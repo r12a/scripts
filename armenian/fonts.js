@@ -14,6 +14,7 @@
             </optgroup>\
             \
             <optgroup label="Google fonts ">\
+            <option value="Noto Serif Armenian">Noto Serif Armenian</option>\
             <option value="Noto Sans Armenian">Noto Sans Armenian</option>\
             </optgroup>\
             \
