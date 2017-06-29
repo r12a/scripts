@@ -3,29 +3,34 @@
 <head>
 <meta charset="utf-8"/>
 <title>Arabic character notes</title>
-<meta name="description" content="Notes about characters in the Unicode Arabic script block."/>
-<link rel="stylesheet" type="text/css" href="../../style/docs.css" />
-<link rel="stylesheet" type="text/css" href="../../scripts/block/block-style.css" />
+<meta name="description" content="Notes about characters in the Unicode Arabic script blocks."/>
+<link rel="stylesheet" type="text/css" href="../../../shared/style/docs.css" />
+<link rel="stylesheet" type="text/css" href="../block/block-style.css" />
 <link rel="stylesheet" type="text/css" href="local.css" />
 <script type="text/javascript" src="fonts.js"></script>
-<script type="text/javascript" src="../../code/toc_section.js"></script>
-<script type="text/javascript" src="../../scripts/block/arabic-names-subset.js"></script>
-<script type="text/javascript" src="../../scripts/block/block-code.js"></script>
-<script type="text/javascript" src="../../code/boilerplate.js"></script>
+<script type="text/javascript" src="../../../shared/code/toc_2016.js"></script>
+<script type="text/javascript" src="../arabic-names-subset.js"></script>
+<script type="text/javascript" src="../block/block-code.js"></script>
+<script type="text/javascript" src="../../../shared/code/boilerplate.js"></script>
 <script type="text/javascript" src="../../uniview/scriptGroups.js"></script>
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 <style id="includeStyles"></style>
+<style>
+.character p {
+    line-height: 35px;
+}
+</style>
 </head>
 
 <body>
 <header>
   <div id="header-boilerplate"></div>
-  <script>document.getElementById('header-boilerplate').innerHTML = bp_header('/images/world.gif','docs');</script> 
+  <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../../shared/images/world.gif','docs');</script> 
 </header>
 <h1>Arabic character notes</h1>
 
-<nav id="top"><a href="#header-boilerplate"><img src="../../images/up.png" alt="go to page top"/></a></nav>
+<nav id="top"><a href="#header-boilerplate"><img src="../../../shared/images/up.png" alt="go to page top"/></a></nav>
 
 <aside class="sidebar">
   <nav>
@@ -33,17 +38,19 @@
     <div id="toc"><!-- placeholder --></div>
     <div class="noprint">
       <h2 class="notoc" id="links">Related links</h2>
-      <p><a href="/scripts/urdu/">Urdu script notes</a></p>
-      <p><a href="/scripts/links?script=arabic">Arabic script links</a></p>
-      <p><a href="/scripts/pickers/arabic-block/">Arabic character picker</a></p>
-      <p><a href="/uniview/?block=arabic">UniView </a></p>
+      <p><a href="../links?script=arabic" target="_blank">Arabic script links</a></p>
     </div>
   </nav>
   <div id="fontsetting" class="closed">
     <h2 class="notoc"><a id="fonts">Fonts</a></h2>
     <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-    <p>Set a font for Arabic text</p>
-    <p style="margin:0">
+    <p>Set  font for the large box<br/>
+      <select  id="slfontswitchfont" 
+onchange="var params = this.value.split(':');setBoxFont(params[0]);">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+    <p>Set font for Arabic examples<br/>
       <select id="exfontswitchfont" 
 onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'ar');">
       </select>
@@ -51,8 +58,7 @@ onchange="var params = this.value.split(':');setGeneralFont(params[0], document.
       <input id="exfontswitchsize" type="number" value="28" style="width: 30px;"
 onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'ar');" />
     </p>
-    <p>Set a font for Urdu text</p>
-    <p>
+    <p>Set font for Urdu examples<br/>
       <select id="ex2fontswitchfont" 
 onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#ex2fontswitchsize').value+'px', 'ur');">
       </select>
@@ -60,33 +66,24 @@ onchange="var params = this.value.split(':');setGeneralFont(params[0], document.
       <input id="ex2fontswitchsize" type="number" value="28" style="width: 30px;"
 onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'ur');" />
     </p>
-    <p>Set a font for the large box</p>
-    <p>
-      <select  id="slfontswitchfont" 
-onchange="var params = this.value.split(':');setIndexFont(params[0], document.querySelector('#slfontswitchsize').value, 'ar');">
-      </select>
-      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
-      <input id="slfontswitchsize" type="number" value="28" style="width: 30px;"
-onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.value+'px', 'ar');" />
-    </p>
     <p onclick="newfont=prompt('Enter the font name. (Only spaces, hyphens, underlines and alphanum allowed.)', '...'); addFontToLists(newfont, 'exfontswitchfont,ex2fontswitchfont,slfontswitchfont');" style="cursor:pointer;">Add a font to these lists</p>
   </div>
 </aside>
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->28 June, 2017<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->29 June, 2017<!-- #EndDate -->
 &bull; tags <a href="http://rishida.net/blog/index.php?tag=arabic" title="Show all blog posts tagged with 'arabic'">arabic</a>, <a href="http://rishida.net/blog/index.php?tag=urdu" title="Show all blog posts tagged with 'urdu'">urdu</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>.</p>
 <div id="intro">
-  <p>This page lists characters in the Unicode Arabic blocks and provides information about them.</p>
+  <p>This page lists characters in the following Unicode Arabic blocks and provides information about them. It is not  authoritative, peer-reviewed information – these are just notes I have gathered from various places.</p>
+  <ul>
+    <li><a href="/uniview/?block=arabic" target="_blank">Arabic block</a></li>
+    <li><a href="/uniview/?block=arabic_supplement" target="_blank">Arabic Supplement</a></li>
+    <li><a href="/uniview/?block=arabic_extended-a" target="_blank">Arabic Extended-A</a></li>
+  </ul>
   <p>To view this page as intended, you  need Arabic naskh  and  nastaliq fonts.  The page is served with  Scheherazade and Noto Nastaliq web fonts. You can select alternative fonts  for the descriptive text from the control to the right.</p>
   <p>If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
   <p>To find a character by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the hex number here:</p>
   <p>Find <input type="text" onChange="var hex=this.value;if (hex!=''){while(hex.length<4){hex='0'+hex;}document.location='#char'+hex.toUpperCase();}"/></p>
   <p>You can also find characters for which there are annotations using UniView (switch on <samp>Show notes</samp>).</p>
-  <ul>
-    <li><a href="/uniview/?block=arabic">Arabic block</a></li>
-    <li><a href="/uniview/?block=arabic_supplement">Arabic Supplement</a></li>
-    <li><a href="/uniview/?block=arabic_extended-a">Arabic Extended-A</a></li>
-  </ul>
   <p>The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. If there is no glyph and you want to see what it looks like, click on <samp>See in UniView</samp>.</p>
   <p>Transcription characters for Arabic follow the Library of Congress, and for Persian follow the UN scheme.</p>
 </div>
@@ -981,7 +978,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           <p><span class="title">Arabic</span> consonant  <span class="trans">h</span></p>
           <p><span class="ipa">h</span></p>
           <p><span class="leadin">Shape:</span> <span class="ex" dir="rtl" lang="ar">ههه ه</span></p>
-          <p>The marker for hijri dates is an initial form of <span class="name">heh</span>, even though it doesn't join to the left, ie. <span class="ex" dir="rtl" lang="ur">ه‍</span>. For this, use a <a href="#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a> immediately after the <span class="name">heh</span>, eg. <span class="ex" lang="ar" dir="rtl">الاثنين 10 رجب 1415 ه‍.</span>. In some cases <a href="#char0640"><span class="uname">U+0640 ARABIC TATWEEL</span> <span lang="ar" dir="rtl">&#x0640;</span></a> is used to ensure that the shape looks right, because some applications or fonts don't produce the right effect when using the ZWJ, eg. <span class="ex" lang="ar" dir="rtl">الاثنين 10 رجب 1415 هـ.</span>.</p>
+          <p>The marker for hijri dates is an initial form of <span class="name">heh</span>, even though it doesn't join to the left, ie. <span class="ex" dir="rtl" lang="ur">ه‍</span>. For this, use a <a href="../punctuation/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a> immediately after the <span class="name">heh</span>, eg. <span class="ex" lang="ar" dir="rtl">الاثنين 10 رجب 1415 ه‍.</span>. In some cases <a href="#char0640"><span class="uname">U+0640 ARABIC TATWEEL</span> <span lang="ar" dir="rtl">&#x0640;</span></a> is used to ensure that the shape looks right, because some applications or fonts don't produce the right effect when using the ZWJ, eg. <span class="ex" lang="ar" dir="rtl">الاثنين 10 رجب 1415 هـ.</span>.</p>
         </div>
         <div class="letter persian">
           <p><span class="title">Persian</span> <span class="ipa">h, -, ɛ, æ, e</span></p>
@@ -4170,7 +4167,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
 
 
 <section id="presentation_forms">
-  <h2><a href='#presentation_forms'>Presentation forms</a></h2>
+  <h2><a href="#presentation_forms">Presentation forms</a></h2>
   <p>Most presentation form characters are for compatibility and should not be used. There are a few characters, however, that may be useful in particular circumstances, and those are the ones discussed here.</p>
   
   <section id="ornate_parentheses">
@@ -4211,17 +4208,20 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
 <section id="word_ligatures">
   <h3><a href="#word_ligatures">Word ligatures</a></h3>
   <p>The word ligature range extends from U+FDF0 to U+FDFD, but the Unicode Standard only calls out a few of those codepoints for mention (those listed here), relegating the others to rarely used compatibility characters.</p>
+  <p>The shape of these characters varies significantly across different fonts. You can experiment with various font renderings using the font switch dialogue box (click on the blue horizontal bar at the bottom right of the page).</p>
     <div class="character" id="charFDF2">
 
       <div class="charimg">&#xFDF2;</div>
       <p class="charname"><strong>U+FDF2</strong> <a href="#charFDF2">ARABIC LIGATURE ALLAH ISOLATED FORM</a></p>
       <p class="univiewLink"><a target="_blank" href="/uniview/?char=FDF2">See in UniView</a></p>
+      <p class="subtitle">Description in the Unicode standard:</p>
+      <div class="unicodenotes">≈ [isolated] 0627 0644 0644 0647</div>
       <div class="notes">
         <div class="letter arabic">
           <p><span class="title">Arabic</span> word ligature, <span class="meaning">Allah</span>.</p>
           <p>According to the text of the Unicode Standard, you should normally create this word ligature with the following sequence of ordinary characters: <span class="ex" dir="rtl" lang="ar">اللّٰه</span> (click on the red text to see the list). However, the compatibility decomposition for this character in the Unicode database is just <span class="ex" dir="rtl" lang="ar">الله</span>, ie. no combining characters, even though the text of the standard says that the ligature should not be formed by fonts when <a href="#char0651"><span class="uname">U+0651 ARABIC SHADDA</span> <span lang="ar" dir="rtl">&#x640;&#x0651;</span></a> &nbsp;and <a href="#char0670"><span class="uname">U+0670 ARABIC LETTER SUPERSCRIPT ALEF</span> <span lang="ar" dir="rtl">&#x640;&#x0670;</span></a> &nbsp;are not present (because the four base characters exist in Persian and other languages in contexts where they have different meanings and pronunciations). <sup>1</sup> </p>
           
-          <p><img src="../../../c/Arabic_Presentation_Forms-A/large/FDF2.png" height="100px" style="float:right;border-radius:1em;" alt=""/><span class="leadin">Shape</span> The shape varies slightly from font to font, and is not always correct – for example, a number of fonts omit the initial alef. The Noto Naskh Arabic font used in the box above left doesn't produce the diacritics. Here is the rendering of this code point in the Unicode charts. </p>
+          <p><img src="../../c/Arabic_Presentation_Forms-A/large/FDF2.png" height="100px" style="float:right;border-radius:1em;" alt=""/><span class="leadin">Shape</span> The shape varies slightly from font to font, and is not always correct – for example, a number of fonts omit the initial alef. The Noto Naskh Arabic font used in the box above left doesn't produce the diacritics. Here is the rendering of this code point in the Unicode charts. </p>
           <p class="ref">Refs:  
             [1] <a href="http://www.unicode.org/versions/Unicode9.0.0/ch09.pdf#page=389" target="_blank">[unicode9] p390</a> &nbsp;&nbsp; </p>
         </div>
@@ -4238,72 +4238,81 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
   </div>
     <div class="character" id="charFDFA">
       <div class="charimg">&#xFDFA;</div>
-      <p class="charname"><strong>U+FDFA</strong> <a href="#charFDF2">ARABIC LIGATURE SALLALLAHOU ALAYHE WASALLAM</a></p>
+      <p class="charname"><strong>U+FDFA</strong> <a href="#charFDFA">ARABIC LIGATURE SALLALLAHOU ALAYHE WASALLAM</a></p>
       <p class="univiewLink"><a target="_blank" href="/uniview/?char=FDFA">See in UniView</a></p>
+      <p class="subtitle">Description in the Unicode standard:</p>
+      <div class="unicodenotes">≈ [isolated] 0635 0644 0649 0020 0627 0644 0644 0647 0020 0639 0644 064A 0647 0020 0648 0633 0644 0645</div>
       <div class="notes">
         <div class="letter arabic">
           <p><span class="title">Arabic</span> word ligature, honorific.</p>
           <p>Honorific used after the name of God or Mohammed, meaning <span class="meaning">'may God's peace and blessings be upon him'</span>. <sup>1</sup></p>
-          <p>Its use is comparable to the combining honorific <a href="#char0610"><span class="uname">U+0610 ARABIC SIGN SALLALLAHOU ALAYHE WASSALLAM</span> <span lang="ar" dir="rtl">&#x640;&#x0610;</span></a>.. <sup>1</sup></p>
-          <p>The compatibility decomposition for this character in the Unicode database is  <span class="ex" dir="rtl" lang="ar">صلى الله عليه وسلم</span> – click on the red text to see the list of characters.</p>
+          <p>Its use is comparable to the combining honorific <a href="#char0610"><span class="uname">U+0610 ARABIC SIGN SALLALLAHOU ALAYHE WASSALLAM</span> <span dir="rtl" lang="ar">ـؐ</span></a>.. <sup>1</sup></p>
+          <p>The compatibility decomposition for this character in the Unicode database is <span class="ex" dir="rtl" lang="ar">صلى الله عليه وسلم</span> – click on the red text to see the list of characters.</p>
           <p>This character is sometimes used by Muslims writing in Latin or Cyrillic scripts. <sup>1</sup></p>
-          <p><img src="../../../c/Arabic_Presentation_Forms-A/large/FDFA.png" height="100px" style="float:right;border-radius:1em;" alt=""/><span class="leadin">Shape</span> The shape varies slightly from font to font. Here is the rendering of this code point in the Unicode charts. </p>
+          <p><img src="../../c/Arabic_Presentation_Forms-A/large/FDFA.png" style="float:right;border-radius:1em;" alt="" height="100px"><span class="leadin">Shape</span> The shape varies slightly from font to font. Here is the rendering of this code point in the Unicode charts. </p>
           <p class="ref">Refs:  
             [1] <a href="http://www.unicode.org/versions/Unicode9.0.0/ch09.pdf#page=389" target="_blank">[unicode9] p390</a> &nbsp;&nbsp; </p>
         </div>
       </div>
     </div>
-    <div class="character" id="charFDFAB">
-      <div class="charimg">&#xFDFB;</div>
-      <p class="charname"><strong>U+FDFB</strong> <a href="#charFDFB">ARABIC LIGATURE JALLAJALALOUHOU</a></p>
-      <p class="univiewLink"><a target="_blank" href="/uniview/?char=FDFB">See in UniView</a></p>
-      <div class="notes">
+    <div class="character" id="charFDFB">
+<div class="charimg">&#xFDFB;</div>
+<p class="charname"><strong>U+FDFB</strong> <a href="#charFDFB">ARABIC LIGATURE JALLAJALALOUHOU</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=FDFB">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">≈ [isolated] 062C 0644 0020 062C 0644 0627 0644 0647</div>
+<div class="notes">
         <div class="letter arabic">
           <p><span class="title">Arabic</span> word ligature, honorific.</p>
           <p>Honorific used after the name of God or Mohammed. <sup>1</sup></p>
           <p>The compatibility decomposition for this character in the Unicode database is <span class="ex" dir="rtl" lang="ar">جل جلاله</span> – click on the red text to see the list of characters.</p>
           <p>This character is sometimes used by Muslims writing in Latin or Cyrillic scripts. <sup>1</sup></p>
-          <p><img  src="../../../c/Arabic_Presentation_Forms-A/large/FDFB.png" height="100px" style="float:right;border-radius:1em;" alt=""/><span class="leadin">Shape</span> The shape varies slightly from font to font. Here is the rendering of this code point in the Unicode charts. </p>
+          <p><img src="../../c/Arabic_Presentation_Forms-A/large/FDFB.png" style="float:right;border-radius:1em;" alt="" height="100px"><span class="leadin">Shape</span> The shape varies slightly from font to font. Here is the rendering of this code point in the Unicode charts. </p>
           <p class="ref">Refs:  
             [1] <a href="http://www.unicode.org/versions/Unicode9.0.0/ch09.pdf#page=389" target="_blank">[unicode9] p390</a> &nbsp;&nbsp; </p>
         </div>
       </div>
-    </div>
-    <div class="character" id="charFDFD">
-      <div class="charimg">&#xFDFD;</div>
-      <p class="charname"><strong>U+FDFD</strong> <a href="#charFDFD">ARABIC LIGATURE BISMILLAH AR-RAHMAN AR-RAHEEM</a></p>
-      <p class="univiewLink"><a target="_blank" href="/uniview/?char=FDFD">See in UniView</a></p>
-      <div class="notes">
+</div>
+ <div class="character" id="charFDFD">
+  <div class="charimg">&#xFDFD;</div>
+<p class="charname"><strong>U+FDFD</strong> <a href="#charFDFD">ARABIC LIGATURE BISMILLAH AR-RAHMAN AR-RAHEEM</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=FDFD">See in UniView</a></p>
+<div class="notes">
         <div class="letter arabic">
           <p><span class="title">Arabic</span> word ligature, basmala.</p>
-          <p>A common opening phrase, meaning <span class="meaning">&quot;In the name of God, the Most Gracious, the Most Merciful&quot;</span>. It is used more commonly than the  other word ligatures shown above, and tends to appear above text. It is also used in other scripts, such as Bengali and Thaana. <sup>1</sup></p>
+          <p>A common opening phrase, meaning <span class="meaning">"In the name of God, the Most Gracious, the Most Merciful"</span>. It is used more commonly than the  other word ligatures shown above, and tends to appear above text. It is also used in other scripts, such as Bengali and Thaana. <sup>1</sup></p>
           <p><q>This is the phrase recited before each sura (chapter) of the Qur'an – except for the ninth. It is used by Muslims in various contexts (for instance, during daily prayer) and is used in over half of the constitutions of countries where Islam is the official religion or more than half of the population follows Islam, usually the first phrase in the preamble, including those of Afghanistan, Bahrain, Bangladesh, Brunei, Egypt, Iran, Iraq, Kuwait, Libya, Maldives, Pakistan, Tunisia, and the United Arab Emirates.</q> <sup>2</sup></p>
           <p>There is no decomposition for this character.</p>
-          <p><img src="../../../c/Arabic_Presentation_Forms-A/large/FDFD.png" height="100px" style="float:right;border-radius:1em;border-radius:1em;" alt=""/><span class="leadin">Shape</span> The shape varies significantly from font to font and usage to usage. Here is the rendering of this code point in the Unicode charts. See <a href="https://en.wikipedia.org/wiki/Basmala" target="_blank">other renderings</a> at Wikipedia.</p>
+          <p><img src="../../c/Arabic_Presentation_Forms-A/large/FDFD.png" style="float:right;border-radius:1em;border-radius:1em; margin-left:1em;" alt="" height="100px"><span class="leadin">Shape</span> The shape varies significantly from font to font and usage to usage. Here is the rendering of this code point in the Unicode charts. See <a href="https://en.wikipedia.org/wiki/Basmala" target="_blank">other renderings</a> at Wikipedia.</p>
           <p class="ref">Refs:  
             [1] <a href="http://www.unicode.org/versions/Unicode9.0.0/ch09.pdf#page=389" target="_blank">[unicode9] p390</a> &nbsp;&nbsp; [2] <a href="https://en.wikipedia.org/wiki/Basmala" target="_blank">Wikipedia</a></p>
         </div>
       </div>
-    </div>
+</div>
+    
+    
 </section>
 <section id="word_lig_currency">
   <h3><a href="#word_lig_currency">Currency</a></h3>
-  <div class="character" id="charFDFC">
-    <div class="charimg">&#xFDFC;</div>
-    <p class="charname"><strong>U+FDFC</strong> <a href="#charFDFC">RIAL SIGN</a></p>
-    <p class="univiewLink"><a target="_blank" href="/uniview/?char=FDFC">See in UniView</a></p>
-    <div class="notes">
-      <div class="letter arabic">
-        <p><span class="title">Persian</span> currency symbol, <span class="meaning">rial</span>.</p>
-        <p>Created by a typewriter standardisation committee in 1973, this is intended to be a condensed version of the word for the Iranian currency. The compatibility decomposition of this character is <span class="ex" dir="rtl" lang="ar">ریال</span> (click on the red text to see the list). </p>
-        <p>The Unicode Standard says that this was only used for a short while in typewriters and keyboard layouts, and so is provided mainly for compatability reasons. Persian users are said to prefer typing the word rather than using this symbol.  <sup>1</sup></p>
-        <p class="ref">Refs:  
-          [1] <a href="http://www.unicode.org/versions/Unicode9.0.0/ch09.pdf#page=389" target="_blank">[unicode9] p391</a> &nbsp;&nbsp; </p>
-      </div>
-    </div>
-  </div>
-</section>
-<section>
+
+  
+<div class="character" id="charFDFC">
+<div class="charimg">&#xFDFC;</div>
+<p class="charname"><strong>U+FDFC</strong> <a href="#charFDFC">RIAL SIGN</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=FDFC">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">≈ [isolated] 0631 06CC 0627 0644</div>
+<div class="notes">
+<div class="letter arabic">
+<p><span class="title">Persian</span> currency symbol, <span class="meaning">rial</span>.</p>
+<p>Created by a typewriter  standardisation committee in 1973, this is intended to be a condensed version of the word for the Iranian currency. The compatibility decomposition of this character is <span class="ex" dir="rtl" lang="ar">ریال</span> (click on the red text to see the list). </p>
+<p>The Unicode Standard says that this was only used for a short while in typewriters and keyboard layouts, and so is provided mainly for compatability reasons. Persian users are said to prefer typing the word rather than using this symbol.  <sup>1</sup></p>
+<p class="ref">Refs:  
+[1] <a href="http://www.unicode.org/versions/Unicode9.0.0/ch09.pdf#page=389" target="_blank">[unicode9] p391</a> &nbsp;&nbsp; </p>
+</div>
+</div>
+</div>
+  
 </section>
 
 <section id="ack">
@@ -4325,71 +4334,10 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
 </section>
 <div id="panel" style="display:none"></div>
 <div class="smallprint"><span id="version">First published  3 February, 2014.  This version <span id="version-info">
-  <!-- #BeginDate format:IS1m -->2017-06-28  11:51<!-- #EndDate -->
+  <!-- #BeginDate format:IS1m -->2017-06-29  15:23<!-- #EndDate -->
 </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
+</section>
 
-<!-- Uncomment this code to get a list of character numbers to put in scriptGroups.js
-<div id=charliststr></div>
-<div></div>
-<div id="listofIPAchars"></div>
-<div id="listofchars"></div>
-<script type="text/javascript" src="/code/showcharacters/names.js"></script>
-<script src="data-extraction.js" type="text/javascript">//</script>
-<script>document.getElementById('listofIPAchars').innerHTML = getlistofIPAchars();
-document.getElementById('listofchars').innerHTML = getlistofchars();
-listCharsWithNotes();
-</script>
-  --> 
-
-<!-- UPDATE UNICODE NOTES
-<button onClick="document.getElementById('tempout').value = updateDesc()">Update page</button>
-<textarea id="tempout" style="width:100%;height:100px;"></textarea>
-<script type="text/javascript" src="/uniview/descriptions.js"></script> 
-<script type="text/javascript" src="/uniview/u.js"></script> 
-<script> 
-function updateDesc () {
-	var chars = document.querySelectorAll(".character")
-	console.log(chars.length)
-	var out = ''
-	for (var i=0;i<chars.length;i++) {
-		var charId = chars[i].id
-		var hex = charId.replace(/char/,'')
-		dec = parseInt(hex,16)
-		while (hex.length < 4) hex = '0' + hex
-		console.log(hex)
-		unicodenotes = ''
-		if (desc[dec]) {
-			var unicodenotes = desc[dec]
-			unicodenotes = unicodenotes.replace(/¶/,'')
-			unicodenotes = unicodenotes.replace(/¶/g,'<br/>')
-			}
-		var charnameNode = chars[i].querySelector(".charname")
-		var charname = charnameNode.innerHTML
-		var notesNode = chars[i].querySelector(".notes")
-		if (notesNode) var notes = notesNode.innerHTML
-		var dbrecord = U[dec].split(';')
-		var cpName = dbrecord[1]
-		
-		out += '<div class="character" id="char'+hex+'">\n'
-		out += '<div class="up"><a href="#char'+hex+'">⇧</a></div>\n'
-		out += '<div class="charimg">&#x'+hex+';</div>\n'
-		out += '<p class="charname"><strong>U+'+hex+'</strong> <a href="#char'+hex+'">'+cpName+'</a></p>\n'
-		out += '<p class="univiewLink"><a target="_blank" href="/uniview/?char='+hex+'">See in UniView</a></p>\n'
-		if (unicodenotes) {
-			out += '<p class="subtitle">Description in the Unicode standard:</p>\n'
-			out += '<div class="unicodenotes">'+unicodenotes+'</div>\n'
-			}
-		if (notesNode) {
-			out += '<div class="notes">\n'
-			out += notes
-			out += '</div>\n'
-			}
-		out += '</div>\n'
-		}
-	return out
-	}
-</script> 
- -->
  
 <!-- PRODUCE LIST OF CHARACTERS IN UNICODE ORDER  
 <textarea id="tempout" style="width:100%;height:100px;"></textarea>
@@ -4413,21 +4361,11 @@ document.getElementById('tempout').value = out
 --> 
 
 <script type="text/javascript">
-createtoc();
+createtoc(3);
 initialiseShowNames();
-highlightIndexChars()
+//highlightIndexChars()
+checkForCharParam();
 
-// check for parameters and take appropriate action
-parameters = location.search.split('&');
-parameters[0] = parameters[0].substring(1);
-for (var p=0;p<parameters.length;p++) {  
-	pairs = parameters[p].split('=');
-	if (pairs[0] == 'char') { 
-		if (pairs[1]) { 
-			document.getElementById('includeStyles').textContent = '.character, h1, h2, h3, #charlistsection, .sidebar, header, #status, #intro, #fontsetting, .smallprint, .univiewLink, #ack, #refs { display: none; } #char'+pairs[1]+' { display: block; }' 
-			} 
-		}
-	}
 </script>
 </body>
 </html>

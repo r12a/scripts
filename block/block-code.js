@@ -283,14 +283,25 @@ function setGeneralFont (fontname, size, language) {
 	}
 
 
-function setIndexFont (fontname, size, language) {
+function setIndexFont (fontname, size) {
 	// change the size and font of the index table characters
+	// note that the latest template removes the index!
 	var examples = document.querySelectorAll('#index td a')
 	for (var e=0;e<examples.length;e++) {  
 		examples[e].style.fontFamily = fontname
 		examples[e].style.fontSize = size
 		}
 		
+	// change the font of the large characters in the block pages
+	// but don't change the size
+	var pictures = document.querySelectorAll('.charimg')
+	for (var p=0;p<pictures.length;p++) {  
+		pictures[p].style.fontFamily = fontname
+		}
+	}
+
+
+function setBoxFont (fontname) {		
 	// change the font of the large characters in the block pages
 	// but don't change the size
 	var pictures = document.querySelectorAll('.charimg')
@@ -309,7 +320,7 @@ function charInfoPointer (codepoint) {
 	// returns: the filename, if successful
 	//          otherwise ''
 	
-	charNum = parseInt(codepoint,16) 
+	var charNum = parseInt(codepoint,16) 
 	if (charNum < 128) { return scriptGroups[0][3] }
 	var i=1
 	while ( i<scriptGroups.length && charNum > scriptGroups[i][1] ) { i++ } 
@@ -354,9 +365,9 @@ function highlightIndexChars () {
 function addFontToLists (fontname, selectionlists) {
 	// adds a font to the selection lists
 	
-	if (fontname == '' || fontname == null) { return }
+	if (fontname === '' || fontname === null) { return }
 	
-	test = fontname.match(/[^a-zA-Z0-9-_\s]/)
+	var test = fontname.match(/[^a-zA-Z0-9-_\s]/)
 	if (test) { 
 		alert("Bad font name.") 
 		return
@@ -375,6 +386,22 @@ function addFontToLists (fontname, selectionlists) {
 		
 	alert('The font '+fontname+' has been added to the selection list(s).')
 	}
+
+
+function checkForCharParam () {
+	// check for parameters; if char= found with value, set style to show only that character
+	parameters = location.search.split('&')
+	parameters[0] = parameters[0].substring(1)
+	for (var p=0;p<parameters.length;p++) {  
+		pairs = parameters[p].split('=')
+		if (pairs[0] === 'char') { 
+			if (pairs[1]) { 
+				document.getElementById('includeStyles').textContent = '.character, h1, h2, h3, #charlistsection, .sidebar, header, #status, #intro, #fontsetting, section>p, .smallprint, .univiewLink, #ack, #refs { display: none; } #char'+pairs[1]+' { display: block; }' 
+				} 
+			}
+		}
+	}
+
 
 
 function hideStuff (codepoint) {
