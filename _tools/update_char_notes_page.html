@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+<meta charset="utf-8"/>
+<title>Update char notes items</title>
+<meta name="description" content="Provides information and updated code for character notes pages."/>
+
+<link rel="stylesheet" href="../../shared/style/docs.css" type="text/css" />
+<link rel="stylesheet" href="../block/block-style.css" type="text/css" />
+<link rel="stylesheet" href="local.css" type="text/css" />
+
+<script type="text/javascript" src="../../uniview/descriptions.js"></script> 
+<script type="text/javascript" src="../../uniview/u.js"></script> 
+
+	
+<script src="/scripts/block/khmer-names-subset.js" type="text/javascript"></script>
+<script src="/scripts/block/block-code.js" type="text/javascript"></script>
+
+<script src="/uniview/scriptGroups.js" type="text/javascript"></script>
+
+<style>
+.thescriptwindow {
+	margin: 0 30% 0 7.5%;
+	padding: 0;
+	border: none;
+	width: 80%;
+	height: 400px;
+	background-color: white;
+	}
+
+</style>
+
+<script>
+function listCharsWithNotes (iframe) {
+	// makes a list of which characters have notes attached, list is space-separated, and mostly decimal number pairs
+	// however a single character that is not part of a series is represented by just that decimal codepoint
+	var charliststr = ''
+	var charlist = iframe.querySelectorAll("div > div.notes")
+	console.log(charlist.length)
+	var sortedcharlist = new Array;
+	for (var i=0; i<charlist.length; i++) {
+		sortedcharlist[i] = ' '+parseInt(charlist[i].parentNode.id.substr(4), 16)
+		}
+	sortedcharlist.sort();
+	
+	charliststr = ''
+	var start = parseInt(sortedcharlist[0])
+	var end = '';
+	for (var i=0; i<sortedcharlist.length; i++) {
+		end = parseInt(sortedcharlist[i])
+		if (sortedcharlist[i+1] != end+1) {
+			if (start == end) { 
+				charliststr += start+' ' 
+				start = parseInt(sortedcharlist[i+1])
+				}
+			else {
+				charliststr += start+':'+end+' '
+				start = parseInt(sortedcharlist[i+1])
+				}
+			}
+		}
+	return charliststr	
+	}
+
+
+
+function updateDesc (iframe) {
+	var chars = iframe.querySelectorAll(".character")
+	console.log(chars.length)
+	var out = ''
+	for (var i=0;i<chars.length;i++) {
+		var changed = false
+		var charId = chars[i].id
+		var hex = charId.replace(/char/,'')
+		dec = parseInt(hex,16)
+		while (hex.length < 4) hex = '0' + hex
+		console.log(hex)
+		
+		// check for descriptions,  only output changed items
+		unicodenotes = ''
+		formernotes = ''
+		if (desc[dec]) {
+			var unicodenotes = desc[dec]
+			unicodenotes = unicodenotes.replace(/¶/,'')
+			unicodenotes = unicodenotes.replace(/¶/g,'<br/>')
+			}
+		if (chars[i].querySelector('.unicodenotes')) formernotes = chars[i].querySelector('.unicodenotes').innerHTML
+		formernotes = formernotes.replace(/\n\s*/g,'')
+		formernotes = formernotes.replace(/<br>/g,'<br/>')
+		console.log(formernotes)
+		console.log(unicodenotes)
+		if (formernotes !== unicodenotes) { console.log('CHANGED!'); changed = true }
+		
+		var charnameNode = chars[i].querySelector(".charname")
+		var charname = charnameNode.innerHTML
+		var notesNode = chars[i].querySelector(".notes")
+		if (notesNode) var notes = notesNode.innerHTML
+		var dbrecord = U[dec].split(';')
+		var cpName = dbrecord[1]
+		
+		if (changed) {
+			out += '<div class="character" id="char'+hex+'">\n'
+			out += '<div class="charimg">&#x'+hex+';</div>\n'
+			out += '<p class="charname"><strong>U+'+hex+'</strong> <a href="#char'+hex+'">'+cpName+'</a></p>\n'
+			out += '<p class="univiewLink"><a target="_blank" href="/uniview/?char='+hex+'">See in UniView</a></p>\n'
+			if (unicodenotes) {
+				out += '<p class="subtitle">Description in the Unicode standard:</p>\n'
+				out += '<div class="unicodenotes">'+unicodenotes+'</div>\n'
+				}
+			if (notesNode) {
+				out += '<div class="notes">'
+				out += notes
+				out += '</div>\n'
+				}
+			out += '</div>\n\n'
+			}
+		}
+	return out
+	}
+ 
+
+
+
+
+function iframeRef( frameRef ) {
+    return frameRef.contentWindow
+        ? frameRef.contentWindow.document
+        : frameRef.contentDocument
+}
+
+
+function produceData () {
+	var iframe = iframeRef(document.getElementById('scrwin'))
+	document.getElementById('charliststr').textContent = listCharsWithNotes(iframe)	
+	document.getElementById('out').value = updateDesc(iframe)
+	}
+</script>
+</head>
+
+<body>
+<h1>Update char notes items</h1>
+
+<p>Provides information and updated code for character notes pages when they are changed.</p>
+
+<p>Directory name: 
+  <input type="text" id="in" placeholder="0000:0000"/> <button  onclick="document.getElementById('scrwin').src = '../'+document.getElementById('in').value+'/block.html'">Go</button></p>
+
+
+  <iframe src="linkdata/none.html" name="scriptWindow" class="thescriptwindow" id="scrwin"></iframe>
+
+
+
+<p><button onClick="produceData()">Produce data</button></p>
+
+<p>Characters containing notes:</p>
+<p id="charliststr"></p>
+
+<p>Updated character descriptions:</p>
+<p><textarea id="out" style="height:400px;width:100%;"></textarea></p>
+
+
+<div class="smallprint"><span id="version">First published  3 Feb 2008.  This version <span id="version-info"> 
+  <!-- #BeginDate format:IS1m -->2017-06-29  10:39<!-- #EndDate --> 
+  </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
+
+
+</body>
+</html>
