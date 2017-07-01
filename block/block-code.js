@@ -396,7 +396,7 @@ function checkForCharParam () {
 		pairs = parameters[p].split('=')
 		if (pairs[0] === 'char') { 
 			if (pairs[1]) { 
-				document.getElementById('includeStyles').textContent = '.character, h1, h2, h3, #charlistsection, .sidebar, header, #status, #intro, #fontsetting, section>p, .smallprint, .univiewLink, #ack, #refs { display: none; } #char'+pairs[1]+' { display: block; }' 
+				document.getElementById('includeStyles').textContent = '.character, h1, h2, h3, #charlistsection, .sidebar, header, #status, #intro, #fontsetting, section>p, .smallprint, .univiewLink, .subtitle, .unicodenotes, .charimg, .charname, #top, #ack, #refs { display: none; } .notes { margin: 0;} #char'+pairs[1]+' { display: block; }' 
 				} 
 			}
 		}
@@ -405,5 +405,5 @@ function checkForCharParam () {
 
 
 function hideStuff (codepoint) {
-	document.getElementById('includeStyles').textContent = '.character, h1, h2, h3, #charlistsection, .sidebar, header, #status, #intro, #fontsetting, .smallprint, .univiewLink, #references, #endlinks, .up { display: none; } #char'+codepoint+' { display: block; }' 
+	document.getElementById('includeStyles').textContent = '.character, h1, h2, h3, #charlistsection, .sidebar, header, #status, #intro, #fontsetting, .smallprint, .univiewLink, .subtitle, .unicodenotes, #references, #endlinks, .up { display: none; } #char'+codepoint+' { display: block; }' 
 	}
