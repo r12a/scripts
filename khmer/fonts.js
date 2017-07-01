@@ -1,5 +1,6 @@
  var fontSelection = '<optgroup label="Webfonts">\
-      <option value="Khmer OS Battambang WF">Khmer OS Battambang WF</option>\
+      <option value="Battambang WF">Battambang WF</option>\
+      <option value="Noto Serif Khmer WF">Noto Serif Khmer WF</option>\
       <option value="Noto Sans Khmer WF">Noto Sans Khmer WF</option>\
       </optgroup>\
       <optgroup label="Mac fonts">\
@@ -11,7 +12,8 @@
       <option value="MoolBoran">MoolBoran (Windows7)</option>\
       </optgroup>\
       <optgroup label="Google fonts">\
-      <option value="Noto Sans">Noto Sans Khmer</option>\
+      <option value="Noto Sans Khmer">Noto Sans Khmer</option>\
+      <option value="Noto Serif Khmer">Noto Serif Khmer</option>\
       </optgroup>\
       <optgroup label="Other fonts">\
       <option value="Battambang">Battambang</option>\
