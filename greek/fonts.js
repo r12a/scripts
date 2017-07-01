@@ -2,4 +2,5 @@
         <option value="Gentium">Gentium</option>\
         <option value="Doulos SIL">Doulos SIL</option>\
         <option value="Times New Roman">Times New Roman</option>\
+        <option value="Arial">Arial</option>\
 '
