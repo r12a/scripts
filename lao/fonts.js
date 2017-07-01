@@ -1,6 +1,7 @@
  var fontSelection = '<option value="0">Select...</option>\
       <optgroup label="Webfont">\
-      <option value="Noto Sans Lao">Noto Sans Lao WF</option>\
+      <option value="Noto Sans Lao WF">Noto Sans Lao WF</option>\
+      <option value="Noto Serif Lao WF">Noto Serif Lao WF</option>\
       </optgroup>\
       <optgroup label="Mac fonts">\
       <option value="Lao MN">Lao MN (Lion)</option>\
