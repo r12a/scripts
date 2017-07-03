@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Character link generator</title>
+
+<!-- enter a codepoint hex number and this utility outputs link code to that codepoint -->
+
+<script type="text/javascript" src="../../uniview/u.js">
+</script>
+<script type="text/javascript">
+
+function doit (cps) { 
+	cps = cps.replace(/\s+/g,' ').trim()
+	cp = cps.split(' ')
+	lang = document.getElementById('lang').value
+	if (document.getElementById('direction').checked) var rl = ' dir="rtl"'
+	else rl = ''
+	if (document.getElementById('combining').checked) cc = '&#xA0;'
+	else cc = ''
+
+	console.log(cp)
+	var out = ''
+	out += '<span class="codepoint">'
+	for (var i=0;i<cp.length;i++) {
+		if (i>0) out += ' + '
+		out += '<span lang="'+lang+'"'+rl+'>'+cc+'&#x'+cp[i]+';</span> '
+		}
+	
+	out += '['
+	for (var i=0;i<cp.length;i++) {
+		var record = U[parseInt(cp[i],16)].split(';')
+		if (i>0) out += ' + '
+		out += '<a href="#char'+cp[i]+'" class="uname">U+'+cp[i]+' '+record[1]+'</a>'
+		}
+	out += ']'
+	out += '</span>'
+	
+	document.getElementById('output').value = out
+	document.getElementById('output').select()
+	
+	out = ''
+	for (var i=0;i<cp.length;i++) {
+		out += '&#x'+cp[i]+';'
+		}
+	document.getElementById('character').innerHTML = out
+	}
+
+function makeExample (local, ipa, trans, meaning) {
+	var out = ''
+	out += '<span class="ex" lang="'+document.getElementById('lang').value+'"'
+	if (document.getElementById('direction').checked) { out += ' dir="rtl"' }
+	out += '>'+local+'</span> '
+	if (ipa) {
+		out += '<span class="ipa">'+ipa+'</span> '
+		}
+	if (trans) {
+		out += '<span class="trans">'+trans+'</span> '
+		}
+	if (meaning) {
+		out += '<span class="meaning">'+meaning+'</span> '
+		}
+	document.getElementById('exampleOutput').value = out
+	document.getElementById('exampleOutput').select();
+	}
+
+</script>
+<style>
+p, input, #character  { font-size: 150%; }
+</style>
+</head>
+
+<body>
+<p style="float:right; margin-top:0; font-size: 16px;">Language code: <input type="text" id="lang" style="width:30px;"></p>
+<p style="float:right; margin-top:0; font-size: 16px; clear:right;">RTL: <input type="checkbox" id="direction"></p>
+<p style="float:right; margin-top:0; font-size: 16px; clear:right;">Combining: <input type="checkbox" id="combining"></p>
+
+<form onSubmit="doit(document.getElementById('cp').value.toUpperCase()); return false;" action="none">
+<p>cps 
+  <input id=cp type="text" /> <button type=submit onClick="doit(document.getElementById('cp').value.toUpperCase()); return false;">Go</button> &nbsp; &nbsp; <span id=character></span></p>
+</form>
+
+<p>&nbsp;</p>
+<textarea id=output style="width: 50%; height: 100px;"></textarea>
+
+<hr style="margin: 100px;" />
+
+
+<form onSubmit="makeExample(document.getElementById('native').value, document.getElementById('ipa').value, document.getElementById('trans').value, document.getElementById('meaning').value); return false;" action="none">
+<table>
+<tr><th>local</th><td><input id=native type=text /></td></tr>
+<tr><th>ipa</th><td><input id=ipa type=text /></td></tr>
+<tr><th>trans</th><td><input id=trans type=text /></td></tr>
+<tr><th>meaning</th><td><input id=meaning type=text /></td></tr>
+</table>
+
+
+<button type=submit onClick="makeExample(document.getElementById('native').value, document.getElementById('ipa').value, document.getElementById('trans').value, document.getElementById('meaning').value; return false;">Go</button> &nbsp; &nbsp; <span id=character></span></p>
+</form>
+
+<p>&nbsp;</p>
+<textarea id=exampleOutput style="width: 50%; height: 100px;"></textarea>
+
+
+</body>
+</html>
