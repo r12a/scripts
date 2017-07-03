@@ -1,6 +1,7 @@
  var fontSelection = 'option value="0">Select...</option>\
 			<optgroup label="Web font">\
  							<option value="Noto Sans Malayalam WF">Noto Sans Malayalam WF</option>\
+ 							<option value="Noto Serif Malayalam WF">Noto Serif Malayalam WF</option>\
             </optgroup>\
 			<optgroup label="Mac fonts">\
  							<option value="Malayalam MN">Malayalam MN</option>\
@@ -11,6 +12,7 @@
  							<option value="Nirmala UI">Nirmala UI</option>\
            </optgroup>\
 			<optgroup label="Google fonts">\
+ 							<option value="Noto Serif Malayalam">Noto Serif Malayalam</option>\
  							<option value="Noto Sans Malayalam">Noto Sans Malayalam</option>\
             </optgroup>\
 			<optgroup label="Other fonts">\
