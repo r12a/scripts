@@ -1,5 +1,5 @@
  var fontSelection = '<optgroup label="Webfonts">\
-        <option value="Noto Serif Thai">Noto Serif Thai</option>\
+        <option value="Noto Serif Thai">Noto Serif Thai WF</option>\
         </optgroup>\
         \
         <optgroup label="Mac font">\
