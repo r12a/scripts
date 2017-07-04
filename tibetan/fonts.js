@@ -1,5 +1,6 @@
  var fontSelection = '<optgroup label="Webfont">\
         <option value="Tibetan Machine Uni WF">Tibetan Machine Uni WF</option>\
+        <option value="Noto Sans Tibetan WF">Noto Sans Tibetan WF</option>\
         </optgroup>\
         \
 		<optgroup label="Mac fonts ">\
