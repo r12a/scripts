@@ -37,12 +37,14 @@ function listCharsWithNotes (iframe) {
 	// however a single character that is not part of a series is represented by just that decimal codepoint
 	var charliststr = ''
 	var charlist = iframe.querySelectorAll("div > div.notes")
-	console.log(charlist.length)
-	var sortedcharlist = new Array;
+	if (window.debugList) console.log(charlist.length)
+	if (window.debugList) console.log(charlist)
+	var sortedcharlist = []
 	for (var i=0; i<charlist.length; i++) {
 		sortedcharlist[i] = ' '+parseInt(charlist[i].parentNode.id.substr(4), 16)
+		if (window.debugList) console.log(charlist[i], sortedcharlist[i], charlist[i].parentNode.id.substr(4))
 		}
-	sortedcharlist.sort();
+	sortedcharlist.sort()
 	
 	charliststr = ''
 	var start = parseInt(sortedcharlist[0])
@@ -50,6 +52,7 @@ function listCharsWithNotes (iframe) {
 	for (var i=0; i<sortedcharlist.length; i++) {
 		end = parseInt(sortedcharlist[i])
 		if (sortedcharlist[i+1] != end+1) {
+			if (window.debugList) console.log('end',end.toString(16).toUpperCase())
 			if (start == end) { 
 				charliststr += start+' ' 
 				start = parseInt(sortedcharlist[i+1])
@@ -67,7 +70,7 @@ function listCharsWithNotes (iframe) {
 
 function updateDesc (iframe) {
 	var chars = iframe.querySelectorAll(".character")
-	console.log(chars.length)
+	if (window.debugDesc) console.log(chars.length)
 	var out = ''
 	for (var i=0;i<chars.length;i++) {
 		var changed = false
@@ -75,7 +78,7 @@ function updateDesc (iframe) {
 		var hex = charId.replace(/char/,'')
 		dec = parseInt(hex,16)
 		while (hex.length < 4) hex = '0' + hex
-		console.log(hex)
+		if (window.debugDesc) console.log(hex)
 		
 		// check for descriptions,  only output changed items
 		unicodenotes = ''
@@ -88,8 +91,8 @@ function updateDesc (iframe) {
 		if (chars[i].querySelector('.unicodenotes')) formernotes = chars[i].querySelector('.unicodenotes').innerHTML
 		formernotes = formernotes.replace(/\n\s*/g,'')
 		formernotes = formernotes.replace(/<br>/g,'<br/>')
-		console.log(formernotes)
-		console.log(unicodenotes)
+		if (window.debugDesc) console.log(formernotes)
+		if (window.debugDesc) console.log(unicodenotes)
 		if (formernotes !== unicodenotes) { console.log('CHANGED!'); changed = true }
 		
 		var charnameNode = chars[i].querySelector(".charname")
@@ -115,6 +118,7 @@ function updateDesc (iframe) {
 			//	out += '</div>\n'
 			//	}
 			//out += '</div>\n\n'
+			out += '\n'
 			}
 		}
 	return out
@@ -162,9 +166,26 @@ function produceData () {
 
 
 <div class="smallprint"><span id="version">First published  3 Feb 2008.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-07-03  8:01<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2017-07-04  7:42<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
+
+<script>
+var debugList = false
+var debugDesc = false
+// check for parameters; if char= found with value, set style to show only that character
+parameters = location.search.split('&')
+parameters[0] = parameters[0].substring(1)
+for (var p=0;p<parameters.length;p++) {  
+	pairs = parameters[p].split('=')
+	if (pairs[0] === 'debug') { 
+		if (pairs[1] && pairs[1] === 'list') debugList = true
+		if (pairs[1] && pairs[1] === 'desc') debugDesc = true
+		if (pairs[1] && pairs[1] === 'all') {  debugList = true; debugDesc = true }
+		}
+	}
+
+</script>
 
 </body>
 </html>
