@@ -272,13 +272,31 @@ function setShowNamesFont (fontname, size, language) {
 	}
 
 
-function setGeneralFont (fontname, size, language) {
+function setGeneralFontXX (fontname, size, language) {
 	var examples = document.querySelectorAll('*[lang ="'+language+'"]')
 	for (var e=0;e<examples.length;e++) {  
 		if (examples[e].lang == language) {
 			examples[e].style.fontFamily = fontname
 			examples[e].style.fontSize = size
 			}
+		}
+	}
+
+
+function setGeneralFont (fontname, size, language) {
+	if (language === '') return
+	var langtags = language.split(',')
+	var searchstr = ''
+	if (langtags.length === 1) searchstr = '*[lang ="'+language+'"]'
+	else {
+		searchstr = '*[lang ="'+langtags[0]+'"]'
+		for (var i=1;i<langtags.length;i++) searchstr += ',*[lang ="'+langtags[i]+'"]'
+		}
+	console.log(searchstr)
+	var examples = document.querySelectorAll(searchstr)
+	for (var e=0;e<examples.length;e++) {  
+		examples[e].style.fontFamily = fontname
+		examples[e].style.fontSize = size
 		}
 	}
 
