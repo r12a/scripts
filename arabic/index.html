@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<title>Arabic script summary</title>
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="description" content="Summary of the Arabic script."/>
+<link rel="stylesheet" href="../../shared/style/docs.css" type="text/css" />
+<link rel="stylesheet" href="../summaries/local.css" type="text/css" />
+<style type="text/css">
+@font-face {
+    font-family: 'webfont';
+    src: url('/shared/webfonts/scheherazaderegotwebfont.woff2') format('woff2'),
+         url('/shared/webfonts/scheherazaderegotwebfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+@font-face {
+    font-family: 'urduwebfont';
+    src: url('/shared/webfonts/notonastaliqurdu-regular-webfont.woff2') format('woff2'),
+         url('/shared/webfonts/notonastaliqurdu-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+#arabicText {
+	font-size: 38px;
+	font-family: webfont, serif;
+	text-align: right;
+	}
+#urduText {
+	font-size: 28px;
+	font-family: urduwebfont, serif;
+	text-align: right;
+	}
+[lang=ar], [lang=fa] { font-family: webfont, serif; font-size: 200%; }
+[lang=ur] { font-family: urduwebfont, serif; font-size: 150%; }
+.large[lang=ar], .large[lang=fa] { font-size: 500%;  text-align: center; line-height: 1; margin-top: 0; margin-bottom: 0; }
+.large[lang=ur] {font-size: 300%; text-align: center; line-height: 1; margin-top: .75em; margin-bottom: .25em; }
+</style>
+
+<script type="text/javascript" src="/shared/code/boilerplate.js"></script>
+<script type="text/javascript" src="/shared/code/toc_2016.js"></script>
+<script type="text/javascript" src="/shared/code/all-names.js"></script>
+<script type="text/javascript" src="/shared/code/character_conversion.js"></script>
+<script type="text/javascript" src="/shared/code/show_codepoints.js"></script>
+<script type="text/javascript" src="/shared/fontlists/manage.js"></script>
+<script type="text/javascript" src="/shared/code/scriptGroups.js"></script>
+<script type="text/javascript" src="../summaries/functions.js"></script>
+<script type="text/javascript" src="../summaries/scriptdata.js"> </script>
+
+<script type="text/javascript" src="/shared/fontlists/arabic.js"> </script>
+</head>
+
+<body>
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
+</header>
+
+<h1>Arabic</h1>
+
+
+<aside class="sidebar">
+<div id="toc"><!-- placeholder --></div>
+
+ <div id="fontsetting" class="closed">
+  <h2 class="notoc"><a id="fonts">Fonts</a></h2>
+  <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
+    <form onSubmit="document.getElementById('arabicText').style.fontFamily = document.getElementById('fontName').value; return false;">
+      <p dir="ltr" class="english">Use this Arabic font:<br/>
+        <input type="text" id="fontName" value="webfont"/>
+        <button
+		  type="submit">Apply</button>
+      </p>
+  </form>
+    <form oninput="document.getElementById('arabicText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
+	return false;">
+      <p>Change size:<br />
+        <input id="slider" type="range" min="12" max="100" step="1" value="32">
+        &#xA0; <span id="sizeIndicator">32px</span><br />
+        <input id="multiplier" type="hidden" value="1" />
+        Multiplier:
+        <input type="radio" name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('arabicText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x1">1</label>
+        <input type="radio" name="step" id="x5" value="2"  onclick="document.getElementById('multiplier').value = 2;  document.getElementById('arabicText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x5">2</label>
+        <input type="radio" name="step" id="x10" value="10"  onclick="document.getElementById('multiplier').value = 10;  document.getElementById('arabicText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x10">10</label>
+      </p>
+    </form>
+<hr/>
+    <form onSubmit="document.getElementById('urduText').style.fontFamily = document.getElementById('ufontName').value; return false;">
+      <p dir="ltr" class="english">Use this Urdu font:<br/>
+        <input type="text" id="ufontName" value="urduwebfont"/>
+        <button
+		  type="submit">Apply</button>
+      </p>
+  </form>
+    <form oninput="document.getElementById('urduText').style.fontSize = (this.uslider.value*this.umultiplier.value)+'px'; 
+	document.getElementById('usizeIndicator').innerHTML = (this.uslider.value*this.umultiplier.value)+'px';
+	return false;">
+      <p>Change size:<br />
+        <input id="uslider" type="range" min="12" max="100" step="1" value="32">
+        &#xA0; <span id="usizeIndicator">32px</span><br />
+        <input id="umultiplier" type="hidden" value="1" />
+        Multiplier:
+        <input type="radio" name="step" id="ux1" value="1" checked="checked" onclick="document.getElementById('umultiplier').value=1; document.getElementById('urduText').style.fontSize = (document.getElementById('uslider').value*document.getElementById('umultiplier').value)+'px'; 
+	document.getElementById('usizeIndicator').innerHTML = (document.getElementById('uslider').value*document.getElementById('umultiplier').value)+'px';" />
+        <label for="ux1">1</label>
+        <input type="radio" name="step" id="ux5" value="2"  onclick="document.getElementById('umultiplier').value = 2;  document.getElementById('urduText').style.fontSize = (document.getElementById('uslider').value*document.getElementById('umultiplier').value)+'px'; 
+	document.getElementById('usizeIndicator').innerHTML = (document.getElementById('uslider').value*document.getElementById('umultiplier').value)+'px';" />
+        <label for="ux5">2</label>
+        <input type="radio" name="step" id="ux10" value="10"  onclick="document.getElementById('umultiplier').value = 10;  document.getElementById('urduText').style.fontSize = (document.getElementById('uslider').value*document.getElementById('umultiplier').value)+'px'; 
+	document.getElementById('usizeIndicator').innerHTML = (document.getElementById('uslider').value*document.getElementById('umultiplier').value)+'px';" />
+        <label for="ux10">10</label>
+      </p>
+    </form>
+</div>
+</aside>
+
+
+<p id="status">Updated 
+  <!-- #BeginDate format:En2 -->18-Jul-2017<!-- #EndDate -->
+&bull; tags <a href="http://rishida.net/blog/index.php?tag=arabic" title="Show all blog posts tagged with 'arabic'">arabic</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+
+
+
+<div class="section">
+  <p>This page provides basic information about the Arabic script. For similar information related to other scripts, see the <a href="/scripts/featurelist/">Script comparison table</a>.  </p>
+  <p class="instructions">Click on the orange text in the features list (right column) to jump to notes and examples. Click on red  text examples or highlight part of the sample text to see a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+  <p>For more details see:  
+  <a href="/scripts/arabic/block">Character notes </a> • <a href="/scripts/links?script=arabic">Script links</a></p>
+</div>
+
+
+
+<section id="samples">
+  <h2 href="#sample">Samples</h2>
+  
+<section id="arabicsample">
+  <h3 href="#arabicsample">Arabic</h3>
+  
+  <div id="arabicText" dir="rtl" lang="ar">
+  <p  title="UDHR clause 1" onMouseUp="showtext()">المادة 1
+
+يولد جميع الناس أحرارًا متساوين في الكرامة والحقوق. وقد وهبوا عقلاً وضميرًا وعليهم أن يعامل بعضهم بعضًا بروح الإخاء.</p>
+  <p  title="UDHR clause 2" onMouseUp="showtext()">المادة 2
+
+لكل إنسان حق التمتع بكافة الحقوق والحريات الواردة في هذا الإعلان، دون أي تمييز، كالتمييز بسبب العنصر أو اللون أو الجنس أو اللغة أو الدين أو الرأي السياسي أو أي رأي آخر، أو الأصل الوطني أو الإجتماعي أو الثروة أو الميلاد أو أي وضع آخر، دون أية تفرقة بين الرجال والنساء.
+
+وفضلاً عما تقدم فلن يكون هناك أي تمييز أساسه الوضع السياسي أو القانوني أو الدولي لبلد أو البقعة التي ينتمي إليها الفرد سواء كان هذا البلد أو تلك البقعة مستقلاً أو تحت الوصاية أو غير متمتع بالحكم الذاتي أو كانت سيادته خاضعة لأي قيد من القيود.</p>
+  </div>
+ </section>
+ 
+  
+<section id="urdusample">
+  <h3 href="#urdusample">Urdu (nastaliq style)</h3>
+  
+  <div id="urduText" dir="rtl" lang="ur">
+  <p  title="UDHR clause 1" onMouseUp="showtext()">
+  دفعہ ۱۔
+  تمام انسان آزاد اور حقوق و عزت کے اعتبار سے برابر پیدا ہوئے ہیں۔ انہیں ضمیر اور عقل ودیعت ہوئی ہے۔ اس لئے انہیں ایک دوسرے کے ساتھ بھائی چارے کا سلوک کرنا چاہیئے۔</p>
+  <p  title="UDHR clause 2" onMouseUp="showtext()">دفعہ ۲۔
+
+ہر شخص ان تمام آزادیوں اور حقوق کا مستحق ہے جو اس اعلان میں بیان کئے گئے ہیں، اور اس حق پر نسل، رنگ، جنس، زبان، مذہب اور سیاسی تفریق کا یا کسی قسم کے عقیدے، قوم، معاشرے، دولت یا خاندانی حیثیت وغیرہ کا کوئی اثر نہ پڑے گا۔
+
+اس کے علاوہ جس علاقے یا ملک سے جو شخص تعلق رکھتا ہے اس کی سیاسی کیفیت دائرہ اختیار یا بین الاقوامی حیثیت کی بنا پر اس سے کوئی امتیازی سلوک نہیں کیا جائے گا۔ چاہے وہ ملک یا علاقہ آزاد ہو یا تولیتی ہو یا غیر مختار ہو یا سیاسی اقتدار کے لحاظ سے کسی دوسری بندش کا پابند ہو۔
+  </p>
+  </div>
+ </section>
+ 
+</section>
+
+
+
+  <div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+    </table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+   </div>
+
+
+
+
+<section id="notes"> 
+
+  <section id="type">
+    <h2>Key features</h2>
+    <p>Arabic is an <span class="newterm">abjad</span>. This means that in normal use the script  represents only consonant and long vowel sounds. This approach is helped by the strong emphasis on consonant patterns in Semitic languages, however the Arabic script is also used for other kinds of language (such as the Indo-European Urdu).</p>
+    <p>For more information see <a href="http://scriptsource.org/scr/Arab">ScriptSource</a>, <a href="http://en.wikipedia.org/wiki/Arabic_script">Wikipedia</a> or <a href="http://www.omniglot.com/writing/arabic.htm">Omniglot</a>.</p>
+  </section>
+  
+  <section id="dir" class="note">
+    <h3>Text direction</h3>
+    <p>Arabic script is written horizontally and right-to-left in the main, but as with all RTL scripts, numbers and embedded LTR script text are written left-to-right (producing 'bidirectional' text). In the following example, the Arabic words are read RTL, starting with the one on the right, and numbers are ten and twelve (ie. read left-to-right). The numeric range is also ordered RTL, ie. it starts with 10 and ends with 12:</p>
+    <p dir="rtl" lang="ar" class="large"><span class="ex">في 10-12 آدار</span></p>
+  </section>
+  
+  
+  <section id="baseline" class="note">
+    <h3>Baseline</h3>
+    <p>The alphabetic baseline is a strong feature of Arabic script on the whole, since characters tend to join there. This is not always the case: for example, some adjacent pairs or ligatures have joins above the baseline, and initial letters in some fonts may start slightly above the baseline, but for most cases it remains a strong feature.</p>
+    <p>The nastaliq style of the script, on the other hand, uses arrangements of joined glyphs that cascade downwards from right to left, and ressemble a strongly sloping baseline. Here are some examples from the sample text above.</p>
+    <p dir="rtl" lang="ur" class="large" style="margin-top: 1em;"><span class="ex">مستحق</span> &nbsp;•&nbsp; <span class="ex">شخص</span> &nbsp;•&nbsp; <span class="ex">کیفیت</span></p>
+  </section>
+  </section>
+  
+  
+  
+  
+  <section id="cchars" class="note">
+    <h2><a href="cchars">Combining characters</a></h2>
+    
+    <p>The main arabic block contains 52 combining characters, with 43 more in the Arabic Extended-A block. However, only a small number are typically used for normal, written Arabic, Persian, etc.</p>
+    <p>Diacritics are used to express short vowel sounds, however for languages such as Arabic, Persian and Urdu they are typically not used, unless there is a particular need to help the reader understand the pronunciation. These diacritics are used in the Koran.</p>
+    <p>However, when the script is used for Uighur, the vowel diacritics <em>are</em> used, as a matter of course.</p>
+    <p>The diacritic <span class="codepoint"><span lang="ar" dir="rtl">&#x25CC;&#x0651;</span> <a href="/scripts/arabic/block#char0651">[<span class="uname">U+0651 ARABIC SHADDA​</span>]</a></span> doubles the value of the consonant it is attached to. It, too, is not often used, although sometimes it appears when vowel signs don't.</p>
+    <p>Multiple combining characters may be used for a single base character, such as when both a shadda and a vowel diacritic are used together.</p>
+  </section>
+  
+
+
+
+
+  <section id="shaping" class="note">
+    <h2><a href="shaping">Context-based glyph changes</a></h2>
+    
+
+<section id="cursive" class="note">
+    <h3>Cursive script</h3>
+    <p>Arabic script joins letters together. This results in four different shapes for most letters (including an isolated shape). The highlights in the example below show the same letter,
+      <span class="codepoint"><span lang="ar" dir="rtl">&#x0639;</span> <a href="/scripts/arabic/block#char0639">[<span class="uname">U+0639 ARABIC LETTER AIN</span>]</a></span>, with three different joining forms:</p>
+    <p dir="rtl" lang="ar" class="large"><span class="ex">ع<span style="color:black">لى</span></span> &nbsp;•&nbsp; 
+      <span class="ex"><span style="color:black">مت</span>ع<span style="color:black">ددة</span></span> &nbsp;•&nbsp; 
+     <span class="ex"><span style="color:black">وسيجم</span>ع</span></p>
+    <p>A few Arabic script letters only join on the right-hand side.</p>
+  </section>
+  
+  
+
+ <section id="gsub" class="note">
+    <h3>Contextual shaping</h3>
+    <p>Ligated glyph forms are common in Arabic. Some, such as <span class="ex" lang="ar" dir="rtl">لا</span> are mandatory. Most of the remainder depend on the font style. Traditional fonts tend to have more ligated forms than modern styles. The following shows a word using no ligatures, on the left, and ligatures, on the right.</p>
+    <p style="text-align:center;"><img src="images/arabic-ligatures1.png" alt=" " style="vertical-align:middle;"> &nbsp;vs.&nbsp; <img src="images/arabic-ligatures2.png" alt=" " style="vertical-align:middle;"></p>
+    <p>In more traditional fonts, you will also often see the join between certain characters, when adjacent, above the baseline, rather than at the baseline, like this:
+    </p>
+    <p style="text-align:center;"><img src="images/arabic-shaping.png" alt=" "></p>
+    <p>rather than  on the baseline, like this:</p>
+    <p style="text-align:center;"><img src="images/arabic-shaping-flat.png" alt=" "></p>
+    <p>But actually a good font will constantly change the shape of glyphs slightly so as to create a more aesthetically pleasing, and in some cases and more easily readable, flow. The following show some simple examples of pairs of the same letter where the glyphs differ.</p>
+    <p dir="rtl" lang="ar" class="large"><span class="ex">ـدد</span> &nbsp; <span class="ex">تتـ</span> &nbsp; <span class="ex">سسـ</span> &nbsp; </p>
+  </section>
+  
+  
+  
+  
+  <section id="gpos" class="note">
+    <h3>Context-based positioning</h3>
+    <p>When vowel or shadda diacritics are used they can be placed in different positions, according to the context.</p>
+    <p>Here you can see  shadda being placed at different heights, depending on the height of the base character that it appears above.</p>
+    <p dir="rtl" lang="ar" class="large"><span class="ex">يتكلّم</span> &nbsp;•&nbsp; <span class="ex">تسجّل</span></p>
+    <p>When both <span class="name">shadda</span> and vowel signs are present, a more complicated set of rules may be applied, depending on the font style, to determine the relevant positions. Vowel diacritics are placed above and below the <em>shadda</em>, rather than above and below the base character.</p>
+    <p dir="rtl" lang="ar" class="ex large">مَمِمّمَّمِّ</p>
+  </section>
+  </section>
+  
+
+  <section id="punctuation" class="note">
+    <h2><a href="#punctuation">Punctuation</a></h2>
+    <p>Arabic languages use a mixture of western and arabic punctuation.</p>
+    <p>The following excerpt from the Arabic sample text above shows the use of <span class="codepoint"><span lang="ar" dir="rtl">&#x060C;</span> <a href="/scripts/arabic/block#char060C">[<span class="uname">U+060C ARABIC COMMA</span>]</a></span>, but uses the ASCII full stop at the end of a sentence.</p>
+    <p dir="rtl" lang="ar" class="ex large">تمييز،</p>
+    <p>The Urdu sample also uses the arabic comma, but uses <span class="codepoint"><span lang="ur" dir="rtl">&#x06D4;</span> <a href="/scripts/arabic/block#char06D4">[<span class="uname">U+06D4 ARABIC FULL STOP</span>]</a></span> at the end of a sentence.</p>
+    <p dir="rtl" lang="ur" class="ex large">چاہیئے۔</p>
+  </section>
+  
+  
+  
+  
+  <section id="digits" class="note">
+    <h2><a href="digits">Digits</a></h2>
+    <p>A set of  arabic-indic digits are typically used in Middle Eastern and Gulf countries, whereas North African countries tend to use european digits. In neither area, however, is one digit style used exclusively.</p>
+    <p dir="rtl" lang="ar" class="ex large">٠١٢٣٤٥٦٧٨٩</p>
+    <p>There is a second set of digits in Unicode for use in languages such as Persian and Urdu. The glyph shapes are typically different for 4 of the digits (although there can also be differences between Persian and Urdu shapes).</p>
+    <p dir="rtl" lang="fa" class="large"><span class="ex">۰۱۲۳۴۵۶۷۸۹</span></p>
+  </section>
+  
+  
+  
+  
+  
+<section id="layout" class="note">
+    <h2><a href="layout">Text layout</a></h2>
+
+  <section id="justify" class="note">
+    <h3>Justification</h3>
+    <p> Arabic script justification can use a number of different techniques. These include stretching the baseline and the glyphs of the text, expanding inter-word spaces, application of ligatures or swash forms, etc.. Typically these will be applied in combination.</p>
+    <p>Some font styles, such as ruq'a, do not permit extensions of the baseline.</p>
+    <p><em>Use the control below to see how your browser justifies the text sample here.</em></p>
+    <p dir="rtl" lang="ar" id="justificationExample" style="text-align:start; font-size: 2em;">المادة 7 كل الناس سواسية أمام القانون ولهم الحق في التمتع بحماية متكافئة عنه دون أية تفرقة، كما أن لهم جميعاً الحق في حماية متساوية ضد أي تمييز يُخل بهذا الإعلان وضد أي تحريض على تمييز كهذا.</p>
+    <p class="english" dir="ltr">
+      <button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Justify   </button>
+    </p>
+  </section>
+  </section>
+  
+  
+  
+  
+  <section id="chars" class="note">
+    <h2>Character list</h2>
+    <p>The Arabic script characters in Unicode 7.0 are spread across 3 blocks:</p>
+    <ol>
+      <li><a href="/uniview/?block=arabic">Arabic</a> (255)</li>
+      <li><a href="/uniview/?block=arabic_supplement">Arabic Supplement </a>(48)</li>
+      <li><a href="/uniview/?block=arabic">Arabic Extended-A</a> (47)</li>
+    </ol>
+    <p>There are two additional blocks for presentation forms, but (with the exception of a handful of code points) these characters are only for compatibility with legacy encodings, and should not be used. Sometimes they are used by people to get around problems with Arabic support in applications, but this is a bad idea since it corrupts the underlying data, making it difficult to search, spellcheck, or do many other things that rely on the use of standard characters and their properties.</p>
+    <p>Many of the characters share a common base form, and are distinguished by the number and location of dots or other small diacritics, called <span class="foreigntext">i'jam</span>. For example, س ‎ش ‎ݜ ‎ ݰ ‎ݽ ‎ݾ ‎ڛ ‎ښ ‎ڜ ‎ۺ.</p>
+    <p>The following is an incomplete list of languages and the number of characters they use, per version 31 of CLDR's lists of characters (exemplarCharacters).</p>
+    <p class="instructions">Click on the links to see a list of characters with names.</p>
+    
+    <section class="characters">
+    <h4>Arabic</h4>
+    <table class="cldrList"><tbody>
+    <tr><th><a target="_blank" href="/uniview/?charlist=%D8%A1%D8%A2%D8%A3%D8%A4%D8%A5%D8%A6%D8%A7%D8%A8%D8%A9%D8%AA%D8%AB%D8%AC%D8%AD%D8%AE%D8%AF%D8%B0%D8%B1%D8%B2%D8%B3%D8%B4%D8%B5%D8%B6%D8%B7%D8%B8%D8%B9%D8%BA%D9%81%D9%82%D9%83%D9%84%D9%85%D9%86%D9%87%D9%88%D9%89%D9%8A">Main</a></th><td lang="ar">ء آ أ ؤ إ ئ ا ب ة ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ى ي</td><td>36</td></tr>
+    <tr><th><a target="_blank" href="/uniview/?charlist=%D9%8B%D9%8C%D9%8D%D9%8E%D9%8F%D9%90%D9%91%D9%92%D9%93%D9%94%D9%95%D9%B0">Combining characters</a></th><td lang="ar">ً ٌ ٍ َ ُ ِ ّ ْ ٓ ٔ ٕ ٰ</td><td>12</td></tr>
+    <tr><th><a target="_blank" href="/uniview/?charlist=-%E2%80%90%E2%80%93%E2%80%94%D8%8C%D8%9B%3A%21%D8%9F.%E2%80%A6%27%22%C2%AB%C2%BB%28%29%5B%5D">Punctuation</a></th><td lang="ar">  - ‐ – — ، ؛ : ! ؟ . … ' &quot; « » ( ) [ ]</td><td>19</td></tr>
+    </tbody></table>
+  </section>
+    
+    <section class="characters">
+    <h4>Persian</h4>
+    <table class="cldrList"><tbody>
+    <tr><th><a target="_blank" href="/uniview/?charlist=%D8%A1%D8%A2%D8%A3%D8%A4%D8%A6%D8%A7%D8%A8%D9%BE%D8%A9%D8%AA%D8%AB%D8%AC%DA%86%D8%AD%D8%AE%D8%AF%D8%B0%D8%B1%D8%B2%DA%98%D8%B3%D8%B4%D8%B5%D8%B6%D8%B7%D8%B8%D8%B9%D8%BA%D9%81%D9%82%DA%A9%DA%AF%D9%84%D9%85%D9%86%D9%87%D9%88%D9%8A%DB%8C">Main</a></th><td lang="fa">ء آ أ ؤ ئ ا ب پ ة ت ث ج چ ح خ د ذ ر ز ژ س ش ص ض ط ظ ع غ ف ق ک گ ل م ن ه و ي ی</td><td>39</td></tr>
+    <tr><th><a target="_blank" href="/uniview/?charlist=%D9%8B%D9%8C%D9%8D%D9%91%D9%93%D9%94">Combining characters</a></th><td lang="fa">ً ٌ ٍ ّ ٓ ٔ</td><td>6</td></tr>
+    <tr><th><a target="_blank" href="/uniview/?charlist=%D9%80-%E2%80%90%D8%8C%D9%AB%D9%AC%D8%9B%3A%21%D8%9F.%E2%80%A6%E2%80%B9%E2%80%BA%C2%AB%C2%BB%28%29%5B%5D%2A%2F%5C">Punctuation</a></th><td lang="fa">ـ - ‐ ، ٫ ٬ ؛ : ! ؟ . … ‹ › « » ( ) [ ] * / \</td><td>23</td></tr>
+    </tbody></table>
+  </section>
+    
+    <section class="characters">
+    <h4>Urdu</h4>
+    <table class="cldrList"><tbody>
+    <tr><th><a target="_blank" href="/uniview/?charlist=%D8%A1%D8%A2%D8%A3%D8%A4%D8%A6%D8%A7%D8%A8%D9%BE%D8%A9%D8%AA%D8%AB%D9%B9%D8%AC%DA%86%D8%AD%D8%AE%D8%AF%D8%B0%DA%88%D8%B1%D8%B2%DA%91%DA%98%D8%B3%D8%B4%D8%B5%D8%B6%D8%B7%D8%B8%D8%B9%D8%BA%D9%81%D9%82%DA%A9%DA%AF%D9%84%D9%85%D9%86%DA%BA%D9%87%DA%BE%DB%81%DB%82%D9%88%D9%8A%DB%8C%DB%92">Main</a></th><td lang="ur">ء آ أ ؤ ئ ا ب پ ة ت ث ٹ ج چ ح خ د ذ ڈ ر ز ڑ ژ س ش ص ض ط ظ ع غ ف ق ک گ ل م ن ں ه ھ ہ ۂ و ي ی ے</td><td>47</td></tr>
+    <tr><th><a target="_blank" href="/uniview/?charlist=%D9%93%D9%94">Combining characters</a></th><td lang="ur">ٓ ٔ</td><td>2</td></tr>
+    <tr><th><a target="_blank" href="/uniview/?charlist=%D8%8C%D8%8D%D9%AB%D9%AC%D8%9B%3A%D8%9F.%DB%94%28%29%5B%5D">Punctuation</a></th><td lang="ur">، ؍ ٫ ٬ ؛ : ؟ . ۔ ( ) [ ]</td><td>13</td></tr>
+    </tbody></table>
+  </section>
+    
+  </section>
+
+
+<div class="smallprint"><span id="version">First published  11 Jul 2017.  This version <span id="version-info"> 
+  <!-- #BeginDate format:IS1m -->2017-07-18  21:11<!-- #EndDate --> 
+  </span> GMT. &nbsp;&bull;&nbsp; <a href="https://github.com/r12a/scripts/issues/new?title=%5Barabic%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fsummaries%2Farabic%0A%0A" target="_blank">Raise an issue</a>. &nbsp;&bull;&nbsp; Copyright r12a.  Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
+
+<div id="panel" style="display:none"></div>
+</body>
+<script>
+initialiseShowNames('/scripts/arabic/block', 'c');
+document.getElementById('featureTableBody').innerHTML = makeSidePanel("Arabic","punctuation:punctuation")
+createtoc(3)
+</script>
+</html>
