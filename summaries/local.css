@@ -2,18 +2,73 @@
 .lr-tb { writing-mode: lr-tb; writing-mode: horizontal-lr; -webkit-writing-mode: horizontal-lr; }
 .tatechuyoko { writing-mode: lr-tb; writing-mode: horizontal-lr; -webkit-writing-mode: horizontal-lr; text-align:center; }
 
+body {
+	line-height: 2em;
+	}
+a { font-weight: 400; }
+#featureTableBody {
+	line-height: 1.75;
+	}
+.ipa { font-family: "Doulos SIL", Gentium, serif; }
+.ipa:before { content: '/'; font-family: 'Helvetica Neue', serif; margin-right: 1.5px; }
+.ipa:after { content: '/'; font-family: 'Helvetica Neue', serif; margin-left: 1.5px; }
+.name { 
+	font-family: "Lucida Sans Unicode", "Lucida Grande", 'lucida sans', "helvetica", "Gentium Plus", sans-serif; 
+	font-size: 16px; 
+	}
+.trans { font-family: "Lucida Sans Unicode", "Lucida Grande", 'lucida sans', "helvetica neue", "Gentium Plus", sans-serif; font-size: 16px; }
+.trans:before { content: '{'; color: #bbb; }
+.trans:after { content: '}';  color: #bbb; }
+.meaning { 
+	font-style: italic;
+	}
+.meaning:before {
+	content: '(';
+	font-style: normal;
+	}
+.meaning:after {
+	content: ')';
+	font-style: normal;
+	}
+.ex  { cursor: pointer; color: red; }
+.uname {
+    font-size: 75%;
+    margin: 0 2px;
+	}
 
+p.large {
+	text-align: center;
+	}
+.instructions {
+	font-style: italic;
+	}
+h2 {
+    font-size: 180%;
+	}
+
+
+#features {
+	float: right;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 3em;
+	right: 1em;
+	width: 28%;
+	text-align: right;
+	margin-top: 7em;
+	}
 #features table td {
 	text-align: left;
 	padding: 0 5px;
-	font-size: 100%;
 	line-height: 1.5;
+	font-size: 80%;
 	}
 #features table th {
 	font-weight: 400;
+	font-size: 60%;
 	}
 #features table {
-	margin: 0;
+	margin: auto;
 	}
 
 #features a { font-size: 110%; font-weight:normal; }
@@ -34,10 +89,33 @@
 #fontcontrols { font-size: 12px; }
 #fontcontrols form { display: inline; }
 
+#fontsetting {
+    line-height: 1em;
+    position: fixed;
+    bottom: 35px;
+    background-color: #eee;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding-top: 0;
+    z-index: 1000;
+	}
 #fontsetting { width: 270px; }
 #fontsetting.open { right: 0px; }
 #fontsetting.closed { right: -258px; }
-#fontsettingswitch { height: 130px; }
+#fontsetting h2 {
+    margin-top: 10px;
+    margin-left: 12px;
+    vertical-align: middle;
+	}
+
+#fontsettingswitch {
+    float: left;
+    height: 130px;
+    width: 12px;
+    background-color: #b4d5ff;
+    font-size: 12px;
+    cursor: pointer;
+	}
 
 
 #showNotes { text-align: right; font-size: 80%; }
@@ -45,3 +123,63 @@
 #sources { font-size: 90%; }
 
 .ref { vertical-align: super; }
+
+
+
+/* ====================== */
+#panel { 
+	position: fixed; 
+	bottom: 20px; 
+	right: 10px; 
+	padding: 0.5em; 
+	width: 26%; 
+	background-color:#ffe; 
+	border: 1px solid #CCC; 
+	box-shadow: 7px 7px 5px #888; 
+	padding: 5px 10px 5px 15px; 
+	border-radius: 10px; 
+	z-index:2000;
+	width: 28%;
+	font-size: 80%;
+	text-align: left;
+	text-align: start;
+	max-height: 80%;
+	overflow: auto;
+	}
+#panel img { vertical-align: middle; }
+#panel p { margin: 0; margin-top: 3px; }
+#panel #title { 
+	font-size: 200%; 
+	color: #F00;
+	}
+/* ====================== */
+
+
+.ctlink {
+    text-align: center;
+    font-size: 70%;
+    margin: 0;
+}
+
+
+.set_vertical_rl {
+	writing-mode: vertical-rl;
+	}
+.set_horizontal {
+	writing-mode: horizontal-tb;
+	}
+
+
+.cldrList { 
+	margin: 0 32% 0 7.5%; 
+	}
+.cldrList td {
+	padding: 0 .5em;
+	text-align:start;
+	}
+.cldrList th {
+	padding: .5em .5em;
+	text-align:end;
+	vertical-align:top;
+	line-height: 1.2;
+	}
