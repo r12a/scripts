@@ -160,7 +160,7 @@ function getLanguage(node) {
 	}
 
 
-function showtext () {
+function showtext (sourceName) {
 	// when text is highlighted in the freeText area, display the character list
 	text=getSelected()
 	if (text.focusOffset > text.anchorOffset) {
@@ -172,7 +172,7 @@ function showtext () {
 		var end = text.anchorOffset
 		}
 	var highlight = text.focusNode.nodeValue.substr(start, end-start)
-	var source = document.getElementById('freeText')
+	var source = document.getElementById(sourceName)
 	showNameDetails(highlight, source.lang, source.dataset.base, source.dataset.target, document.getElementById('panel') )
 	}
 
