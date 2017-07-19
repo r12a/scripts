@@ -34,6 +34,10 @@
 
 <p>Add the range of characters: <input type="text" id="in" placeholder="0000:0000"/> <button onClick="document.getElementById('out').value = makeList(document.getElementById('in').value)">Go</button></p>
 
+<p>OR</p>
+
+<p>Add a list of space-separated characters: <input type="text" id="listin" placeholder="a b c ..."/> <button onClick="document.getElementById('out').value = makeListFromChars(document.getElementById('listin').value)">Go</button></p>
+
 <textarea id="out" style="height:400px;width:100%;"></textarea>
 
 
@@ -43,7 +47,7 @@
    &lt;span class=&quot;trans&quot;&gt;ḥ&lt;/span&gt; &amp;nbsp;&amp;nbsp; &lt;span class=&quot;ipa&quot;&gt;&lt;/span&gt;&lt;/p&gt;<br>&lt;p&gt;&lt;span class=&quot;ipa&quot;&gt;pɑ&lt;/span&gt; explanation_of_usage&lt;/p&gt;<br>&lt;/div&gt;<br>&lt;p&gt;information_thats_not_language_specific &lt;span class=&quot;trans&quot;&gt;ḥ&lt;/span&gt;&lt;/p&gt;<br>&lt;p class=&quot;ref&quot;&gt;&lt;a href=&quot;#refs&quot;&gt;Refs&lt;/a&gt;:<br>   [1] [Daniels] pp564-568 &amp;nbsp;<br>   [2] [Unicode] &lt;a href=&quot;http://www.unicode.org/versions/latest/ch13.pdf#Thaana&quot; target=&quot;_blank&quot;&gt;pp509-510&lt;/a&gt; &amp;nbsp;<br>   [3] Wikipedia: &lt;a href=&quot;https://en.wikipedia.org/wiki/Thaana&quot; target=&quot;_blank&quot;&gt;Thaana&lt;/a&gt; &amp;nbsp;<br>&lt;/p&gt;&lt;/div&gt;</pre>
 
 <div class="smallprint"><span id="version">First published  3 Feb 2008.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-07-05  10:11<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2017-07-18  9:51<!-- #EndDate --> 
 </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 <script type="text/javascript">
@@ -56,6 +60,42 @@ function makeList (range) {
 	var out = ''
 	
 	for (i=start; i<end; i++) {
+		if (U[i]) { 
+			var hex = i.toString(16).toUpperCase()
+			while (hex.length < 4) hex = '0' + hex
+			console.log(hex)
+			unicodenotes = ''
+			if (desc[i]) {
+				var unicodenotes = desc[i]
+				unicodenotes = unicodenotes.replace(/¶/,'')
+				unicodenotes = unicodenotes.replace(/¶/g,'<br/>')
+				}
+			console.log(unicodenotes)
+			var dbrecord = U[i].split(';')
+			var cpName = dbrecord[1]
+			
+			out += '<div class="character" id="char'+hex+'">\n'
+			out += '<div class="charimg">&#x'+hex+';</div>\n'
+			out += '<p class="charname"><strong>U+'+hex+'</strong> <a href="#char'+hex+'">'+cpName+'</a></p>\n'
+			out += '<p class="univiewLink"><a target="_blank" href="/uniview/?char='+hex+'">See in UniView</a></p>\n'
+			if (unicodenotes) {
+				out += '<p class="subtitle">Description in the Unicode standard:</p>\n'
+				out += '<div class="unicodenotes">'+unicodenotes+'</div>\n'
+				}
+			out += '</div>\n\n'
+			}
+		}
+	return out
+	}
+
+function makeListFromChars (chars) {
+	var charList = chars.split(' ')
+	
+	var out = ''
+	
+	for (var x=0; x<charList.length; x++) {
+		var i = charList[x].codePointAt(0)
+		console.log(i)
 		if (U[i]) { 
 			var hex = i.toString(16).toUpperCase()
 			while (hex.length < 4) hex = '0' + hex
