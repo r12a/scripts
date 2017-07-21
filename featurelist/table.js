@@ -124,7 +124,7 @@ function resort (column) {
 		}	
 	
 	for (var col in tablecolumns) {
-		table += '<th class="top"><a href="#theTable" onclick="resort(\''+col+'\');">'+tablecolumns[col]+'</a></th>'+"\n";
+		table += '<th class="top"><a href="#theTable" onclick="resort(\''+col+'\'); return false;">'+tablecolumns[col]+'</a></th>'+"\n";
 		}
 	
 	
