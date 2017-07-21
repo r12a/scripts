@@ -36,7 +36,7 @@ function makeSidePanel (script, otherlinks) {
 		}
 	
 	// process other links, eg. Punctuation:punctuation,Tones:tones
-	var links = otherlinks.split(',')
+	/*var links = otherlinks.split(',')
 	for (i=0;i<links.length;i++) {
 		var parts = links[i].split(':')
 		out += '<tr><th>'
@@ -45,7 +45,7 @@ function makeSidePanel (script, otherlinks) {
 		if (document.getElementById(parts[1])) out +='<a href="#'+parts[1]+'">'+parts[0]+'</a>'
 		else out += parts[0]
 		out += '</td></tr>'
-		}
+		} */
 	return out
 	}
 	
