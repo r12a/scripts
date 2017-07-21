@@ -71,7 +71,7 @@ function resort (column) {
 			var fc = 0;
 			var linked = ''
 			table += '<tr>';
-			if (scriptData[i].linked) linked = " \u003Ca href='/scripts/summaries/"+scriptData[i].linked+"' target='_blank'>\u003Cimg src='link.png' alt='details'/>\u003C/a>"
+			if (scriptData[i].linked) linked = " \u003Ca href='/scripts/"+scriptData[i].linked+"' target='_blank'>\u003Cimg src='link.png' alt='details'/>\u003C/a>"
 			table += '<td title="'+tablecolumns.script+'" style="text-align:right;">'+scriptData[i].script+'</td>'
 			table += '<td title="Link to more details">'+linked+'</td>'
 			table += '<td title="'+tablecolumns.numchars+'">'+scriptData[i].chars+'</td>';
