@@ -1,223 +1,162 @@
-reviews = [ 
+/*
 
-//	Add entries in any order, according to the following pattern:
-//	array ( "Language",
-//		"Script", 
-//		"Number of characters in Unicode", 
-//		"Case sensitive?", 
-//		"Combining characters: y/n", 
-//		"Context dependent positioning: y/n", 
-//		"Multiple combining diacritics",
-//		"Contextual shaping required", 
-//		"Cursive script",
-//		"Ligatures"
-//		"Right-to-left",
-//		"No space as word separator",
-//		"Baseline",
-//		"Tall/complex characters",
-//		"Case distinction",
-//		),
+var scriptData = [ 
 
-//								Context	Mult	Context								No						
-//		No.		case	CC		Posn	CC		Shaping	Cursive	RTL				Space	Baseln	Wrap		Justify	Region
-	 [ "Tamazight", "Tifinagh", 	
-	   32, 	"yes", 	0, 	"no", 	"no", 	"no",	"no", 	"ltr (rtl,b,vtb,vbt)",			"yes",	"mid",	"space",	"space", 	"Europe"],
-	 [ "English", "Latin \u003Ca href='/scripts/summaries/latin'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 	
-	   52, 	"yes", 	0, 	"no", 	"no", 	"no",	"no", 	"ltr",			"yes",	"mid",	"space",	"space", 	"Europe"],
-	 [ "Amharic", "Ethiopic", 
-	   288, 	"no", 	1, 	"no", 	"no", 	"no",	"no", 	"ltr",			"no",	"mid",	"char",		"space",	"Africa"],
-	 [ "Arabic", "Arabic \u003Ca href='/scripts/summaries/arabic'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 	
-	   44, 	"no", 	8, 	"yes", 	"yes", 	"yes",	"yes", 	"rtl",			"yes",	"mid",	"space",	"word", 	"M East"],
-	 [ "Armenian", "Armenian", 
-	   84, 	"yes", 	0, 	"no", 	"no", 	"no",	"no", 	"ltr",			"yes",	"mid",	"space",	"space",	"Europe"],
-	 [ "Bengali", "Bengali", 	
-	   68, 	"no", 	19, 	"yes", 	"yes", 	"yes",	"no", 	"ltr",			"yes",	"high",	"space",	"space", 	"Asia S"],
-	 [ "Burmese", "Myanmar", 	
-	   59, 	"no", 	17, 	"yes", 	"yes", 	"yes",	"no", 	"ltr",			"no",	"mid",	"word",		"cluster", 	"Asia SE"],
-	 [ "Cambodian", "Khmer", 
-	   76, 	"no", 	29, 	"yes", 	"yes", 	"yes",	"no", 	"ltr",			"no",	"mid",	"word",		"cluster",	"Asia SE"],
-	 [ "Cherokee", "Cherokee \u003Ca href='/scripts/summaries/cherokee'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 	
-	   172, 	"yes", 	0, 	"no", 	"no", 	"no",	"no", 	"ltr",			"yes",	"mid",	"space",	"space", 	"America"],
-	 [ "Chinese", "Han \u003Ca href='/scripts/summaries/han'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 
-	   2128, 	"no", 	0, 	"no", 	"no", 	"no",	"no", 	"ltr / tbrl",	"no",	"low",	"char",		"char",		"Asia E"],
-	 [ "Dzongkha", "Tibetan \u003Ca href='/scripts/summaries/tibetan'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 
-	   54, 	"no", 	26, 	"yes", 	"yes", 	"yes",	"no", 	"ltr",			"no",	"high",	"special",	"char/special",		"Asia C"],
-	 [ "French", "Latin \u003Ca href='/scripts/summaries/latin'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 
-	   84, 	"yes", 	0, 	"no", 	"no", 	"no",	"no", 	"ltr",			"yes",	"mid",	"space",	"space",	"Europe"],
-	 [ "Greek", "Greek \u003Ca href='/scripts/summaries/greek'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 
-	   71, 	"yes", 	0, 	"no", 	"no", 	"no",	"no", 	"ltr",			"yes",	"mid",	"space",	"space",	"Europe"],
-	 [ "Gujarati", "Gujarati", 	
-	   68, 	"no", 	18, 	"yes", 	"yes", 	"yes",	"no", 	"ltr",			"yes",	"high",	"space",	"space", 	"Asia S"],
-	 [ "Hausa", "Latin \u003Ca href='/scripts/summaries/latin'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 	
-	   51, 	"yes", 	0, 	"no", 	"no", 	"no",	"no", 	"ltr",			"yes",	"mid",	"space",	"space", 	"Africa"],
-	 [ "Hebrew", "Hebrew \u003Ca href='/scripts/summaries/hebrew'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 
-	   27, 	"no", 	0, 	"no", 	"no", 	"no",	"no", 	"rtl",			"yes",	"mid",	"space",	"space",	"M East"],
-	 [ "Hindi", "Devanagari \u003Ca href='/scripts/summaries/devanagari'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 	
-	   78, 	"no", 	18, 	"yes", 	"yes", 	"yes",	"no", 	"ltr",			"yes",	"high",	"space",	"space", 	"Asia S"],
-	 [ "Igbo", "Latin \u003Ca href='/scripts/summaries/latin'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 	
-	   56, 	"yes", 	0, 	"no", 	"no", 	"no",	"no", 	"ltr",			"yes",	"mid",	"space",	"space", 	"Africa"],
-	 [ "Inuktitut", "UCAS", 	
-	   109, 	"no", 	0, 	"no", 	"no", 	"no",	"no", 	"ltr",			"yes",	"mid",	"space",	"space", 	"America"],
-	 [ "Kannada", "Kannada", 	
-	   82, 	"no", 	19, 	"yes", 	"yes", 	"yes",	"no", 	"ltr",			"yes",	"mid",	"space",	"space", 	"Asia S"],
-	 [ "Indonesian", "Latin \u003Ca href='/scripts/summaries/latin'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 	
-	   46, 	"yes", 	0, 	"no", 	"no", 	"no",	"no", 	"ltr",			"yes",	"mid",	"space",	"space", 	"Asia SE"],
-	 [ "Japanese", "Han, Kana \u003Ca href='/scripts/summaries/japanese'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 
-	   2128, 	"no", 	0, 	"no", 	"no", 	"no",	"no", 	"ltr / tbrl",	"no",	"low",	"char",		"char",		"Asia E"],
-	 [ "Korean", "Hangul \u003Ca href='/scripts/summaries/korean'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 
-	   2350, 	"no", 	0, 	"no", 	"no", 	"no",	"no", 	"ltr / tbrl",	"yes",	"low",	"char",		"space",	"Asia E"],
-	 [ "Lao", "Lao", 
-	   55, 	"no", 	15, 	"yes", 	"yes", 	"yes",	"no", 	"ltr",			"no",	"mid",	"word",		"cluster",	"Asia SE"],
-	 [ "Malayalam", "Malayalam", 	
-	   70, 	"no", 	16, 	"yes", 	"yes", 	"no",	"no", 	"ltr",			"yes",	"mid",	"space",	"space", 	"Asia S"],
-	 [ "Mongolian", "Cyrillic \u003Ca href='/scripts/summaries/cyrillic'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 
-	   35, 	"yes", 	0, 	"no", 	"no", 	"no",	"no", 	"ltr",			"yes",	"mid",	"space",	"space",	"Asia C"],
-	 [ "Mongolian", "Mongolian", 
-	   45, 	"no", 	0, 	"no", 	"no", 	"yes",	"yes", 	"tblr",			"yes",	"vertical",	"space",	"space",	"Asia C"],
-	 [ "Nepali", "Devanagari \u003Ca href='/scripts/summaries/devanagari'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 	
-	   68, 	"no", 	18, 	"yes", 	"yes", 	"yes",	"no", 	"ltr",			"yes",	"high",	"space",	"space", 	"Asia S"],
-	 [ "Oriya", "Oriya", 	
-	   62, 	"no", 	15, 	"yes", 	"yes", 	"yes",	"no", 	"ltr",			"yes",	"mid",	"space",	"space", 	"Asia S"],
-	 [ "Panjabi", "Gurmukhi", 	
-	   68, 	"no", 	13, 	"yes", 	"yes", 	"yes",	"no", 	"ltr",			"yes",	"high",	"space",	"space", 	"Asia S"],
-	 [ "Persian", "Arabic \u003Ca href='/scripts/summaries/arabic'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 	
-	   43, 	"no", 	5, 	"yes", 	"no", 	"yes",	"yes", 	"rtl",			"yes",	"mid",	"space",	"word", 	"M East"],
-	 [ "Portuguese [BR]", "Latin \u003Ca href='/scripts/summaries/latin'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 
-	   78, 	"yes", 	0, 	"no", 	"no", 	"no",	"no", 	"ltr",			"yes",	"mid",	"space",	"space",	"Europe"],
-	 [ "Russian", "Cyrillic \u003Ca href='/scripts/summaries/cyrillic'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 
-	   66, 	"yes", 	0, 	"no", 	"no", 	"no",	"no", 	"ltr",			"yes",	"mid",	"space",	"space",	"Europe"],
-	 [ "Spanish", "Latin \u003Ca href='/scripts/summaries/latin'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 	
-	   66, 	"yes", 	0, 	"no", 	"no", 	"no",	"no", 	"ltr",			"yes",	"mid",	"space",	"space", 	"Europe"],
-	 [ "Swahili", "Latin \u003Ca href='/scripts/summaries/latin'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 	
-	   48, 	"yes", 	0, 	"no", 	"no", 	"no",	"no", 	"ltr",			"yes",	"mid",	"space",	"space", 	"Africa"],
-	 [ "Tamil", "Tamil", 	
-	   47, 	"no", 	12, 	"yes", 	"yes", 	"yes",	"no", 	"ltr",			"yes",	"mid",	"space",	"space", 	"Asia S"],
-	 [ "Telugu", "Telugu", 	
-	   70, 	"no", 	19, 	"yes", 	"yes", 	"yes",	"no", 	"ltr",			"yes",	"mid",	"space",	"space", 	"Asia S"],
-	 [ "Thai", "Thai \u003Ca href='/scripts/summaries/thai'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 
-	   73, 	"no", 	16, 	"yes", 	"yes", 	"no",	"no", 	"ltr",			"no",	"mid",	"word",		"cluster",	"Asia SE"],
-	 [ "Tibetan", "Tibetan \u003Ca href='/scripts/summaries/tibetan'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 
-	   87, 	"no", 	51, 	"yes", 	"yes", 	"yes",	"no", 	"ltr",			"no",	"high",	"special",	"char/special",		"Asia C"],
-	 [ "Urdu", "Arabic \u003Ca href='/scripts/summaries/arabic'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 	
-	   50, 	"no", 	0, 	"no", 	"no", 	"yes",	"yes", 	"rtl",			"no",	"slope", "space",	"word", 	"Asia S"],
-	 [ "Yoruba", "Latin \u003Ca href='/scripts/summaries/latin'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 	
-	   70, 	"yes", 	2, 	"no", 	"no", 	"no",	"no", 	"ltr",			"yes",	"mid",	"space",	"space", 	"Africa"],
-	 [ "Vietnamese", "Latin \u003Ca href='/scripts/summaries/latin'>\u003Cimg src='link.png' alt='details'/>\u003C/a>", 	
-	   186, 	"yes", 	0, 	"no", 	"no", 	"no",	"no", 	"ltr",			"yes",	"mid",	"space",	"space", 	"Asia SE"]
-		
-	];
+{ script:"Arabic", type:"abjad", chars:390, cchars:95, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"yes", dir:"rtl", wordsep:"space", baseline:"mid", wrap:"word", justify:"word/space", digits:"yes", region:"M East" },
 
-// work out complexity
-	for (var n=0;n<reviews.length;n++) {
-		complexity = 0;
-		for (i=3;i<reviews[n].length-1;i++) { 
-			if (reviews[n][i] != '0' && reviews[n][i] != 'no' && reviews[n][i] != 'mid') { complexity++; }
-			}
-		reviews[n][reviews[n].length] = complexity; 
-		}
+{ script:"Armenian", type:"alpha", chars:89, cchars:0, cs:"yes", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"no", region:"M East" },
 
+{ script:"Bengali", type:"abugida", chars:95, cchars:19, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"high", wrap:"word", justify:"space", digits:"yes", region:"Asia S" },
 
+{ script:"Cherokee", type:"syllabic", chars:172, cchars:0, cs:"yes", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"no", region:"America" },
+
+{ script:"Cyrillic", type:"alpha", chars:441, cchars:55, cs:"yes", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"no", region:"Europe", linked:"cyrillic" },
+
+{ script:"Devanagari", type:"abugida", chars:158, cchars:52, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"high", wrap:"word", justify:"space", digits:"yes", region:"Asia S", linked:"devanagari" },
+
+{ script:"Ethiopic", type:"syllabic", chars:495, cchars:3, cs:"no", gpos:"no", mcchars:"?", gsub:"no", cursive:"no", dir:"ltr", wordsep:"፡", baseline:"mid", wrap:"word", justify:"፡", digits:"yes", region:"Africa" },
+
+{ script:"Greek", type:"alpha", chars:368, cchars:0, cs:"yes", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"no", region:"Europe", linked:"greek" },
+
+{ script:"Gujarati", type:"abugida", chars:91, cchars:26, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"high?", wrap:"word", justify:"space", digits:"yes", region:"Asia S" },
+
+{ script:"Gurmukhi", type:"abugida", chars:79, cchars:18, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"high", wrap:"word", justify:"space", digits:"yes", region:"Asia S" },
+
+{ script:"Han", type:"ideogr", chars:87915, cchars:0, cs:"no", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr/tbrl", wordsep:"no", baseline:"low", wrap:"char", justify:"char", digits:"yes", region:"Asia E", linked:"han" },
+
+{ script:"Hangul", type:"ideogr", chars:11183, cchars:0, cs:"no", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr/tbrl", wordsep:"space", baseline:"low", wrap:"char", justify:"space", digits:"no", region:"Asia E" },
+
+{ script:"Hebrew", type:"abjad", chars:87, cchars:51, cs:"no", gpos:"yes", mcchars:"yes", gsub:"no", cursive:"no", dir:"rtl", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", region:"M East", digits:"no", linked:"hebrew" },
+
+{ script:"Kana", type:"ideogr", chars:492, cchars:0, cs:"no", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr/tbrl", wordsep:"no", baseline:"low", wrap:"char", justify:"char", digits:"no", region:"Asia E", linked:"japanese" },
+
+{ script:"Kannada", type:"abugida", chars:88, cchars:22, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"yes", region:"Asia S" },
+
+{ script:"Khmer", type:"abugida", chars:146, cchars:33, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"no", baseline:"mid", wrap:"word", justify:"cluster", digits:"yes", region:"SE Asia" },
+
+{ script:"Lao", type:"alpha", chars:67, cchars:15, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"no", baseline:"mid", wrap:"word", justify:"cluster", digits:"yes", region:"SE Asia" },
+
+{ script:"Latin", type:"alpha", chars:1286, cchars:0, cs:"yes", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"yes", region:"Eur/Am" },
+
+{ script:"Malayalam", type:"abugida", chars:117, cchars:23, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"yes", region:"Asia S" },
+
+{ script:"Mongolian", type:"alpha", chars:156, cchars:6, cs:"no", gpos:"yes", mcchars:"no?", gsub:"yes", cursive:"yes", dir:"tblr", wordsep:"space", baseline:"vertical", wrap:"?", justify:"?", digits:"yes", region:"Asia C" },
+
+{ script:"Myanmar", type:"abugida", chars:223, cchars:62, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"no", baseline:"mid", wrap:"word", justify:"cluster", digits:"yes", region:"SE Asia" },
+
+{ script:"Oriya", type:"abugida", chars:90, cchars:20, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"yes", region:"Asia S" },
+
+{ script:"Tamil", type:"abugida", chars:72, cchars:14, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"yes", region:"Asia S" },
+
+{ script:"Telugu", type:"abugida", chars:96, cchars:22, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"yes", region:"Asia S" },
+
+{ script:"Thaana", type:"alpha", chars:50, cchars:11, cs:"no", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"rtl", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", region:"SAsia", digits:"no" },
+
+{ script:"Thai", type:"abugida", chars:87, cchars:16, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"no", baseline:"mid", wrap:"word", justify:"cluster", digits:"yes", region:"Asia SE" },
+
+{ script:"Tibetan", type:"abugida", chars:211, cchars:77, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"no", baseline:"high", wrap:"syllable", justify:"special", digits:"yes", region:"Asia C", linked:"tibetan" },
+	   
+{ script:"Tifinagh", type:"alpha", chars:32, cchars:0, cs:"yes", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr (+other)", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"yes", region:"Europe" },
+	   
+{ script:"UCAS", type:"?", chars:710, cchars:0, cs:"no", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"no", region:"Europe" },
+	   
+]
+
+*/
+
+var by = function (path, reverse, primer, then) {
+    var get = function (obj, path) {
+            if (path) {
+                path = path.split('.');
+                for (var i = 0, len = path.length - 1; i < len; i++) {
+                    obj = obj[path[i]];
+                }
+                return obj[path[len]];
+            }
+            return obj;
+        },
+        prime = function (obj) {
+            return primer ? primer(get(obj, path)) : get(obj, path);
+        };
+    
+    return function (a, b) {
+        var A = prime(a),
+            B = prime(b);
+        
+        return (
+            (A < B) ? -1 :
+            (A > B) ?  1 :
+            (typeof then === 'function') ? then(a, b) : 0
+        ) * [1,-1][+!!reverse];
+	}
+} // from http://jsfiddle.net/gfullam/sq9U7/
+     
 
 
 function resort (column) { 
 
-table = '';
-
-table += '<table id="reviewtable"><thead><tr>';
-
-	tablecolumns = [
-		"Language",
-		"Script",
-		"Number of characters", 
-		"Case sensitive?", 
-		"Combining characters", 
-		"Context-based positioning", 
-		"Multiple combining characters",
-		"Contextual shaping", 
-		"Cursive script",
-		"Text direction",
-		"Space is word separator",
-		"Baseline",
-		"Text wrap",
-		"Justification",
-		"Region",
-		"Feature count"
-		];
 	
-	for (var i=0;i<tablecolumns.length;i++) {
-		table += '<th class="top"><a href="#theTable" onclick="resort(col='+i+');">'+tablecolumns[i]+'</a></th>'+"\n";
+	scriptData.sort(by(column))
+	
+	var table = ''
+	table += '<table id="reviewtable"><thead><tr>';
+	
+	
+	
+	var tablecolumns = {
+		script:"Script name",
+		linked:" ", 
+		chars:"Number of characters", 
+		cchars:"Combining characters", 
+		cs:"Case sensitive?", 
+		gpos:"Context-based positioning", 
+		mcchars:"Multiple combining characters",
+		gsub:"Contextual shaping", 
+		cursive:"Cursive script",
+		dir:"Text direction",
+		wordsep:"Word separator",
+		baseline:"Baseline",
+		wrap:"Text wrap",
+		justify:"Justification",
+		digits:"Native digits?",
+		region:"Region of origin",
+		fcount:"Feature count"
+		}	
+	
+	for (var col in tablecolumns) {
+		table += '<th class="top"><a href="#theTable" onclick="resort(\''+col+'\');">'+tablecolumns[col]+'</a></th>'+"\n";
 		}
-
-
-table += '</tr></thead><tbody>';
-
-language = 0;
-script = 1;
-numchars = 2;
-ccase = 3;
-combining = 4;
-position = 5;
-multcc = 6;
-shaping = 7;
-cursive = 8;
-direction = 9;
-spacesep = 10;
-baseline = 11;
-wrap = 12;
-justify = 13;
-region = 14;
-fcount = 15;
-
-		//var column = language;
-		//if (isset($_GET['col']) && $_GET['col']!='') { $column=$_GET['col']; }
-
-		for (i=0;i<reviews.length;i++) {
-			temp = reviews[i][column];
-			reviews[i][column] = reviews[i][0];
-			reviews[i][0] = temp;
-			}
-
-		//if (column == language || column == script || column == spacesep ) { reviews.sort(); }
-		//else { reviews.sort(function(a,b){return a-b}); }
-		if (column == language || column == script || column == spacesep ) { reviews.sort(); }
-		else if (column == numchars || column == combining || column == fcount ) { reviews.sort(function(a,b){var x=a[0];var y=b[0];return x-y}); }
-		else { reviews.sort(); }
-		
-		for (i=0;i<reviews.length;i++) {
-			temp = reviews[i][column];
-			reviews[i][column] = reviews[i][0];
-			reviews[i][0] = temp;
-			}
 	
-		for (r=0;r<reviews.length;r++) {
+	
+	table += '</tr></thead><tbody>'
+	
+
+
+		for (var i=0;i<scriptData.length;i++) {
 			var fc = 0;
+			var linked = ''
 			table += '<tr>';
-			table += '<th class="rowstart">'+reviews[r][language]+'</th>';
-			table += '<td title="'+tablecolumns[script]+'">'+reviews[r][script]+'</td>';
-			table += '<td title="'+tablecolumns[numchars]+'">'+reviews[r][numchars]+'</td>';
-			table += '<td title="'+tablecolumns[ccase]+'"'; if (reviews[r][ccase]!='no'){table += 'class="y"'; fc++; } table += '>'+reviews[r][ccase]+'</td>';
-			table += '<td title="'+tablecolumns[combining]+'"'; if (reviews[r][combining]!='0'){table += 'class="y"'; fc++;} table += '>'+reviews[r][combining]+'</td>';
-			table += '<td title="'+tablecolumns[position]+'"'; if (reviews[r][position]!='no'){table += 'class="y"'; fc++;} table += '>'+reviews[r][position]+'</td>';
-			table += '<td title="'+tablecolumns[multcc]+'"'; if (reviews[r][multcc]!='no'){table += 'class="y"'; fc++;} table += '>'+reviews[r][multcc]+'</td>';
-			table += '<td title="'+tablecolumns[shaping]+'"'; if (reviews[r][shaping]!='no'){table += 'class="y"'; fc++;} table += '>'+reviews[r][shaping]+'</td>';
-			table += '<td title="'+tablecolumns[cursive]+'"'; if (reviews[r][cursive]!='no'){table += 'class="y"'; fc++;} table += '>'+reviews[r][cursive]+'</td>';
-			table += '<td title="'+tablecolumns[direction]+'"'; if (reviews[r][direction]!='ltr'){table += 'class="y"'; fc++;} table += '>'+reviews[r][direction]+'</td>';
-			table += '<td title="'+tablecolumns[spacesep]+'"'; if (reviews[r][spacesep]!='yes'){table += 'class="y"'; fc++;} table += '>'+reviews[r][spacesep]+'</td>';
-			table += '<td title="'+tablecolumns[baseline]+'"'; if (reviews[r][baseline]!='mid'){table += 'class="y"'; fc++;} table += '>'+reviews[r][baseline]+'</td>';
-			table += '<td title="'+tablecolumns[wrap]+'"'; if (reviews[r][wrap]!='space'){table += 'class="y"'; fc++;} table += '>'+reviews[r][wrap]+'</td>';
-			table += '<td title="'+tablecolumns[justify]+'"'; if (reviews[r][justify]!='space'){table += 'class="y"'; fc++;} table += '>'+reviews[r][justify]+'</td>';
-			table += '<td title="'+tablecolumns[region]+'">'+reviews[r][region]+'</td>';
+			if (scriptData[i].linked) linked = " \u003Ca href='/scripts/summaries/"+scriptData[i].linked+"' target='_blank'>\u003Cimg src='link.png' alt='details'/>\u003C/a>"
+			table += '<td title="'+tablecolumns.script+'" style="text-align:right;">'+scriptData[i].script+'</td>'
+			table += '<td title="Link to more details">'+linked+'</td>'
+			table += '<td title="'+tablecolumns.numchars+'">'+scriptData[i].chars+'</td>';
+			table += '<td title="'+tablecolumns.cchars+'"'; if (scriptData[i].cchars!==0){table += 'class="y"'; fc++;} table += '>'+scriptData[i].cchars+'</td>';
+			table += '<td title="'+tablecolumns.cs+'"'; if (scriptData[i].cs!=='no'){table += 'class="y"'; fc++; } table += '>'+scriptData[i].cs+'</td>';
+			table += '<td title="'+tablecolumns.gpos+'"'; if (scriptData[i].gpos!=='no'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].gpos+'</td>';
+			table += '<td title="'+tablecolumns.mcchars+'"'; if (scriptData[i].mcchars!=='no'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].mcchars+'</td>';
+			table += '<td title="'+tablecolumns.gsub+'"'; if (scriptData[i].gsub!=='no'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].gsub+'</td>';
+			table += '<td title="'+tablecolumns.cursive+'"'; if (scriptData[i].cursive!=='no'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].cursive+'</td>';
+			table += '<td title="'+tablecolumns.dir+'"'; if (scriptData[i].dir!=='ltr'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].dir+'</td>';
+			table += '<td title="'+tablecolumns.wordsep+'"'; if (scriptData[i].wordsep!=='space'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].wordsep+'</td>';
+			table += '<td title="'+tablecolumns.baseline+'"'; if (scriptData[i].baseline!=='mid'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].baseline+'</td>';
+			table += '<td title="'+tablecolumns.wrap+'"'; if (scriptData[i].wrap!=='word'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].wrap+'</td>';
+			table += '<td title="'+tablecolumns.justify+'"'; if (scriptData[i].justify!=='space'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].justify+'</td>';
+			table += '<td title="'+tablecolumns.digits+'"'; if (scriptData[i].digits!=='no'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].digits+'</td>';
+			table += '<td title="'+tablecolumns.region+'">'+scriptData[i].region+'</td>';
 			
-			// work out complexity
-			//complexity = 0;
-			//for (i=3;i<14;i++) { 
-			//	if (reviews[r][i] != '0' && reviews[r][i] != 'no' && reviews[r][i] != 'mid') { complexity++; }
-			//	}
-			//table += '<td title="'+tablecolumns[15]+'">'+reviews[r][15]+'</td>';
 			table += '<td title="'+tablecolumns[15]+'">'+fc+'</td>';
 			table += '</tr>'+"\n";
 			}
-
 
 
 document.getElementById('theTable').innerHTML = table;
