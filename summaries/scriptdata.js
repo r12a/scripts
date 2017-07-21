@@ -5,7 +5,9 @@ var scriptData = [
 
 { script:"Armenian", type:"alpha", chars:89, cchars:0, cs:"yes", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"no", region:"M East" },
 
-{ script:"Bengali", type:"abugida", chars:95, cchars:19, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"high", wrap:"word", justify:"space", digits:"yes", region:"Asia S" },
+{ script:"Balinese", type:"abugida", chars:121, cchars:31, cs:"no", gpos:"yes", mcchars:"no", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"no", baseline:"mid", wrap:"syllable", justify:"?", digits:"yes", region:"Asia SE", linked:"balinese" },
+
+{ script:"Bengali", type:"abugida", chars:95, cchars:19, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"high", wrap:"word", justify:"space", digits:"yes", region:"Asia S", linked:"bengali" },
 
 { script:"Cherokee", type:"syllabic", chars:172, cchars:0, cs:"yes", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"no", region:"America", linked:"cherokee" },
 
@@ -31,9 +33,9 @@ var scriptData = [
 
 { script:"Kannada", type:"abugida", chars:88, cchars:22, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"yes", region:"Asia S" },
 
-{ script:"Khmer", type:"abugida", chars:146, cchars:33, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"no", baseline:"mid", wrap:"word", justify:"cluster", digits:"yes", region:"Asia SE" },
+{ script:"Khmer", type:"abugida", chars:146, cchars:33, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"no", baseline:"mid", wrap:"word", justify:"cluster", digits:"yes", region:"Asia SE", linked:"khmer" },
 
-{ script:"Lao", type:"alpha", chars:67, cchars:15, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"no", baseline:"mid", wrap:"word", justify:"cluster", digits:"yes", region:"Asia SE" },
+{ script:"Lao", type:"alpha", chars:67, cchars:15, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"no", baseline:"mid", wrap:"word", justify:"cluster", digits:"yes", region:"Asia SE", linked:"lao" },
 
 { script:"Latin", type:"alpha", chars:1286, cchars:0, cs:"yes", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"yes", region:"Eur/Am" },
 
@@ -41,13 +43,13 @@ var scriptData = [
 
 { script:"Mongolian", type:"alpha", chars:156, cchars:6, cs:"no", gpos:"yes", mcchars:"no?", gsub:"yes", cursive:"yes", dir:"tblr", wordsep:"space", baseline:"vertical", wrap:"?", justify:"?", digits:"yes", region:"Asia C" },
 
-{ script:"Myanmar", type:"abugida", chars:223, cchars:62, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"no", baseline:"mid", wrap:"word", justify:"cluster", digits:"yes", region:"Asia SE" },
+{ script:"Myanmar", type:"abugida", chars:223, cchars:62, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"no", baseline:"mid", wrap:"word", justify:"cluster", digits:"yes", region:"Asia SE", linked:"myanmar" },
 
 { script:"N'Ko", type:"alpha", chars:59, cchars:9, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"yes", dir:"rtl", wordsep:"yes", baseline:"mid", wrap:"word", justify:"wd/str", digits:"yes", region:"Africa", linked:"nko" },
 
 { script:"Oriya", type:"abugida", chars:90, cchars:20, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"yes", region:"Asia S" },
 
-{ script:"Tamil", type:"abugida", chars:72, cchars:14, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"yes", region:"Asia S" },
+{ script:"Tamil", type:"abugida", chars:72, cchars:14, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"yes", region:"Asia S", linked:"tamil" },
 
 { script:"Telugu", type:"abugida", chars:96, cchars:22, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"yes", region:"Asia S" },
 
