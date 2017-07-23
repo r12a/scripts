@@ -4,8 +4,9 @@
 <meta charset="utf-8"/>
 <title>ishida &gt;&gt; scripts</title>
 <meta name="description" content="Lists of articles, papers and notes by Richard Ishida."/>
-<link rel="stylesheet" href="../style/docs.css" type="text/css" />
-<link rel="stylesheet" type="text/css" href="../scripts/linkdata/menu.css" />
+<link rel="stylesheet" href="../shared/style/docs.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="linkdata/menu.css" />
+<link rel="stylesheet" type="text/css" href="linkdata/scriptlinks.css" />
 <style type="text/css" media="all">
 h3 a:link {
 	color: gray;
@@ -36,20 +37,173 @@ iframe {
 	margin-top: 170px;
 	}
 </style>
-<script type="text/javascript" src="../code/boilerplate.js"></script>
+<script type="text/javascript" src="/shared/code/boilerplate.js"></script>
+<script type="text/javascript" src="linkdata/linkDB.js"></script>
+<script>
+function getData (script) {
+	var found = false
+	var record = null
+	for (var i=0;i<linkDB.length;i++) {
+		if (linkDB[i].code === script) {
+			record = linkDB[i]
+			found = true
+			break
+			}
+		}
+	if (! found) return '<p>No data found.</p>'
+	
+	script = linkDB[i].script
+	var lc = script.toLowerCase()
+	var norm = script.toLowerCase().replace(/ /g,'_')
+	
+	//console.log(record, record.info)
+	if ( linkDB[i].name ) out = '<h2>'+linkDB[i].name+'</h2>'
+	else out = '<h2>'+script+'</h2>'
+	out += '<table class="links"><tbody>'
+	if (record.info) {
+		out += '<tr><td>General info:</td><td>'
+		out += '<p><a href="http://scriptsource.org/scr/'+record.code+'" target="_blank">Scriptsource</a></p>'
+		if (record.info.wikipedia) out += '<p><a href="http://en.wikipedia.org/wiki/'+record.info.wikipedia+'" target="_blank">Wikipedia</a></p>'
+		if (record.info.omniglot) {
+			if ( record.info.omniglot.match('http') ) out += '<p><a href="'+record.info.omniglot+'" target="_blank">Omniglot</a></p>'
+			else out += '<p><a href="http://www.omniglot.com/writing/'+record.info.omniglot+'.htm" target="_blank">Omniglot</a></p>'
+			}
+		for (var r=2;r<record.local.length;r++) temp += '<p><a href="'+record.info[r].url+'" target="_blank">'+record.info[r].name+'</a></p>'
+		out += '</td></tr>'
+		}
+	if ((record.local && record.local.length) > 0 | scriptNotesSet.has(lc) | charNotesSet.has(lc) | compChartSet.has(lc) | scriptSummarySet.has(lc)) {
+		var temp = ''
+		temp += '<tr><td>r12a.github.io:</td><td>'
+		if (scriptNotesSet.has(lc)) temp += '<p><a href="/scripts/'+lc+'" target="_blank">Script summary</a></p>'
+		if (charNotesSet.has(lc)) temp += '<p><a href="/scripts/'+lc+'/block" target="_blank">Character notes</a></p>'
+		if (compChartSet.has(lc)) temp += '<p><a href="/scripts/featurelist/" target="_blank">Comparison chart</a></p>'
+		for (var r=0;r<record.local.length;r++) temp += '<p><a href="'+record.local[r].url+'" target="_blank">'+record.local[r].name+'</a></p>'
+		if (scriptSummarySet.has(lc)) temp += '<p><a href="/scripts/tutorial/summaries/'+lc+'" target="_blank">Tutorial notes</a></p>'
+		temp += '</td></tr>'
+		if (temp !== '<tr><td>This site:</td><td></td></tr>') out += temp
+		}
+	if (record.unicode) {
+		out += '<tr><td>Unicode info:</td><td>'
+		out += '<p><a href="http://www.unicode.org/versions/latest/ch'+chapters[norm]+'.pdf" target="_blank">Core text</a></p>'
+		out += '<p><a href="http://scriptsource.org/entry/'+ssHistory[norm]+'" target="_blank">Historical</a></p>'
+		out += '</td></tr>'
+		}
+	if (record.charts) {
+		out += '<tr><td>Charts:</td><td><table><tbody>'
+		for (var r=0;r<record.charts.length;r++) out += '<tr><td>'+record.charts[r]+'</td><td><a href="/uniview/?block='+record.charts[r].toLowerCase().replace(/ /g,'_')+'" target="_blank">UniView</a></td><td><a href="http://www.unicode.org/charts/PDF/U'+blockStart[record.charts[r].toLowerCase().replace(/ /g,'_')]+'.pdf" target="_blank">Unicode</a></td></tr>'
+		out += '</tbody></table></td></tr>'
+		}
+	if (record.pickers) {
+		var temp = ''
+		temp += '<tr><td>Pickers:</td><td>'
+		for (var r=0;r<record.pickers.length;r++) temp += '<p><a href="/pickers/'+record.pickers[r].url+'/" target="_blank">'+record.pickers[r].name+'</a></p>'
+		temp += '</td></tr>'
+		if (temp !== '<tr><td>Pickers:</td><td></td></tr>') out += temp
+		}
+	if (record.fontkey) {
+		var temp = ''
+		temp += '<tr><td>Fonts &amp; keyboards:</td><td>'
+		temp += '<p><a href="http://scriptsource.org/scr/'+record.code+'/font" target="_blank">Scriptsource</a></p>'
+		if (googleFontSet.has(norm)) temp += '<p><a href="https://www.google.com/get/noto/" target="_blank">Google Noto</a></p>'
+		if (googleEASet.has(norm)) temp += '<p><a href="http://www.google.com/fonts/earlyaccess" target="_blank">Google Early Access</a></p>'
+		if (gouFonts[norm]) temp += '<p><a href="http://www.wazu.jp/gallery/Fonts_'+gouFonts[norm]+'.html" target="_blank">Gallery of Unicode Fonts</a></p>'
+		for (var r=0;r<record.fontkey.length;r++) temp += '<p><a href="'+record.fontkey[r].url+'" target="_blank">'+record.fontkey[r].name+'</a></p>'
+		if (OSDefaultFontsSet.has(norm)) temp += '<p><a href="/scripts/fontlist/#'+norm+'" target="_blank">OS default fonts</a></p>'
+		temp += '</td></tr>'
+		if (temp !== '<tr><td>Fonts &amp; keyboards:</td><td></td></tr>') out += temp
+		}
+	if (record.layout) {
+		var temp = ''
+		temp += '<tr><td>Layout &amp; typography:</td><td>'
+		for (var r=0;r<record.layout.length;r++) temp += '<p><a href="'+record.layout[r].url+'" target="_blank">'+record.layout[r].name+'</a></p>'
+		if (typographyDocSet.has(norm)) temp += '<p><a href="http://w3c.github.io/typography/" target="_blank">International text layout and typography index</a></p>'
+		if (w3cTypographySet.has(norm)) temp += '<p><a href="https://github.com/w3c/i18n-activity/issues?q=is%3Aissue+is%3Aopen+label%3A'+lc+'" target="_blank">w3c/typography</a></p>'
+		if (w3cTypeSampleSet.has(norm)) temp += '<p><a href="https://w3c.github.io/type-samples/" target="_blank">w3c/type-samples</a></p>'
+		temp += '</td></tr>'
+		if (temp !== '<tr><td>Layout &amp; typography:</td><td></td></tr>') out += temp
+		}
+	if (record.other && record.other.length > 0) {
+		var temp = ''
+		temp += '<tr><td>Other:</td><td>'
+		for (var r=0;r<record.other.length;r++) temp += '<p><a href="'+record.other[r].url+'" target="_blank">'+record.other[r].name+'</a></p>'
+		temp += '</td></tr>'
+		if (temp !== '<tr><td>Other:</td><td></td></tr>') out += temp
+		}
+	out += '</table></tbody>'
+	document.getElementById('out').innerHTML = out
+	}
+
+
+function highlight (classNm, checkboxNode) {
+	// clear the other checkboxes
+	var checkboxes = document.getElementById('usage').querySelectorAll('input')
+	for (let i=0;i<checkboxes.length; i++) checkboxes[i].checked = false
+	checkboxNode.checked = true
+	
+	// fade everything first
+	var scripts = document.getElementById('scriptList').querySelectorAll('a.active, a.limited, a.historic')
+	for (let i=0;i<scripts.length;i++) scripts[i].style.color = '#ccc'
+	
+	// highlight the chosen few
+	var highlightedScripts = document.getElementById('scriptList').querySelectorAll(classNm)
+	for (let i=0;i<highlightedScripts.length;i++) highlightedScripts[i].style.color = 'brown'
+	}
+	
+function indicate (classNm, checkboxNode) {
+	var scripts = document.getElementById('scriptList').querySelectorAll(classNm)
+	
+	for (let i=0;i<scripts.length;i++) {
+		if (checkboxNode.checked) scripts[i].classList.add('indicate')
+		else scripts[i].classList.remove('indicate')
+		}
+	}
+
+function clearAll () {
+	var checkboxes = document.getElementById('filters').querySelectorAll('input')
+	for (let i=0;i<checkboxes.length; i++) checkboxes[i].checked = false
+	
+	var scripts = document.getElementById('scriptList').querySelectorAll('a.active, a.limited, a.historic')
+	for (let i=0;i<scripts.length;i++) scripts[i].style.color = '#999'
+	
+	var scripts = document.getElementById('scriptList').querySelectorAll('a.indicate')
+	for (let i=0;i<scripts.length;i++) scripts[i].classList.remove('indicate')
+	}
+	
+
+</script>
+<style>
+.indicate:after { content: ' •'; color: red; }
+</style>
 </head>
 
 <body>
 <div id="header-boilerplate"></div>
-<script>document.getElementById('header-boilerplate').innerHTML = bp_header('../images/world.gif','docs');</script>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('../shared/images/world.gif','docs');</script>
 
 <h1>Script links</h1>
 
 <div class="section">
-  <p>Choose a script to quickly locate information about it.</p>
+  <div class="sidenoteGroup">
+  <p>Choose a script to quickly locate information about it. The filters to the right may need more refinement.</p>
+  <aside class="sidenote" id="filters">
+  <p style="margin-top:10em;">Highlight scripts of the following type:</p>
+  <div id="usage">
+  <p><input type="checkbox" onClick="highlight('a.active', this)"> in active use</p>
+  <p><input type="checkbox" onClick="highlight('a.limited', this)"> limited current use</p>
+  <p><input type="checkbox" onClick="highlight('a.active, a.limited', this)"> active + limited</p>
+  <p><input type="checkbox" onClick="highlight('a.historic', this)"> historic</p>
+  </div>
+  <p style="margin-top:2em;">Indicate scripts of the following type:</p>
+  <div id="type">
+  <p><input type="checkbox" onClick="indicate('a.liturgical', this)"> liturgical</p>
+  <p><input type="checkbox" onClick="indicate('a.recent', this)"> coined since ~1820</p>
+  </div>
+  <p><button onClick="clearAll()">clear all</button></p>
+  </aside>
+  </div>
 </div>
 
-<div class="section"> 
+<div class="section" id="scriptList"> 
     <div class="viewmenu">
     <ul id="css3menu">
       <li class="topfirst off"><a onclick="return false;" href="#">&nbsp;<br/>
@@ -57,191 +211,200 @@ iframe {
       <li class="off"><a onclick="return false;" href="#">&nbsp;<br/>
         Europe</a>
         <ul>
-          <li><a href="#" onclick="document.getElementById('scrwin').src = 'linkdata/armenian'; return false;" title="armenian">Armenian</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/caucasianalbanian'; return false;" title="caucasianalbanian">Caucasian Albanian</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/cypriotsyllabary'; return false;" title="cypriotsyllabary">Cypriot Syllabary</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/cyrillic'; return false;" title="cyrillic">Cyrillic</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/duployan'; return false;" title="duployan">Duployan</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/elbasan'; return false;" title="elbasan">Elbasan</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/georgian'; return false;" title="georgian">Georgian</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/glagolitic'; return false;" title="glagolitic">Glagolitic</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/gothic'; return false;" title="gothic">Gothic</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/greek'; return false;" title="greek">Greek</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/latin'; return false;" title="latin">Latin</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/lineara'; return false;" title="lineara">Linear A</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/linearb'; return false;" title="linearb">Linear B</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/ogham'; return false;" title="ogham">Ogham</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/oldhungarian'; return false;" title="oldhungarian">Old Hungarian</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/olditalic'; return false;" title="olditalic">Old Italic</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/oldpermic'; return false;" title="oldpermic">Old Permic</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/phaistosdisc'; return false;" title="phaistosdisc">Phaistos Disc</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/runic'; return false;" title="runic">Runic</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/shavian'; return false;" title="shavian">Shavian</a></li>
+          <li><a class="active" href="#" onclick="getData('Armn'); return false;">Armenian</a></li>
+          <li><a class="historic" href="#" onclick="getData('Aghb'); return false;">Caucasian Albanian</a></li>
+          <li><a class="historic" href="#" onclick="getData('Cprt'); return false;">Cypriot Syllabary</a></li>
+          <li><a class="active" href="#" onclick="getData('Cyrl'); return false;">Cyrillic</a></li>
+          <li><a class="historic" href="#" onclick="getData('Elba'); return false;">Elbasan</a></li>
+          <li><a class="active" href="#" onclick="getData('Geor'); return false;">Georgian</a></li>
+          <li><a class="limited liturgical" href="#" onclick="getData('Glag'); return false;">Glagolitic</a></li>
+          <li><a class="historic" href="#" onclick="getData('Goth'); return false;">Gothic</a></li>
+          <li><a class="active" href="#" onclick="getData('Grek'); return false;">Greek</a></li>
+          <li><a class="active" href="#" onclick="getData('Latn'); return false;">Latin</a></li>
+          <li><a class="historic" href="#" onclick="getData('Lina'); return false;">Linear A</a></li>
+          <li><a class="historic" href="#" onclick="getData('Linb'); return false;">Linear B</a></li>
+          <li><a class="historic" href="#" onclick="getData('Ogam'); return false;">Ogham</a></li>
+          <li><a class="historic" href="#" onclick="getData('Hung'); return false;">Old Hungarian</a></li>
+          <li><a class="historic" href="#" onclick="getData('Ital'); return false;">Old Italic</a></li>
+          <li><a class="historic" href="#" onclick="getData('Perm'); return false;">Old Permic</a></li>
+          <li><a class="historic" href="#" onclick="getData('xPhais'); return false;">Phaistos Disc</a></li>
+          <li><a class="historic" href="#" onclick="getData('Runi'); return false;">Runic</a></li>
+          <li><a class="historic recent" href="#" onclick="getData('Shaw'); return false;">Shavian</a></li>
         </ul>
       </li>
       <li class="off"><a onclick="return false;" href="#">&nbsp;<br/>
         Africa</a>
         <ul>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/bamum'; return false;" title="bamum">Bamum</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/bassavah'; return false;" title="bassavah">Bassa Vah</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/coptic'; return false;" title="coptic">Coptic</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/egyptian'; return false;" title="egyptian">Egyptian Hieroglyphs</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/ethiopic'; return false;" title="ethiopic">Ethiopic</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/mendekikakui'; return false;" title="mendekikakui">Mende Kikakui</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/meroitic'; return false;" title="meroitic">Meroitic</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/nko'; return false;" title="nko">N'Ko</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/osmanya'; return false;" title="osmanya">Osmanya</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/tifinagh'; return false;" title="tifinagh">Tifinagh</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/vai'; return false;" title="vai">Vai</a></li>
+          <li><a class="active recent" href="#" onclick="getData('Adlm'); return false;">Adlam</a></li>
+          <li><a class="active recent" href="#" onclick="getData('Bamu'); return false;">Bamum</a></li>
+          <li><a class="active recent" href="#" onclick="getData('Bass'); return false;">Bassa Vah</a></li>
+          <li><a class="historic liturgical" href="#" onclick="getData('Copt'); return false;">Coptic</a></li>
+          <li><a class="historic" href="#" onclick="getData('Egyp'); return false;">Egyptian Hieroglyphs</a></li>
+          <li><a class="active" href="#" onclick="getData('Ethi'); return false;">Ethiopic</a></li>
+          <li><a class="active recent" href="#" onclick="getData('Mend'); return false;">Mende Kikakui</a></li>
+          <li><a class="historic" href="#" onclick="getData('Mero'); return false;">Meroitic</a></li>
+          <li><a class="active recent" href="#" onclick="getData('Nkoo'); return false;">N&apos;Ko</a></li>
+          <li><a class="limited recent" href="#" onclick="getData('Osma'); return false;">Osmanya</a></li>
+          <li><a class="active" href="#" onclick="getData('Tfng'); return false;">Tifinagh</a></li>
+          <li><a class="active recent" href="#" onclick="getData('Vaii'); return false;">Vai</a></li>
         </ul>
       </li>
       <li class="off"><a onclick="return false;" href="#">Middle<br/>
         East</a>
         <ul>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/anatolianhieroglyphs'; return false;" title="anatolianhieroglyphs">Anatolian Hieroglyphs</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/arabic'; return false;" title="arabic">Arabic</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/imperialaramaic'; return false;" title="imperialaramaic"> Aramaic</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/avestan'; return false;" title="avestan">Avestan</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/carian'; return false;" title="carian">Carian</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/cuneiform'; return false;" title="cuneiform">Cuneiform</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/hatran'; return false;" title="hatran">Hatran</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/hebrew'; return false;" title="hebrew">Hebrew</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/lycian'; return false;" title="lycian">Lycian</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/lydian'; return false;" title="lydian">Lydian</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/mandaic'; return false;" title="mandaic">Mandaic</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/nabataean'; return false;" title="nabataean">Nabataean</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/oldnortharabian'; return false;" title="oldnortharabian">Old North Arabian</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/oldpersian'; return false;" title="oldpersian">Old Persian</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/oldsoutharabian'; return false;" title="oldsoutharabian">Old South Arabian</a></li>
-           <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/inscriptionalpahlavi'; return false;" title="inscriptionalpahlavi">Pahlavi, Inscriptional</a></li>
-         <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/psalterpahlavi'; return false;" title="psalterpahlavi">Pahlavi, Psalter</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/palmyrene'; return false;" title="palmyrene">Palmyrene</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/inscriptionalparthian'; return false;" title="inscriptionalparthian">Parthian, Inscriptional</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/phoenician'; return false;" title="phoenician">Phoenician</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/samaritan'; return false;" title="samaritan">Samaritan</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/syriac'; return false;" title="syriac">Syriac</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/ugaritic'; return false;" title="ugaritic">Ugaritic</a></li>
+          <li><a class="historic" href="#" onclick="getData('Hluw'); return false;">Anatolian Hieroglyphs</a></li>
+          <li><a class="active liturgical" href="#" onclick="getData('Arab'); return false;" >Arabic</a></li>
+          <li><a class="historic" href="#" onclick="getData('Armi'); return false;"> Aramaic</a></li>
+          <li><a class="historic liturgical" href="#" onclick="getData('Avst'); return false;">Avestan</a></li>
+          <li><a class="historic" href="#" onclick="getData('Cari'); return false;">Carian</a></li>
+          <li><a class="historic" href="#" onclick="getData('Xsux'); return false;">Cuneiform</a></li>
+          <li><a class="historic" href="#" onclick="getData('Hatr'); return false;">Hatran</a></li>
+          <li><a class="active liturgical" href="#" onclick="getData('Hebr'); return false;">Hebrew</a></li>
+          <li><a class="historic" href="#" onclick="getData('Lyci'); return false;">Lycian</a></li>
+          <li><a class="historic" href="#" onclick="getData('Lydi'); return false;">Lydian</a></li>
+          <li><a class="historic liturgical" href="#" onclick="getData('Mand'); return false;">Mandaic</a></li>
+          <li><a class="historic" href="#" onclick="getData('Nbat'); return false;">Nabataean</a></li>
+          <li><a class="historic" href="#" onclick="getData('Narb'); return false;">Old North Arabian</a></li>
+          <li><a class="historic" href="#" onclick="getData('Xpeo'); return false;">Old Persian</a></li>
+          <li><a class="historic" href="#" onclick="getData('Sarb'); return false;">Old South Arabian</a></li>
+          <li><a class="historic" href="#" onclick="getData('Phli'); return false;">Pahlavi, Inscriptional</a></li>
+          <li><a class="historic" href="#" onclick="getData('Phlp'); return false;">Pahlavi, Psalter</a></li>
+          <li><a class="historic" href="#" onclick="getData('Palm'); return false;">Palmyrene</a></li>
+          <li><a class="historic" href="#" onclick="getData('Prti'); return false;">Parthian, Inscriptional</a></li>
+          <li><a class="historic" href="#" onclick="getData('Phnx'); return false;">Phoenician</a></li>
+          <li><a class="limited liturgical" href="#" onclick="getData('Samr'); return false;">Samaritan</a></li>
+          <li><a class="active liturgical" href="#" onclick="getData('Syrc'); return false;">Syriac</a></li>
+          <li><a class="historic" href="#" onclick="getData('Ugar'); return false;">Ugaritic</a></li>
         </ul>
       </li>
       <li class="off"><a onclick="return false;" href="#">South<br/>
         Asia 1</a>
         <ul>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/ahom'; return false;" title="ahom">Ahom</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/bengali'; return false;" title="bengali">Bengali</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/brahmi'; return false;" title="brahmi">Brahmi</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/chakma'; return false;" title="chakma">Chakma</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/devanagari'; return false;" title="devanagari">Devanagari</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/grantha'; return false;" title="grantha">Grantha</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/gujarati'; return false;" title="gujarati">Gujarati</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/gurmukhi'; return false;" title="gurmukhi">Gurmukhi</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/kaithi'; return false;" title="kaithi">Kaithi</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/kannada'; return false;" title="kannada">Kannada</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/kharoshthi'; return false;" title="kharoshthi">Kharoshthi</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/khojki'; return false;" title="khojki">Khojki</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/khudawadi'; return false;" title="khudawadi">Khudawadi</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/lepcha'; return false;" title="lepcha">Lepcha</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/limbu'; return false;" title="limbu">Limbu</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/mahajani'; return false;" title="mahajani">Mahajani</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/malayalam'; return false;" title="malayalam">Malayalam</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/masaramgondi'; return false;" title="masaramgondi">Masaram Gondi</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/meeteimayek'; return false;" title="meeteimayek">Meetei Mayek</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/modi'; return false;" title="modi">Modi</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/mro'; return false;" title="mro">Mro</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/multani'; return false;" title="multani">Multani</a></li>
+          <li><a class="active" href="#" onclick="getData('Ahom'); return false;">Ahom</a></li>
+          <li><a class="active" href="#" onclick="getData('Beng'); return false;">Bengali</a></li>
+          <li><a class="historic" href="#" onclick="getData('Bhks'); return false;">Bhaiksuki</a></li>
+          <li><a class="historic" href="#" onclick="getData('Brah'); return false;">Brahmi</a></li>
+          <li><a class="active" href="#" onclick="getData('Cakm'); return false;">Chakma</a></li>
+          <li><a class="active" href="#" onclick="getData('Deva'); return false;">Devanagari</a></li>
+          <li><a class="historic" href="#" onclick="getData('Gran'); return false;">Grantha</a></li>
+          <li><a class="active" href="#" onclick="getData('Gujr'); return false;">Gujarati</a></li>
+          <li><a class="active" href="#" onclick="getData('Guru'); return false;">Gurmukhi</a></li>
+          <li><a class="active" href="#" onclick="getData('Kthi'); return false;">Kaithi</a></li>
+          <li><a class="active" href="#" onclick="getData('Knda'); return false;">Kannada</a></li>
+          <li><a class="historic" href="#" onclick="getData('Khar'); return false;">Kharoshthi</a></li>
+          <li><a class="active" href="#" onclick="getData('Khoj'); return false;">Khojki</a></li>
+          <li><a class="active" href="#" onclick="getData('Sind'); return false;">Khudawadi</a></li>
+          <li><a class="active" href="#" onclick="getData('Lepc'); return false;">Lepcha</a></li>
+          <li><a class="active recent" href="#" onclick="getData('Limb'); return false;">Limbu</a></li>
+          <li><a class="active" href="#" onclick="getData('Mahj'); return false;">Mahajani</a></li>
+          <li><a class="active" href="#" onclick="getData('Mlym'); return false;">Malayalam</a></li>
+          <li><a class="limited recent" href="#" onclick="getData('Gonm'); return false;">Masaram Gondi</a></li>
+          <li><a class="active" href="#" onclick="getData('Mtei'); return false;">Meetei Mayek</a></li>
+          <li><a class="active" href="#" onclick="getData('Modi'); return false;">Modi</a></li>
+          <li><a class="active recent" href="#" onclick="getData('Mroo'); return false;">Mro</a></li>
+          <li><a class="active" href="#" onclick="getData('Mult'); return false;">Multani</a></li>
         </ul>
       </li>
       <li class="off"><a onclick="return false;" href="#">South<br/>
         Asia 2</a>
         <ul>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/olchiki'; return false;" title="olchiki">Ol Chiki</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/oriya'; return false;" title="oriya">Oriya</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/saurashtra'; return false;" title="saurashtra">Saurashtra</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/sharada'; return false;" title="sharada">Sharada</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/siddham'; return false;" title="siddham">Siddham</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/sinhala'; return false;" title="sinhala">Sinhala</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/sorasompeng'; return false;" title="sorasompeng">Sora Sompeng</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/sylotinagri'; return false;" title="sylotinagri">Syloti Nagri</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/takri'; return false;" title="takri">Takri</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/tamil'; return false;" title="tamil">Tamil</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/telugu'; return false;" title="telugu">Telugu</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/thaana'; return false;" title="thaana">Thaana</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/tirhuta'; return false;" title="tirhuta">Tirhuta</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/warangciti'; return false;" title="warangciti">Warang Citi</a></li>
+          <li><a class="active" href="#" onclick="getData('Newa'); return false;">Newa</a></li>
+          <li><a class="active recent" href="#" onclick="getData('Olck'); return false;">Ol Chiki</a></li>
+          <li><a class="active" href="#" onclick="getData('Orya'); return false;">Oriya</a></li>
+          <li><a class="active" href="#" onclick="getData('Saur'); return false;">Saurashtra</a></li>
+          <li><a class="active" href="#" onclick="getData('Shrd'); return false;">Sharada</a></li>
+          <li><a class="active" href="#" onclick="getData('Sidd'); return false;">Siddham</a></li>
+          <li><a class="active" href="#" onclick="getData('Sinh'); return false;">Sinhala</a></li>
+          <li><a class="active" href="#" onclick="getData('Sora'); return false;">Sora Sompeng</a></li>
+          <li><a class="active" href="#" onclick="getData('Sylo'); return false;">Syloti Nagri</a></li>
+          <li><a class="active" href="#" onclick="getData('Takr'); return false;">Takri</a></li>
+          <li><a class="active" href="#" onclick="getData('Taml'); return false;">Tamil</a></li>
+          <li><a class="active" href="#" onclick="getData('Telu'); return false;">Telugu</a></li>
+          <li><a class="active" href="#" onclick="getData('Thaa'); return false;">Thaana</a></li>
+          <li><a class="active" href="#" onclick="getData('Tirh'); return false;">Tirhuta</a></li>
+          <li><a class="limited recent" href="#" onclick="getData('Wara'); return false;">Warang Citi</a></li>
         </ul>
       </li>
       <li class="off"><a onclick="return false;" href="#">Central<br/>
         Asia</a>
         <ul>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/manichaean'; return false;" title="manichaean">Manichaean</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/mongolian'; return false;" title="mongolian">Mongolian</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/oldturkic'; return false;" title="oldturkic">Old Turkic</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/phagspa'; return false;" title="phagspa">Phags-pa</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/soyombo'; return false;" title="soyombo">Soyombo</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/tibetan'; return false;" title="tibetan">Tibetan</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/zanabazarsquare'; return false;" title="zanabazarsquare">Zanabazar Square</a></li>
+          <li><a class="historic liturgical" href="#" onclick="getData('Mani'); return false;">Manichaean</a></li>
+          <li><a class="limited liturgical" href="#" onclick="getData('Marc'); return false;">Marchen</a></li>
+          <li><a class="active" href="#" onclick="getData('Mong'); return false;">Mongolian</a></li>
+          <li><a class="historic" href="#" onclick="getData('Orkh'); return false;">Old Turkic</a></li>
+          <li><a class="historic" href="#" onclick="getData('Phag'); return false;">Phags-pa</a></li>
+          <li><a class="historic" href="#" onclick="getData('Soyo'); return false;">Soyombo</a></li>
+          <li><a class="active" href="#" onclick="getData('Tibt'); return false;">Tibetan</a></li>
+          <li><a class="historic" href="#" onclick="getData('Zanb'); return false;">Zanabazar Square</a></li>
         </ul>
       </li>
       <li class="off"><a onclick="return false;" href="#">Southeast<br/>
         Asia</a>
         <ul>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/cham'; return false;" title="cham">Cham</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/kayahli'; return false;" title="kayahli">Kayah Li</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/khmer'; return false;" title="khmer">Khmer</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/lao'; return false;" title="lao">Lao</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/myanmar'; return false;" title="myanmar">Myanmar</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/newtailue'; return false;" title="newtailue">New Tai Lue</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/pahawhhmong'; return false;" title="pahawhhmong">Pahawh Hmong</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/paucinhau'; return false;" title="paucinhau">Pau Cin Hau</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/taile'; return false;" title="taile">Tai Le</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/taitham'; return false;" title="taitham">Tai Tham</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/taiviet'; return false;" title="taiviet">Tai Viet</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/thai'; return false;" title="thai">Thai</a></li>
+          <li><a class="active" href="#" onclick="getData('Cham'); return false;">Cham</a></li>
+          <li><a class="active recent" href="#" onclick="getData('Kali'); return false;">Kayah Li</a></li>
+          <li><a class="active" href="#" onclick="getData('Khmr'); return false;">Khmer</a></li>
+          <li><a class="active" href="#" onclick="getData('Laoo'); return false;">Lao</a></li>
+          <li><a class="active" href="#" onclick="getData('Mymr'); return false;">Myanmar</a></li>
+          <li><a class="active recent" href="#" onclick="getData('Talu'); return false;">New Tai Lue</a></li>
+          <li><a class="active recent" href="#" onclick="getData('Hmng'); return false;">Pahawh Hmong</a></li>
+          <li><a class="active recent liturgical" href="#" onclick="getData('Pauc'); return false;">Pau Cin Hau</a></li>
+          <li><a class="active" href="#" onclick="getData('Tale'); return false;">Tai Le</a></li>
+          <li><a class="active" href="#" onclick="getData('Lana'); return false;">Tai Tham</a></li>
+          <li><a class="active" href="#" onclick="getData('Tavt'); return false;">Tai Viet</a></li>
+          <li><a class="active" href="#" onclick="getData('Thai'); return false;">Thai</a></li>
         </ul>
       </li>
       <li class="off"><a onclick="return false;" href="#">Indonesia<br/>
         &amp; Oceania</a>
         <ul>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/balinese'; return false;" title="balinese">Balinese</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/batak'; return false;" title="batak">Batak</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/buginese'; return false;" title="buginese">Buginese</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/buhid'; return false;" title="buhid">Buhid</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/hanunoo'; return false;" title="hanunoo">Hanunoo</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/javanese'; return false;" title="javanese">Javanese</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/rejang'; return false;" title="rejang">Rejang</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/sundanese'; return false;" title="sundanese">Sundanese</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/tagalog'; return false;" title="tagalog">Tagalog</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/tagbanwa'; return false;" title="tagbanwa">Tagbanwa</a></li>
+          <li><a class="limited" href="#" onclick="getData('Bali'); return false;">Balinese</a></li>
+          <li><a class="active" href="#" onclick="getData('Batk'); return false;">Batak</a></li>
+          <li><a class="active" href="#" onclick="getData('Bugi'); return false;">Buginese</a></li>
+          <li><a class="limited" href="#" onclick="getData('Buhd'); return false;">Buhid</a></li>
+          <li><a class="limited" href="#" onclick="getData('Hano'); return false;">Hanunoo</a></li>
+          <li><a class="limited" href="#" onclick="getData('Java'); return false;">Javanese</a></li>
+          <li><a class="active" href="#" onclick="getData('Rjng'); return false;">Rejang</a></li>
+          <li><a class="active" href="#" onclick="getData('Sund'); return false;">Sundanese</a></li>
+          <li><a class="historic" href="#" onclick="getData('Tglg'); return false;">Tagalog</a></li>
+          <li><a class="limited" href="#" onclick="getData('Tagb'); return false;">Tagbanwa</a></li>
         </ul>
       </li>
       <li class="off"><a onclick="return false;" href="#">East<br/>
         Asia</a>
         <ul>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/bopomofo'; return false;" title="bopomofo">Bopomofo</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/han'; return false;" title="han">Han</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/hangul'; return false;" title="hangul">Hangul</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/japanese'; return false;" title="japanese">Japanese</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/lisu'; return false;" title="lisu">Lisu</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/miao'; return false;" title="miao">Miao</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/nushu'; return false;" title="nushu">Nüshu</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/yi'; return false;" title="yi">Yi</a></li>
+          <li><a class="limited recent" href="#" onclick="getData('Bopo'); return false;">Bopomofo</a></li>
+          <li><a class="active" href="#" onclick="getData('Hani'); return false;">Han</a></li>
+          <li><a class="active" href="#" onclick="getData('Hang'); return false;">Hangul</a></li>
+          <li><a class="active" href="#" onclick="getData('Jpan'); return false;">Kana</a></li>
+          <li><a class="active recent" href="#" onclick="getData('Lisu'); return false;">Lisu</a></li>
+          <li><a class="active recent" href="#" onclick="getData('Plrd'); return false;">Miao</a></li>
+          <li><a class="historic" href="#" onclick="getData('Tang'); return false;">Tangut</a></li>
+          <li><a class="limited" href="#" onclick="getData('Nshu'); return false;">Nüshu</a></li>
+          <li><a class="active" href="#" onclick="getData('Yiii'); return false;">Yi</a></li>
         </ul>
       </li>
       <li class="off toplast"><a onclick="return false;" href="#">&nbsp;<br/>
         America</a>
         <ul>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/cherokee'; return false;" title="cherokee">Cherokee</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/deseret'; return false;" title="deseret">Deseret</a></li>
-          <li><a  href="#" onclick="document.getElementById('scrwin').src = 'linkdata/ucas'; return false;" title="ucas">UCAS</a></li>
+          <li><a class="active recent" href="#" onclick="getData('Cher'); return false;">Cherokee</a></li>
+          <li><a class="historic recent" href="#" onclick="getData('Dsrt'); return false;">Deseret</a></li>
+          <li><a class="active recent" href="#" onclick="getData('Osge'); return false;">Osage</a></li>
+          <li><a class="active recent" href="#" onclick="getData('Cans'); return false;">UCAS</a></li>
         </ul>
       </li>
     </ul>
   </div>
   <div style="clear:both; margin-bottom: 100px;">&nbsp; </div>
+  
+  
+  <div id="out"></div>
+  
   <iframe src="linkdata/none.html" name="scriptWindow" class="thescriptwindow" id="scrwin"></iframe>
 </div>
 
 <div class="smallprint"> <span id="version">This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-06-16  20:15<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2017-07-23  18:13<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span> </div>
 
 
