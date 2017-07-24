@@ -3,7 +3,7 @@ var scriptData = [
 
 { script:"Arabic", type:"abjad", chars:390, cchars:95, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"yes", dir:"rtl", wordsep:"space", baseline:"mid", wrap:"word", justify:"word/space", digits:"yes", region:"M East", linked:"arabic" },
 
-{ script:"Armenian", type:"alpha", chars:89, cchars:0, cs:"yes", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"no", region:"M East" },
+{ script:"Armenian", type:"alpha", chars:89, cchars:0, cs:"yes", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"no", region:"M East", linked:"armenian" },
 
 { script:"Balinese", type:"abugida", chars:121, cchars:31, cs:"no", gpos:"yes", mcchars:"no", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"no", baseline:"mid", wrap:"syllable", justify:"?", digits:"yes", region:"Asia SE", linked:"balinese" },
 
