@@ -169,6 +169,22 @@ function clearAll () {
 	for (let i=0;i<scripts.length;i++) scripts[i].classList.remove('indicate')
 	}
 	
+function getScriptCode (script) {
+	var found = false
+	var record = null
+	script = script.replace(/_/g, ' ')
+	script = script.replace(/%20/g, ' ')
+	for (var i=0;i<linkDB.length;i++) {
+		if (linkDB[i].script.toLowerCase() === script) {
+			code = linkDB[i].code
+			found = true
+			break
+			}
+		}
+	if (! found) return '<p>No data found.</p>'
+	else return code
+	}
+	
 
 </script>
 <style>
@@ -403,7 +419,7 @@ function clearAll () {
 </div>
 
 <div class="smallprint"> <span id="version">This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-07-23  18:30<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2017-07-24  10:09<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span> </div>
 
 
@@ -411,16 +427,13 @@ function clearAll () {
 var options = document.getElementsByTagName('a');
 var script = '';
 var scriptparameter = '';
-parameters = location.search.split('&');
+var parameters = location.search.split('&');
 parameters[0] = parameters[0].substring(1);
 for (var p=0;p<parameters.length;p++) {  
-	pairs = parameters[p].split('=');
-	if (pairs[0] == 'script') { scriptparameter = pairs[1]; }
+	var pairs = parameters[p].split('=');
+	if (pairs[0] == 'script') { script = pairs[1]; }
 	}
-for (var i=0;i<options.length; i++) {
-	if (scriptparameter == options[i].title) { script = scriptparameter; break; }
-	}
-if (script != '') { document.getElementById('scrwin').src = 'linkdata/'+script; }
+if (script != '') { getData(getScriptCode(script)) }
 </script>
 </body>
 </html>
