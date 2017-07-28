@@ -76,7 +76,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->27 July, 2017<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->28 July, 2017<!-- #EndDate -->
 &bull; tags <a href="http://rishida.net/blog/index.php?tag=arabic" title="Show all blog posts tagged with 'arabic'">arabic</a>, <a href="http://rishida.net/blog/index.php?tag=urdu" title="Show all blog posts tagged with 'urdu'">urdu</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>.</p>
 <div id="intro">
   <p>This page lists characters in the following Unicode blocks and provides information about them. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places.</p>
@@ -3367,7 +3367,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
       <div class="notes">
         <div class="letter arabic">
           <p><span class="title">Arabic</span> directional formatting character</p>
-          <p>In a RTL context, a sequence of numbers separated by hyphens (for example), is expected to run left to right when preceded by Hebrew or N’Ko text, however it is expected to run  right to left when preceded by Arabic, Thaana, or Syriac characters.</p>
+          <p>In a RTL context, the bidi algorithm expects a sequence of numbers separated by hyphens (for example),  to run left to right when preceded by Hebrew or N’Ko text, however it expects the sequence to run  right to left when preceded by Arabic, Thaana, or Syriac characters.</p>
           <p lang="ar" dir="rtl"> ك 12-34-5678 </p>
           <p lang="dv" dir="rtl">އ 12-34-5678 </p>
           <p lang="syr" dir="rtl">ܐ 12-34-5678 </p>
@@ -3375,11 +3375,12 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
           <p lang="he" dir="rtl">א 12-34-5678 </p>
           <p>However, when a sequence like this appears alone on a line, it always runs left to right, because the bidi algorithm can't detect a previous Arabic, or other, character. </p>
           <p dir="rtl">12-34-5678 </p>
-          <p>This is not appropriate for documents in Arabic (and i guess Thaana or Syriac). </p>
+          <p>This order not appropriate for documents in the Arabic language (and i guess Dhivehi or Syriac). </p>
           <p>The ALM is a way of producing the right sequencing by inserting what is effectively an invisible Arabic character before the number.</p>
           <p class="ex" lang="ar" dir="rtl">؜12-34-5678</p>
           <p>RLM and RLI..PDI, etc, are unable to produce the RTL sequencing, because the difference lies in what script precedes the number. </p>
-          <p>This is all helpful for Arabic language text, but Persian doesn’t order these sequences RTL, so it’s necessary to use one (any) of the directional formatting characters before such sequences in Persian.</p>
+          <p>This is all helpful for Arabic language text, but Persian doesn’t order these sequences RTL, so it’s necessary to use one (any) of the directional formatting characters before such sequences in Persian to prevent this special ordering.</p>
+          <p>Similar special ordering is applied to numbers in equations, such as 1 + 2 = 3 for Arabic language text.</p>
         </div>
       </div>
     </div>
@@ -4417,7 +4418,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="panel" style="display:none"></div>
 <div class="smallprint"><span id="version">First published  3 February, 2014.  This version <span id="version-info">
-  <!-- #BeginDate format:IS1m -->2017-07-27  11:58<!-- #EndDate -->
+  <!-- #BeginDate format:IS1m -->2017-07-28  13:16<!-- #EndDate -->
 </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 </section>
 
