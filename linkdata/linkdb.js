@@ -1,6 +1,6 @@
-var scriptNotesSet= new Set(['armenian','arabic', 'balinese', 'bengali', 'cherokee', 'devanagari', 'greek', 'han', 'hangul', 'hebrew', 'kana', 'khmer','lao','myanmar','nko', 'tamil', 'thaana', 'thai', 'tibetan'])
+var scriptNotesSet= new Set(['armenian','arabic', 'balinese', 'bengali', 'cherokee', 'devanagari', 'greek', 'han', 'hangul', 'hebrew', 'kana', 'khmer','lao','myanmar','nko', 'syriac', 'tamil', 'thaana', 'thai', 'tibetan'])
 
-var charNotesSet= new Set(['arabic','armenian','bengali', 'balinese', 'cherokee', 'devanagari','ethiopic','greek','hebrew','khmer','lao','latin','lisu','malayalam','mongolian','myanmar', 'nko', 'tamil','thaana', 'thai','tibetan','tifinagh'])
+var charNotesSet= new Set(['arabic','armenian','bengali', 'balinese', 'cherokee', 'devanagari','ethiopic','greek','hebrew','khmer','lao','latin','lisu','malayalam','mongolian','myanmar', 'nko', 'syriac', 'tamil','thaana', 'thai','tibetan','tifinagh'])
 
 var compChartSet= new Set(['arabic','armenian', 'balinese', 'bengali', 'cherokee','cyrillic','devanagari','ethiopic','greek','gujarati','gurmukhi','han','hangul','hebrew','kana','kannada','khmer','lao','latin','malayalam','mongolian','myanmar','oriya','tamil','telugu','thaana','thai','tibetan','tifinagh','ucas'])
 
@@ -753,7 +753,7 @@ var linkDB = [
 	local: [	],
 	unicode:{ 	}, 
 	charts:[	"Syriac", "Syriac Supplement" ],
-	pickers:[	
+	pickers:[	{ name:"Syriac", url:"syriac" }
 				],
 	fontkey:[	 { name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-middle-eastern.html#syriac" }
 				],
