@@ -52,7 +52,7 @@
 
 
 <div class="smallprint"><span id="version">First published  3 Feb 2008.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-07-22  15:21<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2017-07-28  8:04<!-- #EndDate --> 
 </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 <script type="text/javascript">
@@ -124,7 +124,7 @@ function makeListFromChars (chars) {
 				out += '<p class="subtitle">Description in the Unicode standard:</p>\n'
 				out += '<div class="unicodenotes">'+unicodenotes+'</div>\n'
 				}
-			if (document.getElementById('notes').value != '') out += document.getElementById('notes').value
+			if (document.getElementById('notes').value != '') out += document.getElementById('notes').value.replace(/&#x....;/g, '&#x'+hex+';')
 			out += '</div>\n\n'
 			}
 		}
