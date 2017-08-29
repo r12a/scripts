@@ -140,7 +140,18 @@ function initialiseShowNames (base, target) {
 			}
 		else { shownames_setOnclick(examples[e], base, target) }
 		}
+	
+	var lists = document.querySelectorAll(".exlist")
+	for (let i=0;i<lists.length;i++) lists[i].addEventListener('click', showNameDetailsEvent)
 	}
+
+
+function showNameDetailsEvent (evt) { 
+	showNameDetails(evt.target.textContent, evt.target.lang, '/scripts/javanese/block', 'c', document.getElementById('panel'), 'list' )
+	}
+//	document.querySelector("#myButton").addEventListener('click', callbackFunctionName)
+	
+//	function callbackFunctionName (evt) { console.log("Button clicked!") }
 
 
 function shownames_setImgOnclick ( node, base, target ) {
