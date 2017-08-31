@@ -62,70 +62,70 @@ function getData (script) {
 	out += '<table class="links"><tbody>'
 	if (record.info) {
 		out += '<tr><td>General info:</td><td>'
-		out += '<p><a href="http://scriptsource.org/scr/'+record.code+'" target="_blank">Scriptsource</a></p>'
-		if (record.info.wikipedia) out += '<p><a href="http://en.wikipedia.org/wiki/'+record.info.wikipedia+'" target="_blank">Wikipedia</a></p>'
+		out += '<p><a href="http://scriptsource.org/scr/'+record.code+'" >Scriptsource</a></p>'
+		if (record.info.wikipedia) out += '<p><a href="http://en.wikipedia.org/wiki/'+record.info.wikipedia+'" >Wikipedia</a></p>'
 		if (record.info.omniglot) {
-			if ( record.info.omniglot.match('http') ) out += '<p><a href="'+record.info.omniglot+'" target="_blank">Omniglot</a></p>'
-			else out += '<p><a href="http://www.omniglot.com/writing/'+record.info.omniglot+'.htm" target="_blank">Omniglot</a></p>'
+			if ( record.info.omniglot.match('http') ) out += '<p><a href="'+record.info.omniglot+'" >Omniglot</a></p>'
+			else out += '<p><a href="http://www.omniglot.com/writing/'+record.info.omniglot+'.htm" >Omniglot</a></p>'
 			}
-		for (var r=2;r<record.local.length;r++) temp += '<p><a href="'+record.info[r].url+'" target="_blank">'+record.info[r].name+'</a></p>'
+		for (var r=2;r<record.local.length;r++) temp += '<p><a href="'+record.info[r].url+'" >'+record.info[r].name+'</a></p>'
 		out += '</td></tr>'
 		}
 	if ((record.local && record.local.length) > 0 | scriptNotesSet.has(lc) | charNotesSet.has(lc) | compChartSet.has(lc) | scriptSummarySet.has(lc)) {
 		var temp = ''
 		temp += '<tr><td>r12a.github.io:</td><td>'
-		if (scriptNotesSet.has(lc)) temp += '<p><a href="/scripts/'+lc+'" target="_blank">Script summary</a></p>'
-		if (charNotesSet.has(lc)) temp += '<p><a href="/scripts/'+lc+'/block" target="_blank">Character notes</a></p>'
-		if (compChartSet.has(lc)) temp += '<p><a href="/scripts/featurelist/" target="_blank">Comparison chart</a></p>'
-		for (var r=0;r<record.local.length;r++) temp += '<p><a href="'+record.local[r].url+'" target="_blank">'+record.local[r].name+'</a></p>'
-		if (scriptSummarySet.has(lc)) temp += '<p><a href="/scripts/tutorial/summaries/'+lc+'" target="_blank">Tutorial notes</a></p>'
+		if (scriptNotesSet.has(lc)) temp += '<p><a href="/scripts/'+lc+'" >Script summary</a></p>'
+		if (charNotesSet.has(lc)) temp += '<p><a href="/scripts/'+lc+'/block" >Character notes</a></p>'
+		if (compChartSet.has(lc)) temp += '<p><a href="/scripts/featurelist/" >Comparison chart</a></p>'
+		for (var r=0;r<record.local.length;r++) temp += '<p><a href="'+record.local[r].url+'" >'+record.local[r].name+'</a></p>'
+		if (scriptSummarySet.has(lc)) temp += '<p><a href="/scripts/tutorial/summaries/'+lc+'" >Tutorial notes</a></p>'
 		temp += '</td></tr>'
 		if (temp !== '<tr><td>This site:</td><td></td></tr>') out += temp
 		}
 	if (record.unicode) {
 		out += '<tr><td>Unicode info:</td><td>'
-		out += '<p><a href="http://www.unicode.org/versions/latest/ch'+chapters[norm]+'.pdf" target="_blank">Core text</a></p>'
-		out += '<p><a href="http://scriptsource.org/entry/'+ssHistory[norm]+'" target="_blank">Historical</a></p>'
+		out += '<p><a href="http://www.unicode.org/versions/latest/ch'+chapters[norm]+'.pdf" >Core text</a></p>'
+		out += '<p><a href="http://scriptsource.org/entry/'+ssHistory[norm]+'" >Historical</a></p>'
 		out += '</td></tr>'
 		}
 	if (record.charts) {
 		out += '<tr><td>Charts:</td><td><table><tbody>'
-		for (var r=0;r<record.charts.length;r++) out += '<tr><td>'+record.charts[r]+'</td><td><a href="/uniview/?block='+record.charts[r].toLowerCase().replace(/ /g,'_')+'" target="_blank">UniView</a></td><td><a href="http://www.unicode.org/charts/PDF/U'+blockStart[record.charts[r].toLowerCase().replace(/ /g,'_')]+'.pdf" target="_blank">Unicode</a></td></tr>'
+		for (var r=0;r<record.charts.length;r++) out += '<tr><td>'+record.charts[r]+'</td><td><a href="/uniview/?block='+record.charts[r].toLowerCase().replace(/ /g,'_')+'" >UniView</a></td><td><a href="http://www.unicode.org/charts/PDF/U'+blockStart[record.charts[r].toLowerCase().replace(/ /g,'_')]+'.pdf" >Unicode</a></td></tr>'
 		out += '</tbody></table></td></tr>'
 		}
 	if (record.pickers) {
 		var temp = ''
 		temp += '<tr><td>Pickers:</td><td>'
-		for (var r=0;r<record.pickers.length;r++) temp += '<p><a href="/pickers/'+record.pickers[r].url+'/" target="_blank">'+record.pickers[r].name+'</a></p>'
+		for (var r=0;r<record.pickers.length;r++) temp += '<p><a href="/pickers/'+record.pickers[r].url+'/" >'+record.pickers[r].name+'</a></p>'
 		temp += '</td></tr>'
 		if (temp !== '<tr><td>Pickers:</td><td></td></tr>') out += temp
 		}
 	if (record.fontkey) {
 		var temp = ''
 		temp += '<tr><td>Fonts &amp; keyboards:</td><td>'
-		temp += '<p><a href="http://scriptsource.org/scr/'+record.code+'/font" target="_blank">Scriptsource</a></p>'
-		if (googleFontSet.has(norm)) temp += '<p><a href="https://www.google.com/get/noto/" target="_blank">Google Noto</a></p>'
-		if (googleEASet.has(norm)) temp += '<p><a href="http://www.google.com/fonts/earlyaccess" target="_blank">Google Early Access</a></p>'
-		if (gouFonts[norm]) temp += '<p><a href="http://www.wazu.jp/gallery/Fonts_'+gouFonts[norm]+'.html" target="_blank">Gallery of Unicode Fonts</a></p>'
-		for (var r=0;r<record.fontkey.length;r++) temp += '<p><a href="'+record.fontkey[r].url+'" target="_blank">'+record.fontkey[r].name+'</a></p>'
-		if (OSDefaultFontsSet.has(norm)) temp += '<p><a href="/scripts/fontlist/#'+norm+'" target="_blank">OS default fonts</a></p>'
+		temp += '<p><a href="http://scriptsource.org/scr/'+record.code+'/font" >Scriptsource</a></p>'
+		if (googleFontSet.has(norm)) temp += '<p><a href="https://www.google.com/get/noto/" >Google Noto</a></p>'
+		if (googleEASet.has(norm)) temp += '<p><a href="http://www.google.com/fonts/earlyaccess" >Google Early Access</a></p>'
+		if (gouFonts[norm]) temp += '<p><a href="http://www.wazu.jp/gallery/Fonts_'+gouFonts[norm]+'.html" >Gallery of Unicode Fonts</a></p>'
+		for (var r=0;r<record.fontkey.length;r++) temp += '<p><a href="'+record.fontkey[r].url+'" >'+record.fontkey[r].name+'</a></p>'
+		if (OSDefaultFontsSet.has(norm)) temp += '<p><a href="/scripts/fontlist/#'+norm+'" >OS default fonts</a></p>'
 		temp += '</td></tr>'
 		if (temp !== '<tr><td>Fonts &amp; keyboards:</td><td></td></tr>') out += temp
 		}
 	if (record.layout) {
 		var temp = ''
 		temp += '<tr><td>Layout &amp; typography:</td><td>'
-		for (var r=0;r<record.layout.length;r++) temp += '<p><a href="'+record.layout[r].url+'" target="_blank">'+record.layout[r].name+'</a></p>'
-		if (typographyDocSet.has(norm)) temp += '<p><a href="http://w3c.github.io/typography/" target="_blank">International text layout and typography index</a></p>'
-		if (w3cTypographySet.has(norm)) temp += '<p><a href="https://github.com/w3c/i18n-activity/issues?q=is%3Aissue+is%3Aopen+label%3A'+lc+'" target="_blank">w3c/typography</a></p>'
-		if (w3cTypeSampleSet.has(norm)) temp += '<p><a href="https://w3c.github.io/type-samples/" target="_blank">w3c/type-samples</a></p>'
+		for (var r=0;r<record.layout.length;r++) temp += '<p><a href="'+record.layout[r].url+'" >'+record.layout[r].name+'</a></p>'
+		if (typographyDocSet.has(norm)) temp += '<p><a href="http://w3c.github.io/typography/" >International text layout and typography index</a></p>'
+		if (w3cTypographySet.has(norm)) temp += '<p><a href="https://github.com/w3c/i18n-activity/issues?q=is%3Aissue+is%3Aopen+label%3A'+lc+'" >w3c/typography</a></p>'
+		if (w3cTypeSampleSet.has(norm)) temp += '<p><a href="https://w3c.github.io/type-samples/" >w3c/type-samples</a></p>'
 		temp += '</td></tr>'
 		if (temp !== '<tr><td>Layout &amp; typography:</td><td></td></tr>') out += temp
 		}
 	if (record.other && record.other.length > 0) {
 		var temp = ''
 		temp += '<tr><td>Other:</td><td>'
-		for (var r=0;r<record.other.length;r++) temp += '<p><a href="'+record.other[r].url+'" target="_blank">'+record.other[r].name+'</a></p>'
+		for (var r=0;r<record.other.length;r++) temp += '<p><a href="'+record.other[r].url+'" >'+record.other[r].name+'</a></p>'
 		temp += '</td></tr>'
 		if (temp !== '<tr><td>Other:</td><td></td></tr>') out += temp
 		}
@@ -419,7 +419,7 @@ function getScriptCode (script) {
 </div>
 
 <div class="smallprint"> <span id="version">This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-07-24  10:09<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2017-08-26  6:39<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span> </div>
 
 
