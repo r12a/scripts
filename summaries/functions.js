@@ -147,7 +147,8 @@ function initialiseShowNames (base, target) {
 
 
 function showNameDetailsEvent (evt) { 
-	showNameDetails(evt.target.textContent, evt.target.lang, '/scripts/javanese/block', 'c', document.getElementById('panel'), 'list' )
+	// base is set at the bottom of the source page
+	showNameDetails(evt.target.textContent, evt.target.lang, window.base, 'c', document.getElementById('panel'), 'list' )
 	}
 //	document.querySelector("#myButton").addEventListener('click', callbackFunctionName)
 	
