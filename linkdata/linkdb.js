@@ -609,7 +609,7 @@ var linkDB = [
 	local: [	],
 	unicode:{ 	}, 
 	charts:[	"Mandaic" ],
-	pickers:[	
+	pickers:[	{ name:"Mandaic", url:"mandaic" }
 				],
 	fontkey:[	 { name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-middle-eastern.html#mandaic" }
 				],
