@@ -48,6 +48,9 @@
 <script type="text/javascript" src="/shared/fontlists/manage.js"></script>
 <script type="text/javascript" src="/shared/code/scriptGroups.js"></script>
 <script type="text/javascript" src="../summaries/functions.js"></script>
+<script type="text/javascript" src="../block/functions.js"></script>
+<script type="text/javascript" src="/shared/code/getLinks.js"></script>
+<script type="text/javascript" src="/scripts/linkdata/linkdb.js"></script>
 <script type="text/javascript" src="../summaries/scriptdata.js"> </script>
 
 <script type="text/javascript" src="/shared/fontlists/arabic.js"> </script>
@@ -129,22 +132,28 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->25 July, 2017<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->7 January, 2018<!-- #EndDate -->
 &bull; tags <a href="http://rishida.net/blog/index.php?tag=arabic" title="Show all blog posts tagged with 'arabic'">arabic</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
 
 <div class="section">
-  <p>This page provides basic information about the Arabic script. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>.  </p>
+  <p>This page provides basic information about the Arabic script. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned.</p>
   <p class="instructions">Click on red  text examples or highlight part of the sample text to see a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
-  <p>For more details see:  
-  <a class="linkHighlight" href="/scripts/arabic/block">Character notes </a> • <a class="linkHighlight" href="/scripts/links?script=arabic">Script links</a></p>
+<p>For character-specific details see 
+<a class="linkHighlight" href="/scripts/arabic/block">Character notes. </a> For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>.</p>
+  
+  <details id="scriptLinks">
+  <summary>Click here for links to more information.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Arab')</script>
+</details>
 </div>
 
 
 
 <section id="samples">
-  <h2 href="#sample">Samples</h2>
+  <h2 href="#samples">Samples</h2>
   
 <section id="arabicsample">
   <h3 href="#arabicsample">Arabic</h3>
@@ -193,34 +202,45 @@
 
 
 
+<section id="history">
+    <h2><a href="#history">Usage &amp; history</a></h2>
+    <p>From <a href="http://scriptsource.org/scr/Arab">Scriptsource</a>: </p>
+    <blockquote>
+<p>Arabic writing is the second most broadly-used script in the world, after the Latin alphabet. It descended from the Nabataean abjad, itself a descendant of the Phoenician script, and has been used since the 4th century for writing the Arabic language. Since the words of the Prophet Muhammed can only be written in Arabic, the Arabic script has traveled far and wide with the spread of Islam and came to be used for a number of languages throughout Asia, Africa and the Middle East. Many of these are non-Semitic languages, so employ very different sound systems from spoken Arabic, and as a result the script has had to be adapted and is used slightly differently by speakers of different languages. Many African languages use an Arabic-based transcription system called Ajami, which is different from the original Arabic script. Romance languages such as Mozarabic or Ladino are also sometimes written in a modified Arabic script, called Aljamiado. </p>
+<p>Many variations on the script have developed over time and space, but these can be broadly classified into two groups; an angular kufic style which was originally used for stone inscriptions and which commonly employs no diacritics, and the naskh style which is more commonly used, more rounded in form, and governed by a set of principles regulating the proportions between the letters. There are a number of variant styles included in this group, including those used in Arabic calligraphy.</p>
+</blockquote>
+    <p>From <a href="http://en.wikipedia.org/wiki/Arabic_script">Wikipedia</a>:</p>
+<blockquote>
+<p>The Arabic script is the writing system used for writing Arabic and several other languages of Asia and Africa, such as Persian, Urdu, Azerbaijani, Pashto, Central Kurdish, Luri, dialects of Mandinka, and others. Until the 16th century, it was also used to write some texts in Spanish. It is the second-most widely used writing system in the world by the number of countries using it and the third by the number of users, after Latin and Chinese characters. ...</p>
+The script was first used to write texts in Arabic, most notably the Qurʼān, the holy book of Islam. With the spread of Islam, it came to be used to write languages of many language families, leading to the addition of new letters and other symbols, with some versions, such as Kurdish, Uyghur, and old Bosnian being abugidas or true alphabets. It is also the basis for the tradition of Arabic calligraphy.</blockquote>
+</section>
+
+
+
+
 <section id="notes"> 
 
   <section id="type">
-    <h2>Key features</h2>
-    <p>Arabic is an <span class="newterm">abjad</span>. This means that in normal use the script  represents only consonant and long vowel sounds. This approach is helped by the strong emphasis on consonant patterns in Semitic languages, however the Arabic script is also used for other kinds of language (such as the Indo-European Urdu).</p>
-    <p>For more information see <a href="http://scriptsource.org/scr/Arab">ScriptSource</a>, <a href="http://en.wikipedia.org/wiki/Arabic_script">Wikipedia</a> or <a href="http://www.omniglot.com/writing/arabic.htm">Omniglot</a>.</p>
-  </section>
+    <h2><a href="#type">Key features</a></h2>
+    <p>Arabic is an <span class="newterm">abjad</span>. This means that in normal use the script  represents only consonant and long vowel sounds. This approach is helped by the strong emphasis on consonant patterns in Semitic languages, however the Arabic script is also used for other kinds of language (such as the Indo-European Urdu).   See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.</p>
+<p>Arabic script is written horizontally, right-to-left, but numbers and embedded Latin text are read left-to-right. Words are separated by spaces, and contain a mixture of  consonants and long vowels. Diacritics  can be used to indicate short vowel sounds or other phonetic information, where needed. </p>
+<p>The script is  cursive, and some basic letter shapes change radically, depending on what they join to. It is also very common for adjacent characters to ligate and to stretch to fill available space. Many of the characters share a common base form, and are distinguished by the number and location of dots or other small diacritics, called <span class="foreigntext">i'jam</span>. For example, س ‎ش ‎ݜ ‎ ݰ ‎ݽ ‎ݾ ‎ڛ ‎ښ ‎ڜ ‎ۺ.</p>
+    <p>The Arabic script characters in Unicode 10.0 are spread across 3 blocks:</p>
+  <ol>
+      <li><a href="/uniview/?block=arabic">Arabic</a> (255)</li>
+      <li><a href="/uniview/?block=arabic_supplement">Arabic Supplement </a>(48)</li>
+      <li><a href="/uniview/?block=arabic">Arabic Extended-A</a> (47)</li>
+    </ol>
+    <p>There are two additional blocks for presentation forms, but (with the exception of a handful of code points) these characters are only for compatibility with legacy encodings, and should not be used. Sometimes they are used by people to get around problems with Arabic support in applications, but this is a bad idea since it corrupts the underlying data, making it difficult to search, spellcheck, or do many other things that rely on the use of standard characters and their properties.  </p>
+</section>
   
-  <section id="dir" class="note">
-    <h3>Text direction</h3>
-    <p>Arabic script is written horizontally and right-to-left in the main, but as with all RTL scripts, numbers and embedded LTR script text are written left-to-right (producing 'bidirectional' text). In the following example, the Arabic words are read RTL, starting with the one on the right, and numbers are ten and twelve (ie. read left-to-right). The numeric range is also ordered RTL, ie. it starts with 10 and ends with 12:</p>
-    <p dir="rtl" lang="ar" class="large"><span class="ex">في 10-12 آدار</span></p>
-  </section>
-  
-  
-  <section id="baseline" class="note">
-    <h3>Baseline</h3>
-    <p>The alphabetic baseline is a strong feature of Arabic script on the whole, since characters tend to join there. This is not always the case: for example, some adjacent pairs or ligatures have joins above the baseline, and initial letters in some fonts may start slightly above the baseline, but for most cases it remains a strong feature.</p>
-    <p>The nastaliq style of the script, on the other hand, uses arrangements of joined glyphs that cascade downwards from right to left, and ressemble a strongly sloping baseline. Here are some examples from the sample text above.</p>
-    <p dir="rtl" lang="ur" class="large" style="margin-top: 1em;"><span class="ex">مستحق</span> &nbsp;•&nbsp; <span class="ex">شخص</span> &nbsp;•&nbsp; <span class="ex">کیفیت</span></p>
-  </section>
   </section>
   
   
   
   
   <section id="cchars" class="note">
-    <h2><a href="cchars">Combining characters</a></h2>
+  <h2><a href="#cchars">Combining characters</a></h2>
     
     <p>The main arabic block contains 52 combining characters, with 43 more in the Arabic Extended-A block. However, only a small number are typically used for normal, written Arabic, Persian, etc.</p>
     <p>Diacritics are used to express short vowel sounds, however for languages such as Arabic, Persian and Urdu they are typically not used, unless there is a particular need to help the reader understand the pronunciation. These diacritics are used in the Koran.</p>
@@ -234,7 +254,7 @@
 
 
   <section id="shaping" class="note">
-    <h2><a href="shaping">Context-based glyph changes</a></h2>
+    <h2><a href="#shaping">Context-based glyph changes</a></h2>
     
 
 <section id="cursive" class="note">
@@ -275,21 +295,10 @@
   </section>
   </section>
   
-
-  <section id="punctuation" class="note">
-    <h2><a href="#punctuation">Punctuation</a></h2>
-    <p>Arabic languages use a mixture of western and arabic punctuation.</p>
-    <p>The following excerpt from the Arabic sample text above shows the use of <span class="codepoint"><span lang="ar" dir="rtl">&#x060C;</span> <a href="/scripts/arabic/block#char060C">[<span class="uname">U+060C ARABIC COMMA</span>]</a></span>, but uses the ASCII full stop at the end of a sentence.</p>
-    <p dir="rtl" lang="ar" class="ex large">تمييز،</p>
-    <p>The Urdu sample also uses the arabic comma, but uses <span class="codepoint"><span lang="ur" dir="rtl">&#x06D4;</span> <a href="/scripts/arabic/block#char06D4">[<span class="uname">U+06D4 ARABIC FULL STOP</span>]</a></span> at the end of a sentence.</p>
-    <p dir="rtl" lang="ur" class="ex large">چاہیئے۔</p>
-  </section>
   
   
-  
-  
-  <section id="digits" class="note">
-    <h2><a href="digits">Digits</a></h2>
+<section id="digits" class="note">
+<h2><a href="#digits">Digits</a></h2>
     <p>A set of  arabic-indic digits are typically used in Middle Eastern and Gulf countries, whereas North African countries tend to use european digits. In neither area, however, is one digit style used exclusively.</p>
     <p dir="rtl" lang="ar" class="ex large">٠١٢٣٤٥٦٧٨٩</p>
     <p>There is a second set of digits in Unicode for use in languages such as Persian and Urdu. The glyph shapes are typically different for 4 of the digits (although there can also be differences between Persian and Urdu shapes).</p>
@@ -301,9 +310,35 @@
   
   
 <section id="layout" class="note">
-    <h2><a href="layout">Text layout</a></h2>
+    <h2><a href="#layout">Text layout</a></h2>
 
-  <section id="justify" class="note">
+ <section id="dir" class="note">
+<h3>Text direction</h3>
+    <p>Arabic script is written horizontally and right-to-left in the main, but as with all RTL scripts, numbers and embedded LTR script text are written left-to-right (producing 'bidirectional' text). In the following example, the Arabic words are read RTL, starting with the one on the right, and numbers are ten and twelve (ie. read left-to-right). The numeric range is also ordered RTL, ie. it starts with 10 and ends with 12:</p>
+    <p dir="rtl" lang="ar" class="large"><span class="ex">في 10-12 آدار</span></p>
+  </section>
+  
+  
+  <section id="baseline" class="note">
+    <h3>Baseline</h3>
+    <p>The alphabetic baseline is a strong feature of Arabic script on the whole, since characters tend to join there. This is not always the case: for example, some adjacent pairs or ligatures have joins above the baseline, and initial letters in some fonts may start slightly above the baseline, but for most cases it remains a strong feature.</p>
+    <p>The nastaliq style of the script, on the other hand, uses arrangements of joined glyphs that cascade downwards from right to left, and ressemble a strongly sloping baseline. Here are some examples from the sample text above.</p>
+    <p dir="rtl" lang="ur" class="large" style="margin-top: 1em;"><span class="ex">مستحق</span> &nbsp;•&nbsp; <span class="ex">شخص</span> &nbsp;•&nbsp; <span class="ex">کیفیت</span></p>
+  </section>
+
+
+<section>
+<h3><a href="#punctuation">Text delimiters</a></h3>
+    <p>Words are separated by spaces.</p>
+  <p>Arabic languages use a mixture of western and arabic punctuation.</p>
+    <p>The following  shows the use of <span class="codepoint"><span lang="ar" dir="rtl">&#x060C;</span> <a href="/scripts/arabic/block#char060C">[<span class="uname">U+060C ARABIC COMMA</span>]</a></span>. The Arabic sample text at the top of the page uses the ASCII full stop at the end of a sentence.</p>
+    <p dir="rtl" lang="ar" class="ex large">تمييز،</p>
+    <p>The Urdu sample also uses the arabic comma, but uses <span class="codepoint"><span lang="ur" dir="rtl">&#x06D4;</span> <a href="/scripts/arabic/block#char06D4">[<span class="uname">U+06D4 ARABIC FULL STOP</span>]</a></span> at the end of a sentence.</p>
+<p dir="rtl" lang="ur" class="ex large">چاہیئے۔</p>
+</section>
+
+
+<section id="justify" class="note">
     <h3>Justification</h3>
     <p> Arabic script justification can use a number of different techniques. These include stretching the baseline and the glyphs of the text, expanding inter-word spaces, application of ligatures or swash forms, etc.. Typically these will be applied in combination.</p>
     <p>Some font styles, such as ruq'a, do not permit extensions of the baseline.</p>
@@ -316,54 +351,23 @@
   </section>
   
   
-  
-  
   <section id="chars" class="note">
-    <h2>Character list</h2>
-    <p>The Arabic script characters in Unicode 7.0 are spread across 3 blocks:</p>
-    <ol>
-      <li><a href="/uniview/?block=arabic">Arabic</a> (255)</li>
-      <li><a href="/uniview/?block=arabic_supplement">Arabic Supplement </a>(48)</li>
-      <li><a href="/uniview/?block=arabic">Arabic Extended-A</a> (47)</li>
-    </ol>
-    <p>There are two additional blocks for presentation forms, but (with the exception of a handful of code points) these characters are only for compatibility with legacy encodings, and should not be used. Sometimes they are used by people to get around problems with Arabic support in applications, but this is a bad idea since it corrupts the underlying data, making it difficult to search, spellcheck, or do many other things that rely on the use of standard characters and their properties.</p>
-    <p>Many of the characters share a common base form, and are distinguished by the number and location of dots or other small diacritics, called <span class="foreigntext">i'jam</span>. For example, س ‎ش ‎ݜ ‎ ݰ ‎ݽ ‎ݾ ‎ڛ ‎ښ ‎ڜ ‎ۺ.</p>
-    <p>The following is an incomplete list of languages and the number of characters they use, per version 31 of CLDR's lists of characters (exemplarCharacters).</p>
-    <p class="instructions">Click on the links to see a list of characters with names.</p>
-    
-    <section class="characters">
-    <h4>Arabic</h4>
-    <table class="cldrList"><tbody>
-    <tr><th><a target="_blank" href="/uniview/?charlist=%D8%A1%D8%A2%D8%A3%D8%A4%D8%A5%D8%A6%D8%A7%D8%A8%D8%A9%D8%AA%D8%AB%D8%AC%D8%AD%D8%AE%D8%AF%D8%B0%D8%B1%D8%B2%D8%B3%D8%B4%D8%B5%D8%B6%D8%B7%D8%B8%D8%B9%D8%BA%D9%81%D9%82%D9%83%D9%84%D9%85%D9%86%D9%87%D9%88%D9%89%D9%8A">Main</a></th><td lang="ar">ء آ أ ؤ إ ئ ا ب ة ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ى ي</td><td>36</td></tr>
-    <tr><th><a target="_blank" href="/uniview/?charlist=%D9%8B%D9%8C%D9%8D%D9%8E%D9%8F%D9%90%D9%91%D9%92%D9%93%D9%94%D9%95%D9%B0">Combining characters</a></th><td lang="ar">ً ٌ ٍ َ ُ ِ ّ ْ ٓ ٔ ٕ ٰ</td><td>12</td></tr>
-    <tr><th><a target="_blank" href="/uniview/?charlist=-%E2%80%90%E2%80%93%E2%80%94%D8%8C%D8%9B%3A%21%D8%9F.%E2%80%A6%27%22%C2%AB%C2%BB%28%29%5B%5D">Punctuation</a></th><td lang="ar">  - ‐ – — ، ؛ : ! ؟ . … ' &quot; « » ( ) [ ]</td><td>19</td></tr>
-    </tbody></table>
-  </section>
-    
-    <section class="characters">
-    <h4>Persian</h4>
-    <table class="cldrList"><tbody>
-    <tr><th><a target="_blank" href="/uniview/?charlist=%D8%A1%D8%A2%D8%A3%D8%A4%D8%A6%D8%A7%D8%A8%D9%BE%D8%A9%D8%AA%D8%AB%D8%AC%DA%86%D8%AD%D8%AE%D8%AF%D8%B0%D8%B1%D8%B2%DA%98%D8%B3%D8%B4%D8%B5%D8%B6%D8%B7%D8%B8%D8%B9%D8%BA%D9%81%D9%82%DA%A9%DA%AF%D9%84%D9%85%D9%86%D9%87%D9%88%D9%8A%DB%8C">Main</a></th><td lang="fa">ء آ أ ؤ ئ ا ب پ ة ت ث ج چ ح خ د ذ ر ز ژ س ش ص ض ط ظ ع غ ف ق ک گ ل م ن ه و ي ی</td><td>39</td></tr>
-    <tr><th><a target="_blank" href="/uniview/?charlist=%D9%8B%D9%8C%D9%8D%D9%91%D9%93%D9%94">Combining characters</a></th><td lang="fa">ً ٌ ٍ ّ ٓ ٔ</td><td>6</td></tr>
-    <tr><th><a target="_blank" href="/uniview/?charlist=%D9%80-%E2%80%90%D8%8C%D9%AB%D9%AC%D8%9B%3A%21%D8%9F.%E2%80%A6%E2%80%B9%E2%80%BA%C2%AB%C2%BB%28%29%5B%5D%2A%2F%5C">Punctuation</a></th><td lang="fa">ـ - ‐ ، ٫ ٬ ؛ : ! ؟ . … ‹ › « » ( ) [ ] * / \</td><td>23</td></tr>
-    </tbody></table>
-  </section>
-    
-    <section class="characters">
-    <h4>Urdu</h4>
-    <table class="cldrList"><tbody>
-    <tr><th><a target="_blank" href="/uniview/?charlist=%D8%A1%D8%A2%D8%A3%D8%A4%D8%A6%D8%A7%D8%A8%D9%BE%D8%A9%D8%AA%D8%AB%D9%B9%D8%AC%DA%86%D8%AD%D8%AE%D8%AF%D8%B0%DA%88%D8%B1%D8%B2%DA%91%DA%98%D8%B3%D8%B4%D8%B5%D8%B6%D8%B7%D8%B8%D8%B9%D8%BA%D9%81%D9%82%DA%A9%DA%AF%D9%84%D9%85%D9%86%DA%BA%D9%87%DA%BE%DB%81%DB%82%D9%88%D9%8A%DB%8C%DB%92">Main</a></th><td lang="ur">ء آ أ ؤ ئ ا ب پ ة ت ث ٹ ج چ ح خ د ذ ڈ ر ز ڑ ژ س ش ص ض ط ظ ع غ ف ق ک گ ل م ن ں ه ھ ہ ۂ و ي ی ے</td><td>47</td></tr>
-    <tr><th><a target="_blank" href="/uniview/?charlist=%D9%93%D9%94">Combining characters</a></th><td lang="ur">ٓ ٔ</td><td>2</td></tr>
-    <tr><th><a target="_blank" href="/uniview/?charlist=%D8%8C%D8%8D%D9%AB%D9%AC%D8%9B%3A%D8%9F.%DB%94%28%29%5B%5D">Punctuation</a></th><td lang="ur">، ؍ ٫ ٬ ؛ : ؟ . ۔ ( ) [ ]</td><td>13</td></tr>
-    </tbody></table>
-  </section>
-    
-  </section>
+<h2><a href="#chars">Character lists by language</a></h2>
+    <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li><a href="/app-charuse/?language=ar" target="_blank">Arabic</a> <span class="charCount">(36 letters, 12 marks, 14 punctuation, 10 numbers :   total 72)</span></li>
+<li><a href="/app-charuse/?language=fa" target="_blank">Persian</a> <span class="charCount">(40 letters, 8 marks, 14 punctuation, 10 numbers, 1 symbols, 1 other :   total 74)</span></li>
+<li><a href="/app-charuse/?language=ur" target="_blank">Urdu</a> <span class="charCount">(47 letters, 8 marks, 10 punctuation, 10 numbers :   total 75)</span></li>
+<li><a href="/app-charuse/?language=prs" target="_blank">Dari</a> <span class="charCount">(37 letters, 3 marks, 2 punctuation, 10 numbers, 1 other :   total 53)</span></li>
+<li><a href="/app-charuse/?language=ps" target="_blank">Pashto</a> <span class="charCount">(50 letters, 11 marks, 5 punctuation, 10 numbers, 1 symbols :   total 77)</span></li>
+<li><a href="/app-charuse/?language=sd" target="_blank">Sindhi</a> <span class="charCount">(51 letters, 1 marks, 1 punctuation :   total 53)</span></li>
+<li><a href="/app-charuse/?language=ug" target="_blank">Uyghur</a> <span class="charCount">(33 letters, 1 marks, 2 punctuation :   total 36)</span></li>
+</ul>
+</section>
 
 
-<div class="smallprint"><span id="version">First published  11 Jul 2017.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-07-25  7:51<!-- #EndDate --> 
-  </span> GMT. &nbsp;&bull;&nbsp; <a href="https://github.com/r12a/scripts/issues/new?title=%5Barabic%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fsummaries%2Farabic%0A%0A" target="_blank">Raise an issue</a>. &nbsp;&bull;&nbsp; Copyright r12a.  Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/arabic"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-07  12:01<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Barabic%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Farabic%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
 
 <div id="panel" style="display:none"></div>
 </body>
