@@ -19,6 +19,7 @@
 	font-size: 28px;
 	font-family: webfont, serif;
 	text-align: right;
+    line-height: 1.4;
 	}
 [lang=dv] { font-family: webfont, serif; font-size: 140%; }
 .large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
@@ -32,6 +33,9 @@
 <script type="text/javascript" src="/shared/fontlists/manage.js"></script>
 <script type="text/javascript" src="/shared/code/scriptGroups.js"></script>
 <script type="text/javascript" src="../summaries/functions.js"></script>
+<script type="text/javascript" src="../block/functions.js"></script>
+<script type="text/javascript" src="/shared/code/getLinks.js"></script>
+<script type="text/javascript" src="/scripts/linkdata/linkdb.js"></script>
 <script type="text/javascript" src="../summaries/scriptdata.js"> </script>
 
 <script type="text/javascript" src="/shared/fontlists/thaana.js"> </script>
@@ -52,14 +56,23 @@
  <div id="fontsetting" class="closed">
   <h2 class="notoc"><a id="fonts">Fonts</a></h2>
   <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-    <form onSubmit="document.getElementById('freeText').style.fontFamily = document.getElementById('fontName').value; return false;">
-      <p dir="ltr" class="english">Use this font:<br/>
-        <input type="text" id="fontName" value="webfont"/>
-        <button
-		  type="submit">Apply</button>
-      </p>
-  </form>
-    <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'dv');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'dv');" />
+ </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
+ <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
 	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
 	return false;">
       <p>Change size:<br />
@@ -84,15 +97,21 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->7 August, 2017<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->8 January, 2018<!-- #EndDate -->
 &bull; tags  <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="http://rishida.net/blog/?tag=thaana" title="Show all blog posts tagged with 'arabic'">thaana</a></p>
 
 
 <div class="section">
-  <p>This page provides basic information about the Thaana script.  It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>.</p>
+  <p>This page provides basic information about the Thaana script.  It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned.</p>
   <p class="instructions">Click on red  text examples or highlight part of the sample text to see a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
-  <p>For more details see:  <br>
-  <a class="linkHighlight" href="/scripts/thaana/block">Character notes </a> • <a href="/scripts/links?script=thaana" class="linkHighlight">Script links</a></p>
+<p>For character-specific details see 
+  <a class="linkHighlight" href="/scripts/thaana/block">Character notes</a>. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>. </p>
+  
+  <details id="scriptLinks">
+  <summary>Click here for links to more information.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Thaa')</script>
+</details>
 </div>
 
 
@@ -126,20 +145,29 @@
 
 <section id="notes"> 
 
-  <section id="type">
+<section id="history">
+    <h2><a href="#history">Usage &amp; history</a></h2>
+    <p>From <a href="http://scriptsource.org/scr/Thaa">Scriptsource</a>: </p>
+    <blockquote>The Thaana script is used for writing the Maldivian language, also known as Dhivehi, spoken by about 370,000 people in the Maldives and in Maldivian communities in India. The script is unique to this language. The language is also called Mahl, particularly on the island of Minicoy in the Indian territory of Lakshadweep. The Maldivian language has been written in its own script, it is thought, for over two millennia, when it was developed by Maldivian Buddhist monks translating the Buddhist scriptures.</blockquote>
+    <p>From <a href="http://en.wikipedia.org/wiki/Thaana">Wikipedia</a>:</p>
+<blockquote>
+<p>Thaana, Taana or Tāna ( ތާނަ‎ in Tāna script) is the present writing system of the Maldivian language spoken in the Maldives. ...</p>
+<p>The Thaana script first appeared in a Maldivian document towards the beginning of the 18th century in a crude initial form known as Gabulhi Thaana which was written scripta continua. This early script slowly developed, its characters slanting 45 degrees, becoming more graceful and spaces were added between words. As time went by it gradually replaced the older Dhives Akuru alphabet. The oldest written sample of the Thaana script is found in the island of Kanditheemu in Northern Miladhunmadulu Atoll. It is inscribed on the door posts of the main Hukuru Miskiy (Friday mosque) of the island and dates back to 1008 AH (AD 1599) and 1020 AH (AD 1611) when the roof of the building were built and the renewed during the reigns of Ibrahim Kalaafaan (Sultan Ibrahim III) and Hussain Faamuladeyri Kilege (Sultan Hussain II) respectively.</p>
+</blockquote>
+</section>
+
+
+
+
+<section id="type">
     <h2>Key features</h2>
-    <p>Dhivehi is an <span class="newterm">alphabetic abjad</span>. All vowels are written, but as diacritics above the consonants. </p>
-    <p>There are 38 consonants and 11 vowel diacritics in the Thaana block. Words are separated by spaces. Unlike Arabic or N'Ko, the text is not cursive.</p>
-    <p>For more information see <a href="http://scriptsource.org/scr/Thaa">ScriptSource</a>, <a href="http://en.wikipedia.org/wiki/Thaana">Wikipedia</a> or <a href="http://www.omniglot.com/writing/thaana.htm">Omniglot</a>.</p>
-  </section>
-  
-  <section id="dir" class="note">
-    <h3>Text direction</h3>
-    <p>Thaana script is written horizontally and right-to-left in the main, but as with most RTL scripts, numbers and embedded LTR script text are written left-to-right (producing 'bidirectional' text). </p>
-    <p>In the following example, the section number is read LTR, ie 7.2.2, but the Thaana word following is RTL.    </p>
-    <p dir="rtl" lang="dv" class="large"><span  class="ex">7.2.2 ބައްތެލި</span></p>
-  </section>
-  </section>
+    <p>Dhivehi is an <span class="newterm">alphabetic abjad</span>. All vowels are written, but as diacritics above the consonants.   See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
+</p>
+<p>There are 38 consonants and 11 vowel diacritics in the Thaana block. Words are separated by spaces. Unlike Arabic or N'Ko, the text is not cursive.</p>
+  <p>The Thaana script characters in Unicode 10.0 is in a single block:</p>
+  <ul><li><a href="/uniview/?block=arabic">Thaana</a> (50)</li></ul>
+</section>
+</section>
   
   
   
@@ -154,7 +182,7 @@
     <h3><a href="#basic_consonants">Basic consonants</a></h3>
 
     <p>For writing the languages of the Maldives there are 24 consonants in this block (<span class="ex" lang="dv">ހށނރބޅކއވމފދތލގޏސޑޒޓޔޕޖޗ</span>).</p>
-    </section>
+  </section>
     
     
     
@@ -186,23 +214,8 @@
     <p>Word-initial or independent vowel sounds use <span class="codepoint"><span lang="dv" dir="rtl">&#x0787;</span> <a href="/scripts/thaana/block#char0787">[<span class="uname">U+0787 THAANA LETTER ALIFU</span>]</a></span> as a base.</p>
     <p>As mentioned just above, the  diacritic <span class="codepoint"><span lang="dv" dir="rtl">&#x25CC;&#x07B0;</span> <a href="/scripts/thaana/block#char07B0">[<span class="uname">U+07B0 THAANA SUKUN​</span>]</a></span>  signifies that no vowel sound follows a consonant.</p>
 </section>
-  
-  
-  
-  
-  <section id="punctuation" class="note">
-    <h2>Punctuation</h2>
-    <p>Dhivehi punctuation uses a mixture of western and arabic punctuation.</p>
-    <p>The following excerpt from the sample text above shows the use of arabic commas:    </p>
-    <p dir="rtl" lang="dv" class="large"><span class="ex">އުފަންވަނީ،</span></p>
-    <p>The same sample text, however, uses ASCII full stops at the end of sentences.</p>
-  </section>
-  
-  
-  
-  
-  <section id="digits" class="note">
-    <h2>Digits</h2>
+<section id="digits" class="note">
+<h2>Digits</h2>
     <p>Either european digits or arabic-indic digits are used.</p>
   </section>
   
@@ -212,7 +225,30 @@
 <section id="layout" class="note">
     <h2><a href="#layout">Text layout</a></h2>
 
-  <section id="justify" class="note">
+  
+  <section id="dir" class="note">
+    <h3>Text direction</h3>
+    <p>Thaana script is written horizontally and right-to-left in the main, but as with most RTL scripts, numbers and embedded LTR script text are written left-to-right (producing 'bidirectional' text). </p>
+    <p>In the following example, the section number is read LTR, ie 7.2.2, but the Thaana word following is RTL.    </p>
+    <p dir="rtl" lang="dv" class="large"><span  class="ex">7.2.2 ބައްތެލި</span></p>
+  </section>
+
+
+
+
+ <section>
+<h3><a href="#punctuation">Text delimiters</a></h3>
+    <p>Words are separated by spaces.</p>
+    <p>Dhivehi punctuation uses a mixture of western and arabic punctuation.</p>
+    <p>The following excerpt from the sample text above shows the use of arabic commas:    </p>
+    <p dir="rtl" lang="dv" class="large"><span class="ex">އުފަންވަނީ،</span></p>
+    <p>The same sample text, however, uses ASCII full stops at the end of sentences.</p>
+</section>
+
+
+
+
+<section id="justify" class="note">
     <h3>Justification</h3>
     <p>I'm not sure how justification works, but assume it is like in English.</p>
     <p class="instructions">Use the control below to see how your browser justifies the text sample here.</p>
@@ -224,33 +260,36 @@
 </section>
  
  
-  
-  <section id="chars" class="note">
-    <h2>Character list</h2>
-    <p>The Thaana script characters in Unicode 10.0 is in a single block: <a href="/uniview/?block=arabic">Thaana</a> (50).</p>
-    <p>There is no information for Dhivehi exemplarCharacters in version 31 of CLDR's lists of characters.</p>
-    <!--p class="instructions">Click on the links to see a list of characters with names.</p>
-    
-    <section class="characters">
-    <h4>Dhivehi</h4>
-    <table class="cldrList"><tbody>
-    <tr><th><a target="_blank" href="/uniview/?charlist=%CE%B1%CE%AC%CE%B2%CE%B3%CE%B4%CE%B5%CE%AD%CE%B6%CE%B7%CE%AE%CE%B8%CE%B9%CE%AF%CF%8A%CE%90%CE%BA%CE%BB%CE%BC%CE%BD%CE%BE%CE%BF%CF%8C%CF%80%CF%81%CF%83%CF%82%CF%84%CF%85%CF%8D%CF%8B%CE%B0%CF%86%CF%87%CF%88%CF%89%CF%8E">Main</a></th>
-    <td lang="dv">α ά β γ δ ε έ ζ η ή θ ι ί ϊ ΐ κ λ μ ν ξ ο ό π ρ σ ς τ υ ύ ϋ ΰ φ χ ψ ω ώ</td>
-    <td>36</td></tr>
-    <tr><th><a target="_blank" href="/uniview/?charlist=%CC%81%CC%88">Combining characters</a></th>
-    <td lang="dv">́ ̈</td>
-    <td>2</td></tr>
-    <tr><th><a target="_blank" href="/uniview/?charlist=-%E2%80%90%E2%80%93%E2%80%94%2C%3B%3A%21.%E2%80%A6%22%C2%AB%C2%BB%28%29%5B%5D%C2%A7%40%2A%2F%5C%26">Punctuation</a></th>
-    <td lang="dv">- ‐ – — , ; : ! . … &quot; « » ( ) [ ] § @ * / \ &amp;</td>
-    <td>23</td></tr>
-    </tbody></table>
-  </section-->
 
-  </section>
+<section id="chars" class="note">
+<h2>Character lists by language</h2>
+    <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li>
+<p><a href="/app-charuse/?language=dv" target="_blank">Dhivehi</a> <span class="charCount">(35 letters, 11 marks, 2 punctuation :   total 48*)</span></p>
+</li>
+</ul>
+<p style="font-size: 70%">* Character counts are based on an analysis of UDHR only – not on CLDR information or other research.</p>
+</section>
 
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/thaana"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-08-07  10:17<!-- #EndDate --> 
+
+
+<section id="references">
+<h2><a href="#references">References</a></h2>
+  <ol>
+     <li>[Unicode] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch13.pdf">Thaana</a>, pp 511-512.</li>
+   <li>[Daniels] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN 0-19-507993-0</li>
+  </ol>
+</section>
+
+
+
+
+
+
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/thaana"><span id="version-info"> 
+  <!-- #BeginDate format:IS1m -->2018-01-08  8:00<!-- #EndDate --> 
   </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bthaana%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fthaana%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
