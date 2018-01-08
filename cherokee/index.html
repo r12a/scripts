@@ -18,6 +18,7 @@
 #freeText, #freeText2 {
 	font-size: 24px;
 	font-family: webfont, serif;
+    line-height: 1.4;
 	}
 [lang=chr] { font-family: webfont, serif; font-size: 140%; }
 .large .ex { font-size: 300%; }
@@ -31,6 +32,9 @@
 <script type="text/javascript" src="/shared/fontlists/manage.js"></script>
 <script type="text/javascript" src="/shared/code/scriptGroups.js"></script>
 <script type="text/javascript" src="../summaries/functions.js"></script>
+<script type="text/javascript" src="../block/functions.js"></script>
+<script type="text/javascript" src="/shared/code/getLinks.js"></script>
+<script type="text/javascript" src="/scripts/linkdata/linkdb.js"></script>
 <script type="text/javascript" src="../summaries/scriptdata.js"> </script>
 
 <script type="text/javascript" src="/shared/fontlists/cherokee.js"> </script>
@@ -51,14 +55,23 @@
  <div id="fontsetting" class="closed">
   <h2 class="notoc"><a id="fonts">Fonts</a></h2>
   <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-    <form onSubmit="document.getElementById('freeText').style.fontFamily = document.getElementById('fontName').value; return false;">
-      <p dir="ltr" class="english">Use this font:<br/>
-        <input type="text" id="fontName" value="webfont"/>
-        <button
-		  type="submit">Apply</button>
-      </p>
-  </form>
-    <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
+   <p>Set font for examples<br/>
+   <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'chr');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+   <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'chr');" />
+ </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
+ <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
 	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
 	return false;">
       <p>Change size:<br />
@@ -82,15 +95,21 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->7 August, 2017<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->7 January, 2018<!-- #EndDate -->
 &bull; tags  <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="http://rishida.net/blog/?tag=cherokee" title="Show all blog posts tagged with 'cherokee'">cherokee</a></p>
 
 
 <div class="section">
-  <p>This page provides basic information about the Cherokee script. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>.</p>
+  <p>This page provides basic information about the Cherokee script. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned.</p>
   <p class="instructions">Click on red  text examples or highlight part of the sample text to see a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
-  <p>For more details see:  
-  <a href="/scripts/cherokee/block" class="linkHighlight">Character notes </a> • <a href="/scripts/links?script=cherokee" class="linkHighlight">Script links</a></p>
+<p>For character-specific details see 
+  <a href="/scripts/cherokee/block" class="linkHighlight">Character notes</a>. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>. </p>
+  
+  <details id="scriptLinks">
+  <summary>Click here for links to more information.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Cher')</script>
+  </details>
 </div>
 
 
@@ -138,31 +157,35 @@
 
 
 
-<section id="notes"> 
 
-  <section id="type">
+<section id="history">
+    <h2><a href="#history">Usage &amp; history</a></h2>
+    <p>From <a href="http://scriptsource.org/scr/Cher">Scriptsource</a>: </p>
+    <blockquote>
+<p>The Cherokee script was created by a Cherokee man named Sequoyah (also known as George Guess or George Gist) who believed that the key to the colonialists' success and power lay within their 'talking leaves', the written correspondence they used to exchange information and ideas. Although Sequoyah was illiterate, he noted the shapes of the letters in an English Bible and based the shapes of the Cherokee letters on them. For this reason, many of the letters resemble Latin letters and numbers, although there is no relationship between their sounds in English and in Cherokee. Sequoyah spent 12 years devising the Cherokee syllabary, and presented it formally in 1821. It achieved almost instant popularity and by 1824 most Cherokee were literate in the script. In 1828 Sequoyah collaborated with Rev. Samuel A. Worcester to modify the script to facilitate the creation of a printing press. The letters they created together are somewhat different from Sequoyah's original set, and are the letters in use today. ...</p>
+<p>From the 1870s until the early 20th century, the US government implemented formal assimilation policies with the intention of 'civilizing' Native Americans. Native American children were forcibly removed from their families and sent to mandatory boarding schools where they were not allowed to speak their language, practice traditional ways or visit their homes, sometimes for three or four years at a time. As a result, a generation of Cherokee people grew up unable to speak the Cherokee language, and it is now estimated to be spoken by fewer than 10% of Cherokee people. Among those who do speak the language, the script is widely used for writing letters, recipes, folktales, diaries, and for personal record-keeping. It is also used in some legal, governmental and religious documents and, in some areas, public signage. Efforts are being made to revive both the language and the script; to that end it is used in a limited capacity in education. Knowledge of the script is considered a prerequisite for full Cherokee citizenship. Two widely used publications in the script are a Cherokee New Testament and a hymnal. Although the orthography has never officially been standardized, many regard the spellings in these books as a standard for formal language.</p>
+</blockquote>
+    <p>From <a href="http://en.wikipedia.org/wiki/Cherokee_script">Wikipedia</a>:</p>
+<blockquote>The Cherokee syllabary is a syllabary invented by Sequoyah to write the Cherokee language in the late 1810s and early 1820s. His creation of the syllabary is particularly noteworthy as he could not previously read any script. He first experimented with logograms, but his system later developed into a syllabary. In his system, each symbol represents a syllable rather than a single phoneme; the 85 (originally 86) characters provide a suitable method to write Cherokee. Although some symbols resemble Latin, Greek, and Cyrillic letters, the relationship between symbols and sounds is different.</blockquote>
+</section>
+
+
+
+
+
+<section id="type">
     <h2><a href="type">Key features</a></h2>
-    <p>Cherokee is a <span class="newterm">syllabary</span>. Letters typically represent a combination of consonants and vowels.</p>
+    <p>Cherokee is a <span class="newterm">syllabary</span>. Letters typically represent a combination of consonants and vowels.  See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
+</p>
     <p>Text is normally written horizontally, left to right, and the visual forms of letters don't  interact. There are no combining characters or diacritics.</p>
     <p>There is no standard spelling. The way a word is written may vary, according to the pronunciation of the writer, or choices they make for dealing with consonant clusters.</p>
     <p>Words are separated by spaces.</p>
-    <p>For more information see <a href="http://scriptsource.org/scr/Cher">ScriptSource</a>, <a href="http://en.wikipedia.org/wiki/Cherokee_script">Wikipedia</a> or <a href="http://www.omniglot.com/writing/cherokee.htm">Omniglot</a>.</p>
-
-
-
-  
-  <section id="cs" class="note">
-    <h3>Case</h3>
-    <p>Lowercase characters were introduced in Unicode 8.0, to cover growing use of bicameral content in modern typesetting, as well as some older texts such as the Cherokee New Testament. The lowercase text above is likely to be displayed as tofu (boxes), since it is currently difficult to find a font that includes lowercase forms.</p>
-    <p>It is unusual for the majority of content to be in uppercase, and for lowercase to come in later, and implementers may need to take care in introducing the new characters. For example, Cherokee case-folds to uppercase, rather than lower. For more details see the <a href="http://www.unicode.org/versions/latest/ch20.pdf" target="_blank">Unicode Standard</a>.<sup>1</sup></p>
-    <p>This sample text is repeated. The left-hand sample is all uppercase, the right is mixed. The shapes of the upper- vs. lower-cased letters don't change (as they do in Latin or Cyrillic). The lowercase letters are simply smaller.</p>
-    <p class="large"><span lang="chr" class="ex">ᎤᎾᏕᏅᎢ</span>&nbsp;vs.&nbsp;<span lang="chr" class="ex">Ꭴꮎꮥꮕꭲ</span></p>
-  </section>
-  <section id="tones" class="tones">
-    <h3>Tones</h3>
-    <p>Spoken Cherokee has tones, but they are not shown in the text.<sup>1</sup></p>
-  </section>
-  </section>
+    <p>The Cherokee script characters in Unicode 10.0 are spread across 2 blocks (not counting shared characters, such as punctuation):</p>
+    <ul>
+      <li><a href="/uniview/?block=cherokee">Cherokee</a> (92)</li>
+      <li><a href="/uniview/?block=cherokee_supplement">Cherokee Supplement</a> (80)</li>
+    </ul>
+</section>
 
 
 
@@ -173,11 +196,29 @@
     <p>There are 85 characters in the syllabary, of which 6 represent syllables that start with either no consonant or with <span class="ipa">ʔ</span> (<span class="ex" lang="chr">ᎠᎡᎢᎣᎤᎥ</span>), and one character represents the non-syllabic consonant sound <span class="ipa">s</span> (<span class="ex" lang="chr">Ꮝ</span>). The rest nominally represent a combination of consonant plus vowel, though the actual practise is a little more nuanced, and there is a degree of vagueness in the script when it comes to phonetically transcribing spoken sounds.<sup>2</sup></p>
     
     
-    <section id="vowel_chars">
+   <section id="cs" class="note">
+    <h3>Case</h3>
+    <p>Lowercase characters were introduced in Unicode 8.0, to cover growing use of bicameral content in modern typesetting, as well as some older texts such as the Cherokee New Testament. The lowercase text above is likely to be displayed as tofu (boxes), since it is currently difficult to find a font that includes lowercase forms.</p>
+    <p>It is unusual for the majority of content to be in uppercase, and for lowercase to come in later, and implementers may need to take care in introducing the new characters. For example, Cherokee case-folds to uppercase, rather than lower. For more details see the <a href="http://www.unicode.org/versions/latest/ch20.pdf" target="_blank">Unicode Standard</a>.<sup>1</sup></p>
+    <p>This sample text is repeated. The left-hand sample is all uppercase, the right is mixed. The shapes of the upper- vs. lower-cased letters don't change (as they do in Latin or Cyrillic). The lowercase letters are simply smaller.</p>
+    <p class="large"><span lang="chr" class="ex">ᎤᎾᏕᏅᎢ</span>&nbsp;vs.&nbsp;<span lang="chr" class="ex">Ꭴꮎꮥꮕꭲ</span></p>
+  </section>
+
+
+
+
+<section id="tones" class="tones">
+    <h3>Tones</h3>
+    <p>Spoken Cherokee has tones, but they are not shown in the text.<sup>1</sup></p>
+  </section>
+
+
+
+<section id="vowel_chars">
     <h3><a href="#vowel_chars">'Vowel' characters</a></h3>
     <p>The six vowel characters, when they appear at the start of a word represent plain vowel sounds, eg. <span class="ex" lang="chr">ᎠᎹ</span> <span class="ipa">ama</span> <span class="trans">a-ma</span> <span class="meaning">water</span>.</p>
     <p>Elsewhere they represent a syllable starting with <span class="ipa">ʔ</span>, eg. <span class="ex" lang="chr">ᎯᎠ</span> <span class="ipa">hiʔa</span> <span class="trans">hi-a</span> <span class="meaning">this</span>.<sup>2</sup></p>
-    </section>
+  </section>
     
     
     
@@ -213,7 +254,7 @@
     <p>With one exception, consonant clusters are managed by using a normal syllabic character but ignoring the ('dummy') vowel, eg. <span class="ex" lang="chr">ᎦᎵᏉᎩ</span> <span class="ipa">kaɬkʷoːki</span> <span class="trans">ga-li-quo-gi</span> <span class="meaning">seven</span> or <span class="ex" lang="chr">ᎬᏙᎠ</span> <span class="ipa">ktʰoːʔa</span> <span class="trans">gv-do-a</span> <span class="meaning">it's hanging</span>. The character chosen is largely up to the writer, but some words bring in etymological connections.</p>
     <p>The exception is <span class="codepoint"><span lang="chr">&#x13CD;</span> <a href="/scripts/cherokee/block#char13CD">[<span class="uname">U+13CD CHEROKEE LETTER S</span>]</a></span>, which is not followed by a vowel, eg. <span class="ex" lang="chr">ᏍᎪᎯ</span> <span class="ipa">skoːhi</span> <span class="trans">s-go-hi</span> <span class="meaning">ten</span>.<sup>2</sup></p>
     </section>
-    </section>
+</section>
     
     
     <section id="ssV">
@@ -223,18 +264,9 @@
 
 
 
-
-
-  <section id="punctuation" class="note">
-    <h2><a href="#punctuation">Punctuation</a></h2>
-    <p>Cherokee uses standard Latin punctuation.<sup>1</sup></p>
-    <p>In some cases, it has been known for full stops to be raised above the baseline.<sup>2</sup></p>
-</section>
   
   
-  
-  
-  <section id="digits" class="note">
+<section id="digits" class="note">
     <h2><a href="#digits">Digits</a></h2>
     <p>Sequoyah, the inventor of the script, created a set of Cherokee numbers, but they were not adopted and are not encoded in Unicode.<sup>1</sup> The shapes of the numbers can be seen on the Omniglot page.<a class="ref" href="http://www.omniglot.com/writing/cherokee.htm">OG</a></p>
   </section>
@@ -242,14 +274,32 @@
   
   
   
-   <section id="layout" class="note">
+<section id="layout" class="note">
     <h2><a href="#layout">Text layout</a></h2>
     
+  <section id="direction" class="note">
+    <h3><a href="#justify">Text direction</a></h3>
+    <p>Cherokee is written horizontally, left-to-right.</p>
+  </section>
+
+
+
+
+  <section id="delimiters" class="note">
+    <h3><a href="#delimiters">Text delimiters</a></h3>
+  <p>Words are separated by spaces.</p>
+    <p>Cherokee uses standard Latin punctuation.<sup>1</sup></p>
+    <p>In some cases, it has been known for full stops to be raised above the baseline.<sup>2</sup></p>
+  </section>
+
+
+
+
   <section id="justify" class="note">
     <h3><a href="#justify">Justification</a></h3>
     <p>Justification is done, principally, by adjusting the space between words.</p>
     <p><em>Use the control below to see how your browser justifies the text sample here.</em></p>
-    <p dir="rtl" lang="chr" id="justificationExample" style="text-align:start;">Ꮒꭶꮫ ꭲꮷꮃꭽꮙ ꭲꭼꮿꮨꮯ ꮎꮝꭹ ꮧꭷꮏꮹꮫꮝꮧ ꭰꮄ ꭴꮎꮣꮒꮬꮕꭲ ꮕꮰꮿꮝꮫꮎ ꮒꭶꭵ ꭰꮣꮫᏻꮴꮧ ꮎꮝꭹ ꭲꮷꮃꭽꮙ ꭼꮹꮒꮝꮥꮈꮩꮧ ꮎꮝꭹ ꮧꭷꮏꮹꮫꮝꮧ. Ꮒꭶꮣ ꭴꮎꮣꮒꮬꮕꭲ ꭲꮷꮃꭽꮙ ꭼꮹꮒꮝꮥꮈꮩꮧ ꮧꭼꮹꮎꮱꮧꮝꭹ ꮒꭶꭵ ꭰꮣꮫᏻꮴꮧ ꮎꮝꭹ ꭰꮝꭶꮕꭼꭲ ꭿꭰ ꮧꭶꮓꮳꮃꮕꭲ ꭰꮄ ꮧꭼꮹꮎꮱꮧꮝꭹ ꭰꮄ ꮒꭶꭵ ꮣꮣꮪꮄꭼ ꮎꮝꭹ ꭲᏻꮝꮧ ꭰꮣꮫᏻꮴꮧ.</p>
+    <p dir="ltr" lang="chr" id="justificationExample" style="text-align:start;">Ꮒꭶꮫ ꭲꮷꮃꭽꮙ ꭲꭼꮿꮨꮯ ꮎꮝꭹ ꮧꭷꮏꮹꮫꮝꮧ ꭰꮄ ꭴꮎꮣꮒꮬꮕꭲ ꮕꮰꮿꮝꮫꮎ ꮒꭶꭵ ꭰꮣꮫᏻꮴꮧ ꮎꮝꭹ ꭲꮷꮃꭽꮙ ꭼꮹꮒꮝꮥꮈꮩꮧ ꮎꮝꭹ ꮧꭷꮏꮹꮫꮝꮧ. Ꮒꭶꮣ ꭴꮎꮣꮒꮬꮕꭲ ꭲꮷꮃꭽꮙ ꭼꮹꮒꮝꮥꮈꮩꮧ ꮧꭼꮹꮎꮱꮧꮝꭹ ꮒꭶꭵ ꭰꮣꮫᏻꮴꮧ ꮎꮝꭹ ꭰꮝꭶꮕꭼꭲ ꭿꭰ ꮧꭶꮓꮳꮃꮕꭲ ꭰꮄ ꮧꭼꮹꮎꮱꮧꮝꭹ ꭰꮄ ꮒꭶꭵ ꮣꮣꮪꮄꭼ ꮎꮝꭹ ꭲᏻꮝꮧ ꭰꮣꮫᏻꮴꮧ.</p>
     <p class="english" dir="ltr">
       <button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Justify   </button>
     </p>
@@ -259,31 +309,17 @@
 
 
   
-  <section id="chars" class="note">
-    <h2><a href="chars">Character lists by language</a></h2>
-    <p>The Cherokee script characters in Unicode 8.0 are spread across 2 blocks (not counting shared characters, such as punctuation):</p>
-    <ul>
-      <li><a href="/uniview/?block=cherokee">Cherokee</a> (92)</li>
-      <li><a href="/uniview/?block=cherokee_supplement">Cherokee Supplement</a> (80)</li>
-    </ul>
-    <p>The following is an incomplete list of languages and the number of characters they use, per version 31 of CLDR's lists of characters (exemplarCharacters).</p>
-    <p class="instructions">Click on the links to see a list of characters with names.</p>
-    
-    <section class="characters">
-    <h4>Cherokee</h4>
-    <table class="cldrList"><tbody>
-    <tr><th><a target="_blank" href="/uniview/?charlist=%EA%AD%B0%EA%AD%B1%EA%AD%B2%EA%AD%B3%EA%AD%B4%EA%AD%B5%EA%AD%B6%EA%AD%B7%EA%AD%B8%EA%AD%B9%EA%AD%BA%EA%AD%BB%EA%AD%BC%EA%AD%BD%EA%AD%BE%EA%AD%BF%EA%AE%80%EA%AE%81%EA%AE%82%EA%AE%83%EA%AE%84%EA%AE%85%EA%AE%86%EA%AE%87%EA%AE%88%EA%AE%89%EA%AE%8A%EA%AE%8B%EA%AE%8C%EA%AE%8D%EA%AE%8E%EA%AE%8F%EA%AE%90%EA%AE%91%EA%AE%92%EA%AE%93%EA%AE%94%EA%AE%95%EA%AE%96%EA%AE%97%EA%AE%98%EA%AE%99%EA%AE%9A%EA%AE%9B%EA%AE%9C%EA%AE%9D%EA%AE%9E%EA%AE%9F%EA%AE%A0%EA%AE%A1%EA%AE%A2%EA%AE%A3%EA%AE%A4%EA%AE%A5%EA%AE%A6%EA%AE%A7%EA%AE%A8%EA%AE%A9%EA%AE%AA%EA%AE%AB%EA%AE%AC%EA%AE%AD%EA%AE%AE%EA%AE%AF%EA%AE%B0%EA%AE%B1%EA%AE%B2%EA%AE%B3%EA%AE%B4%EA%AE%B5%EA%AE%B6%EA%AE%B7%EA%AE%B8%EA%AE%B9%EA%AE%BA%EA%AE%BB%EA%AE%BC%EA%AE%BD%EA%AE%BE%EA%AE%BF%E1%8F%B8%E1%8F%B9%E1%8F%BA%E1%8F%BB%E1%8F%BC">Main</a></th><td lang="chr">ꭰ ꭱ ꭲ ꭳ ꭴ ꭵ ꭶ ꭷ ꭸ ꭹ ꭺ ꭻ ꭼ ꭽ ꭾ ꭿ ꮀ ꮁ ꮂ ꮃ ꮄ ꮅ ꮆ ꮇ ꮈ ꮉ ꮊ ꮋ ꮌ ꮍ ꮎ ꮏ ꮐ ꮑ ꮒ ꮓ ꮔ ꮕ ꮖ ꮗ ꮘ ꮙ ꮚ ꮛ ꮜ ꮝ ꮞ ꮟ ꮠ ꮡ ꮢ ꮣ ꮤ ꮥ ꮦ ꮧ ꮨ ꮩ ꮪ ꮫ ꮬ ꮭ ꮮ ꮯ ꮰ ꮱ ꮲ ꮳ ꮴ ꮵ ꮶ ꮷ ꮸ ꮹ ꮺ ꮻ ꮼ ꮽ ꮾ ꮿ ᏸ ᏹ ᏺ ᏻ ᏼ</td><td>85</td></tr>
-    <tr><th>Combining characters</th><td lang="chr">none</td><td>0</td></tr>
-    <tr><th>Punctuation</th><td lang="chr">none</td><td>0</td></tr>
-    </tbody></table>
-  </section>
-  </section>
-
-
-
-
+ <section id="chars" class="note">
+<h2>Character lists by language</h2>
+    <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li>
+<p><a href="/app-charuse/?language=chr" target="_blank">Cherokee</a> <span class="charCount">(170 letters :   total 170)</span></p>
+</li>
+</ul>
+</section>
 <section id="references">
-  <h2><a href="#references">References</a></h2>
+<h2><a href="#references">References</a></h2>
   <ol>
     <!--li>[Daniels] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN 0-19-507993-0</li-->
     <li>The Unicode Standard v9.0, <a href="http://www.unicode.org/versions/latest/ch20.pdf">Cherokee</a>. </li>
@@ -293,9 +329,7 @@
 </section>
 
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/cherokee"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-08-07  21:51<!-- #EndDate --> 
-</span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bcherokee%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fcherokee%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/cherokee"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-07  16:17<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bcherokee%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fcherokee%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"></div>
