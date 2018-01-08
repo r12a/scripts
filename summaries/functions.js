@@ -52,6 +52,44 @@ function makeSidePanel (script, otherlinks) {
 
 
 
+function makeSidePanel (script, otherlinks) {
+	console.log(script, otherlinks)
+	var ptr = ''
+	for (var i=0;i<scriptData.length;i++) if  (scriptData[i].script === script) {
+		ptr = scriptData[i]
+		break
+		}
+
+	var out = ''
+	out += '<tr><th>Script name</th><td><p>'+script+'</td></tr>'
+	for (var feature in featureName) {
+		out += '<tr><th>'+featureName[feature]+'</th><td>'
+        if (    (feature=='chars' && ptr[feature]=='0') ||
+                (feature=='cchars' && ptr[feature]=='0') ||
+                (feature=='mcchars' && ptr[feature]=='no') ||
+                (feature=='gpos' && ptr[feature]=='no') ||
+                (feature=='cs' && ptr[feature]=='no') ||
+                (feature=='cursive' && ptr[feature]=='no') ||
+                (feature=='gsub' && ptr[feature]=='no') ||
+                (feature=='dir' && ptr[feature]=='ltr') ||
+                (feature=='baseline' && ptr[feature]=='mid') ||
+                (feature=='digits' && ptr[feature]=='no') ||
+                (feature=='wordsep' && ptr[feature]=='space') ||
+                (feature=='justify' && ptr[feature]=='space') ||
+                (feature=='wrap' && ptr[feature]=='word') ||
+                (feature=='region')
+                ) { out += ptr[feature] }
+        else out +='<span class="tableHighlight">'+ptr[feature]+'</span>'
+        
+		out += '</td></tr>'
+		}
+	
+	return out
+	}
+	
+
+
+
 function clearExamples () {
 	examples = document.getElementById('freeText').getElementsByTagName('span');
 	for (var i=0; i<examples.length; i++) {
