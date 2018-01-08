@@ -45,7 +45,7 @@ var scriptData = [
 
 { script:"Malayalam", type:"abugida", chars:117, cchars:23, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"yes", region:"Asia S" },
 
-{ script:"Mandaic", type:"alpha", chars:87, cchars:3, cs:"no", gpos:"yes", mcchars:"no", gsub:"yes", cursive:"yes", dir:"rtl", wordsep:"space", baseline:"mid", wrap:"word", justify:"word/space", digits:"no", region:"Asia W" },
+{ script:"Mandaic", type:"alpha", chars:87, cchars:3, cs:"no", gpos:"yes", mcchars:"no", gsub:"yes", cursive:"yes", dir:"rtl", wordsep:"space", baseline:"mid", wrap:"word", justify:"word/space", digits:"no", region:"Asia W", linked:"mandaic" },
 
 { script:"Mongolian", type:"alpha", chars:156, cchars:6, cs:"no", gpos:"yes", mcchars:"no?", gsub:"yes", cursive:"yes", dir:"tblr", wordsep:"space", baseline:"vertical", wrap:"?", justify:"?", digits:"yes", region:"Asia C" },
 
