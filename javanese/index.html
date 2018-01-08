@@ -29,10 +29,13 @@
 <script type="text/javascript" src="/shared/code/toc_2016.js"></script>
 <script type="text/javascript" src="/shared/code/all-names.js"></script>
 <script type="text/javascript" src="/shared/code/character_conversion.js"></script>
-<script type="text/javascript" src="../../shared/code/show_codepoints.js"></script>
+<script type="text/javascript" src="/shared/code/show_codepoints.js"></script>
 <script type="text/javascript" src="/shared/fontlists/manage.js"></script>
 <script type="text/javascript" src="/shared/code/scriptGroups.js"></script>
 <script type="text/javascript" src="../summaries/functions.js"></script>
+<script type="text/javascript" src="../block/functions.js"></script>
+<script type="text/javascript" src="/shared/code/getLinks.js"></script>
+<script type="text/javascript" src="/scripts/linkdata/linkdb.js"></script>
 <script type="text/javascript" src="../summaries/scriptdata.js"> </script>
 
 <script type="text/javascript" src="/shared/fontlists/javanese.js"> </script>
@@ -56,14 +59,23 @@
  <div id="fontsetting" class="closed">
   <h2 class="notoc"><a id="fonts">Fonts</a></h2>
   <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-    <form onSubmit="document.getElementById('freeText').style.fontFamily = document.getElementById('fontName').value; return false;">
-      <p dir="ltr" class="english">Use this font:<br/>
-        <input type="text" id="fontName" value="webfont"/>
-        <button
-		  type="submit">Apply</button>
-      </p>
-  </form>
-    <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
+   <p>Set font for examples<br/>
+   <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'jv');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+   <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'jv');" />
+ </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
+ <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
 	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
 	return false;">
       <p>Change size:<br />
@@ -87,21 +99,27 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->31 August, 2017<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->7 January, 2018<!-- #EndDate -->
 &bull; tags  <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="http://rishida.net/blog/?tag=javanese" title="Show all blog posts tagged with 'javanese'">javanese</a></p>
 
 
 <section>
-  <p>This page provides basic information about the Javanese script. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>.</p>
+  <p>This page provides basic information about the Javanese script. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned.</p>
   <p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
-  <p>For more details see: 
-  <a class="linkHighlight" href="/scripts/javanese/block">Character notes </a> • <a class="linkHighlight" href="/scripts/links?script=javanese">Script links</a></p>
-</section>
+<p>For character-specific details see 
+<a class="linkHighlight" href="/scripts/javanese/block">Character notes</a>. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>. </p>
+  
+  <details id="scriptLinks">
+  <summary>Click here for links to more information.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Java')</script>
+  </details>
+  </section>
 
 
 
 <section>
-  <h2 id="sample">Sample (Javanese)</h2>
+<h2 id="sample">Sample (Javanese)</h2>
   
 
   <div id="freeText" dir="ltr" lang="jv" data-target="c" data-base="/scripts/javanese/block" data-source="http://unicode.org/udhr/translations.html">
@@ -124,21 +142,33 @@
 
 
 
+<section id="history">
+    <h2><a href="#history">Usage &amp; history</a></h2>
+    <p>From <a href="http://scriptsource.org/scr/Java">Scriptsource</a>: </p>
+    <blockquote>
+<p>Javanese is Indonesia's oldest literary language, its literary history being traceable to the C4th. Since that time, it has been written in several different scripts - Pallava, Old Javanese, and an Arabic variant known as gundil script - before arriving at its present form in the C17th and 18th. The present Javanese script is a modern variant of Old Kawi, an ancient Brahmic script from which many scripts in the Indonesian archipelago are derived. It is the pre-colonial script of the Javanese language spoken on the Indonesian islands of Java and Bali and is used to write the Tengger and Osing languages, also spoken in Java and Bali. Historically it was also used to write the Bali language, which is now written largely in the Latin and Balinese scripts, and the Sunda language, which is now written in the Latin and Arabic scripts. The Javanese script is closely related to the Balinese script, although Javanese contains 4 consonant letters which are absent in the Balinese. ...</p>
+<p>The first Javanese upright-style font was produced in the 1830s by the Dutch. Early in the C20th, two other cursive type fonts were also produced. Further development was halted abruptly during the second World War when the use of the Javanese script was prohibited under the Japanese occupation. Currently, there are no newspapers or magazines being printed in the Javanese script, although it is still taught in most elementary schools and some junior high schools in Javanese speaking areas.</p>
+</blockquote>
+    <p>From <a href="http://en.wikipedia.org/wiki/Javanese_alphabet">Wikipedia</a>:</p>
+<blockquote>
+<p>The Javanese script, natively known as Aksara Jawa (<span lang="jv">ꦲꦏ꧀ꦱꦫꦗꦮ</span>) and Hanacaraka (<span lang="jv">ꦲꦤꦕꦫꦏ</span>), is an abugida developed by the Javanese people to write several Austronesian languages spoken in Indonesia, primarily the Javanese language and an early form of Javanese called Kawi, as well as Sanskrit, an Indo-Aryan language used as a sacred language throughout Asia. The Javanese script is a descendant of the Brahmi script and therefore has many similarities with the modern scripts of South India and Southeast Asia. The Javanese script, along with the Balinese script, is considered the most elaborate and ornate among Brahmic scripts of Southeast Asia.</p>
+<p>The script was widely used by the court scribes of Java and the Lesser Sunda Islands. Numerous efforts to standardize the script were made in the late 19th to early 20th-century, with the invention of the script's first metal type and the development of concise orthographic guidelines. However, further development was halted abruptly following World War II and especially during the Japanese occupation of the Dutch East Indies, in which its use was prohibited, and the script's use has since declined. Today, everyday use of the Javanese script has been largely supplanted by the Latin alphabet.</p>
+</blockquote>
+</section>
+
+
+
+
   <section id="key_features">
     <h2><a href="#key_features">Key features</a></h2>
-    <p> Javanese is an <span class="newterm">abugida</span>, ie. consonants carry an inherent vowel sound that is overridden, where needed, using vowel signs.    </p>
+    <p> Javanese is an <span class="newterm">abugida</span>, ie. consonants carry an inherent vowel sound that is overridden, where needed, using vowel signs.   See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
+</p>
     <p>The Javanese script characters in Unicode 10.0 are in a single block: </p>
     <ul>
       <li>
         <p><a href="/uniview/?block=javanese">Javanese</a> (91 characters)    </p>
       </li>
     </ul>
-    <p>For more information see <a href="http://scriptsource.org/scr/Javanese">ScriptSource</a>, <a href="http://en.wikipedia.org/wiki/Javanese_alphabet">Wikipedia</a>, <a href="http://www.omniglot.com/writing/javanese.htm">Omniglot</a>, and the <a href="http://www.unicode.org/versions/Unicode10.0.0/ch-javanese.pdf">Unicode Standard</a>.</p>
-  
-  <section id="dir" class="note">
-    <h3><a href="#dir">Text direction</a></h3>
-    <p>Javanese script is written horiztonally, left to right.</p>
-  </section>
 </section>
 
 
@@ -331,7 +361,17 @@
    <section id="layout" class="note">
 <h2><a href="#layout">Text layout</a></h2>
 <p>An orthographic syllable in Javanese can be described as {C F} C {{R}Y} {V{A}} {Z}, where C is a consonant (or consonant + <span class="codepoint"><span lang="jv">&#x25CC;&#xA9B3;</span> <a href="/scripts/javanese/block#charA9B3">[<span class="uname">U+A9B3 JAVANESE SIGN CECAK TELU​</span>]</a></span>), F is <span class="codepoint"><span lang="jv">&#x25CC;&#xA9C0;</span> <a href="/scripts/javanese/block#charA9C0">[<span class="uname">U+A9C0 JAVANESE PANGKON​</span>]</a></span>, R is<span class="codepoint"><span lang="jv">&#x25CC;&#xA9BF;</span> <a href="/scripts/javanese/block#charA9BF">[<span class="uname">U+A9BF JAVANESE CONSONANT SIGN CAKRA​</span>]</a></span>, Y is <span class="codepoint"><span lang="jv">&#x25CC;&#xA9BE;</span> <a href="/scripts/javanese/block#charA9BE">[<span class="uname">U+A9BE JAVANESE CONSONANT SIGN PENGKAL​</span>]</a></span>, V is a vowel-sign, A is <span class="codepoint"><span lang="jv">&#x25CC;&#xA9B4;</span> <a href="/scripts/javanese/block#charA9B4">[<span class="uname">U+A9B4 JAVANESE VOWEL SIGN TARUNG​</span>]</a></span>, and Z is one of the syllable-final consonants.</p>
-    
+
+
+
+<section id="dir" class="note">
+<h3><a href="#dir">Text direction</a></h3>
+    <p>Javanese script is written horiztonally, left to right.</p>
+  </section>
+
+
+
+
 <section id="punctuation" class="note">
     <h3><a href="#punctuation">Text delimiters</a></h3>
     <p>Words are not separated by spaces.<sup></sup></p>
@@ -451,59 +491,17 @@
   
   
   
-  
-  <section id="chars" class="note">
-    <h2>Character lists by language</h2>
-    <p>The following is an incomplete list of languages and the number of characters they use. Javanese script doesn't appear in version 31 of CLDR's lists of characters (exemplarCharacters). </p>
-    <p class="instructions">Click on the links to see a list of characters with names.</p>
-    
-    <section class="characters">
-      <h4>Javanese</h4>
-      <table class="cldrList"><tbody>
-        <tr>
-          <th><a target="_blank" href="/uniview/?charlist=%EA%A6%8F%EA%A6%91%EA%A6%92%EA%A6%93%EA%A6%94%EA%A6%95%EA%A6%96%EA%A6%97%EA%A6%9B%EA%A6%9A%EA%A6%98%EA%A6%A0%EA%A6%A1%EA%A6%A2%EA%A6%9D%EA%A6%A4%EA%A6%9F%EA%A6%A5%EA%A6%A6%EA%A6%A7%EA%A6%A8%EA%A6%A9%EA%A6%AA%EA%A6%AD%EA%A6%AB%EA%A6%B1%EA%A6%AF%EA%A6%AE%EA%A6%B2%EA%A6%B0%EA%A6%A3%EA%A6%9E%EA%A6%99%EA%A6%9C%EA%A6%89%EA%A6%8A">Consonants</a></th>
-          <td lang="jv">ꦏ ꦑ ꦒ ꦓ ꦔ ꦕ ꦖ ꦗ ꦛ ꦚ ꦘ ꦠ ꦡ ꦢ ꦝ ꦤ ꦟ ꦥ ꦦ ꦧ ꦨ ꦩ ꦪ ꦭ ꦫ ꦱ ꦯ ꦮ ꦲ ꦰ ꦣ ꦞ ꦙ ꦜ ꦉ ꦊ</td>
-          <td>36</td></tr>
-        <tr>
-          <th><a target="_blank" href="/uniview/?charlist=%EA%A6%BD%EA%A6%BE%EA%A6%BF">Medial consonants </a></th>
-          <td lang="jv">ꦽ ꦾ ꦿ</td>
-          <td>3</td></tr>
-        <tr>
-          <th><a target="_blank" href="/uniview/?charlist=%EA%A6%80%EA%A6%81%EA%A6%82%EA%A6%83%EA%A6%B3">Diacritics</a></th>
-          <td lang="jv">ꦀ ꦁ ꦂ ꦃ ꦳</td>
-          <td>5</td></tr>
-        <tr>
-          <th><a target="_blank" href="/uniview/?charlist=%EA%A6%84%EA%A6%86%EA%A6%88%EA%A6%8C%EA%A6%8E">Independent vowels </a></th>
-          <td lang="jv">ꦄ ꦆ ꦈ ꦌ ꦎ</td>
-          <td>5</td></tr>
-        <tr>
-          <th><a target="_blank" href="/uniview/?charlist=%EA%A6%B6%EA%A6%B8%EA%A6%BA%EA%A6%BC%EA%A6%B4	">Vowel signs</a></th>
-          <td lang="jv">ꦶ ꦸ ꦺ ꦼ ꦴ</td>
-          <td>5</td></tr>
-        <tr>
-          <th><a target="_blank" href="/uniview/?charlist=%EA%A7%8A%EA%A7%8B%EA%A7%8C%EA%A7%8D%EA%A7%88%EA%A7%89%EA%A7%87%EA%A7%8F">Basic punctuation</a></th>
-          <td lang="jv">꧊ ꧋ ꧌ ꧍ ꧈ ꧉ ꧇ ꧏ</td>
-          <td>8</td></tr>
-        <tr>
-          <th><a target="_blank" href="/uniview/?charlist=%EA%A7%81%EA%A7%82%EA%A7%85%EA%A7%84%EA%A7%83%EA%A7%86">Other punctuation</a></th>
-          <td lang="jv">꧁ ꧂ ꧅ ꧄ ꧃ ꧆</td>
-          <td>6</td></tr>
-        <tr>
-          <th>Total</th>
-          <td lang="jv">&nbsp;</td>
-          <td>68</td>
-        </tr>
-      </tbody>
-      </table>
-    </section>
-    
-  </section>
-
-
-
-
+<section id="chars" class="note">
+<h2>Character lists by language</h2>
+    <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li>
+<p><a href="/app-charuse/?language=jv-java" target="_blank">Javanese</a> <span class="charCount">(42 letters, 13 marks, 13 punctuation :   total 68)</span></p>
+</li>
+</ul>
+</section>
 <section id="references">
-  <h2><a href="#references">References</a></h2>
+<h2><a href="#references">References</a></h2>
   <ol>
     <li>[Daniels] Peter T. Daniels and William Bright, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN 0-19-507993-0, pp477-480</li>
     <li>[Unicode] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch19.pdf">Javanese</a>, pp661-664.</li>
@@ -517,8 +515,8 @@
 
 
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/javanese"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-08-31  7:07<!-- #EndDate --> 
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/javanese"><span id="version-info"> 
+  <!-- #BeginDate format:IS1m -->2018-01-07  16:34<!-- #EndDate --> 
   </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bjavanese%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fjavanese%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 <div id="panel" style="display:none"></div>
