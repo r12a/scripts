@@ -33,16 +33,19 @@
 	font-size: 28px;
 	font-family: eastern, serif;
 	text-align: start;
+    line-height: 1.4;
 	}
 #estrangela {
 	font-size: 28px;
 	font-family: estrangela, serif;
 	text-align: start;
+    line-height: 1.4;
 	}
 #western {
 	font-size: 28px;
 	font-family: western, serif;
 	text-align: start;
+    line-height: 1.4;
 	}
 [lang=syr-syrc] { font-family: eastern, serif; font-size: 140%; }
 [lang=syr-syrn] { font-family: eastern, serif; font-size: 140%; }
@@ -60,6 +63,9 @@
 <script type="text/javascript" src="/shared/fontlists/manage.js"></script>
 <script type="text/javascript" src="/shared/code/scriptGroups.js"></script>
 <script type="text/javascript" src="../summaries/functions.js"></script>
+<script type="text/javascript" src="../block/functions.js"></script>
+<script type="text/javascript" src="/shared/code/getLinks.js"></script>
+<script type="text/javascript" src="/scripts/linkdata/linkdb.js"></script>
 <script type="text/javascript" src="../summaries/scriptdata.js"> </script>
 
 <script type="text/javascript" src="/shared/fontlists/syriac.js"> </script>
@@ -83,14 +89,23 @@
  <div id="fontsetting" class="closed">
   <h2 class="notoc"><a id="fonts">Fonts</a></h2>
   <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-    <form onSubmit="document.getElementById('freeText').style.fontFamily = document.getElementById('fontName').value; return false;">
-      <p dir="ltr" class="english">Use this font:<br/>
-        <input type="text" id="fontName" value="webfont"/>
-        <button
-		  type="submit">Apply</button>
-      </p>
-  </form>
-    <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'syr-Syrc'); setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'syr-Syrn'); setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'syr-Syre'); setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'syr-Syrj');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'syr-Syrc'); setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'syr-Syrn'); setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'syr-Syre'); setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'syr-Syrj');" />
+    </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('eastern').style.fontFamily = document.getElementById('slfontswitchfont').value; document.getElementById('estrangela').style.fontFamily = document.getElementById('slfontswitchfont').value; document.getElementById('western').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
+    <form oninput="document.getElementById('eastern').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; document.getElementById('western').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; document.getElementById('estrangela').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
 	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
 	return false;">
       <p>Change size:<br />
@@ -114,21 +129,27 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->7 August, 2017<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->8 January, 2018<!-- #EndDate -->
 &bull; tags <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="http://rishida.net/blog/?tag=syriac" title="Show all blog posts tagged with 'arabic'">syriac</a></p>
 
 
 <section>
-  <p>This page provides basic information about the Syriac script. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>.</p>
+  <p>This page provides basic information about the Syriac script. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned.</p>
   <p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
-  <p>For more details see: 
-  <a class="linkHighlight" href="/scripts/syriac/block">Character notes </a> • <a class="linkHighlight" href="/scripts/links?script=syriac">Script links</a></p>
+<p>For character-specific details see 
+ <a class="linkHighlight" href="/scripts/syriac/block">Character notes</a>. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>. </p>
+  
+  <details id="scriptLinks">
+  <summary>Click here for links to more information.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Syrc')</script>
+  </details>
 </section>
 
 
 
 <section>
-  <h2 id="sample">Sample</h2>
+<h2 id="sample">Samples</h2>
   <p>Only the first part of the Estrangelo and Serto samples are pointed.</p>
   
 <section id="easternsample">
@@ -175,9 +196,24 @@
 
 
 
-  <section id="key_features">
+ <section id="history">
+    <h2><a href="#history">Usage &amp; history</a></h2>
+    <p>From <a href="http://scriptsource.org/scr/Syrc">Scriptsource</a>: </p>
+    <blockquote>The Syriac script is attested as early as the year 6 AD. It was primarily used for writing the Syriac language, now extinct outside of the Syrian church. The Assyrian Neo-Aramaic, Chaldean Neo-Aramaic and Turoyo/Surayt languages are descended from Syriac, and are still written in the Syriac script. It can also be used for writing Arabic, known as Garshani writing. The script is descended from Proto-Canaanite writing. There are two main dialects of spoken Syriac; West Syriac, used by the Syrian Orthodox, Maronites, and Syrian Catholics; and East Syriac, used by the Assyrians and Chaldaeans. There are three ancient variations of the script: the classical liturgical script called Estrangelo, the Western variant, and the Eastern variant. There is also a Modern Syriac orthography, based on the Eastern variety and having the aim of bridging the differences in Aramaic dialects. A common spoken Aramaic koine used among Iraqis of Assyrian descent is based on this orthography.</blockquote>
+    <p>From <a href="http://en.wikipedia.org/wiki/Syriac_alphabet">Wikipedia</a>:</p>
+<blockquote>
+<p>The Syriac alphabet is a writing system primarily used to write the Syriac language from the 1st century AD.[1] It is one of the Semitic abjads descending from the Aramaic alphabet through the Palmyrene alphabet,[2] and it shares similarities with the Phoenician, Hebrew, Arabic and the traditional Mongolian scripts.</p>
+<p>When Arabic began to be the dominant spoken language in the Fertile Crescent, texts were often written in Arabic with the Syriac script as knowledge of the Arabic alphabet was not yet widespread. Malayalam was also written with Syriac script and was called Suriyani Malayalam. Such writings are usually called Karshuni or Garshuni (ܓܪܫܘܢܝ). Garshuni is often used today by Neo-Aramaic-speakers for written communication, such as letters and fliers.</p>
+</blockquote>
+</section>
+
+
+
+
+<section id="key_features">
     <h2><a href="#key_features">Key features</a></h2>
-    <p>Syriac is an <span class="newterm"> abjad</span>. The script relies mostly on consonant sounds to write words, although vowel sounds can be written using diacritics.    </p>
+    <p>Syriac is an <span class="newterm"> abjad</span>. The script relies mostly on consonant sounds to write words, although vowel sounds can be written using diacritics.  See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
+</p>
     <p>Syriac is used for a number of languages. The  Syriac language itself has two dialects, which are very similar, with almost no differences in grammar or vocabulary, but there are differences in pronunciation.</p>
     <p>The script itself, however, has three main writing systems: <a href="#easternsample"><span class="trans">maḏnḥāyā</span></a> (<span lang="syr-Syrn">ܡܲܕ݂ܢܚܵܝܵܐ</span>) (eastern), <a href="#estrangelasample"><span class="trans">ʾesṭrangēlā</span></a> (<span lang="syr-Syre">ܐܣܛܪܢܓܠܐ</span>), and <a href="#westernsample"><span class="trans">serṭā</span></a> (<span lang="syr-Syrj">ܣܶܪܛܳܐ</span>) (western).</p>
     <ul>
@@ -187,14 +223,11 @@
     </ul>
     <p>The modern Aramaic koine uses the madnhaya dialect of the script, and is usually fully pointed, making it more like an alphabet than an abjad. There are however obligatory points and optional diacritics.</p>
     <p>Words in Syriac are separated by spaces.</p>
-    <p>For more information see <a href="http://scriptsource.org/scr/Syriac">ScriptSource</a>, <a href="http://en.wikipedia.org/wiki/Syriac_alphabet">Wikipedia</a>, <a href="http://www.omniglot.com/writing/syriac.htm">Omniglot</a>, and the <a href="http://www.unicode.org/versions/Unicode10.0.0/ch-syriac.pdf">Unicode Standard</a>.</p>
-  
-  <section id="dir" class="note">
-    <h3><a href="#dir">Text direction</a></h3>
-    <p>Syriac script is written horizontally, right-to-left. Like other RTL scripts, such as Arabic and Hebrew, modern numbers  are  written left-to-right. </p>
-    <p class="instructions">Click on the following example, which contains numbers and words, to see how the order of characters in memory matches the simple right-to-left order as displayed.</p>
-<p dir="rtl" lang="syr-Syrc"  class="large"><span class="ex">ܡܠܘܐܐ 26</span></p>
-  </section>
+    <p>The Syriac script characters in Unicode 10.0 are in two blocks: </p>
+    <ul>
+      <li> <a href="/uniview/?block=syriac">Syriac</a> (87)      </li>
+      <li> <a href="/uniview/?block=syriac_supplement">Syriac Supplement</a> (11)      </li>
+    </ul>
 </section>
 
 
@@ -205,14 +238,14 @@
   <p><span class="charExample"><span class="ex" lang="syr-Syre" dir="rtl">ܐ ܒ ܓ ܕ ܗ ܘ ܙ ܚ ܛ ܝ ܟ ܠ ܡ ܢ ܣ ܥ ܦ ܨ ܩ ܪ ܫ ܬ</span></span>&nbsp;</p>
   <p><span class="codepoint"><span lang="syr-Syre" dir="rtl">&#x0723;</span> <a href="/scripts/syriac/block#char0723">[<span class="uname">U+0723 SYRIAC LETTER SEMKATH</span>]</a></span> has a separate code point for its final form, <span class="codepoint"><span lang="syr-Syre" dir="rtl">&#x0724;</span> <a href="/scripts/syriac/block#char0724">[<span class="uname">U+0724 SYRIAC LETTER FINAL SEMKATH</span>]</a></span>, like Greek sigma or several letters in the Hebrew block.</p>
   <p>There is also a single code point for the ligature <span class="codepoint"><span lang="syr-Syrc" dir="rtl">&#x071E;</span> <a href="/scripts/syriac/block#char071E">[<span class="uname">U+071E SYRIAC LETTER YUDH HE</span>]</a></span>.</p>
-  <p>In modern Aramaic, <span class="codepoint"><span dir="rtl" lang="syr-Syre">&#xA0;&#x0330;</span> <a href="/scripts/syriac/block#char0330">[<span class="uname">U+0330 COMBINING TILDE BELOW​</span>]</a></span> is used with 4 letters to represent 3 non-classical consonants. See <a href="#transliteration">maǧliyana</a> below.</p>
+  <p>In modern Aramaic, <span class="codepoint"><span dir="rtl" lang="syr-Syre">&#xA0;&#x0330;</span> <a href="/scripts/syriac/block#char0330">[<span class="uname">U+0330 COMBINING TILDE BELOW</span>]</a></span> is used with 4 letters to represent 3 non-classical consonants. See <a href="#transliteration">maǧliyana</a> below.</p>
   <p>19 additional consonants are used for writing other languages in Syriac (see <a href="#transliteration">below</a>).</p>
   <p>Isolated versions of 3 letters, such as may be found in counter styles, are usually presented as a doubled letter, using intial and final forms, ie. <span class="charExample"><span class="ex" lang="syr-Syrc" dir="rtl">ܟܟ</span></span>, <span class="charExample"><span class="ex" lang="syr-Syrc" dir="rtl">ܡܡ</span></span>, and <span class="charExample"><span class="ex" lang="syr-Syrc" dir="rtl">ܢܢ</span></span>.</p>
   <section id="nasal_syllabic" class="note">
     <h3><a href="#nasal_syllabic">Hard and soft sounds</a></h3>
   <p>The following consonant symbols represent two sounds, one 'hard' and one 'soft'. The hard sound is an unaspirated plosive, the soft sound is an aspirated fricative or <span class="ipa">w</span>.</p>
-  <p><span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܒ ܓ ܕ ܟ ܦ ܬ</span></span></p>
-  <p>The intended sound of the letter can be made explicit using diacritics: <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0741;</span> <a href="/scripts/syriac/block#char0741">[<span class="uname">U+0741 SYRIAC QUSHSHAYA​</span>]</a></span> for the hard form, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܦ݁ܐ</span> <span class="trans">pē</span></span>, and <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0742;</span> <a href="/scripts/syriac/block#char0742">[<span class="uname">U+0742 SYRIAC RUKKAKHA​</span>]</a></span> for the soft form, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܐܠܦ݂</span> <span class="trans">ʾālap̄</span></span>.</p>
+  <p><span class="charExample"><span class="ex" lang="syr-Syrc" dir="rtl">ܒ ܓ ܕ ܟ ܦ ܬ</span></span></p>
+  <p>The intended sound of the letter can be made explicit using diacritics: <span class="codepoint"><span lang="syr-Syrc" dir="rtl">&#xA0;&#x0741;</span> <a href="/scripts/syriac/block#char0741">[<span class="uname">U+0741 SYRIAC QUSHSHAYA​</span>]</a></span> for the hard form, eg. <span class="charExample"><span class="ex" lang="syr-Syrc" dir="rtl">ܦ݁ܐ</span> <span class="trans">pē</span></span>, and <span class="codepoint"><span lang="syr-Syrc" dir="rtl">&#xA0;&#x0742;</span> <a href="/scripts/syriac/block#char0742">[<span class="uname">U+0742 SYRIAC RUKKAKHA​</span>]</a></span> for the soft form, eg. <span class="charExample"><span class="ex" lang="syr-Syrc" dir="rtl">ܐܠܦ݂</span> <span class="trans">ʾālap̄</span></span>.</p>
   <p>Late and modern East Syriac texts use <span class="codepoint"><span lang="syr-Syrc" dir="rtl">&#xA0;&#x032E;</span> <a href="/scripts/syriac/block#char032E">[<span class="uname">U+032E COMBINING BREVE BELOW​</span>]</a></span> to indicate a fricative form of <span class="trans">pē</span>, ie. <span class="charExample"><span class="ex" lang="syr-Syrc" dir="rtl">ܦ̮</span></span>.<sup>2</sup></p>
   <p>In the maḏnḥāyā style, which uses dots for vowels, soft form marks are usually omitted if they would interfere with the vowel marks. For native words, softening depends on the letter's position within a word or syllable, location relative to other consonants and vowels, gemination, etymology, and other factors. Foreign words do not always follow the rules for softening.<sup>2</sup></p>
   </section>
@@ -337,7 +370,7 @@
       <h3><a href="#gpos">Glyph positioning</a></h3>
       
       <p>There are sometimes clashes between diacritic marks which have to be resolved by repositioning one of the diacritics, or sometimes producing a different solution.</p>
-      <p>For example, marks are usually centred vertically over or under a base character. If, however, <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0742;</span> <a href="/scripts/syriac/block#char0742">[<span class="uname">U+0742 SYRIAC RUKKAKHA​</span>]</a></span> appears below <span class="codepoint"><span lang="syr-Syrc" dir="rtl">&#x0715;</span> <a href="/scripts/syriac/block#char0715">[<span class="uname">U+0715 SYRIAC LETTER DALATH</span>]</a></span> when the glyph for that has a dot below, the mark is moved slightly to the right, as shown here.</p>
+      <p>For example, marks are usually centred vertically over or under a base character. If, however, <span class="codepoint"><span lang="syr-Syrc" dir="rtl">&#xA0;&#x0742;</span> <a href="/scripts/syriac/block#char0742">[<span class="uname">U+0742 SYRIAC RUKKAKHA​</span>]</a></span> appears below <span class="codepoint"><span lang="syr-Syrc" dir="rtl">&#x0715;</span> <a href="/scripts/syriac/block#char0715">[<span class="uname">U+0715 SYRIAC LETTER DALATH</span>]</a></span> when the glyph for that has a dot below, the mark is moved slightly to the right, as shown here.</p>
   <p dir="rtl" lang="syr-Syrn" class="large"><span class="ex">ܝܘܕ݂</span></p>
   <p>If <span class="codepoint"><span lang="syr-Syre" dir="rtl">&#xA0;&#x0308;</span> <a href="/scripts/syriac/block#char0308">[<span class="uname">U+0308 COMBINING DIAERESIS​</span>]</a></span> appears above　<span class="codepoint"><span lang="syr-Syrc" dir="rtl">&#x072A;</span> <a href="/scripts/syriac/block#char072A">[<span class="uname">U+072A SYRIAC LETTER RISH</span>]</a></span> the mark  replaces the single dot above the base letter.</p>
   <p dir="rtl" lang="syr-Syrn" class="large"><span class="ex">ܪ̈</span></p>
@@ -412,7 +445,7 @@
     
     <p>Modern Syriac uses Western digits, like Hebrew.</p>
     <p>There is also, however, a letter-based number system.</p>
-    <p><span class="codepoint"><a href="/scripts/syriac/block#char070F"><span class="uname">U+070F SYRIAC ABBREVIATION MARK </span></a></span> is  used to indicate letter-based numbers. Note how, in this example, the prefix <span lang="syr-syrc">ܒ</span>, is not covered by the SAM, only the number itself.</p>
+    <p><span class="codepoint"><a href="/scripts/syriac/block#char070F"><span class="uname">U+070F SYRIAC ABBREVIATION MARK </span></a></span> is  used to indicate letter-based numbers. Note how, in this example, the prefix <span lang="syr-Syrc">ܒ</span>, is not covered by the SAM, only the number itself.</p>
     <p dir="rtl" lang="syr-Syrn" class="large"><span class="ex">ܒ܏ܝܗ</span></p>
     <p><span class="codepoint"><span lang="syr-Syrc" dir="rtl">&#xA0;&#x032D;</span> <a href="/scripts/syriac/block#char032D">[<span class="uname">U+032D COMBINING CIRCUMFLEX ACCENT BELOW​</span>]</a></span> is also used as a digit marker.<sup>1</sup></p>
   <p class="ref"><a href="#refs">Refs</a>:
@@ -424,8 +457,20 @@
    <section id="layout" class="note">
     <h2><a href="#layout">Text layout</a></h2>
     
- <section id="text_units" class="note">
-    <h3><a href="#text_units">Text units</a></h3>
+
+  
+  <section id="dir" class="note">
+    <h3><a href="#dir">Text direction</a></h3>
+    <p>Syriac script is written horizontally, right-to-left. Like other RTL scripts, such as Arabic and Hebrew, modern numbers  are  written left-to-right. </p>
+    <p class="instructions">Click on the following example, which contains numbers and words, to see how the order of characters in memory matches the simple right-to-left order as displayed.</p>
+<p dir="rtl" lang="syr-Syrc"  class="large"><span class="ex">ܡܠܘܐܐ 26</span></p>
+  </section>
+
+
+
+
+<section id="text_units" class="note">
+    <h3><a href="#text_units">Text delimiters</a></h3>
     <p>Syriac uses spaces between words. </p>
     <p>There are no one-letter words. One letter conjunctions and prepositions such as <span class="charExample"><span class="ex" lang="syr-Syrc" dir="rtl">ܘ</span> <span class="trans">w</span></span> are continguous with the word they precede.</p>
  </section>
@@ -458,7 +503,7 @@
   <section id="abbrev" class="note">
     <h3><a href="#abbrev">Abbreviation</a></h3>
 
-    <p><span class="codepoint"><a href="/scripts/syriac/block#char070F"><span class="uname">U+070F SYRIAC ABBREVIATION MARK </span></a></span>(SAM) indicates that a sequence of characters is an abbreviation, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܬ܏ܫܒܘ</span></span> is an abbreviation of <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܬܫܒܘܚܬܐ</span></span>. The line would ideally have a small circle at the start, middle and end. It normally starts to the left of the nearest tall letter to the end of the abbreviation.</p>
+    <p><span class="codepoint"><a href="/scripts/syriac/block#char070F"><span class="uname">U+070F SYRIAC ABBREVIATION MARK </span></a></span>(SAM) indicates that a sequence of characters is an abbreviation, eg. <span class="charExample"><span class="ex" lang="syr-Syrc" dir="rtl">ܬ܏ܫܒܘ</span></span> is an abbreviation of <span class="charExample"><span class="ex" lang="syr-Syrc" dir="rtl">ܬܫܒܘܚܬܐ</span></span>. The line would ideally have a small circle at the start, middle and end. It normally starts to the left of the nearest tall letter to the end of the abbreviation.</p>
     <p>Modern East Syriac texts use a punctuation mark for contractions of this sort.</p>
   </section>
 </section>
@@ -466,53 +511,17 @@
   
   
   
-  <section id="chars" class="note">
-    <h2>Character lists by language</h2>
-    <p>The Syriac script characters in Unicode 10.0 are in two blocks: </p>
-    <ul>
-      <li>
-        <p><a href="/uniview/?block=syriac">Syriac</a> (87)    </p>
-      </li>
-      <li>
-        <p><a href="/uniview/?block=syriac_supplement">Syriac Supplement</a> (11) </p>
-      </li>
-    </ul>
-    <p>There seems to be no mention in version 31 of CLDR's lists of characters (exemplarCharacters) of a language that uses the Syriac script.</p>
-    <p>The following is what i gleaned from reading Daniels, for Modern Aramaic. It's perfectly likely that some characters are missing, especially for punctuation.</p>
-
-    
-    <section class="characters">
-    <h4>Assyrian Neo-Aramaic</h4>
-    <table class="cldrList"><tbody>
-    <tr>
-      <th><a target="_blank" href="/uniview/?charlist=%DC%90%DC%92%DC%93%DC%95%DC%97%DC%98%DC%99%DC%9A%DC%9B%DC%9D%DC%9F%DC%A0%DC%A1%DC%A2%DC%A3%DC%A5%DC%A6%DC%A8%DC%A9%DC%AA%DC%AB%DC%AC">Letters</a></th>
-      <td lang="syr-Syrc">ܐ ܒ ܓ ܕ ܗ ܘ ܙ ܚ ܛ ܝ ܟ ܠ ܡ ܢ ܣ ܥ ܦ ܨ ܩ ܪ ܫ ܬ</td>
-      <td>22</td></tr>
-    <tr>
-      <th><a target="_blank" href="/uniview/?charlist=%DC%B8%DC%B9%DC%BC%DC%B2%DC%B5%DC%BF">Vowels</a></th>
-      <td lang="syr-Syrc">ܸ ܹ ܼ ܲ ܵ ܿ</td>
-      <td>6</td></tr>
-    <tr>
-      <th><a target="_blank" href="/uniview/?charlist=%DD%82%CC%B0%CC%AE%DD%81%DD%80%CC%88%CC%83%DD%87%CC%87">Diacritics</a></th>
-      <td lang="syr-Syrc">݂ ̰ ̮ ݁ ݀ ̈ ̃ ݇ ̇</td>
-      <td>8</td></tr>
-     <tr>
-      <th><a target="_blank" href="/uniview/?charlist=.%D8%8C%D8%9B%D8%9F">Punctuation</a></th>
-      <td lang="syr-Syrc">.،؛؟</td>
-      <td>4</td></tr>
-     <tr>
-      <th><a target="_blank" href="/uniview/?charlist=0123456789">Digits</a></th>
-      <td lang="syr-Syrc">0123456789</td>
-      <td>10</td></tr>
-   </tbody></table>
-  </section>
-  </section>
-
-
-
-
+ <section id="chars" class="note">
+<h2>Character lists by language</h2>
+    <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li>
+<p><a href="/app-charuse/?language=aii" target="_blank">Assyrian Neo-Aramaic</a> <span class="charCount">(22 letters, 10 marks, 4 punctuation :   total 36)</span></p>
+</li>
+</ul>
+</section>
 <section id="refs">
-  <h2><a href="#refs">References</a></h2>
+<h2><a href="#refs">References</a></h2>
   <ol>
     <li>[Daniels] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN 0-19-507993-0</li>
     <li>[Unicode] The Unicode Standard v9.0, <a href="http://www.unicode.org/versions/latest/ch19.pdf">N'Ko</a>. </li>
@@ -524,8 +533,8 @@
 
 
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/syriac"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-08-07  7:56<!-- #EndDate --> 
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/syriac"><span id="version-info"> 
+  <!-- #BeginDate format:IS1m -->2018-01-08  7:18<!-- #EndDate --> 
   </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bsyriac%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fsyriac%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
