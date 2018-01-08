@@ -19,6 +19,7 @@
 	font-size: 28px;
 	font-family: webfont, serif;
 	text-align: right;
+    line-height: 1.4;
 	}
 [lang=nqo] { font-family: webfont, serif; font-size: 140%; }
 .large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
@@ -32,6 +33,9 @@
 <script type="text/javascript" src="/shared/fontlists/manage.js"></script>
 <script type="text/javascript" src="/shared/code/scriptGroups.js"></script>
 <script type="text/javascript" src="../summaries/functions.js"></script>
+<script type="text/javascript" src="../block/functions.js"></script>
+<script type="text/javascript" src="/shared/code/getLinks.js"></script>
+<script type="text/javascript" src="/scripts/linkdata/linkdb.js"></script>
 <script type="text/javascript" src="../summaries/scriptdata.js"> </script>
 
 <script type="text/javascript" src="/shared/fontlists/nko.js"> </script>
@@ -43,7 +47,7 @@
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
 </header>
 
-<h1>N'Ko</h1>
+<h1>N'Ko script</h1>
 
 
 <aside class="sidebar">
@@ -52,13 +56,22 @@
  <div id="fontsetting" class="closed">
   <h2 class="notoc"><a id="fonts">Fonts</a></h2>
   <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-    <form onSubmit="document.getElementById('freeText').style.fontFamily = document.getElementById('fontName').value; return false;">
-      <p dir="ltr" class="english">Use this font:<br/>
-        <input type="text" id="fontName" value="webfont"/>
-        <button
-		  type="submit">Apply</button>
-      </p>
-  </form>
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'nqo');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'nqo');" />
+    </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
     <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
 	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
 	return false;">
@@ -84,15 +97,23 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->7 August, 2017<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->7 January, 2018<!-- #EndDate -->
 &bull; tags  <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="http://rishida.net/blog/?tag=nko" title="Show all blog posts tagged with 'nko'">nko</a></p>
 
 
 <div class="section">
-  <p>This page provides basic information about the N'Ko script. For similar information related to other scripts, see the <a href="/scripts/featurelist/" class="linkHighlight">Script comparison table</a>.</p>
+  <p>This page provides basic information about the N'Ko script. It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned. 
+</p>
   <p class="instructions">Click on red  text examples or highlight part of the sample text to see a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
-  <p>For more details see: 
-  <a href="/scripts/nko/block" class="linkHighlight">Character notes </a> • <a href="/scripts/links?script=nko" class="linkHighlight">Script links</a></p>
+<p>For character-specific details see 
+  <a href="/scripts/nko/block" class="linkHighlight">Character notes</a>. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>. </p>
+  
+  <details id="scriptLinks">
+  <summary>Click here for links to more information.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Nkoo')</script>
+</details>
+
 </div>
 
 
@@ -121,9 +142,30 @@
 
 <section id="notes"> 
 
-  <section id="type">
+
+
+
+
+<section id="history">
+    <h2><a href="#history">Usage &amp; history</a></h2>
+    <p>From <a href="http://scriptsource.org/scr/Nkoo">Scriptsource</a>: </p>
+    <blockquote>
+<p>The N'ko script was created in 1949 by Soloman Kante to write the Bambara language, one of the Manding languages spoken in Mali, in response to a newspaper article reflecting the colonial misconception that Africans were culturally inferior due to their lack of indigenous writing systems. The word N'ko means &quot;I say&quot; in all the Manding languages. Kante had travelled widely throughout West Africa, and his knowledge of the Arabic script influenced his invention.</p>
+<p>N'ko is also used to write the Kangbe language - a literary (that is, predominantly written as opposed to spoken) language which combines the features of various Manding languages, is understandable by all literate Manding speakers and is used in situations where speakers of different Manding languages need a neutral means of communication. Its role as a literary language has contributed to N'ko's status as one of the most widely used indigenous West African scripts, which has in turn been instrumental in fulfilling one of the functions for which Kante had designed it; the strengthening of Manding cultural identity in the region. The N'ko literacy movement operated largely on the fringes of formal education, which was conducted in the Latin script. Despite receiving no government funding or endorsement, and having no official curriculum, it succeeded because it exploited the desire of the Manding people to define and possess their identity.</p>
+<p>In 1986 l’Association pour l’Impulsion et la Coordination des Recherches sur l’Alphabet N’ko (ICRA-N’KO) was established, and officially approved as an NGO for the promotion of N'ko five years later. The script is currently used in Guinea and Côte d'Ivoire as well as Mali, and has been used for publications relating to indigenous knowledge, including descriptions of medical rituals, traditional poetry, and philosophical works, as well as textbooks and a transcription of the Qur'an.</p>
+</blockquote>
+    <p>From <a href="http://en.wikipedia.org/wiki/N'Ko_alphabet">Wikipedia</a>:</p>
+<blockquote>
+<p>N'Ko (ߒߞߏ‎) is both a script devised by Solomana Kante in 1949, as a writing system for the Manding languages of West Africa, and the name of the literary language written in that script. The term N'Ko means I say in all Manding languages.</p>
+<p>As of 2005, it is used mainly in Guinea and the Ivory Coast (respectively by Maninka and Dyula speakers), with an active user community in Mali (by Bambara-speakers). Publications include a translation of the Quran, a variety of textbooks on subjects such as physics and geography, poetic, and philosophical works, descriptions of traditional medicine, a dictionary, and several local newspapers. It has been classed as the most successful of the West African scripts. The literary language used is intended as a koiné blending elements of the principal Manding languages (which are mutually intelligible), but has a very strong Maninka flavour.</p>
+</blockquote>
+</section>
+
+
+
+<section id="type">
     <h2><a href="type">Key features</a></h2>
-    <p>N'Ko is an <span class="newterm"> alphabet</span>. This means that it is phonetic in nature, where each letter represents a basic sound.    </p>
+    <p>N'Ko is an <span class="newterm"> alphabet</span>. This means that it is phonetic in nature, where each letter represents a basic sound.   See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.</p>
     <p>Words are separated by spaces, and contain a mixture of  consonants and vowels, with diacritics  to indicate things such as tone, nasalisation, or foreign sounds. Several diacritics have multiple uses.</p>
     <p>A base character may carry multiple combining characters, for example:</p>
     <p id="mcchars" dir="rtl" lang="nqo" class="large"><span class="ex">ߣߌ߲߬</span></p>
@@ -131,15 +173,12 @@
     <p>
       <mark>Usage hint</mark>
     : Although some of the N'Ko diacritics look like those in general use, you should use the ones provided in this block. This is because they are typically drawn higher and bolder than the generic marks, and have a wider range of glyph variation.<sup>1</sup></p>
-    <p>For more information see <a href="http://scriptsource.org/scr/Thaa">ScriptSource</a>, <a href="http://en.wikipedia.org/wiki/N'Ko_alphabet">Wikipedia</a>, <a href="http://www.omniglot.com/writing/nko.htm">Omniglot</a>, and the <a href="http://www.unicode.org/versions/Unicode10.0.0/ch19.pdf">Unicode Standard</a>.</p>
-  </section>
+    <p>The N'Ko script characters in Unicode 10.0 are in a single block: </p>
+    <ul>
+      <li> <a href="/uniview/?block=nko">N'Ko</a> (59 characters)      </li>
+    </ul>
+</section>
   
-  <section id="dir" class="note">
-    <h3>Text direction</h3>
-    <p>N'Ko script is written right-to-left. Unlike other RTL scripts, such as Arabic and Hebrew, numbers  are also written right-to-left. </p>
-    <p class="instructions">Click on the following example, which contains numbers and words, to see how the order of characters in memory matches the simple right-to-left order as displayed.</p>
-<p dir="rtl" lang="nqo" class="large"><span lang="nqo" class="ex">ߏ߬ ߞߏߛߐ߲߬߸ ߂߀߀߉ ߞߊߙߏ߫ ߁߀߲/߂߂</span></p>
-  </section>
 </section>
 
 
@@ -279,14 +318,8 @@
   
 
 <section id="punctuation" class="note">
-  <h2><a href="#punctuation">Punctuation</a> &amp; symbols</h2>
-    <p>N'Ko uses punctuation borrowed from Arabic, including <span class="codepoint"><span lang="ar" dir="rtl">&#x060C;</span> <a href="/scripts/arabic/block#char060C">[<span class="uname">U+060C ARABIC COMMA</span>]</a></span>, <span class="codepoint"><span lang="ar" dir="rtl">&#x061B;</span> <a href="/scripts/arabic/block#char061B">[<span class="uname">U+061B ARABIC SEMICOLON</span>]</a></span>, and  <span class="codepoint"><span lang="ar" dir="rtl">&#x061F;</span> <a href="/scripts/arabic/block#char061F">[<span class="uname">U+061F ARABIC QUESTION MARK</span>]</a></span>.<sup>1</sup></p>
-    <p>Other ASCII punctuation is also used. The sample text at the top of the page also shows the use of ASCII colon and full stop.</p>
-  <p>The 2 punctuation characters in the N'Ko Unicode block are <span class="codepoint"><span lang="nqo" dir="rtl">&#x07F8;</span> <a href="/scripts/nko/block#char07F8">[<span class="uname">U+07F8 NKO COMMA</span>]</a></span>, and  <span class="codepoint"><span lang="nqo" dir="rtl">&#x07F9;</span> <a href="/scripts/nko/block#char07F9">[<span class="uname">U+07F9 NKO EXCLAMATION MARK</span>]</a></span>. The N'Ko comma is sometimes used distinctively with the arabic comma in the same text.<sup>1</sup> See this example:</p>
-  <p dir="rtl" lang="nqo" style="text-align:start;"> ߕߏ߲ߘߋ ߟߊ߫ ߊߙߊߓߎ ߞߐ߲ߛߐߣ ߊ ߛߌ߰ߙߊ߬ߕߊ ߊ ߘߏ߫ ߟߎ߫ ߞߊ߲߬ ߸ ߛߊ߫ (  ߜ ، ߔ ، ߗ ) ߟߎ߬ ߘߌ߫ ߛߋ߫  ߛߓߍ߫ ߟߊ߫ ߸ ߏ߬ ߟߎ߬ ߡߍ߲ ߠߎ߬ ߕߍ߫ ߊߙߊߓߎ߫ ߞߊ߲ ߘߐ߫ ߡߎ߰ߡߍ߫ .</p>
-  <p>Other borrowings from Arabic include <span class="codepoint"><span lang="nqo" dir="rtl">&#xFD3E;</span> <a href="/scripts/nko/block#charFD3E">[<span class="uname">U+FD3E ORNATE LEFT PARENTHESIS</span>]</a></span>, and  <span class="codepoint"><span lang="nqo" dir="rtl">&#xFD3F;</span> <a href="/scripts/nko/block#charFD3F">[<span class="uname">U+FD3F ORNATE RIGHT PARENTHESIS</span>]</a></span>, although the shape is often different.<sup>1</sup></p>
-    <p><span class="codepoint"><span lang="nqo" dir="rtl">&#x07F6;</span> <a href="/scripts/nko/block#char07F6">[<span class="uname">U+07F6 NKO SYMBOL OO DENNEN</span>]</a></span> is added to phrases to indicate remote future placement of the topic under discussion.<sup>1</sup></p>
-    <p><span class="codepoint"><span lang="nqo" dir="rtl">&#x07F7;</span> <a href="/scripts/nko/block#char07F7">[<span class="uname">U+07F7 NKO SYMBOL GBAKURUNEN</span>]</a></span> is used to end major sections of the text.<sup>1</sup></p>
+  <h2><a href="#punctuation">Symbols</a></h2>
+<p><span class="codepoint"><span lang="nqo" dir="rtl">&#x07F6;</span> <a href="/scripts/nko/block#char07F6">[<span class="uname">U+07F6 NKO SYMBOL OO DENNEN</span>]</a></span> is added to phrases to indicate remote future placement of the topic under discussion.<sup>1</sup></p>
 </section>
 
 
@@ -319,8 +352,33 @@
   
    <section id="layout" class="note">
     <h2><a href="#layout">Text layout</a></h2>
-    
- <section id="justify" class="note">
+ 
+ 
+   <section id="dir" class="note">
+    <h3>Text direction</h3>
+    <p>N'Ko script is written right-to-left. Unlike other RTL scripts, such as Arabic and Hebrew, numbers  are also written right-to-left. </p>
+    <p class="instructions">Click on the following example, which contains numbers and words, to see how the order of characters in memory matches the simple right-to-left order as displayed.</p>
+<p dir="rtl" lang="nqo" class="large"><span lang="nqo" class="ex">ߏ߬ ߞߏߛߐ߲߬߸ ߂߀߀߉ ߞߊߙߏ߫ ߁߀߲/߂߂</span></p>
+  </section>
+
+
+
+
+ <section>
+<h3><a href="#punctuation">Text delimiters</a></h3>
+    <p>Words are separated by spaces.</p>
+    <p>N'Ko uses punctuation borrowed from Arabic, including <span class="codepoint"><span lang="ar" dir="rtl">&#x060C;</span> <a href="/scripts/arabic/block#char060C">[<span class="uname">U+060C ARABIC COMMA</span>]</a></span>, <span class="codepoint"><span lang="ar" dir="rtl">&#x061B;</span> <a href="/scripts/arabic/block#char061B">[<span class="uname">U+061B ARABIC SEMICOLON</span>]</a></span>, and  <span class="codepoint"><span lang="ar" dir="rtl">&#x061F;</span> <a href="/scripts/arabic/block#char061F">[<span class="uname">U+061F ARABIC QUESTION MARK</span>]</a></span>.<sup>1</sup></p>
+    <p>Other ASCII punctuation is also used. The sample text at the top of the page also shows the use of ASCII colon and full stop.</p>
+  <p>The 2 punctuation characters in the N'Ko Unicode block are <span class="codepoint"><span lang="nqo" dir="rtl">&#x07F8;</span> <a href="/scripts/nko/block#char07F8">[<span class="uname">U+07F8 NKO COMMA</span>]</a></span>, and  <span class="codepoint"><span lang="nqo" dir="rtl">&#x07F9;</span> <a href="/scripts/nko/block#char07F9">[<span class="uname">U+07F9 NKO EXCLAMATION MARK</span>]</a></span>. The N'Ko comma is sometimes used distinctively with the arabic comma in the same text.<sup>1</sup> See this example:</p>
+  <p dir="rtl" lang="nqo" style="text-align:start;"> ߕߏ߲ߘߋ ߟߊ߫ ߊߙߊߓߎ ߞߐ߲ߛߐߣ ߊ ߛߌ߰ߙߊ߬ߕߊ ߊ ߘߏ߫ ߟߎ߫ ߞߊ߲߬ ߸ ߛߊ߫ (  ߜ ، ߔ ، ߗ ) ߟߎ߬ ߘߌ߫ ߛߋ߫  ߛߓߍ߫ ߟߊ߫ ߸ ߏ߬ ߟߎ߬ ߡߍ߲ ߠߎ߬ ߕߍ߫ ߊߙߊߓߎ߫ ߞߊ߲ ߘߐ߫ ߡߎ߰ߡߍ߫ .</p>
+ <p>Other borrowings from Arabic include <span class="codepoint"><span lang="nqo" dir="rtl">&#xFD3E;</span> <a href="/scripts/nko/block#charFD3E">[<span class="uname">U+FD3E ORNATE LEFT PARENTHESIS</span>]</a></span>, and  <span class="codepoint"><span lang="nqo" dir="rtl">&#xFD3F;</span> <a href="/scripts/nko/block#charFD3F">[<span class="uname">U+FD3F ORNATE RIGHT PARENTHESIS</span>]</a></span>, although the shape is often different.<sup>1</sup></p>
+<p><span class="codepoint"><span lang="nqo" dir="rtl">&#x07F7;</span> <a href="/scripts/nko/block#char07F7">[<span class="uname">U+07F7 NKO SYMBOL GBAKURUNEN</span>]</a></span> is used to end major sections of the text.<sup>1</sup></p>
+</section>
+
+
+
+
+<section id="justify" class="note">
     <h3><a href="#justify">Justification</a></h3>
     <p>The most common approach to justification relies on adjustment of spaces.<sup>1</sup></p>
     <p> Sometimes <span class="codepoint"><span lang="nqo" dir="rtl">&#x07FA;</span> <a href="/scripts/nko/block#char07FA">[<span class="uname">U+07FA NKO LAJANYALAN</span>]</a></span> is used like the arabic tatweel to instead stretch the intra-word baseline.<sup>1</sup></p>
@@ -343,39 +401,19 @@
   
   
   
-  <!--section id="chars" class="note">
-    <h3>Character lists by language</h3>
-    <p>The N'Ko script characters in Unicode 10.0 are in a single block: <a href="/uniview/?block=arabic">N'Ko</a> (87).    </p>
-    <p>The following is an incomplete list of languages and the number of characters they use, per version 31 of CLDR's lists of characters (exemplarCharacters).</p>
-    <p class="instructions">Click on the links to see a list of characters with names.</p>
-    
-    <section class="characters">
-      <h4>N'Ko</h4>
-      <table class="cldrList"><tbody>
-        <tr><th><a target="_blank" href="/uniview/?charlist=%D7%90%D7%91%D7%92%D7%93%D7%94%D7%95%D7%96%D7%97%D7%98%D7%99%D7%9B%D7%9A%D7%9C%D7%9E%D7%9D%D7%A0%D7%9F%D7%A1%D7%A2%D7%A4%D7%A3%D7%A6%D7%A5%D7%A7%D7%A8%D7%A9%D7%AA">Main</a></th>
-          <td lang="nqo">א ב ג ד ה ו ז ח ט י כ ך ל מ ם נ ן ס ע פ ף צ ץ ק ר ש ת</td>
-          <td>27</td></tr>
-        <tr>
-          <th><a target="_blank" href="/uniview/?charlist=">Combining </a></th>
-          <td lang="nqo">none</td>
-          <td>0</td></tr>
-        <tr>
-          <th><a target="_blank" href="/uniview/?charlist=%D6%BD%D7%84%E2%80%8E%E2%80%8F%D6%B0%D6%B1%D6%B2%D6%B3%D6%B4%D6%B5%D6%B6%D6%B7%D6%B8%D6%B9%D6%BB%D7%82%D7%81%D6%BC%D6%BF%D7%B4">Auxiliary</a></th>
-          <td lang="nqo">ֽ ׄ ‎ ‏ ְ ֱ ֲ ֳ ִ ֵ ֶ ַ ָ ֹ ֻ ׂ ׁ ּ ֿ ״</td>
-          <td>20</td></tr>
-        <tr><th><a target="_blank" href="/uniview/?charlist=-%E2%80%90%E2%80%93%E2%80%94%2C%3B%3A%21%3F.%27%22%28%29%5B%5D%2F%D6%BE%D7%B3%D7%B4">Punctuation</a></th>
-          <td lang="nqo">- ‐ – — , ; : ! ? . ' &quot; ( ) [ ] / ־ ׳ ״</td>
-          <td>20</td></tr>
-      </tbody></table>
-    </section>
-    
-  </section-->
-
+<section id="chars" class="note">
+<h2>Character lists by language</h2>
+    <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li><a href="/app-charuse/?language=bm-nkoo" target="_blank">Bambara</a> <span class="charCount">(36 letters, 9 marks, 8 punctuation, 10 numbers, 1 symbols :   total 64)</span></li>
+<li><a href="/app-charuse/?language=emk-nkoo" target="_blank">Eastern Maninkan</a> <span class="charCount">(36 letters, 9 marks, 8 punctuation, 10 numbers, 1 symbols :   total 64)</span></li>
+</ul>
+</section>
 
 
 
 <section id="references">
-  <h2><a href="#references">References</a></h2>
+<h2><a href="#references">References</a></h2>
   <ol>
     <!--li>[Daniels] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN 0-19-507993-0</li-->
     <li>The Unicode Standard v9.0, <a href="http://www.unicode.org/versions/latest/ch19.pdf">N'Ko</a>. </li>
@@ -387,8 +425,8 @@
 
 
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/nko"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-08-07  20:55<!-- #EndDate --> 
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/nko"><span id="version-info"> 
+  <!-- #BeginDate format:IS1m -->2018-01-07  18:03<!-- #EndDate --> 
   </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bnko%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fnko%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
