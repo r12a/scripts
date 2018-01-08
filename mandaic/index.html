@@ -19,6 +19,7 @@
 	font-size: 28px;
 	font-family: webfont, serif;
 	text-align: start;
+    line-height: 1.2;
 	}
 [lang=mid] { font-family: webfont, serif; font-size: 140%; }
 .large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
@@ -34,6 +35,7 @@
 <script type="text/javascript" src="/shared/code/scriptGroups.js"></script>
 <script type="text/javascript" src="../../shared/code/getLinks.js"></script>
 <script type="text/javascript" src="../summaries/functions.js"></script>
+<script type="text/javascript" src="../block/functions.js"></script>
 <script type="text/javascript" src="/scripts/linkdata/linkdb.js"></script>
 <script type="text/javascript" src="../summaries/scriptdata.js"> </script>
 <script type="text/javascript" src="/shared/fontlists/mandaic.js"> </script>
@@ -54,7 +56,7 @@
 <div id="toc"><!-- placeholder --></div>
 </nav>
 
- <div id="fontsetting" class="closed">
+ <!--div id="fontsetting" class="closed">
   <h2 class="notoc"><a id="fonts">Fonts</a></h2>
   <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
     <form onSubmit="document.getElementById('freeText').style.fontFamily = document.getElementById('fontName').value; return false;">
@@ -83,12 +85,53 @@
         <label for="x10">10</label>
       </p>
     </form>
+</div-->
+
+ <div id="fontsetting" class="closed">
+  <h2 class="notoc"><a id="fonts">Fonts</a></h2>
+  <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'mid');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'mid');" />
+    </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
+    <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
+	return false;">
+      <p>Change size:<br />
+        <input id="slider" type="range" min="12" max="100" step="1" value="32">
+        &#xA0; <span id="sizeIndicator">32px</span><br />
+        <input id="multiplier" type="hidden" value="1" />
+        Multiplier:
+        <input type="radio" name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x1">1</label>
+        <input type="radio" name="step" id="x5" value="2"  onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x5">2</label>
+        <input type="radio" name="step" id="x10" value="10"  onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x10">10</label>
+      </p>
+    </form>
 </div>
+
 </aside>
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->6 January, 2018<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->7 January, 2018<!-- #EndDate -->
 &bull; tags  <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="http://rishida.net/blog/?tag=mandaic" title="Show all blog posts tagged with 'mandaic'">mandaic</a></p>
 
 
@@ -283,15 +326,18 @@
 
     
         
-<section> </section>
 <section>
 <h3><a href="#punctuation">Text delimiters</a></h3>
     <p>Words are separated by spaces.</p>
   <p> Mandaic uses sentence punctuation sparsely<sup>2</sup>. <span class="codepoint"><span lang="mid" dir="rtl">&#x085E;</span> <a href="/scripts/mandaic/block#char085E">[<span class="uname">U+085E MANDAIC PUNCTUATION</span>]</a></span> is used to start and end text sections. [Everson] describes a smaller version of this symbol that is used like a comma.<sup>4</sup> There is no Unicode character for the smaller version.</p>
 <p>The smaller size is also used in colophons (historical lay text added to religious text).<sup>1</sup></p>
 </section>
+
+
 <section id="repetition" class="note">
 </section>
+
+
    <section id="linebreak" class="note">
      <h3><a href="#linebreak">Line breaking</a></h3>
      <p>Lines usually break between words.</p>
@@ -311,12 +357,16 @@
        </p>
  </section>
 </section>
+
+
+
+
 <section id="chars" class="note">
 <h2>Character lists by language</h2>
-    <p>The following links give information about characters used for languages associated with this script. The number in parentheses is the total number of characters used.</p>
+    <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
 <ul>
 <li>
-<p><a href="/app-charuse/?language=mid" target="_blank">Neo-Mandaic</a> (29) </p>
+<p><a href="/app-charuse/?language=mid" target="_blank">Neo-Mandaic</a> <span class="charCount">(25 letters, 3 marks, 1 punctuation :   total 29)</span></p>
 </li>
 </ul>
 </section>
@@ -338,7 +388,7 @@
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/mandaic"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-06  21:10<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bmandaic%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fmandaic%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/mandaic"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-07  11:58<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bmandaic%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fmandaic%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 <div id="panel" style="display:none"></div>
 </body>
