@@ -19,6 +19,7 @@
 	font-size: 28px;
 	font-family: webfont, serif;
 	text-align: right;
+    line-height: 1.2;
 	}
 [lang=he] { font-family: webfont, serif; font-size: 140%; }
 .large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
@@ -32,6 +33,9 @@
 <script type="text/javascript" src="/shared/fontlists/manage.js"></script>
 <script type="text/javascript" src="/shared/code/scriptGroups.js"></script>
 <script type="text/javascript" src="../summaries/functions.js"></script>
+<script type="text/javascript" src="../block/functions.js"></script>
+<script type="text/javascript" src="/shared/code/getLinks.js"></script>
+<script type="text/javascript" src="/scripts/linkdata/linkdb.js"></script>
 <script type="text/javascript" src="../summaries/scriptdata.js"> </script>
 
 <script type="text/javascript" src="/shared/fontlists/hebrew.js"> </script>
@@ -43,7 +47,7 @@
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Hebrew</h1>
+<h1>Hebrew script</h1>
 
 
 <aside class="sidebar">
@@ -52,13 +56,22 @@
  <div id="fontsetting" class="closed">
   <h2 class="notoc"><a id="fonts">Fonts</a></h2>
   <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-    <form onSubmit="document.getElementById('freeText').style.fontFamily = document.getElementById('fontName').value; return false;">
-      <p dir="ltr" class="english">Use this font:<br/>
-        <input type="text" id="fontName" value="webfont"/>
-        <button
-		  type="submit">Apply</button>
-      </p>
-  </form>
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'he');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'he');" />
+    </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
     <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
 	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
 	return false;">
@@ -83,15 +96,21 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->19-Jul-2017<!-- #EndDate -->
+  <!-- #BeginDate format:En2 -->09-Jan-2018<!-- #EndDate -->
 &bull; tags <a href="http://rishida.net/blog/index.php?tag=hebrew" title="Show all blog posts tagged with 'arabic'">hebrew</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
 <div class="section">
-  <p>This page provides basic information about the Hebrew script. For similar information related to other scripts, see the <a href="/scripts/featurelist/">Script comparison table</a>.</p>
-  <p class="instructions">Click on the orange text in the features list (right column) to jump to notes and examples. Click on red  text examples or highlight part of the sample text to see a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
-  <p>For more details see: 
-  <a href="/scripts/hebrew/block">Character notes </a> • <a href="/scripts/links?script=hebrew">Script links</a></p>
+  <p>This page provides basic information about the Hebrew script. It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned. </p>
+  <p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+<p>For character-specific details see 
+  <a class="linkHighlight" href="/scripts/hebrew/block">Character notes</a>. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>. </p>
+  
+  <details id="scriptLinks">
+  <summary>Click here for links to more information.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Hebr')</script>
+  </details>
 </div>
 
 
@@ -119,25 +138,36 @@
 
 <section id="notes"> 
 
-  <section id="type">
+ <section id="history">
+    <h2><a href="#history">Usage &amp; history</a></h2>
+    <p>From <a href="http://scriptsource.org/scr/Hebr">Scriptsource</a>: </p>
+    <blockquote>
+<p>The Hebrew script is primarily used for writing the Hebrew, Samaritan and Yiddish languages. It is also used for writing some varieties of Arabic spoken in North Africa, Iraq and Yemen; the languages of the Jewish communities in Italy and Corfu, Morocco (Berber), Spain and the Caucasus mountains; and the modern Jewish Aramaic languages. Prior to 500 BC the Hebrew language was written in the Paleo-Hebrew script, which was abandoned after the Jewish exile in the 5th century BC in favour of the Aramaic script, from which the current Hebrew script descended. It is commonly called the Hebrew alphabet, after its first two letters aleph and bet, although it is actually an abjad. ...</p>
+<p>There are four main styles of writing the Hebrew language. Ashuri is a widely-used block style. A particular form of Ashuri, called STA&quot;M (an acronym for the Hebrew words for which this style is used), is used for sacred texts such as the Torah. Rashi is a typeface commonly used for commentaries on sacred texts. A 'cursive' style is used in handwriting. This is characterized by rounded letter shapes; unlike other cursive scripts the letters are generally unconnected.</p>
+</blockquote>
+    <p>From <a href="http://en.wikipedia.org/wiki/Hebrew_alphabet">Wikipedia</a>:</p>
+<blockquote>The Hebrew alphabet (Hebrew: אָלֶף־בֵּית עִבְרִי‬, Alefbet Ivri), known variously by scholars as the Jewish script, square script and block script, is an abjad script used in the writing of the Hebrew language, also adapted as an alphabet script in the writing of other Jewish languages, most notably in Yiddish (lit. &quot;Jewish&quot; for Judeo-German), Djudío (lit. &quot;Jewish&quot; for Judeo-Spanish), and Judeo-Arabic. Historically, there have been two separate abjad scripts to write Hebrew. The original, old Hebrew script, is known as the paleo-Hebrew alphabet, which has been largely preserved, in a variant form, in the Samaritan alphabet. The present &quot;Jewish script&quot; or &quot;square script&quot; to write Hebrew, on the contrary, is a stylized form of the Aramaic alphabet and was known by Jewish sages as the Ashuri alphabet (lit. &quot;Assyrian&quot;), since its origins were alleged to be from Assyria. Various &quot;styles&quot; (in current terms, &quot;fonts&quot;) of representation of the Jewish script letters described in this article also exist, as well as a cursive form which has also varied over time and place, and today is referred to as cursive Hebrew.</blockquote>
+</section>
+
+
+
+<section id="type">
     <h2>Key features</h2>
-    <p>Hebrew is an <span class="newterm"> abjad</span>. This means that in normal use the script represents only consonant and long vowel sounds. This approach is helped by the strong emphasis on consonant patterns in Semitic languages. </p>
-    <p>For more information see <a href="http://scriptsource.org/scr/Thaa">ScriptSource</a>, <a href="http://en.wikipedia.org/wiki/Hebrew">Wikipedia</a> or <a href="http://www.omniglot.com/writing/hebrew.htm">Omniglot</a>.</p>
-  </section>
+    <p>Hebrew is an <span class="newterm"> abjad</span>. This means that in normal use the script represents only consonant and long vowel sounds. This approach is helped by the strong emphasis on consonant patterns in Semitic languages.   See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
+</p>
+<p>The Hebrew script characters in Unicode 10.0 are in a single block: </p>
+<ul><li><a href="/uniview/?block=arabic">Hebrew</a> (87)</li></ul>
+</section>
   
-  <section id="dir" class="note">
-    <h3>Text direction</h3>
-    <p>Hebrew script is written right-to-left in the main, but as with all RTL scripts, numbers and embedded LTR script text are written left-to-right (bidirectional text). In the following example, the Hebrew words (red) are read right-to-left, starting with the one on the right, and the numeric expression (black) is read left-to-right, ie. it starts with 10 and ends with 12. (Note that this is unlike Arabic, where the 10 and 12 would be in opposite positions.)    </p>
-    <p dir="rtl" lang="he" class="large"><span  class="ex">התאריכים 12־10 במרץ</span></p>
-  </section>
- </section>
+  
+</section>
  
  
  
  
  
   <section id="cchars" class="note">
-    <h2><a href="cchars">Combining characters</a></h2>
+  <h2><a href="cchars">Combining characters</a></h2>
     <p>Diacritics for vowel sounds are typically not used. The example highlighted above shows how they could be used to clarify the pronunciation of the name of the German town Mainz.</p>
     <p dir="rtl" lang="he" class="large"><span class="ex">בְמָּיְינְץ</span>    </p>
   </section>
@@ -152,19 +182,8 @@
     <p>This example shows <span class="codepoint"><span lang="he" dir="rtl">&#x05DE;</span> <a href="/scripts/hebrew/block#char05DE">[<span class="uname">U+05DE HEBREW LETTER MEM</span>]</a></span> and <span class="codepoint"><span lang="he" dir="rtl">&#x05DD;</span> <a href="/scripts/hebrew/block#char05DD">[<span class="uname">U+05DD HEBREW LETTER FINAL MEM</span>]</a></span> (on the left).</p>
     <p dir="rtl" lang="he" class="large"><span class="ex">מ<span style="color:black">ומ</span>ח<span style="color:black">ים</span></span>    </p>
   </section>
-  
-  
-  
-  
-  
-  <section id="punctuation" class="note">
-    <h2><a href="punctuation">Punctuation</a></h2>
-    
-    <p>Hebrew uses Latin punctuation for the most part.</p>
-    <p>There are 6 punctuation characters in the Hebrew Unicode block.</p>
-  </section>
-  <section id="digits" class="note">
-    <h2><a href="digits">Digits</a></h2>
+<section id="digits" class="note">
+<h2><a href="digits">Digits</a></h2>
     <p>Hebrew uses european digits.</p>
   </section>
   
@@ -174,7 +193,24 @@
   <section id="layout" class="note">
     <h2><a href="layout">Text layout</a></h2>
     
-  <section id="justify" class="note">
+<section id="dir" class="note">
+    <h3>Text direction</h3>
+    <p>Hebrew script is written right-to-left in the main, but as with all RTL scripts, numbers and embedded LTR script text are written left-to-right (bidirectional text). In the following example, the Hebrew words (red) are read right-to-left, starting with the one on the right, and the numeric expression (black) is read left-to-right, ie. it starts with 10 and ends with 12. (Note that this is unlike Arabic, where the 10 and 12 would be in opposite positions.)    </p>
+    <p dir="rtl" lang="he" class="large"><span  class="ex">התאריכים 12־10 במרץ</span></p>
+  </section>
+  
+  
+  
+  <section id="delimiters">
+<h3><a href="#delimiters">Text delimiters</a></h3>
+    <p>Words are separated by spaces.</p>
+  <p>Hebrew uses Latin punctuation for the most part. There are 6 punctuation characters in the Hebrew Unicode block.</p>
+</section>
+ 
+ 
+ 
+ 
+<section id="justify" class="note">
     <h3>Justification</h3>
     <p>I'm not sure how justification works, but assume it is like in English.</p>
     <p class="instructions">Use the control below to see how your browser justifies the text sample here.</p>
@@ -186,39 +222,20 @@
   </section>
   
   
-  
-  <section id="chars" class="note">
-    <h2><a href="chars">Character list by language</a></h2>
-    <p>The Hebrew script characters in Unicode 10.0 are in a single block: <a href="/uniview/?block=arabic">Hebrew</a> (87).    </p>
-    <p>The following is an incomplete list of languages and the number of characters they use, per version 31 of CLDR's lists of characters (exemplarCharacters).</p>
-    <p class="instructions">Click on the links to see a list of characters with names.</p>
-    
-    <section class="characters">
-    <h4>Hebrew</h4>
-    <table class="cldrList"><tbody>
-    <tr><th><a target="_blank" href="/uniview/?charlist=%D7%90%D7%91%D7%92%D7%93%D7%94%D7%95%D7%96%D7%97%D7%98%D7%99%D7%9B%D7%9A%D7%9C%D7%9E%D7%9D%D7%A0%D7%9F%D7%A1%D7%A2%D7%A4%D7%A3%D7%A6%D7%A5%D7%A7%D7%A8%D7%A9%D7%AA">Main</a></th>
-    <td lang="he">א ב ג ד ה ו ז ח ט י כ ך ל מ ם נ ן ס ע פ ף צ ץ ק ר ש ת</td>
-    <td>27</td></tr>
-    <tr>
-      <th><a target="_blank" href="/uniview/?charlist=">Combining </a></th>
-    <td lang="he">none</td>
-    <td>0</td></tr>
-    <tr>
-      <th><a target="_blank" href="/uniview/?charlist=%D6%BD%D7%84%E2%80%8E%E2%80%8F%D6%B0%D6%B1%D6%B2%D6%B3%D6%B4%D6%B5%D6%B6%D6%B7%D6%B8%D6%B9%D6%BB%D7%82%D7%81%D6%BC%D6%BF%D7%B4">Auxiliary</a></th>
-    <td lang="he">ֽ ׄ ‎ ‏ ְ ֱ ֲ ֳ ִ ֵ ֶ ַ ָ ֹ ֻ ׂ ׁ ּ ֿ ״</td>
-    <td>20</td></tr>
-    <tr><th><a target="_blank" href="/uniview/?charlist=-%E2%80%90%E2%80%93%E2%80%94%2C%3B%3A%21%3F.%27%22%28%29%5B%5D%2F%D6%BE%D7%B3%D7%B4">Punctuation</a></th>
-    <td lang="he">- ‐ – — , ; : ! ? . ' &quot; ( ) [ ] / ־ ׳ ״</td>
-    <td>20</td></tr>
-    </tbody></table>
-  </section>
-
-  </section>
+ 
+ <section id="chars" class="note">
+<h2>Character lists by language</h2>
+    <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li><a href="/app-charuse/?language=he" target="_blank">Hebrew</a> <span class="charCount">(27 letters, 6 punctuation :   total 33)</span></li>
+<li><a href="/app-charuse/?language=yi" target="_blank">Yiddish</a> <span class="charCount">(30 letters, 6 marks, 6 punctuation, 2 other :   total 44)</span></li>
+</ul>
+</section>
 
 
-<div class="smallprint"><span id="version">First published  11 Jul 2017.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-07-19  21:43<!-- #EndDate --> 
-  </span> GMT. &nbsp;&bull;&nbsp; <a href="https://github.com/r12a/scripts/issues/new?title=%5Bhebrew%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fsummaries%2Fhebrew%0A%0A" target="_blank">Raise an issue</a>. &nbsp;&bull;&nbsp; Copyright r12a.  Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
+
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/hebrew"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-09  8:34<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bhebrew%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fhebrew%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
 
 <div id="panel" style="display:none"></div>
 </body>

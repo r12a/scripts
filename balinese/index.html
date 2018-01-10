@@ -26,7 +26,8 @@
 #freeText {
 	font-size: 28px;
 	font-family: webfont, serif;
-	text-align: right;
+	text-align: start;
+    line-height: 2;
 	}
 [lang=ban] { font-family: webfont, 'Noto Sans Balinese WF', serif; font-size: 140%; }
 .large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }	
@@ -40,6 +41,9 @@
 <script type="text/javascript" src="/shared/fontlists/manage.js"></script>
 <script type="text/javascript" src="/shared/code/scriptGroups.js"></script>
 <script type="text/javascript" src="../summaries/functions.js"></script>
+<script type="text/javascript" src="../block/functions.js"></script>
+<script type="text/javascript" src="/shared/code/getLinks.js"></script>
+<script type="text/javascript" src="/scripts/linkdata/linkdb.js"></script>
 <script type="text/javascript" src="../summaries/scriptdata.js"> </script>
 
 <script type="text/javascript" src="/shared/fontlists/balinese.js"> </script>
@@ -51,7 +55,7 @@
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Balinese</h1>
+<h1>Balinese script</h1>
 
   <aside class="sidebar"> 
 		<h2 class="notoc flush"><a id="tochead" name="tochead" tabindex="4">Contents</a></h2>
@@ -60,13 +64,22 @@
  <div id="fontsetting" class="closed">
   <h2 class="notoc"><a id="fonts">Fonts</a></h2>
   <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-    <form onSubmit="document.getElementById('freeText').style.fontFamily = document.getElementById('fontName').value; return false;">
-      <p dir="ltr" class="english">Use this font:<br/>
-        <input type="text" id="fontName" value="webfont"/>
-        <button
-		  type="submit">Apply</button>
-      </p>
-  </form>
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'ban');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'ban');" />
+    </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
     <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
 	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
 	return false;">
@@ -92,22 +105,31 @@
 	<p id="status">Updated Mon 13 Oct 2014  &bull; tags <a href="http://rishida.net/blog/index.php?tag=balinese" title="Show all blog posts tagged with 'balinese'">balinese</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 	<div class="section"><a id="contentstart" name="contentstart" tabindex="1"></a>
-	  <p>This page provides basic information about the Balinese script. For similar information related to other scripts, see the <a href="/scripts/featurelist/">Script comparison table</a>.</p>
-	  <p class="instructions">Click on the orange text in the features list (right column) to jump to notes and examples. Click on red  text examples or highlight part of the sample text to see a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+	  <p>This page provides basic information about the Balinese script. It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned. </p>
+	  <p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
 	  <p class="instructions"><strong>Note:</strong> In Google Chrome (only), the webfont used doesn't show examples starting with adeg adeg as expected. I suggest viewing with Firefox or Safari.</p>
-	  <p>For more details see: <a href="/scripts/balinese/block">Character notes </a> • <a href="/scripts/links?script=balinese">Script links</a></p>
+<p>For character-specific details see 
+<a class="linkHighlight" href="/scripts/balinese/block">Character notes </a> For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>.</p>
+  
+  <details id="scriptLinks">
+  <summary>Click here for links to more information.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Bali')</script>
+  </details>
 	</div>
 
 
 
-  <section id="type">
-    <h2><a href="type">Key features</a></h2>
-<p>The script type is <span class="newterm">abugida</span>. Consonants carry an inherent vowel <span class="ipa">a</span>, although that is pronounced <span class="ipa">ə</span> at the end of a word.</p>
-  <p>Text runs left-to-right, and words are not separated by spaces.</p>
-  </section>
-     
-    
- 
+<section>
+<h2 id="sample">Sample (Balinese)</h2>
+  
+
+  <div id="freeText" dir="ltr" lang="ban" data-target="c" data-base="/scripts/balinese/block" data-source="http://unicode.org/udhr/translations.html">
+  <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">ᬫᬓᬲᬫᬶ​ᬫᬦᬸᬲᬦᬾ​ᬓᭂᬫ᭄ᬩᬲᬶᬦ᭄ᬫᬳᬃᬤᬶᬓ​ᬮᬦ᭄ᬧᬢᭂᬄ​ᬲᬚ᭄ᬭᭀᬦᬶᬂ​ᬓᬳᬦᬦ᭄ᬮᬦ᭄ᬓᬸᬲ᭟​ᬳᬶᬧᬸᬦ᭄ᬓᬵᬦᬸᬕ᭄ᬭᬳᬶᬦ᭄ᬯᬶᬯᬾᬓ​ᬮᬦ᭄ᬩᬸᬤ᭄ᬥᬶ᭟​ᬧᬦ᭄ᬢᬭᬦᬶᬂ​ᬫᬦᬸᬲ​ᬫᬗ᭄ᬤᬦᬾ​ᬧᬭᬲ᭄ᬧᬭᭀᬲ᭄ᬫᬲᭂᬫᭂᬢᭀᬦᬦ᭄᭟</p>
+  <!-- Source: http://www.omniglot.com/writing/balinese.htm -->
+  </div>
+</section>
+
 
 
   <div id="features">
@@ -120,6 +142,37 @@
 
 
  
+
+<section id="history">
+    <h2><a href="#history">Usage &amp; history</a></h2>
+    <p>From <a href="http://scriptsource.org/scr/Bali">Scriptsource</a>: </p>
+    <blockquote>
+<p>The Balinese script is used for writing the Balinese language spoken on the Indonesian islands of Java and Bali. It is derived from the Old Kawi script, and is ultimately of Brahmic descent. It is very similar to the Javanese script in form and behaviour; some consider them to be typological variants of one another. ...</p>
+<p>Historically, Balinese has been inscribed into stone, or written on palm leaves. Traditionally, the religious texts written on palm leaves were considered to be sacred and could not be read by everyone; now, the palm leaves themselves are still considered sacred, although the contents is not, and can be read by anyone who is able, through the media of printed books. New literature in the script is uncommon, however traditional literature is published on a limited scale. Additionally, it is used for public signage on roads, at entrances to villages, and on government buildings. Community reading groups called Sekaha Pesantian also exist for the purpose of reading the Balinese script in a social context, commonly in song form.</p>
+</blockquote>
+    <p>From <a href="http://en.wikipedia.org/wiki/Balinese_alphabet">Wikipedia</a>:</p>
+<blockquote>
+<p>The Balinese script, natively known as Aksara Bali and Hanacaraka, is an alphabet used in the island of Bali, Indonesia, commonly for writing the Austronesian Balinese language, Old Javanese, and the liturgical language Sanskrit. With some modifications, the script is also used to write the Sasak language, used in the neighboring island of Lombok. The script is a descendant of the Brahmi script, and so has many similarities with the modern scripts of South and Southeast Asia. The Balinese script, along with the Javanese script, is considered the most elaborate and ornate among Brahmic scripts of Southeast Asia.</p>
+Though everyday use of the script has largely been supplanted by the Latin alphabet, the Balinese script has significant prevalence in many of the island's traditional ceremonies and is strongly associated with the Hindu religion. The script is mainly used today for copying lontar or palm leaf manuscripts containing religious texts.</blockquote>
+</section>
+
+
+
+
+<section id="type">
+    <h2><a href="type">Key features</a></h2>
+<p>The script type is <span class="newterm">abugida</span>. Consonants carry an inherent vowel <span class="ipa">a</span>, although that is pronounced <span class="ipa">ə</span> at the end of a word.  See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.</p>
+  <p>Text runs left-to-right, and words are not separated by spaces.</p>
+ <p>The Balinese script characters in Unicode 10.0 are in the following block: </p>
+    <ul>
+      <li> <a href="/uniview/?block=balinese">Balinese</a> (121 characters)      </li>
+    </ul>
+ </section>
+     
+    
+ 
+
+
 <section id="balinesechar"> 
   <h2><a href="#balinesechar">Consonants</a></h2>
   
@@ -176,7 +229,7 @@
   <h2><a href="#vowelsummary">Vowels</a></h2>
   <p> Consonants carry an <a href="/docs/unicode-tutorial/part3#vowel-signs" class="termref">inherent vowel</a> <span class="ipa">a</span>,  pronounced <span class="ipa">ə</span> at the end of a word and also in prefixes ma-, pa- and da-. There are   <a class="termref" href="/docs/unicode-tutorial/part3#vowel-signs">vowel signs</a> for all vowel sounds in Balinese except the inherent vowel. </p>
 	<p>There are also independent vowel forms for most vowels for use at the beginning of a word. </p>
-	<p>In the middle of a word, the vowel sign is used over <span class="name">ha</span>. The vowels  <span class="codepoint"><span lang="ban">&#x25CC;&#x1B42;</span> <a href="/scripts/balinese/block#char1B42">[<span class="uname">U+1B42 BALINESE VOWEL SIGN PEPET​</span>]</a></span> and <span class="codepoint"><span lang="ban">&#x25CC;&#x1B43;</span> <a href="/scripts/balinese/block#char1B43">[<span class="uname">U+1B43 BALINESE VOWEL SIGN PEPET TEDUNG​</span>]</a></span>  don't have an independent form, and have to be used over <span class="name"><span class="codepoint"><span lang="ban">&#x1B33;</span> <a href="/scripts/balinese/block#char1B33">[<span class="uname">U+1B33 BALINESE LETTER HA</span>]</a></span></span> at the beginning of a word.</p>
+	<p>In the middle of a word, the vowel sign is used over <span class="name">ha</span>. The vowels  <span class="codepoint"><span lang="ban">&#x25CC;&#x1B42;</span> <a href="/scripts/balinese/block#char1B42">[<span class="uname">U+1B42 BALINESE VOWEL SIGN PEPET​</span>]</a></span> and <span class="codepoint"><span lang="ban">&#x25CC;&#x1B43;</span> <a href="/scripts/balinese/block#char1B43">[<span class="uname">U+1B43 BALINESE VOWEL SIGN PEPET TEDUNG​</span>]</a></span>  don't have an independent form, and have to be used over <span class="codepoint"><span lang="ban">&#x1B33;</span> <a href="/scripts/balinese/block#char1B33">[<span class="uname">U+1B33 BALINESE LETTER HA</span>]</a></span> at the beginning of a word.</p>
 			<p> In Sasak, independent vowel  <span class="codepoint"><span lang="ban">&#x1B05;</span> <a href="/scripts/balinese/block#char1B05">[<span class="uname">U+1B05 BALINESE LETTER AKARA</span>]</a></span>  can be treated as a consonant insomuch as it can be followed by an explicit  <span class="codepoint"><span lang="ban">&#x25CC;&#x1B44;</span> <a href="/scripts/balinese/block#char1B44">[<span class="uname">U+1B44 BALINESE ADEG ADEG​</span>]</a></span>  in word- or syllable-final position, where it indicates the glottal stop, eg. <span class="charExample"><span class="ex" lang="ban">ᬳᬫᬅ᭄</span> <span class="trans">amaq</span></span>; other consonants can also be subjoined to it.</p>
 </section>
 
@@ -205,26 +258,48 @@
 
 
 	<section id="punctuationdescn">
-    <h2><a href="#punctuation">Punctuation</a></h2>
-		<p>Both <span class="codepoint"><span lang="ban">&#x1B5A;</span> <a href="/scripts/balinese/block#char1B5A">[<span class="uname">U+1B5A BALINESE PANTI</span>]</a></span>  and <span class="codepoint"><span lang="ban">&#x1B5B;</span> <a href="/scripts/balinese/block#char1B5B">[<span class="uname">U+1B5B BALINESE PAMADA</span>]</a></span>  are used to begin a section in text.</p>
-<p><span class="codepoint"><span lang="ban">&#x1B5D;</span> <a href="/scripts/balinese/block#char1B5D">[<span class="uname">U+1B5D BALINESE CARIK PAMUNGKAH</span>]</a></span>  is used as a colon, and <span class="codepoint"><span lang="ban">&#x1B5E;</span> <a href="/scripts/balinese/block#char1B5E">[<span class="uname">U+1B5E BALINESE CARIK SIKI</span>]</a></span> and <span class="codepoint"><span lang="ban">&#x1B5F;</span> <a href="/scripts/balinese/block#char1B5F">[<span class="uname">U+1B5F BALINESE CARIK PAREREN</span>]</a></span>   are used as comma and full stop respectively. </p>
-		<p>At the end of a section, <span class="charExample"><span class="ex" lang="ban">᭟᭜᭟</span></span> <span class="name">pasalinan</span> and <span class="charExample"><span class="ex" lang="ban">᭛᭜᭛</span></span> <span class="name">carik agung</span> may be used (depending on what sign began the section). These are encoded using the punctuation ring <span class="codepoint"><span lang="ban">&#x1B5C;</span> <a href="/scripts/balinese/block#char1B5C">[<span class="uname">U+1B5C BALINESE WINDU</span>]</a></span>   together with <span class="codepoint"><span lang="ban">&#x1B5F;</span> <a href="/scripts/balinese/block#char1B5F">[<span class="uname">U+1B5F BALINESE CARIK PAREREN</span>]</a></span>   and <span class="codepoint"><span lang="ban">&#x1B5B;</span> <a href="/scripts/balinese/block#char1B5B">[<span class="uname">U+1B5B BALINESE PAMADA</span>]</a></span>. </p>
-		<p>In some texts, &quot;holy letters&quot; or modre symbols are made by using <span class="codepoint"><span lang="ban">&#x25CC;&#x1B01;</span> <a href="/scripts/balinese/block#char1B01">[<span class="uname">U+1B01 BALINESE SIGN ULU CANDRA​</span>]</a></span> with these: <img class="ex" src="/c/Balinese/examples/modrewindu.png" alt="᭜ᬁ" />, <img class="ex" src="/c/Balinese/examples/modrepareren.png" alt="᭟ᬁ" />, <img class="ex" src="/c/Balinese/examples/modrepamada.png" alt="᭛ᬁ" /> .</p>
+    <h2><a href="#punctuation">Holy letters</a></h2>
+		<p>In some texts, &quot;holy letters&quot; or modre symbols are made by using <span class="codepoint"><span lang="ban">&#x25CC;&#x1B01;</span> <a href="/scripts/balinese/block#char1B01">[<span class="uname">U+1B01 BALINESE SIGN ULU CANDRA​</span>]</a></span> with these: <img class="ex" src="/c/Balinese/examples/modrewindu.png" alt="᭜ᬁ" /> <img class="ex" src="/c/Balinese/examples/modrepareren.png" alt="᭟ᬁ" /> <img class="ex" src="/c/Balinese/examples/modrepamada.png" alt="᭛ᬁ" /> .</p>
 	</section>
 </section>
   
   <section id="layout">
   <h2><a href="#layout">Text layout</a></h2>  
-    
-  <section id="punctuation2">
-    <h3><a href="#punctuation">Line breaking and hyphenation</a></h3>
+  
+  <section id="delimiters">
+<h3><a href="#delimiters">Text delimiters</a></h3>
+    <p>Words are not separated by spaces, and in fact some word boundaries are between stacked consonants.</p>
+		<p>Both <span class="codepoint"><span lang="ban">&#x1B5A;</span> <a href="/scripts/balinese/block#char1B5A">[<span class="uname">U+1B5A BALINESE PANTI</span>]</a></span>  and <span class="codepoint"><span lang="ban">&#x1B5B;</span> <a href="/scripts/balinese/block#char1B5B">[<span class="uname">U+1B5B BALINESE PAMADA</span>]</a></span>  are used to begin a section in text.</p>
+<p><span class="codepoint"><span lang="ban">&#x1B5D;</span> <a href="/scripts/balinese/block#char1B5D">[<span class="uname">U+1B5D BALINESE CARIK PAMUNGKAH</span>]</a></span>  is used as a colon, and <span class="codepoint"><span lang="ban">&#x1B5E;</span> <a href="/scripts/balinese/block#char1B5E">[<span class="uname">U+1B5E BALINESE CARIK SIKI</span>]</a></span> and <span class="codepoint"><span lang="ban">&#x1B5F;</span> <a href="/scripts/balinese/block#char1B5F">[<span class="uname">U+1B5F BALINESE CARIK PAREREN</span>]</a></span>   are used as comma and full stop respectively. </p>
+		<p>At the end of a section, <span class="charExample"><span class="ex" lang="ban">᭟᭜᭟</span></span> <span class="name">pasalinan</span> and <span class="charExample"><span class="ex" lang="ban">᭛᭜᭛</span></span> <span class="name">carik agung</span> may be used (depending on what sign began the section). These are encoded using the punctuation ring <span class="codepoint"><span lang="ban">&#x1B5C;</span> <a href="/scripts/balinese/block#char1B5C">[<span class="uname">U+1B5C BALINESE WINDU</span>]</a></span>   together with <span class="codepoint"><span lang="ban">&#x1B5F;</span> <a href="/scripts/balinese/block#char1B5F">[<span class="uname">U+1B5F BALINESE CARIK PAREREN</span>]</a></span>   and <span class="codepoint"><span lang="ban">&#x1B5B;</span> <a href="/scripts/balinese/block#char1B5B">[<span class="uname">U+1B5B BALINESE PAMADA</span>]</a></span>. </p>
+</section>
+ 
+ 
+ 
+ 
+ 
+  <section id="linebreak">
+    <h3><a href="#linebreak">Line breaking and hyphenation</a></h3>
     <p> Common practice is to break the sentence at any point when it reaches the end of a line, except that no line breaks should be allowed within syllable boundaries and no line breaks are allowed just before a colon, comma or full stop.</p>
     <p>In lontar texts where a word must be broken at the end of a line (always after a full syllable), the sign <span class="codepoint"><span lang="ban">&#x1B60;</span> <a href="/scripts/balinese/block#char1B60">[<span class="uname">U+1B60 BALINESE PAMENENG</span>]</a></span>  is inserted. This sign is not used as a word-joining hyphen; it is used only in linebreaking.</p>
   </section>
   </section>
   
-  
-<section id="charlistsection">
+ 
+ 
+ <section id="chars" class="note">
+<h2>Character lists by language</h2>
+    <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li>TBD</li>
+<!--li><a href="/app-charuse/?language=ban" target="_blank">Balinese</a> <span class="charCount">(25 letters, 3 marks, 1 punctuation :   total 29)</span></li-->
+</ul>
+</section>
+
+
+
+
+<!--section id="charlistsection">
   <h2><a href="#characterlist" id="characterlist">List of basic symbols</a></h2>
   <p>This is a list of main characters or character combinations needed for Balinese. Clicking on these characters will open a  page in another window. If the character is underlined, the new page will display additional information about that character.</p>
 	<table id="index">
@@ -265,7 +340,7 @@
   </table>
 	<p>&nbsp;</p>
   <p>To test the various contextual forms of these characters, use the <a href="/pickers/balinese/">Balinese character picker</a>.</p>
-</section>
+</section-->
 	
 	
 
@@ -285,11 +360,11 @@
 		</ol>
 </section>
 
-<div id="panel" style="display:none"></div>
 
-<div class="smallprint"><span id="version">First published  10 Mar 2012.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-07-21  10:25<!-- #EndDate --> 
-  </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/balinese"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-08  21:43<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bbalinese%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fbalinese%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
+<div id="panel" style="display:none"></div>
 
 <script type="text/javascript">
 initialiseShowNames('/scripts/balinese/block', 'c');

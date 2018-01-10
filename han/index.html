@@ -11,6 +11,7 @@
 #freeText, #freeText2 {
 	font-size: 24px;
 	font-family: webfont, serif;
+    line-height: 1.4;
 	}
 [lang=zh-hans] { font-size: 130%; }
 .large .ex { font-size: 400%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
@@ -24,6 +25,9 @@
 <script type="text/javascript" src="/shared/fontlists/manage.js"></script>
 <script type="text/javascript" src="/shared/code/scriptGroups.js"></script>
 <script type="text/javascript" src="../summaries/functions.js"></script>
+<script type="text/javascript" src="../block/functions.js"></script>
+<script type="text/javascript" src="/shared/code/getLinks.js"></script>
+<script type="text/javascript" src="/scripts/linkdata/linkdb.js"></script>
 <script type="text/javascript" src="../summaries/scriptdata.js"> </script>
 </head>
 
@@ -33,7 +37,7 @@
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Han</h1>
+<h1>Han script</h1>
 
 
 <aside class="sidebar">
@@ -73,17 +77,22 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->19-Jul-2017<!-- #EndDate -->
+  <!-- #BeginDate format:En2 -->09-Jan-2018<!-- #EndDate -->
 &bull; tags <a href="http://rishida.net/blog/index.php?tag=han" title="Show all blog posts tagged with 'han'">han</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
 
 <div class="section">
-  <p>This page provides basic information about the Han script. For similar information related to other scripts, see the <a href="/scripts/featurelist/">Script comparison table</a>.</p>
-  <p class="instructions">Click on the orange text in the features list (right column) to jump to notes and examples. Click on red  text examples or highlight part of the sample text to see a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
-  <p>For more details see:  
-  <!--a href="/scripts/han/block">Character notes </a> • --><a href="/scripts/links?script=han">Script links</a></p>
-</div>
+  <p>This page provides basic information about the Han script. It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned. </p>
+  <p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+<p><!--For character-specific details see 
+  <a class="linkHighlight" href="/scripts/han/block">Character notes</a>. -->For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>. </p>
+  
+  <details id="scriptLinks">
+  <summary>Click here for links to more information.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Hani')</script>
+  </details></div>
 
 
 
@@ -122,19 +131,49 @@
 
 
 
-<section id="notes"> 
+<section id="history">
+    <h2><a href="#history">Usage &amp; history</a></h2>
+    <p>From <a href="http://scriptsource.org/scr/Hani">Scriptsource</a>: </p>
+    <blockquote>
+<p>Chinese writing is believed to be the oldest form of writing in East Asia, having apparently been spontaneously created during the second half of the second millenium BC. There is no evidence of any other writing in use in the area at this time, nor of any outside influence from a literate society. The earliest inscriptions were on bones and shells used in divination during the Shang dynasty (1600-1046 BC), and employed a set of logographic symbols now known as the Oracle Bone Script. Although these symbols have been extinct since the end of the Bronze Age, the modern Han characters are direct descendants from these. ...</p>
+<p>There are two styles of Han characters used for writing Chinese and the languages of China; the traditional forms used throughout the Chinese-speaking world from the 5th century AD until 1949, and the simplified forms which replaced them in the People's Republic of China and Singapore since 1949. Traditional Han is still used in Taiwan, Hong Kong and Macau, and for aesthetic purposes elsewhere in East Asia.</p>
+</blockquote>
+    <p>From <a href="http://en.wikipedia.org/wiki/Chinese_characters">Wikipedia</a>:</p>
+<blockquote>Chinese characters are logograms used in the writing of Chinese, Japanese, Korean, and some other Asian languages. In Standard Chinese, they are called hànzì (simplified Chinese: 汉字; traditional Chinese: 漢字, lit &quot;Han characters&quot;). They have been adapted to write a number of other languages, including Japanese, where they are known as kanji (漢字); Korean, where they are known as Hanja (漢字); and Vietnamese, in a system known as chữ Nôm. Collectively, they are known as CJK characters. Chinese characters constitute the oldest continuously used system of writing in the world. By virtue of their widespread current use in East Asia, and historic use throughout the Sinosphere, Chinese characters are among the most widely adopted writing systems in the world by number of users.</blockquote>
+</section>
 
-  <section id="type">
+
+
+
+<section id="type">
     <h2>Key features</h2>
-    <p>The Han script is an <span class="newterm">ideographic</span> script. Letters typically represent a spoken syllable.</p>
+    <p>The Han script is an <span class="newterm">ideographic</span> script. Letters typically represent a spoken syllable.  See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
+</p>
     <p>There are two main variants of the Han script used for Chinese: Simplified and Traditional. Simplified is used in Mainland China and Singapore, and has a smaller repertoire and simpler shapes than the traditional version, which is used in Taiwan and Hong Kong. </p>
     <p>People speaking different chinese dialects nevertheless write largely the same way, due to the way that the han characters represent concepts rather than sounds.</p>
     <p>Han characters are also widely used in Japan to represent the main part of Japanese words, and sometimes used in Korea (though modern Korean text will contain very few, if any, han characters).</p>
     <p>Text can be written horizontally or vertically. The visual forms of characters don't interact.</p>
-    <p>For more information see <a href="http://scriptsource.org/scr/Grek">ScriptSource</a>, <a href="http://en.wikipedia.org/wiki/Han_script">Wikipedia</a> or <a href="http://www.omniglot.com/writing/han.htm">Omniglot</a>.</p>
-  
-  
-  <section id="dir" class="note">
+    <p>The Han script characters in Unicode 10.0 are spread across 7 blocks:</p>
+    <ul>
+      <li><a href="/uniview/?block=CJK_Unified_Ideographs">CJK Unified Ideographs</a> (20,991)</li>
+      <li><a href="/uniview/?block=CJK_Unified_Ideographs_Extension-A">CJK Unified Ideographs Extension A</a> (6591)</li>
+      <li><a href="/uniview/?block=CJK_Unified_Ideographs_Extension_B">CJK Unified Ideographs Extension B</a> (42,719)</li>
+      <li><a href="/uniview/?block=CJK_Unified_Ideographs_Extension_C">CJK Unified Ideographs Extension C</a> (4,195)</li>
+      <li><a href="/uniview/?block=CJK_Unified_Ideographs_Extension_D">CJK Unified Ideographs Extension D</a> (222)</li>
+      <li><a href="/uniview/?block=CJK_Unified_Ideographs_Extension_E">CJK Unified Ideographs Extension E</a> (5,761)</li>
+      <li><a href="/uniview/?block=CJK_Unified_Ideographs_Extension_F">CJK Unified Ideographs Extension F</a> (7,472)</li>
+    </ul>
+    <p>There are also 2 compatibility blocks (containing 1,014 characters in total), and various related blocks, including Kangxi Radicals, CJK Radicals Supplement, CJK Strokes, Ideographic Description Characters, and Ideographic Symbols and Punctuation.</p>
+</section>
+
+
+
+
+
+<section id="layout" class="note">
+<h2><a href="#layout">Text layout</a></h2>
+ 
+   <section id="dir" class="note">
     <h3>Text direction</h3>
     <p>Text can be written horizontally, left to right, or vertically with lines progressing from right to left. Vertically set text is more common in traditional chinese than simplified chinese areas.</p>
     <p>Older horizontally set texts in Chinese also ran right to left. </p>
@@ -146,34 +185,25 @@
      <p class="set_horizontal" lang="zh-hans" id="verticalTextExample" style="text-align:start;">Article 7. 法律之前人人平等,并有权享受法律的平等保护,不受任何歧视。人人有权享受平等保护,以免受违反本宣言的任何歧视行为以及煽动这种歧视的任何行为之害。</p></div>
 <p>It should be noted, however, that horizontal and vertical text is not usually identical. Apart from the question of what gets rotated and what does not, the two writing modes may show different preferences for emphasis marks, brackets, numbers, and so forth.</p>
   </section>
-
+  
+  
 
 
 
 <section id="wordsep" class="note">
-  <h3>Word separators</h3>
+  <h3>Text delimiters</h3>
   <p>Chinese rarely uses spaces. In the sample text there are gaps around punctuation, but these are produced by a lack of 'ink' in parts of the square character glyphs:</p>
   <p class="instructions">You can verify this by clicking on this example. The character list popup shows that only three characters make up this sequence, and none are spaces.</p>
   <p class="large"><span class="ex" lang="zh-hans">别。并</span></p>
-</section>
-</section>
-
-
-
-
-  <section id="punctuation" class="note">
-    <h2><a href="#punctuation">Punctuation</a></h2>
     <p>Chinese uses native bracket styles, commas and periods. Some of the punctuation looks like that for Latin (eg. parentheses), but the width of the punctuation is likely to include signficant amounts of white space, so that punctuation characters occupy the same space as han characters.</p>
-  </section>
-  
-  
+</section>
 
 
 
-   <section id="layout" class="note">
-    <h2><a href="#layout">Text layout</a></h2>
-    
-  <section id="wrap" class="note">
+
+
+
+<section id="wrap" class="note">
     <h3>Line breaks &amp; word wrap</h3>
     <p>Lines are normally wrapped between characters – word boundaries have no significance for the wrapping. Chinese should, however, take into account a few rules which dictate what characters cannot appear at the end or start of a line.</p>
     <p class="instructions">By looking at the above sample text and changing the width of your browser window you should be able to see text wrapping character by character, and identify characters that cannot appear at the start/end of a line.</p>
@@ -199,17 +229,6 @@
   
   <section id="chars" class="note">
     <h2><a href="chars">Character lists by language</a></h2>
-    <p>The Arabic script characters in Unicode 10.0 are spread across 3 blocks:</p>
-    <ul>
-      <li><a href="/uniview/?block=CJK_Unified_Ideographs">CJK Unified Ideographs</a> (20,991)</li>
-      <li><a href="/uniview/?block=CJK_Unified_Ideographs_Extension-A">CJK Unified Ideographs Extension A</a> (6591)</li>
-      <li><a href="/uniview/?block=CJK_Unified_Ideographs_Extension_B">CJK Unified Ideographs Extension B</a> (42,719)</li>
-      <li><a href="/uniview/?block=CJK_Unified_Ideographs_Extension_C">CJK Unified Ideographs Extension C</a> (4,195)</li>
-      <li><a href="/uniview/?block=CJK_Unified_Ideographs_Extension_D">CJK Unified Ideographs Extension D</a> (222)</li>
-      <li><a href="/uniview/?block=CJK_Unified_Ideographs_Extension_E">CJK Unified Ideographs Extension E</a> (5,761)</li>
-      <li><a href="/uniview/?block=CJK_Unified_Ideographs_Extension_F">CJK Unified Ideographs Extension F</a> (7,472)</li>
-    </ul>
-    <p>There are also 2 compatibility blocks (containing 1,014 characters in total), and various related blocks, including Kangxi Radicals, CJK Radicals Supplement, CJK Strokes, Ideographic Description Characters, and Ideographic Symbols and Punctuation.</p>
     <p>The following is an incomplete list of languages and the number of characters they use, per version 26 of CLDR's lists of characters (exemplarCharacters). </p>
     <p class="instructions">Click on headings with links to get more information about the characters.</p>
   </section>
@@ -249,14 +268,11 @@
     <td>131</td></tr>
     </tbody></table>
   </section>
-</section>
 
 
 
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/han"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-09  6:35<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bhan%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fhan%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
-<div class="smallprint"><span id="version">First published  11 Jul 2017.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-07-19  21:40<!-- #EndDate --> 
-  </span> GMT. &nbsp;&bull;&nbsp; <a href="https://github.com/r12a/scripts/issues/new?title=%5Bhan summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fsummaries%2Fhan%0A%0A" target="_blank">Raise an issue</a>. &nbsp;&bull;&nbsp; Copyright r12a.  Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 <div id="panel" style="display:none"></div>
 </body>

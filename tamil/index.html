@@ -34,6 +34,9 @@
 <script type="text/javascript" src="/shared/fontlists/manage.js"></script>
 <script type="text/javascript" src="/shared/code/scriptGroups.js"></script>
 <script type="text/javascript" src="../summaries/functions.js"></script>
+<script type="text/javascript" src="../block/functions.js"></script>
+<script type="text/javascript" src="/shared/code/getLinks.js"></script>
+<script type="text/javascript" src="/scripts/linkdata/linkdb.js"></script>
 <script type="text/javascript" src="../summaries/scriptdata.js"> </script>
 
 <script type="text/javascript" src="/shared/fontlists/tamil.js"> </script>
@@ -57,13 +60,22 @@
  <div id="fontsetting" class="closed">
   <h2 class="notoc"><a id="fonts">Fonts</a></h2>
   <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-    <form onSubmit="document.getElementById('freeText').style.fontFamily = document.getElementById('fontName').value; return false;">
-      <p dir="ltr" class="english">Use this font:<br/>
-        <input type="text" id="fontName" value="webfont"/>
-        <button
-		  type="submit">Apply</button>
-      </p>
-  </form>
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'ta');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'ta');" />
+    </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
     <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
 	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
 	return false;">
@@ -88,19 +100,25 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->25 July, 2017<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->8 January, 2018<!-- #EndDate -->
 &bull; tags <a href="http://rishida.net/blog/index.php?tag=tamil" title="Show all blog posts tagged with 'tamil'">tamil</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>.</p>
 <section>
-  <p>This page provides basic information about the Tamil script. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>.</p>
+  <p>This page provides basic information about the Tamil script. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned.</p>
   <p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
-  <p>For more details see: 
-  <a class="linkHighlight" href="/scripts/tamil/block">Character notes </a> • <a class="linkHighlight" href="/scripts/links?script=tamil">Script links</a></p>
+<p>For character-specific details see 
+  <a class="linkHighlight" href="/scripts/tamil/block">Character notes</a>. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>. </p>
+  
+  <details id="scriptLinks">
+  <summary>Click here for links to more information.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Taml')</script>
+  </details>
 </section>
 
 
 
 <section>
-  <h2 id="sample">Sample (Tamil)</h2>
+<h2 id="sample">Sample (Tamil)</h2>
   
 
   <div id="freeText" dir="ltr" lang="ta" data-target="c" data-base="/scripts/tamil/block" data-source="http://unicode.org/udhr/translations.html">
@@ -123,12 +141,28 @@
 
 
 
+<section id="history">
+    <h2><a href="#history">Usage &amp; history</a></h2>
+    <p>From <a href="http://scriptsource.org/scr/Taml">Scriptsource</a>: </p>
+    <blockquote>The Tamil script, also called tamiz ezuttu, is used for writing the Tamil language, a Dravidian language spoken by over 65,500,000 people in India, Sri Lanka, Singapore, Malaysia and Mauritius. Tamil is an official language in the south Indian state of Tamil Nadu as well as in Sri Lanka and Malaysia. The script is derived from Brahmi, so is related to many of the scripts used for writing Indian Indo-Aryan languages, to which the Tamil language itself is unrelated.</blockquote>
+    <p>From <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia</a>:</p>
+<blockquote>The Tamil script (<span lang="ta">தமிழ் அரிச்சுவடி</span>; Tamiḻ ariccuvaṭi; [t̪ɐmɨɻ ˈɐɾit͡ɕːuʋəɽi];) is an abugida script that is used by Tamils and Tamil speakers in India, Sri Lanka, Malaysia, Singapore and elsewhere to write the Tamil language, as well as to write the liturgical language Sanskrit, using consonants and diacritics not represented in the Tamil alphabet. Certain minority languages such as Saurashtra, Badaga, Irula, and Paniya are also written in the Tamil script.</blockquote>
+</section>
+
+
+
+
 <section id="intro">
-<h2><a href="#intro">Brief script introduction</a></h2>
-<p> The script is an abugida, ie. consonants carry an inherent vowel sound that is overridden using vowel signs. In Tamil, consonants carry an inherent vowel <span class="ipa">ʌ</span>, usually written <span class="trans">a</span>. </p>
+<h2><a href="#intro">Key features</a></h2>
+<p> The script is an <strong>abugida</strong>, ie. consonants carry an inherent vowel sound that is overridden using vowel signs. In Tamil, consonants carry an inherent vowel <span class="ipa">ʌ</span>, usually written <span class="trans">a</span>.   See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
+</p>
   <p>There are less consonants than in other Indic scripts. Tamil has no aspirated consonants, and symbols are allocated on a phonemic basis, rather than phonetic. This means that <span lang="ta" >க</span>, for example, may be pronounced as the allophones <span class="ipa">k</span> <span class="ipa">ɡ</span> <span class="ipa">x</span> <span class="ipa">ɣ</span> or <span class="ipa">h</span>, according to where it appears relative to other sounds in a word, but its pronunciation doesn't change the word.</p>
   <p>Tamil is diglossic: the classic form is preferred for writing and public speaking, and is mostly standard across the Tamil-speaking regions; the colloquial, spoken form differs widely from the written.</p>
   <p>Text runs from left to right.</p>
+<p>The Tamil script characters in Unicode 10.0 are in the following block: </p>
+    <ul>
+      <li> <a href="/uniview/?block=tamil">Tamil</a> (72 characters)      </li>
+    </ul>
 </section>
 
 
@@ -257,127 +291,41 @@
 		<p>There are a set of Tamil numbers, but modern Tamil text typically uses Western digits. </p>
 		<p>The Tamil digits can be used as a standard decimal counting system, but older versions of the Tamil system had no zero and inserted characters to indicate tens, hundreds, and thousands. For a description of the algorithm, see <a href="http://www.w3.org/TR/predefined-counter-styles/#tamil-styles">Predefined Counter Styles</a> and <a href="http://unicode.org/notes/tn21/tamil_numbers.pdf">Unicode Technical Note #21</a>. You can experiment with this using the<a href="/apps/numberconverter/"> Counter styles converter</a> tool (select Tamil, Ancient).</p>
 </section>
+<section id="layout" class="note">
+<h2><a href="#layout">Text layout</a></h2>
 
-
-
-
-    
-<section id="punctuation">
-		<h2><a href="#punctuation">Punctuation</a></h2>
-		<p>Western punctuation appears to be used generally.</p>
-		<p>The danda and double danda are sometimes used, along with other unified punctuation in the Devanagari block. <sup><a href="http://www.unicode.org/versions/Unicode7.0.0/ch12.pdf">Unicode</a> 477</sup></p>
-	</section>
-    
-    
-
-
-
-
-
-<section id="charlistsection">
-	<h2><a href="#characterlist" id="characterlist">List of basic symbols</a></h2>
-    
-    <section id="tamillist">
-    <h3><a href="#tamillist">Tamil</a></h3>
-	<p>This is a list of main characters or character combinations needed for Tamil. Clicking on these characters will open a  page in another window. If the character is underlined, the new page will display additional information about that character.</p>
-	<p>&nbsp;</p>
-	<table id="index">
-	  <tbody>
-      
-<tr><th><a href="#clconsonants">Consonants</a></th><td>
-<a href="/scripts/block/tamil#char0B95" target="c" title="U+0B95 TAMIL LETTER KA">&#x0B95;</a> 
-<a href="/scripts/block/tamil#char0B99" target="c" title="U+0B99 TAMIL LETTER NGA">&#x0B99;</a> 
-<a href="/scripts/block/tamil#char0B9A" target="c" title="U+0B9A TAMIL LETTER CA">&#x0B9A;</a> 
-<a href="/scripts/block/tamil#char0B9E" target="c" title="U+0B9E TAMIL LETTER NYA">&#x0B9E;</a> 
-<a href="/scripts/block/tamil#char0B9F" target="c" title="U+0B9F TAMIL LETTER TTA">&#x0B9F;</a> 
-<a href="/scripts/block/tamil#char0BA3" target="c" title="U+0BA3 TAMIL LETTER NNA">&#x0BA3;</a> 
-<a href="/scripts/block/tamil#char0BA4" target="c" title="U+0BA4 TAMIL LETTER TA">&#x0BA4;</a> 
-<a href="/scripts/block/tamil#char0BA8" target="c" title="U+0BA8 TAMIL LETTER NA">&#x0BA8;</a> 
-<a href="/scripts/block/tamil#char0BAA" target="c" title="U+0BAA TAMIL LETTER PA">&#x0BAA;</a> 
-<a href="/scripts/block/tamil#char0BAE" target="c" title="U+0BAE TAMIL LETTER MA">&#x0BAE;</a> 
-<a href="/scripts/block/tamil#char0BAF" target="c" title="U+0BAF TAMIL LETTER YA">&#x0BAF;</a> 
-<a href="/scripts/block/tamil#char0BB0" target="c" title="U+0BB0 TAMIL LETTER RA">&#x0BB0;</a> 
-<a href="/scripts/block/tamil#char0BB2" target="c" title="U+0BB2 TAMIL LETTER LA">&#x0BB2;</a> 
-<a href="/scripts/block/tamil#char0BB5" target="c" title="U+0BB5 TAMIL LETTER VA">&#x0BB5;</a> 
-<a href="/scripts/block/tamil#char0BB4" target="c" title="U+0BB4 TAMIL LETTER LLLA">&#x0BB4;</a> 
-<a href="/scripts/block/tamil#char0BB3" target="c" title="U+0BB3 TAMIL LETTER LLA">&#x0BB3;</a> 
-<a href="/scripts/block/tamil#char0BB1" target="c" title="U+0BB1 TAMIL LETTER RRA">&#x0BB1;</a> 
-<a href="/scripts/block/tamil#char0BA9" target="c" title="U+0BA9 TAMIL LETTER NNNA">&#x0BA9;</a> 
-</td></tr>
-
-<tr><th><a href="#clgrantha">Grantha consonants</a></th><td>
-<a href="/scripts/block/tamil#char0BB6" target="c" title="U+0BB6 TAMIL LETTER SHA">&#x0BB6;</a> 
-<a href="/scripts/block/tamil#char0B9C" target="c" title="U+0B9C TAMIL LETTER JA">&#x0B9C;</a> 
-<a href="/scripts/block/tamil#char0BB7" target="c" title="U+0BB7 TAMIL LETTER SSA">&#x0BB7;</a> 
-<a href="/scripts/block/tamil#char0BB8" target="c" title="U+0BB8 TAMIL LETTER SA">&#x0BB8;</a> 
-<a href="/scripts/block/tamil#char0BB9" target="c" title="U+0BB9 TAMIL LETTER HA">&#x0BB9;</a> 
-<a href="/scripts/block/tamil#char0B95" target="c" title="U+0B95 TAMIL LETTER KA">&#x0B95;</a> 
-</td></tr>
-
-<tr><th><a href="#clindependent">Independent vowels</a></th><td>
-<a href="/scripts/block/tamil#char0B85" target="c" title="U+0B85 TAMIL LETTER A">&#x0B85;</a> 
-<a href="/scripts/block/tamil#char0B86" target="c" title="U+0B86 TAMIL LETTER AA">&#x0B86;</a> 
-<a href="/scripts/block/tamil#char0B87" target="c" title="U+0B87 TAMIL LETTER I">&#x0B87;</a> 
-<a href="/scripts/block/tamil#char0B88" target="c" title="U+0B88 TAMIL LETTER II">&#x0B88;</a> 
-<a href="/scripts/block/tamil#char0B89" target="c" title="U+0B89 TAMIL LETTER U">&#x0B89;</a> 
-<a href="/scripts/block/tamil#char0B8A" target="c" title="U+0B8A TAMIL LETTER UU">&#x0B8A;</a> 
-</td></tr>
-
-<tr><th><a href="#clvowelsigns">Vowel signs</a></th><td>
-<a href="/scripts/block/tamil#char0BBE" target="c" title="U+0BBE TAMIL VOWEL SIGN AA">&#xA0;&#xA0;&#x0BBE;</a> 
-<a href="/scripts/block/tamil#char0BBF" target="c" title="U+0BBF TAMIL VOWEL SIGN I">&#xA0;&#xA0;&#x0BBF;</a> 
-<a href="/scripts/block/tamil#char0BC0" target="c" title="U+0BC0 TAMIL VOWEL SIGN II">&#xA0;&#xA0;&#x0BC0;</a> 
-<a href="/scripts/block/tamil#char0BC1" target="c" title="U+0BC1 TAMIL VOWEL SIGN U">&#xA0;&#xA0;&#x0BC1;</a> 
-<a href="/scripts/block/tamil#char0BC2" target="c" title="U+0BC2 TAMIL VOWEL SIGN UU">&#xA0;&#xA0;&#x0BC2;</a> 
-<a href="/scripts/block/tamil#char0BC6" target="c" title="U+0BC6 TAMIL VOWEL SIGN E">&#xA0;&#xA0;&#x0BC6;</a> 
-<a href="/scripts/block/tamil#char0BC7" target="c" title="U+0BC7 TAMIL VOWEL SIGN EE">&#xA0;&#xA0;&#x0BC7;</a> 
-<a href="/scripts/block/tamil#char0BC8" target="c" title="U+0BC8 TAMIL VOWEL SIGN AI">&#xA0;&#xA0;&#x0BC8;</a> 
-<a href="/scripts/block/tamil#char0BCA" target="c" title="U+0BCA TAMIL VOWEL SIGN O">&#xA0;&#xA0;&#x0BCA;</a> 
-<a href="/scripts/block/tamil#char0BCB" target="c" title="U+0BCB TAMIL VOWEL SIGN OO">&#xA0;&#xA0;&#x0BCB;</a> 
-<a href="/scripts/block/tamil#char0BCC" target="c" title="U+0BCC TAMIL VOWEL SIGN AU">&#xA0;&#xA0;&#x0BCC;</a> 
-<a href="/scripts/block/tamil#char0BD7" target="c" title="U+0BD7 TAMIL AU LENGTH MARK">&#xA0;&#xA0;&#x0BD7;</a> 
-</td></tr>
-
-<tr><th><a href="#clsymbols">Symbols</a></th><td>
-<a href="/scripts/block/tamil#char0BCD" target="c" title="U+0BCD TAMIL SIGN VIRAMA">&#xA0;&#xA0;&#x0BCD;</a> 
-<a href="/scripts/block/tamil#char0B83" target="c" title="U+0B83 TAMIL SIGN VISARGA">&#x0B83;</a> 
-<a href="/scripts/block/tamil#char0BFA" target="c" title="U+0BFA TAMIL NUMBER SIGN">&#x0BFA;</a> 
-<a href="/scripts/block/tamil#char0BF9" target="c" title="U+0BF9 TAMIL RUPEE SIGN">&#x0BF9;</a> 
-<a href="/scripts/block/tamil#char0BF3" target="c" title="U+0BF3 TAMIL DAY SIGN">&#x0BF3;</a> 
-<a href="/scripts/block/tamil#char0BF4" target="c" title="U+0BF4 TAMIL MONTH SIGN">&#x0BF4;</a> 
-<a href="/scripts/block/tamil#char0BF5" target="c" title="U+0BF5 TAMIL YEAR SIGN">&#x0BF5;</a> 
-<a href="/scripts/block/tamil#char0BF6" target="c" title="U+0BF6 TAMIL DEBIT SIGN">&#x0BF6;</a> 
-<a href="/scripts/block/tamil#char0BF7" target="c" title="U+0BF7 TAMIL CREDIT SIGN">&#x0BF7;</a> 
-<a href="/scripts/block/tamil#char0BF8" target="c" title="U+0BF8 TAMIL AS ABOVE SIGN">&#x0BF8;</a> 
-<a href="/scripts/block/tamil#char0BD0" target="c" title="U+0BD0 TAMIL OM">&#x0BD0;</a> 
-</td></tr>
-
-
-<tr><th><a href="#clnumbers">Numbers</a></th><td>
-  <a href="/scripts/block/tamil#char0BE6" target="c" title="U+0BE6 TAMIL DIGIT ZERO">&#x0BE6;</a> 
-  <a href="/scripts/block/tamil#char0BE7" target="c" title="U+0BE7 TAMIL DIGIT ONE">&#x0BE7;</a> 
-  <a href="/scripts/block/tamil#char0BE8" target="c" title="U+0BE8 TAMIL DIGIT TWO">&#x0BE8;</a> 
-  <a href="/scripts/block/tamil#char0BE9" target="c" title="U+0BE9 TAMIL DIGIT THREE">&#x0BE9;</a> 
-  <a href="/scripts/block/tamil#char0BEA" target="c" title="U+0BEA TAMIL DIGIT FOUR">&#x0BEA;</a> 
-  <a href="/scripts/block/tamil#char0BEB" target="c" title="U+0BEB TAMIL DIGIT FIVE">&#x0BEB;</a> 
-  <a href="/scripts/block/tamil#char0BEC" target="c" title="U+0BEC TAMIL DIGIT SIX">&#x0BEC;</a> 
-  <a href="/scripts/block/tamil#char0BED" target="c" title="U+0BED TAMIL DIGIT SEVEN">&#x0BED;</a> 
-  <a href="/scripts/block/tamil#char0BEE" target="c" title="U+0BEE TAMIL DIGIT EIGHT">&#x0BEE;</a> 
-  <a href="/scripts/block/tamil#char0BEF" target="c" title="U+0BEF TAMIL DIGIT NINE">&#x0BEF;</a> 
-  <a href="/scripts/block/tamil#char0BF0" target="c" title="U+0BF0 TAMIL NUMBER TEN">&#x0BF0;</a> 
-  <a href="/scripts/block/tamil#char0BF1" target="c" title="U+0BF1 TAMIL NUMBER ONE HUNDRED">&#x0BF1;</a> 
-  <a href="/scripts/block/tamil#char0BF2" target="c" title="U+0BF2 TAMIL NUMBER ONE THOUSAND">&#x0BF2;</a> 
-</td></tr>
-
-
-</tbody>
-  </table>
-  </section>
+<section id="punctuation" class="note">
+<h3><a href="#dir">Text direction</a></h3>
+    <p>Buginese script is written  horizontally, left to right.</p>
 </section>
 
+    
+        
+<section> </section>
+<section>
+<h3><a href="#punctuation">Text delimiters</a></h3>
+    <p>Words are separated by spaces.</p>
+  <p>Western punctuation appears to be used generally.</p>
+<p>The danda and double danda are sometimes used, along with other unified punctuation in the Devanagari block. <sup><a href="http://www.unicode.org/versions/Unicode7.0.0/ch12.pdf">Unicode</a> 477</sup></p>
+</section>
+<section id="linebreak" class="note">
+</section>
+</section>
+  
+  
+  
+<section id="chars" class="note">
+<h2>Character lists by language</h2>
+    <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li>
+<p><a href="/app-charuse/?language=ta" target="_blank">Tamil</a> <span class="charCount">(35 letters, 13 marks, 13 punctuation :   total 61)</span></p>
+</li>
+</ul>
+</section>
 <section id="references"> 
 
-		<h2><a href="#references">Further reading</a></h2>
+<h2><a href="#references">Further reading</a></h2>
 		<ol>
 		  <li>[Daniels] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
 		    0-19-507993-0</li>
@@ -395,12 +343,12 @@
 
 
 
+
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/tamil"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-08  20:07<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Btamil%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ftamil%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
 <div id="panel" style="display:none"><div style="display:block">&nbsp;</div><p style="text-align:right;"></p></div>
 
-<div class="smallprint"> <span id="version">First published  3 February, 2010.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-07-25  7:15<!-- #EndDate --> 
-  </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span> </div>
-  
 
 
 <script type="text/javascript">

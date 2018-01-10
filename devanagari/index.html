@@ -18,6 +18,7 @@
 #freeText {
 	font-size: 24px;
 	font-family: webfont, serif;
+    line-height: 1.4;
 	}
 [lang=hi] { font-family: webfont, serif; font-size: 150%; }
 .large .ex { font-size: 450%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1.75; }
@@ -31,6 +32,9 @@
 <script type="text/javascript" src="/shared/fontlists/manage.js"></script>
 <script type="text/javascript" src="/shared/code/scriptGroups.js"></script>
 <script type="text/javascript" src="../summaries/functions.js"></script>
+<script type="text/javascript" src="../block/functions.js"></script>
+<script type="text/javascript" src="/shared/code/getLinks.js"></script>
+<script type="text/javascript" src="/scripts/linkdata/linkdb.js"></script>
 <script type="text/javascript" src="../summaries/scriptdata.js"> </script>
 
 <script type="text/javascript" src="/shared/fontlists/thaana.js"> </script>
@@ -42,7 +46,7 @@
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Devanagari</h1>
+<h1>Devanagari script</h1>
 
 
 <aside class="sidebar">
@@ -51,13 +55,22 @@
  <div id="fontsetting" class="closed">
   <h2 class="notoc"><a id="fonts">Fonts</a></h2>
   <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-    <form onSubmit="document.getElementById('freeText').style.fontFamily = document.getElementById('fontName').value; return false;">
-      <p dir="ltr" class="english">Use this font:<br/>
-        <input type="text" id="fontName" value="webfont"/>
-        <button
-		  type="submit">Apply</button>
-      </p>
-  </form>
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'hi');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'hi');" />
+    </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
     <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
 	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
 	return false;">
@@ -82,17 +95,22 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->19-Jul-2017<!-- #EndDate -->
+  <!-- #BeginDate format:En2 -->09-Jan-2018<!-- #EndDate -->
 &bull; tags <a href="http://rishida.net/blog/index.php?tag=devanagari" title="Show all blog posts tagged with 'devanagari'">devanagari</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
 
 <div class="section">
-  <p>This page provides basic information about the Devanagari script. For similar information related to other scripts, see <a href="/scripts/featurelist/">Script comparison table</a>.</p>
-  <p class="instructions">Click on the orange text in the features list (right column) to see examples and notes. Click on red  text examples to see the characters. Click on the vertical blue bar, bottom right, to change font settings.</p>
-  <p>For more details see:  
-  <a href="/scripts/devanagari/block">Character notes </a> • <a href="/scripts/links?script=devanagari">Script links</a></p>
-</div>
+  <p>This page provides basic information about the Devanagari script. It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned. </p>
+  <p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+<p>For character-specific details see 
+  <a class="linkHighlight" href="/scripts/devanagari/block">Character notes</a>. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>. </p>
+  
+  <details id="scriptLinks">
+  <summary>Click here for links to more information.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Deva')</script>
+</details></div>
 
 
 
@@ -119,11 +137,44 @@
 
 <section id="notes"> 
 
-  <section id="type">
+ <section id="history">
+    <h2><a href="#history">Usage &amp; history</a></h2>
+    <p>From <a href="http://scriptsource.org/scr/Deva">Scriptsource</a>: </p>
+    <blockquote>Devanagari is a Northern Brahmic script related to many other South Asian scripts including Gujarati, Bengali, and Gurmukhi, and, more distantly, to a number of South-East Asian scripts including Thai, Balinese, and Baybayin. The script is used for over 120 spoken Indo-Aryan languages, including Hindi, Nepali, Marathi, Maithili, Awadhi, Newari and Bhojpuri. It is also used for writing Classical Sanskrit texts. Generally the orthography of the script reflects the pronunciation of the language.</blockquote>
+    <p>From <a href="http://en.wikipedia.org/wiki/Devanagari">Wikipedia</a>:</p>
+<blockquote>
+<p>Devanagari (/ˌdeɪvəˈnɑːɡəri/ DAY-və-NAH-gə-ree; देवनागरी, IAST: Devanāgarī, a compound of &quot;deva&quot; देव and &quot;nāgarī&quot; नागरी; Hindi pronunciation: [d̪eːʋˈnaːɡri]), also called Nagari (Nāgarī, नागरी), is an abugida (alphasyllabary) used in India and Nepal. It is written from left to right, has a strong preference for symmetrical rounded shapes within squared outlines, and is recognisable by a horizontal line that runs along the top of full letters. In a cursory look, the Devanagari script appears different from other Indic scripts such as Bengali-Assamese, Odia, or Gurmukhi, but a closer examination reveals they are very similar except for angles and structural emphasis. ...</p>
+<p>The Devanagari script is used for over 120 languages, making it one of the most used and adopted writing systems in the world. Among the languages using it – as either their only script or one of their scripts – are Awadhi, Bhili, Bhojpuri, Bodo, Chhattisgarhi, Dogri, Haryanvi, Hindi, Kashmiri, Konkani, Magahi, Maithili, Marathi, Mundari, Nepalbhasa, Nepali, Pali, Rajasthani, Sanskrit, Santali and Sindhi. The Devanagari script is closely related to the Nandinagari script commonly found in numerous ancient manuscripts of South India, and it is distantly related to a number of southeast Asian scripts.</p>
+</blockquote>
+</section>
+
+
+
+
+<section id="type">
     <h2>Key features</h2>
-    <p>Devanagari is an <span class="newterm">abugida</span>. Consonant letters have an inherent vowel sound. Combining vowel-signs are attached to the consonant to produce a different vowel.</p>
-    <p>Actually, devanagari is based on orthographic syllables, so the vowel-sign is actually attached to the syllable. An orthographic syllable includes clusters of consonants without intervening vowel sounds. These clusters are typically represented as partially merged forms, called conjuncts.</p><p>Text is normally written horizontally, left to right.</p>
-    <p>For more information see <a href="http://scriptsource.org/scr/Cher">ScriptSource</a>, <a href="http://en.wikipedia.org/wiki/Devanagari_script">Wikipedia</a> or <a href="http://www.omniglot.com/writing/devanagari.htm">Omniglot</a>.</p>
+    <p>Devanagari is an <span class="newterm">abugida</span>. Consonant letters have an inherent vowel sound. Combining vowel-signs are attached to the consonant to indicate that a different vowel follows the consonant.   See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
+</p>
+    <p>Actually, devanagari is based on orthographic syllables, so the vowel-sign is  in fact attached to the syllable. An orthographic syllable includes clusters of consonants without intervening vowel sounds. These clusters are typically represented as partially merged forms, called conjuncts.</p>
+    <p>The devanagari block contains more characters than other indic scripts, partly because it serves as a pivot script for transliterations of other scripts.</p>
+    <p>The Devanagari script characters in Unicode 10.0 are contained in 2 blocks (not counting shared characters, such as punctuation):</p>
+    <ul>
+      <li><a href="/uniview/?block=Devanagari">Devanagari</a> (128)</li>
+      <li><a href="/uniview/?block=Devanagari_Extended">Devanagari Extended</a> (30)</li>
+    </ul>
+  </section>
+  
+  
+  
+  <section id="consonants" class="note">
+    <h2><a href="#consonants">Consonants</a></h2>
+    <p>There are 37 basic consonants.</p>
+    <p><span class="charExample"><span class="exlist" lang="hi">क ख ग घ ङ च छ ज झ ञ ट ठ ड ढ ण त थ द ध न ऩ प फ ब भ म य र ऱ ल ळ ऴ व श ष स ह</span></span>&nbsp;</p>
+    <p>There are also 8 consonants with nukta, used to represent foreign sounds. These should not normally be used. Instead they should be represented by the base consonant followed by <span class="codepoint"><span lang="hi">&#x25CC;&#x093C;</span> [<span class="uname">U+093C DEVANAGARI SIGN NUKTA​</span>]</span>, eg. <span class="charExample"><span class="ex" lang="hi">ख़ारीदारी</span> <span class="trans">k͟hārīdārī</span> <span class="meaning">shopping</span></span>.</p>
+    <p><span class="charExample"><span class="exlist" lang="hi">क़ ख़ ग़ ज़ ड़ ढ़ फ़ य़</span></span>&nbsp;</p>
+    <p>There are 8 more consonants for special use, including 4 for Sindhi implosives.</p>
+    <p><span class="charExample"><span class="exlist" lang="hi">ॸ ॹ ॺ ॽ ॻ ॼ ॾ ॿ</span></span>&nbsp;</p>
+    <p>As mentioned above, each consonant symbol has an inherent following vowel sound.</p>
   </section>
   
   
@@ -139,7 +190,6 @@
   
   
   
-   <section id="context" class="note">
     <h2><a href="#context">Context-based glyph changes</a></h2>
   
    <section id="gsub" class="tones">
@@ -161,24 +211,13 @@
     <p>In the following  the  image to the left shows the normal position of <span class="codepoint"><span lang="hi">&#x00A0;&#x0942;</span> <a href="/scripts/devanagari/block#char0942">[<span class="uname">U+0942 DEVANAGARI VOWEL SIGN UU​</span>]</a></span>, beneath the first letter. The  example on the right shows that character displayed higher up and to the right when combined with the base character <span class="codepoint"><span lang="hi">&#x0930;</span> <a href="/scripts/devanagari/block#char0930">[<span class="uname">U+0930 DEVANAGARI LETTER RA</span>]</a></span>.</p>
     <p class="large"><span class="ex" lang="hi">पूजा</span> &nbsp;&nbsp; vs. &nbsp;&nbsp; <span class="ex" lang="hi">परू</span></p>
   </section>
-  </section>
-  
-  
-  
-  
-  <section id="punctuation" class="note">
-    <h2><a href="#punctuation">Punctuation</a></h2>
-    <p>Devanagari uses standard Latin punctuation, but also has its own version of a full stop, <span class="codepoint"><span lang="hi">&#x0964;</span> <a href="/scripts/devanagari/block#char0964">[<span class="uname">U+0964 DEVANAGARI DANDA</span>]</a></span>, which can be seen in the sample text above. (Although an ASCII full stop is also seen after the lead-in text for each article.)</p>
-    <p class="large"><span class="ex" lang="hi">चाहिए ।</span></p>
-    <p>For boundaries of text above the sentence level there is <span class="codepoint"><span lang="hi">&#x0965;</span> <a href="/scripts/devanagari/block#char0965">[<span class="uname">U+0965 DEVANAGARI DOUBLE DANDA</span>]</a></span>.</p>
-    <p>Both of these characters (using the same code point) are used in a number of other indic scripts.</p>
-  </section>
-  
-  
-  
-  
-  <section id="digits" class="note">
-    <h2><a href="#digits">Digits</a></h2>
+
+
+
+
+
+<section id="digits" class="note">
+<h2><a href="#digits">Digits</a></h2>
     <p>Devanagari has a set of digits, that can be referred to as 'hindi' numerals. They are used regularly.</p>
     <p class="large"><span class="ex" lang="hi">०१२३४५६७८९</span></p>
     <p>An interesting feature of large numbers written in India is that they apply groupings of two, rather than three, digits between commas (even when using european digits). For example, two million would be written:</p>
@@ -190,8 +229,28 @@
   
    <section id="layout" class="note">
     <h2><a href="#layout">Text layout</a></h2>
+   
+      
+  <section id="direction" class="note">
+    <h3><a href="#direction">Direction</a></h3>
+    <p>Text is normally written horizontally, left to right.</p>
+  </section>
+   
     
-  <section id="justify" class="note">
+      
+ <section id="delimiters">
+<h3><a href="#delimiters">Text delimiters</a></h3>
+ <p>Words are separated by spaces.</p>
+    <p>Devanagari uses standard Latin punctuation, but also has its own version of a full stop, <span class="codepoint"><span lang="hi">&#x0964;</span> <a href="/scripts/devanagari/block#char0964">[<span class="uname">U+0964 DEVANAGARI DANDA</span>]</a></span>, which can be seen in the sample text above. (Although an ASCII full stop is also seen after the lead-in text for each article.)</p>
+    <p class="large"><span class="ex" lang="hi">चाहिए ।</span></p>
+    <p>For boundaries of text above the sentence level there is <span class="codepoint"><span lang="hi">&#x0965;</span> <a href="/scripts/devanagari/block#char0965">[<span class="uname">U+0965 DEVANAGARI DOUBLE DANDA</span>]</a></span>.</p>
+    <p>Both of these characters (using the same code point) are used in a number of other indic scripts.</p>
+
+</section>
+
+
+
+<section id="justify" class="note">
     <h3><a href="#justify">Justification</a></h3>
     <p>Justification is done, principally, by adjusting the space between words. (I have no information about whether high-end systems  also adjust inter-character spacing slightly if inter-word doesn't resolve the issue, or to improve aesthetics.)</p>
     <p><em>Use the control below to see how your browser justifies the text sample here.</em></p>
@@ -205,41 +264,25 @@
   
   
   
-  <section id="chars" class="note">
-    <h2>Character lists by language</h2>
-    <p>The Devanagari script characters in Unicode 10.0 are contained in 2 blocks (not counting shared characters, such as punctuation):</p>
-    <ul>
-      <li><a href="/uniview/?block=Devanagari">Devanagari</a> (128)</li>
-      <li><a href="/uniview/?block=Devanagari_Extended">Devanagari Extended</a> (30)</li>
-    </ul>
-    <p>The following is an incomplete list of languages and the number of characters they use, per version 31 of CLDR's lists of characters (exemplarCharacters).</p>
-    <p class="instructions">Click on the links to see a list of characters with names.</p>
-    
-    <section class="characters">
-    <h4>Hindi</h4>
-    <table class="cldrList"><tbody>
-    <tr><th><a target="_blank" href="/uniview/?charlist=%E0%A5%90%E0%A4%85%E0%A4%86%E0%A4%87%E0%A4%88%E0%A4%89%E0%A4%8A%E0%A4%8B%E0%A4%8C%E0%A4%8D%E0%A4%8F%E0%A4%90%E0%A4%91%E0%A4%93%E0%A4%94%E0%A4%95%E0%A4%96%E0%A4%97%E0%A4%98%E0%A4%99%E0%A4%9A%E0%A4%9B%E0%A4%9C%E0%A4%9D%E0%A4%9E%E0%A4%9F%E0%A4%A0%E0%A4%A1%E0%A4%A2%E0%A4%A3%E0%A4%A4%E0%A4%A5%E0%A4%A6%E0%A4%A7%E0%A4%A8%E0%A4%AA%E0%A4%AB%E0%A4%AC%E0%A4%AD%E0%A4%AE%E0%A4%AF%E0%A4%B0%E0%A4%B2%E0%A4%B3%E0%A4%B5%E0%A4%B6%E0%A4%B7%E0%A4%B8%E0%A4%B9%E0%A4%BD">Main</a></th>
-    <td lang="hi">ॐ अ आ इ ई उ ऊ ऋ ऌ ऍ ए ऐ ऑ ओ औ क ख ग घ ङ च छ ज झ ञ ट ठ ड ढ ण त थ द ध न प फ ब भ म य र ल ळ व श ष स ह ऽ</td>
-    <td>50</td></tr>
-    <tr>
-    <th><a target="_blank" href="/uniview/?charlist=%E2%80%8C%E2%80%8D">Auxiliary</a></th>
-    <td lang="hi">‌ ‍</td>
-    <td>2</td></tr>
-    <tr><th><a target="_blank" href="/uniview/?charlist=%E0%A4%BC%E0%A4%81%E0%A4%82%E0%A4%83%E0%A4%BE%E0%A4%BF%E0%A5%80%E0%A5%81%E0%A5%82%E0%A5%83%E0%A5%84%E0%A5%85%E0%A5%87%E0%A5%88%E0%A5%89%E0%A5%8B%E0%A5%8C%E0%A5%8D">Combining characters</a></th>
-    <td lang="hi">़ ँ ं ः ा ि ी ु ू ृ ॄ ॅ े ै ॉ ो ौ ्</td>
-    <td>18</td></tr>
-    <tr><th><a target="_blank" href="/uniview/?charlist=-%2C%3B%3A%21%3F.%E2%80%98%E2%80%99%E2%80%9C%E2%80%9D%28%29%5B%5D%7B%7D%E0%A5%B0">Punctuation</a></th>
-    <td lang="hi">- , ; : ! ? . ‘ ’ “ ” ( ) [ ] { } ॰</td>
-    <td>18</td></tr>
-    </tbody></table>
-  </section>
-  </section>
+<section id="chars" class="note">
+<h2>Character lists by language</h2>
+    <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li><a href="/app-charuse/?language=hi" target="_blank">Hindi</a> <span class="charCount">(50 letters, 17 marks, 7 punctuation, 10 numbers :   total 84)</span></li>
+<li><a href="/app-charuse/?language=mr" target="_blank">Marathi</a> <span class="charCount">(51 letters, 17 marks, 10 punctuation, 10 numbers, 2 other :   total 90)</span></li>
+<li><a href="/app-charuse/?language=mai" target="_blank">Maithili</a> <span class="charCount">(41 letters, 15 marks, 2 punctuation :   total 58)</span></li>
+<li><a href="/app-charuse/?language=ne" target="_blank">Nepali</a> <span class="charCount">(50 letters, 17 marks, 1 punctuation, 10 numbers, 1 other :   total 79)</span></li>
+<li><a href="/app-charuse/?language=sa" target="_blank">Sanskrit</a> <span class="charCount">(35 letters, 14 marks, 1 punctuation :   total 50)</span></li>
+</ul>
+</section>
 </section>
 
 
-<div class="smallprint"><span id="version">First published  11 Jul 2017.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-07-19  21:33<!-- #EndDate --> 
-</span> GMT. &nbsp;&bull;&nbsp; <a href="https://github.com/r12a/scripts/issues/new?title=%5Bdevanagari summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fsummaries%2Fdevanagari%0A%0A" target="_blank">Raise an issue</a>. &nbsp;&bull;&nbsp; Copyright r12a.  Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
+
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/devanagari"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-09  6:22<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bdevanagari%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fdevanagari%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
+
 
 <div id="panel" style="display:none"></div>
 </body>

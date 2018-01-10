@@ -20,6 +20,7 @@
 	font-size: 28px;
 	font-family: webfont, serif;
 	text-align: start;
+    line-height: 1.4;
 	}
 [lang=lo] { font-family: webfont, serif; font-size: 140%; }
 .large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
@@ -33,9 +34,12 @@
 <script type="text/javascript" src="/shared/fontlists/manage.js"></script>
 <script type="text/javascript" src="/shared/code/scriptGroups.js"></script>
 <script type="text/javascript" src="../summaries/functions.js"></script>
+<script type="text/javascript" src="../block/functions.js"></script>
+<script type="text/javascript" src="/shared/code/getLinks.js"></script>
+<script type="text/javascript" src="/scripts/linkdata/linkdb.js"></script>
 <script type="text/javascript" src="../summaries/scriptdata.js"> </script>
 
-<script type="text/javascript" src="/shared/fontlists/template.js"> </script>
+<script type="text/javascript" src="/shared/fontlists/lao.js"> </script>
 </head>
 
 <body>
@@ -53,13 +57,22 @@
  <div id="fontsetting" class="closed">
   <h2 class="notoc"><a id="fonts">Fonts</a></h2>
   <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-    <form onSubmit="document.getElementById('freeText').style.fontFamily = document.getElementById('fontName').value; return false;">
-      <p dir="ltr" class="english">Use this font:<br/>
-        <input type="text" id="fontName" value="webfont"/>
-        <button
-		  type="submit">Apply</button>
-      </p>
-  </form>
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'lo');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'lo');" />
+    </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
     <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
 	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
 	return false;">
@@ -88,16 +101,22 @@
 
 
 <section>
-  <p>This page provides basic information about the Lao script. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>.</p>
-  <p class="instructions">Click on the orange text in the features list (right column) to jump to notes and examples. Click on red  text examples or highlight part of the sample text to see a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
-  <p>For more details see: 
-  <a class="linkHighlight" href="/scripts/template/block">Character notes </a> • <a class="linkHighlight" href="/scripts/links?script=template">Script links</a></p>
+  <p>This page provides basic information about the Lao script. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned.</p>
+  <p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+<p>For character-specific details see 
+<a class="linkHighlight" href="/scripts/template/block">Character notes</a>. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>. </p>
+  
+  <details id="scriptLinks">
+  <summary>Click here for links to more information.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Laoo')</script>
+  </details>
 </section>
 
 
 
 <section>
-  <h2 id="sample">Sample (Lao)</h2>
+<h2 id="sample">Sample (Lao)</h2>
   
 
   <div id="freeText" dir="ltr" lang="nqo" data-target="c" data-base="/scripts/template/block" data-source="http://unicode.org/udhr/translations.html">
@@ -121,13 +140,30 @@
 
 <section id="notes"> 
 
-  <section id="type">
+ <section id="history">
+    <h2><a href="#history">Usage &amp; history</a></h2>
+    <p>From <a href="http://scriptsource.org/scr/Laoo">Scriptsource</a>: </p>
+    <blockquote>The Lao script is used for writing the Lao language, and is also the official script of a number of minority languages in Laos. The Lao language is closely related to Thai; there is a considerable Lao-speaking population in Thailand who write their language with the Thai script. However, the Lao script underwent a number of reforms which caused significant divergence from the Thai script. When the communist Pathet Lao overthrew the Lao government in 1975, they implemented a final spelling reform which simplified and standardized the script.</blockquote>
+    <p>From <a href="http://en.wikipedia.org/wiki/Lao_alphabet">Wikipedia</a>:</p>
+<blockquote>
+<p>Lao script, or Akson Lao, (Lao: ອັກສອນລາວ [ʔáksɔ̌ːn láːw]) is the primary script used to write the Lao language and other minority languages in Laos. It was also used to write the Isan language, but was replaced by the Thai script.</p>
+<p>The Lao alphabet was adapted from the Khmer script, which itself was derived from the Pallava script, a variant of the Grantha alphabet descended from the Brahmi script, which was used in southern India and South East Asia during the 5th and 6th centuries AD. Akson Lao is a sister system to the Thai script, with which it shares many similarities and roots. However, Lao has fewer characters and is formed in a more curvilinear fashion than Thai.</p>
+</blockquote>
+</section>
+
+
+
+<section id="type">
     <h2><a href="type">Key features</a></h2>
-    <p>Lao is an <span class="newterm"> alphabet</span>. This means that it is phonetic in nature, where each letter represents a basic sound.    </p>
+    <p>Lao is an <span class="newterm"> alphabet</span>. This means that it is phonetic in nature, where each letter represents a basic sound.      See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
+</p>
     <p>The script was originally an abugida, but since the script reforms leading up to 1960 it has been  alphabetic. The syllable is the unit for various aspects of the behaviour of the script. Lao is a tonal language, and the script is designed to reflect tonal information. </p>
     <p>The alphabet is split into vowels and consonants. The consonants are grouped into classes that affect the default tonal behaviour of a syllable. There are no independent vowels. Where there is no consonant to support a vowel sign, the character <span class="codepoint"><span lang="lo">&#x0EAD;</span> <a href="/scripts/lao/block#char0EAD">[<span class="uname">U+0EAD LAO LETTER O</span>]</a></span> is used as a support. Vowel signs are typically used in combinations to form the vowel sounds of a syllable.</p>
     <p>Words are not separated by spaces. Text runs horizontally, left to right.</p>
-    <p>For more information see <a href="http://scriptsource.org/scr/Thaa">ScriptSource</a>, <a href="http://en.wikipedia.org/wiki/Template_alphabet">Wikipedia</a>, <a href="http://www.omniglot.com/writing/template.htm">Omniglot</a>, and the <a href="http://www.unicode.org/versions/Unicode10.0.0/ch19.pdf">Unicode Standard</a>.</p>
+<p>The Lao script characters in Unicode 10.0 are in the following block: </p>
+    <ul>
+      <li> <a href="/uniview/?block=lao">Lao</a> (67 characters)      </li>
+    </ul>
   </section>
 </section>
 
@@ -143,7 +179,7 @@
 		<p>The tone depends on the class of the initial consonant in a syllable, the structure of the syllable, and whether or not a tone mark is applied to override the default. Tone values vary depending on location in Laos. There is some disagreement whether there are 5 or 6 tones in Vientiane, and you will see in the tables below that different sources disagree on the tones produced. </p>
 		<p>The following tables present different descriptions of tone values in Lao for the Vientiane dialect. The first and third tables basically agree on the tone value, although the names of tones vary. The middle table shows some different tone values altogether. See a <a href="http://www.seasite.niu.edu/lao/lao3.htm">list of studies</a> for Vientiane tones. </p>
 		<p>This diagram shows 5 tones with names corresponding to a mixture of the first two tables below. </p>
-		<p><img src="/scripts/lao/tones.png" alt="Diagrams of tone vectors." width="292" height="100" /></p>
+		<p><img src="tones.png" alt="Diagrams of tone vectors." width="292" height="100" /></p>
 		<p>Tone marks are normally used only on open syllables, and modify the default tone value. Two of the four tone marks are only used with Class 1 consonants. Tone marks tend to be placed directly over the consonant (or superscript vowel), unlike Thai which tends to place them slightly to the right. </p>
 		<p>Open or live syllables are those that end with a long vowel or sonorant (eg. <span class="ex" lang="lo">ງນມຍວ</span>). Closed or dead syllables end with a stop consonant (eg. <span class="ex" lang="lo">ກດບ</span>) or short vowel. </p>
 		<table  class="tones" border="0">
@@ -413,117 +449,20 @@
 
 
 
-
-<section id="charlistsection">
-	<h2><a href="#characterlist" id="characterlist">List of basic symbols</a></h2>
-    
-    <section id="laolist">
-    <h3><a href="#laolist">Lao</a></h3>
-	<p>This is a list of main characters or character combinations needed for Lao. Clicking on these characters will open a  page in another window. If the character is underlined, the new page will display additional information about that character.</p>
-	<p>&nbsp;</p>
-	<table id="index">
-	  <tbody>
-<tr><th><a href="#clmiddle">Class 1 (middle) consonants</a></th><td>
-<a href="../block/lao#char0E81" target="c" title="U+0E81 LAO LETTER KO">&#x0E81;</a> 
-<a href="../block/lao#char0E88" target="c" title="U+0E88 LAO LETTER CO">&#x0E88;</a> 
-<a href="../block/lao#char0E94" target="c" title="U+0E94 LAO LETTER DO">&#x0E94;</a> 
-<a href="../block/lao#char0E95" target="c" title="U+0E95 LAO LETTER TO">&#x0E95;</a> 
-<a href="../block/lao#char0E9A" target="c" title="U+0E9A LAO LETTER BO">&#x0E9A;</a> 
-<a href="../block/lao#char0E9B" target="c" title="U+0E9B LAO LETTER PO">&#x0E9B;</a> 
-<a href="../block/lao#char0EA2" target="c" title="U+0EA2 LAO LETTER YO">&#x0EA2;</a> 
-<a href="../block/lao#char0EAD" target="c" title="U+0EAD LAO LETTER O">&#x0EAD;</a> 
-</td></tr>
-
-
-<tr><th><a href="#clhigh">Class 2 (high) consonants</a></th><td>
-<a href="../block/lao#char0E82" target="c" title="U+0E82 LAO LETTER KHO SUNG">&#x0E82;</a> 
-<a href="../block/lao#char0EAA" target="c" title="U+0EAA LAO LETTER SO SUNG">&#x0EAA;</a> 
-<a href="../block/lao#char0E96" target="c" title="U+0E96 LAO LETTER THO SUNG">&#x0E96;</a> 
-<a href="../block/lao#char0E9C" target="c" title="U+0E9C LAO LETTER PHO SUNG">&#x0E9C;</a> 
-<a href="../block/lao#char0E9D" target="c" title="U+0E9D LAO LETTER FO TAM">&#x0E9D;</a> 
-<a href="../block/lao#char0EAB" target="c" title="U+0EAB LAO LETTER HO SUNG">&#x0EAB;</a> 
-</td></tr>
-
-
-<tr><th><a href="#cllow">Class 3 (low) consonants</a></th><td>
-<a href="../block/lao#char0E84" target="c" title="U+0E84 LAO LETTER KHO TAM">&#x0E84;</a> 
-<a href="../block/lao#char0E87" target="c" title="U+0E87 LAO LETTER NGO">&#x0E87;</a> 
-<a href="../block/lao#char0E8A" target="c" title="U+0E8A LAO LETTER SO TAM">&#x0E8A;</a> 
-<a href="../block/lao#char0E8D" target="c" title="U+0E8D LAO LETTER NYO">&#x0E8D;</a> 
-<a href="../block/lao#char0E97" target="c" title="U+0E97 LAO LETTER THO TAM">&#x0E97;</a> 
-<a href="../block/lao#char0E99" target="c" title="U+0E99 LAO LETTER NO">&#x0E99;</a> 
-<a href="../block/lao#char0E9E" target="c" title="U+0E9E LAO LETTER PHO TAM">&#x0E9E;</a> 
-<a href="../block/lao#char0E9F" target="c" title="U+0E9F LAO LETTER FO SUNG">&#x0E9F;</a> 
-<a href="../block/lao#char0EA1" target="c" title="U+0EA1 LAO LETTER MO">&#x0EA1;</a> 
-<a href="../block/lao#char0EA5" target="c" title="U+0EA5 LAO LETTER LO LOOT">&#x0EA5;</a> 
-<a href="../block/lao#char0EA7" target="c" title="U+0EA7 LAO LETTER WO">&#x0EA7;</a> 
-<a href="../block/lao#char0EAE" target="c" title="U+0EAE LAO LETTER HO TAM">&#x0EAE;</a> 
-</td></tr>
-
-
-<tr><th><a href="#clother">Other consonants</a></th><td>
-<a href="../block/lao#char0EBD" target="c" title="U+0EBD LAO SEMIVOWEL SIGN NYO">&#x0EBD;</a> 
-<a href="../block/lao#char0EBC" target="c" title="U+0EBC LAO SEMIVOWEL SIGN LO">&#xA0;&#xA0;&#x0EBC;</a> 
-<a href="../block/lao#char0EDC" target="c" title="U+0EDC LAO HO NO">&#x0EDC;</a> 
-<a href="../block/lao#char0EDD" target="c" title="U+0EDD LAO HO MO">&#x0EDD;</a> 
-<a href="../block/lao#char0EA3" target="c" title="U+0EA3 LAO LETTER LO LING">&#x0EA3;</a> 
-</td></tr>
-
-
-<tr><th><a href="#clvowels">Vowels</a></th><td>
-<a href="../block/lao#char0EB0" target="c" title="U+0EB0 LAO VOWEL SIGN A">&#x0EB0;</a> 
-<a href="../block/lao#char0EB2" target="c" title="U+0EB2 LAO VOWEL SIGN AA">&#x0EB2;</a> 
-<a href="../block/lao#char0EB4" target="c" title="U+0EB4 LAO VOWEL SIGN I">&#xA0;&#xA0;&#x0EB4;</a> 
-<a href="../block/lao#char0EB5" target="c" title="U+0EB5 LAO VOWEL SIGN II">&#xA0;&#xA0;&#x0EB5;</a> 
-<a href="../block/lao#char0EB6" target="c" title="U+0EB6 LAO VOWEL SIGN Y">&#xA0;&#xA0;&#x0EB6;</a> 
-<a href="../block/lao#char0EB7" target="c" title="U+0EB7 LAO VOWEL SIGN YY">&#xA0;&#xA0;&#x0EB7;</a> 
-<a href="../block/lao#char0EB8" target="c" title="U+0EB8 LAO VOWEL SIGN U">&#xA0;&#xA0;&#x0EB8;</a> 
-<a href="../block/lao#char0EB9" target="c" title="U+0EB9 LAO VOWEL SIGN UU">&#xA0;&#xA0;&#x0EB9;</a> 
-<a href="../block/lao#char0EC0" target="c" title="U+0EC0 LAO VOWEL SIGN E">&#x0EC0;</a> 
-<a href="../block/lao#char0EC1" target="c" title="U+0EC1 LAO VOWEL SIGN EI">&#x0EC1;</a> 
-<a href="../block/lao#char0EC2" target="c" title="U+0EC2 LAO VOWEL SIGN O">&#x0EC2;</a> 
-<a href="../block/lao#char0EC3" target="c" title="U+0EC3 LAO VOWEL SIGN AY">&#x0EC3;</a> 
-<a href="../block/lao#char0EC4" target="c" title="U+0EC4 LAO VOWEL SIGN AI">&#x0EC4;</a> 
-<a href="../block/lao#char0EB3" target="c" title="U+0EB3 LAO VOWEL SIGN AM">&#xA0;&#xA0;&#x0EB3;</a> 
-<a href="../block/lao#char0EB1" target="c" title="U+0EB1 LAO VOWEL SIGN MAI KAN">&#xA0;&#xA0;&#x0EB1;</a> 
-<a href="../block/lao#char0EBB" target="c" title="U+0EBB LAO VOWEL SIGN MAI KON">&#xA0;&#xA0;&#x0EBB;</a> 
-<a href="../block/lao#char0ECD" target="c" title="U+0ECD LAO NIGGAHITA">&#xA0;&#xA0;&#x0ECD;</a> 
-</td></tr>
-
-
-
-<tr><th><a href="#cltones">Tone marks & cancellation mark</a></th><td>
-<a href="../block/lao#char0EC8" target="c" title="U+0EC8 LAO TONE MAI EK">&#xA0;&#xA0;&#x0EC8;</a> 
-<a href="../block/lao#char0EC9" target="c" title="U+0EC9 LAO TONE MAI THO">&#xA0;&#xA0;&#x0EC9;</a> 
-<a href="../block/lao#char0ECA" target="c" title="U+0ECA LAO TONE MAI TI">&#xA0;&#xA0;&#x0ECA;</a> 
-<a href="../block/lao#char0ECB" target="c" title="U+0ECB LAO TONE MAI CATAWA">&#xA0;&#xA0;&#x0ECB;</a> 
-<a href="../block/lao#char0ECC" target="c" title="U+0ECC LAO CANCELLATION MARK">&#xA0;&#xA0;&#x0ECC;</a> 
-</td></tr>
-
-
-<tr><th><a href="#clnumbers">Numbers</a></th><td>
-<a href="../block/lao#char0ED0" target="c" title="U+0ED0 LAO DIGIT ZERO">&#x0ED0;</a> 
-<a href="../block/lao#char0ED1" target="c" title="U+0ED1 LAO DIGIT ONE">&#x0ED1;</a> 
-<a href="../block/lao#char0ED2" target="c" title="U+0ED2 LAO DIGIT TWO">&#x0ED2;</a> 
-<a href="../block/lao#char0ED3" target="c" title="U+0ED3 LAO DIGIT THREE">&#x0ED3;</a> 
-<a href="../block/lao#char0ED4" target="c" title="U+0ED4 LAO DIGIT FOUR">&#x0ED4;</a> 
-<a href="../block/lao#char0ED5" target="c" title="U+0ED5 LAO DIGIT FIVE">&#x0ED5;</a> 
-<a href="../block/lao#char0ED6" target="c" title="U+0ED6 LAO DIGIT SIX">&#x0ED6;</a> 
-<a href="../block/lao#char0ED7" target="c" title="U+0ED7 LAO DIGIT SEVEN">&#x0ED7;</a> 
-<a href="../block/lao#char0ED8" target="c" title="U+0ED8 LAO DIGIT EIGHT">&#x0ED8;</a> 
-<a href="../block/lao#char0ED9" target="c" title="U+0ED9 LAO DIGIT NINE">&#x0ED9;</a> 
-</td></tr>
-
-
-
-      </tbody>
-  </table>
-  </section>
+<section id="chars" class="note">
+<h2>Character lists by language</h2>
+    <p>Follow these links for information about characters used by languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li><a href="/app-charuse/?language=lo" target="_blank">Lao</a> <span class="charCount">(40 letters, 16 marks :   total 56)</span></li>
+</ul>
 </section>
+
+
+
 
 <section id="references"> 
 
-		<h2><a href="#references">Further reading</a></h2>
+<h2><a href="#references">Further reading</a></h2>
 		<ol>
 		  <li><span class="refcode">[Simmala]</span> Buasawan Simmala &amp; Benjawan Poomsan Becker, <span class="doctitle">Lao for Beginners </span>,  ISBN 1-887521-28-3 </li>
 		  <li><span class="refcode">[Daniels]</span> Peter T. Daniels &amp; William Bright, The World's Writing Systems, ISBN 0-19-507993-0. </li>
@@ -536,9 +475,7 @@
 
 <div id="panel" style="display:none"></div>
 
-<div class="smallprint"><span id="version">First published  10 Feb 2008.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-07-23  21:38<!-- #EndDate --> 
-  </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/lao"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-10  7:24<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Blao%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Flao%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 <script type="text/javascript">
 initialiseShowNames('/scripts/lao/block', 'c');

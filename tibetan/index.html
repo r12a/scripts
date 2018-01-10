@@ -35,6 +35,9 @@
 <script type="text/javascript" src="/shared/fontlists/manage.js"></script>
 <script type="text/javascript" src="/shared/code/scriptGroups.js"></script>
 <script type="text/javascript" src="../summaries/functions.js"></script>
+<script type="text/javascript" src="../block/functions.js"></script>
+<script type="text/javascript" src="/shared/code/getLinks.js"></script>
+<script type="text/javascript" src="/scripts/linkdata/linkdb.js"></script>
 <script type="text/javascript" src="../summaries/scriptdata.js"> </script>
 
 <script type="text/javascript" src="/shared/fontlists/tibetan.js"> </script>
@@ -57,13 +60,22 @@
  <div id="fontsetting" class="closed">
   <h2 class="notoc"><a id="fonts">Fonts</a></h2>
   <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-    <form onSubmit="document.getElementById('freeText').style.fontFamily = document.getElementById('fontName').value; return false;">
-      <p dir="ltr" class="english">Use this font:<br/>
-        <input type="text" id="fontName" value="webfont"/>
-        <button
-		  type="submit">Apply</button>
-      </p>
-  </form>
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'bo');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'bo');" />
+    </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
     <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
 	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
 	return false;">
@@ -88,21 +100,27 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->10 August, 2017<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->10 January, 2018<!-- #EndDate -->
 • tags  <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="http://rishida.net/blog/?tag=tibetan" title="Show all blog posts tagged with 'tibetan'">tibetan</a></p>
 
 
 <section>
-  <p>This page provides basic information about the Tibetan script. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>.</p>
+  <p>This page provides basic information about the Tibetan script. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned.</p>
   <p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
-  <p>For more details see: 
-  <a class="linkHighlight" href="/scripts/tibetan/block">Character notes </a> • <a class="linkHighlight" href="/scripts/links?script=tibetan">Script links</a></p>
+<p>For character-specific details see 
+<a class="linkHighlight" href="/scripts/tibetan/block">Character notes</a>. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>. </p>
+  
+  <details id="scriptLinks">
+  <summary>Click here for links to more information.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Tibt')</script>
+  </details>
 </section>
 
 
 
 <section>
-  <h2 id="sample">Sample (Tibetan)</h2>
+<h2 id="sample">Sample (Tibetan)</h2>
   
 
   <div id="freeText" dir="ltr" lang="nqo" data-target="c" data-base="/scripts/tibetan/block" data-source="http://unicode.org/udhr/translations.html">
@@ -125,16 +143,40 @@
 
 
 
+<section id="history">
+    <h2><a href="#history">Usage &amp; history</a></h2>
+    <p>From <a href="http://scriptsource.org/scr/Tibt">Scriptsource</a>: </p>
+    <blockquote>
+<p>The Tibetan script is used for writing the Tibetan, Dzongkha, Ladakhi and Sikkimese languages, spoken in Tibet, Bhutan, Nepal and India. It is also used for transcribing religious Sanskrit texts. The exact origin of the script is not clear; Tibetan Buddhism traditionally ascribes its creation to Minister Thon mi Sambhota in Northeast India, but Bon Po religious tradition cites Iranian or Central Asian origins. What is generally agreed upon is that it is ultimately derived from the Brahmi script, as evidenced by its syllabic structure, its use of diacritics to modify the vowel in a syllable, and its typically Brahmic canonical arrangement of the letters in phonological groups.</p>
+<p>There are a number of different styles of writing Tibetan, which can be grouped into two main variants: dbu-can 'with a head', which is the most commonly used and is the less cursive of the two, and dbu-med 'headless' which includes the relatively careful dpe-yig 'book writing' or the rapid nkhyug-yig 'running writing'.</p>
+</blockquote>
+    <p>From <a href="http://en.wikipedia.org/wiki/Tibetan_alphabet">Wikipedia</a>:</p>
+<blockquote>
+<p>The Tibetan alphabet is an abugida used to write the Tibetic languages such as Tibetan, as well as Dzongkha, Sikkimese, Ladakhi, and sometimes Balti. The printed form of the alphabet is called uchen script while the hand-written cursive form used in everyday writing is called umê script.</p>
+<p>The alphabet is very closely linked to a broad ethnic Tibetan identity, spanning across areas in Tibet, Bhutan, India, Nepal. The Tibetan alphabet is of Indic origin and it is ancestral to the Limbu alphabet, the Lepcha alphabet, and the multilingual 'Phags-pa script. ...</p>
+<p>The creation of the Tibetan alphabet is attributed to Thonmi Sambhota of the mid-7th century. Tradition holds that Thonmi Sambhota, a minister of Songtsen Gampo (569-649), was sent to India to study the art of writing, and upon his return introduced the alphabet. The form of the letters is based on an Indic alphabet of that period.</p>
+<p>Three orthographic standardizations were developed. The most important, an official orthography aimed to facilitate the translation of Buddhist scriptures, emerged during the early 9th century. Standard orthography has not altered since then, while the spoken language has changed by, for example, losing complex consonant clusters. As a result, in all modern Tibetan dialects, in particular in the Standard Tibetan of Lhasa, there is a great divergence between current spelling (which still reflects the 9th-century spoken Tibetan) and current pronunciation. This divergence is the basis of an argument in favour of spelling reform, to write Tibetan as it is pronounced, for example, writing Kagyu instead of Bka'-rgyud. In contrast, the pronunciation of the Balti, Ladakhi and Burig languages adheres more closely to the archaic spelling.</p>
+</blockquote>
+</section>
+
+
+
+
+
 <section id="type">
   <h2><a href="type">Key features</a></h2>
-<p>Tibetan  is an <span class="newterm">abugida</span>, ie. consonants carry an inherent vowel sound <span class="ipa">a</span> that is overridden using vowel signs. Text runs horizontally from left to right.</p>
+<p>Tibetan  is an <span class="newterm">abugida</span>, ie. consonants carry an inherent vowel sound <span class="ipa">a</span> that is overridden using vowel signs.   See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
+</p>
+<p>Text runs horizontally from left to right.</p>
 <p>There are various different Tibetan scripts, of two basic types: <span class="ex" lang="bo">དབུ་ཅན་</span> <span class="trans">dbu-can</span>, pronounced <span class="ipa">uchen</span> (<span class="meaning">with a head</span>), and <span class="ex" lang="bo">དབུ་མེད་</span> <span class="trans">dbu-med</span>, pronounced <span class="ipa">ume</span> (<span class="meaning">headless</span>). This page concentrates on the former. Pronunciations are based on the central, Lhasa dialect.</p>
 <p>Traditional Tibetan text was written on <a href="http://en.wikipedia.org/wiki/Pecha">pechas</a> (<span class="trans">dpe-cha</span> <span class="ex" lang="bo">དཔེ་ཆ་</span>), loose-leaf sheets. Some of the characters used and formatting approaches are different in books and pechas.</p>
 <p>One of the key distinguishing features of Tibetan is the set of separate code points for subjoined consonants, used where a syllable has multiple consonants. Of the 77 combining characters in the Tibetan block, 48 represent subjoined consonant forms.</p>
 <p id="mcchars">Most Tibetan syllables contain stacked consonants or vowel signs, and very often they contain both together. An example is the text below, which shows a syllable with an initial stack of three consonants plus a vowel sign. </p>
 <p class="large"><span class="ex" lang="bo">རྒྱུད་</span></p>
-    <p>Text is  written horizontally, left to right.</p>
-    <p>For more information see <a href="http://scriptsource.org/scr/Tibetan">ScriptSource</a>, <a href="http://en.wikipedia.org/wiki/Tibetan_alphabet">Wikipedia</a> or <a href="http://www.omniglot.com/writing/tibetan.htm">Omniglot</a>.</p>
+<p>The Tibetan script characters in Unicode 10.0 are contained in a single block (not counting shared characters, such as punctuation):</p>
+    <ul>
+      <li><a href="/uniview/?block=Tibetan">Tibetan</a> (211)</li>
+    </ul>
 </section>
 
 	<section id="consonantintro">
@@ -884,41 +926,25 @@ To do this use <span class="codepoint"><span lang="bo">&#x0F6A;</span> <a href="
 	<p>When text in smaller annotations or larger heading text is mixed with normal text, the letter-heads of all characters should align to the same height.
 	</section>
 </section>
-	  <section id="chars" class="note">
-    <h2>Character lists by language</h2>
-    <p>The Tibetan script characters in Unicode 10.0 are contained in a single block (not counting shared characters, such as punctuation):</p>
-    <ul>
-      <li><a href="/uniview/?block=Tibetan">Tibetan</a> (211)</li>
-    </ul>
-    <p>The following is an incomplete list of languages and the number of characters they use, per version 31 of CLDR's lists of characters (exemplarCharacters).</p>
-    <p class="instructions">Click on the links to see a list of characters with names.</p>
-    
-    <section class="characters">
-      <h4>Tibetan</h4>
-      <table class="cldrList"><tbody>
-        <tr><th><a target="_blank" href="/uniview/?charlist=%E0%BD%80%E0%BD%80%E0%BD%81%E0%BD%82%E0%BD%82%E0%BD%84%E0%BD%85%E0%BD%86%E0%BD%87%E0%BD%89%E0%BD%8A%E0%BD%8B%E0%BD%8C%E0%BD%8C%E0%BD%8E%E0%BD%8F%E0%BD%90%E0%BD%91%E0%BD%91%E0%BD%93%E0%BD%94%E0%BD%95%E0%BD%96%E0%BD%96%E0%BD%98%E0%BD%99%E0%BD%9A%E0%BD%9B%E0%BD%9B%E0%BD%9D%E0%BD%9E%E0%BD%9F%E0%BD%A0%E0%BD%A1%E0%BD%A2%E0%BD%AA%E0%BD%A3%E0%BD%A4%E0%BD%A5%E0%BD%A6%E0%BD%A7%E0%BD%A8">Main</a></th>
-          <td lang="bo">ཀ ཀ ཁ ག ག ང ཅ ཆ ཇ ཉ ཊ ཋ ཌ ཌ ཎ ཏ ཐ ད ད ན པ ཕ བ བ མ ཙ ཚ ཛ ཛ ཝ ཞ ཟ འ ཡ ར ཪ ལ ཤ ཥ ས ཧ ཨ</td>
-          <td>42</td></tr>
-         <tr><th><a target="_blank" href="/uniview/?charlist=%E0%BD%BE%E0%BD%BF%E0%BE%B5%E0%BE%90%E0%BE%90%E0%BE%B5%E0%BE%91%E0%BE%B7%E0%BE%92%E0%BE%92%E0%BE%B7%E0%BE%94%E0%BE%95%E0%BE%96%E0%BE%97%E0%BE%99%E0%BE%9A%E0%BE%9B%E0%BE%B7%E0%BE%9C%E0%BE%9C%E0%BE%B7%E0%BE%9E%E0%BE%9F%E0%BE%A0%E0%BE%B7%E0%BE%A1%E0%BE%A1%E0%BE%B7%E0%BE%A3%E0%BE%A4%E0%BE%A5%E0%BE%B7%E0%BE%A6%E0%BE%A6%E0%BE%B7%E0%BE%A8%E0%BE%A9%E0%BE%AA%E0%BE%B7%E0%BE%AB%E0%BE%AB%E0%BE%B7%E0%BE%AD%E0%BE%BA%E0%BE%AE%E0%BE%AF%E0%BE%B0%E0%BE%B1%E0%BE%BB%E0%BE%B2%E0%BE%BC%E0%BE%B3%E0%BE%B4%E0%BE%B5%E0%BE%B6%E0%BE%B7%E0%BE%B8%E0%BD%B2%E0%BD%B1%E0%BD%B2%E0%BE%80%E0%BD%B1%E0%BE%80%E0%BD%B4%E0%BD%B1%E0%BD%B4%E0%BE%B2%E0%BE%80%E0%BD%B7%E0%BE%B3%E0%BE%80%E0%BD%B9%E0%BD%BA%E0%BD%BB%E0%BD%BC%E0%BD%BD%E0%BE%84">Combining</a></th>
-          <td lang="bo">ཾ ཿ ྵ ྐ ྐ ྵ ྑ ྷ ྒ ྒ ྷ ྔ ྕ ྖ ྗ ྙ ྚ ྛ ྷ ྜ ྜ ྷ ྞ ྟ ྠ ྷ ྡ ྡ ྷ ྣ ྤ ྥ ྷ ྦ ྦ ྷ ྨ ྩ ྪ ྷ ྫ ྫ ྷ ྭ ྺ ྮ ྯ ྰ ྱ ྻ ྲ ྼ ླ ྴ ྵ ྶ ྷ ྸ ི ཱ ི ྀ ཱ ྀ ུ ཱ ུ ྲ ྀ ཷ ླ ྀ ཹ ེ ཻ ོ ཽ ྄</td>
-          <td>78</td></tr>
-       <tr>
-          <th><a target="_blank" href="/uniview/?charlist=%E0%BC%80">Auxiliary</a></th>
-          <td lang="bo">ༀ</td>
-          <td>1</td></tr>
-        <tr><th><a target="_blank" href="/uniview/?charlist=">Punctuation</a></th>
-          <td lang="bo">none (which is incorrect)</td>
-          <td>0</td></tr>
-      </tbody></table>
-    </section>
-  </section>
+
+
+
+
+<section id="chars" class="note">
+<h2>Character lists by language</h2>
+    <p>Follow these links for information about characters used by languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li><a href="/app-charuse/?language=bo" target="_blank">Tibetan</a> <span class="charCount">(36 letters, 51 marks, 7 punctuation, 10 numbers :   total 104)</span></li>
+<li><a href="/app-charuse/?language=dz" target="_blank">Dzongkha</a> <span class="charCount">(30 letters, 30 marks, 33 punctuation, 10 numbers, 4 symbols :   total 107)</span></li>
+</ul>
+</section>
 
 
 
 
 
-	<section id="references"> 
-	  <h2><a href="#references">Further reading</a></h2>
+<section id="references"> 
+<h2><a href="#references">Further reading</a></h2>
 		<ol>
 			<li>[Daniels] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
 				0-19-507993-0</li>
@@ -932,9 +958,7 @@ To do this use <span class="codepoint"><span lang="bo">&#x0F6A;</span> <a href="
 
 <div id="panel" style="display:none"></div>
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/tibetan"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-08-10  8:55<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Btibetan%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ftibetan%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/tibetan"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-10  7:59<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Btibetan%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ftibetan%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <script type="text/javascript">

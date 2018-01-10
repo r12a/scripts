@@ -11,6 +11,7 @@
 #freeText {
 	font-size: 24px;
 	font-family: webfont, serif;
+    line-height: 1.2;
 	}
 [lang=ru] { font-family: webfont, serif; font-size: 130%; }
 .large .ex { font-size: 300%; }
@@ -24,6 +25,9 @@
 <script type="text/javascript" src="/shared/fontlists/manage.js"></script>
 <script type="text/javascript" src="/shared/code/scriptGroups.js"></script>
 <script type="text/javascript" src="../summaries/functions.js"></script>
+<script type="text/javascript" src="../block/functions.js"></script>
+<script type="text/javascript" src="/shared/code/getLinks.js"></script>
+<script type="text/javascript" src="/scripts/linkdata/linkdb.js"></script>
 <script type="text/javascript" src="../summaries/scriptdata.js"> </script>
 
 <script type="text/javascript" src="/shared/fontlists/thaana.js"> </script>
@@ -35,7 +39,7 @@
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Cyrillic</h1>
+<h1>Cyrillic script</h1>
 
 
 <aside class="sidebar">
@@ -44,13 +48,22 @@
  <div id="fontsetting" class="closed">
   <h2 class="notoc"><a id="fonts">Fonts</a></h2>
   <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-    <form onSubmit="document.getElementById('freeText').style.fontFamily = document.getElementById('fontName').value; return false;">
-      <p dir="ltr" class="english">Use this font:<br/>
-        <input type="text" id="fontName" value="webfont"/>
-        <button
-		  type="submit">Apply</button>
-      </p>
-  </form>
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'ru');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'ru');" />
+    </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
     <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
 	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
 	return false;">
@@ -75,16 +88,22 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->19-Jul-2017<!-- #EndDate -->
+  <!-- #BeginDate format:En2 -->09-Jan-2018<!-- #EndDate -->
 &bull; tags <a href="http://rishida.net/blog/index.php?tag=cyrillic" title="Show all blog posts tagged with 'cyrillic'">cyrillic</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
 
 <div class="section">
-  <p>This page provides basic information about the Cyrillic script. For similar information related to other scripts, see the <a href="/scripts/featurelist/">Script comparison table</a>.</p>
-  <p class="instructions">Click on the orange text in the features list (right column) to jump to notes and examples. Click on red  text examples or highlight part of the sample text to see a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
-  <p>For more details see:  
-  <!--a href="/scripts/cyrillic/block">Character notes </a> • --><a href="/scripts/links?script=cyrillic">Script links</a></p>
+  <p>This page provides basic information about the Cyrillic script. It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned. </p>
+  <p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+  <p><!--For character-specific details see 
+  <a class="linkHighlight" href="/scripts/cyrillic/block">Character notes</a>. -->For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>. </p>
+  
+  <details id="scriptLinks">
+  <summary>Click here for links to more information.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Cyrl')</script>
+  </details>
 </div>
 
 
@@ -110,29 +129,50 @@
 
 
 
+<section id="history">
+    <h2><a href="#history">Usage &amp; history</a></h2>
+    <p>From <a href="http://scriptsource.org/scr/Cyrl">Scriptsource</a>: </p>
+    <blockquote>
+<p>The creation of the Cyrillic script is traditionally attributed to Saint Cyril, a missionary working in Bulgaria during the 9th century. He and his brother are also credited with the invention of the Glagolitic script, a derivation of the Greek cursive alphabet which was modified to fit the sound systems of Slavic languages. Some historians credit Clement of Ohrid, a student of Saint Cyril's, with creating the Cyrillic script as a more readable writing system based on Glagolitic. The Cyrillic script was initially used for writing Old Church Slavonic (also called Old Bulgarian), but it has undergone a number of changes since that time, so much so that the old and modern variants are considered by many to be two different but related scripts. Many of the modern letterforms differ from those used in early Cyrillic writing, some letters have been dropped, and new letters have been added. An orthographic reform was implemented by the Russian tsar Peter the Great in 1708 which removed a number of obsolete letters so that Russian writing is now almost perfectly phonetic.</p>
+<p>The script has traditionally been used for writing the Slavic languages, of which Russian is the most widely spoken. During the nineteenth and twentieth centuries, particularly under Soviet rule, it was extended to write over 50 languages throughout Eastern Europe and Asia.</p>
+</blockquote>
+    <p>From <a href="http://en.wikipedia.org/wiki/Cyrillic_script">Wikipedia</a>:</p>
+<blockquote>
+<p>The Cyrillic script /sɪˈrɪlɪk/ is a writing system used for various alphabets across Eurasia (particularity in Eastern Europe, the Caucasus, Central Asia, and North Asia). It is based on the Early Cyrillic alphabet developed during the 9th century AD at the Preslav Literary School in the First Bulgarian Empire. It is the basis of alphabets used in various languages, especially those of Orthodox Slavic origin, and non-Slavic languages influenced by Russian. As of 2011, around 252 million people in Eurasia use it as the official alphabet for their national languages, with Russia accounting for about half of them.</p>
+<p>With the accession of Bulgaria to the European Union on 1 January 2007, Cyrillic became the third official script of the European Union, following the Latin script and Greek script. Cyrillic is derived from the Greek uncial script, augmented by letters from the older Glagolitic alphabet, including some ligatures. These additional letters were used for Old Church Slavonic sounds not found in Greek. The script is named in honor of the two Byzantine brothers, Saints Cyril and Methodius, who created the Glagolitic alphabet earlier on. Modern scholars believe that Cyrillic was developed and formalized by early disciples of Cyril and Methodius.</p>
+</blockquote>
+</section>
+
+
+
 <section id="notes"> 
 
   <section id="type">
     <h2>Key features</h2>
-    <p>Cyrillic is an <span class="newterm">alphabet</span>. Letters typically represent a consonant or vowel sound.</p>
+    <p>Cyrillic is an <span class="newterm">alphabet</span>. Letters typically represent a consonant or vowel sound.   See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
+</p>
     <p>Text is  written horizontally, left to right, and the visual forms of letters don't usually interact.</p>
-    <p>For more information see <a href="http://scriptsource.org/scr/Cyrl">ScriptSource</a>, <a href="http://en.wikipedia.org/wiki/Cyrillic_script">Wikipedia</a> or <a href="http://www.omniglot.com/writing/cyrillic.htm">Omniglot</a>.</p>
+    <p>The Cyrillic script characters in Unicode 10.0 are spread across 4 blocks (not counting the phonetic blocks nor any of the combining character blocks):</p>
+    <ul>
+      <li><a href="/uniview/?block=Cyrillic">Cyrillic</a> (256)</li>
+      <li><a href="/uniview/?block=Cyrillic_supplement">Cyrillic_Supplement</a> (48)</li>
+      <li><a href="/uniview/?block=Cyrillic_Extended-A">Cyrillic Extended-A</a> (32)</li>
+      <li><a href="/uniview/?block=Cyrillic_Extended-B">Cyrillic Extended-B</a> (95)</li>
+    </ul>
   </section>
-  
-  
-  
-  
-  <section id="punctuation" class="note">
-    <h2><a href="punctuation">Punctuation</a></h2>
-    <p>Cyrillic uses standard Latin punctuation.</p>
-  </section>
-  
-  
-  
-   <section id="layout" class="note">
-    <h2><a href="#layout">Text layout</a></h2>
+<section id="layout" class="note">
+ <h2><a href="#layout">Text layout</a></h2>
       
-  <section id="justify" class="note">
+  <section id="delimiters">
+<h3><a href="#delimiters">Text delimiters</a></h3>
+  <p>Words are separated by spaces.</p>
+  <p>Cyrillic uses standard Latin punctuation.</p>
+</section>
+
+
+
+
+<section id="justify" class="note">
     <h3>Justification</h3>
     <p>Justification is done, principally, by adjusting the space between words.</p>
     <p><em>Use the control below to see how your browser justifies the text sample here.</em></p>
@@ -145,37 +185,26 @@
   
   
   
-  
-  <section id="chars" class="note">
-    <h2>Character lists by language</h2>
-    <p>The Cyrillic script characters in Unicode 7.0 are spread across 4 blocks (not counting the phonetic blocks nor any of the combining character blocks):</p>
-    <ul>
-      <li><a href="/uniview/?block=Cyrillic">Cyrillic</a> (256)</li>
-      <li><a href="/uniview/?block=Cyrillic_supplement">Cyrillic_Supplement</a> (48)</li>
-      <li><a href="/uniview/?block=Cyrillic_Extended-A">Cyrillic Extended-A</a> (32)</li>
-      <li><a href="/uniview/?block=Cyrillic_Extended-B">Cyrillic Extended-B</a> (95)</li>
-    </ul>
-    <p>The following is an incomplete list of languages and the number of characters they use, per version 31 of CLDR's lists of characters (exemplarCharacters).</p>
-    <p class="instructions">Click on the links to see a list of characters with names.</p>
-    
-    <section class="characters">
-    <h4>Russian</h4>
-    <table class="cldrList"><tbody>
-    <tr><th><a target="_blank" href="/uniview/?charlist=%D0%B0%D0%B1%D0%B2%D0%B3%D0%B4%D0%B5%D1%91%D0%B6%D0%B7%D0%B8%D0%B9%D0%BA%D0%BB%D0%BC%D0%BD%D0%BE%D0%BF%D1%80%D1%81%D1%82%D1%83%D1%84%D1%85%D1%86%D1%87%D1%88%D1%89%D1%8A%D1%8B%D1%8C%D1%8D%D1%8E%D1%8F">Main</a></th><td lang="ru">а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я</td>
-    <td>33</td></tr>
-    <tr><th><a target="_blank" href="/uniview/?charlist=%CC%86%CC%88">Combining characters</a></th><td lang="ru">̆ ̈</td>
-    <td>2</td></tr>
-    <tr><th><a target="_blank" href="/uniview/?charlist=-%E2%80%90%E2%80%93%E2%80%94%2C%3B%3A%21%3F.%E2%80%A6%27%E2%80%98%E2%80%9A%22%E2%80%9C%E2%80%9E%C2%AB%C2%BB%28%29%5B%5D%7B%7D%C2%A7%40%2A%2F%26%23">Punctuation</a></th><td lang="ru">- ‐ – — , ; : ! ? . … ' ‘ ‚ &quot; “ „ « » ( ) [ ] { } § @ * / &amp; #</td>
-    <td>31</td></tr>
-    </tbody></table>
-  </section>
-  </section>
+ 
+ <section id="chars" class="note">
+<h2>Character lists by language</h2>
+    <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li><a href="/app-charuse/?language=ru" target="_blank">Russian</a> <span class="charCount">(66 letters, 2 marks, 11 punctuation :   total 79)</span></li>
+<li><a href="/app-charuse/?language=be" target="_blank">Belorussian</a> <span class="charCount">(67 letters, 2 marks, 3 punctuation :   total 72)</span></li>
+<li><a href="/app-charuse/?language=bg" target="_blank">Bulgarian</a> <span class="charCount">(60 letters, 1 marks, 11 punctuation, 1 symbols :   total 73)</span></li>
+<li><a href="/app-charuse/?language=kk" target="_blank">Kazakh</a> <span class="charCount">(84 letters, 11 punctuation :   total 95)</span></li>
+<li><a href="/app-charuse/?language=mk" target="_blank">Macedonian</a> <span class="charCount">(62 letters, 1 marks, 9 punctuation :   total 72)</span></li>
+<li><a href="/app-charuse/?language=mn-cyrl" target="_blank">Mongolian</a> <span class="charCount">(70 letters, 2 marks, 15 punctuation :   total 87)</span></li>
+<li><a href="/app-charuse/?language=sr" target="_blank">Serbian</a> <span class="charCount">(60 letters, 7 punctuation :   total 67)</span></li>
+<li><a href="/app-charuse/?language=uk" target="_blank">Ukranian</a> <span class="charCount">(67 letters, 2 marks, 8 punctuation, 1 symbols :   total 78)</span></li>
+</ul>
+</section>
 </section>
 
 
-<div class="smallprint"><span id="version">First published  11 Jul 2017.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-07-19  21:31<!-- #EndDate --> 
-  </span> GMT. &nbsp;&bull;&nbsp; <a href="https://github.com/r12a/scripts/issues/new?title=%5Bcyrillic summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fsummaries%2Fcyrillic%0A%0A" target="_blank">Raise an issue</a>. &nbsp;&bull;&nbsp; Copyright r12a.  Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/cyrillic"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-09  6:22<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bcyrillic%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fcyrillic%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
 
 <div id="panel" style="display:none"></div>
 </body>

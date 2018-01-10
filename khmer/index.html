@@ -41,6 +41,9 @@
 <script type="text/javascript" src="/shared/fontlists/manage.js"></script>
 <script type="text/javascript" src="/shared/code/scriptGroups.js"></script>
 <script type="text/javascript" src="../summaries/functions.js"></script>
+<script type="text/javascript" src="../block/functions.js"></script>
+<script type="text/javascript" src="/shared/code/getLinks.js"></script>
+<script type="text/javascript" src="/scripts/linkdata/linkdb.js"></script>
 <script type="text/javascript" src="../summaries/scriptdata.js"> </script>
 
 <script type="text/javascript" src="/shared/fontlists/khmer.js"> </script>
@@ -53,7 +56,7 @@
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
 </header>
 
-	<h1>Khmer</h1>
+	<h1>Khmer script</h1>
 
 <aside class="sidebar">
 <div id="toc"><!-- placeholder --></div>
@@ -61,13 +64,22 @@
  <div id="fontsetting" class="closed">
   <h2 class="notoc"><a id="fonts">Fonts</a></h2>
   <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-    <form onSubmit="document.getElementById('freeText').style.fontFamily = document.getElementById('fontName').value; return false;">
-      <p dir="ltr" class="english">Use this font:<br/>
-        <input type="text" id="fontName" value="webfont"/>
-        <button
-		  type="submit">Apply</button>
-      </p>
-  </form>
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'km');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'km');" />
+    </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
     <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
 	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
 	return false;">
@@ -91,16 +103,22 @@
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->31-Aug-2017<!-- #EndDate -->
+  <!-- #BeginDate format:En2 -->10-Jan-2018<!-- #EndDate -->
 &bull; tags <a href="http://rishida.net/blog/index.php?tag=khmer" title="Show all blog posts tagged with 'khmer'">khmer</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
 
 <div class="section">
-  <p>This page provides basic information about the Khmer script. For similar information related to other scripts, see the <a href="/scripts/featurelist/">Script comparison table</a>.</p>
-  <p class="instructions">Click on the orange text in the features list (right column) to jump to notes and examples. Click on red  text examples or highlight part of the sample text to see a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
-  <p>For more details see: 
-  <a href="/scripts/khmer/block">Character notes </a> • <a href="/scripts/links?script=khmer">Script links</a></p>
+  <p>This page provides basic information about the Khmer script. It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned. </p>
+  <p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+<p>For character-specific details see 
+<a class="linkHighlight" href="/scripts/khmer/block">Character notes</a>. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>. </p>
+  
+  <details id="scriptLinks">
+  <summary>Click here for links to more information.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Khmr')</script>
+  </details>
 </div>
 
 
@@ -127,24 +145,40 @@
    </div>
 
 
+<section id="history">
+    <h2><a href="#history">Usage &amp; history</a></h2>
+    <p>From <a href="http://scriptsource.org/scr/Khmr">Scriptsource</a>: </p>
+    <blockquote>
+<p>The Khmer script is an abugida, descended from the Brahmic script Pallava. It is used for writing Khmer, the official language of Cambodia. The script is also sometimes used for writing minority languages in Cambodia, such as Brao and Mnong.</p>
+<p>The Khmer literary tradition dates back to the 7th century, and the script is currently in widespread use, although it is estimated that 35% of the Khmer-speaking population aged 15 and over are illiterate in the script.</p>
+</blockquote>
+    <p>From <a href="http://en.wikipedia.org/wiki/Khmer_alphabet">Wikipedia</a>:</p>
+<blockquote>
+<p>The Khmer alphabet or Khmer script (Khmer: អក្សរខ្មែរ; IPA: [ʔaʔsɑː kʰmaːe])  is an abugida (alphasyllabary) script used to write the Khmer language (the official language of Cambodia). It is also used to write Pali in the Buddhist liturgy of Cambodia and Thailand.</p>
+<p>It was adapted from the Pallava script, which ultimately descended from the Brahmi script, which was used in southern India and South East Asia during the 5th and 6th centuries AD. The oldest dated inscription in Khmer was found at Angkor Borei District in Takéo Province south of Phnom Penh and dates from 611. The modern Khmer script differs somewhat from precedent forms seen on the inscriptions of the ruins of Angkor. The Thai and Lao scripts are descended from an older form of the Khmer script.</p>
+</blockquote>
+</section>
+
+
+
 
 <section id="type">
   <h2><a href="type">Key features</a></h2>
-			<p>The script is an abugida, ie. like most Brahmi-influenced scripts, each consonant carries with it an inherent vowel. The sound following a consonant can be modified by attaching vowel signs to the consonant when writing.</p>
+			<p>The script is an abugida, ie. like most Brahmi-influenced scripts, each consonant carries with it an inherent vowel. The sound following a consonant can be modified by attaching vowel signs to the consonant when writing.  See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
+</p>
 			<p>Direction of text is horizontal, left to right.  However, glyphs constituting a single syllable can appear on all sides of the initial character.</p>
 			<p>A key feature of Khmer is that there are a large number of vowel sounds, and only a few vowel signs; and there are a large number of consonant letters for only a small number of consonant sounds. This lead to a system where there are generally two consonant signs for a given sound, each belonging to one of two classes (or registers). So to determine the pronunciation of a vowel sign you start by seeing which class of consonant it follows. For example, using the two symbols for the sound <span class="ipa">k</span>, <span class="ex" lang="km">ក</span> is <span class="ipa">kɑː</span> <span class="meaning">neck</span>, and <span class="ex" lang="km">គ</span> is <span class="ipa">kɔː</span> <span class="meaning">mute</span>. </p>
 			<p>There are two distinct styles of font in Modern Khmer: slanted (called <span class="ex" lang="km">អក្សរច្រៀង</span>), which has an upright variant, and round (called <span class="ex" lang="km">អក្សរឈរ</span>). The round style includes more ligated forms. The upright style is used here. Style examples: slanted upright <span class="ex" lang="km">អក្សរ ខ្មែ</span>, round <span class="ex" lang="km-x-round"  xml:lang="km-x-round">អក្សរ ខ្មែ</span>. </p>
 
+<p>The Khmer script characters in Unicode 10.0 are in the following blocks: </p>
+    <ul>
+      <li> <a href="/uniview/?block=khmer">Khmer</a> (114 characters)</li>
+      <li> <a href="/uniview/?block=khmer_symbols">Khmer Symbols</a> (32 characters)</li>
+    </ul>
 
 
 
-<section id="usageboundaries">
-  <h3><a href="#usageboundaries">Text boundaries </a></h3>
-  <p>The syllable is fundamental in Cambodian. </p>
-  <p>Many native Cambodian words are  monosyllabic. These start with one or more consonants or an independent vowel (or a vowel sign attached to <span class="name">ʔɑː</span>, which is a combination of both). Short vowels in stressed syllables are always followed by a consonant. Long vowels may not be. There are many monosyllabic words that begin with consonant clusters, and some monosyllabic words that end with clusters, although only one consonant is pronounced in syllable final position.</p>
-  <p>There are also many bisyllabic words. In many cases the first syllable in a bisyllabic word is unstressed, and the vowel is usually rendered in colloquial speech as a schwa. Some bisyllabic words are compounds, however, and this may not apply.</p>
-  <p>Polysyllabic words are usually of Sanskrit, Pali or French origin. These words tend to alternate stress across their syllables, but may not. </p>
-</section>
+
 </section>
 
 
@@ -298,8 +332,21 @@ This behaviour can be modified using <span class="codepoint"><span lang="km">&#x
 
 
 
-<section id="punctuation">
-  <h2><a href="#punctuation">Punctuation</a></h2>
+
+<section id="layout">
+  <h2><a href="#layout">Text layout</a></h2>
+
+
+<section id="usageboundaries">
+  <h3><a href="#usageboundaries">Text boundaries </a></h3>
+  <p>The syllable is fundamental in Cambodian. </p>
+  <p>Many native Cambodian words are  monosyllabic. These start with one or more consonants or an independent vowel (or a vowel sign attached to <span class="name">ʔɑː</span>, which is a combination of both). Short vowels in stressed syllables are always followed by a consonant. Long vowels may not be. There are many monosyllabic words that begin with consonant clusters, and some monosyllabic words that end with clusters, although only one consonant is pronounced in syllable final position.</p>
+  <p>There are also many bisyllabic words. In many cases the first syllable in a bisyllabic word is unstressed, and the vowel is usually rendered in colloquial speech as a schwa. Some bisyllabic words are compounds, however, and this may not apply.</p>
+  <p>Polysyllabic words are usually of Sanskrit, Pali or French origin. These words tend to alternate stress across their syllables, but may not. </p>
+</section>
+
+
+
   
 <section id="space">
   <h3><a href="#space">Space</a></h3>
@@ -330,273 +377,25 @@ This behaviour can be modified using <span class="codepoint"><span lang="km">&#x
 </section>
 
 
-<!--div class="section">
-		<h2><a id="usage">Script usage</a></h2>
-		<div class="section2">
-			<h3>Text direction</h3>
-			<p>Script direction is predominantly right to left. Embedded left to right scripts and all numbers run left to right.</p>
-			<p><span class="prompt">List different bidi properties in block</span></p>
-			<p>The Unicode Standard provides an algorithm for ordering bidirectional Arabic.</p>
-		</div>
-		<div class="section2">
-			<h3>Shaping and case</h3>
-			<p>There is no case distinction.</p>
-			<p><span class="prompt">word final / cursive?</span></p>
-			<p><span class="prompt">joiner and non-joiner usage</span></p>
-			<p><span class="prompt">ligatures &amp; special joining forms?</span></p>
-			<p><span class="prompt">conjuncts?</span></p>
-			<p><span class="prompt">non-European numerals?</span></p>
-		</div>
-		<div class="section2">
-			<h3>Combining characters</h3>
-			<p><span class="prompt">breakdown of categories</span></p>
-			<p><span class="prompt">multiple combining characters? specific ordering rules for memory?</span></p>
-			<p><span class="prompt">context dependent placement?</span></p>
-			<p>Note the different placement of vowel signs in <span class="ur" style="font-size: 200%;">بِ</span> and <span class="ur" style="font-size: 200%;">بِب</span></p>
-			<p><span class="prompt">canonical combining classes</span></p>
-			<p> <span class="prompt">predisposed or surrounding glyphs?</span></p>
-			<p><span class="prompt">precomposed forms? normalisation?</span></p>
-		</div>
-		<div class="section2">
-			<h3>Text units, punctuation &amp; signs</h3>
-			<p><span class="prompt">how are words separated? how are sentences &amp; phrases delimited?</span></p>
-			<p><span class="prompt">punctuation and other signs in the block</span></p>
-			<p><span class="prompt">use of other punctuation and signs</span></p>
-		</div>
-		<div class="section2">
-			<h3>Wrapping &amp; justification</h3>
-			<p><span class="prompt">rules</span></p>
-		</div>
-		<div class="section2">
-			<h3>Collation &amp; sort order</h3>
-			<p><span class="prompt">rules</span></p>
-			<p><span class="prompt">importance of loose matching</span></p>
-		</div>
-		<div class="section2">
-			<h3>Other</h3>
-			<p><span class="prompt">method of writing characters</span></p>
-			<p>A number of arabic words that consist of a single character (plus unwritten vowel) are joined to the beginning of the word that
-				follows, eg. <span class="ar">لرجل</span> [<span class="ipa1">lɪ-ræʒul </span>].</p>
-			<p><span class="prompt">special input needs, eg. IMEs</span></p>
-			<p><span class="prompt">font and line height: min. pixel dimensions for characters, line height, inter-line spacing</span></p>
-			<p><span class="prompt">underlining</span></p>
-			<p><span class="prompt">font width: proportional spacing, kerning?</span></p>
-			<p><span class="prompt">baseline alignment</span></p>
-			<p><span class="prompt">ruby</span></p>
-			<p>Line height: To accomodate the sloping baseline of the nasta'liq style, you will need to set the CSS line-height property quite high
-				(perhaps 300% or 400%?).</p>
-		</div>
-</div--><!--div> 
-		<h2><a id="pali">Pali and Sanskrit extensions</a></h2>
-<php getresults( '4176', '4185' ); >
-		</div-->
-<section id="charlistsection">
-	<h2><a href="#characterlist" id="characterlist">List of basic symbols</a></h2>
-    
-    <section id="khmerlist">
-    <h3><a href="#khmerlist">Khmer</a></h3>
-	<p>This is a list of main characters or character combinations needed for Khmer. Clicking on these characters will open a  page in another window. If the character is underlined, the new page will display additional information about that character.</p>
-	<p>&nbsp;</p>
-	<table id="index">
-	  <tbody>
-      
-<tr><th><a href="#clconsonants">Consonants</a></th><td>
-<a href="../block/khmer#char1780" target="c" title="U+1780 KHMER LETTER KA">&#x1780;</a> 
-<a href="../block/khmer#char1781" target="c" title="U+1781 KHMER LETTER KHA">&#x1781;</a> 
-<a href="../block/khmer#char1782" target="c" title="U+1782 KHMER LETTER KO">&#x1782;</a> 
-<a href="../block/khmer#char1783" target="c" title="U+1783 KHMER LETTER KHO">&#x1783;</a> 
-<a href="../block/khmer#char1784" target="c" title="U+1784 KHMER LETTER NGO">&#x1784;</a> 
-<a href="../block/khmer#char1785" target="c" title="U+1785 KHMER LETTER CA">&#x1785;</a> 
-<a href="../block/khmer#char1786" target="c" title="U+1786 KHMER LETTER CHA">&#x1786;</a> 
-<a href="../block/khmer#char1787" target="c" title="U+1787 KHMER LETTER CO">&#x1787;</a> 
-<a href="../block/khmer#char1788" target="c" title="U+1788 KHMER LETTER CHO">&#x1788;</a> 
-<a href="../block/khmer#char1789" target="c" title="U+1789 KHMER LETTER NYO">&#x1789;</a> 
-<a href="../block/khmer#char178A" target="c" title="U+178A KHMER LETTER DA">&#x178A;</a> 
-<a href="../block/khmer#char178B" target="c" title="U+178B KHMER LETTER TTHA">&#x178B;</a> 
-<a href="../block/khmer#char178C" target="c" title="U+178C KHMER LETTER DO">&#x178C;</a> 
-<a href="../block/khmer#char178D" target="c" title="U+178D KHMER LETTER TTHO">&#x178D;</a> 
-<a href="../block/khmer#char178E" target="c" title="U+178E KHMER LETTER NNO">&#x178E;</a> 
-<a href="../block/khmer#char178F" target="c" title="U+178F KHMER LETTER TA">&#x178F;</a> 
-<a href="../block/khmer#char1790" target="c" title="U+1790 KHMER LETTER THA">&#x1790;</a> 
-<a href="../block/khmer#char1791" target="c" title="U+1791 KHMER LETTER TO">&#x1791;</a> 
-<a href="../block/khmer#char1792" target="c" title="U+1792 KHMER LETTER THO">&#x1792;</a> 
-<a href="../block/khmer#char1793" target="c" title="U+1793 KHMER LETTER NO">&#x1793;</a> 
-<a href="../block/khmer#char1794" target="c" title="U+1794 KHMER LETTER BA">&#x1794;</a> 
-<a href="../block/khmer#char1795" target="c" title="U+1795 KHMER LETTER PHA">&#x1795;</a> 
-<a href="../block/khmer#char1796" target="c" title="U+1796 KHMER LETTER PO">&#x1796;</a> 
-<a href="../block/khmer#char1797" target="c" title="U+1797 KHMER LETTER PHO">&#x1797;</a> 
-<a href="../block/khmer#char1798" target="c" title="U+1798 KHMER LETTER MO">&#x1798;</a> 
-<a href="../block/khmer#char1799" target="c" title="U+1799 KHMER LETTER YO">&#x1799;</a> 
-<a href="../block/khmer#char179B" target="c" title="U+179B KHMER LETTER LO">&#x179B;</a> 
-<a href="../block/khmer#char17A1" target="c" title="U+17A1 KHMER LETTER LA">&#x17A1;</a> 
-<a href="../block/khmer#char179A" target="c" title="U+179A KHMER LETTER RO">&#x179A;</a> 
-<a href="../block/khmer#char179F" target="c" title="U+179F KHMER LETTER SA">&#x179F;</a> 
-<a href="../block/khmer#char17A0" target="c" title="U+17A0 KHMER LETTER HA">&#x17A0;</a> 
-<a href="../block/khmer#char179C" target="c" title="U+179C KHMER LETTER VO">&#x179C;</a> 
-<a href="../block/khmer#char17A2" target="c" title="U+17A2 KHMER LETTER QA">&#x17A2;</a> 
-</td></tr>
-
-
-<tr><th><a href="#clsubscript">Subscript consonants</a></th><td>
-<a href="../block/khmer#char1780" target="c" title="U+17D2 U+1780 KHMER SIGN COENG, KHMER LETTER KA"> &#xA0;&#xA0;&#x17D2;&#x1780;</a> 
-<a href="../block/khmer#char1781" target="c" title="U+17D2 U+1781 KHMER SIGN COENG, KHMER LETTER KHA"> &#xA0;&#xA0;&#x17D2;&#x1781;</a> 
-<a href="../block/khmer#char1782" target="c" title="U+17D2 U+1782 KHMER SIGN COENG, KHMER LETTER KO"> &#xA0;&#xA0;&#x17D2;&#x1782;</a> 
-<a href="../block/khmer#char1783" target="c" title="U+17D2 U+1783 KHMER SIGN COENG, KHMER LETTER KHO"> &#xA0;&#xA0;&#x17D2;&#x1783;</a> 
-<a href="../block/khmer#char1784" target="c" title="U+17D2 U+1784 KHMER SIGN COENG, KHMER LETTER NGO"> &#xA0;&#xA0;&#x17D2;&#x1784;</a> 
-<a href="../block/khmer#char1785" target="c" title="U+17D2 U+1785 KHMER SIGN COENG, KHMER LETTER CA"> &#xA0;&#xA0;&#x17D2;&#x1785;</a> 
-<a href="../block/khmer#char1786" target="c" title="U+17D2 U+1786 KHMER SIGN COENG, KHMER LETTER CHA"> &#xA0;&#xA0;&#x17D2;&#x1786;</a> 
-<a href="../block/khmer#char1787" target="c" title="U+17D2 U+1787 KHMER SIGN COENG, KHMER LETTER CO"> &#xA0;&#xA0;&#x17D2;&#x1787;</a> 
-<a href="../block/khmer#char1788" target="c" title="U+17D2 U+1788 KHMER SIGN COENG, KHMER LETTER CHO"> &#xA0;&#xA0;&#x17D2;&#x1788;</a> 
-<a href="../block/khmer#char1789" target="c" title="U+17D2 U+1789 KHMER SIGN COENG, KHMER LETTER NYO"> &#xA0;&#xA0;&#x17D2;&#x1789;</a> 
-<a href="../block/khmer#char178A" target="c" title="U+17D2 U+178A KHMER SIGN COENG, KHMER LETTER DA"> &#xA0;&#xA0;&#x17D2;&#x178A;</a> 
-<a href="../block/khmer#char178B" target="c" title="U+17D2 U+178B KHMER SIGN COENG, KHMER LETTER TTHA"> &#xA0;&#xA0;&#x17D2;&#x178B;</a> 
-<a href="../block/khmer#char178C" target="c" title="U+17D2 U+178C KHMER SIGN COENG, KHMER LETTER DO"> &#xA0;&#xA0;&#x17D2;&#x178C;</a> 
-<a href="../block/khmer#char178D" target="c" title="U+17D2 U+178D KHMER SIGN COENG, KHMER LETTER TTHO"> &#xA0;&#xA0;&#x17D2;&#x178D;</a> 
-<a href="../block/khmer#char178E" target="c" title="U+17D2 U+178E KHMER SIGN COENG, KHMER LETTER NNO"> &#xA0;&#xA0;&#x17D2;&#x178E;</a> 
-<a href="../block/khmer#char178F" target="c" title="U+17D2 U+178F KHMER SIGN COENG, KHMER LETTER TA"> &#xA0;&#xA0;&#x17D2;&#x178F;</a> 
-<a href="../block/khmer#char1790" target="c" title="U+17D2 U+1790 KHMER SIGN COENG, KHMER LETTER THA"> &#xA0;&#xA0;&#x17D2;&#x1790;</a> 
-<a href="../block/khmer#char1791" target="c" title="U+17D2 U+1791 KHMER SIGN COENG, KHMER LETTER TO"> &#xA0;&#xA0;&#x17D2;&#x1791;</a> 
-<a href="../block/khmer#char1792" target="c" title="U+17D2 U+1792 KHMER SIGN COENG, KHMER LETTER THO"> &#xA0;&#xA0;&#x17D2;&#x1792;</a> 
-<a href="../block/khmer#char1793" target="c" title="U+17D2 U+1793 KHMER SIGN COENG, KHMER LETTER NO"> &#xA0;&#xA0;&#x17D2;&#x1793;</a> 
-<a href="../block/khmer#char1794" target="c" title="U+17D2 U+1794 KHMER SIGN COENG, KHMER LETTER BA"> &#xA0;&#xA0;&#x17D2;&#x1794;</a> 
-<a href="../block/khmer#char1795" target="c" title="U+17D2 U+1795 KHMER SIGN COENG, KHMER LETTER PHA"> &#xA0;&#xA0;&#x17D2;&#x1795;</a> 
-<a href="../block/khmer#char1796" target="c" title="U+17D2 U+1796 KHMER SIGN COENG, KHMER LETTER PO"> &#xA0;&#xA0;&#x17D2;&#x1796;</a> 
-<a href="../block/khmer#char1797" target="c" title="U+17D2 U+1797 KHMER SIGN COENG, KHMER LETTER PHO"> &#xA0;&#xA0;&#x17D2;&#x1797;</a> 
-<a href="../block/khmer#char1798" target="c" title="U+17D2 U+1798 KHMER SIGN COENG, KHMER LETTER MO"> &#xA0;&#xA0;&#x17D2;&#x1798;</a> 
-<a href="../block/khmer#char1799" target="c" title="U+17D2 U+1799 KHMER SIGN COENG, KHMER LETTER YO"> &#xA0;&#xA0;&#x17D2;&#x1799;</a> 
-<a href="../block/khmer#char179B" target="c" title="U+17D2 U+179B KHMER SIGN COENG, KHMER LETTER LO"> &#xA0;&#xA0;&#x17D2;&#x179B;</a> 
-<a href="../block/khmer#char17A1" target="c" title="U+17D2 U+17A1 KHMER SIGN COENG, KHMER LETTER LA"> &#xA0;&#xA0;&#x17D2;&#x17A1;</a> 
-<a href="../block/khmer#char179A" target="c" title="U+17D2 U+179A KHMER SIGN COENG, KHMER LETTER RO"> &#xA0;&#xA0;&#x17D2;&#x179A;</a> 
-<a href="../block/khmer#char179F" target="c" title="U+17D2 U+179F KHMER SIGN COENG, KHMER LETTER SA"> &#xA0;&#xA0;&#x17D2;&#x179F;</a> 
-<a href="../block/khmer#char17A0" target="c" title="U+17D2 U+17A0 KHMER SIGN COENG, KHMER LETTER HA"> &#xA0;&#xA0;&#x17D2;&#x17A0;</a> 
-<a href="../block/khmer#char179C" target="c" title="U+17D2 U+179C KHMER SIGN COENG, KHMER LETTER VO"> &#xA0;&#xA0;&#x17D2;&#x179C;</a> 
-<a href="../block/khmer#char17A2" target="c" title="U+17D2 U+17A2 KHMER SIGN COENG, KHMER LETTER QA"> &#xA0;&#xA0;&#x17D2;&#x17A2;</a> 
-</td></tr>
-
-
-<tr><th><a href="#clvowelsigns">Vowel signs</a></th><td>
-<a href="../block/khmer#char17B6" target="c" title="U+17B6 KHMER VOWEL SIGN AA"> &nbsp;&nbsp;&#x17B6;</a> 
-<a href="../block/khmer#char17B7" target="c" title="U+17B7 KHMER VOWEL SIGN I"> &nbsp;&nbsp;&#x17B7;</a> 
-<a href="../block/khmer#char17B8" target="c" title="U+17B8 KHMER VOWEL SIGN II"> &nbsp;&nbsp;&#x17B8;</a> 
-<a href="../block/khmer#char17B9" target="c" title="U+17B9 KHMER VOWEL SIGN Y"> &nbsp;&nbsp;&#x17B9;</a> 
-<a href="../block/khmer#char17BA" target="c" title="U+17BA KHMER VOWEL SIGN YY"> &nbsp;&nbsp;&#x17BA;</a> 
-<a href="../block/khmer#char17BB" target="c" title="U+17BB KHMER VOWEL SIGN U"> &nbsp;&nbsp;&#x17BB;</a> 
-<a href="../block/khmer#char17BC" target="c" title="U+17BC KHMER VOWEL SIGN UU"> &nbsp;&nbsp;&#x17BC;</a> 
-<a href="../block/khmer#char17BD" target="c" title="U+17BD KHMER VOWEL SIGN UA"> &nbsp;&nbsp;&#x17BD;</a> 
-<a href="../block/khmer#char17BE" target="c" title="U+17BE KHMER VOWEL SIGN OE"> &nbsp;&nbsp;&#x17BE;</a> 
-<a href="../block/khmer#char17BF" target="c" title="U+17BF KHMER VOWEL SIGN YA"> &nbsp;&nbsp;&#x17BF;</a> 
-<a href="../block/khmer#char17C0" target="c" title="U+17C0 KHMER VOWEL SIGN IE"> &nbsp;&nbsp;&#x17C0;</a> 
-<a href="../block/khmer#char17C6" target="c" title="U+17C6 KHMER SIGN NIKAHIT"> &nbsp;&nbsp;&#x17C6;</a> 
-<a href="../block/khmer#char17C7" target="c" title="U+17C7 KHMER SIGN REAHMUK"> &nbsp;&nbsp;&#x17C7;</a> 
-</td></tr>
-
-
-<tr><th><a href="#clvowelcombos">Combinations of vowel signs</a></th><td>
-<a href="../block/khmer#char17B6" target="c" title="U+17B6 U+17C6 KHMER VOWEL SIGN AA, KHMER SIGN NIKAHIT"> &nbsp;&nbsp;&#x17B6;&#x17C6;</a> 
-<a href="../block/khmer#char17C6" target="c" title="U+17BB U+17C6 KHMER VOWEL SIGN U, KHMER SIGN NIKAHIT"> &nbsp;&nbsp;&#x17BB;&#x17C6;</a> 
-<a href="../block/khmer#char17BB" target="c" title="U+17BB U+17C7 KHMER VOWEL SIGN U, KHMER SIGN REAHMUK"> &nbsp;&nbsp;&#x17BB;&#x17C7;</a> 
-<a href="../block/khmer#char17C1" target="c" title="U+17C1 U+17C7 KHMER VOWEL SIGN E, KHMER SIGN REAHMUK"> &nbsp;&nbsp;&#x17C1;&#x17C7;</a> 
-<a href="../block/khmer#char17C4" target="c" title="U+17C4 U+17C7 KHMER VOWEL SIGN OO, KHMER SIGN REAHMUK"> &nbsp;&nbsp;&#x17C4;&#x17C7;</a> 
-</td></tr>
-
-
-<tr><th><a href="#clindependent">Independent vowels</a></th><td>
-<a href="../block/khmer#char17A5" target="c" title="U+17A5 KHMER INDEPENDENT VOWEL QI">&#x17A5;</a> 
-<a href="../block/khmer#char17A6" target="c" title="U+17A6 KHMER INDEPENDENT VOWEL QII">&#x17A6;</a> 
-<a href="../block/khmer#char17A7" target="c" title="U+17A7 KHMER INDEPENDENT VOWEL QU">&#x17A7;</a> 
-<a href="../block/khmer#char17AF" target="c" title="U+17AF KHMER INDEPENDENT VOWEL QE">&#x17AF;</a> 
-<a href="../block/khmer#char17B0" target="c" title="U+17B0 KHMER INDEPENDENT VOWEL QAI">&#x17B0;</a> 
-<a href="../block/khmer#char17B1" target="c" title="U+17B1 KHMER INDEPENDENT VOWEL QOO TYPE ONE">&#x17B1;</a> 
-<a href="../block/khmer#char17B2" target="c" title="U+17B2 KHMER INDEPENDENT VOWEL QOO TYPE TWO">&#x17B2;</a> 
-<a href="../block/khmer#char17B3" target="c" title="U+17B3 KHMER INDEPENDENT VOWEL QAU">&#x17B3;</a> 
-<a href="../block/khmer#char17AB" target="c" title="U+17AB KHMER INDEPENDENT VOWEL RY">&#x17AB;</a> 
-<a href="../block/khmer#char17AC" target="c" title="U+17AC KHMER INDEPENDENT VOWEL RYY">&#x17AC;</a> 
-<a href="../block/khmer#char17AD" target="c" title="U+17AD KHMER INDEPENDENT VOWEL LY">&#x17AD;</a> 
-<a href="../block/khmer#char17AE" target="c" title="U+17AE KHMER INDEPENDENT VOWEL LYY">&#x17AE;</a> 
-</td></tr>
-
-
-<tr><th><a href="#clsubscriptiv">Subscript independent vowels</a></th><td>
-<a href="../block/khmer#char17A7" target="c" title="U+17D2 U+17A7 KHMER SIGN COENG, KHMER INDEPENDENT VOWEL QU"> &#xA0;&#xA0;&#x17D2;&#x17A7;</a> 
-<a href="../block/khmer#char17AF" target="c" title="U+17D2 U+17AF KHMER SIGN COENG, KHMER INDEPENDENT VOWEL QE"> &#xA0;&#xA0;&#x17D2;&#x17AF;</a> 
-<a href="../block/khmer#char17AB" target="c" title="U+17D2 U+17AB KHMER SIGN COENG, KHMER INDEPENDENT VOWEL RY"> &#xA0;&#xA0;&#x17D2;&#x17AB;</a> 
-<a href="../block/khmer#char17AC" target="c" title="U+17D2 U+17AC KHMER SIGN COENG, KHMER INDEPENDENT VOWEL RYY"> &#xA0;&#xA0;&#x17D2;&#x17AC;</a> 
-</td></tr>
-
-
-<tr><th><a href="#clcombining">Combining marks</a></th><td>
-<a href="../block/khmer#char17C9" target="c" title="U+17C9 KHMER SIGN MUUSIKATOAN">&#xA0;&#xA0;&#x17C9;</a> 
-<a href="../block/khmer#char17CA" target="c" title="U+17CA KHMER SIGN TRIISAP">&#xA0;&#xA0;&#x17CA;</a> 
-<a href="../block/khmer#char17CB" target="c" title="U+17CB KHMER SIGN BANTOC">&#xA0;&#xA0;&#x17CB;</a> 
-<a href="../block/khmer#char17CC" target="c" title="U+17CC KHMER SIGN ROBAT">&#xA0;&#xA0;&#x17CC;</a> 
-<a href="../block/khmer#char17CD" target="c" title="U+17CD KHMER SIGN TOANDAKHIAT">&#xA0;&#xA0;&#x17CD;</a> 
-<a href="../block/khmer#char17CE" target="c" title="U+17CE KHMER SIGN KAKABAT">&#xA0;&#xA0;&#x17CE;</a> 
-<a href="../block/khmer#char17CF" target="c" title="U+17CF KHMER SIGN AHSDA">&#xA0;&#xA0;&#x17CF;</a> 
-<a href="../block/khmer#char17D0" target="c" title="U+17D0 KHMER SIGN SAMYOK SANNYA">&#xA0;&#xA0;&#x17D0;</a> 
-<a href="../block/khmer#char17C8" target="c" title="U+17C8 KHMER SIGN YUUKALEAPINTU">&#xA0;&#xA0;&#x17C8;</a> 
-<a href="../block/khmer#char17D2" target="c" title="U+17D2 KHMER SIGN COENG">&#xA0;&#xA0;&#x17D2;</a> 
-</td></tr>
-
-
-
-<tr><th><a href="#clpunctuation">Punctuation</a></th><td>
-<a href="../block/khmer#char17D4" target="c" title="U+17D4 KHMER SIGN KHAN">&#x17D4;</a> 
-<a href="../block/khmer#char17D5" target="c" title="U+17D5 KHMER SIGN BARIYOOSAN">&#x17D5;</a> 
-<a href="../block/khmer#char17D6" target="c" title="U+17D6 KHMER SIGN CAMNUC PII KUUH">&#x17D6;</a> 
-</td></tr>
-
-
-<tr><th><a href="#clnumbers">Numbers</a></th><td>
-<a href="../block/khmer#char17E0" target="c" title="U+17E0 KHMER DIGIT ZERO">&#x17E0;</a> 
-<a href="../block/khmer#char17E1" target="c" title="U+17E1 KHMER DIGIT ONE">&#x17E1;</a> 
-<a href="../block/khmer#char17E2" target="c" title="U+17E2 KHMER DIGIT TWO">&#x17E2;</a> 
-<a href="../block/khmer#char17E3" target="c" title="U+17E3 KHMER DIGIT THREE">&#x17E3;</a> 
-<a href="../block/khmer#char17E4" target="c" title="U+17E4 KHMER DIGIT FOUR">&#x17E4;</a> 
-<a href="../block/khmer#char17E5" target="c" title="U+17E5 KHMER DIGIT FIVE">&#x17E5;</a> 
-<a href="../block/khmer#char17E6" target="c" title="U+17E6 KHMER DIGIT SIX">&#x17E6;</a> 
-<a href="../block/khmer#char17E7" target="c" title="U+17E7 KHMER DIGIT SEVEN">&#x17E7;</a> 
-<a href="../block/khmer#char17E8" target="c" title="U+17E8 KHMER DIGIT EIGHT">&#x17E8;</a> 
-<a href="../block/khmer#char17E9" target="c" title="U+17E9 KHMER DIGIT NINE">&#x17E9;</a> 
-</td></tr>
-
-
-<tr><th><a href="#clsymbols">Symbols</a></th><td>
-<a href="../block/khmer#char17DB" target="c" title="U+17DB KHMER CURRENCY SYMBOL RIEL">&#x17DB;</a> 
-<a href="../block/khmer#char17D7" target="c" title="U+17D7 KHMER SIGN LEK TOO">&#x17D7;</a> 
-<a href="../block/khmer#char17D9" target="c" title="U+17D9 KHMER SIGN PHNAEK MUAN">&#x17D9;</a> 
-<a href="../block/khmer#char17DA" target="c" title="U+17DA KHMER SIGN KOOMUUT">&#x17DA;</a> 
-</td></tr>
-
-
-<tr><th><a href="#clrare">Rare characters</a></th><td>
-<a href="../block/khmer#char179D" target="c" title="U+179D KHMER LETTER SHA">&#x179D;</a> 
-<a href="../block/khmer#char179E" target="c" title="U+179E KHMER LETTER SSO">&#x179E;</a> 
-<a href="../block/khmer#char17DC" target="c" title="U+17DC KHMER SIGN AVAKRAHASANYA">&#x17DC;</a> 
-<a href="../block/khmer#char17DD" target="c" title="U+17DD KHMER SIGN ATTHACAN">&#xA0;&#xA0;&#x17DD;</a> 
-<a href="../block/khmer#char17D1" target="c" title="U+17D1 KHMER SIGN VIRIAM">&#xA0;&#xA0;&#x17D1;</a> 
-</td></tr>
-
-
-<tr><th><a href="#cldeprecated">Deprecated characters</a></th><td>
-<a href="../block/khmer#char17A4" target="c" title="U+17A4 KHMER INDEPENDENT VOWEL QAA">&#x17A4;</a> 
-<a href="../block/khmer#char17A3" target="c" title="U+17A3 KHMER INDEPENDENT VOWEL QAQ">&#x17A3;</a> 
-<a href="../block/khmer#char17B4" target="c" title="U+17B4 KHMER VOWEL INHERENT AQ">&#xA0;&#xA0;&#x17B4;</a> 
-<a href="../block/khmer#char17B5" target="c" title="U+17B5 KHMER VOWEL INHERENT AA">&#xA0;&#xA0;&#x17B5;</a> 
-<a href="../block/khmer#char17D3" target="c" title="U+17D3 KHMER SIGN BATHAMASAT">&#xA0;&#xA0;&#x17D3;</a> 
-<a href="../block/khmer#char17A8" target="c" title="U+17A8 KHMER INDEPENDENT VOWEL QUK">&#x17A8;</a> 
-<a href="../block/khmer#char17D8" target="c" title="U+17D8 KHMER SIGN BEYYAL">&#x17D8;</a> 
-</td></tr>
-
-      </tbody>
-  </table>
-    <p>&nbsp;</p>
-    <p>To see a list of ligatures and alternative shapes go to the 'shape' view of the <a href="/pickers/khmer/?view=shape">Khmer character picker</a>. (Hint: to see the composition of a conjunct, click on it and select <samp>Codepoints</samp>.)</p>
+  
+  
+  
+  <section id="chars" class="note">
+    <h2>Character lists by language</h2>
+     <p>Follow these links for information about characters used by languages associated with this script. The numbers in parentheses refer to <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li>
+<p><a href="/app-charuse/?language=km" target="_blank">Khmer</a> <span class="charCount">(48 letters, 27 marks, 9 punctuation, 10 numbers :   total 94)</span></p>
+</li>
+</ul>
 </section>
-</section>
+
+
+
 
 <section id="references"> 
 
-		<h2><a href="#endlinks" id="endlinks">Further reading</a></h2>
+<h2><a href="#endlinks" id="endlinks">Further reading</a></h2>
 		<ol>
 		  <li>Franklin Huffman, <a href="http://www.pratyeka.org/csw/hlp-csw.pdf"><span class="doctitle">Cambodian System of Writing</span></a></li>
 		  <li>Richard Gilbert &amp; Sovandy Hang, <span class="doctitle">Cambodian for Beginners</span>, Paiboon Publishing, ISBN <span class="isbn">1-887521-35-6</span></li>
@@ -607,9 +406,7 @@ This behaviour can be modified using <span class="codepoint"><span lang="km">&#x
 </section>
 <div id="panel" style="display:none"></div>
 
-<div class="smallprint"><span id="version">First published  3 Feb 2008.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-08-31  6:29<!-- #EndDate --> 
-  </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/khmer"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-10  7:25<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bkhmer%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fkhmer%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 <script type="text/javascript">
 initialiseShowNames('/scripts/khmer/block', 'c');

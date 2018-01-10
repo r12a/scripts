@@ -11,6 +11,7 @@
 #freeText {
 	font-size: 24px;
 	font-family: webfont, serif;
+    line-height: 1.4;
 	}
 [lang=ko] { font-family: serif; font-size: 130%; }
 .large .ex { font-size: 400%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
@@ -24,6 +25,9 @@
 <script type="text/javascript" src="/shared/fontlists/manage.js"></script>
 <script type="text/javascript" src="/shared/code/scriptGroups.js"></script>
 <script type="text/javascript" src="../summaries/functions.js"></script>
+<script type="text/javascript" src="../block/functions.js"></script>
+<script type="text/javascript" src="/shared/code/getLinks.js"></script>
+<script type="text/javascript" src="/scripts/linkdata/linkdb.js"></script>
 <script type="text/javascript" src="../summaries/scriptdata.js"> </script>
 </head>
 
@@ -33,7 +37,7 @@
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Hangul</h1>
+<h1>Hangul script</h1>
 
 
 <aside class="sidebar">
@@ -42,13 +46,22 @@
  <div id="fontsetting" class="closed">
   <h2 class="notoc"><a id="fonts">Fonts</a></h2>
   <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-    <form onSubmit="document.getElementById('freeText').style.fontFamily = document.getElementById('fontName').value; return false;">
-      <p dir="ltr" class="english">Use this font:<br/>
-        <input type="text" id="fontName" value="webfont"/>
-        <button
-		  type="submit">Apply</button>
-      </p>
-  </form>
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'ko');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'ko');" />
+    </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
     <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
 	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
 	return false;">
@@ -73,22 +86,27 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->19-Jul-2017<!-- #EndDate -->
+  <!-- #BeginDate format:En2 -->09-Jan-2018<!-- #EndDate -->
 &bull; tags <a href="http://rishida.net/blog/index.php?tag=hangul" title="Show all blog posts tagged with 'hangul'">hangul</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
 
 <section>
-  <p>This page provides basic information about the Hangul script used for writing Korean. For similar information related to other scripts, see the <a href="/scripts/featurelist/">Script comparison table</a>.</p>
-  <p class="instructions">Click on the orange text in the features list (right column) to jump to notes and examples. Click on red  text examples or highlight part of the sample text to see a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
-  <p>For more details see:  
-  <!--a href="/scripts/hangul/block">Character notes </a> • --><a href="/scripts/links?script=hangul">Script links</a></p>
-</section>
+  <p>This page provides basic information about the Hangul script used for writing Korean. It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned. </p>
+  <p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+ <p><!--For character-specific details see 
+  <a class="linkHighlight" href="/scripts/hangul/block">Character notes</a>. -->For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>. </p>
+  
+  <details id="scriptLinks">
+  <summary>Click here for links to more information.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Hang')</script>
+  </details></section>
 
 
 
 <section id="samples">
-  <h2 href="#sample">Sample (Korean)</h2>
+<h2 href="#sample">Sample (Korean)</h2>
   
   <div id="freeText" dir="ltr" lang="ko">
   <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">제 1 조 모든 인간은 태어날 때부터 자유로우며 그 존엄과 권리에 있어 동등하다. 인간은 천부적으로 이성과 양심을 부여받았으며 서로 형제애의 정신으로 행동하여야 한다.</p>
@@ -110,9 +128,22 @@
 
 <section id="notes"> 
 
-  <section id="type">
+ <section id="history">
+    <h2><a href="#history">Usage &amp; history</a></h2>
+    <p>From <a href="http://scriptsource.org/scr/Hang">Scriptsource</a>: </p>
+    <blockquote>Hangul is the phonetic writing system developed in 1446 for writing the Korean language. Prior to this, Korean had been written in Chinese characters, called hanja in Korean, but this was laborious. A given Chinese character could be used to represent a spoken syllable, irrespective of its original Chinese meaning, or it could be used to represent the Korean word with the closest meaning to its original. Reading was difficult because the intended function of the character was not always apparent. Hangul was developed by King Sejong to combat the difficulties associate with writing Korean in hanja. However it was not universally accepted, and for a time was prohibited by Japanese colonial authorities. Only after Korea became independent in 1945 was Hangul accepted as the country's national script.</blockquote>
+    <p>From <a href="http://en.wikipedia.org/wiki/Hangul">Wikipedia</a>:</p>
+<blockquote>
+<p>Hangul (/ˈhɑːnˌɡuːl/ HAHN-gool; from Korean hangeul 한글 [ha(ː)n.ɡɯl]) is the Korean alphabet, which has been used to write the Korean language since its creation in the 15th century by Sejong the Great.</p>
+It is the official writing system of South Korea and North Korea. It is a co-official writing system in the Yanbian Korean Autonomous Prefecture and Changbai Korean Autonomous County in Jilin Province, China. It is also sometimes used to write the Cia-Cia language spoken near the town of Bau-Bau, Indonesia.</blockquote>
+</section>
+
+
+
+<section id="type">
     <h2>Key features</h2>
-    <p>Hangul is a <span class="newterm">syllabary</span> used  to write Korean.</p>
+    <p>Hangul is a <span class="newterm">syllabary</span> used  to write Korean.  See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
+</p>
     <p>It is possible to store hangul as a sequence of non-syllabic Unicode characters, which are then combined for display. This is because the Korean syllabic glyph is composed of easily distinguishable phonetic components (called jamos), grouped into a square. For example,    </p>
     <p class="large"><span class="ex" lang="ko">향한</span></p>
     <p>is composed of the following jamos:</p>
@@ -120,8 +151,15 @@
     <p>This is not common, however. The overwhelming majority of Korean is stored as syllabic units, as shown in the sample above.</p>
     <p>It is also possible to find <a href="han">Han</a> characters (referred to as hanja) in South Korean text, but if used they are very infrequent. They are not considered here.</p>
     <p>Text can be written horizontally or vertically. The visual forms of characters don't interact.</p>
-    <p>For more information see <a href="http://scriptsource.org/scr/Hang">ScriptSource</a>, <a href="http://en.wikipedia.org/wiki/Hangul">Wikipedia</a> or <a href="http://www.omniglot.com/writing/korean.htm">Omniglot</a>.</p>
-  
+    <p>The Hangul syllabic characters in Unicode 10.0 are in the block:</p>
+    <ul>
+      <li><a href="/uniview/?block=Hangul_Syllables">Hangul Syllables</a> (11,183)</li>
+    </ul>
+    <p>There are also several blocks containing jamo characters, including <a href="/uniview/?block=Hangul_Jamo">Hangul Jamo</a> (256), <a href="/uniview/?block=Hangul_Jamo_Extended-A">Hangul Jamo Extended-A</a> (29), <a href="/uniview/?block=Hangul_Jamo_Extended-B">Hangul Jamo Extended-B</a> (72), and <a href="/uniview/?block=Hangul_Compatibility_Jamo">Hangul Compatibility Jamo</a> (94).</p>
+</section>
+<section id="layout" class="note">
+<h2><a href="#layout">Text layout</a></h2>
+   
   
   
   <section id="dir" class="note">
@@ -135,28 +173,19 @@
      <p class="set_horizontal" lang="zh-hans" id="verticalTextExample" style="text-align:start;">모든 사람은 법 앞에 평등하며 어떠한 차별도 없이 법의 동등한 보호를 받을 권리를 가진다. 모든 사람은 이 선언에 위반되는 어떠한 차별과 그러한 차별의 선동으로부터 동등한 보호를 받을 권리를 가진다.</p>
    </div>
   </section>
-  
-  
-  
-  <section id="wordsep" class="note">
-  <h3>Word separators</h3>
-  <p>Unlike Japanese and Chinese, Korean separates 'words' with spaces.</p>
-  </section>
-  </section>
-  
-  
-  
-  <section id="punctuation" class="note">
-    <h2><a href="#punctuation">Punctuation</a></h2>
-    <p>Korean uses Latin punctuation, however many of the punctuation used have additional fullwidth forms.</p>
-  </section>
 
-  
-  
-  
-    <section id="layout" class="note">
-    <h2><a href="#layout">Text layout</a></h2>
-    
+
+
+<section id="delimiters">
+<h3><a href="#delimiters">Text delimiters</a></h3>
+    <p>Unlike Japanese and Chinese, Korean separates 'words' with spaces.</p>
+  <p>Korean uses Latin punctuation, however many of the punctuation used have additional fullwidth forms.</p>
+</section>
+
+
+
+
+
  <section id="wrap" class="note">
     <h3><a href="wrap">Linebreaks & text wrap</a></h3>
     <p>Korean can be wrapped on a word-by-word basis, but it is more common in modern Korean to simply wrap at syllable boundaries. Justification has to also take into account line-breaking rules (geumchik) which dictate what characters cannot appear at the end or start of a line.</p>
@@ -180,11 +209,6 @@
   
   <section id="chars" class="note">
     <h2><a href="chars">Character lists by language</a></h2>
-    <p>The Hangul syllabic characters in Unicode 10.0 are in the block:</p>
-    <ul>
-      <li><a href="/uniview/?block=Hangul_Syllables">Hangul Syllables</a> (11,183)</li>
-    </ul>
-    <p>There are also several blocks containing jamo characters, including <a href="/uniview/?block=Hangul_Jamo">Hangul Jamo</a> (256), <a href="/uniview/?block=Hangul_Jamo_Extended-A">Hangul Jamo Extended-A</a> (29), <a href="/uniview/?block=Hangul_Jamo_Extended-B">Hangul Jamo Extended-B</a> (72), and <a href="/uniview/?block=Hangul_Compatibility_Jamo">Hangul Compatibility Jamo</a> (94).</p>
     <p>Hangul characters are used for Korean. The following list, per version 31 of CLDR's lists of characters (exemplarCharacters), lists  characters used in Korean, including auxiliary hanja characters.</p>
     <p class="instructions">Click on the links to see a list of characters with names.</p>
     
@@ -212,9 +236,7 @@
 </section>
 
 
-<div class="smallprint"><span id="version">First published  11 Jul 2017.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-07-19  21:42<!-- #EndDate --> 
-</span> GMT. &nbsp;&bull;&nbsp; <a href="https://github.com/r12a/scripts/issues/new?title=%5Bhangul summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fsummaries%2Fhangul%0A%0A" target="_blank">Raise an issue</a>. &nbsp;&bull;&nbsp; Copyright r12a.  Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/hangul"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-09  6:45<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bhangul%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fhangul%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 <div id="panel" style="display:none"></div>
 </body>
