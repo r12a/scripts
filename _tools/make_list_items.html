@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+<meta charset="utf-8"/>
+<title>Get new character blocks</title>
+<meta name="description" content="Make list items tool."/>
+</head>
+
+<body>
+<header>
+<h1>Make list items</h1>
+</header>
+
+<p>Makes markup for a list of characters with transcriptions that is presented on the page as an inline table (using flexbox).</p>
+<p>Make sure there are the same number of items in both lists.</p>
+
+<p>Language:
+<input type="text" id="lang" placeholder="bcp47"/>
+</p>
+<p>Add a space-separated list of characters:
+<input type="text" id="in" placeholder="A B C"/>
+</p>
+<p>Add a space-separated list of transcriptions: 
+<input type="text" id="trans" placeholder="a b c ..."/></p>
+
+<p><button onClick="document.getElementById('out').value = makeListFromChars(document.getElementById('in').value, document.getElementById('trans').value, document.getElementById('lang').value); document.getElementById('out').select()">Go</button></p>
+
+<textarea id="out" style="height:400px;width:100%;"></textarea>
+<div class="smallprint"><span id="version">This version <span id="version-info"> 
+  <!-- #BeginDate format:IS1m -->2018-01-11  17:05<!-- #EndDate --> 
+</span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
+
+<script type="text/javascript">
+
+function makeListFromChars (chars, trans, lang) {
+	var charList = chars.split(' ')
+	var tranList = trans.split(' ')
+	
+	var out = '<figure>\n<div class="listAll" onClick="listAll(this, '
+    out += "'"+lang+"'"
+    out += ')">list all</div>\n<div class="listArray">\n'
+	
+	for (let x=0; x<charList.length; x++) {
+        out += '<div class="listPair"><span class="listItem" lang="'+lang+'">'+charList[x]+'</span>'
+        if (trans !== '') out += '<span class="listTrans">'+tranList[x]+'</span>'
+        out += '</div>\n'
+		}
+	return out+'</div>\n</figure>'
+	}
+
+</script>
+
+</body>
+</html>
