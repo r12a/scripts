@@ -179,6 +179,9 @@ function initialiseShowNames (base, target) {
 		else { shownames_setOnclick(examples[e], base, target) }
 		}
 	
+	var listItems = document.querySelectorAll(".listItem")
+	for (let i=0;i<listItems.length;i++) listItems[i].addEventListener('click', showNameDetailsEvent)
+	
 	var lists = document.querySelectorAll(".exlist")
 	for (let i=0;i<lists.length;i++) lists[i].addEventListener('click', showNameDetailsEvent)
 	}
