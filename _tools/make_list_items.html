@@ -21,21 +21,24 @@
 <p>Add a space-separated list of characters:
 <input type="text" id="in" placeholder="A B C"/>
 </p>
-<p>Add a space-separated list of transcriptions: 
+<p>Add a space-separated list of transliterations: 
 <input type="text" id="trans" placeholder="a b c ..."/></p>
+<p>Add a space-separated list of phonetic transcriptions: 
+<input type="text" id="ipa" placeholder="a b c ..."/></p>
 
-<p><button onClick="document.getElementById('out').value = makeListFromChars(document.getElementById('in').value, document.getElementById('trans').value, document.getElementById('lang').value); document.getElementById('out').select()">Go</button></p>
+<p><button onClick="document.getElementById('out').value = makeListFromChars(document.getElementById('in').value, document.getElementById('trans').value, document.getElementById('ipa').value, document.getElementById('lang').value); document.getElementById('out').select()">Go</button></p>
 
 <textarea id="out" style="height:400px;width:100%;"></textarea>
 <div class="smallprint"><span id="version">This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2018-01-11  17:05<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2018-01-11  19:57<!-- #EndDate --> 
 </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 <script type="text/javascript">
 
-function makeListFromChars (chars, trans, lang) {
+function makeListFromChars (chars, trans, ipa, lang) {
 	var charList = chars.split(' ')
 	var tranList = trans.split(' ')
+	var ipaList = ipa.split(' ')
 	
 	var out = '<figure>\n<div class="listAll" onClick="listAll(this, '
     out += "'"+lang+"'"
@@ -44,6 +47,7 @@ function makeListFromChars (chars, trans, lang) {
 	for (let x=0; x<charList.length; x++) {
         out += '<div class="listPair"><span class="listItem" lang="'+lang+'">'+charList[x]+'</span>'
         if (trans !== '') out += '<span class="listTrans">'+tranList[x]+'</span>'
+        if (ipa !== '') out += '<span class="listIPA">'+ipaList[x]+'</span>'
         out += '</div>\n'
 		}
 	return out+'</div>\n</figure>'
