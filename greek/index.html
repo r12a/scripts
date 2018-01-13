@@ -37,7 +37,7 @@
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Greek script</h1>
+<h1>Greek script summary</h1>
 
 
 <aside class="sidebar">
@@ -86,22 +86,20 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->09-Jan-2018<!-- #EndDate -->
+  <!-- #BeginDate format:En2 -->13-Jan-2018<!-- #EndDate -->
 &bull; tags <a href="http://rishida.net/blog/index.php?tag=greek" title="Show all blog posts tagged with 'greek'">greek</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
 
 <div class="section">
-  <p>This page provides basic information about the Greek script. It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned. </p>
-  <p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
- <p>For character-specific details see 
-  <a class="linkHighlight" href="/scripts/greek/block">Character notes</a>. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>. </p>
+  <p>This page provides basic information about the Greek script. It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned.  For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>. </p>
   
   <details id="scriptLinks">
-  <summary>Click here for links to more information.</summary>
+  <summary>Show more links.</summary>
   <div id="linklist"></div>
   <script>document.getElementById('linklist').innerHTML = getData('Grek')</script>
   </details>
+  <p class="instructions">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
 </div>
 
 
@@ -145,22 +143,39 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
     <h2><a href="type">Key features</a></h2>
     <p>Greek is an <span class="newterm">alphabet</span>. Letters typically represent a consonant or vowel sound.  See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
 </p>
-    <p>Text is  written horizontally, left to right, and the visual forms of letters don't usually interact.</p>
-    <p>The Greek script characters in Unicode 10.0 are spread across 4 blocks (not counting the phonetic blocks nor any of the combining character blocks):</p>
-    <ul>
-      <li><a href="/uniview/?block=Greek">Greek</a> (256)</li>
-      <li><a href="/uniview/?block=Greek_supplement">Greek_Supplement</a> (48)</li>
-      <li><a href="/uniview/?block=Greek_Extended-A">Greek Extended-A</a> (32)</li>
-      <li><a href="/uniview/?block=Greek_Extended-B">Greek Extended-B</a> (95)</li>
-    </ul>
+    <p>Text is  written horizontally, left to right, and the visual forms of letters don't usually interact. The script is bicameral.</p>
   </section>
-  
+
+
+
+
+ <section id="chars" class="note">
+<h2>Character lists</h2>
+     <p>The Greek script characters in Unicode 10.0 are spread across 2 blocks, plus one extra for Ancient Greek numbers (not counting the phonetic blocks nor any of the combining character blocks):</p>
+    <ul>
+      <li><a href="/uniview/?block=greek_and_coptic">Greek and Coptic</a> <span class="charCount">(135 characters)</span></li>
+<li><a href="/uniview/?block=Greek_Extended">Greek Extended</a> <span class="charCount">(233 characters)</span></li>
+      <li><a href="/uniview/?block=ancient_greek_numbers">Ancient Greek Numbers</a> <span class="charCount">(79 characters)</span></li>
+    </ul>
+   <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li><a href="/app-charuse/?language=el" target="_blank">Greek</a> <span class="charCount">(71 letters, 3 marks, 7 punctuation :   total 81)</span></li>
+</ul>
+ <p>For character-specific details see 
+  <a class="linkHighlight" href="/scripts/greek/block">Greek Character notes</a>.</p>
+</section>
+
+
+
   
 <section id="gsub" class="note">
-    <h2><a href="#gsub">Context-based glyph changes</a></h2>
+<h2><a href="#gsub">Context-based glyph changes</a></h2>
   
     <p>The letter sigma in Greek varies in shape, depending on whether it appears in the middle or at the end of a word. </p>
+    <figure>
     <p class="large"><span lang="el" class="ex"><span style="color:black">κό</span>σ<span style="color:black">μο</span>ς</span></p>
+    <figcaption>Two different shapes for <span class="trans">sigma</span> (in red), depending on word position.</figcaption>
+    </figure>
     <p>However, this shaping is not done by rendering rules. There are two separate code points in Unicode for the lowercase <span class="codepoint"><span lang="el">&#x03C3;</span> <a href="/scripts/arabic/block#char03C3">[<span class="uname">U+03C3 GREEK SMALL LETTER SIGMA</span>]</a></span> and <span class="codepoint"><span lang="el">&#x03C2;</span> <a href="/scripts/arabic/block#char03C2">[<span class="uname">U+03C2 GREEK SMALL LETTER SIGMA</span>]</a></span>, and separate keys on the standard keyboard.  </p>
   </section>
 <section id="layout" class="note">
@@ -188,24 +203,14 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-
- <section id="chars" class="note">
-<h2>Character lists by language</h2>
-    <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
-<ul>
-<li><a href="/app-charuse/?language=el" target="_blank">Greek</a> <span class="charCount">(71 letters, 3 marks, 7 punctuation :   total 81)</span></li>
-</ul>
-</section>
-
-
-
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/greek"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-09  6:22<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bgreek%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fgreek%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/greek"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-13  14:25<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bgreek%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fgreek%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"></div>
 </body>
 <script>
-initialiseShowNames('/scripts/thaana/block', 'c');
+var base = '/scripts/greek/block'
+initialiseShowNames(base, 'c');
 document.getElementById('featureTableBody').innerHTML = makeSidePanel("Greek","punctuation:punctuation")
 createtoc(3)
 </script>

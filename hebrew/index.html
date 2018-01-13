@@ -47,7 +47,7 @@
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Hebrew script</h1>
+<h1>Hebrew script summary</h1>
 
 
 <aside class="sidebar">
@@ -96,21 +96,18 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->09-Jan-2018<!-- #EndDate -->
+  <!-- #BeginDate format:En2 -->13-Jan-2018<!-- #EndDate -->
 &bull; tags <a href="http://rishida.net/blog/index.php?tag=hebrew" title="Show all blog posts tagged with 'arabic'">hebrew</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
 <div class="section">
-  <p>This page provides basic information about the Hebrew script. It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned. </p>
-  <p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
-<p>For character-specific details see 
-  <a class="linkHighlight" href="/scripts/hebrew/block">Character notes</a>. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>. </p>
-  
-  <details id="scriptLinks">
-  <summary>Click here for links to more information.</summary>
+  <p>This page provides basic information about the Hebrew script. It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned.  For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>. </p>
+   <details id="scriptLinks">
+  <summary>Show more links.</summary>
   <div id="linklist"></div>
   <script>document.getElementById('linklist').innerHTML = getData('Hebr')</script>
   </details>
+ <p class="instructions">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>  
 </div>
 
 
@@ -136,7 +133,6 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section id="notes"> 
 
  <section id="history">
     <h2><a href="#history">Usage &amp; history</a></h2>
@@ -155,12 +151,25 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
     <h2>Key features</h2>
     <p>Hebrew is an <span class="newterm"> abjad</span>. This means that in normal use the script represents only consonant and long vowel sounds. This approach is helped by the strong emphasis on consonant patterns in Semitic languages.   See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
 </p>
+</section>
+  
+  
+ 
+ <section id="chars" class="note">
+<h2>Character lists</h2>
 <p>The Hebrew script characters in Unicode 10.0 are in a single block: </p>
-<ul><li><a href="/uniview/?block=arabic">Hebrew</a> (87)</li></ul>
+<ul>
+<li><a href="/uniview/?block=arabic">Hebrew</a> <span class="charCount">(87 characters)</span></li></ul>
+    <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li><a href="/app-charuse/?language=he" target="_blank">Hebrew</a> <span class="charCount">(27 letters, 6 punctuation :   total 33)</span></li>
+<li><a href="/app-charuse/?language=yi" target="_blank">Yiddish</a> <span class="charCount">(30 letters, 6 marks, 6 punctuation, 2 other :   total 44)</span></li>
+</ul>
+<p>For character-specific details see 
+  <a class="linkHighlight" href="/scripts/hebrew/block">Hebrew character notes</a>.</p>
 </section>
   
   
-</section>
  
  
  
@@ -169,7 +178,10 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   <section id="cchars" class="note">
   <h2><a href="cchars">Combining characters</a></h2>
     <p>Diacritics for vowel sounds are typically not used. The example highlighted above shows how they could be used to clarify the pronunciation of the name of the German town Mainz.</p>
+    <figure>
     <p dir="rtl" lang="he" class="large"><span class="ex">בְמָּיְינְץ</span>    </p>
+    <figcaption>'Mainz' spelled out using diacritic points.</figcaption>
+    </figure>
   </section>
   
   
@@ -180,7 +192,10 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
     <h2><a href="gsub">Contextual shaping</a></h2>
     <p>In Hebrew several characters have a different shape at the end of a word, but each shape variant has it's own codepoint and keyboard key, so there is no need for rendering rules to choose the correct glyph.</p>
     <p>This example shows <span class="codepoint"><span lang="he" dir="rtl">&#x05DE;</span> <a href="/scripts/hebrew/block#char05DE">[<span class="uname">U+05DE HEBREW LETTER MEM</span>]</a></span> and <span class="codepoint"><span lang="he" dir="rtl">&#x05DD;</span> <a href="/scripts/hebrew/block#char05DD">[<span class="uname">U+05DD HEBREW LETTER FINAL MEM</span>]</a></span> (on the left).</p>
+    <figure>
     <p dir="rtl" lang="he" class="large"><span class="ex">מ<span style="color:black">ומ</span>ח<span style="color:black">ים</span></span>    </p>
+    <figcaption>Two different shapes for <span class="trans">mem</span>, depending on position in the word.</figcaption>
+    </figure>
   </section>
 <section id="digits" class="note">
 <h2><a href="digits">Digits</a></h2>
@@ -196,7 +211,10 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <section id="dir" class="note">
     <h3>Text direction</h3>
     <p>Hebrew script is written right-to-left in the main, but as with all RTL scripts, numbers and embedded LTR script text are written left-to-right (bidirectional text). In the following example, the Hebrew words (red) are read right-to-left, starting with the one on the right, and the numeric expression (black) is read left-to-right, ie. it starts with 10 and ends with 12. (Note that this is unlike Arabic, where the 10 and 12 would be in opposite positions.)    </p>
+    <figure>
     <p dir="rtl" lang="he" class="large"><span  class="ex">התאריכים 12־10 במרץ</span></p>
+    <figcaption>Bidirectional Hebrew text.</figcaption>
+    </figure>
   </section>
   
   
@@ -220,27 +238,17 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
     </p>
   </section>
   </section>
-  
-  
- 
- <section id="chars" class="note">
-<h2>Character lists by language</h2>
-    <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
-<ul>
-<li><a href="/app-charuse/?language=he" target="_blank">Hebrew</a> <span class="charCount">(27 letters, 6 punctuation :   total 33)</span></li>
-<li><a href="/app-charuse/?language=yi" target="_blank">Yiddish</a> <span class="charCount">(30 letters, 6 marks, 6 punctuation, 2 other :   total 44)</span></li>
-</ul>
-</section>
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/hebrew"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-09  8:34<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bhebrew%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fhebrew%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/hebrew"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-13  14:26<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bhebrew%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fhebrew%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"></div>
 </body>
 <script>
-initialiseShowNames('/scripts/hebrew/block', 'c');
+var base = '/scripts/hebrew/block'
+initialiseShowNames(base, 'c');
 document.getElementById('featureTableBody').innerHTML = makeSidePanel("Hebrew","")
 createtoc(3)
 </script>
