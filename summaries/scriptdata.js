@@ -51,11 +51,11 @@ var scriptData = [
 
 { script:"Myanmar", type:"abugida", chars:223, cchars:62, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"no", baseline:"mid", wrap:"word", justify:"cluster", digits:"yes", region:"Asia SE", linked:"myanmar" },
 
-{ script:"N'Ko", type:"alpha", chars:59, cchars:9, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"yes", dir:"rtl", wordsep:"yes", baseline:"mid", wrap:"word", justify:"wd/str", digits:"yes", region:"Africa", linked:"nko" },
+{ script:"N'Ko", type:"alpha", chars:59, cchars:9, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"yes", dir:"rtl", wordsep:"space", baseline:"mid", wrap:"word", justify:"wd/str", digits:"yes", region:"Africa", linked:"nko" },
 
 { script:"Oriya", type:"abugida", chars:90, cchars:20, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"yes", region:"Asia S" },
 
-{ script:"Sundanese", type:"abugida", chars:64, cchars:16, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"yes", baseline:"mid", wrap:"?", justify:"?", digits:"yes", region:"Asia SE", linked:"sundanese" },
+{ script:"Sundanese", type:"abugida", chars:64, cchars:16, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"?", justify:"?", digits:"yes", region:"Asia SE", linked:"sundanese" },
 
 { script:"Syriac", type:"abjad", chars:88, cchars:28, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"yes", dir:"rtl", wordsep:"space", baseline:"mid", wrap:"word", justify:"word/space", digits:"no*", region:"M East", linked:"syriac" },
 
