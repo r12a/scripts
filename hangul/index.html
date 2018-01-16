@@ -86,7 +86,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->15-Jan-2018<!-- #EndDate -->
+  <!-- #BeginDate format:En2 -->16-Jan-2018<!-- #EndDate -->
 &bull; tags <a href="http://rishida.net/blog/index.php?tag=hangul" title="Show all blog posts tagged with 'hangul'">hangul</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
@@ -142,13 +142,10 @@ It is the official writing system of South Korea and North Korea. It is a co-off
     <h2>Key features</h2>
     <p>Hangul is a <span class="newterm">syllabary</span> used  to write Korean.  See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
 </p>
-    <p>It is possible to store hangul as a sequence of non-syllabic Unicode characters, which are then combined for display. This is because the Korean syllabic glyph is composed of easily distinguishable phonetic components (called jamos), grouped into a square. For example,    </p>
-    <p class="large"><span class="ex" lang="ko">향한</span></p>
-    <p>is composed of the following jamos:</p>
-    <p class="large"><span class="ex" lang="ko">ᄒ ᅣ ᆼ ᄒ ᅡ ᆫ</span></p>
-    <p>This is not common, however. The overwhelming majority of Korean is stored as syllabic units, as shown in the sample above.</p>
-    <p>It is also possible to find <a href="han">Han</a> characters (referred to as hanja) in South Korean text, but if used they are very infrequent. They are not considered here.</p>
-    <p>Text can be written horizontally or vertically. The visual forms of characters don't interact.</p>
+<p>The term Hangul  is used more frequently in South Korea, whereas a basically synonymous term  Choseongul  is preferred in North Korea. A politically neutral term,  Jeongum, may also be used.<sup>2</sup></p>
+<p>Each Hangul syllabic glyph is composed of easily distinguishable phonetic components (called jamos), grouped into a square. </p>
+<p>It is also possible to find <a href="han">Han</a> characters (referred to as hanja) in South Korean text, but if used they are very infrequent. They are not considered here.</p>
+    <p>Text can be written horizontally or vertically. The visual forms of characters don't interact. Spaces are used to separate words, but lines tend to be broken in the middle of a word, with no hyphenation.</p>
 </section>
 
 
@@ -159,8 +156,184 @@ It is the official writing system of South Korea and North Korea. It is a co-off
     <ul>
       <li><a href="/uniview/?block=Hangul_Syllables">Hangul Syllables</a> <span class="charCount">(11,183 characters)</span></li>
     </ul>
-    <p>There are also several blocks containing jamo characters, including <a href="/uniview/?block=Hangul_Jamo">Hangul Jamo</a> (256), <a href="/uniview/?block=Hangul_Jamo_Extended-A">Hangul Jamo Extended-A</a> (29), <a href="/uniview/?block=Hangul_Jamo_Extended-B">Hangul Jamo Extended-B</a> (72), and <a href="/uniview/?block=Hangul_Compatibility_Jamo">Hangul Compatibility Jamo</a> (94).</p>
-    <p>The listings at the bottom of the page show a list of  characters used, per version 26 of CLDR's lists of characters (exemplarCharacters).</p>
+    <p>There are also several blocks containing jamo characters, including </p>
+<ul>
+<li><a href="/uniview/?block=Hangul_Jamo">Hangul Jamo</a> <span class="charCount">(256 characters)</span></li>
+<li><a href="/uniview/?block=Hangul_Jamo_Extended-A">Hangul Jamo Extended-A</a> <span class="charCount">(29 characters)</span></li>
+<li><a href="/uniview/?block=Hangul_Jamo_Extended-B">Hangul Jamo Extended-B</a> <span class="charCount">(72 characters)</span></li>
+<li> <a href="/uniview/?block=Hangul_Compatibility_Jamo">Hangul Compatibility Jamo</a> <span class="charCount">(94 characters)</span></li>
+</ul>
+<p>The listings at the bottom of the page show a list of  characters used, per version 26 of CLDR's lists of characters (exemplarCharacters).</p>
+</section>
+
+
+
+
+<section id="syllables">
+    <h2><a href="syllables">Syllables</a></h2>
+    
+    
+    <section id="jamos">
+    <h3><a href="#jamos">Syllables and jamos</a></h3>
+    
+    <p>One of the peculiarities of hangul characters is that discreet phonetic symbols, called jamo (<span lang="ko">자모</span>), are combined within a standard square space to represent a syllable. This means that it is only necessary to learn a small number of symbols to be able to read any of the approximately 11,000 syllablic characters supported by Unicode.</p>
+    
+    <figure>
+    <img src="images/jamos.png" alt=''/>
+    <figcaption>An illustration of how 3 syllabic characters are built up of 7 jamo sounds.</figcaption>
+    </figure>
+    
+    <p>It is possible to store hangul text as either jamos or syllabic characters in Unicode, although the latter is more common. Unicode enables both approaches. If the underlying characters are jamos, the text is still displayed as square syllabic characters – the application has to compose the syllables during the rendering process. It is partly because of the occasional difficulty in guessing syllable boundaries that it is more common to store the text in syllabic characters, which have a one-to-one mapping with what is displayed. </p>
+<p>Keyboards, however, are normally organised on the basis of jamos, so the process of creating syllabic characters still has to take place, but between keyboard and storage there are better opportunities for the writer to correct potential errors in syllable boundaries.</p>
+<p>The following is from [Unicode]:</p>
+<blockquote>
+<p>Modern Hangul syllable blocks can be expressed 
+with either two or three jamo, either in the
+form 
+<em>consonant + vowel</em> or in the form 
+<em>consonant + vowel + consonant</em>. There are 19 possible  leading  (initial)  consonants  (
+choseong
+),  21  vowels  (
+jungseong
+),  and  27  trailing  (final)
+consonants  (
+jongseong
+).  Thus  there  are  399  possible  two-jamo  syllable  blocks  and  10,773
+possible three-jamo syllable blocks, giving a 
+total of 11,172 modern Hangul syllable blocks.
+This collection of 11,172 modern Hangul syllables encoded in this block is known as the
+Johab
+ set.</p>
+ </blockquote>
+    </section>
+     
+    
+<section id="sounds">
+<h3><a href="#sounds">Consonants &amp; vowels</a></h3>
+    
+<p>There are 19 consonant jamo, which typically have different pronunciations when syllable initial and final.<sup>3</sup></p>
+<figure>
+<div class="listAll" onClick="listAll(this, 'ko')">list all</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="ko">ㄱ</span><span class="listTrans">g-,-k</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㄲ</span><span class="listTrans">kk-,-k</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㄴ</span><span class="listTrans">n</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㄷ</span><span class="listTrans">d-,-t</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㄸ</span><span class="listTrans">tt-</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㄹ</span><span class="listTrans">r-,-l</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅁ</span><span class="listTrans">m</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅂ</span><span class="listTrans">b-,-p</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅃ</span><span class="listTrans">pp-</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅅ</span><span class="listTrans">s-,-t</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅆ</span><span class="listTrans">ss-,-t</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅇ</span><span class="listTrans">-ng</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅈ</span><span class="listTrans">j-,-t</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅉ</span><span class="listTrans">jj-</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅊ</span><span class="listTrans">ch-,-t</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅋ</span><span class="listTrans">k</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅌ</span><span class="listTrans">t</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅍ</span><span class="listTrans">p</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅎ</span><span class="listTrans">h</span></div>
+</div>
+</figure>
+<p>Wikipedia lists 21 jamo vowel sounds, however there is disagreement among experts about the number of phonemes vs. diphthongs.<sup>3</sup></p>
+<figure>
+<div class="listAll" onClick="listAll(this, 'ko')">list all</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="ko">ㅏ</span><span class="listTrans">a</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅐ</span><span class="listTrans">ae</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅑ</span><span class="listTrans">ya</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅒ</span><span class="listTrans">yae</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅓ</span><span class="listTrans">eo</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅔ</span><span class="listTrans">e</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅕ</span><span class="listTrans">yeo</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅖ</span><span class="listTrans">ye</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅗ</span><span class="listTrans">o</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅘ</span><span class="listTrans">wa</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅙ</span><span class="listTrans">wae</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅚ</span><span class="listTrans">oe</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅛ</span><span class="listTrans">yo</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅜ</span><span class="listTrans">u</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅝ</span><span class="listTrans">wo</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅞ</span><span class="listTrans">we</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅟ</span><span class="listTrans">wi</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅠ</span><span class="listTrans">yu</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅡ</span><span class="listTrans">eu</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅢ</span><span class="listTrans">ui</span></div>
+<div class="listPair"><span class="listItem" lang="ko">ㅣ</span><span class="listTrans">i</span></div>
+</div>
+</figure>
+</section>   
+</section>
+    
+    
+    
+    
+
+
+
+
+<section id="gsub">
+    <h2><a href="gsub">Context-based rendering</a></h2>
+    
+    
+<section id="width">
+<h3><a href="#width">Fullwidth and halfwidth characters</a></h3>
+    
+    <p>Hangul syllables are normally displayed in the same sized square spaces, much like Han and Kana characters.</p>
+<p>Embedded Latin text, numbers, or punctuation, however, can be represented using fullwidth, halfwidth, or proportionally-spaced glyphs.</p>
+<figure> <img src="images/horizontal-mixed.png" alt=''/>
+<figcaption>A mixture of fullwidth, halfwidth and proportionally-spaced glyphs in horizontal text.</figcaption>
+</figure>
+<p>When Latin characters run down the line in vertical text they are likely to be proportionally-spaced or halfwidth.</p>
+<figure> <img src="images/vertical-sideon.png" alt=''/>
+<figcaption>Proportionally-spaced Latin glyphs in vertical text.</figcaption>
+</figure>
+<p>However, acronyms are likely to be upright and set using fullwidth glyphs.</p>
+<figure> <img src="images/vertical-acronym.png" alt=''/>
+<figcaption>Fullwidth Latin glyphs used for an acronym in vertical text.</figcaption>
+</figure>
+<p>In theory, the Unicode Standard expects ASCII letters to be used for both fullwidth and non-fullwidth rendered characters. The fullwidth characters are intended only for roundtrip character conversions. The expectation is that an appropriate font or fullwidth transform would be used to obtain the desired glyph, however, in practice it is common to find the fullwidth characters available in Unicode being used. Note, however, that if you wanted to use a character outside the basic ASCII set, such as é, you would have a problem with this approach since there would not be a corresponding fullwidth character available in Unicode.</p>
+</section>
+    
+    
+    
+    
+<section id="kerning">
+<h3><a href="#kerning">Kerning</a></h3>
+    
+    <p>It is possible to kern Hangul syllabic glyphs, as demonstrated in this figure.</p>
+<figure> <img src="images/kerning.png" alt=''/>
+<figcaption>Examples of opportunities for kerning syllabic glyphs.</figcaption>
+</figure>
+<p>For more information about how this works, see [<a href="http://w3c.github.io/klreq/#fonts-kerning">klreq</a>]. (This is not something that is common in Chinese or Japanese text.)</p>
+</section>
+
+    
+</section>
+
+
+
+
+<section id="numbers">
+    <h2><a href="numbers">Numbers</a></h2>
+    <p>In addition to the set of ASCII digits, Korean uses the corresponding fullwidth variants.</p>
+<figure>
+<div class="listAll" onClick="listAll(this, 'ko')">list all</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="ko">０</span></div>
+<div class="listPair"><span class="listItem" lang="ko">１</span></div>
+<div class="listPair"><span class="listItem" lang="ko">２</span></div>
+<div class="listPair"><span class="listItem" lang="ko">３</span></div>
+<div class="listPair"><span class="listItem" lang="ko">４</span></div>
+<div class="listPair"><span class="listItem" lang="ko">５</span></div>
+<div class="listPair"><span class="listItem" lang="ko">６</span></div>
+<div class="listPair"><span class="listItem" lang="ko">７</span></div>
+<div class="listPair"><span class="listItem" lang="ko">８</span></div>
+<div class="listPair"><span class="listItem" lang="ko">９</span></div>
+</div>
+</figure>
+<p>It also uses <span class="codepoint"><span lang="ko">&#x0025;</span> [<span class="uname">U+0025 PERCENT SIGN</span>]</span> and <span class="codepoint"><span lang="ko">&#x2103;</span> [<span class="uname">U+2103 DEGREE CELSIUS</span>]</span>.</p>
 </section>
 
 
@@ -169,12 +342,20 @@ It is the official writing system of South Korea and North Korea. It is a co-off
 <section id="layout" class="note">
 <h2><a href="#layout">Text layout</a></h2>
    
-  
+  <p>This section summarises some of the salient features of text layout that related to Korean text. For more detail and additional requirements, see <a href="http://w3c.github.io/klreq/">Requirements for Hangul Text Layout and Typography : 한국어 텍스트 레이아웃 및 타이포그래피를 위한 요구사항</a>.</p>
   
   <section id="dir" class="note">
     <h3>Text direction</h3>
     <p>Korean can be set both horizontally and vertically, although vertical Korean is much less common than vertical Japanese. Horizontal lines are read left-to-right. Vertical lines are read top-to-bottom, and progress from right to left across the page.</p>
-    <p class="instructions">If your browser supports vertical text, you can change the direction of the text sample here.</p>
+<p>Sometimes, short runs of numbers or Latin letters run horizontally within a vertical line. This is called 'tate chu yoko' in Japanese, and the horizontal text can typically be two to four characters in length, but is expected to fit within the line width.</p>
+<figure> <img src="images/tate-chu-yoko.png" alt=""/>
+<figcaption>Horizontal runs of number pairs within a vertical line.</figcaption>
+</figure>
+<p>Text columns in vertically set text run from right to left, rather than top to bottom. The first column is nearest the top of the page.</p>
+ <figure> <img src="images/columns.png" alt=""/>
+<figcaption>Horizontal columns in vertically set text.</figcaption>
+</figure>
+   <p class="instructions">If your browser supports vertical text, you can change the direction of the text sample here. Note, however, that it doesn't automatically convert the ASCII punctuation to fullwidth punctuation, as you would expect.</p>
      <p class="english" dir="ltr">
       <button type="button" id="verticalButton" onclick="toggleDirection(document.getElementById('verticalTextExample'), this)"> Set vertically </button>
     </p>
@@ -189,7 +370,137 @@ It is the official writing system of South Korea and North Korea. It is a co-off
 <h3><a href="#delimiters">Text delimiters</a></h3>
     <p>Unlike Japanese and Chinese, Korean separates 'words' with spaces.</p>
   <p>Korean uses Latin punctuation, however many of the punctuation used have additional fullwidth forms.</p>
+<p> For separators at the sentence level and below, the following are used, where the right column indicates approximate equivalences to Latin script.<sup>1</sup></p>
+<table class="character_list">
+      <tbody>
+        <tr>
+          <th scope="row">comma</th>
+          <td>
+          <div class="listAll" onClick="listAll(this, 'ko')">list all</div>
+        <div class="listArray">
+        <div class="listPair"><span class="listItem" lang="ko">,</span></div>
+        <div class="listPair"><span class="listItem" lang="ko">、</span></div>
+        </div>
+        </td>
+        </tr>
+        <tr>
+        <th scope="row">phrase</th>
+          <td>
+          <div class="listAll" onClick="listAll(this, 'ko')">list all</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="ko">·</span></div>
+<div class="listPair"><span class="listItem" lang="ko">:</span></div>
+<div class="listPair"><span class="listItem" lang="ko">;</span></div>
+<div class="listPair"><span class="listItem" lang="ko">：</span></div>
+<div class="listPair"><span class="listItem" lang="ko">；</span></div>
+</div>
+        </td>
+        </tr>
+        <tr>
+        <th scope="row">sentence</th>
+          <td>
+            <div class="listAll" onClick="listAll(this, 'ko')">list all</div>
+            <div class="listArray">
+            <div class="listPair"><span class="listItem" lang="ko">.</span></div>
+<div class="listPair"><span class="listItem" lang="ko">。</span></div>
+<div class="listPair"><span class="listItem" lang="ko">．</span></div>
+<div class="listPair"><span class="listItem" lang="ko">？</span></div>
+            <div class="listPair"><span class="listItem" lang="ko">！</span></div>
+            </div>
+        </td>
+        </tr>
+<tr>
+<th scope="row">parentheses</th>
+<td>
+<div class="listAll" onClick="listAll(this, 'ko')">list all</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="ko">（</span></div>
+<div class="listPair"><span class="listItem" lang="ko">｛</span></div>
+<div class="listPair"><span class="listItem" lang="ko">［</span></div>
+<div class="listPair"><span class="listItem" lang="ko">〔</span></div>
+<div class="listPair"><span class="listItem" lang="ko">《</span></div>
+<div class="listPair"><span class="listItem" lang="ko">》</span></div>
+<div class="listPair"><span class="listItem" lang="ko">〕</span></div>
+<div class="listPair"><span class="listItem" lang="ko">］</span></div>
+<div class="listPair"><span class="listItem" lang="ko">｝</span></div>
+<div class="listPair"><span class="listItem" lang="ko">）</span></div>
+<div class="listPair"><span class="listItem" lang="ko">(</span></div>
+<div class="listPair"><span class="listItem" lang="ko">{</span></div>
+<div class="listPair"><span class="listItem" lang="ko">[</span></div>
+<div class="listPair"><span class="listItem" lang="ko">]</span></div>
+<div class="listPair"><span class="listItem" lang="ko">}</span></div>
+<div class="listPair"><span class="listItem" lang="ko">)</span></div>
+</div>
+</td>
+</tr>
+      </tbody>
+   </table>
+   <p>The ASCII comma and full stop tend to be used for horizontally set text, whereas vertical lines of text generally use the equivalent fullwidth characters.</p>
 </section>
+
+
+
+
+
+<section id="quotations">
+<h3><a href="#quotations">Quotations</a></h3>
+    <p>The characters used to delimit quotations also depend on the orientation of the text. Horizontal text normally uses:</p>
+<figure>
+<div class="listAll" onClick="listAll(this, 'ko')">list all</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="ko">‘</span></div>
+<div class="listPair"><span class="listItem" lang="ko">’</span></div>
+<div class="listPair"><span class="listItem" lang="ko">“</span></div>
+<div class="listPair"><span class="listItem" lang="ko">”</span></div>
+</div>
+</figure>
+<p>Vertical text generally uses:</p>
+<figure>
+<div class="listAll" onClick="listAll(this, 'ko')">list all</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="ko">「</span></div>
+<div class="listPair"><span class="listItem" lang="ko">」</span></div>
+<div class="listPair"><span class="listItem" lang="ko">『</span></div>
+<div class="listPair"><span class="listItem" lang="ko">』</span></div>
+</div>
+</figure>
+</section>
+
+
+
+
+
+<section id="hyphens">
+<h3><a href="#hyphens">Hyphens</a></h3>
+    <p>In addition to <span class="codepoint"><span lang="ko">&#x002D;</span> [<span class="uname">U+002D HYPHEN-MINUS</span>]</span>, the following characters are used as hyphens.</p>
+<figure>
+<div class="listAll" onClick="listAll(this, 'ko')">list all</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="ko">‐</span></div>
+<div class="listPair"><span class="listItem" lang="ko">—</span></div>
+<div class="listPair"><span class="listItem" lang="ko">〜</span></div>
+</div>
+</figure>
+</section>
+
+
+
+
+
+<section id="abbrev">
+<h3><a href="#abbrev">Abbreviation</a></h3>
+    <p>The following characters are used to indicate continuation.</p>
+<figure>
+<div class="listAll" onClick="listAll(this, 'ko')">list all</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="ko">—</span></div>
+<div class="listPair"><span class="listItem" lang="ko">…</span></div>
+<div class="listPair"><span class="listItem" lang="ko">‥</span></div>
+</div>
+</figure>
+</section>
+
+
 
 
 
@@ -207,21 +518,57 @@ It is the official writing system of South Korea and North Korea. It is a co-off
 
 
 
+<section id="repetition">
+<h3><a href="#repetition">Repetition</a></h3>
+    <p><span class="codepoint"><span lang="ko">&#x3003;</span> [<span class="uname">U+3003 DITTO MARK</span>]</span> can be used to indicate repetition.</p>
+</section>
+
+
+
+
+
  <section id="wrap" class="note">
     <h3><a href="wrap">Linebreaks & text wrap</a></h3>
-    <p>Korean can be wrapped on a word-by-word basis, but it is more common in modern Korean to simply wrap at syllable boundaries. Justification has to also take into account line-breaking rules (geumchik) which dictate what characters cannot appear at the end or start of a line.</p>
+    <p>Korean can be wrapped on a word-by-word basis, but it is more common in modern Korean to simply wrap at syllable boundaries. It's a question of preference. This includes embedded Latin script text.</p>
+<p>Line breaking has to also take into account line-breaking rules (<span class="trans">geumchik</span>) which dictate what characters cannot appear at the end or start of a line. Although lines are typically broken after the character that reaches the end of the line, certain characters, such as <span class="charExample"><span class="ex" lang="ko">」</span></span>, should not appear at the start of a line, and others, such as <span class="charExample"><span class="ex" lang="ko">「</span></span>, should not appear at the end. Some character pairs, such as <span class="charExample"><span class="ex" lang="ko">……</span></span> or numbers, should not be broken either. For more information, see [<a href="http://w3c.github.io/klreq/#line-head-rest">klreq</a>].</p>
     <p class="instructions">To test how your browser wraps Korean text, change the width of the browser window and watch how the  sample text behaves.</p>
+<p dir="ltr" lang="ko" id="justificationExample2" style="text-align:start;">모든 사람은 법 앞에 평등하며 어떠한 차별도 없이 법의 동등한 보호를 받을 권리를 가진다. 모든 사람은 이 선언에 위반되는 어떠한 차별과 그러한 차별의 선동으로부터 동등한 보호를 받을 권리를 가진다.</p>
   </section>
   
-  
-  <section id="justify" class="note">
+
+
+
+
+
+<section id="justify" class="note">
     <h3><a href="#justify">Justification</a></h3>
-    <p>Justification is done principally by adjusting inter-word spacing.</p>
-    <p><em>Use the control below to see how your browser justifies the text sample here.</em></p>
+    <p>It is normal for Korean text to be aligned  at the line head and line end (ie. not ragged edge).</p>
+<p>If text is only composed on Hangul syllables, there is no need for justification, since each character has the same width. However, things such as proportionally-based text and punctuation break the alignment and necessitate small adjustments across a line in order to make the last character flush with the line end. The same occurs when the geumchick rules disallow punctuation or other characters at line start or end.</p>
+<p>Justification is done principally by adjusting inter-word spacing.</p>
+   <p>The visible part of the glyph for opening parentheses is typically placed close to the right edge of the square space allocated to a fullwidth character. The remaining blank space is then available for adjustments, where needed, for justification, etc. The opposite is true for closing paired characters, and fullwidth full stop and comma work similarly.</p>
+<p>In the case of vertical text, the ink appears at the top or bottom of the square character space.</p>
+    <p class="instructions">Use the control below to see how your browser justifies the text sample here.</p>
     <p dir="ltr" lang="ko" id="justificationExample" style="text-align:start;">모든 사람은 법 앞에 평등하며 어떠한 차별도 없이 법의 동등한 보호를 받을 권리를 가진다. 모든 사람은 이 선언에 위반되는 어떠한 차별과 그러한 차별의 선동으로부터 동등한 보호를 받을 권리를 가진다.</p>
     <p class="english" dir="ltr">
       <button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Justify   </button>
     </p>
+</section>
+  
+
+
+
+
+
+<section id="paragraph" class="note">
+    <h3><a href="#paragraph">Line alignment</a></h3>
+    <p>The most common way of starting a new paragraph is to indent the first line of the paragraph by one character space. No paragraph leading is used.<sup>1</sup></p>
+  <figure>
+  <img src="images/line-indent.png" alt="Picture of various emphasis symbols."/>
+  <figcaption>Line indentation as a paragraph marker.</figcaption>
+  </figure>
+   <p>There are, however, alternatives such as no indentation on all lines, or no indentation on the first paragraph after a heading.</p>
+<p>Text on a line may be left-aligned, right-aligned, or centred, but in some cases may also be justified so that there is equal space across all characters. See [<a href="http://w3c.github.io/klreq/#para-line-align">klreq</a>].</p>
+
   </section>
   </section>
   
@@ -264,9 +611,9 @@ It is the official writing system of South Korea and North Korea. It is a co-off
 <section id="references">
 <h2><a href="#references">References</a></h2>
   <ol>
-    <li>TBD<!--[Daniels] Peter T. Daniels and William Bright, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN 0-19-507993-0, pp477-480--></li>
-    <li>TBD<!--[Unicode] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch19.pdf">Javanese</a>, pp661-664.--></li>
-    <li>TBD<!--Wikipedia, <a href="httphttps://en.wikipedia.org/wiki/Javanese_alphabet">Javanese alphabet</a>.--></li>
+    <li>[klreq] 임순범 (Soon-Bum Lim) et al., <cite><a href="http://w3c.github.io/klreq/">Requirements for Hangul Text Layout and Typography : 한국어 텍스트 레이아웃 및 타이포그래피를 위한 요구사항</a></cite><!--[Daniels] Peter T. Daniels and William Bright, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN 0-19-507993-0, pp477-480--></li>
+    <li>[Unicode] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch18.pdf">Hangul</a>, pp713-716.</li>
+    <li>[Wikipedia], <a href="https://en.wikipedia.org/wiki/Hangul">Hangul</a>.</li>
     <li>[Jihyerish] Jihye Hong, <cite><a href="https://github.com/w3c/klreq/issues/20#issuecomment-337832245">Github issue comments</a></cite></li>
 </ol>
 </section>
@@ -275,7 +622,7 @@ It is the official writing system of South Korea and North Korea. It is a co-off
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/hangul"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-15  18:29<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bhangul%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fhangul%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/hangul"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-16  8:44<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bhangul%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fhangul%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 <div id="panel" style="display:none"></div>
 </body>
