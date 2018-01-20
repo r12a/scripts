@@ -25,20 +25,23 @@
 <input type="text" id="trans" placeholder="a b c ..."/></p>
 <p>Add a space-separated list of phonetic transcriptions: 
 <input type="text" id="ipa" placeholder="a b c ..."/></p>
+<p>Add a meaning: 
+<input type="text" id="meaning" placeholder="meaning meaning ..."/></p>
 
-<p><button onClick="document.getElementById('out').value = makeListFromChars(document.getElementById('in').value, document.getElementById('trans').value, document.getElementById('ipa').value, document.getElementById('lang').value); document.getElementById('out').select()">Go</button></p>
+<p><button onClick="document.getElementById('out').value = makeListFromChars(document.getElementById('in').value, document.getElementById('trans').value, document.getElementById('ipa').value, document.getElementById('meaning').value, document.getElementById('lang').value); document.getElementById('out').select()">Go</button></p>
 
 <textarea id="out" style="height:400px;width:100%;"></textarea>
 <div class="smallprint"><span id="version">This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2018-01-11  19:57<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2018-01-20  13:21<!-- #EndDate --> 
 </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 <script type="text/javascript">
 
-function makeListFromChars (chars, trans, ipa, lang) {
+function makeListFromChars (chars, trans, ipa, meaning, lang) {
 	var charList = chars.split(' ')
 	var tranList = trans.split(' ')
 	var ipaList = ipa.split(' ')
+	var meaningList = meaning.split(' ')
 	
 	var out = '<figure>\n<div class="listAll" onClick="listAll(this, '
     out += "'"+lang+"'"
@@ -48,6 +51,7 @@ function makeListFromChars (chars, trans, ipa, lang) {
         out += '<div class="listPair"><span class="listItem" lang="'+lang+'">'+charList[x]+'</span>'
         if (trans !== '') out += '<span class="listTrans">'+tranList[x]+'</span>'
         if (ipa !== '') out += '<span class="listIPA">'+ipaList[x]+'</span>'
+        if (meaning !== '') out += '<span class="listMeaning">'+meaningList[x]+'</span>'
         out += '</div>\n'
 		}
 	return out+'</div>\n</figure>'
