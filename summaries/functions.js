@@ -261,10 +261,39 @@ function setFigureRefs () {
     var figrefitems = document.querySelectorAll('.figref')
     for (let i=0;i<figrefitems.length;i++) {
         let id = figrefitems[i].textContent
-        if (figrefs[id]) figrefitems[i].textContent = figrefs[id]
+        if (figrefs[id]) figrefitems[i].textContent = 'Figure '+figrefs[id]
         }
     }
 
+/*
+function setFigureRefs () {
+    // looks for inline a tags with class .figref, takes the textContent and replaces it with the number of the figure
+    // adds a link to the href
+    // textContent should be the id of the figure
+    // only works for figures with figcaption (to screen out character lists)
+    
+    var figrefs = {}
+    var figures = document.querySelectorAll('figcaption')
+    for (let i=0;i<figures.length;i++) {
+        console.log(figures[i].textContent)
+        if (figures[i] && figures[i].parentNode.id) {
+            if (figrefs[figures[i].parentNode.id]) {}
+            else figrefs[figures[i].parentNode.id] = i+1
+            console.log(figures[i].textContent, i+1)
+            }
+        }
+    console.log(figrefs)
 
+    var figrefitems = document.querySelectorAll('.figref')
+    for (let i=0;i<figrefitems.length;i++) {
+        let id = figrefitems[i].textContent
+        if (figrefs[id]) {
+            figrefitems[i].textContent = figrefs[id]
+            figrefitems[i].href = '#'+id
+            }
+        }
+    }
+
+*/
 
 
