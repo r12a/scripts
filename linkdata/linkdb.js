@@ -399,7 +399,7 @@ var linkDB = [
 	local: [	],
 	unicode:{ 	}, 
 	charts:[	"Ethiopic", "Ethiopic Supplement", "Ethiopic Extended", "Ethiopic Extended-A" ],
-	pickers:[	
+	pickers:[	{ name:"Ethiopic", url:"ethiopic" }
 				],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-african.html#ethiopic" }
 				],
