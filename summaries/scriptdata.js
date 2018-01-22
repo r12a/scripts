@@ -17,7 +17,7 @@ var scriptData = [
 
 { script:"Devanagari", type:"abugida", chars:158, cchars:52, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"high", wrap:"word", justify:"space", digits:"yes", region:"Asia S", linked:"devanagari" },
 
-{ script:"Ethiopic", type:"syllabic", chars:495, cchars:3, cs:"no", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"፡/space", baseline:"mid", wrap:"char", justify:"፡/space", digits:"yes", region:"Africa" },
+{ script:"Ethiopic", type:"syllabic", chars:495, cchars:3, cs:"no", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"፡/space", baseline:"mid", wrap:"char", justify:"፡/space", digits:"yes", region:"Africa", linked:"ethiopic" },
 
 { script:"Greek", type:"alpha", chars:368, cchars:0, cs:"yes", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"no", region:"Europe", linked:"greek" },
 
