@@ -1,4 +1,4 @@
-var scriptNotesSet= new Set(['armenian','arabic', 'balinese', 'bengali','buginese', 'cherokee', 'devanagari', 'greek', 'han', 'hangul', 'hebrew', 'javanese', 'kana', 'khmer','lao','mandaic','myanmar', 'nko','sundanese', 'syriac', 'tamil', 'thaana', 'thai', 'tibetan'])
+var scriptNotesSet= new Set(['armenian','arabic', 'balinese', 'bengali','buginese', 'cherokee', 'devanagari', 'ethiopic', 'greek', 'han', 'hangul', 'hebrew', 'javanese', 'kana', 'khmer','lao','mandaic','myanmar', 'nko','sundanese', 'syriac', 'tamil', 'thaana', 'thai', 'tibetan'])
 
 var charNotesSet= new Set(['arabic','armenian', 'balinese','bengali','buginese', 'cherokee', 'devanagari','ethiopic','greek','hebrew', 'javanese', 'khmer','lao','latin','lisu','malayalam','mandaic','mongolian','myanmar', 'nko','sundanese', 'syriac', 'tamil','thaana', 'thai','tibetan','tifinagh'])
 
