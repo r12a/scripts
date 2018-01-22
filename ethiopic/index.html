@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+<meta charset="utf-8"/>
+<title>Ethiopic script summary</title>
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="description" content="Summary of the Ethiopic script."/>
+<link rel="stylesheet" href="../../shared/style/docs.css" type="text/css" />
+<link rel="stylesheet" href="../summaries/local.css" type="text/css" />
+<style type="text/css">
+@font-face {
+    font-family: 'Noto Serif Ethiopic WF';
+    src: url('/shared/webfonts/NotoSansEthiopic-Regularwebfont.woff2') format('woff2'),
+         url('/shared/webfonts/NotoSansEthiopic-Regularwebfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+#freeText {
+	font-size: 24px;
+	font-family: webfont, serif;
+	text-align: start;
+	line-height: 1.6;
+	}
+[lang=am] { font-family: "Noto Serif Ethiopic WF", serif; font-size: 140%; }
+.large { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
+#ethiTable td { text-align: center; vertical-align: middle; }
+.blank { background-color: antiquewhite; }
+.bilab { color: teal; }
+.addit .ex, .addit { color: coral; }
+.ext .ex, .ext { color: magenta; }
+</style>
+
+<script type="text/javascript" src="/shared/code/boilerplate.js"></script>
+<script type="text/javascript" src="/shared/code/toc_2016.js"></script>
+<script type="text/javascript" src="/shared/code/all-names.js"></script>
+<script type="text/javascript" src="/shared/code/character_conversion.js"></script>
+<script type="text/javascript" src="/shared/code/show_codepoints.js"></script>
+<script type="text/javascript" src="/shared/fontlists/manage.js"></script>
+<script type="text/javascript" src="/shared/code/scriptGroups.js"></script>
+<script type="text/javascript" src="../summaries/functions.js"></script>
+<script type="text/javascript" src="../block/functions.js"></script>
+<script type="text/javascript" src="/shared/code/getLinks.js"></script>
+<script type="text/javascript" src="/scripts/linkdata/linkdb.js"></script>
+<script type="text/javascript" src="../summaries/scriptdata.js"> </script>
+
+<script type="text/javascript" src="/shared/fontlists/ethiopic.js"> </script>
+</head>
+
+<body>
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
+</header>
+
+
+<h1>Ethiopic script summary</h1>
+
+<aside class="sidebar">
+<nav>
+<h2 class="notoc flush"><a id="tochead">Contents</a></h2>
+<div id="toc"><!-- placeholder --></div>
+  </nav>
+
+ <div id="fontsetting" class="closed">
+  <h2 class="notoc"><a id="fonts">Fonts</a></h2>
+  <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'am');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'am');" />
+    </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
+    <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
+	return false;">
+      <p>Change size:<br />
+        <input id="slider" type="range" min="12" max="100" step="1" value="32">
+        &#xA0; <span id="sizeIndicator">32px</span><br />
+        <input id="multiplier" type="hidden" value="1" />
+        Multiplier:
+        <input type="radio" name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x1">1</label>
+        <input type="radio" name="step" id="x5" value="2"  onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x5">2</label>
+        <input type="radio" name="step" id="x10" value="10"  onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x10">10</label>
+      </p>
+    </form>
+</div>
+</aside>
+
+
+<p  id="status">Updated 
+<!-- #BeginDate format:Sw1 -->22 January, 2018<!-- #EndDate -->
+&bull; tags <a href="http://rishida.net/blog/index.php?tag=ethiopic" title="Show all blog posts tagged with 'ethiopic'">ethiopic</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>.</p>
+<section>
+  <p>This page provides basic information about the Ethiopic script. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>. </p>
+  <details id="scriptLinks">
+  <summary>Show more links.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Ethi')</script>
+  </details>
+  <p class="instructions">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+  
+</section>
+
+
+
+<section>
+<h2 id="sample">Sample (Ethiopic)</h2>
+  
+
+  <div id="freeText" dir="ltr" lang="ta" data-target="c" data-base="/scripts/ethiopic/block" data-source="http://unicode.org/udhr/translations.html">
+  <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">አንቀጽ፡፩፤ የሰው፡ልጅ፡ሁሉ፡ሲወለድ፡ነጻና፡በክብርና፡በመብትም፡እኩልነት፡ያለው፡ነው።፡የተፈጥሮ፡ማስተዋልና፡ሕሊና፡ስላለው፡አንዱ፡ሌላውን፡በወንድማማችነት፡መንፈስ፡መመልከት፡ይገባዋል።</p>
+  <p title="UDHR, article 2" onMouseUp="showtext('freeText')">አንቀጽ፡፪፤ እያንዳንዱ፡ሰው፡የዘር፡የቀለም፡የጾታ፡የቋንቋ፡የሃይማኖት፡የፖለቲካ፡ወይም፡የሌላ፡ዓይነት፡አስተሳሰብ፡የብሔራዊ፡ወይም፡የኀብረተሰብ፡ታሪክ፡የሀብት፡የትውልድ፡ወይም፡የሌላ፡ደረጃ፡ልዩነት፡ሳይኖሩ፡በዚሁ፡ውሳኔ፡የተዘረዘሩት፡መብቶችንና፡ነጻነቶች፡ሁሉ፡እንዲከበሩለት፡ይገባል። ከዚህም፡በተቀረ፡አንድ፡ሰው፡ከሚኖርበት፡አገር፡ወይም፡ግዛት፡የፖለቲካ፡የአገዛዝ፡ወይም፡የኢንተርናሽናል፡አቋም፡የተነሳ፡አገሩ፡ነጻም፡ሆነ፡በሞግዚትነት፡አስተዳደር፡ወይም፡እራሱን፡ችሎ፡የማይተዳደር፡አገር፡ተወላጅ፡ቢሆንም፡በማንኛውም፡ዓይነት፡ገደብ፡ያለው፡አገዛዝ፡ሥር፡ቢሆንም፡ልዩነት፡አይፈጸምበትም።</p>
+  <!-- Source: http://unicode.org/udhr/translations.html -->
+  </div>
+</section>
+
+
+
+  <div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+    </table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+</div>
+
+
+
+
+<section id="history">
+    <h2><a href="#history">Usage &amp; history</a></h2>
+    <p>From <a href="http://scriptsource.org/scr/Taml">Scriptsource</a>: </p>
+    <blockquote>
+<p>The Ethiopic (Ge'ez) script was developed as the writing system of the Ge'ez language, a Semitic language spoken in Ethiopia and Eritrea until the 10th to the 12th centuries. Although the language ceased to be used in vernacular speech (it now serves a liturgical function only), the script is still widely used for writing the Ethiopian and Eritrean Semitic languages such as Tigré, Amharic and Tigrinya. In some languages, the script is called fidäl (ፊደል), which means 'alphabet', and individual letters are referred to as fidel. The script is believed by many to have derived from the epigraphic South Arabian script, of Proto-Sinaitic heritage, although there is some dispute surrounding this assertion; some also believe it to have descended from Egyptian hieroglyphics. According to the tradition of the Ethiopian Orthodox Tewahedo Church, the script was divinely revealed to Enos, grandson of the first man, Adam. Unlike other Semitic scripts, Ethiopic is written from left to right.</p>
+<p>The original Ge'ez script was an abjad - vowels were not written - but the current script is classified as an abugida. Each symbol represents a CV syllable, but vowels are not inherent in the consonant. The original Ethiopic script contained 182 characters, although the basic (unmarked) consonants number only 26. The script has since been extended for other languages and now contains over 500 symbols. Some of the new symbols represent phonological processes such as palatalization, pharyngealization and labialization.</p>
+</blockquote>
+    <p>From <a href="http://en.wikipedia.org/wiki/Ethiopic_script">Wikipedia</a>:</p>
+<blockquote>The Ge'ez script has been adapted to write other, mostly Semitic, languages, particularly Amharic in Ethiopia, and Tigrinya in both Eritrea and Ethiopia. It is also used for Sebatbeit, Me'en, and most other languages of Ethiopia. In Eritrea it is used for Tigre, and it has traditionally been used for Blin, a Cushitic language. Tigre, spoken in western and northern Eritrea, is considered to resemble Ge'ez more than do the other derivative languages.[citation needed] Some other languages in the Horn of Africa, such as Oromo, used to be written using Ge'ez, but have migrated to Latin-based orthographies.</blockquote>
+</section>
+
+
+
+
+<section id="intro">
+<h2><a href="#intro">Key features</a></h2>
+<p> The script is a <strong>featural syllabary</strong> – it also resembles an abugida in that vowels are indicated by largely standardised adaptations to the base consonant.   See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.</p>
+<p>The script is unicameral, and has only three combining characters, which are rarely used. Characters don't interact, and the baseline is standard.</p>
+<p>Ethiopic does have a range of native punctuation. In particular, although words in modern text are increasingly separated by spaces they may  be separated by a wordspace character instead.</p>
+<p>Ethiopic also has its own numeric digits, which are used in an additive way, rather than in the way numbers are formed in Western text.</p>
+  <p>Text runs horizontally, left to right. </p>
+</section>
+
+
+
+
+
+<section id="chars" class="note">
+<h2>Character lists</h2>
+ <p>The Ethiopic script characters in Unicode 10.0 are in the following block: </p>
+    <ul>
+      <li> <a href="/uniview/?block=ethiopic">Ethiopic</a> <span class="charCount">(326 letters, 3 marks, 20 numbers, 9 punctuation: total 358)</span></li>
+      <li> <a href="/uniview/?block=ethiopic_supplement">Ethiopic Supplement</a> <span class="charCount">(16 letters, 10 symbols : total 26)</span></li>
+      <li> <a href="/uniview/?block=ethiopic_extended">Ethiopic Extended</a> <span class="charCount">(79 letters  : total 79)</span></li>
+      <li> <a href="/uniview/?block=ethiopic_extended-a">Ethiopic Extended-A</a> <span class="charCount">(32 letters : total 32)</span></li>
+    </ul>
+   <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li><a href="/app-charuse/?language=am" target="_blank">Amharic</a> <span class="charCount">(282 letters, 12 punctuation, 12 numbers :   total 306)</span></li>
+<li><a href="/app-charuse/?language=ti" target="_blank">Tigriña</a> <span class="charCount">(300 letters, 1 marks, 3 punctuation :   total 304)</span></li>
+</ul>
+<p>For character-specific details see 
+  <a class="linkHighlight" href="/scripts/ethiopic/block">Ethiopic character notes</a>.</p>
+</section>
+
+
+
+
+<section id="consonants">
+<h2><a href="#consonants">Syllables</a></h2>
+<p>The   Ethiopic syllables in the basic set start with one of the following consonants. The pronunciation listed is for Amharic (which has lost the phonetic distinction between some characters).</p>
+
+
+<figure>
+<div class="listAll" onClick="listAll(this, 'am')">list all</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="am">ሀ</span><span class="listTrans">h</span><span class="listIPA">h</span></div>
+<div class="listPair"><span class="listItem" lang="am">ለ</span><span class="listTrans">l</span><span class="listIPA">l</span></div>
+<div class="listPair"><span class="listItem" lang="am">ሐ</span><span class="listTrans">ḥ</span><span class="listIPA">h</span></div>
+<div class="listPair"><span class="listItem" lang="am">መ</span><span class="listTrans">m</span><span class="listIPA">m</span></div>
+<div class="listPair"><span class="listItem" lang="am">ሠ</span><span class="listTrans">ś</span><span class="listIPA">s</span></div>
+<div class="listPair"><span class="listItem" lang="am">ረ</span><span class="listTrans">r</span><span class="listIPA">ɾ,r</span></div>
+<div class="listPair"><span class="listItem" lang="am">ሰ</span><span class="listTrans">s</span><span class="listIPA">s</span></div>
+<div class="listPair"><span class="listItem" lang="am">ቀ</span><span class="listTrans">ḳ</span><span class="listIPA">kʼ</span></div>
+<div class="listPair"><span class="listItem" lang="am">በ</span><span class="listTrans">b</span><span class="listIPA">b</span></div>
+<div class="listPair"><span class="listItem" lang="am">ተ</span><span class="listTrans">t</span><span class="listIPA">tʼ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ኀ</span><span class="listTrans">ḫ</span><span class="listIPA">h</span></div>
+<div class="listPair"><span class="listItem" lang="am">ነ</span><span class="listTrans">n</span><span class="listIPA">n</span></div>
+<div class="listPair"><span class="listItem" lang="am">አ</span><span class="listTrans">ʾ</span><span class="listIPA">ʔ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ከ</span><span class="listTrans">k</span><span class="listIPA">k</span></div>
+<div class="listPair"><span class="listItem" lang="am">ወ</span><span class="listTrans">w</span><span class="listIPA">w</span></div>
+<div class="listPair"><span class="listItem" lang="am">ዐ</span><span class="listTrans">ʿ</span><span class="listIPA">ʔ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ዘ</span><span class="listTrans">z</span><span class="listIPA">z</span></div>
+<div class="listPair"><span class="listItem" lang="am">የ</span><span class="listTrans">y</span><span class="listIPA">j</span></div>
+<div class="listPair"><span class="listItem" lang="am">ደ</span><span class="listTrans">d</span><span class="listIPA">d</span></div>
+<div class="listPair"><span class="listItem" lang="am">ገ</span><span class="listTrans">g</span><span class="listIPA">ɡ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ጠ</span><span class="listTrans">ṭ</span><span class="listIPA">tʼ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ጰ</span><span class="listTrans">p̣</span><span class="listIPA">pʼ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ጸ</span><span class="listTrans">ṣ</span><span class="listIPA">tsʼ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ፀ</span><span class="listTrans">ṣ́</span><span class="listIPA">tsʼ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ፈ</span><span class="listTrans">f</span><span class="listIPA">f</span></div>
+<div class="listPair"><span class="listItem" lang="am">ፐ</span><span class="listTrans">p</span><span class="listIPA">p</span></div>
+</div>
+</figure>
+
+<p>The consonant shapes above come from the original Ge'ez script, which was an abjad. The script became an abugida when small changes were added to those shapes to indicate the following vowel sound. The consonants above can be followed by one of 8 vowel sounds (though not all combinations exist). The original consonant shape is known as the 'first order', and the other shapes constitute incremental orders. The illustration below is based on the <span class="trans">m</span> consonant.</p>
+
+<figure>
+<div class="listAll" onClick="listAll(this, 'am')">list all</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="am">መ</span><span class="listTrans">ä</span><span class="listIPA">ɛ~ə</span><span class="listMeaning">1st</span></div>
+<div class="listPair"><span class="listItem" lang="am">ሙ</span><span class="listTrans">u</span><span class="listIPA">ʊ~u</span><span class="listMeaning">2nd</span></div>
+<div class="listPair"><span class="listItem" lang="am">ሚ</span><span class="listTrans">i</span><span class="listIPA">i</span><span class="listMeaning">3rd</span></div>
+<div class="listPair"><span class="listItem" lang="am">ማ</span><span class="listTrans">a</span><span class="listIPA">ä</span><span class="listMeaning">4th</span></div>
+<div class="listPair"><span class="listItem" lang="am">ሜ</span><span class="listTrans">e</span><span class="listIPA">e</span><span class="listMeaning">5th</span></div>
+<div class="listPair"><span class="listItem" lang="am">ም</span><span class="listTrans">ə</span><span class="listIPA">ɨ~ə,∅</span><span class="listMeaning">6th</span></div>
+<div class="listPair"><span class="listItem" lang="am">ሞ</span><span class="listTrans">o</span><span class="listIPA">o,ɔ</span><span class="listMeaning">7th</span></div>
+<div class="listPair"><span class="listItem" lang="am">ሟ</span><span class="listTrans">wa</span><span class="listIPA">wə</span><span class="listMeaning">8th</span></div>
+</div>
+</figure>
+
+<p>Three consonants also have a <span class="trans">-yä</span> ending: </p>
+<figure>
+<div class="listAll" onClick="listAll(this, 'am')">list all</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="am">ፘ</span><span class="listTrans">ryä</span></div>
+<div class="listPair"><span class="listItem" lang="am">ፙ</span><span class="listTrans">myä</span></div>
+<div class="listPair"><span class="listItem" lang="am">ፚ</span><span class="listTrans">fyä</span></div>
+</div>
+</figure>
+
+
+<p>Then there is a set of common labiovelar consonants, which are followed by only 5 of the vowel sounds.</p>
+<figure>
+<div class="listAll" onClick="listAll(this, 'am')">list all</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="am">ቈ</span><span class="listTrans">ḳʷ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ኈ</span><span class="listTrans">ḫʷ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ኰ</span><span class="listTrans">kʷ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ጐ</span><span class="listTrans">gʷ</span></div>
+</div>
+</figure>
+
+<p>Additional sets of consonants  match the sounds in the various different languages that use the Ethiopic script. </p>
+<p>Amharic, Tigrinya, Tigre, and Blin each use a selection from the following set.</p>
+<figure>
+<div class="listAll" onClick="listAll(this, 'am')">list all</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="am">ሸ</span><span class="listTrans">š</span><span class="listIPA">ʃ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ቐ</span><span class="listTrans">ḳʰ</span><span class="listIPA">xʼ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ቘ</span><span class="listTrans">ḳʰʷ</span><span class="listIPA">xʼʷ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ቨ</span><span class="listTrans">v</span><span class="listIPA">v~β</span></div>
+<div class="listPair"><span class="listItem" lang="am">ቸ</span><span class="listTrans">č</span><span class="listIPA">tʃ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ⶓ</span><span class="listTrans">ŋʷ</span><span class="listIPA">ŋʷ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ኘ</span><span class="listTrans">ñ</span><span class="listIPA">ɲ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ኸ</span><span class="listTrans">x</span><span class="listIPA">x</span></div>
+<div class="listPair"><span class="listItem" lang="am">ዀ</span><span class="listTrans">xʷ</span><span class="listIPA">xʷ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ዠ</span><span class="listTrans">ž</span><span class="listIPA">ʒ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ጀ</span><span class="listTrans">ǧ</span><span class="listIPA">dʒ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ጘ</span><span class="listTrans">ŋ</span><span class="listIPA">ŋ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ጨ</span><span class="listTrans">č</span><span class="listIPA">tʃ</span></div>
+</div>
+</figure>
+
+
+<p>The remaining characters, largely including those in the extension blocks, are for writing the sounds of other languages, such as Me'en, Sebatbeit, Gamo-Gofa-Dawro, Basketo, Gumuz, etc. The set of extended characters also includes combinations of the previous characters with an <span class="trans">oa</span> vowel sound.</p>
+<figure>
+<div class="listAll" onClick="listAll(this, 'am')">list all</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="am">ᎀ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ⶠ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ⷀ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ᎄ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ⶨ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ⷈ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ⷐ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ⶰ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ⷘ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ⶸ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ꬠ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ꬨ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ᎈ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ᎌ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ⶓ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ꬑ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ꬉ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ꬁ</span></div>
+</div>
+</figure>
+<details>
+<summary>To see the complete list of syllables, click here</summary>
+<script>
+function hideRows (type) {
+    var rows = document.getElementById('ethiTable').querySelectorAll(type)
+    for (let i=0;i<rows.length;i++) rows[i].style.display = 'none'
+    }
+function showRows (type) {
+    var rows = document.getElementById('ethiTable').querySelectorAll(type)
+    for (let i=0;i<rows.length;i++) rows[i].style.display = 'table-row'
+    }
+</script>
+<p>Show: 
+<label class="bilab" onClick="if (this.firstChild.checked) showRows('.bilab'); else hideRows('.bilab')"><input type="checkbox" checked> Bilabials</label>
+<label class="addit" onClick="if (this.firstChild.checked) showRows('.addit'); else hideRows('.addit')"><input type="checkbox" checked> Additional</label>
+<label class="ext" onClick="if (this.firstChild.checked) showRows('.ext'); else hideRows('.ext')"><input type="checkbox" checked> Extensions</label>
+</p>
+
+
+<table id="ethiTable"><thead><tr><td>&nbsp;</td>
+<td><span class="trans">ä</span></td>
+<td><span class="trans">u</span></td>
+<td><span class="trans">i</span></td>
+<td><span class="trans">a</span></td>
+<td><span class="trans">e</span></td>
+<td><span class="trans">ə</span></td>
+<td><span class="trans">o</span></td>
+<td><span class="trans">wa</span></td>
+<td><span class="trans">oa</span></td>
+</tr>
+</thead><tbody>
+<tr class="basic"><td><span class="trans">h</span></td><td><span class="ex" lang="am">ሀ</span></td><td><span class="ex" lang="am">ሁ</span></td><td><span class="ex" lang="am">ሂ</span></td><td><span class="ex" lang="am">ሃ</span></td><td><span class="ex" lang="am">ሄ</span></td><td><span class="ex" lang="am">ህ</span></td><td><span class="ex" lang="am">ሆ</span></td><td class="blank">&nbsp;</td><td><span class="ex ext" lang="am">ሇ</span></td>
+</tr>
+<tr class="basic"><td><span class="trans">l</span></td><td><span class="ex" lang="am">ለ</span></td><td><span class="ex" lang="am">ሉ</span></td><td><span class="ex" lang="am">ሊ</span></td><td><span class="ex" lang="am">ላ</span></td><td><span class="ex" lang="am">ሌ</span></td><td><span class="ex" lang="am">ል</span></td><td><span class="ex" lang="am">ሎ</span></td><td><span class="ex" lang="am">ሏ</span></td>
+<td><span class="ex ext" lang="am">ⶀ</span></td></tr>
+<tr class="basic"><td><span class="trans">ḥ</span></td><td><span class="ex" lang="am">ሐ</span></td><td><span class="ex" lang="am">ሑ</span></td><td><span class="ex" lang="am">ሒ</span></td><td><span class="ex" lang="am">ሓ</span></td><td><span class="ex" lang="am">ሔ</span></td><td><span class="ex" lang="am">ሕ</span></td><td><span class="ex" lang="am">ሖ</span></td><td><span class="ex" lang="am">ሗ</span></td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="basic"><td><span class="trans">m</span></td><td><span class="ex" lang="am">መ</span></td><td><span class="ex" lang="am">ሙ</span></td><td><span class="ex" lang="am">ሚ</span></td><td><span class="ex" lang="am">ማ</span></td><td><span class="ex" lang="am">ሜ</span></td><td><span class="ex" lang="am">ም</span></td><td><span class="ex" lang="am">ሞ</span></td><td><span class="ex" lang="am">ሟ</span></td>
+<td><span class="ex ext" lang="am">ⶁ</span></td>
+</tr>
+<tr class="ext"><td><span class="trans">mʷ</span></td><td><span class="ex" lang="am">ᎀ</span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ᎁ</span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ᎂ</span></td><td><span class="ex" lang="am">ᎃ</span></td><td class="blank">&nbsp;</td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="basic"><td><span class="trans">ś</span></td><td><span class="ex" lang="am">ሠ</span></td><td><span class="ex" lang="am">ሡ</span></td><td><span class="ex" lang="am">ሢ</span></td><td><span class="ex" lang="am">ሣ</span></td><td><span class="ex" lang="am">ሤ</span></td><td><span class="ex" lang="am">ሥ</span></td><td><span class="ex" lang="am">ሦ</span></td><td><span class="ex" lang="am">ሧ</span></td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="basic"><td><span class="trans">r</span></td><td><span class="ex" lang="am">ረ</span></td><td><span class="ex" lang="am">ሩ</span></td><td><span class="ex" lang="am">ሪ</span></td><td><span class="ex" lang="am">ራ</span></td><td><span class="ex" lang="am">ሬ</span></td><td><span class="ex" lang="am">ር</span></td><td><span class="ex" lang="am">ሮ</span></td><td><span class="ex" lang="am">ሯ</span></td>
+<td><span class="ex ext" lang="am">ⶂ</span></td>
+</tr>
+<tr class="basic"><td><span class="trans">s</span></td><td><span class="ex" lang="am">ሰ</span></td><td><span class="ex" lang="am">ሱ</span></td><td><span class="ex" lang="am">ሲ</span></td><td><span class="ex" lang="am">ሳ</span></td><td><span class="ex" lang="am">ሴ</span></td><td><span class="ex" lang="am">ስ</span></td><td><span class="ex" lang="am">ሶ</span></td><td><span class="ex" lang="am">ሷ</span></td>
+<td><span class="ex ext" lang="am">ⶃ</span></td>
+</tr>
+<tr class="addit"><td><span class="trans">š</span></td><td><span class="ex" lang="am">ሸ</span></td><td><span class="ex" lang="am">ሹ</span></td><td><span class="ex" lang="am">ሺ</span></td><td><span class="ex" lang="am">ሻ</span></td><td><span class="ex" lang="am">ሼ</span></td><td><span class="ex" lang="am">ሽ</span></td><td><span class="ex" lang="am">ሾ</span></td><td><span class="ex" lang="am">ሿ</span></td>
+<td><span class="ex ext" lang="am">ⶄ</span></td>
+</tr>
+<tr class="ext"><td><span class="trans"></span></td><td><span class="ex" lang="am">ⶠ</span></td><td><span class="ex" lang="am">ⶡ</span></td><td><span class="ex" lang="am">ⶢ</span></td><td><span class="ex" lang="am">ⶣ</span></td><td><span class="ex" lang="am">ⶤ</span></td><td><span class="ex" lang="am">ⶥ</span></td><td><span class="ex" lang="am">ⶦ</span></td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="basic"><td><span class="trans">ḳ</span></td><td><span class="ex" lang="am">ቀ</span></td><td><span class="ex" lang="am">ቁ</span></td><td><span class="ex" lang="am">ቂ</span></td><td><span class="ex" lang="am">ቃ</span></td><td><span class="ex" lang="am">ቄ</span></td><td><span class="ex" lang="am">ቅ</span></td><td><span class="ex" lang="am">ቆ</span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ቇ</span></td>
+
+</tr>
+<tr class="bilab"><td><span class="trans">ḳʷ</span></td><td><span class="ex" lang="am">ቈ</span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ቊ</span></td><td><span class="ex" lang="am">ቋ</span></td><td><span class="ex" lang="am">ቌ</span></td><td><span class="ex" lang="am">ቍ</span></td><td class="blank">&nbsp;</td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="addit"><td><span class="trans">ḳʰ</span></td><td><span class="ex" lang="am">ቐ</span></td><td><span class="ex" lang="am">ቑ</span></td><td><span class="ex" lang="am">ቒ</span></td><td><span class="ex" lang="am">ቓ</span></td><td><span class="ex" lang="am">ቔ</span></td><td><span class="ex" lang="am">ቕ</span></td><td><span class="ex" lang="am">ቖ</span></td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="addit"><td><span class="trans">ḳʰʷ</span></td><td><span class="ex" lang="am">ቘ</span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ቚ</span></td><td><span class="ex" lang="am">ቛ</span></td><td><span class="ex" lang="am">ቜ</span></td><td><span class="ex" lang="am">ቝ</span></td><td class="blank">&nbsp;</td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="ext"><td><span class="trans"></span></td><td><span class="ex" lang="am">ⷀ</span></td><td><span class="ex" lang="am">ⷁ</span></td><td><span class="ex" lang="am">ⷂ</span></td><td><span class="ex" lang="am">ⷃ</span></td><td><span class="ex" lang="am">ⷄ</span></td><td><span class="ex" lang="am">ⷅ</span></td><td><span class="ex" lang="am">ⷆ</span></td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="basic"><td><span class="trans">b</span></td><td><span class="ex" lang="am">በ</span></td><td><span class="ex" lang="am">ቡ</span></td><td><span class="ex" lang="am">ቢ</span></td><td><span class="ex" lang="am">ባ</span></td><td><span class="ex" lang="am">ቤ</span></td><td><span class="ex" lang="am">ብ</span></td><td><span class="ex" lang="am">ቦ</span></td><td><span class="ex" lang="am">ቧ</span></td>
+<td><span class="ex ext" lang="am">ⶅ</span></td>
+</tr>
+<tr class="ext"><td><span class="trans">bʷ</span></td><td><span class="ex" lang="am">ᎄ</span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ᎅ</span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ᎆ</span></td><td><span class="ex" lang="am">ᎇ</span></td><td class="blank">&nbsp;</td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="addit"><td><span class="trans">v</span></td><td><span class="ex" lang="am">ቨ</span></td><td><span class="ex" lang="am">ቩ</span></td><td><span class="ex" lang="am">ቪ</span></td><td><span class="ex" lang="am">ቫ</span></td><td><span class="ex" lang="am">ቬ</span></td><td><span class="ex" lang="am">ቭ</span></td><td><span class="ex" lang="am">ቮ</span></td><td><span class="ex" lang="am">ቯ</span></td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="basic"><td><span class="trans">t</span></td><td><span class="ex" lang="am">ተ</span></td><td><span class="ex" lang="am">ቱ</span></td><td><span class="ex" lang="am">ቲ</span></td><td><span class="ex" lang="am">ታ</span></td><td><span class="ex" lang="am">ቴ</span></td><td><span class="ex" lang="am">ት</span></td><td><span class="ex" lang="am">ቶ</span></td><td><span class="ex" lang="am">ቷ</span></td>
+<td><span class="ex ext" lang="am">ⶆ</span></td>
+</tr>
+<tr class="addit"><td><span class="trans">č</span></td><td><span class="ex" lang="am">ቸ</span></td><td><span class="ex" lang="am">ቹ</span></td><td><span class="ex" lang="am">ቺ</span></td><td><span class="ex" lang="am">ቻ</span></td><td><span class="ex" lang="am">ቼ</span></td><td><span class="ex" lang="am">ች</span></td><td><span class="ex" lang="am">ቾ</span></td><td><span class="ex" lang="am">ቿ</span></td>
+<td><span class="ex ext" lang="am">ⶇ</span></td>
+</tr>
+<tr class="ext"><td><span class="trans"></span></td><td><span class="ex" lang="am">ⶨ</span></td><td><span class="ex" lang="am">ⶩ</span></td><td><span class="ex" lang="am">ⶪ</span></td><td><span class="ex" lang="am">ⶫ</span></td><td><span class="ex" lang="am">ⶬ</span></td><td><span class="ex" lang="am">ⶭ</span></td><td><span class="ex" lang="am">ⶮ</span></td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="basic"><td><span class="trans">ḫ</span></td><td><span class="ex" lang="am">ኀ</span></td><td><span class="ex" lang="am">ኁ</span></td><td><span class="ex" lang="am">ኂ</span></td><td><span class="ex" lang="am">ኃ</span></td><td><span class="ex" lang="am">ኄ</span></td><td><span class="ex" lang="am">ኅ</span></td><td><span class="ex" lang="am">ኆ</span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ኇ</span></td>
+
+</tr>
+<tr class="bilab"><td><span class="trans">ḫʷ</span></td><td><span class="ex" lang="am">ኈ</span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ኊ</span></td><td><span class="ex" lang="am">ኋ</span></td><td><span class="ex" lang="am">ኌ</span></td><td><span class="ex" lang="am">ኍ</span></td><td class="blank">&nbsp;</td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="basic"><td><span class="trans">n</span></td><td><span class="ex" lang="am">ነ</span></td><td><span class="ex" lang="am">ኑ</span></td><td><span class="ex" lang="am">ኒ</span></td><td><span class="ex" lang="am">ና</span></td><td><span class="ex" lang="am">ኔ</span></td><td><span class="ex" lang="am">ን</span></td><td><span class="ex" lang="am">ኖ</span></td><td><span class="ex" lang="am">ኗ</span></td>
+<td><span class="ex ext" lang="am">ⶈ</span></td>
+</tr>
+<tr class="addit"><td><span class="trans">ñ </span></td><td><span class="ex" lang="am">ኘ</span></td><td><span class="ex" lang="am">ኙ</span></td><td><span class="ex" lang="am">ኚ</span></td><td><span class="ex" lang="am">ኛ</span></td><td><span class="ex" lang="am">ኜ</span></td><td><span class="ex" lang="am">ኝ</span></td><td><span class="ex" lang="am">ኞ</span></td><td><span class="ex" lang="am">ኟ</span></td>
+<td><span class="ex ext" lang="am">ⶉ</span></td>
+</tr>
+<tr class="basic"><td><span class="trans">ʾ</span></td><td><span class="ex" lang="am">አ</span></td><td><span class="ex" lang="am">ኡ</span></td><td><span class="ex" lang="am">ኢ</span></td><td><span class="ex" lang="am">ኣ</span></td><td><span class="ex" lang="am">ኤ</span></td><td><span class="ex" lang="am">እ</span></td><td><span class="ex" lang="am">ኦ</span></td><td><span class="ex" lang="am">ኧ</span></td>
+<td><span class="ex ext" lang="am">ⶊ</span></td>
+</tr>
+<tr class="basic"><td><span class="trans">k</span></td><td><span class="ex" lang="am">ከ</span></td><td><span class="ex" lang="am">ኩ</span></td><td><span class="ex" lang="am">ኪ</span></td><td><span class="ex" lang="am">ካ</span></td><td><span class="ex" lang="am">ኬ</span></td><td><span class="ex" lang="am">ክ</span></td><td><span class="ex" lang="am">ኮ</span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ኯ</span></td>
+</tr>
+<tr class="bilab"><td><span class="trans">kʷ</span></td><td><span class="ex" lang="am">ኰ</span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ኲ</span></td><td><span class="ex" lang="am">ኳ</span></td><td><span class="ex" lang="am">ኴ</span></td><td><span class="ex" lang="am">ኵ</span></td><td class="blank">&nbsp;</td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="ext"><td><span class="trans"></span></td><td><span class="ex" lang="am">ⷈ</span></td><td><span class="ex" lang="am">ⷉ</span></td><td><span class="ex" lang="am">ⷊ</span></td><td><span class="ex" lang="am">ⷋ</span></td><td><span class="ex" lang="am">ⷌ</span></td><td><span class="ex" lang="am">ⷍ</span></td><td><span class="ex" lang="am">ⷎ</span></td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="addit"><td><span class="trans">x</span></td><td><span class="ex" lang="am">ኸ</span></td><td><span class="ex" lang="am">ኹ</span></td><td><span class="ex" lang="am">ኺ</span></td><td><span class="ex" lang="am">ኻ</span></td><td><span class="ex" lang="am">ኼ</span></td><td><span class="ex" lang="am">ኽ</span></td><td><span class="ex" lang="am">ኾ</span></td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="addit"><td><span class="trans">xʷ </span></td><td><span class="ex" lang="am">ዀ</span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ዂ</span></td><td><span class="ex" lang="am">ዃ</span></td><td><span class="ex" lang="am">ዄ</span></td><td><span class="ex" lang="am">ዅ</span></td><td class="blank">&nbsp;</td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="ext"><td><span class="trans"></span></td><td><span class="ex" lang="am">ⷐ</span></td><td><span class="ex" lang="am">ⷑ</span></td><td><span class="ex" lang="am">ⷒ</span></td><td><span class="ex" lang="am">ⷓ</span></td><td><span class="ex" lang="am">ⷔ</span></td><td><span class="ex" lang="am">ⷕ</span></td><td><span class="ex" lang="am">ⷖ</span></td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="basic"><td><span class="trans">w</span></td><td><span class="ex" lang="am">ወ</span></td><td><span class="ex" lang="am">ዉ</span></td><td><span class="ex" lang="am">ዊ</span></td><td><span class="ex" lang="am">ዋ</span></td><td><span class="ex" lang="am">ዌ</span></td><td><span class="ex" lang="am">ው</span></td><td><span class="ex" lang="am">ዎ</span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ዏ</span></td>
+</tr>
+<tr class="basic"><td><span class="trans">ʿ</span></td><td><span class="ex" lang="am">ዐ</span></td><td><span class="ex" lang="am">ዑ</span></td><td><span class="ex" lang="am">ዒ</span></td><td><span class="ex" lang="am">ዓ</span></td><td><span class="ex" lang="am">ዔ</span></td><td><span class="ex" lang="am">ዕ</span></td><td><span class="ex" lang="am">ዖ</span></td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="basic">
+<td><span class="trans">z</span></td><td><span class="ex" lang="am">ዘ</span></td><td><span class="ex" lang="am">ዙ</span></td><td><span class="ex" lang="am">ዚ</span></td><td><span class="ex" lang="am">ዛ</span></td><td><span class="ex" lang="am">ዜ</span></td><td><span class="ex" lang="am">ዝ</span></td><td><span class="ex" lang="am">ዞ</span></td><td><span class="ex" lang="am">ዟ</span></td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="addit"><td><span class="trans">ž</span></td><td><span class="ex" lang="am">ዠ</span></td><td><span class="ex" lang="am">ዡ</span></td><td><span class="ex" lang="am">ዢ</span></td><td><span class="ex" lang="am">ዣ</span></td><td><span class="ex" lang="am">ዤ</span></td><td><span class="ex" lang="am">ዥ</span></td><td><span class="ex" lang="am">ዦ</span></td><td><span class="ex" lang="am">ዧ</span></td>
+<td><span class="ex ext" lang="am">ⶋ</span></td>
+</tr>
+<tr class="ext"><td><span class="trans"></span></td><td><span class="ex" lang="am">ⶰ</span></td><td><span class="ex" lang="am">ⶱ</span></td><td><span class="ex" lang="am">ⶲ</span></td><td><span class="ex" lang="am">ⶳ</span></td><td><span class="ex" lang="am">ⶴ</span></td><td><span class="ex" lang="am">ⶵ</span></td><td><span class="ex" lang="am">ⶶ</span></td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="ext"><td><span class="trans"></span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ꬑ</span></td><td><span class="ex" lang="am">ꬒ</span></td><td><span class="ex" lang="am">ꬓ</span></td><td><span class="ex" lang="am">ꬔ</span></td><td><span class="ex" lang="am">ꬕ</span></td><td><span class="ex" lang="am">ꬖ</span></td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="basic"><td><span class="trans">y</span></td><td><span class="ex" lang="am">የ</span></td><td><span class="ex" lang="am">ዩ</span></td><td><span class="ex" lang="am">ዪ</span></td><td><span class="ex" lang="am">ያ</span></td><td><span class="ex" lang="am">ዬ</span></td><td><span class="ex" lang="am">ይ</span></td><td><span class="ex" lang="am">ዮ</span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ዯ</span></td>
+</tr>
+<tr class="basic"><td><span class="trans">d</span></td><td><span class="ex" lang="am">ደ</span></td><td><span class="ex" lang="am">ዱ</span></td><td><span class="ex" lang="am">ዲ</span></td><td><span class="ex" lang="am">ዳ</span></td><td><span class="ex" lang="am">ዴ</span></td><td><span class="ex" lang="am">ድ</span></td><td><span class="ex" lang="am">ዶ</span></td><td><span class="ex" lang="am">ዷ</span></td>
+<td><span class="ex ext" lang="am">ⶌ</span></td>
+</tr>
+<tr><td>&nbsp;</td><td><span class="ex" lang="am">ዸ</span></td><td><span class="ex" lang="am">ዹ</span></td><td><span class="ex" lang="am">ዺ</span></td><td><span class="ex" lang="am">ዻ</span></td><td><span class="ex" lang="am">ዼ</span></td><td><span class="ex" lang="am">ዽ</span></td><td><span class="ex" lang="am">ዾ</span></td><td><span class="ex" lang="am">ዿ</span></td>
+<td><span class="ex ext" lang="am">ⶍ</span></td>
+</tr>
+<tr class="ext"><td><span class="trans"></span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ꬉ</span></td><td><span class="ex" lang="am">ꬊ</span></td><td><span class="ex" lang="am">ꬋ</span></td><td><span class="ex" lang="am">ꬌ</span></td><td><span class="ex" lang="am">ꬍ</span></td><td><span class="ex" lang="am">ꬎ</span></td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="addit"><td><span class="trans">ǧ</span></td><td><span class="ex" lang="am">ጀ</span></td><td><span class="ex" lang="am">ጁ</span></td><td><span class="ex" lang="am">ጂ</span></td><td><span class="ex" lang="am">ጃ</span></td><td><span class="ex" lang="am">ጄ</span></td><td><span class="ex" lang="am">ጅ</span></td><td><span class="ex" lang="am">ጆ</span></td><td><span class="ex" lang="am">ጇ</span></td>
+<td><span class="ex ext" lang="am">ⶎ</span></td>
+</tr>
+<tr class="basic"><td><span class="trans">g</span></td><td><span class="ex" lang="am">ገ</span></td><td><span class="ex" lang="am">ጉ</span></td><td><span class="ex" lang="am">ጊ</span></td><td><span class="ex" lang="am">ጋ</span></td><td><span class="ex" lang="am">ጌ</span></td><td><span class="ex" lang="am">ግ</span></td><td><span class="ex" lang="am">ጎ</span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ጏ</span></td>
+</tr>
+<tr class="bilab"><td><span class="trans">gʷ</span></td><td><span class="ex" lang="am">ጐ</span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ጒ</span></td><td><span class="ex" lang="am">ጓ</span></td><td><span class="ex" lang="am">ጔ</span></td><td><span class="ex" lang="am">ጕ</span></td><td class="blank">&nbsp;</td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="ext"><td><span class="trans"></span></td><td><span class="ex" lang="am">ⷘ</span></td><td><span class="ex" lang="am">ⷙ</span></td><td><span class="ex" lang="am">ⷚ</span></td><td><span class="ex" lang="am">ⷛ</span></td><td><span class="ex" lang="am">ⷜ</span></td><td><span class="ex" lang="am">ⷝ</span></td><td><span class="ex" lang="am">ⷞ</span></td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="addit"><td><span class="trans">ŋ</span></td><td><span class="ex" lang="am">ጘ</span></td><td><span class="ex" lang="am">ጙ</span></td><td><span class="ex" lang="am">ጚ</span></td><td><span class="ex" lang="am">ጛ</span></td><td><span class="ex" lang="am">ጜ</span></td><td><span class="ex" lang="am">ጝ</span></td><td><span class="ex" lang="am">ጞ</span></td><td><span class="ex" lang="am">ጟ</span></td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="basic"><td><span class="trans">ṭ</span></td><td><span class="ex" lang="am">ጠ</span></td><td><span class="ex" lang="am">ጡ</span></td><td><span class="ex" lang="am">ጢ</span></td><td><span class="ex" lang="am">ጣ</span></td><td><span class="ex" lang="am">ጤ</span></td><td><span class="ex" lang="am">ጥ</span></td><td><span class="ex" lang="am">ጦ</span></td><td><span class="ex" lang="am">ጧ</span></td>
+<td><span class="ex ext" lang="am">ⶏ</span></td>
+</tr>
+<tr class="addit"><td><span class="trans">č̣</span></td><td><span class="ex" lang="am">ጨ</span></td><td><span class="ex" lang="am">ጩ</span></td><td><span class="ex" lang="am">ጪ</span></td><td><span class="ex" lang="am">ጫ</span></td><td><span class="ex" lang="am">ጬ</span></td><td><span class="ex" lang="am">ጭ</span></td><td><span class="ex" lang="am">ጮ</span></td><td><span class="ex" lang="am">ጯ</span></td>
+<td><span class="ex ext" lang="am">ⶐ</span></td>
+</tr>
+<tr class="ext"><td><span class="trans"></span></td><td><span class="ex" lang="am">ⶸ</span></td><td><span class="ex" lang="am">ⶹ</span></td><td><span class="ex" lang="am">ⶺ</span></td><td><span class="ex" lang="am">ⶻ</span></td><td><span class="ex" lang="am">ⶼ</span></td><td><span class="ex" lang="am">ⶽ</span></td><td><span class="ex" lang="am">ⶾ</span></td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="ext"><td><span class="trans"></span></td><td><span class="ex" lang="am">ꬠ</span></td><td><span class="ex" lang="am">ꬡ</span></td><td><span class="ex" lang="am">ꬢ</span></td><td><span class="ex" lang="am">ꬣ</span></td><td><span class="ex" lang="am">ꬤ</span></td><td><span class="ex" lang="am">ꬥ</span></td><td><span class="ex" lang="am">ꬦ</span></td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="basic"><td><span class="trans">p̣</span></td><td><span class="ex" lang="am">ጰ</span></td><td><span class="ex" lang="am">ጱ</span></td><td><span class="ex" lang="am">ጲ</span></td><td><span class="ex" lang="am">ጳ</span></td><td><span class="ex" lang="am">ጴ</span></td><td><span class="ex" lang="am">ጵ</span></td><td><span class="ex" lang="am">ጶ</span></td><td><span class="ex" lang="am">ጷ</span></td>
+<td><span class="ex ext" lang="am">ⶑ</span></td>
+</tr>
+<tr class="basic"><td><span class="trans">ṣ</span></td><td><span class="ex" lang="am">ጸ</span></td><td><span class="ex" lang="am">ጹ</span></td><td><span class="ex" lang="am">ጺ</span></td><td><span class="ex" lang="am">ጻ</span></td><td><span class="ex" lang="am">ጼ</span></td><td><span class="ex" lang="am">ጽ</span></td><td><span class="ex" lang="am">ጾ</span></td><td><span class="ex" lang="am">ጿ</span></td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="ext"><td><span class="trans"></span></td><td><span class="ex" lang="am">ꬨ</span></td><td><span class="ex" lang="am">ꬩ</span></td><td><span class="ex" lang="am">ꬪ</span></td><td><span class="ex" lang="am">ꬫ</span></td><td><span class="ex" lang="am">ꬬ</span></td><td><span class="ex" lang="am">ꬭ</span></td><td><span class="ex" lang="am">ꬮ</span></td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="basic"><td><span class="trans">ṣ́</span></td><td><span class="ex" lang="am">ፀ</span></td><td><span class="ex" lang="am">ፁ</span></td><td><span class="ex" lang="am">ፂ</span></td><td><span class="ex" lang="am">ፃ</span></td><td><span class="ex" lang="am">ፄ</span></td><td><span class="ex" lang="am">ፅ</span></td><td><span class="ex" lang="am">ፆ</span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ፇ</span></td>
+</tr>
+<tr class="basic">
+<td><span class="trans">f</span></td><td><span class="ex" lang="am">ፈ</span></td><td><span class="ex" lang="am">ፉ</span></td><td><span class="ex" lang="am">ፊ</span></td><td><span class="ex" lang="am">ፋ</span></td><td><span class="ex" lang="am">ፌ</span></td><td><span class="ex" lang="am">ፍ</span></td><td><span class="ex" lang="am">ፎ</span></td><td><span class="ex" lang="am">ፏ</span></td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="ext">
+<td><span class="trans">fʷ</span></td><td><span class="ex" lang="am">ᎈ</span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ᎉ</span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ᎊ</span></td><td><span class="ex" lang="am">ᎋ</span></td><td class="blank">&nbsp;</td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+<tr class="basic"><td><span class="trans">p</span></td><td><span class="ex" lang="am">ፐ</span></td><td><span class="ex" lang="am">ፑ</span></td><td><span class="ex" lang="am">ፒ</span></td><td><span class="ex" lang="am">ፓ</span></td><td><span class="ex" lang="am">ፔ</span></td><td><span class="ex" lang="am">ፕ</span></td><td><span class="ex" lang="am">ፖ</span></td><td><span class="ex" lang="am">ፗ</span></td>
+<td><span class="ex ext" lang="am">ⶒ</span></td>
+</tr>
+<tr class="ext">
+<td><span class="trans">pʷ</span></td><td><span class="ex" lang="am">ᎌ</span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ᎍ</span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ᎎ</span></td><td><span class="ex" lang="am">ᎏ</span></td><td class="blank">&nbsp;</td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="ext"><td><span class="trans">ŋʷ</span></td><td><span class="ex ext" lang="am">ⶓ</span></td><td class="blank">&nbsp;</td><td><span class="ex ext" lang="am">ⶔ</span></td><td class="blank">&nbsp;</td><td><span class="ex ext" lang="am">ⶕ</span></td><td><span class="ex ext" lang="am">ⶖ</span></td><td class="blank">&nbsp;</td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="ext"><td><span class="trans"></span></td><td class="blank">&nbsp;</td><td><span class="ex" lang="am">ꬁ</span></td><td><span class="ex" lang="am">ꬂ</span></td><td><span class="ex" lang="am">ꬃ</span></td><td><span class="ex" lang="am">ꬄ</span></td><td><span class="ex" lang="am">ꬅ</span></td><td><span class="ex" lang="am">ꬆ</span></td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+<tr class="basic"><td><span class="trans">-ya</span></td>
+<td><span class="ex" lang="am">ፘ</span></td><td><span class="ex" lang="am">ፙ</span></td><td><span class="ex" lang="am">ፚ</span></td><td class="blank">&nbsp;</td><td class="blank">&nbsp;</td><td class="blank">&nbsp;</td><td class="blank">&nbsp;</td><td class="blank">&nbsp;</td>
+<td class="blank">&nbsp;</td>
+</tr>
+</tbody></table>
+
+</details>
+
+<!--div id="out"></div><script>
+var out = `<table><thead><tr><td>&nbsp;</td>
+<td><span class="trans">ä</span></td>
+<td><span class="trans">u</span></td>
+<td><span class="trans">i</span></td>
+<td><span class="trans">a</span></td>
+<td><span class="trans">e</span></td>
+<td><span class="trans">ə</span></td>
+<td><span class="trans">o</span></td>
+<td><span class="trans">wa</span></td>
+</tr></thead><tbody>`
+for (i=4608;i<5008;i=i+8) {
+    out += '<tr>'
+    for (j=0;j<8;j++) {
+        if (j===0) out += '<td><span class="trans">xxx</span></td>'
+        out += '<td><span class="ex" lang="am">&#'+(i+j)+';</span></td>'
+        }
+    out += '</tr>\n'
+    }
+for (i=11648;i<11743;i=i+8) {
+    out += '<tr>'
+    for (j=0;j<8;j++) {
+        if (j===0) out += '<td><span class="trans">xxx</span></td>'
+        out += '<td><span class="ex" lang="am">&#'+(i+j)+';</span></td>'
+        }
+    out += '</tr>\n'
+    }
+for (i=43776;i<43822;i=i+8) {
+    out += '<tr>'
+    for (j=0;j<8;j++) {
+        if (j===0) out += '<td><span class="trans">xxx</span></td>'
+        out += '<td><span class="ex" lang="am">&#'+(i+j)+';</span></td>'
+        }
+    out += '</tr>\n'
+    }
+out += '</tbody></table>'
+
+document.getElementById('out').innerHTML = out
+</script-->
+
+
+
+
+<section id="silent">
+<h3><a href="#silent">Silent vowels &amp; consonants</a></h3>
+			<p>The <span class="ex" lang="am">አ</span> and <span class="ex" lang="am">ዐ</span> series have lost their consonantal values and are vowel carriers in modern Amharic. Though sometimes the glottal stop <span class="ipa">ʔ</span> is pronounced in word initial and medial positions, it is often dropped, eg. <span class="charExample"><span class="ex" lang="am">አየሩ</span> <span class="trans">ʾäyäru</span> <span class="ipa">əyyəru</span> <span class="meaning">the weather</span></span>.<sup>12</sup></p>
+<p>Many words end with a consonant followed by no vowel. These are written using the <span class="trans">ə</span> syllable, eg. <span class="charExample"><span class="ex" lang="am">ስም</span> <span class="trans">sǝmǝ</span> <span class="ipa">sɨm</span> <span class="meaning">name</span></span>, however the syllable is ambiguous – in some cases the vowel could be read.</p>
+<p>The same syllable is also used for clusters of consonants with no intervening vowels, eg. <span class="charExample"><span class="ex" lang="am">ኢትዮጵያ</span> <span class="trans">ʾitəyop̣əya</span> <span class="ipa">ʾītyōṗṗyā</span> <span class="meaning">Ethiopia</span></span>.</p>
+<p>Doubled consonants do occur in Amharic and other languages that use the Ethiopic script, and they can be important to distinguish one word from another. However, they are not marked in the script (see the previous example for Ethiopia).</p>
+<p>According to Wikipedia<sup>12</sup>, Ethiopian novelist Haddis Alemayehu, who was an advocate of Amharic orthography reform, indicated gemination in his novel <span class="trans">Fǝqǝr Ǝskä Mäqabǝr</span> by placing a dot above the characters whose consonants were geminated, but this practice is rare. Unicode provides <span class="codepoint"><span lang="am">&#x25CC;&#x135F;</span> [<a href="ethiopic#char135F"><span class="uname">U+135F ETHIOPIC COMBINING GEMINATION MARK​</span></a>]</span> for this, or sometimes <span class="codepoint"><span lang="am">&#x25CC;&#x030E;</span> [<a href="ethiopic#char030E"><span class="uname">U+030E COMBINING DOUBLE VERTICAL LINE ABOVE​</span></a>]</span> is used.</p>
+</section>
+</section>
+<!--section id="gsub" class="note">
+<h2><a href="#gsub">Context-based rendering</a></h2>
+  
+	  <p>Although modern Ethiopic uses fewer conjunct ligatures than most other indic scripts, there are still many ligatures needed for a Ethiopic font, mostly for combinations of base consonant and vowel sign.</p>
+			<p>Some vowel signs produce significantly different, commonly ligated, shapes as they combine with the base consonant. The figure below shows just a few examples of shapes produced by just one vowel sign, <span class="codepoint"><span lang="ta">&#x25CC;&#x0BC1;</span> <a href="/scripts/ethiopic/block#char0BC1">[<span class="uname">U+0BC1 TAMIL VOWEL SIGN U​</span>]</a></span>, when combined with various different base characters.</p>
+	<figure id="consvowellig">
+			  <table>
+			    <tbody>
+			      <tr>
+			        <th>Base consonant</th>
+			        <th>Combination</th>
+                </tr>
+		          <tr>
+			          <td><span class="ex" lang="ta">க</span></td>
+			          <td><span class="ex" lang="ta">கு</span></td>
+                </tr>
+		          <tr>
+			            <td><span class="ex" lang="ta">ச</span></td>
+			            <td><span class="ex" lang="ta">சு</span></td>
+                </tr>
+	              <tr>
+			              <td><span class="ex" lang="ta">ஞ</span></td>
+			              <td><span class="ex" lang="ta">ஞு</span></td>
+                </tr>
+	              <tr>
+			                <td><span class="ex" lang="ta">ட</span></td>
+			                <td><span class="ex" lang="ta">டு</span></td>
+                </tr>
+                  <tr>
+			                  <td><span class="ex" lang="ta">ஜ</span></td>
+			                  <td><span class="ex" lang="ta">ஜு</span></td>
+                </tr>
+                </tbody>
+		      </table>
+			  <figcaption>Ligatures with  <span class="codepoint"><span lang="ta">&#x25CC;&#x0BC1;</span> <a href="/scripts/ethiopic/block#char0BC1">[<span class="uname">U+0BC1 TAMIL VOWEL SIGN U​</span>]</a></span>.</figcaption>
+  </figure>
+	  <p>See <a href="http://www.unicode.org/versions/Unicode7.0.0/ch12.pdf">The Unicode Standard</a>, pp 473-476, for a list and description of many more Ethiopic ligatures.</p>
+	</section-->
+   
+   
+   
+   
+    
+<section id="numbers" class="note">
+<h2><a href="#numbers">Numbers</a></h2>
+		<p>European digits are often used, but Ethiopic also has a native numbering system that is additive in nature. </p>
+<figure>
+<div class="listAll" onClick="listAll(this, 'am')">list all</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="am">፩</span><span class="listTrans">1</span></div>
+<div class="listPair"><span class="listItem" lang="am">፪</span><span class="listTrans">2</span></div>
+<div class="listPair"><span class="listItem" lang="am">፫</span><span class="listTrans">3</span></div>
+<div class="listPair"><span class="listItem" lang="am">፬</span><span class="listTrans">4</span></div>
+<div class="listPair"><span class="listItem" lang="am">፭</span><span class="listTrans">5</span></div>
+<div class="listPair"><span class="listItem" lang="am">፮</span><span class="listTrans">6</span></div>
+<div class="listPair"><span class="listItem" lang="am">፯</span><span class="listTrans">7</span></div>
+<div class="listPair"><span class="listItem" lang="am">፰</span><span class="listTrans">8</span></div>
+<div class="listPair"><span class="listItem" lang="am">፱</span><span class="listTrans">9</span></div>
+<div class="listPair"><span class="listItem" lang="am">፲</span><span class="listTrans">10</span></div>
+<div class="listPair"><span class="listItem" lang="am">፳</span><span class="listTrans">20</span></div>
+<div class="listPair"><span class="listItem" lang="am">፴</span><span class="listTrans">30</span></div>
+<div class="listPair"><span class="listItem" lang="am">፵</span><span class="listTrans">40</span></div>
+<div class="listPair"><span class="listItem" lang="am">፶</span><span class="listTrans">50</span></div>
+<div class="listPair"><span class="listItem" lang="am">፷</span><span class="listTrans">60</span></div>
+<div class="listPair"><span class="listItem" lang="am">፸</span><span class="listTrans">70</span></div>
+<div class="listPair"><span class="listItem" lang="am">፹</span><span class="listTrans">80</span></div>
+<div class="listPair"><span class="listItem" lang="am">፺</span><span class="listTrans">90</span></div>
+<div class="listPair"><span class="listItem" lang="am">፻</span><span class="listTrans">100</span></div>
+<div class="listPair"><span class="listItem" lang="am">፼</span><span class="listTrans">10,000</span></div>
+</div>
+</figure>
+
+<p>You can generate Ethiopic numbers using the <a href="https://r12a.github.io/apps/counterconverter/">Counter styles converter</a> app. Type in a number at the top and select <samp>ethiopic-numeric</samp> from the select box.</p>
+<figure>
+    <p lang="am" class="ex large">፳፫፻፵፭</p>
+       <figcaption>The number 2,345 using the Ethiopic numbering system.</figcaption>
+ </figure>
+ 
+ <p>Note that there should be an unbroken line across the whole number at the top and bottom.</p>
+</section>
+
+
+
+
+
+<section id="layout">
+<h2><a href="#layout">Text layout</a></h2>
+
+<section id="punctuation" class="note">
+<h3><a href="#dir">Text direction</a></h3>
+    <p>The Ethiopic  script is written  horizontally, left to right.</p>
+</section>
+
+    
+        
+<section>
+<h3><a href="#punctuation">Text delimiters</a></h3>
+    <p>Words are often separated by spaces in modern text, however they may  be separated by <span class="codepoint"><span lang="am">&#x1361;</span> [<a href="ethiopic#char1361"><span class="uname">U+1361 ETHIOPIC WORDSPACE</span></a>]</span> instead (see the Amharic sample text above).</p>
+  <p>Some Western punctuation may be used, but Ethiopic has several native punctuation characters.</p>
+<table class="character_list">
+  <tbody>
+         <tr>
+          <th scope="row">phrase</th>
+          <td><p><span class="codepoint"><span lang="am">&#x1363;</span> [<a href="ethiopic#char1363"><span class="uname">U+1363 ETHIOPIC COMMA</span></a>]</span> or <span class="codepoint"><span lang="am">&#x1365;</span> [<a href="ethiopic#char1365"><span class="uname">U+1365 ETHIOPIC COLON</span></a>]</span> Both are roughly equivalent to a comma. They are considered glyph variants for the same punctuation symbol, although usually a document will consistently use only one or the other. The latter is more common in religious texts, and is used for biblical references where English would use a colon, eg. <span class="charExample"><span class="ex" lang="am">ማቴ4፥23</span> <span class="meaning">Matt 4:23</span></span>.</p>
+<p><span class="codepoint"><span lang="am">&#x1364;</span> [<a href="ethiopic#char1364"><span class="uname">U+1364 ETHIOPIC SEMICOLON</span></a>]</span> </p>
+<p><span class="codepoint"><span lang="am">&#x1366;</span> [<a href="ethiopic#char1366"><span class="uname">U+1366 ETHIOPIC PREFACE COLON</span></a>]</span> Follows clarification of a subject. It will preface validation statements and examples that support the clarification.&nbsp;</p></td>
+        </tr>
+       <tr>
+        <th scope="row">sentence</th>
+        <td><span class="codepoint"><span lang="am">&#x1362;</span> [<a href="ethiopic#char1362"><span class="uname">U+1362 ETHIOPIC FULL STOP</span></a>]</span>&nbsp; This may be immediately preceded by a wordspace character.</td>
+       </tr>
+<tr>
+<th scope="row">question mark</th>
+<td><span class="codepoint"><span lang="am">&#x1367;</span> [<a href="ethiopic#char1367"><span class="uname">U+1367 ETHIOPIC QUESTION MARK</span></a>]</span>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<th scope="row">paragraph</th>
+<td><span class="codepoint"><span lang="am">&#x1368;</span> [<a href="ethiopic#char1368"><span class="uname">U+1368 ETHIOPIC PARAGRAPH SEPARATOR</span></a>]</span> May be used to conclude the final paragraph of a section in lieu of <span class="codepoint"><span lang="">።</span></span>. Like <span class="codepoint"><span lang="">፠</span></span>,  three or more may also be used together on a line of their own.&nbsp;</td>
+</tr>
+<tr>
+<th scope="row">section</th>
+<td><span class="codepoint"><span lang="am">&#x1360;</span> [<a href="ethiopic#char1360"><span class="uname">U+1360 ETHIOPIC SECTION MARK</span></a>]</span> Used to divide sections or subsections; generally three or more used together on a line of their own.&nbsp;</td>
+</tr>
+     </tbody>
+    </table>
+</section>
+
+
+
+
+<section id="linebreak">
+    <h3><a href="#linebreak">Line breaking &amp; hyphenation</a></h3>
+<p>Ethiopic text is generally wrapped wherever it hits the right margin, whether wordspace or space are used to separate words, and no hyphenation occurs. However, a new line should not start with a space, math operator or any of the following:<sup>11</sup></p>
+<figure>
+<div class="listAll" onClick="listAll(this, 'am')">list all</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="am">፡</span></div>
+<div class="listPair"><span class="listItem" lang="am">፣</span></div>
+<div class="listPair"><span class="listItem" lang="am">፤</span></div>
+<div class="listPair"><span class="listItem" lang="am">፥</span></div>
+<div class="listPair"><span class="listItem" lang="am">፦</span></div>
+<div class="listPair"><span class="listItem" lang="am">።</span></div>
+<div class="listPair"><span class="listItem" lang="am">?</span></div>
+<div class="listPair"><span class="listItem" lang="am">!</span></div>
+<div class="listPair"><span class="listItem" lang="am">¡</span></div>
+<div class="listPair"><span class="listItem" lang="am">)</span></div>
+<div class="listPair"><span class="listItem" lang="am">]</span></div>
+<div class="listPair"><span class="listItem" lang="am">}</span></div>
+<div class="listPair"><span class="listItem" lang="am">/</span></div>
+<div class="listPair"><span class="listItem" lang="am">%</span></div>
+<div class="listPair"><span class="listItem" lang="am">–</span></div>
+<div class="listPair"><span class="listItem" lang="am">”</span></div>
+<div class="listPair"><span class="listItem" lang="am">›</span></div>
+<div class="listPair"><span class="listItem" lang="am">»</span></div>
+<div class="listPair"><span class="listItem" lang="am"></span></div>
+</div>
+</figure>
+
+</section>
+
+
+
+
+<section id="justify">
+    <h3><a href="#justify">Justification</a></h3>
+<p>Full justification is a common typesetting practice. Ethiopic is usually justified by adjusting inter-word spacing. Where words are separated with <span class="codepoint"><span lang="am">&#x1361;</span> [<a href="ethiopic#char1361"><span class="uname">U+1361 ETHIOPIC WORDSPACE</span></a>]</span> this is still the case, however no extra spaces should be added – the width of the wordspace character changes.</p>
+<p>When the wordspace character width changes, the wordspace glyph may be centred, or may appear alongside the previous word, depending on preference.</p>
+<p class="instructions">Use the control below to see how your browser justifies the text sample here.</p>
+    <p lang="am" id="justificationExample" style="text-align: start;">አንቀጽ፡፯፤ ሰው፡ሁሉ፡በሕግ፡ፊት፡እኩል፡ነው።፡ያለአንዳች፡ልዩነትም፡ሕጉ፡ደህንነቱን፡እንዲጠበቅለት፡እኩል፡የሆነ፡መብት፡አለው።፡ይህንን፡ውሳኔ፡በመጣስ፡ከሚደረግ፡ልዩነት፡ለማድረግ፡ከሚነሳሳ፡እንዲጠበቅ፡ሁሉም፡የእኩል፡መብት፡አለው።፡</p>
+    <p class="english" dir="ltr">
+      <button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Justify   </button>
+    </p>
+</section>
+<p class="ednote">Further information needed for this section includes:
+baselines,
+emphasis &amp; highlighting,
+text decoration,
+abbreviations &amp; ellipsis,
+hyphens & dashes
+glyph controls
+quotations,
+repetition,
+
+justification &amp; alignment,
+first-letter styling,
+
+vertical text,
+notes &amp; footnotes,
+page layout
+</p>
+</section>
+  
+  
+  
+<section id="references"> 
+
+<h2><a href="#references">Further reading</a></h2>
+		<ol>
+		  <li>[Daniels] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
+		    0-19-507993-0</li>
+		  <li>[WPScript] Wikipedia, <a href="http://en.wikipedia.org/wiki/Ethiopic_script">Ge'ez Script</a></li>
+		  <li>[WPLanguage] <a href="http://en.wikipedia.org/wiki/Ethiopic_language">Ethiopic language</a></li>
+		  <li>[Unicode] <a href="http://www.unicode.org/versions/Unicode7.0.0/ch12.pdf">The Unicode Standard</a></li>
+		  <li>[Omniglot] <a href="http://www.omniglot.com/writing/ethiopic.htm">Ethiopic</a></li>
+		  <li>[IQEthiopic] <a href="http://www.wordiq.com/definition/Ethiopic_language">Ethiopic language - Definition</a></li>
+		  <li>[UnicodeFAQ] <a href="http://unicode.org/faq/ethiopic.html">Ethiopic Language and Script</a></li>
+		  <li>[NamedSequences] <a href="http://unicode.org/faq/ethiopic.html">Ethiopic Vowels, Consonants, and Syllables: Alternative Formats</a></li>
+		  <li>Anandam Krishnamurthi, <strong>Learn Ethiopic in a Month</strong>, Readwell's, ISBN 9788187782049</li>
+		  <li><a href="http://unicode.org/faq/ethiopic.html">Ethiopic Language and Script</a> (Unicode FAQ)</li>
+<li>[elreq] Daniel Yacob, <a href="http://w3c.github.io/elreq/"><cite>Ethiopic Layout Requirements</cite></a></li>
+<li>[WPAmharicIPA] <a href="https://en.wikipedia.org/wiki/Help:IPA/Amharic">Help:IPA/Amharic</a></li>
+  </ol>
+</section>
+
+
+
+
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/ethiopic"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-22  7:19<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bethiopic%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fethiopic%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
+<div id="panel" style="display:none"><div style="display:block">&nbsp;</div><p style="text-align:right;"></p></div>
+
+
+
+<script type="text/javascript">
+var base = '/scripts/ethiopic/block'
+initialiseShowNames(base, 'c');
+document.getElementById('featureTableBody').innerHTML = makeSidePanel("Ethiopic","")
+createtoc(3)
+setFigureRefs()
+</script>
+
+</body>
+</html>
