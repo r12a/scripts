@@ -1,0 +1,2254 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<title>Sinhala character notes</title>
+<meta name="description" content="Notes about characters in the Unicode Sinhala script blocks."/>
+<link rel="stylesheet" type="text/css" href="../../shared/style/docs.css" />
+<link rel="stylesheet" type="text/css" href="../block/block-style.css" />
+<link rel="stylesheet" type="text/css" href="local.css" />
+
+<script type="text/javascript" src="/shared/code/boilerplate.js"></script>
+<script type="text/javascript" src="/shared/code/toc_2016.js"></script>
+<script type="text/javascript" src="/shared/code/all-names.js"></script>
+<script type="text/javascript" src="/shared/code/character_conversion.js"></script>
+<script type="text/javascript" src="../../shared/code/show_codepoints.js"></script>
+<script type="text/javascript" src="/shared/fontlists/manage.js"></script>
+<script type="text/javascript" src="/shared/code/scriptGroups.js"></script>
+<script type="text/javascript" src="../block/functions.js"></script>
+
+<script type="text/javascript" src="/shared/fontlists/sinhala.js"> </script>
+
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+<style id="includeStyles"></style>
+<style>.notes .character p { line-height: 35px; }</style>
+</head>
+
+<body>
+<header>
+  <div id="header-boilerplate"></div>
+  <script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script> 
+</header>
+<h1>Sinhala character notes</h1>
+
+<nav id="top"><a href="#header-boilerplate"><img src="/shared/images/up.png" alt="go to page top"/></a></nav>
+
+<aside class="sidebar">
+  <nav>
+    <h2 class="notoc flush" id="tochead">Contents</h2>
+    <div id="toc"><!-- placeholder --></div>
+    <div class="noprint">
+      <h2 class="notoc" id="links">Related links</h2>
+      <p><a href="../links?script=sinhala" target="_blank">Sinhala script links</a></p>
+    </div>
+  </nav>
+  
+  
+  <div id="fontsetting" class="closed">
+    <h2 class="notoc"><a id="fonts">Fonts</a></h2>
+    <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
+    <p>Set  font for the large box<br/>
+      <select  id="slfontswitchfont" 
+onchange="var params = this.value.split(':');setBoxFont(params[0]);">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+    <p>Set font for Sinhala examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'ar');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width: 30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'ar');" />
+    </p>
+    <p>Set font for Urdu examples<br/>
+      <select id="ex2fontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#ex2fontswitchsize').value+'px', 'ur');">
+      </select>
+      <script>document.getElementById('ex2fontswitchfont').innerHTML = fontSelection</script>
+      <input id="ex2fontswitchsize" type="number" value="28" style="width: 30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'ur');" />
+    </p>
+    <p onclick="newfont=prompt('Enter the font name. (Only spaces, hyphens, underlines and alphanum allowed.)', '...'); addFontToLists(newfont, 'exfontswitchfont,ex2fontswitchfont,slfontswitchfont');" style="cursor:pointer;">Add a font to these lists</p>
+  </div>
+</aside>
+
+
+<p id="status">Updated 
+  <!-- #BeginDate format:Sw1 -->24 January, 2018<!-- #EndDate -->
+&bull; tags <a href="http://rishida.net/blog/index.php?tag=sinhala" title="Show all blog posts tagged with 'sinhala'">sinhala</a>, <a href="http://rishida.net/blog/index.php?tag=urdu" title="Show all blog posts tagged with 'urdu'">urdu</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>.</p>
+<div id="intro">
+  <p>This page lists characters in the following Unicode blocks and provides information about them. </p>
+  <ul>
+      <li><a href="/uniview/?block=sinhala">Sinhala</a></li>
+      <li><a href="/uniview/?block=sinhala_archaic_numbers">Sinhala Archaic Numbers </a></li>
+</ul>
+<p>This is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places.   </p>
+<p>For a summary of the script and its use in various writing systems, see the page <a class="linkHighlight" href="/scripts/sinhala/">Sinhala script summary</a>.   For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>.</p>
+<p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
+  <p class="instructions">To find a character by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the hex number here:</p>
+  <p>Find <input type="text" onChange="var hex=this.value;if (hex!=''){while(hex.length<4){hex='0'+hex;}document.location='#char'+hex.toUpperCase();}"/></p>
+  <p class="instructions">You can also find characters for which there are annotations using UniView (switch on <samp>Show notes</samp>).</p>
+  <p class="instructions">To view this page as intended, you  need a Sinhala  font.  The page is served with   the Noto Serif Sinhala web font. You can select alternative fonts  for the descriptive text from the control to the right. The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. If there is no glyph and you want to see what it looks like, click on <samp>See in UniView</samp>.</p>
+</div>
+<section id="consonants">
+  <h2><a href="#consonants">Consonants</a></h2>
+  <section id="suddha">
+    <h3><a href="suddha">Śuddha consonants</a></h3>
+
+<div class="character" id="char0D9A">
+<div class="charimg">&#x0D9A;</div>
+<p class="charname"><strong>U+0D9A</strong> <a href="#char0D9A">SINHALA LETTER ALPAPRAANA KAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D9A">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter ka</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> śuddha consonant  &nbsp;&nbsp;
+     <span class="trans">k</span></p>
+<p><span class="ipa">k</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0D9C">
+<div class="charimg">&#x0D9C;</div>
+<p class="charname"><strong>U+0D9C</strong> <a href="#char0D9C">SINHALA LETTER ALPAPRAANA GAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D9C">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter ga</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> śuddha consonant  &nbsp;&nbsp;
+     <span class="trans">g</span></p>
+<p><span class="ipa">g</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0D9F">
+<div class="charimg">&#x0D9F;</div>
+<p class="charname"><strong>U+0D9F</strong> <a href="#char0D9F">SINHALA LETTER SANYAKA GAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D9F">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter nnga</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> śuddha consonant  &nbsp;&nbsp;
+     <span class="trans">ňg</span></p>
+<p><span class="ipa">ᵑɡ</span> Prenasalised consonant.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DA0">
+<div class="charimg">&#x0DA0;</div>
+<p class="charname"><strong>U+0DA0</strong> <a href="#char0DA0">SINHALA LETTER ALPAPRAANA CAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DA0">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter ca</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> śuddha consonant  &nbsp;&nbsp;
+     <span class="trans">c</span></p>
+<p><span class="ipa">ʧ</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DA2">
+<div class="charimg">&#x0DA2;</div>
+<p class="charname"><strong>U+0DA2</strong> <a href="#char0DA2">SINHALA LETTER ALPAPRAANA JAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DA2">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter ja</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> śuddha consonant  &nbsp;&nbsp;
+     <span class="trans">j</span></p>
+<p><span class="ipa">ʤ</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DA7">
+<div class="charimg">&#x0DA7;</div>
+<p class="charname"><strong>U+0DA7</strong> <a href="#char0DA7">SINHALA LETTER ALPAPRAANA TTAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DA7">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter tta</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> śuddha consonant  &nbsp;&nbsp;
+     <span class="trans">ṭ</span></p>
+<p><span class="ipa">ʈ</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DA9">
+<div class="charimg">&#x0DA9;</div>
+<p class="charname"><strong>U+0DA9</strong> <a href="#char0DA9">SINHALA LETTER ALPAPRAANA DDAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DA9">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter dda</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> śuddha consonant  &nbsp;&nbsp;
+     <span class="trans">ḍ</span></p>
+<p><span class="ipa">ɖ</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DAB">
+<div class="charimg">&#x0DAB;</div>
+<p class="charname"><strong>U+0DAB</strong> <a href="#char0DAB">SINHALA LETTER MUURDHAJA NAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DAB">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter nna</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> śuddha consonant  &nbsp;&nbsp;
+     <span class="trans">ṇ</span></p>
+<p><span class="ipa">n</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DAC">
+<div class="charimg">&#x0DAC;</div>
+<p class="charname"><strong>U+0DAC</strong> <a href="#char0DAC">SINHALA LETTER SANYAKA DDAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DAC">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter nndda</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> śuddha consonant  &nbsp;&nbsp;
+     <span class="trans">ňḍ</span></p>
+<p><span class="ipa">ⁿɖ</span> Prenasalised consonant.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DAD">
+<div class="charimg">&#x0DAD;</div>
+<p class="charname"><strong>U+0DAD</strong> <a href="#char0DAD">SINHALA LETTER ALPAPRAANA TAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DAD">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter ta</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> śuddha consonant  &nbsp;&nbsp;
+     <span class="trans">t</span></p>
+<p><span class="ipa">t</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DAF">
+<div class="charimg">&#x0DAF;</div>
+<p class="charname"><strong>U+0DAF</strong> <a href="#char0DAF">SINHALA LETTER ALPAPRAANA DAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DAF">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter da</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> śuddha consonant  &nbsp;&nbsp;
+     <span class="trans">d</span></p>
+<p><span class="ipa">d</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DB3">
+<div class="charimg">&#x0DB3;</div>
+<p class="charname"><strong>U+0DB3</strong> <a href="#char0DB3">SINHALA LETTER SANYAKA DAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DB3">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter nda</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> śuddha consonant  &nbsp;&nbsp;
+     <span class="trans">ňd</span></p>
+<p><span class="ipa">ⁿd</span> Prenasalised consonant.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DB4">
+<div class="charimg">&#x0DB4;</div>
+<p class="charname"><strong>U+0DB4</strong> <a href="#char0DB4">SINHALA LETTER ALPAPRAANA PAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DB4">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter pa</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> śuddha consonant  &nbsp;&nbsp;
+     <span class="trans">p</span></p>
+<p><span class="ipa">p</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DB6">
+<div class="charimg">&#x0DB6;</div>
+<p class="charname"><strong>U+0DB6</strong> <a href="#char0DB6">SINHALA LETTER ALPAPRAANA BAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DB6">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter ba</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> śuddha consonant  &nbsp;&nbsp;
+     <span class="trans">b</span></p>
+<p><span class="ipa">b</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DB8">
+<div class="charimg">&#x0DB8;</div>
+<p class="charname"><strong>U+0DB8</strong> <a href="#char0DB8">SINHALA LETTER MAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DB8">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter ma</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> śuddha consonant  &nbsp;&nbsp;
+     <span class="trans">m</span></p>
+<p><span class="ipa">m</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DB9">
+<div class="charimg">&#x0DB9;</div>
+<p class="charname"><strong>U+0DB9</strong> <a href="#char0DB9">SINHALA LETTER AMBA BAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DB9">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter mba</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> śuddha consonant  &nbsp;&nbsp;
+     <span class="trans">m̌b</span></p>
+<p><span class="ipa">ᵐb</span> Prenasalised consonant.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DBA">
+<div class="charimg">&#x0DBA;</div>
+<p class="charname"><strong>U+0DBA</strong> <a href="#char0DBA">SINHALA LETTER YAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DBA">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter ya</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> śuddha consonant  &nbsp;&nbsp;
+     <span class="trans">y</span></p>
+<p><span class="ipa">j</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DBB">
+<div class="charimg">&#x0DBB;</div>
+<p class="charname"><strong>U+0DBB</strong> <a href="#char0DBB">SINHALA LETTER RAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DBB">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter ra</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> śuddha consonant  &nbsp;&nbsp;
+     <span class="trans">r</span></p>
+<p><span class="ipa">r</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DBD">
+<div class="charimg">&#x0DBD;</div>
+<p class="charname"><strong>U+0DBD</strong> <a href="#char0DBD">SINHALA LETTER DANTAJA LAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DBD">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter la<br/>• dental</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> śuddha consonant  &nbsp;&nbsp;
+     <span class="trans">l</span></p>
+<p><span class="ipa">l</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DC5">
+<div class="charimg">&#x0DC5;</div>
+<p class="charname"><strong>U+0DC5</strong> <a href="#char0DC5">SINHALA LETTER MUURDHAJA LAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DC5">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter lla<br/>• retroflex</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> śuddha consonant  &nbsp;&nbsp;
+     <span class="trans">ḷ</span></p>
+<p><span class="ipa">ɭ</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DC0">
+<div class="charimg">&#x0DC0;</div>
+<p class="charname"><strong>U+0DC0</strong> <a href="#char0DC0">SINHALA LETTER VAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DC0">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter va</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> śuddha consonant  &nbsp;&nbsp;
+     <span class="trans">v</span></p>
+<p><span class="ipa">ʋ</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DC3">
+<div class="charimg">&#x0DC3;</div>
+<p class="charname"><strong>U+0DC3</strong> <a href="#char0DC3">SINHALA LETTER DANTAJA SAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DC3">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter sa<br/>• dental</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> śuddha consonant  &nbsp;&nbsp;
+     <span class="trans">s</span></p>
+<p><span class="ipa">s</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DC4">
+<div class="charimg">&#x0DC4;</div>
+<p class="charname"><strong>U+0DC4</strong> <a href="#char0DC4">SINHALA LETTER HAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DC4">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter ha</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> śuddha consonant  &nbsp;&nbsp;
+     <span class="trans">h</span></p>
+<p><span class="ipa">ɦ</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+
+</section>
+
+
+<section id="misra">
+  <h3><a href="#misra">Miśra consonants</a></h3>
+
+<div class="character" id="char0D9B">
+<div class="charimg">&#x0D9B;</div>
+<p class="charname"><strong>U+0D9B</strong> <a href="#char0D9B">SINHALA LETTER MAHAAPRAANA KAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D9B">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter kha</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> miśra consonant  &nbsp;&nbsp;
+     <span class="trans">kh</span></p>
+<p><span class="ipa">k</span> Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0D9D">
+<div class="charimg">&#x0D9D;</div>
+<p class="charname"><strong>U+0D9D</strong> <a href="#char0D9D">SINHALA LETTER MAHAAPRAANA GAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D9D">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter gha</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> miśra consonant  &nbsp;&nbsp;
+     <span class="trans">gh</span></p>
+<p><span class="ipa">g</span> Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0D9E">
+<div class="charimg">&#x0D9E;</div>
+<p class="charname"><strong>U+0D9E</strong> <a href="#char0D9E">SINHALA LETTER KANTAJA NAASIKYAYA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D9E">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter nga</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> miśra consonant  &nbsp;&nbsp;
+     <span class="trans">ṅ</span></p>
+<p><span class="ipa">ŋ</span> Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DA1">
+<div class="charimg">&#x0DA1;</div>
+<p class="charname"><strong>U+0DA1</strong> <a href="#char0DA1">SINHALA LETTER MAHAAPRAANA CAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DA1">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter cha</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> miśra consonant  &nbsp;&nbsp;
+     <span class="trans">ch</span></p>
+<p><span class="ipa">ʧ</span> Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DA3">
+<div class="charimg">&#x0DA3;</div>
+<p class="charname"><strong>U+0DA3</strong> <a href="#char0DA3">SINHALA LETTER MAHAAPRAANA JAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DA3">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter jha</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> miśra consonant  &nbsp;&nbsp;
+     <span class="trans">jh</span></p>
+<p><span class="ipa">ʤ</span> Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DA4">
+<div class="charimg">&#x0DA4;</div>
+<p class="charname"><strong>U+0DA4</strong> <a href="#char0DA4">SINHALA LETTER TAALUJA NAASIKYAYA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DA4">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter nya</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> miśra consonant  &nbsp;&nbsp;
+     <span class="trans">ñ</span></p>
+<p><span class="ipa">ɲ</span> Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DA8">
+<div class="charimg">&#x0DA8;</div>
+<p class="charname"><strong>U+0DA8</strong> <a href="#char0DA8">SINHALA LETTER MAHAAPRAANA TTAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DA8">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter ttha</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> miśra consonant  &nbsp;&nbsp;
+     <span class="trans">ṭh</span></p>
+<p><span class="ipa">ʈ</span> Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DAA">
+<div class="charimg">&#x0DAA;</div>
+<p class="charname"><strong>U+0DAA</strong> <a href="#char0DAA">SINHALA LETTER MAHAAPRAANA DDAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DAA">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter ddha</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> miśra consonant  &nbsp;&nbsp;
+     <span class="trans">ḍh</span></p>
+<p><span class="ipa">ɖ</span> Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DAE">
+<div class="charimg">&#x0DAE;</div>
+<p class="charname"><strong>U+0DAE</strong> <a href="#char0DAE">SINHALA LETTER MAHAAPRAANA TAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DAE">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter tha</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> miśra consonant  &nbsp;&nbsp;
+     <span class="trans">th</span></p>
+<p><span class="ipa">t</span> Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DB0">
+<div class="charimg">&#x0DB0;</div>
+<p class="charname"><strong>U+0DB0</strong> <a href="#char0DB0">SINHALA LETTER MAHAAPRAANA DAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DB0">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter dha</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> miśra consonant  &nbsp;&nbsp;
+     <span class="trans">dh</span></p>
+<p><span class="ipa">d</span> Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DB1">
+<div class="charimg">&#x0DB1;</div>
+<p class="charname"><strong>U+0DB1</strong> <a href="#char0DB1">SINHALA LETTER DANTAJA NAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DB1">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter na</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> miśra consonant  &nbsp;&nbsp;
+     <span class="trans">n</span></p>
+<p><span class="ipa">n</span> Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DB5">
+<div class="charimg">&#x0DB5;</div>
+<p class="charname"><strong>U+0DB5</strong> <a href="#char0DB5">SINHALA LETTER MAHAAPRAANA PAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DB5">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter pha</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> miśra consonant  &nbsp;&nbsp;
+     <span class="trans">ph</span></p>
+<p><span class="ipa">p</span> Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DB7">
+<div class="charimg">&#x0DB7;</div>
+<p class="charname"><strong>U+0DB7</strong> <a href="#char0DB7">SINHALA LETTER MAHAAPRAANA BAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DB7">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter bha</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> miśra consonant  &nbsp;&nbsp;
+     <span class="trans">bh</span></p>
+<p><span class="ipa">b</span> Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DC1">
+<div class="charimg">&#x0DC1;</div>
+<p class="charname"><strong>U+0DC1</strong> <a href="#char0DC1">SINHALA LETTER TAALUJA SAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DC1">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter sha</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> miśra consonant  &nbsp;&nbsp;
+     <span class="trans">ś</span></p>
+<p><span class="ipa">ʃ</span> Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DC2">
+<div class="charimg">&#x0DC2;</div>
+<p class="charname"><strong>U+0DC2</strong> <a href="#char0DC2">SINHALA LETTER MUURDHAJA SAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DC2">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter ssa<br/>• retroflex</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> miśra consonant  &nbsp;&nbsp;
+     <span class="trans">ṣ</span></p>
+<p><span class="ipa">ʃ</span> Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DC6">
+<div class="charimg">&#x0DC6;</div>
+<p class="charname"><strong>U+0DC6</strong> <a href="#char0DC6">SINHALA LETTER FAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DC6">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter fa</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> miśra consonant  &nbsp;&nbsp;
+     <span class="trans">f</span></p>
+<p><span class="ipa">f</span> Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc). A new consonant for foreign sounds.</p>
+<p>Sometimes this consonant is written using a grapheme that represents the Latin <span class="trans">f</span> combined with <span class="codepoint"><span lang="si">&#x0DB4;</span> [<a href="/scripts/sinhala/block#char0DB4"><span class="uname">U+0DB4 SINHALA LETTER ALPAPRAANA PAYANNA</span></a>]</span>.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DA5">
+<div class="charimg">&#x0DA5;</div>
+<p class="charname"><strong>U+0DA5</strong> <a href="#char0DA5">SINHALA LETTER TAALUJA SANYOOGA NAAKSIKYAYA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DA5">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter jnya</div>
+<div class="notes"></div></div>
+
+<div class="character" id="char0DA6">
+<div class="charimg">&#x0DA6;</div>
+<p class="charname"><strong>U+0DA6</strong> <a href="#char0DA6">SINHALA LETTER SANYAKA JAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DA6">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter nyja</div></div>
+
+
+
+
+</section>
+</section>
+
+
+<section id="vowels">
+<h2><a href="#vowels">Vowels</a></h2>
+
+<section id="independent">
+  <h3><a href="#independent">Independent vowels</a></h3>
+
+<div class="character" id="char0D85">
+<div class="charimg">&#x0D85;</div>
+<p class="charname"><strong>U+0D85</strong> <a href="#char0D85">SINHALA LETTER AYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D85">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter a</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> independent vowel  &nbsp;&nbsp;
+     <span class="trans">a</span></p>
+<p><span class="ipa">a</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>There is no corresponding vowel sign.</p>
+</div></div>
+
+<div class="character" id="char0D86">
+<div class="charimg">&#x0D86;</div>
+<p class="charname"><strong>U+0D86</strong> <a href="#char0D86">SINHALA LETTER AAYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D86">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter aa</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> independent vowel  &nbsp;&nbsp;
+     <span class="trans">ā</span></p>
+<p><span class="ipa">aː</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding vowel sign is <span class="codepoint"><span lang="si">&#x25CC;&#x0DCF;</span> [<a href="/scripts/sinhala/block#char0DCF"><span class="uname">U+0DCF SINHALA VOWEL SIGN AELA-PILLA​</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0D87">
+<div class="charimg">&#x0D87;</div>
+<p class="charname"><strong>U+0D87</strong> <a href="#char0D87">SINHALA LETTER AEYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D87">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter ae</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> independent vowel  &nbsp;&nbsp;
+     <span class="trans">æ</span></p>
+<p><span class="ipa">æ</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding vowel sign is <span class="codepoint"><span lang="si">&#x25CC;&#x0DD0;</span> [<a href="/scripts/sinhala/block#char0DD0"><span class="uname">U+0DD0 SINHALA VOWEL SIGN KETTI AEDA-PILLA​</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0D88">
+<div class="charimg">&#x0D88;</div>
+<p class="charname"><strong>U+0D88</strong> <a href="#char0D88">SINHALA LETTER AEEYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D88">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter aae</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> independent vowel  &nbsp;&nbsp;
+     <span class="trans">ǣ</span></p>
+<p><span class="ipa">æː</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding vowel sign is <span class="codepoint"><span lang="si">&#x25CC;&#x0DD1;</span> [<a href="/scripts/sinhala/block#char0DD1"><span class="uname">U+0DD1 SINHALA VOWEL SIGN DIGA AEDA-PILLA​</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0D89">
+<div class="charimg">&#x0D89;</div>
+<p class="charname"><strong>U+0D89</strong> <a href="#char0D89">SINHALA LETTER IYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D89">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter i</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> independent vowel  &nbsp;&nbsp;
+     <span class="trans">i</span></p>
+<p><span class="ipa">i</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding vowel sign is <span class="codepoint"><span lang="si">&#x25CC;&#x0DD2;</span> [<a href="/scripts/sinhala/block#char0DD2"><span class="uname">U+0DD2 SINHALA VOWEL SIGN KETTI IS-PILLA​</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0D8A">
+<div class="charimg">&#x0D8A;</div>
+<p class="charname"><strong>U+0D8A</strong> <a href="#char0D8A">SINHALA LETTER IIYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D8A">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter ii</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> independent vowel  &nbsp;&nbsp;
+     <span class="trans">ī</span></p>
+<p><span class="ipa">iː</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding vowel sign is <span class="codepoint"><span lang="si">&#x25CC;&#x0DD3;</span> [<a href="/scripts/sinhala/block#char0DD3"><span class="uname">U+0DD3 SINHALA VOWEL SIGN DIGA IS-PILLA​</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0D8B">
+<div class="charimg">&#x0D8B;</div>
+<p class="charname"><strong>U+0D8B</strong> <a href="#char0D8B">SINHALA LETTER UYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D8B">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter u</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> independent vowel  &nbsp;&nbsp;
+     <span class="trans">u</span></p>
+<p><span class="ipa">u</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding vowel sign is <span class="codepoint"><span lang="si">&#x25CC;&#x0DD4;</span> [<a href="/scripts/sinhala/block#char0DD4"><span class="uname">U+0DD4 SINHALA VOWEL SIGN KETTI PAA-PILLA​</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0D8C">
+<div class="charimg">&#x0D8C;</div>
+<p class="charname"><strong>U+0D8C</strong> <a href="#char0D8C">SINHALA LETTER UUYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D8C">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter uu</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> independent vowel  &nbsp;&nbsp;
+     <span class="trans">ū</span></p>
+<p><span class="ipa">uː</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding vowel sign is <span class="codepoint"><span lang="si">&#x25CC;&#x0DD6;</span> [<a href="/scripts/sinhala/block#char0DD6"><span class="uname">U+0DD6 SINHALA VOWEL SIGN DIGA PAA-PILLA​</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0D8D">
+<div class="charimg">&#x0D8D;</div>
+<p class="charname"><strong>U+0D8D</strong> <a href="#char0D8D">SINHALA LETTER IRUYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D8D">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter vocalic r</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> independent vowel  &nbsp;&nbsp;
+     <span class="trans">r̥</span></p>
+<p><span class="ipa">ru</span>, vocalic r. Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc). </p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding vowel sign is <span class="codepoint"><span lang="si">&#x25CC;&#x0DD8;</span> [<a href="/scripts/sinhala/block#char0DD8"><span class="uname">U+0DD8 SINHALA VOWEL SIGN GAETTA-PILLA​</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0D8E">
+<div class="charimg">&#x0D8E;</div>
+<p class="charname"><strong>U+0D8E</strong> <a href="#char0D8E">SINHALA LETTER IRUUYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D8E">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter vocalic rr</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> independent vowel  &nbsp;&nbsp;
+     <span class="trans">r̥̄</span></p>
+<p><span class="ipa">ruː</span>, long vocalic r. Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc). Not in contemporary use.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding vowel sign is xxxx.</p>
+</div></div>
+
+<div class="character" id="char0D8F">
+<div class="charimg">&#x0D8F;</div>
+<p class="charname"><strong>U+0D8F</strong> <a href="#char0D8F">SINHALA LETTER ILUYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D8F">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter vocalic l</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> independent vowel  &nbsp;&nbsp;
+     <span class="trans">l̥</span></p>
+<p><span class="ipa">li</span>,  vocalic l. Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc). Not in contemporary use.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding vowel sign is <span class="codepoint"><span lang="si">&#x25CC;&#x0DDF;</span> [<a href="/scripts/sinhala/block#char0DDF"><span class="uname">U+0DDF SINHALA VOWEL SIGN GAYANUKITTA​</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0D90">
+<div class="charimg">&#x0D90;</div>
+<p class="charname"><strong>U+0D90</strong> <a href="#char0D90">SINHALA LETTER ILUUYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D90">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter vocalic ll</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> independent vowel  &nbsp;&nbsp;
+     <span class="trans">l̥̄</span></p>
+<p><span class="ipa">liː</span>, long vocalic l. Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc). Not in contemporary use.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding vowel sign is <span class="codepoint"><span lang="si">&#x25CC;&#x0DF3;</span> [<a href="/scripts/sinhala/block#char0DF3"><span class="uname">U+0DF3 SINHALA VOWEL SIGN DIGA GAYANUKITTA​</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0D91">
+<div class="charimg">&#x0D91;</div>
+<p class="charname"><strong>U+0D91</strong> <a href="#char0D91">SINHALA LETTER EYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D91">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter e</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> independent vowel  &nbsp;&nbsp;
+     <span class="trans">e</span></p>
+<p><span class="ipa">e</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding vowel sign is <span class="codepoint"><span lang="si">&#x25CC;&#x0DD9;</span> [<a href="/scripts/sinhala/block#char0DD9"><span class="uname">U+0DD9 SINHALA VOWEL SIGN KOMBUVA​</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0D92">
+<div class="charimg">&#x0D92;</div>
+<p class="charname"><strong>U+0D92</strong> <a href="#char0D92">SINHALA LETTER EEYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D92">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter ee</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> independent vowel  &nbsp;&nbsp;
+     <span class="trans">ē</span></p>
+<p><span class="ipa">eː</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding vowel sign is <span class="codepoint"><span lang="si">&#x25CC;&#x0DDA;</span> [<a href="/scripts/sinhala/block#char0DDA"><span class="uname">U+0DDA SINHALA VOWEL SIGN DIGA KOMBUVA​</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0D93">
+<div class="charimg">&#x0D93;</div>
+<p class="charname"><strong>U+0D93</strong> <a href="#char0D93">SINHALA LETTER AIYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D93">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter ai</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> independent vowel  &nbsp;&nbsp;
+     <span class="trans">ai</span></p>
+<p><span class="ipa">ɑj</span> Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding vowel sign is <span class="codepoint"><span lang="si">&#x25CC;&#x0DDB;</span> [<a href="/scripts/sinhala/block#char0DDB"><span class="uname">U+0DDB SINHALA VOWEL SIGN KOMBU DEKA​</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0D94">
+<div class="charimg">&#x0D94;</div>
+<p class="charname"><strong>U+0D94</strong> <a href="#char0D94">SINHALA LETTER OYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D94">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter o</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> independent vowel  &nbsp;&nbsp;
+     <span class="trans">o</span></p>
+<p><span class="ipa">o</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding vowel sign is <span class="codepoint"><span lang="si">&#x25CC;&#x0DDC;</span> [<a href="/scripts/sinhala/block#char0DDC"><span class="uname">U+0DDC SINHALA VOWEL SIGN KOMBUVA HAA AELA-PILLA​</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0D95">
+<div class="charimg">&#x0D95;</div>
+<p class="charname"><strong>U+0D95</strong> <a href="#char0D95">SINHALA LETTER OOYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D95">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter oo</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> independent vowel  &nbsp;&nbsp;
+     <span class="trans">ō</span></p>
+<p><span class="ipa">oː</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding vowel sign is <span class="codepoint"><span lang="si">&#x25CC;&#x0DDD;</span> [<a href="/scripts/sinhala/block#char0DDD"><span class="uname">U+0DDD SINHALA VOWEL SIGN KOMBUVA HAA DIGA AELA-PILLA​</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0D96">
+<div class="charimg">&#x0D96;</div>
+<p class="charname"><strong>U+0D96</strong> <a href="#char0D96">SINHALA LETTER AUYANNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D96">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala letter au</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> independent vowel  &nbsp;&nbsp;
+     <span class="trans">au</span></p>
+<p><span class="ipa">ɑw</span> Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding vowel sign is <span class="codepoint"><span lang="si">&#x25CC;&#x0DDE;</span> [<a href="/scripts/sinhala/block#char0DDE"><span class="uname">U+0DDE SINHALA VOWEL SIGN KOMBUVA HAA GAYANUKITTA​</span></a>]</span>.</p>
+</div></div>
+
+</section>
+
+
+
+
+
+
+<section id="vowelsigns">
+  <h3><a href="#vowelsigns">Vowel signs</a></h3>
+
+<div class="character" id="char0DCF">
+<div class="charimg">&#x0DCF;</div>
+<p class="charname"><strong>U+0DCF</strong> <a href="#char0DCF">SINHALA VOWEL SIGN AELA-PILLA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DCF">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala vowel sign aa</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> vowel sign  &nbsp;&nbsp;
+     <span class="trans"> ā</span></p>
+<p><span class="ipa">aː</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding independent vowel is <span class="codepoint"><span lang="si">&#x0D86;</span> [<a href="/scripts/sinhala/block#char0D86"><span class="uname">U+0D86 SINHALA LETTER AAYANNA</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0DD0">
+<div class="charimg">&#x0DD0;</div>
+<p class="charname"><strong>U+0DD0</strong> <a href="#char0DD0">SINHALA VOWEL SIGN KETTI AEDA-PILLA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DD0">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala vowel sign ae</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> vowel sign  &nbsp;&nbsp;
+     <span class="trans"> æ</span></p>
+<p><span class="ipa"> æ</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding independent vowel is <span class="codepoint"><span lang="si">&#x0D87;</span> [<a href="/scripts/sinhala/block#char0D87"><span class="uname">U+0D87 SINHALA LETTER AEYANNA</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0DD1">
+<div class="charimg">&#x0DD1;</div>
+<p class="charname"><strong>U+0DD1</strong> <a href="#char0DD1">SINHALA VOWEL SIGN DIGA AEDA-PILLA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DD1">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala vowel sign aae</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> vowel sign  &nbsp;&nbsp;
+     <span class="trans"> ǣ</span></p>
+<p><span class="ipa">æː</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding independent vowel is <span class="codepoint"><span lang="si">&#x0D88;</span> [<a href="/scripts/sinhala/block#char0D88"><span class="uname">U+0D88 SINHALA LETTER AEEYANNA</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0DD2">
+<div class="charimg">&#x0DD2;</div>
+<p class="charname"><strong>U+0DD2</strong> <a href="#char0DD2">SINHALA VOWEL SIGN KETTI IS-PILLA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DD2">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala vowel sign i</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> vowel sign  &nbsp;&nbsp;
+     <span class="trans">i</span></p>
+<p><span class="ipa">i</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding independent vowel is <span class="codepoint"><span lang="si">&#x0D89;</span> [<a href="/scripts/sinhala/block#char0D89"><span class="uname">U+0D89 SINHALA LETTER IYANNA</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0DD3">
+<div class="charimg">&#x0DD3;</div>
+<p class="charname"><strong>U+0DD3</strong> <a href="#char0DD3">SINHALA VOWEL SIGN DIGA IS-PILLA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DD3">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala vowel sign ii</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> vowel sign  &nbsp;&nbsp;
+     <span class="trans"> ī</span></p>
+<p><span class="ipa">iː</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding independent vowel is <span class="codepoint"><span lang="si">&#x0D8A;</span> [<a href="/scripts/sinhala/block#char0D8A"><span class="uname">U+0D8A SINHALA LETTER IIYANNA</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0DD4">
+<div class="charimg">&#x0DD4;</div>
+<p class="charname"><strong>U+0DD4</strong> <a href="#char0DD4">SINHALA VOWEL SIGN KETTI PAA-PILLA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DD4">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala vowel sign u</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> vowel sign  &nbsp;&nbsp;
+     <span class="trans">u</span></p>
+<p><span class="ipa">u</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding independent vowel is <span class="codepoint"><span lang="si">&#x0D8A;</span> [<a href="/scripts/sinhala/block#char0D8A"><span class="uname">U+0D8A SINHALA LETTER IIYANNA</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0DD6">
+<div class="charimg">&#x0DD6;</div>
+<p class="charname"><strong>U+0DD6</strong> <a href="#char0DD6">SINHALA VOWEL SIGN DIGA PAA-PILLA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DD6">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala vowel sign uu</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> vowel sign  &nbsp;&nbsp;
+     <span class="trans"> ū</span></p>
+<p><span class="ipa">uː</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding independent vowel is <span class="codepoint"><span lang="si">&#x0D8C;</span> [<a href="/scripts/sinhala/block#char0D8C"><span class="uname">U+0D8C SINHALA LETTER UUYANNA</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0DD8">
+<div class="charimg">&#x0DD8;</div>
+<p class="charname"><strong>U+0DD8</strong> <a href="#char0DD8">SINHALA VOWEL SIGN GAETTA-PILLA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DD8">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala vowel sign vocalic r</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> vowel sign  &nbsp;&nbsp;
+     <span class="trans"> r̥</span></p>
+<p><span class="ipa">ru</span>, vocalic r. Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding independent vowel is <span class="codepoint"><span lang="si">&#x0D8D;</span> [<a href="/scripts/sinhala/block#char0D8D"><span class="uname">U+0D8D SINHALA LETTER IRUYANNA</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0DD9">
+<div class="charimg">&#x0DD9;</div>
+<p class="charname"><strong>U+0DD9</strong> <a href="#char0DD9">SINHALA VOWEL SIGN KOMBUVA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DD9">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala vowel sign e</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> vowel sign  &nbsp;&nbsp;
+     <span class="trans">e</span></p>
+<p><span class="ipa">e</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding independent vowel is <span class="codepoint"><span lang="si">&#x0D91;</span> [<a href="/scripts/sinhala/block#char0D91"><span class="uname">U+0D91 SINHALA LETTER EYANNA</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0DDA">
+<div class="charimg">&#x0DDA;</div>
+<p class="charname"><strong>U+0DDA</strong> <a href="#char0DDA">SINHALA VOWEL SIGN DIGA KOMBUVA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DDA">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala vowel sign ee<br/>≡ 0DD9 0DCA</div>
+<div class="notes">
+<p>This is the precomposed version of <span class="codepoint"><span lang="si">&#x25CC;&#x0DD9;</span> + <span lang="si">&#x25CC;&#x0DCA;</span> [<a href="/scripts/sinhala/block#char0DD9"><span class="uname">U+0DD9 SINHALA VOWEL SIGN KOMBUVA​</span></a> + <a href="/scripts/sinhala/block#char0DCA"><span class="uname">U+0DCA SINHALA SIGN AL-LAKUNA​</span></a>]</span>.</p>
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> vowel sign  &nbsp;&nbsp;
+     <span class="trans"> ē</span></p>
+<p><span class="ipa">eː</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding independent vowel is <span class="codepoint"><span lang="si">&#x0D92;</span> [<a href="/scripts/sinhala/block#char0D92"><span class="uname">U+0D92 SINHALA LETTER EEYANNA</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0DDB">
+<div class="charimg">&#x0DDB;</div>
+<p class="charname"><strong>U+0DDB</strong> <a href="#char0DDB">SINHALA VOWEL SIGN KOMBU DEKA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DDB">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala vowel sign ai</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> vowel sign  &nbsp;&nbsp;
+     <span class="trans">ai</span></p>
+<p><span class="ipa">ɑj</span> Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding independent vowel is <span class="codepoint"><span lang="si">&#x0D93;</span> [<a href="/scripts/sinhala/block#char0D93"><span class="uname">U+0D93 SINHALA LETTER AIYANNA</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0DDC">
+<div class="charimg">&#x0DDC;</div>
+<p class="charname"><strong>U+0DDC</strong> <a href="#char0DDC">SINHALA VOWEL SIGN KOMBUVA HAA AELA-PILLA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DDC">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala vowel sign o<br/>≡ 0DD9 0DCF</div>
+<div class="notes">
+<p>This is the precomposed version of <span class="codepoint"><span lang="si">&#x25CC;&#x0DD9;</span> + <span lang="si">&#x25CC;&#x0DCF;</span> [<a href="/scripts/sinhala/block#char0DD9"><span class="uname">U+0DD9 SINHALA VOWEL SIGN KOMBUVA​</span></a> + <a href="/scripts/sinhala/block#char0DCF"><span class="uname">U+0DCF SINHALA VOWEL SIGN AELA-PILLA​</span></a>]</span>.</p>
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> vowel sign  &nbsp;&nbsp;
+     <span class="trans">o</span></p>
+<p><span class="ipa">o</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding independent vowel is <span class="codepoint"><span lang="si">&#x0D94;</span> [<a href="/scripts/sinhala/block#char0D94"><span class="uname">U+0D94 SINHALA LETTER OYANNA</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0DDD">
+<div class="charimg">&#x0DDD;</div>
+<p class="charname"><strong>U+0DDD</strong> <a href="#char0DDD">SINHALA VOWEL SIGN KOMBUVA HAA DIGA AELA-PILLA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DDD">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala vowel sign oo<br/>≡ 0DDC 0DCA</div>
+<div class="notes">
+<p>This is the precomposed version of <span class="codepoint"><span lang="si">&#x25CC;&#x0DD9;</span> + <span lang="si">&#x25CC;&#x0DCF;</span> + <span lang="si">&#x25CC;&#x0DCA;</span> [<a href="/scripts/sinhala/block#char0DD9"><span class="uname">U+0DD9 SINHALA VOWEL SIGN KOMBUVA​</span></a> + <a href="/scripts/sinhala/block#char0DCF"><span class="uname">U+0DCF SINHALA VOWEL SIGN AELA-PILLA​</span></a> + <a href="/scripts/sinhala/block#char0DCA"><span class="uname">U+0DCA SINHALA SIGN AL-LAKUNA​</span></a>]</span>, or <span class="codepoint"><span lang="si">&#x25CC;&#x0DDC;</span> + <span lang="si">&#x25CC;&#x0DCA;</span> [<a href="/scripts/sinhala/block#char0DDC"><span class="uname">U+0DDC SINHALA VOWEL SIGN KOMBUVA HAA AELA-PILLA​</span></a> + <a href="/scripts/sinhala/block#char0DCA"><span class="uname">U+0DCA SINHALA SIGN AL-LAKUNA​</span></a>]</span>.</p>
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> vowel sign  &nbsp;&nbsp;
+     <span class="trans"> ō</span></p>
+<p><span class="ipa">oː</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding independent vowel is <span class="codepoint"><span lang="si">&#x0D95;</span> [<a href="/scripts/sinhala/block#char0D95"><span class="uname">U+0D95 SINHALA LETTER OOYANNA</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0DDE">
+<div class="charimg">&#x0DDE;</div>
+<p class="charname"><strong>U+0DDE</strong> <a href="#char0DDE">SINHALA VOWEL SIGN KOMBUVA HAA GAYANUKITTA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DDE">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala vowel sign au<br/>≡ 0DD9 0DDF</div>
+<div class="notes">
+<p>This is the precomposed version of <span class="codepoint"><span lang="si">&#x25CC;&#x0DD9;</span> + <span lang="si">&#x25CC;&#x0DDF;</span> [<a href="/scripts/sinhala/block#char0DD9"><span class="uname">U+0DD9 SINHALA VOWEL SIGN KOMBUVA​</span></a> + <a href="/scripts/sinhala/block#char0DDF"><span class="uname">U+0DDF SINHALA VOWEL SIGN GAYANUKITTA​</span></a>]</span>.</p>
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> vowel sign  &nbsp;&nbsp;
+     <span class="trans">au</span></p>
+<p><span class="ipa">ɑw</span> Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding independent vowel is <span class="codepoint"><span lang="si">&#x0D96;</span> [<a href="/scripts/sinhala/block#char0D96"><span class="uname">U+0D96 SINHALA LETTER AUYANNA</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0DDF">
+<div class="charimg">&#x0DDF;</div>
+<p class="charname"><strong>U+0DDF</strong> <a href="#char0DDF">SINHALA VOWEL SIGN GAYANUKITTA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DDF">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala vowel sign vocalic l</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> vowel sign  &nbsp;&nbsp;
+     <span class="trans"> l̥</span></p>
+<p><span class="ipa">li</span>,  vocalic l. Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc). Not in contemporary use.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding independent vowel is <span class="codepoint"><span lang="si">&#x0D8F;</span> [<a href="/scripts/sinhala/block#char0D8F"><span class="uname">U+0D8F SINHALA LETTER ILUYANNA</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0DF2">
+<div class="charimg">&#x0DF2;</div>
+<p class="charname"><strong>U+0DF2</strong> <a href="#char0DF2">SINHALA VOWEL SIGN DIGA GAETTA-PILLA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DF2">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala vowel sign vocalic rr</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> vowel sign  &nbsp;&nbsp;
+     <span class="trans"> r̥̄</span></p>
+<p><span class="ipa">ruː</span>, long vocalic r. Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc). Not in contemporary use.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding independent vowel is <span class="codepoint"><span lang="si">&#x0D8E;</span> [<a href="/scripts/sinhala/block#char0D8E"><span class="uname">U+0D8E SINHALA LETTER IRUUYANNA</span></a>]</span>.</p>
+</div></div>
+
+<div class="character" id="char0DF3">
+<div class="charimg">&#x0DF3;</div>
+<p class="charname"><strong>U+0DF3</strong> <a href="#char0DF3">SINHALA VOWEL SIGN DIGA GAYANUKITTA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DF3">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= sinhala vowel sign vocalic ll</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> vowel sign  &nbsp;&nbsp;
+     <span class="trans"> l̥̄</span></p>
+<p><span class="ipa">liː</span>, long vocalic l. Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc). Not in contemporary use.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+<p>The corresponding independent vowel is <span class="codepoint"><span lang="si">&#x0D90;</span> [<a href="/scripts/sinhala/block#char0D90"><span class="uname">U+0D90 SINHALA LETTER ILUUYANNA</span></a>]</span>.</p>
+</div></div>
+
+
+</section>
+</section>
+
+
+<section id="virama">
+<h2><a href="#virama">Virama &amp; other combining characters</a></h2>
+
+
+<div class="character" id="char0DCA">
+<div class="charimg">&#x0DCA;</div>
+<p class="charname"><strong>U+0DCA</strong> <a href="#char0DCA">SINHALA SIGN AL-LAKUNA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DCA">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= virama</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> virama  &nbsp;&nbsp;</p>
+<p>Indicates that the consonant  is not followed by a vowel sound.</p>
+<p>In most cases this is visible in Sinhalese text, appearing over the relevant consonant. It may have one of two different shapes, however, depending on the consonant it is associated with.</p>
+<p>It is also used to indicate that the font should use a conjunct shape and hide the virama. In this case it is used with <span class="codepoint"><span class="trans">ZWJ</span> [<a href="/scripts/sinhala/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span>. In modern text, the ZWJ follows the virama, and the result is a ligated shape or a reduced shape for one of the conjunct letters.</p>
+<p>If ZWJ is used <em>before</em> the virama the font should produce an older form of conjunct where the character glyphs are drawn together so that they touch (and the virama is hidden).</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0D83">
+<div class="charimg">&#x0D83;</div>
+<p class="charname"><strong>U+0D83</strong> <a href="#char0D83">SINHALA SIGN VISARGAYA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D83">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= visarga</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> visarga  &nbsp;&nbsp;
+     <span class="trans">xxx</span></p>
+<p><span class="ipa">pɑ</span> Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0D82">
+<div class="charimg">&#x0D82;</div>
+<p class="charname"><strong>U+0D82</strong> <a href="#char0D82">SINHALA SIGN ANUSVARAYA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0D82">See in UniView</a></p>
+<p class="subtitle">Description in the Unicode standard:</p>
+<div class="unicodenotes">= anusvara</div>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> anusvara  &nbsp;&nbsp;
+     <span class="trans">ṃ</span></p>
+<p><span class="ipa">ŋ</span></p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+
+
+</section>
+<section id="punctuation">
+<h2><a href='punctuation'>Punctuation</a></h2>
+
+<div class="character" id="char0DF4">
+<div class="charimg">&#x0DF4;</div>
+<p class="charname"><strong>U+0DF4</strong> <a href="#char0DF4">SINHALA PUNCTUATION KUNDDALIYA</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DF4">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> punctuation  &nbsp;&nbsp;</p>
+<p>Equivalent to full stop. No longer in use.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+</section>
+<section id="digits">
+<h2><a href="#digits">Digits</a></h2>
+  
+  <section id="native_digits">
+  <h3><a href="#native_digits">Native</a></h3>
+
+<div class="character" id="char0DE6">
+<div class="charimg">&#x0DE6;</div>
+<p class="charname"><strong>U+0DE6</strong> <a href="#char0DE6">SINHALA LITH DIGIT ZERO</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DE6">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> digit  &nbsp;&nbsp;
+     <span class="trans">0</span></p>
+<p>Not in contemporary use.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DE7">
+<div class="charimg">&#x0DE7;</div>
+<p class="charname"><strong>U+0DE7</strong> <a href="#char0DE7">SINHALA LITH DIGIT ONE</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DE7">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> digit  &nbsp;&nbsp;
+     <span class="trans">1</span></p>
+<p>Not in contemporary use.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DE8">
+<div class="charimg">&#x0DE8;</div>
+<p class="charname"><strong>U+0DE8</strong> <a href="#char0DE8">SINHALA LITH DIGIT TWO</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DE8">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> digit  &nbsp;&nbsp;
+     <span class="trans">2</span></p>
+<p>Not in contemporary use.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DE9">
+<div class="charimg">&#x0DE9;</div>
+<p class="charname"><strong>U+0DE9</strong> <a href="#char0DE9">SINHALA LITH DIGIT THREE</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DE9">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> digit  &nbsp;&nbsp;
+     <span class="trans">3</span></p>
+<p>Not in contemporary use.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DEA">
+<div class="charimg">&#x0DEA;</div>
+<p class="charname"><strong>U+0DEA</strong> <a href="#char0DEA">SINHALA LITH DIGIT FOUR</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DEA">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> digit  &nbsp;&nbsp;
+     <span class="trans">4</span></p>
+<p>Not in contemporary use.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DEB">
+<div class="charimg">&#x0DEB;</div>
+<p class="charname"><strong>U+0DEB</strong> <a href="#char0DEB">SINHALA LITH DIGIT FIVE</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DEB">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> digit  &nbsp;&nbsp;
+     <span class="trans">5</span></p>
+<p>Not in contemporary use.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DEC">
+<div class="charimg">&#x0DEC;</div>
+<p class="charname"><strong>U+0DEC</strong> <a href="#char0DEC">SINHALA LITH DIGIT SIX</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DEC">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> digit  &nbsp;&nbsp;
+     <span class="trans">6</span></p>
+<p>Not in contemporary use.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DED">
+<div class="charimg">&#x0DED;</div>
+<p class="charname"><strong>U+0DED</strong> <a href="#char0DED">SINHALA LITH DIGIT SEVEN</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DED">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> digit  &nbsp;&nbsp;
+     <span class="trans">7</span></p>
+<p>Not in contemporary use.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DEE">
+<div class="charimg">&#x0DEE;</div>
+<p class="charname"><strong>U+0DEE</strong> <a href="#char0DEE">SINHALA LITH DIGIT EIGHT</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DEE">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> digit  &nbsp;&nbsp;
+     <span class="trans">8</span></p>
+<p>Not in contemporary use.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char0DEF">
+<div class="charimg">&#x0DEF;</div>
+<p class="charname"><strong>U+0DEF</strong> <a href="#char0DEF">SINHALA LITH DIGIT NINE</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0DEF">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> digit  &nbsp;&nbsp;
+     <span class="trans">9</span></p>
+<p>Not in contemporary use.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+</section>
+
+<section id="archaic_digits">
+  <h3><a href="#archaic_digits">Archaic digits</a></h3>
+
+<div class="character" id="char111E1">
+<div class="charimg">&#x111E1;</div>
+<p class="charname"><strong>U+111E1</strong> <a href="#char111E1">SINHALA ARCHAIC DIGIT ONE</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=111E1">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> archaic digit  &nbsp;&nbsp;
+     <span class="trans">1</span></p>
+<p>Used in a historic number system, called Sinhala Illakkam, prior to 1815.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char111E2">
+<div class="charimg">&#x111E2;</div>
+<p class="charname"><strong>U+111E2</strong> <a href="#char111E2">SINHALA ARCHAIC DIGIT TWO</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=111E2">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> archaic digit  &nbsp;&nbsp;
+     <span class="trans">2</span></p>
+<p>Used in a historic number system, called Sinhala Illakkam, prior to 1815.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char111E3">
+<div class="charimg">&#x111E3;</div>
+<p class="charname"><strong>U+111E3</strong> <a href="#char111E3">SINHALA ARCHAIC DIGIT THREE</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=111E3">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> archaic digit  &nbsp;&nbsp;
+     <span class="trans">3</span></p>
+<p>Used in a historic number system, called Sinhala Illakkam, prior to 1815.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char111E4">
+<div class="charimg">&#x111E4;</div>
+<p class="charname"><strong>U+111E4</strong> <a href="#char111E4">SINHALA ARCHAIC DIGIT FOUR</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=111E4">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> archaic digit  &nbsp;&nbsp;
+     <span class="trans">4</span></p>
+<p>Used in a historic number system, called Sinhala Illakkam, prior to 1815.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char111E5">
+<div class="charimg">&#x111E5;</div>
+<p class="charname"><strong>U+111E5</strong> <a href="#char111E5">SINHALA ARCHAIC DIGIT FIVE</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=111E5">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> archaic digit  &nbsp;&nbsp;
+     <span class="trans">5</span></p>
+<p>Used in a historic number system, called Sinhala Illakkam, prior to 1815.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char111E6">
+<div class="charimg">&#x111E6;</div>
+<p class="charname"><strong>U+111E6</strong> <a href="#char111E6">SINHALA ARCHAIC DIGIT SIX</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=111E6">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> archaic digit  &nbsp;&nbsp;
+     <span class="trans">6</span></p>
+<p>Used in a historic number system, called Sinhala Illakkam, prior to 1815.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char111E7">
+<div class="charimg">&#x111E7;</div>
+<p class="charname"><strong>U+111E7</strong> <a href="#char111E7">SINHALA ARCHAIC DIGIT SEVEN</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=111E7">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> archaic digit  &nbsp;&nbsp;
+     <span class="trans">7</span></p>
+<p>Used in a historic number system, called Sinhala Illakkam, prior to 1815.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char111E8">
+<div class="charimg">&#x111E8;</div>
+<p class="charname"><strong>U+111E8</strong> <a href="#char111E8">SINHALA ARCHAIC DIGIT EIGHT</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=111E8">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> archaic digit  &nbsp;&nbsp;
+     <span class="trans">8</span></p>
+<p>Used in a historic number system, called Sinhala Illakkam, prior to 1815.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char111E9">
+<div class="charimg">&#x111E9;</div>
+<p class="charname"><strong>U+111E9</strong> <a href="#char111E9">SINHALA ARCHAIC DIGIT NINE</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=111E9">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> archaic digit  &nbsp;&nbsp;
+     <span class="trans">9</span></p>
+<p>Used in a historic number system, called Sinhala Illakkam, prior to 1815.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char111EA">
+<div class="charimg">&#x111EA;</div>
+<p class="charname"><strong>U+111EA</strong> <a href="#char111EA">SINHALA ARCHAIC NUMBER TEN</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=111EA">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> archaic digit  &nbsp;&nbsp;
+     <span class="trans">10</span></p>
+<p>Used in a historic number system, called Sinhala Illakkam, prior to 1815.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char111EB">
+<div class="charimg">&#x111EB;</div>
+<p class="charname"><strong>U+111EB</strong> <a href="#char111EB">SINHALA ARCHAIC NUMBER TWENTY</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=111EB">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> archaic digit  &nbsp;&nbsp;
+     <span class="trans">20</span></p>
+<p>Used in a historic number system, called Sinhala Illakkam, prior to 1815.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char111EC">
+<div class="charimg">&#x111EC;</div>
+<p class="charname"><strong>U+111EC</strong> <a href="#char111EC">SINHALA ARCHAIC NUMBER THIRTY</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=111EC">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> archaic digit  &nbsp;&nbsp;
+     <span class="trans">30</span></p>
+<p>Used in a historic number system, called Sinhala Illakkam, prior to 1815.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char111ED">
+<div class="charimg">&#x111ED;</div>
+<p class="charname"><strong>U+111ED</strong> <a href="#char111ED">SINHALA ARCHAIC NUMBER FORTY</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=111ED">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> archaic digit  &nbsp;&nbsp;
+     <span class="trans">40</span></p>
+<p>Used in a historic number system, called Sinhala Illakkam, prior to 1815.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char111EE">
+<div class="charimg">&#x111EE;</div>
+<p class="charname"><strong>U+111EE</strong> <a href="#char111EE">SINHALA ARCHAIC NUMBER FIFTY</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=111EE">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> archaic digit  &nbsp;&nbsp;
+     <span class="trans">50</span></p>
+<p>Used in a historic number system, called Sinhala Illakkam, prior to 1815.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char111EF">
+<div class="charimg">&#x111EF;</div>
+<p class="charname"><strong>U+111EF</strong> <a href="#char111EF">SINHALA ARCHAIC NUMBER SIXTY</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=111EF">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> archaic digit  &nbsp;&nbsp;
+     <span class="trans">60</span></p>
+<p>Used in a historic number system, called Sinhala Illakkam, prior to 1815.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char111F0">
+<div class="charimg">&#x111F0;</div>
+<p class="charname"><strong>U+111F0</strong> <a href="#char111F0">SINHALA ARCHAIC NUMBER SEVENTY</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=111F0">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> archaic digit  &nbsp;&nbsp;
+     <span class="trans">70</span></p>
+<p>Used in a historic number system, called Sinhala Illakkam, prior to 1815.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char111F1">
+<div class="charimg">&#x111F1;</div>
+<p class="charname"><strong>U+111F1</strong> <a href="#char111F1">SINHALA ARCHAIC NUMBER EIGHTY</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=111F1">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> archaic digit  &nbsp;&nbsp;
+     <span class="trans">80</span></p>
+<p>Used in a historic number system, called Sinhala Illakkam, prior to 1815.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char111F2">
+<div class="charimg">&#x111F2;</div>
+<p class="charname"><strong>U+111F2</strong> <a href="#char111F2">SINHALA ARCHAIC NUMBER NINETY</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=111F2">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> archaic digit  &nbsp;&nbsp;
+     <span class="trans">90</span></p>
+<p>Used in a historic number system, called Sinhala Illakkam, prior to 1815.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char111F3">
+<div class="charimg">&#x111F3;</div>
+<p class="charname"><strong>U+111F3</strong> <a href="#char111F3">SINHALA ARCHAIC NUMBER ONE HUNDRED</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=111F3">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> archaic digit  &nbsp;&nbsp;
+     <span class="trans">100</span></p>
+<p>Used in a historic number system, called Sinhala Illakkam, prior to 1815.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+<div class="character" id="char111F4">
+<div class="charimg">&#x111F4;</div>
+<p class="charname"><strong>U+111F4</strong> <a href="#char111F4">SINHALA ARCHAIC NUMBER ONE THOUSAND</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=111F4">See in UniView</a></p>
+<div class="notes">
+<div class="letter">
+<p class="titlepara"><span class="title">Sinhala</span> archaic digit  &nbsp;&nbsp;
+     <span class="trans">1,000</span></p>
+<p>Used in a historic number system, called Sinhala Illakkam, prior to 1815.</p>
+<p class="ref"><a href="#refs">Refs</a>:
+   [1] <a href="#refs">Daniels pp408-412</a>
+   [2] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Sinhala" target="_blank">Unicode pp513-514</a>  
+   [3] <a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">Sinhalese alphabet</a>  
+</p>
+</div>
+</div></div>
+
+</section>
+</section>
+
+
+<section id="refs">
+<h2><a href="#refs">References</a></h2>
+  <ol>
+    <li>[Unicode] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch13.pdf">Sinhala</a>, pp513-514.</li>
+    <li>[Daniels] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
+		    0-19-507993-0</li>
+<li>Wikipedia, <a href="httphttps://en.wikipedia.org/wiki/Sinhalese_alphabet">Sinhalese alphabet</a>.</li>
+</ol>
+</section>
+
+
+<div id="panel" style="display:none"></div>
+<div class="smallprint"><span id="version">First published  3 February, 2014.  This version <span id="version-info">
+  <!-- #BeginDate format:IS1m -->2018-01-24  9:06<!-- #EndDate -->
+</span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
+</section>
+
+ 
+<!-- PRODUCE LIST OF CHARACTERS IN UNICODE ORDER  
+<textarea id="tempout" style="width:100%;height:100px;"></textarea>
+<script>
+var blocks = document.querySelectorAll('.character')
+var orderedBlocks = []
+
+for (b=0;b<blocks.length;b++) {
+	var blockId = blocks[b].id
+	var hexnum = blockId.replace(/char/,'')
+	var decnum = parseInt(hexnum, 16)
+	orderedBlocks[decnum] = blocks[b].outerHTML
+	}
+
+var out = ''
+for (i=0;i<orderedBlocks.length;i++) {
+	if (orderedBlocks[i]) out += orderedBlocks[i]
+	}
+document.getElementById('tempout').value = out
+</script>
+--> 
+
+<script type="text/javascript">
+createtoc(3);
+var base = '/scripts/sinhala/block'
+initialiseShowNames(base, '');
+//highlightIndexChars()
+checkForCharParam();
+</script>
+</body>
+</html>
