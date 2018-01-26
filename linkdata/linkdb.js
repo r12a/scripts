@@ -1,8 +1,8 @@
-var scriptNotesSet= new Set(['armenian','arabic', 'balinese', 'bengali','buginese', 'cherokee', 'devanagari', 'ethiopic', 'greek', 'han', 'hangul', 'hebrew', 'javanese', 'kana', 'khmer','lao','mandaic','myanmar', 'nko','sundanese', 'syriac', 'tamil', 'thaana', 'thai', 'tibetan'])
+var scriptNotesSet= new Set(['armenian','arabic', 'balinese', 'bengali','buginese', 'cherokee', 'devanagari', 'ethiopic', 'greek', 'han', 'hangul', 'hebrew', 'javanese', 'kana', 'khmer','lao','mandaic','myanmar', 'nko', 'sinhala', 'sundanese', 'syriac', 'tamil', 'thaana', 'thai', 'tibetan'])
 
-var charNotesSet= new Set(['arabic','armenian', 'balinese','bengali','buginese', 'cherokee', 'devanagari','ethiopic','greek','hebrew', 'javanese', 'khmer','lao','latin','lisu','malayalam','mandaic','mongolian','myanmar', 'nko','sundanese', 'syriac', 'tamil','thaana', 'thai','tibetan','tifinagh'])
+var charNotesSet= new Set(['arabic','armenian', 'balinese','bengali','buginese', 'cherokee', 'devanagari','ethiopic','greek','hebrew', 'javanese', 'khmer','lao','latin','lisu','malayalam','mandaic','mongolian','myanmar', 'nko', 'sinhala', 'sundanese', 'syriac', 'tamil','thaana', 'thai','tibetan','tifinagh'])
 
-var compChartSet= new Set(['arabic','armenian', 'balinese', 'bengali', 'buginese', 'cherokee', 'cyrillic', 'devanagari', 'ethiopic', 'greek', 'gujarati', 'gurmukhi', 'han', 'hangul', 'hebrew', 'javanese', 'kana', 'kannada', 'khmer', 'lao', 'latin', 'malayalam', 'mandaic', 'mongolian', 'myanmar', 'nko', 'oriya', 'sundanese', 'syriac', 'tamil', 'telugu', 'thaana', 'thai', 'tibetan', 'tifinagh', 'ucas'])
+var compChartSet= new Set(['arabic','armenian', 'balinese', 'bengali', 'buginese', 'cherokee', 'cyrillic', 'devanagari', 'ethiopic', 'greek', 'gujarati', 'gurmukhi', 'han', 'hangul', 'hebrew', 'javanese', 'kana', 'kannada', 'khmer', 'lao', 'latin', 'malayalam', 'mandaic', 'mongolian', 'myanmar', 'nko', 'oriya', 'sinhala', 'sundanese', 'syriac', 'tamil', 'telugu', 'thaana', 'thai', 'tibetan', 'tifinagh', 'ucas'])
 
 var examplePhraseSet = new Set(['arabic','armenian','canadian_unified_syllabics','cherokee','cyrillic','devanagari','ethiopic','greek','gurmukhi','han','hebrew','latin','khmer','hangul','mongolian','myanmar','telugu','tifinagh','thai','tibetan'])
 
@@ -1141,7 +1141,7 @@ var linkDB = [
 				],
 	unicode:{ 	}, 
 	charts:[	"Sinhala", "Sinhala Archaic Numbers" ],
-	pickers:[	
+	pickers:[	{ name:"Sinhala", url:"sinhala" }
 				],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-south-asian.html#sinhala" }
 				],
