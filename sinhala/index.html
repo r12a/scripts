@@ -101,13 +101,13 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->26 January, 2018<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->27 January, 2018<!-- #EndDate -->
 &bull; tags <a href="http://rishida.net/blog/index.php?tag=sinhala" title="Show all blog posts tagged with 'sinhala'">sinhala</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
 
 <div class="section">
-  <p>This page provides basic information about the Sinhala script and its use for the Sinhala language. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned.  For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>.</p>
+  <p>This page provides basic information about the Sinhala script and its use for the Sinhalese language. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned.  For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>.</p>
 <details id="scriptLinks">
 <summary>Show links for the Sinhala script.</summary>
   <div id="linklist"></div>
@@ -268,6 +268,39 @@ Sinhalese is often considered two alphabets, or an alphabet within an alphabet, 
 <p>The prenasalised shapes are formed from a combination of the shapes of the participating characters.</p>
 </section>
 
+
+
+
+<section id="clusters">
+<h3><a href="#clusters">Consonant clusters &amp; gemination</a></h3>
+<p>Consonant cluster handling is a little unusual in Sinhala, compared to other indic scripts.</p>
+<p>There are 3 ways of managing consonant clusters. Modern Sinhala uses only the first two alternatives.</p>
+<p> In all cases, <span class="codepoint"><span lang="si">&#x25CC;&#x0DCA;</span> [<a href="/scripts/sinhala/block#char0DCA"><span class="uname">U+0DCA SINHALA SIGN AL-LAKUNA​</span></a>], called <span class="name">al lakuna</span>, </span> is used as the virama, however, different joining behaviour can be produced by adding <span class="codepoint"><span class="name">ZWJ</span> [<a href="/scripts/sinhala/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span> before or after.</p>
+<p>The <strong>first approach</strong> simply shows the virama visually over the preceding consonant(s). The shape of the virama can take two forms, depending on the base character it is appended to: with <span class="trans">k</span> you get <span class="ex" lang="si">ක්</span>; with <span class="trans">kh</span> you get <span class="ex" lang="si">ඛ්</span>.</p>
+<p>The <strong>second approach</strong> is principally used when combining <span class="trans">r</span> or <span class="trans">y</span> with another consonant (both before and after, in the case of <span class="trans">r</span>), and produces a reduced or ligated form. For this use:<br/>
+<span class="codepoint"><span lang="si">&#x25CC;&#x0DCA;</span> + <span class="name">ZWJ</span> [<a href="/scripts/sinhala/block#char0DCA"><span class="uname">U+0DCA SINHALA SIGN AL-LAKUNA</span></a> + <a href="/scripts/sinhala/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span>.</p>
+<p>The forms with <span class="trans">r</span> or <span class="trans">y</span> look like this when combined with <span class="trans">k</span>: <span class="charExample"><span class="ex" lang="si">ර්‍ක</span> <span class="trans">rk</span></span>, <span class="charExample"><span class="ex" lang="si">ක්‍ර</span> <span class="trans">kr</span></span>, and <span class="charExample"><span class="ex" lang="si">ක්‍ය</span> <span class="trans">ky</span></span>. There are also forms using both, eg. <span class="charExample"><span class="ex" lang="si">ක්‍ය්‍ර</span> <span class="trans">kjra</span></span> and <span class="charExample"><span class="ex" lang="si">කාර්‍ය්‍යාලය</span> <span class="trans">kāryyālaya</span></span>. Although the use of the conjunct with r is required in normal Sinhalese text, it is possible to not use it: both <span class="charExample"><span class="ex" lang="si">කර්ම</span> <span class="trans">karma</span></span> and <span class="charExample"><span class="ex" lang="si">කර්‍ම</span> <span class="trans">karma</span></span> are valid.<sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2737.pdf">s</a></sup></p>
+<p>Wikipedia<sup><a href="http://en.wikipedia.org/wiki/Sinhalese_alphabet">w</a></sup> lists several more conjuncts, some of which are reproduced below. The availability of these conjuncts is font dependent, eg. <span class="charExample"><span class="ex" lang="si">ඳ්‍ව</span> <span class="trans">ňdva</span></span> doesn't ligate using the default font of this page, but may with another.</p>
+
+<figure>
+<div class="listAll" onClick="listAll(this, 'si')">list all</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="si">ක්‍ව</span><span class="listTrans">kva</span></div>
+<div class="listPair"><span class="listItem" lang="si">ක්‍ෂ</span><span class="listTrans">kṣa</span></div>
+<div class="listPair"><span class="listItem" lang="si">ත්‍ථ</span><span class="listTrans">ttha</span></div>
+<div class="listPair"><span class="listItem" lang="si">ත්‍ව</span><span class="listTrans">tva</span></div>
+<div class="listPair"><span class="listItem" lang="si">න්‍ද</span><span class="listTrans">nda</span></div>
+<div class="listPair"><span class="listItem" lang="si">න්‍ධ</span><span class="listTrans">ndha</span></div>
+<!--div class="listPair"><span class="listItem" lang="si">ඳ්‍ඨ</span><span class="listTrans">ňdṭha</span></div>
+<div class="listPair"><span class="listItem" lang="si">ඳ්‍ධ</span><span class="listTrans">ňddha</span></div>
+<div class="listPair"><span class="listItem" lang="si">ඳ්‍ව</span><span class="listTrans">ňdva</span></div-->
+<div class="listPair"><span class="listItem" lang="si">න්‍ද්‍ර</span><span class="listTrans">ndra</span></div>
+</div>
+</figure>
+
+<p>The <strong>third approach</strong> is used in ancient scriptures but is not used in modern Sinhala.<sup><a href="http://en.wikipedia.org/wiki/Sinhalese_alphabet">w</a></sup> It hides the virama and moves the consonants alongside each other, so that they are touching, eg. <span class="charExample"><span class="ex" lang="si">ම‍්ම</span> <span class="trans">mm</span></span> (cf. <span class="charExample"><span class="ex" lang="si">මම</span></span>). For this use ZWJ first, ie.:<br/>
+<span class="codepoint"><span class="name">ZWJ</span> + <span lang="si">&#x25CC;&#x0DCA;</span> [<a href="/scripts/sinhala/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a> + <a href="/scripts/sinhala/block#char0DCA"><span class="uname">U+0DCA SINHALA SIGN AL-LAKUNA​</span></a>]</span>.</p>
+</section>
 </section>
 
 
@@ -319,42 +352,9 @@ Sinhalese is often considered two alphabets, or an alphabet within an alphabet, 
 
 
 
-<section id="clusters">
-<h3><a href="#clusters">Consonant clusters &amp; gemination</a></h3>
-<p>Consonant cluster handling is a little unusual in Sinhala, compared to other indic scripts.</p>
-<p>There are 3 ways of managing consonant clusters. Modern Sinhala uses only the first two alternatives.</p>
-<p> In all cases, <span class="codepoint"><span lang="si">&#x25CC;&#x0DCA;</span> [<a href="/scripts/sinhala/block#char0DCA"><span class="uname">U+0DCA SINHALA SIGN AL-LAKUNA​</span></a>], called <span class="name">al lakuna</span>, </span> is used as the virama, however, different joining behaviour can be produced by adding <span class="codepoint"><span class="name">ZWJ</span> [<a href="/scripts/sinhala/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span> before or after.</p>
-<p>The <strong>first approach</strong> simply shows the virama visually over the preceding consonant(s). The shape of the virama can take two forms, depending on the base character it is appended to: with <span class="trans">k</span> you get <span class="ex" lang="si">ක්</span>; with <span class="trans">kh</span> you get <span class="ex" lang="si">ඛ්</span>.</p>
-<p>The <strong>second approach</strong> is principally used when combining <span class="trans">r</span> or <span class="trans">y</span> with another consonant (both before and after, in the case of <span class="trans">r</span>), and produces a reduced or ligated form. For this use:<br/>
-<span class="codepoint"><span lang="si">&#x25CC;&#x0DCA;</span> + <span class="name">ZWJ</span> [<a href="/scripts/sinhala/block#char0DCA"><span class="uname">U+0DCA SINHALA SIGN AL-LAKUNA</span></a> + <a href="/scripts/sinhala/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span>.</p>
-<p>The forms with <span class="trans">r</span> or <span class="trans">y</span> look like this when combined with <span class="trans">k</span>: <span class="charExample"><span class="ex" lang="si">ර්‍ක</span> <span class="trans">rk</span></span>, <span class="charExample"><span class="ex" lang="si">ක්‍ර</span> <span class="trans">kr</span></span>, and <span class="charExample"><span class="ex" lang="si">ක්‍ය</span> <span class="trans">ky</span></span>. There are also forms using both, eg. <span class="charExample"><span class="ex" lang="si">ක්‍ය්‍ර</span> <span class="trans">kjra</span></span> and <span class="charExample"><span class="ex" lang="si">කාර්‍ය්‍යාලය</span> <span class="trans">kāryyālaya</span></span>. Although the use of the conjunct with r is required in normal Sinhalese text, it is possible to not use it: both <span class="charExample"><span class="ex" lang="si">කර්ම</span> <span class="trans">karma</span></span> and <span class="charExample"><span class="ex" lang="si">කර්‍ම</span> <span class="trans">karma</span></span> are valid.<sup>4</sup></p>
-<p>Wikipedia<sup>3</sup> lists several more conjuncts, some of which are reproduced below. The availability of these conjuncts is font dependent, eg. <span class="charExample"><span class="ex" lang="si">ඳ්‍ව</span> <span class="trans">ňdva</span></span> doesn't ligate using the default font of this page, but may with another.</p>
-
-<figure>
-<div class="listAll" onClick="listAll(this, 'si')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="si">ක්‍ව</span><span class="listTrans">kva</span></div>
-<div class="listPair"><span class="listItem" lang="si">ක්‍ෂ</span><span class="listTrans">kṣa</span></div>
-<div class="listPair"><span class="listItem" lang="si">ත්‍ථ</span><span class="listTrans">ttha</span></div>
-<div class="listPair"><span class="listItem" lang="si">ත්‍ව</span><span class="listTrans">tva</span></div>
-<div class="listPair"><span class="listItem" lang="si">න්‍ද</span><span class="listTrans">nda</span></div>
-<div class="listPair"><span class="listItem" lang="si">න්‍ධ</span><span class="listTrans">ndha</span></div>
-<!--div class="listPair"><span class="listItem" lang="si">ඳ්‍ඨ</span><span class="listTrans">ňdṭha</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඳ්‍ධ</span><span class="listTrans">ňddha</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඳ්‍ව</span><span class="listTrans">ňdva</span></div-->
-<div class="listPair"><span class="listItem" lang="si">න්‍ද්‍ර</span><span class="listTrans">ndra</span></div>
-</div>
-</figure>
-
-<p>The <strong>third approach</strong> is used in ancient scriptures but is not used in modern Sinhala.<sup>3</sup> It hides the virama and moves the consonants alongside each other, so that they are touching, eg. <span class="charExample"><span class="ex" lang="si">ම‍්ම</span> <span class="trans">mm</span></span> (cf. <span class="charExample"><span class="ex" lang="si">මම</span></span>). For this use ZWJ first, ie.:<br/>
-<span class="codepoint"><span class="name">ZWJ</span> + <span lang="si">&#x25CC;&#x0DCA;</span> [<a href="/scripts/sinhala/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a> + <a href="/scripts/sinhala/block#char0DCA"><span class="uname">U+0DCA SINHALA SIGN AL-LAKUNA​</span></a>]</span>.</p>
-</section>
-
-
-
 <section id="multipart">
 <h3><a href="#multipart">Multipart vowels</a></h3>
-<p>The following vowel signs have strokes that appear on both sides of the base. In decomposed text (NFD) these could be represented by multiple code points, but the Sinhala encoding standard<sup>4</sup> recommends that only the single code point is used.</p>
+<p>The following vowel signs have strokes that appear on both sides of the base. In decomposed text (NFD) these could be represented by multiple code points, but the Sinhala encoding standard<sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2737.pdf">s</a></sup> recommends that only the single code point is used.</p>
 <figure>
 <div class="listAll" onClick="listAll(this, 'si')">list all</div>
 <div class="listArray">
@@ -596,9 +596,9 @@ It is important to note that the Unicode names for these marks should be ignored
 
 
 
-<section id="layout">
-<h2><a href="#layout">Input</a></h2>
-<p>The Sinhala keyboard<sup>4</sup> has deadkeys which change the assignments of keys around them when pressed. For example, pressing the key for <span class="trans">e</span> will change several keys to letters that start with the same symbol.</p>
+<section id="input">
+<h2><a href="#input">Input</a></h2>
+<p>The Sinhala keyboard<sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2737.pdf">s</a></sup> has deadkeys which change the assignments of keys around them when pressed. For example, pressing the key for <span class="trans">e</span> will change several keys to letters that start with the same symbol.</p>
 <figure>
 <p><img src="images/kbd_default.png" alt=""/></p>
 <figcaption>Sinhala keyboard in default state.</figcaption>
@@ -619,18 +619,18 @@ It is important to note that the Unicode names for these marks should be ignored
 <section id="references">
 <h2><a href="#references">References</a></h2>
   <ol>
-    <li>[Unicode] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch13.pdf">Sinhala</a>, pp513-514.</li>
-    <li>[Daniels] Peter T. Daniels and William Bright, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
-		    0-19-507993-0</li>
-<li>Wikipedia, <a href="http://en.wikipedia.org/wiki/Sinhalese_alphabet">Sinhalese alphabet</a>.</li>
-    <li>[SriLanka]  <cite><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2737.pdf">Sri Lanka Standard, Sinhala Character Code for Information Exchange</a></cite>.</li>
+    <li>[U] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch13.pdf">Sinhala</a>, pp513-514.</li>
+    <li>[D] Peter T. Daniels and William Bright, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
+		    0-19-507993-0, pp408-412</li>
+<li>[W] <a href="http://en.wikipedia.org/wiki/Sinhalese_alphabet">Sinhalese alphabet</a>.</li>
+    <li>[S] <cite><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2737.pdf">Sri Lanka Standard, Sinhala Character Code for Information Exchange</a></cite>.</li>
 </ol>
 </section>
 
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/sinhala"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-26  9:12<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bsinhala%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fsinhala%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/sinhala"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-27  9:54<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bsinhala%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fsinhala%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"></div>
