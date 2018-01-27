@@ -1,4 +1,4 @@
-var scriptNotesSet= new Set(['armenian','arabic', 'balinese', 'bengali','buginese', 'cherokee', 'devanagari', 'ethiopic', 'greek', 'han', 'hangul', 'hebrew', 'javanese', 'kana', 'khmer','lao','mandaic','myanmar', 'nko', 'sinhala', 'sundanese', 'syriac', 'tamil', 'thaana', 'thai', 'tibetan'])
+var scriptNotesSet= new Set(['armenian','arabic', 'balinese', 'bengali','buginese', 'cherokee', 'devanagari', 'ethiopic', 'greek', 'han', 'hangul', 'hebrew', 'javanese', 'kana', 'khmer','lao','mandaic','myanmar', 'nko', 'sinhala', 'sundanese', 'syriac', 'tamil', 'thaana', 'thai', 'tibetan', 'tifinagh'])
 
 var charNotesSet= new Set(['arabic','armenian', 'balinese','bengali','buginese', 'cherokee', 'devanagari','ethiopic','greek','hebrew', 'javanese', 'khmer','lao','latin','lisu','malayalam','mandaic','mongolian','myanmar', 'nko', 'sinhala', 'sundanese', 'syriac', 'tamil','thaana', 'thai','tibetan','tifinagh'])
 
@@ -465,7 +465,7 @@ var linkDB = [
 	local: [	],
 	unicode:{ 	}, 
 	charts:[	"Tifinagh" ],
-	pickers:[	
+	pickers:[	{ name:"Tifinagh", url:"tifinagh" }
 				],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-african.html#tifinagh" }
 				],
