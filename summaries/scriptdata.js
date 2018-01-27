@@ -71,7 +71,7 @@ var scriptData = [
 
 { script:"Tibetan", type:"abugida", chars:211, cchars:77, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"no", baseline:"high", wrap:"syllable", justify:"special", digits:"yes", region:"Asia C", linked:"tibetan" },
 	   
-{ script:"Tifinagh", type:"alpha", chars:32, cchars:0, cs:"no", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr+", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"yes", region:"Africa" },
+{ script:"Tifinagh", type:"alpha", chars:59, cchars:1, cs:"no", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr/rtl", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"no", region:"Africa", linked:"tifinagh" },
 	   
 { script:"UCAS", type:"?", chars:710, cchars:0, cs:"no", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"no", region:"America" },
 	   
