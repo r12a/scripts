@@ -121,7 +121,7 @@ var linkDB = [
 	local: [	],
 	unicode:{ 	core:"ch07", historical:"ngc339csy8" }, 
 	charts:[	"Cyrillic", "Cyrillic Supplement", "Cyrillic Extended-A", "Cyrillic Extended-B" ],
-	pickers:[	
+	pickers:[	{ name:"Russian", url:"russian" }
 				],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-european.html#cyrillic" }
 				],
