@@ -12,9 +12,11 @@
 	font-size: 24px;
 	font-family: webfont, serif;
     line-height: 1.2;
+    text-align: start;
 	}
 [lang=ru] { font-family: webfont, serif; font-size: 130%; }
 .large .ex { font-size: 300%; }
+.narrowlines .listPair { margin-bottom: 0.25em; }
 </style>
 
 <script type="text/javascript" src="/shared/code/boilerplate.js"></script>
@@ -88,17 +90,18 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->28-Jan-2018<!-- #EndDate -->
+  <!-- #BeginDate format:En2 -->31-Jan-2018<!-- #EndDate -->
 &bull; tags <a href="http://rishida.net/blog/index.php?tag=cyrillic" title="Show all blog posts tagged with 'cyrillic'">cyrillic</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
 
 <div class="section">
-  <p>This page provides basic information about the Cyrillic script. It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>. </p>
+  <p>This page provides basic information about the Cyrillic script. It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned. For character-specific details see the
+  <a class="linkHighlight" href="/scripts/cyrillic/block">Cyrillic character notes</a>. For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>. </p>
   <p class="instructions">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
   
   <details id="scriptLinks">
-  <summary>Show more links.</summary>
+  <summary class="instructions">Show links for the Cyrillic script.</summary>
   <div id="linklist"></div>
   <script>document.getElementById('linklist').innerHTML = getData('Cyrl')</script>
   </details>
@@ -150,6 +153,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
     <p>Cyrillic is an <span class="newterm">alphabet</span>. Letters typically represent a consonant or vowel sound.   See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
 </p>
     <p>Text is  written horizontally, left to right, and the visual forms of letters don't usually interact. The script is bicameral.</p>
+<p>Of the 441 characters in the Unicode Cyrillic blocks, 177 are historic (33%) and 2 are for Lithuanian dialectology. The remaining 262 are just letters – no punctuation, digits, or combining characters. These are all bicameral, which brings the number of distinct modern letters to 131. One reason for the still high number of letters is that modern Cyrillic text tends to use precomposed forms, rather than combining diacritics separately with base letters. However, there are also many extended characters that are formed by slightly tweaking   a set of basic shapes.</p>
   </section>
 
   
@@ -163,7 +167,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
       <li><a href="/uniview/?block=Cyrillic">Cyrillic</a> <span class="charCount">(256 characters)</span></li>
       <li><a href="/uniview/?block=Cyrillic_supplement">Cyrillic_Supplement</a> <span class="charCount">(48 characters)</span></li>
       <li><a href="/uniview/?block=Cyrillic_Extended-A">Cyrillic Extended-A</a> <span class="charCount">(32 characters)</span></li>
-      <li><a href="/uniview/?block=Cyrillic_Extended-B">Cyrillic Extended-B</a> <span class="charCount">(95 characters)</span></li>
+      <li><a href="/uniview/?block=Cyrillic_Extended-B">Cyrillic Extended-B</a> <span class="charCount">(96 characters)</span></li>
+      <li><a href="/uniview/?block=Cyrillic_Extended-C">Cyrillic Extended-C</a> <span class="charCount">(9 characters)</span></li>
     </ul>
     <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
 <ul>
@@ -176,8 +181,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <li><a href="/app-charuse/?language=sr" target="_blank">Serbian</a> <span class="charCount">(60 letters, 7 punctuation :   total 67)</span></li>
 <li><a href="/app-charuse/?language=uk" target="_blank">Ukranian</a> <span class="charCount">(67 letters, 2 marks, 8 punctuation, 1 symbols :   total 78)</span></li>
 </ul>
-  <p><!--For character-specific details see 
-  <a class="linkHighlight" href="/scripts/cyrillic/block">Character notes</a>. --></p>
+  <p>For character-specific details see the
+ <a class="linkHighlight" href="/scripts/cyrillic/block">Cyrillic character notes</a>.</p>
 </section>
 
 
@@ -189,7 +194,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <section id="consonants">
  <h2><a href="#consonants">Consonants</a></h2>
-      
+ 
 <figure>
 <div class="listAll" onClick="listAll(this, 'ru')">list all</div>
 <div class="listArray">
@@ -216,7 +221,14 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </div>
 </figure>
 
-<p>Hard and soft signs:</p>
+ <p>Russian uses 20 consonants (40 characters, if you include uppercase and lowercase), plus a hard and soft sign (see below).</p>
+      
+
+
+
+<section id="signs">
+<h3><a href="#signs">Hard and soft signs</a></h3>
+
 <figure>
 <div class="listAll" onClick="listAll(this, 'ru')">list all</div>
 <div class="listArray">
@@ -225,6 +237,33 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </div>
 </figure>
 
+</section>
+      
+
+
+
+<section id="obsolete">
+<h3><a href="#obsolete">Obsolete consonants</a></h3>
+
+<p>After the Russian orthographic reform of 1918, the following consonants were removed from the Russian repertoire.<sup><a href="http://en.wikipedia.org/wiki/Cyrillic_script">w</a></sup></p>
+<figure>
+<div class="listAll" onClick="listAll(this, 'ru')">list all</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="ru">Ѳѳ</span><span class="listTrans">ḟ</span></div>
+<div class="listPair"><span class="listItem" lang="ru">Ѵѵ</span><span class="listTrans">ẏ</span></div>
+</div>
+</figure>
+
+<p>Since 1750 the following consonants had already been withdrawn.<sup><a href="http://en.wikipedia.org/wiki/Cyrillic_script">w</a></sup></p>
+<figure>
+<div class="listAll" onClick="listAll(this, 'ru')">list all</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="ru">Ѕѕ</span><span class="listTrans">ż</span></div>
+<div class="listPair"><span class="listItem" lang="ru">Ѯѯ</span><span class="listTrans">k͡s</span></div>
+<div class="listPair"><span class="listItem" lang="ru">Ѱѱ</span><span class="listTrans">p͡s</span></div>
+</div>
+</figure>
+</section>
 
 </section>
 
@@ -234,7 +273,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <section id="vowels">
  <h2><a href="#vowels">Vowels</a></h2>
-      
+ 
 <figure>
 <div class="listAll" onClick="listAll(this, 'ru')">list all</div>
 <div class="listArray">
@@ -251,19 +290,104 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <div class="listPair"><span class="listItem" lang="ru">Яя</span><span class="listTrans">i͡u</span><span class="listIPA">ja</span></div>
 </div>
 </figure>
+
+<p>Standard Russian uses 11 vowel letters (22 characters).</p>
+      
+
+
+
+<section id="obsolete_vowels">
+<h3><a href="#obsolete_vowels">Obsolete vowels</a></h3>
+
+<p>After the Russian orthographic reform of 1918, the following vowels were removed from the Russian repertoire.<sup><a href="http://en.wikipedia.org/wiki/Cyrillic_script">w</a></sup></p>
+<figure>
+<div class="listAll" onClick="listAll(this, 'ru')">list all</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="ru">Іі</span><span class="listTrans">ī</span></div>
+<div class="listPair"><span class="listItem" lang="ru">Ѣѣ</span><span class="listTrans">i͡e</span></div>
+</div>
+</figure>
+
+
+<p>Previously, since 1750, the following consonants had been withdrawn.<sup><a href="http://en.wikipedia.org/wiki/Cyrillic_script">w</a></sup></p>
+<figure>
+<div class="listAll" onClick="listAll(this, 'ru')">list all</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="ru">Ѫѫ</span><span class="listTrans">ǫ</span></div>
+<div class="listPair"><span class="listItem" lang="ru">Ѧѧ</span><span class="listTrans">ę</span></div>
+<div class="listPair"><span class="listItem" lang="ru">Ѭѭ</span><span class="listTrans">i͡ǫ</span></div>
+<div class="listPair"><span class="listItem" lang="ru">Ѩѩ</span><span class="listTrans">i͡ę</span></div>
+</div>
+</figure>
+</section>
 </section>
 
 
 
 
 
+<section id="gsub">
+<h2><a href="#gsub">Context-based glyph changes</a></h2>
+
+<p>Cyrillic doesn't normally have any of the changeability of complex scripts. Characters are typically separate and self-contained.</p>
+<p>However, there can be a significant difference in shape between regular and italic/cursive font shapes for the same character. </p>
+<figure class="narrowlines">
+<div class="listArray" style="justify-content: center; font-size: 300%; line-height: 1.2;">
+<div class="listPair"><span class="listItem" lang="ru">в</span><span class="listItem" style="font-style:italic;" lang="ru">в</span></div>
+<div class="listPair"><span class="listItem" lang="ru">ш</span><span class="listItem" style="font-style:italic;" lang="ru">ш</span></div>
+<div class="listPair"><span class="listItem" lang="ru">й</span><span class="listItem" style="font-style:italic;" lang="ru">й</span></div>
+<div class="listPair"><span class="listItem" lang="ru">м</span><span class="listItem" style="font-style:italic;" lang="ru">м</span></div>
+</div>
+<figcaption>Conservative transformations between regular and italic.</figcaption>
+</figure>
+
+<figure class="narrowlines">
+<div class="listArray" style="justify-content: center; font-size: 300%; line-height: 1.2;">
+<div class="listPair"><span class="listItem" lang="ru">г</span><span class="listItem" style="font-style:italic;" lang="ru">г</span></div>
+<div class="listPair"><span class="listItem" lang="ru">д</span><span class="listItem" style="font-style:italic;" lang="ru">д</span></div>
+<div class="listPair"><span class="listItem" lang="ru">т</span><span class="listItem" style="font-style:italic;" lang="ru">т</span></div>
+</div>
+<figcaption>More radical transformations between regular and italic.</figcaption>
+</figure>
+
+<p>Note in particular the italic form of <span class="ex" lang="ru">т</span> in the figure just above. The italic form of <span class="ex" lang="ru">м</span> is shown in the previous figure.</p>
+<p>The shapes of the italic forms can also vary by language.<sup><span title="See more at ">→</span><a href="http://en.wikipedia.org/wiki/Cyrillic_script#Letterforms_and_typography">w</a></sup></p>
+</section>
+
+
+<section id="diacritics">
+<h2><a href="#diacritics">Diacritics</a></h2>
+      <p>Unicode decomposition can produce <span class="codepoint" translate="no"><span lang="ru">&#x25CC;&#x0308;</span> [<a href="/scripts/cyrillic/block#char0308"><span class="uname">U+0308 COMBINING DIAERESIS​</span></a>]</span> from <span class="codepoint" translate="no"><span lang="ru">&#x0451;</span> [<a href="/scripts/cyrillic/block#char0451"><span class="uname">U+0451 CYRILLIC SMALL LETTER IO</span></a>]</span>, and <span class="codepoint" translate="no"><span lang="ru">&#x25CC;&#x0306;</span> [<a href="/scripts/cyrillic/block#char0306"><span class="uname">U+0306 COMBINING BREVE​</span></a>]</span> from  <span class="codepoint" translate="no"><span lang="ru">&#x0439;</span> [<a href="/scripts/cyrillic/block#char0439"><span class="uname">U+0439 CYRILLIC SMALL LETTER SHORT I</span></a>]</span>, but usually precomposed characters are used.</p>
+<p>One diacritic that <em>is</em> sometimes used is <span class="codepoint" translate="no"><span lang="ru">&#x25CC;&#x0301;</span> [<a href="/scripts/latin/block#char0301"><span class="uname">U+0301 COMBINING ACUTE ACCENT​</span></a>]</span>, used to ....</p>
+<p>There are, however, other languages written in the Cyrillic script that use one or more of the 55 diacritics in the Cyrillic repertoire.</p>
+
+</section>
+
+
+
 <section id="layout">
  <h2><a href="#layout">Text layout</a></h2>
       
+  <section id="direction">
+<h3><a href="#direction">Text direction</a></h3>
+<p>Cyrillic text is written left to right in horizontal lines.</p>
+</section>
+
+
+
+
   <section id="delimiters">
 <h3><a href="#delimiters">Text delimiters</a></h3>
   <p>Words are separated by spaces.</p>
   <p>Cyrillic uses standard Latin punctuation.</p>
+</section>
+
+
+
+
+  <section id="linebreak">
+<h3><a href="#linebreak">Line breaking</a></h3>
+  <p>Spaces between words provide the primary line break opportunities.<sup><a href="http://www.unicode.org/versions/latest/ch07.pdf">u</a></sup></p>
 </section>
 
 
@@ -282,7 +406,20 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </section>
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/cyrillic"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-28  11:47<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bcyrillic%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fcyrillic%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<section id="references">
+<h2><a href="#references">References</a></h2>
+  <ol>
+    <li>[U] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch07.pdf">Cyrillic</a>, pp316-320.</li>
+    <li>[D] Peter T. Daniels and William Bright, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
+		    0-19-507993-0, pp408-412</li>
+<li>[W] <a href="http://en.wikipedia.org/wiki/Cyrillic_script">Cyrillic script</a>.</li>
+    <li>[S] <cite><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2737.pdf">Sri Lanka Standard, Sinhala Character Code for Information Exchange</a></cite>.</li>
+</ol>
+</section>
+
+
+
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/cyrillic"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-31  6:53<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bcyrillic%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fcyrillic%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"></div>
