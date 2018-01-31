@@ -1,6 +1,6 @@
-var scriptNotesSet= new Set(['armenian','arabic', 'balinese', 'bengali','buginese', 'cherokee', 'devanagari', 'ethiopic', 'greek', 'han', 'hangul', 'hebrew', 'javanese', 'kana', 'khmer','lao','mandaic','myanmar', 'nko', 'sinhala', 'sundanese', 'syriac', 'tamil', 'thaana', 'thai', 'tibetan', 'tifinagh'])
+var scriptNotesSet= new Set(['armenian','arabic', 'balinese', 'bengali','buginese', 'cherokee', 'cyrillic', 'devanagari', 'ethiopic', 'greek', 'han', 'hangul', 'hebrew', 'javanese', 'kana', 'khmer','lao','mandaic','myanmar', 'nko', 'sinhala', 'sundanese', 'syriac', 'tamil', 'thaana', 'thai', 'tibetan', 'tifinagh'])
 
-var charNotesSet= new Set(['arabic','armenian', 'balinese','bengali','buginese', 'cherokee', 'devanagari','ethiopic','greek','hebrew', 'javanese', 'khmer','lao','latin','lisu','malayalam','mandaic','mongolian','myanmar', 'nko', 'sinhala', 'sundanese', 'syriac', 'tamil','thaana', 'thai','tibetan','tifinagh'])
+var charNotesSet= new Set(['arabic','armenian', 'balinese','bengali','buginese', 'cherokee', 'cyrillic', 'devanagari','ethiopic','greek','hebrew', 'javanese', 'khmer','lao','latin','lisu','malayalam','mandaic','mongolian','myanmar', 'nko', 'sinhala', 'sundanese', 'syriac', 'tamil','thaana', 'thai','tibetan','tifinagh'])
 
 var compChartSet= new Set(['arabic','armenian', 'balinese', 'bengali', 'buginese', 'cherokee', 'cyrillic', 'devanagari', 'ethiopic', 'greek', 'gujarati', 'gurmukhi', 'han', 'hangul', 'hebrew', 'javanese', 'kana', 'kannada', 'khmer', 'lao', 'latin', 'malayalam', 'mandaic', 'mongolian', 'myanmar', 'nko', 'oriya', 'sinhala', 'sundanese', 'syriac', 'tamil', 'telugu', 'thaana', 'thai', 'tibetan', 'tifinagh', 'ucas'])
 
@@ -121,7 +121,8 @@ var linkDB = [
 	local: [	],
 	unicode:{ 	core:"ch07", historical:"ngc339csy8" }, 
 	charts:[	"Cyrillic", "Cyrillic Supplement", "Cyrillic Extended-A", "Cyrillic Extended-B" ],
-	pickers:[	{ name:"Russian", url:"russian" }
+	pickers:[	{ name:"Russian", url:"russian" },
+				{ name:"Cyrillic", url:"cyrillic" }
 				],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-european.html#cyrillic" }
 				],
