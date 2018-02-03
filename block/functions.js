@@ -51,3 +51,39 @@ function setGeneralFont (fontname, size, language) {
 	}
 
 
+function addLangInfo () {
+    var chars = document.querySelectorAll('.character')
+    for (let i=0;i<chars.length; i++) findLangs(chars[i])
+    }
+
+
+function findLangs (node) {
+    var hex = node.id.replace(/char/,'')
+    var cp = parseInt(hex, 16)
+    var notesNode = node.querySelector('.notes')
+
+    if (notesNode && cl[cp]) {
+        languages = cl[cp]
+        var p = document.createElement('p')
+        p.appendChild(document.createTextNode('Used by: '))
+        for (let l=0;l<languages.length;l++) {
+            var a = document.createElement('a')
+            a.href = '/app-charuse/?language='+languages[l]
+            a.target = '_blank'
+            a.appendChild(document.createTextNode(langs[languages[l]].name.replace(/ \([^\)]+\)/g,'')))
+            p.appendChild(a)
+            if (l<languages.length-1) p.appendChild(document.createTextNode(', '))
+            }
+        notesNode.appendChild(p)
+        }
+    }
+
+
+function getFindStr (hex) {
+// return a value for the Find box at the top of the page
+
+    if (hex.length === 1) var hex = hex.codePointAt(0).toString(16)
+    while(hex.length<4) hex='0'+hex
+    return '#char'+hex.toUpperCase()
+    }
+
