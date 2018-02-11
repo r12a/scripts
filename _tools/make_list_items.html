@@ -3,55 +3,60 @@
 
 <head>
 <meta charset="utf-8"/>
-<title>Get new character blocks</title>
+<title>Make list for summary</title>
 <meta name="description" content="Make list items tool."/>
 </head>
 
 <body>
 <header>
-<h1>Make list items</h1>
+<h1>Make list for summary</h1>
 </header>
 
-<p>Makes markup for a list of characters with transcriptions that is presented on the page as an inline table (using flexbox).</p>
-<p>Make sure there are the same number of items in both lists.</p>
+<p>Makes markup for a list of characters  that is presented on the page as an inline table (using flexbox).</p>
+<p>The input box takes a list, one character per line, where each line contains at least the following tab-separated items: char, transliteration, ipa transcription, meaning. You don't have to fill all slots, but you should use the right number of tabs if slots are empty internally. Indicate which items to include, below.</p>
+<p>If you select 'bicameral' a character such as 'a' will come out as 'Aa'.</p>
 
-<p>Language:
-<input type="text" id="lang" placeholder="bcp47"/>
+<p>
+<label>Language: <input type="text" style="width:4em" id="lang" placeholder="bcp47"/></label>
+<label>Cc base: <input type="text" style="width:2em" id="ccbase" placeholder="-"/></label>
+<label><input type="checkbox" id="bicameral"> Bicameral?</label>
+<label><input type="checkbox" id="trans"> trans?</label>
+<label><input type="checkbox" id="ipa"> ipa?</label>
+<label><input type="checkbox" id="meaning"> meaning?</label>
+<button onClick="bicameral=false;
+if (document.getElementById('bicameral').checked) bicameral = true;
+document.getElementById('out').value = makeListFromChars(document.getElementById('lang').value, document.getElementById('in').value, bicameral); document.getElementById('out').select()">Go</button></p>
+
+<p><textarea id="in" placeholder="Add input list here" style="height:400px;float:left; width:45%; font-size: 150%;"></textarea>
 </p>
-<p>Add a space-separated list of characters:
-<input type="text" id="in" placeholder="A B C"/>
-</p>
-<p>Add a space-separated list of transliterations: 
-<input type="text" id="trans" placeholder="a b c ..."/></p>
-<p>Add a space-separated list of phonetic transcriptions: 
-<input type="text" id="ipa" placeholder="a b c ..."/></p>
-<p>Add a meaning: 
-<input type="text" id="meaning" placeholder="meaning meaning ..."/></p>
 
-<p><button onClick="document.getElementById('out').value = makeListFromChars(document.getElementById('in').value, document.getElementById('trans').value, document.getElementById('ipa').value, document.getElementById('meaning').value, document.getElementById('lang').value); document.getElementById('out').select()">Go</button></p>
+<textarea id="out" style="height:400px;width:45%;float:right;"></textarea>
 
-<textarea id="out" style="height:400px;width:100%;"></textarea>
-<div class="smallprint"><span id="version">This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2018-01-20  13:21<!-- #EndDate --> 
+<br style="clear: both;"/>
+
+<div class="smallprint" style="margin-top: 3em; font-size: 70%; font-style: italic;"><span id="version">This version <span id="version-info"> 
+  <!-- #BeginDate format:IS1m -->2018-02-11  7:54<!-- #EndDate --> 
 </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 <script type="text/javascript">
 
-function makeListFromChars (chars, trans, ipa, meaning, lang) {
-	var charList = chars.split(' ')
-	var tranList = trans.split(' ')
-	var ipaList = ipa.split(' ')
-	var meaningList = meaning.split(' ')
-	
+
+function makeListFromChars (lang, chars, bicameral) {
+    var charList = chars.split('\n')
+    var ccbase = ''
+    if (document.getElementById('ccbase').value !== '') ccbase = document.getElementById('ccbase').value
 	var out = '<figure>\n<div class="listAll" onClick="listAll(this, '
     out += "'"+lang+"'"
     out += ')">list all</div>\n<div class="listArray">\n'
 	
 	for (let x=0; x<charList.length; x++) {
-        out += '<div class="listPair"><span class="listItem" lang="'+lang+'">'+charList[x]+'</span>'
-        if (trans !== '') out += '<span class="listTrans">'+tranList[x]+'</span>'
-        if (ipa !== '') out += '<span class="listIPA">'+ipaList[x]+'</span>'
-        if (meaning !== '') out += '<span class="listMeaning">'+meaningList[x]+'</span>'
+        charList[x] = charList[x].trim()
+        var items = charList[x].split('\t')
+        if (bicameral) items[0] = items[0].toUpperCase() + items[0].toLowerCase()
+        out += '<div class="listPair"><span class="listItem" lang="'+lang+'">'+ccbase+items[0]+'</span>'
+        if (document.getElementById('trans').checked) out += '<span class="listTrans">'+items[1]+'</span>'
+        if (document.getElementById('ipa').checked) out += '<span class="listIPA">'+items[2]+'</span>'
+        if (document.getElementById('meaning').checked) out += '<span class="listMeaning">'+items[3]+'</span>'
         out += '</div>\n'
 		}
 	return out+'</div>\n</figure>'
