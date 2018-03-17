@@ -57,7 +57,7 @@ function addLangInfo () {
     }
 
 
-function findLangs (node) {
+function OLDfindLangs (node) {
     var hex = node.id.replace(/char/,'')
     var cp = parseInt(hex, 16)
     var notesNode = node.querySelector('.notes')
@@ -79,6 +79,41 @@ function findLangs (node) {
     }
 
 
+function findLangs (node) {
+    var hex = node.id.replace(/char/,'')
+    var cp = parseInt(hex, 16)
+    var notesNode = node.querySelector('.notes')
+
+    if (notesNode && cl[cp]) {
+        languages = cl[cp][0]
+        auxlanguages = cl[cp][1]
+        var p = document.createElement('p')
+        if (languages.length>0) p.appendChild(document.createTextNode('Used by: '))
+        else if (auxlanguages.length>0) p.appendChild(document.createTextNode('Used infrequently by: '))
+        for (let l=0;l<languages.length;l++) {
+            var a = document.createElement('a')
+            a.href = '/app-charuse/?language='+languages[l]
+            a.target = '_blank'
+            a.appendChild(document.createTextNode(langs[languages[l]].name.replace(/ \([^\)]+\)/g,'')))
+            p.appendChild(a)
+            if (l<languages.length-1) p.appendChild(document.createTextNode(', '))
+            }
+        if (auxlanguages.length>0 && languages.length>0) p.appendChild(document.createTextNode(', and infrequently by: '))
+        for (let l=0;l<auxlanguages.length;l++) {
+            var a = document.createElement('a')
+            a.href = '/app-charuse/?language='+auxlanguages[l]
+            a.target = '_blank'
+            a.style.fontStyle = 'italic'
+            a.style.fontSize = '90%'
+            a.appendChild(document.createTextNode(langs[auxlanguages[l]].name.replace(/ \([^\)]+\)/g,'')))
+            p.appendChild(a)
+            if (l<auxlanguages.length-1) p.appendChild(document.createTextNode(', '))
+            }
+        notesNode.appendChild(p)
+        }
+    }
+
+
 function getFindStr (hex) {
 // return a value for the Find box at the top of the page
 
@@ -87,3 +122,150 @@ function getFindStr (hex) {
     return '#char'+hex.toUpperCase()
     }
 
+
+
+
+
+
+function replaceStuff () {
+// generate lines for spreadsheet
+var entries = document.querySelectorAll('.character')
+var out = '' 
+document.getElementById('leftovers').value = 'var sidecar = {}\n'
+
+for (let i=0;i<entries.length;i++) {
+    out += entries[i].querySelector('.charimg').textContent
+    letter = entries[i].querySelector('.letter')
+    trans = letter.querySelector('.trans')
+    titlepara = letter.querySelector('.titlepara')
+    ipa = titlepara.querySelectorAll('.ipa')
+    console.log(ipa)
+    ipaStr = ''
+    for (j=0;j<ipa.length;j++) {
+        if (j>0) ipaStr += ', '
+        ipaStr += ipa[j].textContent
+        }
+    if (ipa.length>1) ipaStr += '…'
+    out += '\t'+trans.textContent+'\t'+ipaStr
+    out += '\n'
+    
+    id = entries[i].querySelector('.charimg').textContent
+    allButTitlePara = letter.innerHTML
+    titleParaStr = titlepara.innerHTML
+    allButTitlePara = allButTitlePara.replace('<p class="titlepara">'+titleParaStr+'</p>','')
+    console.log(allButTitlePara)
+    document.getElementById('leftovers').value += 'sidecar["'+id+'"] = `'+allButTitlePara+'`\n'
+    }
+console.log(out)
+document.getElementById('input').value = out
+//document.getElementById('leftovers').value = leftovers
+
+
+// redo contents
+var inputData = document.getElementById('input').value
+var inputLines = inputData.split('\n')
+for (let i=0;i<inputLines.length;i++) {
+    fields = inputLines[i].split('\t')
+    if (fields.length === 1) continue
+    
+    id = fields[0]
+    id = id.codePointAt(0).toString(16).toUpperCase()
+    while (id.length < 4) id = '0'+id
+    id = 'char'+id
+    console.log(id, fields)
+    }
+}
+
+
+
+
+
+
+function extractStuff () {
+// generate lines for spreadsheet
+var entries = document.querySelectorAll('.character')
+var out = '' 
+document.getElementById('leftovers').value = 'var sidecar = {}\n'
+
+for (let i=0;i<entries.length;i++) {
+    //out += entries[i].querySelector('.charimg').textContent
+    letter = entries[i].querySelector('.letter')
+    if (letter) titlepara = letter.querySelector('.titlepara')
+    
+    /*if (titlepara) nametrans = titlepara.querySelector('.trans')
+    else trans = ''
+    if (nametrans) nameipa = titlepara.querySelectorAll('.ipa')
+    else ipa = ''
+    console.log(ipa, nameipa)
+    
+    //ipaStr = ''
+    //for (j=0;j<ipa.length;j++) {
+    //    if (j>0) ipaStr += ', '
+    //    ipaStr += ipa[j].textContent
+    //    }
+    if (nametrans) out += '\t\t\t'+nametrans.textContent+'\t'+nameipa.textContent
+    out += '\n'
+    */
+    
+    if (letter) {
+        id = entries[i].querySelector('.charimg').textContent
+        allButTitlePara = letter.innerHTML
+        if (titlepara){
+            titleParaStr = titlepara.innerHTML
+            allButTitlePara = allButTitlePara.replace('<p class="titlepara">'+titleParaStr+'</p>','')
+            }
+        console.log(allButTitlePara)
+        document.getElementById('leftovers').value += 'sidecar["'+id+'"] = `'+allButTitlePara+'`\n'
+        }
+    }
+console.log(out)
+//document.getElementById('input').value = out
+//document.getElementById('leftovers').value = leftovers
+
+/*
+// redo contents
+var inputData = document.getElementById('input').value
+var inputLines = inputData.split('\n')
+for (let i=0;i<inputLines.length;i++) {
+    fields = inputLines[i].split('\t')
+    if (fields.length === 1) continue
+    
+    id = fields[0]
+    id = id.codePointAt(0).toString(16).toUpperCase()
+    while (id.length < 4) id = '0'+id
+    id = 'char'+id
+    console.log(id, fields)
+    }
+*/
+
+
+/*
+var inputData = document.getElementById('input').value
+var inputLines = inputData.split('\n')
+for (let i=0;i<inputLines.length;i++) {
+    fields = inputLines[i].split('\t')
+    if (fields.length === 1) continue
+    
+    id = fields[0]
+    id = id.codePointAt(0).toString(16).toUpperCase()
+    while (id.length < 4) id = '0'+id
+    id = 'char'+id
+    console.log(id, fields)
+    character = document.getElementById(id)
+
+    
+    innerCode = character.innerHTML
+    replacement = '<p>Syllable &nbsp;&nbsp; <span class="trans">'+fields[1]+'</span></p>'
+    newInnerCode = innerCode.replace(/<div class="notes">/,'<div class="notes">\n'+replacement)
+    character.innerHTML = newInnerCode
+    console.log(replacement)
+    
+    replacement = '<span class="title">Cherokee</span> &nbsp;&nbsp;  <span class="ipa">'+fields[2]+'</span>'
+    titlepara = character.querySelector('.titlepara')
+    titlepara.innerHTML = replacement
+    
+    }
+*/
+
+
+}
