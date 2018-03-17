@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <title>Thaana character notes</title>
-<meta name="description" content="Notes about characters in the Unicode Thaana script block."/>
+<meta name="description" content="Notes about characters in the Unicode Thaana script blocks."/>
 <link rel="stylesheet" type="text/css" href="../../shared/style/docs.css" />
 <link rel="stylesheet" type="text/css" href="../block/block-style.css" />
 <link rel="stylesheet" type="text/css" href="local.css" />
@@ -16,17 +16,22 @@
 <script type="text/javascript" src="/shared/fontlists/manage.js"></script>
 <script type="text/javascript" src="/shared/code/scriptGroups.js"></script>
 <script type="text/javascript" src="../block/functions.js"></script>
+<script type="text/javascript" src="../../app-charuse/char_lang.js"></script>
+<script type="text/javascript" src="../../app-charuse/langs.js"></script>
 
 <script type="text/javascript" src="/shared/fontlists/thaana.js"> </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 <style id="includeStyles"></style>
+<style>
+.character p { line-height: 35px; }
+</style>
 </head>
 
 <body>
 <header>
-  <div id="header-boilerplate"></div>
+<div id="header-boilerplate"></div>
   <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script> 
 </header>
 <h1>Thaana character notes</h1>
@@ -34,15 +39,17 @@
 <nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top"/></a></nav>
 
 <aside class="sidebar">
-  <h2 class="notoc flush"><a id="tochead">Contents</a></h2>
+  <nav>
+  <h2 class="notoc flush"><a id="tochead" name="tochead" tabindex="4">Contents</a></h2>
   <div id="toc"><!-- placeholder --></div>
   <div class="noprint">
-    <h2 class="notoc"><a id="links">Related links</a></h2>
+    <h2 class="notoc"><a id="links" name="links" tabindex="5">Related links</a></h2>
     <p><a href="index">Thaana script summary</a></p>
     <p><a href="../links?script=thaana">Thaana script links</a></p>
   </div>
- 
- 
+</nav>
+
+
   <div id="fontsetting" class="closed">
     <h2 class="notoc"><a id="fonts">Fonts</a></h2>
     <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
@@ -54,58 +61,73 @@ onchange="var params = this.value.split(':');setBoxFont(params[0]);">
     </p>
    <p>Set font for examples<br/>
       <select id="exfontswitchfont" 
-onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'dv');">
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'nqo');">
       </select>
       <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
-      <input id="exfontswitchsize" type="number" value="22" style="width:30px;"
-onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'dv');" />
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'nqo');" />
     </p>
     <p onclick="newfont=prompt('Enter the font name. (Only spaces, hyphens, underlines and alphanum allowed.)', '...'); addFontToLists(newfont, 'exfontswitchfont,slfontswitchfont');" style="cursor:pointer;">Add a font to these lists</p>
   </div>
 </aside>
 
-
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->7 August, 2017<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->13 March, 2018<!-- #EndDate -->
 &bull; tags <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="http://rishida.net/blog/?tag=thaana" title="Show all blog posts tagged with 'thaana'">thaana</a></p>
 <section>
-  <p>This page lists characters in the following Unicode  block and provides information about them.  It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places. </p>
-  <ul>
-    <li><a href="../../uniview/?block=thaana" target="_blank">Thaana</a></li>
-  </ul>
-  <p>For information about the general features of the Thaana script see the <a href="index" class="linkHighlight">Thaana script summary</a>.</p>
-  <p>To view this page as intended, you  need a good font.  This page comes with a Noto Sans Thaana webfont. Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system. I recommend the excellent and free <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;item_id=DoulosSILfont">Doulos SIL font</a>.</p>
-  <p>If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
-  <p>To find a character by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the hex number here:</p>
-  <p>Find <input type="text" onChange="var hex=this.value;if (hex!=''){while(hex.length<4){hex='0'+hex;}document.location='#char'+hex.toUpperCase();}"/></p>
-  <p>You can also find characters for which there are annotations using UniView (switch on <samp>Show notes</samp>).</p>
-  <p>The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. If there is no glyph and you want to see what it looks like, click on <samp>See in UniView</samp>.</p>
+   <p>This page lists characters in the following Unicode  block and provides information about them. </p>
+<ul>
+<li><a href="../../uniview/?block=thaana" target="_blank">Thaana</a></li>
+   </ul>
+   <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
+<p>For a summary of the script and its use in  writing systems, see the page <a class="linkHighlight" href="/scripts/thaana/">Thaana script summary</a>.   For similar information related to other scripts, see <a href="/r12a.github.io/doclist#charnotes">this list</a>.</p>
+<p><span style="text-align: start;">We have usage data only one language that uses the Thaana script</span>: Dhivehi.</p>
+<!--p style="text-align: start;">The transliteration is based on ISO 9985.</p-->
+<p>Find
+<input type="text" 
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/>
+</p>
+<p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
+<details>
+<summary class="instructions">Read more about how to use this page.</summary>
+    <p class="instructions">To <strong>find a character</strong> by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or the hex number in the <samp>Find</samp> control above.</p>
+    <p class="instructions">To view this page as intended, you  need a <strong>Thaana font</strong>.  This page comes with a Noto Sans Thaana webfont. Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system.  For transcriptions I recommend the excellent and free <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;item_id=DoulosSILfont">Doulos SIL font</a>. The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. (If there is no glyph and you want to see what it looks like, click on <samp>See in UniView</samp>.)</p>
+    <p class="instructions"><strong>Information about languages</strong> that use these characters is taken from the list maintained for the Character Use app. The list is not exhaustive.</p>
+<p class="instructions"><strong>References</strong> are indicated by superscript characters. Wherever possible, those contain direct links to the source material. When such a pointer is alongside an arrow → it means that it's worth following the link for the additional information it provides. Digits refer to the main sources, which are listed at the bottom of a set of notes.</p>
+<p class="instructions">When you are using UniView and you turn on <samp>Show notes</samp>, UniView will pull in information about characters from this page.</p>
+</details>
 </section>
 </div>
 
 
+
 <section id="consonants">
-  <h2><a href="#consonants">Consonants</a></h2>
-  
+<h2><a href="#consonants">Consonants</a></h2>
 
 
-<section id="basic_consonants">
-  <h3><a href="#basic_consonants">Basic consonants</a></h3>
-  
+<section id="basicconsonants">
+  <h3><a href="#basicconsonants">Basic consonants</a></h3>
+
+
 <div class="character" id="char0780">
 <div class="charimg">&#x0780;</div>
 <p class="charname"><strong>U+0780</strong> <a href="#char0780">THAANA LETTER HAA</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0780">See in UniView</a></p>
 <div class="notes">
+<p class="charDescription"><span class="charType">Consonant</span> <span class="trans">h</span></p>
 <div class="letter">
-<p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">haa</span>  <span class="trans">h</span>&nbsp;&nbsp; <span class="ipa">h</span></p>
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ހާ</span>
+ <span class="transliteratedname trans">haa</span></span> <span class="ipa">h</span></p>
 </div>
-<p class="ref"><a href="#refs">Refs</a>:
-   [1] [Daniels] pp564-568 &nbsp;
-   [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-   [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp;
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
 </p>
+
 </div>
 </div>
 
@@ -114,18 +136,22 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+0781</strong> <a href="#char0781">THAANA LETTER SHAVIYANI</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0781">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">shavijani</span>  <span class="trans">sh</span>&nbsp;&nbsp; <span class="ipa">ʂ</span></p>
-    <p class="titlepara"><span class="ipa">ʔ</span> in final position in a word with <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span>, eg. <span class="ex" dir="rtl" lang="dv">ރަށް</span> <span class="ipa">raʔ</span> <span class="meaning">island</span>.</p>
-    <p class="titlepara"><span class="ipa">ʂ</span>  when the word continues, eg. <span class="ex" dir="rtl" lang="dv">ރަށެއް</span> <span class="ipa">raʂeh</span> <span class="meaning">an island</span>  and <span class="ex" dir="rtl" lang="dv">ރަށަކީ</span> <span class="ipa">raʂakeː</span> <span class="meaning">the island is.<sup>4</sup></span></p>
-    <p class="titlepara">With  <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span> before another consonant, leads to that consonant being doubled, eg. <span class="ex" lang="dv" dir="rtl">އަށްޑިހަ</span> <span class="ipa">aɖɖiha</span> <span class="meaning">eighty</span>.<sup>1</sup></p>
-  </div>
-<p class="ref"><a href="#refs">Refs</a>:
-   [1] [Daniels] pp564-568 &nbsp;
-   [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-   [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp;
-   [4] Wikipedia: <a href="https://en.wikipedia.org/wiki/Sha_viyani" target="_blank">Sha viyani</a> &nbsp;
+<p class="charDescription"><span class="charType">Consonant</span> <span class="trans">š</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ށަވިޔަނަ</span>
+ <span class="transliteratedname trans">shaviyana</span></span> <span class="ipa">ʂ</span></p>
+<p><span class="ipa">ʔ</span> in final position in a word with <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span>, eg. <span class="ex" dir="rtl" lang="dv">ރަށް</span> <span class="ipa">raʔ</span> <span class="meaning">island</span>.</p>
+<p><span class="ipa">ʂ</span>  when the word continues, eg. <span class="ex" dir="rtl" lang="dv">ރަށެއް</span> <span class="ipa">raʂeh</span> <span class="meaning">an island</span>  and <span class="ex" dir="rtl" lang="dv">ރަށަކީ</span> <span class="ipa">raʂakeː</span> <span class="meaning">the island is.<sup>4</sup></span></p>
+<p>With  <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span> before another consonant, leads to that consonant being doubled, eg. <span class="ex" lang="dv" dir="rtl">އަށްޑިހަ</span> <span class="ipa">aɖɖiha</span> <span class="meaning">eighty</span>.<sup>d</sup></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
 </p>
+
 </div>
 </div>
 
@@ -134,15 +160,21 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+0782</strong> <a href="#char0782">THAANA LETTER NOONU</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0782">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">noonu</span>  <span class="trans">n</span>&nbsp;&nbsp; <span class="ipa">n̪</span></p>
-    <p class="titlepara">When written with no diacritic, this indicates prenasalization of a following stop, eg. <span class="ex" lang="dv">ކަނޑު</span> <span class="ipa">kaⁿɖu</span> <span class="meaning">sea</span>. It is the only case where a letter can appear without a diacritic. In some cases, however, the prenasalisation is not indicated at all, although it is pronounced, eg. <span class="ex" lang="dv">ކަޑު</span>.<sup>1</sup> <sup>3</sup></p>
-    <p class="titlepara">With <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span> it  indicates gemination of a following nasal, eg.  <span class="ex" dir="rtl" lang="dv">އެންމެ</span> <span class="ipa">emme</span> <span class="meaning">only</span>.</p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Consonant</span> <span class="trans">n</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ނޫނު</span>
+ <span class="transliteratedname trans">noonu</span></span> <span class="ipa">n</span></p>
+<p>When written with no diacritic, this indicates prenasalization of a following stop, eg. <span class="ex" lang="dv">ކަނޑު</span> <span class="ipa">kaⁿɖu</span> <span class="meaning">sea</span>. It is the only case where a letter can appear without a diacritic. In some cases, however, the prenasalisation is not indicated at all, although it is pronounced, eg. <span class="ex" lang="dv">ކަޑު</span>.<sup>d</sup> <sup><a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">w</a></sup></p>
+<p>With <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span> it  indicates gemination of a following nasal, eg. <span class="ex" dir="rtl" lang="dv">އެންމެ</span> <span class="ipa">emme</span> <span class="meaning">only</span>.</p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -151,13 +183,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+0783</strong> <a href="#char0783">THAANA LETTER RAA</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0783">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">raa</span>  <span class="trans">r</span>&nbsp;&nbsp; <span class="ipa">r</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Consonant</span> <span class="trans">r</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ރާ</span>
+ <span class="transliteratedname trans">raa</span></span> <span class="ipa">r</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -166,13 +204,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+0784</strong> <a href="#char0784">THAANA LETTER BAA</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0784">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">baa</span>  <span class="trans">b</span>&nbsp;&nbsp; <span class="ipa">b</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Consonant</span> <span class="trans">b</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ބާ</span>
+ <span class="transliteratedname trans">baa</span></span> <span class="ipa">b</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -181,13 +225,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+0785</strong> <a href="#char0785">THAANA LETTER LHAVIYANI</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0785">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">lhaviyani</span>  <span class="trans">lh</span>&nbsp;&nbsp; <span class="ipa">ɭ</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Consonant</span> <span class="trans">ḷ</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޅަވިޔަނި</span>
+ <span class="transliteratedname trans">lhaviyani</span></span> <span class="ipa">ɭ</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -196,13 +246,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+0786</strong> <a href="#char0786">THAANA LETTER KAAFU</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0786">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">kaafu</span>  <span class="trans">k</span>&nbsp;&nbsp; <span class="ipa">k</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Consonant</span> <span class="trans">k</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ކާފު</span>
+ <span class="transliteratedname trans">kaafu</span></span> <span class="ipa">k</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -211,16 +267,22 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+0787</strong> <a href="#char0787">THAANA LETTER ALIFU</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0787">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">alifu</span></p>
-    <p class="titlepara">Used as a carrier for vowel diacritics where a vowel appears at the start of a word or is pronounced separately after another vowel, eg. <span class="ex" dir="rtl" lang="dv">އިރުގައި</span> <span class="ipa">irugai</span> <span class="meaning">time</span>.</p>
-    <p class="titlepara">With <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span> indicates gemination of a following consonant, eg. <span class="ex" dir="rtl" lang="dv">ބައްޓެއް</span> <span class="ipa">baʈʈeʔ</span> <span class="meaning">eggplant</span>, however geminated nasals are formed using <span class="codepoint"><span dir="rtl" lang="dv">&#x0782;</span> [<a href="#char0782" class="uname">U+0782 THAANA LETTER NOONU</a>]</span>.</p>
-    <p class="titlepara"> <span class="ipa">ʔ</span> with <span class="name">sukun</span> at the end of a word, eg. <span class="ex" dir="rtl" lang="dv">ފައް</span> <span class="ipa">faʔ</span> <span class="meaning">sawtooth</span>. In normal speech, however, the glottal stop assimilates completely to the following consonant, except before vowels or <span class="codepoint"><span lang="dv">&#xA0;&#x0780;</span> [<a href="#char0780" class="uname">U+0780 THAANA LETTER HAA</a>]</span>, where it becomes a velar nasal <span class="ipa">ŋ</span>.<sup>1</sup></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Vowel support</span> <span class="trans">-</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">އަލިފު</span>
+ <span class="transliteratedname trans">alifu</span></span> <span class="ipa">∅</span></p>
+<p>Used as a carrier for vowel diacritics where a vowel appears at the start of a word or is pronounced separately after another vowel, eg. <span class="ex" dir="rtl" lang="dv">އިރުގައި</span> <span class="ipa">irugai</span> <span class="meaning">time</span>.</p>
+<p>With <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span> indicates gemination of a following consonant, eg. <span class="ex" dir="rtl" lang="dv">ބައްޓެއް</span> <span class="ipa">baʈʈeʔ</span> <span class="meaning">eggplant</span>, however geminated nasals are formed using <span class="codepoint"><span dir="rtl" lang="dv">&#x0782;</span> [<a href="#char0782" class="uname">U+0782 THAANA LETTER NOONU</a>]</span>.</p>
+<p> <span class="ipa">ʔ</span> with <span class="name">sukun</span> at the end of a word, eg. <span class="ex" dir="rtl" lang="dv">ފައް</span> <span class="ipa">faʔ</span> <span class="meaning">sawtooth</span>. In normal speech, however, the glottal stop assimilates completely to the following consonant, except before vowels or <span class="codepoint"><span lang="dv">&#xA0;&#x0780;</span> [<a href="#char0780" class="uname">U+0780 THAANA LETTER HAA</a>]</span>, where it becomes a velar nasal <span class="ipa">ŋ</span>.<sup>1</sup></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -229,13 +291,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+0788</strong> <a href="#char0788">THAANA LETTER VAAVU</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0788">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">vaavu</span>  <span class="trans">v</span>&nbsp;&nbsp; <span class="ipa">ʋ</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Consonant</span> <span class="trans">v</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ވާވު</span>
+ <span class="transliteratedname trans">vaavu</span></span> <span class="ipa">v</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -244,13 +312,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+0789</strong> <a href="#char0789">THAANA LETTER MEEMU</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0789">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">meemu</span> <span class="trans">m</span>&nbsp;&nbsp; <span class="ipa">m</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Consonant</span> <span class="trans">m</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">މީމު</span>
+ <span class="transliteratedname trans">meemu</span></span> <span class="ipa">m</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -259,14 +333,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+078A</strong> <a href="#char078A">THAANA LETTER FAAFU</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=078A">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">faafu</span>
-    <span class="trans">f</span>&nbsp;&nbsp; <span class="ipa">f</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Consonant</span> <span class="trans">f</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ފާފު</span>
+ <span class="transliteratedname trans">faafu</span></span> <span class="ipa">f</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -275,13 +354,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+078B</strong> <a href="#char078B">THAANA LETTER DHAALU</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=078B">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">dhaalu</span> <span class="trans">dh</span>&nbsp;&nbsp; <span class="ipa">d̪</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Consonant</span> <span class="trans">d</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ދާލު</span>
+ <span class="transliteratedname trans">dhaalu</span></span> <span class="ipa">d</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -290,15 +375,21 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+078C</strong> <a href="#char078C">THAANA LETTER THAA</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=078C">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">thaa</span> <span class="trans">th</span>&nbsp;&nbsp; <span class="ipa">t̪</span></p>
-    <p class="titlepara"><span class="ipa">jʔ</span> in final position in a word with <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span>, eg. <span class="ex" dir="rtl" lang="dv">ރަތް</span> <span class="ipa">rajʔ</span> <span class="meaning">rat</span>.</p>
-    <p class="titlepara">With <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span> before another consonant, leads to that consonant being doubled, but also with the addition of <span class="ipa">j</span>, eg. <span class="ex" lang="dv" dir="rtl">އަތްޕުޅު</span> <span class="ipa">ajppuɭu</span> <span class="meaning">hand</span>.<sup>1</sup></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Consonant</span> <span class="trans">t</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ތާ</span>
+ <span class="transliteratedname trans">thaa</span></span> <span class="ipa">t</span></p>
+<p><span class="ipa">jʔ</span> in final position in a word with <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span>, eg. <span class="ex" dir="rtl" lang="dv">ރަތް</span> <span class="ipa">rajʔ</span> <span class="meaning">rat</span>.</p>
+<p>With <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span> before another consonant, leads to that consonant being doubled, but also with the addition of <span class="ipa">j</span>, eg. <span class="ex" lang="dv" dir="rtl">އަތްޕުޅު</span> <span class="ipa">ajppuɭu</span> <span class="meaning">hand</span>.<sup>1</sup></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -307,13 +398,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+078D</strong> <a href="#char078D">THAANA LETTER LAAMU</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=078D">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">laamu</span> <span class="trans">l</span>&nbsp;&nbsp; <span class="ipa">l</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Consonant</span> <span class="trans">l</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ލާމު</span>
+ <span class="transliteratedname trans">laamu</span></span> <span class="ipa">l</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -322,13 +419,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+078E</strong> <a href="#char078E">THAANA LETTER GAAFU</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=078E">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">gaafu</span> <span class="trans">g</span>&nbsp;&nbsp; <span class="ipa">ɡ</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Consonant</span> <span class="trans">g</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ގާފު</span>
+ <span class="transliteratedname trans">gaafu</span></span> <span class="ipa">ɡ</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -337,13 +440,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+078F</strong> <a href="#char078F">THAANA LETTER GNAVIYANI</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=078F">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">gnaviyani</span> <span class="trans">gn</span>&nbsp;&nbsp; <span class="ipa">ɲ</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Consonant</span> <span class="trans">n</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޏަވިޔަނި</span>
+ <span class="transliteratedname trans">gnaviyani</span></span> <span class="ipa">ɲ</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -352,13 +461,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+0790</strong> <a href="#char0790">THAANA LETTER SEENU</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0790">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">seenu</span> <span class="trans">s</span>&nbsp;&nbsp; <span class="ipa">s̺</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Consonant</span> <span class="trans">s</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ސީނު</span>
+ <span class="transliteratedname trans">seenu</span></span> <span class="ipa">s</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -367,13 +482,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+0791</strong> <a href="#char0791">THAANA LETTER DAVIYANI</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0791">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">daviyani</span> <span class="trans">d</span>&nbsp;&nbsp; <span class="ipa">ɖ</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Consonant</span> <span class="trans">ḍ</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޑަވިޔަނި</span>
+ <span class="transliteratedname trans">daviyani</span></span> <span class="ipa">ɖ</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -382,13 +503,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+0792</strong> <a href="#char0792">THAANA LETTER ZAVIYANI</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0792">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">zaviyani</span> <span class="trans">z</span>&nbsp;&nbsp; <span class="ipa">z̺</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Consonant</span> <span class="trans">z</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޒަވިޔަނި</span>
+ <span class="transliteratedname trans">zaviyani</span></span> <span class="ipa">z</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -397,13 +524,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+0793</strong> <a href="#char0793">THAANA LETTER TAVIYANI</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0793">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">taviyani</span> <span class="trans">t</span>&nbsp;&nbsp; <span class="ipa">ʈ</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Consonant</span> <span class="trans">ṭ</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޓަވިޔަނި</span>
+ <span class="transliteratedname trans">taviyani</span></span> <span class="ipa">ʈ</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -412,13 +545,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+0794</strong> <a href="#char0794">THAANA LETTER YAA</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0794">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">yaa/yaviyani</span> <span class="trans">y</span>&nbsp;&nbsp; <span class="ipa">j</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Consonant</span> <span class="trans">y</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޔަވިޔަނި</span>
+ <span class="transliteratedname trans">yaviyani</span></span> <span class="ipa">j</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -427,13 +566,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+0795</strong> <a href="#char0795">THAANA LETTER PAVIYANI</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0795">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">paviyani</span> <span class="trans">p</span>&nbsp;&nbsp; <span class="ipa">p</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Consonant</span> <span class="trans">p</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޕަވިޔަނި</span>
+ <span class="transliteratedname trans">paviyani</span></span> <span class="ipa">p</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -442,13 +587,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+0796</strong> <a href="#char0796">THAANA LETTER JAVIYANI</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0796">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">javiyani</span> <span class="trans">j</span>&nbsp;&nbsp; <span class="ipa">ʤ</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Consonant</span> <span class="trans">j</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޖަވިޔަނި</span>
+ <span class="transliteratedname trans">javiyani</span></span> <span class="ipa">ɟ</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -457,34 +608,50 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+0797</strong> <a href="#char0797">THAANA LETTER CHAVIYANI</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0797">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">chaviyani</span> <span class="trans">ch</span>&nbsp;&nbsp; <span class="ipa">ʧ</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Consonant</span> <span class="trans">c</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޗަވިޔަނި</span>
+ <span class="transliteratedname trans">chaviyani</span></span> <span class="ipa">c</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
+
+
+
 </section>
+
 
 
 
 <section id="arabic">
   <h3><a href="#arabic">Extensions for Arabic</a></h3>
-  
+
 <div class="character" id="char0798">
 <div class="charimg">&#x0798;</div>
 <p class="charname"><strong>U+0798</strong> <a href="#char0798">THAANA LETTER TTAA</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0798">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">ttaa</span> <span class="trans">ṯ</span> &nbsp;&nbsp; <span class="ex" lang="ar">ث</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Arabic consonant</span> <span class="trans">ṯ</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޘާ</span>
+ <span class="transliteratedname trans">ttaa</span></span> <span class="ex" lang="ar" dir="rtl">ث</span> </p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -493,13 +660,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+0799</strong> <a href="#char0799">THAANA LETTER HHAA</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0799">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">hhaa</span> <span class="trans">ḥ</span> &nbsp;&nbsp; <span class="ex" lang="ar">ح</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Arabic consonant</span> <span class="trans">ḥ</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޙާ</span>
+ <span class="transliteratedname trans">hhaa</span></span> <span class="ex" lang="ar" dir="rtl">ح</span> </p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -508,13 +681,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+079A</strong> <a href="#char079A">THAANA LETTER KHAA</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=079A">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">khaa</span> <span class="trans">ḫ</span> &nbsp;&nbsp; <span class="ex" lang="ar">خ</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Arabic consonant</span> <span class="trans">ḫ</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޚާ</span>
+ <span class="transliteratedname trans">khaa</span></span> <span class="ex" lang="ar" dir="rtl">خ</span> </p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -523,13 +702,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+079B</strong> <a href="#char079B">THAANA LETTER THAALU</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=079B">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">thaalu</span> <span class="trans">ḏ</span> &nbsp;&nbsp; <span class="ex" lang="ar">ذ</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Arabic consonant</span> <span class="trans">ḏ</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޛާލު</span>
+ <span class="transliteratedname trans">thaalu</span></span> <span class="ex" lang="ar" dir="rtl">ذ</span> </p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -538,13 +723,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+079C</strong> <a href="#char079C">THAANA LETTER ZAA</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=079C">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">zaa</span>&nbsp;&nbsp; <span class="ipa">ʒ</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Arabic consonant</span> <span class="trans">ʒ</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޜާ</span>
+ <span class="transliteratedname trans">zaa</span></span> <span class="ex" lang="ar" dir="rtl">ʒ</span> </p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -553,13 +744,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+079D</strong> <a href="#char079D">THAANA LETTER SHEENU</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=079D">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">sheenu</span> <span class="trans">š</span> &nbsp;&nbsp; <span class="ex" lang="ar">ش</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Arabic consonant</span> <span class="trans">š</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޝީނު</span>
+ <span class="transliteratedname trans">sheenu</span></span> <span class="ex" lang="ar" dir="rtl">ش</span> </p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -568,13 +765,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+079E</strong> <a href="#char079E">THAANA LETTER SAADHU</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=079E">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">saadhu</span> <span class="trans">ṣ</span> &nbsp;&nbsp; <span class="ex" lang="ar">ص</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Arabic consonant</span> <span class="trans">ṣ</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޞާޑު</span>
+ <span class="transliteratedname trans">saadhu</span></span> <span class="ex" lang="ar" dir="rtl">ص</span> </p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -583,13 +786,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+079F</strong> <a href="#char079F">THAANA LETTER DAADHU</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=079F">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">daadhu</span> <span class="trans">d̤</span> &nbsp;&nbsp; <span class="ex" lang="ar">ض</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Arabic consonant</span> <span class="trans">d̤</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޟާޑު</span>
+ <span class="transliteratedname trans">daadhu</span></span> <span class="ex" lang="ar" dir="rtl">ض</span> </p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -598,13 +807,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+07A0</strong> <a href="#char07A0">THAANA LETTER TO</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=07A0">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">to</span> <span class="trans">t̤</span> &nbsp;&nbsp; <span class="ex" lang="ar">ط</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Arabic consonant</span> <span class="trans">t̤</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޓޮ</span>
+ <span class="transliteratedname trans">to</span></span> <span class="ex" lang="ar" dir="rtl">ط</span> </p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -613,13 +828,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+07A1</strong> <a href="#char07A1">THAANA LETTER ZO</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=07A1">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">zo</span>&nbsp;&nbsp; <span class="ex" lang="ar">ظ</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Arabic consonant</span> <span class="trans">z̤</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޡޮ</span>
+ <span class="transliteratedname trans">zo</span></span> <span class="ex" lang="ar" dir="rtl">ظ</span> </p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -628,13 +849,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+07A2</strong> <a href="#char07A2">THAANA LETTER AINU</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=07A2">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">aïnu</span> <span class="trans">ʻ</span> &nbsp;&nbsp; <span class="ex" lang="ar">ع</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Arabic consonant</span> <span class="trans">ʻ</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޢައިނު</span>
+ <span class="transliteratedname trans">aïnu</span></span> <span class="ex" lang="ar" dir="rtl">ع</span> </p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -643,13 +870,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+07A3</strong> <a href="#char07A3">THAANA LETTER GHAINU</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=07A3">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">ghaïnu</span> <span class="trans">ǵ</span> &nbsp;&nbsp; <span class="ex" lang="ar">غ</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Arabic consonant</span> <span class="trans">ǵ</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޣައިނު</span>
+ <span class="transliteratedname trans">ghaïnu</span></span> <span class="ex" lang="ar" dir="rtl">غ</span> </p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -658,13 +891,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+07A4</strong> <a href="#char07A4">THAANA LETTER QAAFU</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=07A4">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">qaafu</span> <span class="trans">q</span>&nbsp;&nbsp; <span class="ex" lang="ar">ق</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Arabic consonant</span> <span class="trans">q</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޤާފު</span>
+ <span class="transliteratedname trans">qaafu</span></span> <span class="ex" lang="ar" dir="rtl">ق</span> </p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -673,13 +912,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+07A5</strong> <a href="#char07A5">THAANA LETTER WAAVU</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=07A5">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">waavu</span> <span class="trans">w</span> &nbsp;&nbsp; <span class="ex" lang="ar">و</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Arabic consonant</span> <span class="trans">w</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޥާވު</span>
+ <span class="transliteratedname trans">waavu</span></span> <span class="ex" lang="ar" dir="rtl">و</span> </p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 </section>
@@ -687,45 +932,59 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <section id="addu">
   <h3><a href="#addu">Consonant for Addu dialect</a></h3>
-  
+
+
 <div class="character" id="char07B1">
 <div class="charimg">&#x07B1;</div>
 <p class="charname"><strong>U+07B1</strong> <a href="#char07B1">THAANA LETTER NAA</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=07B1">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> consonant <span class="name">naviyani</span> <span class="trans">ṇ</span>&nbsp;&nbsp; <span class="ipa">ɳ</span></p>
-    <p class="titlepara">This letter was abolished from Maldivian official documents around 1953, but it is still seen in reprints of old books like the <cite>Bodu Tartheebu</cite>, and  is used by the people of Addu Atoll and Fuvahmulah when writing songs or poetry in their dialects as the sound is still present in their spoken language.<sup>3</sup></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Arabic consonant</span> <span class="trans">ṇ</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ޱަވިޔަނަ</span>
+ <span class="transliteratedname trans">naviyani</span></span> <span class="ipa">ɳ</span> </p>
+<p>This letter was abolished from Maldivian official documents around 1953, but it is still seen in reprints of old books like the <cite>Bodu Tartheebu</cite>, and  is used by the people of Addu Atoll and Fuvahmulah when writing songs or poetry in their dialects as the sound is still present in their spoken language.<sup><a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">w</a></sup></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
+
+
+</section>
+
 </section>
 
 
 
-</section>
+
 <section id="vowels">
   <h2><a href="#vowels">Vowels</a></h2>
   
-
-
-
 <div class="character" id="char07A6">
 <div class="charimg">&#x07A6;</div>
 <p class="charname"><strong>U+07A6</strong> <a href="#char07A6">THAANA ABAFILI</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=07A6">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> vowel <span class="name">abafili</span> <span class="trans">a</span> &nbsp;&nbsp; <span class="ipa">ə</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Vowel</span> <span class="trans">a</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">އަބަ ފިލި</span>
+ <span class="transliteratedname trans">aba fili</span></span> <span class="ipa">ə</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -734,13 +993,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+07A7</strong> <a href="#char07A7">THAANA AABAAFILI</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=07A7">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> vowel <span class="name">aabaafili</span> <span class="trans">aa</span> &nbsp;&nbsp; <span class="ipa">əː</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Vowel</span> <span class="trans">ā</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">އާބާ ފިލި</span>
+ <span class="transliteratedname trans">aabaa fili</span></span> <span class="ipa">əː</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -749,13 +1014,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+07A8</strong> <a href="#char07A8">THAANA IBIFILI</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=07A8">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> vowel <span class="name">ibifili</span> <span class="trans">i</span> &nbsp;&nbsp; <span class="ipa">i</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Vowel</span> <span class="trans">i</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">އިބި ފިލި</span>
+ <span class="transliteratedname trans">ibi fili</span></span> <span class="ipa">i</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -764,13 +1035,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+07A9</strong> <a href="#char07A9">THAANA EEBEEFILI</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=07A9">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> vowel <span class="name">eebeefili</span> <span class="trans">ee</span> &nbsp;&nbsp; <span class="ipa">iː</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Vowel</span> <span class="trans">ī</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">އީބީ ފިލި</span>
+ <span class="transliteratedname trans">eebee fili</span></span> <span class="ipa">iː</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -779,13 +1056,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+07AA</strong> <a href="#char07AA">THAANA UBUFILI</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=07AA">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> vowel <span class="name">ubufili</span> <span class="trans">u</span> &nbsp;&nbsp; <span class="ipa">u</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Vowel</span> <span class="trans">u</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">އުބު ފިލި</span>
+ <span class="transliteratedname trans">ubu fili</span></span> <span class="ipa">u</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -794,13 +1077,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+07AB</strong> <a href="#char07AB">THAANA OOBOOFILI</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=07AB">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> vowel <span class="name">ooboofili</span> <span class="trans">oo</span> &nbsp;&nbsp; <span class="ipa">uː</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Vowel</span> <span class="trans">ū</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">އޫބޫ ފިލި</span>
+ <span class="transliteratedname trans">ooboo fili</span></span> <span class="ipa">uː</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -809,13 +1098,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+07AC</strong> <a href="#char07AC">THAANA EBEFILI</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=07AC">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> vowel <span class="name">ebefili</span> <span class="trans">e</span> &nbsp;&nbsp; <span class="ipa">e</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Vowel</span> <span class="trans">e</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">އެބެެ ފިލި</span>
+ <span class="transliteratedname trans">ebe fili</span></span> <span class="ipa">e</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -824,13 +1119,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+07AD</strong> <a href="#char07AD">THAANA EYBEYFILI</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=07AD">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> vowel <span class="name">eybeyfili</span> <span class="trans">ey</span> &nbsp;&nbsp; <span class="ipa">eː</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Vowel</span> <span class="trans">ē</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">އޭބޭ ފިލި</span>
+ <span class="transliteratedname trans">eybey fili</span></span> <span class="ipa">eː</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -839,13 +1140,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+07AE</strong> <a href="#char07AE">THAANA OBOFILI</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=07AE">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> vowel <span class="name">obofili</span> <span class="trans">o</span> &nbsp;&nbsp; <span class="ipa">ɔ</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Vowel</span> <span class="trans">o</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">އޮބޮ ފިލި</span>
+ <span class="transliteratedname trans">obo fili</span></span> <span class="ipa">ɔ</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -854,13 +1161,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+07AF</strong> <a href="#char07AF">THAANA OABOAFILI</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=07AF">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> vowel <span class="name">oaboafili</span> <span class="trans">oa</span> &nbsp;&nbsp; <span class="ipa">ɔː</span></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
+<p class="charDescription"><span class="charType">Vowel</span> <span class="trans">ō</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">އޯބޯ ފިލި</span>
+ <span class="transliteratedname trans">oaboa fili</span></span> <span class="ipa">ɔː</span></p>
+</div>
+
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
 </div>
 </div>
 
@@ -869,30 +1182,35 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+07B0</strong> <a href="#char07B0">THAANA SUKUN</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=07B0">See in UniView</a></p>
 <div class="notes">
-  <div class="letter">
-    <p class="titlepara"><span class="title">Dhivehi</span> vowel <span class="name">sukun</span></p>
-    <p class="titlepara">Normally indicates that the consonant is not followed by a vowel.</p>
-    <p class="titlepara">Over <span class="codepoint"><span dir="rtl" lang="dv">&#x0787;</span> [<a href="#char0787" class="uname">U+0787 THAANA LETTER ALIFU</a>]</span>, or <span class="codepoint"><span dir="rtl" lang="dv">&#x0782;</span> [<a href="#char0782" class="uname">U+0782 THAANA LETTER NOONU</a>]</span> followed by a nasal, it  indicates that a following consonant is geminated,  eg. <span class="ex" dir="rtl" lang="dv">ބައްޓެއް</span> <span class="ipa">baʈʈeʔ</span> <span class="meaning">eggplant</span>, and <span class="ex" dir="rtl" lang="dv">އެންމެ</span> <span class="ipa">emme</span> <span class="meaning">only</span>.</p>
-    <p class="titlepara"><span class="ipa">ʔ</span> over <span class="codepoint"><span lang="dv">&#x0787;</span> [<a href="#char0787" class="uname">U+0787 THAANA LETTER ALIFU</a>]</span> at the end of a word, eg. <span class="ex" dir="rtl" lang="dv">ފައް</span> <span class="ipa">faʔ</span> <span class="meaning">sawtooth.</span> In normal speech, however, the glottal stop assimilates completely to the following consonant, except before vowels or <span class="codepoint"><span lang="dv">&#xA0;&#x0780;</span> [<a href="#char0780" class="uname">U+0780 THAANA LETTER HAA</a>]</span>, where it becomes a velar nasal <span class="ipa">ŋ</span>.<sup>1</sup></p>
-  </div>
-  <p class="ref"><a href="#refs">Refs</a>:
-    [1] [Daniels] pp564-568 &nbsp;
-    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">pp509-510</a> &nbsp;
-    [3] Wikipedia: <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Thaana</a> &nbsp; </p>
-</div>
+<p class="charDescription"><span class="charType">Vowel killer</span> <span class="trans"> ̊</span></p>
+<div class="letter">
+<p class="titlepara"><span class="title">Dhivehi</span>
+<span class="name"><span class="localname" dir="rtl" lang="dv">ސުކުނ</span>
+ <span class="transliteratedname trans">sukun</span></span> <span class="ipa">∅</span></p>
+    <p>Normally indicates that the consonant is not followed by a vowel.</p>
+<p>Over <span class="codepoint"><span dir="rtl" lang="dv">&#x0787;</span> [<a href="#char0787" class="uname">U+0787 THAANA LETTER ALIFU</a>]</span>, or <span class="codepoint"><span dir="rtl" lang="dv">&#x0782;</span> [<a href="#char0782" class="uname">U+0782 THAANA LETTER NOONU</a>]</span> followed by a nasal, it  indicates that a following consonant is geminated,  eg. <span class="ex" dir="rtl" lang="dv">ބައްޓެއް</span> <span class="ipa">baʈʈeʔ</span> <span class="meaning">eggplant</span>, and <span class="ex" dir="rtl" lang="dv">އެންމެ</span> <span class="ipa">emme</span> <span class="meaning">only</span>.</p>
+<p><span class="ipa">ʔ</span> over <span class="codepoint"><span lang="dv">&#x0787;</span> [<a href="#char0787" class="uname">U+0787 THAANA LETTER ALIFU</a>]</span> at the end of a word, eg. <span class="ex" dir="rtl" lang="dv">ފައް</span> <span class="ipa">faʔ</span> <span class="meaning">sawtooth.</span> In normal speech, however, the glottal stop assimilates completely to the following consonant, except before vowels or <span class="codepoint"><span lang="dv">&#xA0;&#x0780;</span> [<a href="#char0780" class="uname">U+0780 THAANA LETTER HAA</a>]</span>, where it becomes a velar nasal <span class="ipa">ŋ</span>.<sup>d</sup></p>
 </div>
 
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="block#refs" target="_blank">Daniels pp564-568</a>, 
+   <a href="http://www.unicode.org/versions/latest/ch13.pdf#Thaana" target="_blank">Unicode pp509-510</a>,  
+   <a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">Wikipedia</a>  
+</p>
+
+</div>
+</div>
 
 
 </section>
-
-
-
 <section id="refs">
-  <h2><a href="#refs" id="endlinks">Reference expansions</a></h2>
+<h2><a href="#refs">References</a></h2>
   <ol>
-    <li><strong>[daniels]</strong> Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN 0-19-507993-0</li>
-  </ol>
+    <li>[D] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
+				0-19-507993-0</li>
+<li>[W] Wikipedia, <a href="http://en.wikipedia.org/wiki/Thaana">Thaana</a></li>
+    <li>[U] <a href="http://www.unicode.org/versions/Unicode6.0.0/ch11.pdf">The Unicode Standard v10.0</a></li>
+</ol>
 </section>
 
 
@@ -900,13 +1218,17 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/thaana/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-08-07  10:14<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2018-03-13  9:15<!-- #EndDate --> 
   </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bthaana%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fthaana%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
-  
+
+
+
 <script type="text/javascript">
-createtoc(3);
-initialiseShowNames();
-checkForCharParam();
+createtoc(3)
+var base = '/scripts/thaana/block'
+initialiseShowNames(base, '')
+checkForCharParam()
+addLangInfo()
 </script>
 </body>
 </html>
