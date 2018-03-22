@@ -6,12 +6,12 @@
 <meta name="description"
 	  content="The tutorial will provide you with an understanding of key requirements for implementing writing systems in information technology. It will do this by examining real examples of a wide range of modern scripts to discover features that a computerized implementation must support." />
 
-<link rel="stylesheet" href="/style/docs.css" type="text/css" />
-<link rel="stylesheet" href="/style/slideshow.css" type="text/css" />
+<link rel="stylesheet" href="../../shared/style/docs.css" type="text/css" />
+<link rel="stylesheet" href="../../shared/style/slideshow.css" type="text/css" />
 <link rel="stylesheet" type="text/css" href="local.css" />
 
-<script type="text/javascript" src="/code/toc_section.js"></script>
-<script type="text/javascript" src="/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/boilerplate.js"></script>
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 
@@ -475,7 +475,7 @@
   <section class="slide">
     <div class="slide-pic"><img src="images/grapheme-cluster.png" alt="slide" /></div>
     <div class="speaker-notes">
-      <p>What a user thinks of as a "character"—a basic unit of a writing system for a language—may not be just a single Unicode code point. Instead, that basic unit may be made up of multiple Unicode code points. This called a user-perceived character. The a-acute shown on the slide it is typically thought of as a single character by users, yet it may actually be represented by two Unicode code points.</p>
+      <p>What a user thinks of as a "character"—a basic unit of a writing system for a language—may not be just a single Unicode code point. Instead, that basic unit may be made up of multiple Unicode code points. This called a user-perceived character. The a-acute shown on the slide it is typically thought of as a single character by users, yet it may actually be represented by two Unicode code points. It is still expected to behave in many editing or typographic situations as a single unit.</p>
     </div>
   </section>
   <section class="slide">
@@ -494,10 +494,18 @@
     </div>
   </section>
   <section class="slide">
+    <div class="slide-pic"><img src="images/grapheme-cluster5.png" alt="slide" /></div>
+    <div class="speaker-notes">
+      <p>The top line of the slide shows a Tamil word, split into 3 grapheme clusters: (1) a base character with a combining vowel-sign to its left, (2) a ligated base character and vowel-sign, and (3) a base character with a combining character above.</p>
+      <p>The Thai word on the second line is split into 6 grapheme clusters: (1) and (2) are a base consonant followed by a vowel-sign, but the vowel-sign is a non-combining character, so these are both separate graphemes; (3) is a consonant with an inherent vowel; (4) is a base consonant followed by two combining characters, one of which is composed of two parts, the second of which extends the cluster horizontally. Items (5) and (6) are a single consonant+inherent vowel, and a consonant with combining vowel-sign above, respectively.</p>
+    </div>
+  </section>
+<section class="slide">
     <div class="slide-pic"><img src="images/grapheme-cluster4.png" alt="slide" /></div>
     <div class="speaker-notes">
-      <p>There are still some combinations of glyphs that users may consider a single unit, but which are not currently covered by the concept of grapheme cluster.  Many Indic languages other than Tamil have syllabic groupings of glyphs that interact in a complicated way.  In the word on the slide, the first syllable would be considered two grapheme clusters, although the first (the orange one) is embedded inside the second, visually. </p>
-      <p>UAX #29 describes the notion of tailored grapheme clusters for this.  The problem being that such a combination of characters is not always rendered in way that looks like a single character.  Sometimes a virama may be used, rather than a ligature. So tailorings for conjuncts may need to be script-, language-, font-, or context-specific to be useful. </p>
+      <p>There are still some combinations of glyphs that users may consider a single unit, but which are not currently covered by the concept of grapheme cluster.  Some Indic languages other than Tamil have  groupings of glyphs that interact in a complicated way to create a single unit.  In the word on the slide, the first syllable includes a consonant + virama + consonant + vowel sign. It is clear that this is a single typographic unit, not only because the first consonant uses the half glyph common to such conjuncts, but because the vowel-sign appears to the left of the whole group, and extends over to the rightmost part.</p>
+<p>However, although this is one grapheme (ie. user-perceived unit), the Unicode grapheme cluster algorithm treats this as two grapheme clusters, where the first (the orange one) is embedded inside the second, visually. This is because the algorithm doesn't combine the characters following the virama. This is about to change, however, in Unicode 11.</p>
+<p>Pre-Unicode11, UAX #29 describes the notion of tailored grapheme clusters for this.  The problem is that such a combination of characters is not always rendered in way that looks like a single character – sometimes a virama may be used, rather than a ligature. So tailorings for conjuncts may need to be script-, language-, font-, or context-specific to be useful. </p>
       <p class="slide-bottom">&nbsp;<a href="#topbar">go to top of page</a></p>
     </div>
   </section>
@@ -510,7 +518,7 @@
 
 
 <div class="smallprint"><span id="version">First published  Feb 2003.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-10-16  11:35<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2018-03-22  15:26<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 
