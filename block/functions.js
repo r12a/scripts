@@ -1,3 +1,5 @@
+/* jshint strict: false */
+/* globals cl, langs */
 
 function checkForCharParam () {
 	// check for parameters; if char= found with value, set style to show only that character
@@ -85,8 +87,8 @@ function findLangs (node) {
     var notesNode = node.querySelector('.notes')
 
     if (notesNode && cl[cp]) {
-        languages = cl[cp][0]
-        auxlanguages = cl[cp][1]
+        var languages = cl[cp][0]
+        var auxlanguages = cl[cp][1]
         var p = document.createElement('p')
         if (languages.length>0) p.appendChild(document.createTextNode('Used by: '))
         else if (auxlanguages.length>0) p.appendChild(document.createTextNode('Used infrequently by: '))
@@ -100,7 +102,7 @@ function findLangs (node) {
             }
         if (auxlanguages.length>0 && languages.length>0) p.appendChild(document.createTextNode(', and infrequently by: '))
         for (let l=0;l<auxlanguages.length;l++) {
-            var a = document.createElement('a')
+            let a = document.createElement('a')
             a.href = '/app-charuse/?language='+auxlanguages[l]
             a.target = '_blank'
             a.style.fontStyle = 'italic'
@@ -117,7 +119,7 @@ function findLangs (node) {
 function getFindStr (hex) {
 // return a value for the Find box at the top of the page
 
-    if (hex.length === 1) var hex = hex.codePointAt(0).toString(16)
+    if (hex.length === 1) hex = hex.codePointAt(0).toString(16)
     while(hex.length<4) hex='0'+hex
     return '#char'+hex.toUpperCase()
     }
