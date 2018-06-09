@@ -1,6 +1,6 @@
-var scriptNotesSet= new Set(['armenian','arabic', 'balinese', 'bengali','buginese', 'cherokee', 'cyrillic', 'devanagari', 'ethiopic', 'greek', 'han', 'hangul', 'hebrew', 'javanese', 'kana', 'khmer','lao','mandaic','myanmar', 'nko', 'sinhala', 'sundanese', 'syriac', 'tamil', 'thaana', 'thai', 'tibetan', 'tifinagh'])
+var scriptNotesSet= new Set(['armenian','arabic', 'balinese', 'bengali','buginese', 'cherokee', 'cyrillic', 'devanagari', 'ethiopic', 'greek', 'gurmukhi', 'han', 'hangul', 'hebrew', 'javanese', 'kana', 'khmer','lao','mandaic','myanmar', 'nko', 'sinhala', 'sundanese', 'syriac', 'tamil', 'thaana', 'thai', 'tibetan', 'tifinagh'])
 
-var charNotesSet= new Set(['arabic','armenian', 'balinese','bengali','buginese', 'cherokee', 'cyrillic', 'devanagari','ethiopic','greek','hebrew', 'javanese', 'khmer','lao','latin','lisu','malayalam','mandaic','mongolian','myanmar', 'nko', 'sinhala', 'sundanese', 'syriac', 'tamil','thaana', 'thai','tibetan','tifinagh'])
+var charNotesSet= new Set(['arabic','armenian', 'balinese','bengali','buginese', 'cherokee', 'cyrillic', 'devanagari','ethiopic','greek', 'gurmukhi', 'hebrew', 'javanese', 'khmer',' lao', 'latin', 'lisu', 'malayalam','mandaic', 'mongolian', 'myanmar', 'nko', 'sinhala', 'sundanese', 'syriac', 'tamil', 'thaana', 'thai','tibetan','tifinagh'])
 
 var compChartSet= new Set(['arabic','armenian', 'balinese', 'bengali', 'buginese', 'cherokee', 'cyrillic', 'devanagari', 'ethiopic', 'greek', 'gujarati', 'gurmukhi', 'han', 'hangul', 'hebrew', 'javanese', 'kana', 'kannada', 'khmer', 'lao', 'latin', 'malayalam', 'mandaic', 'mongolian', 'myanmar', 'nko', 'oriya', 'sinhala', 'sundanese', 'syriac', 'tamil', 'telugu', 'thaana', 'thai', 'tibetan', 'tifinagh', 'ucas'])
 
@@ -15,10 +15,10 @@ var googleEASet= new Set([])
 var gouFonts = { 'greek':'Greek', 'armenian':'Armenian', 'hebrew':'Hebrew', 'arabic':'Arabic', 'syriac':'Syriac', 'thaana':'Thaana', 'nko':'NKo', 'devanagari':'Devanagari', 'bengali':'Bengali', 'gurmukhi':'Gurmukhi', 'gujarati':'Gujarati', 'oriya':'Oriya', 'tamil':'Tamil', 'telugu':'Telugu', 'kannada':'Kannada', 'malayalam':'Malayalam', 'sinhala':'Sinhala', 'thai':'Thai', 'lao':'Lao', 'tibetan':'Tibetan', 'myanmar':'Myanmar', 'georgian':'Georgian', 'ethiopic':'Ethiopic', 'cherokee':'Cherokee', 'ucas':'Canadian', 'ogham':'Ogham', 'runic':'Runic', 'tagalog':'Tagalog', 'hanunoo':'Hanunoo', 'buhid':'Buhid', 'tagbanwa':'Tagbanwa', 'khmer':'Khmer', 'mongolian':'Mongolian', 'limbu':'Limbu', 'tai_le':'TaiLe', 'buginese':'Buginese', 'glagolitic':'Glagolitic', 'coptic':'Coptic', 'tifinagh':'Tifinagh', 'kana':'Japanese', 'yi':'Yi', 'syloti_nagri':'SylotiNagri', 'phags-pa':'Phagspa', 'hangul':'Korean', 'linear_b':'LinearBSyllabary', 'phaistos_disc':'Phaistos', 'old_italic':'OldItalic', 'gothic':'Gothic', 'ugaritic':'Ugaritic', 'deseret':'Deseret', 'shavian':'Shavian', 'osmanya':'Osmanya','linear_a':'Linear_A', 'cypriot':'Cypriot', 'phoenician':'Phoenician', 'kharoshthi':'Kharoshthi', 'ahom':'Ahom'
 }
 
-var ssHistory = { 'greek':'wxsx5j4kzt', 'cyrillic':'ngc339csy8', 'armenian':'z35gwmg4ft', 'hebrew':'qek84cbq5u', 'arabic':'hqr6rc9md5', 'syriac':'hlvzdczufr', 'thaana':'n2tj49rr2n', 'nko':'mnqzubphu7', 'samaritan':'qv7wwr9xgp', 'mandaic':'djwvfmuu3h', 'devanagari':'b6c6j63sf5', 'bengali':'f8jrlqwbac', 'gurmukhi':'fd27tquj5j', 'gujarati':'yqug2kbjjr', 'oriya':'znkmblg693', 'tamil':'zw5nedjarb', 'telugu':'sjrwm9ppr3', 'kannada':'ur8y3qj6yk', 'malayalam':'ypvmjurtyg', 'sinhala':'sbwtu85wbv', 'thai':'d877ebfc65', 'lao':'98522835fg', 'tibetan':'mg8ulatcjb', 'myanmar':'vcz6flwzqs', 'georgian':'rbr2wkvu4m', 'ethiopic':'fvp74ug66k', 'cherokee':'nwnmgh2n8j', 'ucas':'c36d846u2d', 'ogham':'d3z382ahas', 'runic':'ha667hekd4', 'tagalog':'76d3376b7c', 'hanunoo':'ga9dbe72a2', 'buhid':'h4446ag538', 'tagbanwa':'d62f48hfad', 'khmer':'2269c7g9ee', 'mongolian':'xluqdp54ts', 'limbu':'a2exgfkrmf', 'tai_le':'76c7d2ch4g', 'new_tai_lue':'37fcf7h92b', 'buginese':'739e2e7g2e', 'tai_tham':'gf97b8ad78', 'balinese':'f2bb6f3bh9', 'sundanese':'3844bc8cea', 'batak':'geb5h358d3', 'lepcha':'g6cv78jn42', 'ol_chiki':'rrkdvn7crf', 'glagolitic':'lbhv6e4efr', 'coptic':'msg4hep5ev', 'tifinagh':'wmx4utrkuc', 'kana':'ly5dbxtthx', 'bopomofo':'tk449c64jh', 'yi':'ejx9jwrd8e', 'lisu':'473c93dddf', 'vai':'z8tk356ua7', 'bamum':'aeg5ah9fbg', 'syloti_nagri':'kylcx42avd', 'phags-pa':'y22gh9p8g2', 'saurashtra':'eqjs45mf8t', 'kayah_li':'enl5dse8jv', 'rejang':'72d3ce3834', 'javanese':'db9724gea9', 'cham':'c4yzafta3f', 'tai_viet':'mn8j2mcblt', 'meetei_mayek':'x29ycx7hp5', 'hangul':'umfm3ftrny', 'linear_b':'by38na5akh', 'lycian':'hsu56mxkr7', 'carian':'kqrxbcekmr', 'old_italic':'uk7vpcchbc', 'gothic':'hj7ztebb5e', 'old_permic':'cqdluhalzh', 'ugaritic':'ffz7nkcxpb', 'old_persian':'pbjd5pecq6', 'deseret':'tdjlnarc8y', 'shavian':'gj5fewb8ed', 'osmanya':'hg53222b9b', 'osage':'gm4pjj3qw7', 'elbasan':'fum3p8xz6v', 'linear_a':'rmvt9u45sq', 'cypriot':'nywfdbys7b', 'aramaic':'ys8lxa9y4j', 'palmyrene':'z3u3jwap6r', 'nabataean':'kcjefvy9uw', 'hatran':'jpekrxh2wn', 'phoenician':'ltk6h5bent', 'lydian':'hsu56mxkr7', 'meroitic':'ssxtjnbc7s', 'kharoshthi':'n974scptwz', 'old_south_arabian':'clvjlzfzv9', 'old_north_arabian':'gw3vnam33r', 'manichaean':'nnf3pjr2v3', 'avestan':'appyvwf4ku', 'inscriptional_parthian':'b7daarfs3a', 'inscriptional_pahlavi':'ssmdqax9mt', 'psalter_pahlavi':'wqytv3ldez', 'old_turkic':'hpmlm9pjev', 'old_hungarian':'fx7n7tnxzt', 'brahmi':'nskejp3py5', 'kaithi':'xa9swfhv9f', 'sora_sompeng':'r4c4bsfy7v', 'chakma':'pdqjuf5k39', 'mahajani':'kuegm6qedh', 'sharada':'spnpfarl4t', 'khojki':'r9e56hvyut', 'multani':'fptnmnhe3c', 'khudawadi':'fykru6vn8h', 'grantha':'qzhwzbsvm7', 'newa':'y53lggbts6', 'tirhuta':'wysbq8bpm4', 'siddham':'fcmrsmpp9f', 'modi':'tx5uz2hvvz', 'takri':'wvh5zdz7jl', 'ahom':'ky6s63f7fx', 'warang_citi':'llvwz8vpn8', 'zanabazar_square':'j7rr9jgtyl', 'soyombo':'lns82rb9hp', 'pau_cin_hau':'t2uqldgjlv', 'bhaiksuki':'mcr57c34fw', 'marchen':'h6ln54mufu', 'masaram_gondi':'vqhk6w3pgq', 'cuneiform':'yqbyb2mdz7', 'egyptian_hieroglyphs':'q7yl4zu8eh', 'anatolian_hieroglyphs':'tasanpp3u9', 'mro':'b6ebw4c6al', 'bassa_vah':'3d6596eh4g', 'pahawh_hmong':'ha2hg6d5b7', 'miao':'cb32gtbj58', 'tangut':'rkw5m9sm64', 'nushu':'v39xawqg64', 'duployan':'sbhfvtwqkl', 'mende_kikakui':'2874g2ehc8', 'adlam':'llp3cqd7gg', 'han':'tsps57x35g'
+var ssHistory = { 'greek':'wxsx5j4kzt', 'cyrillic':'ngc339csy8', 'armenian':'z35gwmg4ft', 'hebrew':'qek84cbq5u', 'arabic':'hqr6rc9md5', 'syriac':'hlvzdczufr', 'thaana':'n2tj49rr2n', 'nko':'mnqzubphu7', 'samaritan':'qv7wwr9xgp', 'mandaic':'djwvfmuu3h', 'devanagari':'b6c6j63sf5', 'bengali':'f8jrlqwbac', 'gurmukhi':'fd27tquj5j', 'gujarati':'yqug2kbjjr', 'oriya':'znkmblg693', 'tamil':'zw5nedjarb', 'telugu':'sjrwm9ppr3', 'kannada':'ur8y3qj6yk', 'malayalam':'ypvmjurtyg', 'sinhala':'sbwtu85wbv', 'thai':'d877ebfc65', 'lao':'98522835fg', 'tibetan':'mg8ulatcjb', 'myanmar':'vcz6flwzqs', 'georgian':'rbr2wkvu4m', 'ethiopic':'fvp74ug66k', 'cherokee':'nwnmgh2n8j', 'ucas':'c36d846u2d', 'ogham':'d3z382ahas', 'runic':'ha667hekd4', 'tagalog':'76d3376b7c', 'hanunoo':'ga9dbe72a2', 'buhid':'h4446ag538', 'tagbanwa':'d62f48hfad', 'khmer':'2269c7g9ee', 'mongolian':'xluqdp54ts', 'limbu':'a2exgfkrmf', 'tai_le':'76c7d2ch4g', 'new_tai_lue':'37fcf7h92b', 'buginese':'739e2e7g2e', 'tai_tham':'gf97b8ad78', 'balinese':'f2bb6f3bh9', 'sundanese':'3844bc8cea', 'batak':'geb5h358d3', 'lepcha':'g6cv78jn42', 'ol_chiki':'rrkdvn7crf', 'glagolitic':'lbhv6e4efr', 'coptic':'msg4hep5ev', 'tifinagh':'wmx4utrkuc', 'kana':'ly5dbxtthx', 'bopomofo':'tk449c64jh', 'yi':'ejx9jwrd8e', 'lisu':'473c93dddf', 'vai':'z8tk356ua7', 'bamum':'aeg5ah9fbg', 'syloti_nagri':'kylcx42avd', 'phags-pa':'y22gh9p8g2', 'saurashtra':'eqjs45mf8t', 'kayah_li':'enl5dse8jv', 'rejang':'72d3ce3834', 'javanese':'db9724gea9', 'cham':'c4yzafta3f', 'tai_viet':'mn8j2mcblt', 'meetei_mayek':'x29ycx7hp5', 'hangul':'umfm3ftrny', 'linear_b':'by38na5akh', 'lycian':'hsu56mxkr7', 'carian':'kqrxbcekmr', 'old_italic':'uk7vpcchbc', 'gothic':'hj7ztebb5e', 'old_permic':'cqdluhalzh', 'ugaritic':'ffz7nkcxpb', 'old_persian':'pbjd5pecq6', 'deseret':'tdjlnarc8y', 'shavian':'gj5fewb8ed', 'osmanya':'hg53222b9b', 'osage':'gm4pjj3qw7', 'elbasan':'fum3p8xz6v', 'linear_a':'rmvt9u45sq', 'cypriot':'nywfdbys7b', 'aramaic':'ys8lxa9y4j', 'palmyrene':'z3u3jwap6r', 'nabataean':'kcjefvy9uw', 'hatran':'jpekrxh2wn', 'phoenician':'ltk6h5bent', 'lydian':'hsu56mxkr7', 'meroitic':'ssxtjnbc7s', 'kharoshthi':'n974scptwz', 'old_south_arabian':'clvjlzfzv9', 'old_north_arabian':'gw3vnam33r', 'manichaean':'nnf3pjr2v3', 'avestan':'appyvwf4ku', 'inscriptional_parthian':'b7daarfs3a', 'inscriptional_pahlavi':'ssmdqax9mt', 'psalter_pahlavi':'wqytv3ldez', 'old_turkic':'hpmlm9pjev', 'old_hungarian':'fx7n7tnxzt', 'brahmi':'nskejp3py5', 'kaithi':'xa9swfhv9f', 'sora_sompeng':'r4c4bsfy7v', 'chakma':'pdqjuf5k39', 'mahajani':'kuegm6qedh', 'sharada':'spnpfarl4t', 'khojki':'r9e56hvyut', 'multani':'fptnmnhe3c', 'khudawadi':'fykru6vn8h', 'grantha':'qzhwzbsvm7', 'newa':'y53lggbts6', 'tirhuta':'wysbq8bpm4', 'siddham':'fcmrsmpp9f', 'modi':'tx5uz2hvvz', 'takri':'wvh5zdz7jl', 'ahom':'ky6s63f7fx', 'warang_citi':'llvwz8vpn8', 'zanabazar_square':'j7rr9jgtyl', 'soyombo':'lns82rb9hp', 'pau_cin_hau':'t2uqldgjlv', 'bhaiksuki':'mcr57c34fw', 'marchen':'h6ln54mufu', 'masaram_gondi':'vqhk6w3pgq', 'cuneiform':'yqbyb2mdz7', 'egyptian_hieroglyphs':'q7yl4zu8eh', 'anatolian_hieroglyphs':'tasanpp3u9', 'mro':'b6ebw4c6al', 'bassa_vah':'3d6596eh4g', 'pahawh_hmong':'ha2hg6d5b7', 'miao':'cb32gtbj58', 'tangut':'rkw5m9sm64', 'nushu':'v39xawqg64', 'duployan':'sbhfvtwqkl', 'mende_kikakui':'2874g2ehc8', 'adlam':'llp3cqd7gg', 'han':'tsps57x35g', 'medefaidrin':'evyd5v7ebg','sogdian':'xjh6av9y5z', 'old_sogdian':'u9szp2wg4g', 'dogra':'ujs77ahv7k', 'gunjala_gondi':'r3u3b4rjy9', 'hanifi_rohingya':'mj3a6n78t2', 'makasar':'wj3ak6u5s2'
 }
 
-var chapters = { 'greek':'07', 'cyrillic':'07', 'armenian':'07', 'caucasian_albanian':'08','hebrew':'09', 'arabic':'09', 'syriac':'09', 'thaana':'13', 'nko':'19', 'samaritan':'09', 'mandaic':'09', 'devanagari':'12', 'bengali':'12', 'gurmukhi':'12', 'gujarati':'12', 'oriya':'12', 'tamil':'12', 'telugu':'12', 'kannada':'12', 'malayalam':'12', 'sinhala':'13', 'thai':'16', 'lao':'16', 'tibetan':'13', 'myanmar':'16', 'georgian':'07', 'ethiopic':'19', 'cherokee':'20', 'ucas':'20', 'ogham':'08', 'runic':'08', 'tagalog':'17', 'hanunoo':'17', 'buhid':'17', 'tagbanwa':'17', 'khmer':'16', 'mongolian':'13', 'limbu':'13', 'tai_le':'16', 'new_tai_lue':'16', 'buginese':'17', 'tai_tham':'16', 'balinese':'17', 'sundanese':'17', 'batak':'17', 'lepcha':'13', 'ol_chiki':'13', 'glagolitic':'07', 'coptic':'07', 'tifinagh':'19', 'bopomofo':'18', 'yi':'18', 'lisu':'18', 'vai':'19', 'bamum':'19', 'syloti_nagri':'15', 'phags-pa':'14', 'saurashtra':'13', 'kayah_li':'16', 'rejang':'17', 'javanese':'17', 'cham':'16', 'tai_viet':'16', 'meetei_mayek':'13', 'han':'18','hangul':'18', 'kana':'18','linear_b':'08', 'lycian':'08', 'carian':'08', 'old_italic':'08', 'gothic':'08', 'old_permic':'08', 'ugaritic':'11', 'old_persian':'11', 'deseret':'20', 'shavian':'08', 'osmanya':'19', 'osage':'20', 'elbasan':'08', 'linear_a':'08', 'cypriot':'08', 'aramaic':'10', 'palmyrene':'10', 'nabataean':'10', 'hatran':'10', 'phoenician':'10', 'lydian':'08', 'meroitic':'11', 'kharoshthi':'14', 'old_south_arabian':'10', 'old_north_arabian':'10', 'manichaean':'10', 'avestan':'10', 'inscriptional_parthian':'10', 'inscriptional_pahlavi':'10', 'psalter_pahlavi':'10', 'old_turkic':'14', 'old_hungarian':'08', 'brahmi':'14', 'kaithi':'15', 'sora_sompeng':'15', 'chakma':'13', 'mahajani':'15', 'sharada':'15', 'khojki':'15', 'multani':'15', 'khudawadi':'15', 'grantha':'15', 'newa':'13', 'tirhuta':'15', 'siddham':'15', 'modi':'15', 'takri':'15', 'ahom':'15', 'warang_citi':'13', 'zanabazar_square':'14', 'soyombo':'14', 'pau_cin_hau':'16', 'bhaiksuki':'14', 'marchen':'14', 'masaram_gondi':'13', 'cuneiform':'11', 'egyptian_hieroglyphs':'11', 'anatolian_hieroglyphs':'11', 'mro':'13', 'bassa_vah':'19', 'pahawh_hmong':'16', 'miao':'18', 'tangut':'18', 'nushu':'18', 'duployan':'21', 'sutton_signwriting':'21', 'mende_kikakui':'19', 'adlam':'19', 'phaistos_disc':'22'
+var chapters = { 'latin':'07', 'greek':'07', 'coptic':'07', 'cyrillic':'07', 'glagolitic':'07', 'armenian':'07', 'georgian':'07', 'linear_a':'08', 'linear_b':'08', 'cypriot':'08', 'lycian':'08', 'carian':'08', 'lydian':'08', 'old_italic':'08', 'runic':'08','old_hungarian':'08',  'gothic':'08', 'elbasan':'08', 'caucasian_albanian':'08', 'old_permic':'08',  'ogham':'08', 'shavian':'08', 'hebrew':'09', 'arabic':'09', 'syriac':'09', 'samaritan':'09', 'mandaic':'09',  'old_south_arabian':'10', 'old_north_arabian':'10', 'phoenician':'10', 'aramaic':'10', 'manichaean':'10', 'inscriptional_parthian':'10', 'inscriptional_pahlavi':'10', 'psalter_pahlavi':'10', 'avestan':'10', 'nabataean':'10', 'palmyrene':'10', 'hatran':'10', 'cuneiform':'11', 'ugaritic':'11', 'old_persian':'11', 'egyptian_hieroglyphs':'11', 'meroitic':'11', 'anatolian_hieroglyphs':'11', 'devanagari':'12', 'bengali':'12', 'gurmukhi':'12', 'gujarati':'12', 'oriya':'12', 'tamil':'12', 'telugu':'12', 'kannada':'12', 'malayalam':'12', 'thaana':'13', 'sinhala':'13', 'newa':'13', 'tibetan':'13', 'mongolian':'13', 'limbu':'13', 'meetei_mayek':'13', 'mro':'13', 'warang_citi':'13', 'ol_chiki':'13', 'chakma':'13', 'lepcha':'13', 'saurashtra':'13', 'masaram_gondi':'13', 'gunjala_gondi':'13', 'brahmi':'14', 'kharoshthi':'14', 'bhaiksuki':'14', 'phags-pa':'14', 'marchen':'14', 'zanabazar_square':'14', 'soyombo':'14', 'old_turkic':'14', 'sogdian':'14', 'old_sogdian':'14', 'syloti_nagri':'15', 'kaithi':'15', 'sharada':'15', 'takri':'15', 'siddham':'15', 'mahajani':'15', 'khojki':'15', 'khudawadi':'15',  'multani':'15', 'tirhuta':'15', 'modi':'15', 'grantha':'15', 'ahom':'15', 'sora_sompeng':'15', 'dogra':'15', 'thai':'16', 'lao':'16', 'myanmar':'16', 'khmer':'16', 'tai_le':'16', 'new_tai_lue':'16', 'tai_tham':'16', 'tai_viet':'16', 'kayah_li':'16', 'cham':'16', 'pahawh_hmong':'16', 'pau_cin_hau':'16', 'hanifi_rohingya':'16', 'tagalog':'17', 'hanunoo':'17', 'buhid':'17', 'tagbanwa':'17', 'buginese':'17', 'balinese':'17', 'javanese':'17', 'rejang':'17', 'batak':'17', 'sundanese':'17', 'makasar':'17', 'han':'18', 'bopomofo':'18', 'kana':'18', 'hangul':'18',  'yi':'18', 'nushu':'18', 'lisu':'18', 'miao':'18', 'tangut':'18',  'ethiopic':'19',  'osmanya':'19', 'tifinagh':'19', 'nko':'19', 'vai':'19', 'bamum':'19',  'bassa_vah':'19', 'mende_kikakui':'19', 'adlam':'19', 'medefaidrin':'19', 'cherokee':'20', 'ucas':'20', 'osage':'20', 'deseret':'20', 'duployan':'21', 'sutton_signwriting':'21', 'phaistos_disc':'22' 
 }
 
 var OSDefaultFontsSet = new Set(['arabic','armenian','bengali','canadian_unified_syllabics','cherokee','devanagari','ethiopic','georgian','gujarati','gurmukhi','hebrew','kana','kannada','khmer','hangul','lao','malayalam','mongolian','myanmar','new_tai_lue','nko','oriya','osmanya','phags-pa','sinhala','syriac','tai_le','tamil','telugu','thaana','thai','tibetan','tifinagh','vai','yi'])
@@ -30,7 +30,7 @@ var w3cTypographySet =  new Set(['arabic','han','ethiopic','hebrew','devanagari'
 var w3cTypeSampleSet =  new Set(['arabic','han','cyrillic','ethiopic','greek','hebrew','kana','hangul','mongolian','devanagari','thai','tibetan'])
 
 var blockStart = { 
-'basic_latin':'0000', 'latin-1_supplement':'0080', 'latin_extended-a':'0100', 'latin_extended-b':'0180', 'ipa_extensions':'0250', 'spacing_modifier_letters':'02B0', 'combining_diacritical_marks':'0300', 'greek_and_coptic':'0370', 'cyrillic':'0400', 'cyrillic_supplement':'0500', 'armenian':'0530', 'hebrew':'0590', 'arabic':'0600', 'syriac':'0700', 'arabic_supplement':'0750', 'thaana':'0780', 'nko':'07C0', 'samaritan':'0800', 'mandaic':'0840', 'syriac_supplement':'0860', 'arabic_extended-a':'08A0', 'devanagari':'0900', 'bengali':'0980', 'gurmukhi':'0A00', 'gujarati':'0A80', 'oriya':'0B00', 'tamil':'0B80', 'telugu':'0C00', 'kannada':'0C80', 'malayalam':'0D00', 'sinhala':'0D80', 'thai':'0E00', 'lao':'0E80', 'tibetan':'0F00', 'myanmar':'1000', 'georgian':'10A0', 'hangul_jamo':'1100', 'ethiopic':'1200', 'ethiopic_supplement':'1380', 'cherokee':'13A0', 'unified_canadian_aboriginal_syllabics':'1400', 'ogham':'1680', 'runic':'16A0', 'tagalog':'1700', 'hanunoo':'1720', 'buhid':'1740', 'tagbanwa':'1760', 'khmer':'1780', 'mongolian':'1800', 'unified_canadian_aboriginal_syllabics_extended':'18B0', 'limbu':'1900', 'tai_le':'1950', 'new_tai_lue':'1980', 'khmer_symbols':'19E0', 'buginese':'1A00', 'tai_tham':'1A20', 'combining_diacritical_marks_extended':'1AB0', 'balinese':'1B00', 'sundanese':'1B80', 'batak':'1BC0', 'lepcha':'1C00', 'ol_chiki':'1C50', 'cyrillic_extended-c':'1C80', 'sundanese_supplement':'1CC0', 'vedic_extensions':'1CD0', 'phonetic_extensions':'1D00', 'phonetic_extensions_supplement':'1D80', 'combining_diacritical_marks_supplement':'1DC0', 'latin_extended_additional':'1E00', 'greek_extended':'1F00', 'general_punctuation':'2000', 'superscripts_and_subscripts':'2070', 'currency_symbols':'20A0', 'combining_diacritical_marks_for_symbols':'20D0', 'letterlike_symbols':'2100', 'number_forms':'2150', 'arrows':'2190', 'mathematical_operators':'2200', 'miscellaneous_technical':'2300', 'control_pictures':'2400', 'optical_character_recognition':'2440', 'enclosed_alphanumerics':'2460', 'box_drawing':'2500', 'block_elements':'2580', 'geometric_shapes':'25A0', 'miscellaneous_symbols':'2600', 'dingbats':'2700', 'miscellaneous_mathematical_symbols-a':'27C0', 'supplemental_arrows-a':'27F0', 'braille_patterns':'2800', 'supplemental_arrows-b':'2900', 'miscellaneous_mathematical_symbols-b':'2980', 'supplemental_mathematical_operators':'2A00', 'miscellaneous_symbols_and_arrows':'2B00', 'glagolitic':'2C00', 'latin_extended-c':'2C60', 'coptic':'2C80', 'georgian_supplement':'2D00', 'tifinagh':'2D30', 'ethiopic_extended':'2D80', 'cyrillic_extended-a':'2DE0', 'supplemental_punctuation':'2E00', 'cjk_radicals_supplement':'2E80', 'kangxi_radicals':'2F00', 'ideographic_description_characters':'2FF0', 'cjk_symbols_and_punctuation':'3000', 'hiragana':'3040', 'katakana':'30A0', 'bopomofo':'3100', 'hangul_compatibility_jamo':'3130', 'kanbun':'3190', 'bopomofo_extended':'31A0', 'cjk_strokes':'31C0', 'katakana_phonetic_extensions':'31F0', 'enclosed_cjk_letters_and_months':'3200', 'cjk_compatibility':'3300', 'cjk_unified_ideographs_extension_a':'3400', 'yijing_hexagram_symbols':'4DC0', 'cjk_unified_ideographs':'4E00', 'yi_syllables':'A000', 'yi_radicals':'A490', 'lisu':'A4D0', 'vai':'A500', 'cyrillic_extended-b':'A640', 'bamum':'A6A0', 'modifier_tone_letters':'A700', 'latin_extended-d':'A720', 'syloti_nagri':'A800', 'common_indic_number_forms':'A830', 'phags-pa':'A840', 'saurashtra':'A880', 'devanagari_extended':'A8E0', 'kayah_li':'A900', 'rejang':'A930', 'hangul_jamo_extended-a':'A960', 'javanese':'A980', 'myanmar_extended-b':'A9E0', 'cham':'AA00', 'myanmar_extended-a':'AA60', 'tai_viet':'AA80', 'meetei_mayek_extensions':'AAE0', 'ethiopic_extended-a':'AB00', 'latin_extended-e':'AB30', 'cherokee_supplement':'AB70', 'meetei_mayek':'ABC0', 'hangul_syllables':'AC00', 'hangul_jamo_extended-b':'D7B0', 'high_surrogates':'D800', 'high_private_use_surrogates':'DB80', 'low_surrogates':'DC00', 'private_use_area':'E000', 'cjk_compatibility_ideographs':'F900', 'alphabetic_presentation_forms':'FB00', 'arabic_presentation_forms-a':'FB50', 'variation_selectors':'FE00', 'vertical_forms':'FE10', 'combining_half_marks':'FE20', 'cjk_compatibility_forms':'FE30', 'small_form_variants':'FE50', 'arabic_presentation_forms-b':'FE70', 'halfwidth_and_fullwidth_forms':'FF00', 'specials':'FFF0', 'linear_b_syllabary':'10000', 'linear_b_ideograms':'10080', 'aegean_numbers':'10100', 'ancient_greek_numbers':'10140', 'ancient_symbols':'10190', 'phaistos_disc':'101D0', 'lycian':'10280', 'carian':'102A0', 'coptic_epact_numbers':'102E0', 'old_italic':'10300', 'gothic':'10330', 'old_permic':'10350', 'ugaritic':'10380', 'old_persian':'103A0', 'deseret':'10400', 'shavian':'10450', 'osmanya':'10480', 'osage':'104B0', 'elbasan':'10500', 'caucasian_albanian':'10530', 'linear_a':'10600', 'cypriot_syllabary':'10800', 'imperial_aramaic':'10840', 'palmyrene':'10860', 'nabataean':'10880', 'hatran':'108E0', 'phoenician':'10900', 'lydian':'10920', 'meroitic_hieroglyphs':'10980', 'meroitic_cursive':'109A0', 'kharoshthi':'10A00', 'old_south_arabian':'10A60', 'old_north_arabian':'10A80', 'manichaean':'10AC0', 'avestan':'10B00', 'inscriptional_parthian':'10B40', 'inscriptional_pahlavi':'10B60', 'psalter_pahlavi':'10B80', 'old_turkic':'10C00', 'old_hungarian':'10C80', 'rumi_numeral_symbols':'10E60', 'brahmi':'11000', 'kaithi':'11080', 'sora_sompeng':'110D0', 'chakma':'11100', 'mahajani':'11150', 'sharada':'11180', 'sinhala_archaic_numbers':'111E0', 'khojki':'11200', 'multani':'11280', 'khudawadi':'112B0', 'grantha':'11300', 'newa':'11400', 'tirhuta':'11480', 'siddham':'11580', 'modi':'11600', 'mongolian_supplement':'11660', 'takri':'11680', 'ahom':'11700', 'warang_citi':'118A0', 'zanabazar_square':'11A00', 'soyombo':'11A50', 'pau_cin_hau':'11AC0', 'bhaiksuki':'11C00', 'marchen':'11C70', 'masaram_gondi':'11D00', 'cuneiform':'12000', 'cuneiform_numbers_and_punctuation':'12400', 'early_dynastic_cuneiform':'12480', 'egyptian_hieroglyphs':'13000', 'anatolian_hieroglyphs':'14400', 'bamum_supplement':'16800', 'mro':'16A40', 'bassa_vah':'16AD0', 'pahawh_hmong':'16B00', 'miao':'16F00', 'ideographic_symbols_and_punctuation':'16FE0', 'tangut':'17000', 'tangut_components':'18800', 'kana_supplement':'1B000', 'kana_extended-a':'1B100', 'nushu':'1B170', 'duployan':'1BC00', 'shorthand_format_controls':'1BCA0', 'byzantine_musical_symbols':'1D000', 'musical_symbols':'1D100', 'ancient_greek_musical_notation':'1D200', 'tai_xuan_jing_symbols':'1D300', 'counting_rod_numerals':'1D360', 'mathematical_alphanumeric_symbols':'1D400', 'sutton_signwriting':'1D800', 'glagolitic_supplement':'1E000', 'mende_kikakui':'1E800', 'adlam':'1E900', 'arabic_mathematical_alphabetic_symbols':'1EE00', 'mahjong_tiles':'1F000', 'domino_tiles':'1F030', 'playing_cards':'1F0A0', 'enclosed_alphanumeric_supplement':'1F100', 'enclosed_ideographic_supplement':'1F200', 'miscellaneous_symbols_and_pictographs':'1F300', 'emoticons':'1F600', 'ornamental_dingbats':'1F650', 'transport_and_map_symbols':'1F680', 'alchemical_symbols':'1F700', 'geometric_shapes_extended':'1F780', 'supplemental_arrows-c':'1F800', 'supplemental_symbols_and_pictographs':'1F900', 'cjk_unified_ideographs_extension_b':'20000', 'cjk_unified_ideographs_extension_c':'2A700', 'cjk_unified_ideographs_extension_d':'2B740', 'cjk_unified_ideographs_extension_e':'2B820', 'cjk_compatibility_ideographs_supplement':'2F800', 'tags':'E0000', 'variation_selectors_supplement':'E0100', 'supplementary_private_use_area-a':'F0000', 'supplementary_private_use_area-b':'100000'
+'basic_latin':'0000', 'latin-1_supplement':'0080', 'latin_extended-a':'0100', 'latin_extended-b':'0180', 'ipa_extensions':'0250', 'spacing_modifier_letters':'02B0', 'combining_diacritical_marks':'0300', 'greek_and_coptic':'0370', 'cyrillic':'0400', 'cyrillic_supplement':'0500', 'armenian':'0530', 'hebrew':'0590', 'arabic':'0600', 'syriac':'0700', 'arabic_supplement':'0750', 'thaana':'0780', 'nko':'07C0', 'samaritan':'0800', 'mandaic':'0840', 'syriac_supplement':'0860', 'arabic_extended-a':'08A0', 'devanagari':'0900', 'bengali':'0980', 'gurmukhi':'0A00', 'gujarati':'0A80', 'oriya':'0B00', 'tamil':'0B80', 'telugu':'0C00', 'kannada':'0C80', 'malayalam':'0D00', 'sinhala':'0D80', 'thai':'0E00', 'lao':'0E80', 'tibetan':'0F00', 'myanmar':'1000', 'georgian':'10A0', 'hangul_jamo':'1100', 'ethiopic':'1200', 'ethiopic_supplement':'1380', 'cherokee':'13A0', 'unified_canadian_aboriginal_syllabics':'1400', 'ogham':'1680', 'runic':'16A0', 'tagalog':'1700', 'hanunoo':'1720', 'buhid':'1740', 'tagbanwa':'1760', 'khmer':'1780', 'mongolian':'1800', 'unified_canadian_aboriginal_syllabics_extended':'18B0', 'limbu':'1900', 'tai_le':'1950', 'new_tai_lue':'1980', 'khmer_symbols':'19E0', 'buginese':'1A00', 'tai_tham':'1A20', 'combining_diacritical_marks_extended':'1AB0', 'balinese':'1B00', 'sundanese':'1B80', 'batak':'1BC0', 'lepcha':'1C00', 'ol_chiki':'1C50', 'cyrillic_extended-c':'1C80', 'sundanese_supplement':'1CC0', 'vedic_extensions':'1CD0', 'phonetic_extensions':'1D00', 'phonetic_extensions_supplement':'1D80', 'combining_diacritical_marks_supplement':'1DC0', 'latin_extended_additional':'1E00', 'greek_extended':'1F00', 'general_punctuation':'2000', 'superscripts_and_subscripts':'2070', 'currency_symbols':'20A0', 'combining_diacritical_marks_for_symbols':'20D0', 'letterlike_symbols':'2100', 'number_forms':'2150', 'arrows':'2190', 'mathematical_operators':'2200', 'miscellaneous_technical':'2300', 'control_pictures':'2400', 'optical_character_recognition':'2440', 'enclosed_alphanumerics':'2460', 'box_drawing':'2500', 'block_elements':'2580', 'geometric_shapes':'25A0', 'miscellaneous_symbols':'2600', 'dingbats':'2700', 'miscellaneous_mathematical_symbols-a':'27C0', 'supplemental_arrows-a':'27F0', 'braille_patterns':'2800', 'supplemental_arrows-b':'2900', 'miscellaneous_mathematical_symbols-b':'2980', 'supplemental_mathematical_operators':'2A00', 'miscellaneous_symbols_and_arrows':'2B00', 'glagolitic':'2C00', 'latin_extended-c':'2C60', 'coptic':'2C80', 'georgian_supplement':'2D00', 'tifinagh':'2D30', 'ethiopic_extended':'2D80', 'cyrillic_extended-a':'2DE0', 'supplemental_punctuation':'2E00', 'cjk_radicals_supplement':'2E80', 'kangxi_radicals':'2F00', 'ideographic_description_characters':'2FF0', 'cjk_symbols_and_punctuation':'3000', 'hiragana':'3040', 'katakana':'30A0', 'bopomofo':'3100', 'hangul_compatibility_jamo':'3130', 'kanbun':'3190', 'bopomofo_extended':'31A0', 'cjk_strokes':'31C0', 'katakana_phonetic_extensions':'31F0', 'enclosed_cjk_letters_and_months':'3200', 'cjk_compatibility':'3300', 'cjk_unified_ideographs_extension_a':'3400', 'yijing_hexagram_symbols':'4DC0', 'cjk_unified_ideographs':'4E00', 'yi_syllables':'A000', 'yi_radicals':'A490', 'lisu':'A4D0', 'vai':'A500', 'cyrillic_extended-b':'A640', 'bamum':'A6A0', 'modifier_tone_letters':'A700', 'latin_extended-d':'A720', 'syloti_nagri':'A800', 'common_indic_number_forms':'A830', 'phags-pa':'A840', 'saurashtra':'A880', 'devanagari_extended':'A8E0', 'kayah_li':'A900', 'rejang':'A930', 'hangul_jamo_extended-a':'A960', 'javanese':'A980', 'myanmar_extended-b':'A9E0', 'cham':'AA00', 'myanmar_extended-a':'AA60', 'tai_viet':'AA80', 'meetei_mayek_extensions':'AAE0', 'ethiopic_extended-a':'AB00', 'latin_extended-e':'AB30', 'cherokee_supplement':'AB70', 'meetei_mayek':'ABC0', 'hangul_syllables':'AC00', 'hangul_jamo_extended-b':'D7B0', 'high_surrogates':'D800', 'high_private_use_surrogates':'DB80', 'low_surrogates':'DC00', 'private_use_area':'E000', 'cjk_compatibility_ideographs':'F900', 'alphabetic_presentation_forms':'FB00', 'arabic_presentation_forms-a':'FB50', 'variation_selectors':'FE00', 'vertical_forms':'FE10', 'combining_half_marks':'FE20', 'cjk_compatibility_forms':'FE30', 'small_form_variants':'FE50', 'arabic_presentation_forms-b':'FE70', 'halfwidth_and_fullwidth_forms':'FF00', 'specials':'FFF0', 'linear_b_syllabary':'10000', 'linear_b_ideograms':'10080', 'aegean_numbers':'10100', 'ancient_greek_numbers':'10140', 'ancient_symbols':'10190', 'phaistos_disc':'101D0', 'lycian':'10280', 'carian':'102A0', 'coptic_epact_numbers':'102E0', 'old_italic':'10300', 'gothic':'10330', 'old_permic':'10350', 'ugaritic':'10380', 'old_persian':'103A0', 'deseret':'10400', 'shavian':'10450', 'osmanya':'10480', 'osage':'104B0', 'elbasan':'10500', 'caucasian_albanian':'10530', 'linear_a':'10600', 'cypriot_syllabary':'10800', 'imperial_aramaic':'10840', 'palmyrene':'10860', 'nabataean':'10880', 'hatran':'108E0', 'phoenician':'10900', 'lydian':'10920', 'meroitic_hieroglyphs':'10980', 'meroitic_cursive':'109A0', 'kharoshthi':'10A00', 'old_south_arabian':'10A60', 'old_north_arabian':'10A80', 'manichaean':'10AC0', 'avestan':'10B00', 'inscriptional_parthian':'10B40', 'inscriptional_pahlavi':'10B60', 'psalter_pahlavi':'10B80', 'old_turkic':'10C00', 'old_hungarian':'10C80', 'rumi_numeral_symbols':'10E60', 'brahmi':'11000', 'kaithi':'11080', 'sora_sompeng':'110D0', 'chakma':'11100', 'mahajani':'11150', 'sharada':'11180', 'sinhala_archaic_numbers':'111E0', 'khojki':'11200', 'multani':'11280', 'khudawadi':'112B0', 'grantha':'11300', 'newa':'11400', 'tirhuta':'11480', 'siddham':'11580', 'modi':'11600', 'mongolian_supplement':'11660', 'takri':'11680', 'ahom':'11700', 'warang_citi':'118A0', 'zanabazar_square':'11A00', 'soyombo':'11A50', 'pau_cin_hau':'11AC0', 'bhaiksuki':'11C00', 'marchen':'11C70', 'masaram_gondi':'11D00', 'cuneiform':'12000', 'cuneiform_numbers_and_punctuation':'12400', 'early_dynastic_cuneiform':'12480', 'egyptian_hieroglyphs':'13000', 'anatolian_hieroglyphs':'14400', 'bamum_supplement':'16800', 'mro':'16A40', 'bassa_vah':'16AD0', 'pahawh_hmong':'16B00', 'miao':'16F00', 'ideographic_symbols_and_punctuation':'16FE0', 'tangut':'17000', 'tangut_components':'18800', 'kana_supplement':'1B000', 'kana_extended-a':'1B100', 'nushu':'1B170', 'duployan':'1BC00', 'shorthand_format_controls':'1BCA0', 'byzantine_musical_symbols':'1D000', 'musical_symbols':'1D100', 'ancient_greek_musical_notation':'1D200', 'tai_xuan_jing_symbols':'1D300', 'counting_rod_numerals':'1D360', 'mathematical_alphanumeric_symbols':'1D400', 'sutton_signwriting':'1D800', 'glagolitic_supplement':'1E000', 'mende_kikakui':'1E800', 'adlam':'1E900', 'arabic_mathematical_alphabetic_symbols':'1EE00', 'mahjong_tiles':'1F000', 'domino_tiles':'1F030', 'playing_cards':'1F0A0', 'enclosed_alphanumeric_supplement':'1F100', 'enclosed_ideographic_supplement':'1F200', 'miscellaneous_symbols_and_pictographs':'1F300', 'emoticons':'1F600', 'ornamental_dingbats':'1F650', 'transport_and_map_symbols':'1F680', 'alchemical_symbols':'1F700', 'geometric_shapes_extended':'1F780', 'supplemental_arrows-c':'1F800', 'supplemental_symbols_and_pictographs':'1F900', 'cjk_unified_ideographs_extension_b':'20000', 'cjk_unified_ideographs_extension_c':'2A700', 'cjk_unified_ideographs_extension_d':'2B740', 'cjk_unified_ideographs_extension_e':'2B820', 'cjk_compatibility_ideographs_supplement':'2F800', 'tags':'E0000', 'variation_selectors_supplement':'E0100', 'supplementary_private_use_area-a':'F0000', 'supplementary_private_use_area-b':'100000',  'medefaidrin':'16E40','sogdian':'10F30', 'old_sogdian':'10F00', 'dogra':'11800', 'gunjala_gondi':'11D60', 'hanifi_rohingya':'10D00', 'makasar':'11EE0', 'georgian_extended':'1C90'
  }
 
         
@@ -160,7 +160,7 @@ var linkDB = [
 	info:{ 		wikipedia:"Georgian_script", omniglot:"georgian" }, 
 	local: [	],
 	unicode:{ 	}, 
-	charts:[	"Georgian", "Georgian Supplement" ],
+	charts:[	"Georgian", "Georgian Extended", "Georgian Supplement" ],
 	pickers:[	
 				],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-european.html#georgian" }
@@ -2003,13 +2003,125 @@ var linkDB = [
 				]
 	},
 	   
+{ script:"Medefaidrin", code:"Medf", name:"",
+	info:{ 		wikipedia:"Medefaidrin", omniglot:"" }, 
+	local: [	
+				],
+	unicode:{ 	}, 
+	charts:[	"Medefaidrin" ],
+	pickers:[	
+				],
+	fontkey:[	
+				],
+	layout:[	
+				],
+	other:[		
+				]
+	},
+   
+{ script:"Old Sogdian", code:"Sogo", name:"",
+	info:{ 		wikipedia:"Sogdian_alphabet", omniglot:"sogdian" }, 
+	local: [	
+				],
+	unicode:{ 	}, 
+	charts:[	"Old Sogdian" ],
+	pickers:[	
+				],
+	fontkey:[	
+				],
+	layout:[	
+				],
+	other:[		
+				]
+	},
+   
+{ script:"Sogdian", code:"Sogd", name:"",
+	info:{ 		wikipedia:"Sogdian_alphabet", omniglot:"sogdian" }, 
+	local: [	
+				],
+	unicode:{ 	}, 
+	charts:[	"Sogdian" ],
+	pickers:[	
+				],
+	fontkey:[	
+				],
+	layout:[	
+				],
+	other:[		
+				]
+	},
+   
+{ script:"Dogra", code:"Dogr", name:"",
+	info:{ 		wikipedia:"Dogri_language", omniglot:"" }, 
+	local: [	
+				],
+	unicode:{ 	}, 
+	charts:[	"Dogra" ],
+	pickers:[	
+				],
+	fontkey:[	
+				],
+	layout:[	
+				],
+	other:[		
+				]
+	},
+   
+{ script:"Hanifi Rohingya", code:"Rohg", name:"",
+	info:{ 		wikipedia:"Hanifi_Rohingya_script", omniglot:"rohingya.htm#hanifi" }, 
+	local: [	
+				],
+	unicode:{ 	}, 
+	charts:[	"Hanifi Rohingya" ],
+	pickers:[	
+				],
+	fontkey:[	
+				],
+	layout:[	
+				],
+	other:[		
+				]
+	},
+   
+{ script:"Gunjala Gondi", code:"Gong", name:"",
+	info:{ 		wikipedia:"Gunjala_Gondi_Lipi", omniglot:"" }, 
+	local: [	
+				],
+	unicode:{ 	}, 
+	charts:[	"Gunjala Gondi" ],
+	pickers:[	
+				],
+	fontkey:[	
+				],
+	layout:[	
+				],
+	other:[		
+				]
+	},
+   
+{ script:"Makasar", code:"Maka", name:"",
+	info:{ 		wikipedia:"Makasar_(Unicode_block)", omniglot:"" }, 
+	local: [	
+				],
+	unicode:{ 	}, 
+	charts:[	"Makasar" ],
+	pickers:[	{ name:"Makasar", url:"makasar" }
+				],
+	fontkey:[	
+				],
+	layout:[	
+				],
+	other:[		
+				]
+	},
+   
 { script:"Limbu", code:"xxxx", name:"",
 	info:{ 		wikipedia:"Limbu_alphabet", omniglot:"limbu" }, 
 	local: [	
 				],
 	unicode:{ 	}, 
 	charts:[	"Limbu" ],
-	pickers:[	
+	pickers:[	{ name:"Makasar", url:"makasar" }
 				],
 	fontkey:[	
 				],
