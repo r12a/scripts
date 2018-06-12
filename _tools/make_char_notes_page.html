@@ -43,7 +43,15 @@ if(document.getElementById('bicameral').checked) bicameral = true;
 lang = document.getElementById('lang').value;
 dir = document.getElementById('dir').value;
 document.getElementById('out').value = makeListFromChars(document.getElementById('listin').value, bicameral, lang, dir); 
-document.getElementById('out').select()">Go</button></p>
+document.getElementById('out').select()">Go</button><br/>
+
+<label>trans <select id="transLoc"><option selected>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></label>
+<label>ipa <select id="ipaLoc"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></label>
+<label>type <select id="typeLoc"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></label>
+<label>name <select id="nameLoc"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></label>
+<label>native nm <select id="nnameLoc"><option>1</option><option>2</option><option>3</option><option>4</option><option selected>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></label>
+<label>number <select id="numLoc"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option selected>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></label>
+</p>
 
 <textarea id="out" style="height:400px;width:100%;"></textarea>
 
@@ -52,15 +60,17 @@ document.getElementById('out').select()">Go</button></p>
 
 <pre>
 &lt;div class="letter">
-&lt;p class="titlepara">&lt;span class="title">LANGUAGE&lt;/span> 
- &amp;nbsp;&amp;nbsp;&nbsp;&nbsp;&lt;span dir=&quot;ltr&quot; lang="BCP">{5}&lt;/span>&nbsp;&lt;span class=&quot;trans&quot;>{4}&lt;/span>&lt;/p>
-&lt;p>&lt;span class="ipa">{2}&lt;/span> explanation_of_usage&lt;/p>
+&lt;p class="titlepara">&lt;span class="title">LANGUAGE&lt;/span> &lt;span class=&quot;localtrans trans&quot;&gt;{1}&lt;/span&gt; 
+&lt;span class=&quot;name&quot;&gt;&lt;span class=&quot;localname&quot; dir=&quot;ltr&quot; lang="BCP">{5}&lt;/span>
+&nbsp;&lt;span class=&quot;transliteratedname trans&quot;>{4}&lt;/span>&lt;/span&gt;
+&lt;span class="ipa">{2}&lt;/span>&lt;/p&gt;
+&lt;p&gt;explanation_of_usage&lt;/p>
 &lt;/div>
 
 
 
 &lt;p class="ref">&lt;a href="#refs">General sources&lt;/a>:
-   &lt;a href=&quot;block#refs&quot; target="_blank"&gt;Daniels, 
+   &lt;a href=&quot;block#refs&quot; target="_blank"&gt;Daniels&lt;/a&gt;, 
    &lt;a href="http://www.unicode.org/versions/latest/ch07.pdf#Armenian" target="_blank">Unicode&lt;/a>, &nbsp;
    &lt;a href="https://en.wikipedia.org/wiki/Armenian_alphabet" target="_blank">Wikipedia&lt;/a> &nbsp;
 &lt;/p></pre>
@@ -74,8 +84,9 @@ document.getElementById('out').select()">Go</button></p>
 <textarea id="refs" style="height:200px;width:100%;"></textarea>
 
 
+
 <div class="smallprint"><span id="version">First published  3 Feb 2008.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2018-02-11  17:49<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2018-05-09  6:42<!-- #EndDate --> 
 </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 <script type="text/javascript">
@@ -145,6 +156,15 @@ function makeListFromChars (chars, bicameral, lang, dir) {
         }
 	*/
     
+    
+    // get the column position for the standard items
+    var transLoc = document.getElementById('transLoc').value
+    var ipaLoc = document.getElementById('ipaLoc').value
+    var typeLoc = document.getElementById('typeLoc').value
+    var nameLoc = document.getElementById('nameLoc').value
+    var nnameLoc = document.getElementById('nnameLoc').value
+    var numLoc = document.getElementById('numLoc').value
+    
 	var out = ''
 	
 	for (var x=0; x<charList.length; x++) {
@@ -159,8 +179,11 @@ function makeListFromChars (chars, bicameral, lang, dir) {
                 sidecarStr = sidecar[items[0]]
                 console.log(sidecar[items[0]])
                 }
-            else sidecarStr = ''
-            
+            else {
+                sidecarStr = ''
+                console.log('No sidecar for ', items[0])
+                }
+                
 			var hex = i.toString(16).toUpperCase()
 			while (hex.length < 4) hex = '0' + hex
 			console.log(hex)
@@ -185,25 +208,28 @@ function makeListFromChars (chars, bicameral, lang, dir) {
             out += '<div class="notes">\n'
             
             // Description and transliteration
-            if (items[3]) var description = items[3][0].toUpperCase()+items[3].substr(1)
+            if (items[typeLoc]) var description = items[typeLoc][0].toUpperCase()+items[typeLoc].substr(1)
             else description = ''
-            out += '<p>'+description
-            if (items[1]) out += ' &nbsp;&nbsp; <span class="trans">'+items[1]+'</span>'
-            if (items[6]) out += ' &nbsp;&nbsp; #value <span class="num">'+items[6]+'</span>'
+            out += '<p class="charDescription"><span class="charType">'+description+'</span>'
+            if (items[transLoc]) out += ' <span class="trans">'+items[transLoc]+'</span>'
+            if (items[numLoc]) out += ' <span class="numberValue">#value <span class="num">'+items[numLoc]+'</span></span>'
             out += '</p>\n'
             
             // check for decomposable characters
-            if (items[0].normalize('NFD') != items[0]) out += '<p>Decomposes to '+makeCharacterLink(items[0].normalize('NFD'), lang, dir)+'</p>\n'
+            if (items[0].normalize('NFD') != items[0]) out += '<p class="decomposition">Decomposes to '+makeCharacterLink(items[0].normalize('NFD'), lang, dir)+'</p>\n'
             
             // add pointer to other case, if bicameral
-            if (bicameral && items[0].toUpperCase() == items[0]) out += '\n<p>Lowercase is '+makeCharacterLink(items[0].toLowerCase(), lang, dir)+'</p>'
-            else if (bicameral) out += '\n<p>Uppercase is '+makeCharacterLink(items[0].toUpperCase(), lang, dir)+'</p>'
+            if (bicameral && items[0].toUpperCase() == items[0]) out += '\n<p class="lowercase">Lowercase is '+makeCharacterLink(items[0].toLowerCase(), lang, dir)+'</p>'
+            else if (bicameral) out += '\n<p class="uppercase">Uppercase is '+makeCharacterLink(items[0].toUpperCase(), lang, dir)+'</p>'
+            
+            // vowel correspondences
+            // not done automatically. Use <p class="vowelPairing>The corresponding independent vowel is [character].</p>
             
             // if cursive, show the various forms
             if (document.getElementById('cursive').value) {
                 cursiveBase = document.getElementById('cursive').value
-                out += '<p>Cursive shapes (naskh): <span class="ex" lang="'+lang+'">'+items[0]+cursiveBase+items[0]+cursiveBase+items[0]+' '+items[0]+'</span></p>\n'
-                out += '<p>Cursive shapes (nastaliq): <span class="ex" lang="ur">'+items[0]+cursiveBase+items[0]+cursiveBase+items[0]+' '+items[0]+'</span></p>\n'
+                out += '<p class="cursiveShapes">Cursive shapes (naskh): <span class="ex" lang="'+lang+'">'+items[0]+cursiveBase+items[0]+cursiveBase+items[0]+' '+items[0]+'</span></p>\n'
+                //out += '<p>Cursive shapes (nastaliq): <span class="ex" lang="ur">'+items[0]+cursiveBase+items[0]+cursiveBase+items[0]+' '+items[0]+'</span></p>\n'
                 //out += '\n<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">'+items[0]+cursiveBase+items[0]+cursiveBase+items[0]+' '+items[0]+'</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">'+items[0]+cursiveBase+items[0]+cursiveBase+items[0]+' '+items[0]+'</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">'+items[0]+cursiveBase+items[0]+cursiveBase+items[0]+' '+items[0]+'</span></span></p>'
                  }
            
@@ -222,6 +248,14 @@ function makeListFromChars (chars, bicameral, lang, dir) {
                 else notes = notes.replace(/\{5\}/g,'')
                 if (items[6]) notes = notes.replace(/\{6\}/g,items[6])
                 else notes = notes.replace(/\{6\}/g,'')
+                if (items[7]) notes = notes.replace(/\{7\}/g,items[7])
+                else notes = notes.replace(/\{7\}/g,'')
+                if (items[8]) notes = notes.replace(/\{8\}/g,items[8])
+                else notes = notes.replace(/\{8\}/g,'')
+                if (items[9]) notes = notes.replace(/\{9\}/g,items[9])
+                else notes = notes.replace(/\{9\}/g,'')
+                if (items[10]) notes = notes.replace(/\{10\}/g,items[10])
+                else notes = notes.replace(/\{10\}/g,'')
                 notes = notes.replace(/{sidecar}/g, sidecarStr)
                 notes = notes.replace(/&#x....;/g, '&#x'+hex+';')
                 out += notes
