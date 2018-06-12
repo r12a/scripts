@@ -116,6 +116,38 @@ function findLangs (node) {
     }
 
 
+
+function listCharsWithNotes () {
+	// makes a list of which characters have notes attached, list is space-separated, and mostly decimal number pairs
+	// however a single character that is not part of a series is represented by just that decimal codepoint
+	var charliststr = ''
+	var charlist = document.querySelectorAll("div > div.notes")
+	var sortedcharlist = []
+	for (let i=0; i<charlist.length; i++) {
+		sortedcharlist[i] = ' '+parseInt(charlist[i].parentNode.id.substr(4), 16)
+		}
+	sortedcharlist.sort()
+	
+	charliststr = 'Characters with notes: '
+	var start = parseInt(sortedcharlist[0])
+	var end = '';
+	for (let i=0; i<sortedcharlist.length; i++) {
+		end = parseInt(sortedcharlist[i])
+		if (sortedcharlist[i+1] != end+1) {
+			if (start == end) { 
+				charliststr += start+' ' 
+				start = parseInt(sortedcharlist[i+1])
+				}
+			else {
+				charliststr += start+':'+end+' '
+				start = parseInt(sortedcharlist[i+1])
+				}
+			}
+		}
+	document.getElementById('charliststr').textContent = charliststr	
+	}
+
+
 function getFindStr (hex) {
 // return a value for the Find box at the top of the page
 

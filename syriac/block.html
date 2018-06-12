@@ -8,18 +8,18 @@
 <link rel="stylesheet" type="text/css" href="../block/block-style.css" />
 <link rel="stylesheet" type="text/css" href="local.css" />
 
-<script type="text/javascript" src="/shared/code/boilerplate.js"></script>
-<script type="text/javascript" src="/shared/code/toc_2016.js"></script>
-<script type="text/javascript" src="/shared/code/all-names.js"></script>
-<script type="text/javascript" src="/shared/code/character_conversion.js"></script>
-<script type="text/javascript" src="../../shared/code/show_codepoints.js"></script>
-<script type="text/javascript" src="/shared/fontlists/manage.js"></script>
-<script type="text/javascript" src="/shared/code/scriptGroups.js"></script>
-<script type="text/javascript" src="../block/functions.js"></script>
-<script type="text/javascript" src="../../app-charuse/char_lang.js"></script>
-<script type="text/javascript" src="../../app-charuse/langs.js"></script>
+<script src="/shared/code/boilerplate.js"></script>
+<script src="/shared/code/toc_2016.js"></script>
+<script src="/shared/code/all-names.js"></script>
+<script src="/shared/code/character_conversion.js"></script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="/shared/fontlists/manage.js"></script>
+<script src="/shared/code/scriptGroups.js"></script>
+<script src="../block/functions.js"></script>
+<script src="../../app-charuse/char_lang.js"></script>
+<script src="../../app-charuse/langs.js"></script>
 
-<script type="text/javascript" src="/shared/fontlists/syriac.js"> </script>
+<script src="/shared/fontlists/syriac.js"> </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -75,7 +75,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->9 February, 2018<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->11 June, 2018<!-- #EndDate -->
 &bull; tags <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="http://rishida.net/blog/?tag=syriac" title="Show all blog posts tagged with 'syriac'">syriac</a></p>
 <section>
    <p>This page lists characters in the following Unicode  block and provides information about them. </p>
@@ -96,7 +96,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <p class="instructions">To view this page as intended, you need at least three Syriac fonts.  The page comes with a webfont for each of the major styles of Syriac writing: Noto Sans Syriac Eastern, Noto Sans Syriac Estrangelo, and Noto Sans Syriac Western. Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system. The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. (If there is no glyph and you want to see what it looks like, click on <samp>See in UniView</samp>.)</p>
     <p class="instructions">Information about languages that use these characters is taken from the list maintained for the Character Use app. The list is not exhaustive.</p>
 <p class="instructions">References are indicated by superscript characters. Wherever possible, those contain direct links to the source material. When such a pointer is alongside an arrow → it means that it's worth following the link for the additional information it provides. Digits refer to the main sources, which are listed at the bottom of a set of notes.</p>
-    <p class="instructions">When you are using UniView and you turn on <samp>Show notes</samp>, UniView will pull in information about characters from this page.</p></details>
+    <p class="instructions">When you are using UniView and you turn on <samp>Show notes</samp>, UniView will pull in information about characters from this page.</p>
+<p id="charliststr" class="instructions"></p>
+</details>
 </section>
 </div>
 
@@ -1733,16 +1735,18 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/syriac/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2018-02-09  8:37<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2018-06-11  9:18<!-- #EndDate --> 
   </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bsyriac%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fsyriac%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 
 <script type="text/javascript">
-createtoc(3);
-initialiseShowNames();
-checkForCharParam();
+createtoc(3)
+var base = '/scripts/syriac/block'
+initialiseShowNames(base, '')
+checkForCharParam()
 addLangInfo()
+listCharsWithNotes()
 </script>
 </body>
 </html>
