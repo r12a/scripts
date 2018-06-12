@@ -34,9 +34,9 @@ var blockStart = {
  }
 
         
-var linkDB = [ 
+var linkDB = { 
 
-{ script:"Ahom", code:"Ahom",
+ahom:{ script:"Ahom", code:"Ahom",
 	info:{ 		scriptsource:"Ahom", wikipedia:"Ahom_alphabet", omniglot:"ahom" }, 
 	local: [	],
 	unicode:{ 	core:"ch15", historical:"ky6s63f7fx" }, 
@@ -49,14 +49,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Ahom", 
-	info:{ scriptsource:"Ahom", wikipedia:"Ahom_alphabet", omniglot:"ahom" }, 
-	unicode:{ historical:"ky6s63f7fx" }, 
-	charts:[{ name:"Ahom", uniview:"ahom", unicode:"11700" }],
-	fontkey:[{ name:"Scriptsource", url:"Ahom/font" }]
-	},
-
-{ script:"Arabic",  code:"Arab",
+arab:{ script:"Arabic",  code:"Arab",
 	info:{ scriptsource:"Arab", wikipedia:"Arabic_script", omniglot:"arabic" }, 
 	local:[		],
 	unicode:{ 	core:"ch09", historical:"hqr6rc9md5" }, 
@@ -76,7 +69,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Armenian", code:"Armn",
+armn:{ script:"Armenian", code:"Armn",
 	info:{ 		scriptsource:"Armn", wikipedia:"Armenian_script", omniglot:"armenian" }, 
 	local: [	],
 	unicode:{ 	core:"ch07", historical:"z35gwmg4ft" }, 
@@ -90,7 +83,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Caucasian Albanian", code:"Aghb",
+aghb:{ script:"Caucasian Albanian", code:"Aghb",
 	info:{ 		scriptsource:"Aghb", wikipedia:"Caucasian_Albanian_alphabet", omniglot:"caucasianalbanian" }, 
 	local: [	],
 	unicode:{ 	core:"ch08", historical:"x2qwvvz9p4" }, 
@@ -103,7 +96,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Cypriot", code:"Cprt",
+cprt:{ script:"Cypriot", code:"Cprt",
 	info:{ 		wikipedia:"Cypriot_syllabary", omniglot:"cypriot" }, 
 	local: [	],
 	unicode:{ 	core:"ch08", historical:"nywfdbys7b" }, 
@@ -116,7 +109,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Cyrillic", code:"Cyrl",
+cyrl:{ script:"Cyrillic", code:"Cyrl",
 	info:{ 		wikipedia:"Cyrillic_script", omniglot:"cyrillic" }, 
 	local: [	],
 	unicode:{ 	core:"ch07", historical:"ngc339csy8" }, 
@@ -130,7 +123,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Duployan", code:"Dupl",
+dupl:{ script:"Duployan", code:"Dupl",
 	info:{ 		wikipedia:"Duployan" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -143,7 +136,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Elbasan", code:"Elba",
+elba:{ script:"Elbasan", code:"Elba",
 	info:{ 		wikipedia:"Elbasan_alphabet", omniglot:"elbasan" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -156,7 +149,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Georgian", code:"Geor",
+geor:{ script:"Georgian", code:"Geor",
 	info:{ 		wikipedia:"Georgian_script", omniglot:"georgian" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -169,7 +162,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Glagolitic", code:"Glag",
+glag:{ script:"Glagolitic", code:"Glag",
 	info:{ 		wikipedia:"Glagolitic_script", omniglot:"glagolitic" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -182,7 +175,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Gothic", code:"Goth",
+goth:{ script:"Gothic", code:"Goth",
 	info:{ 		wikipedia:"Gothic_alphabet", omniglot:"gothic" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -195,7 +188,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Greek", code:"Grek",
+grek:{ script:"Greek", code:"Grek",
 	info:{ 		wikipedia:"Greek_alphabet", omniglot:"greek" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -208,7 +201,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Latin", code:"Latn",
+latn:{ script:"Latin", code:"Latn",
 	info:{ 		wikipedia:"Latin_script", omniglot:"latin" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -226,7 +219,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Linear A", code:"Lina",
+lina:{ script:"Linear A", code:"Lina",
 	info:{ 		wikipedia:"Linear_a", omniglot:"lineara" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -239,7 +232,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Linear B", code:"Linb",
+linb:{ script:"Linear B", code:"Linb",
 	info:{ 		wikipedia:"Linear_b", omniglot:"linearb" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -252,7 +245,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Ogham", code:"Ogam",
+ogam:{ script:"Ogham", code:"Ogam",
 	info:{ 		wikipedia:"Ogham", omniglot:"ogham" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -265,7 +258,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Old Hungarian", code:"Hung",
+hung:{ script:"Old Hungarian", code:"Hung",
 	info:{ 		wikipedia:"Old_Hungarian_alphabet" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -278,7 +271,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Old Italic", code:"Ital",
+ital:{ script:"Old Italic", code:"Ital",
 	info:{ 		wikipedia:"Old_Italic_alphabet", omniglot:"olditalic" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -291,7 +284,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Old Permic", code:"Perm",
+perm:{ script:"Old Permic", code:"Perm",
 	info:{ 		wikipedia:"Old_Permic", omniglot:"oldpermic" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -304,7 +297,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Phaistos Disc", code:"xPhais",
+xphais:{ script:"Phaistos Disc", code:"xPhais",
 	info:{ 		wikipedia:"Phaistos_Disc", omniglot:"phaistos" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -317,7 +310,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Runic", code:"Runr",
+runr:{ script:"Runic", code:"Runr",
 	info:{ 		wikipedia:"Runic", omniglot:"runic" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -330,7 +323,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Shavian", code:"Shaw",
+shaw:{ script:"Shavian", code:"Shaw",
 	info:{ 		wikipedia:"Shavian", omniglot:"shavian" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -343,7 +336,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Bamum", code:"Bamu",
+bamu:{ script:"Bamum", code:"Bamu",
 	info:{ 		wikipedia:"Bamum_script", omniglot:"bamum" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -356,7 +349,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Bassa Vah", code:"Bass",
+bass:{ script:"Bassa Vah", code:"Bass",
 	info:{ 		wikipedia:"Bassa_Vah", omniglot:"bassa" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -369,7 +362,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Coptic", code:"Copt",
+copt:{ script:"Coptic", code:"Copt",
 	info:{ 		wikipedia:"Coptic_script", omniglot:"coptic" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -382,7 +375,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Egyptian Hieroglyphs", code:"Egyp",
+egyp:{ script:"Egyptian Hieroglyphs", code:"Egyp",
 	info:{ 		wikipedia:"Egyptian_hieroglyphs", omniglot:"egyptian" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -395,7 +388,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Ethiopic", code:"Ethi",
+ethi:{ script:"Ethiopic", code:"Ethi",
 	info:{ 		wikipedia:"Ge'ez_script", omniglot:"ethiopic" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -409,7 +402,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Mende Kikakui", code:"Mend",
+mend:{ script:"Mende Kikakui", code:"Mend",
 	info:{ 		wikipedia:"Mende Kikakui_script", omniglot:"mende" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -422,7 +415,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Meroitic", code:"Merc",
+merc:{ script:"Meroitic", code:"Merc",
 	info:{ 		wikipedia:"Meroitic_alphabet", omniglot:"meroitic" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -435,7 +428,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"NKo", code:"Nkoo",
+nkoo:{ script:"NKo", code:"Nkoo",
 	info:{ 		wikipedia:"N'Ko_alphabet", omniglot:"nko" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -448,7 +441,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Osmanya", code:"Osma",
+osma:{ script:"Osmanya", code:"Osma",
 	info:{ 		wikipedia:"Osmanya_alphabet", omniglot:"osmanya" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -461,7 +454,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Tifinagh", code:"Tfng",
+tfng:{ script:"Tifinagh", code:"Tfng",
 	info:{ 		wikipedia:"Tifinagh", omniglot:"tifinagh" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -474,7 +467,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Vai", code:"Vaii",
+vaii:{ script:"Vai", code:"Vaii",
 	info:{ 		wikipedia:"Vai_syllabary", omniglot:"vai" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -487,7 +480,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Anatolian Hieroglyphs", code:"Hluw", name:"Anatolian (Luwian/Hittite) hieroglyphs",
+hluw:{ script:"Anatolian Hieroglyphs", code:"Hluw", name:"Anatolian (Luwian/Hittite) hieroglyphs",
 	info:{ 		wikipedia:"Anatolian_hieroglyphs", omniglot:"luvian" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -500,7 +493,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Aramaic", code:"Armi",
+armi:{ script:"Aramaic", code:"Armi",
 	info:{ 		wikipedia:"Aramaic_alphabet", omniglot:"aramaic" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -513,7 +506,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Avestan", code:"Avst",
+avst:{ script:"Avestan", code:"Avst",
 	info:{ 		wikipedia:"Avestan_alphabet", omniglot:"avestan" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -526,7 +519,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Carian", code:"Cari",
+cari:{ script:"Carian", code:"Cari",
 	info:{ 		wikipedia:"Carian_script", omniglot:"carian" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -539,7 +532,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Cuneiform", code:"Xsux",
+xsux:{ script:"Cuneiform", code:"Xsux",
 	info:{ 		wikipedia:"Cuneiform_script", omniglot:"cuneiform" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -553,7 +546,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Hatran", code:"Hatr",
+hatr:{ script:"Hatran", code:"Hatr",
 	info:{ 		wikipedia:"Aramaic_of_Hatra", omniglot:"" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -566,7 +559,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Hebrew", code:"Hebr",
+hebr:{ script:"Hebrew", code:"Hebr",
 	info:{ 		wikipedia:"Hebrew_script", omniglot:"hebrew" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -579,7 +572,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Lycian", code:"Lyci",
+lyci:{ script:"Lycian", code:"Lyci",
 	info:{ 		wikipedia:"Lycian_script", omniglot:"http://www.omniglot.com/writing/lycian.php" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -592,7 +585,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Lydian", code:"Lydi",
+lydi:{ script:"Lydian", code:"Lydi",
 	info:{ 		wikipedia:"Lydian_script", omniglot:"http://www.omniglot.com/writing/lydian.php" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -605,7 +598,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Mandaic", code:"Mand", name:"",
+mand:{ script:"Mandaic", code:"Mand", name:"",
 	info:{ 		wikipedia:"Mandaic_alphabet", omniglot:"mandaic" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -618,8 +611,7 @@ var linkDB = [
 				]
 	},
 
-
-{ script:"Nabataean", code:"Nbat", name:"",
+nbat:{ script:"Nabataean", code:"Nbat", name:"",
 	info:{ 		wikipedia:"Nabataean_alphabet", omniglot:"nabataean" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -632,7 +624,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Old North Arabian", code:"Narb", name:"",
+narb:{ script:"Old North Arabian", code:"Narb", name:"",
 	info:{ 		wikipedia:"Old_North_Arabian", omniglot:"" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -644,8 +636,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Old Persian", code:"Xpeo", name:"",
+  
+xpeo:{ script:"Old Persian", code:"Xpeo", name:"",
 	info:{ 		wikipedia:"Old_Persian_cuneiform", omniglot:"opcuneiform" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -657,8 +649,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Old South Arabian", code:"Sarb", name:"",
+  
+sarb:{ script:"Old South Arabian", code:"Sarb", name:"",
 	info:{ 		wikipedia:"Old South Arabian_alphabet", omniglot:"southarabian" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -670,8 +662,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Inscriptional Pahlavi", code:"Phli", name:"",
+  
+phli:{ script:"Inscriptional Pahlavi", code:"Phli", name:"",
 	info:{ 		wikipedia:"Inscriptional_Pahlavi", omniglot:"mpersian" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -683,8 +675,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Psalter Pahlavi", code:"Phlp", name:"",
+  
+phlp:{ script:"Psalter Pahlavi", code:"Phlp", name:"",
 	info:{ 		wikipedia:"Pahlavi_scripts", omniglot:"mpersian" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -696,8 +688,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Palmyrene", code:"Palm", name:"",
+  
+palm:{ script:"Palmyrene", code:"Palm", name:"",
 	info:{ 		wikipedia:"Palmyrene_alphabet", omniglot:"" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -709,8 +701,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Inscriptional Parthian", code:"Prti", name:"",
+  
+prti:{ script:"Inscriptional Parthian", code:"Prti", name:"",
 	info:{ 		wikipedia:"Inscriptional_Parthian#Written_Parthian", omniglot:"mpersian" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -722,8 +714,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Phoenician", code:"Phnx", name:"",
+  
+phnx:{ script:"Phoenician", code:"Phnx", name:"",
 	info:{ 		wikipedia:"Phoenician_alphabet", omniglot:"phoenician" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -735,8 +727,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Samaritan", code:"Samr", name:"",
+  
+samr:{ script:"Samaritan", code:"Samr", name:"",
 	info:{ 		wikipedia:"Samaritan_alphabet", omniglot:"samaritan" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -748,8 +740,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Syriac", code:"Syrc", name:"",
+  
+syrc:{ script:"Syriac", code:"Syrc", name:"",
 	info:{ 		wikipedia:"Syriac_alphabet", omniglot:"syriac" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -762,8 +754,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Ugaritic", code:"Ugar", name:"",
+  
+ugar:{ script:"Ugaritic", code:"Ugar", name:"",
 	info:{ 		wikipedia:"Ugaritic_alphabet", omniglot:"ugaritic" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -775,8 +767,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Bengali", code:"Beng", name:"",
+
+beng:{ script:"Bengali", code:"Beng", name:"",
 	info:{ 		wikipedia:"Bengali_alphabet", omniglot:"bengali" }, 
 	local: [	{ name:"Introduction to Indic Scripts", url:"indic-overview" }
 				],
@@ -789,8 +781,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Brahmi", code:"Brah", name:"",
+  
+brah:{ script:"Brahmi", code:"Brah", name:"",
 	info:{ 		wikipedia:"Brahmi_script", omniglot:"brahmi" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -802,8 +794,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Chakma", code:"Cakm", name:"",
+  
+cakm:{ script:"Chakma", code:"Cakm", name:"",
 	info:{ 		wikipedia:"Chakma_alphabet", omniglot:"chakma" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -815,8 +807,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Devanagari", code:"Deva", name:"",
+  
+deva:{ script:"Devanagari", code:"Deva", name:"",
 	info:{ 		wikipedia:"Devanagari", omniglot:"devanagari" }, 
 	local: [	{ name:"Introduction to Indic Scripts", url:"indic-overview" }
 				],
@@ -829,8 +821,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Grantha", code:"Gran", name:"",
+  
+gran:{ script:"Grantha", code:"Gran", name:"",
 	info:{ 		wikipedia:"Grantha_alphabet", omniglot:"grantha" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -842,8 +834,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Gujarati", code:"Gujr", name:"",
+  
+gujr:{ script:"Gujarati", code:"Gujr", name:"",
 	info:{ 		wikipedia:"Gujarati_alphabet", omniglot:"gujarati" }, 
 	local: [	{ name:"Introduction to Indic Scripts", url:"indic-overview" }
 				],
@@ -856,8 +848,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Gurmukhi", code:"Guru", name:"",
+  
+guru:{ script:"Gurmukhi", code:"Guru", name:"",
 	info:{ 		wikipedia:"Gurmukhi_alphabet", omniglot:"punjabi" }, 
 	local: [	{ name:"Introduction to Indic Scripts", url:"indic-overview" }
 				],
@@ -870,8 +862,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Kaithi", code:"Kthi", name:"",
+  
+kthi:{ script:"Kaithi", code:"Kthi", name:"",
 	info:{ 		wikipedia:"Kaithi", omniglot:"kaithi" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -883,8 +875,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Kannada", code:"Knda", name:"",
+  
+knda:{ script:"Kannada", code:"Knda", name:"",
 	info:{ 		wikipedia:"Kannada_alphabet", omniglot:"kannada" }, 
 	local: [	{ name:"Introduction to Indic Scripts", url:"indic-overview" }
 				],
@@ -897,8 +889,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Kharoshthi", code:"Khar", name:"",
+  
+khar:{ script:"Kharoshthi", code:"Khar", name:"",
 	info:{ 		wikipedia:"Kharoshthi", omniglot:"kharosthi" }, 
 	local: [	
 				],
@@ -911,8 +903,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Khojki", code:"Khoj", name:"",
+  
+khoj:{ script:"Khojki", code:"Khoj", name:"",
 	info:{ 		wikipedia:"Khojki", omniglot:"khojki" }, 
 	local: [	
 				],
@@ -925,8 +917,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Khudawadi", code:"Sind", name:"Khudawadi (Sindhi)",
+  
+sind:{ script:"Khudawadi", code:"Sind", name:"Khudawadi (Sindhi)",
 	info:{ 		wikipedia:"Khudabadi_script", omniglot:"sindhi" }, 
 	local: [	
 				],
@@ -939,8 +931,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Lepcha", code:"Lepc", name:"Lepcha (Róng)",
+  
+lepc:{ script:"Lepcha", code:"Lepc", name:"Lepcha (Róng)",
 	info:{ 		wikipedia:"Lepcha_alphabet", omniglot:"lepcha" }, 
 	local: [	
 				],
@@ -953,8 +945,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Limbu", code:"Limb", name:"",
+  
+limb:{ script:"Limbu", code:"Limb", name:"",
 	info:{ 		wikipedia:"Limbu_alphabet", omniglot:"limbu" }, 
 	local: [	
 				],
@@ -967,8 +959,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Mahajani", code:"Mahj", name:"",
+  
+mahj:{ script:"Mahajani", code:"Mahj", name:"",
 	info:{ 		wikipedia:"Mahajani", omniglot:"" }, 
 	local: [	
 				],
@@ -981,8 +973,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Malayalam", code:"Mlym", name:"",
+  
+mlym:{ script:"Malayalam", code:"Mlym", name:"",
 	info:{ 		wikipedia:"Malayalam_alphabet", omniglot:"malayalam" }, 
 	local: [	{ name:"Introduction to Indic Scripts", url:"indic-overview" }
 				],
@@ -995,8 +987,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Masaram Gondi", code:"Gonm", name:"",
+  
+gonm:{ script:"Masaram Gondi", code:"Gonm", name:"",
 	info:{ 		wikipedia:"Gondi_writing", omniglot:"gondi" }, 
 	local: [	
 				],
@@ -1010,7 +1002,7 @@ var linkDB = [
 				]
 	},
 
-{ script:"Meetei Mayek", code:"Mtei", name:"Meetei Mayek (Meithei, Meitei)",
+mtei:{ script:"Meetei Mayek", code:"Mtei", name:"Meetei Mayek (Meithei, Meitei)",
 	info:{ 		wikipedia:"Meetei_Mayek", omniglot:"manipuri" }, 
 	local: [	
 				],
@@ -1023,8 +1015,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Modi", code:"Modi", name:"Modi, Moḍī",
+  
+modi:{ script:"Modi", code:"Modi", name:"Modi, Moḍī",
 	info:{ 		wikipedia:"Modi_alphabet", omniglot:"modi" }, 
 	local: [	
 				],
@@ -1037,8 +1029,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Mro", code:"Mroo", name:"Mro, Mru",
+  
+mroo:{ script:"Mro", code:"Mroo", name:"Mro, Mru",
 	info:{ 		wikipedia:"Mru_language", omniglot:"mro" }, 
 	local: [	
 				],
@@ -1051,8 +1043,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Multani", code:"Mult", name:"",
+  
+mult:{ script:"Multani", code:"Mult", name:"",
 	info:{ 		wikipedia:"Multani_alphabet", omniglot:"" }, 
 	local: [	
 				],
@@ -1065,8 +1057,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Ol Chiki", code:"Olck", name:"Ol Chiki (Ol Cemet', Ol, Santali)",
+  
+olck:{ script:"Ol Chiki", code:"Olck", name:"Ol Chiki (Ol Cemet', Ol, Santali)",
 	info:{ 		wikipedia:"Ol_Chiki_alphabet", omniglot:"santali" }, 
 	local: [	
 				],
@@ -1079,8 +1071,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Oriya", code:"Orya", name:"Oriya (Odia)",
+
+orya:{ script:"Oriya", code:"Orya", name:"Oriya (Odia)",
 	info:{ 		wikipedia:"Odia_alphabet", omniglot:"oriya" }, 
 	local: [	{ name:"Introduction to Indic Scripts", url:"indic-overview" }
 				],
@@ -1093,8 +1085,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Saurashtra", code:"Saur", name:"",
+  
+saur:{ script:"Saurashtra", code:"Saur", name:"",
 	info:{ 		wikipedia:"Saurashtra_alphabet", omniglot:"" }, 
 	local: [	
 				],
@@ -1107,8 +1099,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Sharada", code:"Shrd", name:"Sharada (Śāradā)",
+  
+shrd:{ script:"Sharada", code:"Shrd", name:"Sharada (Śāradā)",
 	info:{ 		wikipedia:"Sharada_script", omniglot:"sharda" }, 
 	local: [	
 				],
@@ -1121,8 +1113,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Siddham", code:"Sidd", name:"Siddham (Siddhaṃ, Siddhamātṛkā)",
+  
+sidd:{ script:"Siddham", code:"Sidd", name:"Siddham (Siddhaṃ, Siddhamātṛkā)",
 	info:{ 		wikipedia:"Siddham_alphabet", omniglot:"siddham" }, 
 	local: [	
 				],
@@ -1135,8 +1127,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Sinhala", code:"Sinh", name:"",
+  
+sinh:{ script:"Sinhala", code:"Sinh", name:"",
 	info:{ 		wikipedia:"Sinhala_alphabet", omniglot:"sinhala" }, 
 	local: [	
 				],
@@ -1149,8 +1141,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Sora Sompeng", code:"Sora", name:"",
+  
+sora:{ script:"Sora Sompeng", code:"Sora", name:"",
 	info:{ 		wikipedia:"Sora Sompeng", omniglot:"sorangsompeng" }, 
 	local: [	
 				],
@@ -1163,8 +1155,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Syloti Nagri", code:"Sylo", name:"",
+  
+sylo:{ script:"Syloti Nagri", code:"Sylo", name:"",
 	info:{ 		wikipedia:"Syloti Nagri", omniglot:"syloti" }, 
 	local: [	
 				],
@@ -1177,8 +1169,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Takri", code:"Takr", name:"Takri (Ṭākrī, Ṭāṅkrī)",
+  
+takr:{ script:"Takri", code:"Takr", name:"Takri (Ṭākrī, Ṭāṅkrī)",
 	info:{ 		wikipedia:"Takri_alphabet", omniglot:"takri" }, 
 	local: [	
 				],
@@ -1191,8 +1183,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Tamil", code:"Taml", name:"",
+  
+taml:{ script:"Tamil", code:"Taml", name:"",
 	info:{ 		wikipedia:"Tamil_script", omniglot:"tamil" }, 
 	local: [	{ name:"Introduction to Indic Scripts", url:"indic-overview" }
 				],
@@ -1205,8 +1197,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Telugu", code:"Telu", name:"",
+  
+telu:{ script:"Telugu", code:"Telu", name:"",
 	info:{ 		wikipedia:"Telugu_alphabet", omniglot:"telugu" }, 
 	local: [	{ name:"Introduction to Indic Scripts", url:"indic-overview" }
 				],
@@ -1219,8 +1211,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Thaana", code:"Thaa", name:"",
+  
+thaa:{ script:"Thaana", code:"Thaa", name:"",
 	info:{ 		wikipedia:"Thaana", omniglot:"thaana" }, 
 	local: [	
 				],
@@ -1233,8 +1225,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Tirhuta", code:"Tirh", name:"",
+  
+tirh:{ script:"Tirhuta", code:"Tirh", name:"",
 	info:{ 		wikipedia:"Tirhuta", omniglot:"" }, 
 	local: [	
 				],
@@ -1247,8 +1239,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Warang Citi", code:"Wara", name:"Warang Citi (Varang Kshiti)",
+  
+wara:{ script:"Warang Citi", code:"Wara", name:"Warang Citi (Varang Kshiti)",
 	info:{ 		wikipedia:"Varang_Kshiti", omniglot:"varangkshiti" }, 
 	local: [	
 				],
@@ -1261,8 +1253,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Manichaean", code:"Mani", name:"",
+  
+mani:{ script:"Manichaean", code:"Mani", name:"",
 	info:{ 		wikipedia:"Manichaean_alphabet", omniglot:"http://www.omniglot.com/writing/manichaean.php" }, 
 	local: [	
 				],
@@ -1275,8 +1267,8 @@ var linkDB = [
 	layout:[	
 				]
 	},
-	   
-{ script:"Mongolian", code:"Mong", name:"",
+  
+mong:{ script:"Mongolian", code:"Mong", name:"",
 	info:{ 		wikipedia:"Mongolian_alphabet", omniglot:"mongolian" }, 
 	local: [	{ name:"Mongolian Variant Forms", url:"https://r12a.github.io/mongolian-variants/" }
 				],
@@ -1292,8 +1284,8 @@ var linkDB = [
 				{ name:" Quejingzhabu Specification 9.0", url:"http://www.babelstone.co.uk/Mongolian/Specification9.pdf" }
 				]
 	},
-	   
-{ script:"Old Turkic", code:"Orkh", name:"Old Turkic, Orkhon Runic",
+  
+orkh:{ script:"Old Turkic", code:"Orkh", name:"Old Turkic, Orkhon Runic",
 	info:{ 		wikipedia:"Old_Turkic_alphabet", omniglot:"orkhon" }, 
 	local: [	
 				],
@@ -1308,8 +1300,8 @@ var linkDB = [
 	other:[	
 				]
 	},
-	   
-{ script:"Phags-Pa", code:"Phag", name:"",
+  
+phag:{ script:"Phags-Pa", code:"Phag", name:"",
 	info:{ 		wikipedia:"Phags-pa_script", omniglot:"phagspa" }, 
 	local: [	
 				],
@@ -1324,8 +1316,8 @@ var linkDB = [
 	other:[	
 				]
 	},
-	   
-{ script:"Soyombo", code:"Soyo", name:"",
+  
+soyo:{ script:"Soyombo", code:"Soyo", name:"",
 	info:{ 		wikipedia:"Soyombo_alphabet", omniglot:"soyombo" }, 
 	local: [	
 				],
@@ -1340,8 +1332,8 @@ var linkDB = [
 	other:[	
 				]
 	},
-	   
-{ script:"Tibetan", code:"Tibt", name:"",
+  
+tibt:{ script:"Tibetan", code:"Tibt", name:"",
 	info:{ 		wikipedia:"Tibetan_alphabet", omniglot:"tibetan" }, 
 	local: [	
 				],
@@ -1357,8 +1349,8 @@ var linkDB = [
 	other:[		{ name:"Creating and Supporting OpenType Fonts for Tibetan Script", url:"https://www.microsoft.com/typography/OpenTypeDev/tibetan/intro.htm" }
 				]
 	},
-	   
-{ script:"Zanabazar Square", code:"Zanb", name:"",
+  
+zanb:{ script:"Zanabazar Square", code:"Zanb", name:"",
 	info:{ 		wikipedia:"Mongolian_writing_systems", omniglot:"" }, 
 	local: [	
 				],
@@ -1373,8 +1365,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Cham", code:"Cham", name:"",
+  
+cham:{ script:"Cham", code:"Cham", name:"",
 	info:{ 		wikipedia:"Cham_script", omniglot:"cham" }, 
 	local: [	
 				],
@@ -1389,8 +1381,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Kayah Li", code:"Kali", name:"",
+  
+kali:{ script:"Kayah Li", code:"Kali", name:"",
 	info:{ 		wikipedia:"Kayah Li_alphabet", omniglot:"kayahli" }, 
 	local: [	
 				],
@@ -1405,8 +1397,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Khmer", code:"Khmr", name:"",
+  
+khmr:{ script:"Khmer", code:"Khmr", name:"",
 	info:{ 		wikipedia:"Khmer_script", omniglot:"khmer" }, 
 	local: [	
 				],
@@ -1421,8 +1413,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Lao", code:"Laoo", name:"",
+  
+laoo:{ script:"Lao", code:"Laoo", name:"",
 	info:{ 		wikipedia:"Lao_script", omniglot:"lao" }, 
 	local: [	
 				],
@@ -1437,8 +1429,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Myanmar", code:"Mymr", name:"Myanmar (Burmese)",
+  
+mymr:{ script:"Myanmar", code:"Mymr", name:"Myanmar (Burmese)",
 	info:{ 		wikipedia:"Burmese_alphabet", omniglot:"burmese" }, 
 	local: [	
 				],
@@ -1453,8 +1445,8 @@ var linkDB = [
 	other:[		{ name:"Burmese divergence on the Web (blog)", url:"http://rishida.net/blog/?p=1129" }
 				]
 	},
-	   
-{ script:"New Tai Lue", code:"Talu", name:"",
+  
+talu:{ script:"New Tai Lue", code:"Talu", name:"",
 	info:{ 		wikipedia:"New_Tai_Lue_alphabet", omniglot:"tailue" }, 
 	local: [	
 				],
@@ -1469,8 +1461,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Pahawh Hmong", code:"Hmng", name:"",
+  
+hmng:{ script:"Pahawh Hmong", code:"Hmng", name:"",
 	info:{ 		wikipedia:"Pahawh Hmong", omniglot:"pahawhhmong" }, 
 	local: [	
 				],
@@ -1485,8 +1477,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Pau Cin Hau", code:"Pauc", name:"",
+  
+pauc:{ script:"Pau Cin Hau", code:"Pauc", name:"",
 	info:{ 		wikipedia:"Pau Cin Hau", omniglot:"" }, 
 	local: [	
 				],
@@ -1501,8 +1493,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Tai Le", code:"Tale", name:"",
+  
+tale:{ script:"Tai Le", code:"Tale", name:"",
 	info:{ 		wikipedia:"Tai_Le_alphabet", omniglot:"tainua" }, 
 	local: [	
 				],
@@ -1517,8 +1509,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Tai Tham", code:"Lana", name:"Tai Tham (Lanna)",
+  
+lana:{ script:"Tai Tham", code:"Lana", name:"Tai Tham (Lanna)",
 	info:{ 		wikipedia:"Tai_Tham_alphabet", omniglot:"lanna" }, 
 	local: [	
 				],
@@ -1533,8 +1525,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Tai Viet", code:"Tavt", name:"",
+  
+tavt:{ script:"Tai Viet", code:"Tavt", name:"",
 	info:{ 		wikipedia:"Tai Viet_script", omniglot:"taidam" }, 
 	local: [	
 				],
@@ -1549,8 +1541,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Thai", code:"Thai", name:"",
+  
+thai:{ script:"Thai", code:"Thai", name:"",
 	info:{ 		wikipedia:"Thai_alphabet", omniglot:"thai" }, 
 	local: [	
 				],
@@ -1565,8 +1557,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Balinese", code:"Bali", name:"",
+  
+bali:{ script:"Balinese", code:"Bali", name:"",
 	info:{ 		wikipedia:"Balinese_script", omniglot:"balinese" }, 
 	local: [	
 				],
@@ -1581,8 +1573,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Batak", code:"Batk", name:"",
+  
+batk:{ script:"Batak", code:"Batk", name:"",
 	info:{ 		wikipedia:"Batak_alphabet", omniglot:"batak" }, 
 	local: [	
 				],
@@ -1597,8 +1589,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Buginese", code:"Bugi", name:"",
+
+bugi:{ script:"Buginese", code:"Bugi", name:"",
 	info:{ 		wikipedia:"Buginese_script", omniglot:"lontara" }, 
 	local: [	
 				],
@@ -1613,8 +1605,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Buhid", code:"Buhd", name:"",
+  
+buhd:{ script:"Buhid", code:"Buhd", name:"",
 	info:{ 		wikipedia:"Buhid_alphabet", omniglot:"buhid" }, 
 	local: [	
 				],
@@ -1630,7 +1622,7 @@ var linkDB = [
 				]
 	},
 	   
-{ script:"Hanunoo", code:"Hano", name:"Hanunoo (Hanunóo)",
+hano:{ script:"Hanunoo", code:"Hano", name:"Hanunoo (Hanunóo)",
 	info:{ 		wikipedia:"Hanun%C3%B3'o_alphabet", omniglot:"hanunoo" }, 
 	local: [	
 				],
@@ -1645,8 +1637,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Javanese", code:"Java", name:"",
+  
+java:{ script:"Javanese", code:"Java", name:"",
 	info:{ 		wikipedia:"Javanese_alphabet", omniglot:"javanese" }, 
 	local: [	
 				],
@@ -1661,8 +1653,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Rejang", code:"Rjng", name:"Rejang (Redjang, Kaganga)",
+  
+rjng:{ script:"Rejang", code:"Rjng", name:"Rejang (Redjang, Kaganga)",
 	info:{ 		wikipedia:"Rejang_alphabet", omniglot:"redjang" }, 
 	local: [	
 				],
@@ -1677,8 +1669,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Sundanese", code:"Sund", name:"",
+  
+sund:{ script:"Sundanese", code:"Sund", name:"",
 	info:{ 		wikipedia:"Sundanese_alphabet", omniglot:"http://www.omniglot.com/writing/sundanese.php" }, 
 	local: [	
 				],
@@ -1693,8 +1685,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Tagalog", code:"Tglg", name:"Tagalog (Baybayin, Alibata)",
+  
+tglg:{ script:"Tagalog", code:"Tglg", name:"Tagalog (Baybayin, Alibata)",
 	info:{ 		wikipedia:"Tagalog_alphabet", omniglot:"tagalog" }, 
 	local: [	
 				],
@@ -1709,8 +1701,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Tagbanwa", code:"Tagb", name:"",
+  
+tagb:{ script:"Tagbanwa", code:"Tagb", name:"",
 	info:{ 		wikipedia:"Tagbanwa_script", omniglot:"tagbanwa" }, 
 	local: [	
 				],
@@ -1725,8 +1717,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Bopomofo", code:"Bopo", name:"",
+  
+bopo:{ script:"Bopomofo", code:"Bopo", name:"",
 	info:{ 		wikipedia:"Bopomofo", omniglot:"zhuyin" }, 
 	local: [	
 				],
@@ -1741,8 +1733,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Han", code:"Hani", name:"Han (Hanzi, Kanji, Hanja)",
+  
+hani:{ script:"Han", code:"Hani", name:"Han (Hanzi, Kanji, Hanja)",
 	info:{ 		wikipedia:"Chinese_characters", omniglot:"" }, 
 	local: [	{ name:"Simplified vs Traditional", url:"http://r12a.github.io/scripts/chinese/" }
 				],
@@ -1762,8 +1754,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Hangul", code:"Hang", name:"Hangul (Hangŭl, Hangeul)",
+  
+hang:{ script:"Hangul", code:"Hang", name:"Hangul (Hangŭl, Hangeul)",
 	info:{ 		wikipedia:"Hangul", omniglot:"korean" }, 
 	local: [	
 				],
@@ -1778,8 +1770,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Kana", code:"Jpan", name:"Hiragana &amp; Katakana",
+  
+jpan:{ script:"Kana", code:"Jpan", name:"Hiragana &amp; Katakana",
 	info:{ 		wikipedia:"Japanese_writing_system", omniglot:"japanese" }, 
 	local: [	{ name:"Jukugo ruby (blog)", url:"http://rishida.net/blog/?p=469" }
 				],
@@ -1794,8 +1786,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Lisu", code:"Lisu", name:"Lisu (Fraser)",
+  
+lisu:{ script:"Lisu", code:"Lisu", name:"Lisu (Fraser)",
 	info:{ 		wikipedia:"Fraser_alphabet", omniglot:"fraser" }, 
 	local: [	
 				],
@@ -1810,8 +1802,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Miao", code:"Plrd", name:"Miao (Pollard)",
+  
+plrd:{ script:"Miao", code:"Plrd", name:"Miao (Pollard)",
 	info:{ 		wikipedia:"Pollard_script", omniglot:"pollardmiao" }, 
 	local: [	
 				],
@@ -1826,8 +1818,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Nushu", code:"Nshu", name:"Nüshu",
+  
+nshu:{ script:"Nushu", code:"Nshu", name:"Nüshu",
 	info:{ 		wikipedia:"Nüshu_script", omniglot:"" }, 
 	local: [	
 				],
@@ -1842,8 +1834,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Yi", code:"Yiii", name:"",
+  
+yiii:{ script:"Yi", code:"Yiii", name:"",
 	info:{ 		wikipedia:"Yi_script", omniglot:"yi" }, 
 	local: [	
 				],
@@ -1858,8 +1850,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Cherokee", code:"Cher", name:"",
+
+cher:{ script:"Cherokee", code:"Cher", name:"",
 	info:{ 		wikipedia:"Cherokee_script", omniglot:"cherokee" }, 
 	local: [	
 				],
@@ -1874,8 +1866,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"Deseret", code:"Dsrt", name:"",
+
+dsrt:{ script:"Deseret", code:"Dsrt", name:"",
 	info:{ 		wikipedia:"Deseret_alphabet", omniglot:"deseret" }, 
 	local: [	
 				],
@@ -1890,8 +1882,8 @@ var linkDB = [
 	other:[		
 				]
 	},
-	   
-{ script:"UCAS", code:"Cans", name:"Unified Canadian Aboriginal Syllabics",
+
+cans:{ script:"UCAS", code:"Cans", name:"Unified Canadian Aboriginal Syllabics",
 	info:{ 		wikipedia:"Canadian_Aboriginal_syllabics", omniglot:"ucas" }, 
 	local: [	
 				],
@@ -1907,7 +1899,7 @@ var linkDB = [
 				]
 	},
 	   
-{ script:"Osage", code:"Osge", name:"",
+osge:{ script:"Osage", code:"Osge", name:"",
 	info:{ 		wikipedia:"Osage_alphabet", omniglot:"http://www.omniglot.com/writing/osage.php" }, 
 	local: [	
 				],
@@ -1923,7 +1915,7 @@ var linkDB = [
 				]
 	},
 	   
-{ script:"Newa", code:"Newa", name:"Newa (Newar, Newari, Nepāla lipi)",
+newa:{ script:"Newa", code:"Newa", name:"Newa (Newar, Newari, Nepāla lipi)",
 	info:{ 		wikipedia:"Prachalit_Nepal_alphabet", omniglot:"" }, 
 	local: [	
 				],
@@ -1939,7 +1931,7 @@ var linkDB = [
 				]
 	},
 	   
-{ script:"Bhaiksuki", code:"Bhks", name:"",
+bhks:{ script:"Bhaiksuki", code:"Bhks", name:"",
 	info:{ 		wikipedia:"Bhaiksuki_alphabet", omniglot:"" }, 
 	local: [	
 				],
@@ -1955,7 +1947,7 @@ var linkDB = [
 				]
 	},
 	   
-{ script:"Marchen", code:"Marc", name:"",
+marc:{ script:"Marchen", code:"Marc", name:"",
 	info:{ 		wikipedia:"Zhang-Zhung_language#Scripts", omniglot:"" }, 
 	local: [	
 				],
@@ -1971,7 +1963,7 @@ var linkDB = [
 				]
 	},
 	   
-{ script:"Tangut", code:"Tang", name:"",
+tang:{ script:"Tangut", code:"Tang", name:"",
 	info:{ 		wikipedia:"Tangut_script", omniglot:"tangut" }, 
 	local: [	
 				],
@@ -1987,7 +1979,7 @@ var linkDB = [
 				]
 	},
 	   
-{ script:"Adlam", code:"Adlm", name:"",
+adlm:{ script:"Adlam", code:"Adlm", name:"",
 	info:{ 		wikipedia:"Fula_alphabets#Adlam_alphabet", omniglot:"adlam" }, 
 	local: [	
 				],
@@ -2003,7 +1995,7 @@ var linkDB = [
 				]
 	},
 	   
-{ script:"Medefaidrin", code:"Medf", name:"",
+medf:{ script:"Medefaidrin", code:"Medf", name:"",
 	info:{ 		wikipedia:"Medefaidrin", omniglot:"" }, 
 	local: [	
 				],
@@ -2019,7 +2011,7 @@ var linkDB = [
 				]
 	},
    
-{ script:"Old Sogdian", code:"Sogo", name:"",
+sogo:{ script:"Old Sogdian", code:"Sogo", name:"",
 	info:{ 		wikipedia:"Sogdian_alphabet", omniglot:"sogdian" }, 
 	local: [	
 				],
@@ -2035,7 +2027,7 @@ var linkDB = [
 				]
 	},
    
-{ script:"Sogdian", code:"Sogd", name:"",
+sogd:{ script:"Sogdian", code:"Sogd", name:"",
 	info:{ 		wikipedia:"Sogdian_alphabet", omniglot:"sogdian" }, 
 	local: [	
 				],
@@ -2051,7 +2043,7 @@ var linkDB = [
 				]
 	},
    
-{ script:"Dogra", code:"Dogr", name:"",
+'dogr':{ script:"Dogra", code:"Dogr", name:"",
 	info:{ 		wikipedia:"Dogri_language", omniglot:"" }, 
 	local: [	
 				],
@@ -2067,7 +2059,7 @@ var linkDB = [
 				]
 	},
    
-{ script:"Hanifi Rohingya", code:"Rohg", name:"",
+'rohg':{ script:"Hanifi Rohingya", code:"Rohg", name:"",
 	info:{ 		wikipedia:"Hanifi_Rohingya_script", omniglot:"rohingya.htm#hanifi" }, 
 	local: [	
 				],
@@ -2083,7 +2075,7 @@ var linkDB = [
 				]
 	},
    
-{ script:"Gunjala Gondi", code:"Gong", name:"",
+'gong':{ script:"Gunjala Gondi", code:"Gong", name:"",
 	info:{ 		wikipedia:"Gunjala_Gondi_Lipi", omniglot:"" }, 
 	local: [	
 				],
@@ -2099,7 +2091,7 @@ var linkDB = [
 				]
 	},
    
-{ script:"Makasar", code:"Maka", name:"",
+'maka':{ script:"Makasar", code:"Maka", name:"",
 	info:{ 		wikipedia:"Makasar_(Unicode_block)", omniglot:"" }, 
 	local: [	
 				],
@@ -2115,7 +2107,7 @@ var linkDB = [
 				]
 	},
    
-{ script:"Limbu", code:"xxxx", name:"",
+'xxx':{ script:"Limbu", code:"xxxx", name:"",
 	info:{ 		wikipedia:"Limbu_alphabet", omniglot:"limbu" }, 
 	local: [	
 				],
@@ -2132,6 +2124,6 @@ var linkDB = [
 	},
 	   
 	   
-]
+}
 
 

@@ -41,24 +41,31 @@ iframe {
 <script src="linkdata/linkdb.js"></script>
 <script>
 function getData (script) {
-	var found = false
+    // take the data from linkdb.js and display it for a given script
+    // script: string, a 4-letter iso script code, all lowercase
+    
+	/*var found = false
 	var record = null
 	for (var i=0;i<linkDB.length;i++) {
-		if (linkDB[i].code === script) {
+		if (linkDB[i].code.toLowerCase() === script.toLowerCase()) {
 			record = linkDB[i]
 			found = true
 			break
 			}
 		}
 	if (! found) return '<p>No data found.</p>'
+    */
 	
-	script = linkDB[i].script
+    script = script.toLowerCase()
+    if (! linkDB[script]) return '<p>No data found.</p>'
+    
+	record = linkDB[script]
 	var lc = script.toLowerCase()
 	var norm = script.toLowerCase().replace(/ /g,'_')
 	
 	//console.log(record, record.info)
-	if ( linkDB[i].name ) out = '<h2>'+linkDB[i].name+'</h2>'
-	else out = '<h2>'+script+'</h2>'
+	if ( record.name ) out = '<h2>'+record.name+'</h2>'
+	else out = '<h2>'+record.script+'</h2>'
 	out += '<table class="links"><tbody>'
 	if (record.info) {
 		out += '<tr><td>General info:</td><td>'
@@ -174,15 +181,17 @@ function getScriptCode (script) {
 	var record = null
 	script = script.replace(/_/g, ' ')
 	script = script.replace(/%20/g, ' ')
-	for (var i=0;i<linkDB.length;i++) {
-		if (linkDB[i].script.toLowerCase() === script) {
-			code = linkDB[i].code
+    script = script.toLowerCase()
+    
+    for (record in linkDB) {
+		if (linkDB[record].script.toLowerCase() === script) {
+			code = linkDB[record].code
 			found = true
 			break
 			}
 		}
 	if (! found) return '<p>No data found.</p>'
-	else return code
+	else return code.toLowerCase()
 	}
 	
 
@@ -227,14 +236,14 @@ function getScriptCode (script) {
       <li class="off"><a onclick="return false;" href="#">&nbsp;<br/>
         Europe</a>
         <ul>
-          <li><a class="active" href="#" onclick="getData('Armn'); return false;">Armenian</a></li>
-          <li><a class="historic" href="#" onclick="getData('Aghb'); return false;">Caucasian Albanian</a></li>
-          <li><a class="historic" href="#" onclick="getData('Cprt'); return false;">Cypriot Syllabary</a></li>
-          <li><a class="active" href="#" onclick="getData('Cyrl'); return false;">Cyrillic</a></li>
-          <li><a class="historic" href="#" onclick="getData('Elba'); return false;">Elbasan</a></li>
-          <li><a class="active" href="#" onclick="getData('Geor'); return false;">Georgian</a></li>
-          <li><a class="limited liturgical" href="#" onclick="getData('Glag'); return false;">Glagolitic</a></li>
-          <li><a class="historic" href="#" onclick="getData('Goth'); return false;">Gothic</a></li>
+          <li><a class="active" href="#" onclick="getData('armn'); return false;">Armenian</a></li>
+          <li><a class="historic" href="#" onclick="getData('aghb'); return false;">Caucasian Albanian</a></li>
+          <li><a class="historic" href="#" onclick="getData('cprt'); return false;">Cypriot Syllabary</a></li>
+          <li><a class="active" href="#" onclick="getData('cyrl'); return false;">Cyrillic</a></li>
+          <li><a class="historic" href="#" onclick="getData('elba'); return false;">Elbasan</a></li>
+          <li><a class="active" href="#" onclick="getData('geor'); return false;">Georgian</a></li>
+          <li><a class="limited liturgical" href="#" onclick="getData('glag'); return false;">Glagolitic</a></li>
+          <li><a class="historic" href="#" onclick="getData('goth'); return false;">Gothic</a></li>
           <li><a class="active" href="#" onclick="getData('Grek'); return false;">Greek</a></li>
           <li><a class="active" href="#" onclick="getData('Latn'); return false;">Latin</a></li>
           <li><a class="historic" href="#" onclick="getData('Lina'); return false;">Linear A</a></li>
@@ -426,21 +435,24 @@ function getScriptCode (script) {
 </div>
 
 <div class="smallprint"> <span id="version">This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2018-06-09  13:34<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2018-06-12  18:50<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span> </div>
 
 
 <script>
-var options = document.getElementsByTagName('a');
-var script = '';
-var scriptparameter = '';
-var parameters = location.search.split('&');
-parameters[0] = parameters[0].substring(1);
+var options = document.getElementsByTagName('a')
+var script = ''
+var isoCode = ''
+var scriptparameter = ''
+var parameters = location.search.split('&')
+parameters[0] = parameters[0].substring(1)
 for (var p=0;p<parameters.length;p++) {  
-	var pairs = parameters[p].split('=');
-	if (pairs[0] == 'script') { script = pairs[1]; }
+	var pairs = parameters[p].split('=')
+	if (pairs[0] == 'script') { script = pairs[1] }
+	if (pairs[0] == 'iso') { isoCode = pairs[1] }
 	}
-if (script != '') { getData(getScriptCode(script)) }
+if (script !== '') { getData(getScriptCode(script)) }
+if (isoCode !== '') { getData(isoCode) }
 </script>
 </body>
 </html>
