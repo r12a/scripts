@@ -61,7 +61,7 @@ function getData (script) {
     
 	record = linkDB[script]
 	var lc = script.toLowerCase()
-	var norm = script.toLowerCase().replace(/ /g,'_')
+	var norm = linkDB[script].script.toLowerCase().replace(/ /g,'_')
 	
 	//console.log(record, record.info)
 	if ( record.name ) out = '<h2>'+record.name+'</h2>'
@@ -81,18 +81,18 @@ function getData (script) {
 	if ((record.local && record.local.length) > 0 | scriptNotesSet.has(lc) | charNotesSet.has(lc) | compChartSet.has(lc) | scriptSummarySet.has(lc)) {
 		var temp = ''
 		temp += '<tr><td>r12a.github.io:</td><td>'
-		if (scriptNotesSet.has(lc)) temp += '<p><a href="/scripts/'+lc+'" >Script summary</a></p>'
-		if (charNotesSet.has(lc)) temp += '<p><a href="/scripts/'+lc+'/block" >Character notes</a></p>'
+		if (scriptNotesSet.has(lc)) temp += '<p><a href="/scripts/'+norm+'" >Script summary</a></p>'
+		if (charNotesSet.has(lc)) temp += '<p><a href="/scripts/'+norm+'/block" >Character notes</a></p>'
 		if (compChartSet.has(lc)) temp += '<p><a href="/scripts/featurelist/" >Comparison chart</a></p>'
 		for (var r=0;r<record.local.length;r++) temp += '<p><a href="'+record.local[r].url+'" >'+record.local[r].name+'</a></p>'
-		if (scriptSummarySet.has(lc)) temp += '<p><a href="/scripts/tutorial/summaries/'+lc+'" >Tutorial notes</a></p>'
+		if (scriptSummarySet.has(lc)) temp += '<p><a href="/scripts/tutorial/summaries/'+norm+'" >Tutorial notes</a></p>'
 		temp += '</td></tr>'
 		if (temp !== '<tr><td>This site:</td><td></td></tr>') out += temp
 		}
 	if (record.unicode) {
 		out += '<tr><td>Unicode info:</td><td>'
-		out += '<p><a href="http://www.unicode.org/versions/latest/ch'+chapters[norm]+'.pdf" >Core text</a></p>'
-		out += '<p><a href="http://scriptsource.org/entry/'+ssHistory[norm]+'" >Historical</a></p>'
+		out += '<p><a href="http://www.unicode.org/versions/latest/ch'+chapters[lc]+'.pdf" >Core text</a></p>'
+		out += '<p><a href="http://scriptsource.org/entry/'+ssHistory[lc]+'" >Historical</a></p>'
 		out += '</td></tr>'
 		}
 	if (record.charts) {
@@ -111,11 +111,11 @@ function getData (script) {
 		var temp = ''
 		temp += '<tr><td>Fonts &amp; keyboards:</td><td>'
 		temp += '<p><a href="http://scriptsource.org/scr/'+record.code+'/font" >Scriptsource</a></p>'
-		if (googleFontSet.has(norm)) temp += '<p><a href="https://www.google.com/get/noto/" >Google Noto</a></p>'
-		if (googleEASet.has(norm)) temp += '<p><a href="http://www.google.com/fonts/earlyaccess" >Google Early Access</a></p>'
-		if (gouFonts[norm]) temp += '<p><a href="http://www.wazu.jp/gallery/Fonts_'+gouFonts[norm]+'.html" >Gallery of Unicode Fonts</a></p>'
+		if (googleFontSet.has(lc)) temp += '<p><a href="https://www.google.com/get/noto/" >Google Noto</a></p>'
+		if (googleEASet.has(lc)) temp += '<p><a href="http://www.google.com/fonts/earlyaccess" >Google Early Access</a></p>'
+		if (gouFonts[lc]) temp += '<p><a href="http://www.wazu.jp/gallery/Fonts_'+gouFonts[lc]+'.html" >Gallery of Unicode Fonts</a></p>'
 		for (var r=0;r<record.fontkey.length;r++) temp += '<p><a href="'+record.fontkey[r].url+'" >'+record.fontkey[r].name+'</a></p>'
-		if (OSDefaultFontsSet.has(norm)) temp += '<p><a href="/scripts/fontlist/#'+norm+'" >OS default fonts</a></p>'
+		if (OSDefaultFontsSet.has(lc)) temp += '<p><a href="/scripts/fontlist/#'+norm+'" >OS default fonts</a></p>'
 		temp += '</td></tr>'
 		if (temp !== '<tr><td>Fonts &amp; keyboards:</td><td></td></tr>') out += temp
 		}
@@ -435,7 +435,7 @@ function getScriptCode (script) {
 </div>
 
 <div class="smallprint"> <span id="version">This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2018-06-12  18:50<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2018-06-15  6:13<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span> </div>
 
 

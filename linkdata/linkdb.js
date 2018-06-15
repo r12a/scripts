@@ -2,7 +2,7 @@ var scriptNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl
 
 var charNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'grek', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr','laoo','mand', 'mlym', 'mong', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'taml', 'thaa', 'thai', 'tibt', 'tfng'])
 
-var compChartSet= new Set(['arabic','armenian', 'balinese', 'bengali', 'buginese', 'cherokee', 'cyrillic', 'devanagari', 'ethiopic', 'grek', 'gujarati', 'gurmukhi', 'han', 'hangul', 'hebrew', 'javanese', 'kana', 'kannada', 'khmer', 'lao', 'latin', 'malayalam', 'mandaic', 'mongolian', 'myanmar', 'nko', 'oriya', 'sinhala', 'sundanese', 'syriac', 'tamil', 'telugu', 'thaana', 'thai', 'tibetan', 'tifinagh', 'ucas'])
+var compChartSet= new Set(['arab','armn', 'bali', 'beng', 'bugi', 'cher', 'cyrl', 'deva', 'ethi', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'knda', 'khmr', 'laoo', 'latn', 'mlym', 'mand', 'mong', 'mymr', 'nkoo', 'orya', 'sinh', 'sund', 'syrc', 'taml', 'telu', 'thaa', 'thai', 'tibt', 'tfng', 'cans'])
 
 var examplePhraseSet = new Set(['arab','armn','cans','cher','cyrl','deva','ethi','grek','guru','hani','hebr','latn','khmr','hang','mong','mymr','telu','tfng','thai','tibt'])
 
@@ -64,7 +64,7 @@ arab:{ script:"Arabic",  code:"Arab",
 	layout:[	{ name:"Arabic Layout Requirements", url:"https://w3c.github.io/alreq/" },
 				{ name:"Arabic text justification", url:"http://www.tug.org/tugboat/tb27-2/tb87benatia.pdf" },
 				{ name:"Justify Just or Just Justify", url:"http://quod.lib.umich.edu/j/jep/3336451.0013.105?view=text;rgn=main" },
-				{ name:"Typography questions for HTML & CSS: Arabic", url:"http://rishida.net/blog/?p=1059" },
+				{ name:"Typography questions for HTML & CSS: Arabic", url:"https://r12a.github.io/blog/201110.html#20140523" },
 				{ name:"Rule-based expert system for Urdu nastaleeq justification", url:"http://www.cle.org.pk/Publication/papers/2004/rule-based-expert-system.pdf" }
 				]
 	},
@@ -1343,7 +1343,8 @@ tibt:{ script:"Tibetan", code:"Tibt", name:"",
 				],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-central-asian.html#tibetan" }
 				],
-	layout:[	{ name:"Tibetan emphasis (blog)", url:"http://rishida.net/blog/?p=101" },
+	layout:[	{ name:"Tibetan emphasis (blog)", 
+                url:"https://r12a.github.io/blog/200610.html#20070719" },
 				{ name:"Formatting rules for Tibetan text", url:"http://digitaltibetan.org/index.php/Formatting_rules_for_Tibetan_text" }
 				],
 	other:[		{ name:"Creating and Supporting OpenType Fonts for Tibetan Script", url:"https://www.microsoft.com/typography/OpenTypeDev/tibetan/intro.htm" }
@@ -1442,7 +1443,7 @@ mymr:{ script:"Myanmar", code:"Mymr", name:"Myanmar (Burmese)",
 				],
 	layout:[	
 				],
-	other:[		{ name:"Burmese divergence on the Web (blog)", url:"http://rishida.net/blog/?p=1129" }
+	other:[		{ name:"Burmese divergence on the Web (blog)", url:"https://r12a.github.io/blog/201408.html#20140822" }
 				]
 	},
   
@@ -1552,7 +1553,7 @@ thai:{ script:"Thai", code:"Thai", name:"",
 				],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-southeast-asian.html#thai" }
 				],
-	layout:[	{ name:"Thai line breaking in Firefox", url:"http://rishida.net/blog/?p=106" }
+	layout:[	{ name:"Thai line breaking in Firefox", url:"https://r12a.github.io/blog/200707.html#20070717" }
 				],
 	other:[		
 				]
@@ -1773,7 +1774,7 @@ hang:{ script:"Hangul", code:"Hang", name:"Hangul (Hangŭl, Hangeul)",
   
 jpan:{ script:"Kana", code:"Jpan", name:"Hiragana &amp; Katakana",
 	info:{ 		wikipedia:"Japanese_writing_system", omniglot:"japanese" }, 
-	local: [	{ name:"Jukugo ruby (blog)", url:"http://rishida.net/blog/?p=469" }
+	local: [	{ name:"Jukugo ruby (blog)", url:"https://r12a.github.io/blog/201002.html#20100924" }
 				],
 	unicode:{ 	}, 
 	charts:[	"Hiragana", "Katakana", "Katakana Phonetic Extensions", "Kana Supplement", "Kana Extended-A" ],
