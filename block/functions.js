@@ -252,7 +252,6 @@ for (let i=0;i<entries.length;i++) {
         document.getElementById('leftovers').value += 'sidecar["'+id+'"] = `'+allButTitlePara+'`\n'
         }
     }
-console.log(out)
 //document.getElementById('input').value = out
 //document.getElementById('leftovers').value = leftovers
 

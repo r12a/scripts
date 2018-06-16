@@ -256,7 +256,6 @@ function setFigureRefs () {
             //console.log(figures[i].textContent, i+1)
             }
         }
-    console.log(figrefs)
 
     var figrefitems = document.querySelectorAll('.figref')
     for (let i=0;i<figrefitems.length;i++) {
