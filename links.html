@@ -41,20 +41,6 @@ iframe {
 <script src="linkdata/linkdb.js"></script>
 <script>
 function getData (script) {
-    // take the data from linkdb.js and display it for a given script
-    // script: string, a 4-letter iso script code, all lowercase
-    
-	/*var found = false
-	var record = null
-	for (var i=0;i<linkDB.length;i++) {
-		if (linkDB[i].code.toLowerCase() === script.toLowerCase()) {
-			record = linkDB[i]
-			found = true
-			break
-			}
-		}
-	if (! found) return '<p>No data found.</p>'
-    */
 	
     script = script.toLowerCase()
     if (! linkDB[script]) return '<p>No data found.</p>'
@@ -78,7 +64,20 @@ function getData (script) {
 		for (var r=2;r<record.local.length;r++) temp += '<p><a href="'+record.info[r].url+'" >'+record.info[r].name+'</a></p>'
 		out += '</td></tr>'
 		}
-	if ((record.local && record.local.length) > 0 | scriptNotesSet.has(lc) | charNotesSet.has(lc) | compChartSet.has(lc) | scriptSummarySet.has(lc)) {
+	if ((record.local && record.local.length > 0) || scriptNotes[lc] || charNotesList[lc] || compChartSet.has(lc)) {
+		var temp = ''
+		temp += '<tr><td>r12a.github.io:</td><td>'
+		if (scriptNotes[lc]) {
+            for (let n=0;n<scriptNotes[lc].length;n++) temp += '<p><a href="/scripts/'+scriptNotes[lc][n][1]+'" >'+scriptNotes[lc][n][0]+'</a></p>'
+            }
+		if (charNotesList[lc]) temp += '<p><a href="/scripts/'+charNotesList[lc]+'" >Character notes</a></p>'
+		if (compChartSet.has(lc)) temp += '<p><a href="/scripts/featurelist/" >Comparison chart</a></p>'
+		for (var r=0;r<record.local.length;r++) temp += '<p><a href="'+record.local[r].url+'" >'+record.local[r].name+'</a></p>'
+		//if (scriptSummarySet.has(lc)) temp += '<p><a href="/scripts/tutorial/summaries/'+lc+'" >Tutorial notes</a></p>'
+		temp += '</td></tr>'
+		if (temp !== '<tr><th>This site:</th><td></td></tr>') out += temp
+		}
+/*	if ((record.local && record.local.length) > 0 | scriptNotesSet.has(lc) | charNotesSet.has(lc) | compChartSet.has(lc) | scriptSummarySet.has(lc)) {
 		var temp = ''
 		temp += '<tr><td>r12a.github.io:</td><td>'
 		if (scriptNotesSet.has(lc)) temp += '<p><a href="/scripts/'+norm+'" >Script summary</a></p>'
@@ -88,7 +87,7 @@ function getData (script) {
 		if (scriptSummarySet.has(lc)) temp += '<p><a href="/scripts/tutorial/summaries/'+norm+'" >Tutorial notes</a></p>'
 		temp += '</td></tr>'
 		if (temp !== '<tr><td>This site:</td><td></td></tr>') out += temp
-		}
+		}*/
 	if (record.unicode) {
 		out += '<tr><td>Unicode info:</td><td>'
 		out += '<p><a href="http://www.unicode.org/versions/latest/ch'+chapters[lc]+'.pdf" >Core text</a></p>'
@@ -435,7 +434,7 @@ function getScriptCode (script) {
 </div>
 
 <div class="smallprint"> <span id="version">This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2018-06-15  6:13<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2018-06-17  13:55<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span> </div>
 
 

@@ -1,6 +1,72 @@
-var scriptNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'grek', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr','laoo','mand','mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'taml', 'thaa', 'thai', 'tibt', 'tfng'])
+var scriptNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'grek', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr', 'laoo', 'mand', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'taml', 'thaa', 'thai', 'tibt', 'tfng'])
+
+var scriptNotes= {
+    'armn':[['Armenian script summary','armenian/']],
+    'arab':[['Arabic script summary','arabic/'], ['Urdu writing system', 'arabic/urdu'], ['Uighur writing system', 'arabic/uighur']], 
+    'bali':[['Balinese script summary', 'balinese/']], 
+    'beng':[['Bengali script summary', 'bengali/']],
+    'bugi':[['Buginese script summary', 'buginese/']],
+    'cher':[['Cherokee script summary', 'cherokee/']],
+    'cyrl':[['Cyrillic script summary', 'cyrillic/']],
+    'deva':[['Devanagari script summary', 'devanagari/']],
+    'ethi':[['Ethiopic script summary', 'ethiopic/']],
+    'grek':[['Greek script summary', 'greek/']],
+    'guru':[['Gurmukhi script summary', 'gurmukhi/']],
+    'hani':[['Han script summary', 'han/']],
+    'hang':[['Hangul script summary', 'hangul/']],
+    'hebr':[['Hebrew script summary', 'hebrew/']],
+    'java':[['Javanese script summary', 'javanese/']],
+    'jpan':[['Japanese writing system summary', 'kana/']],
+    'khmr':[['Khmer script summary script summary', 'khmer/']],
+    'laoo':[['Lao script summary', 'lao/']],
+    'mand':[['Mandaic script summary', 'mandaic/']],
+    'mymr':[['Myanmar script summary', 'myanmar']],
+    'nkoo':[["N'Ko script summary", 'nko']],
+    'sinh':[['Sinhala script summary', 'sinhala/']],
+    'sund':[['Sundanese script summary', 'sundanese/']],
+    'syrc':[['Syriac script summary', 'syriac/']],
+    'taml':[['Tamil script summary', 'tamil/']],
+    'thaa':[['Thaana script summary', 'thaana/']],
+    'thai':[['Thai script summary', 'thai/']],
+    'tibt':[['Tibetan script summary', 'tibetan/']],
+    'tfng':[['Tifinagh script summary', 'tifinagh/']]
+    }
 
 var charNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'grek', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr','laoo','mand', 'mlym', 'mong', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'taml', 'thaa', 'thai', 'tibt', 'tfng'])
+
+var charNotesList = {
+    'armn':'armenian/block',
+    'arab':'arabic/block', 
+    'bali':'balinese/block', 
+    'beng':'bengali/block',
+    'bugi':'buginese/block',
+    'cher':'cherokee/block',
+    'cyrl':'cyrillic/block',
+    'deva':'devanagari/block',
+    'ethi':'ethiopic/block',
+    'grek':'greek/block',
+    'guru':'gurmukhi/block',
+    'hebr':'hebrew/block',
+    'java':'javanese/block',
+    'khmr':'khmer/block',
+    'laoo':'lao/block',
+    'lisu':'lisu/block',
+    'latn':'latin/block',
+    'mlym':'malayalam/block',
+    'mand':'mandaic/block',
+    'mong':'mongolian/block',
+    'mymr':'myanmar/block',
+    'nkoo':'nko/block',
+    'sinh':'sinhala/block',
+    'sund':'sundanese/block',
+    'syrc':'syriac/block',
+    'taml':'tamil/block',
+    'thaa':'thaana/block',
+    'thai':'thai/block',
+    'tibt':'tibetan/block',
+    'tfng':'tifinagh/block'
+    }
+
 
 var compChartSet= new Set(['arab','armn', 'bali', 'beng', 'bugi', 'cher', 'cyrl', 'deva', 'ethi', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'knda', 'khmr', 'laoo', 'latn', 'mlym', 'mand', 'mong', 'mymr', 'nkoo', 'orya', 'sinh', 'sund', 'syrc', 'taml', 'telu', 'thaa', 'thai', 'tibt', 'tfng', 'cans'])
 
@@ -15,10 +81,10 @@ var googleEASet= new Set([])
 var gouFonts = { 'grek':'Greek', 'armn':'Armenian', 'hebr':'Hebrew', 'arab':'Arabic', 'syrc':'Syriac', 'thaa':'Thaana', 'nkoo':'NKo', 'deva':'Devanagari', 'beng':'Bengali', 'guru':'Gurmukhi', 'gujr':'Gujarati', 'orya':'Oriya', 'taml':'Tamil', 'telu':'Telugu', 'knda':'Kannada', 'mlym':'Malayalam', 'sinh':'Sinhala', 'thai':'Thai', 'laoo':'Lao', 'tibt':'Tibetan', 'mymr':'Myanmar', 'georgian':'Georgian', 'ethiopic':'Ethiopic', 'cherokee':'Cherokee', 'ucas':'Canadian', 'ogham':'Ogham', 'runic':'Runic', 'tagalog':'Tagalog', 'hanunoo':'Hanunoo', 'buhid':'Buhid', 'tagb':'Tagbanwa', 'khmr':'Khmer', 'mong':'Mongolian', 'limb':'Limbu', 'tale':'TaiLe', 'bugi':'Buginese', 'glag':'Glagolitic', 'copt':'Coptic', 'tfng':'Tifinagh', 'kana':'Japanese', 'yiii':'Yi', 'sylo':'SylotiNagri', 'phag':'Phagspa', 'hang':'Korean', 'linb':'LinearBSyllabary', 'xphais':'Phaistos', 'ital':'OldItalic', 'goth':'Gothic', 'ugar':'Ugaritic', 'dsrt':'Deseret', 'shaw':'Shavian', 'osma':'Osmanya','lina':'Linear_A', 'cprt':'Cypriot', 'phnx':'Phoenician', 'khar':'Kharoshthi', 'ahom':'Ahom'
 }
 
-var ssHistory = { 'grek':'wxsx5j4kzt', 'cyrl':'ngc339csy8', 'armn':'z35gwmg4ft', 'hebr':'qek84cbq5u', 'arab':'hqr6rc9md5', 'syrc':'hlvzdczufr', 'thaa':'n2tj49rr2n', 'nkoo':'mnqzubphu7', 'samr':'qv7wwr9xgp', 'mand':'djwvfmuu3h', 'deva':'b6c6j63sf5', 'beng':'f8jrlqwbac', 'guru':'fd27tquj5j', 'gujr':'yqug2kbjjr', 'orya':'znkmblg693', 'taml':'zw5nedjarb', 'telu':'sjrwm9ppr3', 'knda':'ur8y3qj6yk', 'mlym':'ypvmjurtyg', 'sinh':'sbwtu85wbv', 'thai':'d877ebfc65', 'laoo':'98522835fg', 'tibt':'mg8ulatcjb', 'mymr':'vcz6flwzqs', 'geor':'rbr2wkvu4m', 'ethi':'fvp74ug66k', 'cher':'nwnmgh2n8j', 'cans':'c36d846u2d', 'ogam':'d3z382ahas', 'runi':'ha667hekd4', 'tglg':'76d3376b7c', 'hano':'ga9dbe72a2', 'buhd':'h4446ag538', 'tagb':'d62f48hfad', 'khmr':'2269c7g9ee', 'mong':'xluqdp54ts', 'limb':'a2exgfkrmf', 'tale':'76c7d2ch4g', 'talu':'37fcf7h92b', 'bugi':'739e2e7g2e', 'lana':'gf97b8ad78', 'bali':'f2bb6f3bh9', 'sund':'3844bc8cea', 'batk':'geb5h358d3', 'lepc':'g6cv78jn42', 'olck':'rrkdvn7crf', 'glag':'lbhv6e4efr', 'copt':'msg4hep5ev', 'tfng':'wmx4utrkuc', 'kana':'ly5dbxtthx', 'bopo':'tk449c64jh', 'yiii':'ejx9jwrd8e', 'lisu':'473c93dddf', 'vaii':'z8tk356ua7', 'bamu':'aeg5ah9fbg', 'sylo':'kylcx42avd', 'phag':'y22gh9p8g2', 'saur':'eqjs45mf8t', 'kali':'enl5dse8jv', 'rjng':'72d3ce3834', 'java':'db9724gea9', 'cham':'c4yzafta3f', 'tavt':'mn8j2mcblt', 'mtei':'x29ycx7hp5', 'hang':'umfm3ftrny', 'linb':'by38na5akh', 'lyci':'hsu56mxkr7', 'cari':'kqrxbcekmr', 'ital':'uk7vpcchbc', 'goth':'hj7ztebb5e', 'perm':'cqdluhalzh', 'ugar':'ffz7nkcxpb', 'xpeo':'pbjd5pecq6', 'dsrt':'tdjlnarc8y', 'shaw':'gj5fewb8ed', 'osma':'hg53222b9b', 'osge':'gm4pjj3qw7', 'elba':'fum3p8xz6v', 'lina':'rmvt9u45sq', 'cprt':'nywfdbys7b', 'armi':'ys8lxa9y4j', 'palm':'z3u3jwap6r', 'nbat':'kcjefvy9uw', 'hatr':'jpekrxh2wn', 'phnx':'ltk6h5bent', 'lydi':'hsu56mxkr7', 'mero':'ssxtjnbc7s', 'khar':'n974scptwz', 'sarb':'clvjlzfzv9', 'sarn':'gw3vnam33r', 'mani':'nnf3pjr2v3', 'avst':'appyvwf4ku', 'prti':'b7daarfs3a', 'phli':'ssmdqax9mt', 'phlp':'wqytv3ldez', 'orhk':'hpmlm9pjev', 'hung':'fx7n7tnxzt', 'brah':'nskejp3py5', 'kthi':'xa9swfhv9f', 'sora':'r4c4bsfy7v', 'cakm':'pdqjuf5k39', 'mahj':'kuegm6qedh', 'shrd':'spnpfarl4t', 'khoj':'r9e56hvyut', 'mult':'fptnmnhe3c', 'sind':'fykru6vn8h', 'gran':'qzhwzbsvm7', 'newa':'y53lggbts6', 'tirh':'wysbq8bpm4', 'sidd':'fcmrsmpp9f', 'modi':'tx5uz2hvvz', 'takr':'wvh5zdz7jl', 'ahom':'ky6s63f7fx', 'wara':'llvwz8vpn8', 'zanb':'j7rr9jgtyl', 'soyo':'lns82rb9hp', 'pauc':'t2uqldgjlv', 'bhks':'mcr57c34fw', 'marc':'h6ln54mufu', 'gonm':'vqhk6w3pgq', 'xsux':'yqbyb2mdz7', 'egyp':'q7yl4zu8eh', 'hluw':'tasanpp3u9', 'mroo':'b6ebw4c6al', 'bass':'3d6596eh4g', 'hmng':'ha2hg6d5b7', 'miao':'cb32gtbj58', 'tang':'rkw5m9sm64', 'nshu':'v39xawqg64', 'dupl':'sbhfvtwqkl', 'mend':'2874g2ehc8', 'adlm':'llp3cqd7gg', 'hani':'tsps57x35g', 'mede':'evyd5v7ebg', 'sogd':'xjh6av9y5z', 'sogo':'u9szp2wg4g', 'dogr':'ujs77ahv7k', 'gong':'r3u3b4rjy9', 'rogh':'mj3a6n78t2', 'maka':'wj3ak6u5s2'
+var ssHistory = { 'grek':'wxsx5j4kzt', 'cyrl':'ngc339csy8', 'armn':'z35gwmg4ft', 'hebr':'qek84cbq5u', 'arab':'hqr6rc9md5', 'syrc':'hlvzdczufr', 'thaa':'n2tj49rr2n', 'nkoo':'mnqzubphu7', 'samr':'qv7wwr9xgp', 'mand':'djwvfmuu3h', 'deva':'b6c6j63sf5', 'beng':'f8jrlqwbac', 'guru':'fd27tquj5j', 'gujr':'yqug2kbjjr', 'orya':'znkmblg693', 'taml':'zw5nedjarb', 'telu':'sjrwm9ppr3', 'knda':'ur8y3qj6yk', 'mlym':'ypvmjurtyg', 'sinh':'sbwtu85wbv', 'thai':'d877ebfc65', 'laoo':'98522835fg', 'tibt':'mg8ulatcjb', 'mymr':'vcz6flwzqs', 'geor':'rbr2wkvu4m', 'ethi':'fvp74ug66k', 'cher':'nwnmgh2n8j', 'cans':'c36d846u2d', 'ogam':'d3z382ahas', 'runi':'ha667hekd4', 'tglg':'76d3376b7c', 'hano':'ga9dbe72a2', 'buhd':'h4446ag538', 'tagb':'d62f48hfad', 'khmr':'2269c7g9ee', 'mong':'xluqdp54ts', 'limb':'a2exgfkrmf', 'tale':'76c7d2ch4g', 'talu':'37fcf7h92b', 'bugi':'739e2e7g2e', 'lana':'gf97b8ad78', 'bali':'f2bb6f3bh9', 'sund':'3844bc8cea', 'batk':'geb5h358d3', 'lepc':'g6cv78jn42', 'olck':'rrkdvn7crf', 'glag':'lbhv6e4efr', 'copt':'msg4hep5ev', 'tfng':'wmx4utrkuc', 'kana':'ly5dbxtthx', 'bopo':'tk449c64jh', 'yiii':'ejx9jwrd8e', 'lisu':'473c93dddf', 'vaii':'z8tk356ua7', 'bamu':'aeg5ah9fbg', 'sylo':'kylcx42avd', 'phag':'y22gh9p8g2', 'saur':'eqjs45mf8t', 'kali':'enl5dse8jv', 'rjng':'72d3ce3834', 'java':'db9724gea9', 'cham':'c4yzafta3f', 'tavt':'mn8j2mcblt', 'mtei':'x29ycx7hp5', 'hang':'umfm3ftrny', 'linb':'by38na5akh', 'lyci':'hsu56mxkr7', 'cari':'kqrxbcekmr', 'ital':'uk7vpcchbc', 'goth':'hj7ztebb5e', 'perm':'cqdluhalzh', 'ugar':'ffz7nkcxpb', 'xpeo':'pbjd5pecq6', 'dsrt':'tdjlnarc8y', 'shaw':'gj5fewb8ed', 'osma':'hg53222b9b', 'osge':'gm4pjj3qw7', 'elba':'fum3p8xz6v', 'lina':'rmvt9u45sq', 'cprt':'nywfdbys7b', 'armi':'ys8lxa9y4j', 'palm':'z3u3jwap6r', 'nbat':'kcjefvy9uw', 'hatr':'jpekrxh2wn', 'phnx':'ltk6h5bent', 'lydi':'hsu56mxkr7', 'mero':'ssxtjnbc7s', 'khar':'n974scptwz', 'sarb':'clvjlzfzv9', 'sarn':'gw3vnam33r', 'mani':'nnf3pjr2v3', 'avst':'appyvwf4ku', 'prti':'b7daarfs3a', 'phli':'ssmdqax9mt', 'phlp':'wqytv3ldez', 'orhk':'hpmlm9pjev', 'hung':'fx7n7tnxzt', 'brah':'nskejp3py5', 'kthi':'xa9swfhv9f', 'sora':'r4c4bsfy7v', 'cakm':'pdqjuf5k39', 'mahj':'kuegm6qedh', 'shrd':'spnpfarl4t', 'khoj':'r9e56hvyut', 'mult':'fptnmnhe3c', 'sind':'fykru6vn8h', 'gran':'qzhwzbsvm7', 'newa':'y53lggbts6', 'tirh':'wysbq8bpm4', 'sidd':'fcmrsmpp9f', 'modi':'tx5uz2hvvz', 'takr':'wvh5zdz7jl', 'ahom':'ky6s63f7fx', 'wara':'llvwz8vpn8', 'zanb':'j7rr9jgtyl', 'soyo':'lns82rb9hp', 'pauc':'t2uqldgjlv', 'bhks':'mcr57c34fw', 'marc':'h6ln54mufu', 'gonm':'vqhk6w3pgq', 'xsux':'yqbyb2mdz7', 'egyp':'q7yl4zu8eh', 'hluw':'tasanpp3u9', 'mroo':'b6ebw4c6al', 'bass':'3d6596eh4g', 'hmng':'ha2hg6d5b7', 'miao':'cb32gtbj58', 'tang':'rkw5m9sm64', 'nshu':'v39xawqg64', 'dupl':'sbhfvtwqkl', 'mend':'2874g2ehc8', 'adlm':'llp3cqd7gg', 'hani':'tsps57x35g', 'mede':'evyd5v7ebg', 'sogd':'xjh6av9y5z', 'sogo':'u9szp2wg4g', 'dogr':'ujs77ahv7k', 'gong':'r3u3b4rjy9', 'rogh':'mj3a6n78t2', 'maka':'wj3ak6u5s2', 'jpan':'lrnzlkagyq'
 }
 
-var chapters = { 'latn':'07', 'grek':'07', 'copt':'07', 'cyrl':'07', 'glag':'07', 'armn':'07', 'geor':'07', 'lina':'08', 'linb':'08', 'cprt':'08', 'lyci':'08', 'cari':'08', 'lydi':'08', 'ital':'08', 'runi':'08','hung':'08', 'goth':'08', 'elba':'08', 'aghb':'08', 'perm':'08',  'ogam':'08', 'shaw':'08', 'hebr':'09', 'arab':'09', 'syrc':'09', 'samr':'09', 'mand':'09',  'sarb':'10', 'sarn':'10', 'phnx':'10', 'armi':'10', 'mani':'10', 'prti':'10', 'phli':'10', 'plhp':'10', 'avst':'10', 'nbat':'10', 'palm':'10', 'hatr':'10', 'xsux':'11', 'ugar':'11', 'xpeo':'11', 'egyp':'11', 'mero':'11', 'hluw':'11', 'deva':'12', 'beng':'12', 'guru':'12', 'gujr':'12', 'orya':'12', 'taml':'12', 'telu':'12', 'knda':'12', 'mlym':'12', 'thaa':'13', 'sinh':'13', 'newa':'13', 'tibt':'13', 'mong':'13', 'limb':'13', 'mtei':'13', 'mroo':'13', 'wara':'13', 'olck':'13', 'cakm':'13', 'lepc':'13', 'saur':'13', 'gond':'13', 'gong':'13', 'brah':'14', 'khar':'14', 'bhks':'14', 'phag':'14', 'marc':'14', 'zanb':'14', 'soyo':'14', 'orhk':'14', 'sogd':'14', 'sogo':'14', 'sylo':'15', 'kthi':'15', 'shrd':'15', 'takr':'15', 'sidd':'15', 'mahj':'15', 'khoj':'15', 'sind':'15',  'mult':'15', 'tirh':'15', 'modi':'15', 'gran':'15', 'ahom':'15', 'sora':'15', 'dogr':'15', 'thai':'16', 'laoo':'16', 'mymr':'16', 'khmr':'16', 'tale':'16', 'talu':'16', 'lana':'16', 'tavt':'16', 'kali':'16', 'cham':'16', 'hmng':'16', 'pauc':'16', 'rogh':'16', 'tglg':'17', 'hano':'17', 'buhd':'17', 'tagb':'17', 'bugi':'17', 'bali':'17', 'java':'17', 'rjng':'17', 'batk':'17', 'sund':'17', 'maka':'17', 'hani':'18', 'bopo':'18', 'kana':'18', 'hang':'18',  'yiii':'18', 'nshu':'18', 'lisu':'18', 'miao':'18', 'tang':'18',  'ethi':'19',  'osma':'19', 'tfng':'19', 'nkoo':'19', 'vaii':'19', 'bamu':'19',  'bass':'19', 'mend':'19', 'adlm':'19', 'mede':'19', 'cher':'20', 'cans':'20', 'osge':'20', 'dsrt':'20', 'dupl':'21', 'sutton_signwriting':'21', 'xphais':'22' 
+var chapters = { 'latn':'07', 'grek':'07', 'copt':'07', 'cyrl':'07', 'glag':'07', 'armn':'07', 'geor':'07', 'lina':'08', 'linb':'08', 'cprt':'08', 'lyci':'08', 'cari':'08', 'lydi':'08', 'ital':'08', 'runi':'08','hung':'08', 'goth':'08', 'elba':'08', 'aghb':'08', 'perm':'08',  'ogam':'08', 'shaw':'08', 'hebr':'09', 'arab':'09', 'syrc':'09', 'samr':'09', 'mand':'09',  'sarb':'10', 'sarn':'10', 'phnx':'10', 'armi':'10', 'mani':'10', 'prti':'10', 'phli':'10', 'plhp':'10', 'avst':'10', 'nbat':'10', 'palm':'10', 'hatr':'10', 'xsux':'11', 'ugar':'11', 'xpeo':'11', 'egyp':'11', 'mero':'11', 'hluw':'11', 'deva':'12', 'beng':'12', 'guru':'12', 'gujr':'12', 'orya':'12', 'taml':'12', 'telu':'12', 'knda':'12', 'mlym':'12', 'thaa':'13', 'sinh':'13', 'newa':'13', 'tibt':'13', 'mong':'13', 'limb':'13', 'mtei':'13', 'mroo':'13', 'wara':'13', 'olck':'13', 'cakm':'13', 'lepc':'13', 'saur':'13', 'gond':'13', 'gong':'13', 'brah':'14', 'khar':'14', 'bhks':'14', 'phag':'14', 'marc':'14', 'zanb':'14', 'soyo':'14', 'orhk':'14', 'sogd':'14', 'sogo':'14', 'sylo':'15', 'kthi':'15', 'shrd':'15', 'takr':'15', 'sidd':'15', 'mahj':'15', 'khoj':'15', 'sind':'15',  'mult':'15', 'tirh':'15', 'modi':'15', 'gran':'15', 'ahom':'15', 'sora':'15', 'dogr':'15', 'thai':'16', 'laoo':'16', 'mymr':'16', 'khmr':'16', 'tale':'16', 'talu':'16', 'lana':'16', 'tavt':'16', 'kali':'16', 'cham':'16', 'hmng':'16', 'pauc':'16', 'rogh':'16', 'tglg':'17', 'hano':'17', 'buhd':'17', 'tagb':'17', 'bugi':'17', 'bali':'17', 'java':'17', 'rjng':'17', 'batk':'17', 'sund':'17', 'maka':'17', 'hani':'18', 'bopo':'18', 'kana':'18', 'jpan':'18', 'hang':'18',  'yiii':'18', 'nshu':'18', 'lisu':'18', 'miao':'18', 'tang':'18',  'ethi':'19',  'osma':'19', 'tfng':'19', 'nkoo':'19', 'vaii':'19', 'bamu':'19',  'bass':'19', 'mend':'19', 'adlm':'19', 'mede':'19', 'cher':'20', 'cans':'20', 'osge':'20', 'dsrt':'20', 'dupl':'21', 'sutton_signwriting':'21', 'xphais':'22' 
 }
 
 var OSDefaultFontsSet = new Set(['arab','armn','beng','cans','cher','deva','ethi','geor','gujr','guru','hebr','kana','knda','khmr','hang','laoo','mlym','mong','mymr','talu','nkoo','orya','osma','phag','sinh','syrc','tale','taml','telu','thaa','thai','tibt','tfng','vaii','yiii'])
