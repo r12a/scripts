@@ -1,6 +1,16 @@
 /* jshint strict: false */
 /* globals cl, langs */
 
+
+function initialise (base) {
+    createtoc(3)
+    initialiseShowNames(base, '')
+    checkForCharParam()
+    addLangInfo()
+    listCharsWithNotes()
+    addUnicodeNotes()
+    }
+
 function checkForCharParam () {
 	// check for parameters; if char= found with value, set style to show only that character
 	var parameters = location.search.split('&')
@@ -16,6 +26,18 @@ function checkForCharParam () {
 	}
 
 
+
+function addUnicodeNotes () {
+    // adds description.js information 
+    
+    var notes = document.querySelectorAll('.unicodenotes')
+    for (let i=0;i<notes.length;i++) {
+        //console.log(notes[i].parentNode.id)
+        var dec = parseInt(notes[i].parentNode.id.replace('char',''), 16)
+        //console.log(dec)
+        if (desc[dec]) notes[i].innerHTML = desc[dec].replace(/¶/g,'<br/>')
+        }
+    }
 
 function hideStuff (codepoint) {
 	document.getElementById('includeStyles').textContent = '.character, h1, h2, h3, #charlistsection, .sidebar, header, #status, #intro, #fontsetting, .smallprint, .univiewLink, .subtitle, .unicodenotes, #references, #endlinks, .up { display: none; } #char'+codepoint+' { display: block; }' 
@@ -84,12 +106,14 @@ function OLDfindLangs (node) {
 function findLangs (node) {
     var hex = node.id.replace(/char/,'')
     var cp = parseInt(hex, 16)
-    var notesNode = node.querySelector('.notes')
+    //var notesNode = node.querySelector('.notes')
+    var notesNode = node
 
     if (notesNode && cl[cp]) {
         var languages = cl[cp][0]
         var auxlanguages = cl[cp][1]
         var p = document.createElement('p')
+        p.className = 'usedby'
         if (languages.length>0) p.appendChild(document.createTextNode('Used by: '))
         else if (auxlanguages.length>0) p.appendChild(document.createTextNode('Used infrequently by: '))
         for (let l=0;l<languages.length;l++) {
