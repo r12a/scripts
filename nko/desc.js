@@ -1,0 +1,17 @@
+var desc = []   // unicode v11
+
+desc[2026]="→ (nko letter ra - 07D9)"
+desc[2027]="→ (combining macron - 0304)"
+desc[2028]="→ (combining tilde - 0303)"
+desc[2029]="→ (combining dot above - 0307)"
+desc[2030]="→ (combining circumflex accent - 0302)"
+desc[2034]="→ (combining dot below - 0323)"
+desc[2035]="→ (combining diaeresis - 0308)"
+desc[2036]="→ (modifier letter apostrophe - 02BC)"
+desc[2037]="→ (modifier letter turned comma - 02BB)"
+desc[2038]="• indicates remote future placement of the topic under discussion"
+desc[2039]="• marks end of a major section of text¶• symbol represents the three stones holding a cooking pot over a fire"
+desc[2042]="→ (low line - 005F)¶→ (arabic tatweel - 0640)"
+desc[2045]="• used to abbreviate units of measure¶→ (combining bridge below - 032A)"
+desc[2046]="→ (nko letter da - 07D8)"
+desc[2047]="→ (nko letter ta - 07D5)"
