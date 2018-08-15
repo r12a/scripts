@@ -43,10 +43,10 @@ function resort (column) {
 		linked:" ", 
 		chars:"Number of characters", 
 		cchars:"Combining characters", 
-		cs:"Case sensitive?", 
 		gpos:"Context-based positioning", 
 		mcchars:"Multiple combining characters",
 		matras:"Vowel signs",
+		cs:"Case sensitive", 
 		gsub:"Contextual shaping", 
 		cursive:"Cursive script",
 		dir:"Text direction",
@@ -78,10 +78,10 @@ function resort (column) {
 			table += '<td title="Link to more details">'+linked+'</td>'
 			table += '<td title="'+tablecolumns.numchars+'">'+scriptData[i].chars+'</td>';
 			table += '<td title="'+tablecolumns.cchars+'"'; if (scriptData[i].cchars!==0){table += 'class="y"'; fc++;} table += '>'+scriptData[i].cchars+'</td>';
-			table += '<td title="'+tablecolumns.cs+'"'; if (scriptData[i].cs!=='no'){table += 'class="y"'; fc++; } table += '>'+scriptData[i].cs+'</td>';
 			table += '<td title="'+tablecolumns.gpos+'"'; if (scriptData[i].gpos!=='no'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].gpos+'</td>';
 			table += '<td title="'+tablecolumns.mcchars+'"'; if (scriptData[i].mcchars!=='no'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].mcchars+'</td>';
 			table += '<td title="'+tablecolumns.matras+'"'; if (scriptData[i].matras!=='no' && scriptData[i].matras!=='n/a'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].matras+'</td>';
+			table += '<td title="'+tablecolumns.cs+'"'; if (scriptData[i].cs!=='no'){table += 'class="y"'; fc++; } table += '>'+scriptData[i].cs+'</td>';
 			table += '<td title="'+tablecolumns.gsub+'"'; if (scriptData[i].gsub!=='no'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].gsub+'</td>';
 			table += '<td title="'+tablecolumns.cursive+'"'; if (scriptData[i].cursive!=='no'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].cursive+'</td>';
 			table += '<td title="'+tablecolumns.dir+'"'; if (scriptData[i].dir!=='ltr'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].dir+'</td>';
