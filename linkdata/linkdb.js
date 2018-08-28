@@ -1470,7 +1470,7 @@ kali:{ script:"Kayah Li", code:"Kali", name:"",
   
 khmr:{ script:"Khmer", code:"Khmr", name:"",
 	info:{ 		wikipedia:"Khmer_script", omniglot:"khmer" }, 
-	local: [	
+	local: [ { name:"Khmer spreadsheet", url:"https://docs.google.com/spreadsheets/d/1gh6d8_Slzcx1JoRNg07cNG9095csaO7V5zeogjxj7v4/edit#gid=0" }
 				],
 	unicode:{ 	}, 
 	charts:[	"Khmer", "Khmer Symbols" ],
@@ -1486,7 +1486,7 @@ khmr:{ script:"Khmer", code:"Khmr", name:"",
   
 laoo:{ script:"Lao", code:"Laoo", name:"",
 	info:{ 		wikipedia:"Lao_script", omniglot:"lao" }, 
-	local: [	
+	local: [ { name:"Lao spreadsheet", url:"https://docs.google.com/spreadsheets/d/1dKKaAVSsEFBE36-Zfm-kpF1nOe_AEMRQYd0ntfRHUAM/edit#gid=0" }
 				],
 	unicode:{ 	}, 
 	charts:[	"Lao" ],
@@ -1502,8 +1502,8 @@ laoo:{ script:"Lao", code:"Laoo", name:"",
   
 mymr:{ script:"Myanmar", code:"Mymr", name:"Myanmar (Burmese)",
 	info:{ 		wikipedia:"Burmese_alphabet", omniglot:"burmese" }, 
-	local: [	
-				],
+	local: [ { name:"Burmese spreadsheet", url:"https://docs.google.com/spreadsheets/d/1KsEznv6RtvNPJrVZChvoReeFbPUF06qwKxTXDQ-aJ0s/edit#gid=0" },
+		{ name:"Shan spreadsheet", url:"https://docs.google.com/spreadsheets/d/1IrqLDvl72CCj0QuRD1XCmypmwm0HAWmuK1Gl_ia7OpY/edit#gid=0" }],
 	unicode:{ 	}, 
 	charts:[	"Myanmar", "Myanmar Extended-A", "Myanmar Extended-B" ],
 	pickers:[	{ name:"Burmese", url:"myanmar" }
@@ -1518,7 +1518,7 @@ mymr:{ script:"Myanmar", code:"Mymr", name:"Myanmar (Burmese)",
   
 talu:{ script:"New Tai Lue", code:"Talu", name:"",
 	info:{ 		wikipedia:"New_Tai_Lue_alphabet", omniglot:"tailue" }, 
-	local: [	
+	local: [	{ name:"New Tai Lue spreadsheet", url:"https://docs.google.com/spreadsheets/d/1tAATcuoo9y1H-BbqiZ9VRT8KWzQmQP2JVKEECN0Wlz4/edit#gid=0" }
 				],
 	unicode:{ 	}, 
 	charts:[	"New Tai Lue" ],
@@ -1582,12 +1582,12 @@ tale:{ script:"Tai Le", code:"Tale", name:"",
   
 lana:{ script:"Tai Tham", code:"Lana", name:"Tai Tham (Lanna)",
 	info:{ 		wikipedia:"Tai_Tham_alphabet", omniglot:"lanna" }, 
-	local: [	
+	local: [	{ name:"Tai Tham spreadsheet", url:"https://docs.google.com/spreadsheets/d/1BukTNIC7TdPAjMEjEQRmSeTP_atjkA3x62f8nTdOfPE/edit#gid=0" }
 				],
 	unicode:{ 	}, 
 	charts:[	"Tai Tham" ],
-	pickers:[	{ name:"Tai Tham", url:"taitham" }
-				],
+	pickers:[	{ name:"Tai Tham", url:"taitham" },
+		{ name:"Tai Khün", url:"taikhuen" }		],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-southeast-asian.html#taitham" }
 				],
 	layout:[	
@@ -1598,7 +1598,7 @@ lana:{ script:"Tai Tham", code:"Lana", name:"Tai Tham (Lanna)",
   
 tavt:{ script:"Tai Viet", code:"Tavt", name:"",
 	info:{ 		wikipedia:"Tai Viet_script", omniglot:"taidam" }, 
-	local: [	
+	local: [	{ name:"Tai Viet spreadsheet", url:"https://docs.google.com/spreadsheets/d/1_n0S4ZE27lrZ9cAm_Egem80-dv-CGZhLhUrgyw3nUlU/edit#gid=0" }
 				],
 	unicode:{ 	}, 
 	charts:[	"Tai Viet" ],
@@ -1614,7 +1614,7 @@ tavt:{ script:"Tai Viet", code:"Tavt", name:"",
   
 thai:{ script:"Thai", code:"Thai", name:"",
 	info:{ 		wikipedia:"Thai_alphabet", omniglot:"thai" }, 
-	local: [	
+	local: [ { name:"Thai spreadsheet", url:"https://docs.google.com/spreadsheets/d/1vQDoMAo_gTq9c50P_YshbWVH0zeMIqWWTIEdRNWl-Ow/edit#gid=0" }
 				],
 	unicode:{ 	}, 
 	charts:[	"Thai" ],
@@ -1630,7 +1630,7 @@ thai:{ script:"Thai", code:"Thai", name:"",
   
 bali:{ script:"Balinese", code:"Bali", name:"",
 	info:{ 		wikipedia:"Balinese_script", omniglot:"balinese" }, 
-	local: [	
+	local: [ { name:"Balinese spreadsheet", url:"https://docs.google.com/spreadsheets/d/1vQDoMAo_gTq9c50P_YshbWVH0zeMIqWWTIEdRNWl-Ow/edit#gid=0" }
 				],
 	unicode:{ 	}, 
 	charts:[	"Balinese" ],
@@ -1662,7 +1662,7 @@ batk:{ script:"Batak", code:"Batk", name:"",
 
 bugi:{ script:"Buginese", code:"Bugi", name:"",
 	info:{ 		wikipedia:"Buginese_script", omniglot:"lontara" }, 
-	local: [	
+	local: [ { name:"Buginese spreadsheet", url:"https://docs.google.com/spreadsheets/d/1ePNmpZfL3PYtQFgk8IZR_jwF4G4nxIspvLr95oEAFqU/edit#gid=0" }
 				],
 	unicode:{ 	}, 
 	charts:[	"Buginese" ],
@@ -1710,7 +1710,7 @@ hano:{ script:"Hanunoo", code:"Hano", name:"Hanunoo (Hanunóo)",
   
 java:{ script:"Javanese", code:"Java", name:"",
 	info:{ 		wikipedia:"Javanese_alphabet", omniglot:"javanese" }, 
-	local: [	
+	local: [ { name:"Javanese spreadsheet", url:"https://docs.google.com/spreadsheets/d/1dkVkKt0Fxm3CDOyT90KLzfPsZ4XuchtL71iUyuG6uF0/edit#gid=0" }
 				],
 	unicode:{ 	}, 
 	charts:[	"Javanese" ],
@@ -1742,7 +1742,7 @@ rjng:{ script:"Rejang", code:"Rjng", name:"Rejang (Redjang, Kaganga)",
   
 sund:{ script:"Sundanese", code:"Sund", name:"",
 	info:{ 		wikipedia:"Sundanese_alphabet", omniglot:"http://www.omniglot.com/writing/sundanese.php" }, 
-	local: [	
+	local: [ { name:"Sundanese spreadsheet", url:"https://docs.google.com/spreadsheets/d/1XttEh64YT4c-Js72ljJ2tEuLjyh3Po-VQetVFUboObg/edit#gid=0" }
 				],
 	unicode:{ 	}, 
 	charts:[	"Sundanese", "Sundanese Supplement" ],
@@ -2163,7 +2163,7 @@ sogd:{ script:"Sogdian", code:"Sogd", name:"",
    
 'maka':{ script:"Makasar", code:"Maka", name:"",
 	info:{ 		wikipedia:"Makasar_(Unicode_block)", omniglot:"" }, 
-	local: [	
+	local: [ { name:"Makasar spreadsheet", url:"https://docs.google.com/spreadsheets/d/1MsapkSQaa7NWiAWMAhvX6xe8ZCMVhkbJ41NCi-D9aKA/edit#gid=0" }
 				],
 	unicode:{ 	}, 
 	charts:[	"Makasar" ],
