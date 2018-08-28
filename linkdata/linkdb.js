@@ -49,6 +49,7 @@ var charNotesList = {
     'hebr':'hebrew/block',
     'java':'javanese/block',
     'khmr':'khmer/block',
+    'lana':'taitham/block',
     'laoo':'lao/block',
     'lisu':'lisu/block',
     'latn':'latin/block',
@@ -60,7 +61,9 @@ var charNotesList = {
     'sinh':'sinhala/block',
     'sund':'sundanese/block',
     'syrc':'syriac/block',
+    'talu':'newtailue/block',
     'taml':'tamil/block',
+    'tavt':'taiviet/block',
     'thaa':'thaana/block',
     'thai':'thai/block',
     'tibt':'tibetan/block',
@@ -1519,7 +1522,7 @@ talu:{ script:"New Tai Lue", code:"Talu", name:"",
 				],
 	unicode:{ 	}, 
 	charts:[	"New Tai Lue" ],
-	pickers:[	
+	pickers:[	{ name:"New Tai Lue", url:"newtailue" }
 				],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-southeast-asian.html#newtailue" }
 				],
@@ -1583,7 +1586,7 @@ lana:{ script:"Tai Tham", code:"Lana", name:"Tai Tham (Lanna)",
 				],
 	unicode:{ 	}, 
 	charts:[	"Tai Tham" ],
-	pickers:[	
+	pickers:[	{ name:"Tai Tham", url:"taitham" }
 				],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-southeast-asian.html#taitham" }
 				],
@@ -1599,7 +1602,7 @@ tavt:{ script:"Tai Viet", code:"Tavt", name:"",
 				],
 	unicode:{ 	}, 
 	charts:[	"Tai Viet" ],
-	pickers:[	
+	pickers:[	{ name:"Tai Viet", url:"taiviet" }
 				],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-southeast-asian.html#taiviet" }
 				],
