@@ -1566,11 +1566,11 @@ pauc:{ script:"Pau Cin Hau", code:"Pauc", name:"",
   
 tale:{ script:"Tai Le", code:"Tale", name:"",
 	info:{ 		wikipedia:"Tai_Le_alphabet", omniglot:"tainua" }, 
-	local: [	
+	local: [	{ name:"Tai Le spreadsheet", url:"https://docs.google.com/spreadsheets/d/16Ziej_ZPHxTOaP2PJTL3cMHXXhTUIjDIc2au4z7N6lE/edit?usp=sharing" }
 				],
 	unicode:{ 	}, 
 	charts:[	"Tai Le" ],
-	pickers:[	
+	pickers:[	{ name:"Tai Le", url:"taile" }
 				],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-southeast-asian.html#taile" }
 				],
