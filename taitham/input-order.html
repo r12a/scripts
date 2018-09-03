@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+<meta charset="utf-8"/>
+<title>Bopomofo on the Web</title>
+<meta name="description" content="Notes about how to handle bopomofo (zhuyin fuhao) on the Web."/>
+
+<link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="local.css" />
+	
+<script src="../../shared/code/toc_section.js"></script>
+<script src="../../shared/code/boilerplate.js"></script>
+
+<style>
+.ipa { font-family: "Doulos SIL", sans-serif; }
+.pattern td { height: 1em; width: 1em; padding: 0; border: 0; vertical-align: middle; text-align: center; line-height: 1; color: red; }
+.th_meaning, .th_sample { width: 8em; }
+.th_symbol { width: 14em; }
+.th_observations { width: 20em; }
+strong { font-size: 1.5em; }
+</style>
+</head>
+
+<body>
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('/images/world.gif','docs');</script>
+</header>
+
+<h1>Tai Tham placement patterns</h1><aside class="sidebar">
+<h2 class="notoc flush"><a id="tochead" tabindex="4">Contents</a></h2>
+  <nav id="toc"><!-- placeholder --></nav>
+  <div class="noprint">
+        <h2 class="notoc"><a id="links" tabindex="5">Related links</a></h2>
+	<p><a href="/scripts/links?script=bopomofo">Bopomofo script links</a></p>
+        <p><a href="/uniview/?block=bopomofo">Bopomofo in UniView </a></p>
+        <p><a href="/uniview/?block=bopomofo_extended">Extended bopomofo in UniView </a></p>
+        <p><a href="http://dev.w3.org/csswg/css-ruby-1/">CSS Ruby Layout Module Level 1 </a></p>
+      </div>
+</aside>
+
+
+<p id="status">Updated Sun 21 Oct 2014  &bull; tags <a href="http://rishida.net/blog/index.php?tag=bopomofo" title="Show all blog posts tagged with 'bopomofo'">bopomofo</a>, <a href="http://rishida.net/blog/index.php?tag=chinese" title="Show all blog posts tagged with 'chinese'">chinese</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+
+<section>
+	<p>In this page I am exploring typing order when creating orthographic syllables in Tai Tham. It starts from work by Owen, and builds on it.</p>
+	<p>The aim is to see whether there is an optimal order for input of characters, and to explore some anomalies. I start by mapping out what seems to work with a couple of fonts.</p>
+</section>
+	
+<section id="intro">
+<h2><a href="#intro">Input patterns</a></h2>
+
+<table class="group">
+<thead><tr>
+<th>Id</th><th class="th_sample">Sample word</th><th class="th_symbol">Symbol placement</th><th class="th_meaning">Meaning</th></tr></thead>
+<tbody>
+<tr><td rowspan="3" class="id">1</td><td class="taitham" lang="kkh">ᩰᨠ</td><td rowspan="3" class="pattern"><table class="grid">
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td><strong>V</strong></td>
+<td>C</td>
+<td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td><td colspan="2"><img src="images/arrows/curve-right-long-down.png"/></td><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+</table>
+</td><td rowspan="3" class="meaning">one</td></tr>
+<tr><td class="trans">ok</td></tr>
+<tr><td class="ipa">eːk³</td></tr>
+</tbody>
+</table>
+
+
+<table class="group">
+<thead><tr>
+<th>Id</th><th class="th_sample">Sample word</th><th class="th_symbol">Symbol placement</th><th class="th_meaning">Meaning</th></tr></thead>
+<tbody>
+<tr>
+<td rowspan="3" class="id">2</td><td class="taitham" lang="kkh">ᨷᩕᩰ᩠ᨯ</td><td rowspan="3" class="pattern"><table class="grid">
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td colspan="3"><img src="images/arrows/curve-left-long-up-dbl.png"/></td><td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>V</td>
+<td>M</td><td><strong>C</strong></td><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td>
+<td><img src="images/arrows/curve-down-right.png"/></td>
+<td>+</td>
+<td>C</td><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td></tr>
+</table>
+</td>
+<td rowspan="3" class="meaning">help (royal)</td></tr>
+<tr>
+<td class="trans">br̆o˖d</td></tr>
+<tr><td class="ipa">broːt³</td></tr>
+
+</tbody>
+</table>
+<table class="group">
+<thead><tr>
+<th>Id</th><th class="th_sample">Sample word</th><th class="th_symbol">Symbol placement</th><th class="th_meaning">Meaning</th></tr></thead>
+<tbody>
+<tr>
+<td rowspan="3" class="id">3</td><td class="taitham" lang="kkh">ᨸᩮᩬᩨᩡ</td><td rowspan="3" class="pattern"><table class="grid">
+<tr><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td>
+<td>V</td>
+<td><img src="images/arrows/right.png"/></td><td><img src="images/arrows/curve-left-down.png"/></td></tr>
+<tr>
+<td>V</td>
+<td><img src="images/arrows/left.png"/></td>
+<td><strong>C</strong></td><td><img src="images/arrows/lean-up-left.png"/></td>
+<td>V</td></tr>
+<tr><td><img src="images/arrows/curve-down-right.png"/></td><td><img src="images/arrows/right.png"/></td>
+<td>V</td>
+<td><img src="images/arrows/curve-left-up.png"/></td>
+<td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+</table>
+</td>
+<td rowspan="3" class="meaning">mud</td></tr>
+<tr><td class="trans">peōɯ̄a</td></tr>
+<tr>
+<td class="ipa">pɤ²</td></tr>
+</tbody>
+</table>
+<table class="group">
+<thead><tr>
+<th>Id</th><th class="th_sample">Sample word</th><th class="th_symbol">Symbol placement</th><th class="th_meaning">Meaning</th></tr></thead>
+<tbody>
+<tr>
+<td rowspan="3" class="id">4</td>
+<td class="taitham" lang="kkh">ᨠᩣ᩠ᩁ</td><td rowspan="3" class="pattern"><table class="grid">
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td colspan="2"><img src="images/arrows/curve-right-long-up.png"/></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>C</strong></td>
+<td>V</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>C</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</td>
+<td rowspan="3" class="meaning">work</td></tr>
+<tr>
+<td class="trans">kā˖r</td></tr>
+<tr>
+<td class="ipa">kan¹</td></tr>
+</tbody>
+</table>
+</section>
+<section id="questions">
+<section id="forward">
+</section>
+</section>
+
+
+
+<table class="group">
+<thead><tr>
+<th>Id</th><th class="th_sample">Sample word</th><th class="th_symbol">Symbol placement</th><th class="th_meaning">Meaning</th></tr></thead>
+<tbody>
+<tr>
+<td rowspan="3" class="id">5</td>
+<td class="taitham" lang="kkh">ᨣᩥ᩠᩶ᩅ</td><td rowspan="3" class="pattern"><table class="grid">
+<tr><td>&nbsp;</td><td>&nbsp;</td>
+<td colspan="2"><img src="images/arrows/curve-right-long-up.png"/></td>
+<td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td rowspan="2"><img src="images/arrows/curve-up-long-left.png"/></td>
+<td>V</td>
+<td>T</td><td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td><strong>C</strong></td>
+<td>+</td>
+<td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td>
+<td>C</td>
+<td><img src="images/arrows/curve-down-left.png"/></td>
+<td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+</table>
+</td>
+<td rowspan="3" class="meaning">eyebrow</td></tr>
+<tr>
+<td class="trans">ḵi˖²w̱</td></tr>
+<tr>
+<td class="ipa">kiw⁶</td></tr>
+</tbody>
+</table>
+
+<table class="group">
+<thead><tr>
+<th>Id</th><th class="th_sample">Sample word</th><th class="th_symbol">Symbol placement</th><th class="th_meaning">Meaning</th></tr></thead>
+<tbody>
+<tr>
+<td rowspan="3" class="id">6</td>
+<td class="taitham" lang="kkh">ᨡᩮᩢ᩶ᩣ</td><td rowspan="3" class="pattern"><table class="grid">
+<tr>
+<td>&nbsp;</td><td><img src="images/arrows/curve-up-right.png"/></td>
+<td>T</td>
+<td><img src="images/arrows/curve-right-down.png"/></td>
+<td rowspan="2">&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td><img src="images/arrows/curve-up-right-up.png"/></td>
+<td>V</td>
+<td><img src="images/arrows/down.png"/></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>V</td>
+<td><strong>C</strong></td>
+<td>V</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td><img src="images/arrows/curve-right-up.png"/></td>
+<td><img src="images/arrows/curve-down-left.png"/></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</td>
+<td rowspan="3" class="meaning">eyebrow</td></tr>
+<tr>
+<td class="trans">kʰeá²ā</td></tr>
+<tr>
+<td class="ipa">kʰaw³</td></tr>
+</tbody>
+</table>
+<table class="group">
+<thead><tr>
+<th>Id</th><th class="th_sample">Sample word</th><th class="th_symbol">Symbol placement</th><th class="th_meaning">Meaning</th></tr></thead>
+<tbody>
+<tr>
+<td rowspan="3" class="id">7</td>
+<td class="taitham" lang="kkh">ᨣ᩠ᩅᩣ᩠ᨿ</td><td rowspan="3" class="pattern"><table class="grid">
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><strong>C</strong></td><td><img src="images/arrows/curve-up-right.png"/></td>
+<td>V</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>+</td>
+<td><img src="images/arrows/up.png"/></td>
+<td>+</td>
+<td>C</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>C</td>
+<td><img src="images/arrows/curve-left-up.png"/></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</td>
+<td rowspan="3" class="meaning">buffalo</td></tr>
+<tr>
+<td class="trans">ḵ˖w̱ā˖ȳ</td></tr>
+<tr>
+<td class="ipa">kʰwaːj²</td></tr>
+</tbody>
+</table>
+<table class="group">
+<thead><tr>
+<th>Id</th><th class="th_sample">Sample word</th><th class="th_symbol">Symbol placement</th><th class="th_meaning">Meaning</th></tr></thead>
+<tbody>
+<tr>
+<td rowspan="3" class="id">8</td>
+<td class="taitham" lang="kkh">ᨠ᩠ᩅ᩠ᨿᩁ</td><td rowspan="3" class="pattern"><table class="grid">
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>C</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>C</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>+</td>
+<td>&nbsp;</td>
+<td>C</td>
+<td><img src="images/arrows/curve-left-up.png"/></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>C</td>
+<td>+</td>
+<td><img src="images/arrows/curve-left-up.png"/></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</td>
+<td rowspan="3" class="meaning">ox-cart</td></tr>
+<tr>
+<td class="trans">k˖w̱˖ȳr</td></tr>
+<tr>
+<td class="ipa">kweːn¹</td></tr>
+</tbody>
+</table>
+<table class="group">
+<thead><tr>
+<th>Id</th><th class="th_sample">Sample word</th><th class="th_symbol">Symbol placement</th><th class="th_meaning">Meaning</th>
+<th class="th_observations">Observations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3" class="id">9</td>
+<td class="taitham" lang="kkh">ᨧ᩠ᨷᩪ</td><td rowspan="3" class="pattern"><table class="grid">
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>C</strong></td>
+<td>V</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>+</td>
+<td><img src="images/arrows/up.png"/></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>C</td>
+<td><img src="images/arrows/curve-left-up.png"/></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</td>
+<td rowspan="3" class="meaning">kiss</td>
+<td rowspan="3" class="observations">The intuitive order would be <span class="trans">cū˖b, but the final consonant is added before the vowel so that it sits in the stack.</span></td>
+</tr>
+<tr>
+<td class="trans">c˖bū</td></tr>
+<tr>
+<td class="ipa">cuːp³</td></tr>
+</tbody>
+</table>
+
+
+
+<table class="group">
+<thead><tr>
+<th>Id</th><th class="th_sample">Sample word</th><th class="th_symbol">Symbol placement</th><th class="th_meaning">Meaning</th>
+<th class="th_observations">Observations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3" class="id">?</td>
+<td class="taitham" lang="kkh">ᩃᩪᨠ</td><td rowspan="3" class="pattern"><table class="grid">
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><strong>C</strong></td>
+<td>C</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>V</td>
+<td><img src="images/arrows/curve-left-up.png"/></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</td>
+<td rowspan="3" class="meaning">offspring</td>
+<td rowspan="3" class="observations">The final consonant is not subjoined because of a subscript vowel.<span class="trans"></span></td>
+</tr>
+<tr>
+<td class="trans">ḻūk</td></tr>
+<tr>
+<td class="ipa">luːk⁴</td></tr>
+</tbody>
+</table>
+
+
+<table class="group">
+<thead><tr>
+<th>Id</th><th class="th_sample">Sample word</th><th class="th_symbol">Symbol placement</th><th class="th_meaning">Meaning</th>
+<th class="th_observations">Observations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3" class="id">10</td>
+<td class="taitham" lang="kkh">ᩉᩮᩖᩬᩨ</td><td rowspan="3" class="pattern"><table class="grid">
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>V</td><td><img src="images/arrows/left.png"/></td><td><img src="images/arrows/curve-up-left.png"/></td></tr>
+<tr>
+<td>V</td>
+<td><img src="images/arrows/left.png"/></td>
+<td><strong>C</strong></td>
+<td>&nbsp;</td>
+<td><img src="images/arrows/up.png"/></td>
+</tr>
+<tr>
+<td><img src="images/arrows/curve-down-right.png"/></td>
+<td>+</td>
+<td>C</td>
+<td><img src="images/arrows/right.png"/></td>
+<td>V</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</td>
+<td rowspan="3" class="meaning">to be left over</td>
+<td rowspan="3" class="observations">The prescript vowel has to be input before the consonant it follows in speech. Note the 'free floating' vowel-sign below.<span class="trans"></span></td>
+</tr>
+<tr>
+<td class="trans">hel̆ōɯ̄</td></tr>
+<tr>
+<td class="ipa">lɤː¹</td></tr>
+</tbody>
+</table>
+
+
+<table class="group">
+<thead><tr>
+<th>Id</th><th class="th_sample">Sample word</th><th class="th_symbol">Symbol placement</th><th class="th_meaning">Meaning</th>
+<th class="th_observations">Observations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3" class="id">11</td>
+<td class="taitham" lang="kkh">ᩉᩖᨯᩬ</td><td rowspan="3" class="pattern"><table class="grid">
+<tr>
+<td rowspan="2"><img src="images/arrows/curve-down-long-right.png"/></td>
+<td><strong>C</strong></td>
+<td>&nbsp;</td>
+<td>C</td>
+<td rowspan="2"><img src="images/arrows/curve-up-long-right.png"/></td>
+</tr>
+<tr>
+<td>M</td>
+<td><img src="images/arrows/right.png"/></td>
+<td>V</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td rowspan="2"><img src="images/arrows/curve-down-long-right.png"/></td>
+<td><strong>C</strong></td>
+<td><img src="images/arrows/curve-up-right.png"/></td>
+<td>C</td>
+<td rowspan="2"><img src="images/arrows/curve-down-long-left.png"/></td>
+</tr>
+<tr>
+<td>M</td>
+<td><img src="images/arrows/curve-left-up.png"/></td>
+<td>V</td>
+</tr>
+</table>
+</td>
+<td rowspan="3" class="meaning">tube</td>
+<td rowspan="3" class="observations">This can be input in two ways.<span class="trans"></span></td>
+</tr>
+<tr>
+<td class="trans">hl̆dō</td></tr>
+<tr>
+<td class="ipa">lɔːt³</td></tr>
+</tbody>
+</table>
+
+
+<table class="group">
+<thead><tr>
+<th>Id</th><th class="th_sample">Sample word</th><th class="th_symbol">Symbol placement</th><th class="th_meaning">Meaning</th>
+<th class="th_observations">Observations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="3" class="id">12</td>
+<td class="taitham" lang="kkh">ᨨ᩠ᩃᩣ᩠ᨯ</td><td rowspan="3" class="pattern"><table class="grid">
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><strong>C</strong></td>
+<td><img src="images/arrows/curve-up-right.png"/></td>
+<td>V</td>
+<td rowspan="2"><img src="images/arrows/curve-down-long-left.png"/></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>+</td>
+<td>C</td>
+<td>C</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table></td>
+<td rowspan="3" class="meaning">clever</td>
+<td rowspan="3" class="observations">&nbsp;</td>
+</tr>
+<tr>
+<td class="trans">cʰ˖ḻā˖d</td></tr>
+<tr>
+<td class="ipa">cʰa²laːt⁴</td></tr>
+</tbody>
+</table>
+
+</section>
+<div id="panel" style="display:none"></div>
+
+<div class="smallprint"><span id="version">First published  3 Dec 2010.  This version <span id="version-info"> 
+  <!-- #BeginDate format:IS1m -->2018-09-03  20:00<!-- #EndDate --> 
+  </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
+
+
+<script type="text/javascript">
+createtoc();
+initialiseShowNames('/scripts/block/bopomofo', 'c');
+highlightIndexChars()
+</script>
+
+</body>
+</html>
