@@ -3,6 +3,7 @@ var featureName = {
 	chars:"Number of characters", 
 	cchars:"Combining characters", 
 	mcchars:"Multiple combining characters", 
+	matras:"Vowel-signs", 
 	gpos:"Context-based positioning", 
 	cs:"Case distinction", 
 	cursive:"Cursive script", 
@@ -11,6 +12,7 @@ var featureName = {
 	baseline:"Baseline", 
 	wordsep:"Word separator", 
 	wrap:"Wraps at", 
+    hyphenation:"Hyphenation",
 	justify:"Justification", 
 	digits:"Native digits?", 
 	region:"Region" 
@@ -64,20 +66,22 @@ function makeSidePanel (script, otherlinks) {
 	out += '<tr><th>Script name</th><td><p>'+script+'</td></tr>'
 	for (var feature in featureName) {
 		out += '<tr><th>'+featureName[feature]+'</th><td>'
-        if (    (feature=='chars' && ptr[feature]=='0') ||
-                (feature=='cchars' && ptr[feature]=='0') ||
-                (feature=='mcchars' && ptr[feature]=='no') ||
-                (feature=='gpos' && ptr[feature]=='no') ||
-                (feature=='cs' && ptr[feature]=='no') ||
-                (feature=='cursive' && ptr[feature]=='no') ||
-                (feature=='gsub' && ptr[feature]=='no') ||
-                (feature=='dir' && ptr[feature]=='ltr') ||
-                (feature=='baseline' && ptr[feature]=='mid') ||
-                (feature=='digits' && ptr[feature]=='no') ||
-                (feature=='wordsep' && ptr[feature]=='space') ||
-                (feature=='justify' && ptr[feature]=='space') ||
-                (feature=='wrap' && ptr[feature]=='word') ||
-                (feature=='region')
+        if (    (feature==='chars' && ptr[feature]==='0') ||
+                (feature==='cchars' && ptr[feature]==='0') ||
+                (feature==='matras' && ptr[feature]==='no') ||
+                (feature==='mcchars' && ptr[feature]==='no') ||
+                (feature==='gpos' && ptr[feature]==='no') ||
+                (feature==='cs' && ptr[feature]==='no') ||
+                (feature==='cursive' && ptr[feature]==='no') ||
+                (feature==='gsub' && ptr[feature]==='no') ||
+                (feature==='dir' && ptr[feature]==='ltr') ||
+                (feature==='baseline' && ptr[feature]==='mid') ||
+                (feature==='digits' && ptr[feature]==='no') ||
+                (feature==='wordsep' && ptr[feature]==='space') ||
+                (feature==='justify' && ptr[feature]==='space') ||
+                (feature==='wrap' && ptr[feature]==='word') ||
+                (feature==='hyphenation' && ptr[feature]==='no') ||
+                (feature==='region')
                 ) { out += ptr[feature] }
         else out +='<span class="tableHighlight">'+ptr[feature]+'</span>'
         
