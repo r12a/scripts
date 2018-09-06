@@ -1,4 +1,4 @@
-var scriptNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'grek', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr', 'laoo', 'mand', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'taml', 'thaa', 'thai', 'tibt', 'tfng'])
+var scriptNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'grek', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr', 'laoo', 'lana', 'mand', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'taml', 'thaa', 'thai', 'tibt', 'tfng'])
 
 var scriptNotes= {
     'armn':[['Armenian script summary','armenian/']],
@@ -19,6 +19,7 @@ var scriptNotes= {
     'jpan':[['Japanese writing system summary', 'kana/']],
     'khmr':[['Khmer script summary script summary', 'khmer/']],
     'laoo':[['Lao script summary', 'lao/']],
+    'lana':[['Tai Tham script summary', 'taitham/']],
     'mand':[['Mandaic script summary', 'mandaic/']],
     'mymr':[['Myanmar script summary', 'myanmar']],
     'nkoo':[["N'Ko script summary", 'nko']],
@@ -32,7 +33,7 @@ var scriptNotes= {
     'tfng':[['Tifinagh script summary', 'tifinagh/']]
     }
 
-var charNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'grek', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr','laoo','mand', 'mlym', 'mong', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'taml', 'thaa', 'thai', 'tibt', 'tfng'])
+var charNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'grek', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr','laoo', 'lana', 'mand', 'mlym', 'mong', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'taml', 'thaa', 'thai', 'tibt', 'tfng'])
 
 var charNotesList = {
     'armn':'armenian/block',
@@ -1587,7 +1588,9 @@ lana:{ script:"Tai Tham", code:"Lana", name:"Tai Tham (Lanna)",
 	unicode:{ 	}, 
 	charts:[	"Tai Tham" ],
 	pickers:[	{ name:"Tai Tham", url:"taitham" },
-		{ name:"Tai Khün", url:"taikhuen" }		],
+		{ name:"Northern Thai", url:"northernthai" },
+		{ name:"Tai Khün", url:"taikhuen" }
+		],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-southeast-asian.html#taitham" }
 				],
 	layout:[	
