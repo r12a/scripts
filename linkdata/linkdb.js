@@ -542,7 +542,7 @@ vaii:{ script:"Vai", code:"Vaii",
 	local: [	],
 	unicode:{ 	}, 
 	charts:[	"Vai" ],
-	pickers:[	
+	pickers:[	{ name:"Vai", url:"vai" }
 				],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-african.html#vai" }
 				],
