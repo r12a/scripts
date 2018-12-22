@@ -20,9 +20,10 @@
 <label>Language: <input type="text" style="width:4em" id="lang" placeholder="bcp47"/></label>
 <label>Cc base: <input type="text" style="width:2em" id="ccbase" placeholder="-"/></label>
 <label>Bicameral? <input type="checkbox" id="bicameral"></label>
-Show these columns <select id="trans"><option value="0">0</option><option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
-<select id="ipa"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">5</option><option value="5">4</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
-<select id="meaning"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
+Show these columns: translit <select id="trans"><option value="0">0</option><option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select> 
+ipa <select id="ipa"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
+meaning <select id="meaning"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
+<label>characterBox? <input type="checkbox" id="characterBox"></label>
 <button onClick="bicameral=false;
 if (document.getElementById('bicameral').checked) bicameral = true;
 document.getElementById('out').value = makeListFromChars(document.getElementById('lang').value, document.getElementById('in').value, bicameral); document.getElementById('out').select()">Go</button></p>
@@ -35,7 +36,7 @@ document.getElementById('out').value = makeListFromChars(document.getElementById
 <br style="clear: both;"/>
 
 <div class="smallprint" style="margin-top: 3em; font-size: 70%; font-style: italic;"><span id="version">This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2018-02-11  7:54<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2018-12-19  18:02<!-- #EndDate --> 
 </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 <script type="text/javascript">
@@ -45,9 +46,16 @@ function makeListFromChars (lang, chars, bicameral) {
     var charList = chars.split('\n')
     var ccbase = ''
     if (document.getElementById('ccbase').value !== '') ccbase = document.getElementById('ccbase').value
-	var out = '<figure>\n<div class="listAll" onClick="listAll(this, '
+    var count = 0
+    for (let i=0;i<charList.length;i++) {
+        charList[i] = charList[i].trim()
+        if (charList[i] !== '') count++
+        }
+	var out = '<figure'
+    if (document.getElementById('characterBox').checked) out += ' class="characterBox"'
+    out += '>\n<div class="listAll" onClick="listAll(this, '
     out += "'"+lang+"'"
-    out += ')">list all</div>\n<div class="listArray">\n'
+    out += ')">list all '+count+'</div>\n<div class="listArray">\n'
 	
 	for (let x=0; x<charList.length; x++) {
         charList[x] = charList[x].trim()
@@ -60,7 +68,7 @@ function makeListFromChars (lang, chars, bicameral) {
         if (document.getElementById('meaning').value > 0) out += '<span class="listMeaning">'+items[document.getElementById('meaning').value]+'</span>'
         out += '</div>\n'
 		}
-	return out+'</div>\n</figure>'
+	return out+'</div>\n</figure>\n'
 	}
 
 </script>
