@@ -250,11 +250,9 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
  	*/
    	
     for (var x=0; x<charList.length; x++) {
-        //console.log('charlist.x',charList[x])
         if (charList[x].trim() == '') continue
         var items = charList[x].split('\t')
         if (items[0] === '') continue
-        console.log(items[0])
 
         // get the character as dec & hex
         if (items[0].length > 1) var dec = parseInt(items[0].replace('&#x','').replace(';',''),16) // change this to \u.... ?
@@ -262,8 +260,6 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
         var hex = dec.toString(16).toUpperCase()
         while (hex.length < 4) hex = '0'+hex
       
-        //console.log(charList[x])
-		//console.log('dec',dec,'hex',hex, items)
         if (! document.getElementById('char'+hex)) console.log('Character not found: ',items[0],hex)
 		
         else if (U[dec]) {
@@ -283,7 +279,7 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
             // find the location in the document
             var node = document.getElementById('char'+hex)
             var prevSibling = node.querySelector('.univiewLink')
-console.log('char'+hex)
+console.log(items[0],'char'+hex)
             
             // Unicode notes
 			if (unicodenotes) {
@@ -383,7 +379,7 @@ console.log('char'+hex)
             titlepara.appendChild(span)
 
             // do charStatus
-            if (items[cols.statusLoc]) {
+            if (cols.statusLoc>0 && items[cols.statusLoc]) {
                 var msg = '?'
                 switch (items[cols.statusLoc]) {
                     case 'sd': msg = 'strongly deprecated'; break
@@ -400,7 +396,7 @@ console.log('char'+hex)
                 }
             
             // do charType
-            if (items[cols.typeLoc]) {
+            if (cols.typeLoc>0 && items[cols.typeLoc]) {
                 span = document.createElement('span')
                 span.className = 'charType'
                 span.textContent = items[cols.typeLoc]+' '
@@ -408,7 +404,7 @@ console.log('char'+hex)
                 }
             
             // do charIPA
-            if (items[cols.ipaLoc]) {
+            if (cols.ipaLoc>0 && items[cols.ipaLoc]) {
                 span = document.createElement('span')
                 span.className = 'charIPA ipa'
                 span.textContent = items[cols.ipaLoc].replace(/ /g,', ')
@@ -416,7 +412,7 @@ console.log('char'+hex)
                 }
             
             // do localtrans
-            if (items[cols.transLoc]) {
+            if (cols.transLoc>0 && items[cols.transLoc]) {
                 span = document.createElement('span')
                 span.className = 'localtrans trans'
                 span.textContent = ' '+items[cols.transLoc]
@@ -424,11 +420,11 @@ console.log('char'+hex)
                }
  
             // add linebreak before any names
-            if (items[cols.nnameLoc] || items[cols.nameLoc]) titlepara.appendChild(document.createElement('br'))
+            if (cols.nnameLoc>0 && cols.nameLoc>0 && (items[cols.nnameLoc] || items[cols.nameLoc])) titlepara.appendChild(document.createElement('br'))
  
  
             // do localname
-            if (items[cols.nnameLoc]) {
+            if (cols.nnameLoc>0 && items[cols.nnameLoc]) {
                 span = document.createElement('span')
                 span.className = 'localname'
                 if (dir) span.dir = dir
@@ -438,7 +434,7 @@ console.log('char'+hex)
                 }
             
             // do transliteratedname
-            if (items[cols.nameLoc]) {
+            if (cols.nameLoc>0 && items[cols.nameLoc]) {
                 span = document.createElement('span')
                 span.className = 'transliteratedname trans'
                 span.textContent = ' '+items[cols.nameLoc]
@@ -451,7 +447,7 @@ console.log('char'+hex)
             prevSibling = titlepara
 
             // if has subjoined form
-            if (items[cols.subj]) {
+            if (cols.subj>0 && items[cols.subj]) {
                 p = document.createElement('p')
                 p.className = 'charShape'
                 msg = ''
@@ -463,13 +459,13 @@ console.log('char'+hex)
                 }
            
             // if has conjoined form
-            if (items[cols.conj]) {
+            if (cols.conj>0 && items[cols.conj]) {
                 p = document.createElement('p')
                 p.className = 'charShape'
                 p.innerHTML = 'Rather than a subjoined form, this letter has a special joining form: <span class="ex" lang="'+lang+'">'+items[cols.conj]+'</span>'
                 prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
                 }
-   console.log(items[cols.subj] === '')             
+
             // show shape without subjoined form
             if (showShape && items[cols.subj] === '') {
                 p = document.createElement('p')
@@ -479,13 +475,13 @@ console.log('char'+hex)
                 }
 
             // vowel correspondences
-            if (items[cols.ivowel]) {
+            if (cols.ivowel>0 && items[cols.ivowel]) {
                 p = document.createElement('p')
                 p.className = 'vowelPairing'
                 p.innerHTML = 'The corresponding independent vowel is '+makeCharacterLink(items[cols.ivowel], lang, dir)
                 prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
                 }
-            if (items[cols.dvowel]) {
+            if (cols.dvowel>0 && items[cols.dvowel]) {
                 p = document.createElement('p')
                 p.className = 'vowelPairing'
                 p.innerHTML = 'The corresponding dependent vowel is '+makeCharacterLink(items[cols.dvowel], lang, dir)
@@ -493,13 +489,13 @@ console.log('char'+hex)
                 }
            
              // tone correspondences
-            if (items[cols.htone]) {
+            if (cols.htone>0 && items[cols.htone]) {
                 p = document.createElement('p')
                 p.className = 'tonePairing'
                 p.innerHTML = 'High tone equivalent is '+makeCharacterLink(items[cols.htone], lang, dir)
                 prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
                 }
-            if (items[cols.ltone]) {
+            if (cols.ltone>0 && items[cols.ltone]) {
                 p = document.createElement('p')
                 p.className = 'tonePairing'
                 p.innerHTML = 'Low tone equivalent is '+makeCharacterLink(items[cols.ltone], lang, dir)
@@ -560,172 +556,3 @@ console.log('char'+hex)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function OLDreplaceStuff () {
-// generate lines for spreadsheet
-var entries = document.querySelectorAll('.character')
-var out = '' 
-document.getElementById('leftovers').value = 'var sidecar = {}\n'
-
-for (let i=0;i<entries.length;i++) {
-    out += entries[i].querySelector('.charimg').textContent
-    letter = entries[i].querySelector('.letter')
-    trans = letter.querySelector('.trans')
-    titlepara = letter.querySelector('.titlepara')
-    ipa = titlepara.querySelectorAll('.ipa')
-    console.log(ipa)
-    ipaStr = ''
-    for (j=0;j<ipa.length;j++) {
-        if (j>0) ipaStr += ', '
-        ipaStr += ipa[j].textContent
-        }
-    if (ipa.length>1) ipaStr += '…'
-    out += '\t'+trans.textContent+'\t'+ipaStr
-    out += '\n'
-    
-    id = entries[i].querySelector('.charimg').textContent
-    allButTitlePara = letter.innerHTML
-    titleParaStr = titlepara.innerHTML
-    allButTitlePara = allButTitlePara.replace('<p class="titlepara">'+titleParaStr+'</p>','')
-    console.log(allButTitlePara)
-    document.getElementById('leftovers').value += 'sidecar["'+id+'"] = `'+allButTitlePara+'`\n'
-    }
-console.log(out)
-document.getElementById('input').value = out
-//document.getElementById('leftovers').value = leftovers
-
-
-// redo contents
-var inputData = document.getElementById('input').value
-var inputLines = inputData.split('\n')
-for (let i=0;i<inputLines.length;i++) {
-    fields = inputLines[i].split('\t')
-    if (fields.length === 1) continue
-    
-    id = fields[0]
-    id = id.codePointAt(0).toString(16).toUpperCase()
-    while (id.length < 4) id = '0'+id
-    id = 'char'+id
-    console.log(id, fields)
-    }
-}
-
-
-
-
-
-
-function extractStuff () {
-// generate lines for spreadsheet
-var entries = document.querySelectorAll('.character')
-var out = '' 
-document.getElementById('leftovers').value = 'var sidecar = {}\n'
-
-for (let i=0;i<entries.length;i++) {
-    //out += entries[i].querySelector('.charimg').textContent
-    letter = entries[i].querySelector('.letter')
-    if (letter) titlepara = letter.querySelector('.titlepara')
-    
-    /*if (titlepara) nametrans = titlepara.querySelector('.trans')
-    else trans = ''
-    if (nametrans) nameipa = titlepara.querySelectorAll('.ipa')
-    else ipa = ''
-    console.log(ipa, nameipa)
-    
-    //ipaStr = ''
-    //for (j=0;j<ipa.length;j++) {
-    //    if (j>0) ipaStr += ', '
-    //    ipaStr += ipa[j].textContent
-    //    }
-    if (nametrans) out += '\t\t\t'+nametrans.textContent+'\t'+nameipa.textContent
-    out += '\n'
-    */
-    
-    if (letter) {
-        id = entries[i].querySelector('.charimg').textContent
-        allButTitlePara = letter.innerHTML
-        if (titlepara){
-            titleParaStr = titlepara.innerHTML
-            allButTitlePara = allButTitlePara.replace('<p class="titlepara">'+titleParaStr+'</p>','')
-            }
-        console.log(allButTitlePara)
-        document.getElementById('leftovers').value += 'sidecar["'+id+'"] = `'+allButTitlePara+'`\n'
-        }
-    }
-//document.getElementById('input').value = out
-//document.getElementById('leftovers').value = leftovers
-
-/*
-// redo contents
-var inputData = document.getElementById('input').value
-var inputLines = inputData.split('\n')
-for (let i=0;i<inputLines.length;i++) {
-    fields = inputLines[i].split('\t')
-    if (fields.length === 1) continue
-    
-    id = fields[0]
-    id = id.codePointAt(0).toString(16).toUpperCase()
-    while (id.length < 4) id = '0'+id
-    id = 'char'+id
-    console.log(id, fields)
-    }
-*/
-
-
-/*
-var inputData = document.getElementById('input').value
-var inputLines = inputData.split('\n')
-for (let i=0;i<inputLines.length;i++) {
-    fields = inputLines[i].split('\t')
-    if (fields.length === 1) continue
-    
-    id = fields[0]
-    id = id.codePointAt(0).toString(16).toUpperCase()
-    while (id.length < 4) id = '0'+id
-    id = 'char'+id
-    console.log(id, fields)
-    character = document.getElementById(id)
-
-    
-    innerCode = character.innerHTML
-    replacement = '<p>Syllable &nbsp;&nbsp; <span class="trans">'+fields[1]+'</span></p>'
-    newInnerCode = innerCode.replace(/<div class="notes">/,'<div class="notes">\n'+replacement)
-    character.innerHTML = newInnerCode
-    console.log(replacement)
-    
-    replacement = '<span class="title">Cherokee</span> &nbsp;&nbsp;  <span class="ipa">'+fields[2]+'</span>'
-    titlepara = character.querySelector('.titlepara')
-    titlepara.innerHTML = replacement
-    
-    }
-*/
-
-
-}
