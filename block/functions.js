@@ -183,9 +183,412 @@ function getFindStr (hex) {
 
 
 
+function makeCharacterLink (cp, lang, direction) { 
+	// returns markup with information about cp
+	// cp: a unicode character, or sequence of unicode characters
+	// lang: the BCP47 language tag for the context
+	// direction: either rtl or ltr or ''
+    var chars = [...cp]
+
+	var out = '<span class="codepoint" translate="no">'
+	var charstr = ''
+	for (let i=0;i<chars.length;i++) {
+        if (i>0) out += ' + '
+		charstr = chars[i]
+        var dec = chars[i].codePointAt(0)
+		var cbase = ''
+		var dir = ''
+		
+		if (U[dec]) {
+            var ufields = U[dec].split(';')
+            var hex = chars[i].codePointAt(0).toString(16).toUpperCase()
+			while (hex.length < 4) hex = '0'+hex 
+			
+			if (ufields[2][0] == 'M') cbase = '\u00A0'
+			if (direction === 'rtl') dir = ' dir="rtl"'
+			}
+		else console.log( 'Character not found in database.' )
+		out += '<span lang="'+lang+'"'+dir+'>'+cbase+'&#x'+hex+';</span> '
+        }
+	
+	for (let i=0;i<chars.length;i++) {
+        if (i===0) out += '['
+        if (i>0 && i<chars.length) out += ' + '
+        
+		charstr = chars[i]
+        hex = chars[i].codePointAt(0).toString(16).toUpperCase()
+        dec = chars[i].codePointAt(0)
+		while (hex.length < 4) hex = '0'+hex 
+        ufields = U[dec].split(';')
+
+       out +=  '<a href="#char'+hex+'">'
+		out +=  '<span class="uname">U+'+hex+' '+ufields[1]+'</span>'
+		out +=  '</a>'
+        if (i===chars.length-1) out += ']'
+		}
+    out += '</span> '
+	
+	return out.trim()
+	}
 
 
-function replaceStuff () {
+
+function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, showShape) {
+	var charList = chars.split('\n')
+    var div, p, span
+    /*
+    if (bicameral) {
+        temp = []
+        for (let i=0;i<charList.length;i++) {
+            if (charList[i] == '') continue
+            temp.push(charList[i][0].toUpperCase()+charList[i].substr(1))
+            temp.push(charList[i][0].toLowerCase()+charList[i].substr(1))
+            }
+        charList = temp
+        }
+    
+ 	*/
+   	
+    for (var x=0; x<charList.length; x++) {
+        //console.log('charlist.x',charList[x])
+        if (charList[x].trim() == '') continue
+        var items = charList[x].split('\t')
+        if (items[0] === '') continue
+        console.log(items[0])
+
+        // get the character as dec & hex
+        if (items[0].length > 1) var dec = parseInt(items[0].replace('&#x','').replace(';',''),16) // change this to \u.... ?
+		else dec = items[0].codePointAt(0)
+        var hex = dec.toString(16).toUpperCase()
+        while (hex.length < 4) hex = '0'+hex
+      
+        //console.log(charList[x])
+		//console.log('dec',dec,'hex',hex, items)
+        if (! document.getElementById('char'+hex)) console.log('Character not found: ',items[0],hex)
+		
+        else if (U[dec]) {
+            out = ''
+            // get data from descriptions.js
+			unicodenotes = ''
+			if (desc[dec]) {
+				var unicodenotes = desc[dec]
+				unicodenotes = unicodenotes.replace(/¶/,'')
+				unicodenotes = unicodenotes.replace(/¶/g,'<br/>')
+				}
+            
+            // access unicode db
+			var dbrecord = U[dec].split(';')
+			var cpName = dbrecord[dec]
+			
+            // find the location in the document
+            var node = document.getElementById('char'+hex)
+            var prevSibling = node.querySelector('.univiewLink')
+console.log('char'+hex)
+            
+            // Unicode notes
+			if (unicodenotes) {
+                var target = node.querySelector('.unicodenotes') // check whether notes exist already
+                if (target) {
+                    target.innerHTML = unicodenotes
+                    prevSibling = target
+                    }
+                else {
+                    p = document.createElement('p')
+                    p.className = 'subtitle'
+                    p.textContent = 'Description in the Unicode standard:'
+                    div = document.createElement('div')
+                    div.className = 'unicodenotes'
+                    div.textContent = unicodenotes
+                    prevSibling = node.insertBefore(p, prevSibling.nextSibling)
+                    prevSibling = node.insertBefore(div, prevSibling.nextSibling)
+                    }
+				}
+
+            // check for decomposable characters
+            if (items[0].normalize('NFD') != items[0]) {
+                var target = node.querySelector('.decomposition') // check whether decomposition exist already
+                if (target) target.innerHTML = 'Decomposes to '+makeCharacterLink(items[0].normalize('NFD'), lang, dir)
+                else {
+                    p = document.createElement('p')
+                    p.className = 'decomposition'
+                    p.innerHTML = 'Decomposes to '+makeCharacterLink(items[0].normalize('NFD'), lang, dir)
+                    prevSibling = node.insertBefore(p, prevSibling.nextSibling)
+                    }
+                }
+
+            // add pointer to other case, if bicameral
+            if (bicameral && items[0].toUpperCase() == items[0]) {
+                var target = node.querySelector('.lowercase') // check whether lowercase exist already
+                if (target) target.innerHTML = 'Lowercase is '+makeCharacterLink(items[0].toLowerCase(), lang, dir)
+                else {
+                    p = document.createElement('p')
+                    p.className = 'lowercase'
+                    p.innerHTML = 'Lowercase is '+makeCharacterLink(items[0].toLowerCase(), lang, dir)
+                    prevSibling = node.insertBefore(p, prevSibling.nextSibling)
+                    }
+                }
+            // add pointer to other case, if bicameral
+            if (bicameral && items[0].toLowerCase() == items[0]) {
+                var target = node.querySelector('.uppercase') // check whether uppercase exist already
+                if (target) target.innerHTML = 'Uppercase is '+makeCharacterLink(items[0].toUpperCase(), lang, dir)
+                else {
+                    p = document.createElement('p')
+                    p.className = 'uppercase'
+                    p.innerHTML = 'Uppercase is '+makeCharacterLink(items[0].toUpperCase(), lang, dir)
+                    prevSibling = node.insertBefore(p, prevSibling.nextSibling)
+                    }
+                }
+
+            
+            // ADD OTHER STUFF HERE
+            
+            
+            // check for .note subsection
+            var notes = node.querySelector('.notes')
+            if (! notes) { // if no div exists, create one
+                div = document.createElement('div')
+                div.className = 'notes'
+                notes = node.insertBefore(div, prevSibling.nextSibling)
+                }
+            
+            notesNode = node.querySelector('.notes')
+            
+            // check for .letter subsection
+            var letter = notesNode.querySelector('.'+langClass)
+            if (! letter) { // if no subsection exists, create one
+                div = document.createElement('div')
+                div.className = 'letter '+langClass
+                p = document.createElement('p')
+                p.className = 'titlepara'
+                span = document.createElement('span')
+                span.className = 'title'
+                span.textContent = language
+                
+                p.appendChild(span)
+                div.appendChild(p)
+                refsNode = notesNode.querySelector('.ref') // check whether there's a refs section
+                if (refsNode) letter = notesNode.insertBefore(div, refsNode)
+                else letter = notesNode.appendChild(div)
+                }
+            
+            
+            // FILL IN NOTES TITLE
+            var titlepara = letter.querySelector('.titlepara')
+            titlepara.innerHTML = ''
+           
+            // do title
+            span = document.createElement('span')
+            span.className = 'title'
+            span.textContent = language+' '
+            titlepara.appendChild(span)
+
+            // do charStatus
+            if (items[cols.statusLoc]) {
+                var msg = '?'
+                switch (items[cols.statusLoc]) {
+                    case 'sd': msg = 'strongly deprecated'; break
+                    case 'd': msg = 'deprecated'; break
+                    case 'o': msg = 'obsolete'; break
+                    case 'a': msg = 'archaic'; break
+                    case 'l': msg = 'liturgical'; break
+                    }
+                span = document.createElement('span')
+                span.className = 'charStatus'
+                if (msg === 'strongly deprecated') span.className += ' deprecated'
+                span.textContent = ' '+msg+' '
+                titlepara.appendChild(span)
+                }
+            
+            // do charType
+            if (items[cols.typeLoc]) {
+                span = document.createElement('span')
+                span.className = 'charType'
+                span.textContent = items[cols.typeLoc]+' '
+                titlepara.appendChild(span)
+                }
+            
+            // do charIPA
+            if (items[cols.ipaLoc]) {
+                span = document.createElement('span')
+                span.className = 'charIPA ipa'
+                span.textContent = items[cols.ipaLoc].replace(/ /g,', ')
+                titlepara.appendChild(span)
+                }
+            
+            // do localtrans
+            if (items[cols.transLoc]) {
+                span = document.createElement('span')
+                span.className = 'localtrans trans'
+                span.textContent = ' '+items[cols.transLoc]
+                titlepara.appendChild(span)
+               }
+ 
+            // add linebreak before any names
+            if (items[cols.nnameLoc] || items[cols.nameLoc]) titlepara.appendChild(document.createElement('br'))
+ 
+ 
+            // do localname
+            if (items[cols.nnameLoc]) {
+                span = document.createElement('span')
+                span.className = 'localname'
+                if (dir) span.dir = dir
+                span.lang = lang
+                span.textContent = ' '+items[cols.nnameLoc]
+                titlepara.appendChild(span)
+                }
+            
+            // do transliteratedname
+            if (items[cols.nameLoc]) {
+                span = document.createElement('span')
+                span.className = 'transliteratedname trans'
+                span.textContent = ' '+items[cols.nameLoc]
+                titlepara.appendChild(span)
+                }
+            
+    
+    
+            // SECOND LINE INFO
+            prevSibling = titlepara
+
+            // if has subjoined form
+            if (items[cols.subj]) {
+                p = document.createElement('p')
+                p.className = 'charShape'
+                msg = ''
+                if (showShape) msg = 'Basic shape is <span class="ex" lang="'+lang+'">'+items[0]+'</span> &nbsp; '
+                if (items[cols.subj] === '-') msg += 'No subjoined form.'
+                else msg += 'Subjoined form is <span class="ex" lang="'+lang+'">'+items[cols.subj]+'</span>'
+                p.innerHTML = msg
+                prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
+                }
+           
+            // if has conjoined form
+            if (items[cols.conj]) {
+                p = document.createElement('p')
+                p.className = 'charShape'
+                p.innerHTML = 'Rather than a subjoined form, this letter has a special joining form: <span class="ex" lang="'+lang+'">'+items[cols.conj]+'</span>'
+                prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
+                }
+   console.log(items[cols.subj] === '')             
+            // show shape without subjoined form
+            if (showShape && items[cols.subj] === '') {
+                p = document.createElement('p')
+                p.className = 'charShape'
+                p.innerHTML = 'Shape is <span class="ex" lang="'+lang+'">'+items[0]+'</span>'
+                prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
+                }
+
+            // vowel correspondences
+            if (items[cols.ivowel]) {
+                p = document.createElement('p')
+                p.className = 'vowelPairing'
+                p.innerHTML = 'The corresponding independent vowel is '+makeCharacterLink(items[cols.ivowel], lang, dir)
+                prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
+                }
+            if (items[cols.dvowel]) {
+                p = document.createElement('p')
+                p.className = 'vowelPairing'
+                p.innerHTML = 'The corresponding dependent vowel is '+makeCharacterLink(items[cols.dvowel], lang, dir)
+                prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
+                }
+           
+             // tone correspondences
+            if (items[cols.htone]) {
+                p = document.createElement('p')
+                p.className = 'tonePairing'
+                p.innerHTML = 'High tone equivalent is '+makeCharacterLink(items[cols.htone], lang, dir)
+                prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
+                }
+            if (items[cols.ltone]) {
+                p = document.createElement('p')
+                p.className = 'tonePairing'
+                p.innerHTML = 'Low tone equivalent is '+makeCharacterLink(items[cols.ltone], lang, dir)
+                prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
+                }
+            
+           
+
+    
+    
+    
+            // DO EXTRA STUFF AT END OF LETTER DIV
+            
+            // numeric values
+            if (items[cols.numLoc] && cols.numLoc !== 0) {
+                var target = node.querySelector('.numEquiv') // check whether numEquiv exist already
+                if (target) target.innerHTML = 'Number equivalent: '+items[cols.numLoc]
+                else { 
+                    p = document.createElement('p')
+                    p.className = 'numEquiv'
+                    p.innerHTML = 'Number equivalent: '+items[cols.numLoc]
+                    letter.appendChild(p)
+                    }
+                }
+            
+            // other transcriptions
+            if (cols.othertranscriptions && cols.othertranscriptions.length > 0) { 
+                for (let i=0;i<cols.othertranscriptions.length;i++) {
+                    para = ''
+                    if (items[cols.othertranscriptions[i][0]]) {
+                        para += cols.othertranscriptions[i][1]+': <span class="trans">'+items[cols.othertranscriptions[i][0]].replace(/ /g,', ')+'</span> '
+                        p = document.createElement('p')
+                        p.className = 'otherTranscriptions'
+                        p.innerHTML = para
+                        letter.appendChild(p)
+                        }
+                    }
+                }
+            
+           
+            
+ /*           
+ 
+            // if cursive, show the various forms
+            if (document.getElementById('cursive').value) {
+                cursiveBase = document.getElementById('cursive').value
+                out += '<p class="cursiveShapes">Cursive shapes (naskh): <span class="ex" lang="'+lang+'">'+items[0]+cursiveBase+items[0]+cursiveBase+items[0]+' '+items[0]+'</span></p>\n'
+                //out += '<p>Cursive shapes (nastaliq): <span class="ex" lang="ur">'+items[0]+cursiveBase+items[0]+cursiveBase+items[0]+' '+items[0]+'</span></p>\n'
+                //out += '\n<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">'+items[0]+cursiveBase+items[0]+cursiveBase+items[0]+' '+items[0]+'</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">'+items[0]+cursiveBase+items[0]+cursiveBase+items[0]+' '+items[0]+'</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">'+items[0]+cursiveBase+items[0]+cursiveBase+items[0]+' '+items[0]+'</span></span></p>'
+                 }
+           
+*/
+			}
+        }
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function OLDreplaceStuff () {
 // generate lines for spreadsheet
 var entries = document.querySelectorAll('.character')
 var out = '' 
