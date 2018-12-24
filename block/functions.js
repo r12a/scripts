@@ -148,6 +148,38 @@ function listCharsWithNotes () {
 	var charlist = document.querySelectorAll("div > div.notes")
 	var sortedcharlist = []
 	for (let i=0; i<charlist.length; i++) {
+		if (charlist[i].querySelector('.letter') !== null) sortedcharlist.push(parseInt(charlist[i].parentNode.id.substr(4), 16))
+		}
+	sortedcharlist.sort()
+    sortedcharlist.push('')
+	charliststr = 'Characters with notes: '
+	var start = sortedcharlist[0]
+	var end = '';
+	for (let i=0; i<sortedcharlist.length; i++) {
+		end = sortedcharlist[i]
+		if (sortedcharlist[i+1] != end+1) {
+			if (start == end) { 
+				charliststr += start+' ' 
+				start = sortedcharlist[i+1]
+				}
+			else {
+				charliststr += start+':'+end+' '
+				start = sortedcharlist[i+1]
+				}
+			}
+        console.log(start)
+		}
+	document.getElementById('charliststr').textContent = charliststr	
+	}
+
+
+function OLDlistCharsWithNotes () {
+	// makes a list of which characters have notes attached, list is space-separated, and mostly decimal number pairs
+	// however a single character that is not part of a series is represented by just that decimal codepoint
+	var charliststr = ''
+	var charlist = document.querySelectorAll("div > div.notes")
+	var sortedcharlist = []
+	for (let i=0; i<charlist.length; i++) {
 		sortedcharlist[i] = ' '+parseInt(charlist[i].parentNode.id.substr(4), 16)
 		}
 	sortedcharlist.sort()
@@ -300,45 +332,10 @@ console.log(items[0],'char'+hex)
                     }
 				}
 
-            // check for decomposable characters
-            if (items[0].normalize('NFD') != items[0]) {
-                var target = node.querySelector('.decomposition') // check whether decomposition exist already
-                if (target) target.innerHTML = 'Decomposes to '+makeCharacterLink(items[0].normalize('NFD'), lang, dir)
-                else {
-                    p = document.createElement('p')
-                    p.className = 'decomposition'
-                    p.innerHTML = 'Decomposes to '+makeCharacterLink(items[0].normalize('NFD'), lang, dir)
-                    prevSibling = node.insertBefore(p, prevSibling.nextSibling)
-                    }
-                }
 
-            // add pointer to other case, if bicameral
-            if (bicameral && items[0].toUpperCase() == items[0]) {
-                var target = node.querySelector('.lowercase') // check whether lowercase exist already
-                if (target) target.innerHTML = 'Lowercase is '+makeCharacterLink(items[0].toLowerCase(), lang, dir)
-                else {
-                    p = document.createElement('p')
-                    p.className = 'lowercase'
-                    p.innerHTML = 'Lowercase is '+makeCharacterLink(items[0].toLowerCase(), lang, dir)
-                    prevSibling = node.insertBefore(p, prevSibling.nextSibling)
-                    }
-                }
-            // add pointer to other case, if bicameral
-            if (bicameral && items[0].toLowerCase() == items[0]) {
-                var target = node.querySelector('.uppercase') // check whether uppercase exist already
-                if (target) target.innerHTML = 'Uppercase is '+makeCharacterLink(items[0].toUpperCase(), lang, dir)
-                else {
-                    p = document.createElement('p')
-                    p.className = 'uppercase'
-                    p.innerHTML = 'Uppercase is '+makeCharacterLink(items[0].toUpperCase(), lang, dir)
-                    prevSibling = node.insertBefore(p, prevSibling.nextSibling)
-                    }
-                }
 
-            
-            // ADD OTHER STUFF HERE
-            
-            
+            // ADD TO NOTES SECTION
+
             // check for .note subsection
             var notes = node.querySelector('.notes')
             if (! notes) { // if no div exists, create one
@@ -348,6 +345,51 @@ console.log(items[0],'char'+hex)
                 }
             
             notesNode = node.querySelector('.notes')
+            
+           // check for decomposable characters
+            if (items[0].normalize('NFD') != items[0]) {
+                var target = notesNode.querySelector('.decomposition') // check whether decomposition exist already
+                if (target) target.innerHTML = 'Decomposes to '+makeCharacterLink(items[0].normalize('NFD'), lang, dir)
+                else {
+                    p = document.createElement('p')
+                    p.className = 'decomposition'
+                    p.innerHTML = 'Decomposes to '+makeCharacterLink(items[0].normalize('NFD'), lang, dir)
+                    //prevSibling = notesNode.insertBefore(p, prevSibling.nextSibling)
+                    prevSibling = notesNode.insertBefore(p, notesNode.firstChild)
+                    }
+                }
+
+
+// move the bicameral stuff into the letter div and add info to the spreadsheet, since case conversion is language-specific
+
+            // add pointer to other case, if bicameral
+            if (bicameral && items[0].toUpperCase() == items[0]) {
+                var target = notesNode.querySelector('.lowercase') // check whether lowercase exist already
+                if (target) target.innerHTML = 'Lowercase is '+makeCharacterLink(items[0].toLowerCase(), lang, dir)
+                else {
+                    p = document.createElement('p')
+                    p.className = 'lowercase'
+                    p.innerHTML = 'Lowercase is '+makeCharacterLink(items[0].toLowerCase(), lang, dir)
+                    //prevSibling = notesNode.insertBefore(p, prevSibling.nextSibling)
+                    prevSibling = notesNode.insertBefore(p, notesNode.firstChild)
+                    }
+                }
+            // add pointer to other case, if bicameral
+            if (bicameral && items[0].toLowerCase() == items[0]) {
+                var target = notesNode.querySelector('.uppercase') // check whether uppercase exist already
+                if (target) target.innerHTML = 'Uppercase is '+makeCharacterLink(items[0].toUpperCase(), lang, dir)
+                else {
+                    p = document.createElement('p')
+                    p.className = 'uppercase'
+                    p.innerHTML = 'Uppercase is '+makeCharacterLink(items[0].toUpperCase(), lang, dir)
+                    //prevSibling = notesNode.insertBefore(p, prevSibling.nextSibling)
+                    prevSibling = notesNode.insertBefore(p, notesNode.firstChild)
+                    }
+                }
+
+            
+            // ADD OTHER STUFF HERE
+            
             
             // check for .letter subsection
             var letter = notesNode.querySelector('.'+langClass)
@@ -368,11 +410,21 @@ console.log(items[0],'char'+hex)
                 }
             
             
-            // FILL IN NOTES TITLE
+
+            // FILL IN LETTER TITLE
             var titlepara = letter.querySelector('.titlepara')
             titlepara.innerHTML = ''
            
-            // do title
+            // show shape from shape column (use for cursive text)
+            if (cols.shape>0 && items[cols.shape]) {
+                p = document.createElement('p')
+                p.className = 'charShape'
+                p.innerHTML = '<span class="ex" lang="'+lang+'">'+items[cols.shape]+'</span>'
+                prevSibling = letter.insertBefore(p, titlepara)
+                }
+
+
+           // do title
             span = document.createElement('span')
             span.className = 'title'
             span.textContent = language+' '
@@ -420,7 +472,7 @@ console.log(items[0],'char'+hex)
                }
  
             // add linebreak before any names
-            if (cols.nnameLoc>0 && cols.nameLoc>0 && (items[cols.nnameLoc] || items[cols.nameLoc])) titlepara.appendChild(document.createElement('br'))
+            if ((cols.nnameLoc>0 || cols.nameLoc>0) && (items[cols.nnameLoc] || items[cols.nameLoc])) titlepara.appendChild(document.createElement('br'))
  
  
             // do localname
@@ -441,7 +493,16 @@ console.log(items[0],'char'+hex)
                 titlepara.appendChild(span)
                 }
             
-    
+            // do meaning
+            if (cols.meaning>0 && items[cols.meaning]) {
+                span = document.createElement('span')
+                span.className = 'charMeaning meaning'
+                span.textContent = items[cols.meaning]
+                titlepara.appendChild(document.createTextNode(' '))
+                titlepara.appendChild(span)
+                }
+            
+   
     
             // SECOND LINE INFO
             prevSibling = titlepara
@@ -473,7 +534,15 @@ console.log(items[0],'char'+hex)
                 p.innerHTML = 'Shape is <span class="ex" lang="'+lang+'">'+items[0]+'</span>'
                 prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
                 }
-
+/*
+            // show shape from shape column (use for cursive text)
+            if (cols.shape>0 && items[cols.shape]) {
+                p = document.createElement('p')
+                p.className = 'charShape'
+                p.innerHTML = 'Shape is <span class="ex" lang="'+lang+'">'+items[cols.shape]+'</span>'
+                prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
+                }
+*/
             // vowel correspondences
             if (cols.ivowel>0 && items[cols.ivowel]) {
                 p = document.createElement('p')
@@ -502,7 +571,6 @@ console.log(items[0],'char'+hex)
                 prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
                 }
             
-           
 
     
     
@@ -523,6 +591,21 @@ console.log(items[0],'char'+hex)
             
             // other transcriptions
             if (cols.othertranscriptions && cols.othertranscriptions.length > 0) { 
+                para = ''
+                for (let i=0;i<cols.othertranscriptions.length;i++) {
+                    if (items[cols.othertranscriptions[i][0]]) {
+                        para += cols.othertranscriptions[i][1]+': <span class="trans">'+items[cols.othertranscriptions[i][0]].replace(/ /g,', ')+'</span>'
+                        if (i<cols.othertranscriptions.length-1) para += ', &nbsp; '
+                        }
+                    }
+                p = document.createElement('p')
+                p.className = 'otherTranscriptions'
+                p.innerHTML = para
+                letter.appendChild(p)
+                }
+            
+            // other transcriptions OLD VERSION - ONE PER LINE
+            /*if (cols.othertranscriptions && cols.othertranscriptions.length > 0) { 
                 for (let i=0;i<cols.othertranscriptions.length;i++) {
                     para = ''
                     if (items[cols.othertranscriptions[i][0]]) {
@@ -534,20 +617,9 @@ console.log(items[0],'char'+hex)
                         }
                     }
                 }
-            
+            */
            
             
- /*           
- 
-            // if cursive, show the various forms
-            if (document.getElementById('cursive').value) {
-                cursiveBase = document.getElementById('cursive').value
-                out += '<p class="cursiveShapes">Cursive shapes (naskh): <span class="ex" lang="'+lang+'">'+items[0]+cursiveBase+items[0]+cursiveBase+items[0]+' '+items[0]+'</span></p>\n'
-                //out += '<p>Cursive shapes (nastaliq): <span class="ex" lang="ur">'+items[0]+cursiveBase+items[0]+cursiveBase+items[0]+' '+items[0]+'</span></p>\n'
-                //out += '\n<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">'+items[0]+cursiveBase+items[0]+cursiveBase+items[0]+' '+items[0]+'</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">'+items[0]+cursiveBase+items[0]+cursiveBase+items[0]+' '+items[0]+'</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">'+items[0]+cursiveBase+items[0]+cursiveBase+items[0]+' '+items[0]+'</span></span></p>'
-                 }
-           
-*/
 			}
         }
 	}
