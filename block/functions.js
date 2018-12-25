@@ -361,7 +361,7 @@ console.log(items[0],'char'+hex)
 
 
 // move the bicameral stuff into the letter div and add info to the spreadsheet, since case conversion is language-specific
-
+/*
             // add pointer to other case, if bicameral
             if (bicameral && items[0].toUpperCase() == items[0]) {
                 var target = notesNode.querySelector('.lowercase') // check whether lowercase exist already
@@ -386,7 +386,7 @@ console.log(items[0],'char'+hex)
                     prevSibling = notesNode.insertBefore(p, notesNode.firstChild)
                     }
                 }
-
+*/
             
             // ADD OTHER STUFF HERE
             
@@ -543,6 +543,7 @@ console.log(items[0],'char'+hex)
                 prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
                 }
 */
+
             // vowel correspondences
             if (cols.ivowel>0 && items[cols.ivowel]) {
                 p = document.createElement('p')
@@ -576,17 +577,23 @@ console.log(items[0],'char'+hex)
     
     
             // DO EXTRA STUFF AT END OF LETTER DIV
-            
-            // numeric values
-            if (items[cols.numLoc] && cols.numLoc !== 0) {
-                var target = node.querySelector('.numEquiv') // check whether numEquiv exist already
-                if (target) target.innerHTML = 'Number equivalent: '+items[cols.numLoc]
-                else { 
-                    p = document.createElement('p')
-                    p.className = 'numEquiv'
-                    p.innerHTML = 'Number equivalent: '+items[cols.numLoc]
-                    letter.appendChild(p)
-                    }
+
+            // show uppercase
+            if (items[cols.uc] && items[cols.uc] !== '') {
+                p = document.createElement('p')
+                p.className = 'charUppercase'
+                p.innerHTML = 'Uppercase is '+makeCharacterLink(items[cols.uc], lang, dir)
+                //prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
+                letter.appendChild(p)
+                }
+
+            // show lowercase
+            if (items[cols.lc] && items[cols.lc] !== '') {
+                p = document.createElement('p')
+                p.className = 'charLowercase'
+                p.innerHTML = 'Lowercase is '+makeCharacterLink(items[cols.lc], lang, dir)
+                letter.appendChild(p)
+                //prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
                 }
             
             // other transcriptions
@@ -602,6 +609,18 @@ console.log(items[0],'char'+hex)
                 p.className = 'otherTranscriptions'
                 p.innerHTML = para
                 letter.appendChild(p)
+                }
+            
+            // numeric values
+            if (items[cols.numLoc] && cols.numLoc !== 0) {
+                var target = node.querySelector('.numEquiv') // check whether numEquiv exist already
+                if (target) target.innerHTML = 'Number equivalent: '+items[cols.numLoc]
+                else { 
+                    p = document.createElement('p')
+                    p.className = 'numEquiv'
+                    p.innerHTML = 'Number equivalent: '+items[cols.numLoc]
+                    letter.appendChild(p)
+                    }
                 }
             
             // other transcriptions OLD VERSION - ONE PER LINE
