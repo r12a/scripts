@@ -268,18 +268,6 @@ function makeCharacterLink (cp, lang, direction) {
 function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, showShape) {
 	var charList = chars.split('\n')
     var div, p, span
-    /*
-    if (bicameral) {
-        temp = []
-        for (let i=0;i<charList.length;i++) {
-            if (charList[i] == '') continue
-            temp.push(charList[i][0].toUpperCase()+charList[i].substr(1))
-            temp.push(charList[i][0].toLowerCase()+charList[i].substr(1))
-            }
-        charList = temp
-        }
-    
- 	*/
    	
     for (var x=0; x<charList.length; x++) {
         if (charList[x].trim() == '') continue
@@ -354,39 +342,11 @@ console.log(items[0],'char'+hex)
                     p = document.createElement('p')
                     p.className = 'decomposition'
                     p.innerHTML = 'Decomposes to '+makeCharacterLink(items[0].normalize('NFD'), lang, dir)
-                    //prevSibling = notesNode.insertBefore(p, prevSibling.nextSibling)
                     prevSibling = notesNode.insertBefore(p, notesNode.firstChild)
                     }
                 }
 
 
-// move the bicameral stuff into the letter div and add info to the spreadsheet, since case conversion is language-specific
-/*
-            // add pointer to other case, if bicameral
-            if (bicameral && items[0].toUpperCase() == items[0]) {
-                var target = notesNode.querySelector('.lowercase') // check whether lowercase exist already
-                if (target) target.innerHTML = 'Lowercase is '+makeCharacterLink(items[0].toLowerCase(), lang, dir)
-                else {
-                    p = document.createElement('p')
-                    p.className = 'lowercase'
-                    p.innerHTML = 'Lowercase is '+makeCharacterLink(items[0].toLowerCase(), lang, dir)
-                    //prevSibling = notesNode.insertBefore(p, prevSibling.nextSibling)
-                    prevSibling = notesNode.insertBefore(p, notesNode.firstChild)
-                    }
-                }
-            // add pointer to other case, if bicameral
-            if (bicameral && items[0].toLowerCase() == items[0]) {
-                var target = notesNode.querySelector('.uppercase') // check whether uppercase exist already
-                if (target) target.innerHTML = 'Uppercase is '+makeCharacterLink(items[0].toUpperCase(), lang, dir)
-                else {
-                    p = document.createElement('p')
-                    p.className = 'uppercase'
-                    p.innerHTML = 'Uppercase is '+makeCharacterLink(items[0].toUpperCase(), lang, dir)
-                    //prevSibling = notesNode.insertBefore(p, prevSibling.nextSibling)
-                    prevSibling = notesNode.insertBefore(p, notesNode.firstChild)
-                    }
-                }
-*/
             
             // ADD OTHER STUFF HERE
             
@@ -405,8 +365,9 @@ console.log(items[0],'char'+hex)
                 p.appendChild(span)
                 div.appendChild(p)
                 refsNode = notesNode.querySelector('.ref') // check whether there's a refs section
-                if (refsNode) letter = notesNode.insertBefore(div, refsNode)
-                else letter = notesNode.appendChild(div)
+                // console.log(refsNode, notesNode, div)
+                if (! refsNode) letter = notesNode.appendChild(div)
+                else letter = notesNode.insertBefore(div, refsNode)
                 }
             
             
@@ -534,31 +495,8 @@ console.log(items[0],'char'+hex)
                 p.innerHTML = 'Shape is <span class="ex" lang="'+lang+'">'+items[0]+'</span>'
                 prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
                 }
-/*
-            // show shape from shape column (use for cursive text)
-            if (cols.shape>0 && items[cols.shape]) {
-                p = document.createElement('p')
-                p.className = 'charShape'
-                p.innerHTML = 'Shape is <span class="ex" lang="'+lang+'">'+items[cols.shape]+'</span>'
-                prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
-                }
-*/
 
-            // vowel correspondences
-            if (cols.ivowel>0 && items[cols.ivowel]) {
-                p = document.createElement('p')
-                p.className = 'vowelPairing'
-                p.innerHTML = 'The corresponding independent vowel is '+makeCharacterLink(items[cols.ivowel], lang, dir)
-                prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
-                }
-            if (cols.dvowel>0 && items[cols.dvowel]) {
-                p = document.createElement('p')
-                p.className = 'vowelPairing'
-                p.innerHTML = 'The corresponding dependent vowel is '+makeCharacterLink(items[cols.dvowel], lang, dir)
-                prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
-                }
-           
-             // tone correspondences
+            // tone correspondences
             if (cols.htone>0 && items[cols.htone]) {
                 p = document.createElement('p')
                 p.className = 'tonePairing'
@@ -579,7 +517,7 @@ console.log(items[0],'char'+hex)
             // DO EXTRA STUFF AT END OF LETTER DIV
 
             // show uppercase
-            if (items[cols.uc] && items[cols.uc] !== '') {
+            if (cols.uc && items[cols.uc] !== '') {
                 p = document.createElement('p')
                 p.className = 'charUppercase'
                 p.innerHTML = 'Uppercase is '+makeCharacterLink(items[cols.uc], lang, dir)
@@ -588,13 +526,29 @@ console.log(items[0],'char'+hex)
                 }
 
             // show lowercase
-            if (items[cols.lc] && items[cols.lc] !== '') {
+            if (cols.lc && items[cols.lc] !== '') {
                 p = document.createElement('p')
                 p.className = 'charLowercase'
                 p.innerHTML = 'Lowercase is '+makeCharacterLink(items[cols.lc], lang, dir)
                 letter.appendChild(p)
                 //prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
                 }
+
+
+            // vowel correspondences
+            if (cols.ivowel>0 && items[cols.ivowel]) {
+                p = document.createElement('p')
+                p.className = 'vowelPairing'
+                p.innerHTML = 'The corresponding independent vowel is '+makeCharacterLink(items[cols.ivowel], lang, dir)
+                letter.appendChild(p)
+                }
+            if (cols.dvowel>0 && items[cols.dvowel]) {
+                p = document.createElement('p')
+                p.className = 'vowelPairing'
+                p.innerHTML = 'The corresponding dependent vowel is '+makeCharacterLink(items[cols.dvowel], lang, dir)
+                letter.appendChild(p)
+                }
+           
             
             // other transcriptions
             if (cols.othertranscriptions && cols.othertranscriptions.length > 0) { 
@@ -621,23 +575,7 @@ console.log(items[0],'char'+hex)
                     p.innerHTML = 'Number equivalent: '+items[cols.numLoc]
                     letter.appendChild(p)
                     }
-                }
-            
-            // other transcriptions OLD VERSION - ONE PER LINE
-            /*if (cols.othertranscriptions && cols.othertranscriptions.length > 0) { 
-                for (let i=0;i<cols.othertranscriptions.length;i++) {
-                    para = ''
-                    if (items[cols.othertranscriptions[i][0]]) {
-                        para += cols.othertranscriptions[i][1]+': <span class="trans">'+items[cols.othertranscriptions[i][0]].replace(/ /g,', ')+'</span> '
-                        p = document.createElement('p')
-                        p.className = 'otherTranscriptions'
-                        p.innerHTML = para
-                        letter.appendChild(p)
-                        }
-                    }
-                }
-            */
-           
+                }           
             
 			}
         }
