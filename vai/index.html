@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<title>Vai script summary</title>
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="description" content="Summary of the Vai script."/>
+<link rel="stylesheet" href="../../shared/style/docs.css"/>
+<link rel="stylesheet" href="../summaries/local.css"/>
+<style>
+@font-face {
+    font-family: 'Noto Sans Vai WF';
+    src: url('/shared/webfonts/notoserifvai-regular-webfont.woff2') format('woff2'),
+         url('/shared/webfonts/notoserifvai-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+#freeText {
+	font-size: 24px;
+	font-family: "Noto Sans Vai WF", serif;
+    text-align: start;
+	line-height: 1.4;
+	}
+[lang=vai] { font-family: "Noto Sans Vai WF", serif; font-size: 150%; }
+.large[lang=vai] { font-size: 300%;  text-align: center; line-height: 1; margin-top: 0; margin-bottom: 0; }
+.narrowlines .listPair { margin-bottom: 0.25em; }
+.syllableTable td { background-color: #fffdf5; color: brown; font-size: 120%;  }
+</style>
+
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/all-names.js"></script>
+<script src="../../shared/code/character_conversion.js"></script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/fontlists/manage.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
+<script src="../summaries/functions.js"></script>
+<script src="../block/functions.js"></script>
+<script src="../../shared/code/getLinks.js"></script>
+<script src="/scripts/linkdata/linkdb.js"></script>
+<script src="../featurelist/scriptdata.js"> </script>
+
+<script src="../../shared/fontlists/vai.js"> </script>
+</head>
+
+<body>
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
+</header>
+
+<h1>Vai script summary</h1>
+
+<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="Jump to top of page." title="Jump to top of page."/></a></nav>
+
+<aside class="sidebar">
+<nav>
+<h2 class="notoc flush"><a id="tochead">Contents</a></h2>
+<div id="toc"><!-- placeholder --></div>
+  </nav>
+
+ <div id="fontsetting" class="closed">
+  <h2 class="notoc"><a id="fonts">Fonts</a></h2>
+  <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
+   <p>Set font for examples<br/>
+   <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'vai');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+   <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'vai');" />
+ </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
+ <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
+	return false;">
+      <p>Change size:<br />
+        <input id="slider" type="range" min="12" max="100" step="1" value="32">
+        &#xA0; <span id="sizeIndicator">32px</span><br />
+        <input id="multiplier" type="hidden" value="1" />
+        Multiplier:
+        <input type="radio" name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x1">1</label>
+        <input type="radio" name="step" id="x5" value="2"  onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x5">2</label>
+        <input type="radio" name="step" id="x10" value="10"  onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x10">10</label>
+      </p>
+    </form>
+</div>
+</aside>
+
+
+<p id="status">Updated 
+  <!-- #BeginDate format:Sw1 -->31 December, 2018<!-- #EndDate -->
+&bull; tags <a href="https://r12a.github.io/blog/?tag=vai" title="Show all blog posts tagged with 'vai'">vai</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+
+
+
+<div class="section">
+  <p>This page provides basic information about the Vai script and its use for the Vai language. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned. For character-specific details follow the links to the <a class="linkHighlight" href="/scripts/vai/block">Vai character notes</a>. </p>
+<p>For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>.</p>
+<p class="instructions">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+<details id="scriptLinks">
+<summary class="instructions">More links for the Vai script.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Vaii')</script>
+</details>
+</div>
+
+
+
+<section id="sample">
+  <h2 href="#samples">Sample (Vai)</h2>
+  
+  <div id="freeText" lang="vai" data-target="c" data-base="/scripts/vai/block" data-source="http://unicode.org/udhr/translations.html">
+  <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">ꕢꕎꕌ ꔖꔜꕯꕊ (1) ꕉꕜꕮ ꔔꘋ ꖸ ꔰ ꗋꘋ ꕮꕨ ꔔꘋ ꖸ ꕎ ꕉꖸꕊ ꕴꖃ ꕃꔤꘂ ꗱ, ꕉꖷ ꗪꗡ ꔻꔤ ꗏꗒꗡ ꕎ ꗪ ꕉꖸꕊ ꖏꕎ. ꕉꕡ ꖏ ꗳꕮꕊ ꗏ ꕪ ꗓ ꕉꖷ ꕉꖸ ꕘꕞ ꗪ. ꖏꖷ ꕉꖸꔧ ꖏ ꖸ ꕚꕌꘂ ꗷꔤ ꕞ ꘃꖷ ꘉꔧ ꗠꖻ ꕞ ꖴꘋ ꔳꕩ ꕉꖸ ꗳ.</p>
+
+  <p  title="UDHR, article 2" onMouseUp="showtext('freeText')">ꕢꕎꕌ ꗱꕞꕯꕊ (2) ꗞ ꗏꗒ ꔰ ꕚ ꖷ ꗋꖺꕒꕌ ꖸ ꔰ ꕞ ꕺꖃ ꘈꗢ ꗏ ꗷꔤ ꕞ ꘃꖷ ꗞ ꗏ ꗓꖺ ꔰ ꔇꔀ ꕉ ꕮ, ꕉꔤ ꔳ ꗞ ꔱꔤꕮ ꖏ ꖺ ꗞ ꗬꔤꕮ ꖺ ꗞ ꕺꖃ ꕮꔧ ꕮꔕ, ꕉꔤ ꔳ ꖷꖬ ꖏ ꖺ ꕪꔤ, ꕉꔤ ꕢ ꔽꔤ ꕮ ꖺ ꔵꘉ, ꖺ ꕐꕌꔳ, ꖺ ꖏ ꘀꗫ ꕃꔤ ꖺ ꗞꗢ ꗃꕎ ꕸꖃ ꖷ ꗏ ꖺ ꗞ ꖷ ꖸ ꗏ, ꕉꔤ ꔳ ꔻꔤ ꗞꖻ ꖏ ꖺ ꔌꘋ ꕴꕱ ꗞꖻ, ꕉꔤ ꕢ ꕴꖃ ꕃꔤ ꕮ ꔧ ꖏ ꕮꔕ ꗷꔤ ꔰ. ꕉꔤ ꕒꕢ ꕉ ꔫꔤ ꕞ, ꗞ ꕮ ꗞ ꖸ ꗏ ꗓꖺ ꕮꕨ ꔻꔤ ꖏ ꗱ, ꖺ ꕢꕎꕌ ꖏ ꖴꕮ ꖺ ꗷꔤ ꖷ ꖦꖕꕰꕊ ꗪ ꗞꗢ ꕞ ꕴꖃ ꕸꖃꔀ ꗱ ꗡꕯ, ꖺ ꕐꕌꔳ ꖷ ꗏ ꗞꗢ ꗃꕎ, ꕉꔤ ꔳ ꕸꖃ ꖴꘋ ꖏ, ꔧ ꗨꗡ ꕉꕌ ꕸꖃꔀ ꗪ ꕸꖃ ꕮꔕ ꗛꖺ, ꔧ ꗨꗡ ꕉꕌ ꕸꖃꔀ ꗪ ꖴꗷ ꕢꕮ ꕒꕩ ꗏ ꖺ ꗷꔤ ꕮꔕ ꔰ ꕞ.</p>
+  </div>
+ </section>
+  
+
+
+
+
+  <div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+    </table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+   </div>
+
+
+
+
+<section id="history">
+    <h2><a href="#history">Usage &amp; history</a></h2>
+    <p>From <a href="http://scriptsource.org/scr/Arab">Scriptsource</a>: </p>
+    <blockquote>
+<p>The Vai script was created by Mɔmɔlu Duwalu Bukɛlɛ in the 1830s to represent the Vai language spoken by about 104,000 in what is now Liberia, and about 15,000 in Sierra Leone. Tradition states that, while Bukɛlɛ was working as a messenger on a Portuguese ship, he became curious about the written messages he carried, which enabled the recipients to understand the captain's wishes without hearing his spoken words. When he returned home, he had a dream in which a tall white man revealed a number of symbols which could be used to write the Vai language. Upon waking, he wrote these symbols down. </p>
+<p>An alternative theory proposes that the Vai syllabary was influenced by the Cherokee syllabary, to which it bears remarkable similarities. After the creation of the Cherokee syllabary in the early 1800s a number of Cherokee emigrated to West Africa. One particular Cherokee man, Austin Curtis, married into an influential family and became a chief himself. It is proposed that he might have contributed to the creation of the Vai script and influenced its form. </p>
+<p>In the 1960s Momolu Massaquoi at the University of Liberia proposed further minor modifications to some characters, to enable every legitimate syllable to be represented, and, largely as a result of his efforts and those of August Klingenheben, in 1962 the script was standardised. </p>
+<p>The script comprises 212 symbols, with every syllable in use being represented by a unique character. Forty or fifty of these characters are in much wider use than the others; many literates in fact find fifty characters adequate for their purposes. Although some glyphs representing a common place of articulation are related, there is no referable derivation of form or predictable application of diacritics. Tone is not represented, although Vai is a tonal language. ...</p>
+<p>Bukɛlɛ established schools throughout the Vai-speaking region to propagate his script, and literacy became widespread; by 1899 most of the Vai were said to be literate. During the C20th a lengthy manuscript was published, detailing clan histories, Biblical and Qur'anic translations, and folktales. There continues to be a market for Vai literature; The Institute for Liberian Languages publishes in the script. It is also widely used in commerce, as well as for newspapers, tombstones and in traditional rituals.</p>
+<p>&nbsp;</p>
+</blockquote>
+    <p>From <a href="http://en.wikipedia.org/wiki/Vai_script">Wikipedia</a>:</p>
+<blockquote>
+<p>The Vai syllabary is a syllabic writing system devised for the Vai language by Momolu Duwalu Bukele of Jondu, in what is now Grand Cape Mount County, Liberia. Bukele is regarded within the Vai community, as well as by most scholars, as the syllabary's inventor and chief promoter when it was first documented in the 1830s. It is one of the two most successful indigenous scripts in West Africa in terms of the number of current users and the availability of literature written in the script, the other being N'Ko.</p>
+</blockquote>
+</section>
+
+
+
+
+<section id="notes"> 
+
+  <section id="type">
+    <h2><a href="#type">Key features</a></h2>
+    <p>The Vai script is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#alphabet">alphabet</a></span>, ie. consonants carry an inherent vowel sound that is overridden using vowel signs. In Vai, consonants carry an inherent vowel  a. See the table to the right for a brief overview of features, taken from the <a href="/scripts/featurelist/">Script Comparison Table</a>. </p>
+<p>Modern Vai can be written using a subset of the letters available in the Vai Unicode block. The remainder are used for representing the sounds of Sanskrit, Pail and other languages, and include all the aspirated consonants (which are pronounced in the same way as the unaspirated ones). Unusually for indic scripts, there are also a set of prenasalised consonants, and there is an <span class="trans">æ</span> vowel.</p>
+<p>Vai usually present the virama visually in consonant clusters. However, it is also possible to render clusters using conjunct forms (ligatures or reduced glyphs). Zero width joiner is used after the virama to signal the intention for that. Putting the ZWJ before the virama produces another form of conjunct, where adjacent consonants touch each other, but this is not used for modern Sinhalese.</p>
+<p>Text runs from left to right.</p>
+</section>
+  
+  </section>
+  
+  
+  
+  
+  <section id="chars">
+<h2><a href="#chars">Character lists</a></h2>
+   <p>The Vai script characters in Unicode 10.0 are spread across 2 blocks:</p>
+  <ol>
+      <li><a href="/uniview/?block=vai">Vai</a> <span class="charCount">(59 letters, 20 marks, 1 punctuation, 10 numbers :   total 90)</span></li>
+      <li><a href="/uniview/?block=vai_archaic_numbers">Vai Archaic Numbers </a><span class="charCount">(20 numbers :   total 20)</span></li>
+    </ol>
+<p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li><a href="/app-charuse/?language=si" target="_blank">Vai</a> <span class="charCount">(55 letters, 19 marks, 13 punctuation, 1 other :   total 88)</span></li>
+</ul>
+<p>For character-specific details see <a class="linkHighlight" href="/scripts/vai/block">Vai character notes</a>.</p>
+</section>
+  
+  
+  
+  
+  <section id="structure">
+<h2><a href="#structure">Structure</a></h2>
+     <p>"The script is a moraic syllabary. That is to say, rather then each symbol expressing one syllable, each symbol expresses one mora. The spoken language adheres to a strict (C)V(N) pattern, and the script reflects this. CV syllables containing a short vowel are monomoraic and written with a single character, and those containing a long vowel or diphthong are bimoraic and written with two characters. Closed CVN syllables are also bimoraic and written with two characters, as the nasal itself constitutes a mora. It should be mentioned that there is some variation in the way long vowels and diphthongs are syllabified, and therefore written/spelled."<sup><a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Vaii">s</a></sup></p>
+</section>
+
+
+
+
+  
+<section id="syllables">
+<h2><a href="#syllables">Syllables</a></h2>
+<p>The core of the script is a set of CV syllables, which are typically displayed as a table. In a few cases there are extra lines for syllables that end with nasalisation (indicated by ˜).</p>
+
+
+<section id="basic">
+<h3><a href="#basic">Basic syllables</a></h3>
+
+
+<div style="display: flex; flex-direction: row; flex-wrap: wrap; margin-left: 7.5%; margin-right: 32%;">
+<table style="margin: 0;" class="syllableTable">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th><span class="hint">e</span></th>
+<th><span class="hint">i</span></th>
+<th><span class="hint">a</span></th>
+<th><span class="hint">o</span></th>
+<th><span class="hint">u</span></th>
+<th><span class="hint">ɔ</span></th>
+<th><span class="hint">ɛ</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>&nbsp;</th>
+<td><span class="c" id="A500" data-c="cA500" title="U+A500: VAI SYLLABLE EE">ꔀ</span></td>
+<td><span class="c" id="A524" data-c="cA524" title="U+A524: VAI SYLLABLE I">ꔤ</span></td>
+<td><span class="c" id="A549" data-c="cA549" title="U+A549: VAI SYLLABLE A">ꕉ</span></td>
+<td><span class="c" id="A571" data-c="cA571" title="U+A571: VAI SYLLABLE OO">ꕱ</span></td>
+<td><span class="c" id="A595" data-c="cA595" title="U+A595: VAI SYLLABLE U">ꖕ</span></td>
+<td><span class="c" id="A5BA" data-c="cA5BA" title="U+A5BA: VAI SYLLABLE O">ꖺ</span></td>
+<td><span class="c" id="A5E1" data-c="cA5E1" title="U+A5E1: VAI SYLLABLE E">ꗡ</span></td>
+</tr>
+<tr>
+<th>˜</th>
+<td><span class="c" id="A501" data-c="cA501" title="U+A501: VAI SYLLABLE EEN">ꔁ</span></td>
+<td><span class="c" id="A525" data-c="cA525" title="U+A525: VAI SYLLABLE IN">ꔥ</span></td>
+<td><span class="c" id="A54A" data-c="cA54A" title="U+A54A: VAI SYLLABLE AN">ꕊ</span></td>
+<td><span class="c" id="A572" data-c="cA572" title="U+A572: VAI SYLLABLE OON">ꕲ</span></td>
+<td><span class="c" id="A596" data-c="cA596" title="U+A596: VAI SYLLABLE UN">ꖖ</span></td>
+<td><span class="c" id="A5BB" data-c="cA5BB" title="U+A5BB: VAI SYLLABLE ON">ꖻ</span></td>
+<td><span class="c" id="A5E2" data-c="cA5E2" title="U+A5E2: VAI SYLLABLE EN">ꗢ</span></td>
+</tr>
+<tr>
+<th><span class="hint">ŋ</span></th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="c" id="A54B" data-c="cA54B" title="U+A54B: VAI SYLLABLE NGAN">ꕋ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="c" id="A5BC" data-c="cA5BC" title="U+A5BC: VAI SYLLABLE NGON">ꖼ</span></td>
+<td><span class="c" id="A5E3" data-c="cA5E3" title="U+A5E3: VAI SYLLABLE NGEN">ꗣ</span></td>
+</tr>
+<tr>
+<th><span class="hint">h</span></th>
+<td><span class="c" id="A502" data-c="cA502" title="U+A502: VAI SYLLABLE HEE">ꔂ</span></td>
+<td><span class="c" id="A526" data-c="cA526" title="U+A526: VAI SYLLABLE HI">ꔦ</span></td>
+<td><span class="c" id="A54C" data-c="cA54C" title="U+A54C: VAI SYLLABLE HA">ꕌ</span></td>
+<td><span class="c" id="A573" data-c="cA573" title="U+A573: VAI SYLLABLE HOO">ꕳ</span></td>
+<td><span class="c" id="A597" data-c="cA597" title="U+A597: VAI SYLLABLE HU">ꖗ</span></td>
+<td><span class="c" id="A5BD" data-c="cA5BD" title="U+A5BD: VAI SYLLABLE HO">ꖽ</span></td>
+<td><span class="c" id="A5E4" data-c="cA5E4" title="U+A5E4: VAI SYLLABLE HE">ꗤ</span></td>
+</tr>
+<tr>
+<th><span class="hint">h˜</span></th>
+<td>&nbsp;</td>
+<td><span class="c" id="A527" data-c="cA527" title="U+A527: VAI SYLLABLE HIN">ꔧ</span></td>
+<td><span class="c" id="A54D" data-c="cA54D" title="U+A54D: VAI SYLLABLE HAN">ꕍ</span></td>
+<td>&nbsp;</td>
+<td><span class="c" id="A598" data-c="cA598" title="U+A598: VAI SYLLABLE HUN">ꖘ</span></td>
+<td><span class="c" id="A5BE" data-c="cA5BE" title="U+A5BE: VAI SYLLABLE HON">ꖾ</span></td>
+<td><span class="c" id="A5E5" data-c="cA5E5" title="U+A5E5: VAI SYLLABLE HEN">ꗥ</span></td>
+</tr>
+<tr>
+<th><span class="hint">w</span></th>
+<td><span class="c" id="A503" data-c="cA503" title="U+A503: VAI SYLLABLE WEE">ꔃ</span></td>
+<td><span class="c" id="A528" data-c="cA528" title="U+A528: VAI SYLLABLE WI">ꔨ</span></td>
+<td><span class="c" id="A54E" data-c="cA54E" title="U+A54E: VAI SYLLABLE WA">ꕎ</span></td>
+<td><span class="c" id="A574" data-c="cA574" title="U+A574: VAI SYLLABLE WOO">ꕴ</span></td>
+<td><span class="c" id="A599" data-c="cA599" title="U+A599: VAI SYLLABLE WU">ꖙ</span></td>
+<td><span class="c" id="A5BF" data-c="cA5BF" title="U+A5BF: VAI SYLLABLE WO">ꖿ</span></td>
+<td><span class="c" id="A5E6" data-c="cA5E6" title="U+A5E6: VAI SYLLABLE WE">ꗦ</span></td>
+</tr>
+<tr>
+<th><span class="hint">w˜</span></th>
+<td><span class="c" id="A504" data-c="cA504" title="U+A504: VAI SYLLABLE WEEN">ꔄ</span></td>
+<td><span class="c" id="A529" data-c="cA529" title="U+A529: VAI SYLLABLE WIN">ꔩ</span></td>
+<td><span class="c" id="A54F" data-c="cA54F" title="U+A54F: VAI SYLLABLE WAN">ꕏ</span></td>
+<td><span class="c" id="A575" data-c="cA575" title="U+A575: VAI SYLLABLE WOON">ꕵ</span></td>
+<td><span class="c" id="A59A" data-c="cA59A" title="U+A59A: VAI SYLLABLE WUN">ꖚ</span></td>
+<td><span class="c" id="A5C0" data-c="cA5C0" title="U+A5C0: VAI SYLLABLE WON">ꗀ</span></td>
+<td><span class="c" id="A5E7" data-c="cA5E7" title="U+A5E7: VAI SYLLABLE WEN">ꗧ</span></td>
+</tr>
+<tr>
+<th><span class="hint">p</span></th>
+<td><span class="c" id="A505" data-c="cA505" title="U+A505: VAI SYLLABLE PEE">ꔅ</span></td>
+<td><span class="c" id="A52A" data-c="cA52A" title="U+A52A: VAI SYLLABLE PI">ꔪ</span></td>
+<td><span class="c" id="A550" data-c="cA550" title="U+A550: VAI SYLLABLE PA">ꕐ</span></td>
+<td><span class="c" id="A576" data-c="cA576" title="U+A576: VAI SYLLABLE POO">ꕶ</span></td>
+<td><span class="c" id="A59B" data-c="cA59B" title="U+A59B: VAI SYLLABLE PU">ꖛ</span></td>
+<td><span class="c" id="A5C1" data-c="cA5C1" title="U+A5C1: VAI SYLLABLE PO">ꗁ</span></td>
+<td><span class="c" id="A5E8" data-c="cA5E8" title="U+A5E8: VAI SYLLABLE PE">ꗨ</span></td>
+</tr>
+<tr>
+<th><span class="hint">b</span></th>
+<td><span class="c" id="A506" data-c="cA506" title="U+A506: VAI SYLLABLE BHEE">ꔆ</span></td>
+<td><span class="c" id="A52B" data-c="cA52B" title="U+A52B: VAI SYLLABLE BHI">ꔫ</span></td>
+<td><span class="c" id="A551" data-c="cA551" title="U+A551: VAI SYLLABLE BHA">ꕑ</span></td>
+<td><span class="c" id="A577" data-c="cA577" title="U+A577: VAI SYLLABLE BHOO">ꕷ</span></td>
+<td><span class="c" id="A59C" data-c="cA59C" title="U+A59C: VAI SYLLABLE BHU">ꖜ</span></td>
+<td><span class="c" id="A5C2" data-c="cA5C2" title="U+A5C2: VAI SYLLABLE BHO">ꗂ</span></td>
+<td><span class="c" id="A5E9" data-c="cA5E9" title="U+A5E9: VAI SYLLABLE BHE">ꗩ</span></td>
+</tr>
+<tr>
+<th><span class="hint">ɓ</span></th>
+<td><span class="c" id="A507" data-c="cA507" title="U+A507: VAI SYLLABLE BEE">ꔇ</span></td>
+<td><span class="c" id="A52C" data-c="cA52C" title="U+A52C: VAI SYLLABLE BI">ꔬ</span></td>
+<td><span class="c" id="A552" data-c="cA552" title="U+A552: VAI SYLLABLE BA">ꕒ</span></td>
+<td><span class="c" id="A578" data-c="cA578" title="U+A578: VAI SYLLABLE BOO">ꕸ</span></td>
+<td><span class="c" id="A59D" data-c="cA59D" title="U+A59D: VAI SYLLABLE BU">ꖝ</span></td>
+<td><span class="c" id="A5C3" data-c="cA5C3" title="U+A5C3: VAI SYLLABLE BO">ꗃ</span></td>
+<td><span class="c" id="A5EA" data-c="cA5EA" title="U+A5EA: VAI SYLLABLE BE">ꗪ</span></td>
+</tr>
+<tr>
+<th><span class="hint">mɓ</span></th>
+<td><span class="c" id="A508" data-c="cA508" title="U+A508: VAI SYLLABLE MBEE">ꔈ</span></td>
+<td><span class="c" id="A52D" data-c="cA52D" title="U+A52D: VAI SYLLABLE MBI">ꔭ</span></td>
+<td><span class="c" id="A553" data-c="cA553" title="U+A553: VAI SYLLABLE MBA">ꕓ</span></td>
+<td><span class="c" id="A579" data-c="cA579" title="U+A579: VAI SYLLABLE MBOO">ꕹ</span></td>
+<td><span class="c" id="A59E" data-c="cA59E" title="U+A59E: VAI SYLLABLE MBU">ꖞ</span></td>
+<td><span class="c" id="A5C4" data-c="cA5C4" title="U+A5C4: VAI SYLLABLE MBO">ꗄ</span></td>
+<td><span class="c" id="A5EB" data-c="cA5EB" title="U+A5EB: VAI SYLLABLE MBE">ꗫ</span></td>
+</tr>
+<tr>
+<th><span class="hint">kp</span></th>
+<td><span class="c" id="A509" data-c="cA509" title="U+A509: VAI SYLLABLE KPEE">ꔉ</span></td>
+<td><span class="c" id="A52E" data-c="cA52E" title="U+A52E: VAI SYLLABLE KPI">ꔮ</span></td>
+<td><span class="c" id="A554" data-c="cA554" title="U+A554: VAI SYLLABLE KPA">ꕔ</span></td>
+<td><span class="c" id="A57A" data-c="cA57A" title="U+A57A: VAI SYLLABLE KPOO">ꕺ</span></td>
+<td><span class="c" id="A59F" data-c="cA59F" title="U+A59F: VAI SYLLABLE KPU">ꖟ</span></td>
+<td><span class="c" id="A5C5" data-c="cA5C5" title="U+A5C5: VAI SYLLABLE KPO">ꗅ</span></td>
+<td><span class="c" id="A5EC" data-c="cA5EC" title="U+A5EC: VAI SYLLABLE KPE">ꗬ</span></td>
+</tr>
+<tr>
+<th><span class="hint">kp˜</span></th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="c" id="A555" data-c="cA555" title="U+A555: VAI SYLLABLE KPAN">ꕕ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="c" id="A5ED" data-c="cA5ED" title="U+A5ED: VAI SYLLABLE KPEN">ꗭ</span></td>
+</tr>
+<tr>
+<th><span class="hint">mgb</span></th>
+<td><span class="c" id="A50A" data-c="cA50A" title="U+A50A: VAI SYLLABLE MGBEE">ꔊ</span></td>
+<td><span class="c" id="A52F" data-c="cA52F" title="U+A52F: VAI SYLLABLE MGBI">ꔯ</span></td>
+<td><span class="c" id="A556" data-c="cA556" title="U+A556: VAI SYLLABLE MGBA">ꕖ</span></td>
+<td><span class="c" id="A57B" data-c="cA57B" title="U+A57B: VAI SYLLABLE MGBOO">ꕻ</span></td>
+<td><span class="c" id="A5A0" data-c="cA5A0" title="U+A5A0: VAI SYLLABLE MGBU">ꖠ</span></td>
+<td><span class="c" id="A5C6" data-c="cA5C6" title="U+A5C6: VAI SYLLABLE MGBO">ꗆ</span></td>
+<td><span class="c" id="A5EE" data-c="cA5EE" title="U+A5EE: VAI SYLLABLE MGBE">ꗮ</span></td>
+</tr>
+<tr>
+<th><span class="hint">gb</span></th>
+<td><span class="c" id="A50B" data-c="cA50B" title="U+A50B: VAI SYLLABLE GBEE">ꔋ</span></td>
+<td><span class="c" id="A530" data-c="cA530" title="U+A530: VAI SYLLABLE GBI">ꔰ</span></td>
+<td><span class="c" id="A557" data-c="cA557" title="U+A557: VAI SYLLABLE GBA">ꕗ</span></td>
+<td><span class="c" id="A57C" data-c="cA57C" title="U+A57C: VAI SYLLABLE GBOO">ꕼ</span></td>
+<td><span class="c" id="A5A1" data-c="cA5A1" title="U+A5A1: VAI SYLLABLE GBU">ꖡ</span></td>
+<td><span class="c" id="A5C7" data-c="cA5C7" title="U+A5C7: VAI SYLLABLE GBO">ꗇ</span></td>
+<td><span class="c" id="A5EF" data-c="cA5EF" title="U+A5EF: VAI SYLLABLE GBE">ꗯ</span></td>
+</tr>
+<tr>
+<th><span class="hint">gb˜</span></th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="c" id="A5C8" data-c="cA5C8" title="U+A5C8: VAI SYLLABLE GBON">ꗈ</span></td>
+<td><span class="c" id="A5F0" data-c="cA5F0" title="U+A5F0: VAI SYLLABLE GBEN">ꗰ</span></td>
+</tr>
+<tr>
+<th><span class="hint">f</span></th>
+<td><span class="c" id="A50C" data-c="cA50C" title="U+A50C: VAI SYLLABLE FEE">ꔌ</span></td>
+<td><span class="c" id="A531" data-c="cA531" title="U+A531: VAI SYLLABLE FI">ꔱ</span></td>
+<td><span class="c" id="A558" data-c="cA558" title="U+A558: VAI SYLLABLE FA">ꕘ</span></td>
+<td><span class="c" id="A57D" data-c="cA57D" title="U+A57D: VAI SYLLABLE FOO">ꕽ</span></td>
+<td><span class="c" id="A5A2" data-c="cA5A2" title="U+A5A2: VAI SYLLABLE FU">ꖢ</span></td>
+<td><span class="c" id="A5C9" data-c="cA5C9" title="U+A5C9: VAI SYLLABLE FO">ꗉ</span></td>
+<td><span class="c" id="A5F1" data-c="cA5F1" title="U+A5F1: VAI SYLLABLE FE">ꗱ</span></td>
+</tr>
+<tr>
+<th><span class="hint">v</span></th>
+<td><span class="c" id="A50D" data-c="cA50D" title="U+A50D: VAI SYLLABLE VEE">ꔍ</span></td>
+<td><span class="c" id="A532" data-c="cA532" title="U+A532: VAI SYLLABLE VI">ꔲ</span></td>
+<td><span class="c" id="A559" data-c="cA559" title="U+A559: VAI SYLLABLE VA">ꕙ</span></td>
+<td><span class="c" id="A57E" data-c="cA57E" title="U+A57E: VAI SYLLABLE VOO">ꕾ</span></td>
+<td><span class="c" id="A5A3" data-c="cA5A3" title="U+A5A3: VAI SYLLABLE VU">ꖣ</span></td>
+<td><span class="c" id="A5CA" data-c="cA5CA" title="U+A5CA: VAI SYLLABLE VO">ꗊ</span></td>
+<td><span class="c" id="A5F2" data-c="cA5F2" title="U+A5F2: VAI SYLLABLE VE">ꗲ</span></td>
+</tr>
+<tr>
+<th><span class="hint">t</span></th>
+<td><span class="c" id="A50E" data-c="cA50E" title="U+A50E: VAI SYLLABLE TEE">ꔎ</span></td>
+<td><span class="c" id="A533" data-c="cA533" title="U+A533: VAI SYLLABLE TI">ꔳ</span></td>
+<td><span class="c" id="A55A" data-c="cA55A" title="U+A55A: VAI SYLLABLE TA">ꕚ</span></td>
+<td><span class="c" id="A57F" data-c="cA57F" title="U+A57F: VAI SYLLABLE TOO">ꕿ</span></td>
+<td><span class="c" id="A5A4" data-c="cA5A4" title="U+A5A4: VAI SYLLABLE TU">ꖤ</span></td>
+<td><span class="c" id="A5CB" data-c="cA5CB" title="U+A5CB: VAI SYLLABLE TO">ꗋ</span></td>
+<td><span class="c" id="A5F3" data-c="cA5F3" title="U+A5F3: VAI SYLLABLE TE">ꗳ</span></td>
+</tr>
+<tr>
+<th><span class="hint">θ</span></th>
+<td><span class="c" id="A50F" data-c="cA50F" title="U+A50F: VAI SYLLABLE THEE">ꔏ</span></td>
+<td><span class="c" id="A534" data-c="cA534" title="U+A534: VAI SYLLABLE THI">ꔴ</span></td>
+<td><span class="c" id="A55B" data-c="cA55B" title="U+A55B: VAI SYLLABLE THA">ꕛ</span></td>
+<td><span class="c" id="A580" data-c="cA580" title="U+A580: VAI SYLLABLE THOO">ꖀ</span></td>
+<td><span class="c" id="A5A5" data-c="cA5A5" title="U+A5A5: VAI SYLLABLE THU">ꖥ</span></td>
+<td><span class="c" id="A5CC" data-c="cA5CC" title="U+A5CC: VAI SYLLABLE THO">ꗌ</span></td>
+<td><span class="c" id="A5F4" data-c="cA5F4" title="U+A5F4: VAI SYLLABLE THE">ꗴ</span></td>
+</tr>
+<tr>
+<th><span class="hint">d</span></th>
+<td><span class="c" id="A510" data-c="cA510" title="U+A510: VAI SYLLABLE DHEE">ꔐ</span></td>
+<td><span class="c" id="A535" data-c="cA535" title="U+A535: VAI SYLLABLE DHI">ꔵ</span></td>
+<td><span class="c" id="A55C" data-c="cA55C" title="U+A55C: VAI SYLLABLE DHA">ꕜ</span></td>
+<td><span class="c" id="A581" data-c="cA581" title="U+A581: VAI SYLLABLE DHOO">ꖁ</span></td>
+<td><span class="c" id="A5A6" data-c="cA5A6" title="U+A5A6: VAI SYLLABLE DHU">ꖦ</span></td>
+<td><span class="c" id="A5CD" data-c="cA5CD" title="U+A5CD: VAI SYLLABLE DHO">ꗍ</span></td>
+<td><span class="c" id="A5F5" data-c="cA5F5" title="U+A5F5: VAI SYLLABLE DHE">ꗵ</span></td>
+</tr>
+<tr>
+<th><span class="hint">ð</span></th>
+<td><span class="c" id="A511" data-c="cA511" title="U+A511: VAI SYLLABLE DHHEE">ꔑ</span></td>
+<td><span class="c" id="A536" data-c="cA536" title="U+A536: VAI SYLLABLE DHHI">ꔶ</span></td>
+<td><span class="c" id="A55D" data-c="cA55D" title="U+A55D: VAI SYLLABLE DHHA">ꕝ</span></td>
+<td><span class="c" id="A582" data-c="cA582" title="U+A582: VAI SYLLABLE DHHOO">ꖂ</span></td>
+<td><span class="c" id="A5A7" data-c="cA5A7" title="U+A5A7: VAI SYLLABLE DHHU">ꖧ</span></td>
+<td><span class="c" id="A5CE" data-c="cA5CE" title="U+A5CE: VAI SYLLABLE DHHO">ꗎ</span></td>
+<td><span class="c" id="A5F6" data-c="cA5F6" title="U+A5F6: VAI SYLLABLE DHHE">ꗶ</span></td>
+</tr>
+</tbody>
+</table>
+
+
+
+<table style="margin: 0;" class="syllableTable">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th><span class="hint">e</span></th>
+<th><span class="hint">i</span></th>
+<th><span class="hint">a</span></th>
+<th><span class="hint">o</span></th>
+<th><span class="hint">u</span></th>
+<th><span class="hint">ɔ</span></th>
+<th><span class="hint">ɛ</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th><span class="hint">l</span></th>
+<td><span class="c" id="A512" data-c="cA512" title="U+A512: VAI SYLLABLE LEE">ꔒ</span></td>
+<td><span class="c" id="A537" data-c="cA537" title="U+A537: VAI SYLLABLE LI">ꔷ</span></td>
+<td><span class="c" id="A55E" data-c="cA55E" title="U+A55E: VAI SYLLABLE LA">ꕞ</span></td>
+<td><span class="c" id="A583" data-c="cA583" title="U+A583: VAI SYLLABLE LOO">ꖃ</span></td>
+<td><span class="c" id="A5A8" data-c="cA5A8" title="U+A5A8: VAI SYLLABLE LU">ꖨ</span></td>
+<td><span class="c" id="A5CF" data-c="cA5CF" title="U+A5CF: VAI SYLLABLE LO">ꗏ</span></td>
+<td><span class="c" id="A5F7" data-c="cA5F7" title="U+A5F7: VAI SYLLABLE LE">ꗷ</span></td>
+</tr>
+<tr>
+<th><span class="hint">r</span></th>
+<td><span class="c" id="A513" data-c="cA513" title="U+A513: VAI SYLLABLE REE">ꔓ</span></td>
+<td><span class="c" id="A538" data-c="cA538" title="U+A538: VAI SYLLABLE RI">ꔸ</span></td>
+<td><span class="c" id="A55F" data-c="cA55F" title="U+A55F: VAI SYLLABLE RA">ꕟ</span></td>
+<td><span class="c" id="A584" data-c="cA584" title="U+A584: VAI SYLLABLE ROO">ꖄ</span></td>
+<td><span class="c" id="A5A9" data-c="cA5A9" title="U+A5A9: VAI SYLLABLE RU">ꖩ</span></td>
+<td><span class="c" id="A5D0" data-c="cA5D0" title="U+A5D0: VAI SYLLABLE RO">ꗐ</span></td>
+<td><span class="c" id="A5F8" data-c="cA5F8" title="U+A5F8: VAI SYLLABLE RE">ꗸ</span></td>
+</tr>
+<tr>
+<th><span class="hint">ɗ</span></th>
+<td><span class="c" id="A514" data-c="cA514" title="U+A514: VAI SYLLABLE DEE">ꔔ</span></td>
+<td><span class="c" id="A539" data-c="cA539" title="U+A539: VAI SYLLABLE DI">ꔹ</span></td>
+<td><span class="c" id="A560" data-c="cA560" title="U+A560: VAI SYLLABLE DA">ꕠ</span></td>
+<td><span class="c" id="A585" data-c="cA585" title="U+A585: VAI SYLLABLE DOO">ꖅ</span></td>
+<td><span class="c" id="A5AA" data-c="cA5AA" title="U+A5AA: VAI SYLLABLE DU">ꖪ</span></td>
+<td><span class="c" id="A5D1" data-c="cA5D1" title="U+A5D1: VAI SYLLABLE DO">ꗑ</span></td>
+<td><span class="c" id="A5F9" data-c="cA5F9" title="U+A5F9: VAI SYLLABLE DE">ꗹ</span></td>
+</tr>
+<tr>
+<th><span class="hint">nɗ</span></th>
+<td><span class="c" id="A515" data-c="cA515" title="U+A515: VAI SYLLABLE NDEE">ꔕ</span></td>
+<td><span class="c" id="A53A" data-c="cA53A" title="U+A53A: VAI SYLLABLE NDI">ꔺ</span></td>
+<td><span class="c" id="A561" data-c="cA561" title="U+A561: VAI SYLLABLE NDA">ꕡ</span></td>
+<td><span class="c" id="A586" data-c="cA586" title="U+A586: VAI SYLLABLE NDOO">ꖆ</span></td>
+<td><span class="c" id="A5AB" data-c="cA5AB" title="U+A5AB: VAI SYLLABLE NDU">ꖫ</span></td>
+<td><span class="c" id="A5D2" data-c="cA5D2" title="U+A5D2: VAI SYLLABLE NDO">ꗒ</span></td>
+<td><span class="c" id="A5FA" data-c="cA5FA" title="U+A5FA: VAI SYLLABLE NDE">ꗺ</span></td>
+</tr>
+<tr>
+<th><span class="hint">s</span></th>
+<td><span class="c" id="A516" data-c="cA516" title="U+A516: VAI SYLLABLE SEE">ꔖ</span></td>
+<td><span class="c" id="A53B" data-c="cA53B" title="U+A53B: VAI SYLLABLE SI">ꔻ</span></td>
+<td><span class="c" id="A562" data-c="cA562" title="U+A562: VAI SYLLABLE SA">ꕢ</span></td>
+<td><span class="c" id="A587" data-c="cA587" title="U+A587: VAI SYLLABLE SOO">ꖇ</span></td>
+<td><span class="c" id="A5AC" data-c="cA5AC" title="U+A5AC: VAI SYLLABLE SU">ꖬ</span></td>
+<td><span class="c" id="A5D3" data-c="cA5D3" title="U+A5D3: VAI SYLLABLE SO">ꗓ</span></td>
+<td><span class="c" id="A5FB" data-c="cA5FB" title="U+A5FB: VAI SYLLABLE SE">ꗻ</span></td>
+</tr>
+<tr>
+<th><span class="hint">ʃ</span></th>
+<td><span class="c" id="A517" data-c="cA517" title="U+A517: VAI SYLLABLE SHEE">ꔗ</span></td>
+<td><span class="c" id="A53C" data-c="cA53C" title="U+A53C: VAI SYLLABLE SHI">ꔼ</span></td>
+<td><span class="c" id="A563" data-c="cA563" title="U+A563: VAI SYLLABLE SHA">ꕣ</span></td>
+<td><span class="c" id="A588" data-c="cA588" title="U+A588: VAI SYLLABLE SHOO">ꖈ</span></td>
+<td><span class="c" id="A5AD" data-c="cA5AD" title="U+A5AD: VAI SYLLABLE SHU">ꖭ</span></td>
+<td><span class="c" id="A5D4" data-c="cA5D4" title="U+A5D4: VAI SYLLABLE SHO">ꗔ</span></td>
+<td><span class="c" id="A5FC" data-c="cA5FC" title="U+A5FC: VAI SYLLABLE SHE">ꗼ</span></td>
+</tr>
+<tr>
+<th><span class="hint">z</span></th>
+<td><span class="c" id="A518" data-c="cA518" title="U+A518: VAI SYLLABLE ZEE">ꔘ</span></td>
+<td><span class="c" id="A53D" data-c="cA53D" title="U+A53D: VAI SYLLABLE ZI">ꔽ</span></td>
+<td><span class="c" id="A564" data-c="cA564" title="U+A564: VAI SYLLABLE ZA">ꕤ</span></td>
+<td><span class="c" id="A589" data-c="cA589" title="U+A589: VAI SYLLABLE ZOO">ꖉ</span></td>
+<td><span class="c" id="A5AE" data-c="cA5AE" title="U+A5AE: VAI SYLLABLE ZU">ꖮ</span></td>
+<td><span class="c" id="A5D5" data-c="cA5D5" title="U+A5D5: VAI SYLLABLE ZO">ꗕ</span></td>
+<td><span class="c" id="A5FD" data-c="cA5FD" title="U+A5FD: VAI SYLLABLE ZE">ꗽ</span></td>
+</tr>
+<tr>
+<th><span class="hint">ʒ</span></th>
+<td><span class="c" id="A519" data-c="cA519" title="U+A519: VAI SYLLABLE ZHEE">ꔙ</span></td>
+<td><span class="c" id="A53E" data-c="cA53E" title="U+A53E: VAI SYLLABLE ZHI">ꔾ</span></td>
+<td><span class="c" id="A565" data-c="cA565" title="U+A565: VAI SYLLABLE ZHA">ꕥ</span></td>
+<td><span class="c" id="A58A" data-c="cA58A" title="U+A58A: VAI SYLLABLE ZHOO">ꖊ</span></td>
+<td><span class="c" id="A5AF" data-c="cA5AF" title="U+A5AF: VAI SYLLABLE ZHU">ꖯ</span></td>
+<td><span class="c" id="A5D6" data-c="cA5D6" title="U+A5D6: VAI SYLLABLE ZHO">ꗖ</span></td>
+<td><span class="c" id="A5FE" data-c="cA5FE" title="U+A5FE: VAI SYLLABLE ZHE">ꗾ</span></td>
+</tr>
+<tr>
+<th><span class="hint">ʧ</span></th>
+<td><span class="c" id="A51A" data-c="cA51A" title="U+A51A: VAI SYLLABLE CEE">ꔚ</span></td>
+<td><span class="c" id="A53F" data-c="cA53F" title="U+A53F: VAI SYLLABLE CI">ꔿ</span></td>
+<td><span class="c" id="A566" data-c="cA566" title="U+A566: VAI SYLLABLE CA">ꕦ</span></td>
+<td><span class="c" id="A58B" data-c="cA58B" title="U+A58B: VAI SYLLABLE COO">ꖋ</span></td>
+<td><span class="c" id="A5B0" data-c="cA5B0" title="U+A5B0: VAI SYLLABLE CU">ꖰ</span></td>
+<td><span class="c" id="A5D7" data-c="cA5D7" title="U+A5D7: VAI SYLLABLE CO">ꗗ</span></td>
+<td><span class="c" id="A5FF" data-c="cA5FF" title="U+A5FF: VAI SYLLABLE CE">ꗿ</span></td>
+</tr>
+<tr>
+<th><span class="hint">ʤ</span></th>
+<td><span class="c" id="A51B" data-c="cA51B" title="U+A51B: VAI SYLLABLE JEE">ꔛ</span></td>
+<td><span class="c" id="A540" data-c="cA540" title="U+A540: VAI SYLLABLE JI">ꕀ</span></td>
+<td><span class="c" id="A567" data-c="cA567" title="U+A567: VAI SYLLABLE JA">ꕧ</span></td>
+<td><span class="c" id="A58C" data-c="cA58C" title="U+A58C: VAI SYLLABLE JOO">ꖌ</span></td>
+<td><span class="c" id="A5B1" data-c="cA5B1" title="U+A5B1: VAI SYLLABLE JU">ꖱ</span></td>
+<td><span class="c" id="A5D8" data-c="cA5D8" title="U+A5D8: VAI SYLLABLE JO">ꗘ</span></td>
+<td><span class="c" id="A600" data-c="cA600" title="U+A600: VAI SYLLABLE JE">ꘀ</span></td>
+</tr>
+<tr>
+<th><span class="hint">nʤ</span></th>
+<td><span class="c" id="A51C" data-c="cA51C" title="U+A51C: VAI SYLLABLE NJEE">ꔜ</span></td>
+<td><span class="c" id="A541" data-c="cA541" title="U+A541: VAI SYLLABLE NJI">ꕁ</span></td>
+<td><span class="c" id="A568" data-c="cA568" title="U+A568: VAI SYLLABLE NJA">ꕨ</span></td>
+<td><span class="c" id="A58D" data-c="cA58D" title="U+A58D: VAI SYLLABLE NJOO">ꖍ</span></td>
+<td><span class="c" id="A5B2" data-c="cA5B2" title="U+A5B2: VAI SYLLABLE NJU">ꖲ</span></td>
+<td><span class="c" id="A5D9" data-c="cA5D9" title="U+A5D9: VAI SYLLABLE NJO">ꗙ</span></td>
+<td><span class="c" id="A601" data-c="cA601" title="U+A601: VAI SYLLABLE NJE">ꘁ</span></td>
+</tr>
+<tr>
+<th><span class="hint">j</span></th>
+<td><span class="c" id="A51D" data-c="cA51D" title="U+A51D: VAI SYLLABLE YEE">ꔝ</span></td>
+<td><span class="c" id="A542" data-c="cA542" title="U+A542: VAI SYLLABLE YI">ꕂ</span></td>
+<td><span class="c" id="A569" data-c="cA569" title="U+A569: VAI SYLLABLE YA">ꕩ</span></td>
+<td><span class="c" id="A58E" data-c="cA58E" title="U+A58E: VAI SYLLABLE YOO">ꖎ</span></td>
+<td><span class="c" id="A5B3" data-c="cA5B3" title="U+A5B3: VAI SYLLABLE YU">ꖳ</span></td>
+<td><span class="c" id="A5DA" data-c="cA5DA" title="U+A5DA: VAI SYLLABLE YO">ꗚ</span></td>
+<td><span class="c" id="A602" data-c="cA602" title="U+A602: VAI SYLLABLE YE">ꘂ</span></td>
+</tr>
+<tr>
+<th><span class="hint">k</span></th>
+<td><span class="c" id="A51E" data-c="cA51E" title="U+A51E: VAI SYLLABLE KEE">ꔞ</span></td>
+<td><span class="c" id="A543" data-c="cA543" title="U+A543: VAI SYLLABLE KI">ꕃ</span></td>
+<td><span class="c" id="A56A" data-c="cA56A" title="U+A56A: VAI SYLLABLE KA">ꕪ</span></td>
+<td><span class="c" id="A58F" data-c="cA58F" title="U+A58F: VAI SYLLABLE KOO">ꖏ</span></td>
+<td><span class="c" id="A5B4" data-c="cA5B4" title="U+A5B4: VAI SYLLABLE KU">ꖴ</span></td>
+<td><span class="c" id="A5DB" data-c="cA5DB" title="U+A5DB: VAI SYLLABLE KO">ꗛ</span></td>
+<td><span class="c" id="A603" data-c="cA603" title="U+A603: VAI SYLLABLE KE">ꘃ</span></td>
+</tr>
+<tr>
+<th><span class="hint">k˜</span></th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="c" id="A56B" data-c="cA56B" title="U+A56B: VAI SYLLABLE KAN">ꕫ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th><span class="hint">ŋg</span></th>
+<td><span class="c" id="A51F" data-c="cA51F" title="U+A51F: VAI SYLLABLE NGGEE">ꔟ</span></td>
+<td><span class="c" id="A544" data-c="cA544" title="U+A544: VAI SYLLABLE NGGI">ꕄ</span></td>
+<td><span class="c" id="A56C" data-c="cA56C" title="U+A56C: VAI SYLLABLE NGGA">ꕬ</span></td>
+<td><span class="c" id="A590" data-c="cA590" title="U+A590: VAI SYLLABLE NGGOO">ꖐ</span></td>
+<td><span class="c" id="A5B5" data-c="cA5B5" title="U+A5B5: VAI SYLLABLE NGGU">ꖵ</span></td>
+<td><span class="c" id="A5DC" data-c="cA5DC" title="U+A5DC: VAI SYLLABLE NGGO">ꗜ</span></td>
+<td><span class="c" id="A604" data-c="cA604" title="U+A604: VAI SYLLABLE NGGE">ꘄ</span></td>
+</tr>
+<tr>
+<th><span class="hint">ŋg˜</span></th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="c" id="A605" data-c="cA605" title="U+A605: VAI SYLLABLE NGGEN">ꘅ</span></td>
+</tr>
+<tr>
+<th><span class="hint">g</span></th>
+<td><span class="c" id="A520" data-c="cA520" title="U+A520: VAI SYLLABLE GEE">ꔠ</span></td>
+<td><span class="c" id="A545" data-c="cA545" title="U+A545: VAI SYLLABLE GI">ꕅ</span></td>
+<td><span class="c" id="A56D" data-c="cA56D" title="U+A56D: VAI SYLLABLE GA">ꕭ</span></td>
+<td><span class="c" id="A591" data-c="cA591" title="U+A591: VAI SYLLABLE GOO">ꖑ</span></td>
+<td><span class="c" id="A5B6" data-c="cA5B6" title="U+A5B6: VAI SYLLABLE GU">ꖶ</span></td>
+<td><span class="c" id="A5DD" data-c="cA5DD" title="U+A5DD: VAI SYLLABLE GO">ꗝ</span></td>
+<td><span class="c" id="A606" data-c="cA606" title="U+A606: VAI SYLLABLE GE">ꘆ</span></td>
+</tr>
+<tr>
+<th><span class="hint">g</span></th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="c" id="A607" data-c="cA607" title="U+A607: VAI SYLLABLE GEN">ꘇ</span></td>
+</tr>
+<tr>
+<th><span class="hint">m</span></th>
+<td><span class="c" id="A521" data-c="cA521" title="U+A521: VAI SYLLABLE MEE">ꔡ</span></td>
+<td><span class="c" id="A546" data-c="cA546" title="U+A546: VAI SYLLABLE MI">ꕆ</span></td>
+<td><span class="c" id="A56E" data-c="cA56E" title="U+A56E: VAI SYLLABLE MA">ꕮ</span></td>
+<td><span class="c" id="A592" data-c="cA592" title="U+A592: VAI SYLLABLE MOO">ꖒ</span></td>
+<td><span class="c" id="A5B7" data-c="cA5B7" title="U+A5B7: VAI SYLLABLE MU">ꖷ</span></td>
+<td><span class="c" id="A5DE" data-c="cA5DE" title="U+A5DE: VAI SYLLABLE MO">ꗞ</span></td>
+<td><span class="c" id="A608" data-c="cA608" title="U+A608: VAI SYLLABLE ME">ꘈ</span></td>
+</tr>
+<tr>
+<th><span class="hint">n</span></th>
+<td><span class="c" id="A522" data-c="cA522" title="U+A522: VAI SYLLABLE NEE">ꔢ</span></td>
+<td><span class="c" id="A547" data-c="cA547" title="U+A547: VAI SYLLABLE NI">ꕇ</span></td>
+<td><span class="c" id="A56F" data-c="cA56F" title="U+A56F: VAI SYLLABLE NA">ꕯ</span></td>
+<td><span class="c" id="A593" data-c="cA593" title="U+A593: VAI SYLLABLE NOO">ꖓ</span></td>
+<td><span class="c" id="A5B8" data-c="cA5B8" title="U+A5B8: VAI SYLLABLE NU">ꖸ</span></td>
+<td><span class="c" id="A5DF" data-c="cA5DF" title="U+A5DF: VAI SYLLABLE NO">ꗟ</span></td>
+<td><span class="c" id="A609" data-c="cA609" title="U+A609: VAI SYLLABLE NE">ꘉ</span></td>
+</tr>
+<tr>
+<th><span class="hint">ɲ</span></th>
+<td><span class="c" id="A523" data-c="cA523" title="U+A523: VAI SYLLABLE NYEE">ꔣ</span></td>
+<td><span class="c" id="A548" data-c="cA548" title="U+A548: VAI SYLLABLE NYI">ꕈ</span></td>
+<td><span class="c" id="A570" data-c="cA570" title="U+A570: VAI SYLLABLE NYA">ꕰ</span></td>
+<td><span class="c" id="A594" data-c="cA594" title="U+A594: VAI SYLLABLE NYOO">ꖔ</span></td>
+<td><span class="c" id="A5B9" data-c="cA5B9" title="U+A5B9: VAI SYLLABLE NYU">ꖹ</span></td>
+<td><span class="c" id="A5E0" data-c="cA5E0" title="U+A5E0: VAI SYLLABLE NYO">ꗠ</span></td>
+<td><span class="c" id="A60A" data-c="cA60A" title="U+A60A: VAI SYLLABLE NYE">ꘊ</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+<p>&quot;Forty or fifty of these characters are in much wider use than the others; many literates in fact find fifty characters adequate for their purposes.&quot;<sup><a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Vaii">s</a></sup></p>
+
+<p>&quot;The script comprises 212 symbols, with every syllable in use being represented by a unique character. ... Although some glyphs representing a common place of articulation are related, there is no referable derivation of form or predictable application of diacritics.&quot;<sup><a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Vaii">s</a></sup></p>
+</section>
+
+
+
+
+
+<section id="syllfinal">
+<h3><a href="#syllfinal">Syllable-final nasal</a></h3>
+
+<p><span class="codepoint" translate="no"><span lang="vai">&#xA60B;</span> [<a href="/scripts/vai/block#charA60B"><span class="uname">U+A60B VAI SYLLABLE NG</span></a>]</span> represents a syllable-final nasal.</p>
+</section>
+
+
+
+
+
+<section id="vowelextension">
+<h3><a href="#vowelextension">Vowel lengthening</a></h3>
+
+<p><span class="codepoint" translate="no"><span lang="vai">&#xA60C;</span> [<a href="/scripts/vai/block#charA60C"><span class="uname">U+A60C VAI SYLLABLE LENGTHENER</span></a>]</span> indicates that the vowel in thepreceding syllable character should be lengthened.</p>
+<p>Alternatively, &quot;A long vowel may also be indicated by following the syllable with a syllable of the same vowel starting with h.&quot;<sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a></sup> (By introducing ambiguity, texts using this approach are difficult to automatically convert from a Latin transcription to Vai characters.)</p>
+</section>
+
+
+
+
+
+<section id="historical">
+<h3><a href="#historical">Historical syllables</a></h3>
+<p>&quot;One of Momolu Duwalu Bukele's cousins, Kaali Bala Ndole Wano, wrote a long manuscript around 1845 called the Book of Ndole or Book of Rora under the pen name Rora. This roughly fifty page manuscript contains several now obsolete symbols&quot;<sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a></sup></p>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'vai')">list all 5</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="vai">ꘐ</span><span class="listTrans">FA</span><span class="listIPA">fa</span></div>
+<div class="listPair"><span class="listItem" lang="vai">ꘑ</span><span class="listTrans">KA</span><span class="listIPA">ka</span></div>
+<div class="listPair"><span class="listItem" lang="vai">ꘒ</span><span class="listTrans">SO</span><span class="listIPA">so</span></div>
+<div class="listPair"><span class="listItem" lang="vai">ꘪ</span><span class="listTrans">MAA</span><span class="listIPA">mã</span></div>
+<div class="listPair"><span class="listItem" lang="vai">ꘫ</span><span class="listTrans">ƊƆ</span><span class="listIPA">ɗɔ</span></div>
+</div>
+</figure>
+
+<p>&quot;Originally there were separate glyphs for syllables ending in a nasal, such as <span class="ipa">don</span>, with a long vowel, such as <span class="ipa">soo</span>, with a diphthong, such as <span class="ipa">bai</span>, as well as <span class="ipa">bili</span> and <span class="ipa">sɛli</span>. However, these have been dropped from the modern script.&quot;<sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a></sup></p>
+
+</section>
+
+</section>
+
+
+
+
+
+  
+<section id="logograms">
+<h2><a href="#logograms">Logograms</a></h2>
+<p>&quot;The oldest Vai texts used various logograms. Of these, only <span class="codepoint" translate="no"><span lang="vai">&#xA613;</span> [<a href="/scripts/vai/block#charA613"><span class="uname">U+A613 VAI SYMBOL FEENG</span></a>]</span> and <span class="codepoint" translate="no"><span lang="vai">&#xA618;</span> [<a href="/scripts/vai/block#charA618"><span class="uname">U+A618 VAI SYMBOL FAA</span></a>]</span> are still in use.&quot;<sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a></sup></p>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'vai')">list all 16</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="vai">ꘓ</span><span class="listIPA">feŋ</span><span class="listMeaning">thing</span></div>
+<div class="listPair"><span class="listItem" lang="vai">ꘔ</span><span class="listIPA">keŋ</span><span class="listMeaning">foot</span></div>
+<div class="listPair"><span class="listItem" lang="vai">ꘕ</span><span class="listIPA">tiŋ</span><span class="listMeaning">island</span></div>
+<div class="listPair"><span class="listItem" lang="vai">ꘖ</span><span class="listIPA">nii/kpɛ-kɔwu</span><span class="listMeaning">cow/case of gin</span></div>
+<div class="listPair"><span class="listItem" lang="vai">ꘗ</span><span class="listIPA">ɓaŋ</span><span class="listMeaning">finished</span></div>
+<div class="listPair"><span class="listItem" lang="vai">ꘘ</span><span class="listIPA">faa</span><span class="listMeaning">die, kill</span></div>
+<div class="listPair"><span class="listItem" lang="vai">ꘙ</span><span class="listIPA">taa</span><span class="listMeaning">go, carry, journey</span></div>
+<div class="listPair"><span class="listItem" lang="vai">ꘚ</span><span class="listIPA">ɗaŋ</span><span class="listMeaning">hear, understand</span></div>
+<div class="listPair"><span class="listItem" lang="vai">ꘛ</span><span class="listIPA">ɗoŋ</span><span class="listMeaning">enter</span></div>
+<div class="listPair"><span class="listItem" lang="vai">ꘜ</span><span class="listIPA">kuŋ</span><span class="listMeaning">head, be able to</span></div>
+<div class="listPair"><span class="listItem" lang="vai">ꘝ</span><span class="listIPA">tɔŋ</span><span class="listMeaning">be named</span></div>
+<div class="listPair"><span class="listItem" lang="vai">ꘞ</span><span class="listIPA">ɗɔɔ</span><span class="listMeaning">be small</span></div>
+<div class="listPair"><span class="listItem" lang="vai">ꘟ</span><span class="listIPA">jɔŋ</span><span class="listMeaning">slave</span></div>
+<div class="listPair"><span class="listItem" lang="vai">ꔔ</span><span class="listIPA">ɗeŋ</span><span class="listMeaning">child, small</span></div>
+<div class="listPair"><span class="listItem" lang="vai">ꕪ</span><span class="listIPA">ka kai</span><span class="listMeaning">man</span></div>
+<div class="listPair"><span class="listItem" lang="vai">ꗑ</span><span class="listIPA">lɔ</span><span class="listMeaning">in</span></div>
+</div>
+</figure>
+
+
+<p>The last three in the list above, used to represent logograms in the book of Ndole, now just represent ordinary syllable characters.</p>
+</section>
+  
+
+
+
+
+  <section id="tones">
+  <h2><a href="#tones">Tones</a></h2>
+  <p>&quot;Tone is not represented, although Vai is a tonal language.&quot;<sup><a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Vaii">s</a></sup></p>
+</section>
+
+
+
+<section id="shaping">
+  <h2><a href="#shaping">Context-based glyph changes</a></h2>
+<section id="gsub">
+<h3><a href="#gsub">Contextual shaping</a></h3>
+<p>There is no contextual shaping in Vai.</p>
+
+<!--figure class="narrowlines">
+<div class="listArray" style="justify-content: center; font-size: 150%; line-height: 1.2;">
+<div class="listPair"><span class="listItem" lang="vai">ක</span><span class="listTrans">ka</span></div>
+<div class="listPair"><span class="listItem" lang="vai">කු</span><span class="listTrans">ku</span></div>
+<div class="listPair"><span class="listItem" lang="vai">කූ</span><span class="listTrans">kū</span></div>
+</div>
+<div class="listArray" style="justify-content: center; font-size: 150%; line-height: 1.2;">
+<div class="listPair"><span class="listItem" lang="vai">ප</span><span class="listTrans">pa</span></div>
+<div class="listPair"><span class="listItem" lang="vai">පු</span><span class="listTrans">pu</span></div>
+<div class="listPair"><span class="listItem" lang="vai">පූ</span><span class="listTrans">pū</span></div>
+</div>
+<div class="listArray" style="justify-content: center; font-size: 150%; line-height: 1.2;">
+<div class="listPair"><span class="listItem" lang="vai">ර</span><span class="listTrans">ra</span></div>
+<div class="listPair"><span class="listItem" lang="vai">රු</span><span class="listTrans">ru</span></div>
+<div class="listPair"><span class="listItem" lang="vai">රූ</span><span class="listTrans">rū</span></div>
+</div>
+<div class="listArray" style="justify-content: center; font-size: 150%; line-height: 1.2;">
+<div class="listPair"><span class="listItem" lang="vai">ර</span><span class="listTrans">ra</span></div>
+<div class="listPair"><span class="listItem" lang="vai">රැ</span><span class="listTrans">ræ</span></div>
+<div class="listPair"><span class="listItem" lang="vai">රෑ</span><span class="listTrans">rǣ</span></div>
+</div>
+<div class="listArray" style="justify-content: center; font-size: 150%; line-height: 1.2;">
+<div class="listPair"><span class="listItem" lang="vai">ළ</span><span class="listTrans">ḷa</span></div>
+<div class="listPair"><span class="listItem" lang="vai">ළු</span><span class="listTrans">ḷu</span></div>
+<div class="listPair"><span class="listItem" lang="vai">ළූ</span><span class="listTrans">ḷū</span></div>
+</div>
+<figcaption>Shape variants for the <span class="trans">u</span> and <span class="trans">ū</span> vowel signs.</figcaption>
+</figure--></section>
+  
+  
+  
+  
+<section id="gpos">
+  <h3><a href="#gpos">Context-based positioning</a></h3>
+<p>Vai has no combining marks.</p>
+</section>
+</section>
+
+
+
+
+
+<section id="digits">
+<h2><a href="#digits">Numbers</a></h2>
+<p>Vai uses european digits. &quot;In the 1920s Vai-specific digits were developed but never adopted.&quot;<sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a></sup></p>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'vai')">list all 10</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="vai">꘠</span><span class="listTrans">0</span></div>
+<div class="listPair"><span class="listItem" lang="vai">꘡</span><span class="listTrans">1</span></div>
+<div class="listPair"><span class="listItem" lang="vai">꘢</span><span class="listTrans">2</span></div>
+<div class="listPair"><span class="listItem" lang="vai">꘣</span><span class="listTrans">3</span></div>
+<div class="listPair"><span class="listItem" lang="vai">꘤</span><span class="listTrans">4</span></div>
+<div class="listPair"><span class="listItem" lang="vai">꘥</span><span class="listTrans">5</span></div>
+<div class="listPair"><span class="listItem" lang="vai">꘦</span><span class="listTrans">6</span></div>
+<div class="listPair"><span class="listItem" lang="vai">꘧</span><span class="listTrans">7</span></div>
+<div class="listPair"><span class="listItem" lang="vai">꘨</span><span class="listTrans">8</span></div>
+<div class="listPair"><span class="listItem" lang="vai">꘩</span><span class="listTrans">9</span></div>
+</div>
+</figure>
+</section>
+
+
+
+
+
+<section id="punctuation">
+<h2><a href="#punctuation">Punctuation</a></h2>
+<p>Vai uses european punctuation, but also has a few distinct punctuation marks of its own.</p>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'vai')">list all 4</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="vai">꘍</span><span class="listTrans">,</span></div>
+<div class="listPair"><span class="listItem" lang="vai">꘎꘎</span><span class="listTrans">!</span></div>
+<div class="listPair"><span class="listItem" lang="vai">꘎</span><span class="listTrans">.</span></div>
+<div class="listPair"><span class="listItem" lang="vai">꘏</span><span class="listTrans">?</span></div>
+</div>
+</figure>
+
+
+
+</section>
+  
+  
+  
+  
+  
+<section id="layout">
+<h2><a href="#layout">Text layout</a></h2>
+<section id="dir">
+<h3><a href="#dir">Text direction</a></h3>
+    <p>Vai script is written horizontally and left to right.</p>
+</section>
+<section id="delimiters">
+<h3><a href="#delimiters">Text delimiters</a></h3>
+    <p>Words are separated by spaces.</p>
+  <p>Vai  uses western  punctuation and  a few indigenous punctuation marks listed above.</p>
+</section>
+
+
+
+<!--section id="hyphens">
+  <h3><a href="#hyphens">Hyphens</a></h3>
+     <p>Vai language text  uses <span class="codepoint"><span lang="vai">&#x2010;</span> [<span class="uname">U+2010 HYPHEN</span>]</span>, <span class="codepoint"><span lang="vai">&#x2013;</span> [<span class="uname">U+2013 EN DASH</span>], and </span> <span class="codepoint"><span lang="vai">&#x2014;</span> [<span class="uname">U+2014 EM DASH</span>]</span>.</p>
+</section>
+
+
+
+<section id="emphasis">
+<h3><a href="#emphasis">Emphasis</a></h3>
+     <p>Emphasis can sometimes be expressed by stretching the baseline of one or more words. See the section on justification below for more information about baseline stretching.</p>
+</section>
+
+
+
+<section id="quotations">
+<h3><a href="#quotations">Quotations</a></h3>
+     <p>Vai language text typically uses <span class="codepoint"><span lang="vai" dir="ltr">&#x00AB;</span> <a href="/scripts/latin/block#char00AB">[<span class="uname">U+00AB LEFT-POINTING DOUBLE ANGLE QUOTATION MARK</span>]</a></span> and <span class="codepoint"><span lang="vai" dir="ltr">&#x00BB;</span> <a href="/scripts/latin/block#char00BB">[<span class="uname">U+00BB RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK</span>]</a></span> for quotation marks.<span class="charExample"><span class="ex" lang="hy"></span></span></p>
+     <p><span class="codepoint">
+<mark>Usage tip</mark>
+It is important to note that the Unicode names for these marks should be ignored. 'Left-pointing' should be read 'Start', and 'Right-pointing' as 'End'. The direction in which the glyphs point will be automatically determined according to the base direction of the text.</span></p>
+</section>
+
+
+
+
+<section id="justify">
+    <h3><a href="#justify">Justification</a></h3>
+<p>Better quality justification systems stretch glyphs, rather than adding baseline extensions. This dynamic stretching of glyphs is often called 'kashida'. In some typesetting systems, such as InDesign, the tatweel character serves more to indicate opportunities for stretching, and the glyph for the character itself is not shown.</p>
+<p>It is very common to see baseline stretching in modern Vai text where a word or phrase is stretched to fill a particular space, eg. the Vai tag line (<span class="ex" lang="vai">الابداع المتجدد</span> <span class="meaning">Creativity renewed</span>) below the word Lexus in the following image is stretched to be the same width.</p>
+<figure>
+<img src="images/stretch-plus-ligature-1.jpg" alt="Vai text stretched to fit the width of the word Lexus.">
+<figcaption>Vai text being stretched to fit the width of text alongside it.</figcaption>
+</figure>
+<p class="instructions">Use the control below to see how your browser justifies the text sample here.</p>
+    <p lang="vai" id="justificationExample" style="text-align:start;">7 වන වගන්තිය සියල්ලන්ම නීතිය ඉදිරියෙහි එකිනෙකාට සමාන වන අතර, නීතීයේ ආරක්ෂාව ලැබීමට කිසිදු විශේෂයක් නොමැතිව, සියල්ලෝම හිමිකම් ලබති, මේ ප්‍රකාශනයට පටහැනි ලෙස කෙරෙන ඕනෑම අසාධාරණයකින් ආරක්ෂා වීමේ අයිතියත් එබඳු අසාධාරණයන්ට පෙළඹවීමෙන් ආරක්ෂාවීමේ අයිතියත් සියල්ලන්ටම හිමි වේ.</p>
+    <p class="english" dir="ltr">
+      <button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Justify   </button>
+    </p>
+</section-->
+
+
+
+<section> </section>
+<section>
+<h3>TBD</h3>
+<p class="ednote">Other features to be investigate in this section include:
+text direction,
+baselines,
+text delimiters,
+emphasis &amp; highlighting,
+text decoration,
+abbreviations &amp; ellipsis,
+correction marks
+hyphens & dashes
+glyph controls
+cursive text,
+character transforms,
+quotations,
+ruby,
+repetition,
+
+line breaking,
+hyphenation,
+justification &amp; alignment,
+first-letter styling,
+
+vertical text,
+notes &amp; footnotes,
+page layout
+</p>
+</section>
+
+</section>
+<section id="references">
+<h2><a href="#references">References</a></h2>
+<ol>
+<li>[<a href="#refs">d</a>] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
+				0-19-507993-0</li>
+<li>[<a href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a>] Wikipedia, <a href="http://en.wikipedia.org/wiki/NKo_script">Vai syllabary</a></li>
+<li>[<a href="http://www.unicode.org/versions/Unicode11.0.0/ch19.pdf#Vai">u</a>] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch19.pdf#Vai">The Unicode Standard v11.0</a></li>
+<li>[<a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Vaii">s</a>] ScriptSource, <a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Vaii">Vai</a></li>
+</ol>
+</section>
+
+
+
+
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/vai"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-12-31  6:21<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bvai%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fvai%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
+<div id="panel" style="display:none"></div>
+</body>
+<script>
+var base = '/scripts/vai/block'
+initialiseShowNames(base, 'c');
+document.getElementById('featureTableBody').innerHTML = makeSidePanel("Vai")
+createtoc(3)
+</script>
+</html>
