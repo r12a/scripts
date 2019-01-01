@@ -215,7 +215,7 @@ function getFindStr (hex) {
 
 
 
-function makeCharacterLink (cp, lang, direction) { 
+function makeCharacterLink (cp, lang, direction) {
 	// returns markup with information about cp
 	// cp: a unicode character, or sequence of unicode characters
 	// lang: the BCP47 language tag for the context
@@ -275,11 +275,13 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
         if (items[0] === '') continue
 
         // get the character as dec & hex
-        if (items[0].length > 1) var dec = parseInt(items[0].replace('&#x','').replace(';',''),16) // change this to \u.... ?
+        if (items[0].includes('\\u')) var dec = parseInt(items[0].replace('\\u',''),16)
+        //if (items[0].length > 1) var dec = parseInt(items[0].replace('&#x','').replace(';',''),16) // change this to \u.... ?
 		else dec = items[0].codePointAt(0)
         var hex = dec.toString(16).toUpperCase()
         while (hex.length < 4) hex = '0'+hex
-      
+        console.log('dec',dec,'hex',hex)
+        
         if (! document.getElementById('char'+hex)) console.log('Character not found: ',items[0],hex)
 		
         else if (U[dec]) {
@@ -393,7 +395,7 @@ console.log(items[0],'char'+hex)
 
             // do charStatus
             if (cols.statusLoc>0 && items[cols.statusLoc]) {
-                var msg = '?'
+                var msg = items[cols.statusLoc]
                 switch (items[cols.statusLoc]) {
                     case 'sd': msg = 'strongly deprecated'; break
                     case 'd': msg = 'deprecated'; break
@@ -403,7 +405,8 @@ console.log(items[0],'char'+hex)
                     }
                 span = document.createElement('span')
                 span.className = 'charStatus'
-                if (msg === 'strongly deprecated') span.className += ' deprecated'
+                //if (msg === 'strongly deprecated') span.className += ' deprecated'
+                span.className += ' deprecated'
                 span.textContent = ' '+msg+' '
                 titlepara.appendChild(span)
                 }
@@ -433,8 +436,7 @@ console.log(items[0],'char'+hex)
                }
  
             // add linebreak before any names
-            if ((cols.nnameLoc>0 || cols.nameLoc>0) && (items[cols.nnameLoc] || items[cols.nameLoc])) titlepara.appendChild(document.createElement('br'))
- 
+            if ((cols.nnameLoc>0 || cols.nameLoc>0) && (items[cols.nnameLoc] || items[cols.nameLoc]) && (items[cols.nnameLoc] !== '' || items[cols.nameLoc] !== '')) titlepara.appendChild(document.createElement('br'))
  
             // do localname
             if (cols.nnameLoc>0 && items[cols.nnameLoc]) {
