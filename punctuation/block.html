@@ -71,7 +71,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->13 July, 2018<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->1 January, 2019<!-- #EndDate -->
 &bull; tags <a href="http://rishida.net/blog/index.php?tag=arabic" title="Show all blog posts tagged with 'punctuation'">punctuation</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>.</p>
 <div id="intro">
   <p>This page lists characters in the following Unicode  blocks and provides information about them.</p>
@@ -179,6 +179,13 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+200B</strong> <a href="#char200B">ZERO WIDTH SPACE</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=200B">See in UniView</a></p>
 <div class="unicodenotes"></div>
+<div class="notes">
+<div class="letter arabic">
+<p>An invisible character, used to signal line-break and word-break opportunities. It was originally provided for use with writing systems such as Thai, Myanmar, Khmer, Japanese, etc. that don't use spaces between words.</p>
+<p>Justification may create a visible space at the location of this character, eg. the Thai text <span class="charExample" translate="no"><span class="ex" lang="th">อักษร​ไทย</span></span> may look like <span class="charExample" translate="no"><span lang="th">อั ก ษ ร ไ ท ย</span></span> when justified, or when letter-spacing is applied.</p>
+</div>
+<p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout" target="_blank">Unicode</a> </p>
+</div>
 </div>
 
 <div class="character" id="char205F">
@@ -198,10 +205,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=200C">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-  <div class="letter arabic">
+  <div class="letter">
     <p>Prevents two adjacent letters forming a cursive connection with each other when rendered.</p>
   </div>
-  <div class="letter urdu">
+  <div class="letter">
     <p><span class="title">Persian</span></p>
     <p>The ZWNJ is used in Persian for plural suffixes, some proper names, and Ottoman Turkish vowels. Ignoring or removing the ZWNJ will result in text with a different meaning or meaningless text.<sup>1</sup> For example, <span class="ex" lang="ar" dir="rtl">تن‌ها</span> is the plural of <span class="meaning">body</span>, whereas <span class="ex" lang="ar" dir="rtl">تنها</span> is the adjective <span class="meaning">alone</span>.<sup>2</sup> The only difference is the presence or absence of ZWNJ after <span class="name">noon</span>.</p>
     <p class="ref">Refs:  
@@ -209,6 +216,14 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
       [2] <a href="https://github.com/w3c/charmod-norm/issues/44#issuecomment-172042270" target="_blank">Github discussion</a> &nbsp;&nbsp;
       </p>
   </div>
+<div class="letter">
+<p><span class="title">Khmer</span></p>
+  <p>Khmer register shifters (ie. <span class="codepoint" translate="no"><span lang="km">&#x25CC;&#x17C9;</span> [<a href="/scripts/khmer/block#char17C9"><span class="uname">U+17C9 KHMER SIGN MUUSIKATOAN​</span></a>]</span> or <span class="codepoint" translate="no"><span lang="km">&#x25CC;&#x17CA;</span> [<a href="/scripts/khmer/block#char17CA"><span class="uname">U+17CA KHMER SIGN TRIISAP​</span></a>]</span>) usually appear above a consonant. However, if a superscript vowel is also attached to the consonant, the shifter is normally displayed below the consonant, instead. If you want to force the shifter to remain above the consonant, as is occasionally the case, insert ZWNJ between the consonant and the shifter.  For example, <span class="charExample" translate="no"><span class="ex" lang="km">ហ ហ៊ ហ៊ី ហ‌៊ី</span></span>.</p>
+<p class="ref">Refs:  
+      [1] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#page=28" target="_blank">[unicode11] p647</a> &nbsp;&nbsp;
+      [2] <a target="_blank" href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">SIL</a> &nbsp;&nbsp;
+    </p>
+</div>
 </div>
 </div>
 
@@ -304,6 +319,17 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="charname"><strong>U+2060</strong> <a href="#char2060">WORD JOINER</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=2060">See in UniView</a></p>
 <div class="unicodenotes"></div>
+<div class="notes">
+<div class="letter arabic">
+<p>An invisible character, equivalent to a zero-width no-break space, and used to prevent line-breaks, eg. it can be used around the + sign in base&#x2060;+delta&#x2060; to prevent a line break occuring in that sequence of characters. It has no effect on word segmentation.</p>
+<p>It can also be used to bracket other characters to turn them into non-breaking characters, such as <a href="/scripts/punctuation/block#char2009"><span class="uname">U+2009 THIN SPACE</span></a> or <span class="codepoint" translate="no"><span lang="km">&#x2015;</span> [<a href="/scripts/khmer/block#char2015"><span class="uname">U+2015 HORIZONTAL BAR</span></a>]</span>.</p>
+<p>Not to be confused with <a href="/scripts/khmer/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a> or <a href="/scripts/khmer/block#char034F"><span class="uname">U+034F COMBINING GRAPHEME JOINER​</span></a>, since it has no effect on shaping.</p>
+<p>This functionality is also provided by <span class="uname">U+FEFF ZERO WIDTH NO-BREAK SPACE</span>, but since that character also represents the byte-order mark, the use of this word joiner character (added in Unicode 3.2) is strongly preferred over the latter.</p>
+</div>
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout" target="_blank">Unicode</a>
+   </p>
+</div>
 </div>
 
 <div class="character" id="char2066">
@@ -1574,6 +1600,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <h2><a href="#refs">References</a></h2>
 <ul>
   <li>[u] The Unicode Standard</li>
+<li>[<a href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">sk</a>] SIL, <cite><a href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">The order of components in Khmer orthographical syllables</a></cite></li>
 </ul>
 </section>
 
@@ -1581,7 +1608,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div id="panel" style="display:none"></div>
 
 <div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/punctuation/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2018-07-13  10:46<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2019-01-01  8:08<!-- #EndDate --> 
   </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bpunctuation%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fpunctuation%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
