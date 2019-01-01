@@ -77,6 +77,8 @@ var scriptData = [
 	   
 { script:"UCAS", type:"?", chars:710, cchars:0, cs:"no", gpos:"no", mcchars:"no", matras: "no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"?", justify:"space", digits:"no", region:"America" },
 	   
+{ script:"Vai", type:"syllabary", chars:300, cchars:0, cs:"no", gpos:"no", mcchars:"no", matras: "no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"?", justify:"space?", digits:"no", region:"Africa", linked:"vai" },
+	   
 ]
 
 
