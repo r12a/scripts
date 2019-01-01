@@ -4,48 +4,25 @@
 <head>
 <meta charset="utf-8"/>
 <title>Get new character blocks</title>
-<meta name="description" content="Notes about the Khmer script as used for Khmer."/>
+<meta name="description" content="Generate character sections for block doc."/>
 
-<link rel="stylesheet" href="/style/docs.css" type="text/css" />
-<link rel="stylesheet" href="/scripts/block/block-style.css" type="text/css" />
 <link rel="stylesheet" href="local.css" type="text/css" />
 
-<script type="text/javascript" src="../../uniview/descriptions.js"></script> 
-<script type="text/javascript" src="../../uniview/u.js"></script> 
-<script type="text/javascript" src="sidecar.js"></script> 
-
-
-<!--script src="/uniview/scriptGroups.js" type="text/javascript"></script-->
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<script src="../../uniview/descriptions.js"></script> 
+<script src="../../uniview/u.js"></script> 
 </head>
 
 <body>
-<header>
-<div id="header-boilerplate"></div>
-</header>
-
-	<h1>Get new character blocks</h1>
+<h1>Get new character blocks</h1>
 <p>For a given range of characters, produces stubs for codepoint descriptions in character notes pages.</p>
 <p>Add a list from the spreadsheet for the input.</p>
-<div id="panel" style="display:none"></div>
 
-
-
-<p><textarea id="listin" placeholder="a b c ..." style="height:400px;width:100%;"></textarea></p>
+<p><textarea id="listin" placeholder="Add a list of characters here, and don't forget to add references code below." style="height:400px;width:100%;"></textarea></p>
 
 <p>
 <label> Bicameral: <input type="checkbox" id="bicameral"/></label>
 <label> Language: <input type="text" id="lang" style="width: 3em;"/></label>
 <label> Direction: <input type="text" id="dir" style="width: 3em;"/></label>
-<label> Cursive base: <input type="text" id="cursive" style="width: 3em;"/></label>
-<label> Subjoined base: <input type="text" id="subjoined" style="width: 3em;"/></label>
-<br/>
-<label>trans <select id="transLoc"><option selected>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></label>
-<label>ipa <select id="ipaLoc"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></label>
-<label>type <select id="typeLoc"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></label>
-<label>name <select id="nameLoc"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></label>
-<label>native nm <select id="nnameLoc"><option>1</option><option>2</option><option>3</option><option>4</option><option selected>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></label>
-<label>number <select id="numLoc"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option selected>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></label>
 
 <button style="font-size: 150%;" onClick="bicameral=false; 
 if(document.getElementById('bicameral').checked) bicameral = true; 
@@ -58,19 +35,8 @@ document.getElementById('out').select()">Go</button>
 <textarea id="out" style="height:400px;width:100%;"></textarea>
 
 
-<p>Template for notes:</p>
-
+<p>Template for refs:</p>
 <pre>
-&lt;div class="letter">
-&lt;p class="titlepara">&lt;span class="title">LANGUAGE&lt;/span> &lt;span class=&quot;localtrans trans&quot;&gt;{1}&lt;/span&gt; 
-&lt;span class=&quot;name&quot;&gt;&lt;span class=&quot;localname&quot; dir=&quot;ltr&quot; lang="BCP">{5}&lt;/span>
-&nbsp;&lt;span class=&quot;transliteratedname trans&quot;>{4}&lt;/span>&lt;/span&gt;
-&lt;span class="ipa">{2}&lt;/span>&lt;/p&gt;
-&lt;p&gt;explanation_of_usage&lt;/p>
-&lt;/div>
-
-
-
 &lt;p class="ref">&lt;a href="#refs">General sources&lt;/a>:
    &lt;a href=&quot;block#refs&quot; target="_blank"&gt;Daniels&lt;/a&gt;, 
    &lt;a href="http://www.unicode.org/versions/latest/ch07.pdf#Armenian" target="_blank">Unicode&lt;/a>, &nbsp;
@@ -78,20 +44,16 @@ document.getElementById('out').select()">Go</button>
 &lt;/p></pre>
    
    
-   <p>Optional: enter notes code here and it will be added.</p>
-<textarea id="notes" style="height:200px;width:100%;"></textarea>
-
-
-   <p>Optional: enter references code here and it will be added.</p>
+   <p>Enter  code for general references here and they will be added.</p>
 <textarea id="refs" style="height:200px;width:100%;"></textarea>
 
 
 
 <div class="smallprint"><span id="version">First published  3 Feb 2008.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2018-12-22  5:55<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2018-12-29  11:25<!-- #EndDate --> 
 </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
-<script type="text/javascript">
+<script>
 
 
 function makeCharacterLink (cp, lang, direction) { 
@@ -161,12 +123,18 @@ function makeListFromChars (chars, bicameral, lang, dir) {
     
 	var out = ''
 	
-for (var x=0; x<charList.length; x++) {
+    for (var x=0; x<charList.length; x++) {
         if (charList[x] == '') continue
         var items = charList[x].split('\t')
-        if (items[0].length > 1) i = parseInt(items[0].replace('&#x','').replace(';',''),16)
+        
+        // get code point value, converting escapes if necessary
+        if (items[0].includes('&#x')) {
+            items[0] = items[0].replace('&#x','').replace(';','')
+            i = parseInt(items[0],16)
+            }
 		else i = items[0].codePointAt(0)
-		console.log(i, items)
+		console.log('i',i, 'items',items)
+
 		if (U[i]) {                 
 			var hex = i.toString(16).toUpperCase()
 			while (hex.length < 4) hex = '0' + hex
@@ -178,16 +146,7 @@ for (var x=0; x<charList.length; x++) {
 			out += '<div class="charimg">&#x'+hex+';</div>\n'
 			out += '<p class="charname"><strong>U+'+hex+'</strong> <a href="#char'+hex+'">'+cpName+'</a></p>\n'
 			out += '<p class="univiewLink"><a target="_blank" href="/uniview/?char='+hex+'">See in UniView</a></p>\n'
-            out += '<div class="notes">\n'
-                        
-            // if cursive, show the various forms
-            if (document.getElementById('cursive').value) {
-                cursiveBase = document.getElementById('cursive').value
-                out += '<p class="cursiveShapes">Cursive shapes (naskh): <span class="ex" lang="'+lang+'">'+items[0]+cursiveBase+items[0]+cursiveBase+items[0]+' '+items[0]+'</span></p>\n'
-                //out += '<p>Cursive shapes (nastaliq): <span class="ex" lang="ur">'+items[0]+cursiveBase+items[0]+cursiveBase+items[0]+' '+items[0]+'</span></p>\n'
-                //out += '\n<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">'+items[0]+cursiveBase+items[0]+cursiveBase+items[0]+' '+items[0]+'</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">'+items[0]+cursiveBase+items[0]+cursiveBase+items[0]+' '+items[0]+'</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">'+items[0]+cursiveBase+items[0]+cursiveBase+items[0]+' '+items[0]+'</span></span></p>'
-                 }
-           
+            out += '<div class="notes">\n'           
 
             // add references
             if (document.getElementById('refs')) out += '\n'+document.getElementById('refs').value+'\n'
