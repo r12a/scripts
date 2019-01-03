@@ -96,7 +96,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->02-Jan-2019<!-- #EndDate -->
+  <!-- #BeginDate format:En2 -->03-Jan-2019<!-- #EndDate -->
 &bull; tags <a href="http://rishida.net/blog/index.php?tag=devanagari" title="Show all blog posts tagged with 'devanagari'">devanagari</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
@@ -153,11 +153,22 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <section id="type">
-    <h2>Key features</h2>
+    <h2><a href="#type">Key features</a></h2>
     <p>Devanagari is an <span class="newterm">abugida</span>. Consonant letters have an inherent vowel sound. Combining vowel-signs are attached to the consonant to indicate that a different vowel follows the consonant.   See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
 </p>
     <p>Actually, devanagari is based on orthographic syllables, so the vowel-sign is  in fact attached to the syllable. An orthographic syllable includes clusters of consonants without intervening vowel sounds. These clusters are typically represented as partially merged forms, called conjuncts.</p>
     <p>The devanagari block contains more characters than other indic scripts, partly because it serves as a pivot script for transliterations of other scripts.</p>
+</section>
+
+
+
+
+<section id="structure">
+    <h2><a href="#structure">Structure</a></h2>
+    <p> The effective unit of the writing systems is the orthographic syllable, consisting of a consonant and vowel (CV) core and, optionally, one or more preceding consonants, with a canonical structure of (((C)C)C)V. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf">u</a></sup></p>
+<p>Consonant letters by themselves constitute a CV unit, where the V is an inherent vowel, whose exact phonetic value may vary by writing system. Independent vowels also constitute a CV unit, where the C is considered to be null. A dependent vowel sign is used to represent a V in CV units where C is not null and V is not the inherent vowel. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf">u</a></sup></p>
+<p>In some cases, a phonological diphthong (such as Hindi <span class="charExample" translate="no"><span class="ex" lang="hi">जाओ</span> <span class="trans">ɟāọ̄</span></span>) is actually written as two orthographic CV units, where the second of these units is an independent vowel letter. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf">u</a></sup></p>
+<p>Two diacritics (generally classified as vowels) can be used to represent a syllable-final nasal or an unvoiced aspiration. Medial consonants are catered for by the consonant cluster model.</p>
 </section>
   
   
@@ -188,7 +199,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
   
   <section id="consonants">
-    <h2><a href="#consonants">Consonants</a></h2>
+  <h2><a href="#consonants">Consonants</a></h2>
     
     
 <section id="basicconsonants">
@@ -373,7 +384,7 @@ however, this rule does not always hold.)</p>
 </div>
 </figure>
 <p>Several vowel-signs are <em>spacing</em> combining characters. </p>
-<p>One vowel-sign appears to the left of the base consonant, ie. <span class="charExample" translate="no"><span class="ex" lang="hi">कि</span> <span class="ipa">kɪ</span></span>.</p>
+<p>One vowel-sign appears to the left of the base consonant in modern Devanagari, ie. <span class="charExample" translate="no"><span class="ex" lang="hi">कि</span> <span class="ipa">kɪ</span></span>, although one other historic character, <span class="codepoint" translate="no"><span lang="hi">&#x094E;</span> [<a href="devanagari#char094E"><span class="uname">U+094E DEVANAGARI VOWEL SIGN PRISHTHAMATRA E</span></a>]</span>, also does.</p>
 </section>
 
 
@@ -440,6 +451,94 @@ however, this rule does not always hold.)</p>
 
 
   
+<section id="conjuncts">
+<h2><a href="#conjuncts">Consonant clusters</a></h2>
+<p>The absence of a vowel sound between two or more consonants is visually indicated in one of the following ways.</p>
+    <ol>
+    <li>Reduce the shape of all consonants in the cluster except the last to a 'half-form'. </li>
+<li>Reduce a non-initial consonant in size and shape and position it below the first.</li>
+<li>Create a ligature combining the two shapes (where neither may be readily identified).</li>
+<li>The letter <span class="trans">ra</span> has its own idiosyncratic way of combining with other consonants, whether it precedes or follows them.</li>
+<li>Show a visible virama below the non-final consonants in the cluster.</li>
+<li>No indication, although there are usually generalised pronunciation rules that allow readers to spot these locations. Examples of these rules are given in the section about <a href="#inherentvowel">the inherent vowel</a>.</li>
+</ol>
+<p>In all cases, the underlying mechanism in terms of codepoints involves adding <span class="codepoint" translate="no"><span lang="hi">&#x094D;</span> [<a href="devanagari#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA</span></a>]</span> between the consonants in the cluster, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">क्ष</span></span> is produced by the sequence <span class="codepoint" translate="no"><span lang="hi">&#x0915;</span> + <span lang="hi">&#x094D;</span> + <span lang="hi">&#x0937;</span> [<a href="devanagari#char0915"><span class="uname">U+0915 DEVANAGARI LETTER KA</span></a> + <a href="devanagari#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA</span></a> + <a href="devanagari#char0937"><span class="uname">U+0937 DEVANAGARI LETTER SSA</span></a>]</span>.</p>
+<p>Where the approach changes the shape of the constituent consonants, the cluster is referred to as a <span class="name">conjunct</span>.</p>
+<p>The font usually determines which visual method is used, although it is possible to influence this (see below).</p>
+    
+    
+    
+<section id="halfforms">
+<h3><a href="#halfforms">Half-forms</a></h3>
+<p>A half-form is typically created by removing the vertical line in the consonant shape, where there is one. (The vertical line is associated with the inherent vowel, and around two-thirds of Devanagari consonant shapes contain one.) There is often some additional tweaking of glyphs in order to join the components neatly.</p>
+    <figure>
+        <p class="large exampleFlex"><span class="ex" lang="hi">तव→त्व</span><span class="ex" lang="hi">कक→क्क</span><span class="ex" lang="hi">तसव→त्स्व</span></p>
+    <figcaption>Examples of conjuncts formed by using half-forms.</figcaption>
+    </figure>
+</section>
+    
+    
+    
+<section id="verticalcombinations">
+<h3><a href="#verticalcombinations">Vertical combinations</a></h3>
+<p>This is more common for Sanskrit, and few modern fonts reorder glyphs in this way, or do so for a limited number of combinations.</p>
+    <figure>
+        <p class="large exampleFlex"><span class="ex" lang="hi">कक→<img src="images/verticalconjunct.png" alt="क्क" style="vertical-align: middle;"/></span> <span class="ex" lang="hi">दब→द्ब</span> <span class="ex" lang="hi">हव→ह्व</span></p>
+    <figcaption>Examples of conjuncts formed by subjoining non-initial consonants.</figcaption>
+    </figure>
+</section>
+    
+    
+    
+<section id="ligatedconjuncts">
+<h3><a href="#ligatedconjuncts">Ligated conjuncts</a></h3>
+<p>Typically, only a small number of clusters are combined in a way that makes it difficult to spot the component parts. This is, however, the default for two particular clusters: <span class="charExample" translate="no"><span class="ex" lang="hi">क्ष</span> <span class="trans">k͓ʂ</span></span> and <span class="charExample" translate="no"><span class="ex" lang="hi">ज्ञ</span> <span class="trans">ɟ͓ɲ</span></span>.</p>
+    <figure>
+        <p class="large exampleFlex"><span class="ex" lang="hi">कष→क्ष</span> <span class="ex" lang="hi">जञ→ज्ञ</span> <span class="ex" lang="hi">कत→क्त</span></p>
+    <figcaption>Conjuncts formed by ligation.</figcaption>
+    </figure>
+</section>
+    
+    
+    
+<section id="rconjuncts">
+<h3><a href="#rconjuncts">Conjuncts with <span class="trans">ra</span></a></h3>
+<p>When ra <em>follows</em> another consonant, it is typically rendered as a small, diagonal line to the left, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">क्र ग्र भ्र</span></span>. After 6 consonants, however, it is rendered as an upside-down v shape below, ie. <span class="charExample" translate="no"><span class="ex" lang="hi">ट्र ठ्र ड्र ढ्र ड़्र छ्र</span></span>. After <span class="charExample" translate="no"><span class="ex" lang="hi">त</span></span> it produces <span class="charExample" translate="no"><span class="ex" lang="hi">त्र</span></span>.</p>
+    <figure>
+        <p class="large exampleFlex"><span class="ex" lang="hi">कर→क्र</span> <span class="ex" lang="hi">टर→ट्र</span> <span class="ex" lang="hi">तर→त्र</span></p>
+    <figcaption>Conjuncts formed by a following <span class="name">ra</span>.</figcaption>
+    </figure>
+<p>When ra <em>precedes</em> another consonant, it is  rendered as a small hook above the vertical line in the cluster, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">र्क</span> <span class="trans">r͓k</span> and </span><span class="charExample" translate="no"><span class="ex" lang="hi">र्ल</span> <span class="trans">r͓l</span></span>. Where it precedes a cluster using half-forms, it is aligned with the vertical line of the trailing consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">र्स्प</span> <span class="trans">r͓s͓p</span></span>. However, if there is a spacing vowel-sign with a vertical line to the right of the cluster, it aligns with that, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">र्का</span> <span class="trans">r͓kā</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="hi">र्की</span> <span class="trans">r͓kī</span></span>. (This illustrates how the basic units of the script are orthographic syllables.)</p>
+    <figure>
+        <p class="large exampleFlex"><span class="ex">र्क</span> <span class="ex" lang="hi">र्ल</span> <span class="ex" lang="hi">र्स्प</span> <span class="ex" lang="hi">र्का</span></p>
+    <figcaption>Examples of positioning of the hook for conjuncts formed by a preceding <span class="name">ra</span>.</figcaption>
+    </figure>
+</section>
+    
+    
+    
+<section id="visiblevirama">
+<h3><a href="#visiblevirama">Visible virama</a></h3>
+<p>The ability to form conjuncts depends on the richness of the font. Where a font is not able to produce a half-form or ligature, etc., it will leave a visible virama glyph below the initial consonant(s) to indicate the missing vowel sound, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">क्‌क</span> <span class="trans">k͓‌k</span></span>.</p>
+<p>An important consequence of representing clusters in this way is that the syllable boundaries are different. For example, if we follow the cluster with a left-positioned vowel-sign, it will now appear after the virama, rather than before the cluster, eg. compare <span class="charExample" translate="no"><span class="ex" lang="hi">क्कि</span></span> and <span class="charExample" translate="no"><span class="ex" lang="hi">क्‌कि</span></span>. This change is also reflected in segmentation of the text for line-breaking, inter-character spacing, etc.</p>
+<p>A visible virama may also be used with a single consonant, to indicate that it is to be pronounced without the inherent vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">क्</span> <span class="ipa">k</span></span>.</p>
+</section>
+    
+    
+    
+<section id="joiner">
+<h3><a href="#joiner">Using ZWJ &amp; ZWNJ</a></h3>
+<p>The examples in the previous subsection used <span class="codepoint" translate="no"><a href="devanagari#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a></span> to force the production of a visible virama, rather than a half-form. For example:</p>
+<ul>
+<li><span class="codepoint" translate="no"><span lang="hi">&#x0915;</span> + <span lang="hi">&#x094D;</span> + <span lang="hi"><span class="uname">ZWNJ</span></span> + <span lang="hi">&#x0915;</span> [<a href="devanagari#char0915"><span class="uname">U+0915 DEVANAGARI LETTER KA</span></a> + <a href="devanagari#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA</span></a> + <a href="devanagari#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a> + <a href="devanagari#char0915"><span class="uname">U+0915 DEVANAGARI LETTER KA</span></a>]</span> produces <span class="charExample" translate="no"><span class="ex" lang="hi">क्‌क</span></span>, rather than <span class="charExample" translate="no"><span class="ex" lang="hi">क्क</span></span>.</li>
+<li><span class="codepoint" translate="no"><span lang="hi">&#x0915;</span> + <span lang="hi">&#x094D;</span> + <span lang="hi"><span class="uname">ZWNJ</span></span> + <span lang="hi">&#x0937;</span> [<a href="devanagari#char0915"><span class="uname">U+0915 DEVANAGARI LETTER KA</span></a> + <a href="devanagari#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA</span></a> + <a href="devanagari#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a> + <a href="devanagari#char0937"><span class="uname">U+0937 DEVANAGARI LETTER SSA</span></a>]</span> produces <span class="charExample" translate="no"><span class="ex" lang="hi">क्‌ष</span></span>, rather than <span class="charExample" translate="no"><span class="ex" lang="hi">क्ष</span></span>.</li>
+</ul>
+<p><span class="codepoint" translate="no"><a href="devanagari#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a></span> can  be used to produce a half-form, such as <span class="charExample" translate="no"><span class="ex" lang="hi">क्‍ष</span></span>, rather than <span class="charExample"><span class="ex" lang="hi">क्ष</span></span>. It can also be used to produce standalone half-forms (for educational text) such as <span class="charExample" translate="no"><span class="ex" lang="hi">घ्‍</span></span>.</p>
+</section>
+</section>
+
+
+  
 <section id="vocalics">
 <h2><a href="#vocalics">Vocalics</a></h2>
     <p>A set of letters represents a special combination of consonant+vowel, available both as vowel-signs and independent vowels.</p>
@@ -462,20 +561,58 @@ however, this rule does not always hold.)</p>
 
   
 <section id="cchar">
-<h2><a href="#cchar">Combining characters</a></h2>
-    <p>The main devanagari block has a fairly large number of combining characters (52 out of 158). All but six of those are vowel-signs. The remainder are 2 candrabindus, anusvara, visarga, nukta and virama.</p>
-    <p>The latter regularly combine with a vowel-sign attached to the same consonant or consonant cluster. The example below shows  two combining characters that are positioned above the base character in a very common form of the verb 'to be'. One is <span class="codepoint"><span lang="hi">&#x0948;</span> <a href="/scripts/devanagari/block#char0948">[<span class="uname">U+0948 DEVANAGARI VOWEL SIGN AI​</span>]</a></span>, and the other the nasalisation mark <span class="codepoint"><span lang="hi">&#x0902;</span> <a href="/scripts/devanagari/block#char0902">[<span class="uname">U+0902 DEVANAGARI SIGN ANUSVARA​</span>]</a></span>.</p>
-<figure>
-<p class="large"><span class="ex" lang="hi">हैं</span> &nbsp;</p>
-    <figcaption>Multiple combining characters over one base character.</figcaption>
+<h2><a href="#cchar">Diacritics</a></h2>
+    <p>In addition to the combining characters already mentioned, the Devanagari block contains the following diacritics.</p>
+<p><figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'hi')">list all 6</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="hi">ऀ</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॱ</span></div>
+<div class="listPair"><span class="listItem" lang="hi">॑</span></div>
+<div class="listPair"><span class="listItem" lang="hi">॒</span></div>
+<div class="listPair"><span class="listItem" lang="hi">॓</span></div>
+<div class="listPair"><span class="listItem" lang="hi">॔</span></div>
+</div>
+</figure>
+
+</section>
+  
+  
+<section id="digits">
+<h2><a href="#digits">Numbers</a></h2>
+    <p>Devanagari has a set of digits, that can be referred to as 'hindi' numerals. They are used regularly.</p>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'hi')">list all 10</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="hi">०</span><span class="listTrans">0</span></div>
+<div class="listPair"><span class="listItem" lang="hi">१</span><span class="listTrans">1</span></div>
+<div class="listPair"><span class="listItem" lang="hi">२</span><span class="listTrans">2</span></div>
+<div class="listPair"><span class="listItem" lang="hi">३</span><span class="listTrans">3</span></div>
+<div class="listPair"><span class="listItem" lang="hi">४</span><span class="listTrans">4</span></div>
+<div class="listPair"><span class="listItem" lang="hi">५</span><span class="listTrans">5</span></div>
+<div class="listPair"><span class="listItem" lang="hi">६</span><span class="listTrans">6</span></div>
+<div class="listPair"><span class="listItem" lang="hi">७</span><span class="listTrans">7</span></div>
+<div class="listPair"><span class="listItem" lang="hi">८</span><span class="listTrans">8</span></div>
+<div class="listPair"><span class="listItem" lang="hi">९</span><span class="listTrans">9</span></div>
+</div>
+</figure>
+<p>An interesting feature of large numbers written in India is that they apply groupings of two, rather than three, digits between commas (even when using european digits).</p>
+    <figure>
+    <p class="large"><span class="ex" lang="hi">20,00,000</span></p>
+    <figcaption>Two million, written with Indian comma separators.</figcaption>
     </figure>
+
+<p><span class="leadin">Currency.</span> <span class="codepoint" translate="no"><span lang="hi">&#x20B9;</span> [<a href="devanagari#char20B9"><span class="uname">U+20B9 INDIAN RUPEE SIGN</span></a>]</span> is the symbol introduced by the Government of India in 2010 as the official currency symbol for the Indian rupee (INR). <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch22.pdf">u</a></sup></p>
+<p>It is distinguished from <span class="codepoint" translate="no"><span lang="hi">₨</span> [<a href="/scripts/currencysymbols/block#char20A8"><span class="uname">U+20A8 RUPEE SIGN</span></a>]</span>, which is an older symbol not formally  tied to any particular currency. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch22.pdf">u</a></sup> Follow that link for more information about the rupee.&nbsp;</p>
 </section>
   
   
   
-    <h2><a href="#context">Context-based glyph changes</a></h2>
   
-<section id="gsub" class="tones">
+  <section> 
+  <h2><a href="#context">Context-based glyph changes</a></h2>
+  
+<section id="gsub">
     <h3>Context-based shaping</h3>
     <p>The shape of a character when displayed can vary, often dramatically, according to the context.</p>
     <p>One very common example in most indic scripts is the handling of 'conjunct consonants', ie. groups of consonants with no intervening vowel sounds. Since consonants in indic scripts have an inherent vowel sound, when two consonants are combined this way you have to indicate that the vowel of the initial consonant  is suppressed. This is normally done by altering the shape of the first consonant, or merging the shape of the two consonants. </p>
@@ -491,7 +628,23 @@ however, this rule does not always hold.)</p>
     </figure>
   </section>
   
-  
+
+
+
+ <section id="mcchars">
+    <h3>Multiple combining characters</h3>
+
+<p>Diacritics regularly combine with a vowel-sign attached to the same consonant or consonant cluster. The example below shows  two combining characters that are positioned above the base character in a very common form of the verb 'to be'. One is <span class="codepoint"><span lang="hi">&#x0948;</span> <a href="/scripts/devanagari/block#char0948">[<span class="uname">U+0948 DEVANAGARI VOWEL SIGN AI​</span>]</a></span>, and the other the nasalisation mark <span class="codepoint"><span lang="hi">&#x0902;</span> <a href="/scripts/devanagari/block#char0902">[<span class="uname">U+0902 DEVANAGARI SIGN ANUSVARA​</span>]</a></span>.</p>
+<figure>
+<p class="large"><span class="ex" lang="hi">हैं</span> &nbsp;</p>
+    <figcaption>Multiple combining characters over one base character.</figcaption>
+    </figure>
+</section>
+
+
+
+
+
 <section id="gpos">
     <h3>Context-based positioning</h3>
     <p>Combining characters need to be placed in different positions, according to the context.</p>
@@ -506,29 +659,12 @@ however, this rule does not always hold.)</p>
 <figcaption>Context-dependent placement of the glyph representing <span class="trans">ra</span>.</figcaption>
 </figure>
 </section>
-
-
-
-
-
-<section id="digits">
-<h2><a href="#digits">Digits</a></h2>
-    <p>Devanagari has a set of digits, that can be referred to as 'hindi' numerals. They are used regularly.</p>
-    <figure>
-    <p class="large"><span class="ex" lang="hi">०१२३४५६७८९</span></p>
-    <figcaption>'Hindi' digits.</figcaption>
-    </figure>
-    <p>An interesting feature of large numbers written in India is that they apply groupings of two, rather than three, digits between commas (even when using european digits).</p>
-    <figure>
-    <p class="large"><span class="ex" lang="hi">20,00,000</span></p>
-    <figcaption>Two million, written with Indian comma separators.</figcaption>
-    </figure>
 </section>
-  
-  
-  
-  
-   <section id="layout">
+
+
+
+
+<section id="layout">
     <h2><a href="#layout">Text layout</a></h2>
    
       
@@ -580,7 +716,7 @@ however, this rule does not always hold.)</p>
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/devanagari"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-02  19:16<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bdevanagari%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fdevanagari%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/devanagari"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-03  17:44<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bdevanagari%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fdevanagari%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 
