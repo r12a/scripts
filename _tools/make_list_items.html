@@ -36,7 +36,7 @@ document.getElementById('out').value = makeListFromChars(document.getElementById
 <br style="clear: both;"/>
 
 <div class="smallprint" style="margin-top: 3em; font-size: 70%; font-style: italic;"><span id="version">This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2018-12-19  18:02<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2019-01-02  8:12<!-- #EndDate --> 
 </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 <script type="text/javascript">
@@ -61,10 +61,20 @@ function makeListFromChars (lang, chars, bicameral) {
         charList[x] = charList[x].trim()
 		if (charList[x] === '') continue
         var items = charList[x].split('\t')
+        
+        items[0] = items[0].replace(/\\u([a-fA-F0-9]+)/,'&#x$1;')
+        
         if (bicameral) items[0] = items[0].toUpperCase() + items[0].toLowerCase()
         out += '<div class="listPair"><span class="listItem" lang="'+lang+'">'+ccbase+items[0]+'</span>'
+        
         if (document.getElementById('trans').value > 0) out += '<span class="listTrans">'+items[document.getElementById('trans').value]+'</span>'
-        if (document.getElementById('ipa').value > 0) out += '<span class="listIPA">'+items[document.getElementById('ipa').value]+'</span>'
+        
+        if (document.getElementById('ipa').value > 0) {
+            ipa = items[document.getElementById('ipa').value]
+            if (ipa) ipa = ipa.replace(/ /,', ')
+            out += '<span class="listIPA">'+ipa+'</span>'
+            }
+        
         if (document.getElementById('meaning').value > 0) out += '<span class="listMeaning">'+items[document.getElementById('meaning').value]+'</span>'
         out += '</div>\n'
 		}
