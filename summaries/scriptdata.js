@@ -21,9 +21,9 @@ var scriptData = [
 
 { script:"Greek", type:"alpha", chars:368, cchars:0, cs:"yes", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"no", region:"Europe", linked:"greek" },
 
-{ script:"Gujarati", type:"abugida", chars:91, cchars:26, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"high?", wrap:"word", justify:"space", digits:"yes", region:"Asia S" },
+{ script:"Gujarati", type:"abugida", chars:91, cchars:26, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"high?", wrap:"word", justify:"space", digits:"yes", region:"Asia S", linked:"gujarati" },
 
-{ script:"Gurmukhi", type:"abugida", chars:79, cchars:18, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"high", wrap:"word", justify:"space", digits:"yes", region:"Asia S" },
+{ script:"Gurmukhi", type:"abugida", chars:79, cchars:18, cs:"no", gpos:"yes", mcchars:"yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"high", wrap:"word", justify:"space", digits:"yes", region:"Asia S" , linked:"gurmukhi" },
 
 { script:"Han", type:"ideogr", chars:87915, cchars:0, cs:"no", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr/tbrl", wordsep:"no", baseline:"low", wrap:"char", justify:"char", digits:"yes", region:"Asia E", linked:"han" },
 
@@ -74,6 +74,8 @@ var scriptData = [
 { script:"Tifinagh", type:"alpha", chars:59, cchars:1, cs:"no", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr/rtl", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"no", region:"Africa", linked:"tifinagh" },
 	   
 { script:"UCAS", type:"?", chars:710, cchars:0, cs:"no", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space", digits:"no", region:"America" },
+	   
+{ script:"Vai", type:"syllabary", chars:300, cchars:0, cs:"no", gpos:"no", mcchars:"no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", justify:"space?", digits:"no", region:"Africa", linked:"vai" },
 	   
 ]
 
