@@ -33,7 +33,7 @@ var scriptNotes= {
     'tfng':[['Tifinagh script summary', 'tifinagh/']]
     }
 
-var charNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'grek', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr','laoo', 'lana', 'mand', 'mlym', 'mong', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'taml', 'thaa', 'thai', 'tibt', 'tfng'])
+var charNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr','laoo', 'lana', 'maka', 'mand', 'mlym', 'mong', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'tale', 'talu', 'tavt', 'taml', 'thaa', 'thai', 'tibt', 'tfng', 'vaii'])
 
 var charNotesList = {
     'armn':'armenian/block',
@@ -46,6 +46,7 @@ var charNotesList = {
     'deva':'devanagari/block',
     'ethi':'ethiopic/block',
     'grek':'greek/block',
+    'gujr':'gujarati/block',
     'guru':'gurmukhi/block',
     'hebr':'hebrew/block',
     'java':'javanese/block',
@@ -54,8 +55,9 @@ var charNotesList = {
     'laoo':'lao/block',
     'lisu':'lisu/block',
     'latn':'latin/block',
-    'mlym':'malayalam/block',
+    'maka':'makasar/block',
     'mand':'mandaic/block',
+    'mlym':'malayalam/block',
     'mong':'mongolian/block',
     'mymr':'myanmar/block',
     'nkoo':'nko/block',
@@ -63,13 +65,15 @@ var charNotesList = {
     'sinh':'sinhala/block',
     'sund':'sundanese/block',
     'syrc':'syriac/block',
+    'tale':'taile/block',
     'talu':'newtailue/block',
     'taml':'tamil/block',
     'tavt':'taiviet/block',
     'thaa':'thaana/block',
     'thai':'thai/block',
     'tibt':'tibetan/block',
-    'tfng':'tifinagh/block'
+    'tfng':'tifinagh/block',
+    'vaii':'vai/block'
     }
 
 
@@ -127,6 +131,7 @@ arab:{ script:"Arabic",  code:"Arab",
 	charts:[	"Arabic", "Arabic Supplement", "Arabic Extended-A", "Arabic Presentation Forms-A", "Arabic Presentation Forms-B" ],
 	pickers:[	{ name:"Arabic", url:"arabic" },
 				{ name:"Arabic Block", url:"arabicblock" },
+				{ name:"Persian", url:"persian" },
 				{ name:"Uighur", url:"uighur" },
 				{ name:"Urdu", url:"urdu" }
 				],
@@ -264,7 +269,7 @@ grek:{ script:"Greek", code:"Grek",
 	local: [	],
 	unicode:{ 	}, 
 	charts:[	"Greek and Coptic", "Greek Extended", "Ancient Greek Numbers" ],
-	pickers:[	
+	pickers:[	{ name:"Greek", url:"greek" }
 				],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-european.html#greek" }
 				],
@@ -451,7 +456,7 @@ egyp:{ script:"Egyptian Hieroglyphs", code:"Egyp",
 	local: [	],
 	unicode:{ 	}, 
 	charts:[	"Egyptian Hieroglyphs" ],
-	pickers:[	
+	pickers:[	{ name:"Egyptian hieroglyphs", url:"egyptian" }
 				],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-african.html#egyptianhieroglyphs" }
 				],
@@ -885,7 +890,8 @@ deva:{ script:"Devanagari", code:"Deva", name:"",
 				],
 	unicode:{ 	}, 
 	charts:[	"Devanagari", "Devanagari Extended", "Vedic Extensions" ],
-	pickers:[	{ name:"Devanagari", url:"devanagari" }
+	pickers:[	{ name:"Devanagari", url:"devanagari" },
+		{ name:"Hindi", url:"hindi" }
 				],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-south-asian.html#devanagari" }
 				],
@@ -912,7 +918,7 @@ gujr:{ script:"Gujarati", code:"Gujr", name:"",
 				],
 	unicode:{ 	}, 
 	charts:[	"Gujarati" ],
-	pickers:[	
+	pickers:[	{ name:"Gujarati", url:"gujarati" }
 				],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-south-asian.html#gujarati" }
 				],
@@ -1508,7 +1514,8 @@ mymr:{ script:"Myanmar", code:"Mymr", name:"Myanmar (Burmese)",
 		{ name:"Shan spreadsheet", url:"https://docs.google.com/spreadsheets/d/1IrqLDvl72CCj0QuRD1XCmypmwm0HAWmuK1Gl_ia7OpY/edit#gid=0" }],
 	unicode:{ 	}, 
 	charts:[	"Myanmar", "Myanmar Extended-A", "Myanmar Extended-B" ],
-	pickers:[	{ name:"Burmese", url:"myanmar" }
+	pickers:[	{ name:"Burmese", url:"myanmar" },
+		{ name:"Shan", url:"shan" }
 				],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-southeast-asian.html#burmese" }
 				],
@@ -1670,7 +1677,7 @@ bugi:{ script:"Buginese", code:"Bugi", name:"",
 				],
 	unicode:{ 	}, 
 	charts:[	"Buginese" ],
-	pickers:[	
+	pickers:[	{ name:"Buginese", url:"buginese" }
 				],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-southeast-asian.html#buginese" }
 				],
