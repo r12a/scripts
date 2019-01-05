@@ -5,9 +5,9 @@
 <title>Myanmar script notes</title>
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <meta name="description" content="Summary of the Myanmar script."/>
-<link rel="stylesheet" href="../../shared/style/docs.css" type="text/css" />
-<link rel="stylesheet" href="../summaries/local.css" type="text/css" />
-<style type="text/css">
+<link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../common/local.css" />
+<style>
 @font-face {
     font-family: 'webfont';
     src: url('/shared/webfonts/mm3-multiwf.woff2') format('woff2'),
@@ -32,20 +32,20 @@
 .large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
 </style>
 
-<script type="text/javascript" src="/shared/code/boilerplate.js"></script>
-<script type="text/javascript" src="/shared/code/toc_2016.js"></script>
-<script type="text/javascript" src="/shared/code/all-names.js"></script>
-<script type="text/javascript" src="/shared/code/character_conversion.js"></script>
-<script type="text/javascript" src="/shared/code/show_codepoints.js"></script>
-<script type="text/javascript" src="/shared/fontlists/manage.js"></script>
-<script type="text/javascript" src="/shared/code/scriptGroups.js"></script>
-<script type="text/javascript" src="../summaries/functions.js"></script>
-<script type="text/javascript" src="../block/functions.js"></script>
-<script type="text/javascript" src="/shared/code/getLinks.js"></script>
-<script type="text/javascript" src="/scripts/linkdata/linkdb.js"></script>
-<script type="text/javascript" src="../summaries/scriptdata.js"> </script>
+<script src="/shared/code/boilerplate.js"></script>
+<script src="/shared/code/toc_2016.js"></script>
+<script src="/shared/code/all-names.js"></script>
+<script src="/shared/code/character_conversion.js"></script>
+<script src="/shared/code/show_codepoints.js"></script>
+<script src="/shared/fontlists/manage.js"></script>
+<script src="/shared/code/scriptGroups.js"></script>
+<script src="../common/functions.js"></script>
+<script src="../common/block-functions.js"></script>
+<script src="/shared/code/getLinks.js"></script>
+<script src="/scripts/linkdata/linkdb.js"></script>
+<script src="../featurelist/scriptdata.js"> </script>
 
-<script type="text/javascript" src="/shared/fontlists/myanmar.js"> </script>
+<script src="/shared/fontlists/myanmar.js"> </script>
 </head>
 
 <body>
@@ -104,7 +104,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </aside>
 
 
-<p id="status">Updated Sun 15 Feb 2015 &bull; tags <a href="http://rishida.net/blog/index.php?tag=myanmar" title="Show all blog posts tagged with 'myanmar'">myanmar</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>.</p>
+<p id="status">Updated Sun 15 Feb 2015 &bull; tags <a href="https://r12a.github.io/blog/index.php?tag=myanmar" title="Show all blog posts tagged with 'myanmar'">myanmar</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>.</p>
 
 
 
@@ -1438,7 +1438,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   <p>If it is necessary to break text within a phrase, breaks can occur at syllable boundaries, but not within a word. The difficulty is that there is no visual information about which sequences of syllables consitute a word.</p>
   <p>The best way of detecting line-break opportunities  is to use a dictionary to search for polysyllabic words, and then break at syllable boundaries outside the word. This approach may run into problems when uncommon words or new words are used, especially those borrowed foreign terms.</p>
   <p>An alternative is  to indicate break points by inserting <a href="#char200B"><span class="uname">U+200B ZERO WIDTH SPACE</span></a> between words when the content is developed, although this can lead to a lot of extra work. </p>
-  <p>Another alternative is to tie the syllables in a word together using <a href="#char2060"><span class="uname">U+2060 WORD JOINER</span></a> while authoring the content. This requires less intervention, since the number of polysyllabic words is smaller than the total number of words, but applications must be able to ignore the word joiner for searching, sorting, and the like. For this reason Hosken recommends against using it,	and	recommends instead the use of a dictionary with ZWSP backup for words that the dictionary doesn't handle well. However, it's not clear which words a dictionary will fail to recognise when the text is used across different platforms and applications, so this is not an ideal solution either – not to mention that it is difficult for an author to know in advance which words will cause problems and which won't.<sup><a href="http://www.unicode.org/notes/tn11/">Hosken</a>, 12</sup></p>
+  <p>Another alternative is to tie the syllables in a word together using <a href="#char2060"><span class="uname">U+2060 WORD JOINER</span></a> while authoring the content. This requires less intervention, since the number of polysyllabic words is smaller than the total number of words, but applications must be able to ignore the word joiner for searching, sorting, and the like. For this reason Hosken recommends against using it,	and	recommends instead the use of a dictionary with ZWSP backup for words that the dictionary doesn't handle well. However, it's not clear which words a dictionary will fail to recognise when the text is used across different platforms and applications, so this is not an ideal solution either – not to mention that it is difficult for an author to know in advance which words will cause problems and which won't.<sup><a href="http://www.unicode.org/notes/tn11/">h</a>, 12</sup></p>
 </section>
 <section> </section>
 
@@ -1446,30 +1446,30 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<div class="section" id="references">
-<h2><a href="#endlinks" id="endlinks">Further reading</a></h2>
+<div class="section" id="refs">
+<h2><a href="#refs" id="endlinks">References</a></h2>
   <ol>
-    <li>[Daniels] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
+    <li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
       0-19-507993-0</li>
-    <li>[Hosken] Martin Hosken &amp; Maung Tuntunlwin, <a href="http://www.unicode.org/notes/tn11/">Unicode Technical Note #11, Representing Myanmar in Unicode: Details and Examples</a></li>
-    <li><span class="refcode">[Mesher]</span> Gene Mesher, <span class="doctitle">Burmese for Beginners </span>, ISBN 1-887521-51-8 </li>
-    <li>[Unicode] The Unicode Standard v7.0, <a href="http://www.unicode.org/versions/latest/ch16.pdf">Myanmar</a>. </li>
-    <li>[Uniprop] Ireland (NSAI), United Kingdom (BSI), Myanmar Language Commission, Myanmar Unicode and Natural Language Processing Research Center, Myanmar Computer Federation, <a href="http://www.unicode.org/L2/L2006/06077-n3043r-myanmar.pdf">Proposal to encode seven additional Myanmar characters in the UCS</a></li>
-    <li>[wpAlpha] Wikipedia, <a href="http://en.wikipedia.org/wiki/Burmese_alphabet">Burmese Alphabet</a></li>
-    <li>[wpTrans] Wikipedia, <a href="http://en.wikipedia.org/wiki/MLC_Transcription_System">MLC Transcription System</a></li>
-    <li>[wpLang] Wikipedia, <a href="http://en.wikipedia.org/wiki/Burmese_language">Burmese language</a></li>
-    <li>[msTyp] Microsoft Typography, <a href="http://www.microsoft.com/typography/OpenTypeDev/myanmar/intro.htm">Creating and Supporting OpenType Fonts for Myanmar Script</a>, Dec 2013</li>
-    <li>[Sealang] <a href="http://sealang.net/burmese/">Sealang Library Burmese</a></li>
+    <li>[ <sup><a href="http://www.unicode.org/notes/tn11/">h</a></sup> ] Martin Hosken &amp; Maung Tuntunlwin, <a href="http://www.unicode.org/notes/tn11/">Unicode Technical Note #11, Representing Myanmar in Unicode: Details and Examples</a></li>
+    <li>[ <sup><a href="#refs">m</a></sup> ]Gene Mesher, <span class="doctitle">Burmese for Beginners </span>, ISBN 1-887521-51-8 </li>
+    <li>[ <sup><a href="http://www.unicode.org/versions/latest/ch16.pdf">u</a></sup> ] The Unicode Standard v7.0, <a href="http://www.unicode.org/versions/latest/ch16.pdf">Myanmar</a>. </li>
+    <li>[ <sup><a href="http://www.unicode.org/L2/L2006/06077-n3043r-myanmar.pdf">l</a></sup> ] Ireland (NSAI), United Kingdom (BSI), Myanmar Language Commission, Myanmar Unicode and Natural Language Processing Research Center, Myanmar Computer Federation, <a href="http://www.unicode.org/L2/L2006/06077-n3043r-myanmar.pdf">Proposal to encode seven additional Myanmar characters in the UCS</a></li>
+    <li>[ <sup><a href="http://en.wikipedia.org/wiki/Burmese_alphabet">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Burmese_alphabet">Burmese Alphabet</a></li>
+    <li>[ <sup><a href="http://en.wikipedia.org/wiki/MLC_Transcription_System">wm</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/MLC_Transcription_System">MLC Transcription System</a></li>
+    <li>[ <sup><a href="http://en.wikipedia.org/wiki/Burmese_language">wl</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Burmese_language">Burmese language</a></li>
+    <li>[ <sup><a href="http://www.microsoft.com/typography/OpenTypeDev/myanmar/intro.htm">ms</a></sup> ] Microsoft Typography, <a href="http://www.microsoft.com/typography/OpenTypeDev/myanmar/intro.htm">Creating and Supporting OpenType Fonts for Myanmar Script</a>, Dec 2013</li>
+    <li>[ <sup><a href="http://sealang.net/burmese/">s</a></sup> ] <a href="http://sealang.net/burmese/">Sealang Library Burmese</a></li>
   </ol>
 </div>
 
 
 <div id="panel" style="display:none"></div>
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/myanmar"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-01-13  14:15<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bmyanmar%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fmyanmar%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/myanmar"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-05  11:04<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bmyanmar%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fmyanmar%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
-<script type="text/javascript">
+<script>
 var base = '/scripts/myanmar/block'
 initialiseShowNames(base, 'c');
 document.getElementById('featureTableBody').innerHTML = makeSidePanel("Myanmar","")
