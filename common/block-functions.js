@@ -444,20 +444,6 @@ console.log(items[0],'char'+hex)
                 p.innerHTML = 'Shape is <span class="ex" lang="'+lang+'">'+items[0]+'</span>'
                 prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
                 }
-
-            // tone correspondences
-            if (cols.htone>0 && items[cols.htone]) {
-                p = document.createElement('p')
-                p.className = 'tonePairing'
-                p.innerHTML = 'High tone equivalent is '+makeCharacterLink(items[cols.htone], lang, dir)
-                prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
-                }
-            if (cols.ltone>0 && items[cols.ltone]) {
-                p = document.createElement('p')
-                p.className = 'tonePairing'
-                p.innerHTML = 'Low tone equivalent is '+makeCharacterLink(items[cols.ltone], lang, dir)
-                prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
-                }
             
 
     
@@ -497,7 +483,21 @@ console.log(items[0],'char'+hex)
                 p.innerHTML = 'The corresponding dependent vowel is '+makeCharacterLink(items[cols.dvowel], lang, dir)
                 letter.appendChild(p)
                 }
-           
+  
+            // tone correspondences
+            if (cols.htone>0 && items[cols.htone]) {
+                p = document.createElement('p')
+                p.className = 'tonePairing'
+                p.innerHTML = 'High tone equivalent is '+makeCharacterLink(items[cols.htone], lang, dir)
+                letter.appendChild(p)
+                }
+            if (cols.ltone>0 && items[cols.ltone]) {
+                p = document.createElement('p')
+                p.className = 'tonePairing'
+                p.innerHTML = 'Low tone equivalent is '+makeCharacterLink(items[cols.ltone], lang, dir)
+                letter.appendChild(p)
+                }
+         
             
             // other transcriptions
             if (cols.othertranscriptions && cols.othertranscriptions.length > 0) { 
