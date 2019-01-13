@@ -234,3 +234,27 @@ function setFigureRefs () {
         }
     }
 
+
+
+function toggleTranscription (type, show) { 
+    // shows/hides a line of transcriptions in the listPairs
+    // type: string, name of the class of the items to toggle
+    // show: boolean, checkbox unchecked gives false
+    var trans = document.querySelectorAll('.'+type)
+    console.log('translen', trans.length)
+    if (trans.length === 0) return
+
+    for (let i=0; i<trans.length; i++) {
+        if (show) trans[i].style.display = 'block'
+        else trans[i].style.display = 'none'
+        }
+}
+
+//<div class="listPair"><span class="listItem" lang="ber">ⵓ</span><span class="listTrans">u</span><span class="listIPA">ʊ</span></div>
+
+
+
+
+
+
+
