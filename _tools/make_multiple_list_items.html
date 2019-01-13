@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+<meta charset="utf-8"/>
+<title>Make list for summary</title>
+<meta name="description" content="Make list items tool."/>
+</head>
+
+<body>
+<header>
+<h1>Make list for summary</h1>
+</header>
+
+<p>Makes markup for a list of characters  that is presented on the page as an inline table (using flexbox).</p>
+<p>The input box takes a list, one character per line, where each line contains at least the following tab-separated items: char, transliteration, ipa transcription, meaning. You don't have to fill all slots, but you should use the right number of tabs if slots are empty internally. Indicate which items to include, below.</p>
+<p>If you select 'bicameral' a character such as 'a' will come out as 'Aa'.</p>
+
+<p>
+<label>Language: <input type="text" style="width:4em" id="lang" placeholder="bcp47"/></label>
+<label>Cc base: <input type="text" style="width:2em" id="ccbase" placeholder="-"/></label>
+<label>Bicameral? <input type="checkbox" id="bicameral"></label>
+Show these columns: translit <select id="trans"><option value="0">0</option><option value="1" selected>1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select> 
+ipa <select id="ipa"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
+meaning <select id="meaning"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
+<label>characterBox? <input type="checkbox" id="characterBox"></label></p>
+<p>Additional transcriptions:<br>
+<input type="text" placeholder="className" id="extra1"/> <select id="extra1Col"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
+<input type="text" placeholder="className" id="extra2"/> <select id="extra2Col"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>
+</p>
+<button onClick="bicameral=false;
+if (document.getElementById('bicameral').checked) bicameral = true;
+document.getElementById('out').value = makeListFromChars(document.getElementById('lang').value, document.getElementById('in').value, bicameral); document.getElementById('out').select()">Go</button></p>
+
+<p><textarea id="in" placeholder="Add input list here" style="height:400px;float:left; width:45%; font-size: 150%;"></textarea>
+</p>
+
+<textarea id="out" style="height:400px;width:45%;float:right;"></textarea>
+
+<br style="clear: both;"/>
+
+<div class="smallprint" style="margin-top: 3em; font-size: 70%; font-style: italic;"><span id="version">This version <span id="version-info"> 
+  <!-- #BeginDate format:IS1m -->2019-01-13  4:30<!-- #EndDate --> 
+</span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
+
+<script type="text/javascript">
+
+
+function makeListFromChars (lang, chars, bicameral) {
+    var charList = chars.split('\n')
+    var ccbase = ''
+    if (document.getElementById('ccbase').value !== '') ccbase = document.getElementById('ccbase').value
+    var count = 0
+    for (let i=0;i<charList.length;i++) {
+        charList[i] = charList[i].trim()
+        if (charList[i] !== '') count++
+        }
+	var out = '<figure'
+    if (document.getElementById('characterBox').checked) out += ' class="characterBox"'
+    out += '>\n<div class="listAll" onClick="listAll(this, '
+    out += "'"+lang+"'"
+    out += ')">list all '+count+'</div>\n<div class="listArray">\n'
+	
+	for (let x=0; x<charList.length; x++) {
+        charList[x] = charList[x].trim()
+		if (charList[x] === '') continue
+        var items = charList[x].split('\t')
+        
+        items[0] = items[0].replace(/\\u([a-fA-F0-9]+)/,'&#x$1;')
+        
+        if (bicameral) items[0] = items[0].toUpperCase() + items[0].toLowerCase()
+        out += '<div class="listPair"><span class="listItem" lang="'+lang+'">'+ccbase+items[0]+'</span>'
+        
+        if (document.getElementById('ipa').value > 0) {
+            ipa = items[document.getElementById('ipa').value]
+            if (ipa) ipa = ipa.replace(/ /,', ')
+            out += '<span class="listIPA">'+ipa+'</span>'
+            }
+        
+        if (document.getElementById('trans').value > 0) out += '<span class="listTrans">'+items[document.getElementById('trans').value]+'</span>'
+        
+        if (document.getElementById('meaning').value > 0) out += '<span class="listMeaning">'+items[document.getElementById('meaning').value]+'</span>'
+ 
+         if (document.getElementById('extra1Col').value > 0) {
+            extra1Col = items[document.getElementById('extra1Col').value]
+            if (extra1Col) extra1Col = extra1Col.replace(/ /,', ')
+            out += '<span class="'+document.getElementById('extra1').value+'" style="display:none;">'+extra1Col+'</span>'
+            }
+        
+         if (document.getElementById('extra2Col').value > 0) {
+            extra2Col = items[document.getElementById('extra2Col').value]
+            if (extra2Col) extra2Col = extra2Col.replace(/ /,', ')
+            out += '<span class="'+document.getElementById('extra2').value+'" style="display:none;">'+extra2Col+'</span>'
+            }
+        
+
+        out += '</div>\n'
+		}
+	return out+'</div>\n</figure>\n'
+	}
+
+</script>
+
+</body>
+</html>
