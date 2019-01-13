@@ -96,7 +96,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->05-Jan-2019<!-- #EndDate -->
+  <!-- #BeginDate format:En2 -->13-Jan-2019<!-- #EndDate -->
 &bull; tags <a href="http://r12a.github.io/blog/index.php?tag=devanagari" title="Show all blog posts tagged with 'devanagari'">devanagari</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
@@ -136,7 +136,6 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
    </div>
 
 
-<section id="notes"> 
 
  <section id="history">
     <h2><a href="#history">Usage &amp; history</a></h2>
@@ -173,7 +172,17 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
   
   
-  
+<div id="showTranscriptions">
+<div>Show transcriptions</div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div><label>ISO 15919 <input type="checkbox" onChange="toggleTranscription('iso15919', this.checked)"/></label></div>
+</div>
+
+
+
+
+
 <section id="chars">
 <h2>Character lists</h2>
     <p>The Devanagari script characters in Unicode 10.0 are contained in 2 blocks (not counting shared characters, such as punctuation):</p>
@@ -192,7 +201,6 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <p>For character-specific details see 
   <a class="linkHighlight" href="/scripts/devanagari/block">Devanagari character notes</a>.</p>
 </section>
-</section>
 
 
 
@@ -207,60 +215,66 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
     
     
 <p>Basic set of consonants used for Sanskrit. (Phonetic information for Hindi.)</p>
+
 <figure class="characterBox">
 <div class="listAll" onClick="listAll(this, 'hi')">list all 33</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="hi">क</span><span class="listTrans">k</span><span class="listIPA">k</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ख</span><span class="listTrans">kʰ</span><span class="listIPA">kʰ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ग</span><span class="listTrans">g</span><span class="listIPA">g</span></div>
-<div class="listPair"><span class="listItem" lang="hi">घ</span><span class="listTrans">gʰ</span><span class="listIPA">gʰ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ङ</span><span class="listTrans">ŋ</span><span class="listIPA">ŋ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">च</span><span class="listTrans">c</span><span class="listIPA">ʧ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">छ</span><span class="listTrans">cʰ</span><span class="listIPA">ʧʰ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ज</span><span class="listTrans">j</span><span class="listIPA">ɟ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">झ</span><span class="listTrans">jʰ</span><span class="listIPA">ɟʰ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ञ</span><span class="listTrans">ɲ</span><span class="listIPA">ɲ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ट</span><span class="listTrans">ʈ</span><span class="listIPA">ʈ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ठ</span><span class="listTrans">ʈʰ</span><span class="listIPA">ʈʰ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ड</span><span class="listTrans">ɖ</span><span class="listIPA">ɖ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ढ</span><span class="listTrans">ɖʰ</span><span class="listIPA">ɖʰ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ण</span><span class="listTrans">ɳ</span><span class="listIPA">ɳ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">त</span><span class="listTrans">t</span><span class="listIPA">t</span></div>
-<div class="listPair"><span class="listItem" lang="hi">थ</span><span class="listTrans">tʰ</span><span class="listIPA">tʰ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">द</span><span class="listTrans">d</span><span class="listIPA">d</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ध</span><span class="listTrans">dʰ</span><span class="listIPA">dʰ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">न</span><span class="listTrans">n</span><span class="listIPA">n</span></div>
-<div class="listPair"><span class="listItem" lang="hi">प</span><span class="listTrans">p</span><span class="listIPA">p</span></div>
-<div class="listPair"><span class="listItem" lang="hi">फ</span><span class="listTrans">pʰ</span><span class="listIPA">pʰ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ब</span><span class="listTrans">b</span><span class="listIPA">b</span></div>
-<div class="listPair"><span class="listItem" lang="hi">भ</span><span class="listTrans">bʰ</span><span class="listIPA">bʰ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">म</span><span class="listTrans">m</span><span class="listIPA">m</span></div>
-<div class="listPair"><span class="listItem" lang="hi">य</span><span class="listTrans">y</span><span class="listIPA">j</span></div>
-<div class="listPair"><span class="listItem" lang="hi">र</span><span class="listTrans">r</span><span class="listIPA">r</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ल</span><span class="listTrans">l</span><span class="listIPA">l</span></div>
-<div class="listPair"><span class="listItem" lang="hi">व</span><span class="listTrans">ʋ</span><span class="listIPA">w, ʋ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">श</span><span class="listTrans">ʃ</span><span class="listIPA">ɕ, ʃ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ष</span><span class="listTrans">ʂ</span><span class="listIPA">ʂ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">स</span><span class="listTrans">s</span><span class="listIPA">s</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ह</span><span class="listTrans">h</span><span class="listIPA">h</span></div>
+<div class="listPair"><span class="listItem" lang="hi">क</span><span class="listIPA">k</span><span class="listTrans">k</span><span class="iso15919" style="display:none;">k</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ख</span><span class="listIPA">kʰ</span><span class="listTrans">kʰ</span><span class="iso15919" style="display:none;">kh</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ग</span><span class="listIPA">g</span><span class="listTrans">g</span><span class="iso15919" style="display:none;">g</span></div>
+<div class="listPair"><span class="listItem" lang="hi">घ</span><span class="listIPA">gʰ</span><span class="listTrans">gʰ</span><span class="iso15919" style="display:none;">gh</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ङ</span><span class="listIPA">ŋ</span><span class="listTrans">ŋ</span><span class="iso15919" style="display:none;">ṅ</span></div>
+<div class="listPair"><span class="listItem" lang="hi">च</span><span class="listIPA">ʧ</span><span class="listTrans">c</span><span class="iso15919" style="display:none;">c</span></div>
+<div class="listPair"><span class="listItem" lang="hi">छ</span><span class="listIPA">ʧʰ</span><span class="listTrans">cʰ</span><span class="iso15919" style="display:none;">ch</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ज</span><span class="listIPA">ɟ</span><span class="listTrans">j</span><span class="iso15919" style="display:none;">j</span></div>
+<div class="listPair"><span class="listItem" lang="hi">झ</span><span class="listIPA">ɟʰ</span><span class="listTrans">jʰ</span><span class="iso15919" style="display:none;">jh</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ञ</span><span class="listIPA">ɲ</span><span class="listTrans">ɲ</span><span class="iso15919" style="display:none;">ñ</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ट</span><span class="listIPA">ʈ</span><span class="listTrans">ʈ</span><span class="iso15919" style="display:none;">ṭ</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ठ</span><span class="listIPA">ʈʰ</span><span class="listTrans">ʈʰ</span><span class="iso15919" style="display:none;">ṭh</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ड</span><span class="listIPA">ɖ</span><span class="listTrans">ɖ</span><span class="iso15919" style="display:none;">ḍ</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ढ</span><span class="listIPA">ɖʰ</span><span class="listTrans">ɖʰ</span><span class="iso15919" style="display:none;">ḍh</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ण</span><span class="listIPA">ɳ</span><span class="listTrans">ɳ</span><span class="iso15919" style="display:none;">ṇ</span></div>
+<div class="listPair"><span class="listItem" lang="hi">त</span><span class="listIPA">t</span><span class="listTrans">t</span><span class="iso15919" style="display:none;">t</span></div>
+<div class="listPair"><span class="listItem" lang="hi">थ</span><span class="listIPA">tʰ</span><span class="listTrans">tʰ</span><span class="iso15919" style="display:none;">th</span></div>
+<div class="listPair"><span class="listItem" lang="hi">द</span><span class="listIPA">d</span><span class="listTrans">d</span><span class="iso15919" style="display:none;">d</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ध</span><span class="listIPA">dʰ</span><span class="listTrans">dʰ</span><span class="iso15919" style="display:none;">dh</span></div>
+<div class="listPair"><span class="listItem" lang="hi">न</span><span class="listIPA">n</span><span class="listTrans">n</span><span class="iso15919" style="display:none;">n</span></div>
+<div class="listPair"><span class="listItem" lang="hi">प</span><span class="listIPA">p</span><span class="listTrans">p</span><span class="iso15919" style="display:none;">p</span></div>
+<div class="listPair"><span class="listItem" lang="hi">फ</span><span class="listIPA">pʰ</span><span class="listTrans">pʰ</span><span class="iso15919" style="display:none;">ph</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ब</span><span class="listIPA">b</span><span class="listTrans">b</span><span class="iso15919" style="display:none;">b</span></div>
+<div class="listPair"><span class="listItem" lang="hi">भ</span><span class="listIPA">bʰ</span><span class="listTrans">bʰ</span><span class="iso15919" style="display:none;">bh</span></div>
+<div class="listPair"><span class="listItem" lang="hi">म</span><span class="listIPA">m</span><span class="listTrans">m</span><span class="iso15919" style="display:none;">m</span></div>
+<div class="listPair"><span class="listItem" lang="hi">य</span><span class="listIPA">j</span><span class="listTrans">y</span><span class="iso15919" style="display:none;">y</span></div>
+<div class="listPair"><span class="listItem" lang="hi">र</span><span class="listIPA">r</span><span class="listTrans">r</span><span class="iso15919" style="display:none;">r</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ल</span><span class="listIPA">l</span><span class="listTrans">l</span><span class="iso15919" style="display:none;">l</span></div>
+<div class="listPair"><span class="listItem" lang="hi">व</span><span class="listIPA">w, ʋ</span><span class="listTrans">ʋ</span><span class="iso15919" style="display:none;">v</span></div>
+<div class="listPair"><span class="listItem" lang="hi">श</span><span class="listIPA">ɕ, ʃ</span><span class="listTrans">ʃ</span><span class="iso15919" style="display:none;">ś</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ष</span><span class="listIPA">ʂ</span><span class="listTrans">ʂ</span><span class="iso15919" style="display:none;">ṣ</span></div>
+<div class="listPair"><span class="listItem" lang="hi">स</span><span class="listIPA">s</span><span class="listTrans">s</span><span class="iso15919" style="display:none;">s</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ह</span><span class="listIPA">h</span><span class="listTrans">h</span><span class="iso15919" style="display:none;">h</span></div>
 </div>
 </figure>
+
+
 
 
 <p>Additional consonants in the Unicode block encoded as single characters.</p>
+
 <figure class="characterBox">
 <div class="listAll" onClick="listAll(this, 'hi')">list all 8</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="hi">ळ</span><span class="listTrans">ɭ</span><span class="listIPA">ɭ, ɭ̆</span></div>
-<div class="listPair"><span class="listItem" lang="hi">झ़</span><span class="listTrans">ʒ̣</span><span class="listIPA">ʒ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ॹ</span><span class="listTrans"></span><span class="listIPA"></span></div>
-<div class="listPair"><span class="listItem" lang="hi">ॺ</span><span class="listTrans"></span><span class="listIPA"></span></div>
-<div class="listPair"><span class="listItem" lang="hi">ॻ</span><span class="listTrans">ɠ</span><span class="listIPA">ɠ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ॼ</span><span class="listTrans">ʄ</span><span class="listIPA">ʄ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ॾ</span><span class="listTrans">ɗ</span><span class="listIPA">ɗ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ॿ</span><span class="listTrans">ɓ</span><span class="listIPA">ɓ</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ळ</span><span class="listIPA">ɭ, ɭ̆</span><span class="listTrans">ɭ</span><span class="iso15919" style="display:none;">ḷ</span></div>
+<div class="listPair"><span class="listItem" lang="hi">झ़</span><span class="listIPA">ʒ</span><span class="listTrans">ʒ̣</span><span class="iso15919" style="display:none;"></span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॹ</span><span>&nbsp;</span><span class="listTrans"></span><span class="iso15919" style="display:none;"></span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॺ</span><span>&nbsp;</span><span class="listTrans"></span><span class="iso15919" style="display:none;"></span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॻ</span><span class="listIPA">ɠə</span><span class="listTrans">ɠ</span><span class="iso15919" style="display:none;"></span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॼ</span><span class="listIPA">ʄə</span><span class="listTrans">ʄ</span><span class="iso15919" style="display:none;"></span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॾ</span><span class="listIPA">ɗə</span><span class="listTrans">ɗ</span><span class="iso15919" style="display:none;"></span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॿ</span><span class="listIPA">ɓə</span><span class="listTrans">ɓ</span><span class="iso15919" style="display:none;"></span></div>
 </div>
 </figure>
+
+
 </section>
 
 
@@ -269,37 +283,44 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <section id="nukta">
 <h3><a href="#nukta">Extended consonants</a></h3>
         
-  <p><span class="codepoint" translate="no"><span lang="hi">&#x093C;</span> [<a href="devanagari#char093C"><span class="uname">U+093C DEVANAGARI SIGN NUKTA</span></a>]</span> is used to represent foreign sounds, eg. <span class="charExample"><span class="ex" lang="hi">ख़ारीदारी</span> <span class="trans">k͟hārīdārī</span> <span class="meaning">shopping</span></span>. The Unicode block contains precomposed code points for the following.</p>
+  <p><span class="codepoint" translate="no"><span lang="hi">&#x093C;</span> [<a href="devanagari#char093C"><span class="uname">U+093C DEVANAGARI SIGN NUKTA</span></a>]</span> is used to represent foreign sounds, eg. in <span class="charExample" translate="no"><span class="ex" lang="hi">ख़ारीदारी</span> <span class="trans">xārīdārī</span> <span class="meaning">shopping, the dot changes <span class="charExample" translate="no"><span class="ex" lang="hi">ख</span> <span class="ipa">kʰ</span></span> to <span class="charExample" translate="no"><span class="ex" lang="hi">ख़</span> <span class="ipa">x</span></span></span></span>. The Unicode block contains precomposed code points for the following.</p>
+  
+
 <figure class="characterBox">
 <div class="listAll" onClick="listAll(this, 'hi')">list all 11</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="hi">&#x0929;</span><span class="listTrans">ṉ</span><span class="listIPA"></span></div>
-<div class="listPair"><span class="listItem" lang="hi">&#x0931;</span><span class="listTrans"></span><span class="listIPA"></span></div>
-<div class="listPair"><span class="listItem" lang="hi">&#x0934;</span><span class="listTrans"></span><span class="listIPA">ɭʱä</span></div>
-<div class="listPair"><span class="listItem" lang="hi">&#x0958;</span><span class="listTrans">q</span><span class="listIPA">q</span></div>
-<div class="listPair"><span class="listItem" lang="hi">&#x0959;</span><span class="listTrans">x</span><span class="listIPA">x</span></div>
-<div class="listPair"><span class="listItem" lang="hi">&#x095A;</span><span class="listTrans">ɣ</span><span class="listIPA">ɣ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">&#x095B;</span><span class="listTrans">z</span><span class="listIPA">z, q</span></div>
-<div class="listPair"><span class="listItem" lang="hi">&#x095C;</span><span class="listTrans">ɾ</span><span class="listIPA">ɾ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">&#x095D;</span><span class="listTrans">ɾʰ</span><span class="listIPA">ɾʰ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">&#x095E;</span><span class="listTrans">f</span><span class="listIPA">f</span></div>
-<div class="listPair"><span class="listItem" lang="hi">&#x095F;</span><span class="listTrans">ẏ</span><span class="listIPA"></span></div>
+<div class="listPair"><span class="listItem" lang="hi">&#x0929;</span><span>&nbsp;</span><span class="listTrans">ṉ</span><span class="iso15919" style="display:none;">ṉ</span></div>
+<div class="listPair"><span class="listItem" lang="hi">&#x0931;</span><span>&nbsp;</span><span>&nbsp;</span><span class="iso15919" style="display:none;">ṟ</span></div>
+<div class="listPair"><span class="listItem" lang="hi">&#x0934;</span><span class="listIPA">ɭʱä</span><span>&nbsp;</span><span class="iso15919" style="display:none;">ḻ</span></div>
+<div class="listPair"><span class="listItem" lang="hi">&#x0958;</span><span class="listIPA">q</span><span class="listTrans">q</span><span class="iso15919" style="display:none;">q</span></div>
+<div class="listPair"><span class="listItem" lang="hi">&#x0959;</span><span class="listIPA">x</span><span class="listTrans">x</span><span class="iso15919" style="display:none;">k͟h</span></div>
+<div class="listPair"><span class="listItem" lang="hi">&#x095A;</span><span class="listIPA">ɣ</span><span class="listTrans">ɣ</span><span class="iso15919" style="display:none;">ġ</span></div>
+<div class="listPair"><span class="listItem" lang="hi">&#x095B;</span><span class="listIPA">z</span><span class="listTrans">z</span><span class="iso15919" style="display:none;">z</span></div>
+<div class="listPair"><span class="listItem" lang="hi">&#x095C;</span><span class="listIPA">ɾ</span><span class="listTrans">ɾ</span><span class="iso15919" style="display:none;">ṛ</span></div>
+<div class="listPair"><span class="listItem" lang="hi">&#x095D;</span><span class="listIPA">ɾʰ</span><span class="listTrans">ɾʰ</span><span class="iso15919" style="display:none;">ṛh</span></div>
+<div class="listPair"><span class="listItem" lang="hi">&#x095E;</span><span class="listIPA">f</span><span class="listTrans">f</span><span class="iso15919" style="display:none;">f</span></div>
+<div class="listPair"><span class="listItem" lang="hi">&#x095F;</span><span>&nbsp;</span><span class="listTrans">ẏ</span><span class="iso15919" style="display:none;">ẏ</span></div>
 </div>
 </figure>
-<p>These code points all decompose to a basic consonant plus <span class="name">nukta</span>, however only the latter 8 are recomposed by Unicode normalisation form C. The Unicode Standard recommends that content authors use decomposed sequences for these 8 (only).</p>
+
+
+<p>These code points all decompose to a basic consonant plus <span class="name">nukta</span>, however only the first 3 are recomposed by Unicode normalisation form C. The Unicode Standard recommends that content authors use decomposed sequences for the other 8 (only).</p>
+
 <figure>
 <div class="listAll" onClick="listAll(this, 'hi')">list all 8</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="hi">क़</span><span class="listTrans">q</span><span class="listIPA">q</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ख़</span><span class="listTrans">x</span><span class="listIPA">x</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ग़</span><span class="listTrans">ɣ</span><span class="listIPA">ɣ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ज़</span><span class="listTrans">z</span><span class="listIPA">z</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ड़</span><span class="listTrans">ɾ</span><span class="listIPA">ɾ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ढ़</span><span class="listTrans">ɾʰ</span><span class="listIPA">ɾʰ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">फ़</span><span class="listTrans">f</span><span class="listIPA">f</span></div>
-<div class="listPair"><span class="listItem" lang="hi">य़</span><span class="listTrans"></span><span class="listIPA"></span></div>
+<div class="listPair"><span class="listItem" lang="hi">क़</span><span class="listIPA">q</span><span class="listTrans">q</span><span class="iso15919" style="display:none;">q</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ख़</span><span class="listIPA">x</span><span class="listTrans">x</span><span class="iso15919" style="display:none;">k͟h</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ग़</span><span class="listIPA">ɣ</span><span class="listTrans">ɣ</span><span class="iso15919" style="display:none;">ġ</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ज़</span><span class="listIPA">z</span><span class="listTrans">z</span><span class="iso15919" style="display:none;">z</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ड़</span><span class="listIPA">ɾ</span><span class="listTrans">ɾ</span><span class="iso15919" style="display:none;">ṛ</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ढ़</span><span class="listIPA">ɾʰ</span><span class="listTrans">ɾʰ</span><span class="iso15919" style="display:none;">ṛh</span></div>
+<div class="listPair"><span class="listItem" lang="hi">फ़</span><span class="listIPA">f</span><span class="listTrans">f</span><span class="iso15919" style="display:none;">f</span></div>
+<div class="listPair"><span class="listItem" lang="hi">य़</span><span>&nbsp;</span><span>&nbsp;</span><span class="iso15919" style="display:none;">ẏ</span></div>
 </div>
 </figure>
+
+
 <p>The <span class="name">nukta</span> should always be typed and stored immediately after the consonant it modifies, and before any combining vowels or diacritics.</p>
 </section>
   
@@ -310,14 +331,17 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <section id="finals">
 <h3><a href="#finals">Final consonants</a></h3>
 
-<p>Although traditionally classified as vowels, 2 diacritics represent syllable-final nasal sounds.</p>
+<p>Although traditionally classified as vowels, 2 diacritics represent syllable-final consonant sounds.</p>
+
 <figure class="characterBox">
 <div class="listAll" onClick="listAll(this, 'hi')">list all 2</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="hi">ं</span><span class="listTrans">m̽</span><span class="listIPA">m, n ŋ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ः</span><span class="listTrans">h̽</span><span class="listIPA">h</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ं</span><span class="listIPA">m, n ŋ</span><span class="listTrans">m̽</span><span class="iso15919" style="display:none;">ṁ</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ः</span><span class="listIPA">ɦ</span><span class="listTrans">h̽</span><span class="iso15919" style="display:none;">ḥ</span></div>
 </div>
 </figure>
+
+
 
 <p><span class="codepoint" translate="no"><span lang="hi">&#x0902;</span> [<a href="devanagari#char0902"><span class="uname">U+0902 DEVANAGARI SIGN ANUSVARA</span></a>]</span> represents  a nasal that is homorganic with a following consonant. It is positioned over the previous consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">हिंदी</span> <span class="trans">him̽dī</span> <span class="ipa">hindiː</span> <span class="meaning">Hindi</span></span>.</p>
 <p>Most words that use the anusvara can also be written using the consonant itself, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">हिन्दी</span> <span class="trans">hin͓dī</span></span>, although in some cases the anusvara form is more common. For example, <span class="charExample" translate="no"><span class="ex" lang="hi">पंजाब</span> <span class="trans">pm̽jāb</span> <span class="ipa">pañjāb</span> <span class="meaning">Punjab</span></span> is much more common than <span class="charExample" translate="no"><span class="ex" lang="hi">पञ्जाब</span> <span class="trans">pɲ͓jāb</span></span>.</p>
@@ -353,36 +377,43 @@ however, this rule does not always hold.)</p>
 
 <p>To produce a different vowel than the inherent one, Devanagari uses a combining character called a vowel-sign (Sanskrit <span class="name">matra</span>) after the base consonant. For Devanagari, this is always a single character,  is always combining, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">की</span> <span class="ipa">kiː</span></span>, and is always typed and stored after the preceding consonant.</p>
 <p>Vowel-signs used for Hindi:</p>
+
 <figure class="characterBox">
 <div class="listAll" onClick="listAll(this, 'hi')">list all 9</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="hi">ा</span><span class="listTrans">ā</span><span class="listIPA">aː</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ि</span><span class="listTrans">i</span><span class="listIPA">i</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ी</span><span class="listTrans">ī</span><span class="listIPA">iː</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ु</span><span class="listTrans">u</span><span class="listIPA">u</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ू</span><span class="listTrans">ū</span><span class="listIPA">uː</span></div>
-<div class="listPair"><span class="listItem" lang="hi">े</span><span class="listTrans">ē</span><span class="listIPA">eː</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ै</span><span class="listTrans">aʲ</span><span class="listIPA">ɛː</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ो</span><span class="listTrans">ō</span><span class="listIPA">oː</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ौ</span><span class="listTrans">aʷ</span><span class="listIPA">ɔː</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ा</span><span class="listIPA">aː</span><span class="listTrans">ā</span><span class="iso15919" style="display:none;">ā</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ि</span><span class="listIPA">ɪ</span><span class="listTrans">i</span><span class="iso15919" style="display:none;">i</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ी</span><span class="listIPA">iː</span><span class="listTrans">ī</span><span class="iso15919" style="display:none;">ī</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ु</span><span class="listIPA">ʊ</span><span class="listTrans">u</span><span class="iso15919" style="display:none;">u</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ू</span><span class="listIPA">uː</span><span class="listTrans">ū</span><span class="iso15919" style="display:none;">ū</span></div>
+<div class="listPair"><span class="listItem" lang="hi">े</span><span class="listIPA">eː</span><span class="listTrans">ē</span><span class="iso15919" style="display:none;">ē</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ै</span><span class="listIPA">ɛː</span><span class="listTrans">aʲ</span><span class="iso15919" style="display:none;">ai</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ो</span><span class="listIPA">oː</span><span class="listTrans">ō</span><span class="iso15919" style="display:none;">ō</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ौ</span><span class="listIPA">ɔː</span><span class="listTrans">aʷ</span><span class="iso15919" style="display:none;">au</span></div>
 </div>
 </figure>
+
+
 <p>The other vowel-signs  in the Unicode Devanagari block:</p>
+
 <figure class="characterBox">
 <div class="listAll" onClick="listAll(this, 'hi')">list all 10</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="hi">ॕ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ॖ</span><span class="listTrans"></span></div>
-<div class="listPair"><span class="listItem" lang="hi">ॗ</span><span class="listTrans"></span></div>
-<div class="listPair"><span class="listItem" lang="hi">ॆ</span><span class="listTrans">e</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ॅ</span><span class="listTrans">ê</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ॊ</span><span class="listTrans">o</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ॉ</span><span class="listTrans">ô</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ॏ</span><span class="listTrans"></span></div>
-<div class="listPair"><span class="listItem" lang="hi">ऺ</span><span class="listTrans"></span></div>
-<div class="listPair"><span class="listItem" lang="hi">ऻ</span><span class="listTrans"></span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॕ</span><span class="listIPA">æ</span><span class="listTrans">â</span><span>&nbsp;</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॖ</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॗ</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॆ</span><span>&nbsp;</span><span class="listTrans">e</span><span class="iso15919" style="display:none;">e</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॅ</span><span>&nbsp;</span><span class="listTrans">ê</span><span class="iso15919" style="display:none;">ê</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॊ</span><span>&nbsp;</span><span class="listTrans">o</span><span class="iso15919" style="display:none;">o</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॉ</span><span>&nbsp;</span><span class="listTrans">ô</span><span class="iso15919" style="display:none;">ô</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॏ</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ऺ</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ऻ</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></div>
 </div>
 </figure>
+
+
+
 <p>Several vowel-signs are <em>spacing</em> combining characters. </p>
 <p>One vowel-sign appears to the left of the base consonant in modern Devanagari, ie. <span class="charExample" translate="no"><span class="ex" lang="hi">कि</span> <span class="ipa">kɪ</span></span>, although one other historic character, <span class="codepoint" translate="no"><span lang="hi">&#x094E;</span> [<a href="devanagari#char094E"><span class="uname">U+094E DEVANAGARI VOWEL SIGN PRISHTHAMATRA E</span></a>]</span>, also does.</p>
 </section>
@@ -397,39 +428,45 @@ however, this rule does not always hold.)</p>
 
 <p>Devanagari also has a set of independent vowels to represent vowels that are not preceded by a consonant. Unlike the vowel-signs, the set contains a character to represent the inherent vowel sound.</p>
 <p>Independent vowels used by Hindi:</p>
+
 <figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'hi')">list all 21</div>
+<div class="listAll" onClick="listAll(this, 'hi')">list all 10</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="hi">अ</span><span class="listTrans">ạ</span><span class="listIPA">ʌ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">आ</span><span class="listTrans">ạ̄</span><span class="listIPA">aː</span></div>
-<div class="listPair"><span class="listItem" lang="hi">इ</span><span class="listTrans">ị</span><span class="listIPA">i</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ई</span><span class="listTrans">ị̄</span><span class="listIPA">iː</span></div>
-<div class="listPair"><span class="listItem" lang="hi">उ</span><span class="listTrans">ụ</span><span class="listIPA">u</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ऊ</span><span class="listTrans">ụ̄</span><span class="listIPA">uː</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ए</span><span class="listTrans">ẹ̄</span><span class="listIPA">eː</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ऐ</span><span class="listTrans">ạʲ</span><span class="listIPA">ɛː</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ओ</span><span class="listTrans">ọ̄</span><span class="listIPA">oː</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ऑ</span><span class="listTrans">ộ</span><span class="listIPA">ɒ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">औ</span><span class="listTrans">ạʷ</span><span class="listIPA">ɔː</span></div>
+<div class="listPair"><span class="listItem" lang="hi">अ</span><span class="listIPA">ʌ</span><span class="listTrans">ạ</span><span class="iso15919" style="display:none;">a</span></div>
+<div class="listPair"><span class="listItem" lang="hi">आ</span><span class="listIPA">aː</span><span class="listTrans">ạ̄</span><span class="iso15919" style="display:none;">ā</span></div>
+<div class="listPair"><span class="listItem" lang="hi">इ</span><span class="listIPA">i</span><span class="listTrans">ị</span><span class="iso15919" style="display:none;">i</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ई</span><span class="listIPA">iː</span><span class="listTrans">ị̄</span><span class="iso15919" style="display:none;">ī</span></div>
+<div class="listPair"><span class="listItem" lang="hi">उ</span><span class="listIPA">u</span><span class="listTrans">ụ</span><span class="iso15919" style="display:none;">u</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ऊ</span><span class="listIPA">uː</span><span class="listTrans">ụ̄</span><span class="iso15919" style="display:none;">ū</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ए</span><span class="listIPA">eː</span><span class="listTrans">ẹ̄</span><span class="iso15919" style="display:none;">ē</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ऐ</span><span class="listIPA">ɛː</span><span class="listTrans">ạʲ</span><span class="iso15919" style="display:none;">ai</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ओ</span><span class="listIPA">oː</span><span class="listTrans">ọ̄</span><span class="iso15919" style="display:none;">ō</span></div>
+<div class="listPair"><span class="listItem" lang="hi">औ</span><span class="listIPA">ɔː</span><span class="listTrans">ạʷ</span><span class="iso15919" style="display:none;">au</span></div>
 </div>
 </figure>
 
+
+
 <p>The other independent vowels in the Unicode Devanagari block:</p>
+
 <figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'hi')">list all 21</div>
+<div class="listAll" onClick="listAll(this, 'hi')">list all 11</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="hi">ॲ</span><span class="listTrans">ậ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ऄ</span><span class="listTrans"></span></div>
-<div class="listPair"><span class="listItem" lang="hi">ॶ</span><span class="listTrans"></span></div>
-<div class="listPair"><span class="listItem" lang="hi">ॷ</span><span class="listTrans"></span></div>
-<div class="listPair"><span class="listItem" lang="hi">ऎ</span><span class="listTrans">ẹ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ऍ</span><span class="listTrans">ệ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ऒ</span><span class="listTrans">ọ</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ॵ</span><span class="listTrans"></span></div>
-<div class="listPair"><span class="listItem" lang="hi">ॳ</span><span class="listTrans"></span></div>
-<div class="listPair"><span class="listItem" lang="hi">ॴ</span><span class="listTrans"></span></div>
+<div class="listPair"><span class="listItem" lang="hi">ऄ</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॲ</span><span class="listIPA">æ</span><span class="listTrans">ậ</span><span class="iso15919" style="display:none;">ê</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॶ</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॷ</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ऎ</span><span>&nbsp;</span><span class="listTrans">ẹ</span><span class="iso15919" style="display:none;">e</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ऍ</span><span>&nbsp;</span><span class="listTrans">ệ</span><span class="iso15919" style="display:none;">ê</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ऑ</span><span class="listIPA">ɒ</span><span class="listTrans">ộ</span><span class="iso15919" style="display:none;">ô</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ऒ</span><span>&nbsp;</span><span class="listTrans">ọ</span><span class="iso15919" style="display:none;">o</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॵ</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॳ</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॴ</span><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></div>
 </div>
 </figure>
+
+
 <p>Note how <span class="charExample" translate="no"><span class="ex" lang="hi">की</span> <span class="trans">kiː</span></span> and <span class="charExample" translate="no"><span class="ex" lang="hi">कई</span> <span class="trans">kəiː</span></span> are pronounced differently.</p>
 
 </section>
@@ -462,7 +499,7 @@ however, this rule does not always hold.)</p>
 <li>Show a visible virama below the non-final consonants in the cluster.</li>
 <li>No indication, although there are usually generalised pronunciation rules that allow readers to spot these locations. Examples of these rules are given in the section about <a href="#inherentvowel">the inherent vowel</a>.</li>
 </ol>
-<p>In all cases, the underlying mechanism in terms of codepoints involves adding <span class="codepoint" translate="no"><span lang="hi">&#x094D;</span> [<a href="devanagari#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA</span></a>]</span> between the consonants in the cluster, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">क्ष</span></span> is produced by the sequence <span class="codepoint" translate="no"><span lang="hi">&#x0915;</span> + <span lang="hi">&#x094D;</span> + <span lang="hi">&#x0937;</span> [<a href="devanagari#char0915"><span class="uname">U+0915 DEVANAGARI LETTER KA</span></a> + <a href="devanagari#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA</span></a> + <a href="devanagari#char0937"><span class="uname">U+0937 DEVANAGARI LETTER SSA</span></a>]</span>.</p>
+<p>In all cases except the last, the underlying mechanism in terms of codepoints involves adding <span class="codepoint" translate="no"><span lang="hi">&#x094D;</span> [<a href="devanagari#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA</span></a>]</span> between the consonants in the cluster, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">क्ष</span></span> is produced by the sequence <span class="codepoint" translate="no"><span lang="hi">&#x0915;</span> + <span lang="hi">&#x094D;</span> + <span lang="hi">&#x0937;</span> [<a href="devanagari#char0915"><span class="uname">U+0915 DEVANAGARI LETTER KA</span></a> + <a href="devanagari#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA</span></a> + <a href="devanagari#char0937"><span class="uname">U+0937 DEVANAGARI LETTER SSA</span></a>]</span>.</p>
 <p>Where the approach changes the shape of the constituent consonants, the cluster is referred to as a <span class="name">conjunct</span>.</p>
 <p>The font usually determines which visual method is used, although it is possible to influence this (see below).</p>
     
@@ -542,17 +579,18 @@ however, this rule does not always hold.)</p>
 <section id="vocalics">
 <h2><a href="#vocalics">Vocalics</a></h2>
     <p>A set of letters represents a special combination of consonant+vowel, available both as vowel-signs and independent vowels.</p>
+
 <figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'hi')">list all 4</div>
+<div class="listAll" onClick="listAll(this, 'hi')">list all 8</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="hi">ृ</span><span class="listTrans">r̥</span><span class="listIPA">ri</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ॄ</span><span class="listTrans">r̥̄</span><span class="listIPA">riː</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ॢ</span><span class="listTrans">l̥</span><span class="listIPA">li</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ॣ</span><span class="listTrans">l̥̄</span><span class="listIPA"></span></div>
-<div class="listPair"><span class="listItem" lang="hi">ऋ</span><span class="listTrans">r̥̣</span><span class="listIPA">ri</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ॠ</span><span class="listTrans">r̥̣̄</span><span class="listIPA">riː</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ऌ</span><span class="listTrans">l̥̣</span><span class="listIPA">li</span></div>
-<div class="listPair"><span class="listItem" lang="hi">ॡ</span><span class="listTrans">l̥̣̄</span><span class="listIPA"></span></div>
+<div class="listPair"><span class="listItem" lang="hi">ृ</span><span class="listIPA">ri</span><span class="listTrans">r̥</span><span class="iso15919" style="display:none;">r̥</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॄ</span><span class="listIPA">riː</span><span class="listTrans">r̥̄</span><span>&nbsp;</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ऋ</span><span class="listIPA">ri</span><span class="listTrans">r̥̣</span><span class="iso15919" style="display:none;">r̥</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॠ</span><span class="listIPA">riː</span><span class="listTrans">r̥̣̄</span><span class="iso15919" style="display:none;">r̥̄</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॢ</span><span class="listIPA">li</span><span class="listTrans">l̥</span><span class="iso15919" style="display:none;">l̥</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॣ</span><span>&nbsp;</span><span class="listTrans">l̥̄</span><span>&nbsp;</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ऌ</span><span class="listIPA">li</span><span class="listTrans">l̥̣</span><span class="iso15919" style="display:none;">l̥</span></div>
+<div class="listPair"><span class="listItem" lang="hi">ॡ</span><span>&nbsp;</span><span class="listTrans">l̥̣̄</span><span>&nbsp;</span></div>
 </div>
 </figure>
 </section>
@@ -584,18 +622,19 @@ however, this rule does not always hold.)</p>
 <figure class="characterBox">
 <div class="listAll" onClick="listAll(this, 'hi')">list all 10</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="hi">०</span><span class="listTrans">0</span></div>
-<div class="listPair"><span class="listItem" lang="hi">१</span><span class="listTrans">1</span></div>
-<div class="listPair"><span class="listItem" lang="hi">२</span><span class="listTrans">2</span></div>
-<div class="listPair"><span class="listItem" lang="hi">३</span><span class="listTrans">3</span></div>
-<div class="listPair"><span class="listItem" lang="hi">४</span><span class="listTrans">4</span></div>
-<div class="listPair"><span class="listItem" lang="hi">५</span><span class="listTrans">5</span></div>
-<div class="listPair"><span class="listItem" lang="hi">६</span><span class="listTrans">6</span></div>
-<div class="listPair"><span class="listItem" lang="hi">७</span><span class="listTrans">7</span></div>
-<div class="listPair"><span class="listItem" lang="hi">८</span><span class="listTrans">8</span></div>
-<div class="listPair"><span class="listItem" lang="hi">९</span><span class="listTrans">9</span></div>
+<div class="listPair"><span class="listItem" lang="hi">०</span><span class="listTrans">0</span><span class="iso15919" style="display:none;">0</span></div>
+<div class="listPair"><span class="listItem" lang="hi">१</span><span class="listTrans">1</span><span class="iso15919" style="display:none;">1</span></div>
+<div class="listPair"><span class="listItem" lang="hi">२</span><span class="listTrans">2</span><span class="iso15919" style="display:none;">2</span></div>
+<div class="listPair"><span class="listItem" lang="hi">३</span><span class="listTrans">3</span><span class="iso15919" style="display:none;">3</span></div>
+<div class="listPair"><span class="listItem" lang="hi">४</span><span class="listTrans">4</span><span class="iso15919" style="display:none;">4</span></div>
+<div class="listPair"><span class="listItem" lang="hi">५</span><span class="listTrans">5</span><span class="iso15919" style="display:none;">5</span></div>
+<div class="listPair"><span class="listItem" lang="hi">६</span><span class="listTrans">6</span><span class="iso15919" style="display:none;">6</span></div>
+<div class="listPair"><span class="listItem" lang="hi">७</span><span class="listTrans">7</span><span class="iso15919" style="display:none;">7</span></div>
+<div class="listPair"><span class="listItem" lang="hi">८</span><span class="listTrans">8</span><span class="iso15919" style="display:none;">8</span></div>
+<div class="listPair"><span class="listItem" lang="hi">९</span><span class="listTrans">9</span><span class="iso15919" style="display:none;">9</span></div>
 </div>
 </figure>
+
 <p>An interesting feature of large numbers written in India is that they apply groupings of two, rather than three, digits between commas (even when using european digits).</p>
     <figure>
     <p class="large"><span class="ex" lang="hi">20,00,000</span></p>
@@ -690,6 +729,26 @@ however, this rule does not always hold.)</p>
 
 
 
+
+
+<section id="abbrev">
+    <h3><a href="#abbrev">Abbreviation &amp; ellipsis</a></h3>
+    <p>Italicisation and bolding are not traditionally used for highlighting text in Devanagari.</p>
+</section>
+
+
+
+
+
+<section id="emphasis">
+    <h3><a href="#emphasis">Emphasis &amp; highlighting</a></h3>
+    <p>The Devanagari block contains <span class="codepoint" translate="no"><span lang="hi">&#x0970;</span> [<a href="devanagari#char0970"><span class="uname">U+0970 DEVANAGARI ABBREVIATION SIGN</span></a>]</span>, but it's not clear to me whether or how this is used in modern content.</p>
+</section>
+
+
+
+
+
 <section id="justify">
     <h3><a href="#justify">Justification</a></h3>
     <p>Justification is done, principally, by adjusting the space between words. (I have no information about whether high-end systems  also adjust inter-character spacing slightly if inter-word doesn't resolve the issue, or to improve aesthetics.)</p>
@@ -699,7 +758,83 @@ however, this rule does not always hold.)</p>
       <button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Justify   </button>
     </p>
   </section>
-  </section>
+
+
+
+
+<section id="firstletter">
+<h3><a href="#firstletter">First-letter styling</a></h3>
+    <p> Devanagari content does sometimes enlarge the first part of the first word in a paragraph, in a similar way to drop caps. Instead of enlarging just the first letter in the word, it is normal to enlarge the first syllable.</p>
+<figure>
+    <p><img src="images/first_letter.png" alt=""></p>
+    <figcaption>Enlarged syllable styling at the start of a paragraph.</figcaption>
+    </figure>
+<p>In theory, the top line of the characters should align in the large text and the following first line, however many implementations I've seen don't deal well with such niceties.</p>
+<p>It is very common to see such initial-syllable enlargement centred inside a coloured box.</p>
+<figure>
+    <p><img src="images/first_letter_box.png" alt=""></p>
+    <figcaption>Enlarged syllable styled inside a coloured box.</figcaption>
+    </figure>
+</section>
+
+
+
+
+<section id="counters">
+<h3><a href="#counters">Counter styles</a></h3>
+  <p>Counter-styles are used to number lists. The <a href="https://www.w3.org/TR/predefined-counter-styles/#devanagari-styles">Ready-made Counter Styles</a> document contains a two counter styles for Devanagari. </p>
+<p>One is numeric.</p>
+  <pre style="margin-left:7.5%;">
+@counter-style devanagari {
+system: numeric;
+symbols: '\966' '\967' '\968' '\969' '\96A' '\96B' '\96C' '\96D' '\96E' '\96F';
+/* symbols: '०' '१' '२' '३' '४' '५' '६' '७' '८' '९'; */
+}</pre>
+<figure>
+<p class="large">1&nbsp;⇨&nbsp;<span class="ex" lang="hi">१</span> 2&nbsp;⇨&nbsp;<span class="ex" lang="hi">२</span> 3&nbsp;⇨&nbsp;<span class="ex" lang="hi">३</span> 4&nbsp;⇨&nbsp;<span class="ex" lang="hi">४</span> 11&nbsp;⇨&nbsp;<span class="ex" lang="hi">११</span> 22&nbsp;⇨&nbsp;<span class="ex" lang="hi">२२</span> 33&nbsp;⇨&nbsp;<span class="ex" lang="hi">३३</span> 44&nbsp;⇨&nbsp;<span class="ex" lang="hi">४४</span> 111&nbsp;⇨&nbsp;<span class="ex" lang="hi">१११</span> 2222&nbsp;⇨&nbsp;<span class="ex" lang="hi">२२२२</span></p>
+<figcaption>Numbers produced by the decimal 'devanagari' counter style<span class="trans"></span>.</figcaption>
+</figure>
+
+<p>The other is alphabetic.</p>
+<pre style="margin-left:7.5%;">
+@counter-style hindi {
+system: alphabetic;
+symbols: '\915' '\916' '\917' '\918' '\919' '\91A' '\91B' '\91C' '\91D' '\91E'
+ '\91F' '\920' '\921' '\922' '\923' '\924' '\925' '\926' '\927' '\928' '\92A' 
+ '\92B' '\92C' '\92D' '\92E' '\92F' '\930' '\932' '\935' '\936' '\937' '\938' '\939';
+/* symbols: 'क' 'ख' 'ग' 'घ' 'ङ' 'च' 'छ' 'ज' 'झ' 'ञ' 'ट' 'ठ' 'ड' 'ढ' 'ण' 'त' 'थ' 'द'
+ 'ध' 'न' 'प' 'फ' 'ब' 'भ' 'म' 'य' 'र' 'ल' 'व' 'श' 'ष' 'स' 'ह'; */
+}</pre>
+<figure>
+<p class="large">1&nbsp;⇨&nbsp;<span class="ex" lang="hi">क</span> 2&nbsp;⇨&nbsp;<span class="ex" lang="hi">ख</span> 3&nbsp;⇨&nbsp;<span class="ex" lang="hi">ग</span> 4&nbsp;⇨&nbsp;<span class="ex" lang="hi">घ</span> 11&nbsp;⇨&nbsp;<span class="ex" lang="hi">ट</span> 22&nbsp;⇨&nbsp;<span class="ex" lang="hi">फ</span> 33&nbsp;⇨&nbsp;<span class="ex" lang="hi">ह</span> 44&nbsp;⇨&nbsp;<span class="ex" lang="hi">कट</span> 111&nbsp;⇨&nbsp;<span class="ex" lang="hi">गठ</span> 2222&nbsp;⇨&nbsp;<span class="ex" lang="hi">खकट</span></p>
+<figcaption>Numbers produced by the alphabetic 'hindi' counter style<span class="trans"></span>.</figcaption>
+</figure>
+</section>
+
+
+
+
+
+<section>
+<h3>TBD</h3>
+<p class="ednote">Other features to be investigate in this section include:
+emphasis &amp; highlighting,
+text decoration,
+abbreviations &amp; ellipsis,
+hyphens & dashes
+quotations,
+repetition,
+
+line breaking,
+hyphenation,
+justification &amp; alignment,
+first-letter styling,
+
+notes &amp; footnotes,
+page layout
+</p>
+</section>
+</section>
 
 
 
@@ -717,7 +852,7 @@ however, this rule does not always hold.)</p>
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/devanagari"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-05  8:29<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bdevanagari%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fdevanagari%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/devanagari"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-13  16:22<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bdevanagari%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fdevanagari%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 
