@@ -102,7 +102,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->5 January, 2019<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->13 January, 2019<!-- #EndDate -->
 &bull; tags <a href="https://r12a.github.io/blog/index.php?tag=tifinagh" title="Show all blog posts tagged with 'tifinagh'">tifinagh</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
@@ -110,7 +110,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <div class="section">
   <p>This page provides basic information about the Tifinagh script, in particular the so-called Neo-Tifinagh writing system and its use for the Standard Moroccan Tamazight and other Northern Berber languages. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned.   For character-specific details follow the links to the <a class="linkHighlight" href="/scripts/tifinagh/block">Tifinagh character notes</a>. </p>
 <p>For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>.</p>
-<p class="instructions">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+<p class="instructions">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text. Use the control on the right to choose which transcription data you want to see.</p>
 <details id="scriptLinks">
 <summary class="instructions">Show links for the Tifinagh script.</summary>
   <div id="linklist"></div>
@@ -172,9 +172,20 @@ A modern alphabetical derivative of the traditional script, known as Neo-Tifinag
 </section>
   
   </section>
-  
-  
-  
+
+
+
+
+
+<div id="showTranscriptions">
+<div>Show transcriptions</div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div><label>N. Berber <input type="checkbox" onChange="toggleTranscription('berberlatin', this.checked)"/></label></div>
+<div><label>Arabic <input type="checkbox" onChange="toggleTranscription('arabic', this.checked)"/></label></div>
+</div>
+
+
   
   <section id="chars">
 <h2><a href="#chars">Character lists</a></h2>
@@ -189,123 +200,163 @@ A modern alphabetical derivative of the traditional script, known as Neo-Tifinag
 </ul>
 <p>For character-specific details see <a class="linkHighlight" href="/scripts/tifinagh/block">Tifinagh character notes</a>.</p>
 </section>
-
-
-
-
-  
 <section id="consonants">
 <h2><a href="#letters">Consonants</a></h2>
-<p>IRCAM  defines the following set of characters for Neo-Tifinagh, which is a subset of the Unicode Tifinagh block.<sup><a href="http://en.wikipedia.org/wiki/Tifinagh">w</a></sup></p>
 
-<figure>
-<div class="listAll" onClick="listAll(this, 'ber')">list all</div>
+
+<section id="ntconsonants">
+<h3><a href="#ntconsonants">IRCAM consonants</a></h3>
+
+<p>IRCAM  defines the following set of characters for Neo-Tifinagh, which is a subset of the Unicode Tifinagh block designed to cater for Tarifit, Tamazight, and Tachelhit languages.<sup><a href="http://en.wikipedia.org/wiki/Tifinagh">w</a></sup></p>
+
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'ber')">list all 27</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="ber">ⴱ</span><span class="listTrans">b</span><span class="listIPA">b</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⴳ</span><span class="listTrans">g</span><span class="listIPA">ɡ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⴷ</span><span class="listTrans">d</span><span class="listIPA">d</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⴹ</span><span class="listTrans">ḍ</span><span class="listIPA">dˁ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⴼ</span><span class="listTrans">f</span><span class="listIPA">f</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⴽ</span><span class="listTrans">k</span><span class="listIPA">k</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵀ</span><span class="listTrans">h</span><span class="listIPA">h</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵃ</span><span class="listTrans">ḥ</span><span class="listIPA">ħ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵄ</span><span class="listTrans">ɛ, ʕ</span><span class="listIPA">ʕ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵅ</span><span class="listTrans">x</span><span class="listIPA">χ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵇ</span><span class="listTrans">q</span><span class="listIPA">q, qʷ, ɢ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵊ</span><span class="listTrans">j</span><span class="listIPA">ʒ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵍ</span><span class="listTrans">l</span><span class="listIPA">l, ɫ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵎ</span><span class="listTrans">m</span><span class="listIPA">m</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵏ</span><span class="listTrans">n</span><span class="listIPA">n</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵔ</span><span class="listTrans">r</span><span class="listIPA">r, rˤ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵕ</span><span class="listTrans">ṛ</span><span class="listIPA">rˤ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵖ</span><span class="listTrans">ɣ</span><span class="listIPA">ʁ, ɣ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵙ</span><span class="listTrans">s</span><span class="listIPA">s</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵚ</span><span class="listTrans">ṣ</span><span class="listIPA">sˁ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵛ</span><span class="listTrans">š</span><span class="listIPA">ʃ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵜ</span><span class="listTrans">t</span><span class="listIPA">t</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵟ</span><span class="listTrans">ṭ</span><span class="listIPA">tˁ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵡ</span><span class="listTrans">w</span><span class="listIPA">w</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵢ</span><span class="listTrans">y</span><span class="listIPA">j</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵣ</span><span class="listTrans">z</span><span class="listIPA">z</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵥ</span><span class="listTrans">ẓ</span><span class="listIPA">zˁ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵯ</span><span class="listTrans">°</span><span class="listIPA">ʷ</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⴱ</span><span class="listIPA">b</span><span class="listTrans">b</span><span class="berberlatin" style="display:none;">b</span><span class="arabic" style="display:none;">ب</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⴳ</span><span class="listIPA">ɡ</span><span class="listTrans">g</span><span class="berberlatin" style="display:none;">g</span><span class="arabic" style="display:none;">گ</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⴷ</span><span class="listIPA">d</span><span class="listTrans">d</span><span class="berberlatin" style="display:none;">d</span><span class="arabic" style="display:none;">د</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⴹ</span><span class="listIPA">dˁ</span><span class="listTrans">dˁ</span><span class="berberlatin" style="display:none;">ḍ</span><span class="arabic" style="display:none;">ض</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⴼ</span><span class="listIPA">f</span><span class="listTrans">f</span><span class="berberlatin" style="display:none;">f</span><span class="arabic" style="display:none;">ف</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⴽ</span><span class="listIPA">k</span><span class="listTrans">k</span><span class="berberlatin" style="display:none;">k</span><span class="arabic" style="display:none;">ک</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵀ</span><span class="listIPA">h</span><span class="listTrans">h</span><span class="berberlatin" style="display:none;">h, b</span><span class="arabic" style="display:none;">ھ, ب</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵃ</span><span class="listIPA">ħ</span><span class="listTrans">ħ</span><span class="berberlatin" style="display:none;">ḥ</span><span class="arabic" style="display:none;">ح</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵄ</span><span class="listIPA">ʕ</span><span class="listTrans">ʕ</span><span class="berberlatin" style="display:none;">, ' ɛ</span><span class="arabic" style="display:none;">ع</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵅ</span><span class="listIPA">χ</span><span class="listTrans">χ</span><span class="berberlatin" style="display:none;">x, kh</span><span class="arabic" style="display:none;">خ</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵇ</span><span class="listIPA">q, qʷ ɢ</span><span class="listTrans">q</span><span class="berberlatin" style="display:none;">q</span><span class="arabic" style="display:none;">ق</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵊ</span><span class="listIPA">ʒ</span><span class="listTrans">ʒ</span><span class="berberlatin" style="display:none;">j</span><span class="arabic" style="display:none;">ج</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵍ</span><span class="listIPA">l, ɫ</span><span class="listTrans">l</span><span class="berberlatin" style="display:none;">l</span><span class="arabic" style="display:none;">ل</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵎ</span><span class="listIPA">m</span><span class="listTrans">m</span><span class="berberlatin" style="display:none;">m</span><span class="arabic" style="display:none;">م</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵏ</span><span class="listIPA">n</span><span class="listTrans">n</span><span class="berberlatin" style="display:none;">n</span><span class="arabic" style="display:none;">ن</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵔ</span><span class="listIPA">r, rˤ</span><span class="listTrans">r</span><span class="berberlatin" style="display:none;">r</span><span class="arabic" style="display:none;">ر</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵕ</span><span class="listIPA">rˤ</span><span class="listTrans">rˤ</span><span class="berberlatin" style="display:none;">ṛ</span><span class="arabic" style="display:none;">ڕ</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵖ</span><span class="listIPA">ʁ, ɣ</span><span class="listTrans">ʁ</span><span class="berberlatin" style="display:none;">ɣ, gh</span><span class="arabic" style="display:none;">غ</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵙ</span><span class="listIPA">s</span><span class="listTrans">s</span><span class="berberlatin" style="display:none;">s</span><span class="arabic" style="display:none;">س</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵚ</span><span class="listIPA">sˁ</span><span class="listTrans">sˁ</span><span class="berberlatin" style="display:none;">ṣ, ts</span><span class="arabic" style="display:none;">ص</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵛ</span><span class="listIPA">ʃ</span><span class="listTrans">ʃ</span><span class="berberlatin" style="display:none;">š, sh</span><span class="arabic" style="display:none;">ش</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵜ</span><span class="listIPA">t</span><span class="listTrans">t</span><span class="berberlatin" style="display:none;">t</span><span class="arabic" style="display:none;">ت</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵟ</span><span class="listIPA">tˁ</span><span class="listTrans">tˁ</span><span class="berberlatin" style="display:none;">ṭ</span><span class="arabic" style="display:none;">ط</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵡ</span><span class="listIPA">w</span><span class="listTrans">w</span><span class="berberlatin" style="display:none;">w</span><span class="arabic" style="display:none;">ۉ</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵢ</span><span class="listIPA">j</span><span class="listTrans">y</span><span class="berberlatin" style="display:none;">y</span><span class="arabic" style="display:none;">ي</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵣ</span><span class="listIPA">z</span><span class="listTrans">z</span><span class="berberlatin" style="display:none;">z</span><span class="arabic" style="display:none;">ز</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵥ</span><span class="listIPA">zˁ</span><span class="listTrans">zˁ</span><span class="berberlatin" style="display:none;">ẓ, dz</span><span class="arabic" style="display:none;">ژ</span></div>
+</div>
+</figure>
+</section>
+
+
+
+
+<section id="otherconsonants">
+<h3><a href="#otherconsonants">Other consonants</a></h3>
+
+<p>The following characters are listed by IRCAM as 'extended'. The first 6 are rotated versions of other characters, and the last two are to represent foreign sounds. See also the <a href="#digraphs">digraphs</a>.</p>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'ber')">list all 8</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="ber">ⴲ</span><span class="listIPA">β</span><span class="listTrans">β</span><span class="berberlatin" style="display:none;">b</span><span class="arabic" style="display:none;">ٻ</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⴴ</span><span class="listIPA">ʝ</span><span class="listTrans">ʝ</span><span class="berberlatin" style="display:none;">g</span><span class="arabic" style="display:none;">ڲ</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⴸ</span><span class="listIPA">ð</span><span class="listTrans">ð</span><span class="berberlatin" style="display:none;">d</span><span class="arabic" style="display:none;">ذ</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⴺ</span><span class="listIPA">ðˁ</span><span class="listTrans">ðˁ</span><span class="berberlatin" style="display:none;">ḍ</span><span class="arabic" style="display:none;">ظ</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⴿ</span><span class="listIPA">ç</span><span class="listTrans">ç</span><span class="berberlatin" style="display:none;">k</span><span class="arabic" style="display:none;">ک</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵝ</span><span class="listIPA">θ</span><span class="listTrans">θ</span><span class="berberlatin" style="display:none;">t</span><span class="arabic" style="display:none;">ت</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵠ</span><span class="listIPA">v</span><span class="listTrans">v</span><span class="berberlatin" style="display:none;">v</span><span class="arabic" style="display:none;">ۋ</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵒ</span><span class="listIPA">p</span><span class="listTrans">p</span><span class="berberlatin" style="display:none;">p</span><span class="arabic" style="display:none;">پ</span></div>
+</div>
+</figure>
+
+<p>The remaining consonants in the Unicode Tifinagh block are mostly used for modern Tuareg, but there are four others.</p>
+
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'ber')">list all 15</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="ber">ⴵ</span><span class="listIPA">d͡ʒ</span><span class="listTrans">ʤ</span><span class="berberlatin" style="display:none;">dj</span><span class="arabic" style="display:none;">ج</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⴶ</span><span class="listIPA">d͡ʒ</span><span class="listTrans">ʤ̇</span><span class="berberlatin" style="display:none;">dj</span><span class="arabic" style="display:none;">ج</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⴾ</span><span class="listIPA">k, ç</span><span class="listTrans">k̇</span><span class="berberlatin" style="display:none;">k</span><span class="arabic" style="display:none;">ک</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵁ</span><span class="listIPA">h</span><span class="listTrans">ḣ</span><span class="berberlatin" style="display:none;">h</span><span class="arabic" style="display:none;">ھ</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵂ</span><span class="listIPA">h</span><span class="listTrans">ḧ</span><span class="berberlatin" style="display:none;">h</span><span class="arabic" style="display:none;">ھ</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵆ</span><span class="listIPA">χ</span><span class="listTrans">χ̇</span><span class="berberlatin" style="display:none;">kh, x</span><span class="arabic" style="display:none;">خ</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵈ</span><span class="listIPA">q, qʷ</span><span class="listTrans">q̇</span><span class="berberlatin" style="display:none;">q</span><span class="arabic" style="display:none;">ق</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵋ</span><span class="listIPA">ʒ</span><span class="listTrans">ʒ̇</span><span class="berberlatin" style="display:none;">j</span><span class="arabic" style="display:none;">ج</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵌ</span><span class="listIPA">ʒ</span><span class="listTrans">ʒ̈</span><span class="berberlatin" style="display:none;">ẓ, dz</span><span class="arabic" style="display:none;">ژ</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵐ</span><span class="listIPA">ɲ</span><span class="listTrans">ɲ</span><span class="berberlatin" style="display:none;">ny</span><span class="arabic" style="display:none;">ني</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵑ</span><span class="listIPA">ŋ</span><span class="listTrans">ŋ</span><span class="berberlatin" style="display:none;">ng</span><span class="arabic" style="display:none;">ڭ</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵗ</span><span class="listIPA">ʁ</span><span class="listTrans">ʁ̇</span><span class="berberlatin" style="display:none;">gh, γ</span><span class="arabic" style="display:none;">غ</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵘ</span><span class="listIPA">ʁ</span><span class="listTrans">ʁ̈</span><span class="berberlatin" style="display:none;">gh, γ j</span><span class="arabic" style="display:none;">غ, ج</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵞ</span><span class="listIPA">t͡ʃ</span><span class="listTrans">ʧ</span><span class="berberlatin" style="display:none;">ch, tš</span><span class="arabic" style="display:none;">تش</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵤ</span><span class="listIPA">z</span><span class="listTrans">ż</span><span class="berberlatin" style="display:none;">z</span><span class="arabic" style="display:none;">ز</span></div>
 </div>
 </figure>
 
 
-<p>The following characters are listed by IRCAM as 'extended'. The last four are actually digraphs, which may be rendered as ligatures.</p>
+<p>There is a significant amount of variation in the use of Tifinagh symbols between different regions.</p>
+<p class="instructions">A useful exploration of the differences →<sup><a href="https://www.unicode.org/L2/L2010/10278-tifinagh-evolution.pdf">a</a></sup>.</p>
+</section>
 
 
-<figure>
-<div class="listAll" onClick="listAll(this, 'ber')">list all</div>
+
+
+
+<section id="digraphs">
+<h3><a href="#digraphs">Digraphs</a></h3>
+
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'ber')">list all 1</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="ber">ⴲ</span><span class="listTrans">ḇ</span><span class="listIPA">β</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⴴ</span><span class="listTrans">g̱</span><span class="listIPA">ʝ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⴸ</span><span class="listTrans">ḏ</span><span class="listIPA">ð</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⴺ</span><span class="listTrans">ḍ̱</span><span class="listIPA">ðˁ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⴿ</span><span class="listTrans">ḵ</span><span class="listIPA">ç</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵒ</span><span class="listTrans">p</span><span class="listIPA">p</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵝ</span><span class="listTrans">ṯ</span><span class="listIPA">θ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵠ</span><span class="listTrans">v</span><span class="listIPA">v</span></div>
-
-<div class="listPair"><span class="listItem" lang="ber">ⵜⵙ</span><span class="listTrans">ts</span><span class="listIPA">ʦ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⴷⵣ</span><span class="listTrans">dz</span><span class="listIPA">ʣ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵜⵛ</span><span class="listTrans">tc</span><span class="listIPA">ʧ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⴷⵊ</span><span class="listTrans">dj</span><span class="listIPA">ʤ</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵯ</span><span class="listIPA">ʷ</span><span class="listTrans">ʷ</span><span class="berberlatin" style="display:none;">ʷ</span><span class="arabic" style="display:none;">ٗ</span></div>
 </div>
 </figure>
 
+<p>The symbol <span class="codepoint"><span lang="ber">&#x2D6F;</span> [<a href="/scripts/tifinagh/block#char2D6F"><span class="uname">U+2D6F TIFINAGH MODIFIER LETTER LABIALIZATION MARK</span></a>]</span> (<span class="trans">tamatart</span>) is used with other consonants to indicate labiovelarisation, <span class="ipa">ʷ</span>. IRCAM's Tifinagh alphabet uses it for <span class="charExample"><span class="ex" lang="ber">ⴳⵯ</span> <span class="ipa">ɡʷ</span></span> and <span class="charExample"><span class="ex" lang="ber">ⴽⵯ</span> <span class="ipa">kʷ</span></span>. </p>
+<p>The extended ERCIM list includes 3 labioverlarised consonants, written as digraphs: <span class="charExample" translate="no"><span class="ex" lang="ber">ⵅⵯ</span> <span class="ipa">xʷ</span></span>, <span class="charExample" translate="no"><span class="ex" lang="ber">ⵇⵯ</span> <span class="ipa">qʷ</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="ber">ⵖⵯ</span> <span class="ipa">ɣʷ</span></span>.</p>
 
 
-<p>The remaining consonants in the Unicode Tifinagh block are used for modern Tuareg and there are four others.</p>
-
-<details>
-<summary class="instructions">See the remaining consonants in the Tifinagh block.</summary>
+<p>As part of its 'extended' set, IRCAM also recognises four digraphs, which may be rendered as ligatures.</p>
 <figure>
-<div class="listAll" onClick="listAll(this, 'ber')">list all</div>
+<div class="listAll" onClick="listAll(this, 'ber')">list all 4</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="ber">ⴵ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⴶ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⴾ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵁ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵂ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵆ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵈ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵋ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵌ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵐ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵑ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵗ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵘ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵞ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵤ</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵜⵙ</span><span class="listTrans">w</span><span class="listIPA">w</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⴷⵣ</span><span class="listTrans">y</span><span class="listIPA">j</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵜⵛ</span><span class="listTrans">z</span><span class="listIPA">z</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⴷⵊ</span><span class="listTrans">zˁ</span><span class="listIPA">zˁ</span></div>
 </div>
 </figure>
-</details>
-
-<p>The symbol <span class="codepoint"><span lang="ber">&#x2D6F;</span> [<a href="/scripts/tifinagh/block#char2D6F"><span class="uname">U+2D6F TIFINAGH MODIFIER LETTER LABIALIZATION MARK</span></a>]</span> (<span class="trans">tamatart</span>) is used with other consonants to indicate the sound <span class="ipa">ʷ</span>. IRCAM's Tifinagh alphabet uses it for <span class="charExample"><span class="ex" lang="ber">ⴳⵯ</span> <span class="ipa">ɡʷ</span></span> and <span class="charExample"><span class="ex" lang="ber">ⴽⵯ</span> <span class="ipa">kʷ</span></span>. </p>
+</section>
 
 
 
 
 <section id="biconsonants">
 <h3><a href="#biconsonants">Consonant clusters</a></h3>
-<p>Berber Tamazight text displays consonants with no intervening vowels by simply putting them side by side, eg. <span class="charExample"><span class="ex" lang="ber">ⵡⴰⴷⴷⴰⴷ</span> <span class="trans">waddad</span></span>.</p>
-<p>Consonant clusters may, however, be displayed as ligated forms in Tuareg.<sup>u</sup> There are two ways to achieve this.</p>
-<p>When a bi-consonant is considered obligatory, <span class="codepoint"><span lang="ber">&#x25CC;&#x2D7F;</span> [<a href="/scripts/tifinagh/block#char2D7F"><span class="uname">U+2D7F TIFINAGH CONSONANT JOINER​</span></a>]</span> is added between the two consonants. If the font supports bi-consonant shapes, the joiner is not shown, but the consonants are ligated. If the font doesn't support the joiner, it should be displayed visually.</p>
+
+<figure class="characterBox">
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="ber">&#x2D7F;</span><span class="listTrans">͓</span></div>
+</div>
+</figure>
+
+<p> Tamazight text written in Neo-Tifinagh typically displays consonants with no intervening vowels by simply putting them side by side, eg. <span class="charExample"><span class="ex" lang="ber">ⵡⴰⴷⴷⴰⴷ</span> <span class="trans">waddad</span></span>.</p>
+<p>Consonant clusters may, however, be displayed as ligated forms in Tuareg.<sup>u</sup> This is particularly useful in text that is not fully vowelled. There are two ways to achieve this in Unicode-encoded text.</p>
+<p>When a bi-consonant is considered obligatory, &nbsp; <span class="codepoint" translate="no"><span lang="ber">&#x2D7F;</span>&nbsp; [<span class="uname">U+2D7F TIFINAGH CONSONANT JOINER</span>]</span> is added between the two consonants. If the font supports bi-consonant shapes, the joiner is not shown, but the consonants are ligated. If the font doesn't support the joiner, it should be displayed visually, eg. <span class="charExample" translate="no"><span class="ex" lang="ber">ⵎ⵿‌ⵜ</span></span>.</p>
 <figure class="narrowlines">
 <div class="listArray" style="justify-content: center; font-size: 150%; line-height: 1.2;">
-<div class="listPair"><span class="listItem" lang="ber">ⵎ⵿ⵜ</span><span class="listTrans">mt</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵏ⵿ⴾ</span><span class="listTrans">nk</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵏ⵿ⵜ</span><span class="listTrans">nt</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵔ⵿ⵜ</span><span class="listTrans">rt</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵙ⵿ⵜ</span><span class="listTrans">st</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵎ⵿ⵜ</span><span class="listTrans">m͓t</span><span class="berberlatin" style="display:none;">mt</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵏ⵿ⴾ</span><span class="listTrans">n͓k̇</span><span class="berberlatin" style="display:none;">nk</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵏ⵿ⵜ</span><span class="listTrans">n͓t</span><span class="berberlatin" style="display:none;">nt</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵔ⵿ⵜ</span><span class="listTrans">r͓t</span><span class="berberlatin" style="display:none;">rt</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵙ⵿ⵜ</span><span class="listTrans">s͓t</span><span class="berberlatin" style="display:none;">st</span></div>
 </div>
 <figcaption>Examples of ligated biconsonants.</figcaption>
 </figure>
+<p><span class="instructions">More information about the origin of the biconsonant glyph →<sup><a href="http://std.dkuug.dk/JTC1/SC2/WG2/docs/n4069.pdf">p</a></sup></span></p>
+
 <p>The second approach uses <span class="codepoint"><span class="trans">ZWJ</span> [<a href="/scripts/tifinagh/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span> rather than the Tifinagh joiner, and serves as an optional hint to the font. The fallback is simply the two consonants side by side.</p>
-<p><span class="ednote">Could this be a feature that is associated with a higher level protocal, such as a CSS property?</span></p>
+<p>The ligated shapes may vary from font to font.</p>
+<figure class="narrowlines">
+<img src="images/ligatures.png" alt=" "/>
+<figcaption>The ligated biconsonants shown above, rendered using two different fonts (top, Tagmukay; bottom, Noto Sans Tifinagh).</figcaption>
+</figure>
 <p>Old Tifinagh texts don't show gemination. </p>
+<p><span class="ednote">Could this be a feature that is associated with a higher level protocal, such as a CSS property?</span></p>
 </section>
 
 </section>
@@ -318,35 +369,74 @@ A modern alphabetical derivative of the traditional script, known as Neo-Tifinag
 <section id="vowels">
 <h2><a href="#vowels">Vowels</a></h2>
     
-    <p>The vowel letters of Neo-Tifinagh are<sup><a href="http://en.wikipedia.org/wiki/Tifinagh">w</a></sup>:</p>
+    <p>Neo-Tifinagh is designed to be fully vowelled (and therefore, alphabetic), however, other writing sytems such as Touareg and older variants are not.</p>
+<p>The ancient Berber script used a single vowel symbol, read normally as <span class="ipa">a</span>, but <span class="ipa">i</span> after <span class="ipa">y</span> or <span class="ipa">u</span> after <span class="ipa">w</span>.<sup>u</sup> Some Tuareg orthographies display a single vowel letter at the end of a word. </p>
+<p>The vowel letters of Neo-Tifinagh are<sup><a href="http://en.wikipedia.org/wiki/Tifinagh">w</a></sup>:</p>
 
-<figure>
-<div class="listAll" onClick="listAll(this, 'ber')">list all</div>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'ber')">list all 4</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="ber">ⴰ</span><span class="listTrans">a</span><span class="listIPA">æ</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⴻ</span><span class="listTrans">e</span><span class="listIPA">ə</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵉ</span><span class="listTrans">i</span><span class="listIPA">i</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵓ</span><span class="listTrans">u</span><span class="listIPA">ʊ</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⴰ</span><span class="listIPA">æ</span><span class="listTrans">a</span><span class="berberlatin" style="display:none;">a</span><span class="arabic" style="display:none;">ا‬</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⴻ</span><span class="listIPA">ə</span><span class="listTrans">e</span><span class="berberlatin" style="display:none;">e</span><span class="arabic" style="display:none;">ه</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵉ</span><span class="listIPA">i</span><span class="listTrans">i</span><span class="berberlatin" style="display:none;">i</span><span class="arabic" style="display:none;">ي</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵓ</span><span class="listIPA">ʊ</span><span class="listTrans">u</span><span class="berberlatin" style="display:none;">u, w</span><span class="arabic" style="display:none;">و, ۉ</span></div>
 </div>
 </figure>
+
+
 
 
 <section id="altvowels">
 <h3><a href="#altvowels">Vowels in other orthographies</a></h3>
 
-<p>The Unicode block has two further letters, used for Tuareg.</p>
+<p>The Unicode block has two further vowel letters, used for Tuareg. <sup><a href="https://www.unicode.org/L2/L2010/10096-tifinagh-vowels.pdf">aa</a></sup></p>
 
-<figure>
-<div class="listAll" onClick="listAll(this, 'ber')">list all</div>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'ber')">list all 2</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="ber">ⵦ</span><span class="listTrans">e</span><span class="listIPA">e</span></div>
-<div class="listPair"><span class="listItem" lang="ber">ⵧ</span><span class="listTrans">o</span><span class="listIPA">o</span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵦ</span><span class="listIPA">eː</span><span class="listTrans">ė</span><span class="berberlatin" style="display:none;">e</span><span class="arabic" style="display:none;"></span></div>
+<div class="listPair"><span class="listItem" lang="ber">ⵧ</span><span class="listIPA">oː</span><span class="listTrans">o</span><span class="berberlatin" style="display:none;">o</span><span class="arabic" style="display:none;"></span></div>
 </div>
 </figure>
 
-<p>The ancient Berber script used a single vowel symbol, read normally as <span class="ipa">a</span>, but <span class="ipa">i</span> after <span class="ipa">y</span> or <span class="ipa">u</span> after <span class="ipa">w</span>.<sup>u</sup> Some Tuareg orthographies display a single vowel letter at the end of a word. </p>
-<p>Diacritic marks from other blocks have been used in some notations, to represent vowels and foreign consonants, eg. <span class="charExample"><span class="ex" lang="ber">ⴵ̇</span> <span class="ipa">a</span></span>, <span class="charExample"><span class="ex" lang="ber">ⵉ̉</span> <span class="ipa">iː</span></span>, and <span class="charExample"><span class="ex" lang="ber">ⴱ̂</span> <span class="ipa">p</span></span>. Sometimes two diacritics are shown above the base, side by side rather than stacked,eg. <span class="charExample"><span class="ex" lang="ber">ⵉ̇̄</span> <span class="ipa">eː</span></span>.<sup>u</sup></p>
 </section>
+
+
+
+
+
+  
+<section id="diacritics">
+<h2><a href="#diacritics">Diacritics</a></h2>
+
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'ber')">list all 4</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="ber">&#x0307;</span><span class="listTrans">˙</span></div>
+<div class="listPair"><span class="listItem" lang="ber">&#x0309;</span><span class="listTrans">ʼ</span></div>
+<div class="listPair"><span class="listItem" lang="ber">&#x0302;</span><span class="listTrans">ˆ</span></div>
+<div class="listPair"><span class="listItem" lang="ber">&#x0304;</span><span class="listTrans">ˉ</span></div>
+</div>
+</figure>
+
+
+<p>Diacritic marks from other blocks have been used in some notations, to represent vowels and foreign consonants, eg. <span class="charExample"><span class="ex" lang="ber">ⴵ̇</span> <span class="ipa">a</span></span>, <span class="charExample"><span class="ex" lang="ber">ⵉ̉</span> <span class="ipa">iː</span></span>, and <span class="charExample"><span class="ex" lang="ber">ⴱ̂</span> <span class="ipa">p</span></span>. </p>
+<p>Sometimes two diacritics are shown above the base, side by side rather than stacked,eg. <span class="charExample"><span class="ex" lang="ber">ⵉ̇̄</span> <span class="ipa">eː</span></span>.<sup>u</sup></p>
+</section>
+</section>
+
+
+
+
+
+<section id="punctuation">
+<h2><a href="#punctuation">Punctuation</a></h2>
+<figure class="characterBox">
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="ber">⵰</span><span class="listTrans"> •</span></div>
+</div>
+</figure>
+<p> Tifinagh uses western punctuation. However some orthographies use one native punctuation mark, <span class="name">tazarast</span>, to indicate phrase and sentence breaks. See <a href="#delimiters">Text delimiters</a>.</p>
 </section>
 
 
@@ -356,24 +446,6 @@ A modern alphabetical derivative of the traditional script, known as Neo-Tifinag
 <section id="digits">
 <h2><a href="#digits">Numbers</a></h2>
     <p>Tifinagh uses european digits.</p>
-</section>
-
-
-
-
-
-<section id="other">
-<h2><a href="#other">Other characters</a></h2>
-    <p>The Unicode Tifinagh block has two characters that are not consonants or vowels.</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'ber')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="ber">⵰</span></div>
-<div class="listPair"><span class="listItem" lang="ber">◌⵿</span></div>
-</div>
-</figure>
-
-<p>The first is punctuation (see below). The second is used to produce biconsonant clusters – see the section on consonant clusters above.</p>
 </section>
 
 
@@ -392,7 +464,7 @@ A modern alphabetical derivative of the traditional script, known as Neo-Tifinag
 <figcaption>Examples of leaning shapes.</figcaption>
 </figure>
 <p>This is purely a font-based feature. The character codes remain the same.</p>
-<p>Another example of context-based glyph changes is the use Tuareg bi-consonant conjuncts described earlier.</p>
+<p>Another example of context-based glyph changes is the use of Tuareg bi-consonant conjuncts described earlier.</p>
 </section>
   
   
@@ -417,15 +489,15 @@ A modern alphabetical derivative of the traditional script, known as Neo-Tifinag
 <h2><a href="#layout">Text layout</a></h2>
 <section id="dir">
 <h3><a href="#dir">Text direction</a></h3>
-    <p>Berber Neo-Tifinagh script is written horizontally, and left-to-right.</p>
-<p>Modern Tuareg is written horizontally also, but right-to-left.<sup><a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Tfng">s</a></sup></p>
+    <p>The  Neo-Tifinagh writing system is written horizontally, and left-to-right.</p>
+<p>Modern Tuareg is written horizontally also, but right-to-left,<sup><a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Tfng">s</a></sup> and reverses the glyphs of the characters, eg. <span class="charExample" translate="no"><span class="ex" lang="ber">ⴰⵙⵉⴹⵢⴰⵙ⵰</span> <span class="trans">asidˁyas•</span> <span class="meaning">Saturday</span></span> would be written <span class="charExample" translate="no"><span class="ex" lang="ber" style="transform: rotateY(180deg); display: inline-block;">ⴰⵙⵉⴹⵢⴰⵙ⵰</span></span>. This is not possible in plain text, and is achieved here by applying a CSS transform.</p>
 <p>Early inscriptions of Tifinagh were written vertically, bottom-to-top, as well as horizontally left-to-right and right-to-left. Sometimes boustrophedon was used.</p>
 </section>
 <section id="delimiters">
 <h3><a href="#delimiters">Text delimiters</a></h3>
-    <p>Words are separated by spaces.</p>
+    <p>In Neo-Tifinagh, words are separated by spaces. Other variants often don't.</p>
   <p>Tifinagh  uses western  punctuation.<sup>u</sup></p>
-<p>In some areas <span class="codepoint"><span lang="ber">&#x2D70;</span> [<a href="/scripts/tifinagh/block#char2D70"><span class="uname">U+2D70 TIFINAGH SEPARATOR MARK</span></a>]</span> (<span class="trans">tazarast</span>) is used for phrase and sentence breaks.<sup><a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Tfng"><cite>s</cite></a></sup></p>
+<p>In some areas (such as Niger, Mali, Algeria <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3482.pdf">pa</a></sup>) <span class="codepoint"><span lang="ber">&#x2D70;</span> [<a href="/scripts/tifinagh/block#char2D70"><span class="uname">U+2D70 TIFINAGH SEPARATOR MARK</span></a>]</span> (<span class="name">tazarast</span>) is used for phrase and sentence breaks.<sup><a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Tfng"><cite>s</cite></a></sup> In RTL text, this character should be mirrored, however this isn't currently possible in Unicode.</p>
 </section>
 
 
@@ -497,18 +569,21 @@ page layout
 <section id="refs">
 <h2><a href="#refs">References</a></h2>
   <ol>
-    <li>[ <sup><a href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></sup> ] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch19.pdf">Tifinagh</a>, pp735-737.</li>
+<li>[ <sup><a href="https://www.unicode.org/L2/L2010/10278-tifinagh-evolution.pdf">a</a></sup> ] Paul Anderson, <a href="https://www.unicode.org/L2/L2010/10278-tifinagh-evolution.pdf">Evolution of the Tifinagh script in Unicode</a></li>
+<li>[ <sup><a href="https://www.unicode.org/L2/L2010/10096-tifinagh-vowels.pdf">aa</a></sup> ] Paul Anderson, <a href="https://www.unicode.org/L2/L2010/10096-tifinagh-vowels.pdf">Proposal to add two Tifinagh characters for vowels in Tuareg language variants</a></li>
+<li>[ <sup><a href="https://www.academia.edu/16657385/Tifinagh_and_the_IRCAM_Explorations_in_Cursiveness_and_Bicamelarism_in_the_Tifinagh_script">b</a></sup> ] Juan Luis Blanco, <a href="https://www.academia.edu/16657385/Tifinagh_and_the_IRCAM_Explorations_in_Cursiveness_and_Bicamelarism_in_the_Tifinagh_script">Tifinagh &amp; the IRCAM</a></li>
     <li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN 0-19-507993-0, p115.</li>
-<li>[ <sup><a href="http://en.wikipedia.org/wiki/Tifinagh">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Tifinagh"><cite>Tifinagh</cite></a>.</li>
-<li>[ <sup><a href="https://en.wikipedia.org/wiki/Berber_Latin_alphabet">b</a></sup> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Berber_Latin_alphabet"><cite>Berber Latin alphabet</cite></a>.</li>
+<li>[ <sup><a href="http://std.dkuug.dk/JTC1/SC2/WG2/docs/n4069.pdf">p</a></sup> ] Lorna A. Priest, Jon Coblentz, <a href="http://std.dkuug.dk/JTC1/SC2/WG2/docs/n4069.pdf">Documenting a fallback glyph for Tifinagh Consonant Joiner</a></li>
+<li>[ <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3482.pdf">pa</a></sup> ] Lorna A. Priest, Jon Coblentz, Andrew Savage, <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3482.pdf">Proposal to encode additional Tifinagh characters</a></li>
 <li>[ <sup><a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Tfng">s</a></sup> ] Scriptsource, <a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Tfng"><cite>Tifinagh (Berber)</cite></a></li>
+    <li>[ <sup><a href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></sup> ] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch19.pdf">Tifinagh</a>, pp735-737.</li>
+<li>[ <sup><a href="http://en.wikipedia.org/wiki/Tifinagh">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Tifinagh"><cite>Tifinagh</cite></a>.</li>
+<li>[ <sup><a href="https://en.wikipedia.org/wiki/Berber_Latin_alphabet">wb</a></sup> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Berber_Latin_alphabet"><cite>Berber Latin alphabet</cite></a>.</li>
 </ol>
 </section>
 
 
-
-
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/tifinagh"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-05  13:56<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Btifinagh%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ftifinagh%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/tifinagh"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-13  4:47<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Btifinagh%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ftifinagh%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"></div>
