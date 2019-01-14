@@ -27,6 +27,10 @@
 	}
 [lang=bn] { font-family: webfont, SolaimanLipi, Likhan, "Bangla Sangam MN", "Shonar Bangla", "Vrinda", "Lohit Bengali", "Noto Sans Bengali", "Arial Unicode MS", sans-serif; font-size: 150%; }
 .large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
+
+.iso15919 { font-family: "Gentium Plus", Gentium, "Lucida Sans Unicode", "Lucida Grande", 'lucida sans', "helvetica neue", sans-serif;
+font-size: 1.1em;
+font-weight: 300; }
 </style>
 
 <script src="/shared/code/boilerplate.js"></script>
@@ -102,7 +106,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->5 January, 2019<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->14 January, 2019<!-- #EndDate -->
 &bull; tags <a href="http://r12a.github.io/blog/index.php?tag=bengali" title="Show all blog posts tagged with 'bengali'">bengali</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
@@ -117,7 +121,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   </details>
 
 <p class="instructions">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
-    <p>There is some variability in pronunciation that is not always systematic, due to vowel harmony and other things. Because of this I usually provide a transcription rather than a phonetic equivalent for examples. The transcription is that used in the book by William Radice. Letter names are taken from Radice for the most common letters.</p>
+    <p>There is some variability in pronunciation that is not always systematic, due to vowel harmony and other things. Because of this I usually provide a transcription rather than a phonetic equivalent for examples. The transcription is guided by William Radice.</p>
 </section>
 
 
@@ -166,6 +170,15 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 		<p>The basic unit for text segmentation is the syllable. Unicode grapheme clusters don't cover consonant clusters, so some additional processing is needed to identify text unit boundaries.</p>
 
 </section>
+  
+  
+  
+<div id="showTranscriptions">
+<div>Show transcriptions</div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div><label>ISO 15919 <input type="checkbox" onChange="toggleTranscription('iso15919', this.checked)"/></label></div>
+</div>
 
 
 
@@ -193,96 +206,111 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   <p>The Bengali block has 36  consonants:
 </p>
 
-<figure>
-<div class="listAll" onClick="listAll(this, 'bn')">list all</div>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'bn')">list all 32</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="bn">ক</span><span class="listTrans">k</span><span class="listIPA">k,kʰ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">খ</span><span class="listTrans">kh</span><span class="listIPA">kʰ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">গ</span><span class="listTrans">g</span><span class="listIPA">g</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঘ</span><span class="listTrans">gh</span><span class="listIPA">gʰ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঙ</span><span class="listTrans">ṅ</span><span class="listIPA">ŋ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">চ</span><span class="listTrans">c</span><span class="listIPA">c</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ছ</span><span class="listTrans">ch</span><span class="listIPA">cʰ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">জ</span><span class="listTrans">j</span><span class="listIPA">ʤ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঝ</span><span class="listTrans">jh</span><span class="listIPA">ʤʰ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঞ</span><span class="listTrans">ñ</span><span class="listIPA">n</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ট</span><span class="listTrans">ṭ</span><span class="listIPA">ʈ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঠ</span><span class="listTrans">ṭh</span><span class="listIPA">ʈʰ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ড</span><span class="listTrans">ḍ</span><span class="listIPA">ɖ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঢ</span><span class="listTrans">ḍh</span><span class="listIPA">ɖʰ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ণ</span><span class="listTrans">ṇ</span><span class="listIPA">n</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ত</span><span class="listTrans">t</span><span class="listIPA">t</span></div>
-<div class="listPair"><span class="listItem" lang="bn">থ</span><span class="listTrans">th</span><span class="listIPA">tʰ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">দ</span><span class="listTrans">d</span><span class="listIPA">d</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ধ</span><span class="listTrans">dh</span><span class="listIPA">dʰ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ন</span><span class="listTrans">n</span><span class="listIPA">n</span></div>
-<div class="listPair"><span class="listItem" lang="bn">প</span><span class="listTrans">p</span><span class="listIPA">p</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ফ</span><span class="listTrans">ph</span><span class="listIPA">pf,pʰ,f</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ব</span><span class="listTrans">b</span><span class="listIPA">b,∅</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ভ</span><span class="listTrans">bh</span><span class="listIPA">bʰ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ম</span><span class="listTrans">m</span><span class="listIPA">m</span></div>
-<div class="listPair"><span class="listItem" lang="bn">য</span><span class="listTrans">y</span><span class="listIPA">ʤ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">র</span><span class="listTrans">r</span><span class="listIPA">r</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ল</span><span class="listTrans">l</span><span class="listIPA">l</span></div>
-<div class="listPair"><span class="listItem" lang="bn">শ</span><span class="listTrans">ś</span><span class="listIPA">ʃ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ষ</span><span class="listTrans">ṣ</span><span class="listIPA">ʃ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">স</span><span class="listTrans">s</span><span class="listIPA">ʃ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">হ</span><span class="listTrans">h</span><span class="listIPA">h</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ৎ</span><span class="listTrans">t</span><span class="listIPA">t</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ড়</span><span class="listTrans">ṛ</span><span class="listIPA">ɽ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঢ়</span><span class="listTrans">ṛh</span><span class="listIPA">ɽ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">য়</span><span class="listTrans">ẏ</span><span class="listIPA">j,e,w</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ক</span><span class="listIPA">k</span><span class="listTrans">k</span><span class="iso15919" style="display:none;">k</span></div>
+<div class="listPair"><span class="listItem" lang="bn">খ</span><span class="listIPA">kʰ</span><span class="listTrans">kʰ</span><span class="iso15919" style="display:none;">kh</span></div>
+<div class="listPair"><span class="listItem" lang="bn">গ</span><span class="listIPA">g</span><span class="listTrans">g</span><span class="iso15919" style="display:none;">g</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঘ</span><span class="listIPA">gʰ</span><span class="listTrans">gʰ</span><span class="iso15919" style="display:none;">gh</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঙ</span><span class="listIPA">ŋ, ŋg</span><span class="listTrans">ŋ</span><span class="iso15919" style="display:none;">ṅ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">চ</span><span class="listIPA">c</span><span class="listTrans">c</span><span class="iso15919" style="display:none;">c</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ছ</span><span class="listIPA">cʰ</span><span class="listTrans">cʰ</span><span class="iso15919" style="display:none;">ch</span></div>
+<div class="listPair"><span class="listItem" lang="bn">জ</span><span class="listIPA">ʤ</span><span class="listTrans">ʤ</span><span class="iso15919" style="display:none;">j</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঝ</span><span class="listIPA">ʤʰ</span><span class="listTrans">ʤʰ</span><span class="iso15919" style="display:none;">jh</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঞ</span><span class="listIPA">n</span><span class="listTrans">ñ</span><span class="iso15919" style="display:none;">ñ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ট</span><span class="listIPA">ʈ</span><span class="listTrans">ʈ</span><span class="iso15919" style="display:none;">ṭ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঠ</span><span class="listIPA">ʈʰ</span><span class="listTrans">ʈʰ</span><span class="iso15919" style="display:none;">ṭh</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ড</span><span class="listIPA">ɖ</span><span class="listTrans">ɖ</span><span class="iso15919" style="display:none;">ḍ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঢ</span><span class="listIPA">ɖʰ</span><span class="listTrans">ɖʰ</span><span class="iso15919" style="display:none;">ḍh</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ণ</span><span class="listIPA">n</span><span class="listTrans">n̈</span><span class="iso15919" style="display:none;">ṇ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ত</span><span class="listIPA">t</span><span class="listTrans">t</span><span class="iso15919" style="display:none;">t</span></div>
+<div class="listPair"><span class="listItem" lang="bn">থ</span><span class="listIPA">tʰ</span><span class="listTrans">tʰ</span><span class="iso15919" style="display:none;">th</span></div>
+<div class="listPair"><span class="listItem" lang="bn">দ</span><span class="listIPA">d</span><span class="listTrans">d</span><span class="iso15919" style="display:none;">d</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ধ</span><span class="listIPA">dʰ</span><span class="listTrans">dʰ</span><span class="iso15919" style="display:none;">dh</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ন</span><span class="listIPA">n</span><span class="listTrans">n</span><span class="iso15919" style="display:none;">n</span></div>
+<div class="listPair"><span class="listItem" lang="bn">প</span><span class="listIPA">p</span><span class="listTrans">p</span><span class="iso15919" style="display:none;">p</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ফ</span><span class="listIPA">pf, pʰ f</span><span class="listTrans">pʰ</span><span class="iso15919" style="display:none;">ph</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ব</span><span class="listIPA">b, ∅-</span><span class="listTrans">b</span><span class="iso15919" style="display:none;">b</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ভ</span><span class="listIPA">bʰ</span><span class="listTrans">bʰ</span><span class="iso15919" style="display:none;">bh</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ম</span><span class="listIPA">m</span><span class="listTrans">m</span><span class="iso15919" style="display:none;">m</span></div>
+<div class="listPair"><span class="listItem" lang="bn">য</span><span class="listIPA">ʤ-, -æ/-e</span><span class="listTrans">ý</span><span class="iso15919" style="display:none;">y</span></div>
+<div class="listPair"><span class="listItem" lang="bn">র</span><span class="listIPA">r</span><span class="listTrans">r</span><span class="iso15919" style="display:none;">r</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ল</span><span class="listIPA">l</span><span class="listTrans">l</span><span class="iso15919" style="display:none;">l</span></div>
+<div class="listPair"><span class="listItem" lang="bn">শ</span><span class="listIPA">ʃ, s</span><span class="listTrans">ʃ</span><span class="iso15919" style="display:none;">ś</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ষ</span><span class="listIPA">ʃ</span><span class="listTrans">ʃ̇</span><span class="iso15919" style="display:none;">ṣ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">স</span><span class="listIPA">ʃ, s</span><span class="listTrans">ʃ̈</span><span class="iso15919" style="display:none;">s</span></div>
+<div class="listPair"><span class="listItem" lang="bn">হ</span><span class="listIPA">h</span><span class="listTrans">h</span><span class="iso15919" style="display:none;">h</span></div>
+</div>
+</figure>
+<section id="nukta">
+<h3><a href="#nukta">Consonants with nukta</a></h3>
+        
+  <p><span class="codepoint" translate="no"><span lang="hi">&#x093C;</span> [<a href="devanagari#char093C"><span class="uname">U+093C DEVANAGARI SIGN NUKTA</span></a>]</span> is used to create 3 additional letters, eg. the dot changes <span class="charExample" translate="no"><span class="ex" lang="bn">ড</span> <span class="ipa">ɖ</span></span> to <span class="charExample" translate="no"><span class="ex" lang="bn">ড়</span> <span class="ipa">ɽ</span></span>. The Unicode block contains precomposed code points for the following.</p>
+  
+
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'bn')">list all 3</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="bn">&#x09DC;</span><span class="listIPA">ɽ</span><span class="listTrans">ɽ</span><span class="iso15919" style="display:none;">ɽ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">&#x09DD;</span><span class="listIPA">ɽ</span><span class="listTrans">ɽ̇</span><span class="iso15919" style="display:none;">ɽ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">&#x09DF;</span><span class="listIPA">j, e, w</span><span class="listTrans">ẏ</span><span class="iso15919" style="display:none;">ẏ</span></div>
 </div>
 </figure>
 
 
-<p>
-    <mark>Usage tip:</mark>
-Three of these are best represented by combinations of base character and diacritic, since they are decomposed by Normalization Form C.</p>
+
+<p>These code points all decompose to a basic consonant plus <span class="name">nukta</span> and aren't recomposed by Unicode normalisation form C. The Unicode Standard recommends that content authors use decomposed sequences for these letters, ie.</p>
+
 <figure>
-  <table class="choices" style="margin:auto;">
-    <tbody>
-			<tr><th>Don't use</th>
-			<th>Do use</th></tr>
-			<tr>
-			<td><span class="ex" lang="bn">ড়</span><br />
-				<a target="c" href="/scripts/bengali/block#char09DC" class="uname">09DC BENGALI LETTER RRA</a></td>
-			<td><span class="ex" lang="bn">ড</span> + <span class="ex" lang="bn"> ়</span><br />
-				<a target="c" href="/scripts/bengali/block#char09A1" class="uname">09A1 BENGALI LETTER DDA</a>  +<br /><a target="c" href="/scripts/bengali/block#char09BC" class="uname">09BC BENGALI SIGN NUKTA</a></td>
-			</tr>
-			<tr>
-			<td><span class="ex" lang="bn">ঢ়</span><br />
-				<a target="c" href="/scripts/bengali/block#char09DD" class="uname">09DD BENGALI LETTER RHA</a></td>
-			<td><span class="ex" lang="bn">ঢ</span> + <span class="ex" lang="bn"> ়</span><br />
-				<a target="c" href="/scripts/bengali/block#char09A2" class="uname">09A2 BENGALI LETTER DDHA</a>  +<br /><a target="c" href="/scripts/bengali/block#char09BC" class="uname">09BC BENGALI SIGN NUKTA</a></td>
-			</tr>
-			<tr>
-			<td><span class="ex" lang="bn">য়</span><br />
-				<a target="c" href="/scripts/bengali/block#char09DF" class="uname">09DF   BENGALI LETTER YYA</a></td>
-			<td><span class="ex" lang="bn">য</span> + <span class="ex" lang="bn"> ়</span><br />
-				<a target="c" href="/scripts/bengali/block#char09AF" class="uname">09AF BENGALI LETTER YA</a>  +<br /><a target="c" href="/scripts/bengali/block#char09BC" class="uname">09BC BENGALI SIGN NUKTA</a></td>
-			</tr>
-  </tbody></table>
+<div class="listAll" onClick="listAll(this, 'bn')">list all 3</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="bn">ড়</span><span class="listIPA">ɽ</span><span class="listTrans">ɽ</span><span class="iso15919" style="display:none;">ɽ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঢ়</span><span class="listIPA">ɽ</span><span class="listTrans">ɽ̇</span><span class="iso15919" style="display:none;">ɽ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">য়</span><span class="listIPA">j, e, w</span><span class="listTrans">ẏ</span><span class="iso15919" style="display:none;">ẏ</span></div>
+</div>
 </figure>
 
 
-<section id="conjuncts">
-		<h3><a href="#conjuncts">Conjuncts </a></h3>
-	<p>The absence of vowels between consonants can be represented in the following ways:</p>
-			<ul>
-			  <li>with no special rendering, eg. <span class="ex" lang="bn">করতাল</span> <span class="trans">kɔrtal</span> <span class="meaning">cymbal</span>.</li>
-			  <li>by specially shaped combinations of character glyphs called conjuncts, eg. <span class="ex" lang="bn"> গন্ধ</span> <span class="trans">gɔndhô</span> <span class="meaning">scent</span>.</li>
-			  <li>by showing the virama (called <span class="ex" lang="bn">হসন্ত</span> <span class="trans">hɔsôntô </span>in Bengali), eg. <span class="ex" lang="bn" >ফ্‌ল্যাট</span> <span class="trans">ph‌læʈ</span> <span class="meaning">flat</span>. </li>
-    </ul>
-			<p>Unlike languages written in the Devanagari script, consonant clusters are often not represented as conjuncts in Bengali. It is necessary to just know that the vowel should not be pronounced, eg. <span class="ex" lang="bn">রিকশা</span> <span class="trans">rikʃa</span> <span class="meaning">rickshaw</span>. Grammatical suffixes and endings are typically written without conjuncts, eg. <span
-					class="ex" lang="bn">খাননা</span> <span class="trans">khanna</span>, which is the present tense form <span class="trans">khan</span> plus negative suffix <span class="ipa">na</span>; <span class="ex" lang="bn">করছ</span> <span class="trans">kôrchô</span>, which is stem <span class="trans">kôr</span> from <span class="trans">kôra</span> plus present continuous ending <span class="trans">chô</span>.</p>
-			<p>Conjunct shapes are commonly formed by displaying a slightly smaller version of the non-final consonants in a cluster (equivalent to half-forms in Hindi), eg. see the <span class="trans">m</span> in <span class="ex" lang="bn">ক্যম্পাস</span> <span class="trans">kyæmpas</span> <span class="meaning">campus</span>, or by combining the consonants into a more complex conjunct shape, eg. <span class="trans">khr</span> and <span class="trans">ʂʈ</span> in <span class="ex" lang="bn">খ্রিষ্টান</span> <span class="trans">khriʂʈan</span> <span class="meaning">christian</span>.</p>
-			<p>Like other scripts, <span class="codepoint"><span lang="bn">&#x09B0;</span> <a href="/scripts/bengali/block#char09B0">[<span class="uname">U+09B0 BENGALI LETTER RA</span>]</a></span> is displayed in a non-standard way in consonant clusters. A syllable initial <span class="name">rɔ</span> is displayed as a mark to the top right of the cluster, eg. <span class="trans">rt</span> in <span class="ex" lang="bn">গর্ত</span> <span class="trans">gɔrtô</span> <span class="meaning">hole</span>, and a trailing <span class="name">rɔ</span> is typically displayed as a wavy line below the other consonants, eg. <span class="trans">gr</span> in <span class="ex" lang="bn">গ্রাম</span> <span class="trans">gram</span> <span class="meaning">village</span>.</p>
-			<p>Bengali also has a particular way of representing a cluster-final <span class="ipa">j</span> semi-vowel. This is typically represented
-				using the full form of the preceding consonant followed by a special form of <span class="codepoint"><span lang="bn">&#x09AF;</span> <a href="/scripts/bengali/block#char09AF">[<span class="uname">U+09AF BENGALI LETTER YA</span>]</a></span>, known as <span class="name">y̌ɔ-phɔla</span>, eg. <span class="ex" lang="bn">হ্যাঁ</span> <span class="trans">hyæ̃</span> <span class="meaning">yes</span>.</p>
-			<p>When the virama is often used  it is usually because the font doesn't have a particular conjunct ligature, but it may also be visible in places where the phonology is unusual, eg. <span class="ex" lang="bn">ফ্‌ল্যাট</span> <span class="trans">phlæʈ</span> <span class="meaning">flat</span>; <span class="ex" lang="bn">লান্‌চ</span> <span class="trans">lanc</span> <span class="meaning">lunch</span> (though these may also be spelled with conjuncts, eg. <span class="ex" lang="bn">ফ্ল্যাট</span> <span class="trans">phlæʈ</span> <span class="meaning">flat</span>). It is also quite common to see <span class="ex" lang="bn">উদ্‌যাপন</span> to distinguish it from words like <span class="ex" lang="bn">উদ্যান</span>. These words are etymologically related, but distinct phonetically.</p>
-	  <p>Nasals in conjuncts tend to conform to phonological patterns. Velar consonants (k, kh, g, etc) combine with <span class="ex" lang="bn">ঙ</span> <span class="name">ŋɔ</span>, palatal consonant (c, ch, ..) combine with <span class="ex" lang="bn">ঞ</span> <span class="name">ñɔ</span>, retroflex  <span class="ex" lang="bn">ণ</span> <span class="name">ɳɔ</span>, dental <span class="ex" lang="bn">ন</span> <span class="name">nɔ</span>, and labial <span class="ex" lang="bn">ম</span> <span class="name">mɔ</span>.</p>
-  </section>
+
+
+<p>The <span class="name">nukta</span> should always be typed and stored immediately after the consonant it modifies, and before any combining vowels or diacritics.</p>
+</section>
+
+  
+
+
+
+
+<section id="finals">
+<h3><a href="#finals">Final consonants</a></h3>
+
+<p>One letter and 2 diacritics represent syllable-final consonant sounds.</p>
+
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'bn')">list all 3</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="bn">ৎ</span><span class="listIPA">t</span><span class="listTrans">t̽</span><span class="iso15919" style="display:none;">ṯ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ং</span><span class="listIPA">ŋ</span><span class="listTrans">ŋ̽</span><span class="iso15919" style="display:none;">ṁ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঃ</span><span class="listIPA">ɦ</span><span class="listTrans">h̽</span><span class="iso15919" style="display:none;">ḥ</span></div>
+</div>
+</figure>
+
+
+        <p><span class="codepoint" translate="no"><span lang="bn">&#x09CE;</span> [<a href="/scripts/bengali/block#char09CE"><span class="uname">U+09CE BENGALI LETTER KHANDA TA</span></a>]</span> is a variant form of <span class="codepoint" translate="no"><span lang="bn">&#x09A4;</span> [<a href="/scripts/bengali/block#char09A4"><span class="uname">U+09A4 BENGALI LETTER TA</span></a>]</span> that was added to Unicode 4.1 as a separate character. In some words a <span class="name">tɔ</span> that has no following inherent or other vowel may have this shape. It either comes at the end of words, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">হঠাৎ</span> <span class="trans">hʈʰɑt̽</span> <span class="ipa">hɔʈʰɑt</span> <span class="meaning">suddenly</span></span>, or before a consonant that doesn't naturally combine with <span class="name">tɔ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">উৎসব</span> <span class="trans">ụt̽ʃ̈b</span> <span class="ipa">utʃɔb</span> <span class="meaning">festival</span></span> or <span class="charExample" translate="no"><span class="ex" lang="bn">সৎমা</span> <span class="trans">ʃ̈t̽mɑ</span> <span class="ipa">ʃɔtmɑ</span> <span class="meaning">step-mother</span></span>. Many such words, however, use <span class="ex" lang="bn">ত</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">সদাত্মা</span> <span class="trans">ʃ̈dɑt͓mɑ</span> <span class="ipa">ʃadɑtːɑ</span></span>. It's not possible to say which will be used.</p>
+<p><span class="codepoint" translate="no"><span lang="bn">&#x0982;</span> [<a href="/scripts/bengali/block#char0982"><span class="uname">U+0982 BENGALI SIGN ANUSVARA</span></a>]</span> is a final nasal, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বাংলা</span> <span class="trans">bɑŋ̽lɑ</span> <span class="ipa">bɑŋlɑ</span> <span class="meaning">Bengali (language)</span></span>.</p>
+        <p>Sometimes spelling is inconsistent, especially when this or <span class="codepoint" translate="no"><span lang="bn">&#x0999;</span> [<a href="/scripts/bengali/block#char0999"><span class="uname">U+0999 BENGALI LETTER NGA</span></a>]</span> are used in a conjunct, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">সাঙঘাতিক</span> <span class="trans">ʃ̈ɑŋgʰɑtik</span></span> or <span class="charExample" translate="no"><span class="ex" lang="bn">সাংঘাতিক</span> <span class="trans">ʃ̈ɑŋ̽gʰɑtik</span> <span class="ipa">ʃ̈ɑŋgʰɑtik</span> <span class="meaning">terrible</span></span>; <span class="charExample" translate="no"><span class="ex" lang="bn">রঙ</span> <span class="trans">rŋ</span></span> or <span class="charExample" translate="no"><span class="ex" lang="bn">রং</span> <span class="trans">rŋ̽</span> <span class="ipa">rɔŋ</span> <span class="meaning">colour</span></span>. However, in certain words the spelling is fixed. <span class="charExample" translate="no"><span class="ex" lang="bn">বাংলা</span></span> is one such word.  But, since this cannot support vowel signs, the word for Bengali nation (rather than language) has to be spelled with <span class="codepoint" translate="no"><span lang="bn">&#x0999;</span> [<a href="/scripts/bengali/block#char0999"><span class="uname">U+0999 BENGALI LETTER NGA</span></a>]</span>, ie. <span class="charExample" translate="no"><span class="ex" lang="bn">বাঙালী</span> <span class="trans">bɑŋɑlī</span> <span class="ipa">bɑŋgɑlī</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="bn">&#x0983;</span> [<a href="/scripts/bengali/block#char0983"><span class="uname">U+0983 BENGALI SIGN VISARGA</span></a>]</span> has two different effects:</p>
+        <ul>
+<li>Producing vigorous final aspiration, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বাঃ</span> <span class="trans">bɑh̽</span> <span class="ipa">bɑːɦ</span> <span class="meaning">left</span></span>.</li>
+<li>Lengthening the following consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">নিঃশব্দ</span> <span class="trans">nih̽ʃb͓d</span> <span class="ipa">niʃʃɔbdo</span> <span class="meaning">silence</span></span>.  There is no aspiration.</li>
+</ul>
+        <p>The only common colloquial words containing this sign are <span class="charExample" translate="no"><span class="ex" lang="bn">বাঃ</span> <span class="trans">bɑh̽</span> <span class="ipa">bɑːɦ</span> <span class="meaning">left</span></span> and <span class="charExample" translate="no"><span class="ex" lang="bn">দুঃখ</span> <span class="trans">duh̽kʰ</span> <span class="ipa">dukkʰo</span> <span class="meaning">sorrow</span></span>.</p>
+        <p>In the sequence of characters, these should all occur after any combining vowel sign associated with the same syllable. None carry vowel signs.</p>
+
+<p>See also the candrabindu diacritic, which nasalises a vowel.</p>
+</section>
+
 </section>
 
 
@@ -292,49 +320,34 @@ Three of these are best represented by combinations of base character and diacri
 <section id="vowels" class="note">
      <h2><a href="#vowels">Vowels</a></h2>
 
-<p>There are 14 independent vowels in the Bengali block.</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'bn')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="bn">অ</span><span class="listTrans">a</span></div>
-<div class="listPair"><span class="listItem" lang="bn">আ</span><span class="listTrans">ā</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ই</span><span class="listTrans">i</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঈ</span><span class="listTrans">ī</span></div>
-<div class="listPair"><span class="listItem" lang="bn">উ</span><span class="listTrans">u</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঊ</span><span class="listTrans">ū</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঋ</span><span class="listTrans">r̥</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঌ</span><span class="listTrans">l̥</span></div>
-<div class="listPair"><span class="listItem" lang="bn">এ</span><span class="listTrans">ē</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঐ</span><span class="listTrans">ai</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ও</span><span class="listTrans">ō</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঔ</span><span class="listTrans">au</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ৠ</span><span class="listTrans">r̥̄</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ৡ</span><span class="listTrans">l̥̄</span></div>
-</div>
-</figure>
+<section id="inherentvowel">
+<h3><a href="#inherentvowel">Inherent vowel</a></h3>
 
-<p>Given that there is no vowel-sign needed for the inherent vowel, there are therefore 13 available for rendering vowels in orthographic syllables that begin with one or more consonants.</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'bn')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="bn">া</span><span class="listTrans">ā</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ি</span><span class="listTrans">i</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ী</span><span class="listTrans">ī</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ু</span><span class="listTrans">u</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ূ</span><span class="listTrans">ū</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ৃ</span><span class="listTrans">r̥</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ৄ</span><span class="listTrans">l̥</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ে</span><span class="listTrans">ē</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ৈ</span><span class="listTrans">ai</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ো</span><span class="listTrans">ō</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ৌ</span><span class="listTrans">au</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ৢ</span><span class="listTrans">r̥̄</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ৣ</span><span class="listTrans">l̥̄</span></div>
-</div>
-</figure>
-<p>Bengali has lost the distinction between short and long vowels in pronunciation, but retains the difference in spelling.</p>
-<p>Three vowels are rendered on the left side of the syllable, and two have parts on both sides.</p>
-<p>Three of the vowels shown above, <span class="codepoint"><span lang="bn">&#x098C;</span> <a href="/scripts/bengali/block#char098C">[<span class="uname">U+098C BENGALI LETTER VOCALIC L</span>]</a></span>, <span class="codepoint"><span lang="bn">&#x09E0;</span> <a href="/scripts/bengali/block#char09E0">[<span class="uname">U+09E0 BENGALI LETTER VOCALIC RR</span>]</a></span> and <span class="codepoint"><span lang="bn">&#x09E1;</span> <a href="/scripts/bengali/block#char09E1">[<span class="uname">U+09E1 BENGALI LETTER VOCALIC LL</span>]</a></span>, are historic and only used to write Sanskrit in Bengali.</p>
+<p>Each consonant symbol has an inherent following vowel sound, typically transcribed as <span class="trans">a</span>, and pronounced  as <span class="ipa">ɔ</span> or <span class="ipa">o</span>. (And sometimes halfway between these
+two, when influenced by surrounding sounds.) Bengalis are not always aware of these sound differences – thinking of this as one sound. So <span class="codepoint" translate="no"><span lang="bn">&#x0995;</span> [<a href="/scripts/bengali/block#char0995"><span class="uname">U+0995 BENGALI LETTER KA</span></a>]</span> is actually pronounced  <span class="ipa">kɔ</span> or <span class="ipa">ko</span>.</p>
+<p>Note that there is also a vowel pronounced <span class="ipa">o</span>. This can lead to inconsistent spellings, eg. <span class="trans">bhalo</span>, <span class="meaning">good, well</span>, can be spelled either <span class="ex" lang="bn">ভালো</span> or <span class="ex" lang="bn">ভাল</span>. Verb forms tend to be particularly inconsistent, sometimes basing the rationale on what looks good in a particular
+				context.</p>
+			<p>The rules for determining the sound of the inherent vowel are not simple. Partly it is a question of vowel harmony. The following two
+				tendencies can help:</p>
+			<ul>
+				<li>
+					<p>In words with inherent vowels in two consecutive syllables, the sound will usually be <span class="ipa">ɔ</span>..<span
+							class="ipa">o</span>, not <span class="ipa">o</span>..<span class="ipa">ɔ</span>, eg. <span class="ex" lang="bn">গরম</span> <span class="trans">gɔrôm</span>, <span class="meaning">hot</span>.</p>
+				</li>
+				<li>
+					<p>The inherent vowel is always pronounced <span class="ipa">ɔ</span> in words that end with a conjunct consonant and pronounce the
+						vowel.</p>
+				</li>
+			</ul>
+			<p>The inherent vowel is pronounced at the end of some words and not others, eg. <span class="ex" lang="bn">গরম</span> <span class="trans">gɔrôm</span>, <span class="meaning">hot</span> vs. <span class="ex" lang="bn">গড়ান</span> <span class="trans">gɔɽɑnô</span>, <span class="meaning">to roll </span>. There is no real way to tell when it is pronounced and when not in this position, except that it is usually pronounced following a word-final consonant cluster, eg. <span class="ex" lang="bn" >যুদ্ধ</span> <span class="trans">ýud͓dʰô</span> <span class="meaning">war</span>. When pronounced in this position, the sound is usually <span class="ipa">o</span> .</p>
+<p class="ref"><a href="/scripts/bengali/#refs">Refs:</a> Radice 3, 7-8, 21, 148; Daniels 400</p>
+</section>
+
+
+
+
+
+
 
 
 <section id="vowelharmonydesc">
@@ -362,48 +375,36 @@ Three of these are best represented by combinations of base character and diacri
 					<td>i → e</td>
 				</tr>
 			</table>
-			<p>For example, the verb <span class="ex" lang="bn">শোনা</span> <span class="ipa">ʃona</span> <span class="meaning">to hear</span> with an <span class="name">i</span> ending becomes <span class="ipa">ʃuni</span>, <span class="ex" lang="bn">দেখা</span> <span class="ipa">dækʰa</span> <span class="meaning">to see</span> becomes <span class="ipa">dekʰi</span>, etc.  This sometimes accounts for the pronunciation of the inherent vowel, eg. <span class="ex" lang="bn">অতিথি</span> <span class="trans">ôtithi</span> <span class="meaning">guest</span> and <span class="ex" lang="bn">অনুবাদ</span> <span class="trans">ônubad</span> <span class="meaning">translation</span> start with <span class="ipa">o</span> rather than <span class="ipa">ɔ</span>.</p>
-  </section>
-
-<section id="inherentvowel">
-		<h3><a href="#inherentvowel">Inherent vowel</a></h3>
-			<p>The inherent vowel, unlike Hindi, is <span class="ipa">ɔ</span> or <span class="ipa">o</span>. (And sometimes halfway between these
-				two, when influenced by surrounding sounds.) Bengalis are not always aware of these sound differences – thinking of this as one sound. </p>
-			<p>Note that there is also a vowel pronounced <span class="ipa">o</span>. This can lead to inconsistent spellings, eg. <span class="trans">bhalo</span>, <span class="meaning">good, well</span>, can be spelled either <span class="ex" lang="bn">ভালো</span> or <span class="ex" lang="bn">ভাল</span>. Verb forms tend to be particularly inconsistent, sometimes basing the rationale on what looks good in a particular
-				context.</p>
-			<p>The rules for determining the sound of the inherent vowel are not simple. Partly it is a question of vowel harmony. The following two
-				tendencies can help:</p>
-			<ul>
-				<li>
-					<p>In words with inherent vowels in two consecutive syllables, the sound will usually be <span class="ipa">ɔ</span>..<span
-							class="ipa">o</span>, not <span class="ipa">o</span>..<span class="ipa">ɔ</span>, eg. <span class="ex" lang="bn">গরম</span> <span class="trans">gɔrôm</span>, <span class="meaning">hot</span>.</p>
-				</li>
-				<li>
-					<p>The inherent vowel is always pronounced <span class="ipa">ɔ</span> in words that end with a conjunct consonant and pronounce the
-						vowel.</p>
-				</li>
-			</ul>
-			<p>The inherent vowel is pronounced at the end of some words and not others, eg. <span class="ex" lang="bn">গরম</span> <span class="trans">gɔrôm</span>, <span class="meaning">hot</span> vs. <span class="ex" lang="bn">গড়ান</span> <span class="trans">gɔɽanô</span>, <span class="meaning">to roll </span>. There is no real way to tell when it is pronounced and when not in this position, except that it is usually pronounced following a word-final conjunct, eg. <span class="ex" lang="bn" >যুদ্ধ</span> <span class="trans">y̌uddhô</span> <span class="meaning">war</span>. When pronounced in this position, the sound is usually <span class="ipa">o</span> .</p>
-	<p class="ref"><a href="/scripts/bengali/#refs">Refs:</a> Radice 3, 7-8, 21, 148; Daniels 400</p>
+			<p>For example, the verb <span class="ex" lang="bn">শোনা</span> <span class="ipa">ʃonɑ</span> <span class="meaning">to hear</span> with an <span class="name">i</span> ending becomes <span class="ipa">ʃuni</span>, <span class="charExample" translate="no"><span class="ex" lang="bn">দেখা</span> <span class="ipa">dækʰa</span> <span class="meaning">to see</span></span> becomes <span class="ipa">dekʰi</span>, etc.  This sometimes accounts for the pronunciation of the inherent vowel, eg. <span class="ex" lang="bn">অতিথি</span> <span class="ipa">otitʰi</span> <span class="meaning">guest</span> and <span class="ex" lang="bn">অনুবাদ</span> <span class="ipa">onubad</span> <span class="meaning">translation</span> start with <span class="ipa">o</span> rather than <span class="ipa">ɔ</span>.</p>
   </section>
 
 
 
 
-<section id="vowelligatures">
-		<h3><a href="#vowelligatures">Vowel ligatures</a></h3>
-			<p>Some vowel signs can form ligatures with a preceding base consonant in certain contexts, but do not ligate in others (eg. newspapers and modern typefaces). Both forms are equivalent in every way but visually. </p>
-    <p>The default behaviour of a given font can be modified using the zero-width joiner and zero-width non-joiner characters, eg. <span class="ex" lang="bn" >গু</span> vs. <span class="ex" lang="bn" >গ‌ু</span>.</p>
-</section>
+<section id="dependentvowel">
+<h3><a href="#dependentvowel">Dependent vowels</a></h3>
 
 
-
-
-	<section id="choices">
-	  <h3><a href="#choices">Multi-glyph vowel signs</a></h3>
-			<p>
-			  <mark>Usage tip:</mark>
-The Bengali block also has code points that enable you to split vowel signs that circumvent the base into two parts; the single code point should be used. (If you do use the two code points, they must be both input after the base, and in the correct order.)</p>
+<p>To produce a different vowel than the inherent one, Bengali uses a combining character called a vowel-sign (Sanskrit <span class="name">matra</span>) after the base consonant. For Bengali, this is always (in principle) a single character,  is always combining, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">কী</span> <span class="ipa">kiː</span></span>, and is always typed and stored after the preceding consonant.</p>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'bn')">list all 10</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="bn">া</span><span class="listIPA">ɑ, æ</span><span class="listTrans">ɑ</span><span class="iso15919" style="display:none;">ā</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ি</span><span class="listIPA">i, e a</span><span class="listTrans">i</span><span class="iso15919" style="display:none;">i</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ী</span><span class="listIPA">i, e</span><span class="listTrans">ī</span><span class="iso15919" style="display:none;">ī</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ু</span><span class="listIPA">u, o</span><span class="listTrans">u</span><span class="iso15919" style="display:none;">u</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ূ</span><span class="listIPA">u</span><span class="listTrans">ū</span><span class="iso15919" style="display:none;">ū</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ে</span><span class="listIPA">e, æ</span><span class="listTrans">e</span><span class="iso15919" style="display:none;">e</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ৈ</span><span class="listIPA">oj</span><span class="listTrans">oʲ</span><span class="iso15919" style="display:none;">ai</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ো</span><span class="listIPA">o, u ɔ</span><span class="listTrans">o</span><span class="iso15919" style="display:none;">o</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ৌ</span><span class="listIPA">ow</span><span class="listTrans">oʷ</span><span class="iso15919" style="display:none;">au</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ৗ</span><span>&nbsp;</span><span class="listTrans">ː</span><span>&nbsp;</span></div>
+</div>
+</figure>
+<p>Bengali has lost the distinction between short and long vowels in pronunciation, but retains the difference in spelling.</p>
+<p>Almost all of the  vowel-signs are <em>spacing</em> combining characters. </p>
+<p>Three vowels are rendered on the left side of the syllable. These vowel signs are input and stored <em>after</em> the base character. The display software takes care of the correct positioning.</p>
+<p>Two vowel-signs have parts on both sides of the base consonant or cluster. It is possible to construct these vowel-signs from a sequence of individual shapes, and in fact in Normalisation Form D they do decompose, but the Unicode Standard recommends that authors use the precomposed code points.</p>
 <figure>
 			<table style="margin: auto;" class="choices"><tbody>
 			<tr><th>Don't use</th><th>Use</th></tr>
@@ -420,10 +421,433 @@ The Bengali block also has code points that enable you to split vowel signs that
 				<a target="c" href="/scripts/bengali/block#char09CB" class="uname">09CB BENGALI VOWEL SIGN O</a></td>
 			</tr>
 		</tbody></table>
-      </figure>
-  </section>
- </section>
- 
+    </figure>
+<p>Whether you use a single code point or two, the vowel-signs always come after the base consonant when typing and storing. You also need to enter the vowel-sign components in the correct order.</p>
+</section>
+
+
+
+
+
+
+<section id="nasalisation">
+<h3><a href="#nasalisation">Nasalisation</a></h3>
+
+<p><span class="codepoint" translate="no"><span lang="bn">&#x0981;</span> [<a href="/scripts/bengali/block#char0981"><span class="uname">U+0981 BENGALI SIGN CANDRABINDU</span></a>]</span> nasalises the vowel in a syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">হ্যাঁ</span> <span class="trans">h͓ýɑm̽</span> <span class="meaning">yes</span></span>, <span class="charExample" translate="no"><span class="ex" lang="bn">হাঁপান</span> <span class="trans">hɑm̽pɑn</span> <span class="ipa">hɑ̃pɑn</span> <span class="meaning">to pant</span></span>.</p>
+        <p>This appears over the top of an independent vowel, but over the basic consonant when a vowel sign is attached, not over the vowel sign, In the sequence of characters, however, this should occur after any combining vowel sign associated with the same syllable.</p>
+<p>This positioning is not evident when using the Noto Sans webfont, but if you apply another font, such as Kohinoor Bangla, it appears in the correct location. Note how the base consonant is identified correctly in the second word below, even though it is 4 code points away.</p>
+    <figure>
+        <p class="large exampleFlex"><img src="images/candrabindu.png" alt=""/></p>
+    <figcaption>The Kohinoor Bangla font positions the candrabindu over the base consonant.</figcaption>
+    </figure>
+
+</section>
+
+
+
+
+
+<section id="vowelligatures">
+		<h3><a href="#vowelligatures">Vowel ligatures</a></h3>
+			<p>Sometimes vowel signs  (particularly <span class="trans">u) </span>form ligatures with a preceding base consonant. The table below shows ligated and non-ligated forms for several combinations. In certain contexts it may not be appropriate to ligate (eg. newspapers and modern typefaces). Both forms are equivalent in every way but visually.</p>
+<p><figure>
+<div class="listAll" onClick="listAll(this, 'bn')">list all 7</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="bn">রু</span><span class="listItem" lang="bn">র‌ু</span><span class="listTrans">ru</span><span class="iso15919" style="display:none;">ru</span></div>
+<div class="listPair"><span class="listItem" lang="bn">রূ</span><span class="listItem" lang="bn">র‌ূ</span><span class="listTrans">rū</span><span class="iso15919" style="display:none;">rū</span></div>
+<div class="listPair"><span class="listItem" lang="bn">হৃ</span><span class="listItem" lang="bn">হ‌ৃ</span><span class="listTrans">hr̥</span><span class="iso15919" style="display:none;">hr̥</span></div>
+<div class="listPair"><span class="listItem" lang="bn">হু</span><span class="listItem" lang="bn">হ‌ু</span><span class="listTrans">hu</span><span class="iso15919" style="display:none;">hu</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ন্তু</span><span class="listItem" lang="bn">ন্ত‌ু</span><span class="listTrans">n͓tu</span><span class="iso15919" style="display:none;">ntu</span></div>
+<div class="listPair"><span class="listItem" lang="bn">শু</span><span class="listItem" lang="bn">শ‌ু</span><span class="listTrans">ʃu</span><span class="iso15919" style="display:none;">śu</span></div>
+<div class="listPair"><span class="listItem" lang="bn">গু</span><span class="listItem" lang="bn">গ‌ু</span><span class="listTrans">gu</span><span class="iso15919" style="display:none;">gu</span></div>
+</div>
+</figure>
+
+&nbsp;</p>
+    <p> The default behaviour of a given font can be modified using the  zero-width non-joiner character in Unicode content. For example, a font that produces the ligature <span class="charExample" translate="no"><span class="ex" lang="bn">গু</span> <span class="trans">gu</span></span> can be made to show the simpler form  <span class="ex" lang="bn" >গ‌ু</span> by the sequence <span class="codepoint" translate="no"><span lang="bn">&#x0997;</span> + ZWNJ + <span lang="bn">&#x09C1;</span> [<a href="/scripts/bengali/block#char0997"><span class="uname">U+0997 BENGALI LETTER GA</span></a> + <a href="/scripts/bengali/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a> + <a href="/scripts/bengali/block#char09C1"><span class="uname">U+09C1 BENGALI VOWEL SIGN U</span></a>]</span>.</p>
+</section>
+
+
+
+
+
+<section id="independentvowel">
+<h3><a href="#independentvowel">Independent vowels</a></h3>
+
+<p>Bengali also has a set of independent vowels to represent vowel sounds that are not preceded by a consonant. Unlike the vowel-signs, the set contains a character to represent the inherent vowel sound.</p>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'bn')">list all 10</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="bn">অ</span><span class="listIPA">ɔ, o u</span><span class="listTrans">ɔ̣</span><span class="iso15919" style="display:none;">a</span></div>
+<div class="listPair"><span class="listItem" lang="bn">আ</span><span class="listIPA">ɑ</span><span class="listTrans">ɑ</span><span class="iso15919" style="display:none;">ā</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ই</span><span class="listIPA">i, e</span><span class="listTrans">ị</span><span class="iso15919" style="display:none;">i</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঈ</span><span class="listIPA">i, e</span><span class="listTrans">ị̄</span><span class="iso15919" style="display:none;">ī</span></div>
+<div class="listPair"><span class="listItem" lang="bn">উ</span><span class="listIPA">u, o</span><span class="listTrans">ụ</span><span class="iso15919" style="display:none;">u</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঊ</span><span class="listIPA">u</span><span class="listTrans">ụ̄</span><span class="iso15919" style="display:none;">ū</span></div>
+<div class="listPair"><span class="listItem" lang="bn">এ</span><span class="listIPA">e, æ</span><span class="listTrans">ẹ</span><span class="iso15919" style="display:none;">e</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঐ</span><span class="listIPA">oj</span><span class="listTrans">ọʲ</span><span class="iso15919" style="display:none;">ai</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ও</span><span class="listIPA">o, u ɔ</span><span class="listTrans">ọ</span><span class="iso15919" style="display:none;">o</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঔ</span><span class="listIPA">ow</span><span class="listTrans">ọʷ</span><span class="iso15919" style="display:none;">au</span></div>
+</div>
+</figure>
+
+</section>
+</section>
+
+
+
+
+<section id="conjuncts">
+<h2><a href="#conjuncts">Consonant clusters</a></h2>
+	<p>The absence of vowels between consonants can be represented in the following ways:</p>
+			<ul>
+			  <li>with no special rendering, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">করতাল</span> <span class="trans">krtɑl</span> <span class="ipa">kɔrtɑl</span> <span class="meaning">cymbal</span></span>.</li>
+		    <li>by specially shaped combinations of character glyphs, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">গন্ধ</span> <span class="trans">gn͓dʰ</span> <span class="ipa">gɔndʰo</span> <span class="meaning">scent</span></span>. Where the approach changes the shape of the constituent consonants, the cluster is referred to as a <span class="name">conjunct</span>.</li>
+			  <li>by showing the virama (called <span class="charExample" translate="no"><span class="ex" lang="bn">হসন্ত</span> <span class="trans">hʃ̈n͓t</span> <span class="ipa">hɔsonto</span></span> in Bengali), eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ফ্‌ল্যাট</span> <span class="trans">pʰ͓‌l͓ýɑʈ</span> <span class="ipa">pʰlæʈ</span> <span class="meaning">flat</span></span>. </li>
+    </ul>
+			<p>Unlike languages written in the Devanagari script, consonant clusters are often not represented as conjuncts in Bengali. It is necessary to just know that the vowel should not be pronounced, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">রিকশা</span> <span class="trans">rikʃɑ</span> <span class="ipa">rikʃɑ</span> <span class="meaning">rickshaw</span></span>. Grammatical suffixes and endings are typically written without conjuncts, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">খাননা</span> <span class="trans">kʰɑnnɑ</span> <span class="ipa">kʰɑnnɑ</span></span>, which is the present tense form <span class="ipa">khan</span> plus negative suffix <span class="ipa">na</span>; <span class="charExample" translate="no"><span class="ex" lang="bn">করছ</span> <span class="trans">krcʰ</span> <span class="ipa">korcʰo</span></span>, which is stem <span class="trans">kôr</span> from <span class="trans">kôra</span> plus present continuous ending <span class="trans">chô</span>.</p>
+<p>In all cases except the the one just described, the underlying mechanism in terms of codepoints involves adding <span class="codepoint" translate="no"><span lang="bn">&#x09CD;</span> [<a href="/scripts/bengali/block#char09CD"><span class="uname">U+09CD BENGALI SIGN VIRAMA</span></a>]</span> (called <span class="charExample" translate="no"><span class="ex" lang="bn">হসন্ত</span> <span class="trans">hʃ̈n͓t</span> <span class="ipa">hɔʃonto</span></span> in Bengali) between the consonants in the cluster, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ক্ষ</span> <span class="trans">k͓ʃ̇</span></span> is produced by the sequence <span class="codepoint" translate="no"><span lang="bn">&#x0995;</span> + <span lang="bn">&#x09CD;</span> + <span lang="bn">&#x09B7;</span> [<a href="/scripts/bengali/block#char0995"><span class="uname">U+0995 BENGALI LETTER KA</span></a> + <a href="/scripts/bengali/block#char09CD"><span class="uname">U+09CD BENGALI SIGN VIRAMA</span></a> + <a href="/scripts/bengali/block#char09B7"><span class="uname">U+09B7 BENGALI LETTER SSA</span></a>]</span>.</p>
+<p>Nasals in conjuncts tend to conform to phonological patterns. Velar consonants (k, kh, g, etc) combine with <span class="ex" lang="bn">ঙ</span> <span class="name">ŋɔ</span>, palatal consonant (c, ch, ..) combine with <span class="ex" lang="bn">ঞ</span> <span class="name">ñɔ</span>, retroflex <span class="ex" lang="bn">ণ</span> <span class="name">ɳɔ</span>, dental <span class="ex" lang="bn">ন</span> <span class="name">nɔ</span>, and labial <span class="ex" lang="bn">ম</span> <span class="name">mɔ</span>.</p>
+<p>The font usually determines which visual method is used, although it is possible to influence this (see below). </p>
+
+
+<details>
+<summary class="instructions">Show a detailed list of consonant clusters, arranged by their approach to conjunct shaping.</summary>
+<p style="margin-left: 0; margin-right: 0">This set of tables shows conjunct forms for a range of characters. It is not exhaustive. The shapes shown here are those contained in the Noto Sans Bengali font. Other fonts may combine components in different ways. Click on the red characters if you want to see the standard forms.</p>
+
+
+
+<p style="margin-left: 0; margin-right: 0">Components arranged vertically.</p>
+<figure>
+<div class="listAll" onClick="listAll(this, 'bn')">list all 63</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="bn">ব্ল</span><span class="listTrans">b͓l</span><span class="iso15919" style="display:none;">bl</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ক্ল</span><span class="listTrans">k͓l</span><span class="iso15919" style="display:none;">kl</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ক্ব</span><span class="listTrans">k͓b</span><span class="iso15919" style="display:none;">kb</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঘ্ন</span><span class="listTrans">gʰ͓n</span><span class="iso15919" style="display:none;">ghn</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ফ্ল</span><span class="listTrans">pʰ͓l</span><span class="iso15919" style="display:none;">phl</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ক্ক</span><span class="listTrans">k͓k</span><span class="iso15919" style="display:none;">kk</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ক্ব</span><span class="listTrans">k͓b</span><span class="iso15919" style="display:none;">kb</span></div>
+<div class="listPair"><span class="listItem" lang="bn">গ্গ</span><span class="listTrans">g͓g</span><span class="iso15919" style="display:none;">gg</span></div>
+<div class="listPair"><span class="listItem" lang="bn">গ্ধ</span><span class="listTrans">g͓dʰ</span><span class="iso15919" style="display:none;">gdh</span></div>
+<div class="listPair"><span class="listItem" lang="bn">গ্ন</span><span class="listTrans">g͓n</span><span class="iso15919" style="display:none;">gn</span></div>
+<div class="listPair"><span class="listItem" lang="bn">গ্ল</span><span class="listTrans">g͓l</span><span class="iso15919" style="display:none;">gl</span></div>
+<div class="listPair"><span class="listItem" lang="bn">গ্ব</span><span class="listTrans">g͓b</span><span class="iso15919" style="display:none;">gb</span></div>
+<div class="listPair"><span class="listItem" lang="bn">হ্ল</span><span class="listTrans">h͓l</span><span class="iso15919" style="display:none;">hl</span></div>
+<div class="listPair"><span class="listItem" lang="bn">হ্ণ</span><span class="listTrans">h͓n̈</span><span class="iso15919" style="display:none;">hṇ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">থ্ব</span><span class="listTrans">tʰ͓b</span><span class="iso15919" style="display:none;">thb</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঞ্ছ</span><span class="listTrans">ñ͓cʰ</span><span class="iso15919" style="display:none;">ñch</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঞ্জ</span><span class="listTrans">ñ͓ʤ</span><span class="iso15919" style="display:none;">ñj</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঞ্ঝ</span><span class="listTrans">ñ͓ʤʰ</span><span class="iso15919" style="display:none;">ñjh</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ল্ক</span><span class="listTrans">l͓k</span><span class="iso15919" style="display:none;">lk</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ল্গ</span><span class="listTrans">l͓g</span><span class="iso15919" style="display:none;">lg</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ল্প</span><span class="listTrans">l͓p</span><span class="iso15919" style="display:none;">lp</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ল্ব</span><span class="listTrans">l͓b</span><span class="iso15919" style="display:none;">lb</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ল্ল</span><span class="listTrans">l͓l</span><span class="iso15919" style="display:none;">ll</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ণ্ণ</span><span class="listTrans">n͓̈n̈</span><span class="iso15919" style="display:none;">ṇṇ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ণ্ম</span><span class="listTrans">n͓̈m</span><span class="iso15919" style="display:none;">ṇm</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ণ্ব</span><span class="listTrans">n͓̈b</span><span class="iso15919" style="display:none;">ṇb</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ণ্ড</span><span class="listTrans">n͓̈ɖ</span><span class="iso15919" style="display:none;">ṇḍ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ন্ত</span><span class="listTrans">n͓t</span><span class="iso15919" style="display:none;">nt</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ন্থ</span><span class="listTrans">n͓tʰ</span><span class="iso15919" style="display:none;">nth</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ন্ন</span><span class="listTrans">n͓n</span><span class="iso15919" style="display:none;">nn</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ন্ব</span><span class="listTrans">n͓b</span><span class="iso15919" style="display:none;">nb</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ন্ত্ব</span><span class="listTrans">n͓t͓b</span><span class="iso15919" style="display:none;">ntb</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ম্ন</span><span class="listTrans">m͓n</span><span class="iso15919" style="display:none;">mn</span></div>
+<div class="listPair"><span class="listItem" lang="bn">দ্ভ</span><span class="listTrans">d͓bʰ</span><span class="iso15919" style="display:none;">dbh</span></div>
+<div class="listPair"><span class="listItem" lang="bn">দ্ব</span><span class="listTrans">d͓b</span><span class="iso15919" style="display:none;">db</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ত্ত</span><span class="listTrans">t͓t</span><span class="iso15919" style="display:none;">tt</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ত্ত্ব</span><span class="listTrans">t͓t͓b</span><span class="iso15919" style="display:none;">ttb</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ণ্ড</span><span class="listTrans">n͓̈ɖ</span><span class="iso15919" style="display:none;">ṇḍ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ণ্ড্র</span><span class="listTrans">n͓̈ɖ͓r</span><span class="iso15919" style="display:none;">ṇḍr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ত্ন</span><span class="listTrans">t͓n</span><span class="iso15919" style="display:none;">tn</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ত্ব</span><span class="listTrans">t͓b</span><span class="iso15919" style="display:none;">tb</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ট্ট</span><span class="listTrans">ʈ͓ʈ</span><span class="iso15919" style="display:none;">ṭṭ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ক্ট</span><span class="listTrans">k͓ʈ</span><span class="iso15919" style="display:none;">kṭ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">প্প</span><span class="listTrans">p͓p</span><span class="iso15919" style="display:none;">pp</span></div>
+<div class="listPair"><span class="listItem" lang="bn">প্ন</span><span class="listTrans">p͓n</span><span class="iso15919" style="display:none;">pn</span></div>
+<div class="listPair"><span class="listItem" lang="bn">প্ত</span><span class="listTrans">p͓t</span><span class="iso15919" style="display:none;">pt</span></div>
+<div class="listPair"><span class="listItem" lang="bn">প্ল</span><span class="listTrans">p͓l</span><span class="iso15919" style="display:none;">pl</span></div>
+<div class="listPair"><span class="listItem" lang="bn">শ্ন</span><span class="listTrans">ʃ͓n</span><span class="iso15919" style="display:none;">śn</span></div>
+<div class="listPair"><span class="listItem" lang="bn">শ্ল</span><span class="listTrans">ʃ͓l</span><span class="iso15919" style="display:none;">śl</span></div>
+<div class="listPair"><span class="listItem" lang="bn">শ্ব</span><span class="listTrans">ʃ͓b</span><span class="iso15919" style="display:none;">śb</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ষ্ক</span><span class="listTrans">ʃ͓̇k</span><span class="iso15919" style="display:none;">ṣk</span></div>
+<div class="listPair"><span class="listItem" lang="bn">স্ক</span><span class="listTrans">ʃ͓̈k</span><span class="iso15919" style="display:none;">sk</span></div>
+<div class="listPair"><span class="listItem" lang="bn">স্খ</span><span class="listTrans">ʃ͓̈kʰ</span><span class="iso15919" style="display:none;">skh</span></div>
+<div class="listPair"><span class="listItem" lang="bn">স্ত</span><span class="listTrans">ʃ͓̈t</span><span class="iso15919" style="display:none;">st</span></div>
+<div class="listPair"><span class="listItem" lang="bn">স্থ</span><span class="listTrans">ʃ͓̈tʰ</span><span class="iso15919" style="display:none;">sth</span></div>
+<div class="listPair"><span class="listItem" lang="bn">স্ন</span><span class="listTrans">ʃ͓̈n</span><span class="iso15919" style="display:none;">sn</span></div>
+<div class="listPair"><span class="listItem" lang="bn">স্ল</span><span class="listTrans">ʃ͓̈l</span><span class="iso15919" style="display:none;">sl</span></div>
+<div class="listPair"><span class="listItem" lang="bn">স্ব</span><span class="listTrans">ʃ͓̈b</span><span class="iso15919" style="display:none;">sb</span></div>
+<div class="listPair"><span class="listItem" lang="bn">স্ত্র</span><span class="listTrans">ʃ͓̈t͓r</span><span class="iso15919" style="display:none;">str</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ম্ন</span><span class="listTrans">m͓n</span><span class="iso15919" style="display:none;">mn</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ম্ল</span><span class="listTrans">m͓l</span><span class="iso15919" style="display:none;">ml</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ম্ভ</span><span class="listTrans">m͓bʰ</span><span class="iso15919" style="display:none;">mbh</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ম্ব</span><span class="listTrans">m͓b</span><span class="iso15919" style="display:none;">mb</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঙ্ক</span><span class="listTrans">ŋ͓k</span><span class="iso15919" style="display:none;">ṅk</span></div>
+</div>
+</figure>
+
+
+
+<p style="margin-left: 0; margin-right: 0">Components arranged side-by-side,  frequently with simplification of the initial consonant.</p>
+<figure>
+<div class="listAll" onClick="listAll(this, 'bn')">list all 37</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="bn">ব্ব</span><span class="listTrans">b͓b</span><span class="iso15919" style="display:none;">bb</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ব্দ</span><span class="listTrans">b͓d</span><span class="iso15919" style="display:none;">bd</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ধ্ব</span><span class="listTrans">dʰ͓b</span><span class="iso15919" style="display:none;">dhb</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ল্ট</span><span class="listTrans">l͓ʈ</span><span class="iso15919" style="display:none;">lṭ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ল্ফ</span><span class="listTrans">l͓pʰ</span><span class="iso15919" style="display:none;">lph</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ণ্ট</span><span class="listTrans">n͓̈ʈ</span><span class="iso15919" style="display:none;">ṇṭ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ণ্ঢ</span><span class="listTrans">n͓̈ɖʰ</span><span class="iso15919" style="display:none;">ṇḍh</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ণ্ঠ</span><span class="listTrans">n͓̈ʈʰ</span><span class="iso15919" style="display:none;">ṇṭh</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ন্দ</span><span class="listTrans">n͓d</span><span class="iso15919" style="display:none;">nd</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ন্স</span><span class="listTrans">n͓ʃ̈</span><span class="iso15919" style="display:none;">ns</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ল্ড</span><span class="listTrans">l͓ɖ</span><span class="iso15919" style="display:none;">lḍ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">দ্দ</span><span class="listTrans">d͓d</span><span class="iso15919" style="display:none;">dd</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ড্ড</span><span class="listTrans">ɖ͓ɖ</span><span class="iso15919" style="display:none;">ḍḍ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঙ্খ</span><span class="listTrans">ŋ͓kʰ</span><span class="iso15919" style="display:none;">ṅkh</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঙ্ম</span><span class="listTrans">ŋ͓m</span><span class="iso15919" style="display:none;">ṅm</span></div>
+<div class="listPair"><span class="listItem" lang="bn">জ্জ</span><span class="listTrans">ʤ͓ʤ</span><span class="iso15919" style="display:none;">jj</span></div>
+<div class="listPair"><span class="listItem" lang="bn">জ্জ্ব</span><span class="listTrans">ʤ͓ʤ͓b</span><span class="iso15919" style="display:none;">jjb</span></div>
+<div class="listPair"><span class="listItem" lang="bn">জ্ব</span><span class="listTrans">ʤ͓b</span><span class="iso15919" style="display:none;">jb</span></div>
+<div class="listPair"><span class="listItem" lang="bn">জ্ঝ</span><span class="listTrans">ʤ͓ʤʰ</span><span class="iso15919" style="display:none;">jjh</span></div>
+<div class="listPair"><span class="listItem" lang="bn">চ্চ</span><span class="listTrans">c͓c</span><span class="iso15919" style="display:none;">cc</span></div>
+<div class="listPair"><span class="listItem" lang="bn">চ্ছ</span><span class="listTrans">c͓cʰ</span><span class="iso15919" style="display:none;">cch</span></div>
+<div class="listPair"><span class="listItem" lang="bn">চ্ঞ</span><span class="listTrans">c͓ñ</span><span class="iso15919" style="display:none;">cñ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ণ্ঠ</span><span class="listTrans">n͓̈ʈʰ</span><span class="iso15919" style="display:none;">ṇṭh</span></div>
+<div class="listPair"><span class="listItem" lang="bn">প্ট</span><span class="listTrans">p͓ʈ</span><span class="iso15919" style="display:none;">pṭ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">প্স</span><span class="listTrans">p͓ʃ̈</span><span class="iso15919" style="display:none;">ps</span></div>
+<div class="listPair"><span class="listItem" lang="bn">শ্চ</span><span class="listTrans">ʃ͓c</span><span class="iso15919" style="display:none;">śc</span></div>
+<div class="listPair"><span class="listItem" lang="bn">শ্ছ</span><span class="listTrans">ʃ͓cʰ</span><span class="iso15919" style="display:none;">śch</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ষ্প</span><span class="listTrans">ʃ͓̇p</span><span class="iso15919" style="display:none;">ṣp</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ষ্ফ</span><span class="listTrans">ʃ͓̇pʰ</span><span class="iso15919" style="display:none;">ṣph</span></div>
+<div class="listPair"><span class="listItem" lang="bn">স্ট</span><span class="listTrans">ʃ͓̈ʈ</span><span class="iso15919" style="display:none;">sṭ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">স্প</span><span class="listTrans">ʃ͓̈p</span><span class="iso15919" style="display:none;">sp</span></div>
+<div class="listPair"><span class="listItem" lang="bn">স্ফ</span><span class="listTrans">ʃ͓̈pʰ</span><span class="iso15919" style="display:none;">sph</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ম্প</span><span class="listTrans">m͓p</span><span class="iso15919" style="display:none;">mp</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ম্ফ</span><span class="listTrans">m͓pʰ</span><span class="iso15919" style="display:none;">mph</span></div>
+<div class="listPair"><span class="listItem" lang="bn">হ্ব</span><span class="listTrans">h͓b</span><span class="iso15919" style="display:none;">hb</span></div>
+</div>
+</figure>
+
+
+
+<p style="margin-left: 0; margin-right: 0">Arranged in a way that involves ligation, significantly altering one or more of the components.</p>
+<figure>
+<div class="listAll" onClick="listAll(this, 'bn')">list all 21</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="bn">ষ্ণ</span><span class="listTrans">ʃ͓̇n̈</span><span class="iso15919" style="display:none;">ṣṇ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ব্ধ</span><span class="listTrans">b͓dʰ</span><span class="iso15919" style="display:none;">bdh</span></div>
+<div class="listPair"><span class="listItem" lang="bn">হ্ন</span><span class="listTrans">h͓n</span><span class="iso15919" style="display:none;">hn</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঞ্চ</span><span class="listTrans">ñ͓c</span><span class="iso15919" style="display:none;">ñc</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ত্থ</span><span class="listTrans">t͓tʰ</span><span class="iso15919" style="display:none;">tth</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ন্ধ</span><span class="listTrans">n͓dʰ</span><span class="iso15919" style="display:none;">ndh</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ন্ধ্র</span><span class="listTrans">n͓dʰ͓r</span><span class="iso15919" style="display:none;">ndhr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ক্ষ্ম</span><span class="listTrans">k͓ʃ͓̇m</span><span class="iso15919" style="display:none;">kṣm</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ক্স</span><span class="listTrans">k͓ʃ̈</span><span class="iso15919" style="display:none;">ks</span></div>
+<div class="listPair"><span class="listItem" lang="bn">হ্ম</span><span class="listTrans">h͓m</span><span class="iso15919" style="display:none;">hm</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঙ্গ</span><span class="listTrans">ŋ͓g</span><span class="iso15919" style="display:none;">ṅg</span></div>
+<div class="listPair"><span class="listItem" lang="bn">দ্ধ</span><span class="listTrans">d͓dʰ</span><span class="iso15919" style="display:none;">ddh</span></div>
+<div class="listPair"><span class="listItem" lang="bn">দ্ধ্ব</span><span class="listTrans">d͓dʰ͓b</span><span class="iso15919" style="display:none;">ddhb</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ক্ত</span><span class="listTrans">k͓t</span><span class="iso15919" style="display:none;">kt</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঞ্ঝ</span><span class="listTrans">ñ͓ʤʰ</span><span class="iso15919" style="display:none;">ñjh</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ব্জ</span><span class="listTrans">b͓ʤ</span><span class="iso15919" style="display:none;">bj</span></div>
+<div class="listPair"><span class="listItem" lang="bn">জ্ঞ</span><span class="listTrans">ʤ͓ñ</span><span class="iso15919" style="display:none;">jñ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ষ্ঠ</span><span class="listTrans">ʃ͓̇ʈʰ</span><span class="iso15919" style="display:none;">ṣṭh</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ষ্ট</span><span class="listTrans">ʃ͓̇ʈ</span><span class="iso15919" style="display:none;">ṣṭ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ট্ট</span><span class="listTrans">ʈ͓ʈ</span><span class="iso15919" style="display:none;">ṭṭ</span></div>
+</div>
+</figure>
+
+
+
+
+
+<p style="margin-left: 0; margin-right: 0">Conjuncts ending with <span class="ex" lang="bn">র</span> <span class="trans">r</span> typically have a wavy line below.</p>
+<figure>
+<div class="listAll" onClick="listAll(this, 'bn')">list all 31</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="bn">ব্র</span><span class="listTrans">b͓r</span><span class="iso15919" style="display:none;">br</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঘ্র</span><span class="listTrans">gʰ͓r</span><span class="iso15919" style="display:none;">ghr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ফ্র</span><span class="listTrans">pʰ͓r</span><span class="iso15919" style="display:none;">phr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ধ্র</span><span class="listTrans">dʰ͓r</span><span class="iso15919" style="display:none;">dhr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">খ্র</span><span class="listTrans">kʰ͓r</span><span class="iso15919" style="display:none;">khr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">গ্র</span><span class="listTrans">g͓r</span><span class="iso15919" style="display:none;">gr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">থ্র</span><span class="listTrans">tʰ͓r</span><span class="iso15919" style="display:none;">thr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">হ্র</span><span class="listTrans">h͓r</span><span class="iso15919" style="display:none;">hr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ন্ত্র</span><span class="listTrans">n͓t͓r</span><span class="iso15919" style="display:none;">ntr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ন্দ্র</span><span class="listTrans">n͓d͓r</span><span class="iso15919" style="display:none;">ndr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ণ্ড্র</span><span class="listTrans">n͓̈ɖ͓r</span><span class="iso15919" style="display:none;">ṇḍr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ন্ধ্র</span><span class="listTrans">n͓dʰ͓r</span><span class="iso15919" style="display:none;">ndhr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ম্র</span><span class="listTrans">m͓r</span><span class="iso15919" style="display:none;">mr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">স্র</span><span class="listTrans">ʃ͓̈r</span><span class="iso15919" style="display:none;">sr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ষ্ক্র</span><span class="listTrans">ʃ͓̇k͓r</span><span class="iso15919" style="display:none;">ṣkr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">দ্র</span><span class="listTrans">d͓r</span><span class="iso15919" style="display:none;">dr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ক্র</span><span class="listTrans">k͓r</span><span class="iso15919" style="display:none;">kr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ত্রু</span><span class="listTrans">t͓ru</span><span class="iso15919" style="display:none;">tru</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ত্র</span><span class="listTrans">t͓r</span><span class="iso15919" style="display:none;">tr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ভ্র</span><span class="listTrans">bʰ͓r</span><span class="iso15919" style="display:none;">bhr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ড্র</span><span class="listTrans">ɖ͓r</span><span class="iso15919" style="display:none;">ḍr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">জ্র</span><span class="listTrans">ʤ͓r</span><span class="iso15919" style="display:none;">jr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ভ্র</span><span class="listTrans">bʰ͓r</span><span class="iso15919" style="display:none;">bhr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">চ্ছ্র</span><span class="listTrans">c͓cʰ͓r</span><span class="iso15919" style="display:none;">cchr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ট্র</span><span class="listTrans">ʈ͓r</span><span class="iso15919" style="display:none;">ṭr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">প্র</span><span class="listTrans">p͓r</span><span class="iso15919" style="display:none;">pr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">শ্র</span><span class="listTrans">ʃ͓r</span><span class="iso15919" style="display:none;">śr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ষ্ট্র</span><span class="listTrans">ʃ͓̇ʈ͓r</span><span class="iso15919" style="display:none;">ṣṭr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">স্র</span><span class="listTrans">ʃ͓̈r</span><span class="iso15919" style="display:none;">sr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">স্ট্র</span><span class="listTrans">ʃ͓̈ʈ͓r</span><span class="iso15919" style="display:none;">sṭr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">স্প্র</span><span class="listTrans">ʃ͓̈p͓r</span><span class="iso15919" style="display:none;">spr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ম্ভ্র</span><span class="listTrans">m͓bʰ͓r</span><span class="iso15919" style="display:none;">mbhr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ম্র</span><span class="listTrans">m͓r</span><span class="iso15919" style="display:none;">mr</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ম্প্র</span><span class="listTrans">m͓p͓r</span><span class="iso15919" style="display:none;">mpr</span></div>
+</div>
+</figure>
+
+
+
+
+<p style="margin-left: 0; margin-right: 0">Conjuncts ending with <span class="ex" lang="bn">ম</span> <span class="trans">m</span> typically have a long component to the right.</p>
+<figure>
+<div class="listAll" onClick="listAll(this, 'bn')">list all 11</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="bn">ক্ম</span><span class="listTrans">k͓m</span><span class="iso15919" style="display:none;">km</span></div>
+<div class="listPair"><span class="listItem" lang="bn">গ্ম</span><span class="listTrans">g͓m</span><span class="iso15919" style="display:none;">gm</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ল্ম</span><span class="listTrans">l͓m</span><span class="iso15919" style="display:none;">lm</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ন্ম</span><span class="listTrans">n͓m</span><span class="iso15919" style="display:none;">nm</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ম্ম</span><span class="listTrans">m͓m</span><span class="iso15919" style="display:none;">mm</span></div>
+<div class="listPair"><span class="listItem" lang="bn">স্ম</span><span class="listTrans">ʃ͓̈m</span><span class="iso15919" style="display:none;">sm</span></div>
+<div class="listPair"><span class="listItem" lang="bn">দ্ম</span><span class="listTrans">d͓m</span><span class="iso15919" style="display:none;">dm</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ত্ম</span><span class="listTrans">t͓m</span><span class="iso15919" style="display:none;">tm</span></div>
+<div class="listPair"><span class="listItem" lang="bn">শ্ম</span><span class="listTrans">ʃ͓m</span><span class="iso15919" style="display:none;">śm</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ষ্ম</span><span class="listTrans">ʃ͓̇m</span><span class="iso15919" style="display:none;">ṣm</span></div>
+<div class="listPair"><span class="listItem" lang="bn">স্ম</span><span class="listTrans">ʃ͓̈m</span><span class="iso15919" style="display:none;">sm</span></div>
+</div>
+</figure>
+</details>
+
+
+
+<section id="halfforms">
+<h3><a href="#halfforms">Merging shapes as conjuncts</a></h3>
+
+<p>Conjunct shapes are most commonly formed by arranging the components vertically, reducing and combining the shapes of the individual components as needed, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">স+থ→স্থ</span> <span class="trans">ʃ͓̈tʰ</span></span> in <span class="charExample" translate="no"><span class="ex" lang="bn">আস্থা</span> <span class="trans">ɑʃ͓̈tʰɑ</span> <span class="ipa">ɑʃtʰɑ</span> <span class="meaning">trust</span></span>, or <span class="charExample" translate="no"><span class="ex" lang="bn">ল+ল→ল্ল</span> <span class="trans">l͓l</span></span> in <span class="charExample" translate="no"><span class="ex" lang="bn">ঝিল্লি</span> <span class="trans">ʤʰil͓li</span> <span class="ipa">ʤʰilli</span> <span class="meaning">grasshopper</span></span>.</p>
+<p>Many conjuncts are formed by combining components horizontally, eg.  <span class="charExample" translate="no"><span class="ex" lang="bn">ম+প→ম্প</span> <span class="trans">m͓p</span></span> in <span class="charExample" translate="no"><span class="ex" lang="bn">ক্যম্পাস</span> <span class="trans">k͓ým͓pɑʃ̈</span> <span class="ipa">kyæmpas</span> <span class="meaning">campus</span></span>, or <span class="charExample" translate="no"><span class="ex" lang="bn">চ+চ→চ্চ</span> <span class="trans">c͓c</span></span> in <span class="charExample" translate="no"><span class="ex" lang="bn">উচ্চারণ</span> <span class="trans">ục͓cɑrn̈</span> <span class="ipa">ut͡ʃɑrɔn</span> <span class="meaning">pronunciation</span></span>.</p>
+<p>A small set of conjuncts combines the consonants into a  ligated shape, where individual components can't be easily discerned, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ষ+ট→ষ্ট</span> <span class="trans">ʃ͓̇ʈ</span></span> in <span class="charExample" translate="no"><span class="ex" lang="bn">খ্রিষ্টান</span> <span class="trans">kʰ͓riʃ͓̇ʈɑn</span> <span class="ipa">kʰriʂʈan</span> <span class="meaning">christian</span></span>, or <span class="charExample" translate="no"><span class="ex" lang="bn">ক+ষ→ক্ষ</span> <span class="trans">k͓ʃ̇</span></span> in <span class="charExample" translate="no"><span class="ex" lang="bn">ক্ষণ</span> <span class="trans">k͓ʃ̇n̈</span> <span class="ipa">kʃon</span> <span class="meaning">moment</span></span>.</p>
+
+<p>Different fonts may combine the same letters in different ways. The following figures shows characters that are combined in different ways by different fonts.</p>
+    <figure>
+        <p class="large exampleFlex"><img src="images/conjuncts_shape_comp.png" alt=""/></p>
+    <figcaption>The conjuncts <span class="charExample"><span class="ex" lang="bn">ল্গ ল্প হ্ব জ্ঝ ষ্ক হ্ণ ঞ্ঝ</span></span> composed in different ways by the Noto Sans Bengali font (top) and  Solaimon Lipi font (bottom).</figcaption>
+    </figure>
+</section>
+
+
+
+
+<section id="raconjuncts">
+<h3><a href="#raconjuncts">Conjuncts with <span class="name">ra</span> and <span class="name">ma</span></a></h3>
+
+			<p>Like other scripts, initially <span class="codepoint"><span lang="bn">&#x09B0;</span> <a href="/scripts/bengali/block#char09B0">[<span class="uname">U+09B0 BENGALI LETTER RA</span>]</a></span> is displayed in a non-standard way in consonant clusters. </p>
+<p>A  <span class="name">rɔ</span> that is pronounced at the start of a cluster is displayed as a mark above the following consonant(s), eg. <span class="trans">rt</span> in <span class="ex" lang="bn">গর্ত</span> <span class="trans">gɔrtô</span> <span class="meaning">hole</span>. Unlike Devanagari, it doesn't appear to be displayed above the vowel-sign of the orthographic syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">কুর্তা</span> <span class="trans">kur͓tɑ</span> <span class="ipa">kurtɑ</span> <span class="meaning">Indian shirt</span></span>. Like other consonant clusters, it may not involve a conjunct at all, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">কারসাজি</span> <span class="trans">kɑrʃ̈ɑʤi</span> <span class="ipa">kɑrʃɑʤi</span> <span class="meaning">trickery</span></span>.</p>
+<p>A  trailing <span class="name">rɔ</span> is typically displayed as a wavy line below the other consonants, eg. <span class="trans">gr</span> in <span class="ex" lang="bn">গ্রাম</span> <span class="trans">gram</span> <span class="meaning">village</span>.</p>
+<p>A cluster-final <span class="trans">m</span> is also displayed in a characteristic way, as a long line to the right with an appendage to the left at the bottom, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">উন্মত্ত</span> <span class="trans">ụn͓mt͓t</span> <span class="ipa">unmɔtto</span> <span class="meaning">insane</span></span>.</p>
+</section>
+
+
+
+
+<section id="yophola">
+<h3><a href="#yophola"><span class="name">y̌ɔ-phɔla</span></a></h3>
+
+			<p>Bengali also has a particular way of representing a cluster-final <span class="ipa">j</span> semi-vowel. This is typically represented
+				using the full form of the preceding consonant followed by a special form of <span class="codepoint"><span lang="bn">&#x09AF;</span> <a href="/scripts/bengali/block#char09AF">[<span class="uname">U+09AF BENGALI LETTER YA</span>]</a></span>, <span class="charExample" translate="no"><span class="ex" lang="bn">‍্য</span></span>, known as <span class="name">y̌ɔ-phɔla</span>, eg. <span class="ex" lang="bn">হ্যাঁ</span> <span class="trans">hyæ̃</span> <span class="meaning">yes</span>.</p>
+                </section>
+  
+
+
+
+<section id="visiblevirama">
+<h3><a href="#visiblevirama">Visible virama</a></h3>
+
+              
+                
+                
+                
+<p>When the virama is  used  it may be because the font doesn't have a particular conjunct ligature, but it may also be visible in places where the phonology is unusual, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ফ্‌ল্যাট</span> <span class="trans">pʰ͓‌l͓ýɑʈ</span> <span class="ipa">pʰlæʈ</span> <span class="meaning">flat</span></span>; <span class="charExample" translate="no"><span class="ex" lang="bn">লান্‌চ</span> <span class="trans">lɑn͓‌c</span> <span class="ipa">lɑnt͡ʃ</span> <span class="meaning">lunch</span></span> (though these may also be spelled with conjuncts, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ফ্ল্যাট</span> <span class="trans">pʰ͓l͓ýɑʈ</span></span>). It is also quite common to see <span class="charExample" translate="no"><span class="ex" lang="bn">উদ্‌যাপন</span> <span class="trans">ụd͓‌ýɑpn</span></span> to distinguish it from words like <span class="charExample" translate="no"><span class="ex" lang="bn">উদ্যান</span> <span class="trans">ụd͓ýɑn</span></span>. These words are etymologically related, but distinct phonetically.</p>
+<p>Again, if a visible virama is wanted but not what the font does by default, it is possible to force it by inserting a ZWNJ character after the virama.</p>
+</section>
+</section>
+
+
+
+
+
+<section id="vocalics">
+<h2><a href="#vocalics">Vocalics</a></h2>
+
+<p>A set of letters represents a special combination of consonant+vowel, available both as vowel-signs and independent vowels.</p>
+
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'bn')">list all 8</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="bn">ৃ</span><span class="listIPA">ri</span><span class="listTrans">r̥</span><span class="iso15919" style="display:none;">r̥</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ৄ</span><span>&nbsp;</span><span class="listTrans">r̥̄</span><span class="iso15919" style="display:none;">r̥̄</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঋ</span><span class="listIPA">ri</span><span class="listTrans">r̥̣</span><span class="iso15919" style="display:none;">r̥</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ৠ</span><span>&nbsp;</span><span class="listTrans">r̥̣̄</span><span>&nbsp;</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ৢ</span><span>&nbsp;</span><span class="listTrans">l̥</span><span class="iso15919" style="display:none;">l̥</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ৣ</span><span>&nbsp;</span><span class="listTrans">l̥̄</span><span class="iso15919" style="display:none;">l̥̄</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঌ</span><span>&nbsp;</span><span class="listTrans">l̥̣</span><span class="iso15919" style="display:none;">l̥</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ৡ</span><span>&nbsp;</span><span class="listTrans">l̥̣̄</span><span>&nbsp;</span></div>
+</div>
+</figure>
+
+
+
+<p>Three of the vowels shown above, <span class="codepoint"><span lang="bn">&#x098C;</span> <a href="/scripts/bengali/block#char098C">[<span class="uname">U+098C BENGALI LETTER VOCALIC L</span>]</a></span>, <span class="codepoint"><span lang="bn">&#x09E0;</span> <a href="/scripts/bengali/block#char09E0">[<span class="uname">U+09E0 BENGALI LETTER VOCALIC RR</span>]</a></span> and <span class="codepoint"><span lang="bn">&#x09E1;</span> <a href="/scripts/bengali/block#char09E1">[<span class="uname">U+09E1 BENGALI LETTER VOCALIC LL</span>]</a></span>, are historic and only used to write Sanskrit in Bengali.</p>
+</section>
+
+
+
+
+
+<section id="diacritics">
+<h2><a href="#diacritics">Diacritics</a></h2>
+
+<p>Apart from the vowel-signs, the Bengali block contains the following combining characters, all of which are described elsewhere on this page.</p>
+
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'bn')">list all 6</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="bn">ঁ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ং</span></div>
+<div class="listPair"><span class="listItem" lang="bn">ঃ</span></div>
+<div class="listPair"><span class="listItem" lang="bn">়</span></div>
+<div class="listPair"><span class="listItem" lang="bn">্</span></div>
+<div class="listPair"><span class="listItem" lang="bn">৾</span></div>
+</div>
+</figure>
+</section>
+
+
+
+
+
+<section id="punctuation">
+<h2><a href="#punctuation">Punctuation</a></h2>
+
+<p>The only punctuation in the Unicode Bengali block is this abbreviation symbol (see below for a description).</p>
+
+<figure class="characterBox">
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="bn">॰</span></div>
+</div>
+</figure>
+
+</section>
+
  
  
  
@@ -433,21 +857,22 @@ The Bengali block also has code points that enable you to split vowel signs that
  
  <p>Bengali has a set of native digits, which are used regularly in text. They are decimal-based.</p>
  
-<figure>
-<div class="listAll" onClick="listAll(this, 'bn')">list all</div>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'bn')">list all 10</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="bn">০</span><span class="listTrans">0</span></div>
-<div class="listPair"><span class="listItem" lang="bn">১</span><span class="listTrans">1</span></div>
-<div class="listPair"><span class="listItem" lang="bn">২</span><span class="listTrans">2</span></div>
-<div class="listPair"><span class="listItem" lang="bn">৩</span><span class="listTrans">3</span></div>
-<div class="listPair"><span class="listItem" lang="bn">৪</span><span class="listTrans">4</span></div>
-<div class="listPair"><span class="listItem" lang="bn">৫</span><span class="listTrans">5</span></div>
-<div class="listPair"><span class="listItem" lang="bn">৬</span><span class="listTrans">6</span></div>
-<div class="listPair"><span class="listItem" lang="bn">৭</span><span class="listTrans">7</span></div>
-<div class="listPair"><span class="listItem" lang="bn">৮</span><span class="listTrans">8</span></div>
-<div class="listPair"><span class="listItem" lang="bn">৯</span><span class="listTrans">9</span></div>
+<div class="listPair"><span class="listItem" lang="bn">০</span><span class="listTrans">0</span><span class="iso15919" style="display:none;">0</span></div>
+<div class="listPair"><span class="listItem" lang="bn">১</span><span class="listTrans">1</span><span class="iso15919" style="display:none;">1</span></div>
+<div class="listPair"><span class="listItem" lang="bn">২</span><span class="listTrans">2</span><span class="iso15919" style="display:none;">2</span></div>
+<div class="listPair"><span class="listItem" lang="bn">৩</span><span class="listTrans">3</span><span class="iso15919" style="display:none;">3</span></div>
+<div class="listPair"><span class="listItem" lang="bn">৪</span><span class="listTrans">4</span><span class="iso15919" style="display:none;">4</span></div>
+<div class="listPair"><span class="listItem" lang="bn">৫</span><span class="listTrans">5</span><span class="iso15919" style="display:none;">5</span></div>
+<div class="listPair"><span class="listItem" lang="bn">৬</span><span class="listTrans">6</span><span class="iso15919" style="display:none;">6</span></div>
+<div class="listPair"><span class="listItem" lang="bn">৭</span><span class="listTrans">7</span><span class="iso15919" style="display:none;">7</span></div>
+<div class="listPair"><span class="listItem" lang="bn">৮</span><span class="listTrans">8</span><span class="iso15919" style="display:none;">8</span></div>
+<div class="listPair"><span class="listItem" lang="bn">৯</span><span class="listTrans">9</span><span class="iso15919" style="display:none;">9</span></div>
 </div>
 </figure>
+
 
 <p>See also the section <a href="#counters">Counters</a> below.</p>
 
@@ -456,10 +881,18 @@ The Bengali block also has code points that enable you to split vowel signs that
 <section id="currency">
 <h3><a href="#currency">Currency</a></h3>
 
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'bn')">list both</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="bn">৳</span></div>
+<div class="listPair"><span class="listItem" lang="bn">৲</span></div>
+</div>
+</figure>
+
 <p><span class="codepoint"><span lang="bn">&#x09F3;</span> <a href="/scripts/bengali/block#char09F3">[<span class="uname">U+09F3 BENGALI RUPEE SIGN</span>]</a></span> is the Bengali rupee sign.</p>
 <p>There are also a number of currency symbols, used in older texts, including <span class="codepoint"><span lang="bn">&#x09F2;</span> <a href="/scripts/bengali/block#char09F2">[<span class="uname">U+09F2 BENGALI RUPEE MARK</span>]</a></span> and the following currency denominator signs. </p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'bn')">list all</div>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'bn')">list all 6</div>
 <div class="listArray">
 <div class="listPair"><span class="listItem" lang="bn">৴</span></div>
 <div class="listPair"><span class="listItem" lang="bn">৵</span></div>
@@ -469,6 +902,7 @@ The Bengali block also has code points that enable you to split vowel signs that
 <div class="listPair"><span class="listItem" lang="bn">৹</span></div>
 </div>
 </figure>
+
 <p>These were used in an additive/subtractive system for specifying the number of <span class="name">ānā</span> in the Bengali notation for currency used up to 1957, eg. <span class="ex" lang="bn">৷৷৶৹</span> <span class="trans">11 ānā</span> (<span class="meaning">11 ana</span>); <span class="ex" lang="bn">৸৶৹</span> <span class="trans">15 ānā</span> (<span class="meaning">15 ana</span>).  There are 16 ana in one rupee, and the system works in multiples of 4. For a detailed explanation of usage, see <a href="http://std.dkuug.dk/JTC1/SC2/wg2/docs/n3311.pdf">[Pandey]</a>.</p>
 </section>
 </section> 
@@ -477,7 +911,15 @@ The Bengali block also has code points that enable you to split vowel signs that
  
 <section id="formatting">
 <h2><a href="#formatting">Text layout</a></h2>
-
+   
+      
+  <section id="direction">
+    <h3><a href="#direction">Direction</a></h3>
+    <p>Text is normally written horizontally, left to right.</p>
+  </section>
+   
+    
+      
 <section id="delimiters">
 <h3><a href="#delimiters">Text delimiters</a></h3>
     <p>Words are separated by spaces.</p>
@@ -492,7 +934,7 @@ The Bengali block also has code points that enable you to split vowel signs that
 <h3><a href="#abbrev">Abbreviations</a></h3>
 <p>The <span class="name">bisɔrgô</span> <span class="codepoint"><span lang="bn">&#x0983;</span> <a href="/scripts/bengali/block#char0983">[<span class="uname">U+0983 BENGALI SIGN VISARGA​</span>]</a></span> is sometimes used to mark initial abbreviations.</p>
 <p>A sign called <span class="name">urdha-comma</span> can be used to indicate truncation of words, eg. <span class="ex" lang="bn">কʼরে</span> <span class="trans">kô're</span> <span class="meaning">after</span>, and <span class="ex" lang="bn">ʼপরে</span> <span class="trans">'pôre</span> <span class="meaning">above</span>. The Unicode Standard recommends use of <span class="codepoint"><span lang="bn">&#x02BC;</span> <a href="/scripts/bengali/block#char02BC">[<span class="uname">U+02BC MODIFIER LETTER APOSTROPHE</span>]</a></span>, but in Wikipedia a normal apostrophe <a href="http://bn.wikipedia.org/wiki/%E0%A6%AB%E0%A6%BE%E0%A6%B2%E0%A6%BF_%E0%A6%AB%E0%A6%BE%E0%A6%B2%E0%A6%BF_%E0%A6%95%27%E0%A6%B0%E0%A7%87_%E0%A6%95%E0%A6%BE%E0%A6%9F%E0%A6%BE_%E0%A6%9A%E0%A6%BE%E0%A6%81%E0%A6%A6">seems to be used</a> <sup><a href="http://www.unicode.org/versions/Unicode7.0.0/ch12.pdf">[Unicode] p460</a></sup>.</p>
-<p>The Unicode block also has the punctuation <span class="codepoint"><span lang="bn">&#x09FD;</span> <a href="/scripts/bengali/block#char09FD">[<span class="uname">U+09FD BENGALI ABBREVIATION SIGN</span>]</a></span>, but it's not clear to me how it is used. It doesn't appear to be in common use.</p>
+<p>The Unicode block also has the punctuation <span class="codepoint" translate="no"><span lang="bn">&#x0970;</span> [<a href="/scripts/bengali/block#char0970"><span class="uname">U+0970 DEVANAGARI ABBREVIATION SIGN</span></a>]</span>, but it's not clear to me how it is used. It doesn't appear to be in common use.</p>
 </section>
 
 
@@ -508,15 +950,17 @@ The Bengali block also has code points that enable you to split vowel signs that
 
 <section id="counters">
   <h3><a href="#counters">Counters</a></h3>
-  <p>The <a href="http://www.w3.org/International/docs/counter-styles/#bengali-styles">Predefined Counter Styles</a> document contains a single counter style for Bengali. It is numeric.</p>
+  <p>The <a href="https://www.w3.org/TR/predefined-counter-styles/#bengali-styles">Ready-made Counter Styles</a> document contains a single counter style for Bengali. It is numeric.</p>
   <pre style="margin-left:7.5%;">
 @counter-style bengali {
 system: numeric;
 symbols: '\9E6' '\9E7' '\9E8' '\9E9' '\9EA' '\9EB' '\9EC' '\9ED' '\9EE' '\9EF';
 /* symbols: '০' '১' '২' '৩' '৪' '৫' '৬' '৭' '৮' '৯'; */
-} 
-  </pre>
-  <p>Examples: 1 ⇨	<span class="ex" lang="bn">১</span>, 2 ⇨	<span class="ex" lang="bn">২</span>, 3 ⇨ <span class="ex" lang="bn">৩</span>, 4 ⇨ <span class="ex" lang="bn">৪</span>, 11 ⇨ <span class="ex" lang="bn">১১</span>, 22 ⇨	<span class="ex" lang="bn">২২</span>, 33 ⇨	<span class="ex" lang="bn">৩৩</span>, 44 ⇨	<span class="ex" lang="bn">৪৪</span>, 111 ⇨	<span class="ex" lang="bn">১১১</span>, 2222 ⇨	<span class="ex" lang="bn">২২২২</span>.</p>
+}</pre>
+<figure>
+<p class="large">1&nbsp;⇨&nbsp;<span class="ex">১</span> 2&nbsp;⇨&nbsp;<span class="ex">২</span> 3&nbsp;⇨&nbsp;<span class="ex">৩</span> 4&nbsp;⇨&nbsp;<span class="ex">৪</span> 11&nbsp;⇨&nbsp;<span class="ex">১১</span> 22&nbsp;⇨&nbsp;<span class="ex">২২</span> 33&nbsp;⇨&nbsp;<span class="ex" lang="hi">३३</span> 44&nbsp;⇨&nbsp;<span class="ex">৪৪</span> 111&nbsp;⇨&nbsp;<span class="ex">১১১</span> 2222&nbsp;⇨&nbsp;<span class="ex">২২২২</span></p>
+<figcaption>Numbers produced by the decimal 'bengali' counter style<span class="trans"></span>.</figcaption>
+</figure>
 </section>
 </section>
 
@@ -540,7 +984,7 @@ symbols: '\9E6' '\9E7' '\9E8' '\9E9' '\9EA' '\9EB' '\9EC' '\9ED' '\9EE' '\9EF';
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/bengali"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-05  7:39<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bbengali%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fbengali%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/bengali"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-14  22:47<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bbengali%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fbengali%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 
