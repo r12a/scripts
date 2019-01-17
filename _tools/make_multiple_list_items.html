@@ -40,7 +40,7 @@ document.getElementById('out').value = makeListFromChars(document.getElementById
 <br style="clear: both;"/>
 
 <div class="smallprint" style="margin-top: 3em; font-size: 70%; font-style: italic;"><span id="version">This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-01-13  4:30<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2019-01-13  14:03<!-- #EndDate --> 
 </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 <script type="text/javascript">
@@ -52,8 +52,8 @@ function makeListFromChars (lang, chars, bicameral) {
     if (document.getElementById('ccbase').value !== '') ccbase = document.getElementById('ccbase').value
     var count = 0
     for (let i=0;i<charList.length;i++) {
-        charList[i] = charList[i].trim()
-        if (charList[i] !== '') count++
+        //charList[i] = charList[i].trim()
+        if (charList[i].trim() !== '') count++
         }
 	var out = '<figure'
     if (document.getElementById('characterBox').checked) out += ' class="characterBox"'
@@ -62,8 +62,8 @@ function makeListFromChars (lang, chars, bicameral) {
     out += ')">list all '+count+'</div>\n<div class="listArray">\n'
 	
 	for (let x=0; x<charList.length; x++) {
-        charList[x] = charList[x].trim()
-		if (charList[x] === '') continue
+        //charList[x] = charList[x].trim()
+		if (charList[x].trim() === '') continue
         var items = charList[x].split('\t')
         
         items[0] = items[0].replace(/\\u([a-fA-F0-9]+)/,'&#x$1;')
@@ -74,24 +74,52 @@ function makeListFromChars (lang, chars, bicameral) {
         if (document.getElementById('ipa').value > 0) {
             ipa = items[document.getElementById('ipa').value]
             if (ipa) ipa = ipa.replace(/ /,', ')
-            out += '<span class="listIPA">'+ipa+'</span>'
+            if (ipa !== '') out += '<span class="listIPA">'+ipa+'</span>'
+            else out += '<span>&nbsp;</span>'
             }
         
-        if (document.getElementById('trans').value > 0) out += '<span class="listTrans">'+items[document.getElementById('trans').value]+'</span>'
-        
-        if (document.getElementById('meaning').value > 0) out += '<span class="listMeaning">'+items[document.getElementById('meaning').value]+'</span>'
+        if (document.getElementById('trans').value > 0) {
+            trans = items[document.getElementById('trans').value]
+            if (trans) trans = trans.replace(/ /,', ')
+            if (trans !== '') out += '<span class="listTrans">'+trans+'</span>'
+            else out += '<span>&nbsp;</span>'
+            }
+
+//out += '<span class="listTrans">'+items[document.getElementById('trans').value]+'</span>'
+                  
+        if (document.getElementById('meaning').value > 0) {
+            meaning = items[document.getElementById('meaning').value]
+            if (meaning !== '') out += '<span class="listMeaning">'+meaning+'</span>'
+            else out += '<span>&nbsp;</span>'
+            }
+
+        //if (document.getElementById('meaning').value > 0) out += '<span class="listMeaning">'+items[document.getElementById('meaning').value]+'</span>'
  
-         if (document.getElementById('extra1Col').value > 0) {
+         if (document.getElementById('extra1Col').value > 0) { 
             extra1Col = items[document.getElementById('extra1Col').value]
             if (extra1Col) extra1Col = extra1Col.replace(/ /,', ')
-            out += '<span class="'+document.getElementById('extra1').value+'" style="display:none;">'+extra1Col+'</span>'
+            if (extra1Col !== '') out += '<span class="'+document.getElementById('extra1').value+'" style="display:none;">'+extra1Col+'</span>'
+            else out += '<span>&nbsp;</span>'
             }
-        
+
+        //if (document.getElementById('extra1Col').value > 0) {
+        //    extra1Col = items[document.getElementById('extra1Col').value]
+        //    if (extra1Col) extra1Col = extra1Col.replace(/ /,', ')
+        //    out += '<span class="'+document.getElementById('extra1').value+'" style="display:none;">'+extra1Col+'</span>'
+        //    }
+ 
          if (document.getElementById('extra2Col').value > 0) {
             extra2Col = items[document.getElementById('extra2Col').value]
             if (extra2Col) extra2Col = extra2Col.replace(/ /,', ')
-            out += '<span class="'+document.getElementById('extra2').value+'" style="display:none;">'+extra2Col+'</span>'
+            if (extra2Col !== '') out += '<span class="'+document.getElementById('extra1').value+'" style="display:none;">'+extra2Col+'</span>'
+            else out += '<span>&nbsp;</span>'
             }
+
+         //if (document.getElementById('extra2Col').value > 0) {
+        //    extra2Col = items[document.getElementById('extra2Col').value]
+        //    if (extra2Col) extra2Col = extra2Col.replace(/ /,', ')
+        //    out += '<span class="'+document.getElementById('extra2').value+'" style="display:none;">'+extra2Col+'</span>'
+        //    }
         
 
         out += '</div>\n'
