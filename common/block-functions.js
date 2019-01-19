@@ -285,12 +285,18 @@ console.log(items[0],'char'+hex)
             
            // check for decomposable characters
             if (items[0].normalize('NFD') != items[0]) {
-                var target = notesNode.querySelector('.decomposition') // check whether decomposition exist already
-                if (target) target.innerHTML = 'Decomposes to '+makeCharacterLink(items[0].normalize('NFD'), lang, dir)
+                var target = notesNode.querySelector('.decomposition') // check whether decomposition markup exists already
+                //if (target) target.innerHTML = 'Decomposes to '+makeCharacterLink(items[0].normalize('NFD'), lang, dir)
+                if (target) {
+                    let msg = 'Decomposes to '+makeCharacterLink(items[0].normalize('NFD'), lang, dir)
+                    if (items[0].normalize('NFD') === items[0].normalize('NFC')) msg += '<br/><strong>The NFC normalised form of this character is the decomposed sequence!</strong>'
+                    target.innerHTML = msg
+                    }
                 else {
                     p = document.createElement('p')
                     p.className = 'decomposition'
                     p.innerHTML = 'Decomposes to '+makeCharacterLink(items[0].normalize('NFD'), lang, dir)
+                    if (items[0].normalize('NFD') === items[0].normalize('NFC')) p.innerHTML += '<br/><strong>The NFC normalised form of this character is the decomposed sequence!</strong>'
                     prevSibling = notesNode.insertBefore(p, notesNode.firstChild)
                     }
                 }
