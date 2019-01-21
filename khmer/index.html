@@ -34,7 +34,7 @@
 </style>
 
 <script src="/shared/code/boilerplate.js"></script>
-<script src="/shared/code/toc_2016.js"></script>
+<script src="/shared/code/toc_2019.js"></script>
 <script src="/shared/code/all-names.js"></script>
 <script src="/shared/code/character_conversion.js"></script>
 <script src="/shared/code/show_codepoints.js"></script>
@@ -106,7 +106,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->05-Jan-2019<!-- #EndDate -->
+  <!-- #BeginDate format:En2 -->21-Jan-2019<!-- #EndDate -->
 &bull; tags <a href="https://r12a.github.io/blog/index.php?tag=khmer" title="Show all blog posts tagged with 'khmer'">khmer</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
@@ -146,8 +146,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
    </div>
 
 
-<section id="history">
-    <h2><a href="#history">Usage &amp; history</a></h2>
+<section>
+    <h2 id="history">Usage &amp; history</h2>
     <p>From <a href="http://scriptsource.org/scr/Khmr">Scriptsource</a>: </p>
     <blockquote>
 <p>The Khmer script is an abugida, descended from the Brahmic script Pallava. It is used for writing Khmer, the official language of Cambodia. The script is also sometimes used for writing minority languages in Cambodia, such as Brao and Mnong.</p>
@@ -163,8 +163,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section id="type">
-  <h2><a href="type">Key features</a></h2>
+<section>
+  <h2 id="type">Distinctive features</h2>
 			<p>The script is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>, ie. like most Brahmi-influenced scripts, each consonant carries with it an inherent vowel. The sound following a consonant can be modified by attaching vowel signs to the consonant when writing.  See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
 </p>
 			<p>Direction of text is horizontal, left to right.  However, glyphs constituting a single syllable can appear on any side of the base character, and multiple diacritics are often needed to create the vowel in a syllable.</p>
@@ -177,13 +177,22 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 </section>
+  
+  
+  
+<div id="showTranscriptions">
+<div>Show transcriptions</div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div><label>UNGEGN <input type="checkbox" onChange="toggleTranscription('ungegn', this.checked)"/></label></div>
+</div>
 
 
-  
-  
-  
-  <section id="chars">
-  <h2>Character lists by language</h2>
+
+
+
+<section>
+  <h2 id="chars">Character lists by language</h2>
 <p>The Khmer script characters in Unicode 10.0 are in the following blocks: </p>
     <ul>
       <li> <a href="/uniview/?block=khmer">Khmer</a> <span class="charCount">(54 letters, 33 marks, 20 numbers, 6 punctuation, 1 symbol : total 114)</span></li>
@@ -202,100 +211,118 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section id="consonants">
-<h2><a href="#consonants">Consonants</a></h2>
+
+<section>
+<h2 id="syllable_structure">Structure </h2>
+   <p>The syllable is fundamental in Cambodian. </p>
+  <p>Many native Cambodian words are  monosyllabic. These start with one or more consonants or an independent vowel (or a vowel sign attached to <span class="name">ʔɑː</span>, which is a combination of both). Short vowels in stressed syllables are always followed by a consonant. Long vowels may not be. There are many monosyllabic words that begin with consonant clusters, and some monosyllabic words that end with clusters, although only one consonant is pronounced in syllable final position.</p>
+  <p>There are also many bisyllabic words. In many cases the first syllable in a bisyllabic word is unstressed, and the vowel is usually rendered in colloquial speech as a schwa. Some bisyllabic words are compounds, however, and this may not apply.</p>
+  <p>Polysyllabic words are usually of Sanskrit, Pali or French origin. These words tend to alternate stress across their syllables, but may not. </p>
+
+
+
+
+<section>
+  <h3 id="usageboundaries">Order of syllable components</h3>
+
+<p>An orthographic syllable is slightly different from a morphological syllable, since an orthographic syllable may begin with the final consonant of the previous morphological syllable. Alternatively, an orthographic syllable may be just a final consonant or consonant cluster in a morphological syllable.</p>
+    <p>
+      <mark>Usage tip:</mark>
+    Components of an 'orthographic syllable'*  should be composed in the following order:</p>
+  <ol style="text-align: left;">
+    <li>base consonant or independent vowel </li>
+    <li><span class="name">rɔɓaːt </span></li>
+    <li><span class="name">museʔkətoə̯n </span>or <span class="name">trəisaɓ </span> (register shifters)</li>
+    <li>subscript (consonant or independent vowel)</li>
+    <li>vowel sign</li>
+    <li>zero-width joiner or non-joiner</li>
+    <li>any other mark </li>
+  </ol>
+  <p>This fixed ordering makes it easier to search for and collate text. </p>
+  <p>As mentioned above, although all combining characters follow the base in memory, the visual order of syllable components may not follow a linear progression from left to right. In the following example the order in which the glyphs are pronounced is far left, far right, down, left, left: <span class="ex" lang="km">កន្ត្រៃ</span> <span class="ipa">kɑntraj</span> <span class="name">scissor<span class="meaning"></span>s.</span> Here <span class="ex" lang="km">ច្រៀង</span> the spoken order of the separate visible parts, numbered left to right, is 3,2, 1+4, 5, Some vowel signs span two or three sides of the base consonant or cluster. </p>
+</section>
+
+</section>
+
+
+
+
+
+<section>
+<h2 id="consonants">Consonants</h2>
 
 <p>The Khmer block has 35 consonants. The list just below shows those in use in modern Khmer, although some are not widely used. The phonetic transcriptions below show the sound of the consonant in syllable initial (left) and final (right) positions.</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'km')">list all</div>
+<p>Each consonant letter is pronounced with an inherent vowel by default.</p>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'km')">list all 33</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="km">ក</span><span class="listTrans">kâ</span><span class="listIPA">kɑː, -k</span></div>
-<div class="listPair"><span class="listItem" lang="km">ខ</span><span class="listTrans">kʰâ</span><span class="listIPA">kʰɑː, -k</span></div>
-<div class="listPair"><span class="listItem" lang="km">គ</span><span class="listTrans">ḵô</span><span class="listIPA">kɔː, -k</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឃ</span><span class="listTrans">ḵʰô</span><span class="listIPA">kʰɔː, -k</span></div>
-<div class="listPair"><span class="listItem" lang="km">ង</span><span class="listTrans">ngô</span><span class="listIPA">ŋɔː, -ŋ</span></div>
-<div class="listPair"><span class="listItem" lang="km">ច</span><span class="listTrans">câ</span><span class="listIPA">cɑː, -c</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឆ</span><span class="listTrans">cʰâ</span><span class="listIPA">cʰɑː</span></div>
-<div class="listPair"><span class="listItem" lang="km">ជ</span><span class="listTrans">c̱ô</span><span class="listIPA">cɔː, -c</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឈ</span><span class="listTrans">c̱ʰô</span><span class="listIPA">cʰɔː</span></div>
-<div class="listPair"><span class="listItem" lang="km">ញ</span><span class="listTrans">ñô</span><span class="listIPA">ɲɔː, -ɲ</span></div>
-<div class="listPair"><span class="listItem" lang="km">ដ</span><span class="listTrans">dâ</span><span class="listIPA">ɗɑː, -t</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឋ</span><span class="listTrans">ṭʰâ</span><span class="listIPA">tʰɑː, -t</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឌ</span><span class="listTrans">ḏô</span><span class="listIPA">ɗɔː, -t</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឍ</span><span class="listTrans">ṱʰô</span><span class="listIPA">tʰɔː, -t</span></div>
-<div class="listPair"><span class="listItem" lang="km">ណ</span><span class="listTrans">nâ</span><span class="listIPA">nɑː, -n</span></div>
-<div class="listPair"><span class="listItem" lang="km">ត</span><span class="listTrans">tâ</span><span class="listIPA">tɑː, -t</span></div>
-<div class="listPair"><span class="listItem" lang="km">ថ</span><span class="listTrans">tʰâ</span><span class="listIPA">tʰɑː, -t</span></div>
-<div class="listPair"><span class="listItem" lang="km">ទ</span><span class="listTrans">ṯô</span><span class="listIPA">tɔː, -t</span></div>
-<div class="listPair"><span class="listItem" lang="km">ធ</span><span class="listTrans">ṯʰô</span><span class="listIPA">tʰɔː, -t</span></div>
-<div class="listPair"><span class="listItem" lang="km">ន</span><span class="listTrans">ṉô</span><span class="listIPA">nɔː, -n</span></div>
-<div class="listPair"><span class="listItem" lang="km">ប</span><span class="listTrans">bâ</span><span class="listIPA">ɓɑː, -p</span></div>
-<div class="listPair"><span class="listItem" lang="km">ផ</span><span class="listTrans">pʰâ</span><span class="listIPA">pʰɑː, -p</span></div>
-<div class="listPair"><span class="listItem" lang="km">ព</span><span class="listTrans">ꝑô</span><span class="listIPA">pɔː, -p</span></div>
-<div class="listPair"><span class="listItem" lang="km">ភ</span><span class="listTrans">ꝑʰô</span><span class="listIPA">pʰɔː, -p</span></div>
-<div class="listPair"><span class="listItem" lang="km">ម</span><span class="listTrans">mô</span><span class="listIPA">mɔː, -m</span></div>
-<div class="listPair"><span class="listItem" lang="km">យ</span><span class="listTrans">yô</span><span class="listIPA">jɔː, -iː</span></div>
-<div class="listPair"><span class="listItem" lang="km">រ</span><span class="listTrans">rô</span><span class="listIPA">rɔː</span></div>
-<div class="listPair"><span class="listItem" lang="km">ល</span><span class="listTrans">ḻô</span><span class="listIPA">lɔː, -l</span></div>
-<div class="listPair"><span class="listItem" lang="km">វ</span><span class="listTrans">vô</span><span class="listIPA">ʋɔː, -w</span></div>
-<div class="listPair"><span class="listItem" lang="km">ស</span><span class="listTrans">sâ</span><span class="listIPA">sɑː, -h</span></div>
-<div class="listPair"><span class="listItem" lang="km">ហ</span><span class="listTrans">hâ</span><span class="listIPA">hɑː</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឡ</span><span class="listTrans">lâ</span><span class="listIPA">lɑː</span></div>
-<div class="listPair"><span class="listItem" lang="km">អ</span><span class="listTrans">’â</span><span class="listIPA">ʔɑː</span></div>
+<div class="listPair"><span class="listItem" lang="km">ក</span><span class="listIPA">kɑː, kʰ- -k</span><span class="listTrans">k</span><span class="ungegn" style="display:none;">kâ</span></div>
+<div class="listPair"><span class="listItem" lang="km">ខ</span><span class="listIPA">kʰɑː, k- -k</span><span class="listTrans">kʰ</span><span class="ungegn" style="display:none;">khâ</span></div>
+<div class="listPair"><span class="listItem" lang="km">គ</span><span class="listIPA">kɔː, kʰ- -k</span><span class="listTrans">ḵ</span><span class="ungegn" style="display:none;">kô</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឃ</span><span class="listIPA">kʰɔː, k- -k</span><span class="listTrans">ḵʰ</span><span class="ungegn" style="display:none;">khô</span></div>
+<div class="listPair"><span class="listItem" lang="km">ង</span><span class="listIPA">ŋɔː, -ŋ</span><span class="listTrans">ŋ</span><span class="ungegn" style="display:none;">ngô</span></div>
+<div class="listPair"><span class="listItem" lang="km">ច</span><span class="listIPA">cɑː, -c</span><span class="listTrans">c</span><span class="ungegn" style="display:none;">châ</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឆ</span><span class="listIPA">cʰɑː</span><span class="listTrans">cʰ</span><span class="ungegn" style="display:none;">chhâ</span></div>
+<div class="listPair"><span class="listItem" lang="km">ជ</span><span class="listIPA">cɔː, -c</span><span class="listTrans">c̱</span><span class="ungegn" style="display:none;">chô</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឈ</span><span class="listIPA">cʰɔː</span><span class="listTrans">c̱ʰ</span><span class="ungegn" style="display:none;">chhô</span></div>
+<div class="listPair"><span class="listItem" lang="km">ញ</span><span class="listIPA">ɲɔː, -ɲ</span><span class="listTrans">ɲ</span><span class="ungegn" style="display:none;">nhô</span></div>
+<div class="listPair"><span class="listItem" lang="km">ដ</span><span class="listIPA">ɗɑː, -t</span><span class="listTrans">ɗ</span><span class="ungegn" style="display:none;">dâ</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឋ</span><span class="listIPA">tʰɑː, t- -t</span><span class="listTrans">ṫʰ</span><span class="ungegn" style="display:none;">thâ</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឌ</span><span class="listIPA">ɗɔː, -t</span><span class="listTrans">ɗ̱</span><span class="ungegn" style="display:none;">dô</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឍ</span><span class="listIPA">tʰɔː, -t</span><span class="listTrans">ṯ̇ʰ</span><span class="ungegn" style="display:none;">thô</span></div>
+<div class="listPair"><span class="listItem" lang="km">ណ</span><span class="listIPA">nɑː, -n</span><span class="listTrans">n</span><span class="ungegn" style="display:none;">nâ</span></div>
+<div class="listPair"><span class="listItem" lang="km">ត</span><span class="listIPA">tɑː, ɗ- t- -t</span><span class="listTrans">t</span><span class="ungegn" style="display:none;">tâ</span></div>
+<div class="listPair"><span class="listItem" lang="km">ថ</span><span class="listIPA">tʰɑː, t- -t</span><span class="listTrans">tʰ</span><span class="ungegn" style="display:none;">thâ</span></div>
+<div class="listPair"><span class="listItem" lang="km">ទ</span><span class="listIPA">tɔː, -t</span><span class="listTrans">ṯ</span><span class="ungegn" style="display:none;">tô</span></div>
+<div class="listPair"><span class="listItem" lang="km">ធ</span><span class="listIPA">tʰɔː, t- -t</span><span class="listTrans">ṯʰ</span><span class="ungegn" style="display:none;">thô</span></div>
+<div class="listPair"><span class="listItem" lang="km">ន</span><span class="listIPA">nɔː, -n</span><span class="listTrans">ṉ</span><span class="ungegn" style="display:none;">nô</span></div>
+<div class="listPair"><span class="listItem" lang="km">ប</span><span class="listIPA">ɓɑː, p- -p</span><span class="listTrans">b</span><span class="ungegn" style="display:none;">bâ</span></div>
+<div class="listPair"><span class="listItem" lang="km">ផ</span><span class="listIPA">pʰɑː, p- -p</span><span class="listTrans">pʰ</span><span class="ungegn" style="display:none;">phâ</span></div>
+<div class="listPair"><span class="listItem" lang="km">ព</span><span class="listIPA">pɔː, -p</span><span class="listTrans">p̄</span><span class="ungegn" style="display:none;">pô</span></div>
+<div class="listPair"><span class="listItem" lang="km">ភ</span><span class="listIPA">pʰɔː, p- -p</span><span class="listTrans">p̄ʰ</span><span class="ungegn" style="display:none;">phô</span></div>
+<div class="listPair"><span class="listItem" lang="km">ម</span><span class="listIPA">mɔː, -m</span><span class="listTrans">m̱</span><span class="ungegn" style="display:none;">mô</span></div>
+<div class="listPair"><span class="listItem" lang="km">យ</span><span class="listIPA">jɔː, -iː</span><span class="listTrans">ȳ</span><span class="ungegn" style="display:none;">yô</span></div>
+<div class="listPair"><span class="listItem" lang="km">រ</span><span class="listIPA">rɔː, -∅</span><span class="listTrans">ṟ</span><span class="ungegn" style="display:none;">rô</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឡ</span><span class="listIPA">lɑː</span><span class="listTrans">l</span><span class="ungegn" style="display:none;">lâ</span></div>
+<div class="listPair"><span class="listItem" lang="km">ល</span><span class="listIPA">lɔː, -l</span><span class="listTrans">ḻ</span><span class="ungegn" style="display:none;">lô</span></div>
+<div class="listPair"><span class="listItem" lang="km">វ</span><span class="listIPA">ʋɔː, -w</span><span class="listTrans">v̱</span><span class="ungegn" style="display:none;">vô</span></div>
+<div class="listPair"><span class="listItem" lang="km">ស</span><span class="listIPA">sɑː, s- -h</span><span class="listTrans">s</span><span class="ungegn" style="display:none;">sâ</span></div>
+<div class="listPair"><span class="listItem" lang="km">ហ</span><span class="listIPA">hɑː, ∅-</span><span class="listTrans">h</span><span class="ungegn" style="display:none;">hâ</span></div>
+<div class="listPair"><span class="listItem" lang="km">អ</span><span class="listIPA">ʔɑː</span><span class="listTrans">ʔ</span><span class="ungegn" style="display:none;">’â</span></div>
 </div>
 </figure>
+
 
 
 <p>The following two consonants are obsolete.</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'km')">list all</div>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'km')">list both</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="km">ឝ</span><span class="listTrans">ś</span><span class="listIPA">ɕ</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឞ</span><span class="listTrans">ṣ</span><span class="listIPA">ʂ</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឝ</span><span class="listIPA">ɕ</span><span class="listTrans">ś</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឞ</span><span class="listIPA">ʂ</span><span class="listTrans">ṣ</span></div>
 </div>
 </figure>
 
 
 
-<section id="modification">
-<h3><a href="#modification">Consonant class modification</a></h3>
+<section>
+<h3 id="modification">Consonant registers</h3>
 
-<p>As mentioned above, the class of a consonant determines the vowel sound in a syllable. For example, <span class="charExample" translate="no"><span class="ex" lang="km">ក</span> <span class="ipa">kɑː</span></span> vs. <span class="charExample" translate="no"><span class="ex" lang="km">គ</span> <span class="ipa">kɔː</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="km">កី</span> <span class="ipa">kəj</span></span> vs. <span class="charExample" translate="no"><span class="ex" lang="km">គី</span> <span class="ipa">kiː</span></span>.</p>
+<p>Khmer is not tonal, but each consonant character belongs to one of two classes. The class of a consonant determines the vowel sound in a syllable. For example, <span class="charExample" translate="no"><span class="ex" lang="km">ក</span> <span class="ipa">kɑː</span></span> vs. <span class="charExample" translate="no"><span class="ex" lang="km">គ</span> <span class="ipa">kɔː</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="km">កី</span> <span class="ipa">kəj</span></span> vs. <span class="charExample" translate="no"><span class="ex" lang="km">គី</span> <span class="ipa">kiː</span></span>.</p>
 
 <p>Two diacritics, <span class="codepoint"><span lang="km">&#x17C9;</span> <a href="/scripts/khmer/block#char17C9">[<span class="uname">U+17C9 KHMER SIGN MUUSIKATOAN​</span>]</a></span> and <span class="codepoint"><span lang="km">&#x17CA;</span> <a href="/scripts/khmer/block#char17CA">[<span class="uname">U+17CA KHMER SIGN TRIISAP​</span>]</a></span>, are used to <em>change</em> the class of a consonant. These are particularly useful when a given sound has only one character associated with it, such as the letters <span class="ex" lang="km">ម</span>, <span class="ex" lang="km">យ</span> and <span class="ex" lang="km">ស</span>  etc.</p>
 
 </section>
-
-
-
-<section id="final_consonants">
-  <h3><a href="#final_consonants">Final consonants</a></h3>
-  <p>Not all Khmer consonants can appear in syllable-final position. The most common syllable-final consonants include the following:</p>
-  
-<figure>
-<div class="listAll" onClick="listAll(this, 'km')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="km">ក</span><span class="listIPA">k</span></div>
-<div class="listPair"><span class="listItem" lang="km">ង</span><span class="listIPA">ŋ</span></div>
-<div class="listPair"><span class="listItem" lang="km">ញ</span><span class="listIPA">ɲ</span></div>
-<div class="listPair"><span class="listItem" lang="km">ត</span><span class="listIPA">t</span></div>
-<div class="listPair"><span class="listItem" lang="km">ន</span><span class="listIPA">n</span></div>
-<div class="listPair"><span class="listItem" lang="km">ប</span><span class="listIPA">p</span></div>
-<div class="listPair"><span class="listItem" lang="km">ម</span><span class="listIPA">m</span></div>
-<div class="listPair"><span class="listItem" lang="km">ល</span><span class="listIPA">l</span></div>
-</div>
-</figure>
-
-<p>The pronunciation of the consonant in final position may differ from it's normal pronunciation. </p>
-</section>
   
 
 
 
-<section id="subscript_consonants">
-  <h3><a href="#subscript_consonants">Subscript consonants</a></h3>
-  <p>It is common to find clusters of consonants with no intervening vowel sounds. In Khmer, this is very common at the beginning of a word, but clusters also occur medially in multisyllable words, and occasionally at the end of a word. </p>
-  <p>When two consonants occur together without an intervening vowel, the second is rendered in subscript form, called <span class="ex" lang="km">ជើងអក្សរ</span> <span class="ipa">cəːŋʔɑʔsɑː</span> (<span class="meaning">consonant feet</span>) (or  'coeng', pronounced <span class="ipa">cəːŋ</span>). Cambodians see these subscripts as distinct letter forms.</p>
+<section>
+  <h3 id="subscript_consonants">Subscript consonants</h3>
+  <p>It is common to find clusters of consonants with no intervening vowel sounds. Since words are not separated by spaces, clusters can appear at word boundaries as well as word-internally.</p>
+<p>In Khmer, word-internation clusters are very common at the beginning of a word, but clusters also occur medially in multisyllable words, and occasionally at the end of a word. </p>
+<p>Khmer doesn't do anything special with clusters at word boundaries, however word-internal clusters usually lead to some stacking behaviour.</p>
+<p>When two consonants occur together without an intervening vowel, the second is rendered in subscript form, called <span class="ex" lang="km">ជើងអក្សរ</span> <span class="ipa">cəːŋʔɑʔsɑː</span> (<span class="meaning">consonant feet</span>) (or  'coeng', pronounced <span class="ipa">cəːŋ</span>). Cambodians see these subscripts as distinct letter forms.</p>
   <p>In Unicode subscript forms are produced by inserting <span class="codepoint"><span lang="km">&#x17D2;</span> <a href="/scripts/khmer/block#char17D2">[<span class="uname">U+17D2 KHMER SIGN COENG​</span>]</a></span> before the consonant that will become a subscript. This character, which has no visual form in Cambodian, is called the coeng in Unicode, although it should rightly be called the coeng generator.</p>
   <p>Where the two consonants involved in the cluster are in different classes or registers, the pronunciation of any following vowel is normally determined by the register of the subscript consonant. For the following exceptions, however, the vowel pronunciation is determined by the register of the first consonant:</p>
 <figure>
@@ -320,90 +347,116 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section id="subscript_with_vowel">
-  <h3><a href="#subscript_with_vowel">Subscript consonants after vowels</a></h3>
+<section>
+  <h3 id="subscript_with_vowel">Subscript consonants after vowels</h3>
   <p>It is rare but possible to find subscripts used after independent vowels. One common word spelled this way is <span class="ex" lang="km">ឲ្យ</span> <span class="ipa">ʔaoj</span> <span class="meaning">to give</span>.</p>
   <p>It is also possible to find subscript forms of independent vowels. Four of these are named sequences in Unicode.</p>
 </section>
+
+
+
+
+<section>
+  <h3 id="final_consonants">Final consonants</h3>
+  <p>Not all Khmer consonants can appear in syllable-final position. The most common syllable-final consonants include the following:</p>
+  
+<figure>
+<div class="listAll" onClick="listAll(this, 'km')">list all</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="km">ក</span><span class="listIPA">k</span></div>
+<div class="listPair"><span class="listItem" lang="km">ង</span><span class="listIPA">ŋ</span></div>
+<div class="listPair"><span class="listItem" lang="km">ញ</span><span class="listIPA">ɲ</span></div>
+<div class="listPair"><span class="listItem" lang="km">ត</span><span class="listIPA">t</span></div>
+<div class="listPair"><span class="listItem" lang="km">ន</span><span class="listIPA">n</span></div>
+<div class="listPair"><span class="listItem" lang="km">ប</span><span class="listIPA">p</span></div>
+<div class="listPair"><span class="listItem" lang="km">ម</span><span class="listIPA">m</span></div>
+<div class="listPair"><span class="listItem" lang="km">ល</span><span class="listIPA">l</span></div>
+</div>
+</figure>
+
+<p>The pronunciation of the consonant in final position may differ from it's normal pronunciation, but it is not followed by a vowel sound.</p>
+<p>Because ordinary letters are used in word-final position, it is difficult to parse Khmer. For example, the sequence <span class="charExample" translate="no"><span class="ex" lang="km">កក</span></span> could equally represent  two syllables with inherent vowels, or one syllable with a final <span class="ipa">-k</span> sound.</p>
+<p>Two final consonants (<span class="ipa">m</span> and <span class="ipa">h</span>) can also be produced using combining characters. See <a class="sectionref">anusvara_visarga</a> for details.</p>
+</section>
 </section>
 
 
 
 
 
-<section id="vowels">
-<h2><a href="#vowels">Vowels</a></h2>
+<section>
+<h2 id="vowels">Vowels</h2>
 
 
 <p>The Khmer Unicode block has 16 vowel signs, and 15 independent vowels (not counting 2 that are deprecated).</p>
-<p>Several vowel characters are composed of  parts that are visually separate, eg.   the sound <span class="ipa">aw/əː</span> is represented as <span class="codepoint"><span lang="km">&#x17BE;</span> <a href="/scripts/khmer/block#char17BE">[<span class="uname">U+17BE KHMER VOWEL SIGN OE​</span>]</a></span>. </p>
 <p>Other diacritics also produce vowel sounds after or before the consonants they are attached to.</p>
 <p>As mentioned above, an initial indicator of pronunciation is the class of the syllable-initial consonant. Additional factors include whether this is an unstressed vowel, vowel harmony, and whether any of the special diacritics have been used to change the sound. For an in-depth treatment of pronunciation see Huffman in the sources section. </p>
             
             
             
             
-<section id="inherent_vowels">
-	<h3><a href="#inherent_vowels">Inherent vowels</a></h3>
-			<p> Khmer has two inherent vowels, <span class="ipa">ɑː</span> and <span class="ipa">ɔː</span>. The class of the consonant will initially dictate which sound is appropriate, eg. <span class="ex" lang="km">ក</span> <span class="ipa">kɑː</span> vs. <span class="ex" lang="km">គ</span> <span class="ipa">kɔː</span>.</p>
-			<p>Inherent vowels are not pronounced after syllable final consonants. </p>
+<section>
+	<h3 id="inherent_vowels">Inherent vowels</h3>
+			<p>Each consonant symbol has an inherent following vowel sound, typically transcribed as <span class="trans">a</span>.</p>
+<p> Khmer has two inherent vowels, <span class="ipa">ɑː</span> and <span class="ipa">ɔː</span>. The class of the consonant will initially dictate which sound is appropriate, eg. <span class="ex" lang="km">ក</span> <span class="ipa">kɑː</span> vs. <span class="ex" lang="km">គ</span> <span class="ipa">kɔː</span>.</p>
+			<p>Inherent vowels are not pronounced after syllable final consonants, nor after initial consonants in a stack. </p>
   </section>
             
             
             
             
- <section id="vowel_signs">
-	<h3><a href="#vowel_signs">Vowel signs</a></h3>           
-			<p> As mentioned above, in most cases, vowel signs attached to a consonant are pronounced differently, depending on the register of the consonant letter, eg. <span class="ex" lang="km">កា</span> <span class="ipa">kaː</span> vs. <span class="ex" lang="km">គា</span> <span class="ipa">kiə</span>.</p>
-            <figure>
-<div class="listAll" onClick="listAll(this, 'km')">list all</div>
+ <section>
+ <h3 id="vowel_signs">Vowel signs</h3>           
+			<p>To produce a different vowel than the inherent one, Khmer uses one or more  combining characters, called vowel-signs, after the base consonant. </p>
+<p> As mentioned above, in most cases, vowel signs attached to a consonant are pronounced differently, depending on the register of the consonant letter, eg. <span class="ex" lang="km">កា</span> <span class="ipa">kaː</span> vs. <span class="ex" lang="km">គា</span> <span class="ipa">kiə</span>.</p>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'km')">list all 17</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="km">ា</span><span class="listTrans">ā</span><span class="listIPA">aː, iə</span></div>
-<div class="listPair"><span class="listItem" lang="km">ិ</span><span class="listTrans">i</span><span class="listIPA">ə, e, ɨ, i</span></div>
-<div class="listPair"><span class="listItem" lang="km">ី</span><span class="listTrans">ī</span><span class="listIPA">əj, iː</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឹ</span><span class="listTrans">ẏ</span><span class="listIPA">ə, ɨ</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឺ</span><span class="listTrans">ȳ</span><span class="listIPA">əɨ, ɨː</span></div>
-<div class="listPair"><span class="listItem" lang="km">ុ</span><span class="listTrans">u</span><span class="listIPA">o, u</span></div>
-<div class="listPair"><span class="listItem" lang="km">ូ</span><span class="listTrans">ū</span><span class="listIPA">ou, uː</span></div>
-<div class="listPair"><span class="listItem" lang="km">ួ</span><span class="listTrans">ua</span><span class="listIPA">uə</span></div>
-<div class="listPair"><span class="listItem" lang="km">ើ</span><span class="listTrans">oe</span><span class="listIPA">aə, əː</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឿ</span><span class="listTrans">ẏa</span><span class="listIPA">ɨə</span></div>
-<div class="listPair"><span class="listItem" lang="km">ៀ</span><span class="listTrans">ia</span><span class="listIPA">iə</span></div>
-<div class="listPair"><span class="listItem" lang="km">េ</span><span class="listTrans">e</span><span class="listIPA">ei, eː</span></div>
-<div class="listPair"><span class="listItem" lang="km">ែ</span><span class="listTrans">ae</span><span class="listIPA">ae, ɛː</span></div>
-<div class="listPair"><span class="listItem" lang="km">ៃ</span><span class="listTrans">ai</span><span class="listIPA">aj, ɨj</span></div>
-<div class="listPair"><span class="listItem" lang="km">ោ</span><span class="listTrans">o</span><span class="listIPA">ao, oː</span></div>
-<div class="listPair"><span class="listItem" lang="km">ៅ</span><span class="listTrans">au</span><span class="listIPA">aw, ɨw</span></div>
+<div class="listPair"><span class="listItem" lang="km">ា</span><span class="listIPA">aː, iə</span><span class="listTrans">ā</span><span class="ungegn" style="display:none;">ā</span></div>
+<div class="listPair"><span class="listItem" lang="km">ៈ</span><span class="listIPA">aʔ, eə̆ʔ</span><span class="listTrans">a</span><span>&nbsp;</span></div>
+<div class="listPair"><span class="listItem" lang="km">ិ</span><span class="listIPA">ə, e ɨ i</span><span class="listTrans">i</span><span class="ungegn" style="display:none;">i</span></div>
+<div class="listPair"><span class="listItem" lang="km">ី</span><span class="listIPA">əj, iː</span><span class="listTrans">ī</span><span class="ungegn" style="display:none;">ī</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឹ</span><span class="listIPA">ə, ɨ</span><span class="listTrans">ɨ</span><span class="ungegn" style="display:none;">ẏ</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឺ</span><span class="listIPA">əɨ, ɨː</span><span class="listTrans">ɨ̄</span><span class="ungegn" style="display:none;">ȳ</span></div>
+<div class="listPair"><span class="listItem" lang="km">ុ</span><span class="listIPA">o, u</span><span class="listTrans">u</span><span class="ungegn" style="display:none;">u</span></div>
+<div class="listPair"><span class="listItem" lang="km">ូ</span><span class="listIPA">ou, uː</span><span class="listTrans">ū</span><span class="ungegn" style="display:none;">ū</span></div>
+<div class="listPair"><span class="listItem" lang="km">េ</span><span class="listIPA">ei, eː</span><span class="listTrans">e</span><span class="ungegn" style="display:none;">e</span></div>
+<div class="listPair"><span class="listItem" lang="km">ែ</span><span class="listIPA">ae, ɛː</span><span class="listTrans">æ</span><span class="ungegn" style="display:none;">ae</span></div>
+<div class="listPair"><span class="listItem" lang="km">ៃ</span><span class="listIPA">aj, ɨj</span><span class="listTrans">aʲ</span><span class="ungegn" style="display:none;">ai</span></div>
+<div class="listPair"><span class="listItem" lang="km">ោ</span><span class="listIPA">ao, oː</span><span class="listTrans">o</span><span class="ungegn" style="display:none;">o</span></div>
+<div class="listPair"><span class="listItem" lang="km">ៅ</span><span class="listIPA">aw, ɨw</span><span class="listTrans">aʷ</span><span class="ungegn" style="display:none;">au</span></div>
+<div class="listPair"><span class="listItem" lang="km">ួ</span><span class="listIPA">uə</span><span class="listTrans">uᵊ</span><span class="ungegn" style="display:none;">ua</span></div>
+<div class="listPair"><span class="listItem" lang="km">ើ</span><span class="listIPA">aə, əː</span><span class="listTrans">aᵊ</span><span class="ungegn" style="display:none;">oe</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឿ</span><span class="listIPA">ɨə</span><span class="listTrans">ɨᵊ</span><span class="ungegn" style="display:none;">ẏa</span></div>
+<div class="listPair"><span class="listItem" lang="km">ៀ</span><span class="listIPA">iə</span><span class="listTrans">iᵊ</span><span class="ungegn" style="display:none;">ia</span></div>
 </div>
 </figure>
+<p><span class="codepoint" translate="no"><span lang="km">&#x17C8;</span> [<a href="/scripts/khmer/block#char17C8"><span class="uname">U+17C8 KHMER SIGN YUUKALEAPINTU​</span></a>]</span> is a 20th century addition to the Khmer repertoire. It is used as a vowel after consonants that are pronounced as stressed syllables at the end of a word, or preceding an internal juncture in compounds.</p>
+<p>Several vowel characters are composed of  parts that are visually separate, eg.   the sound <span class="ipa">aw/əː</span> is represented as <span class="codepoint"><span lang="km">&#x17BE;</span> <a href="/scripts/khmer/block#char17BE">[<span class="uname">U+17BE KHMER VOWEL SIGN OE​</span>]</a></span>. </p>
 
-  </section>
+</section>
             
             
             
             
- <section id="independent_vowels">
-	<h3><a href="#independent_vowels">Independent vowels</a></h3>           
+ <section>
+	<h3 id="independent_vowels">Independent vowels</h3>           
 		<p> There are two ways of representing vowel sounds that are not preceded by a consonant.</p>
 			<p>The most common way is to add  a vowel-sign to the character <span class="codepoint"><span lang="km">&#x17A2;</span> <a href="/scripts/khmer/block#char17A2">[<span class="uname">U+17A2 KHMER LETTER QA</span>]</a></span>, eg. <span class="ex" lang="km">អី</span> <span class="ipa">ʔəj</span>.</p>
-			<p>There are also some independent vowel letters, but unlike most South Asian scripts, there are fewer independent vowels than vowel signs, and some do not have direct correspondances with a vowel sign, eg. <span class="ex" lang="km">ឪ</span> corresponds phonetically to the vowel plus consonant combination <span class="ex" lang="km">ូវ</span>. </p>
-            <figure>
-<div class="listAll" onClick="listAll(this, 'km')">list all</div>
+			<p>There are also some independent vowel letters, but unlike most South Asian scripts, there are fewer independent vowels than vowel signs, and some do not have direct correspondances with a vowel sign, eg. <span class="ex" lang="km">ឪ</span> corresponds phonetically to the vowel plus consonant combination <span class="ex" lang="km">ូវ</span>. (See also <a class="sectionref">vocalics</a>.)</p>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'km')">list all 10</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="km">ឥ</span><span class="listTrans">′i</span><span class="listIPA">ʔə, ʔɨ, ʔəj</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឦ</span><span class="listTrans">′ī</span><span class="listIPA">ʔəj</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឧ</span><span class="listTrans">′u</span><span class="listIPA">ʔo, ʔu, ʔao</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឩ</span><span class="listTrans">′ū</span><span class="listIPA">ou, ʔuː</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឪ</span><span class="listTrans">ýu</span><span class="listIPA">ʔəw</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឯ</span><span class="listTrans">′ae</span><span class="listIPA">ʔae, ʔɛː, ʔeː</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឰ</span><span class="listTrans">′ai</span><span class="listIPA">ʔaj</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឱ</span><span class="listTrans">′o</span><span class="listIPA">ʔao</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឳ</span><span class="listTrans">′au</span><span class="listIPA">ʔaw</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឲ</span><span class="listTrans">′ǎu</span><span class="listIPA">ʔao</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឫ</span><span class="listTrans">ṛ</span><span class="listIPA">ra~ru</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឬ</span><span class="listTrans">ṝ</span><span class="listIPA">raː~ruː</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឭ</span><span class="listTrans">ḷ</span><span class="listIPA">la~lu</span></div>
-<div class="listPair"><span class="listItem" lang="km">ឮ</span><span class="listTrans">ḹ</span><span class="listIPA">laː~luː</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឥ</span><span class="listIPA">ʔə, ʔɨ ʔəj</span><span class="listTrans">ị</span><span class="ungegn" style="display:none;">i</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឦ</span><span class="listIPA">ʔəj</span><span class="listTrans">ị̄</span><span class="ungegn" style="display:none;">ī</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឪ</span><span class="listIPA">ʔəw</span><span class="listTrans">ɨ̣</span><span class="ungegn" style="display:none;">ýu</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឧ</span><span class="listIPA">ʔo, ʔu ʔao</span><span class="listTrans">ụ</span><span class="ungegn" style="display:none;">u</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឩ</span><span class="listIPA">ou, ʔuː</span><span class="listTrans">ụ̄</span><span class="ungegn" style="display:none;">ū</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឯ</span><span class="listIPA">ʔae, ʔɛː ʔeː</span><span class="listTrans">æ̣</span><span class="ungegn" style="display:none;">ae</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឰ</span><span class="listIPA">ʔaj</span><span class="listTrans">ạʲ</span><span class="ungegn" style="display:none;">ai</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឱ</span><span class="listIPA">ʔao</span><span class="listTrans">ọ</span><span class="ungegn" style="display:none;">o</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឳ</span><span class="listIPA">ʔaw</span><span class="listTrans">ạʷ</span><span class="ungegn" style="display:none;">au</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឲ</span><span class="listIPA">ʔao</span><span class="listTrans">ạᵒ</span><span class="ungegn" style="display:none;">âu</span></div>
 </div>
 </figure>
 
@@ -411,20 +464,36 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   </section>
  
 
+  
+<section>
+<h3 id="vocalics">Vocalics</h3>
+    <p>A set of letters that represents a special combination of consonant+vowel, available in Khmer only as independent vowels.</p>
 
-
-<section id="anusvara_visarga">
-	<h3><a href="#anusvara_visarga">Vowel-like diacritics</a></h3>
-<p>Three diacritics can behave like vowel-signs in Khmer.</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'km')">list all</div>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'km')">list all 4</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="km">ំ</span><span class="listTrans">ṃ</span><span class="listIPA">m</span></div>
-<div class="listPair"><span class="listItem" lang="km">ះ</span><span class="listTrans">ḥ</span><span class="listIPA">h</span></div>
-<div class="listPair"><span class="listItem" lang="km">ៈ</span><span class="listTrans">à</span><span class="listIPA">aʔ, eə̆ʔ</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឫ</span><span class="listIPA">ra~ru</span><span class="listTrans">r̥ₔ</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឬ</span><span class="listIPA">raː~ruː</span><span class="listTrans">r̥̄ₔ</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឭ</span><span class="listIPA">la~lu</span><span class="listTrans">l̥ₔ</span></div>
+<div class="listPair"><span class="listItem" lang="km">ឮ</span><span class="listIPA">laː~luː</span><span class="listTrans">l̥̄ₔ</span></div>
 </div>
 </figure>
 
+</section>
+
+
+
+
+<section>
+	<h3 id="anusvara_visarga">Vowel-like diacritics</h3>
+<p>Two diacritics can behave like vowel-signs in Khmer.</p>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'km')">list both</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="km">ំ</span><span class="listIPA">m</span><span class="listTrans">ṃ</span></div>
+<div class="listPair"><span class="listItem" lang="km">ះ</span><span class="listIPA">h</span><span class="listTrans">ḥ</span></div>
+</div>
+</figure>
 <p>The descendants of the anusvara and the visarga, <span class="codepoint" translate="no"><span lang="km">&#x17C6;</span> [<a href="/scripts/khmer/block#char17C6"><span class="uname">U+17C6 KHMER SIGN NIKAHIT​</span></a>],</span> called <span lang="km">និគ្គហិត</span> <span class="name">niʔkəhət,</span> and <span class="codepoint" translate="no"><span lang="km">&#x17C7;</span> [<a href="/scripts/khmer/block#char17C7"><span class="uname">U+17C7 KHMER SIGN REAHMUK​</span></a>]</span>, called <span lang="km">រះមុខ</span> <span class="name">reə̆hmuk</span>, are  regarded as vowels in Khmer, even though their  sounds still end with <span class="ipa">ŋ</span> and <span class="ipa">h</span>, respectively.</p>
 <p>They are also used in combination with other vowel signs to produce common vowel sounds.</p>
 <figure>
@@ -437,15 +506,14 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <div class="listPair"><span class="listItem" lang="km">ោះ</span><span class="listTrans"></span><span class="listIPA">ɑh, uə̆h</span></div>
 </div>
 </figure>
-			<p>Two of these combinations are regarded as additional vowels in the alphabet but not encoded separately in Unicode (though they are named sequences), ie. <span class="ex" lang="km">អាំ</span> <span class="ipa">am, oə̆m</span> and <span class="ex" lang="km">អុំ</span> <span class="ipa">om, um. </span></p>
-<p><span class="codepoint" translate="no"><span lang="km">&#x17C8;</span> [<a href="/scripts/khmer/block#char17C8"><span class="uname">U+17C8 KHMER SIGN YUUKALEAPINTU​</span></a>]</span> is a 20th century addition to the Khmer repertoire. It is used as a vowel after consonants that are pronounced as stressed syllables at the end of a word, or preceding an internal juncture in compounds.</p>
-  </section>
+			<p>The first two of these combinations are regarded as  vowels in the Khmer alphabet but they are not encoded separately in Unicode (though they are named sequences), ie. <span class="ex" lang="km">អាំ</span> <span class="ipa">am, oə̆m</span> and <span class="ex" lang="km">អុំ</span> <span class="ipa">om, um. </span></p>
+</section>
            
             
             
             
- <section id="vowel_harmony">
-	<h3><a href="#vowel_harmony">Vowel harmony</a></h3>           
+ <section>
+	<h3 id="vowel_harmony">Vowel harmony</h3>           
 			<p> In two-syllable words, where the second syllable begins with one of the following consonants the vowel class of the second syllable is the same as that of the first.</p>
 <figure>
 <div class="listAll" onClick="listAll(this, 'km')">list all</div>
@@ -470,37 +538,35 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section id="cchars">
-<h2><a href="#cchars">Diacritics</a></h2>
+<section>
+<h2 id="cchars">Combining characters</h2>
   
-  <p>The Khmer block contains 33 combining marks, 16 of which are vowel-signs, and 3 vowel-like signs and are described above. Two  deprecated inherent vowel marks, and one astrological mark who's use is discouraged, bring the remaining total to 11.
-  <figure>
-</figure>
+  <p>The Khmer block contains 33 combining marks, 16 of which are vowel-signs, and 3 vowel-like signs – these are described above. Two  deprecated inherent vowel marks, and one astrological mark who's use is discouraged, bring the remaining total to 11.
 </p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'km')">list all</div>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'km')">list all 11</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="km">្</span></div>
-<div class="listPair"><span class="listItem" lang="km">៉</span></div>
-<div class="listPair"><span class="listItem" lang="km">៊</span></div>
-<div class="listPair"><span class="listItem" lang="km">៌</span></div>
-<div class="listPair"><span class="listItem" lang="km">៍</span></div>
-<div class="listPair"><span class="listItem" lang="km">៑</span></div>
-<div class="listPair"><span class="listItem" lang="km">៝</span></div>
-<div class="listPair"><span class="listItem" lang="km">់</span></div>
-<div class="listPair"><span class="listItem" lang="km">័</span></div>
-<div class="listPair"><span class="listItem" lang="km">៎</span></div>
-<div class="listPair"><span class="listItem" lang="km">៏</span></div>
-
+<div class="listPair"><span class="listItem" lang="km">្</span><span class="listTrans">͓</span></div>
+<div class="listPair"><span class="listItem" lang="km">៑</span><span class="listTrans">¯</span></div>
+<div class="listPair"><span class="listItem" lang="km">៌</span><span class="listTrans">ʳ</span></div>
+<div class="listPair"><span class="listItem" lang="km">៍</span><span class="listTrans">˟</span></div>
+<div class="listPair"><span class="listItem" lang="km">់</span><span class="listTrans">˘</span></div>
+<div class="listPair"><span class="listItem" lang="km">័</span><span class="listTrans">ă</span></div>
+<div class="listPair"><span class="listItem" lang="km">៝</span><span class="listTrans">ᵊ</span></div>
+<div class="listPair"><span class="listItem" lang="km">៎</span><span class="listTrans">ⸯ</span></div>
+<div class="listPair"><span class="listItem" lang="km">៏</span><span class="listTrans">⁎</span></div>
+<div class="listPair"><span class="listItem" lang="km">៉</span><span class="listTrans">″</span></div>
+<div class="listPair"><span class="listItem" lang="km">៊</span><span class="listTrans">′</span></div>
 </div>
 </figure>
+
 
 <p><span class="codepoint" translate="no"><span lang="km">&#x17D2;</span> [<a href="/scripts/khmer/block#char17D2"><span class="uname">U+17D2 KHMER SIGN COENG​</span></a>]</span>,  used to create stacked consonants, is described earlier, as are <span class="codepoint" translate="no"><span lang="km">&#x17C9;</span> [<a href="/scripts/khmer/block#char17C9"><span class="uname">U+17C9 KHMER SIGN MUUSIKATOAN​</span></a>]</span> and <span class="codepoint" translate="no"><span lang="km">&#x17CA;</span> [<a href="/scripts/khmer/block#char17CA"><span class="uname">U+17CA KHMER SIGN TRIISAP​</span></a>]</span>.</p>
 <p>Other diacritics are described here in general terms. For the detail, click on the character above and follow the links to the character notes document.</p>
 
 
-<section id="silence_marks">
-<h3><a href="#silence_marks">Silencing marks</a></h3>
+<section>
+<h3 id="silence_marks">Silencing marks</h3>
 
 <p>Two diacritics, <span class="codepoint" translate="no"><span lang="km">&#x17CC;</span> [<a href="/scripts/khmer/block#char17CC"><span class="uname">U+17CC KHMER SIGN ROBAT​</span></a>]</span> and <span class="codepoint" translate="no"><span lang="km">&#x17CD;</span> [<a href="/scripts/khmer/block#char17CD"><span class="uname">U+17CD KHMER SIGN TOANDAKHIAT​</span></a>]</span>, are used to silence written characters. The former is not very common and silences final consonants, eg.  <span class="ex" lang="km">បរិបូណ៌</span> <span class="ipa">ɓɑriɓou</span> <span class="meaning">abundant</span> (although it also introduces or affects sound in some cases in multisyllabic words). The latter is used over a consonant, particularly in loan words, to silence it and any attached vowels or subscripts, eg. <span class="charExample" translate="no"><span class="ex" lang="km">សប្ដាហ៍</span> <span class="trans">sâb͓dāhâ˚</span> <span class="ipa">sɑpɗaː</span> <span class="meaning">week</span></span> or <span class="charExample" translate="no"><span class="ex" lang="km">រេហ៍ពល</span> <span class="trans">rehâ˚ꝑôḻ</span> <span class="ipa">rɔpuə̆l</span> <span class="meaning">army</span></span>.</p>
 <p><span class="codepoint" translate="no"><span lang="km">&#x17D1;</span> [<a href="/scripts/khmer/block#char17D1"><span class="uname">U+17D1 KHMER SIGN VIRIAM</span></a>]</span>, the sanskrit virama, is sometimes used in Sanskrit words to indicate that a final consonant has no vowel sound, eg. <span class="charExample" translate="no"><span class="ex" lang="km">អាត្មន៑</span> <span class="ipa">ʔaːtman</span> <span class="meaning">soul</span></span>.</p>
@@ -510,8 +576,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section id="vowel_mod">
-<h3><a href="#vowel_mod">Vowel modifier marks</a></h3>
+<section>
+<h3 id="vowel_mod">Vowel modifier marks</h3>
 
 <p><span class="codepoint" translate="no"><span lang="km">&#x17CB;</span> [<a href="/scripts/khmer/block#char17CB"><span class="uname">U+17CB KHMER SIGN BANTOC</span></a>]</span> is always placed above the final consonant, and basically shortens the preceding vowel.</p>
 <p><span class="codepoint" translate="no"><span lang="km">&#x17D0;</span> [<a href="/scripts/khmer/block#char17D0"><span class="uname">U+17D0 KHMER SIGN SAMYOK SANNYA​</span></a>]</span> is used in some Pail and Sanskrit loan words (although alternative spellings exist) and indicates that the syllable has a particular vowel.&nbsp;</p>
@@ -519,8 +585,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section id="other_marks">
-<h3><a href="#other_marks">Other marks</a></h3>
+<section>
+<h3 id="other_marks">Other marks</h3>
 
 <p><span class="codepoint" translate="no"><span lang="km">&#x17CF;</span> [<a href="/scripts/khmer/block#char17CF"><span class="uname">U+17CF KHMER SIGN AHSDA​</span></a>]</span> is used over two consonants to indicate that they represent two specific words: <span class="charExample" translate="no"><span class="ex" lang="km">ក៏</span> <span class="ipa">kɑː</span> <span class="meaning">also, then, therefore</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="km">ដ៏</span> <span class="ipa">ɗɑː</span> <span class="meaning">which, very</span></span>.</p>
 <p><span class="codepoint" translate="no"><span lang="km">&#x17CE;</span> [<a href="/scripts/khmer/block#char17CE"><span class="uname">U+17CE KHMER SIGN KAKABAT​</span></a>]</span> is very rare, but used over the final consonant of a word like an exclamation mark, to convey excited emphasis, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ណែ៎</span> <span class="ipa">nɛː</span> <span class="meaning">Hey!</span></span>, or <span class="charExample" translate="no"><span class="ex" lang="km">នុ៎ះន៎</span> <span class="ipa">nuhnɔː</span> <span class="meaning">Over there!</span></span>.&nbsp;</p>
@@ -531,21 +597,21 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section id="punctuation">
-<h2><a href="#punctuation">Punctuation &amp; symbols</a></h2>
+<section>
+<h2 id="punctuation">Punctuation &amp; symbols</h2>
 
 <p>The Khmer block has 7 non-deprecated punctuation marks, and a currency symbol.</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'km')">list all</div>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'km')">list all 8</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="km">៖</span></div>
-<div class="listPair"><span class="listItem" lang="km">។</span></div>
-<div class="listPair"><span class="listItem" lang="km">៕</span></div>
-<div class="listPair"><span class="listItem" lang="km">៙</span></div>
-<div class="listPair"><span class="listItem" lang="km">៚</span></div>
-<div class="listPair"><span class="listItem" lang="km">ៗ</span></div>
-<div class="listPair"><span class="listItem" lang="km">៛</span></div>
-<div class="listPair"><span class="listItem" lang="km">ៜ</span></div>
+<div class="listPair"><span class="listItem" lang="km">៖</span><span class="listTrans">:</span></div>
+<div class="listPair"><span class="listItem" lang="km">។</span><span class="listTrans">.</span></div>
+<div class="listPair"><span class="listItem" lang="km">៕</span><span class="listTrans">¶</span></div>
+<div class="listPair"><span class="listItem" lang="km">៙</span><span>&nbsp;</span></div>
+<div class="listPair"><span class="listItem" lang="km">៚</span><span>&nbsp;</span></div>
+<div class="listPair"><span class="listItem" lang="km">ៗ</span><span>&nbsp;</span></div>
+<div class="listPair"><span class="listItem" lang="km">៘</span><span class="listTrans">...</span></div>
+<div class="listPair"><span class="listItem" lang="km">៛</span><span class="listTrans">¤</span></div>
 </div>
 </figure>
 <p>These are described elsewhere on this page.</p>
@@ -555,12 +621,12 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section id="numbers">
-<h2><a href="#numbers">Numbers</a></h2>
+<section>
+<h2 id="numbers">Numbers, dates, currency, etc.</h2>
 
 <p>Khmer has its own set of decimal digits, although western digits are also used sometimes.</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'km')">list all</div>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'km')">list all 10</div>
 <div class="listArray">
 <div class="listPair"><span class="listItem" lang="km">០</span><span class="listTrans">0</span></div>
 <div class="listPair"><span class="listItem" lang="km">១</span><span class="listTrans">1</span></div>
@@ -574,17 +640,24 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <div class="listPair"><span class="listItem" lang="km">៩</span><span class="listTrans">9</span></div>
 </div>
 </figure>
+
 <p>The thousands separator is <span class="codepoint" translate="no"><span lang="km">&#x002E;</span> [<span class="uname">U+002E FULL STOP</span>]</span>, and decimal separator is <span class="codepoint" translate="no"><span lang="km">&#x002C;</span> [<span class="uname">U+002C COMMA</span>]</span>.</p>
 <p>Ranges and dates use the ASCII hyphen.<sup><a href="https://en.wikipedia.org/wiki/Khmer_alphabet#Spacing_and_punctuation">w</a></sup></p>
-<p><b class="leadin" id="currency">Currency. </b>The symbol <span class="codepoint" translate="no"><span lang="km">&#x17DB;</span> [<a href="/scripts/khmer/block#char17DB"><span class="uname">U+17DB KHMER CURRENCY SYMBOL RIEL</span></a>]</span> (<span class="charExample" translate="no"><span class="ex" lang="km">សញ្ញារៀល</span> <span class="ipa">saɲ ɲaː riəl</span></span>) is placed after the amount, eg. <span class="ex" lang="km">៣.០០០ ៛</span> <span class="ipa">ɓej poan riəl</span> <span class="meaning">3,000 riel</span>. Sometimes <span class="codepoint" translate="no"><span lang="km">&#x179A;</span> [<a href="/scripts/khmer/block#char179A"><span class="uname">U+179A KHMER LETTER RO</span></a>]</span> is used instead.</p>
+
+
+<section>
+<h3 id="currency">Currency</h3>
+
+<p>The symbol <span class="codepoint" translate="no"><span lang="km">&#x17DB;</span> [<a href="/scripts/khmer/block#char17DB"><span class="uname">U+17DB KHMER CURRENCY SYMBOL RIEL</span></a>]</span> (<span class="charExample" translate="no"><span class="ex" lang="km">សញ្ញារៀល</span> <span class="ipa">saɲ ɲaː riəl</span></span>) is placed after the amount, eg. <span class="ex" lang="km">៣.០០០ ៛</span> <span class="ipa">ɓej poan riəl</span> <span class="meaning">3,000 riel</span>. Sometimes <span class="codepoint" translate="no"><span lang="km">&#x179A;</span> [<a href="/scripts/khmer/block#char179A"><span class="uname">U+179A KHMER LETTER RO</span></a>]</span> is used instead.</p>
+</section>
 </section>
 
 
 
 
 
-<section id="deprecated">
-<h2><a href="#deprecated">Unused characters</a></h2>
+<section>
+<h2 id="deprecated">Unused characters</h2>
 
 <p>The Khmer block has a number of deprecated or obsolete characters.</p>
 <figure>
@@ -606,11 +679,11 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section id="glyphs">
-<h2><a href="#glyphs">Glyph shaping</a></h2>
+<section>
+<h2 id="glyphs">Glyph shaping &amp; positioning</h2>
   
-<section id="gsub">
-<h3><a href="#gsub">Context-based glyph changes</a></h3>
+<section>
+<h3 id="gsub">Context-based glyph changes</h3>
 
   <p> There is very little in the way of interaction between characters other than the subscript shapes used after the coeng generator.</p>
   <p>Some small joining features occur in relation to <span class="codepoint"><span lang="km">&#x17B6;</span> <a href="/scripts/khmer/block#char17B6">[<span class="uname">U+17B6 KHMER VOWEL SIGN AA​</span>]</a></span> and similarly shaped vowels. Unicode provides the following list of common forms: </p>
@@ -632,8 +705,8 @@ This behaviour can be modified using <span class="codepoint"><span lang="km">&#x
 
 
 
-<section id="font_styles">
-<h3><a href="#font_styles">Font styles</a></h3>
+<section>
+<h3 id="font_styles">Font styles</h3>
 <p>There are several distinct styles of font in Modern Khmer. </p>
 <p>Most modern typefaces are set in an upright style (called <span class="charExample" translate="no"><span class="ex" lang="km">អក្សរឈរ</span> <span class="trans">ʔɑːksɑː cʰɔː</span></span> or <span class="charExample" translate="no"><span class="ex" lang="km">អក្សរត្រង់</span> <span class="trans">ʔɑːksɑː trɑŋ</span></span>).<sup><a href="https://en.wikipedia.org/wiki/Khmer_alphabet#Styles">w</a></sup> This is the style used for this page.</p>
     <figure>
@@ -659,56 +732,23 @@ This behaviour can be modified using <span class="codepoint"><span lang="km">&#x
 
 
 
-<section id="syllable_structure">
-<h2><a href="#syllable_structure">Syllable structure </a></h2>
-   <p>The syllable is fundamental in Cambodian. </p>
-  <p>Many native Cambodian words are  monosyllabic. These start with one or more consonants or an independent vowel (or a vowel sign attached to <span class="name">ʔɑː</span>, which is a combination of both). Short vowels in stressed syllables are always followed by a consonant. Long vowels may not be. There are many monosyllabic words that begin with consonant clusters, and some monosyllabic words that end with clusters, although only one consonant is pronounced in syllable final position.</p>
-  <p>There are also many bisyllabic words. In many cases the first syllable in a bisyllabic word is unstressed, and the vowel is usually rendered in colloquial speech as a schwa. Some bisyllabic words are compounds, however, and this may not apply.</p>
-  <p>Polysyllabic words are usually of Sanskrit, Pali or French origin. These words tend to alternate stress across their syllables, but may not. </p>
 
 
 
+<section>
+<h2 id="layout">Structural boundaries &amp; markers</h2>
 
-<section id="syllable_components">
-  <h3><a href="#usageboundaries">Order of syllable components</a></h3>
 
-<p>An orthographic syllable is slightly different from a morphological syllable, since an orthographic syllable may begin with the final consonant of the previous morphological syllable. Alternatively, an orthographic syllable may be just a final consonant or consonant cluster in a morphological syllable.</p>
-    <p>
-      <mark>Usage tip:</mark>
-    Components of an 'orthographic syllable'*  should be composed in the following order:</p>
-  <ol style="text-align: left;">
-    <li>base consonant or independent vowel </li>
-    <li><span class="name">rɔɓaːt </span></li>
-    <li><span class="name">museʔkətoə̯n </span>or <span class="name">trəisaɓ </span> (register shifters)</li>
-    <li>subscript (consonant or independent vowel)</li>
-    <li>vowel sign</li>
-    <li>zero-width joiner or non-joiner</li>
-    <li>any other mark </li>
-  </ol>
-  <p>This fixed ordering makes it easier to search for and collate text. </p>
-  <p>As mentioned above, although all combining characters follow the base in memory, the visual order of syllable components may not follow a linear progression from left to right. In the following example the order in which the glyphs are pronounced is far left, far right, down, left, left: <span class="ex" lang="km">កន្ត្រៃ</span> <span class="ipa">kɑntraj</span> <span class="name">scissor<span class="meaning"></span>s.</span> Here <span class="ex" lang="km">ច្រៀង</span> the spoken order of the separate visible parts, numbered left to right, is 3,2, 1+4, 5, Some vowel signs span two or three sides of the base consonant or cluster. </p>
+<section>
+<h3 id="word">Word boundaries</h3>
+
+<p>  Khmer words are not separated by spaces.</p>
 </section>
 
-</section>
+<section>
+<h3 id="phrase">Phrase boundaries</h3>
 
-
-
-<section id="layout">
-  <h2><a href="#layout">Text layout</a></h2>
-
-
-<section id="text_direction">
-  <h3><a href="#text_direction">Text direction</a></h3>
-  <p>Khmer text runs left to right in horizontal lines.</p>
-</section>
-
-
-
-  
-<section id="usageboundaries">
-  <h3><a href="#usageboundaries">Text boundaries &amp; punctuation </a></h3>
-
-<p> <b id="word_boundaries" class="leadin">Word boundaries.</b> Khmer words are not separated by spaces, so the space, <span lang="km">ឃ្លា</span> <span class="ipa">kliə</span>, is regarded as punctuation, similar to the comma. Huffman lists the following uses:</p>
+<p>Although Khmer words are not separated by spaces, the space (<span lang="km">ឃ្លា</span> <span class="ipa">kliə</span>) is used, and is regarded as punctuation, similar to the comma. Huffman lists the following uses:</p>
   <ol>
     <li>between clauses within a sentence</li>
     <li>between sentences in a cohesive group of sentences</li>
@@ -722,7 +762,7 @@ This behaviour can be modified using <span class="codepoint"><span lang="km">&#x
   <p><span lang="km">ថ្ងៃនេះ ខ្ញុំទៅផ្សារ ទិញក្រច អង្ករ ហើយនឹងអីវ៉ាន់ផ្សេង ៗ</span><br />
     <span class="ipa">tŋajnih kɲomtɨwpsaː tiɲkrouc ʔɑŋkɑː haəjnɨŋʔəjʋanpseiŋ pseiŋ</span><br />
     <span class="meaning">Today ( ) I'm going to the market ( ) to buy oranges ( ) rice ( ) and various things. </span></p>
-<p><b id="phrases" class="leadin">Phrase delimiters. </b>Khmer also uses <span class="codepoint" translate="no"><span lang="km">&#x17D4;</span> [<a href="/scripts/khmer/block#char17D4"><span class="uname">U+17D4 KHMER SIGN KHAN</span></a>]</span> to mark the end of sentences, although a series of sentences on a related topic tend to be separated by space instead.</p>
+<p><b id="phrases" class="leadin">Phrasal punctuation marks. </b>Khmer also uses <span class="codepoint" translate="no"><span lang="km">&#x17D4;</span> [<a href="/scripts/khmer/block#char17D4"><span class="uname">U+17D4 KHMER SIGN KHAN</span></a>]</span> to mark the end of sentences, although a series of sentences on a related topic tend to be separated by space instead.</p>
 <p><span class="codepoint" translate="no"><span lang="km">&#x17D6;</span> [<a href="/scripts/khmer/block#char17D6"><span class="uname">U+17D6 KHMER SIGN CAMNUC PII KUUH</span></a>]</span> is used in much the same way as a western colon.&nbsp;</p>
 <p><b id="question" class="leadin">Question &amp; exclamation marks.</b> Khmer uses Western punctuation marks, eg. <span class="ex" lang="km">ហេត៊អ្វី?</span> <span class="ipa">haetʰ aʋəi</span>, and  <span class="ex" lang="km">កុំ!</span> <span class="ipa">kom</span>.</p>
 <p>Very rarely, the combining character <span class="codepoint" translate="no"><span lang="km">&#x17CE;</span> [<a href="/scripts/khmer/block#char17CE"><span class="uname">U+17CE KHMER SIGN KAKABAT​</span></a>]</span> can be used over the final consonant of a word like an exclamation mark, to convey excited emphasis, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ណែ៎</span> <span class="ipa">nɛː</span> <span class="meaning">Hey!</span></span>, or <span class="charExample" translate="no"><span class="ex" lang="km">នុ៎ះន៎</span> <span class="ipa">nuhnɔː</span> <span class="meaning">Over there!</span></span>.</p>
@@ -733,8 +773,8 @@ This behaviour can be modified using <span class="codepoint"><span lang="km">&#x
     
     
 
-<section id="repetition">
-  <h3><a href="#repetition">Repetition</a></h3>
+<section>
+  <h3 id="repetition">Repetition</h3>
 <p>It is common to repeat words or sometimes phrases in Khmer, particularly to provide emphasis. <span class="codepoint" translate="no"><span lang="km">&#x17D7;</span> [<a href="/scripts/khmer/block#char17D7"><span class="uname">U+17D7 KHMER SIGN LEK TOO</span></a>]</span> (called <span class="charExample" translate="no"><span class="ex" lang="km">លេខទោ</span> <span class="ipa">leːktoː</span></span>) can be used for this, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ខ្លាំង ៗ</span> <span class="ipa">klaŋklaŋ</span> <span class="meaning">very strong</span></span>; <span class="charExample" translate="no"><span class="ex" lang="km">គាត់មានផ្ទះថ្មី ៗ</span> <span class="ipa">kaːtʰ miən pʰteə̯h tʰməitʰməi</span> <span class="meaning">he has a brand new house</span></span>.</p>
         <p>Sometimes this sign repeats a phrase rather than a word, eg. <span class="charExample" translate="no"><span class="ex" lang="km">បន្តិចម្ដង ៗ</span> <span class="ipa">ɓɑntecmɗɑːŋ ɓɑntecmɗɑːŋ</span> <span class="meaning">little by little</span></span>.</p>
         <p>It is also occasionally used to repeat the word at the end of a sentence for the beginning of a new sentence<sup><a href="http://www.pratyeka.org/csw/hlp-csw.pdf">h</a></sup>, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ខ្ញុំទៅផ្ទះខ្ញុំ ។ នៅជិតផ្សារ</span> <span class="ipa">kɲomtɨwpteə̆hkɲom  pteə̆hkɲom nɨwcɨtpsaː</span> <span class="meaning"></span></span>.</p>
@@ -744,8 +784,8 @@ This behaviour can be modified using <span class="codepoint"><span lang="km">&#x
 
 
 
-<section id="continuation">
-  <h3><a href="#continuation">Continuation</a></h3>
+<section>
+  <h3 id="continuation">Continuation</h3>
 <p>The word <span class="charExample" translate="no"><span class="ex" lang="km">។ល។</span></span> (pronounced <span class="ipa">laʔ</span>) is used as the equivalent of 'etc.' A character exists that represents that sequence, <span class="codepoint" translate="no"><span lang="km">&#x17D8;</span> [<a href="/scripts/khmer/block#char17D8"><span class="uname">U+17D8 KHMER SIGN BEYYAL</span></a>]</span>, but the Unicode Standard recommends the use of the three separate characters instead.<sup><a href="http://www.unicode.org/versions/Unicode10.0.0/ch16.pdf#Khmer">u</a></sup></p>
 <p>Other spellings for et cetera also exist. These include:</p>
         <ul>
@@ -754,39 +794,76 @@ This behaviour can be modified using <span class="codepoint"><span lang="km">&#x
           <li><span class="ex" lang="km">–ល–</span></li>
         </ul>
 </section>
+</section>
 
 
 
 
-<section id="linebreak">
-  <h3><a href="#linebreak">Line breaks &amp; hyphenation</a></h3>
-<p><span class="codepoint" translate="no"><span lang="km">&#x002D;</span> [<span class="uname">U+002D HYPHEN-MINUS</span>]</span> is used to indicate when part of a word has been wrapped onto a new line.</p>
+
+
+
+
+<section>
+  <h2 id="linelayout">Line &amp; paragraph layout</h2>
+
+
+<section>
+  <h3 id="text_direction">Text direction</h3>
+  <p>Khmer text runs left to right in horizontal lines.</p>
 </section>
 
 
 
 
 <section>
-<h3>TBD</h3>
-<p class="ednote">Other features to be investigated in this section include: 
-text direction,
-text delimiters,
-emphasis &amp; highlighting,
-text decoration,
-abbreviations &amp; ellipsis,
-glyph controls
-character transforms,
-quotations,
-repetition,
+  <h3 id="linebreak">Line breaks &amp; hyphenation</h3>
+<p><span class="codepoint" translate="no"><span lang="km">&#x002D;</span> [<span class="uname">U+002D HYPHEN-MINUS</span>]</span> is used to indicate when part of a word has been wrapped onto a new line.</p>
+</section>
 
-line breaking,
-hyphenation,
-justification &amp; alignment,
-first-letter styling,
 
-notes &amp; footnotes,
-page layout
-</p>
+
+
+
+
+<section>
+    <h3 id="tbd">TBD</h3>
+<p class="ednote">Further information needed for this section includes:</p>
+<pre style="margin-left: 10%;">
+Glyph shaping &amp; positioning
+    Cursive text
+    Context-based shaping
+    Multiple combining characters
+    Context-based positioning
+    Transforming characters
+
+Structural boundaries &amp; markers
+    Hyphens &amp; dashes
+    Bracketing information
+    Quotations
+    Abbreviations, ellipsis, &amp; repetition
+    Emphasis &amp; highlights
+    Inline notes &amp; annotations
+
+Inline layout
+    Inline text spacing
+    Bidirectional text
+
+Line &amp; paragraph layout
+    Line breaking
+    Hyphenation
+    Text alignment &amp; justification
+    Counters, lists, etc.
+    Styling initials
+    Baselines &amp; inline alignment
+
+Page &amp; book layout
+    General page layout &amp; progression
+    Directional layout features
+	Grids &amp; tables
+    Notes, footnotes, etc.
+    Forms &amp; user interaction
+    Page numbering, running headers, etc.
+</pre>
 </section>
 
 </section>
@@ -794,9 +871,9 @@ page layout
 
 
 
-<section id="refs"> 
+<section> 
 
-<h2><a href="#refs" id="endlinks">References</a></h2>
+<h2 id="#refs">References</h2>
 <ol>
 <li>[ <a href="http://www.pratyeka.org/csw/hlp-csw.pdf"><sup><span class="doctitle">h</span></sup></a> ] Franklin Huffman, <a href="http://www.pratyeka.org/csw/hlp-csw.pdf"><span class="doctitle">Cambodian System of Writing</span></a></li>
 <li>[ <sup><a href="#refs">g</a></sup> ] Richard Gilbert &amp; Sovandy Hang, <span class="doctitle">Cambodian for Beginners</span>, Paiboon Publishing, ISBN <span class="isbn">1-887521-35-6</span></li>
@@ -808,7 +885,7 @@ page layout
 </section>
 <div id="panel" style="display:none"></div>
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/khmer"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-05  9:45<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bkhmer%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fkhmer%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/khmer"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-21  10:11<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bkhmer%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fkhmer%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 <script>
 var base = '/scripts/khmer/block'
