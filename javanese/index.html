@@ -29,6 +29,7 @@
 	}
 [lang=jv] { font-family: 'Tuladha Jejeg WF', 'Tuladha Jejeg', 'Javanese Text', Yogyakarta, Yogya, 'Noto Sans Javanese WF', serif; font-size: 140%; }
 .large { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
+.latin { font-family: gentiumpluswf; }
 </style>
 
 <script src="/shared/code/boilerplate.js"></script>
@@ -173,6 +174,19 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
   
   
+<div id="showTranscriptions">
+<div>Show transcriptions</div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div>
+<label>Latin 
+<input type="checkbox" onChange="toggleTranscription('latin', this.checked)"/></label></div>
+</div>
+
+
+
+
+
 <section>
 <h2 id="chars">Character lists</h2>
     <p>The Javanese script characters in Unicode 10.0 are in a single block: </p>
@@ -218,63 +232,61 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
       <tr>
         <th scope="row">Nglegéna</th>
       <td style="text-align: center; padding: 1em;" class="characterBox">
-<div class="listAll" onClick="listAll(this, 'jv')">list all</div>
+<div class="listAll" onClick="listAll(this, 'jv')">list all 22</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="jv">ꦏ</span><span class="listTrans">k</span><span class="listIPA">ka, kɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦐ</span><span class="listTrans">q</span><span class="listIPA">qa, qɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦒ</span><span class="listTrans">g</span><span class="listIPA">ɡa, gɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦔ</span><span class="listTrans">ng</span><span class="listIPA">ŋa, nɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦕ</span><span class="listTrans">c</span><span class="listIPA">ʧa, ʧɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦗ</span><span class="listTrans">j</span><span class="listIPA">ʤa, ʤɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦚ</span><span class="listTrans">ny</span><span class="listIPA">ɲa, ɲɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦛ</span><span class="listTrans">th</span><span class="listIPA">ʈa, ʈɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦝ</span><span class="listTrans">dh</span><span class="listIPA">ɖa, ɖɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦠ</span><span class="listTrans">t</span><span class="listIPA">ta, tɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦢ</span><span class="listTrans">d</span><span class="listIPA">da, dɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦤ</span><span class="listTrans">n</span><span class="listIPA">na, nɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦥ</span><span class="listTrans">p</span><span class="listIPA">pa, pɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦧ</span><span class="listTrans">b</span><span class="listIPA">ba, bɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦩ</span><span class="listTrans">m</span><span class="listIPA">ma, mɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦪ</span><span class="listTrans">y</span><span class="listIPA">ja, jɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦭ</span><span class="listTrans">l</span><span class="listIPA">la, lɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦫ</span><span class="listTrans">r</span><span class="listIPA">ra, rɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦬ</span><span class="listTrans">r</span><span class="listIPA">ra, rɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦱ</span><span class="listTrans">s</span><span class="listIPA">sa, sɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦮ</span><span class="listTrans">w</span><span class="listIPA">wa, wɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦲ</span><span class="listTrans">h</span><span class="listIPA">h, a, ∅</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦏ</span><span class="listIPA">ka, kɔ</span><span class="listTrans">k</span><span class="latin" style="display:none;">k</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦐ</span><span class="listIPA">qa, qɔ</span><span class="listTrans">q</span><span class="latin" style="display:none;">q</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦒ</span><span class="listIPA">ɡa, gɔ</span><span class="listTrans">g</span><span class="latin" style="display:none;">g</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦔ</span><span class="listIPA">ŋa, nɔ</span><span class="listTrans">ŋ</span><span class="latin" style="display:none;">ng</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦕ</span><span class="listIPA">ʧa, ʧɔ</span><span class="listTrans">ʧ</span><span class="latin" style="display:none;">c</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦗ</span><span class="listIPA">ʤa, ʤɔ</span><span class="listTrans">ʤ</span><span class="latin" style="display:none;">j</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦚ</span><span class="listIPA">ɲa, ɲɔ</span><span class="listTrans">ɲ</span><span class="latin" style="display:none;">ny</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦛ</span><span class="listIPA">ʈa, ʈɔ</span><span class="listTrans">ʈ</span><span class="latin" style="display:none;">th</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦝ</span><span class="listIPA">ɖa, ɖɔ</span><span class="listTrans">ɖ</span><span class="latin" style="display:none;">dh</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦠ</span><span class="listIPA">ta, tɔ</span><span class="listTrans">t</span><span class="latin" style="display:none;">t</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦢ</span><span class="listIPA">da, dɔ</span><span class="listTrans">d</span><span class="latin" style="display:none;">d</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦤ</span><span class="listIPA">na, nɔ</span><span class="listTrans">n</span><span class="latin" style="display:none;">n</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦥ</span><span class="listIPA">pa, pɔ</span><span class="listTrans">p</span><span class="latin" style="display:none;">p</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦧ</span><span class="listIPA">ba, bɔ</span><span class="listTrans">b</span><span class="latin" style="display:none;">b</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦩ</span><span class="listIPA">ma, mɔ</span><span class="listTrans">m</span><span class="latin" style="display:none;">m</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦪ</span><span class="listIPA">ja, jɔ</span><span class="listTrans">y</span><span class="latin" style="display:none;">y</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦭ</span><span class="listIPA">la, lɔ</span><span class="listTrans">l</span><span class="latin" style="display:none;">l</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦫ</span><span class="listIPA">ra, rɔ</span><span class="listTrans">r</span><span class="latin" style="display:none;">r</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦬ</span><span class="listIPA">ra, rɔ</span><span class="listTrans">ṙ</span><span class="latin" style="display:none;">r</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦱ</span><span class="listIPA">sa, sɔ</span><span class="listTrans">s</span><span class="latin" style="display:none;">s</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦮ</span><span class="listIPA">wa, wɔ</span><span class="listTrans">w</span><span class="latin" style="display:none;">w</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦲ</span><span class="listIPA">h, a ∅</span><span class="listTrans">h</span><span class="latin" style="display:none;">h</span></div>
 </div>
-
 </td>
-      </tr>
+</tr>
       <tr>
         <th scope="row">Murda</th>
       <td style="text-align: center; padding: 1em;" class="characterBox">
-<div class="listAll" onClick="listAll(this, 'jv')">list all</div>
+<div class="listAll" onClick="listAll(this, 'jv')">list all 9</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="jv">ꦑ</span><span class="listTrans">K</span><span class="listIPA">ka, kɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦓ</span><span class="listTrans">G</span><span class="listIPA">ɡa, gɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦖ</span><span class="listTrans">C</span><span class="listIPA">ʧa, ʧɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦘ</span><span class="listTrans">NY</span><span class="listIPA">ɲa, ɲɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦡ</span><span class="listTrans">T</span><span class="listIPA">ta, tɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦟ</span><span class="listTrans">N</span><span class="listIPA">na, nɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦦ</span><span class="listTrans">P</span><span class="listIPA">pa, pɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦨ</span><span class="listTrans">B</span><span class="listIPA">ba, bɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦯ</span><span class="listTrans">S</span><span class="listIPA">sa, sɔ</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦑ</span><span class="listIPA">ka, kɔ</span><span class="listTrans">K</span><span class="latin" style="display:none;">K</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦓ</span><span class="listIPA">ɡa, gɔ</span><span class="listTrans">G</span><span class="latin" style="display:none;">G</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦖ</span><span class="listIPA">ʧa, ʧɔ</span><span class="listTrans">C</span><span class="latin" style="display:none;">C</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦘ</span><span class="listIPA">ɲa, ɲɔ</span><span class="listTrans">Ñ</span><span class="latin" style="display:none;">NY</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦡ</span><span class="listIPA">ta, tɔ</span><span class="listTrans">T</span><span class="latin" style="display:none;">T</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦟ</span><span class="listIPA">na, nɔ</span><span class="listTrans">N</span><span class="latin" style="display:none;">N</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦦ</span><span class="listIPA">pa, pɔ</span><span class="listTrans">P</span><span class="latin" style="display:none;">P</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦨ</span><span class="listIPA">ba, bɔ</span><span class="listTrans">B</span><span class="latin" style="display:none;">B</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦯ</span><span class="listIPA">sa, sɔ</span><span class="listTrans">S</span><span class="latin" style="display:none;">S</span></div>
 </div>
-
 </td>
       </tr>
       <tr>
         <th scope="row">Mahaprana</th>
         <td style="text-align: center; padding: 1em;" class="characterBox">
 
-<div class="listAll" onClick="listAll(this, 'jv')">list all</div>
+<div class="listAll" onClick="listAll(this, 'jv')">list all 5</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="jv">ꦰ</span><span class="listTrans">S</span><span class="listIPA">sa, sɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦣ</span><span class="listTrans">D</span><span class="listIPA">da, dɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦞ</span><span class="listTrans">DH</span><span class="listIPA">ɖa, ɖɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦙ</span><span class="listTrans">J</span><span class="listIPA">ʤa, ʤɔ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦜ</span><span class="listTrans">TH</span><span class="listIPA">ʈa, ʈɔ</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦰ</span><span class="listIPA">sa, sɔ</span><span class="listTrans">S̱</span><span class="latin" style="display:none;">S</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦣ</span><span class="listIPA">da, dɔ</span><span class="listTrans">Ḏ</span><span class="latin" style="display:none;">D</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦞ</span><span class="listIPA">ɖa, ɖɔ</span><span class="listTrans">Ḓ</span><span class="latin" style="display:none;">DH</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦙ</span><span class="listIPA">ʤa, ʤɔ</span><span class="listTrans">J̱</span><span class="latin" style="display:none;">J</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦜ</span><span class="listIPA">ʈa, ʈɔ</span><span class="listTrans">Ṯ</span><span class="latin" style="display:none;">TH</span></div>
 </div>
 
 </td>
@@ -283,12 +295,13 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
         <th scope="row">Vocalic</th>
       <td style="text-align: center; padding: 1em;" class="characterBox">
 
-<div class="listAll" onClick="listAll(this, 'jv')">list all</div>
+<div class="listAll" onClick="listAll(this, 'jv')">list all 3</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="jv">ꦉ</span><span class="listTrans">re</span><span class="listIPA">rə</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦊ</span><span class="listTrans">le</span><span class="listIPA">lə</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦋ</span><span class="listTrans">leu</span><span class="listIPA">lɤ</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦉ</span><span class="listIPA">rə</span><span class="listTrans">r̥</span><span class="latin" style="display:none;">re</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦊ</span><span class="listIPA">lə</span><span class="listTrans">l̥</span><span class="latin" style="display:none;">le</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦋ</span><span class="listIPA">lɤ</span><span class="listTrans">ŀ̥</span><span class="latin" style="display:none;">leu</span></div>
 </div>
+
 
 </td>
       </tr>
@@ -327,15 +340,16 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
     <h3 id="medials">Medial (wyanjana) consonants</h3>
     
     <p>Three combining characters  represent medial consonants.</p>
-    
-    <figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'jv')">list all</div>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'jv')">list all 3</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="jv">ꦽ</span><span class="listTrans">re</span><span class="listIPA">rə</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦾ</span><span class="listTrans">y</span><span class="listIPA">j</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦿ.</span><span class="listTrans">r</span><span class="listIPA">r</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦾ</span><span class="listIPA">j</span><span class="listTrans">y̆</span><span class="latin" style="display:none;">y</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦿ</span><span class="listIPA">r</span><span class="listTrans">r̆</span><span class="latin" style="display:none;">r</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦽ</span><span class="listIPA">rə</span><span class="listTrans">r̥̆</span><span class="latin" style="display:none;">re</span></div>
 </div>
 </figure>
+
+
 
   <p>These indicate that the consonant doesn't start a new syllable, eg. <span class="charExample"><span class="ex" lang="jv">ꦥꦿꦩꦸꦏ</span> <span class="trans">pramuka</span> <span class="meaning">scout</span></span>,  <span class="charExample"><span class="ex" lang="jv">ꦏꦾꦲꦶꦏꦤ꧀ꦗꦼꦁ</span> <span class="trans">kyai kanjeng</span></span>, <span class="charExample"><span class="ex" lang="jv">ꦕꦕꦶꦁꦏꦽꦩꦶ</span> <span class="trans">cacing kremi</span></span>.</p>
   </section>
@@ -346,16 +360,16 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   <section>
     <h3 id="finals">Word-final (seisigeg) diacritics</h3>
     <p>Four syllable-final consonant sounds  are represented using combining characters.</p>
-
 <figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'jv')">list all</div>
+<div class="listAll" onClick="listAll(this, 'jv')">list all 4</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="jv">ꦀ</span><span class="listTrans">m</span><span class="listIPA">m</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦁ</span><span class="listTrans">n</span><span class="listIPA">ŋ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦂ</span><span class="listTrans">r</span><span class="listIPA">r</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦃ</span><span class="listTrans">h</span><span class="listIPA">h</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦀ</span><span class="listIPA">m</span><span class="listTrans">m̽</span><span class="latin" style="display:none;">m</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦁ</span><span class="listIPA">ŋ</span><span class="listTrans">ŋ̽</span><span class="latin" style="display:none;">ng</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦂ</span><span class="listIPA">r</span><span class="listTrans">r̽</span><span class="latin" style="display:none;">r</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦃ</span><span class="listIPA">h</span><span class="listTrans">h̽</span><span class="latin" style="display:none;">h</span></div>
 </div>
 </figure>
+
 
 <p>Examples: <span class="charExample"><span class="ex" lang="jv">ꦱꦼꦏꦺꦴꦭꦃ</span> <span class="trans">sekolah</span> <span class="meaning">school</span></span>, <span class="charExample"><span class="ex" lang="jv">ꦥꦼꦫꦲꦸꦭꦪꦂ</span> <span class="trans">perahu layar</span> <span class="meaning">sailboat</span></span>, <span class="charExample"><span class="ex" lang="jv">ꦥꦼꦠꦼꦁ</span> <span class="trans">peteng</span> <span class="meaning">dark</span></span>.</p>
   </section>
@@ -397,19 +411,18 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
  
     <p>To produce a different vowel than the inherent one, Javanese uses a combining character called a vowel-sign after the base consonant. This may involve more than one character,  but is always combining, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦏꦶ</span> <span class="trans">ki</span></span>, and is always typed and stored after the preceding consonant.</p>
 <p>The Javanese block has 9 combining characters used as vowel-signs.</p>
-    
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'jv')">list all</div>
+    <figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'jv')">list all 9</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="jv">ꦴ</span><span class="listTrans">a</span><span class="listIPA">aː</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦶ</span><span class="listTrans">i</span><span class="listIPA">i</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦸ</span><span class="listTrans">u</span><span class="listIPA">u</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦺ</span><span class="listTrans">e</span><span class="listIPA">e</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦼ</span><span class="listTrans">e</span><span class="listIPA">ə</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦵ</span><span class="listTrans">o</span><span class="listIPA">o</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦷ</span><span class="listTrans">i</span><span class="listIPA"></span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦹ</span><span class="listTrans">u</span><span class="listIPA"></span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦻ</span><span class="listTrans">ai</span><span class="listIPA"></span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦴ</span><span class="listIPA">aː</span><span class="listTrans">ː</span><span class="latin" style="display:none;">a</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦶ</span><span class="listIPA">i</span><span class="listTrans">i</span><span class="latin" style="display:none;">i</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦸ</span><span class="listIPA">u</span><span class="listTrans">u</span><span class="latin" style="display:none;">u</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦺ</span><span class="listIPA">e</span><span class="listTrans">e</span><span class="latin" style="display:none;">e</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦼ</span><span class="listIPA">ə</span><span class="listTrans">ə</span><span class="latin" style="display:none;">e</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦵ</span><span class="listIPA">o</span><span class="listTrans">ȯ</span><span class="latin" style="display:none;">o</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦷ</span><span>&nbsp;</span><span class="listTrans">ī</span><span class="latin" style="display:none;">i</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦹ</span><span>&nbsp;</span><span class="listTrans">ū</span><span class="latin" style="display:none;">u</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦻ</span><span>&nbsp;</span><span class="listTrans">aʲ</span><span class="latin" style="display:none;">ai</span></div>
 </div>
 </figure>
 
@@ -458,18 +471,17 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <p>The normal way to represent independent vowels in Javanese is to combine a vowel sign with <span class="codepoint"><span lang="jv">&#xA9B2;</span> <a href="/scripts/javanese/block#charA9B2">[<span class="uname">U+A9B2 JAVANESE LETTER HA</span>]</a></span>, eg. <span class="charExample"><span class="ex" lang="jv">ꦲꦪꦸ</span> <span class="trans">ayu</span> <span class="meaning">graceful</span></span>. </p>
 <p>The independent vowel <em>letters</em> are used in Javanese to distinguish proper nouns or foreign words from ordinary words, eg.  compare <span class="charExample"><span class="ex" lang="jv">ꦄꦪꦸ</span> <span class="trans">Ayu</span></span>, a personal name, with the previous example.<sup><a href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></sup></p>
       <p>There are 8 independent vowel letters. </p>
-      
-      <figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'jv')">list all</div>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'jv')">list all 8</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="jv">ꦄ</span><span class="listTrans">a</span><span class="listIPA">a</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦆ</span><span class="listTrans">i</span><span class="listIPA">i</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦇ</span><span class="listTrans">i</span><span class="listIPA">i</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦅ</span><span class="listTrans">i</span><span class="listIPA">i</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦈ</span><span class="listTrans">u</span><span class="listIPA">u</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦌ</span><span class="listTrans">e</span><span class="listIPA">e, ɛ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦍ</span><span class="listTrans">e</span><span class="listIPA"></span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꦎ</span><span class="listTrans">o</span><span class="listIPA">o</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦄ</span><span class="listIPA">a</span><span class="listTrans">ạ</span><span class="latin" style="display:none;">a</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦆ</span><span class="listIPA">i</span><span class="listTrans">ị</span><span class="latin" style="display:none;">i</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦇ</span><span class="listIPA">i</span><span class="listTrans">ị̄</span><span class="latin" style="display:none;">i</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦅ</span><span class="listIPA">i</span><span class="listTrans">ị̂</span><span class="latin" style="display:none;">i</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦈ</span><span class="listIPA">u</span><span class="listTrans">ụ</span><span class="latin" style="display:none;">u</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦌ</span><span class="listIPA">e, ɛ</span><span class="listTrans">ẹ</span><span class="latin" style="display:none;">e</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦍ</span><span>&nbsp;</span><span>&nbsp;</span><span class="latin" style="display:none;">e</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꦎ</span><span class="listIPA">o</span><span class="listTrans">ọ</span><span class="latin" style="display:none;">o</span></div>
 </div>
 </figure>
 
@@ -530,14 +542,14 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <p>The Javanese block contains 18 combining characters, of which 3 are medial consonants, 4 final consonants, and 9 vowel signs.</p>
 <p>The other two are the pangkon, which works like a virama, and the cecak telu, which is used to create non-javanese sounds.</p>
-
 <figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'jv')">list all</div>
+<div class="listAll" onClick="listAll(this, 'jv')">list all 2</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="jv">꧀</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꦳</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧀</span><span class="listTrans">͓</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꦳</span><span class="listTrans">ˑ</span></div>
 </div>
 </figure>
+
 <p>All of these are described above.</p>
 </section>
  
@@ -550,24 +562,24 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <h2 id="punctuation">Punctuation</h2>
 <p>The Javanese block contains 15 punctuation marks. They are all described in the <a href="#layout">Text layout</a> section.</p>
 <figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'jv')">list all</div>
+<div class="listAll" onClick="listAll(this, 'jv')">list all 16</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="jv">꧊</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꧋</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꧌</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꧍</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꧈</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꧉</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꧇</span></div>
-<div class="listPair"><span class="listItem" lang="jv">ꧏ</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꧁</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꧂</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꧅</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꧄</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꧃</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꧞</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꧟</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꧆</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧊</span><span class="listTrans">|</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧋</span><span class="listTrans">¶</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧌</span><span class="listTrans">(</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧍</span><span class="listTrans">)</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧈</span><span class="listTrans">,</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧉</span><span class="listTrans">.</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧇</span><span class="listTrans">:</span></div>
+<div class="listPair"><span class="listItem" lang="jv">ꧏ</span><span class="listTrans">²</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧁</span><span class="listTrans"><ᵗ</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧂</span><span class="listTrans">ᵗ></span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧅</span><span class="listTrans"><ʰ</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧄</span><span class="listTrans">[ʰ</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧃</span><span class="listTrans">{ʰ</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧞</span><span>&nbsp;</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧟</span><span>&nbsp;</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧆</span><span class="listTrans">°</span></div>
 </div>
 </figure>
 </section>
@@ -584,20 +596,19 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
     <h3 id="digits">Digits</h3>
 
     <p>Javanese uses native digits, which are decimal-based and used in the same way as European numerals.</p>
-    
-    <figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'jv')">list all</div>
+<figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'jv')">list all 10</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="jv">꧐</span><span class="listTrans">0</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꧑</span><span class="listTrans">1</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꧒</span><span class="listTrans">2</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꧓</span><span class="listTrans">3</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꧔</span><span class="listTrans">4</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꧕</span><span class="listTrans">5</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꧖</span><span class="listTrans">6</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꧗</span><span class="listTrans">7</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꧘</span><span class="listTrans">8</span></div>
-<div class="listPair"><span class="listItem" lang="jv">꧙</span><span class="listTrans">9</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧐</span><span class="listTrans">0</span><span class="latin" style="display:none;">0</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧑</span><span class="listTrans">1</span><span class="latin" style="display:none;">1</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧒</span><span class="listTrans">2</span><span class="latin" style="display:none;">2</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧓</span><span class="listTrans">3</span><span class="latin" style="display:none;">3</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧔</span><span class="listTrans">4</span><span class="latin" style="display:none;">4</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧕</span><span class="listTrans">5</span><span class="latin" style="display:none;">5</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧖</span><span class="listTrans">6</span><span class="latin" style="display:none;">6</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧗</span><span class="listTrans">7</span><span class="latin" style="display:none;">7</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧘</span><span class="listTrans">8</span><span class="latin" style="display:none;">8</span></div>
+<div class="listPair"><span class="listItem" lang="jv">꧙</span><span class="listTrans">9</span><span class="latin" style="display:none;">9</span></div>
 </div>
 </figure>
 
@@ -864,7 +875,7 @@ Page &amp; book layout
 
 
 <div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/javanese"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-01-22  5:50<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2019-01-22  6:28<!-- #EndDate --> 
   </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bjavanese%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fjavanese%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 <div id="panel" style="display:none"></div>
