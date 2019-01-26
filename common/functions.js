@@ -1,3 +1,13 @@
+
+function initialiseSummary (base, lang, tableName) {
+    window.base = base
+    makeTables(lang)
+    initialiseShowNames(base, 'c')
+    document.getElementById('featureTableBody').innerHTML = makeSidePanel(tableName,"")
+    createtoc(3)
+    }
+
+
 var featureName = { 
 	type:"Script type", 
 	chars:"Number of characters", 
@@ -57,6 +67,97 @@ function makeSidePanel (script, otherlinks) {
 	return out
 	}
 	
+
+
+function makeTables (lang) {
+    // create the lists of characters in yellow boxes
+
+    if (typeof window.spreadsheet == 'undefined') return
+    
+    // make an object from the spreadsheet
+    var temp = window.spreadsheet.split('\n')
+    window.spreadsheetRows = {}
+    for (var x=0; x<temp.length; x++) {
+        if (temp[x].trim() == '') continue
+        var items = temp[x].split('\t')
+        if (items[0] === '') continue
+
+        window.spreadsheetRows[items[0]] = ['0']
+        for (let i=1;i<items.length;i++) window.spreadsheetRows[items[0]].push(items[i])
+        }
+    console.log(spreadsheetRows)
+
+
+    var tables, node, chars, info, bicameral, out, char
+    
+    tables = document.querySelectorAll('.auto')
+console.log(tables.length)
+    for (let t=0;t<tables.length;t++) {
+        node = tables[t]
+        console.log(node)
+
+        //chars = node.dataset.chars.split('␣')
+        chars = node.textContent.split('␣')
+        info = node.dataset.cols
+        if (node.className.includes('bicameral')) bicameral = true
+        else bicameral = false
+        out = ''
+
+        if (chars.length > 1) {
+            out += '<div class="listAll" onClick="listAll(this, \''+lang+'\')">list '
+            if (chars.length === 2) out += 'both'
+            else out += 'all '+chars.length
+            out += '</div>'
+            }
+
+        out += '<div class="listArray">'
+
+        for (let i=0;i<chars.length;i++) {
+            if (bicameral) char = chars[i][chars[i].length-1]
+            else char = chars[i]
+            
+            out += '<div class="listPair"><span class="listItem" lang="'+lang+'">'+chars[i]+'</span>'
+
+            // print the code point values
+            out += '<span class="listUnum">'
+            for (let z=0;z<chars[i].length;z++) {
+                var hex = chars[i].codePointAt(z)
+                hex = hex.toString(16).toUpperCase()
+                while (hex.length < 4) hex = '0'+hex
+                out += hex
+                if (chars.length>1 && z<chars.length-1) out += '<br/>'
+                }
+                out += '</span>'
+
+            if (info.includes('ipa')) {
+                if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.ipaLoc]) ch = window.spreadsheetRows[char][cols.ipaLoc]
+                else ch = '&nbsp;'
+                if (ch === '&nbsp;') out += '<span>&nbsp;</span>'
+                else out += '<span class="listIPA">'+ch+'</span>'
+                }
+
+            if (info.includes('trans')) {
+                if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.transLoc]) ch = window.spreadsheetRows[char][cols.transLoc]
+                else ch = '&nbsp;'
+                out += '<span class="listTrans">'+ch+'</span>'
+                }
+
+            if (info.includes('transc')) {
+                if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.transcription]) ch = window.spreadsheetRows[char][cols.transcription]
+                else ch = '&nbsp;'
+                out += '<span class="listTransc">'+ch+'</span>'
+                }
+
+            out += '</div>'
+            }
+        out += '</div>'
+
+        node.innerHTML = out
+        }
+    }
+
+
+
 
 
 
@@ -137,6 +238,8 @@ function initialiseShowNames (base, target) {
 // function will display character by character names for example in the panel
 // base (string), path for link to character detail
 
+// this extends the function in show_codepoints.js to add support for listItems
+
 	// check whether the calling page has set a base and target window
 	if(typeof base === 'undefined') { base = ''; }
 	if(typeof target === 'undefined') { target = ''; } 
@@ -149,6 +252,7 @@ function initialiseShowNames (base, target) {
 		else { shownames_setOnclick(examples[e], base, target) }
 		}
 	
+    // this is the new stuff
 	var listItems = document.querySelectorAll(".listItem")
 	for (let i=0;i<listItems.length;i++) listItems[i].addEventListener('click', showNameDetailsEvent)
 	
@@ -161,11 +265,8 @@ function showNameDetailsEvent (evt) {
 	// base is set at the bottom of the source page
 	showNameDetails(evt.target.textContent, evt.target.lang, window.base, 'c', document.getElementById('panel'), 'list' )
 	}
-//	document.querySelector("#myButton").addEventListener('click', callbackFunctionName)
-	
-//	function callbackFunctionName (evt) { console.log("Button clicked!") }
 
-
+/*
 function shownames_setImgOnclick ( node, base, target ) {
 	node.onclick = function(){ showNameDetails(node.alt, node.lang, base, target, document.getElementById('panel') ) }
 	}
@@ -181,7 +282,7 @@ function getLanguage(node) {
 	else if(node.parentNode) return getLanguage(node.parentNode)
 	else return ''
 	}
-
+*/
 
 function showtext (sourceName) {
 	// when text is highlighted in the freeText area, display the character list
@@ -251,6 +352,24 @@ function toggleTranscription (type, show) {
 }
 
 //<div class="listPair"><span class="listItem" lang="ber">ⵓ</span><span class="listTrans">u</span><span class="listIPA">ʊ</span></div>
+
+
+function setGeneralFont (fontname, size, language) {
+	if (language === '') return
+	var langtags = language.split(',')
+	var searchstr = ''
+	if (langtags.length === 1) searchstr = '*[lang ="'+language+'"]'
+	else {
+		searchstr = '*[lang ="'+langtags[0]+'"]'
+		for (var i=1;i<langtags.length;i++) searchstr += ',*[lang ="'+langtags[i]+'"]'
+		}
+	console.log(searchstr)
+	var examples = document.querySelectorAll(searchstr)
+	for (var e=0;e<examples.length;e++) {  
+		examples[e].style.fontFamily = fontname
+		examples[e].style.fontSize = size
+		}
+	}
 
 
 
