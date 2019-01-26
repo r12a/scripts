@@ -5,7 +5,7 @@ var scriptData = [
 
 { script:"Armenian", type:"alpha", chars:91, cchars:0, cs:"yes", gpos:"no", mcchars:"no", matras: "no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"yes", justify:"space", digits:"no", region:"M East", linked:"armenian" },
 
-{ script:"Balinese", type:"abugida", chars:121, cchars:31, cs:"no", gpos:"yes", mcchars:"no", matras: "yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"no", baseline:"mid", wrap:"syllable", hyphenation:"no", justify:"?", digits:"yes", region:"Asia SE", linked:"balinese" },
+{ script:"Balinese", type:"abugida", chars:121, cchars:31, cs:"no", gpos:"yes", mcchars:"yes", matras: "yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"no", baseline:"mid", wrap:"syllable", hyphenation:"yes", justify:"none", digits:"yes", region:"Asia SE", linked:"balinese" },
 
 { script:"Bengali", type:"abugida", chars:95, cchars:19, cs:"no", gpos:"yes", mcchars:"yes", matras: "yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"high", wrap:"word", hyphenation:"yes?", justify:"space", digits:"yes", region:"Asia S", linked:"bengali" },
 
