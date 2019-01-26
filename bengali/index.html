@@ -33,6 +33,7 @@ font-size: 1.1em;
 font-weight: 300; }
 </style>
 
+<script src="db.js"> </script>
 <script src="/shared/code/boilerplate.js"></script>
 <script src="/shared/code/toc_2019.js"></script>
 <script src="/shared/code/all-names.js"></script>
@@ -41,7 +42,6 @@ font-weight: 300; }
 <script src="/shared/fontlists/manage.js"></script>
 <script src="/shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
-<script src="../common/block-functions.js"></script>
 <script src="/shared/code/getLinks.js"></script>
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
@@ -108,7 +108,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->19 January, 2019<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->26 January, 2019<!-- #EndDate -->
 &bull; tags <a href="http://r12a.github.io/blog/index.php?tag=bengali" title="Show all blog posts tagged with 'bengali'">bengali</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
@@ -175,10 +175,11 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
   
 <div id="showTranscriptions">
-<div>Show transcriptions</div>
+<div>In yellow boxes, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
 <div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
-<div><label>ISO 15919 <input type="checkbox" onChange="toggleTranscription('iso15919', this.checked)"/></label></div>
+<div><label>ISO 15919 <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
 </div>
 
 
@@ -198,134 +199,6 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </ul>
 <p>For character-specific details see <a class="linkHighlight" href="/scripts/bengali/block">Bengali character notes</a>.</p>
 </section>
-
-
-
-
-<section>
-<h2 id="consonants">Consonants</h2>
-
-
-
-<section>
-<h3 id="basicconsonants">Basic consonants</h3>
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'bn')">list all 32</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="bn">ক</span><span class="listIPA">k</span><span class="listTrans">k</span><span class="iso15919" style="display:none;">k</span></div>
-<div class="listPair"><span class="listItem" lang="bn">খ</span><span class="listIPA">kʰ</span><span class="listTrans">kʰ</span><span class="iso15919" style="display:none;">kh</span></div>
-<div class="listPair"><span class="listItem" lang="bn">গ</span><span class="listIPA">g</span><span class="listTrans">g</span><span class="iso15919" style="display:none;">g</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঘ</span><span class="listIPA">gʰ</span><span class="listTrans">gʰ</span><span class="iso15919" style="display:none;">gh</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঙ</span><span class="listIPA">ŋ, ŋg</span><span class="listTrans">ŋ</span><span class="iso15919" style="display:none;">ṅ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">চ</span><span class="listIPA">c</span><span class="listTrans">c</span><span class="iso15919" style="display:none;">c</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ছ</span><span class="listIPA">cʰ</span><span class="listTrans">cʰ</span><span class="iso15919" style="display:none;">ch</span></div>
-<div class="listPair"><span class="listItem" lang="bn">জ</span><span class="listIPA">ʤ</span><span class="listTrans">ʤ</span><span class="iso15919" style="display:none;">j</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঝ</span><span class="listIPA">ʤʰ</span><span class="listTrans">ʤʰ</span><span class="iso15919" style="display:none;">jh</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঞ</span><span class="listIPA">n</span><span class="listTrans">ñ</span><span class="iso15919" style="display:none;">ñ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ট</span><span class="listIPA">ʈ</span><span class="listTrans">ʈ</span><span class="iso15919" style="display:none;">ṭ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঠ</span><span class="listIPA">ʈʰ</span><span class="listTrans">ʈʰ</span><span class="iso15919" style="display:none;">ṭh</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ড</span><span class="listIPA">ɖ</span><span class="listTrans">ɖ</span><span class="iso15919" style="display:none;">ḍ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঢ</span><span class="listIPA">ɖʰ</span><span class="listTrans">ɖʰ</span><span class="iso15919" style="display:none;">ḍh</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ণ</span><span class="listIPA">n</span><span class="listTrans">n̈</span><span class="iso15919" style="display:none;">ṇ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ত</span><span class="listIPA">t</span><span class="listTrans">t</span><span class="iso15919" style="display:none;">t</span></div>
-<div class="listPair"><span class="listItem" lang="bn">থ</span><span class="listIPA">tʰ</span><span class="listTrans">tʰ</span><span class="iso15919" style="display:none;">th</span></div>
-<div class="listPair"><span class="listItem" lang="bn">দ</span><span class="listIPA">d</span><span class="listTrans">d</span><span class="iso15919" style="display:none;">d</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ধ</span><span class="listIPA">dʰ</span><span class="listTrans">dʰ</span><span class="iso15919" style="display:none;">dh</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ন</span><span class="listIPA">n</span><span class="listTrans">n</span><span class="iso15919" style="display:none;">n</span></div>
-<div class="listPair"><span class="listItem" lang="bn">প</span><span class="listIPA">p</span><span class="listTrans">p</span><span class="iso15919" style="display:none;">p</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ফ</span><span class="listIPA">pf, pʰ f</span><span class="listTrans">pʰ</span><span class="iso15919" style="display:none;">ph</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ব</span><span class="listIPA">b, ∅-</span><span class="listTrans">b</span><span class="iso15919" style="display:none;">b</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ভ</span><span class="listIPA">bʰ</span><span class="listTrans">bʰ</span><span class="iso15919" style="display:none;">bh</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ম</span><span class="listIPA">m</span><span class="listTrans">m</span><span class="iso15919" style="display:none;">m</span></div>
-<div class="listPair"><span class="listItem" lang="bn">য</span><span class="listIPA">ʤ-, -æ/-e</span><span class="listTrans">ý</span><span class="iso15919" style="display:none;">y</span></div>
-<div class="listPair"><span class="listItem" lang="bn">র</span><span class="listIPA">r</span><span class="listTrans">r</span><span class="iso15919" style="display:none;">r</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ল</span><span class="listIPA">l</span><span class="listTrans">l</span><span class="iso15919" style="display:none;">l</span></div>
-<div class="listPair"><span class="listItem" lang="bn">শ</span><span class="listIPA">ʃ, s</span><span class="listTrans">ʃ</span><span class="iso15919" style="display:none;">ś</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ষ</span><span class="listIPA">ʃ</span><span class="listTrans">ʃ̇</span><span class="iso15919" style="display:none;">ṣ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">স</span><span class="listIPA">ʃ, s</span><span class="listTrans">ʃ̈</span><span class="iso15919" style="display:none;">s</span></div>
-<div class="listPair"><span class="listItem" lang="bn">হ</span><span class="listIPA">h</span><span class="listTrans">h</span><span class="iso15919" style="display:none;">h</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ৰ</span><span class="listIPA">ɹ</span><span class="listTrans">ɹ</span><span class="iso15919" style="display:none;">r</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ৱ</span><span class="listIPA">w β</span><span class="listTrans">v</span><span class="iso15919" style="display:none;">v</span></div>
-</div>
-</figure>
-
-<p>The last two characters in the list above are specifically for Assamese.</p>
-<p>The consonant cluster <span class="ex" lang="bn" >ক্ষ</span> <span class="trans">k͓ʃ̇</span> is called <span class="name">khiyɔ</span> and is often treated as a letter of the alphabet in that some dictionaries give it it's own section, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ক্ষুদ্র</span> <span class="trans">k͓ʃ̇ud͓r</span> <span class="ipa">kʰudro</span> <span class="meaning">small</span></span>.</p>
-</section>
-
-
-
-
-<section>
-<h3 id="nukta">Consonants with nukta</h3>
-        
-  <p><span class="codepoint" translate="no"><span lang="hi">&#x093C;</span> [<a href="devanagari#char093C"><span class="uname">U+093C DEVANAGARI SIGN NUKTA</span></a>]</span> is used to create 3 additional letters, eg. the dot changes <span class="charExample" translate="no"><span class="ex" lang="bn">ড</span> <span class="ipa">ɖ</span></span> to <span class="charExample" translate="no"><span class="ex" lang="bn">ড়</span> <span class="ipa">ɽ</span></span>. The Unicode block contains precomposed code points for the following.</p>
-  
-
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'bn')">list all 3</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="bn">&#x09DC;</span><span class="listIPA">ɽ</span><span class="listTrans">ɽ</span><span class="iso15919" style="display:none;">ɽ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">&#x09DD;</span><span class="listIPA">ɽ</span><span class="listTrans">ɽ̇</span><span class="iso15919" style="display:none;">ɽ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">&#x09DF;</span><span class="listIPA">j, e, w</span><span class="listTrans">ẏ</span><span class="iso15919" style="display:none;">ẏ</span></div>
-</div>
-</figure>
-
-
-
-<p>These code points all decompose to a basic consonant plus <span class="name">nukta</span> and aren't recomposed by Unicode normalisation form C. The Unicode Standard recommends that content authors use decomposed sequences for these letters, ie.</p>
-
-<figure>
-<div class="listAll" onClick="listAll(this, 'bn')">list all 3</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="bn">ড়</span><span class="listIPA">ɽ</span><span class="listTrans">ɖˑ</span><span class="iso15919" style="display:none;">ɽ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঢ়</span><span class="listIPA">ɽ</span><span class="listTrans">ɖʰˑ</span><span class="iso15919" style="display:none;">ɽ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">য়</span><span class="listIPA">j, e, w</span><span class="listTrans">ýˑ</span><span class="iso15919" style="display:none;">ẏ</span></div>
-</div>
-</figure>
-
-
-
-
-<p>The <span class="name">nukta</span> should always be typed and stored immediately after the consonant it modifies, and before any combining vowels or diacritics.</p>
-</section>
-
-  
-
-
-
-
-<section>
-<h3 id="finals">Final consonants</h3>
-
-<p>One letter and 2 diacritics represent syllable-final consonant sounds.</p>
-
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'bn')">list all 3</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="bn">ৎ</span><span class="listIPA">t</span><span class="listTrans">t̽</span><span class="iso15919" style="display:none;">ṯ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ং</span><span class="listIPA">ŋ</span><span class="listTrans">ŋ̽</span><span class="iso15919" style="display:none;">ṁ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঃ</span><span class="listIPA">ɦ</span><span class="listTrans">h̽</span><span class="iso15919" style="display:none;">ḥ</span></div>
-</div>
-</figure>
-
-
-        <p><span class="codepoint" translate="no"><span lang="bn">&#x09CE;</span> [<a href="/scripts/bengali/block#char09CE"><span class="uname">U+09CE BENGALI LETTER KHANDA TA</span></a>]</span> is a variant form of <span class="codepoint" translate="no"><span lang="bn">&#x09A4;</span> [<a href="/scripts/bengali/block#char09A4"><span class="uname">U+09A4 BENGALI LETTER TA</span></a>]</span> that was added to Unicode 4.1 as a separate character. In some words a <span class="name">tɔ</span> that has no following inherent or other vowel may have this shape. It either comes at the end of words, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">হঠাৎ</span> <span class="trans">hʈʰɑt̽</span> <span class="ipa">hɔʈʰɑt</span> <span class="meaning">suddenly</span></span>, or before a consonant that doesn't naturally combine with <span class="name">tɔ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">উৎসব</span> <span class="trans">ụt̽ʃ̈b</span> <span class="ipa">utʃɔb</span> <span class="meaning">festival</span></span> or <span class="charExample" translate="no"><span class="ex" lang="bn">সৎমা</span> <span class="trans">ʃ̈t̽mɑ</span> <span class="ipa">ʃɔtmɑ</span> <span class="meaning">step-mother</span></span>. Many such words, however, use <span class="ex" lang="bn">ত</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">সদাত্মা</span> <span class="trans">ʃ̈dɑt͓mɑ</span> <span class="ipa">ʃadɑtːɑ</span></span>. It's not possible to say which will be used.</p>
-<p><span class="codepoint" translate="no"><span lang="bn">&#x0982;</span> [<a href="/scripts/bengali/block#char0982"><span class="uname">U+0982 BENGALI SIGN ANUSVARA</span></a>]</span> is a final nasal, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বাংলা</span> <span class="trans">bɑŋ̽lɑ</span> <span class="ipa">bɑŋlɑ</span> <span class="meaning">Bengali (language)</span></span>.</p>
-        <p>Sometimes spelling is inconsistent, especially when this or <span class="codepoint" translate="no"><span lang="bn">&#x0999;</span> [<a href="/scripts/bengali/block#char0999"><span class="uname">U+0999 BENGALI LETTER NGA</span></a>]</span> are used in a conjunct, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">সাঙঘাতিক</span> <span class="trans">ʃ̈ɑŋgʰɑtik</span></span> or <span class="charExample" translate="no"><span class="ex" lang="bn">সাংঘাতিক</span> <span class="trans">ʃ̈ɑŋ̽gʰɑtik</span> <span class="ipa">ʃ̈ɑŋgʰɑtik</span> <span class="meaning">terrible</span></span>; <span class="charExample" translate="no"><span class="ex" lang="bn">রঙ</span> <span class="trans">rŋ</span></span> or <span class="charExample" translate="no"><span class="ex" lang="bn">রং</span> <span class="trans">rŋ̽</span> <span class="ipa">rɔŋ</span> <span class="meaning">colour</span></span>. However, in certain words the spelling is fixed. <span class="charExample" translate="no"><span class="ex" lang="bn">বাংলা</span></span> is one such word.  But, since this cannot support vowel signs, the word for Bengali nation (rather than language) has to be spelled with <span class="codepoint" translate="no"><span lang="bn">&#x0999;</span> [<a href="/scripts/bengali/block#char0999"><span class="uname">U+0999 BENGALI LETTER NGA</span></a>]</span>, ie. <span class="charExample" translate="no"><span class="ex" lang="bn">বাঙালী</span> <span class="trans">bɑŋɑlī</span> <span class="ipa">bɑŋgɑlī</span></span>.</p>
-<p><span class="codepoint" translate="no"><span lang="bn">&#x0983;</span> [<a href="/scripts/bengali/block#char0983"><span class="uname">U+0983 BENGALI SIGN VISARGA</span></a>]</span> has two different effects:</p>
-        <ul>
-<li>Producing vigorous final aspiration, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বাঃ</span> <span class="trans">bɑh̽</span> <span class="ipa">bɑːɦ</span> <span class="meaning">left</span></span>.</li>
-<li>Lengthening the following consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">নিঃশব্দ</span> <span class="trans">nih̽ʃb͓d</span> <span class="ipa">niʃʃɔbdo</span> <span class="meaning">silence</span></span>.  There is no aspiration.</li>
-</ul>
-        <p>The only common colloquial words containing this sign are <span class="charExample" translate="no"><span class="ex" lang="bn">বাঃ</span> <span class="trans">bɑh̽</span> <span class="ipa">bɑːɦ</span> <span class="meaning">left</span></span> and <span class="charExample" translate="no"><span class="ex" lang="bn">দুঃখ</span> <span class="trans">duh̽kʰ</span> <span class="ipa">dukkʰo</span> <span class="meaning">sorrow</span></span>.</p>
-        <p>In the sequence of characters, these should all occur after any combining vowel sign associated with the same syllable. None carry vowel signs.</p>
-
-<p>See also the candrabindu diacritic, which nasalises a vowel.</p>
-</section>
-
-</section>
-
 
 
 
@@ -354,7 +227,19 @@ two, when influenced by surrounding sounds.) Bengalis are not always aware of th
 <p>The pronunciation tends to be <span class="ipa">o</span> when followed by a one of <span class="ipa">i, j, u, w</span> either immediately or in the next syllable, but <span class="ipa">ɔ</span> otherwise. <sup><a href="#refs">d400</a></sup></p>
 </li>
 			</ul>
-			<p>The inherent vowel is pronounced at the end of some words and not others, eg. <span class="ex" lang="bn">গরম</span> <span class="trans">gɔrôm</span>, <span class="meaning">hot</span> vs. <span class="ex" lang="bn">গড়ান</span> <span class="trans">gɔɽɑnô</span>, <span class="meaning">to roll </span>. There is no real way to tell when it is pronounced and when not in this position, except that it is usually pronounced following a word-final consonant cluster.</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="suppression">Vowel suppression</h3>
+
+<p>The inherent vowel is pronounced at the end of some words and not others, eg. <span class="ex" lang="bn">গরম</span> <span class="trans">gɔrôm</span>, <span class="meaning">hot</span> vs. <span class="ex" lang="bn">গড়ান</span> <span class="trans">gɔɽɑnô</span>, <span class="meaning">to roll </span>. There is no real way to tell when it is pronounced and when not in this position, except that it is usually pronounced following a word-final consonant cluster.</p>
+<p>Bengali uses <span class="codepoint" translate="no"><span lang="bn">&#x09CD;</span> [<a href="/scripts/bengali/block#char09CD"><span class="uname">U+09CD BENGALI SIGN VIRAMA</span></a>]</span> (called <span class="name">hasant</span> in Bengali) to kill the inherent vowel after a consonant. The virama is rarely seen. As just mentioned, no virama is used at the end of a word, or in many other situations.</p>
+<p> The virama is used, however, when the consonant is part of a consonant cluster but also usually hidden (see <a class="sectionref">clusters</a>). </p>
+<p>The virama is visible, however, if it isn't followed by a consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ক্</span> <span class="trans">k͓</span></span> explicitly represents just the sound <span class="charExample"><span class="ipa">k</span></span>.</p>
 <p class="ref"><a href="/scripts/bengali/#refs">Refs:</a> Radice 3, 7-8, 21, 148; Daniels 400</p>
 </section>
 
@@ -397,28 +282,33 @@ two, when influenced by surrounding sounds.) Bengalis are not always aware of th
 
 
 <section>
-<h3 id="dependentvowel">Dependent vowels</h3>
+<h3 id="dependentvowel">Vowel-signs</h3>
 
 
-<p>To produce a different vowel than the inherent one, Bengali uses a combining character called a vowel-sign (Sanskrit <span class="name">matra</span>) after the base consonant. For Bengali, this is always (in principle) a single character,  is always combining, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">কী</span> <span class="ipa">kiː</span></span>, and is always typed and stored after the preceding consonant.</p>
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'bn')">list all 10</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="bn">া</span><span class="listIPA">ɑ, æ</span><span class="listTrans">ɑ</span><span class="iso15919" style="display:none;">ā</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ি</span><span class="listIPA">i, e a</span><span class="listTrans">i</span><span class="iso15919" style="display:none;">i</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ী</span><span class="listIPA">i, e</span><span class="listTrans">ī</span><span class="iso15919" style="display:none;">ī</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ু</span><span class="listIPA">u, o</span><span class="listTrans">u</span><span class="iso15919" style="display:none;">u</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ূ</span><span class="listIPA">u</span><span class="listTrans">ū</span><span class="iso15919" style="display:none;">ū</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ে</span><span class="listIPA">e, æ</span><span class="listTrans">e</span><span class="iso15919" style="display:none;">e</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ৈ</span><span class="listIPA">oj</span><span class="listTrans">oʲ</span><span class="iso15919" style="display:none;">ai</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ো</span><span class="listIPA">o, u ɔ</span><span class="listTrans">o</span><span class="iso15919" style="display:none;">o</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ৌ</span><span class="listIPA">ow</span><span class="listTrans">oʷ</span><span class="iso15919" style="display:none;">au</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ৗ</span><span>&nbsp;</span><span class="listTrans">ː</span><span>&nbsp;</span></div>
-</div>
-</figure>
+<p>To produce a different vowel than the inherent one, Bengali attaches vowel-signs (Sanskrit <span class="name">matra</span>) to the preceding consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">কী</span> <span class="ipa">kiː</span></span>.</p>
+<p>Bengali vowel signs are all combining characters. In principle a single character is used per base consonant, but 2 vowel signs decompose to more than one character.</p>
+<p>All vowel-signs are typed and stored <em>after</em> the base consonant, whether or not they precede it when displayed. The font takes care of the glyph positioning.</p>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">া␣ি␣ী␣ু␣ূ␣ে␣ৈ␣ো␣ৌ␣ৗ</figure>
+
 <p>Bengali has lost the distinction between short and long vowels in pronunciation, but retains the difference in spelling.</p>
-<p>Almost all of the  vowel-signs are <em>spacing</em> combining characters. </p>
-<p>Three vowels are rendered on the left side of the syllable. These vowel signs are input and stored <em>after</em> the base character. The display software takes care of the correct positioning.</p>
+<p>Almost all of the  vowel-signs are <em>spacing</em> combining characters, meaning that they consume horizontal space when added to a base consonant.. </p>
+<p>Vowel-sign positions are as follows:</p>
+<ul>
+<li>3 prescript</li>
+<li>3 postscript</li>
+<li>2 subscript</li>
+<li>2 pre+postscript</li>
+</ul>
+<p>See also <a class="sectionref">vocalics</a>.</p>
+</section>
+
+
+
+
+<section>
+<h3 id="multipart">Multi-part vowel-signs</h3>
+
 <p>Two vowel-signs have parts on both sides of the base consonant or cluster. It is possible to construct these vowel-signs from a sequence of individual shapes, and in fact in Normalisation Form D they do decompose, but the Unicode Standard recommends that authors use the precomposed code points.</p>
 <figure>
 			<table style="margin: auto;" class="choices"><tbody>
@@ -437,7 +327,7 @@ two, when influenced by surrounding sounds.) Bengalis are not always aware of th
 			</tr>
 		</tbody></table>
 </figure>
-<p>Whether you use a single code point or two, the vowel-signs always come after the base consonant when typing and storing. You also need to enter the vowel-sign components in the correct order.</p>
+<p>Whether you use a single code point or two, the vowel-signs always come after the base consonant when typing and storing. You also need to enter and store the vowel-sign components in left-to-right order.</p>
 </section>
 
 
@@ -465,6 +355,7 @@ two, when influenced by surrounding sounds.) Bengalis are not always aware of th
 <section>
 		<h3 id="vowelligatures">Vowel ligatures</h3>
 			<p>Sometimes vowel signs  (particularly <span class="trans">u) </span>form ligatures with a preceding base consonant. The table below shows ligated and non-ligated forms for several combinations. In certain contexts it may not be appropriate to ligate (eg. newspapers and modern typefaces). Both forms are equivalent in every way but visually.</p>
+
 <p><figure>
 <div class="listAll" onClick="listAll(this, 'bn')">list all 7</div>
 <div class="listArray">
@@ -487,38 +378,119 @@ two, when influenced by surrounding sounds.) Bengalis are not always aware of th
 
 
 <section>
-<h3 id="independentvowel">Independent vowels</h3>
+<h3 id="independentvowel">Syllable-initial vowels</h3>
 
-<p>Bengali also has a set of independent vowels to represent vowel sounds that are not preceded by a consonant. Unlike the vowel-signs, the set contains a character to represent the inherent vowel sound.</p>
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'bn')">list all 10</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="bn">অ</span><span class="listIPA">ɔ, o u</span><span class="listTrans">ɔ̣</span><span class="iso15919" style="display:none;">a</span></div>
-<div class="listPair"><span class="listItem" lang="bn">আ</span><span class="listIPA">ɑ</span><span class="listTrans">ɑ</span><span class="iso15919" style="display:none;">ā</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ই</span><span class="listIPA">i, e</span><span class="listTrans">ị</span><span class="iso15919" style="display:none;">i</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঈ</span><span class="listIPA">i, e</span><span class="listTrans">ị̄</span><span class="iso15919" style="display:none;">ī</span></div>
-<div class="listPair"><span class="listItem" lang="bn">উ</span><span class="listIPA">u, o</span><span class="listTrans">ụ</span><span class="iso15919" style="display:none;">u</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঊ</span><span class="listIPA">u</span><span class="listTrans">ụ̄</span><span class="iso15919" style="display:none;">ū</span></div>
-<div class="listPair"><span class="listItem" lang="bn">এ</span><span class="listIPA">e, æ</span><span class="listTrans">ẹ</span><span class="iso15919" style="display:none;">e</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঐ</span><span class="listIPA">oj</span><span class="listTrans">ọʲ</span><span class="iso15919" style="display:none;">ai</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ও</span><span class="listIPA">o, u ɔ</span><span class="listTrans">ọ</span><span class="iso15919" style="display:none;">o</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঔ</span><span class="listIPA">ow</span><span class="listTrans">ọʷ</span><span class="iso15919" style="display:none;">au</span></div>
-</div>
-</figure>
+<p class="instructions">Syllable-initial vowels appear at the beginning of a word, or after another vowel in the middle of a word. Unlike the vowel-signs, the set contains a character to represent the inherent vowel sound.</p>
+<p>Bengali represents syllable-initial vowels using a set of independent vowel letters.</p>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">অ␣আ␣ই␣ঈ␣উ␣ঊ␣এ␣ঐ␣ও␣ঔ</figure>
+
 
 </section>
+
+
+
+
+
+<section>
+<h3 id="vocalics">Vocalics</h3>
+
+<p class="instructions">Vocalics are letters derived from Sanskrit that generally behave like vowels, but represent <span class="trans">r/l</span> followed by a vowel. They are  available both as vowel-signs and independent vowels.</p>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ৃ␣ৄ␣ৢ␣ৣ␣ঋ␣ৠ␣ঌ␣ৡ</figure>
+
+
+
+<p>Three of the vowels shown above, <span class="codepoint"><span lang="bn">&#x098C;</span> <a href="/scripts/bengali/block#char098C">[<span class="uname">U+098C BENGALI LETTER VOCALIC L</span>]</a></span>, <span class="codepoint"><span lang="bn">&#x09E0;</span> <a href="/scripts/bengali/block#char09E0">[<span class="uname">U+09E0 BENGALI LETTER VOCALIC RR</span>]</a></span> and <span class="codepoint"><span lang="bn">&#x09E1;</span> <a href="/scripts/bengali/block#char09E1">[<span class="uname">U+09E1 BENGALI LETTER VOCALIC LL</span>]</a></span>, are historic and only used to write Sanskrit in Bengali.</p>
+</section>
+</section>
+
+
+
+
+
+
+
+<section>
+<h2 id="consonants">Consonants</h2>
+
+
+
+<section>
+<h3 id="basicconsonants">Basic consonants</h3>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ক␣খ␣গ␣ঘ␣ঙ␣চ␣ছ␣জ␣ঝ␣ঞ␣ট␣ঠ␣ড␣ঢ␣ণ␣ত␣থ␣দ␣ধ␣ন␣প␣ফ␣ব␣ভ␣ম␣য␣র␣ল␣শ␣ষ␣স␣হ␣ৰ␣ৱ</figure>
+
+<p>The last two characters in the list above are specifically for Assamese.</p>
+<p>The consonant cluster <span class="ex" lang="bn" >ক্ষ</span> <span class="trans">k͓ʃ̇</span> is called <span class="name">khiyɔ</span> and is often treated as a letter of the alphabet in that some dictionaries give it it's own section, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ক্ষুদ্র</span> <span class="trans">k͓ʃ̇ud͓r</span> <span class="ipa">kʰudro</span> <span class="meaning">small</span></span>.</p>
 </section>
 
 
 
 
 <section>
-<h2 id="conjuncts">Consonant clusters</h2>
+<h3 id="nukta">Repertoire extension (nukta)</h3>
+        
+  <p><span class="codepoint" translate="no"><span lang="hi">&#x093C;</span> [<a href="devanagari#char093C"><span class="uname">U+093C DEVANAGARI SIGN NUKTA</span></a>]</span> is used to create 3 additional letters, eg. the dot changes <span class="charExample" translate="no"><span class="ex" lang="bn">ড</span> <span class="ipa">ɖ</span></span> to <span class="charExample" translate="no"><span class="ex" lang="bn">ড়</span> <span class="ipa">ɽ</span></span>. Here is a list of graphemes that combine nukta with an existing consonant.</p>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ড়␣ঢ়␣য়</figure>
+
+<p>The Unicode Standard recommends that content authors use decomposed sequences for these letters. However, the Unicode block also contains the precomposed code points shown below.</p>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">&#x09DC;␣&#x09DD;␣&#x09DF;</figure>
+
+
+
+<p>Decomposed sequences are <em>not</em> recomposed by Unicode Normalisation Form C (NFC). </p>
+<p>The <span class="name">nukta</span> should always be typed and stored immediately after the consonant it modifies, and before any combining vowels or diacritics.</p>
+</section>
+
+  
+
+
+
+
+<section>
+<h3 id="finals">Final consonants</h3>
+
+<p>One letter and 2 diacritics represent syllable-final consonant sounds.</p>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ৎ␣ং␣ঃ</figure>
+
+
+        <p><span class="codepoint" translate="no"><span lang="bn">&#x09CE;</span> [<a href="/scripts/bengali/block#char09CE"><span class="uname">U+09CE BENGALI LETTER KHANDA TA</span></a>]</span> is a variant form of <span class="codepoint" translate="no"><span lang="bn">&#x09A4;</span> [<a href="/scripts/bengali/block#char09A4"><span class="uname">U+09A4 BENGALI LETTER TA</span></a>]</span> that was added to Unicode 4.1 as a separate character. In some words a <span class="name">tɔ</span> that has no following inherent or other vowel may have this shape. It either comes at the end of words, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">হঠাৎ</span> <span class="trans">hʈʰɑt̽</span> <span class="ipa">hɔʈʰɑt</span> <span class="meaning">suddenly</span></span>, or before a consonant that doesn't naturally combine with <span class="name">tɔ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">উৎসব</span> <span class="trans">ụt̽ʃ̈b</span> <span class="ipa">utʃɔb</span> <span class="meaning">festival</span></span> or <span class="charExample" translate="no"><span class="ex" lang="bn">সৎমা</span> <span class="trans">ʃ̈t̽mɑ</span> <span class="ipa">ʃɔtmɑ</span> <span class="meaning">step-mother</span></span>. Many such words, however, use <span class="ex" lang="bn">ত</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">সদাত্মা</span> <span class="trans">ʃ̈dɑt͓mɑ</span> <span class="ipa">ʃadɑtːɑ</span></span>. It's not possible to say which will be used.</p>
+<p><span class="codepoint" translate="no"><span lang="bn">&#x0982;</span> [<a href="/scripts/bengali/block#char0982"><span class="uname">U+0982 BENGALI SIGN ANUSVARA</span></a>]</span> is a final nasal, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বাংলা</span> <span class="trans">bɑŋ̽lɑ</span> <span class="ipa">bɑŋlɑ</span> <span class="meaning">Bengali (language)</span></span>.</p>
+        <p>Sometimes spelling is inconsistent, especially when this or <span class="codepoint" translate="no"><span lang="bn">&#x0999;</span> [<a href="/scripts/bengali/block#char0999"><span class="uname">U+0999 BENGALI LETTER NGA</span></a>]</span> are used in a conjunct, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">সাঙঘাতিক</span> <span class="trans">ʃ̈ɑŋgʰɑtik</span></span> or <span class="charExample" translate="no"><span class="ex" lang="bn">সাংঘাতিক</span> <span class="trans">ʃ̈ɑŋ̽gʰɑtik</span> <span class="ipa">ʃ̈ɑŋgʰɑtik</span> <span class="meaning">terrible</span></span>; <span class="charExample" translate="no"><span class="ex" lang="bn">রঙ</span> <span class="trans">rŋ</span></span> or <span class="charExample" translate="no"><span class="ex" lang="bn">রং</span> <span class="trans">rŋ̽</span> <span class="ipa">rɔŋ</span> <span class="meaning">colour</span></span>. However, in certain words the spelling is fixed. <span class="charExample" translate="no"><span class="ex" lang="bn">বাংলা</span></span> is one such word.  But, since this cannot support vowel signs, the word for Bengali nation (rather than language) has to be spelled with <span class="codepoint" translate="no"><span lang="bn">&#x0999;</span> [<a href="/scripts/bengali/block#char0999"><span class="uname">U+0999 BENGALI LETTER NGA</span></a>]</span>, ie. <span class="charExample" translate="no"><span class="ex" lang="bn">বাঙালী</span> <span class="trans">bɑŋɑlī</span> <span class="ipa">bɑŋgɑlī</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="bn">&#x0983;</span> [<a href="/scripts/bengali/block#char0983"><span class="uname">U+0983 BENGALI SIGN VISARGA</span></a>]</span> has two different effects:</p>
+        <ul>
+<li>Producing vigorous final aspiration, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বাঃ</span> <span class="trans">bɑh̽</span> <span class="ipa">bɑːɦ</span> <span class="meaning">left</span></span>.</li>
+<li>Lengthening the following consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">নিঃশব্দ</span> <span class="trans">nih̽ʃb͓d</span> <span class="ipa">niʃʃɔbdo</span> <span class="meaning">silence</span></span>.  There is no aspiration.</li>
+</ul>
+        <p>The only common colloquial words containing this sign are <span class="charExample" translate="no"><span class="ex" lang="bn">বাঃ</span> <span class="trans">bɑh̽</span> <span class="ipa">bɑːɦ</span> <span class="meaning">left</span></span> and <span class="charExample" translate="no"><span class="ex" lang="bn">দুঃখ</span> <span class="trans">duh̽kʰ</span> <span class="ipa">dukkʰo</span> <span class="meaning">sorrow</span></span>.</p>
+        <p>In the sequence of characters, these should all occur after any combining vowel sign associated with the same syllable. None carry vowel signs.</p>
+
+<p>See also the candrabindu diacritic, which <a href="#nasalisation">nasalises</a> a vowel.</p>
+</section>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<section>
+<h2 id="clusters">Consonant clusters</h2>
 	<p>The absence of vowels between consonants can be represented in the following ways:</p>
 			<ul>
 			  <li>with no special rendering, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">করতাল</span> <span class="trans">krtɑl</span> <span class="ipa">kɔrtɑl</span> <span class="meaning">cymbal</span></span>.</li>
 		    <li>by specially shaped combinations of character glyphs, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">গন্ধ</span> <span class="trans">gn͓dʰ</span> <span class="ipa">gɔndʰo</span> <span class="meaning">scent</span></span>. Where the approach changes the shape of the constituent consonants, the cluster is referred to as a <span class="name">conjunct</span>.</li>
 			  <li>by showing the virama (called <span class="charExample" translate="no"><span class="ex" lang="bn">হসন্ত</span> <span class="trans">hʃ̈n͓t</span> <span class="ipa">hɔsonto</span></span> in Bengali), eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ফ্‌ল্যাট</span> <span class="trans">pʰ͓‌l͓ýɑʈ</span> <span class="ipa">pʰlæʈ</span> <span class="meaning">flat</span></span>. </li>
+<li>where a  syllable-final consonant diacritic is followed by a regular consonant.</li>
     </ul>
 			<p>Unlike languages written in the Devanagari script, consonant clusters are often not represented as conjuncts in Bengali. It is necessary to just know that the vowel should not be pronounced, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">রিকশা</span> <span class="trans">rikʃɑ</span> <span class="ipa">rikʃɑ</span> <span class="meaning">rickshaw</span></span>. Grammatical suffixes and endings are typically written without conjuncts, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">খাননা</span> <span class="trans">kʰɑnnɑ</span> <span class="ipa">kʰɑnnɑ</span></span>, which is the present tense form <span class="ipa">khan</span> plus negative suffix <span class="ipa">na</span>; <span class="charExample" translate="no"><span class="ex" lang="bn">করছ</span> <span class="trans">krcʰ</span> <span class="ipa">korcʰo</span></span>, which is stem <span class="trans">kôr</span> from <span class="trans">kôra</span> plus present continuous ending <span class="trans">chô</span>.</p>
 <p>In all cases except the the one just described, the underlying mechanism in terms of codepoints involves adding <span class="codepoint" translate="no"><span lang="bn">&#x09CD;</span> [<a href="/scripts/bengali/block#char09CD"><span class="uname">U+09CD BENGALI SIGN VIRAMA</span></a>]</span> (called <span class="charExample" translate="no"><span class="ex" lang="bn">হসন্ত</span> <span class="trans">hʃ̈n͓t</span> <span class="ipa">hɔʃonto</span></span> in Bengali) between the consonants in the cluster, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ক্ষ</span> <span class="trans">k͓ʃ̇</span></span> is produced by the sequence <span class="codepoint" translate="no"><span lang="bn">&#x0995;</span> + <span lang="bn">&#x09CD;</span> + <span lang="bn">&#x09B7;</span> [<a href="/scripts/bengali/block#char0995"><span class="uname">U+0995 BENGALI LETTER KA</span></a> + <a href="/scripts/bengali/block#char09CD"><span class="uname">U+09CD BENGALI SIGN VIRAMA</span></a> + <a href="/scripts/bengali/block#char09B7"><span class="uname">U+09B7 BENGALI LETTER SSA</span></a>]</span>.</p>
@@ -532,6 +504,7 @@ two, when influenced by surrounding sounds.) Bengalis are not always aware of th
 
 
 <p style="margin-left: 0; margin-right: 0">Components arranged vertically.</p>
+
 <figure>
 <div class="listAll" onClick="listAll(this, 'bn')">list all 63</div>
 <div class="listArray">
@@ -794,34 +767,15 @@ two, when influenced by surrounding sounds.) Bengalis are not always aware of th
 <p>When the virama is  used  it may be because the font doesn't have a particular conjunct ligature, but it may also be visible in places where the phonology is unusual, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ফ্‌ল্যাট</span> <span class="trans">pʰ͓‌l͓ýɑʈ</span> <span class="ipa">pʰlæʈ</span> <span class="meaning">flat</span></span>; <span class="charExample" translate="no"><span class="ex" lang="bn">লান্‌চ</span> <span class="trans">lɑn͓‌c</span> <span class="ipa">lɑnt͡ʃ</span> <span class="meaning">lunch</span></span> (though these may also be spelled with conjuncts, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ফ্ল্যাট</span> <span class="trans">pʰ͓l͓ýɑʈ</span></span>). It is also quite common to see <span class="charExample" translate="no"><span class="ex" lang="bn">উদ্‌যাপন</span> <span class="trans">ụd͓‌ýɑpn</span></span> to distinguish it from words like <span class="charExample" translate="no"><span class="ex" lang="bn">উদ্যান</span> <span class="trans">ụd͓ýɑn</span></span>. These words are etymologically related, but distinct phonetically.</p>
 <p>Again, if a visible virama is wanted but not what the font does by default, it is possible to force it by inserting a ZWNJ character after the virama.</p>
 </section>
-</section>
 
 
 
 
 
 <section>
-<h2 id="vocalics">Vocalics</h2>
-
-<p>A set of letters represents a special combination of consonant+vowel, available both as vowel-signs and independent vowels.</p>
-
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'bn')">list all 8</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="bn">ৃ</span><span class="listIPA">ri</span><span class="listTrans">r̥</span><span class="iso15919" style="display:none;">r̥</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ৄ</span><span>&nbsp;</span><span class="listTrans">r̥̄</span><span class="iso15919" style="display:none;">r̥̄</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঋ</span><span class="listIPA">ri</span><span class="listTrans">r̥̣</span><span class="iso15919" style="display:none;">r̥</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ৠ</span><span>&nbsp;</span><span class="listTrans">r̥̣̄</span><span>&nbsp;</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ৢ</span><span>&nbsp;</span><span class="listTrans">l̥</span><span class="iso15919" style="display:none;">l̥</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ৣ</span><span>&nbsp;</span><span class="listTrans">l̥̄</span><span class="iso15919" style="display:none;">l̥̄</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঌ</span><span>&nbsp;</span><span class="listTrans">l̥̣</span><span class="iso15919" style="display:none;">l̥</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ৡ</span><span>&nbsp;</span><span class="listTrans">l̥̣̄</span><span>&nbsp;</span></div>
-</div>
-</figure>
-
-
-
-<p>Three of the vowels shown above, <span class="codepoint"><span lang="bn">&#x098C;</span> <a href="/scripts/bengali/block#char098C">[<span class="uname">U+098C BENGALI LETTER VOCALIC L</span>]</a></span>, <span class="codepoint"><span lang="bn">&#x09E0;</span> <a href="/scripts/bengali/block#char09E0">[<span class="uname">U+09E0 BENGALI LETTER VOCALIC RR</span>]</a></span> and <span class="codepoint"><span lang="bn">&#x09E1;</span> <a href="/scripts/bengali/block#char09E1">[<span class="uname">U+09E1 BENGALI LETTER VOCALIC LL</span>]</a></span>, are historic and only used to write Sanskrit in Bengali.</p>
+<h3 id="wordclusters">Syllable-final diacritics</h3>
+	<p>As mentioned <a href="#finals">earlier</a>, Bengali represents some final consonants using diacritics. Such syllable-final diacritics are followed by ordinary consonant shapes in consonant clusters.</p>
+</section>
 </section>
 
 
@@ -831,19 +785,10 @@ two, when influenced by surrounding sounds.) Bengalis are not always aware of th
 <section>
 <h2 id="diacritics">Diacritics</h2>
 
-<p>Apart from the vowel-signs, the Bengali block contains the following combining characters, all of which are described elsewhere on this page.</p>
+<p>Apart from the <a href="#vowelsigns">vowel-signs</a>, the Bengali block contains the following combining characters, all of which are described elsewhere on this page.</p>
 
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'bn')">list all 6</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="bn">ঁ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ং</span></div>
-<div class="listPair"><span class="listItem" lang="bn">ঃ</span></div>
-<div class="listPair"><span class="listItem" lang="bn">়</span></div>
-<div class="listPair"><span class="listItem" lang="bn">্</span></div>
-<div class="listPair"><span class="listItem" lang="bn">৾</span></div>
-</div>
-</figure>
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ঁ␣ং␣ঃ␣়␣্␣৾</figure>
+
 </section>
 
 
@@ -855,11 +800,9 @@ two, when influenced by surrounding sounds.) Bengalis are not always aware of th
 
 <p>The only punctuation in the Unicode Bengali block is this abbreviation symbol (see below for a description).</p>
 
-<figure class="characterBox">
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="bn">॰</span></div>
-</div>
-</figure>
+<figure class="characterBox auto"  data-cols="">॰</figure>
+
+<p>Bengali also uses two punctuation marks from the Devanagari block. For more information see <a class="sectionref">phrase</a>.</p>
 
 </section>
 
@@ -872,21 +815,7 @@ two, when influenced by surrounding sounds.) Bengalis are not always aware of th
  
  <p>Bengali has a set of native digits, which are used regularly in text. They are decimal-based.</p>
  
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'bn')">list all 10</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="bn">০</span><span class="listTrans">0</span><span class="iso15919" style="display:none;">0</span></div>
-<div class="listPair"><span class="listItem" lang="bn">১</span><span class="listTrans">1</span><span class="iso15919" style="display:none;">1</span></div>
-<div class="listPair"><span class="listItem" lang="bn">২</span><span class="listTrans">2</span><span class="iso15919" style="display:none;">2</span></div>
-<div class="listPair"><span class="listItem" lang="bn">৩</span><span class="listTrans">3</span><span class="iso15919" style="display:none;">3</span></div>
-<div class="listPair"><span class="listItem" lang="bn">৪</span><span class="listTrans">4</span><span class="iso15919" style="display:none;">4</span></div>
-<div class="listPair"><span class="listItem" lang="bn">৫</span><span class="listTrans">5</span><span class="iso15919" style="display:none;">5</span></div>
-<div class="listPair"><span class="listItem" lang="bn">৬</span><span class="listTrans">6</span><span class="iso15919" style="display:none;">6</span></div>
-<div class="listPair"><span class="listItem" lang="bn">৭</span><span class="listTrans">7</span><span class="iso15919" style="display:none;">7</span></div>
-<div class="listPair"><span class="listItem" lang="bn">৮</span><span class="listTrans">8</span><span class="iso15919" style="display:none;">8</span></div>
-<div class="listPair"><span class="listItem" lang="bn">৯</span><span class="listTrans">9</span><span class="iso15919" style="display:none;">9</span></div>
-</div>
-</figure>
+<figure class="characterBox auto"  data-cols="trans,transc">০␣১␣২␣৩␣৪␣৫␣৬␣৭␣৮␣৯</figure>
 
 
 <p>See also the section <a href="#counters">Counters</a> below.</p>
@@ -896,27 +825,12 @@ two, when influenced by surrounding sounds.) Bengalis are not always aware of th
 <section>
 <h3 id="currency">Currency</h3>
 
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'bn')">list both</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="bn">৳</span></div>
-<div class="listPair"><span class="listItem" lang="bn">৲</span></div>
-</div>
-</figure>
+<figure class="characterBox auto"  data-cols="">৳␣৲</figure>
 
 <p><span class="codepoint"><span lang="bn">&#x09F3;</span> <a href="/scripts/bengali/block#char09F3">[<span class="uname">U+09F3 BENGALI RUPEE SIGN</span>]</a></span> is the Bengali rupee sign.</p>
 <p>There are also a number of currency symbols, used in older texts, including <span class="codepoint"><span lang="bn">&#x09F2;</span> <a href="/scripts/bengali/block#char09F2">[<span class="uname">U+09F2 BENGALI RUPEE MARK</span>]</a></span> and the following currency denominator signs. </p>
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'bn')">list all 6</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="bn">৴</span></div>
-<div class="listPair"><span class="listItem" lang="bn">৵</span></div>
-<div class="listPair"><span class="listItem" lang="bn">৶</span></div>
-<div class="listPair"><span class="listItem" lang="bn">৷</span></div>
-<div class="listPair"><span class="listItem" lang="bn">৸</span></div>
-<div class="listPair"><span class="listItem" lang="bn">৹</span></div>
-</div>
-</figure>
+
+<figure class="characterBox auto"  data-cols="">৴␣৵␣৶␣৷␣৸␣৹</figure>
 
 <p>These were used in an additive/subtractive system for specifying the number of <span class="name">ānā</span> in the Bengali notation for currency used up to 1957, eg. <span class="ex" lang="bn">৷৷৶৹</span> <span class="trans">11 ānā</span> (<span class="meaning">11 ana</span>); <span class="ex" lang="bn">৸৶৹</span> <span class="trans">15 ānā</span> (<span class="meaning">15 ana</span>).  There are 16 ana in one rupee, and the system works in multiples of 4. For a detailed explanation of usage, see <a href="http://std.dkuug.dk/JTC1/SC2/wg2/docs/n3311.pdf">[Pandey]</a>.</p>
 </section>
@@ -932,9 +846,16 @@ two, when influenced by surrounding sounds.) Bengalis are not always aware of th
    
       
 <section>
-<h3 id="delimiters">Word &amp; phrase boundaries</h3>
+<h3 id="word">Word boundaries</h3>
     <p>Words are separated by spaces.</p>
-  <p>The danda, <span class="codepoint"><span lang="bn">&#x0964;</span> <a href="/scripts/bengali/block#char0964">[<span class="uname">U+0964 DEVANAGARI DANDA</span>]</a></span>, is used for sentence final punctuation. <span class="ed">I haven't seen much evidence for the use of the double danda, <span class="codepoint"><span lang="bn">&#x0965;</span> <a href="/scripts/bengali/block#char0965">[<span class="uname">U+0965 DEVANAGARI DOUBLE DANDA</span>]</a></span>.</span></p>
+</section>
+
+
+
+   
+<section>
+<h3 id="phrase">Phrase boundaries</h3>
+<p>The danda, <span class="codepoint"><span lang="bn">&#x0964;</span> <a href="/scripts/bengali/block#char0964">[<span class="uname">U+0964 DEVANAGARI DANDA</span>]</a></span>, is used for sentence final punctuation. <span class="ed">I haven't seen much evidence for the use of the double danda, <span class="codepoint"><span lang="bn">&#x0965;</span> <a href="/scripts/bengali/block#char0965">[<span class="uname">U+0965 DEVANAGARI DOUBLE DANDA</span>]</a></span>.</span></p>
   <p>Western punctuation, such as commas, semicolons, colons, quotation marks and hyphens are also used quite commonly. </p>
 </section>
 
@@ -1064,7 +985,7 @@ Page &amp; book layout
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/bengali"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-19  16:31<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bbengali%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fbengali%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/bengali"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-26  17:00<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bbengali%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fbengali%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 
@@ -1072,10 +993,7 @@ Page &amp; book layout
 
 
 <script>
-var base = '/scripts/bengali/block'
-initialiseShowNames(base, 'c');
-document.getElementById('featureTableBody').innerHTML = makeSidePanel("Bengali","")
-createtoc(3)
+initialiseSummary('/scripts/bengali/block','bn','Bengali')
 </script>
 
 </body>
