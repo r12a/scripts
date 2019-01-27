@@ -23,33 +23,34 @@
 	}
 [lang=hy] { font-family: webfont, serif; font-size: 140%; }
 .large { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
+.iso9985 { font-family: gentiumpluswf; }
 </style>
 
-<script src="/shared/code/boilerplate.js"></script>
-<script src="/shared/code/toc_2019.js"></script>
-<script src="/shared/code/all-names.js"></script>
-<script src="/shared/code/character_conversion.js"></script>
-<script src="/shared/code/show_codepoints.js"></script>
-<script src="/shared/fontlists/manage.js"></script>
-<script src="/shared/code/scriptGroups.js"></script>
+<script src="db.js"> </script>
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2019.js"></script>
+<script src="../../shared/code/all-names.js"></script>
+<script src="../../shared/code/character_conversion.js"></script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/fontlists/manage.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
-<script src="../common/block-functions.js"></script>
-<script src="/shared/code/getLinks.js"></script>
+<script src="../../shared/code/getLinks.js"></script>
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
 
-<script src="/shared/fontlists/armenian.js"> </script>
+<script src="../../shared/fontlists/armenian.js"> </script>
 </head>
 
 <body>
 <header>
 <div id="header-boilerplate"></div>
-<script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
 </header>
 
 <h1>Armenian script summary</h1>
 
-<nav id="top"><a href="#header-boilerplate"><img src="/shared/images/up.png" alt="go to page top"/></a></nav>
+<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top"/></a></nav>
 
 <aside class="sidebar">
 <nav>
@@ -99,8 +100,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </aside>
 
 
-<p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->22 January, 2019<!-- #EndDate -->
+<p id="status">Updated<!-- #BeginDate format:Sw1 -->27 January, 2019<!-- #EndDate --> -->
 &bull; tags  <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="http://rishida.net/blog/?tag=armenian" title="Show all blog posts tagged with 'armenian'">armenian</a></p>
 
 
@@ -153,7 +153,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <section>
-    <h2 id="type"><a href="type">Key features</a></h2>
+    <h2 id="type"><a href="type">Distinctive features</a></h2>
     <p>Armenian is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#alphabet">alphabet</a></span>. This means that it is phonetic in nature, where each letter represents a basic sound. See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.</p>
     <p>Armenian has uppercase and lowercase pairs. The shapes of the upper and lowercase forms can differ significantly.</p>
     <figure>
@@ -167,7 +167,18 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
   
   
-  
+<div id="showTranscriptions">
+<div>In yellow boxes, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div><label>ISO 9985 <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+</div>
+
+
+
+
+
 <section>
 <h2 id="chars">Character lists</h2>
         <p>The Armenian script characters in Unicode 10.0 mostly in a single block, however there are a handful of ligatures in another: </p>
@@ -186,46 +197,29 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
+
+
+  <section>
+    <h2 id="vowels">Vowels</h2>
+ 
+ <p>There are 7 vowel characters, each with an upper and lower case form, and one more that is only lower case. This is   <span class="codepoint"><span lang="hy">&#x0587;</span> <a href="/scripts/armenian/block#char0587">[<span class="uname">U+0587 ARMENIAN SMALL LIGATURE ECH YIWN</span>]</a>, formerly a ligature but now considered a separate letter of the alphabet.</span></p>
+   
+<figure class="characterBox auto bicameral" data-cols="ipa,trans,transc">Աա␣Եե␣և␣Էէ␣Ըը␣Իի␣Ոո␣Օօ</figure>
+
+<p>The letter <span class="codepoint"><span lang="hy">&#x0568;</span> <a href="/scripts/armenian/block#char0568">[<span class="uname">U+0568 ARMENIAN SMALL LETTER ET</span>]</a></span> is generally used only at the start or end of a word, and so the sound <span class="ipa">ə</span> is unwritten between consonants.<sup>d</sup></p>
+ <p><span class="codepoint"><span lang="hy">&#x0585;</span> <a href="/scripts/armenian/block#char0585">[<span class="uname">U+0585 ARMENIAN SMALL LETTER OH</span>]</a></span> and its uppercase form are only used in classical orthography, word-initially and in some compound words.<sup>d</sup></p>
+</section> 
+
+
+
+
+
 <section>
 <h2 id="consonants">Consonants</h2>
   <p>The Armenian block has 32 consonants, each of which has an upper- and lowercase form.</p>
   
-  <figure>
-<div class="listAll" onClick="listAll(this, 'hy')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="hy">Բբ</span><span class="listTrans">b</span><span class="listIPA">b,pʰ</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Գգ</span><span class="listTrans">g</span><span class="listIPA">g,kʰ</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Դդ</span><span class="listTrans">d</span><span class="listIPA">d,tʰ</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Զզ</span><span class="listTrans">z</span><span class="listIPA">z</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Թթ</span><span class="listTrans">t’</span><span class="listIPA">tʰ</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Ժժ</span><span class="listTrans">ž</span><span class="listIPA">ʒ</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Լլ</span><span class="listTrans">l</span><span class="listIPA">l</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Խխ</span><span class="listTrans">x</span><span class="listIPA">χ</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Ծծ</span><span class="listTrans">ç</span><span class="listIPA">ts,dz</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Կկ</span><span class="listTrans">k</span><span class="listIPA">k,ɡ</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Հհ</span><span class="listTrans">h</span><span class="listIPA">h</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Ձձ</span><span class="listTrans">j</span><span class="listIPA">dz,tsʰ</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Ղղ</span><span class="listTrans">ġ</span><span class="listIPA">ʁ</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Ճճ</span><span class="listTrans">č̣</span><span class="listIPA">tʃ,dʒ</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Մմ</span><span class="listTrans">m</span><span class="listIPA">m</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Յյ</span><span class="listTrans">y</span><span class="listIPA">h,j</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Նն</span><span class="listTrans">n</span><span class="listIPA">n,ŋ</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Շշ</span><span class="listTrans">š</span><span class="listIPA">ʃ</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Չչ</span><span class="listTrans">č</span><span class="listIPA">tʃʰ</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Պպ</span><span class="listTrans">p</span><span class="listIPA">p,b</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Ջջ</span><span class="listTrans">ǰ</span><span class="listIPA">dʒ,tʃʰ</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Ռռ</span><span class="listTrans">ṙ</span><span class="listIPA">r,ɾ</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Սս</span><span class="listTrans">s</span><span class="listIPA">s</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Վվ</span><span class="listTrans">v</span><span class="listIPA">v</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Տտ</span><span class="listTrans">t</span><span class="listIPA">t,d</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Րր</span><span class="listTrans">r</span><span class="listIPA">ɾ</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Ցց</span><span class="listTrans">c’</span><span class="listIPA">tsʰ</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Ււ</span><span class="listTrans">w</span><span class="listIPA">v</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Փփ</span><span class="listTrans">p’</span><span class="listIPA">pʰ</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Քք</span><span class="listTrans">k’</span><span class="listIPA">kʰ</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Ֆֆ</span><span class="listTrans">f</span><span class="listIPA">f</span></div>
-</div>
-</figure>
+<figure class="characterBox auto bicameral" data-cols="ipa,trans,transc">Բբ␣Գգ␣Դդ␣Զզ␣Թթ␣Ժժ␣Լլ␣Խխ␣Ծծ␣Կկ␣Հհ␣Ձձ␣Ղղ␣Ճճ␣Մմ␣Յյ␣Նն␣Շշ␣Չչ␣Պպ␣Ջջ␣Ռռ␣Սս␣Վվ␣Տտ␣Րր␣Ցց␣Ււ␣Փփ␣Քք␣Ֆֆ</figure>
+
 
 <p>Pronunciations of many of the consonants vary between eastern and western variants of Armenian. In the list above, where two pronunciations are given the first is eastern and the second western Armenian.</p>
   <p>Sometimes adjacent glyphs form ligatures (see below).</p>
@@ -235,39 +229,80 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   <p><span class="codepoint"><span lang="hy">&#x0581;</span> <a href="/scripts/armenian/block#char0581">[<span class="uname">U+0581 ARMENIAN SMALL LETTER CO</span>]</a></span> and its uppercase form are only used in classical orthography, word-initially and in some compound words.<sup>d</sup></p>
   <p>In reformed orthography, the letter <span class="codepoint"><span lang="hy">&#x0582;</span> <a href="/scripts/armenian/block#char0582">[<span class="uname">U+0582 ARMENIAN SMALL LETTER YIWN</span>]</a></span> appears only as a component of <span class="ex" lang="hy">ու</span>.<sup>d</sup></p>
 </section>
-
-
-
-
-
-  <section>
-    <h2 id="vowels">Vowels</h2>
- 
- <p>There are 7 vowel characters, each with an upper and lower case form, and one more that is only lower case. This is   <span class="codepoint"><span lang="hy">&#x0587;</span> <a href="/scripts/armenian/block#char0587">[<span class="uname">U+0587 ARMENIAN SMALL LIGATURE ECH YIWN</span>]</a>, formerly a ligature but now considered a separate letter of the alphabet.</span></p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'hy')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="hy">Աա</span><span class="listTrans">a</span><span class="listIPA">ɑ</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Եե</span><span class="listTrans">e</span><span class="listIPA">ɛ</span></div>
-<div class="listPair"><span class="listItem" lang="hy">և</span><span class="listTrans">ew</span><span class="listIPA">ev,jev</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Էէ</span><span class="listTrans">ɛ</span><span class="listIPA">ɛ</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Ըը</span><span class="listTrans">ë</span><span class="listIPA">ə</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Իի</span><span class="listTrans">i</span><span class="listIPA">i</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Ոո</span><span class="listTrans">o</span><span class="listIPA">o,vo</span></div>
-<div class="listPair"><span class="listItem" lang="hy">Օօ</span><span class="listTrans">ò</span><span class="listIPA">o</span></div>
-</div>
-</figure>
-
- <p>The letter <span class="codepoint"><span lang="hy">&#x0568;</span> <a href="/scripts/armenian/block#char0568">[<span class="uname">U+0568 ARMENIAN SMALL LETTER ET</span>]</a></span> is generally used only at the start or end of a word, and so the sound <span class="ipa">ə</span> is unwritten between consonants.<sup>d</sup></p>
- <p><span class="codepoint"><span lang="hy">&#x0585;</span> <a href="/scripts/armenian/block#char0585">[<span class="uname">U+0585 ARMENIAN SMALL LETTER OH</span>]</a></span> and its uppercase form are only used in classical orthography, word-initially and in some compound words.<sup>d</sup></p>
-</section> 
+  
   
   
   
   
   
 <section>
-  <h2 id="gsub">Context-based rendering</h2>
+<h2 id="punctuation">Punctuation</h2>
+
+<p>Punctuation characters in the Unicode Armenian block.</p>
+<figure class="characterBox auto bicameral" data-cols="trans,transc" data-links="#phrase,#phrase,#tonal_punctuation,#tonal_punctuation,#tonal_punctuation,#hyphenation">՝␣։␣՞␣՜␣՛␣֊</figure>
+
+<p>Punctuation characters from other blocks that are used in Armenian.</p>
+<figure class="characterBox auto bicameral" data-cols="trans,transc" data-links="#phrase,#phrase,#quotations,#quotations">,␣․␣«␣»</figure>
+
+<p>Follow the links for descriptions.</p>
+
+
+
+
+<section>
+    <h3 id="deprecated_punctuation">Deprecated punctuation marks</h3>
+
+<figure class="characterBox auto" data-cols="">&#x0559;␣&#x055A;</figure>
+
+<p><span class="codepoint"><span lang="hy">&#x0559;</span> <a href="/scripts/armenian/block#char0559">[<span class="uname">U+0559 ARMENIAN MODIFIER LETTER LEFT HALF RING</span>]</a></span> was encoded by mistake, and is not used in Armenian.</p>
+<p>
+The Unicode Standard recommends not to use <span class="codepoint"><span lang="hy">&#x055A;</span> <a href="/scripts/armenian/block#char055A">[<span class="uname">U+055A ARMENIAN APOSTROPHE</span>]</a></span>, but to use <span class="codepoint"><span lang="hy">&#x2019;</span> <a href="/scripts/armenian/block#char2019">[<span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span>]</a></span> instead.</p>
+</section>
+</section>
+  
+  
+  
+  
+  
+  
+<section>
+<h2 id="symbols">Symbols</h2>
+
+<figure class="characterBox auto bicameral" data-cols="trans">֍␣֎␣֏</figure>
+
+
+  <p>The Unicode Armenian block contains 3 symbols. <span class="codepoint" translate="no"><span lang="hy">&#x058D;</span> [<a href="/scripts/armenian/block#char058D"><span class="uname">U+058D RIGHT-FACING ARMENIAN ETERNITY SIGN</span></a>]</span> and <span class="codepoint" translate="no"><span lang="hy">&#x058E;</span> [<a href="/scripts/armenian/block#char058E"><span class="uname">U+058E LEFT-FACING ARMENIAN ETERNITY SIGN</span></a>]</span>  are widespread architectural motifs, and an ancient national symbol of Armenia. The actual representation of the symbol can vary, but it generally has the same swirling effect, and typically 8 segments.<sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3924.pdf">→ e</a></sup></p>
+<p>The 3rd symbol is that for currency (see <a class="secref">numbers</a>).</p>
+</section>
+   
+  
+  
+  
+  
+  
+<section>
+<h2 id="numbers">Numbers, dates, currency, etc.</h2>
+  <p>Armenian uses European numeral digits.</p>
+
+<section>
+<h3 id="dates">Dates</h3>
+
+  <p> The ASCII hyphen appears to be used for ordinal numbers in dates, eg. <span class="charExample"><span class="ex" lang="hy">նոյեմբերի 20-ին:</span> <span class="meaning">On November 20</span></span>.</p>
+</section>
+
+<section>
+<h3 id="currency">Currency</h3>
+
+<p> The Armenian block has a symbol for the Armenian dram, <span class="codepoint" translate="no"><span lang="hy">&#x058F;</span> [<a href="/scripts/armenian/block#char058F"><span class="uname">U+058F ARMENIAN DRAM SIGN</span></a>]</span>.</p>
+  </section>
+  </section>
+ 
+  
+  
+  
+  
+<section>
+  <h2 id="gsub">Glyph shaping &amp; positioning</h2>
   
   <section>
     <h3 id="cursive">Ligatures</h3>
@@ -278,6 +313,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <figcaption>Ligatures.</figcaption>
 </figure>
   <p>Dedicated code points are available for these characters in the Alphabetic Presentation Forms block, with compatibility decompositions to the relevant consonant pairs.  </p>
+<figure class="characterBox auto" data-cols="trans,transc">ﬓ␣ﬔ␣ﬕ␣ﬖ␣ﬗ</figure>
   </section>
   
   <section>
@@ -290,45 +326,26 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </figure>
   </section>
 </section>
-  
-  
-  
-  
-  
-  
-<section>
-<h2 id="numbers">Numbers</h2>
-  <p>Armenian uses European numeral digits.</p>
-  <p><span class="leadin">Dates.</span> The ASCII hyphen appears to be used for ordinal numbers in dates, eg. <span class="charExample"><span class="ex" lang="hy">նոյեմբերի 20-ին:</span> <span class="meaning">On November 20</span></span>.</p>
-<p><span class="leadin">Currency.</span> The Armenian block has a symbol for the Armenian dram, <span class="codepoint" translate="no"><span lang="hy">&#x058F;</span> [<a href="/scripts/armenian/block#char058F"><span class="uname">U+058F ARMENIAN DRAM SIGN</span></a>]</span>.</p>
-  </section>
-  
-  
-  
-  
-  
-  
-<section>
-<h2 id="symbols">Symbols</h2>
-  <p>The Unicode Armenian block contains two symbols: <span class="codepoint" translate="no"><span lang="hy">&#x058D;</span> [<a href="/scripts/armenian/block#char058D"><span class="uname">U+058D RIGHT-FACING ARMENIAN ETERNITY SIGN</span></a>]</span> and <span class="codepoint" translate="no"><span lang="hy">&#x058E;</span> [<a href="/scripts/armenian/block#char058E"><span class="uname">U+058E LEFT-FACING ARMENIAN ETERNITY SIGN</span></a>]</span>. These are widespread architectural motif, and an ancient national symbol of Armenia.The actual representation of the symbol can vary, but it generally has the same swirling effect, and typically 8 segments.<sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3924.pdf">→ e</a></sup></p>
-</section>
+
+
+
+
 
   
-  
-   <section>
-   <h2 id="layout">Text layout</h2>
-    
- <section>
-    <h3 id="direction">Text direction</h3>
-    <p>Armenian is written horizontally, left to right.<sup></sup></p>
-  </section>
- 
- 
- 
- <section>
-    <h3 id="punctuation">Text delimiters</h3>
+<section>
+<h2 id="layout">Structural boundaries &amp; markers</h2>
+
+<section>
+<h3 id="word">Word boundaries</h3>
     <p>Words are separated by spaces.</p>
-    <p> For separators at the sentence level and below, the following are used in Armenian text, where the right column indicates approximate equivalences to Latin script.</p>
+</section>
+
+
+
+
+<section>
+<h3 id="phrase">Phrase boundaries</h3>
+<p> For separators at the sentence level and below, the following are used in Armenian text, where the right column indicates approximate equivalences to Latin script.</p>
     <table class="character_list">
       <tbody>
           <tr>
@@ -400,22 +417,37 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </tbody>
 </table>
 </section>
+</section>
+
+
+
+
+
+
+  
+<section>
+   <h2 id="layout">Line &amp; paragraph layout</h2>
+    
+ <section>
+    <h3 id="direction">Text direction</h3>
+    <p>Armenian is written horizontally, left to right.<sup></sup></p>
+  </section>
 
 
 
 
 <section>
-    <h3 id="deprecated_punctuation">Deprecated punctuation marks</h3>
-
-<p>
-<mark>Usage tips</mark> </p>
-    <p><span class="codepoint"><span lang="hy">
-&#x0559;</span> <a href="/scripts/armenian/block#char0559">[<span class="uname">U+0559 ARMENIAN MODIFIER LETTER LEFT HALF RING</span>]</a></span> was encoded by mistake, and is not used in Armenian.</p>
-<p>
-The Unicode Standard recommends not to use <span class="codepoint"><span lang="hy">&#x055A;</span> <a href="/scripts/armenian/block#char055A">[<span class="uname">U+055A ARMENIAN APOSTROPHE</span>]</a></span>, but to use <span class="codepoint"><span lang="hy">&#x2019;</span> <a href="/scripts/armenian/block#char2019">[<span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span>]</a></span> instead.</p>
+    <h3 id="justify"> Text alignment &amp; justification</h3>
+    <p>The most common approach to justification relies on adjustment of spaces.<sup>d</sup></p>
+    <p class="instructions">Use the control below to see how your browser justifies the text sample here.</p>
+    <p dir="ltr" lang="hy" id="justificationExample" style="text-align:start;">Բոլորը հավասար են օրենքի առջև և, առանց որևէ խտրականության, ունեն օրենքով հավասար պաշտպանվելու իրավունք։ Բոլորը ունեն հավասար պաշտպանության իրավունք՝ ընդդեմ ցանկացած խտրականության, որով խախտվում է այս Հռչակագիրը, և ընդդեմ նման խտրականության մղող ցանկացած սադրանքի։</p>
+    <p class="english" dir="ltr">
+      <button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Justify   </button>
+    </p>
 </section>
-
-
+ 
+ 
+ 
 
 <section>
   <h3 id="counterstyle">Counter styles</h3>
@@ -426,19 +458,6 @@ The Unicode Standard recommends not to use <span class="codepoint"><span lang="h
     111 <span class="ex">ՃԺԱ</span> &nbsp; 222 <span class="ex">ՄԻԲ</span> &nbsp; 333 <span class="ex">ՅԼԳ</span></p>
     <figcaption>Various counter style values in the additive Armenian system.</figcaption>
 </figure>
-</section>
-
-
-
-
-<section>
-    <h3 id="justify">Justification</h3>
-    <p>The most common approach to justification relies on adjustment of spaces.<sup>d</sup></p>
-    <p class="instructions">Use the control below to see how your browser justifies the text sample here.</p>
-    <p dir="ltr" lang="hy" id="justificationExample" style="text-align:start;">Բոլորը հավասար են օրենքի առջև և, առանց որևէ խտրականության, ունեն օրենքով հավասար պաշտպանվելու իրավունք։ Բոլորը ունեն հավասար պաշտպանության իրավունք՝ ընդդեմ ցանկացած խտրականության, որով խախտվում է այս Հռչակագիրը, և ընդդեմ նման խտրականության մղող ցանկացած սադրանքի։</p>
-    <p class="english" dir="ltr">
-      <button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Justify   </button>
-    </p>
 </section>
 </section>
 
@@ -461,16 +480,13 @@ The Unicode Standard recommends not to use <span class="codepoint"><span lang="h
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/armenian"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-22  14:21<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Barmenian%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Farmenian%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/armenian"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-27  17:45<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Barmenian%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Farmenian%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"></div>
 </body>
 <script>
-var base = '/scripts/armenian/block'
-initialiseShowNames(base, 'c');
-document.getElementById('featureTableBody').innerHTML = makeSidePanel("Armenian","")
-createtoc(3)
+initialiseSummary('/scripts/armenian/block','hy','Armenian')
 </script>
 
 </html>
