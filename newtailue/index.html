@@ -26,6 +26,7 @@
 .narrowlines .listPair { margin-bottom: 0.25em; }
 </style>
 
+<script src="db.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2019.js"></script>
 <script src="../../shared/code/all-names.js"></script>
@@ -34,7 +35,6 @@
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
-<script src="../common/block-functions.js"></script>
 <script src="../../shared/code/getLinks.js"></script>
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
@@ -101,7 +101,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->20 January, 2019<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->26 January, 2019<!-- #EndDate -->
 &bull; tags <a href="https://r12a.github.io/blog/index.php?tag=newtailue" title="Show all blog posts tagged with 'newtailue'">newtailue</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
@@ -172,9 +172,11 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <div id="showTranscriptions">
-<div>Show transcriptions</div>
+<div>In yellow boxes, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
 <div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<!--div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div-->
 </div>
 
 
@@ -212,6 +214,97 @@ where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem"
 
 
 
+<section>
+<h2 id="vowels">Vowels</h2>
+    
+<section>
+<h3 id="inherent">Inherent vowel</h3>
+<p>Each consonant symbol has an inherent vowel sound, typically transcribed as <span class="ipa">a</span>.<sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf"></a></sup></p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="vowelsigns">Vowel signs</h3>
+<p>To produce a different vowel than the inherent one, New Tai Lü uses one or more vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="khb">ᦂᦲ</span> <span class="trans">ki</span></span>. </p>
+<p>All vowel signs in New Tai Lü are ordinary spacing characters, rather than combining characters, and may appear before or after the base.</p>
+<p>Vowel-sign positions are as follows:</p>
+<ul>
+<li>4 prescript</li>
+<li>13 postscript</li>
+</ul>
+<p>Vowel-signs can also be combined to create additional sounds.</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="prescript">Prescript vowel signs</h3>
+
+<figure class="characterBox auto" data-cols="ipa,trans">ᦺ␣ᦵ␣ᦶ␣ᦷ</figure>
+<p>New Tai Lü uses a visual encoding model (since Unicode 8.0), like Thai and Lao. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></sup></p>
+<p>The 4 vowel signs that appear to the left of the consonant are therefore typed and stored before the consonant, even though they are pronounced after.</p>
+<p>Note that <span class="codepoint" translate="no"><span lang="khb">&#x19B6;</span> [<a href="/scripts/newtailue/block#char19B6"><span class="uname">U+19B6 NEW TAI LUE VOWEL SIGN AE</span></a>]</span> should not be typed as two successive <span class="codepoint" translate="no"><span lang="khb">&#x19B5;</span> [<a href="/scripts/newtailue/block#char19B5"><span class="uname">U+19B5 NEW TAI LUE VOWEL SIGN E</span></a>]</span> characters. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></sup></p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="postscript">Simple postscript vowel signs</h3>
+
+<figure class="characterBox auto" data-cols="ipa,trans">ᦱ␣ᦲ␣ᦹ␣ᦳ␣ᦴ␣ᦸ␣ᦰ</figure>
+
+<p>The typical use of <span class="codepoint" translate="no"><span lang="khb">&#x19B0;</span> [<a href="/scripts/newtailue/block#char19B0"><span class="uname">U+19B0 NEW TAI LUE VOWEL SIGN VOWEL SHORTENER</span></a>]</span> is to produce a short open vowel, however it is sometimes used to distinguish homonyms or for onomatopoeia. <sup><a href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></sup></p>
+<p>In closed syllables, long vowels are usually pronounced short except for the vowel <span class="charExample" translate="no"><span class="ex" lang="khb">ᦱ</span></span>. <sup><a href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></sup></p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="diphthongs">Diphthongs</h3>
+
+<p>In addition to the previously mentioned simple vowel signs there is a set of diphthongs that combine the basic vowel sound with <span class="ipa">j</span>. These  all follow the consonant.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans">ᦻ␣ᦿ␣ᦼ␣ᦽ␣ᦾ␣ᧀ</figure>
+
+</section>
+
+
+
+<section>
+<h3 id="multipart">Multipart vowels</h3>
+<p>The following vowel sounds are produced by combining the above symbols around or after the consonant character.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans">-ᦲᦰ␣ᦵ-ᦰ␣ᦶ-ᦰ␣ᦷ-ᦰ␣-ᦸᦰ␣ᦵ-ᦲᦰ␣ᦵ-ᦲ␣-ᦹᦰ</figure>
+
+
+<!--figure class="characterBox">
+<div class="listAll" onClick="listAll(this, 'khb')">list all 8</div>
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="khb">-ᦲᦰ</span><span class="listIPA">i?</span><span class="listTrans">i’</span></div>
+<div class="listPair"><span class="listItem" lang="khb">ᦵ-ᦰ</span><span class="listIPA">e?</span><span class="listTrans">e’</span></div>
+<div class="listPair"><span class="listItem" lang="khb">ᦶ-ᦰ</span><span class="listIPA">ɛ?</span><span class="listTrans">ɛ’</span></div>
+<div class="listPair"><span class="listItem" lang="khb">ᦷ-ᦰ</span><span class="listIPA">o?</span><span class="listTrans">o’</span></div>
+<div class="listPair"><span class="listItem" lang="khb">-ᦸᦰ</span><span class="listIPA">ɔʔ</span><span class="listTrans">ɔ’</span></div>
+<div class="listPair"><span class="listItem" lang="khb">ᦵ-ᦲᦰ</span><span class="listIPA">əʔ</span><span class="listTrans">ei’</span></div>
+<div class="listPair"><span class="listItem" lang="khb">ᦵ-ᦲ</span><span class="listIPA">əː</span><span class="listTrans">ei</span></div>
+<div class="listPair"><span class="listItem" lang="khb">-ᦹᦰ</span><span class="listIPA">ɯ</span><span class="listTrans">ɯ’</span></div>
+</div>
+</figure-->
+</section>
+</section>
+
+
+
+
 
 
 <section>
@@ -220,55 +313,8 @@ where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem"
 <section>
 <h3 id="basic_consonants">Basic consonants</h3>
 
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'khb')">list all 44</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="khb">ᦂ</span><span class="listIPA">k</span><span class="listTrans">k</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦅ</span><span class="listIPA">k</span><span class="listTrans">ḵ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦦ</span><span class="listIPA">kʷ</span><span class="listTrans">kʷ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦨ</span><span class="listIPA">kʷ</span><span class="listTrans">ḵʷ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦄ</span><span class="listIPA">ŋa</span><span class="listTrans">ŋ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦇ</span><span class="listIPA">ŋa</span><span class="listTrans">ŋ̱</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦈ</span><span class="listIPA">ʦ, ʨ</span><span class="listTrans">ʦ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦋ</span><span class="listIPA">ʦ, ʨ</span><span class="listTrans">ʦ̱</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦎ</span><span class="listIPA">t</span><span class="listTrans">t</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦑ</span><span class="listIPA">t</span><span class="listTrans">ṯ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦏ</span><span class="listIPA">tʰ</span><span class="listTrans">tʰ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦒ</span><span class="listIPA">tʰ</span><span class="listTrans">ṯʰ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦡ</span><span class="listIPA">d</span><span class="listTrans">d</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦤ</span><span class="listIPA">d</span><span class="listTrans">ḏ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦐ</span><span class="listIPA">n</span><span class="listTrans">n</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦓ</span><span class="listIPA">n</span><span class="listTrans">ṉ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦔ</span><span class="listIPA">p</span><span class="listTrans">p</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦗ</span><span class="listIPA">p</span><span class="listTrans">p̱</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦕ</span><span class="listIPA">pʰ</span><span class="listTrans">pʰ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦘ</span><span class="listIPA">pʰ</span><span class="listTrans">p̱ʰ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦢ</span><span class="listIPA">b</span><span class="listTrans">b</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦥ</span><span class="listIPA">b</span><span class="listTrans">ḇ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦖ</span><span class="listIPA">m</span><span class="listTrans">m</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦙ</span><span class="listIPA">m</span><span class="listTrans">m̱</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦜ</span><span class="listIPA">l</span><span class="listTrans">l</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦟ</span><span class="listIPA">l</span><span class="listTrans">ḻ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦊ</span><span class="listIPA">j</span><span class="listTrans">y</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦍ</span><span class="listIPA">j</span><span class="listTrans">y̱</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦛ</span><span class="listIPA">w</span><span class="listTrans">w</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦞ</span><span class="listIPA">w</span><span class="listTrans">w̱</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦠ</span><span class="listIPA">h</span><span class="listTrans">h</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦣ</span><span class="listIPA">h</span><span class="listTrans">ẖ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦃ</span><span class="listIPA">x</span><span class="listTrans">x</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦆ</span><span class="listIPA">x</span><span class="listTrans">x̱</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦧ</span><span class="listIPA">xʷ</span><span class="listTrans">xʷ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦩ</span><span class="listIPA">xʷ</span><span class="listTrans">x̱ʷ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦉ</span><span class="listIPA">s, ɕ</span><span class="listTrans">s</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦌ</span><span class="listIPA">s, ɕ</span><span class="listTrans">s̱</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦪ</span><span class="listIPA">sʷ</span><span class="listTrans">sʷ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦫ</span><span class="listIPA">sʷ</span><span class="listTrans">s̱ʷ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦚ</span><span class="listIPA">f</span><span class="listTrans">f</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦝ</span><span class="listIPA">f</span><span class="listTrans">f̱</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦀ</span><span class="listIPA">ʔ</span><span class="listTrans">ạ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦁ</span><span class="listIPA">ʔ</span><span class="listTrans">ạ̱</span></div>
-</div>
-</figure>
+<figure class="characterBox auto" data-cols="ipa,trans">ᦂ␣ᦅ␣ᦦ␣ᦨ␣ᦄ␣ᦇ␣ᦈ␣ᦋ␣ᦎ␣ᦑ␣ᦏ␣ᦒ␣ᦡ␣ᦤ␣ᦐ␣ᦓ␣ᦔ␣ᦗ␣ᦕ␣ᦘ␣ᦢ␣ᦥ␣ᦖ␣ᦙ␣ᦜ␣ᦟ␣ᦊ␣ᦍ␣ᦛ␣ᦞ␣ᦠ␣ᦣ␣ᦃ␣ᦆ␣ᦧ␣ᦩ␣ᦉ␣ᦌ␣ᦪ␣ᦫ␣ᦚ␣ᦝ␣ᦀ␣ᦁ</figure>
+
 
 
 
@@ -285,18 +331,9 @@ where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem"
 <h3 id="prenasalised">Final consonants</h3>
 
 <p>New Tai Lü has a set of dedicated final consonants. A small hook-like modification indicates that they have no inherent vowel. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></sup></p>
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'khb')">list all 7</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="khb">ᧅ</span><span class="listIPA">k</span><span class="listTrans">k̽</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᧂ</span><span class="listIPA">ŋ</span><span class="listTrans">ŋ̽</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᧆ</span><span class="listIPA">t</span><span class="listTrans">t̽</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᧃ</span><span class="listIPA">n</span><span class="listTrans">n̽</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᧇ</span><span class="listIPA">p</span><span class="listTrans">p̽</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᧄ</span><span class="listIPA">m</span><span class="listTrans">m̽</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᧁ</span><span class="listIPA">u̯</span><span class="listTrans">w̽</span></div>
-</div>
-</figure>
+
+<figure class="characterBox auto" data-cols="ipa,trans">ᧅ␣ᧂ␣ᧆ␣ᧃ␣ᧇ␣ᧄ␣ᧁ</figure>
+
 
 </section>
 
@@ -305,13 +342,8 @@ where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem"
 <section>
 <h3 id="ligatures">Ligatures</h3>
 
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'khb')">list all 2</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="khb">᧞</span><span class="listIPA">lɛʔ</span><span class="listTrans">lˀ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">᧟</span><span class="listIPA">lɛu</span><span class="listTrans">lʷ</span></div>
-</div>
-</figure>
+<figure class="characterBox auto" data-cols="ipa,trans">᧞␣᧟</figure>
+
 
 
 <p>New Tai Lü has two ligatures, used for abbreviations.</p>
@@ -321,115 +353,6 @@ where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem"
 
 </section>
 
-
-
-
-
-  
-<section>
-<h2 id="vowels">Vowels</h2>
-    
-<section>
-<h3 id="inherent">Inherent vowel</h3>
-<p>Each consonant symbol has an inherent vowel sound, typically transcribed as <span class="ipa">a</span>.<sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf"></a></sup></p>
-<p>To produce a different vowel than the inherent one, New Tai Lü uses one or more vowel-signs. Vowel-signs in New Tai Lü are all normal spacing characters, and may appear before or after the base. They may also be combined to produce additional sounds.</p>
-</section>
-
-
-
-
-
-<section>
-<h3 id="prescript">Prescript vowel signs</h3>
-
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'khb')">list all 4</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="khb">ᦺ</span><span class="listIPA">ai̯</span><span class="listTrans">a͕ʲ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦵ</span><span class="listIPA">eː</span><span class="listTrans">e͕</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦶ</span><span class="listIPA">ɛ</span><span class="listTrans">ɛ͕</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦷ</span><span class="listIPA">oː</span><span class="listTrans">o͕</span></div>
-</div>
-</figure>
-
-
-
-<p>New Tai Lü uses a visual encoding model (since Unicode 8.0), like Thai and Lao. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></sup></p>
-<p>The 4 vowel signs that appear to the left of the consonant are therefore typed and stored before the consonant, even though they are pronounced after.</p>
-<p>Note that <span class="codepoint" translate="no"><span lang="khb">&#x19B6;</span> [<a href="/scripts/newtailue/block#char19B6"><span class="uname">U+19B6 NEW TAI LUE VOWEL SIGN AE</span></a>]</span> should not be typed as two successive <span class="codepoint" translate="no"><span lang="khb">&#x19B5;</span> [<a href="/scripts/newtailue/block#char19B5"><span class="uname">U+19B5 NEW TAI LUE VOWEL SIGN E</span></a>]</span> characters. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></sup></p>
-</section>
-
-
-
-
-
-<section>
-<h3 id="postscript">Simple postscript vowel signs</h3>
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'khb')">list all 7</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="khb">ᦱ</span><span class="listIPA">aː</span><span class="listTrans">ā</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦲ</span><span class="listIPA">i</span><span class="listTrans">i</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦹ</span><span class="listIPA">ɯ</span><span class="listTrans">ɯ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦳ</span><span class="listIPA">uʔ</span><span class="listTrans">u</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦴ</span><span class="listIPA">u</span><span class="listTrans">ū</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦸ</span><span class="listIPA">ɔ</span><span class="listTrans">ɔ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦰ</span><span class="listIPA">ʔ</span><span class="listTrans">ʔ</span></div>
-</div>
-</figure>
-
-
-
-
-
-
-<p>All vowel signs in New Tai Lü are ordinary spacing characters, rather than combining characters.</p>
-<p>The typical use of <span class="codepoint" translate="no"><span lang="khb">&#x19B0;</span> [<a href="/scripts/newtailue/block#char19B0"><span class="uname">U+19B0 NEW TAI LUE VOWEL SIGN VOWEL SHORTENER</span></a>]</span> is to produce a short open vowel, however it is sometimes used to distinguish homonyms or for onomatopoeia. <sup><a href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></sup></p>
-<p>In closed syllables, long vowels are usually pronounced short except for the vowel <span class="charExample" translate="no"><span class="ex" lang="khb">ᦱ</span></span>. <sup><a href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></sup></p>
-</section>
-
-
-
-
-
-<section>
-<h3 id="diphthongs">Diphthongs</h3>
-
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'khb')">list all 6</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="khb">ᦻ</span><span class="listIPA">aːi̯</span><span class="listTrans">aʲ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦿ</span><span class="listIPA">ɯi̯</span><span class="listTrans">ɯʲ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦼ</span><span class="listIPA">ui̯</span><span class="listTrans">uʲ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦽ</span><span class="listIPA">oi̯</span><span class="listTrans">oʲ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦾ</span><span class="listIPA">ɔi̯</span><span class="listTrans">ɔʲ</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᧀ</span><span class="listIPA">əi̯</span><span class="listTrans">əʲ</span></div>
-</div>
-</figure>
-
-<p>In addition to the previously mentioned simple vowel signs there is a set of diphthongs that combine the basic vowel sound with <span class="ipa">j</span>. These  all follow the consonant.</p>
-</section>
-
-
-
-<section>
-<h3 id="multipart">Multipart vowels</h3>
-<p>The following vowel sounds are produced by combining the above symbols around or after the consonant character.</p>
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'khb')">list all 8</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="khb">-ᦲᦰ</span><span class="listIPA">i?</span><span class="listTrans">i’</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦵ-ᦰ</span><span class="listIPA">e?</span><span class="listTrans">e’</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦶ-ᦰ</span><span class="listIPA">ɛ?</span><span class="listTrans">ɛ’</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦷ-ᦰ</span><span class="listIPA">o?</span><span class="listTrans">o’</span></div>
-<div class="listPair"><span class="listItem" lang="khb">-ᦸᦰ</span><span class="listIPA">ɔʔ</span><span class="listTrans">ɔ’</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦵ-ᦲᦰ</span><span class="listIPA">əʔ</span><span class="listTrans">ei’</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᦵ-ᦲ</span><span class="listIPA">əː</span><span class="listTrans">ei</span></div>
-<div class="listPair"><span class="listItem" lang="khb">-ᦹᦰ</span><span class="listIPA">ɯ</span><span class="listTrans">ɯ’</span></div>
-</div>
-</figure>
-</section>
-</section>
   
 
 
@@ -448,15 +371,10 @@ where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem"
   <section>
   <h2 id="tones">Tones</h2>
 
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'khb')">list all 2</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="khb">ᧈ</span><span class="listTrans">¹</span></div>
-<div class="listPair"><span class="listItem" lang="khb">ᧉ</span><span class="listTrans">²</span></div>
-</div>
-</figure>
+<figure class="characterBox auto" data-cols="trans">ᧈ␣ᧉ</figure>
 
-<p>New Tai Lü has two tone marks which are written at the end of an unchecked syllable. Because consonants come in pairs to denote two tonal registers, the two tone marks allow for representation of six specific tones. <sup><a href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></sup></p>
+
+<p>New Tai Lü has two tone marks, which are written at the end of an unchecked syllable. Because consonants come in pairs to denote two tonal registers, the two tone marks allow for representation of six specific tones. <sup><a href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></sup></p>
 <p>Tai Lü has 6 tones in unchecked syllables (ending in sonorants <span class="ipa">m, n, ŋ, w, j</span> or vowels). <sup><a href="https://en.wikipedia.org/wiki/Tai_Lue_language">wl</a></sup></p>
 
 <table>
@@ -539,22 +457,10 @@ where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem"
 <section>
 <h2 id="digits">Numbers</h2>
     <p>New Tai Lü has its own set of digits, derived from the Tai Tham <span class="name">hora</span> set. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></sup></p>
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'khb')">list all 11</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="khb">᧐</span><span class="listTrans">0</span></div>
-<div class="listPair"><span class="listItem" lang="khb">᧑</span><span class="listTrans">1</span></div>
-<div class="listPair"><span class="listItem" lang="khb">᧒</span><span class="listTrans">2</span></div>
-<div class="listPair"><span class="listItem" lang="khb">᧓</span><span class="listTrans">3</span></div>
-<div class="listPair"><span class="listItem" lang="khb">᧔</span><span class="listTrans">4</span></div>
-<div class="listPair"><span class="listItem" lang="khb">᧕</span><span class="listTrans">5</span></div>
-<div class="listPair"><span class="listItem" lang="khb">᧖</span><span class="listTrans">6</span></div>
-<div class="listPair"><span class="listItem" lang="khb">᧗</span><span class="listTrans">7</span></div>
-<div class="listPair"><span class="listItem" lang="khb">᧘</span><span class="listTrans">8</span></div>
-<div class="listPair"><span class="listItem" lang="khb">᧙</span><span class="listTrans">9</span></div>
-<div class="listPair"><span class="listItem" lang="khb">᧚</span><span class="listTrans">1̣</span></div>
-</div>
-</figure>
+
+<figure class="characterBox auto" data-cols="trans">᧐␣᧑␣᧒␣᧓␣᧔␣᧕␣᧖␣᧗␣᧘␣᧙␣᧚</figure>
+
+
 <p><span class="codepoint" translate="no"><span lang="khb">&#x19DA;</span> [<a href="/scripts/newtailue/block#char19DA"><span class="uname">U+19DA NEW TAI LUE THAM DIGIT ONE</span></a>]</span> is an alternative glyph for <span class="codepoint" translate="no"><span lang="khb">&#x19D1;</span> [<a href="/scripts/newtailue/block#char19D1"><span class="uname">U+19D1 NEW TAI LUE DIGIT ONE</span></a>]</span> when it might otherwise be confused with the vowel <span class="codepoint" translate="no"><span lang="khb">&#x19B1;</span> [<a href="/scripts/newtailue/block#char19B1"><span class="uname">U+19B1 NEW TAI LUE VOWEL SIGN AA</span></a>]</span>. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></sup></p>
 </section>
 
@@ -572,31 +478,22 @@ where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem"
   
 <section>
 <h2 id="boundaries">Structural boundaries &amp; markers</h2>
-<section>
-<h3 id="delimiters">Grapheme, word &amp; phrase boundaries</h3>
-    <p>Words are separated by spaces.</p>
-  <p>New Tai Lü  appears to use fullwidth Chinese punctuation. May include the following (needs to be checked). Not sure whether it also uses western punctuation.</p>
-  
-  <figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'khb')">list all 14</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="khb">〈</span></div>
-<div class="listPair"><span class="listItem" lang="khb">〉</span></div>
-<div class="listPair"><span class="listItem" lang="khb">《</span></div>
-<div class="listPair"><span class="listItem" lang="khb">》</span></div>
-<div class="listPair"><span class="listItem" lang="khb">（</span></div>
-<div class="listPair"><span class="listItem" lang="khb">）</span></div>
-<div class="listPair"><span class="listItem" lang="khb">！</span></div>
-<div class="listPair"><span class="listItem" lang="khb">？</span></div>
-<div class="listPair"><span class="listItem" lang="khb">：</span></div>
-<div class="listPair"><span class="listItem" lang="khb">；</span></div>
-<div class="listPair"><span class="listItem" lang="khb">。</span></div>
-<div class="listPair"><span class="listItem" lang="khb">、</span></div>
-<div class="listPair"><span class="listItem" lang="khb">，</span></div>
-<div class="listPair"><span class="listItem" lang="khb">．</span></div>
-</div>
-</figure>
 
+<section>
+<h3 id="words">Word boundaries</h3>
+
+<p>Words are separated by spaces.</p>
+</section>
+
+
+
+
+<section>
+<h3 id="phrase">Phrase boundaries</h3>
+
+  <p>New Tai Lü  appears to use fullwidth Chinese punctuation. May include the following (needs to be checked). Not sure whether it also uses western punctuation.</p>
+
+<figure class="characterBox auto" data-cols="trans">〈␣〉␣《␣》␣（␣）␣！␣？␣：␣；␣。␣、␣，␣．</figure>
 
 </section>
   
@@ -610,48 +507,6 @@ where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem"
 <h3 id="dir">Text direction</h3>
     <p>New Tai Lü script is written horizontally and left to right.</p>
 </section>
-
-
-
-<!--section id="hyphens">
-  <h3 id="hyphens">Hyphens</h3>
-     <p>New Tai Lü language text  uses <span class="codepoint"><span lang="blt">&#x2010;</span> [<span class="uname">U+2010 HYPHEN</span>]</span>, <span class="codepoint"><span lang="blt">&#x2013;</span> [<span class="uname">U+2013 EN DASH</span>], and </span> <span class="codepoint"><span lang="blt">&#x2014;</span> [<span class="uname">U+2014 EM DASH</span>]</span>.</p>
-</section>
-
-
-
-<section>
-<h3 id="emphasis">Emphasis</h3>
-     <p>Emphasis can sometimes be expressed by stretching the baseline of one or more words. See the section on justification below for more information about baseline stretching.</p>
-</section>
-
-
-
-<section>
-<h3 id="quotations">Quotations</h3>
-     <p>New Tai Lü language text typically uses <span class="codepoint"><span lang="blt" dir="ltr">&#x00AB;</span> <a href="/scripts/latin/block#char00AB">[<span class="uname">U+00AB LEFT-POINTING DOUBLE ANGLE QUOTATION MARK</span>]</a></span> and <span class="codepoint"><span lang="blt" dir="ltr">&#x00BB;</span> <a href="/scripts/latin/block#char00BB">[<span class="uname">U+00BB RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK</span>]</a></span> for quotation marks.<span class="charExample"><span class="ex" lang="hy"></span></span></p>
-     <p><span class="codepoint">
-<mark>Usage tip</mark>
-It is important to note that the Unicode names for these marks should be ignored. 'Left-pointing' should be read 'Start', and 'Right-pointing' as 'End'. The direction in which the glyphs point will be automatically determined according to the base direction of the text.</span></p>
-</section>
-
-
-
-
-<section>
-    <h3 id="justify">Justification</h3>
-<p>Better quality justification systems stretch glyphs, rather than adding baseline extensions. This dynamic stretching of glyphs is often called 'kashida'. In some typesetting systems, such as InDesign, the tatweel character serves more to indicate opportunities for stretching, and the glyph for the character itself is not shown.</p>
-<p>It is very common to see baseline stretching in modern New Tai Lü text where a word or phrase is stretched to fill a particular space, eg. the New Tai Lü tag line (<span class="ex" lang="blt">الابداع المتجدد</span> <span class="meaning">Creativity renewed</span>) below the word Lexus in the following image is stretched to be the same width.</p>
-<figure>
-<img src="images/stretch-plus-ligature-1.jpg" alt="New Tai Lü text stretched to fit the width of the word Lexus.">
-<figcaption>New Tai Lü text being stretched to fit the width of text alongside it.</figcaption>
-</figure>
-<p class="instructions">Use the control below to see how your browser justifies the text sample here.</p>
-    <p lang="blt" id="justificationExample" style="text-align:start;">7 වන වගන්තිය සියල්ලන්ම නීතිය ඉදිරියෙහි එකිනෙකාට සමාන වන අතර, නීතීයේ ආරක්ෂාව ලැබීමට කිසිදු විශේෂයක් නොමැතිව, සියල්ලෝම හිමිකම් ලබති, මේ ප්‍රකාශනයට පටහැනි ලෙස කෙරෙන ඕනෑම අසාධාරණයකින් ආරක්ෂා වීමේ අයිතියත් එබඳු අසාධාරණයන්ට පෙළඹවීමෙන් ආරක්ෂාවීමේ අයිතියත් සියල්ලන්ටම හිමි වේ.</p>
-    <p class="english" dir="ltr">
-      <button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Justify   </button>
-    </p>
-</section-->
 
 
 
@@ -715,15 +570,12 @@ Page &amp; book layout
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/newtailue"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-20  8:58<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bnewtailue%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fnewtailue%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/newtailue"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-26  17:51<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bnewtailue%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fnewtailue%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"></div>
 </body>
 <script>
-var base = '/scripts/newtailue/block'
-initialiseShowNames(base, 'c');
-document.getElementById('featureTableBody').innerHTML = makeSidePanel("New Tai Lü")
-createtoc(3)
+initialiseSummary('/scripts/newtailue/block','khb','New Tai Lü')
 </script>
 </html>
