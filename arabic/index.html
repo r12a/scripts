@@ -6,7 +6,7 @@
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <meta name="description" content="Summary of the Arabic script."/>
 <link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../summaries/local.css" />
+<link rel="stylesheet" href="../common/local.css" />
 <link rel="stylesheet" href="../style/print.css"/>
 <style type="text/css">
 @font-face {
@@ -35,31 +35,31 @@
 .large[lang=ur] {font-size: 300%; text-align: center; line-height: 1; margin-top: .75em; margin-bottom: .5em; }
 </style>
 
-<script src="/shared/code/boilerplate.js"></script>
-<script src="/shared/code/toc_2019.js"></script>
-<script src="/shared/code/all-names.js"></script>
-<script src="/shared/code/character_conversion.js"></script>
-<script src="/shared/code/show_codepoints.js"></script>
-<script src="/shared/fontlists/manage.js"></script>
-<script src="/shared/code/scriptGroups.js"></script>
+<script src="db.js"> </script>
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2019.js"></script>
+<script src="../../shared/code/all-names.js"></script>
+<script src="../../shared/code/character_conversion.js"></script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/fontlists/manage.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
-<script src="../common/block-functions.js"></script>
-<script src="/shared/code/getLinks.js"></script>
-<script src="/scripts/linkdata/linkdb.js"></script>
+<script src="../../shared/code/getLinks.js"></script>
+<script src="../linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
 
-<script src="/shared/fontlists/arabic.js"> </script>
+<script src="../../shared/fontlists/arabic.js"> </script>
 </head>
 
 <body>
 <header>
 <div id="header-boilerplate"></div>
-<script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
 </header>
 
 <h1>Arabic script summary</h1>
 
-<nav id="top"><a href="#header-boilerplate"><img src="/shared/images/up.png" alt="Jump to top of page." title="Jump to top of page."/></a></nav>
+<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="Jump to top of page." title="Jump to top of page."/></a></nav>
 
 <aside class="sidebar">
 <nav>
@@ -110,20 +110,21 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->22 January, 2019<!-- #EndDate -->
-&bull; tags <a href="http://rishida.net/blog/index.php?tag=arabic" title="Show all blog posts tagged with 'arabic'">arabic</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+  <!-- #BeginDate format:Sw1 -->27 January, 2019<!-- #EndDate -->
+&bull; tags <a href="http://r12a.github.io/blog/index.php?tag=arabic" title="Show all blog posts tagged with 'arabic'">arabic</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
 
 <div class="section">
   <p>This page provides basic information about the Arabic script and its use for the Arabic language. (See also the pages <a class="linkHighlight" href="/scripts/arabic/urdu">Urdu Writing System</a> and <a class="linkHighlight" href="/scripts/arabic/uighur">Uighur Writing System</a>.) It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned.   For character-specific details follow the links to the <a class="linkHighlight" href="/scripts/arabic/block">Arabic character notes</a>. </p>
 <p>For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>.</p>
+<p class="instructions">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+<p class="instructions"><strong>The ipa and transcription correspondences shown on this page are specific to the Arabic language. See the other summary documents mentioned above  for other languages.</strong></p>
 <details id="scriptLinks">
 <summary class="instructions">More links for the Arabic script.</summary>
   <div id="linklist"></div>
   <script>document.getElementById('linklist').innerHTML = getData('Arab')</script>
 </details>
-  <p class="instructions">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
 </div>
 
 
@@ -183,8 +184,18 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
   
   
   
-  
-  
+<div id="showTranscriptions">
+<div>In yellow boxes, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div><label>ISO 9985 <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+</div>
+
+
+
+
+
 <section>
 <h2 id="chars">Character lists</h2>
     <p>The Arabic script characters in Unicode 10.0 are spread across 3 blocks:</p>
@@ -211,6 +222,73 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
 
 
 
+
+  
+<section>
+<h2 id="vowels">Vowels</h2>
+
+
+<section>
+<h3 id="matres">Matres lectionis</h3>
+
+<p class="definition">In the spelling of Arabic and some other Semitic languages, matres lectionis refers to the use of certain consonants to indicate a vowel. <sup><a href="https://en.wikipedia.org/wiki/Mater_lectionis">w</a></sup></p>
+<p>In Arabic, the following may  indicate the location of a  long vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">قلوب</span> <span class="trans">qlwb</span> <span class="ipa">quluːb</span> <span class="meaning">hearts</span></span>, <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">تاريخ</span> <span class="trans">tɑryx</span> <span class="ipa">tɑːriːx</span> <span class="meaning">history</span></span>. They are always visible, whether or not the text shows vowel diacritics.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ا␣و␣ي</figure>
+<p>These characters, especially <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0627;</span> [<a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span>, may also be used with a number of other small marks, such as <span class="name">hamza</span>, for particular effects. Read further for more details.</p>
+<p>(At the risk of being pedantic, <span class="name">alef</span> doesn't actually represent a consonant on it's own (unlike the other two). It is really only a support for a vowel and/or diacritic.)</p>
+</section>
+
+
+
+
+
+
+<section>
+<h3 id="alefmaksura">Alef maksura</h3>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ى</figure>
+
+<p><span class="codepoint"><span lang="ar" dir="rtl">&#x0649;</span> <a href="/scripts/arabic/block#char0649">[<span class="uname">U+0649 ARABIC LETTER ALEF MAKSURA</span>]</a></span> represents the  long a-vowel at the end of many words when it is written with <span class="uname">yeh</span> instead of an <span class="uname">alef</span>. In this case the <span class="uname">yeh</span> is typically printed without dots, to avoid confusion, although this is not universal.  This spelling only occurs with certain words, and only when the final sound is <span class="ipa">aː</span>, eg. <span class="ex" dir="rtl" lang="ar">معنى</span> <span class="ipa">mæʕnaː</span>. If any suffix is added, the spelling reverts to the normal alef, eg. <span class="ex" dir="rtl" lang="ar">معناهم</span> <span class="ipa">mæʕnaː-hum</span>.</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="shortvowels">Short vowels</h3>
+
+<p>Short vowels can be expressed using diacritics, eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">العَرَبِيَّة‎</span> <span class="trans">ɑlʕarabiyaᵚẗ‎ (al-ʻarabīyah)</span> <span class="meaning">Arabic</span></span>, however for languages such as Arabic, Persian and Urdu they are typically not used, unless there is a particular need to help the reader understand the pronunciation. The previous example would therefore usually be written <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">العربية‎</span> <span class="trans">ɑlʕrbyẗ‎ (al-ʻarabīyah)</span></span>. On the other hand, when the script is used for Uighur, all vowels are shown, as a matter of course. These diacritics are also  used in  the Quran (though not originally), to reduce ambiguity. </p>
+<p>The Arabic language uses the following vowel diacritics:</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">َ␣ُ␣ِ</figure>
+<p>There is a secondary set of vowel diacritics with origins in classical arabic, where indefinite nouns and adjectives were marked by a final n-sound, called <span class="ex" dir="rtl" lang="ar">تنوين</span> <span class="ipa">tænwiːn</span> or, in English, 'nunation'. This is normally indicated by visually doubling the vowel diacritic, but there are Unicode characters for each combination. </p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ً␣ٌ␣ٍ</figure>
+<p>On a word ending with an a-vowel (though not with a feminine ending or some other suffixes) an extra alef was also added at the end of the word. In modern arabic printing the fathatan is usually dropped, but the alef is retained. The pronunciation of the ending <span class="ipa">æn</span> is also retained in many words, eg.<span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">كِتَابًا</span> <span class="trans">kitaɑbaⁿɑ</span> <span class="ipa">kɪtæːbæn</span></span> <span class="ipa">kɪtæːbæn</span>, <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">فَرَسًا</span> <span class="trans">farasaⁿɑ</span> <span class="ipa">færæsæn</span></span>.</p>
+</section>
+
+
+
+
+<section>
+<h3 id="supalef">Superscript alef</h3>
+<p><span class="codepoint"><span lang="ar" dir="rtl">&#x640;&#x0670;</span> <a href="/scripts/arabic/block#char0670">[<span class="uname">U+0670 ARABIC LETTER SUPERSCRIPT ALEF​</span>]</a></span> is used in certain Arabic words such as <span class="ex" dir="rtl" lang="ar">هٰذَا</span> <span class="meaning">this</span> or <span class="ex" dir="rtl" lang="ar">ذٰلِكَ</span> <span class="meaning">that</span>, and not forgetting <span class="ex" dir="rtl" lang="ar">اللّٰه</span> <span class="meaning">Allah</span>.</p>
+</section>
+
+
+
+
+<section>
+<h3 id="vowelabsence">Vowel absence</h3>
+<p>When text is vowelled, <span class="codepoint"><span lang="ar" dir="rtl">&#x640;&#x0652;</span> <a href="/scripts/arabic/block#char0652">[<span class="uname">U+0652 ARABIC SUKUN</span>]</a></span> can be used over a consonant to indicate that it is not followed by a vowel sound, eg. <span class="ex" dir="rtl" lang="ar">مَكْتَب</span> <span class="ipa">maktab</span>.</p>
+</section>
+</section>
+
+
+
+
   
 <section>
 <h2 id="letters">Letters</h2>
@@ -222,68 +300,16 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
   
 <p>The vast majority of letters represent consonants. A few represent long vowels.</p>
 <p>The following letters are those generally recognised as constituting the Arabic alphabet.</p>
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'ar')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="ar">ا</span><span class="listTrans">ˡ</span><span class="listIPA">aː, a, ʔa, -</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ب</span><span class="listTrans">b</span><span class="listIPA">b</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ت</span><span class="listTrans">t</span><span class="listIPA">t</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ث</span><span class="listTrans">ṯ</span><span class="listIPA">θ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ج</span><span class="listTrans">ǧ</span><span class="listIPA">ʒ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ح</span><span class="listTrans">ḥ</span><span class="listIPA">ħ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">خ</span><span class="listTrans">ẖ</span><span class="listIPA">x</span></div>
-<div class="listPair"><span class="listItem" lang="ar">د</span><span class="listTrans">d</span><span class="listIPA">d</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ذ</span><span class="listTrans">ḏ</span><span class="listIPA">ð</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ر</span><span class="listTrans">r</span><span class="listIPA">r</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ز</span><span class="listTrans">z</span><span class="listIPA">z</span></div>
-<div class="listPair"><span class="listItem" lang="ar">س</span><span class="listTrans">s</span><span class="listIPA">s</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ش</span><span class="listTrans">š</span><span class="listIPA">ʃ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ص</span><span class="listTrans">ṣ</span><span class="listIPA">s̴</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ض</span><span class="listTrans">ḍ</span><span class="listIPA">d̴</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ط</span><span class="listTrans">ṭ</span><span class="listIPA">t̴</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ظ</span><span class="listTrans">ẓ</span><span class="listIPA">z̴</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ع</span><span class="listTrans">ʿ</span><span class="listIPA">ʕ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">غ</span><span class="listTrans">ġ</span><span class="listIPA">ɣ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ف</span><span class="listTrans">f</span><span class="listIPA">f</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ق</span><span class="listTrans">q</span><span class="listIPA">q</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ك</span><span class="listTrans">k</span><span class="listIPA">k</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ل</span><span class="listTrans">l</span><span class="listIPA">l</span></div>
-<div class="listPair"><span class="listItem" lang="ar">م</span><span class="listTrans">m</span><span class="listIPA">m</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ن</span><span class="listTrans">n</span><span class="listIPA">n</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ه</span><span class="listTrans">h</span><span class="listIPA">h</span></div>
-<div class="listPair"><span class="listItem" lang="ar">و</span><span class="listTrans">w</span><span class="listIPA">w, u</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ي</span><span class="listTrans">y</span><span class="listIPA">j, iː</span></div>
-</div>
-</figure>
 
-<p>Of those, three letters represent either consonants and/or long vowels.</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'ar')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="ar">ا</span><span class="listTrans">a</span></div>
-<div class="listPair"><span class="listItem" lang="ar">و</span><span class="listTrans">w/u</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ي</span><span class="listTrans">y/i</span></div>
-</div>
-</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ا␣ب␣ت␣ث␣ج␣ح␣خ␣د␣ذ␣ر␣ز␣س␣ش␣ص␣ض␣ط␣ظ␣ع␣غ␣ف␣ق␣ك␣ل␣م␣ن␣ه␣و␣ي</figure>
+
+<p>Of those, some letters represent long vowel locations or combinations of consonant plus vowel.</p>
 
 <p>Other letters  commonly found in Arabic include:</p>
 
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'ar')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="ar">ء</span><span class="listTrans">ʾ</span><span class="listIPA">ʔ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">آ</span><span class="listTrans">ā</span><span class="listIPA">ʔaʔ, ʔaː</span></div>
-<div class="listPair"><span class="listItem" lang="ar">أ</span><span class="listTrans">ᵃ</span><span class="listIPA">ʔa, ʔu, ʔ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">إ</span><span class="listTrans">ₐ</span><span class="listIPA">ʔi</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ٱ</span><span class="listTrans">’</span><span class="listIPA">a</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ؤ</span><span class="listTrans">ʷ</span><span class="listIPA">ʔu, ʔ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ئ</span><span class="listTrans">ʸ</span><span class="listIPA">ʔɪ, ʔ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ى</span><span class="listTrans">ỳ</span><span class="listIPA">ɑː</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ة</span><span class="listTrans">ẗ</span><span class="listIPA">-, t</span></div>
-</div>
-</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ء␣آ␣أ␣إ␣ٱ␣ؤ␣ئ␣ى␣ة</figure>
 
-
+<p>Most of the above letters with diacritics decompose in Unicode Normalization Form D (NFD), however <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0671;</span> [<a href="/scripts/arabic/block#char0671"><span class="uname">U+0671 ARABIC LETTER ALEF WASLA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0629;</span> [<a href="/scripts/arabic/block#char0629"><span class="uname">U+0629 ARABIC LETTER TEH MARBUTA</span></a>]</span> do not.</p>
 
 
 
@@ -291,247 +317,16 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
 
 <details>
   <summary class="instructions">Show all letters in the Unicode Arabic blocks.</summary>
-<figure class="characterBox" style="margin:0;">
-<div class="listAll" onClick="listAll(this, 'ar')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="ar">ؠ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ء</span></div>
-<div class="listPair"><span class="listItem" lang="ar">آ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">أ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ؤ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">إ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ئ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ا</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ب</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ة</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ت</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ث</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ج</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ح</span></div>
-<div class="listPair"><span class="listItem" lang="ar">خ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">د</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ذ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ر</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ز</span></div>
-<div class="listPair"><span class="listItem" lang="ar">س</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ش</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ص</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ض</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ط</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ظ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ع</span></div>
-<div class="listPair"><span class="listItem" lang="ar">غ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ػ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ؼ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ؽ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ؾ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ؿ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ـ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ف</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ق</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ك</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ل</span></div>
-<div class="listPair"><span class="listItem" lang="ar">م</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ن</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ه</span></div>
-<div class="listPair"><span class="listItem" lang="ar">و</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ى</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ي</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ٮ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ٯ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ٱ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ٲ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ٳ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ٴ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ٵ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ٶ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ٷ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ٸ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ٹ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ٺ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ٻ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ټ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ٽ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">پ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ٿ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڀ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ځ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڂ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڃ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڄ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">څ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">چ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڇ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڈ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ډ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڊ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڋ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڌ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڍ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڎ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڏ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڐ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڑ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڒ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ړ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڔ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڕ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ږ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڗ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ژ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڙ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ښ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڛ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڜ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڝ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڞ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڟ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڠ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڡ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڢ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڣ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڤ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڥ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڦ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڧ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڨ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ک</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڪ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ګ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڬ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڭ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڮ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">گ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڰ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڱ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڲ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڳ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڴ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڵ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڶ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڷ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڸ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڹ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ں</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڻ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڼ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڽ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ھ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ڿ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ۀ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ہ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ۂ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ۃ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ۄ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ۅ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ۆ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ۇ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ۈ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ۉ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ۊ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ۋ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ی</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ۍ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ێ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ۏ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ې</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ۑ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ے</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ۓ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ە</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ۥ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ۦ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ۮ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ۯ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ۺ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ۻ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ۼ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ۿ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݐ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݑ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݒ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݓ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݔ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݕ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݖ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݗ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݘ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݙ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݚ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݛ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݜ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݝ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݞ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݟ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݠ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݡ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݢ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݣ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݤ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݥ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݦ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݧ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݨ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݩ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݪ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݫ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݬ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݭ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݮ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݯ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݰ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݱ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݲ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݳ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݴ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݵ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݶ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݷ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݸ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݹ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݺ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݻ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݼ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݽ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݾ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ݿ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢠ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢡ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢢ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢣ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢤ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢥ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢦ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢧ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢨ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢩ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢪ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢫ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢬ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢭ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢮ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢯ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢰ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢱ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢲ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢳ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢴ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢶ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢷ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢸ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢹ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢺ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢻ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢼ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ࢽ</span></div>
-</div>
-</figure>  
+  
+<figure class="characterBox auto" data-cols="">ؠ␣ء␣آ␣أ␣ؤ␣إ␣ئ␣ا␣ب␣ة␣ت␣ث␣ج␣ح␣خ␣د␣ذ␣ر␣ز␣س␣ش␣ص␣ض␣ط␣ظ␣ع␣غ␣ػ␣ؼ␣ؽ␣ؾ␣ؿ␣ـ␣ف␣ق␣ك␣ل␣م␣ن␣ه␣و␣ى␣ي␣ٮ␣ٯ␣ٱ␣ٲ␣ٳ␣ٴ␣ٵ␣ٶ␣ٷ␣ٸ␣ٹ␣ٺ␣ٻ␣ټ␣ٽ␣پ␣ٿ␣ڀ␣ځ␣ڂ␣ڃ␣ڄ␣څ␣چ␣ڇ␣ڈ␣ډ␣ڊ␣ڋ␣ڌ␣ڍ␣ڎ␣ڏ␣ڐ␣ڑ␣ڒ␣ړ␣ڔ␣ڕ␣ږ␣ڗ␣ژ␣ڙ␣ښ␣ڛ␣ڜ␣ڝ␣ڞ␣ڟ␣ڠ␣ڡ␣ڢ␣ڣ␣ڤ␣ڥ␣ڦ␣ڧ␣ڨ␣ک␣ڪ␣ګ␣ڬ␣ڭ␣ڮ␣گ␣ڰ␣ڱ␣ڲ␣ڳ␣ڴ␣ڵ␣ڶ␣ڷ␣ڸ␣ڹ␣ں␣ڻ␣ڼ␣ڽ␣ھ␣ڿ␣ۀ␣ہ␣ۂ␣ۃ␣ۄ␣ۅ␣ۆ␣ۇ␣ۈ␣ۉ␣ۊ␣ۋ␣ی␣ۍ␣ێ␣ۏ␣ې␣ۑ␣ے␣ۓ␣ە␣ۥ␣ۦ␣ۮ␣ۯ␣ۺ␣ۻ␣ۼ␣ۿ␣ݐ␣ݑ␣ݒ␣ݓ␣ݔ␣ݕ␣ݖ␣ݗ␣ݘ␣ݙ␣ݚ␣ݛ␣ݜ␣ݝ␣ݞ␣ݟ␣ݠ␣ݡ␣ݢ␣ݣ␣ݤ␣ݥ␣ݦ␣ݧ␣ݨ␣ݩ␣ݪ␣ݫ␣ݬ␣ݭ␣ݮ␣ݯ␣ݰ␣ݱ␣ݲ␣ݳ␣ݴ␣ݵ␣ݶ␣ݷ␣ݸ␣ݹ␣ݺ␣ݻ␣ݼ␣ݽ␣ݾ␣ݿ␣ࢠ␣ࢡ␣ࢢ␣ࢣ␣ࢤ␣ࢥ␣ࢦ␣ࢧ␣ࢨ␣ࢩ␣ࢪ␣ࢫ␣ࢬ␣ࢭ␣ࢮ␣ࢯ␣ࢰ␣ࢱ␣ࢲ␣ࢳ␣ࢴ␣ࢶ␣ࢷ␣ࢸ␣ࢹ␣ࢺ␣ࢻ␣ࢼ␣ࢽ</figure>
+
+  
 </details>
 
 
 <section>
     <h3 id="hamza">Hamza</h3>
-<p><span class="codepoint"><span lang="ar" dir="rtl">&#x0621;</span> <a href="/scripts/arabic/block#char0621">[<span class="uname">U+0621 ARABIC LETTER HAMZA</span>]</a></span> represents the glottal stop sound. For  historical reasons,  is treated as an orthographic sign rather than as a letter of the alphabet. It sometimes stands alone, but usually appears with a 'carrier' letter - alef, waw, or yeh  for which separate precomposed characters are available in Unicode (<span class="exlist" dir="rtl" lang="ar">أ إ ؤ ئ</span>). Examples of use include  <span class="ex" dir="rtl" lang="ar">إكرام</span> <span class="trans">'ikrām</span>, <span class="ex" dir="rtl" lang="ar">نائم</span> <span class="trans">nā'im</span>, and <span class="ex" dir="rtl" lang="ar">بناء</span> <span class="trans">binā'</span>.</p>
+<p><span class="codepoint"><span lang="ar" dir="rtl">&#x0621;</span> <a href="/scripts/arabic/block#char0621">[<span class="uname">U+0621 ARABIC LETTER HAMZA</span>]</a></span> represents the glottal stop sound. For  historical reasons,  it is treated as an orthographic sign rather than as a letter of the alphabet. It sometimes stands alone, but usually appears with a 'carrier' letter - <span class="uname">alef</span>, <span class="uname">waw</span>, or <span class="uname">yeh</span> for which separate precomposed characters are available in Unicode ( <span class="exlist" dir="rtl" lang="ar">أ إ ؤ ئ</span> ). Examples of use include  <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">إكرام</span> <span class="trans">ɑ̜krɑm</span> <span class="ipa">ikrɑːm</span> <span class="meaning">Ikram</span></span>, <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">نائم</span> <span class="trans">nɑy͑m</span> <span class="ipa">nɑːʔim</span> <span class="meaning">sleeping</span></span> , and <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">بناء</span> <span class="trans">bnɑʔ</span> <span class="ipa">binɑːʔ</span> <span class="meaning">building</span></span>.</p>
 <p>In modern printed arabic, the hamza is rarely shown when it occurs at the beginning of a word, but may appear in conjunction with another character. When the hamza is above  another character you should typically use <span class="codepoint"><span dir="rtl" lang="ar">ٔ</span> <a href="#char0654">[<span class="uname">U+0654 ARABIC HAMZA ABOVE</span>]</a></span> with the appropriate base character, although there are a number of exceptions. For more details, see the <a href="block#char0621">character description</a>.</p>
 <p>Classical arabic distinguishes between 'cutting' and 'joining' hamza. 'Cutting' means always pronounced, 'joining' means frequently elided. </p>
 <p>The joining hamza is of little practical importance in modern arabic pronounced without the old case endings. When it does appear in modern Arabic, <span class="codepoint"><span dir="rtl" lang="ar">ٱ</span> <a href="#char0671">[<span class="uname">U+0671 ARABIC LETTER ALEF WASLA</span>]</a></span> is used to indicate a joining hamza.</p>
@@ -545,10 +340,10 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
 <p><span class="codepoint"><span lang="ar" dir="rtl">&#x0622;</span> <a href="/scripts/arabic/block#char0622">[<span class="uname">U+0622 ARABIC LETTER ALEF WITH MADDA ABOVE</span>]</a></span>  is used when either of the two following combinations of glottal stop and a vowel appear in a word:</p>
           <ul>
             <li>
-              <p><span class="ipa">ʔaʔ</span> (hamza, short a, hamza) eg. <span class="ex" dir="rtl" lang="ar">آثار</span> <span class="ipa">ʔaːθaːr</span></p>
+              <p><span class="ipa">ʔaʔ</span> (hamza, short a, hamza) eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">آثار</span> <span class="trans">ɑ̄θɑr</span> <span class="ipa">ʔaːθaːr</span> <span class="meaning">effects</span></span></p>
             </li>
             <li>
-              <p><span class="ipa">ʔaː</span> (hamza, long a) eg. <span class="ex" dir="rtl" lang="ar">قرآن</span> <span class="ipa">qur'ʔaːn</span></p>
+              <p><span class="ipa">ʔaː</span> (hamza, long a) eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">القرآن</span> <span class="trans">ɑlqrɑ̄n</span> <span class="ipa">alqur'ʔaːn</span></span> <span class="ipa">qur'ʔaːn</span></p>
             </li>
           </ul>
           <p>Normal pronunciation in <em>both</em> cases is <span class="ipa">ʔaː</span>.</p>
@@ -557,210 +352,51 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
 
 
 
-
-
-<section>
-<h3 id="alefmaksura">Alef maksura</h3>
-<p><span class="codepoint"><span lang="ar" dir="rtl">&#x0649;</span> <a href="/scripts/arabic/block#char0649">[<span class="uname">U+0649 ARABIC LETTER ALEF MAKSURA</span>]</a></span> represents the  long a-vowel at the end of many words when it is written with <span class="uname">yeh</span> instead of an <span class="uname">alef</span>. In this case the <span class="uname">yeh</span> is typically printed without dots, to avoid confusion, although this is not universal.  This spelling only occurs with certain words, and only when the final sound is <span class="ipa">aː</span>, eg. <span class="ex" dir="rtl" lang="ar">معنى</span> <span class="ipa">mæʕnaː</span>. If any suffix is added, the spelling reverts to the normal alef, eg. <span class="ex" dir="rtl" lang="ar">معناهم</span> <span class="ipa">mæʕnaː-hum</span>.</p>
-</section>
-
-
-
-
 <section>
     <h3 id="tehmarbuta">Teh marbuta</h3>
- <p><span class="codepoint"><span lang="ar" dir="rtl">&#x0629;</span> <a href="/scripts/arabic/block#char0629">[<span class="uname">U+0629 ARABIC LETTER TEH MARBUTA</span>]</a></span> usually has no sound, but is sometimes pronounced <span class="ipa">t</span> in specific grammatical contexts, eg.  <span class="ex" dir="rtl" lang="ar">مدرسة</span> <span class="ipa">mædræsæ</span>.</p>
-          <p>It is used for historical reasons to write the feminine ending, <span class="ipa">æ</span> – the dots are borrowed from teh (<span class="ex" dir="rtl" lang="ar">ت</span>) – and is only used in final position. If any suffix is added, the ending is spelled with <span class="codepoint"><span dir="rtl" lang="ar">ت</span> <a href="#char062A">[<span class="uname">U+062A ARABIC LETTER TEH</span>]</a></span>, eg. <span class="ex" dir="rtl" lang="ar">مدرستنا</span> <span class="ipa">mædræsæt-naː</span>.</p>
-          <p>In modern arabic it is not uncommon to find the two dots omitted, particularly on masculine proper names that have the feminine ending, eg. <span class="ex" dir="rtl" lang="ar">طلبة</span> <span class="ipa">tulbæ</span>.</p>
+ <p><span class="codepoint"><span lang="ar" dir="rtl">&#x0629;</span> <a href="/scripts/arabic/block#char0629">[<span class="uname">U+0629 ARABIC LETTER TEH MARBUTA</span>]</a></span> usually has no sound, eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">مدرسة</span> <span class="trans">mdrsẗ</span> <span class="ipa">mædræsæ</span> <span class="meaning">school</span></span>, but is sometimes pronounced <span class="ipa">t</span> in specific grammatical contexts.</p>
+          <p>It is used for historical reasons to write the feminine ending, <span class="ipa">æ</span> – the dots are borrowed from <span class="uname">teh</span> (<span class="ex" dir="rtl" lang="ar">ت</span>) – and is only used in final position. If any suffix is added, the ending is spelled with <span class="codepoint"><span dir="rtl" lang="ar">ت</span> <a href="#char062A">[<span class="uname">U+062A ARABIC LETTER TEH</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">مدرستنا</span> <span class="trans">mdrstnɑ</span> <span class="ipa">mædræsæt-naː</span> <span class="meaning">our school</span></span>.</p>
+          <p>In modern arabic it is not uncommon to find the two dots omitted, particularly on masculine proper names that have the feminine ending, eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">طلبة</span> <span class="trans">t̴lbẗ</span> <span class="ipa">tulbæ</span></span>.</p>
 <p>Vowelled text may omit the short <span class="ipa">æ</span> diacritic before the <span class="uname">teh marbuta</span>, because the sound is always the same.</p>
 </section>
-
 </section>
 
+
+
+
+
+<section>
+<h2 id="clusters">Consonant clusters &amp; gemination</h2>
+<p>The diacritic <span class="codepoint"><span lang="ar" dir="rtl">&#x640;&#x0651;</span> <a href="/scripts/arabic/block#char0651">[<span class="uname">U+0651 ARABIC SHADDA​</span>]</a></span> doubles the value of the consonant it is attached to, which is phonemically significant in Arabic, eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">تاجر، تجّار</span> <span class="trans">tɑʒr, tʒᵚɑr (tajir, tujjar)</span> <span class="ipa">trader, traders</span></span>. It, too, is not often used, although sometimes it appears when vowel signs don't.</p>
+<p>A common, though not universal, practice is to display any combining <span class="name">kasra</span> below the shadda, rather than below the base consonant, eg. <span class="ex" dir="rtl" lang="ar">قَبِّل</span> <span class="ipa">qæbːɪl</span>. Some fonts, such as Amiri, don't do this.</p>
+</section>
+  
 
 
 
 
   
-  <section>
+  
+  
+    <section>
   <h2 id="cchars">Combining characters</h2>
     
     <p>The main arabic block contains 52 combining characters, with 43 more in the Arabic Extended-A block. However, only a small number are typically used for normal, written Arabic, Persian, etc.</p>
 <p>The standard diacritics in the Arabic language repertoire include the following:</p>
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'ar')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="ar">َ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ُ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ِ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ً</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ٌ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ٍ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ّ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ْ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ٰ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ٔ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ٕ</span></div>
-</div>
-</figure>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc" data-links="#shortvowels,#shortvowels,#shortvowels,#shortvowels,#shortvowels,#shortvowels,#clusters,#vowelabsence,#supalef,#hamza,#hamza">َ␣ُ␣ِ␣ً␣ٌ␣ٍ␣ّ␣ْ␣ٰ␣ٔ␣ٕ</figure>
 
 
-<p>The hamza diacritics were <a href="#hamza">discussed above</a>.</p>
+<p>All of these diacritics are discussed in earlier sections. Follow the links for more information.</p>
 <p>Multiple combining characters may be used for a single base character, such as when both a shadda and a vowel diacritic are used together.</p>
     
   
   <details>
   <summary class="instructions">Show all combining characters in the Unicode Arabic blocks.</summary>
-<figure style="margin:1em 0;">
-<div class="listAll" onClick="listAll(this, 'ar')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="ar">ؐ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ؑ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ؒ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ؓ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ؔ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ؕ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ؖ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ؗ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ؘ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ؙ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ؚ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ً</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ٌ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ٍ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-َ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ُ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ِ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ّ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ْ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ٓ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ٔ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ٕ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ٖ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ٗ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-٘</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ٙ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ٚ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ٛ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ٜ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ٝ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ٞ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ٟ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ٰ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ۖ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ۗ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ۘ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ۙ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ۚ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ۛ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ۜ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-۟</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-۠</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ۡ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ۢ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ۣ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ۤ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ۧ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ۨ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-۪</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-۫</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-۬</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ۭ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣔ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣕ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣖ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣗ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣘ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣙ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣚ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣛ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣜ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣝ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣞ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣟ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-࣠</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-࣡</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣣ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣤ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣥ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣦ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣧ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣨ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣩ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-࣪</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-࣫</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-࣬</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-࣭</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-࣮</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-࣯</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣰ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣱ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣲ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣳ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣴ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣵ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣶ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣷ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣸ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣹ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣺ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣻ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣼ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣽ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣾ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">-ࣿ</span></div>
-</div>
-</figure>  
+  
+<figure class="characterBox auto" data-cols="">ؐ␣ؑ␣ؒ␣ؓ␣ؔ␣ؕ␣ؖ␣ؗ␣ؘ␣ؙ␣ؚ␣ً␣ٌ␣ٍ␣َ␣ُ␣ِ␣ّ␣ْ␣ٓ␣ٔ␣ٕ␣ٖ␣ٗ␣٘␣ٙ␣ٚ␣ٛ␣ٜ␣ٝ␣ٞ␣ٟ␣ٰ␣ۖ␣ۗ␣ۘ␣ۙ␣ۚ␣ۛ␣ۜ␣۟␣۠␣ۡ␣ۢ␣ۣ␣ۤ␣ۧ␣ۨ␣۪␣۫␣۬␣ۭ␣ࣔ␣ࣕ␣ࣖ␣ࣗ␣ࣘ␣ࣙ␣ࣚ␣ࣛ␣ࣜ␣ࣝ␣ࣞ␣ࣟ␣࣠␣࣡␣ࣣ␣ࣤ␣ࣥ␣ࣦ␣ࣧ␣ࣨ␣ࣩ␣࣪␣࣫␣࣬␣࣭␣࣮␣࣯␣ࣰ␣ࣱ␣ࣲ␣ࣳ␣ࣴ␣ࣵ␣ࣶ␣ࣷ␣ࣸ␣ࣹ␣ࣺ␣ࣻ␣ࣼ␣ࣽ␣ࣾ␣ࣿ</figure>
+  
 </details>
-  
-  
-
-
-
-    
-  <section>
-    <h3 id="vowels">Vowels</h3>
-    <p>As we saw above, long vowel locations are usually identified by letters.</p>
-<p>Short vowels can be expressed using diacritics, however for languages such as Arabic, Persian and Urdu they are typically not used, unless there is a particular need to help the reader understand the pronunciation. On the other hand, when the script is used for Uighur, the vowel diacritics <em>are</em> used, as a matter of course. These diacritics are also  used in the Koran. </p>
-<p>For the Arabic language the vowel diacritics are:</p>
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'ar')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="ar">َ</span><span class="listTrans">a</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ُ</span><span class="listTrans">u</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ِ</span><span class="listTrans">i</span></div>
-</div>
-</figure>
-    <p>There is a secondary set of vowel diacritics with origins in classical arabic, where indefinite nouns and adjectives were marked by a final n-sound, called <span class="ex" dir="rtl" lang="ar">تنوين</span> <span class="ipa">tænwiːn</span> or, in English, 'nunation'. This is normally indicated by doubling the vowel diacritic. </p>
-  <figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'ar')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="ar">ً</span><span class="listTrans">an</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ٌ</span><span class="listTrans">un</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ٍ</span><span class="listTrans">in</span></div>
-</div>
-</figure>
-<p>On a word ending with an a-vowel (though not with a feminine ending or some other suffixes) an extra alef was also added at the end of the word. In modern arabic printing the fathatan is usually dropped, but the alef is retained. The pronunciation of the ending <span class="ipa">æn</span> is also retained in many words, eg.<span class="ex" dir="rtl" lang="ar">كِتَابًا</span> <span class="ipa">kɪtæːbæn</span>, <span class="ex" dir="rtl" lang="ar">فَرَسًا</span> <span class="ipa">færæsæn</span>.</p>
-</section>
-
-
-
-
-<section>
-<h3 id="clusters">Consonant clusters &amp; gemination</h3>
-<p>When text is vowelled, <span class="codepoint"><span lang="ar" dir="rtl">&#x640;&#x0652;</span> <a href="/scripts/arabic/block#char0652">[<span class="uname">U+0652 ARABIC SUKUN</span>]</a></span> is used over a consonant to indicate that it is not followed by a vowel sound, eg. <span class="ex" dir="rtl" lang="ar">مَكْتَب</span> <span class="ipa">maktab</span>.</p>
-
-<p>The diacritic <span class="codepoint"><span lang="ar" dir="rtl">&#x640;&#x0651;</span> <a href="/scripts/arabic/block#char0651">[<span class="uname">U+0651 ARABIC SHADDA​</span>]</a></span> doubles the value of the consonant it is attached to, which is phonemically significant in Arabic, eg. <span class="ex" dir="rtl" lang="ar">رتّب</span> <span class="ipa">rætːæbæ</span>. It, too, is not often used, although sometimes it appears when vowel signs don't.</p>
-<p>A common, though not universal, practice is to display any combining kasra below the shadda, rather than below the base consonant, eg. <span class="ex" dir="rtl" lang="ar">قَبِّل</span> <span class="ipa">qæbːɪl</span>. Some fonts, such as Amiri, don't do this.</p>
-</section>
-
-
-
-
-<section>
-<h3 id="supalef">Superscript alef</h3>
-<p><span class="codepoint"><span lang="ar" dir="rtl">&#x640;&#x0670;</span> <a href="/scripts/arabic/block#char0670">[<span class="uname">U+0670 ARABIC LETTER SUPERSCRIPT ALEF​</span>]</a></span> is used in certain Arabic words such as <span class="ex" dir="rtl" lang="ar">هٰذَا</span> <span class="meaning">this</span> or <span class="ex" dir="rtl" lang="ar">ذٰلِكَ</span> <span class="meaning">that</span>, and not forgetting <span class="ex" dir="rtl" lang="ar">اللّٰه</span> <span class="meaning">Allah</span>.</p>
-</section>
 </section>
   
 
@@ -774,36 +410,12 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
 <section>
 <h2 id="punctuation">Punctuation</h2>
     <p>Only the main Arabic Unicode block contains punctuation. There are 12 items.</p>
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'ar')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="ar">؉</span></div>
-<div class="listPair"><span class="listItem" lang="ar">؊</span></div>
-<div class="listPair"><span class="listItem" lang="ar">،</span></div>
-<div class="listPair"><span class="listItem" lang="ar">؍</span></div>
-<div class="listPair"><span class="listItem" lang="ar">؛</span></div>
-<div class="listPair"><span class="listItem" lang="ar">؞</span></div>
-<div class="listPair"><span class="listItem" lang="ar">؟</span></div>
-<div class="listPair"><span class="listItem" lang="ar">٪</span></div>
-<div class="listPair"><span class="listItem" lang="ar">٫</span></div>
-<div class="listPair"><span class="listItem" lang="ar">٬</span></div>
-<div class="listPair"><span class="listItem" lang="ar">٭</span></div>
-<div class="listPair"><span class="listItem" lang="ar">۔</span></div>
-</div>
-</figure>
-<p>The Arabic language typically uses the following. For information about how these and punctuation marks from other blocks are used for the Arabic language, see the <a href="#layout">Text layout</a> and <a href="#numbers">Numbers</a> sections below.</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'ar')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="ar">٫</span></div>
-<div class="listPair"><span class="listItem" lang="ar">٬</span></div>
-<div class="listPair"><span class="listItem" lang="ar">٪</span></div>
-<div class="listPair"><span class="listItem" lang="ar">؉</span></div>
-<div class="listPair"><span class="listItem" lang="ar">،</span></div>
-<div class="listPair"><span class="listItem" lang="ar">؛</span></div>
-<div class="listPair"><span class="listItem" lang="ar">؟</span></div>
-</div>
-</figure>
+
+<figure class="characterBox auto" data-cols="trans,transc">؉␣؊␣،␣؍␣؛␣؞␣؟␣٪␣٫␣٬␣٭␣۔</figure>
+<p>The Arabic language typically uses the following. For information about how these and punctuation marks from other blocks are used for the Arabic language, see the <a class="sectionref">phrase</a> and <a class="sectionref">numbers</a> sections below.</p>
+
+<figure class="auto" data-cols="">٫␣٬␣٪␣؉␣،␣؛␣؟</figure>
+
 </section>
   
   
@@ -811,44 +423,24 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
 <section>
 <h2 id="symbols">Symbols</h2>
     <p>Only the main Arabic Unicode block contains the  symbols, none of which are widely used by Arabic language text.</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'ar')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="ar">؆</span></div>
-<div class="listPair"><span class="listItem" lang="ar">؇</span></div>
-<div class="listPair"><span class="listItem" lang="ar">؈</span></div>
-<div class="listPair"><span class="listItem" lang="ar">؋</span></div>
-<div class="listPair"><span class="listItem" lang="ar">؎</span></div>
-<div class="listPair"><span class="listItem" lang="ar">؏</span></div>
-<div class="listPair"><span class="listItem" lang="ar">۞</span></div>
-<div class="listPair"><span class="listItem" lang="ar">۩</span></div>
-<div class="listPair"><span class="listItem" lang="ar">۽</span></div>
-<div class="listPair"><span class="listItem" lang="ar">۾</span></div>
-</div>
-</figure>
 
+<figure class="characterBox auto" data-cols="">؆␣؇␣؈␣؋␣؎␣؏␣۞␣۩␣۽␣۾</figure>
 <p>Characters in the Arabic Presentation Forms blocks should not normally be used, but they contain just a few symbols that are not just for compability use, including the following.</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'ar')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="ar">﴾</span></div>
-<div class="listPair"><span class="listItem" lang="ar">﴿</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ﷲ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ﷺ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">ﷻ</span></div>
-<div class="listPair"><span class="listItem" lang="ar">﷽</span></div>
-<div class="listPair"><span class="listItem" lang="ar">﷼</span></div>
-</div>
-</figure>
+
+<figure class="characterBox auto" data-cols="">﴾␣﴿␣ﷲ␣ﷺ␣ﷻ␣﷽␣﷼</figure>
 <p>For more information about how they are used, click on them and follow the links to the the character notes page.</p>
 </section>
   
   
   
 <section>
-<h2 id="digits">Numbers</h2>
+<h2 id="numbers">Numbers, dates, currency, etc.</h2>
+<figure class="characterBox auto" data-cols="trans,transc">٠␣١␣٢␣٣␣٤␣٥␣٦␣٧␣٨␣٩</figure>
+<figure class="characterBox auto" data-cols="trans,transc">۰␣۱␣۲␣۳␣۴␣۵␣۶␣۷␣۸␣۹</figure>
+
     <p>A set of  arabic-indic digits are typically used in Middle Eastern and Gulf countries, whereas North African countries tend to use European digits. In neither area, however, is one digit style used exclusively.</p>
-    <figure>
+
+<figure>
     <p dir="rtl" lang="ar" class="ex large">٠١٢٣٤٥٦٧٨٩</p>
     <figcaption>Arabic-indic numerals, used in Arabic language text.</figcaption>
     </figure>
@@ -866,7 +458,7 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
   
   
 <section>
-  <h2 id="shaping">Glyph shaping &amp; positioning</h2>
+<h2 id="shaping">Glyph shaping &amp; positioning</h2>
     
 
 <section>
@@ -939,7 +531,7 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
 
 
 <section>
-<h3 id="delimiters">Phrase boundaries</h3>
+<h3 id="phrase">Phrase boundaries</h3>
 <p>Arabic language uses a mixture of western and arabic punctuation. Other languages using the Arabic script may use different punctuation, such as the full stop in Urdu.</p>
 <p> For separators at the sentence level and below, the following are used in Arabic language text, where the right column indicates approximate equivalences to Latin script.</p>
     <table class="character_list">
@@ -990,10 +582,8 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
 
 <section>
 <h3 id="quotations">Quotations</h3>
-     <p>Arabic language text typically uses <span class="codepoint"><span lang="ar" dir="ltr">&#x00AB;</span> <a href="/scripts/latin/block#char00AB">[<span class="uname">U+00AB LEFT-POINTING DOUBLE ANGLE QUOTATION MARK</span>]</a></span> and <span class="codepoint"><span lang="ar" dir="ltr">&#x00BB;</span> <a href="/scripts/latin/block#char00BB">[<span class="uname">U+00BB RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK</span>]</a></span> for quotation marks.<span class="charExample"><span class="ex" lang="hy"></span></span></p>
-     <p><span class="codepoint">
-<mark>Usage tip</mark>
-It is important to note that the Unicode names for these marks should be ignored. 'Left-pointing' should be read 'Start', and 'Right-pointing' as 'End'. The direction in which the glyphs point will be automatically determined according to the base direction of the text.</span></p>
+     <p>Arabic language text typically uses <span class="codepoint"><span lang="ar" dir="ltr">&#x00AB;</span> <a href="/scripts/latin/block#char00AB">[<span class="uname">U+00AB LEFT-POINTING DOUBLE ANGLE QUOTATION MARK</span>]</a></span> and <span class="codepoint"><span lang="ar" dir="ltr">&#x00BB;</span> <a href="/scripts/latin/block#char00BB">[<span class="uname">U+00BB RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK</span>]</a></span> for quotation marks.</p>
+<p><span class="codepoint">It is important to note that the Unicode names for these marks should be ignored. 'Left-pointing' should be read 'Start', and 'Right-pointing' as 'End'. The direction in which the glyphs point will be automatically determined according to the base direction of the text.</span></p>
 </section>
 
 
@@ -1149,15 +739,12 @@ Page & book layout
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/arabic"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-22  11:18<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Barabic%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Farabic%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/arabic"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-27  11:23<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Barabic%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Farabic%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"></div>
 </body>
 <script>
-var base = '/scripts/arabic/block'
-initialiseShowNames(base, 'c');
-document.getElementById('featureTableBody').innerHTML = makeSidePanel("Arabic")
-createtoc(3)
+initialiseSummary('/scripts/arabic/block','ar','Arabic')
 </script>
 </html>
