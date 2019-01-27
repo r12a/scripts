@@ -91,7 +91,7 @@ function makeTables (lang) {
     var tables, node, chars, info, bicameral, out, char
     
     tables = document.querySelectorAll('.auto')
-console.log(tables.length)
+
     for (let t=0;t<tables.length;t++) {
         node = tables[t]
         console.log(node)
@@ -101,6 +101,14 @@ console.log(tables.length)
         info = node.dataset.cols
         if (node.className.includes('bicameral')) bicameral = true
         else bicameral = false
+        if (node.dataset.notes) {
+            notes = node.dataset.notes.split(',')
+            }
+        else notes = []
+        if (node.dataset.links) {
+            links = node.dataset.links.split(',')
+            }
+        else links = []
         out = ''
 
         if (chars.length > 1) {
@@ -146,6 +154,23 @@ console.log(tables.length)
                 if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.transcription]) ch = window.spreadsheetRows[char][cols.transcription]
                 else ch = '&nbsp;'
                 out += '<span class="listTransc">'+ch+'</span>'
+                }
+
+            if (info.includes('meaning')) {
+                if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.meaning]) ch = window.spreadsheetRows[char][cols.meaning]
+                else ch = '&nbsp;'
+                out += '<span class="listMeaning">'+ch+'</span>'
+                }
+
+            if (notes.length > 0) {
+                if (notes[i]) ch = notes[i]
+                else ch = '&nbsp;'
+                out += '<span class="listMeaning">'+ch+'</span>'
+                }
+
+            if (links.length > 0) {
+                if (links[i]) out += '<a href="'+links[i]+'">link</a>'
+                else out += '<span>&nbsp;</span>'
                 }
 
             out += '</div>'
