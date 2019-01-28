@@ -25,6 +25,7 @@
 details figure { margin-left: 0; margin-right: 0; }
 </style>
 
+<script src="db.js"> </script>
 <script src="/shared/code/boilerplate.js"></script>
 <script src="/shared/code/toc_2019.js"></script>
 <script src="/shared/code/all-names.js"></script>
@@ -33,7 +34,6 @@ details figure { margin-left: 0; margin-right: 0; }
 <script src="/shared/fontlists/manage.js"></script>
 <script src="/shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
-<script src="../common/block-functions.js"></script>
 <script src="/shared/code/getLinks.js"></script>
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
@@ -98,7 +98,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->22 January, 2019<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->28 January, 2019<!-- #EndDate -->
 &bull; tags  <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="http://r12a.github.io/blog/?tag=cherokee" title="Show all blog posts tagged with 'cherokee'">cherokee</a></p>
 
 
@@ -183,6 +183,16 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
     <p>There is no standard spelling. The way a word is written may vary, according to the pronunciation of the writer, or choices they make for dealing with consonant clusters.</p>
     <p>Words are separated by spaces.</p>
 </section>
+  
+  
+  
+<div id="showTranscriptions">
+<div>In yellow boxes, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<!--div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div-->
+</div>
 
 
 
@@ -208,172 +218,46 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
   <section>
   <h2 id="syllables">Syllables</h2>
-    <p>There are 85 characters in the syllabary, of which 6 represent syllables that start with either no consonant or with <span class="ipa">ʔ</span> (<span class="ex" lang="chr">ᎠᎡᎢᎣᎤᎥ</span>), and one character represents the non-syllabic consonant sound <span class="ipa">s</span> (<span class="ex" lang="chr">Ꮝ</span>). The rest nominally represent a combination of consonant plus vowel, though the actual practise is a little more nuanced, and there is a degree of vagueness in the script when it comes to phonetically transcribing spoken sounds.<sup><a href="#refs">d</a></sup></p>
+    <p>There are 85 characters in the syllabary, of which 6 represent syllables that start with either no consonant or with <span class="ipa">ʔ</span> (<span class="ex" lang="chr">Ꭰ Ꭱ Ꭲ Ꭳ Ꭴ Ꭵ</span>), and one character represents the non-syllabic consonant sound <span class="ipa">s</span> (<span class="ex" lang="chr">Ꮝ</span>). The rest nominally represent a combination of consonant plus vowel, though the actual practise is a little more nuanced, and there is a degree of vagueness in the script when it comes to phonetically transcribing spoken sounds.<sup><a href="#refs">d</a></sup></p>
 
 <details>
 <summary class="instructions">Click here to see the syllabary.</summary>
-    <figure style="margin-right: 0">
-<div class="listAll" onClick="listAll(this, 'cher')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="chr">Ꭰꭰ</span><span class="listTrans">a</span><span class="listIPA">a, ʔa</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꭱꭱ</span><span class="listTrans">e</span><span class="listIPA">e, ʔ</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꭲꭲ</span><span class="listTrans">i</span><span class="listIPA">i, ʔ</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꭳꭳ</span><span class="listTrans">o</span><span class="listIPA">o, ʔ</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꭴꭴ</span><span class="listTrans">u</span><span class="listIPA">u, ʔu</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꭵꭵ</span><span class="listTrans">v</span><span class="listIPA">ə̃, ʔə̃</span></div>
-</div>
-</figure>
-<figure>
-<div class="listAll" onClick="listAll(this, 'cher')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="chr">Ꭶꭶ</span><span class="listTrans">ga</span><span class="listIPA">ka</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꭷꭷ</span><span class="listTrans">ka</span><span class="listIPA">kʰa</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꭸꭸ</span><span class="listTrans">ge</span><span class="listIPA">ke, kʰe…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꭹꭹ</span><span class="listTrans">gi</span><span class="listIPA">ki, kʰi…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꭺꭺ</span><span class="listTrans">go</span><span class="listIPA">ko, kʰo…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꭻꭻ</span><span class="listTrans">gu</span><span class="listIPA">ku, kʰu…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꭼꭼ</span><span class="listTrans">gv</span><span class="listIPA">kə̃, kʰə̃…</span></div>
-</div>
-</figure>
-<figure>
-<div class="listAll" onClick="listAll(this, 'cher')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="chr">Ꭽꭽ</span><span class="listTrans">ha</span><span class="listIPA">ha</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꭾꭾ</span><span class="listTrans">he</span><span class="listIPA">he</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꭿꭿ</span><span class="listTrans">hi</span><span class="listIPA">hi</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮀꮀ</span><span class="listTrans">ho</span><span class="listIPA">ho</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮁꮁ</span><span class="listTrans">hu</span><span class="listIPA">hu</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮂꮂ</span><span class="listTrans">hv</span><span class="listIPA">hə̃</span></div>
-</div>
-</figure>
-<figure>
-<div class="listAll" onClick="listAll(this, 'cher')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="chr">Ꮃꮃ</span><span class="listTrans">la</span><span class="listIPA">la, ɬa…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮄꮄ</span><span class="listTrans">le</span><span class="listIPA">le, ɬe…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮅꮅ</span><span class="listTrans">li</span><span class="listIPA">li, ɬi…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮆꮆ</span><span class="listTrans">lo</span><span class="listIPA">lo, ɬo…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮇꮇ</span><span class="listTrans">lu</span><span class="listIPA">lu, ɬu…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮈꮈ</span><span class="listTrans">lv</span><span class="listIPA">lə̃, ɬə̃…</span></div>
-</div>
-</figure>
-<figure>
-<div class="listAll" onClick="listAll(this, 'cher')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="chr">Ꮉꮉ</span><span class="listTrans">ma</span><span class="listIPA">ma</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮊꮊ</span><span class="listTrans">me</span><span class="listIPA">me</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮋꮋ</span><span class="listTrans">mi</span><span class="listIPA">mi</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮌꮌ</span><span class="listTrans">mo</span><span class="listIPA">mo</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮍꮍ</span><span class="listTrans">mu</span><span class="listIPA">mu</span></div>
-</div>
-</figure>
-<figure>
-<div class="listAll" onClick="listAll(this, 'cher')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="chr">Ꮎꮎ</span><span class="listTrans">na</span><span class="listIPA">na</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮏꮏ</span><span class="listTrans">hna</span><span class="listIPA">hna</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮐꮐ</span><span class="listTrans">nah</span><span class="listIPA">nah</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮑꮑ</span><span class="listTrans">ne</span><span class="listIPA">ne, hne…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮒꮒ</span><span class="listTrans">ni</span><span class="listIPA">ni, hni…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮓꮓ</span><span class="listTrans">no</span><span class="listIPA">no, hno…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮔꮔ</span><span class="listTrans">nu</span><span class="listIPA">nu, hnu…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮕꮕ</span><span class="listTrans">nv</span><span class="listIPA">nə̃, hnə̃…</span></div>
-</div>
-</figure>
-<figure>
-<div class="listAll" onClick="listAll(this, 'cher')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="chr">Ꮖꮖ</span><span class="listTrans">qua</span><span class="listIPA">kʷa, kʷʰa…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮗꮗ</span><span class="listTrans">que</span><span class="listIPA">kʷe, kʷʰe…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮘꮘ</span><span class="listTrans">qui</span><span class="listIPA">kʷi, kʷʰi…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮙꮙ</span><span class="listTrans">quo</span><span class="listIPA">kʷo, kʷʰo…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮚꮚ</span><span class="listTrans">quu</span><span class="listIPA">kʷu, kʷʰu…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮛꮛ</span><span class="listTrans">quv</span><span class="listIPA">kʷə̃, kʷʰə̃…</span></div>
-</div>
-</figure>
-<figure>
-<div class="listAll" onClick="listAll(this, 'cher')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="chr">Ꮜꮜ</span><span class="listTrans">sa</span><span class="listIPA">sa</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮝꮝ</span><span class="listTrans">s</span><span class="listIPA">s</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮞꮞ</span><span class="listTrans">se</span><span class="listIPA">se</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮟꮟ</span><span class="listTrans">si</span><span class="listIPA">si</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮠꮠ</span><span class="listTrans">so</span><span class="listIPA">so</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮡꮡ</span><span class="listTrans">su</span><span class="listIPA">su</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮢꮢ</span><span class="listTrans">sv</span><span class="listIPA">sə̃</span></div>
-</div>
-</figure>
-<figure>
-<div class="listAll" onClick="listAll(this, 'cher')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="chr">Ꮣꮣ</span><span class="listTrans">da</span><span class="listIPA">ta</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮤꮤ</span><span class="listTrans">ta</span><span class="listIPA">tʰa</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮥꮥ</span><span class="listTrans">de</span><span class="listIPA">te</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮦꮦ</span><span class="listTrans">te</span><span class="listIPA">tʰe</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮧꮧ</span><span class="listTrans">di</span><span class="listIPA">ti</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮨꮨ</span><span class="listTrans">ti</span><span class="listIPA">tʰi</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮩꮩ</span><span class="listTrans">do</span><span class="listIPA">to, tʰo…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮪꮪ</span><span class="listTrans">du</span><span class="listIPA">tu, tʰu…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮫꮫ</span><span class="listTrans">dv</span><span class="listIPA">tə̃, tʰə̃…</span></div>
-</div>
-</figure>
-<figure>
-<div class="listAll" onClick="listAll(this, 'cher')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="chr">Ꮬꮬ</span><span class="listTrans">dla</span><span class="listIPA">tˡa</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮭꮭ</span><span class="listTrans">tla</span><span class="listIPA">tˡʰa</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮮꮮ</span><span class="listTrans">tle</span><span class="listIPA">tˡe, tˡʰe…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮯꮯ</span><span class="listTrans">tli</span><span class="listIPA">tˡi, tˡʰi…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮰꮰ</span><span class="listTrans">tlo</span><span class="listIPA">tˡo, tˡʰo…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮱꮱ</span><span class="listTrans">tlu</span><span class="listIPA">tˡu, tˡʰu…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮲꮲ</span><span class="listTrans">tlv</span><span class="listIPA">tˡə̃, tˡʰə̃…</span></div>
-</div>
-</figure>
-<figure>
-<div class="listAll" onClick="listAll(this, 'cher')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="chr">Ꮳꮳ</span><span class="listTrans">tsa</span><span class="listIPA">ʦa, ʧa…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮴꮴ</span><span class="listTrans">tse</span><span class="listIPA">ʦe, ʧe…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮵꮵ</span><span class="listTrans">tsi</span><span class="listIPA">ʦi, ʧi…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮶꮶ</span><span class="listTrans">tso</span><span class="listIPA">ʦo, ʧo…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮷꮷ</span><span class="listTrans">tsu</span><span class="listIPA">ʦu, ʧu…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮸꮸ</span><span class="listTrans">tsv</span><span class="listIPA">ʦə̃, ʧə̃…</span></div>
-</div>
-</figure>
-<figure>
-<div class="listAll" onClick="listAll(this, 'cher')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="chr">Ꮹꮹ</span><span class="listTrans">wa</span><span class="listIPA">wa, hwa…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮺꮺ</span><span class="listTrans">we</span><span class="listIPA">we, hwe…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮻꮻ</span><span class="listTrans">wi</span><span class="listIPA">wi, hwi…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮼꮼ</span><span class="listTrans">wo</span><span class="listIPA">wo, hwo…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮽꮽ</span><span class="listTrans">wu</span><span class="listIPA">wu, hwu…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꮾꮾ</span><span class="listTrans">wv</span><span class="listIPA">wə̃, hwə̃…</span></div>
-</div>
-</figure>
-<figure>
-<div class="listAll" onClick="listAll(this, 'cher')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="chr">Ꮿꮿ</span><span class="listTrans">ya</span><span class="listIPA">ja, hja…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ᏸᏸ</span><span class="listTrans">ye</span><span class="listIPA">je, hje…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ᏹᏹ</span><span class="listTrans">yi</span><span class="listIPA">ji, hji…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ᏺᏺ</span><span class="listTrans">yo</span><span class="listIPA">jo, hjo…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ᏻᏻ</span><span class="listTrans">yu</span><span class="listIPA">ju, hju…</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ᏼᏼ</span><span class="listTrans">yv</span><span class="listIPA">jə̃, hjə̃…</span></div>
-</div>
-</figure>
+ 
+<figure class="characterBox auto bicameral" style="margin-left: 0" data-cols="ipa,trans">Ꭰꭰ␣Ꭱꭱ␣Ꭲꭲ␣Ꭳꭳ␣Ꭴꭴ␣Ꭵꭵ</figure>
+
+<figure class="characterBox auto bicameral" style="margin-left: 0" data-cols="ipa,trans">Ꭶꭶ␣Ꭷꭷ␣Ꭸꭸ␣Ꭹꭹ␣Ꭺꭺ␣Ꭻꭻ␣Ꭼꭼ</figure>
+
+<figure class="characterBox auto bicameral" style="margin-left: 0" data-cols="ipa,trans">Ꭽꭽ␣Ꭾꭾ␣Ꭿꭿ␣Ꮀꮀ␣Ꮁꮁ␣Ꮂꮂ</figure>
+
+<figure class="characterBox auto bicameral" style="margin-left: 0" data-cols="ipa,trans">Ꮃꮃ␣Ꮄꮄ␣Ꮅꮅ␣Ꮆꮆ␣Ꮇꮇ␣Ꮈꮈ</figure>
+
+<figure class="characterBox auto bicameral" style="margin-left: 0" data-cols="ipa,trans">Ꮉꮉ␣Ꮊꮊ␣Ꮋꮋ␣Ꮌꮌ␣Ꮍꮍ</figure>
+
+<figure class="characterBox auto bicameral" style="margin-left: 0" data-cols="ipa,trans">Ꮎꮎ␣Ꮏꮏ␣Ꮐꮐ␣Ꮑꮑ␣Ꮒꮒ␣Ꮓꮓ␣Ꮔꮔ␣Ꮕꮕ</figure>
+
+<figure class="characterBox auto bicameral" style="margin-left: 0" data-cols="ipa,trans">Ꮖꮖ␣Ꮗꮗ␣Ꮘꮘ␣Ꮙꮙ␣Ꮚꮚ␣Ꮛꮛ</figure>
+
+<figure class="characterBox auto bicameral" style="margin-left: 0" data-cols="ipa,trans">Ꮜꮜ␣Ꮝꮝ␣Ꮞꮞ␣Ꮟꮟ␣Ꮠꮠ␣Ꮡꮡ␣Ꮢꮢ</figure>
+
+<figure class="characterBox auto bicameral" style="margin-left: 0" data-cols="ipa,trans">Ꮣꮣ␣Ꮤꮤ␣Ꮥꮥ␣Ꮦꮦ␣Ꮧꮧ␣Ꮨꮨ␣Ꮩꮩ␣Ꮪꮪ␣Ꮫꮫ</figure>
+
+<figure class="characterBox auto bicameral" style="margin-left: 0" data-cols="ipa,trans">Ꮬꮬ␣Ꮭꮭ␣Ꮮꮮ␣Ꮯꮯ␣Ꮰꮰ␣Ꮱꮱ␣Ꮲꮲ</figure>
+
+<figure class="characterBox auto bicameral" style="margin-left: 0" data-cols="ipa,trans">Ꮳꮳ␣Ꮴꮴ␣Ꮵꮵ␣Ꮶꮶ␣Ꮷꮷ␣Ꮸꮸ</figure>
+
+<figure class="characterBox auto bicameral" style="margin-left: 0" data-cols="ipa,trans">Ꮹꮹ␣Ꮺꮺ␣Ꮻꮻ␣Ꮼꮼ␣Ꮽꮽ␣Ꮾꮾ</figure>
+
+<figure class="characterBox auto bicameral" style="margin-left: 0" data-cols="ipa,trans">Ꮿꮿ␣Ᏸᏸ␣Ᏹᏹ␣Ᏺᏺ␣Ᏻᏻ␣Ᏼᏼ</figure>
+
+   
 </details>
 
 <p>One syllable is archaic and not used.</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'cher')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="chr">Ᏽᏽ</span><span class="listTrans">mv</span><span class="listIPA">mə̃</span></div>
-</div>
-</figure>
+<figure class="characterBox auto bicameral" data-cols="ipa,trans">Ᏽᏽ</figure>
 
 
-   <section>
+
+  <section>
     <h3 id="cs">Case</h3>
     <p>Lowercase characters were introduced in Unicode 8.0, to cover growing use of bicameral content in modern typesetting, as well as some older texts such as the Cherokee New Testament. The lowercase text above is likely to be displayed as tofu (boxes), since it is currently difficult to find a font that includes lowercase forms.</p>
     <p>It is unusual for the majority of content to be in uppercase, and for lowercase to come in later, and implementers may need to take care in introducing the new characters. For example, Cherokee case-folds to uppercase, rather than lower. For more details see the <a href="http://www.unicode.org/versions/latest/ch20.pdf" target="_blank">Unicode Standard</a>.<sup><a href="http://www.unicode.org/versions/latest/ch20.pdf">u</a></sup></p>
@@ -391,43 +275,27 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
     <h3 id="tones">Tones</h3>
     <p>Spoken Cherokee has tones, but they are not shown in the text.<sup><a href="http://www.unicode.org/versions/latest/ch20.pdf">u</a></sup></p>
 <p>Linguists who want to show tones do so using standard allocations of combining characters.<a class="ref" href="http://www.omniglot.com/writing/cherokee.htm"></a> The following list shows diacritics used to express tones. (Mid is the default, and doesn't need marking.)<sup><a href="http://www.unicode.org/L2/L2014/14064r-n4537r-cherokee.pdf">e</a>5</sup></p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'chr')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="chr">Ꭰ̄</span><span class="listMeaning">mid</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꭰ̂</span><span class="listMeaning">falling</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꭰ̌</span><span class="listMeaning">rising</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꭰ̀</span><span class="listMeaning">low</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꭰ́ </span><span class="listMeaning">high</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꭰ̋ </span><span class="listMeaning">sup. hi.</span></div>
-</div>
-</figure>
+
+<figure class="auto" data-cols="" data-notes="mid,falling,rising,low,high,sup.hi">Ꭰ̄␣Ꭰ̂␣Ꭰ̌␣Ꭰ̀␣Ꭰ́␣Ꭰ̋</figure>
+
   </section>
 
 
 
 <section>
     <h3 id="vowel_chars">'Vowel' characters</h3>
-    <p>The six vowel characters, when they appear at the start of a word represent plain vowel sounds, eg. <span class="ex" lang="chr">ᎠᎹ</span> <span class="ipa">ama</span> <span class="trans">a-ma</span> <span class="meaning">water</span>.</p>
-    <p>Elsewhere they represent a syllable starting with <span class="ipa">ʔ</span>, eg. <span class="ex" lang="chr">ᎯᎠ</span> <span class="ipa">hiʔa</span> <span class="trans">hi-a</span> <span class="meaning">this</span>.<sup><a href="#refs">d</a></sup></p>
-    <figure style="margin-right: 0">
-<div class="listAll" onClick="listAll(this, 'cher')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="chr">Ꭰꭰ</span><span class="listTrans">a</span><span class="listIPA">a, ʔa</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꭱꭱ</span><span class="listTrans">e</span><span class="listIPA">e, ʔ</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꭲꭲ</span><span class="listTrans">i</span><span class="listIPA">i, ʔ</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꭳꭳ</span><span class="listTrans">o</span><span class="listIPA">o, ʔ</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꭴꭴ</span><span class="listTrans">u</span><span class="listIPA">u, ʔu</span></div>
-<div class="listPair"><span class="listItem" lang="chr">Ꭵꭵ</span><span class="listTrans">v</span><span class="listIPA">ə̃, ʔə̃</span></div>
-</div>
-</figure>
+    <p>The six vowel characters, when they appear at the start of a word represent plain vowel sounds, eg. <span class="charExample" translate="no"><span class="ex" lang="chr">ᎠᎹ</span> <span class="trans">a-ma</span> <span class="ipa">ama</span> <span class="meaning">water</span></span>.</p>
+    <p>Elsewhere they represent a syllable starting with <span class="ipa">ʔ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="chr">ᎯᎠ</span> <span class="trans">hi-a</span> <span class="ipa">hiʔa</span> <span class="meaning">this</span></span>.<sup><a href="#refs">d</a></sup></p>
+ 
+<figure class="auto bicameral" data-cols="ipa,trans">Ꭰꭰ␣Ꭱꭱ␣Ꭲꭲ␣Ꭳꭳ␣Ꭴꭴ␣Ꭵꭵ</figure>
+
   </section>
     
     
     
     <section>
     <h3 id="vowel_length">Vowel length and tone</h3>
-    <p>The vowel in a CV syllable doesn't distinguish between short and long vowel sounds, nor does it indicate tonal values, eg.  <span class="ex" lang="chr">ᎠᎹ</span> <span class="ipa">ama</span> <span class="trans">a-ma</span> <span class="meaning">water</span> and  <span class="ex" lang="chr">ᎠᎹ</span> <span class="ipa">aːma</span> <span class="trans">a-ma</span> <span class="meaning">salt</span> are written the same, although the vowels are of different lengths and the tones (low vs high, respectively) are different.<sup><a href="#refs">d</a></sup></p>
+    <p>The vowel in a CV syllable doesn't distinguish between short and long vowel sounds, nor does it indicate tonal values, eg.  <span class="charExample" translate="no"><span class="ex" lang="chr">ᎠᎹ</span> <span class="trans">a-ma</span> <span class="ipa">ama</span> <span class="meaning">water</span></span>  and  <span class="charExample" translate="no"><span class="ex" lang="chr">ᎠᎹ</span> <span class="trans">a-ma</span> <span class="ipa">aːma</span> <span class="meaning">salt</span></span> are written the same, although the vowels are of different lengths and the tones (low vs high, respectively) are different.<sup><a href="#refs">d</a></sup></p>
     </section>
     
     
@@ -435,9 +303,9 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
     
     <section>
     <h3 id="syllable_final">Syllable final consonants</h3>
-    <p>Each character may not only end with a vowel, but may also end with <span class="ipa">ʔ</span> or <span class="ipa">h</span>, eg. <span class="ex" lang="chr">ᏑᏗ</span> <span class="ipa">suhti</span> <span class="trans">su-di</span> <span class="meaning">fishhook</span> and <span class="ex" lang="chr">ᏔᎵ</span> <span class="ipa">tʰaʔli</span> <span class="trans">ta-li</span> <span class="meaning">two</span> are written with just two characters.</p>
+    <p>Each character may not only end with a vowel, but may also end with <span class="ipa">ʔ</span> or <span class="ipa">h</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="chr">ᏑᏗ</span> <span class="trans">su-di</span> <span class="ipa">suhti</span> <span class="meaning">fishhook</span></span> and <span class="charExample" translate="no"><span class="ex" lang="chr">ᏔᎵ</span> <span class="trans">ta-li</span> <span class="ipa">tʰaʔli</span> <span class="meaning">two</span></span> are written with just two characters.</p>
     <p>There is one distinctive pair related to syllables ending with h: <span class="charExample"><span class="ex" lang="chr">Ꮎ</span> <span class="ipa">na</span></span> is contrasted with <span class="charExample"><span class="ex" lang="chr">Ꮐ</span> <span class="ipa">nah</span></span>.</p>
-    <p>Syllables that end with an <span class="ipa">s</span> sound can be written using <span class="codepoint"><span lang="chr">&#x13CD;</span> <a href="/scripts/cherokee/block#char13CD">[<span class="uname">U+13CD CHEROKEE LETTER S</span>]</a></span>, eg. <span class="ex" lang="chr">ᎯᏴᏫᏯᏍ</span> <span class="ipa">hijə̃ːwiːjaːs</span> <span class="trans">hi-yv-wi-ya-s</span> <span class="meaning">Are you an Indian?</span><sup> 2</sup></p>
+    <p>Syllables that end with an <span class="ipa">s</span> sound can be written using <span class="codepoint"><span lang="chr">&#x13CD;</span> <a href="/scripts/cherokee/block#char13CD">[<span class="uname">U+13CD CHEROKEE LETTER S</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="chr">ᎯᏴᏫᏯᏍ</span> <span class="trans">hi-yv-wi-ya-s</span> <span class="ipa">hijə̃ːwiːjaːs</span> <span class="meaning">Are you an Indian?</span></span><sup> 2</sup></p>
     </section>
     
     
@@ -446,22 +314,22 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
     <section>
     <h3 id="aspiration">Syllable initial aspiration</h3>
     <p>Only 6 syllable pairs distinguish between aspirated and non-aspirated sounds at the start of a syllable.</p>
-    <p>Only one nasal syllable makes this distinction, ie. <span class="ex" lang="chr">ᎬᎾ</span> <span class="ipa">kə̃ːna</span> <span class="trans">gv-na</span> <span class="meaning">I'm alive</span> versus <span class="ex" lang="chr">ᎬᎿ</span> <span class="ipa">kə̃ːhna</span> <span class="trans">gv-hna</span> <span class="meaning">she's alive</span>. However, <span class="ex" lang="chr">ᎬᏂᎭ</span> <span class="trans">gv-ni-ha</span> could be either <span class="ipa">kə̃ːniha</span> <span class="meaning">I'm striking it</span> or <span class="ipa">kə̃ːhniha</span> <span class="trans">gv-ni-ha</span> <span class="meaning">she's striking it</span>.</p>
-    <p>There are five pairs of characters that make this distinction for stops or affricates: <span class="ex" lang="chr">Ꭶ+Ꭷ, Ꮣ+Ꮤ, Ꮥ+Ꮦ, Ꮧ+Ꮨ, Ꮬ+Ꮭ</span>. For example, it is possible to distinguish between the first two syllables of <span class="ex" lang="chr">ᎧᎦᎵ</span> <span class="ipa">kʰaːkaʔli</span> <span class="trans">ka-ga-li</span> <span class="meaning">February</span>, but not between the two meanings of <span class="ex" lang="chr">ᎪᎳ</span> <span class="trans">go-la</span>, ie. <span class="ipa">koːla</span> <span class="meaning">winter</span> and <span class="ipa">kʰoːla</span> <span class="meaning">bone</span>.<sup><a href="#refs">d</a></sup></p>
+    <p>Only one nasal syllable makes this distinction, ie. <span class="charExample" translate="no"><span class="ex" lang="chr">ᎬᎾ</span> <span class="trans">gv-na</span> <span class="ipa">kə̃ːna</span> <span class="meaning">I'm alive</span></span> versus <span class="charExample" translate="no"><span class="ex" lang="chr">ᎬᎿ</span> <span class="trans">gv-hna</span> <span class="ipa">kə̃ːhna</span> <span class="meaning">she's alive</span></span>. However, <span class="charExample" translate="no"><span class="ex" lang="chr">ᎬᏂᎭ</span> <span class="trans">gv-ni-ha</span></span>  could be either <span class="ipa">kə̃ːniha</span> <span class="meaning">I'm striking it</span> or <span class="ipa">kə̃ːhniha</span> <span class="trans">gv-ni-ha</span> <span class="meaning">she's striking it</span>.</p>
+    <p>There are five pairs of characters that make this distinction for stops or affricates: <span class="ex" lang="chr">Ꭶ+Ꭷ, Ꮣ+Ꮤ, Ꮥ+Ꮦ, Ꮧ+Ꮨ, Ꮬ+Ꮭ</span>. For example, it is possible to distinguish between the first two syllables of <span class="charExample" translate="no"><span class="ex" lang="chr">ᎧᎦᎵ</span> <span class="trans">ka-ga-li</span> <span class="ipa">kʰaːkaʔli</span> <span class="meaning">February</span></span>, but not between the two meanings of <span class="charExample" translate="no"><span class="ex" lang="chr">ᎪᎳ</span> <span class="trans">go-la</span></span>, ie. <span class="ipa">koːla</span> <span class="meaning">winter</span> and <span class="ipa">kʰoːla</span> <span class="meaning">bone</span>.<sup><a href="#refs">d</a></sup></p>
     </section>
     
     
     
     <section>
     <h3 id="clusters">Consonant clusters</h3>
-    <p>With one exception, consonant clusters are managed by using a normal syllabic character but ignoring the ('dummy') vowel, eg. <span class="ex" lang="chr">ᎦᎵᏉᎩ</span> <span class="ipa">kaɬkʷoːki</span> <span class="trans">ga-li-quo-gi</span> <span class="meaning">seven</span> or <span class="ex" lang="chr">ᎬᏙᎠ</span> <span class="ipa">ktʰoːʔa</span> <span class="trans">gv-do-a</span> <span class="meaning">it's hanging</span>. The character chosen is largely up to the writer, but some words bring in etymological connections.</p>
-    <p>The exception is <span class="codepoint"><span lang="chr">&#x13CD;</span> <a href="/scripts/cherokee/block#char13CD">[<span class="uname">U+13CD CHEROKEE LETTER S</span>]</a></span>, which is not followed by a vowel, eg. <span class="ex" lang="chr">ᏍᎪᎯ</span> <span class="ipa">skoːhi</span> <span class="trans">s-go-hi</span> <span class="meaning">ten</span>.<sup><a href="#refs">d</a></sup></p>
+    <p>With one exception, consonant clusters are managed by using a normal syllabic character but ignoring the ('dummy') vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="chr">ᎦᎵᏉᎩ</span> <span class="trans">ga-li-qo-gi</span> <span class="ipa">kaɬkʷoːki</span> <span class="meaning">seven</span></span> or <span class="charExample" translate="no"><span class="ex" lang="chr">ᎬᏙᎠ</span> <span class="trans">gv-do-a</span> <span class="ipa">ktʰoːʔa</span> <span class="meaning">it's hanging</span></span>. The character chosen is largely up to the writer, but some words bring in etymological connections.</p>
+    <p>The exception is <span class="codepoint"><span lang="chr">&#x13CD;</span> <a href="/scripts/cherokee/block#char13CD">[<span class="uname">U+13CD CHEROKEE LETTER S</span>]</a></span>, which is not followed by a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="chr">ᏍᎪᎯ</span> <span class="trans">s-go-hi</span> <span class="ipa">skoːhi</span> <span class="meaning">ten</span></span>.<sup><a href="#refs">d</a></sup></p>
     </section>
     
     
     <section>
     <h3 id="ssV">ssV sequences</h3>
-    <p>Some manuscripts precede syllables beginning with an <span class="ipa">s</span> sound with <span class="codepoint"><span lang="chr">&#x13CD;</span> <a href="/scripts/cherokee/block#char13CD">[<span class="uname">U+13CD CHEROKEE LETTER S</span>]</a></span>, and Sequoyah spelled his name like that, ie. <span class="ex" lang="chr">ᏍᏏᏉᏯ</span> <span class="trans">s-si-quo-ya</span>.</p>
+    <p>Some manuscripts precede syllables beginning with an <span class="ipa">s</span> sound with <span class="codepoint"><span lang="chr">&#x13CD;</span> <a href="/scripts/cherokee/block#char13CD">[<span class="uname">U+13CD CHEROKEE LETTER S</span>]</a></span>, and Sequoyah spelled his name like that, ie. <span class="charExample" translate="no"><span class="ex" lang="chr">ᏍᏏᏉᏯ</span> <span class="trans">s-si-qo-ya</span></span>.</p>
   </section>
 </section>
 
@@ -471,17 +339,21 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
 <section>
     <h2 id="diacritics">Diacritics</h2>
-<p>Everson reports that  some combining diacritical marks are now used in Cherokee text by ordinary readers and especially children.<sup><a href="http://www.unicode.org/L2/L2014/14064r-n4537r-cherokee.pdf">e</a>5</sup></p>
-<p><span class="codepoint" translate="no"><span lang="chr">&#x25CC;&#x0323;</span> [<a href="../latin/block#char0323"><span class="uname">U+0323 COMBINING DOT BELOW</span></a>]</span> indicates  shifts  in  consonant  readings – such  as  voiced  to  voiceless,  voiceless  to voiced; for example, where <span class="ex" lang="chr">Ꭺ</span> is <span class="ipa">ko</span>, <span class="ex" lang="chr">Ꭺ̣</span> would be <span class="ipa">kʰo</span>.</p>
-<p><span class="codepoint" translate="no"><span lang="chr">&#x25CC;&#x0331;</span> [<a href="../latin/block#char0331"><span class="uname">U+0331 COMBINING MACRON BELOW</span></a>]</span> indicates  the  dropping  of  a  vowel; for example, Oklahoma could be written <span class="charExample" translate="no"><span class="ex" lang="chr">ᎣᎦ̱ᎳᎰᎹ</span></span>.</p>
-<p>When  a consonant is both shifted <em>and</em> has its vowel dropped, <span class="codepoint" translate="no"><span lang="chr">&#x25CC;&#x0324;</span> [<a href="../latin/block#char0324"><span class="uname">U+0324 COMBINING DIAERESIS BELOW</span></a>]</span> is used.</p>
-<p>Nasalisation is only very rarely marked: in such cases, it can be indicated using <span class="codepoint" translate="no"><span lang="chr">&#x25CC;&#x0330;</span> [<a href="../latin/block#char0330"><span class="uname">U+0330 COMBINING TILDE BELOW​</span></a>]</span>.</p>
+<p>Everson reports that  some combining diacritical marks are now used in Cherokee text by ordinary readers and especially children.<sup><a href="http://www.unicode.org/L2/L2014/14064r-n4537r-cherokee.pdf">e</a>5</sup> </p>
+<p>These diacritics are  in the Unicode Combining Diacritical Marks block. The Cherokee block has no combining characters.</p>
+
+<figure class="characterBox auto" data-cols="">̣␣̱␣̤␣̰</figure>
+
+<p><span class="codepoint" translate="no"><span lang="chr">&nbsp;&#x0323;</span> [<a href="../latin/block#char0323"><span class="uname">U+0323 COMBINING DOT BELOW</span></a>]</span> indicates  shifts  in  consonant  readings – such  as  voiced  to  voiceless,  voiceless  to voiced; for example, where <span class="ex" lang="chr">Ꭺ</span> is <span class="ipa">ko</span>, <span class="ex" lang="chr">Ꭺ̣</span> would be <span class="ipa">kʰo</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="chr">&nbsp;&#x0331;</span> [<a href="../latin/block#char0331"><span class="uname">U+0331 COMBINING MACRON BELOW</span></a>]</span> indicates  the  dropping  of  a  vowel; for example, Oklahoma could be written <span class="charExample" translate="no"><span class="charExample" translate="no"><span class="ex" lang="chr">ᎣᎦ̱ᎳᎰᎹ</span> <span class="trans">o-ga̱-la-ho-ma</span></span></span>.</p>
+<p>When  a consonant is both shifted <em>and</em> has its vowel dropped, <span class="codepoint" translate="no"><span lang="chr">&nbsp;&#x0324;</span> [<a href="../latin/block#char0324"><span class="uname">U+0324 COMBINING DIAERESIS BELOW</span></a>]</span> is used.</p>
+<p>Nasalisation is only very rarely marked: in such cases, it can be indicated using <span class="codepoint" translate="no"><span lang="chr">&nbsp;&#x0330;</span> [<a href="../latin/block#char0330"><span class="uname">U+0330 COMBINING TILDE BELOW​</span></a>]</span>.</p>
 </section>
 
   
   
 <section>
-<h2 id="digits">Digits</h2>
+<h2 id="digits">Numbers</h2>
     <p>Sequoyah, the inventor of the script, created a set of Cherokee numbers, but they were not adopted and are not encoded in Unicode.<sup><a href="http://www.unicode.org/versions/latest/ch20.pdf">u</a></sup> The shapes of the numbers can be seen on the Omniglot page.<sup><a href="http://www.omniglot.com/writing/cherokee.htm">o</a></sup></p>
   </section>
   
@@ -489,33 +361,46 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
   
 <section>
-    <h2 id="layout">Text layout</h2>
-    
-  <section>
-    <h3 id="dir">Text direction</h3>
-    <p>Cherokee is written horizontally, left-to-right.</p>
-  </section>
-
-
-
-
-  <section>
-    <h3 id="delimiters">Text delimiters</h3>
-  <p>Words are separated by spaces.</p>
-    <p>Cherokee uses standard Latin punctuation.<sup><a href="http://www.unicode.org/versions/latest/ch20.pdf">u</a></sup></p>
-    <p>In some cases, it has been known for full stops to be raised above the baseline.<sup><a href="#refs">d</a></sup></p>
-  </section>
-
-
+<h2 id="shaping">Glyph shaping &amp; positioning</h2>
+    <p>There is no interaction between the glyphs in Cherokee.</p>
 
   <section>
     <h3 id="fontstyle">Font style</h3>
     <p>Cherokee users would like their fonts to have italic and bold styles, although this is not currently common. These alternate styles would be used in the same way as for the Latin script.<sup><a href="http://www.unicode.org/L2/L2014/14064r-n4537r-cherokee.pdf">e</a>5</sup></p>
   </section>
+</section>
+  
+  
+  
+  
+<section>
+    <h2 id="layout">Structural boundaries &amp; markers</h2>
+    
+  <section>
+    <h3 id="words">Word boundaries</h3>
+  <p>Words are separated by spaces.</p>
+  </section>
 
 
 
 
+  <section>
+    <h3 id="phrase">Phrase boundaries</h3>
+    <p>Cherokee uses standard Latin punctuation.<sup><a href="http://www.unicode.org/versions/latest/ch20.pdf">u</a></sup></p>
+    <p>In some cases, it has been known for full stops to be raised above the baseline.<sup><a href="#refs">d</a></sup></p>
+  </section>
+  </section>
+  
+  
+  
+  
+<section>
+    <h2 id="layout">Line &amp; paragraph layout</h2>
+    
+  <section>
+    <h3 id="dir">Text direction</h3>
+    <p>Cherokee is written horizontally, left-to-right.</p>
+  </section>
 
   <section>
     <h3 id="justify">Justification</h3>
@@ -526,31 +411,59 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
       <button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Justify   </button>
     </p>
   </section>
+</section>
+
+
+
+
+
+
+
 
 
 
 <section>
-<h3>TBD</h3>
-<p class="ednote">Other features to be investigated in this section include: 
-text delimiters,
-emphasis &amp; highlighting,
-text decoration,
-abbreviations &amp; ellipsis,
-hyphens & dashes
-character transforms,
-quotations,
+<h3 id="tbd">TBD</h3>
+<p class="ednote">Further information needed for this section includes:</p>
+<pre style="margin-left: 10%;">
+Glyph shaping &amp; positioning
+    Cursive text
+    Context-based shaping
+    Multiple combining characters
+    Context-based positioning
+    Transforming characters
 
-line breaking,
-hyphenation,
-justification &amp; alignment,
-first-letter styling,
+Structural boundaries &amp; markers
+    Grapheme boundaries
+    Hyphens &amp; dashes
+    Bracketing information
+    Quotations
+    Abbreviations, ellipsis, &amp; repetition
+    Emphasis &amp; highlights
+    Inline notes &amp; annotations
 
-notes &amp; footnotes,
-page layout
-</p>
+Inline layout
+    Inline text spacing
+    Bidirectional text
+
+Line &amp; paragraph layout
+    Line breaking
+    Hyphenation
+    Text alignment &amp; justification
+    Counters, lists, etc.
+    Styling initials
+    Baselines &amp; inline alignment
+
+Page &amp; book layout
+    General page layout &amp; progression
+    Directional layout features
+	Grids &amp; tables
+    Notes, footnotes, etc.
+    Forms &amp; user interaction
+    Page numbering, running headers, etc.
+</pre>
 </section>
 
-</section>
 
 
 
@@ -568,16 +481,13 @@ page layout
 </section>
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/cherokee"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-22  15:00<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bcherokee%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fcherokee%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/cherokee"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-28  5:54<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bcherokee%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fcherokee%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"></div>
 </body>
 <script>
-var base = '/scripts/cherokee/block'
-initialiseShowNames(base, 'c');
-document.getElementById('featureTableBody').innerHTML = makeSidePanel("Cherokee","")
-createtoc(3)
+initialiseSummary('/scripts/cherokee/block','chr','Cherokee')
 </script>
 
 </html>
