@@ -24,15 +24,15 @@
 .large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1.75; }
 </style>
 
+<script src="db.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2019.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
-<script src="../common/block-functions.js"></script>
 <script src="../../shared/code/getLinks.js"></script>
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
@@ -98,7 +98,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->05-Jan-2019<!-- #EndDate -->
+  <!-- #BeginDate format:En2 -->29-Jan-2019<!-- #EndDate -->
 &bull; tags <a href="https://r12a.github.io/blog/?tag=thai" title="Show all blog posts tagged with 'thai'">thai</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
@@ -117,8 +117,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section id="samples">
-  <h2 href="#sample">Sample</h2>
+<section>
+  <h2 id="sample">Sample</h2>
   
   
   <div id="freeText" dir="ltr" lang="th" contenteditable="true" style="text-align: left;">
@@ -142,10 +142,9 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section id="notes"> 
 
- <section id="history">
-    <h2><a href="#history">Usage &amp; history</a></h2>
+<section>
+    <h2 id="history">Usage &amp; history</h2>
     <p>From <a href="http://scriptsource.org/scr/Thai">Scriptsource</a>: </p>
     <blockquote>The Thai script is used primarily for writing the Thai language, as well as Northern Thai, Northeastern Thai, Southern Thai, and Thai Song, which are separate languages. It is also used to write a number of minority languages in Thailand, Laos and China, as well as Pali, which is widely used in Buddhist temples and monasteries. Both the Thai language and script are closely related to Laotian. The script is of Indic origin, derived from Old Khmer.</blockquote>
     <p>From <a href="http://en.wikipedia.org/wiki/Thai_alphabet">Wikipedia</a>:</p>
@@ -160,21 +159,31 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section id="type">
-    <h2>Key features</h2>
+<section>
+    <h2 id="type">Distinctive features</h2>
     <p>Thai is an <span class="newterm">abugida</span>. Consonant letters have an inherent vowel sound. Vowel-signs are attached to the consonant to produce a different vowel.   See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
 </p>
 <p>Unlike devanagari, multiple vowel-signs may be used with a single character, and those positioned to the left of the consonant(s) are not combining characters.</p>
     <p>Like indic scripts, thai is based on orthographic syllables, so the vowel-sign is actually attached to the syllable. An orthographic syllable includes clusters of consonants without intervening vowel sounds. These clusters are typically represented as partially merged forms, called conjuncts.</p><p>Text is  written horizontally, left to right.</p>
   </section>
-  </section>
   
   
   
-  
-  
-  <section id="chars">
-<h2>Character lists</h2>
+<div id="showTranscriptions">
+<div>In yellow boxes, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div><label>ISO 11940 
+<input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+</div>
+
+
+
+
+
+  <section>
+<h2 id="chars">Character lists</h2>
     <p>The Thai script characters in Unicode 11.0 are contained in a single block (not counting shared characters, such as punctuation):</p>
     <ul>
       <li><a href="/uniview/?block=Thai">Thai</a> <span class="charCount">(57 letters, 16 marks, 3 punctuation, 10 numbers, 1 symbol : total 87)</span></li>
@@ -190,146 +199,71 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section id="consonants">
-<h2><a href="#letters">Consonants</a></h2>
-<p>Thai has no subjoined consonants, nor does it have any code points dedicated to medial or final consonants, although consonants do appear in those positions, eg. <span class="charExample" translate="no"><span class="ex" lang="th">โปรแกรม</span> <span class="trans">opṟɛk̯ṟm̱</span> <span class="ipa">proː krɛːm</span> <span class="meaning">(computer) program</span></span>.</p>
-
-<section id="basic_consonants">
-<h3><a href="#basic_consonants">Basic consonants</a></h3>
-
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'th')">list all 44</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="th">ก</span><span class="listTrans">k̯</span><span class="listIPA">k, -k</span></div>
-<div class="listPair"><span class="listItem" lang="th">ข</span><span class="listTrans">kʰ</span><span class="listIPA">kʰ, -k</span></div>
-<div class="listPair"><span class="listItem" lang="th">ฃ</span><span class="listTrans">k̈ʰ</span><span class="listIPA">kʰ, -k</span></div>
-<div class="listPair"><span class="listItem" lang="th">ค</span><span class="listTrans">ḵʰ</span><span class="listIPA">kʰ, -k</span></div>
-<div class="listPair"><span class="listItem" lang="th">ฆ</span><span class="listTrans">ḵ̇ʰ</span><span class="listIPA">kʰ, -k</span></div>
-<div class="listPair"><span class="listItem" lang="th">ฅ</span><span class="listTrans">ḵ̈ʰ</span><span class="listIPA">kʰ, -k</span></div>
-<div class="listPair"><span class="listItem" lang="th">ง</span><span class="listTrans">ŋ̱</span><span class="listIPA">ŋ</span></div>
-<div class="listPair"><span class="listItem" lang="th">จ</span><span class="listTrans">c̯</span><span class="listIPA">tɕ, -t</span></div>
-<div class="listPair"><span class="listItem" lang="th">ฉ</span><span class="listTrans">cʰ</span><span class="listIPA">tɕʰ</span></div>
-<div class="listPair"><span class="listItem" lang="th">ช</span><span class="listTrans">c̱ʰ</span><span class="listIPA">tɕʰ, -t</span></div>
-<div class="listPair"><span class="listItem" lang="th">ฌ</span><span class="listTrans">ċ̱ʰ</span><span class="listIPA">tɕʰ</span></div>
-<div class="listPair"><span class="listItem" lang="th">ฏ</span><span class="listTrans">ṭ̯</span><span class="listIPA">t, -t</span></div>
-<div class="listPair"><span class="listItem" lang="th">ฐ</span><span class="listTrans">ṭʰ</span><span class="listIPA">tʰ, -t</span></div>
-<div class="listPair"><span class="listItem" lang="th">ฑ</span><span class="listTrans">ṭ̲ʰ</span><span class="listIPA">tʰ, -t</span></div>
-<div class="listPair"><span class="listItem" lang="th">ฒ</span><span class="listTrans">ṭ̲̇ʰ</span><span class="listIPA">tʰ, -t</span></div>
-<div class="listPair"><span class="listItem" lang="th">ฎ</span><span class="listTrans">ḍ̯</span><span class="listIPA">d, -t</span></div>
-<div class="listPair"><span class="listItem" lang="th">ณ</span><span class="listTrans">ṇ̱</span><span class="listIPA">n</span></div>
-<div class="listPair"><span class="listItem" lang="th">ต</span><span class="listTrans">t̯</span><span class="listIPA">t, -t</span></div>
-<div class="listPair"><span class="listItem" lang="th">ถ</span><span class="listTrans">tʰ</span><span class="listIPA">tʰ, -t</span></div>
-<div class="listPair"><span class="listItem" lang="th">ท</span><span class="listTrans">ṯʰ</span><span class="listIPA">tʰ, -t</span></div>
-<div class="listPair"><span class="listItem" lang="th">ธ</span><span class="listTrans">ṯ̇ʰ</span><span class="listIPA">tʰ, -t</span></div>
-<div class="listPair"><span class="listItem" lang="th">ด</span><span class="listTrans">d̯</span><span class="listIPA">d, -t</span></div>
-<div class="listPair"><span class="listItem" lang="th">น</span><span class="listTrans">ṉ</span><span class="listIPA">n</span></div>
-<div class="listPair"><span class="listItem" lang="th">ป</span><span class="listTrans">p</span><span class="listIPA">p, -p</span></div>
-<div class="listPair"><span class="listItem" lang="th">ผ</span><span class="listTrans">pʰ</span><span class="listIPA">pʰ</span></div>
-<div class="listPair"><span class="listItem" lang="th">พ</span><span class="listTrans">p̱ʰ</span><span class="listIPA">pʰ, -p</span></div>
-<div class="listPair"><span class="listItem" lang="th">ภ</span><span class="listTrans">ṗ̱ʰ</span><span class="listIPA">pʰ, -p</span></div>
-<div class="listPair"><span class="listItem" lang="th">บ</span><span class="listTrans">b̯</span><span class="listIPA">b, -p</span></div>
-<div class="listPair"><span class="listItem" lang="th">ม</span><span class="listTrans">m̱</span><span class="listIPA">m</span></div>
-<div class="listPair"><span class="listItem" lang="th">ย</span><span class="listTrans">y̱</span><span class="listIPA">j, (-n)</span></div>
-<div class="listPair"><span class="listItem" lang="th">ญ</span><span class="listTrans">ẏ̱</span><span class="listIPA">j, -n</span></div>
-<div class="listPair"><span class="listItem" lang="th">ล</span><span class="listTrans">ḻ</span><span class="listIPA">l, -n</span></div>
-<div class="listPair"><span class="listItem" lang="th">ฬ</span><span class="listTrans">ḻ̇</span><span class="listIPA">l, -n</span></div>
-<div class="listPair"><span class="listItem" lang="th">ร</span><span class="listTrans">ṟ</span><span class="listIPA">r, -n</span></div>
-<div class="listPair"><span class="listItem" lang="th">ว</span><span class="listTrans">w̱</span><span class="listIPA">w</span></div>
-<div class="listPair"><span class="listItem" lang="th">ห</span><span class="listTrans">h</span><span class="listIPA">h</span></div>
-<div class="listPair"><span class="listItem" lang="th">ฮ</span><span class="listTrans">ẖ</span><span class="listIPA">h</span></div>
-<div class="listPair"><span class="listItem" lang="th">ส</span><span class="listTrans">s</span><span class="listIPA">s, -t</span></div>
-<div class="listPair"><span class="listItem" lang="th">ศ</span><span class="listTrans">ś</span><span class="listIPA">s, -t</span></div>
-<div class="listPair"><span class="listItem" lang="th">ษ</span><span class="listTrans">ṣ</span><span class="listIPA">s, -t</span></div>
-<div class="listPair"><span class="listItem" lang="th">ซ</span><span class="listTrans">ṡ̱</span><span class="listIPA">s, -t</span></div>
-<div class="listPair"><span class="listItem" lang="th">ฝ</span><span class="listTrans">f̱</span><span class="listIPA">f, -p</span></div>
-<div class="listPair"><span class="listItem" lang="th">ฟ</span><span class="listTrans">ḟ̱</span><span class="listIPA">f</span></div>
-<div class="listPair"><span class="listItem" lang="th">อ</span><span class="listTrans">ʔ</span><span class="listIPA">-, ɔː</span></div>
-</div>
-</figure>
+<section>
+<h2 id="vowels">Vowels</h2>
 
 
-<p><span class="codepoint" translate="no"><span lang="th">&#x0E2D;</span> [<a href="/scripts/thai/block#char0E2D"><span class="uname">U+0E2D THAI CHARACTER O ANG</span></a>]</span> is silent when used as a base for vowels at the beginning of a syllable. When it appears alone after a base consonant it becomes the vowel ɔː. It is also used in combination with other characters to produce additional vowel sounds (see below).</p>
+<section>
+<h3 id="inherent">Inherent vowel</h3>
+
+<p>Consonants carry an inherent vowel,  pronounced <span class="ipa">o</span> inside a closed syllable, and <span class="ipa">a</span> in an open syllable.  So <span class="charExample" translate="no"><span class="ex" lang="tmp">ก</span></span> is pronounced <span class="ipa">ka</span>.</p>
 </section>
 
 
-<section id="consonant_class">
-<h3><a href="#consonant_class">Consonant class</a></h3>
-
-<p>The consonants are  associated with high, mid, or low classes related to tone values. Low class consonants are indicated using an underline in the transliteration. The consonants that default to mid class have an inverted breve below the transliteration.</p>
-<p>The distribution per consonant class is as follows:</p>
-<table>
-<tr><th>High</th><td class="exlist" lang="th">ข ฃ ฉ ฐ ถ ป ผ ห ส ศ ษ</td></tr>
-<tr><th>Mid</th><td class="exlist" lang="th">ก จ ฏ ฎ ด บ</td></tr>
-<tr><th>Low</th><td class="exlist" lang="th">ค ฆ ฅ ช ฌ ฑ ฒ ณ ท ธ น พ ภ ม ย ญ ล ฬ ร ว ฮ ซ ฝ ฟ</td></tr>
-</table>
-<p>A silent  <span class="codepoint" translate="no"><span lang="th">&#x0E2B;</span> [<a href="/scripts/thai/block#char0E2B"><span class="uname">U+0E2B THAI CHARACTER HO HIP</span></a>]</span> can be added before the following characters to make their default tonal class high, eg. <span class="charExample" translate="no"><span class="ex" lang="th">หมา</span> <span class="trans">hm̱ā</span> <span class="ipa">mǎː</span> <span class="meaning">dog</span></span>, <span class="charExample" translate="no"><span class="ex" lang="th">หยุด</span> <span class="trans">hy̱ud̯</span> <span class="ipa">jùt</span> <span class="meaning">to stop</span></span>.</p>
-        <figure>
-<div class="listAll" onClick="listAll(this, 'th')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="exlist"><span class="listItem" lang="th">ง</span></span></div>
-<div class="listPair"><span class="exlist"><span class="listItem" lang="th">ญ</span></span></div>
-<div class="listPair"><span class="exlist"><span class="listItem" lang="th">น</span></span></div>
-<div class="listPair"><span class="exlist"><span class="listItem" lang="th">ม</span></span></div>
-<div class="listPair"><span class="exlist"><span class="listItem" lang="th">ย</span></span></div>
-<div class="listPair"><span class="exlist"><span class="listItem" lang="th">ร</span></span></div>
-<div class="listPair"><span class="exlist"><span class="listItem" lang="th">ล</span></span></div>
-<div class="listPair"><span class="exlist"><span class="listItem" lang="th">ว</span></span></div>
-</div>
-</figure>
-</section>
-
+<section>
+<h3 id="vowel_absence">Vowel absence</h3>
+<p>Vowel absence after syllable-final consonants is not normally marked in any way. Nor is it marked in syllable-initial clusters.</p>
+<p><span class="codepoint" translate="no"><span lang="th">&#xA0;&#x0E4C;</span> [<a href="/scripts/thai/block#char0E4C"><span class="uname">U+0E4C THAI CHARACTER THANTHAKHAT​</span></a>]</span> can be used  above a syllable when it is not pronounced (usually at the end of a syllable), eg. <span class="ex" lang="th">รถเมล์</span> <span class="ipa">rotmeː</span> <span class="meaning">bus</span>, <span class="ex" lang="th">ศักดิ์สิทธิ์</span> <span class="ipa">saksitʰ</span> <span class="meaning">to be sacred</span>. It is often used for foreign loan words, eg. <span class="ex" lang="th">คอมพิวเตอร์</span> <span class="ipa">kʰompʰiwtɤː</span> <span class="meaning">computer</span>, <span class="ex" lang="th">โปสการ์ด</span> <span class="ipa">poːskaːt</span> <span class="meaning">postcard</span>, <span class="ex" lang="th">สแตมป์</span> <span class="ipa">satɛːm</span> <span class="meaning">stamp</span>.</p>
 </section>
 
 
 
 
-<section id="vowels">
-<h2><a href="#vowels">Vowels</a></h2>
-
-
-<p>Consonants carry an inherent  vowel  that can be overridden using vowel signs. The inherent vowel is <span class="ipa">o</span> inside a closed syllable, and <span class="ipa">a</span> in an open syllable.</p>
-<p>There are no independent vowels in Thai, ie. for use at the start of a syllable. In such situations, Thai uses <span class="codepoint" translate="no"><span lang="th">&#x0E2D;</span> [<a href="/scripts/thai/block#char0E2D"><span class="uname">U+0E2D THAI CHARACTER O ANG</span></a>]</span> as a base for vowel signs.</p>
-
-
-
-<section id="prescript">
-<h3><a href="#prescript">Prescript dependent vowels</a></h3>
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'th')">list all 5</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="th">เ</span><span class="listTrans">e</span><span class="listIPA">eː</span></div>
-<div class="listPair"><span class="listItem" lang="th">แ</span><span class="listTrans">ɛ</span><span class="listIPA">ɛː</span></div>
-<div class="listPair"><span class="listItem" lang="th">ใ</span><span class="listTrans">äʲ</span><span class="listIPA">aj</span></div>
-<div class="listPair"><span class="listItem" lang="th">ไ</span><span class="listTrans">aʲ</span><span class="listIPA">aj</span></div>
-<div class="listPair"><span class="listItem" lang="th">โ</span><span class="listTrans">o</span><span class="listIPA">oː</span></div>
-</div>
-</figure>
-
-
-
-<p>Of the vowel-signs, 5 appear to the left of the onset consonant. These characters are not combining characters, and are typed and stored before the base.</p>
+<section>
+<h3 id="vowelsigns">Vowel signs</h3>
+<p>To produce a different vowel than the inherent one, Thai uses one or more vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="khb">กิ</span> <span class="trans">ki</span></span>. </p>
+<p>Vowel signs in Thai are a mixture of combining characters and ordinary spacing characters, Only the superscript and subscript vowel-signs are combining characters.</p>
+<p>Vowel-signs can also be combined to create additional sounds.</p>
+<p>Vowel-sign positions and combinations are as follows. (There may be one or two more than shown here.)</p>
+<ul>
+<li>5 prescript, eg. <span class="charExample" translate="no"><span class="ex" lang="th">โก</span> <span class="trans">ok̯ (ko)</span></span></li>
+<li>2 postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="th">กา</span> <span class="trans">k̯ā</span></span></li>
+<li>5 superscript, eg. <span class="charExample" translate="no"><span class="ex" lang="th">กิ</span> <span class="trans">k̯i</span></span></li>
+<li>2 subscript, eg. <span class="charExample" translate="no"><span class="ex" lang="th">กุ</span> <span class="trans">k̯u</span></span></li>
+<li>6 sup+postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="th">กือ</span> <span class="trans">k̯ɯ̄ʔ</span> <span class="ipa">kɯːo</span></span></li>
+<li>4 post+postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="th">กาว</span> <span class="trans">k̯āw̱</span> <span class="ipa">kaːw</span></span></li>
+<li>2 sub+postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="th">กุย</span> <span class="trans">k̯uy̱</span> <span class="ipa">kuj</span></span></li>
+<li>10 pre+postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="th">เกะ</span> <span class="trans">ek̯a</span> <span class="ipa">kè</span></span></li>
+<li>3 pre+superscript, eg. <span class="charExample" translate="no"><span class="ex" lang="th">เกิ</span> <span class="trans">ek̯i</span> <span class="ipa">kɤː</span></span></li>
+<li>2 super+post+post, eg. <span class="charExample" translate="no"><span class="ex" lang="th">กัวะ</span> <span class="trans">k̯äw̱a</span> <span class="ipa">kua </span></span></li>
+<li>2 pre+post+post, eg. <span class="charExample" translate="no"><span class="ex" lang="th">เกาะ</span> <span class="trans">ek̯āa</span> <span class="ipa">kɔ̀</span></span></li>
+<li>3 pre+sup+postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="th">เกือ</span> <span class="trans">ek̯ɯ̄ʔ</span> <span class="ipa">kɯːa</span></span></li>
+<li>4 pre+sup+post+postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="th">เกียะ</span> <span class="trans">ek̯īy̱a</span> <span class="ipa">kiːa</span></span></li>
+</ul>
+<p>See also <a class="sectionref">vocalics</a>.</p>
 </section>
 
 
 
-<section id="dependent">
-<h3><a href="#dependent">Other dependent vowels</a></h3>
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'th')">list all 10</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="th">ะ</span><span class="listTrans">a</span><span class="listIPA">a</span></div>
-<div class="listPair"><span class="listItem" lang="th">ั</span><span class="listTrans">ä</span><span class="listIPA">a</span></div>
-<div class="listPair"><span class="listItem" lang="th">า</span><span class="listTrans">ā</span><span class="listIPA">aː</span></div>
-<div class="listPair"><span class="listItem" lang="th">ิ</span><span class="listTrans">i</span><span class="listIPA">i</span></div>
-<div class="listPair"><span class="listItem" lang="th">ี</span><span class="listTrans">ī</span><span class="listIPA">iː</span></div>
-<div class="listPair"><span class="listItem" lang="th">ึ</span><span class="listTrans">ɯ</span><span class="listIPA">ɯ</span></div>
-<div class="listPair"><span class="listItem" lang="th">ื</span><span class="listTrans">ɯ̄</span><span class="listIPA">ɯː</span></div>
-<div class="listPair"><span class="listItem" lang="th">ุ</span><span class="listTrans">u</span><span class="listIPA">u</span></div>
-<div class="listPair"><span class="listItem" lang="th">ู</span><span class="listTrans">ū</span><span class="listIPA">uː</span></div>
-<div class="listPair"><span class="listItem" lang="th">ำ</span><span class="listTrans">aᵐ</span><span class="listIPA">am</span></div>
-</div>
-</figure>
 
+
+<section>
+<h3 id="prescript">Prescript dependent vowels</h3>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">เ␣แ␣ใ␣ไ␣โ</figure>
+
+
+<p>Thai uses a visual encoding model. Of the vowel-signs, 5 appear to the left of the onset consonant. These characters are not combining characters, and are typed and stored before the base.</p>
+<p>Note that these vowel-signs are placed before the start of the <em>syllable</em>. This means that a word with a consonant cluster at the start separates the prescript vowel from any postscript vowels by more than one consonant character, eg. <span class="charExample" translate="no"><span class="ex" lang="th">เปล่า</span> <span class="trans">ep̯ḻ¹ā</span> <span class="ipa">plàw</span> <span class="meaning">no</span></span>.</p>
+<p>Note that <span class="codepoint" translate="no"><span lang="th">&#x0E41;</span> [<a href="/scripts/thai/block#char0E41"><span class="uname">U+0E41 THAI CHARACTER SARA AE</span></a>]</span> should not be typed as two successive <span class="codepoint" translate="no"><span lang="th">&#x0E40;</span> [<a href="/scripts/thai/block#char0E40"><span class="uname">U+0E40 THAI CHARACTER SARA E</span></a>]</span> characters.</p>
+</section>
+
+
+
+<section>
+<h3 id="dependent">Other vowel signs</h3>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ะ␣ั␣า␣ิ␣ี␣ึ␣ื␣ุ␣ู␣ำ</figure>
 
 
 
@@ -340,82 +274,24 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section id="consonant_vowels">
-<h3><a href="#consonant_vowels">Consonants pronounced as vowels</a></h3>
+<section>
+<h3 id="consonant_vowels">Consonants pronounced as vowels</h3>
 
 
 <p>The consonant <span class="codepoint" translate="no"><span lang="th">&#x0E2D;</span> [<a href="/scripts/thai/block#char0E2D"><span class="uname">U+0E2D THAI CHARACTER O ANG</span></a>]</span> is also be pronounced as the vowel ɔː when it appears alone after a base consonant.</p>
+<p>Many of the vowel combinations involve <span class="codepoint" translate="no"><span lang="th">&#x0E22;</span> [<a href="/scripts/thai/block#char0E22"><span class="uname">U+0E22 THAI CHARACTER YO YAK</span></a>]</span> and/or  <span class="codepoint" translate="no"><span lang="th">&#x0E27;</span> [<a href="/scripts/thai/block#char0E27"><span class="uname">U+0E27 THAI CHARACTER WO WAEN</span></a>]</span> to create diphthongs.</p>
 <p>The consonant <span class="codepoint" translate="no"><span lang="th">&#x0E23;</span> [<a href="/scripts/thai/block#char0E23"><span class="uname">U+0E23 THAI CHARACTER RO RUA</span></a>]</span> is pronounced as a vowel <span class="ipa">a</span> when doubled medially, eg. <span class="ex" lang="th">ธรรม</span> <span class="ipa">tʰam </span> <span class="meaning">justice</span>. When   doubled at the end of a syllable it is pronounced <span class="ipa">an</span>, eg. <span class="ex" lang="th">กรรไกร</span> <span class="ipa">kankraj</span> <span class="meaning">scissors</span>. Note, however, that this may also constitute the end and beginning of two syllables, eg. <span class="ex" lang="th">ภรรยา</span> <span class="ipa">pʰanrájaː</span> <span class="meaning">wife</span>.</p>
 </section>
 
 
 
 
+<section>
+<h3 id="complex_vowels">Vowel-sign combinations</h3>
 
-<section id="vocalics">
-<h3><a href="#vocalics">Vocalics</a></h3>
+<p>The various vowel-signs described just above can be mixed together with <span class="codepoint" translate="no"><span lang="th">&#x0E2D;</span> [<a href="/scripts/thai/block#char0E2D"><span class="uname">U+0E2D THAI CHARACTER O ANG</span></a>]</span>, <span class="codepoint" translate="no"><span lang="th">&#x0E22;</span> [<a href="/scripts/thai/block#char0E22"><span class="uname">U+0E22 THAI CHARACTER YO YAK</span></a>]</span>, <span class="codepoint" translate="no"><span lang="th">&#x0E27;</span> [<a href="/scripts/thai/block#char0E27"><span class="uname">U+0E27 THAI CHARACTER WO WAEN</span></a>]</span>, and <span class="codepoint" translate="no"><span lang="th">&#xA0;&#x0E47;</span> [<a href="/scripts/thai/block#char0E47"><span class="uname">U+0E47 THAI CHARACTER MAITAIKHU​</span></a>]</span> to produce additional sounds, as shown in the examples below.</p>
 
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'th')">list all 4</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="th">ฤ</span><span class="listTrans">r̥</span><span class="listIPA">rɯ, ri</span></div>
-<div class="listPair"><span class="listItem" lang="th">ฦ</span><span class="listTrans">l̥</span><span class="listIPA">lɯ</span></div>
-<div class="listPair"><span class="listItem" lang="th">ๅ</span><span class="listTrans">ɯ̃</span><span class="listIPA">ɯː</span></div>
-</div>
-</figure>
-
-<p>These letters are actually considered to be consonants in Thai.</p>
-<p>The long forms of both are created using <span class="codepoint" translate="no"><span lang="th">&#x0E45;</span> [<a href="/scripts/thai/block#char0E45"><span class="uname">U+0E45 THAI CHARACTER LAKKHANGYAO</span></a>]</span>, ie. <span class="charExample" translate="no"><span class="ex" lang="th">ฤๅ</span></span> and <span class="charExample" translate="no"><span class="ex" lang="th">ฦๅ</span></span>. Otherwise, that character doesn't appear alone.</p>
-</section>
-
-
-
-
-<section id="complex_vowels">
-<h3><a href="#complex_vowels">Vowel combinations</a></h3>
-
-<p>The various vowel-signs described just above can be mixed together with <span class="codepoint" translate="no"><span lang="th">&#x0E2D;</span> [<a href="/scripts/thai/block#char0E2D"><span class="uname">U+0E2D THAI CHARACTER O ANG</span></a>]</span>, <span class="codepoint" translate="no"><span lang="th">&#x0E22;</span> [<a href="/scripts/thai/block#char0E22"><span class="uname">U+0E22 THAI CHARACTER YO YAK</span></a>]</span>, <span class="codepoint" translate="no"><span lang="th">&#x0E27;</span> [<a href="/scripts/thai/block#char0E27"><span class="uname">U+0E27 THAI CHARACTER WO WAEN</span></a>]</span>, and <span class="codepoint" translate="no"><span lang="th">&#xA0;&#x0E47;</span> [<a href="/scripts/thai/block#char0E47"><span class="uname">U+0E47 THAI CHARACTER MAITAIKHU​</span></a>]</span> to produce additional sounds, as shown in the examples below. The letter <span class="charExample" translate="no"><span class="ex" lang="th">ก</span></span> is used to indicate the location of the base consonant.</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'th')">list all 36</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="th">กือ</span><span class="listTrans">ɯ̄ʔ</span><span class="listIPA">ɯː</span></div>
-<div class="listPair"><span class="listItem" lang="th">เกะ</span><span class="listTrans">e-a</span><span class="listIPA">e</span></div>
-<div class="listPair"><span class="listItem" lang="th">เก็</span><span class="listTrans">e-˘</span><span class="listIPA">e</span></div>
-<div class="listPair"><span class="listItem" lang="th">แกะ</span><span class="listTrans">ɛ-a</span><span class="listIPA">ɛ</span></div>
-<div class="listPair"><span class="listItem" lang="th">แก็</span><span class="listTrans">ɛ-˘</span><span class="listIPA">ɛ</span></div>
-<div class="listPair"><span class="listItem" lang="th">โกะ</span><span class="listTrans">o-a</span><span class="listIPA">o</span></div>
-<div class="listPair"><span class="listItem" lang="th">เกาะ</span><span class="listTrans">e-āa</span><span class="listIPA">ɔ</span></div>
-<div class="listPair"><span class="listItem" lang="th">ก็อ</span><span class="listTrans">-˘ʔ</span><span class="listIPA">o</span></div>
-<div class="listPair"><span class="listItem" lang="th">เกอะ</span><span class="listTrans">e-ʔa</span><span class="listIPA">ɤʔ</span></div>
-<div class="listPair"><span class="listItem" lang="th">เกอ</span><span class="listTrans">e-ʔ</span><span class="listIPA">ɤː</span></div>
-<div class="listPair"><span class="listItem" lang="th">เกิ</span><span class="listTrans">e-i</span><span class="listIPA">ɤː</span></div>
-<div class="listPair"><span class="listItem" lang="th">เกียะ</span><span class="listTrans">e-īya</span><span class="listIPA">iaʔ</span></div>
-<div class="listPair"><span class="listItem" lang="th">เกีย</span><span class="listTrans">e-īy</span><span class="listIPA">ia</span></div>
-<div class="listPair"><span class="listItem" lang="th">เกือะ</span><span class="listTrans">e-ɯ̄ʔa</span><span class="listIPA">ɯaʔ</span></div>
-<div class="listPair"><span class="listItem" lang="th">เกือ</span><span class="listTrans">e-ɯ̄ʔ</span><span class="listIPA">ɯa</span></div>
-<div class="listPair"><span class="listItem" lang="th">กัวะ</span><span class="listTrans">äwa</span><span class="listIPA">uaʔ</span></div>
-<div class="listPair"><span class="listItem" lang="th">กัว</span><span class="listTrans">äw</span><span class="listIPA">ua</span></div>
-<div class="listPair"><span class="listItem" lang="th">กิว</span><span class="listTrans">iw</span><span class="listIPA">iu, iw</span></div>
-<div class="listPair"><span class="listItem" lang="th">เก็ว</span><span class="listTrans">e-˘w</span><span class="listIPA">eu, ew</span></div>
-<div class="listPair"><span class="listItem" lang="th">เกว</span><span class="listTrans">e-w</span><span class="listIPA">eːu, eːw</span></div>
-<div class="listPair"><span class="listItem" lang="th">แกว</span><span class="listTrans">ɛ-w</span><span class="listIPA">eːu, eːw</span></div>
-<div class="listPair"><span class="listItem" lang="th">เกา</span><span class="listTrans">e-ā</span><span class="listIPA">au, aw</span></div>
-<div class="listPair"><span class="listItem" lang="th">กาว</span><span class="listTrans">āw</span><span class="listIPA">aːu</span></div>
-<div class="listPair"><span class="listItem" lang="th">เกียว</span><span class="listTrans">e-īyw</span><span class="listIPA">iau, iaw</span></div>
-<div class="listPair"><span class="listItem" lang="th">กัย</span><span class="listTrans">äy</span><span class="listIPA">ai, aj</span></div>
-<div class="listPair"><span class="listItem" lang="th">ไกย</span><span class="listTrans">aʲ-y</span><span class="listIPA">ai, aj</span></div>
-<div class="listPair"><span class="listItem" lang="th">กาย</span><span class="listTrans">āy</span><span class="listIPA">aːi, aːj</span></div>
-<div class="listPair"><span class="listItem" lang="th">ก็อย</span><span class="listTrans">˘ʔy</span><span class="listIPA">ɔi, ɔj</span></div>
-<div class="listPair"><span class="listItem" lang="th">กอย</span><span class="listTrans">ʔy</span><span class="listIPA">ɔːi, ɔːj</span></div>
-<div class="listPair"><span class="listItem" lang="th">โกย</span><span class="listTrans">o-y</span><span class="listIPA">ɔːi, ɔːj</span></div>
-<div class="listPair"><span class="listItem" lang="th">กุย</span><span class="listTrans">uy</span><span class="listIPA">ui, uj</span></div>
-<div class="listPair"><span class="listItem" lang="th">เกย</span><span class="listTrans">e-y</span><span class="listIPA">ɤːi, ɤːj</span></div>
-<div class="listPair"><span class="listItem" lang="th">กวย</span><span class="listTrans">wy</span><span class="listIPA">uai, uaj</span></div>
-<div class="listPair"><span class="listItem" lang="th">เกือย</span><span class="listTrans">e-ɯ̄ʔy</span><span class="listIPA">ɯai, ɯaj</span></div>
-<div class="listPair"><span class="listItem" lang="th">ฤๅ</span><span class="listTrans">r̥ɯ̃</span><span class="listIPA">rɯː</span></div>
-<div class="listPair"><span class="listItem" lang="th">ฦๅ</span><span class="listTrans">l̥ɯ̃</span><span class="listIPA">lɯː</span></div>
-</div>
-</figure>
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">-ือ␣-็อ␣-ัว␣-ัย␣-ิว␣-าว␣-าย␣-อย␣-ุย␣-ูย␣-วย␣เ-ะ␣เ-็␣เ-อ␣เ-ิ␣เ-ว␣เ-า␣เ-ย␣แ-ว␣แ-ะ␣แ-็␣โ-ะ␣โ-ย␣ไ-ย␣-็อย␣-ัวะ␣เ-าะ␣เ-อะ␣เ-ือ␣เ-็ว␣เ-ีย␣เ-ียะ␣เ-ือะ␣เ-ียว␣เ-ือย␣ฤๅ␣ฦๅ</figure>
 
 
 <p>Distribution of vowel elements is as follows:</p>
@@ -436,25 +312,117 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <p>At maximum, vowel components can occur concurrently on 3 sides of the base.</p>
 </section>
+
+
+
+
+
+<section>
+<h3 id="independent">Syllable-initial vowels</h3>
+
+<p class="explanatoryintro">Syllable-initial vowels appear at the beginning of a word, or at the beginning of a new syllable in the middle of a word.</p>
+<p>There are no independent vowel letters in Thai, Thai uses <span class="codepoint" translate="no"><span lang="th">&#x0E2D;</span> [<a href="/scripts/thai/block#char0E2D"><span class="uname">U+0E2D THAI CHARACTER O ANG</span></a>]</span> as a base for vowel signs, eg. <span class="charExample" translate="no"><span class="ex" lang="th">อิ่ม</span> <span class="trans">ʔi¹m̱</span> <span class="ipa">ìm</span> <span class="meaning">to be full</span></span>, or <span class="charExample" translate="no"><span class="ex" lang="th">สะอาด</span> <span class="trans">saʔād̯</span> <span class="ipa">sà àːt</span> <span class="meaning">clean</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="th">&#x0E2D;</span> [<a href="/scripts/thai/block#char0E2D"><span class="uname">U+0E2D THAI CHARACTER O ANG</span></a>]</span> on its own represents the same sound as the inherent vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="th">อเมริกา</span> <span class="trans">ʔem̱ṟik̯ā</span> <span class="ipa">à meː rì kaː</span> <span class="meaning">America</span></span>.</p>
 </section>
 
 
 
 
-<section id="tones">
-<h2><a href="#tones">Tones</a></h2>
-  
-  <figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'th')">list all 4</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="th">่</span><span class="listTrans">¹</span></div>
-<div class="listPair"><span class="listItem" lang="th">้</span><span class="listTrans">²</span></div>
-<div class="listPair"><span class="listItem" lang="th">๊</span><span class="listTrans">³</span></div>
-<div class="listPair"><span class="listItem" lang="th">๋</span><span class="listTrans">⁴</span></div>
-</div>
-</figure>
+
+<section>
+<h3 id="vocalics">Vocalics</h3>
+
+<p class="explanatoryintro">Vocalics are special combinations of consonant+vowel, derived from Sanskrit.</p>
+
+<figure class="characterBox auto"  data-cols="ipa,trans">ฤ␣ฦ␣ๅ</figure>
+
+
+<p>These letters are actually considered to be consonants in Thai.</p>
+<p>The long forms of both are created using <span class="codepoint" translate="no"><span lang="th">&#x0E45;</span> [<a href="/scripts/thai/block#char0E45"><span class="uname">U+0E45 THAI CHARACTER LAKKHANGYAO</span></a>]</span>, ie. <span class="charExample" translate="no"><span class="ex" lang="th">ฤๅ</span></span> and <span class="charExample" translate="no"><span class="ex" lang="th">ฦๅ</span></span>. Otherwise, that character doesn't appear alone.</p>
+</section>
+</section>
+
+
+
+<section>
+<h2 id="consonants">Consonants</h2>
+<p>Thai has no subjoined consonants, nor does it have any code points dedicated to medial or final consonants, although consonants do appear in those positions, eg. <span class="charExample" translate="no"><span class="ex" lang="th">โปรแกรม</span> <span class="trans">opṟɛk̯ṟm̱</span> <span class="ipa">proː krɛːm</span> <span class="meaning">(computer) program</span></span>.</p>
+
+<section>
+<h3 id="basic_consonants">Basic consonants</h3>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ก␣ข␣ฃ␣ค␣ฆ␣ฅ␣ง␣จ␣ฉ␣ช␣ฌ␣ฏ␣ฐ␣ฑ␣ฒ␣ฎ␣ณ␣ต␣ถ␣ท␣ธ␣ด␣น␣ป␣ผ␣พ␣ภ␣บ␣ม␣ย␣ญ␣ล␣ฬ␣ร␣ว␣ห␣ฮ␣ส␣ศ␣ษ␣ซ␣ฝ␣ฟ␣อ</figure>
+
+
+
+<p><span class="codepoint" translate="no"><span lang="th">&#x0E2D;</span> [<a href="/scripts/thai/block#char0E2D"><span class="uname">U+0E2D THAI CHARACTER O ANG</span></a>]</span> is silent when used as a base for vowels at the beginning of a syllable. When it appears alone after a base consonant it becomes the vowel ɔː. It is also used in combination with other characters to produce additional vowel sounds (see <a class="secref">independent</a>).</p>
+</section>
+
+
+<section>
+<h3 id="consonant_class">Consonant class</h3>
+
+<p>The consonants are  associated with high, mid, or low classes related to tone values. Low class consonants are indicated using an underline in the transliteration. The consonants that default to mid class have an inverted breve below the transliteration.</p>
+<p>The distribution per consonant class is as follows:</p>
+<table>
+<tr><th>High</th><td class="exlist" lang="th">ข ฃ ฉ ฐ ถ ป ผ ห ส ศ ษ</td></tr>
+<tr><th>Mid</th><td class="exlist" lang="th">ก จ ฏ ฎ ด บ</td></tr>
+<tr><th>Low</th><td class="exlist" lang="th">ค ฆ ฅ ช ฌ ฑ ฒ ณ ท ธ น พ ภ ม ย ญ ล ฬ ร ว ฮ ซ ฝ ฟ</td></tr>
+</table>
+<p>A silent  <span class="codepoint" translate="no"><span lang="th">&#x0E2B;</span> [<a href="/scripts/thai/block#char0E2B"><span class="uname">U+0E2B THAI CHARACTER HO HIP</span></a>]</span> can be added before the following characters to make their default tonal class high, eg. <span class="charExample" translate="no"><span class="ex" lang="th">หมา</span> <span class="trans">hm̱ā</span> <span class="ipa">mǎː</span> <span class="meaning">dog</span></span>, <span class="charExample" translate="no"><span class="ex" lang="th">หยุด</span> <span class="trans">hy̱ud̯</span> <span class="ipa">jùt</span> <span class="meaning">to stop</span></span>.</p>
+<figure class="auto"  data-cols="trans,transc">ง␣ญ␣น␣ม␣ย␣ร␣ล␣ว</figure>
+</section>
+
+
+
+<section>
+<h3 id="onset_clusters">Syllable-onset clusters</h3>
+
+<p>Consonant clusters at the start of a syllable can arise from additional consonants such as <span class="codepoint" translate="no"><span lang="th">&#x0E25;</span> [<a href="/scripts/thai/block#char0E25"><span class="uname">U+0E25 THAI CHARACTER LO LING</span></a>]</span> and <span class="codepoint" translate="no"><span lang="th">&#x0E23;</span> [<a href="/scripts/thai/block#char0E23"><span class="uname">U+0E23 THAI CHARACTER RO RUA</span></a>]</span> eg. <span class="charExample" translate="no"><span class="ex" lang="th">ปลา</span> <span class="trans">p̯ḻā</span> <span class="ipa">plaː</span> <span class="meaning">fish</span></span>, or the silent <span class="codepoint" translate="no"><span lang="th">&#x0E2B;</span> [<a href="/scripts/thai/block#char0E2B"><span class="uname">U+0E2B THAI CHARACTER HO HIP</span></a>]</span> used to affect tonal values, eg. <span class="charExample" translate="no"><span class="ex" lang="th">หมา</span> <span class="trans">hm̱ā</span> <span class="ipa">mǎː</span> <span class="meaning">dog</span></span>.</p>
+<p>There are no dedicated code points for these, so it is feasible that <span class="charExample"><span class="ex" lang="th">ปลา</span></span> could be pronounced <span class="ipa">pà laː</span> in a different context.</p>
+<p>When there are tone marks, they are placed over the second consonant, as are any super-/subscript vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="th">เปลี่ยน</span> <span class="trans">ep̯ḻī¹y̱ṉ</span> <span class="ipa">plìːan</span> <span class="meaning">to change</span></span>.</p>
+<p>Prescript vowel-signs are placed before the first consonant in the cluster, ie. at the start of the syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="th">โปรแกรม</span> <span class="trans">opṟɛk̯ṟm̱</span> <span class="ipa">proː krɛːm</span> <span class="meaning">(computer) program</span></span>, which does this twice.</p>
+</section>
+
+
+
+
+<section>
+<h3 id="finals">Syllable-final consonants</h3>
+
+<p>Consonants at the end of a syllable use ordinary code points, eg. <span class="charExample" translate="no"><span class="ex" lang="th">ตื่น</span> <span class="trans">t̯ɯ̄¹ṉ</span> <span class="ipa">tɯ̀ːn</span> <span class="meaning">to wake up</span></span>. </p>
+<p>This can create some ambiguity, since there is no distinction between the sequence in the previous example and one where <span class="charExample"><span class="ex" lang="th">น</span></span> is a new syllable with an inherent vowel.</p>
+<p>The one exception is the character that is normally regarded as a vowel, <span class="codepoint" translate="no"><span lang="th">&#x0E33;</span> [<a href="/scripts/thai/block#char0E33"><span class="uname">U+0E33 THAI CHARACTER SARA AM</span></a>]</span>, which includes the final <span class="ipa">m</span> sound, eg. <span class="charExample" translate="no"><span class="ex" lang="th">ห้องน้ำ</span> <span class="trans">h²ʔŋ̱ṉ²aᵐ</span> <span class="ipa">hôŋ nám</span> <span class="meaning">toilet</span></span>.</p>
+<p>A final <span class="ipa">m</span> is not always represented using <span class="name">sara am</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="th">ห้าม</span> <span class="trans">h²ām̱</span> <span class="ipa">hâːm</span> <span class="meaning">to forbid</span></span>.</p>
+</section>
+
+</section>
+
+
+
+
+
+<section>
+<h2 id="clusters">Consonant clusters</h2>
+
+<p>Consonant clusters occur syllable-initially, or where one syllable ends with a consonant and the next begins with one.</p>
+<p>There are no special mechanisms in Thai for dealing with clusters, such as conjuncts, stacking, special final consonants, etc.</p>
+<p>See also <a class="secref">onset_clusters</a>.</p>
+
+</section>
+
+
+
+
+
+<section>
+<h2 id="tones">Tones</h2>
+
+<figure class="characterBox auto"  data-cols="trans">่␣้␣๊␣๋</figure>
+
 <p>The expected typing and storage position for tone marks is immediately after the base consonant of the syllable, or after a superscript vowel-sign if there is one. However, the tone mark should be typed before <span class="codepoint" translate="no"><span lang="th">&#x0E33;</span> [<a href="/scripts/thai/block#char0E33"><span class="uname">U+0E33 THAI CHARACTER SARA AM</span></a>]</span>, and should be displayed above the <span class="name">nikhahit</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="th">ก่ำ</span></span>.</p>
-<p>The following chart shows how to tell which tones are associated with a syllable. 'Checked' means ending in the sound <span class="ipa">-p</span>, <span class="ipa">-t</span>, or <span class="ipa">-k</span> or a short vowel.</p>
+<p>The following chart shows how to tell which tones are associated with a syllable. </p>
+<p class="explanatoryintro">'Checked' means ending in the sound <span class="ipa">-p</span>, <span class="ipa">-t</span>, or <span class="ipa">-k</span> or a short vowel.</p>
 <table width="200" border="0">
 <tbody>
 <tr>
@@ -556,74 +524,53 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section id="diacritics">
-<h2><a href="#diacritics">Diacritics</a></h2>
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'th')">list both</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="th">์</span></div>
-<div class="listPair"><span class="listItem" lang="th">็</span></div>
-</div>
-</figure>
+<section>
+<h2 id="diacritics">Diacritics</h2>
+
+ <figure class="characterBox auto"  data-cols="trans">์␣็</figure>
 
 
-<p><span class="codepoint" translate="no"><span lang="th">&#xA0;&#x0E4C;</span> [<a href="/scripts/thai/block#char0E4C"><span class="uname">U+0E4C THAI CHARACTER THANTHAKHAT​</span></a>]</span> is used  above a syllable when it is not pronounced (usually at the end of a syllable), eg. <span class="ex" lang="th">รถเมล์</span> <span class="ipa">rotmeː</span> <span class="meaning">bus</span>, <span class="ex" lang="th">ศักดิ์สิทธิ์</span> <span class="ipa">saksitʰ</span> <span class="meaning">to be sacred</span>. It is often used for foreign loan words, eg. <span class="ex" lang="th">คอมพิวเตอร์</span> <span class="ipa">kʰompʰiwtɤː</span> <span class="meaning">computer</span>, <span class="ex" lang="th">โปสการ์ด</span> <span class="ipa">poːskaːt</span> <span class="meaning">postcard</span>, <span class="ex" lang="th">สแตมป์</span> <span class="ipa">satɛːm</span> <span class="meaning">stamp</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="th">&#xA0;&#x0E4C;</span> [<a href="/scripts/thai/block#char0E4C"><span class="uname">U+0E4C THAI CHARACTER THANTHAKHAT​</span></a>]</span> is used   to suppress a vowel sound. See <a class="secref">vowel_absence</a>.</p>
 <p><span class="codepoint" translate="no"><span lang="th">&#xA0;&#x0E47;</span> [<a href="/scripts/thai/block#char0E47"><span class="uname">U+0E47 THAI CHARACTER MAITAIKHU​</span></a>]</span> converts vowels produced by the following three vowel signs to short vowels when they occur in medial position: <span class="ipa">ɔ</span> <span class="ex" lang="th">–็อ–</span> (<span class="ipa">ɔː</span> &gt; <span class="ipa">ɔ</span>), <span class="ipa">e</span> <span class="ex" lang="th">เ–็–</span> (<span class="ipa">eː</span> &gt; <span class="ipa">e</span>), eg. <span class="ex" lang="th">เด็ก</span> <span class="ipa">dèk</span> <span class="meaning">child</span>, and <span class="ipa">oːj</span> <span class="ex" lang="th">แ–็–</span> <span class="ipa">æː</span> &gt; <span class="ipa">æ</span> (not very common). It is also used for: <span class="ipa">ew</span> <span class="ex" lang="th">เ–็ว</span> (<span class="ipa">eːw</span> &gt; <span class="ipa">ew</span>), eg. <span class="ex" lang="th">เร็ว</span> <span class="ipa">rew</span> <span class="meaning">fast.</span> Also one word consists of consonant + short symbol: <span class="ex" lang="th">ก็</span> <span class="ipa">gɔ</span>.</p>
 </section>
 
 
 
 
-<section id="punctuation">
-  <h2><a href="#punctuation">Punctuation</a></h2>
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'th')">list all 4</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="th">฿</span></div>
-<div class="listPair"><span class="listItem" lang="th">๚</span></div>
-<div class="listPair"><span class="listItem" lang="th">ๆ</span></div>
-<div class="listPair"><span class="listItem" lang="th">ฯลฯ</span></div>
-</div>
-</figure>
+<section>
+<h2 id="punctuation">Punctuation</h2>
+
+<p>The Unicode Standard classifies some of these as punctuation, and some as letters.</p>
+<figure class="characterBox auto"  data-cols="trans" data-links="#phrase,#phrase,#lists,#repetition,#repetition">๚␣๛␣๏␣ๆ␣ฯ</figure>
 
 
 
-
-<p> These characters are all described in the <a href="#delimiters">Text delimiters</a> section.</p>
+<p>Follow the links for more information about these characters.</p>
 </section>
   
   
   
   
-<section id="digits">
-<h2>Digits</h2>
-    <p>Thai has a set of digits, that  are used regularly.</p>
-    <figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'th')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="th">๐</span><span class="listTrans">0</span></div>
-<div class="listPair"><span class="listItem" lang="th">๑</span><span class="listTrans">1</span></div>
-<div class="listPair"><span class="listItem" lang="th">๒</span><span class="listTrans">2</span></div>
-<div class="listPair"><span class="listItem" lang="th">๓</span><span class="listTrans">3</span></div>
-<div class="listPair"><span class="listItem" lang="th">๔</span><span class="listTrans">4</span></div>
-<div class="listPair"><span class="listItem" lang="th">๕</span><span class="listTrans">5</span></div>
-<div class="listPair"><span class="listItem" lang="th">๖</span><span class="listTrans">6</span></div>
-<div class="listPair"><span class="listItem" lang="th">๗</span><span class="listTrans">7</span></div>
-<div class="listPair"><span class="listItem" lang="th">๘</span><span class="listTrans">8</span></div>
-<div class="listPair"><span class="listItem" lang="th">๙</span><span class="listTrans">9</span></div>
-</div>
-</figure>
+<section>
+<h2 id="numbers">Numbers, dates, currency, etc.</h2>
+    <p>Thai has a set of decimal digits, that  are used regularly.</p>
+ 
+ <figure class="characterBox auto"  data-cols="trans">๐␣๑␣๒␣๓␣๔␣๕␣๖␣๗␣๘␣๙</figure>
+ 
+ <p>The currency symbol for baht is encoded in the Unicode Thai block.</p>
+
+ <figure class="characterBox auto"  data-cols="trans">฿</figure>
 </section>
 
 
 
 
-  <section id="shaping">
-  <h2><a href="#shaping">Contextual shaping &amp; positioning</a></h2>
+  <section>
+  <h2 id="shaping">Glyph shaping &amp; positioning</h2>
 
 
-<section id="cchars">
-<h3><a href="#cchars">Combining characters</a></h3>
+<section>
+<h3 id="cchars">Combining characters</h3>
     <p>Most of the combining characters in Thai are used for vowel-signs and tone marks.</p>
     <p>Thai regularly combines multiple combining characters above a base consonant. There are two examples in the text below, both of which show a base character with a vowel sign and then a tone mark on top.</p>
     <figure>
@@ -634,8 +581,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
   
   
-  <section id="gpos">
-    <h3><a href="#gpos">Context-based positioning</a></h3>
+  <section>
+    <h3 id="gpos">Context-based positioning</h3>
     <p>Combining characters need to be placed in different positions, according to the context. The  example below shows the same tone character displayed at different heights, according to what falls beneath it.</p>
     <figure>
     <p class="large"><img src="images/thai-position.png" alt="ให้มีขึ้น"></p>
@@ -650,50 +597,95 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
   
- <section id="layout">
- <h2><a href="#layout">Text layout</a></h2>
+ <section>
+ <h2 id="boundaries">Structural boundaries &amp; markers</h2>
   
-  <section id="textdirection">
-  <h3><a href="#textdirection">Text direction</a></h3>
-    <p>Text is  written horizontally, left to right.</p>
-</section>
-<section id="delimiters">
-<h3><a href="#delimiters">Text delimiters</a></h3>
-    <p>Thai uses space as a phrase marker, rather than a word separator, often in places where English text would use commas or periods. Latin-based  punctuation  such  as  comma,  period,  and  colon  are  also used  in  text,  particularly  in  conjunction  with  Latin  letters  or  in  formatting  numbers, addresses, and so forth.</p>
-<p>Although Thai words are not separated by spaces or any other character, within a phrase, there is a concept of words in the text, for example, lines are supposed to be broken at word boundaries. In the case of compound words there may, however, be some variation in where word boundaries are considered to be.</p>
+<section>
+<h3 id="words">Word boundaries</h3>
+
+    <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). We will  treat it as a vaguely-defined semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+<p>Thai doesn't separate words in a phrase. </p>
+<p>There is, however, a concept of words in the text. For example, lines are supposed to be broken at word boundaries. </p>
 <figure>
 <p class="large"><img src="images/thai-words.png" alt="รวมทั้งวิทยาการด้านคอมพิว"></p>
 <figcaption>Word boundaries occur where the vertical lines appear, though they are not marked by the script.</figcaption>
 </figure>
-<p> <span class="codepoint" translate="no"><span lang="th">&#x0E5A;</span> [<a href="/scripts/thai/block#char0E5A"><span class="uname">U+0E5A THAI CHARACTER ANGKHANKHU</span></a>]</span> is used to mark the end of a long segment of text. It can be combined as <span class="charExample" translate="no"><span class="ex" lang="th">๚ะ</span></span>  to mark a larger segment of text; typically this usage can be seen at the end of a verse in poetry. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></sup></p>
-<p> <span class="codepoint" translate="no"><span lang="th">&#x0E5B;</span> [<a href="/scripts/thai/block#char0E5B"><span class="uname">U+0E5B THAI CHARACTER KHOMUT</span></a>]</span> marks the end of a chapter or document, where it always follows the <span class="charExample"><span class="ex" lang="th">๚ะ</span></span> combination. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></sup></p>
-  </section>
-  
-  
-  
-  
- <section id="repetition">
-  <h3><a href="#repetition">Repetition</a> &amp; elision</h3>
-<p><span class="codepoint" translate="no"><span lang="th">&#x0E46;</span> [<a href="/scripts/thai/block#char0E46"><span class="uname">U+0E46 THAI CHARACTER MAIYAMOK</span></a>]</span> is used to mark repetition of preceding letters. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></sup></p>
-<p> <span class="codepoint" translate="no"><span lang="th">&#x0E2F;</span> [<a href="/scripts/thai/block#char0E2F"><span class="uname">U+0E2F THAI CHARACTER PAIYANNOI</span></a>]</span> is used to indicate elision or abbreviation of letters; it  is  itself  viewed  as  a  kind  of  letter,  however,  and  is  used  with  considerable  frequency because of its appearance in such words as the Thai name for Bangkok.  Paiyannoi  is also used  in  the combination  <span class="charExample" translate="no"><span class="ex" lang="th">ฯลฯ</span></span>  to  create  a  construct  called   <span class="name">paiyanyai</span> , which means “et cetera, and so forth.” <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></sup></p>
+<p>The main difficulty arises when dealing with compound words. It can often be difficult to decide whether a given string of syllables represents multiple words or a single compound word.</p>
+<figure>
+<p><img src="images/thai-alt1.png" alt="Long Thai words."></p>
+<p><img src="images/thai-alt2.png" alt="Shorter Thai words."></p>
+<figcaption>Alternative line break opportunities for Thai text using compound nouns.</figcaption>
+</figure>
+<p>The variation may be related to the operation being performed on the text (eg. line breaking in narrow newsprint columns, vs. double-click selection, vs. cursor movement, etc.), or it may just   be down to personal preference,</p>
+<p>The  difference may also be contextually dependent. Wirote Aroonmanakun describes how <span class="charExample" translate="no"><span class="ex" lang="th">คนขับรถ</span> <span class="trans">ḵʰṉkʰäb̯ṟtʰ</span> <span class="ipa">kʰon kʰàp ròt</span> <span class="meaning">driver</span></span> should be viewed as a single word in the context <span class="charExample" translate="no"><span class="ex" lang="th">คนขับรถนั่งคอยอยู่ในรถ</span> <span class="trans">ḵʰṉkʰäb̯ṟtʰṉä¹ŋ̱ḵʰʔy̱ʔy̱ū¹äʲṉṟtʰ</span> <span class="ipa">kʰon kʰàp ròt nâŋ kʰɔːj jûː nràjt</span> <span class="meaning">the (man who works as a) driver is waiting in the car</span></span>, whereas in the phrase <span class="charExample" translate="no"><span class="ex" lang="th">คนขับรถผ่านแยกนี้ไม่มากนัก</span> <span class="trans">ḵʰṉkʰäb̯ṟtʰpʰ¹āṉɛy̱k̯ṉī²aʲm̱¹m̱āk̯ṉäk̯</span> <span class="ipa">kʰon kʰàp ròt pʰàːn jɛ̀ːk níː mâj màːk nàk</span> <span class="meaning">not many people drive through this intersection</span></span> it would be viewed as 3 words, referring to anyone who is driving. <sup><a href="http://pioneer.netserv.chula.ac.th/~awirote/ling/snlp2007-wirote.pdf">a</a></sup></p>
+<p>Proper names, which are composed from multiple words, are also problematic, especially because there are no capital letters to distinguish them from other pieces of text. . <sup><a href="https://github.com/w3c/csswg-drafts/issues/2455#issuecomment-375162188">g</a></sup></p>
 </section>
 
 
 
 
- <section id="wrap">
-    <h3>Line breaks & text wrap</h3>
-    <p>Thai doesn't indicate word boundaries, but when Thai text is wrapped at the end of a line you should not split a word. This normally requires an application to look up in a dictionary where the word boundaries fall. As you change the width of the browser window the highlighted text above should break at the following points if you browser supports Thai wrapping:</p>
+<section>
+<h3 id="zwsp">ZWSP &amp; WJ</h3>
+
+<p>In order to manually fine-tune word-boundary detection, the  invisible character <span class="codepoint" translate="no"><a href="/scripts/thai/block#char200B"><span class="uname">U+200B ZERO WIDTH SPACE</span></a></span> (ZWSP) can  be  used  to  create  breaks. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></sup></p>
+<p>To prevent a break between syllables, <span class="codepoint" translate="no"><a href="/scripts/thai/block#char2060"><span class="uname">U+2060 WORD JOINER</span></a></span>(WJ) can be used.</p>
+<p> It is also important to bear in mind that Thai may be used to write various languages, in particular minority languages for which different dictionaries are needed. Since such dictionaries may not available in a given browser or other application, there is a tendency to use ZWSP in order to compensate.</p>
+<p>Large-scale manual entry of ZWSP and WJ has potential downsides because the user cannot see them; this leads to problems with ZWSP being inserted in the wrong position, or multiple times. However, these don't set a state, so it doesn't create major issues. It would be useful, however, if an editor showed the location of these characters.</p>
+<p>Care should also be taken when trying to match text, eg. for searching in a page. WJ should be ignored. ZWSP may or may not be ignored, depending on whether word boundaries are significant for the search.</p>
+</section>
+
+
+
+
+<section>
+<h3 id="phrase">Phrase boundaries</h3>
+
+<p>Thai uses space as a phrase marker, rather than to delimit words, often in places where English text would use commas or periods.</p>
+<p>Latin-based  punctuation  such  as  comma,  period,  and  colon  are  also used  in  text,  particularly  in  conjunction  with  Latin  letters  or  in  formatting  numbers, addresses, and so forth.</p>
+<p> <span class="codepoint" translate="no"><span lang="th">&#x0E5A;</span> [<a href="/scripts/thai/block#char0E5A"><span class="uname">U+0E5A THAI CHARACTER ANGKHANKHU</span></a>]</span> is used to mark the end of a long segment of text. It can be combined as <span class="charExample" translate="no"><span class="ex" lang="th">๚ะ</span></span>  to mark a larger segment of text; typically this usage can be seen at the end of a verse in poetry. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></sup></p>
+<p> <span class="codepoint" translate="no"><span lang="th">&#x0E5B;</span> [<a href="/scripts/thai/block#char0E5B"><span class="uname">U+0E5B THAI CHARACTER KHOMUT</span></a>]</span> marks the end of a chapter or document, where it always follows the <span class="charExample"><span class="ex" lang="th">๚ะ</span></span> combination. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></sup></p>
+ </section>
+  
+  
+  
+  
+ <section>
+  <h3 id="repetition">Repetition &amp; elision</h3>
+<p><span class="codepoint" translate="no"><span lang="th">&#x0E46;</span> [<a href="/scripts/thai/block#char0E46"><span class="uname">U+0E46 THAI CHARACTER MAIYAMOK</span></a>]</span> is used to mark repetition of preceding letters. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></sup></p>
+<p> <span class="codepoint" translate="no"><span lang="th">&#x0E2F;</span> [<a href="/scripts/thai/block#char0E2F"><span class="uname">U+0E2F THAI CHARACTER PAIYANNOI</span></a>]</span> is used to indicate elision or abbreviation of letters; it  is  itself  viewed  as  a  kind  of  letter,  however,  and  is  used  with  considerable  frequency because of its appearance in such words as the Thai name for Bangkok.  Paiyannoi  is also used  in  the combination  <span class="charExample" translate="no"><span class="ex" lang="th">ฯลฯ</span></span>  to  create  a  construct  called   <span class="name">paiyanyai</span> , which means “et cetera, and so forth.” <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></sup></p>
+</section>
+</section>
+
+
+
+
+  
+ <section>
+ <h2 id="para">Line &amp; paragraph layout</h2>
+  
+ <section>
+  <h3 id="textdirection">Text direction</h3>
+    <p>Text is  written horizontally, left to right.</p>
+</section>
+
+
+
+
+ <section>
+    <h3 id="wrap">Line breaks &amp; text wrap</h3>
+<p>Thai doesn't indicate word boundaries, but when Thai text is wrapped at the end of a line you should not split a word. </p>
+<p>As you change the width of the browser window the highlighted text above should break at the following points if your browser supports Thai wrapping:</p>
     <p class="large"><img src="images/thai-wrap.png" alt="โลกจะใช้เพียง"></p>
-    <p> If explicit word break or line break opportunities are desired – for example,  for  the  use  of  automatic  line  layout  algorithms – the  character  <span class="codepoint" translate="no"><a href="/scripts/thai/block#char200B"><span class="uname">U+200B ZERO WIDTH SPACE</span></a></span>   should  be  used  to  place  invisible  marks  for  such  breaks.  The   zero  width space  can grow to have a visible width when justified.  <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></sup></p>
-  </section>
+    <p>Because Thai doesn't separate words,  applications typically look up   word boundaries in a dictionary, however, such lookup doesn't always produce the needed result, especially when dealing with compound words and proper names (see <a class="secref">words</a>). To counteract these deficiencies, authors may use <span class="codepoint" translate="no"><a href="/scripts/thai/block#char200B"><span class="uname">U+200B ZERO WIDTH SPACE</span></a></span> and <span class="codepoint" translate="no"><a href="/scripts/thai/block#char2060"><span class="uname">U+2060 WORD JOINER</span></a></span> (see <a class="secref">zwsp</a>).</p>
+</section>
 
 
 
 
-  <section id="justify">
-    <h3>Justification</h3>
+ <section>
+    <h3 id="justify">Justification</h3>
     <p>Justification in Thai adjusts blank spaces, but also makes certain adjustments to inter-character spacing. Browsers currently tend not to justify Thai text well. </p>
+<p>The   zero  width space  can grow to have a visible width when justified. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></sup></p>
     <p><em>Use the control below to see how your browser justifies the text sample here.</em></p>
     <p lang="th" id="justificationExample" style="text-align:start;">ทุกคนเสมอกันตามกฏหมายและมีสิทธิที่จะได้รับความคุ้มครองของกฏหมายเท่าทียมกัน โดยปราศจากการเลือกปฏิบัติใด ๆ ทุกคนมีสิทธิที่จะได้รับความคุ้มครองเท่าเทียมกันจากการเลือกปฏิบัติใด ๆ อันเป็นการล่วงละเมิดปฏิญญา และจากการยุยงให้เกิดการเลือกปฏิบัติดังกล่าว </p>
     <p class="english" dir="ltr">
@@ -704,8 +696,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-  <section id="lists">
-  <h3><a href="#lists">Lists, counters, etc.</a></h3>
+ <section>
+  <h3 id="lists">Lists, counters, etc.</h3>
 <p><span class="codepoint" translate="no"><span lang="th">&#x0E4F;</span> [<a href="/scripts/thai/block#char0E4F"><span class="uname">U+0E4F THAI CHARACTER FONGMAN</span></a>]</span> is the Thai bullet, which is used to mark items in lists or  appears  at  the  beginning  of  a  verse,  sentence,  paragraph,  or  other  textual  segment. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></sup></p>
 <p>The document <a href="https://www.w3.org/TR/predefined-counter-styles/#thai-styles">Ready-made Counter Styles</a> includes two counter styles:</p>
 <ol>
@@ -716,8 +708,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section id="lineheight">
-  <h3>Line height</h3>
+<section>
+  <h3 id="lineheight">Line height</h3>
   <p>Thai places vowel and tone marks above base characters, one above the other, and can also add combining characters below the line. The complexity of these marks means that the vertical resolution needed for clearly readable Thai text is higher than for, say, Latin text. In addition, Thai tends to adds more interline spacing than Latin text does.</p>
   <p>Here is an example of a word with combining characters above and below base characters:</p>
   <figure>
@@ -725,48 +717,71 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   <figcaption>Multiple diacritics above and below the base significantly increase the vertical height of lines.</figcaption>
   </figure>
 </section>
- </section>
- 
- 
- 
- <section>
-<h3>TBD</h3>
-<p class="ednote">Other features to be investigate in this section include:
-
-baselines,,
-emphasis &amp; highlighting,
-text decoration,
-abbreviations &amp; ellipsis,
-correction marks
-hyphens & dashes
-glyph controls
-cursive text,
-character transforms,
-quotations,
-ruby,
-repetition,
-
-line breaking,
-hyphenation,
-justification &amp; alignment,
-first-letter styling,
-
-vertical text,
-notes &amp; footnotes,
-page layout
-</p>
 </section>
 
 
 
 
-<section id="refs">
-<h2><a href="#refs">References</a></h2>
+
+
+
+<section>
+<h3 id="tbd">TBD</h3>
+<p class="ednote">Further information needed for this section includes:</p>
+<pre style="margin-left: 10%;">
+Glyph shaping &amp; positioning
+    Cursive text
+    Context-based shaping
+    Multiple combining characters
+    Context-based positioning
+    Transforming characters
+
+Structural boundaries &amp; markers
+    Grapheme, word &amp; phrase boundaries
+    Hyphens &amp; dashes
+    Bracketing information
+    Quotations
+    Abbreviations, ellipsis, &amp; repetition
+    Emphasis &amp; highlights
+    Inline notes &amp; annotations
+
+Inline layout
+    Inline text spacing
+    Bidirectional text
+
+Line &amp; paragraph layout
+    Text direction
+    Line breaking
+    Hyphenation
+    Text alignment &amp; justification
+    Counters, lists, etc.
+    Styling initials
+    Baselines &amp; inline alignment
+
+Page &amp; book layout
+    General page layout &amp; progression
+    Directional layout features
+	Grids &amp; tables
+    Notes, footnotes, etc.
+    Forms &amp; user interaction
+    Page numbering, running headers, etc.
+</pre>
+</section>
+
+
+
+
+	
+
+<section>
+<h2 id="refs">References</h2>
 <ol>
 <li>[ <sup><a href="http://www.unicode.org/versions/latest/ch12.pdf">u</a></sup> ] The Unicode Standard v7.0, <a href="http://www.unicode.org/versions/latest/ch12.pdf">Thai</a></li>
 <li>[ <sup><a href="#refs">b</a></sup> ] Marie-Hélène Brown, Reading and Writing Thai, ISBN 974-210-4506</li>
 <li>[ <sup><a href="#refs">t</a></sup> ] Benjawan Poomsan Becker, Thai for Beginners, ISBN 1-887521-00-3</li>
 <li>[ <sup><a href="http://www.thailandqa.com/forum/showthread.php?4830-Special-characters-in-thai-language">p</a></sup> ] <a href="http://www.thailandqa.com/forum/showthread.php?4830-Special-characters-in-thai-language">Special characters in thai language</a>, The Packnam Web Forums</li>
+<li>[ <sup>g</sup> ] Github discussions. Especially contributions by James Clarke.</li>
+<li>[ <sup><a href="http://pioneer.netserv.chula.ac.th/~awirote/ling/snlp2007-wirote.pdf">a</a></sup> ] Wirote Aroonmanakun, <a href="http://pioneer.netserv.chula.ac.th/~awirote/ling/snlp2007-wirote.pdf">Thoughts on Word and Sentence Segmentation in Thai</a></li>
 </ol>
 </section>
 
@@ -774,15 +789,12 @@ page layout
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/thai"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-05  13:27<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bthai%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fthai%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/thai"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-29  9:42<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bthai%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fthai%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 <div id="panel" style="display:none"></div>
 </body>
 <script>
-var base = '/scripts/thai/block'
-initialiseShowNames(base, 'c');
-document.getElementById('featureTableBody').innerHTML = makeSidePanel("Thai","line height:lineheight")
-createtoc(3)
+initialiseSummary('/scripts/thai/block','th','Thai')
 </script>
 
 </html>
