@@ -40,7 +40,7 @@ document.getElementById('out').value = makeListFromChars(document.getElementById
 <br style="clear: both;"/>
 
 <div class="smallprint" style="margin-top: 3em; font-size: 70%; font-style: italic;"><span id="version">This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-01-13  14:03<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2019-01-22  20:54<!-- #EndDate --> 
 </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 <script type="text/javascript">
@@ -121,6 +121,11 @@ function makeListFromChars (lang, chars, bicameral) {
         //    out += '<span class="'+document.getElementById('extra2').value+'" style="display:none;">'+extra2Col+'</span>'
         //    }
         
+        hex = items[0].codePointAt(0)
+        unum = hex.toString(16).toUpperCase()
+        while (unum.length<4) unum = '0'+unum
+        out += ' <span class="unum">'+unum+'</span>'
+
 
         out += '</div>\n'
 		}
