@@ -31,15 +31,15 @@
 .ext .ex, .ext { color: magenta; }
 </style>
 
+<script src="db.js"> </script>
 <script src="/shared/code/boilerplate.js"></script>
-<script src="/shared/code/toc_2016.js"></script>
+<script src="/shared/code/toc_2019.js"></script>
 <script src="/shared/code/all-names.js"></script>
 <script src="/shared/code/character_conversion.js"></script>
 <script src="/shared/code/show_codepoints.js"></script>
 <script src="/shared/fontlists/manage.js"></script>
 <script src="/shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
-<script src="../common/block-functions.js"></script>
 <script src="/shared/code/getLinks.js"></script>
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
@@ -108,7 +108,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p  id="status">Updated 
-<!-- #BeginDate format:Sw1 -->5 January, 2019<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->30 January, 2019<!-- #EndDate -->
 &bull; tags <a href="https://r12a.github.io/blog/index.php?tag=ethiopic" title="Show all blog posts tagged with 'ethiopic'">ethiopic</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>.</p>
 <section>
   <p>This page provides basic information about the Ethiopic script. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned. For character-specific details follow the links to the <a class="linkHighlight" href="/scripts/ethiopic/block">Ethiopic character notes</a>. </p>
@@ -136,19 +136,10 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-  <div id="features">
-  <table>
-      <tbody id="featureTableBody">
-     </tbody>
-    </table>
-    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
-</div>
 
 
-
-
-<section id="history">
-    <h2><a href="#history">Usage &amp; history</a></h2>
+<section>
+    <h2 id="history">Usage &amp; history</h2>
     <p>From <a href="http://scriptsource.org/scr/Taml">Scriptsource</a>: </p>
     <blockquote>
 <p>The Ethiopic (Ge'ez) script was developed as the writing system of the Ge'ez language, a Semitic language spoken in Ethiopia and Eritrea until the 10th to the 12th centuries. Although the language ceased to be used in vernacular speech (it now serves a liturgical function only), the script is still widely used for writing the Ethiopian and Eritrean Semitic languages such as Tigré, Amharic and Tigrinya. In some languages, the script is called fidäl (ፊደል), which means 'alphabet', and individual letters are referred to as fidel. The script is believed by many to have derived from the epigraphic South Arabian script, of Proto-Sinaitic heritage, although there is some dispute surrounding this assertion; some also believe it to have descended from Egyptian hieroglyphics. According to the tradition of the Ethiopian Orthodox Tewahedo Church, the script was divinely revealed to Enos, grandson of the first man, Adam. Unlike other Semitic scripts, Ethiopic is written from left to right.</p>
@@ -161,8 +152,20 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section id="intro">
-<h2><a href="#intro">Key features</a></h2>
+  <div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+    </table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+</div>
+
+
+
+
+
+<section>
+<h2 id="intro">Key features</h2>
 <p> The script is a <span class="newterm"><a class="termref" href="https://en.wikipedia.org/wiki/Featural_writing_system">featural syllabary</a></span> – it  resembles an abugida in that vowels are indicated by largely standardised adaptations to the base consonant.   See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.</p>
 <p>The script is unicameral, and has only three combining characters, which are rarely used. Characters don't interact, and the baseline is standard.</p>
 <p>Ethiopic does have a range of native punctuation. In particular, although words in modern text are increasingly separated by spaces they may  be separated by a wordspace character instead.</p>
@@ -174,8 +177,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section id="chars" class="note">
-<h2>Character lists</h2>
+<section>
+<h2 id="chars">Character lists</h2>
  <p>The Ethiopic script characters in Unicode 10.0 are in the following block: </p>
     <ul>
       <li> <a href="/uniview/?block=ethiopic">Ethiopic</a> <span class="charCount">(326 letters, 3 marks, 20 numbers, 9 punctuation: total 358)</span></li>
@@ -195,62 +198,75 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section id="consonants">
-<h2><a href="#consonants">Syllables</a></h2>
+<div id="showTranscriptions">
+<div>In yellow boxes, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<!--div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div-->
+</div>
+
+
+
+
+
+<section>
+<h2 id="consonants">Syllables</h2>
 <p>The   Ethiopic syllables in the basic set start with one of the following consonants. The pronunciation listed is for Amharic (which has lost the phonetic distinction between some characters).</p>
 
 
 <figure>
-<div class="listAll" onClick="listAll(this, 'am')">list all</div>
+<div class="listAll" onClick="listAll(this, 'am')">list all 26</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="am">ሀ</span><span class="listTrans">h</span><span class="listIPA">h</span></div>
-<div class="listPair"><span class="listItem" lang="am">ለ</span><span class="listTrans">l</span><span class="listIPA">l</span></div>
-<div class="listPair"><span class="listItem" lang="am">ሐ</span><span class="listTrans">ḥ</span><span class="listIPA">h</span></div>
-<div class="listPair"><span class="listItem" lang="am">መ</span><span class="listTrans">m</span><span class="listIPA">m</span></div>
-<div class="listPair"><span class="listItem" lang="am">ሠ</span><span class="listTrans">ś</span><span class="listIPA">s</span></div>
-<div class="listPair"><span class="listItem" lang="am">ረ</span><span class="listTrans">r</span><span class="listIPA">ɾ,r</span></div>
-<div class="listPair"><span class="listItem" lang="am">ሰ</span><span class="listTrans">s</span><span class="listIPA">s</span></div>
-<div class="listPair"><span class="listItem" lang="am">ቀ</span><span class="listTrans">ḳ</span><span class="listIPA">kʼ</span></div>
-<div class="listPair"><span class="listItem" lang="am">በ</span><span class="listTrans">b</span><span class="listIPA">b</span></div>
-<div class="listPair"><span class="listItem" lang="am">ተ</span><span class="listTrans">t</span><span class="listIPA">tʼ</span></div>
-<div class="listPair"><span class="listItem" lang="am">ኀ</span><span class="listTrans">ḫ</span><span class="listIPA">h</span></div>
-<div class="listPair"><span class="listItem" lang="am">ነ</span><span class="listTrans">n</span><span class="listIPA">n</span></div>
-<div class="listPair"><span class="listItem" lang="am">አ</span><span class="listTrans">ʾ</span><span class="listIPA">ʔ</span></div>
-<div class="listPair"><span class="listItem" lang="am">ከ</span><span class="listTrans">k</span><span class="listIPA">k</span></div>
-<div class="listPair"><span class="listItem" lang="am">ወ</span><span class="listTrans">w</span><span class="listIPA">w</span></div>
-<div class="listPair"><span class="listItem" lang="am">ዐ</span><span class="listTrans">ʿ</span><span class="listIPA">ʔ</span></div>
-<div class="listPair"><span class="listItem" lang="am">ዘ</span><span class="listTrans">z</span><span class="listIPA">z</span></div>
-<div class="listPair"><span class="listItem" lang="am">የ</span><span class="listTrans">y</span><span class="listIPA">j</span></div>
-<div class="listPair"><span class="listItem" lang="am">ደ</span><span class="listTrans">d</span><span class="listIPA">d</span></div>
-<div class="listPair"><span class="listItem" lang="am">ገ</span><span class="listTrans">g</span><span class="listIPA">ɡ</span></div>
-<div class="listPair"><span class="listItem" lang="am">ጠ</span><span class="listTrans">ṭ</span><span class="listIPA">tʼ</span></div>
-<div class="listPair"><span class="listItem" lang="am">ጰ</span><span class="listTrans">p̣</span><span class="listIPA">pʼ</span></div>
-<div class="listPair"><span class="listItem" lang="am">ጸ</span><span class="listTrans">ṣ</span><span class="listIPA">tsʼ</span></div>
-<div class="listPair"><span class="listItem" lang="am">ፀ</span><span class="listTrans">ṣ́</span><span class="listIPA">tsʼ</span></div>
-<div class="listPair"><span class="listItem" lang="am">ፈ</span><span class="listTrans">f</span><span class="listIPA">f</span></div>
-<div class="listPair"><span class="listItem" lang="am">ፐ</span><span class="listTrans">p</span><span class="listIPA">p</span></div>
+<div class="listPair"><span class="listItem" lang="am">ሀ</span><span class="listIPA">h</span><span class="listTrans">h</span></div>
+<div class="listPair"><span class="listItem" lang="am">ለ</span><span class="listIPA">l</span><span class="listTrans">l</span></div>
+<div class="listPair"><span class="listItem" lang="am">ሐ</span><span class="listIPA">h</span><span class="listTrans">ḥ</span></div>
+<div class="listPair"><span class="listItem" lang="am">መ</span><span class="listIPA">m</span><span class="listTrans">m</span></div>
+<div class="listPair"><span class="listItem" lang="am">ሠ</span><span class="listIPA">s</span><span class="listTrans">ś</span></div>
+<div class="listPair"><span class="listItem" lang="am">ረ</span><span class="listIPA">ɾ,r</span><span class="listTrans">r</span></div>
+<div class="listPair"><span class="listItem" lang="am">ሰ</span><span class="listIPA">s</span><span class="listTrans">s</span></div>
+<div class="listPair"><span class="listItem" lang="am">ቀ</span><span class="listIPA">kʼ</span><span class="listTrans">ḳ</span></div>
+<div class="listPair"><span class="listItem" lang="am">በ</span><span class="listIPA">b</span><span class="listTrans">b</span></div>
+<div class="listPair"><span class="listItem" lang="am">ተ</span><span class="listIPA">tʼ</span><span class="listTrans">t</span></div>
+<div class="listPair"><span class="listItem" lang="am">ኀ</span><span class="listIPA">h</span><span class="listTrans">ḫ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ነ</span><span class="listIPA">n</span><span class="listTrans">n</span></div>
+<div class="listPair"><span class="listItem" lang="am">አ</span><span class="listIPA">ʔ</span><span class="listTrans">ʾ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ከ</span><span class="listIPA">k</span><span class="listTrans">k</span></div>
+<div class="listPair"><span class="listItem" lang="am">ወ</span><span class="listIPA">w</span><span class="listTrans">w</span></div>
+<div class="listPair"><span class="listItem" lang="am">ዐ</span><span class="listIPA">ʔ</span><span class="listTrans">ʿ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ዘ</span><span class="listIPA">z</span><span class="listTrans">z</span></div>
+<div class="listPair"><span class="listItem" lang="am">የ</span><span class="listIPA">j</span><span class="listTrans">y</span></div>
+<div class="listPair"><span class="listItem" lang="am">ደ</span><span class="listIPA">d</span><span class="listTrans">d</span></div>
+<div class="listPair"><span class="listItem" lang="am">ገ</span><span class="listIPA">ɡ</span><span class="listTrans">g</span></div>
+<div class="listPair"><span class="listItem" lang="am">ጠ</span><span class="listIPA">tʼ</span><span class="listTrans">ṭ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ጰ</span><span class="listIPA">pʼ</span><span class="listTrans">p̣</span></div>
+<div class="listPair"><span class="listItem" lang="am">ጸ</span><span class="listIPA">tsʼ</span><span class="listTrans">ṣ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ፀ</span><span class="listIPA">tsʼ</span><span class="listTrans">ṣ́</span></div>
+<div class="listPair"><span class="listItem" lang="am">ፈ</span><span class="listIPA">f</span><span class="listTrans">f</span></div>
+<div class="listPair"><span class="listItem" lang="am">ፐ</span><span class="listIPA">p</span><span class="listTrans">p</span></div>
 </div>
 </figure> 
+ 
 
 <p>The consonant shapes above come from the original Ge'ez script, which was an abjad. The script became an abugida when small changes were added to those shapes to indicate the following vowel sound. The consonants above can be followed by one of 8 vowel sounds (though not all combinations exist). The original consonant shape is known as the 'first order', and the other shapes constitute incremental orders. The illustration below is based on the <span class="trans">m</span> consonant.</p>
 
 <figure>
-<div class="listAll" onClick="listAll(this, 'am')">list all</div>
+<div class="listAll" onClick="listAll(this, 'am')">list all 8</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="am">መ</span><span class="listTrans">ä</span><span class="listIPA">ɛ~ə</span><span class="listMeaning">1st</span></div>
-<div class="listPair"><span class="listItem" lang="am">ሙ</span><span class="listTrans">u</span><span class="listIPA">ʊ~u</span><span class="listMeaning">2nd</span></div>
-<div class="listPair"><span class="listItem" lang="am">ሚ</span><span class="listTrans">i</span><span class="listIPA">i</span><span class="listMeaning">3rd</span></div>
-<div class="listPair"><span class="listItem" lang="am">ማ</span><span class="listTrans">a</span><span class="listIPA">ä</span><span class="listMeaning">4th</span></div>
-<div class="listPair"><span class="listItem" lang="am">ሜ</span><span class="listTrans">e</span><span class="listIPA">e</span><span class="listMeaning">5th</span></div>
-<div class="listPair"><span class="listItem" lang="am">ም</span><span class="listTrans">ə</span><span class="listIPA">ɨ~ə,∅</span><span class="listMeaning">6th</span></div>
-<div class="listPair"><span class="listItem" lang="am">ሞ</span><span class="listTrans">o</span><span class="listIPA">o,ɔ</span><span class="listMeaning">7th</span></div>
-<div class="listPair"><span class="listItem" lang="am">ሟ</span><span class="listTrans">wa</span><span class="listIPA">wə</span><span class="listMeaning">8th</span></div>
+<div class="listPair"><span class="listItem" lang="am">መ</span><span class="listIPA">ɛ~ə</span><span class="listTrans">ä</span><span class="listMeaning">1st</span></div>
+<div class="listPair"><span class="listItem" lang="am">ሙ</span><span class="listIPA">ʊ~u</span><span class="listTrans">u</span><span class="listMeaning">2nd</span></div>
+<div class="listPair"><span class="listItem" lang="am">ሚ</span><span class="listIPA">i</span><span class="listTrans">i</span><span class="listMeaning">3rd</span></div>
+<div class="listPair"><span class="listItem" lang="am">ማ</span><span class="listIPA">ä</span><span class="listTrans">a</span><span class="listMeaning">4th</span></div>
+<div class="listPair"><span class="listItem" lang="am">ሜ</span><span class="listIPA">e</span><span class="listTrans">e</span><span class="listMeaning">5th</span></div>
+<div class="listPair"><span class="listItem" lang="am">ም</span><span class="listIPA">ɨ~ə,∅</span><span class="listTrans">ə</span><span class="listMeaning">6th</span></div>
+<div class="listPair"><span class="listItem" lang="am">ሞ</span><span class="listIPA">o,ɔ</span><span class="listTrans">o</span><span class="listMeaning">7th</span></div>
+<div class="listPair"><span class="listItem" lang="am">ሟ</span><span class="listIPA">wə</span><span class="listTrans">wa</span><span class="listMeaning">8th</span></div>
 </div>
 </figure>
 
 <p>Three consonants also have a <span class="trans">-yä</span> ending: </p>
 <figure>
-<div class="listAll" onClick="listAll(this, 'am')">list all</div>
+<div class="listAll" onClick="listAll(this, 'am')">list all 3</div>
 <div class="listArray">
 <div class="listPair"><span class="listItem" lang="am">ፘ</span><span class="listTrans">ryä</span></div>
 <div class="listPair"><span class="listItem" lang="am">ፙ</span><span class="listTrans">myä</span></div>
@@ -261,7 +277,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <p>Then there is a set of common labiovelar consonants, which are followed by only 5 of the vowel sounds.</p>
 <figure>
-<div class="listAll" onClick="listAll(this, 'am')">list all</div>
+<div class="listAll" onClick="listAll(this, 'am')">list all 4</div>
 <div class="listArray">
 <div class="listPair"><span class="listItem" lang="am">ቈ</span><span class="listTrans">ḳʷ</span></div>
 <div class="listPair"><span class="listItem" lang="am">ኈ</span><span class="listTrans">ḫʷ</span></div>
@@ -273,28 +289,28 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <p>Additional sets of consonants  match the sounds in the various different languages that use the Ethiopic script. </p>
 <p>Amharic, Tigrinya, Tigre, and Blin each use a selection from the following set.</p>
 <figure>
-<div class="listAll" onClick="listAll(this, 'am')">list all</div>
+<div class="listAll" onClick="listAll(this, 'am')">list all 13</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="am">ሸ</span><span class="listTrans">š</span><span class="listIPA">ʃ</span></div>
-<div class="listPair"><span class="listItem" lang="am">ቐ</span><span class="listTrans">ḳʰ</span><span class="listIPA">xʼ</span></div>
-<div class="listPair"><span class="listItem" lang="am">ቘ</span><span class="listTrans">ḳʰʷ</span><span class="listIPA">xʼʷ</span></div>
-<div class="listPair"><span class="listItem" lang="am">ቨ</span><span class="listTrans">v</span><span class="listIPA">v~β</span></div>
-<div class="listPair"><span class="listItem" lang="am">ቸ</span><span class="listTrans">č</span><span class="listIPA">tʃ</span></div>
-<div class="listPair"><span class="listItem" lang="am">ⶓ</span><span class="listTrans">ŋʷ</span><span class="listIPA">ŋʷ</span></div>
-<div class="listPair"><span class="listItem" lang="am">ኘ</span><span class="listTrans">ñ</span><span class="listIPA">ɲ</span></div>
-<div class="listPair"><span class="listItem" lang="am">ኸ</span><span class="listTrans">x</span><span class="listIPA">x</span></div>
-<div class="listPair"><span class="listItem" lang="am">ዀ</span><span class="listTrans">xʷ</span><span class="listIPA">xʷ</span></div>
-<div class="listPair"><span class="listItem" lang="am">ዠ</span><span class="listTrans">ž</span><span class="listIPA">ʒ</span></div>
-<div class="listPair"><span class="listItem" lang="am">ጀ</span><span class="listTrans">ǧ</span><span class="listIPA">dʒ</span></div>
-<div class="listPair"><span class="listItem" lang="am">ጘ</span><span class="listTrans">ŋ</span><span class="listIPA">ŋ</span></div>
-<div class="listPair"><span class="listItem" lang="am">ጨ</span><span class="listTrans">č</span><span class="listIPA">tʃ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ሸ</span><span class="listIPA">ʃ</span><span class="listTrans">š</span></div>
+<div class="listPair"><span class="listItem" lang="am">ቐ</span><span class="listIPA">xʼ</span><span class="listTrans">ḳʰ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ቘ</span><span class="listIPA">xʼʷ</span><span class="listTrans">ḳʰʷ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ቨ</span><span class="listIPA">v~β</span><span class="listTrans">v</span></div>
+<div class="listPair"><span class="listItem" lang="am">ቸ</span><span class="listIPA">tʃ</span><span class="listTrans">č</span></div>
+<div class="listPair"><span class="listItem" lang="am">ⶓ</span><span class="listIPA">ŋʷ</span><span class="listTrans">ŋʷ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ኘ</span><span class="listIPA">ɲ</span><span class="listTrans">ñ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ኸ</span><span class="listIPA">x</span><span class="listTrans">x</span></div>
+<div class="listPair"><span class="listItem" lang="am">ዀ</span><span class="listIPA">xʷ</span><span class="listTrans">xʷ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ዠ</span><span class="listIPA">ʒ</span><span class="listTrans">ž</span></div>
+<div class="listPair"><span class="listItem" lang="am">ጀ</span><span class="listIPA">dʒ</span><span class="listTrans">ǧ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ጘ</span><span class="listIPA">ŋ</span><span class="listTrans">ŋ</span></div>
+<div class="listPair"><span class="listItem" lang="am">ጨ</span><span class="listIPA">tʃ</span><span class="listTrans">č</span></div>
 </div>
 </figure>
 
 
 <p>The remaining characters, largely including those in the extension blocks, are for writing the sounds of other languages, such as Me'en, Sebatbeit, Gamo-Gofa-Dawro, Basketo, Gumuz, etc. The set of extended characters also includes combinations of the previous characters with an <span class="trans">oa</span> vowel sound.</p>
 <figure>
-<div class="listAll" onClick="listAll(this, 'am')">list all</div>
+<div class="listAll" onClick="listAll(this, 'am')">list all 18</div>
 <div class="listArray">
 <div class="listPair"><span class="listItem" lang="am">ᎀ</span></div>
 <div class="listPair"><span class="listItem" lang="am">ⶠ</span></div>
@@ -317,7 +333,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </div>
 </figure>
 <details>
-<summary>To see the complete list of syllables, click here</summary>
+<summary class="instructions">To see the complete list of syllables, click here</summary>
 <script>
 function hideRows (type) {
     var rows = document.getElementById('ethiTable').querySelectorAll(type)
@@ -577,8 +593,8 @@ document.getElementById('out').innerHTML = out
 
 
 
-<section id="silent">
-<h3><a href="#silent">Silent vowels &amp; consonants</a></h3>
+<section>
+<h3 id="silent">Silent vowels &amp; consonants</h3>
 			<p>The <span class="ex" lang="am">አ</span> and <span class="ex" lang="am">ዐ</span> series have lost their consonantal values and are vowel carriers in modern Amharic. Though sometimes the glottal stop <span class="ipa">ʔ</span> is pronounced in word initial and medial positions, it is often dropped, eg. <span class="charExample"><span class="ex" lang="am">አየሩ</span> <span class="trans">ʾäyäru</span> <span class="ipa">əyyəru</span> <span class="meaning">the weather</span></span>.<sup><a href="https://en.wikipedia.org/wiki/Help:IPA/Amharic">a</a></sup></p>
 <p>Many words end with a consonant followed by no vowel. These are written using the <span class="trans">ə</span> syllable, eg. <span class="charExample"><span class="ex" lang="am">ስም</span> <span class="trans">sǝmǝ</span> <span class="ipa">sɨm</span> <span class="meaning">name</span></span>, however the syllable is ambiguous – in some cases the vowel could be read.</p>
 <p>The same syllable is also used for clusters of consonants with no intervening vowels, eg. <span class="charExample"><span class="ex" lang="am">ኢትዮጵያ</span> <span class="trans">ʾitəyop̣əya</span> <span class="ipa">ʾītyōṗṗyā</span> <span class="meaning">Ethiopia</span></span>.</p>
@@ -591,43 +607,27 @@ document.getElementById('out').innerHTML = out
    
    
     
-<section id="diacritics" class="note">
-<h2><a href="#diacritics">Diacritics</a></h2>
+<section>
+<h2 id="diacritics">Diacritics</h2>
 
 <p>The Ethiopic blocks have only 3 combining characters.</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'am')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="am">&nbsp;፞</span></div>
-<div class="listPair"><span class="listItem" lang="am">&nbsp;፟</span></div>
-<div class="listPair"><span class="listItem" lang="am">&nbsp;፝</span></div>
-</div>
-</figure>
-<p>The first is a vowel length, the second a gemination indicator (see above), and the third a combination of both.</p>
+
+<figure class="characterBox auto" data-cols="">፞␣፟␣፝</figure>
+
+<p>The first is for vowel length, the second a gemination indicator (see <a class="secref">silent</a>), and the third a combination of both.</p>
 </section>
    
    
    
    
     
-<section id="punctuation" class="note">
-<h2><a href="#punctuation">Punctuation</a></h2>
+<section>
+<h2 id="punctuation">Punctuation</h2>
 
 <p>There are 9 punctuation mark in the Ethiopic blocks.</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'am')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="am">፠</span></div>
-<div class="listPair"><span class="listItem" lang="am">፡</span></div>
-<div class="listPair"><span class="listItem" lang="am">።</span></div>
-<div class="listPair"><span class="listItem" lang="am">፣</span></div>
-<div class="listPair"><span class="listItem" lang="am">፤</span></div>
-<div class="listPair"><span class="listItem" lang="am">፥</span></div>
-<div class="listPair"><span class="listItem" lang="am">፦</span></div>
-<div class="listPair"><span class="listItem" lang="am">፧</span></div>
-<div class="listPair"><span class="listItem" lang="am">፨</span></div>
-</div>
-</figure>
+
+<figure class="characterBox auto" data-cols="trans">፠␣፡␣።␣፣␣፤␣፥␣፦␣፧␣፨</figure>
+
 <p>These are described in the <a href="#layout">Text layout</a> section below.</p>
 </section>
    
@@ -635,34 +635,11 @@ document.getElementById('out').innerHTML = out
    
    
     
-<section id="numbers" class="note">
-<h2><a href="#numbers">Numbers</a></h2>
+<section>
+<h2 id="numbers">Numbers</h2>
 		<p>European digits are often used, but Ethiopic also has a native numbering system that is additive in nature. </p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'am')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="am">፩</span><span class="listTrans">1</span></div>
-<div class="listPair"><span class="listItem" lang="am">፪</span><span class="listTrans">2</span></div>
-<div class="listPair"><span class="listItem" lang="am">፫</span><span class="listTrans">3</span></div>
-<div class="listPair"><span class="listItem" lang="am">፬</span><span class="listTrans">4</span></div>
-<div class="listPair"><span class="listItem" lang="am">፭</span><span class="listTrans">5</span></div>
-<div class="listPair"><span class="listItem" lang="am">፮</span><span class="listTrans">6</span></div>
-<div class="listPair"><span class="listItem" lang="am">፯</span><span class="listTrans">7</span></div>
-<div class="listPair"><span class="listItem" lang="am">፰</span><span class="listTrans">8</span></div>
-<div class="listPair"><span class="listItem" lang="am">፱</span><span class="listTrans">9</span></div>
-<div class="listPair"><span class="listItem" lang="am">፲</span><span class="listTrans">10</span></div>
-<div class="listPair"><span class="listItem" lang="am">፳</span><span class="listTrans">20</span></div>
-<div class="listPair"><span class="listItem" lang="am">፴</span><span class="listTrans">30</span></div>
-<div class="listPair"><span class="listItem" lang="am">፵</span><span class="listTrans">40</span></div>
-<div class="listPair"><span class="listItem" lang="am">፶</span><span class="listTrans">50</span></div>
-<div class="listPair"><span class="listItem" lang="am">፷</span><span class="listTrans">60</span></div>
-<div class="listPair"><span class="listItem" lang="am">፸</span><span class="listTrans">70</span></div>
-<div class="listPair"><span class="listItem" lang="am">፹</span><span class="listTrans">80</span></div>
-<div class="listPair"><span class="listItem" lang="am">፺</span><span class="listTrans">90</span></div>
-<div class="listPair"><span class="listItem" lang="am">፻</span><span class="listTrans">100</span></div>
-<div class="listPair"><span class="listItem" lang="am">፼</span><span class="listTrans">10,000</span></div>
-</div>
-</figure>
+
+<figure class="characterBox auto" data-cols="trans">፩␣፪␣፫␣፬␣፭␣፮␣፯␣፰␣፱␣፲␣፳␣፴␣፵␣፶␣፷␣፸␣፹␣፺␣፻␣፼</figure>
 
 <p>You can generate Ethiopic numbers using the <a href="https://r12a.github.io/apps/counterconverter/">Counter styles converter</a> app. Type in a number at the top and select <samp>ethiopic-numeric</samp> from the select box.</p>
 <figure>
@@ -677,19 +654,19 @@ document.getElementById('out').innerHTML = out
 
 
 
-<section id="layout">
-<h2><a href="#layout">Text layout</a></h2>
+<section>
+<h2 id="boundaries">Structural boundaries &amp; markers</h2>
 
-<section id="punctuation" class="note">
-<h3><a href="#dir">Text direction</a></h3>
-    <p>The Ethiopic  script is written  horizontally, left to right.</p>
+<section>
+  <h3 id="words">Word boundaries</h3>
+
+<p> Words are often separated by spaces in modern text, however they may  be separated by <span class="codepoint"><span lang="am">&#x1361;</span> [<a href="ethiopic#char1361"><span class="uname">U+1361 ETHIOPIC WORDSPACE</span></a>]</span> instead (see the Amharic sample text above).</p>
 </section>
 
     
-<section id="usageboundaries">
-  <h3><a href="#usageboundaries">Text boundaries &amp; punctuation </a></h3>
+<section>
+  <h3 id="phrase">Phrase boundaries</h3>
 
-<p> <b id="word_boundaries" class="leadin">Word boundaries.</b>Words are often separated by spaces in modern text, however they may  be separated by <span class="codepoint"><span lang="am">&#x1361;</span> [<a href="ethiopic#char1361"><span class="uname">U+1361 ETHIOPIC WORDSPACE</span></a>]</span> instead (see the Amharic sample text above).</p>
 <p>Some Western punctuation may be used, but Ethiopic has several native punctuation characters.</p>
 <p><b id="phrases" class="leadin">Phrases. </b><span class="codepoint"><span lang="am">&#x1363;</span> [<a href="ethiopic#char1363"><span class="uname">U+1363 ETHIOPIC COMMA</span></a>]</span> or <span class="codepoint"><span lang="am">&#x1365;</span> [<a href="ethiopic#char1365"><span class="uname">U+1365 ETHIOPIC COLON</span></a>]</span> are both roughly equivalent to a comma. They are considered glyph variants for the same punctuation symbol, although usually a document will consistently use only one or the other. The latter is more common in religious texts, and is used for biblical references where English would use a colon, eg. <span class="charExample"><span class="ex" lang="am">ማቴ4፥23</span> <span class="meaning">Matt 4:23</span></span>.</p>
 <p><span class="codepoint"><span lang="am">&#x1364;</span> [<a href="ethiopic#char1364"><span class="uname">U+1364 ETHIOPIC SEMICOLON</span></a>]</span></p>
@@ -700,41 +677,35 @@ document.getElementById('out').innerHTML = out
 <p><b id="sections2" class="leadin">Paragraphs. </b><span class="codepoint"><span lang="am">&#x1368;</span> [<a href="ethiopic#char1368"><span class="uname">U+1368 ETHIOPIC PARAGRAPH SEPARATOR</span></a>]</span> may be used to conclude the final paragraph of a section in lieu of <span class="codepoint"><span lang="am">።</span></span>. Like <span class="codepoint"><span lang="am">፠</span></span> below,  three or more may also be used together on a line of their own.&nbsp;</p>
 <p><b id="sections" class="leadin">Sections.</b><span class="codepoint"><span lang="am">&#x1360;</span> [<a href="ethiopic#char1360"><span class="uname">U+1360 ETHIOPIC SECTION MARK</span></a>]</span> Used to divide sections or subsections; generally three or more used together on a line of their own.&nbsp;</p>
 </section>
-<section id="linebreak">
-    <h3><a href="#linebreak">Line breaking &amp; hyphenation</a></h3>
+
+
+
+
+
+<section>
+<h2 id="para">Line &amp; paragraph layout</h2>
+
+<section>
+<h3 id="dir">Text direction</h3>
+    <p>The Ethiopic  script is written  horizontally, left to right.</p>
+</section>
+
+    
+
+
+<section>
+    <h3 id="linebreak">Line breaking &amp; hyphenation</h3>
 <p>Ethiopic text is generally wrapped wherever it hits the right margin, whether wordspace or space are used to separate words, and no hyphenation occurs. However, a new line should not start with a space, math operator or any of the following:<sup><a href="http://w3c.github.io/elreq/#ethiopic_punctuation">e</a></sup></p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'am')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="am">፡</span></div>
-<div class="listPair"><span class="listItem" lang="am">፣</span></div>
-<div class="listPair"><span class="listItem" lang="am">፤</span></div>
-<div class="listPair"><span class="listItem" lang="am">፥</span></div>
-<div class="listPair"><span class="listItem" lang="am">፦</span></div>
-<div class="listPair"><span class="listItem" lang="am">።</span></div>
-<div class="listPair"><span class="listItem" lang="am">?</span></div>
-<div class="listPair"><span class="listItem" lang="am">!</span></div>
-<div class="listPair"><span class="listItem" lang="am">¡</span></div>
-<div class="listPair"><span class="listItem" lang="am">)</span></div>
-<div class="listPair"><span class="listItem" lang="am">]</span></div>
-<div class="listPair"><span class="listItem" lang="am">}</span></div>
-<div class="listPair"><span class="listItem" lang="am">/</span></div>
-<div class="listPair"><span class="listItem" lang="am">%</span></div>
-<div class="listPair"><span class="listItem" lang="am">–</span></div>
-<div class="listPair"><span class="listItem" lang="am">”</span></div>
-<div class="listPair"><span class="listItem" lang="am">›</span></div>
-<div class="listPair"><span class="listItem" lang="am">»</span></div>
-<div class="listPair"><span class="listItem" lang="am"></span></div>
-</div>
-</figure>
+
+<figure class="auto" data-cols="">፡␣፣␣፤␣፥␣፦␣።␣?␣!␣¡␣)␣]␣}␣/␣%␣–␣”␣›␣»</figure>
 
 </section>
 
 
 
 
-<section id="justify">
-    <h3><a href="#justify">Justification</a></h3>
+<section>
+    <h3 id="justify"> Text alignment &amp; justification</h3>
 <p>Full justification is a common typesetting practice. Ethiopic is usually justified by adjusting inter-word spacing. Where words are separated with <span class="codepoint"><span lang="am">&#x1361;</span> [<a href="ethiopic#char1361"><span class="uname">U+1361 ETHIOPIC WORDSPACE</span></a>]</span> this is still the case, however no extra spaces should be added – the width of the wordspace character changes.</p>
 <p>When the wordspace character width changes, the wordspace glyph may be centred, or may appear alongside the previous word, depending on preference.</p>
 <p class="instructions">Use the control below to see how your browser justifies the text sample here.</p>
@@ -743,30 +714,59 @@ document.getElementById('out').innerHTML = out
       <button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Justify   </button>
     </p>
 </section>
-<p class="ednote">Further information needed for this section includes:
-baselines,
-emphasis &amp; highlighting,
-text decoration,
-abbreviations &amp; ellipsis,
-hyphens & dashes
-glyph controls
-quotations,
-repetition,
-
-justification &amp; alignment,
-first-letter styling,
-
-vertical text,
-notes &amp; footnotes,
-page layout
-</p>
 </section>
-  
-  
-  
-<section id="refs"> 
 
-<h2><a href="#refs">References</a></h2>
+
+
+
+
+
+
+<section>
+    <h3 id="tbd">TBD</h3>
+<p class="ednote">Further information needed for this section includes:</p>
+<pre style="margin-left: 10%;">
+Glyph shaping &amp; positioning
+    Cursive text
+    Context-based shaping
+    Multiple combining characters
+    Context-based positioning
+    Transforming characters
+
+Structural boundaries &amp; markers
+    Grapheme boundaries
+    Hyphens &amp; dashes
+    Bracketing information
+    Quotations
+    Abbreviations, ellipsis, &amp; repetition
+    Emphasis &amp; highlights
+    Inline notes &amp; annotations
+
+Inline layout
+    Inline text spacing
+    Bidirectional text
+
+Line &amp; paragraph layout
+    Counters, lists, etc.
+    Styling initials
+    Baselines &amp; inline alignment
+
+Page &amp; book layout
+    General page layout &amp; progression
+    Directional layout features
+	Grids &amp; tables
+    Notes, footnotes, etc.
+    Forms &amp; user interaction
+    Page numbering, running headers, etc.
+</pre>
+</section>
+
+
+
+
+	
+<section> 
+<h2 id="refs">References</h2>
 		<ol>
 		  <li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
 		    0-19-507993-0</li>
@@ -787,7 +787,7 @@ page layout
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/ethiopic"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-05  8:44<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bethiopic%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fethiopic%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/ethiopic"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-30  19:18<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bethiopic%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fethiopic%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"><div style="display:block">&nbsp;</div><p style="text-align:right;"></p></div>
@@ -795,11 +795,7 @@ page layout
 
 
 <script>
-var base = '/scripts/ethiopic/block'
-initialiseShowNames(base, 'c');
-document.getElementById('featureTableBody').innerHTML = makeSidePanel("Ethiopic","")
-createtoc(3)
-setFigureRefs()
+initialiseSummary('/scripts/ethiopic/block','am','Ethiopic')
 </script>
 
 </body>
