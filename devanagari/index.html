@@ -98,7 +98,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->26-Jan-2019<!-- #EndDate -->
+  <!-- #BeginDate format:En2 -->29-Jan-2019<!-- #EndDate -->
 &bull; tags <a href="http://r12a.github.io/blog/index.php?tag=devanagari" title="Show all blog posts tagged with 'devanagari'">devanagari</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
@@ -106,9 +106,9 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <section>
 <p>This page provides basic information about the Devanagari script. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned. For character-specific details follow the links to the <a class="linkHighlight" href="/scripts/devanagari/block">Devanagari character notes</a>.</p>
 <p>For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>.</p>
-<p class="instructions">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+<p class="instructions noprint">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
     
-<details id="scriptLinks">
+<details id="scriptLinks" class="noprint">
 <summary class="instructions">More links for the Devanagari script.</summary>
   <div id="linklist"></div>
   <script>document.getElementById('linklist').innerHTML = getData('Deva')</script>
@@ -129,14 +129,6 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-  <div id="features">
-  <table>
-      <tbody id="featureTableBody">
-     </tbody>
-    </table>
-    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
-   </div>
-
 
 
  <section>
@@ -152,10 +144,20 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
+  <div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+    </table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+   </div>
+
+
+
 
 <section>
     <h2 id="type">Distinctive features</h2>
-    <p>Devanagari is an <span class="newterm">abugida</span>. Consonant letters have an inherent vowel sound. Combining vowel-signs are attached to the consonant to indicate that a different vowel follows the consonant.   See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
+    <p>Devanagari is an <span class="newterm">abugida</span>. Consonant letters have an inherent vowel sound. Combining vowel-signs are attached to the consonant to indicate that a different vowel follows the consonant.   See the table in the right-hand column for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
 </p>
     <p>Actually, devanagari is based on orthographic syllables, so the vowel-sign is  in fact attached to the syllable. An orthographic syllable includes clusters of consonants without intervening vowel sounds. These clusters are typically represented as partially merged forms, called conjuncts.</p>
     <p>The devanagari block contains more characters than other indic scripts, partly because it serves as a pivot script for transliterations of other scripts.</p>
@@ -273,8 +275,8 @@ however, this rule does not always hold.)</p>
 <section>
 <h3 id="independentvowel">Syllable-initial vowels</h3>
 
-<p>Syllable-initial vowels appear at the beginning of a word, or after another vowel in the middle of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">नई</span> <span class="trans">nị̄ (nəị̄)</span> <span class="meaning">new</span></span> (note how this is different from <span class="charExample" translate="no"><span class="ex" lang="hi">नी</span> <span class="trans">nī</span></span>). Unlike the vowel-signs, the set contains a character to represent the inherent vowel sound.</p>
-<p>Devanagari represents syllable-initial vowels using a set of independent vowel letters.</p>
+<p class="explanatoryintro">Syllable-initial vowels appear at the beginning of a word, or after another vowel in the middle of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">नई</span> <span class="trans">nị̄ (nəị̄)</span> <span class="meaning">new</span></span> (note how this is different from <span class="charExample" translate="no"><span class="ex" lang="hi">नी</span> <span class="trans">nī</span></span>). </p>
+<p>Devanagari represents syllable-initial vowels using a set of independent vowel letters. The set contains a character to represent the inherent vowel sound.</p>
 <p>Independent vowels used by Hindi:</p>
 
 <figure class="characterBox auto"  data-cols="ipa,trans,transc">अ␣आ␣इ␣ई␣उ␣ऊ␣ए␣ऐ␣ओ␣औ</figure>
@@ -292,7 +294,8 @@ however, this rule does not always hold.)</p>
   
 <section>
 <h3 id="vocalics">Vocalics</h3>
-    <p>Vocalics are letters derived from Sanskrit that generally behave like vowels, but represent <span class="trans">r/l</span> followed by a vowel. They are  available both as vowel-signs and independent vowels.</p>
+    <p class="explanatoryintro">Vocalics are special combinations of consonant+vowel, derived from Sanskrit, that generally behave like vowels.</p>
+<p>In Devanagari, vocalics are  available both as vowel-signs and independent vowels.</p>
 <figure class="characterBox auto"  data-cols="ipa,trans,transc">ृ␣ॄ␣ॢ␣ॣ␣ऋ␣ॠ␣ऌ␣ॡ</figure>
 </section>
 
@@ -595,7 +598,9 @@ however, this rule does not always hold.)</p>
 
 <section>
 <h3 id="word">Word phrase boundaries</h3>
- <p>Words are separated by spaces.</p>
+    <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). We   treat it as a vaguely-defined semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+
+<p>Words are separated by spaces.</p>
 </section>
 
 
@@ -781,7 +786,7 @@ Page &amp; book layout
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/devanagari"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-26  15:46<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bdevanagari%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fdevanagari%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/devanagari"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-29  13:45<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bdevanagari%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fdevanagari%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 
