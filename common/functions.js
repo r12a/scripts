@@ -112,9 +112,11 @@ function makeTables (lang) {
         out = ''
 
         if (chars.length > 1) {
+            var length = chars.length
+            for (let j=0;j<chars.length;j++) if (chars[j] === ' ') length-- // ignore spaces
             out += '<div class="listAll" onClick="listAll(this, \''+lang+'\')">list '
-            if (chars.length === 2) out += 'both'
-            else out += 'all '+chars.length
+            if (length === 2) out += 'both'
+            else out += 'all '+length
             out += '</div>'
             }
 
@@ -126,6 +128,12 @@ function makeTables (lang) {
             
             out += '<div class="listPair"><span class="listItem" lang="'+lang+'">'+chars[i]+'</span>'
 
+            // leave a blank where a space is used
+            if (chars[i] === ' ') {
+                out += '&nbsp;</span></div>'
+                continue
+                }
+            
             // print the code point values
             out += '<span class="listUnum">'
             for (let z=0;z<chars[i].length;z++) {
