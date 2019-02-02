@@ -27,6 +27,7 @@
 .loc { font-family: gentiumpluswf; }
 </style>
 
+<script src="db.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2019.js"></script>
 <script src="../../shared/code/all-names.js"></script>
@@ -35,7 +36,6 @@
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
-<script src="../common/block-functions.js"></script>
 <script src="../../shared/code/getLinks.js"></script>
 <script src="../../scripts/linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
@@ -100,7 +100,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->21 January, 2019<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->2 February, 2019<!-- #EndDate -->
 &bull;  tags <a href="https://r12a.github.io/blog/?tag=lao" title="Show all blog posts tagged with 'lao'">lao</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
@@ -111,7 +111,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <p>For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>. </p>
  <p class="instructions">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>  
    <details id="scriptLinks">
-  <summary>Show more links.</summary>
+  <summary>More links for the Lao script.</summary>
   <div id="linklist"></div>
   <script>document.getElementById('linklist').innerHTML = getData('Laoo')</script>
   </details>
@@ -132,18 +132,6 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-  <div id="features">
-  <table>
-      <tbody id="featureTableBody">
-     </tbody>
-    </table>
-    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
-</div>
-
-
-
-
-
 <section>
     <h2 id="history">Usage &amp; history</h2>
     <p>From <a href="http://scriptsource.org/scr/Laoo">Scriptsource</a>: </p>
@@ -154,6 +142,18 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <p>The Lao alphabet was adapted from the Khmer script, which itself was derived from the Pallava script, a variant of the Grantha alphabet descended from the Brahmi script, which was used in southern India and South East Asia during the 5th and 6th centuries AD. Akson Lao is a sister system to the Thai script, with which it shares many similarities and roots. However, Lao has fewer characters and is formed in a more curvilinear fashion than Thai.</p>
 </blockquote>
 </section>
+
+
+
+  <div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+    </table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+</div>
+
+
 
 
 
@@ -168,15 +168,6 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
   
   
-<div id="showTranscriptions">
-<div>Show transcriptions</div>
-<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
-<div><label>LOC <input type="checkbox" onChange="toggleTranscription('loc', this.checked)"/></label></div>
-</div>
-
-
-
 
 
 <section>
@@ -199,7 +190,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <section>
 <h2 id="structure">Structure</h2>
    <p>The syllable is a basic element of the Lao language, and many words are monosyllabic. All syllables begin with a written consonant. Syllables that begin with a vowel sound are written with a silent base consonant.</p>
-<p>The phonological structure of a syllable is (C)V(C), using the following:</p>
+<p>The phonological structure of a syllable is (C)w?V(C), using the following:</p>
 <table>
 <thead><tr><th>Onset</th><th>Vowel</th><th>Final</th></tr></thead>
 <tbody>
@@ -225,6 +216,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </tbody>
 </table>
 <p>ʔ occurs after short vowels.</p>
+<p>Unlike Thai, its close neighbour linguistically, Lao doesn't naturally support onset clusters of consonants other than with <span class="ipa">w</span>, and then not before rounded vowels. <sup><a href="https://en.wikipedia.org/wiki/Lao_language#Syllables">w</a></sup></p>
 <p>Lao also has 6 phonological tones in unchecked syllables (ie. ending in a vowel, or m, n, ŋ, w or j), and 4 in checked syllables (ie. ending in p, t,  k, or ʔ).</p>
 <table>
 <thead>
@@ -288,6 +280,175 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
+<div id="showTranscriptions">
+<div>In yellow boxes, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+</div>
+
+
+
+
+
+<section>
+  <h2 id="text_direction">Text direction</h2>
+  <p>Lao text runs left to right in horizontal lines.</p>
+</section>
+
+
+
+
+
+
+
+<section>
+<h2 id="vowels">Vowels</h2>
+
+
+<section>
+<h3 id="inherent">Inherent vowel</h3>
+
+<p>Unlike its close neighbour, Thai, consonants do not carry an inherent  vowel. The vowel <span class="ipa">a</span> has to be written explicitly in Lao.</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="vowel_absence">Vowel absence</h3>
+<p>Vowel absence after syllable-final consonants is not normally marked in any way. Nor is it marked in syllable-initial clusters.</p>
+</section>
+
+
+
+
+<section>
+<h3 id="vowelsigns">Vowel signs</h3>
+<p>To produce a different vowel than the inherent one, Lao uses one or more vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ກິ</span> <span class="trans">ki</span></span>. </p>
+<p>Vowel signs in Lao are a mixture of combining characters and ordinary spacing characters. Only the superscript and subscript vowel-signs are combining characters.</p>
+<p>Vowel-signs can also be combined to create additional sounds.</p>
+<p>The following list shows where vowel-signs are positioned around a base consonant to produce vowels, and how many instances of that pattern there are. Numbers after + sign indicate multiple code points.</p>
+<ul>
+<li>5 prescript, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ໂກ</span> <span class="trans">ōk̯ (ko)</span></span></li>
+<li>3 postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ກາ</span> <span class="trans">k̯ā</span></span></li>
+<li>7 superscript, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ກິ</span> <span class="trans">k̯i</span></span></li>
+<li>2 subscript, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ກຸ</span> <span class="trans">k̯u</span></span></li>
+<li>1+6 sup+postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ກັຍ</span> <span class="trans">k̯äɲ̱ </span> <span class="ipa">kaj</span></span></li>
+<li>+3 post+postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ກາຍ</span> <span class="trans">k̯āɲ̱</span> <span class="ipa">kaːj</span></span></li>
+<li>+5 pre+postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ເກະ</span> <span class="trans">ēk̯a</span> <span class="ipa">ke</span></span></li>
+<li>+4 pre+superscript, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ເກິ</span> <span class="trans">ēk̯i</span> <span class="ipa">kɤ</span></span></li>
+<li>+1 super+post+post, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ກົວະ</span> <span class="trans">k̯ow̱a</span> <span class="ipa">kuə</span></span></li>
+<li>+1 pre+post+post, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ເກາະ</span> <span class="trans">ēk̯āa</span> <span class="ipa">kɔ</span></span></li>
+<li>+4 pre+sup+postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ເກົາ</span> <span class="trans">ēk̯oā</span> <span class="ipa">kaw</span></span></li>
+<li>+2 pre+sup+post+postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ເກັຍະ</span> <span class="trans">ēk̯äɲ̱a</span> <span class="ipa">kia</span></span></li>
+</ul>
+<p>At maximum, vowel components can occur concurrently on 3 sides of the base.</p>
+</section>
+
+
+
+
+
+
+
+<section>
+<h3 id="prescript">Prescript dependent vowels</h3>
+  
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ເ␣ແ␣ໂ␣ໄ␣ໃ</figure>
+
+
+<p>Of the vowel-signs, 5 appear to the left of the onset consonant. </p>
+<p>Like Thai, Lao uses a visual encoding model, so these characters are not combining characters, and are typed and stored before the base.</p>
+<p>Note that <span class="codepoint" translate="no"><span lang="lo">&#x0EC1;</span> [<a href="/scripts/lao/block#char0EC1"><span class="uname">U+0EC1 LAO VOWEL SIGN EI</span></a>]</span> should not be typed as two successive <span class="codepoint" translate="no"><span lang="lo">&#x0EC0;</span> [<a href="/scripts/lao/block#char0EC0"><span class="uname">U+0EC0 LAO VOWEL SIGN E</span></a>]</span> characters.</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="dependent">Other vowel-signs</h3>
+
+  
+<figure class="characterBox auto" data-cols="ipa,trans,transc">າ␣ະ␣ັ␣ິ␣ີ␣ຶ␣ື␣ຸ␣ູ␣ຽ␣ໍ␣ົ␣ຳ</figure>
+
+
+
+<p><span class="codepoint" translate="no"><span lang="lo">&#x0EB0;</span> [<a href="/scripts/lao/block#char0EB0"><span class="uname">U+0EB0 LAO VOWEL SIGN A</span></a>]</span>, <span class="codepoint" translate="no"><span lang="lo">&#x0EB2;</span> [<a href="/scripts/lao/block#char0EB2"><span class="uname">U+0EB2 LAO VOWEL SIGN AA</span></a>]</span>, and <span class="codepoint" translate="no"><span lang="lo">&#x0EBD;</span> [<a href="/scripts/lao/block#char0EBD"><span class="uname">U+0EBD LAO SEMIVOWEL SIGN NYO</span></a>]</span> are normal spacing characters; the rest are combining characters.</p>
+<p><span class="codepoint" translate="no"><span lang="lo">&#x0EB3;</span> [<a href="/scripts/lao/block#char0EB3"><span class="uname">U+0EB3 LAO VOWEL SIGN AM</span></a>]</span> is classed as a vowel, but also contains the final consonant <span class="ipa">m</span>, represented by a built-in <span class="name">nikhahit</span> (cf. <span class="codepoint" translate="no"><span lang="lo">&#x2D;&#x0ECD;</span> [<a href="/scripts/lao/block#char0ECD"><span class="uname">U+0ECD LAO NIGGAHITA​</span></a>]</span>). It is a spacing combining character.</p>
+<p><span class="codepoint" translate="no"><span lang="lo">&#x0EBD;</span> [<a href="/scripts/lao/block#char0EBD"><span class="uname">U+0EBD LAO SEMIVOWEL SIGN NYO</span></a>]</span> was originally an alternate form of non-initial <span class="codepoint" translate="no"><span lang="lo">&#x0E8D;</span> [<a href="/scripts/lao/block#char0E8D"><span class="uname">U+0E8D LAO LETTER NYO</span></a>]</span>, but is now used for diphthongs.&nbsp;</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="consonant_vowels">Consonants pronounced as vowels</h3>
+  
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ອ␣ວ</figure>
+
+
+<p>The consonant <span class="codepoint" translate="no"><span lang="lo">&#x0EAD;</span> [<a href="/scripts/lao/block#char0EAD"><span class="uname">U+0EAD LAO LETTER O</span></a>]</span> is also  pronounced as the vowel ɔː when it appears alone in a closed syllable.</p>
+<p>Unlike Thai, <span class="ednote">it seems that</span> <span class="codepoint" translate="no"><span lang="lo">&#x0EA7;</span> [<a href="/scripts/lao/block#char0EA7"><span class="uname">U+0EA7 LAO LETTER WO</span></a>]</span> doesn't act as a consonant in its own right.</p>
+<p>Both of these characters also appear as a part of the complex vowels described below.</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="complex_vowels">Vowel-sign combinations</h3>
+<p>The various vowel-signs described just above can be mixed together with <span class="codepoint" translate="no"><span lang="lo">&#x0EAD;</span> [<a href="/scripts/lao/block#char0EAD"><span class="uname">U+0EAD LAO LETTER O</span></a>]</span>, <span class="codepoint" translate="no"><span lang="lo">&#x0E8D;</span> [<a href="/scripts/lao/block#char0E8D"><span class="uname">U+0E8D LAO LETTER NYO</span></a>]</span>, <span class="codepoint" translate="no"><span lang="lo">&#x0EA7;</span> [<a href="/scripts/lao/block#char0EA7"><span class="uname">U+0EA7 LAO LETTER WO</span></a>]</span>, and <span class="codepoint" translate="no"><span lang="lo">&#x0EBD;</span> [<a href="/scripts/lao/block#char0EBD"><span class="uname">U+0EBD LAO SEMIVOWEL SIGN NYO</span></a>]</span> to produce additional sounds, as shown in the examples below.</p>
+  
+<figure class="characterBox auto vowelcluster" data-cols="ipa,trans,transc">-ັຍ␣-ັອ␣-ັຽ␣-ົວ␣-ິວ␣-ີວ␣-າຍ␣-າຽ␣ເ-ິ␣ເ-ີ␣ເ-ັ␣ເ-ະ␣ແ-ະ␣ເ-ຍ␣ແ-ັ␣ແ-ວ␣ໂ-ະ␣-ຽວ␣-ົວະ␣ເ-ົາ␣ເ-ັຍ␣ເ-ຶອ␣ເ-ືອ␣ເ-າະ␣ເ-ັຍະ␣ເ-ັຽວ</figure>
+
+<p>Distribution of vowel elements is as follows:</p>
+<table>
+<tr>
+<td></td>
+<td class="exlist" lang="lo">-ັ -ິ -ີ -ຶ -ື -ໍ -ົ</td>
+<td class="exlist" lang="lo">-ຳ</td>
+<td></td>
+</tr>
+<tr>
+<td class="exlist" lang="lo">ເ ແ ໂ ໃ ໄ</td>
+<td style="background-color: red;"></td>
+<td class="exlist" lang="lo"> ະ າ ອ ວ ຍ ຽ</td>
+<td class="exlist" lang="lo">ຍ ຽ ະ ວ</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td class="exlist" lang="lo">-ຸ -ູ</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+
+</section>
+
+
+
+
+
+<section>
+<h3 id="independent_vowels">Standalone vowels</h3>
+
+<p class="explanatoryintro">Standalone vowels are not preceded by a consonant, and may appear at the beginning or in the middle of a word. This typically includes a way to represent the sound of the inherent vowel in isolation.</p>
+<p>Lao uses a silent <span class="codepoint" translate="no"><span lang="lo">&#x0EAD;</span> [<a href="/scripts/lao/block#char0EAD"><span class="uname">U+0EAD LAO LETTER O</span></a>]</span> as a base, to which vowel signs are applied, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ໂອ</span> <span class="trans">ōʔ (ō)</span> <span class="meaning">bowl</span></span>.</p>
+<p>Lao has  no  independent vowel letters. </p>
+</section>
+</section>
+
+
+
+
+
+
 <section>
 <h2 id="consonants">Consonants</h2>
 <p>Lao has only one subjoined consonant, used in combination only with HA (see below). It doesn't have any code points dedicated to medial or final consonants, although consonants do appear in those positions.</p>
@@ -298,38 +459,9 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <section>
 <h3 id="basic_consonants">Basic consonants</h3>
 
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'lo')">list all 27</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="lo">ກ</span><span class="listIPA">k</span><span class="listTrans">k̯</span><span class="loc" style="display:none;">k</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຂ</span><span class="listIPA">kʰ, x</span><span class="listTrans">kʰ</span><span class="loc" style="display:none;">kh</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຄ</span><span class="listIPA">kʰ, x</span><span class="listTrans">ḵʰ</span><span class="loc" style="display:none;">kh</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ງ</span><span class="listIPA">ŋ</span><span class="listTrans">ŋ̱</span><span class="loc" style="display:none;">ng</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຈ</span><span class="listIPA">tɕ</span><span class="listTrans">c</span><span class="loc" style="display:none;">ch</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຍ</span><span class="listIPA">ɲ, -j</span><span class="listTrans">ɲ̱</span><span class="loc" style="display:none;">ny, -j</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຕ</span><span class="listIPA">t</span><span class="listTrans">t̯</span><span class="loc" style="display:none;">t</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຖ</span><span class="listIPA">tʰ</span><span class="listTrans">tʰ</span><span class="loc" style="display:none;">th</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ທ</span><span class="listIPA">tʰ</span><span class="listTrans">ṯʰ</span><span class="loc" style="display:none;">th</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ດ</span><span class="listIPA">d, -t</span><span class="listTrans">d̯</span><span class="loc" style="display:none;">d/-t</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ນ</span><span class="listIPA">n</span><span class="listTrans">ṉ</span><span class="loc" style="display:none;">n</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ປ</span><span class="listIPA">p</span><span class="listTrans">p̯</span><span class="loc" style="display:none;">p</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຜ</span><span class="listIPA">pʰ</span><span class="listTrans">pʰ</span><span class="loc" style="display:none;">ph</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ພ</span><span class="listIPA">pʰ</span><span class="listTrans">p̱ʰ</span><span class="loc" style="display:none;">ph</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ບ</span><span class="listIPA">b, -p</span><span class="listTrans">b̯</span><span class="loc" style="display:none;">b, -p</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ມ</span><span class="listIPA">m</span><span class="listTrans">m̱</span><span class="loc" style="display:none;">m</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ລ</span><span class="listIPA">l</span><span class="listTrans">ḻ</span><span class="loc" style="display:none;">l</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຢ</span><span class="listIPA">j</span><span class="listTrans">y̯</span><span class="loc" style="display:none;">y</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຣ</span><span class="listIPA">r, l -n</span><span class="listTrans">ṟ</span><span class="loc" style="display:none;">r, -n</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ວ</span><span class="listIPA">ʋ, w -w</span><span class="listTrans">w̱</span><span class="loc" style="display:none;">v, w</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຫ</span><span class="listIPA">h</span><span class="listTrans">h</span><span class="loc" style="display:none;">h</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຮ</span><span class="listIPA">h</span><span class="listTrans">ẖ</span><span class="loc" style="display:none;">h</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ສ</span><span class="listIPA">s</span><span class="listTrans">s</span><span class="loc" style="display:none;">s</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຊ</span><span class="listIPA">s</span><span class="listTrans">s̱</span><span class="loc" style="display:none;">x</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຝ</span><span class="listIPA">f</span><span class="listTrans">f</span><span class="loc" style="display:none;">f</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຟ</span><span class="listIPA">f</span><span class="listTrans">f̱</span><span class="loc" style="display:none;">f</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ອ</span><span class="listIPA">ʔ</span><span class="listTrans">ʔ</span><span class="loc" style="display:none;">-</span></div>
-</div>
-</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ກ␣ຂ␣ຄ␣ງ␣ຈ␣ຍ␣ຕ␣ຖ␣ທ␣ດ␣ນ␣ປ␣ຜ␣ພ␣ບ␣ມ␣ລ␣ຢ␣ຣ␣ວ␣ຫ␣ຮ␣ສ␣ຊ␣ຝ␣ຟ␣ອ</figure>
+
+
 <p><span class="codepoint" translate="no"><span lang="lo">&#x0EAD;</span> [<a href="/scripts/lao/block#char0EAD"><span class="uname">U+0EAD LAO LETTER O</span></a>]</span> is silent when used as a base for vowels at the beginning of a syllable. When it appears alone after a base consonant it becomes the vowel ɔː, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ໂອ</span> <span class="trans">ōʔ</span> <span class="ipa">òː</span> <span class="meaning">bowl</span></span>. It is also used in combination with other characters to produce additional vowel sounds (see below).</p>
 </section>
 
@@ -357,220 +489,42 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </tr>
 </table>
 <p>A silent  <span class="codepoint"><span lang="lo">&#x0EAB;</span> <a href="/scripts/lao/block#char0EAB">[<span class="uname">U+0EAB LAO LETTER HO SUNG</span>]</a></span> can be added before the following characters to make their default tonal class high:</p>
-        <figure>
-<div class="listAll" onClick="listAll(this, 'lo')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="lo">ງ</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ນ</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ມ</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ລ</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ວ</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຍ</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຽ</span></div>
-</div>
-</figure>
-<p>There are alternate forms for some of these compounds. Two can be represented as ligatures, for which there are separate characters in Unicode: <span class="codepoint"><span lang="lo">&#x0EDC;</span> <a href="/scripts/lao/block#char0EDC">[<span class="uname">U+0EDC LAO HO NO</span>]</a></span> and <span class="codepoint"><span lang="lo">&#x0EDD;</span> <a href="/scripts/lao/block#char0EDD">[<span class="uname">U+0EDD LAO HO MO</span>]</a></span>. Another can be represented by converting the second consonant to a subscript (<span class="ex" lang="lo">ຫຼ</span>), also available as a separate character in Unicode.</p>
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'lo')">list all 3</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="lo">ໜ</span><span class="listIPA">n</span><span class="listTrans">n</span><span class="loc" style="display:none;">n</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ໝ</span><span class="listIPA">m</span><span class="listTrans">m</span><span class="loc" style="display:none;">m</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຼ</span><span class="listIPA">l</span><span class="listTrans">l̆</span><span class="loc" style="display:none;">l</span></div>
-</div>
-</figure>
-<p>In a consonant cluster any tone marks or superscript vowels appear over the second consonant. </p>
-		<p class="ref"><a href="#endlinks">Refs:</a> Daniels 462; Unicode 378 </p>
+
+<figure class="auto" data-cols="trans,transc">ງ␣ນ␣ມ␣ລ␣ວ␣ຍ␣ຽ</figure>
+
+<p>See <a class="secref">syllable_onset</a> for further details about how these are presented.</p>
 </section>
 
 
 
 
+
 <section>
-<h3 id="finals">Final consonants</h3>
+<h3 id="syllable_onset">Syllable-onset clusters</h3>
+
+<p>Unlike Thai, Lao doesn't have syllable-initial clusters other than the clusters associated with tone (described in the previous section), and consonants followed by <span class="codepoint" translate="no"><span lang="lo">&#x0EA7;</span> [<a href="/scripts/lao/block#char0EA7"><span class="uname">U+0EA7 LAO LETTER WO</span></a>]</span> and a non-rounded vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ຄວາຍ</span> <span class="trans">ḵʰw̱āɲ̱ (khwāi)</span> <span class="meaning">buffalo</span></span>.</p>
+
+<p>There are alternate forms for some of the tone-related compounds mentioned in <a class="secref">consonant_class</a>. Two can be represented as ligatures, for which there are separate characters in Unicode: <span class="codepoint"><span lang="lo">&#x0EDC;</span> <a href="/scripts/lao/block#char0EDC">[<span class="uname">U+0EDC LAO HO NO</span>]</a></span> and <span class="codepoint"><span lang="lo">&#x0EDD;</span> <a href="/scripts/lao/block#char0EDD">[<span class="uname">U+0EDD LAO HO MO</span>]</a></span>. Another can be represented by converting the second consonant to a subscript (<span class="ex" lang="lo">ຫຼ</span>), also available as a separate character in Unicode. <span class="refcode"><sup><a href="#refs">d462</a></sup></span> <sup><a href="http://www.unicode.org/versions/Unicode5.0.0/ch09.pdf">u378</a></sup></p>
+
+<figure class="characterBox auto" data-cols="ipa, trans,transc">ໜ␣ໝ␣ຼ</figure>
+
+<p>In a consonant cluster any tone marks or superscript vowels appear over the second consonant. </p>
+</section>
+
+
+
+<section>
+<h3 id="finals">Syllable-final consonants</h3>
 <p>Lao doesn't have any code points dedicated to syllable final consonants, although consonants do appear in those positions, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ນົກ</span> <span class="trans">ṉok̯</span> <span class="meaning">bird</span></span>.</p>
 <p>Only the following consonants appear in syllable-final position. Note how the sound may change.</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'lo')">list all 10</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="lo">ກ</span><span class="listIPA">k</span><span class="listTrans">k̯</span><span class="loc" style="display:none;">k</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ງ</span><span class="listIPA">ŋ</span><span class="listTrans">ŋ̱</span><span class="loc" style="display:none;">ng</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຍ</span><span class="listIPA">ɲ, -j</span><span class="listTrans">ɲ̱</span><span class="loc" style="display:none;">ny, -j</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ດ</span><span class="listIPA">d, -t</span><span class="listTrans">d̯</span><span class="loc" style="display:none;">d/-t</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ນ</span><span class="listIPA">n</span><span class="listTrans">ṉ</span><span class="loc" style="display:none;">n</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ບ</span><span class="listIPA">b, -p</span><span class="listTrans">b̯</span><span class="loc" style="display:none;">b, -p</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ມ</span><span class="listIPA">m</span><span class="listTrans">m̱</span><span class="loc" style="display:none;">m</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຢ</span><span class="listIPA">j</span><span class="listTrans">y̯</span><span class="loc" style="display:none;">y</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຣ</span><span class="listIPA">r, l -n</span><span class="listTrans">ṟ</span><span class="loc" style="display:none;">r, -n</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ວ</span><span class="listIPA">ʋ, w -w</span><span class="listTrans">w̱</span><span class="loc" style="display:none;">v, w</span></div>
-</div>
-</figure>
+  
+<figure class="auto" data-cols="ipa,trans,transc">ກ␣ງ␣ຍ␣ດ␣ນ␣ບ␣ມ␣ຢ␣ຣ␣ວ</figure>
 
-
+<p>Because Lao requires vowels to be written, there is not the ambiguity about syllable boundaries that one finds in Thai caused by doubts about whether a consonant is syllable-final or a syllable in its own right.</p>
+<p>A final <span class="ipa">m</span> sound may be represented by &nbsp; <span class="codepoint" translate="no"><span lang="lo">&#x0EB3;</span> [<a href="/scripts/lao/block#char0EB3"><span class="uname">U+0EB3 LAO VOWEL SIGN AM</span></a>]</span>.</p>
 </section>
 </section>
 
-
-
-
-<section>
-<h2 id="vowels">Vowels</h2>
-<p>Unlike its close neighbour, Thai, consonants do not carry an inherent  vowel. The vowel <span class="ipa">a</span> has to be written explicitly in Lao.</p>
-<p>Distribution of vowel elements is as follows:</p>
-<table>
-<tr>
-<td></td>
-<td class="exlist" lang="lo">-ັ -ິ -ີ -ຶ -ື -ໍ -ົ</td>
-<td class="exlist" lang="lo">-ຳ</td>
-<td></td>
-</tr>
-<tr>
-<td class="exlist" lang="lo">ເ ແ ໂ ໃ ໄ</td>
-<td style="background-color: red;"></td>
-<td class="exlist" lang="lo"> ະ າ ອ ວ ຍ ຽ</td>
-<td class="exlist" lang="lo">ຍ ຽ ະ ວ</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td class="exlist" lang="lo">-ຸ -ູ</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-</table>
-<p>At maximum, vowel components can occur concurrently on 3 sides of the base.</p>
-
-
-
-
-
-<section>
-<h3 id="prescript">Prescript dependent vowels</h3>
-
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'lo')">list all 5</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="lo">ເ</span><span class="listIPA">eː</span><span class="listTrans">ē</span><span class="loc" style="display:none;">ē</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ແ</span><span class="listIPA">ɛː</span><span class="listTrans">ɛ̄</span><span class="loc" style="display:none;">ǣ</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ໂ</span><span class="listIPA">oː</span><span class="listTrans">ō</span><span class="loc" style="display:none;">ō</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ໄ</span><span class="listIPA">aj</span><span class="listTrans">aʲ</span><span class="loc" style="display:none;">ai</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ໃ</span><span class="listIPA">aj</span><span class="listTrans">äʲ</span><span class="loc" style="display:none;">ai</span></div>
-</div>
-</figure>
-
-
-<p>Of the vowel-signs, 5 appear to the left of the onset consonant. </p>
-<p>Like Thai, Lao uses a visual encoding model, so these characters are not combining characters, and are typed and stored before the base.</p>
-</section>
-
-
-
-
-
-<section>
-<h3 id="dependent">Other dependent vowels</h3>
-
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'lo')">list all 13</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="lo">າ</span><span class="listIPA">aː</span><span class="listTrans">ā</span><span class="loc" style="display:none;">ā</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ະ</span><span class="listIPA">aʔ, a</span><span class="listTrans">a</span><span class="loc" style="display:none;">a</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ັ</span><span class="listIPA">aʔ, a</span><span class="listTrans">ä</span><span class="loc" style="display:none;">a</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ິ</span><span class="listIPA">i</span><span class="listTrans">i</span><span class="loc" style="display:none;">i</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ີ</span><span class="listIPA">iː</span><span class="listTrans">ī</span><span class="loc" style="display:none;">ī</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຶ</span><span class="listIPA">ɯ</span><span class="listTrans">ɯ</span><span class="loc" style="display:none;">ư</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ື</span><span class="listIPA">ɯː</span><span class="listTrans">ɯ̄</span><span class="loc" style="display:none;">ư̄</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຸ</span><span class="listIPA">u</span><span class="listTrans">u</span><span class="loc" style="display:none;">u</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ູ</span><span class="listIPA">uː</span><span class="listTrans">ū</span><span class="loc" style="display:none;">ū</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຽ</span><span class="listIPA">iːə</span><span class="listTrans">iᵊ</span><span class="loc" style="display:none;">īa</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ໍ</span><span class="listIPA">ɔː</span><span class="listTrans">ɔ̄</span><span class="loc" style="display:none;">ǭ</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ົ</span><span class="listIPA">oʔ, o</span><span class="listTrans">o</span><span class="loc" style="display:none;">o</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຳ</span><span class="listIPA">am</span><span class="listTrans">aᵐ</span><span class="loc" style="display:none;">am</span></div>
-</div>
-</figure>
-
-
-
-
-
-
-<p><span class="codepoint" translate="no"><span lang="lo">&#x0EB0;</span> [<a href="/scripts/lao/block#char0EB0"><span class="uname">U+0EB0 LAO VOWEL SIGN A</span></a>]</span>, <span class="codepoint" translate="no"><span lang="lo">&#x0EB2;</span> [<a href="/scripts/lao/block#char0EB2"><span class="uname">U+0EB2 LAO VOWEL SIGN AA</span></a>]</span>, and <span class="codepoint" translate="no"><span lang="lo">&#x0EBD;</span> [<a href="/scripts/lao/block#char0EBD"><span class="uname">U+0EBD LAO SEMIVOWEL SIGN NYO</span></a>]</span> are normal spacing characters; the rest are combining characters.</p>
-<p><span class="codepoint" translate="no"><span lang="lo">&#x0EB3;</span> [<a href="/scripts/lao/block#char0EB3"><span class="uname">U+0EB3 LAO VOWEL SIGN AM</span></a>]</span> is classed as a vowel, but also contains the final consonant <span class="ipa">m</span>, represented by a built-in <span class="name">nikhahit</span> (cf. <span class="codepoint" translate="no"><span lang="lo">&#x2D;&#x0ECD;</span> [<a href="/scripts/lao/block#char0ECD"><span class="uname">U+0ECD LAO NIGGAHITA​</span></a>]</span>). It is a spacing combining character.</p>
-<p><span class="codepoint" translate="no"><span lang="lo">&#x0EBD;</span> [<a href="/scripts/lao/block#char0EBD"><span class="uname">U+0EBD LAO SEMIVOWEL SIGN NYO</span></a>]</span> was originally an alternate form of non-initial <span class="codepoint" translate="no"><span lang="lo">&#x0E8D;</span> [<a href="/scripts/lao/block#char0E8D"><span class="uname">U+0E8D LAO LETTER NYO</span></a>]</span>, but is now used for diphthongs.&nbsp;</p>
-</section>
-
-
-
-
-
-<section>
-<h3 id="consonant_vowels">Consonants pronounced as vowels</h3>
-
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'lo')">list both</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="lo">ອ</span><span class="listIPA">ɔː</span><span class="listTrans">ʔ</span><span class="loc" style="display:none;">ǭ</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ວ</span><span class="listIPA">uːə</span><span class="listTrans">w̱</span><span class="loc" style="display:none;">ūa</span></div>
-</div>
-</figure>
-
-
-<p>The consonant <span class="codepoint" translate="no"><span lang="lo">&#x0EAD;</span> [<a href="/scripts/lao/block#char0EAD"><span class="uname">U+0EAD LAO LETTER O</span></a>]</span> is also  pronounced as the vowel ɔː when it appears alone in a closed syllable.</p>
-<p>Unlike Thai, it seems that <span class="codepoint" translate="no"><span lang="lo">&#x0EA7;</span> [<a href="/scripts/lao/block#char0EA7"><span class="uname">U+0EA7 LAO LETTER WO</span></a>]</span> doesn't act as a consonant in its own right.</p>
-<p>Both of these characters also appear as a part of the complex vowels described below.</p>
-</section>
-
-
-
-
-
-<section>
-<h3 id="complex_vowels">Multi-part vowels</h3>
-<p>The various vowel-signs described just above can be mixed together with <span class="codepoint" translate="no"><span lang="lo">&#x0EAD;</span> [<a href="/scripts/lao/block#char0EAD"><span class="uname">U+0EAD LAO LETTER O</span></a>]</span>, <span class="codepoint" translate="no"><span lang="lo">&#x0E8D;</span> [<a href="/scripts/lao/block#char0E8D"><span class="uname">U+0E8D LAO LETTER NYO</span></a>]</span>, <span class="codepoint" translate="no"><span lang="lo">&#x0EA7;</span> [<a href="/scripts/lao/block#char0EA7"><span class="uname">U+0EA7 LAO LETTER WO</span></a>]</span>, and <span class="codepoint" translate="no"><span lang="lo">&#x0EBD;</span> [<a href="/scripts/lao/block#char0EBD"><span class="uname">U+0EBD LAO SEMIVOWEL SIGN NYO</span></a>]</span> to produce additional sounds, as shown in the examples below.</p>
-
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'lo')">list all 26</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="lo">-ັຍ</span><span class="listIPA">aj</span><span class="listTrans">-äɲ̱</span><span class="loc" style="display:none;">ai</span></div>
-<div class="listPair"><span class="listItem" lang="lo">-າຍ</span><span class="listIPA">aːj</span><span class="listTrans">-āɲ̱</span><span class="loc" style="display:none;">āi</span></div>
-<div class="listPair"><span class="listItem" lang="lo">-າຽ</span><span class="listIPA">aːj</span><span class="listTrans">-āiᵊ</span><span class="loc" style="display:none;">āi</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ເ-ົາ</span><span class="listIPA">aw</span><span class="listTrans">ē-oā</span><span class="loc" style="display:none;">ao</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ເ-ະ</span><span class="listIPA">eʔ, e</span><span class="listTrans">ē-a</span><span class="loc" style="display:none;">e</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ເ-ັ</span><span class="listIPA">eʔ, e</span><span class="listTrans">ē-ä</span><span class="loc" style="display:none;">e</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ແ-ະ</span><span class="listIPA">ɛʔ, ɛ</span><span class="listTrans">ɛ̄-a</span><span class="loc" style="display:none;">æ</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ແ-ັ</span><span class="listIPA">ɛʔ, ɛ</span><span class="listTrans">ɛ̄-ä</span><span class="loc" style="display:none;">æ</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ໂ-ະ</span><span class="listIPA">oʔ, o</span><span class="listTrans">ō-a</span><span class="loc" style="display:none;">o</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ເ-າະ</span><span class="listIPA">ɔʔ, ɔ</span><span class="listTrans">ē-āa</span><span class="loc" style="display:none;">ǫ</span></div>
-<div class="listPair"><span class="listItem" lang="lo">-ັອ</span><span class="listIPA">ɔʔ, ɔ</span><span class="listTrans">-äʔ</span><span class="loc" style="display:none;">ǫ</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ເ-ິ</span><span class="listIPA">ɤ</span><span class="listTrans">ē-i</span><span class="loc" style="display:none;">œ</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ເ-ີ</span><span class="listIPA">ɤː</span><span class="listTrans">ē-ī</span><span class="loc" style="display:none;">œ̄</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ແ-ວ</span><span class="listIPA">ɛːw</span><span class="listTrans">ɛ̄-w̱</span><span class="loc" style="display:none;">æw</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ເ-ັຍະ</span><span class="listIPA">ia</span><span class="listTrans">ē-äɲ̱a</span><span>&nbsp;</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ເ-ັຍ</span><span class="listIPA">iːə</span><span class="listTrans">ē-äɲ̱</span><span class="loc" style="display:none;">ia</span></div>
-<div class="listPair"><span class="listItem" lang="lo">-ັຽ</span><span class="listIPA">iə</span><span class="listTrans">-äiᵊ</span><span class="loc" style="display:none;">ia</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ເ-ຍ</span><span class="listIPA">iːə</span><span class="listTrans">ē-ɲ̱</span><span class="loc" style="display:none;">īa</span></div>
-<div class="listPair"><span class="listItem" lang="lo">-ິວ</span><span class="listIPA">iw</span><span class="listTrans">-iw̱</span><span class="loc" style="display:none;">iu</span></div>
-<div class="listPair"><span class="listItem" lang="lo">-ີວ</span><span class="listIPA">iːw</span><span class="listTrans">-īw̱</span><span class="loc" style="display:none;">īu</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ເ-ຶອ</span><span class="listIPA">ɯə</span><span class="listTrans">ē-ɯʔ</span><span class="loc" style="display:none;">ưa</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ເ-ືອ</span><span class="listIPA">ɯːə</span><span class="listTrans">ē-ɯ̄ʔ</span><span class="loc" style="display:none;">ư̄a</span></div>
-<div class="listPair"><span class="listItem" lang="lo">-ົວະ</span><span class="listIPA">uə</span><span class="listTrans">-ow̱a</span><span class="loc" style="display:none;">ua</span></div>
-<div class="listPair"><span class="listItem" lang="lo">-ົວ</span><span class="listIPA">uə</span><span class="listTrans">-ow̱</span><span class="loc" style="display:none;">ūa</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ເ-ັຽວ</span><span>&nbsp;</span><span class="listTrans">e-äiᵊw̱</span><span class="loc" style="display:none;">īeo</span></div>
-<div class="listPair"><span class="listItem" lang="lo">ຽວ</span><span>&nbsp;</span><span class="listTrans">iᵊw̱</span><span class="loc" style="display:none;">īeo</span></div>
-</div>
-</figure>
-
-</section>
-
-
-
-
-
-<section>
-<h3 id="independent_vowels">Independent vowels</h3>
-
-<p>Lao has  no characters dedicated to independent vowels, ie. for use at the start of a syllable. </p>
-<p>In such situations, Lao uses a silent <span class="codepoint" translate="no"><span lang="lo">&#x0EAD;</span> [<a href="/scripts/lao/block#char0EAD"><span class="uname">U+0EAD LAO LETTER O</span></a>]</span>  as a base, to which vowel signs are applied, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ໂອ</span> <span class="trans">ōʔ (ō)</span> <span class="meaning">bowl</span></span>.</p>
-</section>
-</section>
 
 
 
@@ -584,7 +538,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <li>Where a syllable begins with <span class="trans">h</span> in order to change the tone (see <a class="sectionref">consonant_class</a>), eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ຫຍັງ</span> <span class="trans">hɲ̱äŋ̱ (nyang)</span> <span class="meaning">nothing</span></span>.</li>
 <li>Where a syllable ends with a consonant and another syllable begins. The Lao for <span class="meaning">Lao script </span>has several syllable-final consonants: <span class="charExample" translate="no"><span class="ex" lang="lo">ອັກສອນລາວ</span> <span class="trans">ʔäk̯sʔṉḻāw̱ (ak sǭn lāw)</span> <span class="ipa">ʔáksɔ̌ːn láːw</span></span>.</li>
 </ul>
-<p>No special characters or viramas are involved, except that:</p>
+<p>No special characters or viramas are involved, except that (as described in <a class="secref">syllable_onset</a>:</p>
 <ul>
 <li>Two combinations of <span class="trans">h</span>+consonant can be written as ligatures, using a single character, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ໝາ</span> <span class="trans">mā</span> <span class="meaning">dog</span></span>, rather than <span class="charExample" translate="no"><span class="ex" lang="lo">ຫມາ</span> <span class="trans">hm̱ā</span></span>.</li>
 <li>The combination <span class="trans">hl</span> can be written with a special subjoined grapheme for <span class="trans">l</span>, which is encoded as a combining character, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ຫຼາຍ</span> <span class="trans">hl̆āɲ̱</span> <span class="ipa">lāj</span> <span class="meaning">more</span></span>.</li>
@@ -595,16 +549,9 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <section>
 <h2 id="tones">Tones</h2>
+  
+<figure class="characterBox auto" data-cols="ipa,trans,transc">່␣້␣໊␣໋</figure>
 
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'lo')">list all 4</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="lo">່</span><span class="listTrans">¹</span></div>
-<div class="listPair"><span class="listItem" lang="lo">້</span><span class="listTrans">²</span></div>
-<div class="listPair"><span class="listItem" lang="lo">໊</span><span class="listTrans">³</span></div>
-<div class="listPair"><span class="listItem" lang="lo">໋</span><span class="listTrans">⁴</span></div>
-</div>
-</figure>
 
 
 <p>The expected typing and storage position for tone marks is immediately after the base consonant of the syllable, or after a superscript vowel-sign if there is one. However, the tone mark should be typed before <span class="codepoint" translate="no"><span lang="lo">&#x0EB3;</span> [<a href="/scripts/lao/block#char0EB3"><span class="uname">U+0EB3 LAO VOWEL SIGN AM</span></a>]</span>, and should be displayed above the <span class="name">nikhahit</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ກ່ຳ</span></span>.</p>
@@ -711,6 +658,27 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <section>
+<h2 id="diacritics">Combining marks</h2>
+
+ <figure class="characterBox auto"  data-cols="trans">&#x0ECC;</figure>
+
+
+<p>Apart from those already described in the sections relating to vowel-signs and tones, there is only one combining mark in the Lao Unicode block: <span class="codepoint" translate="no"><span lang="lo">&#x0ECC;</span> [<a href="/scripts/lao/block#char0ECC"><span class="uname">U+0ECC LAO CANCELLATION MARK</span></a>]</span>.</p>
+</section>
+
+
+
+
+<section>
+<h2 id="punctuation">Punctuation</h2>
+
+<p>The Lao Unicode block contains no punctuation. Lao uses western punctuation. See <a class="secref">phrase</a>.</p>
+</section>
+
+
+
+
+<section>
 <h2 id="numbers">Numbers, dates, currency, etc.</h2>
 
 <p>Lao uses Western digits.</p>
@@ -720,7 +688,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <section>
-<h2 id="numbers">Glyph shaping &amp; positioning</h2>
+<h2 id="shaping">Glyph shaping &amp; positioning</h2>
 
 <p>Prescript vowels are visually ordered, and therefore do not need to be positioned by the font.</p>
 <p>Vowel-signs, tones, and one consonant, however, have combining characters that need to be correctly positioned relative to the base character, and can be combined with a single base character.</p>
@@ -750,8 +718,9 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
     
 
 <section>
-  <h3 id="quotations">Quotations</h3>
-<p>According to CLDR, the default quote marks for Lao should be, reading right to left, <span lang="lo" class="ex">“...”</span>. When an additional quote is embedded within the first, the quote marks should be <span class="ex" lang="lo">‘...’</span>. </p>
+<h3 id="quotations">Quotations</h3>
+<p>According to CLDR, the default quote marks for Lao are <span class="codepoint" translate="no"><span lang="lo">“</span> [<span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span>]</span> at the start, and <span class="codepoint" translate="no"><span lang="lo">”</span> [<span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span>]</span> at the end. </p>
+<p>When an additional quote is embedded within the first, the quote marks are <span class="codepoint" translate="no"><span lang="lo">‘</span> [<span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span>]</span> and <span class="codepoint" translate="no"><span lang="lo">’</span> [<span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span>]</span>.</p>
 </section>
 </section>
 
@@ -796,20 +765,13 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <section>
-  <h3 id="lists">Counters, lists, etc.</h3>
-  
-<p>One numeric CSS counter style is defined for Lao in the document <a href="https://w3c.github.io/predefined-counter-styles/#tamil-styles">Ready-made Counter Styles</a>: <code class="kw" translate="no">lao</code>.</p>
-  <pre style="margin-left:7.5%;">
-@counter-style lao {
-system: numeric;
-symbols: '\ED0' '\ED1' '\ED2' '\ED3' '\ED4' '\ED5' '\ED6' '\ED7'
-'\ED8' '\ED9';
-/* symbols: '໐' '໑' '໒' '໓' '໔' '໕' '໖' '໗' '໘' '໙'; */
-}</pre>
+  <h3 id="lists">Counter styles</h3>
+<p>Lao uses one native, numeric counter style, according to the document <a href="https://w3c.github.io/predefined-counter-styles/#tamil-styles">Ready-made Counter Styles</a>. The  style uses the Lao digits: '໐' '໑' '໒' '໓' '໔' '໕' '໖' '໗' '໘' '໙''.</p>
 <figure>
 <p class="large">1&nbsp;⇨&nbsp;<span class="ex" lang="km">໑</span> 2&nbsp;⇨&nbsp;<span class="ex" lang="km">໒</span> 3&nbsp;⇨&nbsp;<span class="ex" lang="km">໓</span> 4&nbsp;⇨&nbsp;<span class="ex" lang="km">໔</span> 11&nbsp;⇨&nbsp;<span class="ex" lang="km">໑໑</span> 22&nbsp;⇨&nbsp;<span class="ex" lang="km">໒໒</span> 33&nbsp;⇨&nbsp;<span class="ex" lang="km">໓໓</span> 44&nbsp;⇨&nbsp;<span class="ex" lang="km">໔໔</span> 111&nbsp;⇨&nbsp;<span class="ex" lang="km">໑໑໑</span> 2222&nbsp;⇨&nbsp;<span class="ex" lang="km">໒໒໒</span></p>
-<figcaption>Numbers produced by the decimal 'lao' counter style<span class="trans"></span>.</figcaption>
+<figcaption>Numbers produced by the  Lao counter style<span class="trans"></span>.</figcaption>
 </figure>
+<p>You can experiment with these styles using the <a href="../../r12a.github.io/apps/counterconverter/apps/counterconverter/">Counter styles converter</a>.</p>
 </section>
 
 </section>
@@ -1044,13 +1006,10 @@ mai cat-ta-waː</th>
 
 <div id="panel" style="display:none"></div>
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/lao"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-21  18:16<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Blao%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Flao%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/lao"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-02-02  14:56<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Blao%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Flao%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 <script type="text/javascript">
-var base = '/scripts/lao/block'
-initialiseShowNames(base, 'c');
-document.getElementById('featureTableBody').innerHTML = makeSidePanel("Lao","")
-createtoc(3)
+initialiseSummary('/scripts/lao/block','lo','Lao')
 </script>
 
 </body>
