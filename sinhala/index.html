@@ -21,26 +21,27 @@
     text-align: start;
 	line-height: 1.4;
 	}
+@media print { #freeText { font-size: 18px; } }
 [lang=si] { font-family: "Noto Serif Sinhala WF", serif; font-size: 150%; }
 .large[lang=si] { font-size: 300%;  text-align: center; line-height: 1; margin-top: 0; margin-bottom: 0; }
 .narrowlines .listPair { margin-bottom: 0.25em; }
 .iso15919 { font-family: gentiumpluswf; }
 </style>
 
-<script src="/shared/code/boilerplate.js"></script>
-<script src="/shared/code/toc_2019.js"></script>
-<script src="/shared/code/all-names.js"></script>
-<script src="/shared/code/character_conversion.js"></script>
-<script src="/shared/code/show_codepoints.js"></script>
-<script src="/shared/fontlists/manage.js"></script>
-<script src="/shared/code/scriptGroups.js"></script>
+<script src="db.js"> </script>
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2019.js"></script>
+<script src="../../shared/code/all-names.js"></script>
+<script src="../../shared/code/character_conversion.js"></script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/fontlists/manage.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
-<script src="../common/block-functions.js"></script>
-<script src="/shared/code/getLinks.js"></script>
+<script src="../../shared/code/getLinks.js"></script>
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
 
-<script src="/shared/fontlists/sinhala.js"> </script>
+<script src="../../shared/fontlists/sinhala.js"> </script>
 </head>
 
 <body>
@@ -51,7 +52,7 @@
 
 <h1>Sinhala script summary</h1>
 
-<nav id="top"><a href="#header-boilerplate"><img src="/shared/images/up.png" alt="go to page top"/></a></nav>
+<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top"/></a></nav>
 
 <aside class="sidebar">
 <nav>
@@ -102,7 +103,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->20 January, 2019<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->4 February, 2019<!-- #EndDate -->
 &bull; tags <a href="https://r12a.github.io/blog/index.php?tag=sinhala" title="Show all blog posts tagged with 'sinhala'">sinhala</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
@@ -134,17 +135,6 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-  <div id="features">
-  <table>
-      <tbody id="featureTableBody">
-     </tbody>
-    </table>
-    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
-   </div>
-
-
-
-
 <section>
     <h2 id="history">Usage &amp; history</h2>
     <p>From <a href="http://scriptsource.org/scr/Arab">Scriptsource</a>: </p>
@@ -161,21 +151,24 @@ Sinhalese is often considered two alphabets, or an alphabet within an alphabet, 
 
 
 
-  <section>
+<div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+    </table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+   </div>
+
+
+
+
+<section>
     <h2 id="distinctive">Distinctive features</h2>
     <p>The Sinhala script is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>, ie. consonants carry an inherent vowel sound that is overridden using vowel signs. In Sinhala, consonants carry an inherent vowel  a. See the table to the right for a brief overview of features, taken from the <a href="/scripts/featurelist/">Script Comparison Table</a>. </p>
-<p>Modern Sinhala can be written using a subset of the letters available in the Sinhala Unicode block. The remainder are used for representing the sounds of Sanskrit, Pail and other languages, and include all the aspirated consonants (which are pronounced in the same way as the unaspirated ones). Unusually for indic scripts, there are also a set of prenasalised consonants, and there is an <span class="trans">æ</span> vowel.</p>
+<p>Modern Sinhala can be written using a subset of the letters available in the Sinhala Unicode block. The remainder are used for representing the sounds of Sanskrit, Pail and other languages, and include all the aspirated consonants (which are pronounced in the same way as the unaspirated ones).</p>
+<p>Unusually for indic scripts, there is a set of prenasalised consonants, and there is also an <span class="trans">æ</span> vowel.</p>
 <p>The virama is usually displayed in consonant clusters. However, it is also possible to render clusters using conjunct forms (ligatures or reduced glyphs). Zero width joiner is used after the virama to signal the intention for that. Putting the ZWJ before the virama produces another form of conjunct, where adjacent consonants touch each other, but this is not used for modern Sinhalese.</p>
 </section>
-  
-  
-  
-<div id="showTranscriptions">
-<div>Show transcriptions</div>
-<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
-<div><label>ISO 15919 <input type="checkbox" onChange="toggleTranscription('iso15919', this.checked)"/></label></div>
-</div>
 
 
 
@@ -194,149 +187,43 @@ Sinhalese is often considered two alphabets, or an alphabet within an alphabet, 
 </ul>
 <p>For character-specific details see <a class="linkHighlight" href="/scripts/sinhala/block">Sinhala character notes</a>.</p>
 </section>
-
-
-
-
   
-<section>
-<h2 id="letters">Consonants</h2>
-<p>Sinhala uses a core set of consonants for writing the modern, spoken language of Sinhalese, but has an extended set used for writing Sanskrit, Pali, and Tamil words. Each consonant has the inherent vowel <span class="trans">a</span>.</p>
-
-
-
-
-<section>
-<h3 id="basicconsonants">Basic (<span class="trans">ʃuddʰa</span>) consonants</h3>
-
-<p>The core set, or <span class="trans">ʃuddʰa hōɖiya</span>, is based on the classical grammar of the middle ages (called <span land="si">එළු හෝඩිය</span> <span class="name">ẹɭu hōɖiya</span>) and contains the following consonants:</p>
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'si')">list all 23</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="si">ක</span><span class="listIPA">k</span><span class="listTrans">k</span><span class="iso15919" style="display:none;">k</span></div>
-<div class="listPair"><span class="listItem" lang="si">ග</span><span class="listIPA">g</span><span class="listTrans">g</span><span class="iso15919" style="display:none;">g</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඟ</span><span class="listIPA">ᵑɡ</span><span class="listTrans">ᵑɡ</span><span class="iso15919" style="display:none;">ňg</span></div>
-<div class="listPair"><span class="listItem" lang="si">ච</span><span class="listIPA">ʧ</span><span class="listTrans">c</span><span class="iso15919" style="display:none;">c</span></div>
-<div class="listPair"><span class="listItem" lang="si">ජ</span><span class="listIPA">ʤ</span><span class="listTrans">ʤ</span><span class="iso15919" style="display:none;">j</span></div>
-<div class="listPair"><span class="listItem" lang="si">ට</span><span class="listIPA">ʈ</span><span class="listTrans">ʈ</span><span class="iso15919" style="display:none;">ṭ</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඩ</span><span class="listIPA">ɖ</span><span class="listTrans">ɖ</span><span class="iso15919" style="display:none;">ḍ</span></div>
-<div class="listPair"><span class="listItem" lang="si">ණ</span><span class="listIPA">n</span><span class="listTrans">n</span><span class="iso15919" style="display:none;">ṇ</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඬ</span><span class="listIPA">ⁿɖ</span><span class="listTrans">ⁿɖ</span><span class="iso15919" style="display:none;">ňḍ</span></div>
-<div class="listPair"><span class="listItem" lang="si">ත</span><span class="listIPA">t</span><span class="listTrans">t</span><span class="iso15919" style="display:none;">t</span></div>
-<div class="listPair"><span class="listItem" lang="si">ද</span><span class="listIPA">d</span><span class="listTrans">d</span><span class="iso15919" style="display:none;">d</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඳ</span><span class="listIPA">ⁿd</span><span class="listTrans">ⁿd</span><span class="iso15919" style="display:none;">ňd</span></div>
-<div class="listPair"><span class="listItem" lang="si">ප</span><span class="listIPA">p</span><span class="listTrans">p</span><span class="iso15919" style="display:none;">p</span></div>
-<div class="listPair"><span class="listItem" lang="si">බ</span><span class="listIPA">b</span><span class="listTrans">b</span><span class="iso15919" style="display:none;">b</span></div>
-<div class="listPair"><span class="listItem" lang="si">ම</span><span class="listIPA">m</span><span class="listTrans">m</span><span class="iso15919" style="display:none;">m</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඹ</span><span class="listIPA">ᵐb</span><span class="listTrans">ᵐb</span><span class="iso15919" style="display:none;">m̌b</span></div>
-<div class="listPair"><span class="listItem" lang="si">ය</span><span class="listIPA">j</span><span class="listTrans">y</span><span class="iso15919" style="display:none;">y</span></div>
-<div class="listPair"><span class="listItem" lang="si">ර</span><span class="listIPA">r</span><span class="listTrans">r</span><span class="iso15919" style="display:none;">r</span></div>
-<div class="listPair"><span class="listItem" lang="si">ල</span><span class="listIPA">l</span><span class="listTrans">l</span><span class="iso15919" style="display:none;">l</span></div>
-<div class="listPair"><span class="listItem" lang="si">ළ</span><span class="listIPA">l</span><span class="listTrans">ɭ</span><span class="iso15919" style="display:none;">ḷ</span></div>
-<div class="listPair"><span class="listItem" lang="si">ව</span><span class="listIPA">ʋ</span><span class="listTrans">v</span><span class="iso15919" style="display:none;">v</span></div>
-<div class="listPair"><span class="listItem" lang="si">ස</span><span class="listIPA">s</span><span class="listTrans">s</span><span class="iso15919" style="display:none;">s</span></div>
-<div class="listPair"><span class="listItem" lang="si">හ</span><span class="listIPA">ɦ</span><span class="listTrans">h</span><span class="iso15919" style="display:none;">h</span></div>
-</div>
-</figure>
-
-</section>
-
-
-
-
-<section>
-<h3 id="misraconsonants"><span class="trans">miʃra</span> &amp; other consonants</h3>
-
-<p>The full set of consonants, known as <span class="trans">miʃra hōɖiya</span> (mixed alphabet), includes the following additional consonants.</p>
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'si')">list all 18</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="si">ඛ</span><span class="listIPA">k</span><span class="listTrans">kʰ</span><span class="iso15919" style="display:none;">kh</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඝ</span><span class="listIPA">g</span><span class="listTrans">gʰ</span><span class="iso15919" style="display:none;">gh</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඥ</span><span class="listIPA">ɡn</span><span class="listTrans">ᵑǰ</span><span class="iso15919" style="display:none;">jñ</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඞ</span><span class="listIPA">ŋ</span><span class="listTrans">ŋ</span><span class="iso15919" style="display:none;">ṅ</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඡ</span><span class="listIPA">ʧ</span><span class="listTrans">cʰ</span><span class="iso15919" style="display:none;">ch</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඣ</span><span class="listIPA">ʤ</span><span class="listTrans">ʤʰ</span><span class="iso15919" style="display:none;">jh</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඤ</span><span class="listIPA">ɲ</span><span class="listTrans">ɲ</span><span class="iso15919" style="display:none;">ñ</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඦ</span><span class="listIPA">nd͡ʒ</span><span class="listTrans">ⁿʤ</span><span class="iso15919" style="display:none;">n̆ja</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඨ</span><span class="listIPA">ʈ</span><span class="listTrans">ʈʰ</span><span class="iso15919" style="display:none;">ṭh</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඪ</span><span class="listIPA">ɖ</span><span class="listTrans">ɖʰ</span><span class="iso15919" style="display:none;">ḍh</span></div>
-<div class="listPair"><span class="listItem" lang="si">ථ</span><span class="listIPA">t</span><span class="listTrans">tʰ</span><span class="iso15919" style="display:none;">th</span></div>
-<div class="listPair"><span class="listItem" lang="si">ධ</span><span class="listIPA">d</span><span class="listTrans">dʰ</span><span class="iso15919" style="display:none;">dh</span></div>
-<div class="listPair"><span class="listItem" lang="si">න</span><span class="listIPA">n</span><span class="listTrans">ṅ</span><span class="iso15919" style="display:none;">n</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඵ</span><span class="listIPA">p</span><span class="listTrans">pʰ</span><span class="iso15919" style="display:none;">ph</span></div>
-<div class="listPair"><span class="listItem" lang="si">භ</span><span class="listIPA">b</span><span class="listTrans">bʰ</span><span class="iso15919" style="display:none;">bh</span></div>
-<div class="listPair"><span class="listItem" lang="si">ශ</span><span class="listIPA">ʃ</span><span class="listTrans">ʃ</span><span class="iso15919" style="display:none;">ś</span></div>
-<div class="listPair"><span class="listItem" lang="si">ෂ</span><span class="listIPA">ʃ</span><span class="listTrans">ʃ̇</span><span class="iso15919" style="display:none;">ṣ</span></div>
-<div class="listPair"><span class="listItem" lang="si">ෆ</span><span class="listIPA">f</span><span class="listTrans">f</span><span class="iso15919" style="display:none;">f</span></div>
-</div>
-</figure>
-
-
-<p>Note that the aspirated <span class="trans">miʃra</span> consonants are mapped to the same sounds as the unaspirated <span class="trans">ʃuddʰa</span> ones, and the retroflex <span class="trans">ṇ</span> and <span class="trans">ḷ</span> are each pronounced without retroflexion.</p>
-<p>Sinhalese  has a new character for <span class="trans">f</span>, <span class="codepoint"><span lang="si">&#x0DC6;</span> [<a href="/scripts/sinhala/block#char0DC6"><span class="uname">U+0DC6 SINHALA LETTER FAYANNA</span></a>]</span>. Sometimes, instead, a character is used that combines the Latin letter 'f' with the Sinhalese <span class="trans">p</span>, <span class="codepoint"><span lang="si">&#x0DB4;</span> [<a href="/scripts/sinhala/block#char0DB4"><span class="uname">U+0DB4 SINHALA LETTER ALPAPRAANA PAYANNA</span></a>]</span>.</p>
-</section>
-
-
-
-
-<section>
-<h3 id="prenasalised">Prenasalised consonants</h3>
-
-<p>A peculiarity of Sinhalese among indic scripts is the inclusion of prenasalised consonants, representing a nasal sound followed by a stop. The orthography distinguishes these graphemes from the more straightforward nasal consonant followed by a stop. For example, compare <span class="charExample" translate="no"><span class="ex" lang="si">අඬ</span> <span class="trans">ạⁿɖ</span> <span class="ipa">aⁿɖa</span> <span class="meaning">sound</span></span> and <span class="charExample" translate="no"><span class="ex" lang="si">අණ්ඩ</span> <span class="trans">ạn͓ɖ</span> <span class="ipa">aɳɖa</span> <span class="meaning">egg</span></span>.</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'si')">list all 6</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="si">ඟ</span><span class="listIPA">ᵑɡ</span><span class="listTrans">ᵑɡ</span><span class="iso15919" style="display:none;">ňg</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඬ</span><span class="listIPA">ⁿɖ</span><span class="listTrans">ⁿɖ</span><span class="iso15919" style="display:none;">ňḍ</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඳ</span><span class="listIPA">ⁿd</span><span class="listTrans">ⁿd</span><span class="iso15919" style="display:none;">ňd</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඹ</span><span class="listIPA">ᵐb</span><span class="listTrans">ᵐb</span><span class="iso15919" style="display:none;">m̌b</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඥ</span><span class="listIPA">ɡn</span><span class="listTrans">ᵑǰ</span><span class="iso15919" style="display:none;">jñ</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඦ</span><span class="listIPA">nd͡ʒ</span><span class="listTrans">ⁿʤ</span><span class="iso15919" style="display:none;">n̆j</span></div>
-</div>
-</figure>
-
-
-<p>The prenasalised shapes are formed from a combination of the shapes of the participating characters.</p>
-</section>
   
+  
+<div id="showTranscriptions">
+<div>Show transcriptions</div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div><label>ISO 15919 <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+</div>
 
 
 
 
 <section>
-<h3 id="finals">Final consonants</h3>
-
-<p>Two combining characters are used to represent syllable-final consonant sounds.</p>
-
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'hi')">list both</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="si">ං</span><span class="listIPA">ŋ</span><span class="listTrans">ŋ̽</span><span class="iso15919" style="display:none;">n</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඃ</span><span class="listIPA">?</span><span class="listTrans">h̽</span><span class="iso15919" style="display:none;">h</span></div>
-</div>
-</figure>
-
-
-
-  <p><span class="codepoint"><span lang="si">&#x25CC;&#x0D82;</span> [<a href="/scripts/sinhala/block#char0D82"><span class="uname">U+0D82 SINHALA SIGN ANUSVARAYA​</span></a>]</span> usually represents the sound <span class="ipa">ŋ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="si">සිංහල</span> <span class="trans">siŋ̽hl</span> <span class="ipa">siŋhala</span> <span class="meaning">Sinhala</span></span>.</p>
-<p><span class="codepoint"><span lang="si">&#x25CC;&#x0D83;</span> [<a href="/scripts/sinhala/block#char0D83"><span class="uname">U+0D83 SINHALA SIGN VISARGAYA​</span></a>]</span> is also in the repertoire. <span class="ednote">Not clear how it's used in Sinhala.</span>&nbsp;</p>
-<p>Either of these 'semi-consonants' must be used after a vowel or after a consonant+vowel (including the inherent vowel), and must be the last combining character in the syllable.</p>
-</section>
-
+<h2 id="dir">Text direction</h2>
+    <p>Sinhala script is written horizontally and left to right.</p>
 </section>
 
 
 
 
 
-  
+
 <section>
   <h2 id="vowels">Vowels</h2>
+  
 <section>
 <h3 id="inherentvowel">Inherent vowel</h3>
 
 <p>Each consonant symbol has an inherent following vowel sound, typically transcribed as <span class="trans">a</span>, and pronounced <span class="ipa">ə</span>. So <span class="codepoint" translate="no"><span lang="si">&#x0D9A;</span> [<a href="/scripts/sinhala/block#char0D9A"><span class="uname">U+0D9A SINHALA LETTER ALPAPRAANA KAYANNA</span></a>]</span> is actually pronounced <span class="ipa">ka</span>.</p>
+</section>
+
+
+
+
+<section>
+<h3 id="absence">Vowel absence</h3>
 <p>When the inherent vowel is not pronounced, <span class="codepoint" translate="no"><span lang="si">&#x0DCA;</span> [<a href="/scripts/sinhala/block#char0DCA"><span class="uname">U+0DCA SINHALA SIGN AL-LAKUNA</span></a>]</span> is attached to the consonant. So to indicate just the sound <span class="ipa">k</span>, use <span class="charExample" translate="no"><span class="ex" lang="si">ක්</span></span>.</p>
 </section>
 
@@ -344,45 +231,22 @@ Sinhalese is often considered two alphabets, or an alphabet within an alphabet, 
 
 
 <section>
-<h3 id="dependentvowel">Dependent vowels</h3>
+<h3 id="dependentvowel">Vowel-signs</h3>
 
 
-<p>To produce a different vowel than the inherent one, Sinhala uses a combining character called a vowel-sign after the base consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="si">කී</span> <span class="ipa">kiː</span></span>, and is always typed and stored after the preceding consonant.</p>
-<p>The vowel letters of Sinhala are also divided into a core and extended set. </p>
+<p>To produce a different vowel than the inherent one, Sinhala uses a combining character called a vowel-sign after the base consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="si">කී</span> <span class="ipa">kiː</span></span>.</p>
+<p> Characters that represent vowel-signs are all combining marks, and are always typed and stored <em>after</em> the preceding consonant, whether or not the vowel-signs precede it when displayed. The font takes care of the glyph positioning.  In principle a single character is used per base consonant, but several vowel signs decompose to more than one character.</p>
+<p>The vowel letters of Sinhala are  divided into a core set and extended set (the latter for writing Sanskrit, Pali, and Tamil words).</p>
 <p>The core (<span class="trans">ʃuddʰa</span>) alphabet includes the following.</p>
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'si')">list all 11</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="si">ා</span><span class="listIPA">aː, a</span><span class="listTrans">ā</span><span class="iso15919" style="display:none;">ā</span></div>
-<div class="listPair"><span class="listItem" lang="si">ැ</span><span class="listIPA">æ</span><span class="listTrans">æ</span><span class="iso15919" style="display:none;">æ</span></div>
-<div class="listPair"><span class="listItem" lang="si">ෑ</span><span class="listIPA">æː</span><span class="listTrans">ǣ</span><span class="iso15919" style="display:none;">ǣ</span></div>
-<div class="listPair"><span class="listItem" lang="si">ි</span><span class="listIPA">i</span><span class="listTrans">i</span><span class="iso15919" style="display:none;">i</span></div>
-<div class="listPair"><span class="listItem" lang="si">ී</span><span class="listIPA">iː</span><span class="listTrans">ī</span><span class="iso15919" style="display:none;">ī</span></div>
-<div class="listPair"><span class="listItem" lang="si">ු</span><span class="listIPA">u</span><span class="listTrans">u</span><span class="iso15919" style="display:none;">u</span></div>
-<div class="listPair"><span class="listItem" lang="si">ූ</span><span class="listIPA">uː</span><span class="listTrans">ū</span><span class="iso15919" style="display:none;">ū</span></div>
-<div class="listPair"><span class="listItem" lang="si">ෙ</span><span class="listIPA">e</span><span class="listTrans">e</span><span class="iso15919" style="display:none;">e</span></div>
-<div class="listPair"><span class="listItem" lang="si">ේ</span><span class="listIPA">eː</span><span class="listTrans">ē</span><span class="iso15919" style="display:none;">ē</span></div>
-<div class="listPair"><span class="listItem" lang="si">ො</span><span class="listIPA">o</span><span class="listTrans">o</span><span class="iso15919" style="display:none;">o</span></div>
-<div class="listPair"><span class="listItem" lang="si">ෝ</span><span class="listIPA">oː</span><span class="listTrans">ō</span><span class="iso15919" style="display:none;">ō</span></div>
-</div>
-</figure>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ා␣ැ␣ෑ␣ි␣ී␣ු␣ූ␣ෙ␣ේ␣ො␣ෝ</figure>
+
 
 
 <p>The extended (<span class="trans">miʃra</span>) letters are as follows, but see also <a class="sectionref">vocalics</a>:</p>
 
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'si')">list both</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="si">ෛ</span><span class="listIPA">ɑj</span><span class="listTrans">aʲ</span><span class="iso15919" style="display:none;">ai</span></div>
-<div class="listPair"><span class="listItem" lang="si">ෞ</span><span class="listIPA">ɑw</span><span class="listTrans">aʷ</span><span class="iso15919" style="display:none;">au</span></div>
-</div>
-</figure>
 
-
-<p>Several vowel-signs are <em>spacing</em> combining characters, meaning that they consume horizontal space when added to a base consonant. </p>
-<p>Two vowel-signs appear to the left of the base consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="si">කෙ</span> <span class="trans">ke</span></span>, and 4 have multiple parts that appear on two sides of the base, eg. <span class="charExample" translate="no"><span class="ex" lang="si">කේ</span> <span class="trans">kē</span></span> and <span class="charExample" translate="no"><span class="ex" lang="si">කො</span> <span class="trans">ko</span></span>. Vowel-signs are, nevertheless, always typed and stored after the base consonant, and the font positions them as needed.</p>
-
-
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ෛ␣ෞ</figure>
 
 <p>The pronunciations of <span class="codepoint"><span lang="si">&#x0D85;</span> [<a href="/scripts/sinhala/block#char0D85"><span class="uname">U+0D85 SINHALA LETTER AYANNA</span></a>]</span> and <span class="codepoint"><span lang="si">&#x0D86;</span> [<a href="/scripts/sinhala/block#char0D86"><span class="uname">U+0D86 SINHALA LETTER AAYANNA</span></a>]</span> vary, but in a fairly predictable way. The former is <span class="ipa">a</span> in the first syllable, except for a few words, and before double consonants or clusters, and <span class="ipa">ə</span> word finally and before single consonants. The latter represents <span class="ipa">aː</span> everywhere except word-finally, where it may be <span class="ipa">a</span>, depending on the word structure. Similar length rules apply to <span class="ipa">e</span> and <span class="ipa">o</span> in final position.</p>
 <p>One particular affix, <span class="charExample"><span class="ex" lang="si">යි</span> <span class="trans">yi</span></span>, is pronounced <span class="ipa">j</span> and treated as a final consonant.</p>
@@ -408,60 +272,126 @@ Sinhalese is often considered two alphabets, or an alphabet within an alphabet, 
 
 
 
+ 
+<section>
+<h3 id="placement">Vowel-sign placement</h3>
+
+<p>The following list shows where vowel-signs are positioned around a base consonant to produce vowels, and how many instances of that pattern there are.</p>
+<ul>
+<li>2 prescript, eg. <span class="charExample" translate="no"><span class="ex" lang="si">කෙ</span> <span class="trans">ke</span></span></li>
+<li>3 postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="si">කැ</span> <span class="trans">kæ</span></span></li>
+<li>2 superscript, eg. <span class="charExample" translate="no"><span class="ex" lang="si">කි</span> <span class="trans">ki</span></span></li>
+<li>2 subscript, eg. <span class="charExample" translate="no"><span class="ex" lang="si">කු</span> <span class="trans">ku</span></span></li>
+<li>3 pre+postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="si">කො</span> <span class="trans">ko</span></span></li>
+<li>1 pre+superscript, eg. <span class="charExample" translate="no"><span class="ex" lang="si">කේ</span> <span class="trans">kē</span></span></li>
+</ul>
+</section>
+
+
+
+
 
 <section>
-<h3 id="independentvowel">independent vowels</h3>
+<h3 id="independentvowel">Standalone vowels</h3>
 
-<p>Sinhala also has a set of independent vowels to represent vowels that are not preceded by a consonant. Unlike the vowel-signs, the set contains a character to represent the inherent vowel sound.</p>
+<p class="explanatoryintro">Standalone vowels are not preceded by a consonant, and may appear at the beginning or in the middle of a word.</p>
+<p>Sinhala represents standalone vowels using a set of independent vowel letters. The set includes a character to represent the inherent vowel sound.</p>
 <p>The core (<span class="trans">ʃuddʰa</span>) alphabet includes the following.</p>
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'si')">list all 12</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="si">අ</span><span class="listIPA">a, ə</span><span class="listTrans">ạ</span><span class="iso15919" style="display:none;">a</span></div>
-<div class="listPair"><span class="listItem" lang="si">ආ</span><span class="listIPA">aː, a</span><span class="listTrans">ạ̄</span><span class="iso15919" style="display:none;">ā</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඇ</span><span class="listIPA">æ</span><span class="listTrans">æ̣</span><span class="iso15919" style="display:none;">æ</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඈ</span><span class="listIPA">æː</span><span class="listTrans">ǣ̣</span><span class="iso15919" style="display:none;">ǣ</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඉ</span><span class="listIPA">i</span><span class="listTrans">ị</span><span class="iso15919" style="display:none;">i</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඊ</span><span class="listIPA">iː</span><span class="listTrans">ị̄</span><span class="iso15919" style="display:none;">ī</span></div>
-<div class="listPair"><span class="listItem" lang="si">උ</span><span class="listIPA">u</span><span class="listTrans">ụ</span><span class="iso15919" style="display:none;">u</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඌ</span><span class="listIPA">uː</span><span class="listTrans">ụ̄</span><span class="iso15919" style="display:none;">ū</span></div>
-<div class="listPair"><span class="listItem" lang="si">එ</span><span class="listIPA">e</span><span class="listTrans">ẹ</span><span class="iso15919" style="display:none;">e</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඒ</span><span class="listIPA">eː</span><span class="listTrans">ẹ̄</span><span class="iso15919" style="display:none;">ē</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඔ</span><span class="listIPA">o</span><span class="listTrans">ọ</span><span class="iso15919" style="display:none;">o</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඕ</span><span class="listIPA">oː</span><span class="listTrans">ọ̄</span><span class="iso15919" style="display:none;">ō</span></div>
-</div>
-</figure>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">අ␣ආ␣ඇ␣ඈ␣ඉ␣ඊ␣උ␣ඌ␣එ␣ඒ␣ඔ␣ඕ</figure>
+
 <p>The extended (<span class="trans">miʃra</span>) letters are as follows, but see also <a class="sectionref">vocalics</a>:</p>
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'si')">list both</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="si">ඓ</span><span class="listIPA">ɑj</span><span class="listTrans">ạʲ</span><span class="iso15919" style="display:none;">ai</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඖ</span><span class="listIPA">ɑw</span><span class="listTrans">ạʷ</span><span class="iso15919" style="display:none;">au</span></div>
-</div>
-</figure>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ඓ␣ඖ</figure>
+
+</section>
 </section>
 
 
 
 
 <section>
-<h3 id="vocalics">Vocalics</h3>
-<p>A set of letters that represents a special combination of consonant+vowel, available both as vowel-signs and independent vowels. These are all classed as extended (<span class="trans">miʃra</span>) letters.</p>
-<figure class="characterBox">
-<div class="listAll" onClick="listAll(this, 'si')">list all 8</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="si">ඍ</span><span class="listIPA">ri, ru</span><span class="listTrans">r̥</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඎ</span><span class="listIPA">riː, ruː</span><span class="listTrans">r̥̄</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඏ</span><span class="listIPA">li</span><span class="listTrans">l̥</span></div>
-<div class="listPair"><span class="listItem" lang="si">ඐ</span><span class="listIPA">liː</span><span class="listTrans">l̥̄</span></div>
-<div class="listPair"><span class="listItem" lang="si">ෘ</span><span class="listIPA">ri, ru</span><span class="listTrans">r̥</span></div>
-<div class="listPair"><span class="listItem" lang="si">ෲ</span><span class="listIPA">riː, ruː</span><span class="listTrans">r̥̄</span></div>
-<div class="listPair"><span class="listItem" lang="si">ෟ</span><span class="listIPA">li</span><span class="listTrans">l̥</span></div>
-<div class="listPair"><span class="listItem" lang="si">ෳ</span><span class="listIPA">liː</span><span class="listTrans">l̥̄</span></div>
-</div>
-</figure>
+<h2 id="vocalics">Vocalics</h2>
+<p class="explanatoryintro">Vocalics are letters derived from Sanskrit that generally behave like vowels, but represent r/l followed by a vowel. They are often available both as vowel-signs and independent vowel letters.</p>
+<p>These are all classed as extended (<span class="trans">miʃra</span>) letters.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans">ඍ␣ඎ␣ඏ␣ඐ␣ෘ␣ෲ␣ෟ␣ෳ</figure>
+
 </section>
+
+
+
+
+
+
+
+  
+<section>
+<h2 id="letters">Consonants</h2>
+<p>As for vowels, Sinhala uses a core set of consonants for writing the modern, spoken language of Sinhalese, but has an extended set used for writing Sanskrit, Pali, and Tamil words.</p>
+
+
+
+
+<section>
+<h3 id="basicconsonants">Basic (<span class="trans">ʃuddʰa</span>) consonants</h3>
+
+<p>The core set, or <span class="trans">ʃuddʰa hōɖiya</span>, is based on the classical grammar of the middle ages (called <span land="si">එළු හෝඩිය</span> <span class="name">ẹɭu hōɖiya</span>) and contains the following consonants:</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ක␣ග␣ඟ␣ච␣ජ␣ට␣ඩ␣ණ␣ඬ␣ත␣ද␣ඳ␣ප␣බ␣ම␣ඹ␣ය␣ර␣ල␣ළ␣ව␣ස␣හ</figure>
+
 </section>
+
+
+
+
+<section>
+<h3 id="misraconsonants"><span class="trans">miʃra</span> &amp; other consonants</h3>
+
+<p>The full set of consonants, known as <span class="trans">miʃra hōɖiya</span> (mixed alphabet), includes the following additional consonants.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ඛ␣ඝ␣ඥ␣ඞ␣ඡ␣ඣ␣ඤ␣ඦ␣ඨ␣ඪ␣ථ␣ධ␣න␣ඵ␣භ␣ශ␣ෂ␣ෆ</figure>
+
+
+<p>Note that the aspirated <span class="trans">miʃra</span> consonants are mapped to the same sounds as the unaspirated <span class="trans">ʃuddʰa</span> ones, and the retroflex <span class="trans">ṇ</span> and <span class="trans">ḷ</span> are each pronounced without retroflexion.</p>
+<p>Sinhalese  has a new character for <span class="trans">f</span>, <span class="codepoint"><span lang="si">&#x0DC6;</span> [<a href="/scripts/sinhala/block#char0DC6"><span class="uname">U+0DC6 SINHALA LETTER FAYANNA</span></a>]</span>. Sometimes, instead, a character is used that combines the Latin letter 'f' with the Sinhalese <span class="trans">p</span>, <span class="codepoint"><span lang="si">&#x0DB4;</span> [<a href="/scripts/sinhala/block#char0DB4"><span class="uname">U+0DB4 SINHALA LETTER ALPAPRAANA PAYANNA</span></a>]</span>.</p>
+</section>
+
+
+
+
+<section>
+<h3 id="prenasalised">Prenasalised consonants</h3>
+
+<p>A peculiarity of Sinhalese among indic scripts is the inclusion of prenasalised consonants, representing a nasal sound followed by a stop. The orthography distinguishes these graphemes from the more straightforward nasal consonant followed by a stop. For example, compare <span class="charExample" translate="no"><span class="ex" lang="si">අඬ</span> <span class="trans">ạⁿɖ</span> <span class="ipa">aⁿɖa</span> <span class="meaning">sound</span></span> and <span class="charExample" translate="no"><span class="ex" lang="si">අණ්ඩ</span> <span class="trans">ạn͓ɖ</span> <span class="ipa">aɳɖa</span> <span class="meaning">egg</span></span>.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ඟ␣ඬ␣ඳ␣ඹ␣ඥ␣ඦ</figure>
+
+
+<p>The prenasalised shapes are formed from a combination of the shapes of the participating characters.</p>
+</section>
+  
+
+
+
+
+<section>
+<h3 id="finals">Final consonants</h3>
+
+<p>Two combining characters are used to represent syllable-final consonant sounds.</p>
+
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ං␣ඃ</figure>
+
+
+
+  <p><span class="codepoint"><span lang="si">&#x25CC;&#x0D82;</span> [<a href="/scripts/sinhala/block#char0D82"><span class="uname">U+0D82 SINHALA SIGN ANUSVARAYA​</span></a>]</span> usually represents the sound <span class="ipa">ŋ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="si">සිංහල</span> <span class="trans">siŋ̽hl</span> <span class="ipa">siŋhala</span> <span class="meaning">Sinhala</span></span>.</p>
+<p><span class="codepoint"><span lang="si">&#x25CC;&#x0D83;</span> [<a href="/scripts/sinhala/block#char0D83"><span class="uname">U+0D83 SINHALA SIGN VISARGAYA​</span></a>]</span> is also in the repertoire. <span class="ednote">Not clear how it's used in Sinhala.</span>&nbsp;</p>
+<p>Either of these 'semi-consonants' must be used after a vowel or after a consonant+vowel (including the inherent vowel), and must be the last combining character in the syllable.</p>
+</section>
+
+</section>
+
   
 
 
@@ -480,11 +410,6 @@ Sinhalese is often considered two alphabets, or an alphabet within an alphabet, 
 
 
 <p> In all cases, <span class="codepoint"><span lang="si">&#x25CC;&#x0DCA;</span> [<a href="/scripts/sinhala/block#char0DCA"><span class="uname">U+0DCA SINHALA SIGN AL-LAKUNA​</span></a>], called <span class="name">al lakuna</span>, </span> is used as the virama, however, different joining behaviour can be produced by adding <span class="codepoint"><span class="name">ZWJ</span> [<a href="/scripts/sinhala/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span> before or after.</p>
-<figure class="characterBox">
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="si">්</span><span class="listTrans">͓</span></div>
-</div>
-</figure>
 
 
 
@@ -537,14 +462,8 @@ Sinhalese is often considered two alphabets, or an alphabet within an alphabet, 
   <section>
   <h2 id="other">Combining characters</h2>
   <p>Of the 20 combining characters in the Sinhala block, 17 are vowel signs. The remainder include the virama, the anusvara, and the visarga. Follow the links to find descriptions of these.</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'si')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="si">-්</span><span class="listMeaning">virama</span> <span class="listMeaning"><a href="#clusters">link</a></span></div>
-<div class="listPair"><span class="listItem" lang="si">-ං</span><span class="listMeaning">anusvara</span> <span class="listMeaning"><a href="#finals">link</a></span></div>
-<div class="listPair"><span class="listItem" lang="si">-ඃ</span><span class="listMeaning">visarga</span><span class="listMeaning"> <a href="#finals">link</a></span></div>
-</div>
-</figure>
+
+<figure class="characterBox auto" data-cols="trans" data-links="#clusters,#finals,#finals">්␣ං␣ඃ</figure>
 </section>
 
 
@@ -555,48 +474,13 @@ Sinhalese is often considered two alphabets, or an alphabet within an alphabet, 
 <h2 id="digits">Numbers, dates, currency, etc.</h2>
     <p>Sinhala uses european digits.</p>
 <p>There is, however, a set of native digits, that were used into the 20th century, but mostly associated with horoscopes. The shapes of some of these are identical to characters used for other purposes.</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'si')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="si">෦</span><span class="listTrans">0</span></div>
-<div class="listPair"><span class="listItem" lang="si">෧</span><span class="listTrans">1</span></div>
-<div class="listPair"><span class="listItem" lang="si">෨</span><span class="listTrans">2</span></div>
-<div class="listPair"><span class="listItem" lang="si">෩</span><span class="listTrans">3</span></div>
-<div class="listPair"><span class="listItem" lang="si">෪</span><span class="listTrans">4</span></div>
-<div class="listPair"><span class="listItem" lang="si">෫</span><span class="listTrans">5</span></div>
-<div class="listPair"><span class="listItem" lang="si">෬</span><span class="listTrans">6</span></div>
-<div class="listPair"><span class="listItem" lang="si">෭</span><span class="listTrans">7</span></div>
-<div class="listPair"><span class="listItem" lang="si">෮</span><span class="listTrans">8</span></div>
-<div class="listPair"><span class="listItem" lang="si">෯</span><span class="listTrans">9</span></div>
-</div>
-</figure>
+
+<figure class="characterBox auto" data-cols="trans">෦␣෧␣෨␣෩␣෪␣෫␣෬␣෭␣෮␣෯</figure>
 
 <p>There is also another, older set that were used in an archaic number system, called Sinhala Illakkam, prior to 1815. These are all in the Sinhala Archaic Numbers block.</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'si')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="si">𑇡</span><span class="listTrans">1</span></div>
-<div class="listPair"><span class="listItem" lang="si">𑇢</span><span class="listTrans">2</span></div>
-<div class="listPair"><span class="listItem" lang="si">𑇣</span><span class="listTrans">3</span></div>
-<div class="listPair"><span class="listItem" lang="si">𑇤</span><span class="listTrans">4</span></div>
-<div class="listPair"><span class="listItem" lang="si">𑇥</span><span class="listTrans">5</span></div>
-<div class="listPair"><span class="listItem" lang="si">𑇦</span><span class="listTrans">6</span></div>
-<div class="listPair"><span class="listItem" lang="si">𑇧</span><span class="listTrans">7</span></div>
-<div class="listPair"><span class="listItem" lang="si">𑇨</span><span class="listTrans">8</span></div>
-<div class="listPair"><span class="listItem" lang="si">𑇩</span><span class="listTrans">9</span></div>
-<div class="listPair"><span class="listItem" lang="si">𑇪</span><span class="listTrans">10</span></div>
-<div class="listPair"><span class="listItem" lang="si">𑇫</span><span class="listTrans">20</span></div>
-<div class="listPair"><span class="listItem" lang="si">𑇬</span><span class="listTrans">30</span></div>
-<div class="listPair"><span class="listItem" lang="si">𑇭</span><span class="listTrans">40</span></div>
-<div class="listPair"><span class="listItem" lang="si">𑇮</span><span class="listTrans">50</span></div>
-<div class="listPair"><span class="listItem" lang="si">𑇯</span><span class="listTrans">60</span></div>
-<div class="listPair"><span class="listItem" lang="si">𑇰</span><span class="listTrans">70</span></div>
-<div class="listPair"><span class="listItem" lang="si">𑇱</span><span class="listTrans">80</span></div>
-<div class="listPair"><span class="listItem" lang="si">𑇲</span><span class="listTrans">90</span></div>
-<div class="listPair"><span class="listItem" lang="si">𑇳</span><span class="listTrans">100</span></div>
-<div class="listPair"><span class="listItem" lang="si">𑇴</span><span class="listTrans">1000</span></div>
-</div>
-</figure>
+
+<figure class="characterBox auto" data-cols="trans">𑇡␣𑇢␣𑇣␣𑇤␣𑇥␣𑇦␣𑇧␣𑇨␣𑇩␣𑇪␣𑇫␣𑇬␣𑇭␣𑇮␣𑇯␣𑇰␣𑇱␣𑇲␣𑇳␣𑇴</figure>
+
 </section>
 
 
@@ -712,8 +596,16 @@ Sinhalese is often considered two alphabets, or an alphabet within an alphabet, 
 <h2 id="boundaries">Structural boundaries &amp; markers</h2>
 
 <section>
-<h3 id="delimiters">Text delimiters</h3>
-    <p>Words are separated by spaces.</p>
+<h3 id="words">Word boundaries</h3>
+    <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+<p>Words are separated by spaces.</p>
+</section>
+
+
+
+
+<section>
+<h3 id="phrase">Phrase boundaries</h3>
   <p>Sinhala  uses western  punctuation. </p>
 <p>The punctuation character <span class="codepoint"><span lang="si">&#x0DF4;</span> [<a href="/scripts/sinhala/block#char0DF4"><span class="uname">U+0DF4 SINHALA PUNCTUATION KUNDDALIYA</span></a>]</span> once functioned to indicate the end of a paragraph, but is not used for modern Sinhala content.</p>
 </section>
@@ -723,19 +615,10 @@ Sinhalese is often considered two alphabets, or an alphabet within an alphabet, 
   
   
   
-<section>
-<h2 id="layout">Line &amp; paragraph layout</h2>
-<section>
-<h3 id="dir">Text direction</h3>
-    <p>Sinhala script is written horizontally and left to right.</p>
-</section>
-</section>
-
-
 
 
 <section>
-    <h3 id="tbd">TBD</h3>
+<h3 id="tbd">TBD</h3>
 <p class="ednote">Further information needed for this section includes:</p>
 <pre style="margin-left: 10%;">
 Glyph shaping &amp; positioning
@@ -798,6 +681,57 @@ Page &amp; book layout
 
 
 
+
+
+<section>
+    <h3 id="tbd">TBD</h3>
+<p class="ednote">Further information needed for this section includes:</p>
+<pre style="margin-left: 10%;">
+Glyph shaping &amp; positioning
+    Cursive text
+    Context-based shaping
+    Multiple combining characters
+    Context-based positioning
+    Transforming characters
+
+Structural boundaries &amp; markers
+    Grapheme, word &amp; phrase boundaries
+    Hyphens &amp; dashes
+    Bracketing information
+    Quotations
+    Abbreviations, ellipsis, &amp; repetition
+    Emphasis &amp; highlights
+    Inline notes &amp; annotations
+
+Inline layout
+    Inline text spacing
+    Bidirectional text
+
+Line &amp; paragraph layout
+    Text direction
+    Line breaking
+    Hyphenation
+    Text alignment &amp; justification
+    Counters, lists, etc.
+    Styling initials
+    Baselines &amp; inline alignment
+
+Page &amp; book layout
+    General page layout &amp; progression
+    Directional layout features
+	Grids &amp; tables
+    Notes, footnotes, etc.
+    Forms &amp; user interaction
+    Page numbering, running headers, etc.
+</pre>
+</section>
+
+
+
+ 
+	
+
+
 <section>
 <h2 id="refs">References</h2>
   <ol>
@@ -812,15 +746,12 @@ Page &amp; book layout
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/sinhala"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-20  17:57<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bsinhala%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fsinhala%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/sinhala"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-02-04  8:58<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bsinhala%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fsinhala%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"></div>
 </body>
 <script>
-var base = '/scripts/sinhala/block'
-initialiseShowNames(base, 'c');
-document.getElementById('featureTableBody').innerHTML = makeSidePanel("Sinhala")
-createtoc(3)
+initialiseSummary('/scripts/sinhala/block','si','Sinhala')
 </script>
 </html>
