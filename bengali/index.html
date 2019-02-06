@@ -108,7 +108,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->26 January, 2019<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->6 February, 2019<!-- #EndDate -->
 &bull; tags <a href="http://r12a.github.io/blog/index.php?tag=bengali" title="Show all blog posts tagged with 'bengali'">bengali</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
@@ -162,7 +162,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <section>
-    <h2 id="type">Key features</h2>
+    <h2 id="type">Distinctive features</h2>
 			<p>Bengali is an <span class="newterm">abugida</span>, and is called <span class="ex" lang="bn">বাংলা</span> <span class="trans">baɱla</span> in the Bangla language.   See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
 </p>
 <p>This is characterised by consonant characters that include an inherent vowel sound. The inherent vowel can be overridden using vowel signs appended to the character. There are also independent vowel signs to represent vowels that are not preceded by consonants. The syllable is the unit for various aspects of the behaviour of the script. </p>
@@ -198,6 +198,39 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <li><a href="/app-charuse/?language=as" target="_blank">Assamese</a> <span class="charCount">(44 letters, 16 marks, 1 punctuation, 10 numbers :   total 71)</span></li>
 </ul>
 <p>For character-specific details see <a class="linkHighlight" href="/scripts/bengali/block">Bengali character notes</a>.</p>
+</section>
+
+
+
+
+
+<section>
+<h2 id="structure">Structure</h2>
+    <p> The effective unit of the Bengali writing systems is the orthographic syllable.</p>
+<p>An orthographic syllable can be defined in one of the following sequence of code point. Lowercase letters represent combining characters. Some vowel signs may be displayed at the start of the sequence, although the code points representing them always appear after the base consonant</p>
+
+<section>
+<h3 id="consonant_syllable">Consonant-based syllables</h3>
+
+<p>[C[n]h] [C[n]h (ᶻʷʲ)] C[n] [h | (ᶻʷⁿʲ) v [v] (c)] [f]</p>
+<p>The core of a consonant-based syllable is a base consonant character, which may or may not additionally represent an inherent vowel if it stands alone. If it is followed by a vowel-sign or hasant, there is no inherent vowel. At the end of a word, there may or may not be an inherent vowel, whether or not there is a hasant.</p>
+<p>The base consonant may also be a combination of consonant code point plus nukta.</p>
+<p>The base consonant can be preceded by up to two consonant+hasant pairs (where the consonant may also be a combination of consonant+nukta), but only if those consonants form conjuncts (ie. the hasant is invisible), eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ক্ক,ম্প,ক্ষ, ন্ত্র</span> <span class="trans">k͓k,m͓p,k͓ʃ̇, n͓t͓r</span></span>. If the preceding consonants carry visible hasant symbols, those are treated as separate orthographic syllables.</p>
+<p>In some cases, a <span class="uname">RA</span> + hasant followed by <span class="uname">YA</span> may introduce a ZWJ character after the hasant, in order to specify special shaping rules for the <span class="uname">YA</span>.</p>
+<p>Note that the variable use of the hasant in Bengali means that a phonetic cluster of consonants  can constitute a larger series of orthographic syllables. For example, <span class="charExample" translate="no"><span class="ex" lang="bn">করতাল</span> <span class="trans">krtɑl</span> <span class="ipa">kɔrtɑl</span></span> has two phonetic syllables, but 3 orthographic since the <span class="trans">rt</span> combination is not combined.</p>
+<p>The base consonant can be followed by either one or two code points representing vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">কী, কি, ক&#x09C7;&#x09BE;</span></span>, or instead by a hasant, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ক্</span> <span class="trans">k͓</span></span>. Vowel code points may be followed by a nasalisation diacritic.</p>
+<p>A base consonant may be followed by ZWNJ + vowel code point where the author wants to prevent ligation of the following vowel sign, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">শ‌ু</span> <span class="trans">ʃᶻʷⁿʲu</span></span>.</p>
+<p>Unless the base consonant is followed by a hasant, the syllable may end with a final consonant repesented by khanda ta, anusvara, or visarga.</p>
+</section>
+
+
+
+<section>
+<h3 id="vowel_syllable">Vowel-based syllables</h3>
+<p>Vowel-based syllables begin with a standalone vowel, which is represented by a single independent vowel or vocalic.</p>
+<p>An independent vowel may be followed by an anusvara, visarga or candrabindu (nasalisation), eg. <span class="charExample" translate="no"><span class="ex" lang="bn">উঃ, আঁ</span> <span class="trans">ụh̽, ɑm̽</span></span>.</p>
+
+</section>
 </section>
 
 
@@ -985,7 +1018,7 @@ Page &amp; book layout
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/bengali"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-26  17:00<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bbengali%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fbengali%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/bengali"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-02-06  12:20<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bbengali%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fbengali%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 
