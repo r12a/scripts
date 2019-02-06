@@ -101,6 +101,10 @@ function makeTables (lang) {
         info = node.dataset.cols
         if (node.className.includes('bicameral')) bicameral = true
         else bicameral = false
+        if (node.className.includes('vowelcluster')) vowelcluster = true // this should be phased out
+        else vowelcluster = false
+        if (node.dataset.ignore) var ignorableChar = node.dataset.ignore.codePointAt(0)
+        else ignorableChar = ''
         if (node.dataset.notes) {
             notes = node.dataset.notes.split(',')
             }
@@ -138,6 +142,8 @@ function makeTables (lang) {
             out += '<span class="listUnum">'
             for (let z=0;z<chars[i].length;z++) {
                 var hex = chars[i].codePointAt(z)
+                if (ignorableChar && ignorableChar === hex) continue // ignore specified character
+                if (vowelcluster && hex === 45) continue // ignore hyphens - this should be phased out
                 hex = hex.toString(16).toUpperCase()
                 while (hex.length < 4) hex = '0'+hex
                 out += hex
