@@ -110,7 +110,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->29 January, 2019<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->31 January, 2019<!-- #EndDate -->
 &bull; tags <a href="http://r12a.github.io/blog/index.php?tag=arabic" title="Show all blog posts tagged with 'arabic'">arabic</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
@@ -225,7 +225,44 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
 
 
 
+<section>
+<h2 id="dir">Text direction</h2>
 
+    <p>Arabic script is written horizontally and right-to-left in the main but, as in most right-to-left scripts, numbers and embedded left-to-right script text are written left-to-right (producing 'bidirectional' text). </p>
+<figure>
+   <p dir="rtl" lang="ar" class="large"><span class="ex">9 يناير/ كانون الثاني 2018</span></p>
+    <figcaption>Arabic words are read RTL, starting  on the right, but numbers are  read left-to-right.</figcaption>
+ </figure>
+  
+  
+<section>
+<h3 id="expressions">Expressions &amp; sequences</h3>
+    <p>A sequence of numbers, for example a range separated by hyphens,  runs right to left in the Arabic language (and Thaana or Syriac scripts), whereas for Persian language text (and in   Hebrew, N’Ko or Adlam scripts) it runs left to right.</p>
+<p>In the following Arabic text, which is right-to-left overall, the numeric range is also ordered RTL, ie. it starts with 10 and ends with 12:</p>
+<figure>
+<p dir="rtl" lang="ar" class="large"><span class="ex">في 10-12 آدار</span></p>
+    <figcaption>A numeric range in Arabic language text.</figcaption>
+</figure>
+    <p>In Persian, however, the expression would run LTR, so this would be:</p>
+ <figure>
+ <p dir="rtl" lang="ar" class="large"><span class="ex">في &lrm;10-12 آدار</span></p>
+     <figcaption>A numeric range in Persian language text.</figcaption>
+ </figure>
+
+<p>The Unicode Bidirectional Algorithm automatically produces the Arabic ordering when a sequence or expression follows Arabic text. However, a sequence that appears alone on a line doesn't benefit from this, so to make the text appear correctly for Arabic  you should add <span class="codepoint"><a href="/scripts/arabic/block#char061C"><span class="uname">U+061C ARABIC LETTER MARK</span></a></span> (ALM) at the start of the line. This is effectively an invisible Arabic script character.</p>
+<figure>
+    <p dir="rtl" lang="ar" class="large"><span class="ex">&#x061C;10-01-2018</span></p>
+    <figcaption>A numeric date in Arabic language text.</figcaption>
+</figure>
+
+    <p>If you are writing in Persian, on the other hand, you don't need to add anything in this case.</p>
+<figure>
+<p dir="rtl" lang="ar" class="large"><span class="ex">10-01-2018</span></p>
+    <figcaption>The same date in Persian language text.</figcaption>
+</figure>
+      <p>However, if you are writing in Persian and the sequence or expression follows text you need to either isolate the sequence directionally or precede it with <span class="codepoint"><a href="/scripts//scripts/arabic/block/block#char200E"><span class="uname">U+200E LEFT-TO-RIGHT MARK</span></a></span> (LRM) to make it look correct (click on the example above with text to see that in action).</p>
+<p>Similar special ordering is applied to numbers in equations, such as 1 + 2 = 3, for Arabic language text.</p>
+</section></section>
   
 <section>
 <h2 id="vowels">Vowels</h2>
@@ -600,47 +637,10 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
 
 
 <section>
-<h2 id="layout">Line &amp; paragraph layout</h2>
+<h2 id="para">Line &amp; paragraph layout</h2>
 <p>This section  focuses mainly on Arabic language text, however attention is sometimes drawn to differences when the Arabic script is used for other languages.</p>
 
- <section>
-<h3 id="dir">Text direction</h3>
-    <p>Arabic script is written horizontally and right-to-left in the main, but as with most RTL scripts, numbers and embedded LTR script text are written left-to-right (producing 'bidirectional' text). </p>
-<figure>
-   <p dir="rtl" lang="ar" class="large"><span class="ex">9 يناير/ كانون الثاني 2018</span></p>
-    <figcaption>Arabic words are read RTL, starting  on the right, but numbers are  read left-to-right.</figcaption>
- </figure>
-</section>
-  
-  
-<section>
-<h3 id="expressions">Expressions &amp; sequences</h3>
-    <p>A sequence of numbers, for example a range separated by hyphens,  runs right to left in the Arabic language (and Thaana or Syriac scripts), whereas for Persian language text (and in   Hebrew, N’Ko or Adlam scripts) it runs left to right.</p>
-<p>In the following Arabic text, which is RTL overall, the numeric range is also ordered RTL, ie. it starts with 10 and ends with 12:</p>
-<figure>
-<p dir="rtl" lang="ar" class="large"><span class="ex">في 10-12 آدار</span></p>
-    <figcaption>A numeric range in Arabic language text.</figcaption>
-</figure>
-    <p>In Persian, however, the expression would run LTR, so this would be:</p>
- <figure>
- <p dir="rtl" lang="ar" class="large"><span class="ex">في &lrm;10-12 آدار</span></p>
-     <figcaption>A numeric range in Persian language text.</figcaption>
- </figure>
 
-<p>The Unicode Bidirectional Algorithm automatically produces the Arabic ordering when a sequence or expression follows Arabic text. However, a sequence that appears alone on a line doesn't benefit from this, so to make the text appear correctly for Arabic  you should add <span class="codepoint"><a href="/scripts/arabic/block#char061C"><span class="uname">U+061C ARABIC LETTER MARK</span></a></span> (ALM) at the start of the line. This is effectively an invisible Arabic script character.</p>
-<figure>
-    <p dir="rtl" lang="ar" class="large"><span class="ex">&#x061C;10-01-2018</span></p>
-    <figcaption>A numeric date in Arabic language text.</figcaption>
-</figure>
-
-    <p>If you are writing in Persian, on the other hand, you don't need to add anything in this case.</p>
-<figure>
-<p dir="rtl" lang="ar" class="large"><span class="ex">10-01-2018</span></p>
-    <figcaption>The same date in Persian language text.</figcaption>
-</figure>
-      <p>However, if you are writing in Persian and the sequence or expression follows text you need to either isolate the sequence directionally or precede it with <span class="codepoint"><a href="/scripts//scripts/arabic/block/block#char200E"><span class="uname">U+200E LEFT-TO-RIGHT MARK</span></a></span> (LRM) to make it look correct (click on the example above with text to see that in action).</p>
-<p>Similar special ordering is applied to numbers in equations, such as 1 + 2 = 3, for Arabic language text.</p>
-</section>
 
 
 
@@ -744,7 +744,7 @@ Page & book layout
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/arabic"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-29  14:26<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Barabic%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Farabic%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/arabic"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-31  6:47<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Barabic%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Farabic%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"></div>
