@@ -94,13 +94,17 @@ function makeTables (lang) {
 
     for (let t=0;t<tables.length;t++) {
         node = tables[t]
-        console.log(node)
+        bicameral = false
+        showFirst = false
+       //console.log(node)
 
         //chars = node.dataset.chars.split('␣')
         chars = node.textContent.split('␣')
         info = node.dataset.cols
         if (node.className.includes('bicameral')) bicameral = true
         else bicameral = false
+        if (node.dataset.select && node.dataset.select == 'last') bicameral = true
+        else if (node.dataset.select) showFirst = true
         if (node.className.includes('vowelcluster')) vowelcluster = true // this should be phased out
         else vowelcluster = false
         if (node.dataset.ignore) var ignorableChar = node.dataset.ignore.codePointAt(0)
@@ -128,6 +132,7 @@ function makeTables (lang) {
 
         for (let i=0;i<chars.length;i++) {
             if (bicameral) char = chars[i][chars[i].length-1]
+            else if (showFirst) char = chars[i][0]
             else char = chars[i]
             
             out += '<div class="listPair"><span class="listItem" lang="'+lang+'">'+chars[i]+'</span>'
