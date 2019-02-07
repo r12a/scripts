@@ -113,6 +113,10 @@ function makeTables (lang) {
             notes = node.dataset.notes.split(',')
             }
         else notes = []
+        if (node.dataset.ipa) {
+            ipa = node.dataset.ipa.split(',')
+            }
+        else ipa = []
         if (node.dataset.links) {
             links = node.dataset.links.split(',')
             }
@@ -161,6 +165,11 @@ function makeTables (lang) {
                 else ch = '&nbsp;'
                 if (ch === '&nbsp;') out += '<span>&nbsp;</span>'
                 else out += '<span class="listIPA">'+ch+'</span>'
+                }
+
+            if (ipa.length > 0) {
+                if (ipa[i]) out += '<span class="listIPA">'+ipa[i]+'</span>'
+                else out += '<span>&nbsp;</span>'
                 }
 
             if (info.includes('trans')) {
