@@ -30,6 +30,7 @@
 	text-align: start;
     line-height: 2;
 	}
+@media print { #freeText { font-size: 18px; } }
 [lang=tmp] { font-family: Noto Serif Template WF, 'Template WF', serif; font-size: 140%; }
 .large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }	
 </style>
@@ -44,7 +45,7 @@
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
 <script src="../../shared/code/getLinks.js"></script>
-<script src="/scripts/linkdata/linkdb.js"></script>
+<script src="../linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
 
 <script src="../../shared/fontlists/template.js"> </script>
@@ -113,7 +114,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
   
   <details id="scriptLinks">
-  <summary>More links for the Template script.</summary>
+  <summary class="instructions">More links for the Template script.</summary>
   <div id="linklist"></div>
   <script>document.getElementById('linklist').innerHTML = getData('Bali')</script>
   </details>
@@ -132,14 +133,6 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </section>
 
 
-
-  <div id="features">
-  <table>
-      <tbody id="featureTableBody">
-     </tbody>
-    </table>
-    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
-   </div>
 
 
  
@@ -160,21 +153,23 @@ Though everyday use of the script has largely been supplanted by the Latin alpha
 
 
 
+
+  <div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+    </table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+   </div>
+
+
+
+
 <section>
-    <h2><a href="type">Distinctive features</a></h2>
+    <h2 id="type">Distinctive features</h2>
 <p>The script  is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>. Consonants carry an inherent vowel <span class="ipa">a</span>, although that is pronounced <span class="ipa">ə</span> at the end of a word.  See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.</p>
   <p>Text runs left-to-right, and words are not separated by spaces.</p>
  </section>
-  
-  
-  
-<div id="showTranscriptions">
-<div>In yellow boxes, show:</div>
-<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
-<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
-<div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
-</div>
 
 
 
@@ -193,14 +188,39 @@ Though everyday use of the script has largely been supplanted by the Latin alpha
 </ul>
 <p>For character-specific details see the <a class="linkHighlight" href="/scripts/template/block">Template character notes</a>.</p>
 </section>
+  
+  
 
 
+
+<div id="showTranscriptions">
+<div>In yellow boxes, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+</div>
+
+
+
+
+
+
+  <section>
+    <h2 id="direction">Text direction</h2>
+    <p>Template text is written horizontally, left to right.</p>
+  </section>
+   
+    
+      
 
 
 
 <section> 
 <h2 id="vowelsummary">Vowels</h2>
- 
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᬅ␣ᬆ</figure>
+
 <section>
 <h3 id="inherent">Inherent vowel</h3>
 
@@ -230,21 +250,22 @@ Though everyday use of the script has largely been supplanted by the Latin alpha
 <section>
 <h3 id="vowelsigns">Vowel-signs</h3>
 
-<p>To produce a different vowel than the inherent one, Template attaches  vowel signs to  the preceding consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="tmp">ᬓᬶ</span> <span class="ipa">ki</span></span>.</p>
-<p>Template vowel signs are all combining characters. In principle a single character is used per base consonant, but 3 vowel signs decompose to more than one character.</p>
+<p>To produce a different vowel than the inherent one, Template attaches  vowel-signs to  the preceding consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="tmp">ᬓᬶ</span> <span class="ipa">ki</span></span>.</p>
+<p>Characters that produce vowel signs are all combining characters. In principle a single character is used per base consonant, but 3 vowel signs decompose to more than one character.</p>
 <p>All vowel-signs are typed and stored <em>after</em> the base consonant, whether or not they precede it when displayed. The font takes care of the glyph positioning.</p>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ᬵ␣ᬶ␣ᬷ␣ᬸ␣ᬹ␣ᬾ␣ᬿ␣ᭀ␣ᭁ␣ᭂ␣ᭃ</figure>
-<p>The majority of the vowel-signs are <a class="termref" href="../glossary/#spacingmark">spacing marks</a>, meaning that they consume horizontal space when added to a base consonant.</p>
-<p>Vowel-sign positions are as follows:</p>
-<ul>
-<li>1 prescript, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਕਿ</span> <span class="trans">kɪ</span></span></li>
-<li>2 postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਕੀ</span> <span class="trans">kī</span></span></li>
-<li>4 superscript, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਕੇ</span> <span class="trans">ke</span></span></li>
-<li>2 subscript, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਕੁ</span> <span class="trans">kʊ</span></span></li>
-<li>2 pre+postscript</li>
-<li>1 super+postscript</li>
-</ul>
+<p>The majority of the vowel-signs are spacing marks, meaning that they consume horizontal space when added to a base consonant.</p>
 <p>To represent the sound <span class="ipa">rə</span>, Template uses the <a href="#vocalics">vocalic letter</a>. The sequence <span class="codepoint"><span lang="tmp">&#x1B2D;</span> <a href="/scripts/template/block#char1B2D">[<span class="uname">U+1B2D BALINESE LETTER RA</span>]</a></span> + <span class="codepoint"><span lang="tmp">&#x1B42;</span> <a href="/scripts/template/block#char1B42">[<span class="uname">U+1B42 BALINESE VOWEL SIGN PEPET​</span>]</a></span> is <em>not</em> used.</p>
+<p>When a vowel-sign follows a subjoined consonant it appears above the stack.</p>
+    <figure>
+    <p lang="jv" class="large">ꦏ<span class="ex">ꦤ꧀ꦛꦶ</span></p>
+    <figcaption>The word <span class="trans">kanthi</span>, where the <span class="trans">i</span> appears above the <span class="trans">n</span>.</figcaption>
+    </figure>
+    <p>It is perhaps worth noting also, that a two-part vowel associated with a consonant cluster involving a conjoined (rather than subjoined) second consonant appears before and after the whole cluster.</p>
+    <figure>
+    <p lang="jv" class="large">ꦩꦔ<span class="ex">ꦤ꧀ꦱꦺꦴ</span>ꦠꦺꦴ</p>
+    <figcaption>The <span class="trans">o</span> surrounds the <span class="trans">ns</span> in <span class="trans">mangan soto</span>.</figcaption>
+    </figure>
 <p>See also <a class="sectionref">vocalics</a>.</p>
 </section>
 
@@ -269,13 +290,31 @@ Though everyday use of the script has largely been supplanted by the Latin alpha
 
  
 <section>
-<h3 id="independentvowels">Syllable-initial vowels</h3>
-<p class="explanatoryintro">Syllable-initial vowels appear at the beginning of a word, or after another vowel in the middle of a word. Unlike the vowel-signs, the set contains a character to represent the inherent vowel sound.</p>
-<p>Template represents syllable-initial vowels using a set of independent vowel letters. The set includes a character to represent the inherent vowel sound.</p>
+<h3 id="placement">Vowel-sign placement</h3>
+
+<p>The following list shows where vowel-signs are positioned around a base consonant to produce vowels, and how many instances of that pattern there are. The figure after the + sign represents combinations of Unicode characters,</p>
+<ul>
+<li>1 prescript, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਕਿ</span> <span class="trans">kɪ</span></span></li>
+<li>2 postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਕੀ</span> <span class="trans">kī</span></span></li>
+<li>4 superscript, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਕੇ</span> <span class="trans">ke</span></span></li>
+<li>2 subscript, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਕੁ</span> <span class="trans">kʊ</span></span></li>
+<li>2 pre+postscript</li>
+<li>1 super+postscript</li>
+</ul>
+</section>
+
+
+
+
+ 
+<section>
+<h3 id="independentvowels">Standalone vowels</h3>
+<p class="explanatoryintro">Standalone vowels are not preceded by a consonant, and may appear at the beginning or in the middle of a word.</p>
+<p>Template represents standalone vowels using a set of independent vowel letters. The set includes a character to represent the inherent vowel sound.</p>
 <p>ALT</p>
 
 
-<p>In the middle of a word, Template represents vowels that begin a syllable by using a vowel-sign after <span class="codepoint" translate="no"><span lang="tmp">&#x1B33;</span> [<a href="template#char1B33"><span class="uname">U+1B33 BALINESE LETTER HA</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tmp">ᬤᬳᬾᬭᬄ</span> <span class="trans">dherh̽ (daerah)</span> <span class="meaning">development</span></span>.</p>
+<p>In the middle of a word, Template represents standalone vowels  using a vowel-sign after <span class="codepoint" translate="no"><span lang="tmp">&#x1B33;</span> [<a href="template#char1B33"><span class="uname">U+1B33 BALINESE LETTER HA</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tmp">ᬤᬳᬾᬭᬄ</span> <span class="trans">dherh̽ (daerah)</span> <span class="meaning">development</span></span>.</p>
 
 <p>At the beginning of a word, most  vowels are represented using one of the 10 <a class="termref" href="../glossary/#independentvowel">independent vowel</a> characters.</p>
 
@@ -284,14 +323,14 @@ Though everyday use of the script has largely been supplanted by the Latin alpha
 	<p>The vowels  <span class="codepoint"><span lang="tmp">&#x25CC;&#x1B42;</span> <a href="/scripts/template/block#char1B42">[<span class="uname">U+1B42 BALINESE VOWEL SIGN PEPET​</span>]</a></span> and <span class="codepoint"><span lang="tmp">&#x25CC;&#x1B43;</span> <a href="/scripts/template/block#char1B43">[<span class="uname">U+1B43 BALINESE VOWEL SIGN PEPET TEDUNG​</span>]</a></span>  don't have an independent form, and have to be used alongside <span class="codepoint"><span lang="tmp">&#x1B33;</span> <a href="/scripts/template/block#char1B33">[<span class="uname">U+1B33 BALINESE LETTER HA</span>]</a></span> at the beginning of a word.</p>
 			<p> In Sasak, independent vowel  <span class="codepoint"><span lang="tmp">&#x1B05;</span> <a href="/scripts/template/block#char1B05">[<span class="uname">U+1B05 BALINESE LETTER AKARA</span>]</a></span>  can be  followed by an explicit  <span class="codepoint"><span lang="tmp">&#x25CC;&#x1B44;</span> <a href="/scripts/template/block#char1B44">[<span class="uname">U+1B44 BALINESE ADEG ADEG​</span>]</a></span>  in word- or syllable-final position, where it indicates the glottal stop, eg. <span class="charExample" translate="no"><span class="ex" lang="tmp">ᬳᬫᬅ᭄</span> <span class="trans">hmạ͓</span> <span class="ipa">amaʔ</span></span>; other consonants can also be subjoined to it.</p>
 </section>
-
+</section>
 
 
 
 <section>
-<h3 id="vocalics">Vocalics</h3>
+<h2 id="vocalics">Vocalics</h2>
 
-<p><a class="termref" href="../glossary/#vocalic">Vocalics</a> are special combinations of consonant+vowel, derived from Sanskrit.</p>
+<p class="explanatoryintro">Vocalics are letters derived from Sanskrit that generally behave like vowels, but represent r/l followed by a vowel. They are often available both as vowel-signs and independent vowel letters.</p>
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ᬋ␣ᬌ␣ᬍ␣ᬎ␣ᬺ␣ᬻ␣ᬼ␣ᬽ</figure>
 
@@ -300,7 +339,6 @@ Though everyday use of the script has largely been supplanted by the Latin alpha
 <p>As a second component in a consonant cluster, the vocalic <span class="uname">ra repa</span> has a postfixed form and a subjoined form. </p>
 <p>The postfixed form <img src="/c/Template/examples/rarepa-postfixed.png" class="ex" alt="◌᭄ᬭᭂ" title="◌᭄ᬭᭂ"/> is seen where the independent (consonant) form of <em>ra repa</em> follows a syllable which ends in a consonant, The sequence of Unicode characters to be used for this is <span class="codepoint" translate="no">C + <span lang="tmp">&#x1B44;</span> + <span lang="tmp">&#x1B0B;</span> [ consonant + <a href="template#char1B44"><span class="uname">U+1B44 BALINESE ADEG ADEG</span></a> + <a href="template#char1B0B"><span class="uname">U+1B0B BALINESE LETTER RA REPA</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tmp">ᬧᬓ᭄ᬋᬋᬄ</span> <span class="trans">pk͓r̥̣r̥̣h̽ (Pak Rěrěh)</span> <span class="meaning">Mr Rereh</span></span>.</p>
 		  <p>The subjoined form <img src="/c/Template/examples/rarepa-subjoined.png" class="ex" alt="◌ᬺ" title="◌ᬺ"/> is used to represent the  dependent <span class="uname">ra repa</span> after  a syllable-initial consonant. The sequence of characters to be used here is <span class="codepoint" translate="no">C + <span lang="tmp">&#x1B3A;</span> [ consonant + <a href="template#char1B3A"><span class="uname">U+1B3A BALINESE VOWEL SIGN RA REPA</span></a>]</span>, eg.<span class="charExample" translate="no"><span class="ex" lang="tmp"> ᬓᬺᬰ᭄ᬡ</span> <span class="trans">kr̥ŝ͓n̂ (Krěsna)</span> <span class="meaning">Krishna</span></span> .</p>
-</section>
 </section>
 
 
@@ -423,7 +461,6 @@ Though everyday use of the script has largely been supplanted by the Latin alpha
 <li>A syllable-final consonant diacritic followed by a regular consonant.</li>
 </ol>
 <p>In Unicode, the stacking and conjoining behaviour is achieved by adding <span class="codepoint"><span lang="tmp">&#x1B44;</span> <a href="/scripts/template/block#char1B44">[<span class="uname">U+1B44 BALINESE ADEG ADEG​</span>]</a></span>  between the consonants. The font hides the glyph automatically.</p><p>Because there are no spaces between words, consonants at the end of one word and the beginning of the next also behave like other consonant clusters. When this leads to stacks or conjoined sequences, the joined words are not typically split at line ends.</p>
-<p>&nbsp;</p>
 
 
 		<section>
@@ -490,7 +527,7 @@ Though everyday use of the script has largely been supplanted by the Latin alpha
 
 
 <section>
-<h2 id="cchar">Diacritics</h2>
+<h2 id="cchar">Combining marks</h2>
     <p>In addition to the <a href="#vowelsigns">vowel-signs</a>, <a href="vocalics">vocalics</a>, and <a href="finals">final consonants</a> already mentioned, the Devanagari block contains the following diacritics, which are also introduced in the following sections, respectively, <a class="sectionref">extension</a>, and <a class="sectionref">suppression</a>.</p>
 
 <figure class="characterBox auto"  data-cols="">᬴␣᭄</figure>
@@ -560,7 +597,9 @@ Though everyday use of the script has largely been supplanted by the Latin alpha
   
 <section>
 <h3 id="word">Word boundaries</h3>
-    <p>Words are not separated by spaces, and in fact some word boundaries occur between stacked consonants. This means that segmentation for line-breaking, etc. uses orthographic syllables as a unit, where orthographic means </p>
+ <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+
+<p>Words are not separated by spaces, and in fact some word boundaries occur between stacked consonants. This means that segmentation for line-breaking, etc. uses orthographic syllables as a unit, where orthographic means </p>
 </section>
 
 
@@ -584,15 +623,6 @@ Though everyday use of the script has largely been supplanted by the Latin alpha
    
       
   <section>
-    <h3 id="direction">Text direction</h3>
-    <p>Template text is written horizontally, left to right.</p>
-  </section>
-   
-    
-      
-
-
-  <section>
     <h3 id="linebreak">Line breaking &amp; hyphenation</h3>
     <p> Common practice is to break the sentence at any point when it reaches the end of a line, except that no line breaks should be allowed within syllable boundaries and no line breaks are allowed just before a colon, comma or full stop.</p>
     <p>In lontar texts where a word must be broken at the end of a line (always after a full syllable), the sign <span class="codepoint"><span lang="tmp">&#x1B60;</span> <a href="/scripts/template/block#char1B60">[<span class="uname">U+1B60 BALINESE PAMENENG</span>]</a></span>  is inserted. This sign is not used as a word-joining hyphen; it is used only in linebreaking.</p>
@@ -604,6 +634,30 @@ Though everyday use of the script has largely been supplanted by the Latin alpha
  <section>
     <h3 id="justification">Text alignment &amp; justification</h3>
     <p>According to <a href="http://www.babadbali.com/aksarabali/alphabet-c.htm#_Toc35514825">Sudewa</a>, full justification is not a feature of Template text in traditional palm-leaf manuscripts, and only left, or occasionally centred or right alignment is relevant.</p>
+</section>
+
+
+
+
+<section>
+  <h3 id="lists">Counter styles</h3>
+  
+<p>Khmer uses two counter styles, according to the document <a href="https://w3c.github.io/predefined-counter-styles/#tamil-styles">Ready-made Counter Styles</a>, one numeric and the other alphabetic.</p>
+<p>The numeric style uses the Khmer digits: '០' '១' '២' '៣' '៤' '៥' '៦' '៧' '៨' '៩'.</p>
+<figure>
+<p class="large">1&nbsp;⇨&nbsp;<span class="ex" lang="km">១</span> 2&nbsp;⇨&nbsp;<span class="ex" lang="km">២</span> 3&nbsp;⇨&nbsp;<span class="ex" lang="km">៣</span> 4&nbsp;⇨&nbsp;<span class="ex" lang="km">៤</span> 11&nbsp;⇨&nbsp;<span class="ex" lang="km">១១</span> 22&nbsp;⇨&nbsp;<span class="ex" lang="km">២២</span> 33&nbsp;⇨&nbsp;<span class="ex" lang="km">៣៣</span> 44&nbsp;⇨&nbsp;<span class="ex" lang="km">៤៤</span> 111&nbsp;⇨&nbsp;<span class="ex" lang="km">១១១</span> 2222&nbsp;⇨&nbsp;<span class="ex" lang="km">២២២</span></p>
+<figcaption>Numbers produced by the numeric counter style<span class="trans"></span>.</figcaption>
+</figure>
+
+
+<p>The alphabetic counter style uses the following letters: 'ក' 'ខ' 'គ' 'ឃ' 'ង' 'ច' 'ឆ' 'ជ' 'ឈ' 'ញ' 'ដ' 'ឋ' 'ឌ'
+'ឍ' 'ណ' 'ត' 'ថ' 'ទ' 'ធ' 'ន' 'ប' 'ផ' 'ព' 'ភ' 'ម' 'យ' 'រ' 'ល' 'វ'
+'ស' 'ហ' 'ឡ' 'អ'.</p>
+<figure>
+<p class="large">1&nbsp;⇨&nbsp;<span class="ex" lang="km">ក</span> 2&nbsp;⇨&nbsp;<span class="ex" lang="km">ខ</span> 3&nbsp;⇨&nbsp;<span class="ex" lang="km">គ</span> 4&nbsp;⇨&nbsp;<span class="ex" lang="km">ឃ</span> 11&nbsp;⇨&nbsp;<span class="ex" lang="km">ដ</span> 22&nbsp;⇨&nbsp;<span class="ex" lang="km">ផ</span> 33&nbsp;⇨&nbsp;<span class="ex" lang="km">អ</span> 44&nbsp;⇨&nbsp;<span class="ex" lang="km">កដ</span> 111&nbsp;⇨&nbsp;<span class="ex" lang="km">គឋ</span> 2222&nbsp;⇨&nbsp;<span class="ex" lang="km">ចភ</span></p>
+<figcaption>Numbers produced by the alphabetic counter style<span class="trans"></span>.</figcaption>
+</figure>
+<p>You can experiment with these styles using the <a href="../../r12a.github.io/apps/counterconverter/apps/counterconverter/">Counter styles converter</a>.</p>
 </section>
 </section>
  
@@ -676,7 +730,7 @@ Page &amp; book layout
 
 
 
-
+ 
 	
 
 
@@ -697,7 +751,7 @@ Page &amp; book layout
 </section>
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/template"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-30  6:52<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Btemplate%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ftemplate%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/template"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-02-08  7:02<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Btemplate%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ftemplate%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"></div>
