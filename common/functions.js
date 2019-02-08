@@ -184,6 +184,12 @@ function makeTables (lang) {
                 out += '<span class="listTransc">'+ch+'</span>'
                 }
 
+            if (info.includes('trans2')) {
+                if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.transcription2]) ch = window.spreadsheetRows[char][cols.transcription2]
+                else ch = '&nbsp;'
+                out += '<span class="listTrans2">'+ch+'</span>'
+                }
+
             if (info.includes('meaning')) {
                 if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.meaning]) ch = window.spreadsheetRows[char][cols.meaning]
                 else ch = '&nbsp;'
