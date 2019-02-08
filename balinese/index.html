@@ -7,7 +7,7 @@
 <meta name="description" content="Summary of the Balinese script."/>
 <link rel="stylesheet" href="../../shared/style/docs.css" />
 <link rel="stylesheet" href="../common/local.css" />
-<link rel="stylesheet" href="../style/print.css"/>
+<!--link rel="stylesheet" href="../style/print.css"/-->
 <style>
 @font-face {
     font-family: 'Aksara Bali WF';
@@ -26,11 +26,12 @@
 	}
 #freeText {
 	font-size: 28px;
-	font-family: Noto Serif Balinese WF, serif;
+	font-family: "Noto Serif Balinese", "Noto Serif Balinese WF", serif;
 	text-align: start;
     line-height: 2;
 	}
-[lang=ban] { font-family: Noto Serif Balinese WF, 'Aksara Bali WF', serif; font-size: 140%; }
+@media print { #freeText { font-size: 18px; } }
+[lang=ban] { font-family: "Noto Serif Balinese", "Noto Serif Balinese WF", 'Aksara Bali WF', serif; font-size: 140%; }
 .large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }	
 </style>
 
@@ -113,7 +114,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
   
   <details id="scriptLinks">
-  <summary>More links for the Balinese script.</summary>
+  <summary class="instructions">More links for the Balinese script.</summary>
   <div id="linklist"></div>
   <script>document.getElementById('linklist').innerHTML = getData('Bali')</script>
   </details>
@@ -133,17 +134,6 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-  <div id="features">
-  <table>
-      <tbody id="featureTableBody">
-     </tbody>
-    </table>
-    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
-   </div>
-
-
- 
-
 <section>
     <h2 id="history">Usage &amp; history</h2>
     <p>From <a href="http://scriptsource.org/scr/Bali">Scriptsource</a>: </p>
@@ -160,6 +150,17 @@ Though everyday use of the script has largely been supplanted by the Latin alpha
 
 
 
+  <div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+    </table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+   </div>
+
+
+ 
+
 <section>
     <h2><a href="type">Distinctive features</a></h2>
 <p>The script  is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>. Consonants carry an inherent vowel <span class="ipa">a</span>, although that is pronounced <span class="ipa">ə</span> at the end of a word.  See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.</p>
@@ -168,17 +169,6 @@ Though everyday use of the script has largely been supplanted by the Latin alpha
   
   
   
-<div id="showTranscriptions">
-<div>In yellow boxes, show:</div>
-<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
-<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
-<div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
-</div>
-
-
-
-
 
  <section>
 <h2 id="chars">Character lists</h2>
@@ -196,6 +186,26 @@ Though everyday use of the script has largely been supplanted by the Latin alpha
 
 
 
+
+
+<div id="showTranscriptions">
+<div>In yellow boxes, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+</div>
+
+
+
+
+  <section>
+    <h2 id="direction">Text direction</h2>
+    <p>Balinese text is written horizontally, left to right.</p>
+  </section>
+   
+    
+      
 
 
 <section> 
@@ -536,15 +546,6 @@ Though everyday use of the script has largely been supplanted by the Latin alpha
    
       
   <section>
-    <h3 id="direction">Text direction</h3>
-    <p>Balinese text is written horizontally, left to right.</p>
-  </section>
-   
-    
-      
-
-
-  <section>
     <h3 id="linebreak">Line breaking &amp; hyphenation</h3>
     <p> Common practice is to break the sentence at any point when it reaches the end of a line, except that no line breaks should be allowed within syllable boundaries and no line breaks are allowed just before a colon, comma or full stop.</p>
     <p>In lontar texts where a word must be broken at the end of a line (always after a full syllable), the sign <span class="codepoint"><span lang="ban">&#x1B60;</span> <a href="/scripts/balinese/block#char1B60">[<span class="uname">U+1B60 BALINESE PAMENENG</span>]</a></span>  is inserted. This sign is not used as a word-joining hyphen; it is used only in linebreaking.</p>
@@ -649,7 +650,7 @@ Page &amp; book layout
 </section>
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/balinese"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-26  15:58<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bbalinese%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fbalinese%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/balinese"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-02-03  11:37<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bbalinese%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fbalinese%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"></div>
