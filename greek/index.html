@@ -14,21 +14,22 @@
 	font-family: "Times New Roman", serif;
     line-height: 1.2;
 	}
+@media print { #freeText { font-size: 18px; } }
 [lang=el] { font-family: "Times New Roman", 'Gentium', serif; font-size: 130%; }
 .large .ex { font-size: 400%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
 </style>
 
+<script src="db.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2019.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
-<script src="../common/block-functions.js"></script>
 <script src="../../shared/code/getLinks.js"></script>
-<script src="../../scripts/linkdata/linkdb.js"></script>
+<script src="../linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
 
 <script src="../../shared/fontlists/greek.js"> </script>
@@ -89,7 +90,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->04-Jan-2019<!-- #EndDate -->
+  <!-- #BeginDate format:En2 -->10-Feb-2019<!-- #EndDate -->
 &bull; tags <a href="http://rishida.net/blog/index.php?tag=greek" title="Show all blog posts tagged with 'greek'">greek</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
@@ -107,8 +108,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section id="samples">
-  <h2 href="#sample">Sample (Greek)</h2>
+<section>
+  <h2 id="sample">Sample (Greek)</h2>
   
   <div id="freeText" dir="ltr" lang="el">
   <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">ΑΡΘΡΟ 1 Όλοι οι άνθρωποι γεννιούνται ελεύθεροι και ίσοι στην αξιοπρέπεια και τα δικαιώματα. Είναι προικισμένοι με λογική και συνείδηση, και οφείλουν να συμπεριφέρονται μεταξύ τους με πνεύμα αδελφοσύνης.</p>
@@ -117,19 +118,11 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </section>
 
 
-  <div id="features">
-  <table>
-      <tbody id="featureTableBody">
-     </tbody>
-    </table>
-    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
-   </div>
 
 
 
-
-<section id="history">
-    <h2><a href="#history">Usage &amp; history</a></h2>
+<section>
+    <h2 id="history">Usage &amp; history</h2>
     <p>From <a href="http://scriptsource.org/scr/Grek">Scriptsource</a>: </p>
     <blockquote>
 <p>The Greek script was the first documented writing system to represent consonants and vowels with distinct symbols, making it the oldest true alphabet. It has been used since the 8th century BC for writing the Greek language, and select letters are also currently used in writing mathematic and scientific concepts such as π (pi) and Ω (Ohm). Some symbols have been incorporated into the International Phonetic Alphabet. The script has also been used for writing a number of minority languages, including Urum, Albanian Tosk, and Balkan Gagauz Turkish.</p>
@@ -142,8 +135,19 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-  <section id="type">
-    <h2><a href="type">Key features</a></h2>
+<div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+    </table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+   </div>
+
+
+
+
+  <section>
+    <h2 id="type">Key features</h2>
     <p>Greek is an <span class="newterm">alphabet</span>. Letters typically represent a consonant or vowel sound.  See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
 </p>
     <p>Text is  written horizontally, left to right, and the visual forms of letters don't usually interact. The script is bicameral.</p>
@@ -152,8 +156,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
- <section id="chars" class="note">
-<h2>Character lists</h2>
+ <section>
+<h2 id="chars">Character lists</h2>
      <p>The Greek script characters in Unicode 10.0 are spread across 2 blocks, plus one extra for Ancient Greek numbers (not counting the phonetic blocks nor any of the combining character blocks):</p>
     <ul>
       <li><a href="/uniview/?block=greek_and_coptic">Greek and Coptic</a> <span class="charCount">(135 characters)</span></li>
@@ -170,9 +174,82 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
+
+
+
+<div id="showTranscriptions">
+<div>In yellow boxes, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<!--div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div-->
+</div>
+
+
+
+
+
+
+<section>
+    <h2 id="direction">Text direction</h2>
+    <p>Template text is written horizontally, left to right.</p>
+  </section>
+   
+    
+      
+
+
+
+
+<section>
+    <h2 id="vowels">Vowels</h2>
+
+<p>Vowels used in modern Greek.</p>
+<figure class="characterBox auto" data-cols="ipa,trans" data-select="last">Άά␣Έέ␣Ήή␣Ίί␣Όό␣Ύύ␣Ώώ␣Αα␣Εε␣Ιι␣Οο␣Υυ␣Ωω␣Ϊϊ␣Ϋϋ␣Ἐἐ␣ΰ␣ΐ</figure>
+
+</section>
+   
+    
+      
+
+
+
+
+<section>
+    <h2 id="consonants">Consonants</h2>
+
+<p>Consonants used in modern Greek.</p>
+<figure class="characterBox auto" data-cols="ipa,trans" data-select="last">Ββ␣Γγ␣Δδ␣Ζζ␣Ηη␣Θθ␣Κκ␣Λλ␣Μμ␣Νν␣Ξξ␣Ππ␣Ρρ␣Σςσ␣Ττ␣Φφ␣Χχ␣Ψψ</figure>
+
+<p><span class="codepoint" translate="no"><span lang="el">&#x03C2;</span> [<a href="/scripts/greek/block#char03C2"><span class="uname">U+03C2 GREEK SMALL LETTER FINAL SIGMA</span></a>]</span> is a word-final form of <span class="codepoint" translate="no"><span lang="el">&#x03C3;</span> [<a href="/scripts/greek/block#char03C3"><span class="uname">U+03C3 GREEK SMALL LETTER SIGMA</span></a>]</span>.  Due to legacy implementations, Unicode has a separate code point for this glyph (see <a class="secref">gsub</a>).</p>
+</section>
+      
+      
+
+
+
+
+<section>
+    <h2 id="punctuation">Punctuation</h2>
+
+<p>The Unicode Greek block contains only 2 combining marks, but it is not recommended to use either.</p>
+
+<figure class="characterBox auto" data-cols="trans" data-select="last">&#x037E;␣&#x0387;</figure>
+
+<p><span class="codepoint" translate="no"><span lang="el">&#x037E;</span> [<a href="/scripts/greek/block#char037E"><span class="uname">U+037E GREEK QUESTION MARK</span></a>]</span> was originally intended to represent the Greek question mark, but Unicode recommends using <span class="codepoint" translate="no"><span lang="el">&#x003B;</span> [<a href="/scripts/greek/block#char003B"><span class="uname">U+003B SEMICOLON</span></a>]</span> instead.  During normalization this character is changed to the ASCII semicolon.</p>
+<p>The other punctuation mark in the Greek block is <span class="codepoint" translate="no"><span lang="el">&#x0387;</span> [<a href="/scripts/greek/block#char0387"><span class="uname">U+0387 GREEK ANO TELEIA</span></a>]</span>. During normalisation, this is changed to <span class="codepoint" translate="no"><span lang="el">&#x00B7;</span> [<a href="/scripts/greek/block#char00B7"><span class="uname">U+00B7 MIDDLE DOT</span></a>]</span>.</p>
+
+<p>See <a class="secref">phrase</a>.</p>
+</section>
   
-<section id="gsub" class="note">
-<h2><a href="#gsub">Context-based glyph changes</a></h2>
+    
+      
+
+
+
+
+<section>
+<h2 id="gsub">Glyph shaping &amp; positioning</h2>
   
     <p>The letter sigma in Greek varies in shape, depending on whether it appears in the middle or at the end of a word. </p>
     <figure>
@@ -181,41 +258,114 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
     </figure>
     <p>However, this shaping is not done by rendering rules. There are two separate code points in Unicode for the lowercase <span class="codepoint"><span lang="el">&#x03C3;</span> <a href="/scripts/arabic/block#char03C3">[<span class="uname">U+03C3 GREEK SMALL LETTER SIGMA</span>]</a></span> and <span class="codepoint"><span lang="el">&#x03C2;</span> <a href="/scripts/arabic/block#char03C2">[<span class="uname">U+03C2 GREEK SMALL LETTER SIGMA</span>]</a></span>, and separate keys on the standard keyboard.  </p>
   </section>
-<section id="layout" class="note">
- <h2><a href="#layout">Text layout</a></h2>
+ 
+  
+  
+  
+  
+  
+<section>
+<h2 id="layout">Structural boundaries &amp; markers</h2>
 
 
-<section id="delimiters">
-<h3><a href="#delimiters">Text delimiters</a></h3>
-    <p>Words are separated by spaces.</p>
-  <p>Greek uses standard Latin punctuation.</p>
+<section>
+<h3 id="words">Word boundaries</h3>
+    <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+<p>Words are separated by spaces.</p>
 </section>
 
 
 
-  <section id="justify" class="note">
-    <h3><a href="#justify">Justification</a></h3>
+
+
+<section>
+<h3 id="phrase">Phrase boundaries</h3>
+<p>Greek uses standard Latin punctuation, except that, instead of a question mark, Greek uses a semi-colon instead. </p>
+<p>There is a Greek question mark character in the Unicode Greek &amp; Coptic block, but the Unicode Standard recommends use of the ASCII semi-colon instead.</p>
+</section>
+</section>
+  
+  
+  
+  
+  
+  
+<section>
+<h2 id="para">Line &amp; paragraph layout</h2>
+
+<section>
+<h3 id="justify">Text alignment &amp; justification</h3>
     <p>Justification is done, principally, by adjusting the space between words.</p>
     <p><em>Use the control below to see how your browser justifies the text sample here.</em></p>
     <p dir="ltr" lang="el" id="justificationExample" style="text-align:start;">Όλοι είναι ίσοι απέναντι στον νόμο και έχουν δικαίωμα σε ίση προστασία του νόμου, χωρίς καμία απολύτως διάκριση. Όλοι έχουν δικαίωμα σε ίση προστασία από κάθε διάκριση που θα παραβίαζε την παρούσα Διακήρυξη και από κάθε πρόκληση για μια τέτοια δυσμενή διάκριση.</p>
     <p class="english" dir="ltr">
       <button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Justify   </button>
     </p>
-  </section>
+</section>
 </section>
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/greek"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-04  22:33<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bgreek%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fgreek%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
+
+
+<section>
+    <h3 id="tbd">TBD</h3>
+<p class="ednote">Further information needed for this section includes:</p>
+<pre style="margin-left: 10%;">
+Glyph shaping &amp; positioning
+    Cursive text
+    Context-based shaping
+    Multiple combining characters
+    Context-based positioning
+    Transforming characters
+
+Structural boundaries &amp; markers
+    Grapheme, word &amp; phrase boundaries
+    Hyphens &amp; dashes
+    Bracketing information
+    Quotations
+    Abbreviations, ellipsis, &amp; repetition
+    Emphasis &amp; highlights
+    Inline notes &amp; annotations
+
+Inline layout
+    Inline text spacing
+    Bidirectional text
+
+Line &amp; paragraph layout
+    Text direction
+    Line breaking
+    Hyphenation
+    Text alignment &amp; justification
+    Counters, lists, etc.
+    Styling initials
+    Baselines &amp; inline alignment
+
+Page &amp; book layout
+    General page layout &amp; progression
+    Directional layout features
+	Grids &amp; tables
+    Notes, footnotes, etc.
+    Forms &amp; user interaction
+    Page numbering, running headers, etc.
+</pre>
+</section>
+
+
+
+ 
+	
+
+
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/greek"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-02-10  18:49<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bgreek%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fgreek%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"></div>
 </body>
 <script>
-var base = '/scripts/greek/block'
-initialiseShowNames(base, 'c');
-document.getElementById('featureTableBody').innerHTML = makeSidePanel("Greek","")
-createtoc(3)
+initialiseSummary('/scripts/greek/block','el','Greek')
 </script>
 
 </html>
