@@ -113,10 +113,19 @@ function makeTables (lang) {
             notes = node.dataset.notes.split(',')
             }
         else notes = []
+        if (node.dataset.extra) {
+            extra = node.dataset.extra.split('␣')
+			var extraLang = extra.pop()
+            }
+        else extra = []
         if (node.dataset.ipa) {
             ipa = node.dataset.ipa.split(',')
             }
         else ipa = []
+        if (node.dataset.translit) {
+            translit = node.dataset.translit.split('␣')
+            }
+        else translit = []
         if (node.dataset.links) {
             links = node.dataset.links.split(',')
             }
@@ -147,6 +156,13 @@ function makeTables (lang) {
                 continue
                 }
             
+			// print any second row of characters
+            if (extra.length > 0) {
+                if (extra[i]) out += '<span class="listExtra" lang="'+extraLang+'">'+extra[i]+'</span>'
+                else out += '<span>&nbsp;</span>'
+                }
+
+			
             // print the code point values
             out += '<span class="listUnum">'
             for (let z=0;z<chars[i].length;z++) {
@@ -169,7 +185,7 @@ function makeTables (lang) {
 
             if (ipa.length > 0) {
                 if (ipa[i]) out += '<span class="listIPA">'+ipa[i]+'</span>'
-                else out += '<span>&nbsp;</span>'
+                else out += ' '
                 }
 
             if (info.includes('trans')) {
@@ -178,7 +194,12 @@ function makeTables (lang) {
                 out += '<span class="listTrans">'+ch+'</span>'
                 }
 
-            if (info.includes('transc')) {
+             if (translit.length > 0) {
+                if (translit[i]) out += '<span class="listTrans">'+translit[i]+'</span>'
+                else out += ' '
+                }
+
+           if (info.includes('transc')) {
                 if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.transcription]) ch = window.spreadsheetRows[char][cols.transcription]
                 else ch = '&nbsp;'
                 out += '<span class="listTransc">'+ch+'</span>'
