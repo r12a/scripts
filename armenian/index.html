@@ -21,6 +21,7 @@
 	text-align: start;
     line-height: 1.4;
 	}
+@media print { #freeText { font-size: 18px; } }
 [lang=hy] { font-family: webfont, serif; font-size: 140%; }
 .large { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
 .iso9985 { font-family: gentiumpluswf; }
@@ -56,7 +57,7 @@
 <nav>
 <h2 class="notoc flush"><a id="tochead">Contents</a></h2>
 <div id="toc"><!-- placeholder --></div>
-  </nav>
+</nav>
 
  <div id="fontsetting" class="closed">
   <h2 class="notoc"><a id="fonts">Fonts</a></h2>
@@ -65,7 +66,7 @@
       <select id="exfontswitchfont" 
 onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'hy');">
       </select>
-      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+   <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
       <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
 onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'hy');" />
  </p>
@@ -95,24 +96,24 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
         <label for="x10">10</label>
       </p>
-    </form>
+ </form>
 </div>
 </aside>
 
 
-<p id="status">Updated<!-- #BeginDate format:Sw1 -->27 January, 2019<!-- #EndDate --> -->
+<p id="status">Updated<!-- #BeginDate format:Sw1 -->10 February, 2019<!-- #EndDate --> -->
 &bull; tags  <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="http://rishida.net/blog/?tag=armenian" title="Show all blog posts tagged with 'armenian'">armenian</a></p>
 
 
 <section>
   <p>This page provides basic information about the Armenian script. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned. For character-specific details follow the links to the <a class="linkHighlight" href="/scripts/armenian/block">Armenian character notes.</a> </p>
 <p>For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>. </p>
+<p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
 <details id="scriptLinks">
 <summary class="instructions">Show links for the Armenian script.</summary>
   <div id="linklist"></div>
-  <script>document.getElementById('linklist').innerHTML = getData('Armn')</script>
+<script>document.getElementById('linklist').innerHTML = getData('Armn')</script>
   </details>
-  <p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
 </section>
 
 
@@ -121,7 +122,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <h2 id="sample">Sample (Armenian)</h2>
   
 
-  <div id="freeText" dir="ltr" lang="hy" data-target="c" data-base="/scripts/armenian/block" data-source="http://unicode.org/udhr/translations.html">
+<div id="freeText" dir="ltr" lang="hy" data-target="c" data-base="/scripts/armenian/block" data-source="http://unicode.org/udhr/translations.html">
   <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">Հոդված 1 Բոլոր մարդիկ ծնվում են ազատ ու հավասար իրենց արժանապատվությամբ ու իրավունքներով։ Նրանք ունեն բանականություն ու խիղճ և միմյանց պետք է եղբայրաբար վերաբերվեն։</p>
   <p title="UDHR, article 2" onMouseUp="showtext('freeText')">Հոդված 2 Ամեն ոք ունի այս Հռչակագրում բերված բոլոր իրավունքներն ու ազատությունները առանց որևէ խտրության՝ հիմնված ցեղային, մաշկի գույնի, սեռի, լեզվի, կրոնի, քաղաքական կամ այլ համոզմունքների, ազգային կամ սոցիալական ծագման, ունեցվածքի, դասային պատկանելության կամ որևէ այլ կարգավիճակի վրա։ Ավելին, ոչ մի խտրականություն չպետք է լինի հիմնված երկրի կամ տարածքի, քաղաքական, իրավական, կամ միջազգային կարգավիճակի վրա, լինի դա անկախ, խնամարկյալ, ոչինքնակառավարվող կամ ինքնիշխանության որևէ այլ սահմանափակումով պետական կազմավորում, որին պատկանում է մարդը։</p>
   <!-- Source: http://unicode.org/udhr/translations.html -->
@@ -134,9 +135,9 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   <table>
       <tbody id="featureTableBody">
      </tbody>
-    </table>
+  </table>
     <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
-   </div>
+</div>
 
 
 
@@ -194,6 +195,16 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </ul>
 <p>For character-specific details see <a class="linkHighlight" href="/scripts/armenian/block">Armenian character notes.</a></p>
 </section>
+
+
+
+
+    
+ <section>
+    <h2 id="direction">Text direction</h2>
+    <p>Armenian is written horizontally, left to right.<sup></sup></p>
+</section>
+
 
 
 
@@ -294,8 +305,8 @@ The Unicode Standard recommends not to use <span class="codepoint"><span lang="h
 <h3 id="currency">Currency</h3>
 
 <p> The Armenian block has a symbol for the Armenian dram, <span class="codepoint" translate="no"><span lang="hy">&#x058F;</span> [<a href="/scripts/armenian/block#char058F"><span class="uname">U+058F ARMENIAN DRAM SIGN</span></a>]</span>.</p>
-  </section>
-  </section>
+</section>
+</section>
  
   
   
@@ -426,15 +437,7 @@ The Unicode Standard recommends not to use <span class="codepoint"><span lang="h
 
   
 <section>
-   <h2 id="layout">Line &amp; paragraph layout</h2>
-    
- <section>
-    <h3 id="direction">Text direction</h3>
-    <p>Armenian is written horizontally, left to right.<sup></sup></p>
-  </section>
-
-
-
+   <h2 id="para">Line &amp; paragraph layout</h2>
 
 <section>
     <h3 id="justify"> Text alignment &amp; justification</h3>
@@ -480,7 +483,7 @@ The Unicode Standard recommends not to use <span class="codepoint"><span lang="h
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/armenian"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-01-27  17:45<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Barmenian%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Farmenian%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/armenian"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-02-10  17:49<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Barmenian%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Farmenian%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"></div>
