@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<title>Malayalam script notes</title>
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="description" content="Summary of the Malayalam script."/>
+<link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../common/local.css" />
+<!--link rel="stylesheet" href="../style/print.css"/-->
+<style>
+@font-face {
+    font-family: 'Malayalam WF';
+    src: url('../../shared/webfonts/NotoSansMalayalamUI-Regularwebfont.woff2') format('woff2'),
+         url('../../shared/webfonts/NotoSansMalayalamUI-Regularwebfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+@font-face {
+	font-family: 'Noto Serif Malayalam WF';
+	src: 	local('Noto Serif Malayalam'),
+			url('../../shared/webfonts/notoserifmalayalam-regular-webfont.woff2') format('woff2'),  
+			url('../../shared/webfonts/notoserifmalayalam-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	}
+#freeText {
+	font-size: 28px;
+	font-family: Noto Serif Malayalam WF, serif;
+	text-align: start;
+    line-height: 2;
+	}
+@media print { #freeText { font-size: 18px; } }
+[lang=ml] { font-family: "Noto Serif Malayalam WF", 'Malayalam WF', serif; font-size: 140%; }
+.large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }	
+</style>
+
+<script src="db.js"> </script>
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2019.js"></script>
+<script src="../../shared/code/all-names.js"></script>
+<script src="../../shared/code/character_conversion.js"></script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/fontlists/manage.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
+<script src="../common/functions.js"></script>
+<script src="../../shared/code/getLinks.js"></script>
+<script src="../linkdata/linkdb.js"></script>
+<script src="../featurelist/scriptdata.js"> </script>
+
+<script src="../../shared/fontlists/malayalam.js"> </script>
+</head>
+
+<body>
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
+</header>
+
+<h1>Malayalam script summary</h1>
+
+<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top"/></a></nav>
+
+  <aside class="sidebar"> 
+		<h2 class="notoc flush"><a id="tochead" name="tochead" tabindex="4">Contents</a></h2>
+		<div id="toc"><!-- placeholder --></div>
+
+ <div id="fontsetting" class="closed">
+  <h2 class="notoc"><a id="fonts">Fonts</a></h2>
+  <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'ml');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'ml');" />
+    </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
+    <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
+	return false;">
+      <p>Change size:<br />
+        <input id="slider" type="range" min="12" max="100" step="1" value="32">
+        &#xA0; <span id="sizeIndicator">32px</span><br />
+        <input id="multiplier" type="hidden" value="1" />
+        Multiplier:
+        <input type="radio" name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x1">1</label>
+        <input type="radio" name="step" id="x5" value="2"  onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x5">2</label>
+        <input type="radio" name="step" id="x10" value="10"  onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x10">10</label>
+      </p>
+    </form>
+</div>
+</aside>
+
+	<p id="status">Updated Mon 13 Oct 2014  &bull; tags <a href="http://r12a.github.io/blog/index.php?tag=malayalam" title="Show all blog posts tagged with 'malayalam'">malayalam</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+
+	<div class="section">
+	  <p>This page provides basic information about the Malayalam script. It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned.  For character-specific details follow the links to the <a class="linkHighlight" href="/scripts/malayalam/block">Malayalam character notes</a>.</p>
+<p>For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>.</p>
+<p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+  
+  <details id="scriptLinks">
+  <summary class="instructions">More links for the Malayalam script.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Mlym')</script>
+  </details>
+</div>
+
+
+
+<section>
+<h2 id="sample">Sample (Malayalam)</h2>
+  
+
+  <div id="freeText" dir="ltr" lang="ml" data-target="c" data-base="/scripts/malayalam/block" data-source="http://unicode.org/udhr/translations.html">
+  <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">വകുപ്പ്‌ 1. മനുഷ്യരെല്ലാവരും തുല്യാവകാശങ്ങളോടും അന്തസ്സോടും സ്വാതന്ത്ര്യത്തോടുംകൂടി ജനിച്ചിട്ടുള്ളവരാണ്‌. അന്യോന്യം ഭ്രാതൃഭാവത്തോടെ പെരുമാറുവാനാണ്‌ മനുഷ്യന്നു വിവേകബുദ്ധിയും മനസ്സാക്ഷിയും സിദ്ധമായിരിക്കുന്നത്‌.</p>
+  <p  title="UDHR, article 2" onMouseUp="showtext('freeText')">വകുപ്പ്‌ 2. ജാതി, മതം, നിറം, ഭാഷ, സ്ത്രീപുരുഷഭേദം, രാഷ്ട്രീയാഭിപ്രായം സ്വത്ത്‌, കുലം എന്നിവയെ കണക്കാക്കാതെ ഈ പ്രഖ്യാപനത്തില്‍ പറയുന്ന അവകാശങ്ങള്‍ക്കും സ്വാതന്ത്ര്യത്തിനും സര്‍വ്വജനങ്ങളും അര്‍ഹരാണ്‌. രാഷ്ട്രീയ സ്ഥിതിയെ അടിസ്ഥാനമാക്കി (സ്വതന്ത്രമോ, പരിമിത ഭരണാധികാരത്തോടു കൂടിയതോ ഏതായാലും വേണ്ടതില്ല) ഈ പ്രഖ്യാപനത്തിലെ അവകാശങ്ങളെ സംബന്ധിച്ചേടത്തോളം യാതൊരു വ്യത്യാസവും യാതൊരാളോടും കാണിക്കാന്‍ പാടുള്ളതല്ല.</p>
+  <!-- Source:  -->
+  </div>
+</section>
+
+
+
+
+ 
+
+<section>
+    <h2 id="history">Usage &amp; history</h2>
+    <p>From <a href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf">The Unicode Standard</a>: </p>
+    <blockquote>
+<p>The Malayalam script is a South Indian script used to write the Malayalam language of theKerala  state.  Malayalam  is  a  Dravidian  language  like  Kannada,  Tamil,  and  Telugu. Throughout its history, it has absorbed words from Tamil, Sanskrit, Arabic, and English.</p>
+<p>The shapes of Malayalam letters closely resemble those of Tamil. Malayalam, however, has a very full and complex set of conjunct consonant forms. ...</p>
+<p>In the 1970s and 1980s, Malayalam underwent orthographic reform due to printing difficulties. The treatment of the combining vowel signs u and uu was simplified at this time.These vowel signs had previously been represented using special cluster graphemes where the vowel signs were fused beneath their consonants, but in the reformed orthography they are represented by spacing characters following their consonants.</p>
+</blockquote>
+    <p>From <a href="http://en.wikipedia.org/wiki/Malayalam_alphabet">Wikipedia</a>:</p>
+<blockquote>
+<p>Malayalam script (Malayāḷalipi; IPA: [mələjɑːɭə lɪpɪ] / Malayalam: മലയാളലിപി) is a Brahmic script used commonly to write the Malayalam language, which is the principal language of Kerala, India, spoken by 35 million people in the world. Malayalam script is also widely used for writing Sanskrit texts in Kerala. Like many other Indic scripts, it is an alphasyllabary (abugida), a writing system that is partially “alphabetic” and partially syllable-based. The modern Malayalam alphabet has 15 vowel letters, 36 consonant letters, and a few other symbols. The Malayalam script is a Vatteluttu alphabet extended with symbols from the Grantha alphabet to represent Indo-Aryan loanwords. The script is also used to write several minority languages such as Paniya, Betta Kurumba, and Ravula. The Malayalam language itself was historically written in several different scripts. </p>
+</blockquote>
+</section>
+
+
+
+
+
+  <div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+    </table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+   </div>
+
+
+
+
+<section>
+    <h2 id="type">Distinctive features</h2>
+<p>The script  is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>. Consonants carry an inherent vowel <span class="ipa">a</span>, although that is pronounced <span class="ipa">ə</span> at the end of a word.  See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.</p>
+  <p>Although the shapes of Malayalam letters closely resemble those of Tamil, the Malayalam script has a very full and complex set of conjunct consonant forms. </p>
+ </section>
+
+
+
+
+
+ <section>
+<h2 id="chars">Character lists</h2>
+  <p>The Malayalam script characters in Unicode 10.0 are in the following block: </p>
+    <ul>
+      <li> <a href="/uniview/?block=malayalam">Malayalam</a> <span class="charCount">(121 characters)</span></li>
+    </ul>
+   <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li><a href="/app-charuse/?language=ml" target="_blank">Malayalam</a> <span class="charCount">(58 letters, 16 marks, 4 punctuation, 2 other:   total 80)</span></li>
+</ul>
+<p>For character-specific details see the <a class="linkHighlight" href="/scripts/malayalam/block">Malayalam character notes</a>.</p>
+</section>
+  
+  
+
+
+
+<div id="showTranscriptions">
+<div>In yellow boxes, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div>
+<label>ISO 15919 
+<input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+</div>
+
+
+
+
+
+
+  <section>
+    <h2 id="direction">Text direction</h2>
+    <p>Malayalam text is written horizontally, left to right.</p>
+  </section>
+   
+    
+      
+
+
+
+<section> 
+<h2 id="vowelsummary">Vowels</h2>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᬅ␣ᬆ</figure>
+<figure>
+<p lang="jv" class="large">ꦩꦔ<span class="ex">ꦤ꧀ꦱꦺꦴ</span>ꦠꦺꦴ</p>
+    <figcaption>The <span class="trans">o</span> surrounds the <span class="trans">ns</span> in <span class="trans">mangan soto</span>.</figcaption>
+    </figure>
+
+<section>
+<h3 id="inherent">Inherent vowel</h3>
+
+<p>Consonants carry an inherent vowel usually transcribed and pronounced <span class="ipa">a</span>.  So <span class="charExample" translate="no"><span class="ex" lang="ml">ക</span></span> is pronounced <span class="ipa">ka</span>.</p>
+</section>
+
+
+
+
+ 
+<section>
+<h3 id="absence">Vowel absence &amp; half-u</h3>
+<p>Malayalam uses &nbsp;<span class="codepoint" translate="no"><span lang="ml">&#x0D4D;</span> [<a href="/scripts/malayalam/block#char0D4D"><span class="uname">U+0D4D MALAYALAM SIGN VIRAMA</span></a>]</span> (in Malayalam called <span class="charExample" translate="no"><span class="ex" lang="ml">ചന്ദ്രക്കല</span> <span class="trans">cn͓d͓rk͓kl (candrakkala)</span> <span class="ipa">ʧand̪r̪akkala</span></span>) to kill the inherent vowel after a consonant, eg.<span class="charExample" translate="no"><span class="ex" lang="ta"> ക്</span> <span class="trans">k͓</span></span> explicitly represents just the sound k. </p>
+<p>However, in modern text, at the end of a word the combination <span class="charExample" translate="no"><span class="ex" lang="ta"> ക്</span> <span class="trans">k͓</span></span> may also represent the sound <span class="ipa">kə̆</span> or <span class="ipa">kɨ̆</span> (depending on dialect). The transcription for this is usually <span class="trans">ŭ</span>, and it is called <span class="name">half-u</span>.</p>
+<p>In older documents the <span class="name">half-u</span> was typically written with a <span class="trans">u</span> vowel-sign plus <span class="name">chandrakkala</span>, which is not ambiguous, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">പാലു്</span> <span class="trans">pālu͓</span> <span class="ipa">pālə̆</span> <span class="meaning">milk</span></span>.</p>
+<p>The Unicode Standard provides examples of <span class="name">half-u</span> occurring in positions that are not word-final (that is, not immediately before a space), eg. <span class="charExample" translate="no"><span class="ex" lang="ml">ഐശീല്ം</span> <span class="trans">ạʲʃīl͓m̽ (aiśīlŭṃ)</span> <span class="ipa">ai̯ʃiːləm</span> <span class="meaning">than ice</span></span>. In another example, the <span class="name">chandrakkala</span> is attached to an independent vowel letter, and overrides the sound of that letter, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">എ്ന്നാ</span> <span class="trans">ẹ͓n͓nā</span> <span class="ipa">ənnaː</span> <span class="meaning">on which day?</span></span></p>
+<p>The <span class="name">chandrakkala</span> is always written after any vowel-sign and before any final consonant (such as anusvara).</p>
+<p>See also <a class="secref">clusters</a>, where the <span class="name">chandrakkala</span> can be hidden between consonant clusters, and <a class="secref">finals</a>.</p>
+</section>
+
+
+
+
+ 
+<section>
+<h3 id="vowelsigns">Vowel-signs</h3>
+
+<p>To produce a different vowel than the inherent one, Malayalam attaches  vowel-signs to  the preceding consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">കി</span> <span class="ipa">ki</span></span>.</p>
+<p>Characters that produce vowel signs are all combining characters. In principle a single character is used per base consonant, but 3 vowel signs decompose to more than one character.</p>
+<p>All vowel-signs are typed and stored <em>after</em> the base consonant, whether or not they precede it when displayed. The font takes care of the glyph positioning.</p>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ാ␣ി␣ീ␣ു␣ൂ␣െ␣േ␣ൊ␣ോ␣ൈ␣ൗ␣ൌ</figure>
+<p>All of the vowel-signs are spacing marks, meaning that they consume horizontal space when added to a base consonant.</p>
+<p>In modern text, <span class="codepoint" translate="no"><span lang="ml">&#x0D57;</span> [<a href="/scripts/malayalam/block#char0D57"><span class="uname">U+0D57 MALAYALAM AU LENGTH MARK</span></a>]</span> has become a dominant way to write the vowel <span class="ipa">au̯</span>, rather than <span class="codepoint" translate="no"><span lang="ml">&#x0D4C;</span> [<a href="/scripts/malayalam/block#char0D4C"><span class="uname">U+0D4C MALAYALAM VOWEL SIGN AU</span></a>]</span>. </p>
+<p>Vowel-signs may also be attached to digits, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">355ാം</span> <span class="trans">355ām̽</span> <span class="meaning">355th</span></span>. <sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u505</a></sup></p>
+<p>See also <a class="sectionref">vocalics</a>.</p>
+</section>
+
+
+
+
+ 
+<section>
+<h3 id="multipart">Multi-part vowel-signs</h3>
+
+<p>Three vowel-signs can be written as a single character, or as two, eg. </p>
+<ol>
+<li><span class="codepoint" translate="no"><span lang="ml">&#x0D4A;</span> [<a href="/scripts/malayalam/block#char0D4A"><span class="uname">U+0D4A MALAYALAM VOWEL SIGN O</span></a>]</span> or</li>
+<li><span class="codepoint" translate="no"><span lang="ml">&#x0D46;</span> + <span lang="ml">&#x0D3E;</span> [<a href="/scripts/malayalam/block#char0D46"><span class="uname">U+0D46 MALAYALAM VOWEL SIGN E</span></a> + <a href="/scripts/malayalam/block#char0D3E"><span class="uname">U+0D3E MALAYALAM VOWEL SIGN AA</span></a>]</span>.</li>
+</ol>
+<p>The single code point per vowel-sign is required by the Unicode Standard <sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u501</a></sup>, however the parts are separated in <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD).</p>
+<p>Whichever approach is used, the vowel-signs must be typed and stored after the consonant characters they surround, and in  left to right order.</p>
+</section>
+
+
+
+
+ 
+<section>
+<h3 id="placement">Vowel-sign placement</h3>
+
+<p>The following list shows where vowel-signs are positioned around a base consonant to produce vowels, and how many instances of that pattern there are. The figure after the + sign represents combinations of Unicode characters. This information doesn't take into account the vowel ligation mentioned in the next section.</p>
+<ul>
+<li>3 prescript, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">കെ</span> <span class="trans">ke</span></span></li>
+<li>6 postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">കാ</span> <span class="trans">kā</span></span></li>
+<li>3 pre+postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">കൊ</span> <span class="trans">ko</span></span></li>
+</ul>
+</section>
+
+
+
+
+ 
+<section>
+<h3 id="uvowels">Vowel ligatures &amp; orthographic reforms</h3>
+
+<p>Like Tamil, Malayalam consonants combining with <span class="codepoint" translate="no"><span lang="ml">&#x0D41;</span> [<a href="/scripts/malayalam/block#char0D41"><span class="uname">U+0D41 MALAYALAM VOWEL SIGN U</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ml">&#x0D42;</span> [<a href="/scripts/malayalam/block#char0D42"><span class="uname">U+0D42 MALAYALAM VOWEL SIGN UU</span></a>]</span> can produce ligated forms, as shown in <a class="figref">u_ligatures</a>.</p>
+<figure id="u_ligatures">
+<img src="images/u_ligatures.png" alt=""/>
+    <figcaption>Ligated forms of consonant plus <span class="trans">-u</span> (top) and <span class="trans">-ū</span> (bottom)<span class="trans"></span>. The far left shows ordinary forms.</figcaption>
+</figure>
+<!-- Reconstruct this example using: 
+http://localhost/pickers/malayalam/?text=%0Ac%20%E2%86%92%09k%09g%09c%CA%B0%09j%09%C9%B3%09t%09n%09b%CA%B0%09r%09%CA%83%09h%0A%E0%B4%9A%E0%B5%81%20%E2%86%92%09%E0%B4%95%E0%B5%81%09%E0%B4%97%E0%B5%81%09%E0%B4%9B%E0%B5%81%09%E0%B4%9C%E0%B5%81%09%E0%B4%A3%E0%B5%81%09%E0%B4%A4%E0%B5%81%09%E0%B4%A8%E0%B5%81%09%E0%B4%AD%E0%B5%81%09%E0%B4%B0%E0%B5%81%09%E0%B4%B6%E0%B5%81%09%E0%B4%B9%E0%B5%81%0A%E0%B4%9A%E0%B5%82%20%E2%86%92%09%E0%B4%95%E0%B5%82%09%E0%B4%97%E0%B5%82%09%E0%B4%9B%E0%B5%82%09%E0%B4%9C%E0%B5%82%09%E0%B4%A3%E0%B5%82%09%E0%B4%A4%E0%B5%82%09%E0%B4%A8%E0%B5%82%09%E0%B4%AD%E0%B5%82%09%E0%B4%B0%E0%B5%82%09%E0%B4%B6%E0%B5%82%09%E0%B4%B9%E0%B5%82%0A%0A%0A
+-->
+<p>During orthographic reforms in the 1970s and 1980s a simpler approached was introduced, to make printing easier. Both vowels were represented by an unchanging, postscript vowel-sign as shown below. No change is needed to the underlying code points in Unicode, this is purely a font difference.</p>
+
+<figure class="auto" data-cols="trans,transc" data-select="first">ചു␣കു␣ഗു␣ഛു␣ജു␣ണു␣തു␣നു␣ഭു␣രു␣ശു␣ഹു</figure>
+</section>
+
+
+
+
+ 
+<section>
+<h3 id="independentvowels">Standalone vowels</h3>
+<p class="explanatoryintro">Standalone vowels are not preceded by a consonant, and may appear at the beginning or in the middle of a word.</p>
+<p>Malayalam represents standalone vowels using a set of independent vowel letters. The set includes a character to represent the inherent vowel sound.</p>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">അ␣ആ␣ഇ␣ഈ␣ഉ␣ഊ␣എ␣ഏ␣ഒ␣ഓ␣ഐ␣ഔ</figure>
+</section>
+</section>
+
+
+
+<section>
+<h2 id="vocalics">Vocalics</h2>
+
+<p class="explanatoryintro">Vocalics are letters derived from Sanskrit that generally behave like vowels, but represent r/l followed by a vowel. They are often available both as vowel-signs and independent vowel letters.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ഋ␣ൠ␣ഌ␣ൡ␣ൃ␣ൄ␣ൢ␣ൣ</figure>
+
+<p>The 3 items to the right of the list above are used only to write Sanskrit in Malayalam. <sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u501</a></sup></p>
+</section>
+
+
+
+
+
+
+
+<section> 
+<h2 id="malayalamchar">Consonants</h2>
+  
+<section>
+<h3 id="consonantpronunciation">Basic  consonants</h3>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ക␣ഖ␣ഗ␣ഘ␣ങ␣ച␣ഛ␣ജ␣ഝ␣ഞ␣ട␣ഠ␣ഡ␣ഢ␣ണ␣ത␣ഥ␣ദ␣ധ␣ന␣ഩ␣പ␣ഫ␣ബ␣ഭ␣മ␣യ␣ര␣റ␣ല␣ള␣ഴ␣വ␣ശ␣ഷ␣സ␣ഹ␣ഺ</figure>
+
+<p><span class="codepoint" translate="no"><span lang="ml">&#x0D29;</span> [<a href="/scripts/malayalam/block#char0D29"><span class="uname">U+0D29 MALAYALAM LETTER NNNA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ml">&#x0D3A;</span> [<a href="/scripts/malayalam/block#char0D3A"><span class="uname">U+0D3A MALAYALAM LETTER TTTA</span></a>]</span> are archaic.</p>
+</section>
+
+
+
+
+
+
+<section>
+<h3 id="finals">Syllable-final consonants</h3>
+	<p>Words ending with <span class="name">chandrakkala</span> may be pronounced with a half-u sound after. In order to indicate a consonant with no following vowel sound at all the following <span class="name">chillu</span> (or <span class="name">cillakṣaram</span>) characters can be used.</p>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ൺ␣ൻ␣ർ␣ൽ␣ൾ␣ൿ␣ൔ␣ൕ␣ൖ</figure>
+
+<p><span class="codepoint" translate="no"><span lang="ml">&#x0D7F;</span> [<a href="/scripts/malayalam/block#char0D7F"><span class="uname">U+0D7F MALAYALAM LETTER CHILLU K</span></a>]</span> is relatively rare.<sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u505</a></sup> Unicode v9 introduced 3 more chillu letters, <span class="codepoint" translate="no"><span lang="ml">&#x0D54;</span> [<a href="/scripts/malayalam/block#char0D54"><span class="uname">U+0D54 MALAYALAM LETTER CHILLU M</span></a>]</span>, <span class="codepoint" translate="no"><span lang="ml">&#x0D55;</span> [<a href="/scripts/malayalam/block#char0D55"><span class="uname">U+0D55 MALAYALAM LETTER CHILLU Y</span></a>]</span>, and <span class="codepoint" translate="no"><span lang="ml">&#x0D56;</span> [<a href="/scripts/malayalam/block#char0D56"><span class="uname">U+0D56 MALAYALAM LETTER CHILLU LLL</span></a>]</span>.</p>
+<p>In older Unicode text the first 5 chillus in the list above were written using the combination <span class="uname">consonant+VIRAMA+ZWJ</span>, but since the introduction of the chillu characters in Unicode v5.1 these precomposed characters are recommended.</p>
+<p>Malayalam also uses the anusvara and visarga as syllable-final characters.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ം␣ഃ</figure>
+
+<p>The anusvara can be used multiple times after a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">ഈംംംം</span> <span class="trans">ị̄m̽m̽m̽m̽</span></span>. <sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u504</a></sup></p>
+</section>
+</section>
+ 
+ 
+ 
+  
+  
+<section>
+<h2 id="clusters">Consonant clusters</h2>
+<p class="explanatoryintro">When the shapes of constituent consonants in a cluster are changed or merged to indicate the lack of intervening vowels, this is referred to as a conjunct.</p>
+<p>The absence of a vowel sound between two or more consonants is visually indicated in one of the following ways.</p>
+<ol>
+<li>A visible <span class="name">chandrakkala</span> character above the top right  of the initial consonant.</li>
+<li>Stacked consonants, where the non-initial consonant appears below the initial, usually with a reduced or ligated form.</li>
+<li>Conjoined consonants, where consonants sit side-by-side but with some ligation or different forms than usual.</li>
+<li>Special 'chillu' shapes for the initial consonant (a special case of the preceding bullet point).</li>
+<li>A syllable-final consonant diacritic followed by a regular consonant.</li>
+</ol>
+<p>In Unicode, the stacking and conjoining behaviour is achieved by adding <span class="codepoint" translate="no"><span lang="ml">&#x0D4D;</span> [<a href="/scripts/malayalam/block#char0D4D"><span class="uname">U+0D4D MALAYALAM SIGN VIRAMA</span></a>]</span>  between the consonants. The font hides the glyph automatically.</p>
+<p>Traditional fonts have more ligatures than modern ones. There doesn't appear to much in the way of a systematic
+
+
+approach to shaping. With a few exceptions, the conjuncts are specific to particular pairs of characters.</p>
+<p>You can see conjunct forms in the <a href="conjunct_chart">conjunct map table</a>. This shows all combinations of two consonants and allows you to observe the effect of changing the font. Images of the table with conjuncts highlighted by coloured dots are available for the <a href="images/conjunct_map_noto.png">Noto Serif Malayalam </a>and <a href="images/conjunct_map_thoolika.png">Thoolika Traditional Unicode</a> fonts.</p>
+<p>Sequences involving more than two consonants in a cluster can combine a variety of methods. The example in <a class="figref">to_india</a> shows 3 conjoined consonants in the middle, and a conjoined cluster stacked below another letter at the end.</p>
+<figure id="to_india">
+<img src="images/to_india.png" alt="ഇന്ത്യയ്ക്ക്"/>
+    <figcaption>The word <span class="charExample" translate="no"><span class="ex" lang="ml">ഇന്ത്യയ്ക്ക്</span> <span class="trans">ịn͓t͓yy͓k͓k͓</span> <span class="meaning">to India </span></span> in the Thoolika Traditional Unicode font.</figcaption>
+    </figure>
+
+<p><span class="codepoint" translate="no"><span lang="ml">&#x0D30;</span> [<a href="/scripts/malayalam/block#char0D30"><span class="uname">U+0D30 MALAYALAM LETTER RA</span></a>]</span> when non-initial  in a cluster is displayed to the left of the other consonant(s) in the reformed orthography, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">ക്ര</span> <span class="trans">k͓r</span></span>.  This transposition is done by the font – the typed and stored order remains the same as the spoken order.</p>
+<p>When <span class="uname">RA</span> follows more than one consonant, it is displayed to the left of the cluster, not just to the left of the preceding consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">ന്ദ്ര</span> <span class="trans">n͓d͓r</span></span> in <span class="charExample" translate="no"><span class="ex" lang="ml">ചന്ദ്രക്കല</span> <span class="trans">cn͓d͓rk͓kl</span> <span class="ipa">ʧand̪r̪akkala</span></span>.</p>
+
+
+<section>
+			<h3 id="chandrakkala">Visible <span class="name">chandrakkala</span></h3>
+			<p>This is a common option, and was promoted as the default by the orthogrpahic reforms of the 1970s. It is also the fallback if the font doesn't contain conjunct forms for a particular cluster of consonants.</p>
+<p>Examples include <span class="charExample" translate="no"><span class="ex" lang="ml">ട്ഛ</span> <span class="trans">ʈ͓cʰ</span> and <span class="charExample" translate="no"><span class="ex" lang="ml">ക്റ</span> <span class="trans">k͓ṙ</span></span></span>.</p>
+</section>
+
+
+
+
+<section>
+<h3 id="stacking">Stacking</h3>
+	<p>The non-initial consonant is  drawn below the initial consonant, and with a slightly different shape. </p>
+<p>The following list shows stacked conjuncts in the Noto Serif Malayalam font (unless you changed the font for examples on this page).</p>
+
+<figure class="auto" data-cols="" data-ignore="&#x0D4D;" data-translit="k͓ʈ␣k͓l␣g͓g␣c͓c␣c͓cʰ␣ʈ͓ʈ␣ɖ͓ɖ␣ɖ͓ɖʰ␣ɳ͓ɳ␣t͓l␣d͓d␣p͓p␣p͓l␣b͓d␣b͓dʰ␣b͓b␣b͓l␣m͓l␣ṙ͓ṙ␣y͓y␣l͓p␣l͓l␣l͓ʋ␣ʋ͓ʋ␣ʃ͓l␣ʃ͓ʃ␣s͓l␣s͓s␣ʂ͓ʈ␣h͓l">ക്ട␣ക്ല␣ഗ്ഗ␣ച്ച␣ച്ഛ␣ട്ട␣ഡ്ഡ␣ഡ്ഢ␣ണ്ണ␣ത്ല␣ദ്ദ␣പ്പ␣പ്ല␣ബ്ദ␣ബ്ധ␣ബ്ബ␣ബ്ല␣മ്ല␣റ്റ␣യ്യ␣ല്പ␣ല്ല␣ല്വ␣വ്വ␣ശ്ല␣ശ്ശ␣സ്ല␣സ്സ␣ഷ്ട␣ഹ്ല</figure>
+
+<p>Stacks tend to be particularly common for geminated consonants, even when those consonants don't participate in other conjunct pairings. In 3 such cases, the second consonant is often represented by a small triangle. </p>
+<p>Otherwise, the subjoined consonant may be a reduced version of the original, or may be ligated. Note that <span class="uname">LA</span> has a very different shape from normal when in subjoined position.</p>
+</section>
+
+
+
+
+		<section>
+		<h3 id="conjoined">Conjoined consonants</h3>
+			<p>Conjuncts where the consonants remain side-by-side typically merge the shapes of the consonants.</p>
+<p>However, 3 consonants have very standardised glyphs when they appear in non-initial position, and those glyphs don't merge with the other consonant. They are <span class="codepoint" translate="no"><span lang="ml">&#x0D2F;</span> [<a href="/scripts/malayalam/block#char0D2F"><span class="uname">U+0D2F MALAYALAM LETTER YA</span></a>]</span>, <span class="codepoint" translate="no"><span lang="ml">&#x0D31;</span> [<a href="/scripts/malayalam/block#char0D31"><span class="uname">U+0D31 MALAYALAM LETTER RRA</span></a>]</span>, and <span class="codepoint" translate="no"><span lang="ml">&#x0D35;</span> [<a href="/scripts/malayalam/block#char0D35"><span class="uname">U+0D35 MALAYALAM LETTER VA</span></a>]</span>. The list below shows them combined with the letter <span class="uname">KA</span>.</p>
+
+<figure class="auto" data-cols="" data-ignore="&#x0D4D;" data-translit="k͓y␣k͓r␣k͓ʋ">ക്യ␣ക്ര␣ക്വ</figure>
+
+<p>The following list shows conjoined conjuncts in the Noto Serif Malayalam font (unless you changed the font for examples on this page). To see the original shapes, click on the conjunct.</p>
+
+<figure class="auto" data-cols="" data-ignore="&#x0D4D;" data-translit="k͓k␣k͓ʂ␣g͓d␣g͓n␣g͓m␣ŋ͓k␣ŋ͓ŋ␣j͓j␣j͓ɲ␣ɲ͓c␣ɲ͓cʰ␣ɲ͓ɲ␣ɳ͓ʈ␣ɳ͓ɖ␣ɳ͓ɖʰ␣ɳ͓m␣t͓t␣t͓tʰ␣t͓n␣t͓bʰ␣t͓m␣t͓s␣d͓dʰ␣n͓t␣n͓tʰ␣n͓d␣n͓dʰ␣n͓n␣n͓m␣m͓p␣m͓m␣ʃ͓c␣ʃ͓cʰ␣s͓tʰ␣h͓n␣h͓m">ക്ക␣ക്ഷ␣ഗ്ദ␣ഗ്ന␣ഗ്മ␣ങ്ക␣ങ്ങ␣ജ്ജ␣ജ്ഞ␣ഞ്ച␣ഞ്ഛ␣ഞ്ഞ␣ണ്ട␣ണ്ഡ␣ണ്ഢ␣ണ്മ␣ത്ത␣ത്ഥ␣ത്ന␣ത്ഭ␣ത്മ␣ത്സ␣ദ്ധ␣ന്ത␣ന്ഥ␣ന്ദ␣ന്ധ␣ന്ന␣ന്മ␣മ്പ␣മ്മ␣ശ്ച␣ശ്ഛ␣സ്ഥ␣ഹ്ന␣ഹ്മ</figure>
+
+</section>
+
+
+
+
+
+<section>
+<h3 id="initialclusters">Chillu-style initials</h3>
+<p>In some fonts the initial consonant in a cluster may take a chillu shape,  followed by an ordinary glyph for the second character.</p>
+<p>In the Thoolika Traditional Unicode font this applies to the following consonants in initial position. The examples all use <span class="uname">SHA</span> in the second position.  Note that the chillu code points are not used here – this is just font styling on normal consonants.</p>
+
+<figure class="auto" data-cols="" data-ignore="&#x0D4D;" data-translit="k͓ʃ␣ɳ͓ʃ␣n͓ʃ␣r͓ʃ␣l͓ʃ␣ɭ͓ʃ">ക്ശ␣ണ്ശ␣ന്ശ␣ര്ശ␣ല്ശ␣ള്ശ</figure>
+
+<p><a class="figref">conjunct_chillus</a> shows the same sequence of characters in the Thoolika Traditional Unicode font. Note how the shape of the second consonant remains the same as normal - there is no ligation or repositioning.</p>
+
+<figure id="conjunct_chillus">
+<img src="images/conjunct_chillus.png" alt=""/>
+    <figcaption>Chillu-style initials used in the Thoolika Traditional Unicode font for consonant clusters.</figcaption>
+</figure>
+<!-- Reconstruct this example using: 
+http://localhost/pickers/malayalam/?text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3%E0%B5%8D%E0%B4%B6%20%E0%B4%A8%E0%B5%8D%E0%B4%B6%20%E0%B4%B0%E0%B5%8D%E0%B4%B6%20%E0%B4%B2%E0%B5%8D%E0%B4%B6%20%E0%B4%B3%E0%B5%8D%E0%B4%B6
+--></section>
+
+
+
+
+
+<section>
+<h3 id="initial_ra">Initial <span class="charExample" translate="no"><span lang="ml">ര</span></span> (<span class="uname" style="text-transform: uppercase;">RA</span>)</h3>
+	<p>Cluster-initial <span class="codepoint" translate="no"><span lang="ml">&#x0D30;</span> [<a href="/scripts/malayalam/block#char0D30"><span class="uname">U+0D30 MALAYALAM LETTER RA</span></a>]</span> is only used before <span class="codepoint" translate="no"><span lang="ml">&#x0D2F;</span> [<a href="/scripts/malayalam/block#char0D2F"><span class="uname">U+0D2F MALAYALAM LETTER YA</span></a>]</span> in standard Malayalam.<sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u505</a></sup> Since the orthographic reform, this has been written as <span class="charExample" translate="no"><span class="ex" lang="ml">ര്യ</span> <span class="trans">r͓y</span></span>.</p>
+<p>Before the 1970s, however, a dot or small vertical stroke was used over the following consonant, in a similar way to the <span class="name">repha</span> in other indic scripts, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">ൎയ</span></span>. The character <span class="codepoint" translate="no"><span lang="ml">&#x0D4E;</span> [<a href="/scripts/malayalam/block#char0D4E"><span class="uname">U+0D4E MALAYALAM LETTER DOT REPH</span></a>]</span> is used to reproduce this. </p>
+<p>This character is not a combining character. It is typed and stored in the same place as you would expect to find  the <span class="uname">RA + VIRAMA</span>, and then the font needs to  position the glyph over the following consonant.</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="rra_conjuncts">Clusters with  <span class="charExample" translate="no"><span lang="ml">റ</span></span> (<span class="uname" style="text-transform: uppercase;">RRA</span>)</h3>
+	<p>The conjunct <span class="charExample" translate="no"><span class="ex" lang="ml">റ്റ</span> <span class="trans">ṙ͓ṙ</span></span> is always pronounced <span class="ipa">tta</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">പാറ്റ</span> <span class="trans">pāṙ͓ṙ</span> <span class="ipa">paːtta</span> <span class="meaning">cockroach</span></span>.</p>
+<p>The same word could be spelled <span class="charExample" translate="no"><span class="ex" lang="ml">പാററ</span> <span class="trans">pāṙṙ</span></span>, and until the 1960s, when the stacked version began to appear, would have been, but this would be ambiguous, cf. <span class="charExample" translate="no"><span class="ex" lang="ml">ടെംപററി</span> <span class="trans">ʈem̽pṙṙi</span> <span class="ipa">ʈemparari</span> <span class="meaning">temporary</span></span>.<sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u506</a></sup> It would be particularly ambiguous when there are more than 2 <span class="uname">RRA</span> characters side by side, eg. compare <span class="charExample" translate="no"><span class="ex" lang="ml">കിലോമീറ്ററുകൾ</span> <span class="trans">kilōmīṙ͓ṙṙukɭ̽</span> <span class="ipa">kiloːmiːṯṯarukaɭ</span> <span class="meaning">kilometers</span></span> with <span class="charExample" translate="no"><span class="ex" lang="ml">കിലോമീറററുകൾ</span> <span class="trans">kilōmīṙṙṙukɭ̽</span></span>.</p>
+<p>If a word with the sound <span class="ipa">tt</span> is spelled using an unstacked pair of these characters, the pair acts as a single unit with prescript vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">മാറെറാലി</span> <span class="trans">māṙeṙāli</span> <span class="ipa">maːṯṯoli</span> <span class="meaning">echo</span></span>. To achieve the correct positioning of vowel-signs here, however, it is necessary to use the decomposed forms of the vowel (see the transcription). Otherwise you would end up with <span class="charExample" translate="no"><span class="ex" lang="ml">മാററൊലി</span> <span class="trans">māṙṙoli</span></span>, where the prescript part of the vowel is in the wrong place.</p>
+<p>Similarly, <span class="charExample" translate="no"><span class="ex" lang="ml">ൻ്റ</span> <span class="trans">n͓̽ṙ</span></span> is always pronounced <span class="ipa">nta</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">ആൻ്റോ</span> <span class="trans">ận͓̽ṙō</span> <span class="ipa">aːntoː</span> <span class="meaning">proper name</span></span>.</p>
+<p>According to the Unicode Standard, an alternative spelling exists without the stack, ie. <span class="charExample" translate="no"><span class="ex" lang="ml">ആൻേറാ</span> <span class="trans">ận̽ēṙā</span> <span class="ipa">aːntoː</span></span> (note that again we had to split the vowel), but this can also lead to ambiguity.<sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u506</a></sup></p>
+</section>
+    
+    
+    
+<section>
+<h3 id="joiner">Using ZWJ &amp; ZWNJ</h3>
+<p>According to the Unicode Standard:<sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u505</a></sup></p>
+<ul>
+<li><span class="codepoint" translate="no"><a href="devanagari#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a></span>placed <em>after</em> the <span class="name">chandrakkala</span>  can be used to force the production of a visible virama, rather than a conjunct form. For example, <span class="codepoint" translate="no"><span lang="ml">&#x0D15;</span> + <span lang="ml">&#x0D4D;</span> + <span class="uname">ZWNJ</span> + <span lang="ml">&#x0D15;</span> [<a href="/scripts/malayalam/block#char0D15"><span class="uname">U+0D15 MALAYALAM LETTER KA</span></a> + <a href="/scripts/malayalam/block#char0D4D"><span class="uname">U+0D4D MALAYALAM SIGN VIRAMA</span></a> + <a href="/scripts/malayalam/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a> + <a href="/scripts/malayalam/block#char0D15"><span class="uname">U+0D15 MALAYALAM LETTER KA</span></a>]</span> produces <span class="charExample" translate="no"><span class="ex" lang="ml">ക്‌ക</span></span>, rather than <span class="charExample" translate="no"><span class="ex" lang="ml">ക്ക</span></span>.</li>
+<li>Uniquely to Malayalam, placing the ZWSP <em>before</em> the <span class="name">chandrakkala</span> is supposed to produce the modern 'open' form of the conjunct in fonts that would otherwise produce a traditional conjunct, eg. <span class="codepoint" translate="no"><span lang="ml">&#x0D15;</span> + <span class="uname">ZWNJ</span> + <span lang="ml">&#x0D4D;</span> + <span lang="ml">&#x0D30;</span> [<a href="/scripts/malayalam/block#char0D15"><span class="uname">U+0D15 MALAYALAM LETTER KA</span></a> + <a href="/scripts/malayalam/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a> + <a href="/scripts/malayalam/block#char0D4D"><span class="uname">U+0D4D MALAYALAM SIGN VIRAMA</span></a> + <a href="/scripts/malayalam/block#char0D30"><span class="uname">U+0D30 MALAYALAM LETTER RA</span></a>]</span> should produce the form <span class="charExample" translate="no"><span class="ex" lang="ml">ക്ര</span></span>.</li>
+<li><span class="codepoint" translate="no"><a href="devanagari#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a></span> can  be used <em>before</em> the <span class="name">chandrakkala</span>  to produce a traditional conjunct form in fonts that produce the open form by default but have the glyphs for the traditional forms too.</li>
+<li><span class="codepoint" translate="no"><a href="devanagari#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a></span>  used <em>after</em> the <span class="name">chandrakkala</span> should produce a chillu form, but this approach is now deprecated in favour of using the chillu codepoints. See <a class="secref">finals</a>.</li>
+</ul>
+<p>Unfortunately, the 2nd and 3rd approaches don't work with the Malayalam fonts on my system.</p>
+</section>
+</section>
+
+
+
+
+
+
+<section>
+<h2 id="cchar">Combining marks</h2>
+    <p>In addition to the <a href="#vowelsigns">vowel-signs</a>, <a href="vocalics">vocalics</a>, and <a href="finals">final consonants</a> already mentioned, the Malayalam block contains the following diacritics.</p>
+
+<figure class="characterBox auto"  data-cols="">ഀ␣ഁ␣഻␣഼␣്</figure>
+
+<p><span class="codepoint" translate="no"><span lang="ml">&#x0D4D;</span> [<a href="/scripts/malayalam/block#char0D4D"><span class="uname">U+0D4D MALAYALAM SIGN VIRAMA</span></a>]</span> is used to kill the inherent vowel, and to produce conjunct behaviour in consonant clusters (see <a class="secref">absence</a>).</p>
+</section>
+    
+    
+    
+    
+    
+<section> 
+<h2 id="punctuation">Punctuation</h2>
+		<p>The Malayalam Unicode block contains no punctuation marks. However, older texts use the danda phrase delimiters found in the Devanagari block (see <a class="secref">phrase</a>).</p>
+
+<figure class="characterBox auto"  data-cols="">।␣॥</figure>
+</section>
+   
+    
+    
+    
+    
+<section> 
+<h2 id="numbers">Numbers, dates, currency, etc</h2>
+		<p>There is a set of Malayalam digits, but they are not use for modern texts. </p>
+
+<figure class="characterBox auto"  data-cols="trans,transc">൦␣൧␣൨␣൩␣൪␣൫␣൬␣൭␣൮␣൯</figure>
+
+		<p>Older texts also used the following additional numeric characters.</p>
+
+<figure class="characterBox auto"  data-cols="trans,transc">൰␣൱␣൲␣൳␣൴␣൵</figure>
+
+<p>According to the  Unicode Standard, Malayalam also used the following characters in the Common Indic Number Forms block.<sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u507</a></sup></p>
+
+<figure class="characterBox auto" data-translit="¼␣½␣¾" data-cols="">꠰␣꠱␣꠲</figure>
+
+
+
+<section>
+<h3 id="dates">Dates</h3>
+
+<p><span class="codepoint" translate="no"><span lang="ml">&#x0D79;</span> [<a href="/scripts/malayalam/block#char0D79"><span class="uname">U+0D79 MALAYALAM DATE MARK</span></a>]</span> can be used like the 'th' in English dates, but it use is fading in modern text. <sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u507</a></sup></p>
+</section>
+</section>
+
+
+
+
+
+
+<section>
+<h2 id="shaping">Glyph shaping &amp; positioning</h2>
+
+<p>You can experiment with examples using the <a href="/pickers/malayalam/">Malayalam picker</a>.</p>
+
+
+<section>
+<h3 id="gsub">Context-based shaping</h3>
+
+<p>Display technology needs to provide shaping for conjunct formation.</p>
+</section>
+
+
+<section>
+<h3 id="gpos">Context-based positioning</h3>
+
+			<p>Display technology must correctly position prescript vowels to the left of the consonant or consonant cluster, and place the separate glyphs of 2-part vowels around those also.</p>
+<p>It must do a similar thing for display of <span class="uname">RA</span> using the orthographic reforms.</p>
+</section>
+</section>
+
+
+
+
+
+
+<section>
+<h2 id="boundaries">Structural boundaries &amp; markers</h2>  
+  
+<section>
+<h3 id="word">Word boundaries</h3>
+ <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+
+<p>Spaces are often used between words, but it is not uncommon for writers to use spacing to indicate phonological pauses, rather than lexical boundaries. <sup><a href="http://scriptsource.org/scr/Mlym">s</a></sup></p>
+<p>Sequences of characters between spaces are often quite long in Malayalam, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">അറിയപ്പെടുന്നുവെങ്കിലും</span> <span class="trans">ạ̄ṙiyp͓peʈun͓nuʋeŋ͓kilum̽</span></span>.</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="phrase">Phrase boundaries</h3>
+<p>Malayalam uses western punctuation.</p>
+<p>Older texts used <span class="codepoint" translate="no"><span lang="ml">&#x0964;</span> [<a href="/scripts/malayalam/block#char0964"><span class="uname">U+0964 DEVANAGARI DANDA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ml">&#x0965;</span> [<a href="/scripts/malayalam/block#char0965"><span class="uname">U+0965 DEVANAGARI DOUBLE DANDA</span></a>]</span> to separate phrases.</p>
+</section>
+</section>
+ 
+ 
+ 
+ 
+ 
+<section>
+<h2 id="paralayout">Line &amp; paragraph layout</h2>
+   
+      
+<section>
+    <h3 id="linebreak">Line breaking &amp; hyphenation</h3>
+<p>Spaces provide the main line break opportunities.</p>
+</section>
+
+
+
+ <section>
+    <h3 id="justification">Text alignment &amp; justification</h3>
+    <p>tbd</p>
+</section>
+
+
+
+
+<section>
+  <h3 id="lists">Counter styles</h3>
+  
+<p>Malayalam uses, according to the document <a href="https://w3c.github.io/predefined-counter-styles/#tamil-styles">Ready-made Counter Styles</a>, a numeric counter style.</p>
+<p>The  style uses the Malayalam digits: '൦' '൧' '൨' '൩' '൪' '൫' '൬' '൭' '൮' '൯'.</p>
+<figure>
+<p class="large">1&nbsp;⇨&nbsp;<span class="ex" lang="km">൧</span> 2&nbsp;⇨&nbsp;<span class="ex" lang="km">൨</span> 3&nbsp;⇨&nbsp;<span class="ex" lang="km">൩</span> 4&nbsp;⇨&nbsp;<span class="ex" lang="km">൪</span> <br>
+11&nbsp;⇨&nbsp;<span class="ex" lang="km">൧൧</span> 22&nbsp;⇨&nbsp;<span class="ex" lang="km">൨൨</span> 33&nbsp;⇨&nbsp;<span class="ex" lang="km">൩൩</span> 44&nbsp;⇨&nbsp;<span class="ex" lang="km">൪൪</span> <br>
+111&nbsp;⇨&nbsp;<span class="ex" lang="km">൧൧൧</span> 2222&nbsp;⇨&nbsp;<span class="ex" lang="km">൨൨൨</span></p>
+<figcaption>Numbers produced by the numeric counter style<span class="trans"></span>.</figcaption>
+</figure>
+<p>You can experiment with this style using the <a href="../../r12a.github.io/apps/counterconverter/">Counter styles converter</a>.</p>
+</section>
+</section>
+
+
+
+
+
+
+
+<section>
+    <h3 id="tbd">TBD</h3>
+<p class="ednote">Further information needed for this section includes:</p>
+<pre style="margin-left: 10%;">
+Glyph shaping &amp; positioning
+    Cursive text
+    Context-based shaping
+    Multiple combining characters
+    Context-based positioning
+    Transforming characters
+
+Structural boundaries &amp; markers
+    Grapheme, word &amp; phrase boundaries
+    Hyphens &amp; dashes
+    Bracketing information
+    Quotations
+    Abbreviations, ellipsis, &amp; repetition
+    Emphasis &amp; highlights
+    Inline notes &amp; annotations
+
+Inline layout
+    Inline text spacing
+    Bidirectional text
+
+Line &amp; paragraph layout
+    Text direction
+    Line breaking
+    Hyphenation
+    Text alignment &amp; justification
+    Counters, lists, etc.
+    Styling initials
+    Baselines &amp; inline alignment
+
+Page &amp; book layout
+    General page layout &amp; progression
+    Directional layout features
+	Grids &amp; tables
+    Notes, footnotes, etc.
+    Forms &amp; user interaction
+    Page numbering, running headers, etc.
+</pre>
+</section>
+
+
+
+ 
+	
+
+
+	<section> 
+
+    <h2 id="refs">References</h2>
+		<ol>
+			<!--li>[Daniels] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
+				0-19-507993-0</li-->
+<li>[ <sup><a href="http://en.wikipedia.org/wiki/Malayalam_script">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Malayalam_script">Malayalam script</a></li>
+			<li>[ <sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u</a></sup> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf">The Unicode Standard v11.0</a></li>
+</ol>
+</section>
+
+
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/malayalam"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-02-14  10:01<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bmalayalam%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fmalayalam%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
+<div id="panel" style="display:none"></div>
+
+<script>
+initialiseSummary('/scripts/malayalam/block','ml','Malayalam')
+</script>
+
+</body>
+</html>
