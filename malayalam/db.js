@@ -19,7 +19,7 @@ var spreadsheet = `
 ദ	d¶	d	d¶	d	d̪	consonant					
 ധ	D¶	dʰ	D¶	dh	d̪ʰ	consonant					
 ന	n¶	n	n¶	n	n̪ n	consonant					
-ഩ	n					consonant			archaic		
+ഩ	n	ṅ	n	ṉ	n	consonant			archaic		
 പ	p	p	p	p	p	consonant					
 ഫ	P	pʰ	P	ph	pʰ	consonant					
 ബ	b	b	b	b	b	consonant					
@@ -36,8 +36,7 @@ var spreadsheet = `
 ഷ	s	ʂ	s	ṣ	ʂ	consonant					
 സ	s¶	s	s¶	s	s	consonant					
 ഹ	h	h	h	h	ɦ	consonant					
-ഺ						consonant			archaic		
-											
+ഺ	t	ṫ	t	 ṯ	t	consonant			archaic													
 											
 ൺ	N	ɳ̽	N	ṇ^	n	chillu consonant					
 ൻ	N	n̽	N	n^	n	chillu consonant					
@@ -80,15 +79,14 @@ var spreadsheet = `
 ൌ	a	ȧʷ	a	au	au̯	historic vowel sign			archaic		
 											
 											
-ൃ	R	r̥	R	r̥	rɨ	vowel sign					ഋ
-ൄ	R	r̥̄	R	r̥̄		vowel sign			very rare		ൠ
 ഋ	R	r̥̣	R	r̥̣	rɨ	independent vowel				ൃ	
-ൠ	R	r̥̣̄	R	r̥̣̄	riː	independent vowel			very rare	ൄ	
-ൢ	L	l̥	L	l̥	lu	vowel sign			very rare		ഌ
-ൣ	L	l̥̄	L	l̥̄		vowel sign			very rare		ൡ
-ഌ	L	l̥̣	L	l̥̣		independent vowel			(in one Sanskrit word only)	ൢ	
-ൡ	L	l̥̣̄	L	l̥̣̄		independent vowel			very rare	ൣ	
-											
+ൠ	R	r̥̣̄	R	r̥̣̄	rɨː	independent vowel			very rare	ൄ	
+ഌ	L	l̥̣	L	l̥̣	lɨ	independent vowel			(in one Sanskrit word only)	ൢ	
+ൡ	L	l̥̣̄	L	l̥̣̄	lɨː	independent vowel			very rare	ൣ	
+ൃ	R	r̥	R	r̥	rɨ	vowel sign					ഋ
+ൄ	R	r̥̄	R	r̥̄	rɨː	vowel sign			very rare		ൠ
+ൢ	L	l̥	L	l̥	lɨ	vowel sign			very rare		ഌ
+ൣ	L	l̥̄	L	l̥̄	lɨː	vowel sign			very rare		ൡ											
 											
 ൦	0	0	0	0		digit					
 ൧	1	1	1	1		digit					
