@@ -46,10 +46,10 @@ var spreadsheet = `
 ศ	s	ś	s -t	s -t	high class consonant	so sala	ศ ศาลา	
 ษ	s	ṣ	s -t	s -t	high class consonant	so rue-si	ษ ฤๅษี	
 ซ	s	ṡ̱	s -t	s -t	low class consonant	so so	ซ โซ่	
-ฝ	f	f̱	f -p	f -p	low class consonant	fo fan	ฟ ฟัน	
-ฟ	f	ḟ̱	f	f	low class consonant	fo fa	ฝ ฝา	
+ฝ	f	f	f -p	f -p	high class consonant	fo fan	ฟ ฟัน	
+ฟ	f	f̱	f	f	low class consonant	fo fa	ฝ ฝา	
 								
-อ	}	ʔ	' o	- ɔː	mid class consonant	o ang	อ อ่าง	
+อ	}	ʔ̯	' o	- ɔː	mid class consonant	o ang	อ อ่าง	
 								
 								
 								
@@ -114,20 +114,20 @@ var spreadsheet = `
 								
 								
 								
--ือ	U	-ɯ̄ʔ	ūe	ɯː				
--็อ	O	˘ʔ		o				
+-ือ	U	-ɯ̄ʔ̯	ūe	ɯː				
+-็อ	O	˘ʔ̯		o				
 -ัว	U	-äw̱	ua	ua				
 -ัย	A	-äy̱	ai	ai aj				
 -ิว	I	-iw̱	io	iu iw				
 -าว	A	-āw̱	ao	aːu				
 -าย	A	-āy̱	ai	aːi aːj				
--อย	O	-ʔy̱	oi	ɔːi ɔːj				
+-อย	O	-ʔ̯y̱	oi	ɔːi ɔːj				
 -ุย	U	-uy̱	ui	ui uj				
 -ูย		-ūy̱	ui					
 -วย	U	-w̱y̱	uai	uai uaj				
 เ-ะ	E	e-a	e	e				
 เ-็	E	e-˘		e				
-เ-อ	V	e-ʔ	oe	ɤː				
+เ-อ	V	e-ʔ̯	oe	ɤː				
 เ-ิ	V	e-i		ɤː				
 เ-ว	E	e-w̱	eo	eːu eːw				
 เ-า	A	e-ā	ao	au aw				
@@ -138,21 +138,24 @@ var spreadsheet = `
 โ-ะ	O	o-a	o	o				
 โ-ย	O	o-y̱	oi	ɔːi ɔːj				
 ไ-ย	A	aʲ-y̱	ai	ai aj				
--็อย	O	-˘ʔy̱		ɔi ɔj				
+-็อย	O	-˘ʔ̯y̱		ɔi ɔj				
 -ัวะ	U	-äw̱a		uaʔ				
 เ-าะ	E	e-āa	o	ɔ				
-เ-อะ	V	e-ʔa	oe	ɤʔ				
-เ-ือ	U	e-ɯ̄ʔ	uea	ɯa				
+เ-อะ	V	e-ʔ̯a	oe	ɤʔ				
+เ-ือ	U	e-ɯ̄ʔ̯	uea	ɯa				
 เ-็ว	E	e-˘w̱	eo	eu ew				
 เ-ีย	I	e-īy̱	ia	ia				
 เ-ียะ	I	e-īy̱a	ia	iaʔ				
-เ-ือะ	U	e-ɯ̄ʔa	uea	ɯaʔ				
+เ-ือะ	U	e-ɯ̄ʔ̯a	uea	ɯaʔ				
 เ-ียว	I	e-īy̱w̱	iao	iau iaw				
-เ-ือย	U	e-ɯ̄ʔy̱	ueai	ɯai ɯaj				
+เ-ือย	U	e-ɯ̄ʔ̯y̱	ueai	ɯai ɯaj				
 ฤๅ	R	r̥ɯ̃		rɯː				
-ฦๅ	L	l̥ɯ̃		lɯː												
+ฦๅ	L	l̥ɯ̃		lɯː				
 								
-ฯลฯ	E	⋯ḻ⋯		pajjaːnjài				`
+								
+ฯลฯ	E	⋯ḻ⋯		pajjaːnjài				
+`
+
 
 var cols = {
 "transLoc": 2,
