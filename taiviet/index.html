@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<title>Tai Viet script notes</title>
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="description" content="Summary of the Tai Viet script."/>
+<link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../common/local.css" />
+<!--link rel="stylesheet" href="../style/print.css"/-->
+<style>
+@font-face {
+    font-family: 'Tai Heritage WF';
+	src: 	local('Tai Heritage Pro'),
+   			url('../../shared/webfonts/taiheritagepro-regular-webfont.woff2') format('woff2'),
+    		url('../../shared/webfonts/taiheritagepro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+@font-face {
+	font-family: 'Noto Sans Tai Viet WF';
+	src: 	local('Noto Sans Tai Viet'),
+			url('../../shared/webfonts/notosanstaiviet-regular-webfont.woff2') format('woff2'),  
+			url('../../shared/webfonts/notosanstaiviet-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	}
+#freeText {
+	font-size: 28px;
+	font-family: "Tai Heritage WF", "Noto Sans Tai Viet WF", serif;
+	text-align: start;
+    line-height: 2;
+	}
+@media print { #freeText { font-size: 18px; } }
+[lang=blt] { font-family: "Tai Heritage WF", "Noto Sans Tai Viet WF", serif; font-size: 140%; }
+.large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }	
+</style>
+
+<script src="db.js"> </script>
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2019.js"></script>
+<script src="../../shared/code/all-names.js"></script>
+<script src="../../shared/code/character_conversion.js"></script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/fontlists/manage.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
+<script src="../common/functions.js"></script>
+<script src="../../shared/code/getLinks.js"></script>
+<script src="../linkdata/linkdb.js"></script>
+<script src="../featurelist/scriptdata.js"> </script>
+
+<script src="../../shared/fontlists/taiviet.js"> </script>
+</head>
+
+<body>
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
+</header>
+
+<h1>Tai Viet script summary</h1>
+
+<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top"/></a></nav>
+
+  <aside class="sidebar"> 
+		<h2 class="notoc flush"><a id="tochead" name="tochead" tabindex="4">Contents</a></h2>
+		<div id="toc"><!-- placeholder --></div>
+
+ <div id="fontsetting" class="closed">
+  <h2 class="notoc"><a id="fonts">Fonts</a></h2>
+  <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'blt');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'blt');" />
+    </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
+    <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
+	return false;">
+      <p>Change size:<br />
+        <input id="slider" type="range" min="12" max="100" step="1" value="32">
+        &#xA0; <span id="sizeIndicator">32px</span><br />
+        <input id="multiplier" type="hidden" value="1" />
+        Multiplier:
+        <input type="radio" name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x1">1</label>
+        <input type="radio" name="step" id="x5" value="2"  onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x5">2</label>
+        <input type="radio" name="step" id="x10" value="10"  onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x10">10</label>
+      </p>
+    </form>
+</div>
+</aside>
+
+	<p id="status">Updated Mon 13 Oct 2014  &bull; tags <a href="http://r12a.github.io/blog/index.php?tag=taiviet" title="Show all blog posts tagged with 'taiviet'">taiviet</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+
+	<div class="section">
+	  <p>This page provides basic information about the Tai Viet script. It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned.  For character-specific details follow the links to the <a class="linkHighlight" href="/scripts/taiviet/block">Tai Viet character notes</a>.</p>
+<p>For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>.</p>
+<p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+  
+  <details id="scriptLinks">
+  <summary class="instructions">More links for the Tai Viet script.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Tavt')</script>
+  </details>
+</div>
+
+
+
+<section>
+<h2 id="sample">Sample (Tai dam)</h2>
+  
+
+  <div id="freeText" dir="ltr" lang="blt" data-target="c" data-base="/scripts/taiviet/block" data-source="http://unicode.org/udhr/translations.html">
+  <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">ꪭꪴꪒ 1 ꪹꪕꪸꪉ ꪀꪱ ꪋꪴ ꫛ ꪎꪲꪉ ꪮꪮꪀ ꪣꪱ ꪻꪠ ꪁꪷ ꪻꪬ ꪼꪒ ꪕꪳ ꪕꪱꪉ ꪀꪾꪚ ꪹꪋꪷꪉ ꪝꪸꪉ ꪕꪮꪥ ꪩꪾ ꫛ ꪶꪔꪙ ꪠꪴ - ꪋꪴ ꪬꪺ ꫛ ꪻꪠ ꪁꪷ ꪻꪬ ꪣꪲ ꪁꪫꪸꪙ ꪎꪱꪉ ꪶꪎꪣ ꪩꪺꪉ ꪹꪥꪸꪒ ꫛ ꪀꪾꪚ ꪹꪥꪸꪒ ꪻꪊ ꪚꪴꪙ ꪀꪾꪚ ꪼꪒ ꪹꪚꪷꪉ ꪒꪲ ꪀꪾꪚ ꪫꪸꪀ ꪭꪰꪀ ꪵꪝꪉ ꪹꪏꪉ ꪹꪭꪙ ꪒꪸꪫ.</p>
+  <p  title="UDHR, article 2" onMouseUp="showtext('freeText')">ꪭꪴꪒ 2
+
+ꪋꪴ ꫛ ꪻꪠ ꪁꪷ ꪝꪮꪣ ꪼꪒ ꪹꪬꪉ ꪝꪳꪉ ꪁꪫꪸꪙ ꪹꪜꪸꪙ ꪹꪊꪱ ꪀꪾꪚ ꪕꪳ ꪕꪱꪉ ꪹꪏꪉ ꪹꪫꪱ ꪀꪺꪉ ꪻꪚ ꪜꪱꪫ ꪁꪫꪱꪣ ꪙꪲ, ꪹꪚꪱ ꪜꪽ ꪵꪊꪀ ꪹꪋ ꪡꪽ - ꪹꪙ ꪘꪰꪉ - ꪻꪊ ꪈꪾ - ꪁꪫꪱꪣ ꪜꪱꪀ - ꪭꪲꪒ ꪅꪮꪉ - ꪩꪺꪉ ꪜꪴꪙ ꪵꪔꪉ ꪀꪨꪰꪒ ꪄꪮꪉ ꪹꪊꪱ ꪭꪳ ꪫꪱ ꪩꪺꪉ ꪀꪨꪰꪒ ꪮꪳꪙ, ꪶꪀꪀ ꪹꪅꪱ ꪹꪬꪱ ꪭꪱꪀ ꪚꪱꪙ ꪹꪣꪉ ꪬꪱꪀ ꪣꪲ ꪭꪳ ꪫꪱ ꪚꪱꪙ ꪹꪣꪉ ꪙꪾ ꪣꪲꪉ ꪎꪲꪉ ꪄꪮꪉ. ꪄꪮꪉ ꪹꪊꪱ ꪬꪱꪀ ꪼꪒ ꪬꪱꪀ ꪣꪲ ꪭꪳ ꪫꪱ ꪹꪜꪸꪙ ꪵꪔ ꪚꪱꪙ ꪹꪣꪉ ꪕꪰꪒ ꪮꪮꪀ.</p>
+  <!-- Source: https://unicode.org/udhr/d/udhr_blt.html -->
+  </div>
+</section>
+
+
+
+
+ 
+
+<section>
+    <h2 id="history">Usage &amp; history</h2>
+    <p>From <a href="http://scriptsource.org/scr/Tavt">Scriptsource</a>: </p>
+    <blockquote>
+<p>The Tai Viet script is used for writing the Tai Dam, Tai Dón, Tai Daeng, Thai Song and Tày Tac languages spoken in Vietnam, Laos, China and Thailand. Speakers of these languages are also found in the United States, Australia and France. There is significant variation in the orthographic conventions of the Tai languages, as well as in their phonologies, which in turn impacts the orthography. However, a unified, standardized version of the script, with an agreed upon core set of characters, was developed at a UNESCO-sponsored workshop in 2006, and subsequently accepted for encoding in The Unicode Standard. ...</p>
+<p>Little is known about the origin of the Tai Viet script. It appears to have been derived from the Thai script around the 16th century, which is in turn of Khmer, and ultimately Brahmic, origin.</p>
+</blockquote>
+    <p>From <a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">The Unicode Standard</a>:</p>
+<blockquote>
+<p>The Tai Viet script is used by three Tai languages spoken primarily in northwestern Viet-nam, northern Laos, and central Thailand: Tai Dam (also Black Tai or Tai Noir), Tai Dón (White Tai or Tai Blanc), and Thai Song (Lao Song or Lao Song Dam). The Thai Song of Thailand  are  geographically  removed  from,  but  linguistically  related  to  the  Tai  people  of Vietnam and Laos. There are also populations in Australia, China, France, and the United States. The script is related to other Tai scripts used throughout Southeast Asia. The total population  using  the  three  languages,  across  all  countries,  is  estimated  to  be  1.3  million (Tai Dam 764,000, Tai Dón 490,000, Thai Song 32,000). The script is still used by the Ta ipeople in Vietnam, and there is a desire to introduce it into formal education there. It is unknown whether it is in current use in Laos, Thailand, or China.</p>
+<p>Several  different  spellings  have  been  employed  for  the  name  of  the  script,  including  Tay Viet.  Linguists  commonly  use  “Thai”  to  indicate  the  language  of  central  Thailand,  and “Tai” to indicate the language family; however, even that usage is inconsistent.</p>
+</blockquote>
+</section>
+
+
+
+
+
+  <div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+    </table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+   </div>
+
+
+
+
+<section>
+    <h2 id="type">Distinctive features</h2>
+<p>The script  is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#alphabet">alphabet</a></span>. Both consonants and vowels are indicated by letters.  See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.</p>
+  <p>The following list describes some distinctive characteristics of the Tai Viet script.</p>
+<ul>
+<li>Most Southeast Asian scripts are abugidas, rather than alphabets, like Tai Viet. However, Tai Viet still uses vowel-signs to write consonants.</li>
+<li>
+<p>Tai Viet uses a visual encoding, so prescript vowel signs are not combining characters, and are typed and stored before the consonant that precedes them phonetically.</p>
+</li>
+<li>
+<p>Like other Tai scripts, there is a double set of initial consonants, one for low tone class and one for high tone class. </p>
+</li>
+<li><p>item</p></li>
+<li><p>item</p></li>
+</ul>
+ </section>
+
+
+
+
+
+ <section>
+<h2 id="chars">Character lists</h2>
+  <p>The Tai Viet script characters in Unicode 11.0 are in the following block: </p>
+    <ul>
+      <li> <a href="/uniview/?block=taiviet">Tai Viet</a> <span class="charCount">(61 letters, 9 marks,, 2 punctuation :   total 72)</span></li>
+    </ul>
+   <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li><a href="/app-charuse/?language=blt" target="_blank">Tai Dam</a> <span class="charCount">(46 letters, 7 marks, :   total 53)</span></li>
+</ul>
+<p>For character-specific details see the <a class="linkHighlight" href="/scripts/taiviet/block">Tai Viet character notes</a>.</p>
+</section>
+  
+  
+
+
+
+<section>
+<h2 id="structure">Structure</h2>
+  <p>The Tai languages are almost exclusively monosyllabic. A very small number of words have an unstressed initial syllable, and loan words may be polysyllabic.<sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf">b</a></sup></p>
+<p>The essential base of a Tai Viet syllable is, expressed in terms of characters:</p>
+<p><code>prescript vowel?, root consonant(s), combining vowel?, postscript vowel?, final consonant?</code></p>
+<p>The root consonant may be a cluster involving labialisation. Any combining vowel goes after the root consonant, including any labialisation.</p>
+<p>Tone marks expressed as combining characters always follow the root consonants and any combining vowels, ie. they come before any postscript vowel.</p>
+<p>Tone marks expressed as spacing characters always come at the very end.</p>
+<p>One other sequence occurs when  writing the vowel-final consonant combination <span class="trans">-ap</span>, which is written with a vowel placed over the final low-series <span class="trans">b</span>, rather than over the initial consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪁꪜꪾ</span> <span class="trans">kp̄aᵐ</span></span>. The sequence is:</p>
+<p><code>root consonant(s), final consonant, combining vowel</code></p>
+</section>
+<div id="showTranscriptions">
+<div>In yellow boxes, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<!--div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div-->
+</div>
+
+
+
+
+
+
+  <section>
+  <h2 id="direction">Text direction</h2>
+    <p>Tai Viet text is written horizontally, left to right.</p>
+  </section>
+   
+    
+      
+
+
+
+<section> 
+<h2 id="vowelsummary">Vowels</h2>
+
+<p>Tai Viet consonants have no inherent vowel. All vowels have to be written, using vowel-signs attached to  a consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪁꪲ</span> <span class="ipa">ki</span></span>.</p>
+<p>Vowel signs in Tai Viet are a mixture of combining characters and ordinary spacing characters.</p>
+<p>Vowel-signs can also be combined to create additional sounds.</p>
+<p>Three of the vowels produced represent a combination of vowel + final consonant sound, <span class="ipa">j</span> ,<span class="ipa">w</span>, <span class="ipa">n</span>, or <span class="ipa">p</span>. Other vowels represent the diphthongs <span class="ipa">ɨə</span>, <span class="ipa">iᵊ</span>, and <span class="ipa">uᵊ</span>.</p>
+<figure> </figure>
+
+
+
+
+
+
+
+<section>
+<h3 id="prescript">Prescript  vowel-signs</h3>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ꪼ␣ꪻ␣ꪵ␣ꪹ␣ꪶ</figure>
+
+<p>Of the vowel-signs, 5 appear to the left of the onset consonant. </p>
+<p>Like  Lao, Tai Viet uses a visual encoding model, so these characters are not combining characters, and are typed and stored before the base.</p>
+<p>Note that <span class="codepoint" translate="no"><span lang="blt">&#xAAB5;</span> [<a href="/scripts/taiviet/block#charAAB5"><span class="uname">U+AAB5 TAI VIET VOWEL E</span></a>]</span> should not be typed as two successive <span class="codepoint" translate="no"><span lang="blt">&#xAAB9;</span> [<a href="/scripts/taiviet/block#charAAB9"><span class="uname">U+AAB9 TAI VIET VOWEL UEA</span></a>]</span> characters.</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="consonant_vowels">Consonants used as vowels</h3>
+
+  
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ꪮ␣ꪯ␣ꪫ␣ꪜ</figure>
+
+
+
+<p><span class="codepoint" translate="no"><span lang="blt">&#xAAAE;</span> [<a href="/scripts/taiviet/block#charAAAE"><span class="uname">U+AAAE TAI VIET LETTER LOW O</span></a>]</span> and <span class="codepoint" translate="no"><span lang="blt">&#xAAAF;</span> [<a href="/scripts/taiviet/block#charAAAF"><span class="uname">U+AAAF TAI VIET LETTER HIGH</span></a></span>can represent vowels on their own. The word <span class="charExample" translate="no"><span class="ex" lang="blt">ꪮꪮꪀ</span> <span class="trans">ʔ̱ʔ̱ḵ</span> <span class="ipa">ʔɔʔ²</span> <span class="meaning">to go out</span></span> in fact shows the same character being used as both consonant and vowel in the same word. <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf">b</a></sup></p>
+<p>The other two are used in combination with other vowel signs, see <a class="secref">complex_vowels</a>.</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="vowelsigns">Other vowel-signs</h3>
+
+  
+<figure class="characterBox auto" data-cols="ipa,trans,transc">␣ꪰ␣ꪱ␣ꪲ␣ꪳ␣ꪴ␣ꪷ␣ꪾ␣ꪽ␣ꪸ␣ꪺ</figure>
+
+
+
+<p><span class="codepoint" translate="no"><span lang="blt">&#xAAB1;</span> [<a href="/scripts/taiviet/block#charAAB1"><span class="uname">U+AAB1 TAI VIET VOWEL AA</span></a>]</span>, <span class="codepoint" translate="no"><span lang="blt">&#xAABD;</span> [<a href="/scripts/taiviet/block#charAABD"><span class="uname">U+AABD TAI VIET VOWEL AN</span></a>]</span>, and <span class="codepoint" translate="no"><span lang="blt">&#xAABA;</span> [<a href="/scripts/taiviet/block#charAABA"><span class="uname">U+AABA TAI VIET VOWEL UA</span></a>]</span> are normal spacing characters; the rest are combining characters.</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="complex_vowels">Vowel-sign combinations</h3>
+<p>The  vowel-signs described  above can be mixed together with <span class="codepoint" translate="no"><span lang="blt">&#xAAAB;</span> [<a href="/scripts/taiviet/block#charAAAB"><span class="uname">U+AAAB TAI VIET LETTER HIGH VO</span></a>]</span> and <span class="codepoint" translate="no"><span lang="blt">&#xAA9A;</span> [<a href="/scripts/taiviet/block#charAA9A"><span class="uname">U+AA9A TAI VIET LETTER LOW BO</span></a>]</span> to produce additional sounds, as shown in the examples below.</p>
+  
+<figure class="characterBox auto vowelcluster" data-cols="ipa,trans,transc">ꪹ-ꪱ␣ꪹ-ꪸ␣ꪹ-ꪷ␣ꪵ-ꪫ␣-ꪚꪾ</figure>
+
+<p><span class="codepoint" translate="no"><span lang="blt">&#xAAAB;</span> [<a href="/scripts/taiviet/block#charAAAB"><span class="uname">U+AAAB TAI VIET LETTER HIGH VO</span></a>]</span> can be ambiguous in this combination unless there is a tone mark, see <a class="secref">medials</a>.</p>
+<p>The last item in the list is rather unusual. It puts the vowel-sign above the final consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪀꪚꪾ</span> <span class="trans">ḵaᵖ</span> <span class="ipa">kap²</span> <span class="meaning">with, and</span></span>.</p>
+</section>
+
+
+
+
+ 
+<section>
+<h3 id="placement">Vowel-sign placement</h3>
+
+<p>The following list shows where vowel-signs are positioned around a base consonant to produce vowels, and how many instances of that pattern there are. The figure after the + sign represents combinations of Unicode characters,</p>
+<ul>
+<li>5 prescript, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪶꪁ</span> <span class="trans">ok</span></span></li>
+<li>3 postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪁꪱ</span> <span class="trans">kā</span></span></li>
+<li>6 superscript, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪁꪲ</span> <span class="trans">ki</span></span></li>
+<li>1 subscript, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪁꪴ</span> <span class="trans">ku</span></span></li>
+<li>2 pre+postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹꪁꪱ</span> <span class="trans">ɨᵊkā (kaʷ)</span></span></li>
+<li>2 pre+superscript, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹꪁꪱ</span> <span class="trans">ɨᵊkā (ke)</span></span></li>
+<li>1 post+superscript, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪁꪜꪾ</span> <span class="trans">kp̄aᵐ (kap)</span></span></li>
+</ul>
+</section>
+
+
+
+
+ 
+<section>
+<h3 id="independentvowels">Standalone vowels</h3>
+<p class="explanatoryintro">Standalone vowels are not preceded by a consonant, and may appear at the beginning or in the middle of a word.</p>
+<p>Tai Viet represents standalone vowels using a vowel-sign attached to <span class="codepoint" translate="no"><span lang="blt">&#xAAAE;</span> [<a href="/scripts/taiviet/block#charAAAE"><span class="uname">U+AAAE TAI VIET LETTER LOW O</span></a>]</span> or <span class="codepoint" translate="no"><span lang="blt">&#xAAAF;</span> [<a href="/scripts/taiviet/block#charAAAF"><span class="uname">U+AAAF TAI VIET LETTER HIGH</span></a>]</span>.</p>
+</section>
+</section>
+
+
+
+
+
+
+
+<section> 
+<h2 id="taivietchar">Consonants</h2>
+<p>Each consonant is associated with a high or low class related to tone values. (In the r12a transliteration, low class consonants are indicated using an underline in the transliteration.) The consonants then work with tone marks to indicate the tone of the syllable.</p>
+
+
+
+
+<section>
+<h3 id="highclass">High class  consonants</h3>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ꪁ␣ꪃ␣ꪆ␣ꪉ␣ꪋ␣ꪍ␣ꪑ␣ꪕ␣ꪗ␣ꪓ␣ꪙ␣ꪝ␣ꪟ␣ꪛ␣ꪣ␣ꪩ␣ꪧ␣ꪥ␣ꪫ␣ꪭ␣ꪅ␣ꪏ␣ꪡ␣ꪮ</figure>
+</section>
+
+
+
+
+<section>
+<h3 id="lowclass">Low class  consonants</h3>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ꪀ␣ꪂ␣ꪇ␣ꪈ␣ꪊ␣ꪌ␣ꪐ␣ꪔ␣ꪖ␣ꪒ␣ꪘ␣ꪜ␣ꪞ␣ꪚ␣ꪢ␣ꪨ␣ꪦ␣ꪤ␣ꪪ␣ꪬ␣ꪄ␣ꪎ␣ꪠ␣ꪯ</figure>
+</section>
+
+
+
+
+<section>
+<h3 id="medials">syllable-initial consonants</h3>
+<p>The  consonant <span class="name">wa</span> can appear immediately after the initial consonant in a syllable. It is written using <span class="codepoint" translate="no"><span lang="blt">&#xAAAB;</span> [<a href="/scripts/taiviet/block#charAAAB"><span class="uname">U+AAAB TAI VIET LETTER HIGH VO</span></a>]</span>.</p>
+<p>The pronunciation of a syllable containing <span class="uname">WA</span> in non-initial position can be ambiguous, unless there is a diacritic, since the <span class="uname">WA</span> may or may not be a final consonant. Compare <span class="charExample" translate="no"><span class="ex" lang="blt">ꪀꪲꪫ</span> <span class="trans">ḵiw</span></span> and <span class="charExample" translate="no"><span class="ex" lang="blt">ꪀꪫꪲ</span> <span class="trans">ḵwi</span></span>, or <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪀ꫁ꪫ</span> <span class="trans">ɛḵ²w (k<span class="ipa">ʷɛ</span>)</span></span> vs. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪀꪫ꫁</span> <span class="trans">ɛḵw² (kɛw)</span></span>. <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf">b</a></sup></p>
+<p>In order to address the latter ambiguity,  the character <span class="codepoint" translate="no"><span lang="blt">&#xAAA5;</span> [<a href="/scripts/taiviet/block#charAAA5"><span class="uname">U+AAA5 TAI VIET LETTER HIGH YO</span></a>]</span> is sometimes appended to the end of the sequence to indicate the second pronunciation, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪁꪫꪥ</span> <span class="trans">ɛkwy</span> <span class="ipa">kʷɛ²</span> <span class="meaning">cinnamon</span></span>. Since <span class="ipa">j</span> never occurs after <span class="ipa">ɛ</span>, this can be done without creating a new ambiguity. This spelling is only used in some dialects of the traditional script, however, it has been adopted as a standard  in a project sponsored by the Son La Department of Science and Technology. <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf">b</a></sup></p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="finals">Syllable-final consonants</h3>
+	<p>Syllable-final plosives are written using the following low class consonants. These created 'checked' syllables.</p>
+<figure class="auto" data-cols="trans" data-ipa="-k -ʔ,-p,-t">ꪀ␣ꪚ␣ꪒ</figure>
+
+<p>For open syllables ending with nasals or glides, the following high class consonants are used.</p>
+<figure class="auto" data-cols="trans" data-ipa="-m,-n,-ŋ,-y,-w">ꪣ␣ꪙ␣ꪉ␣ꪥ␣ꪫ</figure>
+
+<p>In addition, several vowels carry a final consonant. See <a class="secref">vowelsummary</a>. These include:</p>
+<figure class="auto" data-cols="trans" data-ipa="-am,-an,-ap,-aw,-aj,-əw" data-ignore="-">ꪾ␣ꪽ␣-ꪜꪾ␣ꪹ-ꪱ␣ꪼ␣ꪻ</figure>
+</section>
+</section>
+ 
+ 
+ 
+  
+  
+<section>
+<h2 id="clusters">Consonant clusters</h2>
+<p class="explanatoryintro">When the shapes of constituent consonants in a cluster are changed or merged to indicate the lack of intervening vowels, this is referred to as a conjunct.</p>
+<p>@ The absence of a vowel sound between two or more consonants is visually indicated in one of the following ways.</p>
+<ol>
+<li>Stacked consonants, where the non-initial consonant appears below the initial, often with a different shape from normal.</li>
+<li>Conjoined consonants, where consonants sit side-by-side but the non-initial consonant has a slightly different form that usual.</li>
+<li>A visible <span class="name">adeg adeg</span> character following the initial consonant.</li>
+<li>A syllable-final consonant diacritic followed by a regular consonant.</li>
+</ol>
+<p>@ In Unicode, the stacking and conjoining behaviour is achieved by adding <span class="codepoint"><span lang="blt">&#x1B44;</span> <a href="/scripts/taiviet/block#char1B44">[<span class="uname">U+1B44 BALINESE ADEG ADEG​</span>]</a></span>  between the consonants. The font hides the glyph automatically.</p><p>@ Because there are no spaces between words, consonants at the end of one word and the beginning of the next also behave like other consonant clusters. When this leads to stacks or conjoined sequences, the joined words are not typically split at line ends.</p>
+
+
+		<section>
+			<h3 id="stacking">Stacking</h3>
+			<p>@ To represent consonants without intervening vowels, the non-initial consonant is typically drawn below the initial consonant, and with a slightly different shape. </p>
+<p>@ The following table shows 28 consonants in their normal and subjoined forms.</p>
+
+<figure class="auto bicameral" data-cols="ipa,trans,transc">ᬓ᭄ᬓ␣ᬔ᭄ᬔ␣ᬕ᭄ᬕ␣ᬖ᭄ᬖ␣ᬗ᭄ᬗ␣ᬘ᭄ᬘ␣ᬙ᭄ᬙ␣ᬚ᭄ᬚ␣ᬜ᭄ᬜ␣ᬝ᭄ᬝ␣ᬞ᭄ᬞ␣ᬟ᭄ᬟ␣ᬠ᭄ᬠ␣ᬡ᭄ᬡ␣ᬢ᭄ᬢ␣ᬣ᭄ᬣ␣ᬤ᭄ᬤ␣ᬥ᭄ᬥ␣ᬦ᭄ᬦ␣ᬩ᭄ᬩ␣ᬪ᭄ᬪ␣ᬫ᭄ᬫ␣ᬬ᭄ᬬ␣ᬭ᭄ᬭ␣ᬮ᭄ᬮ␣ᬯ᭄ᬯ␣ᬰ᭄ᬰ␣ᬳ᭄ᬳ</figure>
+
+<p>@ Many of the subjoined forms are just slightly smaller versions of the original, but several have very different shapes altogether, most of which ligate with the cluster initial consonant by joining strokes.</p>
+<p>@ There can be up to 3 consonants combined in this way, and the third consonant must be one of <span class="name">ya</span>, <span class="name">ra</span>, <span class="name">la</span> or <span class="name">wa</span>.</p>
+</section>
+
+
+
+
+		<section>
+		<h3 id="conjoined">Conjoined consonants</h3>
+			<p>@ Some consonants in non-initial positions in a cluster remain side by side, but the non-initial consonant uses a special conjoined form, eg.  the <span class="trans">s</span>, which is normally shaped <span class="charExample" translate="no"><span class="ex" lang="blt">ᬱ</span>, loses some ink to its left side</span> in <span class="charExample" translate="no"><span class="ex" lang="blt">ᬅᬓ᭄ᬱᬭ</span> <span class="trans">ạk͓ṡ̂r (akśara)</span> <span class="meaning">alphabet</span></span>, which is characteristic of all these conjoined forms.</p>
+
+<figure class="auto bicameral" data-cols="ipa,trans,transc">ᬓ᭄ᬲ␣ᬓ᭄ᬱ␣ᬓ᭄ᬋ␣ᬓ᭄ᬌ␣ᬓ᭄ᬨ␣ᬓ᭄ᬧ␣ᬓ᭄ᬧ᬴␣ᬓ᭄ᭈ␣ᬓ᭄ᭊ</figure>
+
+<p>@ The conjoined form of <span class="codepoint" translate="no"><span lang="blt">&#x1B32;</span> [<a href="taiviet#char1B32"><span class="uname">U+1B32 BALINESE LETTER SA</span></a>]</span> is unusual in that it involves strokes both below and to the right of the initial consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ᬧᬓ᭄ᬲ</span> <span class="trans">pk͓s (paksa)</span> <span class="meaning">force</span></span>.</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="initialclusters">syllable-initial consonant clusters</h3>
+<p>The  consonant <span class="name">wa</span> can appear immediately after the initial consonant in a syllable. It is written using <span class="codepoint" translate="no"><span lang="blt">&#xAAAB;</span> [<a href="/scripts/taiviet/block#charAAAB"><span class="uname">U+AAAB TAI VIET LETTER HIGH VO</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪁꪫꪥ</span> <span class="trans">ɛkwy</span> <span class="ipa">kʷɛ²</span> <span class="meaning">cinnamon</span></span>.</p>
+<p>The pronunciation of a syllable containing <span class="uname">WA</span> in non-initial position can be ambiguous, unless there is a diacritic, since the <span class="uname">WA</span> may or may not be a final consonant. Compare <span class="charExample" translate="no"><span class="ex" lang="blt">ꪀꪲꪫ</span> <span class="trans">ḵiw</span></span> and <span class="charExample" translate="no"><span class="ex" lang="blt">ꪀꪫꪲ</span> <span class="trans">ḵwi</span></span>, or <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪀ꫁ꪫ</span> <span class="trans">ɛḵ²w</span></span> vs. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪀꪫ꫁</span> <span class="trans">ɛḵw²</span></span>. <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf">b</a></sup></p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="wordclusters">Syllable-final diacritics</h3>
+	<p>@ As mentioned earlier, Tai Viet represents some final consonants using diacritics. Such syllable-final diacritics are followed by ordinary consonant shapes in consonant clusters.</p>
+</section>
+</section>
+
+
+
+<section>
+<h2 id="tones">Tones</h2>
+ 
+ <p>Until the latter part of the 20th century Tai Viet didn't mark tones other than by the consonant class. Since then, however, 2 methods have developed.</p>
+<p>Tai Dam speakers in the United States and speakers of the Song language borrowed combining tone marks from Lao/Thai.</p>
+
+<figure class="characterBox auto" data-cols="trans,transc">꪿␣꫁␣</figure>
+
+<p>These tone marks are typed and stored immediately after any combining vowel-sign, if there is one, otherwise after the initial consonant(s).</p>
+<p>The Tai community in Vietnam developed an alternative approach, where tone is marked by ordinary spacing characters that are typed and stored after all other elements in the syllable.</p>
+
+<figure class="characterBox auto" data-cols="trans,transc">ꫀ␣ꫂ</figure>
+<p>The following chart shows how to tell which tones are associated with a syllable. </p>
+<p class="explanatoryintro">'Checked' means ending in the sound <span class="ipa">-p</span>, <span class="ipa">-t</span>, or <span class="ipa">-k</span> or <span class="ipa">ʔ</span>.</p>
+<table width="200" border="0">
+<tbody>
+<tr>
+<th scope="col">Consonant</th>
+<th scope="col">Checked?</th>
+<th scope="col">Tone&nbsp;mark</th>
+<th scope="col">Tone</th>
+</tr>
+<tr>
+<td rowspan="4">high</td>
+<td>yes</td>
+<td>none</td>
+<td><strong>5</strong></td>
+</tr>
+<tr>
+<td rowspan="3">no</td>
+<td> none</td>
+<td><strong>4</strong></td>
+</tr>
+<tr>
+<td>꪿ or ꫀ</td>
+<td><strong>5</strong></td>
+</tr>
+<tr>
+<td>꫁ or ꫂ</td>
+<td><strong>6</strong></td>
+</tr>
+<tr>
+<td rowspan="4">low</td>
+<td>yes</td>
+<td>none</td>
+<td><strong>2</strong></td>
+</tr>
+<tr>
+<td rowspan="3">no</td>
+<td>none</td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td>꪿ or ꫀ</td>
+<td><strong>2</strong></td>
+</tr>
+<tr>
+<td>꫁ or ꫂ</td>
+<td><strong>3</strong></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+</section>
+
+
+
+
+
+
+<section>
+<h2 id="cchar">Combining marks</h2>
+    <p>@ In addition to the <a href="#vowelsigns">vowel-signs</a>, <a href="vocalics">vocalics</a>, and <a href="finals">final consonants</a> already mentioned, the Devanagari block contains the following diacritics, which are also introduced in the following sections, respectively, <a class="sectionref">extension</a>, and <a class="sectionref">suppression</a>.</p>
+
+<figure class="characterBox auto"  data-cols="">᬴␣᭄</figure>
+
+<p>@ <span class="codepoint"><span lang="blt">&#x1B01;</span> <a href="/scripts/taiviet/block#char1B01">[<span class="uname">U+1B01 BALINESE SIGN ULU CANDRA​</span>]</a></span> was already introduced to represent syllable-final consonants, but has a more general role in representing 'holy letters' or modre symbols.</p>
+<figure id="modre"><img class="ex" src="/c/Tai Viet/examples/modrewindu.png" alt="᭜ᬁ" /> &nbsp; <img class="ex" src="/c/Tai Viet/examples/modrepareren.png" alt="᭟ᬁ" /> &nbsp; <img class="ex" src="/c/Tai Viet/examples/modrepamada.png" alt="᭛ᬁ" />.
+<figcaption>Modre symbols that include <span class="name">ulu candra</span>.</figcaption>
+</figure>
+
+<p>@ There is also a set of musical diacritical marks, which are not described here.</p>
+</section>
+    
+    
+    
+    
+    
+<section> 
+<h2 id="punctuation">Punctuation</h2>
+		<p>@ The Tai Viet Unicode block contains the following punctuation marks.</p>
+
+<figure class="characterBox auto"  data-cols="">᭚␣᭛␣᭜␣᭝␣᭞␣᭟␣᭠</figure>
+
+		<p>@ All but the last are described in <a class="sectionref">phrase</a>, and the final mark is described in <a class="sectionref">linebreak</a>.</p>
+</section>
+    
+    
+    
+    
+    
+<section> 
+<h2 id="symbols">Symbols</h2>
+		<p>@ The Tai Viet Unicode block contains the following characters with the <span class="uname">symbol</span> property.</p>
+
+<figure class="characterBox auto"  data-cols="">᭚␣᭛␣᭜␣᭝␣᭞␣᭟␣᭠</figure>
+
+		<p>@ All but the last are described in <a class="sectionref">phrase</a>, and the final mark is described in <a class="sectionref">linebreak</a>.</p>
+</section>
+   
+    
+    
+    
+    
+<section> 
+<h2 id="numberdescn">Numbers</h2>
+		<p>@ There is a set of Tai Viet digits, and they are used in the same way as Latin digits. </p>
+
+<figure class="characterBox auto"  data-cols="">᭑␣᭒␣᭓␣᭔␣᭕␣᭖␣᭗␣᭘␣᭙␣᭐</figure>
+
+		<p>@ However, many of the digit symbols are indistinguishable from other Tai Viet letters. Numbers are typically surrounded by <span class="codepoint"><span lang="blt">&#x1B5E;</span> <a href="/scripts/taiviet/block#char1B5E">[<span class="uname">U+1B5E BALINESE CARIK SIKI</span>]</a></span>, so that they are easily recognisable, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ᬩᬮᬶ᭞᭓᭞ᬚᬸᬮᬶ᭞᭑᭙᭘᭒᭟</span> <span class="trans">bli,3,ʤuli,1982.</span> <span class="meaning">Bali, 3 July 1982</span></span>.</p>
+</section>
+<section>
+<h2 id="shaping">Glyph shaping &amp; positioning</h2>
+
+<p>@ You can experiment with examples using the <a href="/pickers/taiviet/">Tai Viet picker</a>.</p>
+
+
+<section>
+<h3 id="gsub">Context-based shaping</h3>
+
+  <p>@ Many of the subjoined and post-fixed consonant forms have different shapes from the standard glyph for that character, for example <span class="name">na</span> <span class="charExample"><span class="ex" lang="blt">ᬦ</span></span>  becomes &nbsp; <span class="charExample"><span class="ex" lang="blt">᭄ᬦ</span></span>.</p>
+<p>@ In addition, many conjunct clusters combine characters with special  shapes, or subtly change parts of glyphs to join smoothly. Often the changes are significant, especially the medial consonants, ya, ra, wa and la. For example, see the sequence &lt;ba, adeg-adeg, ra, adeg-adeg, ya&gt; in <span class="charExample" translate="no"><span class="ex" lang="blt">ᬩ᭄ᬭ᭄ᬬᬕ᭄</span> <span class="trans">b͓r͓yg͓ (briag)</span> <span class="meaning">laughter</span></span>.</p>
+<p>@ Combining vowel signs can also have different shapes depending on the context. For example, the vowel sign tedung typically ligates with the preceding consonant, eg. <span class="name">ha</span> is <span class="charExample"><span class="ex" lang="blt">ᬳ</span></span>  but <span class="name">&lt;ha, tedong&gt;</span> is <span class="charExample"><span class="ex" lang="blt">ᬳᬵ</span></span>  and <span class="name">subjoined ya</span> is &nbsp; <span class="charExample"><span class="ex" lang="blt" style="font-family: 'Aksara Bali WF'!important;">᭄ᬬ</span></span>  but <span class="name">&lt;consonant, adeg-adeg, ya, tedong&gt;</span> can be rendered as &nbsp; <span class="charExample"><span class="ex" style="font-family: 'Aksara Bali WF'!important;" lang="blt">᭄ᬬᬵ</span></span>.</p>
+</section>
+
+
+<section>
+<h3 id="gpos">Context-based positioning</h3>
+
+			<p>@ When a vowel and a final consonant sign both appear above a consonant, they are placed side by side, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ᬱᬫ᭄ᬧᬶᬂ</span> <span class="trans">sm͓piŋ̇̽ (samping)</span> <span class="meaning">side</span></span>.</p>
+</section>
+</section>
+
+
+
+
+
+
+<section>
+<h2 id="boundaries">Structural boundaries &amp; markers</h2>  
+  
+<section>
+<h3 id="word">Word boundaries</h3>
+ <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+
+<p>Unlike many other Tai scripts, Tai Viet uses spaces between words.<sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf">b</a></sup></p>
+<p>@ Words are not separated by spaces, and in fact some word boundaries occur between stacked consonants. This means that segmentation for line-breaking, etc. uses orthographic syllables as a unit, where orthographic means </p>
+<p>@ Devanagari has hyphenated words – mainly conjoined nouns, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">लाभ-हानि</span> <span class="trans">lābʰ-hāni</span> <span class="meaning">profit-loss</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="hi">माता-पिता</span> <span class="trans">mātā-pitā</span> <span class="meaning">parents</span></span>. <sup><a href="https://www.w3.org/TR/ilreq/">i</a></sup></p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="phrase">Phrase boundaries</h3>
+<p>@ Both <span class="codepoint"><span lang="blt">&#x1B5A;</span> <a href="/scripts/taiviet/block#char1B5A">[<span class="uname">U+1B5A BALINESE PANTI</span>]</a></span>  and <span class="codepoint"><span lang="blt">&#x1B5B;</span> <a href="/scripts/taiviet/block#char1B5B">[<span class="uname">U+1B5B BALINESE PAMADA</span>]</a></span>  are used to begin a section in text.</p>
+<p>@ <span class="codepoint"><span lang="blt">&#x1B5D;</span> <a href="/scripts/taiviet/block#char1B5D">[<span class="uname">U+1B5D BALINESE CARIK PAMUNGKAH</span>]</a></span>  is used as a colon, and <span class="codepoint"><span lang="blt">&#x1B5E;</span> <a href="/scripts/taiviet/block#char1B5E">[<span class="uname">U+1B5E BALINESE CARIK SIKI</span>]</a></span> and <span class="codepoint"><span lang="blt">&#x1B5F;</span> <a href="/scripts/taiviet/block#char1B5F">[<span class="uname">U+1B5F BALINESE CARIK PAREREN</span>]</a></span>   are used as comma and full stop respectively. </p>
+		<p>@ At the end of a section, <span class="charExample"><span class="ex" lang="blt">᭟᭜᭟</span></span> <span class="name">pasalinan</span> and <span class="charExample"><span class="ex" lang="blt">᭛᭜᭛</span></span> <span class="name">carik agung</span> may be used (depending on what sign began the section). These are encoded using the punctuation ring <span class="codepoint"><span lang="blt">&#x1B5C;</span> <a href="/scripts/taiviet/block#char1B5C">[<span class="uname">U+1B5C BALINESE WINDU</span>]</a></span>   together with <span class="codepoint"><span lang="blt">&#x1B5F;</span> <a href="/scripts/taiviet/block#char1B5F">[<span class="uname">U+1B5F BALINESE CARIK PAREREN</span>]</a></span>   and <span class="codepoint"><span lang="blt">&#x1B5B;</span> <a href="/scripts/taiviet/block#char1B5B">[<span class="uname">U+1B5B BALINESE PAMADA</span>]</a></span>. </p>
+</section>
+</section>
+ 
+ 
+ 
+ 
+ 
+<section>
+<h2 id="paralayout">Line &amp; paragraph layout</h2>
+   
+      
+  <section>
+    <h3 id="linebreak">Line breaking &amp; hyphenation</h3>
+    <p>@  Common practice is to break the sentence at any point when it reaches the end of a line, except that no line breaks should be allowed within syllable boundaries and no line breaks are allowed just before a colon, comma or full stop.</p>
+    <p>@ In lontar texts where a word must be broken at the end of a line (always after a full syllable), the sign <span class="codepoint"><span lang="blt">&#x1B60;</span> <a href="/scripts/taiviet/block#char1B60">[<span class="uname">U+1B60 BALINESE PAMENENG</span>]</a></span>  is inserted. This sign is not used as a word-joining hyphen; it is used only in linebreaking.</p>
+<p>@ For an application to use this correctly, it would need to know where the word boundaries are in the text, and then put this character at the end of the line only when a multisyllabic word is broken. This would require a dictionary to be applied to the text, as it is for line-breaking in Thai or Khmer, even though breaking on syllables is the default.  </p>
+</section>
+
+
+
+ <section>
+    <h3 id="justification">Text alignment &amp; justification</h3>
+    <p>@ According to <a href="http://www.babadbali.com/aksarabali/alphabet-c.htm#_Toc35514825">Sudewa</a>, full justification is not a feature of Tai Viet text in traditional palm-leaf manuscripts, and only left, or occasionally centred or right alignment is relevant.</p>
+</section>
+
+
+
+
+<section>
+  <h3 id="lists">Counter styles</h3>
+  
+<p>@ Khmer uses two counter styles, according to the document <a href="https://w3c.github.io/predefined-counter-styles/#tamil-styles">Ready-made Counter Styles</a>, one numeric and the other alphabetic.</p>
+<p>@ The numeric style uses the Khmer digits: '០' '១' '២' '៣' '៤' '៥' '៦' '៧' '៨' '៩'.</p>
+<figure>
+<p class="large">1&nbsp;⇨&nbsp;<span class="ex" lang="km">១</span> 2&nbsp;⇨&nbsp;<span class="ex" lang="km">២</span> 3&nbsp;⇨&nbsp;<span class="ex" lang="km">៣</span> 4&nbsp;⇨&nbsp;<span class="ex" lang="km">៤</span> 11&nbsp;⇨&nbsp;<span class="ex" lang="km">១១</span> 22&nbsp;⇨&nbsp;<span class="ex" lang="km">២២</span> 33&nbsp;⇨&nbsp;<span class="ex" lang="km">៣៣</span> 44&nbsp;⇨&nbsp;<span class="ex" lang="km">៤៤</span> 111&nbsp;⇨&nbsp;<span class="ex" lang="km">១១១</span> 2222&nbsp;⇨&nbsp;<span class="ex" lang="km">២២២</span></p>
+<figcaption>Numbers produced by the numeric counter style<span class="trans"></span>.</figcaption>
+</figure>
+
+
+<p>@ The alphabetic counter style uses the following letters: 'ក' 'ខ' 'គ' 'ឃ' 'ង' 'ច' 'ឆ' 'ជ' 'ឈ' 'ញ' 'ដ' 'ឋ' 'ឌ'
+'ឍ' 'ណ' 'ត' 'ថ' 'ទ' 'ធ' 'ន' 'ប' 'ផ' 'ព' 'ភ' 'ម' 'យ' 'រ' 'ល' 'វ'
+'ស' 'ហ' 'ឡ' 'អ'.</p>
+<figure>
+<p class="large">1&nbsp;⇨&nbsp;<span class="ex" lang="km">ក</span> 2&nbsp;⇨&nbsp;<span class="ex" lang="km">ខ</span> 3&nbsp;⇨&nbsp;<span class="ex" lang="km">គ</span> 4&nbsp;⇨&nbsp;<span class="ex" lang="km">ឃ</span> 11&nbsp;⇨&nbsp;<span class="ex" lang="km">ដ</span> 22&nbsp;⇨&nbsp;<span class="ex" lang="km">ផ</span> 33&nbsp;⇨&nbsp;<span class="ex" lang="km">អ</span> 44&nbsp;⇨&nbsp;<span class="ex" lang="km">កដ</span> 111&nbsp;⇨&nbsp;<span class="ex" lang="km">គឋ</span> 2222&nbsp;⇨&nbsp;<span class="ex" lang="km">ចភ</span></p>
+<figcaption>Numbers produced by the alphabetic counter style<span class="trans"></span>.</figcaption>
+</figure>
+<p>@ You can experiment with these styles using the <a href="../../r12a.github.io/apps/counterconverter/apps/counterconverter/">Counter styles converter</a>.</p>
+</section>
+</section>
+ 
+ 
+ 
+ 
+ 
+ <section>
+ <h2 id="pagelayout">Page &amp; book layout</h2>
+ 
+  <section>
+    <h3 id="generallayout">General page layout &amp; progression</h3>
+    <p>@ Traditionally, Tai Viet was written on thin, landscape palm-leaf manuscripts, called <a href="https://en.wikipedia.org/wiki/Palm-leaf_manuscript#Javanese_and_Tai Viet">lontar</a>. </p>
+    <figure id="palm_leaf">
+        <p>@ <a href="https://upload.wikimedia.org/wikipedia/commons/8/8c/Arjunawiwaha_canto_5.jpg"><img style="width: 100%;" src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Arjunawiwaha_canto_5.jpg" alt="Picture of a palm leaf manuscript."/></a></p>
+    <figcaption>Example of a palm-leaf manuscript from <a href="https://upload.wikimedia.org/wikipedia/commons/8/8c/Arjunawiwaha_canto_5.jpg">Wikipedia</a>.</figcaption>
+    </figure>
+<p>@ The text was packed in without paragraph breaks.</p>
+</section>
+</section>
+
+
+
+
+
+
+
+<section>
+    <h3 id="tbd">TBD</h3>
+<p class="ednote">Further information needed for this section includes:</p>
+<pre style="margin-left: 10%;">
+Glyph shaping &amp; positioning
+    Cursive text
+    Context-based shaping
+    Multiple combining characters
+    Context-based positioning
+    Transforming characters
+
+Structural boundaries &amp; markers
+    Grapheme, word &amp; phrase boundaries
+    Hyphens &amp; dashes
+    Bracketing information
+    Quotations
+    Abbreviations, ellipsis, &amp; repetition
+    Emphasis &amp; highlights
+    Inline notes &amp; annotations
+
+Inline layout
+    Inline text spacing
+    Bidirectional text
+
+Line &amp; paragraph layout
+    Text direction
+    Line breaking
+    Hyphenation
+    Text alignment &amp; justification
+    Counters, lists, etc.
+    Styling initials
+    Baselines &amp; inline alignment
+
+Page &amp; book layout
+    General page layout &amp; progression
+    Directional layout features
+	Grids &amp; tables
+    Notes, footnotes, etc.
+    Forms &amp; user interaction
+    Page numbering, running headers, etc.
+</pre>
+</section>
+
+
+
+ 
+	
+
+
+	<section> 
+
+    <h2 id="refs">Further reading</h2>
+		<ol>
+			<!--li>[Daniels] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
+				0-19-507993-0</li-->
+			<li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="doctitle"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
+		    0-19-507993-0</li>
+<li>[ <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf">b</a></sup> ] Jim Brase, <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf">Proposal to encode the Tai  Viet script in the UCS</a></li>
+<li>[ <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></sup> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">The Unicode Standard v11.0</a></li>
+</ol>
+</section>
+
+
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/taiviet"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-02-17  8:11<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Btaiviet%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ftaiviet%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
+<div id="panel" style="display:none"></div>
+
+<script>
+initialiseSummary('/scripts/taiviet/block','blt','Tai Viet')
+</script>
+
+</body>
+</html>
