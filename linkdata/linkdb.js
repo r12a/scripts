@@ -1,4 +1,4 @@
-var scriptNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'grek', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr', 'laoo', 'lana', 'mand', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'taml', 'thaa', 'thai', 'tibt', 'tfng'])
+var scriptNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'grek', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr', 'laoo', 'lana', 'mand', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'taml', 'tavt', 'thaa', 'thai', 'tibt', 'tfng'])
 
 var scriptNotes= {
     'armn':[['Armenian script summary','armenian/']],
@@ -29,6 +29,7 @@ var scriptNotes= {
     'syrc':[['Syriac script summary', 'syriac/']],
     'talu':[['New Tai Lü script summary', 'newtailue/']],
     'taml':[['Tamil script summary', 'tamil/']],
+    'tavt':[['Tai Viet script summary', 'taiviet/']],
     'thaa':[['Thaana script summary', 'thaana/']],
     'thai':[['Thai script summary', 'thai/']],
     'tibt':[['Tibetan script summary', 'tibetan/']],
