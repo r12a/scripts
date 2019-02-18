@@ -63,6 +63,8 @@ var scriptData = [
 
 { script:"Syriac", type:"abjad", chars:88, cchars:28, cs:"no", gpos:"yes", mcchars:"yes", matras: "no", gsub:"yes", cursive:"yes", dir:"rtl", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"?", justify:"word/space", digits:"no*", region:"M East", linked:"syriac" },
 
+{ script:"Tai Le", type:"alpha", chars:35, cchars:0, cs:"no", gpos:"yes", mcchars:"no", matras: "yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"no", baseline:"mid", wrap:"?", hyphenation:"?", justify:"?", digits:"no", region:"Asia SE", linked:"taile" },
+
 { script:"Tai Tham", type:"abugida", chars:127, cchars:40, cs:"no", gpos:"yes", mcchars:"yes", matras: "yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"no", baseline:"mid", wrap:"word", hyphenation:"no", justify:"?", digits:"yes", region:"Asia SE", linked:"taitham" },
 
 { script:"Tai Viet", type:"alpha", chars:72, cchars:9, cs:"no", gpos:"yes", mcchars:"yes", matras: "visual", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"?", justify:"?", digits:"no", region:"Asia SE", linked:"taiviet" },
