@@ -27,6 +27,7 @@ var scriptNotes= {
     'sinh':[['Sinhala script summary', 'sinhala/']],
     'sund':[['Sundanese script summary', 'sundanese/']],
     'syrc':[['Syriac script summary', 'syriac/']],
+    'tale':[['Tai Le script summary', 'taile/']],
     'talu':[['New Tai Lü script summary', 'newtailue/']],
     'taml':[['Tamil script summary', 'tamil/']],
     'tavt':[['Tai Viet script summary', 'taiviet/']],
