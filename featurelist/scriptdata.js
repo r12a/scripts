@@ -65,6 +65,8 @@ var scriptData = [
 
 { script:"Tai Tham", type:"abugida", chars:127, cchars:40, cs:"no", gpos:"yes", mcchars:"yes", matras: "yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"no", baseline:"mid", wrap:"word", hyphenation:"no", justify:"?", digits:"yes", region:"Asia SE", linked:"taitham" },
 
+{ script:"Tai Viet", type:"alpha", chars:72, cchars:9, cs:"no", gpos:"yes", mcchars:"yes", matras: "visual", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"?", justify:"?", digits:"no", region:"Asia SE", linked:"taiviet" },
+
 { script:"Tamil", type:"abugida", chars:72, cchars:14, cs:"no", gpos:"yes", mcchars:"yes", matras: "yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"?", justify:"space", digits:"yes", region:"Asia S", linked:"tamil" },
 
 { script:"Telugu", type:"abugida", chars:96, cchars:22, cs:"no", gpos:"yes", mcchars:"yes", matras: "yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"?", justify:"space", digits:"yes", region:"Asia S" },
