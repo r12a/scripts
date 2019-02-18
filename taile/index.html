@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<title>Tai Le script summary</title>
+<meta name="description" content="Summary of the Tai Le script."/>
+<link rel="stylesheet" href="../../shared/style/docs.css"/>
+<link rel="stylesheet" href="../common/local.css"/>
+<style>
+@font-face {
+    font-family: 'Noto Sans Tai Le WF';
+    src: url('../../shared/webfonts/notosanstaile-regular-webfont.woff2') format('woff2'),
+         url('../../shared/webfonts/notosanstaile-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+#freeText {
+	font-size: 28px;
+	font-family: "Noto Sans Tai Le WF", serif;
+    text-align: start;
+	line-height: 1.8;
+	}
+@media print { #freeText { font-size: 18px; } }
+[lang=tdd] { font-family: "Noto Sans Tai Le WF", serif; font-size: 150%; }
+.large[lang=tdd] { font-size: 300%;  text-align: center; line-height: 1; margin-top: 0; margin-bottom: 0; }
+.narrowlines .listPair { margin-bottom: 0.25em; }
+</style>
+
+<script src="db.js"> </script>
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2019.js"></script>
+<script src="../../shared/code/all-names.js"></script>
+<script src="../../shared/code/character_conversion.js"></script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/fontlists/manage.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
+<script src="../common/functions.js"></script>
+<script src="../../shared/code/getLinks.js"></script>
+<script src="../linkdata/linkdb.js"></script>
+<script src="../featurelist/scriptdata.js"> </script>
+
+<script src="../../shared/fontlists/taile.js"> </script>
+</head>
+
+<body>
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
+</header>
+
+<h1>Tai Le script summary</h1>
+
+<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="Jump to top of page." title="Jump to top of page."/></a></nav>
+
+<aside class="sidebar">
+<nav>
+<h2 class="notoc flush"><a id="tochead">Contents</a></h2>
+<div id="toc"><!-- placeholder --></div>
+</nav>
+
+ <div id="fontsetting" class="closed">
+  <h2 class="notoc"><a id="fonts">Fonts</a></h2>
+  <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
+   <p>Set font for examples<br/>
+   <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'blt');">
+   </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+   <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'blt');" />
+ </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
+ <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
+	return false;">
+      <p>Change size:<br />
+        <input id="slider" type="range" min="12" max="100" step="1" value="32">
+        &#xA0; <span id="sizeIndicator">32px</span><br />
+        <input id="multiplier" type="hidden" value="1" />
+        Multiplier:
+        <input type="radio" name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x1">1</label>
+        <input type="radio" name="step" id="x5" value="2"  onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x5">2</label>
+        <input type="radio" name="step" id="x10" value="10"  onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x10">10</label>
+      </p>
+ </form>
+</div>
+</aside>
+
+
+<p id="status">Updated 
+  <!-- #BeginDate format:Sw1 -->18 February, 2019<!-- #EndDate -->
+&bull; tags <a href="https://r12a.github.io/blog/index.php?tag=taile" title="Show all blog posts tagged with 'taile'">taile</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+
+
+
+<div class="section">
+  <p>This page provides basic information about the Tai Le script and its use for the Tai Nüa language. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned. For character-specific details follow the links to the <a class="linkHighlight" href="/scripts/taile/block">Tai Le character notes</a>. </p>
+<p>For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>.</p>
+<p class="instructions">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+<details id="scriptLinks">
+<summary class="instructions">More links for the Tai Le script.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Tale')</script>
+</details>
+</div>
+
+
+
+<section>
+  <h2 id="sample">Sample (Tai Nüa)</h2>
+<p>The two paragraphs show the same text, except that the first uses spacing characters for tone marks, and second shows the older combining-character orthography.</p>
+  
+  <div id="freeText" lang="tdd" data-target="c" data-base="/scripts/taile/block" data-source="http://www.seasite.niu.edu/tai/TaiDehong/story1/gif&jpg/p3.jpg">
+  <p onMouseUp="showtext('freeText')">ᥘᥬᥰ​ᥔᥩᥛᥳ​ᥝᥢᥰ​ᥘᥭᥳ，​ᥐᥩᥙ​ᥘᥭᥲ​ᥑᥨᥛᥱ​ᥑᥦᥢᥴ​ᥖᥫᥒᥰ​ᥐᥣ，​ᥝᥣᥐ​ᥖᥣᥙᥱ​ᥐᥨᥢᥰ​ᥑᥥᥢᥴ​ᥛᥣᥰ​ᥔᥥᥴ，​ᥛᥣᥢᥲ​ᥘᥣᥰ​ᥟᥢᥐᥬᥲ​ᥓᥛ​ᥑᥩᥙᥱ​ᥞᥤᥛᥰ​ᥙᥥᥲ​ᥢᥣᥢᥳ​ᥘᥢᥳ，​ᥛᥤᥰ​ᥐᥣᥭᥰ​ᥚᥣᥒᥳ​ᥓᥤᥢ​ᥚᥧᥒᥴ​ᥘᥫᥒ​ᥑᥝᥲ​ᥛᥣᥢᥳ​ᥛᥣᥰ，​ᥟᥣ​ᥛᥥᥝᥰ​ᥖᥭᥰ​ᥖᥒᥰ​ᥘᥣᥭᥴ​ᥟᥩᥢ​ᥐᥢ​ᥐᥣᥱ​ᥓᥩᥭ​ᥗᥦᥛᥴ．</p>
+
+  <p onMouseUp="showtext('freeText')">ᥘᥬ̈​ᥔᥩᥛ̇​ᥝᥢ̈​ᥘᥭ̇，​ᥐᥩᥙ​ᥘᥭ̀​ᥑᥨᥛ̌​ᥑᥦᥢ́​ᥖᥫᥒ̈​ᥐᥣ，​ᥝᥣᥐ​ᥖᥣᥙ̌​ᥐᥨᥢ̈​ᥑᥥᥢ́​ᥛᥣ̈​ᥔᥥ́，​ᥛᥣᥢ̀​ᥘᥣ̈​ᥟᥢᥐᥬ̀​ᥓᥛ​ᥑᥩᥙ̌​ᥞᥤᥛ̈​ᥙᥥ̀​ᥢᥣᥢ̇​ᥘᥢ̇，​ᥛᥤ̈​ᥐᥣᥭ̈​ᥚᥣᥒ̇​ᥓᥤᥢ​ᥚᥧᥒ́​ᥘᥫᥒ​ᥑᥝ̀​ᥛᥣᥢ̇​ᥛᥣ̈，​ᥟᥣ​ᥛᥥᥝ̈​ᥖᥭ̈​ᥖᥒ̈​ᥘᥣᥭ́​ᥟᥩᥢ​ᥐᥢ​ᥐᥣ̌​ᥓᥩᥭ​ᥗᥦᥛ́．</p>
+  </div>
+</section>
+  
+
+
+
+
+<section>
+<h2 id="history">Usage &amp; history</h2>
+    <p>From the <a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">Unicode Standard</a>: </p>
+    <blockquote>
+<p>The Tai Le script has a history of 700–800 years, during which time several orthographicconventions were used. The modern form of the script was developed in the years following  1954;  it  rationalized  the  older  system  and added a systematic representation of toneswith the use of combining diacritics. The new system was revised again in 1988, when spacing tone marks were introduced to replace the combining diacritics. The Unicode encoding of Tai Le handles both the modern form of the script and its more recent revision.</p>
+<p>The Tai Le language is also known as Tai Nüa, Dehong Dai, Tai Mau, Tai Kong, and Chinese Shan.</p>
+</blockquote>
+    <p>From <a href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">Wikipedia</a>:</p>
+<blockquote>
+<p>The Tai Le script (ᥖᥭᥰᥘᥫᥴ, [tai˦.lə˧˥]), or Dehong Dai script, is a script used to write the Tai Nüa language of south-central Yunnan, China. (The language is also known as Nɯa, Dehong Dai and Chinese Shan.) It is written in horizontal lines from left to right, with spaces only between clauses and sentences. </p>
+<p>The Tai Le script has a long history (700–800 years) and has used several different orthographic conventions. Between 1952 and 1988, the script went through four reforms. The third reform (1963/1964) used diacritics to represent tones, while the fourth reform (1988–present) uses standalone tone letters.</p>
+</blockquote>
+</section>
+
+
+
+
+<div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+</table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+</div>
+
+
+
+
+<section>
+    <h2 id="distinguishing">Distinguishing features</h2>
+    <p>The Tai Le script is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>, ie. consonants carry an inherent vowel sound that is overridden using vowel signs. In Tai Le, consonants carry an inherent vowel  <span class="ipa">a</span>. See the table to the right for a brief overview of features, taken from the <a href="/scripts/featurelist/">Script Comparison Table</a>. </p>
+<p>The key  distinguishing feature of Tai Le is its regularity and simplicity compared to other Tai scripts. The sequence of characters is C(V)(C)(T). Tones always go after any other characters in the syllable.</p>
+<p>The consonant repertoire is not mapped to high or low classes, and vowel-signs are all spacing characters that follow the onset consonant. There are no consonant clusters.</p>
+</section>
+  
+
+
+
+
+
+  <section>
+<h2 id="chars">Character lists</h2>
+   <p>The Tai Le script characters in Unicode 11.0 are found in 1 block:</p>
+  <ol>
+      <li><a href="/uniview/?block=taile">Tai Le</a> <span class="charCount">(70 letters, 2 symbols, 11 numbers :   total 83)</span></li>
+</ol>
+<!--p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li><a href="/app-charuse/?language=si" target="_blank">Tai Le</a> <span class="charCount">(55 letters, 19 marks, 13 punctuation, 1 other :   total 88)</span></li>
+</ul-->
+<p>For character-specific details see <a class="linkHighlight" href="/scripts/taile/block">Tai Le character notes</a>.</p>
+</section>
+  
+  
+  
+  
+  <section>
+<h2 id="structure">Structure</h2>
+     <p>The script is syllable-based. </p>
+<p>A syllable's phonetic and orthographic structure is very simple; C(V)(C)(T).</p>
+<p>There are no medial consonant letters. Single characters are available for the onset sequences.</p>
+<p>Syllable-final consonants are the same characters used for onset.</p>
+<p>There are 6 tone marks, which may be represented by spacing characters or in older orthographies by combining marks, but which always come at the end of the syllable..</p>
+</section>
+
+
+
+<div id="showTranscriptions">
+<div>In yellow boxes, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<!--div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div-->
+</div>
+
+
+  
+<section>
+<h2 id="dir">Text direction</h2>
+    <p>Tai Le script is written horizontally and left to right.</p>
+</section>
+
+
+
+
+
+
+<section>
+<h2 id="vowels">Vowels</h2>
+    
+<section>
+<h3 id="inherent">Inherent vowel</h3>
+<p>Each consonant symbol has an inherent vowel sound, typically transcribed as <span class="ipa">a</span>.<sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf"></a></sup> So <span class="ex">ᥐ</span> is pronounced <span class="ipa">ka</span>.</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="vowelsigns">Vowel signs</h3>
+<p>To produce a different vowel than the inherent one, Tai Le uses one or more vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="tdd">ᥐᥤ</span> <span class="trans">ki</span></span>. </p>
+<p>All vowel signs in Tai Le are ordinary spacing characters, rather than combining characters, and  appear  after the base.</p>
+<figure class="characterBox auto" data-cols="ipa,trans">ᥣ␣ᥥ␣ᥫ␣ᥦ␣ᥤ␣ᥪ␣ᥩ␣ᥨ␣ᥧ␣ᥬ␣ᥭ</figure>
+</section>
+
+
+
+
+
+<section>
+<h3 id="placement">Vowel-sign placement</h3>
+<p>The following list shows where vowel-signs are positioned around a base consonant to produce vowels, and how many instances of that pattern there are. </p>
+<ul>
+<li>11 postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="tdd">ᥐᥣ</span> <span class="trans">ka</span></span></li>
+</ul>
+</section>
+</section>
+
+
+
+
+
+
+<section>
+<h2 id="consonants">Consonants</h2>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᥐ␣ᥠ␣ᥒ␣ᥓ␣ᥡ␣ᥟ␣ᥖ␣ᥗ␣ᥢ␣ᥙ␣ᥚ␣ᥛ␣ᥕ␣ᥘ␣ᥝ␣ᥞ␣ᥑ␣ᥔ␣ᥜ</figure>
+<p>Tai Le consonants are straightforward. There is no duplication for tone support, no stacking or other conjunct behaviour, etc.</p>
+<section>
+<h3 id="medials">Syllable-initial consonant clusters</h3>
+
+<p>Tai Le has no syllable-initial clusters. <span class="ednote">Check this.</span></p>
+</section>
+
+
+
+
+<section>
+<h3 id="finals">Syllable-final consonants</h3>
+
+<p>Consonants do appear in syllable-final position, but Tai Le has no dedicated characters for this. Standard consonant characters are used. It is usually easy to tell that a character is used in final consonant position, because of the position of tone marks, however it seems possible that an open syllable with no tone mark followed by an open syllable using the inherent vowel would create some ambiguity.</p>
+<p>When used in final position, <span class="codepoint" translate="no"><span lang="tdd">&#x195D;</span> [<a href="/scripts/taile/block#char195D"><span class="uname">U+195D TAI LE LETTER VA</span></a>]</span> is pronounced <span class="ipa">w</span>.</p>
+</section>
+
+</section>
+  
+
+
+
+
+  <section>
+  <h2 id="tones">Tones</h2>
+<p>The current orthography for Tai Le uses spacing characters to represent tone marks.</p>
+
+<figure class="characterBox auto" data-cols="trans">ᥰ␣ᥱ␣ᥲ␣ᥳ␣ᥴ</figure>
+
+
+<p>Tone marks were introduced in 1963, and until 1988 were written using the following combining characters.<sup><a href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet"></a></sup></p>
+
+<figure class="characterBox auto" data-cols="trans">̈␣̌␣̀␣̇␣́</figure>
+
+<p>When a diacritic is used with a tall vowel letter it is displayed to the side, eg. compare <span class="charExample" translate="no"><span class="ex" lang="tdd">ᥑᥥᥢ́</span> <span class="trans">xen⁶</span></span> and <span class="charExample" translate="no"><span class="ex" lang="tdd">ᥙᥥ̀</span> <span class="trans">pe⁴</span></span>.</p><p>Whether spacing character or combining characters are used, Tai Le tone marks always appear at the very end of a syllable (ie. after any final consonant).</p>
+<p>The following tones are represented.</p>
+<table>
+<tbody>
+<tr>
+<th>Mark</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>ᥰ or ◌̈</td>
+<td><em>high-level</em></td>
+</tr>
+<tr>
+<td>ᥱ or ◌̌</td>
+<td><em>low-level</em></td>
+</tr>
+<tr>
+<td><span style="font-size:large;">ᥲ or ◌̀</span></td>
+<td><em>mid-fall</em></td>
+</tr>
+<tr>
+<td><span style="font-size:large;">ᥳ or ◌̇</span></td>
+<td><em>high-fall</em></td>
+</tr>
+<tr>
+<td>ᥴ or ◌́</td>
+<td><em>mid-rise</em></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+
+
+
+<section>
+<h2 id="digits">Numbers</h2>
+    <p>In China, European digits are used, in the main, although Myanmar digits (U+1040..U+1049) are also used with slight glyph variants. </p>
+<p>These are the Myanmar digits. Unfortunately, the default font for this page doesn't show the typical differences in glyph shape, in particular, for the digits 2, 6, 8, and 9. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></sup></p>
+
+<figure class="characterBox auto" data-cols="trans">၀␣၁␣၂␣၃␣၄␣၅␣၆␣၇␣၈␣၉</figure>
+
+
+<p>The differences can be seen in <a class="figref">fig_digits</a>.<sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u650</a></sup></p>
+<figure id="fig_digits">
+<p><img src="images/digits.png" alt="Table showing digit glyphs."/></p>
+<figcaption>Comparison of glyphs for Myanmar digits used in Myanmar and Tai Le.</figcaption>
+</figure>
+</section>
+
+
+
+
+  <section>
+  <h2 id="shaping">Glyph shaping &amp; positioning</h2>
+<p>Vowels all follow the initial consonant and are spacing characters with no special joining behaviour. Therefore, the Tai Le script has no need for special shaping, other than when diacritics are used for tone marks alongside tall characters, as described above.</p>
+</section>
+  
+  
+  
+  
+  
+<section>
+<h2 id="boundaries">Structural boundaries &amp; markers</h2>
+
+<section>
+<h3 id="words">Word boundaries</h3>
+    <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). We will  treat it as a vaguely-defined semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+
+<p>Words are not separated by spaces.</p>
+</section>
+
+
+
+
+<section>
+<h3 id="phrase">Phrase boundaries</h3>
+
+  <p>Tai Le  uses western and fullwidth Chinese punctuation<sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u650</a></sup>, which may include the following<span class="ednote"> (needs to be checked)</span>.</p>
+
+<figure class="characterBox auto" data-cols="trans">〈␣〉␣《␣》␣（␣）␣！␣？␣：␣；␣。␣、␣，␣．</figure>
+
+</section>
+  
+</section>
+  
+  
+  
+
+
+
+<section>
+<h3 id="tbd">TBD</h3>
+<p class="ednote">Further information needed for this section includes:</p>
+<pre style="margin-left: 10%;">
+Glyph shaping &amp; positioning
+    Cursive text
+    Context-based shaping
+    Multiple combining characters
+    Context-based positioning
+    Transforming characters
+
+Structural boundaries &amp; markers
+    Grapheme, word &amp; phrase boundaries
+    Hyphens &amp; dashes
+    Bracketing information
+    Quotations
+    Abbreviations, ellipsis, &amp; repetition
+    Emphasis &amp; highlights
+    Inline notes &amp; annotations
+
+Inline layout
+    Inline text spacing
+    Bidirectional text
+
+Line &amp; paragraph layout
+    Line breaking
+    Hyphenation
+    Text alignment &amp; justification
+    Counters, lists, etc.
+    Styling initials
+    Baselines &amp; inline alignment
+
+Page &amp; book layout
+    General page layout &amp; progression
+    Directional layout features
+	Grids &amp; tables
+    Notes, footnotes, etc.
+    Forms &amp; user interaction
+    Page numbering, running headers, etc.
+</pre>
+</section>
+
+
+
+
+
+
+<section>
+<h2 id="refs">References</h2>
+<ol>
+<li>[ <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></sup> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">The Unicode Standard v11.0</a></li>
+<li>[ <sup><a href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></sup> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet" target="_blank">Tai Le script</a></li>
+</ol>
+</section>
+
+
+
+
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/taile"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-02-18  16:14<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Btaile%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ftaile%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
+<div id="panel" style="display:none"></div>
+</body>
+<script>
+initialiseSummary('/scripts/taile/block','tdd','Tai Le')
+</script>
+</html>
