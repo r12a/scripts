@@ -21,7 +21,7 @@ var scriptData = [
 
 { script:"Greek", type:"alpha", chars:368, cchars:0, cs:"yes", gpos:"no", mcchars:"no", matras: "no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"yes", justify:"space", digits:"no", region:"Europe", linked:"greek" },
 
-{ script:"Gujarati", type:"abugida", chars:91, cchars:26, cs:"no", gpos:"yes", mcchars:"yes", matras: "yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"high?", wrap:"word", hyphenation:"?", justify:"space", digits:"yes", region:"Asia S" },
+{ script:"Gujarati", type:"abugida", chars:91, cchars:26, cs:"no", gpos:"yes", mcchars:"yes", matras: "yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"high?", wrap:"word", hyphenation:"?", justify:"space", digits:"yes", region:"Asia S", linked:"gujarati" },
 
 { script:"Gurmukhi", type:"abugida", chars:79, cchars:18, cs:"no", gpos:"yes", mcchars:"yes", matras: "yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"high", wrap:"word", hyphenation:"?", justify:"space", digits:"yes", region:"Asia S", linked:"gurmukhi" },
 
@@ -42,6 +42,8 @@ var scriptData = [
 { script:"Lao", type:"alpha", chars:67, cchars:15, cs:"no", gpos:"yes", mcchars:"yes", matras: "visual", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"no", baseline:"mid", wrap:"word", hyphenation:"no", justify:"cluster", digits:"yes", region:"Asia SE", linked:"lao" },
 
 { script:"Latin", type:"alpha", chars:1286, cchars:0, cs:"yes", gpos:"no", mcchars:"no", matras: "no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"yes", justify:"space", digits:"yes", region:"Eur/Am" },
+
+{ script:"Lisu", type:"abugida", chars:48, cchars:0, cs:"no", gpos:"no", mcchars:"no", matras: "no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"syllable", baseline:"mid", wrap:"syllable", hyphenation:"no", justify:"space", digits:"no", region:"Asia E", linked:"lisu" },
 
 { script:"Malayalam", type:"abugida", chars:117, cchars:23, cs:"no", gpos:"yes", mcchars:"yes", matras: "yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"?", justify:"space", digits:"yes", region:"Asia S", linked:"malayalam" },
 
