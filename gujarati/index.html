@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<title>Gujarati script notes</title>
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="description" content="Summary of the Gujarati script."/>
+<link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../common/local.css" />
+<!--link rel="stylesheet" href="../style/print.css"/-->
+<style>
+@font-face {
+    font-family: 'Gujarati WF';
+    src: url('../../shared/webfonts/notosansgujarati-regular-webfont.woff2') format('woff2'),
+         url('../../shared/webfonts/notosansgujarati-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+@font-face {
+	font-family: 'Noto Serif Gujarati WF';
+	src: 	local('Noto Serif Gujarati'),
+			url('../../shared/webfonts/notoserifgujarati-regular-webfont.woff2') format('woff2'),  
+			url('../../shared/webfonts/notoserifgujarati-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	}
+#freeText {
+	font-size: 28px;
+	font-family: "Noto Serif Gujarati WF", serif;
+	text-align: start;
+    line-height: 2;
+	}
+@media print { #freeText { font-size: 18px; } }
+[lang=gu] { font-family: "Gujarati WF", 'Gujarati WF', serif; font-size: 140%; }
+.large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }	
+</style>
+
+<script src="db.js"> </script>
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2019.js"></script>
+<script src="../../shared/code/all-names.js"></script>
+<script src="../../shared/code/character_conversion.js"></script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/fontlists/manage.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
+<script src="../common/functions.js"></script>
+<script src="../../shared/code/getLinks.js"></script>
+<script src="../linkdata/linkdb.js"></script>
+<script src="../featurelist/scriptdata.js"> </script>
+
+<script src="../../shared/fontlists/gujarati.js"> </script>
+</head>
+
+<body>
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
+</header>
+
+<h1>Gujarati script summary</h1>
+
+<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top"/></a></nav>
+
+  <aside class="sidebar"> 
+		<h2 class="notoc flush"><a id="tochead" name="tochead" tabindex="4">Contents</a></h2>
+		<div id="toc"><!-- placeholder --></div>
+
+ <div id="fontsetting" class="closed">
+  <h2 class="notoc"><a id="fonts">Fonts</a></h2>
+  <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'gu');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'gu');" />
+    </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
+    <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
+	return false;">
+      <p>Change size:<br />
+        <input id="slider" type="range" min="12" max="100" step="1" value="32">
+        &#xA0; <span id="sizeIndicator">32px</span><br />
+        <input id="multiplier" type="hidden" value="1" />
+        Multiplier:
+        <input type="radio" name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x1">1</label>
+        <input type="radio" name="step" id="x5" value="2"  onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x5">2</label>
+        <input type="radio" name="step" id="x10" value="10"  onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x10">10</label>
+      </p>
+    </form>
+</div>
+</aside>
+
+	<p id="status">Updated Mon 13 Oct 2014  &bull; tags <a href="http://r12a.github.io/blog/index.php?tag=gujarati" title="Show all blog posts tagged with 'gujarati'">gujarati</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+
+	<div class="section">
+	  <p>This page provides basic information about the Gujarati script. It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned.  For character-specific details follow the links to the <a class="linkHighlight" href="/scripts/gujarati/block">Gujarati character notes</a>.</p>
+<p>For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>.</p>
+<p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+  
+  <details id="scriptLinks">
+  <summary class="instructions">More links for the Gujarati script.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Gujr')</script>
+  </details>
+</div>
+
+
+
+<section>
+<h2 id="sample">Sample (Gujarati)</h2>
+  
+
+  <div id="freeText" dir="ltr" lang="gu" data-target="c" data-base="/scripts/gujarati/block" data-source="https://unicode.org/udhr/d/udhr_guj.html">
+  <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">અનુચ્છેદ ૧:
+
+પ્રતિષ્ઠા અને અધિકારોની દૃષ્ટિએ સર્વ માનવો જન્મથી સ્વતંત્ર અને સમાન હોય છે. તેમનામાં વિચારશક્તિ અને અંતઃકરણ હોય છે અને તેમણે પરસ્પર બંધુત્વની ભાવનાથી વર્તવું જોઇએ.</p>
+  <p  title="UDHR, article 2" onMouseUp="showtext('freeText')">અનુચ્છેદ ૨:
+
+દરેક વ્યક્તિને જાતિ, રંગ, લિંગ, ભાષા, ધર્મે, રાજકીય અથવા બીજા અભિપ્રાય, રાષ્ટ્રીય અથવા સામાજિક ઉદ્ભવસ્થાન, મિલકત, જન્મ અથવા મોભા જેવા કોઇપણ જાતના ભેદભાવ વગર આ ધોષણામાં રજૂ કરવામાં આવેલા સધળા અધિકારો અને સ્વતંત્રતા ભોગવવાનો હક્ક છે.
+
+વધુમાં કોઇપણ વ્યક્તિ તે સ્વતંત્ર, ટ્રસ્ટ હેઠળના સ્વશાસન હેઠળ ન હોય તેવા અથવા સાર્વભામત્વની બીજી કોઇપણ મર્યાદા હેઠળ આવેલા દેશ અથવા પ્રદેશની હોય તો પણ રાજકીય, હફમવવિષયક અથવા આંતરરાષ્ટ્રીય મોભાના ધોરણે તેની સાથે કોઇપણ ભેદભાવ રાખવામાં આવશે નહિ.</p>
+  <!-- Source: https://unicode.org/udhr/d/udhr_guj.html -->
+  </div>
+</section>
+
+
+
+
+ 
+
+<section>
+    <h2 id="history">Usage &amp; history</h2>
+    <p>From <a href="http://scriptsource.org/scr/Bali">Scriptsource</a>: </p>
+    <blockquote>
+<p>The Gujarati script is used for writing the Gujarati and Chodri languages, together spoken by almost 47 million people. It is also used alongside the Devanagari script for writing a number of languages used by the Bhil people, one of India's largest indigenous groups. The script is related to Devanagari, with modifications to some of the letters, and without the headstroke which characterizes most of the Nagari scripts. The loss of the headstroke reflects the script's origins in informal writing; until the mid-19th century it was used primarily for bookkeeping and personal correspondence, but since printing facilities have become widely available to Gujarati speakers the script is used in schools, for printing books and newspapers, in government offices and public signage, and is one of the official scripts of India.</p>
+</blockquote>
+    <p>From <a href="http://en.wikipedia.org/wiki/Gujarati_alphabet">Wikipedia</a>:</p>
+<blockquote>
+<p>The Gujarati script was adapted from the Devanagari script to write the Gujarati language. Gujarati language and script developed in three distinct phases — 10th to 15th century, 15th to 17th century and 17th to 19th century. The first phase is marked by use of Prakrit, Apabramsa and its variants such as Paisaci, Shauraseni, Magadhi and Maharashtri. In second phase, Old Gujarati script was in wide use. The earliest known document in the Old Gujarati script is a handwritten manuscript Adi Parva dating from 1591–92, and the script first appeared in print in a 1797 advertisement. The third phase is the use of script developed for ease and fast writing. The use of shirorekha (the topline as in Sanskrit) was abandoned. Until the 19th century it was used mainly for writing letters and keeping accounts, while the Devanagari script was used for literature and academic writings. It is also known as the śarāphī (banker's), vāṇiāśāī (merchant's) or mahājanī (trader's) script. This script became basis for modern script. Later the same script was adopted by writers of manuscripts. Jain community also promoted its use for copying religious texts by hired writers.</p>
+</blockquote>
+</section>
+
+
+
+
+
+  <div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+    </table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+   </div>
+
+
+
+
+<section>
+    <h2 id="type">Distinctive features</h2>
+<p>The script  is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>. Consonants carry an inherent vowel which can be modified by appending vowel-signs to the consonant.  See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.</p>
+<p>The following list describes some distinctive characteristics of the Gujarati script.</p>
+<ul>
+<li>
+<p>The absence of the inherent vowel is not always indicated. It is generally not pronounced at the end of a word, but also it is sometimes elided without indications  within a word.</p></li>
+<li>
+<p>Some vowel-signs can be visually analysed into subcomponents, but Unicode usage involves only one combining character per consonant.</p></li>
+<li>
+<p>The consonant repertoire can be extended for transliteration of Arabic and Avestan texts.</p></li>
+<li>
+<p>Final consonant combining characters include the anusvara and visarga.</p>
+</li>
+<li>Conjuncts involve half-forms and subjoined forms as well as ligatures. In addition, participating consonants may just be moved together. Gujarati is also unusual in that components in clusters sometimes used Devanagari glyphs for one or more Gujarati characters.</li>
+</ul>
+</section>
+
+
+
+
+
+ <section>
+<h2 id="chars">Character lists</h2>
+  <p>The Gujarati script characters in Unicode 11.0 are in the following block: </p>
+    <ul>
+      <li> <a href="/uniview/?block=gujarati">Gujarati</a> <span class="charCount">(53 letters, 26 marks, 10 digits, 1 punctuation, 1 symbol:   total 91)</span></li>
+    </ul>
+   <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li><a href="/app-charuse/?language=gu" target="_blank">Gujarati</a> <span class="charCount">(50 letters, 18 marks, 10 digits, 13 punctuation :   total 91)</span></li>
+<!--li><a href="/app-charuse/?language=gu" target="_blank">Gujarati</a> <span class="charCount">(25 letters, 3 marks, 1 punctuation :   total 29)</span></li-->
+</ul>
+<p>For character-specific details see the <a class="linkHighlight" href="/scripts/gujarati/block">Gujarati character notes</a>.</p>
+</section>
+  
+  
+
+
+
+<div id="showTranscriptions">
+<div>In yellow boxes, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+</div>
+
+
+
+
+
+
+  <section>
+    <h2 id="direction">Text direction</h2>
+    <p>Gujarati text is written horizontally, left to right.</p>
+  </section>
+   
+    
+      
+
+
+
+<section> 
+<h2 id="vowelsummary">Vowels</h2>
+<section>
+<h3 id="inherent">Inherent vowel</h3>
+
+<p>Consonants carry an inherent vowel usually transcribed as <span class="trans">a</span> and pronounced <span class="ipa">ə</span>.  So <span class="charExample" translate="no"><span class="ex" lang="gu">ક</span></span> is pronounced <span class="ipa">ka</span>.</p>
+</section>
+
+
+
+
+ 
+<section>
+<h3 id="absence">Vowel absence</h3>
+
+<p>The inherent vowel is not always pronounced, even if there is no visual indication of its absence.</p>
+<p>For example, the inherent vowel is typically not pronounced at the end of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="gu">ઘર</span> <span class="trans">gʰr</span> <span class="ipa">ɡar</span> <span class="meaning">house</span></span>. The inherent vowel is still dropped when the root word is followed by suffixes or in compounds, eg. <span class="charExample" translate="no"><span class="ex" lang="gu">ઘરપર</span> <span class="trans">gʰrpr</span> <span class="ipa">ɡarpar</span> <span class="meaning">on the house</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="gu">ઘરકામ</span> <span class="trans">gʰrkəm</span> <span class="ipa">ɡarkəm</span> <span class="meaning">housework</span></span>.<sup><a href="http://en.wikipedia.org/wiki/Gujarati_alphabet#Overview"> w</a></sup></p>
+<p>The inherent vowel may also be elided when combining morphemes, eg. the root <span class="charExample" translate="no"><span class="ex" lang="gu">પકડ઼</span> <span class="trans">pkɖ̣ (pakaṛ)</span> <span class="meaning">hold</span></span> is written the same even when inflected as <span class="charExample" translate="no"><span class="ex" lang="gu">પકડ઼ે</span> <span class="trans">pkɖ̣e (pakaṛe)</span> <span class="meaning">holds</span></span> even though the pronunciation is <span class="trans">pakṛe</span>. <sup><a href="http://en.wikipedia.org/wiki/Gujarati_alphabet#Overview">w</a></sup></p>
+<p>In other cases, the inherent vowel is simply missing, eg. <span class="charExample" translate="no"><span class="ex" lang="gu">વરસાદ</span> <span class="trans">ʋrsəd (varasād)</span> <span class="meaning">rain</span></span> is pronounced <span class="ipa">varsaːd</span>.<sup><a href="http://en.wikipedia.org/wiki/Gujarati_alphabet#Overview"> w</a></sup></p>
+<p>Gujarati can also  use <span class="codepoint" translate="no"><span lang="gu">&#x0ACD;</span> [<a href="/scripts/gujarati/block#char0ACD"><span class="uname">U+0ACD GUJARATI SIGN VIRAMA</span></a>]</span> (called <span class="name">halant</span> in Gujarati) to explicitly kill the inherent vowel after a consonant. The virama is rarely seen. Apart from the situations just mentioned, the virama is also usually hidden when  part of a consonant cluster (see <a class="sectionref">clusters</a>). </p>
+<p>The virama is visible, however, if it isn't followed by a consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="gu"> ક્</span> <span class="trans">k͓</span></span> explicitly represents just the sound <span class="charExample"><span class="ipa">k</span></span>.</p>
+</section>
+
+
+
+
+
+
+ 
+<section>
+<h3 id="vowelsigns">Vowel-signs</h3>
+
+<p>To produce a different vowel than the inherent one, Gujarati attaches  vowel-signs to  the preceding consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="gu">કી</span> <span class="trans">kī</span></span>.</p>
+<p>Characters that produce vowel signs are all single, combining characters. </p>
+<p>All vowel-signs are typed and stored <em>after</em> the base consonant, whether or not they precede it when displayed. The font takes care of the glyph positioning.</p>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ા␣િ␣ી␣ુ␣ૂ␣ે␣ૈ␣ો␣ૌ␣ૅ␣ૉ</figure>
+<p>About half of the vowel-signs are spacing marks, meaning that they consume horizontal space when added to a base consonant.</p>
+<p>There are separate vowel-signs for the historical short and long variants, but length is no longer distinctive in modern pronunciation. It is only found in metrical structures of verse.<sup><a href="http://en.wikipedia.org/wiki/Gujarati_alphabet#Overview"> w</a></sup></p>
+<p><span class="codepoint" translate="no"><span lang="gu">&#x0AC5;</span> [<a href="/scripts/gujarati/block#char0AC5"><span class="uname">U+0AC5 GUJARATI VOWEL SIGN CANDRA E</span></a>]</span> and <span class="codepoint" translate="no"><span lang="gu">&#x0AC9;</span> [<a href="/scripts/gujarati/block#char0AC9"><span class="uname">U+0AC9 GUJARATI VOWEL SIGN CANDRA O</span></a>]</span> are used to represent the English <span class="ipa">æ</span> and <span class="ipa">ɔ</span> sounds, respectively.<sup><a href="http://en.wikipedia.org/wiki/Gujarati_alphabet#Vowels">w</a></sup></p>
+<p>See also <a class="sectionref">vocalics</a>.</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="nasalisation">Nasalisation</h3>
+
+<p><span class="codepoint" translate="no"><span lang="gu">&#x0A82;</span> [<a href="/scripts/gujarati/block#char0A82"><span class="uname">U+0A82 GUJARATI SIGN ANUSVARA</span></a>]</span> nasalises the vowel in a syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="gu">મેં</span> <span class="trans">me˜</span> <span class="meaning">I</span></span>.</p>
+<p>The anusvara may also represent a nasal before a plosive.</p>
+
+</section>
+
+
+
+
+ 
+<section>
+<h3 id="placement">Vowel-sign placement</h3>
+
+<p>The following list shows where vowel-signs are positioned around a base consonant to produce vowels, and how many instances of that pattern there are.</p>
+<ul>
+<li>1 prescript, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">કિ</span> <span class="trans">ki</span></span></li>
+<li>5 postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">કા</span> <span class="trans">kə</span></span></li>
+<li>3 superscript, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">કે</span> <span class="trans">ke</span></span></li>
+<li>2 subscript, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">કુ</span> <span class="trans">ku</span></span></li>
+</ul>
+</section>
+
+
+
+
+ 
+<section>
+<h3 id="independentvowels">Standalone vowels</h3>
+<p class="explanatoryintro">Standalone vowels are not preceded by a consonant, and may appear at the beginning or in the middle of a word.</p>
+<p>Gujarati represents standalone vowels using a set of independent vowel letters. The set includes a character to represent the inherent vowel sound.</p>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">અ␣આ␣ઇ␣ઈ␣ઉ␣ઊ␣એ␣ઐ␣ઓ␣ઔ␣ઍ␣ઑ</figure>
+</section>
+
+
+
+
+ 
+<section>
+<h3 id="visualanalysis">Visual composition</h3>
+<p>Visually, several of the standalone vowels and some vowel-signs look as it they could be composed of smaller parts, juxtaposed. For example, <span class="codepoint" translate="no"><span lang="gu">&#x0A86;</span> [<a href="/scripts/gujarati/block#char0A86"><span class="uname">U+0A86 GUJARATI LETTER AA</span></a>]</span> looks like it could be composed of <span class="codepoint" translate="no"><span lang="gu">&#x0A85;</span> + <span lang="gu">&#x0ABE;</span> [<a href="/scripts/gujarati/block#char0A85"><span class="uname">U+0A85 GUJARATI LETTER A</span></a> + <a href="/scripts/gujarati/block#char0ABE"><span class="uname">U+0ABE GUJARATI VOWEL SIGN AA</span></a>]</span>. Similarly, <span class="codepoint" translate="no"><span lang="gu">&#x0ACB;</span> [<a href="/scripts/gujarati/block#char0ACB"><span class="uname">U+0ACB GUJARATI VOWEL SIGN O</span></a>]</span> looks like <span class="codepoint" translate="no"><span lang="gu">&#x0ABE;</span> + <span lang="gu">&#x0AC7;</span> [<a href="/scripts/gujarati/block#char0ABE"><span class="uname">U+0ABE GUJARATI VOWEL SIGN AA</span></a> + <a href="/scripts/gujarati/block#char0AC7"><span class="uname">U+0AC7 GUJARATI VOWEL SIGN E</span></a>]</span>.</p>
+<p>These compositions and decompositions do not exist in Unicode normalisation forms, and the Unicode Standard requires the use of single codepoints rather than sequences in all cases.</p>
+</section>
+</section>
+
+
+
+<section>
+<h2 id="vocalics">Vocalics</h2>
+
+<p class="explanatoryintro">Vocalics are letters derived from Sanskrit that generally behave like vowels, but represent r/l followed by a vowel. They are often available both as vowel-signs and independent vowel letters.</p>
+<p>In Gujarati, vocalics are  available both as vowel-signs and independent vowels.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ઋ␣ૠ␣ઌ␣ૡ␣ૃ␣ૄ␣ૢ␣ૣ</figure>
+</section>
+
+
+
+
+
+
+
+<section> 
+<h2 id="consonants">Consonants</h2>
+  
+<section>
+<h3 id="basicconsonants">Basic  consonants</h3>
+<figure class="characterBox auto" data-cols="trans,transc">ક␣ખ␣ગ␣ઘ␣ઙ␣ચ␣છ␣જ␣ઝ␣ઞ␣ટ␣ઠ␣ડ␣ઢ␣ણ␣ત␣થ␣દ␣ધ␣ન␣પ␣ફ␣બ␣ભ␣મ␣ય␣ર␣લ␣ળ␣વ␣શ␣ષ␣સ␣હ</figure>
+</section>
+
+
+
+
+<section>
+<h3 id="extensions">Repertoire extension</h3>
+
+<p>The Unicode Gujarati block provides mechanisms for extending the basic set of consonants, in particular for the transcription of Arabic and Avestan.</p>
+<p>A set of combining characters for the range 0AFA..0AFF was added to the block in Unicode v10 to allow representation of Arabic sounds. For more details, see the Unicode Standard. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf">→u480</a></sup></p>
+<p><span class="codepoint" translate="no"><span lang="gu">&#x0ABC;</span> [<a href="/scripts/gujarati/block#char0ABC"><span class="uname">U+0ABC GUJARATI SIGN NUKTA</span></a>]</span> is used to transliterate sounds in Avestan found in the texts of the Zoroastrians, who fled to Gujarat from Persia and are known as Parsis. They include the following;</p>
+
+<figure class="auto " data-cols="">ત઼␣ંઘ઼␣જ઼␣ખ઼</figure>
+
+<p>The Gujarati block also has an additional consonant character to represent &nbsp;the letter <span class="ipa">ʒ</span> in those transliterations.</p>
+<figure class="characterBox auto" data-cols="">ૹ</figure>
+<p>For more information on this and other aspects of Avestan transliteration, see <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n4473.pdf">Proposal	to	encode	Gujarati	Letter	ZHA</a>.</p>
+</section>
+
+
+
+
+<section>
+<h3 id="finals">Final consonants</h3>
+<p>Two combining characters can follow a consonant or vowel to produce a final consonant sound in a phonetic syllable.</p>
+<p><span class="codepoint" translate="no"><span lang="gu">&#x0A82;</span> [<a href="/scripts/gujarati/block#char0A82"><span class="uname">U+0A82 GUJARATI SIGN ANUSVARA</span></a>]</span> nasalises the vowel in a syllable (see <a class="secref">nasalisation</a>), or represents a homorganic nasal before a plosive.</p>
+<p><span class="codepoint" translate="no"><span lang="gu">&#x0A83;</span> [<a href="/scripts/gujarati/block#char0A83"><span class="uname">U+0A83 GUJARATI SIGN VISARGA</span></a>]</span> is a rarely used and silent hangover from Sanskrit, representing a final <span class="trans">h</span>.</p>
+</section>
+</section>
+
+
+
+
+
+
+<section>
+<h2 id="clusters">Consonant clusters</h2>
+<p class="explanatoryintro">When the shapes of constituent consonants in a cluster are changed or merged to indicate the lack of intervening vowels, this is referred to as a conjunct.</p>
+<p>The absence of a vowel sound between two or more consonants can be indicated visually  in the following ways.</p>
+    <ol>
+    <li>Create a conjunct. There are a number of possibilities here:<ol style="margin:0;">
+<li>Reduce the shape of all consonants in the cluster except the last to a 'half-form'. </li>
+<li>Reduce a non-initial consonant in size and shape and position it below the first. Sometimes the subjoined character is attached to the bottom left corner.</li>
+<li>Move the component consonants close together, so that they touch.</li>
+<li>Create a ligature combining the two shapes (where it may be difficult to identify one or more of the parts).</li>
+<li>The letter <span class="trans">ra</span> has its own idiosyncratic way of combining with other consonants, whether it precedes or follows them.</li>
+</ol></li>
+<li>Show a visible virama below the non-final consonants in the cluster.</li>
+<li>Use a final-consonant character before another consonant. See <a class="secref">finals</a>.</li>
+<li>No indication, although there are usually generalised pronunciation rules that allow readers to spot these locations. See <a class="secref">absence</a>.</li>
+</ol>
+<p>One slightly unusual aspect of Gujarati is that it sometimes borrows Devanagari glyph shapes for one or more components of a conjunct (though the characters are still the normal Gujarati ones).</p>
+<p>In all cases except the last, the underlying mechanism in terms of codepoints involves adding <span class="codepoint" translate="no"><span lang="gu">&#x0ACD;</span> [<a href="/scripts/gujarati/block#char0ACD"><span class="uname">U+0ACD GUJARATI SIGN VIRAMA</span></a>]</span> between the consonants in the cluster, eg. <span class="charExample" translate="no"><span class="ex" lang="gu">શ્ચ</span></span> is produced by the sequence <span class="codepoint" translate="no"><span lang="gu">&#x0AB6;</span> + <span lang="gu">&#x0ACD;</span> + <span lang="gu">&#x0A9A;</span> [<a href="/scripts/gujarati/block#char0AB6"><span class="uname">U+0AB6 GUJARATI LETTER SHA</span></a> + <a href="/scripts/gujarati/block#char0ACD"><span class="uname">U+0ACD GUJARATI SIGN VIRAMA</span></a> + <a href="/scripts/gujarati/block#char0A9A"><span class="uname">U+0A9A GUJARATI LETTER CA</span></a>]</span>.</p>
+<p>The font usually determines which visual method is used, although it is possible to influence this (see below).</p>
+    
+    
+    
+<section>
+<h3 id="halfforms">Half-forms</h3>
+<p>A half-form is typically created by removing the vertical line in the consonant shape, where there is one. (The vertical line is associated with the inherent vowel, and around two-thirds of Gujarati consonant shapes contain one.) There is often some additional tweaking of glyphs in order to join the components neatly.</p>
+    <figure>
+        <p class="large exampleFlex"><span class="ex" lang="gu">ત્‌વ→ત્વ</span> <span class="ex" lang="gu">ણ્‌ઢ→ણ્ઢ</span> <span class="ex" lang="gu">થ્‌થ→થ્થ</span></p>
+    <figcaption>Examples of conjuncts formed by using half-forms.</figcaption>
+    </figure>
+</section>
+    
+    
+    
+<section>
+<h3 id="verticalcombinations">Vertical combinations</h3>
+<p>Vertical combinations are  particularly common for gemination.</p>
+    <figure>
+        <p class="large exampleFlex"><span class="ex" lang="gu">ટ્‌ટ→ટ્ટ</span> <span class="ex" lang="gu">ઢ્‌ઢ→ઢ્ઢ</span> <span class="ex" lang="gu">ટ્‌ઠ→ટ્ઠ</span></p>
+    <figcaption>Examples of conjuncts formed by subjoining non-initial consonants.</figcaption>
+    </figure>
+<p>Some vertical combinations hang the subjoined second consonant from the bottom-left corner.</p>
+<figure>
+<p class="large exampleFlex"><span class="ex" lang="gu">દ્‌ગ→દ્ઘ</span> <span class="ex" lang="gu">દ્‌ધ→દ્ધ</span> <span class="ex" lang="gu">દ્‌બ→દ્બ</span></p>
+<figcaption>Examples where subjoined consonants are attached to the bottom-left corner.</figcaption>
+</figure>
+</section>
+    
+    
+    
+<section>
+<h3 id="devanagariglyphs">Using devanagari glyph shapes</h3>
+<p>Certain clusters use devanagari shapes for one or more of the consonants participating in the conjunct. This is a reminder that conjuncts are to a large extent a legacy of Sanskrit text.</p>
+<figure>
+<p class="large exampleFlex"><span class="ex" lang="gu">હ્‌ય→હ્ય</span> <span class="ex" lang="gu">ઞ્‌જ→ઞ્જ</span> <span class="ex" lang="gu">દ્‌બ→દ્બ</span> <span class="ex" lang="gu">ઙ્‌ક→ઙ્ક</span></p>
+<figcaption>Examples where part(s) of the conjunct <span class="codepoint" translate="no"></span> use a Devanagari shape.</figcaption>
+</figure>
+</section>
+    
+    
+    
+<section>
+<h3 id="ligatedconjuncts">Ligated conjuncts</h3>
+<p>Other clusters combine components into special ligated forms, often in a way that makes it difficult to spot the component parts.</p>
+    <figure>
+        <p class="large exampleFlex"><span class="ex" lang="gu">ત્‌ત→ત્ત</span> <span class="ex" lang="gu">દ્‌પ→દ્ય</span> <span class="ex" lang="gu">શ્‌ચ→શ્ચ</span> <span class="ex" lang="gu">ક્‌ષ→ક્ષ</span></p>
+    <figcaption>Conjuncts formed by ligation.</figcaption>
+    </figure>
+</section>
+    
+    
+    
+<section>
+<h3 id="ligatedconjuncts">touching consonants in  conjuncts</h3>
+<p>Other clusters, particularly where there is no vertical stroke in the preceding consonant, move the components closer together, without major shape changes, so that they touch.</p>
+    <figure>
+        <p class="large exampleFlex"><span class="ex" lang="gu">ક્‌ક→ક્ક</span> <span class="ex" lang="gu">ક્‌ય→ક્ય</span> <span class="ex" lang="gu">જ્‌જ→જ્જ</span></p>
+    <figcaption>Consonants in a cluster that touch each other without substantial shape changes.</figcaption>
+    </figure>
+</section>
+    
+    
+    
+<section>
+<h3 id="rconjuncts">Conjuncts with <span class="trans">ra</span></h3>
+<p>When ra <em>follows</em> another consonant, it is typically rendered as a small, diagonal line pointing downwards to the left, eg. <span class="charExample" translate="no"><span class="charExample" translate="no"><span class="ex" lang="gu">ક્ર ગ્ર ભ્ર હ્ર શ્ર</span></span></span>. After 5 consonants, however, it is rendered as an upside-down v shape below, ie. <span class="charExample" translate="no"><span class="charExample" translate="no"><span class="ex" lang="gu">ટ્ર ઠ્ર ડ્ર ઢ્ર દ્ર</span></span></span>. After <span class="charExample" translate="no"><span class="ex" lang="gu">ત</span></span> it produces <span class="charExample" translate="no"><span class="ex" lang="gu">ત્ર</span></span>.</p>
+    <figure>
+        <p class="large exampleFlex"><span class="ex" lang="gu">ગ્‌ર→ગ્ર</span> <span class="ex" lang="gu">ટ્‌ર→ટ્ર</span> <span class="ex" lang="gu">ત્‌ર→ત્ર</span></p>
+    <figcaption>Conjuncts formed by a following <span class="name">ra</span>.</figcaption>
+    </figure>
+<p>When ra <em>precedes</em> another consonant, it is  rendered as a small hook above the following consonant, or a following vertical line in the cluster, eg. <span class="charExample" translate="no"><span class="ex" lang="gu">ર્ક</span> <span class="trans">r͓k</span></span> and <span class="charExample" translate="no"><span class="ex" lang="gu">ર્સ</span> <span class="trans">r͓s</span></span>. Where it precedes a cluster, it is aligned with the vertical line of the trailing consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="gu">ર્સ્પ</span> <span class="trans">r͓s͓p</span></span>. However, if there is a spacing vowel-sign with a vertical line to the right of the cluster, it aligns with that, eg. <span class="charExample" translate="no"><span class="ex" lang="gu">ર્કા</span> <span class="trans">r͓kə</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="gu">ર્કી</span> <span class="trans">r͓kī</span></span>. (This illustrates how the basic units of the script are orthographic syllables.)</p>
+    <figure>
+        <p class="large exampleFlex"><span class="ex" lang="gu">ર્ક</span> <span class="ex" lang="gu">ર્વા</span> <span class="ex" lang="gu">ર્સ્પ</span> <span class="ex" lang="gu">ર્સ્પા</span></p>
+    <figcaption>Examples of positioning of the hook for conjuncts formed by a preceding <span class="name">ra</span>.</figcaption>
+    </figure>
+</section>
+    
+    
+    
+<section>
+<h3 id="visiblevirama">Visible virama</h3>
+<p>The ability to form conjuncts depends on the richness of the font. Where a font is not able to produce a half-form or ligature, etc., it will leave a visible virama glyph below the initial consonant(s) to indicate the missing vowel sound, eg. <span class="charExample" translate="no"><span class="ex" lang="gu">ટ્બ</span> <span class="trans">ʈ͓b</span></span>.</p>
+<!--p>CHECK THIS OUT - ESPECIALLY GIVEN THAT THE DEFAULT APPLE FONTS DON'T DO IT
+An important consequence of representing clusters in this way is that the syllable boundaries are different. For example, if we follow the cluster with a left-positioned vowel-sign, it will now appear after the virama, rather than before the cluster, eg. compare <span class="charExample" translate="no"><span class="ex" lang="gu">क्कि</span></span> and <span class="charExample" translate="no"><span class="ex" lang="gu">क्‌कि</span></span>. This change is also reflected in segmentation of the text for line-breaking, inter-character spacing, etc.</p--></section>
+    
+    
+    
+<section>
+<h3 id="joiner">Using ZWJ &amp; ZWNJ</h3>
+<p>The examples in the previous subsection used <span class="codepoint" translate="no"><a href="devanagari#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a></span> to force the production of a visible virama, rather than a half-form. For example, <span class="codepoint" translate="no"><span lang="gu">&#x0AA5;</span> + <span lang="gu">&#x0ACD;</span> + <span class="uname">ZWNJ</span> + <span lang="gu">&#x0AA5;</span> [<a href="/scripts/gujarati/block#char0AA5"><span class="uname">U+0AA5 GUJARATI LETTER THA</span></a> + <a href="/scripts/gujarati/block#char0ACD"><span class="uname">U+0ACD GUJARATI SIGN VIRAMA</span></a> + <a href="/scripts/gujarati/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a> + <a href="/scripts/gujarati/block#char0AA5"><span class="uname">U+0AA5 GUJARATI LETTER THA</span></a>]</span> produces <span class="ex" lang="gu">થ્‌થ</span>, rather than <span class="ex" lang="gu">થ્થ</span>.</p>
+<p><span class="codepoint" translate="no"><a href="devanagari#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a></span> can  be used to produce a half-form, such as <span class="charExample" translate="no"><span class="ex" lang="gu">સ્‍ચ</span></span>, rather than <span class="charExample"><span class="ex" lang="gu">શ્ચ</span></span>. It can also be used to produce standalone half-forms (for educational text) such as <span class="charExample" translate="no"><span class="ex" lang="gu">સ્‍</span></span>.</p>
+</section>
+</section>
+
+
+
+
+
+
+<section>
+<h2 id="otherletter">Other letters</h2>
+    <p>In addition to the consonants and vowel letters already mentioned, the Devanagari block contains the following letters.</p>
+
+<figure class="characterBox auto"  data-cols="">ઽ␣ૹ</figure>
+
+<p><span class="codepoint" translate="no"><span lang="gu">&#x0ABD;</span> [<a href="/scripts/gujarati/block#char0ABD"><span class="uname">U+0ABD GUJARATI SIGN AVAGRAHA</span></a>]</span> is used when writing Sanskrit.</p>
+<p><span class="codepoint" translate="no"><span lang="gu">&#x0AF9;</span> [<a href="/scripts/gujarati/block#char0AF9"><span class="uname">U+0AF9 GUJARATI LETTER ZHA</span></a>]</span> is used for transliterations of the Zoroastrian Avestan texts (see <a class="secref">extensions</a>).</p>
+</section>
+
+
+
+
+
+
+<section>
+<h2 id="cchar">Combining marks</h2>
+    <p>In addition to the <a href="#vowelsigns">vowel-signs</a> and  <a href="vocalics">vocalics</a> already mentioned, the Devanagari block contains the following diacritics, which are also introduced in the following sections, respectively, <a class="sectionref">extension</a>, and <a class="sectionref">suppression</a>.</p>
+
+<figure class="characterBox auto"  data-cols="">ઁ␣ં␣ઃ␣઼␣્</figure>
+
+<p><span class="codepoint" translate="no"><span lang="gu">&#x0A81;</span> [<a href="/scripts/gujarati/block#char0A81"><span class="uname">U+0A81 GUJARATI SIGN CANDRABINDU</span></a>]</span> and <span class="codepoint" translate="no"><span lang="gu">&#x0A82;</span> [<a href="/scripts/gujarati/block#char0A82"><span class="uname">U+0A82 GUJARATI SIGN ANUSVARA</span></a>]</span> produce  nasalisation (see <a class="secref">nasalisation</a>), and anusvara can also represent a final consonant, as does <span class="codepoint" translate="no"><span lang="gu">&#x0A83;</span> [<a href="/scripts/gujarati/block#char0A83"><span class="uname">U+0A83 GUJARATI SIGN VISARGA</span></a>]</span> (see <a class="secref">finals</a>).</p>
+<p><span class="codepoint" translate="no"><span lang="gu">&#x0ACD;</span> [<a href="/scripts/gujarati/block#char0ACD"><span class="uname">U+0ACD GUJARATI SIGN VIRAMA</span></a>]</span> kills the inherent vowel and creates conjuncts (see <a class="secref">absence</a>).</p>
+<p><span class="codepoint" translate="no"><span lang="gu">&#x0ABC;</span> [<a href="/scripts/gujarati/block#char0ABC"><span class="uname">U+0ABC GUJARATI SIGN NUKTA</span></a>]</span> and the set of combining characters just below are used to extend the consonant repertoire (see <a class="secref">extensions</a>).</p>
+<figure class="characterBox auto"  data-cols="">ૺ␣ૻ␣ૼ␣૽␣૾␣૿</figure>
+
+</section>
+    
+    
+    
+    
+    
+<section> 
+<h2 id="punctuation">Punctuation</h2>
+		<p>The Unicode Gujarati  block only contains one characters with the general property of <span class="uname">punctuation</span>. It is used for abbreviations (see <a class="secref">abbreviation</a>).</p>
+
+<figure class="characterBox auto"  data-cols="">૰</figure>
+<p>Gujurati sometimes uses the dandas from the Unicode Devanagari block (see <a class="sectionref">phrase</a>).</p>
+
+<figure class="characterBox auto"  data-cols="">।␣॥</figure>
+</section>
+    
+    
+    
+    
+    
+<section> 
+<h2 id="symbols">Symbols</h2>
+		<p>The  only character in the Unicode Gujarati block  with the <span class="uname">symbol</span> property is the Gujarati rupee sign.</p>
+
+<figure class="characterBox auto"  data-cols="">૱</figure>
+
+<p>This can also be written using ordinary characters, ie. <span class="charExample" translate="no"><span class="ex" lang="gu">રૂ૰</span></span>, which is short for <span class="charExample" translate="no"><span class="ex" lang="gu">રૂપિયો</span> <span class="trans">rūpiyo</span> <span class="meaning">rupee</span></span>. Note that rupee can also be abbreviated using a period, ie. <span class="charExample" translate="no"><span class="ex" lang="gu">રૂ.</span></span>.</p>
+</section>
+   
+    
+    
+    
+    
+<section> 
+<h2 id="numberdescn">Numbers</h2>
+		<p>There is a set of Gujarati digits, and they are used in the same way as Latin digits. </p>
+
+<figure class="characterBox auto"  data-cols="">૦␣૧␣૨␣૩␣૪␣૫␣૬␣૭␣૮␣૯</figure>
+</section>
+
+
+
+
+
+<!--section>
+<h2 id="shaping">Glyph shaping &amp; positioning</h2>
+
+<p>You can experiment with examples using the <a href="/pickers/gujarati/">Gujarati picker</a>.</p>
+
+
+<section>
+<h3 id="gsub">Context-based shaping</h3>
+
+  <p>@ Many of the subjoined and post-fixed consonant forms have different shapes from the standard glyph for that character, for example <span class="name">na</span> <span class="charExample"><span class="ex" lang="gu">ᬦ</span></span>  becomes &nbsp; <span class="charExample"><span class="ex" lang="gu">᭄ᬦ</span></span>.</p>
+<p>@ In addition, many conjunct clusters combine characters with special  shapes, or subtly change parts of glyphs to join smoothly. Often the changes are significant, especially the medial consonants, ya, ra, wa and la. For example, see the sequence &lt;ba, adeg-adeg, ra, adeg-adeg, ya&gt; in <span class="charExample" translate="no"><span class="ex" lang="gu">ᬩ᭄ᬭ᭄ᬬᬕ᭄</span> <span class="trans">b͓r͓yg͓ (briag)</span> <span class="meaning">laughter</span></span>.</p>
+<p>@ Combining vowel signs can also have different shapes depending on the context. For example, the vowel sign tedung typically ligates with the preceding consonant, eg. <span class="name">ha</span> is <span class="charExample"><span class="ex" lang="gu">ᬳ</span></span>  but <span class="name">&lt;ha, tedong&gt;</span> is <span class="charExample"><span class="ex" lang="gu">ᬳᬵ</span></span>  and <span class="name">subjoined ya</span> is &nbsp; <span class="charExample"><span class="ex" lang="gu" style="font-family: 'Aksara Bali WF'!important;">᭄ᬬ</span></span>  but <span class="name">&lt;consonant, adeg-adeg, ya, tedong&gt;</span> can be rendered as &nbsp; <span class="charExample"><span class="ex" style="font-family: 'Aksara Bali WF'!important;" lang="gu">᭄ᬬᬵ</span></span>.</p>
+</section>
+
+
+<section>
+<h3 id="gpos">Context-based positioning</h3>
+
+			<p>@ When a vowel and a final consonant sign both appear above a consonant, they are placed side by side, eg. <span class="charExample" translate="no"><span class="ex" lang="gu">ᬱᬫ᭄ᬧᬶᬂ</span> <span class="trans">sm͓piŋ̇̽ (samping)</span> <span class="meaning">side</span></span>.</p>
+</section>
+</section-->
+
+
+
+
+
+
+<section>
+<h2 id="boundaries">Structural boundaries &amp; markers</h2>  
+  
+<section>
+<h3 id="word">Word boundaries</h3>
+ <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+
+<p>Words are  separated by spaces.</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="phrase">Phrase boundaries</h3>
+    <p>Gujarati uses standard western punctuation, but may also use the Devanagari version of a full stop, <span class="codepoint"><span lang="hi">&#x0964;</span> <a href="/scripts/devanagari/block#char0964">[<span class="uname">U+0964 DEVANAGARI DANDA</span>]</a></span> (although an ASCII full stop is  seen in the sample text above.)</p>
+<p>For boundaries of text above the sentence level there is <span class="codepoint"><span lang="hi">&#x0965;</span> <a href="/scripts/devanagari/block#char0965">[<span class="uname">U+0965 DEVANAGARI DOUBLE DANDA</span>]</a></span>.</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="abbreviation">Abbreviation</h3>
+<p><span class="codepoint" translate="no"><span lang="gu">&#x0AF0;</span> [<a href="/scripts/gujarati/block#char0AF0"><span class="uname">U+0AF0 GUJARATI ABBREVIATION SIGN</span></a>] </span>is a commonly-used character in Gujarati and appears in printed materials. It  is used to write abbreviations of words in Gujarati, eg. <span class="charExample" translate="no"><span class="ex" lang="gu">ડોક્ટર</span> <span class="trans">ɖok͓ʈr (dokṭar)</span> <span class="meaning">doctor</span></span> can be abbreviated as <span class="charExample" translate="no"><span class="ex" lang="gu">ડો૰</span></span>.  The Latin full stop is used interchangably with this character, eg. <span class="charExample" translate="no"><span class="ex" lang="gu">ડો.</span></span>.</p>
+</section>
+</section>
+ 
+ 
+ 
+ 
+ 
+<section>
+<h2 id="paralayout">Line &amp; paragraph layout</h2>
+<section>
+  <h3 id="lists">Counter styles</h3>
+  
+<p>Gujarati has a numeric counter style, according to the document <a href="https://w3c.github.io/predefined-counter-styles/#tamil-styles">Ready-made Counter Styles</a>.</p>
+<p>It uses the standard Gujarati digits: '੦' '੧' '੨' '੩' '੪' '੫' '੬' '੭' '੮' '੯''.</p>
+<figure>
+<p class="large">1&nbsp;⇨&nbsp;<span class="ex" lang="gu">੧</span> 2&nbsp;⇨&nbsp;<span class="ex" lang="gu">੨</span> 3&nbsp;⇨&nbsp;<span class="ex" lang="gu">੩</span> 4&nbsp;⇨&nbsp;<span class="ex" lang="gu">੪</span> <br>
+11&nbsp;⇨&nbsp;<span class="ex">੧</span><span class="ex">੧</span> 22&nbsp;⇨&nbsp;<span class="ex">੨</span><span class="ex">੨</span> 33&nbsp;⇨&nbsp;<span class="ex">੩</span><span class="ex">੩</span> 44&nbsp;⇨&nbsp;<span class="ex" lang="gu">੪੪</span> <br>
+111&nbsp;⇨&nbsp;<span class="ex">੧</span><span class="ex">੧</span><span class="ex">੧</span>222&nbsp;⇨&nbsp;<span class="ex">੨</span><span class="ex">੨</span><span class="ex">੨</span></p>
+<figcaption>Numbers produced by the numeric counter style<span class="trans"></span>.</figcaption>
+</figure>
+<p>You can experiment with these styles using the <a href="../../r12a.github.io/apps/counterconverter/apps/counterconverter/">Counter styles converter</a>.</p>
+</section>
+</section>
+
+
+
+
+
+
+
+<section>
+<h3 id="tbd">TBD</h3>
+<p class="ednote">Further information needed for this section includes:</p>
+<pre style="margin-left: 10%;">
+Glyph shaping &amp; positioning
+    Cursive text
+    Context-based shaping
+    Multiple combining characters
+    Context-based positioning
+    Transforming characters
+
+Structural boundaries &amp; markers
+    Grapheme, word &amp; phrase boundaries
+    Hyphens &amp; dashes
+    Bracketing information
+    Quotations
+    Abbreviations, ellipsis, &amp; repetition
+    Emphasis &amp; highlights
+    Inline notes &amp; annotations
+
+Inline layout
+    Inline text spacing
+    Bidirectional text
+
+Line &amp; paragraph layout
+    Text direction
+    Line breaking
+    Hyphenation
+    Text alignment &amp; justification
+    Counters, lists, etc.
+    Styling initials
+    Baselines &amp; inline alignment
+
+Page &amp; book layout
+    General page layout &amp; progression
+    Directional layout features
+	Grids &amp; tables
+    Notes, footnotes, etc.
+    Forms &amp; user interaction
+    Page numbering, running headers, etc.
+</pre>
+</section>
+
+
+
+ 
+	
+
+
+	<section> 
+
+    <h2 id="refs">Further reading</h2>
+		<ol>
+			<!--li>[Daniels] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
+				0-19-507993-0</li-->
+			<li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="doctitle"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
+		    0-19-507993-0</li>
+			<li>[ <sup><a href="http://std.dkuug.dk/JTC1/sc2/WG2/docs/n2908.pdf">e</a></sup> ] Everson et al., <a href="http://std.dkuug.dk/JTC1/sc2/WG2/docs/n2908.pdf">Proposal for encoding the Gujarati script in the UCS</a></li>
+			<li>[ <sup><a href="http://en.wikipedia.org/wiki/Gujarati_alphabet">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Gujarati_alphabet">Gujarati alphabet</a></li>
+			<li>[ <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf">u</a></sup> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf">The Unicode Standard v11.0</a></li>
+			<li>[ <sup><a href="http://scriptsource.org/cms/scripts/page.php?item_id=source_detail&amp;uid=nrgqwv9x7a">o</a></sup> ] Omniglot, <a href="http://scriptsource.org/cms/scripts/page.php?item_id=source_detail&amp;uid=nrgqwv9x7a">Gujarati </a></li>
+			<li>[ <sup><a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&amp;uid=aggc6af8cc">ss</a></sup> ] ScriptSource, <a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&amp;uid=aggc6af8cc">Gujarati</a></li>
+<li>[ <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n4473.pdf">z</a></sup> ] Vinodh Rajan, <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n4473.pdf">Proposal	to	encode	Gujarati	Letter	ZHA</a></li>
+		</ol>
+</section>
+
+
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/gujarati"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-02-23  8:09<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bgujarati%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fgujarati%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
+<div id="panel" style="display:none"></div>
+
+<script>
+initialiseSummary('/scripts/gujarati/block','gu','Gujarati')
+</script>
+
+</body>
+</html>
