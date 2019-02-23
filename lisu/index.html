@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<title>Lisu script notes</title>
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="description" content="Summary of the Lisu script."/>
+<link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../common/local.css" />
+<!--link rel="stylesheet" href="../style/print.css"/-->
+<style>
+@font-face {
+    font-family: 'Lisu WF';
+    src: url('../../shared/webfonts/Lisuwebfont.woff2') format('woff2'),
+         url('../../shared/webfonts/Lisuwebfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+@font-face {
+	font-family: 'Noto Serif Lisu WF';
+	src: 	local('Noto Serif Lisu'),
+			url('../../shared/webfonts/notoseriflisu-regularwebfont.woff2') format('woff2'),  
+			url('../../shared/webfonts/notoseriflisu-regularwebfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	}
+#freeText {
+	font-size: 28px;
+	font-family: Noto Serif Lisu WF, serif;
+	text-align: start;
+    line-height: 2;
+	}
+@media print { #freeText { font-size: 18px; } }
+[lang=lis] { font-family: Noto Serif Lisu WF, 'Lisu WF', serif; font-size: 140%; }
+.large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }	
+</style>
+
+<script src="db.js"> </script>
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2019.js"></script>
+<script src="../../shared/code/all-names.js"></script>
+<script src="../../shared/code/character_conversion.js"></script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/fontlists/manage.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
+<script src="../common/functions.js"></script>
+<script src="../../shared/code/getLinks.js"></script>
+<script src="../linkdata/linkdb.js"></script>
+<script src="../featurelist/scriptdata.js"> </script>
+
+<script src="../../shared/fontlists/lisu.js"> </script>
+</head>
+
+<body>
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
+</header>
+
+<h1>Lisu script summary</h1>
+
+<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top"/></a></nav>
+
+  <aside class="sidebar"> 
+		<h2 class="notoc flush"><a id="tochead" name="tochead" tabindex="4">Contents</a></h2>
+		<div id="toc"><!-- placeholder --></div>
+
+ <div id="fontsetting" class="closed">
+  <h2 class="notoc"><a id="fonts">Fonts</a></h2>
+  <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'lis');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'lis');" />
+    </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
+    <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
+	return false;">
+      <p>Change size:<br />
+        <input id="slider" type="range" min="12" max="100" step="1" value="32">
+        &#xA0; <span id="sizeIndicator">32px</span><br />
+        <input id="multiplier" type="hidden" value="1" />
+        Multiplier:
+        <input type="radio" name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x1">1</label>
+        <input type="radio" name="step" id="x5" value="2"  onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x5">2</label>
+        <input type="radio" name="step" id="x10" value="10"  onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x10">10</label>
+      </p>
+    </form>
+</div>
+</aside>
+
+	<p id="status">Updated Mon 13 Oct 2014  &bull; tags <a href="http://r12a.github.io/blog/index.php?tag=lisu" title="Show all blog posts tagged with 'lisu'">lisu</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+
+	<div class="section">
+	  <p>This page provides basic information about the Lisu script. It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned.  For character-specific details follow the links to the <a class="linkHighlight" href="/scripts/lisu/block">Lisu character notes</a>.</p>
+<p>For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>.</p>
+<p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+  
+  <details id="scriptLinks">
+  <summary class="instructions">More links for the Lisu script.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Lisu')</script>
+  </details>
+</div>
+
+
+
+<section>
+<h2 id="sample">Sample (Lisu)</h2>
+  
+
+  <div id="freeText" dir="ltr" lang="lis" data-target="c" data-base="/scripts/lisu/block" data-source="http://www.evertype.com/standards/iso10646/pdf/fraser-sample.pdf">
+  <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">ꓞꓳ ꓘꓹ ꓠꓯꓹꓼ ꓢꓲ ꓫꓬ ꓟ ꓙ ꓖꓴ ꓗꓪ ꓟꓬꓱꓽ ꓧꓳꓽ ꓢꓴ ꓠꓬ꓾ ꓞꓳ ꓘꓹ ꓗꓪ ꓟ ꓞꓳ ꓟ ꓐꓴ ꓔꓯ ꓮ ꓡꓲ ꓬꓰ ꓠꓯꓹ ꓟ꓾ ꓟꓬꓱꓽ ꓔꓯ ꓧꓳꓽ ꓪꓴꓸ ꓟꓴ ꓢꓴ ꓬꓲ ꓜꓴꓻ ꓤ (Committee) ꓕꓲ ꓜꓴꓻ ꓢꓲꓺ ꓖꓶ ꓠꓯꓹ ꓡꓳ꓿</p>
+  <!-- Source: http://www.evertype.com/standards/iso10646/pdf/fraser-sample.pdf -->
+  </div>
+</section>
+
+
+
+
+ 
+
+<section>
+    <h2 id="history">Usage &amp; history</h2>
+    <p>From the <a href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">Unicode Standard</a>: </p>
+    <blockquote>
+<p>Somewhere between 1908 and 1914 a Karen evangelist from Myanmar by the name of Ba Thaw modified the shapes of Latin characters and created the Lisu script. Afterwards, British missionary James Outram Fraser and some Lisu pastors revised and improved the script. The script is commonly known in the West as the Fraser script. It is also sometimes called the Old Lisu script, to distinguish it from newer, Latin-based orthographies for the Lisu language.</p>
+<p>There are 630,000 Lisu people in China, mainly in the regions of Nujiang, Diqing, Lijiang, Dehong, Baoshan, Kunming and Chuxiong in the Yunnan Province. Another 350,000 Lisu live in Myanmar, Thailand and India. Other user communities are mostly Christians from the Dulong, the Nu and the Bai nationalities in China.</p>
+<p>At present, about 200,000 Lisu in China use the Lisu script and about 160,000 in the other countries are literate in it. The Lisu script is widely used in China in education, publishing, the media and religion. Various schools and universities at the national, provincial and prefectural levels have been offering Lisu courses for many years. Globally, the script is also widely used in a variety of Lisu literature.</p>
+</blockquote>
+    <p>From <a href="http://en.wikipedia.org/wiki/Lisu_alphabet">Wikipedia</a>:</p>
+<blockquote>
+<p>The Fraser alphabet or Old Lisu Alphabet is an artificial script invented around 1915 by Sara Ba Thaw, a Karen preacher from Myanmar, and improved by the missionary James O. Fraser, to write the Lisu language. It is a single-case (unicameral) alphabet. It was also used for the Naxi language, e.g. the 1932 Naxi Gospel of Mark and used in the Zaiwa or Atsi language e.g. the 1938 Atsi Gospel of Mark. ...</p>
+<p>The Chinese government recognized the alphabet in 1992 as the official script for writing in Lisu.</p>
+</blockquote>
+</section>
+
+
+
+
+
+  <div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+    </table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+   </div>
+
+
+
+
+<section>
+    <h2 id="type">Distinctive features</h2>
+<p>The script  is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>. Consonants carry an inherent vowel which can be modified by appending vowel-signs to the consonant.  See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.</p>
+<p>The following list describes some distinctive characteristics of the Lisu script.</p>
+<ul>
+<li>
+<p>The Lisu script combines characteristics of an abugida and an alphabet, in that it uses vowel letters rather than vowel-signs to override the inherent vowel.</p></li>
+<li>
+<p>Many Lisu characters look like Latin characters, but they are not unified. Nor is there any case distinction.</p>
+</li>
+<li>
+<p>The script is based on a fairly simple syllabic structure. Tones are written at the end of the syllable, using what look like western punctuation marks.</p></li>
+<li>
+<p>Punctuation mixes western and Chinese characters with a couple of Lisu-only characters. European digits are used.</p></li>
+<li>Generally, syllables are separated by spaces, whether or not they are part of a multisyllabic word, and text is wrapped at spaces regardless of word boundaries. Syllables in proper nouns, however, are separated by hyphens and wrapped as a unit.</li>
+</ul>
+</section>
+
+
+
+
+
+ <section>
+<h2 id="chars">Character lists</h2>
+  <p>The Lisu script characters in Unicode 11.0 are in the following block: </p>
+    <ul>
+      <li> <a href="/uniview/?block=lisu">Lisu</a> <span class="charCount">(46 letters, 2 punctuation :   total 48)</span></li>
+    </ul>
+   <!--p>@ The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li><a href="/app-charuse/?language=lis" target="_blank">Lisu</a> <span class="charCount">(45 letters, 14 marks, 10 digits, 10 punctuation :   total 79)</span></li>
+<li>TBD</li>
+<li><a href="/app-charuse/?language=lis" target="_blank">Lisu</a> <span class="charCount">(25 letters, 3 marks, 1 punctuation :   total 29)</span></li>
+</ul-->
+<p>For character-specific details see the <a class="linkHighlight" href="/scripts/lisu/block">Lisu character notes</a>.</p>
+</section>
+  
+  
+
+
+
+<div id="showTranscriptions">
+<div>In yellow boxes, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<!--div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div-->
+</div>
+
+
+
+
+
+
+  <section>
+    <h2 id="direction">Text direction</h2>
+    <p>Lisu text is written horizontally, left to right.</p>
+  </section>
+   
+    
+      
+
+
+
+<section> 
+<h2 id="vowels">Vowels</h2>
+
+
+<section>
+<h3 id="inherent">Inherent vowel</h3>
+
+<p>Consonants carry an inherent vowel usually transcribed as <span class="trans">a</span> and pronounced <span class="ipa">ɑ</span>.  So <span class="charExample" translate="no"><span class="ex" lang="lis">ꓗ</span></span> is pronounced <span class="ipa">kɑ</span>.</p>
+</section>
+<section>
+<h3 id="vowelsigns">Vowel characters</h3>
+
+<p>Lisu is unusual for an abugida. Normally, abugidas produce a different vowel than the inherent one by attaching vowel-signs to the base consonant. Lisu instead uses a standalone vowel character after the  consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="lis">ꓗꓲ</span> <span class="ipa">ki</span></span>.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans">ꓮ␣ꓯ␣ꓷ␣ꓰ␣ꓱ␣ꓲ␣ꓶ␣ꓳ␣ꓴ␣ꓵ</figure>
+</section>
+
+
+
+
+ 
+<section>
+<h3 id="consonantvowels">Consonant characters used as vowels</h3>
+
+<p>Three consonants are sometimes used as vowels.</p>
+
+<figure class="auto" data-cols="ipa,trans">ꓪ␣ꓬ␣ꓭ</figure>
+</section>
+
+
+
+
+ 
+<section>
+<h3 id="vowelmodifiers">Vowel-related modifiers</h3>
+
+
+<figure class="characterBox auto" data-cols="ipa,trans">ʼ␣ˍ</figure>
+
+<p><span class="codepoint" translate="no"><span lang="lis">&#x02BC;</span> [<a href="/scripts/lisu/block#char02BC"><span class="uname">U+02BC MODIFIER LETTER APOSTROPHE</span></a>]</span> is used to indicate nasalisation. </p>
+<p><span class="codepoint" translate="no"><span lang="lis">&#x02CD;</span> [<a href="/scripts/lisu/block#char02CD"><span class="uname">U+02CD MODIFIER LETTER LOW MACRON</span></a>]</span> marks various aspects of verbal forms. It is pronounced <span class="ipa">ɑ</span> with a falling 31 tone, and is written at the end of a syllable.</p>
+<p>Neither of the above are encoded in the Unicode Lisu block.</p>
+</section>
+</section>
+
+
+
+
+
+
+<section> 
+<h2 id="consonants">Consonants</h2>
+  
+<p>Many Lisu consonants look like Latin characters, but they are not unified.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans">ꓐ␣ꓭ␣ꓚ␣ꓛ␣ꓓ␣ꓝ␣ꓞ␣ꓖ␣ꓨ␣ꓧ␣ꓙ␣ꓩ␣ꓗ␣ꓘ␣ꓡ␣ꓟ␣ꓠ␣ꓑ␣ꓒ␣ꓣ␣ꓤ␣ꓢ␣ꓔ␣ꓕ␣ꓪ␣ꓥ␣ꓦ␣ꓫ␣ꓬ␣ꓜ</figure>
+</section>
+
+
+
+
+
+
+<section>
+<h2 id="tones">Tones</h2>
+<p>Lisu uses the following signs, which look like western punctuation, to represent the tone of a syllable. The Unicode Standard says that they may use the same fixed-width spacing as the letters.</p>
+  
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ꓸ␣ꓹ␣ꓺ␣ꓻ␣ꓼ␣ꓽ</figure>
+
+
+
+<p>The expected typing and storage position for tone marks is after all other elements in a syllable.</p>
+<p>The first four tone letters can be used in combination with the last two to represent certain combination tones. Of the various possibilities, only <span class="charExample" translate="no"><span class="ex" lang="lis">,;</span></span> is still in use; the rest are now rarely seen in China. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">u</a></sup></p>
+</section>
+    
+    
+    
+    
+    
+<section> 
+<h2 id="punctuation">Punctuation</h2>
+		<p>The Lisu Unicode block contains the following punctuation marks.</p>
+
+<figure class="characterBox auto"  data-cols="">꓾␣꓿</figure>
+
+		<p>In addition, Lisu uses the following Western and Chinese punctuation</p>
+
+<figure class="characterBox auto"  data-cols="">?␣!␣"␣(␣)␣《␣》␣…</figure>
+
+<p>See <a class="secref">boundaries</a> for more information.</p>
+</section>
+
+
+
+
+    
+<section> 
+<h2 id="numberdescn">Numbers</h2>
+		<p> Lisu uses european digits.</p>
+<p>The thousands and decimal separators are the same as those used in English.</p>
+</section>
+<section>
+<h2 id="shaping">Glyph shaping &amp; positioning</h2>
+
+<p>There is no glyph shaping or positioning required for Lisu.</p>
+</section>
+
+
+
+
+
+
+<section>
+<h2 id="boundaries">Structural boundaries &amp; markers</h2>  
+  
+<section>
+<h3 id="word">Word boundaries</h3>
+ <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+
+<p>Syllables  are separated by spaces, however where syllables combine to form a proper noun, <span class="codepoint" translate="no">a hyphen is </span>  used to bind the syllables together.</p>
+<p>For multi-syllable words the inter-syllable space is still used. Because of difficulties determining which syllable sequences correspond to multi-syllablic words, except when dealing with proper nouns, the syllable is normally taken to be the basic unit for text processing.<sup><a href="https://www.w3.org/TR/ilreq/"></a></sup></p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="phrase">Phrase boundaries</h3>
+<p>A greater and lesser degree of finality are represented by <span class="codepoint" translate="no"><span lang="lis">&#xA4FE;</span> [<a href="/scripts/lisu/block#charA4FE"><span class="uname">U+A4FE LISU PUNCTUATION COMMA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="lis">&#xA4FF;</span> [<a href="/scripts/lisu/block#charA4FF"><span class="uname">U+A4FF LISU PUNCTUATION FULL STOP</span></a>]</span>.</p>
+<p>Chapter and verse in biblical texts tend to be separated by the ASCII colon and semicolon. The numeric context helps distinguish these separators from the Lisu tone marks.</p>
+		<p>Lisu also uses the ASCII characters <span class="codepoint" translate="no"><span lang="lis">&#x003F;</span> [<a href="/scripts/lisu/block#char003F"><span class="uname">U+003F QUESTION MARK</span></a>]</span> and <span class="codepoint" translate="no"><span lang="lis">&#x0021;</span> [<a href="/scripts/lisu/block#char0021"><span class="uname">U+0021 EXCLAMATION MARK</span></a>]</span> for question and exclamation marks. The question mark replaces the <span class="charExample" translate="no"><span class="ex" lang="lis">ꓺꓽ꓿</span></span> sequence of characters,  which was  used in older texts.</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="hyphens">Hyphens &amp; dashes</h3>
+<p>As mentioned earlier,  <span class="codepoint" translate="no"><span lang="lis">&#x002D;</span> [<a href="/scripts/lisu/block#char002D"><span class="uname">U+002D HYPHEN-MINUS</span></a>]</span> is  used between the syllables that compose a proper noun. The Unicode Standard suggests the use of <span class="codepoint" translate="no"><span lang="lis">&#x2010;</span> [<a href="/scripts/lisu/block#char2010"><span class="uname">U+2010 HYPHEN</span></a>]</span> instead, as its semantics are less ambiguous.</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="ellipsis">Ellipsis</h3>
+
+<p>Ellipsis is written using <span class="codepoint" translate="no"><span lang="lis">&#x2026;</span> [<a href="/scripts/lisu/block#char2026"><span class="uname">U+2026 HORIZONTAL ELLIPSIS</span></a>]</span>.</p>
+<p>In Chinese texts this is always doubled, ie. <span class="charExample" translate="no"><span class="ex" lang="lis">……</span></span>.</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="brackets">Bracketing information</h3>
+
+<p>The ASCII characters <span class="codepoint" translate="no"><span lang="lis">&#x0028;</span> [<a href="/scripts/lisu/block#char0028"><span class="uname">U+0028 LEFT PARENTHESIS</span></a>]</span> and <span class="codepoint" translate="no"><span lang="lis">&#x0029;</span> [<a href="/scripts/lisu/block#char0029"><span class="uname">U+0029 RIGHT PARENTHESIS</span></a>]</span> are used for parentheses.</p>
+<p>The fullwidth characters <span class="codepoint" translate="no"><span lang="lis">&#x300A;</span> [<a href="/scripts/lisu/block#char300A"><span class="uname">U+300A LEFT DOUBLE ANGLE BRACKET</span></a>]</span> and <span class="codepoint" translate="no"><span lang="lis">&#x300B;</span> [<a href="/scripts/lisu/block#char300B"><span class="uname">U+300B RIGHT DOUBLE ANGLE BRACKET</span></a>]</span> are used to identify book titles.</p>
+</section>
+</section>
+ 
+ 
+ 
+ 
+ 
+<section>
+<h2 id="paralayout">Line &amp; paragraph layout</h2>
+   
+      
+  <section>
+    <h3 id="linebreak">Line breaking &amp; hyphenation</h3>
+    <p>The space between syllables provides the primary break opportunity for wrapping text, even where that occurs in the middle of a multi-syllable word.</p>
+    <p><span class="ednote">The Unicode Standard suggests that proper nouns, which have syllables separated by hyphens, are not split. Need to check that.</span></p>
+</section>
+</section>
+<section>
+<h3 id="tbd">TBD</h3>
+<p class="ednote">Further information needed for this section includes:</p>
+<pre style="margin-left: 10%;">
+Glyph shaping &amp; positioning
+    Cursive text
+    Context-based shaping
+    Multiple combining characters
+    Context-based positioning
+    Transforming characters
+
+Structural boundaries &amp; markers
+    Grapheme, word &amp; phrase boundaries
+    Hyphens &amp; dashes
+    Bracketing information
+    Quotations
+    Abbreviations, ellipsis, &amp; repetition
+    Emphasis &amp; highlights
+    Inline notes &amp; annotations
+
+Inline layout
+    Inline text spacing
+    Bidirectional text
+
+Line &amp; paragraph layout
+    Text direction
+    Line breaking
+    Hyphenation
+    Text alignment &amp; justification
+    Counters, lists, etc.
+    Styling initials
+    Baselines &amp; inline alignment
+
+Page &amp; book layout
+    General page layout &amp; progression
+    Directional layout features
+	Grids &amp; tables
+    Notes, footnotes, etc.
+    Forms &amp; user interaction
+    Page numbering, running headers, etc.
+</pre>
+</section>
+
+
+
+ 
+	
+
+
+	<section> 
+
+    <h2 id="refs">Further reading</h2>
+		<ol>
+			<!--li>[Daniels] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
+				0-19-507993-0</li-->
+			<li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="doctitle"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
+		    0-19-507993-0</li>
+<li>[ <sup><a href="http://en.wikipedia.org/wiki/Lisu_script">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Lisu_script">Lisu script</a></li>
+			<li>[ <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">u</a></sup> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">The Unicode Standard v11.0</a></li>
+</ol>
+</section>
+
+
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/lisu"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-02-23  8:36<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Blisu%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Flisu%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
+<div id="panel" style="display:none"></div>
+
+<script>
+initialiseSummary('/scripts/lisu/block','lis','Lisu')
+</script>
+
+</body>
+</html>
