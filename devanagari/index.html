@@ -99,7 +99,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->15-Feb-2019<!-- #EndDate -->
+  <!-- #BeginDate format:En2 -->23-Feb-2019<!-- #EndDate -->
 &bull; tags <a href="http://r12a.github.io/blog/index.php?tag=devanagari" title="Show all blog posts tagged with 'devanagari'">devanagari</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
@@ -177,17 +177,6 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
   
   
-<div id="showTranscriptions">
-<div>In yellow boxes, show:</div>
-<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
-<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
-<div><label>ISO 15919 <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
-</div>
-
-
-
-
 
 <section>
 <h2>Character lists</h2>
@@ -211,6 +200,26 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
+ <div id="showTranscriptions">
+<div>In yellow boxes, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div><label>ISO 15919 <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+</div>
+
+
+
+
+ <section>
+    <h2 id="direction">Text direction</h2>
+    <p>Text is normally written horizontally, left to right.</p>
+  </section>
+   
+    
+      
+
+
 <section>
 <h2 id="vowels">Vowels</h2>
 
@@ -225,7 +234,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
  
 <section>
-<h3 id="suppression">Vowel suppression</h3>
+<h3 id="suppression">Vowel absence</h3>
 <p>The inherent vowel is not always pronounced. For example in Hindi it is not usually pronounced at the end of a word,
 although a ghost echo may appear after a word-final cluster of consonants, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">योग्य</span> <span class="trans">yōg͓y</span> <span class="ipa">jogjᵊ</span></span>, or <span class="charExample" translate="no"><span class="ex" lang="hi">राष्ट्र</span> <span class="trans">rāʂ͓ʈ͓r</span> <span class="ipa">ɾəstɾᵊ</span></span>. </p>
 <p>In
@@ -256,48 +265,9 @@ however, this rule does not always hold.)</p>
 
 
 <p>Half the vowel-signs are <em>spacing</em> combining characters, meaning that they consume horizontal space when added to a base consonant.</p>
-<p>Vowel-sign positions are as follows (Hindi in parentheses):</p>
-<ul>
-<li>2 (1) prescript</li>
-<li>8 (4) postscript</li>
-<li>6 (2) superscript</li>
-<li>4 (2) subscript</li>
-</ul>
 <p>There are no vowel-signs with multiple parts, and only one vowel-sign appears per base consonant.</p>
 <p>All vowel-signs are typed and stored <em>after</em> the base consonant, whether or not they precede it when displayed. The font takes care of the glyph positioning.</p>
 <p>See also <a class="sectionref">vocalics</a>.</p>
-</section>
-
-
-
-
-
-
-<section>
-<h3 id="independentvowel">Syllable-initial vowels</h3>
-
-<p class="explanatoryintro">Syllable-initial vowels appear at the beginning of a word, or after another vowel in the middle of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">नई</span> <span class="trans">nị̄ (nəị̄)</span> <span class="meaning">new</span></span> (note how this is different from <span class="charExample" translate="no"><span class="ex" lang="hi">नी</span> <span class="trans">nī</span></span>). </p>
-<p>Devanagari represents syllable-initial vowels using a set of independent vowel letters. The set contains a character to represent the inherent vowel sound.</p>
-<p>Independent vowels used by Hindi:</p>
-
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">अ␣आ␣इ␣ई␣उ␣ऊ␣ए␣ऐ␣ओ␣औ</figure>
-
-
-
-<p>The other independent vowels in the Unicode Devanagari block:</p>
-
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">ऄ␣ॲ␣ॶ␣ॷ␣ऎ␣ऍ␣ऑ␣ऒ␣ॵ␣ॳ␣ॴ</figure>
-</section>
-
-
-
-
-  
-<section>
-<h3 id="vocalics">Vocalics</h3>
-    <p class="explanatoryintro">Vocalics are special combinations of consonant+vowel, derived from Sanskrit, that generally behave like vowels.</p>
-<p>In Devanagari, vocalics are  available both as vowel-signs and independent vowels.</p>
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">ृ␣ॄ␣ॢ␣ॣ␣ऋ␣ॠ␣ऌ␣ॡ</figure>
 </section>
 
 
@@ -311,6 +281,56 @@ however, this rule does not always hold.)</p>
 <p>When a vowel-sign rises above the head line, the glyph for this character may be simplified to  just a dot (which resembles the anusvara).<sup><a href="refs"> s</a></sup> It appears that this is normally achieved by using an anusvara instead of candrabindu, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">हैं</span> <span class="trans">hɛ̄m̽</span> <span class="ipa">ɦɛ̃</span> <span class="meaning">are</span></span>.</p>
 
 </section>
+
+
+
+
+ 
+<section>
+<h3 id="placement">Vowel-sign placement</h3>
+
+<p>The following list shows where vowel-signs are positioned around a base consonant to produce vowels, and how many instances of that pattern there are. The number used by Hindi is shown in parentheses.</p>
+<ul>
+<li>2 (1)  prescript, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">कि</span> <span class="trans">ki</span></span></li>
+<li>8 (4) postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">का</span> <span class="trans">kā</span></span></li>
+<li>6 (2) superscript, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">के</span> <span class="trans">kē</span></span></li>
+<li>4 (2) subscript, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">कु</span> <span class="trans">ku</span></span></li>
+</ul>
+</section>
+
+
+
+
+
+
+<section>
+<h3 id="independentvowel">Standalone vowels</h3>
+
+<p class="explanatoryintro">Standalone vowels are not preceded by a consonant, and may appear at the beginning or in the middle of a word.</p>
+<p>Devanagari represents standalone vowels using a set of independent vowel letters. The set contains a character to represent the inherent vowel sound.</p>
+<p>Independent vowels used by Hindi:</p>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">अ␣आ␣इ␣ई␣उ␣ऊ␣ए␣ऐ␣ओ␣औ</figure>
+
+
+
+<p>The other independent vowels in the Unicode Devanagari block:</p>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ऄ␣ॲ␣ॶ␣ॷ␣ऎ␣ऍ␣ऑ␣ऒ␣ॵ␣ॳ␣ॴ</figure>
+
+<p>Note the difference between <span class="charExample" translate="no"><span class="ex" lang="hi">नई</span> <span class="trans">nị̄ (nəị̄)</span> <span class="meaning">new</span></span> and <span class="charExample" translate="no"><span class="ex" lang="hi">नी</span> <span class="trans">nī</span></span>.</p>
+</section>
+</section>
+
+
+
+
+  
+<section>
+<h2 id="vocalics">Vocalics</h2>
+<p class="explanatoryintro">Vocalics are letters derived from Sanskrit that generally behave like vowels, but represent r/l followed by a vowel. They are often available both as vowel-signs and independent vowel letters.</p>
+<p>In Devanagari, vocalics are  available both as vowel-signs and independent vowels.</p>
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ृ␣ॄ␣ॢ␣ॣ␣ऋ␣ॠ␣ऌ␣ॡ</figure>
 </section>
 
 
@@ -387,17 +407,19 @@ however, this rule does not always hold.)</p>
   
 <section>
 <h2 id="clusters">Consonant clusters</h2>
-<p>The absence of a vowel sound between two or more consonants is visually indicated in one of the following ways.</p>
+<p class="explanatoryintro">When the shapes of constituent consonants in a cluster are changed or merged to indicate the lack of intervening vowels, this is referred to as a conjunct.</p>
+<p>The absence of a vowel sound between two or more consonants can be visually indicated in one of the following ways.</p>
     <ol>
-    <li>Reduce the shape of all consonants in the cluster except the last to a 'half-form'. </li>
+    <li>Create a conjunct. There are a number of possibilities here:<ol style="margin: 0;">
+<li>Reduce the shape of all consonants in the cluster except the last to a 'half-form'. </li>
 <li>Reduce a non-initial consonant in size and shape and position it below the first.</li>
 <li>Create a ligature combining the two shapes (where neither may be readily identified).</li>
 <li>The letter <span class="trans">ra</span> has its own idiosyncratic way of combining with other consonants, whether it precedes or follows them.</li>
+</ol></li>
 <li>Show a visible virama below the non-final consonants in the cluster.</li>
 <li>No indication, although there are usually generalised pronunciation rules that allow readers to spot these locations. Examples of these rules are given in the section about <a href="#inherentvowel">the inherent vowel</a>.</li>
 </ol>
 <p>In all cases except the last, the underlying mechanism in terms of codepoints involves adding <span class="codepoint" translate="no"><span lang="hi">&#x094D;</span> [<a href="devanagari#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA</span></a>]</span> between the consonants in the cluster, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">क्ष</span></span> is produced by the sequence <span class="codepoint" translate="no"><span lang="hi">&#x0915;</span> + <span lang="hi">&#x094D;</span> + <span lang="hi">&#x0937;</span> [<a href="devanagari#char0915"><span class="uname">U+0915 DEVANAGARI LETTER KA</span></a> + <a href="devanagari#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA</span></a> + <a href="devanagari#char0937"><span class="uname">U+0937 DEVANAGARI LETTER SSA</span></a>]</span>.</p>
-<p>Where the approach changes the shape of the constituent consonants, the cluster is referred to as a <span class="name">conjunct</span>.</p>
 <p>The font usually determines which visual method is used, although it is possible to influence this (see below).</p>
     
     
@@ -625,9 +647,11 @@ however, this rule does not always hold.)</p>
 
 
 
+
+  
 <section>
-    <h3 id="abbrev">Abbreviation &amp; ellipsis</h3>
-<p>The Devanagari block contains <span class="codepoint" translate="no"><span lang="hi">&#x0970;</span> [<a href="devanagari#char0970"><span class="uname">U+0970 DEVANAGARI ABBREVIATION SIGN</span></a>]</span>, but it's not clear to me whether or how this is used in modern content.</p>
+<h3 id="abbrev">Abbreviation</h3>
+<p><span class="codepoint" translate="no"><span lang="hi">&#x0970;</span> [<a href="devanagari#char0970"><span class="uname">U+0970 DEVANAGARI ABBREVIATION SIGN</span></a>]</span> is used  to indicate abbreviations of words, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">रुपया</span> <span class="trans">rupyā (rupayā)</span> <span class="meaning">rupee</span></span> can be abbreviated as <span class="charExample" translate="no"><span class="ex" lang="hi">रु॰</span></span>.</p>
 </section>
 
 
@@ -652,15 +676,6 @@ however, this rule does not always hold.)</p>
 <h2 id="layout">Line &amp; paragraph layout</h2>
    
       
-  <section>
-    <h3 id="direction">Text direction</h3>
-    <p>Text is normally written horizontally, left to right.</p>
-  </section>
-   
-    
-      
-
-
   <section>
     <h3 id="hyphenation">Hyphenation</h3>
     <p>Devanagari text can be hyphenated during line wrap.</p>
@@ -789,7 +804,7 @@ Page &amp; book layout
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/devanagari"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-02-15  13:01<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bdevanagari%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fdevanagari%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/devanagari"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-02-23  8:15<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bdevanagari%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fdevanagari%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 
