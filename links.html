@@ -2,7 +2,7 @@
 <html lang="en-GB">
 <head>
 <meta charset="utf-8"/>
-<title>ishida &gt;&gt; scripts</title>
+<title>r12a &gt;&gt; scripts</title>
 <meta name="description" content="Lists of articles, papers and notes by Richard Ishida."/>
 <link rel="stylesheet" href="../shared/style/docs.css" type="text/css" />
 <link rel="stylesheet" type="text/css" href="linkdata/menu.css" />
@@ -141,12 +141,23 @@ function getData (script) {
 		temp += '</td></tr>'
 		if (temp !== '<tr><td>Other:</td><td></td></tr>') out += temp
 		}
+	if (record.dates) {
+		var temp = ''
+		temp += '<tr><td>Usage:</td><td>'
+		temp += '<p>'
+		if (record.end) temp+= 'Historic script <span style="font-size:80%;">('+record.dates+')</span>'
+		else if (record.current_usage) temp += record.dates+ ', <span style="font-size:80%">but with limited usage ('+record.current_usage+')</span>'
+		else temp += record.dates
+		temp += '</p>'
+		temp += '</td></tr>'
+		out += temp
+		}
 	out += '</table></tbody>'
 	document.getElementById('out').innerHTML = out
 	}
 
 
-function highlight (classNm, checkboxNode) {
+function OLDhighlight (classNm, checkboxNode) {
 	// clear the other checkboxes
 	var checkboxes = document.getElementById('usage').querySelectorAll('input')
 	for (let i=0;i<checkboxes.length; i++) checkboxes[i].checked = false
@@ -161,6 +172,52 @@ function highlight (classNm, checkboxNode) {
 	for (let i=0;i<highlightedScripts.length;i++) highlightedScripts[i].style.color = 'brown'
 	}
 	
+function highlight (classNm, checkboxNode) {
+	// clear the other checkboxes
+	var checkboxes = document.getElementById('usage').querySelectorAll('input')
+	for (let i=0;i<checkboxes.length; i++) checkboxes[i].checked = false
+	checkboxNode.checked = true
+	
+	// fade everything first
+	var scripts = document.querySelectorAll('.script')
+	for (let i=0;i<scripts.length;i++) scripts[i].style.color = '#ccc'
+	
+	// highlight the chosen few
+	if (classNm === 'active') {
+		for (let s=0; s<scripts.length; s++) {
+			if (linkDB[scripts[s].id.toLowerCase()].end === '' && linkDB[scripts[s].id.toLowerCase()].current_usage === '') scripts[s].style.color = 'brown'
+			}
+		}
+	
+	if (classNm === 'limited') {
+		for (let s=0; s<scripts.length; s++) {
+			if (linkDB[scripts[s].id.toLowerCase()].end === '' && linkDB[scripts[s].id.toLowerCase()].current_usage !== '') scripts[s].style.color = 'brown'
+			}
+		}
+	
+	if (classNm === 'activelimited') {
+		for (let s=0; s<scripts.length; s++) {
+			if (linkDB[scripts[s].id.toLowerCase()].end === '') scripts[s].style.color = 'brown'
+			}
+		}
+	
+	if (classNm === 'historic') {
+		for (let s=0; s<scripts.length; s++) {
+			if (linkDB[scripts[s].id.toLowerCase()].end !== '') scripts[s].style.color = 'brown'
+			}
+		}
+	
+	if (classNm === 'recent') {
+		for (let s=0; s<scripts.length; s++) {
+			var start = parseInt(linkDB[scripts[s].id.toLowerCase()].start)
+			if (start > 1820) scripts[s].style.color = 'brown'
+			}
+		}
+	
+	//var highlightedScripts = document.getElementById('scriptList').querySelectorAll(classNm)
+	//for (let i=0;i<highlightedScripts.length;i++) highlightedScripts[i].style.color = 'brown'
+	}
+	
 function indicate (classNm, checkboxNode) {
 	var scripts = document.getElementById('scriptList').querySelectorAll(classNm)
 	
@@ -170,12 +227,21 @@ function indicate (classNm, checkboxNode) {
 		}
 	}
 
+function indicateLit (classNm, checkboxNode) {
+	var scripts = document.getElementById('scriptList').querySelectorAll(classNm)
+	
+	for (let i=0;i<scripts.length;i++) {
+		if (checkboxNode.checked) scripts[i].classList.add('indicateLit')
+		else scripts[i].classList.remove('indicate')
+		}
+	}
+
 function clearAll () {
 	var checkboxes = document.getElementById('filters').querySelectorAll('input')
 	for (let i=0;i<checkboxes.length; i++) checkboxes[i].checked = false
 	
 	var scripts = document.getElementById('scriptList').querySelectorAll('a.active, a.limited, a.historic')
-	for (let i=0;i<scripts.length;i++) scripts[i].style.color = '#999'
+	for (let i=0;i<scripts.length;i++) scripts[i].style.color = 'brown'
 	
 	var scripts = document.getElementById('scriptList').querySelectorAll('a.indicate')
 	for (let i=0;i<scripts.length;i++) scripts[i].classList.remove('indicate')
@@ -202,7 +268,8 @@ function getScriptCode (script) {
 
 </script>
 <style>
-.indicate:after { content: ' •'; color: red; }
+.indicate:after { content: ' (>1820)'; color: red; }
+.indicateLit:after { content: ' (Liturg.)'; color: darkseagreen; }
 </style>
 </head>
 
@@ -214,19 +281,15 @@ function getScriptCode (script) {
 
 <div class="section">
   <div class="sidenoteGroup">
-  <p>Choose a script to quickly locate information about it. The filters to the right may need more refinement.</p>
+  <p>Choose a script.</p>
   <aside class="sidenote" id="filters">
   <p style="margin-top:12em;">Highlight scripts of the following type:</p>
   <div id="usage">
-  <p><input type="checkbox" onClick="highlight('a.active', this)"> in active use</p>
-  <p><input type="checkbox" onClick="highlight('a.limited', this)"> limited current use</p>
-  <p><input type="checkbox" onClick="highlight('a.active, a.limited', this)"> active + limited</p>
-  <p><input type="checkbox" onClick="highlight('a.historic', this)"> historic</p>
-  </div>
-  <p style="margin-top:2em;">Indicate scripts of the following type:</p>
-  <div id="type">
-  <p><input type="checkbox" onClick="indicate('a.liturgical', this)"> liturgical</p>
-  <p><input type="checkbox" onClick="indicate('a.recent', this)"> coined since ~1820</p>
+  <p><input type="checkbox" onClick="highlight('active', this)"> in active use</p>
+  <p><input type="checkbox" onClick="highlight('limited', this)"> limited current use</p>
+  <p><input type="checkbox" onClick="highlight('activelimited', this)"> active + limited</p>
+  <p><input type="checkbox" onClick="highlight('historic', this)"> historic</p>
+  <p><input type="checkbox" onClick="highlight('recent', this)"> invented since ~1820</p>
   </div>
   <p><button onClick="clearAll()">clear all</button></p>
   </aside>
@@ -241,193 +304,197 @@ function getScriptCode (script) {
       <li class="off"><a onclick="return false;" href="#">&nbsp;<br/>
         Europe</a>
         <ul>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=armn'; return false;">Armenian</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=aghb'; return false;">Caucasian Albanian</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=cprt'; return false;">Cypriot Syllabary</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=cyrl'; return false;">Cyrillic</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=elba'; return false;">Elbasan</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=geor'; return false;">Georgian</a></li>
-          <li><a class="limited liturgical" href="#" onclick="window.location = 'links?iso=glag'; return false;">Glagolitic</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=goth'; return false;">Gothic</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Grek'; return false;">Greek</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Latn'; return false;">Latin</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Lina'; return false;">Linear A</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Linb'; return false;">Linear B</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Ogam'; return false;">Ogham</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Hung'; return false;">Old Hungarian</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Ital'; return false;">Old Italic</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Perm'; return false;">Old Permic</a></li>
-          <li><a class="historic" href="#" onclick="getData('xPhais'); return false;">Phaistos Disc</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Runr'; return false;">Runic</a></li>
-          <li><a class="historic recent" href="#" onclick="window.location = 'links?iso=Shaw'; return false;">Shavian</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=armn'; return false;" id="Armn">Armenian</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=aghb'; return false;" id="Aghb">Caucasian Albanian</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=cprt'; return false;" id="Cprt">Cypriot Syllabary</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=cyrl'; return false;" id="Cyrl">Cyrillic</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=elba'; return false;" id="Elba">Elbasan</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=geor'; return false;" id="Geor">Georgian</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=glag'; return false;" id="Glag">Glagolitic</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=goth'; return false;" id="Goth">Gothic</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Grek'; return false;" id="Grek">Greek</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Latn'; return false;" id="Latn">Latin</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Lina'; return false;" id="Lina">Linear A</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Linb'; return false;" id="Linb">Linear B</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Ogam'; return false;" id="Ogam">Ogham</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Hung'; return false;" id="Hung">Old Hungarian</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Ital'; return false;" id="Ital">Old Italic</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Perm'; return false;" id="Perm">Old Permic</a></li>
+          <li><a class="script" href="#" onclick="getData('xPhais'); return false;" id="xPhais">Phaistos Disc</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Runr'; return false;" id="Runr">Runic</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Shaw'; return false;" id="Shaw">Shavian</a></li>
         </ul>
       </li>
       <li class="off"><a onclick="return false;" href="#">&nbsp;<br/>
         Africa</a>
         <ul>
-          <li><a class="active recent" href="#" onclick="window.location = 'links?iso=Adlm'; return false;">Adlam</a></li>
-          <li><a class="active recent" href="#" onclick="window.location = 'links?iso=Bamu'; return false;">Bamum</a></li>
-          <li><a class="active recent" href="#" onclick="window.location = 'links?iso=Bass'; return false;">Bassa Vah</a></li>
-          <li><a class="historic liturgical" href="#" onclick="window.location = 'links?iso=Copt'; return false;">Coptic</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Egyp'; return false;">Egyptian Hieroglyphs</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Ethi'; return false;">Ethiopic</a></li>
-          <li><a class="active recent" href="#" onclick="window.location = 'links?iso=Medf'; return false;">Medefaidrin</a></li>
-          <li><a class="active recent" href="#" onclick="window.location = 'links?iso=Mend'; return false;">Mende Kikakui</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Mero'; return false;">Meroitic</a></li>
-          <li><a class="active recent" href="#" onclick="window.location = 'links?iso=Nkoo'; return false;">N&apos;Ko</a></li>
-          <li><a class="limited recent" href="#" onclick="window.location = 'links?iso=Osma'; return false;">Osmanya</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Tfng'; return false;">Tifinagh</a></li>
-          <li><a class="active recent" href="#" onclick="window.location = 'links?iso=Vaii'; return false;">Vai</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Adlm'; return false;" id="Adlm">Adlam</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Bamu'; return false;" id="Bamu">Bamum</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Bass'; return false;" id="Bass">Bassa Vah</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Copt'; return false;" id="Copt">Coptic</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Egyp'; return false;" id="Egyp">Egyptian Hieroglyphs</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Ethi'; return false;" id="Ethi">Ethiopic</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Medf'; return false;" id="Medf">Medefaidrin</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Mend'; return false;" id="Mend">Mende Kikakui</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Merc'; return false;" id="Merc">Meroitic</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Nkoo'; return false;" id="Nkoo">N&apos;Ko</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Osma'; return false;" id="Osma">Osmanya</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Tfng'; return false;" id="Tfng">Tifinagh</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Vaii'; return false;" id="Vaii">Vai</a></li>
         </ul>
       </li>
-      <li class="off"><a onclick="return false;" href="#">Middle<br/>
-        East</a>
+      <li class="off"><a onclick="return false;" href="#">West<br/>
+        Asia</a>
         <ul>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Hluw'; return false;">Anatolian Hieroglyphs</a></li>
-          <li><a class="active liturgical" href="#" onclick="window.location = 'links?iso=Arab'; return false;" >Arabic</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Armi'; return false;"> Aramaic</a></li>
-          <li><a class="historic liturgical" href="#" onclick="window.location = 'links?iso=Avst'; return false;">Avestan</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Cari'; return false;">Carian</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Xsux'; return false;">Cuneiform</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Hatr'; return false;">Hatran</a></li>
-          <li><a class="active liturgical" href="#" onclick="window.location = 'links?iso=Hebr'; return false;">Hebrew</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Lyci'; return false;">Lycian</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Lydi'; return false;">Lydian</a></li>
-          <li><a class="historic liturgical" href="#" onclick="window.location = 'links?iso=Mand'; return false;">Mandaic</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Nbat'; return false;">Nabataean</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Narb'; return false;">Old North Arabian</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Xpeo'; return false;">Old Persian</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Sarb'; return false;">Old South Arabian</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Phli'; return false;">Pahlavi, Inscriptional</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Phlp'; return false;">Pahlavi, Psalter</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Palm'; return false;">Palmyrene</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Prti'; return false;">Parthian, Inscriptional</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Phnx'; return false;">Phoenician</a></li>
-          <li><a class="limited liturgical" href="#" onclick="window.location = 'links?iso=Samr'; return false;">Samaritan</a></li>
-          <li><a class="active liturgical" href="#" onclick="window.location = 'links?iso=Syrc'; return false;">Syriac</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Ugar'; return false;">Ugaritic</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Hluw'; return false;" id="Hluw">Anatolian Hieroglyphs</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Arab'; return false;" id="Arab" >Arabic</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Armi'; return false;" id="Armi"> Aramaic</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Avst'; return false;" id="Avst">Avestan</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Cari'; return false;" id="Cari">Carian</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Xsux'; return false;" id="Xsux">Cuneiform</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Elym'; return false;" id="Elym" data-dates="-3C–-5C">Elymaic</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Hatr'; return false;" id="Hatr">Hatran</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Hebr'; return false;" id="Hebr">Hebrew</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Lyci'; return false;" id="Lyci">Lycian</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Lydi'; return false;" id="Lydi">Lydian</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Mand'; return false;" id="Mand">Mandaic</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Nbat'; return false;" id="Nbat">Nabataean</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Narb'; return false;" id="Narb">Old North Arabian</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Xpeo'; return false;" id="Xpeo">Old Persian</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Sarb'; return false;" id="Sarb">Old South Arabian</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Phli'; return false;" id="Phli">Pahlavi, Inscriptional</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Phlp'; return false;" id="Phlp">Pahlavi, Psalter</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Palm'; return false;" id="Palm">Palmyrene</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Prti'; return false;" id="Prti">Parthian, Inscriptional</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Phnx'; return false;" id="Phnx">Phoenician</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Samr'; return false;" id="Samr">Samaritan</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Syrc'; return false;" id="Syrc">Syriac</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Ugar'; return false;" id="Ugar">Ugaritic</a></li>
         </ul>
       </li>
       <li class="off"><a onclick="return false;" href="#">South<br/>
         Asia 1</a>
         <ul>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Ahom'; return false;">Ahom</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Beng'; return false;">Bengali</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Bhks'; return false;">Bhaiksuki</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Brah'; return false;">Brahmi</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Cakm'; return false;">Chakma</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Deva'; return false;">Devanagari</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Dogr'; return false;">Dogra</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Gran'; return false;">Grantha</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Gujr'; return false;">Gujarati</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Gong'; return false;">Gunjala Gondi</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Guru'; return false;">Gurmukhi</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Kthi'; return false;">Kaithi</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Knda'; return false;">Kannada</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Khar'; return false;">Kharoshthi</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Khoj'; return false;">Khojki</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Sind'; return false;">Khudawadi</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Lepc'; return false;">Lepcha</a></li>
-          <li><a class="active recent" href="#" onclick="window.location = 'links?iso=Limb'; return false;">Limbu</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Mahj'; return false;">Mahajani</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Mlym'; return false;">Malayalam</a></li>
-          <li><a class="limited recent" href="#" onclick="window.location = 'links?iso=Gonm'; return false;">Masaram Gondi</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Mtei'; return false;">Meetei Mayek</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Modi'; return false;">Modi</a></li>
-          <li><a class="active recent" href="#" onclick="window.location = 'links?iso=Mroo'; return false;">Mro</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Mult'; return false;">Multani</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Ahom'; return false;" id="Ahom">Ahom</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Beng'; return false;" id="Beng">Bengali</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Bhks'; return false;" id="Bhks">Bhaiksuki</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Brah'; return false;" id="Brah">Brahmi</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Cakm'; return false;" id="Cakm">Chakma</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Deva'; return false;" id="Deva">Devanagari</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Dogr'; return false;" id="Dogr">Dogra</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Gran'; return false;" id="Gran">Grantha</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Gujr'; return false;" id="Gujr">Gujarati</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Gong'; return false;" id="Gong">Gunjala Gondi</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Guru'; return false;" id="Guru">Gurmukhi</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Kthi'; return false;" id="Kthi">Kaithi</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Knda'; return false;" id="Knda">Kannada</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Khar'; return false;" id="Khar">Kharoshthi</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Khoj'; return false;" id="Khoj">Khojki</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Sind'; return false;" id="Sind">Khudawadi</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Lepc'; return false;" id="Lepc">Lepcha</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Limb'; return false;" id="Limb">Limbu</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Mahj'; return false;" id="Mahj">Mahajani</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Mlym'; return false;" id="Mlym">Malayalam</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Gonm'; return false;" id="Gonm">Masaram Gondi</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Mtei'; return false;" id="Mtei">Meetei Mayek</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Modi'; return false;" id="Modi">Modi</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Mroo'; return false;" id="Mroo">Mro</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Mult'; return false;" id="Mult">Multani</a></li>
         </ul>
       </li>
       <li class="off"><a onclick="return false;" href="#">South<br/>
         Asia 2</a>
         <ul>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Newa'; return false;">Newa</a></li>
-          <li><a class="active recent" href="#" onclick="window.location = 'links?iso=Olck'; return false;">Ol Chiki</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Orya'; return false;">Oriya</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Saur'; return false;">Saurashtra</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Shrd'; return false;">Sharada</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Sidd'; return false;">Siddham</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Sinh'; return false;">Sinhala</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Sora'; return false;">Sora Sompeng</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Sylo'; return false;">Syloti Nagri</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Takr'; return false;">Takri</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Taml'; return false;">Tamil</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Telu'; return false;">Telugu</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Thaa'; return false;">Thaana</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Tirh'; return false;">Tirhuta</a></li>
-          <li><a class="limited recent" href="#" onclick="window.location = 'links?iso=Wara'; return false;">Warang Citi</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Nand'; return false;" id="Nand">Nandinagari</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Newa'; return false;" id="Newa">Newa</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Olck'; return false;" id="Olck">Ol Chiki</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Orya'; return false;" id="Orya">Oriya</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Saur'; return false;" id="Saur">Saurashtra</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Shrd'; return false;" id="Shrd">Sharada</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Sidd'; return false;" id="Sidd">Siddham</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Sinh'; return false;" id="Sinh">Sinhala</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Sora'; return false;" id="Sora">Sora Sompeng</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Sylo'; return false;" id="Sylo">Syloti Nagri</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Takr'; return false;" id="Takr">Takri</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Taml'; return false;" id="Taml">Tamil</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Telu'; return false;" id="Telu">Telugu</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Thaa'; return false;" id="Thaa">Thaana</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Tirh'; return false;" id="Tirh">Tirhuta</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Wara'; return false;" id="Wara">Warang Citi</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Wcho'; return false;" id="Wcho">Wancho</a></li>
         </ul>
       </li>
       <li class="off"><a onclick="return false;" href="#">Central<br/>
         Asia</a>
         <ul>
-          <li><a class="historic liturgical" href="#" onclick="window.location = 'links?iso=Mani'; return false;">Manichaean</a></li>
-          <li><a class="limited liturgical" href="#" onclick="window.location = 'links?iso=Marc'; return false;">Marchen</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Mong'; return false;">Mongolian</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Orkh'; return false;">Old Turkic</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Phag'; return false;">Phags-pa</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Sogd'; return false;">Sogdian</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Sogo'; return false;">Sogdian, Old</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Soyo'; return false;">Soyombo</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Tibt'; return false;">Tibetan</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Zanb'; return false;">Zanabazar Square</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Mani'; return false;" id="Mani">Manichaean</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Marc'; return false;" id="Marc">Marchen</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Mong'; return false;" id="Mong">Mongolian</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Orkh'; return false;" id="Orkh">Old Turkic</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Phag'; return false;" id="Phag">Phags-pa</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Sogd'; return false;" id="Sogd">Sogdian</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Sogo'; return false;" id="Sogo">Sogdian, Old</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Soyo'; return false;" id="Soyo">Soyombo</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Tibt'; return false;" id="Tibt">Tibetan</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Zanb'; return false;" id="Zanb">Zanabazar Square</a></li>
         </ul>
       </li>
       <li class="off"><a onclick="return false;" href="#">Southeast<br/>
         Asia</a>
         <ul>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Cham'; return false;">Cham</a></li>
-          <li><a class="active recent" href="#" onclick="window.location = 'links?iso=Rohg'; return false;">Hanifi Rohingya</a></li>
-          <li><a class="active recent" href="#" onclick="window.location = 'links?iso=Kali'; return false;">Kayah Li</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Khmr'; return false;">Khmer</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Laoo'; return false;">Lao</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Mymr'; return false;">Myanmar</a></li>
-          <li><a class="active recent" href="#" onclick="window.location = 'links?iso=Talu'; return false;">New Tai Lue</a></li>
-          <li><a class="active recent" href="#" onclick="window.location = 'links?iso=Hmng'; return false;">Pahawh Hmong</a></li>
-          <li><a class="active recent liturgical" href="#" onclick="window.location = 'links?iso=Pauc'; return false;">Pau Cin Hau</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Tale'; return false;">Tai Le</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Lana'; return false;">Tai Tham</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Tavt'; return false;">Tai Viet</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Thai'; return false;">Thai</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Cham'; return false;" id="Cham">Cham</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Rohg'; return false;" id="Rohg">Hanifi Rohingya</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Kali'; return false;" id="Kali">Kayah Li</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Khmr'; return false;" id="Khmr">Khmer</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Laoo'; return false;" id="Laoo">Lao</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Mymr'; return false;" id="Mymr">Myanmar</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Talu'; return false;" id="Talu">New Tai Lue</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Hmnp'; return false;" id="Hmnp">Nyiakeng Puachue Hmong</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Hmng'; return false;" id="Hmng">Pahawh Hmong</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Pauc'; return false;" id="Pauc">Pau Cin Hau</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Tale'; return false;" id="Tale">Tai Le</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Lana'; return false;" id="Lana">Tai Tham</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Tavt'; return false;" id="Tavt">Tai Viet</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Thai'; return false;" id="Thai">Thai</a></li>
         </ul>
       </li>
       <li class="off"><a onclick="return false;" href="#">Indonesia<br/>
         &amp; Oceania</a>
         <ul>
-          <li><a class="limited" href="#" onclick="window.location = 'links?iso=Bali'; return false;">Balinese</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Batk'; return false;">Batak</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Bugi'; return false;">Buginese</a></li>
-          <li><a class="limited" href="#" onclick="window.location = 'links?iso=Buhd'; return false;">Buhid</a></li>
-          <li><a class="limited" href="#" onclick="window.location = 'links?iso=Hano'; return false;">Hanunoo</a></li>
-          <li><a class="limited" href="#" onclick="window.location = 'links?iso=Java'; return false;">Javanese</a></li>
-          <li><a class="limited" href="#" onclick="window.location = 'links?iso=Maka'; return false;">Makasar</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Rjng'; return false;">Rejang</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Sund'; return false;">Sundanese</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Tglg'; return false;">Tagalog</a></li>
-          <li><a class="limited" href="#" onclick="window.location = 'links?iso=Tagb'; return false;">Tagbanwa</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Bali'; return false;" id="Bali">Balinese</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Batk'; return false;" id="Batk">Batak</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Bugi'; return false;" id="Bugi">Buginese</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Buhd'; return false;" id="Buhd">Buhid</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Hano'; return false;" id="Hano">Hanunoo</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Java'; return false;" id="Java">Javanese</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Maka'; return false;" id="Maka">Makasar</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Rjng'; return false;" id="Rjng">Rejang</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Sund'; return false;" id="Sund">Sundanese</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Tglg'; return false;" id="Tglg">Tagalog</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Tagb'; return false;" id="Tagb">Tagbanwa</a></li>
         </ul>
       </li>
       <li class="off"><a onclick="return false;" href="#">East<br/>
         Asia</a>
         <ul>
-          <li><a class="limited recent" href="#" onclick="window.location = 'links?iso=Bopo'; return false;">Bopomofo</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Hani'; return false;">Han</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Hang'; return false;">Hangul</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Jpan'; return false;">Kana</a></li>
-          <li><a class="active recent" href="#" onclick="window.location = 'links?iso=Lisu'; return false;">Lisu</a></li>
-          <li><a class="active recent" href="#" onclick="window.location = 'links?iso=Plrd'; return false;">Miao</a></li>
-          <li><a class="historic" href="#" onclick="window.location = 'links?iso=Tang'; return false;">Tangut</a></li>
-          <li><a class="limited" href="#" onclick="window.location = 'links?iso=Nshu'; return false;">Nüshu</a></li>
-          <li><a class="active" href="#" onclick="window.location = 'links?iso=Yiii'; return false;">Yi</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Bopo'; return false;" id="Bopo">Bopomofo</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Hani'; return false;" id="Hani">Han</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Hang'; return false;" id="Hang">Hangul</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Jpan'; return false;" id="Jpan">Kana</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Lisu'; return false;" id="Lisu">Lisu</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Plrd'; return false;" id="Plrd">Miao</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Tang'; return false;" id="Tang">Tangut</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Nshu'; return false;" id="Nshu">Nüshu</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Yiii'; return false;" id="Yiii">Yi</a></li>
         </ul>
       </li>
       <li class="off toplast"><a onclick="return false;" href="#">&nbsp;<br/>
         America</a>
         <ul>
-          <li><a class="active recent" href="#" onclick="window.location = 'links?iso=Cher'; return false;">Cherokee</a></li>
-          <li><a class="historic recent" href="#" onclick="window.location = 'links?iso=Dsrt'; return false;">Deseret</a></li>
-          <li><a class="active recent" href="#" onclick="window.location = 'links?iso=Osge'; return false;">Osage</a></li>
-          <li><a class="active recent" href="#" onclick="window.location = 'links?iso=Cans'; return false;">UCAS</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Cher'; return false;" id="Cher">Cherokee</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Dsrt'; return false;" id="Dsrt">Deseret</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Osge'; return false;" id="Osge">Osage</a></li>
+          <li><a class="script" href="#" onclick="window.location = 'links?iso=Cans'; return false;" id="Cans">UCAS</a></li>
         </ul>
       </li>
     </ul>
@@ -440,7 +507,7 @@ function getScriptCode (script) {
 </div>
 
 <div class="smallprint"> <span id="version">This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2018-12-31  6:37<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2019-03-06  21:47<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span> </div>
 
 
