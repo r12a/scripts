@@ -143,7 +143,7 @@ function getData (script) {
 		}
 	if (record.dates) {
 		var temp = ''
-		temp += '<tr><td>Usage:</td><td>'
+		temp += '<tr><td>Chronology:</td><td>'
 		temp += '<p>'
 		if (record.end) temp+= 'Historic script <span style="font-size:80%;">('+record.dates+')</span>'
 		else if (record.current_usage) temp += record.dates+ ', <span style="font-size:80%">but with limited usage ('+record.current_usage+')</span>'
@@ -157,21 +157,6 @@ function getData (script) {
 	}
 
 
-function OLDhighlight (classNm, checkboxNode) {
-	// clear the other checkboxes
-	var checkboxes = document.getElementById('usage').querySelectorAll('input')
-	for (let i=0;i<checkboxes.length; i++) checkboxes[i].checked = false
-	checkboxNode.checked = true
-	
-	// fade everything first
-	var scripts = document.getElementById('scriptList').querySelectorAll('a.active, a.limited, a.historic')
-	for (let i=0;i<scripts.length;i++) scripts[i].style.color = '#ccc'
-	
-	// highlight the chosen few
-	var highlightedScripts = document.getElementById('scriptList').querySelectorAll(classNm)
-	for (let i=0;i<highlightedScripts.length;i++) highlightedScripts[i].style.color = 'brown'
-	}
-	
 function highlight (classNm, checkboxNode) {
 	// clear the other checkboxes
 	var checkboxes = document.getElementById('usage').querySelectorAll('input')
@@ -213,11 +198,10 @@ function highlight (classNm, checkboxNode) {
 			if (start > 1820) scripts[s].style.color = 'brown'
 			}
 		}
-	
-	//var highlightedScripts = document.getElementById('scriptList').querySelectorAll(classNm)
-	//for (let i=0;i<highlightedScripts.length;i++) highlightedScripts[i].style.color = 'brown'
 	}
-	
+
+
+
 function indicate (classNm, checkboxNode) {
 	var scripts = document.getElementById('scriptList').querySelectorAll(classNm)
 	
@@ -507,7 +491,7 @@ function getScriptCode (script) {
 </div>
 
 <div class="smallprint"> <span id="version">This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-03-06  21:47<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2019-03-06  22:15<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span> </div>
 
 

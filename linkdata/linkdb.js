@@ -119,6 +119,7 @@ var blockStart = {
 // NOTES
 // current_usage should be empty if the script is in active use by a large number of people, or if the script isn't in use today
 // if not, use one of the following labels: limited, endangered, liturgical, notation
+// the end field should be empty for scripts that are not historic
 
 
         
