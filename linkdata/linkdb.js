@@ -466,7 +466,7 @@ copt:{ script:"Coptic", code:"Copt", dates:"4thC – 14thC", start:"300", end:"1
 				]
 	},
 
-egyp:{ script:"Egyptian Hieroglyphs", code:"Egyp", dates:"BCE 30thC – CE 1stC", start:"-3000", end:"100", origin:"Africa", current_usage:"",
+egyp:{ script:"Egyptian Hieroglyphs", code:"Egyp", dates:"BCE 30thC – 1stC CE", start:"-3000", end:"100", origin:"Africa", current_usage:"",
 	info:{ 		wikipedia:"Egyptian_hieroglyphs", omniglot:"egyptian" }, 
 	local: [	],
 	unicode:{ 	}, 
@@ -506,7 +506,7 @@ mend:{ script:"Mende Kikakui", code:"Mend", dates:"1920 – today", start:"1920"
 				]
 	},
 
-merc:{ script:"Meroitic", code:"Merc", dates:"BCE 3rdC – CE 4thC", start:"-300", end:"400", origin:"Africa", current_usage:"",
+merc:{ script:"Meroitic", code:"Merc", dates:"BCE 3rdC – 4thC CE", start:"-300", end:"400", origin:"Africa", current_usage:"",
 	info:{ 		wikipedia:"Meroitic_alphabet", omniglot:"meroitic" }, 
 	local: [	],
 	unicode:{ 	}, 
