@@ -202,35 +202,15 @@ function highlight (classNm, checkboxNode) {
 
 
 
-function indicate (classNm, checkboxNode) {
-	var scripts = document.getElementById('scriptList').querySelectorAll(classNm)
-	
-	for (let i=0;i<scripts.length;i++) {
-		if (checkboxNode.checked) scripts[i].classList.add('indicate')
-		else scripts[i].classList.remove('indicate')
-		}
-	}
-
-function indicateLit (classNm, checkboxNode) {
-	var scripts = document.getElementById('scriptList').querySelectorAll(classNm)
-	
-	for (let i=0;i<scripts.length;i++) {
-		if (checkboxNode.checked) scripts[i].classList.add('indicateLit')
-		else scripts[i].classList.remove('indicate')
-		}
-	}
-
 function clearAll () {
 	var checkboxes = document.getElementById('filters').querySelectorAll('input')
 	for (let i=0;i<checkboxes.length; i++) checkboxes[i].checked = false
 	
-	var scripts = document.getElementById('scriptList').querySelectorAll('a.active, a.limited, a.historic')
+	var scripts = document.querySelectorAll('.script')
 	for (let i=0;i<scripts.length;i++) scripts[i].style.color = 'brown'
-	
-	var scripts = document.getElementById('scriptList').querySelectorAll('a.indicate')
-	for (let i=0;i<scripts.length;i++) scripts[i].classList.remove('indicate')
 	}
-	
+
+
 function getScriptCode (script) {
 	var found = false
 	var record = null
@@ -251,10 +231,6 @@ function getScriptCode (script) {
 	
 
 </script>
-<style>
-.indicate:after { content: ' (>1820)'; color: red; }
-.indicateLit:after { content: ' (Liturg.)'; color: darkseagreen; }
-</style>
 </head>
 
 <body>
@@ -491,7 +467,7 @@ function getScriptCode (script) {
 </div>
 
 <div class="smallprint"> <span id="version">This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-03-06  22:15<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2019-03-07  6:48<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span> </div>
 
 
