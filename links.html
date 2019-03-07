@@ -195,7 +195,14 @@ function highlight (classNm, checkboxNode) {
 	if (classNm === 'recent') {
 		for (let s=0; s<scripts.length; s++) {
 			var start = parseInt(linkDB[scripts[s].id.toLowerCase()].start)
-			if (start > 1820) scripts[s].style.color = 'brown'
+			if (start >= 1800) scripts[s].style.color = 'brown'
+			}
+		}
+	
+	if (classNm === 'vrecent') {
+		for (let s=0; s<scripts.length; s++) {
+			var start = parseInt(linkDB[scripts[s].id.toLowerCase()].start)
+			if (start >= 1900) scripts[s].style.color = 'brown'
 			}
 		}
 	}
@@ -249,7 +256,10 @@ function getScriptCode (script) {
   <p><input type="checkbox" onClick="highlight('limited', this)"> limited current use</p>
   <p><input type="checkbox" onClick="highlight('activelimited', this)"> active + limited</p>
   <p><input type="checkbox" onClick="highlight('historic', this)"> historic</p>
-  <p><input type="checkbox" onClick="highlight('recent', this)"> invented since ~1820</p>
+  <p><input type="checkbox" onClick="highlight('recent', this)"> 
+invented after ~1800</p>
+  <p><input type="checkbox" onClick="highlight('vrecent', this)"> 
+invented after ~1900</p>
   </div>
   <p><button onClick="clearAll()">clear all</button></p>
   </aside>
@@ -467,7 +477,7 @@ function getScriptCode (script) {
 </div>
 
 <div class="smallprint"> <span id="version">This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-03-07  6:48<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2019-03-07  6:54<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span> </div>
 
 
