@@ -780,7 +780,7 @@ phlp:{ script:"Psalter Pahlavi", code:"Phlp", name:"", dates:"6thC – 7thC", st
 				]
 	},
   
-palm:{ script:"Palmyrene", code:"Palm", name:"", dates:"BCE 1stC", start:"-100", end:"-100", origin:"West Asia", current_usage:"",
+palm:{ script:"Palmyrene", code:"Palm", name:"", dates:"BCE 1stC – 3rdC CE", start:"-100", end:"200", origin:"West Asia", current_usage:"",
 	info:{ 		wikipedia:"Palmyrene_alphabet", omniglot:"" }, 
 	local: [	],
 	unicode:{ 	}, 
