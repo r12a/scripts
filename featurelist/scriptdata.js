@@ -19,6 +19,8 @@ var scriptData = [
 
 { script:"Ethiopic", type:"syllabic", chars:495, cchars:3, cs:"no", gpos:"no", mcchars:"no", matras: "no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"፡/space", baseline:"mid", wrap:"char", hyphenation:"?", justify:"፡/space", digits:"yes", region:"Africa", linked:"ethiopic" },
 
+{ script:"Georgian", type:"alpha", chars:174, cchars:0, cs:"yes*", gpos:"no", mcchars:"no", matras: "no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"?", justify:"space", digits:"no", region:"Europe", linked:"georgian" },
+
 { script:"Greek", type:"alpha", chars:368, cchars:0, cs:"yes", gpos:"no", mcchars:"no", matras: "no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"yes", justify:"space", digits:"no", region:"Europe", linked:"greek" },
 
 { script:"Gujarati", type:"abugida", chars:91, cchars:26, cs:"no", gpos:"yes", mcchars:"yes", matras: "yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"high?", wrap:"word", hyphenation:"?", justify:"space", digits:"yes", region:"Asia S", linked:"gujarati" },
