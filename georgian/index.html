@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<title>Georgian script notes</title>
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="description" content="Summary of the Georgian script."/>
+<link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../common/local.css" />
+<!--link rel="stylesheet" href="../style/print.css"/-->
+<style>
+@font-face {
+    font-family: 'Noto Sans Georgian WF';
+    src: url('../../shared/webfonts/NotoSansGeorgian-regular.woff2') format('woff2'),
+         url('../../shared/webfonts/NotoSansGeorgian-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+@font-face {
+	font-family: 'Noto Serif Georgian WF';
+	src: 	local('Noto Serif Georgian'),
+			url('../../shared/webfonts/notoserifgeorgian-regular-webfont.woff2') format('woff2'),  
+			url('../../shared/webfonts/notoserifgeorgian-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	}
+@font-face {
+    font-family: 'BGP 2017 DejaVu Serif WF';
+    src: local('BGP 2017 DejaVu Serif'),
+		 url('../../shared/webfonts/bpg_2017_dejavuserif-webfont.woff2') format('woff2'),
+         url('../../shared/webfonts/bpg_2017_dejavuserif-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+@font-face {
+	font-family: 'BGP 2017 DejaVu Sans WF';
+	src: 	local('BGP 2017 DejaVu Sans'),
+			url('../../shared/webfonts/bpg_2017_dejavusans-webfont.woff2') format('woff2'),  
+			url('../../shared/webfonts/bpg_2017_dejavusans-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	}
+#freeText {
+	font-size: 28px;
+	font-family: "BGP 2017 DejaVu Serif WF", serif;
+	text-align: start;
+    line-height: 2;
+	}
+@media print { #freeText { font-size: 18px; } }
+[lang=ka] { font-family: "BGP 2017 DejaVu Serif WF", 'Noto Serif Georgian WF', serif; font-size: 140%; }
+.large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }	
+</style>
+
+<script src="db.js"> </script>
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2019.js"></script>
+<script src="../../shared/code/all-names.js"></script>
+<script src="../../shared/code/character_conversion.js"></script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/fontlists/manage.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
+<script src="../common/functions.js"></script>
+<script src="../../shared/code/getLinks.js"></script>
+<script src="../linkdata/linkdb.js"></script>
+<script src="../featurelist/scriptdata.js"> </script>
+
+<script src="../../shared/fontlists/georgian.js"> </script>
+</head>
+
+<body>
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
+</header>
+
+<h1>Georgian script summary</h1>
+
+<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top"/></a></nav>
+
+  <aside class="sidebar"> 
+		<h2 class="notoc flush"><a id="tochead" name="tochead" tabindex="4">Contents</a></h2>
+		<div id="toc"><!-- placeholder --></div>
+
+ <div id="fontsetting" class="closed">
+  <h2 class="notoc"><a id="fonts">Fonts</a></h2>
+  <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'ka');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'ka');" />
+    </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
+    <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
+	return false;">
+      <p>Change size:<br />
+        <input id="slider" type="range" min="12" max="100" step="1" value="32">
+        &#xA0; <span id="sizeIndicator">32px</span><br />
+        <input id="multiplier" type="hidden" value="1" />
+        Multiplier:
+        <input type="radio" name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x1">1</label>
+        <input type="radio" name="step" id="x5" value="2"  onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x5">2</label>
+        <input type="radio" name="step" id="x10" value="10"  onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x10">10</label>
+      </p>
+    </form>
+</div>
+</aside>
+
+	<p id="status">Updated Mon 13 Oct 2014  &bull; tags <a href="http://r12a.github.io/blog/index.php?tag=georgian" title="Show all blog posts tagged with 'georgian'">georgian</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+
+	<div class="section">
+	  <p>This page provides basic information about the two scripts used to write Georgian: Mkedruli (+Mtavruli), and Khutsuri (Asomtavruli+Nuskhuri). It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned.  For character-specific details follow the links to the <a class="linkHighlight" href="/scripts/georgian/block">Georgian character notes</a>.</p>
+<p>For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/featurelist/">Script comparison table</a>.</p>
+<p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+  
+  <details id="scriptLinks">
+  <summary class="instructions">More links for the Georgian script.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Geor')</script>
+  </details>
+</div>
+
+
+
+<section>
+<h2 id="sample">Sample (Georgian)</h2>
+  
+
+  <div id="freeText" dir="ltr" lang="ka" data-target="c" data-base="/scripts/georgian/block" data-source="https://unicode.org/udhr/d/udhr_kat.html">
+  <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">მუხლი 1.
+
+ყველა ადამიანი იბადება თავისუფალი და თანასწორი თავისი ღირსებითა და უფლებებით. მათ მინიჭებული აქვთ გონება და სინდისი და ერთმანეთის მიმართ უნდა იქცეოდნენ ძმობის სულისკვეთებით.</p>
+  <p  title="UDHR, article 2" onMouseUp="showtext('freeText')">მუხლი 2.
+
+ამ დეკლარაცით გამოცხადებული ყველა უფლება და ყველა თავისუფლება მინიჭებული უნდა ჰქონდეს ყოველ ადამიანს განურჩევლად რაიმე განსხვავების, სახელდობრ, რასის, კანის ფერის, სქესის, ენის, რელიგიის, პოლიტიკური თუ სხვა რწმენის, ეროვნული თუ სოციალური წარმომავლობის, ქონებრივი, წოდებრივი თუ სხვა მდგომარეობისა.
+
+გარდა ამისა, დაუშვებელია რაიმე განსხვავება იმ ქვეყნის თუ ტერიტორიის პოლიტიკური, სამართლებრივი ან საერთაშორისო სტატუსის საფუძველზე, რომელსაც ადამიანი ეკუთვნის, მიუხედავად იმისა, თუ როგორია ეს ტერიტორია - დამოუკიდებელი, სამეურვეო, არათვითმმართველი თუ სხვაგვარად შეზღუდული თავის სევერენიტეტში.</p>
+  <!-- Source: https://unicode.org/udhr/d/udhr_kat.html -->
+  </div>
+</section>
+
+
+
+
+ 
+
+<section>
+    <h2 id="history">Usage &amp; history</h2>
+    <p>From <a href="http://scriptsource.org/scr/Geor">Scriptsource</a>: </p>
+    <blockquote>
+<p>The Georgian language is spoken by approximately 3,900,000 people in Georgia, as well as by 355,000 people in Azerbaijan, Turkey and Iran. The earliest uncontested inscription in the language dates from the 5th century. Since that time, Georgian has been written in three distinct scripts. The original script was an inscriptional form called Asomtavruli, from which a manuscript form, Nuskhuri, was derived. For a time, these were combined in a  bicameral system called Khutsuri in which Asomtavruli letters were used as the upper case and Nushkuri as the lower case. Since the 11th century, a third script has been attested, called Mkhedruli. There is some debate as to the origins of this third script; some scholars say that it evolved from the Khutsuri system, other, that it pre-dates it. What is generally agreed upon is that Mkhedruli was used as a secular script alongside the ecclesiastical Khutsuri until the 18th century, since which time it has been used for nearly all Georgian writing. The three scripts share the same letter names, despite having different letter shapes. </p>
+<p>The Mkhedruli alphabet is also used for writing the Mingrelian and Svan languages spoken in Georgia, as well as Laz, spoken in Turkey.</p>
+</blockquote>
+    <p>From <a href="http://en.wikipedia.org/wiki/Georgian_scripts">Wikipedia</a>:</p>
+<blockquote>
+<p>The Georgian scripts are the three writing systems used to write the Georgian language: Asomtavruli, Nuskhuri and Mkhedruli. Although the systems differ in appearance, all three are unicase, their letters share the same names and alphabetical order, and are written horizontally from left to right. Of the three scripts, Mkhedruli, once the civilian royal script of the Kingdom of Georgia and mostly used for the royal charters, is now the standard script for modern Georgian and its related Kartvelian languages, whereas Asomtavruli and Nuskhuri are used only by the Georgian Orthodox Church, in ceremonial religious texts and iconography.</p>
+Georgian scripts are unique in their appearance and their exact origin has never been established; however, in strictly structural terms, their alphabetical order largely corresponds to the Greek alphabet, with the exception of letters denoting uniquely Georgian sounds, which are grouped at the end. Originally consisting of 38 letters, Georgian is presently written in a 33-letter alphabet, as five letters are obsolete in that language. The number of Georgian letters used in other Kartvelian languages varies. Mingrelian uses 36: 33 that are current Georgian letters, one obsolete Georgian letter, and two additional letters specific to Mingrelian and Svan. Laz uses the same 33 current Georgian letters as Mingrelian plus that same obsolete letter and a letter borrowed from Greek for a total of 35. The fourth Kartvelian language, Svan, is not commonly written, but when it is, it uses Georgian letters as utilized in Mingrelian, with an additional obsolete Georgian letter and sometimes supplemented by diacritics for its many vowels.</blockquote>
+</section>
+
+
+
+
+
+  <div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+    </table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+   </div>
+
+
+
+
+<section>
+    <h2 id="type">Distinctive features</h2>
+<p>The scripts are <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">alphabets</a></span>. Both consonants and vowels are indicated by letters.  See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.</p>
+<p>Characters in the Unicode Georgian blocks represent 4 different letter styles for, with few exceptions, the same phonetic range. Modern Georgian uses only the <span class="name">mkhedruli</span> style of lettering, though occasionally its <span class="name">mtavruli</span> variants are used for emphasis or titles. The <span class="name">asomtavruli</span> and <span class="name">nuskhuri</span> styles are not well understood by ordinary Georgians. They are used together in ecclesiastical texts as the bicameral <span class="name">'khutsuri'</span> writing system.</p>
+<p>The following list describes some distinctive characteristics of the Georgian script.</p>
+<ul>
+<li>
+<p>The script is very close to the phonetics of the language, and  all 4 styles generally provide a letter for each sound in a very regular way.</p></li>
+<li>
+<p>When <span class="name">asomtavruli</span> and <span class="name">nuskhuri</span> are mixed as <span class="name">khutsuri</span>, then words may be title-cased, and there was an attempt to introduce something similar for <span class="name">mkhedruli</span> in the mid-20th century, but modern Georgian is normally written using lowercase only.  If the <span class="name">mtavruli</span> capitals are used, they are applied to a whole word at the minimum, so their use is more akin to ALL-CAPS than to the Capitalisation used in the Latin script.</p></li>
+</ul>
+</section>
+
+
+
+
+
+ <section>
+<h2 id="chars">Character lists</h2>
+  <p>The Georgian script characters in Unicode 11.0 are in the following blocks: </p>
+    <ul>
+      <li> <a href="/uniview/?block=georgian">Georgian</a> <span class="charCount">(88 letters, 1 punctuation :   total 89)</span></li>
+<li> <a href="/uniview/?block=georgian_extended">Georgian Extended</a> <span class="charCount">(46 letters :   total 46)</span></li>
+<li> <a href="/uniview/?block=georgian_supplement">Georgian Supplement</a> <span class="charCount">(40 letters :   total 40)</span></li>
+    </ul>
+   <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li><a href="/app-charuse/?language=ka" target="_blank">Georgian</a> <span class="charCount">(33 letters, 16 punctuation, 1 symbol :   total 50)</span></li>
+<!--li><a href="/app-charuse/?language=ka" target="_blank">Georgian</a> <span class="charCount">(25 letters, 3 marks, 1 punctuation :   total 29)</span></li-->
+</ul>
+<p>For character-specific details see the <a class="linkHighlight" href="/scripts/georgian/block">Georgian character notes</a>.</p>
+</section>
+  
+  
+
+
+
+<div id="showTranscriptions">
+<div>In yellow boxes, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div>
+<label>National 
+<input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+<div>
+<label>ISO 9984
+<input type="checkbox" onChange="toggleTranscription('listTrans2', this.checked)"/></label></div>
+</div>
+
+
+
+
+
+
+  <section>
+    <h2 id="direction">Text direction</h2>
+    <p>Georgian text is written horizontally, left to right.</p>
+  </section>
+
+
+
+
+
+<section>
+<h2 id="modern">Modern Georgian</h2>
+
+<p class="instructions">All the character lists in this section show mkedruli to the left and mtavruli to the right.</p>
+
+
+
+<section> 
+<h3 id="mkhedruli">Mkhedruli</h3>
+<p>Mkhedruli (<span class="charExample" translate="no"><span class="ex" lang="ka">მხედრული</span> <span class="trans">mχɛdruli</span> <span class="ipa">mxɛdruli</span></span>) is the standard set of characters for writing modern Georgian. It is normally used as a monocased script, even though there are Unicode mappings to uppercase variants (see <a class="secref">mtavruli</a>).</p>
+<p class="instructions">For more information about the characters, click on them and follow the links to the character notes page.</p>
+</section>
+
+
+
+
+
+
+<section> 
+<h3 id="mtavruli">Mtavruli</h3>
+<p><span class="name">Mtavruli</span> (<span class="charExample" translate="no"><span class="ex" lang="ka">მხედრული მთავრული</span> <span class="trans">mχɛdruli mtavruli</span> <span class="ipa">mxɛdruli mtʰɑvruli</span></span>) is also used for writing modern Georgian. These characters in Unicode are classed as uppercase versions of the <span class="name">mkedruli</span>, however in modern text they are normally used like all-caps rather than at the beginning of a sentence or proper noun, etc. They are typically used to emphasise words or for headings. <sup><a href="https://en.wikipedia.org/wiki/Georgian_scripts#Mkhedruli">w</a></sup></p>
+<p>The <span class="name">mtavruli</span> letters are have similar forms to the <span class="name">mkhedruli</span> except that, in principle, all  letters  written  in  the  <span class="name">mtavruli</span> style  appear  with  an equal height standing on the baseline, similar to small caps in the Latin script.</p>
+<p>Dedicated characters were only introduced in Unicode v11. Prior to that, authors had to use special fonts with the <span class="name">mkhedruli</span> code points in order to write <span class="name">mtavruli</span> letters.</p>
+<p>At the time of writing, there are still not many Unicode fonts that provide glyphs for the <span class="name">mtavruli</span> characters, and browsers on  OS X and iOS browsers map (most) <span class="name">mtavruli</span> letters to <span class="name">mkhedruli</span> glyphs if a font doesn't contain the necessary glyphs.</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="georgian_mkhedruli">Georgian language characters</h3>
+<p>The following characters are used to write the modern Georgian language.</p>
+
+<figure class="characterBox georgian" data-cols="ipa,trans,transc,trans2" data-select="first" >აᲐ␣ბᲑ␣გᲒ␣დᲓ␣ეᲔ␣ვᲕ␣ზᲖ␣თᲗ␣იᲘ␣კᲙ␣ლᲚ␣მᲛ␣ნᲜ␣ოᲝ␣პᲞ␣ჟᲟ␣რᲠ␣სᲡ␣ტᲢ␣უᲣ␣ფᲤ␣ქᲥ␣ღᲦ␣ყᲧ␣შᲨ␣ჩᲩ␣ცᲪ␣ძᲫ␣წᲬ␣ჭᲭ␣ხᲮ␣ჯᲯ␣ჰᲰ</figure>
+
+<!--figure class="characterBox georgian" data-cols="ipa,trans,transc,trans2">ა␣ბ␣გ␣დ␣ე␣ვ␣ზ␣თ␣ი␣კ␣ლ␣მ␣ნ␣ო␣პ␣ჟ␣რ␣ს␣ტ␣უ␣ფ␣ქ␣ღ␣ყ␣შ␣ჩ␣ც␣ძ␣წ␣ჭ␣ხ␣ჯ␣ჰ</figure-->
+</section>
+
+
+
+<section>
+<h3 id="other_mkhedruli">Characters for other languages</h3>
+<p>The following characters are obsolete in the Georgian language, but still used in other languages.<sup><a href="http://www.loc.gov/catdir/cpso/romanization/georgian.pdf"></a></sup> They were removed by the Society for the Spreading of Literacy among Georgians, founded by Prince Ilia Chavchavadze in 1879 because they were redundant. <sup><a href="https://en.wikipedia.org/wiki/Georgian_scripts#Mkhedruli">w</a></sup> </p>
+<p class="instructions">IPA values are for the languages that use them. For previous Georgian pronunciation, click on the character and follow links to the character notes page.</p>
+<figure class="characterBox otherlanguages" data-cols="ipa,trans,trans2" data-select="first" >ჱᲱ␣ჲᲲ␣ჳᲳ␣ჴᲴ</figure>
+<p>The above letters are all used for the Svan language, and the 2nd in the list is used also for Mingrelian and Laz.</p>
+<p>The  characters below were specifically created for use with other languages (Svan and Mingrelian for the first two, and Laz for the last).</p>
+
+<figure class="characterBox otherlanguages" data-cols="ipa,trans,trans2" data-select="first" >ჷᲷ␣ჸᲸ␣ჶᲶ</figure>
+</section>
+
+
+
+
+<section>
+<h3 id="archaic_mkhedruli">Archaic characters</h3>
+        
+<p>One Georgian-only character is no longer used (since the 1879 reform).</p>
+
+<figure class="characterBox georgian"  data-cols="ipa,trans,trans2" data-select="first" >ჵᲵ</figure>
+
+<p>The  characters below were used for other languages in the past, including Bats, Ossetian and Abkhaz.</p>
+
+<figure class="characterBox otherlanguages"  data-cols="ipa,trans,trans2" data-select="first" >ჹᲹ␣ჺᲺ␣ჼ␣ჽᲽ␣ჾᲾ␣ჿᲿ</figure>
+</section>
+</section>
+ 
+ 
+
+
+
+
+
+<section> 
+<h2 id="ecclesiastical">Ecclesiastical/archaic Georgian</h2>
+<p class="instructions">All the character lists in this section show asomtavruli to the left and nuskhuri to the right.</p>
+
+
+<section> 
+<h3 id="asomtavruli">Asomtavruli</h3>
+
+<p><span class="name">Asomtavruli</span> was used for writing historic Georgian inscriptions, and is really only used in liturgical texts now. These characters in Unicode are classed as uppercase versions of the <span class="name">nuskhuri</span>, and in religious texts they are mixed in a similar way to capitals and lowercase characters in the Latin script. This mixture is called <span class="name">khutsuri</span>.</p>
+</section>
+
+
+
+
+
+<section> 
+<h3 id="nuskhuri">Nuskhuri</h3>
+<p><span class="name">Nuskhuri</span> developed as a non-inscriptional alphabet, alongside <span class="name">Asomtravuli</span>, and is also only used in liturgical texts now. These characters in Unicode are classed as lowercase versions of the <span class="name">asomtravuli</span>.</p>
+</section>
+
+
+
+
+
+<section> 
+<h3 id="khutsuri">Khutsuri</h3>
+<p>In religious texts <span class="name">asomtravuli</span> and  <span class="name">nuskhuri</span> are mixed in a similar way to capitals and lowercase characters in the Latin script. This mixture is called <span class="name">khutsuri</span>.</p>
+</section>
+
+
+
+
+<section>
+<h3 id="georgian_asomtavruli">Georgian language characters</h3>
+<p>The following characters are used to write the modern Georgian language.</p>
+
+<figure class="characterBox georgian" data-cols="ipa,trans,transc,trans2" data-select="first" >Ⴀⴀ␣Ⴁⴁ␣Ⴂⴂ␣Ⴃⴃ␣Ⴄⴄ␣Ⴅⴅ␣Ⴆⴆ␣Ⴇⴇ␣Ⴈⴈ␣Ⴉⴉ␣Ⴊⴊ␣Ⴋⴋ␣Ⴌⴌ␣Ⴍⴍ␣Ⴎⴎ␣Ⴏⴏ␣Ⴐⴐ␣Ⴑⴑ␣Ⴒⴒ␣Ⴓⴓ␣Ⴔⴔ␣Ⴕⴕ␣Ⴖⴖ␣Ⴗⴗ␣Ⴘⴘ␣Ⴙⴙ␣Ⴚⴚ␣Ⴛⴛ␣Ⴜⴜ␣Ⴝⴝ␣Ⴞⴞ␣Ⴟⴟ␣Ⴠⴠ</figure>
+</section>
+
+
+
+<section>
+<h3 id="other_asomtavruli">Characters for other languages</h3>
+<p>The first 3 characters are obsolete in the Georgian language, but are still used in Svan, Mingrelian, and Laz languages.<sup><a href="http://www.loc.gov/catdir/cpso/romanization/georgian.pdf"></a></sup> The last character in the list was created specifically for use with Svan.</p>
+<figure class="characterBox otherlanguages" data-cols="ipa,trans,trans2" data-select="first" >Ⴡⴡ␣Ⴢⴢ␣Ⴣⴣ␣Ⴤⴤ␣Ⴧⴧ</figure>
+</section>
+
+
+
+
+<section>
+<h3 id="archaic_asomtavruli">Archaic characters</h3>
+        
+  <p>The following characters are archaic. The first was used for Georgian, and the second for Ossetian.</p>
+
+<figure class="characterBox georgian"  data-cols="ipa,trans,trans2" data-select="first" >Ⴥⴥ␣Ⴭⴭ</figure>
+</section>
+</section>
+ 
+
+
+
+ 
+ 
+  
+  
+<section>
+<h2 id="clusters">Consonant clusters</h2>
+<p>There are no special arrangments for consonant clusters in Georgian.</p>
+</section>
+<section>
+<h2 id="cchar">Combining marks</h2>
+    <p>Georgian normally has no combining marks, and there are none in the Unicode Georgian block.</p>
+<p>It is, however, possible to find a combining accent character used with Laz for certain vowels.</p>
+</section>
+    
+    
+    
+    
+    
+<section> 
+<h2 id="punctuation">Punctuation</h2>
+		<p>The Georgian Unicode block contains only one punctuation mark.</p>
+
+<figure class="characterBox georgian"  data-cols="">჻</figure>
+
+		<p>In older texts it was used to signal the end of a paragraph.</p>
+<p>Otherwise, Georgian uses standard western punctuation. CLDR lists the following non-ASCII punctuation.</p>
+<figure class="characterBox georgian"  data-cols="" data-select="first" >«␣»␣§␣‐␣–␣—␣…␣‘␣‚␣“␣„␣†␣‡␣′␣″</figure>
+</section>
+    
+    
+    
+    
+    
+<section> 
+<h2 id="symbols">Symbols</h2>
+		<p>The Georgian Unicode block contains no symbols, but Georgian uses a currency symbol and a number symbol from elsewhere in Unicode.</p>
+<figure class="characterBox georgian"  data-cols="" data-select="first" >₾␣№</figure>
+</section>
+   
+    
+    
+    
+    
+<section> 
+<h2 id="numberdescn">Numbers</h2>
+		<p>Georgian uses the standard western digits.</p>
+<p>The Georgian currency symbol, <span class="codepoint" translate="no"><span lang="ka">&#x20BE;</span> [<a href="/scripts/currencysymbols/block#char20BE"><span class="uname">U+20BE LARI SIGN</span></a>]</span> is found in the Currency Symbols block. </p>
+</section>
+<section>
+<h2 id="shaping">Glyph shaping &amp; positioning</h2>
+<p>Georgian doesn't do any shaping or positioning of characters based on the context, but individual letter forms can vary from font to font.</p>
+<p>You can experiment with examples using the <a href="/pickers/georgian/">Georgian picker</a>.</p>
+</section>
+
+
+
+
+
+
+<section>
+<h2 id="boundaries">Structural boundaries &amp; markers</h2>  
+  
+<section>
+<h3 id="word">Word boundaries</h3>
+ <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+
+<p>Words are  separated by spaces.</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="phrase">Phrase boundaries</h3>
+<p>Georgian uses standard western punctuation. See <a class="secref">punctuation</a> for a list of non-ASCII punctuation marks used in Georgian according to CLDR.</p>
+<p><span class="codepoint" translate="no"><span lang="ka">&#x10FB;</span> [<a href="/scripts/georgian/block#char10FB"><span class="uname">U+10FB GEORGIAN PARAGRAPH SEPARATOR</span></a>]</span> was formerly used to indicate the end of a paragraph, but is not common in modern Georgian. When used, it appeared at the end of the last line in the paragraph.</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="quotations">Quotation marks</h3>
+
+<p>According to CLDR, the default quote marks for Georgian are <span class="codepoint" translate="no"><span lang="ka">&#x201E;</span> [<a href="/scripts/punctuation/block#char201E"><span class="uname">U+201E DOUBLE LOW-9 QUOTATION MARK</span></a>]</span> at the start, and <span class="codepoint" translate="no"><span lang="ka">&#x201C;</span> [<a href="/scripts/punctuation/block#char201C"><span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span></a>]</span> at the end. </p>
+<p>When an additional quote is embedded within the first, the quote marks are <span class="codepoint" translate="no"><span lang="ka">&#x00AB;</span> [<a href="/scripts/punctuation/block#char00AB"><span class="uname">U+00AB LEFT-POINTING DOUBLE ANGLE QUOTATION MARK</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ka">&#x00BB;</span> [<a href="/scripts/punctuation/block#char00BB"><span class="uname">U+00BB RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK</span></a>]</span>.</p>
+<p>The following example shows quotation marks used to offset terms.</p>
+<p lang="ka">თავრული  სტილი  არასოდეს  გამოიყენება  როგორც  ე.წ.  „დიდი  ასოები“.</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="emphasis">Emphasis &amp; highlights</h3>
+<p>Modern Georgian tends to use <span class="name">mtavruli</span> characters for a word or phrase to show emphasis or highlight it. The <span class="name">mtavruli</span> characters are used like ALL-CAPS and applied to whole words or phrases, and never just the first letter in a word.</p>
+</section></section><section>
+<h2 id="paralayout">Line &amp; paragraph layout</h2>
+   
+      
+  <section>
+    <h3 id="linebreak">Line breaking &amp; hyphenation</h3>
+    <p>The primary line-break opportunities for Georgian text are the spaces between words.</p>
+<p>Georgian uses hyphenation to fit text to lines better.</p>
+
+<figure>
+<p class="large"><img src="images/hyphenation.png" alt=""/></p>
+<figcaption>An example of hyphenation in Georgian<span class="trans"></span>.</figcaption>
+</figure>
+</section>
+
+
+
+ <section>
+    <h3 id="justification">Text alignment &amp; justification</h3>
+    <p>TBD</p>
+</section>
+
+
+
+
+<section>
+  <h3 id="lists">Counter styles</h3>
+  
+<p>The document <a href="https://w3c.github.io/predefined-counter-styles/#tamil-styles">Ready-made Counter Styles</a> lists an additive counter style for Georgian. It uses the following <span class="name">mkhedruli</span> characters: 10000 'ჵ', 9000 'ჰ', 8000 'ჯ', 7000 'ჴ', 6000 'ხ', 5000 'ჭ', 4000 'წ', 3000 'ძ', 2000 'ც', 1000 'ჩ', 900 'შ', 800 'ყ', 700 'ღ', 600 'ქ', 500 'ფ', 400 'ჳ', 300 'ტ', 200 'ს', 100 'რ', 90 'ჟ', 80 'პ', 70 'ო', 60 'ჲ', 50 'ნ', 40 'მ', 30 'ლ', 20 'კ', 10 'ი', 9 'თ', 8 'ჱ', 7 'ზ', 6 'ვ', 5 'ე', 4 'დ', 3 'გ', 2 'ბ', 1 'ა'. This list of characters includes several that are archaic in written text.</p>
+<figure>
+<p class="large">1&nbsp;⇨&nbsp;<span class="ex" lang="ka">ა</span> 2&nbsp;⇨&nbsp;<span class="ex" lang="ka">ბ</span> 3&nbsp;⇨&nbsp;<span class="ex" lang="ka">გ</span> 4&nbsp;⇨&nbsp;<span class="ex" lang="ka">დ</span> <br>
+11&nbsp;⇨&nbsp;<span class="ex" lang="ka">ია</span> 22&nbsp;⇨&nbsp;<span class="ex" lang="ka">კბ</span> 33&nbsp;⇨&nbsp;<span class="ex" lang="ka">ლგ</span> 44&nbsp;⇨&nbsp;<span class="ex" lang="ka">მდ</span> <br>
+111&nbsp;⇨&nbsp;<span class="ex" lang="ka">რია</span> 2222&nbsp;⇨&nbsp;<span class="ex" lang="ka">ცსკბ</span></p>
+<figcaption>Numbers produced by the Georgian additive counter style<span class="trans"></span>.</figcaption>
+</figure>
+<p>You can experiment with these styles using the <a href="../../r12a.github.io/apps/counterconverter/apps/counterconverter/">Counter styles converter</a>.</p>
+</section>
+</section>
+<section>
+<h3 id="tbd">TBD</h3>
+<p class="ednote">Further information needed for this section includes:</p>
+<pre style="margin-left: 10%;">
+Glyph shaping &amp; positioning
+    Cursive text
+    Context-based shaping
+    Multiple combining characters
+    Context-based positioning
+    Transforming characters
+
+Structural boundaries &amp; markers
+    Grapheme, word &amp; phrase boundaries
+    Hyphens &amp; dashes
+    Bracketing information
+    Quotations
+    Abbreviations, ellipsis, &amp; repetition
+    Inline notes &amp; annotations
+
+Inline layout
+    Inline text spacing
+    Bidirectional text
+
+Line &amp; paragraph layout
+    Line breaking
+    Hyphenation
+    Text alignment &amp; justification
+    Counters, lists, etc.
+    Styling initials
+    Baselines &amp; inline alignment
+
+Page &amp; book layout
+    General page layout &amp; progression
+    Directional layout features
+	Grids &amp; tables
+    Notes, footnotes, etc.
+    Forms &amp; user interaction
+    Page numbering, running headers, etc.
+</pre>
+</section>
+
+
+
+ 
+	
+
+
+	<section> 
+
+    <h2 id="refs">Further reading</h2>
+		<ol>
+			<!--li>[Daniels] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
+				0-19-507993-0</li-->
+			<li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="doctitle"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
+		    0-19-507993-0</li>
+			<li>[ <sup><a href="http://std.dkuug.dk/JTC1/sc2/WG2/docs/n2908.pdf">e</a></sup> ] Everson et al., <a href="http://std.dkuug.dk/JTC1/sc2/WG2/docs/n2908.pdf">Proposal for encoding the Georgian script in the UCS</a></li>
+			<li>[ <sup><a href="http://en.wikipedia.org/wiki/Georgian_scripts">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Georgian_scripts">Georgian scripts</a></li>
+			<li>[ <sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch11.pdf">u</a></sup> ] <a href="http://www.unicode.org/versions/Unicode6.0.0/ch11.pdf">The Unicode Standard v12.0</a></li>
+			<li>[ <sup><a href="https://medium.com/@akakirazmadze/mtavruli-letters-5665d0aec09c">m</a></sup> ] Akaki Razmadze, <a href="https://medium.com/@akakirazmadze/mtavruli-letters-5665d0aec09c">Mtavruli letters</a></li>
+			<li>[ <sup><a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&amp;uid=aggc6af8cc">ss</a></sup> ] ScriptSource, <a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&amp;uid=aggc6af8cc">Georgian</a></li>
+<li>[ <sup><a href="https://www.unicode.org/wg2/docs/n4712-georgian.pdf">r</a></sup> ] Michael Everson, Nika Gujejiani, &amp; Akaki Razmadze, <a href="https://www.unicode.org/wg2/docs/n4712-georgian.pdf"> Revised proposal for the addition of Georgian characters to the UCS</a></li>
+		</ol>
+</section>
+
+
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/georgian"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-03-16  7:41<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bgeorgian%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fgeorgian%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
+<div id="panel" style="display:none"></div>
+
+<script>
+replaceStuff('Georgian', '.georgian', georgian, '', 'ka', '', georgiancols, false)
+replaceStuff('Georgian', '.otherlanguages', otherlanguages, '', 'ka', '', otherlanguagescols, false)
+initialiseSummary('/scripts/georgian/block','ka','Georgian')
+</script>
+
+</body>
+</html>
