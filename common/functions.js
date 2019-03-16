@@ -238,6 +238,181 @@ function makeTables (lang) {
 
 
 
+//replaceStuff('Georgian', 'otherlanguages', otherlanguages, '', 'ka', '', cols, false)
+	
+
+
+function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, showShape) {
+    // create the lists of characters in yellow boxes
+
+    //if (typeof chars == 'undefined') return
+    console.log(cols)
+	
+    // make an object from the spreadsheet data
+    var temp = chars.split('\n')
+    var spreadsheetRows = {}
+    for (var x=0; x<temp.length; x++) {
+        if (temp[x].trim() == '') continue
+        var items = temp[x].split('\t')
+        if (items[0] === '') continue
+
+        spreadsheetRows[items[0]] = ['0']
+        for (let i=1;i<items.length;i++) spreadsheetRows[items[0]].push(items[i])
+        }
+    console.log(spreadsheetRows)
+
+
+    var tables, node, chars, info, bicameral, out, char
+    
+    tables = document.querySelectorAll(langClass)
+	console.log('table length', tables.length, langClass)
+
+    for (let t=0;t<tables.length;t++) {
+        node = tables[t]
+        bicameral = false
+        showFirst = false
+       //console.log(node)
+
+        //chars = node.dataset.chars.split('␣')
+        chars = node.textContent.split('␣')
+        info = node.dataset.cols
+        if (node.className.includes('bicameral')) bicameral = true
+        else bicameral = false
+        if (node.dataset.select && node.dataset.select == 'last') bicameral = true
+        else if (node.dataset.select) showFirst = true
+        if (node.className.includes('vowelcluster')) vowelcluster = true // this should be phased out
+        else vowelcluster = false
+        if (node.dataset.ignore) var ignorableChar = node.dataset.ignore.codePointAt(0)
+        else ignorableChar = ''
+        if (node.dataset.notes) {
+            notes = node.dataset.notes.split(',')
+            }
+        else notes = []
+        if (node.dataset.extra) {
+            extra = node.dataset.extra.split('␣')
+			var extraLang = extra.pop()
+            }
+        else extra = []
+        if (node.dataset.ipa) {
+            ipa = node.dataset.ipa.split(',')
+            }
+        else ipa = []
+        if (node.dataset.translit) {
+            translit = node.dataset.translit.split('␣')
+            }
+        else translit = []
+        if (node.dataset.links) {
+            links = node.dataset.links.split(',')
+            }
+        else links = []
+        out = ''
+
+        if (chars.length > 1) {
+            var length = chars.length
+            for (let j=0;j<chars.length;j++) if (chars[j] === ' ') length-- // ignore spaces
+            out += '<div class="listAll" onClick="listAll(this, \''+lang+'\')">list '
+            if (length === 2) out += 'both'
+            else out += 'all '+length
+            out += '</div>'
+            }
+
+        out += '<div class="listArray">'
+
+        for (let i=0;i<chars.length;i++) {
+            if (bicameral) char = chars[i][chars[i].length-1]
+            else if (showFirst) char = chars[i][0]
+            else char = chars[i]
+            
+            out += '<div class="listPair"><span class="listItem" lang="'+lang+'">'+chars[i]+'</span>'
+
+            // leave a blank where a space is used
+            if (chars[i] === ' ') {
+                out += '&nbsp;</span></div>'
+                continue
+                }
+            
+			// print any second row of characters
+            if (extra.length > 0) {
+                if (extra[i]) out += '<span class="listExtra" lang="'+extraLang+'">'+extra[i]+'</span>'
+                else out += '<span>&nbsp;</span>'
+                }
+
+			
+            // print the code point values
+            out += '<span class="listUnum">'
+            for (let z=0;z<chars[i].length;z++) {
+                var hex = chars[i].codePointAt(z)
+                if (ignorableChar && ignorableChar === hex) continue // ignore specified character
+                if (vowelcluster && hex === 45) continue // ignore hyphens - this should be phased out
+                hex = hex.toString(16).toUpperCase()
+                while (hex.length < 4) hex = '0'+hex
+                out += hex
+                if (chars.length>1 && z<chars.length-1) out += '<br/>'
+                }
+                out += '</span>'
+
+            if (info.includes('ipa')) {
+                if (spreadsheetRows[char] && spreadsheetRows[char][cols.ipaLoc]) ch = spreadsheetRows[char][cols.ipaLoc]
+                else ch = '&nbsp;'
+                if (ch === '&nbsp;') out += '<span>&nbsp;</span>'
+                else out += '<span class="listIPA">'+ch+'</span>'
+                }
+
+            if (ipa.length > 0) {
+                if (ipa[i]) out += '<span class="listIPA">'+ipa[i]+'</span>'
+                else out += ' '
+                }
+
+            if (info.includes('trans')) {
+                if (spreadsheetRows[char] && spreadsheetRows[char][cols.transLoc]) ch = spreadsheetRows[char][cols.transLoc]
+                else ch = '&nbsp;'
+                out += '<span class="listTrans">'+ch+'</span>'
+                }
+
+             if (translit.length > 0) {
+                if (translit[i]) out += '<span class="listTrans">'+translit[i]+'</span>'
+                else out += ' '
+                }
+
+           if (info.includes('transc')) {
+                if (spreadsheetRows[char] && spreadsheetRows[char][cols.transcription]) ch = spreadsheetRows[char][cols.transcription]
+                else ch = '&nbsp;'
+                out += '<span class="listTransc">'+ch+'</span>'
+                }
+
+            if (info.includes('trans2')) {
+                if (spreadsheetRows[char] && spreadsheetRows[char][cols.transcription2]) ch = spreadsheetRows[char][cols.transcription2]
+                else ch = '&nbsp;'
+                out += '<span class="listTrans2">'+ch+'</span>'
+                }
+
+            if (info.includes('meaning')) {
+                if (spreadsheetRows[char] && spreadsheetRows[char][cols.meaning]) ch = spreadsheetRows[char][cols.meaning]
+                else ch = '&nbsp;'
+                out += '<span class="listMeaning">'+ch+'</span>'
+                }
+
+            if (notes.length > 0) {
+                if (notes[i]) ch = notes[i]
+                else ch = '&nbsp;'
+                out += '<span class="listMeaning">'+ch+'</span>'
+                }
+
+            if (links.length > 0) {
+                if (links[i]) out += '<a href="'+links[i]+'">link</a>'
+                else out += '<span>&nbsp;</span>'
+                }
+
+            out += '</div>'
+            }
+        out += '</div>'
+
+        node.innerHTML = out
+        }
+    }
+
+
+
 
 
 
@@ -422,7 +597,7 @@ function toggleTranscription (type, show) {
     // type: string, name of the class of the items to toggle
     // show: boolean, checkbox unchecked gives false
     var trans = document.querySelectorAll('.'+type)
-    console.log('translen', trans.length)
+    console.log('translen for ', type, 'is', trans.length)
     if (trans.length === 0) return
 
     for (let i=0; i<trans.length; i++) {
