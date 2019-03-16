@@ -1,4 +1,4 @@
-var scriptNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr', 'laoo', 'lana', 'lisu', 'mand', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'taml', 'tavt', 'thaa', 'thai', 'tibt', 'tfng'])
+var scriptNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr', 'laoo', 'lana', 'lisu', 'mand', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'taml', 'tavt', 'thaa', 'thai', 'tibt', 'tfng'])
 
 var scriptNotes= {
     'armn':[['Armenian script summary','armenian/']],
@@ -10,6 +10,7 @@ var scriptNotes= {
     'cyrl':[['Cyrillic script summary', 'cyrillic/']],
     'deva':[['Devanagari script summary', 'devanagari/']],
     'ethi':[['Ethiopic script summary', 'ethiopic/']],
+    'geor':[['Georgian script summary', 'georgian/']],
     'grek':[['Greek script summary', 'greek/']],
     'gujr':[['Gujarati script summary', 'gujarati/']],
     'guru':[['Gurmukhi script summary', 'gurmukhi/']],
@@ -39,7 +40,7 @@ var scriptNotes= {
     'tfng':[['Tifinagh script summary', 'tifinagh/']]
     }
 
-var charNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr','laoo', 'lana', 'maka', 'mand', 'mlym', 'mong', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'tale', 'talu', 'tavt', 'taml', 'thaa', 'thai', 'tibt', 'tfng', 'vaii'])
+var charNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr','laoo', 'lana', 'maka', 'mand', 'mlym', 'mong', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'tale', 'talu', 'tavt', 'taml', 'thaa', 'thai', 'tibt', 'tfng', 'vaii'])
 
 var charNotesList = {
     'armn':'armenian/block',
@@ -51,6 +52,7 @@ var charNotesList = {
     'cyrl':'cyrillic/block',
     'deva':'devanagari/block',
     'ethi':'ethiopic/block',
+    'geor':'georgian/block',
     'grek':'greek/block',
     'gujr':'gujarati/block',
     'guru':'gurmukhi/block',
@@ -245,7 +247,7 @@ geor:{ script:"Georgian", code:"Geor", dates:"5thC – today", start:"1400", end
 	local: [	],
 	unicode:{ 	}, 
 	charts:[	"Georgian", "Georgian Extended", "Georgian Supplement" ],
-	pickers:[	
+	pickers:[	{ name:"Georgian", url:"georgian" }
 				],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-european.html#georgian" }
 				],
