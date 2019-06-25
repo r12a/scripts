@@ -903,12 +903,14 @@ cakm:{ script:"Chakma", code:"Cakm", name:"", dates:"8thC – today", start:"700
   
 deva:{ script:"Devanagari", code:"Deva", name:"", dates:"11thC – today", start:"1100", end:"", origin:"South Asia", current_usage:"",
 	info:{ 		wikipedia:"Devanagari", omniglot:"devanagari" }, 
-	local: [	{ name:"Introduction to Indic Scripts", url:"indic-overview" }
+	local: [	{ name:"Introduction to Indic Scripts", url:"indic-overview" },
+				{ name:"Kashmiri in devanagari", url:"devanagari/kashmiri" }
 				],
 	unicode:{ 	}, 
 	charts:[	"Devanagari", "Devanagari Extended", "Vedic Extensions" ],
 	pickers:[	{ name:"Devanagari", url:"devanagari" },
-		{ name:"Hindi", url:"hindi" }
+				{ name:"Hindi", url:"hindi" },
+				{ name:"Kashmiri", url:"kashmiri" }
 				],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-south-asian.html#devanagari" }
 				],
