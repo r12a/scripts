@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<title>Kashmiri (arab)</title>
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="description" content="Kashmiri in arabic script."/>
+<link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../common/local.css" />
+<style>
+@font-face {
+    font-family: 'webfont';
+    src: url('/shared/webfonts/notonastaliqurdu-regular-webfont.woff2') format('woff2'),
+         url('/shared/webfonts/notonastaliqurdu-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+#freeText {
+	font-size: 24px;
+	font-family: webfont, serif;
+    line-height: 1.6;
+	}
+@media print { #freeText { font-size: 18px; } }
+[lang=ks] { font-family: webfont, serif; font-size: 150%; }
+.large .ex { font-size: 400%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1.75; }
+.iso15919 { font-family: gentiumpluswf; }
+</style>
+
+<script src="../../shared/scriptdb/kashmiri_arab.js"> </script>
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2019.js"></script>
+<script src="../../shared/code/all-names.js"></script>
+<script src="../../shared/code/character_conversion.js"></script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/fontlists/manage.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
+<script src="../common/functions.js"></script>
+<!--script src="../common/block-functions.js"></script-->
+<script src="../../shared/code/getLinks.js"></script>
+<script src="../../scripts/linkdata/linkdb.js"></script>
+<script src="../featurelist/scriptdata.js"> </script>
+
+<script src="../../shared/fontlists/arabic.js"> </script>
+</head>
+
+<body>
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
+</header>
+
+<h1>Kashmiri in arabic script (Draft)</h1>
+
+<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="Jump to top of page." title="Jump to top of page."/></a></nav>
+
+<aside class="sidebar">
+<div id="toc"><!-- placeholder --></div>
+
+ <div id="fontsetting" class="closed">
+  <h2 class="notoc"><a id="fonts">Fonts</a></h2>
+  <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'hi');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'ks');" />
+    </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
+    <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
+	return false;">
+      <p>Change size:<br />
+        <input id="slider" type="range" min="12" max="100" step="1" value="32">
+        &#xA0; <span id="sizeIndicator">32px</span><br />
+        <input id="multiplier" type="hidden" value="1" />
+        Multiplier:
+        <input type="radio" name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x1">1</label>
+        <input type="radio" name="step" id="x5" value="2"  onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x5">2</label>
+        <input type="radio" name="step" id="x10" value="10"  onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x10">10</label>
+      </p>
+    </form>
+</div>
+</aside>
+
+
+<p id="status">Updated 
+  <!-- #BeginDate format:En2 -->04-Jul-2019<!-- #EndDate -->
+&bull; tags <a href="http://r12a.github.io/blog/index.php?tag=devanagari" title="Show all blog posts tagged with 'devanagari'">devanagari</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+
+
+
+<section>
+<p>This page provides basic information about characters used to write the Kashmiri language in the Arabic script. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned. For character-specific details follow the links to the <a class="linkHighlight" href="/scripts/arabic/block">Arabic character notes</a>.</p>
+<p>See the <a class="linkHighlight" href="index">Arabic script summary</a> for most of the information about how the Arabic script works, and the orthography used for the Arabic language. This page aims to provide Kashmiri-specific information.</p>
+<p>For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/">page of links</a>.</p>
+<p class="instructions noprint">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+    
+<details id="scriptLinks" class="noprint">
+<summary class="instructions">More links for the Arabic script.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Arab')</script>
+</details>
+</section>
+
+
+
+<section>
+<h2 href="#sample">Sample (Kashmiri)</h2>
+  
+  
+  <div id="freeText" dir="rtl" lang="ks" contenteditable="true">
+  <p  title="Article 1, first sentence of UDHR." onMouseUp="showtext('freeText')" data-source="https://www.omniglot.com/writing/kashmiri.htm">سٔری لُکھ چھہٕ حقوٗق تِہ عزت لِحاظٕ ہِہی ژامِت. تِمن چھہِ صمیر تِہ عَقل دِنِ آمٕژ. تٔوے پَزٕ تُمن بھٲیٔی برادری سانْ روزُن.</p>
+</div>
+</section>
+
+
+
+
+
+ <section>
+    <h2 id="history">Usage &amp; history</h2>
+    <p>For information about the script in general, see the <a href="index/#history">Arabic overview</a>.<sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf"></a></sup></p>
+<p>Kashmiri is written in the devanagari script by Hindus. Muslims use the arabic script.</p>
+</section>
+
+
+
+  <div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+    </table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+   </div>
+
+
+
+
+<section>
+    <h2 id="type">Distinctive features</h2>
+    <p>The Arabic script is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abjad">abjad</a></span>. This means that in normal use the script  represents only consonant and long vowel sounds. The Arabic alphabet has been adapted to cope with the many more vowels sounds in languages such as Kashmiri. See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.</p>
+<p>Kashmiri is principally written using the nasta'liq style of Arabic writing. Glyphs are more drawn out, and the baseline tends to be sloping from word to word.</p>
+</section>
+
+
+
+
+<section>
+<h2 id="structure">Structure</h2>
+    <p>See the <a href="index/#structure">Arabic overview</a>.<sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf"></a></sup></p>
+</section>
+  
+  
+  
+
+<section>
+<h2>Character lists</h2>
+    <p>The Arabic script characters in Unicode 10.0 are spread across 3 blocks:</p>
+  <ol>
+      <li><a href="/uniview/?block=arabic">Arabic</a> <span class="charCount">(153 letters, 52 marks, 20 numbers, 12 punctuation, 10 symbols, 8 other : total 255)</span></li>
+      <li><a href="/uniview/?block=arabic_supplement">Arabic Supplement </a><span class="charCount">(48 letters : total 48)</span></li>
+      <li><a href="/uniview/?block=arabic">Arabic Extended-A</a> <span class="charCount">(29 letters, 43 marks, 1 other : total 73)</span></li>
+    </ol>
+    <p>The following links go to the Character Usage app. The numbers  are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li><a href="/app-charuse/?language=ks-arab" target="_blank">Kashmiri</a> <span class="charCount">47 letters, 2 marks, 1 punctuation, 10 numbers, 11 other :   total 71   &nbsp;   + ( 8 infrequent ) </span></li>
+</ul>
+<p>For character-specific details see 
+  <a class="linkHighlight" href="/scripts/arabic/block">Arabic character notes</a>.</p>
+
+
+<section>
+<h3 id="hindiDiff">Differences from Arabic</h3>
+
+<p>@Kashmiri doesn't use the following consonants (they include, notably, all the aspirated sonorants), however they may occasionally appear in words directly borrowed from Sanskrit and Hindi.<sup><a href="http://koshur.org/pdf/Let%20Us%20Learn%20Kashmiri.pdf">r</a></sup></p>
+<figure class="auto"  data-cols="">घ␣ङ␣झ␣ञ␣ढ␣ण␣ध␣भ␣ळ␣ष</figure>
+<p>@The following are additional consonants, all formed by adding a nukta.</p>
+<figure class="auto"  data-cols="">च़␣छ़␣ज़</figure>
+<p>@Kashmiri adds the following vowels (and their vowel-signs).</p>
+<figure class="auto"  data-cols="">ॲ␣ऑ␣ॶ␣ॷ␣ऎ␣ऒ␣ॵ</figure>
+<p>@Kashmiri doesn't use the visarga.<sup><a href="http://koshur.org/pdf/Let%20Us%20Learn%20Kashmiri.pdf">r</a></sup></p>
+</section>
+</section>
+
+
+
+
+ <div id="showTranscriptions">
+<div>In yellow boxes, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div><label>ISO 15919 <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+</div>
+
+
+
+
+ <section>
+    <h2 id="direction">Text direction</h2>
+    <p>Text is normally written horizontally, right to left, however numbers and non-Arabic script text runs left to right.</p>
+<p>See the <a href="index/#direction">Arabic overview</a>.</p>
+  </section>
+   
+    
+      
+
+
+<section>
+<h2 id="vowels">Vowels</h2>
+
+
+<section>
+<h3 id="vowelPhonemes">Phoneme table</h3>
+<p>The allocation of characters to vowel sounds is somewhat complicated. The complexity arises from the number of vowels in Kashmiri compared to the Arabic language, and the need to represent them all, but also because different sequences are needed for different positional forms, and also there are often a number of alternative character sequences possible. For more detailed information, see the following section. </p>
+<p>The sequences in the table show the isolated form on the right, and then initial, medial and final, respectively, from right to left.</p>
+<table class="ipaTable">
+<thead>
+<tr>
+<th>&#160; </th>
+<th>Front </th>
+<th>Central </th>
+<th>Back </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>High </th>
+<td><span class="ipa">i</span> <span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">اِ&nbsp;&nbsp;اِ&nbsp;&nbsp;–ِ&nbsp;&nbsp;–ِ </span></span> &nbsp; <span class="ipa">iː</span> <span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">ای&nbsp;&nbsp;ایٖـ &nbsp;&nbsp; ـیٖـ&nbsp;&nbsp;ی</span></span></td>
+<td><span class="ipa">ɨ</span> <span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">إ&nbsp;&nbsp;إ&nbsp;&nbsp;–ٕ&nbsp;&nbsp;–ٕ </span></span> <span class="ipa">ɨː</span> <span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">ٳ&nbsp;&nbsp;ٳ&nbsp;&nbsp;–ٟ&nbsp;&nbsp;–ٟ</span></span></td>
+<td><span class="ipa">u</span> <span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">اُ&nbsp;&nbsp;اُ&nbsp;&nbsp;–ُ&nbsp;&nbsp;–ُ</span></span> <span class="ipa">uː</span> <span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">اوٗ&nbsp;&nbsp;اوٗ&nbsp;&nbsp;ـوٗ&nbsp;&nbsp;ـوٗ</span></span></td>
+</tr>
+<tr>
+<th>Mid </th>
+<td><span class="ipa">e</span> <sub>[see below]</sub> <span class="ipa">eː</span> <span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">اے&nbsp;&nbsp;ایـ &nbsp;&nbsp;ـیـ&nbsp;&nbsp;ے</span></span></td>
+<td><span class="ipa">ə</span> <span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">أ&nbsp;&nbsp;أ&nbsp;&nbsp;–ٔ&nbsp;&nbsp;–ٔ</span></span> <span class="ipa">əː</span> <span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">ٲ&nbsp;&nbsp;ٲ&nbsp;&nbsp;ٲ&nbsp;&nbsp;ٲ</span></span></td>
+<td><span class="ipa">o</span> <span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">اۆ&nbsp;&nbsp;اۆ&nbsp;&nbsp;ـۆ&nbsp;&nbsp;ـۆ</span></span> <span class="ipa">oː</span> <span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">او&nbsp;&nbsp;او&nbsp;&nbsp;ـو&nbsp;&nbsp;ـو</span></span></td>
+</tr>
+<tr>
+<th>Low </th>
+<td></td>
+<td>
+<span class="ipa">a</span> <span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">اَ&nbsp;&nbsp;اَ&nbsp;&nbsp;–َ&nbsp;&nbsp;–َ</span></span> 
+<span class="ipa">aː</span> <span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">آ&nbsp;&nbsp;آ&nbsp;&nbsp;ا&nbsp;&nbsp;ا</span></span></td>
+<td>
+<span class="ipa">ɔ</span> <span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">اۄ&nbsp;&nbsp;اۄ&nbsp;&nbsp;ۄ&nbsp;&nbsp;ـۄ</span></span>
+<span class="ipa">ɔː</span> <span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">اۄآ&nbsp;&nbsp;-&nbsp;&nbsp;-&nbsp;&nbsp;ـۄآ</span></span>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>Diphthongs are handled by combining characters.</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="inherentvowel"> vowels</h3>
+
+<p>Vowels in initial or isolated position are written with a preceding<span class="codepoint" translate="no"><span lang="ks" dir="rtl"> &#x0627;</span> [<a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span>.</p>
+<p>The following descriptions should be read with the vowel phoneme chart in the previous section.</p>
+<p><span class="ipa">i</span> is written with <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0650;</span> [<a href="/scripts/arabic/block#char0650"><span class="uname">U+0650 ARABIC KASRA</span></a>]</span>.</p>
+<p><span class="ipa">ī</span> uses <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06CC;</span> + <span lang="ks" dir="rtl">&#x0656;</span> [<a href="/scripts/arabic/block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a> + <a href="/scripts/arabic/block#char0656"><span class="uname">U+0656 ARABIC SUBSCRIPT ALEF</span></a>]</span> for initial and medial positions, but just <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06CC;</span> [<a href="/scripts/arabic/block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span> for final and isolate.</p>
+<p><span class="ipa">ɨ</span> uses <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0655;</span> [<a href="/scripts/arabic/block#char0655"><span class="uname">U+0655 ARABIC HAMZA BELOW</span></a>]</span>. The initial and isolate forms can be rendered with the precomposed character <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0625;</span> [<a href="/scripts/arabic/block#char0625"><span class="uname">U+0625 ARABIC LETTER ALEF WITH HAMZA BELOW</span></a>]</span>, which is canonically equivalent to <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0627;</span> + <span lang="ks" dir="rtl">&#x0655;</span> [<a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="/scripts/arabic/block#char0655"><span class="uname">U+0655 ARABIC HAMZA BELOW</span></a>]</span> .</p>
+<p><span class="ipa">ɨː</span>  uses <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x065F;</span> [<a href="/scripts/arabic/block#char065F"><span class="uname">U+065F ARABIC WAVY HAMZA BELOW</span></a>]</span>. There is a precomposed character for the initial and isolate combinations with alef, <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0673;</span> [<a href="/scripts/arabic/block#char0673"><span class="uname">U+0673 ARABIC LETTER ALEF WITH WAVY HAMZA BELOW</span></a>]</span>, that neither composes nor decomposes in normalisation, but it is strongly deprecated by the Unicode Standard.</p>
+<p><span class="ipa">u</span> uses <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x064F;</span> [<a href="/scripts/arabic/block#char064F"><span class="uname">U+064F ARABIC DAMMA</span></a>]</span>.</p>
+<p><span class="ipa">uː</span> uses <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0648;</span> + <span lang="ks" dir="rtl">&#x0657;</span> [<a href="/scripts/arabic/block#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a> + <a href="/scripts/arabic/block#char0657"><span class="uname">U+0657 ARABIC INVERTED DAMMA</span></a>]</span>.</p>
+<p><span class="ipa">e</span> is unclear. Wikipedia uses <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06CE;</span> [<a href="/scripts/arabic/block#char06CE"><span class="uname">U+06CE ARABIC LETTER YEH WITH SMALL V</span></a>]</span> throughout, but Daniels and LOC show a <span class="uname">YEH</span> with what looks like a combining breve above for the initial and medial forms, and <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06D2;</span> [<a href="/scripts/arabic/block#char06D2"><span class="uname">U+06D2 ARABIC LETTER YEH BARREE</span></a>]</span> with the same diacritic above for final and isolate.</p>
+<p><span class="ipa">eː</span> uses <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06CC;</span> [<a href="/scripts/arabic/block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span> for initial and medial forms, and <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06D2;</span> [<a href="/scripts/arabic/block#char06D2"><span class="uname">U+06D2 ARABIC LETTER YEH BARREE</span></a>]</span> for final and isolate.</p>
+<p><span class="ipa">ə</span> uses <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0654;</span> [<a href="/scripts/arabic/block#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span>, however there are several precomposed characters available for use with hamza above. These include:</p>
+<ul>
+<li><span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0623;</span> [<a href="/scripts/arabic/block#char0623"><span class="uname">U+0623 ARABIC LETTER ALEF WITH HAMZA ABOVE</span></a>]</span></li>
+<li><span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0624;</span> [<a href="/scripts/arabic/block#char0624"><span class="uname">U+0624 ARABIC LETTER WAW WITH HAMZA ABOVE</span></a>]</span></li>
+<li><span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0626;</span> [<a href="/scripts/arabic/block#char0626"><span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span></a>]</span></li>
+<li><span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06C2;</span> [<a href="/scripts/arabic/block#char06C2"><span class="uname">U+06C2 ARABIC LETTER HEH GOAL WITH HAMZA ABOVE</span></a>]</span></li>
+<li><span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0681;</span> [<a href="/scripts/arabic/block#char0681"><span class="uname">U+0681 ARABIC LETTER HAH WITH HAMZA ABOVE</span></a>]</span></li>
+<li><span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x076C;</span> [<a href="/scripts/arabic/block#char076C"><span class="uname">U+076C ARABIC LETTER REH WITH HAMZA ABOVE</span></a>]</span></li>
+<li><span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x08A1;</span> [<a href="/scripts/arabic/block#char08A1"><span class="uname">U+08A1 ARABIC LETTER BEH WITH HAMZA ABOVE</span></a>]</span></li>
+</ul>
+<p>All of the above except <span class="uname">HAH</span>, <span class="uname">REH</span>, and <span class="uname">BEH</span> decompose and recompose during normalisation.</p>
+<p><span class="ipa">əː</span> uses <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0672;</span> [<a href="/scripts/arabic/block#char0672"><span class="uname">U+0672 ARABIC LETTER ALEF WITH WAVY HAMZA ABOVE</span></a>]</span>.</p>
+<p><span class="ipa">o</span> uses <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06C6;</span> [<a href="/scripts/arabic/block#char06C6"><span class="uname">U+06C6 ARABIC LETTER OE</span></a>]</span>.</p>
+<p><span class="ipa">oː</span> uses <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0648;</span> [<a href="/scripts/arabic/block#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a>]</span>.</p>
+<p><span class="ipa">a</span> uses <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x064E;</span> [<a href="/scripts/arabic/block#char064E"><span class="uname">U+064E ARABIC FATHA</span></a>]</span>.</p>
+<p><span class="ipa">aː</span> uses <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0622;</span> [<a href="/scripts/arabic/block#char0622"><span class="uname">U+0622 ARABIC LETTER ALEF WITH MADDA ABOVE</span></a>]</span> in initial and isolate forms, and just <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0627;</span> [<a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span> elsewhere. The former may be decomposed.</p>
+<p><span class="ipa">ɔ</span> uses <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06C4;</span> [<a href="/scripts/arabic/block#char06C4"><span class="uname">U+06C4 ARABIC LETTER WAW WITH RING</span></a>]</span>.</p>
+<p><span class="ipa">ɔː</span> is used only in isolated and final forms, and uses <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06C4;</span> + <span lang="ks" dir="rtl">&#x0622;</span> [<a href="/scripts/arabic/block#char06C4"><span class="uname">U+06C4 ARABIC LETTER WAW WITH RING</span></a> + <a href="/scripts/arabic/block#char0622"><span class="uname">U+0622 ARABIC LETTER ALEF WITH MADDA ABOVE</span></a>]</span>.&nbsp;</p>
+<p>Sources for this section: <a class="fnref" href="#refs">d</a>, <a class="fnref" href="https://www.loc.gov/catdir/cpso/romanization/kashmiri.pdf">e</a>, <a class="fnref" href="http://www.unicode.org/versions/latest/ch09.pdf">u</a>, <a class="fnref" href="https://en.wikipedia.org/wiki/Kashmiri_language">w</a>.</p>
+<p>The set of characters needed to represent the Kashmiri vowels, then, including decompositions and compositions, includes the following. The list may need to be adjusted when the representation of <span class="ipa">e</span> is better understood.</p>
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">آ␣أ␣إ␣ا␣و␣َ␣ُ␣ِ␣ٓ␣ٔ␣ٕ␣ٖ␣ٗ␣ٟ␣ٲ␣ۄ␣ۆ␣ی␣ے</figure>
+<p>The Unicode character <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0673;</span> [<a href="/scripts/arabic/block#char0673"><span class="uname">U+0673 ARABIC LETTER ALEF WITH WAVY HAMZA BELOW</span></a>]</span>  represents a valid visual arrangement for Kashmiri, but  is deprecated by the Standard, in favour of the decomposed sequence <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0627;</span> + <span lang="ks" dir="rtl">&#x065F;</span> [<a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="/scripts/arabic/block#char065F"><span class="uname">U+065F ARABIC WAVY HAMZA BELOW</span></a>], because t</span>here is no normalisation equivalence.</p>
+<figure class="deprecatedBox auto"  data-cols="">ٳ</figure>
+</section>
+
+
+
+
+ 
+<section>
+<h3 id="suppression">Vowel absence</h3>
+<p>Kashmiri uses <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0652;</span> [<a href="/scripts/arabic/block#char0652"><span class="uname">U+0652 ARABIC SUKUN</span></a>]</span> to kill the  vowel after a consonant.<a class="fnref" href="https://www.unicode.org/L2/L2009/09311-kashmiri-ltr-from-swaran-lata.pdf">l2</a> Note that the shape may resemble an inverted v. This is also called <span class="name">jazm</span>. </p>
+<p>Sometimes people use <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06E1;</span> [<a href="/scripts/arabic/block#char06E1"><span class="uname">U+06E1 ARABIC SMALL HIGH DOTLESS HEAD OF KHAH</span></a>]</span> for this.</p>
+<p>LOC has an example, <span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">روْنگ</span> <span class="trans">rw°ng</span></span>, where the vowel absence is indicated over the <span class="uname">WAW</span>.</p>
+</section>
+<section>
+<h3 id="nasalisation">Nasalisation</h3>
+
+<p>It seems that <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06BA;</span> [<a href="/scripts/arabic/block#char06BA"><span class="uname">U+06BA ARABIC LETTER NOON GHUNNA</span></a>]</span> may be used for nasalisation of a vowels. To be confirmed. <a href="http://localhost/scripts/arabic/urdu#nasalisations">See details</a> about how this works in Urdu.</p>
+</section>
+</section>
+
+
+
+
+ 
+
+
+  
+  <section>
+  <h2 id="consonants">Consonants</h2>
+
+
+<section>
+<h3 id="consonantPhonemes">Phoneme table</h3>
+<table class="ipaTable">
+<thead>
+<tr>
+<th colspan="2"></th>
+<th>Bilabial </th>
+<th>Dental </th>
+<th>Alveolar </th>
+<th>Retroflex </th>
+<th>Alveolo<br />
+-palatal </th>
+<th>Velar </th>
+<th>Glottal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th rowspan="2">Stop /<br />
+Affricate </th>
+<th><span style="font-size:85%;">plain</span> </th>
+<td><span class="ipa">p</span> <span class="ex" lang="ks">پ</span><br/>
+<span class="ipa">b</span> <span class="ex" lang="ks">ب</span></td>
+<td><span class="ipa">t</span> <span class="ex" lang="ks">ت</span><br/>
+<span class="ipa">d</span> <span class="ex" lang="ks">د</span></td>
+<td><span class="ipa">ts</span> <span class="ex" lang="ks">ژ</span></td>
+<td><span class="ipa">ʈ</span> <span class="ex" lang="ks">ٹ</span><br/>
+<span class="ipa">ɖ</span> <span class="ex" lang="ks">ڈ</span></td>
+<td><span class="ipa">tʃ</span> <span class="ex" lang="ks">چ</span><br/>
+<span class="ipa">dʒ</span> <span class="ex" lang="ks">ج</span></td>
+<td><span class="ipa">k</span> <span class="ex" lang="ks">ک</span><br/>
+<span class="ipa">ɡ</span> <span class="ex" lang="ks">گ</span></td>
+<td></td>
+</tr>
+<tr>
+<th><span style="font-size:85%;">aspirated</span> </th>
+<td><span class="ipa">pʰ</span> <span class="ex" lang="ks">پھ</span></td>
+<td><span class="ipa">tʰ</span> <span class="ex" lang="ks">تھ</span></td>
+<td><span class="ipa">tsʰ</span> <span class="ex" lang="ks">ثھ</span></td>
+<td><span class="ipa">ʈʰ</span> <span class="ex" lang="ks">ٹھ</span></td>
+<td><span class="ipa">tʃʰ</span> <span class="ex" lang="ks">چھ</span></td>
+<td><span class="ipa">kʰ</span> <span class="ex" lang="ks">کھ</span></td>
+<td></td>
+</tr>
+<tr>
+<th colspan="2">Fricative </th>
+<td></td>
+<td></td>
+<td><span class="ipa">s</span> <span class="ex" lang="ks">س</span><br/>
+<span class="ipa">z</span> <span class="ex" lang="ks">ز</span></td>
+<td></td>
+<td><span class="ipa">ʃ</span> <span class="ex" lang="ks">ش</span></td>
+<td></td>
+<td><span class="ipa">h</span> <span class="ex" lang="ks">ہ</span></td>
+</tr>
+<tr>
+<th colspan="2">Nasal </th>
+<td><span class="ipa">m</span> <span class="ex" lang="ks">م</span></td>
+<td><span class="ipa">n</span> <span class="ex" lang="ks">ن</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th colspan="2">Approximant </th>
+<td><span class="ipa">w</span> <span class="ex" lang="ks">و</span></td>
+<td><span class="ipa">l</span> <span class="ex" lang="ks">ل</span></td>
+<td></td>
+<td></td>
+<td><span class="ipa">j</span> <span class="ex" lang="ks">ی</span></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th colspan="2">Trill </th>
+<td></td>
+<td><span class="ipa">r</span> <span class="ex" lang="ks">ر</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+    
+<section>
+    <h3 id="basicconsonants">Basic consonants</h3>
+    
+    
+<p>The following constitute a basic set of consonants used for Kashmiri, that cover all standard phonemes.</p>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ب␣ت␣ث␣ج␣د␣ر␣ز␣س␣ش␣ل␣م␣ن␣و␣ٹ␣پ␣چ␣ڈ␣ژ␣ک␣گ␣ھ␣ہ␣ی␣پھ␣تھ␣ثھ␣ٹھ␣چھ␣کھ</figure>
+
+<p>The last 6 items in the list are combinations of plosives with <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06BE;</span> [<a href="/scripts/arabic/block#char06BE"><span class="uname">U+06BE ARABIC LETTER HEH DOACHASHMEE</span></a>]</span>  to produce the aspirated sounds.</p>
+</section>
+
+
+
+
+<section>
+    <h3 id="basicconsonants">Additional consonants</h3>
+    
+    
+<p>The following set of consonants map mostly to the same phonemes.</p>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ط␣ق␣ع␣خ␣غ␣ف␣ث␣ص␣ح␣ذ␣ض␣ظ␣ڑ</figure>
+
+<p>The last 6 items in the list are combinations of plosives with <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06BE;</span> [<a href="/scripts/arabic/block#char06BE"><span class="uname">U+06BE ARABIC LETTER HEH DOACHASHMEE</span></a>]</span>  to produce the aspirated sounds.</p>
+</section>
+
+
+
+
+<section>
+    <h3 id="palatalisation">Palatalisation</h3>
+   
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ؠ</figure>
+
+<p>Palatalisation is a frequent feature of  Kashmiri words. It is represented using <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0620;</span> [<a href="/scripts/arabic/block#char0620"><span class="uname">U+0620 ARABIC LETTER KASHMIRI YEH</span></a>]</span>. It mostly appears medially and finally: non-final/isolate forms have a small circle beneath them, eg. these are all the same character <span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">ؠ&nbsp;&nbsp;ؠـ&nbsp;&nbsp;ـؠـ&nbsp;&nbsp;ـؠ</span></span>.</p>
+<p>Use preceding the inherent vowel seems to typically be transcribed using <span class="trans">ê</span>, eg. <span class="trans">têmbar</span>. At the end of a word, it is often transcribed using a superscript i, eg. <span class="trans">tånⁱ</span>.</p>
+</section>
+</section>
+
+
+  
+
+
+
+
+  
+<section>
+<h2 id="typos">Confusables</h2>
+<p>This section documents some common spelling errors. Most of the illustrations are from a Kashmiri <a href="https://ks.wikipedia.org/wiki/%D8%A7%DB%81%D9%85_%D8%B5%D9%8E%D9%81%DB%81%D9%95">Wikipedia</a> page, but they do occur elsewhere, too.</p>
+<p>Kashmiri doesn't use <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x064A;</span> [<a href="/scripts/arabic/block#char064A"><span class="uname">U+064A ARABIC LETTER YEH</span></a>]</span>, but people sometimes use it in Kashmiri text, failing to distinguish it from <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06CC;</span> [<a href="/scripts/arabic/block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span>. Here is an example from Wikipedia <span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">اِنسيكلؤپِيڈيا</span></span>. The correct spelling would be <span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">اِنسیکلۆپِیڈیا</span></span>.</p>
+<p>This can also lead to the use of characters such as <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0626;</span> [<a href="/scripts/arabic/block#char0626"><span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span></a>]</span>, rather than <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06CC;</span> + <span lang="ks" dir="rtl">&#x0654;</span> [<a href="/scripts/arabic/block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a> + <a href="/scripts/arabic/block#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span>.</p>
+<p>That example also uses <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0643;</span> [<a href="/scripts/arabic/block#char0643"><span class="uname">U+0643 ARABIC LETTER KAF</span></a>]</span> instead of <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06A9;</span> [<a href="/scripts/arabic/block#char06A9"><span class="uname">U+06A9 ARABIC LETTER KEHEH</span></a>]</span>, and <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0624;</span> [<a href="/scripts/arabic/block#char0624"><span class="uname">U+0624 ARABIC LETTER WAW WITH HAMZA ABOVE</span></a>]</span> instead of <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06C6;</span> [<a href="/scripts/arabic/block#char06C6"><span class="uname">U+06C6 ARABIC LETTER OE</span></a>]</span>.</p>
+<p>Non-final forms of <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0620;</span> [<a href="/scripts/arabic/block#char0620"><span class="uname">U+0620 ARABIC LETTER KASHMIRI YEH</span></a>]</span> may be incorrectly typed using <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x066E;</span> + <span lang="ks" dir="rtl">&#x06EA;</span> [<a href="/scripts/arabic/block#char066E"><span class="uname">U+066E ARABIC LETTER DOTLESS BEH</span></a> + <a href="/scripts/arabic/block#char06EA"><span class="uname">U+06EA ARABIC EMPTY CENTRE LOW STOP</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">پٮ۪ٹھ</span></span> in Wikipedia, rather than <span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">پؠٹھ</span></span>.</p>
+<p>(The same page has <span class="charExample" translate="no"><span class="ex" lang="ks" dir="rtl">موسیٖقی</span></span>, where the final <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06CC;</span> [<a href="/scripts/arabic/block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span> should perhaps be <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x0620;</span> [<a href="/scripts/arabic/block#char0620"><span class="uname">U+0620 ARABIC LETTER KASHMIRI YEH</span></a>]</span> ?)</p>
+</section>
+<section>
+<h2 id="clusters">Consonant clusters &amp; gemination</h2>
+<p>The diacritic <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0651;</span>&nbsp; [<a href="/scripts/arabic/block#char0651"><span class="uname">U+0651 ARABIC SHADDA</span></a>]</span> doubles the value of the consonant it is attached to. It is also used to explicitly signal an absence of intervening vowels between any two consonants, where needed.</p>
+</section>
+<!--section>
+<h2 id="otherletters">Other letters</h2>
+
+<p>@CLDR lists the following additional characters with the general property of letter.</p>
+
+<figure class="auxiliaryBox auto"  data-cols="">ऽ␣ॐ</figure>
+
+
+<p>@Used for vowel elision in Sanskrit, the main function of <span class="codepoint" translate="no"><span lang="ks">&#x093D;</span> [<a href="devanagari#char093D"><span class="uname">U+093D DEVANAGARI SIGN AVAGRAHA</span></a>]</span> in Hindi is to show that a vowel is sustained in a cry or a shout, eg.  <span class="charExample" translate="no"><span class="ex" lang="ks">आईऽऽऽ!</span> <span class="trans">ạ̄ị̄´´´!</span></span> <sup><a href="https://en.wikipedia.org/wiki/Devanagari">w</a></sup>.</p>
+<p>@<span class="codepoint" translate="no"><span lang="ks">&#x0950;</span> [<a href="devanagari#char0950"><span class="uname">U+0950 DEVANAGARI OM</span></a>]</span> is a religious symbol.&nbsp;</p>
+</section-->
+
+
+
+  
+<section>
+<h2 id="cchar">Combining marks</h2>
+    <p>Apart from the vowel-signs, the commonly-used combining marks in Kashmiri include the following.  Follow the links for more information.</p>
+
+<figure class="auxiliaryBox auto"  data-cols="" data-links="#suppression,#clusters">ْ␣ّ</figure>
+
+
+</section>
+
+
+
+  
+<section>
+<h2 id="punctuation">Punctuation</h2>
+<figure class="characterBox auto"  data-cols="">۔␣،␣؛␣؟␣٪</figure>
+</section>
+
+
+
+
+<section>
+<h2 id="formatting">Formatting characters</h2>
+<p>The Arabic script uses a large number of Unicode characters that affect the way that other characters are rendered. Many of those have no visible form of their own.</p>
+<p>Modern Arabic-script text makes use of a relatively large set of invisible formatting characters, especially in plain text, many of which are used to manage text direction. For more details, see the <a href="index#formatting">Arabic overview</a>.</p>
+</section>
+
+
+
+
+
+  
+<section>
+<h2 id="digits">Numbers, dates, currency, etc</h2>
+<figure class="characterBox auto"  data-cols="">۰␣۴␣۵␣۶␣۴␣۵␣۶␣۷␣۸␣۹</figure>
+
+<p>I suspect that Kashmiri may use <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x066B;</span> [<a href="/scripts/arabic/block#char066B"><span class="uname">U+066B ARABIC DECIMAL SEPARATOR</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x066C;</span> [<a href="/scripts/arabic/block#char066C"><span class="uname">U+066C ARABIC THOUSANDS SEPARATOR</span></a>]</span>, but need to confirm.<!--figure class="characterBox auto"  data-cols="trans,transc">०␣१␣२␣३␣४␣५␣६␣७␣८␣९</figure>
+
+<p>@An interesting feature of large numbers written in India is that they apply groupings of two, rather than three, digits between commas (even when using european digits).</p>
+    <figure>
+    <p class="large"><span class="ex" lang="ks">20,00,000</span></p>
+    <figcaption>Two million, written with Indian comma separators.</figcaption>
+    </figure-->
+
+  
+<!--section>
+<h3 id="currency">Currency</h3>
+
+<p>@<span class="codepoint" translate="no"><span lang="ks">&#x20B9;</span> [<a href="/scripts/devanagari/block#char20B9"><span class="uname">U+20B9 INDIAN RUPEE SIGN</span></a>]</span> is the symbol introduced by the Government of India in 2010 as the official currency symbol for the Indian rupee (INR). <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch22.pdf">u</a></sup></p>
+</section--></p>
+</section>
+  
+  
+  
+  
+  <section> 
+  <h2 id="context">Glyph shaping &amp; positioning</h2>
+<p>See the <a href="index/#shaping">Arabic overview</a>.</p>
+</section>
+<section>
+<h2 id="refs">References</h2>
+  <ol>
+    <li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN 0-19-507993-0, pp752-753</li>
+<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Kashmiri_language">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Kashmiri_language">Kashmiri language</a></li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch09.pdf">u</a> ] The Unicode Standard v11.0, <a href="http://www.unicode.org/versions/latest/ch09.pdf">Arabic</a></li>
+<li>[ <a class="fnref" href="https://www.loc.gov/catdir/cpso/romanization/kashmiri.pdf">e</a> ]     LOC, <a href="https://www.loc.gov/catdir/cpso/romanization/kashmiri.pdf">Kashmiri (in Perso-Arabic Script) </a></li>
+<li>[ <a class="fnref" href="http://koshur.org/pdf/Let%20Us%20Learn%20Kashmiri.pdf">r</a> ]  M.K.Raina, <a href="http://koshur.org/pdf/Let%20Us%20Learn%20Kashmiri.pdf">How to read and write Kashmiri in Devanagari?</a></li>
+<li>[ <a class="fnref" href="https://www.unicode.org/L2/L2009/09311-kashmiri-ltr-from-swaran-lata.pdf">l</a> ]  Swaran Lata, <a href="https://www.unicode.org/L2/L2009/09311-kashmiri-ltr-from-swaran-lata.pdf">Encoding of additional characters in Unicode for representation of Kashmiri</a></li>
+<li>[ <a class="fnref" href="https://www.unicode.org/L2/L2009/09311-kashmiri-ltr-from-swaran-lata.pdf">l2</a> ]  Swaran Lata, <a href="https://www.unicode.org/L2/L2009/09311-kashmiri-ltr-from-swaran-lata.pdf">Issues pertinent to Kashmiri</a></li>
+</ol>
+</section>
+
+
+
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/devanagari"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-07-04  11:18<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bdevanagari%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fdevanagari%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
+
+
+<div id="panel" style="display:none"></div>
+</body>
+<script>
+initialiseSummary('/scripts/devanagari/block','ks','Devanagari')
+</script>
+
+</html>
