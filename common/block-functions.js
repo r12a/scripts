@@ -145,7 +145,6 @@ function listCharsWithNotes () {
 				start = sortedcharlist[i+1]
 				}
 			}
-        console.log(start)
 		}
 	document.getElementById('charliststr').textContent = charliststr	
 	}
@@ -212,14 +211,22 @@ function makeCharacterLink (cp, lang, direction) {
 
 
 
+
+
+
+
+
+
 function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, showShape) {
 	var charList = chars.split('\n')
     var div, p, span
    	
-    for (var x=0; x<charList.length; x++) {
+    for (var x=0; x<charList.length; x++) { 
         if (charList[x].trim() == '') continue
         var items = charList[x].split('\t')
         if (items[0] === '') continue
+        if (items[0].length > 1) continue
+        if (items[0][cols.class] && items[0][cols.class].includes('x')) continue
 
         // get the character as dec & hex
         if (items[0].includes('\\u')) var dec = parseInt(items[0].replace('\\u',''),16)
@@ -227,7 +234,6 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
 		else dec = items[0].codePointAt(0)
         var hex = dec.toString(16).toUpperCase()
         while (hex.length < 4) hex = '0'+hex
-        console.log('dec',dec,'hex',hex)
         
         if (! document.getElementById('char'+hex)) console.log('Character not found: ',items[0],hex)
 		
@@ -248,7 +254,6 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
             // find the location in the document
             var node = document.getElementById('char'+hex)
             var prevSibling = node.querySelector('.univiewLink')
-console.log(items[0],'char'+hex)
             
             // Unicode notes
 			if (unicodenotes) {
@@ -320,7 +325,6 @@ console.log(items[0],'char'+hex)
                 p.appendChild(span)
                 div.appendChild(p)
                 refsNode = notesNode.querySelector('.ref') // check whether there's a refs section
-                // console.log(refsNode, notesNode, div)
                 if (! refsNode) letter = notesNode.appendChild(div)
                 else letter = notesNode.insertBefore(div, refsNode)
                 }
@@ -452,7 +456,7 @@ console.log(items[0],'char'+hex)
                 }
             
 
-    
+   
     
     
             // DO EXTRA STUFF AT END OF LETTER DIV
