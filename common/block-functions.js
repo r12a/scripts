@@ -226,7 +226,7 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
         var items = charList[x].split('\t')
         if (items[0] === '') continue
         if (items[0].length > 1) continue
-        if (items[0][cols.class] && items[0][cols.class].includes('x')) continue
+        if (items[cols.class] && items[cols.class].includes('-')) continue
 
         // get the character as dec & hex
         if (items[0].includes('\\u')) var dec = parseInt(items[0].replace('\\u',''),16)
