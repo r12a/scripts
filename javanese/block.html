@@ -76,7 +76,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->5 January, 2019<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->6 July, 2019<!-- #EndDate -->
 &bull; tags <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="https://r12a.github.io/blog/?tag=javanese" title="Show all blog posts tagged with 'javanese'">javanese</a></p>
 <section>
    <p>This page lists characters in the following Unicode  block and provides information about them.</p>
@@ -1919,137 +1919,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 
+
+<script src="../../shared/scriptdb/javanese.js">  </script>
+
 <script>
-var spreadsheet = `
-ꦏ	k	k	ka kɔ	consonant				ꦏ ꦥ꧀ꦏ				
-ꦐ	q	q	qa qɔ	sasak consonant				ꦐ ꦥ꧀ꦐ				
-ꦒ	g	g	ɡa gɔ	consonant				ꦒ ꦥ꧀ꦒ				
-ꦔ	n	ŋ	ŋa nɔ	consonant				ꦔ ꦥ꧀ꦔ				
-ꦕ	t	ʧ	ʧa ʧɔ	consonant				ꦕ ꦥ꧀ꦕ				
-ꦗ	d	ʤ	ʤa ʤɔ	consonant				ꦗ ꦥ꧀ꦗ				
-ꦚ	n	ɲ	ɲa ɲɔ	consonant				ꦚ ꦥ꧀ꦚ				
-ꦛ	t	ʈ	ʈa ʈɔ	consonant				ꦛ ꦥ꧀ꦛ				
-ꦝ	d	ɖ	ɖa ɖɔ	consonant				ꦝ ꦥ꧀ꦝ				
-ꦠ	t¶	t	ta tɔ	consonant				ꦠ ꦥ꧀ꦠ				
-ꦢ	d¶	d	da dɔ	consonant				ꦢ ꦥ꧀ꦢ				
-ꦤ	n¶	n	na nɔ	consonant				ꦤ ꦥ꧀ꦤ				
-ꦥ	p	p	pa pɔ	consonant				ꦥ ꦥ꧀ꦥ	ꦥ꧀ꦥ			
-ꦧ	b	b	ba bɔ	consonant				ꦧ ꦥ꧀ꦧ				
-ꦩ	m	m	ma mɔ	consonant				ꦩ ꦥ꧀ꦩ				
-ꦪ	y	y	ja jɔ	consonant				ꦪ ꦥ꧀ꦪ				
-ꦭ	l	l	la lɔ	consonant				ꦭ ꦥ꧀ꦭ				
-ꦫ	r	r	ra rɔ	consonant				ꦫ ꦥ꧀ꦫ				
-ꦬ	R	ṙ	ra rɔ	consonant		ra agung	a	ꦬ ꦥ꧀ꦬ				
-ꦱ	s	s	sa sɔ	consonant				ꦱ ꦥ꧀ꦱ	ꦥ꧀ꦱ			
-ꦮ	w	w	wa wɔ	consonant				ꦮ ꦥ꧀ꦮ				
-ꦲ	h	h	h a ∅	consonant				ꦲ ꦥ꧀ꦲ	ꦥ꧀ꦲ			
-ꦑ	K	K	ka kɔ	murda consonant				ꦑ ꦥ꧀ꦑ				
-ꦓ	G	G	ɡa gɔ	murda consonant				ꦓ ꦥ꧀ꦓ				
-ꦖ	C	C	ʧa ʧɔ	murda consonant				ꦖ ꦥ꧀ꦖ				
-ꦘ	N	Ñ	ɲa ɲɔ	murda consonant				ꦘ ꦥ꧀ꦘ				
-ꦡ	T	T	ta tɔ	murda consonant				ꦡ ꦥ꧀ꦡ				
-ꦟ	N	N	na nɔ	murda consonant				ꦟ ꦥ꧀ꦟ				
-ꦦ	P	P	pa pɔ	murda consonant				ꦦ ꦥ꧀ꦦ	ꦥ꧀ꦦ			
-ꦨ	B	B	ba bɔ	murda consonant				ꦨ ꦥ꧀ꦨ				
-ꦯ	S	S	sa sɔ	murda consonant				ꦯ ꦥ꧀ꦯ				
-ꦰ	S	S̱	sa sɔ	mahaprana consonant				ꦰ ꦥ꧀ꦰ	ꦥ꧀ꦰ			
-ꦣ	D	Ḏ	da dɔ	mahaprana consonant				ꦣ ꦥ꧀ꦣ				
-ꦞ	D	Ḓ	ɖa ɖɔ	mahaprana consonant				ꦞ ꦥ꧀ꦞ				
-ꦙ	J	J̱	ʤa ʤɔ	mahaprana consonant				ꦙ ꦥ꧀ꦙ				
-ꦜ	T	Ṯ	ʈa ʈɔ	mahaprana consonant				ꦜ ꦥ꧀ꦜ				
-												
-												
-ꦉ	R	r̥	rə	independent vocalic		pa cerek		ꦉ ꦥ꧀ꦉ	ꦥ꧀ꦉ			
-ꦊ	L	l̥	lə	independent vocalic		nga lelet		ꦊ ꦥ꧀ꦊ				
-ꦋ	L	ŀ̥	lɤ	independent vocalic		nga lelet raswadi		ꦋ ꦥ꧀ꦋ				
-												
-												
-ꦾ	y	y̆	j	medial consonant		pengkal						
-ꦿ	y	r̆	r	medial consonant		cakra						
-ꦽ	r	r̥̆	rə	medial consonant		kere						
-												
-												
-ꦀ	m	m̽	m	syllable-final consonant		panyangga						
-ꦁ	n	ŋ̽	ŋ	syllable-final consonant		cecak						
-ꦂ	r	r̽	r	syllable-final consonant		layar						
-ꦃ	h	h̽	h	syllable-final consonant		wignyan						
-												
-												
-ꦄ	A	ạ	a	independent vowel								
-ꦆ	I	ị	i	independent vowel							ꦲꦶ	
-ꦇ	I	ị̄	i	independent vowel								
-ꦅ	I	ị̂	i	kawi independent vowel								
-ꦈ	U	ụ	u	independent vowel							ꦲꦸ	
-ꦌ	E	ẹ	e ɛ	independent vowel							ꦲꦺ	
-ꦍ				independent vowel			a					
-ꦎ	O	ọ	o	independent vowel							ꦲꦺꦴ	
-												
-												
-ꦴ	:	ː	aː	vowel sign/length mark		tarung						
-ꦶ	i	i	i	vowel sign		wulu						ꦆ
-ꦸ	u	u	u	vowel sign		suku						ꦈ
-ꦺ	e	e	e	vowel sign		taling						ꦌ
-ꦼ	e	ə	ə	vowel sign		pepet						
-ꦵ	o	ȯ	o	vowel sign		tolong	a					
-ꦷ	i	ī		vowel sign			a					ꦇ
-ꦹ	u	ū		vowel sign			a					ꦈꦴ
-ꦻ	a	aʲ		vowel sign		dirga mure	a					
-												
-												
-꧀	*	͓		vowel-killer		pangkon						
-꦳	/	̣		sound changer		cecak telu						
-												
-												
-꧊	|	|		parenthesis/quotation marks		pada adeg						
-꧋	|	¶		paragraph/section start		para adeg adeg						
-꧌	(	(		parenthesis/quotation marks		pada piseleh						
-꧍	)	)		parenthesis/quotation marks		pada piseleh						
-꧈	,	,		comma/full stop		pada lingsa						
-꧉	.	.		full stop		pada lungsi						
-꧇	:	:		colon/number indicator		pada pangkat						
-ꧏ	&	²		repetition sign		pada rangkep						
-꧁	#	<ᵗ		title marker		rerengan						
-꧂	#	ᵗ>		title marker		rerengan						
-꧅	#	<ʰ		honorific symbol		pada luhur						
-꧄	#	[ʰ		honorific symbol		pada madya						
-꧃	#	{ʰ		honorific symbol		pada andap						
-꧞				correction mark		pada tirta tumétés						
-꧟				correction mark		pada isèn-isèn						
-꧆	#	°		punctuation		pada windu						
-												
-												
-꧐	0	0		digit		nol						
-꧑	1	1		digit		siji						
-꧒	2	2		digit		loro						
-꧓	3	3		digit		telu						
-꧔	4	4		digit		papat						
-꧕	5	5		digit		lima						
-꧖	6	6		digit		nem						
-꧗	7	7		digit		pitu						
-꧘	8	8		digit		wolu						
-꧙	9	9		digit		sanga						
-												
-												
-\u200B	]	␣	 									
-\u200C	=	ₓ										
-\u200D	=	₊										
-`
-
-var cols = {
-"transLoc": 2,
-"ipaLoc": 3,
-"typeLoc": 4,
-"nnameLoc": 5,
-"nameLoc": 6,
-"numLoc": 0,
-"statusLoc": 7,
-"dvowel": 11,
-"ivowel": 12,
-"shape":8,
-//"othertranscriptions": [[4, 'ISO 15919']]
-}
-replaceStuff('Javanese', 'javanese', spreadsheet, '', 'jv', '', cols)
-
+replaceStuff('Javanese', 'javanese', spreadsheet, '', 'jv', '', cols, false)
 </script> 
 
 
@@ -2059,7 +1933,7 @@ replaceStuff('Javanese', 'javanese', spreadsheet, '', 'jv', '', cols)
 
 
 <div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/javanese/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-01-05  9:34<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2019-07-06  14:23<!-- #EndDate --> 
   </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bjavanese%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fjavanese%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
