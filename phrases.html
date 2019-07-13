@@ -58,6 +58,7 @@ p { text-align: start;}
 
 <script src="../shared/code/boilerplate.js"></script>
 <script src="../shared/code/toc_2019.js"></script>
+<script src="phraseslist.js"></script>
 </head>
 
 <body>
@@ -663,7 +664,7 @@ Genir pawb yn rhydd ac yn gydradd â’i gilydd mewn urddas a hawliau. Fe’u cy
 
 </div>
 
-<!--
+<!-- TEMPLATE
 
 
 
@@ -717,9 +718,21 @@ Genir pawb yn rhydd ac yn gydradd â’i gilydd mewn urddas a hawliau. Fe’u cy
 </section>
 
 
+<details style="margin-left: 7.5%;">
+<summary>Show list</summary>
+<pre id="listoutput"></pre>
+<script>
+	scripts = document.querySelectorAll('#mainData h2')
+	var out = 'phrasesList={\n'
+	for (l=0;l<scripts.length;l++) out += '"'+scripts[l].id+'":true,\n'
+	out += '}'
+	document.getElementById('listoutput').textContent = out
+</script>
+</details>
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/lao"><span id="vers<!-- #BeginDate format:IS1m -->2019-07-13  13:59<!-- #EndDate -->->->->->-></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Blao%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Flao%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/">2019-07-13  14:23</a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Blao%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Flao%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 <script>
 createtoc(3)
