@@ -41,6 +41,7 @@ iframe {
 <script src="linkdata/linkdb.js"></script>
 <script src="../pickers/pickerlistdb.js"></script>
 <script src="../scripts/phraseslist.js"></script>
+<script src="../app-charuse/langs.js"></script>
 <script>
 function getData (script) {
 
@@ -86,23 +87,23 @@ function getData (script) {
 		temp += '</td></tr>'
 		if (temp !== '<tr><th>This site:</th><td></td></tr>') out += temp
 		}
-/*	if ((record.local && record.local.length) > 0 | scriptNotesSet.has(lc) | charNotesSet.has(lc) | compChartSet.has(lc) | scriptSummarySet.has(lc)) {
-		var temp = ''
-		temp += '<tr><td>r12a.github.io:</td><td>'
-		if (scriptNotesSet.has(lc)) temp += '<p><a href="/scripts/'+norm+'" >Script summary</a></p>'
-		if (charNotesSet.has(lc)) temp += '<p><a href="/scripts/'+norm+'/block" >Character notes</a></p>'
-		if (compChartSet.has(lc)) temp += '<p><a href="/scripts/featurelist/" >Comparison chart</a></p>'
-		for (var r=0;r<record.local.length;r++) temp += '<p><a href="'+record.local[r].url+'" >'+record.local[r].name+'</a></p>'
-		if (scriptSummarySet.has(lc)) temp += '<p><a href="/scripts/tutorial/summaries/'+norm+'" >Tutorial notes</a></p>'
-		temp += '</td></tr>'
-		if (temp !== '<tr><td>This site:</td><td></td></tr>') out += temp
-		}*/
 	if (record.unicode) {
 		out += '<tr><td>Unicode info:</td><td>'
 		out += '<p><a href="http://www.unicode.org/versions/latest/ch'+chapters[lc]+'.pdf" >Core text</a></p>'
 		out += '<p><a href="http://scriptsource.org/entry/'+ssHistory[lc]+'" >Historical</a></p>'
 		out += '</td></tr>'
 		}
+	// character usage
+	out += '<tr><td>Character usage info:</td><td>'
+		beginning = true
+		for (lang in langs) {
+			if (langs[lang].script === script) {
+				if (! beginning) out += ' • '
+				beginning = false
+				out += '<a href="../app-charuse/?language='+lang+'">'+langs[lang].name+'</a> '
+				}
+			}
+		out += '</td></tr>'
 	if (record.charts) {
 		out += '<tr><td>Charts:</td><td><table><tbody>'
 		for (var r=0;r<record.charts.length;r++) out += '<tr><td>'+record.charts[r]+'</td><td><a href="/uniview/?block='+record.charts[r].toLowerCase().replace(/ /g,'_')+'" >UniView</a></td><td><a href="http://www.unicode.org/charts/PDF/U'+blockStart[record.charts[r].toLowerCase().replace(/ /g,'_')]+'.pdf" >Unicode</a></td></tr>'
@@ -482,7 +483,7 @@ invented after ~1900</p>
 </div>
 
 <div class="smallprint"> <span id="version">This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-07-13  15:27<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2019-07-13  16:46<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span> </div>
 
 
