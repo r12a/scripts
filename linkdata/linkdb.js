@@ -2,13 +2,19 @@ var scriptNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl
 
 var scriptNotes= {
     'armn':[['Armenian script summary','armenian/']],
-    'arab':[['Arabic script summary','arabic/'], ['Urdu writing system', 'arabic/urdu'], ['Uighur writing system', 'arabic/uighur']], 
+    'arab':[['Arabic script summary','arabic/'], 
+			['Urdu writing system', 'arabic/urdu'], 
+			['Uighur writing system', 'arabic/uighur'], 
+			['Kashmiri in Arabic script', 'arabic/kashmiri']
+			], 
     'bali':[['Balinese script summary', 'balinese/']], 
     'beng':[['Bengali script summary', 'bengali/']],
     'bugi':[['Buginese script summary', 'buginese/']],
     'cher':[['Cherokee script summary', 'cherokee/']],
     'cyrl':[['Cyrillic script summary', 'cyrillic/']],
-    'deva':[['Devanagari script summary', 'devanagari/']],
+    'deva':[['Devanagari script summary', 'devanagari/'], 
+			['Kashmiri in Devanagari', 'devanagari/kashmiri']
+			],
     'ethi':[['Ethiopic script summary', 'ethiopic/']],
     'geor':[['Georgian script summary', 'georgian/']],
     'grek':[['Greek script summary', 'greek/']],
@@ -21,7 +27,9 @@ var scriptNotes= {
     'jpan':[['Japanese writing system summary', 'kana/']],
     'khmr':[['Khmer script summary script summary', 'khmer/']],
     'laoo':[['Lao script summary', 'lao/']],
-    'lana':[['Tai Tham script summary', 'taitham/'], ['Northern Thai writing system', 'taitham/northernthai']],
+    'lana':[['Tai Tham script summary', 'taitham/'], 
+			['Northern Thai writing system', 'taitham/northernthai']],
+    'latn':[['Hausa (boko)', 'latin/hausa']],
     'lisu':[['Lisu script summary', 'lisu/']],
     'mand':[['Mandaic script summary', 'mandaic/']],
     'mlym':[['Malayalam script summary', 'malayalam']],
