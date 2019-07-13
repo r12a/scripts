@@ -4,10 +4,10 @@
 <meta charset="utf-8"/>
 <title>r12a &gt;&gt; scripts</title>
 <meta name="description" content="Lists of articles, papers and notes by Richard Ishida."/>
-<link rel="stylesheet" href="../shared/style/docs.css" type="text/css" />
-<link rel="stylesheet" type="text/css" href="linkdata/menu.css" />
-<link rel="stylesheet" type="text/css" href="linkdata/scriptlinks.css" />
-<style type="text/css" media="all">
+<link rel="stylesheet" href="../shared/style/docs.css" />
+<link rel="stylesheet" href="linkdata/menu.css" />
+<link rel="stylesheet" href="linkdata/scriptlinks.css" />
+<style media="all">
 h3 a:link {
 	color: gray;
 	text-decoration: none;
@@ -37,12 +37,14 @@ iframe {
 	margin-top: 170px;
 	}
 </style>
-<script src="/shared/code/boilerplate.js"></script>
+<script src="../shared/code/boilerplate.js"></script>
 <script src="linkdata/linkdb.js"></script>
+<script src="../pickers/pickerlistdb.js"></script>
+<script src="../scripts/phraseslist.js"></script>
 <script>
 function getData (script) {
-	
-    script = script.toLowerCase()
+
+	script = script.toLowerCase()
     if (! linkDB[script]) return '<p>No data found.</p>'
     
 	record = linkDB[script]
@@ -78,6 +80,7 @@ function getData (script) {
             }
 		if (charNotesList[lc]) temp += '<p><a href="/scripts/'+charNotesList[lc]+'" >Character notes</a></p>'
 		if (compChartSet.has(lc)) temp += '<p><a href="/scripts/featurelist/" >Comparison chart</a></p>'
+		if (phrasesList[script]) temp += '<p><a href="/scripts/phrases#'+script+'" >Sample phrases</a></p>'
 		for (var r=0;r<record.local.length;r++) temp += '<p><a href="'+record.local[r].url+'" >'+record.local[r].name+'</a></p>'
 		//if (scriptSummarySet.has(lc)) temp += '<p><a href="/scripts/tutorial/summaries/'+lc+'" >Tutorial notes</a></p>'
 		temp += '</td></tr>'
@@ -108,7 +111,9 @@ function getData (script) {
 	if (record.pickers) {
 		var temp = ''
 		temp += '<tr><td>Pickers:</td><td>'
-		for (var r=0;r<record.pickers.length;r++) temp += '<p><a href="/pickers/'+record.pickers[r].url+'/" >'+record.pickers[r].name+'</a></p>'
+		for (let p=0;p<plist.length;p++) {
+			if (plist[p].tag === script) temp += '<p><a href="/pickers/'+plist[p].url+'" >'+plist[p].name+'</a></p>'
+			}
 		temp += '</td></tr>'
 		if (temp !== '<tr><td>Pickers:</td><td></td></tr>') out += temp
 		}
@@ -477,7 +482,7 @@ invented after ~1900</p>
 </div>
 
 <div class="smallprint"> <span id="version">This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-03-07  6:54<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2019-07-13  15:27<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span> </div>
 
 
