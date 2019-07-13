@@ -266,13 +266,15 @@ function makeCharacterLink (cp, lang, direction) {
 
 
 function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, showShape) {
-	var charList = chars.split('\n')
+	var spreadsheetLines = chars.split('\n')
     var div, p, span
    	
-    for (var x=0; x<charList.length; x++) {
-        if (charList[x].trim() == '') continue
-        var items = charList[x].split('\t')
+    for (var x=0; x<spreadsheetLines.length; x++) {
+        if (spreadsheetLines[x].trim() == '') continue
+        var items = spreadsheetLines[x].split('\t')
         if (items[0] === '') continue
+		if (items[0].length > 1) continue
+        //console.log('items0',items[0],'length',items[0].length)
 
         // get the character as dec & hex
         if (items[0].includes('\\u')) var dec = parseInt(items[0].replace('\\u',''),16)
@@ -301,7 +303,7 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
             // find the location in the document
             var node = document.getElementById('char'+hex)
             var prevSibling = node.querySelector('.univiewLink')
-console.log(items[0],'char'+hex)
+//console.log(items[0],'char'+hex)
             
             // Unicode notes
 			if (unicodenotes) {
