@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<title>Hausa (boko)</title>
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="description" content="Hausa in latin."/>
+<link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../common/local.css" />
+<style>
+@font-face {
+    font-family: 'webfont';
+    src: url('../../shared/webfonts/gentiumplus-r-webfont.woff2') format('woff2'),
+         url('../../shared/webfonts/gentiumplus-r-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+#freeText {
+	font-size: 24px;
+	font-family: "Gentium Plus", "Doulos SIL", webfont, serif;
+    line-height: 1.6;
+	}
+@media print { #freeText { font-size: 18px; } }
+[lang=ha] { font-family: "Gentium Plus", "Doulos SIL", webfont, serif; font-size: 120%; }
+.large .ex { font-size: 400%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1.75; }
+</style>
+
+<script src="../../shared/scriptdb/hausab.js"> </script>
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2019.js"></script>
+<script src="../../shared/code/all-names.js"></script>
+<script src="../../shared/code/character_conversion.js"></script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/fontlists/manage.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
+<script src="../common/functions.js"></script>
+<!--script src="../common/block-functions.js"></script-->
+<script src="../../shared/code/getLinks.js"></script>
+<script src="../../scripts/linkdata/linkdb.js"></script>
+<script src="../featurelist/scriptdata.js"> </script>
+
+<script src="../../shared/fontlists/latin.js"> </script>
+</head>
+
+<body>
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
+</header>
+
+<h1>Hausa (boko) [Draft]</h1>
+
+<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="Jump to top of page." title="Jump to top of page."/></a></nav>
+
+<aside class="sidebar">
+<div id="toc"><!-- placeholder --></div>
+
+ <div id="fontsetting" class="closed">
+  <h2 class="notoc"><a id="fonts">Fonts</a></h2>
+  <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'hi');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'hi');" />
+    </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
+    <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
+	return false;">
+      <p>Change size:<br />
+        <input id="slider" type="range" min="12" max="100" step="1" value="32">
+        &#xA0; <span id="sizeIndicator">32px</span><br />
+        <input id="multiplier" type="hidden" value="1" />
+        Multiplier:
+        <input type="radio" name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x1">1</label>
+        <input type="radio" name="step" id="x5" value="2"  onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x5">2</label>
+        <input type="radio" name="step" id="x10" value="10"  onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x10">10</label>
+      </p>
+    </form>
+</div>
+</aside>
+
+
+<p id="status">Updated 
+  <!-- #BeginDate format:En2 -->13-Jul-2019<!-- #EndDate -->
+&bull; tags <a href="http://r12a.github.io/blog/index.php?tag=latin" title="Show all blog posts tagged with 'latin'">latin</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+
+
+
+<section>
+<p>This page provides basic information about characters used to write the Hausa language in the Latin script. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned. For character-specific details follow the links to the <a class="linkHighlight" href="/scripts/latin/block">Latin character notes</a>.</p>
+<p>See also the notes on <a href="../arabic/hausa">Hausa ( ajami)</a>, and the <a href="../../pickers/hausab/">Hausa (boko) picker</a>.</p>
+<p>For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/">page of links</a>.</p>
+<p class="instructions noprint">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+    
+<details id="scriptLinks" class="noprint">
+<summary class="instructions">More links for the Latin script.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Latn')</script>
+</details>
+</section>
+
+
+
+<section>
+<h2 href="#sample">Sample</h2>
+  
+  
+  <div id="freeText" dir="ltr" lang="ha" contenteditable="true">
+  <p  title="UDHR." onMouseUp="showtext('freeText')" data-source="https://unicode.org/udhr/d/udhr_hau_NG.html">[Nigeria] Abin nufi ga ilimi shi ne: ya sama wa ɗan-adam jin daɗin rayuwa da ƙarfafa kiyayewa da hakkokinsa da muhimman abubuwan da ʼyancinsa ya ƙunsa. Ya kamata ilimi ya kawo fahimtar juna da ragowa da aminci tsakanin ƙasashe da tsakanin ʼyan-adam, kome launin fatarsu da addinin da suke bi, ya kuma ƙarfafa ƙoƙarin da Majalisar Ɗinkin Duniya take yi domin a sami zaman lafiya da kwanciyar hankali a duniya.</p>
+</div>
+  <div id="freeText" dir="ltr" lang="ha" contenteditable="true">
+  <p  title="UDHR." onMouseUp="showtext('freeText')" data-source="https://unicode.org/udhr/d/udhr_hau_NE.html">[Niger] ... muhimman abubuwan da ƴancinsa ya ƙunsa. ... tsakanin ƙasashe da tsakanin ƴan‐adam, kome ....</p>
+</div>
+</section>
+
+
+
+
+
+ <section>
+    <h2 id="history">Usage &amp; history</h2>
+<p>Hausa can be written in the Latin script, but also (less commonly) using the Arabic ajami script.</p>
+</section>
+
+
+
+  <div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+    </table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+   </div>
+
+
+
+
+<section>
+    <h2 id="type">Distinctive features</h2>
+    <p>The Latin script is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#alphabet">alphabet</a></span>. This means that it is largely phonetic in nature, where each letter represents a basic sound. See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.</p>
+</section>
+
+
+
+
+<section>
+    <h2 id="structure">Structure</h2>
+    <p>Hausa has 3 syllable types: CV, CVV, and CVC, where VV can be a long vowel or a diphthong.<a class="fnref" href="#refs">c</a> The long vs. short vowel distinction is phonemically important, however when a syllable with a long vowel acquires and final consonant, the vowel is shortened.</p>
+<p>Consonant clusters may occur where syllables are side by side, but not within a syllable. Gemination is, however, a distinctive feature.<a class="fnref" href="#refs">c</a></p>
+<p>Semivowels <span class="ipa">ʷ</span> and <span class="ipa">ʲ</span> may occur after an initial consonant.</p>
+</section>
+  
+  
+  
+
+<section>
+<h2>Character lists</h2>
+    <p>Apart from ASCII characters, Hausa uses characters from the following Unicode Latin blocks:</p>
+    <ul>
+      <li><a href="/uniview/?block=IPA_Extensions">IPA Extensions</a> <span class="charCount">(2 characters)</span></li>
+      <li><a href="/uniview/?block=Latin_Extended-B">Latin Extended-B</a> <span class="charCount">(6 characters)</span></li>
+<li><a href="/uniview/?block=Spacing_Modifier_Letters">Spacing Modifier Letters</a> <span class="charCount">(1 character)</span></li>
+    </ul>
+    <p>The following links go to the Character Usage app. The numbers  are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li><a href="/app-charuse/?language=ha" target="_blank">Hausa</a> <span class="charCount">9 letters, 3 punctuation :   total 12  &nbsp;&nbsp;   + ( 34 infrequent ) </span></li>
+</ul>
+</section>
+
+
+
+
+ <div id="showTranscriptions">
+<div>In yellow boxes, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+</div>
+
+
+
+
+ <section>
+    <h2 id="direction">Text direction</h2>
+    <p>Text is normally written horizontally, left to right.</p>
+  </section>
+   
+    
+      
+
+
+<section>
+<h2 id="vowels">Vowels</h2>
+
+
+<section>
+<h3 id="vowelPhonemes">Phoneme table</h3>
+<table class="ipaTable">
+<thead>
+<tr>
+<th>&#160; </th>
+<th>Front </th>
+<th>Central </th>
+<th>Back </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Close </th>
+<td><span class="ipa">i</span>, <span class="ipa">iː</span> <span class="ex" lang="ks">i</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">u</span>, <span class="ipa">uː</span> <span class="ex" lang="ks">u</span></td>
+</tr>
+<tr>
+<th>Mid </th>
+<td><span class="ipa">e</span>, <span class="ipa">eː</span> <span class="ex" lang="ks">e</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">o</span>, <span class="ipa">oː</span> <span class="ex" lang="ks">o</span></td>
+</tr>
+<tr>
+<th>Open</th>
+<td></td>
+<td><span class="ipa">a</span>, <span class="ipa">aː</span> <span class="ex" lang="ks">a</span></td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<p>Diphthongs: <span class="ipa"></span>ai, au, (iu), and (ui).</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="inherentvowel">Vowel characters</h3>
+
+<p>There are 5 vowel letters, each with an upper and lower case form.</p>
+
+<figure class="characterBox auto bicameral"  data-cols="ipa,trans">Ii␣Uu␣Ee␣Oo␣Aa</figure>
+
+<p>Although it is phonemically distinctive, Hausa doesn't distinguish between long and short vowels in writing.</p>
+</section>
+</section>
+<section>
+<h2 id="consonants">Consonants</h2>
+
+
+<section>
+<h3 id="consonantPhonemes">Phoneme table</h3>
+<table class="ipaTable">
+<thead>
+<tr>
+<th></th>
+<th>Labial </th>
+<th>Dental </th>
+<th>Alveolar </th>
+<th>Palatal </th>
+<th>Retroflex</th>
+<th>Velar </th>
+<th>Glottal </th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Plosive </th>
+<td><br>
+<span class="ipa">b</span> <span class="ex" lang="lo">b</span></td>
+<td><span class="ipa">t</span> <span class="ex" lang="lo">t</span><br>
+<span class="ipa">d</span> <span class="ex" lang="lo">d</span></td>
+<td><span class="ipa">t͡ʃ</span> <span class="ex" lang="lo">c</span><br>
+( <span class="ipa">d͡ʒ</span> <span class="ex" lang="lo">j</span>)</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">k</span> <span class="ex" lang="lo">k</span><br>
+<span class="ipa">g</span> <span class="ex" lang="lo">g</span></td>
+<td><span class="ipa">ʔ</span> <span class="ex" lang="lo">ʼ</span></td>
+<td><span class="ipa">kʷ</span> <span class="ex" lang="lo">kw</span><br>
+<span class="ipa">gʷ</span> <span class="ex" lang="lo">gw</span></td>
+<td><span class="ipa">kʲ</span> <span class="ex" lang="lo">ky</span><br>
+<span class="ipa">gʲ</span> <span class="ex" lang="lo">gy</span></td>
+</tr>
+<tr>
+<th><span style="font-size:85%;">glottalised</span></th>
+<td><span class="ipa">ɓ</span> <span class="ex" lang="lo">ɓ</span></td>
+<td><span class="ipa">ɗ</span> <span class="ex" lang="lo">ɗ</span></td>
+<td><span class="ipa">t͡sʼ</span> <span class="ex" lang="lo">ts</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">kʼ</span> <span class="ex" lang="lo">ƙ</span></td>
+<td></td>
+<td><span class="ipa">kʷʼ</span> <span class="ex" lang="lo">ƙw</span></td>
+<td><span class="ipa">kʲʼ</span> <span class="ex" lang="lo">ƙy</span></td>
+</tr>
+<tr>
+<th>Fricative </th>
+<td><span class="ipa">ɸ</span> <span class="ex" lang="lo">f</span></td>
+<td></td>
+<td><span class="ipa">s</span> <span class="ex" lang="lo">s</span><br>
+<span class="ipa">z</span> <span class="ex" lang="lo">z</span></td>
+<td><span class="ipa">ʃ</span> <span class="ex" lang="lo">sh</span><br>
+<span class="ipa">ʒ</span> <span class="ex" lang="lo">j</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">h</span> <span class="ex" lang="lo">h</span></td>
+<td><span class="ipa">fʲ</span> <span class="ex" lang="lo">fy</span></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>Nasal </th>
+<td><span class="ipa">m</span> <span class="ex" lang="lo">m</span></td>
+<td><span class="ipa">n</span> <span class="ex" lang="lo">n</span></td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>Approximant </th>
+<td><span class="ipa">w</span> <span class="ex" lang="lo">w</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">l</span> <span class="ex" lang="lo">l</span></td>
+<td><span class="ipa">j</span> <span class="ex" lang="lo">y</span><br>
+<span class="ipa">j̰</span> <span class="ex" lang="lo">ƴ</span> <span class="ex" lang="lo">ʼy</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>Trill/flap </th>
+<td></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɾ</span> <span class="ex" lang="lo">r</span></td>
+<td></td>
+<td><span class="ipa">ɽ</span> <span class="ex" lang="lo">r</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+    
+<section>
+    <h3 id="basicconsonants">Basic consonants</h3>
+    
+    
+<p>Basic set of consonants used for Hausa.</p>
+
+<figure class="characterBox auto bicameral"  data-cols="ipa,trans,transc">Bb␣Dd␣Ɓɓ␣Tt␣Dd␣Ɗɗ␣Cc␣Jj␣Kk␣Gg␣Ƙƙ␣Ff␣Ss␣Zz␣Hh␣Mm␣Nn␣Ww␣Ll␣Rr␣Yy␣Ƴƴ␣ʼ</figure>
+
+<p><span class="ipa">j̰</span> is a semi-vowel approximant with creaky voice (laryngealisation). It is not used in many words, but many of those words are very common, such as <span class="charExample" translate="no"><span class="ex" lang="ha">ʼyaʼya|ƴaƴa</span> <span class="ipa">j̰aj̰a</span> <span class="meaning">children</span></span>. It can be represented in 2 ways: <span class="codepoint" translate="no"><span lang="ha">&#x01B4;</span> [<a href="/scripts/latin/block#char01B4"><span class="uname">U+01B4 LATIN SMALL LETTER Y WITH HOOK</span></a>]</span>  used in Niger,  and <span class="codepoint" translate="no"><span lang="ha">&#x02BC;</span> + <span lang="ha">&#x0079;</span> [<a href="/scripts/latin/block#char02BC"><span class="uname">U+02BC MODIFIER LETTER APOSTROPHE</span></a> + <a href="/scripts/latin/block#char0079"><span class="uname">U+0079 LATIN SMALL LETTER Y</span></a>]</span>, used in Nigeria.</p>
+<p>The letter <span class="codepoint" translate="no"><span lang="ha">&#x0072;</span> [<a href="/scripts/latin/block#char0072"><span class="uname">U+0072 LATIN SMALL LETTER R</span></a>]</span> represents 2 different sounds: <span class="ipa">ɾ</span> and <span class="ipa">ɽ</span>. In academic or educational texts the former is sometimes distinguished using <span class="codepoint" translate="no"><span lang="ha">&#x0072;</span> + <span lang="ha">&#x0303;</span> [<a href="/scripts/latin/block#char0072"><span class="uname">U+0072 LATIN SMALL LETTER R</span></a> + <a href="/scripts/latin/block#char0303"><span class="uname">U+0303 COMBINING TILDE</span></a>]</span>.</p>
+</section>
+
+
+
+
+<section>
+<h3 id="ejectives">Ejectives &amp; implosives</h3>
+    
+    
+<p>Ejectives and implosives can be represented using special characters, but may also be represented by a combination of apostrophe and the basic character<a class="fnref" href="https://en.wikipedia.org/wiki/Hausa_language">w</a>, or often just by the basic character itself. For example, <span class="charExample" translate="no"><span class="ex" lang="ha">ɗaya</span> <span class="ipa">dʼaja</span> <span class="meaning">one</span></span> might be also written <span class="charExample" translate="no"><span class="ex" lang="ha">dʼaya</span></span> or simply <span class="charExample" translate="no"><span class="ex" lang="ha">daya</span></span>.</p>
+<p>Wikipedia uses the special character forms, but the BBC, CRI, and VOA Hausa pages just use ordinary characters for the ejectives.</p>
+<p>The digraph <span class="ex" lang="ha">ts</span> represents an ejective sound without the use of a special character or apostrophe. The associated sound can be either <span class="ipa">sʼ</span>or <span class="ipa">t͡sʼ</span>.</p>
+</section>
+
+
+  
+
+
+
+<section>
+<h3 id="apostrophe">Apostrophe</h3>
+<p>On its own, the apostrophe represents a glottal stop, eg. <span class="charExample" translate="no"><span class="ex" lang="ha">jamaʼa</span> <span class="meaning">public</span></span>. It is not written in initial position.</p>
+<p>The apostrophe shown here is <span class="codepoint" translate="no"><span lang="ha">&#x02BC;</span> [<a href="/scripts/latin/block#char02BC"><span class="uname">U+02BC MODIFIER LETTER APOSTROPHE</span></a>]</span>, but the BBC, CRI, and Wikipedia texts use <span class="codepoint" translate="no"><span lang="ha">&#x0027;</span> [<a href="/scripts/latin/block#char0027"><span class="uname">U+0027 APOSTROPHE</span></a>]</span> instead. Sometimes texts (including VOA) use <span class="codepoint" translate="no"><span lang="ha">&#x2019;</span> [<a href="/scripts/latin/block#char2019"><span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span></a>]</span>.</p>
+</section>
+</section>
+
+
+  
+
+
+
+
+  
+<section>
+<h2 id="tones">Tones</h2>
+<p>Hausa uses 3 tones, high, low and falling. These are not indicated in normal text.<a class="fnref" href="#refs">c</a></p>
+<p>In academic and education text the tone can be indicated using one of the following characters, representing high, low, and falling, respectively.<sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf"></a></sup></p>
+
+<figure class="auxiliaryBox auto"  data-cols="">́␣̀␣̂</figure>
+</section>
+
+
+
+  
+<!--section>
+<h2 id="otherletters">Other letters</h2>
+
+<p>CLDR lists the following additional characters with the general property of letter.</p>
+
+<figure class="auxiliaryBox auto"  data-cols="">ऽ␣ॐ</figure>
+
+
+<p>Used for vowel elision in Sanskrit, the main function of <span class="codepoint" translate="no"><span lang="hi">&#x093D;</span> [<a href="latin#char093D"><span class="uname">U+093D DEVANAGARI SIGN AVAGRAHA</span></a>]</span> in Hindi is to show that a vowel is sustained in a cry or a shout, eg.  <span class="charExample" translate="no"><span class="ex" lang="hi">आईऽऽऽ!</span> <span class="trans">ạ̄ị̄´´´!</span></span> <sup><a href="https://en.wikipedia.org/wiki/Devanagari">w</a></sup>.</p>
+<p><span class="codepoint" translate="no"><span lang="hi">&#x0950;</span> [<a href="latin#char0950"><span class="uname">U+0950 DEVANAGARI OM</span></a>]</span> is a religious symbol.&nbsp;</p>
+</section-->
+
+
+
+  
+<section>
+<h2 id="cchar">Combining marks</h2>
+    <p>The only combining marks are those listed in the section <a class="secref">tones</a>, and are not in common use outside academic and educational texts.</p>
+</section>
+
+
+
+  
+<section>
+<h2 id="punctuation">Punctuation</h2>
+    <p>Western punctuation is used.<a class="fnref" href="http://koshur.org/pdf/Let%20Us%20Learn%20Hausa.pdf"></a> CLDR specifically lists the following.</p>
+<figure class="characterBox auto"  data-cols="">‐␣‘␣’</figure>
+
+</section>
+  
+  
+<section>
+<h2 id="digits">Numbers, dates, currency, etc</h2>
+    <p>European digits are used.</p>
+
+<!--figure class="characterBox auto"  data-cols="trans,transc">०␣१␣२␣३␣४␣५␣६␣७␣८␣९</figure>
+
+<p>An interesting feature of large numbers written in India is that they apply groupings of two, rather than three, digits between commas (even when using european digits).</p>
+    <figure>
+    <p class="large"><span class="ex" lang="hi">20,00,000</span></p>
+    <figcaption>Two million, written with Indian comma separators.</figcaption>
+    </figure-->
+
+  
+<!--section>
+<h3 id="currency">Currency</h3>
+
+<p><span class="codepoint" translate="no"><span lang="hi">&#x20B9;</span> [<a href="/scripts/latin/block#char20B9"><span class="uname">U+20B9 INDIAN RUPEE SIGN</span></a>]</span> is the symbol introduced by the Government of India in 2010 as the official currency symbol for the Indian rupee (INR). <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch22.pdf">u</a></sup></p>
+</section-->
+</section>
+  
+  
+  
+  
+  <section> 
+  <h2 id="context">Glyph shaping &amp; positioning</h2>
+<p>No special shaping or positioning is needed.<sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf"></a></sup></p>
+</section>
+  
+  
+  
+  
+<section> 
+<h2 id="orthographies">Orthographic differences</h2>
+<p>This orthography was introduced by the British at the beginning of the 20th century.<sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf"></a></sup></p>
+<p>There was an attempt at one point to introduce vowel doubling to indicate long vowels in Niger, but that was dropped.</p>
+<p>As noted above, there is a tendency for online content to use punctuation marks rather than a modifier letter for the glottal stop or before y. There is also a tendency to use ordinary ASCII characters rather that those dedicated to ejectives and implosives.</p>
+</section>
+
+
+
+
+<section>
+<h2 id="refs">References</h2>
+  <ol>
+    <!--li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
+				0-19-507993-0, pp487-497</li-->
+<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Hausa_language">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Hausa_language">Hausa language</a></li>
+<li>[ <a class="fnref" href="http://www.omniglot.com/writing/hausa.htm">o</a> ]  Omniglot, <a href="http://www.omniglot.com/writing/hausa.htm">Hausa (Harshen Hausa / هَرْشَن هَوْسَ)</a></li>
+<li>[ <a class="fnref" href="http://www.bisharat.net/wikidoc/pmwiki.php/PanAfrLoc/Hausa">p</a> ]  Pan AfriLoc, <a href="http://www.bisharat.net/wikidoc/pmwiki.php/PanAfrLoc/Hausa">Hausa - Haoussa - هوس</a></li>
+<li>[ <a class="fnref" href="#refs">c</a> ]  Bernard Comrie, <cite>The World's Major Languages</cite>, ISBN 978-1138184824</li>
+</ol>
+<p>Sample texts:</p>
+<ol>
+<!--li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
+				0-19-507993-0, pp487-497</li-->
+<li><a href="https://ha.wikipedia.org/wiki/Babban_shafi">Wikipedia</a></li>
+<li><a href="https://www.bbc.com/hausa">BBC News</a></li>
+<li><a href="https://www.voahausa.com/">Voice of America</a></li>
+<li><a href="http://hausa.cri.cn/">CRI Online</a></li>
+<li><a href="https://www.dw.com/ha/batutuwa/s-11603">Deutsche Welle</a></li>
+</ol>
+</section>
+
+
+
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/latin"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-07-13  6:39<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Blatin%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Flatin%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
+
+
+<div id="panel" style="display:none"></div>
+</body>
+<script>
+initialiseSummary('/scripts/latin/block','ha','Latin')
+</script>
+
+</html>

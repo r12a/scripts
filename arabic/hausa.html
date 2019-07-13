@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<title>Hausa (ajami)</title>
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="description" content="Hausa in arabic script."/>
+<link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../common/local.css" />
+<style>
+@font-face {
+    font-family: 'webfont';
+    src: url('../../shared/webfonts/scheherazaderegotwebfont.woff2') format('woff2'),
+         url('../../shared/webfonts/scheherazaderegotwebfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+#freeText {
+	font-size: 48px;
+	font-family: webfont, serif;
+    line-height: 1.6;
+	}
+@media print { #freeText { font-size: 18px; } }
+[lang=ha] { font-family: webfont, serif; font-size: 200%; }
+.large .ex { font-size: 400%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1.75; }
+.listTransc { font-family: gentiumpluswf; }
+</style>
+
+<script src="../../shared/scriptdb/hausaa.js"> </script>
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2019.js"></script>
+<script src="../../shared/code/all-names.js"></script>
+<script src="../../shared/code/character_conversion.js"></script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/fontlists/manage.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
+<script src="../common/functions.js"></script>
+<!--script src="../common/block-functions.js"></script-->
+<script src="../../shared/code/getLinks.js"></script>
+<script src="../../scripts/linkdata/linkdb.js"></script>
+<script src="../featurelist/scriptdata.js"> </script>
+
+<script src="../../shared/fontlists/arabic.js"> </script>
+</head>
+
+<body>
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
+</header>
+
+<h1>Hausa (ajami) [Draft]</h1>
+
+<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="Jump to top of page." title="Jump to top of page."/></a></nav>
+
+<aside class="sidebar">
+<div id="toc"><!-- placeholder --></div>
+
+ <div id="fontsetting" class="closed">
+  <h2 class="notoc"><a id="fonts">Fonts</a></h2>
+  <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'hi');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'ha');" />
+    </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
+    <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
+	return false;">
+      <p>Change size:<br />
+        <input id="slider" type="range" min="12" max="100" step="1" value="32">
+        &#xA0; <span id="sizeIndicator">32px</span><br />
+        <input id="multiplier" type="hidden" value="1" />
+        Multiplier:
+        <input type="radio" name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x1">1</label>
+        <input type="radio" name="step" id="x5" value="2"  onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x5">2</label>
+        <input type="radio" name="step" id="x10" value="10"  onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x10">10</label>
+      </p>
+    </form>
+</div>
+</aside>
+
+
+<p id="status">U<!-- #BeginDate format:En2 -->13-Jul-2019<!-- #EndDate -->ndDate -->
+&bull; tags <a href="http://r12a.github.io/blog/index.php?tag=devanagari" title="Show all blog posts tagged with 'devanagari'">devanagari</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+
+
+
+<section>
+<p>This page provides basic information about characters used to write the Hausa language in the Arabic script. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned. For character-specific details follow the links to the <a class="linkHighlight" href="/scripts/arabic/block">Arabic character notes</a>.</p>
+<p>See the <a class="linkHighlight" href="index">Arabic script summary</a> for most of the information about how the Arabic script works, and the orthography used for the Arabic language. This page aims to provide Hausa-specific information. See also the notes on <a href="../latin/hausa">Hausa ( boko)</a>, and the <a href="../../pickers/hausaa/">Hausa (ajami) picker</a>.</p>
+<p>For similar information related to other scripts, see the <a class="linkHighlight" href="/scripts/">page of links</a>.</p>
+<p class="instructions noprint">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+    
+<details id="scriptLinks" class="noprint">
+<summary class="instructions">More links for the Arabic script.</summary>
+  <div id="linklist"></div>
+  <script>document.getElementById('linklist').innerHTML = getData('Arab')</script>
+</details>
+</section>
+
+
+
+<section>
+<h2 href="#sample">Sample (Hausa)</h2>
+  
+  
+  <div id="freeText" dir="rtl" lang="ha" contenteditable="true">
+  <p  title="A verse from Aljiyu Namangi, Imfiraji, Part 3 (Verse 3)" onMouseUp="showtext('freeText')" data-source="http://www.omniglot.com/writing/hausa.htm">رَایُوَا بَبَّنْ رَبُو نَا | غُنْ مَسَاٻِى دُونْ شِدَیْنَا | تَرْسَشِنْ أیْكِى نَ ٻَرْنَا | فَیْ دَ ٻُویٜ سِڟَیْدَ سُنَّا | شِبِ أللَّهْ بَادَكَنْغَرَا بَا</p>
+</div>
+</section>
+
+
+
+
+
+ <section>
+    <h2 id="history">Usage &amp; history</h2>
+    <p>For information about the script in general, see the <a href="index/#history">Arabic overview</a>.<sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf"></a></sup></p>
+<p>Hausa can be written in the Latin script, but also (less commonly) using the Arabic ajami script.</p>
+</section>
+
+
+
+  <div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+    </table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+   </div>
+
+
+
+
+<section>
+    <h2 id="type">Distinctive features</h2>
+    <p>The Arabic script is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abjad">abjad</a></span>. This means that in normal use the script  represents only consonant and long vowel sounds. The Arabic alphabet has been adapted to cope with the many more vowels sounds in languages such as Hausa. See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.</p>
+<p>Hausa is principally written using the naskh style of Arabic writing. It includes several characters and diacritics that are not used in standard Arabic.</p>
+<p>Unlike Standard Arabic, ajami tends to add all vowel diacritics to text.</p>
+</section>
+
+
+
+
+<section>
+<h2 id="structure">Structure</h2>
+    <p>Hausa has 3 syllable types: CV, CVV, and CVC, where VV can be a long vowel or a diphthong.<a class="fnref" href="#refs">c</a> The long vs. short vowel distinction is phonemically important, however when a syllable with a long vowel acquires and final consonant, the vowel is shortened.</p>
+<p>Consonant clusters may occur where syllables are side by side, but not within a syllable. Gemination is, however, a distinctive feature.<a class="fnref" href="#refs">c</a></p>
+<p>Semivowels <span class="ipa">ʷ</span> and <span class="ipa">ʲ</span> may occur after an initial consonant.</p>
+</section>
+  
+  
+  
+
+<section>
+<h2>Character lists</h2>
+    <p>@Hausa uses characters from the following Unicode blocks:</p>
+  <ol>
+      <li><a href="/uniview/?block=arabic">Arabic</a> <span class="charCount">(26 letters, 6 marks [others tbc] : total 32)</span></li>
+</ol>
+    <p>@The following links go to the Character Usage app. The numbers  are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li><a href="/app-charuse/?language=ha-arab" target="_blank">Hausa</a> <span class="charCount">47 letters, 2 marks, 1 punctuation, 10 numbers, 11 other :   total 71   &nbsp;   + ( 8 infrequent ) </span></li>
+</ul>
+<p>For character-specific details see 
+  <a class="linkHighlight" href="/scripts/arabic/block">Arabic character notes</a>.</p>
+</section>
+
+
+
+
+ <div id="showTranscriptions">
+<div>In yellow boxes, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div><label>Latin <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+</div>
+
+
+
+
+ <section>
+    <h2 id="direction">Text direction</h2>
+    <p>Text is normally written horizontally, right to left, however numbers and non-Arabic script text runs left to right.</p>
+<p>See the <a href="index/#direction">Arabic overview</a> for more details, especially related to sequences of items and numbers.</p>
+  </section>
+   
+    
+      
+
+
+<section>
+<h2 id="vowels">Vowels</h2>
+
+
+<section>
+<h3 id="vowelPhonemes">Phoneme table</h3>
+<p>The sequences in the table show the isolated form on the right, and then initial, medial and final, respectively, from right to left.</p>
+<table class="ipaTable">
+<thead>
+<tr>
+<th>&#160; </th>
+<th>Front </th>
+<th>Central </th>
+<th>Back </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>High </th>
+<td><span class="ipa">i</span> 
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ـِ</span></span> 
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ـِ</span></span>
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">?</span></span>
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">?</span></span><br/>
+
+<span class="ipa">iː</span>
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ـِى</span></span> 
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ـِىـ</span></span>
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">?</span></span>
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">?</span></span>
+</td>
+
+<td>&nbsp;</td>
+
+
+<td><span class="ipa">u</span> 
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ـُ</span></span> 
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ـُ</span></span>
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">?</span></span>
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">?</span></span><br/>
+<span class="ipa">uː</span>
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ـُو</span></span> 
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ـُو</span></span>
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">?</span></span> 
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">?</span></span>
+</td>
+</tr>
+<tr>
+<th>Mid </th>
+<td><span class="ipa">e</span> 
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ـٜ</span></span> 
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ـٜ</span></span>
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">?</span></span>
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">?</span></span><br/>
+<span class="ipa">eː</span>
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ـیٰٜ</span></span> 
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ـٰٜ</span></span>
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">?</span></span>
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">?</span></span>
+</td>
+
+<td>&nbsp;</td>
+
+<td><span class="ipa">o</span> 
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ـُ</span></span> 
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ـُ</span></span>
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">?</span></span>
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">?</span></span><br/>
+<span class="ipa">oː</span>
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ـُو</span></span> 
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ـُو</span></span>
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">?</span></span> 
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">?</span></span>
+</td>
+</tr>
+<tr>
+<th>Low </th>
+<td>&nbsp;</td>
+
+<td><span class="ipa">a</span> 
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ـَ</span></span> 
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ـَ</span></span>
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">?</span></span>
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">?</span></span><br/>
+<span class="ipa">aː</span>
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ـَا</span></span> 
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ـَا</span></span>
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">?</span></span> 
+<span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">?</span></span>
+</td>
+
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>Diphthongs.</p>
+<table class="ipaTable">
+<thead>
+</thead>
+<tbody>
+<tr>
+<td><span class="ipa">ai</span></td>
+<td><span class="ex" lang="ha">ـَیْ</span></td>
+</tr>
+<tr>
+<td><span class="ipa">au</span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ـَوْ</span></span></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+
+
+
+<section>
+<h3 id="vowelOverview">Vowel details</h3>
+
+<p>Unlike Standard Arabic, Hausa ajami appears to normally add all vowel diacritics to text.</p>
+<p>It's not clear to me how to form isolate and initial forms. I've seen Wolof ajami that uses alef+hamza with the appropriate vowel diacritic, and this seems to be the case for the text i transcribed above, eg. <span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">أیْكِى</span> <span class="trans">a͑y͓kiī</span></span>.  Presumably, the hamza goes below for the i vowel? I also saw something that appeared to be using ain (representing the glottal stop) with a vowel diacritic for the initial position. Either of these would make sense, given the syllabic structure of Hausa.</p>
+<!--p>@Vowels in initial or isolated position are written with a preceding <span class="codepoint" translate="no"><span lang="ha" dir="rtl"> &#x0627;</span> [<a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span>.</p-->
+<p>The following descriptions should be read with the vowel phoneme chart in the previous section.</p>
+<p><span class="ipa">i</span> is written with <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0650;</span> [<a href="/scripts/arabic/block#char0650"><span class="uname">U+0650 ARABIC KASRA</span></a>]</span>.</p>
+<p><span class="ipa">iː</span> uses <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0650;</span> + <span lang="ha" dir="rtl">&#x0649;</span> [<a href="/scripts/arabic/block#char0650"><span class="uname">U+0650 ARABIC KASRA</span></a> + <a href="/scripts/arabic/block#char0649"><span class="uname">U+0649 ARABIC LETTER ALEF MAKSURA</span></a>]</span>.</p>
+<p><span class="ipa">u</span> uses <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x064F;</span> [<a href="/scripts/arabic/block#char064F"><span class="uname">U+064F ARABIC DAMMA</span></a>]</span>.</p>
+<p><span class="ipa">uː</span> uses <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x064F;</span> + <span lang="ha" dir="rtl">&#x0648;</span> [<a href="/scripts/arabic/block#char064F"><span class="uname">U+064F ARABIC DAMMA</span></a> + <a href="/scripts/arabic/block#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a>]</span>.</p>
+<p><span class="ipa">e</span> uses <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x065C;</span> [<a href="/scripts/arabic/block#char065C"><span class="uname">U+065C ARABIC VOWEL SIGN DOT BELOW</span></a>]</span>. This is a typical African usage.</p>
+<p><span class="ipa">eː</span> uses <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0670;</span> + <span lang="ha" dir="rtl">&#x065C;</span> [<a href="/scripts/arabic/block#char0670"><span class="uname">U+0670 ARABIC LETTER SUPERSCRIPT ALEF</span></a> + <a href="/scripts/arabic/block#char065C"><span class="uname">U+065C ARABIC VOWEL SIGN DOT BELOW</span></a>]</span>.</p>
+<p><span class="ipa">o</span> and <span class="ipa">oː</span> use the same characters as <span class="ipa">u</span> and <span class="ipa">uː</span>.</p>
+<p><span class="ipa">a</span> uses <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x064E;</span> [<a href="/scripts/arabic/block#char064E"><span class="uname">U+064E ARABIC FATHA</span></a>]</span>.</p>
+<p><span class="ipa">aː</span> uses <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x064E;</span> + <span lang="ha" dir="rtl">&#x0627;</span> [<a href="/scripts/arabic/block#char064E"><span class="uname">U+064E ARABIC FATHA</span></a> + <a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span>.</p>
+<p>Diphthongs ending with <span class="ipa">i</span> appear to follow the initial vowel diacritic with <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x06CC;</span> [<a href="/scripts/arabic/block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span> rather than <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0649;</span> [<a href="/scripts/arabic/block#char0649"><span class="uname">U+0649 ARABIC LETTER ALEF MAKSURA</span></a>]</span>, since  two dots below are visible in medial position, eg. <span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">شِدَیْنَا</span> <span class="trans">ʃiday͓naā</span></span>, but not at the end of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">فَیْ</span> <span class="trans">fay͓</span></span>.</p>
+<p>The set of characters needed to represent the Hausa vowels, then, is the following. </p>
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ا␣و␣ى␣ی␣َ␣ُ␣ِ␣ٜ␣ٰ</figure>
+</section>
+
+
+
+
+ 
+<section>
+<h3 id="suppression">Vowel absence</h3>
+<p>Hausa uses <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0652;</span> [<a href="/scripts/arabic/block#char0652"><span class="uname">U+0652 ARABIC SUKUN</span></a>]</span> to kill the  vowel after a consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">تَرْسَشِنْ</span> <span class="trans">tar͓saʃin͓</span></span>.</p>
+<figure class="characterBox auto"  data-cols="trans">ْ</figure>
+<p>Vowel absence is usually marked (unlike Standard Arabic), including over the <span class="uname">YEH</span> or <span class="uname">WAW</span> that signal the final part of a diphthong.</p>
+</section>
+</section>
+
+
+
+
+ 
+
+
+  
+  <section>
+  <h2 id="consonants">Consonants</h2>
+
+
+<section>
+<h3 id="consonantPhonemes">Phoneme table</h3>
+<p>There is no standard for how to write Hausa in ajami, so there is some variation in which characters are mapped to which sounds.</p>
+<table class="ipaTable">
+<thead>
+<tr>
+<th></th>
+<th>Labial </th>
+<th>Dental </th>
+<th>Alveolar </th>
+<th>Palatal </th>
+<th>Retroflex</th>
+<th>Velar </th>
+<th>Glottal </th>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Plosive </th>
+<td><br>
+<span class="ipa">b</span> <span class="ex" lang="ha">ب</span></td>
+<td><span class="ipa">t</span> <span class="ex" lang="ha">ت</span><br>
+<span class="ipa">d</span> <span class="ex" lang="ha">د</span></td>
+<td><span class="ipa">t͡ʃ</span> <span class="ex" lang="ha">ث</span><br/>
+( <span class="ipa">d͡ʒ</span> <span class="ex">ج</span>)</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">k</span> <span class="ex" lang="ha">ك</span><br/>
+<span class="ipa">g</span> <span class="ex" lang="ha">غ</span></td>
+<td><span class="ipa">ʔ</span> <span class="ex" lang="ha">ع</span></td>
+<td><span class="ipa">kʷ</span> <span class="ex" lang="ha">kw</span><br/>
+<span class="ipa">gʷ</span> <span class="ex" lang="ha">gw</span></td>
+<td><span class="ipa">kʲ</span> <span class="ex" lang="ha">ky</span><br/>
+<span class="ipa">gʲ</span> <span class="ex" lang="ha">gy</span></td>
+</tr>
+<tr>
+<th><span style="font-size:85%;">glottalised</span></th>
+<td><span class="ipa">ɓ</span> <span class="ex" lang="ha">ب</span> <span class="ex" lang="ha">ٻ‎</span></td>
+<td><span class="ipa">ɗ</span> <span class="ex" lang="ha">د</span> <span class="ex" lang="ha">ط</span></td>
+<td><span class="ipa">(t)sʼ</span> <span class="ex" lang="ha">ط</span> <span class="ex" lang="ha">ڟ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">kʼ</span> <span class="ex" lang="ha">ك</span> <span class="ex" lang="ha">ق</span></td>
+<td></td>
+<td><span class="ipa">kʷʼ</span> <span class="ex" lang="ha">ƙw</span></td>
+<td><span class="ipa">kʲʼ</span> <span class="ex" lang="ha">ƙy</span></td>
+</tr>
+<tr>
+<th>Fricative </th>
+<td><span class="ipa">ɸ</span> <span class="ex" lang="ha">ف</span></td>
+<td></td>
+<td><span class="ipa">s</span> <span class="ex" lang="ha">س</span><br/>
+<span class="ipa">z</span> <span class="ex" lang="ha">ز</span> <span class="ex" lang="ha">ذ</span><span class="ex" lang="ha"></span></td>
+<td><span class="ipa">ʃ</span> <span class="ex" lang="ha">ش</span><br/>
+<span class="ipa">ʒ</span> <span class="ex" lang="ha">ج</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">h</span> <span class="ex" lang="ha">ه</span></td>
+<td><span class="ipa">fʲ</span> <span class="ex" lang="ha">fy</span></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>Nasal </th>
+<td><span class="ipa">m</span> <span class="ex" lang="ha">م</span></td>
+<td><span class="ipa">n</span> <span class="ex" lang="ha">ن</span></td>
+<td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>Approximant </th>
+<td><span class="ipa">w</span> <span class="ex" lang="ha">و</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">l</span> <span class="ex" lang="ha">ل</span></td>
+<td><span class="ipa">j</span> <span class="ex" lang="ha">ی</span><br/>
+<span class="ipa">j̰</span> <span class="ex" lang="ha">ی</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>Trill/flap </th>
+<td></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɾ</span> <span class="ex" lang="ha">ر</span></td>
+<td></td>
+<td><span class="ipa">ɽ</span> <span class="ex" lang="ha">ر</span></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The only mention of <span class="ipa">j̰</span>, which in boko is written distinctively as <span class="charExample" translate="no"><span class="ex" lang="ha">ƴ</span></span> or <span class="charExample" translate="no"><span class="ex" lang="ha">ʼy</span></span>, is in Omniglot, which actually uses <span class="uname">ARABIC YEH</span> rather than the <span class="uname">FARSI YEH</span> used here.</p>
+</section>
+    
+<section>
+    <h3 id="basicconsonants">Basic consonants</h3>
+    
+    
+<p>The following lists all the consonants in the phonemic table above.</p>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ب␣ت␣ث␣ج␣د␣ذ␣ر␣ز␣س␣ش␣ط␣ع␣غ␣ف␣ق␣ك␣ل␣م␣ن␣ه␣و␣ٻ␣ڟ␣ی</figure>
+
+<p>&nbsp;</p>
+</section>
+
+
+
+
+<section>
+    <h3 id="additionalconsonants">Additional consonants</h3>
+    
+    
+<p>Omniglot lists a number of additional characters to those above.</p>
+
+<figure class="characterBox auto" data-ipa="aː,h,h,zˁ,s,l,f,h" data-cols="">أ␣ح␣خ␣ظ␣ص␣ض␣ڢ␣ة</figure>
+
+<p><span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x06A2;</span> [<a href="/scripts/arabic/block#char06A2"><span class="uname">U+06A2 ARABIC LETTER FEH WITH DOT MOVED BELOW</span></a>]</span> is an African (Maghrebi) form of <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0641;</span> [<a href="/scripts/arabic/block#char0641"><span class="uname">U+0641 ARABIC LETTER FEH</span></a>]</span>.</p>
+</section>
+</section>
+
+
+  
+
+
+
+<section>
+<h2 id="clusters">Consonant clusters &amp; gemination</h2>
+<p>Geminated consonants are indicated using <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0651;</span> [<a href="/scripts/arabic/block#char0651"><span class="uname">U+0651 ARABIC SHADDA</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">بَبَّنْ</span> <span class="trans">baba˖n͓</span> <span class="meaning">big</span></span>.</p>
+<p>@Is it also used to explicitly signal an absence of intervening vowels between adjoining syllables, where needed?</p>
+</section>
+
+
+
+
+<section>
+<h2 id="typos">Confusables</h2>
+<p>There is some variation in sources about the use of <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x06CC;</span> [<a href="/scripts/arabic/block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span> versus <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x064A;</span> [<a href="/scripts/arabic/block#char064A"><span class="uname">U+064A ARABIC LETTER YEH</span></a>]</span>. Most sources seem to agree, however, that the long i uses <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0649;</span> [<a href="/scripts/arabic/block#char0649"><span class="uname">U+0649 ARABIC LETTER ALEF MAKSURA</span></a>]</span>, whereas the end of a diphthong uses one of the former.</p>
+</section>
+
+
+
+
+
+<!--section>
+<h2 id="otherletters">Other letters</h2>
+
+<p>@CLDR lists the following additional characters with the general property of letter.</p>
+
+<figure class="auxiliaryBox auto"  data-cols="">ऽ␣ॐ</figure>
+
+
+<p>@Used for vowel elision in Sanskrit, the main function of <span class="codepoint" translate="no"><span lang="ha">&#x093D;</span> [<a href="devanagari#char093D"><span class="uname">U+093D DEVANAGARI SIGN AVAGRAHA</span></a>]</span> in Hindi is to show that a vowel is sustained in a cry or a shout, eg.  <span class="charExample" translate="no"><span class="ex" lang="ha">आईऽऽऽ!</span> <span class="trans">ạ̄ị̄´´´!</span></span> <sup><a href="https://en.wikipedia.org/wiki/Devanagari">w</a></sup>.</p>
+<p>@<span class="codepoint" translate="no"><span lang="ha">&#x0950;</span> [<a href="devanagari#char0950"><span class="uname">U+0950 DEVANAGARI OM</span></a>]</span> is a religious symbol.&nbsp;</p>
+</section-->
+
+
+
+  
+<section>
+<h2 id="cchar">Combining marks</h2>
+    <p>Apart from the <a href="#vowelOverview">vowel-signs</a>, the commonly-used combining marks in Hausa include the following.  Follow the links for more information.</p>
+
+<figure class="auxiliaryBox auto"  data-cols="" data-links="#suppression,#clusters">ْ␣ّ</figure>
+
+
+</section>
+
+
+
+  
+<section>
+<h2 id="punctuation">Punctuation</h2>
+<p>Need clarity on use of punctuation.  It is likely to include the following.</p>
+<figure class="characterBox auto"  data-cols="">۔␣،␣؛␣؟␣٪</figure>
+</section>
+
+
+
+
+<section>
+<h2 id="formatting">Formatting characters</h2>
+<p>The Arabic script uses a large number of Unicode characters that affect the way that other characters are rendered. Many of those have no visible form of their own.</p>
+<p>Modern Arabic-script text makes use of a relatively large set of invisible formatting characters, especially in plain text, many of which are used to manage text direction. For more details, see the <a href="index#formatting">Arabic overview</a>.</p>
+</section>
+
+
+
+
+
+  
+<section>
+<h2 id="digits">Numbers, dates, currency, etc</h2>
+
+<p>Need to confirm whether Hausa uses the following digit forms.</p>
+<figure class="characterBox auto"  data-cols="">۰␣۴␣۵␣۶␣۴␣۵␣۶␣۷␣۸␣۹</figure>
+
+<p>I suspect that Hausa may use <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x066B;</span> [<a href="/scripts/arabic/block#char066B"><span class="uname">U+066B ARABIC DECIMAL SEPARATOR</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x066C;</span> [<a href="/scripts/arabic/block#char066C"><span class="uname">U+066C ARABIC THOUSANDS SEPARATOR</span></a>]</span>, but need to confirm.<!--figure class="characterBox auto"  data-cols="trans,transc">०␣१␣२␣३␣४␣५␣६␣७␣८␣९</figure>
+
+<p>@An interesting feature of large numbers written in India is that they apply groupings of two, rather than three, digits between commas (even when using european digits).</p>
+    <figure>
+    <p class="large"><span class="ex" lang="ha">20,00,000</span></p>
+    <figcaption>Two million, written with Indian comma separators.</figcaption>
+    </figure-->
+
+  
+<!--section>
+<h3 id="currency">Currency</h3>
+
+<p>@<span class="codepoint" translate="no"><span lang="ha">&#x20B9;</span> [<a href="/scripts/devanagari/block#char20B9"><span class="uname">U+20B9 INDIAN RUPEE SIGN</span></a>]</span> is the symbol introduced by the Government of India in 2010 as the official currency symbol for the Indian rupee (INR). <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch22.pdf">u</a></sup></p>
+</section--></p>
+</section>
+  
+  
+  
+  
+  <section> 
+  <h2 id="context">Glyph shaping &amp; positioning</h2>
+<p>See the <a href="index/#shaping">Arabic overview</a>.</p>
+</section>
+<section>
+<h2 id="refs">References</h2>
+<ol>
+<!--li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
+				0-19-507993-0, pp487-497</li-->
+<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Hausa_language">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Hausa_language">Hausa language</a></li>
+<li>[ <a class="fnref" href="http://www.omniglot.com/writing/hausa.htm">o</a> ]  Omniglot, <a href="http://www.omniglot.com/writing/hausa.htm">Hausa (Harshen Hausa / هَرْشَن هَوْسَ)</a></li>
+<li>[ <a class="fnref" href="http://www.bisharat.net/wikidoc/pmwiki.php/PanAfrLoc/Hausa">p</a> ]  Pan AfriLoc, <a href="http://www.bisharat.net/wikidoc/pmwiki.php/PanAfrLoc/Hausa">Hausa - Haoussa - هوس</a></li>
+<li>[ <a class="fnref" href="http://www.bisharat.net/wikidoc/pmwiki.php/PanAfrLoc/Hausa">s</a> ]  adap. from Neil Skinner, <a href="http://www.bisharat.net/wikidoc/pmwiki.php/PanAfrLoc/Hausa">Ajami Zeichensatz</a></li>
+<li>[ <a class="fnref" href="#refs">c</a> ]  Bernard Comrie, <cite>The World's Major Languages</cite>, ISBN 978-1138184824</li>
+</ol>
+</section>
+
+
+
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/devanagari"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-07-13  6:37<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bdevanagari%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fdevanagari%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
+
+
+<div id="panel" style="display:none"></div>
+</body>
+<script>
+initialiseSummary('/scripts/arabic/block','ha','Arabic')
+</script>
+
+</html>
