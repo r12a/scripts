@@ -76,7 +76,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->5 January, 2019<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->14 July, 2019<!-- #EndDate -->
 &bull; tags <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="https://r12a.github.io/blog/?tag=mandaic" title="Show all blog posts tagged with 'mandaic'">mandaic</a></p>
 <section>
    <p>This page lists characters in the following Unicode  block and provides information about them. </p>
@@ -84,9 +84,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <li><a href="../../uniview/?block=mandaic" target="_blank">Mandaic</a></li>
    </ul>
    <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-<p>For a summary of the script and its use in  writing systems, see the page <a class="linkHighlight" href="/scripts/mandaic/">Mandaic script summary</a>.   For similar information related to other scripts, see <a href="/r12a.github.io/doclist#charnotes">this list</a>.</p>
-<p><span style="text-align: start;">We have usage data for only the Mandaic language using this script</span>.</p>
-<p style="text-align: start;">The transliteration is based on Daniels.</p>
+<p>For details about how the script works, see <a class="linkHighlight" href="index">Mandaic</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Mand">Script links pages</a>.</p>
 <p>Find
 <input type="text" 
 onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/>
@@ -772,68 +770,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 
+
+<script src="../../shared/scriptdb/mandaic.js">  </script>
+
 <script>
-var spreadsheet = `
-ࡁ	b	b	b	consonant	b	ba			ࡁࡅࡁࡅࡁ ࡁ
-ࡂ	g	g	ɡ	consonant	g	ga			ࡂࡅࡂࡅࡂ ࡂ
-ࡃ	d	d	d	consonant	d	da			ࡃࡅࡃࡅࡃ ࡃ
-ࡄ	h	h	h	consonant	h	ha			ࡄࡅࡄࡅࡄ ࡄ
-ࡆ	z	z	z	consonant	z	za			ࡆࡅࡆࡅࡆ ࡆ
-ࡇ	h	ẖ	iːʷ ħuᵘ	consonant	ẖ	eh			ࡇࡅࡇࡅࡇ ࡇ
-ࡈ	y	ᵵ	ᵵ	consonant	ṭ	ṭa			ࡈࡅࡈࡅࡈ ࡈ
-ࡊ	k	k	k	consonant	k	ka			ࡊࡅࡊࡅࡊ ࡊ
-ࡋ	l	l	l	consonant	l	la			ࡋࡅࡋࡅࡋ ࡋ
-ࡌ	m	m	m	consonant	m	ma			ࡌࡅࡌࡅࡌ ࡌ
-ࡍ	n	n	n	consonant	n	na			ࡍࡅࡍࡅࡍ ࡍ
-ࡎ	s	s	s	consonant	s	sa			ࡎࡅࡎࡅࡎ ࡎ
-ࡐ	p	p	p	consonant	p	pa			ࡐࡅࡐࡅࡐ ࡐ
-ࡑ	s	ᵴ	ᵴ	consonant	ṣ	ṣa			ࡑࡅࡑࡅࡑ ࡑ
-ࡒ	q	q	q	consonant	q	qa			ࡒࡅࡒࡅࡒ ࡒ
-ࡓ	r	r	r	consonant	r	ra			ࡓࡅࡓࡅࡓ ࡓ
-ࡔ	s	ʃ	ʃ	consonant	š	ša			ࡔࡅࡔࡅࡔ ࡔ
-ࡕ	t¶	t	t	consonant	t	ta			ࡕࡅࡕࡅࡕ ࡕ
-ࡖ	d	ḏ	di	consonant	ḏ	dushenna/adu			ࡖࡅࡖࡅࡖ ࡖ
-ࡗ	k	k͟d	kḏi	consonant	kḏ	kad			ࡗࡅࡗࡅࡗ ࡗ
-ࡘ	{	ʕ	ʕ	consonant	ʕ	ayin			ࡘࡅࡘࡅࡘ ࡘ
-									
-									
-ࡀ	a	ā	aː a	vowel	ā	a			ࡀࡅࡀࡅࡀ ࡀ
-ࡅ	u	u	u uː o	vowel	u	wa/ushenna			ࡅࡅࡅࡅࡅ ࡅ
-ࡉ	i	i	i iː e	vowel	i	ya			ࡉࡅࡉࡅࡉ ࡉ
-ࡏ	e	ʿ	- e i iː u	vowel	ʿ	e			ࡏࡅࡏࡅࡏ ࡏ
-									
-									
-\u0859	/	̤		affrication mark					
-\u085B	&	˖		gemination mark					
-\u085A	[	̱		vocalisation mark					
-									
-									
-࡞	|	¶		section delimiter					
-`
-
-var cols = {
-"transLoc": 2,
-"ipaLoc": 3,
-"typeLoc": 4,
-"nnameLoc": 7,
-"nameLoc": 6,
-"numLoc": 0,
-"statusLoc": 8,
-"dvowel": 0,
-"ivowel": 0,
-"subj":0,
-"ltone":0,
-"htone":0,
-"numLoc":0,
-"meaning":0,
-"shape":9,
-"lc":0,
-"uc":0,
-
-//"othertranscriptions": [[3, 'Transcription']]
-}
 replaceStuff('Mandaic', 'mandaic', spreadsheet, '', 'mid', '', cols, false)
-
 </script> 
 
 
@@ -843,7 +784,7 @@ replaceStuff('Mandaic', 'mandaic', spreadsheet, '', 'mid', '', cols, false)
 
 
 <div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/mandaic/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-01-05  10:21<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2019-07-14  13:59<!-- #EndDate --> 
   </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bmandaic%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fmandaic%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 

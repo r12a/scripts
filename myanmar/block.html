@@ -70,7 +70,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->5 January, 2019<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->14 July, 2019<!-- #EndDate -->
 &bull; tags <a href="https://r12a.github.io/blog/index.php?tag=burmese" title="Show all blog posts tagged with 'burmese'">burmese</a>, <a href="https://r12a.github.io/blog/index.php?tag=myanmar" title="Show all blog posts tagged with 'myanmar'">myanmar</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>.</p>
 <section>
   <p>This page lists characters in the following Unicode  block and provides information about them.</p>
@@ -78,8 +78,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
     <li><a href="../../uniview/?block=myanmar" target="_blank">Myanmar</a></li>
   </ul>
   <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-<p>For a summary of the script and its use in  writing systems, see the page <a class="linkHighlight" href="/scripts/myanmar/">Myanmar script summary</a>.   For similar information related to other scripts, see <a href="/r12a.github.io/doclist#charnotes">this list</a>.</p>
-  <p><span style="text-align: start;">We have usage data for the following 3 languages that use the Myanmar script</span>: Burmese, Mon, Shan.</p>
+<p>For details about how the script works, see <a class="linkHighlight" href="index">Myanmar/Burmese</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Mymr">Script links pages</a>.</p>
 <p>Find <input type="text" onChange="var hex=this.value;if (hex!=''){while(hex.length<4){hex='0'+hex;}document.location='#char'+hex.toUpperCase();}"/></p>
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
@@ -2154,124 +2153,12 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 
+
+
+<script src="../../shared/scriptdb/burmese.js">  </script>
+
 <script>
-var spreadsheet = `
-က	k	k	k -ʔ ɡ tɕ-	consonant					
-ခ	k	kʰ	kʰ ɡ tɕ-	consonant					
-ဂ	g	g	ɡ dʑ-	consonant					
-ဃ	g	ġ	ɡ	consonant			rare		
-င	n	ŋ	ŋ	consonant					
-စ	s	ṡ	s -ʔ z z-	consonant					
-ဆ	s	ṡʰ	sʰ z	consonant					
-ဇ	z	ż	z	consonant					
-ဈ	z	z̈	z	consonant			rare		
-ည	n	ɲ	ɲ	consonant					
-ဉ	n	ɲ̇	ɲ	consonant					
-ဋ	t	ṫ	t	consonant			mostly archaic		
-ဌ	t	ẗ	t	consonant			mostly archaic		
-ဍ	d	ḋ	d	consonant			mostly archaic		
-ဎ	d	d̈	d	consonant			mostly archaic		
-ဏ	n	ṅ	n	consonant			mostly archaic		
-တ	t¶	t	t -ʔ d	consonant					
-ထ	t	tʰ	tʰ d	consonant					
-ဒ	d¶	d	d	consonant					
-ဓ	d	d̊	d	consonant					
-န	n¶	n	n	consonant					
-ပ	p	p	p -ʔ b	consonant					
-ဖ	p	pʰ	pʰ f b	consonant					
-ဗ	b	b	b v	consonant					
-ဘ	b	ḃ	b pʰ-	consonant					
-မ	m	m	m	consonant					
-ယ	y	y	j ɛ	consonant					
-ရ	r	ṙ	j r ʃ	consonant					
-လ	l	l	l -ʃ-	consonant					
-ဠ	l	l̇	l -ʃ-	consonant			rare		
-ဝ	w	w	w	consonant					
-သ	@	θ	θ ð	consonant					
-ဿ	@	θː	θ	consonant ligature					
-ဟ	h	h	h	consonant					
-အ	}	ʔ	ʔ ʔa	consonant/indpendent vowel					
-									
-									
-ျ	y	y̆	j ʨ ʥ ʃ	medial consonant					
-ြ	j	j̆	j ʨ ʥ ɲ	medial consonant					
-ွ	w	w̆	w	medial consonant					
-ှ		h̆	̥ -ʃ	medial consonant					
-									
-									
-ံ	n	n̽	ɴ	final consonant					
-									
-									
-ဣ	I	ị	ʔḭ	independent vowel				ိ	
-ဤ	I	ị̈	ʔì	independent vowel				ီ	
-ဥ	U	ụ	ʔṵ	independent vowel				ု	
-ဦ	U	ụ̇	ʔù	independent vowel				ူ	
-ဧ	E	ẹ	ʔè	independent vowel				ေ	
-ဩ	O	ɔ̣	ʔɔ́	independent vowel					
-ဪ	O	ɔ̣̇	ʔɔ̀	independent vowel					
-									
-									
-ာ	a	a	a	vowel sign					
-ါ	a	ä	a	vowel sign					
-ိ	i	i	i eɪ	vowel sign					ဣ
-ီ	i	ï	i	vowel sign					ဤ
-ု	u	u	u oʊ	vowel sign					ဥ
-ူ	u	u̇	u	vowel sign					ဦ
-ေ	e	e	e	vowel sign					ဧ
-ဲ	e	ɛ	ɛ	vowel sign					
-									
-									
-်	\	ˣ		asat	əθaʔ	အသတ်			
-္	*	͓		virama					
-									
-									
-့	^	¹		tone mark					
-း	^	²		tone mark					
-									
-									
-၌	$	(loc)	n̥aiʔ	symbol	ɛʔkʰəjanʰaɪʔ				
-၍	$	(sub)	jwɛ	symbol	ɛʔkʰəjajwɛ				
-၎	$	(afore)		symbol	ɛʔkʰəjajwɛ				
-၏	$	(gen)	í	symbol	ɛʔkʰəjaí				
-၊	,	,		comma					
-။	.	.		full stop					
-									
-									
-၀	0	0		digit					
-၁	1	1		digit					
-၂	2	2		digit					
-၃	3	3		digit					
-၄	4	4		digit					
-၅	5	5		digit					
-၆	6	6		digit					
-၇	7	7		digit					
-၈	8	8		digit					
-၉	9	9		digit					
-`
-
-var cols = {
-"transLoc": 2,
-"ipaLoc": 3,
-"typeLoc": 4,
-"nnameLoc": 6,
-"nameLoc": 5,
-"numLoc": 0,
-"statusLoc": 7,
-"dvowel": 8,
-"ivowel": 9,
-"subj":0,
-"ltone":0,
-"htone":0,
-"numLoc":0,
-"meaning":0,
-"shape":0,
-"lc":0,
-"uc":0,
-
-//"othertranscriptions": [[3, 'Transcription']]
-}
 replaceStuff('Burmese', 'burmese', spreadsheet, '', 'my', '', cols, false)
-
 </script> 
 
 
@@ -2279,114 +2166,10 @@ replaceStuff('Burmese', 'burmese', spreadsheet, '', 'my', '', cols, false)
 
 
 
-
-
-
+<script src="../../shared/scriptdb/shan.js">  </script>
 
 <script>
-var spreadsheet = `
-ၵ	k	k	k	consonant
-ၶ	k	kʰ	kʰ	consonant
-င	n	ŋ	ŋ	consonant
-ၷ	g	g	ɡ	consonant
-ၸ	c	c	ʨ	consonant
-ၺ	n	ɲ	ɲ	consonant
-ၹ	z	z	z	consonant
-တ	t	t	t	consonant
-ထ	t	tʰ	tʰ	consonant
-ၼ	n¶	n	n	consonant
-ၻ	d	d	d	consonant
-ပ	p	p	p	consonant
-ၽ	p	pʰ	pʰ	consonant
-ၾ	f	f	f	consonant
-မ	m	m	m	consonant
-ၿ	b	b	b	consonant
-ယ	y	y	j	consonant
-ရ	r	r	r	consonant
-လ	l	l	l	consonant
-ဝ	w	w	w	consonant
-သ	s	s	s	consonant
-ႀ	Q	θ	θ	consonant
-ႁ	h	h	h	consonant
-ဢ	}	ʔ	ʔ	consonant
-				
-				
-ျ	y	y̆	j	medial consonant
-ြ	r	r̆	r	medial consonant
-ႂ	w	w̆	w	medial consonant
-				
-				
-				
-				
-				
-				
-ႃ	a	a	a	vowel sign
-ၢ	a	ā	aː	vowel sign
-ိ	i	i	i	vowel sign
-ီ	i	ī	iː	vowel sign
-ု	u	u	u	vowel sign
-ူ	u	ū	uː	vowel sign
-ေ	e	e	e	vowel sign
-ဵ	e	ė	e	vowel sign
-ႄ	a	æ	æ	vowel sign
-ႅ	a	æ̇	æ	vowel sign
-ႆ	a	aʲ	aj	vowel sign
-႟	o	o		vowel
-ွ	o	ɔ	ɔ o	vowel sign
-				
-				
-				
-်	\	ˣ		asat
-္	*	͓		virama
-				
-				
-				
-ႇ	^	²		tone mark
-ႈ	^	³		tone mark
-း	^	⁴		tone mark
-ႉ	^	⁵		tone mark
-ႊ	^	⁶		tone mark
-				
-				
-၊	,	,		comma
-။	.	.		full stop
-				
-				
-႐	§	0̣		shan digit
-႑	§	1̣		shan digit
-႒	§	2̣		shan digit
-႓	§	3̣		shan digit
-႔	§	4̣		shan digit
-႕	§	5̣		shan digit
-႖	§	6̣		shan digit
-႗	§	7̣		shan digit
-႘	§	8̣		shan digit
-႙	§	9̣		shan digit
-`
-
-var cols = {
-"transLoc": 2,
-"ipaLoc": 3,
-"typeLoc": 4,
-"nnameLoc": 0,
-"nameLoc": 0,
-"numLoc": 0,
-"statusLoc": 0,
-"dvowel": 0,
-"ivowel": 0,
-"subj":0,
-"ltone":0,
-"htone":0,
-"numLoc":0,
-"meaning":0,
-"shape":0,
-"lc":0,
-"uc":0,
-
-//"othertranscriptions": [[3, 'Transcription']]
-}
 replaceStuff('Shan', 'shan', spreadsheet, '', 'shn', '', cols, false)
-
 </script> 
 
 
@@ -2396,7 +2179,7 @@ replaceStuff('Shan', 'shan', spreadsheet, '', 'shn', '', cols, false)
 <div id="panel" style="display:none"></div>
 
 <div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/myanmar/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-01-05  11:05<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2019-07-14  14:22<!-- #EndDate --> 
   </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bmyanmar%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fmyanmar%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 <!-- Uncomment this code to get a list of all character names for the file names-subset.js
