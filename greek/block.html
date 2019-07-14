@@ -76,8 +76,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->5 January, 2019<!-- #EndDate -->
-&bull; tags <a href="http://rishida.net/blog/index.php?tag=greek" title="Show all blog posts tagged with 'greek'">greek</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+  <!-- #BeginDate format:Sw1 -->14 July, 2019<!-- #EndDate -->
+&bull; tags <a href="http://r12a.github.io/blog/index.php?tag=greek" title="Show all blog posts tagged with 'greek'">greek</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
 <section>
@@ -87,9 +87,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
     <li><a href="../../uniview/?block=greek_extended" target="_blank">Greek extended</a></li>
   </ul>
   <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-  <p>For a summary of the script and its use in  writing systems, see the page <a class="linkHighlight" href="/scripts/greek/">Greek script summary</a>.   For similar information related to other scripts, see <a href="/r12a.github.io/doclist#charnotes">this list</a>.</p>
-  <p><span style="text-align: start;">We have usage data for the following  language that uses the Greek script</span>: Greek.</p>
-  <p>Find <input type="text" onChange="var hex=this.value;if (hex!=''){while(hex.length<4){hex='0'+hex;}document.location='#char'+hex.toUpperCase();}"/></p>
+  <p>For details about how the script works, see <a class="linkHighlight" href="index">Greek</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Grek">Script links pages</a>.</p>
+<p>Find <input type="text" onChange="var hex=this.value;if (hex!=''){while(hex.length<4){hex='0'+hex;}document.location='#char'+hex.toUpperCase();}"/></p>
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -971,7 +970,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
     <div class="notes">
       <div class="letter moderngreek">
-        <p>Equivalent to '?' in English, but note that you should use U+003B SEMICOLON rather than this character. During normalization this character is changed to the ASCII semicolon.</p>
+       <p class="titlepara"><span class="title">Modern Greek</span></p>
+       <p>Equivalent to '?' in English, but note that you should use U+003B SEMICOLON rather than this character. During normalization this character is changed to the ASCII semicolon.</p>
       </div>
     </div>
   </div>
@@ -982,6 +982,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
     <div class="notes">
       <div class="letter moderngreek">
+       <p class="titlepara"><span class="title">Modern Greek</span></p>
         <p>Equivalent to semi-colon in English.</p>
       </div>
     </div>
@@ -1056,7 +1057,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
     <div class="notes">
       <div class="letter">
-        <p>Not used for modern spelling, but may appear as numbers in numbered lists or outlines.</p>
+        <p class="titlepara"><span class="title">Modern Greek</span></p>
+       <p>Not used for modern spelling, but may appear as numbers in numbered lists or outlines.</p>
       </div>
     </div>
   </div>
@@ -1440,114 +1442,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 
+
+<script src="../../shared/scriptdb/greek.js">  </script>
+
 <script>
-var spreadsheet = `
-Α	A	A	a	vowel	alpha	άλφα	α	
-Β	V	V	v	consonant	beta	βήτα	β	
-Γ	Y	Ɣ	ɣ ʝ	consonant	gamma	γάμμα	γ	
-Δ	D	Ð	ð	consonant	delta	δέλτα	δ	
-Ε	E	E	e	vowel	epsilon	έψιλον	ε	
-Ζ	Z	Z	z	consonant	zeta	ζήτα	ζ	
-Η	I	İ	i	vowel	eta	ήτα	η	
-Θ	Q	Θ	θ	consonant	theta	θήτα	θ	
-Ι	I	I	i ç ʝ ɲ	vowel	iota	ιώτα	ι	
-Κ	K	K	k c	consonant	kappa	κάππα	κ	
-Λ	L	L	l	consonant	la(m)bda	λά(μ)βδα	λ	
-Μ	M	M	m	consonant	mu	μυ	μ	
-Ν	N	N	n	consonant	nu	νυ	ν	
-Ξ	K	K͡S	ks	consonant	xi	ξι	ξ	
-Ο	O	O	o	vowel	omicron	όμικρον	ο	
-Π	P	P	p	consonant	pi	πι	π	
-Ρ	R	R	r	consonant	rho	ρώ	ρ	
-Σ	S	S	s z	consonant	sigma	σίγμα	σ	
-Τ	T	T	t	consonant	tau	ταυ	τ	
-Υ	Y	Y	i	vowel	upsilon	ύψιλον	υ	
-Φ	F	F	f	consonant	phi	φι	φ	
-Χ	X	X	x ç	consonant	chi	χι	χ	
-Ψ	P	P͡S	ps	consonant	psi	ψι	ψ	
-Ω	O	Ȯ	o	vowel	omega	ωμέγα	ω	
-								
-α	a	a	a	vowel	alpha	άλφα		Α
-β	v	v	v	consonant	beta	βήτα		Β
-γ	y	ɣ	ɣ ʝ	consonant	gamma	γάμμα		Γ
-δ	d	ð	ð	consonant	delta	δέλτα		Δ
-ε	e	e	e	vowel	epsilon	έψιλον		Ε
-ζ	z	z	z	consonant	zeta	ζήτα		Ζ
-η	i	i	i	vowel	eta	ήτα		Η
-θ	q	θ	θ	consonant	theta	θήτα		Θ
-ι	i	ı	i ç ʝ ɲ	consonant	iota	ιώτα		Ι
-κ	k	k	k c	consonant	kappa	κάππα		Κ
-λ	l	l	l	consonant	la(m)bda	λά(μ)βδα		Λ
-μ	m	m	m	consonant	mu	μυ		Μ
-ν	n	n	n	consonant	nu	νυ		Ν
-ξ	k	k͡s	ks	consonant	xi	ξι		Ξ
-ο	o	o	o	vowel	omicron	όμικρον		Ο
-π	p	p	p	consonant	pi	πι		Π
-ρ	r	r	r	consonant	rho	ρώ		Ρ
-σ	s	s	s z	consonant	sigma	σίγμα		Σ
-ς	s	s̽	s z	consonant	final sigma	σίγμα		
-τ	t	t	t	consonant	tau	ταυ		Τ
-υ	y	y	i	vowel	upsilon	ύψιλον		Υ
-φ	f	f	f	consonant	phi	φι		Φ
-χ	x	x	x ç	consonant	chi	χι		Χ
-ψ	p	p͡s	ps	consonant	psi	ψι		Ψ
-ω	o	ȯ	o	vowel	omega	ωμέγα		Ω
-								
-								
-Ά	A	Á	a	vowel + tonos			ά	
-Έ	E	É	e	vowel + tonos			έ	
-Ή	I	Í	i	vowel + tonos			ή	
-Ί	O	Ô	o	vowel + tonos			ί	
-Ό	O	Ó	o	vowel + tonos			ό	
-Ύ	Y	Ý	i	vowel + tonos			ύ	
-Ώ	O	Õ	o	vowel + tonos			ώ	
-Ϊ	I	Ï	i	vowel + dialytika			ϊ	
-Ϋ	Y	Ÿ	i	vowel + dialytika			ϋ	
-								
-ά	a	á	a	vowel + tonos				Ά
-έ	e	é	e	vowel + tonos				Έ
-ή	i	í	i	vowel + tonos				Ή
-ί	o	ô	o	vowel + tonos				Ί
-ό	o	ó	o	vowel + tonos				Ό
-ύ	y	ý	i	vowel + tonos				Ύ
-ώ	o	õ	o	vowel + tonos				Ώ
-ΐ	i	ḯ	i	vowel				
-ϊ	i	ï	i	vowel + dialytika				Ϊ
-ϋ	y	ÿ	i	vowel + dialytika				Ϋ
-ΰ	y	ÿ́	i	vowel + dialytika + tonos				
-								
-								
-;	?	?		question mark				
-·	;	;		semicolon				
-								
-								
-\u0301	[	ˊ		acute accent				
-\u0308	[	¨		diaeresis				
-`
-
-var cols = {
-"transLoc": 2,
-"ipaLoc": 3,
-"typeLoc": 4,
-"nnameLoc": 6,
-"nameLoc": 5,
-"numLoc": 0,
-"statusLoc": 0,
-"lc": 7,
-"uc": 8,
-"dvowel": 0,
-"ivowel": 0,
-"subj":0,
-"ltone":0,
-"htone":0,
-"numLoc":0,
-"meaning":0,
-"shape":0,
-
-//"othertranscriptions": [[4, 'ISO 9985']]
-}
 replaceStuff('Modern Greek', 'moderngreek', spreadsheet, '', 'el', '', cols, false)
-
 </script> 
 
 
@@ -1557,7 +1456,7 @@ replaceStuff('Modern Greek', 'moderngreek', spreadsheet, '', 'el', '', cols, fal
 <div id="panel" style="display:none"></div>
 
 <div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/greek/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-01-05  6:41<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2019-07-14  11:16<!-- #EndDate --> 
   </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bgreek%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fgreek%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 <!-- Uncomment this code to get a list of all character names for the file names-subset.js

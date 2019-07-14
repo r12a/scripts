@@ -69,7 +69,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->5 January, 2019<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->14 July, 2019<!-- #EndDate -->
 &bull; tags <a href="https://r12a.github.io/blog/index.php?tag=hebrew" title="Show all blog posts tagged with 'hebrew'">hebrew</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 <section>
   <p>This page lists characters in the following Unicode  block and provides information about them.</p>
@@ -77,20 +77,9 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
     <li><a href="../../uniview/?block=hebrew" target="_blank">Hebrew</a></li>
   </ul>
   <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-  <p>For a summary of the script and its use in  writing systems, see the page <a class="linkHighlight" href="/scripts/hebrew/">Hebrew script summary</a>.   For similar information related to other scripts, see <a href="/r12a.github.io/doclist#charnotes">this list</a>.</p>
-  <p><span style="text-align: start;">We have usage data for the following 2 languages that use the Hebrew script</span>: Hebrew, Yiddish.</p>
-  <p>Find <input type="text" onChange="var hex=this.value;if (hex!=''){while(hex.length<4){hex='0'+hex;}document.location='#char'+hex.toUpperCase();}"/></p>
+  <p>For details about how the script works, see <a class="linkHighlight" href="index">Hebrew</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Hebr">Script links pages</a>.</p>
+<p>Find <input type="text" onChange="var hex=this.value;if (hex!=''){while(hex.length<4){hex='0'+hex;}document.location='#char'+hex.toUpperCase();}"/></p>
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
-<details>
-<summary class="instructions">Read more about how to use this page.</summary>
-    <p class="instructions">To <strong>find a character</strong> by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or the hex number in the <samp>Find</samp> control above.</p>
-    <p class="instructions">To view this page as intended, you  need a <strong>Hebrew font</strong>.  <!--This page comes with a Template webfont.--> Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system.  For transcriptions I recommend the excellent and free <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;item_id=DoulosSILfont">Doulos SIL font</a>. The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. (If there is no glyph and you want to see what it looks like, click on <samp>See in UniView</samp>.)</p>
-    <p class="instructions"><strong>Information about languages</strong> that use these characters is taken from the list maintained for the Character Use app. The list is not exhaustive.</p>
-<p class="instructions"><strong>References</strong> are indicated by superscript characters. Wherever possible, those contain direct links to the source material. When such a pointer is alongside an arrow → it means that it's worth following the link for the additional information it provides. Digits refer to the main sources, which are listed at the bottom of a set of notes.</p>
-<p class="instructions">When you are using UniView and you turn on <samp>Show notes</samp>, UniView will pull in information about characters from this page.</p>
-<p id="charliststr" class="instructions"></p>
-</details>
-
 </section>
 </div>
 
@@ -1576,133 +1565,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 
-
+<script src="../../shared/scriptdb/hebrew.js">  </script>
 
 <script>
-var spreadsheet = `
-א	}	ʔ		'  ∅	ʔ ∅	consonant	אָלֶף	ˈalɛf	1				
-ב	v	v		v	v	consonant	בֵית	vet	2				
-ג	g	g		g	ɡ	consonant	גִּימֵל	gimel	3				
-ד	d	d		d	d	consonant	דָּלֶת	ˈdalɛt, ˈdalɛd	4				
-ה	h	h		h	h ʔ ∅	consonant	הֵא	he, hej	5				
-ו	v	v̇		v	v w	consonant	וָו	vav	6				
-ז	z	z		z	z	consonant	זַיִן	zajin, za.in	7				
-ח	x	x		ẖ	x χ	consonant	חֵית	χet	8				
-ט	t	t		t	t	consonant	טֵית	tet	9				
-י	y	y		y	j	consonant	יוֹד	jod, jud	10				
-כ	x	ẋ		kh	x χ	consonant	כַף	χaf	20				
-ך	x	x̽		kh	x χ	word-final consonant variant	כַף סוֹפִית	χaf sofit					
-ל	l	l		l	l	consonant	לָמֶד	ˈlamɛd	30				
-מ	m	m		m	m	consonant	מֵם	mem	40				
-ם	m	m̽		m	m	word-final consonant variant	מֵם סוֹפִית	mem sofit					
-נ	n	n		n	n	consonant	נוּן	nun	50				
-ן	n	n̽		n	n	word-final consonant variant	נוּן סוֹפִית	nun sofit					
-ס	s	s		s	s	consonant	סָמֶך	ˈsamɛχ	60				
-ע	}	ʔ̇		'  ∅	ʔ ∅	consonant	עַיִן	ajin, a.in	70				
-פ	f	f		f	f	consonant	פֵא, פה	fe, fej	80				
-ף	f	f̽		f	f	word-final consonant variant	פֵּא סוֹפִית, פה סופית	fe/fej sofit					
-צ	t	ʦ		ts	ʦ	consonant	צַדִי, צדיק	ʦadi	90				
-ץ	t	ʦ̽		ts	ʦ	word-final consonant variant	צַדִי סוֹפִית, צדיק סופית	ʦadi sofit					
-ק	k	k		k	k	consonant	קוֹף	kuf, kof	100				
-ר	r	ʁ		r	ɣ ʁ	consonant	רֵישׁ	ʁeʃ	200				
-ש	s	ṡ		s sh	ʃ s	consonant			300				
-ת	t	ṫ		t	t	consonant	תו	θav θaf	400				
-װ	w	w			w	consonant							
-													
-													
-ְ	:	͓			e̞ ∅	vowel shortener	שְׁוָא	ʃvɑ					
-ֱ	e	ĕ			e̞	vowel point	חֲטַף סֶגּוֹל‬	ħaˈtaf sɛˈɡol					
-ֲ	a	ă			ä	vowel point	חֲטַף פַּתַח	ħaˈtaf paˈtaħ					
-ֳ	o	ŏ			o̞	vowel point	חֲטַף קָמָץ	ħaˈtaf kaˈmats					
-ִ	i	i			i	vowel point	חִירִיק‬	χiˈʁik					
-ֵ	e	e			e̞ e̞j	vowel point	צֵירֵי‬	tseˈɾe					
-ֶ	e	ɛ			e̞	vowel point	סֶגּוֹל	sɛˈɡol					
-ַ	a	a			ä	vowel point	פַּתַח	paˈtaħ					
-ָ	a	ɑ			ä o̞	vowel point	קָמַץ	kaˈmats					
-ֹ	o	o			o̞	vowel point	חוֹלָם‬	ħoˈlam					
-ֺ	o	ȯ			o̞	vowel point		ħoˈlam ħaˈser					
-ֻ	u	u			u	vowel point	קֻבּוּץ‬	kuˈbuts					
-													
-													
-ֽ	:¶	ː			ː					a			
-													
-													
-ּ	/	̣				hard consonant diacritic	דָּגֵשׁ	dagesh/mappiq					
-ֽ						biblical stress marker	מֶתֶג	meteg		l			
-־	-	-				hyphen	מַקָּף‬	maqaf					
-ֿ						fricative indicator	רפה	rafe					
-׀						word separator		paseq					
-ׁ	/	̎				shin dot							
-ׂ	/	̍				sin dot							
-׃						biblical end of verse	סוֹף פָּסוּק	sof pasuq					
-״	+	¨				acronym indicator	גֵּרְשַׁיִם	gershayim					
-׳	/	´				pronunciation change/initialism/numeral indicator	גֵּרֶשׁ	ˈɡeʁeʃ					
-													
-													
-₪	±	¤				shekel							
-													
-													
-													
-\u200C	=	ₓ					zwnj						
-\u200D	=	₊					zwj						
-\u200E	=	ˡʳᵐ					lrm						
-\u200F	=	ʳˡᵐ					rlm						
-\u061C	=	ᵃˡᵐ					alm						
-\u2067	=	ʳˡⁱ					rli						
-\u2066	=	ˡʳⁱ					lri						
-\u202B	=	ʳˡᵉ					rle						
-\u202A	=	ˡʳᵉ					lre						
-\u2069	=	ᵖᵈⁱ					pdi						
-\u202C	=	ᵖᵈᶠ					pdf						
-													
-													
-֑						cantillation mark							
-֒						cantillation mark							
-֓						cantillation mark							
-֔						cantillation mark							
-֕						cantillation mark							
-֖						cantillation mark							
-֗						cantillation mark							
-֘						cantillation mark							
-֙						cantillation mark							
-֚						cantillation mark							
-֛						cantillation mark							
-֜						cantillation mark							
-֝						cantillation mark							
-֞						cantillation mark							
-֟						cantillation mark							
-֠						cantillation mark							
-֡						cantillation mark							
-֢						cantillation mark							
-֣						cantillation mark							
-֤						cantillation mark							
-֥						cantillation mark							
-֦						cantillation mark							
-֧						cantillation mark							
-֨						cantillation mark							
-֩						cantillation mark							
-֪						cantillation mark							
-֫						cantillation mark							
-֬						cantillation mark							
-֭						cantillation mark							
-֮						cantillation mark							
-֯						cantillation mark							
-`
-
-var cols = {
-"transLoc": 2,
-"ipaLoc": 5,
-"typeLoc": 6,
-"nameLoc": 8,
-"nnameLoc": 7,
-"numLoc": 9,
-"statusLoc": 10,
-"othertranscriptions": [[4, 'Israeli Academy']]
-}
-replaceStuff('Israeli Hebrew', 'israelihebrew', spreadsheet, '', 'he', 'rtl', cols)
-
-</script>
-
+replaceStuff('Israeli Hebrew', 'israelihebrew', spreadsheet, '', 'he', 'rtl', cols, false)
+</script> 
 
 
 
@@ -1712,7 +1579,7 @@ replaceStuff('Israeli Hebrew', 'israelihebrew', spreadsheet, '', 'he', 'rtl', co
 <div id="panel" style="display:none"></div>
 
 <div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/hebrew/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-01-05  9:21<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2019-07-14  11:44<!-- #EndDate --> 
   </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bhebrew%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fhebrew%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 <!-- Uncomment this code to get a list of all character names for the file names-subset.js 
