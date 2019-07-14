@@ -126,7 +126,7 @@ function listCharsWithNotes () {
 	var charlist = document.querySelectorAll("div > div.notes, .usedby")
 	var sortedcharlist = []
 	for (let i=0; i<charlist.length; i++) {
-		//if (charlist[i].querySelector('.letter') !== null) 
+		if (charlist[i].querySelector('.letter') !== null || charlist[i].querySelector('.usedby') !== null) 
 		sortedcharlist.push(parseInt(charlist[i].parentNode.id.substr(4), 16))
 		}
 	const uniqueSet = new Set(sortedcharlist)
