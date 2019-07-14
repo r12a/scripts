@@ -78,7 +78,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->5 January, 2019<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->14 July, 2019<!-- #EndDate -->
 &bull; tags <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="http://r12a.github.io/blog/?tag=cyrillic" title="Show all blog posts tagged with 'cyrillic'">cyrillic</a></p>
 <section>
    <p>This page lists characters in the following Unicode  blocks and provides information about them. </p>
@@ -90,8 +90,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <li><a href="../../uniview/?block=cyrillic_extended-c" target="_blank">Cyrillic Extended-C</a></li>
    </ul>
    <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-<p>For a summary of the script and its use in  writing systems, see the  <a class="linkHighlight" href="/scripts/cyrillic/">Cyrillic script summary</a>.   For similar information related to other scripts, see <a href="/r12a.github.io/doclist#charnotes">this list</a>.</p>
-<p style="text-align: start;">Languages using Cyrillic include: Abkhaz, Adyghe, Southern Altai, Belorussian, Bosnian, Bulgarian, Chechen, Church Slavonic, Even, Evenki, Kazakh, Kyrgyz, Kabardian, Khakas, Komi-Permyak, Macedonian, Mongolian, Nanai, Nganasan, Ossetian, Orok, Russian, Yakut, Serbian, Shor, Turkmen, Tajik, Tatar, Tuvan, Ukrainian, Uzbek, Tundra Yukaghir (32).</p>
+<p style="text-align: start;">For details about how the script works, see <a class="linkHighlight" href="index">Cyrillic/Russian</a>. For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Cyrl">Script links pages</a>.</p>
 <p>Find
 <input type="text" 
 onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/>
@@ -5616,99 +5615,14 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 
+
+
+<script src="../../shared/scriptdb/russian.js">  </script>
+
 <script>
-var spreadsheet = `
-а	a	a	a	a	a	vowel	a	а			А
-б	b	b	b	b	b bʲ	consonant	bɛ	бэ			Б
-в	v	v	v	v	v vʲ	consonant	vɛ	вэ			В
-г	g	g	g	g	ɡ ɡʲ	consonant	ɡɛ	гэ			Г
-д	d	d	d	d	d dʲ	consonant	dɛ	дэ			Д
-е	e	e	e	e	je ʲe e	vowel	je	е			Е
-ж	z	ʐ	z	ž	ʐ	consonant	ʐɛ	жэ			Ж
-з	z	z	z	z	z zʲ	consonant	zɛ	зэ			З
-и	i	i	i	i	i ʲi ɨ	vowel	i	и			И
-й	y	y	ĭ	ī	j	vowel	i kratkəjɪ	и краткое			Й
-к	k	k	k	k	k kʲ	consonant	ka	ка			К
-л	l	l	l	l	ɫ lʲ	consonant	ɛlʲ	эль			Л
-м	m	m	m	m	m mʲ	consonant	ɛm	эм			М
-н	n	n	n	n	n nʲ	consonant	ɛn	эн			Н
-о	o	o	o	o	o	vowel	o	о			О
-п	p	p	p	p	p pʲ	consonant	pɛ	пэ			П
-р	r	r	r	r	r rʲ	consonant	ɛr	эр			Р
-с	s	s	s	s	s sʲ	consonant	ɛs	эс			С
-т	t	t	t	t	t tʲ	consonant	tɛ	тэ			Т
-у	u	u	u	u	u	vowel	u	у			У
-ф	f	f	f	f	f fʲ	consonant	ɛf	эф			Ф
-х	x	x	h	h	x xʲ	consonant	xa	ха			Х
-ц	t	ʦ	ch	c	ʦ	consonant	ʦɛ	цэ			Ц
-ч	t	ʨ	ch	č	ʨ	consonant	ʨɛ	чэ			Ч
-ш	s	ʂ	s	š	ʂ	consonant	ʂa	шæ			Ш
-щ	s	ʂ̂	s	ŝ	ɕɕ ɕʨ	consonant	ɕɕæ	ща			Щ
-ъ	"	ʺ	"	ʺ 		hard sign	tvʲɵrdɨj znak	твёрдый знак			Ъ
-ы	i	ɨ	y	y	ɨ	vowel	ɨ	ы			Ы
-ь	ʹ	ʹ		ʹ	ʲ	soft sign	ˈmʲæxʲkʲɪj znak	мягкий знак			Ь
-э	e	ɛ	e	è 	ɛ	vowel	ɛ	э			Э
-ю	j	jᵘ	u	û	ju	vowel	ju	ю			Ю
-я	j	jᵃ	a	â	ja	vowel	ja	я			Я
-											
-А	a	A	a	a	a	vowel	a	а		а	
-Б	b	B	b	b	b bʲ	consonant	bɛ	бэ		б	
-В	v	V	v	v	vvʲ	consonant	vɛ	вэ		в	
-Г	g	G	g	g	ɡɡʲ	consonant	ɡɛ	гэ		г	
-Д	d	D	d	d	d dʲ	consonant	dɛ	дэ		д	
-Е	e	E	e	e	je ʲe e	vowel	je	е		е	
-Ж	z	ʐ	z	ž	ʐ	consonant	ʐɛ	жэ		ж	
-З	z	Z	z	z	z zʲ	consonant	zɛ	зэ		з	
-И	i	I	i	i	i ʲi ɨ	vowel	i	и		и	
-Й	y	Y	ĭ	ī	j	vowel	i kratkəjɪ	и краткое		й	
-К	k	K	k	k	k kʲ	consonant	ka	ка		к	
-Л	l	L	l	l	ɫ lʲ	consonant	ɛlʲ	эль		л	
-М	m	M	m	m	m mʲ	consonant	ɛm	эм		м	
-Н	n	N	n	n	n nʲ	consonant	ɛn	эн		н	
-О	o	O	o	o	o	vowel	o	о		о	
-П	p	P	p	p	p pʲ	consonant	pɛ	пэ		п	
-Р	r	R	r	r	r rʲ	consonant	ɛr	эр		р	
-С	s	S	s	s	s sʲ	consonant	ɛs	эс		с	
-Т	t	T	t	t	t tʲ	consonant	tɛ	тэ		т	
-У	u	U	u	u	u	vowel	u	у		у	
-Ф	f	F	f	f	f fʲ	consonant	ɛf	эф		ф	
-Х	x	X	h	h	x xʲ	consonant	xa	ха		х	
-Ц	t	ʦ	ch	c	ʦ	consonant	ʦɛ	цэ		ц	
-Ч	t	ʨ	ch	č	ʨ	consonant	ʨɛ	чэ		ч	
-Ш	s	Ʂ	s	š	ʂ	consonant	ʂa	шæ		ш	
-Щ	s	Ʂ̂	s	ŝ	ɕɕ ɕʨ	consonant	ɕɕæ	ща		щ	
-Ъ	"	ʺ	"	ʺ 		hard sign	tvʲɵrdɨj znak	твёрдый знак		ъ	
-Ы	i	Ɨ	y	y	ɨ	vowel	ɨ	ы		ы	
-Ь	ʹ	ʹ		ʹ	ʲ	soft sign	ˈmʲæxʲkʲɪj znak	мягкий знак		ь	
-Э	e	Ɛ	e	è 	ɛ	vowel	ɛ	э		э	
-Ю	j	Û	u	û	ju	vowel	ju	ю		ю	
-Я	j	Â	a	â	ja	vowel	ja	я		я	
-`
-
-var cols = {
-"transLoc": 2,
-"ipaLoc": 5,
-"typeLoc": 6,
-"nnameLoc": 8,
-"nameLoc": 7,
-"numLoc": 0,
-"statusLoc": 9,
-"dvowel": 0,
-"ivowel": 0,
-"subj":0,
-"ltone":0,
-"htone":0,
-"numLoc":0,
-"meaning":0,
-"shape":0,
-"lc":10,
-"uc":11,
-
-"othertranscriptions": [[4, 'ISO 9:1995']]
-}
 replaceStuff('Russian', 'russian', spreadsheet, '', 'ru', '', cols, false)
-
 </script> 
+
 
 
 
@@ -5719,7 +5633,7 @@ replaceStuff('Russian', 'russian', spreadsheet, '', 'ru', '', cols, false)
 
 
 <div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/cyrillic/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-01-05  8:21<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2019-07-14  10:20<!-- #EndDate --> 
   </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bcyrillic%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fcyrillic%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
