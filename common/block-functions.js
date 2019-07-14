@@ -123,11 +123,14 @@ function listCharsWithNotes () {
 	// makes a list of which characters have notes attached, list is space-separated, and mostly decimal number pairs
 	// however a single character that is not part of a series is represented by just that decimal codepoint
 	var charliststr = ''
-	var charlist = document.querySelectorAll("div > div.notes")
+	var charlist = document.querySelectorAll("div > div.notes, .usedby")
 	var sortedcharlist = []
 	for (let i=0; i<charlist.length; i++) {
-		if (charlist[i].querySelector('.letter') !== null) sortedcharlist.push(parseInt(charlist[i].parentNode.id.substr(4), 16))
+		//if (charlist[i].querySelector('.letter') !== null) 
+		sortedcharlist.push(parseInt(charlist[i].parentNode.id.substr(4), 16))
 		}
+	const uniqueSet = new Set(sortedcharlist)
+	sortedcharlist = [...uniqueSet]
 	sortedcharlist.sort()
     sortedcharlist.push('')
 	charliststr = 'Characters with notes: '
