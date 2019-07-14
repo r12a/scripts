@@ -1,51 +1,52 @@
 var scriptNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr', 'laoo', 'lana', 'lisu', 'mand', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'taml', 'tavt', 'thaa', 'thai', 'tibt', 'tfng'])
 
 var scriptNotes= {
-    'armn':[['Armenian script summary','armenian/']],
-    'arab':[['Arabic script summary','arabic/'], 
-			['Urdu writing system', 'arabic/urdu'], 
-			['Uighur writing system', 'arabic/uighur'], 
-			['Kashmiri in Arabic script', 'arabic/kashmiri']
+    'armn':[['Armenian','armenian/']],
+    'arab':[['Arabic','arabic/'], 
+			['Urdu', 'arabic/urdu'], 
+			['Uighur', 'arabic/uighur'], 
+			['Kashmiri', 'arabic/kashmiri']
 			], 
-    'bali':[['Balinese script summary', 'balinese/']], 
-    'beng':[['Bengali script summary', 'bengali/']],
+    'bali':[['Balinese', 'balinese/']], 
+    'beng':[['Bengali/Bangla', 'bengali/']],
     'bugi':[['Buginese script summary', 'buginese/']],
-    'cher':[['Cherokee script summary', 'cherokee/']],
-    'cyrl':[['Cyrillic script summary', 'cyrillic/']],
-    'deva':[['Devanagari script summary', 'devanagari/'], 
-			['Kashmiri in Devanagari', 'devanagari/kashmiri']
+    'cher':[['Cherokee', 'cherokee/']],
+    'cyrl':[['Cyrillic/Russian', 'cyrillic/']],
+    'deva':[['Devanagari/Hindi', 'devanagari/'], 
+			['Kashmiri', 'devanagari/kashmiri']
 			],
-    'ethi':[['Ethiopic script summary', 'ethiopic/']],
-    'geor':[['Georgian script summary', 'georgian/']],
-    'grek':[['Greek script summary', 'greek/']],
-    'gujr':[['Gujarati script summary', 'gujarati/']],
-    'guru':[['Gurmukhi script summary', 'gurmukhi/']],
-    'hani':[['Han script summary', 'han/']],
-    'hang':[['Hangul script summary', 'hangul/']],
-    'hebr':[['Hebrew script summary', 'hebrew/']],
-    'java':[['Javanese script summary', 'javanese/']],
-    'jpan':[['Japanese writing system summary', 'kana/']],
-    'khmr':[['Khmer script summary script summary', 'khmer/']],
-    'laoo':[['Lao script summary', 'lao/']],
-    'lana':[['Tai Tham script summary', 'taitham/'], 
-			['Northern Thai writing system', 'taitham/northernthai']],
+    'ethi':[['Ethiopic', 'ethiopic/']],
+    'geor':[['Georgian', 'georgian/']],
+    'grek':[['Greek', 'greek/']],
+    'gujr':[['Gujarati', 'gujarati/']],
+    'guru':[['Gurmukhi/Punjabi', 'gurmukhi/']],
+    'hani':[['Han/Chinese', 'han/']],
+    'hang':[['Hangul', 'hangul/']],
+    'hebr':[['Hebrew', 'hebrew/']],
+    'java':[['Javanese', 'javanese/']],
+    'jpan':[['Japanese', 'kana/']],
+    'khmr':[['Khmer', 'khmer/']],
+    'laoo':[['Lao', 'lao/']],
+    'lana':[['Tai Tham/Tai Khün', 'taitham/'], 
+			['Northern Thai', 'taitham/northernthai']],
     'latn':[['Hausa (boko)', 'latin/hausa']],
-    'lisu':[['Lisu script summary', 'lisu/']],
-    'mand':[['Mandaic script summary', 'mandaic/']],
-    'mlym':[['Malayalam script summary', 'malayalam']],
-    'mymr':[['Myanmar script summary', 'myanmar']],
-    'nkoo':[["N'Ko script summary", 'nko']],
-    'sinh':[['Sinhala script summary', 'sinhala/']],
-    'sund':[['Sundanese script summary', 'sundanese/']],
-    'syrc':[['Syriac script summary', 'syriac/']],
-    'tale':[['Tai Le script summary', 'taile/']],
-    'talu':[['New Tai Lü script summary', 'newtailue/']],
-    'taml':[['Tamil script summary', 'tamil/']],
-    'tavt':[['Tai Viet script summary', 'taiviet/']],
-    'thaa':[['Thaana script summary', 'thaana/']],
-    'thai':[['Thai script summary', 'thai/']],
-    'tibt':[['Tibetan script summary', 'tibetan/']],
-    'tfng':[['Tifinagh script summary', 'tifinagh/']]
+    'lisu':[['Lisu', 'lisu/']],
+    'mand':[['Mandaic', 'mandaic/']],
+    'mlym':[['Malayalam', 'malayalam']],
+    'mymr':[['Myanmar/Burmese', 'myanmar']],
+    'nkoo':[["N'Ko", 'nko']],
+    'sinh':[['Sinhala', 'sinhala/']],
+    'sund':[['Sundanese', 'sundanese/']],
+    'syrc':[['Syriac', 'syriac/']],
+    'tale':[['Tai Le/Tai Nüa', 'taile/']],
+    'talu':[['New Tai Lü', 'newtailue/']],
+    'taml':[['Tamil', 'tamil/']],
+    'tavt':[['Tai Viet/Tai Dam', 'taiviet/']],
+    'thaa':[['Thaana/Dhivehi', 'thaana/']],
+    'thai':[['Thai', 'thai/']],
+    'tibt':[['Tibetan', 'tibetan/']],
+    'tfng':[['Tifinagh/Tamazight', 'tifinagh/']],
+    'vaii':[['Vai', 'vai/']],
     }
 
 var charNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr','laoo', 'lana', 'maka', 'mand', 'mlym', 'mong', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'tale', 'talu', 'tavt', 'taml', 'thaa', 'thai', 'tibt', 'tfng', 'vaii'])
@@ -911,8 +912,7 @@ cakm:{ script:"Chakma", code:"Cakm", name:"", dates:"8thC – today", start:"700
   
 deva:{ script:"Devanagari", code:"Deva", name:"", dates:"11thC – today", start:"1100", end:"", origin:"South Asia", current_usage:"",
 	info:{ 		wikipedia:"Devanagari", omniglot:"devanagari" }, 
-	local: [	{ name:"Introduction to Indic Scripts", url:"indic-overview" },
-				{ name:"Kashmiri in devanagari", url:"devanagari/kashmiri" }
+	local: [	{ name:"Introduction to Indic Scripts", url:"indic-overview" }
 				],
 	unicode:{ 	}, 
 	charts:[	"Devanagari", "Devanagari Extended", "Vedic Extensions" ],
@@ -2294,8 +2294,8 @@ sogd:{ script:"Sogdian", code:"Sogd", name:"", dates:"7thC – 14thC", start:"60
 	other:[		
 				]
 	},
-	   
-	   
+
+
 }
 
 
