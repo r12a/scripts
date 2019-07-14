@@ -75,7 +75,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->24 January, 2019<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->14 July, 2019<!-- #EndDate -->
 &bull; tags <a href="http:/.net/blog/index.php?tag=balinese" title="Show all blog posts tagged with 'balinese'">balinese</a>, <a href="http:/.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 <section>
    <p>This page lists characters in the following Unicode  block and provides information about them. </p>
@@ -83,8 +83,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <li><a href="../../uniview/?block=balinese" target="_blank">Balinese</a></li>
    </ul>
    <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-<p>For a summary of the script and its use in  writing systems, see the page <a class="linkHighlight" href="/scripts/balinese/">Balinese script summary</a>.   For similar information related to other scripts, see <a href="/r12a.github.io/doclist#charnotes">this list</a>.</p>
-<p><span style="text-align: start;">We have usage data for no languages that use the Balinese script</span>.</p>
+<p>For details about how the script works, see  <a class="linkHighlight" href="index">Balinese</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Bali">Script links pages</a>.</p>
 <p>Find <input type="text" onChange="var hex=this.value;if (hex!=''){while(hex.length<4){hex='0'+hex;}document.location='#char'+hex.toUpperCase();}"/></p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -1689,171 +1688,12 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 
+
+
+<script src="../../shared/scriptdb/balinese.js">  </script>
+
 <script>
-var spreadsheet = `
-ᬓ	k	k	k	consonant				ᬓ ᭄ᬓ
-ᬔ	K	K		consonant			very rare	ᬔ ᭄ᬔ
-ᬕ	g	g	g	consonant				ᬕ ᭄ᬕ
-ᬗ	n	ŋ	ŋ	consonant				ᬗ ᭄ᬗ
-ᬘ	c	c	c	consonant				ᬘ ᭄ᬘ
-ᬙ	C	ĉ		consonant			very rare	ᬙ ᭄ᬙ
-ᬚ	d	ʤ	ʤ	consonant				ᬚ ᭄ᬚ
-ᬛ	D	ʤ̇	ʤ	consonant			one word only	ᬛ ᭄ᬛ
-ᬜ	n	ɲ	ɲ	consonant				ᬜ ᭄ᬜ
-ᬞ	T¶	T		consonant				ᬞ ᭄ᬞ
-ᬟ	D	D		consonant				ᬟ ᭄ᬟ
-ᬠ	D	Ḋ		consonant				ᬠ ᭄ᬠ
-ᬢ	t	t	t	consonant				ᬢ ᭄ᬢ
-ᬤ	d	d	d	consonant				ᬤ ᭄ᬤ
-ᬦ	n	n	n	consonant				ᬦ ᭄ᬦ
-ᬧ	p	p	p	consonant				ᬧ ᭄ᬧ
-ᬩ	b	b	b	consonant				ᬩ ᭄ᬩ
-ᬫ	m	m	m	consonant				ᬫ ᭄ᬫ
-ᬬ	y	y	j	consonant				ᬬ ᭄ᬬ
-ᬭ	r	r	r	consonant	ra / guwung			ᬭ ᭄ᬭ
-ᬮ	l	l	l	consonant				ᬮ ᭄ᬮ
-ᬯ	w	w	w	consonant				ᬯ ᭄ᬯ
-ᬲ	S	ṡ̂		consonant				ᬲ ᭄ᬲ
-ᬳ	h	h	h ∅	consonant				ᬳ ᭄ᬳ
-								
-								
-ᬖ	G	ĝ		consonant	ga gora		kawi	ᬖ ᭄ᬖ
-ᬝ	T	t̂		consonant	ta latik		kawi	ᬝ ᭄ᬝ
-ᬡ	N	n̂		consonant	na rambat		kawi	ᬡ ᭄ᬡ
-ᬣ	T	ṫ̂		consonant	ta tawa		kawi	ᬣ ᭄ᬣ
-ᬥ	D	d̂		consonant	da madu		kawi	ᬥ ᭄ᬥ
-ᬨ	P	p̂		consonant	pa kapal		kawi	ᬨ ᭄ᬨ
-ᬪ	B	b̂		consonant	ba kembang		kawi	ᬪ ᭄ᬪ
-ᬰ	S	ŝ		consonant	sa saga		kawi	ᬰ ᭄ᬰ
-ᬱ	s	s	s	consonant	sa sapa		kawi	ᬱ ᭄ᬱ
-								
-								
-ᭅ								
-ᭆ								
-ᭇ								
-ᭈ								
-ᭉ								
-ᭊ								
-ᭋ								
-								
-								
-ᬋ	R	r̥̣	rə	vocalic	ra repa			ᬋ ᭄ᬋ
-ᬌ	R	r̥̣̄	rəː	vocalic				
-ᬍ	L	l̥̣	lə	vocalic				
-ᬎ	L	l̥̣̄	ləː	vocalic				
-ᬺ	R	r̥	rə	vowel sign/semi-vowel/medial consonant	guwung macelek			
-ᬻ	R	r̥̄	rəː	vowel sign/semi-vowel/medial consonant	guwung macelek tedong			
-ᬼ	L	l̥	lə	vocalic				
-ᬽ	L	l̥̄	ləː	vocalic				
-								
-								
-ᬂ	n	ŋ̇̽	-ŋ	final consonant	cecek			
-ᬃ	r	r̽	-r	final consonant	surang			
-ᬄ	h	h̽	-h	final consonant	bisah			
-ᬀ	m	m̽	-m	final consonant	ulu ricem			
-ᬁ	n	ŋ̽	-ŋ	final consonant	ulu candra			
-								
-								
-᬴	/	̣		nukta	rerekan			
-᭄	*	͓		virama	adegadeg			
-								
-								
-ᬅ	A	ạ	a	independent vowel	a kara			
-ᬆ	A	ɑ̣̄	ɑː	independent vowel	a kara tedong			
-ᬇ	I	ị	i	independent vowel	i kara			
-ᬈ	I	ị̄	iː 	independent vowel	i kara tedong			
-ᬉ	U	ụ	u	independent vowel	u kara			
-ᬊ	U	ụ̄	uː	independent vowel	u kara tedong			
-ᬏ	E	ẹ	e ɛ	independent vowel	e kara			
-ᬐ	A	ạʲ	aːi	independent vowel	airsania			
-ᬑ	O	ọ	o ɔ	independent vowel	o kara			
-ᬒ	A	ạʷ	aːu	independent vowel	o kara tedong			
-								
-								
-ᬵ	a	ɑ̄	ɑː	vowel sign	tedong			
-ᬶ	i	i	i	vowel sign	ulu			
-ᬷ	i	ī	iː	vowel sign	ulu-sari			
-ᬸ	u	u	u	vowel sign	suku			
-ᬹ	u	ū	uː	vowel sign	suku-ilut			
-ᬾ	e	e	e ɛ	vowel sign	taleng			
-ᬿ	a	aʲ	aːi	vowel sign	taleng-repa			
-ᭀ	o	o	o ɔ	vowel sign	taleng tedong			
-ᭁ	a	aʷ	aːu	vowel sign	taleng-repa tedong			
-ᭂ	e	ə 	ə	vowel sign	pepet			
-ᭃ	e	ə̄	əː	vowel sign	pepet tedong			
-								
-								
-᭐	0	0		digit	bindu/windu			
-᭑	1	1		digit	siki/besik			
-᭒	2	2		digit	kalih/dua			
-᭓	3	3		digit	tiga/telu			
-᭔	4	4		digit	papat			
-᭕	5	5		digit	lima			
-᭖	6	6		digit	nem			
-᭗	7	7		digit	pitu			
-᭘	8	8		digit	kutus			
-᭙	9	9		digit	sanga/sia			
-								
-								
-᭞	,	,		~comma	carik			
-᭟	.	.		~full stop	carik pareren			
-᭝	:	:		colon	carik pamungkah			
-᭠	-	-		line-breaking hyphen	pameneng			
-᭚	#	ᵖ>		text start symbol	panten			
-᭛	#	ʳ>		text start symbol	pamada			
-᭜	#	°		punctuation				
-								
-								
-								
-								
-								
-ᬚ᬴	z	z	z	z				
-ᬧ᬴	f	f	f	f				
-ᬯ᬴	v	v	v	v				
-ᬓ᬴	x	x	x	x				
-ᬳ᬴	h	ħ	ħ	ħ				
-ᬕ᬴	y	ɣ	ɣ	ɣ				
-ᬗ᬴	{	ʕ	ʕ	ʕ				
-ᬤ᬴								
-								
-								
-\u1B05\u1B35	A	ɑ̣̄	ɑː		ᬆ			
-\u1B07\u1B35	I	ị̄	iː 		ᬈ			
-\u1B09\u1B35	U	ụ̄	uː		ᬊ			
-\u1B0B\u1B35	R	r̥̣̄	rəː		ᬌ			
-\u1B0D\u1B35	L	l̥̣̄	ləː		ᬎ			
-\u1B11\u1B35	A	ạʷ	aːu		ᬒ			
-\u1B3A\u1B35	R	r̥̄	rəː		ᬻ			
-\u1B3C\u1B35	L	l̥̄	ləː		ᬽ			
-\u1B3E\u1B35	o	o	o ɔ		ᭀ			
-\u1B3F\u1B35	a	aʷ	aːu		ᭁ			
-\u1B42\u1B35	e	ə̄	əː 		ᭃ			
-`
-
-var cols = {
-"transLoc": 2,
-"ipaLoc": 3,
-"typeLoc": 4,
-"nnameLoc": 6,
-"nameLoc": 5,
-"numLoc": 0,
-"statusLoc": 7,
-"dvowel": 0,
-"ivowel": 0,
-"subj":0,
-"ltone":0,
-"htone":0,
-"numLoc":9,
-"meaning":0,
-"shape":8,
-"lc":0,
-"uc":0,
-"transcription":0,
-
-//"othertranscriptions": [[4, 'ISO 9985']]
-}
 replaceStuff('Balinese', 'balinese', spreadsheet, '', 'ban', '', cols, false)
-
 </script> 
 
 
@@ -1864,7 +1704,7 @@ replaceStuff('Balinese', 'balinese', spreadsheet, '', 'ban', '', cols, false)
 <div id="panel" style="display:none"></div>
 
 <div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/balinese/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-01-24  18:15<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2019-07-14  8:42<!-- #EndDate --> 
   </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bbalinese%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fbalinese%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 <script>
