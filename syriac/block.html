@@ -78,7 +78,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->5 January, 2019<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->14 July, 2019<!-- #EndDate -->
 &bull; tags <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="https://r12a.github.io/blog/?tag=syriac" title="Show all blog posts tagged with 'syriac'">syriac</a></p>
 <section>
    <p>This page lists characters in the following Unicode  block and provides information about them. </p>
@@ -86,8 +86,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <li><a href="../../uniview/?block=syriac" target="_blank">Syriac</a></li>
    </ul>
 <p>This is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. In particular, use of punctuation and diacritics in Assyrian Neo-Aramaic is not fully clear to me yet, and the information here may need some adjustment.</p>
-   <p>For information about the Syriac script and its features in general, see the  <a href="index" class="linkHighlight">Syriac script summary</a>.  For similar information related to other scripts, see <a href="https://r12a.github.io/r12a.github.io/doclist#charnotes">this list</a>.</p>
-<p>Languages using Syriac include Assyrian Neo-Aramaic.</p>
+   <p>For details about how the script works, see <a class="linkHighlight" href="index">Syriac</a>. For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Syrc">Script links pages</a>.</p>
 <p>Find
 <input type="text" 
 onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/>
@@ -1652,7 +1651,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/L2/L1998/98050-syriac-proposal.pdf">[Nelson]</a> p44</p>
-</p>
+
 </div>
 </div>
 
@@ -1749,160 +1748,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 
+
+
+<script src="../../shared/scriptdb/syriac.js">  </script>
+
 <script>
-var spreadsheet = `
-ܐ	}	ʾ	ʔ ɑ	} a	ʔ	ʾ ȃ	consonant	ʾālap̄	ܐܠܦ	1
-ܒ	b	b	b v w	b	b	b ḇ	consonant	bēṯ	ܒܝܬ	2
-ܓ	g	g	ɡ ɣ	g	g	g ḡ ǧ	consonant	gāmal	ܓܡܠ	3
-ܕ	d	d	d ð	d	d	d ḏ	consonant	dālaṯ	ܕܠܬ	4
-ܗ	h	h	h	h	h	h	consonant	hē	ܗܐ	5
-ܘ	w	w	w u o	w	w	w û ô	consonant	waw	ܘܘ	6
-ܙ	z	z	z ʒ	z	z	z ž	consonant	zayn	ܙܝܢ	7
-ܚ	h	ħ	ħ x χ	h	ħ	ḥ	consonant	ḥēṯ	ܚܝܬ	8
-ܛ	t	tˤ	tˤ	t	tˤ	ṭ	consonant	ṭēṯ	ܛܝܬ	9
-ܝ	y	y	j i e	y	j	y î	consonant/mater lectionis	yōḏ	ܝܘܕ	10
-ܟ	k	k	k x ʧ	k	k	k ḵ č	consonant	kāp̄	ܟܦ	20
-ܠ	l	l	l	l	l	l	consonant	lāmaḏ	ܠܡܕ	30
-ܡ	m	m	m	m	m	m	consonant	mīm	ܡܝܡ	40
-ܢ	n	n	n	n	n	n	consonant	nūn	ܢܘܢ	50
-ܣ	s	s	s	s	s	s	consonant	semkaṯ	ܣܡܟܬ	60
-ܥ	{	ʿ	ʕ	{	ʕ	ʿ	consonant	ʿē	ܥܐ	70
-ܦ	p	p	p f w	p	p	p p̄	consonant	pē	ܦܐ	80
-ܨ	s	sˤ	sˤ	s	sˤ	ṣ	consonant	ṣāḏē	ܨܕܐ	90
-ܩ	q	q	q	q	q	q	consonant	qōp̄	ܩܘܦ	100
-ܪ	r	r	r	r	r	r	consonant	rēš	ܪܝܫ	200
-ܫ	s	ʃ 	ʃ ʒ	s	ʃ 	š ẑ	consonant	šīn	ܫܝܢ	300
-ܬ	t	t	t θ	t	t	t ṯ	consonant	taw	ܬܘ	400
-										
-										
-ܖ		ḋ	d ð		d	d ḏ	alternative consonant	dālaṯ rish		
-ܞ	j	jʰ		j	jʰ	jh	ligature			
-ܤ	s	ṡ		s	ṡ	s	consonant			
-ܧ	p	ṗ			p	p	consonant			
-										
-										
-ܔ							garshuni letter			
-ܜ							garshuni letter			
-ً							arabic diacritic			
-ٌ							arabic diacritic			
-ٍ							arabic diacritic			
-َ							arabic diacritic			
-ُ							arabic diacritic			
-ِ							arabic diacritic			
-ّ							arabic diacritic			
-ْ							arabic diacritic			
-ٰ							arabic diacritic			
-ٕ							arabic diacritic			
-ٔ							arabic diacritic			
-ٓ							arabic diacritic			
-										
-										
-ܭ			v		v		consonant			
-ܮ			ɣ		ɣ		consonant			
-ܯ			ð		ð		consonant			
-										
-										
-ݍ			ʒ		ʒ		consonant			
-ݎ			x		x		consonant			
-ݏ			f		f		consonant			
-										
-										
-ܲ	a	a	a	a	a	a	vowel diacritic	pṯāḥā	ܦܬ݂ܳܚܳܐ‎	
-ܵ	a	ā	ɑ	a	ɑ	ā	vowel diacritic	zqāp̄ā	ܙܩܵܦ݂ܵܐ‎	
-ܸ	e	e	ɛ ɪ e	e i e	ɛ ɪ e	e	vowel diacritic	rḇāṣā ʾărīḵā / zlāmā pšīqā	ܪܒ݂ܵܨܵܐ ܐܲܪܝܼܟ݂ܵܐ‎ / ܙܠܵܡܵܐ ܦܫܝܼܩܵܐ‎	
-ܹ	e	ē	e	e	e	ē	vowel diacritic	rḇāṣā karyā / zlāmā qašyā	ܪܒ݂ܵܨܵܐ ܟܲܪܝܵܐ‎ / ܙܠܵܡܵܐ ܩܲܫܝܵܐ‎	
-ܼ	i	i	i u	i	i	i	vowel diacritic	ḥbāṣā		
-ܿ	o	o	o	o	o	o	vowel diacritic	ʿṣāṣā rwīḥā / rwāḥā	ܥܨܵܨܵܐ ܪܘܝܼܚܵܐ‎ / ܪܘܵܚܵܐ‎	
-										
-										
-ܰ	a	ȧ	a	a	a	ȧ	vowel diacritic	pṯāḥā	ܦܬ݂ܳܚܳܐ‎	
-ܱ	a	ạ	a	a	a	ạ	vowel diacritic	pṯāḥā	ܦܬ݂ܳܚܳܐ‎	
-ܳ	a	å	ɑ	a	ɑ	å	vowel diacritic	zqāp̄ā	ܙܩܵܦ݂ܵܐ‎	
-ܴ	a	ḁ	ɑ	a	ɑ	ḁ	vowel diacritic	zqāp̄ā	ܙܩܵܦ݂ܵܐ‎	
-ܶ	e	ė	ɛ e	e e	ɛ e	ė	vowel diacritic	rḇāṣā	ܪܒ݂ܵܨܵܐ	
-ܷ	e	ẹ	ɛ e	e e	ɛ e	ẹ	vowel diacritic	rḇāṣā	ܪܒ݂ܵܨܵܐ	
-ܺ	i	ï	i	i	i	ï	vowel diacritic	ḥḇāṣā	ܚܒ݂ܵܨܵܐ‎	
-ܻ	i	ị	i	i	i	ị	vowel diacritic	ḥḇāṣā	ܚܒ݂ܵܨܵܐ‎	
-ܽ	u	ů	u	u	u	ů	vowel diacritic	ṣāṣā	ܥܨܳܨܳܐ‎	
-ܾ	u	ụ	u	u	u	ụ	vowel diacritic	ṣāṣā	ܥܨܳܨܳܐ‎	
-ّ	o	ȯ	o	o	o	ȯ	vowel diacritic			
-										
-										
-̃							maǧliyana			
-̰							maǧliyana			
-݁							hard-sound marker	qūššāyā	ܩܘܫܝܐ	
-݂		̣					hard/soft sound marker			
-̮							fricative indicator			
-݇							silent letter marker			
-݈							silent letter marker			
-̈	[	̋		[	̋	\u030B	syame			
-̇							disambiguation mark			
-̣							disambiguation mark			
-݀	[	ʺ		[	ʺ	ʺ	feminine marker			
-										
-										
-̄							phonological marker			
-̠							phonological marker			
-̊							hard/soft sound marker			
-̥							hard/soft sound marker			
-̤							phonological marker			
-										
-݃							accent mark			
-݄							accent mark			
-݅							diacritic			
-݆							diacritic			
-݉							music mark			
-݊							diacritic cross			
-ܑ							aleph			
-										
-										
-										
-܀				[	¶		end of paragraph			
-܁		.		.	.	.	full stop			
-܂		.		.	.	.	full stop			
-܃		:		:	:	:	colon			
-܄		:		:	:	:	colon			
-܅		:		:	:	:	colon			
-܆		:		:	:	:	colon			
-܇		:		:	:	:	colon			
-܈		;		;	;	;	phrase division			
-܉		?		?	?	?	question mark			
-										
-܊		.		.	.	.	contraction mark			
-\u070F							abbreviation mark			
-܋							note marker			
-܌							note marker			
-܍							note marker			
-										
-،	,	,		,	,		comma			
-؛	;	;		;	;	;	semi-colon			
-.				.	.		full stop			
-؟	?	?		?	?	?	question mark			
-`
-
-var cols = {
-"transLoc": 2,
-"ipaLoc": 3,
-"typeLoc": 7,
-"nnameLoc": 9,
-"nameLoc": 8,
-"numLoc": 10,
-"statusLoc": 0,
-"dvowel": 0,
-"ivowel": 0,
-"subj":0,
-"ltone":0,
-"htone":0,
-"numLoc":0,
-"meaning":0,
-"shape":0,
-"lc":0,
-"uc":0,
-
-"othertranscriptions": [[6, 'Transcription']]
-}
 replaceStuff('Syriac', 'syriac', spreadsheet, '', 'syr-syrc', '', cols, false)
-
 </script> 
 
 
@@ -1912,119 +1763,10 @@ replaceStuff('Syriac', 'syriac', spreadsheet, '', 'syr-syrc', '', cols, false)
 
 
 
-
+<script src="../../shared/scriptdb/assyrian.js">  </script>
 
 <script>
-var spreadsheet = `
-ܐ	}	ʾ	ʔ ɑ	ʾ ȃ	consonant	ʾālap̄	ܐܠܦ
-ܒ	b	b	b w	b ḇ	consonant	bēṯ	ܒܝܬ
-ܓ	g	g	ɡ ɣ ʤ ɟ ʔ ɣ j	g ḡ ǧ	consonant	gāmal	ܓܡܠ
-ܕ	d	d	d ð	d ḏ	consonant	dālaṯ	ܕܠܬ
-ܗ	h	h	h	h	consonant	hē	ܗܐ
-ܘ	w	w	w u o	w û ô	consonant	waw	ܘܘ
-ܙ	z	z	z ʒ	z ž	consonant	zayn	ܙܝܢ
-ܚ	h	ħ	x	ḥ	consonant	ḥēṯ	ܚܝܬ
-ܛ	t	tˤ	t	ṭ	consonant	ṭēṯ	ܛܝܬ
-ܝ	y	y	j i e	y î	consonant/mater lectionis	yōḏ	ܝܘܕ
-ܟ	k	k	cʰ x ʧ	k ḵ č	consonant	kāp̄	ܟܦ
-ܠ	l	l	l	l	consonant	lāmaḏ	ܠܡܕ
-ܡ	m	m	m	m	consonant	mīm	ܡܝܡ
-ܢ	n	n	n	n	consonant	nūn	ܢܘܢ
-ܣ	s	s	s	s	consonant	semkaṯ	ܣܡܟܬ
-ܥ	{	ʿ	ʔ ʕ	ʿ	consonant	ʿē	ܥܐ
-ܦ	p	p	pʰ p	p p̄	consonant	pē	ܦܐ
-ܨ	s	sˤ	s	ṣ	consonant	ṣāḏē	ܨܕܐ
-ܩ	q	q	q	q	consonant	qōp̄	ܩܘܦ
-ܪ	r	r	r	r	consonant	rēš	ܪܝܫ
-ܫ	s	ʃ 	ʃ ʒ	š ẑ	consonant	šīn	ܫܝܢ
-ܬ	t	t	t tʰ θ	t ṯ	consonant	taw	ܬܘ
-							
-							
-ܞ	j	jʰ		jh	ligature		
-ܤ	s	ṡ			consonant		
-							
-							
-ܔ					garshuni letter		
-ܜ					garshuni letter		
-ً					arabic diacritic		
-ٌ					arabic diacritic		
-ٍ					arabic diacritic		
-َ					arabic diacritic		
-ُ					arabic diacritic		
-ِ					arabic diacritic		
-ّ					arabic diacritic		
-ْ					arabic diacritic		
-ٰ					arabic diacritic		
-ٕ					arabic diacritic		
-ٔ					arabic diacritic		
-ٓ					arabic diacritic		
-							
-							
-ܲ	a	a	a	a	vowel diacritic	pṯāḥā	ܦܬ݂ܳܚܳܐ‎
-ܵ	a	ā	a	ā	vowel diacritic	zqāp̄ā	ܙܩܵܦ݂ܵܐ‎
-ܸ	e	e	i	e	vowel diacritic	rḇāṣā ʾărīḵā / zlāmā pšīqā	ܪܒ݂ܵܨܵܐ ܐܲܪܝܼܟ݂ܵܐ‎ / ܙܠܵܡܵܐ ܦܫܝܼܩܵܐ‎
-ܹ	e	ē	ɪ	ē	vowel diacritic	rḇāṣā karyā / zlāmā qašyā	ܪܒ݂ܵܨܵܐ ܟܲܪܝܵܐ‎ / ܙܠܵܡܵܐ ܩܲܫܝܵܐ‎
-ܼ	i	i	i u	i	vowel diacritic	ḥbāṣā	
-ܿ	o	o	u	o	vowel diacritic	ʿṣāṣā rwīḥā / rwāḥā	ܥܨܵܨܵܐ ܪܘܝܼܚܵܐ‎ / ܪܘܵܚܵܐ‎
-							
-							
-							
-̃					maǧliyana		
-̰					maǧliyana		
-݁					hard-sound marker	qūššāyā	ܩܘܫܝܐ
-݂		̣			hard/soft sound marker		
-̮					fricative indicator		
-݇					silent letter marker		
-݈					silent letter marker		
-̈	[	̋		\u030B	syame		
-̇					disambiguation mark		
-̣					disambiguation mark		
-݀	[	ʺ		ʺ	feminine marker		
-							
-							
-							
-							
-܀					end of paragraph		
-܁		.		.	full stop		
-܂		.		.	full stop		
-܃		:		:	colon		
-܄		:		:	colon		
-܅		:		:	colon		
-܆		:		:	colon		
-܇		:		:	colon		
-܈		;		;	phrase division		
-܉		?		?	question mark		
-							
-܊		.		.	contraction mark		
-&#x070F;					abbreviation mark		
-܋					note marker		
-܌					note marker		
-܍					note marker		
-`
-
-var cols = {
-"transLoc": 2,
-"ipaLoc": 3,
-"typeLoc": 5,
-"nnameLoc": 7,
-"nameLoc": 6,
-"numLoc": 0,
-"statusLoc": 0,
-"dvowel": 0,
-"ivowel": 0,
-"subj":0,
-"ltone":0,
-"htone":0,
-"numLoc":0,
-"meaning":0,
-"shape":0,
-"lc":0,
-"uc":0,
-
-//"othertranscriptions": [[3, 'Transcription']]
-}
 replaceStuff('Assyrian Neo-Aramaic', 'assyrian', spreadsheet, '', 'aii', '', cols, false)
-
 </script> 
 
 
@@ -2034,7 +1776,7 @@ replaceStuff('Assyrian Neo-Aramaic', 'assyrian', spreadsheet, '', 'aii', '', col
 
 
 <div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/syriac/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-01-05  12:25<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2019-07-14  18:11<!-- #EndDate --> 
   </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bsyriac%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fsyriac%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
