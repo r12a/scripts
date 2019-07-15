@@ -76,17 +76,15 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->5 January, 2019<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->15 July, 2019<!-- #EndDate -->
 &bull; tags <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="https://r12a.github.io/blog/?tag=taiviet" title="Show all blog posts tagged with 'taiviet'">taiviet</a></p>
 <section>
    <p>This page lists characters in the following Unicode  block and provides information about them. </p>
 <ul>
 <li><a href="../../uniview/?block=taiviet" target="_blank">Tai Viet</a></li>
-   </ul>
+</ul>
    <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-<p>For a summary of the script and its use in  writing systems, see the page <a class="linkHighlight" href="/scripts/taiviet/">Tai Viet script summary</a>.   For similar information related to other scripts, see <a href="/r12a.github.io/doclist#charnotes">this list</a>.</p>
-<p><span style="text-align: start;">We have usage data for the following  language that uses the Tai Viet script</span>: Tai Dam.</p>
-<p style="text-align: start;">The transliteration is based on ISO 9985.</p>
+<p>For details about how the script works, see <a class="linkHighlight" href="index">Tai Viet/Tai Dam</a>. For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Tavt">Script links pages</a>.</p>
 <p>Find
 <input type="text" 
 onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/>
@@ -1466,135 +1464,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 
+
+<script src="../../shared/scriptdb/taiviet.js">  </script>
+
 <script>
-var spreadsheet = `
-ꪁ	k	k	high tone consonant			ꪀ
-ꪀ	ḵ	k 	low tone consonant		ꪁ	
-ꪃ	kʰ	kʰ	high tone consonant			ꪂ
-ꪂ	ḵʰ	kʰ	low tone consonant		ꪃ	
-ꪆ	g	g	high tone consonant			ꪇ
-ꪇ	ḡ	gʰ	low tone consonant		ꪆ	
-ꪉ	ŋ	ŋ	high tone consonant			ꪈ
-ꪈ	ŋ̄	ŋ	low tone consonant		ꪉ	
-						
-ꪋ	c	ʨ	high tone consonant			ꪊ
-ꪊ	c̱	ʨ	low tone consonant		ꪋ	
-ꪍ	cʰ	ʨʰ	high tone consonant			ꪌ
-ꪌ	c̱ʰ	ʨʰ	low tone consonant		ꪍ	
-ꪑ	ɲ	ʃ ɲ	high tone consonant			ꪐ
-ꪐ	ɲ̄	ʃ ɲ	low tone consonant		ꪑ	
-						
-ꪕ	t	t	high tone consonant			ꪔ
-ꪔ	ṯ	t	low tone consonant		ꪕ	
-ꪗ	tʰ	tʰ	high tone consonant			ꪖ
-ꪖ	ṯʰ	tʰ	low tone consonant		ꪗ	
-ꪓ	d	d	high tone consonant			ꪒ
-ꪒ	ḏ	d -t	low tone consonant		ꪓ	
-ꪙ	n	n	high tone consonant			ꪘ
-ꪘ	ṉ	n	low tone consonant		ꪙ	
-						
-ꪝ	p	p	high tone consonant			ꪜ
-ꪜ	p̄	p	low tone consonant		ꪝ	
-ꪟ	pʰ	pʰ	high tone consonant			ꪞ
-ꪞ	p̄ʰ	pʰ	low tone consonant		ꪟ	
-ꪛ	b	b	high tone consonant			ꪚ
-ꪚ	ḇ	b -p	low tone consonant		ꪛ	
-ꪣ	m	m	high tone consonant			ꪢ
-ꪢ	m̱	m	low tone consonant		ꪣ	
-						
-ꪩ	l	l	high tone consonant			ꪨ
-ꪨ	ḻ	l	low tone consonant		ꪩ	
-ꪧ	r	r	high tone consonant			ꪦ
-ꪦ	ṟ	r	low tone consonant		ꪧ	
-ꪥ	y	j	high tone consonant			ꪤ
-ꪤ	ȳ	j	low tone consonant		ꪥ	
-ꪫ	w	v -w	high tone consonant			ꪪ
-ꪪ	w̱	v	low tone consonant		ꪫ	
-						
-ꪭ	h	h	high tone consonant			ꪬ
-ꪬ	ẖ	h	low tone consonant		ꪭ	
-ꪅ	x	x	high tone consonant			ꪄ
-ꪄ	x̱	x	low tone consonant		ꪅ	
-ꪏ	s	s	high tone consonant			ꪎ
-ꪎ	s̱	s	low tone consonant		ꪏ	
-ꪡ	f	f	high tone consonant			ꪠ
-ꪠ	f̱	f	low tone consonant		ꪡ	
-						
-ꪯ	ʔ	ʔ ɔ	high tone consonant			ꪮ
-ꪮ	ʔ̱	ʔ ɔ	low tone consonant		ꪯ	
-						
-						
-						
-						
-						
-						
-						
-						
-						
-ꫛ	kⁿ	kon⁴	logograph			
-ꫜ	nᵑ	nɨŋ⁵	logograph			
-						
-						
-						
-ꪼ	aʲ	aj	prescript vowel			
-ꪻ	əʷ	əw	prescript vowel			
-ꪵ	ɛ	ɛ	prescript vowel			
-ꪹ	ɨᵊ	ɨə	prescript vowel			
-ꪶ	o	o	prescript vowel			
-						
-						
-ꪰ	a	a	dependent vowel			
-ꪱ	ā	aː	dependent vowel			
-ꪲ	i	i	dependent vowel			
-ꪳ	ɨ	ɨ	dependent vowel			
-ꪴ	u	u	dependent vowel			
-ꪷ	ɔ	ɔ	dependent vowel			
-						
-ꪾ	aᵐ	am	vowel+nasal			
-ꪽ	aⁿ	an	vowel+nasal			
-ꪸ	iᵊ	iə	dipthong			
-ꪺ	uᵊ	uə	dipthong			
-						
-						
-꪿	¹		tone mark	mai ek		
-꫁	²		tone mark	mai song		
-ꫀ	¹̱		tone mark			
-ꫂ	²̱		tone mark			
-						
-						
-						
-						
-						
-						
-						
-ꫝ			repetition mark	sam		
-꫞			poetic head mark	ho hoi		
-꫟			poetic end mark	koi koi		
-`
-
-var cols = {
-"transLoc": 1,
-"ipaLoc": 2,
-"typeLoc": 3,
-"nnameLoc": 0,
-"nameLoc": 4,
-"numLoc": 0,
-"statusLoc": 0,
-"dvowel": 0,
-"ivowel": 0,
-"subj":0,
-"ltone":6,
-"htone":5,
-"numLoc":0,
-"meaning":0,
-"shape":0,
-"lc":0,
-"uc":0,
-
-//"othertranscriptions": [[3, 'Transcription']]
-}
 replaceStuff('Tai Dam', 'taidam', spreadsheet, '', 'blt', '', cols, false)
-
 </script> 
 
 
@@ -1604,7 +1478,7 @@ replaceStuff('Tai Dam', 'taidam', spreadsheet, '', 'blt', '', cols, false)
 
 
 <div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/taiviet/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-01-05  12:42<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2019-07-15  6:33<!-- #EndDate --> 
   </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Btaiviet%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ftaiviet%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
