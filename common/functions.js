@@ -627,7 +627,14 @@ function setGeneralFont (fontname, size, language) {
 	}
 
 
-
+function runCharCount (type, location) {
+	chars = document.querySelectorAll(type)
+	out = ''
+	total = 0
+	for (let i=0;i<chars.length;i++) out += chars[i].textContent.replace(/␣/g,'')
+	document.getElementById(location).textContent = out
+	document.getElementById(location+'Total').textContent = out.length
+	}
 
 
 
