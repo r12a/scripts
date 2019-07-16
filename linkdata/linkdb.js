@@ -3,9 +3,10 @@ var scriptNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl
 var scriptNotes= {
     'armn':[['Armenian','armenian/']],
     'arab':[['Arabic','arabic/'], 
+			['Hausa (ajami)', 'arabic/hausa'],
+			['Kashmiri', 'arabic/kashmiri'],
 			['Urdu', 'arabic/urdu'], 
 			['Uighur', 'arabic/uighur'], 
-			['Kashmiri', 'arabic/kashmiri']
 			], 
     'bali':[['Balinese', 'balinese/']], 
     'beng':[['Bengali/Bangla', 'bengali/']],
@@ -34,7 +35,7 @@ var scriptNotes= {
     'mand':[['Mandaic', 'mandaic/']],
     'mlym':[['Malayalam', 'malayalam']],
     'mymr':[['Myanmar/Burmese', 'myanmar']],
-    'nkoo':[["N'Ko", 'nko']],
+    'nkoo':[["N’Ko", 'nko']],
     'sinh':[['Sinhala', 'sinhala/']],
     'sund':[['Sundanese', 'sundanese/']],
     'syrc':[['Syriac', 'syriac/']],
@@ -45,7 +46,7 @@ var scriptNotes= {
     'thaa':[['Thaana/Dhivehi', 'thaana/']],
     'thai':[['Thai', 'thai/']],
     'tibt':[['Tibetan', 'tibetan/']],
-    'tfng':[['Tifinagh/Tamazight', 'tifinagh/']],
+    'tfng':[['(Neo-)Tifinagh/Tamazight', 'tifinagh/']],
     'vaii':[['Vai', 'vai/']],
     }
 
