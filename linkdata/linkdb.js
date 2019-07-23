@@ -1,13 +1,13 @@
 var scriptNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr', 'laoo', 'lana', 'lisu', 'mand', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'taml', 'tavt', 'thaa', 'thai', 'tibt', 'tfng'])
 
 var scriptNotes= {
-    'armn':[['Armenian','armenian/']],
     'arab':[['Arabic','arabic/'], 
 			['Hausa (ajami)', 'arabic/hausa'],
 			['Kashmiri', 'arabic/kashmiri'],
 			['Urdu', 'arabic/urdu'], 
 			['Uighur', 'arabic/uighur'], 
 			], 
+    'armn':[['Armenian','armenian/']],
     'bali':[['Balinese', 'balinese/']], 
     'beng':[['Bengali/Bangla', 'bengali/']],
     'bugi':[['Buginese', 'buginese/']],
@@ -92,6 +92,51 @@ var charNotesList = {
     'tibt':'tibetan/block',
     'tfng':'tifinagh/block',
     'vaii':'vai/block'
+    }
+
+
+var charNotesList = {
+    'armn':['Armenian', 'armenian/block'],
+    'arab':['Arabic', 'arabic/block'], 
+    'bali':['Balinese', 'balinese/block'], 
+    'beng':['Bengali', 'bengali/block'],
+    'bugi':['Buginese', 'buginese/block'],
+    'cher':['Cherokee', 'cherokee/block'],
+	'currency':['Currency&nbsp;Symbols', 'currency/block'],
+    'cyrl':['Cyrillic', 'cyrillic/block'],
+    'deva':['Devanagari', 'devanagari/block'],
+    'ethi':['Ethiopic', 'ethiopic/block'],
+    'geor':['Georgian', 'georgian/block'],
+    'grek':['Greek', 'greek/block'],
+    'gujr':['Gujarati', 'gujarati/block'],
+    'guru':['Gurmukhi', 'gurmukhi/block'],
+    'hebr':['Hebrew', 'hebrew/block'],
+    'java':['Javanese', 'javanese/block'],
+    'khmr':['Khmer', 'khmer/block'],
+    'laoo':['Lao', 'lao/block'],
+    'lisu':['Lisu', 'lisu/block'],
+    'latn':['Latin', 'latin/block'],
+    'maka':['Makasar', 'makasar/block'],
+    'mlym':['Malayalam', 'malayalam/block'],
+    'mand':['Mandaic', 'mandaic/block'],
+    'mong':['Mongolian', 'mongolian/block'],
+    'mymr':['Myanmar', 'myanmar/block'],
+    'talu':['New&nbsp;Tai&nbsp;Lue', 'newtailue/block'],
+    'nkoo':['NKo', 'nko/block'],
+	'punctuation':['Punctuation', 'punctuation/block'],
+    'runr':['Runic', 'runic/block'],
+    'sinh':['Sinhala', 'sinhala/block'],
+    'sund':['Sundanese', 'sundanese/block'],
+    'syrc':['Syriac', 'syriac/block'],
+    'tale':['Tai&nbsp;Le', 'taile/block'],
+    'lana':['Tai&nbsp;Tham', 'taitham/block'],
+    'tavt':['Tai&nbsp;Viet', 'taiviet/block'],
+    'taml':['Tamil', 'tamil/block'],
+    'thaa':['Thaana', 'thaana/block'],
+    'thai':['Thai', 'thai/block'],
+    'tibt':['Tibetan', 'tibetan/block'],
+    'tfng':['Tifinagh', 'tifinagh/block'],
+    'vaii':['Vai', 'vai/block'],
     }
 
 
