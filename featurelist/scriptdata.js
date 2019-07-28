@@ -57,7 +57,7 @@ var scriptData = [
 
 { script:"New Tai Lü", type:"abugida", chars:83, cchars:0, cs:"no", gpos:"no", mcchars:"no", matras: "visual", gsub:"no", cursive:"no", dir:"ltr", wordsep:"no", baseline:"mid", wrap:"?", hyphenation:"?", justify:"?", digits:"yes", region:"Asia SE", linked:"newtailue" },
 
-{ script:"N'Ko", type:"alpha", chars:59, cchars:9, cs:"no", gpos:"yes", mcchars:"yes", matras: "no", gsub:"yes", cursive:"yes", dir:"rtl", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"?", justify:"wd/str", digits:"yes", region:"Africa", linked:"nko" },
+{ script:"N'Ko", type:"alpha", chars:62, cchars:10, cs:"no", gpos:"yes", mcchars:"yes", matras: "no", gsub:"yes", cursive:"yes", dir:"rtl", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"yes", justify:"wd/str", digits:"yes", region:"Africa", linked:"nko" },
 
 { script:"Oriya", type:"abugida", chars:90, cchars:20, cs:"no", gpos:"yes", mcchars:"yes", matras: "yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"?", justify:"space", digits:"yes", region:"Asia S" },
 
