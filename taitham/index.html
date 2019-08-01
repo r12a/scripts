@@ -135,7 +135,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->15 July, 2019<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->1 August, 2019<!-- #EndDate -->
 &bull; tags <a href="https://r12a.github.io/blog/index.php?tag=taitham" title="Show all blog posts tagged with 'taitham'">taitham</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
@@ -843,13 +843,44 @@ figure class="characterBox auto" data-cols="ipa,trans,transc" data-ipa=",,kʰá,
 
   <section>
   <h2 id="shaping">Glyph shaping &amp; positioning</h2>
+<section>
+<h3 id="gsub">Context-based shaping</h3>
+
+<p class="instructions">Are special glyph forms needed, depending on the context in which a character is used? Do glyphs interact in some circumstances?</p>
 <p>Since there are no conjuncts, there is not so much contextual shaping in Tham as in many other Brahmi-descended scripts.</p>
+</section>
+
+
+
+
+<section>
+<h3 id="gpos">Context-based positioning</h3>
+
+<p class="instructions"> Are there requirements to position diacritics or other items specially, depending on context? Does the script have multiple diacritics competing for the same location relative to the base?</p>
 <p>Placement of tone marks often involves special shaping and positioning. See the positions in the examples below.</p>
 <figure>
 <p lang="nod" class="large1"><span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩥ᩶ ᨠᩥ᩵</span></span><br/><br/><span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩥ᩶ ᨠᩥ᩵</span></span></p>
 <figcaption>Positioning of tone marks next to a superscript vowel in the Lanna Alif font<span class="trans"></span> (top), and the A Tai Tham KH New font (bottom).</figcaption>
 </figure>
 <p>In the A Tai Tham KH New font, a 2nd-tone mark following <span class="codepoint" translate="no"><span lang="kkh">&nbsp;&#x1A62;</span> [<a href="/scripts/taitham/block#char1A62"><span class="uname">U+1A62 TAI THAM VOWEL SIGN MAI SAT​</span></a>]</span> loses its uptick to create two parallel lines, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨡᩮᩢ᩶ᩣ</span> <span class="trans">kʰeá²ā</span> <span class="ipa">kʰaw⁵</span> <span class="meaning">rice</span></span>.</p>
+</section>
+
+
+
+
+<section>
+<h3 id="fontstyle">Font styles</h3>
+<p class="instructions"> Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</p>
+</section>
+
+
+
+
+<section>
+<h3 id="transforms">Transforming characters</h3>
+
+<p class="instructions">If the script is bicameral, are the special rules about case conversion? Are there other correspondences between glyphs, such as half- vs fullwidth presentation forms?</p>
+</section>
 </section>
 
 
@@ -862,10 +893,22 @@ figure class="characterBox auto" data-cols="ipa,trans,transc" data-ipa=",,kʰá,
   
 <section>
 <h2 id="boundaries">Structural boundaries &amp; markers</h2>
+  
+<section>
+<h3 id="graphemes">Grapheme boundaries</h3>
+ <p class="explanatoryintro">A grapheme is a user-perceived unit of text. The Unicode Standard uses generalised rules to define 'grapheme clusters', which approximate the likely grapheme boundaries in a writing system.</p>
 
+<p class="instructions">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements when double-clicking on the text, or moving through the text with the cursor, or backspace, etc.? </p>
+</section>
+
+
+
+
+  
 <section>
 <h3 id="words">Word boundaries</h3>
-    <p>Spaces separate phrases. There is no separation of individual words.</p>
+    <p class="instructions">Are words separated by spaces, or other characters? Are there special requirements when double-clicking  on the text? Are words hyphenated?</p>
+<p>Spaces separate phrases. There is no separation of individual words.</p>
 <p>A new word may start with a subjoined consonant. Stacking is performed across word boundaries. This means that operations such as line-breaking, word highlighting, etc. have to use an orthographic syllable unit which differs from the underlying phonetic syllables.</p>
 </section>
 
@@ -873,8 +916,9 @@ figure class="characterBox auto" data-cols="ipa,trans,transc" data-ipa=",,kʰá,
 
 
 <section>
-<h3 id="phrase">Phrase boundaries</h3>
+<h3 id="phrase">Phrase &amp; section boundaries</h3>
 
+<p class="instructions">What characters are used to indicate the boundaries of phrases, sentences, and sections?</p>
 <p>The following punctuation marks have &quot;progressive values of finality&quot;.</p>
 <ol>
 <li><span class="codepoint" translate="no"><span lang="nod">&#x1AA8;</span> [<a href="/scripts/taitham/block#char1AA8"><span class="uname">U+1AA8 TAI THAM SIGN KAAN</span></a>]</span></li>
@@ -889,13 +933,167 @@ figure class="characterBox auto" data-cols="ipa,trans,transc" data-ipa=",,kʰá,
 
 
 
+
+
 <section>
-  <h3 id="linebreak">Line breaking</h3>
-     <p>Opportunities  for  line  breaking  are  lexical,  but  a  line  break  may  not  be inserted  between  a  base  letter  and  a  combining   diacritic.   <sup><a href="http://www.unicode.org/versions/latest/ch16.pdf">u656</a></sup></p>
+<h3 id="bracketing">Bracketing &amp; parentheses</h3>
+<p class="instructions">What characters are used as parentheses, or to bracket information?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="quotations">Quotations</h3>
+<p class="instructions">What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="hyphens">Abbreviation, ellipsis &amp; repetition</h3>
+<p class="instructions">What characters are used to indicate abbreviation, ellipsis &amp; repetition?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="emphasis">Emphasis &amp; text decoration</h3>
+<p class="instructions">How are emphasis and highlighting achieved? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="inlinenotes">Inline notes &amp; annotations</h3>
+<p class="instructions">What mechanisms, if any, are used to create <u>inline</u> notes and annotations? (For referent-type notes such as footnotes, see below.)</p>
+</section>
+</section>
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+<section>
+<h2 id="paralayout">Line &amp; paragraph layout</h2>
+   
+      
+<section>
+    <h3 id="linebreak">Line breaking &amp; hyphenation</h3>
+<p class="instructions">Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that?</p>
+<p>Opportunities  for  line  breaking  are  lexical,  but  a  line  break  may  not  be inserted  between  a  base  letter  and  a  combining   diacritic. <sup><a href="http://www.unicode.org/versions/latest/ch16.pdf">u656</a></sup></p>
 <p>There  is  no  insertion  of  visible hyphens at line boundaries. <sup><a href="http://www.unicode.org/versions/latest/ch16.pdf">u656</a></sup></p>
 </section>
 
+
+
+<section>
+    <h3 id="hyphenation">Hyphenation</h3>
+<p class="instructions">Is hyphenation used, or something else?</p>
 </section>
+
+
+
+<section>
+    <h3 id="justification">Text alignment &amp; justification</h3>
+<p class="instructions">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</p>
+</section>
+
+
+
+
+<section>
+    <h3 id="letterspace">Letter spacing</h3>
+<p class="instructions">Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see above.).</p>
+</section>
+
+
+
+
+<section>
+  <h3 id="lists">Counters, lists, etc.</h3>
+  
+<p class="instructions">Are there list or other counter styles in use?  If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed? </p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="initials">Styling initials</h3>
+<p class="instructions">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? etc.</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="baselines">Baselines &amp; inline alignment</h3>
+<p class="instructions">Does the script have special requirements for baseline alignment between mixed scripts and in general?</p>
+</section>
+</section>
+ 
+ 
+ 
+ 
+ 
+ <section>
+ <h2 id="pagelayout">Page &amp; book layout</h2>
+ 
+ <section>
+    <h3 id="generallayout">General page layout &amp; progression</h3>
+ <p class="instructions">How are the main text area and ancilliary areas positioned and defined? Are there any special requirements here, such as dimensions in characters for the Japanese kihon hanmen? The book cover for scripts that are read right-to-left scripts is on the right of the spine, rather than the left.  When content can flow vertically and to the left or right, how to specify the location of objects, text, etc. relative to the flow? Do tables and grid layouts work as expected? How do columns work in vertical text? Can you mix block of vertical and horizontal text? Does text scroll in a different direction?</p>
+</section>
+<section>
+<h3 id="grids">Grids &amp; tables</h3>
+<p class="instructions">Does the script have special requirements for character grids or tables?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="footnotes">Notes, footnotes, etc</h3>
+<p class="instructions">Does the script have special requirements for notes, footnotes, endnotes or other necessary annotations of this kind? (There is a section above for purely inline annotations, such as ruby or warichu. This section is more about annotation systems that separate the reference marks and the content of the notes.)</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="interaction">Forms &amp; user interaction</h3>
+<p class="instructions">Are vertical form controls needed? Are scroll bars in an unusual position? Other special requirements for user interaction?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="headers">Page numbering, running headers, etc</h3>
+<p class="instructions">Are there special conventions for page numbering, or the way that running headers and the like are handled?</p>
+</section>
+</section>
+
+
 
 
 
@@ -904,47 +1102,24 @@ figure class="characterBox auto" data-cols="ipa,trans,transc" data-ipa=",,kʰá,
 
 
 <section>
-<h3 id="tbd">TBD</h3>
-<p class="ednote">Further information needed for this section includes:</p>
-<pre style="margin-left: 10%;">
-Glyph shaping &amp; positioning
-    Cursive text
-    Context-based shaping
-    Multiple combining characters
-    Context-based positioning
-    Transforming characters
-
-Structural boundaries &amp; markers
-    Grapheme, word &amp; phrase boundaries
-    Hyphens &amp; dashes
-    Bracketing information
-    Quotations
-    Abbreviations, ellipsis, &amp; repetition
-    Emphasis &amp; highlights
-    Inline notes &amp; annotations
-
-Inline layout
-    Inline text spacing
-    Bidirectional text
-
-Line &amp; paragraph layout
-    Text direction
-    Line breaking
-    Hyphenation
-    Text alignment &amp; justification
-    Counters, lists, etc.
-    Styling initials
-    Baselines &amp; inline alignment
-
-Page &amp; book layout
-    General page layout &amp; progression
-    Directional layout features
-	Grids &amp; tables
-    Notes, footnotes, etc.
-    Forms &amp; user interaction
-    Page numbering, running headers, etc.
-</pre>
+<h2 id="languages">Languages using the Tai Tham script</h2>
+<p>According to ScriptSource, the Tai Tham script is used for the following languages: </p>
+<ul>
+<li>Khün [kkh]</li>
+<li>Lü [khb]</li>
+<li>Northern Thai  [nod]</li>
+<li>Tai Ya [cuu]</li>
+</ul>
 </section>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -969,7 +1144,7 @@ Page &amp; book layout
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/taitham"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-07-15  6:02<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Btaitham%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ftaitham%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/taitham"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-08-01  9:01<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Btaitham%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ftaitham%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"></div>
