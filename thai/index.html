@@ -98,7 +98,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->15-Jul-2019<!-- #EndDate -->
+  <!-- #BeginDate format:En2 -->01-Aug-2019<!-- #EndDate -->
 &bull; tags <a href="https://r12a.github.io/blog/?tag=thai" title="Show all blog posts tagged with 'thai'">thai</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
@@ -712,28 +712,52 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
   <section>
   <h2 id="shaping">Glyph shaping &amp; positioning</h2>
+<p>You can experiment with examples using the <a href="/pickers/thai/">Thai picker</a>.</p>
 
 
 <section>
-<h3 id="cchars">Combining characters</h3>
+<h3 id="gsub">Context-based shaping</h3>
+
+<p class="prompts">Are special glyph forms needed, depending on the context in which a character is used? Do glyphs interact in some circumstances?</p>
+<p>Context-based shaping is not something that normally occurs in Thai text.</p>
+</section>
+
+
+
+
+<section>
+<h3 id="gpos">Context-based positioning</h3>
+
+			<p class="prompts"> Are there requirements to position diacritics or other items specially, depending on context? Does the script have multiple diacritics competing for the same location relative to the base?</p>
     <p>Most of the combining characters in Thai are used for vowel-signs and tone marks.</p>
-    <p>Thai regularly combines multiple combining characters above a base consonant. There are two examples in the text below, both of which show a base character with a vowel sign and then a tone mark on top.</p>
-    <figure>
-  <p class="large"><span class="ex" lang="th">ครั้งที่</span> &nbsp;</p>
-  <figcaption>Multiple diacritics (vowel sign + tone mark) attached to the same base character.</figcaption>
-  </figure>
-  </section>
-  
-  
-  
-  <section>
-    <h3 id="gpos">Context-based positioning</h3>
     <p>Combining characters need to be placed in different positions, according to the context. The  example below shows the same tone character displayed at different heights, according to what falls beneath it.</p>
     <figure>
     <p class="large"><img src="images/thai-position.png" alt="ให้มีขึ้น"></p>
     <figcaption>The same tone mark displayed at different heights.</figcaption>
     </figure>
-  </section>
+    <p>Thai regularly combines multiple combining characters above a base consonant. There are two examples in the text below, both of which show a base character with a vowel sign and then a tone mark on top.</p>
+    <figure>
+  <p class="large"><span class="ex" lang="th">ครั้งที่</span> &nbsp;</p>
+  <figcaption>Multiple diacritics (vowel sign + tone mark) attached to the same base character.</figcaption>
+  </figure>
+</section>
+
+
+
+
+<section>
+<h3 id="fontstyle">Font styles</h3>
+<p class="prompts"> Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</p>
+</section>
+
+
+
+
+<section>
+<h3 id="transforms">Transforming characters</h3>
+
+<p class="prompts">If the script is bicameral, are the special rules about case conversion? Are there other correspondences between glyphs, such as half- vs fullwidth presentation forms?</p>
+</section>
 
 </section>
 
@@ -746,9 +770,22 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
  <h2 id="boundaries">Structural boundaries &amp; markers</h2>
   
 <section>
+<h3 id="graphemes">Grapheme boundaries</h3>
+ <p class="explanatoryintro">A grapheme is a user-perceived unit of text. The Unicode Standard uses generalised rules to define 'grapheme clusters', which approximate the likely grapheme boundaries in a writing system.</p>
+
+<p class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements when double-clicking on the text, or moving through the text with the cursor, or backspace, etc.? </p>
+</section>
+
+
+
+
+  
+
+<section>
 <h3 id="words">Word boundaries</h3>
 
     <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). We will  treat it as a vaguely-defined semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+<p class="prompts">Are words separated by spaces, or other characters? Are there special requirements when double-clicking  on the text? Are words hyphenated?</p>
 <p>Thai doesn't separate words in a phrase. </p>
 <p>There is, however, a concept of words in the text. For example, lines are supposed to be broken at word boundaries. </p>
 <figure>
@@ -785,16 +822,29 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <section>
 <h3 id="phrase">Phrase boundaries</h3>
 
+<p class="prompts">What characters are used to indicate the boundaries of phrases, sentences, and sections?</p>
 <p>Thai uses space as a phrase marker, rather than to delimit words, often in places where English text would use commas or periods.</p>
 <p>Latin-based  punctuation  such  as  comma,  period,  and  colon  are  also used  in  text,  particularly  in  conjunction  with  Latin  letters  or  in  formatting  numbers, addresses, and so forth.</p>
 <p> <span class="codepoint" translate="no"><span lang="th">&#x0E5A;</span> [<a href="/scripts/thai/block#char0E5A"><span class="uname">U+0E5A THAI CHARACTER ANGKHANKHU</span></a>]</span> is used to mark the end of a long segment of text. It can be combined as <span class="charExample" translate="no"><span class="ex" lang="th">๚ะ</span></span>  to mark a larger segment of text; typically this usage can be seen at the end of a verse in poetry. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></sup></p>
 <p> <span class="codepoint" translate="no"><span lang="th">&#x0E5B;</span> [<a href="/scripts/thai/block#char0E5B"><span class="uname">U+0E5B THAI CHARACTER KHOMUT</span></a>]</span> marks the end of a chapter or document, where it always follows the <span class="charExample"><span class="ex" lang="th">๚ะ</span></span> combination. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></sup></p>
  </section>
-    
-    
+
+
+
+
 
 <section>
+<h3 id="bracketing">Bracketing &amp; parentheses</h3>
+<p class="prompts">What characters are used as parentheses, or to bracket information?</p>
+</section>
+
+
+
+
+  
+<section>
 <h3 id="quotations">Quotations</h3>
+<p class="prompts">What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue?</p>
 <p>According to CLDR, the default quote marks for Lao are <span class="codepoint" translate="no"><span lang="th">“</span> [<span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span>]</span> at the start, and <span class="codepoint" translate="no"><span lang="th">”</span> [<span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span>]</span> at the end. </p>
 <p>When an additional quote is embedded within the first, the quote marks are <span class="codepoint" translate="no"><span lang="th">‘</span> [<span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span>]</span> and <span class="codepoint" translate="no"><span lang="th">’</span> [<span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span>]</span>.</p>
 </section>
@@ -804,8 +854,27 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
  <section>
   <h3 id="repetition">Repetition &amp; elision</h3>
+<p class="prompts">What characters are used to indicate abbreviation, ellipsis &amp; repetition?</p>
 <p><span class="codepoint" translate="no"><span lang="th">&#x0E46;</span> [<a href="/scripts/thai/block#char0E46"><span class="uname">U+0E46 THAI CHARACTER MAIYAMOK</span></a>]</span> is used to mark repetition of preceding letters. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></sup></p>
 <p> <span class="codepoint" translate="no"><span lang="th">&#x0E2F;</span> [<a href="/scripts/thai/block#char0E2F"><span class="uname">U+0E2F THAI CHARACTER PAIYANNOI</span></a>]</span> is used to indicate elision or abbreviation of letters; it  is  itself  viewed  as  a  kind  of  letter,  however,  and  is  used  with  considerable  frequency because of its appearance in such words as the Thai name for Bangkok.  Paiyannoi  is also used  in  the combination  <span class="charExample" translate="no"><span class="ex" lang="th">ฯลฯ</span></span>  to  create  a  construct  called   <span class="name">paiyanyai</span> , which means “et cetera, and so forth.” <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></sup></p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="emphasis">Emphasis &amp; text decoration</h3>
+<p class="prompts">How are emphasis and highlighting achieved? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="inlinenotes">Inline notes &amp; annotations</h3>
+<p class="prompts">What mechanisms, if any, are used to create <u>inline</u> notes and annotations? (For referent-type notes such as footnotes, see below.)</p>
 </section>
 </section>
 
@@ -817,7 +886,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
  <h2 id="para">Line &amp; paragraph layout</h2>
   
  <section>
-    <h3 id="wrap">Line breaks &amp; text wrap</h3>
+    <h3 id="wrap">Line breaking &amp; hyphenation</h3>
+<p class="prompts">Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that?</p>
 <p>Thai doesn't indicate word boundaries, but when Thai text is wrapped at the end of a line you should not split a word. </p>
 <p>As you change the width of the browser window the highlighted text above should break at the following points if your browser supports Thai wrapping:</p>
     <p class="large"><img src="images/thai-wrap.png" alt="โลกจะใช้เพียง"></p>
@@ -828,8 +898,9 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
  <section>
-    <h3 id="justify">Justification</h3>
-    <p>Justification in Thai adjusts blank spaces, but also makes certain adjustments to inter-character spacing. Browsers currently tend not to justify Thai text well. </p>
+    <h3 id="justify">Text alignment &amp; justification</h3>
+    <p class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</p>
+<p>Justification in Thai adjusts blank spaces, but also makes certain adjustments to inter-character spacing. Browsers currently tend not to justify Thai text well. </p>
 <p>The   zero  width space  can grow to have a visible width when justified. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></sup></p>
     <p><em>Use the control below to see how your browser justifies the text sample here.</em></p>
     <p lang="th" id="justificationExample" style="text-align:start;">ทุกคนเสมอกันตามกฏหมายและมีสิทธิที่จะได้รับความคุ้มครองของกฏหมายเท่าทียมกัน โดยปราศจากการเลือกปฏิบัติใด ๆ ทุกคนมีสิทธิที่จะได้รับความคุ้มครองเท่าเทียมกันจากการเลือกปฏิบัติใด ๆ อันเป็นการล่วงละเมิดปฏิญญา และจากการยุยงให้เกิดการเลือกปฏิบัติดังกล่าว </p>
@@ -842,13 +913,31 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
  <section>
-  <h3 id="lists">Lists, counters, etc.</h3>
+    <h3 id="letterspace">Letter spacing</h3>
+ <p class="prompts">Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see above.).</p>
+</section>
+
+
+
+
+ <section>
+  <h3 id="lists">Counters, lists, etc.</h3>
+<p class="prompts">Are there list or other counter styles in use?  If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed? </p>
 <p><span class="codepoint" translate="no"><span lang="th">&#x0E4F;</span> [<a href="/scripts/thai/block#char0E4F"><span class="uname">U+0E4F THAI CHARACTER FONGMAN</span></a>]</span> is the Thai bullet, which is used to mark items in lists or  appears  at  the  beginning  of  a  verse,  sentence,  paragraph,  or  other  textual  segment. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></sup></p>
-<p>The document <a href="https://www.w3.org/TR/predefined-counter-styles/#thai-styles">Ready-made Counter Styles</a> includes two counter styles:</p>
-<ol>
-<li>a numeric style, called <code>thai</code>, and </li>
-<li>an alphabetic style, called <code>thai-alphabetic</code>.</li>
-</ol>
+<p>Thai uses two counter styles, according to the document <a href="https://w3c.github.io/predefined-counter-styles/#thai-styles">Ready-made Counter Styles</a>, one numeric and the other alphabetic.</p>
+<p>The numeric style uses the Thai digits: '๐' '๑' '๒' '๓' '๔' '๕' '๖' '๗' '๘' '๙'.</p>
+<figure>
+<p class="large">1&nbsp;⇨&nbsp;<span class="ex" lang="km">๑</span> 2&nbsp;⇨&nbsp;<span class="ex" lang="km">๒</span> 3&nbsp;⇨&nbsp;<span class="ex" lang="km">๓</span> 4&nbsp;⇨&nbsp;<span class="ex" lang="km">៤</span> 11&nbsp;⇨&nbsp;<span class="ex" lang="km">๑๑</span> 22&nbsp;⇨&nbsp;<span class="ex" lang="km">๒๒</span> 33&nbsp;⇨&nbsp;<span class="ex" lang="km">๓๓</span> 44&nbsp;⇨&nbsp;<span class="ex" lang="km">๔๔</span> 111&nbsp;⇨&nbsp;<span class="ex" lang="km">๑๑๑</span> 2222&nbsp;⇨&nbsp;<span class="ex" lang="km">๒๒๒๒</span></p>
+<figcaption>Numbers produced by the numeric counter style<span class="trans"></span>.</figcaption>
+</figure>
+
+
+<p>The alphabetic counter style uses the following letters: 'ก' 'ข' 'ค' 'ง' 'จ' 'ฉ' 'ช' 'ซ' 'ฌ' 'ญ' 'ฎ' 'ฏ' 'ฐ' 'ฑ' 'ฒ' 'ณ' 'ด' 'ต' 'ถ' 'ท' 'ธ' 'น' 'บ' 'ป' 'ผ' 'ฝ' 'พ' 'ฟ' 'ภ' 'ม' 'ย' 'ร' 'ล' 'ว' 'ศ' 'ษ' 'ส' 'ห' 'ฬ' 'อ' 'ฮ'.</p>
+<figure>
+<p class="large">1&nbsp;⇨&nbsp;<span class="ex" lang="km">ก</span> 2&nbsp;⇨&nbsp;<span class="ex" lang="km">ข</span> 3&nbsp;⇨&nbsp;<span class="ex" lang="km">ค</span> 4&nbsp;⇨&nbsp;<span class="ex" lang="km">ง</span> 11&nbsp;⇨&nbsp;<span class="ex" lang="km">ฎ</span> 22&nbsp;⇨&nbsp;<span class="ex" lang="km">น</span> 33&nbsp;⇨&nbsp;<span class="ex" lang="km">น</span> 44&nbsp;⇨&nbsp;<span class="ex" lang="km">กค</span> 111&nbsp;⇨&nbsp;<span class="ex" lang="km">ขภ</span> 2222&nbsp;⇨&nbsp;<span class="ex" lang="km">กฐซ</span></p>
+<figcaption>Numbers produced by the alphabetic counter style<span class="trans"></span>.</figcaption>
+</figure>
+<p>You can experiment with these styles using the <a href="../../app-counterconverter/">Counter styles converter</a>.</p>
 </section>
 
 
@@ -862,7 +951,73 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   <figcaption>Multiple diacritics above and below the base significantly increase the vertical height of lines.</figcaption>
   </figure>
 </section>
+
+
+
+
+  
+<section>
+<h3 id="initials">Styling initials</h3>
+<p class="prompts">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? etc.</p>
 </section>
+
+
+
+
+  
+<section>
+<h3 id="baselines">Baselines &amp; inline alignment</h3>
+<p class="prompts">Does the script have special requirements for baseline alignment between mixed scripts and in general?</p>
+</section>
+</section>
+
+
+
+
+
+
+
+ <section>
+ <h2 id="pagelayout">Page &amp; book layout</h2>
+ 
+ <section>
+    <h3 id="generallayout">General page layout &amp; progression</h3>
+ <p class="prompts">How are the main text area and ancilliary areas positioned and defined? Are there any special requirements here, such as dimensions in characters for the Japanese kihon hanmen? The book cover for scripts that are read right-to-left scripts is on the right of the spine, rather than the left.  When content can flow vertically and to the left or right, how to specify the location of objects, text, etc. relative to the flow? Do tables and grid layouts work as expected? How do columns work in vertical text? Can you mix block of vertical and horizontal text? Does text scroll in a different direction?</p>
+</section>
+<section>
+<h3 id="grids">Grids &amp; tables</h3>
+<p class="prompts">Does the script have special requirements for character grids or tables?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="footnotes">Notes, footnotes, etc</h3>
+<p class="prompts">Does the script have special requirements for notes, footnotes, endnotes or other necessary annotations of this kind? (There is a section above for purely inline annotations, such as ruby or warichu. This section is more about annotation systems that separate the reference marks and the content of the notes.)</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="interaction">Forms &amp; user interaction</h3>
+<p class="prompts">Are vertical form controls needed? Are scroll bars in an unusual position? Other special requirements for user interaction?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="headers">Page numbering, running headers, etc</h3>
+<p class="prompts">Are there special conventions for page numbering, or the way that running headers and the like are handled?</p>
+</section>
+</section>
+
+
 
 
 
@@ -871,52 +1026,57 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <section>
-<h3 id="tbd">TBD</h3>
-<p class="ednote">Further information needed for this section includes:</p>
-<pre style="margin-left: 10%;">
-Glyph shaping &amp; positioning
-    Cursive text
-    Context-based shaping
-    Multiple combining characters
-    Context-based positioning
-    Transforming characters
-
-Structural boundaries &amp; markers
-    Grapheme, word &amp; phrase boundaries
-    Hyphens &amp; dashes
-    Bracketing information
-    Quotations
-    Abbreviations, ellipsis, &amp; repetition
-    Emphasis &amp; highlights
-    Inline notes &amp; annotations
-
-Inline layout
-    Inline text spacing
-    Bidirectional text
-
-Line &amp; paragraph layout
-    Text direction
-    Line breaking
-    Hyphenation
-    Text alignment &amp; justification
-    Counters, lists, etc.
-    Styling initials
-    Baselines &amp; inline alignment
-
-Page &amp; book layout
-    General page layout &amp; progression
-    Directional layout features
-	Grids &amp; tables
-    Notes, footnotes, etc.
-    Forms &amp; user interaction
-    Page numbering, running headers, etc.
-</pre>
+<h2 id="languages">Languages using the Thai script</h2>
+<p>According to ScriptSource, the Thai script is used for the following languages: </p>
+<ul>
+<li>Akha [ahk]</li>
+<li>Bisu [bzi]</li>
+<li>Blang [blr]</li>
+<li>Chong [cog]</li>
+<li>Bru, Eastern [bru]</li>
+<li>Lawa, Eastern [lwl]</li>
+<li>Hmong Daw [mww]</li>
+<li>Hmong Njua [hnj]</li>
+<li>Mien, Iu [ium]</li>
+<li>Kataang [kgd]</li>
+<li>Kensiu [kns]</li>
+<li>Khmu [kjg]</li>
+<li>Khuen [khf]</li>
+<li>Kuy [kdt]</li>
+<li>Laomian [lwm]</li>
+<li>Mal [mlf]</li>
+<li>Mlabri [mra]</li>
+<li>Moken [mwt]</li>
+<li>Moklen [mkm]</li>
+<li>Mpi [mpz]</li>
+<li>Thai, Northeastern [tts]</li>
+<li>Khmer, Northern [kxm]</li>
+<li>Thai, Northern [nod]</li>
+<li>Nyahkur [cbn]</li>
+<li>Pali [pli]</li>
+<li>Malay, Pattani [mfa]</li>
+<li>Phai [prt]</li>
+<li>Karen, Phrae Pwo [kjt]</li>
+<li>Karen, Pwo Eastern [kjp]</li>
+<li>Karen, Pwo Northern [pww]</li>
+<li>Shan [shn]</li>
+<li>Sô [sss]</li>
+<li>Thai, Southern [sou]</li>
+<li>Thai Song [soa]</li>
+<li>Thai [tha]</li>
+<li>Urak Lawoi' [urk]</li>
+<li>Bru, Western [brv]</li>
+<li>Bru, Western [brv]</li>
+<li>Lawa, Western [lcp]</li>
+</ul>
 </section>
 
 
 
 
-	
+
+
+
 
 <section>
 <h2 id="refs">References</h2>
@@ -934,7 +1094,7 @@ Page &amp; book layout
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/thai"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-07-15  6:50<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bthai%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fthai%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/thai"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-08-01  9:27<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bthai%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fthai%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 <div id="panel" style="display:none"></div>
 </body>
