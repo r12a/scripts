@@ -50,6 +50,68 @@ var scriptNotes= {
     'vaii':[['Vai', 'vai/']],
     }
 
+var scriptNotesByRegion = {
+	'Africa':[['Ethiopic', 'ethiopic/'],
+			  ['Hausa (boko)', 'latin/hausa'],
+			  ['Hausa (ajami)', 'arabic/hausa'],
+			  ["N’Ko", 'nko'],
+			  ['(Neo-)Tifinagh/Tamazight', 'tifinagh/'],
+			  ['Vai', 'vai/']
+			  ],
+	'Europe':[['Armenian','armenian/'],
+			  ['Cyrillic/Russian', 'cyrillic/'],
+			  ['Georgian', 'georgian/'],
+			  ['Greek', 'greek/']
+			  ],
+	'West&nbsp;Asia':[['Arabic','arabic/'],
+			  ['Hebrew', 'hebrew/'],
+			  ['Mandaic', 'mandaic/'],
+			  ['Syriac', 'syriac/']
+			  ],
+	'Central&nbsp;Asia':[
+				['Tibetan', 'tibetan/'],
+				['Uighur', 'arabic/uighur']
+			  	],
+	'East&nbsp;Asia':[
+				['Han/Chinese', 'han/'],
+			    ['Hangul/Korean', 'hangul/'],
+			    ['Japanese', 'kana/'],
+			    ['Lisu', 'lisu/'],
+			    ['Mongolian', 'mongolian/']
+			    ],
+	'South&nbsp;Asia':[['Bengali/Bangla', 'bengali/'],
+			  ['Devanagari/Hindi', 'devanagari/'],
+			  ['Kashmiri (arab)', 'arabic/kashmiri'],
+			  ['Kashmiri (deva)', 'devanagari/kashmiri'],
+			  ['Gujarati', 'gujarati/'],
+			  ['Gurmukhi/Punjabi', 'gurmukhi/'],
+			  ['Malayalam', 'malayalam'],
+			  ['Sinhala', 'sinhala/'],
+			  ['Tamil', 'tamil/'],
+			  ['Thaana/Dhivehi', 'thaana/'],
+			  ['Urdu', 'arabic/urdu']
+			  ],
+	'SE&nbsp;Asia':[['Khmer', 'khmer/'],
+			   ['Lao', 'lao/'],
+			   ['Myanmar/Burmese', 'myanmar'],
+			   ['New Tai Lü', 'newtailue/'],
+			   ['Northern Thai', 'taitham/northernthai'],
+			   ['Tai Le/Tai Nüa', 'taile/'],
+			   ['Tai Tham/Tai Khün', 'taitham/'],
+			   ['Tai Viet/Tai Dam', 'taiviet/'],
+			   ['Thai', 'thai/']
+			   ],
+	'MSE Asia':[['Balinese', 'balinese/'],
+			   ['Buginese', 'buginese/'],
+			   ['Javanese', 'javanese/'],
+			   ['Sundanese', 'sundanese/']
+			   ],
+	'Americas':[['Cherokee', 'cherokee/']
+			    ]
+	}
+
+
+
 var charNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr','laoo', 'lana', 'maka', 'mand', 'mlym', 'mong', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'tale', 'talu', 'tavt', 'taml', 'thaa', 'thai', 'tibt', 'tfng', 'vaii'])
 
 var charNotesList = {
