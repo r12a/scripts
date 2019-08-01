@@ -107,7 +107,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->14-Jul-2019<!-- #EndDate -->
+  <!-- #BeginDate format:En2 -->31-Jul-2019<!-- #EndDate -->
 &bull; tags <a href="https://r12a.github.io/blog/index.php?tag=khmer" title="Show all blog posts tagged with 'khmer'">khmer</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
@@ -622,10 +622,14 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <section>
 <h2 id="glyphs">Glyph shaping &amp; positioning</h2>
   
-<section>
-<h3 id="gsub">Context-based glyph changes</h3>
+<p>You can experiment with examples using the <a href="/pickers/khmer/">Khmer picker</a>.</p>
 
-  <p> There is very little in the way of interaction between characters other than the subscript shapes used after the coeng generator.</p>
+
+<section>
+<h3 id="gsub">Context-based shaping</h3>
+
+  <p class="instructions">Are special glyph forms needed, depending on the context in which a character is used? Do glyphs interact in some circumstances?</p>
+<p> There is very little in the way of interaction between characters other than the subscript shapes used after the coeng generator.</p>
   <p>Some small joining features occur in relation to <span class="codepoint"><span lang="km">&#x17B6;</span> <a href="/scripts/khmer/block#char17B6">[<span class="uname">U+17B6 KHMER VOWEL SIGN AA​</span>]</a></span> and similarly shaped vowels. Unicode provides the following list of common forms: </p>
   <ol style="text-align: left;">
     <li><span class="ex" lang="km">ក +&#xA0;ា</span> = <span class="ex" lang="km">កា</span></li>
@@ -642,9 +646,19 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
+<section>
+<h3 id="gpos">Context-based positioning</h3>
+
+<p class="instructions"> Are there requirements to position diacritics or other items specially, depending on context? Does the script have multiple diacritics competing for the same location relative to the base?</p>
+</section>
+
+
+
+
 
 <section>
 <h3 id="font_styles">Font styles</h3>
+<p class="instructions"> Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</p>
 <p>There are several distinct styles of font in Modern Khmer. </p>
 <p>Most modern typefaces are set in an upright style (called <span class="charExample" translate="no"><span class="ex" lang="km">អក្សរឈរ</span> <span class="trans">ʔɑːksɑː cʰɔː</span></span> or <span class="charExample" translate="no"><span class="ex" lang="km">អក្សរត្រង់</span> <span class="trans">ʔɑːksɑː trɑŋ</span></span>).<sup><a href="https://en.wikipedia.org/wiki/Khmer_alphabet#Styles">w</a></sup> This is the style used for this page.</p>
     <figure>
@@ -666,6 +680,15 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
  
 <p>Another style (<span class="charExample" translate="no"><span class="ex" lang="km">អក្សរខម</span> <span class="trans">ʔɑːksɑː kʰɑːm</span></span>), characterized by sharper serifs and angles and retainment of some antique characteristics, is used for yantra text in Cambodia as well as in Thailand.<sup><a href="https://en.wikipedia.org/wiki/Khmer_alphabet#Styles">w</a></sup></p>
 </section>
+
+
+
+
+<section>
+<h3 id="transforms">Transforming characters</h3>
+
+<p class="instructions">If the script is bicameral, are the special rules about case conversion? Are there other correspondences between glyphs, such as half- vs fullwidth presentation forms?</p>
+</section>
 </section>
 
 
@@ -675,17 +698,31 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <section>
 <h2 id="layout">Structural boundaries &amp; markers</h2>
+  
+<section>
+<h3 id="graphemes">Grapheme boundaries</h3>
+ <p class="explanatoryintro">A grapheme is a user-perceived unit of text. The Unicode Standard uses generalised rules to define 'grapheme clusters', which approximate the likely grapheme boundaries in a writing system.</p>
+
+<p class="instructions">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements when double-clicking on the text, or moving through the text with the cursor, or backspace, etc.? </p>
+</section>
 
 
+
+
+  
 <section>
 <h3 id="word">Word boundaries</h3>
 
+ <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+
+<p class="instructions">Are words separated by spaces, or other characters? Are there special requirements when double-clicking  on the text? Are words hyphenated?</p>
 <p>  Khmer words are not separated by spaces.</p>
 </section>
 
 <section>
 <h3 id="phrase">Phrase boundaries</h3>
 
+<p class="instructions">What characters are used to indicate the boundaries of phrases, sentences, and sections?</p>
 <p>Although Khmer words are not separated by spaces, the space (<span lang="km">ឃ្លា</span> <span class="ipa">kliə</span>) is used, and is regarded as punctuation, similar to the comma. Huffman lists the following uses:</p>
   <ol>
     <li>between clauses within a sentence</li>
@@ -708,18 +745,36 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <p><b id="sections" class="leadin">Section boundaries.</b> <span class="codepoint" translate="no"><span lang="km">&#x17D5;</span> [<a href="/scripts/khmer/block#char17D5"><span class="uname">U+17D5 KHMER SIGN BARIYOOSAN</span></a>]</span> can be used to close a chapter, or an entire text.</p>
 <p><b id="text_start_end" class="leadin">Text start and end.</b> Poetic and religious texts typically start with <span class="codepoint" translate="no"><span lang="km">&#x17D9;</span> [<a href="/scripts/khmer/block#char17D9"><span class="uname">U+17D9 KHMER SIGN PHNAEK MUAN</span></a>]</span> and end with <span class="codepoint" translate="no"><span lang="km">&#x17DA;</span> [<a href="/scripts/khmer/block#char17DA"><span class="uname">U+17DA KHMER SIGN KOOMUUT</span></a>]</span>.</p>
 </section>
-    
+
+
+
+
+
+<section>
+<h3 id="bracketing">Bracketing &amp; parentheses</h3>
+<p class="instructions">What characters are used as parentheses, or to bracket information?</p>
+</section>
+
+
     
 
 <section>
   <h3 id="quotations">Quotations</h3>
-<p>According to CLDR, the default quote marks for Lao should be, reading right to left, <span lang="lo" class="ex">“...”</span>. When an additional quote is embedded within the first, the quote marks should be <span class="ex" lang="lo">‘...’</span>. </p>
+<p class="instructions">What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue?</p>
+<p>According to CLDR, the default quote marks for Khmer should be, reading right to left, <span lang="lo" class="ex">“...”</span>. When an additional quote is embedded within the first, the quote marks should be <span class="ex" lang="lo">‘...’</span>. </p>
 </section>
     
     
 
 <section>
+  <h3 id="abbr">Abbreviation</h3>
+<p class="instructions">What characters are used to indicate abbreviation, ellipsis &amp; repetition?</p>
+ </section>  
+    
+
+<section>
   <h3 id="repetition">Repetition</h3>
+<p class="instructions">What characters are used to indicate abbreviation, ellipsis &amp; repetition?</p>
 <p>It is common to repeat words or sometimes phrases in Khmer, particularly to provide emphasis. <span class="codepoint" translate="no"><span lang="km">&#x17D7;</span> [<a href="/scripts/khmer/block#char17D7"><span class="uname">U+17D7 KHMER SIGN LEK TOO</span></a>]</span> (called <span class="charExample" translate="no"><span class="ex" lang="km">លេខទោ</span> <span class="ipa">leːktoː</span></span>) can be used for this, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ខ្លាំង ៗ</span> <span class="ipa">klaŋklaŋ</span> <span class="meaning">very strong</span></span>; <span class="charExample" translate="no"><span class="ex" lang="km">គាត់មានផ្ទះថ្មី ៗ</span> <span class="ipa">kaːtʰ miən pʰteə̯h tʰməitʰməi</span> <span class="meaning">he has a brand new house</span></span>.</p>
         <p>Sometimes this sign repeats a phrase rather than a word, eg. <span class="charExample" translate="no"><span class="ex" lang="km">បន្តិចម្ដង ៗ</span> <span class="ipa">ɓɑntecmɗɑːŋ ɓɑntecmɗɑːŋ</span> <span class="meaning">little by little</span></span>.</p>
         <p>It is also occasionally used to repeat the word at the end of a sentence for the beginning of a new sentence<sup><a href="http://www.pratyeka.org/csw/hlp-csw.pdf">h</a></sup>, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ខ្ញុំទៅផ្ទះខ្ញុំ ។ នៅជិតផ្សារ</span> <span class="ipa">kɲomtɨwpteə̆hkɲom  pteə̆hkɲom nɨwcɨtpsaː</span> <span class="meaning"></span></span>.</p>
@@ -730,7 +785,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <section>
-  <h3 id="continuation">Continuation</h3>
+  <h3 id="continuation">Ellipsis</h3>
 <p>The word <span class="charExample" translate="no"><span class="ex" lang="km">។ល។</span></span> (pronounced <span class="ipa">laʔ</span>) is used as the equivalent of 'etc.' A character exists that represents that sequence, <span class="codepoint" translate="no"><span lang="km">&#x17D8;</span> [<a href="/scripts/khmer/block#char17D8"><span class="uname">U+17D8 KHMER SIGN BEYYAL</span></a>]</span>, but the Unicode Standard recommends the use of the three separate characters instead.<sup><a href="http://www.unicode.org/versions/Unicode10.0.0/ch16.pdf#Khmer">u</a></sup></p>
 <p>Other spellings for et cetera also exist. These include:</p>
         <ul>
@@ -738,6 +793,24 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
           <li><span class="ex" lang="km">–បេ–</span></li>
           <li><span class="ex" lang="km">–ល–</span></li>
         </ul>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="emphasis">Emphasis &amp; text decoration</h3>
+<p class="instructions">How are emphasis and highlighting achieved? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="inlinenotes">Inline notes &amp; annotations</h3>
+<p class="instructions">What mechanisms, if any, are used to create <u>inline</u> notes and annotations? (For referent-type notes such as footnotes, see below.)</p>
 </section>
 </section>
 
@@ -754,6 +827,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <section>
   <h3 id="linebreak">Line breaks</h3>
+<p class="instructions">Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that?</p>
 <p>Although Khmer doesn't use spaces or dividers between words, the expectation is that line-breaks occur at word boundaries.</p>
 <p>There are three basic types of Khmer word:</p>
 <ol>
@@ -763,12 +837,13 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </ol>
 <p>The first two types cannot be broken, but the third type can. For example, <span class="ex" lang="km">|ជាតិ|សាសន៍|</span>, <span class="ex" lang="km">|កម្ម|ផល|</span>, and <span class="ex" lang="km">|សកល|វិទ្យាល័យ|</span>. (<a href="https://github.com/w3c/sealreq/issues/4#issuecomment-384981313">Hong</a>)</p>
 <p>Text is not broken at sub-word syllable boundaries. In fact, this is particularly difficult to do algorithmically in Khmer, because syllable-final consonants are indistinguishable from consonants with an inherent vowel that constitute a new syllable. Some kind of morphological analysis is needed.</p>
-
+</section>
 
 
 
 <section>
   <h3 id="hyphenation">Hyphenation</h3>
+<p class="instructions">Is hyphenation used, or something else?</p>
 <p><span class="codepoint" translate="no"><span lang="km">&#x002D;</span> [<span class="uname">U+002D HYPHEN-MINUS</span>]</span> is used to indicate when part of a word has been wrapped onto a new line.</p>
 </section>
 
@@ -776,8 +851,17 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <section>
-  <h3 id="lists">Counter styles</h3>
+    <h3 id="justification">Text alignment &amp; justification</h3>
+<p class="instructions">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</p>
+</section>
+
+
+
+
+<section>
+  <h3 id="lists">Counters, lists, etc.</h3>
   
+<p class="instructions">Are there list or other counter styles in use?  If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed? </p>
 <p>Khmer uses two counter styles, according to the document <a href="https://w3c.github.io/predefined-counter-styles/#tamil-styles">Ready-made Counter Styles</a>, one numeric and the other alphabetic.</p>
 <p>The numeric style uses the Khmer digits: '០' '១' '២' '៣' '៤' '៥' '៦' '៧' '៨' '៩'.</p>
 <figure>
@@ -799,56 +883,100 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
+  
+<section>
+<h3 id="initials">Styling initials</h3>
+<p class="instructions">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? etc.</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="baselines">Baselines &amp; inline alignment</h3>
+<p class="instructions">Does the script have special requirements for baseline alignment between mixed scripts and in general?</p>
+</section>
+</section>
+
+
+
+
+
 
 
 <section>
-    <h3 id="tbd">TBD</h3>
-<p class="ednote">Further information needed for this section includes:</p>
-<pre style="margin-left: 10%;">
-Glyph shaping &amp; positioning
-    Cursive text
-    Context-based shaping
-    Multiple combining characters
-    Context-based positioning
-    Transforming characters
-
-Structural boundaries &amp; markers
-    Hyphens &amp; dashes
-    Bracketing information
-    Quotations
-    Abbreviations, ellipsis, &amp; repetition
-    Emphasis &amp; highlights
-    Inline notes &amp; annotations
-
-Inline layout
-    Inline text spacing
-    Bidirectional text
-
-Line &amp; paragraph layout
-    Line breaking
-    Hyphenation
-    Text alignment &amp; justification
-    Counters, lists, etc.
-    Styling initials
-    Baselines &amp; inline alignment
-
-Page &amp; book layout
-    General page layout &amp; progression
-    Directional layout features
-	Grids &amp; tables
-    Notes, footnotes, etc.
-    Forms &amp; user interaction
-    Page numbering, running headers, etc.
-</pre>
+<h2 id="pagelayout">Page &amp; book layout</h2>
+ 
+<section>
+    <h3 id="generallayout">General page layout &amp; progression</h3>
+<p class="instructions">How are the main text area and ancilliary areas positioned and defined? Are there any special requirements here, such as dimensions in characters for the Japanese kihon hanmen? The book cover for scripts that are read right-to-left scripts is on the right of the spine, rather than the left.  When content can flow vertically and to the left or right, how to specify the location of objects, text, etc. relative to the flow? Do tables and grid layouts work as expected? How do columns work in vertical text? Can you mix block of vertical and horizontal text? Does text scroll in a different direction?</p>
+</section>
+<section>
+<h3 id="grids">Grids &amp; tables</h3>
+<p class="instructions">Does the script have special requirements for character grids or tables?</p>
 </section>
 
+
+
+
+  
+<section>
+<h3 id="footnotes">Notes, footnotes, etc</h3>
+<p class="instructions">Does the script have special requirements for notes, footnotes, endnotes or other necessary annotations of this kind? (There is a section above for purely inline annotations, such as ruby or warichu. This section is more about annotation systems that separate the reference marks and the content of the notes.)</p>
 </section>
+
+
+
+
+  
+<section>
+<h3 id="interaction">Forms &amp; user interaction</h3>
+<p class="instructions">Are vertical form controls needed? Are scroll bars in an unusual position? Other special requirements for user interaction?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="headers">Page numbering, running headers, etc</h3>
+<p class="instructions">Are there special conventions for page numbering, or the way that running headers and the like are handled?</p>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+<section>
+<h2 id="languages">Languages using the Khmer script</h2>
+<p>According to ScriptSource, the Khmer script is used for the following languages: </p>
+<ul>
+<li>Mnong, Central [cmo]</li>
+<li>Jarai [jra]</li>
+<li>Kavet [krv]</li>
+<li>Khmer [khm]</li>
+<li>Krung [krr]</li>
+<li>Kuy [kdt]</li>
+<li>Lave [brb]</li>
+<li>Khmer, Northern [kxm]</li>
+<li>Tampuan [tpu]</li>
+</ul>
+</section>
+
+
+
+
 
 
 
 
 <section> 
-
 <h2 id="#refs">References</h2>
 <ol>
 <li>[ <a href="http://www.pratyeka.org/csw/hlp-csw.pdf"><sup><span class="doctitle">h</span></sup></a> ] Franklin Huffman, <a href="http://www.pratyeka.org/csw/hlp-csw.pdf"><span class="doctitle">Cambodian System of Writing</span></a></li>
@@ -862,9 +990,34 @@ Page &amp; book layout
 
 
 
+
+
+<details>
+<summary class="instructions">Show stats</summary>
+
+<table id="charCountList">
+<tr><th>Main</th><td id="mainCharList"></td><td id="mainCharListTotal"></td></tr>
+<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
+<tr><th>Auxiliary</th><td id="auxCharList"></td><td id="auxCharListTotal"></td></tr>
+<tr><th>Other</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
+<tr><th>Deprecated</th><td id="deprecatedCharList"></td><td id="deprecatedCharListTotal"></td></tr>
+</table>
+<script>
+runCharCount('.characterBox', 'mainCharList')
+runCharCount('.archaicBox', 'archaicCharList')
+runCharCount('.auxiliaryBox', 'auxCharList')
+runCharCount('.otherBox', 'otherCharList')
+runCharCount('.deprecatedBox', 'deprecatedCharList')
+</script>
+</details>
+
+
+
+
+
 <div id="panel" style="display:none"></div>
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/khmer"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-07-14  12:03<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bkhmer%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fkhmer%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/khmer"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-07-31  10:38<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bkhmer%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fkhmer%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 <script>
 initialiseSummary('/scripts/khmer/block','km','Khmer')
