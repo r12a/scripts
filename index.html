@@ -20,7 +20,7 @@ iframe { border: 0; width: 60%; height: 10em; margin: 1em 32% 1em 7.5%; }
 .flexbox {
 	display:flex; 
 	flex: row wrap;
-	margin: 1em 32% 0 7.5%;
+	margin: 1em 15% 0 7.5%;
 	}
 .flexbox > div {
     flex: 1;
@@ -82,7 +82,7 @@ iframe { border: 0; width: 60%; height: 10em; margin: 1em 32% 1em 7.5%; }
 
 
 
- <div id="scriptnotes" class="flexbox">
+ <div id="scriptnotes" class="flexbox" style="margin-right: 15%;">
  <a href="#scriptnotes"><img src="../r12a.github.io/images/lists/scriptsummary.png" alt=""/></a>
 
 	<div>
@@ -135,18 +135,18 @@ iframe { border: 0; width: 60%; height: 10em; margin: 1em 32% 1em 7.5%; }
           <a href="/scripts/arabic/urdu">Urdu</a> &bull;
           <a href="/scripts/vai/">Vai</a>
           </p-->
- 	<div id="summaries" style="font-size: 90%;"></div>
+ 	<div id="summaries" style="font-size: 80%;text-align:start;"></div>
    </div>
 	
 	<script>
 	out = ''
-	for (item in scriptNotes) {
-		out += '<span style="font-size: 80%; color:brown;">['+item+']</span>&nbsp;'
-		for (let i=0;i<scriptNotes[item].length;i++) {
-			out += '<a href="'+scriptNotes[item][i][1]+'">'+scriptNotes[item][i][0]+'</a> '
-			if (i<scriptNotes[item].length-1) out += '&bull; '
+	for (item in scriptNotesByRegion) {
+		out += '<span style="font-size: 100%; color:brown;font-weight:bold;">'+item+'</span> &nbsp;&nbsp;'
+		for (let i=0;i<scriptNotesByRegion[item].length;i++) {
+			out += '<a href="'+scriptNotesByRegion[item][i][1]+'">'+scriptNotesByRegion[item][i][0]+'</a> '
+			if (i<scriptNotesByRegion[item].length-1) out += '&bull; '
 			}
-		out += ' &nbsp;&nbsp; '
+		out += '<br/>'
 		}
 	document.getElementById('summaries').innerHTML = out
 	</script>
@@ -203,7 +203,7 @@ iframe { border: 0; width: 60%; height: 10em; margin: 1em 32% 1em 7.5%; }
             <a href="/scripts/tifinagh/block">Tifinagh</a> &bull; 
             <a href="/scripts/vai/block">Vai</a>
     </p-->
- 	<div id="charnotelist" style="font-size: 90%;"></div>
+ 	<div id="charnotelist" style="font-size: 80%;"></div>
    </div>
 	
 	<script>
@@ -245,7 +245,7 @@ iframe { border: 0; width: 60%; height: 10em; margin: 1em 32% 1em 7.5%; }
       <p class="mainLink"><a href="/pickers/">Unicode character pickers</a></p>
         <p>Pickers are likely to be most useful if you don't know a script well enough to use the native keyboard. The arrangement of characters also makes it much more useable than a regular character map utility, and they may include characters from more than one block. However, pickers also provide transliteration and other tools, and can help analyse text strings.</p>
 
-  <iframe id="pickerlist" src="../pickers/pickerlist.html" style="width: 100%; height: 20em;margin-left: 0;"></iframe>
+  <iframe id="pickerlist" src="../pickers/pickerlist.html" style="width: 100%; height: 25em;margin-left: 0;"></iframe>
     </div></div>
 
 
