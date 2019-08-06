@@ -1,6 +1,7 @@
 var scriptNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr', 'laoo', 'lana', 'lisu', 'mand', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'taml', 'tavt', 'thaa', 'thai', 'tibt', 'tfng'])
 
 var scriptNotes= {
+    'adlm':[['Adlam','adlam/']],
     'arab':[['Arabic','arabic/'], 
 			['Hausa (ajami)', 'arabic/hausa'],
 			['Kashmiri', 'arabic/kashmiri'],
@@ -51,7 +52,8 @@ var scriptNotes= {
     }
 
 var scriptNotesByRegion = {
-	'Africa':[['Ethiopic', 'ethiopic/'],
+	'Africa':[['Adlam', 'adlam/'],
+			  ['Ethiopic', 'ethiopic/'],
 			  ['Hausa (boko)', 'latin/hausa'],
 			  ['Hausa (ajami)', 'arabic/hausa'],
 			  ["N’Ko", 'nko'],
@@ -115,6 +117,7 @@ var scriptNotesByRegion = {
 var charNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr','laoo', 'lana', 'maka', 'mand', 'mlym', 'mong', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'tale', 'talu', 'tavt', 'taml', 'thaa', 'thai', 'tibt', 'tfng', 'vaii'])
 
 var charNotesList = {
+    'adlm':'adlam/block',
     'armn':'armenian/block',
     'arab':'arabic/block', 
     'bali':'balinese/block', 
@@ -158,6 +161,7 @@ var charNotesList = {
 
 
 var charNotesList = {
+    'adlm':['Adlam', 'adlam/block'],
     'armn':['Armenian', 'armenian/block'],
     'arab':['Arabic', 'arabic/block'], 
     'bali':['Balinese', 'balinese/block'], 
