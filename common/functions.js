@@ -101,7 +101,7 @@ function makeTables (lang) {
         //chars = node.dataset.chars.split('␣')
         chars = node.textContent.split('␣')
         info = node.dataset.cols
-        if (node.className.includes('bicameral')) bicameral = true
+        if (node.className.includes('bicameral')) bicameral = true // note: phase this out in favour of data-select=last
         else bicameral = false
         if (node.dataset.select && node.dataset.select == 'last') bicameral = true
         else if (node.dataset.select) showFirst = true
@@ -143,10 +143,19 @@ function makeTables (lang) {
 
         out += '<div class="listArray">'
 
-        for (let i=0;i<chars.length;i++) {
-            if (bicameral) char = chars[i][chars[i].length-1]
-            else if (showFirst) char = chars[i][0]
+        for (let i=0;i<chars.length;i++) { 
+			if (bicameral || showFirst) {
+				charList = [... chars[i]]
+            	if (bicameral) char = charList[1]
+            	else char = charList[0]
+				}
             else char = chars[i]
+		
+		
+		
+            //if (bicameral) char = chars[i][chars[i].length-1]
+            //else if (showFirst) char = chars[i][0]
+            //else char = chars[i]
             
             out += '<div class="listPair"><span class="listItem" lang="'+lang+'">'+chars[i]+'</span>'
 
@@ -165,7 +174,19 @@ function makeTables (lang) {
 			
             // print the code point values
             out += '<span class="listUnum">'
-            for (let z=0;z<chars[i].length;z++) {
+			charList = [... chars[i]]
+            for (let z=0;z<charList.length;z++) {
+                var hex = charList[z].codePointAt(0)
+                if (ignorableChar && ignorableChar === hex) continue // ignore specified character
+                if (vowelcluster && hex === 45) continue // ignore hyphens - this should be phased out
+                hex = hex.toString(16).toUpperCase()
+                while (hex.length < 4) hex = '0'+hex
+                out += hex
+                if (charList.length>1 && z<charList.length-1) out += '<br/>'
+                }
+                out += '</span>'
+
+            /*for (let z=0;z<chars[i].length;z++) {
                 var hex = chars[i].codePointAt(z)
                 if (ignorableChar && ignorableChar === hex) continue // ignore specified character
                 if (vowelcluster && hex === 45) continue // ignore hyphens - this should be phased out
@@ -174,9 +195,10 @@ function makeTables (lang) {
                 out += hex
                 if (chars.length>1 && z<chars.length-1) out += '<br/>'
                 }
-                out += '</span>'
+                out += '</span>'*/
 
-            if (info.includes('ipa')) {
+            if (info.includes('ipa')) { 
+			//if (window.spreadsheetRows[char]) console.log('ipa',char,window.spreadsheetRows[char][cols.ipaLoc])
                 if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.ipaLoc]) ch = window.spreadsheetRows[char][cols.ipaLoc]
                 else ch = '&nbsp;'
                 if (ch === '&nbsp;') out += '<span>&nbsp;</span>'

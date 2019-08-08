@@ -220,18 +220,22 @@ function makeCharacterLink (cp, lang, direction) {
 
 
 
-function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, showShape) {
+function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, showShape) { 
 	var charList = chars.split('\n')
     var div, p, span
-   	
+   		
     for (var x=0; x<charList.length; x++) { 
         if (charList[x].trim() == '') continue
         var items = charList[x].split('\t')
         if (items[0] === '') continue
-        if (items[0].length > 1) continue
-        if (items[cols.class] && items[cols.class].includes('-')) continue
+		
+		// check whether this is more than one codepoint, taking surrogates into account
+		tempArray = [... items[0]]
+		if (tempArray.length > 1) continue
 
-        // get the character as dec & hex
+		if (items[cols.class] && items[cols.class].includes('-')) continue
+
+		// get the character as dec & hex
         if (items[0].includes('\\u')) var dec = parseInt(items[0].replace('\\u',''),16)
         //if (items[0].length > 1) var dec = parseInt(items[0].replace('&#x','').replace(';',''),16) // change this to \u.... ?
 		else dec = items[0].codePointAt(0)
