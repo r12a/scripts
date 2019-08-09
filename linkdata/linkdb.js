@@ -10,6 +10,7 @@ var scriptNotes= {
 			], 
     'armn':[['Armenian','armenian/']],
     'bali':[['Balinese', 'balinese/']], 
+    'bass':[['Bassa Vah', 'bassavah/']], 
     'beng':[['Bengali/Bangla', 'bengali/']],
     'bugi':[['Buginese', 'buginese/']],
     'cher':[['Cherokee', 'cherokee/']],
@@ -53,6 +54,7 @@ var scriptNotes= {
 
 var scriptNotesByRegion = {
 	'Africa':[['Adlam/Pular', 'adlam/'],
+			  ['Bassa Vah', 'bassavah/'],
 			  ['Ethiopic', 'ethiopic/'],
 			  ['Hausa (boko)', 'latin/hausa'],
 			  ['Hausa (ajami)', 'arabic/hausa'],
@@ -121,6 +123,7 @@ var charNotesList = {
     'armn':'armenian/block',
     'arab':'arabic/block', 
     'bali':'balinese/block', 
+    'bass':'bassavah/block', 
     'beng':'bengali/block',
     'bugi':'buginese/block',
     'cher':'cherokee/block',
@@ -165,6 +168,7 @@ var charNotesList = {
     'armn':['Armenian', 'armenian/block'],
     'arab':['Arabic', 'arabic/block'], 
     'bali':['Balinese', 'balinese/block'], 
+    'bass':['Bassa Vah', 'bassavah/block'], 
     'beng':['Bengali', 'bengali/block'],
     'bugi':['Buginese', 'buginese/block'],
     'cher':['Cherokee', 'cherokee/block'],
