@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<title>Bassa Vah script notes</title>
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="description" content="Summary of the Bassa Vah script."/>
+<link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../common/local.css" />
+<!--link rel="stylesheet" href="../style/print.css"/-->
+<style>
+@font-face {
+    font-family: 'Noto Sans Bassah Vah WF';
+    src: url('../../shared/webfonts/notosansbassavah-regular-webfont.woff2') format('woff2'),
+         url('../../shared/webfonts/notosansbassavah-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+#freeText {
+	font-size: 28px;
+	font-family: "Noto Sans Bassah Vah WF", serif;
+	text-align: start;
+    line-height: 2;
+	}
+@media print { #freeText { font-size: 18px; } }
+[lang=bsq] { font-family: "Noto Sans Bassah Vah WF", serif; font-size: 140%; }
+.large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }	
+</style>
+
+<script src="../../shared/scriptdb/bass.js"> </script>
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2019.js"></script>
+<script src="../../shared/code/all-names.js"></script>
+<script src="../../shared/code/character_conversion.js"></script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/fontlists/manage.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
+<script src="../common/functions.js"></script>
+<script src="../../shared/code/getLinks.js"></script>
+<script src="../linkdata/linkdb.js"></script>
+<script src="../featurelist/scriptdata.js"> </script>
+
+<script src="../../shared/fontlists/bass.js"> </script>
+</head>
+
+<body>
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
+</header>
+
+<h1>Bassa Vah</h1>
+
+<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top"/></a></nav>
+
+  <aside class="sidebar"> 
+		<h2 class="notoc flush"><a id="tochead" name="tochead" tabindex="4">Contents</a></h2>
+		<div id="toc"><!-- placeholder --></div>
+
+ <div id="fontsetting" class="closed">
+  <h2 class="notoc"><a id="fonts">Fonts</a></h2>
+  <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'bsq');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'bsq');" />
+    </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
+    <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
+	return false;">
+      <p>Change size:<br />
+        <input id="slider" type="range" min="12" max="100" step="1" value="32">
+        &#xA0; <span id="sizeIndicator">32px</span><br />
+        <input id="multiplier" type="hidden" value="1" />
+        Multiplier:
+        <input type="radio" name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x1">1</label>
+        <input type="radio" name="step" id="x5" value="2"  onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x5">2</label>
+        <input type="radio" name="step" id="x10" value="10"  onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x10">10</label>
+      </p>
+    </form>
+</div>
+</aside>
+
+	<p id="status">Updated Mon 13 Oct 2014  &bull; tags <a href="http://r12a.github.io/blog/index.php?tag=bassavah" title="Show all blog posts tagged with 'bassavah'">bassavah</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+
+	<div class="section">
+	  <p>This page provides basic information about the Bassa Vah script, and its use for the Bassa language. The information was gathered from a variety of sources, and I have tried to make the summary as accurate as possible, but it has not been reviewed.  For character-specific details follow the links to the <a class="linkHighlight" href="/scripts/bassavah/block">Bassa Vah character notes</a>.</p>
+<p>See also the <a href="../../pickers/bass/">Bassa Vah character app</a>.</p>
+<p>For similar information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Bass">script links pages</a>.</p>
+<p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text. Colours and annotations on panels listing characters are relevant to their use for the Bassa  language.</p>
+</div>
+
+
+
+<section>
+<h2 id="sample">Sample (Bassa Vah)</h2>
+  
+
+  <div id="freeText" dir="ltr" lang="bsq" data-target="c" data-base="/scripts/bassavah/block" data-source="https://www.omniglot.com/writing/bassa.htm">
+  <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">𖫞𖫫𖫰 𖫐𖫭𖫱𖫐-𖫗𖫭𖫰𖫞𖫭𖫰 𖫑𖫫𖫱 𖫔𖫬𖫱𖫞𖫬𖫱𖫭𖫱𖫐-𖫕𖫭𖫰  𖫔𖫪𖫰𖫬𖫲, 𖫞𖫫𖫰𖫬𖫱 𖫕𖫨𖫲𖫐-𖫕𖫪𖫱 𖫒𖫫𖫰𖫭𖫰𖫐 𖫛𖫩𖫰𖫞𖫩𖫰𖫬𖫲 𖫔𖫬𖫰𖫭𖫱𖫐 𖫛𖫨𖫐𖫵 𖫑𖫫𖫰 𖫛𖫧𖫲 𖫔𖫫𖫰𖫞𖫫𖫰 𖫠𖫭𖫱𖫞𖫭𖫱𖫭𖫲-𖫥𖫩𖫲𖫭𖫱𖫐 𖫠𖫩𖫱𖫞𖫩𖫱-𖫕𖫪𖫱𖫧𖫱 𖫑𖫫𖫱 𖫞𖫬𖫲 𖫔𖫪𖫱𖫐𖫭𖫲𖫐 𖫛𖫨𖫰𖫐-𖫛𖫨𖫰𖫐 𖫒𖫨𖫱𖫫𖫱𖫭𖫱𖫐 𖫞𖫫𖫰 𖫕𖫨𖫲𖫪𖫰𖫐, 𖫑𖫫𖫰 𖫛𖫧𖫲 𖫔𖫫𖫰𖫞𖫫𖫰 𖫔𖫬𖫰 𖫛𖫧𖫲𖫧𖫱 𖫕𖫪𖫲𖫐-𖫞𖫬𖫱 𖫑𖫫𖫰 𖫝𖫩𖫲 𖫔𖫪𖫲𖫐𖫭𖫱𖫐 𖫔𖫩𖫰 𖫞𖫭𖫰𖫭𖫰 𖫑𖫧𖫱𖫵</p>
+  <!-- Source: https://www.omniglot.com/writing/bassa.htm -->
+  </div>
+</section>
+
+
+
+
+ 
+
+<section>
+    <h2 id="history">Usage &amp; history</h2>
+    <p>From <a href="http://scriptsource.org/scr/Bass">Scriptsource</a>: </p>
+    <blockquote>
+<p>The Bassa Vah script is used to write the Bassa language spoken in Liberia and Sierra Leone, and by Bassa speakers in Brazil and the Caribbean. The name originated from the Bassa word 'Vah', meaning 'to throw a sign'; the script developed from the earlier Bassa communication system of signs made from chewed leaves or carved into trees and left in set locations where they would be found and interpreted. As this system developed, it was employed by the Bassa people to avoid slave traders, so was suppressed by colonial powers and became almost extinct. </p>
+<p>Widely hailed as the only indigenous African alphabet, ...</p>
+</blockquote>
+    <p>From <a href="https://en.wikipedia.org/wiki/Bassa_script">Wikipedia</a>:</p>
+<blockquote>
+<p>The Bassa script, known as Bassa vah or simply vah ('throwing a sign' in Bassa) is an alphabetic script for writing the Bassa language of Liberia. It was reinvented by Dr. Thomas Flo Lewis, who rediscovered the script in South America from descendants of Bassa Slaves taken to the Americas he instigated publishing of limited materials in the language from the mid-1900s through the 1930s, with its height in the 1910s and 1920s. It is alleged that some of the signs are based on native Bassa pictograms revealed by a former slave. It is not clear what connection it may have had with neighboring scripts, but type was cast for it, and an association for its promotion was formed in Liberia in 1959. It is not used contemporarily and has been classified as a failed script.[1] Its creation should be distinguished from other orthographic attempts in the 1830s by European missionaries. </p>
+</blockquote>
+   
+  
+  
+  
+<!--section> 
+<h3 id="variants">Orthographic development &amp; variants</h3>
+<p>@ Hausa has also been written in ajami since the early 17th century.<a class="fnref" href="https://en.wikipedia.org/wiki/Hausa_language">w</a></p>
+<p>@ There is no standard system of using ajami for Hausa, and different writers may use letters with different values.<a class="fnref" href="https://en.wikipedia.org/wiki/Hausa_language">w</a></p>
+<p>@ There are or have been a number of variant practices for writing Hausa ajami. There are also some confusable characters. They include the following:</p>
+<ul>
+<li>@ There is some variation in sources about the use of <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x06CC;</span> [<a href="/scripts/arabic/block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span> versus <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x064A;</span> [<a href="/scripts/arabic/block#char064A"><span class="uname">U+064A ARABIC LETTER YEH</span></a>]</span>. Most sources seem to agree, however, that the <span class="ipa">iː</span> uses <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0649;</span> [<a href="/scripts/arabic/block#char0649"><span class="uname">U+0649 ARABIC LETTER ALEF MAKSURA</span></a>] </span>,  whereas the end of a diphthong or the consonant <span class="ipa">j</span> uses one of the former. However, some sources show <span class="uname">YEH</span> instead of <span class="uname">FARSI YEH</span> for medial forms. They only differ in that the isolate and final forms of <span class="uname">FARSI YEH</span> have no dots, ie. <span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ییی</span></span> vs. <span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ييي</span></span>.</li>
+<li>@ Unicode policy for the Arabic script is to encode fully precomposed characters rather than to use combining characters for ijam. Therefore, it is inappropriate to use <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x06DB;</span> [<a href="/scripts/arabic/block#char06DB"><span class="uname">U+06DB ARABIC SMALL HIGH THREE DOTS</span></a>] (<span class="name">wagaf</span>)</span> to create characters such as <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x069F;</span> [<a href="/scripts/arabic/block#char069F"><span class="uname">U+069F ARABIC LETTER TAH WITH THREE DOTS ABOVE</span></a>]</span>, even though the Hausa consider the wagaf to be a modifier letter rather than part of the base character.<a class="fnref" href="https://www.unicode.org/L2/L2018/18094-arabic-hausa.pdf">e</a></li>
+<li>@ The <span class="codepoint"><span class="name">wagaf</span></span> may yle.</li>
+</ul>
+</section-->
+</section>
+
+
+
+
+
+  <div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+    </table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+   </div>
+
+
+
+
+<section>
+    <h2 id="type">Distinctive features</h2>
+<p>The Bassa Vah script  is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#alphabet">alphabet</a></span>. Both consonants and vowels are indicated by letters.  See the table to the right for a brief overview of features for the Bassa Vah script, taken from the <a href="../featurelist/">Script Comparison Table</a>.</p>
+  <!--p>@ The following list describes some distinctive characteristics of the Bassa Vah script.</p>
+<ul>
+<li><p>item</p></li>
+<li><p>item</p></li>
+<li><p>item</p></li>
+<li><p>item</p></li>
+</ul-->
+</section>
+
+
+
+
+
+ <section>
+<h2 id="chars">Character lists</h2>
+  <p>Version 12.0 of the Unicode Standard has the following block dedicated to the Bassa Vah script (numbers in lists are non-ASCII only):</p>
+    <ul>
+      <li> <a href="/uniview/?block=bassa_vah">Bassa Vah</a> <span class="charCount">30 letters, 5 marks, 1 punctuation :   total 36</span></li>
+</ul>
+<p>Apart from ASCII characters, the Bassa orthography described here uses the same 36 characters from the same Unicode block </p>
+<p><cite>Character Usage</cite> has information about the following orthographies associated with this script: <a href="/app-charuse/?language=bsq-bass" target="_blank">Bassa</a></p>
+<p>For detailed character-specific information see the <a class="linkHighlight" href="/scripts/bassavah/block">Bassa Vah character notes</a>.</p>
+</section>
+
+
+
+
+<!--section>
+<h2 id="structure">Structure</h2>
+    <p>Hausa has 3 syllable types: CV, CVV, and CVC, where VV can be a long vowel or a diphthong.<a class="fnref" href="#refs">c</a> The long vs. short vowel distinction is phonemically important, however when a syllable with a long vowel acquires and final consonant, the vowel is shortened.</p>
+<p>Consonant clusters may occur where syllables are side by side, but not within a syllable. Gemination is, however, a distinctive feature.<a class="fnref" href="#refs">c</a></p>
+<p>Semivowels <span class="ipa">ʷ</span> and <span class="ipa">ʲ</span> may occur after an initial consonant.</p>
+</section-->
+  
+  
+
+
+
+<div id="showTranscriptions">
+<div>In yellow boxes, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+</div>
+
+
+
+
+
+
+  <section>
+    <h2 id="direction">Text direction</h2>
+    <p>Bassa Vah text is written horizontally, left to right.</p>
+  </section>
+   
+    
+      
+
+
+
+<section> 
+<h2 id="vowelsummary">Vowels</h2>
+
+<section>
+<h3 id="vowelPhonemes">Phoneme table</h3>
+<table class="ipaTable">
+<thead>
+<tr>
+<th>&#160; </th>
+<th colspan="4">Front • Central • Back </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Close </th>
+<td><span class="ipa">i</span> <span class="ex" lang="bsq">𖫭</span></td>
+<td colspan="2">&nbsp;</td>
+<td><span class="ipa">u</span> <span class="ex" lang="bsq">𖫪</span></td>
+</tr>
+<tr>
+<th>Close-mid </th>
+<td><span class="ipa">e</span> <span class="ex" lang="bsq">𖫫</span></td>
+<td colspan="2">&nbsp;</td>
+<td><span class="ipa">o</span> <span class="ex" lang="bsq">𖫩</span></td>
+</tr>
+<tr>
+<th>Open-mid</th>
+<td><span class="ipa">ɛ</span> <span class="ex" lang="bsq">𖫬</span></td>
+<td colspan="2"></td>
+<td><span class="ipa">ɔ</span> <span class="ex" lang="bsq">𖫨</span></td>
+</tr>
+<tr>
+<th>Open </th>
+<td colspan="2"><span class="ipa">a</span> <span class="ex" lang="bsq">𖫧</span></td>
+<td colspan="2"></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+</section>
+
+
+<section>
+<h3 id="voweldetails">Vowel details</h3>
+
+<p>Use of vowels is straightforward. These are the characters.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">𖫭␣𖫪␣𖫩␣𖫫␣𖫬␣𖫨␣𖫧</figure>
+
+<p>It seems quite common to find vowels at the beginning of a syllable, and sometimes several together, eg. <span class="charExample" translate="no"><span class="ex" lang="bsq">𖫒𖫨𖫱𖫫𖫱𖫭𖫱𖫐</span> <span class="trans">sɔ²e²i²n</span></span>.</p>
+</section>
+
+
+
+
+ 
+<section>
+<h3 id="absence">Vowel absence</h3>
+<p><span class="ednote">TBC: Vowel absence within a word seems to only occur after <span class="codepoint" translate="no"><span lang="bsq">&#x16AD0;</span> [<a href="bassavah#char16AD0"><span class="uname">U+16AD0 BASSA VAH LETTER ENNI</span></a>]</span>, when it is used to indicate nasalisation of the preceding vowel, in which case there is no special behaviour – the vowel is simply omitted.</span></p>
+</section>
+</section>
+
+
+
+
+
+
+
+<section> 
+<h2 id="bassavahchar">Consonants</h2>
+
+
+<section>
+<h3 id="consonantPhonemes">Phoneme table</h3>
+<table class="ipaTable">
+<thead>
+<tr>
+<th></th>
+<th>Labial </th>
+<th>Dental </th>
+<th>Alveolar </th>
+<th>Palatal </th>
+<th>Velar </th>
+<th>Glottal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Stop /<br />
+Affricate</th>
+<td><span class="ipa">p</span> <span class="ex" lang="bsq">𖫥</span><br/>
+<span class="ipa">b</span> <span class="ex" lang="bsq">𖫢</span></td>
+<td><span class="ipa">t</span> <span class="ex" lang="bsq">𖫡</span><br/>
+<span class="ipa">d</span> <span class="ex" lang="bsq">𖫗</span><br/>
+<span class="ipa"> ɗ</span> <span class="ex" lang="bsq">𖫞</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">c</span> <span class="ex" lang="bsq">𖫟</span><br>
+<span class="ipa">ɟ</span> <span class="ex" lang="bsq">𖫙</span> <span class="ex" lang="bsq">𖫕</span></td>
+<td><span class="ipa">k</span> <span class="ex" lang="bsq">𖫑</span><br/>
+<span class="ipa"> ɡ</span> <span class="ex" lang="bsq">𖫖</span><br/>
+<span class="ipa">kp</span> <span class="ex" lang="bsq">𖫘</span><br/>
+<span class="ipa"> ɡb</span> <span class="ex" lang="bsq">𖫝</span></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>Fricative </th>
+<td><span class="ipa">f</span> <span class="ex" lang="bsq">𖫓</span><br/>
+<span class="ipa">v</span> <span class="ex" lang="bsq">𖫣</span></td>
+<td></td>
+<td><span class="ipa">s</span> <span class="ex" lang="bsq">𖫒</span><br/>
+<span class="ipa">z</span> <span class="ex" lang="bsq">𖫜</span></td>
+<td></td>
+<td><span class="ipa">xʷ</span> <span class="ex" lang="bsq">𖫚</span></td>
+<td><span class="ipa">h</span> <span class="ex" lang="bsq">𖫤</span><br/>
+<span class="ipa">hʷ</span> <span class="ex" lang="bsq">𖫠</span></td>
+</tr>
+<tr>
+<th>Nasal </th>
+<td><span class="ipa">mb</span> <span class="ex" lang="bsq">𖫔</span></td>
+<td><span class="ipa">n</span> <span class="ex" lang="bsq">𖫐</span></td>
+<td></td>
+<td><span class="ipa">ɲ</span> <span class="ex" lang="bsq">𖫕</span></td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>Approximant </th>
+<td><span class="ipa">w</span> <span class="ex" lang="bsq">𖫛</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">l</span> <span class="ex" lang="bsq">𖫦</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>Trill </th>
+<td></td>
+<td>&nbsp;</td>
+<td><span class="ipa">r</span> <span class="ex" lang="bsq">𖫦</span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+
+
+
+<section>
+<h3 id="consonantpronunciation">Basic  consonants</h3>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">𖫥␣𖫢␣𖫡␣𖫗␣𖫞␣𖫟␣𖫙␣𖫑␣𖫖␣𖫘␣𖫝␣𖫓␣𖫣␣𖫒␣𖫜␣𖫚␣𖫠␣𖫤␣𖫔␣𖫐␣𖫕␣𖫛␣𖫦</figure>
+
+<p>A few of the letters are written in more than one way when Bassa is written in the Latin script.</p>
+<ul>
+<li> <span class="codepoint" translate="no"><span lang="bsq">&#x16AD4;</span> [<a href="bassavah#char16AD4"><span class="uname">U+16AD4 BASSA VAH LETTER MBE</span></a>]</span> is sometimes written as <span class="trans">m</span> and other times as <span class="trans">ɓ</span>.<a class="fnref" href="http://www.loc.gov/catdir/cpso/romanization/bassavah.pdf"></a></li>
+<li><span class="codepoint" translate="no"><span lang="bsq">&#x16ADD;</span> [<a href="bassavah#char16ADD"><span class="uname">U+16ADD BASSA VAH LETTER GBU</span></a>]</span> can be <span class="trans">gb</span> or <span class="trans">gm</span>.</li>
+<li><span class="codepoint" translate="no"><span lang="bsq">&#x16AD5;</span> [<a href="bassavah#char16AD5"><span class="uname">U+16AD5 BASSA VAH LETTER YIE</span></a>]</span> can be <span class="trans">dy</span> or <span class="trans">ny</span>.</li>
+</ul>
+<p>&nbsp;</p>
+</section>
+<section>
+<h3 id="finals">Syllable-final consonants</h3>
+	<p><span class="codepoint" translate="no"><span lang="bsq">&#x16AD0;</span> [<a href="bassavah#char16AD0"><span class="uname">U+16AD0 BASSA VAH LETTER ENNI</span></a>]</span> appears to be used in syllable-final position to indicate nasalisation of the preceding vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="bsq">𖫛𖫨𖫰𖫐-𖫛𖫨𖫰𖫐</span> <span class="trans">wɔ¹n-wɔ¹n (wɔ̃́-wɔ̃́)</span></span>.</p>
+<p><span class="ednote">Other times, the Latin transcription of the sample text above suggests that it is pronounced as <span class="ipa">n</span> in syllable-final position.</span></p>
+</section>
+</section>
+<section>
+<h2 id="tones">Tones</h2>
+<p>Bassah Vah has 5 tone marks. Every syllable must have a tone mark, and they are positioned in the centre of the vowel glyph, eg. <span class="charExample" translate="no"><span class="ex" lang="bsq">𖫩𖫰 𖫩𖫱 𖫩𖫲 𖫩𖫳 𖫩𖫴</span> <span class="trans">o¹ o² o³ o⁴ o⁵</span></span> or <span class="charExample" translate="no"><span class="ex" lang="bsq">𖫫𖫰 𖫫𖫱 𖫫𖫲 𖫫𖫳 𖫫𖫴</span> <span class="trans">e¹ e² e³ e⁴ e⁵</span></span>.</p>
+  
+<figure class="characterBox auto" data-cols="trans">𖫰␣𖫱␣𖫲␣𖫳␣𖫴</figure>
+</section>
+
+
+
+
+
+
+<section>
+<h2 id="cchar">Combining marks</h2>
+<p>Bassa Vah has no combining marks other than the those used for tones.</p>
+</section>
+    
+    
+    
+    
+    
+<section> 
+<h2 id="punctuation">Punctuation</h2>
+		<p>The Bassa Vah block has only one punctuation mark. <span class="codepoint" translate="no"><span lang="bsq">&#x16AF5;</span> [<a href="bassavah#char16AF5"><span class="uname">U+16AF5 BASSA VAH FULL STOP</span></a>]</span> can be used as an alternative to an ASCII period.</p>
+
+<figure class="characterBox auto"  data-cols="">𖫵</figure>
+
+		<p>It was once thought that a similar symbol was used for a comma, but it was decided that this was actually just a typographic error in one document.<a class="fnref" href="http://std.dkuug.dk/JTC1/SC2/wg2/docs/n3991.pdf">r</a></p>
+<p>Otherwise, Bassa Vah uses Western punctuation.</p>
+</section>
+    
+    
+    
+    
+    
+<section> 
+<h2 id="numberdescn">Numbers</h2>
+
+  <section>
+    <h3 id="digits">Digits</h3>
+
+    <p>Bassa Vah uses western digits. </p>
+ 
+<figure class="characterBox auto"  data-cols="">1␣2␣3␣4␣5␣6␣7␣8␣9␣0</figure>
+</section>
+</section>
+
+
+
+
+
+
+<section>
+<h2 id="shaping">Glyph shaping &amp; positioning</h2>
+
+<p>You can experiment with examples using the <a href="/pickers/bass/">Bassa Vah picker</a>.</p>
+
+
+
+
+<section>
+<h3 id="gsub">Context-based shaping</h3>
+
+  <p class="prompts">Are special glyph forms needed, depending on the context in which a character is used? Do glyphs interact in some circumstances?</p>
+<p>There appears to be no particular context-based shaping in Bassa Vah.</p>
+<p>There are, however, some fonts use slightly variant shapes for some letters. Also, the two-dot tone mark, <span class="codepoint" translate="no"><span lang="bsq">&#x16AF2;</span> [<a href="bassavah#char16AF2"><span class="uname">U+16AF2 BASSA VAH COMBINING MID TONE</span></a>]</span>, is sometimes written with the dots horizontal, and sometimes vertical.</p>
+</section>
+
+
+
+
+<section>
+<h3 id="gpos">Context-based positioning</h3>
+
+			<p class="prompts"> Are there requirements to position diacritics or other items specially, depending on context? Does the script have multiple diacritics competing for the same location relative to the base?</p>
+<p>Tone marks need to be positioned relative to each vowel glyph to which they are attached. </p>
+<p>There don't appear to be  multiple combining characters associated with a single base.</p>
+</section>
+
+
+
+
+<section>
+<h3 id="fontstyle">Font styles</h3>
+<p class="prompts"> Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</p>
+</section>
+
+
+
+
+<section>
+<h3 id="transforms">Transforming characters</h3>
+
+<p class="prompts">If the script is bicameral, are the special rules about case conversion? Are there other correspondences between glyphs, such as half- vs fullwidth presentation forms?</p>
+<p>According to ScriptSource, a lower case was developed in recent years by the Bassa Vah Association in the Americas. This case distinction is not yet supported by Unicode.<a class="fnref" href="https://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Bass">s</a></p>
+</section>
+</section>
+
+
+
+
+
+
+<section>
+<h2 id="boundaries">Structural boundaries &amp; markers</h2>  
+  
+<section>
+<h3 id="graphemes">Grapheme boundaries</h3>
+ <p class="explanatoryintro">A grapheme is a user-perceived unit of text. The Unicode Standard uses generalised rules to define 'grapheme clusters', which approximate the likely grapheme boundaries in a writing system.</p>
+
+<p class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements when double-clicking on the text, or moving through the text with the cursor, or backspace, etc.? </p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="word">Word boundaries</h3>
+ <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+<p class="prompts">Are words separated by spaces, or other characters? Are there special requirements when double-clicking  on the text? Are words hyphenated?</p>
+
+<p>Words are  separated by spaces. </p>
+<p>The sample above shows a number of instances where hyphs are used<a class="fnref" href="https://www.w3.org/TR/ilreq/"></a> within a word, eg. <span class="charExample" translate="no"><span class="ex" lang="bsq">𖫐𖫭𖫱𖫐-𖫗𖫭𖫰𖫞𖫭𖫰</span> <span class="trans">ni²n-di¹ɖi¹</span></span> and <span class="charExample" translate="no"><span class="ex" lang="bsq">𖫕𖫪𖫲𖫐-𖫞𖫫𖫱</span> <span class="trans">dᶯu³n-ɖe²</span></span>.</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="phrase">Phrase &amp; section boundaries</h3>
+<p class="prompts">What characters are used to indicate the boundaries of phrases, sentences, and sections?</p>
+<p>Generally, western punctuation is used, including commas, periods and parentheses.</p>
+<p>Bassa Vah also has a native full stop, <span class="codepoint" translate="no"><span lang="bsq">&#x16AF5;</span> [<a href="bassavah#char16AF5"><span class="uname">U+16AF5 BASSA VAH FULL STOP</span></a>]</span>, which can be used instead of the period.</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="bracketing">Bracketing &amp; parentheses</h3>
+<p class="prompts">What characters are used as parentheses, or to bracket information?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="quotations">Quotations</h3>
+<p class="prompts">What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="hyphens">Abbreviation, ellipsis &amp; repetition</h3>
+<p class="prompts">What characters are used to indicate abbreviation, ellipsis &amp; repetition?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="emphasis">Emphasis &amp; text decoration</h3>
+<p class="prompts">How are emphasis and highlighting achieved? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="inlinenotes">Inline notes &amp; annotations</h3>
+<p class="prompts">What mechanisms, if any, are used to create <u>inline</u> notes and annotations? (For referent-type notes such as footnotes, see below.)</p>
+</section>
+</section>
+ 
+ 
+ 
+ 
+ 
+<section>
+<h2 id="paralayout">Line &amp; paragraph layout</h2>
+   
+      
+  <section>
+    <h3 id="linebreak">Line breaking &amp; hyphenation</h3>
+    <p class="prompts">Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that?</p>
+</section>
+
+
+
+<section>
+    <h3 id="hyphenation">Hyphenation</h3>
+<p class="prompts">Is hyphenation used, or something else?</p>
+</section>
+
+
+
+ <section>
+    <h3 id="justification">Text alignment &amp; justification</h3>
+    <p class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</p>
+</section>
+
+
+
+
+ <section>
+    <h3 id="letterspace">Letter spacing</h3>
+    <p class="prompts">Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see above.).</p>
+</section>
+
+
+
+
+<section>
+  <h3 id="lists">Counters, lists, etc.</h3>
+  
+<p class="prompts">Are there list or other counter styles in use?  If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed? </p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="initials">Styling initials</h3>
+<p class="prompts">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? etc.</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="baselines">Baselines &amp; inline alignment</h3>
+<p class="prompts">Does the script have special requirements for baseline alignment between mixed scripts and in general?</p>
+</section>
+</section>
+ 
+ 
+ 
+ 
+ 
+ <section>
+ <h2 id="pagelayout">Page &amp; book layout</h2>
+ 
+  <section>
+    <h3 id="generallayout">General page layout &amp; progression</h3>
+    <p class="prompts">How are the main text area and ancilliary areas positioned and defined? Are there any special requirements here, such as dimensions in characters for the Japanese kihon hanmen? The book cover for scripts that are read right-to-left scripts is on the right of the spine, rather than the left.  When content can flow vertically and to the left or right, how to specify the location of objects, text, etc. relative to the flow? Do tables and grid layouts work as expected? How do columns work in vertical text? Can you mix block of vertical and horizontal text? Does text scroll in a different direction?</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="grids">Grids &amp; tables</h3>
+<p class="prompts">Does the script have special requirements for character grids or tables?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="footnotes">Notes, footnotes, etc</h3>
+<p class="prompts">Does the script have special requirements for notes, footnotes, endnotes or other necessary annotations of this kind? (There is a section above for purely inline annotations, such as ruby or warichu. This section is more about annotation systems that separate the reference marks and the content of the notes.)</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="interaction">Forms &amp; user interaction</h3>
+<p class="prompts">Are vertical form controls needed? Are scroll bars in an unusual position? Other special requirements for user interaction?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="headers">Page numbering, running headers, etc</h3>
+<p class="prompts">Are there special conventions for page numbering, or the way that running headers and the like are handled?</p>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+<section>
+<h2 id="languages">Languages using the Bassa Vah script</h2>
+<p>According to ScriptSource, the Bassa Vah script is used only for the following language: </p>
+<ul>
+<li> Bassa [bsq]</li>
+</ul>
+</section>
+
+
+
+
+
+
+
+
+<section> 
+<h2 id="refs">References</h2>
+		<ol>
+			<li>[ <a class="fnref" href="#refs">c</a> ] Florian Coulmas, <span class="doctitle"><cite>The Blackwell Encyclopedia of Writing Systems</cite></span>, Oxford University Press, ISBN
+		    0-631-21481-X</li>
+			<li>[ <a class="fnref" href="https://cefliberia.org/bassa/bassa-dictionary/">d</a> ] Christian Education Foundation of Liberia, <a href="https://cefliberia.org/bassa/bassa-dictionary/">Bassa-English Dictionary</a></li>
+<li>[ <a class="fnref" href="https://www.unicode.org/L2/L2010/10382r-n3941r-bassavah.pdf">e</a> ] Michael Everson, Charles Riley, <a href="https://www.unicode.org/L2/L2010/10382r-n3941r-bassavah.pdf">Final proposal for encoding the Bassa Vah script in the SMP of the UCS</a></li>
+			<li>[ <a class="fnref" href="https://www.omniglot.com/writing/bassa.htm">o</a> ] Omniglot, <a href="https://www.omniglot.com/writing/bassa.htm">Bassa Vah</a></li>
+<li>[ <a class="fnref" href="http://std.dkuug.dk/JTC1/SC2/wg2/docs/n3991.pdf">r</a> ]  Charles Riley, <a href="http://std.dkuug.dk/JTC1/SC2/wg2/docs/n3991.pdf">Comments on Bassa Vah Comma</a></li>
+<li>[ <a class="fnref" href="https://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Bass">s</a> ] ScriptSource, <a href="https://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Bass">Bassa Vah</a></li>
+<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Bassa_script">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Bassa_script">Bassa script</a></li>
+			<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode12.1.0/ch19.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode12.1.0/ch19.pdf">The Unicode Standard v12.0</a></li>
+</ol>
+</section>
+
+
+
+
+
+<details>
+<summary class="prompts">Show stats</summary>
+
+<table id="charCountList">
+<tr><th>Main</th><td id="mainCharList"></td><td id="mainCharListTotal"></td></tr>
+<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
+<tr><th>Auxiliary</th><td id="auxCharList"></td><td id="auxCharListTotal"></td></tr>
+<tr><th>Other</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
+<tr><th>Deprecated</th><td id="deprecatedCharList"></td><td id="deprecatedCharListTotal"></td></tr>
+</table>
+<script>
+runCharCount('.characterBox', 'mainCharList')
+runCharCount('.archaicBox', 'archaicCharList')
+runCharCount('.auxiliaryBox', 'auxCharList')
+runCharCount('.otherBox', 'otherCharList')
+runCharCount('.deprecatedBox', 'deprecatedCharList')
+</script>
+</details>
+
+
+
+
+
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/bassavah"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-08-09  11:09<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bbassavah%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fbassavah%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
+<div id="panel" style="display:none"></div>
+
+<script>
+initialiseSummary('/scripts/bassavah/block','bsq','Bassa Vah')
+</script>
+
+</body>
+</html>
