@@ -9,6 +9,8 @@ var scriptData = [
 
 { script:"Balinese", type:"abugida", chars:121, cchars:31, cs:"no", gpos:"yes", mcchars:"yes", matras: "yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"no", baseline:"mid", wrap:"syllable", hyphenation:"yes", justify:"none", digits:"yes", region:"Asia SE", linked:"balinese" },
 
+{ script:"Bassa Vah", type:"alpha", chars:36, cchars:5, cs:"no", gpos:"yes", mcchars:"no", matras: "no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"no", baseline:"mid", wrap:"word/space", hyphenation:"?", justify:"?", digits:"no", region:"Africa", linked:"bassavah" },
+
 { script:"Bengali", type:"abugida", chars:95, cchars:19, cs:"no", gpos:"yes", mcchars:"yes", matras: "yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"high", wrap:"word", hyphenation:"yes?", justify:"space", digits:"yes", region:"Asia S", linked:"bengali" },
 
 { script:"Buginese", type:"abugida", chars:30, cchars:5, cs:"no", gpos:"yes", mcchars:"no", matras: "yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"syllable?", hyphenation:"no", justify:"?", digits:"no", region:"Asia SE", linked:"buginese" },
