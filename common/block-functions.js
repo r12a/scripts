@@ -505,13 +505,13 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
             if (cols.htone>0 && items[cols.htone]) {
                 p = document.createElement('p')
                 p.className = 'tonePairing'
-                p.innerHTML = 'High tone equivalent is '+makeCharacterLink(items[cols.htone], lang, dir)
+                p.innerHTML = 'High class equivalent is '+makeCharacterLink(items[cols.htone], lang, dir)
                 letter.appendChild(p)
                 }
             if (cols.ltone>0 && items[cols.ltone]) {
                 p = document.createElement('p')
                 p.className = 'tonePairing'
-                p.innerHTML = 'Low tone equivalent is '+makeCharacterLink(items[cols.ltone], lang, dir)
+                p.innerHTML = 'Low class equivalent is '+makeCharacterLink(items[cols.ltone], lang, dir)
                 letter.appendChild(p)
                 }
          
