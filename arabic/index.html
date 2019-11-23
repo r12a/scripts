@@ -34,6 +34,9 @@
 [lang=ur] { font-family: urduwebfont, serif; font-size: 150%;  }
 .large[lang=ar], .large[lang=fa] { font-size: 400%;  text-align: center; line-height: 1; margin-top: 0; margin-bottom: 0; }
 .large[lang=ur] {font-size: 300%; text-align: center; line-height: 1; margin-top: .75em; margin-bottom: .5em; }
+.counter_style_comp { border-collapse: collapse; }
+.counter_style_comp th { border: 0; line-height: 1; text-align:  start; }
+.counter_style_comp td { border-color: #eee; }
 </style>
 
 <script src="../../shared/scriptdb/arabic.js"> </script>
@@ -66,7 +69,7 @@
 <nav>
 <h2 class="notoc flush"><a id="tochead">Contents</a></h2>
 <div id="toc"><!-- placeholder --></div>
-  </nav>
+</nav>
 
  <div id="fontsetting" class="closed">
   <h2 class="notoc"><a id="fonts">Fonts</a></h2>
@@ -74,7 +77,7 @@
    <p>Set font for examples<br/>
    <select id="exfontswitchfont" 
 onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'ar');">
-      </select>
+   </select>
       <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
    <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
 onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'ar');" />
@@ -105,13 +108,13 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
         <label for="x10">10</label>
       </p>
-    </form>
+ </form>
 </div>
 </aside>
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->31 July, 2019<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->23 November, 2019<!-- #EndDate -->
 &bull; tags <a href="http://r12a.github.io/blog/index.php?tag=arabic" title="Show all blog posts tagged with 'arabic'">arabic</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
@@ -137,7 +140,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 وفضلاً عما تقدم فلن يكون هناك أي تمييز أساسه الوضع السياسي أو القانوني أو الدولي لبلد أو البقعة التي ينتمي إليها الفرد سواء كان هذا البلد أو تلك البقعة مستقلاً أو تحت الوصاية أو غير متمتع بالحكم الذاتي أو كانت سيادته خاضعة لأي قيد من القيود.</p>
   </div>
- </section>
+</section>
 
 
 
@@ -163,9 +166,9 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
   <table>
       <tbody id="featureTableBody">
      </tbody>
-    </table>
+  </table>
     <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
-   </div>
+</div>
 
 
 
@@ -190,7 +193,7 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
       <li><a href="/uniview/?block=arabic">Arabic</a> <span class="charCount">153 letters, 52 marks, 20 numbers, 12 punctuation, 10 symbols, 8 other : total 255</span></li>
       <li><a href="/uniview/?block=arabic_supplement">Arabic Supplement </a><span class="charCount">48 letters : total 48</span></li>
       <li><a href="/uniview/?block=arabic">Arabic Extended-A</a> <span class="charCount">29 letters, 43 marks, 1 other : total 73</span></li>
-    </ol>
+</ol>
     <p>There are two additional blocks for presentation forms, but (with the exception of a handful of code points) these characters are only for compatibility with legacy encodings, and should not be used. Sometimes they are used by people to get around problems with Arabic support in applications, but this is a bad idea since it corrupts the underlying data, making it difficult to search, spellcheck, or do many other things that rely on the use of standard characters and their properties.  </p>
 <p>Apart from ASCII characters, the Arabic orthography described here uses 71 characters (and 9 more, used infrequently) from the following Unicode blocks: </p>
    <ol>
@@ -238,7 +241,7 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
 <figure>
    <p dir="rtl" lang="ar" class="large"><span class="ex">9 يناير/ كانون الثاني 2018</span></p>
     <figcaption>Arabic words are read RTL, starting  on the right, but numbers are  read left-to-right.</figcaption>
- </figure>
+</figure>
   
   
 <section>
@@ -583,28 +586,71 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
      <figcaption>The letter <span class="trans">ain</span> in 3 different joining contexts.</figcaption>
      </figure>
     <p>A few Arabic script letters only join on the right-hand side.</p>
-  </section>
+</section>
   
   
 
  <section>
     <h3 id="gsub">context-based shaping</h3>
 <p class="instructions">Are special glyph forms needed, depending on the context in which a character is used? Do glyphs interact in some circumstances?</p>
-<p>Ligated glyph forms are common in Arabic. Some, such as <span class="ex" lang="ar" dir="rtl">لا</span> are mandatory. Most of the remainder depend on the font style. Traditional fonts tend to have more ligated forms than modern styles.</p>
+<p><span class="leadin">Ligatures.</span> Ligated glyph forms are common in Arabic. Some, such as <span class="ex" lang="ar" dir="rtl">لا</span> are mandatory. Most of the remainder depend on the font style. The <span class="name">lam-alif</span> ligature also affects other characters that are based on the alif, such as for <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">لإ لأ لآ</span></span>.</p>
+<p>Traditional fonts tend to have more optional ligated forms than modern styles.</p>
     <figure>
     <p style="text-align:center;"><img src="images/arabic-ligatures1.png" alt=" " style="vertical-align:middle;"> &nbsp;vs.&nbsp; <img src="images/arabic-ligatures2.png" alt=" " style="vertical-align:middle;"></p>
      <figcaption>The same word with ligatures (right) and no ligatures (left).</figcaption>
  </figure>
-    <p>In more traditional fonts, you will also often see the join between certain characters, when adjacent, above the baseline, rather than at the baseline, like this:
-    </p>
+    <p>Ligatures are often used to manage justification. Since they generally reduce the horizontal width of a word, they can be used to fit more text on the end of a line, or balance baseline stretching.</p>
+<p><span class="leadin">Special joining forms.</span> In more traditional fonts, you will also often see the join between certain characters, when adjacent, above the baseline, rather than at the baseline, like this: </p>
     <p style="text-align:center;"><img src="images/arabic-shaping.png" alt=" "></p>
     <p>rather than  on the baseline, like this:</p>
     <p style="text-align:center;"><img src="images/arabic-shaping-flat.png" alt=" "></p>
-    <p>But actually a good font will constantly change the shape of glyphs slightly so as to create a more aesthetically pleasing, and in some cases and more easily readable, flow.</p>
+    <p>But actually a good font will typically have a range of shapes and placements for a given letter, depending on the adjoining letter. This is illustrated in <a class="figref" href="#noon_joining_forms">noon_joining_forms</a>.<a class="fnref" href="https://w3c.github.io/alreq/#multi-context-joining">a→</a></p>
+    <figure id="noon_joining_forms">
+    <p style="text-align:center;"><img src="images/noon_joining_forms.png" alt="نم نمل نجر نسيم نبات" style="vertical-align:middle;"></p>
+     <figcaption> Various different forms for the initial letter noon,</figcaption>
+ </figure>
+
+<p>Characters within a word may also combine vertically in certain groupings. See the example in <a class="figref" href="#vertical_joining">vertical_joining</a>.</p>
+ <figure id="vertical_joining">
+    <p style="text-align:center;"><img src="images/vertical_joining.png" alt="نم نمل نجر نسيم نبات" style="vertical-align:middle;"></p>
+     <figcaption> Vertical arrangements of letters in the word <span class="ex" lang="ar">خجمم</span>,</figcaption>
+ </figure>
+
+<p><span class="leadin">Teeth letters.</span> A good font will also constantly change the shape of glyphs slightly so as to create a more aesthetically pleasing, and in some cases and more easily readable, flow.</p>
     <figure>
     <p dir="rtl" lang="ar" class="large"><span class="ex">ـدد</span> &nbsp; <span class="ex">تتـ</span> &nbsp; <span class="ex">سسـ</span> &nbsp; </p>
        <figcaption>Three  examples where the same letter is repeated, but the glyph shapes differ.</figcaption>
  </figure>
+ 
+ <p><a class="figref" href="#teeth_letters">teeth_letters</a> shows an example where the same word is displayed using different fonts.<a class="fnref" href="https://w3c.github.io/alreq/#the-so-called-teeth-letters">a</a> The font on the left applies rules to distinguish the letter bases clearly. Note, in particular, that although there are 3 letters which are repeated, none of those letters uses the same shape twice.</p>
+ <figure id="teeth_letters">
+    <p style="text-align:center;"><img src="images/teeth_letters.png" alt="بتثبيتين" style="vertical-align:middle;"></p>
+     <figcaption> The same word in two different fonts (Mishaf and Scheherazade).</figcaption>
+ </figure>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="baselines">Baselines &amp; inline alignment</h3>
+<p class="instructions">Does the script have special requirements for baseline alignment between mixed scripts and in general?</p>
+
+    <p>The alphabetic baseline is a strong feature of Arabic script on the whole, since characters tend to join there. This is not always the case: for example, some adjacent pairs or ligatures have joins above the baseline, and initial letters in some fonts may start slightly above the baseline, but for most cases it remains a strong feature.</p>
+    <p>The nastaliq writing style, on the other hand, uses arrangements of joined glyphs that cascade downwards from right to left, and ressemble a strongly sloping baseline.</p>
+ <figure>
+ <p dir="rtl" lang="ur" class="large" style="margin-top: 1em;"><span class="ex">مستحق</span> &nbsp;•&nbsp; <span class="ex">شخص</span> &nbsp;•&nbsp; <span class="ex">کیفیت</span></p>
+    <figcaption>Sloping baselines in Urdu nastaliq text.</figcaption>
+ </figure>
+ 
+<p>However, even writing styles with an ostensibly flat baseline may, in good quality fonts, draw words on a slightly slanted baseline, or multiple baselines, as shown in <a class="figref" href="#word_baselines">figure</a>.<a class="fnref" href="https://w3c.github.io/alreq/#multi-level-baselines">a</a></p>
+ <figure id="word_baselines">
+ <p><img src="images/baseline_sloping_word.png" alt="Sloping baseline in Mishafi font for يستبشر"/> <img src="images/baseline_multilevel.png" alt="Multilevel baseline in Mishafi font for يستمع"/></p>
+    <figcaption>Words with a gradually sloping baseline (left) and multiple baselines (right).</figcaption>
+ </figure>
+
+<p>Characters within a word may also combine vertically in certain groupings, as mentioned in the previous section.</p>
 </section>
   
   
@@ -631,9 +677,14 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
 
 
 
+
+
 <section>
 <h3 id="fontstyle">Font styles</h3>
 <p class="instructions"> Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</p>
+
+<p>Arabic orthographies can be grouped into a number of writing styles, some of which are more common for particular languages, while others can be used interchangeably for the same language. Sometimes the variations are adapted to usage, for example book text vs. inscriptions; sometimes the variants reflect cultural or stylistic calligraphic  preferences.</p>
+<p>The different styles include Naskh, Nasta'liq, Ruq'a, Thuluth, Taʻlīq, Diwani, Maghribi, Kano. For a brief introduction to font styles, with examples, see <a href="https://w3c.github.io/alreq/#h_different_writing_styles">Text layout requirements for the Arabic script</a>.</p>
 </section>
 
 
@@ -669,7 +720,8 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
 <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
 <p class="instructions">Are words separated by spaces, or other characters? Are there special requirements when double-clicking  on the text? Are words hyphenated?</p>
 <p>Words are separated by spaces.</p>
-<p>In Arabic, small words like 'and' (و) are written alongside the following word with no intervening space (eg. الجامعات والكليات means 'universities and colleges', but there is only one space). Such small words are handled typographically as part of the word they are attached to.</p>
+<p>In Arabic, small words like 'and' (<span class="ex" lang="ar">و</span>) are written alongside the following word with no intervening space (eg. <span class="ex" lang="ar">الجامعات والكليات</span> means 'universities and colleges', but there is only one space). Such small words are handled typographically as part of the word they are attached to.</p>
+<p>Other similar examples include <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0644;</span> [<a href="/scripts/arabic/block#char0644"><span class="uname">U+0644 ARABIC LETTER LAM</span></a>]</span> before a non-Arabic script noun (eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">ل‍W3C</span> <span class="trans">l₊W3C</span> <span class="meaning">for W3C</span></span>), and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0628;</span> [<a href="/scripts/arabic/block#char0628"><span class="uname">U+0628 ARABIC LETTER BEH</span></a>]</span> before a number in Arabic orthography (eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">ب‍42</span> <span class="trans">b₊42</span> <span class="meaning">p. 42</span></span>).<a class="fnref" href="https://w3c.github.io/alreq/#h_segmentation">a</a> <span class="ednote">Check this: i think there's a space between the arabic and what follows. See https://w3c.github.io/type-samples/</span></p>
 </section>
 
 
@@ -778,19 +830,72 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
 <section>
     <h3 id="linebreak">Line breaking &amp; hyphenation</h3>
 <p class="instructions">Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that?</p>
+
+<p>Lines are normally broken at  word boundaries.</p>
+<p>They are not broken at the small gaps that appear where a character doesn't join on the left.</p>
+<p>Like most writing systems, certain characters are expected not to start or end a line. For example, periods and commas shouldn't start a line, and opening parentheses shouldn't end a line.</p>
+<p><span class="leadin">Breaking between Latin words.</span> When a line break occurs in the middle of an embedded left-to-right sequence, the items in that sequence need to be rearranged visually so that it isn't necessary to read lines from top to bottom. </p>
+<p><a class="figref" href="#latin-line-breaks">latin-line-breaks</a> shows how two Latin words are apparently reordered in the flow of text to accommodate this rule. Of course, the rearragement is only that of the visual glyphs: nothing affects the order of the characters in memory.</p>
+
+<figure id="latin-line-breaks">
+<p><img src="images/latin-line-breaks-1.png" alt="Text with no line break in Latin text."/></p>
+<p><img src="images/latin-line-breaks-2.png" alt="Text with line break in Latin text."/></p>
+    <figcaption>The lower of these two images shows the result of decreasing the line width, so that text wraps between a sequence of Latin words.</figcaption>
+</figure>
+
+
+<p><span class="leadin">Hyphenation.</span> Hyphenation isn't used for the Arabic  language, however other languages using the Arabic script may hyphenate (such as Uighur).<a class="fnref" href="https://w3c.github.io/alreq/">a</a></p>
+
+
+<p><span class="leadin">Character properties.</span> Characters used for the Arabic  language have the following assignments related to line-break properties.</p>
+<table><tbody>
+<tr><th class="sg">AL</th>
+<td class="count">44</td><td class="chars"><span class="ex" lang="th">ىابتثجحخدذرزسشصضطظعغفقكلمنهويءآأإؤئىةڢڧࢲـﷲٱ</span></td></tr>
+<tr><th class="sg">B2</th><td class="count">1</td><td class="chars"><span class="ex" lang="th">—</span></td></tr>
+<tr><th class="sg">BA</th>
+<td class="count">2</td><td class="chars"><span class="ex" lang="th">‐–</span></td></tr>
+<tr>
+<th class="sg">CM</th>
+<td class="count">11</td><td class="chars"><span class="ex" lang="th">ًٌٍَُِّْٰٕٔ</span></td></tr>
+<tr>
+<th class="sg">EX</th>
+<td class="count">2</td>
+<td class="chars"><span class="ex" lang="th">؛؟</span></td></tr>
+<tr><th class="sg">IN</th><td class="count">1</td><td class="chars"><span class="ex" lang="th">…</span></td></tr>
+<tr>
+<th class="sg">IS</th>
+<td class="count">2</td><td class="chars"><span class="ex" lang="th">،؍</span></td></tr>
+<tr><th class="sg">NU</th>
+<td class="count">13</td>
+<td class="chars"><span class="ex" lang="th">٫٬٠١٢٣٤٥٦٧٨٩٬</span></td></tr>
+<tr><th class="sg">PO</th>
+<td class="count">3</td><td class="chars"><span class="ex" lang="th">٪؉‰</span></td></tr>
+<tr><th class="sg">QU</th>
+<td class="count">2</td><td class="chars"><span class="ex" lang="th">«»</span></td></tr>
+</tbody></table>
+
+<details id="linebreak_details">
+<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">B2 (break opportunity before and after)</a> the EM DASH  used to set off parenthetical text may allow line breaks before or after, but may also be affected by local orthographic rules.&nbsp;</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BA (break after)</a> indicates that it is normal to break after that character.&nbsp;</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#EX">EX (exclamation mark/interrogation)</a> behaves like closing characters, except in relation to postfix (PO) and non-starter characters (NS).</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">IN (inseparable characters)</a> is intended to be used consecutively. There is never a line break between two characters of this class.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">IS (infix numeric separators)</a> usually occurs inside a numerical expression and may not be separated from the numeric characters that follow, unless a space character intervenes. For example, there is no break in “100.00” or “10,000”, nor in “12:59”..</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">NU (number)</a> behaves like ordinary characters (AL) in the context of most characters but activate the prefix and postfix behavior of prefix and postfix characters.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#OP">PO (postfix numeric)</a> 	usually follows a numerical expression and may not be separated from preceding numeric characters or preceding closing characters, even if one or more space characters intervene. For example, there is no break opportunity in “(12.00) %”..</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#SA">QU (quotation)</a> characters can be opening or closing, or even both, depending on usage. The default is to treat them as both opening and closing.</p>
+</details>
+
 </section>
 
 
 
-<section>
-    <h3 id="hyphenation">Hyphenation</h3>
-<p class="instructions">Is hyphenation used, or something else?</p>
-</section>
-
 
 
 <section>
-    <h3 id="justify"> Text alignment &amp; justification</h3>
+<h3 id="justify"> Text alignment &amp; justification</h3>
     <p class="instructions">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</p>
 <p> Arabic script justification can use a number of different techniques. These include stretching the baseline and the glyphs of the text, expanding inter-word spaces, application of ligatures or swash forms, etc.. Typically these will be applied in combination. Where baseline stretching is applied, the rules for what can be stretched, and how much, are complicated, and differ across writing systems. (Elongation is not normally used at all for the <span class="trans">ruq'a</span> style.) It is not a question of simply adding equal-length extensions across the line.</p>
 <figure>
@@ -801,7 +906,7 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
 <p>The baseline extension character <span class="codepoint"><span lang="ar" dir="rtl">&#x0640;</span> <a href="/scripts/arabic/block#char0640">[<span class="uname">U+0640 ARABIC TATWEEL</span>]</a></span> is sometimes suggested as a way of producing justification by extending the baseline, however when a browser window is resized, or when new text is added near the start of a paragraph, lines wrap differently and all the places where tatweel would be needed have to be recalibrated. Thus tatweels only work for static text with fixed dimensions.</p>
 <p>Better quality justification systems stretch glyphs, rather than adding baseline extensions. This dynamic stretching of glyphs is often called 'kashida'. In some typesetting systems, such as InDesign, the tatweel character serves more to indicate opportunities for stretching, and the glyph for the character itself is not shown.</p>
 <p>It is very common to see baseline stretching in modern Arabic text where a word or phrase is stretched to fill a particular space, eg. the Arabic tag line (<span class="ex" dir="rtl" lang="ar">الابداع المتجدد</span> <span class="meaning">Creativity renewed</span>) below the word Lexus in the following image is stretched to be the same width.</p>
-<figure>
+<figure id="lexus">
 <img src="images/stretch-plus-ligature-1.jpg" alt="Arabic text stretched to fit the width of the word Lexus.">
 <figcaption>Arabic text being stretched to fit the width of text alongside it.</figcaption>
 </figure>
@@ -819,15 +924,399 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
 <section>
     <h3 id="letterspace">Letter spacing</h3>
 <p class="instructions">Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see above.).</p>
+
+<p>Spaces are not added between characters, with the exception of micro-spacing during justification, which is applied to word-medial letters that don't join to the left. On the other hand, the baseline between words is often stretched.</p>
+<p>It is quite common to see Arabic text stretched to fit a given width, as shown in <a class="figref" href="#lexus">lexus</a>, but that type of stretching is more akin to justification than the typical letter-spacing that is applied to other scripts. The amount of stretch is determined by the area that needs to be filled.</p>
+<p>In some cases, however, it may be that elongation of words is driven by stretching the distance between letters, however this is not normally an even amount of stretch between all letters, as letter-spacing tends to be in other scripts. One such case may be the elongation of text to express emphasis or sound elongation.</p>
 </section>
-
-
-
-
 <section>
   <h3 id="lists">Counters, lists, etc.</h3>
   
 <p class="instructions">Are there list or other counter styles in use?  If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed? </p>
+
+<p><a href="https://w3c.github.io/predefined-counter-styles/#tamil-styles">Ready-made Counter Styles</a> list 3 counter styles for use with the Arabic language: one numeric and 2 fixed styles. <a href="https://en.wikipedia.org/wiki/Abjad_numerals">Wikipedia</a> lists 2 more styles: an <code class="kw" translate="no">old maghrebi</code> sequence and the <code class="kw" translate="no">hijai</code> sequence.</p>
+<p><span class="leadin">arabic-indic</span></p>
+<figure class="auto" data-cols="trans,transc">٠␣١␣٢␣٣␣٤␣٥␣٦␣٧␣٨␣٩</figure>
+<p>The <span class="kw" translate="no">arabic-indic</span> numeric style for the Arabic language is decimal-based and uses the  digits shown just above.</p>
+
+
+<!--table class="counter_style_comp">
+<tr>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>0</th>
+</tr>
+<tr>
+<td><span class="ex" lang="ar">١</span></td>
+<td><span class="ex" lang="ar">٢</span></td>
+<td><span class="ex" lang="ar">٣</span></td>
+<td><span class="ex" lang="ar">٤</span></td>
+<td><span class="ex" lang="ar">٥</span></td>
+<td><span class="ex" lang="ar">٦</span></td>
+<td><span class="ex" lang="ar">٧</span></td>
+<td><span class="ex" lang="ar">٨</span></td>
+<td><span class="ex" lang="ar">٩</span></td>
+<td><span class="ex" lang="ar">٠</span></td>
+</tr>
+</table-->
+<figure>
+<table class="counter_style_comp">
+<tr><th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+<tr><td><span class="ex" lang="ar">١</span></td><td><span class="ex" lang="ar">٢</span></td><td><span class="ex" lang="ar">٣</span></td><td><span class="ex" lang="ar">٤</span></td></tr>
+<tr>
+<th>11</th>
+<th>22</th>
+<th>33</th>
+<th>44</th>
+</tr>
+<tr><td><span class="ex" lang="ar">١١</span></td><td><span class="ex" lang="ar">٢٢</span></td><td><span class="ex" lang="ar">٣٣</span></td><td><span class="ex" lang="ar">٤٤</span></td></tr>
+<tr>
+<th>111</th>
+<th>222</th>
+<th>333</th>
+<th>444</th>
+</tr>
+<tr><td><span class="ex" lang="ar">١١١</span></td><td><span class="ex" lang="ar">٢٢٢</span></td><td><span class="ex" lang="ar">٣٣٣</span></td><td><span class="ex" lang="ar">٤٤٤</span></td></tr>
+</table>
+
+
+<figcaption>Numbers produced by the <span class="kw" translate="no">arabic-indic</span> numeric counter style.</figcaption>
+</figure>
+
+
+
+
+<p><span class="leadin">arabic-adjab</span></p>
+<figure class="auto" data-notes="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28"
+data-cols="">ا␣ب␣ج␣د␣ه‍␣و␣ز␣ح␣ط␣ي␣ك␣ل␣م␣ن␣س␣ع␣ف␣ص␣ق␣ر␣ش␣ت␣ث␣خ␣ذ␣ض␣ظ␣غ</figure>
+<p>The <span class="kw" translate="no">arabic-abjad</span> fixed style for the Arabic language  uses the  letters shown just above. It is only able to count to 28. </p>
+<p>Note that the 5th counter includes a zero-width joiner formatting character. This makes the shape distinguishable from <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0665;</span> [<a href="/scripts/arabic/block#char0665"><span class="uname">U+0665 ARABIC-INDIC DIGIT FIVE</span></a>]</span>.</p>
+
+
+<figure>
+<table class="counter_style_comp">
+<tr><th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>11</th>
+<th>21</th>
+<th>24</th>
+<th>28</th>
+</tr>
+<tr>
+<td><span class="ex" lang="ar">ا</span></td><td><span class="ex" lang="ar">ب</span></td><td><span class="ex" lang="ar">ج</span></td><td><span class="ex" lang="ar">د</span></td>
+
+<td><span class="ex" lang="ar">ك</span></td><td><span class="ex" lang="ar">ش</span></td>
+<td><span class="ex" lang="ar">خ</span></td>
+<td><span class="ex" lang="ar">غ</span></td></tr>
+</table>
+
+
+<figcaption>Numbers produced by the <span class="kw" translate="no">arabic-adjab</span> fixed counter style.</figcaption>
+</figure>
+
+
+
+
+
+
+<p><span class="leadin">maghrebi-adjab</span></p>
+<figure class="auto" data-notes="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28"
+data-cols="">ا␣ب␣ج␣د␣ه‍␣و␣ز␣ح␣ط␣ي␣ك␣ل␣م␣ن␣ص␣ع␣ف␣ض␣ق␣ر␣س␣ت␣ث␣خ␣ذ␣ظ␣غ␣ش</figure>
+<p>The <span class="kw" translate="no">maghrebi-abjad</span> fixed style for the Arabic language  uses the  letters shown just above. It is also only able to count to 28. The letters are the same as those used for the arabic-abjad style, but 6 occur in different positions.</p>
+<figure>
+<table class="counter_style_comp">
+<tr><th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>11</th>
+<th>21</th>
+<th>24</th>
+<th>28</th>
+</tr>
+<tr>
+<td><span class="ex" lang="ar">ا</span></td><td><span class="ex" lang="ar">ب</span></td><td><span class="ex" lang="ar">ج</span></td><td><span class="ex" lang="ar">د</span></td>
+
+<td><span class="ex" lang="ar">ك</span></td><td><span class="ex" lang="ar">س</span></td>
+<td><span class="ex" lang="ar">خ</span></td>
+<td><span class="ex" lang="ar">ش</span></td></tr>
+</table>
+
+
+<figcaption>Numbers produced by the <span class="kw" translate="no">arabic-adjab</span> fixed counter style.</figcaption>
+</figure>
+
+
+
+
+<p><span class="leadin">Comparison of lists</span></p>
+<p>The table below shows the differences between fixed  counter styles  for the Arabic and Persian languages. In addition to the styles described above are two other sequences that are mentioned in <a href="https://en.wikipedia.org/wiki/Abjad_numerals">Wikipedia</a> – an <code class="kw" translate="no">old maghrebi</code> sequence and the <code class="kw" translate="no">hijai</code> sequence.</p>
+<p>A blank cell uses the same letter as the nearest non-blank cell above it.</p>
+<table class="counter_style_comp">
+  <thead>
+    <tr>
+      <th scope="row">&nbsp;</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+      <th>11</th>
+      <th>12</th>
+      <th>13</th>
+      <th>14</th>
+      <th>15</th>
+      <th>16</th>
+      <th>17</th>
+      <th>18</th>
+      <th>19</th>
+      <th>20</th>
+      <th>21</th>
+      <th>22</th>
+      <th>23</th>
+      <th>24</th>
+      <th>25</th>
+      <th>26</th>
+      <th>27</th>
+      <th>28</th>
+      <th>29</th>
+      <th>30</th>
+      <th>31</th>
+      <th>32</th>
+  </tr>
+</thead>
+  <tbody>
+    <tr>
+      <th scope="row"><code class="kw" translate="no">persian-abjad</code></th>
+      <td>ا</td>
+      <td>ب</td>
+      <td>ج</td>
+      <td>د</td>
+      <td>ه‍</td>
+      <td>و</td>
+      <td>ز</td>
+      <td>ح</td>
+      <td>ط</td>
+      <td>ی</td>
+      <td>ک</td>
+      <td>ل</td>
+      <td>م</td>
+      <td>ن</td>
+      <td>س</td>
+      <td>ع</td>
+      <td>ف</td>
+      <td>ص</td>
+      <td>ق</td>
+      <td>ر</td>
+      <td>ش</td>
+      <td>ت</td>
+      <td>ث</td>
+      <td>خ</td>
+      <td>ذ</td>
+      <td>ض</td>
+      <td>ظ</td>
+      <td>غ</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+  </tr>
+    <tr>
+      <th scope="row"><code class="kw" translate="no">arabic-abjad</code></th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>ي</td>
+      <td>ك</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+  </tr>
+    <tr>
+      <th scope="row"><code class="kw" translate="no">magrebi-abjad</code></th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>ص</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>ض</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>س</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>ظ</td>
+      <td>غ</td>
+      <td>ش</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+  </tr>
+    <tr>
+      <th scope="row"><code class="kw" translate="no">WP old magrebi</code></th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>ت</td>
+      <td>ث</td>
+      <td>ج</td>
+      <td>ح</td>
+      <td>خ</td>
+      <td>د</td>
+      <td>ذ</td>
+      <td>ر</td>
+      <td>ز</td>
+      <td>ط</td>
+      <td>ظ</td>
+      <td>ك</td>
+      <td>ل</td>
+      <td>م</td>
+      <td>ن</td>
+      <td>ص</td>
+      <td>ض</td>
+      <td>ع</td>
+      <td>غ</td>
+      <td>ف</td>
+      <td>ق</td>
+      <td>س</td>
+      <td>ش</td>
+      <td>ه</td>
+      <td>و</td>
+      <td>ي</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+  </tr>
+    <tr>
+      <th scope="row"><code class="kw" translate="no">WP hijai</code></th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>س</td>
+      <td>ش</td>
+      <td>ص</td>
+      <td>ض</td>
+      <td>ط</td>
+      <td>ظ</td>
+      <td>ع</td>
+      <td>غ</td>
+      <td>ف</td>
+      <td>ق</td>
+      <td>ك</td>
+      <td>ل</td>
+      <td>م</td>
+      <td>ن</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+  </tr>
+    <tr>
+      <th scope="row"><code class="kw" translate="no">persian-alphabetic</code></th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>پ</td>
+      <td>ت</td>
+      <td>ث</td>
+      <td>ج</td>
+      <td>چ</td>
+      <td>ح</td>
+      <td>خ</td>
+      <td>د</td>
+      <td>ذ</td>
+      <td>ر</td>
+      <td>ز</td>
+      <td>ژ</td>
+      <td>س</td>
+      <td>ش</td>
+      <td>ص</td>
+      <td>ض</td>
+      <td>ط</td>
+      <td>ظ</td>
+      <td>ع</td>
+      <td>غ</td>
+      <td>ف</td>
+      <td>ق</td>
+      <td>ک</td>
+      <td>گ</td>
+      <td>ل</td>
+      <td>م</td>
+      <td>ن</td>
+      <td>و</td>
+      <td>ه‍</td>
+      <td>ی</td>
+  </tr>
+</tbody>
+</table>
+<p>You can experiment with these styles using the <a href="../../app-counterconverter/">Counter styles converter</a>.</p>
 </section>
 
 
@@ -842,26 +1331,10 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
 
 
 
-  
-<section>
-<h3 id="baselines">Baselines &amp; inline alignment</h3>
-<p class="instructions">Does the script have special requirements for baseline alignment between mixed scripts and in general?</p>
-
-    <p>The alphabetic baseline is a strong feature of Arabic script on the whole, since characters tend to join there. This is not always the case: for example, some adjacent pairs or ligatures have joins above the baseline, and initial letters in some fonts may start slightly above the baseline, but for most cases it remains a strong feature.</p>
-    <p>The nastaliq style of the script, on the other hand, uses arrangements of joined glyphs that cascade downwards from right to left, and ressemble a strongly sloping baseline.</p>
- <figure>
- <p dir="rtl" lang="ur" class="large" style="margin-top: 1em;"><span class="ex">مستحق</span> &nbsp;•&nbsp; <span class="ex">شخص</span> &nbsp;•&nbsp; <span class="ex">کیفیت</span></p>
-    <figcaption>Sloping baselines in Urdu nastaliq text.</figcaption>
- </figure>
-</section>
-</section>
-
-
-
 
 
 <section>
- <h2 id="pagelayout">Page &amp; book layout</h2>
+<h2 id="pagelayout">Page &amp; book layout</h2>
  
 <section>
     <h3 id="generallayout">General page layout &amp; progression</h3>
@@ -1139,10 +1612,22 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
 <section>
 <h2 id="references">References</h2>
 <ol>
-<li>[U] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch09.pdf#Arabic">Arabic</a>, pp371-393.</li>
-<li>[D] Peter T. Daniels and William Bright, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN 0-19-507993-0, pp559-563.</li>
-<li>[W] Wikipedia, <a href="http://en.wikipedia.org/wiki/Arabic_script"><cite>Arabic script</cite></a>.</li>
-<li>[S] Scriptsource, <a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Arab"><cite>Arabic</cite></a></li>
+<li>[ <a class="fnref" href="#refs">d</a> ]
+			Peter T. Daniels and William Bright, <span class="doctitle"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
+		    0-19-507993-0</li>
+			
+		<li>[ <a class="fnref" href="http://std.dkuug.dk/JTC1/sc2/WG2/docs/n2908.pdf">e</a> ]
+		Everson et al., <a href="http://std.dkuug.dk/JTC1/sc2/WG2/docs/n2908.pdf">Proposal for encoding the thisScript script in the UCS</a></li>
+			
+		<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/thisScript_script">w</a> ]
+		Wikipedia, <a href="http://en.wikipedia.org/wiki/Arabic_script"><cite>Arabic script</cite></a></li>
+			
+		<li>[ <a class="fnref" href="https://www.unicode.org/versions/latest/ch13.pdf">u</a> ]
+		<cite>The Unicode Standard v12.0</cite>, <a href="http://www.unicode.org/versions/latest/ch09.pdf#Arabic">Arabic</a>, pp367-390</li>
+<li>[ <a class="fnref" href="http://scriptsource.org/cms/scripts/page.php?item_id=source_detail&amp;uid=nrgqwv9x7a">s</a> ]
+		ScriptSource, <a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Arab"><cite>Arabic</cite></a></li>
+<li>[ <a class="fnref" href="https://w3c.github.io/alreq/">a</a> ]
+		 <a href="https://w3c.github.io/alreq/"><cite>Text Layout Requirements for the Arabic Script</cite></a> (alreq)</li>
 </ol>
 </section>
 
@@ -1172,7 +1657,7 @@ runCharCount('.deprecatedBox', 'deprecatedCharList')
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/arabic"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-07-31  10:52<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Barabic%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Farabic%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/arabic"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-11-23  17:42<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Barabic%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Farabic%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"></div>
