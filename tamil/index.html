@@ -27,6 +27,9 @@
 .large { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
 .iso15919 { font-family: gentiumpluswf; }
 #vowelchart table { margin: 0; width: 100%; font-size: 70%; }
+.allophone { color: #ccc; }
+.ipa.allophone::before { content: '('; color: #ccc; }
+.ipa.allophone::after { content: ')'; color: #ccc; }
 </style>
 
 <script src="../../shared/scriptdb/tamil.js"> </script>
@@ -41,6 +44,7 @@
 <script src="../../shared/code/getLinks.js"></script>
 <script src="../linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
+<script src="../glossary/glossary.js"> </script>
 
 <script src="../../shared/fontlists/tamil.js"> </script>
 </head>
@@ -105,7 +109,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->1 December, 2019<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->3 December, 2019<!-- #EndDate -->
 &bull; tags <a href="https://r12a.github.io/blog/index.php?tag=tamil" title="Show all blog posts tagged with 'tamil'">tamil</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>.</p>
 <section>
 <p>This page provides basic information about the Tamil script and its use for the Tamil language. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned.   For character-specific details follow the links to the <a class="linkHighlight" href="block">Tamil character notes</a>. </p>
@@ -154,7 +158,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <section>
 <h2 id="intro">Distinctive features</h2>
-<p> The script is an <strong>abugida</strong>, ie. consonants carry an inherent vowel sound that is overridden using vowel signs. In Tamil, consonants carry an inherent vowel <span class="ipa">ʌ</span>, usually written <span class="trans">a</span>.   See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
+<p> The script is an <strong>abugida</strong>, ie. consonants carry an inherent vowel sound that is overridden using vowel-signs. In Tamil, consonants carry an inherent vowel <span class="ipa">ʌ</span>, usually written <span class="trans">a</span>.   See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
 </p>
   <p>There are less consonants than in other Indic scripts. Tamil has no aspirated consonants, and symbols are allocated on a phonemic basis, rather than phonetic. This means that <span lang="ta" >க</span>, for example, may be pronounced as the allophones <span class="ipa">k</span> <span class="ipa">ɡ</span> <span class="ipa">x</span> <span class="ipa">ɣ</span> or <span class="ipa">h</span>, according to where it appears relative to other sounds in a word, but its pronunciation doesn't change the word.</p>
   <p>Tamil is diglossic: the classic form is preferred for writing and public speaking, and is mostly standard across the Tamil-speaking regions; the colloquial, spoken form differs widely from the written.</p>
@@ -208,45 +212,70 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <h2 id="vowelsummary">Vowels</h2>
 
 <section>
+<h3 id="vowelPhonemes">Phoneme table</h3>
+<table class="ipaTable">
+<thead>
+<tr>
+<th>&#160; </th>
+<th>Front</th>
+<th>Central</th>
+<th>Back </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Close </th>
+<td>
+<span class="ipa">i, iː</span>
+</td>
+<td>&nbsp;</td>
+<td>
+<span class="ipa">u, uː</span></td>
+</tr>
+<tr>
+<th>Close-mid </th>
+<td>
+<span class="ipa">e, eː</span></td>
+<td><span class="ipa">ʌ</span></td>
+<td>
+<span class="ipa">o, oː</span></td>
+</tr>
+<tr>
+<th>Open </th>
+<td>&nbsp;</td>
+<td><span class="ipa">aː</span><span class="ex" lang="lo"></span></td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>Vowel length is distinctive; long vowels being about twice the length of short vowels.</p>
+<p>Tamil also has two diphthongs: <span class="ipa">aɪ̯</span> <span class="ex" lang="lo">ஐ</span>, <span class="ipa">aʊ̯</span> <span class="ex" lang="lo">ஒள</span></p>
+<p>Vowel quality can vary depending on the adjacent sounds. A good number of such variations are described in Comrie.</p>
+</section>
+
+
+
+
+<section>
 <h3 id="inherentvowel">Inherent vowel</h3>
 
-<p>Each consonant symbol has an inherent following vowel sound, typically transcribed as <span class="trans">a</span>, and pronounced <span class="ipa">ʌ</span>. So <span class="codepoint" translate="no"><span lang="ta">&#x0B95;</span> [<a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a>]</span> is actually pronounced <span class="ipa">kʌ</span>.</p>
-<p><span class="ednote">Is the inherent vowel always pronounced? If not, what are the rules?</span></p>
+<p id="def_independentvowel" class="explanatoryintro"></p>
+<script> document.getElementById('def_independentvowel').innerHTML = defList.independentvowel </script>
+<p>The sound  <span class="ipa">ʌ</span> is produced as the inherent vowel<a class="fnref" href="#refs">d</a>, so  <span class="codepoint" translate="no"><span lang="ta">&#x0B95;</span> [<a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a>]</span> is  pronounced <span class="ipa">kʌ</span>.</p>
+<p>In many sources, the inherent vowel is described as <span class="ipa">a</span>.</p>
 </section>
 
 
 
-<section>
-<h3 id="suppression">Vowel suppression</h3>
-
-<p>Tamil uses  <span class="codepoint" translate="no"><span lang="ta">&#x0BCD;</span> [<a href="/scripts/tamil/block#char0BCD"><span class="uname">U+0BCD TAMIL SIGN VIRAMA</span></a>]</span> (called <span class="name">puḷḷi</span> in Tamil) to kill the inherent vowel after a consonant, eg.<span class="charExample" translate="no"><span class="ex" lang="ta"> க்</span> <span class="trans">k͓</span></span> explicitly represents just the sound k. </p>
-<p>The pulli tends to be visible anywhere the vowel is dropped. For example, unlike Devanagari, it is used at the end of a word if there is no final vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">மனிதப்</span> <span class="trans">mnitp</span> <span class="ipa">mənid̪əp</span> <span class="meaning">human</span></span>.</p>
-</section>
-
-
-
-<section> </section>
 <section>
 <h3 id="vowelsigns">Vowel-signs</h3>
+<p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
 
-
-<p>To produce a different vowel than the inherent one, Tamil attaches vowel signs  (Sanskrit <span class="name">matra</span>) to  the preceding consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">கி</span> <span class="ipa">ki</span></span>. </p>
-
+<p>Other than the inherent vowel, vowel sounds that follow a consonant sound are represented using <a href="../glossary/vowelsign" target="_blank" class="termref">vowel-signs</a>, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">கீ</span> <span class="trans">kī</span> <span class="ipa">kiː</span></span>. This includes the two diphthongs, which can each be represented by a single code point.</p>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ா␣ி␣ீ␣ு␣ூ␣ெ␣ே␣ொ␣ோ␣ை␣ௌ</figure>
-
-
-
-<p>Tamil vowel signs are all combining characters. In principle a single character is used per base consonant, but 3 vowel signs decompose to more than one character.</p>
-<p>All vowel-signs are typed and stored <em>after</em> the base consonant, and the font puts them in the correct place for display.</p>
+<p>Tamil vowel-signs are all combining characters. In principle a single Unicode character is used per base consonant, even if the vowel-signs appear on both sides of the base consonant, however, see also <a class="secref">alt_vowels</a>. All vowel-signs are typed and stored after the base consonant, and the font puts them in the correct place for display.</p>
 <p>All but one vowel-signs are <em>spacing</em> combining characters, ie. they expand the text width when applied to a consonant.</p>
-<p>Vowel-sign positions are as follows:</p>
-<ul>
-<li>3 prescript, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">மே</span> <span class="trans">mē</span> <span class="meaning">May</span></span>.</li>
-<li>4 postscript</li>
-<li>1 superscript</li>
-<li>3 pre+postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">பௌ</span> <span class="trans">pʌʷ</span></span> in <span class="charExample" translate="no"><span class="ex" lang="ta">ஜிபௌட்டி</span> <span class="trans">ʤipʌʷʈʈi</span> <span class="meaning">Djibouti</span></span>.</li>
-</ul>
-<p>The <span class="trans">u</span> and <span class="trans">ū</span> vowel-signs, and to some extent the <span class="trans">i</span> and <span class="trans">ī</span> signs, tend to form ligatures with the base consonant. See <a class="sectionref">shaping</a>.</p>
+<p>The <span class="trans">u</span> and <span class="trans">ū</span> vowel-signs, and to some extent the <span class="trans">i</span> and <span class="trans">ī</span> signs, tend to form ligatures with the base consonant. See <a class="sectionref">vowelligation</a>.</p>
 </section>
 
 
@@ -254,17 +283,34 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 	<section>
 		<h3 id="alt_vowels">Two-part vowel alternatives</h3>
-			<p> The three two-part vowel signs can be written in two different ways: either as a single code point, or as an initial vowel-sign followed by either <span class="codepoint"><span lang="ta">&#x25CC;&#x0BBE;</span> [<a href="/scripts/tamil/block#char0BBE"><span class="uname">U+0BBE TAMIL VOWEL SIGN AA​</span></a>]</span> or <span class="codepoint"><span lang="ta">&#x25CC;&#x0BD7;</span> [<a href="/scripts/tamil/block#char0BD7"><span class="uname">U+0BD7 TAMIL AU LENGTH MARK​</span></a>]</span>. </p>
-<p>The single code point per vowel sign, is the preferred form and the form in common use for Tamil. The parts are separated, however, in Unicode Normalisation Form D.</p>
+			<p> The 3 two-part vowel-signs can be written in two different ways: either as a single code point, or as an initial vowel-sign followed by either <span class="codepoint"><span lang="ta">&#x25CC;&#x0BBE;</span> [<a href="/scripts/tamil/block#char0BBE"><span class="uname">U+0BBE TAMIL VOWEL SIGN AA​</span></a>]</span> or <span class="codepoint"><span lang="ta">&#x25CC;&#x0BD7;</span> [<a href="/scripts/tamil/block#char0BD7"><span class="uname">U+0BD7 TAMIL AU LENGTH MARK​</span></a>]</span>. </p>
+<p>The single code point per vowel-sign, is the preferred form and the form in common use for Tamil. The parts are separated, however, in Unicode Normalisation Form D.</p>
             <figure>
             <div style="text-align:center"><span class="ex" lang="ta" >க</span>  + <span class="ex" lang="ta" >ொ</span>  ≡ <span class="ex" lang="ta" >க</span>  + <span class="ex" lang="ta" >ெ</span> + <span class="ex" lang="ta" >ா</span><br />
 			<span class="ex" lang="ta" >க</span>  + <span class="ex" lang="ta" >ோ</span>  ≡ <span class="ex" lang="ta" >க</span>  + <span class="ex" lang="ta" >ே</span> + <span class="ex" lang="ta" >ா</span><br />
 			<span class="ex" lang="ta" >க</span>  + <span class="ex" lang="ta" >ௌ</span>  ≡ <span class="ex" lang="ta" >க</span>  + <span class="ex" lang="ta" >ெ</span> + <span class="ex" lang="ta" >ௗ</span>
             </div>
-            <figcaption>Alternate code point sequences for vowel signs that surround the base.</figcaption>
+            <figcaption>Alternate code point sequences for vowel-signs that surround the base.</figcaption>
             </figure>
-			<p>Whichever approach you use, the vowel signs must come after the consonant or consonant cluster that they surround. In the case of multi-character vowel signs, the order is also important and must be as shown above.</p>
+			<p>Whichever approach you use, the vowel-signs must come after the consonant or consonant cluster that they surround. In the case of multi-character vowel-signs, the order is also important and must be as shown above.</p>
 	</section>
+
+
+
+
+ 
+<section>
+<h3 id="placement">Vowel-sign placement</h3>
+
+<p>The following list shows where vowel-signs are positioned around a base consonant to produce vowels, and how many instances of that pattern there are.</p>
+<ul>
+<li>3 prescript, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">கெ</span> <span class="trans">ke</span></span></li>
+<li>4 postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">கூ</span> <span class="trans">kū</span></span></li>
+<li>1 superscript, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">கீ</span> <span class="trans">kī</span></span></li>
+<li>3 pre+postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">கௌ</span> <span class="trans">kʌʷ</span></span></li>
+</ul>
+<p>However, some of the vowel signs are tightly integrated with the consonant shape. See <a class="secref">vowelligation</a>.</p>
+</section>
 
 
 
@@ -272,7 +318,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
     
 <section>
 <h3 id="vowelligation">Vowel ligatures</h3>
-<p>Vowel signs for   <span class="trans">u</span> and <span class="trans">ū</span>, and to some extent  <span class="trans">i</span> and <span class="trans">ī</span>, produce significantly different, ligated shapes as they combine with the base consonant. The figure below shows the basic shape types produced by  <span class="codepoint"><span lang="ta">&#x25CC;&#x0BC1;</span> <a href="/scripts/tamil/block#char0BC1">[<span class="uname">U+0BC1 TAMIL VOWEL SIGN U​</span>]</a></span>, when combined with various different base characters.</p>
+<p>Vowel-signs for   <span class="trans">u</span> and <span class="trans">ū</span>, and to some extent  <span class="trans">i</span> and <span class="trans">ī</span>, produce significantly different, ligated shapes as they combine with the base consonant. The figure below shows the various alternative shapes produced by  <span class="codepoint"><span lang="ta">&#x25CC;&#x0BC1;</span> <a href="/scripts/tamil/block#char0BC1">[<span class="uname">U+0BC1 TAMIL VOWEL SIGN U​</span>]</a></span>, when combined with  different base characters.</p>
 	<figure id="consvowellig">
 			  <table>
 			    <tbody>
@@ -304,8 +350,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 		      </table>
 			  <figcaption>Ligatures with  <span class="codepoint"><span lang="ta">&#x25CC;&#x0BC1;</span> <a href="/scripts/tamil/block#char0BC1">[<span class="uname">U+0BC1 TAMIL VOWEL SIGN U​</span>]</a></span>.</figcaption>
   </figure>
-	  <p>Besides these significant transformations, ligation is used to ensure a clean join between the consonant and vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">லி</span> <span class="trans">li</span></span>, or <span class="charExample" translate="no"><span class="ex" lang="ta">ஷி</span> <span class="trans">ʂi</span></span>, where the vowel-sign is stretched slightly to fit the shape of the consonant.</p>
-<p>See <a href="http://www.unicode.org/versions/Unicode7.0.0/ch12.pdf">The Unicode Standard</a>, pp 473-476, for a list and description of many more Tamil ligatures, or expand the text just below to see a table.</p>
+	  <p>Besides these significant transformations, special shaping is used to ensure a clean join between the consonant and vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">லி</span> <span class="trans">li</span></span>, or <span class="charExample" translate="no"><span class="ex" lang="ta">ஷி</span> <span class="trans">ʂi</span></span>, where the vowel-sign is stretched slightly to fit the shape of the consonant.</p>
+<p>Expand the text just below for a table shapes arising from consonant+vowel combinations in Tamil.</p>
 
 <details>
 <summary class="instructions">Show all consonant+vowel combinations</summary>
@@ -333,18 +379,29 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
+<section> </section>
+<section>
+<h3 id="suppression">Vowel suppression</h3>
+
+<p>Tamil uses  <span class="codepoint" translate="no"><span lang="ta">&#x0BCD;</span> [<a href="/scripts/tamil/block#char0BCD"><span class="uname">U+0BCD TAMIL SIGN VIRAMA</span></a>]</span> (called <span class="name">puḷḷi</span> in Tamil) to kill the inherent vowel after a consonant, eg.<span class="charExample" translate="no"><span class="ex" lang="ta"> க்</span> <span class="trans">k͓</span></span> explicitly represents just the sound k. </p>
+<p>The pulli tends to be visible anywhere the vowel is dropped. For example, unlike Devanagari, it is used at the end of a word if there is no final vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">மனிதப்</span> <span class="trans">mnitp</span> <span class="ipa">mənid̪əp</span> <span class="meaning">human</span></span>.</p>
+</section>
+
+
+
 
 
 
 <section>
 <h3 id="independentvowel">Standalone vowels</h3>
-<p class="explanatoryintro">Standalone vowels are not preceded by a consonant, and may appear at the beginning or in the middle of a word.</p>
+<p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
+
 <p>Tamil represents syllable-initial vowels using a set of independent vowel letters.</p>
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">அ␣ஆ␣இ␣ஈ␣உ␣ஊ␣எ␣ஏ␣ஒ␣ஓ␣ஐ␣ஔ</figure>
 
 
-<p>Independent vowel forms used to be used at the beginning of metrical groups, but now they are used at the beginning of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">இந்த</span> <span class="trans">ịṅt (ịṅta)</span> <span class="meaning">this</span></span>, but also internally to represent 'overlong' vowel sounds, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">பெரீஇஇய</span> <span class="trans">peɾīịịy (peɾīịịya)</span> <span class="meaning">reeeeally big</span></span>.</p>
+<p>Independent vowel forms used to be used at the beginning of metrical groups, but now they are used at the beginning of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">இந்த</span> <span class="trans">ịṅt (ịṅta)</span> <span class="meaning">this</span></span>, but also internally to represent 'overlong' vowel sounds, eg. compare <span class="charExample" translate="no"><span class="ex" lang="ta">பெரீய</span> <span class="trans">peɾīy (peɾīya)</span> <span class="meaning">really big</span></span> and <span class="charExample" translate="no"><span class="ex" lang="ta">பெரீஇஇய</span> <span class="trans">peɾīịịy (peɾīịịya)</span> <span class="meaning">reeeeally big</span></span>.</p>
 </section>
 </section>
 
@@ -357,15 +414,101 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <section>
 <h2 id="consonants">Consonants</h2>
     
-    
+
 <section>
-    <h3 id="basicconsonants">Basic consonants</h3>
+<h3 id="consonantPhonemes">Phoneme table</h3>
+<table class="ipaTable">
+<thead>
+<tr>
+<th></th>
+<th>Labial </th>
+<th>Dental </th>
+<th>Alveolar </th>
+<th>Retroflex</th>
+<th>Palatal </th>
+<th>Velar </th>
+<th>Glottal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Stop</th>
+<td><span class="ipa">p-</span><br/>
+<span class="ipa allophone">b</span></td>
+<td><span class="ipa">t</span>-<br/>
+<span class="ipa allophone">d</span></td>
+<td><span class="ipa">ʧ</span>-<br>
+<span class="ipa allophone">ʤ</span></td>
+<td>ʈ-<br>
+<span class="ipa allophone">ɖ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">k</span>-<br>
+<span class="ipa allophone">ɡ</span></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>Fricative </th>
+<td><span class="ipa allophone">f</span><br>
+<span class="ipa allophone">β</span></td>
+<td><span class="ipa allophone">ð</span></td>
+<td><span class="ipa">s</span> <span class="ipa allophone">ʃ</span><br>
+<span class="ipa allophone">z</span> <span class="ipa allophone">ʒ</span></td>
+<td><span class="ipa allophone">ʂ</span></td>
+<td></td>
+<td><span class="ipa allophone">x</span><br>
+<span class="ipa allophone">ɣ</span></td>
+<td><span class="ipa allophone">h</span></td>
+</tr>
+<tr>
+<th>Nasal </th>
+<td><span class="ipa">m</span></td>
+<td>n̪</td>
+<td><span class="ipa">n</span></td>
+<td>ɳ</td>
+<td><span class="ipa">ɲ</span></td>
+<td><span class="ipa">ŋ</span></td>
+<td></td>
+</tr>
+<tr>
+<th>Approximant </th>
+<td><span class="ipa">ʋ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">l</span></td>
+<td><span class="ipa allophone">ɽ</span> <span class="ipa">ɭ</span></td>
+<td><span class="ipa">j</span></td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>Trill </th>
+<td></td>
+<td>&nbsp;</td>
+<td><span class="ipa">r ɾ</span></td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<p>The Tamil writing system only represents phonemic differences. The sounds in parentheses in the chart are allophonic variations or sounds in foreign words. This is not usually indicated in transcriptions.</p>
+
+<p>Plosives are unvoiced if they occur word-initially or doubled. Elsewhere they are voiced, with a few becoming fricatives intervocalically. Nasals and approximants are always voiced.</p>
+<p>The consonants are classified into three categories: <dfn>vallinam</dfn> (hard consonants), <dfn>mellinam</dfn> (soft consonants, including all nasals), and <dfn>idayinam</dfn> (medium consonants). These categories are important for the rules of pronunciation.</p>
+<p>The mapping of consonants, in particular the plosives, to phonetic sounds is particularly varied for an indic script. These rules for the pronunciation of consonants for the written form of Tamil make for complementary distribution. However, the rules break down to varying degrees when dealing with Sanskrit loan words and the colloquial spoken form of Tamil (particularly in  northern areas). For more read <a href="http://en.wikipedia.org/wiki/Tamil_phonology">Tamil phonology</a> and <a href="#ref_krishnamurthi">Krishnamurthi<sup>23-28</sup></a>.</p>
+<p>The Unicode Standard,  also describes a method of extension that uses superscript or subscript digits, particularly to represent transcriptions of languages such as Sanskrit and Saurashtra. Each number represents the unvoiced, unvoiced aspirated, voiced, voiced aspirated, respectively, eg. <span lang="ta" >ப¹</span> = <span class="trans">pa</span>, <span lang="ta" >ப²</span> = <span class="trans">pha</span>, <span lang="ta" >ப³</span> = <span class="trans">ba</span>, and <span lang="ta" >ப⁴</span> = <span class="trans">bha</span> <a class="fnref" href="http://www.unicode.org/versions/Unicode7.0.0/ch12.pdf">Unicode</a> 471. This isn't currently supported for Unicode text, because such numbers would need to appear between consonants and any following vowel-sign.</p>
+</section>
+
+
+
+
+<section>
+<h3 id="basicconsonants">Basic consonants</h3>
     
-<p>The basic Tamil alphabet consists of the following consonants.</p>
+<p>The   basic consonant sounds of the standard Tamil alphabet are represented by the following characters.</p>
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">க␣ச␣ட␣த␣ப␣ங␣ஞ␣ண␣ந␣ன␣ம␣ர␣ற␣ல␣ள␣ழ␣ய␣வ</figure>
-
-<p>The range of sounds covered by a single letter can be unusually large for an indic script.</p>
 </section>
 
 
@@ -382,7 +525,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <figure class="auxiliaryBox auto" data-cols="ipa,trans,transc">ஶ</figure>
 
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB6;</span> [<a href="/scripts/tamil/block#char0BB6"><span class="uname">U+0BB6 TAMIL LETTER SHA</span></a>]</span> is not commonly used, except in the <span class="trans">ʃɾī</span> ligature <span class="ex" xml:lang="ta" lang="ta">ஶ்ரீ</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB6;</span> [<a href="/scripts/tamil/block#char0BB6"><span class="uname">U+0BB6 TAMIL LETTER SHA</span></a>]</span> is not commonly used, except in the <span class="trans">ʃɾī</span> ligature <span class="ex" xml:lang="ta" lang="ta">ஶ்ரீ</span>. See also <a class="secref">shri</a>.</p>
 </section>
 
 
@@ -408,11 +551,9 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 	<section>
-		<h3 id="consonantpronunciation">Consonant pronunciation</h3>
-			<p>Plosives are unvoiced if they occur word-initially or doubled. Elsewhere they are voiced, with a few becoming fricatives intervocalically. Nasals and approximants are always voiced.</p>
-			<p>The consonants are classified into three categories: <dfn>vallinam</dfn> (hard consonants), <dfn>mellinam</dfn> (soft consonants, including all nasals), and <dfn>idayinam</dfn> (medium consonants), which are important for the rules of pronunciation.</p>
-<p>The mapping of consonants, in particular the plosives, to phonetic sounds is particularly varied for an indic script. These rules for the pronunciation of consonants for the written form of Tamil make for complementary distribution. However, the rules break down to varying degrees when dealing with Sanskrit loan words and the colloquial spoken form of Tamil (particularly in  northern areas). For more read <a href="http://en.wikipedia.org/wiki/Tamil_phonology">Tamil phonology</a> and <a href="#ref_krishnamurthi">Krishnamurthi</a> pp23-28.</p>
-<p>The Unicode Standard,  also describes a method of extension that uses superscript or subscript digits, particularly to represent transcriptions of languages such as Sanskrit and Saurashtra. Each number represents the unvoiced, unvoiced aspirated, voiced, voiced aspirated, respectively, eg. <span lang="ta" >ப¹</span> = <span class="trans">pa</span>, <span lang="ta" >ப²</span> = <span class="trans">pha</span>, <span lang="ta" >ப³</span> = <span class="trans">ba</span>, and <span lang="ta" >ப⁴</span> = <span class="trans">bha</span> <a class="fnref" href="http://www.unicode.org/versions/Unicode7.0.0/ch12.pdf">Unicode</a> 471. This isn't currently supported for Unicode text, because such numbers would need to appear between consonants and any following vowel sign.</p>
+		<h3 id="allophonic_transcriptions">Allophonic transcriptions</h3>
+			<p>As mentioned above, transcriptions of Tamil text generally don't distinguish the allophonic pronunciations.</p>
+<p>The Unicode Standard describes a method of extension that uses superscript or subscript digits, particularly to represent transcriptions of languages such as Sanskrit and Saurashtra. Each number represents the unvoiced, unvoiced aspirated, voiced, voiced aspirated, respectively, eg. <span lang="ta" >ப¹</span> = <span class="trans">pa</span>, <span lang="ta" >ப²</span> = <span class="trans">pha</span>, <span lang="ta" >ப³</span> = <span class="trans">ba</span>, and <span lang="ta" >ப⁴</span> = <span class="trans">bha</span> <a class="fnref" href="http://www.unicode.org/versions/Unicode7.0.0/ch12.pdf">Unicode</a> 471. This isn't currently useable for Unicode text, because such numbers would need to appear between consonants and any following vowel-sign.</p>
 </section>
 
 
@@ -422,7 +563,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <section>
 <h3 id="finals">Syllable-final consonants</h3>
 <p>Syllable-final consonants in Tamil are just written using ordinary consonants with the pulli overhead, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">தமிழ்</span> <span class="trans">tmiɻ͓ (tamiḻ)</span> <span class="meaning">Tamil</span></span>.</p>
-</section></section>
+</section>
+</section>
     
     
     
@@ -438,6 +580,15 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <h2 id="conjuncts">Consonant clusters</h2>
 			<p>Rather than using conjunct glyphs like most other indic scripts, consonant clusters are normally represented using the <span class="name">puḷḷi</span> dot over the  character(s) that are not followed by a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">தீர்ப்பு</span> <span class="trans">tīɾ͓p͓pu</span> <span class="meaning">verdict</span></span>.</p>
 <p>The modern script has two common exceptions: <span class="charExample" translate="no"><span class="ex" lang="ta">க்ஷ</span> <span class="trans">k͓ʂ</span> <span class="ipa">kʃʌ</span></span> and <span class="charExample" translate="no"><span class="ex" lang="ta">ஶ்ரீ</span> <span class="trans">ʃɾī</span> <span class="ipa">ʃri</span></span>. There are more conjunct forms in older versions of the Tamil script. </p>
+
+
+
+
+
+<section>
+<h3 id="shri">Representation of shrī</h3>
+<p>The syllable <span class="charExample"><span class="ipa">ʃri</span></span> can be written with two different initial letters: <span class="codepoint" translate="no"><span lang="ta">&#x0BB6;</span> [<a href="/scripts/tamil/block#char0BB6"><span class="uname">U+0BB6 TAMIL LETTER SHA</span></a>]</span> (ie. <span class="charExample" translate="no"><span class="ex" lang="ta">ஶ்ரீ</span> <span class="trans">ʃɾī</span></span>) or <span class="codepoint" translate="no"><span lang="ta">&#x0BB8;</span> [<a href="/scripts/tamil/block#char0BB8"><span class="uname">U+0BB8 TAMIL LETTER SA</span></a>]</span> (ie.<span class="charExample" translate="no"><span class="ex" lang="ta">ஸ்ரீ</span> <span class="trans">s͓ɾī</span></span>). The result looks identical. Since 2005, the Unicode Consortium has recommended use of the former, but both are still in wide circulation, so Unicode 12 recommends that both be treated as equivalent sequences.<a class="fnref" href="http://www.unicode.org/versions/Unicode7.0.0/ch12.pdf">u493-4</a></p>
+</section></section>
 </section>
  
   
@@ -448,7 +599,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <section>
 <h2 id="namedchar">Named character sequences</h2>
 		<p>Tamil speakers tend to think of grapheme clusters containing consonant+vowel as a single entity. In some cases, people want to process Tamil using these grapheme clusters as a single unit.</p>
-		<p>To assist with this Unicode provides named character sequences that apply standardised names to whole syllables. These can then be mapped to the private use area for applications wanting to work with Tamil in this way.  For normal Tamil data interchange, however, the standard codepoints should be used.<a class="fnref" href="http://www.unicode.org/versions/Unicode7.0.0/ch12.pdf">Unicode</a> 477</p>
+		<p>To assist with this Unicode provides named character sequences that apply standardised names to whole syllables. These can then be mapped to the private use area for applications wanting to work with Tamil in this way.  For normal Tamil data interchange, however, the standard codepoints should be used.<a class="fnref" href="http://www.unicode.org/versions/Unicode7.0.0/ch12.pdf">u496</a></p>
 	</section>
 
    
@@ -463,12 +614,12 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <figure class="characterBox auto" data-cols="trans,transc">்␣ௗ</figure>
 
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BCD;</span> [<a href="/scripts/tamil/block#char0BCD"><span class="uname">U+0BCD TAMIL SIGN VIRAMA</span></a>]</span> is used to show vowel absence. See <a class="sectionref">suppression</a>.</p>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BCD;</span> [<a href="/scripts/tamil/block#char0BCD"><span class="uname">U+0BCD TAMIL SIGN VIRAMA</span></a>]</span> is used to show vowel absence. See <a class="sectionref">suppression</a>. It may be rendered as a dot, or as a small, open circle.</p>
 <p><span class="codepoint" translate="no"><span lang="ta">&#x0BD7;</span> [<a href="/scripts/tamil/block#char0BD7"><span class="uname">U+0BD7 TAMIL AU LENGTH MARK</span></a>]</span> may be used as part of a decomposed vowel-sign, but should never be used alone. See <a class="sectionref">vowelsigns</a>.</p>
 
-<figure class="auxiliaryBox auto" data-cols="">ஂ</figure>
+<figure class="deprecatedBox auto" data-cols="">ஂ</figure>
 
-<p>It's not clear  how or whether <span class="codepoint" translate="no"><span lang="ta">&#x0B82;</span> [<a href="/scripts/tamil/block#char0B82"><span class="uname">U+0B82 TAMIL SIGN ANUSVARA</span></a>]</span> is used. The Unicode Standard says that it is not used for Tamil.</p>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0B82;</span> [<a href="/scripts/tamil/block#char0B82"><span class="uname">U+0B82 TAMIL SIGN ANUSVARA</span></a>]</span> is not used for Tamil. Nor should it be used as a graphical variant of the <span class="name">pulli</span>.<a class="fnref" href="http://www.unicode.org/L2/L2012/12018-tamil-anusvara-depr.pdf">s</a></p>
 </section>
    
    
@@ -486,30 +637,42 @@ debit sign,credit sign,as above,rupee sign,number sign">ௐ␣௳␣௴␣௵␣
 <p>OM is a religious concept found in all three major religions born in India viz. Hinduism, Jainism and Buddhism. <span class="codepoint"><span lang="ta">&#x0BD0;</span> [<a href="/scripts/tamil/block#char0BD0"><span class="uname">U+0BD0 TAMIL OM</span></a>]</span> is widely used in Hindu religious texts, temple publications, and as neon lamps of sign boards in shops etc.</p>
 <p>The other symbols are discussed in <a class="sectionref">numbers</a>.</p>
 </section>
+ 
    
    
    
    
     
 <section>
+<h2 id="otherletter">Tamil supplement</h2>
+		<p>Unicode version 12 added the <a target="_blank" href="https://r12a.github.io/uniview/?block=Tamil_Supplement">Tamil Supplement block</a>. This contains numbers, symbols, and one punctuation mark that are not normally used in modern Tamil, although a few are sometimes used in traditional formats, such as wedding invitations.<a class="fnref" href="http://www.unicode.org/versions/Unicode7.0.0/ch12.pdf">u496</a></p>
+		<p>The number characters are for fractions, and the symbols include measures of grain, old currency symbols, symbols of weight, length, and area, agricultural symbols, clerical symbols, and other symbols and abbreviations. The punctuation marks the end of a text.</p>
+</section>
+  
+   
+   
+   
+    
+<section>
 <h2 id="numbers">Numbers, dates, currency, etc</h2>
-		<p>There is a set of Tamil numbers, but modern Tamil text typically uses Western digits. </p>
+		<p>There is a set of Tamil numbers, but modern Tamil text typically uses Western digits. The CLDR standard-decimal pattern is  	<code>#,##,##0.###</code>. The standard-percent pattern is <code>#,##,##0%</code>.<a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/ta.html">c</a></p>
  <p>An interesting feature of large numbers written in India is that they apply groupings of two, rather than three, digits between commas (even when using european digits).</p>
     <figure>
     <p class="large"><span class="ex" lang="hi">20,00,000</span></p>
     <figcaption>Two million, written with Indian comma separators.</figcaption>
     </figure>
 
+<p>The Tamil digits can be used as a standard decimal counting system, but older versions of the Tamil system had no zero and inserted characters to indicate tens, hundreds, and thousands.</p>
 <figure class="auxiliaryBox auto" data-cols="trans,transc">௦␣௧␣௨␣௩␣௪␣௫␣௬␣௭␣௮␣௯␣௰␣௱␣௲</figure>
 
 
-<p>The Tamil digits can be used as a standard decimal counting system, but older versions of the Tamil system had no zero and inserted characters to indicate tens, hundreds, and thousands. For a description of the algorithm, see <a href="http://www.w3.org/TR/predefined-counter-styles/#tamil-styles">Predefined Counter Styles</a> and <a href="http://unicode.org/notes/tn21/tamil_numbers.pdf">Unicode Technical Note #21</a>. You can experiment with this using the<a href="/apps/counterconverter/"> Counter styles converter</a> tool (select Tamil, Ancient).</p>
+<p>For a description of the algorithm, see <a href="http://www.w3.org/TR/predefined-counter-styles/#tamil-styles">Predefined Counter Styles</a> and <a href="http://unicode.org/notes/tn21/tamil_numbers.pdf">Unicode Technical Note #21</a>. You can experiment with this using the<a href="/apps/counterconverter/"> Counter styles converter</a> tool (select Tamil, Ancient).</p>
 <figure>
     <p lang="ta" class="ex large">௲௨௱௩௰௪</p>
        <figcaption>The number 1,234 using the old Tamil numbering system.</figcaption>
  </figure>
  
- <p>The following signs are for use with numbers. <span class="ednote">Explain how they work.</span></p>
+ <p>The following signs were formerly used with numbers.</p>
 
 <figure class="auxiliaryBox auto" data-cols="" data-notes="number,debit,credit,quantity,percent">௺␣௶␣௷␣வ␣%</figure>
 
@@ -519,10 +682,14 @@ debit sign,credit sign,as above,rupee sign,number sign">ௐ␣௳␣௴␣௵␣
 <section>
 <h3 id="currency">Currency</h3>
 
-<figure class="auxiliaryBox auto" data-cols="" data-notes="rupee">௹</figure>
+<p>The CLDR standard format for currency is <code>¤ #,##,##0.00</code>, and the Indian currency symbol is <span class="codepoint" translate="no"><span lang="ta">&#x20B9;</span> [<a href="/scripts/tamil/block#char20B9"><span class="uname">U+20B9 INDIAN RUPEE SIGN</span></a>]</span><a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/ta.html">c</a>.</p>
+<p class="ednote">Clarify the currency sign. Is it <span class="codepoint" translate="no"><span lang="ta">&#x20B9;</span> [<a href="/scripts/tamil/block#char20B9"><span class="uname">U+20B9 INDIAN RUPEE SIGN</span></a>]</span>?</p>
 
 <p><span class="codepoint"><span lang="ta">&#x0BF9;</span> [<a href="/scripts/tamil/block#char0BF9"><span class="uname">U+0BF9 TAMIL RUPEE SIGN</span></a>]</span> is the Tamil rupee sign.</p>
-<p>It is distinguished from <span class="codepoint" translate="no"><span lang="hi">₨</span> [<a href="/scripts/currencysymbols/block#char20A8"><span class="uname">U+20A8 RUPEE SIGN</span></a>]</span>, which is an older symbol not formally  tied to any particular currency. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch22.pdf">u</a> Follow that link for more information about the rupee.&nbsp;</p>
+
+<figure class="auxiliaryBox auto" data-cols="" data-notes="rupee">௹</figure>
+
+<p>It is distinguished from <span class="codepoint" translate="no"><span lang="hi">₨</span> [<a href="/scripts/currencysymbols/block#char20A8"><span class="uname">U+20A8 RUPEE SIGN</span></a>]</span>, which is an older symbol not formally  tied to any particular currency. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch22.pdf">u</a> Follow that link for more information about the rupee.</p>
 </section>
 
 
@@ -531,7 +698,7 @@ debit sign,credit sign,as above,rupee sign,number sign">ௐ␣௳␣௴␣௵␣
 <section>
 <h3 id="dates">Dates</h3>
 
-<p>Tamil has the following signs. <span class="ednote">Explain how they are used.</span></p> 
+<p>The following signs were formerly used for dates.</p> 
 <figure class="auxiliaryBox auto" data-cols="" data-notes="day,month,year,time">௳␣௴␣௵␣ள</figure>
 
 </section>
@@ -541,7 +708,7 @@ debit sign,credit sign,as above,rupee sign,number sign">ௐ␣௳␣௴␣௵␣
     
     
 <section>
-    <h2 id="shaping">Glyph shaping &amp; positioning</h2>
+<h2 id="shaping">Glyph shaping &amp; positioning</h2>
   
 	  <p>You can experiment with examples using the <a href="/pickers/tamil/">Tamil picker</a>.</p>
 <p>Tamil doesn't appear to have any features relevant to cursive text, baselines &amp; inline alignment, or character transforms.</p>
@@ -555,7 +722,7 @@ debit sign,credit sign,as above,rupee sign,number sign">ௐ␣௳␣௴␣௵␣
 <h3 id="gsub">Context-based shaping</h3>
 
   <p class="prompts">Are special glyph forms needed, depending on the context in which a character is used? Do glyphs interact in some circumstances?</p>
-<p>Although modern Tamil uses fewer <em>conjunct</em> ligatures than most other indic scripts,  many ligatures are still needed for a Tamil font, mostly for combinations of base consonant and vowel sign. See <a class="sectionref">vowelligation</a>.</p>
+<p>Although modern Tamil uses fewer <em>conjunct</em> ligatures than most other indic scripts,  many ligatures are still needed for a Tamil font, mostly for combinations of base consonant and vowel-sign. See <a class="sectionref">vowelligation</a>.</p>
 </section>
 
 
@@ -592,7 +759,8 @@ debit sign,credit sign,as above,rupee sign,number sign">ௐ␣௳␣௴␣௵␣
         
 <section>
 <h3 id="graphemes">Grapheme boundaries</h3>
- <p class="explanatoryintro">A grapheme is a user-perceived unit of text. The Unicode Standard uses generalised rules to define 'grapheme clusters', which approximate the likely grapheme boundaries in a writing system.</p>
+
+<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
 
 <p class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements when double-clicking on the text, or moving through the text with the cursor, or backspace, etc.? </p>
 </section>
@@ -603,7 +771,8 @@ debit sign,credit sign,as above,rupee sign,number sign">ௐ␣௳␣௴␣௵␣
   
 <section>
 <h3 id="word">Word boundaries</h3>
- <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+
 <p class="prompts">Are words separated by spaces, or other characters? Are there special requirements when double-clicking  on the text? Are words hyphenated?</p>
 
 <p>Words are  separated by spaces.</p>
@@ -960,7 +1129,7 @@ data-cols="">௯௲␣௮௲␣௭௲␣௬௲␣௫௲␣௪௲␣௩௲␣௨�
 		    0-19-507993-0</li>
 		  <li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Tamil_script">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Tamil_script">Tamil Script</a></li>
 		  <li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Tamil_language">wl</a> ] <a href="http://en.wikipedia.org/wiki/Tamil_language">Tamil language</a></li>
-		  <li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode7.0.0/ch12.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode7.0.0/ch12.pdf">The Unicode Standard</a></li>
+		  <li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode7.0.0/ch12.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode7.0.0/ch12.pdf">The Unicode Standard</a>, Version 12.</li>
 		  <li>[ <a class="fnref" href="http://www.omniglot.com/writing/tamil.htm">o</a> ] <a href="http://www.omniglot.com/writing/tamil.htm">Tamil</a></li>
 		  <li>[ <a class="fnref" href="http://www.wordiq.com/definition/Tamil_language">wd</a> ] <a href="http://www.wordiq.com/definition/Tamil_language">Tamil language - Definition</a></li>
 		  <li>[ <a class="fnref" href="http://unicode.org/faq/tamil.html">uf</a> ] <a href="http://unicode.org/faq/tamil.html">Tamil Language and Script</a></li>
@@ -969,6 +1138,7 @@ data-cols="">௯௲␣௮௲␣௭௲␣௬௲␣௫௲␣௪௲␣௩௲␣௨�
 <li>[ <a class="fnref" href="http://w3c.github.io/ilreq/">i</a> ] <a href="http://w3c.github.io/ilreq/">Indic Layout Requirements</a></li>
 <li>[ <a class="fnref" href="https://w3c.github.io/iip/tamil/">t</a> ] <a href="https://w3c.github.io/iip/tamil/">Tamil Layout Requirements</a></li>
 <li>[ <a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/ta.html">c</a> ] <a href="https://www.unicode.org/cldr/charts/latest/summary/ta.html">CLDR chart tables</a></li>
+<li>[ <a class="fnref" href="http://www.unicode.org/L2/L2012/12018-tamil-anusvara-depr.pdf">s</a> ] Shriramana Sharma, <a href="http://www.unicode.org/L2/L2012/12018-tamil-anusvara-depr.pdf">Request to deprecate 0B82 TAMIL SIGN ANUSVARA</a></li>
   </ol>
 </section>
 
@@ -999,7 +1169,7 @@ runCharCount('.deprecatedBox', 'deprecatedCharList')
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/tamil"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-12-01  22:27<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Btamil%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ftamil%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/tamil"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-12-03  7:58<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Btamil%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ftamil%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"><div style="display:block">&nbsp;</div><p style="text-align:right;"></p></div>
