@@ -5,7 +5,12 @@ function initialiseSummary (base, lang, tableName) {
     initialiseShowNames(base, 'c')
     document.getElementById('featureTableBody').innerHTML = makeSidePanel(tableName,"")
     createtoc(3)
+	removeEditorNotes()
+	addDefinitions()
     }
+
+
+
 
 
 var featureName = { 
@@ -26,6 +31,26 @@ var featureName = {
 	justify:"Justification", 
 	digits:"Native digits?", 
 	region:"Region" 
+	}
+
+
+
+function addDefinitions () {
+	// adds text for definitions
+	
+	var nodes = document.querySelectorAll('.definitionStub')
+	for (let i=0;i<nodes.length;i++) nodes[i].innerHTML = defList[nodes[i].id.replace(/^def-/,'')]
+	}
+
+
+
+function removeEditorNotes () {
+	// removes editor's notes from the published version: they are only visible when using the localhost domain
+	
+	if (! window.location.origin.includes('localhost')) { 
+		var nodes = document.querySelectorAll('.ednote')
+		for (let i=0;i<nodes.length;i++) nodes[i].style.display = 'none'
+		}
 	}
 
 
