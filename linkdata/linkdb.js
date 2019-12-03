@@ -35,6 +35,7 @@ var scriptNotes= {
     'latn':[['Hausa (boko)', 'latin/hausa']],
     'lisu':[['Lisu', 'lisu/']],
     'mand':[['Mandaic', 'mandaic/']],
+    'mong':[['Mongolian', 'mongolian/']],
     'mlym':[['Malayalam', 'malayalam']],
     'mymr':[['Myanmar/Burmese', 'myanmar']],
     'nkoo':[["N’Ko", 'nko']],
@@ -73,6 +74,7 @@ var scriptNotesByRegion = {
 			  ['Syriac', 'syriac/']
 			  ],
 	'Central&nbsp;Asia':[
+				['Mongolian', 'mongolian/'],
 				['Tibetan', 'tibetan/'],
 				['Uighur', 'arabic/uighur']
 			  	],
