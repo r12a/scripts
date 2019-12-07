@@ -1,4 +1,3 @@
-
 function initialiseSummary (base, lang, tableName) {
     window.base = base
     makeTables(lang)
@@ -7,6 +6,7 @@ function initialiseSummary (base, lang, tableName) {
     createtoc(3)
 	removeEditorNotes()
 	addDefinitions()
+	if (typeof(contentPrompts) !== 'undefined') setContentPrompts()
     }
 
 
@@ -95,7 +95,7 @@ function makeSidePanel (script, otherlinks) {
 
 
 function makeTables (lang) {
-    // create the lists of characters in yellow boxes
+    // create the lists of characters in yellow, etc. boxes
 
     if (typeof window.spreadsheet == 'undefined') return
     
@@ -117,12 +117,14 @@ function makeTables (lang) {
     
     tables = document.querySelectorAll('.auto')
 
+	// for each figure in the document...
     for (let t=0;t<tables.length;t++) {
         node = tables[t]
         bicameral = false
         showFirst = false
        //console.log(node)
 
+		// populate the chars array with characters & gather additional info
         //chars = node.dataset.chars.split('␣')
         chars = node.textContent.split('␣')
         info = node.dataset.cols
@@ -157,6 +159,7 @@ function makeTables (lang) {
         else links = []
         out = ''
 
+		// make the summary count link
         if (chars.length > 1) {
             var length = chars.length
             for (let j=0;j<chars.length;j++) if (chars[j] === ' ') length-- // ignore spaces
@@ -166,8 +169,10 @@ function makeTables (lang) {
             out += '</div>'
             }
 
+		// start building the listArray
         out += '<div class="listArray">'
 
+		// for each item ...
         for (let i=0;i<chars.length;i++) { 
 			if (bicameral || showFirst) {
 				charList = [... chars[i]]
@@ -175,13 +180,7 @@ function makeTables (lang) {
             	else char = charList[0]
 				}
             else char = chars[i]
-		
-		
-		
-            //if (bicameral) char = chars[i][chars[i].length-1]
-            //else if (showFirst) char = chars[i][0]
-            //else char = chars[i]
-            
+		            
             out += '<div class="listPair"><span class="listItem" lang="'+lang+'">'+chars[i]+'</span>'
 
             // leave a blank where a space is used
