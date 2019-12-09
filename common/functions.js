@@ -1,5 +1,6 @@
-function initialiseSummary (base, lang, tableName) {
+function initialiseSummary (base, lang, tableName, dir) {
     window.base = base
+	doHeadersFooters(dir)
     makeTables(lang)
     initialiseShowNames(base, 'c')
     document.getElementById('featureTableBody').innerHTML = makeSidePanel(tableName,"")
@@ -9,6 +10,29 @@ function initialiseSummary (base, lang, tableName) {
 	if (typeof(contentPrompts) !== 'undefined') setContentPrompts()
     }
 
+
+
+
+
+
+function doHeadersFooters (dir) {
+	// adds links to top of document
+	
+	if (document.getElementById('versionTop') === null) return
+	
+	var out = '&bull; recent changes <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages" title="Show commits for the whole scripts repository.">scripts</a> / <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/'+dir+'" title="Show commits for scripts/'+dir+'.">'+dir+'</a>'
+	
+	out += ' &bull; leave a <a target="_blank" href="https://github.com/w3c/i18n-drafts/issues/new?title=['+dir+']%20%20BRIEF_TITLE_GOES_HERE&body=%5Bsource%5D%20https%3A%2F%2Fr12a.github.io%2Fscripts%2F'+dir+'%0A%0A" title="Leave a comment.">comment</a>'
+	
+	document.getElementById('versionTop').innerHTML = out
+	
+	
+	out = ''
+	out += 'See <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/'+dir+'">recent changes</a>. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5B'+dir+'%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2F'+dir+'%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>'
+	
+	
+	document.getElementById('version').innerHTML = out
+	}
 
 
 
