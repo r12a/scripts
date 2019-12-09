@@ -17,10 +17,28 @@ function initialiseSummary (base, lang, tableName, dir) {
 
 function doHeadersFooters (dir) {
 	// adds links to top of document
+	// dir is of the form arabic/index or arabic/urdu
 	
 	if (document.getElementById('versionTop') === null) return
 	
-	var out = '&bull; recent changes <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages" title="Show commits for the whole scripts repository.">scripts</a> / <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/'+dir+'" title="Show commits for scripts/'+dir+'.">'+dir+'</a>'
+
+	//parse the dir
+	var filename = ''
+	var directory = ''
+	var file = ''
+	var path = dir.split('/')
+	filename = 'index.html'
+	directory = path[0]
+	if (path.length === 1) {
+		file = path[0]
+		}
+	else {
+		file = path[1]
+		}
+		
+
+	var out = '&bull; recent changes <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages" title="Show commits for the whole scripts repository.">scripts</a>/<a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/'+directory+'" title="Show commits for scripts/'+directory+'.">'+directory+'</a>'
+	if (path.length > 1) out += '/<a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/'+directory+'/'+filename+'" title="Show commits for scripts/'+file+'.">'+file+'</a>'
 	
 	out += ' &bull; leave a <a target="_blank" href="https://github.com/w3c/i18n-drafts/issues/new?title=['+dir+']%20%20BRIEF_TITLE_GOES_HERE&body=%5Bsource%5D%20https%3A%2F%2Fr12a.github.io%2Fscripts%2F'+dir+'%0A%0A" title="Leave a comment.">comment</a>'
 	
