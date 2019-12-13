@@ -35,12 +35,15 @@
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
-<!--script src="../common/block-functions.js"></script-->
+<script src="../common/transliterate.js"></script>
+<script src="../common/prompts.js"> </script>
+<script src="../glossary/glossary.js"> </script>
 <script src="../../shared/code/getLinks.js"></script>
 <script src="../../scripts/linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
 
 <script src="../../shared/fontlists/devanagari.js"> </script>
+<script src="hi-translit.js">  </script>
 </head>
 
 <body>
@@ -99,16 +102,18 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->14-Jul-2019<!-- #EndDate -->
-&bull; tags <a href="http://r12a.github.io/blog/index.php?tag=devanagari" title="Show all blog posts tagged with 'devanagari'">devanagari</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+  <!-- #BeginDate format:Sw1 -->13 December, 2019<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
 
 
 
 <section>
-<p>This page provides basic information about the Devanagari script. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned. For character-specific details follow the links to the <a class="linkHighlight" href="/scripts/devanagari/block">Devanagari character notes</a>.</p>
-<p>See also the <a href="../../pickers/hindi/">Hindi picker</a>, the <a href="../../pickers/devanagari/">All Devanagari picker</a>, and  the notes on <a href="../devanagari/kashmiri">Kashmiri</a>.</p>
+<p>This page gathers together basic information about the Devanagari script and its use for the Hindi language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Hindi using Unicode; for greater details follow the footnote links (especially those with an arrow alongside them).</p>
+<p> For character-specific details follow the links to the <a class="linkHighlight" href="/scripts/devanagari/block">Devanagari character notes</a>. See also the <a href="../../pickers/hindi/" class="linkHighlight">Hindi character app</a>, the <a href="../../pickers/devanagari/" class="linkHighlight">All Devanagari character app</a>, and  the notes on <a href="../devanagari/kashmiri.html" class="linkHighlight">Kashmiri</a>.</p>
 <p>For similar information related to other scripts, see the <a class="linkHighlight" href="../links?iso=Deva">script links pages</a>.</p>
-<p class="instructions noprint">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+<p class="instructions noprint">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text. Colours and annotations on panels listing characters are relevant to their use for the thisScript language.</p>
+<p class="instructions noprint">Unless in parentheses, the transcriptions in italics that follow Tamil text are a <a href="../glossary/#transliteration" class="termref">transliteration</a> developed for these pages. Those in parentheses are usually ISO transcriptions. Transcriptions in <span style="white-space:nowrap;">⌈ brackets ⌋</span> may be phonemic or phonetic.</p>
 </section>
 
 
@@ -164,9 +169,9 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <section>
     <h2 id="structure">Structure</h2>
-    <p> The effective unit of the writing systems is the orthographic syllable, consisting of a consonant and vowel (CV) core and, optionally, one or more preceding consonants, with a canonical structure of (((C)C)C)V. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf">u</a></sup></p>
-<p>Consonant letters by themselves constitute a CV unit, where the V is an inherent vowel, whose exact phonetic value may vary by writing system. Independent vowels also constitute a CV unit, where the C is considered to be null. A dependent vowel sign is used to represent a V in CV units where C is not null and V is not the inherent vowel. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf">u</a></sup></p>
-<p>In some cases, a phonological diphthong (such as Hindi <span class="charExample" translate="no"><span class="ex" lang="hi">जाओ</span> <span class="trans">ɟāọ̄</span></span>) is actually written as two orthographic CV units, where the second of these units is an independent vowel letter. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf">u</a></sup></p>
+    <p> The effective unit of the writing systems is the orthographic syllable, consisting of a consonant and vowel (CV) core and, optionally, one or more preceding consonants, with a canonical structure of (((C)C)C)V. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf">u</a></p>
+<p>Consonant letters by themselves constitute a CV unit, where the V is an inherent vowel, whose exact phonetic value may vary by writing system. Independent vowels also constitute a CV unit, where the C is considered to be null. A dependent vowel sign is used to represent a V in CV units where C is not null and V is not the inherent vowel. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf">u</a></p>
+<p>In some cases, a phonological diphthong (such as Hindi <span class="charExample" translate="no"><span class="ex" lang="hi">जाओ</span> <span class="trans">ɟāọ̄</span></span>) is actually written as two orthographic CV units, where the second of these units is an independent vowel letter. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf">u</a></p>
 <p>Two diacritics (generally classified as vowels) can be used to represent a syllable-final nasal or an unvoiced aspiration. Medial consonants are catered for by the consonant cluster model. Diacritics are also used to nasalise vowel sounds.</p>
 </section>
   
@@ -175,21 +180,19 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <section>
 <h2>Character lists</h2>
-    <p>The Devanagari script characters in Unicode 10.0 are contained in 2 blocks (not counting shared characters, such as punctuation):</p>
-    <ul>
-      <li><a href="/uniview/?block=Devanagari">Devanagari</a> <span class="charCount">(128 characters)</span></li>
-      <li><a href="/uniview/?block=Devanagari_Extended">Devanagari Extended</a> <span class="charCount">(30 characters)</span></li>
-    </ul>
-    <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+    <p>Version 12.0 of the Unicode Standard has the following blocks dedicated to the Devanagari script (numbers in lists are non-ASCII only):</p>
 <ul>
-<li><a href="/app-charuse/?language=hi" target="_blank">Hindi</a> <span class="charCount">(50 letters, 17 marks, 7 punctuation, 10 numbers :   total 84)</span></li>
-<li><a href="/app-charuse/?language=mr" target="_blank">Marathi</a> <span class="charCount">(51 letters, 17 marks, 10 punctuation, 10 numbers, 2 other :   total 90)</span></li>
-<li><a href="/app-charuse/?language=mai" target="_blank">Maithili</a> <span class="charCount">(41 letters, 15 marks, 2 punctuation :   total 58)</span></li>
-<li><a href="/app-charuse/?language=ne" target="_blank">Nepali</a> <span class="charCount">(50 letters, 17 marks, 1 punctuation, 10 numbers, 1 other :   total 79)</span></li>
-<li><a href="/app-charuse/?language=sa" target="_blank">Sanskrit</a> <span class="charCount">(35 letters, 14 marks, 1 punctuation :   total 50)</span></li>
+      <li><a href="/uniview/?block=Devanagari">Devanagari</a> <span class="charCount">81 letters, 34 marks, 10 numbers, 3 punctuation : total 128</span></li>
+      <li><a href="/uniview/?block=Devanagari_Extended">Devanagari Extended</a> <span class="charCount">9 letters, 19 marks, 4 punctuation : total 32</span></li>
+    </ul>
+    <p>Apart from ASCII characters, the Hindi orthography described here uses 83 characters (and 6 more, used infrequently) from the following Unicode blocks: </p>
+<ul>
+<li><a href="/uniview/?block=Devanagari">Devanagari</a> <span class="charCount">51 letters, 15 marks, 10 numbers, 3 punctuation : total  79 &nbsp; (+ 6 infrequent)</span></li>
+<li> <a href="/uniview/?block=general_punctuation">General punctuation</a> <span class="charCount">4 punctuation : total 4</span></li>
+<li> <a href="/uniview/?block=arabic_presentation_forms-a">Arabic Presentation Forms-A</a> <span class="charCount">2 punctuation : total 2</span></li>
 </ul>
-<p>For character-specific details see 
-  <a class="linkHighlight" href="/scripts/devanagari/block">Devanagari character notes</a>.</p>
+<p><cite>Character Usage</cite> has information about the following orthographies associated with this script: <a href="/app-charuse/?language=bho" target="_blank">Bhojpuri</a> • <a href="/app-charuse/?language=brx" target="_blank">Bodo</a> • <a href="/app-charuse/?language=hi" target="_blank">Hindi</a> • <a href="/app-charuse/?language=knn" target="_blank">Konkani</a> • <a href="/app-charuse/?language=ks-deva" target="_blank">Kashmiri</a> • <a href="/app-charuse/?language=mag" target="_blank">Magahi</a> • <a href="/app-charuse/?language=mai" target="_blank">Maithili</a> • <a href="/app-charuse/?language=mr" target="_blank">Marathi</a> • <a href="/app-charuse/?language=ne" target="_blank">Nepali</a> • <a href="/app-charuse/?language=sa" target="_blank">Sanskrit</a></p>
+<p>For detailed character-specific information see the <a class="linkHighlight" href="/scripts/devanagari/block">Devanagari character notes</a>.</p>
 </section>
 
 
@@ -219,38 +222,75 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <h2 id="vowels">Vowels</h2>
 
 <section>
-<h3 id="inherentvowel">Inherent vowel</h3>
+<h3 id="vowelPhonemes">Vowel sounds</h3>
+<table class="ipaTable">
+<thead>
+<tr>
+<th>&#160;</th>
+<th>Front</th>
+<th>Central</th>
+<th>Back</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Close </th>
+<td><span class="ipa">ɪ iː</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ʊ 	uː</span></td>
+</tr>
+<tr>
+<th>Close-mid </th>
+<td><span class="ipa">eː</span></td>
+<td><span class="ipa">ə</span></td>
+<td><span class="ipa">oː</span></td>
+</tr>
+<tr>
+<th>Open-mid</th>
+<td><span class="ipa">ɛː</span></td>
+<td></td>
+<td><span class="ipa">ɔː</span></td>
+</tr>
+<tr>
+<th>Open</th>
+<td>&nbsp;</td>
+<td><span class="allophone">æː</span></td>
+<td><span class="ipa">ɑː</span></td>
+</tr>
+</tbody>
+</table>
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Hindustani_phonology#Vowels">wp</a>. Sounds in parentheses are non-native or allophones.</p>
+</section>
 
-<p>Each consonant symbol has an inherent following vowel sound, typically transcribed as <span class="trans">a</span>, and pronounced <span class="ipa">ə</span>. So <span class="codepoint" translate="no"><span lang="hi">&#x0915;</span> [<a href="/scripts/devanagari/block#char0915"><span class="uname">U+0915 DEVANAGARI LETTER KA</span></a>]</span> is actually pronounced <span class="ipa">kə</span>.</p>
+
+
+
+<section>
+<h3 id="inherentvowel">Inherent vowel</h3>
+<p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
+
+<p>The inherent  vowel is typically transcribed as <span class="trans">a</span>, and pronounced <span class="ipa">ə</span>. So <span class="codepoint" translate="no"><span lang="hi">&#x0915;</span> [<a href="/scripts/devanagari/block#char0915"><span class="uname">U+0915 DEVANAGARI LETTER KA</span></a>]</span> is actually pronounced <span class="ipa">kə</span>.</p>
 </section>
 
 
 
 
  
-<section>
-<h3 id="suppression">Vowel absence</h3>
-<p>The inherent vowel is not always pronounced. For example in Hindi it is not usually pronounced at the end of a word,
-although a ghost echo may appear after a word-final cluster of consonants, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">योग्य</span> <span class="trans">yōg͓y</span> <span class="ipa">jogjᵊ</span></span>, or <span class="charExample" translate="no"><span class="ex" lang="hi">राष्ट्र</span> <span class="trans">rāʂ͓ʈ͓r</span> <span class="ipa">ɾəstɾᵊ</span></span>. </p>
-<p>In
-					addition Hindi has a general rule that when a word has three or more syllables and ends in a vowel other than the inherent <span class="trans">a</span>, the penultimate vowel
-					is not pronounced, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">समझ</span> <span class="trans">smjʰ</span> <span class="ipa">səməɟʰ</span></span> but <span class="charExample" translate="no"><span class="ex" lang="hi">समझा</span> <span class="trans">smjʰā</span> <span class="ipa">səmɟʰaː</span></span>; <span class="charExample" translate="no"><span class="ex" lang="hi">रहन</span> <span class="trans">rhn</span> <span class="ipa">rəhən</span></span> but <span class="charExample" translate="no"><span class="ex" lang="hi">रहना</span> <span class="trans">rhnā</span> <span class="ipa">rəhnaː</span></span>. (For a number of reasons,
-however, this rule does not always hold.)</p>
-<p>Devanagari uses <span class="codepoint" translate="no"><span lang="hi">&#x094D;</span> [<a href="/scripts/devanagari/block#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA</span></a>]</span> (called <span class="name">halant</span> in Hindi) to kill the inherent vowel after a consonant. The virama is rarely seen. As just mentioned, no virama is used at the end of a word, or in the penultimate syllable where the above rules apply.  The virama is also usually hidden when the consonant is part of a consonant cluster (see <a class="sectionref">clusters</a>). The virama is visible, however, if it isn't followed by a consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">क्</span> <span class="trans">k͓</span></span> explicitly represents just the sound <span class="charExample"><span class="ipa">k</span></span>.</p>
-</section>
+
 
 
 
 
 <section>
 <h3 id="dependentvowel">Vowel-signs</h3>
+<p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
 
+<p>Other than the inherent vowel, vowel sounds that follow a consonant sound are represented using vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">की</span> <span class="ipa">kiː</span></span>.</p>
 
-<p>To produce a different vowel than the inherent one, Devanagari attaches vowel-signs (Sanskrit <span class="name">matra</span>) to the preceding consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">की</span> <span class="ipa">kiː</span></span>. </p>
-<p>For Devanagari, this is always a single character,  is always combining, and is always typed and stored after the preceding consonant.</p>
 <p>Vowel-signs used for Hindi:</p>
 
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">ा␣ि␣ी␣ु␣ू␣े␣ै␣ो␣ौ</figure>
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ि␣ी␣ु␣ू␣े␣ो␣ै␣ौ␣ा</figure>
+
 
 
 <p>CLDR also includes the following:</p>
@@ -262,10 +302,8 @@ however, this rule does not always hold.)</p>
 <figure class="otherBox auto"  data-cols="">ॕ␣ॖ␣ॗ␣ॆ␣ॊ␣ॏ␣ऺ␣ऻ␣ॎ</figure>
 
 
-
+<p>Devanagari vowel-signs are all combining characters. A single Unicode character is used per base consonant, and there are no vowel-signs with multiple parts. All vowel-signs are typed and stored after the base consonant, and the font puts them in the correct place for display.</p>
 <p>Half the vowel-signs are <em>spacing</em> combining characters, meaning that they consume horizontal space when added to a base consonant.</p>
-<p>There are no vowel-signs with multiple parts, and only one vowel-sign appears per base consonant.</p>
-<p>All vowel-signs are typed and stored <em>after</em> the base consonant, whether or not they precede it when displayed. The font takes care of the glyph positioning.</p>
 <p>See also <a class="sectionref">vocalics</a>.</p>
 </section>
 
@@ -276,8 +314,8 @@ however, this rule does not always hold.)</p>
 <section>
 <h3 id="nasalisation">Nasalisation</h3>
 
-<p><span class="codepoint" translate="no"><span lang="hi">&#x0901;</span> [<a href="/scripts/devanagari/block#char0901"><span class="uname">U+0901 DEVANAGARI SIGN CANDRABINDU</span></a>]</span> nasalises the vowel in a syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">मुँह</span> <span class="trans">muŋ̽h</span> <span class="meaning">mouth</span></span>. Any vowel in Hindi can be nasalised in this way, except for the vocalics. <sup><a href="refs">s</a></sup></p>
-<p>When a vowel-sign rises above the head line, the glyph for this character may be simplified to  just a dot (which resembles the anusvara).<sup><a href="refs"> s</a></sup> It appears that this is normally achieved by using an anusvara instead of candrabindu, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">हैं</span> <span class="trans">hɛ̄m̽</span> <span class="ipa">ɦɛ̃</span> <span class="meaning">are</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="hi">&#x0901;</span> [<a href="/scripts/devanagari/block#char0901"><span class="uname">U+0901 DEVANAGARI SIGN CANDRABINDU</span></a>]</span> nasalises the vowel in a syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">मुँह</span> <span class="trans">muŋ̽h</span> <span class="meaning">mouth</span></span>. Any vowel in Hindi can be nasalised in this way, except for the vocalics. <a class="fnref" href="refs">s</a></p>
+<p>When a vowel-sign rises above the head line, the glyph for this character may be simplified to  just a dot (which resembles the anusvara).<a class="fnref" href="refs"> s</a> It appears that this is normally achieved by using an anusvara instead of candrabindu, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">हैं</span> <span class="trans">hɛ̄m̽</span> <span class="ipa">ɦɛ̃</span> <span class="meaning">are</span></span>.</p>
 
 </section>
 
@@ -301,15 +339,30 @@ however, this rule does not always hold.)</p>
 
 
 
+<section>
+<h3 id="suppression">Vowel absence</h3>
+<p>The inherent vowel is not always pronounced. For example in Hindi it is not usually pronounced at the end of a word,
+although a ghost echo may appear after a word-final cluster of consonants, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">योग्य</span> <span class="trans">yōg͓y</span> <span class="ipa">jogjᵊ</span></span>, or <span class="charExample" translate="no"><span class="ex" lang="hi">राष्ट्र</span> <span class="trans">rāʂ͓ʈ͓r</span> <span class="ipa">ɾəstɾᵊ</span></span>. </p>
+<p>In
+					addition Hindi has a general rule that when a word has three or more syllables and ends in a vowel other than the inherent <span class="trans">a</span>, the penultimate vowel
+					is not pronounced, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">समझ</span> <span class="trans">smjʰ</span> <span class="ipa">səməɟʰ</span></span> but <span class="charExample" translate="no"><span class="ex" lang="hi">समझा</span> <span class="trans">smjʰā</span> <span class="ipa">səmɟʰaː</span></span>; <span class="charExample" translate="no"><span class="ex" lang="hi">रहन</span> <span class="trans">rhn</span> <span class="ipa">rəhən</span></span> but <span class="charExample" translate="no"><span class="ex" lang="hi">रहना</span> <span class="trans">rhnā</span> <span class="ipa">rəhnaː</span></span>. (For a number of reasons,
+however, this rule does not always hold.)</p>
+<p>Devanagari uses <span class="codepoint" translate="no"><span lang="hi">&#x094D;</span> [<a href="/scripts/devanagari/block#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA</span></a>]</span> (called <span class="name">halant</span> in Hindi) to kill the inherent vowel after a consonant. The virama is rarely seen. As just mentioned, no virama is used at the end of a word, or in the penultimate syllable where the above rules apply.  The virama is also usually hidden when the consonant is part of a consonant cluster (see <a class="sectionref">clusters</a>). The virama is visible, however, if it isn't followed by a consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">क्</span> <span class="trans">k͓</span></span> explicitly represents just the sound <span class="charExample"><span class="ipa">k</span></span>.</p>
+</section>
+
+
+
+
+
 
 <section>
 <h3 id="independentvowel">Standalone vowels</h3>
+<p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
 
-<p class="explanatoryintro">Standalone vowels are not preceded by a consonant, and may appear at the beginning or in the middle of a word.</p>
 <p>Devanagari represents standalone vowels using a set of independent vowel letters. The set contains a character to represent the inherent vowel sound.</p>
 <p>Independent vowels used by Hindi:</p>
 
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">अ␣आ␣इ␣ई␣उ␣ऊ␣ए␣ऐ␣ओ␣औ</figure>
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">इ␣ई␣उ␣ऊ␣ए␣अ␣ओ␣ऐ␣औ␣आ</figure>
 
 
 
@@ -331,7 +384,8 @@ however, this rule does not always hold.)</p>
   
 <section>
 <h2 id="vocalics">Vocalics</h2>
-<p class="explanatoryintro">Vocalics are letters derived from Sanskrit that generally behave like vowels, but represent r/l followed by a vowel. They are often available both as vowel-signs and independent vowel letters.</p>
+<p id="def-vocalic" class="explanatoryintro definitionStub"></p>
+
 <p>In Devanagari, vocalics are  available both as vowel-signs and independent vowels.</p>
 <p>Hindi generally uses just one vocalic.</p>
 <figure class="characterBox auto"  data-cols="ipa,trans,transc">ृ␣ऋ</figure>
@@ -346,7 +400,107 @@ however, this rule does not always hold.)</p>
   
   <section>
   <h2 id="consonants">Consonants</h2>
-    
+
+
+<section>
+<h3 id="consonantPhonemes">Consonant sounds</h3>
+<table class="ipaTable">
+<thead>
+<tr>
+<th></th>
+<th>Labial </th>
+<th>Dental </th>
+<th>Alveolar </th>
+<th>Palatal </th>
+<th>Retroflex</th>
+<th>Velar </th>
+<th>Uvular</th>
+<th>Glottal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Stop</th>
+<td><span class="ipa">p pʰ</span><br/>
+<span class="ipa">b</span> <span class="ipa">bʰ</span></td>
+<td><span class="ipa">t</span> <span class="ipa">tʰ</span><br/>
+<span class="ipa">d</span> <span class="ipa">dʰ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ʈ</span> <span class="ipa">ʈʰ</span><br/>
+<span class="ipa">ɖ</span> <span class="ipa">ɖʰ</span></td>
+<td><span class="ipa">k</span> <span class="ipa">kʰ</span><br/>
+<span class="ipa">ɡ</span> <span class="ipa">ɡʰ</span></td>
+<td><span class="allophone">q</span></td>
+<td><span class="allophone">ʔ</span></td>
+</tr>
+<tr>
+<th>Affricate</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">t͡ʃ</span> <span class="ipa">t͡ʃʰ</span><br/>
+<span class="ipa">d͡ʒ</span> <span class="ipa">d͡ʒʰ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>Fricative </th>
+<td><span class="allophone">f</span><br/><span class="ipa">v</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">s</span><br/><span class="allophone">z</span></td>
+<td><span class="ipa">ʃ</span></td>
+<td><span class="allophone">ʂ</span></td>
+<td><span class="allophone">x</span><br>
+<span class="allophone">ɣ</span></td>
+<td>&nbsp;</td>
+<td><span class="allophone">h</span><br>
+<span class="ipa">ɦ</span></td>
+</tr>
+<tr>
+<th>Nasal </th>
+<td><span class="ipa">m</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">n</span></td>
+<td><span class="allophone">ɲ</span></td>
+<td><span class="allophone">ɳ</span></td>
+<td><span class="allophone">ŋ</span></td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>Approximant </th>
+<td><span class="ipa">ʋ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">l</span></td>
+<td><span class="ipa">j</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>Trill/flap </th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɾ rʱ </span></td>
+<td></td>
+<td><span class="allophone">ɽ ɽʰ</span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">wp</a>. Sounds in parentheses are non-native or allophones.</p>
+</section>
+
+
+
+
+
     
 <section>
     <h3 id="basicconsonants">Basic consonants</h3>
@@ -354,7 +508,10 @@ however, this rule does not always hold.)</p>
     
 <p>Basic set of consonants, used for Hindi and Sanskrit. (Phonetic information for Hindi.)</p>
 
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">क␣ख␣ग␣घ␣ङ␣च␣छ␣ज␣झ␣ञ␣ट␣ठ␣ड␣ढ␣ण␣त␣थ␣द␣ध␣न␣प␣फ␣ब␣भ␣म␣य␣र␣ल␣व␣श␣ष␣स␣ह</figure>
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">प␣फ␣ब␣भ␣त␣थ␣द␣ध␣ट␣ठ␣ड␣ढ␣च␣छ␣ज␣झ␣क␣ख␣ग␣घ</figure>
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">स␣श␣ष␣ह</figure>
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">म␣न␣ञ␣ण␣ङ</figure>
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">व␣र␣ल␣य</figure>
 
 <p>Additional consonants in the Unicode block encoded as single characters.</p>
 
@@ -369,7 +526,7 @@ however, this rule does not always hold.)</p>
         
   <p><span class="codepoint" translate="no"><span lang="hi">&#x093C;</span> [<a href="/scripts/devanagari/block#char093C"><span class="uname">U+093C DEVANAGARI SIGN NUKTA</span></a>]</span> is used to represent foreign sounds, eg. in <span class="charExample" translate="no"><span class="ex" lang="hi">ख़ारीदारी</span> <span class="trans">kʰˑārīdārī (xārīdārī)</span> <span class="meaning">shopping</span></span>, the dot changes <span class="charExample" translate="no"><span class="ex" lang="hi">ख</span> <span class="ipa">kʰ</span></span> to <span class="charExample" translate="no"><span class="ex" lang="hi">ख़</span> <span class="ipa">x</span></span>. Here is a list of graphemes used in Hindi that combine nukta with an existing consonant.</p>
 
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">झ़␣क़␣ख़␣ग़␣ज़␣ड़␣ढ़␣फ़</figure>
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">क़␣फ़␣ज़␣झ़␣ख़␣ग़␣ड़␣ढ़</figure>
 
   <p>And here are some additional combinations:</p>
 
@@ -386,7 +543,7 @@ however, this rule does not always hold.)</p>
 <p>The Unicode block contains the following precomposed code points.</p>
   
 
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">&#x0958;&#x2423;&#x0959;&#x2423;&#x095A;&#x2423;&#x095B;&#x2423;&#x095C;&#x2423;&#x095D;&#x2423;&#x095E;</figure>
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">&#x0958;&#x2423;&#x095E;&#x2423;&#x095B;&#x2423;&#x0959;&#x2423;&#x095A;&#x2423;&#x095C;&#x2423;&#x095D;</figure>
 
 <p>and</p>
 
@@ -517,7 +674,7 @@ however, this rule does not always hold.)</p>
 <figure class="auxiliaryBox auto"  data-cols="">ऽ␣ॐ</figure>
 
 
-<p>Used for vowel elision in Sanskrit, the main function of <span class="codepoint" translate="no"><span lang="hi">&#x093D;</span> [<a href="devanagari#char093D"><span class="uname">U+093D DEVANAGARI SIGN AVAGRAHA</span></a>]</span> in Hindi is to show that a vowel is sustained in a cry or a shout, eg.  <span class="charExample" translate="no"><span class="ex" lang="hi">आईऽऽऽ!</span> <span class="trans">ạ̄ị̄´´´!</span></span> <sup><a href="https://en.wikipedia.org/wiki/Devanagari">w</a></sup>.</p>
+<p>Used for vowel elision in Sanskrit, the main function of <span class="codepoint" translate="no"><span lang="hi">&#x093D;</span> [<a href="devanagari#char093D"><span class="uname">U+093D DEVANAGARI SIGN AVAGRAHA</span></a>]</span> in Hindi is to show that a vowel is sustained in a cry or a shout, eg.  <span class="charExample" translate="no"><span class="ex" lang="hi">आईऽऽऽ!</span> <span class="trans">ạ̄ị̄´´´!</span></span> <a class="fnref" href="https://en.wikipedia.org/wiki/Devanagari">w</a>.</p>
 <p><span class="codepoint" translate="no"><span lang="hi">&#x0950;</span> [<a href="devanagari#char0950"><span class="uname">U+0950 DEVANAGARI OM</span></a>]</span> is a religious symbol.&nbsp;</p>
 </section>
 
@@ -547,6 +704,9 @@ however, this rule does not always hold.)</p>
 <figure class="characterBox auto"  data-cols="">।␣॥␣॰</figure>
 
 <p>See <a class="sectionref">phrase</a> and <a class="sectionref">abbrev</a> for more information.</p>
+<p>Hindi also uses western punctuation, including the following non-ASCII characters.</p>
+
+<figure class="characterBox auto"  data-cols="trans,transc">‘␣’␣“␣”</figure>
 </section>
   
   
@@ -556,6 +716,7 @@ however, this rule does not always hold.)</p>
 
 <figure class="characterBox auto"  data-cols="trans,transc">०␣१␣२␣३␣४␣५␣६␣७␣८␣९</figure>
 
+<p>The CLDR standard-decimal pattern is <code style="white-space: nowrap;"> #,##,##0.###</code>. The standard-percent pattern is <code style="white-space: nowrap;">#,##,##0%</code>.<a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/hi.html">c</a></p>
 <p>An interesting feature of large numbers written in India is that they apply groupings of two, rather than three, digits between commas (even when using european digits).</p>
     <figure>
     <p class="large"><span class="ex" lang="hi">20,00,000</span></p>
@@ -566,8 +727,9 @@ however, this rule does not always hold.)</p>
 <section>
 <h3 id="currency">Currency</h3>
 
-<p><span class="codepoint" translate="no"><span lang="hi">&#x20B9;</span> [<a href="/scripts/devanagari/block#char20B9"><span class="uname">U+20B9 INDIAN RUPEE SIGN</span></a>]</span> is the symbol introduced by the Government of India in 2010 as the official currency symbol for the Indian rupee (INR). <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch22.pdf">u</a></sup></p>
-<p>It is distinguished from <span class="codepoint" translate="no"><span lang="hi">₨</span> [<a href="/scripts/currencysymbols/block#char20A8"><span class="uname">U+20A8 RUPEE SIGN</span></a>]</span>, which is an older symbol not formally  tied to any particular currency. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch22.pdf">u</a></sup> Follow that link for more information about the rupee.&nbsp;</p>
+<p>The CLDR standard format for currency is <code style="white-space: nowrap;">¤#,##,##0.00</code>.<a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/hi.html">c</a></p>
+<p><span class="codepoint" translate="no"><span lang="hi">&#x20B9;</span> [<a href="/scripts/devanagari/block#char20B9"><span class="uname">U+20B9 INDIAN RUPEE SIGN</span></a>]</span> is the symbol introduced by the Government of India in 2010 as the official currency symbol for the Indian rupee (INR). <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch22.pdf">u</a></p>
+<p>It is distinguished from <span class="codepoint" translate="no"><span lang="hi">₨</span> [<a href="/scripts/currencysymbols/block#char20A8"><span class="uname">U+20A8 RUPEE SIGN</span></a>]</span>, which is an older symbol not formally  tied to any particular currency. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch22.pdf">u</a> Follow that link for more information about the rupee.&nbsp;</p>
 </section>
 </section>
   
@@ -625,6 +787,23 @@ however, this rule does not always hold.)</p>
 <figcaption>Context-dependent placement of the glyph representing <span class="trans">ra</span>.</figcaption>
 </figure>
 </section>
+
+
+
+
+  
+<section>
+<h3 id="baselines">Baselines &amp; inline alignment</h3>
+<p class="prompts">Does the script have special requirements for baseline alignment between mixed scripts and in general?</p>
+</section>
+
+
+
+
+<section>
+<h3 id="fontstyle">Font styles</h3>
+<p class="prompts"> Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</p>
+</section>
 </section>
 
 
@@ -637,14 +816,18 @@ however, this rule does not always hold.)</p>
 
 <section>
 <h3 id="graphemes">Graphemes</h3>
- <p>The basic grapheme for Devanagari text is the orthographic syllable, ie. one or more consonants (with virama if more than one), and a vowel. <span class="ednote">(What about finals?)</span></p>
-    <p>Some of the time, the Unicode concept of grapheme cluster covers the needs for segmentation of the text into text character units, but for the numerous cases where consonant clusters are used, the grapheme cluster stops after the virama.</p>
-<p>This creates a problem because applications that rely on grapheme clusters to indicate boundaries for line-breaking, cursor movement, backspacing, vertical setting, etc. break syllabic units that should remain intact.</p>
-     <figure>
+<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
+
+<p class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements when double-clicking on the text, or moving through the text with the cursor, or backspace, etc.? </p>
+<p>A number of text operations work on the basis of graphemes, rather than code points, such as line-breaking, cursor movement, backspacing, vertical setting, justification, etc. Usually the minimal unit correlates with the Unicode concept of grapheme clusters, but not always.</p>
+<p><span class="leadin">Conjuncts.</span> Conjuncts and any dependent combining characters should never be split.</p>
+<p>This creates a problem when dealing with Unicode grapheme clusters, because they stop after  reaching a virama. So conjuncts usually contain multiple grapheme clusters. This produces incorrect segmentation as seen on the left in <a class="figref">fig_grapheme_conjuncts</a>. Applications need to tailor the grapheme cluster rules to avoid splitting conjuncts.</p>
+     <figure id="fig_grapheme_conjuncts">
     <p class="large"><span class="ex" lang="hi">हि‍ ‍न्‍ ‍दी &nbsp; हि‍ ‍न्दी</span></p>
-    <figcaption>Segmentation of the word <span class="charExample" translate="no"><span class="ex" lang="hi">हिन्दी़</span> <span class="trans">hin͓dị̄</span></span>, first using grapheme clusters, then how it should be.</figcaption>
+    <figcaption>Segmentation of the word <span class="charExample" translate="no"><span class="ex" lang="hi">हिन्दी़</span> <span class="trans">hin͓dị̄</span></span>:  using grapheme clusters (left), and how it should be (right).</figcaption>
     </figure>
-    <p>For Devanagari, and other north Indian scripts, applications need to provide tailored extensions to correctly segment the text at this level.</p>
+    <p>Unfortunately, this is harder than it seems, because whether a conjunct is formed or not usually depends on the capabilities of the font – it cannot be determined solely by looking at the code points in memory. If a font doesn't contain the glyphs to create a conjunct it will render the consonant cluster with a visible virama. In that case, the grapheme cluster approach <em>is</em> appropriate.</p>
+<p class="observation"><i>Observation:</i> It may be that justification and letter-spacing place spacing between vowel-sign glyphs and the glyph of their base characters in some circumstances. This kind of unit requires manipulation of the glyphs in the text, rather than the code points</p>
 
 </section>
 
@@ -654,10 +837,10 @@ however, this rule does not always hold.)</p>
 
 <section>
 <h3 id="word">Word  boundaries</h3>
-    <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). We   treat it as a vaguely-defined semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 
 <p>Words are separated by spaces.</p>
-<p>Devanagari has hyphenated words – mainly conjoined nouns, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">लाभ-हानि</span> <span class="trans">lābʰ-hāni</span> <span class="meaning">profit-loss</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="hi">माता-पिता</span> <span class="trans">mātā-pitā</span> <span class="meaning">parents</span></span>. <sup><a href="https://www.w3.org/TR/ilreq/">i</a></sup></p>
+<p>Devanagari has hyphenated words – mainly conjoined nouns, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">लाभ-हानि</span> <span class="trans">lābʰ-hāni</span> <span class="meaning">profit-loss</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="hi">माता-पिता</span> <span class="trans">mātā-pitā</span> <span class="meaning">parents</span></span>. <a class="fnref" href="https://www.w3.org/TR/ilreq/">i</a></p>
 </section>
 
 
@@ -665,8 +848,9 @@ however, this rule does not always hold.)</p>
 
 
 <section>
-<h3 id="phrase">Phrase boundaries</h3>
-    <p>Devanagari uses standard Latin punctuation, but also has its own version of a full stop, <span class="codepoint"><span lang="hi">&#x0964;</span> <a href="/scripts/devanagari/block#char0964">[<span class="uname">U+0964 DEVANAGARI DANDA</span>]</a></span>, which can be seen in the sample text above. (Although an ASCII full stop is also seen after the lead-in text for each article.)</p>
+<h3 id="phrase">Phrase &amp; section boundaries</h3>
+    <p class="prompts">What characters are used to indicate the boundaries of phrases, sentences, and sections?</p>
+<p>Devanagari uses standard Latin punctuation, but also has its own version of a full stop, <span class="codepoint"><span lang="hi">&#x0964;</span> <a href="/scripts/devanagari/block#char0964">[<span class="uname">U+0964 DEVANAGARI DANDA</span>]</a></span>, which can be seen in the sample text above. (Although an ASCII full stop is also seen after the lead-in text for each article.)</p>
    <figure>
     <p class="large"><span class="ex" lang="hi">चाहिए ।</span></p>
     <figcaption>Devanagari danda, used like a Western full stop.</figcaption>
@@ -680,21 +864,50 @@ however, this rule does not always hold.)</p>
 
 
 
+<section>
+<h3 id="bracketing">Bracketing &amp; parentheses</h3>
+<p><span class="codepoint" translate="no"><span lang="hi">(</span> [<a href="/scripts/devanagari/block#char0028"><span class="uname">U+0028 LEFT PARENTHESIS</span></a>]</span> and <span class="codepoint" translate="no"><span lang="hi">)</span> [<a href="/scripts/devanagari/block#char0029"><span class="uname">U+0029 RIGHT PARENTHESIS</span></a>]</span> are used for parentheses.</p>
+</section>
+
+
+
 
   
 <section>
-<h3 id="abbrev">Abbreviation</h3>
+<h3 id="quotations">Quotations</h3>
+<p class="prompts">What characters are used to indicate dialogue?</p>
+
+<p>The default quote marks for Hindi are <span class="codepoint" translate="no"><span lang="hi">“</span> [<span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span>]</span> at the start, and <span class="codepoint" translate="no"><span lang="hi">”</span> [<span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span>]</span> at the end.<a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/hi.html">c</a></p>
+<p>When an additional quote is embedded within the first, the quote marks are <span class="codepoint" translate="no"><span lang="hi">‘</span> [<span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span>]</span> and <span class="codepoint" translate="no"><span lang="hi">’</span> [<span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span>]</span>.<a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/hi.html">c</a></p></section>
+
+
+
+
+  
+<section>
+<h3 id="abbrev">Abbreviation, ellipsis &amp; repetition</h3>
+<p class="prompts">What characters are used to indicate abbreviation, ellipsis &amp; repetition?</p>
 <p><span class="codepoint" translate="no"><span lang="hi">&#x0970;</span> [<a href="/scripts/devanagari/block#char0970"><span class="uname">U+0970 DEVANAGARI ABBREVIATION SIGN</span></a>]</span> is used  to indicate abbreviations of words, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">रुपया</span> <span class="trans">rupyā (rupayā)</span> <span class="meaning">rupee</span></span> can be abbreviated as <span class="charExample" translate="no"><span class="ex" lang="hi">रु॰</span></span>.</p>
 </section>
 
 
 
 
+  
 <section>
-    <h3 id="emphasis">Emphasis &amp; highlighting</h3>
+<h3 id="emphasis">Emphasis &amp; text decoration</h3>
+<p class="prompts">How are emphasis and highlighting achieved? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</p>
 <p>Italicisation and bolding are not traditionally used for highlighting text in Devanagari.</p>
 </section>
 
+
+
+
+  
+<section>
+<h3 id="inlinenotes">Inline notes &amp; annotations</h3>
+<p class="prompts">What mechanisms, if any, are used to create <u>inline</u> notes and annotations? (For referent-type notes such as footnotes, see below.)</p>
+</section>
 </section>
 
 
@@ -707,7 +920,36 @@ however, this rule does not always hold.)</p>
 
 <section>
 <h2 id="layout">Line &amp; paragraph layout</h2>
-   
+
+<section>
+    <h3 id="linebreak">Line breaking &amp; hyphenation</h3>
+<p class="prompts">Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that?</p>
+
+<p>Devanagari is normally wrapped at word boundaries. </p>
+<p><span class="leadin">Line-edge rules.</span> According to <a href="http://w3c.github.io/ilreq/#h_hyphenation">ilreq</a>, a line should not start with any of the following characters.</p>
+
+<figure class="auto"  data-cols="">,␣.␣:␣;␣।␣॥␣)␣]␣}␣>␣+␣*␣/␣=␣_␣|␣~␣%</figure>
+
+<p>Line breaking should also not move a danda or double danda to the beginning of a new line, even if they are preceded by a space character. These punctuation characters should behave in the same way as a full stop does in English text.</p>
+<p>Presumably, similar rules apply for the end of a line.</p>
+<p><span class="leadin">Character properties.</span> Characters used for the thisLanguage  language have the following assignments related to line-break properties.</p>
+<table><tbody>
+<tr><th class="sg">AL</th><td class="count">120</td><td class="chars"><span class="exlist" lang="hi">अ आ इ ई उ ऊ ऋ ऍ ए ऐ ऑ ओ औ क ख ग घ ङ च छ ज झ ञ ट ठ ड ढ ण त थ द ध न प फ ब भ म य र ल व श ष स ह ऽ ॐ क़ ख़ ग़ ज़ ड़ ढ़ फ़ ॰ ऍ ऑ ऽ ॐ</span></td></tr>
+<tr><th class="sg">BA</th><td class="count">4</td><td class="chars"><span class="exlist" lang="hi">। ॥</span></td></tr>
+<tr><th class="sg">CM</th><td class="count">38</td><td class="chars"><span class="exlist" lang="hi">ँ ं ः ़ ा ि ी ु ू ृ ॅ े ै ॉ ो ौ ् ॅ ॉ</span></td></tr>
+<tr><th class="sg">NU</th><td class="count">20</td><td class="chars"><span class="exlist" lang="hi">० १ २ ३ ४ ५ ६ ७ ८ ९</span></td></tr>
+</tbody></table>
+
+
+
+<details id="linebreak_details">
+<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BA (break after)</a> indicates that it is normal to break after that character.&nbsp;</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">NU (number)</a> behaves like ordinary characters (AL) in the context of most characters but activate the prefix and postfix behavior of prefix and postfix characters.</p>
+</details>
+</section>
       
   <section>
     <h3 id="hyphenation">Hyphenation</h3>
@@ -720,7 +962,8 @@ however, this rule does not always hold.)</p>
 
 <section>
     <h3 id="justify">Text alignment &amp; justification</h3>
-    <p>Justification is done, principally, by adjusting the space between words. (I have no information about whether high-end systems  also adjust inter-character spacing slightly if inter-word doesn't resolve the issue, or to improve aesthetics.)</p>
+    <p class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</p>
+<p>Justification is done, principally, by adjusting the space between words. (I have no information about whether high-end systems  also adjust inter-character spacing slightly if inter-word doesn't resolve the issue, or to improve aesthetics.)</p>
     <p><em>Use the control below to see how your browser justifies the text sample here.</em></p>
     <p lang="hi" id="justificationExample" style="text-align:start;">क़ानून की निग़ाह में सभी समान हैं और सभी बिना भेदभाव के समान क़ानूनी सुरक्षा के अधिकारी हैं । यदि इस घोषणा का अतिक्रमण करके कोई भी भेद-भाव किया जाया उस प्रकार के भेद-भाव को किसी प्रकार से उकसाया जाया, तो उसके विरुद्ध समान संरक्षण का अधिकार सभी को प्राप्त है ।</p>
     <p class="english" dir="ltr">
@@ -732,93 +975,417 @@ however, this rule does not always hold.)</p>
 
 
 <section>
+    <h3 id="letterspace">Letter spacing</h3>
+<p class="prompts">Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see above.).</p>
+</section>
+
+
+
+
+
+
+<section>
+  <h3 id="lists">Counters, lists, etc.</h3>
+  
+<p class="prompts">What is the prevalence of the devanagari-based styles?</p>
+
+<p><a href="https://w3c.github.io/predefined-counter-styles/#devanagari-styles">Ready-made Counter Styles</a> lists 2 counter styles for use with the Hindi language: one numeric and one alphabetic. You can experiment with these styles using the <a href="../../app-counterconverter/">Counter styles converter</a>.</p>
+<figure class="counter_style_comp">
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>devanagari<br>
+(numeric)</th>
+<td><span class="ex" lang="hi">१</span></td>
+<td><span class="ex" lang="hi">२</span></td>
+<td><span class="ex" lang="hi">३</span></td>
+<td><span class="ex" lang="hi">४</span></td>
+</tr>
+<tr>
+<th>hindi<br>
+(alphabetic)</th>
+<td><span class="ex" lang="hi">क</span></td>
+<td><span class="ex" lang="hi">ख</span></td>
+<td><span class="ex" lang="hi">ग</span></td>
+<td><span class="ex" lang="hi">घ</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>11</th>
+<th>22</th>
+<th>33</th>
+<th>44</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>devanagari<br>
+(numeric)</th>
+<td><span class="ex" lang="hi">११</span></td>
+<td><span class="ex" lang="hi">२२</span></td>
+<td><span class="ex" lang="hi">३३</span></td>
+<td><span class="ex" lang="hi">४४</span></td>
+</tr>
+<tr>
+<th>hindi<br>
+(alphabetic)</th>
+<td><span class="ex" lang="hi">ट</span></td>
+<td><span class="ex" lang="hi">फ</span></td>
+<td><span class="ex" lang="hi">ह</span></td>
+<td><span class="ex" lang="hi">कट</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>111</th>
+<th>222</th>
+<th>333</th>
+<th>444</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>devanagari<br>
+(numeric)</th>
+<td><span class="ex" lang="hi">१११</span></td>
+<td><span class="ex" lang="hi">२२२</span></td>
+<td><span class="ex" lang="hi">३३३</span></td>
+<td><span class="ex" lang="hi">४४४</span></td>
+</tr>
+<tr>
+<th>hindi<br>
+(alphabetic)</th>
+<td><span class="ex" lang="hi">गठ</span></td>
+<td><span class="ex" lang="hi">चभ</span></td>
+<td><span class="ex" lang="hi">ञग</span></td>
+<td><span class="ex" lang="hi">डण</span></td>
+</tr>
+</tbody>
+</table>
+<figcaption>Comparative counters produced by Hindi counter styles.</figcaption>
+</figure>
+
+
+
+<p><span class="leadin">numeric</span></p>
+<p>The <span class="kw" translate="no">devanagari</span> numeric style  is decimal-based and uses the  digits shown below.</p>
+<figure class="auto" data-cols="trans,transc">०␣१␣२␣३␣४␣५␣६␣७␣८␣९</figure>
+
+
+
+
+
+
+<p><span class="leadin">alphabetic</span></p>
+<p>The <span class="kw" translate="no">hindi</span> alphabetic style   uses the  letters shown below. </p>
+<figure class="auto" data-notes="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33"
+data-cols="">क␣ख␣ग␣घ␣ङ␣च␣छ␣ज␣झ␣ञ␣ट␣ठ␣ड␣ढ␣ण␣त␣थ␣द␣ध␣न␣प␣फ␣ब␣भ␣म␣य␣र␣ल␣व␣श␣ष␣स␣ह</figure>
+</section>
+
+
+
+
+
+
+<section>
 <h3 id="firstletter">Styling initials</h3>
-    <p> Devanagari content does sometimes enlarge the first part of the first word in a paragraph, in a similar way to drop caps. Instead of enlarging just the first letter in the word, it is normal to enlarge the first syllable.</p>
+    <p class="prompts">How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? </p>
+<p> Devanagari content does sometimes enlarge the first part of the first word in a paragraph, in a similar way to drop caps. Instead of enlarging just the first letter in the word, it is normal to enlarge the first syllable. If the first character is the beginning of a conjunct, the whole conjunct should be included in the styling.</p>
 <figure>
     <p><img src="images/first_letter.png" alt=""></p>
     <figcaption>Enlarged syllable styling at the start of a paragraph.</figcaption>
 </figure>
-<p>In theory, the top line of the characters should align in the large text and the following first line, however many implementations I've seen don't deal well with such niceties.</p>
+<p>In theory, the top line of the characters should align in the large text and the following first line, however it is possible to easily find examples where this is not accurate.</p>
 <p>It is very common to see such initial-syllable enlargement centred inside a coloured box.</p>
 <figure>
     <p><img src="images/first_letter_box.png" alt=""></p>
     <figcaption>Enlarged syllable styled inside a coloured box.</figcaption>
 </figure>
+<p>In the boxed style, the box itself is usually aligned with the top of the first line of text and the bottom of the last, and the highlighted character(s) are centred horizontally and vertically in the box.</p>
+<p>In both styles shown above, any punctuation such as opening quotes and opening parentheses should also be included in the initial styling.</p>
+<p>According to <a href="https://w3c.github.io/ilreq/">ilreq</a>, Hindi generally doesn't use the <a href="https://www.w3.org/TR/dpub-latinreq/#raised-caps-and-sunken-caps">raised or sunken</a> styles, and <a href="https://www.w3.org/TR/css-inline-3/#initial-letter-wrapping">contour-filling</a> is  not needed for Indian text.<a class="fnref" href="https://w3c.github.io/ilreq/">i</a></p>
 </section>
-
-
-
-
-<section>
-<h3 id="counters">Counters, lists, etc.</h3>
-  <p>Counter-styles are used to number lists. The <a href="https://www.w3.org/TR/predefined-counter-styles/#devanagari-styles">Ready-made Counter Styles</a> document contains a two counter styles for Devanagari. </p>
-<p>One is numeric, and uses the decimal-based Hindi numerals, <span lang="hi">'०' '१' '२' '३' '४' '५' '६' '७' '८' '९'</span>.</p>
-<figure>
-<p class="large">1&nbsp;⇨&nbsp;<span class="ex" lang="hi">१</span> 2&nbsp;⇨&nbsp;<span class="ex" lang="hi">२</span> 3&nbsp;⇨&nbsp;<span class="ex" lang="hi">३</span> 4&nbsp;⇨&nbsp;<span class="ex" lang="hi">४</span> <br>
-11&nbsp;⇨&nbsp;<span class="ex" lang="hi">११</span> 22&nbsp;⇨&nbsp;<span class="ex" lang="hi">२२</span> 33&nbsp;⇨&nbsp;<span class="ex" lang="hi">३३</span> 44&nbsp;⇨&nbsp;<span class="ex" lang="hi">४४</span> <br>
-111&nbsp;⇨&nbsp;<span class="ex" lang="hi">१११</span> 2222&nbsp;⇨&nbsp;<span class="ex" lang="hi">२२२२</span></p>
-<figcaption>Numbers produced by the decimal  counter style<span class="trans"></span>.</figcaption>
-</figure>
-
-<p>The other is alphabetic, and uses Devanagari letters in the following order, <span lang="hi">'क' 'ख' 'ग' 'घ' 'ङ' 'च' 'छ' 'ज' 'झ' 'ञ' 'ट' 'ठ' 'ड' 'ढ' 'ण' 'त' 'थ' 'द'
-'ध' 'न' 'प' 'फ' 'ब' 'भ' 'म' 'य' 'र' 'ल' 'व' 'श' 'ष' 'स' 'ह'</span>.</p>
-<figure>
-<p class="large">1&nbsp;⇨&nbsp;<span class="ex" lang="hi">क</span> 2&nbsp;⇨&nbsp;<span class="ex" lang="hi">ख</span> 3&nbsp;⇨&nbsp;<span class="ex" lang="hi">ग</span> 4&nbsp;⇨&nbsp;<span class="ex" lang="hi">घ</span> <br>
-11&nbsp;⇨&nbsp;<span class="ex" lang="hi">ट</span> 22&nbsp;⇨&nbsp;<span class="ex" lang="hi">फ</span> 33&nbsp;⇨&nbsp;<span class="ex" lang="hi">ह</span> 44&nbsp;⇨&nbsp;<span class="ex" lang="hi">कट</span> <br>
-111&nbsp;⇨&nbsp;<span class="ex" lang="hi">गठ</span> 2222&nbsp;⇨&nbsp;<span class="ex" lang="hi">खकट</span></p>
-<figcaption>Numbers produced by the alphabetic  counter style<span class="trans"></span>.</figcaption>
-</figure>
-<p>You can experiment with these styles using the <a href="../../r12a.github.io/apps/counterconverter/apps/counterconverter/">Counter styles converter</a>.</p>
 </section>
-
 
 
 
 
 
 <section>
-<h2 id="page">Page &amp; book layout</h2>
-
-<p>Are there any special requirements for page layout or book binding?</p>
-
+ <h2 id="pagelayout">Page &amp; book layout</h2>
+ 
+<section>
+    <h3 id="generallayout">General page layout &amp; progression</h3>
+<p class="prompts">How are the main text area and ancilliary areas positioned and defined? Are there any special requirements here, such as dimensions in characters for the Japanese kihon hanmen? The book cover for scripts that are read right-to-left scripts is on the right of the spine, rather than the left.  When content can flow vertically and to the left or right, how to specify the location of objects, text, etc. relative to the flow? Do tables and grid layouts work as expected? How do columns work in vertical text? Can you mix block of vertical and horizontal text? Does text scroll in a different direction?</p>
 </section>
+
+
+
 
 
 <section>
-    <h3 id="tbd">TBD</h3>
-<p class="ednote">Further information needed for this section includes:</p>
-<pre style="margin-left: 10%;">
-Structural boundaries &amp; markers
-    Hyphens &amp; dashes
-    Bracketing information
-    Quotations
-    Abbreviations, ellipsis, &amp; repetition
-    Emphasis &amp; highlights
-    Inline notes &amp; annotations
+<h3 id="grids">Grids &amp; tables</h3>
+<p class="prompts">Does the script have special requirements for character grids or tables?</p>
+</section>
 
-Inline layout
-    Inline text spacing
-    Bidirectional text
 
-Line &amp; paragraph layout
-    Line breaking
-    Hyphenation
-    Text alignment &amp; justification
-    Baselines &amp; inline alignment
 
-Page &amp; book layout
-    General page layout &amp; progression
-    Directional layout features
-	Grids &amp; tables
-    Notes, footnotes, etc.
-    Forms &amp; user interaction
-    Page numbering, running headers, etc.
-</pre>
+
+  
+<section>
+<h3 id="footnotes">Notes, footnotes, etc</h3>
+<p class="prompts">Does the script have special requirements for notes, footnotes, endnotes or other necessary annotations of this kind? (There is a section above for purely inline annotations, such as ruby or warichu. This section is more about annotation systems that separate the reference marks and the content of the notes.)</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="interaction">Forms &amp; user interaction</h3>
+<p class="prompts">Are vertical form controls needed? Are scroll bars in an unusual position? Other special requirements for user interaction?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="headers">Page numbering, running headers, etc</h3>
+<p class="prompts">Are there special conventions for page numbering, or the way that running headers and the like are handled?</p>
+</section>
+</section>
+
+
+
+
+
+
+<section>
+<h2 id="languages">Languages using the Devanagari script</h2>
+<p>According to ScriptSource, the Devanagari script is used for the following languages: </p>
+<ul>
+<li>Gondi, Aheri [esg]</li>
+<li>Andh [anr]</li>
+<li>Angika [anp]</li>
+<li>Asuri [asr]</li>
+<li>Athpariya [aph]</li>
+<li>Awadhi [awa]</li>
+<li>Bagheli [bfy]</li>
+<li>Bagheli [bfy]</li>
+<li>Bagri [bgq]</li>
+<li>Bahing [bhj]</li>
+<li>Bantawa [bap]</li>
+<li>Baraamu [brd]</li>
+<li>Bateri [btv]</li>
+<li>Belhariya [byw]</li>
+<li>Bhadrawahi [bhd]</li>
+<li>Bharia [bha]</li>
+<li>Bhatri [bgw]</li>
+<li>Bhilali [bhi]</li>
+<li>Bhili [bhb]</li>
+<li>Bhojpuri [bho]</li>
+<li>Bhujel [byh]</li>
+<li>Bhunjia [bhu]</li>
+<li>Bilaspuri [kfs]</li>
+<li>Birhor [biy]</li>
+<li>Bodo (India) [brx]</li>
+<li>Bote-Majhi [bmj]</li>
+<li>Braj [bra]</li>
+<li>Buksa [tkb]</li>
+<li>Bundeli [bns]</li>
+<li>Byangsi [bee]</li>
+<li>Camling [rab]</li>
+<li>Nicobarese, Central [ncb]</li>
+<li>Chambeali [cdh]</li>
+<li>Chantyal [chx]</li>
+<li>Chepang [cdm]</li>
+<li>Chhattisgarhi [hne]</li>
+<li>Chhintange [ctn]</li>
+<li>Chinali [cih]</li>
+<li>Tharu, Chitwania [the]</li>
+<li>Churahi [cdj]</li>
+<li>Maria, Dandami [daq]</li>
+<li>Tharu, Dangaura [thl]</li>
+<li>Darai [dry]</li>
+<li>Deccan [dcc]</li>
+<li>Dhanwar (Nepal) [dhw]</li>
+<li>Dhimal [dhi]</li>
+<li>Dhodia [dho]</li>
+<li>Dhundari [dhd]</li>
+<li>Dogri (individual language) [dgo]</li>
+<li>Dogri (macrolanguage) [doi]</li>
+<li>Dotyali [dty]</li>
+<li>Dumi [dus]</li>
+<li>Dungmali [raa]</li>
+<li>Dungra Bhil [duh]</li>
+<li>Duruwa [pci]</li>
+<li>Eastern Gurung [ggn]</li>
+<li>Magar, Eastern [mgp]</li>
+<li>Meohang, Eastern [emg]</li>
+<li>Tamang, Eastern [taj]</li>
+<li>Hindi, Fiji [hif]</li>
+<li>Gaddi [gbk]</li>
+<li>Kham, Gamale [kgj]</li>
+<li>Gamit [gbl]</li>
+<li>Garhwali [gbm]</li>
+<li>Konkani, Goan [gom]</li>
+<li>Gondi [gon]</li>
+<li>Gowli [gok]</li>
+<li>Gujari [gju]</li>
+<li>Gurung [gvr]</li>
+<li>Halbi [hlb]</li>
+<li>Kinnauri, Harijan [kjo]</li>
+<li>Haroti [hoj]</li>
+<li>Haryanvi [bgc]</li>
+<li>Hindi [hin]</li>
+<li>Ho [hoc]</li>
+<li>Hyolmo [scp]</li>
+<li>Idu-Mishmi [clk]</li>
+<li>Jaunsari [jns]</li>
+<li>Jerung [jee]</li>
+<li>Jirel [jul]</li>
+<li>Jumli [jml]</li>
+<li>Kachhi [kfr]</li>
+<li>Kagate [syw]</li>
+<li>Kanauji [bjj]</li>
+<li>Kangri [xnr]</li>
+<li>Kashmiri [kas]</li>
+<li>Tharu, Kathoriya [tkt]</li>
+<li>Khaling [klr]</li>
+<li>Khandesi [khn]</li>
+<li>Kharia [khr]</li>
+<li>Kinnauri [kfk]</li>
+<li>Tharu, Kochila [thq]</li>
+<li>Kodaku [ksz]</li>
+<li>Koi [kkt]</li>
+<li>Konkani (individual language) [knn]</li>
+<li>Konkani (macrolanguage) [kok]</li>
+<li>Korku [kfq]</li>
+<li>Creole Portuguese, Korlai [vkp]</li>
+<li>Korwa [kfp]</li>
+<li>Koya [kff]</li>
+<li>Kudmali [kyw]</li>
+<li>Kukna [kex]</li>
+<li>Pahari, Kullu [kfx]</li>
+<li>Kulung (Nepal) [kle]</li>
+<li>Kumaoni [kfy]</li>
+<li>Kumhali [kra]</li>
+<li>Kurukh [kru]</li>
+<li>Lambadi [lmn]</li>
+<li>Lhomi [lhm]</li>
+<li>Limbu [lif]</li>
+<li>Lohorung [lbr]</li>
+<li>Loke [loy]</li>
+<li>Magahi [mag]</li>
+<li>Pahari, Mahasu [bfz]</li>
+<li>Maithili [mai]</li>
+<li>Majhi [mjz]</li>
+<li>Mal Paharia [mkb]</li>
+<li>Malvi [mup]</li>
+<li>Manangba [nmm]</li>
+<li>Mandeali [mjl]</li>
+<li>Marathi [mar]</li>
+<li>Maria (India) [mrr]</li>
+<li>Marwari (India) [rwr]</li>
+<li>Marwari [mwr]</li>
+<li>Mawchi [mke]</li>
+<li>Mewari [mtr]</li>
+<li>Mewati [wtm]</li>
+<li>Newar, Middle [nwx]</li>
+<li>Mising [mrg]</li>
+<li>Munda [unx]</li>
+<li>Mundari [unr]</li>
+<li>Na [nbt]</li>
+<li>Nachering [ncd]</li>
+<li>Nepali (individual language) [npi]</li>
+<li>Nepali (macrolanguage) [nep]</li>
+<li>Kurux, Nepali [kxl]</li>
+<li>Newari [new]</li>
+<li>Nimadi [noe]</li>
+<li>Noiri [noi]</li>
+<li>Gondi, Northern [gno]</li>
+<li>Kolami, Northwestern [kfb]</li>
+<li>Tamang, Northwestern [tmk]</li>
+<li>Pali [pli]</li>
+<li>Palpa [plp]</li>
+<li>Panchpargania [tdb]</li>
+<li>Pangwali [pgg]</li>
+<li>Pankhu [pkh]</li>
+<li>Pattani [lae]</li>
+<li>Bareli, Pauri [bfb]</li>
+<li>Puma [pum]</li>
+<li>Puroik [suv]</li>
+<li>Rajasthani [raj]</li>
+<li>Rajbanshi [rjs]</li>
+<li>Raji [rji]</li>
+<li>Garasia, Rajput [gra]</li>
+<li>Tharu, Rana [thr]</li>
+<li>Bareli, Rathwi [bgd]</li>
+<li>Rawat [jnl]</li>
+<li>Sadri [sck]</li>
+<li>Sampang [rav]</li>
+<li>Sanskrit [san]</li>
+<li>Santali [sat]</li>
+<li>Saraiki [skr]</li>
+<li>Sartang [onp]</li>
+<li>Prākrit, Sauraseni [psu]</li>
+<li>Saurashtra [saz]</li>
+<li>Sauria Paharia [mjt]</li>
+<li>Shekhawati [swv]</li>
+<li>Sherpa [xsr]</li>
+<li>Kham, Sheshi [kip]</li>
+<li>Sindhi [snd]</li>
+<li>Sirmauri [srx]</li>
+<li>Ghale, Southern [ghe]</li>
+<li>Southwestern Tamang [tsf]</li>
+<li>Bhoti, Stod [sbu]</li>
+<li>Sunwar [suz]</li>
+<li>Surgujia [sgj]</li>
+<li>Surjapuri [sjp]</li>
+<li>Monpa, Tawang [twm]</li>
+<li>Monpa, Tawang [twm]</li>
+<li>Thakali [ths]</li>
+<li>Thangmi [thf]</li>
+<li>Thulung [tdh]</li>
+<li>Tilung [tij]</li>
+<li>Tinani [lbf]</li>
+<li>Toto [txo]</li>
+<li>Varhadi-Nagpuri [vah]</li>
+<li>Varli [vav]</li>
+<li>Vasavi [vas]</li>
+<li>Wagdi [wbr]</li>
+<li>Wambule [wme]</li>
+<li>Naga, Wancho [nnp]</li>
+<li>Wayu [vay]</li>
+<li>Magar, Western [mrd]</li>
+<li>Meohang, Western [raf]</li>
+<li>Muria, Western [mut]</li>
+<li>Kham, Western Parbate [kjl]</li>
+<li>Tamang, Western [tdg]</li>
+<li>Yakha [ybh]</li>
+<li>Yamphu [ybi]</li>
+</ul>
 </section>
   
   
   
-</section>
 
 
 
@@ -826,26 +1393,52 @@ Page &amp; book layout
 <section>
 <h2 id="refs">References</h2>
   <ol>
-    <li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
+  <li>[ <a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/hi.html">c</a> ] <a href="https://www.unicode.org/cldr/charts/latest/summary/hi.html">CLDR chart tables</a></li>
+    <li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
 				0-19-507993-0, pp487-497</li>
-<li>[ <sup><a href="http://en.wikipedia.org/wiki/Devanagari">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Devanagari">Devanagari</a></li>
-<li>[ <sup><a href="http://www.unicode.org/versions/latest/ch12.pdf">u</a></sup> ] The Unicode Standard v11.0, <a href="http://www.unicode.org/versions/latest/ch12.pdf">Devanagari</a></li>
-<li>[ <sup><a href="refs">s</a></sup> ] Rupert Snell &amp; Simon Weightman, Teach Yourself Hindi, ISBN 978-0-340-86687-0</li>
-<li>[ <sup><a href="https://www.w3.org/TR/ilreq/">i</a></sup> ]     Swaran Lata, Somnath Chandra, DeitY, Prashant Verma, Richard Ishida, <a href="https://www.w3.org/TR/ilreq/">Indic Layout Requirements</a></li>
+<li>[ <a class="fnref" href="https://www.w3.org/TR/ilreq/">i</a> ]     Swaran Lata, Somnath Chandra, DeitY, Prashant Verma, Richard Ishida, <a href="https://www.w3.org/TR/ilreq/">Indic Layout Requirements</a></li>
+<li>[ <a class="fnref" href="refs">s</a> ] Rupert Snell &amp; Simon Weightman, Teach Yourself Hindi, ISBN 978-0-340-86687-0</li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch12.pdf">u</a> ] The Unicode Standard v11.0, <a href="http://www.unicode.org/versions/latest/ch12.pdf">Devanagari</a></li>
+<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Devanagari">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Devanagari">Devanagari</a></li>
+<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Hindustani_phonology">wp</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Hindustani_phonology">Hindustani phonology</a></li>
 </ol>
 </section>
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/devanagari"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-07-14  5:33<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bdevanagari%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fdevanagari%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
+<details>
+<summary class="prompts">Show stats</summary>
+
+<table id="charCountList">
+<tr><th>Main</th><td id="mainCharList"></td><td id="mainCharListTotal"></td></tr>
+<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
+<tr><th>Auxiliary</th><td id="auxCharList"></td><td id="auxCharListTotal"></td></tr>
+<tr><th>Other</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
+<tr><th>Deprecated</th><td id="deprecatedCharList"></td><td id="deprecatedCharListTotal"></td></tr>
+</table>
+<script>
+runCharCount('.characterBox', 'mainCharList')
+runCharCount('.auxiliaryBox', 'auxCharList')
+runCharCount('.archaicBox', 'archaicCharList')
+runCharCount('.otherBox', 'otherCharList')
+runCharCount('.deprecatedBox', 'deprecatedCharList')
+</script>
+</details>
 
 
 
 
 <div id="panel" style="display:none"></div>
+
+
+<div class="smallprint"><span id="version"></span></div>
+
 </body>
 <script>
-initialiseSummary('/scripts/devanagari/block','hi','Devanagari')
+initialiseSummary('/scripts/devanagari/block','hi','Devanagari','devanagari/index')
+autoTransliterate('hi')
 </script>
 
 </html>
