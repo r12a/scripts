@@ -9,20 +9,20 @@
 <link rel="stylesheet" href="../common/local.css" />
 <style>
 @font-face {
-    font-family: 'Noto Serif Tifinagh WF';
-    src: url('/shared/webfonts/notoseriftifinagh-regular-webfont.woff2') format('woff2'),
-         url('/shared/webfonts/notoseriftifinagh-regular-webfont.woff') format('woff');
+    font-family: 'Noto Sans Tifinagh WF';
+    src: url('/shared/webfonts/NotoSansTifinagh-Regularwebfont.woff2') format('woff2'),
+         url('/shared/webfonts/NotoSansTifinagh-Regularwebfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 	}
 #freeText {
 	font-size: 30px;
-	font-family: "Noto Serif Tifinagh WF", serif;
+	font-family: "Noto Sans Tifinagh WF", sans;
     text-align: start;
 	line-height: 1.4;
 	}
 @media print { #freeText { font-size: 18px; } }
-[lang=ber] { font-family: "Noto Serif Tifinagh WF", serif; font-size: 150%; }
+[lang=ber] { font-family: "Noto Sans Tifinagh WF", sans; font-size: 150%; }
 .large[lang=ber] { font-size: 300%;  text-align: center; line-height: 1; margin-top: 0; margin-bottom: 0; }
 .narrowlines .listPair { margin-bottom: 0.25em; }
 .narrowlines .listItem[lang=ber] { font-family: Tagmukay, 'Noto Sans Tifinagh WF'; }
@@ -37,11 +37,15 @@
 <script src="/shared/fontlists/manage.js"></script>
 <script src="/shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
+<script src="../common/transliterate.js"></script>
+<script src="../common/prompts.js"> </script>
+<script src="../glossary/glossary.js"> </script>
 <script src="/shared/code/getLinks.js"></script>
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
 
 <script src="/shared/fontlists/tifinagh.js"> </script>
+<script src="ber-translit.js">  </script>
 </head>
 
 <body>
@@ -103,17 +107,19 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->2 August, 2019<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/index.php?tag=tifinagh" title="Show all blog posts tagged with 'tifinagh'">tifinagh</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+  <!-- #BeginDate format:Sw1 -->16 December, 2019<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
 
 
 
 <div class="section">
-  <p>This page provides basic information about the Tifinagh script, in particular the so-called Neo-Tifinagh writing system and its use for the Standard Moroccan Tamazight and other Northern Berber languages. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned.   For character-specific details follow the links to the <a class="linkHighlight" href="block">Tifinagh character notes</a>. </p>
-<p>See also the <a href="../../pickers/neotifinagh/">Neo-tifinagh picker</a>, and  the <a href="../../pickers/tifinagh/">All Tifinagh picker</a>.</p>
+  <p>This page gathers together basic information about the Tifinagh script in particular the so-called Neo-Tifinagh writing system and its use for the Standard Moroccan Tamazight and other Northern Berber languages. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Neo-Tifinagh using Unicode; for greater details follow the footnote links (especially those with an arrow alongside them).</p>
+<p> For character-specific details follow the links to the <a class="linkHighlight" href="block">Tifinagh character notes</a>. See also the <a href="../../pickers/neotifinagh/" class="linkHighlight">Neo-tifinagh character app</a>, and  the  <a href="../../pickers/tifinagh/" class="linkHighlight">All Tifinagh picker</a>.</p>
 <p>For similar information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Tfng">script links pages</a>.</p>
 
-<p class="instructions">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text. Use the control on the right to choose which transcription data you want to see.</p>
+<p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text. Colours and annotations on panels listing characters are relevant to their use for Neo-tifinagh.</p>
+<p class="instructions">Unless in parentheses, the transcriptions in italics that follow Neo-tifinagh text are a <a href="../glossary/#transliteration" class="termref">transliteration</a> developed for these pages. Those in parentheses are usually ISO transcriptions. Transcriptions in <span style="white-space:nowrap;">⌈ brackets ⌋</span> may be phonemic or phonetic.</p>
 </div>
 
 
@@ -219,14 +225,97 @@ A modern alphabetical derivative of the traditional script, known as Neo-Tifinag
 <section>
 <h2 id="vowels">Vowels</h2>
     
+
+<section>
+<h3 id="vowelPhonemes">Vowel sounds</h3>
+
+<p><span class="leadin">Plain vowels.</span></p>
+
+
+<div style="margin-left: 7.5%;">
+<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="white"/>
+      <feComposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <!--image xlink:href="images/vowelgrid.gif" alt="Les caractères sont associés à des octets." x="0" y="0" width="400" height="200"></image--> 
+  <use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -->
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+  
+  <!-- near close -->
+<circle cx="200" cy="40" r="3" fill="#ccc"/>
+  
+   <!-- mid close -->
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -->
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- near open -->
+  <circle cx="102" cy="160" r="3" fill="#ccc"/> <!-- near open -->
+  
+  <!-- open -->
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+  
+  <!-- close -->
+  <text x="32" y="15" class="ipa" text-anchor="end">i</text> 
+
+  <!-- near close -->
+  <text x="210" y="45" class="ipa">ʊ</text> 
+
+  <!-- mid -->
+  <text x="158" y="105" class="ipa" text-anchor="middle" filter="url(#solid)">ə</text>
+  <text x="158" y="105" class="ipa" text-anchor="middle">ə</text> 
+
+  <!-- near open -->
+  <text x="94" y="165" class="ipa" text-anchor="end">æ</text> 
+</svg>
+</div>
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">w</a>..</p>
+</section>
+
+
+
+
+
+
+
+
+<section>
+<h3 id="basicvowels">Basic vowels</h3>
+
+
     <p>Neo-Tifinagh is designed to be fully vowelled (and therefore, alphabetic), however, other writing sytems such as Touareg and older variants are not.</p>
 <p>The ancient Berber script used a single vowel symbol, read normally as <span class="ipa">a</span>, but <span class="ipa">i</span> after <span class="ipa">y</span> or <span class="ipa">u</span> after <span class="ipa">w</span>.<sup>u</sup> Some Tuareg orthographies display a single vowel letter at the end of a word. </p>
 <p>The vowel letters of Neo-Tifinagh are<a class="fnref" href="http://en.wikipedia.org/wiki/Tifinagh">w</a>:</p>
 
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc,trans2">ⴰ␣ⴻ␣ⵉ␣ⵓ</figure>
-
-
+<figure class="characterBox auto" data-cols="ipa,trans,transc,trans2">ⵉ␣ⵓ␣ⴻ␣ⴰ</figure>
+</section>
 
 
 
@@ -250,12 +339,133 @@ A modern alphabetical derivative of the traditional script, known as Neo-Tifinag
 
 
 <section>
+<h3 id="consonantPhonemes">Consonant sounds</h3>
+<table class="ipaTable">
+<thead>
+<tr>
+<th></th>
+<th>labial </th>
+<th>dental </th>
+<th>alveolar </th>
+<th>post-<br>
+alveolar</th>
+<th>palatal </th>
+<th>velar </th>
+<th>uvular</th>
+<th>pharyngeal</th>
+<th>glottal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>stop</th>
+<td><span class="allophone">p</span> <span class="ipa">b</span></td>
+<td><span class="ipa">t</span> <span class="ipa">d</span><br/>
+<span class="ipa">tˁ</span> <span class="ipa">dˁ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">c</span> <span class="ipa">ɟ</span></td>
+<td><span class="ipa">k</span> <span class="ipa">ɡ</span></td>
+<td><span class="ipa">q</span> <span class="ipa">ɢ</span><br/>
+<span class="ipa">qʷ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>affricate</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>fricative </th>
+<td><span class="allophone">β</span><br/>
+<span class="ipa">f</span> <span class="allophone">v</span></td>
+<td><span class="allophone">θ</span> <span class="allophone">ð</span><br/>
+<span class="allophone">ðˁ</span></td>
+<td><span class="ipa">s</span> <span class="ipa">z</span><br/>
+<span class="ipa">sˁ</span> <span class="ipa">zˁ</span></td>
+<td><span class="ipa">ʃ</span> <span class="ipa">ʒ</span></td>
+<td><span class="allophone">ʝ</span></td>
+<td><span class="allophone">x</span> <span class="ipa">ɣ</span></td>
+<td><span class="ipa">χ</span> <span class="ipa">ʁ</span></td>
+<td><span class="ipa">ħ</span> <span class="ipa">ʕ</span></td>
+<td><span class="ipa">h</span></td>
+</tr>
+<tr>
+<th>nasal</th>
+<td><span class="ipa">m</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">n</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>approximant</th>
+<td><span class="ipa">w</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">l</span> <span class="ipa">ɫ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">j</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>trill/flap</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">r</span> <span class="ipa">rˁ</span></td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th></th>
+<td class="mouth"><a href="../common/mouth/mouth_labial.png" target="_blank"><img src="../common/mouth/mouth_small_labial.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_dental.png" target="_blank"><img src="../common/mouth/mouth_small_dental.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_alveolar.png" target="_blank"><img src="../common/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_postalveolar.png" target="_blank"><img src="../common/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_palatal.png" target="_blank"><img src="../common/mouth/mouth_small_palatal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_velar.png" target="_blank"><img src="../common/mouth/mouth_small_velar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_uvular.png" target="_blank"><img src="../common/mouth/mouth_small_uvular.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_pharyngeal.png" target="_blank"><img src="../common/mouth/mouth_small_pharyngeal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_glottal.png" target="_blank"><img src="../common/mouth/mouth_small_glottal.png" alt=" "/></a></td>
+</tr>
+</tbody>
+</table>
+
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">wp</a>. Sounds in parentheses are non-native or allophones.</p>
+</section>
+
+
+
+
+
+<section>
 <h3 id="ntconsonants">IRCAM consonants</h3>
 
 <p>IRCAM  defines the following set of characters for Neo-Tifinagh, which is a subset of the Unicode Tifinagh block designed to cater for Tarifit, Tamazight, and Tachelhit languages.<a class="fnref" href="http://en.wikipedia.org/wiki/Tifinagh">w</a></p>
 
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc,trans2">ⴱ␣ⴳ␣ⴷ␣ⴹ␣ⴼ␣ⴽ␣ⵀ␣ⵃ␣ⵄ␣ⵅ␣ⵇ␣ⵊ␣ⵍ␣ⵎ␣ⵏ␣ⵔ␣ⵕ␣ⵖ␣ⵙ␣ⵚ␣ⵛ␣ⵜ␣ⵟ␣ⵡ␣ⵢ␣ⵣ␣ⵥ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc,trans2">ⴱ␣ⵜ␣ⴷ␣ⵟ␣ⴹ␣ⴽ␣ⴳ␣ⵇ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc,trans2">ⴼ␣ⵙ␣ⵣ␣ⵚ␣ⵥ␣ⵛ␣ⵊ␣ⵅ␣ⵖ␣ⵃ␣ⵄ␣ⵀ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc,trans2">ⵎ␣ⵏ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc,trans2">ⵡ␣ⵔ␣ⵕ␣ⵍ␣ⵢ</figure>
 
 </section>
 
@@ -267,12 +477,12 @@ A modern alphabetical derivative of the traditional script, known as Neo-Tifinag
 
 <p>The following characters are listed by IRCAM as 'extended'. The first 6 are rotated versions of other characters, and the last two are to represent foreign sounds. See also the <a href="#digraphs">digraphs</a>.</p>
 
-<figure class="auxiliaryBox auto" data-cols="ipa,trans,transc,trans2">ⴲ␣ⴴ␣ⴸ␣ⴺ␣ⴿ␣ⵝ␣ⵠ␣ⵒ</figure>
+<figure class="auxiliaryBox auto" data-cols="ipa,trans,transc,trans2">ⵒ␣ⴲ␣ⵠ␣ⵝ␣ⴸ␣ⴺ␣ⴴ␣ⴿ</figure>
 
 <p>The remaining consonants in the Unicode Tifinagh block are mostly used for modern Tuareg, but there are four others.</p>
 
 
-<figure class="otherBox auto" data-cols="ipa,trans,transc,trans2">ⴵ␣ⴶ␣ⴾ␣ⵁ␣ⵂ␣ⵆ␣ⵈ␣ⵋ␣ⵌ␣ⵐ␣ⵑ␣ⵗ␣ⵘ␣ⵞ␣ⵤ</figure>
+<figure class="otherBox auto" data-cols="ipa,trans,transc,trans2">ⴾ␣ⵈ␣ⵞ␣ⴵ␣ⴶ␣ⵤ␣ⵋ␣ⵌ␣ⵆ␣ⵗ␣ⵘ␣ⵁ␣ⵂ␣ⵐ␣ⵑ</figure>
 
 
 <p>There is a significant amount of variation in the use of Tifinagh symbols between different regions.</p>
@@ -423,6 +633,15 @@ A modern alphabetical derivative of the traditional script, known as Neo-Tifinag
 
 
 
+  
+<section>
+<h3 id="baselines">Baselines &amp; inline alignment</h3>
+<p class="prompts">Does the script have special requirements for baseline alignment between mixed scripts and in general?</p>
+</section>
+
+
+
+
 <section>
 <h3 id="transforms">Transforming characters</h3>
 
@@ -439,7 +658,7 @@ A modern alphabetical derivative of the traditional script, known as Neo-Tifinag
   
 <section>
 <h3 id="graphemes">Grapheme boundaries</h3>
- <p class="explanatoryintro">A grapheme is a user-perceived unit of text. The Unicode Standard uses generalised rules to define 'grapheme clusters', which approximate the likely grapheme boundaries in a writing system.</p>
+<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
 
 <p class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements when double-clicking on the text, or moving through the text with the cursor, or backspace, etc.? </p>
 </section>
@@ -450,7 +669,7 @@ A modern alphabetical derivative of the traditional script, known as Neo-Tifinag
   
 <section>
 <h3 id="word">Word boundaries</h3>
- <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 <p class="prompts">Are words separated by spaces, or other characters? Are there special requirements when double-clicking  on the text? Are words hyphenated?</p>
 
 <p>In Neo-Tifinagh, words are separated by spaces. Other variants often don't.</p>
@@ -460,7 +679,7 @@ A modern alphabetical derivative of the traditional script, known as Neo-Tifinag
 
 
 <section>
-<h3 id="phrase">Phrase boundaries</h3>
+<h3 id="phrase">Phrase &amp; section boundaries</h3>
   <p class="prompts">What characters are used to indicate the boundaries of phrases, sentences, and sections?</p>
 <p>Tifinagh  uses western  punctuation.<sup>u</sup></p>
 <p>In some areas (such as Niger, Mali, Algeria <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3482.pdf">pa</a>) <span class="codepoint"><span lang="ber">&#x2D70;</span> [<a href="/scripts/tifinagh/block#char2D70"><span class="uname">U+2D70 TIFINAGH SEPARATOR MARK</span></a>]</span> (<span class="name">tazarast</span>) is used for phrase and sentence breaks.<a class="fnref" href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Tfng"><cite>s</cite></a> In RTL text, this character should be mirrored, however this isn't currently possible in Unicode.</p>
@@ -523,6 +742,22 @@ A modern alphabetical derivative of the traditional script, known as Neo-Tifinag
 <section>
     <h3 id="linebreak">Line breaking &amp; hyphenation</h3>
 <p class="prompts">Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that?</p>
+
+
+
+
+<p><span class="leadin">Character properties.</span> Characters used for the Neo-tifinagh orthography have the following assignments related to line-break properties.</p>
+<table><tbody>
+<tr><th class="sg">AL</th><td class="count">1</td><td class="chars"><span class="exlist" lang="xx">ⵉ ⵓ ⴻ ⴰ ⴱ ⵜ ⴷ ⵟ ⴹ ⴽ ⴳ ⵇ ⴼ ⵙ ⵣ ⵚ ⵥ ⵛ ⵊ ⵅ ⵖ ⵃ ⵄ ⵀ ⵎ ⵏ ⵡ ⵔ ⵕ ⵍ ⵢ ⵯ ⵒ ⴲ ⵠ ⵝ ⴸ ⴺ ⴴ ⴿ</span></td></tr>
+</tbody></table>
+
+
+
+<details id="linebreak_details">
+<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
+</details>
+
 </section>
 
 
@@ -684,25 +919,20 @@ A modern alphabetical derivative of the traditional script, known as Neo-Tifinag
 <tr><th>Other</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
 <tr><th>Deprecated</th><td id="deprecatedCharList"></td><td id="deprecatedCharListTotal"></td></tr>
 </table>
-<script>
-runCharCount('.characterBox', 'mainCharList')
-runCharCount('.archaicBox', 'archaicCharList')
-runCharCount('.auxiliaryBox', 'auxCharList')
-runCharCount('.otherBox', 'otherCharList')
-runCharCount('.deprecatedBox', 'deprecatedCharList')
-</script>
 </details>
 
 
 
-
-
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/tifinagh"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-08-02  7:16<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Btifinagh%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ftifinagh%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
-
-
 <div id="panel" style="display:none"></div>
+
+
+<div class="smallprint"><span id="version"></span></div>
+
+
+
 </body>
 <script>
-initialiseSummary('/scripts/tifinagh/block','ber','Tifinagh')
+initialiseSummary('/scripts/tifinagh/block','ber','Tifinagh','tifinagh')
+autoTransliterate('ber')
 </script>
 </html>
