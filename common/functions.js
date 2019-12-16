@@ -1,6 +1,7 @@
 function initialiseSummary (base, lang, tableName, dir) {
     window.base = base
 	doHeadersFooters(dir)
+	runCharCounts()
     makeTables(lang)
     initialiseShowNames(base, 'c')
     document.getElementById('featureTableBody').innerHTML = makeSidePanel(tableName,"")
@@ -12,6 +13,14 @@ function initialiseSummary (base, lang, tableName, dir) {
 
 
 
+
+function runCharCounts () {
+	runCharCount('.characterBox', 'mainCharList')
+	runCharCount('.archaicBox', 'archaicCharList')
+	runCharCount('.auxiliaryBox', 'auxCharList')
+	runCharCount('.otherBox', 'otherCharList')
+	runCharCount('.deprecatedBox', 'deprecatedCharList')
+	}
 
 
 
@@ -719,6 +728,23 @@ function runCharCount (type, location) {
 	total = 0
 	for (let i=0;i<chars.length;i++) out += chars[i].textContent.replace(/␣/g,'')
 	document.getElementById(location).textContent = out
+	document.getElementById(location+'Total').textContent = out.length
+	}
+
+
+function runCharCount (type, location) {
+	charlists = document.querySelectorAll(type)
+	out = ''
+	charlistArray = []
+	for (let i=0;i<charlists.length;i++) {
+		var charStr = charlists[i].textContent
+		charStr = charStr.replace(/␣/g,'')
+		var chars = [...charStr]
+		for (let c=0;c<chars.length;c++) charlistArray.push(chars[c])
+		}
+	const uniqueSet = new Set(charlistArray)
+	out = [...uniqueSet]
+	document.getElementById(location).textContent = out.toString().replace(/,/g,' ')
 	document.getElementById(location+'Total').textContent = out.length
 	}
 
