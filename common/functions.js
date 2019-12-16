@@ -733,6 +733,7 @@ function runCharCount (type, location) {
 
 
 function runCharCount (type, location) {
+	if (document.getElementById(location) == null) return
 	charlists = document.querySelectorAll(type)
 	out = ''
 	charlistArray = []
