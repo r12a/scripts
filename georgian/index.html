@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-GB">  <!-- NEED TO SORT OUT THE DB FILES !  -->
+<html lang="en-GB">
 <head>
 <meta charset="utf-8"/>
 <title>Georgian script notes</title>
@@ -51,7 +51,7 @@
 .large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }	
 </style>
 
-<script src="db.js"> </script>
+<script src="../../shared/scriptdb/georg-ka.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2019.js"></script>
 <script src="../../shared/code/all-names.js"></script>
@@ -60,11 +60,15 @@
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
+<script src="../common/transliterate.js"></script>
+<script src="../common/prompts.js"> </script>
+<script src="../glossary/glossary.js"> </script>
 <script src="../../shared/code/getLinks.js"></script>
 <script src="../linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
 
 <script src="../../shared/fontlists/georgian.js"> </script>
+<script src="ka-translit.js">  </script>
 </head>
 
 <body>
@@ -122,13 +126,19 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </div>
 </aside>
 
-	<p id="status">Updated Mon 13 Oct 2014  &bull; tags <a href="http://r12a.github.io/blog/index.php?tag=georgian" title="Show all blog posts tagged with 'georgian'">georgian</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+<p id="status">Updated 
+<!-- #BeginDate format:Sw1 -->16 December, 2019<!-- #EndDate -->
+  <span id="versionTop"></span>
+</p>
+
+
 
 	<div class="section">
-<p>This page provides basic information about the two scripts used to write Georgian: Mkedruli (+Mtavruli), and Khutsuri (Asomtavruli+Nuskhuri). It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned.  For character-specific details follow the links to the <a class="linkHighlight" href="block">Georgian character notes</a>.</p>
-<p>See also the <a href="../../pickers/georgian/">Georgian picker</a>.</p>
+<p>This page gathers together basic information about the two scripts used to write Georgian: Mkedruli (+Mtavruli), and Khutsuri (Asomtavruli+Nuskhuri) and their use for the Georgian language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Georgian using Unicode; for greater details follow the footnote links (especially those with an arrow alongside them).</p>
+<p> For character-specific details follow the links to the <a class="linkHighlight" href="block">Georgian character notes</a>. See also the <a href="../../pickers/georgian/" class="linkHighlight">Georgian character app</a>.</p>
 <p>For similar information related to other scripts, see the <a class="linkHighlight" href="../links?iso=Geor">script links pages</a>.</p>
-<p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+<p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text. Colours and annotations on panels listing characters are relevant to their use for the Georgian language.</p>
+<p><span class="instructions">Unless in parentheses, the transcriptions in italics that follow Georgian text are a <a href="../glossary/#transliteration" class="termref">transliteration</a> developed for these pages. Those in parentheses are usually ISO transcriptions. Transcriptions in <span style="white-space:nowrap;">⌈ brackets ⌋</span> may be phonemic or phonetic.</span></p>
 </div>
 
 
@@ -200,22 +210,26 @@ Georgian scripts are unique in their appearance and their exact origin has never
 
 
 
- <section>
+<section>
 <h2 id="chars">Character lists</h2>
-  <p>The Georgian script characters in Unicode 11.0 are in the following blocks: </p>
-    <ul>
-      <li> <a href="/uniview/?block=georgian">Georgian</a> <span class="charCount">(88 letters, 1 punctuation :   total 89)</span></li>
+  <p>Version 12.0 of the Unicode Standard has the following blocks dedicated to the Georgian script (numbers in lists are non-ASCII only):</p>
+<ul>
+<li> <a href="/uniview/?block=georgian auto">Georgian</a> <span class="charCount">(87 letters, 1 punctuation :   total 88)</span></li>
 <li> <a href="/uniview/?block=georgian_extended">Georgian Extended</a> <span class="charCount">(46 letters :   total 46)</span></li>
 <li> <a href="/uniview/?block=georgian_supplement">Georgian Supplement</a> <span class="charCount">(40 letters :   total 40)</span></li>
-    </ul>
-   <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
-<ul>
-<li><a href="/app-charuse/?language=ka" target="_blank">Georgian</a> <span class="charCount">(33 letters, 16 punctuation, 1 symbol :   total 50)</span></li>
-<!--li><a href="/app-charuse/?language=ka" target="_blank">Georgian</a> <span class="charCount">(25 letters, 3 marks, 1 punctuation :   total 29)</span></li-->
 </ul>
-<p>For character-specific details see the <a class="linkHighlight" href="/scripts/georgian/block">Georgian character notes</a>.</p>
+<p>Apart from ASCII characters, the Georgian orthography described here uses 84 characters <!--(and @@ more, used infrequently)--> from the following Unicode blocks: </p>
+    <ul>
+    <li><a href="/uniview/?block=georgian auto">Georgian</a> <span class="charCount">33 letters, 1 punctuation : total  34</span></li>
+<li><a href="/uniview/?block=georgian_extended">Georgian Extended</a> <span class="charCount">33 letters : total  33</span></li>
+<li> <a href="/uniview/?block=general_punctuation">General punctuation</a> <span class="charCount">12 punctuation : total 12</span></li>
+<li> <a href="/uniview/?block=latin-1_supplement">Latin-1 Supplement</a> <span class="charCount">3 punctuation : total 3</span></li>
+<li><a href="/uniview/?block=currency_symbols">Currency Symbols</a> <span class="charCount">1 symbol : total 1 </span></li>
+<li><a href="/uniview/?block=letterlike_symbols">Letterlike Symbols</a> <span class="charCount">1 symbol : total 1 </span></li>
+    </ul>
+ <p><cite>Character Usage</cite> has information about the following orthography associated with this script: <a href="/app-charuse/?language=ka" target="_blank">Georgian</a></p>
+<p>For detailed character-specific information see the <a class="linkHighlight" href="/scripts/georgian/block">Georgian character notes</a>.</p>
 </section>
-  
   
 
 
@@ -267,7 +281,7 @@ Georgian scripts are unique in their appearance and their exact origin has never
 
 <section> 
 <h3 id="mtavruli">Mtavruli</h3>
-<p><span class="name">Mtavruli</span> (<span class="charExample" translate="no"><span class="ex" lang="ka">მხედრული მთავრული</span> <span class="trans">mχɛdruli mtavruli</span> <span class="ipa">mxɛdruli mtʰɑvruli</span></span>) is also used for writing modern Georgian. These characters in Unicode are classed as uppercase versions of the <span class="name">mkedruli</span>, however in modern text they are normally used like all-caps rather than at the beginning of a sentence or proper noun, etc. They are typically used to emphasise words or for headings. <sup><a href="https://en.wikipedia.org/wiki/Georgian_scripts#Mkhedruli">w</a></sup></p>
+<p><span class="name">Mtavruli</span> (<span class="charExample" translate="no"><span class="ex" lang="ka">მხედრული მთავრული</span> <span class="trans">mχɛdruli mtavruli</span> <span class="ipa">mxɛdruli mtʰɑvruli</span></span>) is also used for writing modern Georgian. These characters in Unicode are classed as uppercase versions of the <span class="name">mkedruli</span>, however in modern text they are normally used like all-caps rather than at the beginning of a sentence or proper noun, etc. They are typically used to emphasise words or for headings. <a class="fnref" href="https://en.wikipedia.org/wiki/Georgian_scripts#Mkhedruli">w</a></p>
 <p>The <span class="name">mtavruli</span> letters are have similar forms to the <span class="name">mkhedruli</span> except that, in principle, all  letters  written  in  the  <span class="name">mtavruli</span> style  appear  with  an equal height standing on the baseline, similar to small caps in the Latin script.</p>
 <p>Dedicated characters were only introduced in Unicode v11. Prior to that, authors had to use special fonts with the <span class="name">mkhedruli</span> code points in order to write <span class="name">mtavruli</span> letters.</p>
 <p>At the time of writing, there are still not many Unicode fonts that provide glyphs for the <span class="name">mtavruli</span> characters, and browsers on  OS X and iOS browsers map (most) <span class="name">mtavruli</span> letters to <span class="name">mkhedruli</span> glyphs if a font doesn't contain the necessary glyphs.</p>
@@ -278,25 +292,220 @@ Georgian scripts are unique in their appearance and their exact origin has never
 
 
 <section>
+<h3 id="vowelPhonemes">Vowel sounds</h3>
+<div style="margin-left: 7.5%;">
+<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="white"/>
+      <feComposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <!--image xlink:href="images/vowelgrid.gif" alt="Les caractères sont associés à des octets." x="0" y="0" width="400" height="200"></image--> 
+  <use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -->
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+  
+   <!-- mid close -->
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -->
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- open -->
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+  
+  <!-- close -->
+  <text x="32" y="15" class="ipa" text-anchor="end">i</text> 
+<text x="250" y="15" class="ipa">u</text> 
+
+  <!-- open mid -->
+  <text x="81" y="135" class="ipa" text-anchor="end">ɛ</text> 
+  <text x="250" y="135" class="ipa">ɔ</text> 
+
+  <!-- open -->
+  <text x="106" y="195" class="ipa" text-anchor="end">a</text> 
+<text x="232" y="195" class="ipa" text-anchor="end" filter="url(#solid)">ɑ</text>
+<text x="232" y="195" class="ipa" text-anchor="end">ɑ</text> 
+</svg>
+</div>
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Georgian_language#Phonology">w</a>.</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="consonantPhonemes">Consonant sounds</h3>
+<table class="ipaTable">
+<thead>
+<tr>
+<th></th>
+<th>labial </th>
+<th>dental </th>
+<th>alveolar </th>
+<th>post-<br>
+alveolar</th>
+<th>palatal </th>
+<th>velar </th>
+<th>uvular</th>
+<th>glottal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>stop</th>
+<td><span class="ipa">b</span><br>
+<span class="ipa">pʰ</span><br>
+<span class="ipa">pʼ</span></td>
+<td><span class="ipa">d</span><br/>
+<span class="ipa">tʰ</span><br>
+<span class="ipa">tʼ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɡ</span><br/>
+<span class="ipa">kʰ</span> <span class="ipa"><br>
+kʼ</span></td>
+<td><span class="ipa">qʼ</span></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>affricate</th>
+<td>&nbsp;</td>
+<td><span class="ipa">d͡z</span><br>
+<span class="ipa">t͡sʰ</span><br>
+<span class="ipa">t͡sʼ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">d͡ʒ</span><br/>
+<span class="ipa">t͡ʃʰ</span><br/>
+<span class="ipa">t͡ʃʼ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>fricative </th>
+<td><span class="ipa">v</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">s</span> <span class="ipa">z</span></td>
+<td><span class="ipa">ʃ</span> <span class="ipa">ʒ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">x</span> <span class="ipa">ɣ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">h</span></td>
+</tr>
+<tr>
+<th>nasal</th>
+<td><span class="ipa">m</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">n</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>approximant</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">l</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>trill/flap</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">r</span></td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th></th>
+<td class="mouth"><a href="../common/mouth/mouth_labial.png" target="_blank"><img src="../common/mouth/mouth_small_labial.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_dental.png" target="_blank"><img src="../common/mouth/mouth_small_dental.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_alveolar.png" target="_blank"><img src="../common/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_postalveolar.png" target="_blank"><img src="../common/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_palatal.png" target="_blank"><img src="../common/mouth/mouth_small_palatal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_velar.png" target="_blank"><img src="../common/mouth/mouth_small_velar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_uvular.png" target="_blank"><img src="../common/mouth/mouth_small_uvular.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_glottal.png" target="_blank"><img src="../common/mouth/mouth_small_glottal.png" alt=" "/></a></td>
+</tr>
+</tbody>
+</table>
+
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Georgian_language#Phonology">w</a>.</p>
+</section>
+
+
+
+
+
+
+<section>
 <h3 id="georgian_mkhedruli">Georgian language characters</h3>
 <p>The following characters are used to write the modern Georgian language. Each pair shows mkhedruli followed by mtavruli letters.</p>
 
-<figure class="characterBox georgian" data-cols="ipa,trans,transc,trans2" data-select="first" >აᲐ␣ბᲑ␣გᲒ␣დᲓ␣ეᲔ␣ვᲕ␣ზᲖ␣თᲗ␣იᲘ␣კᲙ␣ლᲚ␣მᲛ␣ნᲜ␣ოᲝ␣პᲞ␣ჟᲟ␣რᲠ␣სᲡ␣ტᲢ␣უᲣ␣ფᲤ␣ქᲥ␣ღᲦ␣ყᲧ␣შᲨ␣ჩᲩ␣ცᲪ␣ძᲫ␣წᲬ␣ჭᲭ␣ხᲮ␣ჯᲯ␣ჰᲰ</figure>
 
-<!--figure class="characterBox georgian" data-cols="ipa,trans,transc,trans2">ა␣ბ␣გ␣დ␣ე␣ვ␣ზ␣თ␣ი␣კ␣ლ␣მ␣ნ␣ო␣პ␣ჟ␣რ␣ს␣ტ␣უ␣ფ␣ქ␣ღ␣ყ␣შ␣ჩ␣ც␣ძ␣წ␣ჭ␣ხ␣ჯ␣ჰ</figure-->
+<figure class="characterBox georgian auto" data-cols="ipa,trans,transc,trans2" data-select="first" >იᲘ␣უᲣ␣ეᲔ␣ოᲝ␣აᲐ</figure>
+<figure class="characterBox georgian auto" data-cols="ipa,trans,transc,trans2" data-select="first" >პᲞ␣ფᲤ␣ბᲑ␣ტᲢ␣თᲗ␣დᲓ␣კᲙ␣ქᲥ␣გᲒ␣ყᲧ</figure>
+<figure class="characterBox georgian auto" data-cols="ipa,trans,transc,trans2" data-select="first" >წᲬ␣ცᲪ␣ძᲫ␣ჭᲭ␣ჩᲩ␣ჯᲯ</figure>
+<figure class="characterBox georgian auto" data-cols="ipa,trans,transc,trans2" data-select="first" >ვᲕ␣სᲡ␣ზᲖ␣შᲨ␣ჟᲟ␣ღᲦ␣ხᲮ␣ჰᲰ</figure>
+<figure class="characterBox georgian auto" data-cols="ipa,trans,transc,trans2" data-select="first" >მᲛ␣ნᲜ</figure>
+<figure class="characterBox georgian auto" data-cols="ipa,trans,transc,trans2" data-select="first" >რᲠ␣ლᲚ</figure>
+
+<!--figure class="characterBox georgian auto" data-cols="ipa,trans,transc,trans2">ა␣ბ␣გ␣დ␣ე␣ვ␣ზ␣თ␣ი␣კ␣ლ␣მ␣ნ␣ო␣პ␣ჟ␣რ␣ს␣ტ␣უ␣ფ␣ქ␣ღ␣ყ␣შ␣ჩ␣ც␣ძ␣წ␣ჭ␣ხ␣ჯ␣ჰ</figure-->
 </section>
 
 
 
 <section>
 <h3 id="other_mkhedruli">Characters for other languages</h3>
-<p>The following characters are obsolete in the Georgian language, but still used in other languages.<sup><a href="http://www.loc.gov/catdir/cpso/romanization/georgian.pdf"></a></sup> They were removed by the Society for the Spreading of Literacy among Georgians, founded by Prince Ilia Chavchavadze in 1879 because they were redundant. <sup><a href="https://en.wikipedia.org/wiki/Georgian_scripts#Mkhedruli">w</a></sup> </p>
+<p>The following characters are obsolete in the Georgian language, but still used in other languages.<a class="fnref" href="http://www.loc.gov/catdir/cpso/romanization/georgian.pdf"></a> They were removed by the Society for the Spreading of Literacy among Georgians, founded by Prince Ilia Chavchavadze in 1879 because they were redundant. <a class="fnref" href="https://en.wikipedia.org/wiki/Georgian_scripts#Mkhedruli">w</a> </p>
 <p class="instructions">IPA values are for the languages that use them. For previous Georgian pronunciation, click on the character and follow links to the character notes page.</p>
-<figure class="otherBox otherlanguages" data-cols="ipa,trans,trans2" data-select="first" >ჱᲱ␣ჲᲲ␣ჳᲳ␣ჴᲴ</figure>
+<!--figure class="otherBox otherlanguages auto" data-cols="ipa,trans,trans2" data-select="first" >ჱᲱ␣ჲᲲ␣ჳᲳ␣ჴᲴ</figure-->
+
+<figure class="otherBox otherlanguages" data-cols="ipa,trans,trans2" data-select="first"><div class="listAll" onclick="listAll(this, 'ka')">list all 4</div><div class="listArray"><div class="listPair"><span class="listItem" lang="ka">ჱᲱ</span><span class="listUnum">10F1<br>1CB1<br></span><span class="listIPA">eː</span><span class="listTrans">e</span><span class="listTrans2">ē</span></div><div class="listPair"><span class="listItem" lang="ka">ჲᲲ</span><span class="listUnum">10F2<br>1CB2<br></span><span class="listIPA">j</span><span class="listTrans">j</span><span class="listTrans2">y</span></div><div class="listPair"><span class="listItem" lang="ka">ჳᲳ</span><span class="listUnum">10F3<br>1CB3<br></span><span class="listIPA">w</span><span class="listTrans">w</span><span class="listTrans2">w</span></div><div class="listPair"><span class="listItem" lang="ka">ჴᲴ</span><span class="listUnum">10F4<br>1CB4<br></span><span class="listIPA">q⁽ʰ⁾</span><span class="listTrans">qʰ</span><span class="listTrans2">ẖ</span></div></div></figure>
+
+
 <p>The above letters are all used for the Svan language, and the 2nd in the list is used also for Mingrelian and Laz.</p>
 <p>The  characters below were specifically created for use with other languages (Svan and Mingrelian for the first two, and Laz for the last).</p>
 
-<figure class="otherBox otherlanguages" data-cols="ipa,trans,trans2" data-select="first" >ჷᲷ␣ჸᲸ␣ჶᲶ</figure>
+<!--figure class="otherBox otherlanguages auto" data-cols="ipa,trans,trans2" data-select="first" >ჷᲷ␣ჸᲸ␣ჶᲶ</figure-->
+
+<figure class="otherBox otherlanguages" data-cols="ipa,trans,trans2" data-select="first"><div class="listAll" onclick="listAll(this, 'ka')">list all 3</div><div class="listArray"><div class="listPair"><span class="listItem" lang="ka">ჷᲷ</span><span class="listUnum">10F7<br>1CB7<br></span><span class="listIPA">ə</span><span class="listTrans">ə</span><span class="listTrans2">&nbsp;</span></div><div class="listPair"><span class="listItem" lang="ka">ჸᲸ</span><span class="listUnum">10F8<br>1CB8<br></span><span class="listIPA">ʔ</span><span class="listTrans">ʔ</span><span class="listTrans2">&nbsp;</span></div><div class="listPair"><span class="listItem" lang="ka">ჶᲶ</span><span class="listUnum">10F6<br>1CB6<br></span><span class="listIPA">f</span><span class="listTrans">f</span><span class="listTrans2">f</span></div></div></figure>
+
 </section>
 
 
@@ -307,11 +516,15 @@ Georgian scripts are unique in their appearance and their exact origin has never
         
 <p>One Georgian-only character is no longer used (since the 1879 reform).</p>
 
-<figure class="archaicBox georgian"  data-cols="ipa,trans,trans2" data-select="first" >ჵᲵ</figure>
+<figure class="archaicBox georgian auto"  data-cols="ipa,trans,trans2" data-select="first" >ჵᲵ</figure>
 
 <p>The  characters below were used for other languages in the past, including Bats, Ossetian and Abkhaz.</p>
 
-<figure class="archaicBox otherlanguages"  data-cols="ipa,trans,trans2" data-select="first" >ჹᲹ␣ჺᲺ␣ჼ␣ჽᲽ␣ჾᲾ␣ჿᲿ</figure>
+<!--figure class="archaicBox otherlanguages auto"  data-cols="ipa,trans,trans2" data-select="first" >ჹᲹ␣ჺᲺ␣ჼ␣ჽᲽ␣ჾᲾ␣ჿᲿ</figure-->
+
+
+<figure class="archaicBox otherlanguages" data-cols="ipa,trans,trans2" data-select="first"><div class="listAll" onclick="listAll(this, 'ka')">list all 6</div><div class="listArray"><div class="listPair"><span class="listItem" lang="ka">ჹᲹ</span><span class="listUnum">10F9<br>1CB9<br></span><span class="listIPA">ɢ</span><span class="listTrans">ɢ</span><span class="listTrans2">&nbsp;</span></div><div class="listPair"><span class="listItem" lang="ka">ჺᲺ</span><span class="listUnum">10FA<br>1CBA<br></span><span class="listIPA">ʕ</span><span class="listTrans">ʕ</span><span class="listTrans2">&nbsp;</span></div><div class="listPair"><span class="listItem" lang="ka">ჼ</span><span class="listUnum">10FC<br></span><span class="listIPA">̃</span><span class="listTrans">ᴺ</span><span class="listTrans2">&nbsp;</span></div><div class="listPair"><span class="listItem" lang="ka">ჽᲽ</span><span class="listUnum">10FD<br>1CBD<br></span><span class="listIPA">ə</span><span class="listTrans">ə̇</span><span class="listTrans2">&nbsp;</span></div><div class="listPair"><span class="listItem" lang="ka">ჾᲾ</span><span class="listUnum">10FE<br>1CBE<br></span><span class="listIPA">̴</span><span class="listTrans">ᴸ</span><span class="listTrans2">&nbsp;</span></div><div class="listPair"><span class="listItem" lang="ka">ჿᲿ</span><span class="listUnum">10FF<br>1CBF<br></span><span class="listIPA">ʷ</span><span class="listTrans">ʷ</span><span class="listTrans2">&nbsp;</span></div></div></figure>
+
 </section>
 </section>
  
@@ -357,15 +570,18 @@ Georgian scripts are unique in their appearance and their exact origin has never
 <h3 id="georgian_asomtavruli">Georgian language characters</h3>
 <p>The following characters are used to write the modern Georgian language. Each pair shows asomtavruli followed by nuskhuri.</p>
 
-<figure class="archaicBox georgian" data-cols="ipa,trans,transc,trans2" data-select="first" >Ⴀⴀ␣Ⴁⴁ␣Ⴂⴂ␣Ⴃⴃ␣Ⴄⴄ␣Ⴅⴅ␣Ⴆⴆ␣Ⴇⴇ␣Ⴈⴈ␣Ⴉⴉ␣Ⴊⴊ␣Ⴋⴋ␣Ⴌⴌ␣Ⴍⴍ␣Ⴎⴎ␣Ⴏⴏ␣Ⴐⴐ␣Ⴑⴑ␣Ⴒⴒ␣Ⴓⴓ␣Ⴔⴔ␣Ⴕⴕ␣Ⴖⴖ␣Ⴗⴗ␣Ⴘⴘ␣Ⴙⴙ␣Ⴚⴚ␣Ⴛⴛ␣Ⴜⴜ␣Ⴝⴝ␣Ⴞⴞ␣Ⴟⴟ␣Ⴠⴠ</figure>
+<figure class="archaicBox georgian auto" data-cols="ipa,trans,transc,trans2" data-select="first" >Ⴀⴀ␣Ⴁⴁ␣Ⴂⴂ␣Ⴃⴃ␣Ⴄⴄ␣Ⴅⴅ␣Ⴆⴆ␣Ⴇⴇ␣Ⴈⴈ␣Ⴉⴉ␣Ⴊⴊ␣Ⴋⴋ␣Ⴌⴌ␣Ⴍⴍ␣Ⴎⴎ␣Ⴏⴏ␣Ⴐⴐ␣Ⴑⴑ␣Ⴒⴒ␣Ⴓⴓ␣Ⴔⴔ␣Ⴕⴕ␣Ⴖⴖ␣Ⴗⴗ␣Ⴘⴘ␣Ⴙⴙ␣Ⴚⴚ␣Ⴛⴛ␣Ⴜⴜ␣Ⴝⴝ␣Ⴞⴞ␣Ⴟⴟ␣Ⴠⴠ</figure>
 </section>
 
 
 
 <section>
 <h3 id="other_asomtavruli">Characters for other languages</h3>
-<p>The first 3 characters are obsolete in the Georgian language, but are still used in Svan, Mingrelian, and Laz languages.<sup><a href="http://www.loc.gov/catdir/cpso/romanization/georgian.pdf"></a></sup> The last character in the list was created specifically for use with Svan.</p>
-<figure class="otherBox otherlanguages" data-cols="ipa,trans,trans2" data-select="first" >Ⴡⴡ␣Ⴢⴢ␣Ⴣⴣ␣Ⴤⴤ␣Ⴧⴧ</figure>
+<p>The first 3 characters are obsolete in the Georgian language, but are still used in Svan, Mingrelian, and Laz languages.<a class="fnref" href="http://www.loc.gov/catdir/cpso/romanization/georgian.pdf"></a> The last character in the list was created specifically for use with Svan.</p>
+<!--figure class="otherBox otherlanguages auto" data-cols="ipa,trans,trans2" data-select="first" >Ⴡⴡ␣Ⴢⴢ␣Ⴣⴣ␣Ⴤⴤ␣Ⴧⴧ</figure-->
+
+<figure class="otherBox otherlanguages" data-cols="ipa,trans,trans2" data-select="first"><div class="listAll" onclick="listAll(this, 'ka')">list all 5</div><div class="listArray"><div class="listPair"><span class="listItem" lang="ka">Ⴡⴡ</span><span class="listUnum">10C1<br>2D21<br></span><span class="listIPA">eː</span><span class="listTrans">E̱</span><span class="listTrans2">ē</span></div><div class="listPair"><span class="listItem" lang="ka">Ⴢⴢ</span><span class="listUnum">10C2<br>2D22<br></span><span class="listIPA">j</span><span class="listTrans">J̱</span><span class="listTrans2">y</span></div><div class="listPair"><span class="listItem" lang="ka">Ⴣⴣ</span><span class="listUnum">10C3<br>2D23<br></span><span class="listIPA">w</span><span class="listTrans">W̱</span><span class="listTrans2">w</span></div><div class="listPair"><span class="listItem" lang="ka">Ⴤⴤ</span><span class="listUnum">10C4<br>2D24<br></span><span class="listIPA">q⁽ʰ⁾</span><span class="listTrans">Q̱ʰ</span><span class="listTrans2">ẖ</span></div><div class="listPair"><span class="listItem" lang="ka">Ⴧⴧ</span><span class="listUnum">10C7<br>2D27<br></span><span class="listIPA">ə</span><span class="listTrans">Ə̱</span><span class="listTrans2">&nbsp;</span></div></div></figure>
+
 </section>
 
 
@@ -376,7 +592,7 @@ Georgian scripts are unique in their appearance and their exact origin has never
         
   <p>The following characters are archaic. The first was used for Georgian, and the second for Ossetian.</p>
 
-<figure class="archaicBox georgian"  data-cols="ipa,trans,trans2" data-select="first" >Ⴥⴥ␣Ⴭⴭ</figure>
+<figure class="archaicBox georgian auto"  data-cols="ipa,trans,trans2" data-select="first" >Ⴥⴥ␣Ⴭⴭ</figure>
 </section>
 </section>
  
@@ -405,11 +621,11 @@ Georgian scripts are unique in their appearance and their exact origin has never
 <h2 id="punctuation">Punctuation</h2>
 		<p>The Georgian Unicode block contains only one punctuation mark.</p>
 
-<figure class="characterBox georgian"  data-cols="">჻</figure>
+<figure class="characterBox georgian auto"  data-cols="">჻</figure>
 
 		<p>In older texts it was used to signal the end of a paragraph.</p>
 <p>Otherwise, Georgian uses standard western punctuation. CLDR lists the following non-ASCII punctuation.</p>
-<figure class="characterBox georgian"  data-cols="" data-select="first" >«␣»␣§␣‐␣–␣—␣…␣‘␣‚␣“␣„␣†␣‡␣′␣″</figure>
+<figure class="characterBox georgian auto"  data-cols="" data-select="first" >«␣»␣§␣‐␣–␣—␣…␣‘␣‚␣“␣„␣†␣‡␣′␣″</figure>
 </section>
     
     
@@ -419,7 +635,7 @@ Georgian scripts are unique in their appearance and their exact origin has never
 <section> 
 <h2 id="symbols">Symbols</h2>
 		<p>The Georgian Unicode block contains no symbols, but Georgian uses a currency symbol and a number symbol from elsewhere in Unicode.</p>
-<figure class="characterBox georgian"  data-cols="" data-select="first" >₾␣№</figure>
+<figure class="characterBox georgian auto"  data-cols="" data-select="first" >₾␣№</figure>
 </section>
    
     
@@ -435,6 +651,32 @@ Georgian scripts are unique in their appearance and their exact origin has never
 <h2 id="shaping">Glyph shaping &amp; positioning</h2>
 <p>Georgian doesn't do any shaping or positioning of characters based on the context, but individual letter forms can vary from font to font.</p>
 <p>You can experiment with examples using the <a href="/pickers/georgian/">Georgian picker</a>.</p>
+
+
+
+
+  
+<section>
+<h3 id="baselines">Baselines &amp; inline alignment</h3>
+<p class="prompts">Does the script have special requirements for baseline alignment between mixed scripts and in general?</p>
+</section>
+
+
+
+
+<section>
+<h3 id="fontstyle">Font styles</h3>
+<p class="prompts"> Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</p>
+</section>
+
+
+
+
+<section>
+<h3 id="transforms">Transforming characters</h3>
+
+<p class="prompts">If the script is bicameral, are the special rules about case conversion? Are there other correspondences between glyphs, such as half- vs fullwidth presentation forms?</p>
+</section>
 </section>
 
 
@@ -446,8 +688,20 @@ Georgian scripts are unique in their appearance and their exact origin has never
 <h2 id="boundaries">Structural boundaries &amp; markers</h2>  
   
 <section>
+<h3 id="graphemes">Grapheme boundaries</h3>
+<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
+
+<p class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements when double-clicking on the text, or moving through the text with the cursor, or backspace, etc.? </p>
+
+</section>
+
+
+
+
+  
+<section>
 <h3 id="word">Word boundaries</h3>
- <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 
 <p>Words are  separated by spaces.</p>
 </section>
@@ -457,7 +711,9 @@ Georgian scripts are unique in their appearance and their exact origin has never
 
   
 <section>
-<h3 id="phrase">Phrase boundaries</h3>
+<h3 id="phrase">Phrase &amp; section boundaries</h3>
+<p class="prompts">What characters are used to indicate the boundaries of phrases, sentences, and sections?</p>
+
 <p>Georgian uses standard western punctuation. See <a class="secref">punctuation</a> for a list of non-ASCII punctuation marks used in Georgian according to CLDR.</p>
 <p><span class="codepoint" translate="no"><span lang="ka">&#x10FB;</span> [<a href="/scripts/georgian/block#char10FB"><span class="uname">U+10FB GEORGIAN PARAGRAPH SEPARATOR</span></a>]</span> was formerly used to indicate the end of a paragraph, but is not common in modern Georgian. When used, it appeared at the end of the last line in the paragraph.</p>
 </section>
@@ -467,7 +723,17 @@ Georgian scripts are unique in their appearance and their exact origin has never
 
 
 <section>
-<h3 id="quotations">Quotation marks</h3>
+<h3 id="bracketing">Bracketing &amp; parentheses</h3>
+<p class="prompts">What characters are used as parentheses, or to bracket information?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="quotations">Quotations</h3>
+<p class="prompts">What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue?</p>
 
 <p>According to CLDR, the default quote marks for Georgian are <span class="codepoint" translate="no"><span lang="ka">&#x201E;</span> [<a href="/scripts/punctuation/block#char201E"><span class="uname">U+201E DOUBLE LOW-9 QUOTATION MARK</span></a>]</span> at the start, and <span class="codepoint" translate="no"><span lang="ka">&#x201C;</span> [<a href="/scripts/punctuation/block#char201C"><span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span></a>]</span> at the end. </p>
 <p>When an additional quote is embedded within the first, the quote marks are <span class="codepoint" translate="no"><span lang="ka">&#x00AB;</span> [<a href="/scripts/punctuation/block#char00AB"><span class="uname">U+00AB LEFT-POINTING DOUBLE ANGLE QUOTATION MARK</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ka">&#x00BB;</span> [<a href="/scripts/punctuation/block#char00BB"><span class="uname">U+00BB RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK</span></a>]</span>.</p>
@@ -478,30 +744,104 @@ Georgian scripts are unique in their appearance and their exact origin has never
 
 
 
+  
+<section>
+<h3 id="abbrev">Abbreviation, ellipsis &amp; repetition</h3>
+<p class="prompts">What characters are used to indicate abbreviation, ellipsis &amp; repetition?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="emphasis">Emphasis &amp; text decoration</h3>
+<p class="prompts">How are emphasis and highlighting achieved? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</p>
+
+<p>Modern Georgian tends to use <span class="name">mtavruli</span> characters for a word or phrase to show emphasis or highlight it. The <span class="name">mtavruli</span> characters are used like ALL-CAPS and applied to whole words or phrases, and never just the first letter in a word.</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="inlinenotes">Inline notes &amp; annotations</h3>
+<p class="prompts">What mechanisms, if any, are used to create <u>inline</u> notes and annotations? (For referent-type notes such as footnotes, see below.)</p>
+</section>
+
+</section>
+
+
+
+
+
 
 <section>
-<h3 id="emphasis">Emphasis &amp; highlights</h3>
-<p>Modern Georgian tends to use <span class="name">mtavruli</span> characters for a word or phrase to show emphasis or highlight it. The <span class="name">mtavruli</span> characters are used like ALL-CAPS and applied to whole words or phrases, and never just the first letter in a word.</p>
-</section></section><section>
 <h2 id="paralayout">Line &amp; paragraph layout</h2>
    
       
   <section>
     <h3 id="linebreak">Line breaking &amp; hyphenation</h3>
-    <p>The primary line-break opportunities for Georgian text are the spaces between words.</p>
+    <p class="prompts">Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that?</p>
+<p>The primary line-break opportunities for Georgian text are the spaces between words.</p>
 <p>Georgian uses hyphenation to fit text to lines better.</p>
 
 <figure>
 <p class="large"><img src="images/hyphenation.png" alt=""/></p>
 <figcaption>An example of hyphenation in Georgian<span class="trans"></span>.</figcaption>
 </figure>
+
+
+<p><span class="leadin">Character properties.</span> Characters used for the Georgian  language have the following assignments related to line-break properties.</p>
+<table><tbody>
+<tr><th class="sg">AI</th><td class="count">6</td><td class="chars"><span class="exlist" lang="ka">§ † ‡</span></td></tr>
+<tr><th class="sg">AL</th><td class="count">134</td><td class="chars"><span class="exlist" lang="ka">ი Ი უ Უ ე Ე ო Ო ა Ა პ Პ ფ Ფ ბ Ბ ტ Ტ თ Თ დ Დ კ Კ ქ Ქ გ Გ ყ Ყ წ Წ ც Ც ძ Ძ ჭ Ჭ ჩ Ჩ ჯ Ჯ ვ Ვ ს Ს ზ Ზ შ Შ ჟ Ჟ ღ Ღ ხ Ხ ჰ Ჰ მ Მ ნ Ნ რ Რ ლ Ლ ჻</span></td></tr>
+<tr><th class="sg">B2</th><td class="count">2</td><td class="chars"><span class="exlist" lang="ka">—</span></td></tr>
+<tr><th class="sg">BA</th><td class="count">4</td><td class="chars"><span class="exlist" lang="ka">‐ –</span></td></tr>
+<tr><th class="sg">IN</th><td class="count">2</td><td class="chars"><span class="exlist" lang="ka">…</span></td></tr>
+<tr><th class="sg">OP</th><td class="count">4</td><td class="chars"><span class="exlist" lang="ka">‚ „</span></td></tr>
+<tr><th class="sg">PO</th><td class="count">6</td><td class="chars"><span class="exlist" lang="ka">′ ″ ₾</span></td></tr>
+<tr><th class="sg">PR</th><td class="count">2</td><td class="chars"><span class="exlist" lang="ka">№</span></td></tr>
+<tr><th class="sg">QU</th><td class="count">8</td><td class="chars"><span class="exlist" lang="ka">« » ‘ “</span></td></tr>
+</tbody></table>
+
+
+
+<details id="linebreak_details">
+<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">B2 (break opportunity before and after)</a> the EM DASH  used to set off parenthetical text may allow line breaks before or after, but may also be affected by local orthographic rules.&nbsp;</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BA (break after)</a> indicates that it is normal to break after that character.&nbsp;</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">IN (inseparable characters)</a> is intended to be used consecutively. There is never a line break between two characters of this class.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#OP">OP (open punctuation)</a> 	should be kept with the character that follows. This is desirable, even if there are intervening space characters, as it prevents the appearance of a bare opening punctuation mark at the end of a line.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#OP">PO (postfix numeric)</a> usually follows a numerical expression and may not be separated from preceding numeric characters or preceding closing characters, even if one or more space characters intervene. For example, there is no break opportunity in “(12.00) %”..</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#PR">PR (numeric prefix)</a>  may not be separated from following numeric characters or following opening characters, even if a space character intervenes. For example, there is no break opportunity in “฿ (100.00)”.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#SA">QU (quotation)</a> characters can be opening or closing, or even both, depending on usage. The default is to treat them as both opening and closing.</p>
+</details>
+
+</section>
+
+
+
+<section>
+    <h3 id="hyphenation">Hyphenation</h3>
+<p class="prompts">Is hyphenation used, or something else?</p>
 </section>
 
 
 
  <section>
     <h3 id="justification">Text alignment &amp; justification</h3>
-    <p>TBD</p>
+    <p class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</p>
+</section>
+
+
+
+
+<section>
+    <h3 id="letterspace">Letter spacing</h3>
+<p class="prompts">Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see above.).</p>
 </section>
 
 
@@ -519,48 +859,169 @@ Georgian scripts are unique in their appearance and their exact origin has never
 </figure>
 <p>You can experiment with these styles using the <a href="../../r12a.github.io/apps/counterconverter/apps/counterconverter/">Counter styles converter</a>.</p>
 </section>
-</section>
 <section>
-<h3 id="tbd">TBD</h3>
-<p class="ednote">Further information needed for this section includes:</p>
-<pre style="margin-left: 10%;">
-Glyph shaping &amp; positioning
-    Cursive text
-    Context-based shaping
-    Multiple combining characters
-    Context-based positioning
-    Transforming characters
+  <h3 id="lists">Counters, lists, etc.</h3>
+  
+<p class="prompts">Are there list or other counter styles in use?  If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed? </p>
 
-Structural boundaries &amp; markers
-    Grapheme, word &amp; phrase boundaries
-    Hyphens &amp; dashes
-    Bracketing information
-    Quotations
-    Abbreviations, ellipsis, &amp; repetition
-    Inline notes &amp; annotations
-
-Inline layout
-    Inline text spacing
-    Bidirectional text
-
-Line &amp; paragraph layout
-    Line breaking
-    Hyphenation
-    Text alignment &amp; justification
-    Counters, lists, etc.
-    Styling initials
-    Baselines &amp; inline alignment
-
-Page &amp; book layout
-    General page layout &amp; progression
-    Directional layout features
-	Grids &amp; tables
-    Notes, footnotes, etc.
-    Forms &amp; user interaction
-    Page numbering, running headers, etc.
-</pre>
+<p><a href="https://w3c.github.io/predefined-counter-styles/#tamil-styles">Ready-made Counter Styles</a> lists one additive counter style for use with the Georgian language. You can experiment with this style using the <a href="../../app-counterconverter/">Counter styles converter</a>.</p>
+<figure class="counter_style_comp">
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>georgian<br>
+(additive)</th>
+<td><span class="ex" lang="ka">ა</span></td>
+<td><span class="ex" lang="ka">ბ</span></td>
+<td><span class="ex" lang="ka">გ</span></td>
+<td><span class="ex" lang="ka">დ</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>11</th>
+<th>22</th>
+<th>33</th>
+<th>44</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>georgian<br>
+(additive)</th>
+<td><span class="ex" lang="ka">ია</span></td>
+<td><span class="ex" lang="ka">კბ</span></td>
+<td><span class="ex" lang="ka">ლგ</span></td>
+<td><span class="ex" lang="ka">მდ</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>111</th>
+<th>222</th>
+<th>333</th>
+<th>444</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>georgian<br>
+(additive)</th>
+<td><span class="ex" lang="ka">რია</span></td>
+<td><span class="ex" lang="ka">სკბ</span></td>
+<td><span class="ex" lang="ka">ტლგ</span></td>
+<td><span class="ex" lang="ka">ჳმდ</span></td>
+</tr>
+</tbody>
+</table>
+<figcaption>Counters produced by the Georgian additive counter style.</figcaption>
+</figure>
+<p><span class="leadin">additive</span></p>
+<p>The <span class="kw" translate="no">georgian</span> additive style   uses the  letters shown below. It is  specified for a range between 1 and 19,999. It uses  <span class="name">mkhedruli</span> characters, several of which are archaic in written text.</p>
+<figure class="auto" data-notes="10000,9000,8000,7000,6000,5000,4000,3000,2000,1000,900,800,700,600,500,400,300,200,100,90,80,70,60,50,40,30,20,10,9,8,7,6,5,4,3,2,1"
+data-cols="">ჵ␣ჰ␣ჯ␣ჴ␣ხ␣ჭ␣წ␣ძ␣ც␣ჩ␣შ␣ყ␣ღ␣ქ␣ფ␣ჳ␣ტ␣ს␣რ␣ჟ␣პ␣ო␣ჲ␣ნ␣მ␣ლ␣კ␣ი␣თ␣ჱ␣ზ␣ვ␣ე␣დ␣გ␣ბ␣ა</figure>
 </section>
 
+
+
+
+
+
+
+  
+<section>
+<h3 id="initials">Styling initials</h3>
+<p class="prompts">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? etc.</p>
+</section>
+
+</section>
+
+
+
+
+
+
+<section>
+ <h2 id="pagelayout">Page &amp; book layout</h2>
+ 
+<section>
+    <h3 id="generallayout">General page layout &amp; progression</h3>
+<p class="prompts">How are the main text area and ancilliary areas positioned and defined? Are there any special requirements here, such as dimensions in characters for the Japanese kihon hanmen? The book cover for scripts that are read right-to-left scripts is on the right of the spine, rather than the left.  When content can flow vertically and to the left or right, how to specify the location of objects, text, etc. relative to the flow? Do tables and grid layouts work as expected? How do columns work in vertical text? Can you mix block of vertical and horizontal text? Does text scroll in a different direction?</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="grids">Grids &amp; tables</h3>
+<p class="prompts">Does the script have special requirements for character grids or tables?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="footnotes">Notes, footnotes, etc</h3>
+<p class="prompts">Does the script have special requirements for notes, footnotes, endnotes or other necessary annotations of this kind? (There is a section above for purely inline annotations, such as ruby or warichu. This section is more about annotation systems that separate the reference marks and the content of the notes.)</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="interaction">Forms &amp; user interaction</h3>
+<p class="prompts">Are vertical form controls needed? Are scroll bars in an unusual position? Other special requirements for user interaction?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="headers">Page numbering, running headers, etc</h3>
+<p class="prompts">Are there special conventions for page numbering, or the way that running headers and the like are handled?</p>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+<section>
+<h2 id="languages">Languages using the Georgian script</h2>
+<p>According to ScriptSource, the Georgian script is used for the following languages: </p>
+<ul>
+<li>Abkhazian [abk]</li>
+<li>Georgian [ka]</li>
+<li>Laz [lzz]</li>
+<li>Mingrelian [xmf]</li>
+<li>Avar, Old [oav]</li>
+<li>Ossetic [oss]</li>
+<li>Svan [sva]</li>
+</ul>
+</section>
 
 
  
@@ -569,31 +1030,48 @@ Page &amp; book layout
 
 	<section> 
 
-    <h2 id="refs">Further reading</h2>
+    <h2 id="refs">References</h2>
 		<ol>
-			<!--li>[Daniels] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
-				0-19-507993-0</li-->
-			<li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="doctitle"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
+			<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <span class="doctitle"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
 		    0-19-507993-0</li>
-			<li>[ <sup><a href="http://std.dkuug.dk/JTC1/sc2/WG2/docs/n2908.pdf">e</a></sup> ] Everson et al., <a href="http://std.dkuug.dk/JTC1/sc2/WG2/docs/n2908.pdf">Proposal for encoding the Georgian script in the UCS</a></li>
-			<li>[ <sup><a href="http://en.wikipedia.org/wiki/Georgian_scripts">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Georgian_scripts">Georgian scripts</a></li>
-			<li>[ <sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch11.pdf">u</a></sup> ] <a href="http://www.unicode.org/versions/Unicode6.0.0/ch11.pdf">The Unicode Standard v12.0</a></li>
-			<li>[ <sup><a href="https://medium.com/@akakirazmadze/mtavruli-letters-5665d0aec09c">m</a></sup> ] Akaki Razmadze, <a href="https://medium.com/@akakirazmadze/mtavruli-letters-5665d0aec09c">Mtavruli letters</a></li>
-			<li>[ <sup><a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&amp;uid=aggc6af8cc">ss</a></sup> ] ScriptSource, <a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&amp;uid=aggc6af8cc">Georgian</a></li>
-<li>[ <sup><a href="https://www.unicode.org/wg2/docs/n4712-georgian.pdf">r</a></sup> ] Michael Everson, Nika Gujejiani, &amp; Akaki Razmadze, <a href="https://www.unicode.org/wg2/docs/n4712-georgian.pdf"> Revised proposal for the addition of Georgian characters to the UCS</a></li>
+			<li>[ <a class="fnref" href="http://std.dkuug.dk/JTC1/sc2/WG2/docs/n2908.pdf">e</a> ] Everson et al., <a href="http://std.dkuug.dk/JTC1/sc2/WG2/docs/n2908.pdf">Proposal for encoding the Georgian script in the UCS</a></li>
+<li>[ <a class="fnref" href="https://medium.com/@akakirazmadze/mtavruli-letters-5665d0aec09c">m</a> ] Akaki Razmadze, <a href="https://medium.com/@akakirazmadze/mtavruli-letters-5665d0aec09c">Mtavruli letters</a></li>
+			<li>[ <a class="fnref" href="https://www.unicode.org/wg2/docs/n4712-georgian.pdf">r</a> ] Michael Everson, Nika Gujejiani, &amp; Akaki Razmadze, <a href="https://www.unicode.org/wg2/docs/n4712-georgian.pdf"> Revised proposal for the addition of Georgian characters to the UCS</a></li>
+<li>[ <a class="fnref" href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&amp;uid=aggc6af8cc">ss</a> ] ScriptSource, <a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&amp;uid=aggc6af8cc">Georgian</a></li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode6.0.0/ch11.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode6.0.0/ch11.pdf">The Unicode Standard v12.0</a></li>
+<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Georgian_scripts">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Georgian_scripts">Georgian scripts</a></li>
 		</ol>
 </section>
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/georgian"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-07-14  11:05<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bgeorgian%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fgeorgian%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
+
+<details>
+<summary class="prompts">Show stats</summary>
+
+<table id="charCountList">
+<tr><th>Main</th><td id="mainCharList"></td><td id="mainCharListTotal"></td></tr>
+<tr><th>Auxiliary</th><td id="auxCharList"></td><td id="auxCharListTotal"></td></tr>
+<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
+<tr><th>Other</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
+<tr><th>Deprecated</th><td id="deprecatedCharList"></td><td id="deprecatedCharListTotal"></td></tr>
+</table>
+</details>
+
+
 
 
 <div id="panel" style="display:none"></div>
 
+
+<div class="smallprint"><span id="version"></span></div>
+
+
+
 <script>
-replaceStuff('Georgian', '.georgian', georgian, '', 'ka', '', georgiancols, false)
-replaceStuff('Georgian', '.otherlanguages', otherlanguages, '', 'ka', '', otherlanguagescols, false)
-initialiseSummary('/scripts/georgian/block','ka','Georgian')
+initialiseSummary('/scripts/georgian/block','ka','Georgian','georgian')
+autoTransliterate('ka')
 </script>
 
 </body>
