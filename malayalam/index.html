@@ -44,11 +44,15 @@
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
+<script src="../common/transliterate.js"></script>
+<script src="../common/prompts.js"> </script>
+<script src="../glossary/glossary.js"> </script>
 <script src="../../shared/code/getLinks.js"></script>
 <script src="../linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
 
 <script src="../../shared/fontlists/malayalam.js"> </script>
+<script src="ml-translit.js">  </script>
 </head>
 
 <body>
@@ -106,13 +110,21 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </div>
 </aside>
 
-	<p id="status">Updated Mon 13 Oct 2014  &bull; tags <a href="http://r12a.github.io/blog/index.php?tag=malayalam" title="Show all blog posts tagged with 'malayalam'">malayalam</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+
+
+<p id="status">Updated 
+  <!-- #BeginDate format:Sw1 -->14 December, 2019<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
+
+
 
 	<div class="section">
-	  <p>This page provides basic information about the Malayalam script, and its use for the Malayalam language. It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned.  For character-specific details follow the links to the <a class="linkHighlight" href="block">Malayalam character notes</a>.</p>
-<p>See also the <a href="../../pickers/malayalam/">Malayalam picker</a>.</p>
+	  <p>This page gathers together basic information about the Malayalam script and its use for the Malayalam language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Malayalam using Unicode; for greater details follow the footnote links (especially those with an arrow alongside them).</p>
+<p> For character-specific details follow the links to the <a class="linkHighlight" href="block">Malayalam character notes</a>. See also the <a href="../../pickers/malayalam/" class="linkHighlight">Malayalam character app</a>.</p>
 <p>For similar information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Mlym">script links pages</a>.</p>
 <p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text. Colours and annotations on panels listing characters are relevant to their use for the Malayalam language.</p>
+<p class="instructions">Unless in parentheses, the transcriptions in italics that follow Malayalam text are a <a href="../glossary/#transliteration" class="termref">transliteration</a> developed for these pages. Those in parentheses are usually ISO transcriptions. Transcriptions in <span style="white-space:nowrap;">⌈ brackets ⌋</span> may be phonemic or phonetic.</p>
 </div>
 
 
@@ -224,9 +236,139 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <section>
-<h3 id="inherent">Inherent vowel</h3>
+<h3 id="vowelPhonemes">Vowel sounds</h3>
 
-<p>Consonants carry an inherent vowel usually transcribed and pronounced <span class="ipa">a</span>.  So <span class="charExample" translate="no"><span class="ex" lang="ml">ക</span></span> is pronounced <span class="ipa">ka</span>.</p>
+<p><span class="leadin">Plain vowels.</span></p>
+
+
+<div style="margin-left: 7.5%;">
+<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="white"/>
+      <feComposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <!--image xlink:href="images/vowelgrid.gif" alt="Les caractères sont associés à des octets." x="0" y="0" width="400" height="200"></image--> 
+  <use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -->
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+  
+   <!-- mid close -->
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -->
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- open -->
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+  
+  <!-- close -->
+  <text x="32" y="15" class="ipa" text-anchor="end">i iː</text> 
+<text x="132" y="15" class="ipa" text-anchor="end" filter="url(#solid)">ɨ̆</text>
+<text x="132" y="15" class="ipa" text-anchor="end">ɨ̆</text> 
+  <text x="250" y="15" class="ipa">u uː</text> 
+
+  <!-- close mid -->
+  <text x="57" y="75" class="ipa" text-anchor="end">e eː</text> 
+<text x="250" y="75" class="ipa">o oː</text> 
+
+  <!-- mid -->
+  <text x="158" y="105" class="ipa" text-anchor="middle" filter="url(#solid)">ə</text>
+  <text x="158" y="105" class="ipa" text-anchor="middle">ə</text> 
+
+  <!-- open -->
+  <text x="106" y="195" class="ipa" text-anchor="end">a aː</text> 
+</svg>
+</div>
+
+
+
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Malayalam#Phonology">w</a>.</p>
+<p><span class="leadin">Diphthongs.</span></p>
+
+<div style="margin-left: 7.5%;">
+<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="white"/>
+      <feComposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <!--image xlink:href="images/vowelgrid.gif" alt="Les caractères sont associés à des octets." x="0" y="0" width="400" height="200"></image--> 
+  <use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -->
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+  
+   <!-- mid close -->
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -->
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- open -->
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+  
+  <!-- open -->
+  <text x="106" y="195" class="ipa" text-anchor="end">ai au</text> 
+</svg>
+</div>
+
+
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Malayalam#Phonology">w</a>.</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="inherent">Inherent vowel</h3>
+<p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
+
+<p>The inherent vowel is usually transcribed and pronounced <span class="ipa">a</span>.  So <span class="charExample" translate="no"><span class="ex" lang="ml">ക</span></span> is pronounced <span class="ipa">ka</span>.</p>
 </section>
 
 
@@ -249,14 +391,15 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
  
 <section>
 <h3 id="vowelsigns">Vowel-signs</h3>
+<p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
 
-<p>To produce a different vowel than the inherent one, Malayalam attaches  vowel-signs to  the preceding consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">കി</span> <span class="ipa">ki</span></span>.</p>
-<p>Characters that produce vowel signs are all combining characters. In principle a single character is used per base consonant, but 3 vowel signs decompose to more than one character.</p>
-<p>All vowel-signs are typed and stored <em>after</em> the base consonant, whether or not they precede it when displayed. The font takes care of the glyph positioning.</p>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ാ␣ി␣ീ␣ു␣ൂ␣െ␣േ␣ൊ␣ോ␣ൈ␣ൗ␣ൌ</figure>
-<p>All of the vowel-signs are spacing marks, meaning that they consume horizontal space when added to a base consonant.</p>
+<p>Other than the inherent vowel, vowel sounds that follow a consonant sound are represented using vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">കി</span> <span class="ipa">ki</span></span>. </p>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ി␣ീ␣ു␣ൂ␣െ␣േ␣ൊ␣ോ␣ൈ␣ൗ␣ൌ␣ാ</figure>
 <p>In modern text, <span class="codepoint" translate="no"><span lang="ml">&#x0D57;</span> [<a href="/scripts/malayalam/block#char0D57"><span class="uname">U+0D57 MALAYALAM AU LENGTH MARK</span></a>]</span> has become a dominant way to write the vowel <span class="ipa">au̯</span>, rather than <span class="codepoint" translate="no"><span lang="ml">&#x0D4C;</span> [<a href="/scripts/malayalam/block#char0D4C"><span class="uname">U+0D4C MALAYALAM VOWEL SIGN AU</span></a>]</span>. </p>
 <p>Vowel-signs may also be attached to digits, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">355ാം</span> <span class="trans">355ām̽</span> <span class="meaning">355th</span></span>. <sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u505</a></sup></p>
+
+<p>Malayalam vowel-signs are all combining characters. In principle a single Unicode character is used per base consonant, even if the vowel-signs appear on both sides of the base consonant, but 3 vowel signs decompose to more than one character. See also <a class="secref">multipart</a>. All vowel-signs are typed and stored after the base consonant, and the font puts them in the correct place for display.</p>
+<p>All of the vowel-signs are <em>spacing</em> marks, meaning that they consume horizontal space when added to a base consonant.</p>
 <p>See also <a class="sectionref">vocalics</a>.</p>
 </section>
 
@@ -317,7 +460,8 @@ http://localhost/pickers/malayalam/?text=%0Ac%20%E2%86%92%09k%09g%09c%CA%B0%09j%
  
 <section>
 <h3 id="independentvowels">Standalone vowels</h3>
-<p class="explanatoryintro">Standalone vowels are not preceded by a consonant, and may appear at the beginning or in the middle of a word.</p>
+<p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
+
 <p>Malayalam represents standalone vowels using a set of independent vowel letters. The set includes a character to represent the inherent vowel sound.</p>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">അ␣ആ␣ഇ␣ഈ␣ഉ␣ഊ␣എ␣ഏ␣ഒ␣ഓ␣ഐ␣ഔ</figure>
 </section>
@@ -327,8 +471,7 @@ http://localhost/pickers/malayalam/?text=%0Ac%20%E2%86%92%09k%09g%09c%CA%B0%09j%
 
 <section>
 <h2 id="vocalics">Vocalics</h2>
-
-<p class="explanatoryintro">Vocalics are letters derived from Sanskrit that generally behave like vowels, but represent r/l followed by a vowel. They are often available both as vowel-signs and independent vowel letters.</p>
+<p id="def-vocalic" class="explanatoryintro definitionStub"></p>
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ഋ␣ൠ␣ഌ␣ൡ␣ൃ</figure>
 
@@ -347,10 +490,124 @@ http://localhost/pickers/malayalam/?text=%0Ac%20%E2%86%92%09k%09g%09c%CA%B0%09j%
 
 <section> 
 <h2 id="malayalamchar">Consonants</h2>
-  
+
+
+<section>
+<h3 id="consonantPhonemes">Consonant sounds</h3>
+<table class="ipaTable">
+<thead>
+<tr>
+<th></th>
+<th>labial </th>
+<th>dental </th>
+<th>alveolar </th>
+<th>post-<br>
+alveolar</th>
+<th>retroflex</th>
+<th>palatal </th>
+<th>velar </th>
+<th>glottal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>stop</th>
+<td><span class="ipa">p</span> <span class="ipa">b</span><br>
+<span class="ipa">pʰ</span> <span class="ipa">bʰ</span></td>
+<td><span class="ipa">t</span> <span class="ipa">d</span><br/>
+<span class="ipa">tʰ</span> <span class="ipa">dʰ</span></td>
+<td><span class="ipa">t</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ʈ</span> <span class="ipa">ɖ</span><br/>
+<span class="ipa">ʈʰ</span> <span class="ipa">ɖʰ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">k</span> <span class="ipa">ɡ</span><br/>
+<span class="ipa">kʰ</span> <span class="ipa">ɡʰ</span></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>affricate</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">t͡ʃ</span> <span class="ipa">d͡ʒ</span><br/>
+<span class="ipa">t͡ʃʰ</span> <span class="ipa">d͡ʒʰ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>fricative </th>
+<td><span class="ipa">f</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">s</span></td>
+<td><span class="ipa">ɕ</span></td>
+<td><span class="ipa">ʂ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">h</span></td>
+</tr>
+<tr>
+<th>nasal</th>
+<td><span class="ipa">m</span></td>
+<td><span class="ipa">n̪</span></td>
+<td><span class="ipa">n</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɳ</span></td>
+<td><span class="ipa">ɲ</span></td>
+<td><span class="ipa">ŋ</span></td>
+<td></td>
+</tr>
+<tr>
+<th>approximant</th>
+<td><span class="ipa">ʋ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">l</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɻ</span> <span class="ipa">ɭ</span></td>
+<td><span class="ipa">j</span></td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>trill/flap</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɾ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɽ</span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th></th>
+<td class="mouth"><a href="../common/mouth/mouth_labial.png" target="_blank"><img src="../common/mouth/mouth_small_labial.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_dental.png" target="_blank"><img src="../common/mouth/mouth_small_dental.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_alveolar.png" target="_blank"><img src="../common/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_postalveolar.png" target="_blank"><img src="../common/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_retroflex.png" target="_blank"><img src="../common/mouth/mouth_small_retroflex.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_palatal.png" target="_blank"><img src="../common/mouth/mouth_small_palatal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_velar.png" target="_blank"><img src="../common/mouth/mouth_small_velar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_glottal.png" target="_blank"><img src="../common/mouth/mouth_small_glottal.png" alt=" "/></a></td>
+</tr>
+</tbody>
+</table>
+
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">wp</a>. Sounds in parentheses are non-native or allophones.</p>
+</section>
+
+
+
+
 <section>
 <h3 id="consonantpronunciation">Basic  consonants</h3>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ക␣ഖ␣ഗ␣ഘ␣ങ␣ച␣ഛ␣ജ␣ഝ␣ഞ␣ട␣ഠ␣ഡ␣ഢ␣ണ␣ത␣ഥ␣ദ␣ധ␣ന␣പ␣ഫ␣ബ␣ഭ␣മ␣യ␣ര␣റ␣ല␣ള␣ഴ␣വ␣ശ␣ഷ␣സ␣ഹ</figure>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">പ␣ബ␣ത␣ദ␣ച␣ജ␣ട␣ഡ␣ക␣ഗ␣ഫ␣ഭ␣ഥ␣ധ␣ഛ␣ഝ␣ഠ␣ഢ␣ഖ␣ഘ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">സ␣ഷ␣ശ␣ഹ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">മ␣ന␣ണ␣ഞ␣ങ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">വ␣ര␣റ␣ഴ␣ല␣ള␣യ</figure>
 
 <p>Two other letters, <span class="codepoint" translate="no"><span lang="ml">&#x0D29;</span> [<a href="/scripts/malayalam/block#char0D29"><span class="uname">U+0D29 MALAYALAM LETTER NNNA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ml">&#x0D3A;</span> [<a href="/scripts/malayalam/block#char0D3A"><span class="uname">U+0D3A MALAYALAM LETTER TTTA</span></a>]</span> are historic and used rarely in scholarly texts to represent alveolar sounds. In ordinary texts, <span class="codepoint" translate="no"><span lang="ml">&#x0D28;</span> [<a href="/scripts/malayalam/block#char0D28"><span class="uname">U+0D28 MALAYALAM LETTER NA</span></a> and <span class="codepoint" translate="no"><span lang="ml">&#x0D31;</span> [<a href="/scripts/malayalam/block#char0D31"><span class="uname">U+0D31 MALAYALAM LETTER RRA</span></a>]</span> are used instead</span>.<sup><a href="http://en.wikipedia.org/wiki/Malayalam_script">w</a></sup></p>
 
@@ -367,7 +624,7 @@ http://localhost/pickers/malayalam/?text=%0Ac%20%E2%86%92%09k%09g%09c%CA%B0%09j%
 <section>
 <h3 id="finals">Syllable-final consonants</h3>
 <p>Words ending with <span class="name">chandrakkala</span> may be pronounced with a half-u sound after. In order to indicate a consonant with no following vowel sound at all the following <span class="name">chillu</span> (or <span class="name">cillakṣaram</span>) characters can be used, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">വില്ലൻ</span> <span class="trans">ʋil͓ln̽</span> <span class="ipa">ʋillan</span> <span class="meaning">villain</span></span>.</p>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ൺ␣ൻ␣ർ␣ൽ␣ൾ␣ൿ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ൿ␣ൺ␣ൻ␣ർ␣ൽ␣ൾ</figure>
 
 <p><span class="codepoint" translate="no"><span lang="ml">&#x0D7F;</span> [<a href="/scripts/malayalam/block#char0D7F"><span class="uname">U+0D7F MALAYALAM LETTER CHILLU K</span></a>]</span> is relatively rare.<sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u505</a></sup></p>
 <p> Unicode v9 introduced 3 more chillu letters, <span class="codepoint" translate="no"><span lang="ml">&#x0D54;</span> [<a href="/scripts/malayalam/block#char0D54"><span class="uname">U+0D54 MALAYALAM LETTER CHILLU M</span></a>]</span>, <span class="codepoint" translate="no"><span lang="ml">&#x0D55;</span> [<a href="/scripts/malayalam/block#char0D55"><span class="uname">U+0D55 MALAYALAM LETTER CHILLU Y</span></a>]</span>, and <span class="codepoint" translate="no"><span lang="ml">&#x0D56;</span> [<a href="/scripts/malayalam/block#char0D56"><span class="uname">U+0D56 MALAYALAM LETTER CHILLU LLL</span></a>]</span>, which are not included in CLDR.</p>
@@ -607,36 +864,77 @@ http://localhost/pickers/malayalam/?text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3
 
 <section>
 <h2 id="shaping">Glyph shaping &amp; positioning</h2>
-
+<p>Malayalam is not a cursive script, and there is no need for character transforms.</p>
 <p>You can experiment with examples using the <a href="/pickers/malayalam/">Malayalam picker</a>.</p>
+
+
+
 
 
 <section>
 <h3 id="gsub">Context-based shaping</h3>
 
+  <p class="prompts">Are special glyph forms needed, depending on the context in which a character is used? Do glyphs interact in some circumstances?</p>
 <p>Display technology needs to provide shaping for conjunct formation.</p>
 </section>
+
+
 
 
 <section>
 <h3 id="gpos">Context-based positioning</h3>
 
-			<p>Display technology must correctly position prescript vowels to the left of the consonant or consonant cluster, and place the separate glyphs of 2-part vowels around those also.</p>
+			<p class="prompts"> Are there requirements to position diacritics or other items specially, depending on context? Does the script have multiple diacritics competing for the same location relative to the base?</p>
+<p>Display technology must correctly position prescript vowels to the left of the consonant or consonant cluster, and place the separate glyphs of 2-part vowels around those also.</p>
 <p>It must do a similar thing for display of <span class="uname">RA</span> using the orthographic reforms.</p>
 </section>
+
+
+
+
+  
+<section>
+<h3 id="baselines">Baselines &amp; inline alignment</h3>
+<p class="prompts">Does the script have special requirements for baseline alignment between mixed scripts and in general?</p>
 </section>
 
 
 
 
+<section>
+<h3 id="fontstyle">Font styles</h3>
+<p class="prompts"> Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</p>
+</section>
+</section>
+
+
+ 
+ 
+ 
+ 
 
 
 <section>
 <h2 id="boundaries">Structural boundaries &amp; markers</h2>  
   
 <section>
+<h3 id="graphemes">Grapheme boundaries</h3>
+<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
+
+<p class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements when double-clicking on the text, or moving through the text with the cursor, or backspace, etc.? </p>
+
+</section>
+
+
+
+
+  
+<section>
 <h3 id="word">Word boundaries</h3>
- <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+
+<p class="prompts">Are words separated by spaces, or other characters? Are there special requirements when double-clicking  on the text? Are words hyphenated?</p>
+
 
 <p>Spaces are often used between words, but it is not uncommon for writers to use spacing to indicate phonological pauses, rather than lexical boundaries. <sup><a href="http://scriptsource.org/scr/Mlym">s</a></sup></p>
 <p>Sequences of characters between spaces are often quite long in Malayalam, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">അറിയപ്പെടുന്നുവെങ്കിലും</span> <span class="trans">ạ̄ṙiyp͓peʈun͓nuʋeŋ͓kilum̽</span></span>.</p>
@@ -647,49 +945,262 @@ http://localhost/pickers/malayalam/?text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3
 
   
 <section>
-<h3 id="phrase">Phrase boundaries</h3>
+<h3 id="phrase">Phrase &amp; section boundaries</h3>
+
+<p class="prompts">What characters are used to indicate the boundaries of phrases, sentences, and sections?</p>
 <p>Malayalam uses western punctuation.</p>
 <p>Older texts used <span class="codepoint" translate="no"><span lang="ml">&#x0964;</span> [<a href="/scripts/malayalam/block#char0964"><span class="uname">U+0964 DEVANAGARI DANDA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ml">&#x0965;</span> [<a href="/scripts/malayalam/block#char0965"><span class="uname">U+0965 DEVANAGARI DOUBLE DANDA</span></a>]</span> to separate phrases.</p>
 </section>
+
+
+
+
+
+<section>
+<h3 id="bracketing">Bracketing &amp; parentheses</h3>
+<p class="prompts">What characters are used as parentheses, or to bracket information?</p>
 </section>
- 
- 
- 
- 
- 
+
+
+
+
+  
+<section>
+<h3 id="quotations">Quotations</h3>
+<p class="prompts">What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="abbrev">Abbreviation, ellipsis &amp; repetition</h3>
+<p class="prompts">What characters are used to indicate abbreviation, ellipsis &amp; repetition?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="emphasis">Emphasis &amp; text decoration</h3>
+<p class="prompts">How are emphasis and highlighting achieved? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="inlinenotes">Inline notes &amp; annotations</h3>
+<p class="prompts">What mechanisms, if any, are used to create <u>inline</u> notes and annotations? (For referent-type notes such as footnotes, see below.)</p>
+</section>
+</section>
+
+
+
+
+
+
+
 <section>
 <h2 id="paralayout">Line &amp; paragraph layout</h2>
    
       
-<section>
+  <section>
     <h3 id="linebreak">Line breaking &amp; hyphenation</h3>
+  <p class="prompts">Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that?</p>
 <p>Spaces provide the main line break opportunities.</p>
+
+<p><span class="leadin">Character properties.</span> Characters used for the thisLanguage  language have the following assignments related to line-break properties.</p>
+<table><tbody>
+<tr><th class="sg">AL</th><td class="count">116</td><td class="chars"><span class="exlist" lang="xx">അ ആ ഇ ഈ ഉ ഊ ഋ ഌ എ ഏ ഐ ഒ ഓ ഔ ക ഖ ഗ ഘ ങ ച ഛ ജ ഝ ഞ ട ഠ ഡ ഢ ണ ത ഥ ദ ധ ന പ ഫ ബ ഭ മ യ ര റ ല ള ഴ വ ശ ഷ സ ഹ ൠ ൡ ൺ ൻ ർ ൽ ൾ ൿ</span></td></tr>
+<tr><th class="sg">BA</th><td class="count">4</td><td class="chars"><span class="exlist" lang="xx">। ॥</span></td></tr>
+<tr><th class="sg">CM</th><td class="count">32</td><td class="chars"><span class="exlist" lang="xx">ം ഃ ാ ി ീ ു ൂ ൃ െ േ ൈ ൊ ോ ൌ ് ൗ</span></td></tr>
+<tr><th class="sg">NU</th><td class="count">20</td><td class="chars"><span class="exlist" lang="xx">൦ ൧ ൨ ൩ ൪ ൫ ൬ ൭ ൮ ൯</span></td></tr>
+<tr><th class="sg">PO</th><td class="count">2</td><td class="chars"><span class="exlist" lang="xx">൹</span></td></tr>
+</tbody></table>
+
+
+
+<details id="linebreak_details">
+<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BA (break after)</a> indicates that it is normal to break after that character.&nbsp;</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CP">CP (closing parenthesis)</a> will not cause a break opportunity when appearing in contexts like “(s)he.” In all other respects the breaking behavior of CP and CL are the same.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">NU (number)</a> behaves like ordinary characters (AL) in the context of most characters but activate the prefix and postfix behavior of prefix and postfix characters.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#OP">PO (postfix numeric)</a> usually follows a numerical expression and may not be separated from preceding numeric characters or preceding closing characters, even if one or more space characters intervene. For example, there is no break opportunity in “(12.00) %”..</p>
+</details>
+</section>
+
+
+
+<section>
+    <h3 id="hyphenation">Hyphenation</h3>
+<p class="prompts">Is hyphenation used, or something else?</p>
 </section>
 
 
 
  <section>
     <h3 id="justification">Text alignment &amp; justification</h3>
-    <p>tbd</p>
+    <p class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</p>
+</section>
+
+
+
+
+ <section>
+    <h3 id="letterspace">Letter spacing</h3>
+    <p class="prompts">Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see above.).</p>
 </section>
 
 
 
 
 <section>
-  <h3 id="lists">Counter styles</h3>
+  <h3 id="lists">Counters, lists, etc.</h3>
   
-<p>Malayalam uses, according to the document <a href="https://w3c.github.io/predefined-counter-styles/#tamil-styles">Ready-made Counter Styles</a>, a numeric counter style.</p>
-<p>The  style uses the Malayalam digits: '൦' '൧' '൨' '൩' '൪' '൫' '൬' '൭' '൮' '൯'.</p>
-<figure>
-<p class="large">1&nbsp;⇨&nbsp;<span class="ex" lang="km">൧</span> 2&nbsp;⇨&nbsp;<span class="ex" lang="km">൨</span> 3&nbsp;⇨&nbsp;<span class="ex" lang="km">൩</span> 4&nbsp;⇨&nbsp;<span class="ex" lang="km">൪</span> <br>
-11&nbsp;⇨&nbsp;<span class="ex" lang="km">൧൧</span> 22&nbsp;⇨&nbsp;<span class="ex" lang="km">൨൨</span> 33&nbsp;⇨&nbsp;<span class="ex" lang="km">൩൩</span> 44&nbsp;⇨&nbsp;<span class="ex" lang="km">൪൪</span> <br>
-111&nbsp;⇨&nbsp;<span class="ex" lang="km">൧൧൧</span> 2222&nbsp;⇨&nbsp;<span class="ex" lang="km">൨൨൨</span></p>
-<figcaption>Numbers produced by the numeric counter style<span class="trans"></span>.</figcaption>
+<p class="prompts">Are there list or other counter styles in use?  If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed? </p>
+
+<p><a href="https://w3c.github.io/predefined-counter-styles/#malayalam-styles">Ready-made Counter Styles</a> lists one, numeric, counter style for use with Malayalam. You can experiment with this style using the <a href="../../app-counterconverter/">Counter styles converter</a>.</p>
+<figure class="counter_style_comp">
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>thai<br>
+(numeric)</th>
+<td><span class="ex" lang="th">൧</span></td>
+<td><span class="ex" lang="th">൨</span></td>
+<td><span class="ex" lang="th">൩</span></td>
+<td><span class="ex" lang="th">൪</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>11</th>
+<th>22</th>
+<th>33</th>
+<th>44</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>thai<br>
+(numeric)</th>
+<td><span class="ex" lang="th">൧൧</span></td>
+<td><span class="ex" lang="th">൨൨</span></td>
+<td><span class="ex" lang="th">൩൩</span></td>
+<td><span class="ex" lang="th">൪൪</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>111</th>
+<th>222</th>
+<th>333</th>
+<th>444</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>thai<br>
+(numeric)</th>
+<td><span class="ex" lang="th">൧൧൧</span></td>
+<td><span class="ex" lang="th">൨൨൨</span></td>
+<td><span class="ex" lang="th">൩൩൩</span></td>
+<td><span class="ex" lang="th">൪൪൪</span></td>
+</tr>
+</tbody>
+</table>
+<figcaption>Comparative counters produced by Thai counter styles.</figcaption>
 </figure>
-<p>You can experiment with this style using the <a href="../../r12a.github.io/apps/counterconverter/">Counter styles converter</a>.</p>
+
+
+
+<p><span class="leadin">numeric</span></p>
+<p>The <span class="kw" translate="no">malayalam</span> numeric style  is decimal-based and uses the  digits shown below.</p>
+<figure class="auto" data-cols="trans,transc">൦␣൧␣൨␣൩␣൪␣൫␣൬␣൭␣൮␣൯</figure>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="initials">Styling initials</h3>
+<p class="prompts">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? etc.</p>
 </section>
 </section>
+
+
+
+
+
+
+<section>
+ <h2 id="pagelayout">Page &amp; book layout</h2>
+ 
+<section>
+    <h3 id="generallayout">General page layout &amp; progression</h3>
+<p class="prompts">How are the main text area and ancilliary areas positioned and defined? Are there any special requirements here, such as dimensions in characters for the Japanese kihon hanmen? The book cover for scripts that are read right-to-left scripts is on the right of the spine, rather than the left.  When content can flow vertically and to the left or right, how to specify the location of objects, text, etc. relative to the flow? Do tables and grid layouts work as expected? How do columns work in vertical text? Can you mix block of vertical and horizontal text? Does text scroll in a different direction?</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="grids">Grids &amp; tables</h3>
+<p class="prompts">Does the script have special requirements for character grids or tables?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="footnotes">Notes, footnotes, etc</h3>
+<p class="prompts">Does the script have special requirements for notes, footnotes, endnotes or other necessary annotations of this kind? (There is a section above for purely inline annotations, such as ruby or warichu. This section is more about annotation systems that separate the reference marks and the content of the notes.)</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="interaction">Forms &amp; user interaction</h3>
+<p class="prompts">Are vertical form controls needed? Are scroll bars in an unusual position? Other special requirements for user interaction?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="headers">Page numbering, running headers, etc</h3>
+<p class="prompts">Are there special conventions for page numbering, or the way that running headers and the like are handled?</p>
+</section>
+</section>
+
+
 
 
 
@@ -698,56 +1209,31 @@ http://localhost/pickers/malayalam/?text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3
 
 
 <section>
-    <h3 id="tbd">TBD</h3>
-<p class="ednote">Further information needed for this section includes:</p>
-<pre style="margin-left: 10%;">
-Glyph shaping &amp; positioning
-    Cursive text
-    Context-based shaping
-    Multiple combining characters
-    Context-based positioning
-    Transforming characters
-
-Structural boundaries &amp; markers
-    Grapheme, word &amp; phrase boundaries
-    Hyphens &amp; dashes
-    Bracketing information
-    Quotations
-    Abbreviations, ellipsis, &amp; repetition
-    Emphasis &amp; highlights
-    Inline notes &amp; annotations
-
-Inline layout
-    Inline text spacing
-    Bidirectional text
-
-Line &amp; paragraph layout
-    Text direction
-    Line breaking
-    Hyphenation
-    Text alignment &amp; justification
-    Counters, lists, etc.
-    Styling initials
-    Baselines &amp; inline alignment
-
-Page &amp; book layout
-    General page layout &amp; progression
-    Directional layout features
-	Grids &amp; tables
-    Notes, footnotes, etc.
-    Forms &amp; user interaction
-    Page numbering, running headers, etc.
-</pre>
+<h2 id="languages">Languages using the thisScript script</h2>
+<p>According to ScriptSource, the thisScript script is used for the following languages: </p>
+<ul>
+<li>Allar [all]</li>
+<li>Kurumba, Attapady [pkr]</li>
+<li>Kurumba, Betta [xub]</li>
+<li>Irula [iru]</li>
+<li>Kudiya [kfg]</li>
+<li>Kurichiya [kfh]</li>
+<li>Malayalam [mal]</li>
+<li>Mannan [mjv]</li>
+<li>Muduga [udg]</li>
+<li>Paniya [pcg]</li>
+<li>Ravula [yea]</li>
+</ul>
 </section>
 
 
 
- 
-	
 
 
-	<section> 
 
+
+
+<section> 
     <h2 id="refs">References</h2>
 		<ol>
 			<!--li>[Daniels] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
@@ -760,13 +1246,42 @@ Page &amp; book layout
 </section>
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/malayalam"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-07-14  13:52<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bmalayalam%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fmalayalam%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
+
+<details>
+<summary class="prompts">Show stats</summary>
+
+<table id="charCountList">
+<tr><th>Main</th><td id="mainCharList"></td><td id="mainCharListTotal"></td></tr>
+<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
+<tr><th>Auxiliary</th><td id="auxCharList"></td><td id="auxCharListTotal"></td></tr>
+<tr><th>Other</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
+<tr><th>Deprecated</th><td id="deprecatedCharList"></td><td id="deprecatedCharListTotal"></td></tr>
+</table>
+<script>
+runCharCount('.characterBox', 'mainCharList')
+runCharCount('.auxiliaryBox', 'auxCharList')
+runCharCount('.archaicBox', 'archaicCharList')
+runCharCount('.otherBox', 'otherCharList')
+runCharCount('.deprecatedBox', 'deprecatedCharList')
+</script>
+</details>
+
+
 
 
 <div id="panel" style="display:none"></div>
 
+
+<div class="smallprint"><span id="version"></span></div>
+
+
+
+
 <script>
-initialiseSummary('/scripts/malayalam/block','ml','Malayalam')
+initialiseSummary('/scripts/malayalam/block','ml','Malayalam','malayalam')
+autoTransliterate('ml')
 </script>
 
 </body>
