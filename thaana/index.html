@@ -35,11 +35,15 @@
 <script src="/shared/fontlists/manage.js"></script>
 <script src="/shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
+<script src="../common/transliterate.js"></script>
+<script src="../common/prompts.js"> </script>
+<script src="../glossary/glossary.js"> </script>
 <script src="/shared/code/getLinks.js"></script>
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
 
 <script src="/shared/fontlists/thaana.js"> </script>
+<script src="dv-translit.js">  </script>
 </head>
 
 <body>
@@ -100,16 +104,19 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->15 July, 2019<!-- #EndDate -->
-&bull; tags  <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="https://r12a.github.io/blog/?tag=thaana" title="Show all blog posts tagged with 'arabic'">thaana</a></p>
+  <!-- #BeginDate format:Sw1 -->17 December, 2019<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
+
 
 
 <div class="section">
-  <p>This page provides basic information about the Thaana script, and its use for the Maldivian language, Dhivehi.  It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned.  For character-specific details follow the links to the <a class="linkHighlight" href="block">Thaana character notes</a>. </p>
-<p>See also the <a href="../../pickers/thaana/">Thaana picker</a>.</p>
+  <p>This page gathers together basic information about the Thaana script and its use for the Maldivian language, Dhivehi. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Dhivehi using Unicode; for greater details follow the footnote links (especially those with an arrow alongside them).</p>
+<p> For character-specific details follow the links to the <a class="linkHighlight" href="block">Thaana character notes</a>. See also the <a href="../../pickers/thaana/" class="linkHighlight">Thaana character app</a>.</p>
 <p>For similar information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Thaa">script links pages</a>.</p>
 
 <p class="instructions">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text. Colours and annotations on panels listing characters are relevant to their use for the Dhivehi language.</p>
+<p class="instructions">Unless in parentheses, the transcriptions in italics that follow Tamil text are a <a href="../glossary/#transliteration" class="termref">transliteration</a> developed for these pages. Those in parentheses are usually ISO transcriptions. Transcriptions in <span style="white-space:nowrap;">⌈ brackets ⌋</span> may be phonemic or phonetic.</p>
 </div>
 
 
@@ -170,21 +177,21 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
   
   
- <section>
+ 
+<section>
 <h2 id="chars">Character lists</h2>
-  <p>The Thaana script characters in Unicode 10.0 is in a single block:</p>
-  <ul>
-<li><a href="/uniview/?block=arabic">Thaana</a> <span class="charCount">39 letters, 11 marks : total 50</span></li></ul>
-    <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
-<ul>
-<li>
-<p><a href="/app-charuse/?language=dv" target="_blank">Dhivehi</a> <span class="charCount">39 letters, 11 marks, 2 punctuation :   total 52</span></p>
-</li>
+  <p>Version 12.0 of the Unicode Standard has the following blocks dedicated to the thisScript script (numbers in lists are non-ASCII only):</p>
+    <ul>
+<li><a href="/uniview/?block=arabic">Thaana</a> <span class="charCount">39 letters, 11 marks : total 50</span></li>
 </ul>
-<p>For character-specific details see 
-  <a class="linkHighlight" href="/scripts/thaana/block">Thaana character notes</a>.</p>
+<p>Apart from ASCII characters, the Dhivehi orthography described here uses 51 characters <!--(and @@ more, used infrequently)--> from the following Unicode blocks: </p>
+    <ul>
+    <li> <a href="/uniview/?block=nko">Thaana</a> <span class="charCount">38 letters, 11 marks : total  49</span></li>
+<li> <a href="/uniview/?block=general_punctuation">Arabic</a> <span class="charCount">2 punctuation : total 2</span></li>
+</ul>
+ <p><cite>Character Usage</cite> has information about the following orthography associated with this script: <a href="/app-charuse/?language=dv" target="_blank">Divehi</a></p>
+<p>For detailed character-specific information see the <a class="linkHighlight" href="/scripts/thaana/block">Thaana character notes</a>.</p>
 </section>
-
 
 
 
@@ -203,10 +210,18 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
+<section>
+<h2 id="structure">Structure</h2>
+    <p>Native Maldivian words do not allow initial consonant clusters. The syllable structure is (C)V(C), ie. one vowel with the option of a consonant in the onset and/or coda. This affects the introduction of loanwords, such as <span class="ipa">is.kuːl</span> from English <span class="meaning">school</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Maldivian_phonology">wp</a></p>
+</section>
+
+
+
+
 
 
 <section id="dir">
-    <h2>Text direction</h2>
+<h2>Text direction</h2>
     <p>Thaana script is written horizontally and right-to-left in the main, but as with most RTL scripts, numbers and embedded LTR script text are written left-to-right (producing 'bidirectional' text). </p>
     <figure>
     <p dir="rtl" lang="dv" class="large"><span  class="ex">7.2.2 ބައްތެލި</span></p>
@@ -219,16 +234,88 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
   <section>
   <h2 id="vowels">Vowels</h2>
-    <p>All vowels are always written, but as diacritics above or below the consonant they follow. </p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ަ␣ާ␣ި␣ީ␣ު␣ޫ␣ެ␣ޭ␣ޮ␣ޯ␣ް</figure>
+
+<section>
+<h3 id="vowelPhonemes">Vowel sounds</h3>
+<div style="margin-left: 7.5%;">
+<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="white"/>
+      <feComposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <!--image xlink:href="images/vowelgrid.gif" alt="Les caractères sont associés à des octets." x="0" y="0" width="400" height="200"></image--> 
+  <use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -->
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+  
+   <!-- mid close -->
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -->
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- open -->
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+  
+  <!-- close -->
+  <text x="32" y="15" class="ipa" text-anchor="end">i iː</text> 
+  <text x="250" y="15" class="ipa">u uː</text> 
+
+  <!-- close mid -->
+  <text x="57" y="75" class="ipa" text-anchor="end">e eː</text> 
+  <text x="250" y="75" class="ipa">o oː</text> 
+
+  <!-- mid -->
+  <text x="158" y="105" class="ipa" text-anchor="middle" filter="url(#solid)">ə</text>
+  <text x="158" y="105" class="ipa" text-anchor="middle">ə əː</text> 
+
+</svg>
+</div>
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Maldivian_phonology">wp</a>. </p>
+</section>
+
 
 
 
 
 
 <section>
+<h3 id="basicvowels">Vowel diacritics</h3>
+   <p>All vowels are always written, but as diacritics above or below the consonant they follow. </p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ި␣ީ␣ު␣ޫ␣ެ␣ޭ␣ަ␣ާ␣ޮ␣ޯ</figure>
+</section>
+
+
+
+
+<section>
 <h3 id="novowel">Vowel absence</h3>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ް</figure>
     <p>The  diacritic <span class="codepoint"><span lang="dv" dir="rtl">&#x25CC;&#x07B0;</span> <a href="/scripts/thaana/block#char07B0">[<span class="uname">U+07B0 THAANA SUKUN​</span>]</a></span> indicates that there is no vowel following the consonant it sits on. This is always used, with one exception: when <span class="codepoint"><span lang="dv" dir="rtl">&#x0781;</span> <a href="/scripts/thaana/block#char0781">[<span class="uname">U+0781 THAANA LETTER SHAVIYANI</span>]</a></span> is written with no diacritic, this indicates prenasalization of a following stop, eg. <span class="ex" lang="dv">ކަނޑު</span> <span class="ipa">kaⁿɖu</span> <span class="meaning">sea</span>. It is the only case where a letter can appear without a diacritic. </p>
 </section>
 
@@ -239,7 +326,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <section>
 <h3 id="independentvowels">Standalone vowels</h3>
-<p class="explanatoryintro">Standalone vowels are not preceded by a consonant, and may appear at the beginning or in the middle of a word.</p>
+<p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
+
 <p>Thaana represents standalone vowels using   <span class="codepoint"><span lang="dv" dir="rtl">&#x0787;</span> <a href="/scripts/thaana/block#char0787">[<span class="uname">U+0787 THAANA LETTER ALIFU</span>]</a></span> as a base, to which vowel diacritics are attached.</p>
 </section>
 </section>
@@ -251,13 +339,141 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <section>
 <h2 id="consonants">Consonants</h2>
-    
+
+
+<section>
+<h3 id="consonantPhonemes">Consonant sounds</h3>
+<table class="ipaTable">
+<thead>
+<tr>
+<th></th>
+<th>labial </th>
+<th>dental </th>
+<th>alveolar </th>
+<th>post-<br>
+alveolar</th>
+<th>retroflex</th>
+<th>palatal </th>
+<th>velar </th>
+<th>uvular</th>
+<th>pharyngeal</th>
+<th>glottal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>stop</th>
+<td><span class="allophone">p</span> <span class="ipa">b</span><br/><span class="ipa">ᵐb</span></td>
+<td><span class="ipa">t</span> <span class="ipa">d</span><br/><span class="ipa">ⁿd</span><br/>
+<span class="allophone">tˤ</span> <span class="allophone">dˤ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ʈ</span> <span class="ipa">ɖ</span><br/><span class="ipa">ᶯɖ</span></td>
+<td><span class="ipa">c</span> <span class="ipa">ɟ</span></td>
+<td><span class="ipa">k</span> <span class="ipa">ɡ</span><br/><span class="ipa">ᵑɡ</span></td>
+<td><span class="ipa">q</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>affricate</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>fricative </th>
+<td><span class="ipa">f</span></td>
+<td><span class="allophone">θ</span> <span class="allophone">ð</span></td>
+<td><span class="ipa">s</span> <span class="ipa">z</span><br/>
+<span class="allophone">sˤ</span> <span class="allophone">zˤ</span></td>
+<td><span class="allophone">ʃ</span> <span class="allophone">ʒ</span></td>
+<td><span class="ipa">ʂ</span></td>
+<td><span class="ipa">ɕ</span></td>
+<td><span class="allophone">x</span> <span class="allophone">ɣ</span></td>
+<td>&nbsp;</td>
+<td><span class="allophone">ħ</span> <span class="allophone">ʕ</span></td>
+<td><span class="ipa">h</span></td>
+</tr>
+<tr>
+<th>nasal</th>
+<td><span class="ipa">m</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">n</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɳ</span></td>
+<td><span class="ipa">ɲ</span></td>
+<td><span class="ipa">ŋ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>approximant</th>
+<td><span class="ipa">ʋ</span> <span class="allophone">w</span></td>
+<td><span class="ipa">l̪</span></td>
+<td><span class="ipa">l</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɭ</span></td>
+<td><span class="ipa">j</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>trill/flap</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">r</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th></th>
+<td class="mouth"><a href="../common/mouth/mouth_labial.png" target="_blank"><img src="../common/mouth/mouth_small_labial.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_dental.png" target="_blank"><img src="../common/mouth/mouth_small_dental.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_alveolar.png" target="_blank"><img src="../common/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_postalveolar.png" target="_blank"><img src="../common/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_retroflex.png" target="_blank"><img src="../common/mouth/mouth_small_retroflex.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_palatal.png" target="_blank"><img src="../common/mouth/mouth_small_palatal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_velar.png" target="_blank"><img src="../common/mouth/mouth_small_velar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_uvular.png" target="_blank"><img src="../common/mouth/mouth_small_uvular.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_pharyngeal.png" target="_blank"><img src="../common/mouth/mouth_small_pharyngeal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_glottal.png" target="_blank"><img src="../common/mouth/mouth_small_glottal.png" alt=" "/></a></td>
+</tr>
+</tbody>
+</table>
+
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Maldivian_phonology">wp</a>. Phones in a lighter colour are non-native or allophones.</p>
+</section>
+
+
+
+
+
+
   <section>
     <h3 id="basic_consonants">Basic consonants</h3>
 
     <p>For writing the languages of the Maldives there are 24 consonants in this block.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ހ␣ށ␣ނ␣ރ␣ބ␣ޅ␣ކ␣އ␣ވ␣މ␣ފ␣ދ␣ތ␣ލ␣ގ␣ޏ␣ސ␣ޑ␣ޒ␣ޓ␣ޔ␣ޕ␣ޖ␣ޗ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ޕ␣ބ␣ތ␣ދ␣ޗ␣ޖ␣ޓ␣ޑ␣ކ␣ގ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ފ␣ވ␣ސ␣ޒ␣ށ␣ހ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">މ␣ނ␣ޏ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ރ␣ލ␣ޅ␣ޔ␣އ</figure>
 
 </section>
     
@@ -266,7 +482,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
     <h3 id="transcription">Repertoire extension</h3>
     <p>A further 14 dotted versions of the normal consonants are available for transcribing Arabic sounds and the  English sound <span class="ipa">ʒ</span> (<span class="ex" lang="dv">ޜ</span>).</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ޘ␣ޙ␣ޚ␣ޛ␣ޜ␣ޝ␣ޞ␣ޟ␣ޠ␣ޡ␣ޢ␣ޣ␣ޤ␣ޥ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ޠ␣ޟ␣ޤ␣ޘ␣ޛ␣ޞ␣ޡ␣ޝ␣ޜ␣ޚ␣ޣ␣ޙ␣ޢ␣ޥ</figure>
 
 </section>
     
@@ -287,7 +503,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
     
     
   <section>
-    <h2 id="gemination">Consonant clusters</h2>
+  <h2 id="gemination">Consonant clusters</h2>
 <p>The  diacritic <span class="codepoint"><span lang="dv" dir="rtl">&#x25CC;&#x07B0;</span> <a href="/scripts/thaana/block#char07B0">[<span class="uname">U+07B0 THAANA SUKUN</span>]</a></span> attached to a consonant signifies that it is not followed by a vowel.</p>
     <p>The <span class="name">sukun</span> is also used over a few other characters to indicate gemination of the following consonant,  eg. <span class="ex" dir="rtl" lang="dv">ބައްޓެއް</span> <span class="ipa">baʈʈeʔ</span> <span class="meaning">eggplant</span>, and <span class="ex" dir="rtl" lang="dv">އެންމެ</span> <span class="ipa">emme</span> <span class="meaning">only</span>.</p>
   </section>
@@ -319,54 +535,196 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <h2 id="digits">Numbers, dates, currency, etc.</h2>
     <p>Either european digits or arabic-indic digits are used.</p>
   </section>
-  
-  
-  
+
+
+
+
+
+
+<section>
+<h2 id="shaping">Glyph shaping &amp; positioning</h2>
+
+<p>The Thaana script is not cursive, and involves no significant context-based shaping or positioning.</p>
+<p>The script is unicameral and needs no transforms to convert between code points.</p>
+<p>You can experiment with examples using the <a href="/pickers/thaana/">Thaana character app</a>.</p>
+
+
+
+
+<section>
+<h3 id="baselines">Baselines &amp; inline alignment</h3>
+<p class="prompts">Does the script have special requirements for baseline alignment between mixed scripts and in general?</p>
+</section>
+
+
+
+
+<section>
+<h3 id="fontstyle">Font styles</h3>
+<p class="prompts"> Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</p>
+</section>
+</section>
+
+
+
+
+
+
+
+<section>
+<h2 id="boundaries">Structural boundaries &amp; markers</h2>  
   
 <section>
-<h2 id="boundaries">Structural boundaries &amp; markers</h2>
+<h3 id="graphemes">Grapheme boundaries</h3>
+<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
+
+<p class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements when double-clicking on the text, or moving through the text with the cursor, or backspace, etc.? </p>
+
+</section>
+
+
+
 
   
- <section>
-<h3 id="punctuation">Word boundaries</h3>
-    <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+<section>
+<h3 id="word">Word boundaries</h3>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+
+<p class="prompts">Are words separated by spaces, or other characters? Are there special requirements when double-clicking  on the text? Are words hyphenated?</p>
+
+
 <p>Words are separated by spaces.</p>
- </section>
- 
+</section>
 
- 
- 
- 
-   
+
+
+
+  
 <section>
-<h3 id="phrase">Phrase boundaries</h3>
+<h3 id="phrase">Phrase &amp; section boundaries</h3>
 
-
+<p class="prompts">What characters are used to indicate the boundaries of phrases, sentences, and sections?</p>
 <p>Dhivehi punctuation uses a mixture of western and Arabic punctuation. The latter includes, in particular, <span class="codepoint" translate="no"><span lang="dv" dir="rtl">&#x060C;</span> [<a href="/scripts/thaana/block#char060C"><span class="uname">U+060C ARABIC COMMA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="dv" dir="rtl">&#x061B;</span> [<a href="/scripts/thaana/block#char061B"><span class="uname">U+061B ARABIC SEMICOLON</span></a>]</span>.</p>
-
 <p>In the  sample text at the top of the page Arabic commas and ASCII full stops are mixed together.</p>
-
 <figure>
-    <p dir="rtl" lang="dv" class="large"><span class="ex">އުފަންވަނީ،</span></p>
-    <figcaption>An excerpt from the sample text above showing the use of an arabic comma.</figcaption>
-   </figure>
+<p dir="rtl" lang="dv" class="large"><span class="ex">އުފަންވަނީ،</span></p>
+<figcaption>An excerpt from the sample text above showing the use of an arabic comma.</figcaption>
+</figure>
+</section>
+
+
+
+
+
+<section>
+<h3 id="bracketing">Bracketing &amp; parentheses</h3>
+<p class="prompts">What characters are used as parentheses, or to bracket information?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="quotations">Quotations</h3>
+<p class="prompts">What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="abbrev">Abbreviation, ellipsis &amp; repetition</h3>
+<p class="prompts">What characters are used to indicate abbreviation, ellipsis &amp; repetition?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="emphasis">Emphasis &amp; text decoration</h3>
+<p class="prompts">How are emphasis and highlighting achieved? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="inlinenotes">Inline notes &amp; annotations</h3>
+<p class="prompts">What mechanisms, if any, are used to create <u>inline</u> notes and annotations? (For referent-type notes such as footnotes, see below.)</p>
 </section>
 </section>
 
 
-<section>
-    <h2 id="para">Line &amp; paragraph layout</h2>
+
+
+
+
 
 
 <section>
-    <h3 id="justify">Text alignment &amp; justification</h3>
+<h2 id="paralayout">Line &amp; paragraph layout</h2>
+   
+      
+  <section>
+    <h3 id="linebreak">Line breaking &amp; hyphenation</h3>
+  <p class="prompts">Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that?</p>
+<p><span class="leadin">Character properties.</span> Characters used for the Dhivehi  language have the following assignments related to line-break properties.</p>
+<table><tbody>
+<tr><th class="sg">AL</th><td class="count">76</td><td class="chars"><span class="exlist" lang="xx">ޕ ބ ތ ދ ޗ ޖ ޓ ޑ ކ ގ ފ ވ ސ ޒ ށ ހ މ ނ ޏ ރ ލ ޅ ޔ އ ޠ ޟ ޤ ޘ ޛ ޞ ޡ ޝ ޜ ޚ ޣ ޙ ޢ ޥ</span></td></tr>
+<tr><th class="sg">CM</th><td class="count">22</td><td class="chars"><span class="exlist" lang="xx">ި ީ ު ޫ ެ ޭ ަ ާ ޮ ޯ ް</span></td></tr>
+<tr><th class="sg">EX</th><td class="count">2</td><td class="chars"><span class="exlist" lang="xx">؛</span></td></tr>
+<tr><th class="sg">IS</th><td class="count">2</td><td class="chars"><span class="exlist" lang="xx">،</span></td></tr>
+</tbody></table>
+
+
+<details id="linebreak_details">
+<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#EX">EX (exclamation mark/interrogation)</a> behave like closing characters, except in relation to postfix (PO) and non-starter characters (NS).</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">IS (infix numeric separators)</a> usually occurs inside a numerical expression and may not be separated from the numeric characters that follow, unless a space character intervenes. For example, there is no break in “100.00” or “10,000”, nor in “12:59”..</p>
+</details>
+</section>
+
+
+
+<section>
+    <h3 id="hyphenation">Hyphenation</h3>
+<p class="prompts">Is hyphenation used, or something else?</p>
+</section>
+
+
+
+ <section>
+    <h3 id="justification">Text alignment &amp; justification</h3>
+    <p class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</p>
     <p><span class="ednote">I'm not sure how justification works, but assume it is like in English.</span></p>
     <p class="instructions">Use the control below to see how your browser justifies the text sample here.</p>
     <p dir="rtl" lang="dv" id="justificationExample" style="text-align:start;">ހުރިހާ އިންސާނުންވެސް ދުނިޔެއަށް އުފަންވަނީ، މިނިވަންކަމުގައި، ހަމަހަމަ ޙައްޤުތަކަކާއެކު، ހަމަހަމަ ދަރަޖައެއްގައި ކަމޭހިތެވިގެންވާ ބައެއްގެ ގޮތުގައެވެ.  ހެޔޮ ވިސްނުމާއި، ހެޔޮބުއްދީގެ ބާރު އެމީހުންނަށް ލިބިގެންވެއެވެ.</p>
     <p class="english" dir="ltr">
       <button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Justify   </button>
     </p>
-  </section>
+</section>
+
+
+
+
+ <section>
+    <h3 id="letterspace">Letter spacing</h3>
+    <p class="prompts">Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see above.).</p>
+</section>
+
+
+
+
+<section>
+  <h3 id="lists">Counters, lists, etc.</h3>
+  
+<p class="prompts">Are there list or other counter styles in use?  If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed? </p>
 </section>
 
 
@@ -375,47 +733,60 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
+  
 <section>
-<h3 id="tbd">TBD</h3>
-<p class="ednote">Further information needed for this section includes:</p>
-<pre style="margin-left: 10%;">
-Glyph shaping &amp; positioning
-    Cursive text
-    Context-based shaping
-    Multiple combining characters
-    Context-based positioning
-    Transforming characters
+<h3 id="initials">Styling initials</h3>
+<p class="prompts">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? etc.</p>
+</section>
+</section>
 
-Structural boundaries &amp; markers
-    Grapheme, word &amp; phrase boundaries
-    Hyphens &amp; dashes
-    Bracketing information
-    Quotations
-    Abbreviations, ellipsis, &amp; repetition
-    Emphasis &amp; highlights
-    Inline notes &amp; annotations
 
-Inline layout
-    Inline text spacing
-    Bidirectional text
 
-Line &amp; paragraph layout
-    Text direction
-    Line breaking
-    Hyphenation
-    Text alignment &amp; justification
-    Counters, lists, etc.
-    Styling initials
-    Baselines &amp; inline alignment
 
-Page &amp; book layout
-    General page layout &amp; progression
-    Directional layout features
-	Grids &amp; tables
-    Notes, footnotes, etc.
-    Forms &amp; user interaction
-    Page numbering, running headers, etc.
-</pre>
+
+<section>
+ <h2 id="pagelayout">Page &amp; book layout</h2>
+ 
+<section>
+    <h3 id="generallayout">General page layout &amp; progression</h3>
+<p class="prompts">How are the main text area and ancilliary areas positioned and defined? Are there any special requirements here, such as dimensions in characters for the Japanese kihon hanmen? The book cover for scripts that are read right-to-left scripts is on the right of the spine, rather than the left.  When content can flow vertically and to the left or right, how to specify the location of objects, text, etc. relative to the flow? Do tables and grid layouts work as expected? How do columns work in vertical text? Can you mix block of vertical and horizontal text? Does text scroll in a different direction?</p>
+</section>
+
+
+
+
+
+<section>
+<h3 id="grids">Grids &amp; tables</h3>
+<p class="prompts">Does the script have special requirements for character grids or tables?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="footnotes">Notes, footnotes, etc</h3>
+<p class="prompts">Does the script have special requirements for notes, footnotes, endnotes or other necessary annotations of this kind? (There is a section above for purely inline annotations, such as ruby or warichu. This section is more about annotation systems that separate the reference marks and the content of the notes.)</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="interaction">Forms &amp; user interaction</h3>
+<p class="prompts">Are vertical form controls needed? Are scroll bars in an unusual position? Other special requirements for user interaction?</p>
+</section>
+
+
+
+
+  
+<section>
+<h3 id="headers">Page numbering, running headers, etc</h3>
+<p class="prompts">Are there special conventions for page numbering, or the way that running headers and the like are handled?</p>
+</section>
 </section>
 
 
@@ -430,10 +801,11 @@ Page &amp; book layout
 <section>
 <h2 id="refs">References</h2>
 <ol>
-<li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN
+<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN
 				0-19-507993-0</li>
-<li>[ <sup><a href="http://en.wikipedia.org/wiki/Thaana">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Thaana">Thaana</a></li>
-<li>[ <sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch11.pdf">u</a></sup> ] <a href="http://www.unicode.org/versions/Unicode6.0.0/ch11.pdf">The Unicode Standard v10.0</a>, pp511-512</li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode6.0.0/ch11.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode6.0.0/ch11.pdf">The Unicode Standard v10.0</a>, pp511-512</li>
+<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Thaana">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Thaana">Thaana</a></li>
+<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Maldivian_phonology">wp</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Maldivian_phonology">Thaana phonology</a></li>
 </ol>
 </section>
 
@@ -441,14 +813,32 @@ Page &amp; book layout
 
 
 
+<details>
+<summary class="prompts">Show stats</summary>
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/thaana"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-07-15  6:43<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bthaana%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fthaana%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<table id="charCountList">
+<tr><th>Main</th><td id="mainCharList"></td><td id="mainCharListTotal"></td></tr>
+<tr><th>Auxiliary</th><td id="auxCharList"></td><td id="auxCharListTotal"></td></tr>
+<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
+<tr><th>Other</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
+<tr><th>Deprecated</th><td id="deprecatedCharList"></td><td id="deprecatedCharListTotal"></td></tr>
+</table>
+</details>
+
+
 
 
 <div id="panel" style="display:none"></div>
+
+
+<div class="smallprint"><span id="version"></span></div>
+
+
+
 </body>
 <script>
-initialiseSummary('/scripts/thaana/block','dv','Thaana')
+initialiseSummary('/scripts/thaana/block','dv','Thaana','thaana')
+autoTransliterate('dv')
 </script>
 
 </html>
