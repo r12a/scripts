@@ -35,11 +35,15 @@
 <script src="/shared/fontlists/manage.js"></script>
 <script src="/shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
+<script src="../common/transliterate.js"></script>
+<script src="../common/prompts.js"> </script>
+<script src="../glossary/glossary.js"> </script>
 <script src="/shared/code/getLinks.js"></script>
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
 
 <script src="/shared/fontlists/buginese.js"> </script>
+<script src="bug-translit.js">  </script>
 </head>
 
 <body>
@@ -100,15 +104,17 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->2 August, 2019<!-- #EndDate -->
-&bull; tags  <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="http://r12a.github.io/blog/?tag=buginese" title="Show all blog posts tagged with 'buginese'">buginese</a></p>
+  <!-- #BeginDate format:Sw1 -->17 December, 2019<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
 
 
 <section>
-  <p>This page provides basic information about the Buginese script, and its use for the Bugis language. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned.   For character-specific details follow the links to the <a class="linkHighlight" href="block">Buginese character notes</a>. </p>
-<p>See also the <a href="../../pickers/buginese/">Buginese picker</a>.</p>
+  <p>This page gathers together basic information about the Buginese script and its use for the Bugis language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Bugis using Unicode; for greater details follow the footnote links (especially those with an arrow alongside them).</p>
+<p> For character-specific details follow the links to the <a class="linkHighlight" href="block">Buginese character notes</a>. See also the <a href="../../pickers/buginese/" class="linkHighlight">Buginese character app</a>.</p>
 <p>For similar information related to other scripts, see the <a class="linkHighlight" href="../links?iso=Bugi">script links pages</a>.</p>
 <p class="instructions" style="font-size: 80%; line-height: 1.4;">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text. Colours and annotations on panels listing characters are relevant to their use for the Bugis language.</p>
+<p class="instructions" style="font-size: 80%; line-height: 1.4;">Unless in parentheses, the transcriptions in italics that follow Tamil text are a <a href="../glossary/#transliteration" class="termref">transliteration</a> developed for these pages. Those in parentheses are usually ISO transcriptions. Transcriptions in <span style="white-space:nowrap;">⌈ brackets ⌋</span> may be phonemic or phonetic.</p>
 </section>
 
 
@@ -156,7 +162,26 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
   
   
-<div id="showTranscriptions">
+ <section>
+<h2 id="chars">Character lists</h2>
+  <p>Version 12.0 of the Unicode Standard has the following blocks dedicated to the Buginese script (numbers in lists are non-ASCII only):</p>
+    <ul>
+      <li><a href="/uniview/?block=buginese">Buginese</a> <span class="charCount">23 letters, 5 marks, 2 punctuation :   total 30</span></li>
+</ul>
+<p>Apart from ASCII characters, the Bugis orthography described here uses 30 characters <!--(and @@ more, used infrequently)--> from the following Unicode blocks: </p>
+    <ul>
+    <li><a href="/uniview/?block=buginese">Buginese</a> <span class="charCount">23 letters, 5 marks, 2 punctuation :   total 30</span></li>
+<!--li> <a href="/uniview/?block=general_punctuation">General punctuation</a> <span class="charCount">4 punctuation : total 4  &nbsp; (+ 5 infrequent)</span></li-->
+</ul>
+ <p><cite>Character Usage</cite> has information about the following orthographies associated with this script: <a href="/app-charuse/?language=bug" target="_blank">Buginese</a></p>
+<p>For detailed character-specific information see the <a class="linkHighlight" href="/scripts/buginese/block">Buginese character notes</a>.</p>
+</section>
+
+
+
+
+
+ <div id="showTranscriptions">
 <div>In yellow boxes, show:</div>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
@@ -168,27 +193,9 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
+
 <section>
-    <h2 id="chars">Character lists</h2>
-<p>The Buginese script characters in Unicode 10.0 are in the following block: </p>
-    <ul>
-      <li> <a href="/uniview/?block=buginese">Buginese</a> (30 characters)      </li>
-    </ul>
-     <p>Follow these links for information about characters used by languages associated with this script. The numbers in parentheses refer to <strong>non-ASCII</strong> characters.</p>
-<ul>
-<li>
-<p><a href="/app-charuse/?language=bug" target="_blank">Buginese</a> &nbsp;&nbsp; <span class="charCount">23 letters, 5 marks, 2 punctuation :   total 30</span></p>
-</li>
-</ul>
-<p>For character-specific details see <a class="linkHighlight" href="/scripts/buginese/block">Buginese character notes</a>.</p>
-</section>
-
-
-
-
-
- <section>
-    <h2 id="dir">Text direction</h2>
+ <h2 id="dir">Text direction</h2>
     <p>Buginese script is written in horizontally stacked lines. Characters run left to right inside a line.</p>
     <p>In older journal text when space runs out on a page, scribes used to run the text into the margin and continue in bostrophedon arrangements.</p>
 </section>
@@ -201,10 +208,81 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <section>
     <h2 id="vowels">Vowels</h2>
   
+
+<section>
+<h3 id="vowelPhonemes">Vowel sounds</h3>
+
+<div style="margin-left: 7.5%;">
+<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="white"/>
+      <feComposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <!--image xlink:href="images/vowelgrid.gif" alt="Les caractères sont associés à des octets." x="0" y="0" width="400" height="200"></image--> 
+  <use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -->
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+  
+   <!-- mid close -->
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -->
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- open -->
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+  
+  <!-- close -->
+  <text x="32" y="15" class="ipa" text-anchor="end">i</text> 
+  <text x="250" y="15" class="ipa">u</text> 
+
+  <!-- close mid -->
+  <text x="57" y="75" class="ipa" text-anchor="end">e</text> 
+  <text x="250" y="75" class="ipa">o</text> 
+
+  <!-- mid -->
+  <text x="158" y="105" class="ipa" text-anchor="middle" filter="url(#solid)">ə</text>
+  <text x="158" y="105" class="ipa" text-anchor="middle">ə</text> 
+
+  <!-- open -->
+  <text x="106" y="195" class="ipa" text-anchor="end">a</text> 
+</svg>
+</div>
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Buginese_language#Phonology">w</a>.</p>
+<p class="ednote">There's something odd here and later about a vs ə. Need to figure out which is right.</p>
+</section>
+
+
+
+
 <section>
 <h3 id="inherent">Inherent vowel</h3>
+<p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
 
-<p>Consonants carry an <a href="../glossary/#inherentvowel" class="termref">inherent vowel</a> <span class="ipa">a</span>,  pronounced <span class="ipa">ɔ</span>. So <span class="charExample" translate="no"><span class="charExample" translate="no"><span class="ex" lang="bug">ᨀ</span></span></span> is pronounced <span class="ipa">kɔ</span>.</p>
+<p>The inherent vowel, typically written<a href="../glossary/#inherentvowel" class="termref"></a> <span class="ipa">a</span>,  is pronounced <span class="ipa">ɔ</span>. So <span class="charExample" translate="no"><span class="charExample" translate="no"><span class="ex" lang="bug">ᨀ</span></span></span> is pronounced <span class="ipa">kɔ</span>.</p>
 </section>
 
 
@@ -213,35 +291,43 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <section>
 <h3 id="vowelsigns">Vowel signs</h3>
- 
-    <p>To produce a different vowel than the inherent one, Buginese attaches  vowel signs to  the preceding consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="bug">ᨀᨗ</span> <span class="ipa">ki</span></span>.</p>
-<p>Buginese vowel signs are all combining characters. A single character is used per base consonant.</p>
-<p>All vowel-signs are typed and stored after the base consonant, whether or not they precede it when displayed. The font takes care of the glyph positioning.</p>
+<p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
 
+<p>Other than the inherent vowel, vowel sounds that follow a consonant sound are represented using vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="bug">ᨀᨗ</span> <span class="ipa">ki</span></span>. </p>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ᨗ␣ᨘ␣ᨙ␣ᨚ␣ᨛ</figure>
+<p>Buginese vowel signs are all combining characters. A single character is used per base consonant. All vowel-signs are typed and stored after the base consonant, whether or not they precede it when displayed. The font takes care of the glyph positioning.</p>
+<p>Two of the vowel-signs are <em>spacing</em> marks, meaning that they consume horizontal space when added to a base consonant.</p>
+</section>
 
-<p>Two of the vowel-signs are spacing marks, meaning that they consume horizontal space when added to a base consonant.</p>
 
-<p>Vowel-sign positions are as follows:</p>
+
+
+ 
+<section>
+<h3 id="placement">Vowel-sign placement</h3>
+
+<p>The following list shows where vowel-signs are positioned around a base consonant to produce vowels, and how many instances of that pattern there are.</p>
 <ul>
 <li>1 prescript, eg. <span class="charExample" translate="no"><span class="ex" lang="bug">ᨀᨙ</span> <span class="trans">ke</span></span></li>
 <li>1 postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="bug">ᨀᨚ</span> <span class="trans">ko</span></span></li>
 <li>2 superscript, eg. <span class="charExample" translate="no"><span class="ex" lang="bug">ᨀᨗ</span> <span class="trans">ki</span></span></li>
 <li>1 subscript, eg. <span class="charExample" translate="no"><span class="ex" lang="bug">ᨀᨘ</span> <span class="trans">ku</span></span></li>
 </ul>
+<p>At maximum, vowel components can only occur  on 1 side of the base.</p>
 </section>
- 
+
 
    
  
 <section>
-  <h3 id="independentvowels">Syllable-initial vowels</h3>
-  <p class="definition">Syllable-initial vowels appear at the beginning of a word, or after another vowel in the middle of a word.</p>
+  <h3 id="independentvowels">Standalone vowels</h3>
+<p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
+
 <p>Buginese uses <span class="codepoint"><span lang="bug">&#x1A15;</span> <a href="/scripts/buginese/block#char1A15">[<span class="uname">U+1A15 BUGINESE LETTER A</span>]</a></span> to represent the sound <span class="trans">a</span>  when there is no preceding consonant.</p>
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ᨕ</figure>
 
-<p>Other syllable-initial vowel sounds are written using the same character with vowel-signs attached, eg. <span class="charExample"><span class="trans">ɑənə (ənəng)</span> <span class="meaning">six</span></span>.</p>
+<p>Other syllable-initial vowel sounds are written using the same character with vowel-signs attached, eg. <span class="charExample"><span class="trans">ɑənə</span> <span class="trans">(ənəng)</span> <span class="meaning">six</span></span>:</p>
   <p lang="bug" class="large"><span class="ex">ᨕᨛᨊᨛ</span></p>
 </section>
 
@@ -262,10 +348,119 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <section>
 <h2 id="consonants">Consonants</h2>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨀ␣ᨁ␣ᨂ␣ᨄ␣ᨅ␣ᨆ␣ᨈ␣ᨉ␣ᨊ␣ᨌ␣ᨍ␣ᨎ␣ᨐ␣ᨑ␣ᨒ␣ᨓ␣ᨔ␣ᨖ</figure>
+
+<section>
+<h3 id="consonantPhonemes">Consonant sounds</h3>
+<table class="ipaTable">
+<thead>
+<tr>
+<th></th>
+<th>labial </th>
+<th>dental </th>
+<th>alveolar </th>
+<th>post-<br>
+alveolar</th>
+<th>palatal </th>
+<th>velar </th>
+<th>glottal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>stop</th>
+<td><span class="ipa">p</span> <span class="ipa">b</span><br/>
+<span class="ipa">ᵐp</span></td>
+<td><span class="ipa">t</span> <span class="ipa">d</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">c</span> <span class="ipa">ɟ</span><br/>
+<span class="ipa">ⁿc</span></td>
+<td><span class="ipa">k</span> <span class="ipa">ɡ</span><br/>
+<span class="ipa">ᵑk</span></td>
+<td><span class="ipa">ʔ</span></td>
+</tr>
+<tr>
+<th>affricate</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>fricative </th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">s</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">h</span></td>
+</tr>
+<tr>
+<th>nasal</th>
+<td><span class="ipa">m</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">n</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɲ</span></td>
+<td><span class="ipa">ŋ</span></td>
+<td></td>
+</tr>
+<tr>
+<th>approximant</th>
+<td><span class="ipa">w</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">l</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">j</span></td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>trill/flap</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">r</span><br/>
+<span class="ipa">ⁿr</span></td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th></th>
+<td class="mouth"><a href="../common/mouth/mouth_labial.png" target="_blank"><img src="../common/mouth/mouth_small_labial.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_dental.png" target="_blank"><img src="../common/mouth/mouth_small_dental.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_alveolar.png" target="_blank"><img src="../common/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_postalveolar.png" target="_blank"><img src="../common/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_palatal.png" target="_blank"><img src="../common/mouth/mouth_small_palatal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_velar.png" target="_blank"><img src="../common/mouth/mouth_small_velar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_glottal.png" target="_blank"><img src="../common/mouth/mouth_small_glottal.png" alt=" "/></a></td>
+</tr>
+</tbody>
+</table>
+
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">wp</a>. Phones in a lighter colour are non-native or allophones.</p>
+</section>
+
+
+
+
+
+
+<section>
+<h3 id="consonantlist">Consonant character list</h3>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨄ␣ᨅ␣ᨈ␣ᨉ␣ᨌ␣ᨍ␣ᨀ␣ᨁ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨔ␣ᨖ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨆ␣ᨊ␣ᨎ␣ᨂ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨓ␣ᨑ␣ᨒ␣ᨐ</figure>
 
  <p><span class="codepoint"><span lang="bug">&#x1A16;</span> <a href="/scripts/buginese/block#char1A16">[<span class="uname">U+1A16 BUGINESE LETTER HA</span>]</a></span> was   introduced to represent an Arabic sound.</p>
-
+</section>
   
   
   
@@ -292,13 +487,12 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
   
 <section>
-    <h3 id="consonant_clusters">Consonant clusters</h3>
+    <h3 id="consonant_clusters">Pre-nasalised consonants &amp; consonant clusters</h3>
     
     <p>Four characters are used to represent pre-nasalised consonant clusters in Buginese (but not Makassarese).</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨃ␣ᨏ␣ᨋ␣ᨇ</figure>
-    
-  <p>Otherwise, Buginese doesn't mark clusters.<a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a> There is no virama equivalent.</p>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨇ␣ᨏ␣ᨃ␣ᨋ␣</figure>
+<p>Otherwise, Buginese doesn't mark clusters.<a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a> There is no virama equivalent.</p>
 </section>
 </section>
   
@@ -375,6 +569,14 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
+  
+<section>
+<h3 id="baselines">Baselines &amp; inline alignment</h3>
+<p class="prompts">Does the script have special requirements for baseline alignment between mixed scripts and in general?</p>
+</section>
+
+
+
 
 <section>
 <h3 id="transforms">Transforming characters</h3>
@@ -394,7 +596,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
 <section>
 <h3 id="graphemes">Grapheme boundaries</h3>
- <p class="explanatoryintro">A grapheme is a user-perceived unit of text. The Unicode Standard uses generalised rules to define 'grapheme clusters', which approximate the likely grapheme boundaries in a writing system.</p>
+<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
 
 <p class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements when double-clicking on the text, or moving through the text with the cursor, or backspace, etc.? </p>
 </section>
@@ -405,7 +607,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
 <section>
 <h3 id="word">Word boundaries</h3>
- <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+
 <p class="prompts">Are words separated by spaces, or other characters? Are there special requirements when double-clicking  on the text? Are words hyphenated?</p>
     <p>Words can be separated by spaces, or spaces can be used to separate units longer than words. In some texts words are not separated at all.</p>
   </section>
@@ -482,7 +685,22 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
      <h3 id="linebreak">Line breaking &amp; hyphenation</h3>
      <p class="prompts">Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that?</p>
 <p>According to Everson, hyphenation can occur after any full orthographic syllable, but there are no details about how that works, or whether he actually means line-breaking, rather than hyphenation per-se.</p>
-   </section>
+
+
+<p><span class="leadin">Character properties.</span> Characters used for the Bugis  language have the following assignments related to line-break properties.</p>
+<table><tbody>
+<tr><th class="sg">AL</th><td class="count">50</td><td class="chars"><span class="exlist" lang="xx">ᨕ ᨄ ᨅ ᨈ ᨉ ᨌ ᨍ ᨀ ᨁ ᨔ ᨖ ᨆ ᨊ ᨎ ᨂ ᨓ ᨑ ᨒ ᨐ ᨇ ᨏ ᨃ ᨋ ᨞ ᨟</span></td></tr>
+<tr><th class="sg">CM</th><td class="count">10</td><td class="chars"><span class="exlist" lang="xx">ᨗ ᨘ ᨙ ᨚ ᨛ</span></td></tr>
+</tbody></table>
+
+
+
+<details id="linebreak_details">
+<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
+</details>
+</section>
      
      
      
@@ -522,16 +740,6 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <section>
 <h3 id="initials">Styling initials</h3>
 <p class="prompts">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? etc.</p>
-</section>
-
-
-
-
-  
-<section>
-<h3 id="baselines">Baselines &amp; inline alignment</h3>
-<p class="prompts">Does the script have special requirements for baseline alignment between mixed scripts and in general?</p>
-</section>
 </section>
  
  
@@ -606,10 +814,10 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <section>
 <h2 id="refs">References</h2>
   <ol>
+    <li>[ <a class="fnref" href="http://www.unicode.org/L2/L2003/03320-n2633-lontara.pdf">e</a> ] Michael Everson, <cite><a href="http://www.unicode.org/L2/L2003/03320-n2633-lontara.pdf">Revised final proposal for encoding the Lontara (Buginese) script in the UCS</a></cite>.</li>
+    <li>[ <a class="fnref" href="http://www.unicode.org/L2/L2016/16096-sumbawa.pdf">p</a> ] Anshuman Pandey, <a href="http://www.unicode.org/L2/L2016/16096-sumbawa.pdf"><cite>Representing Sumbawa in Unicode</cite></a></li>
     <li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a> ] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch19.pdf">Buginese</a>, pp663-664.</li>
     <li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Lontara_alphabet">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Lontara_alphabet">Lontara alphabet</a>.</li>
-    <li>[ <a class="fnref" href="http://www.unicode.org/L2/L2003/03320-n2633-lontara.pdf">e</a> ] Michael Everson, <cite><a href="http://www.unicode.org/L2/L2003/03320-n2633-lontara.pdf">Revised final proposal for encoding the Lontara (Buginese) script in the UCS</a></cite>.</li>
-    <li>[ <a class="fnref" href="http://www.unicode.org/L2/L2016/16096-sumbawa.pdf">p</a> ]Anshuman Pandey, <a href="http://www.unicode.org/L2/L2016/16096-sumbawa.pdf"><cite>Representing Sumbawa in Unicode</cite></a></li>
   </ol>
 </section>
 
@@ -622,32 +830,26 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <table id="charCountList">
 <tr><th>Main</th><td id="mainCharList"></td><td id="mainCharListTotal"></td></tr>
-<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
 <tr><th>Auxiliary</th><td id="auxCharList"></td><td id="auxCharListTotal"></td></tr>
+<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
 <tr><th>Other</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
 <tr><th>Deprecated</th><td id="deprecatedCharList"></td><td id="deprecatedCharListTotal"></td></tr>
 </table>
-<script>
-runCharCount('.characterBox', 'mainCharList')
-runCharCount('.archaicBox', 'archaicCharList')
-runCharCount('.auxiliaryBox', 'auxCharList')
-runCharCount('.otherBox', 'otherCharList')
-runCharCount('.deprecatedBox', 'deprecatedCharList')
-</script>
 </details>
 
 
 
 
-
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/buginese"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-08-02  6:24<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bbuginese%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fbuginese%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
-
 <div id="panel" style="display:none"></div>
+
+
+<div class="smallprint"><span id="version"></span></div>
+
+
+
 </body>
 <script>
-initialiseSummary('/scripts/buginese/block','bug','Buginese')
-</script>
+initialiseSummary('/scripts/buginese/block','bug','Buginese','buginese')
+autoTransliterate('bug')</script>
 
 </html>
