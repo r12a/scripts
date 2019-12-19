@@ -446,6 +446,9 @@ details figure {
 	font-weight: normal;
 	line-height: 1;
 	}
+.ipaTable .ipa, .ipaTable .allophone {
+	cursor:pointer;
+	}
 .ipaTable .ipa:before {
 	content: none;
 	}
@@ -468,8 +471,8 @@ details figure {
 /*.allophone::before { content: '('; color: #ccc; }
 .allophone::after { content: ')'; color: #ccc; }*/
 
-.ipaSVG .ipa { fill: #666; font-family: "gentiumpluswf"; font-weight:normal; font-size:20px;text-align:left; text-anchor: center;  }
-.ipaSVG .allophone { fill: #ccc; fill: tan; font-family: "gentiumpluswf"; font-weight:normal; font-size:20px;text-align:left; text-anchor: center;  }
+.ipaSVG .ipa { fill: #666; font-family: "gentiumpluswf"; font-weight:normal; font-size:20px;text-align:left; text-anchor: center; cursor: pointer; }
+.ipaSVG .allophone { fill: #ccc; fill: tan; font-family: "gentiumpluswf"; font-weight:normal; font-size:20px;text-align:left; text-anchor: center; cursor: pointer; }
 .ipaSVG .allophone::before { content: '('; stroke: #ccc; }
 .ipaSVG .allophone::after { content: ')'; stroke: #ccc; }
 
@@ -532,11 +535,14 @@ a:visited {
 #linebreak_details p { margin-right: 0; }
 #linebreak_details { font-size: smaller; line-height: 1.2; margin-top: 1em; }
 
-.observation {
+.observation, .note {
 	font-size: 80%;
 	line-height: 1.2;
 	}
-
+.note::before {
+	content: '[ℹ] ';
+	font-size: 140%;
+	}
 
 .mouth img {
 	width: 50px;
@@ -548,3 +554,11 @@ a:visited {
 	}
 
 
+#phoneLinks {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: #ccc;
+	font-size: 80%; 
+	padding-left: 1em;
+	}

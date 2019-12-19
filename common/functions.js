@@ -9,8 +9,18 @@ function initialiseSummary (base, lang, tableName, dir) {
 	removeEditorNotes()
 	addDefinitions()
 	if (typeof(contentPrompts) !== 'undefined') setContentPrompts()
+	setFindIPA()
     }
 
+
+
+function setFindIPA () {
+	//var listItems = document.querySelectorAll('.characterBox .listIPA')
+	var listItems = document.querySelectorAll('.ipaTable .ipa, .ipaTable .allophone')
+	for (let i=0;i<listItems.length;i++) listItems[i].onclick = findIPA
+	var listItems = document.querySelectorAll('.ipaSVG .ipa, .ipaSVG .allophone')
+	for (let i=0;i<listItems.length;i++) listItems[i].onclick = findIPA
+	}
 
 
 
@@ -747,6 +757,70 @@ function runCharCount (type, location) {
 	out = [...uniqueSet]
 	document.getElementById(location).textContent = out.toString().replace(/,/g,' ')
 	document.getElementById(location+'Total').textContent = out.length
+	}
+
+
+
+
+
+
+function findIPA () {
+	// when you click on a phone in an svg or table chart, this highlights occurrences of that phone in the doc
+	// this only locates a match if the phone is isolated (ie the only phone in the span or one of a set of 
+	// space-separated phones in the span.  It won't pick up usage in ipa spellings of examples.
+	// This is to avoid matching t with th, tʰ, t͡ʃʰ, etc.)
+
+	// create a set of the character(s) being looked up
+	const phoneSet = new Set(this.textContent.replace(/-/g,'').split(' '))
+	//console.log('search for:',phoneSet)
+
+	// identify locations in svg and tables that should not count
+	var svgArray = document.querySelectorAll('.ipaSVG .ipa, .ipaSVG .allophone',)
+	var tableArray = document.querySelectorAll('.ipaTable .ipa, .ipaTable .allophone')
+	var screenedItems = new Set([ ...svgArray, ...tableArray ])
+	//console.log('screenedItems',screenedItems)
+
+	// collect all the .ipa elements
+	var listItems = document.querySelectorAll('.ipa, .listIPA')
+	var counter = 0
+	var links = []
+	for (k=0;k<listItems.length;k++) listItems[k].style.backgroundColor = 'transparent'
+	
+	for (let i=0;i<listItems.length;i++) {
+		var listPhones = listItems[i].textContent.split(' ')
+		for (let p=0;p<listPhones.length;p++) {
+			//listItems[i].style.backgroundColor = 'transparent'
+			if ((! screenedItems.has(listItems[i])) && phoneSet.has(listPhones[p].replace(/-/g,''))) {
+				listItems[i].style.backgroundColor = '#ffa442ad'
+				listItems[i].style.borderRadius = '5px'
+				
+				// gather a list of links to the found items
+				var ptr = listItems[i]
+				//console.log(listItems[i])
+				while (ptr.parentNode.id == '') ptr = ptr.parentNode
+				links.push(ptr.parentNode.id)
+				
+				counter++
+				}
+			}
+		}
+	
+	// remove redundancy from the links array
+	const uniqueLinks = new Set(links)
+	leanLinks = [...uniqueLinks]
+	//console.log(leanLinks)
+	
+	// report the results
+	if (document.getElementById('phoneLinks')) {
+		var out = counter+' matches found in these sections: '
+		for (let i=0;i<leanLinks.length;i++) out += '<a href="#'+leanLinks[i]+'">'+leanLinks[i]+'</a> '
+		document.getElementById('phoneLinks').style.display = 'block'
+		document.getElementById('phoneLinks').innerHTML = out+' &nbsp;&nbsp;<span style="cursor:pointer" onclick="this.parentNode.style.display = \'none\'">X</span>&nbsp;&nbsp;'
+		}
+	else {
+		if (counter > 0) alert(counter+' matches found in these sections: '+leanLinks+'.')
+		else alert('No matches found.')
+		}
 	}
 
 
