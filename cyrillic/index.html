@@ -20,21 +20,24 @@
 .narrowlines .listPair { margin-bottom: 0.25em; }
 </style>
 
-<script src="../../shared/scriptdb/cyrillic_all.js"> </script>
+<script src="../../shared/scriptdb/cyrl-ru.js"> </script>
 <script src="/shared/code/boilerplate.js"></script>
-<script src="/shared/code/toc_2019.js"></script>
+<script src="/shared/code/toc_2020.js"></script>
 <script src="/shared/code/all-names.js"></script>
 <script src="/shared/code/character_conversion.js"></script>
 <script src="/shared/code/show_codepoints.js"></script>
 <script src="/shared/fontlists/manage.js"></script>
 <script src="/shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
+<script src="../common/transliterate.js"></script>
+<script src="../common/prompts.js"> </script>
+<script src="../glossary/glossary.js"> </script>
 <script src="/shared/code/getLinks.js"></script>
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
 
 <script src="/shared/fontlists/cyrillic.js"> </script>
-</head>
+<script src="ru-translit.js">  </script></head>
 
 <body>
 <header>
@@ -92,16 +95,18 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->14-Jul-2019<!-- #EndDate -->
-&bull; tags <a href="http://r12a.github.io/blog/index.php?tag=cyrillic" title="Show all blog posts tagged with 'cyrillic'">cyrillic</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+  <!-- #BeginDate format:Sw1 -->21 December, 2019<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
 
 
 
 <div class="section">
-   <p>This page provides basic information about the Cyrillic script and its use for the Russian language. It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned. For character-specific details see the <a class="linkHighlight" href="block">Cyrillic character notes</a>. </p>
-<p>See also the <a href="../../pickers/russian/">Russian picker</a>, and the <a href="../../pickers/cyrillic/">All Cyrillic picker</a>.</p>
+	  <p>This page gathers together basic information about the Cyrillic script and its use for the Russian language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Russian using Unicode; for greater details follow the footnote links (especially those with an arrow alongside them).</p>
+<p>	 For character-specific details follow the links to the <a class="linkHighlight" href="block">Cyrillic character notes</a>. See also the <a href="../../pickers/russian/" class="linkHighlight">Russian character app</a>, and  the notes on <a href="../../pickers/cyrillic/" class="linkHighlight">All Cyrillic character app</a>.</p>
 <p>For similar information related to other scripts, see the <a class="linkHighlight" href="../links?iso=Cyrl">script links pages</a>.</p>
 <p class="instructions">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.  Colours and annotations on panels listing characters are relevant to their use for the Russian language.</p>
+<p class="instructions">Unless in parentheses, the transcriptions in italics that follow Russian text are a <a href="../glossary/#transliteration" class="termref">transliteration</a> developed for these pages. Those in parentheses are usually ISO transcriptions. Transcriptions in <span style="white-space:nowrap;">⌈ brackets ⌋</span> may be phonemic or phonetic.</p>
 </div>
 
 
@@ -127,8 +132,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-    <h2 id="history">Usage &amp; history</h2>
+<section id="history">
+<h2>Usage &amp; history</h2>
     <p>From <a href="http://scriptsource.org/scr/Cyrl">Scriptsource</a>: </p>
     <blockquote>
 <p>The creation of the Cyrillic script is traditionally attributed to Saint Cyril, a missionary working in Bulgaria during the 9th century. He and his brother are also credited with the invention of the Glagolitic script, a derivation of the Greek cursive alphabet which was modified to fit the sound systems of Slavic languages. Some historians credit Clement of Ohrid, a student of Saint Cyril's, with creating the Cyrillic script as a more readable writing system based on Glagolitic. The Cyrillic script was initially used for writing Old Church Slavonic (also called Old Bulgarian), but it has undergone a number of changes since that time, so much so that the old and modern variants are considered by many to be two different but related scripts. Many of the modern letterforms differ from those used in early Cyrillic writing, some letters have been dropped, and new letters have been added. An orthographic reform was implemented by the Russian tsar Peter the Great in 1708 which removed a number of obsolete letters so that Russian writing is now almost perfectly phonetic.</p>
@@ -144,21 +149,32 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-  <section>
-    <h2 id="type">Key features</h2>
+  <section id="type">
+<h2>Key features</h2>
     <p>Cyrillic is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#alphabet">alphabet</a></span>. Letters typically represent a consonant or vowel sound.   See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
 </p>
     <p>Text is  written horizontally, left to right. The visual forms of letters don't usually interact. The script is bicameral, and uppercase and lowercase shapes are typically the same. There can be a significant difference, however, between regular and cursive/italic shapes for the same character. </p>
 <p>Of the 441 characters in the Unicode Cyrillic blocks, 177 are historic (33%) and 2 are for Lithuanian dialectology.  The remaining 262 are just letters – no punctuation, digits, or combining characters. These are all bicameral, which brings the number of distinct modern letters to 131. Although modern Cyrillic text tends to use precomposed forms, rather than combining diacritics separately with base letters,  many extended characters  are formed by slightly tweaking   a set of basic shapes.</p>
 </section>
-  
+
+
+
+
+    
+ <section id="direction">
+<h2>Text direction</h2>
+    <p>Cyrillic is written horizontally, left to right.<sup></sup></p>
+</section>
+
+
+
   
   
 <div id="showTranscriptions">
-<div>In yellow boxes, show:</div>
+<div>Character lists show:</div>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
 <div><label>ISO 9:1995 
 <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
 </div>
@@ -167,38 +183,118 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h2 id="chars">Character lists</h2>
-    <p>The Cyrillic script characters in Unicode 10.0 are spread across 4 blocks (not counting the phonetic blocks nor any of the combining character blocks):</p>
-    <ul>
-      <li><a href="/uniview/?block=Cyrillic">Cyrillic</a> <span class="charCount">(256 characters)</span></li>
-      <li><a href="/uniview/?block=Cyrillic_supplement">Cyrillic_Supplement</a> <span class="charCount">(48 characters)</span></li>
-      <li><a href="/uniview/?block=Cyrillic_Extended-A">Cyrillic Extended-A</a> <span class="charCount">(32 characters)</span></li>
-      <li><a href="/uniview/?block=Cyrillic_Extended-B">Cyrillic Extended-B</a> <span class="charCount">(96 characters)</span></li>
-      <li><a href="/uniview/?block=Cyrillic_Extended-C">Cyrillic Extended-C</a> <span class="charCount">(9 characters)</span></li>
-    </ul>
-    <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
-<ul>
-<li><a href="/app-charuse/?language=ru" target="_blank">Russian</a> <span class="charCount">(66 letters, 2 marks, 11 punctuation :   total 79)</span></li>
-<li><a href="/app-charuse/?language=be" target="_blank">Belorussian</a> <span class="charCount">(67 letters, 2 marks, 3 punctuation :   total 72)</span></li>
-<li><a href="/app-charuse/?language=bg" target="_blank">Bulgarian</a> <span class="charCount">(60 letters, 1 marks, 11 punctuation, 1 symbols :   total 73)</span></li>
-<li><a href="/app-charuse/?language=kk" target="_blank">Kazakh</a> <span class="charCount">(84 letters, 11 punctuation :   total 95)</span></li>
-<li><a href="/app-charuse/?language=mk" target="_blank">Macedonian</a> <span class="charCount">(62 letters, 1 marks, 9 punctuation :   total 72)</span></li>
-<li><a href="/app-charuse/?language=mn-cyrl" target="_blank">Mongolian</a> <span class="charCount">(70 letters, 2 marks, 15 punctuation :   total 87)</span></li>
-<li><a href="/app-charuse/?language=sr" target="_blank">Serbian</a> <span class="charCount">(60 letters, 7 punctuation :   total 67)</span></li>
-<li><a href="/app-charuse/?language=uk" target="_blank">Ukranian</a> <span class="charCount">(67 letters, 2 marks, 8 punctuation, 1 symbols :   total 78)</span></li>
-</ul>
-  <p>For character-specific details see the
- <a class="linkHighlight" href="/scripts/cyrillic/block">Cyrillic character notes</a>.</p>
+<section id="vowels">
+<h2>Vowels</h2>
+
+
+
+<section id="vowelPhonemes">
+<h3>Vowel sounds</h3>
+
+<p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+
+<p><span class="leadin">Plain vowels.</span></p>
+
+
+<div style="margin-left: 7.5%;">
+<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="white"/>
+      <feComposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <!--image xlink:href="images/vowelgrid.gif" alt="Les caractères sont associés à des octets." x="0" y="0" width="400" height="200"></image--> 
+  <use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -->
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+  
+  <!-- near close -->
+  <circle cx="93" cy="40" r="3" fill="#ccc"/>
+  <circle cx="200" cy="40" r="3" fill="#ccc"/>
+  
+   <!-- mid close -->
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -->
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- near open -->
+  <circle cx="102" cy="160" r="3" fill="#ccc"/> <!-- near open -->
+  
+  <!-- open -->
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+  
+  <!-- close -->
+  <text x="32" y="15" class="ipa" text-anchor="end">i</text> 
+
+  <text x="132" y="15" class="ipa" text-anchor="end" filter="url(#solid)">ɨ</text>
+  <text x="132" y="15" class="allophone" text-anchor="end">ɨ</text> 
+
+  <text x="250" y="15" class="ipa">u</text> 
+
+  <!-- near close -->
+  <text x="85" y="45" class="allophone" text-anchor="end">ɪ</text> 
+
+  <text x="210" y="45" class="allophone">ʊ</text> 
+
+  <!-- close mid -->
+  <text x="57" y="75" class="ipa" text-anchor="end">e</text> 
+  <text x="165" y="75" class="allophone" filter="url(#solid)">ɵ</text> 
+  <text x="165" y="75" class="allophone">ɵ</text> 
+  <text x="250" y="75" class="ipa">o</text> 
+
+  <!-- mid -->
+  <text x="158" y="105" class="allophone" text-anchor="middle" filter="url(#solid)">ə</text>
+  <text x="158" y="105" class="allophone" text-anchor="middle">ə</text> 
+
+  <!-- open mid -->
+  <text x="81" y="135" class="ipa" text-anchor="end">ɛ</text> 
+  <text x="232" y="135" class="allophone" text-anchor="end" filter="url(#solid)">ʌ</text>
+  <text x="232" y="135" class="allophone" text-anchor="end">ʌ</text> 
+
+  <!-- near open -->
+  <text x="94" y="165" class="allophone" text-anchor="end">æ</text> 
+
+
+  <!-- open -->
+  <text x="106" y="195" class="ipa" text-anchor="end">a</text> 
+</svg>
+</div>
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Russian_phonology">wp</a>. Phones in a lighter colour are non-native, are allophones, or more likely are unstressed variants of other sounds.</p>
+
+
+<p><span class="leadin">Diphthongs.</span>Russian diphthongs all end in the sound <span class="ipa">i̯</span>, however they can be analysed either as diphthongs or as vowels followed by <span class="ipa">j</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Russian_phonology">wp</a> Here, for simplicity, we will take the latter line.</p>
 </section>
 
 
 
 
 
-<section>
- <h2 id="vowels">Vowels</h2>
- 
+
+<section id="vowelLetters">
+<h3>Vowel letters</h3>
 <p>Standard Russian uses 11 vowel letters (22 characters).</p>
 
 <figure class="characterBox auto bicameral" data-cols="ipa,trans,transc">Аа␣Яя␣Ээ␣Ее␣Ыы␣Ии␣Йй␣Оо␣Ёё␣Уу␣Юю</figure>
@@ -206,12 +302,120 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <p>The arrangement above shows the correspondence between vowels involving iotation/patalalisation and those not, although the rules for their application are not always clear cut<sup><span title="Read more at ">→ <a href="https://en.wikipedia.org/wiki/Russian_alphabet#Vowels">w</a></span></sup>, and some are more common than others, eg. <span class="ex" lang="ru">э</span> is not particularly common.</p>
 <p>The phonetic sounds shown are not always applied, particularly for unstressed vowels, where for example <span lang="ru" class="ex">о</span> may be pronounced more like <span class="ipa">a</span>.</p>
 <p><span class="codepoint" translate="no"><span lang="ru">&#x0439;</span> [<a href="/scripts/cyrillic/block#char0439"><span class="uname">U+0439 CYRILLIC SMALL LETTER SHORT I</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ru">&#x0451;</span> [<a href="/scripts/cyrillic/block#char0451"><span class="uname">U+0451 CYRILLIC SMALL LETTER IO</span></a>]</span> and their capitals decompose to base plus diacritic.&nbsp;</p>
-      
+</section>
 
 
 
-<section>
-<h3 id="obsolete_vowels">Obsolete Russian vowels</h3>
+
+
+
+<section id="vowelMappings">
+<h3>Vowel to letter mappings</h3>
+
+<p>Given the tendency to alter vowel quality for all vowels in a word other than the one that is stressed, plus the effects of palatalisation, the mapping of letters to actual sounds is somewhat complicated (and in some cases controversial). The following table comes from Wikipedia.<a class="fnref" href="https://en.wikipedia.org/wiki/Russian_phonology">wp</a></p>
+<table>
+<thead style="line-height: 1; vertical-align: bottom;">
+<tr>
+<th>Phoneme
+</th>
+<th>Letter<br>(typically)
+</th>
+<th>Position
+</th>
+<th>Stressed
+</th>
+<th>Reduced
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="2"><span class="ipa">i</span>
+</td>
+<td><span class="ex" lang="ru">и</span></td>
+<td>(Cʲ)V(C)</td>
+<td><span class="ipa">i</span></td>
+<td><span class="ipa">ɪ</span></td></tr>
+<tr>
+<td><span class="ex" lang="ru">ы</span> <span class="ex" lang="ru">и</span></td>
+<td>(C)V
+</td>
+<td colspan="2"><span class="ipa">ɨ</span></td></tr>
+<tr>
+<td rowspan="3"><span class="IPA"><span class="ipa">u</span></span>
+</td>
+<td rowspan="2"><span class="ex" lang="ru">у</span></td>
+<td>(C)V</td>
+<td rowspan="2"><span class="ipa">u</span></td>
+<td rowspan="2"><span class="ipa">ʊ</span></td></tr>
+<tr>
+<td>(C)VCʲ
+</td></tr>
+<tr>
+<td><span class="ex" lang="ru">ю</span></td>
+<td>CʲV</td>
+<td colspan="2"><span class="ipa">ʉ</span></td></tr>
+<tr>
+<td rowspan="4"><span class="ipa">e</span></td>
+<td><span class="ex" lang="ru">э</span></td>
+<td>VC</td>
+<td><span class="ipa">ɛ</span></td>
+<td rowspan="2"><span class="ipa">ɪ</span></td></tr>
+<tr>
+<td><span class="ex" lang="ru">е</span></td>
+<td>CʲV</td>
+<td><span class="ipa">e</span></td></tr>
+<tr>
+<td rowspan="2"><span class="ex" lang="ru">э</span>, <span class="ex" lang="ru">е</span>†</td>
+<td>CVC</td>
+<td><span class="ipa">ɛ</span></td>
+<td rowspan="2"><span class="ipa">ɨ</span>
+</td></tr>
+<tr>
+<td>CVCʲ</td>
+<td><span class="ipa">e</span></td></tr>
+<tr>
+<td rowspan="3"><span class="ipa">o</span></td>
+<td rowspan="2"><span class="ex" lang="ru"><span cl>о</span></span></td>
+<td>(C)V</td>
+<td><span class="ipa">o</span></td>
+<td rowspan="2"><span class="ipa">ə</span>, <span class="ipa">ʌ</span>
+</td></tr>
+<tr>
+<td>(C)VCʲ</td>
+<td rowspan="2"><span class="ipa">ɵ</span></td></tr>
+<tr>
+<td><span class="ex" lang="ru">ё</span>*</td>
+<td>CʲV</td>
+<td><span class="ipa">ɪ</span></td></tr>
+<tr>
+<td rowspan="3"><span class="ipa">a</span></td>
+<td rowspan="2"><span class="ex" lang="ru">а</span></td>
+<td>(C)V</td>
+<td rowspan="2"><span class="ipa">ä</span></td>
+<td rowspan="2"><span class="ipa">ə</span>, <span class="ipa">ʌ</span></td></tr>
+<tr>
+<td>(C)VCʲ
+</td></tr>
+<tr>
+<td><span class="ex" lang="ru">я</span></td>
+<td>CʲV</td>
+<td><span class="ipa">æ</span></td>
+<td><span class="ipa">ɪ</span></td></tr>
+<tr>
+<td colspan="5" style="font-size: 70%; line-height: 1;border:0">
+<p>* Reduced ⟨ё⟩ is written as ⟨е⟩.</p>
+<p>† ⟨е⟩ is used in most loans (except if word-initial) or after <span class="ex" lang="ru">ц, ш, ж</span>.</p>
+</td></tr></tbody>
+</table>
+</section>
+
+
+
+
+
+<section id="obsolete_vowels">
+<h3>Obsolete Russian vowels</h3>
 
 <p>Peter the Great's reform led to the abandonment of these vowel characters.<sup><span title="Read more at ">→ <a href="https://en.wikipedia.org/wiki/Russian_alphabet#Letters_in_disuse_by_1750">w</a></span></sup></p>
 
@@ -231,21 +435,139 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
- <h2 id="consonants">Consonants</h2>
- 
+<section id="consonants">
+<h2>Consonants</h2>
+
+
+<section id="consonantSounds">
+<h3>Consonant sounds</h3>
+
+<p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+
+<table class="ipaTable">
+<thead>
+<tr>
+<th></th>
+<th>labial </th>
+<th>dental </th>
+<th>alveolar </th>
+<th>post-<br>
+alveolar</th>
+<th>retroflex</th>
+<th>palatal </th>
+<th>velar </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>stop</th>
+<td><span class="ipa">p</span> <span class="ipa">b</span><br>
+<span class="ipa">pʲ</span> <span class="ipa">bʲ</span></td>
+<td><span class="ipa">t</span> <span class="ipa">d</span><br/>
+<span class="ipa">tʲ</span> <span class="ipa">dʲ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">k</span> <span class="ipa">ɡ</span><br/>
+<span class="allophone">kʲ</span> <span class="allophone">ɡʲ</span></td>
+</tr>
+<tr>
+<th>affricate</th>
+<td>&nbsp;</td>
+<td><span class="ipa">t͡s</span><br><span class="allophone">t͡sʲ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">t͡ɕ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>fricative </th>
+<td><span class="ipa">f</span> <span class="ipa">v</span><br><span class="ipa">fʲ</span> <span class="ipa">vʲ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">s</span> <span class="ipa">z</span><br/>
+<span class="ipa">sʲ</span> <span class="ipa">zʲ</span></td>
+<td><span class="ipa">ɕː</span> <span class="allophone">ʑː</span></td>
+<td><span class="ipa">ʂ</span> <span class="ipa">ʐ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">x</span> <span class="allophone">ɣ</span><br>
+<span class="ipa">xʲ</span></td>
+</tr>
+<tr>
+<th>nasal</th>
+<td><span class="ipa">m</span><br>
+<span class="ipa">mʲ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">n</span><br>
+<span class="ipa">nʲ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>approximant</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɫ</span><br/><span class="ipa">lʲ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">j</span></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>trill/flap</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">r</span> <br><span class="ipa">rʲ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th></th>
+<td class="mouth"><a href="../common/mouth/mouth_labial.png" target="_blank"><img src="../common/mouth/mouth_small_labial.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_dental.png" target="_blank"><img src="../common/mouth/mouth_small_dental.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_alveolar.png" target="_blank"><img src="../common/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_postalveolar.png" target="_blank"><img src="../common/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_retroflex.png" target="_blank"><img src="../common/mouth/mouth_small_retroflex.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_palatal.png" target="_blank"><img src="../common/mouth/mouth_small_palatal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_velar.png" target="_blank"><img src="../common/mouth/mouth_small_velar.png" alt=" "/></a></td>
+</tr>
+</tbody>
+</table>
+
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Russian_phonology">wp</a>. Phones in a lighter colour are non-native or allophones.</p>
+</section>
+
+
+
+
+<section id="consonantLetters">
+<h3>Consonant letters</h3>
+
 <p>Russian uses 20 consonants (40 characters, if you include uppercase and lowercase), plus a hard and soft sign (see below).</p>
 
-<figure class="characterBox auto bicameral" data-cols="ipa,trans,transc">Бб␣Вв␣Гг␣Дд␣Жж␣Зз␣Кк␣Лл␣Мм␣Нн␣Пп␣Рр␣Сс␣Тт␣Фф␣Хх␣Цц␣Чч␣Шш␣Щщ</figure>
+<figure class="characterBox auto bicameral" data-cols="ipa,trans,transc">Пп␣Бб␣Тт␣Дд␣Кк␣Гг</figure>
+<figure class="characterBox auto bicameral" data-cols="ipa,trans,transc">Цц␣Чч␣Шш␣Щщ</figure>
+<figure class="characterBox auto bicameral" data-cols="ipa,trans,transc">Фф␣Вв␣Сс␣Зз␣Жж␣Хх</figure>
+<figure class="characterBox auto bicameral" data-cols="ipa,trans,transc">Мм␣Нн</figure>
+<figure class="characterBox auto bicameral" data-cols="ipa,trans,transc">Рр␣Лл</figure>
 
       
 <p>Most of the consonants can be pronounced with or without palatisation, ie. 'hard' or 'soft', respectively. In principle, this is determined by which vowel follows it.</p>
 <p>Palatalised pronunciations are followed by these vowels: <span class="exlist" lang="ru">я ё е ю и</span>. The other vowels, <span class="exlist" lang="ru">а о э у ы</span>, follow hard sounds.</p>
+</section>
 
 
 
-<section>
-<h3 id="signs">Hard and soft signs</h3>
+
+
+
+<section id="signs">
+<h3>Hard and soft signs</h3>
 
 <figure class="characterBox auto bicameral" data-cols="ipa,trans,transc">Ъъ␣Ьь</figure>
 
@@ -253,15 +575,15 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <p>The soft sign can be used in two ways.</p>
 <p>In most positions it indicates that the preceding consonant is palatalized and any following vowel is iotated, eg. <span class="charExample" translate="no"><span class="ex" lang="ru">брать</span> <span class="trans">bratʹ</span> <span class="ipa">bratʲ</span> <span class="meaning">to take</span></span> vs. <span class="charExample" translate="no"><span class="ex" lang="ru">брат</span> <span class="trans">brat</span> <span class="ipa">brat</span> <span class="meaning">brother</span></span>.</p>
 <p>After root-final consonants <span class="exlist" lang="ru">ч щ</span> (always soft) or <span class="exlist" lang="ru">ж ш ц</span> (always hard), the soft sign doesn't alter pronunciation but has a grammatical meaning, eg. <span class="charExample" translate="no"><span class="ex" lang="ru">тушь</span> <span class="trans">tuʂʹ</span> <span class="ipa">tuʂ</span> <span class="meaning">india ink</span></span> vs. <span class="charExample" translate="no"><span class="ex" lang="ru">туш</span> <span class="trans">tuʂ</span> <span class="ipa">tuʂ</span> <span class="meaning">flourish after a toast</span></span>.<sup><span title="Read more at ">→ <a href="https://en.wikipedia.org/wiki/Russian_alphabet#Non-vocalized_letters">w</a></span></sup></p>
-<p>Prior to the 1918 reforms, every word ending in a consonant had to be followed by a hard or soft sign. That is no longer the case, and the hard sign is now the least common letter in the Russian alphabet.<sup><a href="https://en.wikipedia.org/wiki/Russian_alphabet#Frequency">w</a></sup></p>
+<p>Prior to the 1918 reforms, every word ending in a consonant had to be followed by a hard or soft sign. That is no longer the case, and the hard sign is now the least common letter in the Russian alphabet.<a class="fnref" href="https://en.wikipedia.org/wiki/Russian_alphabet#Frequency">w</a></p>
 </section>
 
       
 
 
 
-<section>
-<h3 id="obsolete">Obsolete Russian consonants</h3>
+<section id="obsolete">
+<h3>Obsolete Russian consonants</h3>
 
 <p>Around 1750, after Peter the Great's orthographic reform,  the following consonants fell into disuse in Russian.<sup><span title="Read more at ">→ <a href="https://en.wikipedia.org/wiki/Russian_alphabet#Letters_in_disuse_by_1750">w</a></span></sup></p>
 
@@ -279,8 +601,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h2 id="diacritics">Diacritics</h2>
+<section id="diacritics">
+<h2>Diacritics</h2>
 
 <figure class="characterBox auto" data-cols="">̈␣̆</figure>
 
@@ -288,7 +610,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <figure class="auxiliaryBox auto" data-cols="">́</figure>
 
-<p>One diacritic that <em>is</em> sometimes used as a combining character is <span class="codepoint" translate="no"><span lang="ru">&#x25CC;&#x0301;</span> [<a href="/scripts/latin/block#char0301"><span class="uname">U+0301 COMBINING ACUTE ACCENT​</span></a>]</span>, used to indicate stressed vowels for educational materials, dictionaries, and such, eg. <span class="charExample" translate="no"><span class="ex" lang="ru">за́мок</span> <span class="trans">zámok</span> <span class="ipa">zamak</span> <span class="meaning">castle</span></span> vs. <span class="charExample" translate="no"><span class="ex" lang="ru">замо́к</span> <span class="trans">zamók</span> <span class="ipa">zamok</span> <span class="meaning">lock</span></span>. Rarely, it may be used to specify the stress in uncommon foreign words and in poems with unusual stress used to fit the meter.<sup><a href="https://en.wikipedia.org/wiki/Russian_alphabet#Diacritics">w</a></sup></p>
+<p>One diacritic that <em>is</em> sometimes used as a combining character is <span class="codepoint" translate="no"><span lang="ru">&#x25CC;&#x0301;</span> [<a href="/scripts/latin/block#char0301"><span class="uname">U+0301 COMBINING ACUTE ACCENT​</span></a>]</span>, used to indicate stressed vowels for educational materials, dictionaries, and such, eg. <span class="charExample" translate="no"><span class="ex" lang="ru">за́мок</span> <span class="trans">zámok</span> <span class="ipa">zamak</span> <span class="meaning">castle</span></span> vs. <span class="charExample" translate="no"><span class="ex" lang="ru">замо́к</span> <span class="trans">zamók</span> <span class="ipa">zamok</span> <span class="meaning">lock</span></span>. Rarely, it may be used to specify the stress in uncommon foreign words and in poems with unusual stress used to fit the meter.<a class="fnref" href="https://en.wikipedia.org/wiki/Russian_alphabet#Diacritics">w</a></p>
 <p>All 55 of the combining characters in the Unicode Cyrillic block fall under the historical category.</p>
 
 </section>
@@ -298,11 +620,23 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h2 id="gsub">Glyph shaping &amp; positioning</h2>
 
-<p>Cyrillic doesn't normally have any of the changeability of complex scripts. Characters are typically separate and self-contained.</p>
-<p>However, there can be a significant difference in shape between regular and italic/cursive font shapes for the same character. </p>
+
+<section id="shaping">
+<h2>Glyph shaping &amp; positioning</h2>
+
+<p>The Cyrillic script is not cursive, and involves no significant context-based shaping or positioning. Nor are there significant issues around baselines or inline alignment.</p>
+<p>You can experiment with examples using the <a href="/pickers/russian/">Russian character app</a>.</p>
+
+
+
+
+
+<section id="fontstyle">
+<h3>Font styles</h3>
+<p class="prompts"> Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</p>
+
+<p>Cyrillic doesn't normally have any of the changeability of complex scripts. Characters are typically separate and self-contained. However, there can be a significant difference in shape between regular and italic/cursive font shapes for the same character. </p>
 <figure class="narrowlines">
 <div class="listArray" style="justify-content: center; font-size: 300%; line-height: 1.2;">
 <div class="listPair"><span class="listItem" lang="ru">в</span><span class="listItem" style="font-style:italic;" lang="ru">в</span></div>
@@ -323,66 +657,335 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </figure>
 
 <p>Note in particular the italic form of <span class="ex" lang="ru">т</span> in the figure just above. The italic form of <span class="ex" lang="ru">м</span> is shown in the previous figure.</p>
-<p>The shapes of the italic forms can also vary by language.<sup><span title="See more at "></span><a href="http://en.wikipedia.org/wiki/Cyrillic_script#Letterforms_and_typography">→ w</a></sup></p>
-<p>The shape of the breve sign in Cyrillic is different from that used for Latin text.<sup><a href="http://scriptsource.org/cms/scripts/page.php?item_id=entry_detail&uid=k9ew9c6yam">s</a></sup> A font such as Brill can detect the appropriate shape from the adjacent characters.</p>
+<p>The shapes of the italic forms can also vary by language.<sup><span title="See more at "></span><a href="http://en.wikipedia.org/wiki/Cyrillic_script#Letterforms_and_typography">→ w</a></p>
+<p>The shape of the breve sign in Cyrillic is different from that used for Latin text.<a class="fnref" href="http://scriptsource.org/cms/scripts/page.php?item_id=entry_detail&uid=k9ew9c6yam">s</a> A font such as Brill can detect the appropriate shape from the adjacent characters.</p>
 
 <figure class="narrowlines">
 <p><img src="images/breve.png"/></p>
 <figcaption><span class="codepoint" translate="no"><span lang="en">&#x0306;</span> [<a href="/scripts/cyrillic/block#char0306"><span class="uname">U+0306 COMBINING BREVE</span></a>]</span> between cyrillic and latin characters changes shape in the Brill font.</figcaption>
 </figure>
+</section>
 
+
+
+
+<section id="transforms">
+<h3>Transforming characters</h3>
+
+<p class="prompts">If the script is bicameral, are the special rules about case conversion? Are there other correspondences between glyphs, such as half- vs fullwidth presentation forms?</p>
+
+<p>Russian is bicameral, and applications may need to enable transforms to allow the user to switch between cases.</p>
+</section>
 </section>
 
 
 
 
 
-<section>
-<h2 id="boundaries">Structural boundaries &amp; markers</h2>
+
+
+</section>
+<section id="boundaries">
+<h2>Structural boundaries &amp; markers</h2>  
+  
+<section id="graphemes">
+<h3>Grapheme boundaries</h3>
+<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
+
+<p class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements when double-clicking on the text, or moving through the text with the cursor, or backspace, etc.? </p>
+
+</section>
+
+
+
+
+  
+<section id="word">
+<h3>Word boundaries</h3>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+
+<p class="prompts">Are words separated by spaces, or other characters? Are there special requirements when double-clicking  on the text? Are words hyphenated?</p>
+
+
+<p>Words are separated by spaces.</p>
+</section>
+
+
+
+
+  
+<section id="phrase">
+<h3>Phrase &amp; section boundaries</h3>
+
+<p class="prompts">What characters are used to indicate the boundaries of phrases, sentences, and sections?</p>
+<p>Cyrillic uses standard Latin punctuation.</p>
+</section>
+
+
+
+
+
+<section id="bracketing">
+<h3>Bracketing &amp; parentheses</h3>
+<p class="prompts">What characters are used as parentheses, or to bracket information?</p>
+</section>
+
+
+
+
+  
+<section id="quotations">
+<h3>Quotations</h3>
+<p class="prompts">What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue?</p>
+</section>
+
+
+
+
+  
+<section id="abbrev">
+<h3>Abbreviation, ellipsis &amp; repetition</h3>
+<p class="prompts">What characters are used to indicate abbreviation, ellipsis &amp; repetition?</p>
+</section>
+
+
+
+
+  
+<section id="emphasis">
+<h3>Emphasis &amp; text decoration</h3>
+<p class="prompts">How are emphasis and highlighting achieved? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</p>
+</section>
+
+
+
+
+  
+<section id="inlinenotes">
+<h3>Inline notes &amp; annotations</h3>
+<p class="prompts">What mechanisms, if any, are used to create <u>inline</u> notes and annotations? (For referent-type notes such as footnotes, see below.)</p>
+</section>
+</section>
+
+
+
+
+
+
+
+
+<section id="paralayout">
+<h2>Line &amp; paragraph layout</h2>
+   
       
-  <section>
-<h3 id="words">Word boundaries</h3>
-  <p>Words are separated by spaces.</p>
+<section id="linebreak">
+<h3>Line breaking &amp; hyphenation</h3>
+    <p class="prompts">Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that?</p>
+
+<p>Spaces between words provide the primary line break opportunities.<a class="fnref" href="http://www.unicode.org/versions/latest/ch07.pdf">u</a></p>
+<p><span class="leadin">Character properties.</span> Characters used for the Russian  language have the following assignments related to line-break properties.</p>
+<table><tbody>
+<tr><th class="sg">AL</th><td class="count">66</td><td class="chars"><span class="exlist" lang="ru">А а Я я Э э Е е Ы ы И и Й й О о Ё ё У у Ю ю П п Б б Т т Д д К к Г г Ц ц Ч ч Ш ш Щ щ Ф ф В в С с З з Ж ж Х х М м Н н Р р Л л Ъ ъ Ь ь</span></td></tr>
+<tr><th class="sg">CM</th><td class="count">2</td><td class="chars"><span class="exlist" lang="ru">̈ ̆</span></td></tr>
+</tbody></table>
+
+
+
+<details id="linebreak_details">
+<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
+</details>
 </section>
 
 
 
-
-  <section>
-<h3 id="phrase">Phrase boundaries</h3>
-  <p>Cyrillic uses standard Latin punctuation.</p>
-</section>
+<section id="hyphenation">
+<h3>Hyphenation</h3>
+<p class="prompts">Is hyphenation used, or something else?</p>
 </section>
 
 
 
-
-
-<section>
-<h2 id="para">Line &amp; paragraph layout</h2>
-      
-  <section>
-<h3 id="direction">Text direction</h3>
-<p>Cyrillic text is written left to right in horizontal lines.</p>
-</section>
-      
-  <section>
-<h3 id="linebreak">Line breaking</h3>
-  <p>Spaces between words provide the primary line break opportunities.<sup><a href="http://www.unicode.org/versions/latest/ch07.pdf">u</a></sup></p>
-</section>
-
-
-
-
-<section>
-    <h3 id="justify">Justification</h3>
+ <section id="justification">
+<h3>Text alignment &amp; justification</h3>
+    <p class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</p>
     <p>Justification is done, principally, by adjusting the space between words.</p>
-    <p><em>Use the control below to see how your browser justifies the text sample here.</em></p>
-    <p dir="ltr" lang="ru" id="justificationExample" style="text-align:start;">Все люди равны перед законом и имеют право, без всякого различия, на равную защиту закона. Все люди имеют право на равную защиту от какой бы то ни было дискриминации, нарушающей настоящую Декларацию, и от какого бы то ни было подстрекательства к такой дискриминации.</p>
-    <p class="english" dir="ltr">
+    <p class="noprint"><em>Use the control below to see how your browser justifies the text sample here.</em></p>
+    <p dir="ltr" class="noprint" lang="ru" id="justificationExample" style="text-align:start;">Все люди равны перед законом и имеют право, без всякого различия, на равную защиту закона. Все люди имеют право на равную защиту от какой бы то ни было дискриминации, нарушающей настоящую Декларацию, и от какого бы то ни было подстрекательства к такой дискриминации.</p>
+    <p class="english noprint" dir="ltr">
       <button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Justify   </button>
     </p>
 </section>
+
+
+
+
+ <section id="letterspace">
+<h3>Letter spacing</h3>
+    <p class="prompts">Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see above.).</p>
+</section>
+
+
+
+
+<section id="lists">
+<h3>Counters, lists, etc.</h3>
+  
+<p class="prompts">Are there list or other counter styles in use?  If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed? </p>
+
+<p><a href="https://w3c.github.io/predefined-counter-styles/#tamil-styles">Ready-made Counter Styles</a> lists 4 alphabetic counter styles for use with the Russian language. You can experiment with these styles using the <a href="../../app-counters/">Counter styles converter</a>.</p>
+<figure class="counter_style_comp">
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>lower-russian<br>
+(numeric)</th>
+<td><span class="ex" lang="ru">а</span></td>
+<td><span class="ex" lang="ru">б</span></td>
+<td><span class="ex" lang="ru">в</span></td>
+<td><span class="ex" lang="ru">г</span></td>
+</tr>
+<tr>
+<th>lower-russian-full<br>
+(alphabetic)</th>
+<td><span class="ex" lang="ru">а</span></td>
+<td><span class="ex" lang="ru">б</span></td>
+<td><span class="ex" lang="ru">в</span></td>
+<td><span class="ex" lang="ru">г</span></td>
+</tr>
+<tr>
+<th>upper-russian<br>
+(alphabetic)</th>
+<td><span class="ex" lang="ru">А</span></td>
+<td><span class="ex" lang="ru">Б</span></td>
+<td><span class="ex" lang="ru">В</span></td>
+<td><span class="ex" lang="ru">Г</span></td>
+</tr>
+<tr>
+<th>upper-russian-full<br>
+(alphabetic)</th>
+<td><span class="ex" lang="ru">А</span></td>
+<td><span class="ex" lang="ru">Б</span></td>
+<td><span class="ex" lang="ru">В</span></td>
+<td><span class="ex" lang="ru">Г</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>11</th>
+<th>22</th>
+<th>33</th>
+<th>44</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>lower-russian<br>
+(numeric)</th>
+<td><span class="ex" lang="ru">л</span></td>
+<td><span class="ex" lang="ru">ц</span></td>
+<td><span class="ex" lang="ru">ад</span></td>
+<td><span class="ex" lang="ru">ар</span></td>
+</tr>
+<tr>
+<th>lower-russian-full<br>
+(alphabetic)</th>
+<td><span class="ex" lang="ru">й</span></td>
+<td><span class="ex" lang="ru">ф</span></td>
+<td><span class="ex" lang="ru">я</span></td>
+<td><span class="ex" lang="ru">ай</span></td>
+</tr>
+<tr>
+<th>upper-russian<br>
+(alphabetic)</th>
+<td><span class="ex" lang="ru">Л</span></td>
+<td><span class="ex" lang="ru">Ц</span></td>
+<td><span class="ex" lang="ru">АД</span></td>
+<td><span class="ex" lang="ru">АР</span></td>
+</tr>
+<tr>
+<th>upper-russian-full<br>
+(alphabetic)</th>
+<td><span class="ex" lang="ru">Й</span></td>
+<td><span class="ex" lang="ru">Ф</span></td>
+<td><span class="ex" lang="ru">Я</span></td>
+<td><span class="ex" lang="ru">АЙ</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>111</th>
+<th>222</th>
+<th>333</th>
+<th>444</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>lower-russian<br>
+(numeric)</th>
+<td><span class="ex" lang="ru">вю</span></td>
+<td><span class="ex" lang="ru">жэ</span></td>
+<td><span class="ex" lang="ru">лщ</span></td>
+<td><span class="ex" lang="ru">пш</span></td>
+</tr>
+<tr>
+<th>lower-russian-full<br>
+(alphabetic)</th>
+<td><span class="ex" lang="ru">вк</span></td>
+<td><span class="ex" lang="ru">ец</span></td>
+<td><span class="ex" lang="ru">ив</span></td>
+<td><span class="ex" lang="ru">лн</span></td>
+</tr>
+<tr>
+<th>upper-russian<br>
+(alphabetic)</th>
+<td><span class="ex" lang="ru">ВЮ</span></td>
+<td><span class="ex" lang="ru">ЖЭ</span></td>
+<td><span class="ex" lang="ru">ЛЩ</span></td>
+<td><span class="ex" lang="ru">ПШ</span></td>
+</tr>
+<tr>
+<th>upper-russian-full<br>
+(alphabetic)</th>
+<td><span class="ex" lang="ru">ВК</span></td>
+<td><span class="ex" lang="ru">ЕЦ</span></td>
+<td><span class="ex" lang="ru">ИВ</span></td>
+<td><span class="ex" lang="ru">ЛН</span></td>
+</tr>
+</tbody>
+</table>
+<figcaption>Comparative counters produced by Russian counter styles.</figcaption>
+</figure>
+<p><span class="leadin">alphabetic</span></p>
+<p>The <span class="kw" translate="no">lower-russian</span> alphabetic style uses the  letters shown below. </p>
+<figure class="auto" data-notes="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41"
+data-cols="">а␣б␣в␣г␣д␣е␣ж␣з␣и␣к␣л␣м␣н␣о␣п␣р␣с␣т␣у␣ф␣х␣ц␣ч␣ш␣щ␣э␣ю␣я</figure>
+<p>The <span class="kw" translate="no">lower-russian-full</span> alphabetic style uses these  letters. </p>
+<figure class="auto" data-notes="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41"
+data-cols="">а␣б␣в␣г␣д␣е␣ё␣ж␣з␣и␣й␣к␣л␣м␣н␣о␣п␣р␣с␣т␣у␣ф␣х␣ц␣ч␣ш␣щ␣ъ␣ы␣ь␣э␣ю␣я</figure>
+<p>The <span class="kw" translate="no">upper-russian</span> alphabetic style uses these  letters. </p>
+<figure class="auto" data-notes="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41"
+data-cols="">А␣Б␣В␣Г␣Д␣Е␣Ж␣З␣И␣К␣Л␣М␣Н␣О␣П␣Р␣С␣Т␣У␣Ф␣Х␣Ц␣Ч␣Ш␣Щ␣Э␣Ю␣Я</figure>
+<p>The <span class="kw" translate="no">upper-russian</span> alphabetic style uses these  letters. </p>
+<figure class="auto" data-notes="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41"
+data-cols="">А␣Б␣В␣Г␣Д␣Е␣Ё␣Ж␣З␣И␣Й␣К␣Л␣М␣Н␣О␣П␣Р␣С␣Т␣У␣Ф␣Х␣Ц␣Ч␣Ш␣Щ␣Ъ␣Ы␣Ь␣Э␣Ю␣Я</figure>
 </section>
 
 
@@ -391,72 +994,313 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h3 id="tbd">TBD</h3>
-<p class="ednote">Further information needed for this section includes:</p>
-<pre style="margin-left: 10%;">
-Glyph shaping &amp; positioning
-    Cursive text
-    Context-based shaping
-    Multiple combining characters
-    Context-based positioning
-    Transforming characters
-
-Structural boundaries &amp; markers
-    Grapheme, word &amp; phrase boundaries
-    Hyphens &amp; dashes
-    Bracketing information
-    Quotations
-    Abbreviations, ellipsis, &amp; repetition
-    Emphasis &amp; highlights
-    Inline notes &amp; annotations
-
-Inline layout
-    Inline text spacing
-    Bidirectional text
-
-Line &amp; paragraph layout
-    Line breaking
-    Hyphenation
-    Text alignment &amp; justification
-    Counters, lists, etc.
-    Styling initials
-    Baselines &amp; inline alignment
-
-Page &amp; book layout
-    General page layout &amp; progression
-    Directional layout features
-	Grids &amp; tables
-    Notes, footnotes, etc.
-    Forms &amp; user interaction
-    Page numbering, running headers, etc.
-</pre>
+  
+<section id="initials">
+<h3>Styling initials</h3>
+<p class="prompts">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? etc.</p>
+</section>
 </section>
 
 
 
 
 
-<section>
-<h2 id="refs">References</h2>
+
+<section id="pagelayout">
+<h2>Page &amp; book layout</h2>
+ 
+<section id="generallayout">
+<h3>General page layout &amp; progression</h3>
+<p class="prompts">How are the main text area and ancilliary areas positioned and defined? Are there any special requirements here, such as dimensions in characters for the Japanese kihon hanmen? The book cover for scripts that are read right-to-left scripts is on the right of the spine, rather than the left.  When content can flow vertically and to the left or right, how to specify the location of objects, text, etc. relative to the flow? Do tables and grid layouts work as expected? How do columns work in vertical text? Can you mix block of vertical and horizontal text? Does text scroll in a different direction?</p>
+</section>
+
+
+
+
+
+<section id="grids">
+<h3>Grids &amp; tables</h3>
+<p class="prompts">Does the script have special requirements for character grids or tables?</p>
+</section>
+
+
+
+
+  
+<section id="footnotes">
+<h3>Notes, footnotes, etc</h3>
+<p class="prompts">Does the script have special requirements for notes, footnotes, endnotes or other necessary annotations of this kind? (There is a section above for purely inline annotations, such as ruby or warichu. This section is more about annotation systems that separate the reference marks and the content of the notes.)</p>
+</section>
+
+
+
+
+  
+<section id="interaction">
+<h3>Forms &amp; user interaction</h3>
+<p class="prompts">Are vertical form controls needed? Are scroll bars in an unusual position? Other special requirements for user interaction?</p>
+</section>
+
+
+
+
+  
+<section id="headers">
+<h3>Page numbering, running headers, etc</h3>
+<p class="prompts">Are there special conventions for page numbering, or the way that running headers and the like are handled?</p>
+</section>
+</section>
+
+
+
+
+ <section id="chars">
+<h2>Character lists</h2>
+  <p>Version 12.0 of the Unicode Standard has the following blocks dedicated to the Cyrillic script (numbers in lists are non-ASCII only):</p>
+    <ul>
+      <li><a href="/uniview/?block=Cyrillic">Cyrillic</a> <span class="charCount">248 letters, 9 marks, 1 symbol : total 258</span></li>
+      <li><a href="/uniview/?block=Cyrillic_supplement">Cyrillic_Supplement</a> <span class="charCount">48 letters : total 48</span></li>
+      <li><a href="/uniview/?block=Cyrillic_Extended-A">Cyrillic Extended-A</a> <span class="charCount">32 marks : total 32</span></li>
+      <li><a href="/uniview/?block=Cyrillic_Extended-B">Cyrillic Extended-B</a> <span class="charCount">78 letters, 16 marks, 1 punctuation : total 95</span></li>
+      <li><a href="/uniview/?block=Cyrillic_Extended-C">Cyrillic Extended-C</a> <span class="charCount">9 letters : total 9</span></li>
+    </ul>
+<p>Apart from ASCII characters, the Russian orthography described here uses 68 characters (and 2 more, used infrequently) from the following Unicode blocks: </p>
+    <ul>
+    <li><a href="/uniview/?block=Cyrillic">Cyrillic</a> <span class="charCount">66 letters : total  66 &nbsp; (+ 1 infrequent)</span></li>
+<!--li> <a href="/uniview/?block=general_punctuation">General punctuation</a> <span class="charCount">4 punctuation : total 4  &nbsp; (+ 5 infrequent)</span></li-->
+<li> <a href="/uniview/?block=combining_diacritical_marks">Combining Diacritical Marks</a> <span class="charCount">2 marks : total 2</span></li>
+    </ul>
+ <p><cite>Character Usage</cite> has information about the following orthographies associated with this script: <a href="/app-charuse/?language=ru" target="_blank">Russian</a> • <a href="/app-charuse/?language=be" target="_blank">Belorussian</a> • <a href="/app-charuse/?language=bg" target="_blank">Bulgarian</a> • <a href="/app-charuse/?language=kk" target="_blank">Kazakh</a> • <a href="/app-charuse/?language=mk" target="_blank">Macedonian</a> • <a href="/app-charuse/?language=mn-cyrl" target="_blank">Mongolian</a> • <a href="/app-charuse/?language=sr" target="_blank">Serbian</a> • <a href="/app-charuse/?language=uk" target="_blank">Ukranian</a></p>
+<p>For detailed character-specific information see the <a class="linkHighlight" href="/scripts/cyrillic/block">Cyrillic character notes</a>.</p>
+</section>
+
+
+
+
+
+<section id="languages">
+<h2>Languages using the Cyrillic script</h2>
+<p>According to ScriptSource, the Cyrillic script is used for the following languages: </p>
+<ul>
+<li>Abaza [abq]</li>
+<li>Abkhazian [abk]</li>
+<li>Adyghe [ady]</li>
+<li>Aghul [agx]</li>
+<li>Akhvakh [akv]</li>
+<li>Sami, Akkala [sia]</li>
+<li>Alutor [alr]</li>
+<li>Andi [ani]</li>
+<li>Archi [aqc]</li>
+<li>Arin [xrn]</li>
+<li>Armazic [xrm]</li>
+<li>Assan [xss]</li>
+<li>Neo-Aramaic, Assyrian [aii]</li>
+<li>Avaric [ava]</li>
+<li>Azerbaijani [aze]</li>
+<li>Bagvalal [kva]</li>
+<li>Romani, Balkan [rmn]</li>
+<li>Romani, Baltic [rml]</li>
+<li>Bashkir [bak]</li>
+<li>Belarusian [bel]</li>
+<li>Bezhta [kap]</li>
+<li>Bosnian [bos]</li>
+<li>Botlikh [bph]</li>
+<li>Bukharic [bhh]</li>
+<li>Bulgarian [bul]</li>
+<li>Buriat [bua]</li>
+<li>Yupik, Central Siberian [ess]</li>
+<li>Chamalal [cji]</li>
+<li>Chechen [che]</li>
+<li>Chukot [ckt]</li>
+<li>Chulym [clw]</li>
+<li>Slavonic, Church [chu]</li>
+<li>Chuvash [chv]</li>
+<li>Tatar, Crimean [crh]</li>
+<li>Dargwa [dar]</li>
+<li>Daur [dta]</li>
+<li>Dido [ddo]</li>
+<li>Dolgan [dlg]</li>
+<li>Dungan [dng]</li>
+<li>Mari, Eastern [mhr]</li>
+<li>Erzya [myv]</li>
+<li>Even [eve]</li>
+<li>Evenki [evn]</li>
+<li>Enets, Forest [enf]</li>
+<li>Gagauz [gag]</li>
+<li>Ghodoberi [gdo]</li>
+<li>Gilyak [niv]</li>
+<li>Mongolian, Halh [khk]</li>
+<li>Mongolian, Halh [khk]</li>
+<li>Hinukh [gin]</li>
+<li>Hunzib [huz]</li>
+<li>Ingush [inh]</li>
+<li>Itelmen [itl]</li>
+<li>Judeo-Tat [jdt]</li>
+<li>Kabardian [kbd]</li>
+<li>Kalmyk [xal]</li>
+<li>Kamas [xas]</li>
+<li>Kara-Kalpak [kaa]</li>
+<li>Karachay-Balkar [krc]</li>
+<li>Karagas [kim]</li>
+<li>Karaim [kdr]</li>
+<li>Karata [kpt]</li>
+<li>Karelian [krl]</li>
+<li>Kazakh [kaz]</li>
+<li>Kerek [krk]</li>
+<li>Ket [ket]</li>
+<li>Khakas [kjh]</li>
+<li>Khanty [kca]</li>
+<li>Khazar [zkz]</li>
+<li>Khvarshi [khv]</li>
+<li>Sami, Kildin [sjd]</li>
+<li>Koibal [zkb]</li>
+<li>Komi [kom]</li>
+<li>Komi-Permyak [koi]</li>
+<li>Komi-Zyrian [kpv]</li>
+<li>Koryak [kpy]</li>
+<li>Kott [zko]</li>
+<li>Krymchak [jct]</li>
+<li>Kuman (Russia) [qwm]</li>
+<li>Kumyk [kum]</li>
+<li>Kurdish [kur]</li>
+<li>Kyrgyz [kir]</li>
+<li>Ladino [lad]</li>
+<li>Lak [lbe]</li>
+<li>Lezghian [lez]</li>
+<li>Lingua Franca Nova [lfn]</li>
+<li>Macedonian [mkd]</li>
+<li>Mansi [mns]</li>
+<li>Mari (Russia) [chm]</li>
+<li>Mator [mtm]</li>
+<li>Mator [mtm]</li>
+<li>Aleut, Mednyj [mud]</li>
+<li>Greek, Modern (1453-) [ell]</li>
+<li>Moksha [mdf]</li>
+<li>Buriat, Mongolia [bxm]</li>
+<li>Mongolian [mon]</li>
+<li>Montenegrin [cnr]</li>
+<li>Tat, Muslim [ttt]</li>
+<li>Nadruvian [ndf]</li>
+<li>Nanai [gld]</li>
+<li>Yupik, Naukan [ynk]</li>
+<li>Negidal [neg]</li>
+<li>Nenets [yrk]</li>
+<li>Nganasan [nio]</li>
+<li>Nogai [nog]</li>
+<li>Azerbaijani, North [azj]</li>
+<li>Altai, Northern [atv]</li>
+<li>Kurdish, Northern [kmr]</li>
+<li>Sami, Northern [sme]</li>
+<li>Uzbek, Northern [uzn]</li>
+<li>Yukaghir, Northern [ykg]</li>
+<li>Russian, Old [orv]</li>
+<li>Omok [omk]</li>
+<li>Oroch [oac]</li>
+<li>Orok [oaa]</li>
+<li>Ossetic [oss]</li>
+<li>Yupik, Pacific Gulf [ems]</li>
+<li>Pontic [pnt]</li>
+<li>Pumpokol [xpm]</li>
+<li>Romanian [ron]</li>
+<li>Romany [rom]</li>
+<li>Buriat, Russia [bxr]</li>
+<li>Russian [rus]</li>
+<li>Rusyn [rue]</li>
+<li>Rutul [rut]</li>
+<li>Selkup [sel]</li>
+<li>Serbian [srp]</li>
+<li>Shor [cjs]</li>
+<li>Shughni [sgh]</li>
+<li>Tatar, Siberian [sty]</li>
+<li>Yupik, Sirenik [ysr]</li>
+<li>Altai, Southern [alt]</li>
+<li>Yukaghir, Southern [yux]</li>
+<li>Svan [sva]</li>
+<li>Tabassaran [tab]</li>
+<li>Tajik [tgk]</li>
+<li>Talysh [tly]</li>
+<li>Tatar [tat]</li>
+<li>Sami, Ter [sjt]</li>
+<li>Tindi [tin]</li>
+<li>Tlingit [tli]</li>
+<li>Tsakhur [tkr]</li>
+<li>Enets, Tundra [enh]</li>
+<li>Turkish [tur]</li>
+<li>Turkmen [tuk]</li>
+<li>Tuvinian [tyv]</li>
+<li>Udi [udi]</li>
+<li>Udihe [ude]</li>
+<li>Udmurt [udm]</li>
+<li>Ukrainian [ukr]</li>
+<li>Ulch [ulc]</li>
+<li>Urum [uum]</li>
+<li>Uyghur [uig]</li>
+<li>Uyghur [uig]</li>
+<li>Uzbek [uzb]</li>
+<li>Uzbek [uzb]</li>
+<li>Romani, Vlax [rmy]</li>
+<li>Wakhi [wbl]</li>
+<li>Balochi, Western [bgn]</li>
+<li>Mari, Western [mrj]</li>
+<li>Oirat, Written [xwo]</li>
+<li>Xibe [sjo]</li>
+<li>Yagnobi [yai]</li>
+<li>Yakut [sah]</li>
+<li>Yazgulyam [yah]</li>
+<li>Yug [yug]</li>
+<li>Yug [yug]</li>
+</ul>
+</section>
+
+
+
+
+
+
+
+
+<section id="refs">
+<h2>References</h2>
   <ol>
-    <li>[ <sup><a href="http://www.unicode.org/versions/latest/ch07.pdf">u</a></sup> ] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch07.pdf">Cyrillic</a>, pp316-320.</li>
-    <li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
+<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
 		    0-19-507993-0, pp408-412</li>
-<li>[ <sup><a href="http://en.wikipedia.org/wiki/Cyrillic_script">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Cyrillic_script">Cyrillic script</a>.</li>
-<li>[ <sup><a href="http://scriptsource.org/">s</a></sup> ] <a href="http://scriptsource.org/">Scriptsource</a></li>
+<li>[ <a class="fnref" href="http://scriptsource.org/">s</a> ] <a href="http://scriptsource.org/">Scriptsource</a></li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch07.pdf">u</a> ] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch07.pdf">Cyrillic</a>, pp316-320.</li>
+<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Cyrillic_script">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Cyrillic_script">Cyrillic script</a>.</li>
 </ol>
 </section>
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/cyrillic"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-07-14  9:48<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bcyrillic%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fcyrillic%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
+<details>
+<summary class="prompts">Show stats</summary>
+
+<table id="charCountList">
+<tr><th>Main</th><td id="mainCharList"></td><td id="mainCharListTotal"></td></tr>
+<tr><th>Auxiliary</th><td id="auxCharList"></td><td id="auxCharListTotal"></td></tr>
+<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
+<tr><th>Other</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
+<tr><th>Deprecated</th><td id="deprecatedCharList"></td><td id="deprecatedCharListTotal"></td></tr>
+</table>
+</details>
+
+
+<div id="phoneLinks"></div>
 
 
 <div id="panel" style="display:none"></div>
+
+
+<div class="smallprint"><span id="version"></span></div>
+
+
+
 </body>
 <script>
-initialiseSummary('/scripts/cyrillic/block','ru','Cyrillic')
+initialiseSummary('/scripts/cyrillic/block','ru','Cyrillic','cyrillic')
+autoTransliterate('ru')
 </script>
 
 </html>
