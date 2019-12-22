@@ -110,7 +110,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <p id="status">Updated 
   <!-- #BeginDate format:Sw1 -->22 December, 2019<!-- #EndDate -->
   <span id="versionTop"></span>
-  </p>
+</p>
 
 
 
@@ -199,7 +199,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <h2>Text direction</h2>
     <p>Text is normally written horizontally, right to left, however numbers and non-Arabic script text run left to right.</p>
 <p>See the <a href="index/#direction">Arabic overview</a> for more details, especially related to sequences of items and numbers.</p>
-  </section>
+</section>
 
 
 
@@ -891,15 +891,229 @@ alveolar</th>
   <section id="context">
 <h2>Glyph shaping &amp; positioning</h2>
 <p>See the <a href="index/#shaping">Arabic overview</a>.</p>
+<p>The script is unicameral and needs no transforms to convert between code points.</p>
+<p>You can experiment with examples using the <a href="../../pickers/arab-ha/">Hausa ajami character app</a>.</p>
 </section>
 
 
 
 
 
+<section id="boundaries">
+<h2>Structural boundaries &amp; markers</h2>  
   
+<section id="graphemes">
+<h3>Grapheme boundaries</h3>
+<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
+
+<p class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements when double-clicking on the text, or moving through the text with the cursor, or backspace, etc.? </p>
+
+</section>
+
+
+
+
   
+<section id="word">
+<h3>Word boundaries</h3>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+
+<p class="prompts">Are words separated by spaces, or other characters? Are there special requirements when double-clicking  on the text? Are words hyphenated?</p>
+
+
+<p>Words are separated by spaces.</p>
+</section>
+
+
+
+
   
+<section id="phrase">
+<h3>Phrase &amp; section boundaries</h3>
+
+<p class="prompts">What characters are used to indicate the boundaries of phrases, sentences, and sections?</p>
+</section>
+
+
+
+
+
+<section id="bracketing">
+<h3>Bracketing &amp; parentheses</h3>
+<p class="prompts">What characters are used as parentheses, or to bracket information?</p>
+</section>
+
+
+
+
+  
+<section id="quotations">
+<h3>Quotations</h3>
+<p class="prompts">What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue?</p>
+</section>
+
+
+
+
+  
+<section id="abbrev">
+<h3>Abbreviation, ellipsis &amp; repetition</h3>
+<p class="prompts">What characters are used to indicate abbreviation, ellipsis &amp; repetition?</p>
+</section>
+
+
+
+
+  
+<section id="emphasis">
+<h3>Emphasis &amp; text decoration</h3>
+<p class="prompts">How are emphasis and highlighting achieved? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</p>
+</section>
+
+
+
+
+  
+<section id="inlinenotes">
+<h3>Inline notes &amp; annotations</h3>
+<p class="prompts">What mechanisms, if any, are used to create <u>inline</u> notes and annotations? (For referent-type notes such as footnotes, see below.)</p>
+</section>
+</section>
+
+
+
+
+
+
+<section id="paralayout">
+<h2>Line &amp; paragraph layout</h2>
+   
+      
+<section id="linebreak">
+<h3>Line breaking &amp; hyphenation</h3>
+<p class="prompts">Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that?</p>
+<p>See the <a href="index/#shaping">Arabic overview</a>.</p>
+<p><span class="leadin">Character properties.</span> Characters used for the Hausa  language have the following assignments related to line-break properties.</p>
+<table><tbody>
+<tr><th class="sg">AL</th><td class="count">41</td><td class="chars"><span class="exlist" lang="ha">أ إ ا و ى ی ب ت د ث ج ک غ ع ٻ ط ڟ ࢼ ࢻ س ز ش ح م ࢽ ل ر ۑ ݣ ك ݑ ق ف پ ص ذ ظ ه ن ض ؿ</span></td></tr>
+<tr><th class="sg">CM</th><td class="count">9</td><td class="chars"><span class="exlist" lang="ha">َ ُ ِ ْ ٕ ٔ ٜ ٰ ّ</span></td></tr>
+<tr><th class="sg">EX</th><td class="count">1</td><td class="chars"><span class="exlist" lang="ha">؟</span></td></tr>
+<tr><th class="sg">IS</th><td class="count">2</td><td class="chars"><span class="exlist" lang="ha">، .</span></td></tr>
+<tr><th class="sg">QU</th><td class="count">4</td><td class="chars"><span class="exlist" lang="ha">« » ‹ ›</span></td></tr>
+</tbody></table>
+
+
+
+<details id="linebreak_details">
+<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CP">CP (closing parenthesis)</a> will not cause a break opportunity when appearing in contexts like “(s)he.” In all other respects the breaking behavior of CP and CL are the same.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#EX">EX (exclamation mark/interrogation)</a> behave like closing characters, except in relation to postfix (PO) and non-starter characters (NS).</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">IS (infix numeric separators)</a> usually occurs inside a numerical expression and may not be separated from the numeric characters that follow, unless a space character intervenes. For example, there is no break in “100.00” or “10,000”, nor in “12:59”..</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#SA">QU (quotation)</a> characters can be opening or closing, or even both, depending on usage. The default is to treat them as both opening and closing.</p>
+</details>
+</section>
+
+
+
+<section id="hyphenation">
+<h3>Hyphenation</h3>
+<p class="prompts">Is hyphenation used, or something else?</p>
+</section>
+
+
+
+ <section id="justification">
+<h3>Text alignment &amp; justification</h3>
+    <p class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</p>
+</section>
+
+
+
+
+ <section id="letterspace">
+<h3>Letter spacing</h3>
+    <p class="prompts">Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see above.).</p>
+</section>
+
+
+
+
+<section id="lists">
+<h3>Counters, lists, etc.</h3>
+  
+<p class="prompts">Are there list or other counter styles in use?  If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed? </p>
+</section>
+
+
+
+
+
+
+
+  
+<section id="initials">
+<h3>Styling initials</h3>
+<p class="prompts">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? etc.</p>
+</section>
+</section>
+
+
+
+
+
+
+  
+<section id="pagelayout">
+<h2>Page &amp; book layout</h2>
+ 
+<section id="generallayout">
+<h3>General page layout &amp; progression</h3>
+<p class="prompts">How are the main text area and ancilliary areas positioned and defined? Are there any special requirements here, such as dimensions in characters for the Japanese kihon hanmen? The book cover for scripts that are read right-to-left scripts is on the right of the spine, rather than the left.  When content can flow vertically and to the left or right, how to specify the location of objects, text, etc. relative to the flow? Do tables and grid layouts work as expected? How do columns work in vertical text? Can you mix block of vertical and horizontal text? Does text scroll in a different direction?</p>
+</section>
+
+
+
+
+
+<section id="grids">
+<h3>Grids &amp; tables</h3>
+<p class="prompts">Does the script have special requirements for character grids or tables?</p>
+</section>
+
+
+
+
+  
+<section id="footnotes">
+<h3>Notes, footnotes, etc</h3>
+<p class="prompts">Does the script have special requirements for notes, footnotes, endnotes or other necessary annotations of this kind? (There is a section above for purely inline annotations, such as ruby or warichu. This section is more about annotation systems that separate the reference marks and the content of the notes.)</p>
+</section>
+
+
+
+
+  
+<section id="interaction">
+<h3>Forms &amp; user interaction</h3>
+<p class="prompts">Are vertical form controls needed? Are scroll bars in an unusual position? Other special requirements for user interaction?</p>
+</section>
+
+
+
+
+  
+<section id="headers">
+<h3>Page numbering, running headers, etc</h3>
+<p class="prompts">Are there special conventions for page numbering, or the way that running headers and the like are handled?</p>
+</section>
+</section>
+
+
+
+
+
 
 <section>
 <h2>Character lists</h2>
