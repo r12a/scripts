@@ -28,18 +28,22 @@
 
 <script src="../../shared/scriptdb/hebrew.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2019.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
+<script src="../common/transliterate.js"></script>
+<script src="../common/prompts.js"> </script>
+<script src="../glossary/glossary.js"> </script>
 <script src="../../shared/code/getLinks.js"></script>
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
 
 <script src="../../shared/fontlists/hebrew.js"> </script>
+<script src="he-translit.js">  </script>
 </head>
 
 <body>
@@ -48,7 +52,7 @@
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Hebrew</h1>
+<h1>Hebrew (draft)</h1>
 
 <nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top"/></a></nav>
 
@@ -98,21 +102,23 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->14-Jul-2019<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/index.php?tag=hebrew" title="Show all blog posts tagged with 'arabic'">hebrew</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+  <!-- #BeginDate format:Sw1 -->22 December, 2019<!-- #EndDate -->
+  <span id="versionTop"></span>
+</p>
 
 
 <div class="section">
-  <p>This page provides basic information about the Hebrew script, and its use for modern Israeli Hebrew. It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned.    For character-specific details follow the links to the <a class="linkHighlight" href="block">Hebrew character notes</a>.</p>
-  <p>See also the <a href="../../pickers/hebrew/">Hebrew picker</a>.</p>
+  <p>This page gathers together basic information about the Hebrew script and its use for the modern Hebrew language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Hebrew using Unicode; for greater details follow the footnote links (especially those with an arrow alongside them).</p>
+<p> For character-specific details follow the links to the <a class="linkHighlight" href="block">Hebrew character notes</a>. See also the <a href="../../pickers/hebrew/" class="linkHighlight">Hebrew character app</a>.</p>
 <p>For similar information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Hebr">script links pages</a>.</p>
 <p class="instructions">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text. Colours and annotations on panels listing characters are relevant to their use for the modern Hebrew language.</p>
+<p class="instructions">Unless in parentheses, the transcriptions in italics that follow Hebrew text are a <a href="../glossary/#transliteration" class="termref">transliteration</a> developed for these pages. Those in parentheses are usually ISO transcriptions. Transcriptions in <span style="white-space:nowrap;">⌈ brackets ⌋</span> may be phonemic or phonetic.</p>
 </div>
 
 
 
-<section>
-  <h2 id="sample">Sample (Hebrew)</h2>
+<section id="sample">
+<h2>Sample (Hebrew)</h2>
   
   <div id="freeText" dir="rtl" lang="ar">
   <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">סעיף א. כל בני אדם נולדו בני חורין ושווים בערכם ובזכויותיהם. כולם חוננו בתבונה ובמצפון, לפיכך חובה עליהם לנהוג איש ברעהו ברוח של אחוה.</p>
@@ -125,8 +131,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-    <h2 id="history">Usage &amp; history</h2>
+<section id="history">
+<h2>Usage &amp; history</h2>
     <p>From <a href="http://scriptsource.org/scr/Hebr">Scriptsource</a>: </p>
     <blockquote>
 <p>The Hebrew script is primarily used for writing the Hebrew, Samaritan and Yiddish languages. It is also used for writing some varieties of Arabic spoken in North Africa, Iraq and Yemen; the languages of the Jewish communities in Italy and Corfu, Morocco (Berber), Spain and the Caucasus mountains; and the modern Jewish Aramaic languages. Prior to 500 BC the Hebrew language was written in the Paleo-Hebrew script, which was abandoned after the Jewish exile in the 5th century BC in favour of the Aramaic script, from which the current Hebrew script descended. It is commonly called the Hebrew alphabet, after its first two letters aleph and bet, although it is actually an abjad. ...</p>
@@ -151,27 +157,23 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-    <h2 id="type">Distictive features</h2>
+<section id="type">
+<h2>Distinctive features</h2>
     <p>Hebrew is an <span class="newterm"> abjad</span>. This means that in normal use the script represents only consonant and long vowel sounds. This approach is helped by the strong emphasis on consonant patterns in Semitic languages.   See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
 </p>
 </section>
-  
-  
- 
- <section>
-<h2 id="chars">Character lists</h2>
-<p>The Hebrew script characters in Unicode 10.0 are in a single block: </p>
-<ul>
-<li><a href="/uniview/?block=arabic">Hebrew</a> <span class="charCount">31 letters, 51 marks, 6 punctuation :   total 88</span></li></ul>
-    <p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
-<ul>
-<li><a href="/app-charuse/?language=he" target="_blank">Hebrew</a> <span class="charCount">27 letters, 6 punctuation, 1 symbols, 11 other :   total 45 &nbsp;&nbsp; + ( 14 infrequent )</span></li>
-<li><a href="/app-charuse/?language=yi" target="_blank">Yiddish</a> <span class="charCount">30 letters, 6 marks, 6 punctuation, 2 other :   total 44</span></li>
-</ul>
-<p>For character-specific details see 
-  <a class="linkHighlight" href="/scripts/hebrew/block">Hebrew character notes</a>.</p>
-</section>
+
+
+
+
+<section id="dir">
+<h2>Text direction</h2>
+    <p>Hebrew script is written right-to-left in the main, but as with all RTL scripts, numbers and embedded LTR script text are written left-to-right (bidirectional text). In the following example, the Hebrew words are read right-to-left, starting with the one on the right, and the numeric expression (&quot;10-12&quot;) is read left-to-right, ie. it starts with 10 and ends with 12. (Note that this is unlike Arabic, where the 10 and 12 would be in opposite positions.)    </p>
+    <figure>
+    <p dir="rtl" lang="he" class="large"><span  class="ex">התאריכים 12־10 במרץ</span></p>
+    <figcaption>Bidirectional Hebrew text.</figcaption>
+    </figure>
+  </section>
  
    
   
@@ -179,36 +181,153 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <div id="showTranscriptions">
-<div>In yellow boxes, show:</div>
+<div>Character lists show:</div>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
 <div><label>Israeli Academy 
 <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
 </div>
-
-
-
-
-<section>
-    <h2 id="dir">Text direction</h2>
-    <p>Hebrew script is written right-to-left in the main, but as with all RTL scripts, numbers and embedded LTR script text are written left-to-right (bidirectional text). In the following example, the Hebrew words are read right-to-left, starting with the one on the right, and the numeric expression (&quot;10-12&quot;) is read left-to-right, ie. it starts with 10 and ends with 12. (Note that this is unlike Arabic, where the 10 and 12 would be in opposite positions.)    </p>
-    <figure>
-    <p dir="rtl" lang="he" class="large"><span  class="ex">התאריכים 12־10 במרץ</span></p>
-    <figcaption>Bidirectional Hebrew text.</figcaption>
-    </figure>
-  </section>
   
   
   
 
 
-<section>
-<h2 id="vowels">Vowels</h2>
+<section id="vowels">
+<h2>Vowels</h2>
  
 
-<section>
-<h3 id="matres">Matres lectionis</h3>
+<section id="vowelPhonemes">
+<h3>Vowel sounds</h3>
+
+<p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+
+<p><span class="leadin">Plain vowels.</span></p>
+
+
+<div style="margin-left: 7.5%;">
+<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="white"/>
+      <feComposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -->
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+  
+   <!-- mid close -->
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -->
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- open -->
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+  
+  <!-- close -->
+  <text x="32" y="15" class="ipa" text-anchor="end">i</text> 
+<text x="250" y="15" class="ipa">u</text> 
+
+  <!-- close mid -->
+  <text x="57" y="75" class="ipa" text-anchor="end">e</text> 
+  <text x="250" y="75" class="ipa">o</text> 
+
+  <!-- mid -->
+<text x="158" y="105" class="allophone" text-anchor="middle" filter="url(#solid)">ə</text>
+<text x="158" y="105" class="allophone" text-anchor="middle">ə</text> 
+
+  <!-- open -->
+  <text x="106" y="195" class="ipa" text-anchor="end">a</text> 
+</svg>
+</div>
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Modern_Hebrew_phonology">wp</a>. Phones in a lighter colour are non-native or allophones.</p>
+
+
+<p><span class="leadin">Diphthongs.</span></p>
+
+<div style="margin-left: 7.5%;">
+<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="white"/>
+      <feComposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -->
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+  
+   <!-- mid close -->
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -->
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- open -->
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+  
+  <!-- close mid -->
+  <text x="57" y="75" class="ipa" text-anchor="end">ej</text> 
+
+  <!-- open -->
+  <text x="106" y="195" class="ipa" text-anchor="end">aj</text> 
+</svg>
+</div>
+
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Modern_Hebrew_phonology">wp</a>.</p>
+</section>
+
+
+
+
+
+
+<section id="matres">
+<h3>Matres lectionis</h3>
 
  <p class="explanatoryintro">In the spelling of Arabic and some other Semitic languages, matres lectionis refers to the use of certain consonants to indicate a vowel. <sup><a href="https://en.wikipedia.org/wiki/Mater_lectionis">w</a></sup></p>
    <p>In addition to their role as consonants, the following may also indicate the location of a vowel.</p>
@@ -222,8 +341,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h3 id="niqqud">Niqqud points</h3>
+<section id="niqqud">
+<h3>Niqqud points</h3>
 
     <p>A series of points, known as <span class="name">niqqud</span>, can be used to give precision about vowel sounds. They are rarely used outside of educational, children's, and religious texts, or for foreign or ambiguous words. Hebrew readers are usually able to understand the pronunciation from the context and the regular structure of Hebrew words.</p>
 
@@ -240,8 +359,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h3 id="vowelabsence">Vowel absence</h3>
+<section id="vowelabsence">
+<h3>Vowel absence</h3>
 
 <p>To express an absence of vowel between two consonants, use <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05B0;</span> [<span class="uname">U+05B0 HEBREW POINT SHEVA</span>]</span>. However, <a href="https://en.wikipedia.org/wiki/Shva#Pronunciation_in_modern_Hebrew">in various contexts</a> the <span class="name">sh'va</span> is pronounced.</p>
 
@@ -255,11 +374,122 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
  
-<section>
-<h2 id="consonants">Consonants</h2>
+<section id="consonants">
+<h2>Consonants</h2>
 
-<section>
-<h3 id="basic_consonants">Basic consonants</h3>
+
+<section id="consonantSounds">
+<h3>Consonant sounds</h3>
+
+<p>This table reflects phonemes of Israeli Hebrew.</p>
+<p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+
+<table class="ipaTable">
+<thead>
+<tr>
+<th></th>
+<th>labial </th>
+<th>dental </th>
+<th>alveolar </th>
+<th>post-<br>
+alveolar</th>
+<th>palatal </th>
+<th>velar </th>
+<th>uvular</th>
+<th>glottal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>stop</th>
+<td><span class="ipa">p</span> <span class="ipa">b</span></td>
+<td><span class="ipa">t</span> <span class="ipa">d</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">k</span> <span class="ipa">ɡ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ʔ</span></td>
+</tr>
+<tr>
+<th>affricate</th>
+<td>&nbsp;</td>
+<td><span class="ipa">t͡s</span></td>
+<td>&nbsp;</td>
+<td><span class="allophone">t͡ʃ</span> <span class="allophone">d͡ʒ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>fricative </th>
+<td><span class="ipa">f</span> <span class="ipa">v</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">s</span> <span class="ipa">z</span></td>
+<td><span class="ipa">ʃ</span> <span class="allophone">ʒ</span><br/></td>
+<td>&nbsp;</td>
+<td><span class="ipa">x</span></td>
+<td><span class="ipa">ʁ</span></td>
+<td><span class="ipa">h</span></td>
+</tr>
+<tr>
+<th>nasal</th>
+<td><span class="ipa">m</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">n</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>approximant</th>
+<td><span class="allophone">w</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">l</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">j</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>trill/flap</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="allophone">r</span> <span class="allophone">ɾ</span></td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th></th>
+<td class="mouth"><a href="../common/mouth/mouth_labial.png" target="_blank"><img src="../common/mouth/mouth_small_labial.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_dental.png" target="_blank"><img src="../common/mouth/mouth_small_dental.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_alveolar.png" target="_blank"><img src="../common/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_postalveolar.png" target="_blank"><img src="../common/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_palatal.png" target="_blank"><img src="../common/mouth/mouth_small_palatal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_velar.png" target="_blank"><img src="../common/mouth/mouth_small_velar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_uvular.png" target="_blank"><img src="../common/mouth/mouth_small_uvular.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_glottal.png" target="_blank"><img src="../common/mouth/mouth_small_glottal.png" alt=" "/></a></td>
+</tr>
+</tbody>
+</table>
+
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Modern_Hebrew_phonology">wp</a>. Phones in a lighter colour are non-native or allophones.</p>
+</section>
+
+
+
+
+
+
+<section id="basic_consonants">
+<h3>Basic consonants</h3>
 
 <p>These are the basic consonants used in modern Hebrew.</p>
 
@@ -279,8 +509,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h3 id="consonant_extensions">Repertoire extensions</h3>
+<section id="consonant_extensions">
+<h3>Repertoire extensions</h3>
 
 <p>In vowelled text, the following diacritics can be used to modify the sound of a consonant.</p>
 
@@ -311,8 +541,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h2 id="otherletter">Other letters</h2>
+<section id="otherletter">
+<h2>Other letters</h2>
 
 <p>The Unicode Hebrew block contains the following additional characters with the general property of <span class="uname">letter</span>.</p>
 
@@ -325,8 +555,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
   
   
-<section>
-<h2 id="cchars">Combining marks</h2>
+<section id="cchars">
+<h2>Combining marks</h2>
 
 <p>Combining characters used in modern Israeli Hebrew include the following types of diacritic:</p>
 <ul>
@@ -345,8 +575,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h2 id="punctuation">Punctuation</h2>
+<section id="punctuation">
+<h2>Punctuation</h2>
 
 
 <figure class="characterBox auto" data-cols="trans">־␣״␣׳</figure>
@@ -366,13 +596,13 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h2 id="numbers">Numbers</h2>
+<section id="numbers">
+<h2>Numbers</h2>
 <p>Hebrew uses european digits.</p>
 <p>For about a thousand years from the 2nd century BC, Hebrew used letters as numbers. Nowadays, they are only used this way for the Hebrew calendar, for school grades, for counter styles, and in religious contexts.</p>
 
-<section>
-<h3 id="currency">Currency</h3>
+<section id="currency">
+<h3>Currency</h3>
 
 <p>The denomination is generally expressed by the abbreviation <span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">ש״ח</span></span>, meaning <span class="meaning">new sheqel</span>, and standing for <span class="trans">sheqel ẖadash</span>.<sup><a href="http://en.wikipedia.org/wiki/Cantillation"> </a><a href="http://en.wikipedia.org/wiki/Hebrew_punctuation">wp</a></sup></p>
 
@@ -387,11 +617,20 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
   
   
-<section>
-  <h2 id="gsub">Glyph shaping &amp; positioning</h2>
-  
-  <section>
-  <h3 id="gsub">Word-final shapes</h3>
+<section id="shaping">
+<h2>Glyph shaping &amp; positioning</h2>
+
+<p>The Hebrew script is not cursive when printed.</p>
+<p>The script is unicameral and needs no transforms to convert between code points.</p>
+<p>You can experiment with examples using the <a href="/pickers/hebrew/">Hebrew character app</a>.</p>
+
+
+
+
+
+<section id="gsub">
+<h3>Context-based shaping</h3>
+
     <p>In Hebrew several characters have a different shape at the end of a word, but each shape variant has it's own codepoint and keyboard key, so there is no need for rendering rules to choose the correct glyph.</p>
     <p>This example shows <span class="codepoint"><span lang="he" dir="rtl">&#x05DE;</span> <a href="/scripts/hebrew/block#char05DE">[<span class="uname">U+05DE HEBREW LETTER MEM</span>]</a></span> and <span class="codepoint"><span lang="he" dir="rtl">&#x05DD;</span> <a href="/scripts/hebrew/block#char05DD">[<span class="uname">U+05DD HEBREW LETTER FINAL MEM</span>]</a></span> (on the left).</p>
     <figure>
@@ -403,8 +642,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
   
   
-  <section>
-  <h3 id="gpos">Glyph positioning</h3>
+  <section id="gpos">
+<h3>Glyph positioning</h3>
 <p>Multiple diacritics for one base character are common where the various types of diacritic are mixed.</p>
 <figure>
   <p dir="rtl" lang="he" class="large"><span class="ex">תֹ֙הוּ֙ וָבֹ֔הוּ וְחֹ֖שֶׁךְ עַל־פְּנֵ֣י</span>    </p>
@@ -413,42 +652,64 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <p>Combinations of <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05B0;</span> [<a href="/scripts/hebrew/block#char05B0"><span class="uname">U+05B0 HEBREW POINT SHEVA</span></a>]</span> with other vowel diacritics are represented by single, non-decomposable code points, eg. <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05B1;</span> [<a href="/scripts/hebrew/block#char05B1"><span class="uname">U+05B1 HEBREW POINT HATAF SEGOL</span></a>]</span>.</p>
 <p>In NFC normalised text, a dagesh or shin/sin dot always follows the vowel diacritic. It may be necessary to reorder the diacritics for some applications, eg. for transcriptions that map a consonant+dagesh to a single letter.</p>
 </section>
+
+
+
+
+  
+<section id="baselines">
+<h3>Baselines &amp; inline alignment</h3>
+<p class="prompts">Does the script have special requirements for baseline alignment between mixed scripts and in general?</p>
+</section>
+
+
+
+
+<section id="fontstyle">
+<h3>Font styles</h3>
+<p class="prompts"> Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</p>
+</section>
 </section>
   
   
   
-  <section>
-  <h2 id="boundaries">Structural boundaries &amp; markers</h2>
+  <section id="boundaries">
+<h2>Structural boundaries &amp; markers</h2>
     
-  <section>
-<h3 id="words">Word boundaries</h3>
- <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
-   <p>Words are separated by spaces.</p>
+<section id="graphemes">
+<h3>Grapheme boundaries</h3>
+<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
+
+<p class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements when double-clicking on the text, or moving through the text with the cursor, or backspace, etc.? </p>
+
+</section>
+
+
+
+
+  
+<section id="words">
+<h3>Word boundaries</h3>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+
+<p class="prompts">Are words separated by spaces, or other characters? Are there special requirements when double-clicking  on the text? Are words hyphenated?</p>
+
+<p>Words are separated by spaces.</p>
  </section>
  
  
  
-  <section>
-<h3 id="phrase">phrase boundaries</h3>
- <p>Hebrew uses Latin punctuation for the most part. Full stops, question marks, exclamation marks, and commas are used as in English. There are 6 additional punctuation characters in the Hebrew Unicode block.</p>
+  <section id="phrase">
+<h3>phrase boundaries</h3>
+<p class="prompts">What characters are used to indicate the boundaries of phrases, sentences, and sections?</p>
+
+<p>Hebrew uses Latin punctuation for the most part. Full stops, question marks, exclamation marks, and commas are used as in English. There are 6 additional punctuation characters in the Hebrew Unicode block.</p>
 <p>Note that the direction of the question mark (?) is the same as in English, and unlike Arabic.</p>
 <p><span class="leadin">Biblical &amp; liturgical usage.</span> <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05C0;</span> [<a href="/scripts/hebrew/block#char05C0"><span class="uname">U+05C0 HEBREW PUNCTUATION PASEQ</span></a>]</span> is used as a word separator.&nbsp;<sup><a href="http://en.wikipedia.org/wiki/Cantillation">wc</a></sup></p>
 <p>Prayer books and similar use  <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05C3;</span> [<a href="/scripts/hebrew/block#char05C3"><span class="uname">U+05C3 HEBREW PUNCTUATION SOF PASUQ</span></a>]</span> as a full stop.<sup><a href="http://en.wikipedia.org/wiki/Cantillation">wc</a></sup></p>
-</section>
-  
-  
-  
-  <section>
-<h3 id="bracketing">Bracketing</h3>
-    <p>Hebrew uses the same parentheses as English, and uses <span class="codepoint" translate="no"><span lang="he">&#x0028;</span> [<span class="uname">U+0028 LEFT PARENTHESIS</span>]</span> at the start (right) and <span class="codepoint" translate="no"><span lang="he">&#x0029;</span> [<span class="uname">U+0029 RIGHT PARENTHESIS</span>]</span> at the end (left).<sup><a href="http://en.wikipedia.org/wiki/Cantillation">wc</a></sup> These are mirrored characters in Unicode, so the glyph for each character is automatically reversed in RTL text.</p>
-<p>For example, click on the following to see the component characters, <span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">(חדשה)</span></span> (the first character is the paren on the right).</p>
-</section>
-  
-  
-  
-  <section>
-<h3 id="hyphens">Hyphens</h3>
-    <p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05BE;</span> [<a href="/scripts/hebrew/block#char05BE"><span class="uname">U+05BE HEBREW PUNCTUATION MAQAF</span></a>]</span> is the proper punctuation for representing hyphens between compounds, eg. <span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">תל־אביב</span> <span class="trans">ṫl-ʔvyv</span> <span class="meaning">Tel Aviv</span></span>.<sup><a href="http://en.wikipedia.org/wiki/Cantillation">wc</a></sup></p>
+
+
+<p><span class="leadin">Hyphens.</span><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05BE;</span> [<a href="/scripts/hebrew/block#char05BE"><span class="uname">U+05BE HEBREW PUNCTUATION MAQAF</span></a>]</span> is the proper punctuation for representing hyphens between compounds, eg. <span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">תל־אביב</span> <span class="trans">ṫl-ʔvyv</span> <span class="meaning">Tel Aviv</span></span>.<sup><a href="http://en.wikipedia.org/wiki/Cantillation">wc</a></sup></p>
 <p>However, it is less common online because it is not always available on keyboards. Therefore, <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x002D;</span> [<span class="uname">U+002D HYPHEN-MINUS</span>]</span> is often substituted, even though the position of that character is too low when displayed.<sup><a href="http://en.wikipedia.org/wiki/Cantillation">wc</a></sup></p>
 <p>The Unicode Standard indicates that lines should not break on either side of the maqaf.<sup><a href="https://github.com/w3c/hlreq/issues/8#issuecomment-375023043">g</a></sup></p>
 <p>In the Bible, maqaf is primarily associated with cantillation marks and indicates a combination of 2 or more words that are pronounced in one breath. <sup><a href="https://github.com/w3c/hlreq/issues/8#issuecomment-287752935">g</a></sup></p>
@@ -456,52 +717,333 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
   
   
-  <section>
-<h3 id="abbreviations">Acronyms &amp; abbreviations</h3>
+  <section id="bracketing">
+<h3>Bracketing &amp; parentheses</h3>
+    <p>Hebrew uses the same parentheses as English, and uses <span class="codepoint" translate="no"><span lang="he">&#x0028;</span> [<span class="uname">U+0028 LEFT PARENTHESIS</span>]</span> at the start (right) and <span class="codepoint" translate="no"><span lang="he">&#x0029;</span> [<span class="uname">U+0029 RIGHT PARENTHESIS</span>]</span> at the end (left).<sup><a href="http://en.wikipedia.org/wiki/Cantillation">wc</a></sup> These are mirrored characters in Unicode, so the glyph for each character is automatically reversed in RTL text.</p>
+<p>For example, click on the following to see the component characters, <span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">(חדשה)</span></span> (the first character is the paren on the right).</p>
+</section>
+  
+  
+  
+  <section id="quotations">
+<h3>Quotations</h3>
+    <p>Modern quotation marks use <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x201D;</span> [<a href="/scripts/hebrew/block#char201D"><span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span></a>]</span> at the start and <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x201C;</span> [<a href="/scripts/hebrew/block#char201C"><span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span></a>]</span> at the end, eg.<span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">”ישראל“</span> <span class="meaning">Israel</span></span>. Note that the start and end characters are the opposite way around from the use in English.<sup><a href="http://en.wikipedia.org/wiki/Cantillation">wc</a></sup></p>
+<p>Up to around 1970 Hebrew used <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x201E;</span> [<a href="/scripts/hebrew/block#char201E"><span class="uname">U+201E DOUBLE LOW-9 QUOTATION MARK</span></a>]</span> instead for the initial quotation mark, ie. <span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">„ישראל“</span></span>, but this changed due to inadequate keyboard designs.<sup><a href="http://en.wikipedia.org/wiki/Cantillation">wc</a></sup></p>
+  </section>
+  
+  
+  
+  <section id="abbrev">
+<h3>Abbreviation, ellipsis &amp; repetition</h3>
     <p>Acronyms are indicated by placing <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05F4;</span> [<a href="/scripts/hebrew/block#char05F4"><span class="uname">U+05F4 HEBREW PUNCTUATION GERSHAYIM</span></a>]</span> before the last character, eg. <span class="ex" lang="he">ר״ת‬</span>.</p>
 <p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05F3;</span> [<a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]</span> is  used to indicate an abbreviation, eg. <span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">גְּבֶרֶת</span> <span class="trans">g͓̣vɛʁɛṫ</span> <span class="meaning">Mrs.</span></span> is abbreviated as <span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">גב׳</span> <span class="trans">gv´</span></span>. <sup><a href="http://en.wikipedia.org/wiki/Geresh">wg</a></sup></p>
 <p>Due to keyboard inadequacies, these are often replaced by ASCII single and double quote characters, even though in general they are visually too high.&nbsp;</p>
 </section>
+
+
+
+
   
+<section id="emphasis">
+<h3>Emphasis &amp; text decoration</h3>
+<p class="prompts">How are emphasis and highlighting achieved? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</p>
+</section>
+
+
+
+
   
-  
-  <section>
-<h3 id="quotations">Quotations</h3>
-    <p>Modern quotation marks use <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x201D;</span> [<a href="/scripts/hebrew/block#char201D"><span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span></a>]</span> at the start and <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x201C;</span> [<a href="/scripts/hebrew/block#char201C"><span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span></a>]</span> at the end, eg.<span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">”ישראל“</span> <span class="meaning">Israel</span></span>. Note that the start and end characters are the opposite way around from the use in English.<sup><a href="http://en.wikipedia.org/wiki/Cantillation">wc</a></sup></p>
-<p>Up to around 1970 Hebrew used <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x201E;</span> [<a href="/scripts/hebrew/block#char201E"><span class="uname">U+201E DOUBLE LOW-9 QUOTATION MARK</span></a>]</span> instead for the initial quotation mark, ie. <span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">„ישראל“</span></span>, but this changed due to inadequate keyboard designs.<sup><a href="http://en.wikipedia.org/wiki/Cantillation">wc</a></sup></p>
-  </section>
+<section id="inlinenotes">
+<h3>Inline notes &amp; annotations</h3>
+<p class="prompts">What mechanisms, if any, are used to create <u>inline</u> notes and annotations? (For referent-type notes such as footnotes, see below.)</p>
+</section>
 </section>
   
   
   
-<section>
-<h2 id="para">Line &amp; paragraph layout</h2>
+<section id="para">
+<h2>Line &amp; paragraph layout</h2>
 
  
-<section>
-    <h3 id="justify">Text alignment &amp; justification</h3>
-    <!--p>I'm not sure how justification works, but assume it is like in English.</p-->
-    <p class="instructions">Use the control below to see how your browser justifies the text sample here.</p>
-    <p dir="rtl" lang="he" id="justificationExample" style="text-align:start;">הכל שווים לפני החוק וזכזאים ללא הפליה להגנה שווה של החוק. הכל זכאים להגנה שווה מפני כל הפליה המפירה את מצוות ההכרזש הזאת ומפני כל הסתה להפליה כזו.</p>
-    <p class="english" dir="ltr">
-      <button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Justify   </button>
-    </p>
+ <section id="linebreak">
+<h3>Line breaking &amp; hyphenation</h3>
+    <p class="prompts">Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that?</p>
+
+<p>Lines are normally broken at word boundaries.</p>
+<p><span class="leadin">Character properties.</span> Characters used for the thisLanguage  language have the following assignments related to line-break properties.</p>
+<table><tbody>
+<tr><th class="sg">AL</th><td class="count">2</td><td class="chars"><span class="exlist" lang="he">״ ׳</span></td></tr>
+<tr><th class="sg">BA</th><td class="count">1</td><td class="chars"><span class="exlist" lang="he">־</span></td></tr>
+<tr><th class="sg">CM</th><td class="count">14</td><td class="chars"><span class="exlist" lang="he">ִ ֵ ֶ ַ ָ ֹ ֻ ְ ֱ ֲ ֳ ּ ׁ ׂ</span></td></tr>
+<tr><th class="sg">HL</th><td class="count">27</td><td class="chars"><span class="exlist" lang="he">א ב ג ד ה ו ז ח ט י כ ל מ נ ס ע פ צ ק ר ש ת ך ם ן ף ץ</span></td></tr>
+<tr><th class="sg">PR</th><td class="count">1</td><td class="chars"><span class="exlist" lang="he">₪</span></td></tr>
+</tbody></table>
+
+
+
+<details id="linebreak_details">
+<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BA (break after)</a> indicates that it is normal to break after that character.&nbsp;</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#HL">HL (Hebrew letter)</a>  includes all Hebrew letters. When a Hebrew letter is followed by a hyphen, there is no break on either side of the hyphen.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#PR">PR (numeric prefix)</a>  may not be separated from following numeric characters or following opening characters, even if a space character intervenes. For example, there is no break opportunity in “฿ (100.00)”.</p>
+</details>
+</section>
+
+
+
+<section id="hyphenation">
+<h3>Hyphenation</h3>
+<p class="prompts">Is hyphenation used, or something else?</p>
+</section>
+
+
+
+<section id="justification">
+<h3>Text alignment &amp; justification</h3>
+    <p class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</p>
+</section>
+
+
+
+
+<section id="letterspace">
+<h3>Letter spacing</h3>
+<p class="prompts">Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see above.).</p>
+</section>
+
+
+
+
+<section id="lists">
+<h3>Counters, lists, etc.</h3>
+  
+<p class="prompts">Are there list or other counter styles in use?  If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed? </p>
+
+<p><a href="https://w3c.github.io/predefined-counter-styles/#tamil-styles">Ready-made Counter Styles</a> lists 1 additive counter style for use with the Hebrew language. You can experiment with these styles using the <a href="../../app-counters/">Counter styles converter</a>.</p>
+<figure class="counter_style_comp">
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>hebrew<br>
+(additive)</th>
+<td><span class="ex" lang="he">א</span></td>
+<td><span class="ex" lang="he">ב</span></td>
+<td><span class="ex" lang="he">ג</span></td>
+<td><span class="ex" lang="he">ד</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th> 
+<th>11</th>
+<th>22</th>
+<th>33</th>
+<th>44</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>hebrew<br>
+(additive)</th>
+<td><span class="ex" lang="he">יא</span></td>
+<td><span class="ex" lang="he">כב</span></td>
+<td><span class="ex" lang="he">לג</span></td>
+<td><span class="ex" lang="he">מד</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>111</th>
+<th>222</th>
+<th>333</th>
+<th>444</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>hebrew<br>
+(additive)</th>
+<td><span class="ex" lang="he">קיא</span></td>
+<td><span class="ex" lang="he">רכב</span></td>
+<td><span class="ex" lang="he">שלג</span></td>
+<td><span class="ex" lang="he">תמד</span></td>
+</tr>
+</tbody>
+</table>
+<figcaption>Comparative counters produced by Thai counter styles.</figcaption>
+</figure>
+
+
+
+<p><span class="leadin">additive</span></p>
+<p>The <span class="kw" translate="no">hebrew</span> additive style   uses the  letters shown below. It is  specified for a range between 1 and 10,999. This system manually specifies the values for 19-15 to force the correct display of 15 and 16, which are commonly rewritten to avoid a close resemblance to the Tetragrammaton. Implementations may, and some do,  implement this manually to a higher range.</p>
+<figure class="auto" data-notes="10000,9000,8000,7000,6000,5000,4000,3000,2000,1000,400,300,200,100,90,80,70,60,50,40,30,20,19,18,17,16,15,10,9,8,7,6,5,4,3,2,1"
+data-cols="">י׳␣ט׳␣ח׳␣ז׳␣ו׳␣ה׳␣ד׳␣ג׳␣ב׳␣א׳␣ת␣ש␣ר␣ק␣צ␣פ␣ע␣ס␣נ␣מ␣ל␣כ␣יט␣יח␣יז␣טז␣טו␣י␣ט␣ח␣ז␣ו␣ה␣ד␣ג␣ב␣א</figure>
+</section>
+
+
+
+
+
+
+
+  
+<section id="initials">
+<h3>Styling initials</h3>
+<p class="prompts">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? etc.</p>
+</section>
   </section>
-  </section>
 
 
 
 
-<section>
-<h2 id="refs">References</h2>
+  
+  
+ 
+ <section id="pagelayout">
+<h2>Page &amp; book layout</h2>
+ 
+ <section id="generallayout">
+<h3>General page layout &amp; progression</h3>
+ <p class="prompts">How are the main text area and ancilliary areas positioned and defined? Are there any special requirements here, such as dimensions in characters for the Japanese kihon hanmen? The book cover for scripts that are read right-to-left scripts is on the right of the spine, rather than the left.  When content can flow vertically and to the left or right, how to specify the location of objects, text, etc. relative to the flow? Do tables and grid layouts work as expected? How do columns work in vertical text? Can you mix block of vertical and horizontal text? Does text scroll in a different direction?</p>
+</section>
+
+
+
+
+
+<section id="grids">
+<h3>Grids &amp; tables</h3>
+<p class="prompts">Does the script have special requirements for character grids or tables?</p>
+</section>
+
+
+
+
+  
+<section id="footnotes">
+<h3>Notes, footnotes, etc</h3>
+<p class="prompts">Does the script have special requirements for notes, footnotes, endnotes or other necessary annotations of this kind? (There is a section above for purely inline annotations, such as ruby or warichu. This section is more about annotation systems that separate the reference marks and the content of the notes.)</p>
+</section>
+
+
+
+
+  
+<section id="interaction">
+<h3>Forms &amp; user interaction</h3>
+<p class="prompts">Are vertical form controls needed? Are scroll bars in an unusual position? Other special requirements for user interaction?</p>
+</section>
+
+
+
+
+  
+<section id="headers">
+<h3>Page numbering, running headers, etc</h3>
+<p class="prompts">Are there special conventions for page numbering, or the way that running headers and the like are handled?</p>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <section id="chars">
+<h2>Character lists</h2>
+  <p>Version 12.0 of the Unicode Standard has the following block dedicated to the Hebrew script:</p>
+    <ul>
+      <li><a href="/uniview/?block=hebrew">Hebrew</a> <span class="charCount">45 letters, 14 marks, 10 digits, 10 punctuation :   total 79</span></li>
+</ul>
+<p>Apart from ASCII characters, the Hebrew orthography described here uses 31 characters (and 14 more, used infrequently) from the following Unicode blocks: </p>
+    <ul>
+    <li><a href="/uniview/?block=hebrew">Hebrew</a> <span class="charCount">27 letters,  3 punctuation : total  30 &nbsp; (+ 14 infrequent)</span></li>
+<li> <a href="/uniview/?block=general_punctuation">Currency symbols</a> <span class="charCount">1 symbol : total 1  &nbsp; (+ 5 infrequent)</span></li>
+</ul>
+ <p><cite>Character Usage</cite> has information about the following orthographies associated with this script: <a href="/app-charuse/?language=he" target="_blank">Hebrew</a> • <a href="/app-charuse/?language=ydd" target="_blank">Yiddish</a></p>
+<p>For detailed character-specific information see the <a class="linkHighlight" href="/scripts/hebrew/block">Hebrew character notes</a>.</p>
+</section>
+
+
+
+
+
+
+<section id="languages">
+<h2>Languages using the Hebrew script</h2>
+<p>According to ScriptSource, the Hebrew script is used for the following 26 languages: </p>
+<ul>
+<li>Hebrew, Ancient [hbo]</li>
+<li>Bukharic [bhh]</li>
+<li>Yiddish, Eastern [ydd]</li>
+<li>Hebrew [heb]</li>
+<li>Hebrew [heb]</li>
+<li>Hulaulá [huy]</li>
+<li>Judeo-Arabic [jrb]</li>
+<li>Judeo-Berber [jbe]</li>
+<li>Arabic, Judeo-Iraqi [yhd]</li>
+<li>Judeo-Italian [itk]</li>
+<li>Arabic, Judeo-Moroccan [aju]</li>
+<li>Judeo-Persian [jpr]</li>
+<li>Judeo-Tat [jdt]</li>
+<li>Arabic, Judeo-Tripolitanian [yud]</li>
+<li>Arabic, Judeo-Tunisian [ajt]</li>
+<li>Arabic, Judeo-Yemeni [jye]</li>
+<li>Ladino [lad]</li>
+<li>Lishán Didán [trg]</li>
+<li>Lishana Deni [lsd]</li>
+<li>Lishanid Noshan [aij]</li>
+<li>Aramaic, Samaritan [sam]</li>
+<li>Samaritan [smp]</li>
+<li>Tajik [tgk]</li>
+<li>Yiddish, Western [yih]</li>
+<li>Yiddish [yid]</li>
+</ul>
+</section>
+
+
+
+
+
+
+
+
+<section id="refs">
+<h2>References</h2>
   <ol>
     <li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
 				0-19-507993-0, pp487-497</li>
 <li>[ <sup><a href="http://en.wikipedia.org/wiki/Hebrew_alphabet">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Hebrew_alphabet">Hebrew alphabet</a></li>
 <li>[ <sup><a href="http://en.wikipedia.org/wiki/Cantillation">wc</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Cantillation">Cantillation</a></li>
-<li>[ <sup><a href="http://en.wikipedia.org/wiki/Hebrew_punctuation">wp</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Hebrew_punctuation">Hebrew punctuation</a></li>
 <li>[ <sup><a href="http://en.wikipedia.org/wiki/Geresh">wg</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Geresh">Geresh</a></li>
-    <li>[ <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch09.pdf">u</a></sup> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch09.pdf">The Unicode Standard v11.0</a></li>
+<li>[ <sup><a href="http://en.wikipedia.org/wiki/Hebrew_punctuation">wp</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Hebrew_punctuation">Hebrew punctuation</a></li>
+<li>[ <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch09.pdf">u</a></sup> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch09.pdf">The Unicode Standard v11.0</a></li>
 </ol>
 </section>
 
@@ -509,13 +1051,32 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/hebrew"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-07-14  11:40<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bhebrew%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fhebrew%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<details>
+<summary class="prompts">Show stats</summary>
+
+<table id="charCountList">
+<tr><th>Main</th><td id="mainCharList"></td><td id="mainCharListTotal"></td></tr>
+<tr><th>Auxiliary</th><td id="auxCharList"></td><td id="auxCharListTotal"></td></tr>
+<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
+<tr><th>Other</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
+<tr><th>Deprecated</th><td id="deprecatedCharList"></td><td id="deprecatedCharListTotal"></td></tr>
+</table>
+</details>
+
+
+<div id="phoneLinks"></div>
 
 
 <div id="panel" style="display:none"></div>
-</body>
-<script>
-initialiseSummary('/scripts/hebrew/block','he','Hebrew')
-</script>
 
+
+<div class="smallprint"><span id="version"></span></div>
+</body>
+
+
+
+<script>
+initialiseSummary('/scripts/hebrew/block','he','Hebrew','hebrew')
+autoTransliterate('he')
+</script>
 </html>
