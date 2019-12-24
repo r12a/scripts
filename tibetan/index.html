@@ -30,18 +30,22 @@
 
 <script src="../../shared/scriptdb/tibetan.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2019.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
+<script src="../common/transliterate.js"></script>
+<script src="../common/prompts.js"> </script>
+<script src="../glossary/glossary.js"> </script>
 <script src="../../shared/code/getLinks.js"></script>
 <script src="../../scripts/linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
 
 <script src="../../shared/fontlists/tibetan.js"> </script>
+<script src="bo-translit.js">  </script>
 </head>
 
 <body>
@@ -50,7 +54,7 @@
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
 </header>
 
-	<h1>Tibetan</h1>
+	<h1>Tibetan (draft)</h1>
 
 <nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top"/></a></nav>
 
@@ -103,22 +107,24 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->3 December, 2019<!-- #EndDate -->
-• tags  <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="https://r12a.github.io/blog/?tag=tibetan" title="Show all blog posts tagged with 'tibetan'">tibetan</a></p>
+  <!-- #BeginDate format:Sw1 -->24 December, 2019<!-- #EndDate -->
+  <span id="versionTop"></span>
+</p>
 
 
 <section>
-  <p>This page provides basic information about the Tibetan script and its use for the Tibetan language. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned.   For character-specific details follow the links to the <a class="linkHighlight" href="block">Tibetan character notes</a>.</p>
-<p>See also the <a href="../../pickers/tibetan/">Tibetan picker</a>.</p>
+  <p>This page gathers together basic information about the Tibetan script and its use for the Tibetan language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Tibetan using Unicode; for greater details follow the footnote links (especially those with an arrow alongside them).</p>
+<p> For character-specific details follow the links to the <a class="linkHighlight" href="block">Tibetan character notes</a>. See also the <a href="../../pickers/tibetan/" class="linkHighlight">Tibetan character app</a>.</p>
 <p>For similar information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Tibt">script links pages</a>.</p>
 
-<p class="instructions">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+<p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text. Colours and annotations on panels listing characters are relevant to their use for the Tibetan language.</p>
+<p class="instructions">Unless in parentheses, the transcriptions in italics that follow Tamil text are a <a href="../glossary/#transliteration" class="termref">transliteration</a> developed for these pages. Those in parentheses are usually more standard transcriptions. Transcriptions in <span style="white-space:nowrap;">⌈ brackets ⌋</span> may be phonemic or phonetic.</p>
 </section>
 
 
 
-<section>
-<h2 id="sample">Sample (Tibetan)</h2>
+<section id="sample">
+<h2>Sample (Tibetan)</h2>
   
 
   <div id="freeText" dir="ltr" lang="nqo" data-target="c" data-base="../../scripts/tibetan/block" data-source="http://unicode.org/udhr/translations.html">
@@ -134,8 +140,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-    <h2 id="history">Usage &amp; history</h2>
+<section id="history">
+<h2>Usage &amp; history</h2>
     <p>From <a href="http://scriptsource.org/scr/Tibt">Scriptsource</a>: </p>
     <blockquote>
 <p>The Tibetan script is used for writing the Tibetan, Dzongkha, Ladakhi and Sikkimese languages, spoken in Tibet, Bhutan, Nepal and India. It is also used for transcribing religious Sanskrit texts. The exact origin of the script is not clear; Tibetan Buddhism traditionally ascribes its creation to Minister Thon mi Sambhota in Northeast India, but Bon Po religious tradition cites Iranian or Central Asian origins. What is generally agreed upon is that it is ultimately derived from the Brahmi script, as evidenced by its syllabic structure, its use of diacritics to modify the vowel in a syllable, and its typically Brahmic canonical arrangement of the letters in phonological groups.</p>
@@ -165,8 +171,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-  <h2 id="type">Distinctive features</h2>
+<section id="type">
+<h2>Distinctive features</h2>
 <p>Tibetan  is an <span class="newterm">abugida</span>, ie. consonants carry an inherent vowel sound <span class="ipa">a</span> that is overridden using vowel signs.   See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
 </p>
 <p>Text runs horizontally from left to right.</p>
@@ -184,53 +190,170 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h2 id="chars">Character lists</h2>
-<p>The Tibetan script characters in Unicode 10.0 are contained in a single block (not counting shared characters, such as punctuation):</p>
-    <ul>
-      <li><a href="/uniview/?block=Tibetan">Tibetan</a> <span class="charCount">50 letters, 77 marks, 20 numbers, 28 punctuation, 36 symbols : total 221</span></li>
-    </ul>
-    <p>Follow these links for information about characters used by languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
-<ul>
-<li><a href="/app-charuse/?language=bo" target="_blank">Tibetan</a> <span class="charCount">36 letters, 42 marks, 7 punctuation, 10 numbers :   total 95  &nbsp;&nbsp;   + ( 1 infrequent )</span></li>
-<li><a href="/app-charuse/?language=dz" target="_blank">Dzongkha</a> <span class="charCount">30 letters, 30 marks, 33 punctuation, 10 numbers, 4 symbols :   total 107  &nbsp;&nbsp;   + ( 17 infrequent )</span></li>
-</ul>
-<p>For character-specific details see 
-<a class="linkHighlight" href="../../scripts/tibetan/block">Tibetan character notes</a>.</p>
-</section>
-  
+
+  <section id="direction">
+<h2>Text direction</h2>
+    <p>Tibetan text is written horizontally, left to right.</p>
+  </section>
+
   
 
 
 
 <div id="showTranscriptions">
-<div>In yellow boxes, show:</div>
+<div>Character lists show:</div>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
 <!--div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div-->
 </div>
-
-
-
-
-
-
-  <section>
-    <h2 id="direction">Text direction</h2>
-    <p>Tibetan text is written horizontally, left to right.</p>
-  </section>
    
     
       
 
 
 
-<section> 
-<h2 id="vowelsummary">Vowels</h2>
- 
-<section>
-<h3 id="inherent">Inherent vowel</h3>
+<section id="vowelsummary">
+<h2>Vowels</h2>
+
+
+<section id="vowelPhonemes">
+<h3>Vowel sounds</h3>
+
+<p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+
+<p>This is the phonology of modern Llasa Tibetan.</p>
+
+
+<div style="margin-left: 7.5%;">
+<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="white"/>
+      <feComposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -->
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+  
+   <!-- mid close -->
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -->
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- open -->
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+  
+  <!-- close -->
+  <text x="32" y="15" class="ipa" text-anchor="end">i ĩ</text> 
+  <text x="50" y="15" class="ipa" filter="url(#solid)">y ỹ</text> 
+  <text x="50" y="15" class="ipa">y ỹ</text> 
+  <text x="250" y="15" class="ipa">u</text> 
+
+  <!-- close mid -->
+  <text x="57" y="75" class="ipa" text-anchor="end">e ẽ</text> 
+  <text x="75" y="75" class="ipa" filter="url(#solid)">ø ø̃</text> 
+  <text x="75" y="75" class="ipa">ø ø̃</text> 
+  <text x="250" y="75" class="ipa">o</text> 
+
+  <!-- mid -->
+<text x="158" y="105" class="allophone" text-anchor="middle" filter="url(#solid)">ə</text>
+<text x="158" y="105" class="allophone" text-anchor="middle">ə</text> 
+
+  <!-- open mid -->
+  <text x="81" y="135" class="ipa" text-anchor="end">ɛ ɛ̃</text> 
+<text x="250" y="135" class="allophone">ɔ</text> 
+
+  <!-- open -->
+<text x="232" y="195" class="ipa" text-anchor="end" filter="url(#solid)">ɑ</text>
+<text x="232" y="195" class="ipa" text-anchor="end">ɑ</text> 
+</svg>
+</div>
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Standard_Tibetan#Phonology_of_modern_Lhasa_Tibetan">wp</a>. Phones in a lighter colour are non-native or allophones.</p>
+
+
+<p><span class="leadin">Diphthongs.</span></p>
+
+<div style="margin-left: 7.5%;">
+<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="white"/>
+      <feComposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -->
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+  
+   <!-- mid close -->
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -->
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- open -->
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+  
+  <!-- open -->
+<text x="232" y="195" class="ipa" text-anchor="end" filter="url(#solid)">ɑi ɑu</text>
+<text x="232" y="195" class="ipa" text-anchor="end">ɑi ɑu</text> 
+</svg>
+</div>
+</section>
+
+
+
+
+
+
+<section id="inherent">
+<h3>Inherent vowel</h3>
+<p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
 
 <p>Consonants carry an inherent vowel usually transcribed as <span class="trans">a</span>.  So <span class="charExample" translate="no"><span class="ex" lang="tmp">ཀ</span></span> is pronounced <span class="ipa">ka</span>.</p>
 </section>
@@ -239,20 +362,11 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
  
-<section>
-<h3 id="absence">Vowel absence</h3>
-<p>The inherent vowel is not normally pronounced at the end of a word.</p>
-<p>Word-internally, consonants with no intervening vowel are stacked (see <a class="secref">clusters</a>).</p>
-</section>
+<section id="vowelsigns">
+<h3>Vowel-signs</h3>
+<p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
 
-
-
-
- 
-<section>
-<h3 id="vowelsigns">Vowel-signs</h3>
-
-<p>To produce a different vowel than the inherent one, Tibetan attaches  vowel-signs to  the preceding consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="tmp">ཀི</span> <span class="ipa">ki</span></span>.</p>
+<p>Other than the inherent vowel, vowel sounds that follow a consonant sound are represented using vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="tmp">ཀི</span> <span class="ipa">ki</span></span>. This includes  two diphthongs which can each be represented by a single code point.</p>
 <p>Standard Tibetan has only 5 vowels, including the inherent vowel, and so only 4 vowel-signs.</p>
 
 <figure class="characterBox auto" data-cols="ipa,trans">ི␣ུ␣ེ␣ོ</figure>
@@ -265,12 +379,12 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
  
-<section>
-<h3 id="vowel_extensions">Vowel repertoire extensions</h3>
+<section id="vowel_extensions">
+<h3>Vowel repertoire extensions</h3>
 
 <p>For transcription of Sanskrit text or foriegn words, principally from Chinese and Mongolian, the Unicode block provides an additional set of code points.</p>
 
-<figure class="otherBox auto" data-cols="ipa,trans">ཱ␣ཻ␣ཽ␣ྀ␣&#x0F73;␣&#x0F81;␣&#x0F75;</figure>
+<figure class="otherBox auto" data-cols="ipa,trans">&#x0F80;␣&#x0F73;␣&#x0F81;␣&#x0F75;␣&#x0F71;␣&#x0F7B;␣&#x0F7D;</figure>
 
 <p><span class="codepoint" translate="no"><span lang="bo">&#x0F71;</span> [<a href="/scripts/tibetan/block#char0F71"><span class="uname">U+0F71 TIBETAN VOWEL SIGN AA</span></a>]</span> is used to lengthen vowels. The 3 last items in the list above are discouraged by the Unicode Standard, and decomposed in &nbsp;<span class="termref" href="../glossary/#nfc">Unicode Normalisation Form C</span> (NFC). Instead you should use the following pairs.</p>
 
@@ -282,8 +396,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
  
-<section>
-<h3 id="placement">Vowel-sign placement</h3>
+<section id="placement">
+<h3>Vowel-sign placement</h3>
 
 <p>The following list shows where vowel-signs are positioned around a base consonant to produce vowels, and how many instances of that pattern there are. The figure after the + sign represents combinations of Unicode characters,</p>
 <ul>
@@ -298,9 +412,20 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
  
-<section>
-<h3 id="independentvowels">Standalone vowels</h3>
-<p class="explanatoryintro">Standalone vowels are not preceded by a consonant, and may appear at the beginning or in the middle of a word.</p>
+<section id="absence">
+<h3>Vowel absence</h3>
+<p>The inherent vowel is not normally pronounced at the end of a word.</p>
+<p>Word-internally, consonants with no intervening vowel are stacked (see <a class="secref">clusters</a>).</p>
+</section>
+
+
+
+
+ 
+<section id="independentvowels">
+<h3>Standalone vowels</h3>
+<p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
+
 <p>Standalone vowels can be written by attaching vowel-signs to  <span class="codepoint"><span lang="bo">&#x0F60;</span> <a href="/scripts/tibetan/block#char0F60">[<span class="uname">U+0F60 TIBETAN LETTER -A</span>]</a></span> or  <span class="codepoint"><span lang="bo">&#x0F68;</span> <a href="/scripts/tibetan/block#char0F68">[<span class="uname">U+0F68 TIBETAN LETTER A</span>]</a></span>. See <a class="secref">achung</a>.</p>
 </section>
 
@@ -308,8 +433,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-    <h3 id="achung">A-chung and a-chen</h3>
+<section id="achung">
+<h3>A-chung and a-chen</h3>
 		<p> The phonological realisation for <span class="codepoint"><span lang="bo">&#x0F60;</span> <a href="/scripts/tibetan/block#char0F60">[<span class="uname">U+0F60 TIBETAN LETTER -A</span>]</a></span> (called <span class="charExample" translate="no"><span class="ex" lang="bo">འ་ཆུང་</span> <span class="trans">à␣ʧʰuŋ␣ ('a chung)</span></span>) and <span class="codepoint"><span lang="bo">&#x0F68;</span> <a href="/scripts/tibetan/block#char0F68">[<span class="uname">U+0F68 TIBETAN LETTER A</span>]</a></span> (called <span class="charExample" translate="no"><span class="ex" lang="bo">ཨ་ཆེན་</span> <span class="trans">ạ␣ʧʰen␣ (a chen)</span></span>) is <span class="ipa">a</span>. In the Lhasa dialect, the former has a high and the latter a low tone.</p>
 		<p>Both 'a-chung and a-chen can be used with vowel signs, in which case the <span class="ipa">a</span> sound is replaced by that of the vowel.</p>
 		<p>'A-chung can also represent a nasal, so <span class="charExample" translate="no"><span class="ex" lang="bo">མཚམས་</span> <span class="trans">mʦʰms␣ (mtshams)</span> <span class="meaning">boundary</span></span> and  <span class="charExample" translate="no"><span class="ex" lang="bo">མཐུན་</span> <span class="trans">mtʰun␣</span> <span class="meaning">agreement</span></span> are often written <span class="ex" lang="bo">འཚམས་</span> and <span class="ex" lang="bo">འཐུན་</span>. </p>
@@ -323,10 +448,9 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h2 id="vocalics">Vocalics</h2>
-
-<p class="explanatoryintro">Vocalics are letters derived from Sanskrit that generally behave like vowels, but represent r/l followed by a vowel. They are often available both as vowel-signs and independent vowel letters.</p>
+<section id="vocalics">
+<h2>Vocalics</h2>
+<p id="def-vocalic" class="explanatoryintro definitionStub"></p>
 
 <p>Tibetan vocalics are used only for transcription of Sanskrit.</p>
 <p>The following precomposed code points represent the vocalic vowels.</p>
@@ -344,23 +468,144 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h2 id="consonantintro">Consonants</h2>
+<section id="consonantintro">
+<h2>Consonants</h2>
 
-<section>
-<h3 id="basic_consonants">Basic consonants</h3>
+
+<section id="consonantSounds">
+<h3>Consonant sounds</h3>
+
+<p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+
+<table class="ipaTable">
+<thead>
+<tr>
+<th></th>
+<th>labial </th>
+<th>dental </th>
+<th>alveolar </th>
+<th>post-<br>
+alveolar</th>
+<th>retroflex</th>
+<th>palatal </th>
+<th>velar </th>
+<th>glottal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>stop</th>
+<td><span class="ipa">p</span><br>
+<span class="ipa">pʰ</span></td>
+<td><span class="ipa">t</span><br/>
+<span class="ipa">tʰ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ʈ</span><br/>
+<span class="ipa">ʈʰ</span></td>
+<td><span class="ipa">c<br>
+</span><span class="ipa">cʰ</span></td>
+<td><span class="ipa">k</span><br/>
+<span class="ipa">kʰ</span></td>
+<td><span class="ipa">ʔ</span></td>
+</tr>
+<tr>
+<th>affricate</th>
+<td>&nbsp;</td>
+<td><span class="ipa">t͡s</span><br><span class="ipa">t͡sʰ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">t͡ɕ</span><br/>
+<span class="ipa">t͡ɕʰ</span></td>
+<td><span class="ipa">ʈ͡ʂ</span><br/>
+<span class="ipa">ʈ͡ʂʰ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>fricative </th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">s</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ʂ</span></td>
+<td><span class="ipa">ɕ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">h</span></td>
+</tr>
+<tr>
+<th>nasal</th>
+<td><span class="ipa">m</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">n</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɲ</span></td>
+<td><span class="ipa">ŋ</span></td>
+<td></td>
+</tr>
+<tr>
+<th>approximant</th>
+<td><span class="ipa">w</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">l</span> <span class="ipa">ɹ</span></td>
+<td><span class="ipa">ɹ̥</span> <span class="ipa">l̥</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">j</span> <span class="ipa">ʎ</span></td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>trill/flap</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th></th>
+<td class="mouth"><a href="../common/mouth/mouth_labial.png" target="_blank"><img src="../common/mouth/mouth_small_labial.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_dental.png" target="_blank"><img src="../common/mouth/mouth_small_dental.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_alveolar.png" target="_blank"><img src="../common/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_postalveolar.png" target="_blank"><img src="../common/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_retroflex.png" target="_blank"><img src="../common/mouth/mouth_small_retroflex.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_palatal.png" target="_blank"><img src="../common/mouth/mouth_small_palatal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_velar.png" target="_blank"><img src="../common/mouth/mouth_small_velar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_glottal.png" target="_blank"><img src="../common/mouth/mouth_small_glottal.png" alt=" "/></a></td>
+</tr>
+</tbody>
+</table>
+
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">wp</a>. Phones in a lighter colour are non-native or allophones.</p>
+</section>
+
+
+
+
+
+<section id="basic_consonants">
+<h3>Basic consonants</h3>
 		<p> Native Tibetan words use  30 consonants, but the Tibetan block contains many more (see <a class="secref">transliteration</a>).</p>
 <p>There is a basic and a subjoined version of each consonant. These are shown in pairs in this list.</p>
 
-<figure class="characterBox auto" data-select="first" data-cols="ipa,trans" data-ignore="&#x200C;">ཀ‌ྐ␣ཁ‌ྑ␣ག‌ྒ␣ང‌ྔ␣ཅ‌ྕ␣ཆ‌ྖ␣ཇ‌ྗ␣ཉ‌ྙ␣ཏ‌ྟ␣ཐ‌ྠ␣ད‌ྡ␣ན‌ྣ␣པ‌ྤ␣ཕ‌ྥ␣བ‌ྦ␣མ‌ྨ␣ཙ‌ྩ␣ཚ‌ྪ␣ཛ‌ྫ␣ཝ‌ྭ‌ྺ␣ཞ‌ྮ␣ཟ‌ྯ␣འ‌ྰ␣ཡ‌ྱ‌ྻ␣ར‌ྲ␣ལ‌ླ␣ཤ‌ྴ␣ས‌ྶ␣ཧ‌ྷ␣ཨ‌ྸ</figure>
+<figure class="characterBox auto" data-select="first" data-cols="ipa,trans" data-ignore="&#x200C;">པ‌ྤ␣ཕ‌ྥ␣བ‌ྦ␣ཏ‌ྟ␣ཐ‌ྠ␣ད‌ྡ␣ཀ‌ྐ␣ཁ‌ྑ␣ག‌ྒ</figure>
+<figure class="characterBox auto" data-select="first" data-cols="ipa,trans" data-ignore="&#x200C;">ཙ‌ྩ␣ཚ‌ྪ␣ཛ‌ྫ␣ཅ‌ྕ␣ཆ‌ྖ␣ཇ‌ྗ</figure>
+<figure class="characterBox auto" data-select="first" data-cols="ipa,trans" data-ignore="&#x200C;">ས‌ྶ␣ཟ‌ྯ␣ཤ‌ྴ␣ཞ‌ྮ␣ཧ‌ྷ</figure>
+<figure class="characterBox auto" data-select="first" data-cols="ipa,trans" data-ignore="&#x200C;">མ‌ྨ␣ན‌ྣ␣ཉ‌ྙ␣ང‌ྔ</figure>
+<figure class="characterBox auto" data-select="first" data-cols="ipa,trans" data-ignore="&#x200C;">ཝ‌ྭ‌ྺ␣ར‌ྲ␣ལ‌ླ␣ཡ‌ྱ‌ྻ</figure>
+<figure class="characterBox auto" data-select="first" data-cols="ipa,trans" data-ignore="&#x200C;">འ‌ྰ␣ཨ‌ྸ</figure>
 
 </section>
       
       
       
       
-  <section>
-    <h3 id="stacking">Consonant stacking</h3>
+  <section id="stacking">
+<h3>Consonant stacking</h3>
 	  <p> A  stack  has a  consonant character at the top (although it may actually be slightly squeezed or adapted slightly in shape), and one or more special subjoined consonant characters beneath it. </p>
 	  <p>The  topmost consonant in a stack always uses the standard character from the Unicode Tibetan block regardless of whether it is a root consonant or not, and consonants below it always use a character from the subjoined range.</p>
 	  <p>See this example from the Unicode Standard of the word <span class="charExample" translate="no"><span class="ex" lang="bo">སྤྱིར་</span> <span class="trans">sp̰y̰ir␣</span> <span class="ipa">ʧí</span> <span class="meaning">general</span></span>, which shows a stack with three consonants.</p>
@@ -384,8 +629,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h3 id="root">The root consonant</h3>
+<section id="root">
+<h3>The root consonant</h3>
 <p>The pronunciation of Tibetan words is typically much simpler than the orthography, which involves patterns of consonants. These reduce ambiguity and can affect pronunciation and tone. </p>
 	  <p>The primary consonant is called the root consonant (or radical), and the other consonants in the syllable (which normally has up to 6 consonants in total) annotate or modify it. The following rules help identify the root:</p>
 	  <ul>
@@ -409,16 +654,16 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-    <h3 id="prefix">Prefixes</h3>
+<section id="prefix">
+<h3>Prefixes</h3>
 	  <p>Characters in the prefix position are not pronounced, but de-aspirate aspirated root characters and give a higher tone value to nasal root characters. The consonant <span class="codepoint"><span lang="bo">&#x0F42;</span> <a href="../../scripts/tibetan/block#char0F42">[<span class="uname">U+0F42 TIBETAN LETTER GA</span>]</a></span> may occur before 11 root characters, <span class="codepoint"><span lang="bo">&#x0F51;</span> <a href="/scripts/tibetan/block#char0F51">[<span class="uname">U+0F51 TIBETAN LETTER DA</span>]</a></span>  before 6, <span class="codepoint"><span lang="bo">&#x0F56;</span> <a href="/scripts/tibetan/block#char0F56">[<span class="uname">U+0F56 TIBETAN LETTER BA</span>]</a></span> before 10, <span class="codepoint"><span lang="bo">&#x0F58;</span> <a href="/scripts/tibetan/block#char0F58">[<span class="uname">U+0F58 TIBETAN LETTER MA</span>]</a></span> before 11, and <span class="codepoint"><span lang="bo">&#x0F60;</span> <a href="/scripts/tibetan/block#char0F60">[<span class="uname">U+0F60 TIBETAN LETTER -A</span>]</a></span>  before 10, eg. <span class="charExample" translate="no"><span class="ex" lang="bo">འཁོར་ལོ་</span> <span class="trans">àkʰor␣lo␣</span> <span class="ipa">kor-lo</span> <span class="meaning">wheel</span></span>, <span class="charExample" translate="no"><span class="ex" lang="bo">བསད་</span> <span class="trans">bsd␣ (bsad)</span> <span class="ipa">sɛ́</span> <span class="meaning">killed</span></span>.</p>
       </section>
       
       
       
       
-  <section>
-    <h3 id="suffix">Suffixes</h3>
+  <section id="suffix">
+<h3>Suffixes</h3>
 	  <p>Characters in the suffix position have one of the following effects:</p>
 	  <ol>
 	    <li>
@@ -436,16 +681,16 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
       
       
       
-  <section>
-    <h3 id="suffix2">Secondary suffixes</h3>
+  <section id="suffix2">
+<h3>Secondary suffixes</h3>
 	  <p>Only two characters can appear in the secondary suffix location, according to Tibetan grammar, <span class="codepoint"><span lang="bo">&#x0F66;</span> <a href="/scripts/tibetan/block#char0F66">[<span class="uname">U+0F66 TIBETAN LETTER SA</span>]</a></span> and <span class="codepoint"><span lang="bo">&#x0F51;</span> <a href="/scripts/tibetan/block#char0F51">[<span class="uname">U+0F51 TIBETAN LETTER DA</span>]</a></span>, and the latter is no longer officially found in modern Tibetan. A character in this position adds no sound and nor does it affect the sounds in the rest of the syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="bo">བསྒྲུབས་</span> <span class="trans">bsg̰r̰ubs␣</span> <span class="ipa">ɖɹúb</span> <span class="meaning">established</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="bo">གྱུརད་</span> <span class="trans">gy̰urd␣</span> <span class="ipa">kjùr</span> <span class="meaning">became</span></span>.</p>
       </section>
       
       
       
       
-  <section>
-    <h3 id="superscript">Superscripts</h3>
+  <section id="superscript">
+<h3>Superscripts</h3>
 	  <p>The three characters that appear in the superscript location raise the tone pitch of the syllable, but are not pronounced themselves. Each superscript character can only be used with a specified set of root characters.</p>
 <table class="locations" style="margin-right: 0;">
 <tbody>
@@ -469,8 +714,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
       
       
       
-  <section>
-    <h3 id="subscript">Subscripts</h3>
+  <section id="subscript">
+<h3>Subscripts</h3>
 	  <p>The four characters that can appear in the subscript location are also each combined with a particular subset of root characters and have different effects. </p>
 <table class="locations" style="margin-right: 0;">
 <tbody>
@@ -499,8 +744,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
       
       
       
-  <section>
-    <h3 id="irregpron">Irregular pronunciations</h3>
+  <section id="irregpron">
+<h3>Irregular pronunciations</h3>
 		<p> Most consonants translate to the same basic sound unless they are modified by surrounding letters as mentioned above. In some cases, however, the pronunciation of a consonant is irregular. In particular, <span class="trans">b</span> is sometimes pronounced <span class="trans">w</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bo">རེ་བ་</span> <span class="trans">re␣b␣</span> <span class="ipa">re-wa</span> <span class="meaning">hope</span></span>, <span class="charExample" translate="no"><span class="ex" lang="bo">དབང་ཆ་</span> <span class="trans">dbŋ␣ʧʰ␣</span> <span class="ipa">wang-ʧa</span> <span class="meaning">power</span></span>, and some words have an additional nasalisation which is not shown, eg. <span class="charExample" translate="no"><span class="ex" lang="bo">ད་ལྟ་</span> <span class="trans">d␣lt̰␣</span> <span class="ipa">dan-ta</span> <span class="meaning">now</span></span>.</p>
   </section>
   </section>
@@ -509,16 +754,16 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
   
   
-  <section>
-  <h2 id="transliteration">Repertoire extension</h2>
+  <section id="transliteration">
+<h2>Repertoire extension</h2>
 
 <p> Many of the extra consonants (and other characters) are used for transliteration of other languages, principally Sanskrit and Chinese. These include the retroflex and voiced aspirated consonants. A couple of characters are extensions for Balti.</p>
 
 
 
 
-<section>
-    <h3 id="rahead">Fixed form letters</h3>
+<section id="rahead">
+<h3>Fixed form letters</h3>
 
 <figure class="characterBox auto" data-select="first" data-cols="trans" data-ignore="&#x200C;">ཪ␣&#x0FBC;␣ྺ␣ྻ</figure>
 
@@ -530,8 +775,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h3 id="aspirated">Aspirated consonants</h3>
+<section id="aspirated">
+<h3>Aspirated consonants</h3>
 <p>A set of precomposed characters exists for representing aspirated sounds, and the Sanskrit diphone <span class="ipa">kʃ</span>. (The default webfont renders the subjoined forms as if they were two separate code points.)</p>
 <figure class="otherBox auto" data-select="first" data-cols="ipa,trans" data-ignore="&#x200C;">&#x0F43;‌&#x0F93;␣&#x0F4D;‌&#x0F9D;␣&#x0F52;‌&#x0FA2;␣&#x0F57;‌&#x0FA7;␣&#x0F5C;‌&#x0FAC;␣&#x0F69;‌&#x0FB9;</figure>
 
@@ -543,8 +788,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h3 id="retroflex">Retroflex consonants</h3>
+<section id="retroflex">
+<h3>Retroflex consonants</h3>
 
 <figure class="characterBox auto" data-select="first" data-cols="ipa,trans" data-ignore="&#x200C;">ཊ‌&#x0F9A;␣ཋ‌&#x0F9B;␣ཌ‌&#x0F9C;␣ཎ‌&#x0F9E;␣ཥ‌&#x0FB5;</figure>
 <p>The retroflex consonants, which are reversed versions of Tibetan consonant shapes, are often used to distinguish loan words from sequences of Tibetan syllables. For example, <span class="charExample" translate="no"><span class="ex" lang="bo">ཁ་ཎ་ཌ་</span> <span class="trans">kʰ␣ɳ␣ɖ␣ (kha-ṇa-ḍa)</span> <span class="meaning">Canada</span></span>, <span class="charExample" translate="no"><span class="ex" lang="bo">མོ་ཊ་</span> <span class="trans">mo␣ʈ␣ (mo-ṭa)</span> <span class="meaning">car</span></span>.</p>
@@ -553,8 +798,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h3 id="sanskrit">Other Sanskrit characters</h3>
+<section id="sanskrit">
+<h3>Other Sanskrit characters</h3>
 
 <figure class="otherBox auto" data-select="first" data-cols="ipa,trans" data-ignore="&#x200C;">&#x0F7F;␣&#x0F7E;␣ྃ␣྄␣྅</figure>
 
@@ -564,8 +809,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h3 id="tsaphru">Tsa-'phru mark</h3>
+<section id="tsaphru">
+<h3>Tsa-'phru mark</h3>
 <p><span class="codepoint" translate="no"><span lang="bo">&#x0F39;</span> [<a href="/scripts/tibetan/block#char0F39"><span class="uname">U+0F39 TIBETAN MARK TSA -PHRU</span></a>]</span> is an integral part of the three consonants <span class="codepoint"><span lang="bo">ཙ</span> <a href="#char0F59">[<span class="uname">U+0F59 TIBETAN LETTER TSA</span>]</a></span>, <span class="codepoint"><span lang="bo">ཚ</span> <a href="#char0F5A">[<span class="uname">U+0F5A TIBETAN LETTER TSHA</span>]</a></span> , and <span class="codepoint"><span lang="bo">ཛ</span> <a href="#char0F5B">[<span class="uname">U+0F5B TIBETAN LETTER DZA</span>]</a></span>. Although those consonants are not decomposable, this mark has been abstracted and may by itself be applied to <span class="codepoint"><span lang="bo">ཕ</span> <a href="#char0F55">[<span class="uname">U+0F55 TIBETAN LETTER PHA</span>]</a></span> (ie. <span class="ex" lang="bo">ཕ༹</span>) and other consonants to make new letters for use in transliteration and transcription of other languages. For example, in modern literary Tibetan, it is one of the ways used to transcribe the Chinese “fa” and “va” sounds not represented by the normal Tibetan consonants.</p>
 <p>Also used to represent tsa , tsha , and dza in abbreviations.</p>
 <p>This code point should be used immediately after the consonant it modifies, even if that consonant is followed by a subjoined consonant.</p>
@@ -574,8 +819,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h3 id="balti">Balti</h3>
+<section id="balti">
+<h3>Balti</h3>
 <p><span class="codepoint">Two characters are provided for use with Balti.</span></p>
 
 <figure class="otherBox auto" data-cols="ipa,trans">ཫ␣ཬ</figure>
@@ -587,8 +832,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
   
   
-<section>
-<h2 id="otherletters">Other letters</h2>
+<section id="otherletters">
+<h2>Other letters</h2>
   <p>The Unicode Tibetan block contains the following additional characters with the general property of <span class="uname">letter</span>.</p>
 
 <figure class="auxiliaryBox auto" data-cols="">ༀ</figure>
@@ -601,8 +846,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
   
   
-<section>
-<h2 id="diacritics">Combining marks</h2>
+<section id="diacritics">
+<h2>Combining marks</h2>
   <p>The following are characters with the general Unicode property of <span class="uname">mark</span>, excluding those combining marks which are described in the sections relating to subjoined consonants and vowel signs. Many are used for Sanskrit transcriptions.</p>
 <figure class="otherBox auto" data-cols="">ཾ␣ཿ␣྄␣༙␣༵␣༷␣༹␣༾␣༿␣ྂ␣ྃ␣྆␣྇␣ྍ␣ྎ␣ྏ␣࿆</figure>
 
@@ -612,8 +857,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
   
   
-<section>
-<h2 id="punctuation">Punctuation</h2>
+<section id="punctuation">
+<h2>Punctuation</h2>
   <p>These are characters with the general Unicode property of <em>punctuation</em>. They are described elsewhere on this page.</p>
 
 <figure class="characterBox auto" data-cols="">༄␣༅␣༈␣་␣༌␣།␣༎</figure>
@@ -627,8 +872,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
   
   
-<section>
-<h2 id="symbols">Symbols</h2>
+<section id="symbols">
+<h2>Symbols</h2>
   <p>These characters have the general Unicode property of <em>symbol</em>. They are described elsewhere on this page. None of these are listed by CLDR for Tibetan.</p>
 
 <figure class="otherBox auto" data-cols="">༁␣༂␣༃␣༓␣༕␣༖␣༗␣༚␣༛␣༜␣༝␣༞␣༟␣༴␣༶␣༸␣྾␣྿␣࿀␣࿁␣࿂␣࿃␣࿄␣࿅␣࿇␣࿈␣࿉␣࿊␣࿋␣࿌␣࿎␣࿏␣࿕␣࿖␣࿗␣࿘␣&#x2638;</figure>
@@ -640,8 +885,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
   
   
-<section>
-<h2 id="digits">Numbers</h2>
+<section id="digits">
+<h2>Numbers</h2>
   <p>Tibetan has its own set of numbers. My Chinese publication, however, uses european digits.</p>
   
 
@@ -652,8 +897,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
  
 
 
-<section>
-    <h3 id="half_numbers">Half-numbers</h3>
+<section id="half_numbers">
+<h3>Half-numbers</h3>
  <p> By some interpretations, the following shapes each have the value of 0.5 less than the number within which it appears. Used only in some traditional contexts, they appear as the last digit of a multidigit number, eg. <span class="ex" lang="bo">&#x0F24;&#x0F2C;</span> represents 42.5. These are very rarely used, however, and other uses have been postulated. For more information see <a href="http://babelstone.blogspot.co.uk/2007/04/numbers-that-dont-add-up-tibetan-half.html">Numbers that Don't Add Up : Tibetan Half Digits</a>, by Andrew West.</p>
  
 
@@ -667,8 +912,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-  <h2 id="shaping">Glyph shaping &amp; positioning</h2>
+<section id="shaping">
+<h2>Glyph shaping &amp; positioning</h2>
   <p>Tibetan requires many rules to position glyphs correctly, and also to shape characters according to context.</p>
 <p>You can experiment with examples using the <a href="/pickers/tibetan/">Tibetan picker</a>.</p>
   
@@ -677,8 +922,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
    
   
   
-  <section>
-    <h3 id="gsub">Context-based shaping</h3>
+  <section id="gsub">
+<h3>Context-based shaping</h3>
     <p class="prompts">Are special glyph forms needed, depending on the context in which a character is used? Do glyphs interact in some circumstances?</p>
 <p>Glyphs in Tibetan script need to be adapted sometimes to suit the context in which the character is used. A particularly prevalent example is that of the letter <span class="codepoint"><span lang="bo">&#x0F62;</span> <a href="/scripts/tibetan/block#char0F62">[<span class="uname">U+0F62 TIBETAN LETTER RA</span>]</a></span>. When used at the top of a stack it has an abbreviated form, as shown by the grey highlight in the example below on the left.</p>
     <p>The example on the right shows what a normal RA looks like. This is the same underlying character. The shape is determined by rules in the font.</p>
@@ -692,8 +937,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-    <h3 id="gpos">Context-based positioning</h3>
+<section id="gpos">
+<h3>Context-based positioning</h3>
  <p class="prompts"> Are there requirements to position diacritics or other items specially, depending on context? Does the script have multiple diacritics competing for the same location relative to the base?</p>
 <p>Combining characters need to be placed in different positions, according to the context. The example below shows the same vowel sign displayed at different heights, according to what stacks above it.</p>
  <figure>
@@ -705,16 +950,26 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h3 id="fontstyle">Font styles</h3>
+  
+<section id="baselines">
+<h3>Baselines &amp; inline alignment</h3>
+<p class="prompts">Does the script have special requirements for baseline alignment between mixed scripts and in general?</p>
+<p>When text in smaller annotations or larger heading text is mixed with normal text, the letter-heads of all characters should align to the same height.</p>
+</section>
+
+
+
+
+<section id="fontstyle">
+<h3>Font styles</h3>
 <p class="prompts"> Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</p>
 </section>
 
 
 
 
-<section>
-<h3 id="transforms">Transforming characters</h3>
+<section id="transforms">
+<h3>Transforming characters</h3>
 
 <p class="prompts">If the script is bicameral, are the special rules about case conversion? Are there other correspondences between glyphs, such as half- vs fullwidth presentation forms?</p>
 </section>
@@ -726,12 +981,12 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
  
  
  
-<section>
-	  <h2 id="boundaries">Structural boundaries &amp; markers</h2>
+<section id="boundaries">
+<h2>Structural boundaries &amp; markers</h2>
   
-<section>
-<h3 id="graphemes">Grapheme boundaries</h3>
- <p class="explanatoryintro">A grapheme is a user-perceived unit of text. The Unicode Standard uses generalised rules to define 'grapheme clusters', which approximate the likely grapheme boundaries in a writing system.</p>
+<section id="graphemes">
+<h3>Grapheme boundaries</h3>
+<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
 
 <p class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements when double-clicking on the text, or moving through the text with the cursor, or backspace, etc.? </p>
 </section>
@@ -740,12 +995,12 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
   
-<section>
-<h3 id="word">Word boundaries</h3>
- <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
-<p class="prompts">Are words separated by spaces, or other characters? Are there special requirements when double-clicking  on the text? Are words hyphenated?</p>
+<section id="word">
+<h3>Word boundaries</h3>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 
-   <p>Word boundaries within a section are not indicated. Only 'syllables', known as <span class="name">tsheg-bar</span> <span class="ipa">tsek bar</span>, are separated by the <span class="name">tsek</span> character, <span class="codepoint"><span lang="bo">&#x0F0B;</span> <a href="/scripts/tibetan/block#char0F0B">[<span class="uname">U+0F0B TIBETAN MARK INTERSYLLABIC TSHEG</span>]</a></span>.</p> 
+
+<p>Word boundaries within a section are not indicated. Only 'syllables', known as <span class="name">tsheg-bar</span> <span class="ipa">tsek bar</span>, are separated by the <span class="name">tsek</span> character, <span class="codepoint"><span lang="bo">&#x0F0B;</span> <a href="/scripts/tibetan/block#char0F0B">[<span class="uname">U+0F0B TIBETAN MARK INTERSYLLABIC TSHEG</span>]</a></span>.</p> 
 <figure>
 <p class="large"><span class="ex" lang="bo">དོན་ཚན་དང་པོ།་</span></p>
     <figcaption>The intersyllabic tsek in use.</figcaption>
@@ -755,8 +1010,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
    
    
       
-      <section>
-      <h3 id="phrase">Phrase boundaries</h3>
+      <section id="phrase">
+<h3>Phrase boundaries</h3>
       
 	  <div class="sidenoteGroup">
 	  <p class="prompts">What characters are used to indicate the boundaries of phrases, sentences, and sections?</p>
@@ -803,8 +1058,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
     
-<section>
-   <h3 id="headmark">Head marks</h3>
+<section id="headmark">
+<h3>Head marks</h3>
    
 	  <p>In traditional, loose-leaf Tibetan pechas a head mark or <span class="name">yig-mgo</span> (<span class="ipa">yig go</span>) is used at the beginning of the front of the folio so that you can tell which is the front. </p>
 	  <p>Head marks are also used in both pechas and books to indicate the start of a headline or the start of the first paragraph in a longer text.</p>
@@ -820,8 +1075,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
     
-<section>
-   <h3 id="brackets">Bracketing &amp; parentheses</h3>
+<section id="brackets">
+<h3>Bracketing &amp; parentheses</h3>
    
 	  <p class="prompts">What characters are used as parentheses, or to bracket information?</p>
 <p><span class="codepoint"><span lang="bo">&#x0F3C;</span> <a href="/scripts/tibetan/block#char0F3C">[<span class="uname">U+0F3C TIBETAN MARK ANG KHANG GYON</span>]</a></span> and <span class="codepoint"><span lang="bo">&#x0F3D;</span> <a href="/scripts/tibetan/block#char0F3D">[<span class="uname">U+0F3D TIBETAN MARK ANG KHANG GYAS</span>]</a></span> are paired punctuation used to form a roof over one or more digits or words. The right-hand character can also be used much like a single parenthesis in list counters.</p>
@@ -832,8 +1087,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
   
-<section>
-<h3 id="quotations">Quotations</h3>
+<section id="quotations">
+<h3>Quotations</h3>
 <p class="prompts">What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue?</p>
 </section>
 
@@ -841,8 +1096,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
   
-<section>
-<h3 id="hyphens">Abbreviation, ellipsis &amp; repetition</h3>
+<section id="hyphens">
+<h3>Abbreviation, ellipsis &amp; repetition</h3>
 <p class="prompts">What characters are used to indicate abbreviation, ellipsis &amp; repetition?</p>
 <p><span class="codepoint"><span lang="bo">&#x0F34;</span> <a href="/scripts/tibetan/block#char0F34">[<span class="uname">U+0F34 TIBETAN MARK BSDUS RTAGS</span>]</a></span> means 'etc.', and is used after the first few tsek-bar of a recurring phrase.</p>
 </section>
@@ -851,8 +1106,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
   
-<section>
-<h3 id="emphasis">Emphasis &amp; text decoration</h3>
+<section id="emphasis">
+<h3>Emphasis &amp; text decoration</h3>
 <p class="prompts">How are emphasis and highlighting achieved? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</p>
 	  <p><span class="codepoint"><span lang="bo">&#xA0;&#x0F35;</span> <a href="/scripts/tibetan/block#char0F35">[<span class="uname">U+0F35 TIBETAN MARK NGAS BZUNG NYI ZLA​</span>]</a></span> and <span class="codepoint"><span lang="bo">&#xA0;&#x0F37;</span> <a href="/scripts/tibetan/block#char0F37">[<span class="uname">U+0F37 TIBETAN MARK NGAS BZUNG SGOR RTAGS​</span>]</a></span> can be used to create a similar effect to underlining or to mark emphasis.</p>
 	  <p>The use of these marks is not straightforward, since they attach to a syllable rather than a character and therefore to place them correctly the application needs to take syllable boundary positions into account. If entered as combining characters they can be added after the vowel-sign in a stack.</p>
@@ -875,11 +1130,11 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
  
  
  
-<section>
-<h2 id="para">Line &amp; paragraph layout</h2>  
+<section id="para">
+<h2>Line &amp; paragraph layout</h2>  
       
-      <section>
-	  <h3 id="wrap">Line breaking &amp; hyphenation</h3>
+      <section id="wrap">
+<h3>Line breaking &amp; hyphenation</h3>
 	  <p class="prompts">Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that?</p>
 <p> Normally, Tibetan only breaks after the tsek, and doesn't break after spaces.</p>
 	  <p>Tibetan never breaks inside a syllable, and has no hyphenation. If a word is composed of multiple syllables, it is also preferable to avoid breaking a line in the middle of the word.</p>
@@ -905,14 +1160,42 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 	  </ul>
 	  <p>In an environment where the width or content of the page can change, this feature poses a problem for the content author. The application needs to be able to automatically switch between the two styles of shad as a syllable moves on or off a new line when the page is resized or when preceding content is modified.</p>
 	  <p>The Unicode Standard adds: &quot;Not only is rin-chen-spungs-shad used as the replacement for the shay but a whole class of “ornamental shays ” are used for the same purpose. All are scribal variants on a rin-chen-spungs-shad, which is correctly written with three dots above it.&quot;</p>
-      </section>
+	  
+	  
+	  
+	  
+	  
+	  <p><span class="leadin">Character properties.</span> Characters used for the thisLanguage  language have the following assignments related to line-break properties.</p>
+<table><tbody>
+<tr><th class="sg">AL</th><td class="count">38</td><td class="chars"><span class="exlist" lang="bo">པ ཕ བ ཏ ཐ ད ཀ ཁ ག ཙ ཚ ཛ ཅ ཆ ཇ ས ཟ ཤ ཞ ཧ མ ན ཉ ང ཝ ར ལ ཡ འ ཨ ཪ ཊ ཋ ཌ ཎ ཥ ༅ ༀ</span></td></tr>
+<tr><th class="sg">BA</th><td class="count">1</td><td class="chars"><span class="exlist" lang="bo">་</span></td></tr>
+<tr><th class="sg">BB</th><td class="count">1</td><td class="chars"><span class="exlist" lang="bo">༄</span></td></tr>
+<tr><th class="sg">CM</th><td class="count">43</td><td class="chars"><span class="exlist" lang="bo">ི ུ ེ ོ ‌ ྤ ྥ ྦ ྟ ྠ ྡ ྐ ྑ ྒ ྩ ྪ ྫ ྕ ྖ ྗ ྶ ྯ ྴ ྮ ྷ ྨ ྣ ྙ ྔ ྭ ྺ ྲ ླ ྱ ྻ ྰ ྸ ྼ ྚ ྛ ྜ ྞ ྵ</span></td></tr>
+<tr><th class="sg">EX</th><td class="count">2</td><td class="chars"><span class="exlist" lang="bo">། ༎</span></td></tr>
+<tr><th class="sg">GL</th><td class="count">2</td><td class="chars"><span class="exlist" lang="bo">༈ ༌</span></td></tr>
+<tr><th class="sg">NU</th><td class="count">10</td><td class="chars"><span class="exlist" lang="bo">༠ ༡ ༢ ༣ ༤ ༥ ༦ ༧ ༨ ༩</span></td></tr>
+</tbody></table>
+
+
+
+<details id="linebreak_details">
+<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BB">BB (break before)</a> indicates that characters  move to the next line at a line break and thus provide a line break opportunity before.&nbsp;</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BA (break after)</a> indicates that it is normal to break after that character.&nbsp;</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#EX">EX (exclamation mark/interrogation)</a> behave like closing characters, except in relation to postfix (PO) and non-starter characters (NS).</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#GL">GL (non-breaking “glue&quot;)</a> non-tailorable, non-breaking characters prohibit breaks on either side, but that prohibition can be overridden by SP or ZW.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">NU (number)</a> behaves like ordinary characters (AL) in the context of most characters but activate the prefix and postfix behavior of prefix and postfix characters.</p>
+</details>
+</section>
   
   
   
   
   
-      <section>
-	  <h3 id="justify">Text alignment &amp; justification</h3>
+      <section id="justify">
+<h3>Text alignment &amp; justification</h3>
 	  <p class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</p>
 <p> There appear to be two alternative methods of justification.</p>
 	  <p> <a class="leadin" href="#icspacing"  id="icspacing">Method 1: inter-character spacing.</a> Spacing between all characters should be adapted equally. Note that the width of the white-space character should not be changed significantly, so Tibetan texts use the non-breaking space mentioned above, which doesn't change width on justification.</p>
@@ -932,59 +1215,114 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-    <h3 id="letterspace">Letter spacing</h3>
+<section id="letterspace">
+<h3>Letter spacing</h3>
 <p class="prompts">Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see above.).</p>
 </section>
 
 
 
 
-<section>
-  <h3 id="lists">Counters, lists, etc.</h3>
+<section id="lists">
+<h3>Counters, lists, etc.</h3>
   
 <p class="prompts">Are there list or other counter styles in use?  If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed? </p>
+
 <p><span class="codepoint"><span lang="bo">&#x0F3D;</span> <a href="/scripts/tibetan/block#char0F3D">[<span class="uname">U+0F3D TIBETAN MARK ANG KHANG GYAS</span>]</a></span> can  be used much like a single parenthesis in list counters.</p>
-<p>Tibetan uses a numeric counter style, according to the document <a href="https://w3c.github.io/predefined-counter-styles/#tamil-styles">Ready-made Counter Styles</a>.</p>
-<p>The numeric style uses the Tibetan digits: ༠ ༡ ༢ ༣ ༤ ༥ ༦ ༧ ༨  ༩.</p>
-<figure>
-<p class="large">1&nbsp;⇨&nbsp;<span class="ex" lang="km">༡</span> 2&nbsp;⇨&nbsp;<span class="ex" lang="km">༢</span> 3&nbsp;⇨&nbsp;<span class="ex" lang="km">༣</span> 4&nbsp;⇨&nbsp;<span class="ex" lang="km">༤</span> 11&nbsp;⇨&nbsp;<span class="ex" lang="km">༡༡</span> 22&nbsp;⇨&nbsp;<span class="ex" lang="km">༢༢</span> 33&nbsp;⇨&nbsp;<span class="ex" lang="km">༣༣</span> 44&nbsp;⇨&nbsp;<span class="ex" lang="km">༤༤</span> 111&nbsp;⇨&nbsp;<span class="ex" lang="km">༡༡༡</span> 2222&nbsp;⇨&nbsp;<span class="ex" lang="km">༢༢༢༢</span></p>
-<figcaption>Numbers produced by the numeric counter style<span class="trans"></span>.</figcaption>
+<p><a href="https://w3c.github.io/predefined-counter-styles/#tibetan-styles">Ready-made Counter Styles</a> lists one numeric counter style for use with the Tibetan language. You can experiment with this style using the <a href="../../app-counters/">Counter styles converter</a>.</p>
+<figure class="counter_style_comp">
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>tibetan<br>
+(numeric)</th>
+<td><span class="ex" lang="bo">༡</span></td>
+<td><span class="ex" lang="bo">༢</span></td>
+<td><span class="ex" lang="bo">༣</span></td>
+<td><span class="ex" lang="bo">༤</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>11</th>
+<th>22</th>
+<th>33</th>
+<th>44</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>thai<br>
+(numeric)</th>
+<td><span class="ex" lang="bo">༡༡</span></td>
+<td><span class="ex" lang="bo">༢༢</span></td>
+<td><span class="ex" lang="bo">༣༣</span></td>
+<td><span class="ex" lang="bo">༤༤</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>111</th>
+<th>222</th>
+<th>333</th>
+<th>444</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>thai<br>
+(numeric)</th>
+<td><span class="ex" lang="bo">༡༡༡</span></td>
+<td><span class="ex" lang="bo">༢༢༢</span></td>
+<td><span class="ex" lang="bo">༣༣༣</span></td>
+<td><span class="ex" lang="bo">༤༤༤</span></td>
+</tr>
+</tbody>
+</table>
+<figcaption>Comparative counters produced by Tibetan counter styles.</figcaption>
 </figure>
 
 
-<p>You can experiment with these styles using the <a href="../../app-counterconverter/">Counter styles converter</a>.</p>
+
+<p><span class="leadin">numeric</span></p>
+<p>The <span class="kw" translate="no">tibetan</span> numeric style  is decimal-based and uses the  digits shown below.</p>
+<figure class="auto" data-cols="trans,transc">༠␣༡␣༢␣༣␣༤␣༥␣༦␣༧␣༨␣༩</figure>
 </section>
 
 
 
-
   
-<section>
-<h3 id="initials">Styling initials</h3>
+<section id="initials"> </section>
+<section id="initials">
+<h3>Styling initials</h3>
 <p class="prompts">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? etc.</p>
 </section>
-
-
-
-
-  
-<section>
-<h3 id="baselines">Baselines &amp; inline alignment</h3>
-<p class="prompts">Does the script have special requirements for baseline alignment between mixed scripts and in general?</p>
-<p>When text in smaller annotations or larger heading text is mixed with normal text, the letter-heads of all characters should align to the same height.</p>
-</section>
 </section>
 
 
 
 
 
-<section>
-<h2 id="page">Page &amp; book layout</h2>
+<section id="page">
+<h2>Page &amp; book layout</h2>
  
-<section>
-    <h3 id="generallayout">General page layout &amp; progression</h3>
+<section id="generallayout">
+<h3>General page layout &amp; progression</h3>
 <p class="prompts">How are the main text area and ancilliary areas positioned and defined? Are there any special requirements here, such as dimensions in characters for the Japanese kihon hanmen? The book cover for scripts that are read right-to-left scripts is on the right of the spine, rather than the left.  When content can flow vertically and to the left or right, how to specify the location of objects, text, etc. relative to the flow? Do tables and grid layouts work as expected? How do columns work in vertical text? Can you mix block of vertical and horizontal text? Does text scroll in a different direction?</p>
 <p>In pechas, Tibetan text is written inside a visible box which defines the margin of the page. In more recent publications this box may be invisible. Modern publications also use paragraphs. The initial line of a new paragraph may be indented.</p>
 </section>
@@ -993,8 +1331,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h3 id="grids">Grids &amp; tables</h3>
+<section id="grids">
+<h3>Grids &amp; tables</h3>
 <p class="prompts">Does the script have special requirements for character grids or tables?</p>
 </section>
 
@@ -1002,8 +1340,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
   
-<section>
-<h3 id="footnotes_etc">Notes, footnotes, etc.</h3>
+<section id="footnotes_etc">
+<h3>Notes, footnotes, etc.</h3>
 <p class="prompts">Does the script have special requirements for notes, footnotes, endnotes or other necessary annotations of this kind? (There is a section above for purely inline annotations, such as ruby or warichu. This section is more about annotation systems that separate the reference marks and the content of the notes.)</p><p><span class="codepoint"><span lang="bo">&#x0F36;</span> <a href="/scripts/tibetan/block#char0F36">[<span class="uname">U+0F36 TIBETAN MARK CARET -DZUD RTAGS BZHI MIG CAN</span>]</a></span> and <span class="codepoint"><span lang="bo">&#x0FBF;</span> <a href="/scripts/tibetan/block#char0FBF">[<span class="uname">U+0FBF TIBETAN KU RU KHA BZHI MIG CAN</span>]</a></span> are used to indicate where text should be inserted within other text or as references to footnotes and marginal notes.</p>
 </section>
 
@@ -1011,8 +1349,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
   
-<section>
-<h3 id="interaction">Forms &amp; user interaction</h3>
+<section id="interaction">
+<h3>Forms &amp; user interaction</h3>
 <p class="prompts">Are vertical form controls needed? Are scroll bars in an unusual position? Other special requirements for user interaction?</p>
 </section>
 
@@ -1020,8 +1358,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
   
-<section>
-<h3 id="headers">Page numbering, running headers, etc</h3>
+<section id="headers">
+<h3>Page numbering, running headers, etc</h3>
 <p class="prompts">Are there special conventions for page numbering, or the way that running headers and the like are handled?</p>
 </section>
 </section>
@@ -1032,10 +1370,27 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
+ <section id="chars">
+<h2>Character lists</h2>
+  <p>Version 12.0 of the Unicode Standard has the following blocks dedicated to the Tibetan script (numbers in lists are non-ASCII only):</p>
+    <ul>
+<li><a href="/uniview/?block=Tibetan">Tibetan</a> <span class="charCount">50 letters, 77 marks, 20 numbers, 28 punctuation, 36 symbols : total 221</span></li>
+</ul>
+<p>Apart from ASCII characters, the Tibetan orthography described here uses 95 characters (and 1 more, used infrequently) from the following Unicode blocks: </p>
+    <ul>
+<li><a href="/uniview/?block=Tibetan">Tibetan</a> <span class="charCount">36 letters, 42 marks, 7 punctuation, 10 numbers :   total 95  &nbsp;&nbsp;   + ( 1 infrequent )</span></li>
+<!--li> <a href="/uniview/?block=general_punctuation">General punctuation</a> <span class="charCount">4 punctuation : total 4  &nbsp; (+ 5 infrequent)</span></li-->
+</ul>
+ <p><cite>Character Usage</cite> has information about the following orthographies associated with this script: <a href="/app-charuse/?language=bo" target="_blank">Tibetan</a> • <a href="/app-charuse/?language=dz" target="_blank">Dzongkha</a></p>
+<p>For character-specific details see <a class="linkHighlight" href="../../scripts/tibetan/block">Tibetan character notes</a>.</p>
+</section>
 
 
-<section>
-<h2 id="languages">Languages using the Tibetan script</h2>
+
+
+
+<section id="languages">
+<h2>Languages using the Tibetan script</h2>
 <p>According to ScriptSource, the Tibetan script is used for the following languages: </p>
 <ul>
 <li>Adi [adi]</li>
@@ -1082,16 +1437,16 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section> 
-<h2 id="refs">References</h2>
+<section id="refs">
+<h2>References</h2>
 		<ol>
 			<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN
 				0-19-507993-0</li>
+<li><span class="refcode">[ <a class="fnref" href="http://digitaltibetan.org/index.php/Formatting_rules_for_Tibetan_text">f</a> ]</span> <a href="http://digitaltibetan.org/index.php/Formatting_rules_for_Tibetan_text">Formatting rules for Tibetan text</a></li>
 			<li>[ <a class="fnref" href="http://www.learntibetan.net/">l</a> ] <a href="http://www.learntibetan.net/">The Tibetan Language Student</a></li>
-			<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode6.3.0/ch10.pdf#Tibetan">u</a> ] The Unicode Standard v6.3, <a href="http://www.unicode.org/versions/Unicode6.3.0/ch10.pdf#Tibetan">Tibetan</a>. </li>
-			<li><span class="refcode">[ <a class="fnref" href="http://digitaltibetan.org/index.php/Formatting_rules_for_Tibetan_text">f</a> ]</span> <a href="http://digitaltibetan.org/index.php/Formatting_rules_for_Tibetan_text">Formatting rules for Tibetan text</a></li>
 			<li>[ <a class="fnref" href="http://www.thlib.org/reference/transliteration/">t</a> ] <a href="http://www.thlib.org/reference/transliteration/">Transliteration &amp; Transcription Systems for Tibetan &amp; Himalayan Languages</a></li>
-		</ol>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode6.3.0/ch10.pdf#Tibetan">u</a> ] The Unicode Standard v6.3, <a href="http://www.unicode.org/versions/Unicode6.3.0/ch10.pdf#Tibetan">Tibetan</a>. </li>
+</ol>
 </section>
 
 
@@ -1103,31 +1458,27 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <table id="charCountList">
 <tr><th>Main</th><td id="mainCharList"></td><td id="mainCharListTotal"></td></tr>
-<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
 <tr><th>Auxiliary</th><td id="auxCharList"></td><td id="auxCharListTotal"></td></tr>
+<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
 <tr><th>Other</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
 <tr><th>Deprecated</th><td id="deprecatedCharList"></td><td id="deprecatedCharListTotal"></td></tr>
 </table>
-<script>
-runCharCount('.characterBox', 'mainCharList')
-runCharCount('.archaicBox', 'archaicCharList')
-runCharCount('.auxiliaryBox', 'auxCharList')
-runCharCount('.otherBox', 'otherCharList')
-runCharCount('.deprecatedBox', 'deprecatedCharList')
-</script>
 </details>
 
 
-
+<div id="phoneLinks"></div>
 
 
 <div id="panel" style="display:none"></div>
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/tibetan"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-12-03  15:16<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Btibetan%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ftibetan%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+<div class="smallprint"><span id="version"></span></div>
+
 
 
 <script>
-initialiseSummary('/scripts/tibetan/block','bo','Tibetan')
+initialiseSummary('/scripts/tibetan/block','bo','Tibetan','tibetan')
+autoTransliterate('bo')
 </script>
 
 </body>
