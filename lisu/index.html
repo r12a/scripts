@@ -10,45 +10,41 @@
 <!--link rel="stylesheet" href="../style/print.css"/-->
 <style>
 @font-face {
-    font-family: 'Lisu WF';
-    src: url('../../shared/webfonts/Lisuwebfont.woff2') format('woff2'),
-         url('../../shared/webfonts/Lisuwebfont.woff') format('woff');
+    font-family: 'Noto Lisu WF';
+    src: url('../../shared/webfonts/NotoSansLisu-Regularwebfont.woff2') format('woff2'),
+         url('../../shared/webfonts/NotoSansLisu-Regularwebfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 	}
-@font-face {
-	font-family: 'Noto Serif Lisu WF';
-	src: 	local('Noto Serif Lisu'),
-			url('../../shared/webfonts/notoseriflisu-regularwebfont.woff2') format('woff2'),  
-			url('../../shared/webfonts/notoseriflisu-regularwebfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	}
 #freeText {
 	font-size: 28px;
-	font-family: Noto Serif Lisu WF, serif;
+	font-family: "Noto Lisu WF", serif;
 	text-align: start;
     line-height: 2;
 	}
 @media print { #freeText { font-size: 18px; } }
-[lang=lis] { font-family: Noto Serif Lisu WF, 'Lisu WF', serif; font-size: 140%; }
+[lang=lis] { font-family: "Noto Lisu WF", serif; font-size: 140%; }
 .large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }	
 </style>
 
 <script src="../../shared/scriptdb/lisu.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2019.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
+<script src="../common/transliterate.js"></script>
+<script src="../common/prompts.js"> </script>
+<script src="../glossary/glossary.js"> </script>
 <script src="../../shared/code/getLinks.js"></script>
 <script src="../linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
 
 <script src="../../shared/fontlists/lisu.js"> </script>
+<script src="lis-translit.js">  </script>
 </head>
 
 <body>
@@ -57,7 +53,7 @@
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Lisu (Fraser script)</h1>
+<h1>Lisu (Fraser script) (draft)</h1>
 <nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top"/></a></nav>
 
   <aside class="sidebar"> 
@@ -105,20 +101,25 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </div>
 </aside>
 
-	<p id="status">Updated Mon 13 Oct 2014  &bull; tags <a href="http://r12a.github.io/blog/index.php?tag=lisu" title="Show all blog posts tagged with 'lisu'">lisu</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+<p id="status">Updated 
+  <!-- #BeginDate format:Sw1 -->29 December, 2019<!-- #EndDate -->
+  <span id="versionTop"></span>
+</p>
+
 
 	<div class="section">
-	  <p>This page provides basic information about the Lisu script, and its use for the Lisu language. It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned.  For character-specific details follow the links to the <a class="linkHighlight" href="/scripts/lisu/block">Lisu character notes</a>.</p>
-<p>See also the <a href="../../pickers/lisu/">Lisu picker</a>.</p>
+	  <p>This page gathers together basic information about the Lisu script and its use for the Lisu language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Lisu using Unicode; for greater details follow the footnote links (especially those with an arrow alongside them).</p>
+<p> For character-specific details follow the links to the <a class="linkHighlight" href="/scripts/lisu/block">Lisu character notes</a>. See also the <a href="../../pickers/lisu/" class="linkHighlight">Lisu character app</a>, and  the notes on <a href="../latin/hausa" class="linkHighlight">Hausa</a>.</p>
 <p>For similar information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Lisu">script links pages</a>.</p>
 
 <p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text. Colours and annotations on panels listing characters are relevant to their use for the Lisu language.</p>
+<p class="instructions">Unless in parentheses, the transcriptions in italics that follow Lisu text are a <a href="../glossary/#transliteration" class="termref">transliteration</a> developed for these pages. Those in parentheses are usually more standard transcriptions. Transcriptions in <span style="white-space:nowrap;">⌈ brackets ⌋</span> may be phonemic or phonetic.</p>
 </div>
 
 
 
-<section>
-<h2 id="sample">Sample (Lisu)</h2>
+<section id="sample">
+<h2>Sample (Lisu)</h2>
   
 
   <div id="freeText" dir="ltr" lang="lis" data-target="c" data-base="/scripts/lisu/block" data-source="http://www.evertype.com/standards/iso10646/pdf/fraser-sample.pdf">
@@ -132,8 +133,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
  
 
-<section>
-    <h2 id="history">Usage &amp; history</h2>
+<section id="history">
+<h2>Usage &amp; history</h2>
     <p>From the <a href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">Unicode Standard</a>: </p>
     <blockquote>
 <p>Somewhere between 1908 and 1914 a Karen evangelist from Myanmar by the name of Ba Thaw modified the shapes of Latin characters and created the Lisu script. Afterwards, British missionary James Outram Fraser and some Lisu pastors revised and improved the script. The script is commonly known in the West as the Fraser script. It is also sometimes called the Old Lisu script, to distinguish it from newer, Latin-based orthographies for the Lisu language.</p>
@@ -162,8 +163,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-    <h2 id="type">Distinctive features</h2>
+<section id="type">
+<h2>Distinctive features</h2>
 <p>The script  is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>. Consonants carry an inherent vowel which can be modified by appending vowel-signs to the consonant.  See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.</p>
 <p>The following list describes some distinctive characteristics of the Lisu script.</p>
 <ul>
@@ -184,71 +185,142 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
- <section>
-<h2 id="chars">Character lists</h2>
-  <p>The Lisu script characters in Unicode 11.0 are in the following block: </p>
-    <ul>
-      <li> <a href="/uniview/?block=lisu">Lisu</a> <span class="charCount">(46 letters, 2 punctuation :   total 48)</span></li>
-    </ul>
-   <!--p>@ The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
-<ul>
-<li><a href="/app-charuse/?language=lis" target="_blank">Lisu</a> <span class="charCount">(45 letters, 14 marks, 10 digits, 10 punctuation :   total 79)</span></li>
-<li>TBD</li>
-<li><a href="/app-charuse/?language=lis" target="_blank">Lisu</a> <span class="charCount">(25 letters, 3 marks, 1 punctuation :   total 29)</span></li>
-</ul-->
-<p>For character-specific details see the <a class="linkHighlight" href="/scripts/lisu/block">Lisu character notes</a>.</p>
-</section>
-  
+
+  <section id="direction">
+<h2>Text direction</h2>
+    <p>Lisu text is written horizontally, left to right.</p>
+  </section>
+ 
   
 
 
 
 <div id="showTranscriptions">
-<div>In yellow boxes, show:</div>
+<div>Character lists show:</div>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
 <!--div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div-->
 </div>
-
-
-
-
-
-
-  <section>
-    <h2 id="direction">Text direction</h2>
-    <p>Lisu text is written horizontally, left to right.</p>
-  </section>
    
     
       
 
 
 
-<section> 
-<h2 id="vowels">Vowels</h2>
+<section id="vowels">
+<h2>Vowels</h2>
 
 
-<section>
-<h3 id="inherent">Inherent vowel</h3>
+<section id="vowelPhonemes">
+<h3>Vowel sounds</h3>
+
+<p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+
+<p><span class="leadin">Plain vowels.</span></p>
+
+
+<div style="margin-left: 7.5%;">
+<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="white"/>
+      <feComposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -->
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+  
+   <!-- mid close -->
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -->
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- open -->
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+  
+  <!-- close -->
+  <text x="32" y="15" class="ipa" text-anchor="end">i</text> 
+  <text x="50" y="15" class="ipa" filter="url(#solid)">y</text> 
+  <text x="50" y="15" class="ipa">y</text> 
+
+  <text x="132" y="15" class="ipa" text-anchor="end" filter="url(#solid)">ɨ</text>
+  <text x="132" y="15" class="ipa" text-anchor="end">ɨ</text> 
+  <text x="150" y="15" class="ipa" filter="url(#solid)">ʉ</text> 
+  <text x="150" y="15" class="ipa">ʉ</text> 
+
+  <text x="232" y="15" class="ipa" text-anchor="end" filter="url(#solid)">ɯ</text>
+  <text x="232" y="15" class="ipa" text-anchor="end">ɯ</text> 
+  <text x="250" y="15" class="ipa">u</text> 
+
+  <!-- close mid -->
+  <text x="57" y="75" class="ipa" text-anchor="end">e</text> 
+  <text x="75" y="75" class="ipa" filter="url(#solid)">ø</text> 
+  <text x="75" y="75" class="ipa">ø</text> 
+  <text x="144" y="75" class="ipa" text-anchor="end" filter="url(#solid)">ɘ</text>
+  <text x="144" y="75" class="ipa" text-anchor="end">ɘ</text> 
+  <text x="232" y="75" class="ipa" text-anchor="end" filter="url(#solid)">ɤ</text>
+  <text x="232" y="75" class="ipa" text-anchor="end">ɤ</text> 
+  <text x="250" y="75" class="ipa">o</text> 
+
+  <!-- open mid -->
+  <text x="81" y="135" class="ipa" text-anchor="end">ɛ</text> 
+
+  <!-- open -->
+  <text x="232" y="195" class="ipa" text-anchor="end" filter="url(#solid)">ɑ</text>
+<text x="232" y="195" class="ipa" text-anchor="end">ɑ</text> 
+</svg>
+</div>
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Lisu_language#Vowels">wl</a>.<!-- Phones in a lighter colour are non-native or allophones.--></p>
+</section>
+
+
+
+
+
+<section id="inherent">
+<h3>Inherent vowel</h3>
+<p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
 
 <p>Consonants carry an inherent vowel usually transcribed as <span class="trans">a</span> and pronounced <span class="ipa">ɑ</span>.  So <span class="charExample" translate="no"><span class="ex" lang="lis">ꓗ</span></span> is pronounced <span class="ipa">kɑ</span>.</p>
 </section>
-<section>
-<h3 id="vowelsigns">Vowel characters</h3>
+<section id="vowelsigns">
+<h3>Vowel characters</h3>
 
 <p>Lisu is unusual for an abugida. Normally, abugidas produce a different vowel than the inherent one by attaching vowel-signs to the base consonant. Lisu instead uses a standalone vowel character after the  consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="lis">ꓗꓲ</span> <span class="ipa">ki</span></span>.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans">ꓮ␣ꓯ␣ꓷ␣ꓰ␣ꓱ␣ꓲ␣ꓶ␣ꓳ␣ꓴ␣ꓵ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans">ꓲ␣ꓵ␣ꓶ␣ꓴ␣ꓰ␣ꓱ␣ꓷ␣ꓳ␣ꓯ␣ꓮ</figure>
 </section>
 
 
 
 
  
-<section>
-<h3 id="consonantvowels">Consonant characters used as vowels</h3>
+<section id="consonantvowels">
+<h3>Consonant characters used as vowels</h3>
 
 <p>Three consonants are sometimes used as vowels.</p>
 
@@ -259,8 +331,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
  
-<section>
-<h3 id="vowelmodifiers">Vowel-related modifiers</h3>
+<section id="vowelmodifiers">
+<h3>Vowel-related modifiers</h3>
 
 
 <figure class="characterBox auto" data-cols="ipa,trans">ʼ␣ˍ</figure>
@@ -276,12 +348,109 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section> 
-<h2 id="consonants">Consonants</h2>
-  
-<p>Many Lisu consonants look like Latin characters, but they are not unified.</p>
+<section id="consonants">
+<h2>Consonants</h2>
 
-<figure class="characterBox auto" data-cols="ipa,trans">ꓐ␣ꓭ␣ꓚ␣ꓛ␣ꓓ␣ꓝ␣ꓞ␣ꓖ␣ꓨ␣ꓧ␣ꓙ␣ꓩ␣ꓗ␣ꓘ␣ꓡ␣ꓟ␣ꓠ␣ꓑ␣ꓒ␣ꓣ␣ꓤ␣ꓢ␣ꓔ␣ꓕ␣ꓪ␣ꓥ␣ꓦ␣ꓫ␣ꓬ␣ꓜ</figure>
+
+<section id="consonantSounds">
+<h3>Consonant sounds</h3>
+
+<p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+
+<table class="ipaTable">
+<thead>
+<tr>
+<th></th>
+<th>labial </th>
+<th>dental </th>
+<th>alveolar </th>
+<th>post-<br>
+alveolar</th>
+<th>palatal </th>
+<th>velar </th>
+<th>glottal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>stop</th>
+<td><span class="ipa">p</span> <span class="ipa">b</span><br>
+<span class="ipa">pʰ</span></td>
+<td><span class="ipa">t</span> <span class="ipa">d</span><br/>
+<span class="ipa">tʰ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">k</span> <span class="ipa">ɡ</span><br/>
+<span class="ipa">kʰ</span></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>affricate</th>
+<td>&nbsp;</td>
+<td><span class="ipa">t͡s</span> <span class="ipa">d͡z</span><br>
+<span class="ipa">t͡sʰ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">t͡ɕ</span> <span class="ipa">d͡ʑ</span><br/>
+<span class="ipa">t͡ɕʰ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>fricative </th>
+<td><span class="allophone">f</span> <span class="ipa">v</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">s</span> <span class="ipa">z</span></td>
+<td><span class="ipa">ɕ</span><br/></td>
+<td>&nbsp;</td>
+<td><span class="ipa">x</span> <span class="ipa">ɣ</span></td>
+<td><span class="ipa">h̃</span></td>
+</tr>
+<tr>
+<th>nasal</th>
+<td><span class="ipa">m</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">n</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɲ</span></td>
+<td><span class="ipa">ŋ</span></td>
+<td></td>
+</tr>
+<tr>
+<th>approximant</th>
+<td><span class="ipa">w</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">l</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">j</span></td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>trill/flap</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th></th>
+<td class="mouth"><a href="../common/mouth/mouth_labial.png" target="_blank"><img src="../common/mouth/mouth_small_labial.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_dental.png" target="_blank"><img src="../common/mouth/mouth_small_dental.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_alveolar.png" target="_blank"><img src="../common/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_postalveolar.png" target="_blank"><img src="../common/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_palatal.png" target="_blank"><img src="../common/mouth/mouth_small_palatal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_velar.png" target="_blank"><img src="../common/mouth/mouth_small_velar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_glottal.png" target="_blank"><img src="../common/mouth/mouth_small_glottal.png" alt=" "/></a></td>
+</tr>
+</tbody>
+</table>
+
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Lisu_language#Consonants">wl</a>. Phones in a lighter colour are non-native or allophones.</p>
 </section>
 
 
@@ -289,8 +458,26 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h2 id="tones">Tones</h2>
+
+<section id="consonantLetters">
+<h3>Consonant letters</h3>
+
+<p>Many Lisu consonants look like Latin characters, but they are not unified.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans">ꓑ␣ꓐ␣ꓒ␣ꓔ␣ꓓ␣ꓕ␣ꓗ␣ꓖ␣ꓘ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans">ꓝ␣ꓜ␣ꓞ␣ꓚ␣ꓙ␣ꓛ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans">ꓩ␣ꓢ␣ꓤ␣ꓣ␣ꓫ␣ꓬ␣ꓧ␣ꓭ␣ꓦ␣ꓨ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans">ꓟ␣ꓠ␣ꓥ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans">ꓪ␣ꓡ</figure>
+</section>
+</section>
+
+
+
+
+
+<section id="tones">
+<h2>Tones</h2>
 <p>Lisu uses the following signs, which look like western punctuation, to represent the tone of a syllable. The Unicode Standard says that they may use the same fixed-width spacing as the letters.</p>
   
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ꓸ␣ꓹ␣ꓺ␣ꓻ␣ꓼ␣ꓽ</figure>
@@ -298,15 +485,15 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p>The expected typing and storage position for tone marks is after all other elements in a syllable.</p>
-<p>The first four tone letters can be used in combination with the last two to represent certain combination tones. Of the various possibilities, only <span class="charExample" translate="no"><span class="ex" lang="lis">,;</span></span> is still in use; the rest are now rarely seen in China. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">u</a></sup></p>
+<p>The first four tone letters can be used in combination with the last two to represent certain combination tones. Of the various possibilities, only <span class="charExample" translate="no"><span class="ex" lang="lis">,;</span></span> is still in use; the rest are now rarely seen in China. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">u</a></p>
 </section>
     
     
     
     
     
-<section> 
-<h2 id="punctuation">Punctuation</h2>
+<section id="punctuation">
+<h2>Punctuation</h2>
 		<p>The Lisu Unicode block contains the following punctuation marks.</p>
 
 <figure class="characterBox auto"  data-cols="">꓾␣꓿</figure>
@@ -322,15 +509,41 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
     
-<section> 
-<h2 id="numberdescn">Numbers</h2>
+<section id="numberdescn">
+<h2>Numbers</h2>
 		<p> Lisu uses european digits.</p>
 <p>The thousands and decimal separators are the same as those used in English.</p>
 </section>
-<section>
-<h2 id="shaping">Glyph shaping &amp; positioning</h2>
+<section id="shaping">
+<h2>Glyph shaping &amp; positioning</h2>
 
 <p>There is no glyph shaping or positioning required for Lisu.</p>
+
+
+
+
+  
+<section id="baselines">
+<h3>Baselines &amp; inline alignment</h3>
+<p class="prompts">Does the script have special requirements for baseline alignment between mixed scripts and in general?</p>
+</section>
+
+
+
+
+<section id="fontstyle">
+<h3>Font styles</h3>
+<p class="prompts"> Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</p>
+</section>
+
+
+
+
+<section id="transforms">
+<h3>Transforming characters</h3>
+
+<p class="prompts">If the script is bicameral, are the special rules about case conversion? Are there other correspondences between glyphs, such as half- vs fullwidth presentation forms?</p>
+</section>
 </section>
 
 
@@ -338,43 +551,79 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h2 id="boundaries">Structural boundaries &amp; markers</h2>  
+<section id="boundaries">
+<h2>Structural boundaries &amp; markers</h2>  
   
-<section>
-<h3 id="word">Word boundaries</h3>
- <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+<section id="graphemes">
+<h3>Grapheme boundaries</h3>
+<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
+
+<p class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements when double-clicking on the text, or moving through the text with the cursor, or backspace, etc.? </p>
+
+</section>
+
+
+
+
+  
+<section id="word">
+<h3>Word boundaries</h3>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+
+<p class="prompts">Are words separated by spaces, or other characters? Are there special requirements when double-clicking  on the text? Are words hyphenated?</p>
+
 
 <p>Syllables  are separated by spaces, however where syllables combine to form a proper noun, <span class="codepoint" translate="no">a hyphen is </span>  used to bind the syllables together.</p>
-<p>For multi-syllable words the inter-syllable space is still used. Because of difficulties determining which syllable sequences correspond to multi-syllablic words, except when dealing with proper nouns, the syllable is normally taken to be the basic unit for text processing.<sup><a href="https://www.w3.org/TR/ilreq/"></a></sup></p>
+<p>For multi-syllable words the inter-syllable space is still used. Because of difficulties determining which syllable sequences correspond to multi-syllablic words, except when dealing with proper nouns, the syllable is normally taken to be the basic unit for text processing.<a class="fnref" href="https://www.w3.org/TR/ilreq/"></a></p>
 </section>
 
 
 
 
   
-<section>
-<h3 id="phrase">Phrase boundaries</h3>
+<section id="phrase">
+<h3>Phrase boundaries</h3>
+<p class="prompts">What characters are used to indicate the boundaries of phrases, sentences, and sections?</p>
+
 <p>A greater and lesser degree of finality are represented by <span class="codepoint" translate="no"><span lang="lis">&#xA4FE;</span> [<a href="/scripts/lisu/block#charA4FE"><span class="uname">U+A4FE LISU PUNCTUATION COMMA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="lis">&#xA4FF;</span> [<a href="/scripts/lisu/block#charA4FF"><span class="uname">U+A4FF LISU PUNCTUATION FULL STOP</span></a>]</span>.</p>
 <p>Chapter and verse in biblical texts tend to be separated by the ASCII colon and semicolon. The numeric context helps distinguish these separators from the Lisu tone marks.</p>
-		<p>Lisu also uses the ASCII characters <span class="codepoint" translate="no"><span lang="lis">&#x003F;</span> [<a href="/scripts/lisu/block#char003F"><span class="uname">U+003F QUESTION MARK</span></a>]</span> and <span class="codepoint" translate="no"><span lang="lis">&#x0021;</span> [<a href="/scripts/lisu/block#char0021"><span class="uname">U+0021 EXCLAMATION MARK</span></a>]</span> for question and exclamation marks. The question mark replaces the <span class="charExample" translate="no"><span class="ex" lang="lis">ꓺꓽ꓿</span></span> sequence of characters,  which was  used in older texts.</p>
+<p>Lisu also uses the ASCII characters <span class="codepoint" translate="no"><span lang="lis">&#x003F;</span> [<a href="/scripts/lisu/block#char003F"><span class="uname">U+003F QUESTION MARK</span></a>]</span> and <span class="codepoint" translate="no"><span lang="lis">&#x0021;</span> [<a href="/scripts/lisu/block#char0021"><span class="uname">U+0021 EXCLAMATION MARK</span></a>]</span> for question and exclamation marks. The question mark replaces the <span class="charExample" translate="no"><span class="ex" lang="lis">ꓺꓽ꓿</span></span> sequence of characters,  which was  used in older texts.</p>
+
+
+
+
+  
+<p id="hyphens"><span class="leadin">Hyphens &amp; dashes.</span>As mentioned earlier,  <span class="codepoint" translate="no"><span lang="lis">&#x002D;</span> [<a href="/scripts/lisu/block#char002D"><span class="uname">U+002D HYPHEN-MINUS</span></a>]</span> is  used between the syllables that compose a proper noun. The Unicode Standard suggests the use of <span class="codepoint" translate="no"><span lang="lis">&#x2010;</span> [<a href="/scripts/lisu/block#char2010"><span class="uname">U+2010 HYPHEN</span></a>]</span> instead, as its semantics are less ambiguous.</p>
 </section>
 
 
 
 
   
-<section>
-<h3 id="hyphens">Hyphens &amp; dashes</h3>
-<p>As mentioned earlier,  <span class="codepoint" translate="no"><span lang="lis">&#x002D;</span> [<a href="/scripts/lisu/block#char002D"><span class="uname">U+002D HYPHEN-MINUS</span></a>]</span> is  used between the syllables that compose a proper noun. The Unicode Standard suggests the use of <span class="codepoint" translate="no"><span lang="lis">&#x2010;</span> [<a href="/scripts/lisu/block#char2010"><span class="uname">U+2010 HYPHEN</span></a>]</span> instead, as its semantics are less ambiguous.</p>
+<section id="bracketing">
+<h3>Bracketing &amp; parentheses</h3>
+<p class="prompts">What characters are used as parentheses, or to bracket information?</p>
+
+<p>The ASCII characters <span class="codepoint" translate="no"><span lang="lis">&#x0028;</span> [<a href="/scripts/lisu/block#char0028"><span class="uname">U+0028 LEFT PARENTHESIS</span></a>]</span> and <span class="codepoint" translate="no"><span lang="lis">&#x0029;</span> [<a href="/scripts/lisu/block#char0029"><span class="uname">U+0029 RIGHT PARENTHESIS</span></a>]</span> are used for parentheses.</p>
+<p>The fullwidth characters <span class="codepoint" translate="no"><span lang="lis">&#x300A;</span> [<a href="/scripts/lisu/block#char300A"><span class="uname">U+300A LEFT DOUBLE ANGLE BRACKET</span></a>]</span> and <span class="codepoint" translate="no"><span lang="lis">&#x300B;</span> [<a href="/scripts/lisu/block#char300B"><span class="uname">U+300B RIGHT DOUBLE ANGLE BRACKET</span></a>]</span> are used to identify book titles.</p>
 </section>
 
 
 
 
   
-<section>
-<h3 id="ellipsis">Ellipsis</h3>
+<section id="quotations">
+<h3>Quotations</h3>
+<p class="prompts">What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue?</p>
+</section>
+
+
+
+
+  
+<section id="abbrev">
+<h3>Abbreviation, ellipsis &amp; repetition</h3>
+<p class="prompts">What characters are used to indicate abbreviation, ellipsis &amp; repetition?</p>
 
 <p>Ellipsis is written using <span class="codepoint" translate="no"><span lang="lis">&#x2026;</span> [<a href="/scripts/lisu/block#char2026"><span class="uname">U+2026 HORIZONTAL ELLIPSIS</span></a>]</span>.</p>
 <p>In Chinese texts this is always doubled, ie. <span class="charExample" translate="no"><span class="ex" lang="lis">……</span></span>.</p>
@@ -384,69 +633,200 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
   
-<section>
-<h3 id="brackets">Bracketing information</h3>
+<section id="emphasis">
+<h3>Emphasis &amp; text decoration</h3>
+<p class="prompts">How are emphasis and highlighting achieved? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</p>
+</section>
 
-<p>The ASCII characters <span class="codepoint" translate="no"><span lang="lis">&#x0028;</span> [<a href="/scripts/lisu/block#char0028"><span class="uname">U+0028 LEFT PARENTHESIS</span></a>]</span> and <span class="codepoint" translate="no"><span lang="lis">&#x0029;</span> [<a href="/scripts/lisu/block#char0029"><span class="uname">U+0029 RIGHT PARENTHESIS</span></a>]</span> are used for parentheses.</p>
-<p>The fullwidth characters <span class="codepoint" translate="no"><span lang="lis">&#x300A;</span> [<a href="/scripts/lisu/block#char300A"><span class="uname">U+300A LEFT DOUBLE ANGLE BRACKET</span></a>]</span> and <span class="codepoint" translate="no"><span lang="lis">&#x300B;</span> [<a href="/scripts/lisu/block#char300B"><span class="uname">U+300B RIGHT DOUBLE ANGLE BRACKET</span></a>]</span> are used to identify book titles.</p>
-</section>
-</section>
+
+
+
+  
+<section id="inlinenotes">
+<h3>Inline notes &amp; annotations</h3>
+<p class="prompts">What mechanisms, if any, are used to create <u>inline</u> notes and annotations? (For referent-type notes such as footnotes, see below.)</p>
+</section></section>
  
  
  
  
  
-<section>
-<h2 id="paralayout">Line &amp; paragraph layout</h2>
+<section id="paralayout">
+<h2>Line &amp; paragraph layout</h2>
    
       
-  <section>
-    <h3 id="linebreak">Line breaking &amp; hyphenation</h3>
-    <p>The space between syllables provides the primary break opportunity for wrapping text, even where that occurs in the middle of a multi-syllable word.</p>
+  <section id="linebreak">
+<h3>Line breaking &amp; hyphenation</h3>
+    <p class="prompts">Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that?</p>
+
+<p>The space between syllables provides the primary break opportunity for wrapping text, even where that occurs in the middle of a multi-syllable word.</p>
     <p><span class="ednote">The Unicode Standard suggests that proper nouns, which have syllables separated by hyphens, are not split. Need to check that.</span></p>
+
+
+
+<p><span class="leadin">Character properties.</span> Characters used for the thisLanguage  language have the following assignments related to line-break properties.</p>
+<table><tbody>
+<tr><th class="sg">AI</th><td class="count">1</td><td class="chars"><span class="exlist" lang="xx">ˍ</span></td></tr>
+<tr><th class="sg">AL</th><td class="count">47</td><td class="chars"><span class="exlist" lang="xx">ꓲ ꓵ ꓶ ꓴ ꓰ ꓱ ꓷ ꓳ ꓯ ꓮ ʼ ꓑ ꓐ ꓒ ꓔ ꓓ ꓕ ꓗ ꓖ ꓘ ꓝ ꓜ ꓞ ꓚ ꓙ ꓛ ꓩ ꓢ ꓤ ꓣ ꓫ ꓬ ꓧ ꓭ ꓦ ꓨ ꓟ ꓠ ꓥ ꓪ ꓡ ꓸ ꓹ ꓺ ꓻ ꓼ ꓽ</span></td></tr>
+<tr><th class="sg">BA</th><td class="count">2</td><td class="chars"><span class="exlist" lang="xx">꓾ ꓿</span></td></tr>
+<tr><th class="sg">CL</th><td class="count">1</td><td class="chars"><span class="exlist" lang="xx">》</span></td></tr>
+<tr><th class="sg">CP</th><td class="count">1</td><td class="chars"><span class="exlist" lang="xx">)</span></td></tr>
+<tr><th class="sg">EX</th><td class="count">2</td><td class="chars"><span class="exlist" lang="xx">? !</span></td></tr>
+<tr><th class="sg">IN</th><td class="count">1</td><td class="chars"><span class="exlist" lang="xx">…</span></td></tr>
+<tr><th class="sg">OP</th><td class="count">2</td><td class="chars"><span class="exlist" lang="xx">( 《</span></td></tr>
+<tr><th class="sg">QU</th><td class="count">1</td><td class="chars"><span class="exlist" lang="xx">"</span></td></tr>
+</tbody></table>
+
+
+
+<details id="linebreak_details">
+<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AI">AI (ambiguous, alphabetic or Ideograph)</a> line breaking behavior  depends on the context, and may reflect  different rules in East Asian and other contexts.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BA (break after)</a> indicates that it is normal to break after that character.&nbsp;</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CL">CL (close punctuation)</a>  should be kept with the preceding character.&nbsp;The class CL is closely related to the class CP (Close Parenthesis). They differ only in that CP will not introduce a break when followed by a letter or number, which prevents breaks within constructs like “(s)he”.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CP">CP (closing parenthesis)</a> will not cause a break opportunity when appearing in contexts like “(s)he.” In all other respects the breaking behavior of CP and CL are the same.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#EX">EX (exclamation mark/interrogation)</a> behave like closing characters, except in relation to postfix (PO) and non-starter characters (NS).</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">IN (inseparable characters)</a> is intended to be used consecutively. There is never a line break between two characters of this class.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#OP">OP (open punctuation)</a> 	should be kept with the character that follows. This is desirable, even if there are intervening space characters, as it prevents the appearance of a bare opening punctuation mark at the end of a line.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#SA">QU (quotation)</a> characters can be opening or closing, or even both, depending on usage. The default is to treat them as both opening and closing.</p>
+</details>
+</section>
+
+
+
+<section id="hyphenation">
+<h3>Hyphenation</h3>
+<p class="prompts">Is hyphenation used, or something else?</p>
+</section>
+
+
+
+<section id="justification">
+<h3>Text alignment &amp; justification</h3>
+<p class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</p>
+</section>
+
+
+
+
+<section id="letterspace">
+<h3>Letter spacing</h3>
+<p class="prompts">Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see above.).</p>
+</section>
+
+
+
+
+<section id="lists">
+<h3>Counters, lists, etc.</h3>
+  
+<p class="prompts">Are there list or other counter styles in use?  If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed? </p>
+</section>
+
+
+
+
+
+
+
+  
+<section id="initials">
+<h3>Styling initials</h3>
+<p class="prompts">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? etc.</p>
 </section>
 </section>
-<section>
-<h3 id="tbd">TBD</h3>
-<p class="ednote">Further information needed for this section includes:</p>
-<pre style="margin-left: 10%;">
-Glyph shaping &amp; positioning
-    Cursive text
-    Context-based shaping
-    Multiple combining characters
-    Context-based positioning
-    Transforming characters
 
-Structural boundaries &amp; markers
-    Grapheme, word &amp; phrase boundaries
-    Hyphens &amp; dashes
-    Bracketing information
-    Quotations
-    Abbreviations, ellipsis, &amp; repetition
-    Emphasis &amp; highlights
-    Inline notes &amp; annotations
 
-Inline layout
-    Inline text spacing
-    Bidirectional text
 
-Line &amp; paragraph layout
-    Text direction
-    Line breaking
-    Hyphenation
-    Text alignment &amp; justification
-    Counters, lists, etc.
-    Styling initials
-    Baselines &amp; inline alignment
 
-Page &amp; book layout
-    General page layout &amp; progression
-    Directional layout features
-	Grids &amp; tables
-    Notes, footnotes, etc.
-    Forms &amp; user interaction
-    Page numbering, running headers, etc.
-</pre>
+
+
+<section id="pagelayout">
+<h2>Page &amp; book layout</h2>
+ 
+<section id="generallayout">
+<h3>General page layout &amp; progression</h3>
+<p class="prompts">How are the main text area and ancilliary areas positioned and defined? Are there any special requirements here, such as dimensions in characters for the Japanese kihon hanmen? The book cover for scripts that are read right-to-left scripts is on the right of the spine, rather than the left.  When content can flow vertically and to the left or right, how to specify the location of objects, text, etc. relative to the flow? Do tables and grid layouts work as expected? How do columns work in vertical text? Can you mix block of vertical and horizontal text? Does text scroll in a different direction?</p>
+</section>
+
+
+
+
+
+<section id="grids">
+<h3>Grids &amp; tables</h3>
+<p class="prompts">Does the script have special requirements for character grids or tables?</p>
+</section>
+
+
+
+
+  
+<section id="footnotes">
+<h3>Notes, footnotes, etc</h3>
+<p class="prompts">Does the script have special requirements for notes, footnotes, endnotes or other necessary annotations of this kind? (There is a section above for purely inline annotations, such as ruby or warichu. This section is more about annotation systems that separate the reference marks and the content of the notes.)</p>
+</section>
+
+
+
+
+  
+<section id="interaction">
+<h3>Forms &amp; user interaction</h3>
+<p class="prompts">Are vertical form controls needed? Are scroll bars in an unusual position? Other special requirements for user interaction?</p>
+</section>
+
+
+
+
+  
+<section id="headers">
+<h3>Page numbering, running headers, etc</h3>
+<p class="prompts">Are there special conventions for page numbering, or the way that running headers and the like are handled?</p>
+</section>
+</section>
+
+
+
+
+
+
+
+
+ 
+ <section id="chars">
+<h2>Character lists</h2>
+  <p>Version 12.0 of the Unicode Standard has the following block dedicated to the Lisu script:</p>
+    <ul>
+<li> <a href="/uniview/?block=lisu">Lisu</a> <span class="charCount">46 letters, 2 punctuation :   total 48</span></li>
+</ul>
+<p>Apart from ASCII characters, the Lisu orthography described here uses 53 characters <!--(and @@ more, used infrequently) -->from the following Unicode blocks: </p>
+    <ul>
+    <li><a href="/uniview/?block=lisu">Lisu</a> <span class="charCount">46 letters,2 punctuation : total  48</span></li>
+<li> <a href="/uniview/?block=general_punctuation">General punctuation</a> <span class="charCount">1 punctuation : total 1  </span></li>
+<li> <a href="/uniview/?block=spacing_modifier_letters">Spacing Modifier Letters</a> <span class="charCount">2 letters : total 2</span></li>
+<li> <a href="/uniview/?block=CJK_Symbols_and_Punctuation">CJK Symbols and Punctuation</a> <span class="charCount">2 punctuation : total 2</span></li>
+    </ul>
+ <p><cite>Character Usage</cite> has information about the following orthographies associated with this script: <a href="/app-charuse/?language=lis" target="_blank">Lisu</a></p>
+<p>For detailed character-specific information see the <a class="linkHighlight" href="/scripts/lisu/block">Lisu character notes</a>.</p>
+</section>
+
+
+
+
+
+
+<section id="languages">
+<h2>Languages using the Lisu script</h2>
+<p>According to ScriptSource, the Lisu script is used for the following languages: </p>
+<ul>
+<li>Lakkia [lbc]</li>
+<li>Lipo [lpo]</li>
+<li>Lisu [lis]</li>
+<li>Naxi [nxq]</li>
+<li>Zaiwa [atb]</li>
+</ul>
 </section>
 
 
@@ -455,27 +835,49 @@ Page &amp; book layout
 	
 
 
-	<section> 
-
-    <h2 id="refs">Further reading</h2>
+	<section id="refs">
+<h2>Further reading</h2>
 		<ol>
 			<!--li>[Daniels] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
 				0-19-507993-0</li-->
-			<li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="doctitle"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
+			<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <span class="doctitle"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
 		    0-19-507993-0</li>
-<li>[ <sup><a href="http://en.wikipedia.org/wiki/Lisu_script">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Lisu_script">Lisu script</a></li>
-			<li>[ <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">u</a></sup> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">The Unicode Standard v11.0</a></li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">The Unicode Standard v11.0</a></li>
+<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Lisu_script">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Lisu_script">Lisu script</a></li>
+<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Lisu_language">wl</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Lisu_language">Lisu language</a></li>
 </ol>
 </section>
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/lisu"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-07-14  12:12<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Blisu%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Flisu%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
+
+<details>
+<summary class="prompts">Show stats</summary>
+
+<table id="charCountList">
+<tr><th>Main</th><td id="mainCharList"></td><td id="mainCharListTotal"></td></tr>
+<tr><th>Auxiliary</th><td id="auxCharList"></td><td id="auxCharListTotal"></td></tr>
+<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
+<tr><th>Other</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
+<tr><th>Deprecated</th><td id="deprecatedCharList"></td><td id="deprecatedCharListTotal"></td></tr>
+</table>
+</details>
+
+
+<div id="phoneLinks"></div>
 
 
 <div id="panel" style="display:none"></div>
 
+
+<div class="smallprint"><span id="version"></span></div>
+
+
+
 <script>
-initialiseSummary('/scripts/lisu/block','lis','Lisu')
+initialiseSummary('/scripts/lisu/block','lis','Lisu','lisu')
+autoTransliterate('lis')
 </script>
 
 </body>
