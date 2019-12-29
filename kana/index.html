@@ -19,13 +19,17 @@
 
 <script src="db.js"> </script>
 <script src="/shared/code/boilerplate.js"></script>
-<script src="/shared/code/toc_2019.js"></script>
+<script src="/shared/code/toc_2020.js"></script>
 <script src="/shared/code/all-names.js"></script>
 <script src="/shared/code/character_conversion.js"></script>
 <script src="/shared/code/show_codepoints.js"></script>
 <script src="/shared/fontlists/manage.js"></script>
 <script src="/shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
+<script src="../common/transliterate.js"></script>
+<script src="../common/prompts.js"> </script>
+<script src="../glossary/glossary.js"> </script>
+
 <script src="/shared/code/getLinks.js"></script>
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
@@ -40,7 +44,7 @@
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Japanese</h1>
+<h1>Japanese (draft)</h1>
 
 <nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="Jump to top of page." title="Jump to top of page."/></a></nav>
 
@@ -90,22 +94,24 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->14-Jul-2019<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/index.php?tag=kana" title="Show all blog posts tagged with 'kana'">kana</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+  <!-- #BeginDate format:Sw1 -->29 December, 2019<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
 
 
 
 <div class="section">
-  <p>This page provides basic information about the Japanese writing system, which includes the use of Kanji, Hiragana, Katakana and Latin scripts. It is not authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as I learned.  <!--For character-specific details follow the links to the <a class="linkHighlight" href="/scripts/template/block">Template character notes</a>.--> </p>
+  <p>This page gathers together basic information about the Japanese writing system, which includes the use of Kanji, Hiragana, Katakana and Latin scripts. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Japanese using Unicode; for greater details follow the footnote links (especially those with an arrow alongside them).</p>
 <p>For similar information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Jpan">script links pages</a>.</p>
 
-<p class="instructions">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+<p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text. Colours and annotations on panels listing characters are relevant to their use for the Japanese language.</p>
+<p class="instructions">Unless in parentheses, the transcriptions in italics that follow Japanese text are a <a href="../glossary/#transliteration" class="termref">transliteration</a> developed for these pages. Those in parentheses are usually more standard transcriptions. Transcriptions in <span style="white-space:nowrap;">⌈ brackets ⌋</span> may be phonemic or phonetic.</p>
 </div>
 
 
 
-<section>
-  <h2 id="sample">Sample (Japanese)</h2>
+<section id="sample">
+<h2>Sample (Japanese)</h2>
   
   <div id="freeText" dir="ltr" lang="ja">
   <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">第１条 すべての人間は、生まれながらにして自由であり、かつ、尊厳と権利とについて平等である。人間は、理性と良心とを授けられており、互いに同胞の精神をもって行動しなければならない。</p>
@@ -117,8 +123,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-    <h2 id="history">Usage &amp; history</h2>
+<section id="history">
+<h2>Usage &amp; history</h2>
     <p>From <a href="http://scriptsource.org/scr/Jpan">Scriptsource</a>: </p>
     <blockquote>Kanji characters were introduced to Japan around the 3rd century, it is thought from Korea. Until the 7th or 8th century, the Japanese language was written exclusively in these Chinese characters. Initially these were used phonetically to represent similar-sounding Japanese syllables, regardless of their meaning in written Chinese. However, the process of writing Japanese solely in kanji was laborious; each symbol consisted of a number of strokes and only represented one syllable. Two simplified forms of writing began to emerge around the 7th century. The modern hiragana script developed from a simplified cursive style originally developed by women, who were discouraged from learning kanji, and katakana was developed by Buddhist scholars who wrote only one element of each kanji symbol as a form of shorthand.</blockquote>
     <p>From <a href="http://en.wikipedia.org/wiki/Japanese_writing_system">Wikipedia</a>:</p>
@@ -139,62 +145,22 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-    <h2 id="type">Distinctive features</h2>
+<section id="type">
+<h2>Distinctive features</h2>
     <p>Kanji characters are mostly derived from the Chinese Han script. They are used for word roots.</p>
 <p>The term <i class="qterm">kana</i> covers two <span class="newterm"><a href="https://www.unicode.org/glossary/#syllabary">syllabaries</a></span> that are used with kanji characters (see <a href="han">Han</a>) to write Japanese.   See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>. </p>
 <p>One syllabary is hiragana, the other katakana. In both cases, the repertoire includes 5 independent vowel sounds, one nasal sound, and the rest are consonant+vowel combinations. There are a small number of additional characters with particular functions, such a katakana lengthening mark, and a few small characters for representing medial glides.</p>
     <p>Text can be written horizontally or vertically. The visual forms of characters don't interact.</p>
   
  </section>
- 
- 
- 
-
-
-<section>
-    <h2 id="chars">Character lists</h2>
-    <p>The Kana script characters in Unicode 10.0 are spread across 5 blocks:</p>
-    <ul>
-      <li><a href="/uniview/?block=Kana">Hiragana</a> <span class="charCount">(93 letters : total 93)</span></li>
-      <li><a href="/uniview/?block=Kana_Extended-A">Kana Extended-A</a> <span class="charCount">(31 letters : total 31)</span></li>
-      <li><a href="/uniview/?block=Kana_Extended-B">Kana Supplement</a> <span class="charCount">(256 letters : total 256)</span></li>
-      <li><a href="/uniview/?block=Kana_Extended-B">Katakana</a> <span class="charCount">(94 letters, 2 punctuation : total 96)</span></li>
-      <li><a href="/uniview/?block=Kana_Extended-B">Katakana Phonetic Extensions</a> <span class="charCount">(16 letters : total 16)</span></li>
-    </ul>
-    <p>The commonly used characters are in the Hiragana and Katakana blocks. The other characters are somewhat more esoteric.</p>
-    <p>The listings at the bottom of the page show a list of  characters used, per version 31 of CLDR's lists of characters (exemplarCharacters).</p>
-</section>
 
 
 
 
 
  
- 
-<section>
-    <h2 id"structure">Structure</h2>
-    <p>The Japanese language, unlike many neighouring languages, uses polysyllabic words, and has no tones. It is an agglutinative language, and doesn't use spaces or other characters to separate  words.</p>
-<p>Wikipedia<sup><a href="https://en.wikipedia.org/wiki/Japanese_grammar#Sentences,_phrases_and_words">g</a></sup> has a nicely written summary of the structural characteristics:</p>
-    <blockquote>
-    <p><i>Text</i> (<span lang="ja">文章</span> <i class="trans">bunshō</i>) is composed of <i>sentences</i> (<span lang="ja">文</span> <i class="trans">bun</i>), which are in turn composed of <i>phrases</i> (<span lang="ja">文節</span> <i class="trans">bunsetsu</i>), which are its smallest coherent components. Like Chinese and classical Korean, written Japanese does not typically demarcate words with spaces; its agglutinative nature further makes the concept of a <i>word</i> rather different from words in English. The reader identifies word divisions by semantic cues and a knowledge of phrase structure. Phrases have a <em>single</em> meaning-bearing word, followed by a string of suffixes, auxiliary verbs and particles to modify its meaning and designate its grammatical role. In the following example, phrases are indicated by vertical bars:</p>
-<dl>
-<dd lang="ja">太陽が｜東の｜空に｜昇る。</dd>
-<dd translate="no"><i class="trans">taiyō ga | higashi no | sora ni | noboru</i></dd>
-<dd>sun <small>SUBJECT</small> | east <small>POSSESSIVE</small> | sky <small>LOCATIVE</small> | rise</dd>
-<dd>The sun rises in the eastern sky.</dd>
-</dl>
-</blockquote>
-    <p>Romanised Japanese text may add spaces between bunsetsu phrases, with hyphens separating suffixes (eg. <span class="trans">higashi-no</span>), or may also separate the suffixes using spaces (ie. <span class="trans">higashi no</span>).</p>
-</section>
-
-
-
-
-
- 
-  <section>
-    <h2 id="dir">Text direction</h2>
+  <section id="dir">
+<h2>Text direction</h2>
     <p>Text can be written horizontally, left to right, or vertically with lines progressing from right to left. Vertically set text is still common in Japan; most novels, newspapers and magazines are set vertically.</p>
     <p>Older horizontally set texts in Japanese also ran right to left. </p>
     <p class="instructions">If your browser supports vertical text, you can change the direction of the text sample here.</p>
@@ -206,14 +172,221 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
    </div>
 <p>It should be noted, however, that horizontal and vertical text is not usually identical. Apart from the question of what gets rotated and what does not, the two writing modes may show different preferences for emphasis marks, brackets, numbers, and so forth.</p>
   </section>
-  
-  
-  
 
 
 
+
+
+ 
+ 
 <section>
-<h2 id="characters">Kanji characters</h2>
+    <h2 id"structure">Structure</h2>
+    <p>The Japanese language, unlike many neighouring languages, uses polysyllabic words, and has no tones. It is an agglutinative language, and doesn't use spaces or other characters to separate  words.</p>
+<p>Wikipedia<a class="fnref" href="https://en.wikipedia.org/wiki/Japanese_grammar#Sentences,_phrases_and_words">g</a> has a nicely written summary of the structural characteristics:</p>
+    <blockquote>
+    <p><i>Text</i> (<span lang="ja">文章</span> <i class="trans">bunshō</i>) is composed of <i>sentences</i> (<span lang="ja">文</span> <i class="trans">bun</i>), which are in turn composed of <i>phrases</i> (<span lang="ja">文節</span> <i class="trans">bunsetsu</i>), which are its smallest coherent components. Like Chinese and classical Korean, written Japanese does not typically demarcate words with spaces; its agglutinative nature further makes the concept of a <i>word</i> rather different from words in English. The reader identifies word divisions by semantic cues and a knowledge of phrase structure. Phrases have a <em>single</em> meaning-bearing word, followed by a string of suffixes, auxiliary verbs and particles to modify its meaning and designate its grammatical role. In the following example, phrases are indicated by vertical bars:</p>
+<dl>
+<dd lang="ja">太陽が｜東の｜空に｜昇る。</dd>
+<dd translate="no"><i class="trans">taiyō ga | higashi no | sora ni | noboru</i></dd>
+<dd>sun <small>SUBJECT</small> | east <small>POSSESSIVE</small> | sky <small>LOCATIVE</small> | rise</dd>
+<dd>The sun rises in the eastern sky.</dd>
+</dl>
+</blockquote>
+    <p>Romanised Japanese text may add spaces between bunsetsu phrases, with hyphens separating suffixes (eg. <span class="trans">higashi-no</span>), or may also separate the suffixes using spaces (ie. <span class="trans">higashi no</span>).</p>
+</section>
+  
+  
+  
+
+
+
+<section id="vowelPhonemes">
+<h2>Vowel sounds</h2>
+
+<p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+
+<p><span class="leadin">Plain vowels.</span></p>
+
+
+<div style="margin-left: 7.5%;">
+<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="white"/>
+      <feComposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -->
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+  
+   <!-- mid close -->
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -->
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- open -->
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+  
+  <!-- close -->
+  <text x="32" y="15" class="ipa" text-anchor="end">i</text> 
+<text x="250" y="15" class="ipa">u</text> 
+
+  <!-- close mid -->
+  <text x="57" y="75" class="ipa" text-anchor="end">e</text> 
+  <text x="250" y="75" class="ipa">o</text> 
+
+  <!-- open -->
+  <text x="106" y="195" class="ipa" text-anchor="end">a</text> 
+</svg>
+</div>
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">wp</a>. Phones in a lighter colour are non-native or allophones.</p>
+</section>
+
+
+
+
+
+
+
+
+<section id="consonantSounds">
+<h2>Consonant sounds</h2>
+
+<p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+
+<table class="ipaTable">
+<thead>
+<tr>
+<th></th>
+<th>labial </th>
+<th>dental </th>
+<th>alveolar </th>
+<th>post-<br>
+alveolar</th>
+<th>palatal </th>
+<th>velar </th>
+<th>uvular</th>
+<th>glottal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>stop</th>
+<td><span class="ipa">p</span> <span class="ipa">b</span></td>
+<td><span class="ipa">t</span> <span class="ipa">d</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">k</span> <span class="ipa">ɡ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>affricate</th>
+<td>&nbsp;</td>
+<td><span class="ipa">t͡s</span> <span class="ipa">d͡z</span></td>
+<td>&nbsp;</td>
+<td><span class="allophone">t͡ɕ</span> <span class="allophone">d͡ʑ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>fricative </th>
+<td><span class="allophone">ɸ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">s</span> <span class="ipa">z</span></td>
+<td><span class="allophone">ɕ</span> <span class="allophone">ʑ</span></td>
+<td><span class="allophone">ç</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">h</span></td>
+</tr>
+<tr>
+<th>nasal</th>
+<td><span class="ipa">m</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">n</span></td>
+<td>&nbsp;</td>
+<td><span class="allophone">ɲ</span></td>
+<td><span class="allophone">ŋ</span></td>
+<td><span class="allophone">ɴ</span></td>
+<td></td>
+</tr>
+<tr>
+<th>approximant</th>
+<td><span class="ipa">w</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">j</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>trill/flap</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">r</span></td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th></th>
+<td class="mouth"><a href="../common/mouth/mouth_labial.png" target="_blank"><img src="../common/mouth/mouth_small_labial.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_dental.png" target="_blank"><img src="../common/mouth/mouth_small_dental.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_alveolar.png" target="_blank"><img src="../common/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_postalveolar.png" target="_blank"><img src="../common/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_palatal.png" target="_blank"><img src="../common/mouth/mouth_small_palatal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_velar.png" target="_blank"><img src="../common/mouth/mouth_small_velar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_uvular.png" target="_blank"><img src="../common/mouth/mouth_small_uvular.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_glottal.png" target="_blank"><img src="../common/mouth/mouth_small_glottal.png" alt=" "/></a></td>
+</tr>
+</tbody>
+</table>
+
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">wp</a>. Phones in a lighter colour are non-native or allophones.</p>
+</section>
+
+
+
+
+
+
+<section id="characters">
+<h2>Characters</h2>
+
+
+<section id="kanji">
+<h3>Kanji characters</h3>
 
 <p>Kanji characters are mostly derived from the Chinese Han script. They are commonly used for word roots and compound words.</p>
 <figure>
@@ -239,14 +412,19 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </tbody>
 </table>
 </details>
+
+
+<figure class="characterBox auto bicameral" data-cols="ipa" style="display: none">々␣一␣丁␣七␣万␣下␣不␣与␣丑␣且␣世␣丘␣丙␣両␣並␣中␣丸␣丹␣主␣久␣乏␣乗␣乙␣九␣乱␣乳␣乾␣亀␣了␣予␣争␣事␣二␣互␣五␣井␣亜␣亡␣交␣亥␣亨␣享␣亭␣人␣仁␣今␣介␣仏␣仕␣他␣付␣仙␣代␣以␣仮␣仰␣仲␣件␣任␣企␣伊␣伏␣休␣会␣伝␣伯␣伴␣伸␣伺␣似␣但␣位␣佐␣体␣何␣余␣作␣佳␣併␣使␣例␣侍␣供␣依␣価␣侮␣侯␣侵␣便␣係␣促␣俊␣俗␣保␣信␣修␣俳␣俵␣俸␣俺␣倉␣個␣倍␣倒␣候␣借␣倣␣値␣倫␣倹␣偉␣偏␣停␣健␣側␣偶␣偽␣傍␣傑␣傘␣備␣催␣債␣傷␣傾␣働␣像␣僕␣僚␣僧␣儀␣億␣儒␣償␣優␣元␣兆␣先␣光␣克␣免␣兎␣児␣党␣入␣全␣八␣六␣共␣兵␣具␣典␣兼␣内␣円␣冊␣再␣冒␣冗␣写␣冠␣冬␣冷␣准␣凍␣凝␣凡␣処␣凶␣凸␣出␣刀␣刃␣分␣刈␣刊␣刑␣列␣初␣判␣別␣利␣到␣制␣券␣刺␣刻␣則␣削␣前␣剖␣剛␣剣␣剤␣副␣剰␣割␣創␣劇␣力␣功␣加␣劣␣助␣努␣励␣労␣効␣劾␣勅␣勇␣勉␣動␣勘␣務␣勝␣募␣勢␣勤␣勧␣勲␣勺␣匁␣包␣化␣北␣匠␣匹␣医␣匿␣十␣千␣升␣午␣半␣卑␣協␣南␣単␣博␣占␣卯␣危␣即␣卵␣卸␣厄␣厘␣厚␣原␣厳␣去␣参␣又␣及␣収␣叔␣取␣受␣叙␣口␣句␣叫␣召␣可␣台␣史␣右␣号␣司␣各␣合␣吉␣同␣向␣君␣吟␣否␣含␣吸␣吹␣呈␣告␣周␣味␣呼␣命␣和␣咲␣哀␣品␣員␣哲␣唆␣唇␣唐␣唯␣唱␣商␣問␣啓␣善␣喚␣喜␣喝␣喪␣喫␣営␣嗣␣嘆␣嘉␣嘱␣器␣噴␣嚇␣囚␣四␣回␣因␣団␣困␣囲␣図␣固␣国␣圏␣園␣土␣圧␣在␣地␣坂␣均␣坊␣坑␣坪␣垂␣型␣垣␣埋␣城␣域␣執␣培␣基␣埼␣堀␣堂␣堅␣堕␣堤␣堪␣報␣場␣塀␣塁␣塊␣塑␣塔␣塗␣塚␣塩␣塾␣境␣墓␣増␣墜␣墨␣墳␣墾␣壁␣壇␣壊␣壌␣士␣壬␣壮␣声␣売␣変␣夏␣夕␣外␣多␣夜␣夢␣大␣天␣夫␣央␣失␣奇␣奉␣奏␣契␣奔␣奥␣奨␣奪␣奮␣女␣奴␣好␣如␣妄␣妊␣妙␣妥␣妨␣妹␣妻␣姉␣始␣姓␣委␣姫␣姻␣姿␣威␣娘␣娠␣娯␣婆␣婚␣婦␣婿␣媒␣嫁␣嫌␣嫡␣嬢␣子␣孔␣字␣存␣孝␣季␣孤␣学␣孫␣宅␣宇␣安␣完␣宗␣定␣宜␣宝␣実␣客␣室␣宮␣宰␣害␣家␣容␣宿␣寂␣寄␣密␣富␣寒␣寛␣寝␣察␣寡␣寧␣審␣寮␣寸␣寺␣対␣寿␣封␣専␣射␣将␣尉␣尋␣導␣小␣少␣尚␣就␣尺␣尼␣局␣居␣屈␣届␣屋␣展␣属␣層␣履␣屯␣山␣岐␣岡␣岩␣岬␣岳␣岸␣峠␣峡␣峰␣島␣崇␣崎␣崩␣川␣州␣巡␣巣␣工␣巨␣差␣己␣巳␣巻␣市␣布␣帆␣希␣帝␣帥␣師␣席␣帯␣帰␣帳␣常␣帽␣幅␣幕␣幣␣干␣年␣幸␣幹␣幻␣幾␣庁␣広␣床␣序␣底␣店␣庚␣府␣度␣座␣庫␣庭␣庶␣庸␣廃␣廉␣廊␣延␣廷␣建␣弁␣弊␣式␣弐␣弓␣引␣弘␣弟␣弦␣弧␣弱␣張␣強␣弾␣当␣形␣彩␣彫␣彰␣影␣役␣彼␣往␣征␣径␣待␣律␣後␣徐␣徒␣従␣得␣御␣復␣循␣微␣徳␣徴␣徹␣心␣必␣忌␣忍␣志␣忙␣応␣忠␣快␣念␣怒␣怖␣思␣怠␣急␣性␣怪␣恋␣恐␣恒␣恥␣恨␣恩␣恭␣息␣恵␣悔␣悟␣悠␣患␣悦␣悩␣悪␣悲␣悼␣情␣惑␣惜␣惨␣惰␣想␣愁␣愉␣意␣愚␣愛␣感␣慈␣態␣慌␣慎␣慕␣慢␣慣␣慨␣慮␣慰␣慶␣憂␣憎␣憤␣憩␣憲␣憶␣憾␣懇␣懐␣懲␣懸␣戊␣戌␣成␣戒␣戦␣戯␣戸␣戻␣房␣所␣扇␣扉␣手␣才␣打␣払␣扱␣扶␣批␣承␣技␣抄␣把␣抑␣投␣抗␣折␣抜␣択␣披␣抱␣抵␣抹␣押␣抽␣担␣拍␣拐␣拒␣拓␣拘␣拙␣招␣拝␣拠␣拡␣括␣拷␣拾␣持␣指␣挑␣挙␣挟␣振␣挿␣捕␣捜␣捨␣据␣掃␣授␣掌␣排␣掘␣掛␣採␣探␣接␣控␣推␣措␣掲␣描␣提␣揚␣換␣握␣揮␣援␣揺␣損␣搬␣搭␣携␣搾␣摂␣摘␣摩␣撃␣撤␣撮␣撲␣擁␣操␣擦␣擬␣支␣改␣攻␣放␣政␣故␣敏␣救␣敗␣教␣敢␣散␣敬␣数␣整␣敵␣敷␣文␣斉␣斎␣斗␣料␣斜␣斤␣斥␣断␣新␣方␣施␣旅␣旋␣族␣旗␣既␣日␣旧␣早␣旬␣昆␣昇␣昌␣明␣易␣昔␣星␣映␣春␣昨␣昭␣是␣昼␣時␣晩␣普␣景␣晴␣晶␣暁␣暇␣暑␣暖␣暗␣暦␣暫␣暮␣暴␣曇␣曜␣曲␣更␣書␣曹␣替␣最␣月␣有␣服␣朕␣朗␣望␣朝␣期␣木␣未␣札␣朱␣朴␣机␣朽␣杉␣材␣村␣束␣条␣来␣杯␣東␣松␣板␣析␣林␣枚␣果␣枝␣枠␣枢␣枯␣架␣柄␣某␣染␣柔␣柱␣柳␣査␣栄␣栓␣校␣株␣核␣根␣格␣栽␣桃␣案␣桑␣桜␣桟␣梅␣械␣棄␣棋␣棒␣棚␣棟␣森␣棺␣植␣検␣業␣極␣楼␣楽␣概␣構␣様␣槽␣標␣模␣権␣横␣樹␣橋␣機␣欄␣欠␣次␣欧␣欲␣欺␣款␣歌␣歓␣止␣正␣武␣歩␣歯␣歳␣歴␣死␣殉␣残␣殖␣殴␣段␣殺␣殻␣殿␣母␣毎␣毒␣比␣毛␣氏␣民␣気␣水␣氷␣永␣汁␣求␣汎␣汗␣汚␣江␣池␣決␣汽␣沈␣沖␣没␣沢␣河␣沸␣油␣治␣沼␣沿␣況␣泉␣泊␣泌␣法␣泡␣泣␣泥␣注␣泰␣泳␣洋␣洗␣洞␣津␣洪␣活␣派␣流␣浄␣浅␣浜␣浦␣浪␣浮␣浴␣海␣浸␣消␣涙␣涯␣液␣涼␣淑␣淡␣深␣混␣添␣清␣渇␣渉␣渋␣渓␣減␣渡␣渦␣温␣測␣港␣湖␣湯␣湾␣満␣源␣準␣溝␣溶␣滅␣滋␣滑␣滝␣滞␣滴␣漁␣漂␣漆␣漏␣演␣漠␣漢␣漫␣漬␣漸␣潔␣潜␣潟␣潤␣潮␣澄␣激␣濁␣濃␣濫␣濯␣瀬␣火␣灯␣灰␣災␣炉␣炊␣炎␣炭␣点␣為␣烈␣無␣焦␣然␣焼␣煙␣照␣煩␣煮␣熟␣熱␣燃␣燥␣爆␣爵␣父␣片␣版␣牙␣牛␣牧␣物␣牲␣特␣犠␣犬␣犯␣状␣狂␣狩␣独␣狭␣猛␣猟␣猪␣猫␣献␣猶␣猿␣獄␣獣␣獲␣玄␣率␣玉␣王␣珍␣珠␣班␣現␣球␣理␣琴␣環␣璽␣瓶␣甘␣甚␣生␣産␣用␣田␣申␣男␣町␣画␣界␣畑␣畔␣留␣畜␣畝␣略␣番␣異␣畳␣疎␣疑␣疫␣疲␣疾␣病␣症␣痘␣痛␣痢␣痴␣療␣癒␣癖␣癸␣発␣登␣白␣百␣的␣皆␣皇␣皮␣皿␣盆␣益␣盗␣盛␣盟␣監␣盤␣目␣盲␣直␣相␣盾␣省␣看␣県␣真␣眠␣眺␣眼␣着␣睡␣督␣瞬␣矛␣矢␣知␣短␣矯␣石␣砂␣研␣砕␣砲␣破␣硝␣硫␣硬␣碁␣碑␣確␣磁␣磨␣礁␣礎␣示␣礼␣社␣祈␣祉␣祖␣祚␣祝␣神␣祥␣票␣祭␣禁␣禄␣禅␣禍␣福␣秀␣私␣秋␣科␣秒␣秘␣租␣秩␣称␣移␣程␣税␣稚␣種␣稲␣稼␣稿␣穀␣穂␣積␣穏␣穫␣穴␣究␣空␣突␣窃␣窒␣窓␣窮␣窯␣立␣竜␣章␣童␣端␣競␣竹␣笑␣笛␣符␣第␣筆␣等␣筋␣筒␣答␣策␣箇␣算␣管␣箱␣節␣範␣築␣篤␣簡␣簿␣籍␣米␣粉␣粋␣粒␣粗␣粘␣粛␣粧␣精␣糖␣糧␣糸␣系␣糾␣紀␣約␣紅␣紋␣納␣純␣紙␣紛␣素␣索␣紫␣累␣細␣紳␣紹␣紺␣終␣組␣経␣結␣絞␣絡␣給␣統␣絵␣絶␣絹␣継␣続␣維␣綱␣網␣綿␣緊␣総␣緑␣緒␣線␣締␣編␣緩␣緯␣練␣縁␣縄␣縛␣縦␣縫␣縮␣績␣繁␣繊␣織␣繕␣繭␣繰␣缶␣罪␣置␣罰␣署␣罷␣羅␣羊␣美␣群␣義␣羽␣翁␣翌␣習␣翻␣翼␣老␣考␣者␣耐␣耕␣耗␣耳␣聖␣聞␣聴␣職␣肉␣肌␣肖␣肝␣肢␣肥␣肩␣肪␣肯␣育␣肺␣胃␣胆␣背␣胎␣胞␣胴␣胸␣能␣脂␣脅␣脈␣脚␣脱␣脳␣脹␣腐␣腕␣腰␣腸␣腹␣膚␣膜␣膨␣臓␣臣␣臨␣自␣臭␣至␣致␣興␣舌␣舎␣舗␣舞␣舟␣航␣般␣舶␣船␣艇␣艦␣良␣色␣芋␣芝␣花␣芳␣芸␣芽␣苗␣若␣苦␣英␣茂␣茎␣茶␣草␣荒␣荘␣荷␣菊␣菌␣菓␣菜␣華␣落␣葉␣著␣葬␣蒸␣蓄␣蔵␣薄␣薦␣薪␣薬␣藤␣藩␣藻␣虎␣虐␣虚␣虜␣虞␣虫␣蚊␣蚕␣蛇␣蛍␣蛮␣融␣血␣衆␣行␣術␣街␣衛␣衝␣衡␣衣␣表␣衰␣衷␣袋␣被␣裁␣裂␣装␣裏␣裕␣補␣裸␣製␣複␣褐␣褒␣襟␣襲␣西␣要␣覆␣覇␣見␣規␣視␣覚␣覧␣親␣観␣角␣解␣触␣言␣訂␣計␣討␣訓␣託␣記␣訟␣訪␣設␣許␣訳␣訴␣診␣証␣詐␣詔␣評␣詞␣詠␣試␣詩␣詰␣詳␣誇␣誉␣誌␣認␣誓␣誕␣誘␣語␣誠␣誤␣説␣読␣誰␣課␣調␣談␣請␣論␣諭␣諮␣諸␣諾␣謀␣謁␣謄␣謙␣講␣謝␣謡␣謹␣識␣譜␣警␣議␣譲␣護␣谷␣豆␣豊␣豚␣象␣豪␣貝␣貞␣負␣貢␣貧␣販␣貫␣責␣貯␣貴␣買␣貸␣費␣貿␣賀␣賃␣賄␣資␣賊␣賓␣賛␣賜␣賞␣賠␣賢␣賦␣質␣購␣贈␣赤␣赦␣走␣赴␣起␣超␣越␣趣␣足␣距␣跡␣路␣跳␣践␣踊␣踏␣躍␣身␣車␣軌␣軍␣軒␣軟␣転␣軸␣軽␣較␣載␣輝␣輩␣輪␣輸␣轄␣辛␣辞␣辰␣農␣辺␣込␣迅␣迎␣近␣返␣迫␣迭␣述␣迷␣追␣退␣送␣逃␣逆␣透␣逐␣逓␣途␣通␣逝␣速␣造␣連␣逮␣週␣進␣逸␣遂␣遅␣遇␣遊␣運␣遍␣過␣道␣違␣遠␣遣␣適␣遭␣遮␣遵␣遷␣選␣遺␣避␣還␣邦␣邪␣邸␣郊␣郎␣郡␣部␣郭␣郵␣郷␣都␣酉␣酌␣配␣酒␣酔␣酢␣酪␣酬␣酵␣酷␣酸␣醜␣醸␣釈␣里␣量␣金␣針␣釣␣鈍␣鈴␣鉄␣鉛␣鉢␣鉱␣銀␣銃␣銅␣銑␣銘␣銭␣鋭␣鋳␣鋼␣錘␣錠␣錬␣錯␣録␣鍛␣鎖␣鎮␣鏡␣鐘␣鑑␣長␣門␣閉␣開␣閏␣閑␣間␣関␣閣␣閥␣閲␣闘␣阪␣防␣阻␣附␣降␣限␣陛␣院␣陥␣陪␣陰␣陳␣陵␣陶␣陸␣険␣陽␣隅␣隆␣隊␣階␣随␣隔␣際␣障␣隠␣隣␣隷␣隻␣雄␣雇␣雉␣雌␣雑␣離␣難␣雨␣雪␣雰␣雲␣零␣雷␣電␣需␣震␣霊␣霜␣霧␣露␣青␣静␣非␣面␣革␣靴␣韓␣音␣韻␣響␣頂␣頃␣項␣順␣預␣頒␣領␣頭␣頻␣頼␣題␣額␣顔␣顕␣願␣類␣顧␣風␣飛␣食␣飢␣飯␣飲␣飼␣飾␣養␣餓␣館␣首␣香␣馬␣駄␣駆␣駐␣騎␣騒␣験␣騰␣驚␣骨␣髄␣高␣髪␣鬼␣魂␣魅␣魔␣魚␣鮮␣鯨␣鳥␣鳴␣鶏␣鹿␣麗␣麦␣麻␣黄␣黒␣黙␣鼓␣鼠␣鼻␣齢␣叱␣剥␣填␣頬</figure>
+
+
 </section>
 
 
 
 
 
-<section>
-<h2 id="kana">Kana syllabaries</h2>
+<section id="kana">
+<h3>Kana syllabaries</h3>
     <p>Japanese uses two syllabaries: hiragana and katakana.</p>
 <p>Katakana characters are used for foreign loan words, such as the word 'text' here:</p>
     <figure>
@@ -284,25 +462,25 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <p>Small versions of や, ゆ, and よ are used to form syllables such as <span class="charExample" translate="no"><span class="ex" lang="en">きゃ</span> <span class="trans">kya</span> <span class="ipa">kja</span></span>, <span class="charExample" translate="no"><span class="ex" lang="en">きゅ</span> <span class="trans">kya</span> <span class="ipa">kja</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="en">きょ</span> <span class="trans">kyo</span> <span class="ipa">kjo</span></span>.</p>
 <p><span class="codepoint" translate="no"><span lang="ja">&#x30C3;</span> [<a href="/scripts/kana/block#char30C3"><span class="uname">U+30C3 KATAKANA LETTER SMALL TU</span></a>]</span> is  used to lengthen a consonant sound.</p>
 
-<p><span class="codepoint" translate="no"><span lang="ja">&#x30FC;</span> [<a href="/scripts/kana/block#char30FC"><span class="uname">U+30FC KATAKANA-HIRAGANA PROLONGED SOUND MARK</span></a>]</span> is used to elongate vowel sounds. This elongation is phonemically significant. It is used predominantly with katakana, but occasionally also with hiragana. . <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">u720</a></sup></p>
+<p><span class="codepoint" translate="no"><span lang="ja">&#x30FC;</span> [<a href="/scripts/kana/block#char30FC"><span class="uname">U+30FC KATAKANA-HIRAGANA PROLONGED SOUND MARK</span></a>]</span> is used to elongate vowel sounds. This elongation is phonemically significant. It is used predominantly with katakana, but occasionally also with hiragana. . <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">u720</a></p>
+</section>
 
 
-
-<section>
-<h3 id="archaickana">Archaic characters</h3>
+<section id="archaickana">
+<h3>Archaic characters</h3>
 
 <p>A number of characters in the kana blocks are no longer used in modern text.</p>
 <p>These characters were dropped by an orthographic reform shortly after World War 2.</p>
-<figure class="characterBox auto bicameral" data-cols="ipa">ゐヰ␣ゑヱ␣ヸ␣ヹ</figure>
+<figure class="archaicBox auto bicameral" data-cols="ipa">ゐヰ␣ゑヱ␣ヸ␣ヹ</figure>
 </section>
 
 
 
-<section>
-<h3 id="halfwidth">Halfwidth katakana</h3>
+<section id="halfwidth">
+<h3>Halfwidth katakana</h3>
 
 <p>Unicode has a set of halfwidth katakana forms for legacy encoding roundtrips. In principle, these characters should not be used. The normal, fullsized characters should be used instead.</p>
-<figure class="characterBox auto" data-cols="">･␣ｦ␣ｧ␣ｨ␣ｩ␣ｪ␣ｫ␣ｬ␣ｭ␣ｮ␣ｯ␣ｰ␣ｱ␣ｲ␣ｳ␣ｴ␣ｵ␣ｶ␣ｷ␣ｸ␣ｹ␣ｺ␣ｻ␣ｼ␣ｽ␣ｾ␣ｿ␣ﾀ␣ﾁ␣ﾂ␣ﾃ␣ﾄ␣ﾅ␣ﾆ␣ﾇ␣ﾈ␣ﾉ␣ﾊ␣ﾋ␣ﾌ␣ﾍ␣ﾎ␣ﾏ␣ﾐ␣ﾑ␣ﾒ␣ﾓ␣ﾔ␣ﾕ␣ﾖ␣ﾗ␣ﾘ␣ﾙ␣ﾚ␣ﾛ␣ﾜ␣ﾝ␣ﾞ␣ﾟ</figure>
+<figure class="deprecatedBox auto" data-cols="">･␣ｦ␣ｧ␣ｨ␣ｩ␣ｪ␣ｫ␣ｬ␣ｭ␣ｮ␣ｯ␣ｰ␣ｱ␣ｲ␣ｳ␣ｴ␣ｵ␣ｶ␣ｷ␣ｸ␣ｹ␣ｺ␣ｻ␣ｼ␣ｽ␣ｾ␣ｿ␣ﾀ␣ﾁ␣ﾂ␣ﾃ␣ﾄ␣ﾅ␣ﾆ␣ﾇ␣ﾈ␣ﾉ␣ﾊ␣ﾋ␣ﾌ␣ﾍ␣ﾎ␣ﾏ␣ﾐ␣ﾑ␣ﾒ␣ﾓ␣ﾔ␣ﾕ␣ﾖ␣ﾗ␣ﾘ␣ﾙ␣ﾚ␣ﾛ␣ﾜ␣ﾝ␣ﾞ␣ﾟ</figure>
 </section>
 </section>
 
@@ -310,14 +488,14 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h2 id="punctuation">Punctuation</h2>
+<section id="punctuation">
+<h2>Punctuation</h2>
 
 <p>CLDR 31 lists the following punctuation characters for Japanese. First the fullwidth forms of normal characters.</p>
 <figure class="characterBox auto" data-cols="">－␣，␣、␣；␣：␣！␣？␣．␣＇␣＂␣（␣）␣［␣］␣｛␣｝␣＠␣＊␣／␣＼␣＆␣＃␣％</figure>
 
 <p>Then the halfwidth forms.</p>
-<figure class="characterBox auto" data-cols="">･␣、␣､␣。␣｡␣｢␣｣</figure>
+<figure class="auxiliaryBox auto" data-cols="">･␣、␣､␣。␣｡␣｢␣｣</figure>
 
 
 <p>And finally, the other punctuation.</p>
@@ -329,10 +507,10 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <p>The katakana block contains two additional punctuation marks.</p>
 <figure class="characterBox auto" data-cols="">・␣゠</figure>
 
-<p><span class="codepoint" translate="no"><span lang="ja">&#x30FB;</span> [<a href="/scripts/kana/block#char30FB"><span class="uname">U+30FB KATAKANA MIDDLE DOT</span></a>]</span> is used to separate words when writing non-Japanese phrases. . <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">u720</a></sup></p>
+<p><span class="codepoint" translate="no"><span lang="ja">&#x30FB;</span> [<a href="/scripts/kana/block#char30FB"><span class="uname">U+30FB KATAKANA MIDDLE DOT</span></a>]</span> is used to separate words when writing non-Japanese phrases. . <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">u720</a></p>
 <p><span class="codepoint" translate="no"><span lang="ja">&#x30A0;</span> [<a href="/scripts/kana/block#char30A0"><span class="uname">U+30A0 KATAKANA-HIRAGANA DOUBLE HYPHEN</span></a>]</span> is a delimiter occasionally used in analyzed Katakana or Hiragana textual material.&nbsp;</p>
 <p>The hiragana block contains some combining and modifier characters used to represent <span class="name">dakuten</span> and <span class="name">han-dakuten</span> for compatibility with older systems.</p>
-<figure class="characterBox auto" data-cols="">゙␣゚␣゛␣゜</figure>
+<figure class="auxiliaryBox auto" data-cols="">゙␣゚␣゛␣゜</figure>
 
 <p>The kana blocks each have two marks that are used to indicate repetition of a syllable – one for syllables with unvoiced consonants and another for voiced. The table below shows the hiragana first, then the katakana. In both cases there is a character for repetition of ordinary syllables, and one for repetition of syllables with <span class="name">dakuten</span>.</p>
 <figure class="characterBox auto" data-cols="">ゝ␣ゞ␣ヽ␣ヾ</figure>
@@ -343,67 +521,519 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
  
  
  
- 
-<section>
-<h2 id="boundaries">Structural boundaries &amp; markers</h2>  
+
+<section id="shaping">
+<h2>Glyph shaping &amp; positioning</h2>
+
+<p>The Japanese scripts are not cursive, and involves no  context-based shaping or positioning.
+
+
+
+
+<section id="baselines">
+<h3>Baselines &amp; inline alignment</h3>
+<p class="prompts">Does the script have special requirements for baseline alignment between mixed scripts and in general?</p>
+</section>
+
+
+
+
+<section id="fontstyle">
+<h3>Font styles</h3>
+<p class="prompts"> Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</p>
+</section>
+
+
+
+
+<section id="transforms">
+<h3>Transforming characters</h3>
+
+<p class="prompts">If the script is bicameral, are the special rules about case conversion? Are there other correspondences between glyphs, such as half- vs fullwidth presentation forms?</p>
+</section>
+</section>
+
+
+
+
+
+
+<section id="boundaries">
+<h2>Structural boundaries &amp; markers</h2>  
   
-<section>
-<h3 id="words">Word boundaries</h3>
-  <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+<section id="graphemes">
+<h3>Grapheme boundaries</h3>
+<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
+
+<p class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements when double-clicking on the text, or moving through the text with the cursor, or backspace, etc.? </p>
+
+</section>
+
+
+
+
+  
+<section id="word">
+<h3>Word boundaries</h3>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+
+<p class="prompts">Are words separated by spaces, or other characters? Are there special requirements when double-clicking  on the text? Are words hyphenated?</p>
+
 <p>Japanese rarely uses spaces. In the sample text there are gaps around punctuation, but these are produced by a lack of 'ink' in parts of the square character glyphs:</p>
   <p class="instructions">You can verify this by clicking on this example. The character list popup shows that only four characters make up this sequence, and none are spaces.</p>
   <p class="large"><span class="ex" lang="ja">い。（こ</span></p>
 </section>   
    
   
-<section>
-<h3 id="phrase">Phrase boundaries</h3>
-  <p>Japanese uses native bracket styles, commas and periods. Some of the punctuation looks like that for Latin (eg. parentheses), but the width of the punctuation is likely to include signficant amounts of white space, so that punctuation characters occupy the same space as han characters.</p>
-</section>
-  
+<section id="phrase">
+<h3>Phrase boundaries</h3>
+<p class="prompts">What characters are used to indicate the boundaries of phrases, sentences, and sections?</p>
 
-  <section>
-    <h3 id="ruby">Ruby</h3>
-    <p>The pronunciation of Japanese ideographic characters cannot be guessed, and so can pose difficulties for those learning the language. A common way around this problem is to annotate the text with kana characters. This is called ruby, or in its most common form <span class="name">furigana</span>. The following example uses markup to indicate which is base text and which is ruby, however not all browsers can display ruby correctly.</p>
+<p>Japanese uses native bracket styles, commas and periods. Some of the punctuation looks like that for Latin (eg. parentheses), but the width of the punctuation is likely to include signficant amounts of white space, so that punctuation characters occupy the same space as han characters.</p>
+</section>
+
+
+
+
+
+<section id="bracketing">
+<h3>Bracketing &amp; parentheses</h3>
+<p class="prompts">What characters are used as parentheses, or to bracket information?</p>
+</section>
+
+
+
+
+  
+<section id="quotations">
+<h3>Quotations</h3>
+<p class="prompts">What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue?</p>
+</section>
+
+
+
+
+  
+<section id="abbrev">
+<h3>Abbreviation, ellipsis &amp; repetition</h3>
+<p class="prompts">What characters are used to indicate abbreviation, ellipsis &amp; repetition?</p>
+</section>
+
+
+
+
+  
+<section id="emphasis">
+<h3>Emphasis &amp; text decoration</h3>
+<p class="prompts">How are emphasis and highlighting achieved? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</p>
+<p>Japanese sometimes uses katakana characters to create visual emphasis. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">u720</a></p>
+</section>
+
+
+
+
+  
+<section id="inlinenotes">
+<h3>Inline notes &amp; annotations</h3>
+<p class="prompts">What mechanisms, if any, are used to create <u>inline</u> notes and annotations? (For referent-type notes such as footnotes, see below.)</p>
+
+<p>The pronunciation of Japanese ideographic characters cannot be guessed, and so can pose difficulties for those learning the language. A common way around this problem is to annotate the text with kana characters. This is called ruby, or in its most common form <span class="name">furigana</span>. The following example uses markup to indicate which is base text and which is ruby, however not all browsers can display ruby correctly.</p>
     <p class="large"><span class="ex" lang="ja"><ruby>参<rt>さん</rt>加<rt>か</rt>希<rt>き</rt>望<rt>ぼう</rt></ruby></span></p>
   </section>
 </section>
 
 
-  
 
-<section>
-    <h3 id="emphasis">Emphasis</h3>
-<p>Japanese sometimes uses katakana characters to create visual emphasis. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">u720</a></sup></p>
+ 
+ 
+ 
+ 
+ 
+ 
+
+<section id="paralayout">
+<h2>Line &amp; paragraph layout</h2>
+   
+      
+<section id="linebreak">
+<h3>Line breaking &amp; hyphenation</h3>
+    <p class="prompts">Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that?</p>
+
+<p>Lines are normally wrapped between characters – word boundaries have no significance for the wrapping. Japanese should, however, take into account a few rules (kinsoku rules) which dictate what characters cannot appear at the end or start of a line.</p>
+<p><span class="leadin">Character properties.</span> Characters used for the Japanese  language have the following assignments related to line-break properties.</p>
+<table><tbody>
+<tr><th class="sg">AI</th><td class="count">7</td><td class="chars"><span class="exlist" lang="xx">― ‖ § ¶ † ‡ ※</span></td></tr>
+<tr><th class="sg">AL</th><td class="count">4</td><td class="chars"><span class="exlist" lang="xx">@ * &amp; #</span></td></tr>
+<tr><th class="sg">B2</th><td class="count">1</td><td class="chars"><span class="exlist" lang="xx">—</span></td></tr>
+<tr><th class="sg">BA</th><td class="count">1</td><td class="chars"><span class="exlist" lang="xx">‐</span></td></tr>
+<tr><th class="sg">CJ</th><td class="count">21</td><td class="chars"><span class="exlist" lang="xx">ぁ ァ ぃ ィ ぅ ゥ ぇ ェ ぉ ォ ゃ ャ ゅ ュ ょ ョ ゎ ヮ っ ッ ー</span></td></tr>
+<tr><th class="sg">CL</th><td class="count">17</td><td class="chars"><span class="exlist" lang="xx">， 、 ． ） ］ ｝ 。 } 〉 》 」 』 】 〕 ､ ｡ ｣</span></td></tr>
+<tr><th class="sg">CM</th><td class="count">2</td><td class="chars"><span class="exlist" lang="xx">゙ ゚</span></td></tr>
+<tr><th class="sg">CP</th><td class="count">2</td><td class="chars"><span class="exlist" lang="xx">) ]</span></td></tr>
+<tr><th class="sg">EX</th><td class="count">4</td><td class="chars"><span class="exlist" lang="xx">！ ？ ! ?</span></td></tr>
+<tr><th class="sg">HY</th><td class="count">1</td><td class="chars"><span class="exlist" lang="xx">-</span></td></tr>
+<tr><th class="sg">ID</th><td class="count">2062</td>
+<td class="chars"><span class="exlist" lang="xx">一 丁 - 頬 あ ア い イ う ウ え エ お オ か カ き キ く ク け ケ こ コ さ サ し シ す ス せ セ そ ソ た タ ち チ つ ツ て テ と ト な ナ に ニ ぬ ヌ ね ネ の ノ は ハ ひ ヒ ふ フ へ ヘ ほ ホ ま マ み ミ む ム め メ も モ や ヤ ゆ ユ よ ヨ ら ラ り リ る ル れ レ ろ ロ わ ワ を ヲ ん ン が ガ ぎ ギ ぐ グ げ ゲ ご ゴ ざ ザ じ ジ ず ズ ぜ ゼ ぞ ゾ だ ダ ぢ ヂ づ ヅ で デ ど ド ば バ び ビ ぶ ブ べ ベ ぼ ボ ヴ ヷ ヺ ぱ パ ぴ ピ ぷ プ ぺ ペ ぽ ポ － ＇ ＂ ＠ ＊ ／ ＼ ＆ ＃ 〃</span></td></tr>
+<tr><th class="sg">IN</th><td class="count">2</td><td class="chars"><span class="exlist" lang="xx">‥ …</span></td></tr>
+<tr><th class="sg">IS</th><td class="count">3</td><td class="chars"><span class="exlist" lang="xx">; : .</span></td></tr>
+<tr><th class="sg">NS</th><td class="count">13</td><td class="chars"><span class="exlist" lang="xx">々 ； ： 〜 ・ ゠ ゝ ゞ ヽ ヾ ･ ゛ ゜</span></td></tr>
+<tr><th class="sg">OP</th><td class="count">13</td><td class="chars"><span class="exlist" lang="xx">（ ［ ｛ ( [ { 〈 《 「 『 【 〔 ｢</span></td></tr>
+<tr><th class="sg">PO</th><td class="count">5</td><td class="chars"><span class="exlist" lang="xx">％ % ‰ ′ ″</span></td></tr>
+<tr><th class="sg">PR</th><td class="count">1</td><td class="chars"><span class="exlist" lang="xx">\</span></td></tr>
+<tr><th class="sg">QU</th><td class="count">5</td><td class="chars"><span class="exlist" lang="xx">‘ ’ " “ ”</span></td></tr>
+<tr><th class="sg">SY</th><td class="count">1</td><td class="chars"><span class="exlist" lang="xx">/</span></td></tr>
+</tbody></table>
+
+
+
+<details id="linebreak_details">
+<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AI">AI (ambiguous, alphabetic or Ideograph)</a> line breaking behavior  depends on the context, and may reflect  different rules in East Asian and other contexts.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">B2 (break opportunity before and after)</a> the EM DASH  used to set off parenthetical text may allow line breaks before or after, but may also be affected by local orthographic rules.&nbsp;</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BA (break after)</a> indicates that it is normal to break after that character.&nbsp;</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CL">CJ (conditional Japanese starter)</a> contains Japanese small hiragana and katakana. Characters of this class may be treated as either NS or ID, depending on the level of scrictness preferred.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CL">CL (close punctuation)</a>  should be kept with the preceding character.&nbsp;The class CL is closely related to the class CP (Close Parenthesis). They differ only in that CP will not introduce a break when followed by a letter or number, which prevents breaks within constructs like “(s)he”.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CP">CP (closing parenthesis)</a> will not cause a break opportunity when appearing in contexts like “(s)he.” In all other respects the breaking behavior of CP and CL are the same.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#EX">EX (exclamation mark/interrogation)</a> behave like closing characters, except in relation to postfix (PO) and non-starter characters (NS).</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#H2">HY (hyphen)</a> additional context analysis is required to distinguish usage of this character as a hyphen from its usage as a minus sign (or indicator of numerical range). If used as hyphen, it acts like U+2010 HYPHEN, which has line break class BA.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">ID (ideographic)</a> do not require other characters to provide break opportunities; lines can ordinarily break before and after and between pairs of ideographic characters. Note that this class also includes characters other than Han ideographs..</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">IN (inseparable characters)</a> is intended to be used consecutively. There is never a line break between two characters of this class.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">IS (infix numeric separators)</a> usually occurs inside a numerical expression and may not be separated from the numeric characters that follow, unless a space character intervenes. For example, there is no break in “100.00” or “10,000”, nor in “12:59”..</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">NS (nonstarters)</a> cannot start a line, but unlike CL they may allow a break in some contexts when they follow one or more space characters.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#OP">OP (open punctuation)</a> 	should be kept with the character that follows. This is desirable, even if there are intervening space characters, as it prevents the appearance of a bare opening punctuation mark at the end of a line.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#OP">PO (postfix numeric)</a> usually follows a numerical expression and may not be separated from preceding numeric characters or preceding closing characters, even if one or more space characters intervene. For example, there is no break opportunity in “(12.00) %”..</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#PR">PR (numeric prefix)</a>  may not be separated from following numeric characters or following opening characters, even if a space character intervenes. For example, there is no break opportunity in “฿ (100.00)”.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#SA">QU (quotation)</a> characters can be opening or closing, or even both, depending on usage. The default is to treat them as both opening and closing.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#SA">SY (symbols allowing break after)</a> provides a break opportunity after, except in front of digits, so as to not break “1/2” or “06/07/99”.</p>
+</details>
 </section>
 
 
 
- 
- 
- 
- 
- 
- 
-<section>
-<h2 id="para">Line &amp; paragraph layout</h2>
-    
-
-<section>
-    <h3 id="wrap">Linebreaking</h3>
-    <p>Lines are normally wrapped between characters – word boundaries have no significance for the wrapping. Japanese should, however, take into account a few rules (kinsoku rules) which dictate what characters cannot appear at the end or start of a line.</p>
+<section id="hyphenation">
+<h3>Hyphenation</h3>
+<p class="prompts">Is hyphenation used, or something else?</p>
 </section>
-  
-  
-  <section>
-    <h3 id="justify">Text alignment &amp; justification</h3>
+
+
+
+ <section id="justification">
+<h3>Text alignment &amp; justification</h3>
+    <p class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?    </p>
     <p>Japanese justifies text using a complex set of rules which adjust the space between characters on a line. Some characters are adjusted before others. </p>
-    <p><em>Use the control below to see how your browser justifies the text sample here.</em></p>
-    <p dir="ltr" lang="ja" id="justificationExample" style="text-align:start;">すべての人は、法の下において平等であり、また、いかなる差別もなしに法の平等な保護を受ける権利を有する。すべての人は、この宣言に違反するいかなる差別に対しても、また、そのような差別をそそのかすいかなる行為に対しても、平等な保護を受ける権利を有する。</p>
-    <p class="english" dir="ltr">
+    <p class="instructions noprint">Use the control below to see how your browser justifies the text sample here.</p>
+    <p dir="ltr" lang="ja" class="noprint" id="justificationExample" style="text-align:start;">すべての人は、法の下において平等であり、また、いかなる差別もなしに法の平等な保護を受ける権利を有する。すべての人は、この宣言に違反するいかなる差別に対しても、また、そのような差別をそそのかすいかなる行為に対しても、平等な保護を受ける権利を有する。</p>
+    <p class="english noprint" dir="ltr">
       <button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Justify   </button>
     </p>
-  </section>
+</section>
+
+
+
+
+ <section id="letterspace">
+<h3>Letter spacing</h3>
+    <p class="prompts">Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see above.).</p>
+</section>
+
+
+
+
+<section id="lists">
+<h3>Counters, lists, etc.</h3>
+  
+<p class="prompts">Are there list or other counter styles in use?  If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed? </p>
+
+<p>Japanese text uses a number of different counter styles. Some of the more common include full-width European numbers, which in vertical text stand upright. Unicode has various sets of numbers that can be useful here.</p>
+<figure class="counter_style_comp">
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>11</th>
+<th>20</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>dotted-decimal<br>
+(fixed)</th>
+<td><span class="ex" lang="ja">⒈</span></td>
+<td><span class="ex" lang="ja">⒉</span></td>
+<td><span class="ex" lang="ja">⒊</span></td>
+<td><span class="ex" lang="ja">⒋</span></td>
+<td><span class="ex" lang="ja">⒒</span></td>
+<td><span class="ex" lang="ja">⒛</span></td>
+</tr>
+<tr>
+<th>circled-decimal<br>
+(fixed)</th>
+<td><span class="ex" lang="ja">①</span></td>
+<td><span class="ex" lang="ja">②</span></td>
+<td><span class="ex" lang="ja">③</span></td>
+<td><span class="ex" lang="ja">④</span></td>
+<td><span class="ex" lang="ja">⑪</span></td>
+<td><span class="ex" lang="ja">⑳</span></td>
+</tr>
+</tbody>
+</table>
+<figcaption>European digit counters used for Korean counter styles.</figcaption>
+</figure>
+
+
+<p>For the <span class="kw" translate="no">dotted-decimal</span> numeric style   Unicode provides precomposed characters from 1 to 20.</p>
+<p>For the <span class="kw" translate="no">circled-decimal</span> numeric style Unicode provides  characters from 1 to 50.</p>
+<p><a href="https://w3c.github.io/predefined-counter-styles/#korean-styles">Ready-made Counter Styles</a> lists 9 counter styles that use Chinese or Japanese characters. You can experiment with these styles using the <a href="../../app-counterconverter/">Counter styles converter</a>.</p>
+<figure class="counter_style_comp">
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>circled-katakana<br>
+(fixed)</th>
+<td><span class="ex" lang="ja">㋐</span></td>
+<td><span class="ex" lang="ja">㋑</span></td>
+<td><span class="ex" lang="ja">㋒</span></td>
+<td><span class="ex" lang="ja">㋓</span></td>
+</tr>
+<tr>
+<th>hiragana<br>
+(alphabetic)</th>
+<td><span class="ex" lang="ja">あ</span></td>
+<td><span class="ex" lang="ja">い</span></td>
+<td><span class="ex" lang="ja">う</span></td>
+<td><span class="ex" lang="ja">え</span></td>
+</tr>
+<tr>
+<th>hiragana-iroha<br>
+(alphabetic)</th>
+<td><span class="ex" lang="ja">い</span></td>
+<td><span class="ex" lang="ja">ろ</span></td>
+<td><span class="ex" lang="ja">は</span></td>
+<td><span class="ex" lang="ja">に</span></td>
+</tr>
+<tr>
+<th>katakana<br>
+(alphabetic)</th>
+<td><span class="ex" lang="ja">ア</span></td>
+<td><span class="ex" lang="ja">イ</span></td>
+<td><span class="ex" lang="ja">ウ</span></td>
+<td><span class="ex" lang="ja">エ</span></td>
+</tr>
+<tr>
+<th>katakana-iroha<br>
+(alphabetic)</th>
+<td><span class="ex" lang="ja">イ</span></td>
+<td><span class="ex" lang="ja">ロ</span></td>
+<td><span class="ex" lang="ja">ハ</span></td>
+<td><span class="ex" lang="ja">ニ</span></td>
+</tr>
+<tr>
+<th>japanese-informal<br>
+(additive)</th>
+<td><span class="ex">一</span></td>
+<td><span class="ex">二</span></td>
+<td><span class="ex">三</span></td>
+<td><span class="ex">四</span></td>
+</tr>
+<tr>
+<th>japanese-formal<br>
+(additive)</th>
+<td><span class="ex">壱</span></td>
+<td><span class="ex">弐</span></td>
+<td><span class="ex">参</span></td>
+<td><span class="ex">四</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>11</th>
+<th>22</th>
+<th>33</th>
+<th>44</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>circled-katakana<br>
+(fixed)</th>
+<td><span class="ex" lang="ja">㋚</span></td>
+<td><span class="ex">㋥</span></td>
+<td><span class="ex">㋰</span></td>
+<td><span class="ex">㋻</span></td>
+</tr>
+<tr>
+<th>hiragana<br>
+(alphabetic)</th>
+<td><span class="ex" lang="ja">さ</span></td>
+<td><span class="ex">に</span></td>
+<td><span class="ex">む</span></td>
+<td><span class="ex">わ</span></td>
+</tr>
+<tr>
+<th>hiragana-iroha<br>
+(alphabetic)</th>
+<td><span class="ex" lang="ja">る</span></td>
+<td><span class="ex">ら</span></td>
+<td><span class="ex">こ</span></td>
+<td><span class="ex">ひ</span></td>
+</tr>
+<tr>
+<th>katakana<br>
+(alphabetic)</th>
+<td><span class="ex" lang="ja">サ</span></td>
+<td><span class="ex">ニ</span></td>
+<td><span class="ex">ム</span></td>
+<td><span class="ex">ワ</span></td>
+</tr>
+<tr>
+<th>katakana-iroha<br>
+(alphabetic)</th>
+<td><span class="ex" lang="ja">ル</span></td>
+<td><span class="ex" lang="ja">ラ</span></td>
+<td><span class="ex">コ</span></td>
+<td><span class="ex">ヒ</span></td>
+</tr>
+<tr>
+<th>japanese-informal<br>
+(additive)</th>
+<td><span class="ex" lang="ja">十一</span></td>
+<td><span class="ex" lang="ja">二十二</span></td>
+<td><span class="ex" lang="ja">三十三</span></td>
+<td><span class="ex" lang="ja">四十四</span></td>
+</tr>
+<tr>
+<th>japanese-formal<br>
+(additive)</th>
+<td><span class="ex" lang="ja">壱拾壱</span></td>
+<td><span class="ex" lang="ja">弐拾弐</span></td>
+<td><span class="ex" lang="ja">参拾参</span></td>
+<td><span class="ex" lang="ja">四拾四</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>111</th>
+<th>222</th>
+<th>333</th>
+<th>444</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>hiragana<br>
+(alphabetic)</th>
+<td><span class="ex" lang="ja">いそ</span></td>
+<td><span class="ex" lang="ja">えほ</span></td>
+<td><span class="ex" lang="ja">かゐ</span></td>
+<td><span class="ex" lang="ja">けし</span></td>
+</tr>
+<tr>
+<th>hiragana-iroha<br>
+(alphabetic)</th>
+<td><span class="ex" lang="ja">ろれ</span></td>
+<td><span class="ex" lang="ja">にえ</span></td>
+<td><span class="ex" lang="ja">とに</span></td>
+<td><span class="ex" lang="ja">りな</span></td>
+</tr>
+<tr>
+<th>katakana<br>
+(alphabetic)</th>
+<td><span class="ex" lang="ja">イソ</span></td>
+<td><span class="ex" lang="ja">エホ</span></td>
+<td><span class="ex" lang="ja">カヰ</span></td>
+<td><span class="ex" lang="ja">ケシ</span></td>
+</tr>
+<tr>
+<th>katakana-iroha<br>
+(alphabetic)</th>
+<td><span class="ex" lang="ja">ロレ</span></td>
+<td><span class="ex" lang="ja">ニエ</span></td>
+<td><span class="ex" lang="ja">トニ</span></td>
+<td><span class="ex" lang="ja">リナ</span></td>
+</tr>
+<tr>
+<th>japanese-informal<br>
+(additive)</th>
+<td><span class="ex">百十一</span></td>
+<td><span class="ex">二百二十二</span></td>
+<td><span class="ex">三百三十三</span></td>
+<td><span class="ex">四百四十四</span></td>
+</tr>
+<tr>
+<th>japanese-formal<br>
+(additive)</th>
+<td><span class="ex">壱百壱拾壱</span></td>
+<td><span class="ex">弐百弐拾弐</span></td>
+<td><span class="ex">参百参拾参</span></td>
+<td><span class="ex">参百参拾参</span></td>
+</tr>
+</tbody>
+</table>
+<figcaption>Comparative counters produced by Japanese counter styles.</figcaption>
+</figure>
+
+
+
+
+<p><span class="leadin">fixed</span></p>
+<p>The <span class="kw" translate="no">circled-katakana</span> fixed style   uses the following letters. The suffix is a space, and the numbers run from 1 to 47.</p>
+<figure class="auto" data-notes="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48"
+data-cols="">㋐␣㋑␣㋒␣㋓␣㋔␣㋕␣㋖␣㋗␣㋘␣㋙␣㋚␣㋛␣㋜␣㋝␣㋞␣㋟␣㋠␣㋡␣㋢␣㋣␣㋤␣㋥␣㋦␣㋧␣㋨␣㋩␣㋪␣㋫␣㋬␣㋭␣㋮␣㋯␣㋰␣㋱␣㋲␣㋳␣㋴␣㋵␣㋶␣㋷␣㋸␣㋹␣㋺␣㋻␣㋼␣㋽␣㋾</figure>
+
+
+<p><span class="leadin">alphabetic</span></p>
+<p>The alphabetic styles all use <span class="codepoint" translate="no"><span lang="ja">&#x3001;</span> [<span class="uname">U+3001 IDEOGRAPHIC COMMA</span>]</span> as a suffix (with no following space). The <span class="https://en.wikipedia.org/wiki/Iroha">iroha</span> style ordering is based on the order of characters in a pangram poem dating from the Heian era (794–1179).</p>
+<p>The <span class="kw" translate="no">hiragana</span> alphabetic style   uses these 48 hiragana characters in the order in which they are typically arranged.</p>
+<figure class="auto"  data-notes="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48"
+data-cols="">あ␣い␣う␣え␣お␣か␣き␣く␣け␣こ␣さ␣し␣す␣せ␣そ␣た␣ち␣つ␣て␣と␣な␣に␣ぬ␣ね␣の␣は␣ひ␣ふ␣へ␣ほ␣ま␣み␣む␣め␣も␣や␣ゆ␣よ␣ら␣り␣る␣れ␣ろ␣わ␣ゐ␣ゑ␣を␣ん</figure>
+
+<p>The <span class="kw" translate="no">hiragana-iroha</span> alphabetic style   uses  47 hiragana characters in the order shown just below.</p>
+<figure class="auto"  data-notes="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48"
+data-cols="">い␣ろ␣は␣に␣ほ␣へ␣と␣ち␣り␣ぬ␣る␣を␣わ␣か␣よ␣た␣れ␣そ␣つ␣ね␣な␣ら␣む␣う␣ゐ␣の␣お␣く␣や␣ま␣け␣ふ␣こ␣え␣て␣あ␣さ␣き␣ゆ␣め␣み␣し␣ゑ␣ひ␣も␣せ␣す</figure>
+
+<p>The <span class="kw" translate="no">katakana</span> alphabetic style   uses these 48 hiragana characters in the order in which they are typically arranged.</p>
+<figure class="auto"  data-notes="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48"
+data-cols="">ア␣イ␣ウ␣エ␣オ␣カ␣キ␣ク␣ケ␣コ␣サ␣シ␣ス␣セ␣ソ␣タ␣チ␣ツ␣テ␣ト␣ナ␣ニ␣ヌ␣ネ␣ノ␣ハ␣ヒ␣フ␣ヘ␣ホ␣マ␣ミ␣ム␣メ␣モ␣ヤ␣ユ␣ヨ␣ラ␣リ␣ル␣レ␣ロ␣ワ␣ヰ␣ヱ␣ヲ␣ン</figure>
+
+<p>The <span class="kw" translate="no">katakana-iroha</span> alphabetic style   uses  47 hiragana characters in the order shown just below.</p>
+<figure class="auto"  data-notes="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48"
+data-cols="">イ␣ロ␣ハ␣ニ␣ホ␣ヘ␣ト␣チ␣リ␣ヌ␣ル␣ヲ␣ワ␣カ␣ヨ␣タ␣レ␣ソ␣ツ␣ネ␣ナ␣ラ␣ム␣ウ␣ヰ␣ノ␣オ␣ク␣ヤ␣マ␣ケ␣フ␣コ␣エ␣テ␣ア␣サ␣キ␣ユ␣メ␣ミ␣シ␣ヱ␣ヒ␣モ␣セ␣ス</figure>
+
+
+
+
+
+
+<p><span class="leadin">additive</span></p>
+<p>The Japanese additive styles have a range   -9,999 to 9,999. The suffix is<span class="codepoint" translate="no"> <span class="codepoint" translate="no"><span lang="ja">&#x3001;</span> [<span class="uname">U+3001 IDEOGRAPHIC COMMA</span>]</span>  (with no following space)</span>, and negative numbers are preceded by <span class="ex" lang="ja">マイナス</span>.</p>
+<p>The <span class="kw" translate="no">japanese-informal</span> additive style   uses these  letters.</p>
+<figure class="auto" data-notes="9000,8000,7000,6000,5000,4000,3000,2000,1000,900,800,700,600,500,400,300,200,100,90,80,70,60,50,40,30,20,10,9,8,7,6,5,4,3,2,1,0"
+data-cols="">九千␣八千␣七千␣六千␣五千␣四千␣三千␣二千␣千␣九百␣八百␣七百␣六百␣五百␣四百␣三百␣二百␣百␣九十␣八十␣七十␣六十␣五十␣四十␣三十␣二十␣十␣九␣八␣七␣六␣五␣四␣三␣二␣一␣〇</figure>
+
+<p>The <span class="kw" translate="no">japanese-formal</span> additive style   uses these  letters.</p>
+<figure class="auto" data-notes="9000,8000,7000,6000,5000,4000,3000,2000,1000,900,800,700,600,500,400,300,200,100,90,80,70,60,50,40,30,20,10,9,8,7,6,5,4,3,2,1,0"
+data-cols="">九阡␣八阡␣七阡␣六阡␣伍阡␣四阡␣参阡␣弐阡␣壱阡␣九百␣八百␣七百␣六百␣伍百␣四百␣参百␣弐百␣壱百␣九拾␣八拾␣七拾␣六拾␣伍拾␣四拾␣参拾␣弐拾␣壱拾␣九␣八␣七␣六␣伍␣四␣参␣弐␣壱␣零</figure>
 </section>
 
 
@@ -412,47 +1042,132 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-    <h3 id="tbd">TBD</h3>
-<p class="ednote">Further information needed for this section includes:</p>
-<pre style="margin-left: 10%;">
-Glyph shaping &amp; positioning
-    Cursive text
-    Context-based shaping
-    Multiple combining characters
-    Context-based positioning
-    Transforming characters
+  
+<section id="initials">
+<h3>Styling initials</h3>
+<p class="prompts">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? etc.</p>
+</section>
+</section>
 
-Structural boundaries &amp; markers
-    Grapheme, word &amp; phrase boundaries
-    Hyphens &amp; dashes
-    Bracketing information
-    Quotations
-    Abbreviations, ellipsis, &amp; repetition
-    Emphasis &amp; highlights
-    Inline notes &amp; annotations
 
-Inline layout
-    Inline text spacing
-    Bidirectional text
 
-Line &amp; paragraph layout
-    Text direction
-    Line breaking
-    Hyphenation
-    Text alignment &amp; justification
-    Counters, lists, etc.
-    Styling initials
-    Baselines &amp; inline alignment
 
-Page &amp; book layout
-    General page layout &amp; progression
-    Directional layout features
-	Grids &amp; tables
-    Notes, footnotes, etc.
-    Forms &amp; user interaction
-    Page numbering, running headers, etc.
-</pre>
+
+
+
+<section id="pagelayout">
+<h2>Page &amp; book layout</h2>
+ 
+<section id="generallayout">
+<h3>General page layout &amp; progression</h3>
+<p class="prompts">How are the main text area and ancilliary areas positioned and defined? Are there any special requirements here, such as dimensions in characters for the Japanese kihon hanmen? The book cover for scripts that are read right-to-left scripts is on the right of the spine, rather than the left.  When content can flow vertically and to the left or right, how to specify the location of objects, text, etc. relative to the flow? Do tables and grid layouts work as expected? How do columns work in vertical text? Can you mix block of vertical and horizontal text? Does text scroll in a different direction?</p>
+</section>
+
+
+
+
+
+<section id="grids">
+<h3>Grids &amp; tables</h3>
+<p class="prompts">Does the script have special requirements for character grids or tables?</p>
+</section>
+
+
+
+
+  
+<section id="footnotes">
+<h3>Notes, footnotes, etc</h3>
+<p class="prompts">Does the script have special requirements for notes, footnotes, endnotes or other necessary annotations of this kind? (There is a section above for purely inline annotations, such as ruby or warichu. This section is more about annotation systems that separate the reference marks and the content of the notes.)</p>
+</section>
+
+
+
+
+  
+<section id="interaction">
+<h3>Forms &amp; user interaction</h3>
+<p class="prompts">Are vertical form controls needed? Are scroll bars in an unusual position? Other special requirements for user interaction?</p>
+</section>
+
+
+
+
+  
+<section id="headers">
+<h3>Page numbering, running headers, etc</h3>
+<p class="prompts">Are there special conventions for page numbering, or the way that running headers and the like are handled?</p>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+<section id="chars">
+<h2>Character lists</h2>
+    <p>The Kana script characters in Unicode 10.0 are spread across 5 blocks:</p>
+    <ul>
+      <li><a href="/uniview/?block=Kana">Hiragana</a> <span class="charCount">(93 letters : total 93)</span></li>
+      <li><a href="/uniview/?block=Kana_Extended-A">Kana Extended-A</a> <span class="charCount">(31 letters : total 31)</span></li>
+      <li><a href="/uniview/?block=Kana_Extended-B">Kana Supplement</a> <span class="charCount">(256 letters : total 256)</span></li>
+      <li><a href="/uniview/?block=Kana_Extended-B">Katakana</a> <span class="charCount">(94 letters, 2 punctuation : total 96)</span></li>
+      <li><a href="/uniview/?block=Kana_Extended-B">Katakana Phonetic Extensions</a> <span class="charCount">(16 letters : total 16)</span></li>
+    </ul>
+    <p>The commonly used characters are in the Hiragana and Katakana blocks. The other characters are somewhat more esoteric.</p>
+    <p>The listings at the bottom of the page show a list of  characters used, per version 31 of CLDR's lists of characters (exemplarCharacters).</p>
+</section>
+ <section id="chars">
+<h2>Character lists</h2>
+  <p>Version 12.0 of the Unicode Standard has the following blocks dedicated to the Japanese script (numbers in lists are non-ASCII only):</p>
+    <ul>
+      <li><a href="/uniview/?block=Kana">Hiragana</a> <span class="charCount">93 letters : total 93</span></li>
+      <li><a href="/uniview/?block=Kana_Extended-A">Kana Extended-A</a> <span class="charCount">31 letters : total 31</span></li>
+      <li><a href="/uniview/?block=Kana_Extended-B">Kana Supplement</a> <span class="charCount">256 letters : total 256</span></li>
+      <li><a href="/uniview/?block=Kana_Extended-B">Katakana</a> <span class="charCount">94 letters, 2 punctuation : total 96</span></li>
+      <li><a href="/uniview/?block=Kana_Extended-B">Katakana Phonetic Extensions</a> <span class="charCount">16 letters : total 16</span></li>
+    </ul>
+<p>Apart from ASCII characters, the Japanese orthography described here uses 2,136 characters (and 11 more, used infrequently) from the following Unicode blocks: </p>
+    <ul>
+    <li> <a href="/uniview/?block=cjk_unified_ideographs">CJK Unified Ideographs</a> <span class="charCount">1,907 letters : total  1,907 </span></li>
+<li> <a href="/uniview/?block=hiragana">Hiragana</a> <span class="charCount">83 letters : total  83 </span></li>
+<li> <a href="/uniview/?block=katakana">Katakana</a> <span class="charCount">87 letters, 2 punctuation: total 89&nbsp; (+ 4 infrequent)</span></li>
+<li> <a href="/uniview/?block=halfwidth_and_fullwidth_forms">Halfwidth and Fullwidth Forms</a> <span class="charCount">22 punctuation : total 22</span><span class="charCount"> &nbsp; (+ 5 infrequent)</span></li>
+<li> <a href="/uniview/?block=general_punctuation">General punctuation</a> <span class="charCount">16 punctuation : total 16</span></li>
+<li> <a href="/uniview/?block=cjk_symbols_and_punctuation">CJK Symbols and Punctuation</a> <span class="charCount">1 letter, 16 punctuation : total 17  &nbsp; (+ 2 infrequent)</span></li>
+<li> <a href="/uniview/?block=latin-1_supplement">Latin-1 Supplement</a> <span class="charCount">2 punctuation : total 2</span></li>
+</ul>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="languages">
+<h2>Languages using the Japanese scripts</h2>
+<p>According to ScriptSource, the Japanese scripts are used for the following languages: </p>
+<ul>
+<li>Japanese [ja]</li>
+<li>Ainu (Japan)  [ain]</li>
+<li>Okinawan, Central [ryu]</li>
+<li>Chinese, Min Nan [nan]</li>
+</ul>
 </section>
 
 
@@ -461,11 +1176,11 @@ Page &amp; book layout
 	
 
 
-<section>
-<h2 id="refs">References</h2>
+<section id="refs">
+<h2>References</h2>
 <ol>
-<li>[ <sup><a href="https://en.wikipedia.org/wiki/Japanese_grammar">w</a></sup> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Japanese_grammar"><cite>Japanese Grammar</cite></a>.</li>
-<li>[ <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">u</a></sup> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">The Unicode Standard</a>, pp 720-723</li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">The Unicode Standard</a>, pp 720-723</li>
+<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Japanese_grammar">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Japanese_grammar"><cite>Japanese Grammar</cite></a>.</li>
 <!--li>[U] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch13.pdf">Tifinagh</a>, pp735-737.</li>
 <li>[D] Peter T. Daniels and William Bright, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN 0-19-507993-0, p115.</li>
 <li>[B] Wikipedia, <a href="https://en.wikipedia.org/wiki/Berber_Latin_alphabet"><cite>Berber Latin alphabet</cite></a>.</li>
@@ -476,12 +1191,30 @@ Page &amp; book layout
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/kana"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-07-14  12:16<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bkana%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fkana%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+<details>
+<summary class="prompts">Show stats</summary>
+
+<table id="charCountList">
+<tr><th>Main</th><td id="mainCharList"></td><td id="mainCharListTotal"></td></tr>
+<tr><th>Auxiliary</th><td id="auxCharList"></td><td id="auxCharListTotal"></td></tr>
+<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
+<tr><th>Other</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
+<tr><th>Deprecated</th><td id="deprecatedCharList"></td><td id="deprecatedCharListTotal"></td></tr>
+</table>
+</details>
+
+
+<div id="phoneLinks"></div>
+
 
 <div id="panel" style="display:none"></div>
+
+
+<div class="smallprint"><span id="version"></span></div>
 </body>
 <script>
-initialiseSummary('/scripts/kana/block','ja','Kana')
+initialiseSummary('/scripts/kana/block','ja','Kana','kana')
 </script>
 
 </html>
