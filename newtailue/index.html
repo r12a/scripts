@@ -10,8 +10,8 @@
 <style>
 @font-face {
     font-family: 'Noto Serif New Tai Lue WF';
-    src: url('/shared/webfonts/notoserifnewtailue-regular-webfont.woff2') format('woff2'),
-         url('/shared/webfonts/notoserifnewtailue-regular-webfont.woff') format('woff');
+    src: url('/shared/webfonts/notosansnewtailue-regular-webfont.woff2') format('woff2'),
+         url('/shared/webfonts/notosansnewtailue-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 	}
@@ -27,20 +27,27 @@
 .narrowlines .listPair { margin-bottom: 0.25em; }
 </style>
 
-<script src="../../shared/scriptdb/newtailue.js"> </script>
+<script>
+</script>
+
+<script src="../../shared/scriptdb/talu.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2019.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
+<script src="../common/transliterate.js"></script>
+<script src="../common/prompts.js"> </script>
+<script src="../glossary/glossary.js"> </script>
 <script src="../../shared/code/getLinks.js"></script>
 <script src="../linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
 
 <script src="../../shared/fontlists/newtailue.js"> </script>
+<script src="khb-translit.js">  </script>
 </head>
 
 <body>
@@ -49,7 +56,7 @@
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
 </header>
 
-<h1>New Tai Lü</h1>
+<h1>New Tai Lü (draft)</h1>
 
 <nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="Jump to top of page." title="Jump to top of page."/></a></nav>
 
@@ -102,23 +109,25 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->1 August, 2019<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/index.php?tag=newtailue" title="Show all blog posts tagged with 'newtailue'">newtailue</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+  <!-- #BeginDate format:Sw1 -->30 December, 2019<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
 
 
 
 <div class="section">
-  <p>This page provides basic information about the New Tai Lü script and its use for the Tai Lü language. It is not  authoritative, peer-reviewed information – these are just notes I have gathered or copied from various places as i learned. For character-specific details follow the links to the <a class="linkHighlight" href="block">New Tai Lü character notes</a>. </p>
-<p>See also the <a href="../../pickers/newtailue/">New Tai Lü picker</a>.</p>
+  <p>This page gathers together basic information about the New Tai Lü script and its use for the Tai Lü language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Tai Lü using Unicode; for greater details follow the footnote links (especially those with an arrow alongside them).</p>
+<p> For character-specific details follow the links to the <a class="linkHighlight" href="block">New Tai Lü character notes</a>. See also the <a href="../../pickers/newtailue/" class="linkHighlight">New Tai Lü character app</a>.</p>
 <p>For similar information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Talu">script links pages</a>.</p>
 
 <p class="instructions">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text. Colours and annotations on panels listing characters are relevant to their use for the Tai Lü language.</p>
+<p class="instructions">Unless in parentheses, the transcriptions in italics that follow Tai Lü text are a <a href="../glossary/#transliteration" class="termref">transliteration</a> developed for these pages. Those in parentheses are usually ISO transcriptions. Transcriptions in <span style="white-space:nowrap;">⌈ brackets ⌋</span> may be phonemic or phonetic.</p>
 </div>
 
 
 
-<section>
-  <h2 id="sample">Sample (Tai Lü)</h2>
+<section id="sample">
+<h2>Sample (Tai Lü)</h2>
   
   <div id="freeText" lang="blt" data-target="c" data-base="/scripts/newtailue/block" data-source="http://unicode.org/udhr/translations.html">
   <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">ᦝᧂ​ᦑᦸᦰ​ᦵᦑᦲᧈ​ᦓᦲᦰ​ᦗ​ᦻᦗᦲᧈ​ᦈᧅ​ᦶᦐ​ᦏᦲᧈ​ᦏᦾᧉ​ᦟᧁᧈ​ᦺᦞᧉ​ᦺᦃ </p>
@@ -131,8 +140,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-    <h2 id="history">Usage &amp; history</h2>
+<section id="history">
+<h2>Usage &amp; history</h2>
     <p>From the <a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">Unicode Standard</a>: </p>
     <blockquote>
 <p>The New Tai Lue script, also known as Xishuangbanna Dai, is used mainly in southern China. The script was developed in the 20th century as an orthographic simplification of the historic Lanna script used to write the Tai Lue language. “Lanna” refers to a region in present-day northern Thailand as well as to a Tai principality that existed in that region from approximately the late thirteenth century to the early 20th century. The Lanna script grew out of the Mon script and was adapted in various forms in the Lanna kingdom and by Tai-speaking communities in surrounding areas that had close contact with the kingdom, including southern China. The Lanna script, also known as the Tai Tham script ..., is still used to write various languages of the Tai family today, including Tai Lue. The approved orthography for this language uses the New Tai Lue script; however, usage of the older orthography based on a variant of Lanna script can still be found.</p>
@@ -157,43 +166,35 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-    <h2 id="distinguishing">Distinguishing features</h2>
+<section id="distinguishing">
+<h2>Key features</h2>
     <p>The New Tai Lü script is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>, ie. consonants carry an inherent vowel sound that is overridden using vowel signs. In New Tai Lü, consonants carry an inherent vowel  <span class="ipa">a</span>. See the table to the right for a brief overview of features, taken from the <a href="/scripts/featurelist/">Script Comparison Table</a>. </p>
 <p>One distinguishing feature of New Tai Lü is its regularity, and simplicity compared to Tai Tham.</p>
-<p>The repertoire maps each consonant onset to either a high and low register letter, in which all consonants are included. </p>
-<p>Consonant clusters are simplified by a  set of syllable-final consonants.</p>
+<p>The repertoire maps each consonant onset to either a high and low register letter, and all consonants are part of such a pairing. </p>
+<p>Consonant clusters are simplified by a  set of dedicated syllable-final consonants.</p>
 <p>New Tai Lü uses only spacing vowel signs,  stored in visual order. There are no combining characters, and no independent vowel letters.</p>
 <p>New Tai Lü combines into a single letter what would be multiple characters in Tai Tham. For example, <span class="ex" lang="khb">ᦦ</span>, <span class="ex" lang="khb">ᦜ</span>, and <span class="ex" lang="khb">ᦗ</span>.</p>
 </section>
   
-
-
-
-
-
-  <section>
-<h2 id="chars">Character lists</h2>
-   <p>The New Tai Lü script characters in Unicode 11.0 are found in 1 block:</p>
-  <ol>
-      <li><a href="/uniview/?block=newtailue">New Tai Lue</a> <span class="charCount">70 letters, 2 symbols, 11 numbers :   total 83</span></li>
-</ol>
-<p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
-<ul>
-<li><a href="/app-charuse/?language=khb" target="_blank">Tai Lü</a> <span class="charCount">68 letters, 11 numbers, 2 symbols :   total 81</span></li>
-</ul>
-<p>For character-specific details see <a class="linkHighlight" href="/scripts/newtailue/block">New Tai Lü character notes</a>.</p>
+  
+  
+  
+<section id="dir">
+<h2>Text direction</h2>
+    <p>New Tai Lü script is written horizontally and left to right.</p>
 </section>
-  
-  
-  
-  
-  <section>
-<h2 id="structure">Structure</h2>
+
+
+
+
+
+
+<section id="structure">
+<h2>Structure</h2>
      <p>The script is syllable-based. </p>
 <p>A syllable's phonetic structure is C(ʷ)(V)(C) (unchecked) or C(ʷ)(V)C (checked). Unchecked syllables end with a vowel or one of the sonorants <span class="ipa">m, n, ŋ, w, j.</span> Checked syllables end with one of <span class="ipa">ʔ, p, t, k</span>.</p>
 <p>The onset consonant sequence may be one of <span class="listIPA">kʷ, xʷ, sʷ</span>.</p>
-<p>Tai Lü has 6 tones in unchecked syllables. In checked syllables there are two tones. <sup><a href="https://en.wikipedia.org/wiki/Tai_Lue_language">wl</a></sup></p>
+<p>Tai Lü has 6 tones in unchecked syllables. In checked syllables there are two tones. <a class="fnref" href="https://en.wikipedia.org/wiki/Tai_Lue_language">wl</a></p>
 <p>The characters used to represent the phonetics follow the model<br>
 (pV) C (V) (VS) (Fs|Fp) (T)<br>
 where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem" lang="khb">ᦰ</span>, Fs is one of the set of final sonorants, Fp is one of the set of final plosives, and T is a tone marker.</p>
@@ -206,98 +207,243 @@ where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem"
 
 
 <div id="showTranscriptions">
-<div>In yellow boxes, show:</div>
+<div>Character lists show:</div>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
 <!--div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div-->
 </div>
 
 
   
-<section>
-<h2 id="dir">Text direction</h2>
-    <p>New Tai Lü script is written horizontally and left to right.</p>
+<section id="vowels">
+<h2>Vowels</h2>
+<section id="vowelPhonemes">
+<h3>Vowel sounds</h3>
+
+<p class="instructions">To locate a phone in the following sections, click on it, then scroll to find the highlighted items.</p>
+
+<p><span class="leadin">Plain vowels.</span></p>
+
+
+<div style="margin-left: 7.5%;">
+<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="white"/>
+      <feComposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <!--image xlink:href="images/vowelgrid.gif" alt="Les caractères sont associés à des octets." x="0" y="0" width="400" height="200"></image--> 
+  <use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -->
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+  
+   <!-- mid close -->
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -->
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- open -->
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+  
+  <!-- close -->
+  <text x="32" y="15" class="ipa" text-anchor="end">i iː</text> 
+
+  <text x="232" y="15" class="ipa" text-anchor="end" filter="url(#solid)">ɯ ɯː</text>
+  <text x="232" y="15" class="ipa" text-anchor="end">ɯ ɯː</text> 
+<text x="250" y="15" class="ipa">u uː</text> 
+
+  <!-- close mid -->
+  <text x="57" y="75" class="ipa" text-anchor="end">e eː</text> 
+<text x="232" y="75" class="ipa" text-anchor="end" filter="url(#solid)">ɤ ɤː</text>
+  <text x="232" y="75" class="ipa" text-anchor="end">ɤ ɤː</text> 
+  <text x="250" y="75" class="ipa">o oː</text> 
+
+  <!-- open mid -->
+  <text x="81" y="135" class="ipa" text-anchor="end">ɛ ɛː</text> 
+ː  <text x="250" y="135" class="ipa">ɔ ɔː</text> 
+
+  <!-- open -->
+<text x="106" y="195" class="ipa" text-anchor="end">a aː</text> 
+</svg>
+</div>
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet#Vowels">w</a>. Phones in a lighter colour are non-native or allophones.</p>
+
+<p>Vowels in open syllables are long, whereas ones in closed syllables are short, except for <span class="ipa">aː</span> and <span class="ipa">uː</span>. </p>
+
+<p><span class="leadin">Diphthongs.</span></p>
+
+<div style="margin-left: 7.5%;">
+<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="white"/>
+      <feComposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <!--image xlink:href="images/vowelgrid.gif" alt="Les caractères sont associés à des octets." x="0" y="0" width="400" height="200"></image--> 
+  <use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -->
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+  
+   <!-- mid close -->
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -->
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- open -->
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+  
+  <!-- close -->
+  <text x="232" y="15" class="ipa" text-anchor="end" filter="url(#solid)">ɯj</text>
+  <text x="232" y="15" class="ipa" text-anchor="end">ɯj</text> 
+<text x="250" y="15" class="ipa">ui̯</text> 
+
+  <!-- close mid -->
+<text x="232" y="75" class="ipa" text-anchor="end" filter="url(#solid)">ɤj</text>
+  <text x="232" y="75" class="ipa" text-anchor="end">ɤj</text> 
+  <text x="250" y="75" class="ipa">oj</text> 
+
+  <!-- mid -->
+  <text x="158" y="105" class="ipa" text-anchor="middle" filter="url(#solid)">əj</text>
+  <text x="158" y="105" class="ipa" text-anchor="middle">əj</text> 
+
+  <!-- open mid -->
+ː  <text x="250" y="135" class="ipa">ɔj</text> 
+
+  <!-- open -->
+<text x="106" y="195" class="ipa" text-anchor="end">aj aːj</text> 
+</svg>
+</div>
+
+
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet#Vowels">w</a>.</p>
 </section>
 
 
 
 
 
+<section id="inherent">
+<h3>Inherent vowel</h3>
+<p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
 
-<section>
-<h2 id="vowels">Vowels</h2>
-    
-<section>
-<h3 id="inherent">Inherent vowel</h3>
-<p>Each consonant symbol has an inherent vowel sound, typically transcribed as <span class="ipa">a</span>.<sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf"></a></sup></p>
+<p><span class="ipa">a</span> is the sound of the inherent vowel, so <span class="codepoint" translate="no"><span lang="khb">&#x1982;</span> [<a href="/scripts/newtailue/block#char1982"><span class="uname">U+1982 NEW TAI LUE LETTER HIGH KA</span></a>]</span> is  pronounced <span class="ipa">ka</span>.</p>
 </section>
 
 
 
 
 
-<section>
-<h3 id="vowelsigns">Vowel signs</h3>
-<p>To produce a different vowel than the inherent one, New Tai Lü uses one or more vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="khb">ᦂᦲ</span> <span class="trans">ki</span></span>. </p>
+<section id="vowelsigns">
+<h3>Vowel signs</h3>
+<p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
+
+<p>Other than the inherent vowel, vowel sounds that follow a consonant sound are represented using vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="khb">ᦂᦲ</span> <span class="trans">ki</span></span>. This includes  diphthongs.</p>
 <p>All vowel signs in New Tai Lü are ordinary spacing characters, rather than combining characters, and may appear before or after the base.</p>
-<p>Vowel-signs can also be combined to create additional sounds.</p>
+<p>Vowel-signs can also be combined to create additional sounds, in which case they appear on both sides of the base consonant.</p>
 </section>
 
 
 
 
 
-<section>
-<h3 id="prescript">Prescript vowel signs</h3>
+<section id="prescript">
+<h3>Prescript vowel signs</h3>
 
-<figure class="characterBox auto" data-cols="ipa,trans">ᦺ␣ᦵ␣ᦶ␣ᦷ</figure>
-<p>New Tai Lü uses a visual encoding model (since Unicode 8.0), like Thai and Lao. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></sup></p>
+<figure class="characterBox auto" data-cols="ipa,trans">ᦵ␣ᦷ␣ᦶ␣ ␣ᦺ</figure>
+<p>New Tai Lü uses a visual encoding model (since Unicode 8.0), like Thai and Lao. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></p>
 <p>The 4 vowel signs that appear to the left of the consonant are therefore typed and stored before the consonant, even though they are pronounced after.</p>
-<p>Note that <span class="codepoint" translate="no"><span lang="khb">&#x19B6;</span> [<a href="/scripts/newtailue/block#char19B6"><span class="uname">U+19B6 NEW TAI LUE VOWEL SIGN AE</span></a>]</span> should not be typed as two successive <span class="codepoint" translate="no"><span lang="khb">&#x19B5;</span> [<a href="/scripts/newtailue/block#char19B5"><span class="uname">U+19B5 NEW TAI LUE VOWEL SIGN E</span></a>]</span> characters. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></sup></p>
+<p>Note that <span class="codepoint" translate="no"><span lang="khb">&#x19B6;</span> [<a href="/scripts/newtailue/block#char19B6"><span class="uname">U+19B6 NEW TAI LUE VOWEL SIGN AE</span></a>]</span> should not be typed as two successive <span class="codepoint" translate="no"><span lang="khb">&#x19B5;</span> [<a href="/scripts/newtailue/block#char19B5"><span class="uname">U+19B5 NEW TAI LUE VOWEL SIGN E</span></a>]</span> characters. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></p>
 </section>
 
 
 
 
 
-<section>
-<h3 id="postscript">Simple postscript vowel signs</h3>
+<section id="postscript">
+<h3>Simple postscript vowel signs</h3>
 
-<figure class="characterBox auto" data-cols="ipa,trans">ᦱ␣ᦲ␣ᦹ␣ᦳ␣ᦴ␣ᦸ␣ᦰ</figure>
-
-<p>The typical use of <span class="codepoint" translate="no"><span lang="khb">&#x19B0;</span> [<a href="/scripts/newtailue/block#char19B0"><span class="uname">U+19B0 NEW TAI LUE VOWEL SIGN VOWEL SHORTENER</span></a>]</span> is to produce a short open vowel, however it is sometimes used to distinguish homonyms or for onomatopoeia. <sup><a href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></sup></p>
-<p>In closed syllables, long vowels are usually pronounced short except for the vowel <span class="charExample" translate="no"><span class="ex" lang="khb">ᦱ</span></span>. <sup><a href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></sup></p>
+<figure class="characterBox auto" data-cols="ipa,trans">ᦲ␣ᦹ␣ᦳ␣ᦴ␣ᦸ␣ᦰ␣ᦱ␣ ␣ᦻ␣ᦿ␣ᦼ␣ᦽ␣ᦾ␣ᧀ</figure>
+<p>In closed syllables, long vowels are usually pronounced short except for <span class="codepoint" translate="no"><span lang="khb">&#x19B1;</span> [<a href="/scripts/newtailue/block#char19B1"><span class="uname">U+19B1 NEW TAI LUE VOWEL SIGN AA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="khb">&#x19B4;</span> [<a href="/scripts/newtailue/block#char19B4"><span class="uname">U+19B4 NEW TAI LUE VOWEL SIGN UU</span></a>]</span>. <a class="fnref" href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></p>
+<p>The typical use of <span class="codepoint" translate="no"><span lang="khb">&#x19B0;</span> [<a href="/scripts/newtailue/block#char19B0"><span class="uname">U+19B0 NEW TAI LUE VOWEL SIGN VOWEL SHORTENER</span></a>]</span> is to produce a short open <span class="ipa">a</span> vowel, however it is also used to indicate shortness for the vowel-sign combinations described in the next section, in which case it represents just the glottal stop. It is also sometimes used to distinguish homonyms or for onomatopoeia. <a class="fnref" href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></p>
+<p>Six of these single character vowel-signs represent diphthongs that combine the basic vowel sound with <span class="ipa">j</span>. (There is another in the list of prescript vowel-signs.)</p>
 </section>
 
 
 
 
 
-<section>
+<section id="multipart">
+<h3>Vowel-sign combinations</h3>
+
+<figure class="characterBox auto vowelcluster" data-cols="ipa,trans">-ᦲᦰ␣-ᦹᦰ␣-ᦸᦰ␣ᦵ-ᦰ␣ᦶ-ᦰ␣ᦷ-ᦰ␣ᦵ-ᦲᦰ</figure>
+
+<p>The  plain vowel sounds just above are produced by combining  multiple symbols around or after the consonant character. In all cases this involves a single vowel-sign plus <span class="codepoint" translate="no"><span lang="khb">&#x19B0;</span> [<a href="/scripts/newtailue/block#char19B0"><span class="uname">U+19B0 NEW TAI LUE VOWEL SIGN VOWEL SHORTENER</span></a>]</span>, but in one case it  involves that character plus 2 vowel-signs.</p>
+</section>
+
+
+
+
+
+<!--section>
 <h3 id="diphthongs">Diphthongs</h3>
 
+<figure class="characterBox auto" data-cols="ipa,trans">␣ᦻ␣ᦿ␣ᦼ␣ᦽ␣ᦾ␣ᧀ</figure>
+
 <p>In addition to the previously mentioned simple vowel signs there is a set of diphthongs that combine the basic vowel sound with <span class="ipa">j</span>. These  all follow the consonant.</p>
-
-<figure class="characterBox auto" data-cols="ipa,trans">ᦻ␣ᦿ␣ᦼ␣ᦽ␣ᦾ␣ᧀ</figure>
-
-</section>
+</section-->
 
 
 
-<section>
-<h3 id="multipart">Vowel-sign combinations</h3>
-<p>The following vowel sounds are produced by combining the above symbols around or after the consonant character.</p>
-
-<figure class="characterBox auto vowelcluster" data-cols="ipa,trans">-ᦲᦰ␣-ᦹᦰ␣-ᦸᦰ␣ᦵ-ᦰ␣ᦵ-ᦲ␣ᦶ-ᦰ␣ᦷ-ᦰ␣ᦵ-ᦲᦰ</figure>
-
-</section>
-
-
-
-<section>
-<h3 id="placement">Vowel-sign placement</h3>
-<p>The following list shows where vowel-signs are positioned around a base consonant to produce vowels, and how many instances of that pattern there are. Numbers after the + sign represent combinations of vowel-signs.</p>
+<section id="placement">
+<h3>Vowel-sign placement</h3>
+<p>The following list summarises where vowel-signs are positioned around a base consonant to produce vowels, and how many instances of that pattern there are. Numbers after the + sign represent combinations of vowel-signs.</p>
 <ul>
 <li>4 prescript, eg. <span class="charExample" translate="no"><span class="ex" lang="khb">ᦵᦂ</span> <span class="trans">e͕k (ke)</span></span></li>
 <li>13 postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="khb">ᦂᦱ</span> <span class="trans">kā</span></span></li>
@@ -315,49 +461,249 @@ where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem"
 
 
 
-<section>
-<h2 id="consonants">Consonants</h2>
+<section id="consonants">
+<h2>Consonants</h2>
 
-<p>Each basic consonant is one of a pair, denoting either a high or low tonal register for the same phonetic sound. (Those with low tone register are indicated by a line below in the transliteration.) This is very regular – each sound has 2 realisations. The combination of the consonant and tone marks indicates which of the 6 tones apply to a syllable. <sup><a href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></sup></p>
-<p>Three of the pairs represent a syllable initial consonant plus liquid: <span class="charExample" translate="no"><span class="ex" lang="khb">ᦦᦨ ᦧᦩ ᦪᦫ</span></span>. There are no medial consonant letters.</p>
+<p>Each basic consonant is one of a pair, denoting either a high or low tonal register for the same phonetic sound. (Those with low tone register are indicated by a line below in the transliteration.) This is very regular – each sound is represented by 2 consonant letters. The combination of the consonant and tone marks indicates which of the 6 tones apply to a syllable. <a class="fnref" href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></p>
+<p>Three  pairs of consonants (6 letters in total) represent a syllable initial consonant plus liquid: <span class="charExample" translate="no"><span class="ex" lang="khb">ᦦᦨ ᦧᦩ ᦪᦫ</span></span>. There are no medial consonant letters.</p>
 <p>A number of consonant clusters in Tai Tham are represented as single characters in New Tai Lü, in particular high tone variants such as <span class="charExample" translate="no"><span class="ex" lang="khb">ᦜ</span></span> and <span class="charExample" translate="no"><span class="ex" lang="khb">ᦖ</span></span> (<span class="charExample" translate="no"><span class="ex" lang="nod">ᩉᩖ</span></span> and <span class="charExample" translate="no"><span class="ex" lang="nod">ᩉ᩠ᨾ</span></span> in Tai Tham).</p>
-<section>
-<h3 id="highclass">High class  consonants</h3>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᦂ␣ᦦ␣ᦄ␣ᦈ␣ᦎ␣ᦏ␣ᦡ␣ᦐ␣ᦔ␣ᦕ␣ᦢ␣ᦖ␣ᦜ␣ᦊ␣ᦛ␣ᦠ␣ᦃ␣ᦧ␣ᦉ␣ᦪ␣ᦚ␣ᦀ</figure>
+
+
+
+
+
+<section id="consonantPhonemes">
+<h3>Consonant sounds</h3>
+<p class="instructions">To locate a phone in the following sections, click on it, then scroll to find the highlighted items.</p>
+<table class="ipaTable">
+<thead>
+<tr>
+<th></th>
+<th>labial </th>
+<th>dental </th>
+<th>alveolar </th>
+<th>post-<br>
+alveolar</th>
+<th>palatal </th>
+<th>velar </th>
+<th>glottal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>stop</th>
+<td><span class="ipa">p</span> <span class="ipa">b</span><br>
+<span class="ipa">pʰ</span></td>
+<td><span class="ipa">t</span> <span class="ipa">d</span><br/>
+<span class="ipa">tʰ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">k</span><br/>
+<span class="ipa">kʷ</span></td>
+<td><span class="ipa">ʔ</span></td>
+</tr>
+<tr>
+<th>affricate</th>
+<td>&nbsp;</td>
+<td><span class="ipa">t͡s</span></td>
+<td>&nbsp;</td>
+<td><span class="allophone"	>t͡ɕ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>fricative </th>
+<td><span class="ipa">f</span> <span class="ipa">v</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">s</span><br/>
+<span class="ipa">sʷ</span></td>
+<td><span class="allophone">ɕ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">x</span><br>
+<span class="ipa">xʷ</span></td>
+<td><span class="ipa">h</span></td>
+</tr>
+<tr>
+<th>nasal</th>
+<td><span class="ipa">m</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">n</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ŋ</span></td>
+<td></td>
+</tr>
+<tr>
+<th>approximant</th>
+<td><span class="ipa">w</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">l</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">j</span></td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>trill/flap</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th></th>
+<td class="mouth"><a href="../common/mouth/mouth_labial.png" target="_blank"><img src="../common/mouth/mouth_small_labial.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_dental.png" target="_blank"><img src="../common/mouth/mouth_small_dental.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_alveolar.png" target="_blank"><img src="../common/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_postalveolar.png" target="_blank"><img src="../common/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_palatal.png" target="_blank"><img src="../common/mouth/mouth_small_palatal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_velar.png" target="_blank"><img src="../common/mouth/mouth_small_velar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_glottal.png" target="_blank"><img src="../common/mouth/mouth_small_glottal.png" alt=" "/></a></td>
+</tr>
+</tbody>
+</table>
+
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">wp</a>. Phones in a lighter colour are non-native or allophones.</p>
+
+<p>Initials <span class="ipa">t͡s</span> and <span class="ipa">s</span> are palatalised before front vowels  <span class="ipa">i, e,  ɛ</span>, and become <span class="ipa">t͡ɕ</span> and <span class="ipa">ɕ</span>, respectively. For example, <span class="ipa">t͡síŋ</span> <span class="meaning">hard</span> and <span class="ipa">si᷄p</span> <span class="meaning">ten</span> are pronounced as <span class="ipa">t͡ɕiŋ˥</span> and <span class="ipa">ɕip˧˥</span>, respectively.</p>
+<p><span class="leadin">Finals.</span></p>
+<table class="ipaTable">
+<thead>
+<tr>
+<th></th>
+<th>labial </th>
+<th>dental </th>
+<th>alveolar </th>
+<th>post-<br>
+alveolar</th>
+<th>palatal </th>
+<th>velar </th>
+<th>glottal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>stop</th>
+<td><span class="ipa">p</span></td>
+<td><span class="ipa">t</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">k</span></td>
+<td><span class="ipa">ʔ</span></td>
+</tr>
+<tr>
+<th>affricate</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>fricative </th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>nasal</th>
+<td><span class="ipa">m</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">n</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ŋ</span></td>
+<td></td>
+</tr>
+<tr>
+<th>approximant</th>
+<td><span class="ipa">w</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">j</span></td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>trill/flap</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </section>
 
 
 
 
-<section>
-<h3 id="lowclass">Low class  consonants</h3>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᦅ␣ᦨ␣ᦇ␣ᦋ␣ᦑ␣ᦒ␣ᦤ␣ᦓ␣ᦗ␣ᦘ␣ᦥ␣ᦙ␣ᦟ␣ᦍ␣ᦞ␣ᦣ␣ᦆ␣ᦩ␣ᦌ␣ᦫ␣ᦝ␣ᦁ</figure>
+
+
+<section id="highclass">
+<h3>High class  consonants</h3>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᦔ␣ᦢ␣ᦕ␣ᦎ␣ᦡ␣ᦏ␣ᦂ␣ᦦ␣ᦀ</figure>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᦈ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᦚ␣ᦉ␣ᦪ␣ᦃ␣ᦧ␣ᦠ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᦖ␣ᦐ␣ᦄ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᦛ␣ᦜ␣ᦊ</figure>
 </section>
 
 
 
 
-<section>
-<h3 id="prenasalised">Final consonants</h3>
+<section id="lowclass">
+<h3>Low class  consonants</h3>
 
-<p>New Tai Lü has a set of dedicated final consonants. A small hook-like modification indicates that they have no inherent vowel. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></sup></p>
-
-<figure class="characterBox auto" data-cols="ipa,trans">ᧅ␣ᧂ␣ᧆ␣ᧃ␣ᧇ␣ᧄ␣ᧁ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᦗ␣ᦥ␣ᦘ␣ᦑ␣ᦤ␣ᦒ␣ᦅ␣ᦨ␣ᦁ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᦋ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᦝ␣ᦌ␣ᦫ␣ᦆ␣ᦩ␣ᦣ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᦙ␣ᦓ␣ᦇ</figure><figure class="characterBox auto" data-cols="ipa,trans,transc">ᦞ␣ᦟ␣ᦍ</figure>
 
 </section>
 
 
 
-<section>
-<h3 id="ligatures">Ligatures</h3>
+
+<section id="prenasalised">
+<h3>Final consonants</h3>
+
+<p>New Tai Lü has a set of dedicated syllable-final consonants. A small hook-like modification indicates that they have no inherent vowel. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></p>
+
+<figure class="characterBox auto" data-cols="ipa,trans">ᧇ␣ᧆ␣ᧅ␣ᧄ␣ᧃ␣ᧂ␣ᧁ</figure>
+
+</section>
+
+
+
+<section id="ligatures">
+<h3>Ligatures</h3>
 
 <figure class="characterBox auto" data-cols="ipa,trans">᧞␣᧟</figure>
 
 
 
 <p>New Tai Lü has two ligatures, used for abbreviations.</p>
-<p><span class="codepoint" translate="no"><span lang="khb">&#x19DE;</span> [<a href="/scripts/newtailue/block#char19DE"><span class="uname">U+19DE NEW TAI LUE SIGN LAE</span></a>]</span> represents the syllable <span class="charExample" translate="no"><span class="ex" lang="khb">ᦶᦟᦰ</span> <span class="trans">ɛ͕ḻʔ</span> <span class="ipa">lɛʔ</span></span>. <sup><a href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></sup></p>
-<p><span class="codepoint" translate="no"><span lang="khb">&#x19DF;</span> [<a href="/scripts/newtailue/block#char19DF"><span class="uname">U+19DF NEW TAI LUE SIGN LAEV</span></a>]</span> represents the syllable <span class="charExample" translate="no"><span class="ex" lang="khb">ᦶᦟᧁᧉ</span> <span class="trans">ɛ͕ḻw̽²</span> <span class="ipa">lɛu˩</span></span>. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf"></a></sup><sup><a href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></sup></p>
+<p><span class="codepoint" translate="no"><span lang="khb">&#x19DE;</span> [<a href="/scripts/newtailue/block#char19DE"><span class="uname">U+19DE NEW TAI LUE SIGN LAE</span></a>]</span> represents the syllable <span class="charExample" translate="no"><span class="ex" lang="khb">ᦶᦟᦰ</span> <span class="trans">ɛ͕ḻʔ</span> <span class="ipa">lɛʔ</span></span>. <a class="fnref" href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></p>
+<p><span class="codepoint" translate="no"><span lang="khb">&#x19DF;</span> [<a href="/scripts/newtailue/block#char19DF"><span class="uname">U+19DF NEW TAI LUE SIGN LAEV</span></a>]</span> represents the syllable <span class="charExample" translate="no"><span class="ex" lang="khb">ᦶᦟᧁᧉ</span> <span class="trans">ɛ͕ḻw̽²</span> <span class="ipa">lɛu˩</span></span>. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf"></a><a class="fnref" href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></p>
 </section>
 
 </section>
@@ -367,9 +713,9 @@ where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem"
 
 
 
-  <section>
-  <h2 id="clusters">Consonant clusters</h2>
-  <p>Clusters of consonants do not occur regularly<sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></sup>, so there is no virama.</p>
+  <section id="clusters">
+<h2>Consonant clusters</h2>
+  <p>Clusters of consonants do not occur regularly<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a>, so there is no virama.</p>
 <p>Where clusters do occur they  involve the designated final consonant characters.</p>
 </section>
   
@@ -377,15 +723,16 @@ where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem"
 
 
 
-  <section>
-  <h2 id="tones">Tones</h2>
+  <section id="tones">
+<h2>Tones</h2>
 
 <figure class="characterBox auto" data-cols="trans">ᧈ␣ᧉ</figure>
 
 
-<p>New Tai Lü has two tone marks, which are written at the end of an unchecked syllable. Because consonants come in pairs to denote two tonal registers, the two tone marks allow for representation of six specific tones. <sup><a href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></sup></p>
-<p class="explanatoryintro">'Checked' means ending in the sound <span class="ipa">-p</span>, <span class="ipa">-t</span>, <span class="ipa">-k</span>, or <span class="ipa">-ʔ</span>. 'Unchecked' means ending in  sonorants <span class="ipa">m, n, ŋ, w, j</span> or vowels.</p>
-<p>Tai Lü has 2 tones in checked syllables, and 6 tones in unchecked syllables. <sup><a href="https://en.wikipedia.org/wiki/Tai_Lue_language">wl</a></sup></p>
+<p>New Tai Lü has two tone marks, which are written at the end of an unchecked syllable. Because consonants come in pairs to denote two tonal registers, the two tone marks allow for representation of six specific tones.<a class="fnref" href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></p>
+<p id="def-checked" class="explanatoryintro definitionStub"></p>
+
+<p>Tai Lü has 2 tones in checked syllables, and 6 tones in unchecked syllables. <a class="fnref" href="https://en.wikipedia.org/wiki/Tai_Lue_language">wl</a></p>
 <table>
 <tbody>
 <tr>
@@ -451,62 +798,71 @@ where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem"
 
 
 
-<section>
-<h2 id="digits">Numbers</h2>
-    <p>New Tai Lü has its own set of digits, derived from the Tai Tham <span class="name">hora</span> set. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></sup></p>
+<section id="digits">
+<h2>Numbers</h2>
+    <p>New Tai Lü has its own set of digits, derived from the Tai Tham <span class="name">hora</span> set. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></p>
 
 <figure class="characterBox auto" data-cols="trans">᧐␣᧑␣᧒␣᧓␣᧔␣᧕␣᧖␣᧗␣᧘␣᧙␣᧚</figure>
 
 
-<p><span class="codepoint" translate="no"><span lang="khb">&#x19DA;</span> [<a href="/scripts/newtailue/block#char19DA"><span class="uname">U+19DA NEW TAI LUE THAM DIGIT ONE</span></a>]</span> is an alternative glyph for <span class="codepoint" translate="no"><span lang="khb">&#x19D1;</span> [<a href="/scripts/newtailue/block#char19D1"><span class="uname">U+19D1 NEW TAI LUE DIGIT ONE</span></a>]</span> when it might otherwise be confused with the vowel <span class="codepoint" translate="no"><span lang="khb">&#x19B1;</span> [<a href="/scripts/newtailue/block#char19B1"><span class="uname">U+19B1 NEW TAI LUE VOWEL SIGN AA</span></a>]</span>. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></sup></p>
+<p><span class="codepoint" translate="no"><span lang="khb">&#x19DA;</span> [<a href="/scripts/newtailue/block#char19DA"><span class="uname">U+19DA NEW TAI LUE THAM DIGIT ONE</span></a>]</span> is an alternative glyph for <span class="codepoint" translate="no"><span lang="khb">&#x19D1;</span> [<a href="/scripts/newtailue/block#char19D1"><span class="uname">U+19D1 NEW TAI LUE DIGIT ONE</span></a>]</span> when it might otherwise be confused with the vowel <span class="codepoint" translate="no"><span lang="khb">&#x19B1;</span> [<a href="/scripts/newtailue/block#char19B1"><span class="uname">U+19B1 NEW TAI LUE VOWEL SIGN AA</span></a>]</span>. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></p>
 </section>
 
 
 
 
-  <section>
-  <h2 id="shaping">Glyph shaping &amp; positioning</h2>
+  <section id="shaping">
+<h2>Glyph shaping &amp; positioning</h2>
 <p>Prescript vowels are visually ordered, and since there are no combining characters and no joining behaviour, the New Tai Lü script has no contextual variation or placement of glyphs.</p>
 
 
 
 
-<section>
-<h3 id="fontstyle">Font styles</h3>
-<p class="instructions"> Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</p>
-</section>
-
-
-
-
-<section>
-<h3 id="transforms">Transforming characters</h3>
-
-<p class="instructions">If the script is bicameral, are the special rules about case conversion? Are there other correspondences between glyphs, such as half- vs fullwidth presentation forms?</p>
-</section>
-</section>
-  
-  
-  
-  
-  
-<section>
-<h2 id="boundaries">Structural boundaries &amp; markers</h2>
-  
-<section>
-<h3 id="graphemes">Grapheme boundaries</h3>
- <p class="explanatoryintro">A grapheme is a user-perceived unit of text. The Unicode Standard uses generalised rules to define 'grapheme clusters', which approximate the likely grapheme boundaries in a writing system.</p>
-
-<p class="instructions">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements when double-clicking on the text, or moving through the text with the cursor, or backspace, etc.? </p>
+<section id="fontstyle">
+<h3>Font styles</h3>
+<p class="prompts"> Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</p>
 </section>
 
 
 
 
   
-<section>
-<h3 id="words">Word boundaries</h3>
-    <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). We will  treat it as a vaguely-defined semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+<section id="baselines">
+<h3>Baselines &amp; inline alignment</h3>
+<p class="prompts">Does the script have special requirements for baseline alignment between mixed scripts and in general?</p>
+</section>
+
+
+
+
+<section id="transforms">
+<h3>Transforming characters</h3>
+
+<p class="prompts">If the script is bicameral, are the special rules about case conversion? Are there other correspondences between glyphs, such as half- vs fullwidth presentation forms?</p>
+</section>
+</section>
+  
+  
+  
+  
+  
+<section id="boundaries">
+<h2>Structural boundaries &amp; markers</h2>
+  
+<section id="graphemes">
+<h3>Grapheme boundaries</h3>
+<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
+
+<p class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements when double-clicking on the text, or moving through the text with the cursor, or backspace, etc.? </p>
+</section>
+
+
+
+
+  
+<section id="words">
+<h3>Word boundaries</h3>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 
 <p>Words are separated by spaces.</p>
 </section>
@@ -514,8 +870,8 @@ where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem"
 
 
 
-<section>
-<h3 id="phrase">Phrase boundaries</h3>
+<section id="phrase">
+<h3>Phrase boundaries</h3>
 
   <p>New Tai Lü  appears to use fullwidth Chinese punctuation. May include the following (needs to be checked). Not sure whether it also uses western punctuation.</p>
 
@@ -527,45 +883,45 @@ where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem"
 
 
 
-<section>
-<h3 id="bracketing">Bracketing &amp; parentheses</h3>
-<p class="instructions">What characters are used as parentheses, or to bracket information?</p>
+<section id="bracketing">
+<h3>Bracketing &amp; parentheses</h3>
+<p class="prompts">What characters are used as parentheses, or to bracket information?</p>
 </section>
 
 
 
 
   
-<section>
-<h3 id="quotations">Quotations</h3>
-<p class="instructions">What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue?</p>
+<section id="quotations">
+<h3>Quotations</h3>
+<p class="prompts">What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue?</p>
 </section>
 
 
 
 
   
-<section>
-<h3 id="hyphens">Abbreviation, ellipsis &amp; repetition</h3>
-<p class="instructions">What characters are used to indicate abbreviation, ellipsis &amp; repetition?</p>
+<section id="hyphens">
+<h3>Abbreviation, ellipsis &amp; repetition</h3>
+<p class="prompts">What characters are used to indicate abbreviation, ellipsis &amp; repetition?</p>
 </section>
 
 
 
 
   
-<section>
-<h3 id="emphasis">Emphasis &amp; text decoration</h3>
-<p class="instructions">How are emphasis and highlighting achieved? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</p>
+<section id="emphasis">
+<h3>Emphasis &amp; text decoration</h3>
+<p class="prompts">How are emphasis and highlighting achieved? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</p>
 </section>
 
 
 
 
   
-<section>
-<h3 id="inlinenotes">Inline notes &amp; annotations</h3>
-<p class="instructions">What mechanisms, if any, are used to create <u>inline</u> notes and annotations? (For referent-type notes such as footnotes, see below.)</p>
+<section id="inlinenotes">
+<h3>Inline notes &amp; annotations</h3>
+<p class="prompts">What mechanisms, if any, are used to create <u>inline</u> notes and annotations? (For referent-type notes such as footnotes, see below.)</p>
 </section>
 </section>
  
@@ -573,62 +929,85 @@ where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem"
  
  
  
-<section>
-<h2 id="paralayout">Line &amp; paragraph layout</h2>
+<section id="paralayout">
+<h2>Line &amp; paragraph layout</h2>
    
       
-<section>
-    <h3 id="linebreak">Line breaking &amp; hyphenation</h3>
-<p class="instructions">Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that?</p>
+<section id="linebreak">
+<h3>Line breaking &amp; hyphenation</h3>
+<p class="prompts">Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that?</p>
+
+
+
+<p><span class="leadin">Character properties.</span> Characters used for the Tai Lü language have the following assignments related to line-break properties.</p>
+<table><tbody>
+<tr><th class="sg">CL</th>
+<td class="count">7</td><td class="chars"><span class="exlist" lang="khb">〉 》 ） 。 、 ， ．</span></td></tr>
+<tr><th class="sg">EX</th>
+<td class="count">2</td><td class="chars"><span class="exlist" lang="khb">！ ？</span></td></tr>
+<tr><th class="sg">HY</th>
+<td class="count">1</td><td class="chars"><span class="exlist" lang="khb">-</span></td></tr>
+<tr><th class="sg">NS</th>
+<td class="count">2</td><td class="chars"><span class="exlist" lang="khb">： ；</span></td></tr>
+<tr><th class="sg">NU</th>
+<td class="count">10</td><td class="chars"><span class="exlist" lang="khb">᧐ ᧑ ᧒ ᧓ ᧔ ᧕ ᧖ ᧗ ᧘ ᧙</span></td></tr>
+<tr><th class="sg">OP</th>
+<td class="count">3</td><td class="chars"><span class="exlist" lang="khb">〈 《 （</span></td></tr>
+<tr><th class="sg">SA</th>
+<td class="count">73</td><td class="chars"><span class="exlist" lang="khb">ᦵ ᦷ ᦶ ᦺ ᦱ ᦲ ᦹ ᦳ ᦴ ᦸ ᦰ ᦻ ᦿ ᦼ ᦽ ᦾ ᧀ ᦔ ᦢ ᦕ ᦎ ᦡ ᦏ ᦂ ᦦ ᦀ ᦈ ᦚ ᦉ ᦪ ᦃ ᦧ ᦠ ᦖ ᦐ ᦄ ᦛ ᦜ ᦊ ᦗ ᦥ ᦘ ᦑ ᦤ ᦒ ᦅ ᦨ ᦁ ᦋ ᦝ ᦌ ᦫ ᦆ ᦩ ᦣ ᦙ ᦓ ᦇ ᦞ ᦟ ᦍ ᧇ ᧆ ᧅ ᧄ ᧃ ᧂ ᧁ ᧞ ᧟ ᧈ ᧉ ᧚</span></td></tr>
+</tbody></table>
+
+
+
+<details id="linebreak_details">
+<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CL">CL (close punctuation)</a>  should be kept with the preceding character.&nbsp;The class CL is closely related to the class CP (Close Parenthesis). They differ only in that CP will not introduce a break when followed by a letter or number, which prevents breaks within constructs like “(s)he”.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#EX">EX (exclamation mark/interrogation)</a> behave like closing characters, except in relation to postfix (PO) and non-starter characters (NS).</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">NS (nonstarters)</a> cannot start a line, but unlike CL they may allow a break in some contexts when they follow one or more space characters.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">NU (number)</a> behaves like ordinary characters (AL) in the context of most characters but activate the prefix and postfix behavior of prefix and postfix characters.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#OP">OP (open punctuation)</a> 	should be kept with the character that follows. This is desirable, even if there are intervening space characters, as it prevents the appearance of a bare opening punctuation mark at the end of a line.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#SA">SA (Southeast Asian)</a> require morphological analysis to determine break opportunities, in a way similar to a hyphenation algorithm. No break opportunities will be found otherwise. Complex context analysis, often involving dictionary lookup of some form, is required to determine non-emergency line breaks. If such analysis is not available, it is recommended to treat them as AL.</p>
+</details>
 </section>
 
 
 
-<section>
-    <h3 id="hyphenation">Hyphenation</h3>
-<p class="instructions">Is hyphenation used, or something else?</p>
+<section id="hyphenation">
+<h3>Hyphenation</h3>
+<p class="prompts">Is hyphenation used, or something else?</p>
 </section>
 
 
 
-<section>
-    <h3 id="justification">Text alignment &amp; justification</h3>
-<p class="instructions">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</p>
-</section>
-
-
-
-
-<section>
-    <h3 id="letterspace">Letter spacing</h3>
-<p class="instructions">Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see above.).</p>
+<section id="justification">
+<h3>Text alignment &amp; justification</h3>
+<p class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</p>
 </section>
 
 
 
 
-<section>
-  <h3 id="lists">Counters, lists, etc.</h3>
+<section id="letterspace">
+<h3>Letter spacing</h3>
+<p class="prompts">Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see above.).</p>
+</section>
+
+
+
+
+<section id="lists">
+<h3>Counters, lists, etc.</h3>
   
-<p class="instructions">Are there list or other counter styles in use?  If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed? </p>
+<p class="prompts">Are there list or other counter styles in use?  If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed? </p>
 </section>
 
 
 
 
   
-<section>
-<h3 id="initials">Styling initials</h3>
-<p class="instructions">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? etc.</p>
-</section>
-
-
-
-
-  
-<section>
-<h3 id="baselines">Baselines &amp; inline alignment</h3>
-<p class="instructions">Does the script have special requirements for baseline alignment between mixed scripts and in general?</p>
+<section id="initials">
+<h3>Styling initials</h3>
+<p class="prompts">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? etc.</p>
 </section>
 </section>
  
@@ -636,56 +1015,77 @@ where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem"
  
  
  
-<section>
- <h2 id="pagelayout">Page &amp; book layout</h2>
+<section id="pagelayout">
+<h2>Page &amp; book layout</h2>
  
-<section>
-    <h3 id="generallayout">General page layout &amp; progression</h3>
-<p class="instructions">How are the main text area and ancilliary areas positioned and defined? Are there any special requirements here, such as dimensions in characters for the Japanese kihon hanmen? The book cover for scripts that are read right-to-left scripts is on the right of the spine, rather than the left.  When content can flow vertically and to the left or right, how to specify the location of objects, text, etc. relative to the flow? Do tables and grid layouts work as expected? How do columns work in vertical text? Can you mix block of vertical and horizontal text? Does text scroll in a different direction?</p>
+<section id="generallayout">
+<h3>General page layout &amp; progression</h3>
+<p class="prompts">How are the main text area and ancilliary areas positioned and defined? Are there any special requirements here, such as dimensions in characters for the Japanese kihon hanmen? The book cover for scripts that are read right-to-left scripts is on the right of the spine, rather than the left.  When content can flow vertically and to the left or right, how to specify the location of objects, text, etc. relative to the flow? Do tables and grid layouts work as expected? How do columns work in vertical text? Can you mix block of vertical and horizontal text? Does text scroll in a different direction?</p>
 </section>
-<section>
-<h3 id="grids">Grids &amp; tables</h3>
-<p class="instructions">Does the script have special requirements for character grids or tables?</p>
-</section>
-
-
-
-
-  
-<section>
-<h3 id="footnotes">Notes, footnotes, etc</h3>
-<p class="instructions">Does the script have special requirements for notes, footnotes, endnotes or other necessary annotations of this kind? (There is a section above for purely inline annotations, such as ruby or warichu. This section is more about annotation systems that separate the reference marks and the content of the notes.)</p>
+<section id="grids">
+<h3>Grids &amp; tables</h3>
+<p class="prompts">Does the script have special requirements for character grids or tables?</p>
 </section>
 
 
 
 
   
-<section>
-<h3 id="interaction">Forms &amp; user interaction</h3>
-<p class="instructions">Are vertical form controls needed? Are scroll bars in an unusual position? Other special requirements for user interaction?</p>
+<section id="footnotes">
+<h3>Notes, footnotes, etc</h3>
+<p class="prompts">Does the script have special requirements for notes, footnotes, endnotes or other necessary annotations of this kind? (There is a section above for purely inline annotations, such as ruby or warichu. This section is more about annotation systems that separate the reference marks and the content of the notes.)</p>
 </section>
 
 
 
 
   
-<section>
-<h3 id="headers">Page numbering, running headers, etc</h3>
-<p class="instructions">Are there special conventions for page numbering, or the way that running headers and the like are handled?</p>
+<section id="interaction">
+<h3>Forms &amp; user interaction</h3>
+<p class="prompts">Are vertical form controls needed? Are scroll bars in an unusual position? Other special requirements for user interaction?</p>
+</section>
+
+
+
+
+  
+<section id="headers">
+<h3>Page numbering, running headers, etc</h3>
+<p class="prompts">Are there special conventions for page numbering, or the way that running headers and the like are handled?</p>
 </section>
 </section>
 
 
 
+  
+
+
+
+
+
+ <section id="chars">
+<h2>Character lists</h2>
+  <p>Version 12.0 of the Unicode Standard has the following block dedicated to the New Tai Lü script (numbers in lists are non-ASCII only):</p>
+    <ul>
+<li><a href="/uniview/?block=newtailue">New Tai Lue</a> <span class="charCount">70 letters, 2 symbols, 11 numbers :   total 83</span></li>
+</ul>
+<p>Apart from ASCII characters, the thisLanguage orthography described here uses 97 characters <!--(and @@ more, used infrequently)--> from the following Unicode blocks: </p>
+    <ul>
+    <li><a href="/uniview/?block=newtailue">New Tai Lue</a> <span class="charCount">70 letters, 2 symbols, 11 numbers :   total 83</span></li>
+<li> <a href="/uniview/?block=cjk_symbols_and_punctuation">CJK Symbols and Punctuation</a> <span class="charCount">6 punctuation : total 6</span></li>
+<li> <a href="/uniview/?block=halfwidth_and_fullwidth_forms">Halfwidth and Fullwidth Forms</a> <span class="charCount">8 punctuation : total 8</span></li>
+    </ul>
+ <p><cite>Character Usage</cite> has information about the following orthographies associated with this script: <a href="/app-charuse/?language=khb" target="_blank">New Tai Lue</a></p>
+<p>For detailed character-specific information see the <a class="linkHighlight" href="/scripts/newtailue/block">New Tai Lü character notes</a>.</p>
+</section>
 
 
 
 
 
 
-<section>
-<h2 id="languages">Languages using the New Tai Lü script</h2>
+<section id="languages">
+<h2>Languages using the New Tai Lü script</h2>
 <p>According to ScriptSource, the New Tai Lü script is used for the following languages: </p>
 <ul>
 <li>Lü [khb]</li>
@@ -699,24 +1099,45 @@ where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem"
 
 
 
-<section>
-<h2 id="refs">References</h2>
+<section id="refs">
+<h2>References</h2>
 <ol>
-<li>[ <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></sup> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">The Unicode Standard v11.0</a></li>
-<li>[ <sup><a href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></sup> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet" target="_blank">New Tai Lue alphabet</a></li>
-<li>[ <sup><a href="https://en.wikipedia.org/wiki/Tai_Lue_language">wl</a></sup> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Tai_Lue_language" target="_blank">Tai Lue language</a></li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">The Unicode Standard v11.0</a></li>
+<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet" target="_blank">New Tai Lue alphabet</a></li>
+<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Tai_Lue_language">wl</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Tai_Lue_language" target="_blank">Tai Lue language</a></li>
 </ol>
 </section>
 
 
 
 
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/newtailue"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-08-01  5:10<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bnewtailue%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fnewtailue%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+<details>
+<summary class="prompts">Show stats</summary>
+
+<table id="charCountList">
+<tr><th>Main</th><td id="mainCharList"></td><td id="mainCharListTotal"></td></tr>
+<tr><th>Auxiliary</th><td id="auxCharList"></td><td id="auxCharListTotal"></td></tr>
+<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
+<tr><th>Other</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
+<tr><th>Deprecated</th><td id="deprecatedCharList"></td><td id="deprecatedCharListTotal"></td></tr>
+</table>
+</details>
+
+
+<div id="phoneLinks"></div>
 
 
 <div id="panel" style="display:none"></div>
+
+
+<div class="smallprint"><span id="version"></span></div>
+
+
+
 </body>
 <script>
-initialiseSummary('/scripts/newtailue/block','khb','New Tai Lü')
+initialiseSummary('/scripts/newtailue/block','khb','New Tai Lü','newtailue')
+autoTransliterate('khb')
 </script>
 </html>
