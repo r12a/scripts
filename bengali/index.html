@@ -114,7 +114,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->30 December, 2019<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->31 December, 2019<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -194,16 +194,32 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <section id="consonant_syllable">
 <h3 id="h_consonant_syllable">Consonant-based syllables</h3>
 
-<p><code>[C[n]h] [C[n]h (ᶻʷʲ)] C[n] [h | (ᶻʷⁿʲ) v [v] (c)] [f]</code></p>
-<p>The core of a consonant-based syllable is a base consonant character, which may or may not additionally represent an inherent vowel if it stands alone. If it is followed by a vowel-sign or hasant, there is no inherent vowel. At the end of a word, there may or may not be an inherent vowel, whether or not there is a hasant.</p>
-<p>The base consonant may also be a combination of consonant code point plus nukta.</p>
-<p>The base consonant can be preceded by up to two consonant+hasant pairs (where the consonant may also be a combination of consonant+nukta), but only if those consonants form conjuncts (ie. the hasant is invisible), eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ক্ক,ম্প,ক্ষ, ন্ত্র</span> <span class="trans">k͓k,m͓p,k͓ʃ̇, n͓t͓r</span></span>. If the preceding consonants carry visible hasant symbols, those are treated as separate orthographic syllables.</p>
-<p>In some cases, a <span class="uname">RA</span> + hasant followed by <span class="uname">YA</span> may introduce a ZWJ character after the hasant, in order to specify special shaping rules for the <span class="uname">YA</span>.</p>
+<p><code>[C<sub>[n]</sub>h] [C<sub>[n]</sub>h] <b>C<sub>[n]</sub></b> [h | v (n)] [f]</code></p>
+<details><summary class="instructions">Legend</summary>
+<div class="legend">
+<dl><dt><code>C</code></dt><dd>Consonant.</dd></dl>
+<dl><dt><code>C<sub>n</sub></code></dt><dd>Consonant followed by nukta.</dd></dl>
+<dl><dt><code>h</code></dt><dd>Hasant.</dd></dl>
+<dl><dt><code>v</code></dt><dd>Vowel-sign.</dd></dl>
+<dl><dt><code>n</code></dt><dd>Nasalisation diacritic (<span class="name">candrabindu</span>).</dd></dl>
+<dl><dt><code>f</code></dt><dd>Final consonant (one of  <span class="name">khanda ta</span>, <span class="name">anusvara</span>, or <span class="name">visarga</span>).</dd></dl>
+</details>
+<p>The core of a consonant-based syllable is a base consonant character, which may or may not additionally represent an inherent vowel if it stands alone. </p>
+<p>If it is followed by a vowel-sign, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">কী</span> <span class="trans">kī</span></span>, <span class="charExample" translate="no"><span class="ex" lang="bn">কি</span> <span class="trans">ki</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="bn">কো</span> <span class="trans">ko</span></span>, or hasant, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ক্</span> <span class="trans">k͓</span></span>, there is no inherent vowel. At the end of a word, there may or may not be an inherent vowel, even if there is no hasant.</p>
+<p>Any base consonant may  be a combination of consonant code point plus nukta.</p>
+<p>The base consonant can be preceded by up to two consonant+hasant pairs (where the consonant may also be a combination of consonant+nukta), but only if those consonants form <em>conjuncts</em> (ie. the hasant is invisible), eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ক্ক</span> <span class="trans">k͓k</span></span>, <span class="charExample" translate="no"><span class="ex" lang="bn">ম্প</span> <span class="trans">m͓p</span></span>, <span class="charExample" translate="no"><span class="ex" lang="bn">ক্ষ</span> <span class="trans">k͓ʃ̇</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="bn">ন্ত্র</span> <span class="trans">n͓t͓r</span></span>. If the preceding consonants carry visible hasant symbols, those are treated as separate orthographic syllables.</p>
 <p>Note that the variable use of the hasant in Bengali means that a phonetic cluster of consonants  can constitute a larger series of orthographic syllables. For example, <span class="charExample" translate="no"><span class="ex" lang="bn">করতাল</span> <span class="trans">krtɑl</span> <span class="ipa">kɔrtɑl</span></span> has two phonetic syllables, but 3 orthographic since the <span class="trans">rt</span> combination is not combined.</p>
-<p>The base consonant can be followed by either one or two code points representing vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">কী, কি, ক&#x09C7;&#x09BE;</span></span>, or instead by a hasant, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ক্</span> <span class="trans">k͓</span></span>. Vowel code points may be followed by a nasalisation diacritic.</p>
+<p>A vowel-sign may optionally be followed by a nasalisation diacritic.</p>
+<p>Unless the base consonant is followed by a hasant, the syllable may   be terminated by a final consonant repesented by <span class="name">khanda ta</span>, <span class="name">anusvara</span>, or <span class="name">visarga</span>.</p>
+<p><span class="leadin">Special cases.</span> In some cases, a <span class="uname">RA</span> + hasant followed by <span class="uname">YA</span> may introduce a ZWJ character before the hasant, in order to specify special shaping rules for the <span class="uname">YA</span>. Compare <span class="charExample" translate="no"><span class="ex" lang="bn">র্য</span> <span class="trans">r͓ʲ</span></span> and <span class="charExample" translate="no"><span class="ex" lang="bn">র‍্য</span> <span class="trans">r‍ᶻʷʲ͓ʲ</span></span>.</p>
+<p>The base consonant can be followed by either one or two code points representing vowel-signs, eg.  <span class="charExample" translate="no"><span class="ex" lang="bn">কো</span> <span class="trans">ko</span></span> vs. <span class="charExample" translate="no"><span class="ex" lang="bn">&#x0995;&#x09C7;&#x09BE;</span> <span class="trans">keɑ</span></span>. Multiple vowel sequences only occur in decomposed text.</p>
 <p>A base consonant may be followed by ZWNJ + vowel code point where the author wants to prevent ligation of the following vowel sign, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">শ‌ু</span> <span class="trans">ʃᶻʷⁿʲu</span></span>.</p>
-<p>Unless the base consonant is followed by a hasant, the syllable may end with a final consonant repesented by khanda ta, anusvara, or visarga.</p>
+<p><span class="leadin">Conjunct positions.</span> Native Bengali words do not allow initial consonant clusters, and word-final clusters are rare. However, words borrowed from Sanskrit, English, etc. have introduced many such features.</p>
+<p>Many   Bengali speakers retain the native phonology, even when using Sanskrit or English borrowings, such as <span class="charExample" translate="no"><span class="ex" lang="bn">গেরাম</span> <span class="trans">gerɑm</span></span> (CV.CVC) for <span class="charExample" translate="no"><span class="ex" lang="bn">গ্রাম</span> <span class="trans">g͓rɑm</span> <span class="meaning">village</span></span> (CCVC) or <span class="charExample" translate="no"><span class="ex" lang="bn">ইস্কুল</span> <span class="trans">ịʃ͓̈kul</span></span> (VC.CVC) for<span class="charExample" translate="no"><span class="ex" lang="bn">স্কুল</span> <span class="trans">ʃ͓̈kul</span> <span class="meaning">school</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Bengali_phonology#Consonant_clusters">wp</a></p>
+<p>Most word-final clusters were introduced from English, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">লিফ্ট</span> <span class="trans">lipʰ͓ʈ</span> <span class="meaning">lift, elevator</span></span> or <span class="charExample" translate="no"><span class="ex" lang="bn">ব্যাংক</span> <span class="trans">b͓ʲɑŋ̽k</span> <span class="meaning">bank</span></span>. In some dialects, a final nasal+stop is written as a cluster, whereas in standard Bengali it would use nasalisation, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">চান্দ</span> <span class="trans">cɑn͓d</span></span> vs. <span class="charExample" translate="no"><span class="ex" lang="bn">চাঁদ</span> <span class="trans">cɑm̽d</span> <span class="meaning">moon</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Bengali_phonology#Consonant_clusters">wp</a></p>
+<p>For more information, see <a class="fnref" href="https://en.wikipedia.org/wiki/Bengali_phonology#Consonant_clusters">wp</a>.</p>
 </section>
+
 
 
 
@@ -484,7 +500,7 @@ two, when influenced by surrounding sounds.) Bengalis are not always aware of th
 
 			<p> The 2 two-part vowel-signs can be written in two different ways: either as a single code point, or as an initial vowel-sign followed by either <span class="codepoint" translate="no"><span lang="bn">&#x09BE;</span> [<a href="/scripts/bengali/block#char09BE"><span class="uname">U+09BE BENGALI VOWEL SIGN AA</span></a>]</span> or <span class="codepoint" translate="no"><span lang="bn">&#x09D7;</span> [<a href="/scripts/bengali/block#char09D7"><span class="uname">U+09D7 BENGALI AU LENGTH MARK</span></a>]</span>. </p>
 
-<p>The single code point per vowel-sign, is the preferred form and the form in common use for Bengali. The parts are separated, however, in Unicode Normalisation Form D.</p>
+<p>The single code point per vowel-sign, is the preferred form and the form in common use for Bengali. However, the parts are separated in Unicode Normalisation Form D.</p>
 <figure>
 			<table style="margin: auto;" class="choices"><tbody>
 			<tr>
