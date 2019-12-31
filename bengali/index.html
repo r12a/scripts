@@ -168,6 +168,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <section id="type">
 <h2 id="h_type">Distinctive features</h2>
 <p>The Bengali script  is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>. Consonants carry an inherent vowel which can be modified by appending vowel-signs to the consonant.  See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.</p>
+<p>The orthographic letters of the Bengali script are derived from Sanskrit, and in some cases don't quite fit the needs of modern Bangla (eg. lack of a sound <span class="ipa"><span class="ipa">ɛ</span></span>, letters for only 2  of many diphthongs, long and short letters where pronunciation no longer distinguishes those sounds, etc.)</p>
 <!--p>The following list describes some distinctive characteristics of the Bengali script.</p>
 		<p>The alphabet is split int cover consonant clusters, so some additional processing is needed to identify text unit boundaries.</p-->
 
@@ -282,6 +283,9 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   <circle cx="140" cy="10" r="3" fill="#ccc"/>
   <circle cx="240" cy="10" r="3" fill="#ccc"/>
   
+  <!-- near close -->
+  <circle cx="200" cy="40" r="3" fill="#ccc"/>
+  
    <!-- mid close -->
   <circle cx="65" cy="70" r="3" fill="#ccc"/>
   <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
@@ -306,6 +310,9 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   <text x="32" y="15" class="ipa" text-anchor="end">i ĩ</text> 
   <text x="250" y="15" class="ipa" filter="url(#solid)">u ũ</text> 
   <text x="250" y="15" class="ipa">u ũ</text> 
+
+    <!-- near close -->
+  <text x="210" y="45" class="allophone">ʊ</text> 
 
   <!-- close mid -->
   <text x="57" y="75" class="ipa" text-anchor="end" filter="url(#solid)">e ẽ</text>
@@ -422,7 +429,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <section id="vowelharmonydesc">
-<h3 id="h_vowelharmonydesc">Vowel harmony</h3>
+<h3>Vowel harmony</h3>
 
 <p>The pronunciation of a vowel can be affected by the vowel in the following syllable. Radice provides the following table, though this is a simplification and there are many exceptions.</p>
 			<table id="vowelharmony" width="300" border="0">
@@ -487,9 +494,100 @@ two, when influenced by surrounding sounds.) Bengalis are not always aware of th
 <p>Other than the inherent vowel, vowel sounds that follow a consonant sound are represented using vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">কী</span> <span class="ipa">ki</span></span>. This includes  2 diphthongs (each  represented by a single code point), 3 prescript signs, and 2 circumgraphs.</p>
 <figure class="characterBox auto"  data-cols="ipa,trans,transc">ি␣ী␣ু␣ূ␣ে␣ো␣া␣ ␣ৈ␣ৌ</figure>
 <p>Bengali has lost the distinction between short and long vowels in pronunciation, but retains the difference in spelling.</p>
+<p>The variation in pronunciation for the vowel-signs above can often be explained by <a href="#vowelharmonydesc">vowel harmony</a>.</p>
+<p>Although it is one of the standard sounds of Bangla, <span class="ipa">ɛ</span> doesn't have a specific vowel-sign allocated to it. It tends to be represented by combinations of other characters, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ত্যাগ</span> <span class="trans">t͓ʲɑg</span> <span class="ipa">tɛg</span> <span class="meaning">leave</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Bengali_alphabet#cite_note-%C9%9B-6">w</a></p>
+<p><span class="codepoint" translate="no"><span lang="bn">&#x09CB;</span> [<a href="/scripts/bengali/block#char09CB"><span class="uname">U+09CB BENGALI VOWEL SIGN O</span></a>]</span> was originally pronounced <span class="ipa">ʊ</span>, and that pronunciation sometimes persists alongside the <span class="ipa">o</span> that came from Sanskrit, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">নোংরা</span> <span class="trans">noŋ̽rɑ</span> <span class="meaning">foul</span></span> can be pronounced <span class="charExample"><span class="ipa">nʊŋra</span></span> or <span class="charExample"><span class="ipa">noŋra</span></span>.</p>
+<p>Two of the vowel-signs (and independent vowels) represent diphthongs (<span class="ipa">oi̯ </span> and <span class="ipa">ou̯</span>). However, most of the many  diphthongs are represented by a sequence of vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">কেউ</span> <span class="trans">keụ</span> <span class="ipa">keu̯</span> <span class="meaning">somebody</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Bengali_alphabet#Vowels">w</a></p>
 <p>Bengali vowel signs are all combining characters. In principle a single character is used per base consonant, but 2 vowel signs decompose to more than one character (see  <a class="secref">multipart</a>). All vowel-signs are typed and stored <em>after</em> the base consonant, whether or not they precede it when displayed. The font takes care of the glyph positioning.</p>
 <p>Almost all of the  vowel-signs are <em>spacing</em> combining characters, meaning that they consume horizontal space when added to a base consonant.. </p>
 <p>See also <a class="sectionref">vocalics</a>.</p>
+</section>
+
+
+
+
+<section id="diphthongs">
+<h3>Diphthongs</h3>
+
+<p>Two of the vowel-signs (and independent vowels) represent diphthongs (<span class="ipa">oi̯</span> and <span class="ipa">ou̯</span>). However, most of the many  diphthongs are represented by a sequence of vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">কেউ</span> <span class="trans">keụ</span> <span class="ipa">keu̯</span> <span class="meaning">somebody</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Bengali_alphabet#Vowels">w</a></p>
+<p>The sequences tend to involve an independent vowel or a glide consonant to represent the off-glide.</p>
+<p>Following are some examples of diphthongs.</p>
+<table>
+<tbody>
+<tr>
+<th scope="row"><span class="ipa">ii̯</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">পাখিই</span> <span class="trans">pɑkʰiị</span> <span class="ipa">pa.kʰii̯</span> <span class="meaning">birds</span></span>&nbsp;</td>
+<td><span class="ex">খিই</span></td>
+</tr>
+<tr>
+<th scope="row"><span class="ipa">ei̯</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">পারেই</span> <span class="trans">pɑreị</span> <span class="ipa">pa.rei̯</span> <span class="meaning">maybe</span></span>&nbsp;</td>
+<td><span class="ex">রেই</span></td>
+</tr>
+<tr>
+<th scope="row"><span class="ipa">ai̯</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">অনলাইন</span> <span class="trans">ɔ̣nlɑịn</span> <span class="ipa">ɔn.lai̯n</span> <span class="meaning">online</span></span>&nbsp;</td>
+<td><span class="ex">লাই</span></td>
+</tr>
+<tr>
+<th scope="row"><span class="ipa">oi̯</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">তাথৈ</span> <span class="trans">tɑtʰoʲ</span> <span class="ipa">ta.tʰoi̯</span> <span class="meaning">there</span>, <span class="charExample" translate="no"><span class="ex" lang="bn">তেরই</span> <span class="trans">terị</span> <span class="ipa">tæ.roi̯</span> <span class="meaning">thirteen</span></span></span></td>
+<td><span class="ex">থৈ</span>, <span class="ex">রই</span></td>
+</tr>
+<tr>
+<th scope="row"><span class="ipa">ui̯</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">বাবুই</span> <span class="trans">bɑbuị</span> <span class="ipa">ba.bui̯</span> <span class="meaning">baby</span></span>&nbsp;</td>
+<td><span class="ex">বুই</span></td>
+</tr>
+<tr>
+<th scope="row">
+<span class="ipa">iu̯</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">পারফিউম</span> <span class="trans">pɑrpʰiụm</span> <span class="ipa">par.fiu̯m</span> <span class="meaning">perfume</span></span></td>
+<td><span class="ex">ফিউ</span></td>
+</tr>
+<tr>
+<th scope="row"><span class="ipa">eu̯</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">যেকেউ</span> <span class="trans">ʲekeụ</span> <span class="ipa">d͡ʒe.keu̯</span> <span class="meaning">anyone</span></span>&nbsp;</td>
+<td><span class="ex">কেউ</span></td>
+</tr>
+<tr>
+<th scope="row"><span class="ipa">ou̯</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">ধৌত</span> <span class="trans">dʰoʷt</span> <span class="ipa">dʰou̯.to</span> <span class="meaning">wash</span></span>&nbsp;</td>
+<td><span class="ex">ধৌ</span></td>
+</tr>
+<tr>
+<th scope="row"><span class="ipa">au̯</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">একাউন্ট</span> <span class="trans">ẹkɑụn͓ʈ</span> <span class="ipa">æ.kau̯nʈ</span> <span class="meaning">account</span></span>&nbsp;</td>
+<td><span class="ex">কাউ</span></td>
+</tr>
+<tr>
+<th scope="row"><span class="ipa">ɔe̯</span></th>
+<td><span class="charExample"><span class="charExample" translate="no"><span class="ex" lang="bn">ভয়</span> <span class="trans">bʰýˑ</span> <span class="ipa">bʰɔe̯</span> <span class="meaning">fear</span></span></span></td>
+<td><span class="ex">ভয়</span></td>
+</tr>
+<tr>
+<th scope="row"><span class="ipa">ae̯</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">আয়রন</span> <span class="trans">ɑ̣ʲˑrn</span> <span class="ipa">ae̯.rɔn</span> <span class="meaning">iron</span></span>&nbsp;</td>
+<td><span class="ex">আয়</span></td>
+</tr>
+<tr>
+<th scope="row"><span class="ipa">oo̯</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">দুঃখও</span> <span class="trans">duh̽kʰọ</span> <span class="ipa">duk.kʰoo̯</span> <span class="meaning">sadness</span></span>&nbsp;</td>
+<td><span class="ex">খও</span></td>
+</tr>
+<tr>
+<th scope="row"><span class="ipa">ɔo̯</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">তওবার</span> <span class="trans">tọbɑr</span> <span class="ipa">tɔo̯.bar</span> <span class="meaning">repentance</span></span>&nbsp;</td>
+<td><span class="ex">তও</span></td>
+</tr>
+<tr>
+<th scope="row"><span class="ipa">ao̯</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">এছাড়াও</span> <span class="trans">ẹcʰɑɖˑɑọ</span> <span class="ipa">e.t͡ʃʰa.rao̯</span> <span class="meaning">also</span></span>&nbsp;</td>
+<td><span class="ex">ড়াও</span></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
 </section>
 
 
@@ -609,7 +707,7 @@ two, when influenced by surrounding sounds.) Bengalis are not always aware of th
 
 <p>Bengali represents syllable-initial vowels using a set of independent vowel letters.</p>
 
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">ই␣ঈ␣উ␣ঊ␣এ␣ও␣অ␣আ␣ঐ␣ঔ</figure>
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ই␣ঈ␣উ␣ঊ␣এ␣ও␣অ␣আ␣ ␣ঐ␣ঔ</figure>
 
 
 </section>
