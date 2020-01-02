@@ -266,7 +266,6 @@ function makeTables (lang) {
                 while (hex.length < 4) hex = '0'+hex
 				
 				if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.block]) out += '<a href="/scripts/'+window.spreadsheetRows[char][cols.block]+'/block#char'+hex+'" target="c">'
-				else console.log('not found')
                 out += hex
 				if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.block]) out += '</a>'
                 if (charList.length>1 && z<charList.length-1) out += '<br/>'
