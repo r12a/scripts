@@ -11,6 +11,8 @@ defList={
 
 "inherentvowel": 'An <a class="termref" target="_blank" href="../glossary/#inherentvowel">inherent vowel</a> is a vowel sound that is automatically pronounced after a consonant letter, unless specifically suppressed.',
 
+"materlectionis": 'In the spelling of Arabic and some other Semitic languages, matres lectionis refers to the use of certain consonants to indicate a vowel. <sup><a href="https://en.wikipedia.org/wiki/Mater_lectionis">w</a></sup>',
+
 "standalonevowel": 'Standalone vowels are not preceded by a consonant, and may appear at the beginning or in the middle of a word.',
 
 "grapheme": 'A grapheme is a user-perceived unit of text. The Unicode Standard uses generalised rules to define \'grapheme clusters\', which approximate the likely grapheme boundaries in a writing system.',
