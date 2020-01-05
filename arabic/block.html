@@ -16,12 +16,14 @@
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
 <script src="../../uniview/descriptions.js"></script> 
 <script src="../../uniview/u.js"></script> 
 
+<script src="arb-translit.js">  </script>
 <script src="../../shared/fontlists/arabic.js"> </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -81,7 +83,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 </aside>
 
 
-<p id="status">Updat<!-- #BeginDate format:Sw1 -->5 August, 2019<!-- #EndDate -->te -->
+<p id="status">Updat<!-- #BeginDate format:Sw1 -->5 January, 2020<!-- #EndDate -->te -->
 &bull; tags <a href="http://rishida.net/blog/index.php?tag=arabic" title="Show all blog posts tagged with 'arabic'">arabic</a>, <a href="http://rishida.net/blog/index.php?tag=urdu" title="Show all blog posts tagged with 'urdu'">urdu</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>.</p>
 <div id="intro">
   <p>This page lists characters in the following Unicode blocks and provides information about them. </p>
@@ -121,8 +123,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans" lang="ar">ʾ</span> &nbsp;&nbsp; <span class="name" lang="hy">هَمْزة</span> <span class="trans">hamzah</span>          </p>
 <p>For  historical reasons this is treated as an orthographic sign rather than as a letter of the alphabet. It sometimes stands alone, but usually appears with a 'carrier' letter - alef, waw, or yeh (<span class="ex" dir="rtl" lang="ar">أ إ ؤ ئ</span>) for which separate precomposed characters are available in Unicode.</p>
           <p>This codepoint is used for representing the standalone <span class="name">hamza</span> only. On its own it has no joining behaviour.</p>
-          <p><span class="leadin">Combined with base characters:</span> When the <span class="name">hamza</span> is above or below another character you should typically use <span class="codepoint"><span dir="rtl" lang="ar">ٔ</span> <a href="#char0654">[<span class="uname">U+0654 ARABIC HAMZA ABOVE</span>]</a></span> with the appropriate base character, although there are a number of exceptions. </p>
-          <p>Some exceptions arise because the NFC normalization form converts the base character and combining <span class="name">hamza</span> to a precomposed character. These instances include </p>
+          <p><span class="leadin">Hamza with carrier letters:</span> When the <span class="name">hamza</span> is above or below another character it is possible to use <span class="codepoint"><span dir="rtl" lang="ar">ٔ</span> <a href="#char0654">[<span class="uname">U+0654 ARABIC HAMZA ABOVE</span>]</a></span> or <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0655;</span> [<a href="/scripts/arabic/block#char0655"><span class="uname">U+0655 ARABIC HAMZA BELOW</span></a>]</span> with the appropriate base character, however Unicode provides precomposed characters which are usually preferred when writing Arabic. </p>
+          <p>The following are converted to precomposed characters by the NFC normalization form: </p>
           <ul>
             <li><span class="codepoint"><span dir="rtl" lang="ar">أ</span> <a href="#char0623">[<span class="uname">U+0623 ARABIC LETTER ALEF WITH HAMZA ABOVE</span>]</a></span></li>
             <li><span class="codepoint"><span dir="rtl" lang="ar">إ</span> <a href="#char0625">[<span class="uname">U+0625 ARABIC LETTER ALEF WITH HAMZA BELOW</span>]</a></span></li>
@@ -132,7 +134,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
             <li><span class="codepoint"><span dir="rtl" lang="ar">ۓ</span> <a href="#char06D3">[<span class="uname">U+06D3 ARABIC LETTER YEH BARREE WITH HAMZA ABOVE</span>]</a></span></li>
             <li><span class="codepoint"><span dir="rtl" lang="ar">ۀ</span> <a href="#char06C0">[<span class="uname">U+06C0 ARABIC LETTER HEH WITH YEH ABOVE</span>]</a></span> (note that this decomposes to <span class="codepoint"><span dir="rtl" lang="ar">ە</span> <a href="#char06D5">[<span class="uname">U+06D5 ARABIC LETTER AE</span>]</a></span> and <span class="codepoint"><span dir="rtl" lang="ar">ٔ</span> <a href="#char0654">[<span class="uname">U+0654 ARABIC HAMZA ABOVE</span>]</a></span>, not <span class="codepoint"><span dir="rtl" lang="ar">ه</span> <a href="#char0647">[<span class="uname">U+0647 ARABIC LETTER HEH</span>]</a></span> and <span class="codepoint"><span dir="rtl" lang="ar">ٔ</span> <a href="#char0654">[<span class="uname">U+0654 ARABIC HAMZA ABOVE</span>]</a></span>)</li>
           </ul>
-          <p> Other exceptions arise where the <span class="name">hamza</span> is an integral part of the character itself (ie. an <span class="name">ijam</span>). Examples of these characters include</p>
+          <p> Important exceptions arise where the <span class="name">hamza</span> is an integral part of the character itself (ie. an <span class="name">ijam</span>). Examples of these characters include</p>
           <ul>
             <li><span class="codepoint"><span dir="rtl" lang="ar">ځ</span> <a href="#char0681">[<span class="uname">U+0681 ARABIC LETTER HAH WITH HAMZA ABOVE</span>]</a></span></li>
             <li><span class="codepoint"><span dir="rtl" lang="ar">ݬ</span> <a href="#char076C">[<span class="uname">U+076C ARABIC LETTER REH WITH HAMZA ABOVE</span>]</a></span></li>
@@ -141,16 +143,20 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
           </ul>
           <p><span class="leadin">Cutting and joining hamza in orthography:</span> Classical arabic distinguishes between 'cutting' and 'joining' <span class="name">hamza</span>. 'Cutting' means always pronounced, 'joining' means frequently elided. The joining <span class="name">hamza</span> is of little practical importance in modern arabic pronounced without the old case endings.</p>
           <p>In modern printed arabic, the <span class="name">hamza</span> is rarely shown when it occurs at the beginning of a word. </p>
-          <p>The following are simplified rules for use of (cutting) <span class="name">hamza</span>:</p>
+          <p><span class="leadin">Rules for choosing carriers:</span>The following are simplified <a href="https://en.wikipedia.org/wiki/Hamza#Arabic_%22seat%22_rules">rules</a> for use of (cutting) <span class="name">hamza</span>:</p>
           <ul>
             <li>
-              <p>At the beginning of a word <span class="name">hamza</span> is always written on an <span class="name">alef</span>, regardless which vowel it takes. When it takes an i-vowel it is written below the <span class="name">alef</span>. eg. <span class="ex" dir="rtl" lang="ar">أحمد</span> <span class="trans">'aḥmad</span>, <span class="ex" dir="rtl" lang="ar">أريد</span> <span class="trans">'urīd</span>, and <span class="ex" dir="rtl" lang="ar">إكرام</span> <span class="trans">'ikrām</span>. See <span class="codepoint"><span lang="ar">أ</span> <a href="#char0623">[<span class="uname">U+0623 ARABIC LETTER ALEF WITH HAMZA ABOVE</span>]</a></span> and <span class="codepoint"><span lang="ar">إ</span> <a href="#char0625">[<span class="uname">U+0625 ARABIC LETTER ALEF WITH HAMZA BELOW</span>]</a></span>.</p>
+              <p>At the beginning of a word <span class="name">hamza</span> is always written with an <span class="name">alef</span> carrier, regardless which vowel it takes, eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">أوّل</span> (<span class="ex" lang="ar" dir="rtl">أَوَّل</span>) <span class="trans">ɑ͑w˖l</span> <span class="ipa">ʔawːal</span> <span class="meaning">first</span></span>, <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">أجور</span> (<span class="ex" lang="ar" dir="rtl">أُجُور</span>) <span class="trans">ɑ͑ʒwr</span> <span class="ipa">ʔud͡ʒuːr</span> <span class="meaning">wages</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">إدارة</span> (<span class="ex" lang="ar" dir="rtl">إِدَارَة</span>) <span class="trans">ɑ̜dɑrẗ</span> <span class="ipa">ʔidaːra</span> <span class="meaning">administration</span></span>.  When it takes an i-vowel the hamza is written below the <span class="name">alef</span>. See <span class="codepoint"><span lang="ar">أ</span> <a href="#char0623">[<span class="uname">U+0623 ARABIC LETTER ALEF WITH HAMZA ABOVE</span>]</a></span> and <span class="codepoint"><span lang="ar">إ</span> <a href="#char0625">[<span class="uname">U+0625 ARABIC LETTER ALEF WITH HAMZA BELOW</span>]</a></span>.</p>
             </li>
             <li>
-              <p>In the middle of a word it is almost always written above a carrier letter. Which one depends on the vowels preceding and following the <span class="name">hamza</span>, and the rules are complicated (and a common source of spelling errors among Arabs). When <span class="name">yeh</span> is used as a mid-word carrier it loses its dots. eg. <span class="ex" dir="rtl" lang="ar">سأل</span> <span class="trans">sa'al</span>, <span class="ex" dir="rtl" lang="ar">مؤمن</span> <span class="trans">mu'min</span>, and <span class="ex" dir="rtl" lang="ar">نائم</span> <span class="trans">nā'im</span>. See <span class="codepoint"><span dir="rtl" lang="ar">أ</span> <a href="#char0623">[<span class="uname">U+0623 ARABIC LETTER ALEF WITH HAMZA ABOVE</span>]</a></span>, <span class="codepoint"><span dir="rtl" lang="ar">ؤ</span> <a href="#char0624">[<span class="uname">U+0624 ARABIC LETTER WAW WITH HAMZA ABOVE</span>]</a></span>, and <span class="codepoint"><span dir="rtl" lang="ar">ئ</span> <a href="#char0626">[<span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span>]</a></span>.</p>
-            </li>
+              <p>In the middle of a word it is almost always written above a carrier letter, as one of <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">أ ؤ ئ</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">سأل</span> (<span class="ex" lang="ar" dir="rtl">سَألَ</span>) <span class="trans">saɑ͑la</span> <span class="ipa">saʔala</span> <span class="meaning">to question</span></span>, <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">مؤمن</span> (<span class="ex" lang="ar" dir="rtl">مُؤْمِن</span>) <span class="trans">muw͓͑min</span> <span class="ipa">muʔmin</span> <span class="meaning">believer</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">زائر</span> (<span class="ex" lang="ar" dir="rtl">زَائِر</span>) <span class="trans">zaɑy͑ir</span> <span class="ipa">zaːʔir</span> <span class="meaning">visitor</span></span>. Which one depends on the vowels preceding and following the <span class="name">hamza</span>, and the rules are complicated (and a common source of spelling errors among Arabs). See <span class="codepoint"><span dir="rtl" lang="ar">أ</span> <a href="#char0623">[<span class="uname">U+0623 ARABIC LETTER ALEF WITH HAMZA ABOVE</span>]</a></span>, <span class="codepoint"><span dir="rtl" lang="ar">ؤ</span> <a href="#char0624">[<span class="uname">U+0624 ARABIC LETTER WAW WITH HAMZA ABOVE</span>]</a></span>, and <span class="codepoint"><span dir="rtl" lang="ar">ئ</span> <a href="#char0626">[<span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span>]</a></span>. When <span class="name">yeh</span> is used as a mid-word carrier it loses its dots.</p>
+</li>
+<li>
+<p>The rules are less clear for sequences that would produce two medial <span class="uname">WA</span> letters in a row, eg. <span class="charExample"><span class="ipa">CuʔuːC</span></span>. By one application of the rules, <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0624;</span> [<a href="/scripts/arabic/block#char0624"><span class="uname">U+0624 ARABIC LETTER WAW WITH HAMZA ABOVE</span></a>]</span> is replaced with a free-standing hamza (this letter), eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">رؤوس</span> (<span class="ex" lang="ar" dir="rtl">رُؤُوس</span>) <span class="trans">ruw͑uws</span> <span class="ipa">ruʔuːs</span> <span class="meaning">heads</span></span> would be written <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">رءوس</span> <span class="trans">rʔws</span></span>. The rule appears to be less relevant in modern Arabic.</p>
+</li>
             <li>
-              <p>At the end of a word it is written above a carrier after a short vowel, or alone on the line after a long vowel or <span class="name">sukuun</span> (vowelless letter). eg. <span class="ex" dir="rtl" lang="ar">قرأ</span> <span class="trans">qara'</span>, <span class="ex" dir="rtl" lang="ar">خطيء</span> <span class="trans">ḫaṭi'</span>, <span class="ex" dir="rtl" lang="ar">جزء</span> <span class="trans">ǧuz'</span>, <span class="ex" dir="rtl" lang="ar">بناء</span> <span class="trans">binā'</span>.</p>
+              <p>At the end of a word the hamza is written above a carrier after a short vowel,  eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">قرأ</span> (<span class="ex" lang="ar" dir="rtl">قَرَأ</span> ) <span class="trans">qaraɑ͑</span> <span class="ipa">qaraʔ</span> <span class="meaning">to read</span></span>, <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">تنبّؤ</span> (<span class="ex" lang="ar" dir="rtl">تَنَبُّؤ</span>) <span class="trans">tanabu˖w͑</span> <span class="ipa">tanabbuʔ</span> <span class="meaning">forecast</span></span>.</p>
+<p>However, after  a long vowel, a dipthong, or a vowelless letter this free-standing letter is used. eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">بناء</span> (<span class="ex" lang="ar" dir="rtl">بِنَاء</span>) <span class="trans">binaɑʔ</span> <span class="ipa">binaːʔ</span> <span class="meaning">building</span></span>, <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">مليء</span> (<span class="ex" lang="ar" dir="rtl">مَلِيء</span>) <span class="trans">maliyʔ</span> <span class="ipa">maliːʔ</span> <span class="meaning">full</span></span>, <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">جزء</span> (<span class="ex" lang="ar" dir="rtl">جُزْء</span>) <span class="trans">ʒuz͓ʔ</span> <span class="ipa">d͡ʒuzʔ</span> <span class="meaning">portion</span></span>, <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">شيء</span> (<span class="ex" lang="ar" dir="rtl">شَيء</span>) <span class="trans">ʃayʔ</span> <span class="ipa">ʃajʔ</span> <span class="meaning">thing</span></span>.</p>
             </li>
           </ul>
           <p> The sign indicating a joining <span class="name">hamza</span> is called a <span class="name">wasla</span> (see <span class="codepoint"><span dir="rtl" lang="ar">ٱ</span> <a href="#char0671">[<span class="uname">U+0671 ARABIC LETTER ALEF WASLA</span>]</a></span>).</p>
@@ -220,10 +226,134 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">ᵃ</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">أَلِفْ هَمْزة</span> <span class="trans">ʼalīf hamzah</span>  </p>
 <p>This character represents the <span class="name">hamza</span> (<span class="ex" dir="rtl" lang="ar">ء</span>).</p>
-          <p>At the beginning of a word <span class="name">hamza</span> is always written on an <span class="name">alef</span> carrier, regardless which vowel it takes. In this case, where the <span class="name">hamza</span> appears above the <span class="name">alef</span>, the vowel could be <span class="name">a</span> or <span class="name">u</span>. Examples: <span class="ex" dir="rtl" lang="ar">أحمد</span> <span class="trans">'aḥmad</span>, <span class="ex" dir="rtl" lang="ar">أريد</span> <span class="trans">'urīd</span>. </p>
-          <p>This character is also used to represent <span class="name">hamza</span> in the middle or at the end of a word. Which of the possible alternative sequences (<span class="ex" dir="rtl" lang="ar">أ</span>, <span class="ex" dir="rtl" lang="ar">ؤ</span> or <span class="ex" dir="rtl" lang="ar">ئ</span>) is used mid-word depends on the vowels preceding and following the <span class="name">hamza</span>. The rules are complicated (and a common source of spelling errors among Arabs). </p>
-          <p>At the end of a word this character is only used  after a short vowel. Examples: <span class="ex" dir="rtl" lang="ar">سأل</span> <span class="trans">sa'al</span>, <span class="ex" dir="rtl" lang="ar">قرأ</span> <span class="trans">qara'</span>.</p>
-          <p>See <span class="codepoint"><span dir="rtl" lang="ar">ء</span> <a href="#char0621">[<span class="uname">U+0621 ARABIC LETTER HAMZA</span>]</a></span> for more information about <span class="name">hamza</span>. See also <span class="codepoint"><span dir="rtl" lang="ar">إ</span> <a href="#char0625">[<span class="uname">U+0625 ARABIC LETTER ALEF WITH HAMZA BELOW</span>]</a></span>, <span class="codepoint"><span dir="rtl" lang="ar">ؤ</span> <a href="#char0624">[<span class="uname">U+0624 ARABIC LETTER WAW WITH HAMZA ABOVE</span>]</a></span>, and <span class="codepoint"><span dir="rtl" lang="ar">ئ</span> <a href="#char0626">[<span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span>]</a></span>.</p>
+          <p>At the beginning of a word <span class="name">hamza</span> is always written with an <span class="name">alef</span> carrier, regardless which vowel it takes. In this case, where the <span class="name">hamza</span> appears above the <span class="name">alef</span>, the following vowel could be <span class="name">a</span> or <span class="name">u</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">أوّل</span> (<span class="ex" lang="ar" dir="rtl">أَوَّل</span>) <span class="trans">ɑ͑w˖l</span> <span class="ipa">ʔawːal</span> <span class="meaning">first</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">أجور</span> (<span class="ex" lang="ar" dir="rtl">أُجُور</span>) <span class="trans">ɑ͑ʒwr</span> <span class="ipa">ʔud͡ʒuːr</span> <span class="meaning">wages</span></span>.</p>
+		  
+<table class="hamzaTable">
+<thead>
+<tr><th></th><th>i</th><th>iː</th><th>u</th><th>uː</th><th>a</th><th>aː</th></tr>
+</thead>
+<tbody>
+<tr>
+<th>ʔV–</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ʔu–</span></td>
+<td><span class="ipa">ʔuː–</span></td>
+<td><span class="ipa">ʔaː–</span></td>
+<td><span class="ipa">ʔaː–</span></td></tr>
+</tbody>
+</table>
+<p style="font-size: 70%; line-height: 1; margin-bottom: 2em;">Notes: '–' represents any consonant and 'ʔ' represents this character. This table is adapted from <a href="https://en.wikipedia.org/wiki/Hamza#Overview_tables">Wikipedia</a>.</p>
+
+
+
+<p>This character is also used to represent <span class="name">hamza</span> in the middle or at the end of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">سأل</span> (<span class="ex" lang="ar" dir="rtl">سَألَ</span>) <span class="trans">saɑ͑la</span> <span class="ipa">saʔala</span> <span class="meaning">to question</span></span>. Which of the possible alternative sequences (<span class="ex" dir="rtl" lang="ar">أ</span>, <span class="ex" dir="rtl" lang="ar">ؤ</span> or <span class="ex" dir="rtl" lang="ar">ئ</span>) is used to represent hamza mid-word depends on the vowels preceding and following the <span class="name">hamza</span>. <a href="https://en.wikipedia.org/wiki/Hamza#Arabic_%22seat%22_rules">The rules</a> are complicated (and a common source of spelling errors among Arabs). </p>
+<p>This character is typically used in the following phonetic sequences, where '–' represents any consonant and 'ʔ' represents this character. These tables are adapted from <a href="https://en.wikipedia.org/wiki/Hamza#Overview_tables">Wikipedia</a>.</p>
+
+<table class="hamzaTable">
+<thead>
+<tr><th></th>
+<th>i</th>
+<th>iː</th>
+<th>u</th>
+<th>uː</th>
+<th>a</th>
+<th>aː</th></tr>
+</thead>
+<tbody>
+<tr>
+<th>–iʔV–</th><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td></tr>
+<tr>
+<th>–iːʔV–</th><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td></tr>
+<tr>
+<th>–uʔV–</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td><td></td><td></td><td></td></tr>
+<tr>
+<th>–uːʔV–</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td><td></td><td></td><td></td></tr>
+<tr>
+<th>–aʔV–</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td><td></td>
+<td><span class="ipa">–aʔa–</span></td>
+<td></td></tr>
+<tr>
+<th>–aːʔV–</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td><td></td><td></td><td></td></tr>
+<tr>
+<th>–ayʔV–</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>–awʔV–</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">–awʔa–</span></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>–ʔV–</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">–ʔu–</span></td>
+<td><span class="ipa">–ʔuː–</span></td>
+<td><span class="ipa">–ʔa–</span></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>–Vʔ–</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">–aʔ–</span></td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<p style="font-size: 70%; line-height: 1; margin-bottom: 2em;">Notes: <br>
+'–' represents any consonant and 'ʔ' represents this character. This table is adapted from <a href="https://en.wikipedia.org/wiki/Hamza#Overview_tables">Wikipedia</a>.<br>
+The item in the –awʔV– row can alternatively be written using <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0621;</span> [<a href="/scripts/arabic/block#char0621"><span class="uname">U+0621 ARABIC LETTER HAMZA</span></a>]</span>.<br>
+–ʔaː– is written using <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0622;</span> [<a href="/scripts/arabic/block#char0622"><span class="uname">U+0622 ARABIC LETTER ALEF WITH MADDA ABOVE</span></a>]</span>, and –aːʔ– uses <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0621;</span> [<a href="/scripts/arabic/block#char0621"><span class="uname">U+0621 ARABIC LETTER HAMZA</span></a>]</span>.</p>
+<p>At the end of a word this character is only used  after a short <span class="ipa">a</span> vowel., eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">قرأ</span> (<span class="ex" lang="ar" dir="rtl">قَرَأ</span> ) <span class="trans">qaraɑ͑</span> <span class="ipa">qaraʔ</span> <span class="meaning">to read</span></span>.</p>
+<table class="hamzaTable">
+<thead>
+<tr><th></th><th>i</th><th>iː</th><th>u</th><th>uː</th><th>a</th><th>aː</th></tr>
+</thead>
+<tbody>
+<tr>
+<th>–Vʔ</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td><td></td>
+<td><span class="ipa">–aʔ</span></td><td></td></tr>
+</tbody>
+</table>
+<p style="font-size: 70%; line-height: 1; margin-bottom: 2em;">Notes: '–' represents any consonant and 'ʔ' represents this character. This table is adapted from <a href="https://en.wikipedia.org/wiki/Hamza#Overview_tables">Wikipedia</a>.</p>
+<p>See <span class="codepoint"><span dir="rtl" lang="ar">ء</span> <a href="#char0621">[<span class="uname">U+0621 ARABIC LETTER HAMZA</span>]</a></span> for more information about <span class="name">hamza</span>. See also <span class="codepoint"><span dir="rtl" lang="ar">إ</span> <a href="#char0625">[<span class="uname">U+0625 ARABIC LETTER ALEF WITH HAMZA BELOW</span>]</a></span>, <span class="codepoint"><span dir="rtl" lang="ar">ؤ</span> <a href="#char0624">[<span class="uname">U+0624 ARABIC LETTER WAW WITH HAMZA ABOVE</span>]</a></span>, and <span class="codepoint"><span dir="rtl" lang="ar">ئ</span> <a href="#char0626">[<span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span>]</a></span>.</p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">ᵃ</span> <span class="name"><span class="localname" dir="ltr" lang="fa"></span> <span class="transliteratedname trans"></span></span><span class="ipa">ʔ</span></p>
@@ -244,11 +374,139 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
       <p class="univiewLink"><a target="_blank" href="/uniview/?char=0624">See in UniView</a></p>
       <div class="unicodenotes">≡ 0648 0654</div>
       <div class="notes">
+<p class="charNotes">Do not confuse this character with <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0648;</span> [<a href="/scripts/arabic/block#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a>]</span>.</p>
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">ʷ</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">وَاو هَمْزة</span> <span class="trans">wāw hamzah</span>  </p>
-<p>This character represents the hamza (<span class="ex" dir="rtl" lang="ar">ء</span>) in the middle  of a word.</p>
-          <p>In the middle of a word the <span class="name">hamza</span> is almost always written above a carrier letter. Which one depends on the vowels preceding and following the <span class="name">hamza</span>, and the rules are complicated (and a common source of spelling errors among Arabs),  eg. <span class="ex" dir="rtl" lang="ar">مؤمن</span> <span class="trans">mu'min</span> (but cf. <span class="ex" dir="rtl" lang="ar">سأل</span> <span class="trans">sa'al</span>, <span class="ex" dir="rtl" lang="ar">نائم</span> <span class="trans">nā'im</span>). </p>
-          <p>See <span class="codepoint"><span dir="rtl" lang="ar">ء</span> <a href="#char0621">[<span class="uname">U+0621 ARABIC LETTER HAMZA</span>]</a></span> for more information about <span class="name">hamza</span>. See also <span class="codepoint"><span dir="rtl" lang="ar">أ</span> <a href="#char0623">[<span class="uname">U+0623 ARABIC LETTER ALEF WITH HAMZA ABOVE</span>]</a></span>, <span class="codepoint"><span dir="rtl" lang="ar">إ</span> <a href="#char0625">[<span class="uname">U+0625 ARABIC LETTER ALEF WITH HAMZA BELOW</span>]</a></span>, and <span class="codepoint"><span dir="rtl" lang="ar">ئ</span> <a href="#char0624">[<span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span>]</a></span>.</p>
+<p>This character represents the hamza (<span class="ex" dir="rtl" lang="ar">ء</span>) in the middle  or at the end of a word. It is not used word-initially. </p>
+          <p>In the middle of a word the <span class="name">hamza</span> is almost always written above a carrier letter (its 'seat'). Which one depends on the vowels preceding and following the <span class="name">hamza</span>, and <a href="https://en.wikipedia.org/wiki/Hamza#Arabic_%22seat%22_rules">the rules</a> are complicated (and a common source of spelling errors among Arabs). </p>
+
+<p>This character is typically used in the following phonetic sequences:</p>
+
+<table class="hamzaTable">
+<thead>
+<tr><th></th>
+<th>i</th>
+<th>iː</th>
+<th>u</th>
+<th>uː</th>
+<th>a</th>
+<th>aː</th></tr>
+</thead>
+<tbody>
+<tr>
+<th>–iʔV–</th><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td></tr>
+<tr>
+<th>–iːʔV–</th><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td></tr>
+<tr>
+<th>–uʔV–</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">–uʔu–</span></td><td><span class="ipa">–uʔuː–</span></td>
+<td><span class="ipa">–uʔa–</span></td>
+<td><span class="ipa">–uʔaː–</span></td></tr>
+<tr>
+<th>–uːʔV–</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td><td></td><td></td><td></td></tr>
+<tr>
+<th>–aʔV–</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">–aʔu–</span></td>
+<td><span class="ipa">–aʔuː–</span></td>
+<td>&nbsp;</td>
+<td></td></tr>
+<tr>
+<th>–aːʔV–</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">–aːʔu–</span></td><td></td><td></td><td></td></tr>
+<tr>
+<th>–ayʔV–</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>–awʔV–</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">–awʔu–</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>–ʔV–</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">–ʔu–</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>–Vʔ–</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">–uʔ–</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<p style="font-size: 70%; line-height: 1; margin-bottom: 2em;">Notes: <br>
+''–' represents any consonant and 'ʔ' represents this character. This table is adapted from <a href="https://en.wikipedia.org/wiki/Hamza#Overview_tables">Wikipedia</a>.<br>
+The item in the –awʔV– row can alternatively be written using <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0621;</span> [<a href="/scripts/arabic/block#char0621"><span class="uname">U+0621 ARABIC LETTER HAMZA</span></a>]</span>.<br>
+For intervocalic sequences beginning with uː see below.</p>
+<p>Examples of usage:</p>
+<ul>
+<li><span class="ipa">CuʔC</span>: <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">مؤمن</span> (<span class="ex" lang="ar" dir="rtl">مُؤْمِن</span>) <span class="trans">muw͓͑min</span> <span class="ipa">muʔmin</span> <span class="meaning">believer</span></span></li>
+<li><span class="ipa">CuʔaC</span>: <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">يؤثر</span> (<span class="ex" lang="ar" dir="rtl">يُؤَثِّر</span>) <span class="trans">yw͑θr</span> <span class="ipa">juʔaθːir</span> <span class="meaning">prefer</span></span></li>
+<li><span class="ipa">CuʔaːC</span>: <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">سؤال</span> (<span class="ex" lang="ar" dir="rtl">سُؤَال</span>) <span class="trans">suw͑aɑl</span> <span class="ipa">suʔaːl</span> <span class="meaning">question</span></span></li>
+</ul>
+<p>The rules are less clear for sequences that  produce two <span class="uname">WA</span> letters in a row, eg. <span class="charExample"><span class="ipa">–uʔuː–</span></span>. Some texts follow the rule that this letter is replaced with <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0621;</span> [<a href="/scripts/arabic/block#char0621"><span class="uname">U+0621 ARABIC LETTER HAMZA</span></a>]</span>, eg.  <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">رؤوس</span> (<span class="ex" lang="ar" dir="rtl">رُؤُوس</span>) <span class="trans">ruw͑uws</span> <span class="ipa">ruʔuːs</span> <span class="meaning">heads</span></span> would be written <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">رءوس</span> <span class="trans">rʔws</span></span>. The rule appears to be less relevant in modern Arabic.</p>
+<p>At the end of a word the hamza is written above a carrier after a short <span class="ipa">u</span>vowel only, eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">تنبّؤ</span> (<span class="ex" lang="ar" dir="rtl">تَنَبُّؤ</span>) <span class="trans">tanabu˖w͑</span> <span class="ipa">tanabbuʔ</span> <span class="meaning">forecast</span></span>. However, it may also be written in this position using <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0621;</span> [<a href="/scripts/arabic/block#char0621"><span class="uname">U+0621 ARABIC LETTER HAMZA</span></a>]</span>.</p>
+<table class="hamzaTable">
+<thead>
+<tr>
+<th></th>
+<th>i</th>
+<th>iː</th>
+<th>u</th>
+<th>uː</th>
+<th>a</th>
+<th>aː</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>–Vʔ</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">–uʔ</span></td>
+<td></td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p style="font-size: 70%; line-height: 1; margin-bottom: 2em;">Notes: '–' represents any consonant and 'ʔ' represents this character. This table is adapted from <a href="https://en.wikipedia.org/wiki/Hamza#Overview_tables">Wikipedia</a>.</p>
+<p>See <span class="codepoint"><span dir="rtl" lang="ar">ء</span> <a href="#char0621">[<span class="uname">U+0621 ARABIC LETTER HAMZA</span>]</a></span> for more information about <span class="name">hamza</span>. See also <span class="codepoint"><span dir="rtl" lang="ar">أ</span> <a href="#char0623">[<span class="uname">U+0623 ARABIC LETTER ALEF WITH HAMZA ABOVE</span>]</a></span>, <span class="codepoint"><span dir="rtl" lang="ar">إ</span> <a href="#char0625">[<span class="uname">U+0625 ARABIC LETTER ALEF WITH HAMZA BELOW</span>]</a></span>, and <span class="codepoint"><span dir="rtl" lang="ar">ئ</span> <a href="#char0624">[<span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span>]</a></span>.</p>
 </div>
       <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">wٔ</span> <span class="name"><span class="localname" dir="ltr" lang="fa"></span> <span class="transliteratedname trans"></span></span> <span class="ipa">ʔ</span></p>
@@ -274,10 +532,35 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
       <div class="notes">
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">ₐ</span> &nbsp;&nbsp; <span dir="rtl" lang="ar"></span></p>
-<p>This character represents the <span class="name">hamza</span> (<span class="ex" dir="rtl" lang="ar">ء</span>).</p>
-          <p>At the beginning of a word <span class="name">hamza</span> is always written on an <span class="name">alef</span> carrier, regardless which vowel it takes. When it takes an <span class="name">i</span> vowel it is written below the <span class="name">alef</span>. Example: <span class="ex">إكرام</span> <span class="trans">'ikrām</span>. </p>
-          <p>The mid-word and word-final equivalent of this character is <span class="codepoint"><span dir="rtl" lang="ar">ئ</span> <a href="#char0626">[<span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span>]</a></span>.</p>
-          <p>See <span class="codepoint"><span dir="rtl" lang="ar">ء</span> <a href="#char0621">[<span class="uname">U+0621 ARABIC LETTER HAMZA</span>]</a></span> for more information about <span class="name">hamza</span>. See also <span class="codepoint"><span dir="rtl" lang="ar">أ</span> <a href="#char0623">[<span class="uname">U+0623 ARABIC LETTER ALEF WITH HAMZA ABOVE</span>]</a></span>, <span class="codepoint"><span dir="rtl" lang="ar">ؤ</span> <a href="#char0624">[<span class="uname">U+0624 ARABIC LETTER WAW WITH HAMZA ABOVE</span>]</a></span>, and <span class="codepoint"><span dir="rtl" lang="ar">ئ</span> <a href="#char0626">[<span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span>]</a></span>.</p>
+<p>This character represents the <span class="name">hamza</span> (<span class="ex" dir="rtl" lang="ar">ء</span>) at the beginning of a word only.</p>
+          <p>At the beginning of a word <span class="name">hamza</span> is always written with an <span class="name">alef</span> carrier, regardless which vowel it takes. When it is followed by an <span class="ipa">i</span> vowel the hamza is written below the <span class="name">alef</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">إدارة</span> (<span class="ex" lang="ar" dir="rtl">إِدَارَة</span>) <span class="trans">ɑ̜dɑrẗ</span> <span class="ipa">ʔidaːra</span> <span class="meaning">administration</span></span>.</p>
+<table class="hamzaTable">
+<thead>
+<tr>
+<th></th>
+<th>i</th>
+<th>iː</th>
+<th>u</th>
+<th>uː</th>
+<th>a</th>
+<th>aː</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>ʔV–</th>
+<td><span class="ipa">ʔi–</span></td>
+<td><span class="ipa">ʔiː–</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+          <p style="font-size: 70%; line-height: 1; margin-bottom: 2em;">Notes: '–' represents any consonant and 'ʔ' represents this character. This table is adapted from <a href="https://en.wikipedia.org/wiki/Hamza#Overview_tables">Wikipedia</a>.</p>
+<p>The mid-word and word-final equivalent of this character is <span class="codepoint"><span dir="rtl" lang="ar">ئ</span> <a href="#char0626">[<span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span>]</a></span>.</p>
+<p>See <span class="codepoint"><span dir="rtl" lang="ar">ء</span> <a href="#char0621">[<span class="uname">U+0621 ARABIC LETTER HAMZA</span>]</a></span> for more information about <span class="name">hamza</span>. See also <span class="codepoint"><span dir="rtl" lang="ar">أ</span> <a href="#char0623">[<span class="uname">U+0623 ARABIC LETTER ALEF WITH HAMZA ABOVE</span>]</a></span>, <span class="codepoint"><span dir="rtl" lang="ar">ؤ</span> <a href="#char0624">[<span class="uname">U+0624 ARABIC LETTER WAW WITH HAMZA ABOVE</span>]</a></span>, and <span class="codepoint"><span dir="rtl" lang="ar">ئ</span> <a href="#char0626">[<span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span>]</a></span>.</p>
 </div>
 <div class="letter hausa">
 <p class="titlepara">Hausa</p>
@@ -294,11 +577,119 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
       <p class="univiewLink"><a target="_blank" href="/uniview/?char=0626">See in UniView</a></p>
       <div class="unicodenotes">≡ 064A 0654</div>
       <div class="notes">
+<p class="charNotes">Do not confuse this letter with <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0649;</span> [<a href="/scripts/arabic/block#char0649"><span class="uname">U+0649 ARABIC LETTER ALEF MAKSURA</span></a>]</span>, or <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x064A;</span> [<a href="/scripts/arabic/block#char064A"><span class="uname">U+064A ARABIC LETTER YEH</span></a>]</span></p>
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">ʸ</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">يَاء هَمْزة</span> <span class="trans">yāʼ hamzah</span>  </p>
-<p>This character represents the hamza (<span class="ex" dir="rtl" lang="ar">ء</span>) in the middle  of a word. When <span class="name">yeh</span> is used as a mid-word carrier it loses its dots.</p>
-          <p>In the middle of a word the <span class="name">hamza</span> is almost always written above a carrier letter. Which one depends on the vowels preceding and following the <span class="name">hamza</span>, and the rules are complicated (and a common source of spelling errors among Arabs),  eg. <span class="ex" dir="rtl" lang="ar">نائم</span> <span class="trans">nā'im</span> (but cf. <span class="ex" dir="rtl" lang="ar">سأل</span> <span class="trans">sa'al</span>, <span class="ex" dir="rtl" lang="ar">مؤمن</span> <span class="trans">mu'min</span>). </p>
-          <p>See <span class="codepoint"><span dir="rtl" lang="ar">ء</span> <a href="#char0621">[<span class="uname">U+0621 ARABIC LETTER HAMZA</span>]</a></span> for more information about <span class="name">hamza</span>. See also <span class="codepoint"><span dir="rtl" lang="ar">أ</span> <a href="#char0623">[<span class="uname">U+0623 ARABIC LETTER ALEF WITH HAMZA ABOVE</span>]</a></span>, <span class="codepoint"><span dir="rtl" lang="ar">إ</span> <a href="#char0625">[<span class="uname">U+0625 ARABIC LETTER ALEF WITH HAMZA BELOW</span>]</a></span>, and <span class="codepoint"><span dir="rtl" lang="ar">ؤ</span> <a href="#char0624">[<span class="uname">U+0624 ARABIC LETTER WAW WITH HAMZA ABOVE</span>]</a></span>.</p>
+<p>This character represents the hamza (<span class="ex" dir="rtl" lang="ar">ء</span>) in the middle  of or at the end of a word. It is not used word-initially. </p>
+<p>When <span class="name">yeh</span> is used as a mid-word carrier it loses its dots.</p>
+          <p>In the middle of a word the <span class="name">hamza</span> is almost always written above a carrier letter  as one of <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">أ ؤ ئ</span></span>. Which one depends on the vowels preceding and following the <span class="name">hamza</span>, and the rules are complicated (and a common source of spelling errors among Arabs). </p>
+<p>This character is typically used in the following phonetic sequences:</p>
+
+<table class="hamzaTable">
+<thead>
+<tr><th></th>
+<th>i</th>
+<th>iː</th>
+<th>u</th>
+<th>uː</th>
+<th>a</th>
+<th>aː</th></tr>
+</thead>
+<tbody>
+<tr>
+<th>–iʔV–</th><td><span class="ipa">–iʔi–</span></td><td><span –lass="ipa">–iʔiː–</span></td>
+<td><span class="ipa">–iʔu–</span></td>
+<td><span class="ipa">–iʔuː–</span></td>
+<td><span class="ipa">–iʔa–</span></td>
+<td><span class="ipa">–iʔaː–</span></td></tr>
+<tr>
+<th>–iːʔV–</th><td><span class="ipa">–iːʔi–</span></td><td><span class="ipa">–iːʔiː–</span></td>
+<td><span class="ipa">–iːʔu–</span></td>
+<td><span class="ipa">–iːʔuː–</span></td>
+<td><span class="ipa">–iːʔa–</span></td>
+<td><span class="ipa">–iːʔaː–</span></td></tr>
+<tr>
+<th>–uʔV–</th>
+<td><span class="ipa">–uʔi–</span></td>
+<td><span class="ipa">–uʔiː–</span></td>
+<td></td><td></td><td></td><td></td></tr>
+<tr>
+<th>–uːʔV–</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td><td></td><td></td><td></td></tr>
+<tr>
+<th>–aʔV–</th>
+<td><span class="ipa">–aʔi–</span></td>
+<td><span class="ipa">–aʔiː–</span></td>
+<td></td><td></td><td></td><td></td></tr>
+<tr>
+<th>–aːʔV–</th>
+<td><span class="ipa">–aːʔi–</span></td>
+<td><span class="ipa">–aːʔiː–</span></td>
+<td></td><td></td><td></td><td></td></tr>
+<tr>
+<th>–ayʔV–</th>
+<td><span class="ipa">–ajʔi–</span></td>
+<td><span class="ipa">–ajʔiː–</span></td>
+<td><span class="ipa">–ajʔu–</span></td>
+<td><span class="ipa">–ajʔuː–</span></td>
+<td><span class="ipa">–ajʔa–</span></td>
+<td><span class="ipa">–ajʔaː–</span></td>
+</tr>
+<tr>
+<th>–awʔV–</th>
+<td><span class="ipa">–awʔi–</span></td>
+<td><span class="ipa">–awʔiː–</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>–ʔV–</th>
+<td><span class="ipa">–ʔi–</span></td>
+<td><span class="ipa">–ʔiː–</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>–Vʔ–</th>
+<td><span class="ipa">–iʔ–</span></td>
+<td><span class="ipa">–iːʔ–</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p style="font-size: 70%; line-height: 1; margin-bottom: 2em;">Notes: '–' represents any consonant and 'ʔ' represents this character. This table is adapted from <a href="https://en.wikipedia.org/wiki/Hamza#Overview_tables">Wikipedia</a><br>
+.The items in the last row can alternatively be written using <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0621;</span> [<a href="/scripts/arabic/block#char0621"><span class="uname">U+0621 ARABIC LETTER HAMZA</span></a>]</span>.</p>
+<p>At the end of a word the hamza is written above a carrier after a short <span class="ipa">i</span> vowel only. However, it may also be written in this position using <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0621;</span> [<a href="/scripts/arabic/block#char0621"><span class="uname">U+0621 ARABIC LETTER HAMZA</span></a>]</span>.</p>
+
+
+<table class="hamzaTable">
+<thead>
+<tr><th></th><th>i</th><th>iː</th><th>u</th><th>uː</th><th>a</th><th>aː</th></tr>
+</thead>
+<tbody>
+<tr>
+<th>–Vʔ</th>
+<td><span class="ipa">–iʔ</span></td>
+<td>&nbsp;</td>
+<td></td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+<p style="font-size: 70%; line-height: 1; margin-bottom: 2em;">Notes: '–' represents any consonant and 'ʔ' represents this character. This table is adapted from <a href="https://en.wikipedia.org/wiki/Hamza#Overview_tables">Wikipedia</a>.</p>
+<p>Examples of usage:</p>
+<ul>
+<li><span class="ipa">-ːʔiː-</span>: <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">رئيس</span> (<span class="ex" lang="ar" dir="rtl">رَئِيس</span>) <span class="trans">ry͑ys</span> <span class="ipa">raʔiːs</span> <span class="meaning">President</span></span></li>
+<li><span class="ipa">-aːʔi-</span>: <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">زائر</span> (<span class="ex" lang="ar" dir="rtl">زَائِر</span>) <span class="trans">zaɑy͑ir</span> <span class="ipa">zaːʔir</span> <span class="meaning">visitor</span></span></li>
+</ul>
+<p>See <span class="codepoint"><span dir="rtl" lang="ar">ء</span> <a href="#char0621">[<span class="uname">U+0621 ARABIC LETTER HAMZA</span>]</a></span> for more information about <span class="name">hamza</span>. See also <span class="codepoint"><span dir="rtl" lang="ar">أ</span> <a href="#char0623">[<span class="uname">U+0623 ARABIC LETTER ALEF WITH HAMZA ABOVE</span>]</a></span>, <span class="codepoint"><span dir="rtl" lang="ar">إ</span> <a href="#char0625">[<span class="uname">U+0625 ARABIC LETTER ALEF WITH HAMZA BELOW</span>]</a></span>, and <span class="codepoint"><span dir="rtl" lang="ar">ؤ</span> <a href="#char0624">[<span class="uname">U+0624 ARABIC LETTER WAW WITH HAMZA ABOVE</span>]</a></span>.</p>
 </div>
         <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">yٔ</span> <span class="name"><span class="localname" dir="ltr" lang="fa"></span> <span class="transliteratedname trans"></span></span> <span class="ipa">ʔ</span></p>
@@ -408,6 +799,8 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
       <div class="unicodenotes"></div><div class="notes">
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">b</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">بَاء</span> <span class="trans">bā’</span> &nbsp;&nbsp; <span class="ipa">b</span></p>
+<p><span class="ipa">b</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">بيت</span> <span class="trans">byt</span> <span class="ipa">bajt</span> <span class="meaning">house</span></span>.</p>
+<p>May be used for foreign words instead of <span class="ipa">p</span>.</p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">b</span> <span class="name"><span class="localname" dir="ltr" lang="fa">بِ</span> <span class="transliteratedname trans">be</span></span> <span class="ipa">b</span></p>
@@ -428,9 +821,11 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
       <div class="unicodenotes"></div><div class="notes">
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">ẗ</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">تاء مربوطة</span> <span class="trans">tāʼ marbūṭah</span></p>
-<p>Usually no sound, sometimes <span class="ipa">t</span>.</p>
-          <p>Used for historical reasons to write the feminine ending, <span class="ipa">æ</span> – the dots are borrowed from teh (<span class="ex" dir="rtl" lang="ar">ت</span>). Pronounced as <span class="ipa">t</span> in specific grammatical contexts. Example: <span class="ex" dir="rtl" lang="ar">مدرسة</span> <span class="ipa">mædræsæ</span>.</p>
-          <p>This letter is only used in final position. If any suffix is added the ending is spelled with <span class="codepoint"><span dir="rtl" lang="ar">ت</span> <a href="#char062A">[<span class="uname">U+062A ARABIC LETTER TEH</span>]</a></span>, eg. <span class="ex" dir="rtl" lang="ar">مدرستنا</span> <span class="ipa">mædræsæt-naː</span>.</p>
+<p>Usually no sound, sometimes <span class="ipa">t</span>. This letter is only used in final position. </p>
+          <p>Used for historical reasons to write the feminine ending <span class="ipa">æ</span> – the dots are borrowed from teh (<span class="ex" dir="rtl" lang="ar">ت</span>), eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">مدرسة</span> <span class="trans">mdrsẗ</span> <span class="ipa">mædræsæ</span> <span class="meaning">school</span></span>.</p>
+<p>Vowelled text may omit the short <span class="ipa">æ</span> diacritic before the <span class="name">teh marbuta</span>, because the sound is always the same.</p>
+<p><span class="ipa">t</span> in   specific grammatical contexts.</p>
+          <p>If any suffix is added the ending is spelled with <span class="codepoint"><span dir="rtl" lang="ar">ت</span> <a href="#char062A">[<span class="uname">U+062A ARABIC LETTER TEH</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">مدرستنا</span> <span class="trans">mdrstnɑ</span> <span class="ipa">mædræsæt-naː</span> <span class="meaning">our school</span></span>.</p>
           <p>In modern arabic it is not uncommon to find the two dots omitted, particularly on masculine proper names that have the feminine ending, eg. <span class="ex" dir="rtl" lang="ar">طلبة</span> <span class="ipa">tulbæ</span>.</p>
 </div>
 <div class="letter persian">
@@ -449,6 +844,7 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp;  <span class="trans">t</span>
  &nbsp;&nbsp;  <span dir="rtl" lang="ar">تَاء</span> <span class="trans">tā’</span> &nbsp;&nbsp; <span class="ipa">t</span></p>
+<p><span class="ipa">t</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">تلك</span> <span class="trans">til͓ka</span> <span class="ipa">tilka</span> <span class="meaning">that</span></span>.</p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">t</span> <span class="name"><span class="localname" dir="ltr" lang="fa">تِ</span> <span class="transliteratedname trans">te</span></span> <span class="ipa">t</span></p>
@@ -469,6 +865,7 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
       <div class="unicodenotes"></div><div class="notes">
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">ṯ</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">ثَاء</span> <span class="trans">thā’</span> &nbsp;&nbsp; <span class="ipa">θ</span></p>
+<p><span class="ipa">θ</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">ثلاثة</span> <span class="trans">θalɑθaẗ</span> <span class="ipa">θalaːθa</span> <span class="meaning">three</span></span>.</p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">s̱</span> <span class="name"><span class="localname" dir="ltr" lang="fa">ثِ</span> <span class="transliteratedname trans">se</span></span> <span class="ipa">s̱</span></p>
@@ -489,6 +886,7 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp;  <span class="trans">ǧ</span>
  &nbsp;&nbsp;  <span dir="rtl" lang="ar">جِيمْ</span> <span class="trans">jīm</span> &nbsp;&nbsp; <span class="ipa">ʒ</span></p>
+<p>The sound, <span class="ipa">d͡ʒ</span> is used in  Algerian, Hejazi, Najdi, Iraqi, and Gulf regions, whereas <span class="ipa">ʒ</span> is used in Moroccan, Tunisian, Egyptian, Levantine, and Israeli regions.<a class="fnref" href="https://en.wikipedia.org/wiki/Arabic_phonology#Local_variations_of_Modern_Standard_Arabic">w</a></p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">ǧ</span> <span class="name"><span class="localname" dir="ltr" lang="fa">جیم</span> <span class="transliteratedname trans">jim</span></span> <span class="ipa">ʤ</span></p>
@@ -510,6 +908,7 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
       <div class="unicodenotes"></div><div class="notes">
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">ḥ</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">حَاء</span> <span class="trans">ḥā’</span> &nbsp;&nbsp; <span class="ipa">ħ</span></p>
+<p><span class="ipa">ħ</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">حتّى</span> <span class="trans">ħata˖à</span> <span class="ipa">ħatːaː</span> <span class="meaning">until</span></span>.</p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">ḥ</span> <span class="name"><span class="localname" dir="ltr" lang="fa">حِ</span> <span class="transliteratedname trans">he</span></span> <span class="ipa">h, -</span></p>
@@ -528,6 +927,7 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
       <div class="unicodenotes"></div><div class="notes">
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">ẖ</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">خَاء</span> <span class="trans">khā’</span> &nbsp;&nbsp; <span class="ipa">x</span></p>
+<p><span class="ipa">x</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">خِلال</span> <span class="trans">xilɑl</span> <span class="ipa">xilaːla</span> <span class="meaning">through </span></span>.</p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">ẖ</span> <span class="name"><span class="localname" dir="ltr" lang="fa">خِ</span> <span class="transliteratedname trans">xe</span></span> <span class="ipa">x</span></p>
@@ -546,6 +946,7 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
       <div class="unicodenotes"></div><div class="notes">
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">d</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">دَالْ</span> <span class="trans">dāl</span> &nbsp;&nbsp; <span class="ipa">d</span></p>
+<p><span class="ipa">d</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">دِيوَان</span> <span class="trans">diywaɑn</span> <span class="ipa">diːwaːn</span> <span class="meaning">poetry</span></span>.</p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">d</span> <span class="name"><span class="localname" dir="ltr" lang="fa">دال</span> <span class="transliteratedname trans">dāl</span></span> <span class="ipa">d</span></p>
@@ -566,6 +967,7 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
 <div class="unicodenotes"></div><div class="notes">
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">ḏ</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">ذَال</span> <span class="trans">dhāl</span> &nbsp;&nbsp; <span class="ipa">ð</span></p>
+<p><span class="ipa">ð</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">ذَاتِيَّة</span> <span class="trans">ðaɑtiya˖ẗ</span> <span class="ipa">ðaːtiːja</span> <span class="meaning">identity</span></span>.</p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">ẕ</span> <span class="name"><span class="localname" dir="ltr" lang="fa">ذال</span> <span class="transliteratedname trans">zāl</span></span> <span class="ipa">z</span></p>
@@ -592,6 +994,7 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp;  <span class="trans">r</span>
  &nbsp;&nbsp;  <span dir="rtl" lang="ar">رَاء</span> <span class="trans">rā’</span> &nbsp;&nbsp; <span class="ipa">r</span></p>
+<p><span class="ipa">r</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">رؤوس</span> <span class="trans">ruw͑uws</span> <span class="ipa">ruʔuːs</span> <span class="meaning">heads</span></span>.</p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">r</span> <span class="name"><span class="localname" dir="ltr" lang="fa">رِ</span> <span class="transliteratedname trans">re</span></span> <span class="ipa">r</span></p>
@@ -610,6 +1013,7 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
 <div class="unicodenotes"></div><div class="notes">
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">z</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">زَاي</span> <span class="trans">zayn</span> &nbsp;&nbsp; <span class="ipa">z</span></p>
+<p><span class="ipa">z</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">زِيارة</span> <span class="trans">ziyɑrẗ</span> <span class="ipa">zijaːra</span> <span class="meaning">visit</span></span>.</p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">z</span> <span class="name"><span class="localname" dir="ltr" lang="fa">زِ</span> <span class="transliteratedname trans">ze</span></span> <span class="ipa">z</span></p>
@@ -633,6 +1037,7 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
 <div class="unicodenotes"></div><div class="notes">
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">s</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">ِسِينْ</span> <span class="trans">sīn</span> &nbsp;&nbsp; <span class="ipa">s</span></p>
+<p><span class="ipa">s</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">سنة</span> <span class="trans">sanaẗ</span> <span class="ipa">sana</span> <span class="meaning">year</span></span>.</p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">s</span> <span class="name"><span class="localname" dir="ltr" lang="fa">سین</span> <span class="transliteratedname trans">sin</span></span> <span class="ipa">s</span></p>
@@ -659,6 +1064,7 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp;  <span class="trans">š</span>
  &nbsp;&nbsp;  <span dir="rtl" lang="ar">شِينْ</span> <span class="trans">shīn</span> &nbsp;&nbsp; <span class="ipa">ʃ</span></p>
+<p><span class="ipa">ʃ</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">شمس</span> <span class="trans">ʃam͓s</span> <span class="ipa">ʃams</span> <span class="meaning">sun</span></span>.</p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">š</span> <span class="name"><span class="localname" dir="ltr" lang="fa">شین</span> <span class="transliteratedname trans">šin</span></span> <span class="ipa">ʃ</span></p>
@@ -678,6 +1084,7 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
 <div class="unicodenotes"></div><div class="notes">
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">ṣ</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">صَادْ</span> <span class="trans">ṣād</span> &nbsp;&nbsp; <span class="ipa">s̴</span></p>
+<p><span class="ipa">ص</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">صحيفة</span> <span class="trans">ᵴaħiyfaẗ</span> <span class="ipa">sˤaħiːfa</span> <span class="meaning">newspaper</span></span>.</p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">ṣ</span> <span class="name"><span class="localname" dir="ltr" lang="fa">صاد</span> <span class="transliteratedname trans">sād</span></span> <span class="ipa">s</span></p>
@@ -702,6 +1109,7 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
 <div class="unicodenotes"></div><div class="notes">
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">ḍ</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">ضَاد</span> <span class="trans">ḍād</span> &nbsp;&nbsp; <span class="ipa">d̴</span></p>
+<p><span class="ipa">dˤ</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">ضمان</span> <span class="trans">ᵭamɑn</span> <span class="ipa">dˤamaːn</span> <span class="meaning">guarantee</span></span>.</p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">z̤</span> <span class="name"><span class="localname" dir="ltr" lang="fa">ضاد</span> <span class="transliteratedname trans">zād</span></span> <span class="ipa">z</span></p>
@@ -727,6 +1135,7 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
       <div class="unicodenotes"></div><div class="notes">
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">ṭ</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">طَاء</span> <span class="trans">ṭā’</span> &nbsp;&nbsp; <span class="ipa">t̴</span></p>
+<p><span class="ipa">tˤ</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">طريق</span> <span class="trans">ᵵariyq</span> <span class="ipa">tˤariːq</span> <span class="meaning">road</span></span>.</p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">t̤</span> <span class="name"><span class="localname" dir="ltr" lang="fa">طی</span> <span class="transliteratedname trans">ṭā</span></span> <span class="ipa">t</span></p>
@@ -747,6 +1156,7 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp;  <span class="trans">ẓ</span>
 &nbsp;&nbsp;  <span dir="rtl" lang="ar">ظَاء</span> <span class="trans">ẓā’</span> &nbsp;&nbsp; <span class="ipa">z̴</span></p>
+<p><span class="ipa">ðˤ</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">ظلام</span> <span class="trans">ð̴alɑm</span> <span class="ipa">ðˤalaːm</span> <span class="meaning">darkness</span></span>.</p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">ẓ</span> <span class="name"><span class="localname" dir="ltr" lang="fa">ظی</span> <span class="transliteratedname trans">zā</span></span> <span class="ipa">z</span></p>
@@ -774,6 +1184,7 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
       <div class="notes">
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">ʿ</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">عَين</span> <span class="trans">‘ayn</span> &nbsp;&nbsp; <span class="ipa">ʕ</span></p>
+<p><span class="ipa">ʕ</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">على</span> <span class="trans">ʕalaà</span> <span class="ipa">ʕalaː</span> <span class="meaning">over</span></span>.</p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">ʿ</span> <span class="name"><span class="localname" dir="ltr" lang="fa">عین</span> <span class="transliteratedname trans">ʿeyn</span></span> <span class="ipa">ʔ, -</span></p>
@@ -803,6 +1214,7 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
       <div class="unicodenotes"></div><div class="notes">
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">ġ</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">غَين</span> <span class="trans">ghayn</span> &nbsp;&nbsp; <span class="ipa">ɣ</span></p>
+<p><span class="ipa">ɣ</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">غَيْر</span> <span class="trans">ɣay͓r</span> <span class="ipa">ɣajr</span> <span class="meaning">other</span></span>.</p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">ġ</span> <span class="name"><span class="localname" dir="ltr" lang="fa">غین</span> <span class="transliteratedname trans">ġeyn</span></span> <span class="ipa">ɣ</span></p>
@@ -823,7 +1235,8 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
 <div class="unicodenotes"></div><div class="notes">
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">f</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">فَاء</span> <span class="trans">fā’</span> &nbsp;&nbsp; <span class="ipa">f</span></p>
-<p>In arabic material printed in North Africa this letter sometimes has one dot <em>below</em>. There is a separate code point for that (<span class="codepoint"><span lang="ar" dir="rtl">&#x06A2;</span> <a href="#char06A2">[<span class="uname">U+06A2 ARABIC LETTER FEH WITH DOT MOVED BELOW</span>]</a></span>.</p>
+<p><span class="ipa">f</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">فقيد</span> <span class="trans">faqiyd</span> <span class="ipa">faqiːd</span> <span class="meaning">lost</span></span>.</p>
+<p>In  North Africa this letter sometimes has one dot <em>below</em>. There is a separate code point for that, <span class="codepoint"><span lang="ar" dir="rtl">&#x06A2;</span> <a href="#char06A2">[<span class="uname">U+06A2 ARABIC LETTER FEH WITH DOT MOVED BELOW</span>]</a></span>.</p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">f</span> <span class="name"><span class="localname" dir="ltr" lang="fa">فِ</span> <span class="transliteratedname trans">fe</span></span> <span class="ipa">f</span></p>
@@ -847,7 +1260,8 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp;  <span class="trans">q</span>
 &nbsp;&nbsp;  <span dir="rtl" lang="ar">قَاف</span> <span class="trans">qāf</span> &nbsp;&nbsp; <span class="ipa">q</span></p>
-          <p>In arabic material printed in North Africa this letter sometimes has only one dot above. There is a separate code point for that (<span class="codepoint"><span lang="ar" dir="rtl">&#x06A7;</span> <a href="#char06A7">[<span class="uname">U+06A7 ARABIC LETTER QAF WITH DOT ABOVE</span>]</a></span>), but it would make more sense to use a font to make this difference than to use a different character.</p>
+          <p><span class="ipa">q</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">قدح</span> <span class="trans">qadaħ</span> <span class="ipa">qadaħ</span> <span class="meaning">goblet</span></span>.</p>
+<p>In  North Africa an alternative version of this letter with only one dot above is sometimes used. There is a separate code point for that, <span class="codepoint"><span lang="ar" dir="rtl">&#x06A7;</span> <a href="#char06A7">[<span class="uname">U+06A7 ARABIC LETTER QAF WITH DOT ABOVE</span>]</a></span>.</p>
       </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">q</span> <span class="name"><span class="localname" dir="ltr" lang="fa">قاف</span> <span class="transliteratedname trans">qāf</span></span> <span class="ipa">q, ɢ</span></p>
@@ -874,6 +1288,7 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
 <div class="notes">
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">k</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">كَاف</span> <span class="trans">kāf</span> &nbsp;&nbsp; <span class="ipa">k</span></p>
+<p><span class="ipa">k</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">كيف</span> <span class="trans">kay͓fa</span> <span class="ipa">kajfa</span> <span class="meaning">how</span></span>.</p>
 </div>
 <div class="letter persian">
   <p class="titlepara"><span class="title">Persian</span> &nbsp;&nbsp; <span class="ipa">k</span></p>
@@ -898,6 +1313,8 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
 <div class="unicodenotes"></div><div class="notes">
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">l</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">لاَمْ</span> <span class="trans">lām</span> &nbsp;&nbsp; <span class="ipa">l</span></p>
+<p><span class="ipa">l</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">لَحم</span> <span class="trans">laħm</span> <span class="ipa">laħm</span> <span class="meaning">meat</span></span>.</p>
+<p><span class="ipa">ɫ</span> occurs as a phoneme in a handful of loanwords, though not in all pronunciations. It also occurs in the name <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">اللّٰه</span> <span class="trans">ɑll˖̍h</span> <span class="ipa">aɫˈɫaː</span>.</span></p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">l</span> <span class="name"><span class="localname" dir="ltr" lang="fa">لام</span> <span class="transliteratedname trans">lām</span></span> <span class="ipa">l</span></p>
@@ -928,6 +1345,7 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
       <div class="unicodenotes"></div><div class="notes">
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">m</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">مِيمْ</span> <span class="trans">mīm</span> &nbsp;&nbsp; <span class="ipa">m</span></p>
+<p><span class="ipa">m</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">منذ</span> <span class="trans">mun͓ðu</span> <span class="ipa">munðu</span> <span class="meaning">since</span></span>.</p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">m</span> <span class="name"><span class="localname" dir="ltr" lang="fa">میم</span> <span class="transliteratedname trans">mim</span></span> <span class="ipa">m</span></p>
@@ -947,6 +1365,7 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
 <div class="unicodenotes"></div><div class="notes">
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">n</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">نُون</span> <span class="trans">nūn</span> &nbsp;&nbsp; <span class="ipa">n</span></p>
+<p><span class="ipa">n</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">نحو</span> <span class="trans">naħ͓wa</span> <span class="ipa">naħwa</span> <span class="meaning">toward</span></span>.</p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">n</span> <span class="name"><span class="localname" dir="ltr" lang="fa">نون</span> <span class="transliteratedname trans">nun</span></span> <span class="ipa">n</span></p>
@@ -973,6 +1392,7 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
       <div class="unicodenotes"></div><div class="notes">
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">h</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">هَاء</span> <span class="trans">hā’</span> &nbsp;&nbsp; <span class="ipa">h</span></p>
+<p><span class="ipa">h</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">هناك</span> <span class="trans">hunaɑk</span> <span class="ipa">hunaːk</span> <span class="meaning">there</span></span>.</p>
 <p>The marker for hijri dates is an initial form of <span class="name">heh</span>, even though it doesn't join to the left, ie. <span class="ex" dir="rtl" lang="ur">ه‍</span>. For this, use a <a href="../punctuation/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a> immediately after the <span class="name">heh</span>, eg. <span class="ex" lang="ar" dir="rtl">الاثنين 10 رجب 1415 ه‍.</span>. In some cases <span class="codepoint"><span lang="ar" dir="rtl">&#x0640;</span> <a href="#char0640">[<span class="uname">U+0640 ARABIC TATWEEL</span>]</a></span> is used to ensure that the shape looks right, because some applications or fonts don't produce the right effect when using the ZWJ, eg. <span class="ex" lang="ar" dir="rtl">الاثنين 10 رجب 1415 هـ.</span>.</p>
         </div>
 <div class="letter persian">
@@ -990,11 +1410,13 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
       <p class="charname"><strong>U+0648</strong> <a href="#char0648">ARABIC LETTER WAW</a></p>
       <p class="univiewLink"><a target="_blank" href="/uniview/?char=0648">See in UniView</a></p>
       <div class="unicodenotes"></div><div class="notes">
+	  <p class="charNotes">Do not confuse this character with <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0624;</span> [<a href="/scripts/arabic/block#char0624"><span class="uname">U+0624 ARABIC LETTER WAW WITH HAMZA ABOVE</span></a>]</span>.</p>
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">w</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">وَاو</span> <span class="trans">wāw</span> &nbsp;&nbsp; <span class="ipa">w, u</span></p>
-<p><span class="ipa">w</span> consonant or lengthener of u-vowel.</p>
-          <p>In certain foreign words, pronounced more like <span class="ipa">oː</span>, eg. <span class="ex" dir="rtl" lang="ar">بنطلون</span> <span class="ipa">bænt̴æloːn</span></p>
-          <p>The male proper name <span class="ex" dir="rtl" lang="ar">عمرو</span> <span class="ipa">ʕæmr</span> is written with an unpronounced final waw to distinguish it from the name <span class="ex" dir="rtl" lang="ar">عمر</span> <span class="ipa">ʕumar</span> that would otherwise be written identically.</p>
+<p><span class="ipa">w</span> consonant and part of <span class="ipa">aw</span> diphthong, eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">وفى أوفياء</span> <span class="trans">wafià ɑ͑w͓fiyɑʔ</span> <span class="ipa">wafiː awfijaːʔ</span> <span class="meaning">complete (sing+pl)</span></span>.</p>
+<p><span class="ipa">uː</span> as mater lectionis, indicating location of a long u-vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">نقود</span> <span class="trans">nuquwd</span> <span class="ipa">nuquːd</span> <span class="meaning">money</span></span>.</p>
+          <p>In certain foreign words, pronounced more like <span class="ipa">oː</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">بنطلون</span> <span class="trans">ban͓ᵵaluwn</span> <span class="ipa">bænt̴æloːn</span> <span class="meaning">trousers</span></span>.</p>
+          <p>The male proper name <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">عمرو</span> <span class="trans">ʕmrw</span> <span class="ipa">ʕæmr</span> <span class="meaning">Amr</span></span> is written with an unpronounced final waw to distinguish it from the name <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">عمر</span> <span class="trans">ʕmr</span> <span class="ipa">ʕumar</span> <span class="meaning">Omar</span></span> that would otherwise be written identically.</p>
 </div>
 <div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span> <span class="localtrans trans">v</span> <span class="name"><span class="localname" dir="ltr" lang="fa">واو</span> <span class="transliteratedname trans">vāv</span></span><span class="ipa">v, u, o, ow, -</span></p>
@@ -1060,12 +1482,15 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
         • not intended for use in combination with 0654<br/>
         → (arabic letter yeh with hamza above - 0626)</div>
       <div class="notes">
+
+<p class="charNotes">Do not confuse this letter with <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x064A;</span> [<a href="/scripts/arabic/block#char064A"><span class="uname">U+064A ARABIC LETTER YEH</span></a>]</span>, or <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0626;</span> [<a href="/scripts/arabic/block#char0626"><span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span></a>].</span></p>
+<p class="charNotes">For Persian or Urdu see  <span class="codepoint"><span lang="ar" dir="rtl">&#x06CC;</span> <a href="#char06CC">[<span class="uname">U+06CC ARABIC LETTER FARSI YEH</span>]</a></span>.</p>
+
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">ỳ</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">ألف مقصورة</span> <span class="trans">alif maqṣūrah</span> &nbsp;&nbsp; <span class="ipa">ɑː</span></p>
-<p><span class="ipa">eg. </span> <span class="ex" lang="ar" dir="rtl">مستشفى</span> <span class="ipa">mustaʃfɑː</span> <span class="meaning">hospital</span>.</p>
-          <p>The long a-vowel at the end of many words is written with <span class="uname">yeh</span> instead of an <span class="uname">alef</span>. In this case the <span class="uname">yeh</span> is typically printed without dots, to avoid confusion, although this is not universal.  This spelling only occurs with certain words, and only when the final sound is <span class="ipa">aː</span>, eg. <span class="ex" dir="rtl" lang="ar">معنى</span> <span class="ipa">mæʕnaː</span>. If any suffix is added, the spelling reverts to the normal alef, eg. <span class="ex" dir="rtl" lang="ar">معناهم</span> <span class="ipa">mæʕnaː-hum</span>.  </p>
-          <p>Vowelled text may omit the short <span class="ipa">æ</span> diacritic before the <span class="uname">teh marbuta</span>, because the sound is always the same.</p>
-          <p>Older fonts may not show dual joining.</p>
+<p><span class="ipa">aː</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">مستشفى</span> <span class="trans">mus͓taʃ͓faà</span> <span class="ipa">mustaʃfaː</span> <span class="meaning">hospital</span></span>.</p>
+          <p>The long a-vowel at the end of many words is written with <span class="uname">yeh</span> instead of an <span class="uname">alef</span>. In this case the <span class="uname">yeh</span> is typically printed without dots, to avoid confusion, although this is not universal.  This spelling only occurs with certain words, and only when the final sound is <span class="ipa">aː</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">معنى</span> <span class="trans">maʕ͓naà</span> <span class="ipa">maʕnaː</span></span>. If any suffix is added, the spelling reverts to the normal alef, eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">معناهم</span> <span class="trans">mʕnɑhm</span> <span class="ipa">maʕnaː-hum</span></span>.  </p>
+<p>Older fonts may not show dual joining.</p>
         </div>
 <div class="letter hausa">
 <p class="titlepara">Hausa</p>
@@ -1078,8 +1503,7 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
 </ul>
 </div>
         <p class="ref">General sources: <a href="http://www.unicode.org/versions/Unicode10.0.0/ch09.pdf#Arabic" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Arabic_script" target="_blank">Wikipedia</a>, <a href="block#refs">Daniels</a></p>
-<p>Not used in Persian or Urdu.  See <span class="codepoint"><span lang="ar" dir="rtl">&#x06CC;</span> <a href="#char06CC">[<span class="uname">U+06CC ARABIC LETTER FARSI YEH</span>]</a></span>.</p>
-      </div>
+</div>
     </div>
 
 <div class="character" id="char064A">
@@ -1091,18 +1515,22 @@ Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span>
 • retains its dots when used in combination with other combining marks<br/>
 → (arabic letter yeh with two dots below and hamza above - 08A8)</div>
 <div class="notes">
+<p class="charNotes">Do not confuse this letter with <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0649;</span> [<a href="/scripts/arabic/block#char0649"><span class="uname">U+0649 ARABIC LETTER ALEF MAKSURA</span></a>]</span>, or <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0626;</span> [<a href="/scripts/arabic/block#char0626"><span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span></a>].</span></p>
+<p class="charNotes">For Kashmiri, Persian or Urdu, see  <span class="codepoint"><span lang="ar" dir="rtl">&#x06CC;</span> <a href="#char06CC">[<span class="uname">U+06CC ARABIC LETTER FARSI YEH</span>]</a></span>.</p>
+
 <div class="letter arabic">
 <p class="titlepara"><span class="title">Arabic</span> &nbsp;&nbsp; <span class="trans">y</span> &nbsp;&nbsp; <span dir="rtl" lang="ar">يَاء</span> <span class="trans">yā’</span>          </p>
-<p>In certain foreign words, pronounced more like <span class="ipa">eː</span>, eg. <span class="ex" dir="rtl" lang="ar">سكرتير</span> <span class="ipa">sɪkrɪteːr</span>.</p>
-<p><span class="leadin">Use with  hamza</span> When used with <span class="codepoint"><span dir="rtl" lang="ar">ٔ</span> <a href="#char0654">[<span class="uname">U+0654 ARABIC HAMZA ABOVE</span>]</a></span> the two dots are suppressed in all positions. Text in NFC actually uses <span class="codepoint"><span dir="rtl" lang="ar">ئ</span> <a href="#char0626">[<span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span>]</a></span> rather than the decomposed sequence, so that is recommended.</p>
-<p>Unlike this character, <span class="codepoint"><span dir="rtl" lang="ar">ࢨ</span> <a href="#char08A8">[<span class="uname">U+08A8 ARABIC LETTER YEH WITH TWO DOTS BELOW AND HAMZA ABOVE</span>]</a></span> retains  the two dots in all forms, however it also represents a semantically different character.</p>
+<p><span class="ipa">j</span> as a consonant followed by a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">سيارة</span> <span class="trans">syɑrẗ</span> <span class="ipa">sajaːra</span> <span class="meaning">car </span></span>, but also as part of the diphthong <span class="ipa">aj</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">بيت</span> <span class="trans">byt</span> <span class="ipa">bajt</span> <span class="meaning">house </span>.</span></p>
+<p><span class="ipa">iː</span> as a mater lectionis, eg. <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">في</span> <span class="trans">fy</span> <span class="ipa">fiː</span> <span class="meaning">in </span></span>.</p>
+<p><span class="ipa">eː</span> approximately, in certain foreign words,  eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="ar">سكرتير</span> <span class="trans">skrtyr</span> <span class="ipa">sɪkrɪteːr</span> <span class="meaning">secretary </span></span>, <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">أوتيل</span> <span class="trans">ɑ͑wtyl</span> <span class="ipa">oːteːl</span> <span class="meaning">hotel</span></span>.</p>
+<p><span class="leadin">Use with  hamza</span> When used with <span class="codepoint"><span dir="rtl" lang="ar">ٔ</span> <a href="#char0654">[<span class="uname">U+0654 ARABIC HAMZA ABOVE</span>]</a></span> the two dots are suppressed in all positions. Text in NFC actually uses <span class="codepoint"><span dir="rtl" lang="ar">ئ</span> <a href="#char0626">[<span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span>]</a></span> rather than the decomposed sequence, so that is recommended. However, even if the decomposed sequence <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x064A;</span> + <span lang="ar" dir="rtl">&#x0654;</span> [<a href="/scripts/arabic/block#char064A"><span class="uname">U+064A ARABIC LETTER YEH</span></a> + <a href="/scripts/arabic/block#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>] is used,  the font should hide the dots.</span></p>
+<p> Unlike this character, <span class="codepoint"><span dir="rtl" lang="ar">ࢨ</span> <a href="#char08A8">[<span class="uname">U+08A8 ARABIC LETTER YEH WITH TWO DOTS BELOW AND HAMZA ABOVE</span>]</a></span> retains  the two dots in all forms, however it also represents a semantically different character.</p>
 </div>
 <div class="letter kashmiri">
 <p class="titlepara"><span class="title">Kashmiri</span></p>
 <p>Use <span class="codepoint" translate="no"><span lang="ks" dir="rtl">&#x06CC;</span> [<a href="/scripts/arabic/block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span> instead.</p>
 </div>
 <p class="ref">General sources: <a href="http://www.unicode.org/versions/Unicode10.0.0/ch09.pdf#Arabic" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Arabic_script" target="_blank">Wikipedia</a>, <a href="block#refs">Daniels</a></p>
-<p>Not used in Persian or Urdu.  See <span class="codepoint"><span lang="ar" dir="rtl">&#x06CC;</span> <a href="#char06CC">[<span class="uname">U+06CC ARABIC LETTER FARSI YEH</span>]</a></span>.</p>
 </div>
 </div>
 
@@ -2055,8 +2483,7 @@ of water</span>. There is a precomposed character for this combination, <span cl
       <div class="notes">
         <div class="letter arabic">
           <p class="titlepara"><span class="title">Arabic</span> consonant</p>
-          <p><span class="ipa">f</span></p>
-          <p>An alternative form of <span class="codepoint"><span lang="ar" dir="rtl">&#x0641;</span> <a href="#char0641">[<span class="uname">U+0641 ARABIC LETTER FEH</span>]</a></span> used in Arabic in North Africa. It would make more sense to use a font to make this difference than to use a different character.</p>
+<p>A Maghrebi alternative form of <span class="codepoint"><span lang="ar" dir="rtl">&#x0641;</span> <a href="#char0641">[<span class="uname">U+0641 ARABIC LETTER FEH</span>]</a></span> used in  North Africa (but not Libya &amp; Algeria).</p>
 </div>
       </div>
     </div>
@@ -2098,8 +2525,8 @@ of water</span>. There is a precomposed character for this combination, <span cl
       <div class="notes">
         <div class="letter arabic">
           <p class="titlepara"><span class="title">Arabic</span> consonant</p>
-          <p><span class="ipa">q</span></p>
-          <p>An alternative form of <span class="codepoint"><span lang="ar" dir="rtl">&#x0642;</span> <a href="#char0642">[<span class="uname">U+0642 ARABIC LETTER QAF</span>]</a></span> used in Arabic  in North Africa. It would make more sense to use a font to make this difference than to use a different character.</p>
+<p>A Maghrebi alternative form of <span class="codepoint"><span lang="ar" dir="rtl">&#x0642;</span> <a href="#char0642">[<span class="uname">U+0642 ARABIC LETTER QAF</span>]</a></span> used   in North Africa.</p>
+<p>It may be dotless in isolated and final positions and dotted in the initial and medial forms.<a class="fnref" href="https://en.wikipedia.org/wiki/Arabic_alphabet#Regional_variations">w</a></p>
 </div>
       </div>
     </div>
@@ -4678,6 +5105,8 @@ of water</span>. Note that if the <span class="name">choṭī he</span> is prono
   <li id="matthews">[M] David Matthews &amp; Mohamed Kasim Dalvi,  Urdu, ISBN 0-340-86725-6</li>
   <li id="delacy">[D] Richard Delacy, Beginner's Urdu Script, ISBN 0-340-86026-6</li>
 <li>[F] Narguess Farzad, Modern Persian, ISBN 0-340-80265-0</li>
+<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Arabic_alphabet">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Arabic_alphabet">Arabic Alphabet</a></li>
+<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Arabic_alphabet">wh</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Arabic_alphabet">Hamza</a></li>
 </ul>
 </section>
 
@@ -4686,7 +5115,7 @@ of water</span>. Note that if the <span class="name">choṭī he</span> is prono
 
 
 
-<script src="../../shared/scriptdb/arabic.js">  </script>
+<script src="../../shared/scriptdb/arab-ar.js">  </script>
 
 <script>
 replaceStuff('Arabic', 'arabic', spreadsheet, '', 'ar', '', cols, false)
@@ -4696,7 +5125,7 @@ replaceStuff('Arabic', 'arabic', spreadsheet, '', 'ar', '', cols, false)
 
 
 
-<script src="../../shared/scriptdb/persian.js">  </script>
+<script src="../../shared/scriptdb/arab-fa.js">  </script>
 
 <script>
 replaceStuff('Persian', 'persian', spreadsheet, '', 'fa', '', cols, false)
@@ -4706,7 +5135,7 @@ replaceStuff('Persian', 'persian', spreadsheet, '', 'fa', '', cols, false)
 
 
 
-<script src="../../shared/scriptdb/urdu.js">  </script>
+<script src="../../shared/scriptdb/arab-ur.js">  </script>
 
 <script>
 replaceStuff('Urdu', 'urdu', spreadsheet, '', 'ur', '', cols, false)
@@ -4716,7 +5145,7 @@ replaceStuff('Urdu', 'urdu', spreadsheet, '', 'ur', '', cols, false)
 
 
 
-<script src="../../shared/scriptdb/uighur.js">  </script>
+<script src="../../shared/scriptdb/arab-ug.js">  </script>
 
 <script>
 replaceStuff('Uighur', 'uighur', spreadsheet, '', 'ug', '', cols, false)
@@ -4725,7 +5154,7 @@ replaceStuff('Uighur', 'uighur', spreadsheet, '', 'ug', '', cols, false)
 
 
 
-<script src="../../shared/scriptdb/kashmiri_arab.js">  </script>
+<script src="../../shared/scriptdb/arab-ks.js">  </script>
 
 <script>
 replaceStuff('Kashmiri', 'kashmiri', spreadsheet, '', 'ks', '', cols, false)
@@ -4748,7 +5177,7 @@ replaceStuff('Hausa', 'hausa', spreadsheet, '', 'ha', '', cols, false)
 <div id="panel" style="display:none"></div>
 
 <div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/arabic/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-08-05  16:16<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2020-01-05  9:14<!-- #EndDate --> 
   </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Barabic%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Farabic%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 </section>
 
@@ -4776,6 +5205,7 @@ document.getElementById('tempout').value = out
 
 <script>
 initialise('/scripts/arabic/block')
+autoTransliterate('ar')
 </script>
 </body>
 </html>
