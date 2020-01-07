@@ -9,13 +9,14 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 <script src="desc.js"></script>
@@ -24,6 +25,7 @@
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/mongolian.js"> </script>
+<script src="mn-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -78,23 +80,28 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   </div>
 </aside>
 
-<div id="intro">
+
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->14 July, 2019<!-- #EndDate -->
-&bull; tags <a href="http://rishida.net/blog/index.php?tag=mongolian" title="Show all blog posts tagged with 'mongolian'">mongolian</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+  <!-- #BeginDate format:Sw1 -->7 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+</p>
+
+
+<div id="intro">
 <section>
 
   <p>This page lists characters in the following Unicode  block and provides information about them.  </p>
 <ul>
 <li><a href="../../uniview/?block=mongolian" target="_blank">Mongolian</a></li>
-  </ul>
+</ul>
 
   <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
 <p>For details about how the script works, see <a class="linkHighlight" href="index">Mongolian</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Mong">Script links pages</a>.</p>
-<p>Find
-<input type="text" 
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/>
-</p>
+<p><span style="text-align: start;">We have usage data for the following  language that uses the Mongolian script</span>: Mongolian.</p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -113,7 +120,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 </section>
 </div>
 <section id="formatc">
-  <h2><a href="#formatc">Format controls</a></h2>
+  <h2>Format controls</h2>
     
   <div class="character" id="char180B">
     <div class="charimg"><img src="/c/Mongolian/large/180B.png" alt="&#x180B;"/></div>
@@ -146,8 +153,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       <div class="letter mongolian">
         <p><span class="title">Mongolian</span> vowel separator (MVS)</p>
         <p>Used where a final <span class="codepoint"><span class="cpchar" lang="mn">&#x1820;</span> <a href="#char1820">[<span class="uname">U+1820 MONGOLIAN LETTER A</span>]</a></span> or <span class="codepoint"><span class="cpchar" lang="mn">&#x1821;</span> <a href="#char1821">[<span class="uname">U+1821 MONGOLIAN LETTER E</span>]</a></span> vowel is separated from the rest of a word. Unlike characters following <a href="#char202F"><span class="uname">U+202F NARROW NO-BREAK SPACE</span></a>, the <span class="name">A</span> or <span class="name">E</span> following a word is not a suffix, but an integral part of the word. Whether a final <span class="name">A</span> or <span class="name">E</span> is joined or separated is a purely lexical decision, and not an instance of varying orthography. MVS always requires the forward tail form of the following <span class="name">A</span> or <span class="name">E</span> letter. The preceding letter form varies according to the letter, and in some cases whether this is traditional or modern orthography. Examples: </p>
-        <p>Without MVS: <span class="ex" lang="mn">ᠬᠠᠨᠠ</span> <span class="trans">qana</span> <span class="meaning">outer casing of a vein</span></p>
-        <p>With MVS: <span class="ex" lang="mn">ᠬᠠᠨ᠎ᠠ</span> <span class="trans">qana</span> <span class="meaning">wall of a tent</span></p>
+        <p>Without MVS: <span class="charExample" translate="no"><span class="ex" lang="mn">ᠬᠠᠨᠠ</span> <span class="trans">xana</span> <span class="meaning">outer casing of a vein</span></span>.</p>
+        <p>With MVS: <span class="charExample" translate="no"><span class="ex" lang="mn">ᠬᠠᠨ᠎ᠠ</span> <span class="trans">xan·a</span> <span class="meaning">wall of a tent</span></span>.</p>
         <p class="ref"><a href="http:/.net/scripts/urdu/#endlinks">Refs</a>: Unicode</p>
       </div>
     </div>
@@ -155,7 +162,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
   </div>
 </section>
 <section id="basic">
-  <h2><a href="#basic">Basic vowels</a></h2>
+  <h2>Basic vowels</h2>
     
   <div class="character" id="char1820">
     <div class="charimg">&#x1820;</div>
@@ -222,9 +229,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p>Historical variants include: <img src="../../mongolian-variants/i/016.png" alt=""/>(isolate, Todo)<img src="../../mongolian-variants/i/057.png" alt=""/>(initial, Todo)<img src="../../mongolian-variants/i/350.png" alt=""/><img src="../../mongolian-variants/i/257.png" alt=""/><img src="../../mongolian-variants/i/038.png" alt=""/> (medial) and <img src="../../mongolian-variants/i/098.png" alt=""/><img src="../../mongolian-variants/i/258.png" alt=""/><img src="../../mongolian-variants/i/259.png" alt=""/><img src="../../mongolian-variants/i/260.png" alt=""/><img src="../../mongolian-variants/i/261.png" alt=""/><img src="../../mongolian-variants/i/262.png" alt=""/>.</p>
 <p><strong class="leadin">Confusables:</strong></p>
 <ul><li>The glyphs for this character are visually identical to those of <span class="codepoint"><span class="cpchar" lang="mn">&#x1821;</span> <a href="#char1821">[<span class="uname">U+1821 MONGOLIAN LETTER E</span>]</a></span> except in initial position (where this character has an additional stroke). </li>
-<li>The glyphs <img src="../../mongolian-variants/i/032.png" alt=""/> and <img src="../../mongolian-variants/i/002.png" alt=""/> are also visually identical to syllable final glyphs for <span class="codepoint"><span class="cpchar" lang="mn">&#x1828;</span> <a href="#char1821">[<span class="uname">U+1828 MONGOLIAN LETTER NA</span>]</a></span>, and are distinguished only by context. For example, <span class="ex" lang="mn">ᠰᠠᠮ</span> <span class="ipa">sam</span> <span class="trans">sam</span> <span class="meaning">comb</span> and <span class="ex" lang="mn">ᠰᠡᠮ</span> <span class="ipa">səm</span> <span class="trans">sem</span> <span class="meaning">quietly</span> look the same, but if you click on the red text you will see that the characters make it clear which is which.</li>
+<li>The glyphs <img src="../../mongolian-variants/i/032.png" alt=""/> and <img src="../../mongolian-variants/i/002.png" alt=""/> are also visually identical to syllable final glyphs for <span class="codepoint"><span class="cpchar" lang="mn">&#x1828;</span> <a href="#char1821">[<span class="uname">U+1828 MONGOLIAN LETTER NA</span>]</a></span>, and are distinguished only by context. For example, <span class="charExample" translate="no"><span class="ex" lang="mn">ᠰᠠᠮ</span> <span class="trans">sam</span> <span class="ipa">sam</span> <span class="meaning">comb</span></span> and <span class="charExample" translate="no"><span class="ex" lang="mn">ᠰᠡᠮ</span> <span class="trans">sem</span> <span class="ipa">səm</span> <span class="meaning">quietly</span></span> look the same, but if you click on the red text you will see that the characters make it clear which is which.</li>
 </ul>
-<p><strong class="leadin">Derived from:</strong> Old Uyghur aleph, written twice for isolate and initial forms.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Old Uyghur aleph, written twice for isolate and initial forms.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
 </div><p class="ref"><a href="#refs">General sources</a>:
    <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>,  
    <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>,
@@ -304,7 +311,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <ul><li>The glyphs for this character are visually identical to those of <span class="codepoint"><span class="cpchar" lang="mn">&#x1820;</span> <a href="#char1820">[<span class="uname">U+1820 MONGOLIAN LETTER A</span>]</a></span> except in initial position (where this character has one stroke less). </li>
 <li>The glyphs <img src="../../pickers/mongolian/v/1820m.png" alt=""/> and <img src="../../pickers/mongolian/v/1820f.png" alt=""/> are also visually identical to syllable final glyphs for <span class="codepoint"><span class="cpchar" lang="mn">&#x1828;</span> <a href="#char1821">[<span class="uname">U+1828 MONGOLIAN LETTER NA</span>]</a></span>, and are visually distinguished only by context.</li>
 </ul>
-<p><strong class="leadin">Derived from:</strong> Old Uyghur aleph.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Old Uyghur aleph.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -377,9 +384,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <li>Final<img src="../../mongolian-variants/i/054.png" alt=""/> is used after <span class="vright">b, p,<strong> q</strong>, <strong>g</strong>, ts, dz, h</span>. Note that <span class="trans">q</span> and <span class="trans">b</span> are in this group, since this is a neutral vowel.</li>
 <li><img src="../../mongolian-variants/i/070.png" alt=""/> and <img src="../../mongolian-variants/i/038.png" alt=""/>are used after NNBSP.</li>
 </ul>
-<p>Other variants include a handwritten inner mongolian variant on the sequence <span class="trans">yi</span> <img src="../../mongolian-variants/i/064.png" alt=""/>(medial), eg. <span class="charExample"><span class="ex" lang="mn">ᠰᠠᠶ᠋ᠢᠨ|ᠰᠠᠶᠢᠨ</span> <span class="trans">sayin</span> <span class="meaning">good</span></span>, which is written <span class="charExample"><span class="ex" lang="mn">ᠰᠠᠢ᠋ᠨ</span> <span class="trans">sain</span></span>.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p>Other variants include a handwritten inner mongolian variant on the sequence <span class="trans">yi</span> <img src="../../mongolian-variants/i/064.png" alt=""/>(medial), eg. <span class="charExample" translate="no"><span class="ex" lang="mn">ᠰᠠᠶ᠋ᠢᠨ|ᠰᠠᠶᠢᠨ</span> <span class="trans">sayin</span> <span class="meaning">good</span></span>, which is written <span class="charExample" translate="no"><span class="ex" lang="mn">ᠰᠠᠢ᠋ᠨ</span> <span class="trans">sai¹n</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
 <p>Historical variants include:<img src="../../mongolian-variants/i/263.png" alt=""/> (final for after NNBSP) and <img src="../../mongolian-variants/i/038.png" alt=""/> (final).</p>
-<p><strong class="leadin">Derived from:</strong> Old Uyghur yodh, preceded by an aleph for isolate and initial forms.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Old Uyghur yodh, preceded by an aleph for isolate and initial forms.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
 
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
@@ -447,7 +454,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <ul><li>The glyphs for this character are visually identical to those of <span class="codepoint"><span class="cpchar" lang="mn">&#x1824;</span> <a href="#char1824">[<span class="uname">U+1824 MONGOLIAN LETTER U</span>]</a></span>. </li>
 <li>Except in initial position, they are also visually identical to  glyphs for <span class="codepoint"><span class="cpchar" lang="mn">&#x1825;</span> <a href="#char1825">[<span class="uname">U+1825 MONGOLIAN LETTER OE</span>]</a></span>, and <span class="codepoint"><span class="cpchar" lang="mn">&#x1826;</span> <a href="#char1826">[<span class="uname">U+1826 MONGOLIAN LETTER UE</span>]</a></span>.</li>
 </ul>
-<p><strong class="leadin">Derived from:</strong> Old Uyghur waw, preceded by an aleph for isolate and initial forms.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Old Uyghur waw, preceded by an aleph for isolate and initial forms.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
      </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -521,7 +528,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <ul><li>The glyphs for this character are visually identical to those of <span class="codepoint"><span class="cpchar" lang="mn">&#x1823;</span> <a href="#char1823">[<span class="uname">U+1823 MONGOLIAN LETTER O</span>]</a></span>. </li>
 <li>Except in initial position, they are also visually identical to  glyphs for <span class="codepoint"><span class="cpchar" lang="mn">&#x1825;</span> <a href="#char1825">[<span class="uname">U+1825 MONGOLIAN LETTER OE</span>]</a></span>, and <span class="codepoint"><span class="cpchar" lang="mn">&#x1826;</span> <a href="#char1826">[<span class="uname">U+1826 MONGOLIAN LETTER UE</span>]</a></span>.</li>
 </ul>
-<p><strong class="leadin">Derived from:</strong> Old Uyghur waw, preceded by an aleph for isolate and initial forms.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Old Uyghur waw, preceded by an aleph for isolate and initial forms.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
       </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -581,13 +588,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <li>Final<img src="../../mongolian-variants/i/265.png" alt=""/> is used after <span class="vright"> b, p, ts, dz, h</span>. Note that <span class="trans">q</span> and <span class="trans">b</span> are in the previous pattern, since this is a feminine vowel.</li>
 <li>The latter medial and final glyphs make a ligature with the preceding consonant.</li>
 </ul>
-<p>Other variants include<img src="../../mongolian-variants/i/139.png" alt=""/> and <img src="../../mongolian-variants/i/138.png" alt=""/> (medial), and <img src="../../mongolian-variants/i/141.png" alt=""/> (final). The latter is an older form, also used in loanwords.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p>Other variants include<img src="../../mongolian-variants/i/139.png" alt=""/> and <img src="../../mongolian-variants/i/138.png" alt=""/> (medial), and <img src="../../mongolian-variants/i/141.png" alt=""/> (final). The latter is an older form, also used in loanwords.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
 <p>Historical variants include <img src="../../mongolian-variants/i/107.png" alt=""/> (isolated), <img src="../../mongolian-variants/i/264.png" alt=""/> (initial) and <img src="../../mongolian-variants/i/351.png" alt=""/> (final).</p>
 <p><strong class="leadin">Confusables:</strong></p>
 <ul><li>The glyphs for this character are visually identical to those of <span class="codepoint"><span class="cpchar" lang="mn">&#x1826;</span> <a href="#char1826">[<span class="uname">U+1826 MONGOLIAN LETTER UE</span>]</a></span>. </li>
 <li>Except in initial position, they are also visually identical to  glyphs for <span class="codepoint"><span class="cpchar" lang="mn">&#x1823;</span> <a href="#char1823">[<span class="uname">U+1823 MONGOLIAN LETTER O</span>]</a></span>, and <span class="codepoint"><span class="cpchar" lang="mn">&#x1824;</span> <a href="#char1824">[<span class="uname">U+1824 MONGOLIAN LETTER U</span>]</a></span>.</li>
 </ul>
-<p><strong class="leadin">Derived from:</strong> Old Uyghur waw, in a digraph with yodh in word-initial syllables; preceded by an aleph for isolate and initial forms.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Old Uyghur waw, in a digraph with yodh in word-initial syllables; preceded by an aleph for isolate and initial forms.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
     </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -656,13 +663,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <li>The latter medial and final glyphs make a ligature with the preceding consonant.</li>
 <li><img src="../../mongolian-variants/i/116.png" alt=""/>, <img src="../../mongolian-variants/i/265.png" alt=""/> and <img src="../../mongolian-variants/i/133.png" alt=""/> are used after NNBSP.</li>
 </ul>
-<p>Other variants include <img src="../../mongolian-variants/i/107.png" alt=""/> (isolated),<img src="../../mongolian-variants/i/139.png" alt=""/> and <img src="../../mongolian-variants/i/138.png" alt=""/> (medial), and <img src="../../mongolian-variants/i/141.png" alt=""/> (final) and <img src="../../mongolian-variants/i/267.png" alt=""/> (final nnbsp). The latter is an older form, also used in loanwords.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p>Other variants include <img src="../../mongolian-variants/i/107.png" alt=""/> (isolated),<img src="../../mongolian-variants/i/139.png" alt=""/> and <img src="../../mongolian-variants/i/138.png" alt=""/> (medial), and <img src="../../mongolian-variants/i/141.png" alt=""/> (final) and <img src="../../mongolian-variants/i/267.png" alt=""/> (final nnbsp). The latter is an older form, also used in loanwords.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
 <p>Historical variants include <img src="../../mongolian-variants/i/264.png" alt=""/> (initial),  <img src="../../mongolian-variants/i/266.png" alt=""/> (medial) and <img src="../../mongolian-variants/i/351.png" alt=""/> (final).</p>
 <p><strong class="leadin">Confusables:</strong></p>
 <ul><li>The glyphs for this character are visually identical to those of <span class="codepoint"><span class="cpchar" lang="mn">&#x1825;</span> <a href="#char1825">[<span class="uname">U+1825 MONGOLIAN LETTER OE</span>]</a></span>. </li>
 <li>Except in initial position, they are also visually identical to  glyphs for <span class="codepoint"><span class="cpchar" lang="mn">&#x1823;</span> <a href="#char1823">[<span class="uname">U+1823 MONGOLIAN LETTER O</span>]</a></span>, and <span class="codepoint"><span class="cpchar" lang="mn">&#x1824;</span> <a href="#char1824">[<span class="uname">U+1824 MONGOLIAN LETTER U</span>]</a></span>. (Of course, the actual characters used should remove any ambiguity for non-visual uses.)</li>
 </ul>
-<p><strong class="leadin">Derived from:</strong> Old Uyghur waw, in a digraph with yodh in word-initial syllables; preceded by an aleph for isolate and initial forms.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Old Uyghur waw, in a digraph with yodh in word-initial syllables; preceded by an aleph for isolate and initial forms.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
     </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -713,10 +720,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="consonants">
-  <h2><a href="#consonants">Consonants</a></h2>
+  <h2>Consonants</h2>
     
 <section id="basicconsonants">
-  <h3><a href="#basicconsonants">Basic consonants</a></h3>
+  <h3>Basic consonants</h3>
     
   <div class="character" id="char1828">
     <div class="charimg">&#x1828;</div>
@@ -836,7 +843,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 </ul>
 <p><strong class="leadin">Confusables:</strong></p>
 <ul><li>Visually, in syllable-final position, this letter is distinguished from from medial and final a/e only by its position in the syllable sequence.</li></ul>
-<p><strong class="leadin">Derived from:</strong> Old Uyghur nun.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Old Uyghur nun.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -915,7 +922,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <li>medial <img src="../../mongolian-variants/i/272.png" alt=""/><img src="../../mongolian-variants/i/012.png" alt=""/><img src="../../mongolian-variants/i/271.png" alt=""/> </li>
 <li>final <img src="../../mongolian-variants/i/019.png" alt=""/><img src="../../mongolian-variants/i/273.png" alt=""/><img src="../../mongolian-variants/i/274.png" alt=""/><img src="../../mongolian-variants/i/258.png" alt=""/><img src="../../mongolian-variants/i/259.png" alt=""/></li>
 </ul>
-<p><strong class="leadin">Derived from:</strong> Old Uyghur nun-kaph digraph.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Old Uyghur nun-kaph digraph.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
     </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -1029,9 +1036,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 </ul>
 <p>Other variants, requiring a variation selector:</p>
 <ul>
-<li>Final  <img src="../../mongolian-variants/i/022.png" alt=""/>, an older variant form.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></li>
+<li>Final  <img src="../../mongolian-variants/i/022.png" alt=""/>, an older variant form.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></li>
 </ul>
-<p><strong class="leadin">Derived from:</strong> Old Uyghur pe.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Old Uyghur pe.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
     </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -1052,7 +1059,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <span class="ipa">p</span></p>
 <p class="titlepara"><span class="title">Khalkha</span> 
 <span class="ipa">pʰ</span></p>
-        <p>Mostly used for foriegn words. One source says mostly used at the beginning of  foreign words<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup>, but another indicates use in medial and final positions only.</p>
+        <p>Mostly used for foriegn words. One source says mostly used at the beginning of  foreign words<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a>, but another indicates use in medial and final positions only.</p>
         <p> Transcribes <span class="codepoint"><span class="cpchar" lang="mn">&#x0F54;</span> <a href="tibetan#char0F54">[<span class="uname">U+0F54 TIBETAN LETTER PA</span>]</a></span>.</p>
         <p><strong class="leadin">Shapes:</strong></p>
         <table class="syllables">
@@ -1129,7 +1136,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         <ul>
 <li><a href="#char180E"><span class="uname"></span></a>Forms ligatures with ɔ, ʊ, o, and u.</li>
 </ul>
-<p><strong class="leadin">Derived from:</strong> The letter BA as a Galik letter.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> The letter BA as a Galik letter.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
       </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -1148,7 +1155,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="letter mongolian">
 <p class="titlepara"><span class="title">Chakhar, Khalka</span> 
 <span class="ipa">x</span></p>
-<p>Mostly used in masculine words, eg. <span class="ex" lang="mn">ᠬᠠᠭᠠᠨ</span> <span class="trans">qaɣan</span> <span class="meaning">kahn</span></p>
+<p>Mostly used in masculine words, eg. <span class="charExample" translate="no"><span class="ex" lang="mn">ᠬᠠᠭᠠᠨ</span> <span class="trans">xagan</span> <span class="meaning">Kahn</span></span></p>
         <p>Appears to be used only before a vowel.</p>
         <p><strong class="leadin">Shapes:</strong></p>
 <table class="syllables">
@@ -1251,7 +1258,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <ul><li> Before a feminine vowel it  is visually identical to <span class="codepoint"><span class="cpchar" lang="mn">&#x182D;</span> <a href="#char182D">[<span class="uname">U+182D MONGOLIAN LETTER GA</span>]</a></span>. </li>
 <li>The form before masculine vowels differs from <span class="codepoint"><span class="cpchar" lang="mn">&#x182D;</span> <a href="#char182D">[<span class="uname">U+182D MONGOLIAN LETTER GA</span>]</a></span> by the absence of dots.</li>
 </ul>
-<p><strong class="leadin">Derived from:</strong> Old Uyghur merger of gimel and hath (masculine) or  kaph (feminine).<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Old Uyghur merger of gimel and hath (masculine) or  kaph (feminine).<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -1267,9 +1274,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       <p>See <a target="_blank" href="/mongolian-variants#char182D">variant forms</a>.</p>
       <div class="letter mongolian">
         <p><span class="title">Mongolian</span> consonant <span class="trans">ɣ</span>, cyrillic <span class="trans">г</span></p>
-        <p> <span class="ipa">ɣ</span> before masculine vowels, eg. <span class="ex" lang="mn">ᠭᠠᠵᠠᠷ</span> <span class="trans">γaʤar</span> <span class="meaning">place</span>, <span class="ex" lang="mn">ᠬᠠᠭᠠᠨ</span> <span class="trans">qaɣan</span> <span class="meaning">kahn</span>. However, unless reading classical literary Mongolian, when used between two vowels this sound is typically elided, leaving a long vowel. For example, <span class="ex" lang="mn">ᠬᠠᠭᠠᠨ</span> <span class="trans">qaɣan</span> <span class="meaning">kahn</span> is pronounced as if it was written like <span class="trans">qaan</span>. Some exceptions exist, such as <span class="ex" lang="mn">ᠼᠠᠭᠠᠨ</span><span class="trans"> tsaɣan</span> <span class="meaning">white</span>.
-        <p><span class="ipa">g</span> before feminine vowels or non-vowels, eg. <span class="ex" lang="mn">ᠡᠳᠦᠭᠡ</span> <span class="trans">eduge</span> <span class="meaning">now</span> , <span class="ex" lang="mn">ᠵᠣᠷᠢᠭᠲᠠᠢ</span> <span class="trans">ʤɔrigtai</span> <span class="meaning">to be brave</span>, <span class="ex" lang="mn">ᠪᠡᠯᠡᠭ</span> <span class="trans">beleg</span> <span class="meaning">gift</span> </p>
-        <p><span class="ipa">k</span> also before feminine vowels, eg. <span class="ex" lang="mn">ᠭᠦᠮᠦᠨ</span> <span class="trans">kumun</span> <span class="meaning">person</span> </p>
+        <p> <span class="ipa">ɣ</span> before masculine vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="mn">ᠭᠠᠵᠠᠷ</span> <span class="trans">gaʤar</span> <span class="meaning">place</span></span>, <span class="charExample" translate="no"><span class="ex" lang="mn">ᠬᠠᠭᠠᠨ</span> <span class="trans">xagan</span> <span class="meaning">Kahn</span></span>. However, unless reading classical literary Mongolian, when used between two vowels this sound is typically elided, leaving a long vowel. For example, <span class="charExample" translate="no"><span class="ex" lang="mn">ᠬᠠᠭᠠᠨ</span> <span class="trans">xagan</span> <span class="meaning">Kahn</span></span> is pronounced as if it was written like <span class="trans">xaan</span>. Some exceptions exist, such as <span class="charExample" translate="no"><span class="ex" lang="mn">ᠼᠠᠭᠠᠨ</span> <span class="trans">ʦagan</span> <span class="meaning">white</span></span>.
+        <p><span class="ipa">g</span> before feminine vowels or non-vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="mn">ᠡᠳᠦᠭᠡ</span> <span class="trans">eduge</span> <span class="meaning">now</span></span>, <span class="charExample" translate="no"><span class="ex" lang="mn">ᠵᠣᠷᠢᠭᠲᠠᠢ</span> <span class="trans">ʤɔrigtai</span> <span class="meaning">to be brave</span></span>, <span class="charExample" translate="no"><span class="ex" lang="mn">ᠪᠡᠯᠡᠭ</span> <span class="trans">beleg</span> <span class="meaning">gift</span></span>.</p>
+        <p><span class="ipa">k</span> also before feminine vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="mn">ᠭᠦᠮᠦᠨ</span> <span class="trans">gumun</span> <span class="meaning">person</span></span>.</p>
         <p><strong class="leadin">Shapes:</strong></p>
         <table class="syllables">
   <tr>
@@ -1355,11 +1362,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <ul>
 <li>As a velar consonant, this character uses different visual shapes  before masculine and feminine vowels.</li>
 <li>The shape <img src="../../mongolian-variants/i/071.png" alt=""/> forms ligatures with  o, and u.</li>
-<li>If it appears before another vowel or before no vowel, the shape should be determined by the vowel harmony category of the word. For example, it takes a default masculine form at the end of the masculine word <span class="ex" lang="mn">ᠵᠠᠷᠯᠢᠭ</span> <span class="trans">jarlig</span> <span class="meaning">order</span> , but a feminine form  at the end of <span class="ex" lang="mn">ᠴᠢᠷᠢᠭ᠌</span> <span class="trans">chirig</span> <span class="meaning">soldier</span>. <span class="ednote">(To make this look right in the Mongolian White/Writing fonts I had to use  FS2 – which is actually illegal in this position – whereas the font takes care of it in Mongolian Baiti and Noto Sans Mongolian.)</span></li>
+<li>If it appears before another vowel or before no vowel, the shape should be determined by the vowel harmony category of the word. For example, it takes a default masculine form at the end of the masculine word <span class="charExample" translate="no"><span class="ex" lang="mn">ᠵᠠᠷᠯᠢᠭ</span> <span class="trans">ʤarlig</span> <span class="meaning">order</span></span>, but a feminine form  at the end of <span class="charExample" translate="no"><span class="ex" lang="mn">ᠴᠢᠷᠢᠭ᠌</span> <span class="trans">čirig²</span> <span class="meaning">soldier</span></span>. <span class="ednote">(To make this look right in the Mongolian White/Writing fonts I had to use  FS2 – which is actually illegal in this position – whereas the font takes care of it in Mongolian Baiti and Noto Sans Mongolian.)</span></li>
 <li>The medial form with two dots <img src="../../pickers/mongolian/v/182Dm1.png" alt=""/> is used between vowels. The one with no dots <img src="../../pickers/mongolian/v/182Dm.png" alt=""/> is used when followed by a consonant.</li>
 <li><img src="../../pickers/mongolian/v/182Dm2.png" alt=""/> is used before <a href="#char180E"><span class="uname">U+180E MONGOLIAN VOWEL SEPARATOR</span></a>.</li>
 </ul>
-<p>As an example of a situation where a variant selector <em>is</em> needed, consider the word <span class="ex" lang="mn">ᠭ᠋ᠠᠯ</span> <span class="trans">gal</span> <span class="meaning">fire.</span> The first variant selector is needed immediately after the first letter, <span class="trans">g</span>, to prevent the standard two dots appearing (<span class="ex" lang="mn">ᠭᠠᠯ</span> is incorrect).</p>
+<p>As an example of a situation where a variant selector <em>is</em> needed, consider the word <span class="charExample" translate="no"><span class="ex" lang="mn">ᠭ᠋ᠠᠯ</span> <span class="trans">g¹al</span> <span class="meaning">fire</span></span>. The first variant selector is needed immediately after the first letter, <span class="trans">g</span>, to prevent the standard two dots appearing (<span class="ex" lang="mn">ᠭᠠᠯ</span> is incorrect).</p>
 <p>Other variants, requiring a variation selector:</p>
 <ul>
 <li>Isolate <img src="../../mongolian-variants/i/066.png" alt=""/><img src="../../mongolian-variants/i/067.png" alt=""/></li>
@@ -1374,7 +1381,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <ul><li> Before a feminine vowel it  is visually identical to <span class="codepoint"><span class="cpchar" lang="mn">&#x182C;</span> <a href="#char182C">[<span class="uname">U+182C MONGOLIAN LETTER QA</span>]</a></span>. </li>
 <li>The form before masculine vowels differs from <span class="codepoint"><span class="cpchar" lang="mn">&#x182D;</span> <a href="#char182D">[<span class="uname">U+182D MONGOLIAN LETTER GA</span>]</a></span> by two dots.</li>
 </ul>
-<p><strong class="leadin">Derived from:</strong> Old Uyghur merger of gimel and hath (masculine) or  kaph (feminine).<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Old Uyghur merger of gimel and hath (masculine) or  kaph (feminine).<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -1474,8 +1481,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <td><img src="../../mongolian-variants/i/159.png" alt=""/></td>
 </tr>
         </table>
-<p><strong class="leadin">Variants:</strong>According to Wikipedia<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup>, there is a ligated form when <span class="trans">m</span> is followed by <span class="trans">l</span> medially.</p>
-<p><strong class="leadin">Derived from:</strong> Old Uyghur mem.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Variants:</strong>According to Wikipedia<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a>, there is a ligated form when <span class="trans">m</span> is followed by <span class="trans">l</span> medially.</p>
+<p><strong class="leadin">Derived from:</strong> Old Uyghur mem.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
       </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -1585,10 +1592,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         </table>
 <p><strong class="leadin">Variants:</strong>The following glyph changes should be produced by the font, without the need for variant selectors.</p>
 <ul>
-<li>Ligated forms occur when  <span class="trans">l</span> follows a bow-shaped consonant in loanwords, such as <span class="charExample"><span class="ex" lang="mn">ᠪᠯᠠᠮ᠎ᠠ</span> <span class="trans">blam-a</span> <span class="ipa">lama</span></span>.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup> <span class="ednote">(This ligature is produced by Baiti and Noto fonts, but not by Universal White.)</span></li>
-<li>According to Wikipedia<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup>, there is a ligated form when <span class="trans">m</span> is followed by <span class="trans">l</span> medially.</li>
+<li>Ligated forms occur when  <span class="trans">l</span> follows a bow-shaped consonant in loanwords, such as <span class="charExample"><span class="ex" lang="mn">ᠪᠯᠠᠮ᠎ᠠ</span> <span class="trans">blam-a</span> <span class="ipa">lama</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a> <span class="ednote">(This ligature is produced by Baiti and Noto fonts, but not by Universal White.)</span></li>
+<li>According to Wikipedia<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a>, there is a ligated form when <span class="trans">m</span> is followed by <span class="trans">l</span> medially.</li>
 </ul>
-<p><strong class="leadin">Derived from:</strong> Old Uyghur hooked resh.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Old Uyghur hooked resh.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
       </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -1691,10 +1698,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         </table>
 <p><strong class="leadin">Variants:</strong>The following glyph changes require variation selectors.</p>
 <ul>
-<li><img src="../../mongolian-variants/i/188.png" alt=""/>  is an older final variant derived from old uyghur zayin (though sometimes rendered as <img src="../../mongolian-variants/i/002.png" alt=""/> as a purely  stylistic preference), eg. <span class="charExample"><span class="ex" lang="mn">ᠴᠢᠩᠭᠢᠰ᠋</span> <span class="trans">činggis</span></span> on the Stele of Yisüngge<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup>.</li>
+<li><img src="../../mongolian-variants/i/188.png" alt=""/>  is an older final variant derived from old uyghur zayin (though sometimes rendered as <img src="../../mongolian-variants/i/002.png" alt=""/> as a purely  stylistic preference), eg. <span class="charExample"><span class="ex" lang="mn">ᠴᠢᠩᠭᠢᠰ᠋</span> <span class="trans">činggis</span></span> on the Stele of Yisüngge<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a>.</li>
 <li>The final shape <img src="../../mongolian-variants/i/184.png" alt=""/> is used in Manchu, but not traditional Mongolian.</li>
 </ul>
-<p><strong class="leadin">Derived from:</strong> Old Uyghur merged samekh and shin.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Old Uyghur merged samekh and shin.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
     </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -1713,7 +1720,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       <div class="letter mongolian">
       <p class="titlepara"><span class="title">Chakhar</span>, <span class="title">Khalkha</span> 
 <span class="ipa"> ʃ</span></p>
-        <p>This only occurs in word-final position when it is in modern Mongolian words.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+        <p>This only occurs in word-final position when it is in modern Mongolian words.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
         <p><strong class="leadin">Shapes:</strong></p>
         <table class="syllables">
         <tr>
@@ -1794,7 +1801,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <td><img src="../../mongolian-variants/i/187.png" alt=""/></td>
 </tr>
         </table>
-<p><strong class="leadin">Derived from:</strong> Old Uyghur merged samekh and shin.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Old Uyghur merged samekh and shin.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
       </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -1908,7 +1915,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <li>Medial <img src="../../mongolian-variants/i/190.png" alt=""/>.</li>
 </ul>
 <p><strong class="leadin">Confusables:</strong>In word or syllable initial position  it is  visually identical to <span class="codepoint"><span class="cpchar" lang="mn">&#x1833;</span> <a href="#char1833">[<span class="uname">U+1833 MONGOLIAN LETTER DA</span>]</a></span>.</p>
-<p><strong class="leadin">Derived from:</strong> Old Uyghur taw (initial form) and lamedh (medial form).<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Old Uyghur taw (initial form) and lamedh (medial form).<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
      </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -2024,10 +2031,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p>Other variants, requiring a variation selector:</p>
 <ul>
 <li>Initial <img src="../../mongolian-variants/i/046.png" alt=""/></li>
-<li>Final <img src="../../mongolian-variants/i/050.png" alt=""/> in final position, both used for foreign words.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></li>
+<li>Final <img src="../../mongolian-variants/i/050.png" alt=""/> in final position, both used for foreign words.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></li>
 </ul>
 <p><strong class="leadin">Confusables:</strong>In word or syllable initial position  it is  visually identical to <span class="codepoint"><span class="cpchar" lang="mn">&#x1832;</span> <a href="#char1832">[<span class="uname">U+1832 MONGOLIAN LETTER TA</span>]</a></span>.</p>
-<p><strong class="leadin">Derived from:</strong> Old Uyghur taw (initial form) and lamedh (medial form).<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Old Uyghur taw (initial form) and lamedh (medial form).<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
       </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -2134,7 +2141,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <ul>
 <li>Medial  <img src="../../mongolian-variants/i/197.png" alt=""/>, <img src="../../mongolian-variants/i/041.png" alt=""/>, and <img src="../../mongolian-variants/i/038.png" alt=""/></li>
 </ul>
-<p><strong class="leadin">Derived from:</strong> Old Uyghur tsade.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Old Uyghur tsade.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
 
       </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
@@ -2246,7 +2253,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <ul>
 <li>Medial <img src="../../mongolian-variants/i/203.png" alt=""/>, <img src="../../mongolian-variants/i/041.png" alt=""/>, and <img src="../../mongolian-variants/i/038.png" alt=""/></li>
 </ul>
-<p><strong class="leadin">Derived from:</strong> Old Uyghur yodh (initial) and tsade (medial).<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Old Uyghur yodh (initial) and tsade (medial).<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
         <p class="ref"><a href="http:/.net/scripts/urdu/#endlinks">Refs</a>: <a href="http://www.cjvlang.com/Writing/writmongol/mongolalpha.html">Bathrobe</a></p>
       </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
@@ -2365,7 +2372,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <li>Medial <img src="../../mongolian-variants/i/065.png" alt=""/><img src="../../mongolian-variants/i/203.png" alt=""/><img src="../../mongolian-variants/i/197.png" alt=""/></li>
 <li>Final <img src="../../mongolian-variants/i/038.png" alt=""/></li>
 </ul>
-<p><strong class="leadin">Derived from:</strong> Old Uyghur yodh (and distinguished from JA in the 19thC by borrowing Manchu hooked yodh).<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Old Uyghur yodh (and distinguished from JA in the 19thC by borrowing Manchu hooked yodh).<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
       </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -2383,7 +2390,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <p>No variant forms.</p>
       <div class="letter mongolian">
 <p class="titlepara"><span class="title">Chakhar</span>, <span class="title">Khalkha</span> <span class="ipa"> r</span>  </p>
-        <p>Examples: <span class="ex" lang="mn">ᠵᠣᠷᠢᠭᠲᠠᠢ</span> <span class="trans">ʤɔrigtai</span> <span class="meaning">to be brave</span>, <span class="ex" lang="mn">ᠵᠣᠷᠲᠠᠢ</span> <span class="trans">ʤɔrtai</span> <span class="meaning">lucky</span>,<span class="ex" lang="mn">ᠵᠣᠷ</span> <span class="trans">ʤɔr</span> <span class="meaning">good fortune, luck</span>.</p>
+        <p>Examples: <span class="charExample" translate="no"><span class="ex" lang="mn">ᠵᠣᠷᠢᠭᠲᠠᠢ</span> <span class="trans">ʤɔrigtai</span> <span class="meaning">to be brave</span></span>, <span class="charExample" translate="no"><span class="ex" lang="mn">ᠵᠣᠷᠲᠠᠢ</span> <span class="trans">ʤɔrtai</span> <span class="meaning">lucky</span></span>, <span class="charExample" translate="no"><span class="ex" lang="mn">ᠵᠣᠷ</span> <span class="trans">ʤɔr</span> <span class="meaning">good fortune, luck</span></span>.</p>
         <p>Not normally used at the beginning of Mongolian words. Transcribed foreign words usually get a vowel prepended, for example, transcribing Русь (Russia) results in <span class="trans">Oros</span>.</p>
         <p><strong class="leadin">Shapes:</strong></p>
  
@@ -2467,7 +2474,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <td><img src="../../mongolian-variants/i/082.png" alt=""/></td>
 </tr>
         </table>
-<p><strong class="leadin">Derived from:</strong> Old Uyghur resh.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Old Uyghur resh.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
 
  </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
@@ -2481,7 +2488,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="transcription">
-<h3><a href="#transcription">Consonants for transcription</a></h3>
+<h3>Consonants for transcription</h3>
 
   <div class="character" id="char1838">
     <div class="charimg">&#x1838;</div>
@@ -2589,7 +2596,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <li>Media <img src="../../mongolian-variants/i/109.png" alt=""/></li>
 </ul>
 <p><span class="leadin">Confusables:</span> The medial and final forms of this letter are identical to those of <span class="codepoint" translate="no"><span lang="mn">&#x1827;</span> [<a href="/scripts/mongolian/block#char1827"><span class="uname">U+1827 MONGOLIAN LETTER EE</span></a>]</span>.</p>
-<p><strong class="leadin">Derived from:</strong> Old Uyghur beh and waw before a separated vowel.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Old Uyghur beh and waw before a separated vowel.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
       </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -2696,7 +2703,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <ul>
 <li>Ligates with a following o,  u, ö,  or ü.</li>
 </ul>
-<p><strong class="leadin">Derived from:</strong> Galik letter, originally from Mongolian <span class="trans">b</span>.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Galik letter, originally from Mongolian <span class="trans">b</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -2800,7 +2807,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <ul>
 <li>Ligates with a following o,  u, ö,  or ü.</li>
 </ul>
-<p><strong class="leadin">Derived from:</strong> Galik letter.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Galik letter.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
 
       </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
@@ -2912,7 +2919,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <td><img src="../../mongolian-variants/i/206.png" alt=""/></td>
 </tr>
         </table>
-<p><strong class="leadin">Derived from:</strong> Preclassical Mongolian tsade č-ǰ .<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Preclassical Mongolian tsade č-ǰ .<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
      </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -3011,7 +3018,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <td><img src="../../mongolian-variants/i/209.png" alt=""/></td>
 </tr>
         </table>
-<p><strong class="leadin">Derived from:</strong> Preclassical Mongolian tsade č-ǰ .<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Preclassical Mongolian tsade č-ǰ .<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -3111,7 +3118,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <td><img src="../../mongolian-variants/i/229.png" alt=""/></td>
 </tr>
         </table>
-<p><strong class="leadin">Derived from:</strong> Galik letter, preceded by an aleph for initial form.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Galik letter, preceded by an aleph for initial form.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
       </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -3309,7 +3316,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <td><img src="../../mongolian-variants/i/277.png" alt=""/></td>
 </tr>
         </table>
-<p><strong class="leadin">Derived from:</strong> Digraph composed of <span class="ex" lang="mn">ᠯ</span> <span class="trans">l</span> and <span class="ex" lang="mn">ᠾ</span> <span class="trans">h</span>.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Digraph composed of <span class="ex" lang="mn">ᠯ</span> <span class="trans">l</span> and <span class="ex" lang="mn">ᠾ</span> <span class="trans">h</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
       </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -3409,7 +3416,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <td><img src="../../mongolian-variants/i/228.png" alt=""/></td>
 </tr>
         </table>
-<p><strong class="leadin">Derived from:</strong> Galik letter.<sup><a href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></sup></p>
+<p><strong class="leadin">Derived from:</strong> Galik letter.<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_script">w</a></p>
       </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/latest/ch13.pdf#Mongolian" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Mongolian_script" target="_blank">Wikipedia</a>, <a href="block#refs" target="_blank">Daniels</a> </p>
     </div>
@@ -3523,7 +3530,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="todo">
-  <h2><a href="#todo">Todo letters</a></h2>
+  <h2>Todo letters</h2>
     
   <div class="character" id="char1843">
     <div class="charimg">&#x1843;</div>
@@ -3715,7 +3722,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 </section>
 <section id="sibe">
-  <h2><a href="#sibe">Sibe letters</a></h2>
+  <h2>Sibe letters</h2>
     
 <div class="character" id="char185D">
 <div class="charimg">&#x185D;</div>
@@ -3873,7 +3880,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 </section>
 <section id="manchu">
-  <h2><a href="#manchu">Manchu letters</a></h2>
+  <h2>Manchu letters</h2>
     
 <div class="character" id="char1873">
 <div class="charimg">&#x1873;</div>
@@ -3912,7 +3919,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 </section>
 <section id="extensions">
-  <h2><a href="#extensions">Extensions for Sanskrit and Tibetan</a></h2>
+  <h2>Extensions for Sanskrit and Tibetan</h2>
     
 <div class="character" id="char1880">
 <div class="charimg">&#x1880;</div>
@@ -4217,7 +4224,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 </section>
 <section id="punctuation">
-  <h2><a href="#punctuation">Punctuation</a></h2>
+  <h2>Punctuation</h2>
     
   <div class="character" id="char1800">
     <div class="charimg">&#x1800;</div>
@@ -4333,7 +4340,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
   </div>
 </section>
 <section id="digits">
-  <h2><a href="#digits">Digits</a></h2>
+  <h2>Digits</h2>
     
   <div class="character" id="char1810">
     <div class="charimg">&#x1810;</div>
@@ -4406,22 +4413,23 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
   </div>
 </section>
 <section id="refs">
-  <h2><a href="#refs">References</a></h2>
+  <h2>References</h2>
   <ol>
-<li>[ <sup><a href="https://www.unicode.org/versions/latest/ch13.pdf">u</a></sup> ] <cite>The Unicode Standard v10.0</cite>, <a href="https://www.unicode.org/versions/latest/ch13.pdf">Mongolian</a>, pp528-536.</li>
-<li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN 0-19-507993-0, p???.</li>
-<li>[ <sup><a href="https://w3c.github.io/mlreq/">n</a></sup> ] Nasun-urt, Hu Qitu, <cite><a href="https://w3c.github.io/mlreq/">Mongolian Layout Requirements</a></cite></li>
-<li>[ <sup><a href="https://github.com/w3c/mlreq/issues">g</a></sup> ] <a href="https://github.com/w3c/mlreq/issues">Issue list</a> for W3C Mongolian layout requirements.</li>
-<li>[ <sup><a href="http://en.wikipedia.org/wiki/Mongolian_script">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Mongolian_script"><cite> Mongolian script</cite></a>. </li>
-<li>[ <sup><a href="http://www.cjvlang.com/Writing/writmongol/mongolalpha.html">b</a></sup> ] <cite>Bathrobe's East Asian Writing Systems</cite>, <a href="http://www.cjvlang.com/Writing/writmongol/mongolalpha.html">Making Sense of the Traditional Mongolian Script</a></li>
-<li>[ <sup><a href="https://lists.w3.org/Archives/Public/public-i18n-mongolian/2015JulSep/att-0036/DS05_Mongolian_NNBSP_Connected_Suffixes.pdf">m</a></sup> ] <a href="https://lists.w3.org/Archives/Public/public-i18n-mongolian/2015JulSep/att-0036/DS05_Mongolian_NNBSP_Connected_Suffixes.pdf"><cite>Mongolian NNBSP - Connected Suffixes</cite></a>, Greg Eck</li>
+<li>[ <a class="fnref" href="http://www.cjvlang.com/Writing/writmongol/mongolalpha.html">b</a> ] <cite>Bathrobe's East Asian Writing Systems</cite>, <a href="http://www.cjvlang.com/Writing/writmongol/mongolalpha.html">Making Sense of the Traditional Mongolian Script</a></li>
+<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN 0-19-507993-0, p???.</li>
+<li>[ <a class="fnref" href="https://lists.w3.org/Archives/Public/public-i18n-mongolian/2015JulSep/att-0036/DS05_Mongolian_NNBSP_Connected_Suffixes.pdf">m</a> ] <a href="https://lists.w3.org/Archives/Public/public-i18n-mongolian/2015JulSep/att-0036/DS05_Mongolian_NNBSP_Connected_Suffixes.pdf"><cite>Mongolian NNBSP - Connected Suffixes</cite></a>, Greg Eck</li>
+<li>[ <a class="fnref" href="https://w3c.github.io/mlreq/">n</a> ] Nasun-urt, Hu Qitu, <cite><a href="https://w3c.github.io/mlreq/">Mongolian Layout Requirements</a></cite></li>
+<li>[ <a class="fnref" href="https://github.com/w3c/mlreq/issues">g</a> ] <a href="https://github.com/w3c/mlreq/issues">Issue list</a> for W3C Mongolian layout requirements.</li>
+<li>[ <a class="fnref" href="https://www.unicode.org/versions/latest/ch13.pdf">u</a> ] <cite>The Unicode Standard v10.0</cite>, <a href="https://www.unicode.org/versions/latest/ch13.pdf">Mongolian</a>, pp528-536.</li>
+<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Mongolian_script">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Mongolian_script"><cite> Mongolian script</cite></a>. </li>
 </ol>
 </section>
 <div id="panel" style="display:none"></div>
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/mongolian/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-07-14  14:11<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bmongolian%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fmongolian%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+<div class="smallprint"><span id="version"></span></div>
+
+
 
 <!-- Uncomment this code to get a list of all character names for the file names-subset.js  
 <div id=charliststr></div>
@@ -4446,7 +4454,8 @@ Extensions for Sanskrit and Tibetan;extensions;1880-18aa
  --> 
 
 <script>
-initialise('/scripts/mongolian/block')
+initialise('/scripts/mongolian/block','mongolian')
+autoTransliterate('mn')
 </script>
 </body>
 </html>

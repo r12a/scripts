@@ -28,20 +28,24 @@
 figure div[lang=mn] { writing-mode: vertical-lr; font-size: 200%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; width: 100%;}
 </style>
 
-<script src="../../shared/scriptdb/mongolian.js"> </script>
+<script src="../../shared/scriptdb/mong-mn.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2019.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
+<script src="../common/transliterate.js"></script>
+<script src="../common/prompts.js"> </script>
+<script src="../glossary/glossary.js"> </script>
 <script src="../../shared/code/getLinks.js"></script>
 <script src="../linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
 
 <script src="../../shared/fontlists/mongolian.js"> </script>
+<script src="mn-translit.js">  </script>
 </head>
 
 <body>
@@ -103,17 +107,19 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->15 November, 2019<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/index.php?tag=mongolian" title="Show all blog posts tagged with 'mongolian'">mongolian</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+  <!-- #BeginDate format:Sw1 -->7 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
 
 
 
 <div class="section">
-  <p>This page provides basic information about the Mongolian script and its use for the Mongolian language. he information was gathered from a variety of sources, and I have tried to make the summary as accurate as possible, but it has not been reviewed. For character-specific details follow the links to the <a class="linkHighlight" href="/scripts/mongolian/block">Mongolian character notes</a>. </p>
-<p>See also the <a href="../../pickers/arabic/">Mongolian picker</a>.</p>
+<p>This page gathers together basic information about the Mongolian script and its use for the Mongolian language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Mongolian using Unicode; for greater details follow the footnote links (especially those with an arrow alongside them).</p>
+<p> For character-specific details follow the links to the <a class="linkHighlight" href="/scripts/mongolian/block">Mongolian character notes</a>. See also the <a href="../../pickers/mongolian/" class="linkHighlight">Mongolian character app</a>.</p>
 <p>For similar information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Mong">script links pages</a>.</p>
 
-<p class="instructions">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.  Colours and annotations on panels listing characters are relevant to their use for the thisScript language.</p>
+<p class="instructions">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.  Colours and annotations on panels listing characters are relevant to their use for the Mongolian language.</p>
+<p class="instructions">Unless in parentheses, the transcriptions in italics that follow Tamil text are a <a href="../glossary/#transliteration" class="termref">transliteration</a> developed for these pages. Those in parentheses are usually ISO transcriptions. Transcriptions in <span style="white-space:nowrap;">⌈ brackets ⌋</span> may be phonemic or phonetic.</p>
 </div>
 
 
@@ -132,8 +138,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-    <h2 id="history">Usage &amp; history</h2>
+<section id="history">
+<h2>Usage &amp; history</h2>
     <p>From <a href="http://scriptsource.org/scr/Mong">Scriptsource</a>: </p>
     <blockquote>
 <p>The Mongolian script is used for writing the Mongolian language, both within the Inner Mongolia Autonomous Region of the People’s Republic of China and elsewhere in China. In the Mongolian People's Republic (Outer Mongolia), the traditional script was replaced by a Cyrillic orthography since the early 1940s, but revived in the 1990s, so that both scripts are now used in tandem.</p>
@@ -161,44 +167,63 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-    <h2 id="type">Distinctive features</h2>
+<section id="type">
+<h2>Distinctive features</h2>
     <p>The Mongolian script is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#alphabet">alphabet</a></span>, ie. a writing system in which both consonants and vowels are indicated. See the table to the right for a brief overview of features, taken from the <a href="/scripts/featurelist/">Script Comparison Table</a>. </p>
 <p>Modern Mongolian can be written using a subset of the letters available in the Mongolian Unicode block. The remainder are used for writing Todo, Sibe, and Manchu, or for writing foriegn words, especially in Tibetan and Sanskrit.</p>
 <p>Text runs from top to bottom in lines that are stacked (unusually) from left to right.</p>
 </section>
-  
-  
-  
-  
-  
-<section>
-<h2 id="chars">Character lists</h2>
-    <p>Version 12.0 of the Unicode Standard has the following blocks dedicated to the Mongolian script (numbers in lists are non-ASCII only):</p>
-<ol>
-    <li><a href="/uniview/?block=mongolian">Mongolian</a> <span class="charCount">129 letters, 6 marks, 11 punctuation, 10 numbers, 1 other: &nbsp;  total 157</span></li>
-      <li><a href="/uniview/?block=mongolian_supplement">Mongolian Supplement </a><span class="charCount">13 symbols: &nbsp;  total 13</span></li>
-</ol>
-<!--p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
-<ul>
-<li><a href="/app-charuse/?language=si" target="_blank">Mongolian</a> <span class="charCount">(35 letters, 3 marks, 9 punctuation, 10 numbers, 1 separator, 1 other :   total 59)</span></li>
-</ul-->
-<p>For detailed character-specific information see <a class="linkHighlight" href="/scripts/mongolian/block">Mongolian character notes</a>.</p>
+
+
+
+
+
+<section id="dir">
+<h2>Text direction</h2>
+    <p>Mongolian script is written vertically, top to bottom, in columns that flow left to right. This is an unusual configuration. (Chinese, Japanese and Korean vertical text columns are read right to left). It derives from the fact that this script descended from a script (Old Uyghur) that was written right to left.</p>
+<p>Fullwidth Latin alphabetic and digit characters are seen in traditional Mongolian text, as are fullwidth Chinese characters and punctuation (see <a href="#mixed_text" class="figref">the figure below</a>). When used, the latter are displayed upright. The fullwidth series of Unicode characters may be used as an easy way to achieve this. <a class="fnref" href="https://github.com/w3c/mlreq/issues/5">g</a></p>
+<figure id="mixed_text">
+<p><a href="images/mixed_text.jpg" target="_blank"><img src="images/mixed_text.jpg" alt="" style="width:100%;"/></a></p>
+<figcaption>Mixed Mongolian and Chinese text. (Click on the image to see larger.)</figcaption>
+</figure>
+<p>Cyrillic characters may also be seen, used in a way that resembles fullwidth characters, but this is actually a property of the font used to display the characters, since there are no fullwidth cyrillic code points in Unicode.  Emoji are also expected to be displayed upright.<a class="fnref" href="https://github.com/w3c/mlreq/issues/5">g</a></p>
+<p>Non-fullwidth letters and numbers tend to be written sideways.<a class="fnref" href="https://github.com/w3c/mlreq/issues/5">g</a> See <a class="figref" href="#mixed_text_sideways">the following figure</a>.</p>
+<figure id="mixed_text_sideways">
+<p><img src="images/mixed_text_sideways.png" alt=""/></p>
+<figcaption>Sideways Latin text and numbers in vertical Mongolian.</figcaption>
+</figure>
+<p>Upright digits may be used for list counters. And Mongolian also has the feature referred to in Japanese as <em>tate chu yoko</em>, whereby small sequences of non-fullwidth numbers or punctuation may run horizontally within the vertical flow.<a class="fnref" href="https://github.com/w3c/mlreq/issues/5">g</a> See <a class="figref" href="#digits-tate-chu-yoko">the example above</a>.</p>
+<p>Certain punctuation marks are upright, and others are rotated.<a class="fnref" href="https://github.com/w3c/mlreq/issues/5">g</a> (See the section on <a href="#punctuation">Punctuation</a>.)</p>
+<p>Many of the conventions seen in actual digital text may be determined more by the available technology than by what the content author wants to achieve.<a class="fnref" href="https://github.com/w3c/mlreq/issues/5">g</a></p>
+
+
+
+
+
+
+  <section id="nnbsp">
+<h3>In horizontal contexts</h3>
+<p>When Mongolian excerpts are shown in text that is set horizontally (such as on this page), the Mongolian is sometimes represented as a sequence of single vertical words,  eg. <span style="writing-mode:vertical-lr" class="ex" lang="mn">ᠮᠣᠩᠤᠯ<br/>ᠪᠢᠴᠢᠭ</span>, but in other cases it is rotated left and joins horizontally,  eg. <span style="writing-mode:horizontal-tb" class="ex" lang="mn">ᠮᠣᠩᠤᠯ ᠪᠢᠴᠢᠭ</span>. </p>
+<p>Mongolian text  written horizontally is read left-to-right. This means that if it contains embedded text from another language, such as English, there is no bidirectional behaviour (as there would be in Arabic-script text).</p>
+<p>Note also that it is not possible to produce a page of vertical text by printing it horizontally and then rotating the page, This is because the order of lines in the rotated page will be right-to-left, whereas it should be left-to-right.</p>
 </section>
+</section>
+
+
+
   
   
   
-  
-  <section>
-<h2 id="structure">Structure</h2>
+  <section id="structure">
+<h2>Structure</h2>
      <p>The basic unit of text is a word, however words can contain prefixes and suffixes. Some of the suffixes are separated from the root of the word by a small gap, but they are still considered to be part of the word.</p>
 
 
 
 
 
-  <section>
-  <h3 id="harmony">Vowel harmony</h3>
+  <section id="harmony">
+<h3>Vowel harmony</h3>
 <p>Vowel harmony is an important aspect of the Mongolian language – words contain only masculine+neuter vowels, or only feminine+neuter vowels. The masculine vowels are:</p>
 
 <figure class="auto" data-cols="ipa">ᠠ␣ᠣ␣ᠤ</figure>
@@ -253,10 +278,12 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
   
 <div id="showTranscriptions">
-<div>In yellow boxes, show:</div>
+<div>Character lists show:</div>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div>
+<label>Transliteration 
+<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
 <div><label>Joint Sino-Mongolian 
 <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
 <div><label>Cyrillic 
@@ -267,52 +294,165 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h2 id="dir">Text direction</h2>
-    <p>Mongolian script is written vertically, top to bottom, in columns that flow left to right. This is an unusual configuration. (Chinese, Japanese and Korean vertical text columns are read right to left). It derives from the fact that this script descended from a script (Old Uyghur) that was written right to left.</p>
-<p>Fullwidth Latin alphabetic and digit characters are seen in traditional Mongolian text, as are fullwidth Chinese characters and punctuation (see <a href="#mixed_text" class="figref">the figure below</a>). When used, the latter are displayed upright. The fullwidth series of Unicode characters may be used as an easy way to achieve this. <a class="fnref" href="https://github.com/w3c/mlreq/issues/5">g</a></p>
-<figure id="mixed_text">
-<p><a href="images/mixed_text.jpg" target="_blank"><img src="images/mixed_text.jpg" alt="" style="width:100%;"/></a></p>
-<figcaption>Mixed Mongolian and Chinese text. (Click on the image to see larger.)</figcaption>
-</figure>
-<p>Cyrillic characters may also be seen, used in a way that resembles fullwidth characters, but this is actually a property of the font used to display the characters, since there are no fullwidth cyrillic code points in Unicode.  Emoji are also expected to be displayed upright.<a class="fnref" href="https://github.com/w3c/mlreq/issues/5">g</a></p>
-<p>Non-fullwidth letters and numbers tend to be written sideways.<a class="fnref" href="https://github.com/w3c/mlreq/issues/5">g</a> See <a class="figref" href="#mixed_text_sideways">the following figure</a>.</p>
-<figure id="mixed_text_sideways">
-<p><img src="images/mixed_text_sideways.png" alt=""/></p>
-<figcaption>Sideways Latin text and numbers in vertical Mongolian.</figcaption>
-</figure>
-<p>Upright digits may be used for list counters. And Mongolian also has the feature referred to in Japanese as <em>tate chu yoko</em>, whereby small sequences of non-fullwidth numbers or punctuation may run horizontally within the vertical flow.<a class="fnref" href="https://github.com/w3c/mlreq/issues/5">g</a> See <a class="figref" href="#digits-tate-chu-yoko">the example above</a>.</p>
-<p>Certain punctuation marks are upright, and others are rotated.<a class="fnref" href="https://github.com/w3c/mlreq/issues/5">g</a> (See the section on <a href="#punctuation">Punctuation</a>.)</p>
-<p>Many of the conventions seen in actual digital text may be determined more by the available technology than by what the content author wants to achieve.<a class="fnref" href="https://github.com/w3c/mlreq/issues/5">g</a></p>
-
-
-
-
-
-
-  <section>
-  <h3 id="nnbsp">In horizontal contexts</h3>
-<p>When Mongolian excerpts are shown in text that is set horizontally (such as on this page), the Mongolian is sometimes represented as a sequence of single vertical words,  eg. <span style="writing-mode:vertical-lr" class="ex" lang="mn">ᠮᠣᠩᠤᠯ<br/>ᠪᠢᠴᠢᠭ</span>, but in other cases it is rotated left and joins horizontally,  eg. <span style="writing-mode:horizontal-tb" class="ex" lang="mn">ᠮᠣᠩᠤᠯ ᠪᠢᠴᠢᠭ</span>. </p>
-<p>Mongolian text  written horizontally is read left-to-right. This means that if it contains embedded text from another language, such as English, there is no bidirectional behaviour (as there would be in Arabic-script text).</p>
-<p>Note also that it is not possible to produce a page of vertical text by printing it horizontally and then rotating the page, This is because the order of lines in the rotated page will be right-to-left, whereas it should be left-to-right.</p>
-</section>
-</section>
-
-
-
-
-
   
-<section>
-<h2 id="vowels">Vowels</h2>
-    
-    <p>In addition to a set of   Mongolian vowels, the Mongolian block also includes  vowel characters for Todo, Sibe,  Manchu and Ali Gali vowels.</p>
+<section id="vowels">
+<h2>Vowels</h2>
 
 
+<section id="vowelPhonemes">
+<h3>Vowel sounds</h3>
+
+<p class="instructions">Click on the sound groups to see where else in the document each of the sounds are referred to.</p>
+
+<p>The following lists the vowels of Khalkha Mongolian. </p>
+
+<p><span class="leadin">Plain vowels.</span></p>
+<div style="margin-left: 7.5%;">
+<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="white"/>
+      <feComposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <!--image xlink:href="images/vowelgrid.gif" alt="Les caractères sont associés à des octets." x="0" y="0" width="400" height="200"></image--> 
+  <use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -->
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+  
+  <!-- near close -->
+<circle cx="200" cy="40" r="3" fill="#ccc"/>
+  
+   <!-- mid close -->
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -->
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- open -->
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+  
+  <!-- close -->
+  <text x="32" y="15" class="ipa" text-anchor="end">i iː</text> 
+<text x="250" y="15" class="ipa">u uː</text> 
+
+  <!-- near close -->
+<text x="210" y="45" class="ipa">ʊ ʊː</text> 
+
+  <!-- close mid -->
+  <text x="57" y="75" class="ipa" text-anchor="end">e eː</text> 
+<text x="250" y="75" class="ipa">oː</text> 
+
+  <!-- mid -->
+  <text x="158" y="105" class="ipa" text-anchor="middle" filter="url(#solid)">ə</text>
+  <text x="158" y="105" class="ipa" text-anchor="middle">ə</text> 
+
+  <!-- open mid -->
+<text x="250" y="135" class="ipa">ɔ ɔː</text> 
+
+  <!-- open -->
+  <text x="106" y="195" class="ipa" text-anchor="end">a aː</text> 
+</svg>
+</div>
+
+
+
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_language#Phonology">w</a>. </p>
+<p><span class="leadin">Diphthongs.</span></p>
+<div style="margin-left: 7.5%;">
+<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="white"/>
+      <feComposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <!--image xlink:href="images/vowelgrid.gif" alt="Les caractères sont associés à des octets." x="0" y="0" width="400" height="200"></image--> 
+  <use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -->
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+  
+  <!-- near close -->
+<circle cx="200" cy="40" r="3" fill="#ccc"/>
+  
+   <!-- mid close -->
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -->
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- open -->
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+  
+  <!-- close -->
+<text x="250" y="15" class="ipa">ui</text> 
+
+  <!-- near close -->
+<text x="210" y="45" class="ipa">ʊi</text> 
+
+  <!-- open mid -->
+<text x="250" y="135" class="ipa">ɔi</text> 
+
+  <!-- open -->
+  <text x="106" y="195" class="ipa" text-anchor="end">ai</text> 
+</svg>
+</div>
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_language#Phonology">w</a>.</p>
+</section>
+
+
+
+
+
+<section id="basicvowels">
+<h3>Basic vowels</h3>
 <p>Eight vowels are used for the Mongolian language, the last of which is for writing foreign words.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc,trans2">ᠠ␣ᠡ␣ᠢ␣ᠣ␣ᠤ␣ᠥ␣ᠦ␣ᠧ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc,trans2">ᠢ␣ᠦ␣ᠤ␣ᠡ␣ᠧ␣ᠥ␣ᠣ␣ᠠ</figure>
 
+<p>In addition to a set of   Mongolian vowels, the Mongolian block also includes  vowel characters for Todo, Sibe,  Manchu and Ali Gali vowels.</p>
 <p>Todo</p>
 
 <figure class="otherBox auto" data-cols="">ᡃ␣ᡄ␣ᡅ␣ᡆ␣ᡇ␣ᡈ␣ᡉ</figure>
@@ -331,14 +471,14 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p>As previously mentioned, <a href="#harmony">vowel harmony</a> is an important part of the orthography for the Mongolian language.</p>
+</section>
 
 
 
 
 
-
-  <section>
-  <h3 id="nnbsp">Suffixes</h3>
+  <section id="suffixes">
+<h3>Suffixes</h3>
 <p>Many Mongolian suffixes are separated from the root or other suffixes by a small gap, eg. <span class="charExample" translate="no"><span class="ex" lang="mn">ᠭᠠᠵᠠᠷ ᠠ</span> <span class="trans">gaʤar-a</span> <span class="meaning">to the country</span></span>. The Unicode Standard provides <a href="/scripts/punctuation/block#char202F"><span class="uname">U+202F NARROW NO-BREAK SPACE</span></a> for this gap, which is thinner than a normal space, and doesn't provide an opportunity for line-breaking.</p>
 <p>Characters following <a href="/scripts/punctuation/block#char202F"><span class="uname">U+202F NARROW NO-BREAK SPACE</span></a>may take on special shapes.</p>
 </section>
@@ -349,8 +489,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-  <section>
-  <h3 id="mvs">Final vowel separation</h3>
+  <section id="mvs">
+<h3>Final vowel separation</h3>
 <p><span class="codepoint" translate="no"><a href="/scripts/mongolian/block#char180E"><span class="uname">U+180E MONGOLIAN VOWEL SEPARATOR</span></a></span> is used where a final <span class="codepoint"><span class="cpchar" lang="mn">ᠠ</span> <a href="/scripts/mongolian/block#char1820">[<span class="uname">U+1820 MONGOLIAN LETTER A</span>]</a></span> or <span class="codepoint"><span class="cpchar" lang="mn">ᠡ</span> <a href="/scripts/mongolian/block#char1821">[<span class="uname">U+1821 MONGOLIAN LETTER E</span>]</a></span> vowel is separated from the rest of a word.</p>
 <p>Unlike characters following <a href="/scripts/punctuation/block#char202F"><span class="uname">U+202F NARROW NO-BREAK SPACE</span></a>, the <span class="name">A</span> or <span class="name">E</span> following a word is not a suffix, but an integral part of the word. Whether a final <span class="name">A</span> or <span class="name">E</span> is joined or separated is a purely lexical decision, and not an instance of varying orthography. </p>
 <p>MVS always requires the forward tail form of the following <span class="name">A</span> or <span class="name">E</span> letter. The preceding letter form varies according to the letter, and in some cases whether this is traditional or modern orthography. Examples: </p>
@@ -364,9 +504,130 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h2 id="consonants">Consonants</h2>
+<section id="consonants">
+<h2>Consonants</h2>
 <p>The Mongolian block contains consonant symbols for use with Mongolian, Todo, Sibe, Manchu and Ali Gali. Some of the Mongolian characters are shared with other uses.</p>
+
+
+<section id="consonantPhonemes">
+<h3>Consonant sounds</h3>
+
+<p class="instructions">Click on the sounds to see where else in the document they are referred to.</p>
+
+<p>The following table lists the consonants of Khalkha Mongolian.</p>
+<table class="ipaTable">
+<thead>
+<tr>
+<th></th>
+<th>labial </th>
+<th>dental </th>
+<th>alveolar </th>
+<th>post-<br>
+alveolar</th>
+<th>palatal </th>
+<th>velar </th>
+<th>uvular</th>
+<th>glottal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>stop</th>
+<td><span class="ipa">p</span><br>
+<span class="allophone">pʰ</span><br>
+<span class="ipa">pʲ</span><br>
+<span class="allophone">pʲʰ</span></td>
+<td><span class="ipa">t</span><br/>
+<span class="ipa">tʰ</span><br/>
+<span class="ipa">tʲ</span><br/>
+<span class="ipa">tʲʰ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;&nbsp;&nbsp; <span class="ipa">ɡ</span><br/>
+<span class="allophone">kʰ</span><br>&nbsp;&nbsp;&nbsp; <span class="ipa">ɡʲ</span><br/>
+<span class="allophone">kʲʰ</span></td>
+<td><span class="ipa">ɢ</span></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>affricate</th>
+<td>&nbsp;</td>
+<td><span class="ipa">t͡s</span><br>
+<span class="ipa">t͡sʰ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">t͡ʃ</span><br/>
+<span class="ipa">t͡ʃʰ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>fricative </th>
+<td><span class="allophone">f</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">s</span><br/>
+<span class="ipa">ɮ</span><br><span class="ipa">ɮʲ</span></td>
+<td><span class="ipa">ʃ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">x</span> <br><span class="ipa">xʲ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>nasal</th>
+<td><span class="ipa">m</span><br>
+<span class="ipa">mʲ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">n<br>
+nʲ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ŋ</span></td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>approximant</th>
+<td><span class="ipa">w</span> <br><span class="ipa">wʲ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">j</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>trill/flap</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th></th>
+<td class="mouth"><a href="../common/mouth/mouth_labial.png" target="_blank"><img src="../common/mouth/mouth_small_labial.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_dental.png" target="_blank"><img src="../common/mouth/mouth_small_dental.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_alveolar.png" target="_blank"><img src="../common/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_postalveolar.png" target="_blank"><img src="../common/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_palatal.png" target="_blank"><img src="../common/mouth/mouth_small_palatal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_velar.png" target="_blank"><img src="../common/mouth/mouth_small_velar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_uvular.png" target="_blank"><img src="../common/mouth/mouth_small_uvular.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_glottal.png" target="_blank"><img src="../common/mouth/mouth_small_glottal.png" alt=" "/></a></td>
+</tr>
+</tbody>
+</table>
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_language#Phonology">w</a>. Phones in a lighter colour are non-native or allophones.</p>
+</section>
+
+
+
 
 
 <section id="mn_consonants">
@@ -374,7 +635,15 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <p>For the Mongolian language there is a basic set of 16 consonants.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc,trans2">ᠨ␣ᠩ␣ᠪ␣ᠫ␣ᠬ␣ᠭ␣ᠮ␣ᠯ␣ᠰ␣ᠱ␣ᠲ␣ᠳ␣ᠴ␣ᠵ␣ᠶ␣ᠷ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc,trans2">ᠫ␣ᠪ␣ᠲ␣ᠳ␣ᠴ␣ᠵ</figure>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc,trans2">ᠬ␣ᠰ␣ᠱ␣ᠭ</figure>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc,trans2">ᠨ␣ᠩ␣ᠮ</figure>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc,trans2">ᠯ␣ᠶ␣ᠷ</figure>
+
+
 </section>
 
 
@@ -447,8 +716,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h3 id="clusters">Consonant clusters &amp; gemination</h3>
+<section id="clusters">
+<h3>Consonant clusters &amp; gemination</h3>
 <p>Because the script is alphabetic, there are no special mechanisms for representing clusters of consonants without intervening vowels, or doubled consonants.</p>
 </section>
 
@@ -460,8 +729,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h2 id="cchars">Combining marks</h2>
+<section id="cchars">
+<h2>Combining marks</h2>
     <p>The Mongolian block contains 3 visible combining characters.</p>
 <figure class="auxiliaryBox auto" data-cols="">ᢅ␣ᢆ␣ᢩ</figure>
 
@@ -472,8 +741,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-  <h2 id="punctuation">Punctuation</h2>
+<section id="punctuation">
+<h2>Punctuation</h2>
   <p>The Unicode Mongolian block contains 11  characters classed as punctuation by Unicode. Mongolian regularly uses these first five.</p>
 
 <figure class="characterBox auto" data-cols="trans">᠊␣᠁␣᠂␣᠃␣᠄</figure>
@@ -495,8 +764,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h2 id="digits">Numbers</h2>
+<section id="digits">
+<h2>Numbers</h2>
     <p>Mongolian often uses european digits, however there is a set of Mongolian digits.</p>
 
 <figure class="characterBox auto" data-cols="trans">᠐␣᠑␣᠒␣᠓␣᠔␣᠕␣᠖␣᠗␣᠘␣᠙</figure>
@@ -515,13 +784,13 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-  <section>
-  <h2 id="shaping">Glyph shaping &amp; positioning</h2>
+  <section id="shaping">
+<h2>Glyph shaping &amp; positioning</h2>
 <p>Most of the complexity of the Mongolian traditional script has to do with two things: (1) characters are allocated on the basis of phonemic differences, but many characters share identical shapes, and (2) there are many variant forms for a given character, some of which cannot be produced automatically.</p>
 <p>You can experiment with examples using the <a href="/pickers/mongolian/">Mongolian picker</a>.</p>
-<section>
-<h3 id="gsub">Cursive shaping</h3>
-    <p class="instructions"> Is this script cursive? Is the basic shape of a letter radically changed? Is it sometimes not cursive? Are there any special features to note?  Are Unicode joiner and non-joiner characters needed to override default joining behaviours?</p>
+<section id="gsub">
+<h3>Cursive shaping</h3>
+    <p class="prompts"> Is this script cursive? Is the basic shape of a letter radically changed? Is it sometimes not cursive? Are there any special features to note?  Are Unicode joiner and non-joiner characters needed to override default joining behaviours?</p>
 <p>Similarly to the Arabic script, Mongolian letters within a word tend to be joined cursively along the centre baseline, and the shapes of joined characters can vary significantly in various positions. Unlike Arabic, and many other cursive scripts, there are no characters that only join on one side.</p>
 <p>Letters following a Mongolian suffix space may need to be displayed using a joining form, however that is not always the case. It depends on the suffix.</p>
 <p>The base shape of a letter can change significantly, depending on the position in a word. On the other hand,  a number of  letters have adopt identical shapes in the same, or sometimes different joining contexts.</p>
@@ -530,8 +799,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   
   
   
-  <section>
-  <h3 id="gpos">Context-based shaping</h3>
+  <section id="gpos">
+<h3>Context-based shaping</h3>
     <p class="prompts">Are special glyph forms needed, depending on the context in which a character is used? Do glyphs interact in some circumstances?</p>
 <p>Certain letters ligate with adjacent letters.</p>
 <p>In addition to the cursive shaping mentioned just above, individual letters may have context-dependent variant forms, that can be quite different from the standard forms. Where the alternative form can be determined algorithmically, the font should produce the change.</p>
@@ -543,8 +812,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h3 id="gpos">Context-based positioning</h3>
+<section id="gpos">
+<h3>Context-based positioning</h3>
 
 <p class="prompts"> Are there requirements to position diacritics or other items specially, depending on context? Does the script have multiple diacritics competing for the same location relative to the base?</p>
 </section>
@@ -552,16 +821,16 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h3 id="fontstyle">Font styles</h3>
+<section id="fontstyle">
+<h3>Font styles</h3>
 <p class="prompts"> Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</p>
 </section>
 
 
 
 
-<section>
-<h3 id="transforms">Transforming characters</h3>
+<section id="transforms">
+<h3>Transforming characters</h3>
 
 <p class="prompts">If the script is bicameral, are the special rules about case conversion? Are there other correspondences between glyphs, such as half- vs fullwidth presentation forms?</p>
 </section>
@@ -571,11 +840,11 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h2 id="boundaries">Structural boundaries &amp; markers</h2>
+<section id="boundaries">
+<h2>Structural boundaries &amp; markers</h2>
   
-<section>
-<h3 id="graphemes">Grapheme boundaries</h3>
+<section id="graphemes">
+<h3>Grapheme boundaries</h3>
  <p class="explanatoryintro">A grapheme is a user-perceived unit of text. The Unicode Standard uses generalised rules to define 'grapheme clusters', which approximate the likely grapheme boundaries in a writing system.</p>
 
 <p class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements when double-clicking on the text, or moving through the text with the cursor, or backspace, etc.? </p>
@@ -585,16 +854,16 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
   
-<section>
-<h3 id="words">Word boundaries</h3>
+<section id="words">
+<h3>Word boundaries</h3>
     <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
 <p class="prompts">Are words separated by spaces, or other characters? Are there special requirements when double-clicking  on the text? Are words hyphenated?</p>
 <p>Words are separated by spaces. The gaps before certain suffixes are not considered to be word delimiters. Those gaps are usually created using <span class="codepoint" translate="no"><a href="/scripts/mongolian/block#char180E"><span class="uname">U+180E MONGOLIAN VOWEL SEPARATOR</span></a></span> or <span class="codepoint" translate="no"><a href="/scripts/mongolian/block#char202F"><span class="uname">U+202F NARROW NO-BREAK SPACE</span></a></span>.</p>
 </section>
 
 
-<section>
-<h3 id="phrase">Phrase &amp; section boundaries</h3>
+<section id="phrase">
+<h3>Phrase &amp; section boundaries</h3>
 <p class="prompts">What characters are used to indicate the boundaries of phrases, sentences, and sections?</p>
 <p>Mongolian uses a mixture of local punctuation and punctuation from Chinese. See <a class="secref">punctuation</a> for more details.</p>
 </section>
@@ -603,8 +872,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h3 id="bracketing">Bracketing &amp; parentheses</h3>
+<section id="bracketing">
+<h3>Bracketing &amp; parentheses</h3>
 <p class="prompts">What characters are used as parentheses, or to bracket information?</p>
 </section>
 
@@ -612,8 +881,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
   
-<section>
-<h3 id="quotations">Quotations</h3>
+<section id="quotations">
+<h3>Quotations</h3>
 <p class="prompts">What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue?</p>
 </section>
 
@@ -621,16 +890,16 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
   
-<section>
-<h3 id="hyphens">Abbreviation, ellipsis &amp; repetition</h3>
+<section id="hyphens">
+<h3>Abbreviation, ellipsis &amp; repetition</h3>
 <p class="prompts">What characters are used to indicate abbreviation, ellipsis &amp; repetition?</p>
 </section>
 
 
 
 
-<section>
-<h3 id="text_decor">Emphasis &amp; text decoration</h3>
+<section id="text_decor">
+<h3>Emphasis &amp; text decoration</h3>
     <p class="prompts">How are emphasis and highlighting achieved? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</p>
 <p>Underlines run down the right side of vertical lines of Mongolian text. Lines down the left side are equivalent to overline in English text.<a class="fnref" href="https://w3c.github.io/mlreq/#h_text_decoration">n</a></p>
 <p>The side of the vertical line for underlines doesn't change for embedded Latin text. Since Latin text runs down the page, this makes the underline run across the top of the Latin letters. See the red line in <a class="figref" href="#text_decoration_mixed">the figure below</a>.<a class="fnref" href="https://w3c.github.io/mlreq/#h_text_decoration">n</a></p>
@@ -657,8 +926,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
   
-<section>
-<h3 id="ruby">Inline notes &amp; annotations</h3>
+<section id="ruby">
+<h3>Inline notes &amp; annotations</h3>
     <p class="prompts">What mechanisms, if any, are used to create <u>inline</u> notes and annotations? (For referent-type notes such as footnotes, see below.)</p>
 <p>Like Chinese and Japanese, Mongolian text uses ruby annotations to express the pronunciation of words for beginners or in ambiguous situations. This is useful in Mongolian because many characters look identical in cursive text.</p>
   <p>Annotations are typically written in the Latin script, and run down the right side of the line.<a class="fnref" href="https://github.com/w3c/mlreq/issues/1">g</a></p>
@@ -675,17 +944,17 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
  
  
  
-<section>
-<h2 id="paralayout">Line &amp; paragraph layout</h2>
+<section id="paralayout">
+<h2>Line &amp; paragraph layout</h2>
    
       
-  <section>
-    <h3 id="linebreak">Line breaking &amp; hyphenation</h3>
+  <section id="linebreak">
+<h3>Line breaking &amp; hyphenation</h3>
     <p class="prompts">Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that?</p>
 <p>Line-breaking normally occurs at word boundaries (indicated by spaces).</p>
 <p>Lines should <em>not</em> break, however, on gaps between words and their suffixes when separated by <span class="uname">U+202F NARROW NO-BREAK SPACE</span>), or where  <span class="uname">U+180E MONGOLIAN VOWEL SEPARATOR</span> is used.<a href="https://w3c.github.io/mlreq/#mongolian_space" class="fnref">n</a></p>
 <p>As for most writing systems, there are restrictions around which characters are allowed to start or end a line (eg. question marks and colons should not be used at the beginning of a line, and opening brackets should not be used at the end of a line).<a class="fnref" href="https://w3c.github.io/mlreq/#punctuation_rules">n</a></p>
-<p><span class="leadin">Character properties.<a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">x</a></span> Characters used for the Mongolian  language have the following assignments related to line-break properties.</p>
+<p><span class="leadin">Character properties.</span> Characters used for the Mongolian  language have the following assignments related to line-break properties.</p>
 <table><tbody>
 <tr><th class="sg">AL</th>
 <td class="count">37</td><td class="chars"><span style="letter-spacing: 1ch;" class="ex" lang="mn">ᠠᠡᠢᠣᠤᠥᠦᠧᠨᠩᠪᠫᠬᠭᠮᠯᠰᠱᠲᠳᠴᠵᠶᠷᠸᠹᠺᠻᠼᠽᠾᠿᡀᡁᡂ᠊᠁</span></td></tr>
@@ -711,6 +980,9 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <tr>
 <th class="sg">OP</th><td class="count">4</td><td class="chars"><span style="letter-spacing: 1ch;" class="ex" lang="mn">(〈《〔</span></td></tr>
 </tbody></table>
+
+<details id="linebreak_details">
+<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BA (break after)</a> indicates that it is normal to break after that character.&nbsp;</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CL">CL (close punctuation)</a>  should be kept with the preceding character.&nbsp;The class CL is closely related to the class CP (Close Parenthesis). They differ only in that CP will not introduce a break when followed by a letter or number, which prevents breaks within constructs like “(s)he”.</p>
@@ -719,19 +991,20 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#EX">EX (exclamation mark/interrogation)</a> behave like closing characters, except in relation to postfix (PO) and non-starter characters (NS).</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">NU (number)</a> behaves like ordinary characters (AL) in the context of most characters but activate the prefix and postfix behavior of prefix and postfix characters.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#OP">OP (open punctuation)</a> 	should be kept with the character that follows. This is desirable, even if there are intervening space characters, as it prevents the appearance of a bare opening punctuation mark at the end of a line.</p>
+</details>
 </section>
 
 
 
-<section>
-    <h3 id="hyphenation">Hyphenation</h3>
+<section id="hyphenation">
+<h3>Hyphenation</h3>
 <p class="prompts">Is hyphenation used, or something else?</p>
 </section>
 
 
 
- <section>
-    <h3 id="justification">Text alignment &amp; justification</h3>
+ <section id="justification">
+<h3>Text alignment &amp; justification</h3>
     <p class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</p>
 <p>To justify the text on a line, the spaces between words are adjusted.</p>
 <p>When Chinese characters are embedded in Mongolian text and justification applied, space is not added between the Chinese characters (as it would be in a Chinese document).<a class="fnref" href="https://w3c.github.io/mlreq/#mixed_arrangement_cjk">n</a></p>
@@ -744,16 +1017,16 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
- <section>
-    <h3 id="letterspace">Letter spacing</h3>
+ <section id="letterspace">
+<h3>Letter spacing</h3>
     <p class="prompts">Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see above.).</p>
 </section>
 
 
 
 
-<section>
-  <h3 id="lists">Counters, lists, etc.</h3>
+<section id="lists">
+<h3>Counters, lists, etc.</h3>
   
 <p class="prompts">Are there list or other counter styles in use?  If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed? </p>
 
@@ -769,7 +1042,9 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </figure>
 
 
-<p>The  Mongolian section in the document <cite>Ready-made Counter Styles</cite> lists only one style, <a href="https://w3c.github.io/predefined-counter-styles/#mongolian-styles">mongolian</a>,  which is numeric. It uses the Mongolian digits: <span lang="mn">᠐<br/>᠑<br/>᠒<br/>᠓<br/>᠔<br/>᠕<br/>᠖<br/>᠗<br/>᠘<br/>᠙</span>.</p>
+<p><p>&nbsp;</p>
+<p>The  Mongolian section in the document <a href="https://w3c.github.io/predefined-counter-styles/#mongolian-styles"><cite>Ready-made Counter Styles</cite></a>lists only one style, <span class="kw" translate="no">mongolian</span>,  which is numeric. The style is decimal-based and uses the  digits shown below.</p>
+<figure class="auto" data-cols="trans,transc">᠐␣᠑␣᠒␣᠓␣᠔␣᠕␣᠖␣᠗␣᠘␣᠙</figure>
 <figure>
 <p class="large">1&nbsp;⇨&nbsp;<span class="ex" lang="mn">᠑</span> 2&nbsp;⇨&nbsp;<span class="ex" lang="mn">᠒</span> 3&nbsp;⇨&nbsp;<span class="ex" lang="mn">᠓</span> 4&nbsp;⇨&nbsp;<span class="ex" lang="mn">᠔</span> 11&nbsp;⇨&nbsp;<span class="ex" lang="mn">᠑᠑</span> 22&nbsp;⇨&nbsp;<span class="ex" lang="mn">᠒᠒</span> 33&nbsp;⇨&nbsp;<span class="ex" lang="mn">᠓᠓</span> 44&nbsp;⇨&nbsp;<span class="ex" lang="mn">᠔᠔</span> 111&nbsp;⇨&nbsp;<span class="ex" lang="mn">᠑᠑᠑</span> 2222&nbsp;⇨&nbsp;<span class="ex" lang="mn">᠒᠒᠒</span></p>
 <figcaption>Numbers produced by the numeric counter style<span class="trans"></span>.</figcaption>
@@ -791,8 +1066,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
   
-<section>
-<h3 id="initials">Styling initials</h3>
+<section id="initials">
+<h3>Styling initials</h3>
 <p class="prompts">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? etc.</p>
 </section>
 
@@ -800,8 +1075,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
   
-<section>
-<h3 id="baselines">Baselines &amp; inline alignment</h3>
+<section id="baselines">
+<h3>Baselines &amp; inline alignment</h3>
 <p class="prompts">Does the script have special requirements for baseline alignment between mixed scripts and in general?</p>
 
 <p>The default baseline for Mongolian-script text runs down the centre of the vertical line spacing, as shown in <a class="figref" href="#centre_baseline">the figure below</a>.<a class="fnref" href="https://w3c.github.io/mlreq/#h_text_decoration">n</a></p>
@@ -817,11 +1092,11 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
  
  
  
- <section>
- <h2 id="pagelayout">Page &amp; book layout</h2>
+ <section id="pagelayout">
+<h2>Page &amp; book layout</h2>
  
-  <section>
-    <h3 id="generallayout">General page layout &amp; progression</h3>
+  <section id="generallayout">
+<h3>General page layout &amp; progression</h3>
     <p class="prompts">How are the main text area and ancilliary areas positioned and defined? Are there any special requirements here, such as dimensions in characters for the Japanese kihon hanmen? The book cover for scripts that are read right-to-left scripts is on the right of the spine, rather than the left.  When content can flow vertically and to the left or right, how to specify the location of objects, text, etc. relative to the flow? Do tables and grid layouts work as expected? How do columns work in vertical text? Can you mix block of vertical and horizontal text? Does text scroll in a different direction?</p>
 <p>Generally, book binding is on the left, and pages are turned towards the left, unlike books set vertically in Chinese or Japanese.<a class="fnref" href="https://w3c.github.io/mlreq/#https://w3c.github.io/mlreq/#h_binding">n</a></p>
 <figure id="page_turning">
@@ -842,8 +1117,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h3 id="grids">Grids &amp; tables</h3>
+<section id="grids">
+<h3>Grids &amp; tables</h3>
 <p class="prompts">Does the script have special requirements for character grids or tables?</p>
 </section>
 
@@ -851,8 +1126,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
   
-<section>
-<h3 id="footnotes">Notes, footnotes, etc</h3>
+<section id="footnotes">
+<h3>Notes, footnotes, etc</h3>
 <p class="prompts">Does the script have special requirements for notes, footnotes, endnotes or other necessary annotations of this kind? (There is a section above for purely inline annotations, such as ruby or warichu. This section is more about annotation systems that separate the reference marks and the content of the notes.)</p>
 </section>
 
@@ -860,8 +1135,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
   
-<section>
-<h3 id="interaction">Forms &amp; user interaction</h3>
+<section id="interaction">
+<h3>Forms &amp; user interaction</h3>
 <p class="prompts">Are vertical form controls needed? Are scroll bars in an unusual position? Other special requirements for user interaction?</p>
 
 <p>Form controls on Web pages should be rotated 90 degrees clockwise, compared to the form controls for Western languages.<a class="fnref" href="https://w3c.github.io/mlreq/#h_input">→n</a></p>
@@ -871,14 +1146,32 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
   
-<section>
-<h3 id="headers">Page numbering, running headers, etc</h3>
+<section id="headers">
+<h3>Page numbering, running headers, etc</h3>
 <p class="prompts">Are there special conventions for page numbering, or the way that running headers and the like are handled?</p>
 <p>Page numbers should be displayed on the upper or lower side of the page.<a class="fnref" href="https://w3c.github.io/mlreq/#h_page_numbering">n</a></p>
 </section>
 </section>
 
 
+  
+  
+  
+  
+  
+<section id="chars">
+<h2>Character lists</h2>
+    <p>Version 12.0 of the Unicode Standard has the following blocks dedicated to the Mongolian script (numbers in lists are non-ASCII only):</p>
+<ol>
+    <li><a href="/uniview/?block=mongolian">Mongolian</a> <span class="charCount">129 letters, 6 marks, 11 punctuation, 10 numbers, 1 other: &nbsp;  total 157</span></li>
+      <li><a href="/uniview/?block=mongolian_supplement">Mongolian Supplement </a><span class="charCount">13 symbols: &nbsp;  total 13</span></li>
+</ol>
+<!--p>The following links give information about characters used for languages associated with this script. The numbers in parentheses are for <strong>non-ASCII</strong> characters.</p>
+<ul>
+<li><a href="/app-charuse/?language=si" target="_blank">Mongolian</a> <span class="charCount">(35 letters, 3 marks, 9 punctuation, 10 numbers, 1 separator, 1 other :   total 59)</span></li>
+</ul-->
+<p>For detailed character-specific information see <a class="linkHighlight" href="/scripts/mongolian/block">Mongolian character notes</a>.</p>
+</section>
 
 
 
@@ -886,8 +1179,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h2 id="languages">Languages using the Mongolian script</h2>
+<section id="languages">
+<h2>Languages using the Mongolian script</h2>
 <p>According to ScriptSource, the Mongolian script is used for the following languages: </p>
 <ul>
 <li>Mongolian, Halh [khk]</li>
@@ -910,20 +1203,17 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<section>
-<h2 id="refs">References</h2>
+<section id="refs">
+<h2>References</h2>
 <ol>
-<li>[ <a class="fnref" href="https://www.unicode.org/versions/latest/ch13.pdf">u</a> ]
-<cite>The Unicode Standard v12.0</cite>, <a href="https://www.unicode.org/versions/latest/ch13.pdf">Mongolian</a>, pp532-541.</li>
-
 <li>[ <a class="fnref" href="#refs">d</a> ]
 Peter T. Daniels and William Bright, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN 0-19-507993-0, p???.</li>
 
+<li>[ <a class="fnref" href="https://github.com/w3c/mlreq/issues">g</a> ] <a href="https://github.com/w3c/mlreq/issues">Issue list</a> for W3C Mongolian layout requirements.</li>
 <li>[ <a class="fnref" href="https://w3c.github.io/mlreq/">n</a> ]
 Nasun-urt, Hu Qitu, <cite><a href="https://w3c.github.io/mlreq/">Mongolian Layout Requirements</a></cite></li>
-
-<li>[ <a class="fnref" href="https://github.com/w3c/mlreq/issues">g</a> ]
-<a href="https://github.com/w3c/mlreq/issues">Issue list</a> for W3C Mongolian layout requirements.</li>
+<li>[ <a class="fnref" href="https://www.unicode.org/versions/latest/ch13.pdf">u</a> ] <cite>The Unicode Standard v12.0</cite>, <a href="https://www.unicode.org/versions/latest/ch13.pdf">Mongolian</a>, pp532-541.</li>
+<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_language">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Mongolian_language">Mongolian language</a>.</li>
 </ol>
 </section>
 
@@ -943,8 +1233,8 @@ Nasun-urt, Hu Qitu, <cite><a href="https://w3c.github.io/mlreq/">Mongolian Layou
 </table>
 <script>
 runCharCount('.characterBox', 'mainCharList')
-runCharCount('.archaicBox', 'archaicCharList')
 runCharCount('.auxiliaryBox', 'auxCharList')
+runCharCount('.archaicBox', 'archaicCharList')
 runCharCount('.otherBox', 'otherCharList')
 runCharCount('.deprecatedBox', 'deprecatedCharList')
 </script>
@@ -954,23 +1244,21 @@ runCharCount('.deprecatedBox', 'deprecatedCharList')
 
 
 
-<!--script src="../../shared/scriptdb/mongolian.js">  </script>
 
-<script>
-replaceStuff('Mongolian', 'mongolian', spreadsheet, '', 'mn', '', cols, false)
-</script--> 
+<div id="phoneLinks"></div>
 
-
-
-
-<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/mongolian"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-11-15  7:46<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bmongolian%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fmongolian%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 <div id="panel" style="display:none"></div>
 
+
+<div class="smallprint"><span id="version"></span></div>
+
+
+
 <script>
-initialiseSummary('/scripts/mongolian/block','mn','Mongolian')
-//autoTransliterate('mn')
+initialiseSummary('/scripts/mongolian/block','mn','Mongolian','mongolian')
+autoTransliterate('mn',)
 </script>
 </body>
 </html>
