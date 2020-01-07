@@ -9,13 +9,14 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
@@ -23,6 +24,7 @@
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/thai.js"> </script>
+<script src="th-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -72,16 +74,24 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->15 July, 2019<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/index.php?tag=thai" title="Show all blog posts tagged with 'thai'">thai</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
-<section>
+  <!-- #BeginDate format:Sw1 -->7 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
+
+
+
+<div id="intro">
   <p>This page lists characters in the following Unicode  block and provides information about them.</p>
   <ul>
     <li><a href="../../uniview/?block=thai" target="_blank">Thai</a></li>
   </ul>
-  <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
+<p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
   <p>For details about how the script works, see <a class="linkHighlight" href="index">Thai</a>,   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Thai">Script links pages</a>.</p>
-<p>Find <input type="text" onChange="var hex=this.value;if (hex!=''){while(hex.length<4){hex='0'+hex;}document.location='#char'+hex.toUpperCase();}"/></p>
+<p>We have usage data for the following language that uses the Thai script: Thai.</p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -96,8 +106,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 </div>
 
 
-<section id='consonants'>
-  <h2><a href='#consonants'>Consonants</a></h2>
+<section id="consonants">
+<h2>Consonants</h2>
 
   
   <div class="character" id='char0E01'>
@@ -821,8 +831,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
     </div>
   </div>
 </section>
-<section id='vowels'>
-  <h2><a href='#vowels'>Vowels</a></h2>
+<section id="vowels">
+<h2>Vowels</h2>
   
   <div class="character" id='char0E30'>
     <div class="charimg">&#x0E30;</div>
@@ -1130,8 +1140,13 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
     </div>
   </div>
 </section>
-<section id='signs'>
-  <h2><a href='#signs'>Signs</a></h2>
+
+
+
+
+
+<section id="signs">
+<h2>Signs</h2>
   
   <div class="character" id='char0E2F'>
     <div class="charimg">&#x0E2F;</div>
@@ -1235,8 +1250,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
     </div>
   </div>
 </section>
-<section id='vowellength'>
-  <h2><a href='#vowellength'>Vowel length sign</a></h2>
+<section id="vowellength">
+<h2>Vowel length sign</h2>
   
   <div class="character" id='char0E45'>
     <div class="charimg">&#x0E45;</div>
@@ -1252,8 +1267,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
     </div>
   </div>
 </section>
-<section id='repetition'>
-  <h2><a href='#repetition'>Repetition mark</a></h2>
+<section id="repetition">
+<h2>Repetition mark</h2>
   
   <div class="character" id='char0E46'>
     <div class="charimg">&#x0E46;</div>
@@ -1269,8 +1284,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
     </div>
   </div>
 </section>
-<section id='tone'>
-  <h2><a href='#tone'>Tone marks</a></h2>
+<section id="tone">
+<h2>Tone marks</h2>
   
   <div class="character" id='char0E48'>
     <div class="charimg">&#x0E48;</div>
@@ -1341,8 +1356,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 
-<section id='currency'>
-  <h2><a href='#currency'>Currency symbol</a></h2>
+<section id="currency">
+<h2>Currency symbol</h2>
   
   <div class="character" id='char0E3F'>
     <div class="charimg">&#x0E3F;</div>
@@ -1354,8 +1369,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 
-<section id='digits'>
-  <h2><a href='#digits'>Digits</a></h2>
+<section id="digits">
+<h2>Digits</h2>
   
   <div class="character" id='char0E50'>
     <div class="charimg">&#x0E50;</div>
@@ -1431,12 +1446,12 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="refs">
-  <h2><a href="#refs">References</a></h2>
+  <h2>References</h2>
   <ol>
-    <li>[ <sup><a href="http://www.unicode.org/versions/latest/ch12.pdf">u</a></sup> ] The Unicode Standard v7.0, <a href="http://www.unicode.org/versions/latest/ch12.pdf">Thai</a></li>
-    <li>[ <sup><a href="#refs">b</a></sup> ] Marie-Hélène Brown, Reading and Writing Thai, ISBN 974-210-4506</li>
-    <li>[ <sup><a href="#refs">t</a></sup> ] Benjawan Poomsan Becker, Thai for Beginners, ISBN 1-887521-00-3</li>
-    <li>[ <sup><a href="http://www.thailandqa.com/forum/showthread.php?4830-Special-characters-in-thai-language">p</a></sup> ] <a href="http://www.thailandqa.com/forum/showthread.php?4830-Special-characters-in-thai-language">Special characters in thai language</a>, The Packnam Web Forums</li>
+<li>[ <a class="fnref" href="#refs">b</a> ] Marie-Hélène Brown, Reading and Writing Thai, ISBN 974-210-4506</li>
+    <li>[ <a class="fnref" href="http://www.thailandqa.com/forum/showthread.php?4830-Special-characters-in-thai-language">p</a> ] <a href="http://www.thailandqa.com/forum/showthread.php?4830-Special-characters-in-thai-language">Special characters in thai language</a>, The Packnam Web Forums</li>
+<li>[ <a class="fnref" href="#refs">t</a> ] Benjawan Poomsan Becker, Thai for Beginners, ISBN 1-887521-00-3</li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch12.pdf">u</a> ] The Unicode Standard v7.0, <a href="http://www.unicode.org/versions/latest/ch12.pdf">Thai</a></li>
   </ol>
 </section>
 
@@ -1457,9 +1472,10 @@ replaceStuff('Thai', 'thai', spreadsheet, '', 'th', '', cols, false)
 
 <div id="panel" style="display:none"></div>
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/thai/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-07-15  6:53<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bthai%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fthai%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+<div class="smallprint"><span id="version"></span></div>
+
+
 
 <!-- Uncomment this code to get a list of all character names for the file names-subset.js  
 <div id=charliststr></div>
@@ -1484,7 +1500,8 @@ Digits;digits;0E50-0E59
 --> 
 
 <script>
-initialise('/scripts/thai/block')
+initialise('/scripts/thai/block','thai')
+autoTransliterate('th')
 </script>
 </body>
 </html>
