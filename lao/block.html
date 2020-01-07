@@ -5,7 +5,7 @@
 <title>Lao character notes</title>
 <meta name="description" content="Notes about characters in the Unicode Lao script block."/>
 <link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../block/block-style.css" />
+<link rel="stylesheet" href="../common/block-style.css" />
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
@@ -15,7 +15,7 @@
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
-<script src="../block/functions.js"></script>
+<script src="../common/block-functions.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
@@ -45,7 +45,7 @@
     <h2 class="notoc"><a id="links">Related links</a></h2>
     <p><a href="index">Lao script summary</a></p>
 <p><a href="/scripts/links?script=lao" target="_blank">Lao script links</a></p>
-<p><a href="../../pickers/lao/" target="_blank">Lao picker</a></p>
+<p><a href="../../pickers/lao/" target="_blank">Lao character app</a></p>
   </div>
   
   <div id="fontsetting" class="closed">
@@ -71,7 +71,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <div id="intro">
-<p id="status">Updated Wed 15 Oct 2014  &bull; tags <a href="http://rishida.net/blog/index.php?tag=lao" title="Show all blog posts tagged with 'lao'">lao</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+<p id="status">Updated 
+  <!-- #BeginDate format:Sw1 -->7 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
+
 <section>
   <p>This page lists characters in the following Unicode  block and provides information about them. </p>
   <ul>
@@ -79,7 +83,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   </ul>
   <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
   <p>For details about how the script works, see <a class="linkHighlight" href="index">Lao</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Laoo">Script links pages</a>.</p>
-<p>Find <input type="text" onChange="var hex=this.value;if (hex!=''){while(hex.length<4){hex='0'+hex;}document.location='#char'+hex.toUpperCase();}"/></p>
+<p>Find <input type="text" 
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></p>
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -1184,9 +1189,8 @@ replaceStuff('Lao', 'lao', spreadsheet, '', 'lo', '', cols, false)
 
 <div id="panel" style="display:none"></div>
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/lao/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2020-01-02  13:10<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Blao%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Flao%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+<div class="smallprint"><span id="version"></span></div>
 
 <!-- Uncomment this code to get a list of all character names for the file names-subset.js  
 <div id=charliststr></div>
@@ -1223,7 +1227,7 @@ Shan symbols;shans;109E-109F
  --> 
 
 <script>
-initialise('/scripts/lao/block')
+initialise('/scripts/lao/block','lao')
 </script>
 </body>
 </html>
