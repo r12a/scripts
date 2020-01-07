@@ -9,13 +9,14 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
@@ -23,6 +24,7 @@
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/bengali.js"> </script>
+<script src="bn-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -69,19 +71,26 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 </aside>
 
 
-<div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->31 December, 2019<!-- #EndDate -->
-&bull; tags <a href="http://r12a.github.io/blog/index.php?tag=bengali" title="Show all blog posts tagged with 'bengali'">bengali</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+  <!-- #BeginDate format:Sw1 -->7 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+</p>
+
+
+<div id="intro">
 <section>
   <p>This page lists characters in the following Unicode  block and provides information about them.</p>
 <ul>
     <li><a href="../../uniview/?block=bengali" target="_blank">Bengali</a></li>
-  </ul>
+</ul>
 
 <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places.</p>
 <p>For details about how the script works, see <a class="linkHighlight" href="index">Bengali/Bangla</a>. For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Beng">Script links pages</a>.</p>
-<p>Find <input type="text" onChange="var hex=this.value;if (hex!=''){while(hex.length<4){hex='0'+hex;}document.location='#char'+hex.toUpperCase();}"/></p>
+<p><span style="text-align: start;">We have usage data for the following 2 languages that use the Bengali script</span>: Assamese, Bengali.</p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -98,7 +107,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="varioussigns">
-<h2><a href="#varioussigns">Various signs</a></h2>
+<h2>Various signs</h2>
   
   
   <div class="character" id="char0980">
@@ -236,7 +245,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="virama">
-  <h2><a href="#virama">Virama</a></h2>
+  <h2>Virama</h2>
   <div class="character" id="char09CD">
     <div class="charimg">&#x09CD;</div>
     <p class="charname"><strong>U+09CD</strong> <a href="#char09CD">BENGALI SIGN VIRAMA</a></p>
@@ -258,10 +267,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="consonants">
-  <h2><a href="#consonants">Consonants</a></h2>
+  <h2>Consonants</h2>
 
 <section id="basicconsonants">
-  <h3><a href="#basicconsonants">Basic consonants</a></h3>
+  <h3>Basic consonants</h3>
 
   <div class="character" id="char0995">
     <div class="charimg">&#x0995;</div>
@@ -848,7 +857,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="addcons">
-  <h3><a href="#addcons">Additional consonants</a></h3>
+  <h3>Additional consonants</h3>
   
   <div class="character" id="char09CE">
     <div class="charimg">&#x09CE;</div>
@@ -923,7 +932,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="assamese">
-  <h3><a href="#assamese">Additions for Assamese</a></h3>
+  <h3>Additions for Assamese</h3>
   <div class="character" id="char09F0">
     <div class="charimg">&#x09F0;</div>
     <p class="charname"><strong>U+09F0</strong> <a href="#char09F0">BENGALI LETTER RA WITH MIDDLE DIAGONAL</a></p>
@@ -958,11 +967,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="vowels">
-  <h2><a href="#vowels">Vowels</a></h2>
+  <h2>Vowels</h2>
 
 
 <section id="ivowels">
-  <h3><a href="#ivowels">Independent vowels</a></h3>
+  <h3>Independent vowels</h3>
   <div class="character" id="char0985">
     <div class="charimg">&#x0985;</div>
     <p class="charname"><strong>U+0985</strong> <a href="#char0985">BENGALI LETTER A</a></p>
@@ -1145,7 +1154,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="dvowels">
-  <h3><a href="#dvowels">Dependent vowel signs</a></h3>
+  <h3>Dependent vowel signs</h3>
 
 
   <div class="character" id="char09BE">
@@ -1301,7 +1310,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="twopart">
-  <h3><a href="#twopart">Two-part dependent vowel signs</a></h3>
+  <h3>Two-part dependent vowel signs</h3>
   <div class="character" id="char09CB">
     <div class="charimg">&#x09CB;</div>
     <p class="charname"><strong>U+09CB</strong> <a href="#char09CB">BENGALI VOWEL SIGN O</a></p>
@@ -1342,7 +1351,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="sanskrit">
-  <h3><a href="#sanskrit">Additional vowels for Sanskrit</a></h3>
+  <h3>Additional vowels for Sanskrit</h3>
   <div class="character" id="char09E0">
     <div class="charimg">&#x09E0;</div>
     <p class="charname"><strong>U+09E0</strong> <a href="#char09E0">BENGALI LETTER VOCALIC RR</a></p>
@@ -1407,7 +1416,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="digits">
-  <h2><a href="#digits">Digits</a></h2>
+  <h2>Digits</h2>
   <div class="character" id="char09E6">
     <div class="charimg">&#x09E6;</div>
     <p class="charname"><strong>U+09E6</strong> <a href="#char09E6">BENGALI DIGIT ZERO</a></p>
@@ -1520,7 +1529,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   </div>
 </section>
 <section id="fractions">
-  <h2><a href="#fractions">Historic symbols for fractional values</a></h2>
+  <h2>Historic symbols for fractional values</h2>
   <div class="character" id="char09F4">
     <div class="charimg">&#x09F4;</div>
     <p class="charname"><strong>U+09F4</strong> <a href="#char09F4">BENGALI CURRENCY NUMERATOR ONE</a></p>
@@ -1601,7 +1610,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   </div>
 </section>
 <section id="currency">
-  <h2><a href="#currency">Currency signs</a></h2>
+  <h2>Currency signs</h2>
   <div class="character" id="char09F2">
     <div class="charimg">&#x09F2;</div>
     <p class="charname"><strong>U+09F2</strong> <a href="#char09F2">BENGALI RUPEE MARK</a></p>
@@ -1635,9 +1644,9 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   <h2><a href="#refs" id="endlinks"> references</a></h2>
   <ol>
 <li>[ <a class="fnref" href="#refs">b</a> ] Bhattacharya, Private correspondance with Tanmoy Bhattacharya, July 2004. </li>
+<li>[ <a class="fnref" href="http://www.w3.org/International/docs/counter-styles/">c</a> ] Ishida, <cite><a href="http://www.w3.org/International/docs/counter-styles/">Ready-made Counter Styles</a></cite></li>
 <li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN
 		    0-19-507993-0</li>
-<li>[ <a class="fnref" href="http://www.w3.org/International/docs/counter-styles/">c</a> ] Ishida, <cite><a href="http://www.w3.org/International/docs/counter-styles/">Ready-made Counter Styles</a></cite></li>
 <li>[ <a class="fnref" href="http://std.dkuug.dk/JTC1/SC2/wg2/docs/n3311.pdf">p</a> ] Anshuman Pandey, <cite><a href="http://std.dkuug.dk/JTC1/SC2/wg2/docs/n3311.pdf">Proposal to Encode the Ganda Currency Mark for Bengali in ISO/IEC 10646</a></cite></li>
 <li>[ <a class="fnref" href="#refs">r</a> ] William Radice, <span class="doctitle"><cite>Teach Yourself Bengali</cite></span>, Hodder &amp; Shoughton, ISBN 0-340-86029-4</li>
 <li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode7.0.0/ch12.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode7.0.0/ch12.pdf"><cite>The Unicode Standard</cite></a></li>
@@ -1664,9 +1673,10 @@ replaceStuff('Bengali', 'bengali', spreadsheet, '', 'bn', '', cols, false)
 
 <div id="panel" style="display:none"></div>
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/bengali/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-12-31  21:40<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bbengali%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fbengali%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+<div class="smallprint"><span id="version"></span></div>
+
+
 
 <!-- Uncomment this code to get a list of all character names for the file names-subset.js   
 <div id=charliststr></div>
@@ -1697,7 +1707,8 @@ Currency signs;currency;09F2-09F3 09FB-09FB
 
 
 <script>
-initialise('/scripts/bengali/block')
+initialise('/scripts/bengali/block','bengali')
+autoTransliterate('bn')
 </script>
 </body>
 </html>
