@@ -3,6 +3,8 @@
 // call this from the end of the document, but first read in the file that contains the (language specific) autoTranslitArray variable
 
 
+var autoTranslitArray = {}
+
 
 function transliterate (str) {
 
@@ -23,19 +25,41 @@ return str.trim()
 }
 
 
+function transliterateLang (str, lang) {
+// like transliterate() but uses newer data format, to allow for multiple languages per page
+str = ' '+str
+
+var strArray = [...str]
+var exclusions = new Set(['(',')','[',']','.',' '])
+
+for (i=0;i<strArray.length;i++) {
+	if (exclusions.has(strArray[i])) continue
+	if (! autoTranslitArray[lang][strArray[i]]) continue
+	re = new RegExp(strArray[i],'g')
+	str = str.replace(re, autoTranslitArray[lang][strArray[i]])
+	}
+
+
+return str.trim()
+}
+
+
 function autoTransliterate (language) {
 	// finds all the transliterations in examples and retransliterates them using autoTranslitArray
 	
 	var trans = document.querySelectorAll('.charExample')
 	
 	for (let i=0;i<trans.length;i++) {
+		// check this is for the right language, and that there's native and translit text
 		var ex = trans[i].querySelector('.ex')
 		if (ex === null) continue
+		if (ex.lang !== language) continue
   		var translit = trans[i].querySelector('.trans')
 		if (translit === null) continue
-		if (ex.lang !== language) continue
 		
-		translit.textContent = transliterate(ex.textContent)
+		// if all ok, route this according to whether data has language-specific format
+		if (autoTranslitArray[language]) translit.textContent = transliterateLang(ex.textContent, language)
+		else translit.textContent = transliterate(ex.textContent)
 		}
 	}
 
