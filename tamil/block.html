@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2019.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
@@ -83,7 +83,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   </ul>
   <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
   <p>For details about how the script works, see <a class="linkHighlight" href="index">Tamil</a>. For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Taml">Script links pages</a>.</p>
-<p>Find <input type="text" onChange="var hex=this.value;if (hex!=''){while(hex.length<4){hex='0'+hex;}document.location='#char'+hex.toUpperCase();}"/></p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -96,8 +99,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 </details>
 </section>
 </div>
-<section>
-  <h2 id="consonants">Consonants</h2>
+<section id="consonants">
+<h2>Consonants</h2>
 
   
   <div class="character" id='char0B95'>
@@ -458,14 +461,14 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   
   
 </section>
-<section>
-  <h2 id="vowels">Vowels</h2>
+<section id="vowels">
+<h2>Vowels</h2>
  
  
  
   
- <section>
-  <h3 id="ivowels">Independent vowels</h3>
+ <section id="ivowels">
+<h3>Independent vowels</h3>
 
  <div class="character" id='char0B85'>
     <div class="charimg">&#x0B85;</div>
@@ -647,8 +650,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 
-<section>
-<h3 id="dvowels">Dependent vowel signs</h3>
+<section id="dvowels">
+<h3>Dependent vowel signs</h3>
 
   <div class="character" id='char0BBE'>
   <div class="charimg">&#x0BBE;</div>
@@ -809,14 +812,14 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 </section>
-<section>
-  <h2 id="signs">Signs &amp; symbols</h2>
+<section id="signs">
+<h2>Signs &amp; symbols</h2>
 
 
 
   
-<section>
-  <h3 id="virama">Virama</h3>
+<section id="virama">
+<h3>Virama</h3>
   
   <div class="character" id='char0BCD'>
     <div class="charimg">&#x0BCD;</div>
@@ -838,8 +841,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 
-<section>
-  <h3 id="varioussigns">Various signs</h3>
+<section id="varioussigns">
+<h3>Various signs</h3>
   
   <div class="character" id='char0B82'>
     <div class="charimg">&#x0B82;</div>
@@ -903,8 +906,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 
-<section>
-  <h3 id="symbols">Tamil symbols</h3>
+<section id="symbols">
+<h3>Tamil symbols</h3>
   
   <div class="character" id='char0BF3'>
     <div class="charimg">&#x0BF3;</div>
@@ -1013,14 +1016,14 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 </section>
-<section>
-  <h2 id="numbers">Numbers</h2>
+<section id="numbers">
+<h2>Numbers</h2>
   
   
   
   
- <section>
-  <h3 id="digits">Digits</h3>
+ <section id="digits">
+<h3>Digits</h3>
   
  <div class="character" id='char0BE6'>
     <div class="charimg">&#x0BE6;</div>
@@ -1167,8 +1170,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 
-<section>
-  <h3 id="numerics">Tamil numerics</h3>
+<section id="numerics">
+<h3>Tamil numerics</h3>
   
   <div class="character" id='char0BF0'>
     <div class="charimg">&#x0BF0;</div>
@@ -1243,8 +1246,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 </section>
-<section>
-  <h2 id="currency">Currency symbol</h2>
+<section id="currency">
+<h2>Currency symbol</h2>
   
   <div class="character" id='char0BF9'>
     <div class="charimg">&#x0BF9;</div>
@@ -1264,8 +1267,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 </section>
 
 
-<section>
-  <h2 id="refs">References</h2>
+<section id="refs">
+<h2>References</h2>
 <ol>
 <li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
 		    0-19-507993-0</li>
@@ -1298,9 +1301,9 @@ replaceStuff('Tamil', 'tamil', spreadsheet, '', 'ta', '', cols, false)
 
 <div id="panel" style="display:none"></div>
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/tamil/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2020-01-07  6:13<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Btamil%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ftamil%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version"></span></div>
+
+
 
 <!-- Uncomment this code to get a list of all characters with notes and character names for the file names-subset.js 
 <div id=charliststr></div>
@@ -1326,8 +1329,7 @@ Currency symbol;currency;0BF9
 --> 
 
 <script>
-initialise('/scripts/tamil/block')
-setSectionRefs()
+initialise('/scripts/tamil/block','tamil')
 autoTransliterate('ta')
 </script>
 </body>
