@@ -9,13 +9,14 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
@@ -23,6 +24,7 @@
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/template.js"> </script>
+<script src="xx-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -77,8 +79,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->12 March, 2019<!-- #EndDate -->
-&bull; tags <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="http://r12a.github.io/blog/?tag=template" title="Show all blog posts tagged with 'template'">template</a></p>
+  <!-- #BeginDate format:Sw1 -->7 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
+
+
 <section>
    <p>This page lists characters in the following Unicode  block and provides information about them. </p>
 <ul>
@@ -87,8 +92,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
    <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
 <p>For a summary of the script and its use in  writing systems, see the page <a class="linkHighlight" href="/scripts/template/">Template script summary</a>.   For similar information related to other scripts, see <a href="/r12a.github.io/doclist#charnotes">this list</a>.</p>
 <p><span style="text-align: start;">We have usage data for the following 32 languages that use the Cyrillic script</span>: Abkhaz, Adyghe, Southern Altai, Belorussian, Bosnian, Bulgarian, Chechen, Church Slavonic, Even, Evenki, Kazakh, Kyrgyz, Kabardian, Khakas, Komi-Permyak, Macedonian, Mongolian, Nanai, Nganasan, Ossetian, Orok, Russian, Yakut, Serbian, Shor, Turkmen, Tajik, Tatar, Tuvan, Ukrainian, Uzbek, Tundra Yukaghir.</p>
-<p>Find <input type="text" 
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -106,53 +113,53 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="syllables">
-<h2><a href="#syllables">Syllables</a></h2>
+<h2>Syllables</h2>
 
 
 <section id="ee-syllables">
-  <h3><a href="#ee-syllables">Syllables in -ee</a></h3>
+  <h3>Syllables in -ee</h3>
 </section>
 
 
 
 
 <section id="i-syllables">
-  <h3><a href="#i-syllables">Syllables in -i</a></h3>
+  <h3>Syllables in -i</h3>
 </section>
 
 
 
 
 <section id="a-syllables">
-  <h3><a href="#a-syllables">Syllables in -a</a></h3>
+  <h3>Syllables in -a</h3>
 </section>
 
 
 
 
 <section id="oo-syllables">
-  <h3><a href="#oo-syllables">Syllables in -oo</a></h3>
+  <h3>Syllables in -oo</h3>
 </section>
 
 
 
 
 <section id="u-syllables">
-  <h3><a href="#u-syllables">Syllables in -u</a></h3>
+  <h3>Syllables in -u</h3>
 </section>
 
 
 
 
 <section id="o-syllables">
-  <h3><a href="#o-syllables">Syllables in -o</a></h3>
+  <h3>Syllables in -o</h3>
 </section>
 
 
 
 
 <section id="e-syllables">
-  <h3><a href="#e-syllables">Syllables in -e</a></h3>
+  <h3>Syllables in -e</h3>
 </section>
 
 
@@ -164,7 +171,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="vowels">
-  <h2><a href="#vowels">Vowels</a></h2>
+  <h2>Vowels</h2>
 </section>
 
 
@@ -172,19 +179,19 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="tones">
-  <h2><a href="#tones">Tone marks</a></h2>
+  <h2>Tone marks</h2>
   
   
   
 <section id="basic_tones">
-  <h3><a href="#basic_tones">Basic tone marks</a></h3>
+  <h3>Basic tone marks</h3>
 </section>
 
 
 
 
 <section id="tonal_apos">
-  <h3><a href="#tonal_apos">Tonal apostrophes</a></h3>
+  <h3>Tonal apostrophes</h3>
 </section>
 </section>
 
@@ -193,7 +200,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="punctuation">
-  <h2><a href="#punctuation">Punctuation</a></h2>
+  <h2>Punctuation</h2>
 
 <div class="character" id="charAA81">
 <div class="charimg">&#xAA81;</div>
@@ -229,16 +236,16 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="sympunc">
-  <h2><a href="#sympunc">Symbols &amp; punctuation</a></h2>
+  <h2>Symbols &amp; punctuation</h2>
   
   
 <section id="punctuation">
-  <h3><a href="#punctuation">Punctuation</a></h3>
+  <h3>Punctuation</h3>
 </section>
   
   
 <section id="othersymbols">
-  <h3><a href="#othersymbols">Other symbols</a></h3>
+  <h3>Other symbols</h3>
 </section>
 </section>
 
@@ -247,7 +254,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="digits">
-  <h2><a href="#digits">Digits</a></h2>
+  <h2>Digits</h2>
 </section>
 
 
@@ -256,7 +263,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="refs">
-  <h2><a href="#refs">References</a></h2>
+  <h2>References</h2>
   <ol>
     <li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
 				0-19-507993-0</li>
@@ -343,13 +350,12 @@ replaceStuff('Template', 'template', spreadsheet, '', 'XXXXXXX', '', cols, false
 <div id="panel" style="display:none"></div>
 
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/template/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-03-12  7:13<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Btemplate%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ftemplate%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version"></span></div>
 
 
 <script>
-initialise('/scripts/template/block')
+initialise('/scripts/template/block','xxx')
+autoTransliterate('xxx')
 </script>
 </body>
 </html>
