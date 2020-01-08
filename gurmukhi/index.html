@@ -28,23 +28,23 @@
 a { font-weight: 400; }
 </style>
 
-<script src="db.js"> </script>
-<script src="/shared/code/boilerplate.js"></script>
-<script src="/shared/code/toc_2020.js"></script>
-<script src="/shared/code/all-names.js"></script>
-<script src="/shared/code/character_conversion.js"></script>
-<script src="/shared/code/show_codepoints.js"></script>
-<script src="/shared/fontlists/manage.js"></script>
-<script src="/shared/code/scriptGroups.js"></script>
+<script src="../../shared/scriptdb/punjabi.js"> </script>
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
+<script src="../../shared/code/all-names.js"></script>
+<script src="../../shared/code/character_conversion.js"></script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/fontlists/manage.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
 <script src="../common/transliterate.js"></script>
 <script src="../common/prompts.js"> </script>
 <script src="../glossary/glossary.js"> </script>
-<script src="/shared/code/getLinks.js"></script>
+<script src="../../shared/code/getLinks.js"></script>
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
 
-<script src="/shared/fontlists/gurmukhi.js"> </script>
+<script src="../../shared/fontlists/gurmukhi.js"> </script>
 <script src="pa-translit.js">  </script>
 </head>
 
@@ -107,7 +107,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->19 December, 2019<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->8 January, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -210,7 +210,9 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <div>In character lists, show:</div>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div>
+<label>Transliteration 
+<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
 <div><label>ISO 15919 <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
 </div>
 
@@ -459,7 +461,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <h3>Vowel-signs</h3>
 <p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
 
-<p>Other than the inherent vowel, vowel sounds that follow a consonant sound are represented using vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="tmp">ਕੀ</span> <span class="ipa">ki</span></span>.</p>
+<p>Other than the inherent vowel, vowel sounds that follow a consonant sound are represented using vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="tmp">ਕੀ</span> <span class="ipa">ki</span></span>. This includes no diphthongs, 1 prescript sign, and no circumgraphs.</p>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ੀ␣ੂ␣ਿ␣ੁ␣ੇ␣ੋ␣ੈ␣ੌ␣ਾ</figure>
 <p>Vowels <span class="trans">i</span> and <span class="trans">u</span> may be pronounced differently in certain contexts. With a high tone they represent <span class="trans">é</span> and <span class="trans">ó</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਕਿਹੜਾ</span> <span class="trans">kɪhɽā</span> <span class="ipa">kéɽɑ</span> <span class="meaning">who</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="pa">ਕੁਹੜਾ</span> <span class="trans">kʊhɽā</span> <span class="ipa">kóɽɑ</span> <span class="meaning">leper</span></span>. <a class="fnref" href="#refs">d</a></p>
 <p>Combined with a preceding <span class="trans">ah</span> they produce <span class="trans">ǽ</span> and <span class="trans">ɔ́</span>, respectively, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਕਹਿਣਾ</span> <span class="trans">khɪɳā</span> <span class="ipa">kǽɳɑ</span> <span class="meaning">to say</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="pa">ਵਹੁਟੀ</span> <span class="trans">vhʊʈī</span> <span class="ipa">wɔ́ʈi</span> <span class="meaning">bride</span></span>.<a class="fnref" href="#refs"> d</a></p>
@@ -1264,8 +1266,8 @@ alveolar</th>
 
 <table id="charCountList">
 <tr><th>Main</th><td id="mainCharList"></td><td id="mainCharListTotal"></td></tr>
-<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
 <tr><th>Auxiliary</th><td id="auxCharList"></td><td id="auxCharListTotal"></td></tr>
+<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
 <tr><th>Other</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
 <tr><th>Deprecated</th><td id="deprecatedCharList"></td><td id="deprecatedCharListTotal"></td></tr>
 </table>
@@ -1285,5 +1287,6 @@ alveolar</th>
 </body>
 <script>
 initialiseSummary('/scripts/gurmukhi/block','pa','Gurmukhi','gurmukhi')
+autoTransliterate('pa')
 </script>
 </html>

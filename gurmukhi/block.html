@@ -9,13 +9,14 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
@@ -23,6 +24,7 @@
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/gurmukhi.js"> </script>
+<script src="pa-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -76,8 +78,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->14 July, 2019<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="https://r12a.github.io/blog/?tag=gurmukhi" title="Show all blog posts tagged with 'gurmukhi'">gurmukhi</a></p>
+<!-- #BeginDate format:Sw1 -->8 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+</p>
+
+
 <section>
    <p>This page lists characters in the following Unicode  block and provides information about them. </p>
 <ul>
@@ -85,10 +90,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
    </ul>
    <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
 <p>For details about how the script works, see <a class="linkHighlight" href="index">Gurmukhi/Punjabi</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Guru">Script links pages</a>.</p>
-<p>Find
-<input type="text" 
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/>
-</p>
+<p><span style="text-align: start;">We have usage data for the following  language that uses the Gurmukhi script</span>: Punjabi.</p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -106,11 +112,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="consonants">
-<h2><a href="#consonants">Consonants</a></h2>
+<h2>Consonants</h2>
 
 
 <section id="basicconsonants">
-  <h3><a href="#basicconsonants">Basic consonants</a></h3>
+  <h3>Basic consonants</h3>
 
 
 <div class="character" id="char0A15">
@@ -196,7 +202,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <span class="ipa">kə̀</span></p>
 <p>Pronounced without aspiration, and without voicing when initial. Used to indicate a low tone when at the beginning of a word or syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਘੋੜਾ</span> <span class="trans">gʰoṛā</span> <span class="ipa">kòɽɑ</span> <span class="meaning">horse</span></span>, or medially between a short and long vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਪਘਾਰਨਾ</span> <span class="trans">pᵃgʰārnā</span> <span class="ipa">pəɡɑ̀rnɑ</span> <span class="meaning">to melt</span></span>.  </p>
 <p>Indicates a high  tone when elsewhere, eg. 
-<span class="charExample" translate="no"><span class="ex" lang="pa">ਕੁਝ</span> <span class="trans">kujʰ</span> <span class="ipa">kúʤ</span> <span class="meaning">something</span></span>.<sup><a href="http://www.omniglot.com/writing/punjabi.htm">o</a></sup></p>
+<span class="charExample" translate="no"><span class="ex" lang="pa">ਕੁਝ</span> <span class="trans">kujʰ</span> <span class="ipa">kúʤ</span> <span class="meaning">something</span></span>.<a class="fnref" href="http://www.omniglot.com/writing/punjabi.htm">o</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -219,7 +225,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <span class="name"><span class="localname" dir="ltr" lang="pa"></span>
  <span class="transliteratedname trans">ŋɑŋːɑ̃</span></span>
 <span class="ipa">ŋə</span></p>
-<p>Rarely used. It cannot begin a syllable or be placed between two consonants, and occurs most often as an allophone of <span class="codepoint" translate="no"><span lang="pa">&#x0A28;</span> [<a href="/scripts/gurmukhi/block#char0A28"><span class="uname">U+0A28 GURMUKHI LETTER NA</span></a>]</span> before specific consonant phonemes.<sup><a href="http://en.wikipedia.org/wiki/Gurmukhi_script">w</a></sup></p>
+<p>Rarely used. It cannot begin a syllable or be placed between two consonants, and occurs most often as an allophone of <span class="codepoint" translate="no"><span lang="pa">&#x0A28;</span> [<a href="/scripts/gurmukhi/block#char0A28"><span class="uname">U+0A28 GURMUKHI LETTER NA</span></a>]</span> before specific consonant phonemes.<a class="fnref" href="http://en.wikipedia.org/wiki/Gurmukhi_script">w</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -313,7 +319,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <span class="ipa">ʧə̀</span></p>
 <p>Pronounced without aspiration, and without voicing when initial. Used to indicate a low tone when at the beginning of a word or syllable, or medially between a short and long vowel.</p>
 <p>Indicates a high  tone when elsewhere, eg.
-<span class="charExample" translate="no"><span class="ex" lang="pa">ਕੁਝ</span> <span class="trans">kujʰ</span> <span class="ipa">kúʤ</span> <span class="meaning">something</span></span>.<sup><a href="http://www.omniglot.com/writing/punjabi.htm">o</a></sup></p>
+<span class="charExample" translate="no"><span class="ex" lang="pa">ਕੁਝ</span> <span class="trans">kujʰ</span> <span class="ipa">kúʤ</span> <span class="meaning">something</span></span>.<a class="fnref" href="http://www.omniglot.com/writing/punjabi.htm">o</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -336,7 +342,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <span class="name"><span class="localname" dir="ltr" lang="pa"></span>
  <span class="transliteratedname trans">ɲəɲːɑ̃</span></span>
 <span class="ipa">ɲə</span></p>
-<p>Rarely used. It cannot begin a syllable or be placed between two consonants, and occurs most often as an allophone of <span class="codepoint" translate="no"><span lang="pa">&#x0A28;</span> [<a href="/scripts/gurmukhi/block#char0A28"><span class="uname">U+0A28 GURMUKHI LETTER NA</span></a>]</span> before specific consonant phonemes.<sup><a href="http://en.wikipedia.org/wiki/Gurmukhi_script">w</a></sup></p>
+<p>Rarely used. It cannot begin a syllable or be placed between two consonants, and occurs most often as an allophone of <span class="codepoint" translate="no"><span lang="pa">&#x0A28;</span> [<a href="/scripts/gurmukhi/block#char0A28"><span class="uname">U+0A28 GURMUKHI LETTER NA</span></a>]</span> before specific consonant phonemes.<a class="fnref" href="http://en.wikipedia.org/wiki/Gurmukhi_script">w</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -429,7 +435,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="transliteratedname trans">ʈə̀ɖːɑ</span></span>
 <span class="ipa">ʈə̀</span></p>
 <p>Pronounced without aspiration, and without voicing when initial. Used to indicate a low tone when at the beginning of a word or syllable, or medially between a short and long vowel.</p>
-<p>Indicates a high  tone when elsewhere.<sup><a href="http://www.omniglot.com/writing/punjabi.htm">o</a></sup></p>
+<p>Indicates a high  tone when elsewhere.<a class="fnref" href="http://www.omniglot.com/writing/punjabi.htm">o</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -545,7 +551,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="transliteratedname trans">t̪ə̀d̪ːɑ</span></span>
 <span class="ipa">tə̀</span></p>
 <p>Pronounced without aspiration, and without voicing when initial. Used to indicate a low tone when at the beginning of a word or syllable, or medially between a short and long vowel.</p>
-<p>Indicates a high  tone when elsewhere.<sup><a href="http://www.omniglot.com/writing/punjabi.htm">o</a></sup></p>
+<p>Indicates a high  tone when elsewhere.<a class="fnref" href="http://www.omniglot.com/writing/punjabi.htm">o</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -661,7 +667,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="transliteratedname trans">pə̀bːɑ</span></span>
 <span class="ipa">pə̀</span></p>
 <p>Pronounced without aspiration, and without voicing when initial. Used to indicate a low tone when at the beginning of a word or syllable, or medially between a short and long vowel.</p>
-<p>Indicates a high  tone when elsewhere.<sup><a href="http://www.omniglot.com/writing/punjabi.htm">o</a></sup></p>
+<p>Indicates a high  tone when elsewhere.<a class="fnref" href="http://www.omniglot.com/writing/punjabi.htm">o</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -730,7 +736,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <span class="name"><span class="localname" dir="ltr" lang="pa"></span>
  <span class="transliteratedname trans">ɾɑɾɑ</span></span>
 <span class="ipa">rə</span></p>
-<p>Also appears in subjoined form as a syllable medial consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਪ੍ਰਬੰਧ</span> <span class="ipa">prəbə́nd̪</span> <span class="meaning">management, government</span></span>.</p>
+<p>Also appears in subjoined form as a syllable medial consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਪ੍ਰਬੰਧ</span> <span class="trans">p͓rbŋ̽dʰ</span> <span class="ipa">prəbə́nd̪</span> <span class="meaning">management, government</span></span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -799,8 +805,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <span class="name"><span class="localname" dir="ltr" lang="pa"></span>
  <span class="transliteratedname trans">ʋɑʋːɑ</span></span>
 <span class="ipa">ʋə, wə</span></p>
-<p>The pronunciation varies between <span class="ipa">ʋə</span> and <span class="ipa">wə</span> depending on the word.<sup><a href="http://en.wikipedia.org/wiki/Gurmukhi_script">w</a></sup></p>
-<p>Can also appear in subjoined form as a syllable medial consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਸ੍ਵਰਗ</span> <span class="ipa">svərəg</span> <span class="meaning">heaven</span></span>. However, this is much less common than the subjoined form of <span class="codepoint" translate="no"><span lang="pa">&#x0A30;</span> [<a href="/scripts/gurmukhi/block#char0A30"><span class="uname">U+0A30 GURMUKHI LETTER RA</span></a>]</span>.</p>
+<p>The pronunciation varies between <span class="ipa">ʋə</span> and <span class="ipa">wə</span> depending on the word.<a class="fnref" href="http://en.wikipedia.org/wiki/Gurmukhi_script">w</a></p>
+<p>Can also appear in subjoined form as a syllable medial consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਸ੍ਵਰਗ</span> <span class="trans">s͓vrg</span> <span class="ipa">svərəg</span> <span class="meaning">heaven</span></span>. However, this is much less common than the subjoined form of <span class="codepoint" translate="no"><span lang="pa">&#x0A30;</span> [<a href="/scripts/gurmukhi/block#char0A30"><span class="uname">U+0A30 GURMUKHI LETTER RA</span></a>]</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -846,9 +852,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <span class="name"><span class="localname" dir="ltr" lang="pa"></span>
  <span class="transliteratedname trans">ɦɑɦɑ</span></span>
 <span class="ipa">ɦə</span></p>
-<p>Only pronounced <span class="ipa">ɦ</span> when it occurs word initially, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਹਰੀ</span> <span class="trans">hᵃrī</span> <span class="ipa">həri</span> <span class="meaning">green</span></span>. In other locations it is unpronounced and  indicates that the preceding vowel has a high tone, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਮੀਹ</span> <span class="trans">mīh</span> <span class="ipa">mí</span> <span class="meaning">rain</span></span>. When used after a consonant, it appears subjoined below that consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਚੜ੍ਹ</span> <span class="trans">cᵃṛ͓h</span> <span class="ipa">ʧə́ɽ</span> <span class="meaning">climb</span></span>.<sup><a href="#refs">d</a></sup></p>
+<p>Only pronounced <span class="ipa">ɦ</span> when it occurs word initially, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਹਰੀ</span> <span class="trans">hᵃrī</span> <span class="ipa">həri</span> <span class="meaning">green</span></span>. In other locations it is unpronounced and  indicates that the preceding vowel has a high tone, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਮੀਹ</span> <span class="trans">mīh</span> <span class="ipa">mí</span> <span class="meaning">rain</span></span>. When used after a consonant, it appears subjoined below that consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਚੜ੍ਹ</span> <span class="trans">cᵃṛ͓h</span> <span class="ipa">ʧə́ɽ</span> <span class="meaning">climb</span></span>.<a class="fnref" href="#refs">d</a></p>
 <p>When it follows a short <span class="trans">i</span> or <span class="trans">u</span>, it changes the vowel's phonetic value from [ɪ] and [ʊ] to [é] and [ó], respectively, and indicates a high tone.</p>
-<p>According to Omniglot, the conjuncts <span class="charExample" translate="no"><span class="ex" lang="pa">ਗ੍ਹ</span> <span class="trans">gʰa</span></span>, <span class="charExample" translate="no"><span class="ex" lang="pa">ਜ੍ਹ</span> <span class="trans">jʰa</span></span>, <span class="charExample" translate="no"><span class="ex" lang="pa">ਢ੍ਹ</span> <span class="trans">ḍʰa</span></span>, <span class="charExample" translate="no"><span class="ex" lang="pa">ਦ੍ਹ</span> <span class="trans">dʰa</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="pa">ਬ੍ਹ</span> <span class="trans">bʰa</span></span> indicate a level tone when at the beginning of a word or syllable, and a low rising tone when elsewhere.<sup><a href="http://www.omniglot.com/writing/punjabi.htm">o</a></sup></p>
+<p>According to Omniglot, the conjuncts <span class="charExample" translate="no"><span class="ex" lang="pa">ਗ੍ਹ</span> <span class="trans">gʰa</span></span>, <span class="charExample" translate="no"><span class="ex" lang="pa">ਜ੍ਹ</span> <span class="trans">jʰa</span></span>, <span class="charExample" translate="no"><span class="ex" lang="pa">ਢ੍ਹ</span> <span class="trans">ḍʰa</span></span>, <span class="charExample" translate="no"><span class="ex" lang="pa">ਦ੍ਹ</span> <span class="trans">dʰa</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="pa">ਬ੍ਹ</span> <span class="trans">bʰa</span></span> indicate a level tone when at the beginning of a word or syllable, and a low rising tone when elsewhere.<a class="fnref" href="http://www.omniglot.com/writing/punjabi.htm">o</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -866,7 +872,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="additional">
-  <h3><a href="#additional">Extended consonants</a></h3>
+  <h3>Extended consonants</h3>
 
 <div class="character" id="char0A59">
 <div class="charimg">&#x0A59;</div>
@@ -929,7 +935,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <span class="name"><span class="localname" dir="ltr" lang="pa"></span>
  <span class="transliteratedname trans">ləlːɑ pɛɾ bɪnd̪i</span></span>
 <span class="ipa">ɭə</span></p>
-<p>Was only recently added to the Gurmukhī alphabet. It was not a part of the traditional orthography, the phonological difference between 'l' and 'ɭ' is not reflected in the script. Some sources do not consider it a separate letter.<sup><a href="http://en.wikipedia.org/wiki/Gurmukhi_script">w</a></sup></p>
+<p>Was only recently added to the Gurmukhī alphabet. It was not a part of the traditional orthography, the phonological difference between 'l' and 'ɭ' is not reflected in the script. Some sources do not consider it a separate letter.<a class="fnref" href="http://en.wikipedia.org/wiki/Gurmukhi_script">w</a></p>
 <p>Represents an extended sound used for foriegn words, particularly Urdu or Persian. </p>
 </div>
 
@@ -995,7 +1001,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="vowelcarriers">
-  <h3><a href="#vowelcarriers">Vowel carriers</a></h3>
+  <h3>Vowel carriers</h3>
 
 <div class="character" id="char0A72">
 <div class="charimg">&#x0A72;</div>
@@ -1079,10 +1085,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="vowels">
-  <h2><a href="#vowels">Vowels</a></h2>
+  <h2>Vowels</h2>
   
 <section id="independentvowels">
-  <h3><a href="#independentvowels">Independent vowels</a></h3>
+  <h3>Independent vowels</h3>
 
 <div class="character" id="char0A06">
 <div class="charimg">&#x0A06;</div>
@@ -1306,7 +1312,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
   
 <section id="vowelsigns">
-  <h3><a href="#vowelsigns">Vowel signs</a></h3>
+  <h3>Vowel signs</h3>
 
 <div class="character" id="char0A3E">
 <div class="charimg">&#x0A3E;</div>
@@ -1345,8 +1351,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <span class="name"><span class="localname" dir="ltr" lang="pa"></span>
  <span class="transliteratedname trans">sihārī</span></span>
 <span class="ipa">ɪ</span></p>
-<p><span class="charExample"><span class="ipa">é</span></span> with a high tone, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਕਿਹੜਾ</span> <span class="trans">kihṛā</span> <span class="ipa">kéɽɑ</span> <span class="meaning">who</span></span>.<sup><a href="#refs">d</a></sup></p>
-<p><span class="trans">ǽ</span> when combined with a preceding <span class="trans">ah</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਕਹਿਣਾ</span> <span class="trans">kᵃhiṇā</span> <span class="ipa">kǽɳɑ</span> <span class="meaning">to say</span></span>.<sup><a href="#refs">d</a></sup></p>
+<p><span class="charExample"><span class="ipa">é</span></span> with a high tone, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਕਿਹੜਾ</span> <span class="trans">kihṛā</span> <span class="ipa">kéɽɑ</span> <span class="meaning">who</span></span>.<a class="fnref" href="#refs">d</a></p>
+<p><span class="trans">ǽ</span> when combined with a preceding <span class="trans">ah</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਕਹਿਣਾ</span> <span class="trans">kᵃhiṇā</span> <span class="ipa">kǽɳɑ</span> <span class="meaning">to say</span></span>.<a class="fnref" href="#refs">d</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1394,8 +1400,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <span class="name"><span class="localname" dir="ltr" lang="pa"></span>
  <span class="transliteratedname trans">onkaṛ</span></span>
 <span class="ipa">ʊ</span></p>
-<p><span class="trans">ó</span> with  a high tone, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਕੁਹੜਾ</span> <span class="trans">kuhṛā</span> <span class="ipa">kóɽɑ</span> <span class="meaning">leper</span></span>.<sup><a href="#refs">d</a></sup></p>
-<p><span class="trans">ɔ́</span> when combined with a preceding <span class="trans">ah</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਵਹੁਟੀ</span> <span class="trans">wᵃhuṭī</span> <span class="ipa">wɔ́ʈi</span> <span class="meaning">bride</span></span>.<sup><a href="#refs">d</a></sup></p>
+<p><span class="trans">ó</span> with  a high tone, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਕੁਹੜਾ</span> <span class="trans">kuhṛā</span> <span class="ipa">kóɽɑ</span> <span class="meaning">leper</span></span>.<a class="fnref" href="#refs">d</a></p>
+<p><span class="trans">ɔ́</span> when combined with a preceding <span class="trans">ah</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਵਹੁਟੀ</span> <span class="trans">wᵃhuṭī</span> <span class="ipa">wɔ́ʈi</span> <span class="meaning">bride</span></span>.<a class="fnref" href="#refs">d</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1537,7 +1543,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="diacritics">
-  <h2><a href="#diacritics">Diacritics</a></h2>
+  <h2>Diacritics</h2>
   
   
   
@@ -1553,8 +1559,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <span class="name"><span class="localname" dir="ltr" lang="pa"></span>
  <span class="transliteratedname trans">halant</span></span>
 </p>
-<p>Mostly used to indicate  subjoined characters in syllable-initial clusters, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਪ੍ਰਬੰਧ</span> <span class="ipa">prəbə́nd̪</span> <span class="meaning">government</span></span>. Otherwise, unlike other indic scripts, Gurmukhi generally doesn't use the virama to indicate dropped vowel sounds. The reader just needs to know how to pronounce the word.</p>
-<p>The virama may also be used occasionally to suppress the vowel  in Sanskritised text, or in dictionaries for extra phonetic information.<sup><a href="http://en.wikipedia.org/wiki/Gurmukhi_script">w</a></sup></p>
+<p>Mostly used to indicate  subjoined characters in syllable-initial clusters, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਪ੍ਰਬੰਧ</span> <span class="trans">p͓rbŋ̽dʰ</span> <span class="ipa">prəbə́nd̪</span> <span class="meaning">government</span></span>. Otherwise, unlike other indic scripts, Gurmukhi generally doesn't use the virama to indicate dropped vowel sounds. The reader just needs to know how to pronounce the word.</p>
+<p>The virama may also be used occasionally to suppress the vowel  in Sanskritised text, or in dictionaries for extra phonetic information.<a class="fnref" href="http://en.wikipedia.org/wiki/Gurmukhi_script">w</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1617,7 +1623,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="transliteratedname trans">tippi</span></span>
 </p>
 <p>Used with vowels <span class="trans">a</span>, <span class="trans">i</span>, <span class="trans">u</span>, and with final <span class="trans">ū</span> to indicate nasalisation, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਮੂੰਡਾ</span> <span class="trans">mūṃḍā</span> <span class="ipa">muɳɖɑ</span> <span class="meaning">boy</span></span>. ( <span class="codepoint" translate="no"><span lang="pa">&#x0A02;</span> [<a href="/scripts/gurmukhi/block#char0A02"><span class="uname">U+0A02 GURMUKHI SIGN BINDI​</span></a>]</span> is used for all other vowels.)</p>
-<p>Geminated <span class="trans">mm</span> and <span class="trans">nn</span> may be written using a nasalisation diacritic<span class="codepoint" translate="no"></span> associated with the preceding vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਲੰਮੀ</span> <span class="ipa">ləmmi</span> <span class="meaning">long</span></span>.<sup><a href="#refs">d</a></sup></p>
+<p>Geminated <span class="trans">mm</span> and <span class="trans">nn</span> may be written using a nasalisation diacritic<span class="codepoint" translate="no"></span> associated with the preceding vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਲੰਮੀ</span> <span class="trans">lŋ̽mī</span> <span class="ipa">ləmmi</span> <span class="meaning">long</span></span>.<a class="fnref" href="#refs">d</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1663,7 +1669,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <span class="name"><span class="localname" dir="ltr" lang="pa"></span>
  <span class="transliteratedname trans">visarg</span></span>
 </p>
-<p>Used only very occasionally. In some cases it acts like a Sanskrit visarga, producing a voiceless <span class="ipa">h</span> sound, but in others it represents an abbreviation, in the same way the period is used in English.<sup><a href="http://en.wikipedia.org/wiki/Gurmukhi_script">w</a></sup></p>
+<p>Used only very occasionally. In some cases it acts like a Sanskrit visarga, producing a voiceless <span class="ipa">h</span> sound, but in others it represents an abbreviation, in the same way the period is used in English.<a class="fnref" href="http://en.wikipedia.org/wiki/Gurmukhi_script">w</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1686,7 +1692,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <span class="name"><span class="localname" dir="ltr" lang="pa"></span>
  <span class="transliteratedname trans">yakash</span></span>
 </p>
-<p>Occasionally, a cluster ending with <span class="trans">y</span> is rendered using this diacritic, eg. .<span class="charExample" translate="no"><span class="ex" lang="pa">ਕਲੵਚਰੈ</span></span>.</p>
+<p>Occasionally, a cluster ending with <span class="trans">y</span> is rendered using this diacritic, eg. .<span class="charExample" translate="no"><span class="ex" lang="pa">ਕਲੵਚਰੈ</span> <span class="trans">kly̆ʧrɛ</span></span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1732,7 +1738,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <span class="name"><span class="localname" dir="ltr" lang="pa"></span>
  <span class="transliteratedname trans">addak</span></span>
 </p>
-<p>Doubling or reinforcement of a consonant sound is indicated, unusually for an indic script, using this diacritic. It is typed before the consonant (in this way it resembles the small <span class="trans">tsu</span> in Japanese), and is placed to the left of the consonant it affects (not over it), eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਪੱਕੀ</span> <span class="ipa">pəkki</span> <span class="meaning">ripe</span></span>.</p>
+<p>Doubling or reinforcement of a consonant sound is indicated, unusually for an indic script, using this diacritic. It is typed before the consonant (in this way it resembles the small <span class="trans">tsu</span> in Japanese), and is placed to the left of the consonant it affects (not over it), eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਪੱਕੀ</span> <span class="trans">p˖kī</span> <span class="ipa">pəkki</span> <span class="meaning">ripe</span></span>.</p>
 <p>The diacritic may appear over the right side of the preceding consonant, but if that consonant has a vowel sign or extension above the horizontal topline, it may be displayed on a short extension of the joining line. See for example  <span class="charExample" translate="no"><span class="ex" lang="pa">ਭੁੱਲ ਭੇੱਲ ਉੱਛਲ</span></span> (effect may vary by font).</p>
 </div>
 
@@ -1752,7 +1758,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="symbols">
-  <h2><a href="#symbols">Symbols</a></h2>
+  <h2>Symbols</h2>
   
   
 <div class="character" id="char0A74">
@@ -1781,7 +1787,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 </section>
 <section id="digits">
-<h2><a href="#digits">Digits</a></h2>
+<h2>Digits</h2>
   
   
 <div class="character" id="char0A66">
@@ -2023,14 +2029,14 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="refs">
-  <h2><a href="#refs">References</a></h2>
+  <h2>References</h2>
 <ol>
-<li>[ <sup><a href="http://www.unicode.org/versions/latest/ch12.pdf">u</a></sup> ] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch12.pdf">Gurmukhi</a>, pp475-479.</li>
-<li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN 0-19-507993-0, pp395-398</li>
-<li>[ <sup><a href="http://en.wikipedia.org/wiki/Gurmukhi_script">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Gurmukhi_script"><cite>Gurmukhi script</cite></a></li>
-<li>[ <sup><a href="http://unicode.org/L2/L2006/06037-yakash.pdf">s</a></sup> ] Sukhjinder Sidhu, <a href="http://unicode.org/L2/L2006/06037-yakash.pdf"><cite>Proposal to encode Gurmukhi Sign Yakash</cite></a></li>
-<li>[ <sup><a href="http://www.omniglot.com/writing/punjabi.htm">o</a></sup> ] Omniglot, <a href="http://www.omniglot.com/writing/punjabi.htm"><cite>Punjabi</cite></a></li>
-<li>[ <sup><a href="https://scholarsarchive.byu.edu/cgi/viewcontent.cgi?article=3982&context=etd">b</a></sup> ] Andrea Lynn Bowden, <a href="https://scholarsarchive.byu.edu/cgi/viewcontent.cgi?article=3982&context=etd"><cite>Punjabi Tonemics and the Gurmukhi Script: A Preliminary Study</cite></a></li>
+<li>[ <a class="fnref" href="https://scholarsarchive.byu.edu/cgi/viewcontent.cgi?article=3982&context=etd">b</a> ] Andrea Lynn Bowden, <a href="https://scholarsarchive.byu.edu/cgi/viewcontent.cgi?article=3982&context=etd"><cite>Punjabi Tonemics and the Gurmukhi Script: A Preliminary Study</cite></a></li>
+<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN 0-19-507993-0, pp395-398</li>
+<li>[ <a class="fnref" href="http://unicode.org/L2/L2006/06037-yakash.pdf">s</a> ] Sukhjinder Sidhu, <a href="http://unicode.org/L2/L2006/06037-yakash.pdf"><cite>Proposal to encode Gurmukhi Sign Yakash</cite></a></li>
+<li>[ <a class="fnref" href="http://www.omniglot.com/writing/punjabi.htm">o</a> ] Omniglot, <a href="http://www.omniglot.com/writing/punjabi.htm"><cite>Punjabi</cite></a></li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch12.pdf">u</a> ] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch12.pdf">Gurmukhi</a>, pp475-479.</li>
+<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Gurmukhi_script">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Gurmukhi_script"><cite>Gurmukhi script</cite></a></li>
 </ol>
 </section>
 
@@ -2173,14 +2179,12 @@ replaceStuff('Punjabi', 'punjabi', spreadsheet, '', 'pa', '', cols, false)
 <div id="panel" style="display:none"></div>
 
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/gurmukhi/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-07-14  11:29<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bgurmukhi%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fgurmukhi%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
-
+<div class="smallprint"><span id="version"></span></div>
 
 
 <script>
-initialise('/scripts/gurmukhi/block')
+initialise('/scripts/gurmukhi/block','gurmukhi')
+autoTransliterate('pa')
 </script>
 </body>
 </html>
