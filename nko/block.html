@@ -9,13 +9,14 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
@@ -23,6 +24,7 @@
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/nko.js"> </script>
+<script src="nqo-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -76,8 +78,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->24 July, 2019<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>,  <a href="https://r12a.github.io/blog/?tag=nko" title="Show all blog posts tagged with 'nko'">nko</a></p>
+  <!-- #BeginDate format:Sw1 -->8 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
+
+
 <section>
    <p>This page lists characters in the following Unicode  block and provides information about them.</p>
    <ul>
@@ -85,8 +90,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
    </ul>
    <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places.</p>
 <p>For details about how the script works, see <a class="linkHighlight" href="index">N'Ko</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Nkoo">Script links pages</a>.</p>
+<p><span style="text-align: start;">We have usage data for the following  language that uses the N'Ko script</span>: <span style="text-align: start;">N'Ko</span>.</p>
 
-<p>Find <input type="text" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></p>
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
 
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
@@ -104,11 +111,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="consonants">
-<h2><a href="#consonants">Consonants</a></h2>
+<h2>Consonants</h2>
 
 
 <section id="basicconsonants">
-  <h3><a href="#basicconsonants">Basic consonants</a></h3>
+  <h3>Basic consonants</h3>
 
 
 <div class="character" id="char07D2">
@@ -316,7 +323,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter kangbe">
 <p class="titlepara"><span class="title">Kangbe</span> abstract consonant </p>
-<p>Indicates a NA mutated by a preceding nasal, either word-internally or across word boundaries,<sup>1</sup> eg. <span class="ex" lang="nqo" dir="rtl">ߘߋ߲ߣߍ߲ ߠߎ߬ ߟߊ߫ ߓߋߟߋ߲ߠߊ</span> <span class="ipa">dẽnɛ̃ łu la belẽła</span> <span class="meaning">a speech from the children</span>.</p>
+<p>Indicates a NA mutated by a preceding nasal, either word-internally or across word boundaries,<sup>1</sup> eg. <span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">ߘߋ߲ߣߍ߲ ߠߎ߬ ߟߊ߫ ߓߋߟߋ߲ߠߊ</span> <span class="trans">de˜nɛ˜ łu² la¹ bele˜ła</span> <span class="ipa">dẽnɛ̃ łu la belẽła</span> <span class="meaning">a speech from the children</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
   [1] [Unicode] <a href="http://www.unicode.org/versions/latest/ch19.pdf#NKo" target="_blank">p738</a>&nbsp;
@@ -416,7 +423,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
   <div class="letter kangbe">
     <p class="titlepara"><span class="title">Kangbe</span> abstract consonant </p>
-    <p><span class="ipa">Indicates a NYA mutated by a preceding nasal, either word-internally or across word boundaries,</span><sup>1</sup> eg. <span class="ex" lang="nqo" dir="rtl">ߊ߲ ߧߴߌ ߝߏ߬ ߟߊ߫ ߸ ߞߵߌ ߞߎߟߎ߲ߖߋ߲.</span> <span class="trans">ã ñ‘i fo la, k’i kulũjẽ.</span> <span class="meaning">We give you thanks.</span></p>
+    <p>Indicates a NYA mutated by a preceding nasal, either word-internally or across word boundaries,<sup>1</sup> eg. <span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">ߊ߲ ߧߴߌ ߝߏ߬ ߟߊ߫ ߸ ߞߵߌ ߞߎߟߎ߲ߖߋ߲.</span> <span class="trans">a˜ j⁸i fo² la¹ , k⁹i kulu˜ʤe˜.</span> <span class="meaning">We give you thanks.</span></span></p>
   </div>
   <p class="ref"><a href="#refs">Refs</a>:
     [1] [Unicode] <a href="http://www.unicode.org/versions/latest/ch19.pdf#NKo" target="_blank">p738</a>&nbsp; 
@@ -431,7 +438,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="additional">
-  <h3><a href="#additional">archaic consonants</a></h3>
+  <h3>archaic consonants</h3>
 
 <div class="character" id="char07E8">
 <div class="charimg">&#x07E8;</div>
@@ -462,7 +469,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="vowels">
-  <h2><a href="#vowels">Vowels</a></h2>
+  <h2>Vowels</h2>
   
 <div class="character" id="char07CA">
 <div class="charimg">&#x07CA;</div>
@@ -570,7 +577,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
   <div class="letter kangbe">
     <p class="titlepara"><span class="title">Kangbe</span> vowel killer</p>
-    <p>Indicates that adjacent consonants have no intervening vowel sound,  eg. <span class="ex" lang="nqo">ߓߟߏ</span> <span class="ipa">bolo</span> <span class="trans">bloo</span> is pronounced with the vowel after the first letter, even though none is present. To show that this should be pronounced without the vowel you need <span class="ex" lang="nqo">ߓߑߟߏ</span> <span class="ipa">blo</span>.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2765.pdf">e</a></p>
+    <p>Indicates that adjacent consonants have no intervening vowel sound,  eg. <span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">ߓߟߏ</span> <span class="trans">blo</span> <span class="ipa">bolo</span></span> is pronounced with the vowel after the first letter, even though none is present. To show that this should be pronounced without the vowel you need <span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">ߓߑߟߏ</span> <span class="trans">b˖lo</span> <span class="ipa">blo</span></span>.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2765.pdf">e</a></p>
   </div>
   <p class="ref"><a href="#refs">Refs</a>:
     [1] [Unicode] <a href="http://www.unicode.org/versions/latest/ch19.pdf#NKo" target="_blank">p738</a>&nbsp; </p>
@@ -585,12 +592,12 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="tones">
-  <h2><a href="#tones">Tone marks</a></h2>
+  <h2>Tone marks</h2>
   
   
   
 <section id="basic_tones">
-  <h3><a href="#basic_tones">Basic tone marks</a></h3>
+  <h3>Basic tone marks</h3>
   
 <div class="character" id="char07EB">
 <div class="charimg">&#x07EB;</div>
@@ -654,7 +661,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   <div class="letter kangbe">
     <p class="titlepara"><span class="title">Kangbe</span> tone mark</p>
     <p>Tone mark indicating a short rising tone.<sup></sup></p>
-    <p>Also used to indicate the first ordinal, eg. <span class="ex" dir="rtl" lang="nqo">߁߭</span> <span class="meaning">first</span>.<sup>1</sup></p>
+    <p>Also used to indicate the first ordinal, eg. <span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">߁߭</span> <span class="trans">1³</span> <span class="meaning">first</span></span>.<sup>1</sup></p>
     <p>For ordinal numbers after the first see <span class="codepoint"><span lang="nqo" dir="rtl">&nbsp;&#x07F2;</span> <a href="/scripts/nko/block#char07F2">[<span class="uname">U+07F2 NKO COMBINING NASALIZATION MARK​</span>]</a></span>.</p>
     <p>Also used     above  consonants to represent sounds from other languages, particularly French and Arabic, as follows:</p>
     <table>
@@ -822,7 +829,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="tonal_apos">
-  <h3><a href="#tonal_apos">Tonal apostrophes</a></h3>
+  <h3>Tonal apostrophes</h3>
   
 <div class="character" id="char07F4">
 <div class="charimg">&#x07F4;</div>
@@ -862,7 +869,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="nasalisation">
-  <h2><a href="#nasalisation">Nasalisation marks</a></h2>
+  <h2>Nasalisation marks</h2>
   
   
 <div class="character" id="char07F2">
@@ -873,8 +880,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
   <div class="letter kangbe">
     <p class="titlepara"><span class="title">Kangbe</span> nasalisation mark</p>
-    <p>Applied to a vowel to indicate nasalisation, eg. <span class="ex" lang="nqo">ߣߌ߲߬</span>. It should be input between the base character and any of the tone marks.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2765.pdf">e</a></p>
-    <p>Also used to indicate an ordinal number (except for the first), eg. <span class="ex" dir="rtl" lang="nqo">߂߲</span> <span class="meaning">second</span>. When there are multiple digits in a number, the diacritic appears only under the last in sequence, eg. <span class="ex" dir="rtl" lang="nqo">߁߂߃߲</span> <span class="meaning">123rd</span>.<sup>1</sup></p>
+    <p>Applied to a vowel to indicate nasalisation, eg. <span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">ߣߌ߲߬</span> <span class="trans">ni˜²</span></span>. It should be input between the base character and any of the tone marks.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2765.pdf">e</a></p>
+    <p>Also used to indicate an ordinal number (except for the first), eg. <span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">߂߲</span> <span class="trans">2˜</span> <span class="meaning">second</span></span>. When there are multiple digits in a number, the diacritic appears only under the last in sequence, eg. <span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">߁߂߃߲</span> <span class="trans">123˜</span> <span class="meaning">123rd</span></span>.<sup>1</sup></p>
     <p>For the first ordinal number, see <span class="codepoint"><span lang="nqo" dir="rtl">&nbsp;&#x07ED;</span> <a href="/scripts/nko/block#char07ED">[<span class="uname">U+07ED NKO COMBINING SHORT RISING TONE​</span>]</a></span>.</p>
   </div>
   <p class="ref"><a href="#refs">Refs</a>:
@@ -950,11 +957,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="sympunc">
-  <h2><a href="#sympunc">Symbols &amp; punctuation</a></h2>
+  <h2>Symbols &amp; punctuation</h2>
   
   
 <section id="punctuation">
-  <h3><a href="#punctuation">Punctuation</a></h3>
+  <h3>Punctuation</h3>
   
   
 <div class="character" id="char07F8">
@@ -999,7 +1006,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   
   
 <section id="othersymbols">
-  <h3><a href="#othersymbols">Other symbols</a></h3>
+  <h3>Other symbols</h3>
   
 <div class="character" id="char07F6">
 <div class="charimg">&#x07F6;</div>
@@ -1040,7 +1047,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="digits">
-  <h2><a href="#digits">Digits</a></h2>
+  <h2>Digits</h2>
   
   
 <div class="character" id="char07C0">
@@ -1219,13 +1226,12 @@ replaceStuff('Kangbe', 'kangbe', spreadsheet, '', 'nqo', '', cols, false)
 <div id="panel" style="display:none"></div>
 
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/nko/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-07-24  20:30<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bnko%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fnko%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version"></span></div>
 
 
 <script>
-initialise('/scripts/nko/block')
+initialise('/scripts/nko/block','nko')
+autoTransliterate('nqo')
 </script>
 </body>
 </html>
