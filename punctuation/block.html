@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
@@ -71,8 +71,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->17 May, 2019<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/index.php?tag=arabic" title="Show all blog posts tagged with 'punctuation'">punctuation</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>.</p>
+  <!-- #BeginDate format:Sw1 -->8 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
+
+
 <div id="intro">
   <p>This page lists characters in the following Unicode  blocks and provides information about them.</p>
   <ul>
@@ -80,7 +83,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
     <li><a href="../../uniview/?block=supplemental_punctuation" target="_blank">Supplemental Punctuation</a></li>
   </ul>
   <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places.</p>
-<p>Find <input type="text" onChange="var hex=this.value;if (hex!=''){while(hex.length<4){hex='0'+hex;}document.location='#char'+hex.toUpperCase();}"/></p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -95,7 +101,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="spaces">
-  <h2><a href="#spaces">Spaces</a></h2>
+  <h2>Spaces</h2>
 
 <div class="character" id="char2000">
 <div class="charimg"><img src="../../c/General_Punctuation/large/2000.png" alt=""/></div>
@@ -197,7 +203,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 </section>
 <section id="format_chars">
-  <h2><a href="#format_chars">Format characters</a></h2>
+  <h2>Format characters</h2>
 
 <div class="character" id="char200C">
 <div class="charimg"><img src="../../c/General_Punctuation/large/200C.png" alt=""/></div>
@@ -210,11 +216,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   </div>
   <div class="letter">
     <p><span class="title">Persian</span></p>
-    <p>The ZWNJ is used in Persian for plural suffixes, some proper names, and Ottoman Turkish vowels. Ignoring or removing the ZWNJ will result in text with a different meaning or meaningless text.<sup>1</sup> For example, <span class="ex" lang="ar" dir="rtl">تن‌ها</span> is the plural of <span class="meaning">body</span>, whereas <span class="ex" lang="ar" dir="rtl">تنها</span> is the adjective <span class="meaning">alone</span>.<sup>2</sup> The only difference is the presence or absence of ZWNJ after <span class="name">noon</span>. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout">u373</a></sup> <sup><a href="https://github.com/w3c/charmod-norm/issues/44#issuecomment-172042270" target="_blank">g</a></sup></p>
+    <p>The ZWNJ is used in Persian for plural suffixes, some proper names, and Ottoman Turkish vowels. Ignoring or removing the ZWNJ will result in text with a different meaning or meaningless text.<sup>1</sup> For example, <span class="ex" lang="ar" dir="rtl">تن‌ها</span> is the plural of <span class="meaning">body</span>, whereas <span class="ex" lang="ar" dir="rtl">تنها</span> is the adjective <span class="meaning">alone</span>.<sup>2</sup> The only difference is the presence or absence of ZWNJ after <span class="name">noon</span>. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout">u373</a> <a class="fnref" href="https://github.com/w3c/charmod-norm/issues/44#issuecomment-172042270" target="_blank">g</a></p>
 </div>
 <div class="letter">
 <p><span class="title">Khmer</span></p>
-  <p>Khmer register shifters (ie. <span class="codepoint" translate="no"><span lang="km">&#x25CC;&#x17C9;</span> [<a href="/scripts/khmer/block#char17C9"><span class="uname">U+17C9 KHMER SIGN MUUSIKATOAN​</span></a>]</span> or <span class="codepoint" translate="no"><span lang="km">&#x25CC;&#x17CA;</span> [<a href="/scripts/khmer/block#char17CA"><span class="uname">U+17CA KHMER SIGN TRIISAP​</span></a>]</span>) usually appear above a consonant. However, if a superscript vowel is also attached to the consonant, the shifter is normally displayed below the consonant, instead. If you want to force the shifter to remain above the consonant, as is occasionally the case, insert ZWNJ between the consonant and the shifter.  For example, <span class="charExample" translate="no"><span class="ex" lang="km">ហ ហ៊ ហ៊ី ហ‌៊ី</span></span>. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout">u373</a></sup> <sup><a href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">sk</a></sup></p>
+  <p>Khmer register shifters (ie. <span class="codepoint" translate="no"><span lang="km">&#x25CC;&#x17C9;</span> [<a href="/scripts/khmer/block#char17C9"><span class="uname">U+17C9 KHMER SIGN MUUSIKATOAN​</span></a>]</span> or <span class="codepoint" translate="no"><span lang="km">&#x25CC;&#x17CA;</span> [<a href="/scripts/khmer/block#char17CA"><span class="uname">U+17CA KHMER SIGN TRIISAP​</span></a>]</span>) usually appear above a consonant. However, if a superscript vowel is also attached to the consonant, the shifter is normally displayed below the consonant, instead. If you want to force the shifter to remain above the consonant, as is occasionally the case, insert ZWNJ between the consonant and the shifter.  For example, <span class="charExample" translate="no"><span class="ex" lang="km">ហ ហ៊ ហ៊ី ហ‌៊ី</span></span>. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout">u373</a> <a class="fnref" href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">sk</a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout" target="_blank">Unicode</a></p>
 </div>
@@ -356,7 +362,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 </section>
 <section id="dashes">
-  <h2><a href="#dashes">Dashes and hyphens</a></h2>
+  <h2>Dashes and hyphens</h2>
 
 
 
@@ -436,7 +442,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 </section>
 <section id="quotations">
-  <h2><a href="#quotations">Quotations and apostrophe</a></h2>
+  <h2>Quotations and apostrophe</h2>
 
 
 
@@ -515,7 +521,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 </section>
 <section id="brackets">
-  <h2><a href="#brackets">Brackets</a></h2>
+  <h2>Brackets</h2>
 
 
 
@@ -609,7 +615,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 </section>
 <section id="general">
-  <h2><a href="#general">General punctuation</a></h2>
+  <h2>General punctuation</h2>
 
 
 
@@ -662,7 +668,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
   <div class="letter">
     <p><span class="title">Armenian</span> punctuation <span class="name">miǰakēt</span></p>
-    <p>Used like a semi-colon – a shorter break than a full stop. <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout">u322</a></sup></p>
+    <p>Used like a semi-colon – a shorter break than a full stop. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout">u322</a></p>
     <p><span class="charExample" lang="hy">Ոչ ոք չպետք է լինի ստրկության կամ անազատ <span class="ex">վիճակում․ </span>պետք է արգելվեն ստրկատիրության ու ստրուկների առուծախի բոլոր ձևերը։</span>&nbsp;</p>
   </div>
 </div>
@@ -946,7 +952,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 </section>
 <section id="vertical">
-  <h2><a href="#vertical">Double punctuation for vertical text</a></h2>
+  <h2>Double punctuation for vertical text</h2>
 
 
 
@@ -982,7 +988,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 </section>
 <section id="archaic">
-  <h2><a href="#archaic">Archaic/historical punctuation</a></h2>
+  <h2>Archaic/historical punctuation</h2>
 
 
 
@@ -1125,10 +1131,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 </section>
 <section id="editorial">
-  <h2><a href="#editorial">Specialist symbols</a></h2>
+  <h2>Specialist symbols</h2>
 
 <section id="new_testament">
-  <h3><a href="#new_testament">New Testament editorial symbols</a></h3>
+  <h3>New Testament editorial symbols</h3>
 
   <div class="character" id="char2E00">
 <div class="charimg">&#x2E00;</div>
@@ -1233,7 +1239,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="greek">
-  <h3><a href="#greek">Ancient Greek textual symbols</a></h3>
+  <h3>Ancient Greek textual symbols</h3>
 
 <div class="character" id="char2E0E">
 <div class="charimg">&#x2E0E;</div>
@@ -1302,7 +1308,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="near_east">
-  <h3><a href="#near_east">Ancient Near-Eastern linguistic symbol</a></h3>
+  <h3>Ancient Near-Eastern linguistic symbol</h3>
 
 <div class="character" id="char2E17">
 <div class="charimg">&#x2E17;</div>
@@ -1315,7 +1321,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="dictionary">
-  <h3><a href="#dictionary">Dictionary punctuation</a></h3>
+  <h3>Dictionary punctuation</h3>
 
 <div class="character" id="char2E1A">
 <div class="charimg">&#x2E1A;</div>
@@ -1349,7 +1355,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="paleo">
-  <h3><a href="#paleo">Palaeotype transliteration symbol</a></h3>
+  <h3>Palaeotype transliteration symbol</h3>
 
 <div class="character" id="char2E32">
 <div class="charimg">&#x2E32;</div>
@@ -1399,7 +1405,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="typicon">
-  <h3><a href="#typicon">Typicon punctuation</a></h3>
+  <h3>Typicon punctuation</h3>
 
 <div class="character" id="char2E45">
 <div class="charimg">&#x2E45;</div>
@@ -1440,7 +1446,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="alternate">
-  <h3><a href="#alternate">Alternate forms of punctuation</a></h3>
+  <h3>Alternate forms of punctuation</h3>
 
 <div class="character" id="char2E3C">
 <div class="charimg">&#x2E3C;</div>
@@ -1468,7 +1474,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="reversed">
-  <h3><a href="#reversed">Reversed punctuation</a></h3>
+  <h3>Reversed punctuation</h3>
 
 <div class="character" id="char2E41">
 <div class="charimg">&#x2E41;</div>
@@ -1490,7 +1496,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 </section>
 <section id="invisible">
-  <h2><a href="#invisible">Invisible operators</a></h2>
+  <h2>Invisible operators</h2>
 
 
 
@@ -1526,7 +1532,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 </section>
 <section id="deprecated">
-  <h2><a href="#deprecated">Deprecated</a></h2>
+  <h2>Deprecated</h2>
 
 
 
@@ -1580,7 +1586,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 </section>
 
 <!--section id="ack">
-<h2><a href="#ack">Acknowledgements</a></h2>
+<h2>Acknowledgements</h2>
 <p>The following people have provided helpful advice.</p>
 <ul>
   <li><a href="https://github.com/r12a/r12a.github.io/issues/1">Denis Moyogo Jacquerye</a></li>
@@ -1588,25 +1594,22 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 </section-->
 
 <section id="refs">
-<h2><a href="#refs">References</a></h2>
+<h2>References</h2>
 <ul>
-  <li>[ <sup><a href="http://www.unicode.org/versions/Unicode12.0.0/ch23.pdf#Layout">us</a></sup> ] <cite>The Unicode Standard, v12</cite> <a href="https://www.unicode.org/versions/Unicode12.0.0/ch23.pdf">Special areas &amp; format characters</a></li>
-<li>[ <sup><a href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">sk</a></sup> ] SIL, <cite><a href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">The order of components in Khmer orthographical syllables</a></cite></li>
+  <li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode12.0.0/ch23.pdf#Layout">us</a> ] <cite>The Unicode Standard, v12</cite> <a href="https://www.unicode.org/versions/Unicode12.0.0/ch23.pdf">Special areas &amp; format characters</a></li>
+<li>[ <a class="fnref" href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">sk</a> ] SIL, <cite><a href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">The order of components in Khmer orthographical syllables</a></cite></li>
 </ul>
 </section>
 
 
 <div id="panel" style="display:none"></div>
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/punctuation/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-05-17  15:43<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bpunctuation%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fpunctuation%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+<div class="smallprint"><span id="version"></span></div>
 
 
-
- 
 <script>
-initialise('/scripts/punctuation/block')
+initialise('/scripts/punctuation/block','punctuation')
 </script>
 </body>
 </html>
