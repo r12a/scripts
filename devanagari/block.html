@@ -9,13 +9,14 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../..//shared/code/boilerplate.js"></script>
-<script src="../..//shared/code/toc_2016.js"></script>
+<script src="../..//shared/code/toc_2020.js"></script>
 <script src="../..//shared/code/all-names.js"></script>
 <script src="../..//shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../..//shared/fontlists/manage.js"></script>
 <script src="../..//shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
@@ -23,6 +24,7 @@
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/devanagari.js"> </script>
+<script src="hi-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -70,8 +72,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 </aside>
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->14 July, 2019<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/index.php?tag=tamil" title="Show all blog posts tagged with 'devanagari'">devanagari</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+  <!-- #BeginDate format:Sw1 -->7 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
+
+
 <section>
   <p>This page lists characters in the following Unicode  block and provides information about them.</p>
   <ul>
@@ -80,7 +85,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   </ul>
   <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
 <p>For details about how the script works, see  <a class="linkHighlight" href="index">Devanagari/Hindi</a>, and <a class="linkHighlight" href="kashmiri">Kashmiri</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Deva">Script links pages</a>.</p>
-<p>Find <input type="text" onChange="var hex=this.value;if (hex!=''){while(hex.length<4){hex='0'+hex;}document.location='#char'+hex.toUpperCase();}"/></p>
+<p><span style="text-align: start;">We have usage data for the following 10 languages that use the Devanagari script</span>: Bhojpuri, Bodo, Hindi, Konkani, Kashmiri, Magahi, Maithili, Marathi, Nepali, Sanskrit.</p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -98,10 +107,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="consonants">
-  <h2><a href="#consonants">Consonants</a></h2>
+  <h2>Consonants</h2>
 
 <section id="basic_consonants">
-  <h3><a href="#basic_consonants">Basic consonants</a></h3>
+  <h3>Basic consonants</h3>
   <div class="character" id="char0915">
     <div class="charimg">&#x0915;</div>
     <p class="charname"><strong>U+0915</strong> <a href="#char0915">DEVANAGARI LETTER KA</a></p>
@@ -505,7 +514,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
       
       <div class="letter hindi">
         <p class="titlepara"><span class="title">Hindi</span> consonant</p>
-      <p><span class="ipa">v</span> and <span class="ipa">w</span> are allophones that are both represented by this letter in Hindi. Compare <span class="charExample" translate="no"><span class="ex" lang="hi">व्रत</span> <span class="trans">ʋ͓rt</span> <span class="ipa">ʋrʌt</span> <span class="meaning">fast</span></span> and <span class="charExample" translate="no"><span class="ex" lang="hi">पकवान</span> <span class="trans">pkʋān</span> <span class="ipa">pakwaːn</span> <span class="meaning">food dish</span></span>. Native speakers tend to use the correct pronunciation without awareness of the difference. <sup><a href="https://en.wikipedia.org/wiki/Devanagari#Allophony_of_'v'_and_'w'_in_Hindi">w</a></sup></p>
+      <p><span class="ipa">v</span> and <span class="ipa">w</span> are allophones that are both represented by this letter in Hindi. Compare <span class="charExample" translate="no"><span class="ex" lang="hi">व्रत</span> <span class="trans">ʋ͓rt</span> <span class="ipa">ʋrʌt</span> <span class="meaning">fast</span></span> and <span class="charExample" translate="no"><span class="ex" lang="hi">पकवान</span> <span class="trans">pkʋān</span> <span class="ipa">pakwaːn</span> <span class="meaning">food dish</span></span>. Native speakers tend to use the correct pronunciation without awareness of the difference. <a class="fnref" href="https://en.wikipedia.org/wiki/Devanagari#Allophony_of_'v'_and_'w'_in_Hindi">w</a></p>
 </div>
     </div>
   </div>
@@ -562,7 +571,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="aconsonants">
-  <h3><a href="#aconsonants">Additional consonants</a></h3>
+  <h3>Additional consonants</h3>
   <div class="character" id="char0958">
     <div class="charimg">&#x0958;</div>
     <p class="charname"><strong>U+0958</strong> <a href="#char0958">DEVANAGARI LETTER QA</a></p>
@@ -670,7 +679,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="sindhi">
-  <h3><a href="#sindhi">Sindhi implosives</a></h3>
+  <h3>Sindhi implosives</h3>
   <div class="character" id="char097B">
     <div class="charimg">&#x097B;</div>
     <p class="charname"><strong>U+097B</strong> <a href="#char097B">DEVANAGARI LETTER GGA</a></p>
@@ -728,7 +737,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="glottal">
-  <h3><a href="#glottal">Glottal stop</a></h3>
+  <h3>Glottal stop</h3>
   <div class="character" id="char097D">
     <div class="charimg">&#x097D;</div>
     <p class="charname"><strong>U+097D</strong> <a href="#char097D">DEVANAGARI LETTER GLOTTAL STOP</a></p>
@@ -742,10 +751,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="vowels">
-  <h2><a href="#vowels">Vowels</a></h2>
+  <h2>Vowels</h2>
 
 <section id="ivowels">
-  <h3><a href="#ivowels">Independent vowels</a></h3>
+  <h3>Independent vowels</h3>
   <div class="character" id="char0904">
     <div class="charimg">&#x0904;</div>
     <p class="charname"><strong>U+0904</strong> <a href="#char0904">DEVANAGARI LETTER SHORT A</a></p>
@@ -949,7 +958,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="kashmiriiv">
-  <h3><a href="#kashmiriiv">Independent vowels for Kashmiri</a></h3>
+  <h3>Independent vowels for Kashmiri</h3>
   <div class="character" id="char0973">
     <div class="charimg">&#x0973;</div>
     <p class="charname"><strong>U+0973</strong> <a href="#char0973">DEVANAGARI LETTER OE</a></p>
@@ -986,7 +995,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="marathiiv">
-  <h3><a href="#marathiiv">Independent vowel for Marathi</a></h3>
+  <h3>Independent vowel for Marathi</h3>
   <div class="character" id="char0972">
     <div class="charimg">&#x0972;</div>
     <p class="charname"><strong>U+0972</strong> <a href="#char0972">DEVANAGARI LETTER CANDRA A</a></p>
@@ -1003,7 +1012,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="depvowelsigns">
-  <h3><a href="#depvowelsigns">Dependent vowel signs</a></h3>
+  <h3>Dependent vowel signs</h3>
   <div class="character" id="char093E">
     <div class="charimg">&#x093E;</div>
     <p class="charname"><strong>U+093E</strong> <a href="#char093E">DEVANAGARI VOWEL SIGN AA</a></p>
@@ -1209,7 +1218,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="kashmiri">
-  <h3><a href="#kashmiri">Dependent vowel signs for Kashmiri</a></h3>
+  <h3>Dependent vowel signs for Kashmiri</h3>
   <div class="character" id="char093A">
     <div class="charimg">&#x093A;</div>
     <p class="charname"><strong>U+093A</strong> <a href="#char093A">DEVANAGARI VOWEL SIGN OE</a></p>
@@ -1239,7 +1248,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="sanskritvowel">
-  <h3><a href="#sanskritvowel">Additional vowels for Sanskrit</a></h3>
+  <h3>Additional vowels for Sanskrit</h3>
   <div class="character" id="char0960">
     <div class="charimg">&#x0960;</div>
     <p class="charname"><strong>U+0960</strong> <a href="#char0960">DEVANAGARI LETTER VOCALIC RR</a></p>
@@ -1258,7 +1267,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter sanskrit">
 <p class="titlepara"><span class="title">Sanskrit</span></p>
-<p>Not an actual phoneme of Sanskrit, but rather a graphic convention included among the vowels in order to maintain the symmetry of short–long pairs of letters. <sup><a href="https://en.wikipedia.org/wiki/Devanagari">w</a></sup></p>
+<p>Not an actual phoneme of Sanskrit, but rather a graphic convention included among the vowels in order to maintain the symmetry of short–long pairs of letters. <a class="fnref" href="https://en.wikipedia.org/wiki/Devanagari">w</a></p>
 </div>
 </div>
 
@@ -1277,7 +1286,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
     <div class="notes">
 <div class="letter sanskrit">
 <p class="titlepara"><span class="title">Sanskrit</span></p>
-<p>Not an actual phoneme of Sanskrit, but rather a graphic convention included among the vowels in order to maintain the symmetry of short–long pairs of letters. <sup><a href="https://en.wikipedia.org/wiki/Devanagari">w</a></sup></p>
+<p>Not an actual phoneme of Sanskrit, but rather a graphic convention included among the vowels in order to maintain the symmetry of short–long pairs of letters. <a class="fnref" href="https://en.wikipedia.org/wiki/Devanagari">w</a></p>
 </div>
 </div>
 </div>
@@ -1288,7 +1297,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="virama">
-  <h2><a href="#virama">Virama</a></h2>
+  <h2>Virama</h2>
   <div class="character" id="char094D">
     <div class="charimg">&#x094D;</div>
     <p class="charname"><strong>U+094D</strong> <a href="#char094D">DEVANAGARI SIGN VIRAMA</a></p>
@@ -1300,7 +1309,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="signs">
-  <h2><a href="#signs">Various signs</a></h2>
+  <h2>Various signs</h2>
   <div class="character" id="char0900">
     <div class="charimg">&#x0900;</div>
     <p class="charname"><strong>U+0900</strong> <a href="#char0900">DEVANAGARI SIGN INVERTED CANDRABINDU</a></p>
@@ -1315,8 +1324,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter hindi">
 <p class="titlepara"><span class="title">Hindi</span></p>
-<p><span class="codepoint" translate="no"><span lang="hi">&#x0901;</span> [<a href="devanagari#char0901"><span class="uname">U+0901 DEVANAGARI SIGN CANDRABINDU</span></a>]</span> nasalises the vowel in a syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">मुँह</span> <span class="trans">muŋ̽h</span> <span class="meaning">mouth</span></span>. Any vowel in Hindi can be nasalised in this way, except for the vocalics. <sup><a href="refs">s</a></sup></p>
-<p>When a vowel-sign rises above the head line, the glyph for this character may be simplified to  just a dot (which resembles the anusvara).<sup><a href="refs"> s</a></sup> It appears that this is normally achieved by using an anusvara instead of candrabindu, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">हैं</span> <span class="trans">hɛ̄m̽</span> <span class="ipa">ɦɛ̃</span> <span class="meaning">are</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="hi">&#x0901;</span> [<a href="devanagari#char0901"><span class="uname">U+0901 DEVANAGARI SIGN CANDRABINDU</span></a>]</span> nasalises the vowel in a syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">मुँह</span> <span class="trans">muŋ̽h</span> <span class="meaning">mouth</span></span>. Any vowel in Hindi can be nasalised in this way, except for the vocalics. <a class="fnref" href="refs">s</a></p>
+<p>When a vowel-sign rises above the head line, the glyph for this character may be simplified to  just a dot (which resembles the anusvara).<a class="fnref" href="refs"> s</a> It appears that this is normally achieved by using an anusvara instead of candrabindu, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">हैं</span> <span class="trans">hɛ̄m̽</span> <span class="ipa">ɦɛ̃</span> <span class="meaning">are</span></span>.</p>
 </div>
 </div>
   </div>
@@ -1376,10 +1385,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
     <div class="notes">
       <div class="letter hindi">
       <p class="titlepara"><span class="title">Hindi</span> sign <span class="trans">'</span>.</p>
-      <p>A Sanskrit punctuation mark for the elision of a vowel in sandhi: <span class="charExample" translate="no"><span class="ex" lang="hi">एकोऽयम्</span> <span class="trans">ẹ̄kō´ym͓</span> <span class="meaning">this one</span></span> from <span class="charExample"><span class="trans">ekas+ayam</span></span>. <sup><a href="https://en.wikipedia.org/wiki/Devanagari">w</a></sup></p>
-<p>An original long vowel lost to coalescence is sometimes marked with a double avagraha, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">सदाऽऽत्मा</span> <span class="trans">sdā´´t͓mā</span> <span class="meaning">always</span></span> from <span class="trans">sadā+ātmā</span>. <sup><a href="https://en.wikipedia.org/wiki/Devanagari">w</a></sup></p>
-<p>In Hindi, Snell states that its main function is to show that a vowel is sustained in a cry or a shout, eg.  <span class="charExample" translate="no"><span class="ex" lang="hi">आईऽऽऽ!</span> <span class="trans">ạ̄ị̄´´´!</span></span> <sup><a href="https://en.wikipedia.org/wiki/Devanagari">w</a></sup></p>
-<p>In Madhyadeshi languages like Bhojpuri, Awadhi, Maithili, etc. which have quite a number of verbal forms that end in that inherent vowel, the avagraha is used to mark the <em>non-elision</em> of word-final inherent <span class="trans">a</span>, which otherwise is a modern orthographic convention, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">बइठऽ</span> <span class="trans">bịʈʰ´</span> <span class="meaning">sit</span></span> versus <span class="charExample" translate="no"><span class="ex" lang="hi">बइठ</span> <span class="trans">bịʈʰ</span></span>. <sup><a href="https://en.wikipedia.org/wiki/Devanagari">w</a></sup></p>
+      <p>A Sanskrit punctuation mark for the elision of a vowel in sandhi: <span class="charExample" translate="no"><span class="ex" lang="hi">एकोऽयम्</span> <span class="trans">ẹ̄kō´ym͓</span> <span class="meaning">this one</span></span> from <span class="charExample"><span class="trans">ekas+ayam</span></span>. <a class="fnref" href="https://en.wikipedia.org/wiki/Devanagari">w</a></p>
+<p>An original long vowel lost to coalescence is sometimes marked with a double avagraha, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">सदाऽऽत्मा</span> <span class="trans">sdā´´t͓mā</span> <span class="meaning">always</span></span> from <span class="trans">sadā+ātmā</span>. <a class="fnref" href="https://en.wikipedia.org/wiki/Devanagari">w</a></p>
+<p>In Hindi, Snell states that its main function is to show that a vowel is sustained in a cry or a shout, eg.  <span class="charExample" translate="no"><span class="ex" lang="hi">आईऽऽऽ!</span> <span class="trans">ạ̄ị̄´´´!</span></span> <a class="fnref" href="https://en.wikipedia.org/wiki/Devanagari">w</a></p>
+<p>In Madhyadeshi languages like Bhojpuri, Awadhi, Maithili, etc. which have quite a number of verbal forms that end in that inherent vowel, the avagraha is used to mark the <em>non-elision</em> of word-final inherent <span class="trans">a</span>, which otherwise is a modern orthographic convention, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">बइठऽ</span> <span class="trans">bịʈʰ´</span> <span class="meaning">sit</span></span> versus <span class="charExample" translate="no"><span class="ex" lang="hi">बइठ</span> <span class="trans">bịʈʰ</span></span>. <a class="fnref" href="https://en.wikipedia.org/wiki/Devanagari">w</a></p>
       </div>
     </div>
   </div>
@@ -1407,7 +1416,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="vedictone">
-  <h2><a href="#vedictone">Vedic tone marks</a></h2>
+  <h2>Vedic tone marks</h2>
   <div class="character" id="char0951">
     <div class="charimg">&#x0951;</div>
     <p class="charname"><strong>U+0951</strong> <a href="#char0951">DEVANAGARI STRESS SIGN UDATTA</a></p>
@@ -1422,7 +1431,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   </div>
 </section>
 <section id="accent">
-  <h2><a href="#accent">Accent marks</a></h2>
+  <h2>Accent marks</h2>
   <div class="character" id="char0953">
     <div class="charimg">&#x0953;</div>
     <p class="charname"><strong>U+0953</strong> <a href="#char0953">DEVANAGARI GRAVE ACCENT</a></p>
@@ -1440,7 +1449,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="gpunctuation">
-  <h2><a href="#gpunctuation">General punctuation for scripts of India</a></h2>
+  <h2>General punctuation for scripts of India</h2>
   <div class="character" id="char0964">
     <div class="charimg">&#x0964;</div>
     <p class="charname"><strong>U+0964</strong> <a href="#char0964">DEVANAGARI DANDA</a></p>
@@ -1467,7 +1476,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   </div>
 </section>
 <section id="digits">
-  <h2><a href="#digits">Digits</a></h2>
+  <h2>Digits</h2>
   <div class="character" id="char0966">
   <div class="charimg">&#x0966;</div>
 <p class="charname"><strong>U+0966</strong> <a href="#char0966">DEVANAGARI DIGIT ZERO</a></p>
@@ -1535,10 +1544,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="special">
-  <h2><a href="#special">Special use</a></h2>
+  <h2>Special use</h2>
 
 <section id="cantillation">
-  <h3><a href="#cantillation">Cantillation marks (svara) for the Samaveda</a></h3>
+  <h3>Cantillation marks (svara) for the Samaveda</h3>
   <div class="character" id="charA8E0">
     <div class="charimg"><img src="/c/Devanagari_Extended/large/A8E0.png" alt="&#xA8E0;"/></div>
     <p class="charname"><strong>U+A8E0</strong> <a href="#charA8E0">COMBINING DEVANAGARI DIGIT ZERO</a></p>
@@ -1652,7 +1661,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="nasalization">
-  <h3><a href="#nasalization">Marks of nasalization</a></h3>
+  <h3>Marks of nasalization</h3>
   <div class="character" id="charA8F2">
     <div class="charimg"><img src="/c/Devanagari_Extended/large/A8F2.png" alt="&#xA8F2;"/></div>
     <p class="charname"><strong>U+A8F2</strong> <a href="#charA8F2">DEVANAGARI SIGN SPACING CANDRABINDU</a></p>
@@ -1694,7 +1703,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="editorial">
-  <h3><a href="#editorial">Editorial marks</a></h3>
+  <h3>Editorial marks</h3>
   <div class="character" id="charA8F8">
     <div class="charimg"><img src="/c/Devanagari_Extended/large/A8F8.png" alt="&#xA8F8;"/></div>
     <p class="charname"><strong>U+A8F8</strong> <a href="#charA8F8">DEVANAGARI SIGN PUSHPIKA</a></p>
@@ -1726,14 +1735,14 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="refs">
-  <h2><a href="#refs">References</a></h2>
+  <h2>References</h2>
   <ol>
-    <li>[ <sup><a href="http://www.unicode.org/versions/latest/ch12.pdf">u</a></sup> ] The Unicode Standard v11.0, <a href="http://www.unicode.org/versions/latest/ch12.pdf">Devanagari</a></li>
-    <li>[ <sup><a href="refs">s</a></sup> ] Rupert Snell &amp; Simon Weightman, Teach Yourself Hindi, ISBN 978-0-340-86687-0</li>
-<li>[ <sup><a href="https://en.wikipedia.org/wiki/Devanagari">w</a></sup> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Devanagari">Devanagari</a></li>
-<li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
+    <li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
 				0-19-507993-0, pp487-497</li>
-  </ol>
+<li>[ <a class="fnref" href="refs">s</a> ] Rupert Snell &amp; Simon Weightman, Teach Yourself Hindi, ISBN 978-0-340-86687-0</li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch12.pdf">u</a> ] The Unicode Standard v11.0, <a href="http://www.unicode.org/versions/latest/ch12.pdf">Devanagari</a></li>
+<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Devanagari">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Devanagari">Devanagari</a></li>
+</ol>
 </section>
 
 
@@ -1775,9 +1784,10 @@ replaceStuff('Kashmiri', 'kashmiri', spreadsheet, '', 'ks', '', cols, false)
 
 <div id="panel" style="display:none"></div>
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/devanagari/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-07-14  8:40<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bdevanagari%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fdevanagari%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+<div class="smallprint"><span id="version"></span></div>
+
+
 
 <!-- Uncomment this code to get a list of all character names for the file names-subset.js  
 <div id=charliststr></div>
@@ -1815,7 +1825,8 @@ Editorial marks;editorial;A8F8-A8FB
   --> 
 
 <script>
-initialise('/scripts/devanagari/block')
+initialise('/scripts/devanagari/block','devanagari')
+autoTransliterate('hi')
 </script>
 </body>
 </html>
