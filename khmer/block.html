@@ -9,13 +9,14 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
@@ -23,6 +24,7 @@
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/khmer.js"> </script>
+<script src="km-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -76,8 +78,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->14 July, 2019<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="https://r12a.github.io/blog/?tag=khmer" title="Show all blog posts tagged with 'khmer'">khmer</a></p>
+<!-- #BeginDate format:Sw1 -->9 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+</p>
+
+
 <section>
    <p>This page lists characters in the following Unicode  block and provides information about them. </p>
 <ul>
@@ -86,10 +91,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
    </ul>
    <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
 <p>For details about how the script works, see <a class="linkHighlight" href="index">Khmer</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Khmr">Script links pages</a>.</p>
-<p>Find
-<input type="text" 
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/>
-</p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -107,7 +112,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="consonants">
-<h2><a href="#consonants">Consonants</a></h2>
+<h2>Consonants</h2>
 
 
 <div class="character" id="char1780">
@@ -122,10 +127,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"> <span class="ipa">kɑː</span></span></p>
  
         
-        <p><span class="ipa">k</span> with inherent vowel <span class="ipa">ɑː</span> or followed by a vowel, eg. <span class="ex" lang="km">ក៏</span> <span class="ipa">kɑː</span> <span class="meaning">also</span>.</p>
+        <p><span class="ipa">k</span> with inherent vowel <span class="ipa">ɑː</span> or followed by a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ក៏</span> <span class="trans">k⁎</span> <span class="ipa">kɑː</span> <span class="meaning">also</span></span>.</p>
         <p><span class="ipa">k</span> before a subscript consonant.</p>
-        <p><span class="ipa">kʰ</span> when followed by a subscript <span class="ex" lang="km">ន</span> or <span class="ex" lang="km">ម</span>, eg. <span class="ex" lang="km">ក្មូយ</span> <span class="ipa">kʰmuəj</span>.</p>
-        <p><span class="ipa">k</span> in final position, eg. <span class="ex" lang="km">លើក</span> <span class="ipa">ləːk</span> <span class="meaning">to lift</span>.</p>
+        <p><span class="ipa">kʰ</span> when followed by a subscript <span class="ex" lang="km">ន</span> or <span class="ex" lang="km">ម</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ក្មូយ</span> <span class="trans">k͓m̱ūy̱</span> <span class="ipa">kʰmuəj</span></span>.</p>
+        <p><span class="ipa">k</span> in final position, eg. <span class="charExample" translate="no"><span class="ex" lang="km">លើក</span> <span class="trans">ḻaᵊk</span> <span class="ipa">ləːk</span> <span class="meaning">to lift</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://www.pratyeka.org/csw/hlp-csw.pdf" target="_blank">Huffman</a>,
@@ -148,7 +153,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"> <span class="ipa">kʰɑː</span></span></p>
  
         
-        <p><span class="ipa">kʰ</span> with inherent vowel <span class="ipa">ɑː</span> or before a vowel, eg. <span class="ex" lang="km">ខាង</span> <span class="meaning">direction</span> <span class="ipa">kʰaːŋ</span>.</p>
+        <p><span class="ipa">kʰ</span> with inherent vowel <span class="ipa">ɑː</span> or before a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ខាង</span> <span class="trans">kʰāŋ</span> <span class="ipa">kʰaːŋ</span> <span class="meaning">direction</span></span>.</p>
         <p><span class="ipa">k</span> before a subscript consonant.</p>
         <p><span class="ipa">k</span> in final position.</p>
 </div>
@@ -173,10 +178,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"> <span class="ipa">kɔː</span></span></p>
  
         
-        <p><span class="ipa">k</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="ex" lang="km">គេ</span> <span class="ipa">kei</span> <span class="meaning">they</span>.</p>
+        <p><span class="ipa">k</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">គេ</span> <span class="trans">ḵe</span> <span class="ipa">kei</span> <span class="meaning">they</span></span>.</p>
         <p><span class="ipa">k</span> before a subscript consonant.</p>
         <p><span class="ipa">k</span> in final position.</p>
-        <p><span class="ipa">kʰ</span> when followed by a subscript <span class="ex" lang="km">ន</span> or <span class="ex" lang="km">ម</span>, eg. <span class="ex" lang="km">គ្នា</span> <span class="ipa">kʰniə</span>.</p>
+        <p><span class="ipa">kʰ</span> when followed by a subscript <span class="ex" lang="km">ន</span> or <span class="ex" lang="km">ម</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="km">គ្នា</span> <span class="trans">ḵ͓ṉā</span> <span class="ipa">kʰniə</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://www.pratyeka.org/csw/hlp-csw.pdf" target="_blank">Huffman</a>,
@@ -200,7 +205,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  
         
         <p><span class="ipa">kʰ</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel.</p>
-        <p><span class="ipa">k</span> before a subscript consonant, eg. <span class="ex" lang="km">ឃ្លាន</span> <span class="ipa">kliən</span> <span class="meaning">hungry</span>.</p>
+        <p><span class="ipa">k</span> before a subscript consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ឃ្លាន</span> <span class="trans">ḵʰ͓ḻāṉ</span> <span class="ipa">kliən</span> <span class="meaning">hungry</span></span>.</p>
         <p><span class="ipa">k</span> in final position.  Not common.</p>
         <p> * Subscript consonant seldom used.</p>
       
@@ -226,7 +231,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"> <span class="ipa">ŋɔː</span></span></p>
  
         
-        <p><span class="ipa">ŋ</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="ex" lang="km">ងងឹត</span> <span class="ipa">ŋoŋət</span> <span class="meaning">dark</span>. (Note that this sound appears in syllable initial position in Khmer.)</p>
+        <p><span class="ipa">ŋ</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ងងឹត</span> <span class="trans">ŋŋɨt</span> <span class="ipa">ŋoŋət</span> <span class="meaning">dark</span></span>. (Note that this sound appears in syllable initial position in Khmer.)</p>
 <p>Not used before a subscript consonant.</p>
         <p><span class="ipa">ŋ</span> in final position.</p>
 <p>As a subscript this consonant doesn't determine the pronunciation of the vowel sound, it is determined by the class of the non-subscript consonant.</p>
@@ -253,7 +258,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"> <span class="ipa">cɑː</span></span></p>
  
         
-        <p><span class="ipa">c</span> with inherent vowel <span class="ipa">ɑː</span> or before a vowel, eg. <span class="ex" lang="km">ចង់</span> <span class="ipa">cɑŋ</span> <span class="meaning">to want</span>.</p>
+        <p><span class="ipa">c</span> with inherent vowel <span class="ipa">ɑː</span> or before a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ចង់</span> <span class="trans">cŋ˘</span> <span class="ipa">cɑŋ</span> <span class="meaning">to want</span></span>.</p>
         <p><span class="ipa">c</span> before a subscript consonant.</p>
         <p><span class="ipa">ik</span> in final position. <span class="ed">[c] according to Huffman.</span></p>
 </div>
@@ -305,7 +310,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"> <span class="ipa">cɔː</span></span></p>
  
         
-        <p><span class="ipa">c</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="ex" lang="km">ជា</span> <span class="ipa">ciə</span> <span class="meaning">is</span>.</p>
+        <p><span class="ipa">c</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ជា</span> <span class="trans">c̱ā</span> <span class="ipa">ciə</span> <span class="meaning">is</span></span>.</p>
         <p><span class="ipa">c</span> before a subscript consonant.</p>
         <p><span class="ipa">ik</span> in final position. <span class="ed">[c] according to Huffman.</span></p>
 </div>
@@ -330,7 +335,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <span class="charName"> <span class="ipa">cʰɔː</span></span></p>
  
         
-        <p><span class="ipa">cʰ</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="ex" lang="km">ឈឺ</span> <span class="ipa">cʰɨː</span> <span class="meaning">sick</span>.</p>
+        <p><span class="ipa">cʰ</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ឈឺ</span> <span class="trans">c̱ʰɨ̄</span> <span class="ipa">cʰɨː</span> <span class="meaning">sick</span></span>.</p>
         <p><span class="ipa">c</span> before a subscript consonant.</p>
         <p>Not found in final position.</p>
         <p>* Subscript consonant seldom used.</p>
@@ -357,12 +362,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"> <span class="ipa">ɲɔː</span></span></p>
  
         
-        <p><span class="ipa">ɲ</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="ex" lang="km">ញី</span> <span class="ipa">ɲiː</span> <span class="meaning">female</span>.</p>
+        <p><span class="ipa">ɲ</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ញី</span> <span class="trans">ɲī</span> <span class="ipa">ɲiː</span> <span class="meaning">female</span></span>.</p>
         <p>Not found before a subscript consonant.</p>
         <p><span class="ipa">ɲ</span> in final position.</p>
         <p>As a subscript this consonant doesn't determine the pronunciation of the vowel sound, it is determined by the class of the non-subscript consonant.</p>
-        <p>The bottom of this character is dropped when followed by a subscript consonant, eg. <span class="ex" lang="km">បញ្ឆោត</span> <span class="ipa">ɓɑɲcʰaot</span> <span class="meaning">to trick</span>.</p>
-        <p>There are two shapes used for the subscript. When this character appears twice in a cluster, the full form is used. Elsewhere a reduced form is used. For example, compare <span class="ex" lang="km">កញ្ញា</span> <span class="ipa">kɑɲɲaa</span> <span class="meaning">young lady</span> and <span class="ex" lang="km">ប្រាជ្ញា</span> <span class="ipa">praːcɲaa</span> <span class="meaning">intelligence</span>.</p>
+        <p>The bottom of this character is dropped when followed by a subscript consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">បញ្ឆោត</span> <span class="trans">bɲ͓cʰot</span> <span class="ipa">ɓɑɲcʰaot</span> <span class="meaning">to trick</span></span>.</p>
+        <p>There are two shapes used for the subscript. When this character appears twice in a cluster, the full form is used. Elsewhere a reduced form is used. For example, compare <span class="charExample" translate="no"><span class="ex" lang="km">កញ្ញា</span> <span class="trans">kɲ͓ɲā</span> <span class="ipa">kɑɲɲaa</span> <span class="meaning">young lady</span></span> and <span class="charExample" translate="no"><span class="ex" lang="km">ប្រាជ្ញា</span> <span class="trans">b͓ṟāc̱͓ɲā</span> <span class="ipa">praːcɲaa</span> <span class="meaning">intelligence</span></span>.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -386,7 +391,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"> <span class="ipa">ɗɑː</span></span></p>
  
         
-        <p><span class="ipa">ɗ</span> with inherent vowel <span class="ipa">ɑː</span> or before a vowel, eg. <span class="ex" lang="km">ដុល្លារ</span> <span class="ipa">ɗɑllaː</span> <span class="meaning">dollar</span>.</p>
+        <p><span class="ipa">ɗ</span> with inherent vowel <span class="ipa">ɑː</span> or before a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ដុល្លារ</span> <span class="trans">ɗuḻ͓ḻāṟ</span> <span class="ipa">ɗɑllaː</span> <span class="meaning">dollar</span></span>.</p>
         <p><span class="ipa">ɗ</span> before a subscript consonant.</p>
         <p><span class="ipa">t</span> in final position.</p>
         <p>The subscript consonant is the same shape as the subscript of <span class="name">tɑː</span> <span class="ex" lang="km">ត</span>.</p>
@@ -497,7 +502,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"> <span class="ipa">nɑː</span></span></p>
  
         
-        <p><span class="ipa">n</span> with inherent vowel <span class="ipa">ɑː</span> or before a vowel, eg. <span class="ex" lang="km">ណាស់</span> <span class="ipa">nah</span> <span class="meaning">very</span>.</p>
+        <p><span class="ipa">n</span> with inherent vowel <span class="ipa">ɑː</span> or before a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ណាស់</span> <span class="trans">nās˘</span> <span class="ipa">nah</span> <span class="meaning">very</span></span>.</p>
         <p><span class="ipa">n</span> before a subscript consonant.</p>
         <p><span class="ipa">n</span> in final position.</p>
 <p>* Subscript consonant is seldom used: often a silent final subscript.</p>
@@ -524,12 +529,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"> <span class="ipa">tɑː</span></span></p>
  
         
-        <p><span class="ipa">t</span> with inherent vowel <span class="ipa">ɑː</span> or before a vowel, eg. <span class="ex" lang="km">ត្រី</span> <span class="ipa">trəj</span> <span class="meaning">fish</span>.</p>
-        <p><span class="ipa">ɗ</span> at the beginning of two syllable words where the first syllable ends with final nasal, eg. <span class="ex" lang="km">តង្វាយ</span> <span class="ipa">ɗɔŋʋaaj</span> <span class="meaning">gift</span>.</p>
+        <p><span class="ipa">t</span> with inherent vowel <span class="ipa">ɑː</span> or before a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ត្រី</span> <span class="trans">t͓ṟī</span> <span class="ipa">trəj</span> <span class="meaning">fish</span></span>.</p>
+        <p><span class="ipa">ɗ</span> at the beginning of two syllable words where the first syllable ends with final nasal, eg. <span class="charExample" translate="no"><span class="ex" lang="km">តង្វាយ</span> <span class="trans">tŋ͓v̱āy̱</span> <span class="ipa">ɗɔŋʋaaj</span> <span class="meaning">gift</span></span>.</p>
         <p><span class="ipa">t</span> before a subscript consonant.</p>
         <p><span class="ipa">t</span> in final position.</p>
 <p>Subscript consonant is the same shape as the subscript of <span class="name">ɗɑː</span> <span class="ex" lang="km">ដ</span>.</p>
-        <p>The pronunciation when a subscript in medial position is unpredictable, sometimes <span class="ipa">t</span> and sometimes <span class="ipa">ɗ</span>. As a general rule, but not always, it is pronounced <span class="ipa">t</span> when a subscript to <span class="name">nɔː</span> <span class="ex" lang="km">ន</span>, and <span class="ipa">ɗ</span> when a subscript to <span class="name">nɑː</span> <span class="ex" lang="km">ណ</span>, eg. <span class="ex" lang="km">បន្តុះ</span> <span class="ipa">ɓɑntoh</span> <span class="meaning">to criticise</span>, and <span class="ex" lang="km">បណ្តុះ</span> <span class="ipa">ɓɑnɗoh</span> <span class="meaning">to grow</span>.</p>
+        <p>The pronunciation when a subscript in medial position is unpredictable, sometimes <span class="ipa">t</span> and sometimes <span class="ipa">ɗ</span>. As a general rule, but not always, it is pronounced <span class="ipa">t</span> when a subscript to <span class="name">nɔː</span> <span class="ex" lang="km">ន</span>, and <span class="ipa">ɗ</span> when a subscript to <span class="name">nɑː</span> <span class="ex" lang="km">ណ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="km">បន្តុះ</span> <span class="trans">bṉ͓tuh̽</span> <span class="ipa">ɓɑntoh</span> <span class="meaning">to criticize</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="km">បណ្តុះ</span> <span class="trans">bn͓tuh̽</span> <span class="ipa">ɓɑnɗoh</span> <span class="meaning">to grow</span></span>.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -553,7 +558,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"> <span class="ipa">tʰɑː</span></span></p>
  
         
-        <p><span class="ipa">tʰ</span> with inherent vowel <span class="ipa">ɑː</span> or before a vowel, eg. <span class="ex" lang="km">ថា</span> <span class="ipa">tʰaː</span> <span class="meaning">that</span>.</p>
+        <p><span class="ipa">tʰ</span> with inherent vowel <span class="ipa">ɑː</span> or before a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ថា</span> <span class="trans">tʰā</span> <span class="ipa">tʰaː</span> <span class="meaning">that</span></span>.</p>
         <p><span class="ipa">t</span> before a subscript consonant.</p>
         <p><span class="ipa">t</span> in final position.</p>
 </div>
@@ -578,7 +583,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"> <span class="ipa">tɔː</span></span></p>
  
         
-        <p><span class="ipa">t</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="ex" lang="km">ទម្ងន់</span> <span class="ipa">tɔmŋɔn</span> <span class="meaning">weight</span>.</p>
+        <p><span class="ipa">t</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ទម្ងន់</span> <span class="trans">ṯm̱͓ŋṉ˘</span> <span class="ipa">tɔmŋɔn</span> <span class="meaning">weight</span></span>.</p>
         <p><span class="ipa">t</span> before a subscript consonant.</p>
         <p><span class="ipa">t</span> in final position.</p>
 </div>
@@ -603,7 +608,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"> <span class="ipa">tʰɔː</span></span></p>
  
         
-        <p><span class="ipa">tʰ</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="ex" lang="km">ភំ</span> <span class="ipa">tʰom</span> <span class="meaning">big</span>.</p>
+        <p><span class="ipa">tʰ</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg.  <span class="charExample" translate="no"><span class="ex" lang="km">ភំ</span> <span class="trans">p̱ʰm̽</span> <span class="ipa">tʰom</span> <span class="meaning">big</span></span>.</p>
 <p><span class="ipa">t</span> before a subscript consonant.</p>
         <p><span class="ipa">t</span> in final position.</p>
 <p>* Subscript consonant is seldom used: often a silent final subscript.</p>
@@ -630,7 +635,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"> <span class="ipa">nɔː</span></span></p>
  
         
-        <p><span class="ipa">n</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="ex" lang="km">នឹង</span> <span class="ipa">nəŋ</span> <span class="meaning">future tense marker</span>.</p>
+        <p><span class="ipa">n</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">នឹង</span> <span class="trans">ṉɨŋ</span> <span class="ipa">nəŋ</span> <span class="meaning">future tense marker</span></span>.</p>
         <p>Not found before a subscript consonant.</p>
         <p><span class="ipa">n</span> in final position.</p>
         <p>As a subscript this consonant doesn't determine the pronunciation of the vowel sound, it is determined by the class of the non-subscript consonant.</p>
@@ -658,12 +663,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"> <span class="ipa">ɓɑː</span></span></p>
  
         
-        <p><span class="ipa">ɓ</span> with inherent vowel <span class="ipa">ɑː</span> or before a vowel, eg. <span class="ex" lang="km">បន្ទប់</span> <span class="ipa">ɓɑntuɓ</span> <span class="meaning">room</span>.</p>
-        <p><span class="ipa">p</span> when followed by a subscript consonant, eg. <span class="ex" lang="km">ម្រាំ</span> <span class="ipa">pram</span>.</p>
-        <p><span class="ipa">p</span> in final position, eg. <span class="ex" lang="km">ឈប់</span> <span class="ipa">cʰup</span> <span class="meaning">to stop</span>.</p>
-        <p><span class="ipa">p</span> when below a <span class="name">museʔkətoə̯n</span>, eg. <span class="ex" lang="km">ប៉ា</span> <span class="ipa">paː</span> <span class="meaning">father</span>.</p>
-        <p><span class="ipa">p</span> in some words just by convention, eg. <span class="ex" lang="km">បច្ច័យ</span> <span class="ipa">paccaj</span> <span class="meaning">money</span>.</p>
-<p>A ligature <span class="ex" lang="km">បា</span> is used when this character is followed by <span class="name">sra-aː</span>, to avoid similarity with <span class="name">hɑː</span> <span class="ex" lang="km">ហ</span>, eg. <span class="ex" lang="km">បាយ</span> <span class="ipa">ɓaaj</span> <span class="meaning">cooked rice</span>.  The same applies when followed by <span class="name">sra-ao</span> <span class="ex" lang="km">បោ</span> and <span class="name">sra-aw</span> <span class="ex" lang="km">បៅ</span> .</p>
+        <p><span class="ipa">ɓ</span> with inherent vowel <span class="ipa">ɑː</span> or before a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">បន្ទប់</span> <span class="trans">bṉ͓ṯb˘</span> <span class="ipa">ɓɑntuɓ</span> <span class="meaning">room</span></span>.</p>
+        <p><span class="ipa">p</span> when followed by a subscript consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ម្រាំ</span> <span class="trans">m̱͓ṟām̽</span> <span class="ipa">pram</span></span>.</p>
+        <p><span class="ipa">p</span> in final position, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ឈប់</span> <span class="trans">c̱ʰb˘</span> <span class="ipa">cʰup</span> <span class="meaning">to stop</span></span>.</p>
+        <p><span class="ipa">p</span> when below a <span class="name">museʔkətoə̯n</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ប៉ា</span> <span class="trans">b″ā</span> <span class="ipa">paː</span> <span class="meaning">father</span></span>.</p>
+        <p><span class="ipa">p</span> in some words just by convention, eg. <span class="charExample" translate="no"><span class="ex" lang="km">បច្ច័យ</span> <span class="trans">bc͓căy̱</span> <span class="ipa">paccaj</span> <span class="meaning">money</span></span>.</p>
+<p>A ligature <span class="ex" lang="km">បា</span> is used when this character is followed by <span class="name">sra-aː</span>, to avoid similarity with <span class="name">hɑː</span> <span class="ex" lang="km">ហ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="km">បាយ</span> <span class="trans">bāy̱</span> <span class="ipa">ɓaaj</span> <span class="meaning">cooked rice</span></span>.  The same applies when followed by <span class="name">sra-ao</span> <span class="ex" lang="km">បោ</span> and <span class="name">sra-aw</span> <span class="ex" lang="km">បៅ</span> .</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -687,7 +692,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"> <span class="ipa">pʰɑː</span></span></p>
  
         
-        <p><span class="ipa">pʰ</span> with inherent vowel <span class="ipa">ɑː</span>, eg. <span class="ex" lang="km">ផ្សារ</span> <span class="ipa">psaː</span> <span class="meaning">market</span>.</p>
+        <p><span class="ipa">pʰ</span> with inherent vowel <span class="ipa">ɑː</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ផ្សារ</span> <span class="trans">pʰ͓sāṟ</span> <span class="ipa">psaː</span> <span class="meaning">market</span></span>.</p>
         <p><span class="ipa">p</span> before a subscript consonant.</p>
         <p><span class="ipa">p</span> in final position. Not common.</p>
 <p>* Subscript consonant is obsolete, or rarely, if ever, used.</p>
@@ -714,7 +719,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"> <span class="ipa">pɔː</span></span></p>
  
         
-        <p><span class="ipa">p</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="ex" lang="km">ពី</span> <span class="ipa">piː</span> <span class="meaning">from</span>.</p>
+        <p><span class="ipa">p</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ពី</span> <span class="trans">p̱ī</span> <span class="ipa">piː</span> <span class="meaning">from</span></span>.</p>
         <p><span class="ipa">p</span> before a subscript consonant.</p>
         <p><span class="ipa">p</span> in final position.</p>
 </div>
@@ -739,7 +744,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"> <span class="ipa">pʰɔː</span></span></p>
  
         
-        <p><span class="ipa">pʰ</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="ex" lang="km">ភាសា</span> <span class="ipa">pʰiəsaː</span> <span class="meaning">language</span>.</p>
+        <p><span class="ipa">pʰ</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ភាសា</span> <span class="trans">p̱ʰāsā</span> <span class="ipa">pʰiəsaː</span> <span class="meaning">language</span></span>.</p>
         <p><span class="ipa">p</span> before a subscript consonant.</p>
         <p><span class="ipa">p</span> in final position.</p>
 </div>
@@ -764,7 +769,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"> <span class="ipa">mɔː</span></span></p>
  
         
-        <p><span class="ipa">m</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="ex" lang="km">មុខ</span> <span class="ipa">muk</span> <span class="meaning">ahead, front</span>.</p>
+        <p><span class="ipa">m</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">មុខ</span> <span class="trans">m̱ukʰ</span> <span class="ipa">muk</span> <span class="meaning">ahead, front</span></span>.</p>
         <p><span class="ipa">m</span> before a subscript consonant.</p>
         <p><span class="ipa">m</span> in final position.</p>
 <p>As a subscript this consonant doesn't determine the pronunciation of the vowel sound, it is determined by the class of the non-subscript consonant.</p>
@@ -792,7 +797,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"> <span class="ipa">jɔː</span></span></p>
  
         
-        <p><span class="ipa">j</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="ex" lang="km">យល់់</span> <span class="ipa">jul</span> <span class="meaning">to understand</span>.</p>
+        <p><span class="ipa">j</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">យល់់</span> <span class="trans">y̱ḻ˘˘</span> <span class="ipa">jul</span> <span class="meaning">to understand</span></span>.</p>
         <p>Not found before a subscript consonant.</p>
         <p><span class="ipa">iː</span> in final position. <span class="ed">Huffman says <span class="ipa">j</span></span>.</p>
 <p>As a subscript this consonant doesn't determine the pronunciation of the vowel sound, it is determined by the class of the non-subscript consonant.</p>
@@ -819,9 +824,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"> <span class="ipa">rɔː</span></span></p>
  
         
-        <p><span class="ipa">r</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="ex" lang="km">រូប</span> <span class="ipa">ruːɓ</span> <span class="meaning">picture</span>.</p>
-        <p>Not found before a subscript consonant, eg. <span class="ex" lang="km">ការ</span> <span class="ipa">kaa</span> <span class="meaning">work</span>; <span class="ex" lang="km">ខ្មែរ</span> <span class="ipa">kmae</span> <span class="meaning">Cambodian</span>.</p>
-        <p>Silent in final position.  There is no final r sound in Cambodian, but the r symbol can sometimes disambiguate homonyms, eg. <span class="ex" lang="km">កា</span> <span class="ipa">kaa</span> <span class="meaning">to address (a letter)</span> and <span class="ex" lang="km">ការ</span> <span class="ipa">kaa</span> <span class="meaning">to work</span>; <span class="ex" lang="km">ពី</span> <span class="ipa">piː</span> <span class="meaning">from</span> and <span class="ex" lang="km">ពីរ</span> <span class="ipa">piː</span> <span class="meaning">two</span>.</p>
+        <p><span class="ipa">r</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">រូប</span> <span class="trans">ṟūb</span> <span class="ipa">ruːɓ</span> <span class="meaning">picture</span></span>.</p>
+        <p>Not found before a subscript consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ការ</span> <span class="trans">kāṟ</span> <span class="ipa">kaa</span> <span class="meaning">work</span></span>; <span class="charExample" translate="no"><span class="ex" lang="km">ខ្មែរ</span> <span class="trans">kʰ͓m̱æṟ</span> <span class="ipa">kmae</span> <span class="meaning">Cambodian</span></span>.</p>
+        <p>Silent in final position.  There is no final r sound in Cambodian, but the r symbol can sometimes disambiguate homonyms, eg. <span class="charExample" translate="no"><span class="ex" lang="km">កា</span> <span class="trans">kā</span> <span class="ipa">kaa</span> <span class="meaning">to address (a letter)</span></span> and <span class="charExample" translate="no"><span class="ex" lang="km">ការ</span> <span class="trans">kāṟ</span> <span class="ipa">kaa</span> <span class="meaning">to work</span></span>; <span class="charExample" translate="no"><span class="ex" lang="km">ពី</span> <span class="trans">p̱ī</span> <span class="ipa">piː</span> <span class="meaning">from</span></span> and <span class="charExample" translate="no"><span class="ex" lang="km">ពីរ</span> <span class="trans">p̱īṟ</span> <span class="ipa">piː</span> <span class="meaning">two</span></span>.</p>
         <p>As a subscript this consonant doesn't determine the pronunciation of the vowel sound, it is determined by the class of the non-subscript consonant.</p>
       
 </div>
@@ -846,7 +851,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"> <span class="ipa">lɔː</span></span></p>
  
         
-        <p><span class="ipa">l</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="ex" lang="km">លុយ</span> <span class="ipa">luj</span> <span class="meaning">money</span>.</p>
+        <p><span class="ipa">l</span> with inherent vowel <span class="ipa">ɔː</span> or before a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">លុយ</span> <span class="trans">ḻuy̱</span> <span class="ipa">luj</span> <span class="meaning">money</span></span>.</p>
         <p><span class="ipa">l</span> before a subscript consonant.</p>
         <p><span class="ipa">l</span> in final position.</p>
 <p>As a subscript this consonant doesn't determine the pronunciation of the vowel sound, it is determined by the class of the non-subscript consonant.</p>
@@ -878,8 +883,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         <p>Not found before a subscript consonant.</p>
         <p><span class="ipa">w</span> in final position.</p>
 <p>As a subscript this consonant doesn't determine the pronunciation of the vowel sound, it is determined by the class of the non-subscript consonant.</p>
-        <p>In some words it follows a silent <span class="ex" lang="km">ហ</span> to make the following vowel behave as if it was an <span class="ipa">ɑː</span> class consonant, eg. <span class="ex" lang="km">ហ្វូង</span> <span class="ipa">ʋouŋ</span> <span class="meaning">crowd</span>.</p>
-        <p>In combination with preceding <span class="ex" lang="km">ហ</span> it also gives <span class="ipa">f</span>, eg. <span class="ex" lang="km">ហ្វឹក</span> <span class="ipa">fek</span> <span class="meaning">train</span>; <span class="ex" lang="km">កាហ្វេ</span> <span class="ipa">kaafei</span> <span class="meaning">coffee</span>.</p>
+        <p>In some words it follows a silent <span class="ex" lang="km">ហ</span> to make the following vowel behave as if it was an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ហ្វូង</span> <span class="trans">h͓v̱ūŋ</span> <span class="ipa">ʋouŋ</span> <span class="meaning">crowd</span></span>.</p>
+        <p>In combination with preceding <span class="ex" lang="km">ហ</span> it also gives <span class="ipa">f</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ហ្វឹក</span> <span class="trans">h͓v̱ɨk</span> <span class="ipa">fek</span> <span class="meaning">train</span></span>; <span class="charExample" translate="no"><span class="ex" lang="km">កាហ្វេ</span> <span class="trans">kāh͓v̱e</span> <span class="ipa">kaafei</span> <span class="meaning">coffee</span></span>.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -931,8 +936,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         <p><span class="ipa">h</span> with inherent vowel <span class="ipa">ɑː</span> or before a vowel.</p>
         <p>Silent before a subscript consonant.</p>
         <p>Not found in final position.</p>
-<p>In combination with subscript <span class="ex" lang="km">វ</span> gives <span class="ipa">f</span>, eg. <span class="ex" lang="km">ហ្វឹក</span> <span class="ipa">fek</span> <span class="meaning">train</span>; <span class="ex" lang="km">កាហ្វេ</span> <span class="ipa">kaafei</span> <span class="meaning">coffee</span>.</p>
-        <p>In some words it combines with one of the following <span class="ipa">ɔː</span> class subscripts, <span class="ex" lang="km">វមនល</span>, to make the following vowel behave as if they were <span class="ipa">ɑː</span> class consonants, eg. <span class="ex" lang="km">ហ្វូង</span> <span class="ipa">ʋouŋ</span>, <span class="ex" lang="km">ហ្ម</span> <span class="ipa">mɑː</span>, <span class="ex" lang="km">ហ្ន</span> <span class="ipa">nɑː</span>, <span class="ex" lang="km">ហ្ល</span> <span class="ipa">lɑː</span>.</p>
+<p>In combination with subscript <span class="ex" lang="km">វ</span> gives <span class="ipa">f</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ហ្វឹក</span> <span class="trans">h͓v̱ɨk</span> <span class="ipa">fek</span> <span class="meaning">train</span></span>; <span class="charExample" translate="no"><span class="ex" lang="km">កាហ្វេ</span> <span class="trans">kāh͓v̱e</span> <span class="ipa">kaafei</span> <span class="meaning">coffee</span></span>.</p>
+        <p>In some words it combines with one of the following <span class="ipa">ɔː</span> class subscripts, <span class="ex" lang="km">វមនល</span>, to make the following vowel behave as if they were <span class="ipa">ɑː</span> class consonants, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ហ្វូង</span> <span class="trans">h͓v̱ūŋ</span> <span class="ipa">ʋouŋ</span></span>, <span class="charExample" translate="no"><span class="ex" lang="km">ហ្ម</span> <span class="trans">h͓m̱</span> <span class="ipa">mɑː</span></span>, <span class="charExample" translate="no"><span class="ex" lang="km">ហ្ន</span> <span class="trans">h͓ṉ</span> <span class="ipa">nɑː</span></span>, <span class="charExample" translate="no"><span class="ex" lang="km">ហ្ល</span> <span class="trans">h͓ḻ</span> <span class="ipa">lɑː</span></span>.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -985,7 +990,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         <p><span class="ipa">ʔ</span> with inherent vowel <span class="ipa">ɑː</span> or before a vowel.</p>
         <p><span class="ipa">ʔ</span> before a subscript consonant.</p>
         <p>Not found in final position.</p>
-<p>When used as a subscript at the beginning of a word this adds an extra syllable after the initial consonant, eg. <span class="ex" lang="km">ផ្អែម</span> <span class="ipa">pʰaʔaem</span>; <span class="ex" lang="km">ស្អាត</span> <span class="ipa">saʔaːtʰ</span>.</p>
+<p>When used as a subscript at the beginning of a word this adds an extra syllable after the initial consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ផ្អែម</span> <span class="trans">pʰ͓ʔæm̱</span> <span class="ipa">pʰaʔaem</span></span>; <span class="charExample" translate="no"><span class="ex" lang="km">ស្អាត</span> <span class="trans">s͓ʔāt</span> <span class="ipa">saʔaːtʰ</span></span>.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1005,14 +1010,14 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="vowels">
-  <h2><a href="#vowels">Vowels</a></h2>
+  <h2>Vowels</h2>
 
 
 
 
 
 <section id="independentVowels">
-  <h3><a href="#independentVowels">Independent vowels</a></h3>
+  <h3>Independent vowels</h3>
 
 <div class="character" id="char17A5">
 <div class="charimg">&#x17A5;</div>
@@ -1026,8 +1031,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"><span class="localName" lang="km">ស្រៈឥ</span> <span class="ipa">sraʔ ʔeʔ</span></span></p>
  
         
-        <p><span class="ipa">ʔə</span>, eg. <span class="ex" lang="km">ឥត</span> <span class="ipa">ʔət</span> <span class="meaning">not</span></p>
-        <p><span class="ipa">ʔɨ</span>, eg. <span class="ex" lang="km">ឥត</span> <span class="ipa">ʔət</span> <span class="meaning">not</span></p>
+        <p><span class="ipa">ʔə</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ឥត</span> <span class="trans">ịt</span> <span class="ipa">ʔət</span> <span class="meaning">not</span></span>.</p>
+        <p><span class="ipa">ʔɨ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ឥត</span> <span class="trans">ịt</span> <span class="ipa">ʔət</span> <span class="meaning">not</span></span></p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1269,7 +1274,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter khmer">
 <p class="titlepara"><span class="title">Khmer</span> 
  <span class="charName"><span class="localName" lang="km">ស្រៈឲ</span> <span class="ipa">sraʔ ʔao</span></span>        </p>
-<p>This is a variant of <span class="codepoint" translate="no"><span lang="km">&#x17B1;</span> [<a href="/scripts/khmer/block#char17B1"><span class="uname">U+17B1 KHMER INDEPENDENT VOWEL QOO TYPE ONE</span></a>]</span> that is only used, according to Unicode, in two words, one of which, <span class="ex" lang="km">ឲ្យ</span> <span class="ipa">ʔaoj</span> <span class="meaning">to give</span>, is very common however.</p>
+<p>This is a variant of <span class="codepoint" translate="no"><span lang="km">&#x17B1;</span> [<a href="/scripts/khmer/block#char17B1"><span class="uname">U+17B1 KHMER INDEPENDENT VOWEL QOO TYPE ONE</span></a>]</span> that is only used, according to Unicode, in two words, one of which, <span class="charExample" translate="no"><span class="ex" lang="km">ឲ្យ</span> <span class="trans">ạᵒ͓y̱</span> <span class="ipa">ʔaoj</span> <span class="meaning">to give</span></span>, is very common however.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1308,7 +1313,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="vowel_signs">
-  <h3><a href="#vowel_signs">Vowel signs</a></h3>
+  <h3>Vowel signs</h3>
   
 <div class="character" id="char17B6">
 <div class="charimg">&#x17B6;</div>
@@ -1320,8 +1325,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter khmer">
 <p class="titlepara"><span class="title">Khmer</span> 
  <span class="charName"><span class="localName" lang="km">ស្រៈ អា</span> <span class="ipa">s͓rà ʼā</span></span></p>
-         <p><span class="ipa">aː</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="ex" lang="km">ណា</span> <span class="ipa">naː</span> <span class="meaning">which, where</span></p>
-        <p><span class="ipa">iə</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="ex" lang="km">ជា</span> <span class="ipa">ciə</span> <span class="meaning">to be</span></p>
+         <p><span class="ipa">aː</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ណា</span> <span class="trans">nā</span> <span class="ipa">naː</span> <span class="meaning">which, where</span></span></p>
+        <p><span class="ipa">iə</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ជា</span> <span class="trans">c̱ā</span> <span class="ipa">ciə</span> <span class="meaning">to be</span></span>.</p>
         <p>In combination with a following nikahit <span class="ex" lang="km">អាំ</span> this is regarded as a letter of the Khmer alphabet. Sounds are:</p>
         <p><span class="ipa">am</span> after an <span class="ipa">ɑː</span> class consonant.</p>
         <p><span class="ipa">oə̯m</span> after an <span class="ipa">ɔː</span> class consonant.</p>
@@ -1351,9 +1356,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"><span class="localName" lang="km">ស្រៈ អិ</span> <span class="ipa">sraʔ ʔi</span></span></p>
  
         
-        <p><span class="ipa">e</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="ex" lang="km">ចិត្ដ</span> <span class="ipa">cet</span> <span class="meaning">heart</span></p>
-        <p><span class="ipa">i</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="ex" lang="km">វិញ</span> <span class="ipa">ʋiɲ</span> <span class="meaning">instead, again</span></p>
-        <p>In combination with a following <span class="name">reahmuk</span> <span class="ex" lang="km">អិះ</span> this is regarded as a letter of the Khmer alphabet. (It has the same sound, followed by <span class="ipa">h</span>), eg. <span class="ex" lang="km">ជិះ</span> <span class="ipa">cih</span> <span class="meaning">to ride</span>.  This combination has the same sound as <span class="ex" lang="km">អេះ</span>, but this is much less common.</p>
+        <p><span class="ipa">e</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ចិត្ដ</span> <span class="trans">cit͓ɗ</span> <span class="ipa">cet</span> <span class="meaning">heart</span></span>.</p>
+        <p><span class="ipa">i</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">វិញ</span> <span class="trans">v̱iɲ</span> <span class="ipa">ʋiɲ</span> <span class="meaning">instead, again</span></span>.</p>
+        <p>In combination with a following <span class="name">reahmuk</span> <span class="ex" lang="km">អិះ</span> this is regarded as a letter of the Khmer alphabet. (It has the same sound, followed by <span class="ipa">h</span>), eg. <span class="charExample" translate="no"><span class="ex" lang="km">ជិះ</span> <span class="trans">c̱ih̽</span> <span class="ipa">cih</span> <span class="meaning">to ride</span></span>.  This combination has the same sound as <span class="ex" lang="km">អេះ</span>, but this is much less common.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1455,7 +1460,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         
         <p><span class="ipa">o</span> after an <span class="ipa">ɑː</span> class consonant.</p>
         <p><span class="ipa">u</span> after an <span class="ipa">ɔː</span> class consonant.</p>
-        <p>In combination with a following <span class="name">reə̯hmuk</span> <span class="ex" lang="km">អុះ</span> this is regarded as a letter of the Khmer alphabet. (It has the same sound, followed by <span class="ipa">h</span>), eg. <span class="ex" lang="km">ចុះ</span> <span class="ipa">coh</span> <span class="meaning">so?</span>.</p>
+        <p>In combination with a following <span class="name">reə̯hmuk</span> <span class="ex" lang="km">អុះ</span> this is regarded as a letter of the Khmer alphabet. (It has the same sound, followed by <span class="ipa">h</span>), eg. <span class="charExample" translate="no"><span class="ex" lang="km">ចុះ</span> <span class="trans">cuh̽</span> <span class="ipa">coh</span> <span class="meaning">so?</span></span>.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1605,8 +1610,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         <p><span class="ipa">eː</span> after an <span class="ipa">ɔː</span> class consonant.</p>
         <p>Combined with <span class="name">reə̯hmuk</span> <span class="ex" lang="km">អេះ</span>:</p>
         <ul>
-          <li><span class="ipa">eh</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="ex" lang="km">សេះ</span> <span class="ipa">seh</span> <span class="meaning">horse</span></li>
-          <li><span class="ipa">ih</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="ex" lang="km">នេះ</span> <span class="ipa">nih</span> <span class="meaning">this</span></li>
+          <li><span class="ipa">eh</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">សេះ</span> <span class="trans">seh̽</span> <span class="ipa">seh</span> <span class="meaning">horse</span></span>.</li>
+          <li><span class="ipa">ih</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">នេះ</span> <span class="trans">ṉeh̽</span> <span class="ipa">nih</span> <span class="meaning">this</span></span>.</li>
           <li>This combination has the same sound as <span class="ex" lang="km">អិះ</span>, but this is much more common.</li>
         </ul>
       
@@ -1686,8 +1691,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         <p><span class="ipa">oː</span> after an <span class="ipa">ɔː</span> class consonant.</p>
         <p>Combined with <span class="name">reə̯hmuk</span> <span class="ex" lang="km">អោះ</span>:</p>
         <ul>
-          <li><span class="ipa">ɑh</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="ex" lang="km">នៅណោះ</span> <span class="ipa">nəɨnɔh</span> <span class="meaning">over there</span></li>
-          <li><span class="ipa">uəh</span> or <span class="ipa">uh</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="ex" lang="km">ឈ្មោះ</span> <span class="ipa">cʰmuə</span> <span class="meaning">name</span>, <span class="ex" lang="km">នោះ</span> <span class="ipa">nuh</span> <span class="meaning">that</span></li>
+          <li><span class="ipa">ɑh</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">នៅណោះ</span> <span class="trans">ṉaʷnoh̽</span> <span class="ipa">nəɨnɔh</span> <span class="meaning">over there</span></span>.</li>
+          <li><span class="ipa">uəh</span> or <span class="ipa">uh</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ឈ្មោះ</span> <span class="trans">c̱ʰ͓m̱oh̽</span> <span class="ipa">cʰmuə</span> <span class="meaning">name</span></span>, <span class="charExample" translate="no"><span class="ex" lang="km">នោះ</span> <span class="trans">ṉoh̽</span> <span class="ipa">nuh</span> <span class="meaning">that</span></span>.</li>
         </ul>
       
 </div>
@@ -1737,24 +1742,24 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  
         
         <p>Although it can be equated with the anusvara in Sanskrit, this is usually regarded as a vowel sign or a part of a vowel sign in Khmer.</p>
-        <p><span class="ipa">ɑm</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="ex" lang="km">កំពុង</span> <span class="ipa">kɑmpuŋ</span> <span class="meaning">present tense marker</span>.</p>
-        <p><span class="ipa">um</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="ex" lang="km">រំភើប</span> <span class="ipa">rumɓəːpʰ</span> <span class="meaning">excited</span></p>
+        <p><span class="ipa">ɑm</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">កំពុង</span> <span class="trans">km̽p̱uŋ</span> <span class="ipa">kɑmpuŋ</span> <span class="meaning">present tense marker</span></span>.</p>
+        <p><span class="ipa">um</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">រំភើប</span> <span class="trans">ṟm̽p̱ʰaᵊb</span> <span class="ipa">rumɓəːpʰ</span> <span class="meaning">excited</span></span>.</p>
         <p>Combined with <span class="name">sra-o</span> <span class="ex" lang="km">អុ</span>:</p>
         <ul>
-          <li><span class="ipa">om</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="ex" lang="km">ធំ</span> <span class="ipa">tʰɑm</span> <span class="meaning">big</span></li>
-          <li><span class="ipa">um</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="ex" lang="km">ខ្លាឃ្មុំ</span> <span class="ipa">kʰlaːkʰmum</span> <span class="meaning">bear</span></li>
+          <li><span class="ipa">om</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ធំ</span> <span class="trans">ṯʰm̽</span> <span class="ipa">tʰɑm</span> <span class="meaning">big</span></span>.</li>
+          <li><span class="ipa">um</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ខ្លាឃ្មុំ</span> <span class="trans">kʰ͓ḻāḵʰ͓m̱um̽</span> <span class="ipa">kʰlaːkʰmum</span> <span class="meaning">bear</span></span>.</li>
         </ul>
         <p>Combined with <span class="name">sra-aː</span> <span class="ex" lang="km">អា</span>:</p>
         <ul>
-          <li><span class="ipa">am</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="ex" lang="km">ដាំ</span> <span class="ipa">ɗam</span> <span class="meaning">to plant</span></li>
-          <li><span class="ipa">oə̯m</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="ex" lang="km">នាំ</span> <span class="ipa">noə̯m</span> <span class="meaning">to lead</span></li>
+          <li><span class="ipa">am</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ដាំ</span> <span class="trans">ɗām̽</span> <span class="ipa">ɗam</span> <span class="meaning">to plant</span></span>.</li>
+          <li><span class="ipa">oə̯m</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">នាំ</span> <span class="trans">ṉām̽</span> <span class="ipa">noə̯m</span> <span class="meaning">to lead</span></span>.</li>
         </ul>
         <p>Combined with <span class="name">sra-aː</span> and <span class="name">ŋɔː</span> <span class="ex" lang="km">អាង</span>:</p>
         <ul>
-          <li><span class="ipa">aŋ</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="ex" lang="km">ម្ហូបបារាំង</span> <span class="ipa">mhouɓɓaːraŋ</span> <span class="meaning">French food</span></li>
-          <li><span class="ipa">eə̯ŋ</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="ex" lang="km">ទាំង</span> <span class="ipa">teə̯ŋ</span> <span class="meaning">including, both</span></li>
+          <li><span class="ipa">aŋ</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ម្ហូបបារាំង</span> <span class="trans">m̱͓hūbbāṟām̽ŋ</span> <span class="ipa">mhouɓɓaːraŋ</span> <span class="meaning">French food</span></span>.</li>
+          <li><span class="ipa">eə̯ŋ</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ទាំង</span> <span class="trans">ṯām̽ŋ</span> <span class="ipa">teə̯ŋ</span> <span class="meaning">including, both</span></span>.</li>
         </ul>
-        <p>In some words of Sanskrit origin, the <span class="name">niʔkəhət</span> represents <span class="ipa">aŋ</span> or <span class="ipa">an</span>, eg. <span class="ex" lang="km">សំស្ក្រិត</span> <span class="ipa">sɑŋskret</span> <span class="meaning">Sanskrit</span> and <span class="ex" lang="km">សំយោគសញ្ញា</span> <span class="ipa">sɑnjoːksaɲɲaː</span> <span class="meaning">name of a diacritic</span>.</p>
+        <p>In some words of Sanskrit origin, the <span class="name">niʔkəhət</span> represents <span class="ipa">aŋ</span> or <span class="ipa">an</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="km">សំស្ក្រិត</span> <span class="trans">sm̽s͓k͓ṟit</span> <span class="ipa">sɑŋskret</span> <span class="meaning">Sanskrit</span></span> and <span class="charExample" translate="no"><span class="ex" lang="km">សំយោគសញ្ញា</span> <span class="trans">sm̽y̱oḵsɲ͓ɲā</span> <span class="ipa">sɑnjoːksaɲɲaː</span> <span class="meaning">name of a diacritic</span></span>.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1778,14 +1783,14 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  
         
         <p>Although it can be equated with the visarga in Sanskrit, this is regarded as a vowel sign or part of a vowel sign in Khmer.</p>
-        <p><span class="ipa">ah</span> with an <span class="ipa">ɑː</span> class inherent vowel, eg. <span class="ex" lang="km">ខ្លះ</span> <span class="ipa">klɑh</span> <span class="meaning">some</span>.</p>
+        <p><span class="ipa">ah</span> with an <span class="ipa">ɑː</span> class inherent vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ខ្លះ</span> <span class="trans">kʰ͓ḻh̽</span> <span class="ipa">klɑh</span> <span class="meaning">some</span></span>.</p>
         <p><span class="ipa">eə̆h</span> with an <span class="ipa">ɔː</span> class inherent vowel or an <span class="ipa">ɔː</span> class <span class="name">sra-aː</span> <span class="ex" lang="km">អា</span>, eg. <span class="ex" lang="km">ផ្ទះ</span> <span class="ipa">pteə̆h</span> <span class="meaning">house, home</span>.</p>
-        <p><span class="ipa">h</span> after the normal sounds of short vowels <span class="name">sra-e</span> <span class="ex" lang="km">អិ</span>, <span class="name">sra-ə</span> <span class="ex" lang="km">អឹ</span>, and <span class="name">sra-o</span> <span class="ex" lang="km">អុ</span>, eg. <span class="ex" lang="km">ជិះ</span> <span class="ipa">cih</span> <span class="meaning">to ride</span>, <span class="ex" lang="km">កឹះ</span> <span class="ipa">kəh</span> <span class="meaning">to scratch</span>,<span class="ex" lang="km">ពុះ</span> <span class="ipa">puh</span> <span class="meaning">to boil</span>.</p>
-        <p><span class="ipa">ih</span> with <span class="name">sra-ei</span> <span class="ex" lang="km">អេ</span> as an <span class="ipa">ɔː</span> class vowel, eg. <span class="ex" lang="km">នេះ</span> <span class="ipa">nih</span> <span class="meaning">this</span>.</p>
-        <p><span class="ipa">eh</span> with <span class="name">sra-ei</span> <span class="ex" lang="km">អេ</span> or <span class="name">sra-aj</span> <span class="ex" lang="km">អៃ</span> as an <span class="ipa">ɑː</span> class vowel, eg. <span class="ex" lang="km">សេះ</span> <span class="ipa">seh</span> <span class="meaning">horse</span>, <span class="ex" lang="km">កែះ</span> <span class="ipa">keh</span> <span class="meaning">wild goat</span> .</p>
-        <p><span class="ipa">əh</span> with <span class="name">sra-aə</span> <span class="ex" lang="km">អើ</span> as an <span class="ipa">ɑː</span> class vowel, eg. <span class="ex" lang="km">ចង្កើះ</span> <span class="ipa">cɑŋkəh</span> <span class="meaning">chopsticks</span>.</p>
-        <p><span class="ipa">ɑh</span> with <span class="name">sra-ao</span> <span class="ex" lang="km">អោ</span> as an <span class="ipa">ɑː</span> class vowel, eg. <span class="ex" lang="km">កោះ</span> <span class="ipa">kɑh</span> <span class="meaning">island</span>.</p>
-        <p><span class="ipa">uə̆h</span> with <span class="name">sra-ao</span> <span class="ex" lang="km">អោ</span> as an <span class="ipa">ɔː</span> class vowel, eg. <span class="ex" lang="km">គោះ</span> <span class="ipa">kuə̆h</span> <span class="meaning">strike</span>.</p>
+        <p><span class="ipa">h</span> after the normal sounds of short vowels <span class="name">sra-e</span> <span class="ex" lang="km">អិ</span>, <span class="name">sra-ə</span> <span class="ex" lang="km">អឹ</span>, and <span class="name">sra-o</span> <span class="ex" lang="km">អុ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ជិះ</span> <span class="trans">c̱ih̽</span> <span class="ipa">cih</span> <span class="meaning">to ride</span></span>, <span class="charExample" translate="no"><span class="ex" lang="km">កឹះ</span> <span class="trans">kɨh̽</span> <span class="ipa">kəh</span> <span class="meaning">to scratch</span></span>, <span class="charExample" translate="no"><span class="ex" lang="km">ពុះ</span> <span class="trans">p̱uh̽</span> <span class="ipa">puh</span> <span class="meaning">to boil</span></span>.</p>
+        <p><span class="ipa">ih</span> with <span class="name">sra-ei</span> <span class="ex" lang="km">អេ</span> as an <span class="ipa">ɔː</span> class vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">នេះ</span> <span class="trans">ṉeh̽</span> <span class="ipa">nih</span> <span class="meaning">this</span></span>.</p>
+        <p><span class="ipa">eh</span> with <span class="name">sra-ei</span> <span class="ex" lang="km">អេ</span> or <span class="name">sra-aj</span> <span class="ex" lang="km">អៃ</span> as an <span class="ipa">ɑː</span> class vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">សេះ</span> <span class="trans">seh̽</span> <span class="ipa">seh</span> <span class="meaning">horse</span></span>, <span class="charExample" translate="no"><span class="ex" lang="km">កែះ</span> <span class="trans">kæh̽</span> <span class="ipa">keh</span> <span class="meaning">wild goat</span></span>.</p>
+        <p><span class="ipa">əh</span> with <span class="name">sra-aə</span> <span class="ex" lang="km">អើ</span> as an <span class="ipa">ɑː</span> class vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ចង្កើះ</span> <span class="trans">cŋ͓kaᵊh̽</span> <span class="ipa">cɑŋkəh</span> <span class="meaning">chopsticks</span></span>.</p>
+        <p><span class="ipa">ɑh</span> with <span class="name">sra-ao</span> <span class="ex" lang="km">អោ</span> as an <span class="ipa">ɑː</span> class vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">កោះ</span> <span class="trans">koh̽</span> <span class="ipa">kɑh</span> <span class="meaning">island</span></span>.</p>
+        <p><span class="ipa">uə̆h</span> with <span class="name">sra-ao</span> <span class="ex" lang="km">អោ</span> as an <span class="ipa">ɔː</span> class vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">គោះ</span> <span class="trans">ḵoh̽</span> <span class="ipa">kuə̆h</span> <span class="meaning">strike</span></span>.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1812,8 +1817,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  
         
         <p>Used as a vowel after consonants that are to be used as stressed syllables at the end of a word, or preceding an internal juncture in compounds.</p>
-        <p><span class="ipa">aʔ</span> as an <span class="ipa">ɑː</span> class vowel, eg. <span class="ex" lang="km">ស្រៈ</span> <span class="ipa">sraʔ</span> <span class="meaning">vowel</span></p>
-        <p><span class="ipa">eə̆ʔ</span> as an <span class="ipa">ɔː</span> class vowel, eg. <span class="ex" lang="km">ធុរៈ</span> <span class="ipa">tʰureə̆ʔ</span> <span class="meaning">preoccupation</span></p>
+        <p><span class="ipa">aʔ</span> as an <span class="ipa">ɑː</span> class vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ស្រៈ</span> <span class="trans">s͓ṟa</span> <span class="ipa">sraʔ</span> <span class="meaning">vowel</span></span>.</p>
+        <p><span class="ipa">eə̆ʔ</span> as an <span class="ipa">ɔː</span> class vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ធុរៈ</span> <span class="trans">ṯʰuṟa</span> <span class="ipa">tʰureə̆ʔ</span> <span class="meaning">preoccupation</span></span>.</p>
         <p>This character is a modern innovation.  It is also used in the official Cambodian Dictionary to mark any consonant symbol which is pronounced independently.</p>
       
 </div>
@@ -1838,7 +1843,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="coeng">
-  <h2><a href="#coeng">Coeng</a></h2>
+  <h2>Coeng</h2>
   
   
 <div class="character" id="char17D2">
@@ -1874,7 +1879,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="tones">
-  <h2><a href="#tones">Diacritics</a></h2>
+  <h2>Diacritics</h2>
   
   
   
@@ -1893,18 +1898,18 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         <ul>
           <li>After an inherent vowel
             <ul>
-              <li><span class="ipa">ɑ</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="ex" lang="km">ចប់</span> <span class="ipa">cɑp</span> <span class="meaning">to finish</span> (cf. <span class="ex" lang="km">ចប</span> <span class="ipa">cɑːp</span> <span class="meaning">hoe</span>)</li>
-              <li><span class="ipa">u</span> after an <span class="ipa">oː</span> class consonant and before a labial consonant, eg. <span class="ex" lang="km">លប់</span> <span class="ipa">lup</span> <span class="meaning">bird trap</span> (cf. <span class="ex" lang="km">លប</span> <span class="ipa">lɔːp</span> <span class="meaning">fish trap</span>)</li>
-              <li><span class="ipa">uə̯</span> otherwise after an <span class="ipa">ɔː</span> class consonant, eg. <span class="ex" lang="km">លក់</span> <span class="ipa">luə̯k</span> <span class="meaning">to sell</span> (cf. <span class="ex" lang="km">លក</span> <span class="ipa">lɔːk</span> <span class="meaning">to channel</span>)</li>
+              <li><span class="ipa">ɑ</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ចប់</span> <span class="trans">cb˘</span> <span class="ipa">cɑp</span> <span class="meaning">to finish</span></span> (cf. <span class="charExample" translate="no"><span class="ex" lang="km">ចប</span> <span class="trans">cb</span> <span class="ipa">cɑːp</span> <span class="meaning">hoe</span></span>).</li>
+              <li><span class="ipa">u</span> after an <span class="ipa">oː</span> class consonant and before a labial consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">លប់</span> <span class="trans">ḻb˘</span> <span class="ipa">lup</span> <span class="meaning">bird trap</span></span> (cf. <span class="charExample" translate="no"><span class="ex" lang="km">លប</span> <span class="trans">ḻb</span> <span class="ipa">lɔːp</span> <span class="meaning">fish trap</span></span>).</li>
+              <li><span class="ipa">uə̯</span> otherwise after an <span class="ipa">ɔː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">លក់</span> <span class="trans">ḻk˘</span> <span class="ipa">luə̯k</span> <span class="meaning">to sell</span></span> (cf. <span class="charExample" translate="no"><span class="ex" lang="km">លក</span> <span class="trans">ḻk</span> <span class="ipa">lɔːk</span> <span class="meaning">to channel</span></span>).</li>
             </ul>
           </li>
           <li>After <span class="ex" lang="km">ា</span> following an <span class="ipa">ɔː</span> class consonant
             <ul>
-              <li><span class="ipa">eə̯</span> before a velar consonant, eg. <span class="ex" lang="km">ពាក់</span> <span class="ipa">peə̯k</span> <span class="meaning">to wear</span> (cf. <span class="ex" lang="km">ពាក្យ</span> <span class="ipa">piək</span> <span class="meaning">word</span>)</li>
-              <li><span class="ipa">oə̯</span> elsewhere, eg. <span class="ex" lang="km">មាន់</span> <span class="ipa">moə̯n</span> <span class="meaning">to wear</span> (cf. <span class="ex" lang="km">មាន</span> <span class="ipa">miən</span> <span class="meaning">word</span>)</li>
+              <li><span class="ipa">eə̯</span> before a velar consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ពាក់</span> <span class="trans">p̱āk˘</span> <span class="ipa">peə̯k</span> <span class="meaning">to wear</span></span> (cf. <span class="charExample" translate="no"><span class="ex" lang="km">ពាក្យ</span> <span class="trans">p̱āk͓y̱</span> <span class="ipa">piək</span> <span class="meaning">word</span></span>).</li>
+              <li><span class="ipa">oə̯</span> elsewhere, eg. <span class="charExample" translate="no"><span class="ex" lang="km">មាន់</span> <span class="trans">m̱āṉ˘</span> <span class="ipa">moə̯n</span> <span class="meaning">to wear</span></span> (cf. <span class="charExample" translate="no"><span class="ex" lang="km">មាន</span> <span class="trans">m̱āṉ</span> <span class="ipa">miən</span> <span class="meaning">word</span></span>).</li>
             </ul>
           </li>
-          <li>Otherwise, shortens a long vowel, eg. <span class="ex" lang="km">ចាប់</span> <span class="ipa">cap</span> <span class="meaning">to catch</span> (cf. <span class="ex" lang="km">ចាប</span> <span class="ipa">caːp</span> <span class="meaning">sparrow</span>).</li>
+          <li>Otherwise, shortens a long vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ចាប់</span> <span class="trans">cāb˘</span> <span class="ipa">cap</span> <span class="meaning">to catch</span></span> (cf. <span class="charExample" translate="no"><span class="ex" lang="km">ចាប</span> <span class="trans">cāb</span> <span class="ipa">caːp</span> <span class="meaning">sparrow</span></span>).</li>
         </ul>
       
 </div>
@@ -1928,9 +1933,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"><span class="localName" lang="km">របាទ</span> <span class="ipa">rɔɓaːt</span></span></p>
  
         
-        <p>Not a very common mark. It silences final consonants, eg. <span class="ex" lang="km">បរិបូណ៌</span> <span class="ipa">ɓɑriɓou</span> <span class="meaning">abundant</span>.</p>
-        <p>Over a word-medial syllable-initial consonant it introduces the sound <span class="ipa">rə</span> before the syllable, eg. <span class="ex" lang="km">ទុគ៌ត</span> <span class="ipa">tuːrəkuə̆t</span> <span class="meaning">destitute</span>.</p>
-        <p>It can also convert the vowel sound of the previous consonant from <span class="ipa">ɔː</span> to <span class="ipa">ɔə</span> as well as silencing the consonant it appears over, eg. <span class="ex" lang="km">ពណ៌</span> <span class="ipa">pɔə</span> <span class="meaning">colour</span>.</p>
+        <p>Not a very common mark. It silences final consonants, eg. <span class="charExample" translate="no"><span class="ex" lang="km">បរិបូណ៌</span> <span class="trans">bṟibūnʳ</span> <span class="ipa">ɓɑriɓou</span> <span class="meaning">abundant</span></span>.</p>
+        <p>Over a word-medial syllable-initial consonant it introduces the sound <span class="ipa">rə</span> before the syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ទុគ៌ត</span> <span class="trans">ṯuḵʳt</span> <span class="ipa">tuːrəkuə̆t</span> <span class="meaning">destitute</span></span>.</p>
+        <p>It can also convert the vowel sound of the previous consonant from <span class="ipa">ɔː</span> to <span class="ipa">ɔə</span> as well as silencing the consonant it appears over, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ពណ៌</span> <span class="trans">p̱nʳ</span> <span class="ipa">pɔə</span> <span class="meaning">colour</span></span>.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1953,7 +1958,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"><span class="localName" lang="km">ទណ្ឌឃាត</span> <span class="ipa">tɔnɗɔkʰiət</span></span></p>
  
         
-        <p>Used over a consonant, particularly in loan words, to silence it and any attached vowels or subscripts, eg. <span class="ex" lang="km">សាសន៍</span> <span class="ipa">saːh</span> <span class="meaning">race, ethnicity</span>, and <span class="ex" lang="km">សប្ដាហ៍</span> <span class="ipa">sɑpɗaː</span> <span class="meaning">week</span>; <span class="ex" lang="km">រេហ៍ពល</span> <span class="ipa">rɔpuə̆l</span> <span class="meaning">army</span>.</p>
+        <p>Used over a consonant, particularly in loan words, to silence it and any attached vowels or subscripts, eg. <span class="charExample" translate="no"><span class="ex" lang="km">សាសន៍</span> <span class="trans">sāsṉ˟</span> <span class="ipa">saːh</span> <span class="meaning">race, ethnicity</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="km">សប្ដាហ៍</span> <span class="trans">sb͓ɗāh˟</span> <span class="ipa">sɑpɗaː</span> <span class="meaning">week</span></span>; <span class="charExample" translate="no"><span class="ex" lang="km">រេហ៍ពល</span> <span class="trans">ṟeh˟p̱ḻ</span> <span class="ipa">rɔpuə̆l</span> <span class="meaning">army</span></span>.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1976,7 +1981,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"><span class="localName" lang="km">កាកបាទ</span> <span class="ipa">kaːkɑɓaːt</span></span></p>
  
         
-        <p>Very rare, but used over the final consonant of a word like an exclamation mark, to convey excited emphasis, eg. <span class="ex" lang="km">ណែ៎</span> <span class="ipa">nɛː</span> <span class="meaning">Hey !</span>; <span class="ex" lang="km">នុ៎ះន៎</span> <span class="ipa">nuhnɔː</span> <span class="meaning">Over there !</span></p>
+        <p>Very rare, but used over the final consonant of a word like an exclamation mark, to convey excited emphasis, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ណែ៎</span> <span class="trans">næⸯ</span> <span class="ipa">nɛː</span> <span class="meaning">Hey !</span></span>; <span class="charExample" translate="no"><span class="ex" lang="km">នុ៎ះន៎</span> <span class="trans">ṉuⸯh̽ṉⸯ</span> <span class="ipa">nuhnɔː</span> <span class="meaning">Over there !</span></span></p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -2001,8 +2006,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         
         <p>Used over two consonants to indicate that they represent two specific words:</p>
         <ul>
-          <li><span class="ex" lang="km">ក៏</span> <span class="ipa">kɑː</span> meaning <span class="meaning">auxiliary: also, then, therefore</span></li>
-          <li><span class="ex" lang="km">ដ៏</span> <span class="ipa">ɗɑː</span> means <span class="meaning">pronoun which; very</span></li>
+          <li><span class="charExample" translate="no"><span class="ex" lang="km">ក៏</span> <span class="trans">k⁎</span> <span class="ipa">kɑː</span></span> meaning <span class="meaning">auxiliary: also, then, therefore</span></li>
+          <li><span class="charExample" translate="no"><span class="ex" lang="km">ដ៏</span> <span class="trans">ɗ⁎</span> <span class="ipa">ɗɑː</span></span> means <span class="meaning">pronoun which; very</span></li>
         </ul>
       
 </div>
@@ -2026,12 +2031,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"><span class="localName" lang="km">សំយោគសញ្ញា</span> <span class="ipa">sanjoːksaɲɲaː</span></span></p>
  
         
-        <p><span class="ipa">a</span> over an <span class="ipa">ɑː</span> class consonant, eg. <span class="ex" lang="km">ស័កិ្ត</span> <span class="ipa">sak</span> <span class="meaning">rank</span>; <span class="ex" lang="km">ស័កិ្ត</span> <span class="ipa">sak</span> <span class="meaning">rank</span>.</p>
-        <p><span class="ipa">oə̯</span> over an <span class="ipa">ɔː</span> class consonant, in general, eg. <span class="ex" lang="km">ទ័ព</span> <span class="ipa">toə̯p</span> <span class="meaning">army</span>.</p>
-        <p><span class="ipa">eə̯</span> over an <span class="ipa">ɔː</span> class consonant followed by <span class="name">ŋɔː</span> <span class="ex" lang="km">ង</span>, eg. <span class="ex" lang="km">វ័ង</span> <span class="ipa">ʋeə̯ŋ</span> <span class="meaning">palace</span>.</p>
+        <p><span class="ipa">a</span> over an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ស័កិ្ត</span> <span class="trans">săki͓t</span> <span class="ipa">sak</span> <span class="meaning">rank</span></span>; <span class="charExample" translate="no"><span class="ex" lang="km">ស័កិ្ត</span> <span class="trans">săki͓t</span> <span class="ipa">sak</span> <span class="meaning">rank</span></span>.</p>
+        <p><span class="ipa">oə̯</span> over an <span class="ipa">ɔː</span> class consonant, in general, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ទ័ព</span> <span class="trans">ṯăp̱</span> <span class="ipa">toə̯p</span> <span class="meaning">army</span></span>.</p>
+        <p><span class="ipa">eə̯</span> over an <span class="ipa">ɔː</span> class consonant followed by <span class="name">ŋɔː</span> <span class="ex" lang="km">ង</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="km">វ័ង</span> <span class="trans">v̱ăŋ</span> <span class="ipa">ʋeə̯ŋ</span> <span class="meaning">palace</span></span>.</p>
         <p>(Note that all of the above are the same as if a <span class="name">sra-aː</span> plus <span class="name">niʔkəhət </span> had been used.)</p>
-        <p><span class="ipa">ɔə</span> over a consonant followed by <span class="name">rɔː</span> <span class="ex" lang="km">រ</span> (these are always <span class="ipa">ɔː</span> class consonants), eg. <span class="ex" lang="km">ជ័រ</span> <span class="ipa">cɔə</span> <span class="meaning">resin</span>.</p>
-        <p><span class="ipa">ɨ</span> over an <span class="ipa">ɔː</span> class consonant followed by <span class="name">jɔː</span> <span class="ex" lang="km">យ</span>, eg. <span class="ex" lang="km">ជ័យ</span> <span class="ipa">cɨj</span> <span class="meaning">victory</span>.</p>
+        <p><span class="ipa">ɔə</span> over a consonant followed by <span class="name">rɔː</span> <span class="ex" lang="km">រ</span> (these are always <span class="ipa">ɔː</span> class consonants), eg. <span class="charExample" translate="no"><span class="ex" lang="km">ជ័រ</span> <span class="trans">c̱ăṟ</span> <span class="ipa">cɔə</span> <span class="meaning">resin</span></span>.</p>
+        <p><span class="ipa">ɨ</span> over an <span class="ipa">ɔː</span> class consonant followed by <span class="name">jɔː</span> <span class="ex" lang="km">យ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ជ័យ</span> <span class="trans">c̱ăy̱</span> <span class="ipa">cɨj</span> <span class="meaning">victory</span></span>.</p>
         <p>Gilbert &amp; Hang say that the sound is <span class="ipa">e</span> usually, when over <span class="name">ʋɔː</span> <span class="ex" lang="km">វ</span> or <span class="name">nɔː</span> <span class="ex" lang="km">ន</span>.</p>
         <!--p><These combinations are usually followed by 1799:   KHMER LETTER YO, giving the sound <span class="ipa">ej</span>, eg. <span class="ex" lang="km">ន័យ</span> <span class="ipa">ney</span> <span class="meaning">meaning</span>; <span class="ex" lang="km">វ័យ</span> <span class="ipa">ʋey</span> <span class="meaning">age</span>.</p-->
         <!--p><span class="ipa">a</span> usually, over other consonants, eg. <span class="ex" lang="km">បណ្ណាល័យ</span> <span class="ipa">ɓan naː laj</span> <span class="meaning">library</span>; <span class="ex" lang="km">រហ័ស</span> <span class="ipa">la hah</span> <span class="meaning">fast</span></p-->
@@ -2058,7 +2063,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"><span class="localName" lang="km">វិរាម</span> <span class="ipa">ʋiriəm</span></span></p>
  
         
-        <p>The sanskrit virama, sometimes used in Sanskrit words to indicate that a final consonant has no vowel sound, eg. <span class="ex" lang="km">អាត្មន៑</span> <span class="ipa">ʔaːtman</span> <span class="meaning">soul</span>.</p>
+        <p>The sanskrit virama, sometimes used in Sanskrit words to indicate that a final consonant has no vowel sound, eg. <span class="charExample" translate="no"><span class="ex" lang="km">អាត្មន៑</span> <span class="trans">ʔāt͓m̱ṉ¯</span> <span class="ipa">ʔaːtman</span> <span class="meaning">soul</span></span>.</p>
         <p>Sometimes this appears as a bar over the consonant, sometimes as a wide, inverted v-shape under the consonant.</p>
         <p>The Cambodian way of spelling such words uses the <span class="name">sanjoːksaɲɲaː</span> <span class="ex" lang="km">អ័</span>.</p>
       
@@ -2103,10 +2108,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"><span class="localName" lang="km">មូសិកទន្ត</span> <span class="ipa">museʔkətoə̯n</span></span></p>
  
         
-        <p>Changes the register of a consonant from <span class="ipa">ɔː</span> to <span class="ipa">ɑː</span>, affecting the inherent vowel and any other vowel following the consonant, eg. <span class="ex" lang="km">ម៉ត់ចត់</span> <span class="ipa">mɑtcɑt</span> <span class="meaning">careful</span>, <span class="ex" lang="km">រ៉ាប់</span> <span class="ipa">rap</span> <span class="meaning">to guarrantee</span>.  It is used for the following consonants that don't have equivalents in the <span class="ipa">ɑː</span> class: <span class="ex list" lang="km">ង ញ ម យ រ វ</span>. It is usually written over the right-hand side of the consonant glyph. This is also especially useful for spelling foreign names. Eg. <span class="ex" lang="km">យ៉ាង</span> <span class="ipa">jaːŋ</span> <span class="meaning">kind</span> (cf. <span class="ex" lang="km">យាង</span> <span class="ipa">yiəŋ</span> <span class="meaning">to go (royalty)</span>).</p>
-        <p>Changes the sound of <span class="name">ɓɑː</span> <span lang="km">ប</span> from <span class="ipa">ɓ</span> to <span class="ipa">p</span>, eg. <span class="ex" lang="km">ប៉ះ</span> <span class="ipa">pah</span> <span class="meaning">to touch</span>. This is the only way to write an <span class="ipa">ɑː</span> register <span class="ipa">p</span>. Eg. <span class="ex" lang="km">ប៉ាន</span> <span class="ipa">paːn</span> <span class="meaning">to cover</span> (cf. <span class="ex" lang="km">បាន</span> <span class="ipa">ɓaːn</span> <span class="meaning">to have</span>).</p>
-        <p>When a vowel sign appears above the consonant, the <span class="ex" lang="km">ក្បៀសក្រោម</span> <span class="ipa">kɓiəhkraom</span> form of this character is used.  This looks exactly like <span class="name">sra-o</span> <span class="ex" lang="km">អុ</span>,  eg. <span class="ex" lang="km">ម៉ឺន</span> <span class="ipa">məɨn</span> <span class="meaning">10,000</span>; <span class="ex" lang="km">ញ៉ាំ</span> <span class="ipa">ɲam</span> <span class="meaning">to eat</span>.</p>
-        <p>You can prevent this behaviour using a zero-width non-joiner between this character and the following one, eg. <span class="ex" lang="km">ញ៉‌ាំ</span>.</p>
+        <p>Changes the register of a consonant from <span class="ipa">ɔː</span> to <span class="ipa">ɑː</span>, affecting the inherent vowel and any other vowel following the consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ម៉ត់ចត់</span> <span class="trans">m̱″t˘ct˘</span> <span class="ipa">mɑtcɑt</span> <span class="meaning">careful</span></span>, <span class="charExample" translate="no"><span class="ex" lang="km">រ៉ាប់</span> <span class="trans">ṟ″āb˘</span> <span class="ipa">rap</span> <span class="meaning">to guarrantee</span></span>.  It is used for the following consonants that don't have equivalents in the <span class="ipa">ɑː</span> class: <span class="ex list" lang="km">ង ញ ម យ រ វ</span>. It is usually written over the right-hand side of the consonant glyph. This is also especially useful for spelling foreign names. Eg. <span class="charExample" translate="no"><span class="ex" lang="km">យ៉ាង</span> <span class="trans">y̱″āŋ</span> <span class="ipa">jaːŋ</span> <span class="meaning">kind</span></span> (cf. <span class="charExample" translate="no"><span class="ex" lang="km">យាង</span> <span class="trans">y̱āŋ</span> <span class="ipa">yiəŋ</span> <span class="meaning">to go (royalty)</span></span>).</p>
+        <p>Changes the sound of <span class="name">ɓɑː</span> <span lang="km">ប</span> from <span class="ipa">ɓ</span> to <span class="ipa">p</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ប៉ះ</span> <span class="trans">b″h̽</span> <span class="ipa">pah</span> <span class="meaning">to touch</span></span>. This is the only way to write an <span class="ipa">ɑː</span> register <span class="ipa">p</span>. Eg. <span class="charExample" translate="no"><span class="ex" lang="km">ប៉ាន</span> <span class="trans">b″āṉ</span> <span class="ipa">paːn</span> <span class="meaning">to cover</span></span> (cf. <span class="charExample" translate="no"><span class="ex" lang="km">បាន</span> <span class="trans">bāṉ</span> <span class="ipa">ɓaːn</span> <span class="meaning">to have</span></span>).</p>
+        <p>When a vowel sign appears above the consonant, the <span class="ex" lang="km">ក្បៀសក្រោម</span> <span class="ipa">kɓiəhkraom</span> form of this character is used.  This looks exactly like <span class="name">sra-o</span> <span class="ex" lang="km">អុ</span>,  eg. <span class="charExample" translate="no"><span class="ex" lang="km">ម៉ឺន</span> <span class="trans">m̱″ɨ̄ṉ</span> <span class="ipa">məɨn</span> <span class="meaning">10,000</span></span>; <span class="charExample" translate="no"><span class="ex" lang="km">ញ៉ាំ</span> <span class="trans">ɲ″ām̽</span> <span class="ipa">ɲam</span> <span class="meaning">to eat</span></span>.</p>
+        <p>You can prevent this behaviour using a zero-width non-joiner between this character and the following one, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ញ៉‌ាំ</span> <span class="trans">ɲ″‌ām̽</span></span>.</p>
         <p><span class="name">tmɨɲ kɑnɗao</span> means "rat's teeth".</p>
       
 </div>
@@ -2130,9 +2135,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"><span class="localName" lang="km">ត្រីសព្ទ</span> <span class="ipa">trəisaɓ</span></span></p>
  
         
-        <p>Changes the class of a consonant from <span class="ipa">ɔː</span> to <span class="ipa">oː</span>, affecting the inherent vowel and also any other vowel following the consonant, eg. <span class="ex" lang="km">ក្រុមហ៊ុន</span> <span class="ipa">kromhun </span> <span class="meaning">company</span>; <span class="ex" lang="km">ហ៊ាន</span> <span class="ipa">hiən</span> <span class="meaning">to dare</span> (cf. <span class="ex" lang="km">ហាន</span><span class="ipa">haːn</span><span class="meaning">shop</span>); <span class="ex" lang="km">អ៊ូ</span> <span class="ipa">ʔuː</span> <span class="meaning">dry dock</span> (cf. <span class="ex" lang="km">អូ</span><span class="ipa">ʔou</span><span class="meaning">exclamation</span>).  This is especially useful for spelling foreign names.</p>
-        <p>When this appears with a vowel sign above the consonant, the <span class="ex" lang="km">ក្បៀសក្រោម</span> <span class="ipa">kɓiəhkraom</span> form is used.  This looks exactly like <span class="name">sra-o</span> <span class="ex" lang="km">អុ</span>,  eg.  in <span class="ex" lang="km">ស៊ី</span> <span class="ipa">siː</span> <span class="meaning">to eat</span>.</p>
-        <p>You can prevent this behaviour using a zero-width non-joiner between this character and the following one, eg. <span class="ex" lang="km">ស៊‌ី</span>.</p>
+        <p>Changes the class of a consonant from <span class="ipa">ɔː</span> to <span class="ipa">oː</span>, affecting the inherent vowel and also any other vowel following the consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ក្រុមហ៊ុន</span> <span class="trans">k͓ṟum̱h′uṉ</span> <span class="ipa">kromhun</span> <span class="meaning">company</span></span>; <span class="charExample" translate="no"><span class="ex" lang="km">ហ៊ាន</span> <span class="trans">h′āṉ</span> <span class="ipa">hiən</span> <span class="meaning">to dare</span></span> (cf. <span class="charExample" translate="no"><span class="ex" lang="km">ហាន</span> <span class="trans">hāṉ</span> <span class="ipa">haːn</span> <span class="meaning">shop</span></span>); <span class="charExample" translate="no"><span class="ex" lang="km">អ៊ូ</span> <span class="trans">ʔ′ū</span> <span class="ipa">ʔuː</span> <span class="meaning">dry dock</span></span> (cf. <span class="charExample" translate="no"><span class="ex" lang="km">អូ</span> <span class="trans">ʔū</span> <span class="ipa">ʔou</span> <span class="meaning">exclamation</span></span>).  This is especially useful for spelling foreign names.</p>
+        <p>When this appears with a vowel sign above the consonant, the <span class="ex" lang="km">ក្បៀសក្រោម</span> <span class="ipa">kɓiəhkraom</span> form is used.  This looks exactly like <span class="name">sra-o</span> <span class="ex" lang="km">អុ</span>,  eg.  in <span class="charExample" translate="no"><span class="ex" lang="km">ស៊ី</span> <span class="trans">s′ī</span> <span class="ipa">siː</span> <span class="meaning">to eat</span></span>.</p>
+        <p>You can prevent this behaviour using a zero-width non-joiner between this character and the following one, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ស៊‌ី</span> <span class="trans">s′‌ī</span></span>.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -2152,7 +2157,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="punctuation">
-  <h2><a href="#punctuation">Punctuation</a></h2>
+  <h2>Punctuation</h2>
   
   
 <div class="character" id="char17D4">
@@ -2167,7 +2172,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  
         
         <p>Equivalent of a period, placed at the end of a sentence.</p>
-        <p>Also used in the combination <span class="ex" lang="km">។ល។</span> <span class="ipa">lanəŋla</span> to mean etcetera.</p>
+        <p>Also used in the combination <span class="charExample" translate="no"><span class="ex" lang="km">។ល។</span> <span class="trans">.ḻ.</span> <span class="ipa">lanəŋla</span></span> to mean <span class="meaning">etcetera</span>.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -2214,7 +2219,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  
         
         <p>Used much like a colon in English. </p>
-        <p>It is typically used after the quotative particle <span class="ex" lang="km">ថា៖</span> <span class="ipa">tʰaː</span> <span class="meaning">saying, as follows</span> and the copulative <span class="ex" lang="km">គ</span> <span class="ipa">kɨː</span> <span class="meaning">that is</span>.</p>
+        <p>It is typically used after the quotative particle <span class="charExample" translate="no"><span class="ex" lang="km">ថា</span> <span class="trans">tʰā</span> <span class="ipa">tʰaː</span> <span class="meaning">saying, as follows</span></span> and the copulative <span class="charExample" translate="no"><span class="ex" lang="km">គ</span> <span class="trans">ḵ</span> <span class="ipa">kɨː</span> <span class="meaning">that is</span></span>.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -2237,8 +2242,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"><span class="localName" lang="km">ស្ទួន / លេខទោ</span> <span class="ipa">stuən / leːktoː</span></span></p>
  
         
-        <p>Repetition sign.  Repeats the word directly before.  A common way of providing emphasis, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ខ្លាំង ៗ</span> <span class="ipa">klaŋklaŋ</span> <span class="meaning">very strong</span></span>; <span class="charExample" translate="no"><span class="ex" lang="km">គាត់មានផ្ទះថ្មី ៗ</span> <span class="ipa">kaːtʰ miən pʰteə̯h tʰməitʰməi</span> <span class="meaning">he has a brand new house</span></span>.</p>
-        <p>Sometimes repeats a phrase rather than a word, eg. <span class="charExample" translate="no"><span class="ex" lang="km">បន្តិចម្ដង ៗ</span> <span class="ipa">ɓɑntecmɗɑːŋ ɓɑntecmɗɑːŋ</span> <span class="meaning">little by little</span></span>.</p>
+        <p>Repetition sign.  Repeats the word directly before.  A common way of providing emphasis, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ខ្លាំង ៗ</span> <span class="trans">kʰ͓ḻām̽ŋ &</span> <span class="ipa">klaŋklaŋ</span> <span class="meaning">very strong</span></span>; <span class="charExample" translate="no"><span class="ex" lang="km">គាត់មានផ្ទះថ្មី ៗ</span> <span class="trans">ḵāt˘m̱āṉpʰ͓ṯh̽tʰ͓m̱ī &</span> <span class="ipa">kaːtʰ miən pʰteə̯h tʰməitʰməi</span> <span class="meaning">he has a brand new house</span></span>.</p>
+        <p>Sometimes repeats a phrase rather than a word, eg. <span class="charExample" translate="no"><span class="ex" lang="km">បន្តិចម្ដង ៗ</span> <span class="trans">bṉ͓ticm̱͓ɗŋ &</span> <span class="ipa">ɓɑntecmɗɑːŋ ɓɑntecmɗɑːŋ</span> <span class="meaning">little by little</span></span>.</p>
         <p>It is also occasionally used to repeat the word at the end of a sentence for the beginning of a new sentence (Huffman), eg. <span class="charExample" translate="no"><span class="ex" lang="km">ខ្ញុំទៅផ្ទះខ្ញុំ ។ នៅជិតផ្សារ</span> <span class="ipa">kɲomtɨwpteə̆hkɲom  pteə̆hkɲom nɨwcɨtpsaː</span> <span class="meaning"></span></span>.</p>
         <p>The sign is usually separated from the text by a space.</p>
       
@@ -2316,7 +2321,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="currency">
-  <h2><a href="#currency">Currency symbol</a></h2>
+  <h2>Currency symbol</h2>
   
   
 <div class="character" id="char17DB">
@@ -2327,7 +2332,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter khmer">
 <p class="titlepara"><span class="title">Khmer</span> <span class="charName"><span class="localName" lang="km">សញ្ញារៀល</span> <span class="ipa">saɲ ɲaː riəl</span></span></p>
-<p>Placed after the amount, eg. <span class="ex" lang="km">៣០០០ ៛</span> <span class="ipa">ɓej poan riəl</span> <span class="meaning">3000 riel</span>.</p>
+<p>Placed after the amount, eg. <span class="charExample" translate="no"><span class="ex" lang="km">៣០០០ ៛</span> <span class="trans">3000 ¤</span> <span class="ipa">ɓej poan riəl</span> <span class="meaning">3000 riel</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://www.pratyeka.org/csw/hlp-csw.pdf" target="_blank">Huffman</a>, <a href="block#refs" target="_blank">Daniels</a>, <a href="http://www.unicode.org/versions/Unicode10.0.0/ch16.pdf#Khmer" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Khmer_alphabet" target="_blank">Wikipedia</a> </p>
 </div>
@@ -2339,7 +2344,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="digits">
-<h2><a href="#digits">Digits</a></h2>
+<h2>Digits</h2>
   
   
 <div class="character" id="char17E0">
@@ -2578,7 +2583,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <!--section id="astrological">
-<h3><a href="#astrological">Astrological symbols</a></h3>
+<h3>Astrological symbols</h3>
 
 
 <div class="character" id="char17D3">
@@ -2609,11 +2614,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="deprecated">
-  <h2><a href="#deprecated">Deprecated or obsolete</a></h2>
+  <h2>Deprecated or obsolete</h2>
 
 
 <section id="obsoleteCons">
-  <h3><a href="#obsoleteCons">Consonants</a></h3>
+  <h3>Consonants</h3>
 
 <div class="character" id="char179D">
 <div class="charimg">&#x179D;</div>
@@ -2720,7 +2725,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="deppunctuation">
-  <h3><a href="deppunctuation">Punctuation</a></h3>
+  <h3>Punctuation</h3>
 
 
 <div class="character" id="char17D8">
@@ -2734,7 +2739,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span class="charName"><span class="localName" lang="km">។ល។ / ល៉ៈ</span> <span class="ipa">lanəŋla / laʔ</span></span></p>
  
         
-        <p>Means et cetera.  Use of this character is discouraged.  The preferred representation uses the individual characters, eg. <span class="ex" lang="km">។ល។</span>. </p>
+        <p>Means et cetera.  Use of this character is discouraged.  The preferred representation uses the individual characters, eg. <span class="charExample" translate="no"><span class="ex" lang="km">។ល។</span> <span class="trans">.ḻ.</span></span>. </p>
         <p>Other spellings for et cetera also exist. These include:</p>
         <ul>
           <li><span class="ex" lang="km">។បេ។</span></li>
@@ -2759,7 +2764,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="depastrological">
-<h3><a href="#depastrological">Symbols</a></h3>
+<h3>Symbols</h3>
 
 
 <div class="character" id="char17D3">
@@ -2788,16 +2793,16 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="refs">
-  <h2><a href="#refs">References</a></h2>
+  <h2>References</h2>
 	<ol>
-		  <li>[ <a href="http://www.pratyeka.org/csw/hlp-csw.pdf"><sup><span class="doctitle">h</span></sup></a> ] Franklin Huffman, <a href="http://www.pratyeka.org/csw/hlp-csw.pdf"><span class="doctitle">Cambodian System of Writing</span></a></li>
-		  <li>[ <sup><a href="#refs">g</a></sup> ] Richard Gilbert &amp; Sovandy Hang, <span class="doctitle">Cambodian for Beginners</span>, Paiboon Publishing, ISBN <span class="isbn">1-887521-35-6</span></li>
-		  <li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="doctitle"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
+<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <span class="doctitle"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
 		    0-19-507993-0</li>
-		  <li>[ <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch11.pdf">u</a></sup> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch11.pdf?page=18">The Unicode Standard, Version 11</a>, pp637-648</li>
-<li>[ <sup><a href="https://en.wikipedia.org/wiki/Khmer_alphabet">w</a></sup> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Khmer_alphabet">Khmer alphabet</a></li>
-<li>[ <sup><a href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">s</a></sup> ] SIL, <cite><a href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">The order of components in Khmer orthographical syllables</a></cite></li>
-  </ol>
+<li>[ <a class="fnref" href="#refs">g</a> ] Richard Gilbert &amp; Sovandy Hang, <span class="doctitle">Cambodian for Beginners</span>, Paiboon Publishing, ISBN <span class="isbn">1-887521-35-6</span></li>
+<li>[ <a href="http://www.pratyeka.org/csw/hlp-csw.pdf"><sup><span class="doctitle">h</span></sup></a> ] Franklin Huffman, <a href="http://www.pratyeka.org/csw/hlp-csw.pdf"><span class="doctitle">Cambodian System of Writing</span></a></li>
+<li>[ <a class="fnref" href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">s</a> ] SIL, <cite><a href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">The order of components in Khmer orthographical syllables</a></cite></li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch11.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch11.pdf?page=18">The Unicode Standard, Version 11</a>, pp637-648</li>
+<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Khmer_alphabet">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Khmer_alphabet">Khmer alphabet</a></li>
+</ol>
 </section>
 
 
@@ -2818,14 +2823,12 @@ replaceStuff('Khmer', 'khmer', spreadsheet, '', 'km', '', cols, false)
 <div id="panel" style="display:none"></div>
 
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/khmer/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-07-14  12:05<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bkhmer%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fkhmer%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
-
+<div class="smallprint"><span id="version"></span></div>
 
 
 <script>
-initialise('/scripts/khmer/block')
+initialise('/scripts/khmer/block','khmer')
+autoTransliterate('km')
 </script>
 </body>
 </html>

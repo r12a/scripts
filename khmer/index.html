@@ -111,13 +111,12 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->19 December, 2019<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->9 January, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
   
 
 
-<div class="section">
 <div class="section">
 	  <p>This page gathers together basic information about the Khmer script and its use for the Cambodian language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Khmer using Unicode; for greater details follow the footnote links (especially those with an arrow alongside them).</p>
 <p> For character-specific details follow the links to the <a class="linkHighlight" href="block">Khmer character notes</a>. See also the <a href="../../pickers/khmer/" class="linkHighlight">Khmer picker</a>.</p>
@@ -179,7 +178,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 			<p>Direction of text is horizontal, left to right.  However, glyphs constituting a single syllable can appear on any side of the base character, and multiple diacritics are often needed to create the vowel in a syllable.</p>
 			<p>A key feature of Khmer is that there are a large number of vowel sounds, and only a few vowel signs; and there are a large number of consonant letters for only a small number of consonant sounds. This lead to a system where there are generally two consonant signs for a given sound, each belonging to one of two classes (or registers). So to determine the pronunciation of a vowel sign you start by seeing which class of consonant it follows. For example, using the two symbols for the sound <span class="ipa">k</span>, <span class="ex" lang="km">ក</span> is <span class="ipa">kɑː</span> <span class="meaning">neck</span>, and <span class="ex" lang="km">គ</span> is <span class="ipa">kɔː</span> <span class="meaning">mute</span>.</p>
 <p>Consonants stack in Khmer, but not always in a predictable way. Multiple consonants at the start and (sometimes) end of a syllable are usually stacked. Consonant clusters in a multisyllabic word also tend to stack. But syllable-final consonants, which can be one of a number of characters, often don't stack with the onset consonant of the next syllable.</p>
-			<p>There are two distinct styles of font in Modern Khmer: slanted (called <span class="ex" lang="km">អក្សរច្រៀង</span>), which has an upright variant, and round (called <span class="ex" lang="km">អក្សរឈរ</span>). The round style includes more ligated forms. The upright style is used here. Style examples: slanted upright <span class="ex" lang="km">អក្សរ ខ្មែ</span>, round <span class="ex" lang="km-x-round"  xml:lang="km-x-round">អក្សរ ខ្មែ</span>. </p>
+			<p>There are two distinct styles of font in Modern Khmer: slanted (called <span class="ex" lang="km">អក្សរច្រៀង</span>), which has an upright variant, and round (called <span class="ex" lang="km">អក្សរឈរ</span>). The round style includes more ligated forms. The upright style is used here. For examples, see <a class="secref">font_styles</a>.</p>
 </section>
 
 
@@ -233,7 +232,9 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <div>In character lists, show:</div>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div>
+<label>Transliteration 
+<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
 <div><label>UNGEGN <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
 </div>
 
@@ -526,7 +527,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <h3>Vowel signs</h3>           
 <p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
 
-<p>Other than the inherent vowel, vowel sounds that follow a consonant sound are represented using vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="km">គិ</span> <span class="trans">ki</span> <span class="ipa">ki</span></span>. This includes several diphthongs,  each  represented by a single code point.</p>
+<p>Other than the inherent vowel, vowel sounds that follow a consonant sound are represented using vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="km">គិ</span> <span class="trans">ki</span> <span class="ipa">ki</span></span>. This includes several diphthongs (each represented by a single code point), 3 prescript signs, and 5 circumgraphs.</p>
 <p> In most cases, vowel signs attached to a consonant are pronounced differently, depending on the register of the consonant letter, eg. <span class="ex" lang="km">កា</span> <span class="ipa">kaː</span> vs. <span class="ex" lang="km">គា</span> <span class="ipa">kiə</span>.</p>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ា␣ៈ␣ិ␣ី␣ឹ␣ឺ␣ុ␣ូ␣ួ␣េ␣ែ␣ៃ␣ោ␣ៅ␣ើ␣ឿ␣ៀ</figure>
 
@@ -554,8 +555,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
             
             
             
- <section id="multi_part">
-<h3>Multi-part vowel-signs</h3>           
+ <section id="circumgraphs">
+<h3>Using circumgraphs</h3>           
 <p>Several vowels  are produced by a single combining character with visually separate parts, eg.   <span class="charExample" translate="no"><span class="ex" lang="km">កើ</span> <span class="trans">kaᵊ</span> <span class="ipa">kaw</span></span>, which uses <span class="codepoint" translate="no"><span lang="km">&#x17BE;</span> [<a href="/scripts/khmer/block#char17BE"><span class="uname">U+17BE KHMER VOWEL SIGN OE</span></a></span>). It is, however, possible to create something that looks the same using 2  code points eg. <span class="charExample" translate="no"><span class="ex" lang="km">កេី</span> <span class="trans">keī</span></span> using <span class="codepoint" translate="no"><span lang="km">&#x17C1;</span> + <span lang="km">&#x17B8;</span> [<a href="/scripts/khmer/block#char17C1"><span class="uname">U+17C1 KHMER VOWEL SIGN E</span></a> + <a href="/scripts/khmer/block#char17B8"><span class="uname">U+17B8 KHMER VOWEL SIGN II</span></a>]</span>.</p>
 <p>The Unicode Standard surprisingly makes no comment on this, although it does for other scripts, where it encourages use of the single code point.</p>
 <p>For Khmer, single and multiple code point realisations do not normalise to be the same in NFC or NFD, so you are creating different content by using one approach or the other. This may affect various operations on the text.</p>
@@ -1554,8 +1555,8 @@ data-cols="">ក␣ខ␣គ␣ឃ␣ង␣ច␣ឆ␣ជ␣ឈ␣ញ␣ដ␣�
 </table>
 <script>
 runCharCount('.characterBox', 'mainCharList')
-runCharCount('.archaicBox', 'archaicCharList')
 runCharCount('.auxiliaryBox', 'auxCharList')
+runCharCount('.archaicBox', 'archaicCharList')
 runCharCount('.otherBox', 'otherCharList')
 runCharCount('.deprecatedBox', 'deprecatedCharList')
 </script>
@@ -1571,8 +1572,8 @@ runCharCount('.deprecatedBox', 'deprecatedCharList')
 <div class="smallprint"><span id="version"></span></div>
 
 <script>
-autoTransliterate('km')
 initialiseSummary('/scripts/khmer/block','km','Khmer','khmer')
+autoTransliterate('km')
 </script>
 
 </body>
