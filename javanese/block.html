@@ -9,13 +9,14 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
@@ -23,6 +24,7 @@
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/javanese.js"> </script>
+<script src="jv-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -76,8 +78,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->14 July, 2019<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="https://r12a.github.io/blog/?tag=javanese" title="Show all blog posts tagged with 'javanese'">javanese</a></p>
+  <!-- #BeginDate format:Sw1 -->9 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+</p>
+
+
 <section>
    <p>This page lists characters in the following Unicode  block and provides information about them.</p>
    <ul>
@@ -85,7 +90,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
    </ul>
    <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places.</p>
 <p>For details about how the script works, see <a class="linkHighlight" href="index">Javanese</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Java">Script links pages</a>.</p>
-<p>Find <input type="text" onChange="var hex=this.value;if (hex!=''){while(hex.length<4){hex='0'+hex;}document.location='#char'+hex.toUpperCase();}"/></p>
+<p><span style="text-align: start;">We have usage data for the following  language that uses the Javanese script</span>: <span style="text-align: start;">Javanese</span>.</p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -102,11 +111,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="consonants">
-<h2><a href="#consonants">Consonants</a></h2>
+<h2>Consonants</h2>
 
 
 <section id="basicconsonants">
-  <h3><a href="#basicconsonants">Basic consonants</a></h3>
+  <h3>Basic consonants</h3>
 
 
 <div class="character" id="charA98F">
@@ -337,7 +346,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
       <p class="titlepara"><span class="title">Javanese</span> murda consonant  
         &nbsp;&nbsp; <span class="trans">ny</span></p>
       <p>Used for honorifics. See the <a href="index" target="_blank">script summary</a> for details.</p>
-      <p>This was originally  <span class="ex" lang="jv">ꦗ꧀ꦚ</span> <span class="trans">jnya</span>, but later developed into a single letter.</p>
+      <p>This was originally  <span class="charExample" translate="no"><span class="ex" lang="jv">ꦗ꧀ꦚ</span> <span class="trans">ʤ͓ɲ</span></span>, but later developed into a single letter.</p>
     </div>
       <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf#Syriac" target="_blank">Unicode p661-664</a> &nbsp; 
@@ -498,7 +507,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="letter javanese">
 <p class="titlepara"><span class="title">Javanese</span> consonant  
  &nbsp;&nbsp;  <span class="trans">d</span></p>
-<p>eg. <span class="charExample"><span class="ex" lang="jv">ꦣꦂꦩ</span> <span class="trans">darma</span> <span class="meaning">dharma</span></span>. Used for honorifics. See the <a href="index" target="_blank">script summary</a> for details. </p>
+<p>eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦣꦂꦩ</span> <span class="trans">Ḏr̽m</span> <span class="meaning">dharma</span></span>. Used for honorifics. See the <a href="index" target="_blank">script summary</a> for details. </p>
 </div>
 
   <p class="ref"><a href="#refs">Refs</a>:
@@ -819,7 +828,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
  &nbsp;&nbsp;  <span class="trans">h</span></p>
 <p>Rather than a subjoined form, this letter has a conjoined form.</p>
 <p><span class="ipa">ha, hɔ</span> when used as a consonant.</p>
-<p><span class="ipa">a, ∅</span> This letter is also used as the normal way to show independent vowels, in which case it is  pronounced <span class="ipa">a</span> when the inherent vowel is used, and unpronounced if any other vowel is used, eg. <span class="charExample"><span class="ex" lang="jv">ꦲꦪꦸ</span> <span class="trans">ayu</span> <span class="meaning">graceful</span></span>.</p>
+<p><span class="ipa">a, ∅</span> This letter is also used as the normal way to show independent vowels, in which case it is  pronounced <span class="ipa">a</span> when the inherent vowel is used, and unpronounced if any other vowel is used, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦲꦪꦸ</span> <span class="trans">hyu</span> (<span class="trans">ayu</span>) <span class="meaning">graceful</span></span>.</p>
 <p class="ednote">Does this imply that ha and a are written the same way? Or that h is never really pronounced?</p>
 <p><span class="ipa">ħa</span> when used as a <span class="name">rekan</span> with <span class="codepoint"><span lang="jv">&#x25CC;&#xA9B3;</span> <a href="/scripts/javanese/block#charA9B3">[<span class="uname">U+A9B3 JAVANESE SIGN CECAK TELU​</span>]</a></span>, to represent foreign sounds, ie. <span class="charExample"><span class="ex" lang="jv">ꦥ꧀ꦲ꦳</span></span>.</p>
 <p>A rare rekan usage, with other characters, represents the Chinese sound <span class="trans">hwe</span>, ie. <span class="charExample"><span class="ex" lang="jv">ꦲ꧀ꦮꦌ̈</span></span>.</p>
@@ -842,7 +851,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="letter javanese">
 <p class="titlepara"><span class="title">Javanese</span> consonant <span class="name">pa cerek</span> &nbsp;&nbsp;  <span class="trans">rĕ</span></p>
 <p>Rather than a subjoined form, this letter has a conjoined form.</p>
-<p><span class="ipa">rə</span>, eg. <span class="charExample"><span class="ex" lang="jv">ꦲꦸꦧꦶꦉꦧꦸꦱ꧀</span> <span class="trans">ubi rebus</span> <span class="meaning">boiled tubers</span></span>. Treated as a consonant in Javanese, this has a conjoint (pasangan) form, eg. <span class="charExample"><span class="ex" lang="jv">ꦒꦼꦭꦱ꧀ꦉꦱꦶꦏ꧀</span> <span class="trans">gelas resik</span> <span class="meaning">clean glass</span></span>, however it doesn't carry vowel signs.</p>
+<p><span class="ipa">rə</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦲꦸꦧꦶꦉꦧꦸꦱ꧀</span> <span class="trans">hubir̥bus͓</span> (<span class="trans">ubi rebus</span>) <span class="meaning">boiled tubers</span></span>. Treated as a consonant in Javanese, this has a conjoint (pasangan) form, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦒꦼꦭꦱ꧀ꦉꦱꦶꦏ꧀</span> <span class="trans">gəls͓r̥sik͓</span> (<span class="trans">gelas resik</span>) <span class="meaning">clean glass</span></span>, however it doesn't carry vowel signs.</p>
 <p>In the early version of the script this represented the Sanskrit <span class="ipa">ɽ.</span>  In later developments it came to replace <span class="charExample"><span class="charExample"><span class="ex" lang="jv">ꦭꦼ</span></span></span>.</p>
 <p>There is no separate long version of this letter. To create it you need to use <span class="codepoint"><span lang="jv">&#xA989;</span> + <span lang="jv">&#x25CC;&#xA9B4;</span> <a href="/scripts/javanese/block#charA989">[<span class="uname">U+A989 JAVANESE LETTER PA CEREK</span></a> + <a href="/scripts/javanese/block#charA9B4"><span class="uname">U+A9B4 JAVANESE VOWEL SIGN TARUNG​</span>]</a></span>.</p>
 </div>
@@ -862,8 +871,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   
   <div class="letter javanese">
     <p class="titlepara"><span class="title">Javanese</span> independent vocalic vowel <span class="name">nga lelet</span> &nbsp;&nbsp; <span class="trans">lĕ</span></p>
-    <p><span class="ipa">lə</span>, eg. <span class="charExample"><span class="ex" lang="jv">ꦊꦩꦃꦊꦩ꧀ꦧꦸꦠ꧀</span> <span class="trans">lemah lembut</span> <span class="meaning">gentle</span></span>. Treated as a consonant in Javanese.</p>
-    <p> This has a subjoined (pasangan) form which doesn't carry vowel signs, however, [Teguh] implies that it is not used in modern Javanese, saying that <span class="trans">macul lembah</span> is spelled <span class="charExample"><span class="ex" lang="jv">ꦩꦕꦸꦭ꧀ꦭꦼꦩꦃ</span></span> rather than <span class="charExample"><span class="ex" lang="jv">ꦩꦕꦸꦭ꧀ꦊꦩꦃ</span></span>.</p>
+    <p><span class="ipa">lə</span>, eg. <span class="charExample"><span class="ex" lang="jv">ꦊꦩꦃꦊꦩ꧀ꦧꦸꦠ꧀</span> <span class="trans">l̥mh̽l̥m͓but͓</span> (<span class="trans">lemah lembut</span>) <span class="meaning">gentle</span></span>. Treated as a consonant in Javanese.</p>
+    <p> This has a subjoined (pasangan) form which doesn't carry vowel signs, however, [Teguh] implies that it is not used in modern Javanese, saying that <span class="trans">macul lembah</span> is spelled <span class="charExample" translate="no"><span class="ex" lang="jv">ꦩꦕꦸꦭ꧀ꦭꦼꦩꦃ</span> <span class="trans">mʧul͓ləmh̽</span></span> rather than <span class="charExample" translate="no"><span class="ex" lang="jv">ꦩꦕꦸꦭ꧀ꦊꦩꦃ</span> <span class="trans">mʧul͓l̥mh̽</span></span>.</p>
     <p>In the early version of the script this represented the Sanskrit <span class="ipa">l̪</span>. In later developments it came to replace <span class="charExample"><span class="ex" lang="jv">ꦫꦼ</span></span>.</p>
     <p>The long version of this letter is <span class="codepoint"><span lang="jv">&#xA98B;</span> <a href="/scripts/javanese/block#charA98B">[<span class="uname">U+A98B JAVANESE LETTER NGA LELET RASWADI</span>]</a></span>.</p>
   </div>
@@ -900,7 +909,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="medial">
-  <h3><a href="#medial">medial consonants</a></h3>
+  <h3>medial consonants</h3>
 
 <div class="character" id="charA9BD">
 <div class="charimg">&#xA9BD;</div>
@@ -910,7 +919,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter javanese">
 <p class="titlepara"><span class="title">Javanese</span> medial consonant <span class="name">kere</span> &nbsp;&nbsp;  <span class="trans">-re</span></p>
-<p>Used to indicate a second consonant at the start of a syllable, eg. <span class="charExample"><span class="ex" lang="jv">ꦕꦕꦶꦁꦏꦽꦩꦶ</span> <span class="trans">cacing kremi</span></span>.</p>
+<p>Used to indicate a second consonant at the start of a syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦕꦕꦶꦁꦏꦽꦩꦶ</span> <span class="trans">ʧʧiŋ̽kr̥̆mi</span> (<span class="trans">cacing kremi</span>)</span>.</p>
 </div>
   <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf#Syriac" target="_blank">Unicode p661-664</a> &nbsp; 
@@ -927,8 +936,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter javanese">
 <p class="titlepara"><span class="title">Javanese</span> medial consonant <span class="name">pengkal</span> &nbsp;&nbsp;  <span class="trans">-y-</span></p>
-<p>Used to indicate a second consonant at the start of a syllable, eg. <span class="charExample"><span class="ex" lang="jv">ꦏꦾꦲꦶꦏꦤ꧀ꦗꦼꦁ</span> <span class="trans">kyai kanjeng</span></span>.</p>
-<p>It's not always clear from a Latin transcription when this is used rather than the letter <span class="trans">nya</span>, eg. <span class="charExample"><span class="ex" lang="jv">ꦭꦠꦲꦤ꧀ꦚꦚꦶ</span> <span class="trans">latihan nyanyi</span> <span class="meaning">singing practice</span></span>.</p>
+<p>Used to indicate a second consonant at the start of a syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦏꦾꦲꦶꦏꦤ꧀ꦗꦼꦁ</span> <span class="trans">ky̆hikn͓ʤəŋ̽</span> (<span class="trans">kyai kanjeng</span>)</span>.</p>
+<p>It's not always clear from a Latin transcription when this is used rather than the letter <span class="trans">nya</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦭꦠꦲꦤ꧀ꦚꦚꦶ</span> <span class="trans">lthn͓ɲɲi</span> (<span class="trans">latihan nyanyi</span>) <span class="meaning">singing practice</span></span>.</p>
 </div>
   <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf#Syriac" target="_blank">Unicode p661-664</a> &nbsp; 
@@ -945,7 +954,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter javanese">
 <p class="titlepara"><span class="title">Javanese</span> medial consonant <span class="name">cakra</span> &nbsp;&nbsp;  <span class="trans">-r-</span></p>
-<p>Used to indicate a second consonant at the start of a syllable, eg. <span class="charExample"><span class="ex" lang="jv">ꦥꦿꦩꦸꦏ</span> <span class="trans">pramuka</span> <span class="meaning">scout</span></span>.</p>
+<p>Used to indicate a second consonant at the start of a syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦥꦿꦩꦸꦏ</span> <span class="trans">pr̆muk</span> (<span class="trans">pramuka</span>) <span class="meaning">scout</span></span>.</p>
 </div>
   <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf#Syriac" target="_blank">Unicode p661-664</a> &nbsp; 
@@ -962,7 +971,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="syllable_final">
-  <h3><a href="#syllable_final">Syllable-final consonants</a></h3>
+  <h3>Syllable-final consonants</h3>
 
 
 <div class="character" id="charA980">
@@ -990,7 +999,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter javanese">
 <p class="titlepara"><span class="title">Javanese</span> syllable-final consonant <span class="name">cecak</span> &nbsp;&nbsp;  <span class="trans">-ng</span></p>
-<p><span class="ipa">ŋ</span> at the end of a syllable, eg. <span class="charExample"><span class="ex" lang="jv">ꦥꦼꦠꦼꦁ</span> <span class="trans">peteng</span> <span class="meaning">dark</span></span>.</p>
+<p><span class="ipa">ŋ</span> at the end of a syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦥꦼꦠꦼꦁ</span> <span class="trans">pətəŋ̽</span> (<span class="trans">peteng</span>) <span class="meaning">dark</span></span>.</p>
 </div>
   <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf#Syriac" target="_blank">Unicode p661-664</a> &nbsp; 
@@ -1007,8 +1016,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter javanese">
 <p class="titlepara"><span class="title">Javanese</span> syllable-final consonant <span class="name">layar</span> &nbsp;&nbsp;  <span class="trans">-r</span></p>
-<p><span class="ipa">r</span> at the end of a syllable, eg. <span class="charExample"><span class="ex" lang="jv">ꦥꦼꦫꦲꦸꦭꦪꦂ</span> <span class="trans">perahu layar</span> <span class="meaning">sailboat</span></span>.</p>
-<p>In searching operations,  this should be equivalent to  <span class="codepoint"><span lang="jv">&#xA9AB;</span> <a href="/scripts/javanese/block#charA9AB">[<span class="uname">U+A9AB JAVANESE LETTER RA</span>]</a></span> , so that word-forms like  <span class="charExample"><span class="ex" lang="jv">ꦢꦲꦂ</span> <span class="trans">dahar</span> <span class="meaning">eat</span></span> and <span class="charExample"><span class="ex" lang="jv">ꦢꦲꦫ</span> <span class="trans">dahara</span> <span class="meaning">eaten</span></span> will be found together.</p>
+<p><span class="ipa">r</span> at the end of a syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦥꦼꦫꦲꦸꦭꦪꦂ</span> <span class="trans">pərhulyr̽</span> (<span class="trans">perahu layar</span>) <span class="meaning">sailboat</span></span>.</p>
+<p>In searching operations,  this should be equivalent to  <span class="codepoint"><span lang="jv">&#xA9AB;</span> <a href="/scripts/javanese/block#charA9AB">[<span class="uname">U+A9AB JAVANESE LETTER RA</span>]</a></span> , so that word-forms like  <span class="charExample" translate="no"><span class="ex" lang="jv">ꦢꦲꦂ</span> <span class="trans">dhr̽</span> (<span class="trans">dahar</span>) <span class="meaning">eat</span></span> and <span class="charExample" translate="no"><span class="ex" lang="jv">ꦢꦲꦫ</span> <span class="trans">dhr</span> (<span class="trans">dhr</span>) <span class="meaning">dahara</span></span> will be found together.</p>
 </div>
   <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf#Syriac" target="_blank">Unicode p661-664</a> &nbsp; 
@@ -1026,8 +1035,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter javanese">
 <p class="titlepara"><span class="title">Javanese</span> syllable-final consonant <span class="name">wignyan</span> &nbsp;&nbsp;  <span class="trans">-h</span></p>
-<p><span class="ipa">h</span> at the end of a syllable, eg <span class="charExample"><span class="ex" lang="jv">ꦱꦼꦏꦺꦴꦭꦃ</span> <span class="trans">sekolah</span> <span class="meaning">school</span></span>.</p>
-<p>In searching operations,  this should be equivalent to <span class="codepoint"><span lang="jv">&#xA9B2;</span> <a href="/scripts/javanese/block#charA9B2">[<span class="uname">U+A9B2 JAVANESE LETTER HA</span>]</a></span> , so that word-forms like <span class="charExample"><span class="ex" lang="jv">ꦒꦧꦃ</span> <span class="trans">gabah</span> <span class="meaning">grain of rice</span></span> and <span class="charExample"><span class="ex" lang="jv">ꦒꦧꦲꦺ</span> <span class="trans">gabahe</span> <span class="meaning">that grain of rice</span></span> will be found together.</p>
+<p><span class="ipa">h</span> at the end of a syllable, eg <span class="charExample" translate="no"><span class="ex" lang="jv">ꦱꦼꦏꦺꦴꦭꦃ</span> <span class="trans">səkealh̽</span> (<span class="trans">sekolah</span>) <span class="meaning">school</span></span>.</p>
+<p>In searching operations,  this should be equivalent to <span class="codepoint"><span lang="jv">&#xA9B2;</span> <a href="/scripts/javanese/block#charA9B2">[<span class="uname">U+A9B2 JAVANESE LETTER HA</span>]</a></span> , so that word-forms like <span class="charExample" translate="no"><span class="ex" lang="jv">ꦒꦧꦃ</span> <span class="trans">gbh̽</span> (<span class="trans">gabah</span>) <span class="meaning">grain of rice</span></span> and <span class="charExample" translate="no"><span class="ex" lang="jv">ꦒꦧꦲꦺ</span> <span class="trans">gbhe</span> (<span class="trans">gabahe</span>) <span class="meaning">that grain of rice</span></span> will be found together.</p>
 </div>
   <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf#Syriac" target="_blank">Unicode p661-664</a> &nbsp; 
@@ -1045,7 +1054,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="pangkon">
-  <h2><a href="#pangkon">Pangkon</a></h2>
+  <h2>Pangkon</h2>
 
 <div class="character" id="charA9C0">
 <div class="charimg">&#xA9C0;</div>
@@ -1055,9 +1064,9 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter javanese">
 <p class="titlepara"><span class="title">Javanese</span> vowel-killer <span class="name">pangkon</span> &nbsp;&nbsp;</p>
-<p> Usually only visible at the end of a sentence or piece of text, where it suppresses the inherent vowel of the preceding consonant, eg. <span class="charExample"><span class="ex" lang="jv">ꦏꦿꦸꦥꦸꦏ꧀</span> <span class="trans">krupuk</span> <span class="meaning">crackers</span></span>. </p>
+<p> Usually only visible at the end of a sentence or piece of text, where it suppresses the inherent vowel of the preceding consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦏꦿꦸꦥꦸꦏ꧀</span> <span class="trans">kr̆upuk͓</span> (<span class="trans">krupuk</span>) <span class="meaning">crackers</span></span>. </p>
 <p>Between words this character is not usually visible, but it changes the following consonant's glyph shape and/or produces a subjoined consonant to indicate that there is no intervening vowel.</p>
-<p>Occasionally this may appear in the middle of a word, eg. <span class="charExample"><span class="ex" lang="jv">ꦧꦶꦱ꧀ꦠꦿꦤ꧀​ꦱ꧀ꦗꦏꦂꦠ</span> <span class="trans">bis transjakarta</span> <span class="meaning">transjakarta bus</span></span>. It's not clear from the Unicode Standard how to achieve this, however a zero width space works, and so does a zero width non-joiner.</p>
+<p>Occasionally this may appear in the middle of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦧꦶꦱ꧀ꦠꦿꦤ꧀​ꦱ꧀ꦗꦏꦂꦠ</span> <span class="trans">bis͓tr̆n͓␣s͓ʤkr̽t</span> (<span class="trans">bis transjakarta</span>) <span class="meaning">Transjakarta bus</span></span>. It's not clear from the Unicode Standard how to achieve this, however a zero width space works, and so does a zero width non-joiner.</p>
 </div>
   <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf#Syriac" target="_blank">Unicode p661-664</a> &nbsp; 
@@ -1073,10 +1082,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="vowels">
-  <h2><a href="#vowels">Vowels</a></h2>
+  <h2>Vowels</h2>
 
 <section id="independentvowels">
-  <h3><a href="#independentvowels">Independent vowels</a></h3>
+  <h3>Independent vowels</h3>
 
   
 <div class="character" id="charA984">
@@ -1087,7 +1096,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter javanese">
 <p class="titlepara"><span class="title">Javanese</span> independent vowel &nbsp;&nbsp;  <span class="trans">a</span></p>
-<p>This letter is used to differentiate proper nouns or foreign words from ordinary words. The more normal way to represent this independent vowel is to use <span class="codepoint"><span lang="jv">&#xA9B2;</span> <a href="/scripts/javanese/block#charA9B2">[<span class="uname">U+A9B2 JAVANESE LETTER HA</span>]</a></span>. For example, compare <span class="charExample"><span class="ex" lang="jv">ꦲꦪꦸ</span> <span class="trans">ayu</span> <span class="meaning">graceful</span></span> and <span class="charExample"><span class="ex" lang="jv">ꦄꦪꦸ</span> <span class="trans">Ayu</span></span>, a personal name.</p>
+<p>This letter is used to differentiate proper nouns or foreign words from ordinary words. The more normal way to represent this independent vowel is to use <span class="codepoint"><span lang="jv">&#xA9B2;</span> <a href="/scripts/javanese/block#charA9B2">[<span class="uname">U+A9B2 JAVANESE LETTER HA</span>]</a></span>. For example, compare <span class="charExample" translate="no"><span class="ex" lang="jv">ꦲꦪꦸ</span> <span class="trans">hyu</span> (<span class="trans">ayu</span>) <span class="meaning">graceful</span></span> and <span class="charExample" translate="no"><span class="ex" lang="jv">ꦄꦪꦸ</span> <span class="trans">ạyu</span> (<span class="trans">Ayu</span>)</span>, a personal name.</p>
 <p>Everson describes a long version of this vowel using <span class="codepoint"><span lang="jv">&#x25CC;&#xA9B4;</span> <a href="/scripts/javanese/block#charA9B4">[<span class="uname">U+A9B4 JAVANESE VOWEL SIGN TARUNG​</span>]</a></span>, ie. <span class="charExample"><span class="ex" lang="jv">ꦄꦴ</span></span> <span class="trans">ā</span>. It doesn't appear to be used in modern Javanese.</p>
 </div>
   <p class="ref"><a href="#refs">Refs</a>:
@@ -1228,7 +1237,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="vowelsigns">
-  <h3><a href="#vowelsigns">Vowel signs</a></h3>
+  <h3>Vowel signs</h3>
 
 <div class="character" id="charA9B4">
 <div class="charimg">&#xA9B4;</div>
@@ -1395,7 +1404,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="diacritics">
-  <h2><a href="#diacritics">Diacritics</a></h2>
+  <h2>Diacritics</h2>
   
 <div class="character" id="charA9B3">
 <div class="charimg">&#xA9B3;</div>
@@ -1422,11 +1431,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="sympunc">
-  <h2><a href="#sympunc">Symbols &amp; punctuation</a></h2>
+  <h2>Symbols &amp; punctuation</h2>
   
   
 <section id="punctuation">
-  <h3><a href="#punctuation">Basic punctuation</a></h3>
+  <h3>Basic punctuation</h3>
   
   
 <div class="character" id="charA9CA">
@@ -1507,8 +1516,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="letter javanese">
 <p class="titlepara"><span class="title">Javanese</span> punctuation <span class="name">pada lingsa</span></p>
 <p>Similar to a comma, but  not used as such after <span class="codepoint"><span lang="jv">&#x25CC;&#xA9C0;</span> <a href="/scripts/javanese/block#charA9C0">[<span class="uname">U+A9C0 JAVANESE PANGKON​</span>]</a>. If it <em>is</em> used after that, </span>it represents a full stop.</p>
-<p>According to Everson <span class="codepoint"><span lang="jv">&#xA9C8;</span> <a href="/scripts/javanese/block#charA9C8">[<span class="uname">U+A9C8 JAVANESE PADA LINGSA</span>]</a></span> is used for acronyms, eg. <span class="charExample"><span class="ex" lang="jv">꧈ꦢꦺ꧈ꦲ꧈ꦌꦭ꧀꧈</span></span> <span class="trans">DHL</span>.</p>
-<p>It is also used after initials in a name, eg. <span class="charExample"><span class="ex" lang="jv">ꦫ꧈ꦩ꧈ꦯꦸꦭꦂꦠ</span> <span class="meaning">R. M. Sularta</span></span>.<sup>4</sup></p>
+<p>According to Everson <span class="codepoint"><span lang="jv">&#xA9C8;</span> <a href="/scripts/javanese/block#charA9C8">[<span class="uname">U+A9C8 JAVANESE PADA LINGSA</span>]</a></span> is used for acronyms, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">꧈ꦢꦺ꧈ꦲ꧈ꦌꦭ꧀꧈</span> <span class="trans">,de,h,ẹl͓,</span> <span class="meaning">DHL</span></span> <span class="trans">DHL</span>.</p>
+<p>It is also used after initials in a name, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦫ꧈ꦩ꧈ꦯꦸꦭꦂꦠ</span> <span class="trans">r,m,Sulr̽t</span> <span class="meaning">R. M. Sularta</span></span>.<sup>4</sup></p>
 </div>
   <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf#Syriac" target="_blank">Unicode p661-664</a> &nbsp; 
@@ -1547,7 +1556,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="letter javanese">
 <p class="titlepara"><span class="title">Javanese</span> punctuation <span class="name">pada pangkat</span></p>
 <p>Colon equivalent, or number indicator.</p>
-<p>It is used as a number indicator because many of the digits in Javanese are identical to other letters. The pada pangkat is used on either side of a number to indicate that these are digits, eg. <span class="charExample"><span class="ex" lang="jv">ꦱꦼꦭꦱ꧇꧑꧙꧇ꦩꦉꦠ꧀꧇꧒꧐꧑꧓꧇</span> <span class="trans">selasa 19 maret 2013</span> <span class="meaning">Tuesday, 19 March 2013</span></span>.</p>
+<p>It is used as a number indicator because many of the digits in Javanese are identical to other letters. The pada pangkat is used on either side of a number to indicate that these are digits, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦱꦼꦭꦱ꧇꧑꧙꧇ꦩꦉꦠ꧀꧇꧒꧐꧑꧓꧇</span> <span class="trans">səls:19:mr̥t͓:2013:</span> (<span class="trans">selasa 19 maret 2013</span>) <span class="meaning">Tuesday, 19 March 2013</span></span>.</p>
 </div>
   <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf#Syriac" target="_blank">Unicode p661-664</a> &nbsp; 
@@ -1560,7 +1569,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   
   
 <section id="othersymbols">
-  <h3><a href="#othersymbols">Other symbols</a></h3>
+  <h3>Other symbols</h3>
 
 <div class="character" id="charA9CF">
 <div class="charimg">&#xA9CF;</div>
@@ -1570,7 +1579,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter javanese">
 <p class="titlepara"><span class="title">Javanese</span> punctuation <span class="name">pada rangkep</span></p>
-<p>Iteration mark, eg. <span class="charExample"><span class="ex" lang="jv">ꦧꦸꦏꦸꧏ</span> <span class="trans">buku-buku</span> <span class="meaning">books</span></span>. It can be transcribed as <span class="trans">buku2</span>.</p>
+<p>Iteration mark, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦧꦸꦏꦸꧏ</span> <span class="trans">buku&</span> (<span class="trans">buku-buku</span>) <span class="meaning">books</span></span>. It can be transcribed as <span class="trans">buku2</span>.</p>
 <p>Derived from the Arabic digit <span class="codepoint"><span lang="ar" dir="rtl">&#x0662;</span> <a href="/scripts/arabic/block#char0662">[<span class="uname">U+0662 ARABIC-INDIC DIGIT TWO</span>]</a></span>.</p>
 </div>
   <p class="ref"><a href="#refs">Refs</a>:
@@ -1727,7 +1736,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="digits">
-  <h2><a href="#digits">Digits</a></h2>
+  <h2>Digits</h2>
   
   
 <div class="character" id="charA9D0">
@@ -1900,11 +1909,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <section id="refs">
   <h2><a href="#refs" id="endlinks">References</a></h2>
   <ol>
-<li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN 0-19-507993-0, pp477-480</li>
-<li>[ <sup><a href="https://www.unicode.org/versions/latest/ch19.pdf">u</a></sup> ] <cite>The Unicode Standard v10.0</cite>, <a href="https://www.unicode.org/versions/latest/ch19.pdf">Javanese</a>, pp661-664.</li>
-<li>[ <sup><a href="https://en.wikipedia.org/wiki/Javanese_script">w</a></sup> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Javanese_script">Javanese script</a>.</li>
-<li>[ <sup><a href="https://www.unicode.org/L2/L2006/06080-javanese-doc.pdf">t</a></sup> ] Teguh Budi Sayoga, <cite><a href="https://www.unicode.org/L2/L2006/06080-javanese-doc.pdf">Proposal for encoding the Javanese Script in the UCS (A900-A97F)</a></cite>.</li>
-<li>[ <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3319.pdf">e</a></sup> ] Michael Everson, <cite><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3319.pdf">Proposal for encoding the Javanese script in the UCS</a></cite>.</li>
+<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN 0-19-507993-0, pp477-480</li>
+<li>[ <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3319.pdf">e</a> ] Michael Everson, <cite><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3319.pdf">Proposal for encoding the Javanese script in the UCS</a></cite>.</li>
+<li>[ <a class="fnref" href="https://www.unicode.org/L2/L2006/06080-javanese-doc.pdf">t</a> ] Teguh Budi Sayoga, <cite><a href="https://www.unicode.org/L2/L2006/06080-javanese-doc.pdf">Proposal for encoding the Javanese Script in the UCS (A900-A97F)</a></cite>.</li>
+<li>[ <a class="fnref" href="https://www.unicode.org/versions/latest/ch19.pdf">u</a> ] <cite>The Unicode Standard v10.0</cite>, <a href="https://www.unicode.org/versions/latest/ch19.pdf">Javanese</a>, pp661-664.</li>
+<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Javanese_script">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Javanese_script">Javanese script</a>.</li>
 </ol>
 </section>
 
@@ -1930,14 +1939,12 @@ replaceStuff('Javanese', 'javanese', spreadsheet, '', 'jv', '', cols, false)
 <div id="panel" style="display:none"></div>
 
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/javanese/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-07-14  11:58<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bjavanese%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fjavanese%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
-
+<div class="smallprint"><span id="version"></span></div>
 
 
 <script>
-initialise('/scripts/javanese/block')
+initialise('/scripts/javanese/block','javanese')
+autoTransliterate('jv')
 </script>
 </body>
 </html>
