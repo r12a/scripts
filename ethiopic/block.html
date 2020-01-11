@@ -9,13 +9,14 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
@@ -23,6 +24,7 @@
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/ethiopic.js"> </script>
+<script src="am-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -76,8 +78,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->14 July, 2019<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="https://r12a.github.io/blog/?tag=ethiopic" title="Show all blog posts tagged with 'ethiopic'">ethiopic</a></p>
+<!-- #BeginDate format:Sw1 -->11 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+</p>
+
+
 <section>
    <p>This page lists characters in the following Unicode  block and provides information about them. </p>
 <ul>
@@ -88,10 +93,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 </ul>
 <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
 <p>For details about how the script works, see <a class="linkHighlight" href="index">Ethiopic</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Ethi">Script links pages</a>.</p>
-<p>Find
-<input type="text" 
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/>
-</p>
+<p><span style="text-align: start;">We have usage data for the following 2 languages that use the Ethiopic script</span>: Amharic, Tigrinya.</p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -108,7 +114,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="syllables">
-<h2><a href="#syllables">Syllables</a></h2>
+<h2>Syllables</h2>
 
 
 <div class="character" id="char1200">
@@ -3080,7 +3086,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter">
 <p class="titlepara"><span class="title">Amharic</span></p>
-<p>Used after a cardinal number, this gives the ordinal form, and is often rendered as a superscript.<sup><a href="https://w3c.github.io/elreq/#ethiopic_ordinal_notation">e§2.6.3</a></sup></p>
+<p>Used after a cardinal number, this gives the ordinal form, and is often rendered as a superscript.<a class="fnref" href="https://w3c.github.io/elreq/#ethiopic_ordinal_notation">e§2.6.3</a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="https://w3c.github.io/elreq/" target="_blank">Elreq</a>, 
@@ -4747,7 +4753,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter">
 <p class="titlepara"><span class="title">Tigrinya</span></p>
-<p>Used after a cardinal number, this gives the ordinal form, and is often rendered as a superscript.<sup><a href="https://w3c.github.io/elreq/#ethiopic_ordinal_notation">e§2.6.3</a></sup></p>
+<p>Used after a cardinal number, this gives the ordinal form, and is often rendered as a superscript.<a class="fnref" href="https://w3c.github.io/elreq/#ethiopic_ordinal_notation">e§2.6.3</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -7273,7 +7279,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 </section>
 <section id="diacritics">
-  <h2><a href="#diacritics">Diacritics</a></h2>
+  <h2>Diacritics</h2>
 
 <div class="character" id="char135E">
 <div class="charimg">&#x135E;</div>
@@ -7326,7 +7332,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="punctuation">
-  <h2><a href="#punctuation">Punctuation</a></h2>
+  <h2>Punctuation</h2>
   
   
 <div class="character" id="char1360">
@@ -7337,7 +7343,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter ethiopic">
 <p class="titlepara"><span class="title">Amharic</span> <span data-type="name"><span data-type="localname" dir="ltr" lang="am"></span> <span data-type="transliteratedname" class="trans"></span></span></p>
-<p>Used to divide sections or subsections; generally three or more used together on a line of their own. <sup><a href="https://w3c.github.io/elreq/#ethiopic_punctuation">e</a></sup></p>
+<p>Used to divide sections or subsections; generally three or more used together on a line of their own. <a class="fnref" href="https://w3c.github.io/elreq/#ethiopic_punctuation">e</a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="https://w3c.github.io/elreq/" target="_blank">Elreq</a>, <a href="http://www.unicode.org/versions/latest/ch19.pdf#Ethiopic" target="_blank">Unicode</a>, <a href="https://en.wikipedia.org/wiki/Ge'ez_script" target="_blank">Wikipedia</a> </p>
 </div>
@@ -7351,13 +7357,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter ethiopic">
 <p class="titlepara"><span class="title">Ethiopic</span><span data-type="name"><span data-type="transliteratedname" class="trans"></span></span></p>
-<p>Punctuation used to separate words. In modern text it has become less common in published materials than in handwriting.<sup><a href="https://w3c.github.io/elreq/#ethiopic_punctuation">e</a></sup></p>
+<p>Punctuation used to separate words. In modern text it has become less common in published materials than in handwriting.<a class="fnref" href="https://w3c.github.io/elreq/#ethiopic_punctuation">e</a></p>
 </div>
 <div class="letter amharic">
 <p class="titlepara"><span class="title">Amharic</span> 
  <span data-type="name"><span data-type="localname" dir="ltr" lang="am">ሁለት ነጥብ</span>
  <span data-type="transliteratedname" class="trans">hulätə näṭəbə</span></span></p>
-<p>Where space is used to separate words, this character is sometimes used in lieu of a comma.<sup><a href="https://w3c.github.io/elreq/#ethiopic_punctuation">→ e</a></sup></p>
+<p>Where space is used to separate words, this character is sometimes used in lieu of a comma.<a class="fnref" href="https://w3c.github.io/elreq/#ethiopic_punctuation">→ e</a></p>
 </div>
 <div class="letter tigrinya">
 <p class="titlepara"><span class="title">Tigrinya</span> <span data-type="name"><span data-type="localname" dir="ltr" lang="am">ክልተ-ነጥቢ</span> <span data-type="transliteratedname" class="trans">kələtä-näṭəbi</span></span></p>
@@ -7378,7 +7384,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter ethiopic">
 <p class="titlepara"><span class="title">Ethiopic</span><span data-type="name"><span data-type="transliteratedname" class="trans"></span></span></p>
-<p>Punctuation placed at the end of a sentence that describes a complete idea. <sup><a href="https://w3c.github.io/elreq/#ethiopic_punctuation">e</a></sup></p>
+<p>Punctuation placed at the end of a sentence that describes a complete idea. <a class="fnref" href="https://w3c.github.io/elreq/#ethiopic_punctuation">e</a></p>
 </div>
 <div class="letter amharic">
 <p class="titlepara"><span class="title">Amharic</span> 
@@ -7406,7 +7412,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Ethiopic</span><span data-type="name"><span data-type="transliteratedname" class="trans"></span></span></p>
 <p>Often used, to separate comparative and sequential lists of names, phrases, or numbers as well as to separate parts of a sentence that are not complete by themselves.</p>
 <p>This code point and <span class="codepoint"><span lang="am">፥</span> [<a href="#char1365" class="uname">U+1365 ETHIOPIC COLON</a>]</span> are in most cases regarded as glyph variants for the same punctuation symbol, although usually a document will consistently use only one or the other</p>
-<p>There is a tendency to use the other code point more frequently, however, in religious works. <sup><a href="https://w3c.github.io/elreq/#ethiopic_punctuation">e</a></sup></p>
+<p>There is a tendency to use the other code point more frequently, however, in religious works. <a class="fnref" href="https://w3c.github.io/elreq/#ethiopic_punctuation">e</a></p>
 </div>
 <div class="letter amharic">
 <p class="titlepara"><span class="title">Amharic</span> 
@@ -7432,7 +7438,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter ethiopic">
 <p class="titlepara"><span class="title">Ethiopic</span><span data-type="name"><span data-type="transliteratedname" class="trans"></span></span></p>
-<p>Used to separate equivalent main phrases in one idea. Even though it is not placed at the end of a paragraph, it can be used to separate sentences with similar ideas in a paragraph. <sup><a href="https://w3c.github.io/elreq/#ethiopic_punctuation">e</a></sup></p>
+<p>Used to separate equivalent main phrases in one idea. Even though it is not placed at the end of a paragraph, it can be used to separate sentences with similar ideas in a paragraph. <a class="fnref" href="https://w3c.github.io/elreq/#ethiopic_punctuation">e</a></p>
 </div>
 <div class="letter amharic">
 <p class="titlepara"><span class="title">Amharic</span> 
@@ -7465,8 +7471,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span data-type="name"><span data-type="localname" dir="ltr" lang="am">ነጠላ ሰረዝ</span>
  <span data-type="transliteratedname" class="trans">näṭäla säräzə</span></span></p>
 <p>This code point and <span class="codepoint"><span lang="am">፣</span> [<a href="#char1363" class="uname">U+1363 ETHIOPIC COMMA</a>]</span> are in most cases regarded as glyph variants for the same punctuation symbol, although usually a document will consistently use only one or the other.</p>
-<p>There is a tendency to use this shape more frequently, however, in religious works, and so it could be called an <em>ecclesiastical comma</em>.<sup><a href="https://w3c.github.io/elreq/#ethiopic_punctuation">e</a></sup></p>
-<p>It is also used for biblical references where English would normally use a colon, eg. <span class="ex" lang="am">ማቴ4፥23 , ዮሐ13፥16</span> <span class="meaning">Matt 4:23, John 13:16</span>.<sup><a href="https://w3c.github.io/elreq/#ethiopic_comma_usage">e</a></sup></p>
+<p>There is a tendency to use this shape more frequently, however, in religious works, and so it could be called an <em>ecclesiastical comma</em>.<a class="fnref" href="https://w3c.github.io/elreq/#ethiopic_punctuation">e</a></p>
+<p>It is also used for biblical references where English would normally use a colon, eg. <span class="charExample" translate="no"><span class="ex" lang="am">ማቴ4፥23 , ዮሐ13፥16</span> <span class="trans">mate4:23 , yoḥä13:16</span> <span class="ipa">Matt 4:23, John 13:16</span></span>.<a class="fnref" href="https://w3c.github.io/elreq/#ethiopic_comma_usage">e</a></p>
 </div>
 <div class="letter tigrinya">
 <p class="titlepara"><span class="title">Tigrinya</span> <span data-type="name"><span data-type="localname" dir="ltr" lang="am">ንጽል ጭሕጋር (ንጽል ሰረዝ)</span> <span data-type="transliteratedname" class="trans">nəṣələ č̣əḥəgarə (nəṣələ säräzə)</span></span></p>
@@ -7487,7 +7493,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter ethiopic">
 <p class="titlepara"><span class="title">Ethiopic</span><span data-type="name"><span data-type="transliteratedname" class="trans"></span></span></p>
-<p>Punctuation that follows clarification of a subject. It will preface validation statements and examples that support the clarification. <sup><a href="https://w3c.github.io/elreq/#ethiopic_punctuation">e</a></sup></p>
+<p>Punctuation that follows clarification of a subject. It will preface validation statements and examples that support the clarification. <a class="fnref" href="https://w3c.github.io/elreq/#ethiopic_punctuation">e</a></p>
 </div>
 <div class="letter amharic">
 <p class="titlepara"><span class="title">Amharic</span> 
@@ -7515,7 +7521,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Amharic</span> 
  <span data-type="name"><span data-type="localname" dir="ltr" lang="am">ምልክት ሕቶ (ትእምርተ ሕቶ)</span>
  <span data-type="transliteratedname" class="trans">śosətə näṭəbə</span></span></p>
-<p>Used at the end of the questioning sentence. In modern writing, ASCII <span class="codepoint" translate="no"><span lang="am">&#x003F;</span> [<span class="uname">U+003F QUESTION MARK</span>]</span> is preferred.<sup><a href="https://w3c.github.io/elreq/#ethiopic_punctuation">e</a></sup></p>
+<p>Used at the end of the questioning sentence. In modern writing, ASCII <span class="codepoint" translate="no"><span lang="am">&#x003F;</span> [<span class="uname">U+003F QUESTION MARK</span>]</span> is preferred.<a class="fnref" href="https://w3c.github.io/elreq/#ethiopic_punctuation">e</a></p>
 </div>
 <div class="letter tigrinya">
 <p class="titlepara"><span class="title">Tigrinya</span> <span data-type="name"><span data-type="localname" dir="ltr" lang="am">ንጽል ጭሕጋር (ንጽል ሰረዝ)</span> <span data-type="transliteratedname" class="trans">mələkətə ḥəto (təʾəmərətä ḥəto)</span></span></p>
@@ -7539,7 +7545,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
  <span data-type="name"><span data-type="localname" dir="ltr" lang="am"></span>
  <span data-type="transliteratedname" class="trans"></span></span></p>
 <p>May be used to conclude the final paragraph of a section in lieu of <span class="codepoint"><span lang="">።</span> [<a href="#char1362" class="uname">U+1362 ETHIOPIC FULL STOP</a>]</span>. </p>
-<p>Like <span class="codepoint"><span lang="">፠</span> [<a href="#char1360" class="uname">U+1360 ETHIOPIC SECTION MARK</a>]</span>,  three or more may also be used together on a line of their own.<sup><a href="https://w3c.github.io/elreq/#ethiopic_punctuation">e</a></sup></p>
+<p>Like <span class="codepoint"><span lang="">፠</span> [<a href="#char1360" class="uname">U+1360 ETHIOPIC SECTION MARK</a>]</span>,  three or more may also be used together on a line of their own.<a class="fnref" href="https://w3c.github.io/elreq/#ethiopic_punctuation">e</a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="https://w3c.github.io/elreq/" target="_blank">Elreq</a>, 
@@ -7564,7 +7570,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="sympunc">
-  <h2><a href="#sympunc">Symbols</a></h2>
+  <h2>Symbols</h2>
   
 <div class="character" id="char1390">
 <div class="charimg">&#x1390;</div>
@@ -7675,7 +7681,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="digits">
-  <h2><a href="#digits">Numbers</a></h2>
+  <h2>Numbers</h2>
   
   
 <div class="character" id="char1369">
@@ -8007,13 +8013,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="refs">
-  <h2><a href="#refs">References</a></h2>
+  <h2>References</h2>
 <ol>
-<li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
+<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
 		    0-19-507993-0</li>
-<li>[ <sup><a href="http://en.wikipedia.org/wiki/Ethiopic_script">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Ethiopic_script">Ge'ez Script</a></li>
-<li>[ <sup><a href="http://www.unicode.org/versions/latest/ch19.pdf" target="_blank">u</a></sup> ] <cite>The Unicode Standard</cite> v10.0, <a href="http://www.unicode.org/versions/latest/ch19.pdf" target="_blank">Ethiopic</a></li>
-<li>[ <sup><a href="http://w3c.github.io/elreq/">e</a></sup> ] Daniel Yacob, <a href="http://w3c.github.io/elreq/"><cite>Ethiopic Layout Requirements</cite></a></li>
+<li>[ <a class="fnref" href="http://w3c.github.io/elreq/">e</a> ] Daniel Yacob, <a href="http://w3c.github.io/elreq/"><cite>Ethiopic Layout Requirements</cite></a></li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf" target="_blank">u</a> ] <cite>The Unicode Standard</cite> v10.0, <a href="http://www.unicode.org/versions/latest/ch19.pdf" target="_blank">Ethiopic</a></li>
+<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Ethiopic_script">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Ethiopic_script">Ge'ez Script</a></li>
 </ol>
 </section>
 
@@ -8039,14 +8045,12 @@ replaceStuff('Ethiopic', 'ethiopic', spreadsheet, '', 'am', '', cols, false)
 <div id="panel" style="display:none"></div>
 
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/ethiopic/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-07-14  10:48<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bethiopic%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fethiopic%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
-
+<div class="smallprint"><span id="version"></span></div>
 
 
 <script>
-initialise('/scripts/ethiopic/block')
+initialise('/scripts/ethiopic/block','ethiopic')
+autoTransliterate('am')
 </script>
 </body>
 </html>

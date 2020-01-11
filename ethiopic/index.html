@@ -32,7 +32,7 @@
 .ext .ex, .ext { color: magenta; }
 </style>
 
-<script src="../../shared/scriptdb/ethiopic.js"> </script>
+<script src="../../shared/scriptdb/ethi.js"> </script>
 <script src="/shared/code/boilerplate.js"></script>
 <script src="/shared/code/toc_2020.js"></script>
 <script src="/shared/code/all-names.js"></script>
@@ -113,7 +113,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->20 December, 2019<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->11 January, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -194,7 +194,9 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <div>Character lists show:</div>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div>
+<label>Transliteration 
+<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
 <!--div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div-->
 </div>
 
@@ -255,8 +257,6 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   <circle cx="165" cy="130" r="3" fill="#ccc"/>
   <circle cx="240" cy="130" r="3" fill="#ccc"/>
   
-  <!-- near open -->
-  <circle cx="102" cy="160" r="3" fill="#ccc"/> <!-- near open -->
   
   <!-- open -->
   <circle cx="115" cy="190" r="3" fill="#ccc"/>
@@ -272,9 +272,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
   <text x="250" y="15" class="ipa">u</text> 
 
   <!-- near close -->
-  <text x="85" y="45" class="ipa" text-anchor="end">ɪ</text> 
-
-  <text x="210" y="45" class="ipa">ʊ</text> 
+  <text x="85" y="45" class="allophone" text-anchor="end">ɪ</text> 
+  <text x="210" y="45" class="allophone">ʊ</text> 
 
   <!-- close mid -->
   <text x="57" y="75" class="ipa" text-anchor="end">e</text> 
@@ -406,7 +405,7 @@ alveolar</th>
 
 
 
-<section id="consonants">
+<section id="syllables">
 <h2>Syllables</h2>
 <p>The   Ethiopic syllables in the basic set start with one of the following consonants. The pronunciation listed is for Amharic (which has lost the phonetic distinction between some characters).</p>
 
@@ -449,13 +448,13 @@ alveolar</th>
 <figure>
 <div class="listAll" onClick="listAll(this, 'am')">list all 8</div>
 <div class="listArray">
-<div class="listPair"><span class="listItem" lang="am">መ</span><span class="listIPA">ɛ~ə</span><span class="listTrans">ä</span><span class="listMeaning">1st</span></div>
-<div class="listPair"><span class="listItem" lang="am">ሙ</span><span class="listIPA">ʊ~u</span><span class="listTrans">u</span><span class="listMeaning">2nd</span></div>
+<div class="listPair"><span class="listItem" lang="am">መ</span><span class="listIPA">ə ɛ</span><span class="listTrans">ä</span><span class="listMeaning">1st</span></div>
+<div class="listPair"><span class="listItem" lang="am">ሙ</span><span class="listIPA">u ʊ</span><span class="listTrans">u</span><span class="listMeaning">2nd</span></div>
 <div class="listPair"><span class="listItem" lang="am">ሚ</span><span class="listIPA">i</span><span class="listTrans">i</span><span class="listMeaning">3rd</span></div>
-<div class="listPair"><span class="listItem" lang="am">ማ</span><span class="listIPA">ä</span><span class="listTrans">a</span><span class="listMeaning">4th</span></div>
+<div class="listPair"><span class="listItem" lang="am">ማ</span><span class="listIPA">a</span><span class="listTrans">a</span><span class="listMeaning">4th</span></div>
 <div class="listPair"><span class="listItem" lang="am">ሜ</span><span class="listIPA">e</span><span class="listTrans">e</span><span class="listMeaning">5th</span></div>
-<div class="listPair"><span class="listItem" lang="am">ም</span><span class="listIPA">ɨ~ə,∅</span><span class="listTrans">ə</span><span class="listMeaning">6th</span></div>
-<div class="listPair"><span class="listItem" lang="am">ሞ</span><span class="listIPA">o,ɔ</span><span class="listTrans">o</span><span class="listMeaning">7th</span></div>
+<div class="listPair"><span class="listItem" lang="am">ም</span><span class="listIPA">ɨ ə ∅</span><span class="listTrans">ə</span><span class="listMeaning">6th</span></div>
+<div class="listPair"><span class="listItem" lang="am">ሞ</span><span class="listIPA">o ɔ</span><span class="listTrans">o</span><span class="listMeaning">7th</span></div>
 <div class="listPair"><span class="listItem" lang="am">ሟ</span><span class="listIPA">wə</span><span class="listTrans">wa</span><span class="listMeaning">8th</span></div>
 </div>
 </figure>
@@ -528,6 +527,15 @@ alveolar</th>
 <div class="listPair"><span class="listItem" lang="am">ꬁ</span></div>
 </div>
 </figure>
+
+
+<p>The following is a list of syllabic characters used for Amharic.</p>
+
+
+<figure class="characterBox auto" data-cols="trans,ipa">ሀ␣ሁ␣ሂ␣ሃ␣ሄ␣ህ␣ሆ␣ለ␣ሉ␣ሊ␣ላ␣ሌ␣ል␣ሎ␣ሏ␣ሐ␣ሑ␣ሒ␣ሓ␣ሔ␣ሕ␣ሖ␣ሗ␣መ␣ሙ␣ሚ␣ማ␣ሜ␣ም␣ሞ␣ሟ␣ሠ␣ሡ␣ሢ␣ሣ␣ሤ␣ሥ␣ሦ␣ሧ␣ረ␣ሩ␣ሪ␣ራ␣ሬ␣ር␣ሮ␣ሯ␣ሰ␣ሱ␣ሲ␣ሳ␣ሴ␣ስ␣ሶ␣ሷ␣ሸ␣ሹ␣ሺ␣ሻ␣ሼ␣ሽ␣ሾ␣ሿ␣ቀ␣ቁ␣ቂ␣ቃ␣ቄ␣ቅ␣ቆ␣ቈ␣ቊ␣ቋ␣ቌ␣ቍ␣በ␣ቡ␣ቢ␣ባ␣ቤ␣ብ␣ቦ␣ቧ␣ቨ␣ቩ␣ቪ␣ቫ␣ቬ␣ቭ␣ቮ␣ቯ␣ተ␣ቱ␣ቲ␣ታ␣ቴ␣ት␣ቶ␣ቷ␣ቸ␣ቹ␣ቺ␣ቻ␣ቼ␣ች␣ቾ␣ቿ␣ኀ␣ኁ␣ኂ␣ኃ␣ኄ␣ኅ␣ኆ␣ኈ␣ኊ␣ኋ␣ኌ␣ኍ␣ነ␣ኑ␣ኒ␣ና␣ኔ␣ን␣ኖ␣ኗ␣ኘ␣ኙ␣ኚ␣ኛ␣ኜ␣ኝ␣ኞ␣ኟ␣አ␣ኡ␣ኢ␣ኣ␣ኤ␣እ␣ኦ␣ኧ␣ከ␣ኩ␣ኪ␣ካ␣ኬ␣ክ␣ኮ␣ኰ␣ኲ␣ኳ␣ኴ␣ኵ␣ኸ␣ኹ␣ኺ␣ኻ␣ኼ␣ኽ␣ኾ␣ወ␣ዉ␣ዊ␣ዋ␣ዌ␣ው␣ዎ␣ዐ␣ዑ␣ዒ␣ዓ␣ዔ␣ዕ␣ዖ␣ዘ␣ዙ␣ዚ␣ዛ␣ዜ␣ዝ␣ዞ␣ዟ␣ዠ␣ዡ␣ዢ␣ዣ␣ዤ␣ዥ␣ዦ␣ዧ␣የ␣ዩ␣ዪ␣ያ␣ዬ␣ይ␣ዮ␣ደ␣ዱ␣ዲ␣ዳ␣ዴ␣ድ␣ዶ␣ዷ␣ጀ␣ጁ␣ጂ␣ጃ␣ጄ␣ጅ␣ጆ␣ጇ␣ገ␣ጉ␣ጊ␣ጋ␣ጌ␣ግ␣ጎ␣ጐ␣ጒ␣ጓ␣ጔ␣ጕ␣ጠ␣ጡ␣ጢ␣ጣ␣ጤ␣ጥ␣ጦ␣ጧ␣ጨ␣ጩ␣ጪ␣ጫ␣ጬ␣ጭ␣ጮ␣ጯ␣ጰ␣ጱ␣ጲ␣ጳ␣ጴ␣ጵ␣ጶ␣ጷ␣ጸ␣ጹ␣ጺ␣ጻ␣ጼ␣ጽ␣ጾ␣ጿ␣ፀ␣ፁ␣ፂ␣ፃ␣ፄ␣ፅ␣ፆ␣ፈ␣ፉ␣ፊ␣ፋ␣ፌ␣ፍ␣ፎ␣ፏ␣ፐ␣ፑ␣ፒ␣ፓ␣ፔ␣ፕ␣ፖ␣ፗ</figure>
+
+
+
 <details>
 <summary class="instructions">To see the complete list of syllables, click here</summary>
 <script>
@@ -749,11 +757,11 @@ function showRows (type) {
 <!--div id="out"></div><script>
 var out = `<table><thead><tr><td>&nbsp;</td>
 <td><span class="trans">ä</span></td>
-<td><span class="trans">u</span></td>
+<td><span class="trans">u</span></td> 
 <td><span class="trans">i</span></td>
 <td><span class="trans">a</span></td>
 <td><span class="trans">e</span></td>
-<td><span class="trans">ə</span></td>
+<td><span class="trans">ə</span></td> 
 <td><span class="trans">o</span></td>
 <td><span class="trans">wa</span></td>
 </tr></thead><tbody>`
@@ -1229,8 +1237,8 @@ document.getElementById('out').innerHTML = out
 
 <table id="charCountList">
 <tr><th>Main</th><td id="mainCharList"></td><td id="mainCharListTotal"></td></tr>
-<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
 <tr><th>Auxiliary</th><td id="auxCharList"></td><td id="auxCharListTotal"></td></tr>
+<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
 <tr><th>Other</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
 <tr><th>Deprecated</th><td id="deprecatedCharList"></td><td id="deprecatedCharListTotal"></td></tr>
 </table>
