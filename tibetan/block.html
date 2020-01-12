@@ -9,20 +9,22 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
 <script src="../../uniview/descriptions.js"></script> 
 <script src="../../uniview/u.js"></script> 
 
-<script src="../../shared/fontlists/tibetan.js"> </script>
+<script src="../../shared/fontlists/tibt.js"> </script>
+<script src="bo-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -72,16 +74,23 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->15 July, 2019<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/index.php?tag=tibetan" title="Show all blog posts tagged with 'tibetan'">tibetan</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+  <!-- #BeginDate format:Sw1 -->12 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+</p>
+
+
 <section>
   <p>This page lists characters in the following Unicode  block and provides information about them.</p>
   <ul>
     <li><a href="../../uniview/?block=tibetan" target="_blank">Tibetan</a></li>
   </ul>
   <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-  <p>For details about how the script works, see <a class="linkHighlight" href="index">Tibetan</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Tibt">Script links pages</a>.</p>
-<p>Find <input type="text" onChange="var hex=this.value;if (hex!=''){while(hex.length<4){hex='0'+hex;}document.location='#char'+hex.toUpperCase();}"/></p>
+  <p>For details about how the script works, see the <a class="linkHighlight" href="index">Tibetan</a> summary.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Tibt">Script links pages</a>.</p>
+<p><span style="text-align: start;">We have usage data for the following 2 languages that use the Cyrillic script</span>: Tibetan, Dzongkha.</p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -99,7 +108,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="syllable">
-  <h2><a href="#syllable">Syllable</a></h2>
+  <h2>Syllable</h2>
 
   
 <div class="character" id="char0F00">
@@ -114,12 +123,12 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   
 </section>
 <section id="consonants">
-  <h2><a href="#consonants">Consonants</a></h2>
+  <h2>Consonants</h2>
 
 
 
 <section id="basic_consonants">
-  <h3><a href="#basic_consonants">Basic consonants</a></h3>
+  <h3>Basic consonants</h3>
 
 <div class="character" id="char0F40">
     <div class="charimg">&#x0F40;</div>
@@ -819,7 +828,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="subjoined">
-  <h3><a href="#subjoined">Subjoined consonants</a></h3>
+  <h3>Subjoined consonants</h3>
   
   <div class="character" id='char0F90'>
     <div class="charimg">&#x0F90;</div>
@@ -1468,7 +1477,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="fixed">
-  <h3><a href="#fixed">Fixed-form subjoined consonants</a></h3>
+  <h3>Fixed-form subjoined consonants</h3>
   
   <div class="character" id='char0FBA'>
     <div class="charimg">&#x0FBA;</div>
@@ -1519,7 +1528,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="balti">
-    <h3><a href="#balti">Extensions for Balti</a></h3>
+    <h3>Extensions for Balti</h3>
     
   <div class="character" id='char0F6B'>
     <div class="charimg">&#x0F6B;</div>
@@ -1540,13 +1549,13 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   
 </section>
 <section id="vowels">
-  <h2><a href="#vowels">Vowels</a></h2>
+  <h2>Vowels</h2>
 
 
 
 
 <section id="depvowelsigns">
-  <h3><a href="#depvowelsigns">Dependent vowel signs</a></h3>
+  <h3>Dependent vowel signs</h3>
   
 <div class="character" id='char0F71'>
     <div class="charimg">&#x0F71;</div>
@@ -1757,7 +1766,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="vocalic">
-  <h3><a href="#vocalic">Vocalic modification</a></h3>
+  <h3>Vocalic modification</h3>
   
 <div class="character" id='char0F7E'>
     <div class="charimg">&#x0F7E;</div>
@@ -1912,7 +1921,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="head">
-<h3><a href="#head">Head marks</a></h3>
+<h3>Head marks</h3>
   
 <div class="character" id='char0F01'>
     <div class="charimg">&#x0F01;</div>
@@ -1998,7 +2007,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="ppunctuation">
-  <h3><a href="#ppunctuation">Paired punctuation</a></h3>
+  <h3>Paired punctuation</h3>
   
 <div class="character" id='char0F3A'>
     <div class="charimg">&#x0F3A;</div>
@@ -2060,7 +2069,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="marks">
-  <h3><a href="#marks">Marks and signs</a></h3>
+  <h3>Marks and signs</h3>
   
 <div class="character" id='char0F08'>
     <div class="charimg">&#x0F08;</div>
@@ -2405,7 +2414,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="astrological">
-  <h3><a href="#astrological">Astrological signs</a></h3>
+  <h3>Astrological signs</h3>
   
 <div class="character" id='char0F15'>
     <div class="charimg">&#x0F15;</div>
@@ -2582,7 +2591,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="cantillation">
-  <h3><a href="#cantillation">Cantillation signs</a></h3>
+  <h3>Cantillation signs</h3>
   
 <div class="character" id='char0FC0'>
     <div class="charimg">&#x0FC0;</div>
@@ -2617,7 +2626,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="symbols">
-  <h3><a href="#symbols">Symbols</a></h3>
+  <h3>Symbols</h3>
   
 <div class="character" id='char0FC4'>
     <div class="charimg">&#x0FC4;</div>
@@ -2703,7 +2712,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="religious">
-  <h3><a href="#religious">Religious symbols</a></h3>
+  <h3>Religious symbols</h3>
   
 <div class="character" id='char0FD5'>
     <div class="charimg">&#x0FD5;</div>
@@ -2771,7 +2780,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="annotation">
-  <h3><a href="#annotation">Annotation marks</a></h3>
+  <h3>Annotation marks</h3>
   
 <div class="character" id='char0FD9'>
     <div class="charimg">&#x0FD9;</div>
@@ -2793,13 +2802,13 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 </section>
 <section id="numbers">
-  <h2><a href="#numbers">Numbers</a></h2>
+  <h2>Numbers</h2>
   
 
 
 
 <section id="digits">
-  <h3><a href="#digits">Digits</a></h3>
+  <h3>Digits</h3>
   
 <div class="character" id='char0F20'>
     <div class="charimg">&#x0F20;</div>
@@ -2876,7 +2885,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="minushalf">
-  <h3><a href="#minushalf">Digits minus half</a></h3>
+  <h3>Digits minus half</h3>
   
 <div class="character" id='char0F2A'>
     <div class="charimg">&#x0F2A;</div>
@@ -3027,12 +3036,12 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <section id="refs">
   <h2><a href="#refs"  id="endlinks">References</a></h2>
 <ol>
-<li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN
+<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN
 				0-19-507993-0</li>
-<li>[ <sup><a href="http://www.learntibetan.net/">l</a></sup> ] <a href="http://www.learntibetan.net/">The Tibetan Language Student</a></li>
-<li>[ <sup><a href="http://www.unicode.org/versions/Unicode6.3.0/ch10.pdf#Tibetan">u</a></sup> ] The Unicode Standard v6.3, <a href="http://www.unicode.org/versions/Unicode6.3.0/ch10.pdf#Tibetan">Tibetan</a>. </li>
-<li><span class="refcode">[ <sup><a href="http://digitaltibetan.org/index.php/Formatting_rules_for_Tibetan_text">f</a></sup> ]</span> <a href="http://digitaltibetan.org/index.php/Formatting_rules_for_Tibetan_text">Formatting rules for Tibetan text</a></li>
-<li>[ <sup><a href="http://www.thlib.org/reference/transliteration/">t</a></sup> ] <a href="http://www.thlib.org/reference/transliteration/">Transliteration &amp; Transcription Systems for Tibetan &amp; Himalayan Languages</a></li>
+<li>[ <a class="fnref" href="http://www.learntibetan.net/">l</a> ] <a href="http://www.learntibetan.net/">The Tibetan Language Student</a></li>
+<li><span class="refcode">[ <a class="fnref" href="http://digitaltibetan.org/index.php/Formatting_rules_for_Tibetan_text">f</a> ]</span> <a href="http://digitaltibetan.org/index.php/Formatting_rules_for_Tibetan_text">Formatting rules for Tibetan text</a></li>
+<li>[ <a class="fnref" href="http://www.thlib.org/reference/transliteration/">t</a> ] <a href="http://www.thlib.org/reference/transliteration/">Transliteration &amp; Transcription Systems for Tibetan &amp; Himalayan Languages</a></li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode6.3.0/ch10.pdf#Tibetan">u</a> ] The Unicode Standard v6.3, <a href="http://www.unicode.org/versions/Unicode6.3.0/ch10.pdf#Tibetan">Tibetan</a>. </li>
 </ol>
 </section>
 
@@ -3042,7 +3051,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 
-<script src="../../shared/scriptdb/tibetan.js">  </script>
+<script src="../../shared/scriptdb/tibt.js">  </script>
 
 <script>
 replaceStuff('Tibetan', 'tibetan', spreadsheet, '', 'bo', '', cols, false)
@@ -3053,24 +3062,14 @@ replaceStuff('Tibetan', 'tibetan', spreadsheet, '', 'bo', '', cols, false)
 
 <div id="panel" style="display:none"></div>
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/tibetan/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-07-15  6:58<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Btibetan%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ftibetan%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
-<!-- Uncomment this code to get a list of all character names for the file names-subset.js 
-<div id=charliststr></div>
-<div><span class="ex" lang="bo">ༀ༁༂༃༄༅༆༇༈༉༊་༌།༎༏༐༑༒༓༔༕༖༗༘༙༚༛༜༝༞༟༠༡༢༣༤༥༦༧༨༩༪༫༬༭༮༯༰༱༲༳༴༵༶༷༸༹༺༻༼༽༾༿ཀཁགགྷངཅཆཇཉཊཋཌཌྷཎཏཐདདྷནཔཕབབྷམཙཚཛཛྷཝཞཟའཡརལཤཥསཧཨཀྵཪཫཬཱཱཱིིུུྲྀཷླྀཹེཻོཽཾཿ྄ཱྀྀྂྃ྅྆྇ྈྉྊྋྌྍྎྏྐྑྒྒྷྔྕྖྗྙྚྛྜྜྷྞྟྠྡྡྷྣྤྥྦྦྷྨྩྪྫྫྷྭྮྯྰྱྲླྴྵྶྷྸྐྵྺྻྼ྾྿࿀࿁࿂࿃࿄࿅࿆࿇࿈࿉࿊࿋࿌࿎࿏࿐࿑࿒࿓࿔࿕࿖࿗࿘࿙࿚</span></div>
-<div id="listofchars"></div>
-<script src="/javascript/showcharacters/names.js"></script>
-<script src="data-extraction.js">//</script>
-<script>
-//document.getElementById('listofchars').innerHTML = getlistofchars();
-listCharsWithNotes();
-</script>
- --> 
+<div class="smallprint"><span id="version"></span></div>
+
+
 
 <script>
-initialise('/scripts/tibetan/block')
+initialise('/scripts/tibetan/block','tibetan')
+autoTransliterate('bo')
 </script>
 </body>
 </html>
