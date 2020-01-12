@@ -51,7 +51,7 @@
 .large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }	
 </style>
 
-<script src="../../shared/scriptdb/georg-ka.js"> </script>
+<script src="../../shared/scriptdb/geor.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
@@ -67,7 +67,7 @@
 <script src="../linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
 
-<script src="../../shared/fontlists/georgian.js"> </script>
+<script src="../../shared/fontlists/geor.js"> </script>
 <script src="ka-translit.js">  </script>
 </head>
 
@@ -127,7 +127,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </aside>
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->19 December, 2019<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->12 January, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -135,7 +135,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 	<div class="section">
 <p>This page gathers together basic information about the two scripts used to write Georgian: Mkedruli (+Mtavruli), and Khutsuri (Asomtavruli+Nuskhuri) and their use for the Georgian language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Georgian using Unicode; for greater details follow the footnote links (especially those with an arrow alongside them).</p>
-<p> For character-specific details follow the links to the <a class="linkHighlight" href="block">Georgian character notes</a>. See also the <a href="../../pickers/georgian/" class="linkHighlight">Georgian character app</a>.</p>
+<p> For character-specific details follow the links to the <a class="linkHighlight" href="block">Georgian character notes</a>. See also the <a href="../../pickers/geor-ka/" class="linkHighlight">Georgian</a>, <a href="../../pickers/geok-ka/" class="linkHighlight">Khutsuri</a>, or <a href="../../pickers/georgian/" class="linkHighlight">All Georgian</a> character apps.</p>
 <p>For similar information related to other scripts, see the <a class="linkHighlight" href="../links?iso=Geor">script links pages</a>.</p>
 <p class="instructions">Clicking on red  text examples, or highlighting part of the sample text shows a list of characters. Click on the vertical blue bar (bottom right) to change font settings for the sample text. Colours and annotations on panels listing characters are relevant to their use for the Georgian language.</p>
 <p><span class="instructions">Unless in parentheses, the transcriptions in italics that follow Georgian text are a <a href="../glossary/#transliteration" class="termref">transliteration</a> developed for these pages. Those in parentheses are usually ISO transcriptions. Transcriptions in <span style="white-space:nowrap;">⌈ brackets ⌋</span> may be phonemic or phonetic.</span></p>
@@ -205,7 +205,33 @@ Georgian scripts are unique in their appearance and their exact origin has never
 <p>When <span class="name">asomtavruli</span> and <span class="name">nuskhuri</span> are mixed as <span class="name">khutsuri</span>, then words may be title-cased, and there was an attempt to introduce something similar for <span class="name">mkhedruli</span> in the mid-20th century, but modern Georgian is normally written using lowercase only.  If the <span class="name">mtavruli</span> capitals are used, they are applied to a whole word at the minimum, so their use is more akin to ALL-CAPS than to the Capitalisation used in the Latin script.</p></li>
 </ul>
 </section>
+
+
+
+
+
+
+<section id="direction">
+<h2>Text direction</h2>
+    <p>Georgian text is written horizontally, left to right.</p>
+  </section>
   
+
+
+
+
+
+<section id="structure">
+<h2>Structure</h2>
+  <p>A feature of the Georgian language is the propensity to cluster consonants, and it does so in 2 ways. </p>
+<ol>
+<li>In harmonic clusters, two similar consonants are pronounced with only a single release, eg. <span class="charExample" translate="no"><span class="ex" lang="ka">ბგერა</span> <span class="trans">bgɛra</span> <span class="meaning">sound</span></span>, <span class="charExample" translate="no"><span class="ex" lang="ka">ცხოვრება</span> <span class="trans">cʰχɔvrɛba</span> <span class="meaning">life</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="ka">წყალი</span> <span class="trans">ċq̇ali</span> <span class="meaning">water</span></span>.<a class="fnref" href="http://en.wikipedia.org/wiki/Georgian_language#Prosody">wl</a></li>
+<li>Other clusters of up to 6 (and occasionally more) consonants are also frequent, eg. <span class="charExample" translate="no"><span class="ex" lang="ka">მწვანე</span> <span class="trans">mċvanɛ</span> <span class="meaning">green</span></span>, <span class="charExample" translate="no"><span class="ex" lang="ka">მთვრალი</span> <span class="trans">mtvrali</span> <span class="meaning">drunk</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="ka">მწვრთნელი</span> <span class="trans">mċvrtnɛli</span> <span class="meaning">trainer</span></span>.<a class="fnref" href="http://en.wikipedia.org/wiki/Georgian_language#Prosody">wl</a></li>
+</ol>
+</section>
+  
+
+
 
 
 
@@ -213,7 +239,9 @@ Georgian scripts are unique in their appearance and their exact origin has never
 <div>In yellow boxes, show:</div>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div>
+<label>Transliteration 
+<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
 <div>
 <label>National 
 <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
@@ -221,16 +249,6 @@ Georgian scripts are unique in their appearance and their exact origin has never
 <label>ISO 9984
 <input type="checkbox" onChange="toggleTranscription('listTrans2', this.checked)"/></label></div>
 </div>
-
-
-
-
-
-
-  <section id="direction">
-<h2>Text direction</h2>
-    <p>Georgian text is written horizontally, left to right.</p>
-  </section>
 
 
 
@@ -353,17 +371,17 @@ alveolar</th>
 <tr>
 <th>stop</th>
 <td><span class="ipa">b</span><br>
-<span class="ipa">pʰ</span><br>
+<span class="ipa">p⁽ʰ⁾</span><br>
 <span class="ipa">pʼ</span></td>
 <td><span class="ipa">d</span><br/>
-<span class="ipa">tʰ</span><br>
+<span class="ipa">t⁽ʰ⁾</span><br>
 <span class="ipa">tʼ</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td><span class="ipa">ɡ</span><br/>
-<span class="ipa">kʰ</span> <span class="ipa"><br>
-kʼ</span></td>
+<span class="ipa">k⁽ʰ⁾</span><br>
+<span class="ipa">kʼ</span></td>
 <td><span class="ipa">qʼ</span></td>
 <td>&nbsp;</td>
 </tr>
@@ -371,11 +389,11 @@ kʼ</span></td>
 <th>affricate</th>
 <td>&nbsp;</td>
 <td><span class="ipa">d͡z</span><br>
-<span class="ipa">t͡sʰ</span><br>
+<span class="ipa">t͡s⁽ʰ⁾</span><br>
 <span class="ipa">t͡sʼ</span></td>
 <td>&nbsp;</td>
 <td><span class="ipa">d͡ʒ</span><br/>
-<span class="ipa">t͡ʃʰ</span><br/>
+<span class="ipa">t͡ʃ⁽ʰ⁾</span><br/>
 <span class="ipa">t͡ʃʼ</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -390,7 +408,7 @@ kʼ</span></td>
 <td><span class="ipa">ʃ</span> <span class="ipa">ʒ</span></td>
 <td>&nbsp;</td>
 <td><span class="ipa">x</span> <span class="ipa">ɣ</span></td>
-<td>&nbsp;</td>
+<td><span class="allophone">χ</span></td>
 <td><span class="ipa">h</span></td>
 </tr>
 <tr>
@@ -469,17 +487,14 @@ kʼ</span></td>
 <h3>Characters for other languages</h3>
 <p>The following characters are obsolete in the Georgian language, but still used in other languages.<a class="fnref" href="http://www.loc.gov/catdir/cpso/romanization/georgian.pdf"></a> They were removed by the Society for the Spreading of Literacy among Georgians, founded by Prince Ilia Chavchavadze in 1879 because they were redundant. <a class="fnref" href="https://en.wikipedia.org/wiki/Georgian_scripts#Mkhedruli">w</a> </p>
 <p class="instructions">IPA values are for the languages that use them. For previous Georgian pronunciation, click on the character and follow links to the character notes page.</p>
-<!--figure class="otherBox otherlanguages auto" data-cols="ipa,trans,trans2" data-select="first" >ჱᲱ␣ჲᲲ␣ჳᲳ␣ჴᲴ</figure-->
 
-<figure class="otherBox otherlanguages" data-cols="ipa,trans,trans2" data-select="first"><div class="listAll" onclick="listAll(this, 'ka')">list all 4</div><div class="listArray"><div class="listPair"><span class="listItem" lang="ka">ჱᲱ</span><span class="listUnum">10F1<br>1CB1<br></span><span class="listIPA">eː</span><span class="listTrans">e</span><span class="listTrans2">ē</span></div><div class="listPair"><span class="listItem" lang="ka">ჲᲲ</span><span class="listUnum">10F2<br>1CB2<br></span><span class="listIPA">j</span><span class="listTrans">j</span><span class="listTrans2">y</span></div><div class="listPair"><span class="listItem" lang="ka">ჳᲳ</span><span class="listUnum">10F3<br>1CB3<br></span><span class="listIPA">w</span><span class="listTrans">w</span><span class="listTrans2">w</span></div><div class="listPair"><span class="listItem" lang="ka">ჴᲴ</span><span class="listUnum">10F4<br>1CB4<br></span><span class="listIPA">q⁽ʰ⁾</span><span class="listTrans">qʰ</span><span class="listTrans2">ẖ</span></div></div></figure>
+<figure class="archaicBox auto" data-cols="trans,trans2" data-ipa="eː,q⁽ʰ⁾,w,j" data-select="first" >ჱᲱ␣ჴᲴ␣ჳᲳ␣ჲᲲ</figure>
 
 
 <p>The above letters are all used for the Svan language, and the 2nd in the list is used also for Mingrelian and Laz.</p>
 <p>The  characters below were specifically created for use with other languages (Svan and Mingrelian for the first two, and Laz for the last).</p>
 
-<!--figure class="otherBox otherlanguages auto" data-cols="ipa,trans,trans2" data-select="first" >ჷᲷ␣ჸᲸ␣ჶᲶ</figure-->
-
-<figure class="otherBox otherlanguages" data-cols="ipa,trans,trans2" data-select="first"><div class="listAll" onclick="listAll(this, 'ka')">list all 3</div><div class="listArray"><div class="listPair"><span class="listItem" lang="ka">ჷᲷ</span><span class="listUnum">10F7<br>1CB7<br></span><span class="listIPA">ə</span><span class="listTrans">ə</span><span class="listTrans2">&nbsp;</span></div><div class="listPair"><span class="listItem" lang="ka">ჸᲸ</span><span class="listUnum">10F8<br>1CB8<br></span><span class="listIPA">ʔ</span><span class="listTrans">ʔ</span><span class="listTrans2">&nbsp;</span></div><div class="listPair"><span class="listItem" lang="ka">ჶᲶ</span><span class="listUnum">10F6<br>1CB6<br></span><span class="listIPA">f</span><span class="listTrans">f</span><span class="listTrans2">f</span></div></div></figure>
+<figure class="otherBox auto" data-cols="trans,trans2" data-ipa="ə,ʔ,f" data-select="first" >ჷᲷ␣ჸᲸ␣ჶᲶ</figure>
 
 </section>
 
@@ -495,10 +510,8 @@ kʼ</span></td>
 
 <p>The  characters below were used for other languages in the past, including Bats, Ossetian and Abkhaz.</p>
 
-<!--figure class="archaicBox otherlanguages auto"  data-cols="ipa,trans,trans2" data-select="first" >ჹᲹ␣ჺᲺ␣ჼ␣ჽᲽ␣ჾᲾ␣ჿᲿ</figure-->
+<figure class="otherBox otherlanguages auto" data-ipa="ɢ,ʕ,˜,ə,˷,ʷ" data-cols="trans,trans2" data-select="first" >ჹᲹ␣ჺᲺ␣ჼ␣ჽᲽ␣ჾᲾ␣ჿᲿ</figure>
 
-
-<figure class="archaicBox otherlanguages" data-cols="ipa,trans,trans2" data-select="first"><div class="listAll" onclick="listAll(this, 'ka')">list all 6</div><div class="listArray"><div class="listPair"><span class="listItem" lang="ka">ჹᲹ</span><span class="listUnum">10F9<br>1CB9<br></span><span class="listIPA">ɢ</span><span class="listTrans">ɢ</span><span class="listTrans2">&nbsp;</span></div><div class="listPair"><span class="listItem" lang="ka">ჺᲺ</span><span class="listUnum">10FA<br>1CBA<br></span><span class="listIPA">ʕ</span><span class="listTrans">ʕ</span><span class="listTrans2">&nbsp;</span></div><div class="listPair"><span class="listItem" lang="ka">ჼ</span><span class="listUnum">10FC<br></span><span class="listIPA">̃</span><span class="listTrans">ᴺ</span><span class="listTrans2">&nbsp;</span></div><div class="listPair"><span class="listItem" lang="ka">ჽᲽ</span><span class="listUnum">10FD<br>1CBD<br></span><span class="listIPA">ə</span><span class="listTrans">ə̇</span><span class="listTrans2">&nbsp;</span></div><div class="listPair"><span class="listItem" lang="ka">ჾᲾ</span><span class="listUnum">10FE<br>1CBE<br></span><span class="listIPA">̴</span><span class="listTrans">ᴸ</span><span class="listTrans2">&nbsp;</span></div><div class="listPair"><span class="listItem" lang="ka">ჿᲿ</span><span class="listUnum">10FF<br>1CBF<br></span><span class="listIPA">ʷ</span><span class="listTrans">ʷ</span><span class="listTrans2">&nbsp;</span></div></div></figure>
 
 </section>
 </section>
@@ -545,7 +558,13 @@ kʼ</span></td>
 <h3>Georgian language characters</h3>
 <p>The following characters are used to write the modern Georgian language. Each pair shows asomtavruli followed by nuskhuri.</p>
 
-<figure class="archaicBox georgian auto" data-cols="ipa,trans,transc,trans2" data-select="first" >Ⴀⴀ␣Ⴁⴁ␣Ⴂⴂ␣Ⴃⴃ␣Ⴄⴄ␣Ⴅⴅ␣Ⴆⴆ␣Ⴇⴇ␣Ⴈⴈ␣Ⴉⴉ␣Ⴊⴊ␣Ⴋⴋ␣Ⴌⴌ␣Ⴍⴍ␣Ⴎⴎ␣Ⴏⴏ␣Ⴐⴐ␣Ⴑⴑ␣Ⴒⴒ␣Ⴓⴓ␣Ⴔⴔ␣Ⴕⴕ␣Ⴖⴖ␣Ⴗⴗ␣Ⴘⴘ␣Ⴙⴙ␣Ⴚⴚ␣Ⴛⴛ␣Ⴜⴜ␣Ⴝⴝ␣Ⴞⴞ␣Ⴟⴟ␣Ⴠⴠ</figure>
+
+<figure class="archaicBox georgian auto" data-cols="ipa,trans,transc,trans2" data-select="first" >Ⴈⴈ␣Ⴓⴓ␣Ⴄⴄ␣Ⴍⴍ␣Ⴀⴀ</figure>
+<figure class="archaicBox georgian auto" data-cols="ipa,trans,transc,trans2" data-select="first" >Ⴎⴎ␣Ⴔⴔ␣Ⴁⴁ␣Ⴒⴒ␣Ⴇⴇ␣Ⴃⴃ␣Ⴉⴉ␣Ⴕⴕ␣Ⴂⴂ␣Ⴗⴗ</figure>
+<figure class="archaicBox georgian auto" data-cols="ipa,trans,transc,trans2" data-select="first" >Ⴜⴜ␣Ⴚⴚ␣Ⴛⴛ␣Ⴝⴝ␣Ⴙⴙ␣Ⴟⴟ</figure>
+<figure class="archaicBox georgian auto" data-cols="ipa,trans,transc,trans2" data-select="first" >Ⴅⴅ␣Ⴑⴑ␣Ⴆⴆ␣Ⴘⴘ␣Ⴏⴏ␣Ⴞⴞ␣Ⴖⴖ␣Ⴠⴠ</figure>
+<figure class="archaicBox georgian auto" data-cols="ipa,trans,transc,trans2" data-select="first" >Ⴋⴋ␣Ⴌⴌ</figure>
+<figure class="archaicBox georgian auto" data-cols="ipa,trans,transc,trans2" data-select="first" >Ⴊⴊ␣Ⴐⴐ</figure>
 </section>
 
 
@@ -553,9 +572,8 @@ kʼ</span></td>
 <section id="other_asomtavruli">
 <h3>Characters for other languages</h3>
 <p>The first 3 characters are obsolete in the Georgian language, but are still used in Svan, Mingrelian, and Laz languages.<a class="fnref" href="http://www.loc.gov/catdir/cpso/romanization/georgian.pdf"></a> The last character in the list was created specifically for use with Svan.</p>
-<!--figure class="otherBox otherlanguages auto" data-cols="ipa,trans,trans2" data-select="first" >Ⴡⴡ␣Ⴢⴢ␣Ⴣⴣ␣Ⴤⴤ␣Ⴧⴧ</figure-->
 
-<figure class="otherBox otherlanguages" data-cols="ipa,trans,trans2" data-select="first"><div class="listAll" onclick="listAll(this, 'ka')">list all 5</div><div class="listArray"><div class="listPair"><span class="listItem" lang="ka">Ⴡⴡ</span><span class="listUnum">10C1<br>2D21<br></span><span class="listIPA">eː</span><span class="listTrans">E̱</span><span class="listTrans2">ē</span></div><div class="listPair"><span class="listItem" lang="ka">Ⴢⴢ</span><span class="listUnum">10C2<br>2D22<br></span><span class="listIPA">j</span><span class="listTrans">J̱</span><span class="listTrans2">y</span></div><div class="listPair"><span class="listItem" lang="ka">Ⴣⴣ</span><span class="listUnum">10C3<br>2D23<br></span><span class="listIPA">w</span><span class="listTrans">W̱</span><span class="listTrans2">w</span></div><div class="listPair"><span class="listItem" lang="ka">Ⴤⴤ</span><span class="listUnum">10C4<br>2D24<br></span><span class="listIPA">q⁽ʰ⁾</span><span class="listTrans">Q̱ʰ</span><span class="listTrans2">ẖ</span></div><div class="listPair"><span class="listItem" lang="ka">Ⴧⴧ</span><span class="listUnum">10C7<br>2D27<br></span><span class="listIPA">ə</span><span class="listTrans">Ə̱</span><span class="listTrans2">&nbsp;</span></div></div></figure>
+<figure class="otherBox otherlanguages auto" data-ipa="eː,j,w,q⁽ʰ⁾,ə" data-cols="trans,trans2" data-select="first" >Ⴡⴡ␣Ⴢⴢ␣Ⴣⴣ␣Ⴤⴤ␣Ⴧⴧ</figure>
 
 </section>
 
@@ -565,9 +583,10 @@ kʼ</span></td>
 <section id="archaic_asomtavruli">
 <h3>Archaic characters</h3>
         
-  <p>The following characters are archaic. The first was used for Georgian, and the second for Ossetian.</p>
+  <p>The following characters are archaic. The first pair was used for Georgian, and the second for Ossetian.</p>
 
-<figure class="archaicBox georgian auto"  data-cols="ipa,trans,trans2" data-select="first" >Ⴥⴥ␣Ⴭⴭ</figure>
+<figure class="archaicBox georgian auto"  data-cols="ipa,trans,trans2" data-select="first" >Ⴥⴥ</figure>
+<figure class="otherBox georgian auto" data-ipa="ə" data-cols="trans,trans2" data-select="first" >Ⴭⴭ</figure>
 </section>
 </section>
  
@@ -822,18 +841,7 @@ kʼ</span></td>
 
 
 
-<section id="lists">
-<h3>Counter styles</h3>
-  
-<p>The document <a href="https://w3c.github.io/predefined-counter-styles/#tamil-styles">Ready-made Counter Styles</a> lists an additive counter style for Georgian. It uses the following <span class="name">mkhedruli</span> characters: 10000 'ჵ', 9000 'ჰ', 8000 'ჯ', 7000 'ჴ', 6000 'ხ', 5000 'ჭ', 4000 'წ', 3000 'ძ', 2000 'ც', 1000 'ჩ', 900 'შ', 800 'ყ', 700 'ღ', 600 'ქ', 500 'ფ', 400 'ჳ', 300 'ტ', 200 'ს', 100 'რ', 90 'ჟ', 80 'პ', 70 'ო', 60 'ჲ', 50 'ნ', 40 'მ', 30 'ლ', 20 'კ', 10 'ი', 9 'თ', 8 'ჱ', 7 'ზ', 6 'ვ', 5 'ე', 4 'დ', 3 'გ', 2 'ბ', 1 'ა'. This list of characters includes several that are archaic in written text.</p>
-<figure>
-<p class="large">1&nbsp;⇨&nbsp;<span class="ex" lang="ka">ა</span> 2&nbsp;⇨&nbsp;<span class="ex" lang="ka">ბ</span> 3&nbsp;⇨&nbsp;<span class="ex" lang="ka">გ</span> 4&nbsp;⇨&nbsp;<span class="ex" lang="ka">დ</span> <br>
-11&nbsp;⇨&nbsp;<span class="ex" lang="ka">ია</span> 22&nbsp;⇨&nbsp;<span class="ex" lang="ka">კბ</span> 33&nbsp;⇨&nbsp;<span class="ex" lang="ka">ლგ</span> 44&nbsp;⇨&nbsp;<span class="ex" lang="ka">მდ</span> <br>
-111&nbsp;⇨&nbsp;<span class="ex" lang="ka">რია</span> 2222&nbsp;⇨&nbsp;<span class="ex" lang="ka">ცსკბ</span></p>
-<figcaption>Numbers produced by the Georgian additive counter style<span class="trans"></span>.</figcaption>
-</figure>
-<p>You can experiment with these styles using the <a href="../../r12a.github.io/apps/counterconverter/apps/counterconverter/">Counter styles converter</a>.</p>
-</section>
+
 <section id="lists">
 <h3>Counters, lists, etc.</h3>
   
@@ -1039,6 +1047,7 @@ data-cols="">ჵ␣ჰ␣ჯ␣ჴ␣ხ␣ჭ␣წ␣ძ␣ც␣ჩ␣შ␣�
 <li>[ <a class="fnref" href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&amp;uid=aggc6af8cc">ss</a> ] ScriptSource, <a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&amp;uid=aggc6af8cc">Georgian</a></li>
 <li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode6.0.0/ch11.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode6.0.0/ch11.pdf">The Unicode Standard v12.0</a></li>
 <li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Georgian_scripts">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Georgian_scripts">Georgian scripts</a></li>
+<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Georgian_language">wl</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Georgian_language">Georgian language</a></li>
 		</ol>
 </section>
 
