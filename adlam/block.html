@@ -9,20 +9,22 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
 <script src="../../uniview/descriptions.js"></script> 
 <script src="../../uniview/u.js"></script> 
 
-<script src="../../shared/fontlists/adlam.js"> </script>
+<script src="../../shared/fontlists/adlm.js"> </script>
+<script src="fuf-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -77,17 +79,23 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->8 August, 2019<!-- #EndDate -->
-&bull; tags <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="http://r12a.github.io/blog/?tag=adlam" title="Show all blog posts tagged with 'adlam'">adlam</a></p>
+<!-- #BeginDate format:Sw1 -->12 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
+
+
 <section>
    <p>This page lists characters in the following Unicode  block and provides information about them. </p>
 <ul>
 <li><a href="../../uniview/?block=adlam" target="_blank">Adlam</a></li>
    </ul>
    <p>The information was gathered from a variety of sources, and I have tried to make the summary as accurate as possible, but it has not been reviewed.</p>
-<p>For a summary of the script and its use in  writing systems, see the page <a class="linkHighlight" href="/scripts/adlam/">Adlam/Pular</a>.   For similar information related to other scripts, see the <a class="linkHighlight" href="../../scripts/links?iso=Adlm">Script links pages</a>.</p>
-<p>Find <input type="text" 
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></p>
+<p>For a summary of the script and its use in  writing systems, see the  <a class="linkHighlight" href="/scripts/adlam/">Adlam/Pular</a> summary.   For similar information related to other scripts, see the <a class="linkHighlight" href="../../scripts/links?iso=Adlm">Script links pages</a>.</p>
+<p><span style="text-align: start;">We have usage data for the following  language that uses the Adlam script</span>: Pular.</p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -105,11 +113,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="letters">
-<h2><a href="#letters">Letters</a></h2>
+<h2>Letters</h2>
 
 
 <section id="lcase">
-  <h3><a href="#lcase">small letters</a></h3>
+  <h3>Small letters</h3>
 
 
 <div class="character" id="char1E922">
@@ -456,7 +464,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="i-syllables">
-  <h3><a href="#i-syllables">supplementary small letters</a></h3>
+  <h3>Supplementary small letters</h3>
 
 <div class="character" id="char1E93E">
 <div class="charimg">&#x1E93E;</div>
@@ -558,7 +566,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="capitals">
-  <h3><a href="#a-syllables">Capital letters</a></h3>
+  <h3>Capital letters</h3>
 
 <div class="character" id="char1E900">
 <div class="charimg">&#x1E900;</div>
@@ -902,7 +910,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="supp-capital">
-  <h3><a href="#oo-syllables">Supplementary capital letters</a></h3>
+  <h3>Supplementary capital letters</h3>
 
 <div class="character" id="char1E91C">
 <div class="charimg">&#x1E91C;</div>
@@ -984,7 +992,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="diacritics">
-  <h2><a href="#diacritics">Diacritics</a></h2>
+  <h2>Diacritics</h2>
 
 <div class="character" id="char1E944">
 <div class="charimg">&#x1E944;</div>
@@ -1112,7 +1120,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="modifier">
-  <h2><a href="#modifier">Modifier character</a></h2>
+  <h2>Modifier character</h2>
   
 <div class="character" id="char1E94B">
 <div class="charimg">&#x1E94B;</div>
@@ -1147,7 +1155,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="punctuation">
-  <h2><a href="#punctuation">Punctuation</a></h2>
+  <h2>Punctuation</h2>
   
   
 <div class="character" id="char1E95E">
@@ -1188,7 +1196,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="digits">
-  <h2><a href="#digits">Digits</a></h2>
+  <h2>Digits</h2>
 
 <div class="character" id="char1E950">
 <div class="charimg">&#x1E950;</div>
@@ -1318,7 +1326,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="refs">
-  <h2><a href="#refs">References</a></h2>
+  <h2>References</h2>
 <ol>
 <li>[ <a class="fnref" href="https://www.unicode.org/L2/L2018/18282r-adlam.pdf">b</a> ] Abdoulaye Barry, Ibrahima Barry, Peter Constable, Andrew Glass, <a href="https://www.unicode.org/L2/L2018/18282r-adlam.pdf"><cite>Proposal to encode ADLAM NASALIZATION MARK for ADLaM script</cite></a></li>
 <li>[ <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n4628.pdf">e</a> ] Michael Everson, <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n4628.pdf"><cite>Proposal for encoding the Adlam script in the SMP of the UCS</cite></a></li>
@@ -1349,13 +1357,12 @@ replaceStuff('Adlam', 'adlam', spreadsheet, '', 'fuf', '', cols, false)
 <div id="panel" style="display:none"></div>
 
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/adlam/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-08-08  8:00<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Badlam%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fadlam%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version"></span></div>
 
 
 <script>
-initialise('/scripts/adlam/block')
+initialise('/scripts/adlam/block','adlam')
+autoTransliterate('fuf')
 </script>
 </body>
 </html>
