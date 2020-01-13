@@ -9,13 +9,14 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
@@ -23,6 +24,7 @@
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/cyrillic.js"> </script>
+<script src="ru-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -78,9 +80,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->14 July, 2019<!-- #EndDate -->
-&bull; tags <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="http://r12a.github.io/blog/?tag=cyrillic" title="Show all blog posts tagged with 'cyrillic'">cyrillic</a></p>
-<section>
+  <!-- #BeginDate format:Sw1 -->13 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+</p>
+
+
    <p>This page lists characters in the following Unicode  blocks and provides information about them. </p>
 <ul>
 <li><a href="../../uniview/?block=cyrillic" target="_blank">Cyrillic</a></li>
@@ -88,13 +92,14 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <li><a href="../../uniview/?block=cyrillic_extended-a" target="_blank">Cyrillic Extended-A</a></li>
 <li><a href="../../uniview/?block=cyrillic_extended-b" target="_blank">Cyrillic Extended-B</a></li>
 <li><a href="../../uniview/?block=cyrillic_extended-c" target="_blank">Cyrillic Extended-C</a></li>
-   </ul>
-   <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-<p style="text-align: start;">For details about how the script works, see <a class="linkHighlight" href="index">Cyrillic/Russian</a>. For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Cyrl">Script links pages</a>.</p>
-<p>Find
-<input type="text" 
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/>
-</p>
+</ul>
+<p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
+<p style="text-align: start;">For details about how the script works, see the <a class="linkHighlight" href="index">Cyrillic/Russian</a> summary. For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Cyrl">Script links pages</a>.</p>
+<p style="text-align: start;">We have usage data for the following 33 languages that use the Cyrillic script: Abkhaz, Adyghe, Southern Altai, Northern Azerbaijani, Belorussian, Bulgarian, Bosnian, Chechen, Shor, Church Slavonic, Even, Evenki, Nanai, Kabardian, Halh Mongolian, Khakas, Kazakh, Komi-Permyak, Kyrgyz, Macedonian, Nganasan, Orok, Ossetian, Russian, Yakut, Serbian, Tajik, Turkmen, Tatar, Tuvan, Ukrainian, Northern Uzbek, Tundra Yukaghir.</p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -110,11 +115,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="letters">
-<h2><a href="#letters">Letters</a></h2>
+<h2>Letters</h2>
 
 
 <section id="russian">
-  <h3><a href="#russian">Basic Russian alphabet</a></h3>
+  <h3>Basic Russian alphabet</h3>
   
   
 <div class="character" id="char0410">
@@ -1338,7 +1343,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="additional">
-  <h3><a href="#additional">Extended letters</a></h3>
+  <h3>Extended letters</h3>
 
 
 
@@ -3138,7 +3143,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="nivkh">
-  <h3><a href="#nivkh">Nivkh additions</a></h3>
+  <h3>Nivkh additions</h3>
   
 <div class="character" id="char04FA">
 <div class="charimg">&#x04FA;</div>
@@ -3221,7 +3226,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="komi">
-  <h3><a href="#komi">Komi additions</a></h3>
+  <h3>Komi additions</h3>
   
 <div class="character" id="char0500">
 <div class="charimg">&#x0500;</div>
@@ -3471,7 +3476,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="khanty">
-  <h3><a href="#khanty">Khanty additions</a></h3>
+  <h3>Khanty additions</h3>
   
 <div class="character" id="char0510">
 <div class="charimg">&#x0510;</div>
@@ -3528,7 +3533,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="chukchi">
-  <h3><a href="#chukchi">Chukchi additions</a></h3>
+  <h3>Chukchi additions</h3>
   
 <div class="character" id="char0512">
 <div class="charimg">&#x0512;</div>
@@ -3561,7 +3566,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="mordvin">
-  <h3><a href="#mordvin">Mordvin additions</a></h3>
+  <h3>Mordvin additions</h3>
   
 <div class="character" id="char0514">
 <div class="charimg">&#x0514;</div>
@@ -3642,7 +3647,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="kurdish">
-  <h3><a href="#kurdish">Kurdish additions</a></h3>
+  <h3>Kurdish additions</h3>
   
 <div class="character" id="char051A">
 <div class="charimg">&#x051A;</div>
@@ -3697,7 +3702,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="aleut">
-  <h3><a href="#aleut">Aleut additions</a></h3>
+  <h3>Aleut additions</h3>
   
 <div class="character" id="char051E">
 <div class="charimg">&#x051E;</div>
@@ -3730,7 +3735,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="chuvash">
-  <h3><a href="#chuvash">Chuvash additions</a></h3>
+  <h3>Chuvash additions</h3>
   
 <div class="character" id="char0520">
 <div class="charimg">&#x0520;</div>
@@ -3785,7 +3790,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="abkhaz">
-  <h3><a href="#abkhaz">Abkhaz additions</a></h3>
+  <h3>Abkhaz additions</h3>
   
 <div class="character" id="char0524">
 <div class="charimg">&#x0524;</div>
@@ -3815,7 +3820,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="azerbaijani">
-  <h3><a href="#azerbaijani">Azerbaijani additions</a></h3>
+  <h3>Azerbaijani additions</h3>
   
 <div class="character" id="char0526">
 <div class="charimg">&#x0526;</div>
@@ -3845,7 +3850,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="orok">
-  <h3><a href="#orok">Orok additions</a></h3>
+  <h3>Orok additions</h3>
   
 <div class="character" id="char0528">
 <div class="charimg">&#x0528;</div>
@@ -3878,7 +3883,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="historic">
-<h2><a href="#historic">Historic characters</a></h2>
+<h2>Historic characters</h2>
   
 <div class="character" id="char0460">
 <div class="charimg">&#x0460;</div>
@@ -4298,7 +4303,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="lettervariants">
-  <h3><a href="#lettervariants">Historic letter variants</a></h3>
+  <h3>Historic letter variants</h3>
   
 <div class="character" id="char1C80">
 <div class="charimg">&#x1C80;</div>
@@ -4368,7 +4373,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="oldcyrillic">
-  <h3><a href="#oldcyrillic">Old cyrillic</a></h3>
+  <h3>Old cyrillic</h3>
 
 
 <div class="character" id="charA640">
@@ -4891,7 +4896,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="oldcyrilliccm">
-  <h3><a href="#oldcyrilliccm">Old cyrillic combining marks</a></h3>
+  <h3>Old cyrillic combining marks</h3>
   
 <div class="character" id="charA674">
 <div class="charimg">&#xA674;</div>
@@ -4982,7 +4987,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="oldchslavoniccm">
-  <h3><a href="#oldchslavoniccm">Old Church Slavonic combining marks</a></h3>
+  <h3>Old Church Slavonic combining marks</h3>
   
 <div class="character" id="char2DE0">
 <div class="charimg">&#x2DE0;</div>
@@ -5212,7 +5217,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="abkhasian">
-  <h3><a href="#abkhasian">Old Abkhasian</a></h3>
+  <h3>Old Abkhasian</h3>
   
 
 <div class="character" id="charA680">
@@ -5461,7 +5466,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="modifier">
-  <h3><a href="#modifier">Modifier letter</a></h3>
+  <h3>Modifier letter</h3>
   
 <div class="character" id="charA67F">
 <div class="charimg">&#xA67F;</div>
@@ -5475,7 +5480,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="punctuation">
-  <h3><a href="#punctuation">Punctuation</a></h3>
+  <h3>Punctuation</h3>
   
 <div class="character" id="charA673">
 <div class="charimg">&#xA673;</div>
@@ -5496,7 +5501,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="abbreviation">
-  <h3><a href="#abbreviation">Abbreviation mark</a></h3>
+  <h3>Abbreviation mark</h3>
   
 <div class="character" id="charA66F">
 <div class="charimg">&#xA66F;</div>
@@ -5510,7 +5515,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="numeric">
-  <h3><a href="#numeric">Numeric signs</a></h3>
+  <h3>Numeric signs</h3>
   
 <div class="character" id="char0482">
 <div class="charimg">&#x0482;</div>
@@ -5559,7 +5564,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="misc">
-  <h3><a href="#misc">Miscellaneous</a></h3>
+  <h3>Miscellaneous</h3>
 
 <div class="character" id="char0483">
 <div class="charimg">&#x0483;</div>
@@ -5602,12 +5607,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="refs">
-<h2><a href="#refs">References</a></h2>
+<h2>References</h2>
   <ol>
-    <li>[ <sup><a href="http://www.unicode.org/versions/latest/ch07.pdf">u</a></sup> ] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch07.pdf">Cyrillic</a>, pp316-320.</li>
-    <li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
+<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
 		    0-19-507993-0, pp408-412</li>
-<li>[ <sup><a href="http://en.wikipedia.org/wiki/Cyrillic_script">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Cyrillic_script">Cyrillic script</a>.</li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch07.pdf">u</a> ] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch07.pdf">Cyrillic</a>, pp316-320.</li>
+<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Cyrillic_script">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Cyrillic_script">Cyrillic script</a>.</li>
 </ol>
 </section>
 
@@ -5617,7 +5622,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 
-<script src="../../shared/scriptdb/russian.js">  </script>
+<script src="../../shared/scriptdb/cyrl-ru.js">  </script>
 
 <script>
 replaceStuff('Russian', 'russian', spreadsheet, '', 'ru', '', cols, false)
@@ -5632,14 +5637,12 @@ replaceStuff('Russian', 'russian', spreadsheet, '', 'ru', '', cols, false)
 <div id="panel" style="display:none"></div>
 
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/cyrillic/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-07-14  10:20<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bcyrillic%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fcyrillic%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
-
+<div class="smallprint"><span id="version"></span></div>
 
 
 <script>
-initialise('/scripts/cyrillic/block')
+initialise('/scripts/cyrillic/block','cyrillic')
+autoTransliterate('ru')
 </script>
 
 </body>
