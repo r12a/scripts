@@ -8,13 +8,14 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
@@ -22,6 +23,7 @@
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/lisu.js"> </script>
+<script src="lis-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -67,7 +69,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 </aside>
 
 <div id="intro">
-<p id="status">Updated Sun 31 2014  &bull; tags <a href="https://r12a.github.io/blog/index.php?tag=lisu" title="Show all blog posts tagged with 'lisu'">lisu</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+<p id="status">Updated 
+<!-- #BeginDate format:Sw1 -->14 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
+
 
 <section>
   <p>This page lists characters in the following Unicode  block and provides information about them.</p>
@@ -76,8 +82,12 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   </ul>
   <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
   <!--p>For a summary of the script and its use in  writing systems, see the page <a class="linkHighlight" href="/scripts/lisu/">Lisu script summary</a>.   For similar information related to other scripts, see <a href="/r12a.github.io/doclist#charnotes">this list</a>.</p-->
-  <p>For details about how the script works, see <a class="linkHighlight" href="index">Lisu (Fraser script)</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Lisu">Script links pages</a>.</p>
-  <p>Find <input type="text" onChange="var hex=this.value;if (hex!=''){while(hex.length<4){hex='0'+hex;}document.location='#char'+hex.toUpperCase();}"/></p>
+  <p>For details about how the script works, see the <a class="linkHighlight" href="index">Lisu (Fraser script)</a> summary.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Lisu">Script links pages</a>.</p>
+<p><span style="text-align: start;">We have usage data for the following  language that uses the Lisu script</span>: Lisu.</p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -93,7 +103,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="consonants">
-  <h2><a href="consonants">Consonants</a></h2>
+  <h2>Consonants</h2>
   
   
   
@@ -408,7 +418,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="vowels">
-  <h2><a href="#vowels">Vowels</a></h2>
+  <h2>Vowels</h2>
   <div class="character" id='charA4EE'>
     <div class="charimg">&#xA4EE;</div>
     <p class="charname"><strong>U+A4EE</strong> <a href="#charA4EE">LISU LETTER A</a></p>
@@ -526,7 +536,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="tone">
-  <h2><a href="#tone">Tones</a></h2>
+  <h2>Tones</h2>
   <div class="character" id='charA4F8'>
     <div class="charimg">&#xA4F8;</div>
     <p class="charname"><strong>U+A4F8</strong> <a href="#charA4F8">LISU LETTER TONE MYA TI</a></p>
@@ -601,7 +611,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="punctuation">
-  <h2><a href="#punctuation">Punctuation</a></h2>
+  <h2>Punctuation</h2>
   <div class="character" id='charA4FE'>
     <div class="charimg">&#xA4FE;</div>
     <p class="charname"><strong>U+A4FE</strong> <a href="#charA4FE">LISU PUNCTUATION COMMA</a></p>
@@ -628,6 +638,22 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 
+ 
+	
+
+
+<section id="refs">
+<h2>Further reading</h2>
+		<ol>
+<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <span class="doctitle"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN 0-19-507993-0</li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">The Unicode Standard v11.0</a></li>
+<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Lisu_script">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Lisu_script">Lisu script</a></li>
+<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Lisu_language">wl</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Lisu_language">Lisu language</a></li>
+</ol>
+</section>
+
+
+
 
 
 
@@ -643,31 +669,13 @@ replaceStuff('Lisu', 'lisu', spreadsheet, '', 'lis', '', cols, false)
 
 <div id="panel" style="display:none"></div>
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/lisu/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-07-14  12:14<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Blisu%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Flisu%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
-<!-- Uncomment this code to get a list of all character names for the file names-subset.js  
-<div id=charliststr></div>
-<div><span class="ex" lang="lis">ꓐꓑꓒꓓꓔꓕꓖꓗꓘꓙꓚꓛꓜꓝꓞꓟꓠꓡꓢꓣꓤꓥꓦꓧꓨꓩꓪꓫꓬꓭꓮꓯꓰꓱꓲꓳꓴꓵꓶꓷꓸꓹꓺꓻꓼꓽ꓾꓿'-_</span></div>
-<div id="listofchars"></div>
-<script src="/javascript/showcharacters/names.js"></script>
-<script src="data-extraction.js">//</script>
-<script>document.getElementById('listofchars').innerHTML = getlistofchars();
-listCharsWithNotes();
-</script>
---> 
+<div class="smallprint"><span id="version"></span></div>
 
-<!--
-Consonants;consonants;a4d0-a4ed
-Vowels;vowels;a4ee-a4f7
-Tones;tones;a4f8-a4fd
-Punctuation;punctuation;a4fe-a4ff
-Characters from ASCII range;ascii;0027 002d 005f
---> 
 
 <script>
-initialise('/scripts/lisu/block')
+initialise('/scripts/lisu/block','lisu')
+autoTransliterate('lis')
 </script>
 </body>
 </html>
