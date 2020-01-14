@@ -9,13 +9,14 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
@@ -23,6 +24,7 @@
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/sinhala.js"> </script>
+<script src="si-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -76,8 +78,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->14 July, 2019<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="https://r12a.github.io/blog/?tag=sinhala" title="Show all blog posts tagged with 'sinhala'">sinhala</a></p>
+<!-- #BeginDate format:Sw1 -->14 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
+
+
 <section>
    <p>This page lists characters in the following Unicode  blocks and provides information about them. </p>
 <ul>
@@ -85,12 +90,13 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <li><a href="/uniview/?block=sinhala_archaic_numbers">Sinhala Archaic Numbers </a></li>
    </ul>
    <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-<p>For details about how the script works, see <a class="linkHighlight" href="index">Sinhala</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Sinh">Script links pages</a>.</p>
+<p>For details about how the script works, see the <a class="linkHighlight" href="index">Sinhala</a> summary.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Sinh">Script links pages</a>.</p>
+<p><span style="text-align: start;">We have usage data for the following  language that uses the Sinhala script</span>: <span style="text-align: start;">Sinhala</span>.</p>
 <!--p style="text-align: start;">The transliteration is based on ISO 9985.</p-->
-<p>Find
-<input type="text" 
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/>
-</p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -107,11 +113,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="consonants">
-<h2><a href="#consonants">Consonants</a></h2>
+<h2>Consonants</h2>
 
 
 <section id="basicconsonants">
-  <h3><a href="#basicconsonants">Śuddha consonants</a></h3>
+  <h3>Śuddha consonants</h3>
 
 
 <div class="character" id="char0D9A">
@@ -577,7 +583,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="misra">
-  <h3><a href="#misra">Miśra consonants</a></h3>
+  <h3>Miśra consonants</h3>
 
 
 <div class="character" id="char0D9B">
@@ -631,8 +637,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter sinhala">
 <p class="titlepara"><span class="title">Sinhala</span> &nbsp;&nbsp; <span class="ipa">ɡna</span></p>
 <p>Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
-<p><a class="ipa">ɲ</a> at the beginning of a word, and pronounced the same as <span class="codepoint"><span lang="si">&#x0DA4;</span> [<a href="/scripts/sinhala/block#char0DA4"><span class="uname">U+0DA4 SINHALA LETTER TAALUJA NAASIKYAYA</span></a>]</span>, eg. compare <span class="charExample" translate="no"><span class="ex" lang="si">ඤාණ</span> <span class="trans">ɲān (ɲāna)</span> <span class="meaning">Jnana</span></span> and <span class="charExample" translate="no"><span class="ex" lang="si">ඥාන</span> <span class="trans">ǰᵑāṅ (ᵑǰāṅa)</span> <span class="meaning">knowledge</span></span>.</p>
-<p><span class="ipa">gn</span> elsewhere  two consonants, eg. <span class="charExample" translate="no"><span class="ex" lang="si">පඥා</span> <span class="trans">pᵑǰā (paᵑǰā)</span> <span class="ipa">pagɲa</span></span>.</p>
+<p><a class="ipa">ɲ</a> at the beginning of a word, and pronounced the same as <span class="codepoint"><span lang="si">&#x0DA4;</span> [<a href="/scripts/sinhala/block#char0DA4"><span class="uname">U+0DA4 SINHALA LETTER TAALUJA NAASIKYAYA</span></a>]</span>, eg. compare <span class="charExample" translate="no"><span class="ex" lang="si">ඤාණ</span> <span class="trans">ɲān</span> (<span class="trans">ɲāna</span>) <span class="meaning">Jnana</span></span> and <span class="charExample" translate="no"><span class="ex" lang="si">ඥාන</span> <span class="trans">ǰᵑāṅ</span> (<span class="trans">ᵑǰāṅa</span>) <span class="meaning">knowledge</span></span>.</p>
+<p><span class="ipa">gn</span> elsewhere  two consonants, eg. <span class="charExample" translate="no"><span class="ex" lang="si">පඥා</span> <span class="trans">pᵑǰā</span> (<span class="trans">paᵑǰā</span>) <span class="ipa">pagɲa</span></span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -654,7 +660,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter sinhala">
 <p class="titlepara"><span class="title">Sinhala</span> &nbsp;&nbsp; <span class="ipa">ŋ</span></p>
 <p>Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
-<p>This consonant never appears with a vowel, but does appear with a virama, ie. <span class="charExample"><span class="ex" lang="si">ඞ්</span></span>.<sup><a href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">s</a></sup></p>
+<p>This consonant never appears with a vowel, but does appear with a virama, ie. <span class="charExample"><span class="ex" lang="si">ඞ්</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Sinhala_alphabet" target="_blank">s</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -972,10 +978,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="vowels">
-<h2><a href="#vowels">Vowels</a></h2>
+<h2>Vowels</h2>
   
 <section id="suddhaindependent">
-  <h3><a href="#suddhaindependent">Śuddha independent vowels</a></h3>
+  <h3>Śuddha independent vowels</h3>
 
 <div class="character" id="char0D85">
 <div class="charimg">&#x0D85;</div>
@@ -1216,7 +1222,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="misraindependent">
-  <h3><a href="#misraindependent">Miśra independent vowels</a></h3>
+  <h3>Miśra independent vowels</h3>
 
 <div class="character" id="char0D8D">
 <div class="charimg">&#x0D8D;</div>
@@ -1247,7 +1253,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter sinhala">
 <p class="titlepara"><span class="title">Sinhala</span> &nbsp;&nbsp; <span class="ipa">riː,ruː</span></p>
-<p>Long vocalic r. Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).  Not in contemporary use, however the corresponding vowel sign, <span class="codepoint"><span lang="si">&#x25CC;&#x0DF2;</span> [<a href="/scripts/sinhala/block#char0DF2"><span class="uname">U+0DF2 SINHALA VOWEL SIGN DIGA GAETTA-PILLA​</span></a>]</span>, <em>is</em> used, eg. <span class="charExample" translate="no"><span class="ex" lang="si">කරතෲ</span> <span class="trans">krtr̥̄ (karatr̥̄)</span></span>.</p>
+<p>Long vocalic r. Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).  Not in contemporary use, however the corresponding vowel sign, <span class="codepoint"><span lang="si">&#x25CC;&#x0DF2;</span> [<a href="/scripts/sinhala/block#char0DF2"><span class="uname">U+0DF2 SINHALA VOWEL SIGN DIGA GAETTA-PILLA​</span></a>]</span>, <em>is</em> used, eg. <span class="charExample" translate="no"><span class="ex" lang="si">කරතෲ</span> <span class="trans">krtr̥̄</span> (<span class="trans">karatr̥̄</span>)</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1346,7 +1352,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="suddhavowelsigns">
-  <h3><a href="#suddhavowelsigns">Śuddha vowel signs</a></h3>
+  <h3>Śuddha vowel signs</h3>
 
 <div class="character" id="char0DCF">
 <div class="charimg">&#x0DCF;</div>
@@ -1585,7 +1591,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="misravowelsigns">
-  <h3><a href="#misravowelsigns">Miśra vowel signs</a></h3>
+  <h3>Miśra vowel signs</h3>
 
 <div class="character" id="char0DD8">
 <div class="charimg">&#x0DD8;</div>
@@ -1616,7 +1622,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter sinhala">
 <p class="titlepara"><span class="title">Sinhala</span> &nbsp;&nbsp;  <span data-type="name"><span data-type="localname" lang="si">ගැටය සහිත ඇලපිලි දෙක</span> <span class="trans" data-type="nametransliteration">gæṭa sahita ælapili deka</span></span> &nbsp;&nbsp; <span class="ipa">riː,ruː</span></p>
-<p>Long vocalic r, eg. <span class="charExample"><span class="ex" lang="si">කරතෲ</span> <span class="trans">karatr̥̄</span></span>. Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
+<p>Long vocalic r, eg. <span class="charExample"><span class="ex" lang="si">කරතෲ</span> <span class="trans">karatr̥̄</span> (<span class="trans">karatr̥̄</span>)</span>. Part of the extended (<span class="trans">miśra</span>) repertoire (for Sanskrit, Pali, etc).</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1795,7 +1801,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="punctuation">
-<h2><a href="#punctuation">Punctuation</a></h2>
+<h2>Punctuation</h2>
 <div class="character" id="char0DF4">
 <div class="charimg">&#x0DF4;</div>
 <p class="charname"><strong>U+0DF4</strong> <a href="#char0DF4">SINHALA PUNCTUATION KUNDDALIYA</a></p>
@@ -1817,10 +1823,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="digits">
-<h2><a href="#digits">Numbers</a></h2>
+<h2>Numbers</h2>
   
   <section id="native_digits">
-  <h3><a href="#native_digits">Astrological digits</a></h3>
+  <h3>Astrological digits</h3>
 
 <div class="character" id="char0DE6">
 <div class="charimg">&#x0DE6;</div>
@@ -2027,7 +2033,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
   
   <section id="archaic_digits">
-  <h3><a href="#archaic_digits">Archaic digits</a></h3>
+  <h3>Archaic digits</h3>
 
 <div class="character" id="char111E1">
 <div class="charimg">&#x111E1;</div>
@@ -2378,13 +2384,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="refs">
-  <h2><a href="#refs">References</a></h2>
+  <h2>References</h2>
 <ol>
-<li>[ <sup><a href="http://www.unicode.org/versions/latest/ch13.pdf">u</a></sup> ] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch13.pdf">Sinhala</a>, pp513-514.</li>
-<li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
+<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
 		    0-19-507993-0, pp408-412</li>
-<li>[ <sup><a href="http://en.wikipedia.org/wiki/Sinhalese_alphabet">w</a></sup> ] <a href="http://en.wikipedia.org/wiki/Sinhalese_alphabet">Sinhalese alphabet</a>.</li>
-<li>[ <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2737.pdf">s</a></sup> ] <cite><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2737.pdf">Sri Lanka Standard, Sinhala Character Code for Information Exchange</a></cite>.</li>
+<li>[ <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2737.pdf">s</a> ] <cite><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2737.pdf">Sri Lanka Standard, Sinhala Character Code for Information Exchange</a></cite>.</li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch13.pdf">u</a> ] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch13.pdf">Sinhala</a>, pp513-514.</li>
+<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Sinhalese_alphabet">w</a> ] <a href="http://en.wikipedia.org/wiki/Sinhalese_alphabet">Sinhalese alphabet</a>.</li>
 </ol>
 </section>
 
@@ -2407,14 +2413,12 @@ replaceStuff('Sinhala', 'sinhala', spreadsheet, '', 'si', '', cols, false)
 <div id="panel" style="display:none"></div>
 
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/sinhala/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-07-14  14:46<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bsinhala%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fsinhala%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
-
+<div class="smallprint"><span id="version"></span></div>
 
 
 <script>
-initialise('/scripts/sinhala/block')
+initialise('/scripts/sinhala/block','sinhala')
+autoTransliterate('si')
 </script>
 </body>
 </html>
