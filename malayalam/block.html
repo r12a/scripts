@@ -9,13 +9,14 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
@@ -23,6 +24,7 @@
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/malayalam.js"> </script>
+<script src="ml-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -71,8 +73,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->14 July, 2019<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/index.php?tag=malayalam" title="Show all blog posts tagged with 'malayalam'">malayalam</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+  <!-- #BeginDate format:Sw1 -->14 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
+
+
 <section>
   <p>This page lists characters in the following Unicode  block and provides information about them.</p>
   <ul>
@@ -80,8 +85,12 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   </ul>
   <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
   <!--p>For a summary of the script and its use in  writing systems, see the page <a class="linkHighlight" href="/scripts/malayalam/">Malayalam script summary</a>.   For similar information related to other scripts, see <a href="/r12a.github.io/doclist#charnotes">this list</a>.</p-->
-  <p>For details about how the script works, see <a class="linkHighlight" href="index">Malayalam</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Mlym">Script links pages</a>.</p>
-  <p>Find <input type="text" onChange="var hex=this.value;if (hex!=''){while(hex.length<4){hex='0'+hex;}document.location='#char'+hex.toUpperCase();}"/></p>
+  <p>For details about how the script works, see the <a class="linkHighlight" href="index">Malayalam</a> summary.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Mlym">Script links pages</a>.</p>
+<p><span style="text-align: start;">We have usage data for the following  language that uses the Malayalam script</span>: <span style="text-align: start;">Malayalam</span>.</p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -100,10 +109,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="consonants">
-  <h2><a href="#consonants">Consonants</a></h2>
+  <h2>Consonants</h2>
     
 <section id="basic_consonants">
-  <h3><a href="#basic_consonants">Basic consonants</a></h3>
+  <h3>Basic consonants</h3>
     
   <div class="character" id='char0D15'>
     <div class="charimg">&#x0D15;</div>
@@ -343,7 +352,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
         <p class="titlepara"><span class="title">Malayalam</span> consonant</p>
         <p><span class="ipa">n̪</span> when initial and single.</p>
         <p><span class="ipa">n</span> elsewhere when single.</p>
-        <p>The geminate form can be either, eg. <span class="ex" lang="ml" xml:lang="ml">പന്നി</span> <span class="ipa">pan̪n̪i</span> (<span class="meaning">pig</span>) and <span class="ex" lang="ml" xml:lang="ml">കന്നി</span> <span class="ipa">kanni</span> (<span class="meaning">unmarried girl</span>).</p>
+        <p>The geminate form can be either, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">പന്നി</span> <span class="trans">pn͓ni</span> <span class="ipa">pan̪n̪i</span> <span class="meaning">pig</span></span> and <span class="charExample" translate="no"><span class="ex" lang="ml">കന്നി</span> <span class="trans">kn͓ni</span> <span class="ipa">kanni</span> <span class="meaning">unmarried girl</span></span>.</p>
       </div>
     </div>
   </div>
@@ -411,7 +420,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
     <div class="notes">
       <div class="letter malayalam">
         <p class="titlepara"><span class="title">Malayalam</span> consonant <span class="ipa">m</span></p>
-        <p>An <span class="ipa">m</span> at the end of a syllable is commonly written with <span class="codepoint"><span lang="ml">&#x0D02;</span> [<a href="#char0D02" class="uname">U+0D02 MALAYALAM SIGN ANUSVARA</a>]</span>, eg. <span class="ex" lang="ml" xml:lang="ml">ഹംസം</span> <span class="ipa">hamsam</span> (<span class="meaning">swan</span>).</p>
+        <p>An <span class="ipa">m</span> at the end of a syllable is commonly written with <span class="codepoint"><span lang="ml">&#x0D02;</span> [<a href="#char0D02" class="uname">U+0D02 MALAYALAM SIGN ANUSVARA</a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">ഹംസം</span> <span class="trans">hംsം</span> <span class="ipa">hamsam</span> <span class="meaning">swan</span></span>.</p>
       </div>
     </div>
   </div>
@@ -560,7 +569,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   
 </section>
 <section id='chillu'>
-  <h3><a href='#chillu'>Chillu letters</a></h3>
+  <h3>Chillu letters</h3>
 
 
 
@@ -634,11 +643,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 </section>
 </section>
 <section id="vowels">
-  <h2><a href="#vowels">Vowels</a></h2>
+  <h2>Vowels</h2>
 
   
 <section id="ivowels">
-  <h3><a href="#ivowels">Independent vowels</a></h3>
+  <h3>Independent vowels</h3>
 
 
 
@@ -828,7 +837,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   
 </section>
 <section id='dvowels'>
-  <h3><a href='#dvowels'>Dependent vowel signs</a></h3>
+  <h3>Dependent vowel signs</h3>
   
   
 
@@ -1047,7 +1056,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   </div>
 </section>
 <section id='sanskrit'>
-  <h3><a href='#sanskrit'>Additions for Sanskrit</a></h3>
+  <h3>Additions for Sanskrit</h3>
     
 
 
@@ -1138,7 +1147,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 </section>
 <section id='historic_vowels'>
-  <h3><a href='#historic_vowels'>Historic vowel</a></h3>
+  <h3>Historic vowel</h3>
     
 
 
@@ -1154,11 +1163,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 </section>
 </section>
 <section id="signs">
-  <h2><a href="#signs">Signs</a></h2>
+  <h2>Signs</h2>
 
 
 <section id="varioussigns">
-  <h3><a href="#varioussigns">Various</a></h3>
+  <h3>Various</h3>
 
 
 
@@ -1171,7 +1180,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
     <div class="notes">
       <div class="letter malayalam">
         <p class="titlepara"><span class="title">Malayalam</span> combining mark</p>
-        <p><span class="ipa">m</span> (used at the end of a syllable), eg. <span class="ex" lang="ml" xml:lang="ml">ഹംസം</span> <span class="ipa">hamsam</span> (<span class="meaning">swan</span>).</p>
+        <p><span class="ipa">m</span> (used at the end of a syllable), eg. <span class="charExample" translate="no"><span class="ex" lang="ml">ഹംസം</span> <span class="trans">hംsം</span> <span class="ipa">hamsam</span> <span class="meaning">swan</span></span>.</p>
       </div>
     </div>
   </div>
@@ -1198,7 +1207,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   </div>
 </section>
 <section id='virama'>
-  <h3><a href='#virama'>Viramas</a></h3>
+  <h3>Viramas</h3>
   <div class="character" id="char0D4D">
   <div class="charimg">&#x0D4D;</div>
 <p class="charname"><strong>U+0D4D</strong> <a href="#char0D4D">MALAYALAM SIGN VIRAMA</a></p>
@@ -1207,10 +1216,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
   <div class="letter malayalam">
     <p class="titlepara"><span class="title">Malayalam</span> <span class="name">chandrakkala</span></p>
-    <p>Functions as a normal indic virama to indicate conjuncts in consonant clusters, eg. <span class="ex" lang="ml">ക്ഷ</span> <span class="trans">kṣ</span>, <span class="ex" lang="ml">ക്ക</span> <span class="trans">kka</span>, <span class="ex" lang="ml">പ്പ</span> <span class="trans">ppa</span>, etc</p>
+    <p>Functions as a normal indic virama to indicate conjuncts in consonant clusters, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">ക്ഷ</span> <span class="trans">k͓ʂ</span></span>, <span class="charExample" translate="no"><span class="ex" lang="ml">ക്ക</span> <span class="trans">k͓k</span></span>, <span class="charExample" translate="no"><span class="ex" lang="ml">പ്പ</span> <span class="trans">p͓p</span></span>, etc</p>
     <p>Another function, however, is to reduce vowel sounds, producing the sound known as 'half-u' or <span class="name">samvruthokaram</span>, ie.  <span class="ipa">ə</span>.</p>
-    <p>In traditional orthography this is produced using <span class="codepoint"><span lang="ml">&#x0D41;</span> [<a href="#char0D41" class="uname">U+0D41 MALAYALAM VOWEL SIGN U</a>]</span> with a virama above, eg. <span class="ex" lang="ml">പാലു്</span> <span class="ipa">paːlə</span> <span class="trans">pālŭ</span> <span class="meaning">milk</span>.</p>
-    <p>In modern orthography it is produced using the <span class="name">chandrakkala</span> above a vowel or a consonant, in which case it reduces the vowel or the inherent vowel to <span class="ipa">ə</span>, eg. <span class="ex" lang="ml">എ്ന്നാ</span> <span class="ipa">ənnaː </span> <span class="trans">ŭnnā </span> <span class="meaning">on which day?</span>, <span class="ex" lang="ml">ഐശീല്ം</span> <span class="ipa">ai̯ɕiːləm </span> <span class="trans">aiśīlŭṃ </span> <span class="meaning">than ice</span>.</p>
+    <p>In traditional orthography this is produced using <span class="codepoint"><span lang="ml">&#x0D41;</span> [<a href="#char0D41" class="uname">U+0D41 MALAYALAM VOWEL SIGN U</a>]</span> with a virama above, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">പാലു്</span> <span class="trans">pālu͓</span> <span class="ipa">paːlə</span> <span class="meaning">pink</span></span>.</p>
+    <p>In modern orthography it is produced using the <span class="name">chandrakkala</span> above a vowel or a consonant, in which case it reduces the vowel or the inherent vowel to <span class="ipa">ə</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">എ്ന്നാ</span> <span class="trans">ẹ͓n͓nā</span> <span class="ipa">ənnaː</span> <span class="meaning">on which day?</span></span>, <span class="charExample" translate="no"><span class="ex" lang="ml">ഐശീല്ം</span> <span class="trans">ạʲʃīl͓ം</span> <span class="ipa">ai̯ɕiːləm</span> <span class="meaning">than ice</span></span>.</p>
     <p>Note that the first example in the previous paragraph uses the <span class="name">chandrakkala</span> in both ways. The 2nd example shows  the <span class="name">chandrakkala</span>  before the <span class="name">anusvara</span>, which is normal.</p>
   </div>
 <p class="ref">Refs:  [1] <a href="http://www.unicode.org/versions/Unicode5.2.0/ch09.pdf">Unicode Standard 9</a> p499</p>
@@ -1235,7 +1244,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   
 </section>
 <section id='dotreph'>
-  <h3><a href='#dotreph'>Dot reph</a></h3>
+  <h3>Dot reph</h3>
 
 
     
@@ -1249,7 +1258,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   
 </section>
 <section id='dates'>
-  <h3><a href='#dates'>Date mark</a></h3>
+  <h3>Date mark</h3>
 
 
     
@@ -1264,7 +1273,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   
 </section>
 <section id='measurement'>
-  <h3><a href='#measurement'>Measurement sign</a></h3>
+  <h3>Measurement sign</h3>
 
 
     
@@ -1279,7 +1288,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 </section>
 <section id='sanskrit_signs'>
-  <h3><a href='#sanskrit_signs'>Addition for Sanskrit</a></h3>
+  <h3>Addition for Sanskrit</h3>
  
  
  
@@ -1295,10 +1304,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 </section>
 </section>
 <section id='numbers'>
-  <h2><a href='#numbers'>Numbers</a></h2>
+  <h2>Numbers</h2>
     
 <section id='digits'>
-  <h3><a href='#digits'>Digits</a></h3>
+  <h3>Digits</h3>
 
 
 
@@ -1377,7 +1386,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   
 </section>
 <section id='numerics'>
-  <h3><a href='#numerics'>Malayalam numerics</a></h3>
+  <h3>Malayalam numerics</h3>
 
 
 
@@ -1407,7 +1416,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   
   
 <section id='fractions'>
-  <h3><a href='#fractions'>Fractions</a></h3>
+  <h3>Fractions</h3>
 
 
 
@@ -1515,6 +1524,25 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 
+<section id="refs">
+<h2>References</h2>
+		<ol>
+			<!--li>[Daniels] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
+				0-19-507993-0</li-->
+<li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="doctitle"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
+		    0-19-507993-0</li>
+<li>[ <sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u</a></sup> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf">The Unicode Standard v11.0</a></li>
+<li>[ <sup><a href="http://en.wikipedia.org/wiki/Malayalam_script">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Malayalam_script">Malayalam script</a></li>
+</ol>
+</section>
+
+
+
+
+
+
+
+
 <script src="../../shared/scriptdb/malayalam.js">  </script>
 
 <script>
@@ -1526,38 +1554,13 @@ replaceStuff('Malayalam', 'malayalam', spreadsheet, '', 'ml', '', cols, false)
 
 <div id="panel" style="display:none"></div>
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/malayalam/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-07-14  13:52<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bmalayalam%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fmalayalam%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
-<!-- Uncomment this code to get a list of all character names for the file names-subset.js  
-<div id=charliststr></div>
-<div><span class="ex" lang="ml">ഁംഃഅആഇഈഉഊഋഌഎഏഐഒഓഔകഖഗഘങചഛജഝഞടഠഡഢണതഥദധനഩപഫബഭമയരറലളഴവശഷസഹഺഽാിീുൂൃൄെേൈൊോൌ്ൎൗൠൡൢൣ൦൧൨൩൪൫൬൭൮൯൰൱൲൳൴൵൹ൺൻർൽൾൿ</span></div>
-<div id="listofchars"></div>
-<script src="/javascript/showcharacters/names.js"></script>
-<script src="data-extraction.js">//</script>
-<script>document.getElementById('listofchars').innerHTML = getlistofchars();
-listCharsWithNotes();
-</script>
---> 
+<div class="smallprint"><span id="version"></span></div>
 
-<!--
-Various signs;varioussigns;0D02-0D03 0D57
-Independent vowels;ivowels;0D05-0D14
-Consonants;consonants;0D15-0D3A
-Chillu letters;chillu;0D7A-0D7f
-Additions for Sanskrit;sanskrit;0D60-0D61
-Dependent vowel signs;dvowels;0D62-0D63
-Two-part dependent vowel signs;twopart;0D4A-0D4c
-Virama;virama;0D4D
-Dot reph;dotreph;0D4E
-Digits;digits;0D66-0D6F
-Malayalam numerics;numerics;0D70-0D72
-Date mark;datemark;0D79
---> 
 
 <script>
-initialise('/scripts/malayalam/block')
+initialise('/scripts/malayalam/block', 'malayalam')
+autoTransliterate('ml')
 </script>
 </body>
 </html>
