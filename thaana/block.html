@@ -9,13 +9,14 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
@@ -23,6 +24,7 @@
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/thaana.js"> </script>
+<script src="dv-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -76,20 +78,24 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->15 July, 2019<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="https://r12a.github.io/blog/?tag=thaana" title="Show all blog posts tagged with 'thaana'">thaana</a></p>
+<!-- #BeginDate format:Sw1 -->14 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
+
+
 <section>
    <p>This page lists characters in the following Unicode  block and provides information about them. </p>
 <ul>
 <li><a href="../../uniview/?block=thaana" target="_blank">Thaana</a></li>
    </ul>
    <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-<p>For details about how the script works, see <a class="linkHighlight" href="index">Thaana/Dhivehi</a>. For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Thaa">Script links pages</a>.</p>
+<p>For details about how the script works, see the <a class="linkHighlight" href="index">Thaana/Dhivehi</a> summary. For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Thaa">Script links pages</a>.</p>
+<p><span style="text-align: start;">We have usage data for the following  language that uses the Thaana script</span>: <span style="text-align: start;">Dhivehi</span>.</p>
 <!--p style="text-align: start;">The transliteration is based on ISO 9985.</p-->
-<p>Find
-<input type="text" 
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/>
-</p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -106,11 +112,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="consonants">
-<h2><a href="#consonants">Consonants</a></h2>
+<h2>Consonants</h2>
 
 
 <section id="basicconsonants">
-  <h3><a href="#basicconsonants">Basic consonants</a></h3>
+  <h3>Basic consonants</h3>
 
 
 <div class="character" id="char0780">
@@ -146,9 +152,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Dhivehi</span>
 <span class="name"><span class="localname" dir="rtl" lang="dv">ށަވިޔަނަ</span>
  <span class="transliteratedname trans">shaviyana</span></span> <span class="ipa">ʂ</span></p>
-<p><span class="ipa">ʔ</span> in final position in a word with <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span>, eg. <span class="ex" dir="rtl" lang="dv">ރަށް</span> <span class="ipa">raʔ</span> <span class="meaning">island</span>.</p>
-<p><span class="ipa">ʂ</span>  when the word continues, eg. <span class="ex" dir="rtl" lang="dv">ރަށެއް</span> <span class="ipa">raʂeh</span> <span class="meaning">an island</span>  and <span class="ex" dir="rtl" lang="dv">ރަށަކީ</span> <span class="ipa">raʂakeː</span> <span class="meaning">the island is.<sup>4</sup></span></p>
-<p>With  <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span> before another consonant, leads to that consonant being doubled, eg. <span class="ex" lang="dv" dir="rtl">އަށްޑިހަ</span> <span class="ipa">aɖɖiha</span> <span class="meaning">eighty</span>.<sup>d</sup></p>
+<p><span class="ipa">ʔ</span> in final position in a word with <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="dv" dir="rtl">ރަށް</span> <span class="trans">rəʂ͓</span> <span class="ipa">raʔ</span> <span class="meaning">island</span></span>.</p>
+<p><span class="ipa">ʂ</span>  when the word continues, eg. <span class="charExample" translate="no"><span class="ex" lang="dv" dir="rtl">ރަށެއް</span> <span class="trans">rəʂeʿ͓</span> <span class="ipa">raʂeh</span> <span class="meaning">an island</span></span>  and <span class="charExample" translate="no"><span class="ex" lang="dv" dir="rtl">ރަށަކީ</span> <span class="trans">rəʂəkī</span> <span class="ipa">raʂakeː</span> <span class="meaning">the island is</span></span>.<sup>4</sup></p>
+<p>With  <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span> before another consonant, leads to that consonant being doubled, eg. <span class="charExample" translate="no"><span class="ex" lang="dv" dir="rtl">އަށްޑިހަ</span> <span class="trans">ʿəʂ͓ɖihə</span> <span class="ipa">aɖɖiha</span> <span class="meaning">eighty</span></span>.<sup>d</sup></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -171,8 +177,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Dhivehi</span>
 <span class="name"><span class="localname" dir="rtl" lang="dv">ނޫނު</span>
  <span class="transliteratedname trans">noonu</span></span> <span class="ipa">n</span></p>
-<p>When written with no diacritic, this indicates prenasalization of a following stop, eg. <span class="ex" lang="dv">ކަނޑު</span> <span class="ipa">kaⁿɖu</span> <span class="meaning">sea</span>. It is the only case where a letter can appear without a diacritic. In some cases, however, the prenasalisation is not indicated at all, although it is pronounced, eg. <span class="ex" lang="dv">ކަޑު</span>.<sup>d</sup> <sup><a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">w</a></sup></p>
-<p>With <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span> it  indicates gemination of a following nasal, eg. <span class="ex" dir="rtl" lang="dv">އެންމެ</span> <span class="ipa">emme</span> <span class="meaning">only</span>.</p>
+<p>When written with no diacritic, this indicates prenasalization of a following stop, eg. <span class="charExample" translate="no"><span class="ex" lang="dv" dir="rtl">ކަނޑު</span> <span class="trans">kənɖu</span> <span class="ipa">kaⁿɖu</span> <span class="meaning">sea</span></span>. It is the only case where a letter can appear without a diacritic. In some cases, however, the prenasalisation is not indicated at all, although it is pronounced, eg. <span class="charExample" translate="no"><span class="ex" lang="dv" dir="rtl">ކަޑު</span> <span class="trans">kəɖu</span></span>.<a class="fnref" href="#refs">d</a> <a class="fnref" href="https://en.wikipedia.org/wiki/Thaana" target="_blank">w</a></p>
+<p>With <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span> it  indicates gemination of a following nasal, eg. <span class="charExample" translate="no"><span class="ex" lang="dv" dir="rtl">އެންމެ</span> <span class="trans">ʿen͓me</span> <span class="ipa">emme</span> <span class="meaning">only</span></span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -282,9 +288,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Dhivehi</span>
 <span class="name"><span class="localname" dir="rtl" lang="dv">އަލިފު</span>
  <span class="transliteratedname trans">alifu</span></span> <span class="ipa">∅</span></p>
-<p>Used as a carrier for vowel diacritics where a vowel appears at the start of a word or is pronounced separately after another vowel, eg. <span class="ex" dir="rtl" lang="dv">އިރުގައި</span> <span class="ipa">irugai</span> <span class="meaning">time</span>.</p>
-<p>With <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span> indicates gemination of a following consonant, eg. <span class="ex" dir="rtl" lang="dv">ބައްޓެއް</span> <span class="ipa">baʈʈeʔ</span> <span class="meaning">eggplant</span>, however geminated nasals are formed using <span class="codepoint"><span dir="rtl" lang="dv">&#x0782;</span> [<a href="#char0782" class="uname">U+0782 THAANA LETTER NOONU</a>]</span>.</p>
-<p> <span class="ipa">ʔ</span> with <span class="name">sukun</span> at the end of a word, eg. <span class="ex" dir="rtl" lang="dv">ފައް</span> <span class="ipa">faʔ</span> <span class="meaning">sawtooth</span>. In normal speech, however, the glottal stop assimilates completely to the following consonant, except before vowels or <span class="codepoint"><span lang="dv">&#xA0;&#x0780;</span> [<a href="#char0780" class="uname">U+0780 THAANA LETTER HAA</a>]</span>, where it becomes a velar nasal <span class="ipa">ŋ</span>.<sup>1</sup></p>
+<p>Used as a carrier for vowel diacritics where a vowel appears at the start of a word or is pronounced separately after another vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="dv" dir="rtl">އިރުގައި</span> <span class="trans">ʿirugəʿi</span> <span class="ipa">irugai</span> <span class="meaning">time</span></span>.</p>
+<p>With <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span> indicates gemination of a following consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="dv" dir="rtl">ބައްޓެއް</span> <span class="trans">bəʿ͓ʈeʿ͓</span> <span class="ipa">baʈʈeʔ</span> <span class="meaning">eggplant</span></span>, however geminated nasals are formed using <span class="codepoint"><span dir="rtl" lang="dv">&#x0782;</span> [<a href="#char0782" class="uname">U+0782 THAANA LETTER NOONU</a>]</span>.</p>
+<p> <span class="ipa">ʔ</span> with <span class="name">sukun</span> at the end of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="dv" dir="rtl">ފައް</span> <span class="trans">fəʿ͓</span> <span class="ipa">faʔ</span> <span class="meaning">sawtooth</span></span>. In normal speech, however, the glottal stop assimilates completely to the following consonant, except before vowels or <span class="codepoint"><span lang="dv">&#xA0;&#x0780;</span> [<a href="#char0780" class="uname">U+0780 THAANA LETTER HAA</a>]</span>, where it becomes a velar nasal <span class="ipa">ŋ</span>.<sup>1</sup></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -395,8 +401,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Dhivehi</span>
 <span class="name"><span class="localname" dir="rtl" lang="dv">ތާ</span>
  <span class="transliteratedname trans">thaa</span></span> <span class="ipa">t</span></p>
-<p><span class="ipa">jʔ</span> in final position in a word with <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span>, eg. <span class="ex" dir="rtl" lang="dv">ރަތް</span> <span class="ipa">rajʔ</span> <span class="meaning">rat</span>.</p>
-<p>With <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span> before another consonant, leads to that consonant being doubled, but also with the addition of <span class="ipa">j</span>, eg. <span class="ex" lang="dv" dir="rtl">އަތްޕުޅު</span> <span class="ipa">ajppuɭu</span> <span class="meaning">hand</span>.<sup>1</sup></p>
+<p><span class="ipa">jʔ</span> in final position in a word with <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="dv" dir="rtl">ރަތް</span> <span class="trans">rət͓</span> <span class="ipa">rajʔ</span> <span class="meaning">rat</span></span>.</p>
+<p>With <span class="codepoint"><span dir="rtl" lang="dv">&#xA0;&#x07B0;</span> [<a href="#char07B0" class="uname">U+07B0 THAANA SUKUN</a>]</span> before another consonant, leads to that consonant being doubled, but also with the addition of <span class="ipa">j</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="dv" dir="rtl">އަތްޕުޅު</span> <span class="trans">ʿət͓puɭu</span> <span class="ipa">ajppuɭu</span> <span class="meaning">hand</span></span>.<sup>1</sup></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -658,7 +664,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="arabic">
-  <h3><a href="#arabic">Extensions for Arabic</a></h3>
+  <h3>Extensions for Arabic</h3>
 
 <div class="character" id="char0798">
 <div class="charimg">&#x0798;</div>
@@ -971,7 +977,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="addu">
-  <h3><a href="#addu">Consonant for Addu dialect</a></h3>
+  <h3>Consonant for Addu dialect</h3>
 
 
 <div class="character" id="char07B1">
@@ -985,7 +991,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Dhivehi</span>
 <span class="name"><span class="localname" dir="rtl" lang="dv">ޱަވިޔަނަ</span>
  <span class="transliteratedname trans">naviyani</span></span> <span class="ipa">ɳ</span> </p>
-<p>This letter was abolished from Maldivian official documents around 1953, but it is still seen in reprints of old books like the <cite>Bodu Tartheebu</cite>, and  is used by the people of Addu Atoll and Fuvahmulah when writing songs or poetry in their dialects as the sound is still present in their spoken language.<sup><a href="https://en.wikipedia.org/wiki/Thaana" target="_blank">w</a></sup></p>
+<p>This letter was abolished from Maldivian official documents around 1953, but it is still seen in reprints of old books like the <cite>Bodu Tartheebu</cite>, and  is used by the people of Addu Atoll and Fuvahmulah when writing songs or poetry in their dialects as the sound is still present in their spoken language.<a class="fnref" href="https://en.wikipedia.org/wiki/Thaana" target="_blank">w</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1006,7 +1012,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="vowels">
-  <h2><a href="#vowels">Vowels</a></h2>
+  <h2>Vowels</h2>
   
 <div class="character" id="char07A6">
 <div class="charimg">&#x07A6;</div>
@@ -1239,8 +1245,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <span class="name"><span class="localname" dir="rtl" lang="dv">ސުކުނ</span>
  <span class="transliteratedname trans">sukun</span></span> <span class="ipa">∅</span></p>
     <p>Normally indicates that the consonant is not followed by a vowel.</p>
-<p>Over <span class="codepoint"><span dir="rtl" lang="dv">&#x0787;</span> [<a href="#char0787" class="uname">U+0787 THAANA LETTER ALIFU</a>]</span>, or <span class="codepoint"><span dir="rtl" lang="dv">&#x0782;</span> [<a href="#char0782" class="uname">U+0782 THAANA LETTER NOONU</a>]</span> followed by a nasal, it  indicates that a following consonant is geminated,  eg. <span class="ex" dir="rtl" lang="dv">ބައްޓެއް</span> <span class="ipa">baʈʈeʔ</span> <span class="meaning">eggplant</span>, and <span class="ex" dir="rtl" lang="dv">އެންމެ</span> <span class="ipa">emme</span> <span class="meaning">only</span>.</p>
-<p><span class="ipa">ʔ</span> over <span class="codepoint"><span lang="dv">&#x0787;</span> [<a href="#char0787" class="uname">U+0787 THAANA LETTER ALIFU</a>]</span> at the end of a word, eg. <span class="ex" dir="rtl" lang="dv">ފައް</span> <span class="ipa">faʔ</span> <span class="meaning">sawtooth.</span> In normal speech, however, the glottal stop assimilates completely to the following consonant, except before vowels or <span class="codepoint"><span lang="dv">&#xA0;&#x0780;</span> [<a href="#char0780" class="uname">U+0780 THAANA LETTER HAA</a>]</span>, where it becomes a velar nasal <span class="ipa">ŋ</span>.<sup>d</sup></p>
+<p>Over <span class="codepoint"><span dir="rtl" lang="dv">&#x0787;</span> [<a href="#char0787" class="uname">U+0787 THAANA LETTER ALIFU</a>]</span>, or <span class="codepoint"><span dir="rtl" lang="dv">&#x0782;</span> [<a href="#char0782" class="uname">U+0782 THAANA LETTER NOONU</a>]</span> followed by a nasal, it  indicates that a following consonant is geminated,  eg. <span class="charExample" translate="no"><span class="ex" lang="dv" dir="rtl">ބައްޓެއް</span> <span class="trans">bəʿ͓ʈeʿ͓</span> <span class="ipa">baʈʈeʔ</span> <span class="meaning">eggplant</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="dv" dir="rtl">އެންމެ</span> <span class="trans">ʿen͓me</span> <span class="ipa">emme</span> <span class="meaning">only</span></span>.</p>
+<p><span class="ipa">ʔ</span> over <span class="codepoint"><span lang="dv">&#x0787;</span> [<a href="#char0787" class="uname">U+0787 THAANA LETTER ALIFU</a>]</span> at the end of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="dv" dir="rtl">ފައް</span> <span class="trans">fəʿ͓</span> <span class="ipa">faʔ</span> <span class="meaning">sawtooth</span></span>. In normal speech, however, the glottal stop assimilates completely to the following consonant, except before vowels or <span class="codepoint"><span lang="dv">&#xA0;&#x0780;</span> [<a href="#char0780" class="uname">U+0780 THAANA LETTER HAA</a>]</span>, where it becomes a velar nasal <span class="ipa">ŋ</span>.<sup>d</sup></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1255,12 +1261,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 </section>
 <section id="refs">
-<h2><a href="#refs">References</a></h2>
+<h2>References</h2>
   <ol>
-    <li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN
+    <li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN
 				0-19-507993-0</li>
-<li>[ <sup><a href="http://en.wikipedia.org/wiki/Thaana">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Thaana">Thaana</a></li>
-    <li>[ <sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch11.pdf">u</a></sup> ] <a href="http://www.unicode.org/versions/Unicode6.0.0/ch11.pdf">The Unicode Standard v10.0</a>, pp511-512</li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode6.0.0/ch11.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode6.0.0/ch11.pdf">The Unicode Standard v10.0</a>, pp511-512</li>
+<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Thaana">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Thaana">Thaana</a></li>
 </ol>
 </section>
 
@@ -1282,14 +1288,12 @@ replaceStuff('Dhivehi', 'dhivehi', spreadsheet, '', 'dv', '', cols, false)
 <div id="panel" style="display:none"></div>
 
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/thaana/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-07-15  6:45<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bthaana%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fthaana%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
-
+<div class="smallprint"><span id="version"></span></div>
 
 
 <script>
-initialise('/scripts/thaana/block')
+initialise('/scripts/thaana/block','thaana')
+autoTransliterate('dv')
 </script>
 </body>
 </html>
