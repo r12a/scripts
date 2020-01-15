@@ -9,13 +9,14 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
@@ -23,6 +24,7 @@
 <script src="../../uniview/u.js"></script> 
 
 <script src="/shared/fontlists/balinese.js"> </script>
+<script src="ban-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -75,16 +77,23 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->14 July, 2019<!-- #EndDate -->
-&bull; tags <a href="http:/.net/blog/index.php?tag=balinese" title="Show all blog posts tagged with 'balinese'">balinese</a>, <a href="http:/.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+  <!-- #BeginDate format:Sw1 -->15 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
+
+
 <section>
    <p>This page lists characters in the following Unicode  block and provides information about them. </p>
 <ul>
 <li><a href="../../uniview/?block=balinese" target="_blank">Balinese</a></li>
    </ul>
    <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-<p>For details about how the script works, see  <a class="linkHighlight" href="index">Balinese</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Bali">Script links pages</a>.</p>
-<p>Find <input type="text" onChange="var hex=this.value;if (hex!=''){while(hex.length<4){hex='0'+hex;}document.location='#char'+hex.toUpperCase();}"/></p>
+<p>For details about how the script works, see the <a class="linkHighlight" href="index">Balinese</a> summary.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Bali">Script links pages</a>.</p>
+<p><span style="text-align: start;">We have usage data for the following language that uses the Balinese script</span>: <span style="text-align: start;">Balinese</span>.</p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
     <p class="instructions">To <strong>find a character</strong> by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or the hex number in the <samp>Find</samp> control above.</p>
@@ -99,7 +108,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 </section>
 </div>
 <section id='varioussigns'>
-  <h2><a href='#varioussigns'>Various signs</a></h2>
+  <h2>Various signs</h2>
   
   <div class='character' id='char1B00'>
     <div class='charimg'>&#x1B00;</div>
@@ -110,7 +119,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
       <div class="letter balinese">
         
           <p class="titlepara"><span class="title">Balinese</span> combining character, <span class="name">ulu ricem</span></p>
-<p>When combined with certain syllables this sign becomes part of the Aksara Modre, or holy letters, which are used to write words in Sanskrit, usually part of prayers. This character only appears in Sanskrit texts, eg. <span class="ex" lang="ban">ᬰᬶᬤ᭄ᬥᬀ</span> <!--img class="exi"  lang="ban" src="../../c/Balinese/examples/siddham.png" alt="ᬰᬶᬤ᭄ᬥᬀ" /--> <span class="trans">siddham</span>.</p>
+<p>When combined with certain syllables this sign becomes part of the Aksara Modre, or holy letters, which are used to write words in Sanskrit, usually part of prayers. This character only appears in Sanskrit texts, eg. <span class="charExample" translate="no"><span class="ex" lang="ban">ᬰᬶᬤ᭄ᬥᬀ</span> <span class="trans">ŝid͓d̂m̽</span> (<span class="trans">siddham</span>)</span>.<!--img class="exi"  lang="ban" src="../../c/Balinese/examples/siddham.png" alt="ᬰᬶᬤ᭄ᬥᬀ" /--></p>
                 </div>
           <p class="ref">Refs:  [1] <a href="http://www.babadbali.com/aksarabali/alphabet.htm">The Balinese Alphabet [Sudewa]</a> [2] <a href="http://en.wikipedia.org/wiki/Balinese_script"> Balinese Script [Wikipedia]</a></p>
 
@@ -125,8 +134,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
       <div class="letter balinese">
         
           <p class="titlepara"><span class="title">Balinese</span> combining character, <span class="name">ulu candra</span></p>
-<p>When combined with certain syllables this sign becomes part of the Aksara Modre, or holy letters, which are used to write words in Sanskrit, usually part of prayers, eg. <span class="ex" lang="ban">ᬫᬁ</span> <!--img class="exi"  lang="ban" src="../../c/Balinese/examples/mang.png" alt="ᬫᬁ" /--> <span class="trans">mang</span> (<span class="meaning">holy letter</span>).</p>
-          <p><span class="ipa">-m</span> Over <span class="name">ulu candra</span> this creates the letter <span class="name">ongkara</span>, which is the symbol of God, <span class="ex" lang="ban">ᬒᬁ</span> <!--img class="exi"  lang="ban" src="../../c/Balinese/examples/om.png" alt="ᬒᬁ" /--> and is transcribed <span class="trans">om</span>, eg. <span class="ex" lang="ban">ᬒᬁᬲ᭄ᬯᬲ᭄ᬢ᭄ᬬᬲ᭄ᬢᬸ </span> <!--img class="exi"  lang="ban" src="../../c/Balinese/examples/omswastiastu.png" alt="ᬒᬁᬲ᭄ᬯᬲ᭄ᬢ᭄ᬬᬲ᭄ᬢᬸ" /--> <span class="trans">om swastiastu</span> (<span class="meaning">God bless you</span>).</p>
+<p>When combined with certain syllables this sign becomes part of the Aksara Modre, or holy letters, which are used to write words in Sanskrit, usually part of prayers, eg. <span class="charExample" translate="no"><span class="ex" lang="ban">ᬫᬁ</span> <span class="trans">mŋ̽</span> (<span class="trans">mang</span>) <span class="meaning">holy letter</span></span><!--img class="exi"  lang="ban" src="../../c/Balinese/examples/mang.png" alt="ᬫᬁ" /-->.</p>
+          <p><span class="ipa">-m</span> Over <span class="name">ulu candra</span> this creates the letter <span class="name">ongkara</span>, which is the symbol of God, <span class="ex" lang="ban">ᬒᬁ</span> <!--img class="exi"  lang="ban" src="../../c/Balinese/examples/om.png" alt="ᬒᬁ" /--> and is transcribed <span class="trans">om</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ban">ᬒᬁᬲ᭄ᬯᬲ᭄ᬢ᭄ᬬᬲ᭄ᬢᬸ</span> <span class="trans">ạʷŋ̽s͓ws͓t͓ys͓tu</span> (<span class="trans">om swastiastu</span>) <span class="meaning">God bless you</span></span><!--img class="exi"  lang="ban" src="../../c/Balinese/examples/omswastiastu.png" alt="ᬒᬁᬲ᭄ᬯᬲ᭄ᬢ᭄ᬬᬲ᭄ᬢᬸ" /-->.</p>
                 </div>
           <p class="ref">Refs:  [1] <a href="http://www.babadbali.com/aksarabali/alphabet.htm">The Balinese Alphabet [Sudewa]</a> [2] <a href="http://en.wikipedia.org/wiki/Balinese_script"> Balinese Script [Wikipedia]</a></p>
 
@@ -141,7 +150,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
       <div class="letter balinese">
         
           <p class="titlepara"><span class="title">Balinese</span> combining character, <span class="name">cecek</span></p>
-<p>Only appears at the end of a word, eg. <span class="ex" lang="ban">ᬩᬗ᭄ᬓᬸᬂ</span> <!--img class="exi"  lang="ban" src="../../c/Balinese/examples/bangkung.png" alt="ᬩᬗ᭄ᬓᬸᬂ" /--> <span class="trans">bangkung</span> (<span class="meaning">pig</span>), unless the word involves repetition, eg. <span class="ex" lang="ban">ᬘᬾᬂᬘᬾᬂ</span> <!--img class="exi"  lang="ban" src="../../c/Balinese/examples/cengceng.png" alt="ᬘᬾᬂᬘᬾᬂ" /--> <span class="trans">cengceng</span> (<span class="meaning">musical instrument</span>).</p>
+<p>Only appears at the end of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="ban">ᬩᬗ᭄ᬓᬸᬂ</span> <span class="trans">bŋ͓kuŋ̇̽</span> (<span class="trans">bangkung</span>) <span class="meaning">pig</span></span><!--img class="exi"  lang="ban" src="../../c/Balinese/examples/bangkung.png" alt="ᬩᬗ᭄ᬓᬸᬂ" /-->, unless the word involves repetition, eg. <span class="charExample" translate="no"><span class="ex" lang="ban">ᬘᬾᬂᬘᬾᬂ</span> <span class="trans">ceŋ̇̽ceŋ̇̽</span> (<span class="trans">cengceng</span>) <span class="meaning">musical instrument</span></span><!--img class="exi"  lang="ban" src="../../c/Balinese/examples/cengceng.png" alt="ᬘᬾᬂᬘᬾᬂ" /-->.</p>
                 </div>
           <p class="ref">Refs:  [1] <a href="http://www.babadbali.com/aksarabali/alphabet.htm">The Balinese Alphabet [Sudewa]</a> [2] <a href="http://en.wikipedia.org/wiki/Balinese_script"> Balinese Script [Wikipedia]</a></p>
 
@@ -156,7 +165,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
       <div class="letter balinese">
         
           <p class="titlepara"><span class="title">Balinese</span> combining character, <span class="name">surang</span></p>
-<p>Unlike most Brahmi-derived scripts, to represent a Balinese ra that starts a sequence of consonants without intervening vowels  this character is used over the <em>preceding</em> syllable, eg. <span class="ex" lang="ban">ᬓᬃᬡ</span> <!--img class="exi"  lang="ban" src="../../c/Balinese/examples/karna.png" alt="ᬓᬃᬡ" /--> <span class="trans">karna</span> (<span class="meaning">ear</span>). </p>
+<p>Unlike most Brahmi-derived scripts, to represent a Balinese ra that starts a sequence of consonants without intervening vowels  this character is used over the <em>preceding</em> syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="ban">ᬓᬃᬡ</span> <span class="trans">kr̽n̂</span> (<span class="trans">karna</span>) <span class="meaning">ear</span></span><!--img class="exi"  lang="ban" src="../../c/Balinese/examples/karna.png" alt="ᬓᬃᬡ" /-->. </p>
           <p>The Kawi form of the script used a repha glyph in the same way as many Brahmic scripts do.  However, because many syllables end in -r in the Balinese language, this written form was changed. </p>
                 </div>
           <p class="ref">Refs:  [1] <a href="http://www.babadbali.com/aksarabali/alphabet.htm">The Balinese Alphabet [Sudewa]</a> [2] <a href="http://en.wikipedia.org/wiki/Balinese_script"> Balinese Script [Wikipedia]</a></p>
@@ -172,7 +181,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
       <div class="letter balinese">
         
           <p class="titlepara"><span class="title">Balinese</span> combining character, <span class="name">bisah</span></p>
-<p>Only appears at the end of a word, eg. <span class="ex" lang="ban">ᬫᬦᬄ</span> <!--img class="exi"  lang="ban" src="../../c/Balinese/examples/manah.png" alt="ᬫᬦᬄ" /--> <span class="trans">manah</span> (<span class="meaning">logic</span>), unless the word involves repetition.</p>
+<p>Only appears at the end of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="ban">ᬫᬦᬄ</span> <span class="trans">mnh̽</span> (<span class="trans">manah</span>) <span class="meaning">logic</span></span><!--img class="exi"  lang="ban" src="../../c/Balinese/examples/manah.png" alt="ᬫᬦᬄ" /-->, unless the word involves repetition.</p>
                 </div>
           <p class="ref">Refs:  [1] <a href="http://www.babadbali.com/aksarabali/alphabet.htm">The Balinese Alphabet [Sudewa]</a> [2] <a href="http://en.wikipedia.org/wiki/Balinese_script"> Balinese Script [Wikipedia]</a></p>
 
@@ -202,7 +211,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
       <div class="letter balinese">
         
           <p class="titlepara"><span class="title">Balinese</span> virama, <span class="name">adegadeg</span></p>
-          <p>This is the Balinese virama. It is usually invisible when used between two characters to indicate an absence of intervening vowels. It is visible, however, at the end of a word that does not finish with a vowel and is not followed by anything else, eg. <span class="ex" lang="ban">ᬓᬧᬮ᭄</span> <!--img class="exi"  lang="ban" src="../../c/Balinese/examples/kapal.png" alt="ᬓᬧᬮ᭄" /--><span class="trans">kapal</span> (<span class="meaning">ship</span>), or sometimes to clarify the distinction between a word-final consonant and a medial consonant, eg. <span class="ex" lang="ban">ᬧᬓ᭄ᬭᬫᬦ᭄</span> <!--img class="exi"  lang="ban" src="../../c/Balinese/examples/pakraman.png" alt="ᬧᬓ᭄ᬭᬫᬦ᭄" /--><span class="trans">pakraman</span> (<span class="meaning">membership</span>) vs. eg. <span class="ex" lang="ban">ᬧᬓ᭄‌ᬭᬫᬦ᭄</span> <!--img class="exi"  lang="ban" src="../../c/Balinese/examples/pakzwnjraman.png" alt="ᬧᬓ᭄‌ᬭᬫᬦ᭄" /--><span class="trans">Pak Raman</span> (<span class="meaning">Mr. Raman</span>).</p>
+          <p>This is the Balinese virama. It is usually invisible when used between two characters to indicate an absence of intervening vowels. It is visible, however, at the end of a word that does not finish with a vowel and is not followed by anything else, eg. <span class="charExample" translate="no"><span class="ex" lang="ban">ᬓᬧᬮ᭄</span> <span class="trans">kpl͓</span> (<span class="trans">kapal</span>) <span class="meaning">ship</span></span><!--img class="exi"  lang="ban" src="../../c/Balinese/examples/kapal.png" alt="ᬓᬧᬮ᭄" /-->, or sometimes to clarify the distinction between a word-final consonant and a medial consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="ban">ᬧᬓ᭄ᬭᬫᬦ᭄</span> <span class="trans">pk͓rmn͓</span> (<span class="trans">pakraman</span>) <span class="meaning">membership</span></span><!--img class="exi"  lang="ban" src="../../c/Balinese/examples/pakraman.png" alt="ᬧᬓ᭄ᬭᬫᬦ᭄" /--> vs. eg. <span class="charExample" translate="no"><span class="ex" lang="ban">ᬧᬓ᭄‌ᬭᬫᬦ᭄</span> <span class="trans">pk͓ₓrmn͓</span> (<span class="trans">Pak Raman</span>) <span class="meaning">Mr. Raman</span></span><!--img class="exi"  lang="ban" src="../../c/Balinese/examples/pakzwnjraman.png" alt="ᬧᬓ᭄‌ᬭᬫᬦ᭄" /-->.</p>
                 </div>
           <p class="ref">Refs:  [1] <a href="http://www.babadbali.com/aksarabali/alphabet.htm">The Balinese Alphabet [Sudewa]</a> [2] <a href="http://en.wikipedia.org/wiki/Balinese_script"> Balinese Script [Wikipedia]</a></p>
 
@@ -216,11 +225,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id='consonants'>
-  <h2><a href='#consonants'>Consonants</a></h2>
+  <h2>Consonants</h2>
 
 
 <section id='basicconsonants'>
-  <h3><a href='#basicconsonants'>Basic consonants</a></h3>
+  <h3>Basic consonants</h3>
   <div class='character' id='char1B13'>
     <div class='charimg'>&#x1B13;</div>
     <p class="charname"><strong>U+1B13</strong> <a href="#char1B13">BALINESE LETTER KA</a></p>
@@ -345,7 +354,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
       <div class="letter balinese">
         
           <p class="titlepara"><span class="title">Balinese</span> consonant          </p>
-<p>Seems to be known from only one word, <span class="ex" lang="ban">ᬦᬶᬃᬛᬭ</span> <!--img src="../../c/Balinese/examples/nirjhara.png" class="exi"  lang="ban"alt="ᬦᬶᬃᬛᬭ" /--> <span class="trans">nirjhara</span> (<span class="meaning">pond</span>). (It is possible that an original <span class="name">ai</span> may have been lost in Balinese, to be replaced by the glyph for  this character.) </p>
+<p>Seems to be known from only one word, <span class="charExample" translate="no"><span class="ex" lang="ban">ᬦᬶᬃᬛᬭ</span> <span class="trans">nir̽ʤ̇r</span> (<span class="trans">nirjhara</span>) <span class="meaning">pond</span></span><!--img src="../../c/Balinese/examples/nirjhara.png" class="exi"  lang="ban"alt="ᬦᬶᬃᬛᬭ" /-->. (It is possible that an original <span class="name">ai</span> may have been lost in Balinese, to be replaced by the glyph for  this character.) </p>
           <p>Sudewa says that this is identical to the independent vowel <span class="name">airsania</span>, but in the Unicode charts and elsewhere the top right of <span class="name">airsania</span> <span class="name">airsania</span> <span class="ex" lang="ban">ᬐ</span> <!--img src="../../c/Balinese/examples/ai.png" class="exi"  lang="ban"alt="ᬐ" /--> and <span class="name">jha</span> <span class="ex" lang="ban">ᬛ</span> <!--img src="../../c/Balinese/examples/jha.png" class="exi"  lang="ban"alt="ᬛ" /--> is slightly different.</p>
                 </div>
           <p class="ref">Refs:  [1] <a href="http://www.babadbali.com/aksarabali/alphabet.htm">The Balinese Alphabet [Sudewa]</a> [2] <a href="http://en.wikipedia.org/wiki/Balinese_script"> Balinese Script [Wikipedia]</a></p>
@@ -574,7 +583,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
         
           <p class="titlepara"><span class="title">Balinese</span> consonant          </p>
           <p>This character is also used for the semi-vowel / medial consonant <span class="name">nania</span>.</p>
-          <p>When used medially, it can also follow another medial ra or la, eg. <span class="ex" lang="ban">ᬩ᭄ᬭ᭄ᬬᬕ᭄</span> (<img src="../../c/Balinese/examples/briag.png" alt="ᬩ᭄ᬭ᭄ᬬᬕ᭄" class="exi"  lang="ban"/>) <span class="trans">briag</span> (<span class="meaning">laughter</span>).</p>
+          <p>When used medially, it can also follow another medial ra or la, eg. <img src="../../c/Balinese/examples/briag.png" alt="ᬩ᭄ᬭ᭄ᬬᬕ᭄" class="exi"  lang="ban"/> <span class="charExample" translate="no"><span class="ex" lang="ban">ᬩ᭄ᬭ᭄ᬬᬕ᭄</span> <span class="trans">b͓r͓yg͓</span> (<span class="trans">briag</span>) <span class="meaning">laughter</span></span>.</p>
                 </div>
           <p class="ref">Refs:  [1] <a href="http://www.babadbali.com/aksarabali/alphabet.htm">The Balinese Alphabet [Sudewa]</a> [2] <a href="http://en.wikipedia.org/wiki/Balinese_script"> Balinese Script [Wikipedia]</a></p>
 
@@ -590,9 +599,9 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
         
           <p class="titlepara"><span class="title">Balinese</span> consonant/semi vowel/medial consonant, <span class="name">ra / guwung</span></p>
           
-          <p>This character is also used for the semi-vowel / medial consonant <span class="name">guwung</span>,  eg. <span class="ex" lang="ban">ᬘᬓ᭄ᬭ</span> <!--img class="exi"  lang="ban" src="../../c/Balinese/examples/cakra.png" alt="ᬘᬓ᭄ᬭ" /--> <span class="trans">cakra</span> (<span class="meaning">disk</span>).</p>
-          <p>When used medially, it can also be followed by another medial ya or wa, eg. <span class="ex" lang="ban">ᬩ᭄ᬭ᭄ᬬᬕ᭄</span> (<img src="../../c/Balinese/examples/briag.png" alt="ᬩ᭄ᬭ᭄ᬬᬕ᭄" class="exi"  lang="ban"/>) <span class="trans">briag</span> (<span class="meaning">laughter</span>).</p>
-          <p>Ra is not used with  <span class="codepoint"><span lang="ban">&nbsp;&nbsp;&#x1B42;</span> <a href="#char1B42">[<span class="uname">U+1B42 BALINESE VOWEL SIGN PEPET</span>]</a></span> or <span class="codepoint"><span lang="ban">&nbsp;&nbsp;&#x1B43;</span> <a href="#char1B43">[<span class="uname">U+1B43 BALINESE VOWEL SIGN PEPET TEDUNG</span>]</a></span>. Instead use <span class="codepoint"><span lang="ban">&#x1B0B;</span> <a href="#1B0B">[<span class="uname">U+1B0B BALINESE LETTER RA REPA</span>]</a></span>, eg. <span class="ex" lang="ban">ᬓᭂᬋᬂ</span> <!--img class="exi"  lang="ban" src="../../c/Balinese/examples/kereng.png" alt="ᬓᭂᬋᬂ" /-->, <span class="trans">kereng</span> (<span class="meaning">eat a lot</span>), or <span class="codepoint"><span lang="ban">&#x1B0C;</span> <a href="#char1B0C">[<span class="uname">U+1B0C BALINESE LETTER RA REPA TEDUNG</span>]</a></span>, respectively.</p>
+          <p>This character is also used for the semi-vowel / medial consonant <span class="name">guwung</span>,  eg. <span class="charExample" translate="no"><span class="ex" lang="ban">ᬘᬓ᭄ᬭ</span> <span class="trans">ck͓r</span> (<span class="trans">cakra</span>) <span class="meaning">disk</span></span><!--img class="exi"  lang="ban" src="../../c/Balinese/examples/cakra.png" alt="ᬘᬓ᭄ᬭ" /-->.</p>
+          <p>When used medially, it can also be followed by another medial ya or wa, eg. <img src="../../c/Balinese/examples/briag.png" alt="ᬩ᭄ᬭ᭄ᬬᬕ᭄" class="exi"  lang="ban"/> <span class="charExample" translate="no"><span class="ex" lang="ban">ᬩ᭄ᬭ᭄ᬬᬕ᭄</span> <span class="trans">b͓r͓yg͓</span> (<span class="trans">briag</span>) <span class="meaning">laughter</span></span>.</p>
+          <p>Ra is not used with  <span class="codepoint"><span lang="ban">&nbsp;&nbsp;&#x1B42;</span> <a href="#char1B42">[<span class="uname">U+1B42 BALINESE VOWEL SIGN PEPET</span>]</a></span> or <span class="codepoint"><span lang="ban">&nbsp;&nbsp;&#x1B43;</span> <a href="#char1B43">[<span class="uname">U+1B43 BALINESE VOWEL SIGN PEPET TEDUNG</span>]</a></span>. Instead use <span class="codepoint"><span lang="ban">&#x1B0B;</span> <a href="#1B0B">[<span class="uname">U+1B0B BALINESE LETTER RA REPA</span>]</a></span>, eg. <!--img class="exi"  lang="ban" src="../../c/Balinese/examples/kereng.png" alt="ᬓᭂᬋᬂ" /--><span class="charExample" translate="no"><span class="ex" lang="ban">ᬓᭂᬋᬂ</span> <span class="trans">kə r̥̣ŋ̇̽</span> (<span class="trans">kereng</span>) <span class="meaning">eat a lot</span></span>, or <span class="codepoint"><span lang="ban">&#x1B0C;</span> <a href="#char1B0C">[<span class="uname">U+1B0C BALINESE LETTER RA REPA TEDUNG</span>]</a></span>, respectively.</p>
                 </div>
           <p class="ref">Refs:  [1] <a href="http://www.babadbali.com/aksarabali/alphabet.htm">The Balinese Alphabet [Sudewa]</a> [2] <a href="http://en.wikipedia.org/wiki/Balinese_script"> Balinese Script [Wikipedia]</a></p>
 
@@ -610,7 +619,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
           
           <p>This character is also used for the semi-vowel / medial consonant <span class="name">gantungan la</span>.</p>
           <p>When used medially, it can also be followed by another medial ya or wa.</p>
-          <p>La is not used with  <span class="codepoint"><span lang="ban">&nbsp;&nbsp;&#x1B42;</span> <a href="#char1B42">[<span class="uname">U+1B42 BALINESE VOWEL SIGN PEPET</span>]</a></span> or <span class="codepoint"><span lang="ban">&nbsp;&nbsp;&#x1B43;</span> <a href="#char1B43">[<span class="uname">U+1B43 BALINESE VOWEL SIGN PEPET TEDUNG</span>]</a></span>. Instead use <span class="codepoint"><span lang="ban">&#x1B0D;</span> <a href="#char1B0D">[<span class="uname">U+1B0D BALINESE LETTER LA LENGA</span>]</a></span>, eg. <span class="ex" lang="ban">ᬢᬍᬃ</span>, <!--img class="exi"  lang="ban" src="../../c/Balinese/examples/taler.png" alt="ᬢᬍᬃ" /--> <span class="trans">taler</span> (<span class="meaning">therefore</span>), or <span class="codepoint"><span lang="ban">&#x1B0E;</span> <a href="#char1B0E">[<span class="uname">U+1B0E BALINESE LETTER LA LENGA TEDUNG</span>]</a></span>, respectively.</p>
+          <p>La is not used with  <span class="codepoint"><span lang="ban">&nbsp;&nbsp;&#x1B42;</span> <a href="#char1B42">[<span class="uname">U+1B42 BALINESE VOWEL SIGN PEPET</span>]</a></span> or <span class="codepoint"><span lang="ban">&nbsp;&nbsp;&#x1B43;</span> <a href="#char1B43">[<span class="uname">U+1B43 BALINESE VOWEL SIGN PEPET TEDUNG</span>]</a></span>. Instead use <span class="codepoint"><span lang="ban">&#x1B0D;</span> <a href="#char1B0D">[<span class="uname">U+1B0D BALINESE LETTER LA LENGA</span>]</a></span>, eg. <!--img class="exi"  lang="ban" src="../../c/Balinese/examples/taler.png" alt="ᬢᬍᬃ" /--><span class="charExample" translate="no"><span class="ex" lang="ban">ᬢᬍᬃ</span> <span class="trans">tl̥̣r̽</span> (<span class="trans">taler</span>) <span class="meaning">therefore</span></span>, or <span class="codepoint"><span lang="ban">&#x1B0E;</span> <a href="#char1B0E">[<span class="uname">U+1B0E BALINESE LETTER LA LENGA TEDUNG</span>]</a></span>, respectively.</p>
                 </div>
           <p class="ref">Refs:  [1] <a href="http://www.babadbali.com/aksarabali/alphabet.htm">The Balinese Alphabet [Sudewa]</a> [2] <a href="http://en.wikipedia.org/wiki/Balinese_script"> Balinese Script [Wikipedia]</a></p>
 
@@ -675,7 +684,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
         
           <p class="titlepara"><span class="title">Balinese</span> consonant</p>
           
-          <p>eg. <span class="ex" lang="ban">ᬧᬓ᭄ᬲ</span> <!--img class="exi"  lang="ban" src="../../c/Balinese/examples/paksa.png" alt="ᬧᬓ᭄ᬲ" /--> <span class="trans">paksa</span> (<span class="meaning">force</span>).</p>
+          <p>eg. <!--img class="exi"  lang="ban" src="../../c/Balinese/examples/paksa.png" alt="ᬧᬓ᭄ᬲ" /--><span class="charExample" translate="no"><span class="ex" lang="ban">ᬧᬓ᭄ᬲ</span> <span class="trans">pk͓s</span> (<span class="trans">paksa</span>) <span class="meaning">force</span></span>.</p>
                 </div>
           <p class="ref">Refs:  [1] <a href="http://www.babadbali.com/aksarabali/alphabet.htm">The Balinese Alphabet [Sudewa]</a> [2] <a href="http://en.wikipedia.org/wiki/Balinese_script"> Balinese Script [Wikipedia]</a></p>
 
@@ -690,7 +699,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
       <div class="letter balinese">
         
           <p class="titlepara"><span class="title">Balinese</span> consonant          </p>
-<p><span class="ipa">-</span> when used as a support for a vowel. It is used as a support for a vowel sign when an independent vowel is used within a word, eg. <span class="ex" lang="ban">ᬤᬳᬾᬭᬄ</span> <img src="../../c/Balinese/examples/daerah.png" alt="ᬤᬳᬾᬭᬄ" class="exi"  lang="ban"/> <span class="trans">daerah</span> (<span class="meaning">development</span>). The vowels <span class="name">pepet</span> and <span class="name">pepet tedong</span> have no independent form, so they are represented with <span class="name">ha</span> plus vowel sign at the start of a word, too. </p>
+<p><span class="ipa">-</span> when used as a support for a vowel. It is used as a support for a vowel sign when an independent vowel is used within a word, eg. <img src="../../c/Balinese/examples/daerah.png" alt="ᬤᬳᬾᬭᬄ" class="exi"  lang="ban"/> <span class="charExample" translate="no"><span class="ex" lang="ban">ᬤᬳᬾᬭᬄ</span> <span class="trans">dherh̽</span> (<span class="trans">daerah</span>) <span class="meaning">development</span></span>. The vowels <span class="name">pepet</span> and <span class="name">pepet tedong</span> have no independent form, so they are represented with <span class="name">ha</span> plus vowel sign at the start of a word, too. </p>
                 </div>
           <p class="ref">Refs:  [1] <a href="http://www.babadbali.com/aksarabali/alphabet.htm">The Balinese Alphabet [Sudewa]</a> [2] <a href="http://en.wikipedia.org/wiki/Balinese_script"> Balinese Script [Wikipedia]</a></p>
 
@@ -701,7 +710,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id='additional'>
-  <h3><a href='#additional'>Additional consonants</a></h3>
+  <h3>Additional consonants</h3>
   <div class='character' id='char1B45'>
     <div class='charimg'>&#x1B45;</div>
     <p class="charname"><strong>U+1B45</strong> <a href="#char1B45">BALINESE LETTER KAF SASAK</a></p>
@@ -752,10 +761,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id='vowels'>
-  <h2><a href='#vowels'>Vowels</a></h2>
+  <h2>Vowels</h2>
 
 <section id='ivowels'>
-  <h3><a href='#ivowels'>Independent vowels</a></h3>
+  <h3>Independent vowels</h3>
   <div class='character' id='char1B05'>
     <div class='charimg'>&#x1B05;</div>
     <p class="charname"><strong>U+1B05</strong> <a href="#char1B05">BALINESE LETTER AKARA</a></p>
@@ -860,9 +869,9 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
         
           <p class="titlepara"><span class="title">Balinese</span> consonant, <span class="name">ra repa</span></p>
           
-          <p>Balinese does not use <em>ra + pepet</em> to represent the sound <span class="ipa">rə</span>. Instead it uses this <span class="name">ra repa</span> character<!--img src="../../c/Balinese/examples/rarepa.png" class="exi"  lang="ban"alt="ᬋ" /-->. <span class="name">Ra repa</span> at the beginning of a syllable, such as in <span class="ex" lang="ban">ᬓᭂᬋᬂ</span> <!--img src="../../c/Balinese/examples/kereng.png" alt="ᬓᭂᬋᬂ" class="exi"  lang="ban"/--> <span class="trans">kěrěng</span> (<span class="meaning">eat a lot</span>), is treated as a consonant.</p>
-          <p><em>Ra repa</em> has a postfixed form and a subjoined form. The postfixed form <img src="../../c/Balinese/examples/rarepa-postfixed.png" class="exi"  lang="ban"alt="◌᭄ᬭᭂ" /> is seen where the consonant form of <em>ra repa</em> follows a word which ends in a consonant, such as <span class="ex" lang="ban">ᬧᬓ᭄ᬋᬋᬄ</span> <!--img src="../../c/Balinese/examples/pakrereh.png" alt="ᬧᬓ᭄ᬋᬋᬄ" class="exi"  lang="ban"/--> <span class="trans">Pak Rěrěh</span> (<span class="meaning">Mr Rereh</span>). The sequence of characters to be used for this is <em>&lt;consonant, adeg-adeg, ra repa&gt;</em> (ie. not using <span class="codepoint"><span lang="ban">&#xA0;&#x1B3A;</span> <a href="#char1B3A">[<span class="uname">U+1B3A BALINESE VOWEL SIGN RA REPA</span>]</a></span>).</p>
-          <p>The subjoined form <img src="../../c/Balinese/examples/rarepa-subjoined.png" class="exi"  lang="ban"alt="◌ᬺ" /> is used to represent the  original <em>vocalic r</em>. In such cases, it   follows a syllable-initial consonant, as in <span class="ex" lang="ban">ᬓᬺᬰ᭄ᬡ</span> <!--img src="../../c/Balinese/examples/kresna.png" alt="ᬓᬺᬰ᭄ᬡ" class="exi"  lang="ban"/--> <span class="trans">Krěsna</span> (<span class="meaning">Krishna</span>). This is where <span class="uname">U+1B3A BALINESE VOWEL SIGN RA REPA</span> is used. The sequence of characters to be used here is <em>&lt;consonant, vowel sign ra repa&gt;</em>.</p>
+          <p>Balinese does not use <em>ra + pepet</em> to represent the sound <span class="ipa">rə</span>. Instead it uses this <span class="name">ra repa</span> character<!--img src="../../c/Balinese/examples/rarepa.png" class="exi"  lang="ban"alt="ᬋ" /-->. <span class="name">Ra repa</span> at the beginning of a syllable, such as in <!--img src="../../c/Balinese/examples/kereng.png" alt="ᬓᭂᬋᬂ" class="exi"  lang="ban"/--> <<span class="charExample" translate="no"><span class="ex" lang="ban">ᬓᭂᬋᬂ</span> <span class="trans">kə r̥̣ŋ̇̽</span> (<span class="trans">kěrěng</span>) <span class="meaning">eat a lot</span></span>, is treated as a consonant.</p>
+          <p><em>Ra repa</em> has a postfixed form and a subjoined form. The postfixed form <img src="../../c/Balinese/examples/rarepa-postfixed.png" class="exi"  lang="ban"alt="◌᭄ᬭᭂ" /> is seen where the consonant form of <em>ra repa</em> follows a word which ends in a consonant, such as <!--img src="../../c/Balinese/examples/pakrereh.png" alt="ᬧᬓ᭄ᬋᬋᬄ" class="exi"  lang="ban"/--> <span class="charExample" translate="no"><span class="ex" lang="ban">ᬧᬓ᭄ᬋᬋᬄ</span> <span class="trans">pk͓r̥̣r̥̣h̽</span> (<span class="trans">Pak Rěrěh</span>) <span class="meaning">Mr Rereh</span></span>. The sequence of characters to be used for this is <em>&lt;consonant, adeg-adeg, ra repa&gt;</em> (ie. not using <span class="codepoint"><span lang="ban">&#xA0;&#x1B3A;</span> <a href="#char1B3A">[<span class="uname">U+1B3A BALINESE VOWEL SIGN RA REPA</span>]</a></span>).</p>
+          <p>The subjoined form <img src="../../c/Balinese/examples/rarepa-subjoined.png" class="exi"  lang="ban"alt="◌ᬺ" /> is used to represent the  original <em>vocalic r</em>. In such cases, it   follows a syllable-initial consonant, as in <!--img src="../../c/Balinese/examples/kresna.png" alt="ᬓᬺᬰ᭄ᬡ" class="exi"  lang="ban"/--> <span class="charExample" translate="no"><span class="ex" lang="ban">ᬓᬺᬰ᭄ᬡ</span> <span class="trans">kr̥ŝ͓n̂</span> (<span class="trans">Krěsna</span>) <span class="meaning">Krishna</span></span>. This is where <span class="uname">U+1B3A BALINESE VOWEL SIGN RA REPA</span> is used. The sequence of characters to be used here is <em>&lt;consonant, vowel sign ra repa&gt;</em>.</p>
 
         
       </div>
@@ -955,7 +964,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id='dvowels'>
-  <h3><a href='#dvowels'>Dependent vowel signs</a></h3>
+  <h3>Dependent vowel signs</h3>
   <div class='character' id='char1B35'>
     <div class='charimg'>&#x1B35;</div>
     <p class="charname"><strong>U+1B35</strong> <a href="#char1B35">BALINESE VOWEL SIGN TEDUNG</a></p>
@@ -1046,7 +1055,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
           <p class="titlepara"><span class="title">Balinese</span> vowel sign/semi-vowel/medial consonant, <span class="name">guwung macelek</span></p>
           
           <p>In Balinese the combination <span class="codepoint"><span lang="ban">&#x1B2D;</span> <a href="#char1B2D">[<span class="uname">U+1B2D BALINESE LETTER RA</span>]</a></span> + <span class="codepoint"><span lang="ban">&nbsp;&#x1B42;</span> <a href="#char1B42">[<span class="uname">U+1B42 BALINESE VOWEL SIGN PEPET</span>]</a></span>  is not used. Instead <span class="codepoint"><span lang="ban">&#x1B0B;</span> <a href="#char1B0B">[<span class="uname">U+1B0B BALINESE LETTER RA REPA</span>]</a></span> is used. This can be used for what was originally a vocalic r.</p>
-          <p>This subjoined form  of <span class="name">ra repa</span> follows a syllable-initial consonant, as in <span class="ex" lang="ban">ᬓᬺᬰ᭄ᬡ</span> <!--img src="../../c/Balinese/examples/kresna.png" alt="ᬓᬺᬰ᭄ᬡ" class="exi"  lang="ban"/--> <span class="trans">Krěsna</span> (<span class="meaning">Krishna</span>). </p>
+          <p>This subjoined form  of <span class="name">ra repa</span> follows a syllable-initial consonant, as in <!--img src="../../c/Balinese/examples/kresna.png" alt="ᬓᬺᬰ᭄ᬡ" class="exi"  lang="ban"/--> <span class="charExample" translate="no"><span class="ex" lang="ban">ᬓᬺᬰ᭄ᬡ</span> <span class="trans">kr̥ŝ͓n̂</span> (<span class="trans">Krěsna</span>) <span class="meaning">Krishna</span></span>. </p>
                 </div>
           <p class="ref">Refs:  [1] <a href="http://www.babadbali.com/aksarabali/alphabet.htm">The Balinese Alphabet [Sudewa]</a> [2] <a href="http://en.wikipedia.org/wiki/Balinese_script"> Balinese Script [Wikipedia]</a></p>
 
@@ -1181,7 +1190,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
         
           <p class="titlepara"><span class="title">Balinese</span> vowel sign, <span class="name">pepet</span></p>
           
-          <p>This vowel sign is not used with  <span class="codepoint"><span lang="ban">&#x1B2D;</span> <a href="#char1B2D">[<span class="uname">U+1B2D BALINESE LETTER RA</span>]</a></span> or <span class="codepoint"><span lang="ban">&#x1B2E;</span> <a href="#char1B2E">[<span class="uname">U+1B2E BALINESE LETTER LA</span>]</a></span>. Instead use  <span class="codepoint"><span lang="ban">&#x1B0B;</span> <a href="#char1B0B">[<span class="uname">U+1B0B BALINESE LETTER RA REPA</span>]</a></span>, eg. <span class="ex" lang="ban">ᬓᭂᬋᬂ</span><!--img class="exi"  lang="ban" src="../../c/Balinese/examples/kereng.png" alt="ᬓᭂᬋᬂ" /-->, <span class="trans">kereng</span> (<span class="meaning">eat a lot</span>), or <span class="codepoint"><span lang="ban">&#x1B0D;</span> <a href="#char1B0D">[<span class="uname">U+1B0D BALINESE LETTER LA LENGA</span>]</a></span>, eg. <span class="ex" lang="ban">ᬢᬍᬃ</span><!--img class="exi"  lang="ban" src="../../c/Balinese/examples/taler.png" alt="ᬢᬍᬃ" /-->, <span class="trans">taler</span> (<span class="meaning">therefore</span>).</p>
+          <p>This vowel sign is not used with  <span class="codepoint"><span lang="ban">&#x1B2D;</span> <a href="#char1B2D">[<span class="uname">U+1B2D BALINESE LETTER RA</span>]</a></span> or <span class="codepoint"><span lang="ban">&#x1B2E;</span> <a href="#char1B2E">[<span class="uname">U+1B2E BALINESE LETTER LA</span>]</a></span>. Instead use  <span class="codepoint"><span lang="ban">&#x1B0B;</span> <a href="#char1B0B">[<span class="uname">U+1B0B BALINESE LETTER RA REPA</span>]</a></span>, eg. <!--img class="exi"  lang="ban" src="../../c/Balinese/examples/kereng.png" alt="ᬓᭂᬋᬂ" /--><span class="charExample" translate="no"><span class="ex" lang="ban">ᬓᭂᬋᬂ</span> <span class="trans">kə r̥̣ŋ̇̽</span> (<span class="trans">kereng</span>) <span class="meaning">eat a lot</span></span>, or <span class="codepoint"><span lang="ban">&#x1B0D;</span> <a href="#char1B0D">[<span class="uname">U+1B0D BALINESE LETTER LA LENGA</span>]</a></span>, eg. <!--img class="exi"  lang="ban" src="../../c/Balinese/examples/taler.png" alt="ᬢᬍᬃ" /--><span class="charExample" translate="no"><span class="ex" lang="ban">ᬢᬍᬃ</span> <span class="trans">tl̥̣r̽</span> (<span class="trans">therefore</span>) <span class="meaning">therefore</span></span>.</p>
           <p>There is no independent vowel corresponding to this. Instead use pepet with <span class="codepoint"><span lang="ban">&#x1B33;</span> <a href="#char1B33">[<span class="uname">U+1B33 BALINESE LETTER HA</span>]</a></span>, ie. <span class="ex" lang="ban">ᬳᭂ</span><!--img class="exi"  lang="ban" src="../../c/Balinese/examples/e.png" alt="ᬳᭂ" /-->.</p>
                 </div>
           <p class="ref">Refs:  [1] <a href="http://www.babadbali.com/aksarabali/alphabet.htm">The Balinese Alphabet [Sudewa]</a> [2] <a href="http://en.wikipedia.org/wiki/Balinese_script"> Balinese Script [Wikipedia]</a></p>
@@ -1214,7 +1223,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id='digits'>
-  <h2><a href='#digits'>Digits</a></h2>
+  <h2>Digits</h2>
   <div class='character' id='char1B50'>
     <div class='charimg'>&#x1B50;</div>
     <p class="charname"><strong>U+1B50</strong> <a href="#char1B50">BALINESE DIGIT ZERO</a></p>
@@ -1360,7 +1369,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id='punctuation'>
-  <h2><a href='#punctuation'>Punctuation</a></h2>
+  <h2>Punctuation</h2>
   <div class='character' id='char1B5A'>
     <div class='charimg'>&#x1B5A;</div>
     <p class="charname"><strong>U+1B5A</strong> <a href="#char1B5A">BALINESE PANTI</a></p>
@@ -1434,7 +1443,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
         
           <p class="titlepara"><span class="title">Balinese</span> punctuation, <span class="name">carik</span></p>
           <p>Equivalent to a comma.</p>
-          <p>This is also used for acronyms, eg. <span class="trans">Bank Pembangunan Daerah Bali</span> (<span class="meaning">Development Bank of Bali Province</span>) can be abbreviated to <span class="ex" lang="ban">ᬩ᭞ᬧᭂ᭞ᬤ᭞ᬩᬮᬶ</span><!--img class="exi"  lang="ban" src="../../c/Balinese/examples/bpdbali.png" alt="ᬩ᭞ᬧᭂ᭞ᬤ᭞ᬩᬮᬶ" /--><span class="trans">ba pe da bali</span>.</p>
+          <p>This is also used for acronyms, eg. <span class="trans">Bank Pembangunan Daerah Bali</span> (<span class="meaning">Development Bank of Bali Province</span>) can be abbreviated to <!--img class="exi"  lang="ban" src="../../c/Balinese/examples/bpdbali.png" alt="ᬩ᭞ᬧᭂ᭞ᬤ᭞ᬩᬮᬶ" /--><span class="charExample" translate="no"><span class="ex" lang="ban">ᬩ᭞ᬧᭂ᭞ᬤ᭞ᬩᬮ</span> <span class="trans">b,pə ,d,bl</span> (<span class="trans">ba pe da bali</span>)</span>.</p>
           <p>It is also used to surround numbers, since many digits cannot be distinguished from letters, eg. <span class="ex" lang="ban">ᬩᬮᬶ᭞᭓᭞ᬚᬸᬮᬶ᭞᭑᭙᭘᭒᭟</span><!--img class="exi"  lang="ban" src="../../c/Balinese/examples/date.png" alt="ᬩᬮᬶ᭞᭓᭞ᬚᬸᬮᬶ᭞᭑᭙᭘᭒᭟" /--> (<span class="meaning">Bali, 3 July 1982</span>).</p>
                 </div>
           <p class="ref">Refs:  [1] <a href="http://www.babadbali.com/aksarabali/alphabet.htm">The Balinese Alphabet [Sudewa]</a> [2] <a href="http://en.wikipedia.org/wiki/Balinese_script"> Balinese Script [Wikipedia]</a></p>
@@ -1478,10 +1487,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id='music'>
-  <h2><a href='#music'>Musical symbols</a></h2>
+  <h2>Musical symbols</h2>
 
 <section id='musicnotes'>
-  <h3><a href='#musicnotes'>Musical symbols for notes</a></h3>
+  <h3>Musical symbols for notes</h3>
   <div class='character' id='char1B61'>
     <div class='charimg'>&#x1B61;</div>
     <p class="charname"><strong>U+1B61</strong> <a href="#char1B61">BALINESE MUSICAL SYMBOL DONG</a></p>
@@ -1548,7 +1557,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id='musicdiacr'>
-  <h3><a href='#musicdiacr'>Diacritical marks for musical symbols</a></h3>
+  <h3>Diacritical marks for musical symbols</h3>
   <div class='character' id='char1B6B'>
     <div class='charimg'>&#x1B6B;</div>
     <p class="charname"><strong>U+1B6B</strong> <a href="#char1B6B">BALINESE MUSICAL SYMBOL COMBINING TEGEH</a></p>
@@ -1609,7 +1618,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id='musicsymbols'>
-  <h3><a href='#musicsymbols'>More musical symbols</a></h3>
+  <h3>More musical symbols</h3>
   <div class='character' id='char1B74'>
     <div class='charimg'>&#x1B74;</div>
     <p class="charname"><strong>U+1B74</strong> <a href="#char1B74">BALINESE MUSICAL SYMBOL RIGHT-HAND OPEN DUG</a></p>
@@ -1674,12 +1683,12 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   <ol>
 <!--li>[Daniels] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
 				0-19-507993-0</li-->
-<li>[ <sup><a href="http://www.babadbali.com/aksarabali/alphabet.htm">s</a></sup> ] Sudewa, <a href="http://www.babadbali.com/aksarabali/alphabet.htm">The Balinese Alphabet</a></li>
-<li>[ <sup><a href="http://std.dkuug.dk/JTC1/sc2/WG2/docs/n2908.pdf">e</a></sup> ] Everson et al., <a href="http://std.dkuug.dk/JTC1/sc2/WG2/docs/n2908.pdf">Proposal for encoding the Balinese script in the UCS</a></li>
-<li>[ <sup><a href="http://en.wikipedia.org/wiki/Balinese_script">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Balinese_script">Balinese script</a></li>
-<li>[ <sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch11.pdf">u</a></sup> ] <a href="http://www.unicode.org/versions/Unicode6.0.0/ch11.pdf">The Unicode Standard v6.0</a></li>
-<li>[ <sup><a href="http://scriptsource.org/cms/scripts/page.php?item_id=source_detail&amp;uid=nrgqwv9x7a">o</a></sup> ] Omniglot, <a href="http://scriptsource.org/cms/scripts/page.php?item_id=source_detail&amp;uid=nrgqwv9x7a">Balinese</a></li>
-<li>[ <sup><a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&amp;uid=aggc6af8cc">ss</a></sup> ] ScriptSource, <a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&amp;uid=aggc6af8cc">Balinese</a></li>
+<li>[ <a class="fnref" href="http://std.dkuug.dk/JTC1/sc2/WG2/docs/n2908.pdf">e</a> ] Everson et al., <a href="http://std.dkuug.dk/JTC1/sc2/WG2/docs/n2908.pdf">Proposal for encoding the Balinese script in the UCS</a></li>
+<li>[ <a class="fnref" href="http://scriptsource.org/cms/scripts/page.php?item_id=source_detail&amp;uid=nrgqwv9x7a">o</a> ] Omniglot, <a href="http://scriptsource.org/cms/scripts/page.php?item_id=source_detail&amp;uid=nrgqwv9x7a">Balinese</a></li>
+<li>[ <a class="fnref" href="http://www.babadbali.com/aksarabali/alphabet.htm">s</a> ] Sudewa, <a href="http://www.babadbali.com/aksarabali/alphabet.htm">The Balinese Alphabet</a></li>
+<li>[ <a class="fnref" href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&amp;uid=aggc6af8cc">ss</a> ] ScriptSource, <a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&amp;uid=aggc6af8cc">Balinese</a></li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode6.0.0/ch11.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode6.0.0/ch11.pdf">The Unicode Standard v6.0</a></li>
+<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Balinese_script">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Balinese_script">Balinese script</a></li>
 </ol>
 </section>
 
@@ -1703,12 +1712,13 @@ replaceStuff('Balinese', 'balinese', spreadsheet, '', 'ban', '', cols, false)
 
 <div id="panel" style="display:none"></div>
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/balinese/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-07-14  8:42<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bbalinese%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fbalinese%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+<div class="smallprint"><span id="version"></span></div>
+
 
 <script>
-initialise('/scripts/balinese/block')
+initialise('/scripts/balinese/block','balinese')
+autoTransliterate('ban')
 </script>
 </body>
 </html>

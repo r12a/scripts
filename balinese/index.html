@@ -61,7 +61,7 @@
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Balinese</h1>
+<h1>Balinese (draft)</h1>
 
 <nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top"/></a></nav>
 
@@ -111,7 +111,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->19 December, 2019<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->15 January, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -182,10 +182,12 @@ Though everyday use of the script has largely been supplanted by the Latin alpha
 
 
 <div id="showTranscriptions">
-<div>In character lists, show:</div>
+<div>Character lists show:</div>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" checked/></label></div>
+<div>
+<label>Transliteration 
+<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
 <div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
 </div>
    
@@ -345,7 +347,7 @@ Though everyday use of the script has largely been supplanted by the Latin alpha
 <h3>Vowel-signs</h3>
 <p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
 
-<p>Other than the inherent vowel, vowel sounds that follow a consonant sound are represented using vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="ban">ᬓᬶ</span> <span class="ipa">ki</span></span>. This includes the  diphthongs, which can each be represented by a single code point.</p>
+<p>Other than the inherent vowel, vowel sounds that follow a consonant sound are represented using vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="ban">ᬓᬶ</span> <span class="ipa">ki</span></span>. This includes the  diphthongs (which can each be represented by a single code point), 2 prescript signs, and 3 circumgraphs.</p>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ᬶ␣ᬷ␣ᬸ␣ᬹ␣ᬾ␣ᭀ␣ᭂ␣ᭃ␣ᬵ␣ᬿ␣ᭁ</figure>
 <p>To represent the sound <span class="ipa">rə</span>, Balinese uses the <a href="#vocalics">vocalic letter</a>. The sequence <span class="codepoint"><span lang="ban">&#x1B2D;</span> <a href="/scripts/balinese/block#char1B2D">[<span class="uname">U+1B2D BALINESE LETTER RA</span>]</a></span> + <span class="codepoint"><span lang="ban">&#x1B42;</span> <a href="/scripts/balinese/block#char1B42">[<span class="uname">U+1B42 BALINESE VOWEL SIGN PEPET​</span>]</a></span> is <em>not</em> used.</p>
 <p>Balinese vowel-signs are all combining characters. In principle a single Unicode character is used per base consonant, even if the vowel-signs appear on both sides of the base consonant, however 3 vowel signs decompose to more than one character (see  <a class="secref">multipart</a>). All vowel-signs are typed and stored after the base consonant, and the font puts them in the correct place for display.</p>
@@ -358,7 +360,7 @@ Though everyday use of the script has largely been supplanted by the Latin alpha
 
  
 <section id="multipart">
-<h3>Multi-part vowel signs</h3>
+<h3>Encoding circumgraphs</h3>
 
 <p>Three vowel-signs can be written as a single character, or as two, eg. </p>
 <ol>
@@ -1074,18 +1076,11 @@ alveolar</th>
 
 <table id="charCountList">
 <tr><th>Main</th><td id="mainCharList"></td><td id="mainCharListTotal"></td></tr>
-<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
 <tr><th>Auxiliary</th><td id="auxCharList"></td><td id="auxCharListTotal"></td></tr>
+<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
 <tr><th>Other</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
 <tr><th>Deprecated</th><td id="deprecatedCharList"></td><td id="deprecatedCharListTotal"></td></tr>
 </table>
-<script>
-runCharCount('.characterBox', 'mainCharList')
-runCharCount('.archaicBox', 'archaicCharList')
-runCharCount('.auxiliaryBox', 'auxCharList')
-runCharCount('.otherBox', 'otherCharList')
-runCharCount('.deprecatedBox', 'deprecatedCharList')
-</script>
 </details>
 
 
