@@ -9,13 +9,14 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="/shared/code/boilerplate.js"></script>
-<script src="/shared/code/toc_2016.js"></script>
+<script src="/shared/code/toc_2020.js"></script>
 <script src="/shared/code/all-names.js"></script>
 <script src="/shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="/shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
@@ -23,6 +24,7 @@
 <script type="text/javascript" src="../../uniview/u.js"></script> 
 
 <script src="/shared/fontlists/buginese.js"> </script>
+<script src="bug-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -76,16 +78,23 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->14 July, 2019<!-- #EndDate -->
-&bull; tags <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="http://r12a.github.io/blog/?tag=buginese" title="Show all blog posts tagged with 'buginese'">buginese</a></p>
+  <!-- #BeginDate format:Sw1 -->15 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
+
+
 <section>
    <p>This page lists characters in the following Unicode  block and provides information about them.</p>
    <ul>
      <li><a href="../../uniview/?block=buginese" target="_blank">Buginese</a></li>
    </ul>
    <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places.</p>
-<p>For details about how the script works, see <a class="linkHighlight" href="index">Buginese</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Bugi">Script links pages</a>.</p>
-<p>Find <input type="text" onChange="var hex=this.value;if (hex!=''){while(hex.length<4){hex='0'+hex;}document.location='#char'+hex.toUpperCase();}"/></p>
+<p>For details about how the script works, see the <a class="linkHighlight" href="index">Buginese</a> summary.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Bugi">Script links pages</a>.</p>
+<p><span style="text-align: start;">We have usage data for the following language that uses the Buginese script</span>: <span style="text-align: start;">Buginese</span>.</p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -103,11 +112,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="consonants">
-<h2><a href="#consonants">Consonants</a></h2>
+<h2>Consonants</h2>
 
 
 <section id="basicconsonants">
-  <h3><a href="#basicconsonants">Basic consonants</a></h3>
+  <h3>Basic consonants</h3>
 
 <div class="character" id="char1A00">
 <div class="charimg">&#x1A00;</div>
@@ -117,7 +126,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">k</span></p>
-<p><span class="ipa">kɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨀᨆᨗᨔᨗ</span> <span class="trans">kamisi</span> <span class="meaning">Thursday</span></span>.</p>
+<p><span class="ipa">kɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨀᨆᨗᨔᨗ</span> <span class="trans">kamisi</span> (<span class="trans">kamisi</span>) <span class="meaning">Thursday</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -135,7 +144,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp; <span class="trans">g</span></p>
-<p><span class="ipa">gɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨅᨔ ᨕᨘᨁᨗ</span> <span class="trans">basa ugi</span> <span class="meaning">Buginese language</span></span>.</p>
+<p><span class="ipa">gɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨅᨔ ᨕᨘᨁᨗ</span> <span class="trans">basa ugi</span> (<span class="trans">basa ugi</span>) <span class="meaning">Buginese language</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -153,7 +162,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp; <span class="trans">ng</span></p>
-<p><span class="ipa">ŋɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨕᨆᨑᨙᨉᨀᨂᨛ</span> <span class="trans">amaradekangəng</span> <span class="meaning">democracy</span></span>.</p>
+<p><span class="ipa">ŋɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨕᨆᨑᨙᨉᨀᨂᨛ</span> <span class="trans">amaradekangəng</span> (<span class="trans">amaradekangəng</span>)  <span class="meaning">democracy</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -171,7 +180,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp; <span class="trans">p</span></p>
-<p><span class="ipa">pɑ, eg. <span class="charExample"><span class="ex" lang="bug">ᨒᨄ</span> <span class="trans">lapa</span> <span class="meaning">lava</span></span>.</span></p>
+<p><span class="ipa">pɑ, eg. <span class="charExample"><span class="ex" lang="bug">ᨒᨄ</span> <span class="trans">lapa</span> (<span class="trans">lapa</span>) <span class="meaning">lava</span></span>.</span></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -191,7 +200,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">b</span></p>
-<p><span class="ipa">bɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨕᨑᨅ</span> <span class="trans">araba</span> <span class="meaning">Wednesday</span></span>.</p>
+<p><span class="ipa">bɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨕᨑᨅ</span> <span class="trans">araba</span> (<span class="trans">araba</span>) <span class="meaning">Wednesday</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -209,7 +218,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">m</span></p>
-<p><span class="ipa">mɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨀᨆᨗᨔᨗ</span> <span class="trans">kamisi</span> <span class="meaning">Thursday</span></span>.</div>
+<p><span class="ipa">mɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨀᨆᨗᨔᨗ</span> <span class="trans">kamisi</span> (<span class="trans">kamisi</span>) <span class="meaning">Thursday</span></span>.</div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Buginese" target="_blank">pp663-664</a>  
@@ -226,7 +235,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">t</span></p>
-<p><span class="ipa">tɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨔᨈᨘ</span> <span class="trans">satung</span> <span class="meaning">Saturday</span></span>.</p>
+<p><span class="ipa">tɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨔᨈᨘ</span> <span class="trans">satung</span> (<span class="trans">satung</span>) <span class="meaning">Saturday</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -244,7 +253,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">d</span></p>
-<p><span class="ipa">dɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨄᨉᨚᨕᨂᨛ</span> <span class="trans">paddoangeng</span> <span class="meaning">prayers</span></span>.</p>
+<p><span class="ipa">dɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨄᨉᨚᨕᨂᨛ</span> <span class="trans">paddoangeng</span> (<span class="trans">paddoangeng</span>) <span class="meaning">prayers</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -262,7 +271,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">n</span></p>
-<p><span class="ipa">nɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨕᨗᨊ</span> <span class="trans">ina</span> <span class="ipa">mother</span></span>.</p>
+<p><span class="ipa">nɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨕᨗᨊ</span> <span class="trans">ina</span> (<span class="trans">ina</span>) <span class="ipa">mother</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -280,7 +289,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">c</span></p>
-<p><span class="ipa">cɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨆᨌ</span> <span class="trans">maca</span> <span class="meaning">clever</span></span>.</p>
+<p><span class="ipa">cɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨆᨌ</span> <span class="trans">maca</span> (<span class="trans">maca</span>) <span class="meaning">clever</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -298,7 +307,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">j</span></p>
-<p><span class="ipa">ɟɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨍᨘᨆ</span> <span class="ipa">juma</span> <span class="meaning">Friday</span></span>.</p>
+<p><span class="ipa">ɟɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨍᨘᨆ</span> <span class="trans">juma</span> <span class="ipa">juma</span> <span class="meaning">Friday</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -359,7 +368,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">r</span></p>
-<p><span class="ipa">rɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨅᨗᨌᨑ</span> <span class="trans">bicara</span> <span class="meaning">language</span></span>.</p>
+<p><span class="ipa">rɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨅᨗᨌᨑ</span> <span class="trans">bicara</span> (<span class="trans">bicara</span>) <span class="meaning">language</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -377,7 +386,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">l</span></p>
-<p><span class="ipa">lɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨒᨄ</span> <span class="trans">lapa</span> <span class="ipa">lava</span></span>.</p>
+<p><span class="ipa">lɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨒᨄ</span> <span class="trans">lapa</span> (<span class="trans">lapa</span>) <span class="ipa">lava</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -395,7 +404,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">w</span></p>
-<p><span class="ipa">wɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨓᨕᨙ</span> <span class="trans">wae</span> <span class="meaning">water</span></span>.</p>
+<p><span class="ipa">wɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨓᨕᨙ</span> <span class="trans">wae</span> (<span class="trans">wae</span>) <span class="meaning">water</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -431,7 +440,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">h</span></p>
-<p><span class="ipa">hɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨕᨛᨔᨚ ᨕᨖᨕᨗ</span> <span class="trans">əso ahai</span> <span class="meaning">Sunday</span></span>.</p>
+<p><span class="ipa">hɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨕᨛᨔᨚ ᨕᨖᨕᨗ</span> <span class="trans">əso ahai</span> (<span class="trans">əso ahai</span>) <span class="meaning">Sunday</span></span>.</p>
 <p>This letter is used to represent Arabic sounds.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
@@ -448,7 +457,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="clusters">
-  <h3><a href="#clusters">Consonant clusters</a></h3>
+  <h3>Consonant clusters</h3>
 
 <div class="character" id="char1A03">
 <div class="charimg">&#x1A03;</div>
@@ -522,10 +531,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 </section>
 </section>
 <section id="vowels">
-  <h2><a href="#vowels">Vowels</a></h2>
+  <h2>Vowels</h2>
 
 <section id="independentvowels">
-  <h3><a href="#independentvowels">Independent vowel</a></h3>
+  <h3>Independent vowel</h3>
 
   
 <div class="character" id="char1A15">
@@ -536,7 +545,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">a</span></p>
-<p><span class="ipa">ɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨕᨔᨘ</span> <span class="trans">asu</span> <span class="meaning">dog</span></span>, or used in combination with vowel-signs to make independent vowels, eg. <span class="charExample"><span class="ex" lang="bug">ᨕᨗᨊ</span> <span class="trans">ina</span> <span class="ipa">mother</span></span>.</p>
+<p><span class="ipa">ɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨕᨔᨘ</span> <span class="trans">asu</span> (<span class="trans">asu</span>) <span class="meaning">dog</span></span>, or used in combination with vowel-signs to make independent vowels, eg. <span class="charExample"><span class="ex" lang="bug">ᨕᨗᨊ</span> <span class="trans">ina</span> (<span class="trans">ina</span>) <span class="ipa">mother</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -550,7 +559,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="vowelsigns">
-  <h3><a href="#vowelsigns">Vowel signs</a></h3>
+  <h3>Vowel signs</h3>
 
 <div class="character" id="char1A17">
 <div class="charimg">&#x1A17;</div>
@@ -578,7 +587,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> vowel-sign &nbsp;&nbsp;   <span class="trans">u</span></p>
-<p><span class="ipa">u</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨍᨘᨆ</span> <span class="trans">juma</span> <span class="meaning">Friday </span></span>.
+<p><span class="ipa">u</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨍᨘᨆ</span> <span class="trans">juma</span> (<span class="trans">juma</span>) <span class="meaning">Friday </span></span>.
 </p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
@@ -615,7 +624,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> vowel-sign &nbsp;&nbsp;   <span class="trans">o</span></p>
-<p><span class="ipa">o</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨕᨛᨔᨚ ᨕᨖᨕᨗ</span> <span class="trans">əso ahai</span> <span class="meaning">Sunday</span></span>.</p>
+<p><span class="ipa">o</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨕᨛᨔᨚ ᨕᨖᨕᨗ</span> <span class="trans">əso ahai</span> (<span class="trans">əso ahai</span>)  <span class="meaning">Sunday</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -633,7 +642,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> vowel-sign &nbsp;&nbsp;   <span class="trans">ə</span></p>
-<p><span class="ipa">ə</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨕᨛᨔᨚ ᨕᨖᨕᨗ</span> <span class="trans">əso ahai</span> <span class="meaning">Sunday</span></span>.</p>
+<p><span class="ipa">ə</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨕᨛᨔᨚ ᨕᨖᨕᨗ</span> <span class="trans">əso ahai</span> (<span class="trans">əso ahai</span>) <span class="meaning">Sunday</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -649,7 +658,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="sympunc">
-  <h2><a href="#sympunc"> punctuation</a></h2>
+  <h2>Punctuation</h2>
   
  <div class="character" id="char1A1E">
 <div class="charimg">&#x1A1E;</div>
@@ -659,7 +668,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> punctuation <span class="name">pallawa</span></p>
-<p>Breaks up phrases in places where English would typically add a comma or a full stop, eg.<br><span class="charExample"><span class="ex" lang="bug">ᨊᨄᨘᨊᨕᨗ ᨑᨗᨕᨔᨙᨂᨙ ᨕᨀᨒᨙ᨞ ᨊᨄᨘᨊᨕᨗ ᨑᨗᨕᨔᨙᨂᨙ ᨕᨈᨗ ᨆᨑᨙᨊᨗ ᨊ ᨔᨗᨅᨚᨒᨙ ᨅᨚᨒᨙᨊ ᨄᨉ ᨔᨗᨄᨀᨈᨕᨘ ᨄᨉ ᨆᨔᨒᨔᨘᨑᨙ᨞</span> <span class="trans">Nappunai riasengnge akkaleng, nappunai riasengnge ati marennni na sibole bolena pada sipakatau pada massalasureng.</span></span></p>
+<p>Breaks up phrases in places where English would typically add a comma or a full stop, eg.<br><span class="ex" lang="bug">ᨊᨄᨘᨊᨕᨗ ᨑᨗᨕᨔᨙᨂᨙ ᨕᨀᨒᨙ᨞ ᨊᨄᨘᨊᨕᨗ ᨑᨗᨕᨔᨙᨂᨙ ᨕᨈᨗ ᨆᨑᨙᨊᨗ ᨊ ᨔᨗᨅᨚᨒᨙ ᨅᨚᨒᨙᨊ ᨄᨉ ᨔᨗᨄᨀᨈᨕᨘ ᨄᨉ ᨆᨔᨒᨔᨘᨑᨙ᨞</span> (<span class="trans">Nappunai riasengnge akkaleng, nappunai riasengnge ati marennni na sibole bolena pada sipakatau pada massalasureng.</span>)</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -696,11 +705,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <section id="refs">
   <h2><a href="#refs" id="endlinks">References</a></h2>
   <ol>
-<li>[ <sup><a href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></sup> ] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch19.pdf">Buginese</a>, pp663-664.</li>
-<li>[ <sup><a href="https://en.wikipedia.org/wiki/Lontara_script">w</a></sup> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Lontara_script">Lontara script</a>.</li>
-<li>[ <sup><a href="http://www.unicode.org/L2/L2003/03320-n2633-lontara.pdf">e</a></sup> ] Michael Everson, <cite><a href="http://www.unicode.org/L2/L2003/03320-n2633-lontara.pdf">Revised final proposal for encoding the Lontara (Buginese) script in the UCS</a></cite>.</li>
-<li>[ <sup><a href="http://www.unicode.org/L2/L2016/16096-sumbawa.pdf">p</a></sup> ]Anshuman Pandey, <a href="http://www.unicode.org/L2/L2016/16096-sumbawa.pdf"><cite>Representing Sumbawa in Unicode</cite></a></li>
-<li>[ <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3666.pdf">e2</a></sup> ] Michael Everson, <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3666.pdf"><cite>Proposal for encoding additional Buginese characters for Old Buginese in the UCS</cite></a></li>
+<li>[ <a class="fnref" href="http://www.unicode.org/L2/L2003/03320-n2633-lontara.pdf">e</a> ] Michael Everson, <cite><a href="http://www.unicode.org/L2/L2003/03320-n2633-lontara.pdf">Revised final proposal for encoding the Lontara (Buginese) script in the UCS</a></cite>.</li>
+<li>[ <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3666.pdf">e2</a> ] Michael Everson, <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3666.pdf"><cite>Proposal for encoding additional Buginese characters for Old Buginese in the UCS</cite></a></li>
+<li>[ <a class="fnref" href="http://www.unicode.org/L2/L2016/16096-sumbawa.pdf">p</a> ] Anshuman Pandey, <a href="http://www.unicode.org/L2/L2016/16096-sumbawa.pdf"><cite>Representing Sumbawa in Unicode</cite></a></li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a> ] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch19.pdf">Buginese</a>, pp663-664.</li>
+<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Lontara_script">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Lontara_script">Lontara script</a>.</li>
 </ol>
 </section>
 
@@ -723,14 +732,12 @@ replaceStuff('Buginese', 'buginese', spreadsheet, '', 'bug', '', cols, false)
 <div id="panel" style="display:none"></div>
 
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/buginese/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-07-14  9:28<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bbuginese%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fbuginese%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
-
+<div class="smallprint"><span id="version"></span></div>
 
 
 <script>
-initialise('/scripts/buginese/block')
+initialise('/scripts/buginese/block','buginese')
+autoTransliterate('bug')
 </script>
 </body>
 </html>
