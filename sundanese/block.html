@@ -5,17 +5,18 @@
 <title>Sundanese character notes</title>
 <meta name="description" content="Notes about characters in the Unicode Sundanese script blocks."/>
 <link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../block/block-style.css" />
+<link rel="stylesheet" href="../common/block-style.css" />
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
-<script src="../block/functions.js"></script>
+<script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
@@ -23,6 +24,7 @@
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/sundanese.js"> </script>
+<script src="su-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -76,8 +78,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->14 July, 2019<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="https://r12a.github.io/blog/?tag=sundanese" title="Show all blog posts tagged with 'sundanese'">sundanese</a></p>
+  <!-- #BeginDate format:Sw1 -->15 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
+
+
 <section>
    <p>This page lists characters in the following Unicode  block and provides information about them.</p>
    <ul>
@@ -85,8 +90,12 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
      <li><a href="../../uniview/?block=sundanese_supplement" target="_blank">Sundanese supplement</a></li>
    </ul>
    <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-<p>For details about how the script works, see <a class="linkHighlight" href="index">Sundanese</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Sund">Script links pages</a>.</p>
-<p>Find <input type="text" onChange="var hex=this.value;if (hex!=''){while(hex.length<4){hex='0'+hex;}document.location='#char'+hex.toUpperCase();}"/></p>
+<p>For details about how the script works, see the <a class="linkHighlight" href="index">Sundanese</a> summary.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Sund">Script links pages</a>.</p>
+<p><span style="text-align: start;">We have usage data for the following language that uses the Sundanese script</span>: <span style="text-align: start;">Sundanese</span>.</p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -103,11 +112,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="consonants">
-<h2><a href="#consonants">Consonants</a></h2>
+<h2>Consonants</h2>
 
 
 <section id="basicconsonants">
-  <h3><a href="#basicconsonants">Basic consonants</a></h3>
+  <h3>Basic consonants</h3>
 
 
 <div class="character" id="char1B8A">
@@ -445,7 +454,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> consonant &nbsp;&nbsp;     <span class="trans">kh</span></p>
-<p>Used for writing Arabic <span class="ex" lang="ar">خ</span>, eg. <span class="charExample"><span class="ex" lang="su">ᮮᮥᮯᮥ</span> <span class="trans">خاشع</span> <span class="trans">xušu</span> <span class="meaning">state of grace</span></span>. Not widely used.</p>
+<p>Used for writing Arabic <span class="ex" lang="ar">خ</span>, eg. <span class="charExample"><span class="ex" lang="su">ᮮᮥᮯᮥ</span> <span class="trans">xušu</span> (<span class="trans">xušu</span>) (<span class="trans">خاشع</span>) <span class="meaning">state of grace</span></span>. Not widely used.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -460,7 +469,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> consonant &nbsp;&nbsp;     <span class="trans">sy</span></p>
-<p>Used for writing Arabic <span class="ex" lang="ar">ش</span>, eg. <span class="charExample"><span class="ex" lang="su">ᮮᮥᮯᮥ</span> <span class="trans">خاشع</span> <span class="trans">xušu</span> <span class="meaning">state of grace</span></span>. Not widely used.</p>
+<p>Used for writing Arabic <span class="ex" lang="ar">ش</span>, eg. <span class="charExample"><span class="ex" lang="su">ᮮᮥᮯᮥ</span> <span class="trans">xušu</span> (<span class="trans">xušu</span>) (<span class="trans">خاشع</span>) <span class="meaning">state of grace</span></span>. Not widely used.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -473,7 +482,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="medial">
-  <h3><a href="#medial">medial consonants</a></h3>
+  <h3>medial consonants</h3>
 
 <div class="character" id="char1BA1">
 <div class="charimg">&#x1BA1;</div>
@@ -498,7 +507,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> medial consonant <span class="name">panyakra</span>&nbsp;&nbsp;     <span class="trans">-r-</span></p>
-<p>Used after a syllable-initial consonant, eg. <span class="charExample"><span class="ex" lang="su">ᮃᮌᮢᮤᮊᮥᮜ᮪ᮒᮥᮁ</span> <span class="trans">agrikultur</span> <span class="meaning">agriculture</span></span>.</p>
+<p>Used after a syllable-initial consonant, eg. <span class="charExample"><span class="ex" lang="su">ᮃᮌᮢᮤᮊᮥᮜ᮪ᮒᮥᮁ</span> <span class="trans">agrikultur</span> (<span class="trans">agrikultur</span>) <span class="meaning">agriculture</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -513,7 +522,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> medial consonant <span class="name">panyiku</span>&nbsp;&nbsp;     <span class="trans">-l-</span></p>
-<p>Used after a syllable-initial consonant, eg. <span class="charExample"><span class="ex" lang="su">ᮄᮊᮣᮤᮙ᮪</span> <span class="trans">iklim</span> <span class="meaning">climate</span></span>.</p>
+<p>Used after a syllable-initial consonant, eg. <span class="charExample"><span class="ex" lang="su">ᮄᮊᮣᮤᮙ᮪</span> <span class="trans">iklim</span> (<span class="trans">iklim</span>)  <span class="meaning">climate</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -529,7 +538,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="syllable_final">
-  <h3><a href="#syllable_final">Syllable-final consonants</a></h3>
+  <h3>Syllable-final consonants</h3>
 
 
 <div class="character" id="char1B80">
@@ -540,7 +549,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> syllable-final consonant <span class="name">panayecek</span> &nbsp;&nbsp;     <span class="trans">-ng</span></p>
-<p><span class="ipa">ŋ</span> as a syllable-final sound, eg. <span class="charExample"><span class="ex" lang="su">ᮙᮀᮌᮥ</span> <span class="trans">manggu</span> <span class="meaning">mangosteen</span></span>.</p>
+<p><span class="ipa">ŋ</span> as a syllable-final sound, eg. <span class="charExample"><span class="ex" lang="su">ᮙᮀᮌᮥ</span> <span class="trans">manggu</span> (<span class="trans">manggu</span>) <span class="meaning">mangosteen</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -555,7 +564,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> syllable-final consonant <span class="name">panglayar</span> &nbsp;&nbsp;     <span class="trans">-r</span></p>
-<p><span class="ipa">r</span> as a syllable-final sound, eg. <span class="charExample"><span class="ex" lang="su">ᮕᮞᮤᮁ</span> <span class="trans">pasir</span> <span class="meaning">hill</span></span>.</p>
+<p><span class="ipa">r</span> as a syllable-final sound, eg. <span class="charExample"><span class="ex" lang="su">ᮕᮞᮤᮁ</span> <span class="trans">pasir</span> (<span class="trans">pasir</span>) <span class="meaning">hill</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -570,7 +579,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> syllable-final consonant <span class="name">pangwisad</span> &nbsp;&nbsp;     <span class="trans">-h</span></p>
-<p><span class="ipa">h</span> as a syllable-final sound, eg. <span class="charExample"><span class="ex" lang="su">ᮃᮘᮂ-ᮃᮘᮂ</span> <span class="trans">abah-abah</span> <span class="meaning">goods.</span></span></p>
+<p><span class="ipa">h</span> as a syllable-final sound, eg. <span class="charExample"><span class="ex" lang="su">ᮃᮘᮂ-ᮃᮘᮂ</span> <span class="trans">abah-abah</span> (<span class="trans">abah-abah</span>) <span class="meaning">goods.</span></span></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -582,7 +591,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="historical_consonants">
-  <h3><a href="#historical_consonants">Historical consonants</a></h3>
+  <h3>Historical consonants</h3>
 
 <div class="character" id="char1BAC">
 <div class="charimg">&#x1BAC;</div>
@@ -699,7 +708,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="viramas">
-  <h2><a href="#viramas">Viramas</a></h2>
+  <h2>Viramas</h2>
 
 <div class="character" id="char1BAA">
 <div class="charimg">&#x1BAA;</div>
@@ -709,7 +718,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> virama <span class="name">patén</span> or <span class="name">pamaéh</span> &nbsp;</p>
-<p>Visible indicator of a killed vowel, eg. <span class="charExample"><span class="ex" lang="su">ᮃᮊ᮪ᮞᮛ</span> <span class="trans">aksara</span></span>.</p>
+<p>Visible indicator of a killed vowel, eg. <span class="charExample"><span class="ex" lang="su">ᮃᮊ᮪ᮞᮛ</span> <span class="trans">aksara</span> (<span class="trans">aksara</span>)</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -738,10 +747,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="vowels">
-  <h2><a href="#vowels">Vowels</a></h2>
+  <h2>Vowels</h2>
 
 <section id="independentvowels">
-  <h3><a href="#independentvowels">Independent vowels</a></h3>
+  <h3>Independent vowels</h3>
 
   
 <div class="character" id="char1B83">
@@ -767,7 +776,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> independent vowel &nbsp;&nbsp;     <span class="trans">i</span></p>
-<p><span class="ipa">i</span>, eg. <span class="charExample"><span class="ex" lang="su">ᮄᮊᮣᮤᮙ᮪</span> <span class="trans">iklim</span> <span class="meaning">climate</span></span>.</p>
+<p><span class="ipa">i</span>, eg. <span class="charExample"><span class="ex" lang="su">ᮄᮊᮣᮤᮙ᮪</span> <span class="trans">iklim</span> (<span class="trans">iklim</span>) <span class="meaning">climate</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -797,7 +806,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p>The corresponding vowel-sign is <span class="codepoint"><span lang="su">&#xA0;&#x1BA6;</span> <a href="/scripts/sundanese/block#char1BA6">[<span class="uname">U+1BA6 SUNDANESE VOWEL SIGN PANAELAENG​</span>]</a></span>.</p>
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> independent vowel &nbsp;&nbsp;     <span class="trans">é</span></p>
-<p><span class="ipa">e</span>, eg. <span class="charExample"><span class="ex" lang="su">ᮆᮜ᮪ᮙᮥ</span> <span class="trans">élmu</span> <span class="meaning">science</span></span>.</p>
+<p><span class="ipa">e</span>, eg. <span class="charExample"><span class="ex" lang="su">ᮆᮜ᮪ᮙᮥ</span> <span class="trans">élmu</span> (<span class="trans">élmu</span>) <span class="meaning">science</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -851,7 +860,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="vowelsigns">
-  <h3><a href="#vowelsigns">Vowel signs</a></h3>
+  <h3>Vowel signs</h3>
 
 <div class="character" id="char1BA4">
 <div class="charimg">&#x1BA4;</div>
@@ -861,7 +870,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> vowel-sign <span class="name">panghulu</span>&nbsp;&nbsp;     <span class="trans">i</span></p>
-<p>eg. <span class="charExample"><span class="ex" lang="su">ᮄᮊᮣᮤᮙ᮪</span> <span class="trans">iklim</span> <span class="meaning">climate</span></span>.</p>
+<p>eg. <span class="charExample"><span class="ex" lang="su">ᮄᮊᮣᮤᮙ᮪</span> <span class="trans">iklim</span> (<span class="trans">iklim</span>) <span class="meaning">climate</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -876,7 +885,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> vowel-sign <span class="name">panyuku</span>&nbsp;&nbsp;     <span class="trans">u</span></p>
-<p>eg. <span class="charExample"><span class="ex" lang="su">ᮆᮜ᮪ᮙᮥ</span> <span class="trans">élmu</span> <span class="meaning">science</span></span>.</p>
+<p>eg. <span class="charExample"><span class="ex" lang="su">ᮆᮜ᮪ᮙᮥ</span> <span class="trans">élmu</span> (<span class="trans">élmu</span>)  <span class="meaning">science</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -891,7 +900,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> vowel-sign <span class="name">panéléng</span>&nbsp;&nbsp;     <span class="trans">é</span></p>
-<p>This vowel-sign is displayed to the left of the base character, eg. <span class="charExample"><span class="ex" lang="su">ᮛᮦᮌᮀ</span> <span class="trans">régang</span> <span class="meaning">stick</span></span>.</p>
+<p>This vowel-sign is displayed to the left of the base character, eg. <span class="charExample"><span class="ex" lang="su">ᮛᮦᮌᮀ</span> <span class="trans">régang</span> (<span class="trans">régang</span>) <span class="meaning">stick</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -906,7 +915,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> vowel-sign <span class="name">panolong</span>&nbsp;&nbsp;     <span class="trans">o</span></p>
-<p>eg. <span class="charExample"><span class="ex" lang="su">ᮌᮨᮜᮧᮙ᮪ᮘᮀ ᮙᮤᮊᮢᮧ</span> <span class="trans">gelombang mikro</span> <span class="meaning">microwave</span></span>.</p>
+<p>eg. <span class="charExample"><span class="ex" lang="su">ᮌᮨᮜᮧᮙ᮪ᮘᮀ ᮙᮤᮊᮢᮧ</span> <span class="trans">gelombang mikro</span> (<span class="trans">gelombang mikro</span>) <span class="meaning">microwave</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -949,7 +958,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="sign">
-  <h2><a href="#sign">Sign</a></h2>
+  <h2>Sign</h2>
   
 <div class="character" id="char1BBA">
 <div class="charimg">&#x1BBA;</div>
@@ -960,7 +969,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div class="letter sundanese">
   <p class="titlepara"><span class="title">Sundanese</span> sign &nbsp;&nbsp;     <span class="name">avagraha</span></p>
 <p>Not used in modern Sundanese.</p>
-<p>In older Sundanese orthography  it kills the vowel of a preceding consonant but introduces a hiatus before an initial  <span class="trans">a-</span>, eg. <span class="charExample"><span class="ex" lang="su">ᮃᮜᮥᮔᮺᮌᮥᮀ</span> <span class="trans">alun-agung</span> <span class="meaning">tidal wave</span></span>. This could also be written as two words, ie. <span class="charExample"><span class="ex" lang="su">ᮃᮜᮥᮔ᮪ ᮃᮌᮥᮀ</span></span>.</p>
+<p>In older Sundanese orthography  it kills the vowel of a preceding consonant but introduces a hiatus before an initial  <span class="trans">a-</span>, eg. <span class="charExample"><span class="ex" lang="su">ᮃᮜᮥᮔᮺᮌᮥᮀ</span> <span class="trans">alun-agung</span> (<span class="trans">alun-agung</span>) <span class="meaning">tidal wave</span></span>. This could also be written as two words, ie. <span class="charExample"><span class="ex" lang="su">ᮃᮜᮥᮔ᮪ ᮃᮌᮥᮀ</span> <span class="trans">ạlunˣ ạguŋ̽</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
   [1] <a href="https://en.wikipedia.org/wiki/Sundanese_alphabet" target="_blank">Everson2</a> </p>
@@ -975,7 +984,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="sympunc">
-  <h2><a href="#sympunc"> punctuation</a></h2>
+  <h2> punctuation</h2>
   
 <div class="character" id="char1CC0">
 <div class="charimg">&#x1CC0;</div>
@@ -1103,7 +1112,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="digits">
-  <h2><a href="#digits">Digits</a></h2>
+  <h2>Digits</h2>
   
   
 <div class="character" id="char1BB0">
@@ -1256,10 +1265,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <section id="refs">
   <h2><a href="#refs" id="endlinks">References</a></h2>
 <ol>
-<li>[ <sup><a href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></sup> ] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch19.pdf">Sundanese</a>, pp661-664.</li>
-<li>[ <sup><a href="httphttps://en.wikipedia.org/wiki/Sundanese_alphabet">w</a></sup> ] Wikipedia, <a href="httphttps://en.wikipedia.org/wiki/Sundanese_alphabet">Sundanese alphabet</a>.</li>
-<li>[ <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3319.pdf">e</a></sup> ] Michael Everson, <cite><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3319.pdf">Proposal for encoding the Sundanese script in the UCS</a></cite>.</li>
-<li>[ <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3666.pdf">os</a></sup> ] Michael Everson, <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3666.pdf"><cite>Proposal for encoding additional Sundanese characters for Old Sundanese in the UCS</cite></a></li>
+<li>[ <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3319.pdf">e</a> ] Michael Everson, <cite><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3319.pdf">Proposal for encoding the Sundanese script in the UCS</a></cite>.</li>
+<li>[ <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3666.pdf">os</a> ] Michael Everson, <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3666.pdf"><cite>Proposal for encoding additional Sundanese characters for Old Sundanese in the UCS</cite></a></li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a> ] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch19.pdf">Sundanese</a>, pp661-664.</li>
+<li>[ <a class="fnref" href="httphttps://en.wikipedia.org/wiki/Sundanese_alphabet">w</a> ] Wikipedia, <a href="httphttps://en.wikipedia.org/wiki/Sundanese_alphabet">Sundanese alphabet</a>.</li>
 </ol>
 </section>
 
@@ -1280,14 +1289,12 @@ replaceStuff('Sundanese', 'sundanese', spreadsheet, '', 'su', '', cols, false)
 <div id="panel" style="display:none"></div>
 
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/sundanese/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-07-14  15:28<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bsundanese%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fsundanese%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
-
+<div class="smallprint"><span id="version"></span></div>
 
 
 <script>
-initialise('/scripts/sundanese/block')
+initialise('/scripts/sundanese/block','sundanese')
+autoTransliterate('su')
 </script>
 </body>
 </html>
