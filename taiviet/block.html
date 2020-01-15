@@ -9,13 +9,14 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
@@ -23,6 +24,7 @@
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/taiviet.js"> </script>
+<script src="blt-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -76,19 +78,23 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->15 July, 2019<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="https://r12a.github.io/blog/?tag=taiviet" title="Show all blog posts tagged with 'taiviet'">taiviet</a></p>
+<!-- #BeginDate format:Sw1 -->15 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
+
+
 <section>
    <p>This page lists characters in the following Unicode  block and provides information about them. </p>
 <ul>
 <li><a href="../../uniview/?block=taiviet" target="_blank">Tai Viet</a></li>
 </ul>
    <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-<p>For details about how the script works, see <a class="linkHighlight" href="index">Tai Viet/Tai Dam</a>. For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Tavt">Script links pages</a>.</p>
-<p>Find
-<input type="text" 
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/>
-</p>
+<p>For details about how the script works, see the <a class="linkHighlight" href="index">Tai Viet/Tai Dam</a> summary. For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Tavt">Script links pages</a>.</p>
+<p><span style="text-align: start;">We have usage data for the following language that uses the Tai Viet script</span>: Tai Dam.</p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -105,11 +111,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="consonants">
-<h2><a href="#consonants">Consonants</a></h2>
+<h2>Consonants</h2>
 
 
 <section id="basicconsonants">
-  <h3><a href="#basicconsonants">Basic consonants</a></h3>
+  <h3>Basic consonants</h3>
 <div class="character" id="charAA81">
 <div class="charimg">&#xAA81;</div>
 <p class="charname"><strong>U+AA81</strong> <a href="#charAA81">TAI VIET LETTER HIGH KO</a></p>
@@ -664,11 +670,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">v, -w</span></p>
 <p>This letter is the one used for syllable final <span class="ipa">w</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪔꪲꪫ</span> <span class="trans">ṯiw</span> <span class="ipa">tʰiw¹</span> <span class="meaning">to whistle</span></span>.</p>
-<p>This  letter is also used to labialise initial velar consonants when appearing immediately after the consonant. <span class="ref"><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b4</a></span> The placement of a vowel sign can help avoid ambiguity here: compare <span class="charExample" translate="no"><span class="ex" lang="blt">ꪀꪲꪫ</span> <span class="trans">ḵiw</span> <span class="ipa">kiw</span></span> vs. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪀꪫꪲ</span> <span class="trans">ḵʷi</span> <span class="ipa">kʷi</span></span>. <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b5</a></sup></p>
+<p>This  letter is also used to labialise initial velar consonants when appearing immediately after the consonant. <span class="ref"><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b4</a></span> The placement of a vowel sign can help avoid ambiguity here: compare <span class="charExample" translate="no"><span class="ex" lang="blt">ꪀꪲꪫ</span> <span class="trans">ḵiw</span> <span class="ipa">kiw</span></span> vs. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪀꪫꪲ</span> <span class="trans">ḵʷi</span> <span class="ipa">kʷi</span></span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b5</a></p>
 <p>Also occurs in the following vowel:</p>
 <p><span class="ipa">ʷɛ</span> <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵ-ꪫ</span></span>, where the missing consonant is velar, and the result is a labialised velar consonant followed by <span class="ipa">ɛ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪁꪫꪥ</span> <span class="trans">ɛkwy</span> <span class="ipa">kʷɛ²</span> <span class="meaning">cinnamon</span></span>.</p>
-<p>The traditional sequence <span class="charExample"><span class="ex" lang="blt">ꪵ-ꪫ</span></span> is ambiguous in open  syllables. It can be  interpreted as either <span class="ipa">Cɛw</span>, or as <span class="ipa">Cʷɛ</span> (where C represents a  velar consonant). To eliminate this  ambiguity, the character  <span class="codepoint" translate="no"><span lang="blt">&#xAAA5;</span> [<a href="/scripts/taiviet/block#charAAA5"><span class="uname">U+AAA5 TAI VIET LETTER HIGH YO</span></a>]</span>  is sometimes appended to the  end of the sequence to indicate the second  pronunciation (as in the earlier example). Since <span class="ipa">j</span> never occurs after  <span class="ipa">ɛ</span>, this can be done without creating a new  ambiguity. This spelling is only used in  some dialects of the traditional script. However, it has been adopted as a standard  spelling in a project sponsored by the  Son La Department of Science and  Technology. <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b6</a></sup></p>
-<p>Alternatively, the position of a tone mark can help disambiguate the pronunciation. Compare <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪀ꫁ꪫ</span> <span class="trans">ɛḵ²w</span> <span class="ipa">kɛw³</span></span> and <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪀꪫ꫁</span> <span class="trans">ɛḵw²</span> <span class="ipa">kʷɛ³</span></span>. <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b5</a></sup></p>
+<p>The traditional sequence <span class="charExample"><span class="ex" lang="blt">ꪵ-ꪫ</span></span> is ambiguous in open  syllables. It can be  interpreted as either <span class="ipa">Cɛw</span>, or as <span class="ipa">Cʷɛ</span> (where C represents a  velar consonant). To eliminate this  ambiguity, the character  <span class="codepoint" translate="no"><span lang="blt">&#xAAA5;</span> [<a href="/scripts/taiviet/block#charAAA5"><span class="uname">U+AAA5 TAI VIET LETTER HIGH YO</span></a>]</span>  is sometimes appended to the  end of the sequence to indicate the second  pronunciation (as in the earlier example). Since <span class="ipa">j</span> never occurs after  <span class="ipa">ɛ</span>, this can be done without creating a new  ambiguity. This spelling is only used in  some dialects of the traditional script. However, it has been adopted as a standard  spelling in a project sponsored by the  Son La Department of Science and  Technology. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b6</a></p>
+<p>Alternatively, the position of a tone mark can help disambiguate the pronunciation. Compare <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪀ꫁ꪫ</span> <span class="trans">ɛḵ²w</span> <span class="ipa">kɛw³</span></span> and <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪀꪫ꫁</span> <span class="trans">ɛḵw²</span> <span class="ipa">kʷɛ³</span></span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b5</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -872,7 +878,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="logographs">
-  <h3><a href="#logographs">Logographs</a></h3>
+  <h3>Logographs</h3>
 
 <div class="character" id="charAADB">
 <div class="charimg">&#xAADB;</div>
@@ -884,7 +890,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">kon⁴</span></p>
-<p>Used with the meaning <span class="meaning">person</span>. The  ligature is used to distinguish  between homophonous words such as <span class="charExample" translate="no"><span class="ex" lang="blt">ꫛ</span> <span class="trans">kⁿ</span> <span class="ipa">kon⁴</span> <span class="meaning">person</span></span> and <span class="charExample" translate="no"><span class="ex" lang="blt">ꪶꪁꪙ</span> <span class="trans">okn</span> <span class="ipa">kon⁴</span> <span class="meaning">to stir</span></span>. <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b9</a></sup></p>
+<p>Used with the meaning <span class="meaning">person</span>. The  ligature is used to distinguish  between homophonous words such as <span class="charExample" translate="no"><span class="ex" lang="blt">ꫛ</span> <span class="trans">kⁿ</span> <span class="ipa">kon⁴</span> <span class="meaning">person</span></span> and <span class="charExample" translate="no"><span class="ex" lang="blt">ꪶꪁꪙ</span> <span class="trans">okn</span> <span class="ipa">kon⁴</span> <span class="meaning">to stir</span></span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b9</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -905,7 +911,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">nɨŋ⁵</span></p>
-<p>Ligature for the word <span class="meaning">one</span>.  <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b9</a></sup></p>
+<p>Ligature for the word <span class="meaning">one</span>.  <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b9</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -925,11 +931,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="vowels">
-  <h2><a href="#vowels">Vowels</a></h2>
+  <h2>Vowels</h2>
 
 
 <section id="prescript">
-<h3><a href="#prescript">Prescript vowels</a></h3>
+<h3>Prescript vowels</h3>
 
 <div class="character" id="charAABC">
 <div class="charimg">&#xAABC;</div>
@@ -989,8 +995,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪀ꪿ꪙ</span> <span class="trans">ɛḵ¹n</span> <span class="ipa">kɛn²</span> <span class="meaning">seed</span></span>.</p>
 <p>Also occurs in the following vowel:</p>
 <p><span class="ipa">ʷɛ</span> <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵ-ꪫ</span></span>, where the missing consonant is velar, and the result is a labialised velar consonant followed by <span class="ipa">ɛ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪁꪫꪥ</span> <span class="trans">ɛkwy</span> <span class="ipa">kʷɛ²</span> <span class="meaning">cinnamon</span></span>.</p>
-<p>The traditional sequence <span class="charExample"><span class="ex" lang="blt">ꪵ-ꪫ</span></span> is ambiguous in open  syllables. It can be  interpreted as either <span class="ipa">Cɛw</span>, or as <span class="ipa">Cʷɛ</span> (where C represents a  velar consonant). To eliminate this  ambiguity, the character  <span class="codepoint" translate="no"><span lang="blt">&#xAAA5;</span> [<a href="/scripts/taiviet/block#charAAA5"><span class="uname">U+AAA5 TAI VIET LETTER HIGH YO</span></a>]</span>  is sometimes appended to the  end of the sequence to indicate the second  pronunciation (as in the earlier example). Since <span class="ipa">j</span> never occurs after  <span class="ipa">ɛ</span>, this can be done without creating a new  ambiguity. This spelling is only used in  some dialects of the traditional script. However, it has been adopted as a standard  spelling in a project sponsored by the  Son La Department of Science and  Technology. <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b6</a></sup></p>
-<p>Alternatively, the position of a tone mark can help disambiguate the pronunciation. Compare <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪀ꫁ꪫ</span> <span class="trans">ɛḵ²w</span> <span class="ipa">kɛw³</span></span> and <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪀꪫ꫁</span> <span class="trans">ɛḵw²</span> <span class="ipa">kʷɛ³</span></span>. <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b5</a></sup></p>
+<p>The traditional sequence <span class="charExample"><span class="ex" lang="blt">ꪵ-ꪫ</span></span> is ambiguous in open  syllables. It can be  interpreted as either <span class="ipa">Cɛw</span>, or as <span class="ipa">Cʷɛ</span> (where C represents a  velar consonant). To eliminate this  ambiguity, the character  <span class="codepoint" translate="no"><span lang="blt">&#xAAA5;</span> [<a href="/scripts/taiviet/block#charAAA5"><span class="uname">U+AAA5 TAI VIET LETTER HIGH YO</span></a>]</span>  is sometimes appended to the  end of the sequence to indicate the second  pronunciation (as in the earlier example). Since <span class="ipa">j</span> never occurs after  <span class="ipa">ɛ</span>, this can be done without creating a new  ambiguity. This spelling is only used in  some dialects of the traditional script. However, it has been adopted as a standard  spelling in a project sponsored by the  Son La Department of Science and  Technology. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b6</a></p>
+<p>Alternatively, the position of a tone mark can help disambiguate the pronunciation. Compare <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪀ꫁ꪫ</span> <span class="trans">ɛḵ²w</span> <span class="ipa">kɛw³</span></span> and <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪀꪫ꫁</span> <span class="trans">ɛḵw²</span> <span class="ipa">kʷɛ³</span></span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b5</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1055,7 +1061,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="othervowels">
-<h3><a href="#othervowels">Other vowels</a></h3>
+<h3>Other vowels</h3>
 
 <div class="character" id="charAAB0">
 <div class="charimg">&#xAAB0;</div>
@@ -1277,12 +1283,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="tones">
-  <h2><a href="#tones">Tone marks</a></h2>
+  <h2>Tone marks</h2>
   
   
   
 <section id="combining_tones">
-  <h3><a href="#combining_tones">Combining tone marks</a></h3>
+  <h3>Combining tone marks</h3>
   
 <div class="character" id="charAABF">
 <div class="charimg">&#xAABF;</div>
@@ -1295,7 +1301,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <span class="transliteratedname trans">mai ek</span></span></p>
 <p>Used only on unchecked syllables (ie. not ending in -p, -t, or -k).</p>
 <p>Sets <strong>tone 5</strong> for high  onsets, eg. TBD, <strong>and tone 2</strong> for low, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪄꪴ꪿ꪙ</span> <span class="trans">x̱u¹n</span> <span class="ipa">xun²</span> <span class="meaning">dust</span></span>.</p>
-<p>Combining tone marks were originated by Tai Dam speakers in the United  States, using Lao tone marks. The Tai community in Vietnam, however, invented their own spacing tone marks written on the base  line at the end of the syllable. This mark corresponds to <span class="codepoint" translate="no"><span lang="blt">&#xAAC0;</span> [<a href="/scripts/taiviet/block#charAAC0"><span class="uname">U+AAC0 TAI VIET TONE MAI NUENG</span></a>]</span>. <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b7</a></sup></p>
+<p>Combining tone marks were originated by Tai Dam speakers in the United  States, using Lao tone marks. The Tai community in Vietnam, however, invented their own spacing tone marks written on the base  line at the end of the syllable. This mark corresponds to <span class="codepoint" translate="no"><span lang="blt">&#xAAC0;</span> [<a href="/scripts/taiviet/block#charAAC0"><span class="uname">U+AAC0 TAI VIET TONE MAI NUENG</span></a>]</span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b7</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1317,7 +1323,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <span class="transliteratedname trans">mai song</span></span></p>
 <p>Used only on unchecked syllables (ie. not ending in -p, -t, or -k).</p>
 <p>Sets <strong>tone 6</strong> for high  onsets, eg. TBD, <strong>and tone 3</strong> for low, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪎ꫁ꪺꪉ</span> <span class="trans">s̱²uᵊŋ</span> <span class="ipa">suəŋ³</span> <span class="meaning">trousers</span></span>.</p>
-<p>Combining tone marks were originated by Tai Dam speakers in the United  States, using Lao tone marks. The Tai community in Vietnam, however, invented their own spacing tone marks written on the base  line at the end of the syllable. This mark corresponds to <span class="codepoint" translate="no"><span lang="blt">&#xAAC2;</span> [<a href="/scripts/taiviet/block#charAAC2"><span class="uname">U+AAC2 TAI VIET TONE MAI SONG</span></a>]</span>. <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b7</a></sup></p>
+<p>Combining tone marks were originated by Tai Dam speakers in the United  States, using Lao tone marks. The Tai community in Vietnam, however, invented their own spacing tone marks written on the base  line at the end of the syllable. This mark corresponds to <span class="codepoint" translate="no"><span lang="blt">&#xAAC2;</span> [<a href="/scripts/taiviet/block#charAAC2"><span class="uname">U+AAC2 TAI VIET TONE MAI SONG</span></a>]</span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b7</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1334,7 +1340,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="spacing_tones">
-  <h3><a href="#spacing_tones">Spacing tone marks</a></h3>
+  <h3>Spacing tone marks</h3>
   
 
 <div class="character" id="charAAC0">
@@ -1347,7 +1353,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <span class="ipa"></span></p>
 <p>Written at the end of  unchecked syllables (ie. not ending in -p, -t, or -k).</p>
 <p>Sets <strong>tone 5</strong> for high  onsets, eg. TBD, <strong>and tone 2</strong> for low, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪄꪴꪙꫀ</span> <span class="trans">x̱un¹̱</span> <span class="ipa">xun²</span> <span class="meaning">dust</span></span>.</p>
-<p>Spacing tone marks were originated by the Tai community in Vietnam. Tai Dam speakers in the United  States, however, invented their own combining  tone marks based on Lao. This character corresponds to <span class="codepoint" translate="no"><span lang="blt">&#xAABF;</span> [<a href="/scripts/taiviet/block#charAABF"><span class="uname">U+AABF TAI VIET TONE MAI EK​</span></a>]</span>. <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b7</a></sup></p>
+<p>Spacing tone marks were originated by the Tai community in Vietnam. Tai Dam speakers in the United  States, however, invented their own combining  tone marks based on Lao. This character corresponds to <span class="codepoint" translate="no"><span lang="blt">&#xAABF;</span> [<a href="/scripts/taiviet/block#charAABF"><span class="uname">U+AABF TAI VIET TONE MAI EK​</span></a>]</span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b7</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1368,7 +1374,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <span class="ipa"></span></p>
 <p>Written at the end of  unchecked syllables (ie. not ending in -p, -t, or -k).</p>
 <p>Sets <strong>tone 6</strong> for high  onsets, eg. TBD, <strong>and tone 3</strong> for low, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪎꪺꪉꫂ</span> <span class="trans">s̱uᵊŋ²̱</span> <span class="ipa">suəŋ³</span> <span class="meaning">trousers</span></span>.</p>
-<p>Spacing tone marks were originated by the Tai community in Vietnam. Tai Dam speakers in the United  States, however, invented their own combining  tone marks based on Lao. This character corresponds to <span class="codepoint" translate="no"><span lang="blt">&#xAAC1;</span> [<a href="/scripts/taiviet/block#charAAC1"><span class="uname">U+AAC1 TAI VIET TONE MAI THO​</span></a>]</span>. <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b7</a></sup></p>
+<p>Spacing tone marks were originated by the Tai community in Vietnam. Tai Dam speakers in the United  States, however, invented their own combining  tone marks based on Lao. This character corresponds to <span class="codepoint" translate="no"><span lang="blt">&#xAAC1;</span> [<a href="/scripts/taiviet/block#charAAC1"><span class="uname">U+AAC1 TAI VIET TONE MAI THO​</span></a>]</span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b7</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1383,7 +1389,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 </section>
 </section>
 <section id="sympunc">
-  <h2><a href="#sympunc">Symbols &amp; punctuation</a></h2>
+  <h2>Symbols &amp; punctuation</h2>
   
 <div class="character" id="charAADD">
 <div class="charimg">&#xAADD;</div>
@@ -1452,10 +1458,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 </section>
 <section id="refs">
-  <h2><a href="#refs">References</a></h2>
+  <h2>References</h2>
   <ol>
-<li>[ <sup><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf">b</a></sup> ] Jim Brase, <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf">Proposal to encode the Tai  Viet script in the UCS</a></li>
-<li>[ <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></sup> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">The Unicode Standard v11.0</a></li>
+<li>[ <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf">b</a> ] Jim Brase, <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf">Proposal to encode the Tai  Viet script in the UCS</a></li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">The Unicode Standard v11.0</a></li>
 </ol>
 </section>
 
@@ -1477,18 +1483,12 @@ replaceStuff('Tai Dam', 'taidam', spreadsheet, '', 'blt', '', cols, false)
 <div id="panel" style="display:none"></div>
 
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/taiviet/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-07-15  6:33<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Btaiviet%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ftaiviet%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version"></span></div>
 
 
 <script>
-createtoc(3)
-var base = '/scripts/taiviet/block'
-initialiseShowNames(base, '')
-checkForCharParam()
-addLangInfo()
-listCharsWithNotes()
+initialise('/scripts/taiviet/block','taiviet')
+autoTransliterate('blt')
 </script>
 </body>
 </html>
