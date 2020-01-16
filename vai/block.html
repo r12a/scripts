@@ -9,13 +9,14 @@
 <link rel="stylesheet" type="text/css" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
@@ -23,6 +24,7 @@
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/vai.js"> </script>
+<script src="vai-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -77,17 +79,23 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->15 July, 2019<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="https://r12a.github.io/blog/?tag=vai" title="Show all blog posts tagged with 'vai'">vai</a></p>
+<!-- #BeginDate format:Sw1 -->16 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
+
+
 <section>
    <p>This page lists characters in the following Unicode  block and provides information about them. </p>
 <ul>
 <li><a href="../../uniview/?block=vai" target="_blank">Vai</a></li>
    </ul>
    <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-<p>For details about how the script works, see <a class="linkHighlight" href="index">Vai</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Vaii">Script links pages</a>.</p>
-<p>Find <input type="text" 
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></p>
+<p>For details about how the script works, see the <a class="linkHighlight" href="index">Vai</a> summary.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Vaii">Script links pages</a>.</p>
+<p><span style="text-align: start;">We have usage data for the following  language that uses the Vai script</span>: Vai.</p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -105,11 +113,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="syllables">
-<h2><a href="#syllables">Syllables</a></h2>
+<h2>Syllables</h2>
 
 
 <section id="ee-syllables">
-  <h3><a href="#ee-syllables">Syllables in -ee</a></h3>
+  <h3>Syllables in -ee</h3>
 
 <div class="character" id="charA500">
 <div class="charimg">&#xA500;</div>
@@ -590,7 +598,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="i-syllables">
-  <h3><a href="#i-syllables">Syllables in -i</a></h3>
+  <h3>Syllables in -i</h3>
 
 <div class="character" id="charA524">
 <div class="charimg">&#xA524;</div>
@@ -1081,7 +1089,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="a-syllables">
-  <h3><a href="#a-syllables">Syllables in -a</a></h3>
+  <h3>Syllables in -a</h3>
 
 <div class="character" id="charA549">
 <div class="charimg">&#xA549;</div>
@@ -1614,7 +1622,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="oo-syllables">
-  <h3><a href="#oo-syllables">Syllables in -oo</a></h3>
+  <h3>Syllables in -oo</h3>
 
 <div class="character" id="charA571">
 <div class="charimg">&#xA571;</div>
@@ -2092,7 +2100,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="u-syllables">
-  <h3><a href="#u-syllables">Syllables in -u</a></h3>
+  <h3>Syllables in -u</h3>
 
 <div class="character" id="charA595">
 <div class="charimg">&#xA595;</div>
@@ -2583,7 +2591,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="o-syllables">
-  <h3><a href="#o-syllables">Syllables in -o</a></h3>
+  <h3>Syllables in -o</h3>
 
 <div class="character" id="charA5BA">
 <div class="charimg">&#xA5BA;</div>
@@ -3103,7 +3111,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="e-syllables">
-  <h3><a href="#e-syllables">Syllables in -e</a></h3>
+  <h3>Syllables in -e</h3>
 
 <div class="character" id="charA5E1">
 <div class="charimg">&#xA5E1;</div>
@@ -3659,7 +3667,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="syllablefinals">
-  <h3><a href="#syllablefinals">Syllable finals</a></h3>
+  <h3>Syllable finals</h3>
 
 <div class="character" id="charA60B">
 <div class="charimg">&#xA60B;</div>
@@ -3693,7 +3701,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="historicsyllables">
-  <h3><a href="#historicsyllables">Historic syllables</a></h3>
+  <h3>Historic syllables</h3>
 
 <div class="character" id="charA610">
 <div class="charimg">&#xA610;</div>
@@ -3702,7 +3710,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter vai">
 <p class="titlepara">Vai</p>
-<p>Appears in the Book of Ndole (or Book of Rora), written around 1845 by Kaali Bala Ndole Wano, a cousin of the script inventor Momolu Duwalu Bukele.<sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a></sup></p>
+<p>Appears in the Book of Ndole (or Book of Rora), written around 1845 by Kaali Bala Ndole Wano, a cousin of the script inventor Momolu Duwalu Bukele.<a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
   <a href="http://www.unicode.org/versions/latest/ch19.pdf#Vai" target="_blank">Unicode</a>,  
@@ -3718,7 +3726,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter vai">
 <p class="titlepara">Vai</p>
-<p>Appears in the Book of Ndole (or Book of Rora), written around 1845 by Kaali Bala Ndole Wano, a cousin of the script inventor Momolu Duwalu Bukele.<sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a></sup></p>
+<p>Appears in the Book of Ndole (or Book of Rora), written around 1845 by Kaali Bala Ndole Wano, a cousin of the script inventor Momolu Duwalu Bukele.<a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
   <a href="http://www.unicode.org/versions/latest/ch19.pdf#Vai" target="_blank">Unicode</a>,  
@@ -3734,7 +3742,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter vai">
 <p class="titlepara">Vai</p>
-<p>Appears in the Book of Ndole (or Book of Rora), written around 1845 by Kaali Bala Ndole Wano, a cousin of the script inventor Momolu Duwalu Bukele.<sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a></sup></p>
+<p>Appears in the Book of Ndole (or Book of Rora), written around 1845 by Kaali Bala Ndole Wano, a cousin of the script inventor Momolu Duwalu Bukele.<a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
   <a href="http://www.unicode.org/versions/latest/ch19.pdf#Vai" target="_blank">Unicode</a>,  
@@ -3750,7 +3758,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter vai">
 <p class="titlepara">Vai</p>
-<p>Appears in the Book of Ndole (or Book of Rora), written around 1845 by Kaali Bala Ndole Wano, a cousin of the script inventor Momolu Duwalu Bukele.<sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a></sup></p>
+<p>Appears in the Book of Ndole (or Book of Rora), written around 1845 by Kaali Bala Ndole Wano, a cousin of the script inventor Momolu Duwalu Bukele.<a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
   <a href="http://www.unicode.org/versions/latest/ch19.pdf#Vai" target="_blank">Unicode</a>,  
@@ -3766,7 +3774,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter vai">
 <p class="titlepara">Vai</p>
-<p>Appears in the Book of Ndole (or Book of Rora), written around 1845 by Kaali Bala Ndole Wano, a cousin of the script inventor Momolu Duwalu Bukele.<sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a></sup></p>
+<p>Appears in the Book of Ndole (or Book of Rora), written around 1845 by Kaali Bala Ndole Wano, a cousin of the script inventor Momolu Duwalu Bukele.<a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
   <a href="http://www.unicode.org/versions/latest/ch19.pdf#Vai" target="_blank">Unicode</a>,  
@@ -3782,7 +3790,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="logograms">
-  <h2><a href="#logograms">Logograms</a></h2>
+  <h2>Logograms</h2>
 
 <div class="character" id="charA613">
 <div class="charimg">&#xA613;</div>
@@ -3791,7 +3799,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter vai">
 <p class="titlepara">Vai</p>
-<p>This is one of only two logograms still in use.<sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></sup></p>
+<p>This is one of only two logograms still in use.<a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
   <a href="http://www.unicode.org/versions/latest/ch19.pdf#Vai" target="_blank">Unicode</a>,  
@@ -3859,7 +3867,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter vai">
 <p class="titlepara">Vai</p>
-<p>This is one of only two logograms still in use.<sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></sup></p>
+<p>This is one of only two logograms still in use.<a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
   <a href="http://www.unicode.org/versions/latest/ch19.pdf#Vai" target="_blank">Unicode</a>,  
@@ -3965,7 +3973,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="punctuation">
-  <h2><a href="#punctuation">Punctuation</a></h2>
+  <h2>Punctuation</h2>
 
 <div class="character" id="charA60D">
 <div class="charimg">&#xA60D;</div>
@@ -3987,7 +3995,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter vai">
 <p class="titlepara">Vai</p>
-<p>Two of these characters together, ie. <span class="ex" lang="vai">꘎꘎</span>, creates an exclamation mark.<sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></sup></p>
+<p>Two of these characters together, ie. <span class="ex" lang="vai">꘎꘎</span>, creates an exclamation mark.<a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
   <a href="http://www.unicode.org/versions/latest/ch19.pdf#Vai" target="_blank">Unicode</a>,  
@@ -4017,7 +4025,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="digits">
-<h2><a href="#digits">Digits</a></h2>
+<h2>Digits</h2>
 
 <div class="character" id="charA620">
 <div class="charimg">&#xA620;</div>
@@ -4026,7 +4034,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter vai">
 <p class="titlepara">Vai</p>
-<p>This set of digits was developed in the 1920s, but never adopted.<sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></sup></p>
+<p>This set of digits was developed in the 1920s, but never adopted.<a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
   <a href="http://www.unicode.org/versions/latest/ch19.pdf#Vai" target="_blank">Unicode</a>,  
@@ -4042,7 +4050,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter vai">
 <p class="titlepara">Vai</p>
-<p>This set of digits was developed in the 1920s, but never adopted.<sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></sup></p>
+<p>This set of digits was developed in the 1920s, but never adopted.<a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
   <a href="http://www.unicode.org/versions/latest/ch19.pdf#Vai" target="_blank">Unicode</a>,  
@@ -4058,7 +4066,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter vai">
 <p class="titlepara">Vai</p>
-<p>This set of digits was developed in the 1920s, but never adopted.<sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></sup></p>
+<p>This set of digits was developed in the 1920s, but never adopted.<a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
   <a href="http://www.unicode.org/versions/latest/ch19.pdf#Vai" target="_blank">Unicode</a>,  
@@ -4074,7 +4082,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter vai">
 <p class="titlepara">Vai</p>
-<p>This set of digits was developed in the 1920s, but never adopted.<sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></sup></p>
+<p>This set of digits was developed in the 1920s, but never adopted.<a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
   <a href="http://www.unicode.org/versions/latest/ch19.pdf#Vai" target="_blank">Unicode</a>,  
@@ -4090,7 +4098,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter vai">
 <p class="titlepara">Vai</p>
-<p>This set of digits was developed in the 1920s, but never adopted.<sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></sup></p>
+<p>This set of digits was developed in the 1920s, but never adopted.<a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
   <a href="http://www.unicode.org/versions/latest/ch19.pdf#Vai" target="_blank">Unicode</a>,  
@@ -4106,7 +4114,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter vai">
 <p class="titlepara">Vai</p>
-<p>This set of digits was developed in the 1920s, but never adopted.<sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></sup></p>
+<p>This set of digits was developed in the 1920s, but never adopted.<a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
   <a href="http://www.unicode.org/versions/latest/ch19.pdf#Vai" target="_blank">Unicode</a>,  
@@ -4122,7 +4130,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter vai">
 <p class="titlepara">Vai</p>
-<p>This set of digits was developed in the 1920s, but never adopted.<sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></sup></p>
+<p>This set of digits was developed in the 1920s, but never adopted.<a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
   <a href="http://www.unicode.org/versions/latest/ch19.pdf#Vai" target="_blank">Unicode</a>,  
@@ -4138,7 +4146,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter vai">
 <p class="titlepara">Vai</p>
-<p>This set of digits was developed in the 1920s, but never adopted.<sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></sup></p>
+<p>This set of digits was developed in the 1920s, but never adopted.<a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
   <a href="http://www.unicode.org/versions/latest/ch19.pdf#Vai" target="_blank">Unicode</a>,  
@@ -4154,7 +4162,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter vai">
 <p class="titlepara">Vai</p>
-<p>This set of digits was developed in the 1920s, but never adopted.<sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></sup></p>
+<p>This set of digits was developed in the 1920s, but never adopted.<a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
   <a href="http://www.unicode.org/versions/latest/ch19.pdf#Vai" target="_blank">Unicode</a>,  
@@ -4170,7 +4178,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter vai">
 <p class="titlepara">Vai</p>
-<p>This set of digits was developed in the 1920s, but never adopted.<sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></sup></p>
+<p>This set of digits was developed in the 1920s, but never adopted.<a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary"></a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
   <a href="http://www.unicode.org/versions/latest/ch19.pdf#Vai" target="_blank">Unicode</a>,  
@@ -4189,14 +4197,14 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="refs">
-  <h2><a href="#refs">References</a></h2>
+  <h2>References</h2>
   <ol>
-    <li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN
+    <li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN
 				0-19-507993-0</li>
-<li>[ <sup><a href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/NKo_script">Vai syllabary</a></li>
-    <li>[ <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch19.pdf#Vai">u</a></sup> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch19.pdf#Vai">The Unicode Standard v11.0</a></li>
-<li>[ <sup><a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Vaii">s</a></sup> ] ScriptSource, <a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Vaii">Vai</a></li>
-  </ol>
+<li>[ <a class="fnref" href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Vaii">s</a> ] ScriptSource, <a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Vaii">Vai</a></li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch19.pdf#Vai">u</a> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch19.pdf#Vai">The Unicode Standard v11.0</a></li>
+<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/NKo_script">Vai syllabary</a></li>
+</ol>
 </section>
 
 
@@ -4216,18 +4224,12 @@ replaceStuff('Vai', 'vai', spreadsheet, '', 'vai', '', cols, false)
 <div id="panel" style="display:none"></div>
 
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/vai/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-07-15  7:24<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bvai%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fvai%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version"></span></div>
 
 
 <script>
-createtoc(3)
-var base = '/scripts/vai/block'
-initialiseShowNames(base, '')
-checkForCharParam()
-addLangInfo()
-listCharsWithNotes()
+initialise('/scripts/vai/block','vai')
+autoTransliterate('vai')
 </script>
 </body>
 </html>
