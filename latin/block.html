@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
@@ -71,8 +71,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->5 January, 2019<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/index.php?tag=latin" title="Show all blog posts tagged with 'latin'">latin</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+  <!-- #BeginDate format:Sw1 -->16 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
+
+
 <section>
   <p>This page lists characters in the following Unicode  block and provides information about them.</p>
   <ul>
@@ -81,7 +84,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   </ul>
   <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
 <p><span style="text-align: start;">We have usage data for  243 languages that use the Latin script</span>. Because of the size of the Latin repertoire, this page only shows characters for which notes exist.</p>
-  <p>Find <input type="text" onChange="var hex=this.value;if (hex!=''){while(hex.length<4){hex='0'+hex;}document.location='#char'+hex.toUpperCase();}"/></p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -97,7 +104,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <section id="punctuation">
-  <h2><a href="#punctuation">Punctuation</a></h2>
+  <h2>Punctuation</h2>
   
   
   <div class="character" id='char0027'>
@@ -184,23 +191,22 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 </section>
 <section id="refs">
-  <h2><a href="#refs" id="endlinks">References</a></h2>
+  <h2>References</h2>
   <ol>
-    <li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN 0-19-507993-0</li>
-    <li>[ <sup><a target="_blank" href="https://w3c.github.io/elreq/">e</a></sup> ] Daniel Yacob, <cite><a target="_blank" href="https://w3c.github.io/elreq/">Ethiopic Layout Requirements</a></cite></li>
+    <li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN 0-19-507993-0</li>
+    <li>[ <a class="fnref" target="_blank" href="https://w3c.github.io/elreq/">e</a> ] Daniel Yacob, <cite><a target="_blank" href="https://w3c.github.io/elreq/">Ethiopic Layout Requirements</a></cite></li>
   </ol>
 </section>
 
 
 <div id="panel" style="display:none"></div>
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/latin/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-01-05  9:50<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Blatin%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Flatin%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+<div class="smallprint"><span id="version"></span></div>
 
 
 <script>
-initialise('/scripts/latin/block')
+initialise('/scripts/latin/block','latin')
 </script>
 </body>
 </html>
