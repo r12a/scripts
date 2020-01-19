@@ -10,12 +10,20 @@ function initialiseSummary (base, lang, tableName, dir) {
 	addDefinitions()
 	if (typeof(contentPrompts) !== 'undefined') setContentPrompts()
 	setFindIPA()
+	setupBlockLinks()
     }
+
+
+function setupBlockLinks () {
+	// set target attribute for links that point to characters in the block page
+	var links = document.querySelectorAll('.codepoint a')
+	for (let i=0;i<links.length;i++) if (links[i].target != null) links[i].target = 'c'
+	}
 
 
 
 function setFindIPA () {
-	//var listItems = document.querySelectorAll('.characterBox .listIPA')
+	// makes ipa characters in sounds charts indicate locations they are used
 	var listItems = document.querySelectorAll('.ipaTable .ipa, .ipaTable .allophone')
 	for (let i=0;i<listItems.length;i++) listItems[i].onclick = findIPA
 	var listItems = document.querySelectorAll('.ipaSVG .ipa, .ipaSVG .allophone')
