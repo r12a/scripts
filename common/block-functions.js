@@ -14,6 +14,34 @@ function initialise (base, dir) {
 
 
 
+function toggleImages () {
+	// replace all the large characters with images
+	
+	// check whether we're converting to images or characters
+	var testnode = document.querySelector('.charimg')
+	if (testnode.textContent == '') var toImg = false
+	else toImg = true
+	
+	var nodes = document.querySelectorAll('.charimg')
+	
+	if (toImg) {
+		for (let i=0;i<nodes.length;i++) {
+			var id = nodes[i].parentNode.id.replace('char','')
+			var dec = parseInt(id, 16)
+			var group = getScriptGroup(dec)
+			nodes[i].innerHTML = '<img src="/c/'+group+'/large/'+id+'.png"/>'
+			}
+		}
+	else {
+		for (let i=0;i<nodes.length;i++) {
+			var id = nodes[i].parentNode.id.replace('char','')
+			nodes[i].innerHTML = '&#x'+id+';'
+			}
+		}
+	}
+
+
+
 function doHeadersFooters (dir) {
 	// adds links to top of document
 	// dir is of the form arabic/index or arabic/urdu
