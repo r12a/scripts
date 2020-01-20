@@ -9,13 +9,14 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
@@ -23,6 +24,7 @@
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/runic.js"> </script>
+<script src="runr-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -78,7 +80,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <div id="intro">
 <p id="status">Updated 
 <!-- #BeginDate format:Sw1 -->20 January, 2020<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="https://r12a.github.io/blog/?tag=runic" title="Show all blog posts tagged with 'runic'">runic</a></p>
+  <span id="versionTop"></span>
+</p>
+
+
 <section>
    <p>This page lists characters in the following Unicode  block and provides information about them. </p>
 <ul>
@@ -86,10 +91,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
    </ul>
    <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
 <p><!--For details about how the script works, see <a class="linkHighlight" href="index">Devanagari/Hindi</a>, and <a class="linkHighlight" href="kashmiri">Kashmiri</a>.   -->For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Runi">Script links pages</a>..</p>
-<p>Find
-<input type="text" 
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/>
-</p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example. Click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -106,7 +111,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="letters">
-<h2><a href="#letters">letters</a></h2>
+<h2>letters</h2>
 
 
 <div class="character" id="char16A0">
@@ -1391,7 +1396,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="punctuation">
-<h2><a href="#punctuation">Punctuation</a></h2>
+<h2>Punctuation</h2>
 
 
 <div class="character" id="char16EB">
@@ -1453,7 +1458,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="golden">
-<h2><a href="#golden">Golden number runes</a></h2>
+<h2>Golden number runes</h2>
 
 
 
@@ -1517,7 +1522,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="tolkein">
-<h2><a href="#tolkein">Tolkenian runes</a></h2>
+<h2>Tolkenian runes</h2>
 
 
 <div class="character" id="char16F1">
@@ -1577,7 +1582,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="cryptogrammmic">
-<h2><a href="#cryptogrammmic">Cryptogrammmic letters</a></h2>
+<h2>Cryptogrammmic letters</h2>
 
 <div class="character" id="char16F4">
 <div class="charimg">&#x16F4;</div>
@@ -1670,15 +1675,15 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="refs">
-  <h2><a href="#refs">References</a></h2>
+  <h2>References</h2>
   <ol>
-    <li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN
+    <li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN
 				0-19-507993-0, pp333-339</li>
-<li>[ <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch08.pdf">u</a></sup> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch08.pdf">The Unicode Standard v11.0</a></li>
-<li>[ <sup><a href="http://en.wikipedia.org/wiki/Runes">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Runes">Runes</a></li>
-<li>[ <sup><a href="http://en.wikipedia.org/wiki/Anglo-Saxon_runes">wa</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Anglo-Saxon_runes">Anglo-Saxon runes</a></li>
-<li>[ <sup><a href="http://en.wikipedia.org/wiki/Younger_Futhark">wy</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Younger_Futhark">Younger Futhark</a></li>
-<li>[ <sup><a href="http://en.wikipedia.org/wiki/Medieval_runes">wm</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Medieval_runes">Medieval runes</a></li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch08.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch08.pdf">The Unicode Standard v11.0</a></li>
+<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Runes">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Runes">Runes</a></li>
+<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Anglo-Saxon_runes">wa</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Anglo-Saxon_runes">Anglo-Saxon runes</a></li>
+<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Medieval_runes">wm</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Medieval_runes">Medieval runes</a></li>
+<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Younger_Futhark">wy</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Younger_Futhark">Younger Futhark</a></li>
 </ol>
 </section>
 
@@ -1852,18 +1857,13 @@ replaceStuff('Anglo-saxon', 'asf', spreadsheet, '', 'asf', '', cols, false)
 <div id="panel" style="display:none"></div>
 
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/runic/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2020-01-20  9:27<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Brunic%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Frunic%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version"></span></div>
 
 
 <script>
-createtoc(3)
-var base = '/scripts/runic/block'
-initialiseShowNames(base, '')
-checkForCharParam()
-addLangInfo()
-listCharsWithNotes()
+initialise('/scripts/runic/block','runic')
+autoTransliterate('asf')
+autoTransliterate('non')
 </script>
 </body>
 </html>
