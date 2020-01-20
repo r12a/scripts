@@ -9,13 +9,14 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
@@ -23,6 +24,7 @@
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/makasar.js"> </script>
+<script src="mak-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -73,8 +75,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->20 January, 2020<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="https://r12a.github.io/blog/?tag=makasar" title="Show all blog posts tagged with 'makasar'">makasar</a></p>
+  <!-- #BeginDate format:Sw1 -->20 January, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
+
+
 <section>
    <p>This page lists characters in the following Unicode  block and provides information about them. </p>
 <ul>
@@ -82,10 +87,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
    </ul>
    <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
 <p><!--For details about how the script works, see <a class="linkHighlight" href="index">Makasar</a>.-->   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Maka">Script links pages</a>.</p>
-<p>Find
-<input type="text" 
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/>
-</p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
 <p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example. Click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
@@ -102,7 +107,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="consonants">
-<h2><a href="#consonants">Consonants</a></h2>
+<h2>Consonants</h2>
 <div class="character" id="char11EE0">
 <div class="charimg">&#x11EE0;</div>
 <p class="charname"><strong>U+11EE0</strong> <a href="#char11EE0">MAKASAR LETTER KA</a></p>
@@ -280,7 +285,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="vowels">
-  <h2><a href="#vowels">Vowels</a></h2>
+  <h2>Vowels</h2>
   
 <div class="character" id="char11EF1">
 <div class="charimg">&#x11EF1;</div>
@@ -333,7 +338,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 </div>
 </section>
 <section id="punctuation">
-<h2><a href="#punctuation">Punctuation</a></h2>
+<h2>Punctuation</h2>
   
   
 <div class="character" id="char11EF2">
@@ -368,9 +373,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 </section>
 <section id="refs">
-<h2><a href="#refs">References</a></h2>
+<h2>References</h2>
   <ol>
-<li>[ <sup><a href="http://www.unicode.org/versions/Unicode12.0.0/ch17.pdf">u</a></sup> ] <a href="http://www.unicode.org/versions/Unicode12.0.0/ch17.pdf">The Unicode Standard v12.0</a></li>
+<li>[ <a class="fnref"  href="http://www.unicode.org/versions/Unicode12.0.0/ch17.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode12.0.0/ch17.pdf">The Unicode Standard v12.0</a></li>
 </ol>
 </section>
 
@@ -393,18 +398,12 @@ replaceStuff('Makasar', 'makasar', spreadsheet, '', 'mak', '', cols, false)
 <div id="panel" style="display:none"></div>
 
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/makasar/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2020-01-20  9:27<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bmakasar%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fmakasar%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version"></span></div>
 
 
 <script>
-createtoc(3)
-var base = '/scripts/makasar/block'
-initialiseShowNames(base, '')
-checkForCharParam()
-addLangInfo()
-listCharsWithNotes()
+initialise('/scripts/makasar/block','makasar')
+autoTransliterate('mak')
 </script>
 </body>
 </html>
