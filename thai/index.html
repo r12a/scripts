@@ -1599,8 +1599,8 @@ alveolar</th>
 <section id="zwsp">
 <h4>ZWSP &amp; WJ</h4>
 
-<p>In order to manually fine-tune word-boundary detection, the  invisible character <span class="codepoint" translate="no"><a href="/scripts/thai/block#char200B"><span class="uname">U+200B ZERO WIDTH SPACE</span></a></span> (ZWSP) can  be  used  to  create  breaks.<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></p>
-<p>To prevent a break between syllables, <span class="codepoint" translate="no"><a href="/scripts/thai/block#char2060"><span class="uname">U+2060 WORD JOINER</span></a></span>(WJ) can be used.</p>
+<p>In order to manually fine-tune word-boundary detection, the  invisible character <span class="codepoint" translate="no"><a href="/scripts/punctuation/block#char200B"><span class="uname">U+200B ZERO WIDTH SPACE</span></a></span> (ZWSP) can  be  used  to  create  breaks.<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></p>
+<p>To prevent a break between syllables, <span class="codepoint" translate="no"><a href="/scripts/punctuation/block#char2060"><span class="uname">U+2060 WORD JOINER</span></a></span>(WJ) can be used.</p>
 <p> It is also important to bear in mind that Thai may be used to write various languages, in particular minority languages for which different dictionaries are needed. Since such dictionaries may not available in a given browser or other application, there is a tendency to use ZWSP in order to compensate.</p>
 <p>Large-scale manual entry of ZWSP and WJ has potential downsides because the user cannot see them; this leads to problems with ZWSP being inserted in the wrong position, or multiple times. However, these don't set a state, so it doesn't create major issues. It would be useful, however, if an editor showed the location of these characters.</p>
 <p>Care should also be taken when trying to match text, eg. for searching in a page. WJ should be ignored. ZWSP may or may not be ignored, depending on whether word boundaries are significant for the search.</p>
@@ -1722,9 +1722,18 @@ alveolar</th>
  <section id="justify">
 <h3>Text alignment &amp; justification</h3>
     <p class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</p>
-<p>Justification in Thai adjusts blank spaces, but also makes certain adjustments to inter-character spacing. Browsers currently tend not to justify Thai text well. </p>
-<p>The   zero  width space  can grow to have a visible width when justified.<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></p>
-    <p class="noprint"><em>Use the control below to see how your browser justifies the text sample here.</em></p>
+<p>Justification in Thai primarily adjusts blank spaces, but may also make certain adjustments to inter-character spacing. Browsers currently tend not to justify Thai text well.</p>
+<p>The character-based spacing is most common in narrow columns, such as newsprint, where there is no space except at the end of a line.</p>
+<p>Any <span class="codepoint" translate="no"><a href="/scripts/punctuation/block#char200B"><span class="uname">U+200B ZERO WIDTH SPACE</span></a></span> (ZWSP) is used to separate words is ignored during Thai justification. Justification proceeds as if it wasn't there.<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf#G53337">u625</a></p>
+<p class="observation"><i>Observation:</i> The justification in <a class="figref">fig_justification_intercharacter_spacing</a> shows equal spacing across a phrase where there are no space characters to stretch. Note how the equal spacing separates prescript and postscript vowel signs by the same amount; they are not kept together with the base consonant they modify.</p>
+
+<figure id="fig_justification_intercharacter_spacing">
+<p>
+<img alt="แนะโบรกฯรวมตัวตั้งสนง.ตปท." src="images/justification_intercharacter_spacing.jpg" data-source="" ></p>
+<figcaption>A line with no spaces applies inter-character spacing to justify the text.</figcaption>
+</figure>
+
+<p class="noprint"><em>Use the control below to see how your browser justifies the text sample here.</em></p>
     <p lang="th" id="justificationExample" style="text-align:start;">ทุกคนเสมอกันตามกฏหมายและมีสิทธิที่จะได้รับความคุ้มครองของกฏหมายเท่าทียมกัน โดยปราศจากการเลือกปฏิบัติใด ๆ ทุกคนมีสิทธิที่จะได้รับความคุ้มครองเท่าเทียมกันจากการเลือกปฏิบัติใด ๆ อันเป็นการล่วงละเมิดปฏิญญา และจากการยุยงให้เกิดการเลือกปฏิบัติดังกล่าว </p>
     <p class="noprint" dir="ltr">
       <button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Justify   </button>
@@ -1740,7 +1749,7 @@ alveolar</th>
 <figcaption>Indentations at paragraph start in a Thai newspaper.</figcaption>
 </figure>
 
-  </section>
+ </section>
 </section>
 
 
