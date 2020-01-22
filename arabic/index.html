@@ -118,7 +118,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->5 January, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->22 January, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -227,7 +227,7 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
 <p dir="rtl" lang="ar" class="large"><span class="ex">10-01-2018</span></p>
     <figcaption>The same date in Persian language text.</figcaption>
 </figure>
-      <p>However, if you are writing in Persian and the sequence or expression follows text you need to either isolate the sequence directionally or precede it with <span class="codepoint"><a href="/scripts//scripts/arabic/block/block#char200E"><span class="uname">U+200E LEFT-TO-RIGHT MARK</span></a></span> (LRM) to make it look correct (click on the example above with text to see that in action).</p>
+      <p>However, if you are writing in Persian and the sequence or expression follows text you need to either isolate the sequence directionally or precede it with <span class="codepoint"><a target="c" href="/scripts/punctuation/block#char200E"><span class="uname">U+200E LEFT-TO-RIGHT MARK</span></a></span> (LRM) to make it look correct (click on the example above with text to see that in action).</p>
 <p>Similar special ordering is applied to numbers in equations, such as 1 + 2 = 3, for Arabic language text.</p>
 </section></section>
 
@@ -896,7 +896,7 @@ alveolar</th>
      <figcaption>The same word with ligatures (right) and no ligatures (left).</figcaption>
  </figure>
     <p>Ligatures are often used to manage justification. Since they generally reduce the horizontal width of a word, they can be used to fit more text on the end of a line, or balance baseline stretching.</p>
-<p><span class="leadin">Special joining forms.</span> In more traditional fonts, you will also often see the join between certain characters, when adjacent, above the baseline, rather than at the baseline, like this: </p>
+<p><span class="leadin">Special joining forms.</span> In more traditional fonts, you will also often see the join between certain characters, when adjacent, above the baseline, like this: </p>
     <p style="text-align:center;"><img src="images/arabic-shaping.png" alt=" "></p>
     <p>rather than  on the baseline, like this:</p>
     <p style="text-align:center;"><img src="images/arabic-shaping-flat.png" alt=" "></p>
@@ -912,7 +912,7 @@ alveolar</th>
      <figcaption> Vertical arrangements of letters in the word <span class="ex" lang="ar">خجمم</span>,</figcaption>
  </figure>
 
-<p><span class="leadin">Teeth letters.</span> A good font will also constantly change the shape of glyphs slightly so as to create a more aesthetically pleasing, and in some cases and more easily readable, flow.</p>
+<p><span class="leadin">Teeth letters.</span> A good font will  constantly change the shape of glyphs slightly so as to create a more aesthetically pleasing, and in some cases a more easily readable, flow.</p>
     <figure>
     <p dir="rtl" lang="ar" class="large"><span class="ex">ـدد</span> &nbsp; <span class="ex">تتـ</span> &nbsp; <span class="ex">سسـ</span> &nbsp; </p>
        <figcaption>Three  examples where the same letter is repeated, but the glyph shapes differ.</figcaption>
@@ -959,13 +959,17 @@ alveolar</th>
     <figcaption>Sloping baselines in Urdu nastaliq text.</figcaption>
  </figure>
  
-<p>However, even writing styles with an ostensibly flat baseline may, in good quality fonts, draw words on a slightly slanted baseline, or multiple baselines, as shown in <a class="figref" href="#word_baselines">figure</a>.<a class="fnref" href="https://w3c.github.io/alreq/#multi-level-baselines">a</a></p>
- <figure id="word_baselines">
+<p>However, even writing styles with an ostensibly flat baseline may, in good quality fonts, draw words on a slightly slanted baseline, or multiple baselines, as shown in <a class="figref">fig_word_baselines</a>.<a class="fnref" href="https://w3c.github.io/alreq/#multi-level-baselines">a</a></p>
+ <figure id="fig_word_baselines">
  <p><img src="images/baseline_sloping_word.png" alt="Sloping baseline in Mishafi font for يستبشر"/> <img src="images/baseline_multilevel.png" alt="Multilevel baseline in Mishafi font for يستمع"/></p>
     <figcaption>Words with a gradually sloping baseline (left) and multiple baselines (right).</figcaption>
  </figure>
 
 <p>Characters within a word may also combine vertically in certain groupings, as mentioned in the previous section.</p>
+
+
+<p><span class="leadin">Line height and multi-script positioning.</span> Even without the deviations from the baseline described above, the ascenders and descenders of Arabic letters tend to travel further from the baseline that is usual in Latin script text. Allowances for this need to be made for line height settings on a page, but also it can be problematic when combining Latin and Arabic text on the same line using different fonts for each.</p>
+<p>If the Arabic font supports the needed Latin letters, the font design will already take into account the relative sizes of the letters, and their placement relative to the baselines of each script. If different fonts are used, though, it's important to match the baselines and harmonise the font sizes used.</p>
 </section>
 
 
@@ -977,8 +981,13 @@ alveolar</th>
 <h3>Font styles</h3>
 <p class="prompts"> Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</p>
 
-<p>Arabic orthographies can be grouped into a number of writing styles, some of which are more common for particular languages, while others can be used interchangeably for the same language. Sometimes the variations are adapted to usage, for example book text vs. inscriptions; sometimes the variants reflect cultural or stylistic calligraphic  preferences.</p>
+<p><span class="leadin">Writing styles.</span> Arabic orthographies can be grouped into a number of writing styles, some of which are more common for particular languages, while others can be used interchangeably for the same language. Sometimes the variations are adapted to usage, for example book text vs. inscriptions; sometimes the variants reflect cultural or stylistic calligraphic  preferences.</p>
 <p>The different styles include Naskh, Nasta'liq, Ruq'a, Thuluth, Taʻlīq, Diwani, Maghribi, Kano. For a brief introduction to font styles, with examples, see <a href="https://w3c.github.io/alreq/#h_different_writing_styles">Text layout requirements for the Arabic script</a>.</p>
+<p><span class="leadin">Italics &amp; oblique.</span> Arabic text does use slanting letters. In some cases the letters may be slanted to the left as in <a class="figref">fig_font_style_italic</a>.</p>
+ <figure id="fig_font_style_italic">
+ <p><img src="images/font_style_italic.jpg" alt="Left-leaning italics for جريدة العجب الدولية"/></p>
+    <figcaption>The text just below this newspaper title leans to the left.</figcaption>
+ </figure>
 </section>
 
 
@@ -1635,7 +1644,7 @@ data-cols="">ا␣ب␣ج␣د␣ه‍␣و␣ز␣ح␣ط␣ي␣ك␣ل␣م�
 <h3>Styling initials</h3>
 <p class="prompts">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? etc.</p>
 </section>
-
+</section>
 
 
 
