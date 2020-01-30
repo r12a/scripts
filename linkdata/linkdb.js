@@ -1,4 +1,4 @@
-var scriptNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr', 'laoo', 'lana', 'lisu', 'mand', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'taml', 'tavt', 'thaa', 'thai', 'tibt', 'tfng'])
+var scriptNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr', 'laoo', 'lana', 'lisu', 'mand', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'taml', 'tavt', 'telu', 'thaa', 'thai', 'tibt', 'tfng'])
 
 var scriptNotes= {
     'adlm':[['Adlam/Pular','adlam/']],
@@ -45,6 +45,7 @@ var scriptNotes= {
     'tale':[['Tai Le/Tai Nüa', 'taile/']],
     'talu':[['New Tai Lü', 'newtailue/']],
     'taml':[['Tamil', 'tamil/']],
+    'telu':[['Telugu', 'telugu/']],
     'tavt':[['Tai Viet/Tai Dam', 'taiviet/']],
     'thaa':[['Thaana/Dhivehi', 'thaana/']],
     'thai':[['Thai', 'thai/']],
@@ -94,6 +95,7 @@ var scriptNotesByRegion = {
 			  ['Malayalam', 'malayalam'],
 			  ['Sinhala', 'sinhala/'],
 			  ['Tamil', 'tamil/'],
+			  ['Telugu', 'telugu/'],
 			  ['Thaana/Dhivehi', 'thaana/'],
 			  ['Urdu', 'arabic/urdu']
 			  ],
@@ -118,7 +120,7 @@ var scriptNotesByRegion = {
 
 
 
-var charNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr','laoo', 'lana', 'maka', 'mand', 'mlym', 'mong', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'tale', 'talu', 'tavt', 'taml', 'thaa', 'thai', 'tibt', 'tfng', 'vaii'])
+var charNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'kana', 'khmr','laoo', 'lana', 'maka', 'mand', 'mlym', 'mong', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'tale', 'talu', 'tavt', 'taml', 'telu', 'thaa', 'thai', 'tibt', 'tfng', 'vaii'])
 
 var charNotesList = {
     'adlm':'adlam/block',
@@ -156,6 +158,7 @@ var charNotesList = {
     'tale':'taile/block',
     'talu':'newtailue/block',
     'taml':'tamil/block',
+    'telu':'telugu/block',
     'tavt':'taiviet/block',
     'thaa':'thaana/block',
     'thai':'thai/block',
@@ -204,6 +207,7 @@ var charNotesList = {
     'lana':['Tai&nbsp;Tham', 'taitham/block'],
     'tavt':['Tai&nbsp;Viet', 'taiviet/block'],
     'taml':['Tamil', 'tamil/block'],
+    'telu':['Telugu', 'telugu/block'],
     'thaa':['Thaana', 'thaana/block'],
     'thai':['Thai', 'thai/block'],
     'tibt':['Tibetan', 'tibetan/block'],
