@@ -3,7 +3,7 @@ var scriptData = [
 
 { script:"Adlam", type:"alpha", chars:88, cchars:7, cs:"yes", gpos:"yes", mcchars:"yes", matras: "no", gsub:"yes", cursive:"yes", dir:"rtl", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"?", justify:"?", digits:"yes", region:"Africa", linked:"adlam" },
 
-{ script:"Arabic", type:"abjad", chars:376, cchars:95, cs:"no", gpos:"yes", mcchars:"yes", matras: "no", gsub:"yes", cursive:"yes", dir:"rtl", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"no*", justify:"word/space", digits:"yes", region:"M East", linked:"arabic" },
+{ script:"Arabic", type:"abjad", chars:387, cchars:96, cs:"no", gpos:"yes", mcchars:"yes", matras: "no", gsub:"yes", cursive:"yes", dir:"rtl", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"no*", justify:"word/space", digits:"yes", region:"M East", linked:"arabic" },
 
 { script:"Armenian", type:"alpha", chars:91, cchars:0, cs:"yes", gpos:"no", mcchars:"no", matras: "no", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"yes", justify:"space", digits:"no", region:"M East", linked:"armenian" },
 
