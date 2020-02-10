@@ -11,6 +11,10 @@ defList={
 
 "inherentvowel": 'An <a class="termref" target="_blank" href="../glossary/#inherentvowel">inherent vowel</a> is a vowel sound that is automatically pronounced after a consonant letter, unless specifically suppressed.',
 
+"justification": 'The essence of justification (unlike letter-spacing) is that text is arranged to fit within a given distance, usually a line width.',
+
+"letterspacing": 'Unlike justification, which fits text within a fixed space, letter-spacing adds regular amounts of space between letters, and the resulting length is a by-product of that.',
+
 "materlectionis": 'In the spelling of Arabic and some other Semitic languages, matres lectionis refers to the use of certain consonants to indicate a vowel. <sup><a href="https://en.wikipedia.org/wiki/Mater_lectionis">w</a></sup>',
 
 "standalonevowel": 'Standalone vowels are not preceded by a consonant, and may appear at the beginning or in the middle of a word.',
