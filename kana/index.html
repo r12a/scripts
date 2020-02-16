@@ -15,6 +15,8 @@
 @media print { #freeText { font-size: 18px; } }
 [lang=ja] { font-family: serif; font-size: 130%; }
 .large .ex { font-size: 400%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
+thead th { text-align: center; }
+#fig_yotsugana td { text-align:  center; }
 </style>
 
 <script src="db.js"> </script>
@@ -94,7 +96,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->6 February, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->16 February, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -161,7 +163,16 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
  
   <section id="dir">
 <h2>Text direction</h2>
-    <p>Text can be written horizontally, left to right, or vertically with lines progressing from right to left. Vertically set text is still common in Japan; most novels, newspapers and magazines are set vertically.</p>
+    <p>Text can be written horizontally, left to right, or vertically with lines progressing from right to left. Vertically set text is still common in Japan; most novels, newspapers and magazines are set vertically.<a class="fnref" href="https://w3c.github.io/jlreq/#h-note-15">j</a></p>
+<p>Sometimes, vertically set text may contain sections or items that are set horizontally. For example, in newspapers, headings are normally set horizontally above body of an article which is set vertically, and captions are usually horizontal.</p>
+<p><a class="figref">fig_mixed_direction</a> shows pages from a magazine that mix directions on the page.</p>
+
+<figure id="fig_mixed_direction">
+<a href="images/mixed_direction_small.jpg"><img src="images/mixed_direction_small.jpg" alt="" data-source="Skyward in-flight magazine, Oct 2019, p62." style="width: 250px; height:370px;"></a>
+<a href="images/mixed_direction_2_small.jpg"><img src="images/mixed_direction_2_small.jpg" alt="" data-source="Skyward in-flight magazine, Oct 2019, p84." style="width: 250px; height:370px;"></a>
+<figcaption>Vertically set pages with mixed direction text. (Click on image for larger size.)</figcaption>
+</figure>
+
     <p>Older horizontally set texts in Japanese also ran right to left. </p>
     <p class="instructions">If your browser supports vertical text, you can change the direction of the text sample here.</p>
      <p class="english" dir="ltr">
@@ -170,7 +181,23 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
    <div style="display:flex; max-height:20em;">
      <p class="set_horizontal" lang="zh-hans" id="verticalTextExample" style="text-align:start;">第７条 すべての人は、法の下において平等であり、また、いかなる差別もなしに法の平等な保護を受ける権利を有する。すべての人は、この宣言に違反するいかなる差別に対しても、また、そのような差別をそそのかすいかなる行為に対しても、平等な保護を受ける権利を有する。</p>
    </div>
-<p>It should be noted, however, that horizontal and vertical text is not usually identical. Apart from the question of what gets rotated and what does not, the two writing modes may show different preferences for emphasis marks, brackets, numbers, and so forth.</p>
+<p>It should be noted, however, that different conventions are applied for horizontal and vertical text, for example in terms of characters used and treatment of embedded romaji and numerals. Apart from the question of what gets rotated and what does not, the two writing modes may show different preferences for emphasis marks, brackets, numbers, and so forth. This means that it is not usually appropriate to simply switch the direction of the text without making additional changes.</p>
+<p>In vertical text (only) decisions have to be made about how to present embedded romaji text and numbers. Romaji typically runs down the page, with proportionally-spaced characters rotated 90º to the right. However, acronyms are often written using upright, fullwidth characters.</p>
+
+<figure id="fig_vertical_romaji">
+<img src="images/romaji_sidewayss.png" alt="" style="margin:0 2em;">
+<img src="images/romaji_upright.png" alt="" style="margin:0 2em;">
+<figcaption>Romaji text with characters rotated (left), and an acronym with upright letters (right).</figcaption>
+</figure>
+
+<p>Numbers, and sometimes text, may also run horizontally within a vertical line. This is most common with double-digit numbers, such as in dates. The width of the horizontal text should not normally exceed the width of the surrounding vertical text (ie. it should fit in the width of a character space). This is referred to as <span class="name">tate chu yoko</span>.</p>
+
+<figure id="fig_tate_chu_yoko">
+<img src="images/tate_chu_yoko.png" alt="">
+<figcaption>Numbers arranged horizontally within a vertical line.</figcaption>
+</figure>
+
+
   </section>
 
 
@@ -466,6 +493,47 @@ alveolar</th>
 </section>
 
 
+
+
+
+<section id="yotsugana">
+<h3>Yotsugana</h3>
+
+<p>Over time, certain voiced sounds have merged in several important dialects, as shown in <a class="figref">fig_yotsugana</a>. </p>
+
+<figure id="fig_yotsugana">
+<table>
+<thead>
+<tr><th></th><th><span class="ex" lang="ja">ぢ</span></th><th><span class="ex" lang="ja">じ</span></th><th><span class="ex" lang="ja">づ</span></th><th><span class="ex" lang="ja">ず</span></th></tr>
+</thead>
+<tbody>
+<tr><th>Tokyo (standard)</th><td colspan="2"><span class="ipa">d͡ʑi</span>~<span class="ipa">ʑi</span></td>
+<td colspan="2"><span class="ipa">d͡zɯᵝ</span>~<span class="ipa">zɯᵝ</span></td></tr>
+<tr><th>South Tohoku</th><td colspan="4"><span class="ipa">d͡zɯᵝ</span></td></tr>
+<tr><th>Kōchi (Hata, Tosa)</th>
+<td><span class="ipa">di</span>~<span class="ipa">d͡zi</span></td>
+<td><span class="ipa">ʑi</span></td>
+<td><span class="ipa">dɯᵝ</span>~<span class="ipa">d͡zɯᵝ</span></td><td><span class="ipa">zɯᵝ</span></td></tr>
+<tr><th>Kagoshima</th>
+<td><span class="ipa">d͡ʑi</span></td><td><span class="ipa">ʑi</span></td>
+<td><span class="ipa">d͡zɯᵝ</span></td><td><span class="ipa">zɯᵝ</span></td></tr>
+<tr><th>Okinawa</th><td colspan="4"><span class="ipa">d͡ʑi</span></td></tr>
+</tbody>
+</table>
+<figcaption>Yotsugana pronunciation around Japan. (source <a class="fnref" href="https://en.wikipedia.org/wiki/Yotsugana">w</a>.)</figcaption>
+</figure>
+
+<p>The orthographic reform shortly after World War 2 recommended the use of only <span class="codepoint" translate="no"><span lang="zh">&#x3058;</span> [<a href="/scripts/punctuation/block#char3058"><span class="uname">U+3058 HIRAGANA LETTER ZI</span></a>]</span> and <span class="codepoint" translate="no"><span lang="zh">&#x305A;</span> [<a href="/scripts/punctuation/block#char305A"><span class="uname">U+305A HIRAGANA LETTER ZU</span></a>]</span>, except in circumstances where an unvoiced sound has become voiced because of:<a class="fnref" href="https://en.wikipedia.org/wiki/Yotsugana">w</a></p>
+<ol>
+<li> compounding (rendaku), eg. <span class="charExample" translate="no"><span class="ex" lang="zh">神無月</span> <span class="ipa">kannad͡zuki</span> <span class="meaning">October (lunar month)</span></span>, which combines <span class="charExample" translate="no"><span class="ex" lang="zh">かん</span></span>, <span class="charExample" translate="no"><span class="ex" lang="zh">な</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="zh">つき</span></span>, would be written in hiragana as <span class="charExample" translate="no"><span class="ex" lang="zh">かんなづき</span></span>.</li>
+<li>repetition, eg. <span class="charExample" translate="no"><span class="ex" lang="zh">続</span></span>is written <span class="charExample" translate="no"><span class="ex" lang="zh">つづく</span></span> in hiragana.</li>
+</ol>
+</section>
+
+
+
+
+
 <section id="archaickana">
 <h3>Archaic characters</h3>
 
@@ -473,6 +541,9 @@ alveolar</th>
 <p>These characters were dropped by an orthographic reform shortly after World War 2.</p>
 <figure class="archaicBox auto bicameral" data-cols="ipa">ゐヰ␣ゑヱ␣ヸ␣ヹ</figure>
 </section>
+
+
+
 
 
 
@@ -525,7 +596,95 @@ alveolar</th>
 <section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
 
-<p>The Japanese scripts are not cursive, and involves no  context-based shaping or positioning.
+<p>The Japanese scripts are not cursive, and involve no  context-based shaping or positioning.</p>
+<p>By default, all kanji, hiragana,  katakana, and punctuation characters are drawn inside a <i class="newterm">character frame</i> that is square and the same size for all characters. The box containing the actual symbol is called the <i class="newterm">letter face</i>, and there should be some space left between the letter face and the character frame. There may be variations, particularly for small kana, punctuation, etc., in the size of the letter face.</p>
+<p>Because of the regularity of the character frame size, it can be used to measure the size of the text area or other parts of a page (horizontally or vertically).</p>
+
+<svg width="10px" height="1px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
+   <style type="text/css">
+	.svg_bo36 { fill:#ED1C24; font-family:'Tibetan_Machine_Uni'; font-size:36px; }
+	.svg_bo36_highlight { fill:#0000DD; font-family:'Tibetan_Machine_Uni'; font-size:36px; }
+	.svg_annotation { font-size:14px; text-anchor: middle; }
+	.svg_boundary { fill: none; stroke: #7fcff2; }
+	#arrowLeft {fill:#27AAE1;}
+	#arrowRight {fill:#27AAE1;}
+    </style>
+	
+    <defs>
+    <g id="arrowLeft">
+          <polygon points="0,4 8,0 8,3 40,3 40,5 8,5 8,8"/>
+        </g>
+    <g id="arrowRight">
+      <polygon points="0,3 32,3 32,0 40,4 32,8 32,5 0,5"/>
+        </g>
+  </defs>
+    </svg>
+<style>
+.svg_annotation { font-size: 10px; }
+.svg_ja60 { font-size: 60px; font-family: "Hiragino Mincho Pro", "MS Mincho"; stroke-width: 1; stroke-opacity: 0.5; }
+</style>
+
+<figure its-locale-filter-list="en" id="vowel_in_stack">
+<img src="images/character_frame.png" alt="">
+<!--svg width="400px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 80">
+    	<text x="0" y="60" class="svg_ja60">版</text>
+    	<text x="200" y="60" class="svg_ja60">り</text>
+
+		<rect x="0" y="8" width="60" height="60" class="svg_boundary"></rect>
+		<rect x="200" y="8" width="60" height="60" class="svg_boundary"></rect>
+		
+        <text x="130" y="20" class="svg_annotation">character frame</text>
+		<line x1="176" y1="17" x2="200" y2="17" style="stroke:#7fcff2; stroke-width: 1;"/>
+		<line x1="60" y1="17" x2="80" y2="17" style="stroke:#7fcff2; stroke-width: 1;"/>
+
+		<text x="130" y="50" class="svg_annotation">letter face</text>
+		<line x1="40" y1="47" x2="96" y2="47" style="stroke:#7fcff2; stroke-width: 1;"/>
+		<line x1="160" y1="47" x2="220" y2="47" style="stroke:#7fcff2; stroke-width: 1;"/>
+      </svg-->
+
+
+        <!--use xlink:href="#arrowLeft" x="60" y="20" text-anchor="left"></use>
+		<use xlink:href="#arrowLeft" x="50" y="50" text-anchor="left"></use>
+        <use xlink:href="#arrowLeft" x="200" y="50" transform="rotate(180,200,40)"></use>
+		<use xlink:href="#arrowRight" x="200" y="50" text-anchor="right"></use-->
+	  <figcaption>Character frame and letter face.</figcaption>
+        </figure>
+		
+
+
+<p>In principle, Japanese characters are set solid, ie. with no space between the character frames. However, text alignment and justification can make adjustments to the placement of characters in the direction of the line flow. See <a class="secref">justification</a> and <a class="secref">letterspace</a>.</p>
+
+
+
+
+<section id="gpos">
+<h3>Context-based positioning</h3>
+<p class="prompts"> Are there requirements to position diacritics or other items specially, depending on context? Does the script have multiple diacritics competing for the same location relative to the base?</p>
+
+<p>Characters such as small kana and punctuation occupy different locations within the character frame in horizontal and vertical text.</p>
+
+<figure its-locale-filter-list="en" id="fig_small_kana">
+<img src="images/positioning_small_kana.png" alt="">	
+<!--svg width="400px" height="250px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250">
+    	<text x="30" y="8" class="svg_ja60" style="writing-mode:tb-rl;">きょう。</text>
+    	<text x="0" y="60" class="svg_ja60">　ょう。</text>
+
+<rect x="0" y="8" width="60" height="60" class="svg_boundary"></rect>
+<rect x="60" y="8" width="60" height="60" class="svg_boundary"></rect>
+<rect x="120" y="8" width="60" height="60" class="svg_boundary"></rect>
+<rect x="180" y="8" width="60" height="60" class="svg_boundary"></rect>
+		
+<rect x="0" y="68" width="60" height="60" class="svg_boundary"></rect>
+<rect x="0" y="128" width="60" height="60" class="svg_boundary"></rect>
+<rect x="0" y="188" width="60" height="60" class="svg_boundary"></rect>
+		</svg-->
+	  <figcaption>Positioning of small ょ and the full stop in horizontal and vertical character frames.</figcaption>
+</figure>
+
+<p><a class="figref">fig_small_kana</a> shows how in horizontal text small kana are centred horizontally in the character frame but are vertically below centre; in vertical text they are centred vertically, but aligned right.</p>
+<p>The full stop also switches from bottom-left in horizontal text, to top-right in vertical.</p>
+<p>These are differences that cannot be produced by rotating glyphs, but require special glyphs in the font which are applied when the directional context is detected.</p>
+</section>
 
 
 
@@ -730,9 +889,18 @@ alveolar</th>
 
  <section id="justification">
 <h3>Text alignment &amp; justification</h3>
+<p id="def-justification" class="explanatoryintro definitionStub"></p>
     <p class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?    </p>
-    <p>Japanese justifies text using a complex set of rules which adjust the space between characters on a line. Some characters are adjusted before others. </p>
-    <p class="instructions noprint">Use the control below to see how your browser justifies the text sample here.</p>
+    <p>The preferred arrangement of characters on a line is solid set, ie. each character frame immediately follows the previous one, each with the same width. In principle, in books where the width of the text area on a page is set by counting characters and fixed, paragraphs composed of kanji and kana characters don't need to be justified. Lines break as soon as the line is full of characters, and the whole paragraph has grid lines vertically and horizontally between the characters.</p>
+<p>However, a number of factors may introduce a need to introduce justification, from time to time. One such would be punctuation that pulls the last character of the previous line with it to the next line, so that it doesn't begin a line on its own. Another would be web-based text where windows can be stretched, resulting in a situation where the width of a line no longer exactly corresponds to the sum of the width of all the characters on that line. Other situations include lines where proportionally-spaced romaji text breaks the grid effect.</p><p>Japanese justifies text using a complex set of rules which adjust the space between characters on a line. Some characters are adjusted before others. </p>
+<p>In situations where a set of lines each contains self-contained text, the line content may be stretched to fit the line width, for example in table cells. In this case it is typical to set the first and last characters at the line start and end, respectively, and then apply equal amounts of spacing between all remaining characters. This can result in large gaps, including lines where the two characters are arranged at opposite line ends with nothing between. See <a class="figref">fig_distributed_spacing</a>.</p>
+
+<figure id="fig_distributed_spacing">
+<img src="images/distributed_spacing.png" alt="Distributed spacing example."/>
+<figcaption>Evenly distributed spaces across a line in a table. Source <a class="fnref" href="https://w3c.github.io/jlreq/#id25">j</a></figcaption>
+</figure>
+
+ <p class="instructions noprint">Use the control below to see how your browser justifies the text sample here.</p>
     <p dir="ltr" lang="ja" class="noprint" id="justificationExample" style="text-align:start;">すべての人は、法の下において平等であり、また、いかなる差別もなしに法の平等な保護を受ける権利を有する。すべての人は、この宣言に違反するいかなる差別に対しても、また、そのような差別をそそのかすいかなる行為に対しても、平等な保護を受ける権利を有する。</p>
     <p class="english noprint" dir="ltr">
       <button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Justify   </button>
@@ -744,7 +912,17 @@ alveolar</th>
 
  <section id="letterspace">
 <h3>Letter spacing</h3>
+<p id="def-letterspacing" class="explanatoryintro definitionStub"></p>
     <p class="prompts">Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see above.).</p>
+<p>Letter-spacing is used to achieve balance between items with large and small numbers of characters, such as headings, running heads, and captions. When expanding text, equal amounts of space are added between the character frames of the item with the smaller number of characters.</p>
+
+<figure id="fig_letterspace">
+<img src="images/letter_spacing_1.jpeg" alt="" style="max-width: 40%;"/><img src="images/letter_spacing_2.jpeg" alt=""  style="max-width: 40%;"/>
+<figcaption>Examples of headings where letter spacing has been applied.</figcaption>
+</figure>
+
+<p><span class="leadin">Reducing inter-character spacing.</span> Although solid set text is normally best for readability, in large print sizes, such as for magazine headings, it may be desirable to reduce the distance between certain characters. This is typically done by reducing the distance between adjacent letter faces.</p>
+<p>Sometimes, text may also be kerned by overlapping the character frames by a regular amount across a whole line.</p>
 </section>
 
 
@@ -1070,12 +1248,23 @@ data-cols="">九阡␣八阡␣七阡␣六阡␣伍阡␣四阡␣参阡␣弐�
 <section id="generallayout">
 <h3>General page layout &amp; progression</h3>
 <p class="prompts">How are the main text area and ancilliary areas positioned and defined? Are there any special requirements here, such as dimensions in characters for the Japanese kihon hanmen? The book cover for scripts that are read right-to-left scripts is on the right of the spine, rather than the left.  When content can flow vertically and to the left or right, how to specify the location of objects, text, etc. relative to the flow? Do tables and grid layouts work as expected? How do columns work in vertical text? Can you mix block of vertical and horizontal text? Does text scroll in a different direction?</p>
+<p><span class="leadin">Book binding &amp; reading direction.</span> Books, magazines, et cetera, that are vertically set have the front cover on the right, and pages turn to the right as you read.</p>
+
+<figure id="fig_book_binding">
+<img src="images/book_binding.png" alt="" data-source="https://w3c.github.io/jlreq/#fig1_2">
+<figcaption>Horizontal books are bound on the left, and vertical on the right.</figcaption>
+</figure>
+
+<p><span class="leadin">Page layout.</span> Rather than specifying margins and then filling the space between with the body of the text, Japanese text areas will usually be defined by specifying the width and height of the text area as a number of characters, and then determining the size of the margins based on what remains of the page size. This is possible because Japanese characters are  drawn in square character frames, all the same size.</p>
+<p>In fact, the calculations also include an inter-line space. This inter-line space must be set for the whole page at a size that is large enough to accommodate any ruby annotations or other items that may protrude into the line gap. Therefore, the line height doesn't change for individual lines that have ruby annotations.</p>
+<p>Defining layout of the text area in this way creates a virtual grid, to which some things snap. For example, headings may be indented by a given number of character spaces, and are centred on a given number of lines in the grid. Page headers and footers may also correspond to aspects of the text area grid for positioning.</p>
 </section>
 
 
 
 
 
+<section id="grids"> </section>
 <section id="grids">
 <h3>Grids &amp; tables</h3>
 <p class="prompts">Does the script have special requirements for character grids or tables?</p>
@@ -1106,6 +1295,14 @@ data-cols="">九阡␣八阡␣七阡␣六阡␣伍阡␣四阡␣参阡␣弐�
 <section id="headers">
 <h3>Page numbering, running headers, etc</h3>
 <p class="prompts">Are there special conventions for page numbering, or the way that running headers and the like are handled?</p>
+<p>Page headers and footers typically run horizontally on vertically set pages.</p>
+
+<figure id="fig_headers_footers">
+<img src="images/headers_footers.png" alt=""/>
+<figcaption>Example of a page format in vertical writing mode. Source <a class="fnref" href="https://w3c.github.io/jlreq/#elements_of_page_formats">j</a>.</figcaption>
+</figure>
+
+
 </section>
 </section>
 
@@ -1188,7 +1385,8 @@ data-cols="">九阡␣八阡␣七阡␣六阡␣伍阡␣四阡␣参阡␣弐�
 <section id="refs">
 <h2>References</h2>
 <ol>
-<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">The Unicode Standard</a>, pp 720-723</li>
+<li>[ <a class="fnref" href="https://w3c.github.io/jlreq/">j</a> ] <a href="https://w3c.github.io/jlreq/">Requirements for Japanese Text Layout 日本語組版処理の要件（日本語版）</a></li>
+<li>[ <a class="fnref" href="https://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">u</a> ] <a href="https://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">The Unicode Standard</a>, pp 720-723</li>
 <li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Japanese_grammar">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Japanese_grammar"><cite>Japanese Grammar</cite></a>.</li>
 <!--li>[U] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch13.pdf">Tifinagh</a>, pp735-737.</li>
 <li>[D] Peter T. Daniels and William Bright, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN 0-19-507993-0, p115.</li>
