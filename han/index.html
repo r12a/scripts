@@ -16,6 +16,11 @@
 @media print { #freeText { font-size: 18px; } }
 [lang|=zh]  { font-size: 130%; }
 .large .ex { font-size: 400%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
+.vt { text-align: center; white-space: nowrap; line-height: 1; }
+.nc { text-align: center; font-size: 80%; }
+thead th { text-align: center; }
+.punctuationTable td { border: 0; }
+.punctuationTable thead th { font-size: 80%; line-height: 1; }
 </style>
 
 <script src="../../shared/scriptdb/hani.js"> </script>
@@ -91,7 +96,7 @@ Multiplier:
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->8 January, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->14 February, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -525,7 +530,7 @@ alveolar</th>
 <section id="punctuation">
 <h2>Punctuation</h2>
 
-<p>Chinese uses a large number of punctuation marks, and that number is increased by the duplication of normal vs. fullwidth variants.</p>
+<p>Chinese uses a large number of punctuation marks, and that number is increased by the duplication of normal vs. fullwidth variants. The fullwidth punctuation often includes significant amounts of white space, so that character frames of the punctuation characters are the same size as Han characters.</p>
 <p>CLDR lists  136 punctuation characters for the union of Simplified and Traditional Chinese, grouped here by Unicode block.</p>
 <p>CJK Symbols &amp; Punctuation:</p>
 
@@ -560,15 +565,114 @@ alveolar</th>
 
 
 
-
-
-
+<svg width="10px" height="1px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
+   <style type="text/css">
+	.svg_bo36 { fill:#ED1C24; font-family:'Tibetan_Machine_Uni'; font-size:36px; }
+	.svg_bo36_highlight { fill:#0000DD; font-family:'Tibetan_Machine_Uni'; font-size:36px; }
+	.svg_annotation { font-size:14px; text-anchor: middle; }
+	.svg_boundary { fill: none; stroke: #7fcff2; }
+	#arrowLeft {fill:#27AAE1;}
+	#arrowRight {fill:#27AAE1;}
+    </style>
+	
+    <defs>
+    <g id="arrowLeft">
+          <polygon points="0,4 8,0 8,3 40,3 40,5 8,5 8,8"/>
+        </g>
+    <g id="arrowRight">
+    <polygon points="0,3 32,3 32,0 40,4 32,8 32,5 0,5"/>
+    </g>
+  </defs>
+</svg>
+<style>
+.svg_annotation { font-size: 10px; }
+.svg_ja60 { font-size: 60px; font-family: "STSung", "SimSun"; stroke-width: 1; stroke-opacity: 0.5; }
+</style>
 
 
 <section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
 
 <p>Standard Chinese text has no special shaping or positioning features.</p>
+<p>By default, all han characters and punctuation are inside a <i class="newterm">character frame</i> that is square and the same size for all characters. The box containing the actual symbol is called the <i class="newterm">letter face</i>, and there should be some space left between the letter face and the character frame. There may be variations, particularly for  punctuation, etc., in the size of the letter face.</p>
+
+<figure its-locale-filter-list="en" id="vowel_in_stack">
+<svg width="400px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 80">
+    	<text x="0" y="60" class="svg_ja60">版</text>
+
+<rect x="0" y="8" width="60" height="60" class="svg_boundary"></rect>
+		
+        <text x="130" y="20" class="svg_annotation">character frame</text>
+		<line x1="60" y1="17" x2="80" y2="17" style="stroke:#7fcff2; stroke-width: 1;"/>
+
+		<text x="130" y="50" class="svg_annotation">letter face</text>
+		<line x1="40" y1="47" x2="96" y2="47" style="stroke:#7fcff2; stroke-width: 1;"/>
+
+
+        <!--use xlink:href="#arrowLeft" x="60" y="20" text-anchor="left"></use>
+		<use xlink:href="#arrowLeft" x="50" y="50" text-anchor="left"></use>
+        <use xlink:href="#arrowLeft" x="200" y="50" transform="rotate(180,200,40)"></use>
+		<use xlink:href="#arrowRight" x="200" y="50" text-anchor="right"></use-->
+      </svg>
+	  <figcaption>Character frame and letter face.</figcaption>
+        </figure>
+		
+<p>Because of the regularity of the character frame size, it can be used to measure the size of the text area or other parts of a page (horizontally or vertically).</p>
+<p>In principle, Han characters are set solid, ie. with no space between the character frames. However, text alignment and justification can make adjustments to the placement of characters in the direction of the line flow. See <a class="secref">justify</a> and <a class="secref">letterspace</a>.</p>
+
+
+
+<figure its-locale-filter-list="en" id="fig_small_kana">
+<svg width="400px" height="300px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+    	<!--text x="50" y="60" class="svg_ja60" style="writing-mode:tb-rl;">ブィーイ</text-->
+    	<text x="30" y="8" class="svg_ja60" style="writing-mode:tb-rl;">きょう。</text>
+    	<text x="0" y="60" class="svg_ja60">　ょう。</text>
+
+<rect x="0" y="8" width="60" height="60" class="svg_boundary"></rect>
+<rect x="60" y="8" width="60" height="60" class="svg_boundary"></rect>
+<rect x="120" y="8" width="60" height="60" class="svg_boundary"></rect>
+<rect x="180" y="8" width="60" height="60" class="svg_boundary"></rect>
+		
+<rect x="0" y="68" width="60" height="60" class="svg_boundary"></rect>
+<rect x="0" y="128" width="60" height="60" class="svg_boundary"></rect>
+<rect x="0" y="188" width="60" height="60" class="svg_boundary"></rect>
+		
+        <!--text x="130" y="20" class="svg_annotation">character frame</text>
+		<line x1="60" y1="17" x2="80" y2="17" style="stroke:#7fcff2; stroke-width: 1;"/>
+
+		<text x="130" y="50" class="svg_annotation">letter face</text>
+		<line x1="40" y1="47" x2="96" y2="47" style="stroke:#7fcff2; stroke-width: 1;"/-->
+      </svg>
+	  <figcaption>Character frame and letter face.</figcaption>
+        </figure>
+
+
+
+
+
+
+
+
+
+
+<section id="gpos">
+<h3>Context-based positioning</h3>
+<p class="prompts"> Are there requirements to position diacritics or other items specially, depending on context? Does the script have multiple diacritics competing for the same location relative to the base?</p>
+
+<p>Dashes, ellipses, and brackets are rotated 90º to the right when they appear in vertical text. Here is a list of characters to which this applies.<a class="fnref" href="https://w3c.github.io/clreq/#table_of_punctuation_marks">c</a></p>
+
+<figure class="auto"  data-cols="">⸺␣—␣…␣～␣-␣–␣/␣「␣」␣『␣』␣“␣”␣‘␣’␣（␣）␣《␣》␣〈␣〉␣【␣】␣〖␣〗␣〔␣〕␣［␣］␣｛␣｝</figure>
+</section>
+
+
+
+
+
+
+
+
+
+
 <section id="baselines">
 <h3>Baselines &amp; inline alignment</h3>
 <p class="prompts">Does the script have special requirements for baseline alignment between mixed scripts and in general?</p>
@@ -596,6 +700,9 @@ alveolar</th>
 
 <section id="wordsep">
 <h2>Structural boundaries &amp; markers</h2>
+<p>Several of the following sections include icons after punctuation marks that indicate whether the punctuation is used in horizontal (<span style="color:red;">H</span>) or vertical (<span style="color:red;">V</span>) writing, and whether the character is rotated 90º in vertical text, or translated to a different location in the character frame.</p>
+<p>When lines or other text decoration are used, they normally appear below horizontal text, and to the left of vertical text. However, emphasis marks appear to the right of a vertical line. </p>
+<p>When two underlined items appear side-by-side, the underline should be broken between the two. If a line of Chinese text contains some text in  another language and orthography, the position of any text decoration should follow the Chinese conventions.</p>
 
 <section id="graphemes">
 <h3>Grapheme boundaries</h3>
@@ -615,16 +722,134 @@ alveolar</th>
  <figure>
   <p class="large"><span class="ex" lang="zh-hans">别。并</span></p>
   <figcaption>The gap between these characters is only an absence of ink. There is no space character.</figcaption>
-  </figure>
- </section>
-
+</figure>
+</section>
 
 
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
    <p class="prompts">What characters are used to indicate the boundaries of phrases, sentences, and sections?</p>
-<p>Chinese uses native bracket styles, commas and periods. Some of the punctuation looks like that for Latin (eg. parentheses), but the width of the punctuation is likely to include significant amounts of white space, so that punctuation characters occupy the same space as han characters.</p>
-    </section>
+<p> Chinese uses the following separators at the sentence level and below.<a class="fnref" href="https://w3c.github.io/clreq/#h-pause-or-stop-punctuation-marks">c</a></p>
+<table class="punctuationTable">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th colspan="2">SC: H, V</th>
+<th colspan="2">TC: H, V</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th rowspan="4">phrase</th>
+<td><span class="codepoint" translate="no"><span lang="zh">&#xFF0C;</span> [<a href="/scripts/punctuation/block#charFF0C"><span class="uname">U+FF0C FULLWIDTH COMMA</span></a>]</span>&nbsp;</td>
+<td class="vt"><img src="images/BR.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/TR.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/C.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/C.png" alt="Bottom right"></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x3001;</span> [<a href="/scripts/punctuation/block#char3001"><span class="uname">U+3001 IDEOGRAPHIC COMMA</span></a>]</span>&nbsp;*</td>
+<td class="vt"><img src="images/BR.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/TR.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/C.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/C.png" alt="Bottom right"></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#xFF1A;</span> [<a href="/scripts/punctuation/block#charFF1A"><span class="uname">U+FF1A FULLWIDTH COLON</span></a>]</span>&nbsp;</td>
+<td class="vt"><img src="images/L.png" alt="Left"></td>
+<td class="vt"><img src="images/R.png" alt="Right"></td>
+<td class="vt"><img src="images/HC.png" alt="Centre"></td>
+<td class="vt"><img src="images/HC.png" alt="Centre"></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#xFF1B;</span> [<a href="/scripts/punctuation/block#charFF1B"><span class="uname">U+FF1B FULLWIDTH SEMICOLON</span></a>]</span>&nbsp;</td>
+<td class="vt"><img src="images/L.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/R.png" alt="Right"></td>
+<td class="vt"><img src="images/HC.png" alt="Centre"></td>
+<td class="vt"><img src="images/HC.png" alt="Centre"></td>
+</tr>
+<tr>
+<th rowspan="2">sentence</th>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x3002;</span> [<a href="/scripts/punctuation/block#char3002"><span class="uname">U+3002 IDEOGRAPHIC FULL STOP</span></a>]</span></td>
+<td class="vt"><img src="images/BR.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/TR.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/C.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/C.png" alt="Bottom right"></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#xFF0E;</span> [<a href="/scripts/punctuation/block#charFF0E"><span class="uname">U+FF0E FULLWIDTH FULL STOP</span></a>]  *</span></td>
+<td class="vt"><img src="images/BR.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/TR.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/C.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/C.png" alt="Bottom right"></td>
+</tr>
+<tr>
+<th>exclamation</th>
+<td><span class="codepoint" translate="no"><span lang="zh">&#xFF01;</span> [<a href="/scripts/punctuation/block#charFF01"><span class="uname">U+FF01 FULLWIDTH EXCLAMATION MARK</span></a>]</span>&nbsp;</td>
+<td class="vt"><img src="images/L.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/R.png" alt="Right"></td>
+<td class="vt"><img src="images/HC.png" alt="Centre"></td>
+<td class="vt"><img src="images/HC.png" alt="Centre"></td>
+</tr>
+<tr>
+<th>question</th>
+<td><span class="codepoint" translate="no"><span lang="zh">&#xFF1F;</span> [<a href="/scripts/punctuation/block#charFF1F"><span class="uname">U+FF1F FULLWIDTH QUESTION MARK</span></a>]</span>&nbsp;</td>
+<td class="vt"><img src="images/L.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/R.png" alt="Right"></td>
+<td class="vt"><img src="images/HC.png" alt="Centre"></td>
+<td class="vt"><img src="images/HC.png" alt="Centre"></td>
+</tr>
+</tbody>
+</table>
+
+<p><span class="codepoint" translate="no"><span lang="zh">&#x3001;</span> [<a href="/scripts/punctuation/block#char3001"><span class="uname">U+3001 IDEOGRAPHIC COMMA</span></a>]</span> is typically used as a list separator.</p>
+<p><span class="codepoint" translate="no"><span lang="zh">&#xFF0E;</span> [<a href="/scripts/punctuation/block#charFF0E"><span class="uname">U+FF0E FULLWIDTH FULL STOP</span></a>]</span> is used as sentence-final punctuation in, for example, college textbooks, science and technology literature, and grammar books of Western languages, most of which are in horizontal writing mode, and Western language is heavily used.</p>
+<p>As the table shows, these punctuation marks are not rotated, however their position varies in Simplified Chinese for horizontal and vertical text, relative to the character frame. In Traditional Chinese they are all centred.</p>
+<p>These different positions in Simplified Chinese require dedicated glyphs in the font, and cannot be achieved by simply rotating the glyph.</p>
+<p>Chinese also uses the following doubled exclamation/question marks. They remain upright in vertical text.</p>
+<table class="punctuationTable">
+<thead>
+</thead>
+<tbody>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x203C;</span> [<a href="/scripts/punctuation/block#char203C"><span class="uname">U+203C DOUBLE EXCLAMATION MARK</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x2047;</span> [<a href="/scripts/punctuation/block#char2047"><span class="uname">U+2047 DOUBLE QUESTION MARK</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x2048;</span> [<a href="/scripts/punctuation/block#char2048"><span class="uname">U+2048 QUESTION EXCLAMATION MARK</span></a>]</span>&nbsp;</td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x2049;</span> [<a href="/scripts/punctuation/block#char2049"><span class="uname">U+2049 EXCLAMATION QUESTION MARK</span></a>]</span>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>Other punctuation used to separate phrases or items includes:</p>
+<table class="punctuationTable">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>H</th>
+<th>V</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x2E3A;</span> [<a href="/scripts/punctuation/block#char2E3A"><span class="uname">U+2E3A TWO-EM DASH</span></a>]</span>&nbsp;</td>
+<td class="vt"><img src="images/VC.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/HC.png" alt="Bottom right"></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x2014;&#x2014;</span> [<a href="/scripts/punctuation/block#char2014"><span class="uname">U+2014 EM DASH</span></a> + <a href="/scripts/punctuation/block#char2014"><span class="uname">U+2014 EM DASH</span></a>]</span></td>
+<td class="vt"><img src="images/VC.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/HC.png" alt="Bottom right"></td>
+</tr>
+</tbody>
+</table>
+<p>If <span class="uname">EM DASH</span> characters are used, they are used in pairs.</p>
+</section>
     
     
     
@@ -633,19 +858,63 @@ alveolar</th>
 
 
 <section id="bracketing">
-<h3>Bracketing &amp; parentheses</h3>
-<p class="prompts">What characters are used as parentheses, or to bracket information?</p>
+<h3>Bracketing &amp; range markers</h3>
+<p><span class="leadin">Parentheses &amp; brackets.</span>For general parentheses in text, Chinese uses:</p>
+<table class="punctuationTable">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>H</th>
+<th>V</th>
+</tr>
+</thead>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#xFF08;</span> [<a href="/scripts/punctuation/block#charFF08"><span class="uname">U+FF08 FULLWIDTH LEFT PARENTHESIS</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="zh">&#xFF09;</span> [<a href="/scripts/punctuation/block#charFF09"><span class="uname">U+FF09 FULLWIDTH RIGHT PARENTHESIS</span></a>]</span></td>
+<td class="vt"><img src="images/R.png" alt="Right aligned"> <img src="images/L.png" alt="Left aligned"></td>
+<td class="vt"><img src="images/B.png" alt="Bottom aligned"><br>
+<img src="images/T.png" alt="Top aligned"></td>
+</tr>
+</table>
 
-   <p><span class="leadin">Titles &amp; names</span></p>
-   <p>Titles of works  including books, articles, songs, movies, files, calligraphy and paintings are identified in Chinese in one of two ways:</p>
+<p>Dashes can also be used to offset information, in which case Chinese typically uses those listed in the previous section, doubled up.</p>
+<p>Although there are a number of other bracket characters (listed just below),  they are rarely used in Chinese publications.<a class="fnref" href="https://w3c.github.io/clreq/#id81">c</a></p>
+
+<figure class="auto"  data-cols="">【␣】␣〖␣〗␣〔␣〕␣［␣］␣｛␣｝</figure>
+
+
+
+   <p><span class="leadin">Titles.</span> Titles of works  including books, articles, songs, movies, files, calligraphy and paintings are identified in Chinese in one of two ways:<a class="fnref" href="https://w3c.github.io/clreq/#id87">c</a></p>
 <ol>
-<li>Underlining the title with a wavy line.</li>
-<li>Using  brackets around the title.</li>
+<li>Using  angle brackets around the title.</li>
+<li>Underlining the title with a wavy line (is rarely used in modern publications, but can still be seen in some textbooks and ancient publications).</li>
 </ol>
-<p>In horizontal text, the line goes below. In vertical text the line goes to the left. When two underlined items appear side-by-side, the underline should be broken between the two.</p>
-<p>Proper names are also regularly highlighted using line decoration, but this time straight. The line appears on the same sides.</p>
-<p>If a line of Chinese text contains some text in Japanese or another language, and there is a line associated with that text, the position of the line should follow the Chinese conventions.</p>
-<p>The brackets <span class="codepoint" translate="no"><span lang="zh">&#x300A;</span> [<a href="/scripts/lisu/block#char300A"><span class="uname">U+300A LEFT DOUBLE ANGLE BRACKET</span></a>]</span> and <span class="codepoint" translate="no"><span lang="lis">&#x300B;</span> [<a href="/scripts/lisu/block#char300B"><span class="uname">U+300B RIGHT DOUBLE ANGLE BRACKET</span></a>]</span> tend to be used for book and chapter titles, and <span class="codepoint" translate="no"><span lang="khb">&#x3008;</span> [<a href="/scripts/newtailue/block#char3008"><span class="uname">U+3008 LEFT ANGLE BRACKET</span></a>]</span> with <span class="codepoint" translate="no"><span lang="khb">&#x3009;</span> [<a href="/scripts/newtailue/block#char3009"><span class="uname">U+3009 RIGHT ANGLE BRACKET</span></a>]</span> for articles. <sup><a href="https://w3c.github.io/clreq/#glyphs_sizes_and_positions_in_character_faces_of_punctuation_marks">c</a></sup></p>
+<table class="punctuationTable">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>H</th>
+<th>V</th>
+</tr>
+</thead>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x300A;</span> [<a href="/scripts/punctuation/block#char300A"><span class="uname">U+300A LEFT DOUBLE ANGLE BRACKET</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x300B;</span> [<a href="/scripts/punctuation/block#char300B"><span class="uname">U+300B RIGHT DOUBLE ANGLE BRACKET</span></a>]</span></td>
+<td class="vt"><img src="images/R.png" alt="Right aligned"> <img src="images/L.png" alt="Left aligned"></td>
+<td class="vt"><img src="images/B.png" alt="Bottom aligned"><br><img src="images/T.png" alt="Top aligned"></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="khb">&#x3008;</span> [<a href="/scripts/newtailue/block#char3008"><span class="uname">U+3008 LEFT ANGLE BRACKET</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="khb">&#x3009;</span> [<a href="/scripts/newtailue/block#char3009"><span class="uname">U+3009 RIGHT ANGLE BRACKET</span></a>]</span></td>
+<td class="vt"><img src="images/R.png" alt="Right aligned"> <img src="images/L.png" alt="Left aligned"></td>
+<td class="vt"><img src="images/B.png" alt="Bottom aligned"><br>
+<img src="images/T.png" alt="Top aligned"></td>
+</tr>
+</table>
+<p>The double brackets tend to be used for book and chapter titles, and <span class="codepoint" translate="no"><span lang="khb">the single brackets</span></span><span class="codepoint" translate="no"></span> for articles.<a class="fnref" href="https://w3c.github.io/clreq/#glyphs_sizes_and_positions_in_character_faces_of_punctuation_marks">c</a></p>
+<p><span class="leadin">Proper names.</span> Proper names can be highlighted using line decoration, but this time a straight underline. Note that the underline is not used for emphasis in this case. This is mostly used in textbooks and older publications.<a class="fnref" href="https://w3c.github.io/clreq/#glyphs_sizes_and_positions_in_character_faces_of_punctuation_marks">c</a></p>
 
 
 
@@ -660,6 +929,107 @@ alveolar</th>
 <section id="quotations">
 <h3>Quotations</h3>
 <p class="prompts">What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue?</p>
+
+<p><span class="leadin">Mainland China.</span> Mainland China, where vertical text is not common, uses different quote marks for horizontal and vertical writing. The default quote marks  are:<a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/ta.html">c</a></p>
+<table class="punctuationTable">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>H</th>
+<th>V</th>
+</tr>
+</thead>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x201C;</span> [<a href="/scripts/punctuation/block#char201C"><span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span></a>]</span></td><td><span class="codepoint" translate="no"><span lang="zh">&#x201D;</span> [<a href="/scripts/punctuation/block#char201D"><span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span></a>]</span></td>
+<td class="vt"><img src="images/TR.png" alt="Top=right aligned"> <img src="images/TL.png" alt="Top-left aligned"></td>
+<td class="vt">-</td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x300E;</span> [<a href="/scripts/punctuation/block#char300E"><span class="uname">U+300E LEFT WHITE CORNER BRACKET</span></a>]</span></td><td><span class="codepoint" translate="no"><span lang="zh">&#x300F;</span> [<a href="/scripts/punctuation/block#char300F"><span class="uname">U+300F RIGHT WHITE CORNER BRACKET</span></a>]</span></td>
+<td class="vt">-</td>
+<td class="vt"><img src="images/BR.png" alt="Bottom-right aligned"><br>
+<img src="images/TL.png" alt="Top-left aligned"></td>
+</tr>
+</table>
+<p>When an additional quote is embedded within the first, the quote marks are:<a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/ta.html">c</a></p>
+<table class="punctuationTable">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>H</th>
+<th>V</th>
+</tr>
+</thead>
+<tr><td><span class="codepoint" translate="no"><span lang="zh">&#x2018;</span> [<a href="/scripts/punctuation/block#char2018"><span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span></a>]</span></td><td><span class="codepoint" translate="no"><span lang="zh">&#x2019;</span> [<a href="/scripts/punctuation/block#char2019"><span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span></a>]</span></td>
+<td class="vt"><img src="images/TR.png" alt="Top-right aligned"> <img src="images/BL.png" alt="Bottom-left aligned"></td>
+<td class="vt">-</td>
+</tr>
+<tr><td><span class="codepoint" translate="no"><span lang="zh">&#x300C;</span> [<a href="/scripts/punctuation/block#char300C"><span class="uname">U+300C LEFT CORNER BRACKET</span></a>]</span></td><td><span class="codepoint" translate="no"><span lang="zh">&#x300D;</span> [<a href="/scripts/punctuation/block#char300D"><span class="uname">U+300D RIGHT CORNER BRACKET</span></a>]</span></td>
+<td class="vt">-</td>
+<td class="vt"><img src="images/BR.png" alt="Bottom-right aligned"><br>
+<img src="images/TL.png" alt="Top-left aligned"></td>
+</tr></table>
+
+<p><span class="leadin">Taiwan.</span> Taiwan tends to use a single set of quote marks, but the other way around compared to Mainland China. The default quote marks  are:<a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/ta.html">c</a></p>
+<table class="punctuationTable">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>H</th>
+<th>V</th>
+</tr>
+</thead>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x300C;</span> [<a href="/scripts/punctuation/block#char300C"><span class="uname">U+300C LEFT CORNER BRACKET</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x300D;</span> [<a href="/scripts/punctuation/block#char300D"><span class="uname">U+300D RIGHT CORNER BRACKET</span></a>]</span></td>
+<td class="vt"><img src="images/TR.png" alt="Top-right aligned"> <img src="images/BL.png" alt="Bottom-left aligned"></td>
+<td class="vt"><img src="images/BR.png" alt="Bottom-right aligned"><br>
+<img src="images/TL.png" alt="Top-left aligned"></td>
+</tr>
+</table>
+<p>When an additional quote is embedded within the first, the quote marks are:<a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/ta.html">c</a></p>
+<table class="punctuationTable">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>H</th>
+<th>V</th>
+</tr>
+</thead>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x300E;</span> [<a href="/scripts/punctuation/block#char300E"><span class="uname">U+300E LEFT WHITE CORNER BRACKET</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x300F;</span> [<a href="/scripts/punctuation/block#char300F"><span class="uname">U+300F RIGHT WHITE CORNER BRACKET</span></a>]</span></td>
+<td class="vt"><img src="images/TR.png" alt="Top-right aligned"> <img src="images/BL.png" alt="Bottom-left aligned"></td>
+<td class="vt"><img src="images/BR.png" alt="Bottom-right aligned"><br>
+<img src="images/TL.png" alt="Top-left aligned"></td>
+</tr>
+</table>
+<p>Occasionally, Traditional Chinese text may use double brackets for the default, and single for the embedded. It may also use quotation marks, like Mainland China, but not commonly, and much less so for vertical text.</p>
+</section>
+
+
+
+
+  
+<section id="emphasis">
+<h3>Emphasis</h3>
+<p class="prompts">How are emphasis and highlighting achieved? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</p>
+
+<p>Straight or wavy lines alongside the text are typically used in Chinese to indicate proper nouns such as a person's name, a book title, or the name of a place, rather than for emphasis like the underlining associated with Latin-script text.<a class="fnref" href="id82">c</a></p>
+<p>Chinese uses dots or circles alongside characters to express emphasis, one dot per base character.</p>
+
+<figure id="fig_emphasis">
+<img src="images/emphasis_h.png" alt="" style="margin-right: 3em;"> 
+<img src="images/emphasis_v.png" alt="" style="vertical-align: top;">
+  <figcaption>Text emphasis in horizontal (left) and vertical (right) text.</figcaption>
+</figure>
+
+<p>In horizontal text, emphasis marks appear underneath the base text. They usually appear to the right of a vertical line, ie. on the opposite side of  lines used for book titles, proper nouns, etc. (to avoid interference).</p>
+<p>In the same way as for other line decorations, embedded  text in other languages would have dots displayed on the same side as for Chinese.</p>
 </section>
 
 
@@ -669,19 +1039,86 @@ alveolar</th>
 <section id="abbrev">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
 <p class="prompts">What characters are used to indicate abbreviation, ellipsis &amp; repetition?</p>
+
+<p><span class="leadin">Ellipsis.</span> An ellipsis in Chinese consists of six dots and takes up the space of two Hanzi characters. This is normally achieved using two <span class="codepoint" translate="no"><span lang="zh">&#x2026;</span> [<a href="/scripts/punctuation/block#char2026"><span class="uname">U+2026 HORIZONTAL ELLIPSIS</span></a>]</span> characters, side-by-side.<a class="fnref" href="https://w3c.github.io/clreq/#id83">c</a></p>
+<table class="punctuationTable">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>H</th>
+<th>V</th>
+</tr>
+</thead>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x2026;&#x2026;</span> [<a href="/scripts/punctuation/block#char2026"><span class="uname">U+2026 HORIZONTAL ELLIPSIS</span></a>] x2</span></td>
+<td class="vt"><img src="images/B.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/L.png" alt="Left"></td>
+</tr>
+</table>
 </section>
 
 
 
 
   
-<section id="emphasis">
-<h3>Emphasis &amp; text decoration</h3>
-<p class="prompts">How are emphasis and highlighting achieved? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</p>
+<section id="otherPunctuation">
+<h3>Other punctuation</h3>
 
-<p>Straight or wavy lines alongside the text are typically used in Chinese to indicate proper nouns such as a person's name, a book title, or the name of a place, rather than for emphasis like the underlining associated with Latin-script text.</p>
-<p>Chinese uses dots alongside characters to express emphasis, one dot per base character.</p>
-<p>In horizontal text, emphasis marks appear underneath the base text. They usually appear to the right of a vertical line, ie. on the opposite side of  lines used for book titles, proper nouns, etc. (to avoid interference). Like for line decorations, embedded  text in other languages would have dots displayed on the same side as for Chinese.</p>
+<p><span class="leadin">Dashes.</span> The long dashes mentioned in bracketing can also be used to show a continuation of tone or sound, an abrupt change in thought, or adding new content to the context<a class="fnref" href="id82">c</a>.</p>
+<p><span class="leadin">Connectors.</span>Connector marks are used &quot;to indicate the beginning and end of time or space, to indicate quantity, to express the name of a chemical compound, to label a table or illustration, to connect a house number in an address, for a phone number, to separate digits which indicate the year, month and date, or to connect compound nouns and for the romanization, as well as the foreign text in the content&quot;.<a class="fnref" href="https://w3c.github.io/clreq/#id85">c</a></p>
+<p>Chinese uses the following punctuation for this.<a class="fnref" href="https://w3c.github.io/clreq/#id85">c</a></p>
+<table class="punctuationTable">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th colspan="2">SC: H, V</th>
+<th colspan="2">TC: H, V</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#xFF5E;</span> [<a href="/scripts/punctuation/block#charFF5E"><span class="uname">U+FF5E FULLWIDTH TILDE</span></a>]</span></td>
+<td class="vt"><img src="images/VC.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/HC.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/VC.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/HC.png" alt="Bottom right"></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x2013;</span> [<a href="/scripts/punctuation/block#char2013"><span class="uname">U+2013 EN DASH</span></a>]</span></td>
+<td class="vt"><img src="images/VC.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/HC.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/VC.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/HC.png" alt="Bottom right"></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x2014;</span> [<a href="/scripts/punctuation/block#char2014"><span class="uname">U+2014 EM DASH</span></a>]</span>&nbsp;</td>
+<td class="vt"><img src="images/VC.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/HC.png" alt="Bottom right"></td>
+<td class="vt">-</td>
+<td class="vt">-</td>
+</tr>
+</tbody>
+</table>
+
+<p><span class="leadin">Separators.</span> Interpuncts are used to separate the first name and family name in foreign or minority names rendered using Chinese characters, and with book title marks to separate chapters, articles and volumes in publications.<a class="fnref" href="https://w3c.github.io/clreq/#id86">c</a></p>
+<table class="punctuationTable">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>H</th>
+<th>V</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x00B7;</span> [<a href="/scripts/punctuation/block#char00B7"><span class="uname">U+00B7 MIDDLE DOT</span></a>]</span></td>
+<td class="vt"><img src="images/C.png" alt="Centred"></td>
+<td class="vt"><img src="images/C.png" alt="Centred"></td>
+</tr>
+</tbody>
+</table>
+<p>Middle dots sometimes take up only a halfwidth space in Simplified Chinese when used with dates, eg. <span class="ex" lang="zh">2&#x00B7;11</span>.<a class="fnref" href="https://w3c.github.io/clreq/#id86">c</a></p>
+<p>The following characters are <em>not</em> recommended for this purpose: <span class="codepoint" translate="no"><span lang="zh">&#xFF0E;</span> [<a href="/scripts/punctuation/block#charFF0E"><span class="uname">U+FF0E FULLWIDTH FULL STOP</span></a>]</span>, <span class="codepoint" translate="no"><span lang="zh">&#x2027;</span> [<a href="/scripts/punctuation/block#char2027"><span class="uname">U+2027 HYPHENATION POINT</span></a>]</span>, <span class="codepoint" translate="no"><span lang="zh">&#x2022;</span> [<a href="/scripts/punctuation/block#char2022"><span class="uname">U+2022 BULLET</span></a>]</span>, and <span class="codepoint" translate="no"><span lang="zh">&#x30FB;</span> [<a href="/scripts/punctuation/block#char30FB"><span class="uname">U+30FB KATAKANA MIDDLE DOT</span></a>]</span>.<a class="fnref" href="https://w3c.github.io/clreq/#id86">c</a></p>
 </section>
 
 
@@ -703,10 +1140,16 @@ alveolar</th>
 
 <section id="wrap">
 <h3>Line breaking &amp; word wrap</h3>
-    <p class="prompts">Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that?</p>
+<p class="prompts">Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that?</p>
 <p>Lines are normally wrapped between characters – word boundaries have no significance for the wrapping. Chinese should, however, take into account a few rules which dictate what characters cannot appear at the end or start of a line.</p>
-    <p class="instructions">By looking at the above sample text and changing the width of your browser window you should be able to see text wrapping character by character, and identify characters that cannot appear at the start/end of a line.</p>
-  
+<p><span class="leadin">Line start/end rules.</span> The following characters should not  begin a line. Instead, they should bring the previous Han character with them.<a class="fnref" href="https://w3c.github.io/clreq/#table_of_punctuation_marks">c</a></p>
+<figure class="auto"  data-cols="">。␣．␣，␣、␣：␣；␣！␣‼␣？␣⁇␣～␣-␣–␣—␣·␣・␣‧␣/␣／␣」␣』␣”␣’␣）␣》␣〉␣】␣〗␣〕␣］␣｝</figure>
+
+<p>These rules are not always observed for Traditional Chinese in Taiwan, and may be ignored also for newsprint, because it deals with narrow columns of text.<a class="fnref" href="https://w3c.github.io/clreq/#prohibition_rules_for_line_start_end">c</a></p>
+<p>Also, where several punctuation marks appear together, for example <span class="ex" lang="zh">。』」</span>, moving all characters from the previous line might create too large a gap for justification to handle elegantly, and so punctuation marks might be allowed to appear at the line start.<a class="fnref" href="https://w3c.github.io/clreq/#prohibition_rules_for_line_start_end">c</a></p>
+<p>The following characters should not appear at the end of a line.</p>
+ <figure class="auto"  data-cols="">「␣『␣“␣‘␣（␣《␣〈␣【␣〖␣〔␣［␣｛</figure>
+ 
   
   
 <p><span class="leadin">Character properties.</span> Characters used for the Chinese  language have the following assignments related to line-break properties.</p>
@@ -733,7 +1176,7 @@ alveolar</th>
 
 
 
-<detailsx id="linebreak_details">
+<details id="linebreak_details">
 <summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AI">AI (ambiguous, alphabetic or Ideograph)</a> line breaking behavior  depends on the context, and may reflect  different rules in East Asian and other contexts.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
@@ -743,6 +1186,7 @@ alveolar</th>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CP">CP (closing parenthesis)</a> will not cause a break opportunity when appearing in contexts like “(s)he.” In all other respects the breaking behavior of CP and CL are the same.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#EX">EX (exclamation mark/interrogation)</a> behave like closing characters, except in relation to postfix (PO) and non-starter characters (NS).</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#GL">GL (non-breaking “glue&quot;)</a> non-tailorable, non-breaking characters prohibit breaks on either side, but that prohibition can be overridden by SP or ZW.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">ID (ideographic)</a> do not require other characters to provide break opportunities; lines can ordinarily break before and after and between pairs of ideographic characters. Note that this class also includes characters other than Han ideographs..</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">IN (inseparable characters)</a> is intended to be used consecutively. There is never a line break between two characters of this class.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">IS (infix numeric separators)</a> usually occurs inside a numerical expression and may not be separated from the numeric characters that follow, unless a space character intervenes. For example, there is no break in “100.00” or “10,000”, nor in “12:59”..</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">NS (nonstarters)</a> cannot start a line, but unlike CL they may allow a break in some contexts when they follow one or more space characters.</p>
@@ -1256,7 +1700,9 @@ data-cols="">𝍶␣𝍵␣𝍴␣𝍳␣𝍲</figure>
 		<ol>
 			<!--li>[Daniels] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
 				0-19-507993-0</li-->
-			<li>[ <a class="fnref" href="#refs">d</a> ]
+			<li>[ <a class="fnref" href="https://w3c.github.io/clreq/">c</a> ]
+			<a href="https://w3c.github.io/clreq/">Requirements for Chinese Text Layout 中文排版需求</a></li>
+<li>[ <a class="fnref" href="#refs">d</a> ]
 			Peter T. Daniels and William Bright, <span class="doctitle"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
 		    0-19-507993-0</li>
 			
