@@ -844,12 +844,12 @@ alveolar</th>
 <p><span class="leadin">Ruby.</span> Various ways of arranging inter-linear annotations alongside text fall under the rubrique of <span class="name">ruby</span> (named from a British print size originally used for the annotations). These include mono-ruby, jukugo-ruby, and group-ruby, and they are described in detail below.</p>
 <p>Ruby is commonly used to indicate the pronunciation of ideographic characters used in Japanese, as it cannot usually be guessed and so can pose difficulties for those learning the language. For these cases, mono-ruby is most commonly used, however a variant, jukugo-ruby, is sometimes applied to compound nouns (which are called <span class="name">jukugo</span> in Japanese).</p>
 <p>Ruby annotations are also used to provide brief indications of the meaning of words or characters. These annotations typically use the group-ruby approach.</p>
-<p>The rest of this section describes features that are generally common to all forms of ruby.</p>
+<p>The rest of this section describes features that are generally common to all forms of ruby, before we move on to examine the differences in following subsections.</p>
 <p>All annotations appear within the standard inter-line space for the page, and don't create extra space if they only appear on a single line. That said, the inter-line space is usually set at an appropriate size to accommodate annotations.</p>
 <p>Unlike Chinese, it is common to find annotations applied just to specific words, rather than annotating the whole text.</p>
 <p>Ruby annotations normally appear above horizontal lines of text, and to the right of vertical lines. Occasionally, both phonetic and semantic annotations are applied to the same base text, in which case the annotations appear on both sides of the base. A typical scenario in these cases would be to have mono-ruby above/right of the base, and group-ruby below/left.</p>
 <p><span class="leadin">Mono-ruby.</span> Usually applied to kanji base characters, each base character is associated individually with an annotation. </p>
-<p>Annotations are normally centred over the base character in horizontal text, and with the middle of the base character in vertical text. Lines can be broken in the middle of a sequence of mono-ruby annotations.</p>
+<p>Annotations are normally centred over the base character in horizontal text, and with the middle of the base character in vertical text. (called <span class="name">nakatsuki</span>). An alternative, used only in vertical text, is to align the annotation with the top of the character frame of the base character (<span class="name">katatsuki</span>), as in the righthand example in <a class="figref">fig_jukugo</a>.</p>
 
 <!--p class="large" style="writing-mode:horizontal-tb;"><span class="ex" lang="ja"><ruby><rb>推</rb><rt>すい</rt><rb>理</rb><rt style="color:chocolate">り</rt><rb>小</rb><rt>しょう</rt><rb>説</rb><rt style="color:chocolate">せつ</rt></ruby></span></p-->
 
@@ -859,9 +859,24 @@ alveolar</th>
 <figcaption>Mono-ruby for <span class="charExample" translate="no"><span class="ex" lang="ja">推理小説</span> <span class="meaning">detective novel</span></span>, in horizontal and vertical text (colouring added for illustrative purposes). </figcaption>
 </figure>
 
-<p>Since the annotation characters are usually 1/2 the size of the base characters, 3-character annotations require more space that the underlying kanji. Internally to the sequence, this will produce a gap between the base characters. At either end of the sequence, either a gap is opened up between the character with the long annotation and its neighbour (see <a class="figref">fig_mono_ruby</a>), or the annotation may overhang the neighbouring base characters. </p>
-<p>Simpler implementations produce gaps or allow annotations to overhang any blank parts of adjacent fullwidth punctuation characters. More complicated implementations may allow overlap of kana characters, but never overlap kanji or other base characters with annotations.</p>
+<p>Since the annotation characters are usually 1/2 the size of the base characters, 3-character annotations require more space that the underlying kanji. Internally to the sequence, this will produce a gap between the base characters, since annotations cannot overlap (see <a class="figref">fig_mono_ruby</a>). </p>
+<p>At either end of the sequence, either a gap is opened up between the base character with the long annotation and its neighbour (see <a class="figref">fig_overhang</a>), or the annotation may overhang the neighbouring base characters. Simpler implementations produce gaps, but allow annotations to overhang any blank parts of adjacent fullwidth punctuation characters. More sophisticated applications may allow overlap of kana or other characters, but never kanji, but may also have to deal more complicated algorithms, such as balancing space on either side of the ruby sequence.</p>
+
+<!--p class="large" lang="ja">彼が<ruby><rb>町</rb><rt>ちょう</rt><rb>長</rb><rt>ちょう</rt></ruby>です</p-->
+
+<figure id="fig_overhang">
+<img src="images/chocho_gap.png" alt=""><br>
+<img src="images/chocho_overhang.png" alt="">
+<figcaption>Alternative ways of dealing with potential overhang either side of the ruby sequence.</figcaption>
+</figure>
+
 <p>At line start or line end, long annotations do not protrude past the line edge – meaning that there will be a gap between the base character and the line edge.</p>
+
+<figure id="fig_line_edge_ruby">
+<img src="images/line_edge.png" alt="">
+<figcaption>Gaps produced at line end and line start by wide annotations.</figcaption>
+</figure>
+<p>Lines can be broken in the middle of a sequence of mono-ruby annotations, as long as an associated base and annotation are kept together.</p>
 <p><span class="leadin">Group ruby.</span> Applies when the base is a sequence of characters, mapped to a single annotation. The base can be a sequence of either kanji  or other characters, as can be the annotation.</p>
 <p>When the annotation is shorter than the base, and the annotation is composed of kana or kanji characters, they are typically spread out with two units of equal spacing between each character and one at either end. The end space should never exceed half the width of a base character.</p>
 <p>When the base is shorter than the annotation, the inverse applies.</p>
@@ -871,7 +886,8 @@ alveolar</th>
 <p><span class="leadin">Jukugo-ruby.</span> Where compound nouns (<span class="name">jukugo</span>) occur, special rules for arrangement of annotation characters  (so-called <span class="name">jukugo-ruby</span>) can make it appear that they are evenly distributed across the word (see  the lefthand example in <a class="figref">fig_jukugo</a>), but there are rules about how much and what type of overhang are allowed, which sometimes lead to gaps (see the righthand example of <a class="figref">fig_jukugo</a>).</p>
 
 <!--p class="large" style="writing-mode:vertical-rl;"><span class="ex" lang="ja"><ruby><rb>橋<span style="color:chocolate">頭</span>堡</rb><rt>きよう<span style="color:chocolate">とう</span>ほ</rt></ruby></span></p>
-<p class="large" style="writing-mode:vertical-rl;"><span class="ex" lang="ja"><ruby><rb>橋<span style="color:red">頭</span>堡</rb><rt>きよう<span style="color:red">とう</span>ほ</rt></ruby></span></p>
+<p class="large" style="writing-mode:vertical-rl;">&nbsp;</p>
+<p class="large" style="writing-mode:vertical-rl;">&nbsp;</p>
 <p class="large" style="writing-mode:vertical-rl;"><span class="ex" lang="ja"><ruby><rb>思<span style="color:chocolate">春</span>期</rb><rt>し　<span style="color:chocolate">しゅん</span>き</rt></ruby></span></p-->
 
 <figure id="fig_jukugo">
@@ -884,51 +900,20 @@ alveolar</th>
 <p>It is up to the author whether a word that is actually a sequence or 2 compound nouns is treated as a single jukugo ruby, or as two separate ones.</p>
 <p><span class="leadin">Inline ruby.</span> Where text sizes are too small for ruby characters to be easily read, the ruby annotation is typically rendered after the base text, in parentheses. </p>
 <p>Inline annotations should normally correspond to full words, even if the sequence of base characters would otherwise be represented using mono-ruby. For example, the inline representation of the word <span class="charExample" translate="no"><span class="ex" lang="ja">東京</span> <span class="meaning">Tokyo</span></span>  should be displayed inline as <span class="charExample" translate="no"><span class="ex" lang="ja">東京（とうきょう）</span></span>, not <span class="charExample" translate="no"><span class="ex" lang="ja">東（とう）京（きょう）</span></span>.</p>
-<p><span class="leadin">Indicating pronunciation.</span> Pronunciation is normally indicated using hiragana annotations.</p>
 
-<p class="large" style="writing-mode:vertical-rl;"><span class="ex" lang="ja"><ruby><rb>参</rb><rt>さん</rt><rb>加</rb><rt>か</rt><rb>希</rb><rt>き</rt><rb>望</rb><rt>ぼう</rt></ruby></span></p>
 
-<figure id="fig_furigana"><img src="images/furigana.png" alt="参(さん)加(か)希(き)望(ぼう)">
-<figcaption>Example of furigana phonetic annotations.</figcaption>
+
+
+<p><span class="leadin">Warichu.</span> Warichu is a method of adding  notes right alongside the relevant text, used particularly in study guides, travel guides, reference books, encyclopedias and manuals. It is generally only used in vertical text, although it is occasionally used in horizontal text for  study guides and encyclopedias.</p>
+<p>The note is usually surrounded by parentheses (or rarely just spaces), and the text of the note is half the size of the main text and arranged in two parallel lines. The two parallel lines are usually set with no inter-line spacing.</p>
+
+<figure id="fig_warichu">
+<img src="images/warichu.png" alt="">
+<figcaption>Two  examples of warichu.</figcaption>
 </figure>
 
-<p>The annotation runs above  the line for horizontal text, and to the right of vertical text.</p>
-
-
-<figure id="fig_furigana_v"><img src="images/furigana_v.png" alt="参(さん)加(か)希(き)望(ぼう)">
-<figcaption>Furigana in vertical text.</figcaption>
-</figure>
-
-<p>Phonetic ruby is most commonly aligned with the base text character-by-character (called <span class="name">mono-ruby</span>), as shown in the examples just above.</p>
-<p>The annotation characters are usually half the size of the base characters. This means that 3 character annotations require more space that the underlying kanji. In such cases, when mono-ruby is used, either a gap is opened up between the character needing more space and its neighbours, or the annotation may overlap the neighbouring base characters. Overlap is not allowed, however, over adjacent kanji characters.</p>
-
-<!--p class="large"><span class="ex" lang="ja">この<ruby><rb>畑</rb><rt>はたけ</rt></ruby>で　</span></p>
-<p class="large"><span class="ex" lang="ja">この<ruby><rb>畑</rb><rt>はたけ</rt></ruby>畑で　</span></p-->
-
-<p class="large" lang="ja">彼が <ruby><rb>町</rb><rt>ちょう</rt><rb>長</rb><rt>ちょう</rt></ruby> です</p>
-<p class="large" lang="ja">彼が）<ruby><rb>町</rb><rt>ちょう</rt><rb>長</rb><rt>ちょう</rt></ruby>（です</p>
-
-<figure id="fig_overhang"><img src="images/overhang.png" alt="彼が<ruby><rb>町</rb><rt>ちょう</rt><rb>長</rb><rt>ちょう</rt></ruby>です">
-
-<figcaption>Long annotations in mono-ruby overhanging the characters on either side of the annotated text, but creating space internally.</figcaption>
-</figure>
-
-
-<p>Where compound nouns (<span class="name">jukugo</span>) occur, special rules for arrangement of annotation characters  (so-called <span class="name">jukugo-ruby</span>) can make it appear that they are evenly distributed across the word (see  the lefthand example in <a class="figref">fig_jukugo</a>), but there are rules about how much and what type of overhang are allowed, which sometimes lead to gaps (see the righthand example of <a class="figref">fig_jukugo</a>).</p>
-
-<!--p class="large" style="writing-mode:vertical-rl;"><span class="ex" lang="ja"><ruby><rb>橋<span style="color:chocolate">頭</span>堡</rb><rt>きよう<span style="color:chocolate">とう</span>ほ</rt></ruby></span></p>
-<p class="large" style="writing-mode:vertical-rl;"><span class="ex" lang="ja"><ruby><rb>橋<span style="color:red">頭</span>堡</rb><rt>きよう<span style="color:red">とう</span>ほ</rt></ruby></span></p>
-<p class="large" style="writing-mode:vertical-rl;"><span class="ex" lang="ja"><ruby><rb>思<span style="color:chocolate">春</span>期</rb><rt>し　<span style="color:chocolate">しゅん</span>き</rt></ruby></span></p-->
-
-<figure id="fig_jukugo">
-<img src="images/jukugo.png" alt="橋頭堡/きようとうほ (beachhead)" style="margin-right:3em;">
-<img src="images/jukugo_gap.png" alt="思春期/ししゅんき (puberty)">
-<figcaption>Two examples of distributed annotations in jukugo-ruby. On the right, a gap appears in the annotation because of the rules about overhang.</figcaption>
-</figure>
-
-<p>An important feature of jukugo-ruby is that where the full compound noun doesn't fit at the end of a line the base characters wrap one-by-one in the normal way, taking with them the appropriate annotations. The annotation for a single base character is never split across a line break.</p>
-<p>In mono-ruby, each annotation is usually centred over the base character it describes (called <span class="name">nakatsuki</span>). An alternative, used only in vertical text, is to align the annotation with the top of the character frame of the base character (<span class="name">katatsuki</span>), as in the righthand example in <a class="figref">fig_jukugo</a>.</p>
-
+<p>The warichu lines should be as close to equal in length as possible, given the normal wrapping rules, and if there is a difference, the initial line (right side) should be the longer.</p>
+<p>In the rare event that the warichu text breaks across more than one line (see <a class="figref">fig_warichu</a> on the right), both lines of the warichu on the first line of the main text should be read completely before continuing to the remainder of the note. The characters in memory  follow the normal reading sequence (and use normal characters, too), but the application needs to rearrange the visual order around the line break.</p>
 </section>
 </section>
 
