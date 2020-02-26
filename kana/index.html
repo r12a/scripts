@@ -773,17 +773,121 @@ alveolar</th>
 
 <p class="prompts">Are words separated by spaces, or other characters? Are there special requirements when double-clicking  on the text? Are words hyphenated?</p>
 
-<p>Japanese rarely uses spaces. In the sample text there are gaps around punctuation, but these are produced by a lack of 'ink' in parts of the square character glyphs:</p>
+<p>Japanese rarely uses spaces. In the sample text there are gaps around punctuation, but these are produced by a lack of 'ink' in parts of the square character glyphs.</p>
   <p class="instructions">You can verify this by clicking on this example. The character list popup shows that only four characters make up this sequence, and none are spaces.</p>
   <p class="large"><span class="ex" lang="ja">い。（こ</span></p>
+  
+  <p>Gaps of this kind may also be reduced during justification and line alignment.</p>
+<p>In general, word boundaries are not important for line-wrapping, however occasionally text such as headings may be wrapped at word boundaries in order to better balance the text.</p>
+<p>Word boundaries are identified when users select screen text, eg. by double-clicking inside a word. Heuristics and dictionaries are needed to identify the boundaries of words in such situations. Note, also, that words in Japanese are very often a mixture of kanji characters followed by hiragana. The word boundary detection needs to treat the various scripts as a unified orthography.</p>
 </section>   
    
   
 <section id="phrase">
 <h3>Phrase boundaries</h3>
 <p class="prompts">What characters are used to indicate the boundaries of phrases, sentences, and sections?</p>
+<p> Japanese uses the following separators at the sentence level and below.<a class="fnref" href="https://w3c.github.io/jlreq/#differences_in_vertical_and_horizontal_composition_in_use_of_punctuation_marks">j</a>  Some of the punctuation looks like that for Latin (eg. parentheses, commas, and full stops), but the width of the punctuation is likely to include significant amounts of white space, so that punctuation characters occupy the same space as han characters.</p>
+<table class="punctuationTable">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>H</th>
+<th>V</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th rowspan="4">phrase</th>
+<td><span class="codepoint" translate="no"><span lang="zh">&#xFF0C;</span> [<a href="/scripts/punctuation/block#charFF0C"><span class="uname">U+FF0C FULLWIDTH COMMA</span></a>]</span>&nbsp;</td>
+<td class="vt"><img src="images/locations/BL.png" alt="Bottom left"></td>
+<td class="vt"><img src="images/locations/TR.png" alt="Bottom right"></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x3001;</span> [<a href="/scripts/punctuation/block#char3001"><span class="uname">U+3001 IDEOGRAPHIC COMMA</span></a>]</span></td>
+<td class="vt"><img src="images/locations/BL.png" alt="Bottom left"></td>
+<td class="vt"><img src="images/locations/TR.png" alt="Bottom right"></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#xFF1A;</span> [<a href="/scripts/punctuation/block#charFF1A"><span class="uname">U+FF1A FULLWIDTH COLON</span></a>]</span>&nbsp;</td>
+<td class="vt"><img src="images/locations/L.png" alt="Left"></td>
+<td class="vt"><img src="images/locations/R.png" alt="Right"></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#xFF1B;</span> [<a href="/scripts/punctuation/block#charFF1B"><span class="uname">U+FF1B FULLWIDTH SEMICOLON</span></a>]</span>&nbsp;</td>
+<td class="vt"><img src="images/locations/L.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/locations/R.png" alt="Right"></td>
+</tr>
+<tr>
+<th rowspan="2">sentence</th>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x3002;</span> [<a href="/scripts/punctuation/block#char3002"><span class="uname">U+3002 IDEOGRAPHIC FULL STOP</span></a>]</span></td>
+<td class="vt"><img src="images/locations/BL.png" alt="Bottom left"></td>
+<td class="vt"><img src="images/locations/TR.png" alt="Bottom right"></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#xFF0E;</span> [<a href="/scripts/punctuation/block#charFF0E"><span class="uname">U+FF0E FULLWIDTH FULL STOP</span></a>]</span></td>
+<td class="vt"><img src="images/locations/BL.png" alt="Bottom left"></td>
+<td class="vt"><img src="images/locations/TR.png" alt="Bottom right"></td>
+</tr>
+<tr>
+<th>exclamation</th>
+<td><span class="codepoint" translate="no"><span lang="zh">&#xFF01;</span> [<a href="/scripts/punctuation/block#charFF01"><span class="uname">U+FF01 FULLWIDTH EXCLAMATION MARK</span></a>]</span>&nbsp;</td>
+<td class="vt"><img src="images/locations/L.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/locations/R.png" alt="Right"></td>
+</tr>
+<tr>
+<th>question</th>
+<td><span class="codepoint" translate="no"><span lang="zh">&#xFF1F;</span> [<a href="/scripts/punctuation/block#charFF1F"><span class="uname">U+FF1F FULLWIDTH QUESTION MARK</span></a>]</span>&nbsp;</td>
+<td class="vt"><img src="images/locations/L.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/locations/R.png" alt="Right"></td>
+</tr>
+</tbody>
+</table>
 
-<p>Japanese uses native bracket styles, commas and periods. Some of the punctuation looks like that for Latin (eg. parentheses), but the width of the punctuation is likely to include signficant amounts of white space, so that punctuation characters occupy the same space as han characters.</p>
+<p><span class="codepoint" translate="no"><span lang="zh">&#x3001;</span> [<a href="/scripts/punctuation/block#char3001"><span class="uname">U+3001 IDEOGRAPHIC COMMA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="zh">&#x3002;</span> [<a href="/scripts/punctuation/block#char3002"><span class="uname">U+3002 IDEOGRAPHIC FULL STOP</span></a>]</span> are the norm for vertical text, however two alternative conventions as applied to horizontal text: especially in books that mix Japanese and western text, such as books on science and technology, the former may be replaced by <span class="codepoint" translate="no"><span lang="zh">&#xFF0C;</span> [<a href="/scripts/punctuation/block#charFF0C"><span class="uname">U+FF0C FULLWIDTH COMMA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="zh">&#xFF0E;</span> [<a href="/scripts/punctuation/block#charFF0E"><span class="uname">U+FF0E FULLWIDTH FULL STOP</span></a>]</span>. Often, however, the ideographic full stop is retained, since it is more visible and looks better (this convention has been adopted for Japanese official publications).<a class="fnref" href="https://w3c.github.io/jlreq/#differences_in_vertical_and_horizontal_composition_in_use_of_punctuation_marks">j</a></p>
+<p>As the table shows, these punctuation marks require dedicated glyphs in the font, and cannot be achieved by simply rotating the glyph.</p>
+<p>Japanese also uses the following doubled exclamation/question marks. They remain upright in vertical text.</p>
+<table class="punctuationTable">
+<thead>
+</thead>
+<tbody>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x203C;</span> [<a href="/scripts/punctuation/block#char203C"><span class="uname">U+203C DOUBLE EXCLAMATION MARK</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x2047;</span> [<a href="/scripts/punctuation/block#char2047"><span class="uname">U+2047 DOUBLE QUESTION MARK</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x2048;</span> [<a href="/scripts/punctuation/block#char2048"><span class="uname">U+2048 QUESTION EXCLAMATION MARK</span></a>]</span>&nbsp;</td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x2049;</span> [<a href="/scripts/punctuation/block#char2049"><span class="uname">U+2049 EXCLAMATION QUESTION MARK</span></a>]</span>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>Other punctuation used to separate phrases or items includes:</p>
+<table class="punctuationTable">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>H</th>
+<th>V</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x2E3A;</span> [<a href="/scripts/punctuation/block#char2E3A"><span class="uname">U+2E3A TWO-EM DASH</span></a>]</span>&nbsp;</td>
+<td class="vt"><img src="images/locations/VC.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/locations/HC.png" alt="Bottom right"></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x2014;&#x2014;</span> [<a href="/scripts/punctuation/block#char2014"><span class="uname">U+2014 EM DASH</span></a> + <a href="/scripts/punctuation/block#char2014"><span class="uname">U+2014 EM DASH</span></a>]</span></td>
+<td class="vt"><img src="images/locations/VC.png" alt="Bottom right"></td>
+<td class="vt"><img src="images/locations/HC.png" alt="Bottom right"></td>
+</tr>
+</tbody>
+</table>
+<p>If <span class="uname">EM DASH</span> characters are used, they are used in pairs.</p>
 </section>
 
 
@@ -791,8 +895,47 @@ alveolar</th>
 
 
 <section id="bracketing">
-<h3>Bracketing &amp; parentheses</h3>
-<p class="prompts">What characters are used as parentheses, or to bracket information?</p>
+<h3>Bracketing &amp; other delimiters</h3>
+<p class="prompts">What characters are used as parentheses, or to bracket information? What other mechanisms are used to signify that beginning and end of ranges of text with a particular semantic function?  See also the specialised sections on quotations, emphasis, and inline notes/annotations.</p>
+
+<p><span class="leadin">Parentheses &amp; brackets.</span>For general parentheses and bracketing in text, Japanese uses:</p>
+<table class="punctuationTable">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>H</th>
+<th>V</th>
+</tr>
+</thead>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#xFF08;</span> [<a href="/scripts/punctuation/block#charFF08"><span class="uname">U+FF08 FULLWIDTH LEFT PARENTHESIS</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="zh">&#xFF09;</span> [<a href="/scripts/punctuation/block#charFF09"><span class="uname">U+FF09 FULLWIDTH RIGHT PARENTHESIS</span></a>]</span></td>
+<td class="vt"><img src="images/locations/R.png" alt="Right aligned"> <img src="images/locations/L.png" alt="Left aligned"></td>
+<td class="vt"><img src="images/locations/B.png" alt="Bottom aligned"><br>
+<img src="images/locations/T.png" alt="Top aligned"></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="ja">&#xFF3B;</span> [<a href="/scripts/punctuation/block#charFF3B"><span class="uname">U+FF3B FULLWIDTH LEFT SQUARE BRACKET</span></a>]</span>&nbsp;</td>
+<td><span class="codepoint" translate="no"><span lang="ja">&#xFF3D;</span> [<a href="/scripts/punctuation/block#charFF3D"><span class="uname">U+FF3D FULLWIDTH RIGHT SQUARE BRACKET</span></a>]</span>&nbsp;</td>
+<td class="vt"><img src="images/locations/R.png" alt="Right aligned"> <img src="images/locations/L.png" alt="Left aligned"></td>
+<td class="vt">-</td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="ja">&#x3014;</span> [<a href="/scripts/punctuation/block#char3014"><span class="uname">U+3014 LEFT TORTOISE SHELL BRACKET</span></a>]</span>&nbsp;</td>
+<td><span class="codepoint" translate="no"><span lang="ja">&#x3015;</span> [<a href="/scripts/punctuation/block#char3015"><span class="uname">U+3015 RIGHT TORTOISE SHELL BRACKET</span></a>]</span>&nbsp;</td>
+<td class="vt">-</td>
+<td class="vt"><img src="images/locations/B.png" alt="Bottom aligned"><br>
+<img src="images/locations/T.png" alt="Top aligned"></td>
+</tr>
+</table>
+
+<p><span class="codepoint" translate="no"><span lang="ja">&#x3014;</span> [<a href="/scripts/punctuation/block#char3014"><span class="uname">U+3014 LEFT TORTOISE SHELL BRACKET</span></a>]</span> and its closing partner are the vertical equivalent of<span class="codepoint" translate="no"><span lang="ja">&#xFF3B;</span> [<a href="/scripts/punctuation/block#charFF3B"><span class="uname">U+FF3B FULLWIDTH LEFT SQUARE BRACKET</span></a>]</span>, which is used in horizontal text.</p>
+<p>Although there are a number of other bracket characters (listed just below),  they are less commonly used.</p>
+
+<figure class="auto"  data-cols="">【␣】␣〖␣〗␣｛␣｝</figure>
+
+
 </section>
 
 
@@ -801,7 +944,82 @@ alveolar</th>
   
 <section id="quotations">
 <h3>Quotations</h3>
-<p class="prompts">What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue?</p>
+
+<p> Japanese uses different quote marks for horizontal and vertical writing. The default quote marks  are:<a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/ta.html">c</a></p>
+<table class="punctuationTable">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>H</th>
+<th>V</th>
+</tr>
+</thead>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x201C;</span> [<a href="/scripts/punctuation/block#char201C"><span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span></a>]</span></td><td><span class="codepoint" translate="no"><span lang="zh">&#x201D;</span> [<a href="/scripts/punctuation/block#char201D"><span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span></a>]</span></td>
+<td class="vt"><img src="images/locations/TR.png" alt="Top=right aligned"> <img src="images/locations/TL.png" alt="Top-left aligned"></td>
+<td class="vt">-</td>
+</tr>
+<tr><td><span class="codepoint" translate="no"><span lang="zh">&#x300C;</span> [<a href="/scripts/punctuation/block#char300C"><span class="uname">U+300C LEFT CORNER BRACKET</span></a>]</span></td><td><span class="codepoint" translate="no"><span lang="zh">&#x300D;</span> [<a href="/scripts/punctuation/block#char300D"><span class="uname">U+300D RIGHT CORNER BRACKET</span></a>]</span></td>
+<td class="vt"><img src="images/locations/TR.png" alt="Top=right aligned"> <img src="images/locations/TL.png" alt="Top-left aligned"></td>
+<td class="vt"><img src="images/locations/BR.png" alt="Bottom-right aligned"><br>
+<img src="images/locations/TL.png" alt="Top-left aligned"></td>
+</tr>
+<tr><td><span class="codepoint" translate="no"><span lang="ja">&#x301D;</span> [<a href="/scripts/punctuation/block#char301D"><span class="uname">U+301D REVERSED DOUBLE PRIME QUOTATION MARK</span></a>]</span></td><td><span class="codepoint" translate="no"><span lang="ja">&#x301F;</span> [<a href="/scripts/punctuation/block#char301F"><span class="uname">U+301F LOW DOUBLE PRIME QUOTATION MARK</span></a>]</span></td>
+<td class="vt">-</td>
+<td class="vt"><img src="images/locations/TR.png" alt="Top=right aligned"> <img src="images/locations/TL.png" alt="Top-left aligned"></td>
+</tr>
+</table>
+<p>When an additional quote is embedded within the first, the quote marks are:<a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/ta.html">c</a></p>
+<table class="punctuationTable">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th>H</th>
+<th>V</th>
+</tr>
+</thead>
+<tr><td><span class="codepoint" translate="no"><span lang="zh">&#x2018;</span> [<a href="/scripts/punctuation/block#char2018"><span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span></a>]</span></td><td><span class="codepoint" translate="no"><span lang="zh">&#x2019;</span> [<a href="/scripts/punctuation/block#char2019"><span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span></a>]</span></td>
+<td class="vt"><img src="images/locations/TR.png" alt="Top-right aligned"> <img src="images/locations/BL.png" alt="Bottom-left aligned"></td>
+<td class="vt">-</td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="zh">&#x300E;</span> [<a href="/scripts/punctuation/block#char300E"><span class="uname">U+300E LEFT WHITE CORNER BRACKET</span></a>]</span></td><td><span class="codepoint" translate="no"><span lang="zh">&#x300F;</span> [<a href="/scripts/punctuation/block#char300F"><span class="uname">U+300F RIGHT WHITE CORNER BRACKET</span></a>]</span></td>
+<td class="vt">-</td>
+<td class="vt"><img src="images/locations/BR.png" alt="Bottom-right aligned"><br>
+<img src="images/locations/TL.png" alt="Top-left aligned"></td>
+</tr>
+</table>
+
+</section>
+
+
+
+
+  
+<section id="emphasis">
+<h3>Emphasis</h3>
+
+<p>Japanese sometimes uses katakana characters to create visual emphasis. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">u720</a></p>
+<p><a href="https://w3c.github.io/jlreq/#composition_of_emphasis_dots">Japanese Layout Requirements </a>lists the following ways of showing emphasis in Japanese.</p>
+<ol>
+<li>Select a different typeface (eg. a Gothic font in Mincho text).</li>
+<li>Use <span class="codepoint" translate="no"><span lang="ja">&#x300C;</span> [<a href="/scripts/punctuation/block#char300C"><span class="uname">U+300C LEFT CORNER BRACKET</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ja">&#x300D;</span> [<a href="/scripts/punctuation/block#char300D"><span class="uname">U+300D RIGHT CORNER BRACKET</span></a>]</span> or <span class="codepoint" translate="no"><span lang="ja">&#x3008;</span> [<a href="/scripts/punctuation/block#char3008"><span class="uname">U+3008 LEFT ANGLE BRACKET</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ja">&#x3009;</span> [<a href="/scripts/punctuation/block#char3009"><span class="uname">U+3009 RIGHT ANGLE BRACKET</span></a>]</span>.</li>
+<li>Change the colour.</li>
+<li>Underline.</li>
+<li>Boten marks (also known as emphasis marks).</li>
+</ol>
+<p>(1) and (2) are popular approaches. (5) is not as common, but is a traditional approach with some value attached.</p>
+<p>Different boten marks are used in horizontal and vertical text. Typically, bullets are used above characters in horizontal text, and sesame dots are used to the right of characters in vertical text.<a class="fnref" href="https://w3c.github.io/jlreq/#composition_of_emphasis_dots">j</a></p>
+<p>The boten mark is centre-aligned with the base characters, and doesn't normally appear alongside full stops, commas, or brackets.<a class="fnref" href="https://w3c.github.io/jlreq/#composition_of_emphasis_dots">j</a></p>
+
+<figure id="fig_boten">
+<img src="images/boten_horizontal.png" alt="Horizontal text and boten marks." style="margin-right: 2em;">
+<img src="images/boten_vertical.png" alt="Horizontal text and boten marks.">
+<figcaption>Boten marks used for emphasis in horizontal and vertical text. (<a href="https://w3c.github.io/jlreq/#fig2_3_37">source</a>)</figcaption>
+</figure>
+<p>Embedded  text in other languages would have boten marks displayed on the same side as for Japanese.</p>
 </section>
 
 
@@ -811,25 +1029,6 @@ alveolar</th>
 <section id="abbrev">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
 <p class="prompts">What characters are used to indicate abbreviation, ellipsis &amp; repetition?</p>
-</section>
-
-
-
-
-  
-<section id="emphasis">
-<h3>Emphasis &amp; text decoration</h3>
-<p class="prompts">How are emphasis and highlighting achieved? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</p>
-<p>Japanese sometimes uses katakana characters to create visual emphasis. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">u720</a></p>
-<p><a href="https://w3c.github.io/jlreq/#composition_of_emphasis_dots">Japanese Layout Requirements </a>lists the following ways of showing emphasis in Japanese.</p>
-<ol>
-<li>Select a different typeface.</li>
-<li>Use <span class="codepoint" translate="no"><span lang="ja">&#x300C;</span> [<a href="/scripts/punctuation/block#char300C"><span class="uname">U+300C LEFT CORNER BRACKET</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ja">&#x300D;</span> [<a href="/scripts/punctuation/block#char300D"><span class="uname">U+300D RIGHT CORNER BRACKET</span></a>]</span> or <span class="codepoint" translate="no"><span lang="ja">&#x3008;</span> [<a href="/scripts/punctuation/block#char3008"><span class="uname">U+3008 LEFT ANGLE BRACKET</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ja">&#x3009;</span> [<a href="/scripts/punctuation/block#char3009"><span class="uname">U+3009 RIGHT ANGLE BRACKET</span></a>]</span>.</li>
-<li>Change the colour.</li>
-<li>Underline.</li>
-<li>Boten marks (also known as emphasis marks).</li>
-</ol>
-<p>(1) and (2) are popular approaches. (5) is not as common, but is a traditional approach with some value attached.</p>
 </section>
 
 
@@ -959,7 +1158,8 @@ alveolar</th>
 <h3>Line breaking &amp; hyphenation</h3>
     <p class="prompts">Are there special rules about the way text  wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that?</p>
 
-<p>Lines are normally wrapped between characters – word boundaries have no significance for the wrapping. Japanese should, however, take into account a few rules (kinsoku rules) which dictate what characters cannot appear at the end or start of a line.</p>
+<p>Lines are normally wrapped between characters – word boundaries usually have no significance for the wrapping. However, occasionally there is a preference to wrap text at word boundaries, eg. to better balance headings.</p>
+<p>Japanese should also take into account a few rules (kinsoku rules) which dictate what characters cannot appear at the end or start of a line.</p>
 <p><span class="leadin">Character properties.</span> Characters used for the Japanese  language have the following assignments related to line-break properties.</p>
 <table><tbody>
 <tr><th class="sg">AI</th><td class="count">7</td><td class="chars"><span class="exlist" lang="xx">― ‖ § ¶ † ‡ ※</span></td></tr>
@@ -973,7 +1173,7 @@ alveolar</th>
 <tr><th class="sg">EX</th><td class="count">4</td><td class="chars"><span class="exlist" lang="xx">！ ？ ! ?</span></td></tr>
 <tr><th class="sg">HY</th><td class="count">1</td><td class="chars"><span class="exlist" lang="xx">-</span></td></tr>
 <tr><th class="sg">ID</th><td class="count">2062</td>
-<td class="chars"><span class="exlist" lang="xx">一 丁 - 頬 あ ア い イ う ウ え エ お オ か カ き キ く ク け ケ こ コ さ サ し シ す ス せ セ そ ソ た タ ち チ つ ツ て テ と ト な ナ に ニ ぬ ヌ ね ネ の ノ は ハ ひ ヒ ふ フ へ ヘ ほ ホ ま マ み ミ む ム め メ も モ や ヤ ゆ ユ よ ヨ ら ラ り リ る ル れ レ ろ ロ わ ワ を ヲ ん ン が ガ ぎ ギ ぐ グ げ ゲ ご ゴ ざ ザ じ ジ ず ズ ぜ ゼ ぞ ゾ だ ダ ぢ ヂ づ ヅ で デ ど ド ば バ び ビ ぶ ブ べ ベ ぼ ボ ヴ ヷ ヺ ぱ パ ぴ ピ ぷ プ ぺ ペ ぽ ポ － ＇ ＂ ＠ ＊ ／ ＼ ＆ ＃ 〃</span></td></tr>
+<td class="chars"><span class="exlist" lang="xx">一 丁 to 頬 あ ア い イ う ウ え エ お オ か カ き キ く ク け ケ こ コ さ サ し シ す ス せ セ そ ソ た タ ち チ つ ツ て テ と ト な ナ に ニ ぬ ヌ ね ネ の ノ は ハ ひ ヒ ふ フ へ ヘ ほ ホ ま マ み ミ む ム め メ も モ や ヤ ゆ ユ よ ヨ ら ラ り リ る ル れ レ ろ ロ わ ワ を ヲ ん ン が ガ ぎ ギ ぐ グ げ ゲ ご ゴ ざ ザ じ ジ ず ズ ぜ ゼ ぞ ゾ だ ダ ぢ ヂ づ ヅ で デ ど ド ば バ び ビ ぶ ブ べ ベ ぼ ボ ヴ ヷ ヺ ぱ パ ぴ ピ ぷ プ ぺ ペ ぽ ポ － ＇ ＂ ＠ ＊ ／ ＼ ＆ ＃ 〃</span></td></tr>
 <tr><th class="sg">IN</th><td class="count">2</td><td class="chars"><span class="exlist" lang="xx">‥ …</span></td></tr>
 <tr><th class="sg">IS</th><td class="count">3</td><td class="chars"><span class="exlist" lang="xx">; : .</span></td></tr>
 <tr><th class="sg">NS</th><td class="count">13</td><td class="chars"><span class="exlist" lang="xx">々 ； ： 〜 ・ ゠ ゝ ゞ ヽ ヾ ･ ゛ ゜</span></td></tr>
