@@ -9,13 +9,14 @@
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../shared/code/toc_2016.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
 
@@ -23,12 +24,15 @@
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/syriac.js"> </script>
+<script src="syr-translit.js">  </script>
+<script src="aii-translit.js">  </script>
+<script src="tru-translit.js">  </script>
 
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 <style id="includeStyles"></style>
 <style>
-.character p { line-height: 35px; }
+/*.character p { line-height: 35px; }*/
 .ref { text-align: right; }
 .ref1 {text-align: right; }
 </style>
@@ -41,7 +45,7 @@
 </header>
 <h1> Syriac character notes</h1>
 
-<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top"/></a></nav>
+<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a></nav>
 
 <aside class="sidebar">
   <nav>
@@ -78,20 +82,24 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->14 July, 2019<!-- #EndDate -->
-&bull; tags <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>, <a href="https://r12a.github.io/blog/?tag=syriac" title="Show all blog posts tagged with 'syriac'">syriac</a></p>
+  <!-- #BeginDate format:Sw1 -->11 March, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
+
+
 <section>
    <p>This page lists characters in the following Unicode  block and provides information about them. </p>
 <ul>
 <li><a href="../../uniview/?block=syriac" target="_blank">Syriac</a></li>
    </ul>
-<p>This is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. In particular, use of punctuation and diacritics in Assyrian Neo-Aramaic is not fully clear to me yet, and the information here may need some adjustment.</p>
-   <p>For details about how the script works, see <a class="linkHighlight" href="index">Syriac</a>. For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Syrc">Script links pages</a>.</p>
-<p>Find
-<input type="text" 
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/>
-</p>
-<p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
+<p>This is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places.</p>
+   <p>For details about how the script works, see the <a class="linkHighlight" href="index">Syriac</a> summary. For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Syrc">Script links pages</a>.</p>
+<p><span style="text-align: start;">We have usage data for the following 2 languages that use the Syriac script</span>: Syriac, Assyrian Neo-Aramaic.</p>
+
+<p>Find <input type="text" id="findInput"
+onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+
+<p class="instructions">If you click on    example text, you will see  at the bottom right of the page a list of the characters that make up the example. Click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
 <details>
 <summary class="instructions">Read more about how to use this page.</summary>
     <p class="instructions">To find a character by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or the hex number in the <samp>Find</samp> control above.</p>
@@ -107,28 +115,46 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="consonants">
-<h2><a href="#consonants">Consonants</a></h2>
+<h2>Consonants</h2>
 
 <section id="basic">
-<h3><a href="#basic">Basic consonants</a></h3>
+<h3>Basic consonants</h3>
 <div class="character" id="char0710">
 <div class="charimg">&#x0710;</div>
 <p class="charname"><strong>U+0710</strong> <a href="#char0710">SYRIAC LETTER ALAPH</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0710">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant &nbsp;&nbsp; <span class="trans">ʾ</span>, or as mater lectionis <span class="trans">ā</span> &nbsp;&nbsp; #value <span class="num">1</span></p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" lang="syr-Syrn" dir="rtl">ܝܐ ܕܐ ܐ</span></span> &nbsp; Estrangela <span class="charExample"><span class="ex" lang="syr-Syre" dir="rtl">ܝܐ ܕܐ ܐ</span></span> &nbsp; Western <span class="charExample"><span class="ex" lang="syr-Syrj" dir="rtl">ܝܐ ܕܐ ܐ</span></span></p>
-<div class="letter syriac">
-<p class="titlepara"><span class="title">Syriac</span> &nbsp;&nbsp; <span class="name" lang="syr-syrc">ܐܠܦ</span> <span class="name">ʾālap̄</span></p>
-<p><span class="ipa">ʔ</span> as a consonant, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܐܠܦ</span> <span class="trans">ʾālap̄</span>.<br/>
-<span class="ipa">ɑ</span> as mater lectionis, eg. .</p>
+<div class="letter generalInfo">
+<p class="charShape"><span class="ex" lang="syr">ܐ ـܐ ܕܐ</span> <span class="ex" lang="aii">ܐ ـܐ ܕܐ</span> <span class="ex" lang="tru">ܐ ـܐ ܕܐ</span></p>
+<p>Glottal stop or vowel support,  and also mater lectionis. </p>
+<p>Joins only to right. Cursive forms show (top to bottom) estrangelo, eastern, and western styles.</p>
+<p>As a consonant, usually transcribed <span class="trans">ʾ</span>. As mater lectionis, this may be transcribed as <span class="trans">ȃ</span>.</p>
+<p class="otherTranscriptions">Transcription: <span class="trans">ʾ, </span><span class="trans">ȃ</span></p>
+<p class="numEquiv">Number equivalent: 1</p>
 </div>
+<div class="letter syriac">
+<p class="titlepara"><span class="title">Syriac</span></p>
+<p><span class="ipa">ʔ</span> as a consonant, eg. <span class="charExample"><span class="ex" lang="syr" dir="rtl">ܐܠܦ</span> <span class="trans">ʾālap̄</span></span>.</p>
+<p><span class="ipa">ɑ</span> as mater lectionis, eg. <span class="charExample" translate="no"><span class="ex" lang="syr" dir="rtl">ܐܬܘ̈ܬܐ</span> <span class="trans">ʾtw̋tʾ</span> (<span class="trans">āṯwāṯâ</span>) <span class="meaning">the letters</span></span>.</p>
+</div>
+
 <div class="letter assyrian">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span> &nbsp;&nbsp;&nbsp; <span class="trans">ʾ</span>, or as mater lectionis <span class="trans">a</span></p>
-<p><span class="ipa">ʔ</span> as a consonant, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܐܠܦ</span> <span class="trans">ʾālap̄</span>. No vowels begin a word, but many begin with <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܐ</span> <span class="trans">ʾ</span></span> or <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܥ</span> <span class="trans">ʿ</span></span>, representing the glottal stop.</p>
-<p>When word final it is typically not pronounced, but  signals the presence of the vowels <span class="ipa">a, ɪ</span>, which is particularly useful in unpointed text, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܕܠܐ</span> <span class="trans">dlʾ</span> <span class="ipa">dla</span> <span class="meaning">without</span></span>. In pointed text there is a diacritic on the previous letter to indicate the actual sound, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܐܵܗܵܐ</span> <span class="trans">ʾahaʾ</span> <span class="ipa">ʔaha</span> <span class="meaning">this</span></span>, <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܡܵܚܸܐ</span> <span class="trans">maḥɪʾ</span> <span class="ipa">maxi</span> <span class="meaning">hit</span></span>.</p>
+<p><span class="ipa">ʔ</span> as a consonant, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܐܠܦ</span> <span class="trans">ʾālap̄</span></span>. No vowels begin a word, but many begin with <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܐ</span> <span class="trans">ʾ</span></span> or <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܥ</span> <span class="trans">ʿ</span></span>, representing the glottal stop.<a class="fnref" href="#refs">d506</a></p>
+<p><span class="ipa">ɑ</span> or <span class="ipa">ɪ</span> as mater lectionis. When word final it is typically not pronounced, but  signals the presence of either vowel, which is particularly useful in unpointed text, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܕܠܐ</span> <span class="trans">dlʾ</span> <span class="ipa">dla</span> <span class="meaning">without</span></span>. In pointed text there is a diacritic on the previous letter to indicate the actual sound, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܐܵܗܵܐ</span> <span class="trans">ʾahaʾ</span> <span class="ipa">ʔaha</span> <span class="meaning">this</span></span>, <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܡܵܚܸܐ</span> <span class="trans">maḥɪʾ</span> <span class="ipa">maxi</span> <span class="meaning">hit</span></span>.</p>
 </div>
+
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span></p>
+<p><span class="ipa">∅</span> where it occurs at the start or end of a word, in conjunction with other vowel diacritics. </p>
+<p>All word-initial vowels are written using the normal diacritic or mater lectionis preceded by a silent <span class="name">olaf</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܰܬ݂ܡܷܠ</span> <span class="trans">ʾat‐̣məl</span> (<span class="trans">aṯmël</span>) <span class="meaning">yesterday</span></span> (which uses a diacritic), and <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܝܠܷܢ</span> <span class="trans">ʾylən</span> (<span class="trans">ilën</span>) <span class="meaning">September</span></span> (which uses a mater lectionis for the vowel sound).<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a></p>
+<p>It also appears silently, after the appropriate vowel diacritic, at the end of words that end in <span class="ipa">a</span> or <span class="ipa">e</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܒܳܬܶܐ</span> <span class="trans">boteʾ</span> (<span class="trans">bote</span>) <span class="meaning">houses</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܒܝܪܰܐ</span> <span class="trans">byraʾ</span> (<span class="trans">bira</span>) <span class="meaning">beer</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a></p>
+<p><span class="ipa">o</span> as mater lectionis when it appears at the end of a word without a preceding vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܒܰܗܪܐ</span> <span class="trans">bahrʾ</span> (<span class="trans">bahro</span>) <span class="meaning">light</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a></p>
+<p class="ednote"><i>Observation:</i> I found only one instance of olaf appearing inside a word. See the third word in <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܕܠܐ ܗܳܘܰܠܟ݂ܘ ܫܘܐܠܶܐ ܚܪܶܢܶܐ، ܓܷܕ ܥܷܒܪܝܢܰܐ</span> <span class="trans">dlʾ howalk‐̣w ʃwʾleʾ ħreneʾ, gəd ʕəbrynaʾ</span> (<span class="trans">d lo howalxu šuwole ḥrene, gëd cëbrina</span>)</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a></p>
+<!--p>Alongside <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0720;</span> [<a href="/scripts/syriac/block#char0720"><span class="uname">U+0720 SYRIAC LETTER LAMADH</span></a>]</span> in the serto style the angle and shape of this letter adapts. The sequence , eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܠܦ</span> <span class="trans">ʾlp</span> (<span class="trans">ʾālap̄</span>) <span class="meaning">alaph</span></span> but <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܠܐ</span> <span class="trans">lʾ</span> (<span class="trans">lâ</span>) <span class="meaning">not</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a></p-->
+</div>
+
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
     [2] <a href="https://en.wikipedia.org/wiki/Syriac_alphabet" target="_blank">WP Syriac alphabet</a>&nbsp; 
@@ -141,18 +167,30 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0712">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant &nbsp;&nbsp; <span class="trans">b</span> when hard, <span class="trans">ḇ</span> when soft &nbsp;&nbsp; #value <span class="num">2</span></p>
-<p>This symbol represents both a plosive (hard) and fricative (soft) sound. The intended sound of the letter can be made explicit using <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0741;</span> <a href="/scripts/syriac/block#char0741">[<span class="uname">U+0741 SYRIAC QUSHSHAYA​</span>]</a></span> for the hard form, and <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0742;</span> <a href="/scripts/syriac/block#char0742">[<span class="uname">U+0742 SYRIAC RUKKAKHA​</span>]</a></span> for the soft form. </p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܒܝܒܝܒ ܒ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܒܝܒܝܒ ܒ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܒܝܒܝܒ ܒ</span></span></p>
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom).</span><span class="ex" lang="syr">ܒ ܒـܒـܒ</span>
+<span class="ex" lang="aii">ܒ ܒـܒـܒ</span>
+<span class="ex" lang="tru">ܒ ܒـܒـܒ</span></p>
+<p>Represents both a plosive (hard) and fricative (soft). The intended sound of the letter can be made explicit using &nbsp; <span class="codepoint"><span lang="syr-syre" dir="rtl">&#x0741;</span> <a href="/scripts/syriac/block#char0741">[<span class="uname">U+0741 SYRIAC QUSHSHAYA</span>]</a></span> for the hard form, and &nbsp; <span class="codepoint"><span lang="syr-syre" dir="rtl">&#x0742;</span> <a href="/scripts/syriac/block#char0742">[<span class="uname">U+0742 SYRIAC RUKKAKHA</span>]</a></span> for the soft form. </p>
+<p>Wherever it is traditionally geminate within a word, even in dialects that no longer distinguish double consonants, it is hard.<a class="fnref" href="https://en.wikipedia.org/wiki/Bet_(letter)#Syriac_Beth">w</a></p><p class="numEquiv">Number equivalent: 2</p>
+</div>
+
 <div class="letter syriac">
-<p class="titlepara"><span class="title">Syriac</span> &nbsp;&nbsp; <span class="name" lang="syr-syrc">ܒܝܬ</span> <span class="name">bēṯ </span></p>
-<p><span class="ipa">b</span> when hard, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܒܝܬ</span> <span class="trans">bēṯ</span></span>.</p>
-<p> <span class="ipa">v, w</span> when soft, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܪܒ݂ܵܨܵܐ‎</span> <span class="trans">rḇāṣā</span></span>. <span class="ipa">v</span> has become <span class="ipa">w</span> in most modern dialects.</p>
+<p class="titlepara"><span class="title">Syriac</span></p>
+<p><span class="ipa">b</span> when hard, eg. <span class="charExample" translate="no"><span class="ex" lang="syr" dir="rtl">ܒܝܬ</span> <span class="trans">byt</span> (<span class="trans">bēṯ</span>)</span>.</p>
+<p> <span class="ipa">v</span> when soft, eg. <span class="charExample" translate="no"><span class="ex" lang="syr" dir="rtl">ܪܒ݂ܨܐ</span> <span class="trans">rḅsˤʾ</span> (<span class="trans">rḅāsˤāʾ</span>)</span>.</p>
 </div>
 <div class="letter assyrian">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
-<p><span class="ipa">b</span> when hard, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܒܝܬ</span> <span class="trans">bēṯ</span></span>.</p>
-<p> <span class="ipa">w</span> when soft, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܪܒ݂ܵܨܵܐ‎</span> <span class="trans">rḇāṣā</span></span>. <span class="ipa">v</span> has become <span class="ipa">w</span> in most modern dialects. </p>
+<p><span class="ipa">b</span> when hard, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒܝܬ</span> <span class="trans">byt</span> (<span class="trans">bēṯ</span>)</span>.</p>
+<p> <span class="ipa">w</span> when soft, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܪܒ݂ܨܐ</span> <span class="trans">rḅsˤʾ</span> (<span class="trans">rḅāsˤāʾ</span>)</span>. <span class="ipa">v</span> has become <span class="ipa">w</span> in most modern dialects, and can form diphthongs with a preceding vowel.<a class="fnref" href="https://en.wikipedia.org/wiki/Bet_(letter)#Syriac_Beth">w</a></p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span>&nbsp;</p>
+<p><span class="ipa">b</span> when hard, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܒܝܬ</span> <span class="trans">byt</span> (<span class="trans">bēṯ</span>)</span>.</p>
+<p><span class="ipa">v</span> when soft, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܒ݂ܝܠܠܰܐ</span> <span class="trans">b‐̣yllȧʾ</span> (<span class="trans">villa</span>) <span class="meaning">villa</span></span>. Note that the soft sound is transcribed <span class="trans">v</span>.</p>
+<p>Words that in Syriac are written using <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܒ݂</span></span> tend to be written in Turoyo using <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0718;</span> [<a href="/scripts/syriac/block#char0718"><span class="uname">U+0718 SYRIAC LETTER WAW</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="syr-syrn" dir="rtl">ܕܰܗܒ݂ܐ</span> <span class="trans">dȧhb‐̣ʾ</span> (<span class="trans">dahḇo</span>) <span class="meaning">gold</span></span> becomes <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܕܰܗܘܐ</span> <span class="trans">dȧhwʾ</span> (<span class="trans">dahwo</span>)</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/1?content-fragment-id=1736">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -166,21 +204,29 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0713">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant &nbsp;&nbsp; <span class="trans">g</span> when hard, <span class="trans">ḡ, g̱</span> when soft, <span class="trans">ǧ</span> with maǧlīyānā &nbsp;&nbsp; #value <span class="num">3</span></p>
-<p>This symbol represents both a plosive (hard) and fricative (soft) sound. The intended sound of the letter can be made explicit using <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0741;</span> <a href="/scripts/syriac/block#char0741">[<span class="uname">U+0741 SYRIAC QUSHSHAYA​</span>]</a></span> for the hard form, and <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0742;</span> <a href="/scripts/syriac/block#char0742">[<span class="uname">U+0742 SYRIAC RUKKAKHA​</span>]</a></span> for the soft form.</p>
-<p>When combined with <span class="codepoint"><span lang="syr-Syre" dir="rtl">&#x25CC;&#x0330;</span> <a href="/scripts/syriac/block#char0330">[<span class="uname">U+0330 COMBINING TILDE BELOW​</span>]</a></span>, known as <span class="trans">maǧlīyānā</span>, this represents a sound not in the classical Syriac phonology.</p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܓܝܓܝܓ ܓ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܓܝܓܝܓ ܓ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܓܝܓܝܓ ܓ</span></span></p>
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܓ ܓـܓـܓ</span> <span class="ex" lang="aii">ܓ ܓـܓـܓ</span> <span class="ex" lang="tru">ܓ ܓـܓـܓ</span></p>
+<p>Represents both a plosive (hard) and fricative (soft). The intended sound of the letter can be made explicit using &nbsp; <span class="codepoint"><span lang="syr-syre" dir="rtl">&#x0741;</span> <a href="/scripts/syriac/block#char0741">[<span class="uname">U+0741 SYRIAC QUSHSHAYA</span>]</a></span> for the hard form, and &nbsp; <span class="codepoint"><span lang="syr-syre" dir="rtl">&#x0742;</span> <a href="/scripts/syriac/block#char0742">[<span class="uname">U+0742 SYRIAC RUKKAKHA</span>]</a></span> for the soft form. </p>
+<p>When combined with &nbsp;<span class="codepoint"><span lang="syr-Syre" dir="rtl">&#x0330;</span>&nbsp;<a href="/scripts/syriac/block#char0330"> [<span class="uname">U+0330 COMBINING TILDE BELOW</span>]</a></span>, known as <span class="trans">maǧlīyānā</span>, this represents a sound not in the classical Syriac phonology, transcribed as <span class="trans">ǧ</span>.</p>
+<p class="numEquiv">Number equivalent: 3</p>
+</div>
 <div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span> <span class="name" lang="syr-syrc">ܓܡܠ</span> <span class="name">gāmal</span></p>
-<p><span class="ipa">g</span> when hard, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܓ݁ܡܠ</span> <span class="trans">gāmal</span></span>.</p>
-<p><span class="ipa">ɣ</span> when soft, eg. ...</p>
+<p><span class="ipa">g</span> when hard, eg. <span class="charExample" translate="no"><span class="ex" lang="syr" dir="rtl">ܓ݁ܡܠ</span> <span class="trans">g݁ml</span> (<span class="trans">gāmal</span>)</span>.</p>
+<p><span class="ipa">ɣ</span> when soft.</p>
 </div>
 <div class="letter assyrian">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span>&nbsp;</p>
-<p><span class="ipa">g</span> when hard, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܓ݁ܡܠ</span> <span class="trans">gāmal</span></span>.</p>
-<p><span class="ipa">ɟ, ʔ, ɣ, j</span> when soft, eg. ...</p>
+<p><span class="ipa">g</span> when hard, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܓ݁ܡܠ</span> <span class="trans">g݁ml</span> (<span class="trans">gāmal</span>)</span>.</p>
+<p><span class="ipa">ɣ, ɟ, ʔ, j</span> when soft.</p>
 <p> <span class="ipa">ʤ</span> with <span class="trans">maǧliyana</span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܒܘܼܓ̰ܪܹ̈ܐ</span> <span class="trans">buʤrī</span> <span class="ipa">bûʤreʾ</span> <span class="meaning">cultivated</span></span>.</p>
 </div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span>&nbsp;</p>
+<p><span class="ipa">g</span> when hard, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܓܘܫܡܐ</span> <span class="trans">gwʃmʾ</span> (<span class="trans">gušmo</span>) <span class="meaning">body</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
+<p><span class="ipa">ɣ</span> when soft, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܓ݂ܰܠܛܐ</span> <span class="trans">g‐̣ȧltˤʾ</span> (<span class="trans">ġalṭo</span>) <span class="meaning">mistake</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
+<p>For <span class="ipa">ʤ</span> see <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0714;</span> [<a href="/scripts/syriac/block#char0714"><span class="uname">U+0714 SYRIAC LETTER GAMAL GARSHUNI</span></a>]</span>.</p></div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
     [2] <a href="https://en.wikipedia.org/wiki/Syriac_alphabet" target="_blank">WP Syriac alphabet</a>&nbsp; 
@@ -195,18 +241,28 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0715">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant &nbsp;&nbsp; <span class="trans">d</span> when hard, <span class="trans">ḏ</span> when soft &nbsp;&nbsp;  #value 4</p>
-<p>This symbol represents both a plosive (hard) and fricative (soft) sound. The intended sound of the letter can be made explicit using <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0741;</span> <a href="/scripts/syriac/block#char0741">[<span class="uname">U+0741 SYRIAC QUSHSHAYA​</span>]</a></span> for the hard form, and <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0742;</span> <a href="/scripts/syriac/block#char0742">[<span class="uname">U+0742 SYRIAC RUKKAKHA​</span>]</a></span> for the soft form.  When the symbol for this code point has a dot below, the latter appears slightly to the right.</p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܕܝܕܝܕ ܕ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܕܝܕܝܕ ܕ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܕܝܕܝܕ ܕ</span></span></p>
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܕ ـܕ</span> <span class="ex" lang="aii">ܕ ـܕ</span> <span class="ex" lang="tru">ܕ ـܕ</span></p>
+<p>Represents both a plosive (hard) and fricative (soft). The intended sound of the letter can be made explicit using &nbsp; <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x0741;</span> <a href="/scripts/syriac/block#char0741">[<span class="uname">U+0741 SYRIAC QUSHSHAYA​</span>]</a></span> for the hard form, and &nbsp; <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x0742;</span> <a href="/scripts/syriac/block#char0742">[<span class="uname">U+0742 SYRIAC RUKKAKHA​</span>]</a></span> for the soft form.</p>
+<p>Joins only to the right.</p>
+<p>When the glyph for this letter has a dot below it, <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x0742;</span> <a href="/scripts/syriac/block#char0742">[<span class="uname">U+0742 SYRIAC RUKKAKHA​</span>]</a></span> is moved slightly to the right, eg. <span class="charExample"><span class="ex" lang="syr-syrn" dir="rtl">ܕ݂</span></span> and <span class="charExample"><span class="ex" lang="tru" dir="rtl">ܕ݂</span></span></p>
+<p class="numEquiv">Number equivalent: 4</p>
+</div>
 <div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span> &nbsp;&nbsp; <span class="name" lang="syr-syrc">ܕܠܬ</span> <span class="name">dālaṯ </span></p>
-<p><span class="ipa">d</span> when hard, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܕ݁ܠܬ</span> <span class="trans">dālaṯ</span></span>.</p>
-<p><span class="ipa">ð</span> when soft, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܝܘܕ݂</span> <span class="trans">yōḏ</span></span>.</p>
+<p><span class="ipa">d</span> when hard, eg. <span class="charExample"><span class="ex" lang="syr" dir="rtl">ܕ݁ܠܬ</span> <span class="trans">dālaṯ</span></span>.</p>
+<p><span class="ipa">ð</span> when soft, eg. <span class="charExample"><span class="ex" lang="syr" dir="rtl">ܝܘܕ݂</span> <span class="trans">yōḏ</span></span>.</p>
 </div>
 <div class="letter assyrian">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span>&nbsp;</p>
-<p><span class="ipa">d</span> when hard, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܕ݁ܠܬ</span> <span class="trans">dālaṯ</span></span>.</p>
-<p><span class="ipa">ð</span> when soft, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܝܘܕ݂</span> <span class="trans">yōḏ</span></span>. Not all Aramaic dialects have this sound.</p>
+<p><span class="ipa">d</span> when hard, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܕܵܠܵܬ</span> <span class="trans">dālāt</span> (<span class="trans">dālāṯ</span>)</span>.</p>
+<p><span class="ipa">ð</span> when soft, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܝܘܕ݂</span> <span class="trans">ywḍ</span> (<span class="trans">yōḏ</span>)</span>. Not all Aramaic dialects have this sound.</p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span>&nbsp;</p>
+<p><span class="ipa">d</span> when hard, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܕܰܪܓ݂ܐ</span> <span class="trans">dȧrg‐̣ʾ</span> (<span class="trans">darġo</span>) <span class="meaning">stair</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
+<p><span class="ipa">ð</span> when soft, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܰܕ݂ܢܐ</span> <span class="trans">ʾȧd‐̣nʾ</span> (<span class="trans">aḏno</span>) <span class="meaning">ear</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -222,18 +278,28 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0717">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant &nbsp;&nbsp; <span class="trans">h</span> &nbsp;&nbsp; #value <span class="num">5</span></p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܗܝܗܝܗ ܗ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܗܝܗܝܗ ܗ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܗܝܗܝܗ ܗ</span></span></p>
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܗ ـܗ</span> <span class="ex" lang="aii">ܗ ـܗ</span> <span class="ex" lang="tru">ܗ ـܗ</span></p>
+<p>Cconsonant, grammatical marker, or abbreviation. </p>
+<p>Joins only to right.</p>
+<p>At the end of a word with a point above it, it represents the third-person feminine singular suffix. Without the point, it stands for the masculine equivalent.<a class="fnref" href="https://en.wikipedia.org/wiki/He_(letter)">w</a></p>
+<p>Standing alone with a horizontal line above it, it is the abbreviation for either <span class="charExample" translate="no"><span class="ex" lang="syr-Syrc" dir="rtl">ܗܵܢܘܿ</span> <span class="trans">hānô</span> <span class="meaning">this is, that is</span></span> or <span class="charExample" translate="no"><span class="ex" lang="syr-Syrc" dir="rtl">ܗܵܠܹܠܘܼܝܵܐ</span> <span class="trans">hālēlûyâ</span> <span class="meaning">hallelujah</span>.</span><a class="fnref" href="https://en.wikipedia.org/wiki/He_(letter)">w</a></p>
+<p class="numEquiv">Number equivalent: 5</p>
+</div>
 <div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span> &nbsp;&nbsp; <span class="name" lang="syr-syrc">ܗܐ</span> <span class="name">hē</span></p>
 <p><span class="ipa">h</span>, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܗܐ</span> <span class="trans">hē</span></span>.</p>
-<p>At the end of a word with a point above it, it represents the third-person feminine singular suffix. Without the point, it stands for the masculine equivalent.<sup><a href="https://en.wikipedia.org/wiki/He_(letter)">w</a></sup></p>
-<p>Standing alone with a horizontal line above it, it is the abbreviation for either <span class="charExample" translate="no"><span class="ex" lang="syr-Syrc" dir="rtl">ܗܵܢܘܿ</span> <span class="trans">hānô</span> <span class="meaning">this is, that is</span></span> or <span class="charExample" translate="no"><span class="ex" lang="syr-Syrc" dir="rtl">ܗܵܠܹܠܘܼܝܵܐ</span> <span class="trans">hālēlûyâ</span> <span class="meaning">hallelujah</span>.</span><sup><a href="https://en.wikipedia.org/wiki/He_(letter)">w</a></sup></p>
 <p>Greek <span class="trans">ai</span> is sometimes written <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܗ</span></span>.<sup>d501</sup></p>
 </div>
 <div class="letter assyrian">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
 <p><span class="ipa">h</span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܐܵܗܵܐ</span> <span class="trans">ʾahaʾ</span> <span class="ipa">ʔaha</span> <span class="meaning">this</span></span>.</p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span></p>
+<p><span class="ipa">h</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܗܶܫ</span> <span class="trans">hėʃ</span> (<span class="trans">heš</span>) <span class="meaning">still</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.2?content-fragment-id=1748">a</a></p>
+<p><span class="ipa">∅</span> when used as a grammatical indicator at the end of a word after <span class="ipa">e</span> or <span class="ipa">a</span> when it represents a personal ending or pronominal suffix, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܓܪܷܫܠܶܗ</span> <span class="trans">grəʃleh</span> (<span class="trans">grëšle</span>) <span class="meaning">he pulled</span></span>, <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܓܪܷܫܠܰܗ</span> <span class="trans">grəʃlah</span> (<span class="trans">grëšla</span>) <span class="meaning">she pulled</span></span>; <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܒܰܒܶܗ</span> <span class="trans">babeh</span> (<span class="trans">babe</span>) <span class="meaning">his father</span></span>, <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܒܰܒܰܗ</span> <span class="trans">babah</span> (<span class="trans">baba</span>) <span class="meaning">her father</span></span>; etc.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -249,8 +315,14 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0718">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant &nbsp;&nbsp; <span class="trans">w</span> (<span class="trans">ū, ō</span> in combinations) &nbsp;&nbsp; #value <span class="num">6</span></p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܘܝܘܝܘ ܘ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܘܝܘܝܘ ܘ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܘܝܘܝܘ ܘ</span></span></p>
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܘ ـܘ</span> <span class="ex" lang="aii">ܘ ـܘ</span> <span class="ex" lang="tru">ܘ ـܘ</span></p>
+<p>Consonant and mater lectionis. </p>
+<p>Joins only to right.</p>
+<p>As a consonant, usually transcribed <span class="trans">w</span>. When combined with vowel signs, this may be transcribed as <span class="trans">û</span> or <span class="trans">ô</span>.</p>
+<p class="numEquiv">Number equivalent: 6</p>
+</div>
 <div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>&nbsp;&nbsp; <span class="name" lang="syr-syrc">ܘܘ</span> <span class="name">waw</span></p>
 <p><span class="ipa">w</span> as a consonant, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܘܘ</span> <span class="trans">waw</span></span>.<br/>
@@ -262,6 +334,14 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p><span class="ipa">u</span> when representing a vowel, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܩܘܝܡܐ</span> <span class="trans">qûymʾ</span> <span class="ipa">qujama</span> <span class="meaning">subsistence</span></span>. </p>
 <p>When, in pointed text,  it carries the diacritic <span class="codepoint"><span lang="syr-Syrn" dir="rtl">&#xA0;&#x073C;</span> <a href="/scripts/syriac/block#char073C">[<span class="uname">U+073C SYRIAC HBASA-ESASA DOTTED​</span>]</a></span> it is transcribed <span class="trans">û</span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܩܘܼܝܵܡܵܐܼ</span> <span class="trans">qûyamaʾ</span></span>. When it carries the diacritic <span class="codepoint"><span lang="syr-Syrn" dir="rtl">&#xA0;&#x073F;</span> <a href="/scripts/syriac/block#char073F">[<span class="uname">U+073F SYRIAC RWAHA​</span>]</a></span>, it is transcribed as <span class="trans">ô</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="syr-Syrc" dir="rtl">ܗܵܢܘܿ</span> <span class="trans">hānô</span> <span class="meaning">this is, that is</span></span>. Both are pronounced the same (<span class="ipa">u</span>).</p>
 <p><span class="ipa">o</span> where in pointed text it follows the diacritic <span class="codepoint"><span lang="syr-Syrn" dir="rtl">&#xA0;&#x0735;</span> <a href="/scripts/syriac/block#char0735">[<span class="uname">U+0735 SYRIAC ZQAPHA DOTTED​</span>]</a></span> , eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܕܵܘ</span> <span class="trans">aw</span></span></p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span></p>
+<p><span class="ipa">w</span> as a consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܘܰܥܕܐ</span> <span class="trans">wȧʕdʾ</span> (<span class="trans">wacdo</span>) <span class="meaning">appointment</span></span>.</p>
+<p><span class="ipa">u</span> as mater lectionis, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܕܘܟܬܐ</span> <span class="trans">dwktʾ</span> (<span class="trans">dukṯo</span>) <span class="meaning">place</span></span>. Note that no vowel diacritic is used. </p>
+<p>The following shows both uses in a single word, <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܰܪܢܘܘܳܐ</span> <span class="trans">ʾȧrnwwåʾ</span> (<span class="trans">arnuwo</span>) <span class="meaning">rabbit</span></span>.</p>
+<p>This letter is also used without a vowel diacritic for the diphthong <span class="ipa">aw</span> eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܕܰܘܡܐ</span> <span class="trans">dawmʾ</span> (<span class="trans">dawmo</span>) <span class="meaning">tree</span></span>.</p>
+<p>It can also appear without a diacritic when a word ends in <span class="ipa">o</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܚܰܠܘܐ</span> <span class="trans">ħalwʾ</span> (<span class="trans">ḥalwo</span>) <span class="meaning">milk</span></span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">Refs</a>:
@@ -278,9 +358,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0719">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant &nbsp;&nbsp; <span class="trans">z</span> or  <span class="trans">ž</span> with maǧliyana &nbsp;&nbsp; #value <span class="num">7</span></p>
-<p>When combined with <span class="codepoint"><span lang="syr-Syre" dir="rtl">&#x25CC;&#x0330;</span> <a href="/scripts/syriac/block#char0330">[<span class="uname">U+0330 COMBINING TILDE BELOW​</span>]</a></span> or <span class="codepoint"><span lang="syr-Syre" dir="rtl">&#xA0;&#x0303;</span> <a href="/scripts/syriac/block#char0303">[<span class="uname">U+0303 COMBINING TILDE​</span>],</a></span> known as <span class="trans">maǧlīyānā</span>, this represents a sound not in the classical Syriac phonology.</p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܙܝܙܝܙ ܙ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܙܝܙܝܙ ܙ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܙܝܙܝܙ ܙ</span></span></p>
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܙ ـܙ</span> <span class="ex" lang="aii">ܙ ـܙ</span> <span class="ex" lang="tru">ܙ ـܙ</span></p>
+<p>Joins only to the right.</p>
+<p>When combined with <span class="codepoint"><span lang="syr-Syre" dir="rtl">&#x0330;</span> &#xA0;<a href="/scripts/syriac/block#char0330">[<span class="uname">U+0330 COMBINING TILDE BELOW​</span>]</a></span> or <span class="codepoint"><span lang="syr-Syre" dir="rtl">&#x0303;</span> &#xA0;<a href="/scripts/syriac/block#char0303">[<span class="uname">U+0303 COMBINING TILDE​</span>],</a></span> known as <span class="trans">maǧlīyānā</span>, this represents a sound not in the classical Syriac phonology.</p>
+<p class="numEquiv">Number equivalent: 7</p>
+</div>
 <div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>  <span class="name" lang="syr-syrc">ܙܝܢ</span> <span class="name">zayn </span></p>
 <p><span class="ipa">z</span>, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܙܝܢ</span> <span class="trans">zayn</span></span>.</p>
@@ -290,6 +374,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
 <p><span class="ipa">z</span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܙܝܢ</span> <span class="trans">zayn</span></span>.</p>
 <p><span class="ipa">ʒ</span> with <span class="trans">maǧliyana</span>, ie. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܙ̃</span></span>.</p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span></p>
+<p><span class="ipa">z</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܙܰܒܢܐ</span> <span class="trans">zȧbnʾ</span> (<span class="trans">zabno</span>) <span class="meaning">time</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
+<p><span class="ipa">ʒ</span> as   <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܙ̰</span></span> with <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0330;</span> &nbsp;[<a href="/scripts/syriac/block#char0330"><span class="uname">U+0330 COMBINING TILDE BELOW</span></a>]</span> (<span class="name">maǧliyana</span>), eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܙ̰ܱܒܰܫܶܐ</span> <span class="trans">z‐̰ạbȧʃėʾ</span> (<span class="trans">žäbaše</span>) <span class="meaning">watermelon</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -305,8 +394,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=071A">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant &nbsp;&nbsp; <span class="trans">ḥ</span> &nbsp;&nbsp; #value <span class="num">8</span></p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܚܝܚܝܚ ܚ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܚܝܚܝܚ ܚ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܚܝܚܝܚ ܚ</span></span></p>
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܚ ܚـܚـܚ</span> <span class="ex" lang="aii">ܚ ܚـܚـܚ</span> <span class="ex" lang="tru">ܚ ܚـܚـܚ</span></p>
+<p>&nbsp;</p>
+<p class="numEquiv">Number equivalent: 8</p>
+</div>
 <div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>  <span class="name" lang="syr-syrc">ܚܝܬ</span> <span class="name">ḥēṯ </span> &nbsp;</p>
 <p><span class="ipa">ħ, x, χ</span>, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܚܝܬ</span> <span class="trans">ḥēṯ</span></span>.</p>
@@ -314,6 +407,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter assyrian">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
 <p><span class="ipa">x</span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܚܲܕ</span> <span class="trans">ḥăd</span> <span class="ipa">xa</span> <span class="meaning">one</span></span>.</p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span></p>
+<p><span class="ipa">ħ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܚܳܠܐ</span> <span class="trans">ħålʾ</span> (<span class="trans">ḥolo</span>) <span class="meaning">uncle</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -329,8 +426,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=071B">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant &nbsp;&nbsp; <span class="trans">ṭ</span> &nbsp;&nbsp; #value <span class="num">9</span></p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܛܝܛܝܛ ܛ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܛܝܛܝܛ ܛ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܛܝܛܝܛ ܛ</span></span></p><div class="letter syriac">
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܛ ܛـܛـܛ</span> <span class="ex" lang="aii">ܛ ܛـܛـܛ</span> <span class="ex" lang="tru">ܛ ܛـܛـܛ</span></p>
+<p>Emphatic consonant.</p>
+<p class="numEquiv">Number equivalent: 9</p>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܛܝܬ</span> <span class="trans">ṭēṯ</span></p>
 <p><span class="ipa">tˤ</span>, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܛܝܬ</span> <span class="trans">ṭēṯ</span></span>.</p>
@@ -338,6 +440,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter assyrian">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
 <p><span class="ipa">t</span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܪܗܸܛܪ̈ܵܝܹܐ</span> <span class="trans">rhɪtrajɪ</span> <span class="ipa">rhĭṭ"rayeʾ</span> <span class="meaning">eloquent</span></span>.</p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span></p>
+<p><span class="ipa">tˤ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܛܷܒܒܰܟܼ</span> <span class="trans">tˤẹbbȧki</span> (<span class="trans">ṭëbbax</span>) <span class="meaning">august</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
+<p>For <span class="ipa">dˤ</span> see <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x071C;</span> [<a href="/scripts/syriac/block#char071C"><span class="uname">U+071C SYRIAC LETTER TETH GARSHUNI</span></a>]</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -353,8 +460,14 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=071D">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant/mater lectionis &nbsp;&nbsp; <span class="trans">y</span> (<span class="trans">î</span> in combinations)&nbsp;&nbsp; #value <span class="num">10</span></p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܝܝܝܝܝ ܝ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܝܝܝܝܝ ܝ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܝܝܝܝܝ ܝ</span></span></p><div class="letter syriac">
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܝ ܝـܝـܝ</span> <span class="ex" lang="aii">ܝ ܝـܝـܝ</span> <span class="ex" lang="tru">ܝ ܝـܝـܝ</span></p>
+<p>Consonant and  mater lectionis. </p>
+<p>As a consonant, usually transcribed <span class="trans">y</span>. When combined with vowel signs, this may be transcribed as <span class="trans">î</span>.</p>
+<p class="numEquiv">Number equivalent: 10</p>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܝܘܕ</span> <span class="trans">yōḏ</span></p>
 <p><span class="ipa">j</span> as consonant, eg. <span class="charExample"><span class="ex" lang="syr-Syre" dir="rtl">ܩܲܕ݂ܡܵܝܲܬ݂</span> <span class="trans">qaḏmayaṯ</span> <span class="meaning">firstly</span></span>.</p>
@@ -367,6 +480,14 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p><span class="ipa">i, e</span> when representing a vowel, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܦܝܫܝ</span> <span class="trans">pyšî</span> <span class="ipa">pʰeʃi</span> <span class="meaning">become</span></span>, which contains two of these letters representing two different vowels. </p>
 <p>In pointed text it is transcribed as <span class="charExample"><span class="trans">î</span></span> and pronounced <span class="ipa">i</span> when it carries the diacritic <span class="codepoint"><span lang="syr-Syrn" dir="rtl">&#xA0;&#x073C;</span> <a href="/scripts/syriac/block#char073C">[<span class="uname">U+073C SYRIAC HBASA-ESASA DOTTED​</span>]</a></span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܦܵܝܫܝܼ</span> <span class="trans">payšî</span> <span class="ipa">pʰeʃi</span> <span class="meaning">become</span></span>. </p>
 <p>The sequence <span class="trans">ay</span> is pronounced <span class="ipa">e</span> when this letter has no diacritic of its own and follows a letter with the vowel diacritic <span class="codepoint"><span lang="syr-Syrn" dir="rtl">&#xA0;&#x0735;</span> <a href="/scripts/syriac/block#char0735">[<span class="uname">U+0735 SYRIAC ZQAPHA DOTTED​</span>]</a></span> (see the same example).</p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span></p>
+<p><span class="ipa">j</span> as a consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܒ̣ܝܝܰܢܰܐ</span> <span class="trans">b‐̜yyȧnȧʾ</span> (<span class="trans">Viyana</span>) <span class="meaning">Vienna</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܣܷܣܝܐ</span> <span class="trans">sẹsyʾ</span> (<span class="trans">sësyo</span>) <span class="meaning">horse</span></span>.</p>
+<p><span class="ipa">i</span> as mater lectionis, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܪܝܫܐ</span> <span class="trans">ryʃʾ</span> (<span class="trans">rišo</span>) <span class="meaning">head</span></span>. No vowel diacritic is used.</p>
+<p>The following shows both uses in a single word, <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܥܰܨܪܝـܝܶܐ</span> <span class="trans">ʕȧsˤryـyėʾ</span> (<span class="trans">caṣriye</span>) <span class="meaning">evening</span></span>.</p>
+<p>This letter is also used without a vowel diacritic for the diphthong <span class="ipa">aj</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܰܝܕܰܪܒܐ</span> <span class="trans">ʾaydarbʾ</span> (<span class="trans">aydarbo</span>) <span class="meaning">how</span></span>.</p>
+<p>It can also appear without a diacritic when a word ends in <span class="ipa">o</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܰܕܠܰܠܝܐ</span> <span class="trans">ʾadlalyʾ</span> (<span class="trans">adlalyo</span>) <span class="meaning">tonight</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -382,10 +503,14 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=071F">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant &nbsp;&nbsp; <span class="trans">k</span> when hard, <span class="trans">ḵ</span> when soft, <span class="trans">č</span> with maǧliyana&nbsp;&nbsp; #value <span class="num">20</span></p>
-<p>This symbol represents both a plosive (hard) and fricative/glide (soft) sound. The intended sound of the letter can be made explicit using <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0741;</span> <a href="/scripts/syriac/block#char0741">[<span class="uname">U+0741 SYRIAC QUSHSHAYA​</span>]</a></span> for the hard form, and <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0742;</span> <a href="/scripts/syriac/block#char0742">[<span class="uname">U+0742 SYRIAC RUKKAKHA​</span>]</a></span> for the soft form.</p>
-<p>When combined with <span class="codepoint"><span lang="syr-Syre" dir="rtl">&#xA0;&#x0303;</span> <a href="/scripts/syriac/block#char0303">[<span class="uname">U+0303 COMBINING TILDE​</span>]</a></span>, known as <span class="trans">maǧlīyānā</span>, this represents a sound not in the classical Syriac phonology.</p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܟܝܟܝܟ ܟ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܟܝܟܝܟ ܟ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܟܝܟܝܟ ܟ</span></span></p><div class="letter syriac">
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܟ ܟـܟـܟ</span> <span class="ex" lang="aii">ܟ ܟـܟـܟ</span> <span class="ex" lang="tru">ܟ ܟـܟـܟ</span></p>
+<p>Represents both a plosive (hard) and fricative (soft). The intended sound of the letter can be made explicit using &nbsp; <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x0741;</span> <a href="/scripts/syriac/block#char0741">[<span class="uname">U+0741 SYRIAC QUSHSHAYA​</span>]</a></span> for the hard form, and &nbsp; <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x0742;</span> <a href="/scripts/syriac/block#char0742">[<span class="uname">U+0742 SYRIAC RUKKAKHA​</span>]</a></span> for the soft form. </p>
+<p>When combined with &nbsp;<span class="codepoint"><span lang="syr-Syre" dir="rtl">&#x0303;</span> &#xA0;<a href="/scripts/syriac/block#char0303">[<span class="uname">U+0303 COMBINING TILDE​</span>]</a></span>, known as <span class="trans">maǧlīyānā</span>, this represents a sound not in the classical Syriac phonology.</p>
+<p class="numEquiv">Number equivalent: 20</p>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܟܦ</span> <span class="trans">kāp̄</span></p>
 <p><span class="ipa">k</span> when hard, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܟ݁ܦ</span> <span class="trans">kāp̄</span></span>.</p>
@@ -397,6 +522,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p><span class="ipa">cʰ</span> when hard, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܟܬܝ݂ܵܒܵܬܹܐ</span> <span class="trans">ktîḇat"eʿ</span> <span class="ipa">cʰtʰiwatʰɪ</span> <span class="meaning">writings</span></span>.</p>
 <p><span class="ipa">x</span> when soft, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܢܘܼܟ݂ܪ̈ܵܝܹܐ</span> <span class="trans">nûḵr"ayeʿ</span> <span class="ipa">nuxrajɪ</span> <span class="meaning">foreign</span></span>.</p>
 <p> <span class="ipa">ʧ</span> when combined with <span class="codepoint"><span lang="syr-Syre" dir="rtl">&#xA0;&#xA0;&#x0330;</span> <a href="/scripts/syriac/block#char0330">[<span class="uname">U+0330 COMBINING TILDE BELOW​</span>]</a></span> to represent this non-classical sound, ie. <span class="charExample"><span class="ex" lang="aii" dir="rtl">‍ܟ̮‍ </span></span>.</p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span></p>
+<p><span class="ipa">k</span> when hard, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܟܰܓ݂ܰܬ</span> <span class="trans">kȧg‐̣ȧt</span> (<span class="trans">kaġat</span>) <span class="meaning">paper</span></span>.&nbsp;</p>
+<p><span class="ipa">x</span> when soft, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܟ݂ܰܒܪܐ</span> <span class="trans">k‐̣ȧbrʾ</span> (<span class="trans">xabro</span>) <span class="meaning">word</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -412,8 +542,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0720">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant &nbsp;&nbsp; <span class="trans">l</span> &nbsp;&nbsp; #value <span class="num">30</span></p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܠܝܠܝܠ ܠ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܠܝܠܝܠ ܠ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܠܝܠܝܠ ܠ</span></span></p><div class="letter syriac">
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܠ ܠـܠـܠ</span> <span class="ex" lang="aii">ܠ ܠـܠـܠ</span> <span class="ex" lang="tru">ܠ ܠـܠـܠ</span></p>
+<p class="numEquiv">Number equivalent: 30</p>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܠܡܕ</span> <span class="trans">lāmaḏ</span></p>
 <p><span class="ipa">l</span>, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܠܡܕ</span> <span class="trans">lāmaḏ</span></span>.</p>
@@ -421,6 +555,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter assyrian">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
 <p><span class="ipa">l</span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܕܠܐ</span> <span class="trans">dlaʾ</span> <span class="ipa">dla</span> <span class="meaning">without</span></span>.</p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span></p>
+<p><span class="ipa">l</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܫܠܳܡܐ</span> <span class="trans">ʃlåmʾ</span> (<span class="trans">šlomo</span>) <span class="meaning">hello</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.2?content-fragment-id=1748">a</a></p>
+<p>Note how the isolated and final forms are represented by a glyph that doubles the strokes. In certain combinations, this also produces special forms: when doubled, it is written <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܠܠ</span> <span class="trans">ll</span></span>; followed by <span class="name">olaf</span> it is written <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܠܐ</span> <span class="trans">lʾ</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -436,9 +575,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0721">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant &nbsp;&nbsp; <span class="trans">m</span> &nbsp;&nbsp; #value <span class="num">40</span></p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܡܝܡܝܡ ܡ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܡܝܡܝܡ ܡ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܡܝܡܝܡ ܡ</span></span></p>
-<p>When isolated, this letter is usually shown as initial+final form, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܡܡ</span></span>. </p>
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܡ ܡـܡـܡ</span> <span class="ex" lang="aii">ܡ ܡـܡـܡ</span> <span class="ex" lang="tru">ܡ ܡـܡـܡ</span></p>
+<p>When isolated, this letter is usually shown as initial+final form, ie. <span class="charExample"><span class="ex" lang="syr-syrn" dir="rtl">ܡܡ</span></span>. </p>
+<p class="numEquiv">Number equivalent: 40</p>
+</div>
 <div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܡܝܡ</span> <span class="trans">mīm</span></p>
@@ -447,6 +589,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter assyrian">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
 <p><span class="ipa">m</span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܐܘ݂ܡܬܵܐ</span> <span class="trans">ʾûmtaʾ</span> <span class="ipa">ʔumtʰa</span> <span class="meaning">nation</span></span>.</p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span></p>
+<p><span class="ipa">m</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܡܘܟܠܐ</span> <span class="trans">mwklʾ</span> (<span class="trans">muklo</span>) <span class="meaning">food</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -462,9 +608,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0722">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant &nbsp;&nbsp; <span class="trans">n</span> &nbsp;&nbsp; #value <span class="num">50</span></p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܢܝܢܝܢ ܢ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܢܝܢܝܢ ܢ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܢܝܢܝܢ ܢ</span></span></p>
-<p>When isolated, this letter is usually shown as initial+final form, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܢܢ</span></span>. </p>
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܢ ܢـܢـܢ</span> <span class="ex" lang="aii">ܢ ܢـܢـܢ</span> <span class="ex" lang="tru">ܢ ܢـܢـܢ</span></p>
+<p>When isolated, this letter is usually shown as initial+final form, ie. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܢܢ</span></span>. </p>
+<p class="numEquiv">Number equivalent: 50</p>
+</div>
 <div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܢܘܢ</span> <span class="trans">nūn</span></p>
@@ -473,6 +622,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter assyrian">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
 <p><span class="ipa">n</span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܐܸܢ</span> <span class="trans">ʾĭn</span> <span class="ipa">ʔɪn</span> <span class="meaning">if</span></span>.</p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span></p>
+<p><span class="ipa">n</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܰܚܘܢܐ</span> <span class="trans">ʾȧħwnʾ</span> (<span class="trans">aḥuno</span>) <span class="meaning">brother</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -488,8 +641,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0723">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant &nbsp;&nbsp; <span class="trans">s</span> &nbsp;&nbsp; #value <span class="num">60</span></p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܣܝܣܝܣ ܣ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܣܝܣܝܣ ܣ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܣܝܣܝܣ ܣ</span></span></p><div class="letter syriac">
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܣ ܣـܣـܣ</span> <span class="ex" lang="aii">ܣ ܣـܣـܣ</span> <span class="ex" lang="tru">ܣ ܣـܣـܣ</span></p>
+<p>In word-final position, this may be replaced by <span class="codepoint" translate="no"><span lang="syr-syrj" dir="rtl">&#x0724;</span> [<a href="/scripts/syriac/block#char0724"><span class="uname">U+0724 SYRIAC LETTER FINAL SEMKATH</span></a>]</span>.</p>
+<p class="numEquiv">Number equivalent: 60</p>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܣܡܟܬ</span> <span class="trans">semkaṯ</span></p>
 <p><span class="ipa">s</span>, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܣܡܟܬ</span> <span class="trans">semkaṯ</span></span>.</p>
@@ -497,6 +655,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter assyrian">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
 <p><span class="ipa">s</span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܦܵܐܹܣ</span> <span class="trans">paʿes</span> <span class="ipa">pʰajiʃ</span> <span class="meaning">become</span></span>.</p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span></p>
+<p><span class="ipa">s</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܣܷܣܝܐ</span> <span class="trans">sẹsyʾ</span> (<span class="trans">sësyo</span>) <span class="meaning">horse</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/1?content-fragment-id=1736">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -506,14 +668,50 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 </div>
 </div>
 
+
+<div class="character" id="char0724">
+<div class="charimg">&#x0724;</div>
+<p class="charname"><strong>U+0724</strong> <a href="#char0724">SYRIAC LETTER FINAL SEMKATH</a></p>
+<p class="univiewLink"><a target="_blank" href="/uniview/?char=0724">See in UniView</a></p>
+<div class="unicodenotes"></div>
+<div class="notes">
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܤ ܤـܤـܤ</span> <span class="ex" lang="aii">ܤ ܤـܤـܤ</span> <span class="ex" lang="tru">ܤ ܤـܤـܤ</span></p>
+<p>Word-final  consonant.</p>
+<p>Since this character is intended for word-final use only, there shouldn't be a need for the full set of cursive forms, but they are provided here all the same, to see what the font does.</p>
+<p>The standard character for s is <span class="codepoint" translate="no"><span lang="syr-syrj" dir="rtl">&#x0723;</span> [<a href="/scripts/syriac/block#char0723"><span class="uname">U+0723 SYRIAC LETTER SEMKATH</span></a>]</span>.</p>
+</div>
+<div class="letter syriac">
+<p class="titlepara"><span class="title">Syriac</span>
+&nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
+<p><span class="ipa">s</span>, used like Greek final sigma as a word-final alternate form for <span class="codepoint" translate="no"><span lang="syr-Syrc" dir="rtl">&#x0723;</span> [<a href="/scripts/syriac/block#char0723"><span class="uname">U+0723 SYRIAC LETTER SEMKATH</span></a>]</span>.</p>
+</div>
+<div class="letter assyrian">
+<p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
+<p>Daniels makes no mention of this form, and doesn't show it at the end of a word in the text sample, however the east syriac fonts from Beth Mardutho support it.</p>
+</div>
+<p class="ref"><a href="#refs">Refs</a>:
+    [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
+    [2] <a href="https://en.wikipedia.org/wiki/Syriac_alphabet" target="_blank">WP Syriac alphabet</a>&nbsp; 
+</p>
+</div>
+</div>
+
+
 <div class="character" id="char0725">
 <div class="charimg">&#x0725;</div>
 <p class="charname"><strong>U+0725</strong> <a href="#char0725">SYRIAC LETTER E</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0725">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant &nbsp;&nbsp; <span class="trans">ʿ</span> &nbsp;&nbsp; #value <span class="num">70</span></p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܥܝܥܝܥ ܥ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܥܝܥܝܥ ܥ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܥܝܥܝܥ ܥ</span></span></p><div class="letter syriac">
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܥ ܥـܥـܥ</span> <span class="ex" lang="aii">ܥ ܥـܥـܥ</span> <span class="ex" lang="tru">ܥ ܥـܥـܥ</span></p>
+<p>Consonant.</p>
+<p class="numEquiv">Number equivalent: 70</p>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܥܐ</span> <span class="trans">ʿē</span></p>
 <p><span class="ipa">ʕ</span>, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܥܐ</span> <span class="trans">ʿē</span></span>.</p>
@@ -521,6 +719,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter assyrian">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span> <span class="charExample"><span class="ex" lang="aii" dir="rtl">&#x0725; &#x0725;&#x0725;&#x0725;</span></span> &nbsp;&nbsp; <span class="trans">ʿ</span></p>
 <p><span class="ipa">ʔ, ʕ</span>, eg. ...</p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span></p>
+<p><span class="ipa">ʕ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܥܰܝܢܐ</span> <span class="trans">ʕȧynʾ</span> (<span class="trans">cayno</span>) <span class="meaning">eye</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -536,9 +738,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0726">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant &nbsp;&nbsp; <span class="trans">p</span>  when hard, <span class="trans">p̄</span>&nbsp;when soft &nbsp;&nbsp; #value <span class="num">80</span></p>
-<p>This symbol represents both a plosive (hard) and fricative/glide (soft) sound. The intended sound of the letter can be made explicit using <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0741;</span> <a href="/scripts/syriac/block#char0741">[<span class="uname">U+0741 SYRIAC QUSHSHAYA​</span>]</a></span> for the hard form, and <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0742;</span> <a href="/scripts/syriac/block#char0742">[<span class="uname">U+0742 SYRIAC RUKKAKHA​</span>]</a></span> for the soft form.</p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܦܝܦܝܦ ܦ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܦܝܦܝܦ ܦ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܦܝܦܝܦ ܦ</span></span></p><div class="letter syriac">
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom).</span><span class="ex" lang="syr">ܦ ܦـܦـܦ</span> <span class="ex" lang="aii">ܦ ܦـܦـܦ</span> <span class="ex" lang="tru">ܦ ܦـܦـܦ</span></p>
+<p>Represents both a plosive (hard) and fricative (soft). The intended sound of the letter can be made explicit using &nbsp; <span class="codepoint"><span lang="syr-syre" dir="rtl">&#x0741;</span> <a href="/scripts/syriac/block#char0741">[<span class="uname">U+0741 SYRIAC QUSHSHAYA</span>]</a></span> for the hard form, and &nbsp; <span class="codepoint"><span lang="syr-syre" dir="rtl">&#x0742;</span> <a href="/scripts/syriac/block#char0742">[<span class="uname">U+0742 SYRIAC RUKKAKHA</span>]</a></span> for the soft form. </p>
+<p class="numEquiv">Number equivalent: 80</p>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܦܐ</span> <span class="trans">pē</span></p>
 <p><span class="ipa">p</span> when hard, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܦ݁ܐ</span> <span class="trans">pē</span></span>.</p>
@@ -548,6 +754,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter assyrian">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
 <p><span class="ipa">pʰ, p</span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܦܵܝܫܝܼ</span> <span class="trans">payšî</span> <span class="ipa">pʰeʃi</span> <span class="meaning">become</span></span>.</p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span></p>
+<p>The standard pronunciation, without any diacritic,  is <span class="ipa">f</span>. To indicate <span class="ipa">p</span>, add <span class="codepoint"><span lang="syr-syre" dir="rtl">&#x0741;</span> <a href="/scripts/syriac/block#char0741">[<span class="uname">U+0741 SYRIAC QUSHSHAYA</span>]</a></span>, ie. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܦ݁</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Turoyo_language#Alphabet">w</a><a class="fnref" href="https://textbook.surayt.com/en/Level%20A/1?content-fragment-id=1736">a</a></p>
+<p><span class="ipa">f</span> when soft, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܦܶܡܐ</span> <span class="trans">pėmʾ</span> (<span class="trans">femo</span>) <span class="meaning">mouth</span></span>.</p>
+<p><span class="ipa">p</span> when hard, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܦ݁ܠܰܢ</span> <span class="trans">p‐̇lȧn</span> (<span class="trans">plan</span>) <span class="meaning">plan</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -563,8 +775,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0728">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant &nbsp;&nbsp; <span class="trans">ṣ</span> &nbsp;&nbsp; #value <span class="num">90</span></p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܨܝܨܝܨ ܨ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܨܝܨܝܨ ܨ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܨܝܨܝܨ ܨ</span></span></p><div class="letter syriac">
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܨ ـܨ</span> <span class="ex" lang="aii">ܨ ـܨ</span> <span class="ex" lang="tru">ܨ ـܨ</span></p>
+<p>Joins only to the right.</p>
+<p class="numEquiv">Number equivalent: 90</p>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܨܕܐ</span> <span class="trans">ṣāḏē</span></p>
 <p><span class="ipa">sˤ</span>, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܨܕܐ</span> <span class="trans">ṣāḏē</span></span>.</p>
@@ -572,6 +789,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter assyrian">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
 <p><span class="ipa">s</span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܪܒ݂ܵܨܵܐ‎</span> <span class="trans">rḇāṣā</span></span>.</p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span></p>
+<p><span class="ipa">sˤ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܨܰܦܪܐ</span> <span class="trans">sˤȧfrʾ</span> (<span class="trans">ṣafro</span>) <span class="meaning">morning</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/1?content-fragment-id=1736">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -587,8 +808,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0729">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant &nbsp;&nbsp; <span class="trans">q</span> &nbsp;&nbsp; #value <span class="num">100</span></p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܩܝܩܝܩ ܩ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܩܝܩܝܩ ܩ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܩܝܩܝܩ ܩ</span></span></p><div class="letter syriac">
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܩ ܩـܩـܩ</span> <span class="ex" lang="aii">ܩ ܩـܩـܩ</span> <span class="ex" lang="tru">ܩ ܩـܩـܩ</span></p>
+<p class="numEquiv">Number equivalent: 100</p>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܩܘܦ</span> <span class="trans">qōp̄</span></p>
 <p><span class="ipa">q</span> , eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܩܘܦ</span> <span class="trans">qōp̄</span></span>.</p>
@@ -596,6 +821,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter assyrian">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
 <p><span class="ipa">q</span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܩܘ݂ܝܵܡܵܐ</span> <span class="trans">qûyamaʾ</span> <span class="ipa">qujama</span> <span class="meaning">subsistence</span></span>.</p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span></p>
+<p><span class="ipa">q</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܩܰܚܘܰܐ</span> <span class="trans">qȧħwȧʾ</span> (<span class="trans">qaḥwa</span>) <span class="meaning">coffee</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/1?content-fragment-id=1736">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -611,9 +840,14 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=072A">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant &nbsp;&nbsp; <span class="trans">r</span> &nbsp;&nbsp; #value <span class="num">200</span></p>
-<p>When this letter occurs in combination with <span class="codepoint"><span lang="syr-Syrc" dir="rtl">&#xA0;&#x0308;</span> <a href="/scripts/syriac/block#char0308">[<span class="uname">U+0308 COMBINING DIAERESIS​</span>]</a></span> (plural marker) the diaeresis replaces the dot that is normally above it.</p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܪܝܪܝܪ ܪ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܪܝܪܝܪ ܪ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܪܝܪܝܪ ܪ</span></span></p><div class="letter syriac">
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܪ ـܪ</span> <span class="ex" lang="aii">ܪ ـܪ</span> <span class="ex" lang="tru">ܪ ـܪ</span></p>
+<p> Joins only to the right.</p>
+<p>When this letter occurs in combination with&#xA0; <span class="codepoint"><span lang="syr-Syrc" dir="rtl">&#x0308;</span> &#xA0;<a href="/scripts/syriac/block#char0308">[<span class="uname">U+0308 COMBINING DIAERESIS​</span>]</a></span> (plural marker) the diaeresis replaces the dot that is normally above it.</p>
+<p class="numEquiv">Number equivalent: 200</p>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܪܝܫ</span> <span class="trans">rēš</span></p>
 <p><span class="ipa">r</span>, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܪܝܫ</span> <span class="trans">rēš</span></span>.</p>
@@ -622,6 +856,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
 <p><span class="ipa">r</span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܡܵܪܹܐ</span> <span class="trans">mareʾ</span> <span class="ipa">marɪ</span> <span class="meaning">possessor of</span></span>.</p>
 <p>Same behaviour for dot replacement.</p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span></p>
+<p><span class="ipa">r</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܪܰܒܷܥ</span> <span class="trans">rȧbẹʕ</span> (<span class="trans">rabëc</span>) <span class="meaning">spring</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/1?content-fragment-id=1736">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -637,9 +875,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=072B">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant &nbsp;&nbsp; <span class="trans">š</span> or <span class="trans">ẑ</span> with <span class="trans">maǧlīyānā</span>&nbsp;&nbsp; #value <span class="num">300</span></p>
-<p>When combined with <span class="codepoint"><span lang="syr-Syre" dir="rtl">&#x25CC;&#x0330;</span> <a href="/scripts/syriac/block#char0330">[<span class="uname">U+0330 COMBINING TILDE BELOW​</span>]</a></span> or <span class="codepoint"><span lang="syr-Syre" dir="rtl">&#xA0;&#x0303;</span> <a href="/scripts/syriac/block#char0303">[<span class="uname">U+0303 COMBINING TILDE​</span>],</a></span> known as <span class="trans">maǧlīyānā</span>, this represents a sound not in the classical Syriac phonology.</p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܫܝܫܝܫ ܫ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܫܝܫܝܫ ܫ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܫܝܫܝܫ ܫ</span></span></p><div class="letter syriac">
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܫ ܫـܫـܫ</span> <span class="ex" lang="aii">ܫ ܫـܫـܫ</span> <span class="ex" lang="tru">ܫ ܫـܫـܫ</span></p>
+<p>When combined with <span class="codepoint"><span lang="syr-Syre" dir="rtl">&#x0330;</span> &#xA0;<a href="/scripts/syriac/block#char0330">[<span class="uname">U+0330 COMBINING TILDE BELOW​</span>]</a></span> or <span class="codepoint"><span lang="syr-Syre" dir="rtl">&#x0303;</span> &#xA0;<a href="/scripts/syriac/block#char0303">[<span class="uname">U+0303 COMBINING TILDE​</span>],</a></span> known as <span class="trans">maǧlīyānā</span>, this represents a sound not in the classical Syriac phonology.</p>
+<p class="numEquiv">Number equivalent: 300</p>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܫܝܢ</span> <span class="trans">šīn</span></p>
 <p><span class="ipa">ʃ</span>, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܠܸܫܵܢܵܐ</span> <span class="trans">lĭšanaʾ</span> <span class="ipa">liʃana</span> <span class="meaning">language</span></span>.</p>
@@ -649,6 +891,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
 <p><span class="ipa">ʃ</span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܠܸܫܵܢܵܐ</span> <span class="trans">lĭšanaʾ</span> <span class="ipa">liʃana</span> <span class="meaning">language</span></span>.</p>
 <p><span class="ipa">ʒ</span> with <span class="trans">maǧlīyānā</span>, ie. <span class="charExample"><span class="ex" lang="aii" dir="rtl">‍ܫ̃‍ </span></span>.</p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span></p>
+<p><span class="ipa">ʃ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܫܰܬܐ</span> <span class="trans">ʃȧtʾ</span> (<span class="trans">šato</span>) <span class="meaning">year</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/1?content-fragment-id=1736">a</a></p>
+<p><span class="ipa">t͡ʃ</span>  as <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܫ̰</span></span>, with <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0330;</span> &nbsp;[<a href="/scripts/syriac/block#char0330"><span class="uname">U+0330 COMBINING TILDE BELOW</span></a>]</span> (<span class="name">maǧlīyānā</span>), eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܫ̰ܰܢܛܰܐ</span> <span class="trans">ʃ‐̰ȧntˤȧʾ</span> (<span class="trans">čanṭa</span>) <span class="meaning">bag</span></span> (transcribed <span class="trans">č</span>).<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/1?content-fragment-id=1736">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -664,18 +911,28 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=072C">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant &nbsp;&nbsp; <span class="trans">t</span> when hard, <span class="trans">ṯ</span> when soft &nbsp;&nbsp; #value <span class="num">400</span></p>
-<p>This symbol represents both a plosive (hard) and fricative (soft) sound. The intended sound of the letter can be made explicit using <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0741;</span> <a href="/scripts/syriac/block#char0741">[<span class="uname">U+0741 SYRIAC QUSHSHAYA​</span>]</a></span> for the hard form, and <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0742;</span> <a href="/scripts/syriac/block#char0742">[<span class="uname">U+0742 SYRIAC RUKKAKHA​</span>]</a></span> for the soft form.</p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܬܝܬܝܬ ܬ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܬܝܬܝܬ ܬ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܬܝܬܝܬ ܬ</span></span></p><div class="letter syriac">
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܬ ـܬ</span> <span class="ex" lang="aii">ܬ ـܬ</span> <span class="ex" lang="tru">ܬ ـܬ</span></p>
+<p>Represents both a plosive (hard) and fricative (soft). The intended sound of the letter can be made explicit using &nbsp; <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x0741;</span> <a href="/scripts/syriac/block#char0741">[<span class="uname">U+0741 SYRIAC QUSHSHAYA​</span>]</a></span> for the hard form, and &nbsp; <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x0742;</span> <a href="/scripts/syriac/block#char0742">[<span class="uname">U+0742 SYRIAC RUKKAKHA​</span>]</a></span> for the soft form. </p>
+<p>Joins only to the right.</p>
+<p class="numEquiv">Number equivalent: 400</p>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܬܘ</span> <span class="trans">taw</span></p>
 <p><span class="ipa">t</span> when hard, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܬ݁ܘ</span> <span class="trans">taw</span></span>.</p>
-<p><span class="ipa">θ</span> when soft, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܒܝܬ݂</span> <span class="trans">bēṯ</span></span>. Some modern eastern dialects don't use the soft form.</p>
+<p><span class="ipa">θ</span> when soft, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܒܝܬ݂</span> <span class="trans">bēṯ</span></span>. </p>
 </div>
 <div class="letter assyrian">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
 <p><span class="ipa">t, tʰ</span> when hard, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܡܵܦܬܘܼܝܹܐ</span> <span class="trans">maptûyeʾ</span> <span class="ipa">mapʰtʰujɪ</span> <span class="meaning">expand</span></span>.</p>
-<p><span class="ipa">θ</span> when soft, eg. ...</p>
+<p><span class="ipa">θ</span> when soft. Some modern eastern dialects don't use the soft form.</p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span></p>
+<p><span class="ipa">t</span> when hard, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܬܰܠܓܐ</span> <span class="trans">tȧlgʾ</span> (<span class="trans">talgo</span>) <span class="meaning">snow</span></span>.</p>
+<p><span class="ipa">θ</span> when soft, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܰܬ݂ܬܐ</span> <span class="trans">ʾȧt‐̣tʾ</span> (<span class="trans">aṯto</span>) <span class="meaning">woman</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -691,7 +948,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="additional">
-<h3><a href="#additional">Additional consonant forms</a></h3>
+<h3>Additional consonant forms</h3>
 
 <div class="character" id="char0716">
 <div class="charimg">&#x0716;</div>
@@ -699,8 +956,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0716">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Alternative consonant</p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܖܝܖܝܖ ܖ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܖܝܖܝܖ ܖ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܖܝܖܝܖ ܖ</span></span></p><div class="letter syriac">
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܖ ـܖ</span> <span class="ex" lang="aii">ܖ ـܖ</span> <span class="ex" lang="tru">ܖ ـܖ</span></p>
+<p>In ancient texts the dot that distinguishes <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x0715;</span> <a href="/scripts/syriac/block#char0715">[<span class="uname">U+0715 SYRIAC LETTER DALATH</span>]</a></span> from <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x072A;</span> <a href="/scripts/syriac/block#char072A">[<span class="uname">U+072A SYRIAC LETTER RISH</span>]</a></span> was not used. This code point can be used to represent that ambiguous form, where needed.</p>
+<p>Joins only to the right.</p>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans">dālaṯ rish</span></p>
 <p>In ancient texts the dot that distinguishes <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x0715;</span> <a href="/scripts/syriac/block#char0715">[<span class="uname">U+0715 SYRIAC LETTER DALATH</span>]</a></span> from <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x072A;</span> <a href="/scripts/syriac/block#char072A">[<span class="uname">U+072A SYRIAC LETTER RISH</span>]</a></span> was not used. This code point can be used to represent that ambiguous form, where needed.</p>
@@ -718,8 +980,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=071E">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Ligature &nbsp;&nbsp; <span class="trans">jh</span></p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܞܝܞܝܞ ܞ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܞܝܞܝܞ ܞ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܞܝܞܝܞ ܞ</span></span></p><div class="letter syriac">
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܞ ـܞ</span> <span class="ex" lang="aii">ܞ ـܞ</span> <span class="ex" lang="tru">ܞ ـܞ</span></p>
+<p>Ligature for the sound <span class="ipa">jh</span>.</p>
+<p>Joins only to the right.</p>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p>Used in East Syriac and Estrangela texts.</p>
@@ -731,37 +998,18 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 </div>
 </div>
 
-<div class="character" id="char0724">
-<div class="charimg">&#x0724;</div>
-<p class="charname"><strong>U+0724</strong> <a href="#char0724">SYRIAC LETTER FINAL SEMKATH</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=0724">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-<p>Consonant </p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܤܝܤܝܤ ܤ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܤܝܤܝܤ ܤ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܤܝܤܝܤ ܤ</span></span></p><div class="letter syriac">
-<p class="titlepara"><span class="title">Syriac</span>
- &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
-<p><span class="ipa">s</span>, used like Greek final sigma as a word-final alternate form for <span class="codepoint" translate="no"><span lang="syr-Syrc" dir="rtl">&#x0723;</span> [<a href="/scripts/syriac/block#char0723"><span class="uname">U+0723 SYRIAC LETTER SEMKATH</span></a>]</span>.</p>
-</div>
-<div class="letter assyrian">
-<p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
-<p>Daniels makes no mention of this form, and doesn't show it at the end of a word in the text sample, however the east syriac fonts from Beth Mardutho support it.</p>
-</div>
-<p class="ref"><a href="#refs">Refs</a>:
-    [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
-    [2] <a href="https://en.wikipedia.org/wiki/Syriac_alphabet" target="_blank">WP Syriac alphabet</a>&nbsp; 
-</p>
-</div>
-</div>
-
 <div class="character" id="char0727">
 <div class="charimg">&#x0727;</div>
 <p class="charname"><strong>U+0727</strong> <a href="#char0727">SYRIAC LETTER REVERSED PE</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0727">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant </p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܧܝܧܝܧ ܧ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܧܝܧܝܧ ܧ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܧܝܧܝܧ ܧ</span></span></p><div class="letter syriac">
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܧ ܧܧܧ</span> <span class="ex" lang="aii">ܧ ܧܧܧ</span> <span class="ex" lang="tru">ܧ ܧܧܧ</span></p>
+<p>Bilabial plosive used in Christian Palestinian Aramaic.</p>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p>Used in Christian Palestinian Aramaic</p>
@@ -775,7 +1023,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="garshuni">
-<h3><a href="#garshuni">Garshuni letters</a></h3>
+<h3>Garshuni letters</h3>
 
 <div class="character" id="char0714">
 <div class="charimg">&#x0714;</div>
@@ -783,9 +1031,17 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0714">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Garshuni letter</p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܔܝܔܝܔ ܔ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܔܝܔܝܔ ܔ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܔܝܔܝܔ ܔ</span></span></p>
-<p>Used for writing Arabic in the Syriac script.</p>
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom).</span><span class="ex" lang="syr">ܔ ܔܔܔ</span> <span class="ex" lang="aii">ܔ ܔܔܔ</span> <span class="ex" lang="tru">ܔ ܔܔܔ</span></p>
+<p>Garshuni letter used for writing Arabic in the Syriac script.</p>
+<p>This is an adaptation of the letter <span class="codepoint" translate="no"><span lang="syr" dir="rtl">&#x0713;</span> [<a href="/scripts/syriac/block#char0713"><span class="uname">U+0713 SYRIAC LETTER GAMAL</span></a>]</span>.</p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span> &nbsp;&nbsp; <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
+<p>In Turoyo this is an ordinary letter of the alphabet.</p>
+<p><span class="charExample" translate="no"><span class="ipa">d͡ʒ</span>, eg. <span class="ex" lang="tru" dir="rtl">ܔܰܙܘܶܐ</span> <span class="trans">ʤȧzwėʾ</span> (<span class="trans">jazwe</span>) <span class="meaning">coffee pot</span></span>&nbsp;</p>
+</div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
     [2] <a href="https://en.wikipedia.org/wiki/Syriac_alphabet" target="_blank">WP Syriac alphabet</a>&nbsp; 
@@ -800,9 +1056,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=071C">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Garshuni letter</p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܜܝܜܝܜ ܜ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܜܝܜܝܜ ܜ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܜܝܜܝܜ ܜ</span></span></p>
-<p>Used for writing Arabic in the Syriac script.</p>
+<div class="letter generalInfo">
+<p class="charShape"><span class="groupedTranscriptions">Estrangelo, eastern, and<br>
+western styles (top to bottom)</span><span class="ex" lang="syr">ܜ ܜܜܜ</span> <span class="ex" lang="aii">ܜ ܜܜܜ</span> <span class="ex" lang="tru">ܜ ܜܜܜ</span></p>
+<p>Garshuni letter used for writing Arabic in the Syriac script.</p>
+<p>This is an adaptation of the letter <span class="codepoint" translate="no"><span lang="syr" dir="rtl">&#x071B;</span> [<a href="/scripts/syriac/block#char071B"><span class="uname">U+071B SYRIAC LETTER TETH</span></a>]</span>.</p>
+</div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
     [2] <a href="#refs" target="_blank">Daniels p505</a>&nbsp; 
@@ -816,7 +1075,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="persian">
-<h3><a href="#persian">Persian letters</a></h3>
+<h3>Persian letters</h3>
 
 <div class="character" id="char072D">
 <div class="charimg">&#x072D;</div>
@@ -824,8 +1083,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=072D">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant</p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܭܝܭܝܭ ܭ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܭܝܭܝܭ ܭ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܭܝܭܝܭ ܭ</span></span></p><div class="letter persian">
+<div class="letter generalInfo">
+<p>Used for writing Persian in the Syriac script.</p>
+</div>
+<div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p><span class="ipa">v</span> Used in Persian text of the 8th-14th centuries CE.</p>
@@ -841,8 +1102,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=072E">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant</p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܮܝܮܝܮ ܮ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܮܝܮܝܮ ܮ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܮܝܮܝܮ ܮ</span></span></p><div class="letter persian">
+<div class="letter generalInfo">
+<p>Used for writing Persian in the Syriac script.</p>
+<p>This is an adaptation of the letter <span class="codepoint" translate="no"><span lang="syr" dir="rtl">&#x0713;</span> [<a href="/scripts/syriac/block#char0713"><span class="uname">U+0713 SYRIAC LETTER GAMAL</span></a>]</span>.</p>
+</div>
+<div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p><span class="ipa">ɣ</span> Used in Persian text of the 8th-14th centuries CE.</p>
@@ -858,8 +1122,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=072F">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant</p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ܯܝܯܝܯ ܯ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ܯܝܯܝܯ ܯ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܯܝܯܝܯ ܯ</span></span></p><div class="letter persian">
+<div class="letter generalInfo">
+<p>Used for writing Persian in the Syriac script.</p>
+<p>This is an adaptation of the letter <span class="codepoint" translate="no"><span lang="syr" dir="rtl">&#x0715;</span> [<a href="/scripts/syriac/block#char0715"><span class="uname">U+0715 SYRIAC LETTER DALATH</span></a>]</span>.</p>
+</div><div class="letter persian">
 <p class="titlepara"><span class="title">Persian</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p><span class="ipa">ð</span> Used in Persian text of the 8th-14th centuries CE.</p>
@@ -875,7 +1141,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="sogdian">
-<h3><a href="#sogdian">Sogdian letters</a></h3>
+<h3>Sogdian letters</h3>
 
 <div class="character" id="char074D">
 <div class="charimg">&#x074D;</div>
@@ -883,8 +1149,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=074D">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant</p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ݍܝݍܝݍ ݍ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ݍܝݍܝݍ ݍ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ݍܝݍܝݍ ݍ</span></span></p><div class="letter sogdian">
+<div class="letter generalInfo">
+<p>Used for writing Sogdian in the Syriac script.</p>
+</div>
+<div class="letter sogdian">
 <p class="titlepara"><span class="title">Sogdian</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p><span class="ipa">ʒ</span> Used in Sogdian text of the 8th-14th centuries CE</p>
@@ -901,8 +1169,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=074E">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant</p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ݎܝݎܝݎ ݎ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ݎܝݎܝݎ ݎ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ݎܝݎܝݎ ݎ</span></span></p><div class="letter sogdian">
+<div class="letter generalInfo">
+<p>Used for writing Sogdian in the Syriac script.</p>
+</div>
+<div class="letter sogdian">
 <p class="titlepara"><span class="title">Sogdian</span>&nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p><span class="ipa">x</span> Used in Sogdian text of the 8th-14th centuries CE</p>
 </div>
@@ -918,8 +1188,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=074F">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Consonant</p>
-<p>Cursive shapes: Eastern <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrn">ݏܝݏܝݏ ݏ</span></span>&nbsp; Estrangela <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syre">ݏܝݏܝݏ ݏ</span></span> &nbsp; Western <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ݏܝݏܝݏ ݏ</span></span></p><div class="letter sogdian">
+<div class="letter generalInfo">
+<p>Used for writing Sogdian in the Syriac script.</p>
+</div>
+<div class="letter sogdian">
 <p class="titlepara"><span class="title">Sogdian</span>&nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p><span class="ipa">f</span> Used in Sogdian text of the 8th-14th centuries CE</p>
 </div>
@@ -937,11 +1209,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="vowels">
-<h2><a href="#vowels">Vowels</a></h2>
+<h2>Vowels</h2>
 
 
 <section id="dottedvowels">
-<h3><a href="#dottedvowels">Dotted vowels</a></h3>
+<h3>Dotted vowels</h3>
 
 <div class="character" id="char0732">
 <div class="charimg">&#x0732;</div>
@@ -949,10 +1221,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0732">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Vowel diacritic &nbsp;&nbsp; <span class="trans">a</span></p><div class="letter syriac">
-<p class="titlepara"><span class="title">East (and West) Syriac</span>
- &nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܦܬ݂ܳܚܳܐ‎</span> <span class="trans">pṯāḥā</span></p>
-<p><span class="ipa">a</span> This is the standard way to represent this sound in East Syriac, and is often used in West Syriac too. </p>
+<div class="letter generalInfo">
+<p>Dotted vowel diacritics are standard in East Syriac, but also sometimes used in West Syriac too. </p>
 </div>
 <div class="letter assyrian">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span>&nbsp;&nbsp;<span class="trans">ă</span></p>
@@ -972,13 +1242,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0735">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Vowel diacritic &nbsp;&nbsp; <span class="trans">ā</span></p><div class="letter syriac">
-<p class="titlepara"><span class="title">East (&amp; West) Syriac</span>&nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܙܩܵܦ݂ܵܐ‎</span> <span class="trans">zqāp̄ā</span></p>
-<p><span class="ipa">ɑ</span> This is the standard way to represent this sound in East Syriac, and is often used in West Syriac too. </p>
+<div class="letter generalInfo">
+<p>Dotted vowel diacritics are standard in East Syriac, but also sometimes used in West Syriac too. </p>
 </div>
 <div class="letter assyrian">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
-<p><span class="ipa">a</span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܐܵܗܵܐ</span> <span class="trans">ʾahaʾ</span> <span class="ipa">ʔaha</span> <span class="meaning">this</span></span>.<span class="charExample"><span class="meaning"></span></span></p>
+<p><span class="ipa">ɑ</span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܐܵܗܵܐ</span> <span class="trans">ʾahaʾ</span> <span class="ipa">ʔɑhɑ</span> <span class="meaning">this</span></span>.<span class="charExample"><span class="meaning"></span></span></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -994,15 +1263,14 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0738">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Vowel diacritic &nbsp;&nbsp; <span class="trans">e</span></p><div class="letter syriac">
-<p class="titlepara"><span class="title">East (&amp; West) Syriac</span>&nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܪܒ݂ܵܨܵܐ ܐܲܪܝܼܟ݂ܵܐ‎ / ܙܠܵܡܵܐ ܦܫܝܼܩܵܐ‎</span> <span class="trans">rḇāṣā ʾărīḵā / zlāmā pšīqā</span></p>
-<p><span class="ipa">ɛ</span> This is the standard way to represent this sound in East Syriac, and is often used in West Syriac too.</p>
-<p><span class="ipa">ɪ</span> often in East Syriac dialect.</p>
-<p><span class="ipa">e</span> when followed by <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x071D;</span> <a href="/scripts/syriac/block#char071D">[<span class="uname">U+071D SYRIAC LETTER YUDH</span>]</a></span>.</p>
+<div class="letter generalInfo">
+<p>Dotted vowel diacritics are standard in East Syriac, but also sometimes used in West Syriac too. </p>
 </div>
 <div class="letter assyrian">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span>&nbsp;&nbsp;<span class="trans">ĭ</span></p>
-<p><span class="ipa">i</span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܠܸܫܵܢܵܐ</span> <span class="trans">lĭšanaʾ</span> <span class="ipa">liʃana</span> <span class="meaning">language</span></span>.<span class="charExample"><span class="meaning"></span></span></p>
+<p><span class="ipa">ɛ</span> is the standard pronunciation.</p>
+<p><span class="ipa">ɪ</span> often in East Syriac dialects (when it may be transcribed <span class="trans">i</span>), eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܠܸܫܵܢܵܐ</span> <span class="trans">lĭšanaʾ</span> <span class="ipa">lɪʃana</span> <span class="meaning">language</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Syriac_alphabet#Vowels">w</a></p>
+<p><span class="ipa">e</span> when followed by <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x071D;</span> <a href="/scripts/syriac/block#char071D">[<span class="uname">U+071D SYRIAC LETTER YUDH</span>]</a></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -1018,12 +1286,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0739">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Vowel diacritic &nbsp;&nbsp; <span class="trans">ē</span></p><div class="letter syriac">
-<p class="titlepara"><span class="title">East (&amp; West) Syriac</span>&nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܪܒ݂ܵܨܵܐ ܟܲܪܝܵܐ‎ / ܙܠܵܡܵܐ ܩܲܫܝܵܐ‎</span> <span class="trans">rḇāṣā karyā / zlāmā qašyā</span></p>
-<p><span class="ipa">e</span> This is the standard way to represent this sound in East Syriac, and is often used in West Syriac too.</p>
+<div class="letter generalInfo">
+<p>Dotted vowel diacritics are standard in East Syriac, but also sometimes used in West Syriac too. </p>
 </div>
 <div class="letter assyrian">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span>&nbsp;&nbsp;<span class="trans">e</span></p>
+<p><span class="ipa">e</span> is the standard pronunciation. It is also the pronunciation when this is followed by <span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x071D;</span> [<a href="/scripts/syriac/block#char071D"><span class="uname">U+071D SYRIAC LETTER YUDH</span></a>]</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Syriac_alphabet#Vowels">w</a></p>
 <p><span class="ipa">ɪ</span>, i, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܡܵܪܹܐ</span> <span class="trans">mareʾ</span> <span class="ipa">marɪ</span> <span class="meaning">possessor of</span></span>.<span class="charExample"><span class="meaning"></span></span></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
@@ -1040,15 +1308,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=073C">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Vowel diacritic &nbsp;&nbsp; <span class="trans">i</span> &nbsp;(combined with yudh and waw = <span class="trans">î, û</span>)</p><div class="letter syriac">
-<p class="titlepara"><span class="title">East (&amp; West) Syriac</span> &nbsp;&nbsp;  <span class="name" lang="syr-syrc">ܥܨܵܨܵܐ ܐܲܠܝܼܨܵܐ‎</span> <span class="name">ʿṣāṣā ʾălīṣā</span> or <span class="name" lang="syr-syrc">ܪܒ݂ܵܨܵܐ‎</span> <span class="name">rḇāṣā</span></p>
-<p><span class="ipa">u</span>, when used with <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x0718;</span> <a href="/scripts/syriac/block#char0718">[<span class="uname">U+0718 SYRIAC LETTER WAW</span>]</a></span></p>
-<p><span class="ipa">i</span>, when used with <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x071D;</span> <a href="/scripts/syriac/block#char071D">[<span class="uname">U+071D SYRIAC LETTER YUDH</span>]</a></span></p>
+<div class="letter generalInfo">
+<p>Dotted vowel diacritics are standard in East Syriac, but also sometimes used in West Syriac too. </p>
 </div>
 <div class="letter assyrian">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
-<p><span class="ipa">u</span> Always used with <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x0718;</span> <a href="/scripts/syriac/block#char0718">[<span class="uname">U+0718 SYRIAC LETTER WAW</span>]</a></span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܩܘܼܝܵܡܵܐܼ</span> <span class="trans">qûyamaʾ</span> <span class="ipa">qujama</span> <span class="meaning">subsistence</span></span>.</p>
-<p><span class="ipa">i</span> Always used with <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x071D;</span> <a href="/scripts/syriac/block#char071D">[<span class="uname">U+071D SYRIAC LETTER YUDH</span>]</a></span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܗܵܘܝܼ</span> <span class="trans">hawî</span> <span class="ipa">hawi</span> <span class="meaning">be</span></span>.</p>
+<p><span class="ipa">u</span> Always used with <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x0718;</span> <a href="/scripts/syriac/block#char0718">[<span class="uname">U+0718 SYRIAC LETTER WAW</span>]</a></span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܩܘܼܝܵܡܵܐܼ</span> <span class="trans">qûyamaʾ</span> <span class="ipa">qujama</span> <span class="meaning">subsistence</span></span>. The two together may be transcribed as <span class="trans">û</span>.</p>
+<p><span class="ipa">i</span> Always used with <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x071D;</span> <a href="/scripts/syriac/block#char071D">[<span class="uname">U+071D SYRIAC LETTER YUDH</span>]</a></span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܗܵܘܝܼ</span> <span class="trans">hawî</span> <span class="ipa">hawi</span> <span class="meaning">be</span></span>. The two together may be transcribed as <span class="trans">î</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -1064,14 +1330,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=073F">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Vowel diacritic &nbsp;&nbsp; <span class="trans">o</span> &nbsp;(combined with  waw =<span class="trans"> ô</span>)</p>
-<div class="letter syriac">
-<p class="titlepara"><span class="title">East (&amp; West) Syriac</span>&nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܥܨܵܨܵܐ ܪܘܝܼܚܵܐ‎ / ܪܘܵܚܵܐ‎</span> <span class="trans">ʿṣāṣā rwīḥā / rwāḥā</span></p>
-<p><span class="ipa">o</span>, when used with <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x0718;</span> <a href="/scripts/syriac/block#char0718">[<span class="uname">U+0718 SYRIAC LETTER WAW</span>]</a></span></p>
+<div class="letter generalInfo">
+<p>Dotted vowel diacritics are standard in East Syriac, but also sometimes used in West Syriac too. </p>
 </div>
 <div class="letter assyrian">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span>&nbsp;&nbsp;<span class="trans">ô</span></p>
-<p><span class="ipa">u</span> Always used with <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x0718;</span> <a href="/scripts/syriac/block#char0718">[<span class="uname">U+0718 SYRIAC LETTER WAW</span>]</a></span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܢܵܛܘܿܪܹ̈ܐ</span> <span class="trans">naṭô"reʾ</span> <span class="ipa">naturɪ</span> <span class="meaning">keepers</span></span>.</p>
+<p><span class="ipa">o / u</span> Always used with <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x0718;</span> <a href="/scripts/syriac/block#char0718">[<span class="uname">U+0718 SYRIAC LETTER WAW</span>]</a></span>, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܢܵܛܘܿܪܹ̈ܐ</span> <span class="trans">naṭô"reʾ</span> <span class="ipa">naturɪ</span> <span class="meaning">keepers</span></span>. The two together may be transcribed as <span class="trans">ô</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -1088,7 +1352,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="greekvowels">
-<h3><a href="#greekvowels">Greek letter vowels</a></h3>
+<h3>Greek letter vowels</h3>
 
 <div class="character" id="char0730">
 <div class="charimg">&#x0730;</div>
@@ -1096,10 +1360,16 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0730">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Vowel diacritic &nbsp;&nbsp; <span class="trans">ȧ</span></p>
-<p>Derived from an uppercase alpha. The vowel can be indicated either above or below the consonant. To make it appear below the consonant use <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0731;</span> <a href="/scripts/syriac/block#char0731">[<span class="uname">U+0731 SYRIAC PTHAHA BELOW​</span>]</a></span>.</p>
-<div class="letter syriac">
-<p class="titlepara"><span class="title">West Syriac</span> &nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܦܬ݂ܳܚܳܐ‎</span> <span class="trans">pṯāḥā</span> &nbsp;&nbsp; <span class="ipa">a</span></p>
+<div class="letter generalInfo">
+<p>Used for West Syriac. Derived from an uppercase alpha.</p>
+<p>The vowel can be indicated either above or below the consonant. To make it appear below the consonant use <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0731;</span> <a href="/scripts/syriac/block#char0731">[<span class="uname">U+0731 SYRIAC PTHAHA BELOW​</span>]</a></span>.</p>
+</div>
+<div class="letter syr">
+<p class="titlepara"><span class="title">West Syriac</span> &nbsp;&nbsp;  <span class="name" lang="syr">ܦܬ݂ܳܚܳܐ‎</span> <span class="trans">pṯāḥā</span> &nbsp;&nbsp; <span class="ipa">a</span></p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span> &nbsp;&nbsp; <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
+<p><span class="charExample" translate="no"><span class="ipa">a</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܡܰܠܟܘܬܼܐ</span> <span class="trans">malkwtiʾ</span> (<span class="trans">malkuṯo</span>) <span class="meaning">kingdom</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.2?content-fragment-id=1748">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -1114,10 +1384,16 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0731">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Vowel diacritic &nbsp;&nbsp; <span class="trans">ạ</span></p>
-<p>Derived from an uppercase alpha. The vowel can be indicated either above or above the consonant. To make it appear below the consonant use <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0730;</span> <a href="/scripts/syriac/block#char0730">[<span class="uname">U+0730 SYRIAC PTHAHA ABOVE​</span>]</a></span>.</p>
-<div class="letter syriac">
-<p class="titlepara"><span class="title">West Syriac</span>&nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܦܬ݂ܳܚܳܐ‎</span> <span class="trans">pṯāḥā</span> &nbsp;&nbsp; <span class="ipa">a</span></p>
+<div class="letter generalInfo">
+<p>Used for West Syriac. Derived from an uppercase alpha.</p>
+<p>The vowel can be indicated either above or above the consonant.To make it appear above the consonant use <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0730;</span> <a href="/scripts/syriac/block#char0730">[<span class="uname">U+0730 SYRIAC PTHAHA ABOVE​</span>]</a></span>.</p>
+</div>
+<div class="letter syr">
+<p class="titlepara"><span class="title">West Syriac</span>&nbsp;&nbsp;  <span class="name" lang="syr">ܦܬ݂ܳܚܳܐ‎</span> <span class="trans">pṯāḥā</span> &nbsp;&nbsp; <span class="ipa">a</span></p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span> &nbsp;&nbsp; <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
+<p><span class="charExample" translate="no"><span class="ipa">a</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܓ݂ܱܠܱܒܶܐ</span> <span class="trans">g‐̣äläbeʾ</span> (<span class="trans">ġäläbe</span>) <span class="meaning">many</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.2?content-fragment-id=1748">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -1132,10 +1408,16 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0733">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Vowel diacritic &nbsp;&nbsp; <span class="trans">å</span></p>
-<p>Derived from a lowercase alpha. The vowel can be indicated either above or below the consonant. To make it appear below the consonant use <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0734;</span> <a href="/scripts/syriac/block#char0734">[<span class="uname">U+0734 SYRIAC ZQAPHA BELOW​</span>]</a></span>.</p>
-<div class="letter syriac">
-<p class="titlepara"><span class="title">West Syriac</span>&nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܙܩܵܦ݂ܵܐ‎</span> <span class="trans">zqāp̄ā</span> &nbsp;&nbsp;<span class="ipa">ɑ</span></p>
+<div class="letter generalInfo">
+<p>Used for West Syriac. Derived from a lowercase alpha.</p>
+<p>The vowel can be indicated either above or below the consonant. To make it appear below the consonant use <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0734;</span> <a href="/scripts/syriac/block#char0734">[<span class="uname">U+0734 SYRIAC ZQAPHA BELOW​</span>]</a></span>.</p>
+</div>
+<div class="letter syr">
+<p class="titlepara"><span class="title">West Syriac</span>&nbsp;&nbsp;  <span class="name" lang="syr">ܙܩܵܦ݂ܵܐ‎</span> <span class="trans">zqāp̄ā</span> &nbsp;&nbsp;<span class="ipa">ɑ</span></p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span> &nbsp;&nbsp; <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
+<p><span class="charExample" translate="no"><span class="ipa">ɒ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܳܬ݂ܐ</span> <span class="trans">ʾot‐̣ʾ</span> (<span class="trans">oṯo</span>) <span class="meaning">sign</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.2?content-fragment-id=1748">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -1150,10 +1432,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0734">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Vowel diacritic &nbsp;&nbsp; <span class="trans">ḁ</span></p>
-<p>Derived from a lowercase alpha. The vowel can be indicated either above or below the consonant. To make it appear above the consonant use <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0733;</span> <a href="/scripts/syriac/block#char0733">[<span class="uname">U+0733 SYRIAC ZQAPHA ABOVE​</span>]</a></span>.</p>
-<div class="letter syriac">
-<p class="titlepara"><span class="title">West Syriac</span>&nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܙܩܵܦ݂ܵܐ‎</span> <span class="trans">zqāp̄ā</span> &nbsp;&nbsp;<span class="ipa">ɑ</span></p>
+<div class="letter generalInfo">
+<p>Used for West Syriac. Derived from a lowercase alpha.</p>
+<p>The vowel can be indicated either above or below the consonant. To make it appear above the consonant use <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0733;</span> <a href="/scripts/syriac/block#char0733">[<span class="uname">U+0733 SYRIAC ZQAPHA ABOVE​</span>]</a></span>.</p>
+</div>
+<div class="letter syr">
+<p class="titlepara"><span class="title">West Syriac</span>&nbsp;&nbsp;  <span class="name" lang="syr">ܙܩܵܦ݂ܵܐ‎</span> <span class="trans">zqāp̄ā</span> &nbsp;&nbsp;<span class="ipa">ɑ</span></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -1169,10 +1453,16 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0736">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Vowel diacritic &nbsp;&nbsp; <span class="trans">ė</span></p>
-<p>Derived from a lowercase epsilon. The vowel can be indicated either above or below the consonant. To make it appear below the consonant use <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0737;</span> <a href="/scripts/syriac/block#char0737">[<span class="uname">U+0737 SYRIAC RBASA BELOW​</span>]</a></span>.</p>
-<div class="letter syriac">
-<p class="titlepara"><span class="title">West Syriac</span>&nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܪܒ݂ܵܨܵܐ</span> <span class="trans">rḇāṣā</span> &nbsp;&nbsp;<span class="ipa">ɛ, e</span></p>
+<div class="letter generalInfo">
+<p>Used for West Syriac. Derived from a lowercase epsilon.</p>
+<p>The vowel can be indicated either above or below the consonant. To make it appear below the consonant use <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0737;</span> <a href="/scripts/syriac/block#char0737">[<span class="uname">U+0737 SYRIAC RBASA BELOW​</span>]</a></span>.</p>
+</div>
+<div class="letter syr">
+<p class="titlepara"><span class="title">West Syriac</span>&nbsp;&nbsp;  <span class="name" lang="syr">ܪܒ݂ܵܨܵܐ</span> <span class="trans">rḇāṣā</span> &nbsp;&nbsp;<span class="ipa">ɛ, e</span></p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span> &nbsp;&nbsp; <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
+<p><span class="charExample" translate="no"><span class="ipa">e</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܶܡܐ</span> <span class="trans">ʾemʾ</span> (<span class="trans">emo</span>) <span class="meaning">mother</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.2?content-fragment-id=1748">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -1187,10 +1477,16 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0737">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Vowel diacritic &nbsp;&nbsp; <span class="trans">ẹ</span></p>
-<p>Derived from a lowercase epsilon. The vowel can be indicated either above or below the consonant. To make it appear above the consonant use <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0736;</span> <a href="/scripts/syriac/block#char0736">[<span class="uname">U+0736 SYRIAC RBASA ABOVE​</span>]</a></span>.</p>
-<div class="letter syriac">
-<p class="titlepara"><span class="title">West Syriac</span>&nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܪܒ݂ܵܨܵܐ</span> <span class="trans">rḇāṣā</span> &nbsp;&nbsp;<span class="ipa">ɛ, e</span></p>
+<div class="letter generalInfo">
+<p>Used for West Syriac. Derived from a lowercase epsilon.</p>
+<p>The vowel can be indicated either above or below the consonant. To make it appear above the consonant use <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x0736;</span> <a href="/scripts/syriac/block#char0736">[<span class="uname">U+0736 SYRIAC RBASA ABOVE​</span>]</a></span>.</p>
+</div>
+<div class="letter syr">
+<p class="titlepara"><span class="title">West Syriac</span>&nbsp;&nbsp;  <span class="name" lang="syr">ܪܒ݂ܵܨܵܐ</span> <span class="trans">rḇāṣā</span> &nbsp;&nbsp;<span class="ipa">ɛ, e</span></p>
+</div>
+<div class="letter tru">
+<p class="titlepara"><span class="title">Turoyo</span> &nbsp;&nbsp; <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
+<p><span class="charExample" translate="no"><span class="ipa">ə</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܷܫܡܐ</span> <span class="trans">ʾəʃmʾ</span> (<span class="trans">ëšmo</span>) <span class="meaning">name</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.2?content-fragment-id=1748">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -1205,10 +1501,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=073A">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Vowel diacritic &nbsp;&nbsp; <span class="trans">ï</span></p>
-<p>Derived from a uppercase eta. The vowel can be indicated either above or below the consonant. To make it appear below the consonant use <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x073B;</span> <a href="/scripts/syriac/block#char073B">[<span class="uname">U+073B SYRIAC HBASA BELOW​</span>]</a></span>.</p>
-<div class="letter syriac">
-<p class="titlepara"><span class="title">West Syriac</span>&nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܚܒ݂ܵܨܵܐ‎</span> <span class="trans">ḥḇāṣā</span> &nbsp;&nbsp; <span class="ipa">i</span></p>
+<div class="letter generalInfo">
+<p>Used for West Syriac. Derived from a uppercase eta.</p>
+<p>The vowel can be indicated either above or below the consonant. To make it appear below the consonant use <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x073B;</span> <a href="/scripts/syriac/block#char073B">[<span class="uname">U+073B SYRIAC HBASA BELOW​</span>]</a></span>.</p>
+</div>
+<div class="letter syr">
+<p class="titlepara"><span class="title">West Syriac</span>&nbsp;&nbsp;  <span class="name" lang="syr">ܚܒ݂ܵܨܵܐ‎</span> <span class="trans">ḥḇāṣā</span> &nbsp;&nbsp; <span class="ipa">i</span></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -1223,10 +1521,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=073B">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Vowel diacritic &nbsp;&nbsp; <span class="trans">ị</span></p>
-<p>Derived from a uppercase eta. The vowel can be indicated either above or below the consonant. To make it appear above the consonant use <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x073A;</span> <a href="/scripts/syriac/block#char073A">[<span class="uname">U+073A SYRIAC HBASA ABOVE​</span>]</a></span>.</p>
-<div class="letter syriac">
-<p class="titlepara"><span class="title">West Syriac</span>&nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܚܒ݂ܵܨܵܐ‎</span> <span class="trans">ḥḇāṣā</span> &nbsp;&nbsp; <span class="ipa">i</span></p>
+<div class="letter generalInfo">
+<p>Used for West Syriac. Derived from a uppercase eta.</p>
+<p>The vowel can be indicated either above or below the consonant. To make it appear above the consonant use <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x073A;</span> <a href="/scripts/syriac/block#char073A">[<span class="uname">U+073A SYRIAC HBASA ABOVE​</span>]</a></span>.</p>
+</div>
+<div class="letter syr">
+<p class="titlepara"><span class="title">West Syriac</span>&nbsp;&nbsp;  <span class="name" lang="syr">ܚܒ݂ܵܨܵܐ‎</span> <span class="trans">ḥḇāṣā</span> &nbsp;&nbsp; <span class="ipa">i</span></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -1241,10 +1541,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=073D">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Vowel diacritic &nbsp;&nbsp; <span class="trans">ů</span></p>
-<p>Derived from a combined capital upsilon and lowercase omicron. The vowel can be indicated either above or below the consonant. To make it appear below the consonant use <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x073E;</span> <a href="/scripts/syriac/block#char073E">[<span class="uname">U+073E SYRIAC ESASA BELOW​</span>]</a></span>.</p>
-<div class="letter syriac">
-<p class="titlepara"><span class="title">West Syriac</span>&nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܥܨܳܨܳܐ‎</span> <span class="trans">ṣāṣā</span> &nbsp;&nbsp; <span class="ipa">u</span></p>
+<div class="letter generalInfo">
+<p>Used for West Syriac. Derived from a combined capital upsilon and lowercase omicron.</p>
+<p>The vowel can be indicated either above or below the consonant. To make it appear below the consonant use <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x073E;</span> <a href="/scripts/syriac/block#char073E">[<span class="uname">U+073E SYRIAC ESASA BELOW​</span>]</a></span>.</p>
+</div>
+<div class="letter syr">
+<p class="titlepara"><span class="title">West Syriac</span>&nbsp;&nbsp;  <span class="name" lang="syr">ܥܨܳܨܳܐ‎</span> <span class="trans">ṣāṣā</span> &nbsp;&nbsp; <span class="ipa">u</span></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -1259,10 +1561,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=073E">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Vowel diacritic &nbsp;&nbsp; <span class="trans">ụ</span></p>
-<p>Derived from a combined capital upsilon and lowercase omicron. The vowel can be indicated either above or below the consonant. To make it appear above the consonant use <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x073D;</span> <a href="/scripts/syriac/block#char073D">[<span class="uname">U+073D SYRIAC ESASA ABOVE​</span>]</a></span>.</p>
-<div class="letter syriac">
-<p class="titlepara"><span class="title">West Syriac</span>&nbsp;&nbsp;  <span class="name" lang="syr-Syrc">ܥܨܳܨܳܐ‎</span> <span class="trans">ṣāṣā</span> &nbsp;&nbsp; <span class="ipa">u</span></p>
+<div class="letter generalInfo">
+<p>Used for West Syriac. Derived from a combined capital upsilon and lowercase omicron.</p>
+<p>The vowel can be indicated either above or below the consonant. To make it appear above the consonant use <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#xA0;&#x073D;</span> <a href="/scripts/syriac/block#char073D">[<span class="uname">U+073D SYRIAC ESASA ABOVE​</span>]</a></span>.</p>
+</div>
+<div class="letter syr">
+<p class="titlepara"><span class="title">West Syriac</span>&nbsp;&nbsp;  <span class="name" lang="syr">ܥܨܳܨܳܐ‎</span> <span class="trans">ṣāṣā</span> &nbsp;&nbsp; <span class="ipa">u</span></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -1278,7 +1582,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="diacritics">
-<h2><a href="#diacritics">Diacritics</a></h2>
+<h2>Diacritics</h2>
 
 <div class="character" id="char0741">
 <div class="charimg">&#x0741;</div>
@@ -1286,12 +1590,16 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0741">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Hard-sound marker </p>
+<div class="letter generalInfo">
+<p>Hard-sound marker.</p>
+<p>The following letters can represent either a 'hard' or 'soft' consonant: <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܒ ܓ ܕ ܟ ܦ ܬ</span></span><span class="charExample"><span class="ex" lang="syr-Syrj" dir="rtl"></span></span>. The hard version is a plosive, and the soft version a fricative.</p>
+<p>This diacritic is used to indicate that the letter represents the 'hard' form (<span class="name">qūššāyā </span>), although in modern text the absence of a dot is the usual way to indicate a hard value.<a class="fnref" href="https://en.wikipedia.org/wiki/Assyrian_Neo-Aramaic#Letters">w</a></p>
+</div>
 <div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span>&nbsp;&nbsp; <span class="name" lang="syr-syrc">ܩܘܫܝܐ</span> <span class="name">qūššāyā</span></p>
 <p>The following letters can represent either a 'hard' or 'soft' consonant: <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܒ ܓ ܕ ܟ ܦ ܬ</span></span><span class="charExample"><span class="ex" lang="syr-Syrj" dir="rtl"></span></span>. The hard version is a plosive, and the soft version a fricative.</p>
-<p>This diacritic is used to indicate that the letter represents the 'hard' form (<span class="name">qūššāyā </span>), although in modern text the absence of a dot is the usual way to indicate a hard value. </p>
+<p>This diacritic is used when you want to explicitly indicate that the letter represents the 'hard' form (<span class="name">qūššāyā </span>), although in modern text the absence of a dot is the usual way to indicate a hard value. </p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -1306,7 +1614,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0742">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Soft-sound marker</p><div class="letter syriac">
+<div class="letter generalInfo">
+<p>Soft-sound marker.</p>
+<p>The following letters can represent either a 'hard' or 'soft' consonant: <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܒ ܓ ܕ ܟ ܦ ܬ</span></span><span class="charExample"><span class="ex" lang="syr-Syrj" dir="rtl"></span></span>. The hard version is a plosive, and the soft version a fricative.</p>
+<p>This diacritic is used when you want to explicitly indicate that the letter represents the 'soft' form ( <span class="name">rūkkāḵā </span>).</p>
+<p>When this diacritic appears below <span class="codepoint"><span lang="syr-Syre" dir="rtl">&#x0715;</span> <a href="/scripts/syriac/block#char0715">[<span class="uname">U+0715 SYRIAC LETTER DALATH</span>]</a></span> and that character has a dot below it, this diacritic moves slightly to the right, eg. <span class="charExample"><span class="ex" lang="syr-syrn" dir="rtl">ܝܘܕ݂</span> <span class="trans">yōḏ</span></span>.</p>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-syrc">ܪܘܟܟܐ</span> <span class="name">rūkkāḵā</span></p>
 <p>The following letters can represent either a 'hard' or 'soft' consonant: <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܒ ܓ ܕ ܟ ܦ ܬ</span></span><span class="charExample"><span class="ex" lang="syr-Syrj" dir="rtl"></span></span>. The hard version is a plosive, and the soft version a fricative.</p>
@@ -1326,7 +1640,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0747">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Silent letter marker</p><div class="letter syriac">
+<div class="letter generalInfo">
+<p>Silent letter marker, called <span class="name">talqana</span>, used in the Eastern style.</p>
+<p> It is frequently used in the modern Aramaic koine to bridge differences in dialects. For example, <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="aii">ܒܬ݇ܪ</span> <span class="trans">bt݇r</span> <span class="meaning">after</span></span>, is pronounced <span class="ipa">baθar</span> in some modern dialects, harking back to the classical pronunciation, but <span class="ipa">bar</span> in Urmi and the koine.</p>
+  <p>The letters <span class="charExample"><span class="exlist" dir="rtl" lang="aii">ܐ ܥ ܗ ܝ</span></span>, when included for etymological reasons, are often silent, though without using the talqana.<a class="fnref" href="http://www.unicode.org/L2/L1998/98050-syriac-proposal.pdf">n</a>&nbsp;</p>
+  <p>The Western style uses <span class="codepoint" translate="no"><span dir="rtl" lang="syr-Syrj">̱</span> &nbsp; [<a href="/scripts/syriac/block#char0331" target="c"><span class="uname">U+0331 COMBINING MACRON BELOW</span></a>]</span>, eg.  <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="syr-Syrj">ܒܬ̱ܪ</span> <span class="trans">bṯr</span></span>.</p>
+<p>The marker can also appear below the base, in which case use <span class="codepoint" translate="no"><span lang="syr" dir="rtl">&#x0748;</span> &nbsp;[<a href="/scripts/syriac/block#char0748"><span class="uname">U+0748 SYRIAC OBLIQUE LINE BELOW</span></a>]</span>.</p>
+</div><div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p>Indicates a silent letter, eg. <span class="charExample"><span class="ex" lang="syr-Syrn" dir="rtl">ܗ݇ܘ̣ܵܐ</span></span>.</p>
@@ -1343,7 +1663,15 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0748">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Silent letter marker</p><div class="letter syriac">
+<div class="letter generalInfo">
+<p>Silent letter marker, called <span class="name">talqana</span>, used in the Eastern style.</p>
+<p> It is frequently used in the modern Aramaic koine to bridge differences in dialects.</p>
+<p>The letters <span class="charExample"><span class="exlist" dir="rtl" lang="aii">ܐ ܥ ܗ ܝ</span></span>, when included for etymological reasons, are often silent, though without using the talqana.<a class="fnref" href="http://www.unicode.org/L2/L1998/98050-syriac-proposal.pdf">n</a>&nbsp;</p>
+<p>The Western style uses <span class="codepoint" translate="no"><span dir="rtl" lang="syr-Syrj">̱</span> &nbsp; [<a href="/scripts/syriac/block#char0331" target="c"><span class="uname">U+0331 COMBINING MACRON BELOW</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="syr-Syrj">ܒܬ̱ܪ</span> <span class="trans">bṯr</span></span>.</p>
+<p>The marker can also appear below the base, in which case use <span class="codepoint" translate="no"><span lang="syr" dir="rtl">&#x0747;</span> &nbsp;[<a href="/scripts/syriac/block#char0747"><span class="uname">U+0747 SYRIAC OBLIQUE LINE ABOVE</span></a>]</span>.</p>
+<p>Can also be used to indicate numbers multiplied by a certain constant.</p>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p>Indicates a silent letter, eg. <span class="charExample"><span class="ex" lang="syr-Syrj" dir="rtl">ܐ݈</span></span>.</p>
@@ -1361,7 +1689,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0740">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Feminine marker &nbsp;&nbsp; <span class="trans">ʺ</span></p><div class="letter syriac">
+<div class="letter generalInfo">
+<p>Feminine marker.</p>
+<p class="charShape"><span class="ex" lang="syr">ܬ݀</span> <span class="ex" lang="aii">ܬ݀</span> <span class="ex" lang="tru">ܬ݀</span></p>
+<p>Used with <span class="codepoint"><span lang="syr-Syrc" dir="rtl">&#x072C;</span> <a href="/scripts/syriac/block#char072C">[<span class="uname">U+072C SYRIAC LETTER TAW</span>]</a></span> when  it is a feminine suffix. East Syriac fonts should render as two dots below the base letter, whereas West Syriac fonts render as a single dot to the left of the base, eg. <span class="charExample"><span class="ex" lang="syr-Syrj" dir="rtl">ܕܰܫܘܳܬ݀</span></span>. Examples to the right show (top to bottom) estrangelo, eastern, and western styles.</p>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p>A feminine marker used with <span class="codepoint"><span lang="syr-Syrc" dir="rtl">&#x072C;</span> <a href="/scripts/syriac/block#char072C">[<span class="uname">U+072C SYRIAC LETTER TAW</span>]</a></span> when used as a feminine suffix. East Syriac fonts should render as two dots below the base letter, whereas West Syriac fonts render as a single dot to the left of the base, eg. <span class="charExample"><span class="ex" lang="syr-Syrj" dir="rtl">ܕܰܫܘܳܬ݀</span></span>.</p>
@@ -1381,7 +1714,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0743">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Accent mark</p><div class="letter syriac">
+<div class="letter generalInfo">
+<p>Accent mark used in ancient manuscripts.</p>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p>Accent mark used in ancient manuscripts, eg. <span class="charExample"><span class="ex" lang="syr-Syrj" dir="rtl">ܡܪ݃ܝܐ</span></span>.</p>
@@ -1398,7 +1734,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0744">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Accent mark</p><div class="letter syriac">
+<div class="letter generalInfo">
+<p>Accent mark used in ancient manuscripts.</p>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p>Accent mark used in ancient manuscripts, eg. <span class="charExample"><span class="ex" lang="syr-Syrj" dir="rtl">ܡܪ݄ܝ</span></span>.</p>
@@ -1449,7 +1788,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0749">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Music mark</p><div class="letter syriac">
+<div class="letter generalInfo">
+<p>A music mark, eg. <span class="charExample"><span class="ex" lang="syr-Syrj" dir="rtl">ܘܰܩـ݉ـܨܳܐ</span></span>. </p>
+<p>Also used in the Syrian Orthodox Anaphora book to mark the breaking of the Eucharist bread.</p>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p>A music mark, eg. <span class="charExample"><span class="ex" lang="syr-Syrj" dir="rtl">ܘܰܩـ݉ـܨܳܐ</span></span>. Also used in the Syrian Orthodox Anaphora book to mark the breaking of the Eucharist bread.</p>
@@ -1466,7 +1809,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=074A">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Diacritic cross</p><div class="letter syriac">
+<div class="letter generalInfo">
+<p>A diacritic cross used in liturgical texts of all the Syriac churches, East and West.</p>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p>A diacritic cross used in liturgical texts of all the Syriac churches, East and West, eg. <span class="charExample"><span class="ex" lang="syr-Syrj" dir="rtl">ܘܩܰـ݊ـܕܶܫ</span></span>.</p>
@@ -1483,7 +1829,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0711">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Superscript alaph</p><div class="letter syriac">
+<div class="letter generalInfo">
+<p>Superscript alaph. Used in East Syriac texts to indicate an etymological alaph. Maps to nothing in West Syriac.</p>
+</div><div class="letter syriac">
 <p class="titlepara"><span class="title">East Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p>Used in East Syriac texts to indicate an etymological alaph, eg. <span class="charExample"><span class="ex" lang="syr-Syrn" dir="rtl">ܩܲܖ݄ܡܵܝܑܼܬ̣</span></span>. Maps to nothing in West Syriac.</p>
@@ -1499,7 +1847,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <section id="punctuation">
-<h2><a href="#punctuation">Punctuation</a></h2>
+<h2>Punctuation</h2>
 
 <div class="character" id="char0700">
 <div class="charimg">&#x0700;</div>
@@ -1507,7 +1855,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0700">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>End of paragraph</p>
+<div class="letter generalInfo">
+<p> End of paragraph punctuation.</p>
+</div>
 </div>
 </div>
 
@@ -1517,7 +1867,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0701">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Phrase delimiter</p><div class="letter syriac">
+<div class="notes">
+<div class="letter generalInfo">
+<p> Phrase delimiter. </p>
+<p>Marks interrogations, imperatives, and pauses, especially in Biblical texts.</p>
+</div>
+</div><div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p>Marks interrogations, imperatives, and pauses, especially in Biblical texts.<sup>1</sup></p>
@@ -1531,7 +1886,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0702">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Phrase delimiter</p>
+<div class="notes">
+<div class="letter generalInfo">
+<p> Phrase delimiter. </p>
+<p>Marks subordinate clauses and minor pauses, especially in Biblical texts.</p>
+</div>
+</div>
 <div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
@@ -1546,7 +1906,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0703">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Colon</p><div class="letter syriac">
+<div class="notes">
+<div class="letter generalInfo">
+<p> Colon. </p>
+<p>Marks expressions of wonder and has a distinct pausal value in Biblical texts.</p>
+</div>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p>Marks expressions of wonder and has a distinct pausal value in Biblical texts.<sup>1</sup></p>
@@ -1560,7 +1926,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0704">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Colon</p><div class="letter syriac">
+<div class="notes">
+<div class="letter generalInfo">
+<p> Colon. </p>
+<p>Used at the end of verses of supplications.</p>
+</div>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p>Used at the end of verses of supplications.<sup>1</sup></p>
@@ -1574,7 +1946,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0705">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Colon</p><div class="letter syriac">
+<div class="notes">
+<div class="letter generalInfo">
+<p> Colon. </p>
+<p>Joins two words closely together in a context to which a rising tone is suitable.</p>
+</div>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p><span class="ipa"></span>Joins two words closely together in a context to which a rising tone is suitable.<sup>1</sup></p>
@@ -1588,7 +1966,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0706">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Colon</p><div class="letter syriac">
+<div class="notes">
+<div class="letter generalInfo">
+<p> Colon. </p>
+<p>Marks a dependent clause.</p>
+</div>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p>Marks a dependent clause.<sup>1</sup></p>
@@ -1602,7 +1986,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0707">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Colon</p><div class="letter syriac">
+<div class="notes">
+<div class="letter generalInfo">
+<p> Colon. </p>
+<p>Marks the end of a subdivision of the apodosis, or latter part of a Biblical verse.</p>
+</div>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p>Marks the end of a subdivision of the apodosis, or latter part of a Biblical verse.<sup>1</sup></p>
@@ -1616,7 +2006,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0708">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Phrase division</p><div class="letter syriac">
+<div class="notes">
+<div class="letter generalInfo">
+<p> Phrase divider. </p>
+<p>Marks a minor phrase division.</p>
+</div>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p>Marks a minor phrase division.<sup>1</sup></p>
@@ -1630,7 +2026,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0709">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Question mark</p><div class="letter syriac">
+<div class="notes">
+<div class="letter generalInfo">
+<p> Question mark. </p>
+<p>Marks the end of a real or rhetorical question. Should be called sublinear colon skewed left.</p>
+</div>
+</div><div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p>Marks the end of a real or rhetorical question. Should be called sublinear colon skewed left.<sup>1</sup></p>
@@ -1644,7 +2045,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=070A">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Contraction mark</p><div class="letter syriac">
+<div class="notes">
+<div class="letter generalInfo">
+<p> Contraction mark. </p>
+<p>Placed at the end of an incomplete word to mark a contraction. Mostly used in East Syriac.<sup></sup></p>
+</div>
+</div><div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p>Placed at the end of an incomplete word to mark a contraction. Mostly used in East Syriac, eg. <span class="charExample"><span class="ex" lang="syr-Syrc" dir="rtl">ܩܫ܊</span></span>.<sup>1</sup></p>
@@ -1661,7 +2067,14 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=070F">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Abbreviation mark</p><div class="letter syriac">
+<div class="notes">
+<div class="letter generalInfo">
+<p> Abbreviation mark. </p>
+<p>Indicates that a sequence of characters is an abbreviation, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܬ܏ܫܒܘ</span></span> is an abbreviation of <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܬܫܒܘܚܬܐ</span></span>. The line would ideally have a small circle at the start, middle and end. It normally starts to the left of the nearest tall letter to the end of the abbreviation.</p>
+<p>Modern East Syriac texts use a punctuation mark for contractions of this sort.</p>
+<p>It is also used to indicate letter-based numbers, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܒ܏ܝܗ</span></span>. Note how, in this example, the prefix <span lang="syr-syrc">ܒ</span>, is not covered by the SAM, only the number itself.</p>
+</div>
+</div><div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p>Indicates that a sequence of characters is an abbreviation, eg. <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܬ܏ܫܒܘ</span></span> is an abbreviation of <span class="charExample"><span class="ex" lang="syr-syrc" dir="rtl">ܬܫܒܘܚܬܐ</span></span>. The line would ideally have a small circle at the start, middle and end. It normally starts to the left of the nearest tall letter to the end of the abbreviation.</p>
@@ -1681,6 +2094,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=070B">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
+<div class="notes">
+<div class="letter generalInfo">
+<p> Note marker. </p>
+<p>Marks the beginning of a phrase, word, or morpheme that has a marginal note in the Herklean translation of the New Testament. The section is ended using <span class="codepoint"><span lang="syr-Syre" dir="rtl">&#x070C;</span> <a href="/scripts/syriac/block#char070C">[<span class="uname">U+070C SYRIAC HARKLEAN METOBELUS</span>]</a></span>.</p>
+</div>
+</div>
 <p>Note marker</p><div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
@@ -1698,7 +2117,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=070C">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Note marker</p><div class="letter syriac">
+<div class="notes">
+<div class="letter generalInfo">
+<p> Note marker. </p>
+<p>Marks the end of a section with a marginal note in the Herklean translation of the New Testament. The beginning of the section is indicated using <span class="codepoint"><span lang="syr-Syre" dir="rtl">&#x070B;</span> <a href="/scripts/syriac/block#char070B">[<span class="uname">U+070B SYRIAC HARKLEAN OBELUS</span>]</a></span> or <span class="codepoint"><span lang="syr-Syre" dir="rtl">&#x070D;</span> <a href="/scripts/syriac/block#char070D">[<span class="uname">U+070D SYRIAC HARKLEAN ASTERISCUS</span>]</a></span>.</p>
+</div>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p>Marks the end of a section with a marginal note in the Herklean translation of the New Testament. The beginning of the section is indicated using <span class="codepoint"><span lang="syr-Syre" dir="rtl">&#x070B;</span> <a href="/scripts/syriac/block#char070B">[<span class="uname">U+070B SYRIAC HARKLEAN OBELUS</span>]</a></span> or <span class="codepoint"><span lang="syr-Syre" dir="rtl">&#x070D;</span> <a href="/scripts/syriac/block#char070D">[<span class="uname">U+070D SYRIAC HARKLEAN ASTERISCUS</span>]</a></span>.<sup>1</sup> For example: <span class="charExample"><span class="ex" lang="syr-Syre" dir="rtl">܋ܙܒܢܝ̈ܢ܌</span></span></p>
@@ -1715,7 +2140,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=070D">See in UniView</a></p>
 <div class="unicodenotes"></div>
 <div class="notes">
-<p>Note marker</p><div class="letter syriac">
+<div class="notes">
+<div class="letter generalInfo">
+<p> Note marker. </p>
+<p>Marks the beginning of a phrase, word, or morpheme that has a marginal note in the Herklean translation of the New Testament. The section is ended using <span class="codepoint"><span lang="syr-Syre" dir="rtl">&#x070C;</span> <a href="/scripts/syriac/block#char070C">[<span class="uname">U+070C SYRIAC HARKLEAN METOBELUS</span>]</a></span></p>
+</div>
+</div>
+<div class="letter syriac">
 <p class="titlepara"><span class="title">Syriac</span>
  &nbsp;&nbsp;  <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
 <p>Marks the beginning of a phrase, word, or morpheme that has a marginal note in the Herklean translation of the New Testament. The section is ended using <span class="codepoint"><span lang="syr-Syre" dir="rtl">&#x070C;</span> <a href="/scripts/syriac/block#char070C">[<span class="uname">U+070C SYRIAC HARKLEAN METOBELUS</span>]</a></span>.<sup>1</sup> For example: <span class="charExample"><span class="ex" lang="syr-Syre" dir="rtl">܍ܥܙܢܐ܌</span></span></p>
@@ -1735,25 +2166,26 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <section id="refs">
 <h2><a href="#refs" id="endlinks">References</a></h2>
 <ol>
-<li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN 0-19-507993-0</li>
-<li>[ <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch09.pdf">u</a></sup> ] The Unicode Standard v9.0, <a href="http://www.unicode.org/versions/Unicode11.0.0/ch09.pdf">Syriac</a>. </li>
-<li>[ <sup><a href="httphttps://en.wikipedia.org/wiki/Syriac_alphabet">w</a></sup> ] Wikipedia, <a href="httphttps://en.wikipedia.org/wiki/Syriac_alphabet">Syriac alphabet</a></li>
-<li>[ <sup><a href="http://www.unicode.org/L2/L1998/98050-syriac-proposal.pdf">n</a></sup> ] Paul Nelson, George Anton Kiraz, Sargon Hass, <a href="http://www.unicode.org/L2/L1998/98050-syriac-proposal.pdf"><cite>Proposal to Encode Syriac in ISO/IEC 10646</cite></a>, 1998</li>
-<li>[ <sup><a href="http://www.unicode.org/L2/L2002/02132-N2422-syrian.pdf">s</a></sup> ] Nicholas Sims-Williams, Michael Everson, <cite><a href="http://www.unicode.org/L2/L2002/02132-N2422-syrian.pdf">Proposal to add six Syriac letters for Sogdian and Persian to the UCS</a></cite></li>
+<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN 0-19-507993-0</li>
+<li>[ <a class="fnref" href="http://www.unicode.org/L2/L1998/98050-syriac-proposal.pdf">n</a> ] Paul Nelson, George Anton Kiraz, Sargon Hass, <a href="http://www.unicode.org/L2/L1998/98050-syriac-proposal.pdf"><cite>Proposal to Encode Syriac in ISO/IEC 10646</cite></a>, 1998</li>
+<li>[ <a class="fnref" href="http://www.unicode.org/L2/L2002/02132-N2422-syrian.pdf">s</a> ] Nicholas Sims-Williams, Michael Everson, <cite><a href="http://www.unicode.org/L2/L2002/02132-N2422-syrian.pdf">Proposal to add six Syriac letters for Sogdian and Persian to the UCS</a></cite></li>
+<li>[ <a class="fnref" href="https://textbook.surayt.com/en/Level%20A/0">a</a> ] Aramaic Online Project (2014-2017) edited by Shabo Talay, <a href="https://textbook.surayt.com/en/Level%20A/0">ܫܠܳܡܐ ܣܘܪܰܝܬ Šlomo Surayt An Introductory Course to Surayt-Aramaic (Turoyo)</a></li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch09.pdf">u</a> ] The Unicode Standard v9.0, <a href="http://www.unicode.org/versions/Unicode11.0.0/ch09.pdf">Syriac</a>. </li>
+<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Syriac_alphabet">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Syriac_alphabet">Syriac alphabet</a></li>
 </ol>
 </section>
 
 
 
 
+<!-- replaceStuff (box_title, class_to_merge_with, spreadsheet, bicameral?, lang, dir, cols, showShape) -->
 
 
 
-
-<script src="../../shared/scriptdb/syriac.js">  </script>
+<script src="../../shared/scriptdb/syrc.js">  </script>
 
 <script>
-replaceStuff('Syriac', 'syriac', spreadsheet, '', 'syr-syrc', '', cols, false)
+replaceStuff('Syriac', 'syriac', spreadsheet, '', 'syr', 'rtl', cols, false)
 </script> 
 
 
@@ -1766,7 +2198,20 @@ replaceStuff('Syriac', 'syriac', spreadsheet, '', 'syr-syrc', '', cols, false)
 <script src="../../shared/scriptdb/assyrian.js">  </script>
 
 <script>
-replaceStuff('Assyrian Neo-Aramaic', 'assyrian', spreadsheet, '', 'aii', '', cols, false)
+replaceStuff('Assyrian Neo-Aramaic', 'assyrian', spreadsheet, '', 'aii', 'rtl', cols, false)
+</script> 
+
+
+
+
+
+
+
+
+<script src="../../shared/scriptdb/syrc-tru.js">  </script>
+
+<script>
+replaceStuff('Turoyo', 'tru', spreadsheet, '', 'tru', 'rtl', cols, false)
 </script> 
 
 
@@ -1775,14 +2220,14 @@ replaceStuff('Assyrian Neo-Aramaic', 'assyrian', spreadsheet, '', 'aii', '', col
 <div id="panel" style="display:none"></div>
 
 
-<div class="smallprint"><span id="version">Last commit <a href="https://github.com/r12a/scripts/commits/gh-pages/syriac/block.html"><span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2019-07-14  18:11<!-- #EndDate --> 
-  </span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bsyriac%20characters%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fsyriac%2Fblock%0A%0A" target="_blank">comment</a> &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
-
+<div class="smallprint"><span id="version"></span></div>
 
 
 <script>
-initialise('/scripts/syriac/block')
+initialise('/scripts/syriac/block','syriac')
+autoTransliterate('syr')
+autoTransliterate('aii')
+autoTransliterate('tru')
 </script>
 </body>
 </html>
