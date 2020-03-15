@@ -304,7 +304,9 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
 		tempArray = [... items[0]]
 		if (tempArray.length > 1) continue
 
+		// quite if the spreadsheet indicates that this should not be displayed
 		if (items[cols.class] && items[cols.class].includes('-')) continue
+		if (items[cols.class] && items[cols.class].includes('x')) continue
 
 		// get the character as dec & hex
         if (items[0].includes('\\u')) var dec = parseInt(items[0].replace('\\u',''),16)
