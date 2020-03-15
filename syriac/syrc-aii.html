@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<title>Assyrian script summary</title>
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="description" content="Summary of the Syriac script."/>
+<link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../common/local.css" />
+<style>
+@font-face {
+    font-family: 'eastern';
+    src: url('/shared/webfonts/notosanssyriaceastern-regular-webfont.woff2') format('woff2'),
+         url('/shared/webfonts/notosanssyriaceastern-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+@font-face {
+    font-family: 'estrangela';
+    src: url('/shared/webfonts/notosanssyriacestrangela-regular-webfont.woff2') format('woff2'),
+         url('/shared/webfonts/notosanssyriacestrangela-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+@font-face {
+    font-family: 'western';
+    src: url('/shared/webfonts/notosanssyriacwestern-regular-webfont.woff2') format('woff2'),
+         url('/shared/webfonts/notosanssyriacwestern-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+@font-face {
+    font-family: 'Adiabene WF';
+    src: url('/shared/webfonts/syrcomadiabene.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+@font-face {
+    font-family: 'Estrangela Edessa WF';
+    src: url('/shared/webfonts/syrcomedessa.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+@font-face {
+    font-family: 'Serta Jerusalem WF';
+    src: url('/shared/webfonts/syrcomjerusalem.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+#eastern {
+	font-size: 40px;
+	font-family: 'Adiabene WF', eastern, serif;
+	text-align: start;
+    line-height: 1.4;
+	}
+#estrangela {
+	font-size: 40px;
+	font-family: 'Estrangela Edessa WF', estrangela, serif;
+	text-align: start;
+    line-height: 1.4;
+	}
+#western {
+	font-size: 40px;
+	font-family: 'Serta Jerusalem WF', western, serif;
+	text-align: start;
+    line-height: 1.4;
+	}
+@media print { #eastern { font-size: 18px; } }
+@media print { #estrangela { font-size: 18px; } }
+@media print { #western { font-size: 18px; } }
+[lang=syr-syrc] { font-family: eastern, serif; font-size: 140%; }
+[lang=syr-syrn] { font-family: eastern, serif; font-size: 140%; }
+[lang=syr-syre] { font-family: estrangela, serif; font-size: 140%; }
+[lang=syr-syrj] { font-family: 'Serta Jerusalem WF', western, serif; font-size: 180%; }
+[lang=aii] { font-family: 'Adiabene WF', "East Syriac Ctesiphon", "East Syriac Adiabene", eastern, serif; font-size: 180%; }
+.large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
+</style>
+
+<script src="../../shared/scriptdb/assyrian.js"> </script>
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
+<script src="../../shared/code/all-names.js"></script>
+<script src="../../shared/code/character_conversion.js"></script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/fontlists/manage.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
+<script src="../common/functions.js"></script>
+<script src="../common/transliterate.js"></script>
+<script src="../common/prompts.js"> </script>
+<script src="../glossary/glossary.js"> </script>
+<script src="../../shared/code/getLinks.js"></script>
+<script src="../../scripts/linkdata/linkdb.js"></script>
+<script src="../featurelist/scriptdata.js"> </script>
+
+<script src="../../shared/fontlists/syriac.js"> </script>
+<script src="aii-translit.js">  </script>
+</head>
+
+<body>
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
+</header>
+
+<h1>Assyrian Neo-Aramaic (draft)</h1>
+
+<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" title="Jump to top of page." alt="Jump to top of page."/></a></nav>
+
+<aside class="sidebar">
+<nav>
+<h2 class="notoc flush"><a id="tochead">Contents</a></h2>
+<div id="toc"><!-- placeholder --></div>
+  </nav>
+
+ <div id="fontsetting" class="closed">
+  <h2 class="notoc"><a id="fonts">Fonts</a></h2>
+  <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
+   <p>Set font for examples<br/>
+      <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'aii'); setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'aii'); setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'syr-Syre'); setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'syr-Syrj');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'aii'); setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'aii'); setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'syr-Syre'); setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'syr-Syrj');" />
+    </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('eastern').style.fontFamily = document.getElementById('slfontswitchfont').value; document.getElementById('estrangela').style.fontFamily = document.getElementById('slfontswitchfont').value; document.getElementById('western').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
+    <form oninput="document.getElementById('eastern').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; document.getElementById('western').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; document.getElementById('estrangela').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
+	return false;">
+      <p>Change size:<br />
+        <input id="slider" type="range" min="12" max="100" step="1" value="32">
+        &#xA0; <span id="sizeIndicator">32px</span><br />
+        <input id="multiplier" type="hidden" value="1" />
+        Multiplier:
+        <input type="radio" name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x1">1</label>
+        <input type="radio" name="step" id="x5" value="2"  onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x5">2</label>
+        <input type="radio" name="step" id="x10" value="10"  onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x10">10</label>
+      </p>
+    </form>
+</div>
+</aside>
+
+
+<p id="status">Updated 
+  <!-- #BeginDate format:Sw1 -->13 March, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
+
+
+<section>
+  <p>This page gathers together basic information about the Syriac script and its use for the Assyrian Neo-Aramaic language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Assyrian Neo-Aramaic using Unicode; for greater details follow the footnote links (especially those with an arrow alongside them).</p>
+<p>See the <a class="linkHighlight" href="index">Syriac</a> page for most of the information about how the Syriac script works, and the orthography used for the Syriac language. This page aims to provide Assyrian-specific information.&nbsp;</p>
+<p> For character-specific details follow the links to the <a href="block" class="linkHighlight">Syriac character notes</a>. See also the <a href="../../pickers/syriac/" class="linkHighlight"> Syriac picker</a>, the <a href="../../pickers/syr-aii/" class="linkHighlight">Assyrian Neo-Aramaic picker</a>, and the <a href="../../pickers/syr-tru/" class="linkHighlight"> Turoyo picker</a>.</p>
+<p>For similar information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Syrc">script links pages</a>.</p>
+
+<p class="instructions">Clicking on   example text, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.  <!--Colours and annotations on panels listing characters are relevant to their use for the Assyrian Neo-Aramaic language.--> Colours and annotations on panels listing characters are relevant to their use for the Assyrian Neo-Aramaic language.</p>
+<p class="instructions">Unless in parentheses, the transcriptions in italics that follow Assyrian Neo-Aramaic text are a <a href="../glossary/#transliteration" class="termref">transliteration</a> developed for these pages. Those in parentheses are usually more standard transcriptions. Transcriptions in <span style="white-space:nowrap;">⌈ brackets ⌋</span> may be phonemic or phonetic.</p>
+</section>
+
+
+
+<section id="sample">
+<h2>Samples</h2>
+  <p>Only the first part of the Estrangelo and Serto samples are pointed.</p>
+  
+<section id="easternsample">
+<h3>assyrian neo-aramaic (maḏnḥāyā)</h3>
+  <div id="eastern" dir="rtl" lang="syr-syrn" data-target="c" data-base="/scripts/syriac/block" data-source="http://unicode.org/udhr/translations.html">
+    <p  title="UDHR, article 1" onMouseUp="showtext('eastern')">ܩܘ݂ܝܵܡܵܐ ܕܟܠ ܚܕܵܐ ܐܘ݂ܡܬܵܐ ܬܸܠܝܵܐ ܝܠܹܗ ܒܠܸܫܵܢܘ݁ܗ، ܘܠܸܫܵܢܵܐ ܒܟܬܝ݂ܵܒ݂ܵܬܘ݂ܗܝ ܘܒܣܸܦܪܵܝܘ݂ܬܘ݂ܗܝ. ܚܲܕ ܠܸܫܵܢܵܐ ܕܠܐ ܟܬܝܼ̈ܒܹܬܵܐ، ܐܲܝܟ ܚܲܕ ܟܲܪܡܵܐ ܝܠܹܗ ܕܠܵܐ ܢܵܛܘܿܪܹ̈ܐ.  ܐܵܗܵܐ ܒܸܬ ܦܵܐܹܣ ܐ݇ܟ݂ܝܼܠܵܐ ܒܓܸܠܹ̈ܐ ܫܹܐܕܵܢܹ̈ܐ، ܘܠܸܫܵܢܵܐ ܒܚܵܒܪܹ̈ܐ ܢܘ݂ܼܟܪ݂̈ܵܝܹܐ.</p>
+  <p title="UDHR, article 2" onMouseUp="showtext('eastern')">ܐܵܗܵܐ ܠܸܫܵܢܲܢ، ܐܵܦܸܢ ܡܘܼܣܟܸܢܵܐ، ܐܝܼܢܵܐ ܡܵܪܹܐ ܛܘܼܗܡܵܐ ܝܠܹܗ، ܘܐܝܼܬ ܠܹܗ ܕܝܼܠܵܝܵܬܹ̈ܐ ܚܩܝܼܪܹ̈ܐ.  ܐܸܢ ܦܵܝܫܝܼ ܒܘܼܓ̰ܪܹ̈ܐ، ܟܹܐ ܗܵܘܝܼ ܡܲܦܬܘܼܝܹܐ ܘܓܲܪܘܘܼܣܹܐ ܒܣܸܕܪܵܐ ܕܐܵܢ ܠܸܫܵܢܹ̈ܐ ܣܸܦܪ̈ܵܝܹܐ ܘܪܗܸܛܪ̈ܵܝܹܐ ܕܕܘܼܢܝܹܐ.</p>
+  <!-- Source: Daniels p503 -->
+  </div>
+</section>
+  
+  
+</section>
+  
+  
+
+
+
+ <section id="history">
+<h2>Usage &amp; history</h2>
+    <p>From <a href="http://scriptsource.org/scr/Syrc">Scriptsource</a>: </p>
+    <blockquote>The Syriac script is attested as early as the year 6 AD. It was primarily used for writing the Syriac language, now extinct outside of the Syrian church. The Assyrian Neo-Aramaic, Chaldean Neo-Aramaic and Turoyo/Surayt languages are descended from Syriac, and are still written in the Syriac script. It can also be used for writing Arabic, known as Garshani writing. The script is descended from Proto-Canaanite writing. There are two main dialects of spoken Syriac; West Syriac, used by the Syrian Orthodox, Maronites, and Syrian Catholics; and East Syriac, used by the Assyrians and Chaldaeans. There are three ancient variations of the script: the classical liturgical script called Estrangelo, the Western variant, and the Eastern variant. There is also a Modern Syriac orthography, based on the Eastern variety and having the aim of bridging the differences in Aramaic dialects. A common spoken Aramaic koine used among Iraqis of Assyrian descent is based on this orthography.</blockquote>
+    <p>From <a href="http://en.wikipedia.org/wiki/Syriac_alphabet">Wikipedia</a>:</p>
+<blockquote>
+<p>Assyrian Neo-Aramaic or simply Assyrian (ܣܘܪܝܬ or ܣܘܪܬ Sūreṯ), also known as Syriac, Eastern Syriac and Neo-Syriac, is an Aramaic language within the Semitic branch of the Afro-Asiatic language family that is spoken by the Assyrian people. The various Assyrian dialects descend from Old Aramaic, the lingua franca in the later phase of the Assyrian Empire, which slowly displaced the East Semitic Akkadian language beginning around the 10th century BC They have been further heavily influenced by Classical Syriac, the Middle Aramaic dialect of Edessa, after its adoption as an official liturgical language of the Syriac churches. </p>
+<p>Assyrian-speakers are native to Upper Mesopotamia, Iranian Azerbaijan, southeastern Anatolia and the northeastern Levant, which is a large region stretching from the plain of Urmia in northwestern Iran through to the Erbil, Kirkuk and Duhok regions in northern Iraq, together with the northern regions of Syria and to southcentral and southeastern Turkey. Instability throughout the Middle East over the past century has led to a worldwide diaspora of Assyrian speakers, with most speakers now living abroad in such places as North and South America, Australia, Europe and Russia. Speakers of Assyrian and Turoyo are ethnic Assyrians and are the descendants of the ancient inhabitants of Mesopotamia.</p>
+</blockquote>
+</section>
+
+
+
+
+<div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+    </table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+   </div>
+
+
+
+
+<section id="key_features">
+<h2>Distinctive features</h2>
+    <p>Syriac is an <span class="newterm"><a href="https://www.unicode.org/glossary/#abjad" class="termref"> abjad</a></span>. The script relies mostly on consonant sounds to write words, although in Modern Aramaic written in Syriac vowel sounds tend to be written using diacritics, making it more like an alphabetic script.  See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
+</p>
+<p>The modern Aramaic koine uses the madnhaya script orthography, and is usually fully pointed, making it more like an alphabet than an abjad. There are however obligatory points and optional diacritics.</p>
+    <p>Words in Syriac are separated by spaces.</p>
+<p><em>Note on transliteration: </em>The transliterated text here conforms mostly to that of the sources used, but takes a departure for the vowels in order to ensure a one-to-one correspondence between Syriac and Latin characters.</p>
+</section>
+
+
+
+
+
+
+<section id="dir">
+<h2>Text direction</h2>
+    <p>Syriac script is written horizontally, right-to-left. Like other RTL scripts, such as Arabic and Hebrew, modern numbers  are  written left-to-right. </p>
+    <figure>
+<p dir="rtl" lang="aii"  class="large"><span class="ex">ܡܠܘܐܐ 26</span></p>
+<figcaption class="instructions">Highlight the letters in this example, which contains numbers and words, to see how the order of characters when displayed differs for text and digits.</figcaption>
+</figure>
+  </section>
+
+
+
+
+
+
+<div id="showTranscriptions">
+<div>Character lists show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div>
+<label>Transliteration 
+<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
+<div>
+  <label>Latin 
+    <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+</div>
+
+
+
+
+
+
+<section id="vowels">
+<h2>Vowels</h2>
+    <p>All vowels are rendered in Syriac using combining characters. There are two sets of these. <span class="trans">Maḏnḥāyā</span> uses a series of dots. <span class="trans">Serṭā</span> uses a set of miniaturised Greek characters, but also uses the dots. <span class="trans">ʾEsṭrangēlā</span> doesn't normally show vowels.</p>
+    <p>Modern Aramaic written in Syriac is usually fully pointed.</p>
+
+
+
+
+
+
+
+<section id="vowelPhonemes">
+<h3>Vowel sounds</h3>
+
+<p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+
+
+<section id="plain_vowels">
+<h4>Plain vowels.</h4>
+
+
+<div style="margin-left: 7.5%;">
+<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="white"/>
+      <feComposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -->
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+    
+  <!-- near close -->
+  <circle cx="93" cy="40" r="3" fill="#ccc"/>
+
+   <!-- mid close -->
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -->
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- open -->
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+  <!-- near close -->
+  <text x="85" y="45" class="allophone" text-anchor="end">ɪ</text> 
+
+<!-- close -->
+  <text x="32" y="15" class="ipa" text-anchor="end">i</text> 
+  <text x="250" y="15" class="ipa">u</text> 
+
+  <!-- close mid -->
+  <text x="57" y="75" class="ipa" text-anchor="end">e</text> 
+  <text x="250" y="75" class="ipa">o</text> 
+
+  <!-- mid -->
+  <text x="158" y="105" class="ipa" text-anchor="middle" filter="url(#solid)">ə</text>
+  <text x="158" y="105" class="ipa" text-anchor="middle">ə</text> 
+
+  <!-- open mid -->
+  <text x="81" y="135" class="allophone" text-anchor="end">ɛ</text> 
+  <text x="250" y="135" class="allophone">ɔ</text> 
+
+  <!-- open -->
+  <text x="106" y="195" class="ipa" text-anchor="end">a</text> 
+  <text x="232" y="195" class="ipa" text-anchor="end" filter="url(#solid)">ɑ</text>
+  <text x="232" y="195" class="ipa" text-anchor="end">ɑ</text> 
+</svg>
+</div>
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source <a class="fnref" href="https://en.wikipedia.org/wiki/Assyrian_Neo-Aramaic">wa</a>. Phones in a lighter colour are non-native or allophones.</p>
+<p>There are several dialects, each of which have slight phonetic differences. For more detail, see <a href="https://en.wikipedia.org/wiki/Assyrian_Neo-Aramaic#Vowels">Wikipedia</a>.</p>
+</section>
+
+
+
+<section id="diphthongs">
+<p><span class="leadin">Diphthongs.</span></p>
+
+<div style="margin-left: 7.5%;">
+<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="white"/>
+      <feComposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -->
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+
+   <!-- mid close -->
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -->
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- open -->
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+
+<!-- close -->
+  <!-- open -->
+  <text x="106" y="195" class="ipa" text-anchor="end">aj aw</text> 
+</svg>
+</div>
+
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source <a class="fnref" href="https://en.wikipedia.org/wiki/Assyrian_Neo-Aramaic">wa</a>.</p>
+</section>
+</section>
+
+
+
+
+
+
+
+
+<section id="consonant_vowels">
+<h3>Consonants representing vowels (matres lectionis)</h3>
+<p id="def-materlectionis" class="explanatoryintro definitionStub"></p>
+
+<p>Three consonants can  represent vowels, particularly in unpointed text. They are <span class="codepoint"><span lang="aii" dir="rtl">&#x0710;</span> <a href="/scripts/syriac/block#char0710">[<span class="uname">U+0710 SYRIAC LETTER ALAPH</span>]</a></span>, <span class="codepoint"><span lang="aii" dir="rtl">&#x0718;</span> <a href="/scripts/syriac/block#char0718">[<span class="uname">U+0718 SYRIAC LETTER WAW</span>]</a></span> and <span class="codepoint"><span lang="aii" dir="rtl">&#x071D;</span> <a href="/scripts/syriac/block#char071D">[<span class="uname">U+071D SYRIAC LETTER YUDH</span>]</a></span>. For details,  follow the links to see the character descriptions.</p>
+ <p>Other vowels are expressed  through applying the  diacritics to a base letter.    </p>
+    </section>
+
+
+
+
+<section id="basic_vowels">
+<h3>Vowel points</h3>
+<p>In the Eastern style, the 7 basic vowel sounds are expressed using 6 dotted vowel diacritics.</p>
+  
+  
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ܼ␣ܸ␣ܹ␣ܿ␣ܲ␣ܵ</figure>
+
+
+<p>In the modern Aramaic koine, 2 of these diacritics are only used in conjunction with a particular consonant: </p>
+ <ul>
+ <li><span class="codepoint"><span lang="aii" dir="rtl">&#x071D;</span> + <span lang="aii" dir="rtl">&#xA0;&#x073C;</span> <a href="/scripts/syriac/block#char071D">[<span class="uname">U+071D SYRIAC LETTER YUDH</span></a> + <a href="/scripts/syriac/block#char073C"><span class="uname">U+073C SYRIAC HBASA-ESASA DOTTED​</span>]</a></span> (<span class="trans"> î</span> )</li>
+ <li><span class="codepoint"><span lang="aii" dir="rtl">&#x0718;</span> + <span lang="aii" dir="rtl">&#xA0;&#x073C;</span> <a href="/scripts/syriac/block#char071D">[<span class="uname">U+071D SYRIAC LETTER WAW</span></a> + <a href="/scripts/syriac/block#char073C"><span class="uname">U+073C SYRIAC HBASA-ESASA DOTTED​</span>]</a></span> ( <span class="trans">û</span> )</li>
+ <li><span class="codepoint"><span lang="aii" dir="rtl">&#x0718;</span> + <span lang="aii" dir="rtl">&#xA0;&#x073F;</span> <a href="/scripts/syriac/block#char0718">[<span class="uname">U+071D SYRIAC LETTER WAW</span></a> + <span class="codepoint"> <a href="/scripts/syriac/block#char073F"><span class="uname">U+073F SYRIAC RWAHA</span>]</a></span></span> ( <span class="trans">ô</span> )</li>
+ </ul>
+ <p>The remainder can be used with most consonant letters.</p>
+<p>The following table shows how standard vowel sounds can be written, using <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒ</span></span> as a base.</p>
+<table>
+<tr>
+<th><span class="ipa">i</span></th><td><span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒܝܼ</span></span></td>
+
+<th><span class="ipa">ɪ</span></th>
+<td><span class="ex"><span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒܸ</span></span></span></td>
+
+<th><span class="ipa">u</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒܘܼ</span></span></td>
+</tr>
+<tr>
+<th><span class="ipa">e</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒܹ</span></span> <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒܹܝ</span></span> <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒܸܝ</span></span></td>
+
+<th><span class="ipa">ɛ</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒܸ</span></span></td>
+
+<th><span class="ipa">o</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒܘܿ</span></span></td>
+</tr>
+<tr>
+<th>&nbsp;</th><th>&nbsp;</th>
+<th><span class="ipa">a</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒܲ</span></span></td>
+
+<th><span class="ipa">ɑ</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒܵ</span></span></td>
+</tr>
+</table>
+
+</section>
+
+
+
+
+  <section id="tone_marks">
+<h3>Greek letter notation</h3>
+ 
+    <p>In the Western style there are 5 Greek symbols, but each can appear either above or below the base character, and one code point is provided for each position. The complete set is as follows:</p> 
+ 
+
+
+<figure class="otherBox auto" data-cols="ipa,trans,transc">ܺ␣ܻ␣ܽ␣ܾ␣ܶ␣ܷ␣ّ␣ܰ␣ܱ␣ܳ␣ܴ</figure>
+
+  <p>The serta style of the script also uses a lowercase omega on one word, the interjection 'Oh!', ie. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܐܘّ</span> <span class="trans">ʾō</span></span>. The omega is represented using <span class="codepoint"><span lang="aii" dir="rtl">&#x0651;</span> &nbsp; <a href="/scripts/syriac/block#char0651">[<span class="uname">U+0651 ARABIC SHADDA​</span>]</a></span>.</p>
+
+<p>The following table shows how standard vowel sounds can be written, using <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒ</span></span> as a base.</p>
+<table>
+<tr>
+<th><span class="ipa">i</span></th><td><span class="charExample" translate="no"><span class="ex" lang="syr-syrj" dir="rtl">ܒܺ|ܒܻ</span></span></td>
+
+<th><span class="ipa">ɪ</span></th>
+<td>&nbsp;</td>
+
+<th><span class="ipa">u</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="syr-syrj" dir="rtl">ܒܽ|ܒܾ</span></span></td>
+</tr>
+<tr>
+<th><span class="ipa">e</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="syr-syrj" dir="rtl">ܒܶ|ܒܷ</span></span></td>
+
+<th><span class="ipa">ɛ</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="syr-syrj" dir="rtl">ܒܶ|ܒܷ</span></span></td>
+
+<th><span class="ipa">o</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="syr-syrj" dir="rtl">ܒܳ|ܒܴ</span></span></td>
+</tr>
+<tr>
+<th>&nbsp;</th><th>&nbsp;</th>
+<th><span class="ipa">a</span></th>
+<td><span class="charExample" translate="no"><span class="ex" lang="syr-syrj" dir="rtl">ܒܰ|ܒܱ</span></span></td>
+
+<th><span class="ipa">ɑ</span></th>
+<td>&nbsp;</td>
+</tr>
+</table>
+</section>
+</section>
+	
+	
+	
+	
+	
+	
+<section id="consonants">
+<h2>Consonants</h2>
+
+
+
+
+<section id="consonantSounds">
+<h3>Consonant sounds</h3>
+
+<p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+
+<table class="ipaTable">
+<thead>
+<tr>
+<th></th>
+<th>labial </th>
+<th>dental </th>
+<th>alveolar </th>
+<th>post-<br>
+alveolar</th>
+<th>palatal </th>
+<th>velar </th>
+<th>uvular</th>
+<th>pharyngeal</th>
+<th>glottal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>stop</th>
+<td><span class="ipa">p</span> <span class="ipa">b</span><br>
+<span class="ipa">pˤ</span><br>
+<span class="ipa">pʰ</span></td>
+<td><span class="ipa">t</span> <span class="ipa">d</span><br/>
+<span class="ipa">tˤ</span><br/>
+<span class="ipa">tʰ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="allophone">c</span> <span class="allophone">ɟ</span><br>
+<span class="allophone">cˤ</span><br>
+<span class="allophone">cʰ</span></td>
+<td><span class="ipa">k</span> <span class="ipa">ɡ</span><br/>
+<span class="ipa">kˤ</span><br/>
+<span class="ipa">kʰ</span></td>
+<td><span class="ipa">q</span></td>
+<td>&nbsp;</td>
+<td><span class="allophone">ʔ</span></td>
+</tr>
+<tr>
+<th>affricate</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">t͡ʃ</span> <span class="ipa">d͡ʒ</span><br/>
+<span class="ipa">t͡ʃˤ</span><br/>
+<span class="ipa">t͡ʃʰ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>fricative </th>
+<td><span class="allophone">f</span> <span class="allophone">v</span></td>
+<td><span class="allophone">θ</span> <span class="allophone">ð</span></td>
+<td><span class="ipa">s</span> <span class="ipa">z</span><br/>
+<span class="ipa">sˤ</span></td>
+<td><span class="ipa">ʃ</span> <span class="ipa">ʒ</span><br/></td>
+<td>&nbsp;</td>
+<td><span class="ipa">x</span> <span class="ipa">ɣ</span></td>
+<td>&nbsp;</td>
+<td><span class="allophone">ħ</span> <span class="allophone">ʕ</span></td>
+<td><span class="ipa">h</span></td>
+</tr>
+<tr>
+<th>nasal</th>
+<td><span class="ipa">m</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">n</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="allophone">ŋ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>approximant</th>
+<td><span class="allophone">ʋ</span> <span class="ipa">w</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">l</span> <span class="ipa">lˤ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">j</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>trill/flap</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">r</span> <span class="ipa">ɾ</span> <span class="ipa">rˤ</span></td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th></th>
+<td class="mouth"><a href="../common/mouth/mouth_labial.png" target="_blank"><img src="../common/mouth/mouth_small_labial.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_dental.png" target="_blank"><img src="../common/mouth/mouth_small_dental.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_alveolar.png" target="_blank"><img src="../common/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_postalveolar.png" target="_blank"><img src="../common/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_palatal.png" target="_blank"><img src="../common/mouth/mouth_small_palatal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_velar.png" target="_blank"><img src="../common/mouth/mouth_small_velar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_uvular.png" target="_blank"><img src="../common/mouth/mouth_small_uvular.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_pharyngeal.png" target="_blank"><img src="../common/mouth/mouth_small_pharyngeal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_glottal.png" target="_blank"><img src="../common/mouth/mouth_small_glottal.png" alt=" "/></a></td>
+</tr>
+</tbody>
+</table>
+
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source <a class="fnref" href="https://en.wikipedia.org/wiki/Assyrian_Neo-Aramaic">wa</a>. Phones in a lighter colour are non-native or allophones.</p>
+
+<p>Among most Assyrian Neo-Aramaic speakers, the pharyngeal  <span class="ipa">ʕ</span> is  pronounced as <span class="ipa">ʔ</span> or <span class="ipa">∅</span>, or geminates a previous consonant.</p>
+
+<details>
+<summary class="instructions">Show notes on dialectal variations, taken directly from Wikipedia:</summary>
+<ul style="font-size: 90%; margin: 1em 0;">
+<li>In Iraqi Koine Assyrian and many Urmian &amp; Northern dialects, the palatals <span class="ipa">c</span>, <span class="ipa">ɟ</span> and aspirate <span class="ipa">cʰ</span> are considered the predominate realisation of <span class="ipa">k</span>, <span class="ipa">g</span> and aspirate <span class="ipa">kʰ</span>.</li>
+<li>The phoneme <span class="ipa">ħ</span> is only used by Assyrian-speakers under larger Arabic influence. In most dialects, it is realised as <span class="ipa">x</span>. The one exception to this is the dialect of Hértevin, which merged the two historical phonemes into <span class="ipa">ħ</span>, thus lacking <span class="ipa">x</span> instead.</li>
+<li>The pharyngeal <span class="ipa">ʕ</span>, represented by the letter <span class="trans">`e</span>, is a marginal phoneme that is generally upheld in formal or religious speech. Among the majority of Assyrian speakers, <span class="trans">`e</span> would be realised as <span class="ipa">aɪ̯</span>, <span class="ipa">eɪ̯</span>, <span class="ipa">ɛ</span>, <span class="ipa">j</span>, deleted, or even geminating the previous consonant, depending on the dialect and phonological context.</li>
+<li><span class="ipa">f</span> is a phoneme heard in the Tyari, Barwari and Chaldean dialects. In most of the other Assyrian varieties, it merges with <span class="ipa">p</span>. though <span class="ipa">f</span> is found in loanwords for these varieties of Assyrian.</li>
+<li>The phonemes <span class="ipa">t</span> and <span class="ipa">d</span> have allophonic realisations of <span class="ipa">θ</span> and <span class="ipa">ð</span> (respectively) in most Lower Tyari, Barwari and Chaldean dialects, which is a carryover of <span class="name">begadkefat</span> from the Ancient Aramaic period.</li>
+<li>In the Upper Tyari dialects, <span class="ipa">θ</span> is realised as <span class="ipa">ʃ</span> or <span class="ipa">t</span>; in the Marga dialect, the <span class="ipa">t</span> may at times be replaced with <span class="ipa">s</span>.</li>
+<li>In the Urmian dialect, <span class="ipa">w</span> has a widespread allophone <span class="ipa">ʋ</span> (it may vacillate to <span class="ipa">v</span> for some speakers).</li>
+<li>In the Jilu dialect, <span class="ipa">q</span> is uttered as a tense <span class="ipa">k</span>. This can also occur in other dialects.</li>
+<li><span class="ipa">ɡ</span> is affricated, thus pronounced as <span class="ipa">d͡ʒ</span> in some Urmian, Tyari and Nochiya dialects. <span class="ipa">k</span> would be affricated to <span class="ipa">t͡ʃ</span> in the same process.</li>
+<li><span class="ipa">ɣ</span> is a marginal phoneme that occurs across all dialects. Either a result of the historic splitting of <span class="ipa">g</span>, through loanwords, or by contact of <span class="ipa">x</span> with a voiced consonant.</li>
+<li><span class="ipa">ʒ</span> is found predominately from loanwords, but, in some dialects, also from the voicing of <span class="ipa">ʃ</span> (e.g. <span class="trans">(ḥašbunā)</span> <span class="ipa">xaʒbu:na:</span>, <span class="meaning">counting</span>, from the root ḥ-š-b, <span class="meaning">to count</span>) as in the Jilu dialect or the fortition of <span class="ipa">j</span> (e.g. <span class="trans">Urmiynāyā</span> &gt; <span class="trans">Urmižnāyā</span> <span class="ipa">Uɾ:mɪ:ʒna:ja:</span>, <span class="meaning">Urmian</span> from <span class="trans">mija</span> <span class="meaning">water</span>)</li>
+<li><span class="ipa">n</span> can be pronounced <span class="ipa">ŋ</span> before velar consonants <span class="ipa">x</span> and <span class="ipa">q</span> and as <span class="ipa">m</span> before labial consonants.</li>
+</ul>
+</details>
+</section>
+
+
+
+
+
+
+<section id="basic_consonants">
+<h3>Basic consonants</h3>
+
+  <p>All the letters in the Syriac block are consonants. There are 22 basic consonants. </p>
+  
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ܦ␣ܒ␣ܬ␣ܛ␣ܕ␣ܟ␣ܓ␣ܩ␣ܥ</figure>
+  <figure class="characterBox auto" data-cols="ipa,trans,transc">ܣ␣ܤ␣ܨ␣ܫ␣ܙ␣ܚ␣ܗ</figure>
+  <figure class="characterBox auto" data-cols="ipa,trans,transc">ܡ␣ܢ</figure>
+  <figure class="characterBox auto" data-cols="ipa,trans,transc">ܘ␣ܪ␣ܠ␣ܝ</figure>
+
+<p><span class="codepoint"><span lang="aii" dir="rtl">&#x0723;</span> <a href="/scripts/syriac/block#char0723">[<span class="uname">U+0723 SYRIAC LETTER SEMKATH</span>]</a></span> has a separate code point for its final form, <span class="codepoint"><span lang="aii" dir="rtl">&#x0724;</span> <a href="/scripts/syriac/block#char0724">[<span class="uname">U+0724 SYRIAC LETTER FINAL SEMKATH</span>]</a></span>, like Greek sigma or several letters in the Hebrew block.</p>
+<p>Eastern Syriac uses a  couple of additional symbols, though they don't introduce new sounds:</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ܞ␣ܧ</figure>
+
+<p><span class="codepoint"><span lang="aii" dir="rtl">&#x071E;</span> <a href="/scripts/syriac/block#char071E">[<span class="uname">U+071E SYRIAC LETTER YUDH HE</span>]</a></span> is a single code point for the ligature <span class="ipa">jʰ</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x0727;</span> [<a href="/scripts/syriac/block#char0727"><span class="uname">U+0727 SYRIAC LETTER REVERSED PE</span></a>]</span> is used in Christian Palestinian Aramaic.</p>
+
+
+<p>Isolated versions of 3 letters, such as may be found in counter styles, are usually presented as a doubled letter, using intial and final forms, ie. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܟܟ</span></span>, <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܡܡ</span></span>, and <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܢܢ</span></span>.</p>
+
+
+<p id="glyph_comparison">The glyphs used to represent consonants in Estrangelo, Eastern, and Western Syriac  can be significantly different. The following list compares them, top to bottom, in that order.</p>
+
+
+<figure class="">
+<div class="listArray">
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܦ</span><span lang="aii">ܦ</span><span lang="syr-Syrj">ܦ</span><span class="listIPA">p</span><span class="listTrans">p</span><span class="listTransc">p, p̄</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܒ</span><span lang="aii">ܒ</span><span lang="syr-Syrj">ܒ</span><span class="listIPA">b</span><span class="listTrans">b</span><span class="listTransc">b ḇ</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܬ</span><span lang="aii">ܬ</span><span lang="syr-Syrj">ܬ</span><span class="listIPA">t</span><span class="listTrans">t</span><span class="listTransc">t ṯ</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܕ</span><span lang="aii">ܕ</span><span lang="syr-Syrj">ܕ</span><span class="listIPA">d</span><span class="listTrans">d</span><span class="listTransc">d ḏ</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܛ</span><span lang="aii">ܛ</span><span lang="syr-Syrj">ܛ</span><span class="listIPA">tˤ</span><span class="listTrans">tˤ</span><span class="listTransc">ṭ</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܟ</span><span lang="aii">ܟ</span><span lang="syr-Syrj">ܟ</span><span class="listIPA">k</span><span class="listTrans">k</span><span class="listTransc">k ḵ č</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܓ</span><span lang="aii">ܓ</span><span lang="syr-Syrj">ܓ</span><span class="listIPA">ɡ</span><span class="listTrans">g</span><span class="listTransc">g ḡ ǧ</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܩ</span><span lang="aii">ܩ</span><span lang="syr-Syrj">ܩ</span><span class="listIPA">q</span><span class="listTrans">q</span><span class="listTransc">q</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܐ</span><span lang="aii">ܐ</span><span lang="syr-Syrj">ܐ</span><span class="listIPA">ʔ</span><span class="listTrans">ʾ</span><span class="listTransc">ʾ ȃ</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܣ</span><span lang="aii">ܣ</span><span lang="syr-Syrj">ܣ</span><span class="listIPA">s</span><span class="listTrans">s</span><span class="listTransc">s</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܙ</span><span lang="aii">ܙ</span><span lang="syr-Syrj">ܙ</span><span class="listIPA">z</span><span class="listTrans">z</span><span class="listTransc">z ž</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܨ</span><span lang="aii">ܨ</span><span lang="syr-Syrj">ܨ</span><span class="listIPA">sˤ</span><span class="listTrans">sˤ</span><span class="listTransc">ṣ</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܫ</span><span lang="aii">ܫ</span><span lang="syr-Syrj">ܫ</span><span class="listIPA">ʃ</span><span class="listTrans">ʃ</span><span class="listTransc">š ẑ</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܚ</span><span lang="aii">ܚ</span><span lang="syr-Syrj">ܚ</span><span class="listIPA">ħ</span><span class="listTrans">ħ</span><span class="listTransc">ḥ</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܥ</span><span lang="aii">ܥ</span><span lang="syr-Syrj">ܥ</span><span class="listIPA">ʕ</span><span class="listTrans">ʿ</span><span class="listTransc">ʿ</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܗ</span><span lang="aii">ܗ</span><span lang="syr-Syrj">ܗ</span><span class="listIPA">h</span><span class="listTrans">h</span><span class="listTransc">h</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܡ</span><span lang="aii">ܡ</span><span lang="syr-Syrj">ܡ</span><span class="listIPA">m</span><span class="listTrans">m</span><span class="listTransc">m</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܢ</span><span lang="aii">ܢ</span><span lang="syr-Syrj">ܢ</span><span class="listIPA">n</span><span class="listTrans">n</span><span class="listTransc">n</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܘ</span><span lang="aii">ܘ</span><span lang="syr-Syrj">ܘ</span><span class="listIPA">w</span><span class="listTrans">w</span><span class="listTransc">w û ô</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܪ</span><span lang="aii">ܪ</span><span lang="syr-Syrj">ܪ</span><span class="listIPA">r</span><span class="listTrans">r</span><span class="listTransc">r</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܠ</span><span lang="aii">ܠ</span><span lang="syr-Syrj">ܠ</span><span class="listIPA">l</span><span class="listTrans">l</span><span class="listTransc">l</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܝ</span><span lang="aii">ܝ</span><span lang="syr-Syrj">ܝ</span><span class="listIPA">j</span><span class="listTrans">y</span><span class="listTransc">y î</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܖ</span><span lang="aii">ܖ</span><span lang="syr-Syrj">ܖ</span><span class="listIPA">d</span><span class="listTrans">ḋ</span><span class="listTransc">d ḏ</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܞ</span><span lang="aii">ܞ</span><span lang="syr-Syrj">ܞ</span><span class="listIPA">jʰ</span><span class="listTrans">jʰ</span><span class="listTransc">jh</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܤ</span><span lang="aii">ܤ</span><span lang="syr-Syrj">ܤ</span><span class="listIPA">-s</span><span class="listTrans">ṡ</span><span class="listTransc">s</span></div>
+<div class="listPair"><span class="listItem" lang="syr-Syre">ܧ</span><span lang="aii">ܧ</span><span lang="syr-Syrj">ܧ</span><span class="listIPA">p</span><span class="listTrans">ṗ</span><span class="listTransc">p</span></div>
+</div>
+</figure>
+
+<figure class="archaicBox auto" data-cols="ipa,trans,transc">ܖ</figure>
+
+<p><span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x0716;</span> [<a href="/scripts/syriac/block#char0716"><span class="uname">U+0716 SYRIAC LETTER DOTLESS DALATH RISH</span></a>]</span> is an alternative shape that can be used to represent &nbsp;an ambiguous form in ancient texts that could stand for either <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܕ</span> <span class="trans">d</span></span> or <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܪ</span> <span class="trans">r</span></span>.</p>
+</section>
+
+
+
+
+
+
+<section id="hard_soft">
+<h3>Hard and soft sounds</h3>
+<p>The following consonant symbols represent two sounds, one 'hard' and one 'soft'. The hard sound is an unaspirated plosive, the soft sound is an aspirated fricative or <span class="ipa">w</span>.</p>
+ 
+
+<figure class="auto" data-cols="ipa,trans,transc">ܦ␣ܒ␣ܬ␣ܕ␣ܟ␣ܓ</figure>
+
+<p>The intended sound of the letter can be made explicit using diacritics: high <span class="codepoint"><span lang="aii" dir="rtl">&#x0741;</span> &nbsp; <a href="/scripts/syriac/block#char0741">[<span class="uname">U+0741 SYRIAC QUSHSHAYA​</span>]</a></span> for the hard form, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܦ݁ܐ</span> <span class="trans">p݁ʾ (pē)</span></span>, and low&nbsp; <span class="codepoint"><span lang="aii" dir="rtl">&#x0742;</span> &nbsp; <a href="/scripts/syriac/block#char0742">[<span class="uname">U+0742 SYRIAC RUKKAKHA​</span>]</a></span> for the soft form, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܐܠܦ݂</span> <span class="trans">ʾlp̄ (ʾālap̄)</span></span>.</p>
+  <p>Late and modern East Syriac texts use <span class="codepoint"><span lang="aii" dir="rtl">&#x032E;</span> &nbsp; <a href="/scripts/syriac/block#char032E">[<span class="uname">U+032E COMBINING BREVE BELOW​</span>]</a></span> to indicate a fricative form of <span class="trans">pē</span>, ie. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܦ̮</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Syriac_alphabet">w</a></p>
+  <p>In the <span class="name">maḏnḥāyā</span> style, which uses dots for vowels, soft form marks are usually omitted if they would interfere with the vowel marks. For native words, softening depends on the letter's position within a word or syllable, location relative to other consonants and vowels, gemination, etymology, and other factors. Foreign words do not always follow the rules for softening.<a class="fnref" href="https://en.wikipedia.org/wiki/Syriac_alphabet">w</a></p>
+</section>
+
+
+
+
+
+
+
+<section id="consonant_clusters">
+<h3>Consonant clusters</h3>
+    
+    <p>There seems to be no equivalent to the Arabic sukun to indicate clusters of consonant sounds. (Although sukun can be used when transliterating Arabic text in Syriac script.)<sup></sup></p>
+    <p>However, the short <span class="ipa">a</span> and <span class="ipa">ɪ</span> vowels are only used in closed syllables, so if they are followed by an intervocalic consonant, it indicates that the consonant is doubled, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܣܲܡܵܐ</span> <span class="trans">sămaʾ</span> <span class="ipa">samma</span> <span class="meaning">poison</span></span> vs. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܣܵܡܵܐ</span> <span class="trans">samaʾ</span> <span class="ipa">saːma</span> <span class="meaning">portion</span></span>.<a class="fnref" href="#refs">d</a></p>
+</section>
+</section>
+ 
+   
+  
+  
+  
+  
+  
+<section id="transliteration">
+<h2>Repertoire extensions</h2>
+  
+<section id="magliyana">
+  <h3 class="name">Maǧlīyānā</h3>
+  
+  <p> East Syriac uses a mark called <span class="name" lang="aii">ܡܓ̰ܠܝܢܐ‎</span> <span class="trans">maǧlīyānā</span> to represent certain non-classical sounds in modern dialects or change the sound for foreign words. Wikipedia<a class="fnref" href="https://en.wikipedia.org/wiki/Syriac_alphabet">w</a> says that these are added above either of <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܓ</span> <span class="trans">g</span></span> and <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܟ</span> <span class="trans">k</span></span>; above or below <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܙ</span> <span class="trans">z</span></span>; and below <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܫ</span> <span class="trans">ʃ</span></span>, but Daniels<sup><a class="fnref" href="#refs">d</a></sup> shows only above. </p>
+<p>The <span class="name">maǧliyana</span> is written using one of 2 code points from the Combining Diacritic Marks block:  <span class="codepoint"><span lang="aii" dir="rtl">&#x0303;</span> &nbsp; <a href="/scripts/syriac/block#char0303">[<span class="uname">U+0303 COMBINING TILDE</span>]</a></span> or <span class="codepoint"><span lang="aii" dir="rtl">&#x0330;</span> &nbsp; <a href="/scripts/syriac/block#char0330">[<span class="uname">U+0330 COMBINING TILDE BELOW</span>]</a></span>.</p>
+  </section>
+  
+  
+  
+  <section id="garshuni">
+<h3>Garshuni</h3>
+  
+  <p>Garshuni (<span class="name" lang="aii" dir="rtl">ܓܪܫܘܢܝ</span>) refers to the practise of writing Arabic in the syriac script. In addition to Arabic script diacritics, a couple of Syriac letter forms are used.</p>
+  
+  
+<figure class="otherBox auto" data-cols="">ܔ␣ܜ␣ً␣ٌ␣ٍ␣َ␣ُ␣ِ␣ّ␣ْ␣ٰ␣ٕ␣ٔ␣ٓ␣̈</figure>
+
+
+  <p> To represent <span class="trans">teh marbuta</span>, Syriac uses <span class="codepoint"><span lang="aii" dir="rtl">&#x0308;</span> &nbsp; <a href="/scripts/syriac/block#char0308">[<span class="uname">U+0308 COMBINING DIAERESIS</span>]</a></span>. Vowel sounds are written using the Arabic harakat marks.</p>
+  </section>
+  
+  
+  
+  
+  <section id="translitConsonants">
+<h3>Additional consonants</h3>
+  
+  <p>Several additional consonants are used for writing other languages in Syriac: 3 for Persian</p>
+  
+  
+<figure class="otherBox auto" data-cols="ipa,trans">ܭ␣ܮ␣ܯ</figure>
+
+<p> 3 for Sogdian</p>
+
+ 
+<figure class="otherBox auto" data-cols="ipa,trans">ݍ␣ݎ␣ݏ</figure>
+
+<p> and 11 for Malayalam in the <a href="/uniview/?block=Syriac_Supplement">Syriac Supplement</a> block.</p>
+</section>
+</section>
+
+	
+	
+	
+	
+
+<section id="diacritics">
+<h2>Diacritics</h2>
+
+  <p>Syriac uses a large number of diacritics, encoded both in the Syriac block and other blocks (in particular, the Combining Diacritical Marks block).  For vowel-related diacritics, see <a class="secref">vowels</a>. The following are additional diacritics used in modern Eastern Syriac.</p>
+  
+
+<figure class="characterBox auto" data-cols="trans">̃␣̰␣݁␣݂␣̮␣݇␣݈␣̈␣̇␣̣␣݀␣ܑ</figure>
+
+
+<p>In modern Aramaic, the combining tildes are used to represent non-classical consonants. See <a class="secref">magliyana</a>.</p>
+<p><span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x0741;</span> [<a href="/scripts/syriac/block#char0741"><span class="uname">U+0741 SYRIAC QUSHSHAYA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x0742;</span> [<a href="/scripts/syriac/block#char0742"><span class="uname">U+0742 SYRIAC RUKKAKHA</span></a>]</span> are used to explicitly indicate hard and soft sounds, as is <span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x032E;</span> &nbsp; [<a href="/scripts/syriac/block#char032E"><span class="uname">U+032E COMBINING BREVE BELOW</span></a>]</span>. See <a class="secref">hard_soft</a>.&nbsp;</p>
+<p>The remaining diacritics in the above list are used in modern Aramaic  in unpointed as well as pointed text, and are described below: see <a  class="secref">talqana</a>, <a class="secref">syame</a>, <a  class="secref">ddots</a>, and <a class="secref">feminine</a>.</p>
+
+  
+  
+  
+  
+  <section id="talqana">
+<h3>Talqana (silent letters)</h3>
+  <p><span class="codepoint"><span lang="aii" dir="rtl">&#xA0;&#x0747;</span> <a href="/scripts/syriac/block#char0747">[<span class="uname">U+0747 SYRIAC OBLIQUE LINE ABOVE​</span>]</a></span> is used in the Eastern style to indicate letters that are not pronounced. It is frequently used in the modern Aramaic koine to bridge difference in dialects. For example, <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒܬ݇ܪ</span> <span class="trans">bt݇r</span> <span class="meaning">after</span></span>, is pronounced <span class="ipa">baθar</span> in some modern dialects, harking back to the classical pronunciation, but <span class="ipa">bar</span> in Urmi and the koine.</p>
+  <p>The letters <span class="charExample"><span class="exlist" lang="aii" dir="rtl">ܐ ܥ ܗ ܝ</span></span>, when included for etymological reasons, are often silent, though without using the talqana.<a class="fnref" href="http://www.unicode.org/L2/L1998/98050-syriac-proposal.pdf">n</a></p>
+  <p>The Unicode Standard says that <span class="codepoint"><span lang="aii" dir="rtl">&#xA0;&#x0748;&#xA0;</span> <a href="/scripts/syriac/block#char0748">[<span class="uname">U+0748 SYRIAC OBLIQUE LINE BELOW​</span>]</a></span> is used in a similar way.<a class="fnref" href="http://www.unicode.org/versions/latest/ch09.pdf#Syriac">u</a></p>
+<p>The Western style uses <span class="codepoint" translate="no"><span lang="syr-Syrj" dir="rtl">&#x0331;</span> &nbsp; [<a href="/scripts/syriac/block#char0331"><span class="uname">U+0331 COMBINING MACRON BELOW</span></a>]</span>, eg. the above example would be written <span class="charExample" translate="no"><span class="ex" lang="syr-Syrj" dir="rtl">ܒܬ̱ܪ</span> <span class="trans">bṯr</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x0711;</span> &nbsp; [<a href="/scripts/syriac/block#char0711"><span class="uname">U+0711 SYRIAC LETTER SUPERSCRIPT ALAPH</span></a>]</span> is used in East Syriac texts to indicate an etymological alaph, eg. <span class="charExample"><span class="ex" dir="rtl" lang="aii">ܩܲܖ݄ܡܵܝܑܼܬ̣</span></span>. It maps to nothing in West Syriac.</p>
+  </section>
+
+  
+  
+  
+  
+  <section id="syame">
+<h3>Syame (plurals)</h3>
+  <p><span class="codepoint"><span lang="aii" dir="rtl">&#x0308;</span> &#xA0; <a href="/scripts/syriac/block#char0308">[<span class="uname">U+0308 COMBINING DIAERESIS​</span>]</a></span> is also used to represent the Syriac <a class="trans">syame</a> (<span class="name" lang="aii" dir="rtl">ܣܝ̈ܡܐ</span>), which indicates plural nouns, adjectives and participles. It is needed because many plural words would otherwise look the same as the singular word, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܡܠܟܐ</span> <span class="trans">mlkʾ</span> <span class="trans">(malkā)</span> <span class="meaning">king</span></span> could otherwise be also read as <span class="charExample"><span class="trans">malkē</span> <span class="meaning">kings</span></span>. Instead, the plural form can be written as <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܡܠܟ̈ܐ</span> <span class="trans">mlk̋ʾ</span></span>.</p>
+  <p>Although it's not strictly needed for non-regular words, it is also used for them, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒܝܬܐ</span> <span class="trans">bytʾ</span> <span class="trans">(baytā)</span> <span class="meaning">house</span></span> and <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒ̈ܬܐ</span> <span class="trans">b̋tʾ</span> <span class="trans">(bāttē)</span> <span class="meaning">houses</span></span>.</p>
+  <p>Some modern usage, however, omits this diacritic when vowel marks are present, because it is redundant.</p>
+  <p>An author can place this mark above any letter in a word, but if the word contains one or more　<span class="codepoint"><span lang="aii" dir="rtl">&#x072A;</span> <a href="/scripts/syriac/block#char072A">[<span class="uname">U+072A SYRIAC LETTER RISH</span>]</a></span> the mark is generally placed over the one which is nearest the word end, and replaces the single dot above it, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܢܘܼܟ݂ܪ̈ܵܝܹܐ</span> <span class="trans">nûḵr̋āyēʾ</span> <span class="ipa">nuxrajɪ</span> <span class="meaning">foreign</span></span>.</p>
+  <p>Other likely locations include low rising letters, and letters near the middle or end of a word.<a class="fnref" href="https://en.wikipedia.org/wiki/Syriac_alphabet">w</a></p>
+  </section>
+  
+  
+  
+  
+  
+  <section id="ddots">
+<h3>Disambiguation dots</h3>
+  <p><span class="codepoint"><span lang="aii" dir="rtl">&#x0307;</span> &#xA0; <a href="/scripts/syriac/block#char0307">[<span class="uname">U+0307 COMBINING DOT ABOVE​</span>]</a></span> and <span class="codepoint"><span lang="aii" dir="rtl">&#x0323;</span> &#xA0; <a href="/scripts/syriac/block#char0323">[<span class="uname">U+0323 COMBINING DOT BELOW​</span>]</a></span> are  used to disambiguate certain letters, morphemes or words, eg. the dot above distinguishes <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܡ̇ܢ</span> <span class="trans">ṁn</span> <span class="ipa">man</span> <span class="meaning">who</span></span> from <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܡ̣ܢ</span> <span class="trans">ṃn</span> <span class="ipa">mɪn</span> <span class="meaning">from</span></span> , with a dot below. </p>
+<p>The dot is also written over the 3rd person fem. suffix <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܘܗ̇</span> <span class="trans">-wḣ</span> <span class="ipa">-o</span></span>, the masc. and fem. personal pronouns, <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܗ̇ܘ</span> <span class="trans">ḣw</span> <span class="ipa">aw</span></span> and <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܗ̇ܝ</span> <span class="trans">ḣy</span> <span class="ipa">aj</span></span>, and their corresponding demonstratives.</p>
+  </section>
+  
+  
+  
+  
+  
+  <section id="feminine">
+<h3>Feminine marker</h3>
+<p><span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#xA0;&#x0740;</span> [<a href="/scripts/syriac/block#char0740"><span class="uname">U+0740 SYRIAC FEMININE DOT​</span></a>]</span> is a feminine marker used with <span class="codepoint"><span dir="rtl" lang="aii">ܬ</span> <a href="/scripts/syriac/block#char072C">[<span class="uname">U+072C SYRIAC LETTER TAW</span>]</a></span> to indicate a feminine suffix. East Syriac fonts should render as two dots below the base letter, whereas West Syriac fonts render as a single dot to the left of the base, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܕܲܫܘܵܬ݀</span> <span class="trans">daʃwātʺ</span></span> (Eastern) vs. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܕܰܫܘܳܬ݀</span> <span class="trans">dȧʃwåtʺ</span></span> (Western).</p>
+</section>
+  
+  
+  
+<section id="misc_marks">
+<h3>Miscellaneous marks</h3>
+  <p>Syriac uses  other combining marks, many of which are used in archaic documents or contexts.</p>
+  
+  
+<figure class="otherBox auto" data-cols="">̄␣̠␣̊␣̥␣̤␣݃␣݄␣݅␣݆␣݉␣݊␣̭</figure>
+
+<p><span class="codepoint"><span lang="aii" dir="rtl">&#x0304;</span> &#xA0; <a href="/scripts/syriac/block#char0304">[<span class="uname">U+0304 COMBINING MACRON​</span>]</a></span> and <span class="codepoint"><span lang="aii" dir="rtl">&#x0320;</span> &#xA0; <a href="/scripts/syriac/block#char0320">[<span class="uname">U+0320 COMBINING MINUS SIGN BELOW​</span>]</a></span> are used for various purposes, ranging from phonological to grammatical and orthographic markers.<sup>d</sup></p>
+ <p><span class="codepoint"><span lang="aii" dir="rtl">&#x030A;</span> &#xA0; <a href="/scripts/syriac/block#char030A">[<span class="uname">U+030A COMBINING RING ABOVE</span>]</a></span> and <span class="codepoint"><span lang="aii" dir="rtl">&#x0325;</span> &#xA0; <a href="/scripts/syriac/block#char0325">[<span class="uname">U+0325 COMBINING RING BELOW</span>]</a></span> are used as alternatives to <span class="codepoint"><span lang="aii" dir="rtl">&#x0741;</span> &#xA0; <a href="/scripts/syriac/block#char0741">[<span class="uname">U+0741 SYRIAC QUSHSHAYA</span>]</a></span> and <span class="codepoint"><span lang="aii" dir="rtl">&#x0742;</span> &#xA0; <a href="/scripts/syriac/block#char0742">[<span class="uname">U+0742 SYRIAC RUKKAKHA</span>]</a></span>, and are mixed freely with the latter in West Syriac grammar books.<sup>d</sup></p>
+<p>Found in ancient manuscripts, <span class="codepoint"><span lang="aii" dir="rtl">&#x0324;</span> &#xA0; <a href="/scripts/syriac/block#char0324">[<span class="uname">U+0324 COMBINING DIAERESIS BELOW​</span>]</a></span> has a grammatical and phonological function.</p>
+<p><span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x0743;</span> &#xA0; [<a href="/scripts/syriac/block#char0743"><span class="uname">U+0743 SYRIAC TWO VERTICAL DOTS ABOVE</span></a>]</span> and <span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x0744;</span> &#xA0; [<a href="/scripts/syriac/block#char0744"><span class="uname">U+0744 SYRIAC TWO VERTICAL DOTS BELOW</span></a>]</span> are accent marks.</p>
+<p><span class="codepoint" translate="no"><span lang="syr-syrj" dir="rtl">&#x0745;</span> &nbsp; [<a href="/scripts/syriac/block#char0745"><span class="uname">U+0745 SYRIAC THREE DOTS ABOVE</span></a>]</span> and <span class="codepoint" translate="no"><span lang="syr-syrj" dir="rtl">&#x0746;</span> &nbsp;  [<a href="/scripts/syriac/block#char0746"><span class="uname">U+0746 SYRIAC THREE DOTS BELOW</span></a>]</span> are used in Turoyo &nbsp;for letters not found in Syriac, eg. <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܐ݅ ܦܪܥܓܬܐ</span></span> and  <span class="charExample"><span class="ex" dir="rtl" lang="syr-Syrj">ܔ݆ܰܥܓܰܗ̈</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x0749;</span> &#xA0; [<a href="/scripts/syriac/block#char0749"><span class="uname">U+0749 SYRIAC MUSIC</span></a>]</span> is associated with music, and &nbsp; <span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x074A;</span> &#xA0; [<a href="/scripts/syriac/block#char074A"><span class="uname">U+074A SYRIAC BARREKH</span></a>]</span> is a diacritic cross.</p>
+<p><span class="codepoint"><span lang="aii" dir="rtl">&#x032D;</span> &#xA0; <a href="/scripts/syriac/block#char032D">[<span class="uname">U+032D COMBINING CIRCUMFLEX ACCENT BELOW​</span>]</a></span> is  used as a digit marker.<a class="fnref" href="http://www.unicode.org/versions/latest/ch09.pdf#Syriac" target="_blank">u</a></p>
+</section>
+</section>
+  
+  
+  
+  
+
+<section id="punctuation">
+<h2>Punctuation, marks &amp; symbols</h2>
+<p>Modern Syriac uses basic punctuation from the ASCII and Arabic ranges, as described in  <a class="secref">boundaries</a>. These are the basic items.</p>
+
+ 
+<figure class="characterBox auto" data-cols="trans">،␣؛␣.␣؟</figure>
+
+
+
+<p>Additional punctuation  provided in the Syriac block includes the following, which are not much used in modern, non-liturgical contexts.</p>
+
+ 
+<figure class="archaicBox auto" data-cols="trans">܀␣܁␣܂␣܃␣܄␣܅␣܆␣܇␣܈␣܉</figure>
+
+
+<figure>
+<p><img src="images/juckel.png" alt="Syriac punctuation."/></p>
+  <figcaption>Example of estrangela script as used by Western scholars<a class="fnref" href="http://www.unicode.org/L2/L1998/98050-syriac-proposal.pdf">n</a>, which includes some additional punctuation.</figcaption>
+</figure>
+
+<p>Other punctuation marks are used to indicate abbreviations, and footnotes or sidenotes, and are described further in the <a class="secref">boundaries</a> and <a class="secref">digits</a> sections. They are also mostly liturgical or archaic in nature.</p>
+
+ 
+<figure class="otherBox auto" data-cols="">܊␣܏␣܋␣܌␣܍</figure>
+
+</section>
+
+
+
+  
+  
+<section id="digits">
+<h2>Numbers</h2>
+    
+    <p>Modern Syriac uses Western digits, like Hebrew.</p>
+    <p>There is also, however, a letter-based number system. Wikipedia hints at the use of diacritics to create higher numbers (<q>using various systems of dashes above or below, [bet] can stand for 2,000 and 20,000</q><a class="fnref" href="https://en.wikipedia.org/wiki/Bet_(letter)#Syriac_Beth">w</a>).</p>
+    <p><span class="codepoint"><a href="/scripts/syriac/block#char070F"><span class="uname">U+070F SYRIAC ABBREVIATION MARK </span></a></span> (SAM) is  used to indicate letter-based numbers. Note how, in this example, the prefix <span lang="aii">ܒ</span>, is not covered by the SAM, only the number itself.</p>
+    <figure>
+    <p dir="rtl" lang="syr-Syre" class="large"><span class="ex">ܒ܏ܝܗ</span></p>
+    <figcaption>A prefixed number, with Syriac abbreviation mark only over the number part.</figcaption>
+    </figure>
+    <p><span class="codepoint"><span lang="aii" dir="rtl">&#x032D;</span> &#xA0; <a href="/scripts/syriac/block#char032D">[<span class="uname">U+032D COMBINING CIRCUMFLEX ACCENT BELOW​</span>]</a></span> is also used as a digit marker.<a class="fnref" href="http://www.unicode.org/versions/latest/ch09.pdf#Syriac" target="_blank">u</a></p>
+</section>
+  
+  
+  
+  
+  
+<section id="shaping">
+<h2>Glyph shaping &amp; positioning</h2>
+<p>You can experiment with examples using the <a href="/pickers/syriac/">Syriac character app</a>.</p>
+  
+<section id="cursive">
+<h3>Cursive text</h3>
+<p>Syriac is cursive, ie. letters in a word are joined up. Fonts need to produce the appropriate joining form for a code point, according to its visual context.</p>
+    <figure>
+<p dir="rtl" class="large"><span class="ex" lang="syr-Syrj">ܦܘܠܝܛܝܩܝܬܐ</span></p>
+<figcaption>Letters join on the right or both sides in Syriac.</figcaption>
+</figure>
+    
+    <p>The cursive treatment generally produces only moderate changes to the glyph shapes, the most significant being when there is no connecting character to the left. With a few letters, however, it can produce significant variations of the character's essential shape.</p>
+    <p>Like Arabic, there are 8 glyphs that don't join to the left<sup></sup>.</p>
+    <p>Unlike Arabic, however, there is a variation in the unconnected final form of <span class="codepoint"><span lang="aii" dir="rtl">&#x0710;</span> <a href="/scripts/syriac/block#char0710">[<span class="uname">U+0710 SYRIAC LETTER ALAPH</span>]</a></span>, depending on what letter it follows. When it follows <span class="codepoint"><span lang="aii" dir="rtl">&#x0715;</span> <a href="/scripts/syriac/block#char0715">[<span class="uname">U+0715 SYRIAC LETTER DALATH</span>]</a></span> or <span class="codepoint"><span lang="aii" dir="rtl">&#x072A;</span> <a href="/scripts/syriac/block#char072A">[<span class="uname">U+072A SYRIAC LETTER RISH</span>]</a></span> it may have a different form (<span class="charExample"><span class="ex" lang="aii" dir="rtl">ܪܐ</span></span>) to that used after other non-joining characters (such as <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܗܐ</span></span>).</p>
+  </section>
+
+
+
+
+
+
+
+<section id="gsub">
+<h3>Context-based shaping</h3>
+<p>Apart from the shaping required to support cursive behaviour, there are also optional and font-dependent word-final ligatures, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܗܝ</span> <span class="trans">hy</span></span>. </p>
+    <p>One ligated pair, representing <span class="ipa">jʰ</span>, has its own code point: <span class="codepoint"><span lang="aii" dir="rtl">&#x071E;</span> <a href="/scripts/syriac/block#char071E">[<span class="uname">U+071E SYRIAC LETTER YUDH HE</span>]</a></span>.</p>
+</section>
+
+
+
+
+
+
+<section id="gpos">
+<h3>Context-based positioning</h3>
+<p>There are sometimes clashes between diacritic marks which have to be resolved by repositioning one of the diacritics, or sometimes producing a different solution.</p>
+      <p>For example, marks are usually centred vertically over or under a base character. If, however, &nbsp; <span class="codepoint"><span lang="aii" dir="rtl">&#x0742;</span> &#xA0; <a href="/scripts/syriac/block#char0742">[<span class="uname">U+0742 SYRIAC RUKKAKHA</span>]</a></span> appears below <span class="codepoint"><span lang="aii" dir="rtl">&#x0715;</span> <a href="/scripts/syriac/block#char0715">[<span class="uname">U+0715 SYRIAC LETTER DALATH</span>]</a></span> when the glyph for that has a dot below, the mark is moved slightly to the right, as shown here.</p>
+      <figure>
+  <p dir="rtl" lang="syr-Syrn" class="large"><span class="ex">ܝܘܕ݂</span></p>
+  <figcaption>Rukkakha moves to the right to accommodate the dot under dalath.</figcaption>
+  </figure>
+  <p>If &#xA0; <span class="codepoint"><span lang="aii" dir="rtl">&#x0308;</span> &#xA0; <a href="/scripts/syriac/block#char0308">[<span class="uname">U+0308 COMBINING DIAERESIS</span>]</a></span> appears above　<span class="codepoint"><span lang="aii" dir="rtl">&#x072A;</span> <a href="/scripts/syriac/block#char072A">[<span class="uname">U+072A SYRIAC LETTER RISH</span>]</a></span> the mark  replaces the single dot above the base letter.</p>
+  <figure>
+  <p dir="rtl" lang="syr-Syrn" class="large"><span class="ex">ܪ̈</span></p>
+  <figcaption>Combining diaeresis replaces the dot over rish.</figcaption>
+  </figure>
+  <p>In this example, the RISH character carries not only a combining diaeresis, but also a vowel mark, which is moved upwards to ride above the former.</p>
+  <figure>
+  <p dir="rtl" lang="syr-Syrn" class="large"><span class="ex">ܪ̈ܵ</span> &nbsp; vs &nbsp; <span class="ex">ܝܵ</span></p>
+  <figcaption>Rish + diaeresis + vowel mark causes stacking diacritics.</figcaption>
+  </figure>
+</section>
+  
+
+
+
+  
+<section id="baselines">
+<h3>Baselines, line height, etc.</h3>
+<p>Syriac uses the alphabetic baseline.</p>
+<p>To include the long ascenders and descenders in Syriac, plus the (sometimes stacked) diacritics, line heights need to be slightly larger than for English text.</p>
+</section>
+
+
+
+
+<section id="fontstyle">
+<h3>Font styles</h3>
+<p><span class="leadin">Writing styles.</span> As mentioned <a href="#key_features">earlier</a>, Syriac has 3 major variant writing styles. The phonetic repertoire is largely the same, as are the code points for the consonant letters, but the shapes of the letters and code points and shapes of vowel diacritics can vary significantly.  <a class="figref">fig_writing_styles</a> shows the differences using typical fonts for each style.</p>
+
+<figure id="fig_writing_styles" data-notes="brēšiṯ iṯaw[hy]-[h]wā melṯā">
+<img src="images/estrangelo_edessa.png" alt="ܒܪܫܝܬ ܐܝܬܘܗܝ ܗܘܐ ܡܠܬܐ.">
+<img src="images/adiabene.png" alt="ܒ݁ܪܹܫܝܼܬ݂ ܐܝܼܬ݂ܵܘܗ݇ܝ ܗ݇ܘܵܐ ܡܸܠܬ݂ܵܐ.">
+<img src="images/serto_jerusalem.png" alt="ܒ݁ܪܶܫܺܝܬ݂ ܐܻܝܬ݂ܰܘܗ̠ܝ ܗ̠ܘܳܐ ܡܶܠܬ݂ܳܐ." data-notes="72px Serto Jerusalem">
+<figcaption>The opening words of the Gospel of St John in (top to bottom) Estrangelo, Eastern Syriac and Western Syriac.  <span style="font-size: 60%;">Source <a class="fnref" href="https://en.wikipedia.org/wiki/Syriac_alphabet#Alphabet_forms">w</a></span></figcaption>
+</figure>
+
+<p><a class="figref">fig_writing_styles_noto</a> shows the same text, but this time using Noto fonts, which tend to show up better the essential differences in the shapes of the letters (since the font design is harmonised).</p>
+
+<figure id="fig_writing_styles_noto">
+<div style="font-size: 140%">
+<p lang="syr-syre" dir="rtl" style="font-family: estrangelo;">ܒܪܫܝܬ ܐܝܬܘܗܝ ܗܘܐ ܡܠܬܐ.</p>
+<p lang="syr-syrn" dir="rtl" style="font-family: eastern;">ܒ݁ܪܹܫܝܼܬ݂ ܐܝܼܬ݂ܵܘܗ݇ܝ ܗ݇ܘܵܐ ܡܸܠܬ݂ܵܐ.</p>
+<p lang="syr-syrj" dir="rtl" style="font-family: western; font-size:140%;">ܒ݁ܪܶܫܺܝܬ݂ ܐܻܝܬ݂ܰܘܗ̠ܝ ܗ̠ܘܳܐ ܡܶܠܬ݂ܳܐ.</p>
+</div>
+<figcaption>The opening words of the Gospel of St John in (top to bottom) Estrangelo, Eastern Syriac and Western Syriac, using Noto fonts.  <span style="font-size: 60%;">Source <a class="fnref" href="https://en.wikipedia.org/wiki/Syriac_alphabet#Alphabet_forms">w</a></span></figcaption>
+</figure>
+
+<p>See the <a href="#glyph_comparison">list of letter shapes</a> compared side-by-side for Estrangelo, Eastern Syriac and Western Syriac.</p>
+</section>
+
+
+
+
+<section id="transforms">
+<h3>Transforming characters</h3>
+
+<p>Syriac is monocameral.</p>
+</section>
+</section>
+
+
+
+  
+  
+
+
+
+
+
+
+<section id="boundaries">
+<h2>Structural boundaries &amp; markers</h2>  
+  
+<section id="graphemes">
+<h3>Grapheme boundaries</h3>
+<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
+
+<p class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements when double-clicking on the text, or moving through the text with the cursor, or backspace, etc.? </p>
+
+</section>
+
+
+
+
+  
+<section id="word">
+<h3>Word boundaries</h3>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+<p>Syriac uses spaces between words. </p>
+    <p>There are no one-letter words. One letter conjunctions and prepositions such as <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܘ</span> <span class="trans">w</span></span> are continguous with the word they precede.</p>
+    
+
+     </section>
+
+	   
+	   
+	   
+	   
+<section id="phrase">
+<h3>Phrase &amp; section boundaries</h3>
+<p> Modern Syriac uses ASCII punctuation and punctuation borrowed from Arabic. For separators at the sentence level and below, the following are used, where the right column indicates approximate equivalences.</p>
+     <table class="character_list">
+      <tbody>
+          <tr>
+          <th scope="row">comma</th>
+          <td><span class="codepoint"><span lang="ar" dir="rtl">&#x060C;</span> <a href="/scripts/arabic/block#char060C">[<span class="uname">U+060C ARABIC COMMA</span>]</a></span></td>
+        </tr>
+        <tr>
+          <th scope="row"> semi-colon</th>
+          <td><span class="codepoint"><span lang="ar" dir="rtl">&#x061B;</span> <a href="/scripts/arabic/block#char061B">[<span class="uname">U+061B ARABIC SEMICOLON</span>]</a></span></td>
+        </tr>
+       <tr>
+          <th scope="row">sentence</th>
+       <td><p class="codepoint"><span lang="hy">.</span> [<span class="uname">U+002E  FULL STOP</span>]</p>
+<span class="codepoint"><span lang="ar" dir="rtl">&#x061F;</span> <a href="/scripts/arabic/block#char061F">[<span class="uname">U+061F ARABIC QUESTION MARK</span>]</a></span></td>
+      </tr>
+     </tbody>
+    </table>
+    
+    <p>For other punctuation marks, see <a class="secref">punctuation</a>.</p>
+</section>
+
+
+
+
+
+<section id="bracketing">
+<h3>Bracketing &amp; range markers</h3>
+<p><span class="leadin">Numbers.</span> The Syriac abbreviation mark is used in older texts to identify letters used as numbers by drawing a line above them. See <a class="secref">digits</a> for more information.</p>
+<p><span class="codepoint"><span lang="aii" dir="rtl">&#x032D;</span> &#xA0; <a href="/scripts/syriac/block#char032D">[<span class="uname">U+032D COMBINING CIRCUMFLEX ACCENT BELOW​</span>]</a></span> is also used as a digit marker.<a class="fnref" href="http://www.unicode.org/versions/latest/ch09.pdf#Syriac" target="_blank">u</a></p>
+</section>
+
+
+
+
+  
+<section id="quotations">
+<h3>Quotations</h3>
+<p class="prompts">What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue?</p>
+</section>
+
+
+
+
+  
+<section id="emphasis">
+<h3>Emphasis</h3>
+<p class="prompts">How are emphasis and highlighting achieved? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</p>
+</section>
+
+
+
+
+  
+<section id="abbrev">
+<h3>Abbreviation, ellipsis &amp; repetition</h3>
+<p class="prompts">What characters are used to indicate abbreviation, ellipsis &amp; repetition?</p>
+
+    <p><span class="codepoint"><a href="/scripts/syriac/block#char070F"><span class="uname">U+070F SYRIAC ABBREVIATION MARK </span></a></span>(SAM) indicates that a sequence of characters is an abbreviation, eg. <span class="charExample"><span class="ex" lang="syr-syrn" dir="rtl">ܬ܏ܫܒܘ</span></span> is an abbreviation of <span class="charExample"><span class="ex" lang="syr-syrn" dir="rtl">ܬܫܒܘܚܬܐ</span></span>. The line would ideally have a small circle at the start, middle and end. It normally starts to the left of the nearest tall letter to the end of the abbreviation.</p>
+    <p>Modern East Syriac texts use a punctuation mark for contractions of this sort.</p>
+</section>
+
+
+
+
+
+<section id="otherPunctuation">
+<h3>Other punctuation</h3>
+
+<p>TBD</p>
+</section>
+
+
+
+
+
+
+<section id="inlinenotes">
+<h3>Inline notes &amp; annotations</h3>
+<p class="prompts">What mechanisms, if any, are used to create <u>inline</u> notes and annotations? (For referent-type notes such as footnotes, see below.)</p>
+</section>
+</section>
+
+
+
+  
+  
+   
+<section id="paralayout">
+<h2>Line &amp; paragraph layout</h2>
+   
+      
+<section id="linebreak">
+<h3>Line breaking &amp; hyphenation</h3>
+<p>Basic line-break opportunities occur between the space-separated words.</p>
+
+<p><span class="leadin">Character properties.</span> Characters used for the Assyrian Neo-Aramaic language have the following assignments related to line-break properties.</p>
+<table><tbody>
+<tr><th class="sg">AL</th><td class="count">24</td><td class="chars"><span class="exlist" lang="xx">ܦ ܒ ܬ ܛ ܕ ܟ ܓ ܩ ܥ ܣ ܤ ܨ ܫ ܙ ܚ ܗ ܡ ܢ ܘ ܪ ܠ ܝ ܞ ܧ</span></td></tr>
+<tr><th class="sg">CM</th><td class="count">18</td><td class="chars"><span class="exlist" lang="xx">ܼ ܸ ܹ ܿ ܲ ܵ ̃ ̰ ݁ ݂ ̮ ݇ ݈ ̈ ̇ ̣ ݀ ܑ</span></td></tr>
+<tr><th class="sg">EX</th><td class="count">2</td><td class="chars"><span class="exlist" lang="xx">؛ ؟</span></td></tr>
+<tr><th class="sg">IS</th><td class="count">2</td><td class="chars"><span class="exlist" lang="xx">، .</span></td></tr>
+</tbody></table>
+
+
+
+<details id="linebreak_details">
+<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CP">CP (closing parenthesis)</a> will not cause a break opportunity when appearing in contexts like “(s)he.” In all other respects the breaking behavior of CP and CL are the same.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#EX">EX (exclamation mark/interrogation)</a> behave like closing characters, except in relation to postfix (PO) and non-starter characters (NS).</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">IS (infix numeric separators)</a> usually occurs inside a numerical expression and may not be separated from the numeric characters that follow, unless a space character intervenes. For example, there is no break in “100.00” or “10,000”, nor in “12:59”..</p>
+</details>
+</section>
+
+
+
+<section id="hyphenation">
+<h3>Hyphenation</h3>
+<p class="prompts">Is hyphenation used, or something else?</p>
+</section>
+
+
+
+ <section id="justification">
+<h3>Text alignment &amp; justification</h3>
+    <p class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</p>
+ <p>The sources used say that <span class="codepoint"><span lang="aii" dir="rtl">&#x0640;</span> <a href="/scripts/syriac/block#char0640">[<span class="uname">U+0640 ARABIC TATWEEL</span>]</a></span> can be used, as in Arabic, to lengthen the baseline inside Syriac words. It's not clear, however, whether the use of that is for justification, or simply for word stretching. A couple of examples seem to show it in use for support of diacritics (music and barrekh, eg. <span class="charExample"><span class="ex" lang="syr-Syrj" dir="rtl">ܘܰܩـ݉ـܨܳܐ</span></span>).</p>
+ <p class="observation"><i>Observation</i> However,  font support for joining Syriac characters with the tatweel seems patchy, which indicates that it is perhaps not in common use.</p>
+</section>
+
+
+
+
+<section id="letterspace">
+<h3>Letter spacing</h3>
+<p class="prompts">Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see above.).</p>
+</section>
+
+
+
+
+<section id="lists">
+<h3>Counters, lists, etc.</h3>
+  
+<p class="prompts">Are there list or other counter styles in use?  If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed? </p>
+</section>
+
+
+
+
+
+
+
+  
+<section id="initials"> </section>
+<section id="initials">
+<h3>Styling initials</h3>
+<p class="prompts">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? etc.</p>
+</section>
+</section>
+
+
+
+
+
+
+<section id="pagelayout">
+<h2>Page &amp; book layout</h2>
+ 
+<section id="generallayout">
+<h3>General page layout &amp; progression</h3>
+<p class="prompts">How are the main text area and ancilliary areas positioned and defined? Are there any special requirements here, such as dimensions in characters for the Japanese kihon hanmen? The book cover for scripts that are read right-to-left scripts is on the right of the spine, rather than the left.  When content can flow vertically and to the left or right, how to specify the location of objects, text, etc. relative to the flow? Do tables and grid layouts work as expected? How do columns work in vertical text? Can you mix block of vertical and horizontal text? Does text scroll in a different direction?</p>
+</section>
+
+
+
+
+
+<section id="grids">
+<h3>Grids &amp; tables</h3>
+<p class="prompts">Does the script have special requirements for character grids or tables?</p>
+</section>
+
+
+
+
+  
+<section id="footnotes">
+<h3>Notes, footnotes, etc</h3>
+<p class="prompts">Does the script have special requirements for notes, footnotes, endnotes or other necessary annotations of this kind? (There is a section above for purely inline annotations, such as ruby or warichu. This section is more about annotation systems that separate the reference marks and the content of the notes.)</p>
+<p><span class="leadin">Marginal notes.</span> Three marks are used for marginal notes in the Harklean translation of the New Testament. <span class="codepoint"><span lang="aii" dir="rtl">&#x070B;</span> <a href="/scripts/syriac/block#char070B">[<span class="uname">U+070B SYRIAC HARKLEAN OBELUS</span>]</a></span> and <span class="codepoint"><span lang="aii" dir="rtl">&#x070D;</span> <a href="/scripts/syriac/block#char070D">[<span class="uname">U+070D SYRIAC HARKLEAN ASTERISCUS</span>]</a></span> mark the beginning of a phrase, word or morpheme that has a marginal note. <span class="codepoint"><span lang="aii" dir="rtl">&#x070C;</span> <a href="/scripts/syriac/block#char070C">[<span class="uname">U+070C SYRIAC HARKLEAN METOBELUS</span>]</a></span> marks the end of such sections.<sup>d</sup>&nbsp;</p>
+</section>
+
+
+
+
+  
+<section id="interaction">
+<h3>Forms &amp; user interaction</h3>
+<p class="prompts">Are vertical form controls needed? Are scroll bars in an unusual position? Other special requirements for user interaction?</p>
+</section>
+
+
+
+
+  
+<section id="headers">
+<h3>Page numbering, running headers, etc</h3>
+<p class="prompts">Are there special conventions for page numbering, or the way that running headers and the like are handled?</p>
+</section>
+</section>
+  
+  
+  
+  
+<section id="chars">
+<h2>Character lists</h2>
+  <p>Version 12.0 of the Unicode Standard has the following blocks dedicated to the Syriac script (numbers in lists are non-ASCII only):</p>
+    <ul>
+      <li> <a href="/uniview/?block=syriac">Syriac</a> <span class="charCount">34 letters, 28 marks, 14 punctuation, 1 other : total 77</span></li>
+      <li> <a href="/uniview/?block=syriac_supplement">Syriac Supplement</a> <span class="charCount">11 letters : total 11</span></li>
+    </ul>
+<p>Apart from ASCII characters, the Assyrian Neo-Aramaic orthography described here uses 98 characters <!--(and @@ more, used infrequently)--> from the following Unicode blocks: </p>
+    <ul>
+    <li><a href="/uniview/?block=syriac">Syriac</a> <span class="charCount">34 letters, 28 marks, 14 punctuation, 1 other : total 77 </span></li>
+<li> <a href="/uniview/?block=combining_diacritical_marks">Combining diacritical marks</a> <span class="charCount">6 marks : total 6</span></li>
+<li> <a href="/uniview/?block=arabic_presentation_forms">Arabic</a> <span class="charCount">12 marks, 3 punctuation : total 15</span></li>
+    </ul>
+ <p><cite>Character Usage</cite> has information about the following orthography associated with this script: <a href="/app-charuse/?language=aii" target="_blank">Assyrian Neo-Aramaic</a></p>
+<p>For detailed character-specific information see the <a class="linkHighlight" href="/scripts/syriac/block">Syriac character notes</a>.</p>
+</section>
+
+
+
+
+
+
+<section id="languages">
+<h2>Languages using the Syriac script</h2>
+<p>According to ScriptSource, the Syriac script is used for the following languages: </p>
+<ul>
+<li>Arabic [ara]</li>
+<li>Neo-Aramaic, Assyrian [aii]</li>
+<li>Neo-Aramaic, Barzani Jewish [bjf]</li>
+<li>Neo-Aramaic, Bohtan [bhn]</li>
+<li>Neo-Aramaic, Chaldean [cld]</li>
+<li>Syriac, Classical [syc]</li>
+<li>Hértevin [hrt]</li>
+<li>Aramaic, Jewish Babylonian (ca. 200-1200 CE) [tmr]</li>
+<li>Koy Sanjaq Surat [kqd]</li>
+<li>Mlahsö [lhs]</li>
+<li>Aramaic, Official (700-300 BCE) [arc]</li>
+<li>Aramaic, Old (up to 700 BCE) [oar]</li>
+<li>Aramaic, Samaritan [sam]</li>
+<li>Senaya [syn]</li>
+<li>Sogdian [sog]</li>
+<li>Syriac [syr]</li>
+<li>Turoyo [tru]</li>
+</ul>
+</section>
+
+
+ 
+	
+
+
+<section id="refs">
+<h2>References</h2>
+  <ol>
+    <li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN 0-19-507993-0</li>
+    <li>[ <a class="fnref" href="http://www.unicode.org/L2/L1998/98050-syriac-proposal.pdf">n</a> ] Paul Nelson, George Anton Kiraz, Sargon Hass, <a href="http://www.unicode.org/L2/L1998/98050-syriac-proposal.pdf"><cite>Proposal to Encode Syriac in ISO/IEC 10646</cite></a>, 1998</li>
+<li>[ <a class="fnref" href="http://www.unicode.org/L2/L2002/02132-N2422-syrian.pdf">s</a> ] Nicholas Sims-Williams, Michael Everson, <cite><a href="http://www.unicode.org/L2/L2002/02132-N2422-syrian.pdf">Proposal to add six Syriac letters for Sogdian and Persian to the UCS</a></cite></li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch09.pdf">u</a> ] The Unicode Standard v9.0, <a href="http://www.unicode.org/versions/Unicode11.0.0/ch09.pdf">Syriac</a>. </li>
+<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Assyrian_Neo-Aramaic">wa</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Assyrian_Neo-Aramaic">Assyrian Neo-Aramaic</a></li>
+    <li>[ <a class="fnref" href="httphttps://en.wikipedia.org/wiki/Syriac_alphabet">w</a> ] Wikipedia, <a href="httphttps://en.wikipedia.org/wiki/Syriac_alphabet">Syriac alphabet</a></li>
+</ol>
+</section>
+
+
+
+
+
+<details>
+<summary class="prompts">Show stats</summary>
+
+<table id="charCountList">
+<tr><th>Main</th><td id="mainCharList"></td><td id="mainCharListTotal"></td></tr>
+<tr><th>Auxiliary</th><td id="auxCharList"></td><td id="auxCharListTotal"></td></tr>
+<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
+<tr><th>Other</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
+<tr><th>Deprecated</th><td id="deprecatedCharList"></td><td id="deprecatedCharListTotal"></td></tr>
+</table>
+</details>
+
+
+<div id="phoneLinks"></div>
+
+
+<div id="panel" style="display:none"></div>
+
+
+<div class="smallprint"><span id="version"></span></div>
+</body>
+<script>
+initialiseSummary('/scripts/syriac/block','aii','Syriac','syriac')
+autoTransliterate('aii')
+</script>
+
+</html>
