@@ -76,6 +76,7 @@
 [lang=syr-syre] { font-family: estrangela, serif; font-size: 140%; }
 [lang=aii] { font-family: 'Adiabene WF', "East Syriac Ctesiphon", "East Syriac Adiabene", eastern, serif; font-size: 180%; }
 .large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
+.medium .ex { font-size: 150%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
 </style>
 
 <script src="../../shared/scriptdb/syrc-tru.js"> </script>
@@ -157,7 +158,7 @@ onchange="document.getElementById('eastern').style.fontFamily = document.getElem
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->18 March, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->21 March, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -221,12 +222,39 @@ onchange="document.getElementById('eastern').style.fontFamily = document.getElem
 
 
 <section id="key_features">
-<h2>Distinctive features</h2>
-    <p>Syriac, in principle, is an <span class="newterm"><a href="https://www.unicode.org/glossary/#abjad" class="termref"> abjad</a></span>. The script relies mostly on consonant sounds to write words, although the orthography described here for Turoyo requires the text to be fully pointed, making it more like an alphabetic script.  See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
+<h2>Basic features</h2>
+    <p>Syriac, in principle, is an <span class="newterm"><a href="https://www.unicode.org/glossary/#abjad" class="termref"> abjad</a></span>. The script relies mostly on consonant sounds to write words, although the orthography described here for Turoyo requires the text to be fully pointed, making it more like an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#alphabet">alphabet</a></span>.  See the table to the right for a brief overview of features, taken from the <a href="../featurelist/">Script Comparison Table</a>.
 </p>
 <p>The Syriac script has three main orthographic systems: <span class="trans">maḏnḥāyā</span> (<span lang="aii">ܡܲܕ݂ܢܚܵܝܵܐ</span>) (eastern), <span class="trans">ʾesṭrangēlā</span> (<span lang="syr-Syre">ܐܣܛܪܢܓܠܐ</span>), and <span class="trans">serṭā</span> (<span lang="syr-Syrj">ܣܶܪܛܳܐ</span>) (western). Turoyo uses a version of the  serto orthography, derived from West Syriac texts.</p>
-<p>The Turoyo orthography described here uses only a small number of diacritics and punctuation marks, compared to Syriac. It treats combinations of consonant plus diacritic as distinct letters of the alphabet.</p>
 <p>For vowels, Turoyo uses a subset of the Greek letter diacritics in the serto orthography. The position relative to the base consonant (above or below) is not interchangeable, but signals different vowel sounds.</p>
+<p>The Turoyo orthography described here uses only a small number of diacritics and punctuation marks, compared to Syriac. It treats combinations of consonant plus diacritic as distinct letters of the alphabet.</p>
+</section>
+
+
+
+
+
+
+<section id="dir">
+<h2>Text direction</h2>
+    <p>Syriac script is written horizontally, right-to-left. Like other RTL scripts, such as Arabic and Hebrew, modern numbers and text in LTR scripts are  displayed left-to-right (producing 'bidirectional' text). </p>
+
+<figure id="fig_bidi_text">
+<p dir="rtl" lang="tru"  class="medium"><span class="ex">ܘܝܩܝܦܕܝܐ ܗܘ ܬܪܡܝܬܐ ܕܡܛܟܣܬܐ ܕܘܝܩܝܡܝܕܝܐ ܘܫܬܐܣ ܒ15 ܟܢܘܢ ܒ 2001 ܒܠܫܢܐ ܐܢܓܠܝܐ ܘܡܩܝܡܢܐ ܕܘܝܩܝܦܕܝܐ ܗܘ ܓܝܡܝ ܘܝܠܙ (Jimmy Wales).</span></p>
+<figcaption class="instructions">Bidirectional Syriac text. Numbers are read left-to-right, and the rest of the text flows right-to-left.</figcaption>
+</figure>
+
+<p>The Unicode Bidirectional Algorithm automatically takes care of the ordering for all the text in <a class="figref">fig_bidi_text</a>, as long as the 'base direction' is set to RTL. In HTML this can be set using the <code>dir</code> attribute, or in plain text using <a href="#formatting">formatting controls</a>.</p>
+<p>If the base direction is not set appropriately, the directional runs will be ordered incorrectly as shown in <a class="figref">fig_bidi_no_base_direction</a>.</p>
+
+<figure id="fig_bidi_no_base_direction">
+<p lang="tru" dir="rtl" class="medium">ܐܝ ܦܝ (IP) ܕܝܠܟ ܢܬܟܬܒ ܒܬܫܥܝܬܐ ܕܦܐܬܐ.</p>
+<p lang="tru"  class="medium">ܐܝ ܦܝ (IP) ܕܝܠܟ ܢܬܟܬܒ ܒܬܫܥܝܬܐ ܕܦܐܬܐ.</p>
+<figcaption class="instructions">The exact same sequence of characters with the base direction set to RTL (top), and with no  base direction set on this LTR page (bottom).</figcaption>
+</figure>
+
+<p>For more information about how directionality and base direction work, see <a href="https://www.w3.org/International/articles/inline-bidi-markup/uba-basics.en">Unicode Bidirectional Algorithm basics</a>. For information about plain text formatting characters see <a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls.en">How to use Unicode controls for bidi text</a>. And for working with markup in HTML, see <a href="https://www.w3.org/International/tutorials/bidi-xhtml/">Creating HTML Pages in Arabic, Hebrew and Other Right-to-left Scripts</a>.</p>
+<p>See also <a class="secref">expressions</a>.</p>
 </section>
 
 
@@ -623,7 +651,7 @@ alveolar</th>
 
   <p>All the letters in the Syriac block are consonants. There are 22 basic consonants, but these can be combined with one of two diacritics to create additional sounds. The list below shows the combinations as well as the simple consonants, since the former are  treated as letters of the alphabet.</p>
   
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ܦ݂␣ܒ␣ܬ␣ܛ␣ܕ␣ܟ␣ܓ␣ܩ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ܦ݁␣ܒ␣ܬ␣ܛ␣ܕ␣ܟ␣ܓ␣ܩ</figure>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ܫ̰␣ܔ</figure>
   <figure class="characterBox auto" data-cols="ipa,trans,transc">ܦ␣ܒ݂␣ܬ݂␣ܕ݂␣ܣ␣ܨ␣ܙ␣ܫ␣ܙ̰␣ܟ݂␣ܓ݂␣ܚ␣ܥ␣ܗ</figure>
   <figure class="characterBox auto" data-cols="ipa,trans,transc">ܡ␣ܢ</figure>
@@ -642,7 +670,7 @@ alveolar</th>
 
 
 <section id="modifiers">
-<h3>Diacritics to modify consonants</h3>
+<h3>Diacritics to modify consonant sounds</h3>
 
 <p>Turoyo uses 3 diacritics to produce additional sounds from the basic set of Syriac consonants.</p>
 <p><span class="codepoint"><span lang="syr-syrj" dir="rtl">&#x0741;</span> &nbsp; <a href="/scripts/syriac/block#char0741">[<span class="uname">U+0741 SYRIAC QUSHSHAYA</span>]</a></span> produces the 'hard' form of a consonant. In Turoyo it is only used to distinguish <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܦ݁</span> <span class="trans">f‐̇</span> <span class="ipa">p</span> </span> from <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܦ</span> <span class="trans">f</span> <span class="ipa">f</span></span>.</p>
@@ -670,11 +698,30 @@ alveolar</th>
 <section id="diacritics">
 <h2>Diacritics</h2>
 
-  <p>Apart from the <a href="#vowels"> vowel-related diacritics</a>, the following  diacritics are used in Turoyo.</p>
+<p>Turoyo only uses a small number of the large set of Syriac diacritics.</p>
+
+
+
+
+<section id="diacritics_vowels">
+<h3>Vowel diacritics</h3>
+<p> Vowel-related diacritics are described in <a class="secref">vowels</a>. </p>
+
+<figure class="characterBox auto" data-cols="trans">ܷ␣ܱ␣ܶ␣ܳ␣ܰ</figure>
+</section>
+
+
+
+
+
+<section id="diacritics_sound">
+<h3>Sound modifiers</h3>
+
+<p>Apart from the <a href="#vowels"> vowel-related diacritics</a>, the following  diacritics are used in Turoyo to extend the consonant repertoire. See <a class="secref">modifiers</a>.</p>
   
 
 <figure class="characterBox auto" data-cols="trans">̰␣݁␣݂␣݅␣݆</figure>
-<p>These diacritics are all used to extend the consonant repertoire. See <a class="secref">modifiers</a>.&nbsp;</p>
+</section>
 </section>
   
   
@@ -698,12 +745,75 @@ alveolar</th>
 
 
 
+
+
+
+
+<section id="formatting">
+<h2>Formatting characters</h2>
+    <p>The  Unicode has a set of characters that affect the way that other characters are rendered. None of those have a visible form of their own.</p>
+ 
+<figure class="formattingBox auto" data-cols="trans">&#x2067;␣&#x202B;␣&#x2066;␣&#x202A;␣&#x2069;␣&#x202C;␣&#x200F;␣&#x200E;␣&#x061C;␣&#x200D;␣&#x200C;</figure>
+
+
+
+
+<section id="textdirectioncontrols">
+<h3>Managing text direction</h3>
+
+<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">RLE</span> [<a target="c" href="/scripts/arabic/block#char202B"><span class="uname">U+202B RIGHT-TO-LEFT EMBEDDING</span></a>]</span>, <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRE</span> [<a target="c" href="/scripts/arabic/block#char202A"><span class="uname">U+202A LEFT-TO-RIGHT EMBEDDING</span></a>]</span>, and <span class="codepoint" translate="no"><span class="uname" dir="ltr">PDF</span> [<a target="c" href="/scripts/arabic/block#char202C"><span class="uname">U+202C POP DIRECTIONAL FORMATTING</span></a>]</span> are in widespread use to set the base direction of a range of characters.  <span class="uname">RLE/LRE</span> come at the start, and  <span class="uname">PDF</span> at the end of a range of characters for which the base direction is to be set.</p>
+<p>More recently, the Unicode Standard added a set of characters which do the same thing but also isolate the content from surrounding characters, in order to avoid spillover effects. They are <span class="codepoint" translate="no"><span class="uname" dir="ltr">RLI</span> [<a target="c" href="/scripts/arabic/block#char2067"><span class="uname">U+2067 RIGHT-TO-LEFT ISOLATE</span></a>]</span>, <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRI</span> [<a target="c" href="/scripts/arabic/block#char2066"><span class="uname">U+2066 LEFT-TO-RIGHT ISOLATE</span></a>]</span>, and <span class="codepoint" translate="no"><span class="uname" dir="ltr">PDI</span> [<a target="c" href="/scripts/arabic/block#char2069"><span class="uname">U+2069 POP DIRECTIONAL ISOLATE</span></a>]</span>.<strong> The Unicode Standard recommends that these be used instead,</strong> however some applications  don't yet recognise them. </p>
+<p>There is also <span class="codepoint" translate="no"><span class="uname" dir="ltr">FSI</span> [<a target="c" href="/scripts/arabic/block#char2068"><span class="uname">U+2068 FIRST STRONG ISOLATE</span></a>]</span>, used initially to set the base direction according to the first recognised strongly-directional character.</p>
+<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">ALM</span> [<a target="c" href="/scripts/arabic/block#char061C"><span class="uname">U+061C ARABIC LETTER MARK</span></a>]</span> is used to produce correct sequencing of numeric data. Follow the link for details.&nbsp;</p>
+<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">RLM</span> [<a target="c" href="/scripts/arabic/block#char200F"><span class="uname">U+200F RIGHT-TO-LEFT MARK</span></a>]</span> and <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRM</span> [<a target="c" href="/scripts/arabic/block#char200E"><span class="uname">U+200E LEFT-TO-RIGHT MARK</span></a>]</span> are invisible characters with strong directional properties that are also sometimes used to produce the correct ordering of text.</p>
+<p>For more information about how to use these formatting characters see <a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls.en">How to use Unicode controls for bidi text</a>. Note, however, that when writing HTML you should generally use markup rather than these control codes. For information about that, see <a href="https://www.w3.org/International/tutorials/bidi-xhtml/">Creating HTML Pages in Arabic, Hebrew and Other Right-to-left Scripts</a>.</p>
+</section>
+
+
+
+
+
+<section id="shapingcontrols">
+<h3>Managing glyph shaping</h3>
+
+<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">ZWJ</span> [<a href="/scripts/punctuation/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span> and <span class="codepoint" translate="no"><span class="uname" dir="ltr">ZWNJ</span> [<a target="c" href="/scripts/arabic/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a>]</span> are used to control the joining behaviour of cursive glyphs. They are particularly useful in educational contexts, but also have real world applications.</p>
+<p><span class="codepoint"><span class="uname" dir="ltr">ZWJ</span></span>  permits a letter to form a cursive connection without a visible neighbour.</p>
+<p><span class="codepoint"><span class="uname" dir="ltr">ZWNJ</span></span> prevents two adjacent letters forming a cursive connection with each other when rendered. </p>
+</section>
+</section>
+
+
+
+
   
   
 <section id="digits">
 <h2>Numbers</h2>
     
     <p>Turoyo uses Western digits.</p>
+
+
+
+
+
+<section id="expressions">
+<h3>Expressions &amp; sequences</h3>
+    <p>A sequence of European numbers, for example a range separated by hyphens,  runs from right to left in the Syriac script (and Arabic or Thaana scripts), whereas for Persian, Hebrew, N’Ko or Adlam scripts it runs left to right.</p>
+<p><a class="figref">fig_range</a> shows some   Syriac text, which is right-to-left overall, containing a numeric range that is  ordered RTL, ie. it starts with 240 and ends with 250.</p>
+<figure id="fig_range">
+<p dir="rtl" lang="tru" class="medium"><span class="ex">ܛܪܦܐ 240-250 ܩܘܼܛܢ</span></p>
+    <figcaption>A numeric range in Syriac language text.</figcaption>
+</figure>
+<p>The Unicode Bidirectional Algorithm automatically produces the expected ordering when a sequence or expression follows Syriac characters. However, a sequence that appears alone on a line doesn't benefit from this, so to make the text appear correctly for Syriac  you should add <span class="codepoint"><a target="c" href="/scripts/arabic/block#char061C"><span class="uname">U+061C ARABIC LETTER MARK</span></a></span> (ALM) at the start of the line (see <a class="figref">fig_ALM</a>). This is  an invisible formatting character.</p>
+<figure id="fig_ALM">
+<div class="medium">
+    <p dir="rtl" lang="tru"><span class="ex">&#x061C;10-01-2018</span></p>
+    <p dir="rtl" lang="tru"><span class="ex">10-01-2018</span></p>
+</div>
+    <figcaption>A numeric date alone on a line of RTL text, with ALM before it (top), and without (bottom). (Click on each line to see the code points.)</figcaption>
+</figure>
+<p>Similar special ordering is applied to numbers in equations, such as 1 + 2 = 3, for Syriac language text.</p>
+</section>
 </section>
   
   
@@ -714,6 +824,130 @@ alveolar</th>
 <h2>Glyph shaping &amp; positioning</h2>
 <p>Turoyo is cursive, and includes various aspects of context-sensitive shaping and positioning, as described in the <a href="index#shaping">Syriac page</a>.</p>
 <p>You can experiment with examples using the <a href="/pickers/syrc-tru/">Turoyo character app</a>.</p>
+
+
+
+
+
+
+<section id="cursive">
+<h3>Cursive text</h3>
+<p>Syriac is cursive, ie. letters in a word are joined up. Fonts need to produce the appropriate joining form for a code point, according to its visual context.</p>
+    <figure>
+<p dir="rtl" class="large"><span class="ex" lang="tru">ܦܘܠܝܛܝܩܝܬܐ</span></p>
+<figcaption>Letters join on the right or both sides in Syriac script.</figcaption>
+</figure>
+<p>Like Arabic, there are 8 glyphs that don't join to the left<sup></sup>.</p>
+<figure class="auto" data-cols="ipa,trans">ܐ␣ܬ␣ܕ␣ܨ␣ܙ␣ܗ␣ܪ␣ܘ</figure>
+</section>
+
+
+
+
+
+
+
+<section id="gsub">
+<h3>Context-based shaping</h3>
+<p><span class="leadin">Cursive shaping.</span> The cursive treatment  produces only minor changes to  glyph shapes in most cases. A small number of letters, however, exhibit significant changes in word final  positions. See <a class="figref">fig_cursive_shapes</a>.</p>
+
+<figure id="fig_cursive_shapes">
+<p class="large"><span class="ex" lang="tru">ܟܟܟ ܟ</span></p>
+<p class="large"><span class="ex" lang="tru">ܡܡܡ ܡ</span></p>
+<p class="large"><span class="ex" lang="tru">ܢܢܢ ܢ</span></p>
+<p class="large"><span class="ex" lang="tru">ـܐ ܐ</span></p>
+<figcaption>Letters with significantly different shapes for final/isolate forms.</figcaption>
+</figure>
+<p>Note that unconnected glyphs may have different isolated and word-final shapes. For example, in the sequence <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܡܠܘܐܐ</span> <span class="trans">mlwʾʾ</span></span> the 2 <span class="name" >alaph</span> characters at the end have different shapes, although both are unconnected.</p>
+<p><span class="leadin">Ligatures.</span> Apart from the shaping required to support cursive behaviour, there are also typical  ligatures, such as those shown in <a class="figref">fig_serto_lig</a>, some of which are optional or font-dependent.</p>
+
+
+
+<figure id="fig_serto_lig" data-notes="72px jerusalem">
+<table>
+<tr>
+<td><img src="images/lig_2.png" alt="ܐܠܗܐ"></td>
+<td>alaph + lamadh</td><td><span class="charExample" translate="no"><span class="ex" lang="syr-syrj" dir="rtl">ܐܠܗܐ</span></span></td></tr>
+<tr>
+<td><img src="images/lig_3.png" alt="ܓܠܦ"></td>
+<td>gamal + lamadh</td>
+<td><span class="charExample" translate="no"><span class="ex" lang="syr-syrj" dir="rtl">ܓܠܦ</span></span></td>
+</tr>
+<tr>
+<td><img src="images/lig_4.png" alt="ܐܓܥܠ"></td>
+<td>gamal + e</td>
+<td><span class="charExample" translate="no"><span class="ex" lang="syr-syrj" dir="rtl">ܐܓܥܠ</span></span></td>
+</tr>
+<tr>
+<td><img src="images/lig_5.png" alt="ܘܕܠـܝܠܐܝܬ"></td>
+<td>yudh + taw</td>
+<td><span class="charExample" translate="no"><span class="ex" lang="syr-syrj" dir="rtl">ܘܕܠـܝܠܐܝܬ</span></span></td>
+</tr>
+<tr>
+<td><img src="images/lig_1.png" alt="ܕܬܬܠ ܐܢܬܬܐ"></td>
+<td>lamadh + space + alaph</td>
+<td><span class="charExample" translate="no"><span class="ex" lang="syr-syrj" dir="rtl">ܕܬܬܠ ܐܢܬܬܐ</span></span></td>
+</tr>
+<tr>
+<td><img src="images/lig_6.png" alt="ܡܠܐܟ݂ܗ"></td>
+<td>lamadh + alaph</td>
+<td><span class="charExample" translate="no"><span class="ex" lang="syr-syrj" dir="rtl">ܡܠܐܟ݂ܗ</span></span></td>
+</tr>
+<tr>
+<td><img src="images/lig_7.png" alt="ܚܠܠܝܢܝ"></td>
+<td>lamadh + lamadh</td>
+<td><span class="charExample" translate="no"><span class="ex" lang="syr-syrj" dir="rtl">ܚܠܠܝܢܝ</span></span></td>
+</tr>
+<tr>
+<td><img src="images/lig_8.png" alt="ܐ̱ܢܐ"></td>
+<td>nun + alaph</td>
+<td><span class="charExample" translate="no"><span class="ex" lang="syr-syrj" dir="rtl">ܐ̱ܢܐ</span></span></td>
+</tr>
+<tr>
+<td><img src="images/lig_9.png" alt="ܥܠ ܐܘܟܝܣܛܝܐ"></td>
+<td>nun + alaph</td>
+<td><span class="charExample" translate="no"><span class="ex" lang="syr-syrj" dir="rtl">ܥܠ ܐܘܟܝܣܛܝܐ</span></span></td>
+</tr>
+<tr>
+<td><img src="images/lig_10.png" alt="ܕܘܨܢ"></td>
+<td>sadhe + nun</td>
+<td><span class="charExample" translate="no"><span class="ex" lang="syr-syrj" dir="rtl">ܕܘܨܢ</span></span></td>
+</tr>
+</table>
+<figcaption>Ligatures in West Syriac style orthography.</figcaption>
+</figure>
+</section>
+
+
+
+
+
+
+<section id="gpos">
+<h3>Context-based positioning</h3>
+<p>There are sometimes clashes between diacritic marks which have to be resolved by repositioning one of the diacritics, or sometimes producing a different solution.</p>
+      <p>For example, marks are usually centred vertically over or under a base character. If, however, &nbsp; <span class="codepoint"><span lang="syr-syrj" dir="rtl">&#x0742;</span> &#xA0; <a href="/scripts/syriac/block#char0742">[<span class="uname">U+0742 SYRIAC RUKKAKHA</span>]</a></span> appears below <span class="codepoint"><span lang="tru" dir="rtl">&#x0715;</span> <a href="/scripts/syriac/block#char0715">[<span class="uname">U+0715 SYRIAC LETTER DALATH</span>]</a></span> when the glyph for that has a dot below, the mark is moved slightly to the right, as shown here.</p>
+      <figure>
+  <p dir="rtl" lang="tru" class="large"><span class="ex">ܕ݂</span></p>
+  <figcaption>Rukkakha moves to the right to accommodate the dot under dalath.</figcaption>
+  </figure>
+  <p>If &#xA0; <span class="codepoint"><span lang="syr-syrj" dir="rtl">&#x0308;</span> &#xA0; <a href="/scripts/syriac/block#char0308">[<span class="uname">U+0308 COMBINING DIAERESIS</span>]</a></span> appears above　<span class="codepoint"><span lang="tru" dir="rtl">&#x072A;</span> <a href="/scripts/syriac/block#char072A">[<span class="uname">U+072A SYRIAC LETTER RISH</span>]</a></span> the mark  replaces the single dot above the base letter.</p>
+  <figure>
+  <p dir="rtl" lang="tru" class="large"><span class="ex">ܪ̈</span></p>
+  <figcaption>Combining diaeresis replaces the dot over rish.</figcaption>
+  </figure>
+  <p>In this example, the RISH character carries not only a combining diaeresis, but also a vowel mark, which is moved upwards to ride above the former.</p>
+  <figure>
+  <p dir="rtl" lang="tru" class="large"><span class="ex">ܪ̈ܵ</span> &nbsp; vs &nbsp; <span class="ex">ܝܵ</span></p>
+  <figcaption>Rish + diaeresis + vowel mark causes stacking diacritics.</figcaption>
+  </figure>
+</section>
+
+
+
+
+
+
 <section id="baselines">
 <h3>Baselines, line height, etc.</h3>
 <p>Turoyo uses the alphabetic baseline.</p>
@@ -732,7 +966,7 @@ alveolar</th>
 
 
 <section id="transforms">
-<h3>Transforming characters</h3>
+<h3>Character transforms</h3>
 
 <p>Syriac is monocameral.</p>
 </section>
@@ -778,27 +1012,32 @@ alveolar</th>
 	   
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
-<p> Turoyo uses ASCII punctuation and punctuation borrowed from Arabic. For separators at the sentence level and below, the following are used, where the right column indicates approximate equivalences.</p>
+<p> Turoyo uses ASCII punctuation and punctuation borrowed from Arabic. For separators at the sentence level and below, the following are used.</p>
+
      <table class="character_list">
       <tbody>
           <tr>
-          <th scope="row">comma</th>
-          <td><span class="codepoint"><span lang="ar" dir="rtl">&#x060C;</span> <a href="/scripts/arabic/block#char060C">[<span class="uname">U+060C ARABIC COMMA</span>]</a></span></td>
-        </tr>
-        <tr>
-          <th scope="row"> semi-colon</th>
-          <td><span class="codepoint"><span lang="ar" dir="rtl">&#x061B;</span> <a href="/scripts/arabic/block#char061B">[<span class="uname">U+061B ARABIC SEMICOLON</span>]</a></span>
-		  </td>
+          <th scope="row">phrase</th>
+          <td><span class="codepoint"><span lang="tru" dir="rtl">&#x060C;</span> <a href="/scripts/arabic/block#char060C">[<span class="uname">U+060C ARABIC COMMA</span>]
+</a></span><br>
+<span class="codepoint"><span lang="tru" dir="rtl">&#x061B;</span> <a href="/scripts/arabic/block#char061B">[<span class="uname">U+061B ARABIC SEMICOLON</span>]</a></span><br>
+<span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0706;</span> [<a href="/scripts/syriac/block#char0706"><span class="uname">U+0706 SYRIAC COLON SKEWED LEFT</span></a>]</span><br>
+<span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0707;</span> [<a href="/scripts/syriac/block#char0707"><span class="uname">U+0707 SYRIAC COLON SKEWED RIGHT</span></a>]</span>
+</td>
         </tr>
        <tr>
-          <th scope="row">sentence</th>
-       <td><p class="codepoint"><span lang="hy">.</span> [<span class="uname">U+002E  FULL STOP</span>]</p>
-<span class="codepoint"><span lang="ar" dir="rtl">&#x061F;</span> <a href="/scripts/arabic/block#char061F">[<span class="uname">U+061F ARABIC QUESTION MARK</span>]</a></span></td>
+          <th scope="row">sentence </th>
+       <td><p class="codepoint"><span lang="tru">.</span> [<span class="uname">U+002E  FULL STOP</span>]</p>
+<span class="codepoint"><span lang="tru" dir="rtl">&#x061F;</span> <a href="/scripts/arabic/block#char061F">[<span class="uname">U+061F ARABIC QUESTION MARK</span>]</a></span></td>
       </tr>
      </tbody>
     </table>
+
+
+<table class="character_list">
+</table>
     
-    <p><a href="https://textbook.surayt.com/en/Level%20A/17?content-fragment-id=1822">Šlomo Surayt</a> also makes heavy use of the following 2 Syriac punctuation marks as separators: <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0707;</span> [<a href="/scripts/syriac/block#char0707"><span class="uname">U+0707 SYRIAC COLON SKEWED RIGHT</span></a>],</span> used where the equivalent English text uses en-dash and semicolon; <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0706;</span> [<a href="/scripts/syriac/block#char0706"><span class="uname">U+0706 SYRIAC COLON SKEWED LEFT</span></a>]</span>, used where the English has en-dash or solidus.</p>
+    <p class="observation"><i>Observation:</i> <a href="https://textbook.surayt.com/en/Level%20A/17?content-fragment-id=1822">Šlomo Surayt</a>  makes heavy use of the following 2 Syriac punctuation marks as separators: <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0707;</span> [<a href="/scripts/syriac/block#char0707"><span class="uname">U+0707 SYRIAC COLON SKEWED RIGHT</span></a>],</span> used where the equivalent English text uses en-dash and semicolon; <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0706;</span> [<a href="/scripts/syriac/block#char0706"><span class="uname">U+0706 SYRIAC COLON SKEWED LEFT</span></a>]</span>, used where the English has en-dash or solidus.</p>
 </section>
 
 
@@ -844,7 +1083,7 @@ alveolar</th>
 <section id="otherPunctuation">
 <h3>Other punctuation</h3>
 
-<p>TBD</p>
+<p class="prompts">tbd</p>
 </section>
 
 
