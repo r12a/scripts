@@ -32,12 +32,17 @@ function setFindIPA () {
 
 
 
+
 function runCharCounts () {
-	runCharCount('.characterBox', 'mainCharList')
-	runCharCount('.archaicBox', 'archaicCharList')
-	runCharCount('.auxiliaryBox', 'auxCharList')
-	runCharCount('.otherBox', 'otherCharList')
-	runCharCount('.deprecatedBox', 'deprecatedCharList')
+	var out = ''
+	out += runCharCount('.characterBox', 'Main')
+	out += runCharCount('.auxiliaryBox', 'Auxiliary')
+	out += runCharCount('.formattingBox', 'Formatting')
+	out += runCharCount('.archaicBox', 'Archaic')
+	out += runCharCount('.otherBox', 'Other')
+	out += runCharCount('.deprecatedBox', 'Deprecated')
+	
+	document.getElementById('charCountList').innerHTML = out
 	}
 
 
@@ -164,7 +169,10 @@ function makeSidePanel (script, otherlinks) {
 function makeTables (lang) {
     // create the lists of characters in yellow, etc. boxes
 
-    if (typeof window.spreadsheet == 'undefined') return
+    if (typeof window.spreadsheet == 'undefined') {
+		console.log("Spreadsheet undefined.")
+		return
+		}
     
     // make an object from the spreadsheet
     var temp = window.spreadsheet.split('\n')
@@ -743,20 +751,12 @@ function setGeneralFont (fontname, size, language) {
 	}
 
 
-function runCharCount (type, location) {
-	chars = document.querySelectorAll(type)
-	out = ''
-	total = 0
-	for (let i=0;i<chars.length;i++) out += chars[i].textContent.replace(/␣/g,'')
-	document.getElementById(location).textContent = out
-	document.getElementById(location+'Total').textContent = out.length
-	}
 
 
-function runCharCount (type, location) {
-	if (document.getElementById(location) == null) return
-	charlists = document.querySelectorAll(type)
-	out = ''
+function runCharCount (type, location) { 
+	//if (document.getElementById(location) == null) return
+	var charlists = document.querySelectorAll(type)
+	var out = ''
 	charlistArray = []
 	for (let i=0;i<charlists.length;i++) {
 		var charStr = charlists[i].textContent
@@ -765,9 +765,15 @@ function runCharCount (type, location) {
 		for (let c=0;c<chars.length;c++) charlistArray.push(chars[c])
 		}
 	const uniqueSet = new Set(charlistArray)
-	out = [...uniqueSet]
-	document.getElementById(location).textContent = out.toString().replace(/,/g,' ')
-	document.getElementById(location+'Total').textContent = out.length
+	var uniqueArray = [...uniqueSet]
+	
+	out += '<tr><th>'+location+'</th>'
+	+'<td id="'+location+'CharList">'
+	+uniqueArray.toString().replace(/,/g,' ')
+	+'</td>'
+	+'<td id="'+location+'CharListTotal">'+uniqueArray.length+'</td></tr>'
+
+	return out
 	}
 
 
