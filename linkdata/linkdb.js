@@ -41,8 +41,11 @@ var scriptNotes= {
     'nkoo':[["N’Ko", 'nko']],
     'sinh':[['Sinhala', 'sinhala/']],
     'sund':[['Sundanese', 'sundanese/']],
-    'syrc':[['Syriac', 'syriac/']],
-    'tale':[['Tai Le/Tai Nüa', 'taile/']],
+    'syrc':[['Syriac', 'syriac/'],
+ 			['Assyrian Neo-Aramaic', 'syriac/syrc-aii'],
+ 			['Turoyo', 'syriac/syrc-tru']
+			],
+   'tale':[['Tai Le/Tai Nüa', 'taile/']],
     'talu':[['New Tai Lü', 'newtailue/']],
     'taml':[['Tamil', 'tamil/']],
     'telu':[['Telugu', 'telugu/']],
@@ -70,9 +73,11 @@ var scriptNotesByRegion = {
 			  ['Greek', 'greek/']
 			  ],
 	'West&nbsp;Asia':[['Arabic','arabic/'],
+			  ['Assyrian Neo-Aramaic', 'syriac/syrc-aii'],
 			  ['Hebrew', 'hebrew/'],
 			  ['Mandaic', 'mandaic/'],
-			  ['Syriac', 'syriac/']
+			  ['Syriac', 'syriac/'],
+			  ['Turoyo', 'syriac/syrc-tru']
 			  ],
 	'Central&nbsp;Asia':[
 				['Mongolian', 'mongolian/'],
