@@ -256,7 +256,9 @@ function makeTables (lang) {
 				}
             else char = chars[i]
 		            
-            out += '<div class="listPair"><span class="listItem" lang="'+lang+'">'+chars[i]+'</span>'
+            //out += '<div class="listPair"><span class="listItem" lang="'+lang+'">'+chars[i]+'</span>'
+			if (node.dataset.lang) out += '<div class="listPair"><span class="listItem" lang="'+node.dataset.lang+'">'+chars[i]+'</span>'
+            else out += '<div class="listPair"><span class="listItem" lang="'+lang+'">'+chars[i]+'</span>'
 
             // leave a blank where a space is used
             if (chars[i] === ' ') {
