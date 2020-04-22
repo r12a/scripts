@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="../common/local.css" />
 <style>
 @font-face {
-    font-family: 'arabicwebfont';
+    font-family: 'Scheherazade WF';
     src: url('/shared/webfonts/scheherazaderegotwebfont.woff2') format('woff2'),
          url('/shared/webfonts/scheherazaderegotwebfont.woff') format('woff');
     font-weight: normal;
@@ -23,9 +23,17 @@
     font-weight: normal;
     font-style: normal;
 	}
+@font-face {
+    font-family: 'Awami Nastaliq WF';
+	src: local('Awami Nastaliq'),
+		url('../../shared/webfonts/AwamiNastaliq-Regular.woff2') format('woff2'),
+		url('../../shared/webfonts/AwamiNastaliq-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
 #arabicText {
 	font-size: 38px;
-	font-family: arabicwebfont, serif;
+	font-family: Scheherazade WF, serif;
 	text-align: right;
 	line-height: 1.4;
 	}
@@ -36,10 +44,11 @@
 	line-height: 2;
 	}
 @media print { #freeText { font-size: 18px; } }
-[lang=ar], [lang=fa] { font-family: arabicwebfont, serif; font-size: 200%; }
+[lang=ar], [lang=fa] { font-family: Scheherazade WF, serif; font-size: 200%; }
 [lang=ur] { font-family: "Noto Nastaliq Urdu WF", serif; font-size: 150%; }
 .large[lang=ar], .large[lang=fa] { font-size: 500%;  text-align: center; line-height: 1; margin-top: 0; margin-bottom: 0; }
 .large[lang=ur] {font-size: 300%; text-align: center; line-height: 1; margin-top: .75em; margin-bottom: .25em; }
+.medium .ex { font-size: 150%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
 </style>
 
 <script src="../../shared/scriptdb/arab-ur.js"> </script>
@@ -58,7 +67,7 @@
 <script src="../linkdata/linkdb.js"></script>
 <script src="../featurelist/scriptdata.js"> </script>
 
-<script src="/shared/fontlists/arabic.js"> </script>
+<script src="../../shared/fontlists/urdufonts.js"> </script>
 <script src="ur-translit.js">  </script>
 </head>
 
@@ -122,7 +131,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->10 April, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->22 April, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -233,13 +242,65 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <section id="dir">
 <h2>Text direction</h2>
-    <p>Arabic script is written horizontally and right-to-left in the main, but as with most RTL scripts, numbers and embedded LTR script text are written left-to-right (producing 'bidirectional' text). </p>
+    <p>Urdu is written horizontally and right-to-left in the main, but as with most RTL scripts, numbers and embedded LTR script text are written left-to-right (producing 'bidirectional' text). </p>
 <figure id="fig_uefa">
 <p dir="rtl" lang="ur" class="large"><span class="charExample"><span style="font-size:50%;" class="ex"  dir="rtl">رکھتا ہے اور 2009ء میں UEFA کپ کے</span></span></p>
-    <figcaption>Urdu words are read RTL, starting  on the right, but numbers and Latin text are  read left-to-right.</figcaption>
+    <figcaption>Urdu words are read right-to-left, starting  from the right of this line, but numbers and Latin text are  read left-to-right.</figcaption>
 </figure>
 
-<p>Unicode provides a set of 10 formatting characters that can be used to control the direction of text when displayed. These are listed in the article <cite><a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls">How to use Unicode controls for bidi text</a></cite>.</p>
+<p>The Unicode Bidirectional Algorithm automatically takes care of the ordering for all the text in <a class="figref">fig_uefa</a>, as long as the 'base direction' is set to RTL. In HTML this can be set using the <code>dir</code> attribute, or in plain text using <a href="#directioncontrols">formatting controls</a>.</p>
+<p>If the base direction is not set appropriately, the directional runs will be ordered incorrectly as in <a class="figref">fig_bidi_no_base_direction</a>.</p>
+
+<figure id="fig_bidi_no_base_direction">
+<p dir="rtl" class="small" lang="ur">رکھتا ہے اور 2009ء میں UEFA کپ کے</p>
+<p class="small" lang="ur">رکھتا ہے اور 2009ء میں UEFA کپ کے</p>
+<figcaption class="instructions">The exact same sequence of characters with the base direction set to RTL (top), and with no  base direction set on this LTR page (bottom).</figcaption>
+</figure>
+
+<p>For more information about how directionality and base direction work, see <a href="https://www.w3.org/International/articles/inline-bidi-markup/uba-basics.en">Unicode Bidirectional Algorithm basics</a>. For information about plain text formatting characters see <a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls.en">How to use Unicode controls for bidi text</a>. And for working with markup in HTML, see <a href="https://www.w3.org/International/tutorials/bidi-xhtml/">Creating HTML Pages in Arabic, Hebrew and Other Right-to-left Scripts</a>.</p>
+<p>See also <a class="secref">expressions</a> and <a class="secref">breaking_latin</a>.</p>
+
+
+
+
+
+
+<section id="directioncontrols">
+<h3>Managing text direction</h3>
+
+<p>Unicode provides a set of 10 formatting characters that can be used to control the direction of text when displayed.</p>
+<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">RLE</span> [<a target="c" href="/scripts/arabic/block#char202B"><span class="uname">U+202B RIGHT-TO-LEFT EMBEDDING</span></a>]</span>, <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRE</span> [<a target="c" href="/scripts/arabic/block#char202A"><span class="uname">U+202A LEFT-TO-RIGHT EMBEDDING</span></a>]</span>, and <span class="codepoint" translate="no"><span class="uname" dir="ltr">PDF</span> [<a target="c" href="/scripts/arabic/block#char202C"><span class="uname">U+202C POP DIRECTIONAL FORMATTING</span></a>]</span> are in widespread use to set the base direction of a range of characters.  <span class="uname">RLE/LRE</span> come at the start, and  <span class="uname">PDF</span> at the end of a range of characters for which the base direction is to be set.</p>
+<p>More recently, the Unicode Standard added a set of characters which do the same thing but also isolate the content from surrounding characters, in order to avoid spillover effects. They are <span class="codepoint" translate="no"><span class="uname" dir="ltr">RLI</span> [<a target="c" href="/scripts/arabic/block#char2067"><span class="uname">U+2067 RIGHT-TO-LEFT ISOLATE</span></a>]</span>, <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRI</span> [<a target="c" href="/scripts/arabic/block#char2066"><span class="uname">U+2066 LEFT-TO-RIGHT ISOLATE</span></a>]</span>, and <span class="codepoint" translate="no"><span class="uname" dir="ltr">PDI</span> [<a target="c" href="/scripts/arabic/block#char2069"><span class="uname">U+2069 POP DIRECTIONAL ISOLATE</span></a>]</span>.  The Unicode Standard recommends that these be used instead, however some applications  don't yet recognise them. </p>
+<p>There is also <span class="codepoint" translate="no"><span class="uname" dir="ltr">FSI</span> [<a target="c" href="/scripts/arabic/block#char2068"><span class="uname">U+2068 FIRST STRONG ISOLATE</span></a>]</span>, used initially to set the base direction according to the first recognised strongly-directional character.</p>
+<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">ALM</span> [<a target="c" href="/scripts/arabic/block#char061C"><span class="uname">U+061C ARABIC LETTER MARK</span></a>]</span> is used to produce correct sequencing of numeric data. Follow the link and see <a class="secref">expressions</a> for details.&nbsp;</p>
+<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">RLM</span> [<a target="c" href="/scripts/arabic/block#char200F"><span class="uname">U+200F RIGHT-TO-LEFT MARK</span></a>]</span> and <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRM</span> [<a target="c" href="/scripts/arabic/block#char200E"><span class="uname">U+200E LEFT-TO-RIGHT MARK</span></a>]</span> are invisible characters with strong directional properties that are also sometimes used to produce the correct ordering of text.</p>
+<p>For more information about how to use these formatting characters see <a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls.en"><cite>How to use Unicode controls for bidi text</cite></a>. Note, however, that when writing HTML you should generally use markup rather than these control codes. For information about that, see <a href="https://www.w3.org/International/tutorials/bidi-xhtml/"><cite>Creating HTML Pages in Arabic, Hebrew and Other Right-to-left Scripts</cite></a>.</p>
+</section>
+
+
+
+
+<section id="expressions">
+<h3>Expressions &amp; sequences</h3>
+    <p>A sequence of  numbers separated by hyphens, for example a range,  runs from right to left in  Urdu.</p>
+<p><a class="figref">fig_range</a> shows some   Urdu text, which is right-to-left overall, containing a numeric range that is also  ordered RTL, ie. it starts with 100 and ends with 999.</p>
+<figure id="fig_range">
+<p dir="rtl" class="medium" lang="ur"><span class="ex">100–999 تصدیق شدہ کیس</span></p>
+    <figcaption>A numeric range in Urdu language text.</figcaption>
+</figure>
+<p>When a list uses the ASCII hyphen as a separator, the Unicode Bidirectional Algorithm automatically produces the expected ordering <em> only when a sequence or expression follows Urdu characters</em>. However, a sequence that appears alone on a line will be ordered left-to-right. To make the range read right-to-left you should, in this case, add the  formatting character <span class="codepoint"><a target="c" href="/scripts/arabic/block#char061C"><span class="uname">U+061C ARABIC LETTER MARK</span></a></span> (ALM) at the start of the line (see and click on each line in <a class="figref">fig_ALM</a>).</p>
+<figure id="fig_ALM">
+<div class="medium">
+    <p dir="rtl" lang="ur"><span class="ex">؜10-01-2018</span></p>
+    <p dir="rtl" lang="ur"><span class="ex">10-01-2018</span></p>
+</div>
+    <figcaption>A numeric date alone on a line of RTL text, with ALM before it (top), and without (bottom). (Click on each line to see the code points.)</figcaption>
+</figure>
+<p>Note that the required order cannot be achieved  by simply setting the base direction, nor by using <span class="codepoint" translate="no"><a href="/scripts/punctuation/block#char200F"><span class="uname">U+200F RIGHT-TO-LEFT MARK</span></a></span>.</p>
+<p>Alternatively, you could use a different separator, such as <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x2013;</span> [<a href="/scripts/arabic/block#char2013"><span class="uname">U+2013 EN DASH</span></a>]</span> (as in <a class="figref">fig_range</a>) or <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x2010;</span> [<a href="/scripts/arabic/block#char2010"><span class="uname">U+2010 HYPHEN</span></a>]</span>. No special arrangements are then necessary.</p>
+<p>Similar RTL ordering is applied to numbers in equations, such as <span class="ex" lang="ur" dir="rtl" style="white-space: nowrap">1 + 2 = 3</span>, for Urdu language text.</p>
+<p>See also <a class="secref">percent_sign</a>.</p>
+</section>
 </section>
 
 
@@ -339,8 +400,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <text x="250" y="75" class="ipa">oː</text> 
 
   <!-- mid -->
-  <text x="158" y="105" class="ipa" text-anchor="middle" filter="url(#solid)">ə</text>
-  <text x="158" y="105" class="ipa" text-anchor="middle">ə</text> 
+  <text x="165" y="135" class="ipa" text-anchor="middle" filter="url(#solid)">ə</text>
+  <text x="165" y="135" class="ipa" text-anchor="middle">ə</text> 
 
   <!-- open mid -->
   <text x="81" y="135" class="ipa" text-anchor="end" filter="url(#solid)">ɛː</text>
@@ -360,150 +421,25 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Hindustani_phonology#Vowels">wp</a>. Phones in a lighter colour are non-native or allophones.</p>
-<p>The phoneme <span class="ipa">ə</span> is often written <span class="ipa">a</span> in phonemic transcriptions. Its pronunciation may also be slightly lower (such as <span class="ipa">ɐ</span>).</p>
+<p>The phoneme <span class="ipa">ə</span> is often written <span class="ipa">a</span> in phonemic transcriptions. Its pronunciation may also be slightly lower as far down as <span class="ipa">ɐ</span>, so it is shown slightly lower than normal on the chart.</p>
 <p><span class="ipa">iː</span> and <span class="ipa">uː</span> in word-final position are typically shortened to <span class="ipa">i</span> and <span class="ipa">u</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">شَکتی</span> <span class="trans">ʃakty</span> <span class="ipa">ʃəkti</span> <span class="meaning">energy</span></span> and <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">وَستُو</span> <span class="trans">vastuv</span> <span class="ipa">ʋəstu</span> <span class="meaning">item</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Hindustani_phonology#Vowels">wp</a></p>
-<p>Where <span class="ipa">ɦ</span> has inherent vowels on either side, those vowels may become <span class="ipa">ɛ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">کَہنا</span> <span class="trans">kaḫnɑ</span> <span class="ipa">kɛɦɛnaː</span> <span class="meaning">to say</span></span>. A similar process occurs for word-final <span class="ipa">ɦ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">کَہہ</span> <span class="trans">kaḫḫ</span> <span class="ipa">kəɦ</span> <span class="meaning">say!</span></span><a class="fnref" href="https://en.wikipedia.org/wiki/Hindustani_phonology#Vowels">wp</a></p>
+<p>Where <span class="ipa">ɦ</span> has inherent vowels on either side, those vowels may become <span class="ipa">ɛ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">کَہنا</span> <span class="trans">kaḫnɑ</span> <span class="ipa">kɛɦɛnɑː</span> <span class="meaning">to say</span></span>. A similar process occurs for word-final <span class="ipa">ɦ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">کَہہ</span> <span class="trans">kaḫḫ</span> <span class="ipa">kɛɦ</span> <span class="meaning">say!</span></span><a class="fnref" href="https://en.wikipedia.org/wiki/Hindustani_phonology#Vowels">wp</a></p>
 <p class="instructions">For more details, see <a href="https://en.wikipedia.org/wiki/Hindustani_phonology">Wikipedia</a>.</p>
 </section>
 
 
-<section id="vowelDiacritics">
-<h3>Vowel diacritics</h3>
 
-<p>Urdu follows Arabic in using diacritics to express short vowel sounds, but also rarely uses them in normal text. The basic set of diacritics used for vowels is as follows. </p>
-
-<figure class="characterBox auto" data-cols="ipa,trans,transc">َ␣ً␣ُ␣ٌ␣ِ␣ٍ␣ْ␣ٗ␣ٓ␣ٰ␣ٖ␣٘</figure>
-</section>
 
 
 
 <section id="vowel_mappings">
 <h3>Vowel to script mapping</h3>
 
-<p>Given the extra phonetic sounds in Urdu, compared to Arabic, the way characters are used to express vowels  is much more complicated. The following table shows the standard ways of indicating vowel sounds, and shows what diacritics would be used if they were shown. Note however, that context can change the
-value of a vowel diacritic (such as a following  <span class="name">'ain</span> or <span class="name">he</span>) – these are detailed below the table. Three short vowels are not typically found in final position. The examples only show diacritics  for the sound currently being discussed.</p>
-			<!--table style="line-height: 3em; text-align:left;"  id="voweldiacritics">
-			<tbody>
-			<tr>
-				<th>sound</th>
-				<th>final</th>
-				<th>medial</th>
-				<th>initial</th>
-				<th>base component</th>
-				<th>final</th>
-				<th>medial</th>
-				<th>initial</th>
-			</tr>
-			<tr>
-				<th class="ipa">ə</th>
-				<td>&#xA0;</td>
-				<td><img src="images/064E.png" alt="064E: ARABIC FATHA" title="064E: ARABIC FATHA" /></td>
-				<td><img src="images/alifzabar.gif" alt="0627: ARABIC LETTER ALEF+064E: ARABIC FATHA" title="0627: ARABIC LETTER ALEF+064E: ARABIC FATHA" /></td>
-				<td><span class="name">zabar</span></td>
-				<td>&nbsp;</td>
-				<td><span class="ex" lang="ur" dir="rtl">بَب</span> <span class="ipa">bəb</span></td>
-				<td><span class="ex" lang="ur" dir="rtl">اَب</span> <span class="ipa">əb</span></td>
-			</tr>
-			<tr>
-				<th class="ipa">ɪ</th>
-				<td>&#xA0;</td>
-				<td><img src="images/0650.png" alt="0650: ARABIC KASRA" title="0650: ARABIC KASRA" /></td>
-				<td><img src="images/alifzer.gif" alt="0627: ARABIC LETTER ALEF+0650: ARABIC KASRA" title="0627: ARABIC LETTER ALEF+0650: ARABIC KASRA" /></td>
-				<td><span class="name">zer</span></td>
-				<td>&nbsp;</td>
-				<td><span class="ex" lang="ur" dir="rtl">دِن</span> <span class="ipa">dɪn</span></td>
-				<td><span class="ex" lang="ur" dir="rtl">اِن</span> <span class="ipa">ɪn</span></td>
-			</tr>
-			<tr>
-				<th class="ipa">ʊ</th>
-				<td>&nbsp;</td>
-				<td><img src="images/064F.png" alt="064F: ARABIC DAMMA" title="064F: ARABIC DAMMA" /></td>
-				<td><img src="images/alifpesh.gif" alt="0627: ARABIC LETTER ALEF+064F: ARABIC DAMMA" title="0627: ARABIC LETTER ALEF+064F: ARABIC DAMMA" /></td>
-				<td><span class="name">peʃ</span></td>
-				<td>&nbsp;</td>
-				<td><span class="ex" lang="ur" dir="rtl">سُست</span> <span class="ipa">sʊst</span></td>
-				<td><span class="ex" lang="ur" dir="rtl">اُس</span> <span class="ipa">ʊs</span><br /></td>
-			</tr>
-			<tr>
-				<th class="ipa">ɑː</th>
-				<td><img src="images/alif.gif" alt="0627: ARABIC LETTER ALEF" title="0627: ARABIC LETTER ALEF" /></td>
-				<td><img src="images/alif.gif" alt="0627: ARABIC LETTER ALEF" title="0627: ARABIC LETTER ALEF" /></td>
-				<td><img src="images/alifmadd.gif" alt="0622: ARABIC LETTER ALEF WITH MADDA ABOVE" title="0622: ARABIC LETTER ALEF WITH MADDA ABOVE" /></td>
-				<td><span class="name">alɪf</span></td>
-				<td><span class="ex" lang="ur" dir="rtl">لکھنا</span> <span class="ipa">lɪkʰnɑː</span><br /></td>
-				<td><span class="ex" lang="ur" dir="rtl">باغ</span> <span class="ipa">bɑːɣ</span><br /></td>
-				<td><span class="ex" lang="ur" dir="rtl">آج</span> <span class="ipa">ɑːʤ</span></td>
-			</tr>
-			<tr>
-				<th class="ipa">e</th>
-				<td><img src="images/barihe.gif" alt="06D2: ARABIC LETTER YEH BARREE" title="06D2: ARABIC LETTER YEH BARREE" /></td>
-				<td><img src="images/jemedial.gif" alt="06CC: ARABIC LETTER FARSI YEH" title="006CC: ARABIC LETTER FARSI YEH" /></td>
-				<td><img src="images/alifjeinitial.gif" alt="0627: ARABIC LETTER ALEF+06CC: ARABIC LETTER FARSI YEH" title="0627: ARABIC LETTER ALEF+06CC: ARABIC LETTER FARSI YEH" /></td>
-				<td><span class="name">je</span></td>
-				<td><span class="ex" lang="ur" dir="rtl">بجے</span> <span class="ipa">baʤe</span></td>
-				<td><span class="ex" lang="ur" dir="rtl">بیٹا</span> <span class="ipa">beʈɑː</span></td>
-				<td><span class="ex" lang="ur" dir="rtl">ایک</span> <span class="ipa">ek</span></td>
-			</tr>
-			<tr>
-				<th class="ipa">iː</th>
-				<td><img src="images/jefinal.gif" alt="06CC: ARABIC LETTER FARSI YEH" title="06CC: ARABIC LETTER FARSI YEH" /></td>
-				<td><img src="images/kasrajemedial.gif" alt="06CC: ARABIC LETTER FARSI YEH+0650: ARABIC KASRA" title="06CC: ARABIC LETTER FARSI YEH+0650: ARABIC KASRA" /></td>
-				<td><img src="images/alifkasrajeinitial.gif" alt="06CC: ARABIC LETTER FARSI YEH+0650: ARABIC KASRA" title="06CC: ARABIC LETTER FARSI YEH+0650: ARABIC KASRA" /></td>
-				<td><span class="name">zer+je / je</span></td>
-				<td><span class="ex" lang="ur" dir="rtl">گاری</span> <span class="ipa">gɑːriː</span></td>
-				<td><span class="ex" lang="ur" dir="rtl">تِین</span> <span class="ipa">tiːn</span></td>
-				<td><span class="ex" lang="ur" dir="rtl">اِینٹ</span> <span class="ipa">iːnʈ</span></td>
-			</tr>
-			<tr>
-				<th class="ipa">ɛ</th>
-				<td><img src="images/zabarbarihe.gif" alt="064E: ARABIC FATHA+06D2: ARABIC LETTER YEH BARREE" title="064E: ARABIC FATHA+06D2: ARABIC LETTER YEH BARREE" /></td>
-				<td><img src="images/zabarjemedial.gif" alt="064E: ARABIC FATHA+06CC: ARABIC LETTER FARSI YEH" title="064E: ARABIC FATHA+06CC: ARABIC LETTER FARSI YEH" /></td>
-				<td><img src="images/alifzabarje.gif" alt="0627: ARABIC LETTER ALEF+064E: ARABIC FATHA+06CC: ARABIC LETTER FARSI YEH" title="0627: ARABIC LETTER ALEF+064E: ARABIC FATHA+06CC: ARABIC LETTER FARSI YEH" /></td>
-				<td><span class="name">zabar+je</span></td>
-				<td><span class="ex" lang="ur" dir="rtl">ہَے</span> <span class="ipa">hɛ</span></td>
-				<td><span class="ex" lang="ur" dir="rtl">کَیسا</span> <span class="ipa">kɛsɑː</span></td>
-				<td><span class="ex" lang="ur" dir="rtl">اَیسا</span> <span class="ipa">ɛsɑː</span></td>
-			</tr>
-			<tr>
-				<th class="ipa">o</th>
-				<td><img src="images/vau.gif" alt="0648: ARABIC LETTER WAW" title="0648: ARABIC LETTER WAW" /></td>
-				<td><img src="images/vau.gif" alt="0648: ARABIC LETTER WAW" title="0648: ARABIC LETTER WAW" /></td>
-				<td><img src="images/alifvau.gif" alt="0627: ARABIC LETTER ALEF+0648: ARABIC LETTER WAW" title="0627: ARABIC LETTER ALEF+0648: ARABIC LETTER WAW" /></td>
-				<td><span class="name">vɑːuː</span></td>
-				<td><span class="ex" lang="ur" dir="rtl">کو</span> <span class="ipa">ko</span></td>
-				<td><span class="ex" lang="ur" dir="rtl">ٹوپی</span> <span class="ipa">ʈopiː</span></td>
-				<td><span class="ex" lang="ur" dir="rtl">اوس</span> <span class="ipa">os</span></td>
-			</tr>
-			<tr>
-				<th class="ipa">uː</th>
-				<td><img src="images/peshvau.gif" alt="0648: ARABIC LETTER WAW+064F: ARABIC DAMMA" title="0648: ARABIC LETTER WAW+064F: ARABIC DAMMA" /><br />
-				<img src="images/vauipesh.gif" alt="0648: ARABIC LETTER WAW+0657: ARABIC INVERTED DAMMA" title="0648: ARABIC LETTER WAW+0657: ARABIC INVERTED DAMMA" /></td>
-				<td><img src="images/peshvau.gif" alt="0648: ARABIC LETTER WAW+064F: ARABIC DAMMA" title="0648: ARABIC LETTER WAW+064F: ARABIC DAMMA" /><br />
-				<img src="images/vauipesh.gif" alt="0648: ARABIC LETTER WAW+0657: ARABIC INVERTED DAMMA" title="0648: ARABIC LETTER WAW+0657: ARABIC INVERTED DAMMA" /></td>
-				<td><img src="images/alifpeshvau.gif" alt="0627: ARABIC LETTER ALEF+064F: ARABIC DAMMA+0648: ARABIC LETTER WAW" title="0627: ARABIC LETTER ALEF+064F: ARABIC DAMMA+0648: ARABIC LETTER WAW" /><br />
-				<img src="images/alifvauipesh.gif" alt="0627: ARABIC LETTER ALEF+0648: ARABIC LETTER WAW+0657: ARABIC INVERTED DAMMA" title="0627: ARABIC LETTER ALEF+0648: ARABIC LETTER WAW+0657: ARABIC INVERTED DAMMA" /></td>
-				<td><span class="name">peʃ+vɑːuː</span> or <br />
-					<span class="name">vɑːuː+inverted peʃ</span></td>
-				<td><span class="ex" lang="ur" dir="rtl">ہندُو</span> <span class="ipa">hɪnduː</span><br /><span class="ex" lang="ur" dir="rtl">ہندوٗ</span> <span class="ipa">hɪnduː</span></td>
-				<td><span class="ex" lang="ur" dir="rtl">پُورا</span> <span class="ipa">puːrɑː</span><br /><span class="ex" lang="ur" dir="rtl">ثوٗرا</span> <span class="ipa">puːrɑː</span></td>
-				<td><span class="ex" lang="ur" dir="rtl">اُوپر</span> <span class="ipa">uːpar</span><br /><span class="ex" lang="ur" dir="rtl">اوٗپر</span> <span class="ipa">uːpar</span></td>
-			</tr>
-			<tr>
-				<th class="ipa">ɔ</th>
-				<td><img src="images/zabarvau.gif" alt="064E: ARABIC FATHA+0648: ARABIC LETTER WAW" title="064E: ARABIC FATHA+0648: ARABIC LETTER WAW" /></td>
-				<td><img src="images/zabarvau.gif" alt="064E: ARABIC FATHA+0648: ARABIC LETTER WAW" title="064E: ARABIC FATHA+0648: ARABIC LETTER WAW" /></td>
-				<td><img src="images/alifzabarvau.gif" alt="0627: ARABIC LETTER ALEF+064E: ARABIC FATHA+0648: ARABIC LETTER WAW" title="0627: ARABIC LETTER ALEF+064E: ARABIC FATHA+0648: ARABIC LETTER WAW" /></td>
-				<td><span class="name">zabar+vɑːuː</span></td>
-				<td><span class="ex" lang="ur" dir="rtl">نَو</span> <span class="ipa">nɔ</span></td>
-				<td><span class="ex" lang="ur" dir="rtl">شَوق</span> <span class="ipa">ʃɔq</span></td>
-				<td><span class="ex" lang="ur" dir="rtl">اَور</span> <span class="ipa">ɔr</span></td>
-			</tr>
-			</tbody>
-			</table-->
+<p>Urdu follows Arabic in using diacritics to express short vowel sounds, but also rarely uses them in normal text.  Given the extra phonetic sounds in Urdu, compared to Arabic, the way characters are used to express vowels  is much more complicated. </p>
 
 
 
-<p>The following tables show how the above  vowel sounds map to characters or sequences of characters. The table shows initial  (<b>i</b>), medial (<b>m</b>), and final (<b>f</b>) forms. It also shows what the vowels would look like in text with and without diacritics.</p>
+<p>The following tables show how the above  vowel sounds map to characters or sequences of characters in vowelled text. The table shows initial  (<b>i</b>), medial (<b>m</b>), and final (<b>f</b>) forms. The three short vowels are not typically found in final position.</p>
 
 
 
@@ -529,14 +465,14 @@ value of a vowel diacritic (such as a following  <span class="name">'ain</span> 
 <div class="phone">&nbsp;</div>
 <div class="posn">f</div>
 <div>
-<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0640;&#x06CC;</span> &nbsp; [<a href="/scripts/arabic/block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">گاری</span> <span class="trans">gɑry</span> <span class="ipa">gɑːriː</span> <span class="meaning">car</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x25CC;&#x0650;&#x0640;&#x06CC;</span> &nbsp; [<a href="/scripts/arabic/block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">گاری</span> <span class="trans">gɑry</span> <span class="ipa">gɑːriː</span> <span class="meaning">car</span></span>.</p>
 </div>
 </div>
 <div class="mapItem">
 <div class="phone"><span class="ipa">ɪ</span></div>
 <div class="posn">i</div>
 <div>
-<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0627;&#x0650;</span> [<a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="/scripts/arabic/block#char0650"><span class="uname">U+0650 ARABIC KASRA</span></a>], eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">اِنسَان</span> <span class="trans">ɑinsaɑn</span> <span class="ipa">ɪnsaːn</span> <span class="meaning">human</span></span>.</span></p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0627;&#x0650;</span> [<a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="/scripts/arabic/block#char0650"><span class="uname">U+0650 ARABIC KASRA</span></a>], eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">اِنسَان</span> <span class="trans">ɑinsaɑn</span> <span class="ipa">ɪnsɑːn</span> <span class="meaning">human</span></span>.</span></p>
 </div>
 </div>
 <div class="mapItem">
@@ -544,6 +480,7 @@ value of a vowel diacritic (such as a following  <span class="name">'ain</span> 
 <div class="posn">m</div>
 <div>
 <p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x25CC;&#x0650;</span> [<a href="/scripts/arabic/block#char0650"><span class="uname">U+0650 ARABIC KASRA</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">دِن</span> <span class="trans">din</span> <span class="ipa">dɪn</span> <span class="meaning">day</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0640;&#x0626;&#x0640;</span> [<a href="/scripts/arabic/block#char0626"><span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span></a>]</span>&nbsp; after another vowel with no intervening consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">کوئلہ</span> <span class="trans">kʋɪ͑lh</span> <span class="ipa">koɪlɑː</span> <span class="meaning">coal</span></span>.</p>
 </div>
 </div>
 <div class="mapItem">
@@ -558,6 +495,7 @@ value of a vowel diacritic (such as a following  <span class="name">'ain</span> 
 <div class="posn">m</div>
 <div>
 <p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x25CC;&#x064F;</span> [<a href="/scripts/arabic/block#char064F"><span class="uname">U+064F ARABIC DAMMA</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">سُست</span> <span class="trans">sust</span> <span class="ipa">sʊst</span> <span class="meaning">lazy</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0648;</span> [<a href="/scripts/arabic/block#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a>]</span> in two very common words: <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">خود</span> <span class="trans">xvd</span> <span class="ipa">xʊd</span> <span class="meaning">self</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">خوش</span> <span class="trans">xvʃ</span> <span class="ipa">xʊʃ</span> <span class="meaning">happy</span></span>.</p>
 </div>
 </div>
 <div class="mapItem">
@@ -631,33 +569,17 @@ value of a vowel diacritic (such as a following  <span class="name">'ain</span> 
 </div>
 </div>
 </div>
-
-
-
-
-
-<div id="mapv_mid" class="map">
-<div class="mapItem">
-<div class="phone"><span class="ipa">ə</span></div>
-<div class="posn">i</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0627;&#x064E;</span> [<a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="/scripts/arabic/block#char064E"><span class="uname">U+064E ARABIC FATHA</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">اَب</span> <span class="trans">ɑab</span> <span class="ipa">ab</span> <span class="meaning">now</span></span>.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone">&nbsp;</div>
-<div class="posn">m</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x25CC;&#x064E;</span> [<a href="/scripts/arabic/block#char064E"><span class="uname">U+064E ARABIC FATHA</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">سَر</span> <span class="trans">sar</span> <span class="ipa">səɾ</span> <span class="meaning">head</span></span>.</p>
-</div>
-</div>
-</div>
-
-
-
-
-
 <div id="mapv_lmid" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɛ</span></div>
+<div class="posn">-</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x25CC;&#x0650;</span> [<a href="/scripts/arabic/block#char0650"><span class="uname">U+0650 ARABIC KASRA</span></a>]</span>, when used as izafat, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">شیرِ پنجاب</span> <span class="trans">ʃyri pnʤɑb</span> <span class="ipa">ʃer ɛ panʤɑːb</span> <span class="meaning">Lion of the Punjab</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06C1;&#x0654;</span> [<a href="/scripts/arabic/block#char06C1"><span class="uname">U+06C1 ARABIC LETTER HEH GOAL</span></a> + <a href="/scripts/arabic/block#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span> as izafat when the preceding word ends in a <em>silent</em> <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06C1;</span> [<a href="/scripts/arabic/block#char06C1"><span class="uname">U+06C1 ARABIC LETTER HEH GOAL</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">درجۂ حرارت</span> <span class="trans">drʤe͑ ḫrɑrt</span> <span class="ipa">dərd͡ʒa ɛ hərɑːrət</span> <span class="meaning">temperature</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0654;</span> [<a href="/scripts/arabic/block#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span> as izafat when the preceding word ends with <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06CC;</span> [<a href="/scripts/arabic/block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">آزادیٔ مذہب</span> <span class="trans">ɑ̄zɑdy‘ mżhb</span> <span class="ipa">ɑːzɑːdiː ɛ məzhəb</span> <span class="meaning">freedom of religion</span></span>.</p>
+<p>&nbsp;<span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0626;&#x06D2;</span> [<a href="/scripts/arabic/block#char0626"><span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span></a> + <a href="/scripts/arabic/block#char06D2"><span class="uname">U+06D2 ARABIC LETTER YEH BARREE</span></a>]</span> as izafat when the preceding word ends in <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0627;</span> [<a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span> or <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0648;</span> [<a href="/scripts/arabic/block#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">روئے زمین</span> <span class="trans">rʋɪ͑ɛ zmyn</span> <span class="ipa">ruː ɛ zamiːn</span> <span class="meaning">the surface of the ground</span></span>.</p>
+</div>
+</div>
 <div class="mapItem">
 <div class="phone"><span class="ipa">ɛː</span></div>
 <div class="posn">i</div>
@@ -678,6 +600,9 @@ value of a vowel diacritic (such as a following  <span class="name">'ain</span> 
 <div class="posn">f</div>
 <div>
 <p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x25CC;&#x0640;&#x064E;&#x06D2;</span> [<a href="/scripts/arabic/block#char064E"><span class="uname">U+064E ARABIC FATHA</span></a> + <a href="/scripts/arabic/block#char06D2"><span class="uname">U+06D2 ARABIC LETTER YEH BARREE</span></a>]</span>, eg.<span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ہَے</span> <span class="trans">ḫaɛ</span> <span class="ipa">hɛː</span> <span class="meaning">is</span></span>. </p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x25CC;&#x0650;</span> [<a href="/scripts/arabic/block#char0650"><span class="uname">U+0650 ARABIC KASRA</span></a>]</span> as ezafat after a consonant, eg. : <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="ur">شیرِ پنجاب</span> <span class="trans">ʃyri pnʤɑb</span> <span class="ipa">ʃer ɛ panʤɑːb</span> <span class="meaning">Lion of the Punjab</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0654;</span> [<a href="/scripts/arabic/block#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span>&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06C2;</span> [<a href="/scripts/arabic/block#char06C2"><span class="uname">U+06C2 ARABIC LETTER HEH GOAL WITH HAMZA ABOVE</span></a>]</span> as ezafat after a 'silent h', eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="ur">قطرۂ آب</span> <span class="trans">qt̂re͑ ɑ̄b</span> <span class="ipa">qatra ɛ ɑːb</span> <span class="meaning">drop of water</span></span>. &nbsp;</p>
 </div>
 </div>
 <div class="mapItem">
@@ -709,7 +634,22 @@ value of a vowel diacritic (such as a following  <span class="name">'ain</span> 
 
 <div id="mapv_low" class="map">
 <div class="mapItem">
-<div class="phone"><span class="ipa">aː</span></div>
+<div class="phone"><span class="ipa">ə</span></div>
+<div class="posn">i</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0627;&#x064E;</span> [<a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="/scripts/arabic/block#char064E"><span class="uname">U+064E ARABIC FATHA</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">اَب</span> <span class="trans">ɑab</span> <span class="ipa">ab</span> <span class="meaning">now</span></span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">m</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x25CC;&#x064E;</span> [<a href="/scripts/arabic/block#char064E"><span class="uname">U+064E ARABIC FATHA</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">سَر</span> <span class="trans">sar</span> <span class="ipa">səɾ</span> <span class="meaning">head</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0640;&#x0626;&#x0640;</span> [<a href="/scripts/arabic/block#char0626"><span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span></a>]</span>&nbsp; after another vowel with no intervening consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ہیئت</span> <span class="trans">hyɪ͑t</span> <span class="ipa">hɛːat</span> <span class="meaning">astronomy</span></span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɑː</span></div>
 <div class="posn">i</div>
 <div>
 <p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0622;</span> [<a href="/scripts/arabic/block#char0622"><span class="uname">U+0622 ARABIC LETTER ALEF WITH MADDA ABOVE</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">آج</span> <span class="trans">ɑ̄ʤ</span> <span class="ipa">ɑːʤ</span> <span class="meaning">today</span></span>.</p>
@@ -719,14 +659,16 @@ value of a vowel diacritic (such as a following  <span class="name">'ain</span> 
 <div class="phone">&nbsp;</div>
 <div class="posn">m</div>
 <div>
-<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0627;</span> [<a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">باغ</span> <span class="trans">bɑɣ</span> <span class="ipa">bɑːɣ</span> <span class="meaning">garden</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x25CC;&#x064E;&#x0640;&#x0627;</span> [<a href="/scripts/arabic/block#char064E"><span class="uname">U+064E ARABIC FATHA</span></a> + <a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">بَاغ</span> <span class="trans">baɑɣ</span> <span class="ipa">bɑːɣ</span> <span class="meaning">garden</span></span>.</p>
 </div>
 </div>
 <div class="mapItem">
 <div class="phone">&nbsp;</div>
 <div class="posn">f</div>
 <div>
-<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0627;</span> [<a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">لکھنا</span> <span class="trans">lkʰnɑ</span> <span class="ipa">lɪkʰnɑː</span> <span class="meaning">to write</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x25CC;&#x064E;&#x0640;&#x0627;</span> [<a href="/scripts/arabic/block#char064E"><span class="uname">U+064E ARABIC FATHA</span></a> + <a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">لِکھنَا</span> <span class="trans">likʰnaɑ</span> <span class="ipa">lɪkʰnɑː</span> <span class="meaning">to write</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0640;&#x06C1;</span> [<a href="/scripts/arabic/block#char06C1"><span class="uname">U+06C1 ARABIC LETTER HEH GOAL</span></a>]</span> at the end of many words derived from Arabic or Persian, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">مَکّہ</span> <span class="trans">makᵚḫ</span> <span class="ipa">məkkɑː</span> <span class="meaning">Mecca</span></span>.&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0640;&#x06CC;&#x0670;</span> [<a href="/scripts/arabic/block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a> + <a href="/scripts/arabic/block#char0670"><span class="uname">U+0670 ARABIC LETTER SUPERSCRIPT ALEF</span></a>]</span> at the end of a few Arabic words, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">اعلیٰ</span> <span class="trans">ɑʿlyɑ̇</span> <span class="ipa">alɑː</span> <span class="meaning">paramount</span></span>.&nbsp;</p>
 </div>
 </div>
 </div>
@@ -740,8 +682,8 @@ value of a vowel diacritic (such as a following  <span class="name">'ain</span> 
 <div class="phone"><span class="ipa">◌̃</span></div>
 <div class="posn"></div>
 <div>
-<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06BA;</span> [<a href="/scripts/arabic/block#char06BA"><span class="uname">U+06BA ARABIC LETTER NOON GHUNNA</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">نہیں</span> <span class="trans">nḫyñ</span> <span class="ipa">nə.ɦĩː</span> <span class="meaning">no</span></span></p>
-<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0646;</span> [<a href="/scripts/arabic/block#char0646"><span class="uname">U+0646 ARABIC LETTER NOON</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">دانت</span> <span class="trans">dɑnt</span> <span class="ipa">d̪ɑ̃ːt̪</span> <span class="meaning">tooth</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06BA;</span> [<a href="/scripts/arabic/block#char06BA"><span class="uname">U+06BA ARABIC LETTER NOON GHUNNA</span></a>]</span> when word final, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">نہیں</span> <span class="trans">nḫyñ</span> <span class="ipa">nə.ɦĩː</span> <span class="meaning">no</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0646;</span> [<a href="/scripts/arabic/block#char0646"><span class="uname">U+0646 ARABIC LETTER NOON</span></a>] elsewhere</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">دانت</span> <span class="trans">dɑnt</span> <span class="ipa">d̪ɑ̃ːt̪</span> <span class="meaning">tooth</span></span>, <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">اونچا</span> <span class="trans">ɑvnčɑ</span> <span class="ipa">ũt͡ʃɑː</span> <span class="meaning">tall</span></span>.</p>
 </div>
 </div>
 </div>
@@ -756,7 +698,7 @@ value of a vowel diacritic (such as a following  <span class="name">'ain</span> 
 
 
 <section id="mapToVowels">
-<h3>Characters to sounds</h3>
+<h3>Vowels without diacritics</h3>
 
 <p>When text is unvowelled (as it usually is), there are far fewer ways of writing vowels than shown in the previous section, and more ambiguity about which sound is represented by a letter.</p>
 <p>This table shows the available permutations and their mappings. (The table should be read right-to-left.)</p>
@@ -809,6 +751,27 @@ value of a vowel diacritic (such as a following  <span class="name">'ain</span> 
 <p>The vowels <span class="ipa">ə</span> <span class="ipa">ɪ</span> <span class="ipa">ʊ</span> are not marked in medial position, and generally do not occur in final position.</p>
 <p>&nbsp;</p>
 </section>
+
+
+
+
+
+
+
+<section id="vowelDiacritics">
+<h3>Vowel diacritics</h3>
+
+<p>The  set of diacritics used for vowels is as follows. </p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">َ␣ً␣ُ␣ٌ␣ِ␣ٍ␣ْ␣ٗ␣ٓ␣ٰ␣ٖ␣٘</figure>
+</section>
+
+
+
+
+
+
+
 <section id="ain">
 <h3>'ain</h3>
 			<p>The letter <span class="codepoint"><span lang="ur" dir="rtl">&#x0639;</span> <a href="/scripts/arabic/block#char0639">[<span class="uname">U+0639 ARABIC LETTER AIN</span>]</a></span> is used in words of Arabic origin. In these words it is typically not pronounced but can support vowels. In this way, at the beginning of a word it can fulfill the same function as the alif, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">عَرب</span> <span class="trans">ʿarb</span> <span class="ipa">arab</span> <span class="meaning">Arab</span></span>. The Urdu word <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">اَرَب</span> <span class="trans">ɑarab</span> <span class="ipa">arab</span> <span class="meaning">necessity</span></span>, though pronounced the same, becomes a completely different word by its spelling. Note, in particular, that the equivalent of <span class="codepoint"><span lang="ur" dir="rtl">&#x0622;</span> <a href="/scripts/arabic/block#char0622">[<span class="uname">U+0622 ARABIC LETTER ALEF WITH MADDA ABOVE</span>]</a></span> <span class="ipa">ɑː</span> is <span class="ex" lang="ur" dir="rtl">عا</span>, as in <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">عادت</span> <span class="trans">ʿɑdt</span> <span class="ipa">ɑːdat</span> <span class="meaning">habit</span></span>.</p>
@@ -852,7 +815,7 @@ value of a vowel diacritic (such as a following  <span class="name">'ain</span> 
 			<p>The diacritic <span class="codepoint"><span lang="ur" dir="rtl">&#x25CC;&#x0670;</span> [<a href="/scripts/arabic/block#char0670"><span class="uname">U+0670 ARABIC LETTER SUPERSCRIPT ALEF​</span></a>]</span> is used in a few Arabic words over the final form of <span class="codepoint"><span dir="rtl" lang="ar">ی</span> <a href="#char06CC">[<span class="uname">U+06CC ARABIC LETTER FARSI YEH</span>]</a></span> to produce the sound <span class="ipa">ɑ:</span> eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="ur">اعلیٰ</span> <span class="trans">ɑʿlyɑ̇</span> <span class="ipa">alɑː</span> <span class="meaning">paramount, highest</span></span>;  <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">دعویٰ</span> <span class="trans">dʿvyɑ̇</span> <span class="ipa">davɑː</span> <span class="meaning">law suit, claim</span></span>. </p>
 			<p>The similar diacritic <span class="codepoint"><span lang="ur" dir="rtl">&#x25CC;&#x0656;</span> [<a href="/scripts/arabic/block#char0656"><span class="uname">U+0656 ARABIC SUBSCRIPT ALEF</span></a>]</span> is used to indicate that a vowel is <span class="ipa">iː</span> or <span class="ipa">i</span> rather than <span class="ipa">e</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">نُحْیٖ</span> <span class="trans">nuh͓yᵢ</span></span>. This diacritic is not usually needed, and serves only to emphasise that the vowel is long.</p>
 <p><span class="codepoint"><span lang="ur" dir="rtl">&#x25CC;&#x0657;</span> [<a href="/scripts/arabic/block#char0657"><span class="uname">U+0657 ARABIC INVERTED DAMMA​</span></a>]</span> is used to indicate that the vowel is <span class="ipa">uː</span> or <span class="ipa">ʊ</span> rather than <span class="ipa">ɔ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">حبل حلالہٗ</span> <span class="trans">hbl hlɑlḫᵘ</span></span>. It is not usually needed, and serves only to emphasise that the vowel is long.</p>
-<p>The doubled vowel diacritics, <span class="codepoint"><span lang="ur" dir="rtl">&#x25CC;&#x064B;</span> [<a href="/scripts/arabic/block#char064B"><span class="uname">U+064B ARABIC FATHATAN​</span></a>]</span>, <span class="codepoint"><span lang="ur" dir="rtl">&#x25CC;&#x064C;</span> [<a href="/scripts/arabic/block#char064C"><span class="uname">U+064C ARABIC DAMMATAN​</span></a>]</span>, and <span class="codepoint"><span lang="ur" dir="rtl">&#x25CC;&#x064D;</span> [<a href="/scripts/arabic/block#char064D"><span class="uname">U+064D ARABIC KASRATAN​</span></a>]</span> are used at the ends of certain Arabic adverbs. The doubled zabar (fathatan) is the most common of the three marks of this type. Although the mark appears over an <span class="name">alif</span> the vowel sound is short. Examples, <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="ur">یقیناً</span> <span class="trans">yqynɑaⁿ</span> <span class="ipa">yakiːnan</span> <span class="meaning">certainly</span></span>; <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="ur">مثلاً</span> <span class="trans">mṡlɑaⁿ</span> <span class="ipa">masalan</span> <span class="meaning">for example</span></span>.</p>
+<p>The doubled vowel diacritics, <span class="codepoint"><span lang="ur" dir="rtl">&#x25CC;&#x064B;</span> [<a href="/scripts/arabic/block#char064B"><span class="uname">U+064B ARABIC FATHATAN​</span></a>]</span>, <span class="codepoint"><span lang="ur" dir="rtl">&#x25CC;&#x064C;</span> [<a href="/scripts/arabic/block#char064C"><span class="uname">U+064C ARABIC DAMMATAN​</span></a>]</span>, and <span class="codepoint"><span lang="ur" dir="rtl">&#x25CC;&#x064D;</span> [<a href="/scripts/arabic/block#char064D"><span class="uname">U+064D ARABIC KASRATAN​</span></a>]</span> are used at the ends of certain Arabic adverbs. The doubled zabar (fathatan) is the most common of the three marks of this type, and is usually written over an <span class="name">alif</span>, although the vowel sound is short. Examples, <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="ur">یقیناً</span> <span class="trans">yqynɑaⁿ</span> <span class="ipa">yakiːnan</span> <span class="meaning">certainly</span></span>; <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="ur">مثلاً</span> <span class="trans">mṡlɑaⁿ</span> <span class="ipa">masalan</span> <span class="meaning">for example</span></span>.</p>
 </section>
 
 
@@ -872,7 +835,7 @@ value of a vowel diacritic (such as a following  <span class="name">'ain</span> 
 			<p>A  <span class="name">hamzā</span> plays more than one role in Urdu. One such role is to indicate the boundaries between
 				vowel sounds when there is no intervening consonant. Depending on the vowels concerned, it is used in a number of different ways. It can also have
 				two different shapes, one like the initial form of <span class="name">'ain</span> and the other more like an italic 's'.</p>
-			<p>In this example we see hamza in its isolated form, <span class="ex" lang="ur" dir="rtl">انشاءﷲ</span> <span class="ipa">ɪnʃalːaː</span> <span
+			<p>In this example we see hamza in its isolated form, <span class="ex" lang="ur" dir="rtl">انشاءﷲ</span> <span class="ipa">ɪnʃalːɑː</span> <span
 				class="meaning">God willing</span>.</p>
 			<p>When the second vowel is an <span class="ipa">iː</span> or <span class="ipa">e</span> represented by <span class="codepoint"><span lang="ur" dir="rtl">&#x06CC;</span> <a href="/scripts/arabic/block#char06CC">[<span class="uname">U+06CC ARABIC LETTER FARSI YEH</span>]</a></span> or <span class="codepoint"><span lang="ur" dir="rtl">&#x06D2;</span> <a href="/scripts/arabic/block#char06D2">[<span class="uname">U+06D2 ARABIC LETTER YEH BARREE</span>]</a></span>, the <span class="name">hamzā</span> 'sits on a chair' before the letter
 	representing the second vowel.</p>
@@ -898,13 +861,42 @@ value of a vowel diacritic (such as a following  <span class="name">'ain</span> 
 <h3>Izāfat</h3>
 			<p><span class="name">Izāfat</span> <span class="ipa">ɪzɑːfat</span> is the name given to the short vowel <span class="ipa">ɛ</span> used to describe a
 				relationship between two words. It may be translated <span class="meaning">of</span>, eg. as in <span class="meaning">the Lion of Punjab</span>.</p>
-			<p>This sound occurs at the end of a word and is mostly represented using <span class="name">zer</span>. Sometimes, however, the combining mark is not shown, even though
+			<p>This sound occurs at the end of a word and is mostly represented using <span class="name">zer</span>. Sometimes the combining mark is not shown, even though
 				pronounced. Examples: <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">شیرِ پنجاب</span> <span class="trans">ʃyri pnʤɑb</span> <span class="ipa">ʃer ɛ panʤɑːb</span> <span class="meaning">Lion of the Punjab</span></span>; <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">طالبِ علم</span> <span class="trans">t̂ɑlbi ʿlm</span> <span class="ipa">tɑːlɪb ɛ ɪlm</span> <span class="meaning">seeker of knowledge (student)</span></span>.</p>
-				<p>When the preceding word  ends in
-					a <em><strong>silent</strong></em> <span class="name">choṭī he</span> <span class="codepoint"><span lang="ur" dir="rtl">&#x06C1;</span> <a href="/scripts/arabic/block#char06C1">[<span class="uname">U+06C1 ARABIC LETTER HEH GOAL</span>]</a></span><span class="codepoint"><a href="/scripts/arabic/block#char06CC"></a></span>, izafat is  represented by a combining hamza, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">قطرۂ آب</span> <span class="trans">qt̂re͑ ɑ̄b</span> <span class="ipa">qatra ɛ ɑːb</span> <span class="meaning">drop of water</span></span>. Note that if the <span class="name">choṭī he</span> is pronounced, then zer is used, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">آہِ گرم</span> <span class="trans">ɑ̄ḫi grm</span> <span class="ipa">āh-e garm</span> <span class="meaning">hot sigh</span></span>.</p>
-<p>When the preceding word  ends in				    <span class="name">ye</span> <span class="codepoint"><span lang="ur" dir="rtl">&#x06CC;</span> <a href="/scripts/arabic/block#char06CC">[<span class="uname">U+06CC ARABIC LETTER FARSI YEH</span>]</a></span>, sources differ on the approach to take. Some sources say that you should just add <span class="name">zer</span>, as described before. Others say that izafat is represented by a combining hamza, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ولیٔ کامل</span> <span class="trans">vly‘ kɑml</span> <span class="ipa">valiː ɛ kɑːmɪl</span> <span class="meaning">perfect saint</span></span>. <span class="ednote">Should you use <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span> <a href="/scripts/arabic/block#char0626">[<span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span>]</a></span> or <span class="codepoint"><span lang="ur" dir="rtl">&#x06CC;</span> <a href="/scripts/arabic/block#char06CC">[<span class="uname">U+06CC ARABIC LETTER FARSI YEH</span>]</a></span> + combining hamza? Most of the sources proposing this approach seem to use the former. With Google fonts the result looks the same either way. With Nafees Nastaleeq only the latter works. The latter seems more logical, wrt searching, semantics, etc.</span></p>
-<p>When the preceding word ends in a long <span class="trans">a</span> or <span class="trans">u</span> vowel, izafat is represented using hamza 'on it's chair', ie. <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span> <a href="/scripts/arabic/block#char0626">[<span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span>]</a></span>, plus <span class="codepoint"><span lang="ur" dir="rtl">&#x06D2;</span> <a href="/scripts/arabic/block#char06D2">[<span class="uname">U+06D2 ARABIC LETTER YEH BARREE</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">صدائے بلند</span> <span class="trans">ŝdɑɪ͑ɛ blnd</span> <span class="ipa">sadɑː ɛ buland</span> <span class="meaning">a high voice</span></span>;
-  <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">روئے زمین</span> <span class="trans">rvɪ͑ɛ zmyn</span> <span class="ipa">ruː ɛ zamiːn</span> <span class="meaning">the surface of the ground</span></span>. Sometimes, however, the hamza is not shown.<sup>[2 p99]</sup><sup>[11]</sup></p>
+				<p>If   <span class="codepoint"><span lang="ur" dir="rtl">&#x06C1;</span> <a href="/scripts/arabic/block#char06C1">[<span class="uname">U+06C1 ARABIC LETTER HEH GOAL</span>]</a></span> (<span class="name">choṭī he</span>) is pronounced at the end of a word, then <span class="name">zer</span> is used, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">براہِ راست</span> <span class="trans">brɑhi rɑst</span> <span class="ipa">bərɑːɦ ɛ rɑːst</span> <span class="meaning">directly</span></span>. However, when the preceding word  ends in
+					a <em><strong>silent</strong></em> <span class="name">choṭī he</span><span class="codepoint"><a href="/scripts/arabic/block#char06CC"></a></span> izafat is  represented by a combining hamza, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">درجۂ حرارت</span> <span class="trans">drʤe͑ ḫrɑrt</span> <span class="ipa">dərd͡ʒa ɛ hərɑːrət</span> <span class="meaning">temperature</span></span> or  <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">قطرۂ آب</span> <span class="trans">qt̂re͑ ɑ̄b</span> <span class="ipa">qatra ɛ ɑːb</span> <span class="meaning">drop of water</span></span>. Normally, you would write this using the precomposed character <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06C2;</span> [<a href="/scripts/arabic/block#char06C2"><span class="uname">U+06C2 ARABIC LETTER HEH GOAL WITH HAMZA ABOVE</span></a>]</span>.</p>
+<p>When the preceding word  ends in				    <span class="name">ye</span> <span class="codepoint"><span lang="ur" dir="rtl">&#x06CC;</span> <a href="/scripts/arabic/block#char06CC">[<span class="uname">U+06CC ARABIC LETTER FARSI YEH</span>]</a></span>  izafat is represented by a combining hamza, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">آزادیٔ مذہب</span> <span class="trans">ɑ̄zɑdy‘ mżhb</span> <span class="ipa">ɑːzɑːdiː ɛ məzhəb</span> <span class="meaning">freedom of religion</span></span>. 
+<!--or <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ولیٔ کامل</span> <span class="trans">vly‘ kɑml</span> <span class="ipa">valiː ɛ kɑːmɪl</span> <span class="meaning">perfect saint</span></span-->
+This is normally written using <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06CC;&#x0654;</span> [<a href="/scripts/arabic/block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a> + <a href="/scripts/arabic/block#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span>, rather than <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0626;</span> [<a href="/scripts/arabic/block#char0626"><span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span></a>]</span> (which is used for <a href="#junctions">vowel separation</a>).</p>
+<p>When the preceding word ends in a vowel written with<span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ا</span></span></span> or <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">و</span></span>, izafat is represented using hamza 'on it's chair' followed by <span class="name">baɽiː je</span>, ie. <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0626;&#x06D2;</span> [<a href="/scripts/arabic/block#char0626"><span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span></a> + <a href="/scripts/arabic/block#char06D2"><span class="uname">U+06D2 ARABIC LETTER YEH BARREE</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">صدائے بلند</span> <span class="trans">ŝdɑɪ͑ɛ blnd</span> <span class="ipa">sadɑː ɛ buland</span> <span class="meaning">a high voice</span></span> or 
+  <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">روئے زمین</span> <span class="trans">rvɪ͑ɛ zmyn</span> <span class="ipa">ruː ɛ zamiːn</span> <span class="meaning">the surface of the ground</span></span>.<a class="fnref" href="#refs">m250</a></p>
+<figure id="izafat_endings">
+<table>
+<thead>
+<tr><th>Word ends with:</th><th>&nbsp;</th></tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row"><span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ی</span></span></th>
+<td>add <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x25CC;&#x0654;</span> [<a href="/scripts/arabic/block#char0654"><span class="uname">U+0654 ARABIC HAMZA ABOVE</span></a>]</span></td>
+</tr>
+<tr>
+<th scope="row" style="white-space: nowrap"><em>unpronounced</em> <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ہ</span></span></th>
+<td>replace with <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06C2;</span> [<a href="/scripts/arabic/block#char06C2"><span class="uname">U+06C2 ARABIC LETTER HEH GOAL WITH HAMZA ABOVE</span></a>]</span>&nbsp;</td>
+</tr>
+<tr>
+<th scope="row"><span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ا</span></span> or <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">و</span></span></th>
+<td>add <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0626;&#x06D2;</span> [<a href="/scripts/arabic/block#char0626"><span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span></a> + <a href="/scripts/arabic/block#char06D2"><span class="uname">U+06D2 ARABIC LETTER YEH BARREE</span></a>]</span>&nbsp;</td>
+</tr>
+<tr>
+<th scope="row">otherwise</th>
+<td>add <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x25CC;&#x0650;</span> [<a href="/scripts/arabic/block#char0650"><span class="uname">U+0650 ARABIC KASRA</span></a>]</span>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Summary of how to write izafat.</figcaption>
+</figure>
+
 </section>
 </section>
 
@@ -1029,7 +1021,7 @@ alveolar</th>
 </table>
 <p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">wp</a>. Phones in a lighter colour are non-native or allophones.</p>
 <p>Urdu, like other Indic languages, has four forms of plosives, illustrated here with the bilabial stop: unvoiced <span class="ipa">p</span>, voiced <span class="ipa">b</span>, aspirated <span class="ipa">pʰ</span>, and murmured <span class="ipa">bʱ</span>. It also has a set of retroflex consonants.</p>
-<p><span class="ipa">v</span> and <span class="ipa">w</span> are allophones of <span class="ipa">ʋ</span> in Urdu. <span class="ipa">w</span> typically occurs between a consonant and vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">پکوان</span> <span class="trans">pkvɑn</span> <span class="ipa">pəkwaːn</span> <span class="meaning">food dish</span></span>. Compare with <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ورت</span> <span class="trans">vrt</span> <span class="ipa">vrət</span> <span class="meaning">vow</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Hindustani_phonology#Allophony_of_[v]_and_[w]">wp</a></p>
+<p><span class="ipa">v</span> and <span class="ipa">w</span> are allophones of <span class="ipa">ʋ</span> in Urdu. <span class="ipa">w</span> typically occurs between a consonant and vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">پکوان</span> <span class="trans">pkvɑn</span> <span class="ipa">pəkwɑːn</span> <span class="meaning">food dish</span></span>. Compare with <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ورت</span> <span class="trans">vrt</span> <span class="ipa">vrət</span> <span class="meaning">vow</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Hindustani_phonology#Allophony_of_[v]_and_[w]">wp</a></p>
 <p class="instructions">For more details, see <a href="https://en.wikipedia.org/wiki/Hindustani_phonology">Wikipedia</a>.</p>
 </section>
 
@@ -1060,7 +1052,7 @@ alveolar</th>
 </div>
 </div>
 <div class="mapItem">
-<div class="phone"><span class="ipa">pʱ</span></div>
+<div class="phone"><span class="ipa">pʰ</span></div>
 <div>
 <p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x067E;&#x06BE;</span> [<a href="/scripts/arabic/block#char067E"><span class="uname">U+067E ARABIC LETTER PEH</span></a> + <a href="/scripts/arabic/block#char06BE"><span class="uname">U+06BE ARABIC LETTER HEH DOACHASHMEE</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">پھل</span> <span class="trans">pʰl</span> <span class="ipa">pʰəl</span> <span class="meaning">fruit</span></span>.</p>
 </div>
@@ -1075,7 +1067,7 @@ alveolar</th>
 <div class="phone"><span class="ipa">t</span></div>
 <div>
 <p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x062A;</span> [<a href="/scripts/arabic/block#char062A"><span class="uname">U+062A ARABIC LETTER TEH</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">تین</span> <span class="trans">tyn</span> <span class="ipa">t̪iːn</span> <span class="meaning">three</span></span>.</p>
-<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0637;</span> [<a href="/scripts/arabic/block#char0637"><span class="uname">U+0637 ARABIC LETTER TAH</span></a>]</span>, used for Arabic words.&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0637;</span> [<a href="/scripts/arabic/block#char0637"><span class="uname">U+0637 ARABIC LETTER TAH</span></a>]</span>, in words of Arabic origin, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">خُطُوط</span> <span class="trans">xut̂uʋt̂</span> <span class="ipa">xʊtuːt</span> <span class="meaning">letters</span></span>.&nbsp;</p>
 </div>
 </div>
 <div class="mapItem">
@@ -1085,7 +1077,7 @@ alveolar</th>
 </div>
 </div>
 <div class="mapItem">
-<div class="phone"><span class="ipa">tʱ</span></div>
+<div class="phone"><span class="ipa">tʰ</span></div>
 <div>
 <p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x062A;&#x06BE;</span> [<a href="/scripts/arabic/block#char062A"><span class="uname">U+062A ARABIC LETTER TEH</span></a> + <a href="/scripts/arabic/block#char06BE"><span class="uname">U+06BE ARABIC LETTER HEH DOACHASHMEE</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">تھوکنا</span> <span class="trans">tʰvknɑ</span> <span class="ipa">t̪ʰuːk.nɑː</span> <span class="meaning">to spit</span></span>.</p>
 </div>
@@ -1109,7 +1101,7 @@ alveolar</th>
 </div>
 </div>
 <div class="mapItem">
-<div class="phone"><span class="ipa">ʈʱ</span></div>
+<div class="phone"><span class="ipa">ʈʰ</span></div>
 <div>
 <p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0679;&#x06BE;</span> [<a href="/scripts/arabic/block#char0679"><span class="uname">U+0679 ARABIC LETTER TTEH</span></a> + <a href="/scripts/arabic/block#char06BE"><span class="uname">U+06BE ARABIC LETTER HEH DOACHASHMEE</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ٹھنڈا</span> <span class="trans">ʈʰnɖɑ</span> <span class="ipa">ʈʰən.ɖɑː</span> <span class="meaning">cold</span></span>.</p>
 </div>
@@ -1133,7 +1125,7 @@ alveolar</th>
 </div>
 </div>
 <div class="mapItem">
-<div class="phone"><span class="ipa">kʱ</span></div>
+<div class="phone"><span class="ipa">kʰ</span></div>
 <div>
 <p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06A9;&#x06BE;</span> [<a href="/scripts/arabic/block#char06A9"><span class="uname">U+06A9 ARABIC LETTER KEHEH</span></a> + <a href="/scripts/arabic/block#char06BE"><span class="uname">U+06BE ARABIC LETTER HEH DOACHASHMEE</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">کھانا‎</span> <span class="trans">kʰɑnɑ‎</span> <span class="ipa">kʰɑː.nɑː</span> <span class="meaning">to eat</span></span>.</p>
 </div>
@@ -1141,7 +1133,7 @@ alveolar</th>
 <div class="mapItem">
 <div class="phone"><span class="ipa">ɡʱ</span></div>
 <div>
-<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06AF;&#x06BE;</span> [<a href="/scripts/arabic/block#char06AF"><span class="uname">U+06AF ARABIC LETTER GAF</span></a> + <a href="/scripts/arabic/block#char06BE"><span class="uname">U+06BE ARABIC LETTER HEH DOACHASHMEE</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">گھاس‎</span> <span class="trans">gʰɑs‎</span> <span class="ipa">ɡʱaːs</span> <span class="meaning">grass</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06AF;&#x06BE;</span> [<a href="/scripts/arabic/block#char06AF"><span class="uname">U+06AF ARABIC LETTER GAF</span></a> + <a href="/scripts/arabic/block#char06BE"><span class="uname">U+06BE ARABIC LETTER HEH DOACHASHMEE</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">گھاس‎</span> <span class="trans">gʰɑs‎</span> <span class="ipa">ɡʱɑːs</span> <span class="meaning">grass</span></span>.</p>
 </div>
 </div>
 <div class="mapItem">
@@ -1170,7 +1162,7 @@ alveolar</th>
 </div>
 </div>
 <div class="mapItem">
-<div class="phone"><span class="ipa">t͡ʃʱ</span></div>
+<div class="phone"><span class="ipa">t͡ʃʰ</span></div>
 <div>
 <p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0686;&#x06BE;</span> [<a href="/scripts/arabic/block#char0686"><span class="uname">U+0686 ARABIC LETTER TCHEH</span></a> + <a href="/scripts/arabic/block#char06BE"><span class="uname">U+06BE ARABIC LETTER HEH DOACHASHMEE</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">چھوٹا‎</span> <span class="trans">čʰvʈɑ‎</span> <span class="ipa">t͡ʃʰoː.ʈɑː</span> <span class="meaning">small</span></span>.</p>
 </div>
@@ -1196,22 +1188,24 @@ alveolar</th>
 <div class="mapItem">
 <div class="phone"><span class="ipa">v</span></div>
 <div>
-<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0648;</span> [<a href="/scripts/arabic/block#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ہوا‎</span> <span class="trans">ḫvɑ‎</span> <span class="ipa">ɦə.ʋɑː</span> <span class="meaning">wind</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0648;</span> [<a href="/scripts/arabic/block#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a>]</span>, as an allophone of <span class="ipa">ʋ</span>, eg. <!--span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ہوا</span> <span class="trans">ḫvɑ</span> <span class="ipa">ɦə.ʋɑː</span> <span class="meaning">wind</span></span--><span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ورت</span> <span class="trans">vrt</span> <span class="ipa">vrət</span> <span class="meaning">vow</span></span>.</p>
 </div>
 </div>
 <div class="mapItem">
 <div class="phone"><span class="ipa">s</span></div>
 <div>
 <p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0633;</span> [<a href="/scripts/arabic/block#char0633"><span class="uname">U+0633 ARABIC LETTER SEEN</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">سورج‎</span> <span class="trans">svrʤ‎</span> <span class="ipa">suː.ɾəd͡ʒ</span> <span class="meaning">sun</span></span>.</p>
-<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0635;</span> [<a href="/scripts/arabic/block#char0635"><span class="uname">U+0635 ARABIC LETTER SAD</span></a>]</span>, used for Arabic words.&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0635;</span> [<a href="/scripts/arabic/block#char0635"><span class="uname">U+0635 ARABIC LETTER SAD</span></a>]</span> in words of Arabic origin, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">صابُن</span> <span class="trans">ŝɑbun</span> <span class="ipa">sɑːbʊn</span> <span class="meaning">soap</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x062B;</span> [<a href="/scripts/arabic/block#char062B"><span class="uname">U+062B ARABIC LETTER THEH</span></a>]</span> in words of Arabic or Persian origin, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ثابت</span> <span class="trans">ṡɑbt</span> <span class="ipa">sɑːbət</span> <span class="meaning">proven </span></span>.</p>
 </div>
 </div>
 <div class="mapItem">
 <div class="phone"><span class="ipa">z</span></div>
 <div>
-<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0630;</span> [<a href="/scripts/arabic/block#char0630"><span class="uname">U+0630 ARABIC LETTER THAL</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">نزدیک</span> <span class="trans">nzdyk</span> <span class="ipa">nəzdiːk</span> <span class="meaning">near</span></span>.</p>
-<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0636;</span> [<a href="/scripts/arabic/block#char0636"><span class="uname">U+0636 ARABIC LETTER DAD</span></a>]</span>, used for Arabic words.</p>
-<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0638;</span> [<a href="/scripts/arabic/block#char0638"><span class="uname">U+0638 ARABIC LETTER ZAH</span></a>]</span>, used for Arabic words.&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0632;</span> [<a href="/scripts/arabic/block#char0632"><span class="uname">U+0632 ARABIC LETTER ZAIN</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">نزدیک</span> <span class="trans">nzdyk</span> <span class="ipa">nəzdiːk</span> <span class="meaning">near</span></span></p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0630;</span> [<a href="/scripts/arabic/block#char0630"><span class="uname">U+0630 ARABIC LETTER THAL</span></a>]</span>, eg. .<span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">جذبہ</span> <span class="trans">ʤzbḫ</span> <span class="ipa">d͡ʒəzbɑː</span> <span class="meaning">emotion</span></span></p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0636;</span> [<a href="/scripts/arabic/block#char0636"><span class="uname">U+0636 ARABIC LETTER DAD</span></a>]</span>, in words of Arabic origin, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ضِد</span> <span class="trans">ẑid</span> <span class="ipa">zɪd</span> <span class="meaning">stubbornness </span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0638;</span> [<a href="/scripts/arabic/block#char0638"><span class="uname">U+0638 ARABIC LETTER ZAH</span></a>]</span>, in words of Arabic origin, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ظَاہِر</span> <span class="trans">žaɑhir</span> <span class="ipa">zɑːɦɪr</span> <span class="meaning">apparent</span></span>.</p>
 </div>
 </div>
 <div class="mapItem">
@@ -1227,12 +1221,6 @@ alveolar</th>
 </div>
 </div>
 <div class="mapItem">
-<div class="phone"><span class="ipa">ʂ</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x062B;</span> [<a href="/scripts/arabic/block#char062B"><span class="uname">U+062B ARABIC LETTER THEH</span></a>]</span>, eg. </p>
-</div>
-</div>
-<div class="mapItem">
 <div class="phone"><span class="ipa">x</span></div>
 <div>
 <p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x062E;</span> [<a href="/scripts/arabic/block#char062E"><span class="uname">U+062E ARABIC LETTER KHAH</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">خون‎</span> <span class="trans">xvn‎</span> <span class="ipa">xuːn</span> <span class="meaning">blood</span></span>.</p>
@@ -1241,19 +1229,14 @@ alveolar</th>
 <div class="mapItem">
 <div class="phone"><span class="ipa">ɣ</span></div>
 <div>
-<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x063A;</span> [<a href="/scripts/arabic/block#char063A"><span class="uname">U+063A ARABIC LETTER GHAIN</span></a>]</span>, eg.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">h</span></div>
-<div>
-<p>?</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x063A;</span> [<a href="/scripts/arabic/block#char063A"><span class="uname">U+063A ARABIC LETTER GHAIN</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">غُلام</span> <span class="trans">ɣulɑm</span> <span class="ipa">ɣʊlɑːm</span> <span class="meaning">slave</span></span>.</p>
 </div>
 </div>
 <div class="mapItem">
 <div class="phone"><span class="ipa">ɦ</span></div>
 <div>
 <p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06C1;</span> [<a href="/scripts/arabic/block#char06C1"><span class="uname">U+06C1 ARABIC LETTER HEH GOAL</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ہڈی‎</span> <span class="trans">ḫɖy‎</span> <span class="ipa">ɦəɖ.ɖiː</span> <span class="meaning">bone</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x062D;</span> [<a href="/scripts/arabic/block#char062D"><span class="uname">U+062D ARABIC LETTER HAH</span></a>]</span> in words of Arabic origin, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">حَاکِم</span> <span class="trans">ḫaɑkim</span> <span class="ipa">hɑːkɪm</span> <span class="meaning">governer</span></span>.&nbsp;</p>
 </div>
 </div>
 
@@ -1310,19 +1293,19 @@ alveolar</th>
 <div class="mapItem">
 <div class="phone"><span class="ipa">w</span></div>
 <div>
-<p>&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0648;</span> [<a href="/scripts/arabic/block#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a>]</span> as an allophone of ʋ commonly occuring between a consonant and vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">پکوان</span> <span class="trans">pkʋɑn</span> <span class="ipa">pəkwɑːn</span> <span class="meaning">dish</span></span>.</p>
 </div>
 </div>
 <div class="mapItem">
 <div class="phone"><span class="ipa">r</span></div>
 <div>
-<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0631;</span> [<a href="/scripts/arabic/block#char0631"><span class="uname">U+0631 ARABIC LETTER REH</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0631;</span> [<a href="/scripts/arabic/block#char0631"><span class="uname">U+0631 ARABIC LETTER REH</span></a>]</span>, eg <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">اردو</span> <span class="trans">ɑrdʋ</span> <span class="ipa">ʊrduː</span> <span class="meaning">Urdu</span></span>.</p>
 </div>
 </div>
 <div class="mapItem">
 <div class="phone"><span class="ipa">ɾ</span></div>
 <div>
-<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0631;</span> [<a href="/scripts/arabic/block#char0631"><span class="uname">U+0631 ARABIC LETTER REH</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">رات‎</span> <span class="trans">rɑt‎</span> <span class="ipa">ɾɑːt̪</span> <span class="meaning">night</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0631;</span> [<a href="/scripts/arabic/block#char0631"><span class="uname">U+0631 ARABIC LETTER REH</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">آرام</span> <span class="trans">ɑ̄rɑm</span> <span class="ipa">ɑːɾɑːm</span> <span class="meaning">relaxation</span></span>. Allophone of <span class="ipa">r</span> that ends to occur between vowels.</p>
 </div>
 </div>
 <div class="mapItem">
@@ -1360,37 +1343,47 @@ alveolar</th>
 
 
 
-<section id="consonantLetters">
-<h3>Consonant letters</h3>
+<section id="basic_letters">
+<h3>Basic letters</h3>
 
-<p>The alphabet standardised by the National Language Authority in Pakistan counts 59 letters, of which 18 are digraphs representing aspirated consonants.</p>
-<p>The basic letters are:</p>
-
+<p>The alphabet standardised in 2004 by the National Language Authority in Pakistan counts 39 letters, and 18  digraphs representing aspirated consonants. Follow the links to the character notes for the letters described below to find examples and detailed information.</p>
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">پ␣ب␣ت␣ط␣د␣ٹ␣ڈ␣ك␣گ␣ق␣ء</figure>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">چ␣ج</figure>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ف␣و␣س␣ث␣ص␣ذ␣ذ␣ض␣ظ␣ش␣ژ␣خ␣غ␣ہ␣ح␣ھ␣ع</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ف␣و␣س␣ث␣ص␣ز␣ذ␣ض␣ظ␣ش␣ژ␣خ␣غ␣ہ␣ح␣ھ␣ع</figure>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">م␣ن␣ں</figure>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ر␣ڑ␣ل␣ی</figure>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ے␣ا</figure>
 
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0648;</span> [<a href="/scripts/arabic/block#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06CC;</span> [<a href="/scripts/arabic/block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span> represent both consonants and vowels. See <a class="secref">mapToVowels</a>.</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06C1;</span> [<a href="/scripts/arabic/block#char06C1"><span class="uname">U+06C1 ARABIC LETTER HEH GOAL</span></a>]</span> normally represents the sound 
+<splan class="ipa">ɦ</splan>
+in Urdu, but it is also pronounced <span class="ipa">ɑː</span> or is silent in certain contexts.&nbsp; <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x062D;</span> [<a href="/scripts/arabic/block#char062D"><span class="uname">U+062D ARABIC LETTER HAH</span></a>]</span> is used for words of Arabic origin.</p>
+<p>There are 3 letters for <span class="ipa">s</span>, and 4 for <span class="ipa">z</span>, due the retention of Arabic spelling for words of Arabic origin. The most common letter for <span class="ipa">s</span> is <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0633;</span> [<a href="/scripts/arabic/block#char0633"><span class="uname">U+0633 ARABIC LETTER SEEN</span></a>]</span>, and for <span class="ipa">z</span> is <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0632;</span> [<a href="/scripts/arabic/block#char0632"><span class="uname">U+0632 ARABIC LETTER ZAIN</span></a>]</span>.</p>
+</section>
 
-<p>The aspirated consonants are:</p>
 
+<section id="aspirated_letters">
+<h3>Aspirated consonants</h3>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">پھ␣بھ␣تھ␣دھ␣ٹھ␣ڈھ␣کھ␣گھ</figure>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">چھ␣جھ</figure>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">وھ␣هھ</figure>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">مھ␣نھ</figure>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">رھ␣ڑھ␣لھ␣یھ</figure>
-	
+</section>
 
 
+
+<section id="other_letters">
+<h4>Other</h4>
 <p>Other characters found in Urdu text include the following. These are introduced further down this page, but  you can, as usual, find out more by clicking on them.</p>
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">آ␣ؤ␣ئ␣ي␣ۂ</figure>
 
 <p><span class="codepoint"><span lang="ur" dir="rtl">&#x064A;</span> [<a href="/scripts/arabic/block#char064A"><span class="uname">U+064A ARABIC LETTER YEH</span></a>]</span> is only found in decomposed forms of <span class="codepoint"><span lang="ur" dir="rtl">&#x0626;</span> [<a href="/scripts/arabic/block#char0626"><span class="uname">U+0626 ARABIC LETTER YEH WITH HAMZA ABOVE</span></a>]</span>.</p>
 </section>
+</section>
+
 
 
 
@@ -1401,10 +1394,17 @@ alveolar</th>
 <h3>Consonant clusters</h3>
 <p id="def-consonantcluster" class="explanatoryintro definitionStub"></p>
 
-<p>The absence of a vowel sound can be indicated with the diacritic <span class="codepoint"><span lang="ur" dir="rtl">&#xA0;&#x0652;</span> <a href="/scripts/arabic/block#char0652">[<span class="uname">U+0652 ARABIC SUKUN​</span>]</a></span>, called <span class="name">sukūn</span> or <span class="name">jazm</span>, although this diacritic is not normally shown in text, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">سَخْت</span> <span class="trans">sax͓t</span> <span class="ipa">saxt</span> <span class="meaning">hard</span></span>.</p>
-			<p>It has various possible forms, including a small round circle, something that looks like <span class="name">peʃ</span>, and something like a circumflex.</p>
-			<p>This diacritic is never written above the final character in a word, because as a rule a short vowel is not pronounced in this position.</p>
-	</section>
+<p>The absence of a vowel sound can be indicated with the diacritic <span class="codepoint"><span lang="ur" dir="rtl">&#xA0;&#x0652;</span> <a href="/scripts/arabic/block#char0652">[<span class="uname">U+0652 ARABIC SUKUN</span>]</a></span>, called <span class="name">sukūn</span> or <span class="name">jazm</span>, although this diacritic is not normally shown in text, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">سَخْت</span> <span class="trans">sax͓t</span> <span class="ipa">saxt</span> <span class="meaning">hard</span></span>.</p>
+			<p>It has various possible forms, including a small round circle, something that looks like <span class="name">peʃ</span>, and something like a circumflex, see <a class="figref">fig_sukun</a>.</p>
+
+<figure id="fig_sukun">
+<img src="images/sukun_circ_ur.png" class="ex" alt="سَخْت"  data-notes="Awami Nastaliq font, normal settings">
+<img src="images/sukun_apos_ur.png" class="ex" alt="سَخْت" data-notes="Awami Nastaliq font, font-feature-settings: 'cv78' 2;"> &nbsp;&nbsp;&nbsp;
+<figcaption>Two alternative shapes of sukun.</figcaption>
+</figure>
+
+<p>This diacritic is never written above the final character in a word, because as a rule a short vowel is not pronounced in this position.</p>
+</section>
     
     
     
@@ -1447,11 +1447,24 @@ alveolar</th>
 <section id="cchars">
 <h2>Combining characters</h2>
 
+<section id="vowel_diacritics">
+<h3>Vowel diacritics</h3>
+
 <p>The following diacritics used to express vowels are described in <a class="secref">vowelsummary</a>.</p>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">َ␣ً␣ُ␣ٌ␣ِ␣ٍ␣ْ␣ٗ␣ٓ␣ٰ␣ٖ␣٘</figure>
+</section>
 
-<p>The remaining diacritics are honorifics, described in <a class="secref">symbols</a>.</p>
-<figure class="characterBox auto" data-cols="trans">ؐ␣ؑ␣ؒ␣ؓ␣ؔ</figure>
+
+
+
+
+<section id="honorifics">
+<h3>Honorifics</h3>
+<p>The remaining combining characters are used with names as honorifics, eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="ur">قاضی نور محمّدؒ</span> <span class="trans">qɑẑy nvr mhmᵚdؒ</span> <span class="ipa">kaziː nur mamed rahmatulla alayhe</span> <span class="meaning">Qazi Nur Muhammad, may God have mercy upon him!</span></span>. They are combining characters that appear over the name at a point chosen by the author.</p>
+
+<figure class="characterBox auto" data-cols="">ؔ␣ؓ␣ؒ␣ؑ␣ؐ</figure>
+
+</section>
 </section>
 
 
@@ -1460,7 +1473,7 @@ alveolar</th>
 
 <section id="numbers">
 <h2>Numbers</h2>
-<p>Urdu uses the extended arabic-indic digits in the Arabic block. </p>
+<p>Urdu may use ASCII digits, or may use the extended arabic-indic digits in the Arabic block. </p>
 
 
 <figure class="characterBox auto" data-cols="trans,transc">۰␣۱␣۲␣۳␣۴␣۵␣۶␣۷␣۸␣۹</figure>
@@ -1477,49 +1490,101 @@ alveolar</th>
 </table>
  <figcaption>Comparison of digit shapes in Urdu, Persian and Arabic.</figcaption>
 </figure>
-<p>Urdu has special characters for the thousands and decimal separators: <span class="codepoint"><span lang="ur" dir="rtl">&#x066C;</span> [<a href="/scripts/arabic/block#char066C"><span class="uname">U+066C ARABIC THOUSANDS SEPARATOR</span></a>]</span> and <span class="codepoint"><span lang="ur" dir="rtl">&#x066B;</span> [<a href="/scripts/arabic/block#char066B"><span class="uname">U+066B ARABIC DECIMAL SEPARATOR</span></a>]</span>.  It also uses <span class="codepoint"><span lang="ur" dir="rtl">&#x066A;</span> [<a href="/scripts/arabic/block#char066A"><span class="uname">U+066A ARABIC PERCENT SIGN</span></a>]</span>. <span class="ednote">Need to clarify whether the percent sign appears to the right or left of the number. When typed after, it appears to the right.</span></p>
+<p>Urdu also has special characters for the thousands and decimal separators: <span class="codepoint"><span lang="ur" dir="rtl">&#x066C;</span> [<a href="/scripts/arabic/block#char066C"><span class="uname">U+066C ARABIC THOUSANDS SEPARATOR</span></a>]</span> and <span class="codepoint"><span lang="ur" dir="rtl">&#x066B;</span> [<a href="/scripts/arabic/block#char066B"><span class="uname">U+066B ARABIC DECIMAL SEPARATOR</span></a>]</span> (see <a class="figref">fig_percent_sign</a>), although the ASCII full stop and comma may also be used.</p>
+<p>See <a class="secref">expressions</a> for a discussion of how to handle numeric ranges.</p>
 
-  <figure>
- <p dir="rtl" lang="ur" class="large" style="margin-top: 1em;"><span class="ex">٪۵٬۴۳۲٫۱</span></p>
+
+
+
+<section id="percent_sign">
+<h4>Percentages</h4>
+<p>Urdu may use the Arabic percent sign, <span class="codepoint"><span lang="ur" dir="rtl">&#x066A;</span> [<a href="/scripts/arabic/block#char066A"><span class="uname">U+066A ARABIC PERCENT SIGN</span></a>]</span>.</p>
+<p class="observation"><span class="leadin">Observation:</span> <a href="https://ur.wikipedia.org/wiki/%D8%B5%D8%AF%D9%88%D8%B1_%D9%BE%D8%A7%DA%A9%D8%B3%D8%AA%D8%A7%D9%86_%DA%A9%DB%8C_%D9%81%DB%81%D8%B1%D8%B3%D8%AA">Wikipedia</a> uses an ASCII percent sign with ASCII digits</p>
+<!--p>عارف علوی 53.24% ووٹ حاصل کر کے تیرہویں صدر پاکستان منتخب ہوئے۔</p-->
+
+ <figure id="fig_percent_sign">
+ <p dir="rtl" lang="ur" class="large" style="margin-top: 1em;"><span class="ex">؜۵٬۴۳۲٫۱٪</span></p>
     <figcaption>The figure 5,432.1% using Urdu characters.</figcaption>
  </figure>
+ <p>The percent sign is typed and stored after the numbers. Like the ASCII hyphen based expressions mentioned in <a class="secref">expressions</a>, it will appear to the left of a number if that number is preceded by Urdu characters. However, if the percentage appears alone on a line it is necessary to use an ALM formatting character just before it to prevent the sign appearing on the right.</p>
+</section>
 
-<p>That said, <a href="https://ur.wikipedia.org/wiki/%D8%B5%D9%81%D8%AD%DB%82_%D8%A7%D9%88%D9%84">Urdu Wikipedia</a> currently uses European digits and <span class="codepoint"><span lang="ur" dir="rtl">&#x060C;</span> [<span class="uname">U+060C ARABIC COMMA</span>]</span> and <span class="codepoint"><span lang="ur" dir="rtl">&#x002E;</span> [<span class="uname">U+002E FULL STOP</span>]</span>, respectively, for thousands and decimal separators. (English) <a href="https://en.wikipedia.org/wiki/Eastern_Arabic_numerals#Usage">Wikipedia</a> says  that <q>In Pakistan, Western Arabic numerals are more extensively used as a considerable majority of the population is anglophone. Eastern numerals still continue to see use in Urdu publications and newspapers, as well as sign boards.</q></p>
-<p>Urdu also has a sign <span class="codepoint"><span lang="ur" dir="rtl">&#x0600;</span> [<a href="/scripts/arabic/block#char0600"><span class="uname">U+0600 ARABIC NUMBER SIGN</span></a>]</span> which can be used to indicate  a number, eg. <span class="charExample"><span class="ex" lang="ur" dir="rtl">۱۲۳؀</span></span>. <span class="ednote">[The Noto Nastaliq Urdu webfont doesn't seem to extend the sign below the number, whereas the same font on the system does. Both that font and Nafees Nastaleeq require this sign to be added after the number, and appear to treat it like a fixed width combining mark, rather than a subtending mark that grows with the number.]</span></p>
+
+
+
+<section id="number_sign">
+<h4>Number sign</h4>
+<p>Urdu  has a sign <span class="codepoint"><span lang="ur" dir="rtl">&#x0600;</span> [<a href="/scripts/arabic/block#char0600"><span class="uname">U+0600 ARABIC NUMBER SIGN</span></a>]</span> which can be used to indicate  a number. As shown in <a class="figref">fig_number_sign</a>, its length varies with the number of digits in the number.</p>
+<figure id="fig_number_sign">
+<img src="images/ur_number_sign.png" class="ex" alt="؀۱۲۳">
+<figcaption>The Arabic number sign runs below the numbers it is used with.</figcaption>
+</figure>
+
+<p>To use this sign, type it  before the digits. Even though it displays beneath the digits, it is a formatting character, and not a combining mark. </p>
+</section>
+
+
 
 
 
 <section id="dates">
 <h3>Dates</h3>
 
-<p><span class="codepoint"><span lang="ur" dir="rtl">&#x060D;</span> [<a href="/scripts/arabic/block#char060D"><span class="uname">U+060D ARABIC DATE SEPARATOR</span></a>]</span> is used in Urdu. <span class="ednote">[Find out how and how often it is used.]</span></p>
-<p>Dates are indicated by placing the long sweep of <span class="codepoint"><span lang="ur" dir="rtl">&#x0601;</span> [<a href="/scripts/arabic/block#char0601"><span class="uname">U+0601 ARABIC SIGN SANAH</span></a>]</span> below the year digits. For the Gregorian calendar this is followed with the word <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="ur">عیسوی</span> <span class="trans">ʿysvy</span> <span class="ipa">iːsviː</span> <span class="meaning">Christian Era</span></span>, usually abbreviated as a hamza <span class="ex" dir="rtl" lang="ur">ء</span>. Dates using the Muslim calendar are followed by the word <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="ur">ہجری</span> <span class="trans">ḫʤry</span> <span class="ipa">hɪʤriː</span></span>,  abbreviated with the symbol <span class="ex" dir="rtl" lang="ur">ھ</span>.</p>
-          <p>The sanh sign is typed before the digits (in a rtl context): eg. <span dir="rtl" class="ex" lang="ur">۲۰۰۴؁ء</span> ‎(<span class="meaning">2004</span>). It is not a combining character, even though it displays beneath the digits. The length of the symbol may vary according to the number of digits. It is terminated by a non-digit character.</p>
+<p>Dates in Urdu may be based on the Gregorian calendar or the Hijri calendar. Dates in the Gregorian calendar are followed with the word <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="ur">عیسوی</span> <span class="trans">ʿysvy</span> <span class="ipa">iːsviː</span> <span class="meaning">Christian Era</span></span> – usually rendered by the abbreviation <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0621;</span> [<a href="/scripts/arabic/block#char0621"><span class="uname">U+0621 ARABIC LETTER HAMZA</span></a>]</span>. Dates using the Muslim calendar are followed by the word <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="ur">ہجری</span> <span class="trans">ḫʤry</span> <span class="ipa">hɪʤriː</span></span> – abbreviated as <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06BE;</span> [<a href="/scripts/arabic/block#char06BE"><span class="uname">U+06BE ARABIC LETTER HEH DOACHASHMEE</span></a>]</span>.</p>
+
+<figure id="fig_hijri">
+<p class="medium"><span class="ex" lang="ur">یکم جمادی الاول 1423 ھ</span></p>
+<figcaption>An Urdu date (12 July 2002) in the Hijri calendar.</figcaption>
+</figure>
+
+<p class="observation">Note that the word <span class="name">hijri</span> in Arabic is written with <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0647;</span> [<a href="/scripts/arabic/block#char0647"><span class="uname">U+0647 ARABIC LETTER HEH</span></a>]</span> (<span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">هجري</span></span>), rather than <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06C1;</span> [<a href="/scripts/arabic/block#char06C1"><span class="uname">U+06C1 ARABIC LETTER HEH GOAL</span></a>]</span> (<span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ہجری</span></span>), and the abbreviation in Arabic is <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0647;&#x200D;</span> [<a href="/scripts/arabic/block#char0647"><span class="uname">U+0647 ARABIC LETTER HEH</span></a> + <a href="/scripts/punctuation/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span>, whereas in Urdu it is <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06BE;</span> [<a href="/scripts/arabic/block#char06BE"><span class="uname">U+06BE ARABIC LETTER HEH DOACHASHMEE</span></a>]</span>.</p>
+<p>Dates may also be indicated by placing the long sweep of <span class="codepoint"><span lang="ur" dir="rtl">&#x0601;</span> [<a href="/scripts/arabic/block#char0601"><span class="uname">U+0601 ARABIC SIGN SANAH</span></a>]</span> below the year digits.</p>
+
+<figure id="fig_sanah">
+<img src="images/sanh_ur.png" class="ex" alt="؁۲۰۱۴ء">
+<figcaption>An Urdu date (2014), with a <span class="uname">SANAH</span> sign running below it, and a hamza to indicate the Gregorian calendar.</figcaption>
+</figure>
+
+         <p>Like the number sign,  <span class="uname">SANAH</span>  is typed before the digits (see <a class="figref">fig_sanah</a>). It is not a combining character, even though it displays beneath the digits. The length of the symbol may vary according to the number of digits. It is terminated by a non-digit character.</p>
 <p><span class="codepoint"><span lang="ur" dir="rtl">&#x0604;</span> [<a href="/scripts/arabic/block#char0604"><span class="uname">U+0604 ARABIC SIGN SAMVAT</span></a>]</span> is another subtending mark, intended to indicate a year in the Śaka calendar. &nbsp;</p>
+<p><span class="codepoint"><span lang="ur" dir="rtl">&#x060D;</span> [<a href="/scripts/arabic/block#char060D"><span class="uname">U+060D ARABIC DATE SEPARATOR</span></a>]</span> is used in Urdu. <span class="ednote">[Find out how and how often it is used.]</span></p>
 </section>
-	</section>	
-	
+</section>	
+
+
+
+
 	
 	
 	
 <section id="symbols">
-<h2>Symbols &amp; honorifics</h2>
-<section id="honorifics">
-<h3>Honorifics</h3>
-<p>The following combining characters are used with names as honorifics, eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="ur">قاضی نور محمّدؒ</span> <span class="trans">qɑẑy nvr mhmᵚdؒ</span> <span class="ipa">kaziː nur mamed rahmatulla alayhe</span> <span class="meaning">Qazi Nur Muhammad, may God have mercy upon him!</span></span>. They are combining characters that appear over the name at a point chosen by the author.</p>
+<h2>Symbol</h2>
 
-<figure class="characterBox auto" data-cols="">ؔ␣ؓ␣ؒ␣ؑ␣ؐ</figure>
-
-</section>
-
-
-
-
-<section id="bismilla">
-<h3>Bismilla</h3>
 <p><span class="codepoint"><span lang="ur" dir="rtl">&#xFDFD;</span> [<a href="/scripts/arabic/block#charFDFD"><span class="uname">U+FDFD ARABIC LIGATURE BISMILLAH AR-RAHMAN AR-RAHEEM</span></a>]</span> is used by Muslims in various contexts including the constitutions of countries where Islam has a significant presence.  The shape varies significantly from font to font and usage to usage.</p>
 </section>
+
+
+
+	
+	
+	
+	
+<section id="formatting_chars">
+<h2>Formatting characters</h2>
+
+
+<p>The Arabic script uses a  number of Unicode characters that affect the way that other characters are rendered. Many of those have no visible form of their own. The following set of characters used in Urdu text does have a visual representation. </p>
+
+<figure class="characterBox auto" data-cols="">؀␣؁␣؂␣؃␣؄␣۝</figure>
+
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0600;</span> [<a href="/scripts/arabic/block#char0600"><span class="uname">U+0600 ARABIC NUMBER SIGN</span></a>]</span> is described in <a class="secref">number_sign</a>.</p>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0601;</span> [<a href="/scripts/arabic/block#char0601"><span class="uname">U+0601 ARABIC SIGN SANAH</span></a>]</span> is described in <a class="secref">dates</a>.</p>
+<p class="observation"><span class="leadin">Observation:</span> The subtending character display is broken in the Noto Nastaliq Urdu font. That font only produces the expected display if (a) a RTL override is applied to the characters, or (b) the SANAH is typed <em>after</em> the digits (in a RTL normal base direction, but not an override). The Awami Nastaliq font handles them as expected, as long as the sign precedes the digits and the base direction is set to RTL (but not if a directional override is applied).</p>
+<p>Urdu text also makes use of a relatively large set of invisible formatting characters, especially in plain text, many of which are used to manage text direction (see <a class="secref">directioncontrols</a>), and others are used to control cursive shaping behaviour (see <a class="secref">shapingcontrols</a>).</p>
 </section>
+
+
+
 
 
 
@@ -1530,13 +1595,25 @@ alveolar</th>
 
 <section id="cursive">
 <h3>Cursive script</h3>
-<p>Arabic script joins letters together. This results in four different shapes for most letters (including an isolated shape).</p>
-      <figure>
-    <p dir="rtl" lang="ur" class="large">
-      <span class="ex">ع<span style="color:black">قل ودی</span>ع<span style="color:black">ت</span></p>
+<p>Arabic script joins letters together. Fonts need to produce the appropriate joining form for a code point, according to its visual context. This results in four different shapes for most letters (including an isolated shape). The highlights in <a class="figref">fig_cursive</a> below show the same letter, <span class="codepoint"><span dir="rtl" lang="ar">ع</span> <a target="c" href="/scripts/arabic/block#char0639">[<span class="uname">U+0639 ARABIC LETTER AIN</span>]</a></span>, with two different joining forms.&nbsp;</p>
+<figure id="fig_cursive"> <img src="images/cursive_shapes_ur.png" alt=" عقل ودیعت"/>
      <figcaption>The letter <span class="codepoint"><span lang="ur" dir="rtl">&#x0639;</span> [<a href="/scripts/arabic/block#char0639"><span class="uname">U+0639 ARABIC LETTER AIN</span></a>]</span> in 2 different joining contexts.</figcaption>
      </figure>
-    <p>A few Arabic script letters only join on the right-hand side.</p>
+    <p>A few Arabic script letters only join on the right-hand side. For Urdu these include:</p>
+<figure class="auto" data-cols="trans,transc">و␣د␣ڈ␣ذ␣ر␣ز␣ژ␣ڑ␣ا␣ے</figure>
+
+<p>There are 2 Unicode blocks containing Arabic presentation forms: these contain individual characters corresponding to the various joining forms and ligatures.  With only a handful of exceptions, characters in those blocks should not be used for text content; they are only for managing legacy encodings. Instead, characters in the main Arabic block should be used, and the font will manage the necessary cursive shaping.
+
+
+
+
+<section id="shapingcontrols"><h4>Managing glyph shaping</h4>
+
+<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">ZWJ</span> [<a href="/scripts/punctuation/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span> and <span class="codepoint" translate="no"><span class="uname" dir="ltr">ZWNJ</span> [<a target="c" href="/scripts/arabic/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a>]</span> are used to control the joining behaviour of cursive glyphs. They are particularly useful in educational contexts, but also have real world applications.</p>
+<p><span class="codepoint"><span class="uname" dir="ltr">ZWJ</span></span>  permits a letter to form a cursive connection without a visible neighbour. For example, the marker for hijri dates is an initial form of <span class="name">heh</span>, even though it doesn't join with anything to its left, ie. <span class="ex" dir="rtl" lang="ur">ه‍ </span>. For this, use <span class="codepoint"><span class="uname" dir="ltr">ZWJ</span></span> immediately after the <span class="name">heh</span>, eg. <span class="ex" dir="rtl" lang="ar">الاثنين 10 رجب 1415 ه‍.</span>. It can also be used for illustrating cursive joining forms, eg. <span class="charExample"><span class="ex" lang="ur" dir="rtl">ان‍‍ &nbsp; ‍س‍‍ &nbsp; ‍ان</span></span>. Characters from the Presentation Forms blocks in Unicode should not be used in such cases.</p>
+<p><span class="codepoint"><span class="uname" dir="ltr">ZWNJ</span></span> prevents two adjacent letters forming a cursive connection with each other when rendered, eg. <span class="charExample"><span class="ex" lang="ur" dir="rtl">ان‌س‌ان</span></span>.</p>
+<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">CGJ</span> [<a target="c" href="/scripts/combining/block#char034F"><span class="uname">U+034F COMBINING GRAPHEME JOINER</span></a>]</span> is used in Arabic to produce special ordering of diacritics. The name is a misnomer, as it is generally used to <em>break</em> the normal sequence of diacritics.&nbsp;</p>
+</section>
 </section>
 
 
@@ -1546,14 +1623,6 @@ alveolar</th>
 <p>As in Arabic, <span class="trans">lam</span> followed by <span class="trans">alef</span> ligate, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">اسلام</span> <span class="trans">ɑslɑm</span> <span class="ipa">islam</span> <span class="meaning">Islam</span></span>. </p>
 
 
-<section id="zwj">
-<h4>Joiner &amp; non-joiner</h4>
-<p>The following invisible Unicode formatting characters can be used to control cursive joining.</p>
-<ul>
-<li> <span class="codepoint"> <a href="/scripts/arabic/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a></span> (ZWNJ), prevents cursive joiing between adjacent characters, eg. <span class="charExample"><span class="ex" lang="ur" dir="rtl">ان‌س‌ان</span></span></li>
-<li><span class="codepoint"><a href="/scripts/arabic/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a></span> produces a joining glyph when a character wouldn't otherwise join with something, eg. <span class="charExample"><span class="ex" lang="ur" dir="rtl">ان‍‍ &nbsp; ‍س‍‍ &nbsp; ‍ان</span></span>.</li>
-</ul>
-</section>
 </section>
 
 
@@ -1586,7 +1655,7 @@ alveolar</th>
  <p dir="rtl" lang="ur" class="large" style="margin-top: 1em; margin-bottom: 1em;"><span class="ex">مستحق</span> &nbsp;•&nbsp; <span class="ex">شخص</span> &nbsp;•&nbsp; <span class="ex">کیفیت</span></p>
     <figcaption>Sloping baselines in Urdu nastaliq text.</figcaption>
 </figure>
- </section>
+</section>
 </section>
 
 
@@ -1612,7 +1681,7 @@ alveolar</th>
 <h3>Word boundaries</h3>
 <p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 <p>Words are separated by spaces.</p>
- </section>
+</section>
   
   
 
@@ -1710,7 +1779,22 @@ alveolar</th>
       
 <section id="linebreak">
 <h3>Line breaking &amp; hyphenation</h3>
-<p class="prompts">tbd</p>
+<p>Basic line-break opportunities occur between the space-separated words.</p>
+<p>They are not broken at the small gaps that appear where a character doesn't join on the left.</p>
+
+
+<section id="breaking_latin">
+<h4>Breaking between Latin words</h4>
+<p>When a line break occurs in the middle of an embedded left-to-right sequence, the items in that sequence are rearranged visually so that the reading direction remains top-to-bottom. <a class="figref">latin_line_breaks</a> shows how two Latin words are apparently reordered in the flow of text to accommodate this rule.</p>
+<figure id="latin_line_breaks">
+<p><img src="images/latin_line_breaks_ur_1.png" alt="391 میں تھیوفلس اعظم (Patriarch Theophilus)کے حکم سے عیسائیوں نے اس کی کتابوں کو نیست و نابود کر دیا۔ کیونکہ ان کے خیال میں اس سے کفرپھیلنے کا اندیشہ تھا۔" style="margin-bottom: 1em;"></p>
+<p><img src="images/latin_line_breaks_ur_2.png" alt="Text with line break in Latin text."></p>
+    <figcaption>Urdu with embedded Latin text. The lower of these two images shows the result of decreasing the line width, so that text wraps between a sequence of Latin words.</figcaption>
+</figure>
+<p>In digital text the rearrangement is  automatic. Only the positions of the font glyphs are changed: nothing affects the order of the characters in memory.</p>
+</section>
+
+
 
 <section id="char_props">
 <h4>Character properties</h4>
@@ -1892,6 +1976,8 @@ alveolar</th>
         0-340-67027-4</li>
 <li>[ <a class="fnref" href="http://wwwold.dkuug.dk/jtc1/sc2/wg2/docs/n2413-4.pdf">p</a> ]
 		Urdu and Regional Language Software Development Forum, Ministry of Science and Technology, Government of Pakistan, <a href="http://wwwold.dkuug.dk/jtc1/sc2/wg2/docs/n2413-4.pdf">Proposal to add Marks and Digits in Arabic Code Block (for Urdu)</a></li>
+<li>[ <a class="fnref" href="https://www.loc.gov/catdir/cpso/romanization/urdu.pdf">r</a> ]
+		ALA-LC Romanization Tables, <a href="https://www.loc.gov/catdir/cpso/romanization/urdu.pdf">Urdu (in Arabic script)</a></li>
 <li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Basmala">wb</a> ]
 		Wikipedia, <a href="http://en.wikipedia.org/wiki/Basmala">Basmala</a></li>
 <li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Hindustani_phonology">wp</a> ]
