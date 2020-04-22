@@ -287,13 +287,57 @@ function makeCharacterLink (cp, lang, direction) {
 
 
 
+var spreadsheetRows = {}
+
+function parseSpreadsheet (spreadsheet) {
+    // create an object called spreadsheetRows from the Google spreadsheet data
+	// newStyleSpreadsheet is defined in the db.js file - if set, the character column is one higher
+	// it should eventually become the only pattern
+
+    if (typeof spreadsheet == 'undefined') {
+		alert("Spreadsheet not loaded !")
+		return
+		}
+    
+    if (typeof window.newStyleSpreadsheet == 'undefined') {
+		// make an object from the spreadsheet
+		var temp = window.spreadsheet.split('\n')
+		window.spreadsheetRows = {}
+		for (var x=0; x<temp.length; x++) {
+			if (temp[x].trim() == '') continue
+			var items = temp[x].split('\t')
+			if (items[0] === '') continue
+
+			window.spreadsheetRows[items[0]] = ['0']
+			for (let i=1;i<items.length;i++) window.spreadsheetRows[items[0]].push(items[i])
+			}
+		}
+	else {
+		// make an object from the spreadsheet
+		var temp = window.spreadsheet.split('\n')
+		window.spreadsheetRows = {}
+		for (var x=0; x<temp.length; x++) {
+			if (temp[x].trim() == '') continue
+			var items = temp[x].split('\t')
+			if (items[1] === '') continue
+
+			window.spreadsheetRows[items[1]] = ['0']
+			for (let i=1;i<items.length;i++) window.spreadsheetRows[items[1]].push(items[i])
+			}
+	}
+	}
 
 
+
+
+
+//replaceStuff('Urdu', 'urdu', spreadsheet, '', 'ur', '', cols, false)
 
 
 function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, showShape) { 
 	var charList = chars.split('\n')
     var div, p, span
+	parseSpreadsheet(chars)
    		
     for (var x=0; x<charList.length; x++) { 
         if (charList[x].trim() == '') continue
@@ -304,7 +348,7 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
 		tempArray = [... items[0]]
 		if (tempArray.length > 1) continue
 
-		// quite if the spreadsheet indicates that this should not be displayed
+		// quit if the spreadsheet indicates that this should not be displayed
 		if (items[cols.class] && items[cols.class].includes('-')) continue
 		if (items[cols.class] && items[cols.class].includes('x')) continue
 
@@ -315,7 +359,7 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
         var hex = dec.toString(16).toUpperCase()
         while (hex.length < 4) hex = '0'+hex
         
-        if (! document.getElementById('char'+hex)) console.log('Character not found: ',items[0],hex)
+        if (! document.getElementById('char'+hex)) console.log('This page needs: ',items[0],hex)
 		
         else if (U[dec]) {
             out = ''
@@ -590,7 +634,8 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
          
             
             // other transcriptions
-            if (cols.othertranscriptions && cols.othertranscriptions.length > 0) { 
+ 			var insertTranscriptions = letter.querySelectorAll('.insertTranscription')
+            if (cols.othertranscriptions && cols.othertranscriptions.length > 0 && insertTranscriptions.length === 0) { 
                 para = ''
                 for (let i=0;i<cols.othertranscriptions.length;i++) {
                     if (items[cols.othertranscriptions[i][0]]) {
@@ -615,9 +660,28 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
                     letter.appendChild(p)
                     }
                 }           
-            
+	
+			// do the inserted transcription locations
+			if (insertTranscriptions.length > 0 && cols.othertranscriptions && cols.othertranscriptions.length > 0) {
+				for (var it=0;it<insertTranscriptions.length;it++) {
+					para = ''
+					for (let i=0;i<cols.othertranscriptions.length;i++) {
+						if (spreadsheetRows[insertTranscriptions[it].textContent][cols.othertranscriptions[i][0]]) {
+							//para += cols.othertranscriptions[i][1]+': <span class="trans">'+items[cols.othertranscriptions[i][0]].replace(/ /g,', ')+'</span>'
+							para += cols.othertranscriptions[i][1]+': <span class="trans">'+spreadsheetRows[insertTranscriptions[it].textContent][cols.othertranscriptions[i][0]]+'</span>'
+							if (i<cols.othertranscriptions.length-1) para += ', &nbsp; '
+							}
+						}
+					insertTranscriptions[it].innerHTML = para
+					}
+				}
+			// if there are paras in the markup but no data in the spreadsheet, hide the markup
+			else if (insertTranscriptions.length > 0) {
+				for (var z=0;z<insertTranscriptions.length;z++) insertTranscriptions[z].style.display = 'none'
+				}
 			}
         }
+
 	}
 
 
