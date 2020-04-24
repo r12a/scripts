@@ -131,7 +131,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->23 April, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->24 April, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -225,9 +225,9 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <section id="key_features">
 <h2>Basic features</h2>
-  <p>Urdu uses the Arabic script with extensions to covers its much wider repertoire of sounds. A number of the extensions are based on those developed for Persian (Farsi).  See the table to the right for a brief overview of features for the Arabic script, taken from the <a href="../featurelist/">Script Comparison Table</a>.
+  <p>Urdu uses the Arabic script, with extensions to covers its much wider repertoire of sounds. A number of the extensions are based on those developed for Persian (Farsi).  The Arabic script is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abjad">abjad</a></span>. This means that in normal use the script  represents only consonant and long vowel sounds. See the table to the right for a brief overview of features for the Arabic script, taken from the <a href="../featurelist/">Script Comparison Table</a>.
 </p>
-			<p>The script type is abjad, ie. the script is largely consonantal and short vowel sounds are typically not shown. Some of the consonant
+<p>Some of the consonant
 				characters double as long vowels (eg. <span class="ur">ی</span> and <span class="ur">و</span>). The vowels are not usually clearly defined, but when
 				necessary, vowel information can be represented by combining marks appearing above or below the base consonant. The absence of a vowel and doubling
 				of consonants can be indicated in the same way.</p>
@@ -242,7 +242,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <section id="dir">
 <h2>Text direction</h2>
-    <p>Urdu is written horizontally and right-to-left in the main, but as with most RTL scripts, numbers and embedded LTR script text are written left-to-right (producing 'bidirectional' text). </p>
+    <p>Urdu is written horizontally and right-to-left in the main, but (as with most RTL scripts) numbers and embedded LTR script text are written left-to-right (producing 'bidirectional' text). </p>
 
 <figure id="fig_uefa">
 <p dir="rtl" lang="ur" class="medium" style="white-space: nowrap;"><span class="ex">رکھتا ہے اور 2009ء میں UEFA کپ کے</span></p>
@@ -250,7 +250,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </figure>
 
 <p>The Unicode Bidirectional Algorithm automatically takes care of the ordering for all the text in <a class="figref">fig_uefa</a>, as long as the 'base direction' is set to RTL. In HTML this can be set using the <code>dir</code> attribute, or in plain text using <a href="#directioncontrols">formatting controls</a>.</p>
-<p>If the base direction is not set appropriately, the directional runs will be ordered incorrectly as in <a class="figref">fig_bidi_no_base_direction</a>.</p>
+<p>If the base direction is not set appropriately, the directional runs will be ordered incorrectly as shown in <a class="figref">fig_bidi_no_base_direction</a>.</p>
 
 <figure id="fig_bidi_no_base_direction">
 <p dir="rtl" class="small" lang="ur">رکھتا ہے اور 2009ء میں UEFA کپ کے</p>
@@ -259,7 +259,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </figure>
 
 <p>For more information about how directionality and base direction work, see <a href="https://www.w3.org/International/articles/inline-bidi-markup/uba-basics.en">Unicode Bidirectional Algorithm basics</a>. For information about plain text formatting characters see <a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls.en">How to use Unicode controls for bidi text</a>. And for working with markup in HTML, see <a href="https://www.w3.org/International/tutorials/bidi-xhtml/">Creating HTML Pages in Arabic, Hebrew and Other Right-to-left Scripts</a>.</p>
-<p>See also <a class="secref">expressions</a> and <a class="secref">breaking_latin</a>.</p>
+<p>On this page, see also <a class="secref">expressions</a> and <a class="secref">breaking_latin</a> for additional features related to direction.</p>
 
 
 
@@ -269,7 +269,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <section id="directioncontrols">
 <h3>Managing text direction</h3>
 
-<p>Unicode provides a set of 10 formatting characters that can be used to control the direction of text when displayed.</p>
+<p>Unicode provides a set of 10 formatting characters that can be used to control the direction of text when displayed. These characters have no visual form in the rendered text, however text editing applications may have a way to show their location.</p>
 <p><span class="codepoint" translate="no"><span class="uname" dir="ltr">RLE</span> [<a target="c" href="/scripts/arabic/block#char202B"><span class="uname">U+202B RIGHT-TO-LEFT EMBEDDING</span></a>]</span>, <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRE</span> [<a target="c" href="/scripts/arabic/block#char202A"><span class="uname">U+202A LEFT-TO-RIGHT EMBEDDING</span></a>]</span>, and <span class="codepoint" translate="no"><span class="uname" dir="ltr">PDF</span> [<a target="c" href="/scripts/arabic/block#char202C"><span class="uname">U+202C POP DIRECTIONAL FORMATTING</span></a>]</span> are in widespread use to set the base direction of a range of characters.  <span class="uname">RLE/LRE</span> come at the start, and  <span class="uname">PDF</span> at the end of a range of characters for which the base direction is to be set.</p>
 <p>More recently, the Unicode Standard added a set of characters which do the same thing but also isolate the content from surrounding characters, in order to avoid spillover effects. They are <span class="codepoint" translate="no"><span class="uname" dir="ltr">RLI</span> [<a target="c" href="/scripts/arabic/block#char2067"><span class="uname">U+2067 RIGHT-TO-LEFT ISOLATE</span></a>]</span>, <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRI</span> [<a target="c" href="/scripts/arabic/block#char2066"><span class="uname">U+2066 LEFT-TO-RIGHT ISOLATE</span></a>]</span>, and <span class="codepoint" translate="no"><span class="uname" dir="ltr">PDI</span> [<a target="c" href="/scripts/arabic/block#char2069"><span class="uname">U+2069 POP DIRECTIONAL ISOLATE</span></a>]</span>.  The Unicode Standard recommends that these be used instead, however some applications  don't yet recognise them. </p>
 <p>There is also <span class="codepoint" translate="no"><span class="uname" dir="ltr">FSI</span> [<a target="c" href="/scripts/arabic/block#char2068"><span class="uname">U+2068 FIRST STRONG ISOLATE</span></a>]</span>, used initially to set the base direction according to the first recognised strongly-directional character.</p>
@@ -283,13 +283,13 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <section id="expressions">
 <h3>Expressions &amp; sequences</h3>
-    <p>A sequence of  numbers separated by hyphens, for example a range,  runs from right to left in  Urdu.</p>
+    <p>A sequence of  numbers separated by hyphens (for example a range)  runs from right to left in  Urdu.</p>
 <p><a class="figref">fig_range</a> shows some   Urdu text, which is right-to-left overall, containing a numeric range that is also  ordered RTL, ie. it starts with 100 and ends with 999.</p>
 <figure id="fig_range">
 <p dir="rtl" class="medium" lang="ur"><span class="ex">100–999 تصدیق شدہ کیس</span></p>
     <figcaption>A numeric range in Urdu language text.</figcaption>
 </figure>
-<p>When a list uses the ASCII hyphen as a separator, the Unicode Bidirectional Algorithm automatically produces the expected ordering <em> only when a sequence or expression follows Urdu characters</em>. However, a sequence that appears alone on a line will be ordered left-to-right. To make the range read right-to-left you should, in this case, add the  formatting character <span class="codepoint"><a target="c" href="/scripts/arabic/block#char061C"><span class="uname">U+061C ARABIC LETTER MARK</span></a></span> (ALM) at the start of the line (see and click on each line in <a class="figref">fig_ALM</a>).</p>
+<p>When a list uses the ASCII hyphen as a separator, the Unicode Bidirectional Algorithm automatically produces the expected ordering <em> only when a sequence or expression follows Urdu characters</em>. However, a sequence that appears alone on a line will be ordered left-to-right. To make the sequence read right-to-left you should, in this case, add the  formatting character <span class="codepoint"><a target="c" href="/scripts/arabic/block#char061C"><span class="uname">U+061C ARABIC LETTER MARK</span></a></span> (ALM) at the start of the line (see and click on each line in <a class="figref">fig_ALM</a>).</p>
 <figure id="fig_ALM">
 <div class="medium">
     <p dir="rtl" lang="ur"><span class="ex">؜10-01-2018</span></p>
@@ -440,7 +440,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<p>The following tables show how the above  vowel sounds map to characters or sequences of characters in vowelled text. The table shows initial  (<b>i</b>), medial (<b>m</b>), and final (<b>f</b>) forms. The three short vowels are not typically found in final position.</p>
+<p>The following tables show how the above  vowel sounds map to common characters or sequences of characters in vowelled text. The sections that follow this provide additional information. The table shows initial  (<b>i</b>), medial (<b>m</b>), and final (<b>f</b>) forms. The three short vowels are not typically found in final position.</p>
 
 
 
@@ -814,8 +814,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <section id="suppdiacritics">
 <h3>Supplementary diacritics</h3>
 			<p>The diacritic <span class="codepoint"><span lang="ur" dir="rtl">&#x25CC;&#x0670;</span> [<a href="/scripts/arabic/block#char0670"><span class="uname">U+0670 ARABIC LETTER SUPERSCRIPT ALEF​</span></a>]</span> is used in a few Arabic words over the final form of <span class="codepoint"><span dir="rtl" lang="ar">ی</span> <a href="#char06CC">[<span class="uname">U+06CC ARABIC LETTER FARSI YEH</span>]</a></span> to produce the sound <span class="ipa">ɑ:</span> eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="ur">اعلیٰ</span> <span class="trans">ɑʿlyɑ̇</span> <span class="ipa">alɑː</span> <span class="meaning">paramount, highest</span></span>;  <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">دعویٰ</span> <span class="trans">dʿvyɑ̇</span> <span class="ipa">davɑː</span> <span class="meaning">law suit, claim</span></span>. </p>
-			<p>The similar diacritic <span class="codepoint"><span lang="ur" dir="rtl">&#x25CC;&#x0656;</span> [<a href="/scripts/arabic/block#char0656"><span class="uname">U+0656 ARABIC SUBSCRIPT ALEF</span></a>]</span> is used to indicate that a vowel is <span class="ipa">iː</span> or <span class="ipa">i</span> rather than <span class="ipa">e</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">نُحْیٖ</span> <span class="trans">nuh͓yᵢ</span></span>. This diacritic is not usually needed, and serves only to emphasise that the vowel is long.</p>
-<p><span class="codepoint"><span lang="ur" dir="rtl">&#x25CC;&#x0657;</span> [<a href="/scripts/arabic/block#char0657"><span class="uname">U+0657 ARABIC INVERTED DAMMA​</span></a>]</span> is used to indicate that the vowel is <span class="ipa">uː</span> or <span class="ipa">ʊ</span> rather than <span class="ipa">ɔ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">حبل حلالہٗ</span> <span class="trans">hbl hlɑlḫᵘ</span></span>. It is not usually needed, and serves only to emphasise that the vowel is long.</p>
+			<p>The similar diacritic <span class="codepoint"><span lang="ur" dir="rtl">&#x25CC;&#x0656;</span> [<a href="/scripts/arabic/block#char0656"><span class="uname">U+0656 ARABIC SUBSCRIPT ALEF</span></a>]</span> is used to indicate that a vowel is <span class="ipa">iː</span> or <span class="ipa">i</span> rather than <span class="ipa">e</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">نُحْیٖ</span> <span class="trans">nuh͓yᵢ</span></span>. This diacritic is not usually needed, and serves only to emphasise that this is a vowel.</p>
+<p><span class="codepoint"><span lang="ur" dir="rtl">&#x25CC;&#x0657;</span> [<a href="/scripts/arabic/block#char0657"><span class="uname">U+0657 ARABIC INVERTED DAMMA​</span></a>]</span> is used to indicate that the vowel is <span class="ipa">uː</span> or <span class="ipa">ʊ</span> rather than <span class="ipa">ɔ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">حبل حلالہٗ</span> <span class="trans">hbl hlɑlḫᵘ</span></span>. It is not usually needed, and serves only to emphasise that this is a vowel.</p>
 <p>The doubled vowel diacritics, <span class="codepoint"><span lang="ur" dir="rtl">&#x25CC;&#x064B;</span> [<a href="/scripts/arabic/block#char064B"><span class="uname">U+064B ARABIC FATHATAN​</span></a>]</span>, <span class="codepoint"><span lang="ur" dir="rtl">&#x25CC;&#x064C;</span> [<a href="/scripts/arabic/block#char064C"><span class="uname">U+064C ARABIC DAMMATAN​</span></a>]</span>, and <span class="codepoint"><span lang="ur" dir="rtl">&#x25CC;&#x064D;</span> [<a href="/scripts/arabic/block#char064D"><span class="uname">U+064D ARABIC KASRATAN​</span></a>]</span> are used at the ends of certain Arabic adverbs. The doubled zabar (fathatan) is the most common of the three marks of this type, and is usually written over an <span class="name">alif</span>, although the vowel sound is short. Examples, <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="ur">یقیناً</span> <span class="trans">yqynɑaⁿ</span> <span class="ipa">yakiːnan</span> <span class="meaning">certainly</span></span>; <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="ur">مثلاً</span> <span class="trans">mṡlɑaⁿ</span> <span class="ipa">masalan</span> <span class="meaning">for example</span></span>.</p>
 </section>
 
@@ -824,7 +824,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <section id="nasalisations">
 <h3>Nasalisation</h3>
-  <p>Vowels may be nasalised, like at the end of the French word élan. This is indicated in Urdu by a glyph called <span class="name">nun ghunna</span> that looks like the letter <span class="name">nun</span> except that in word final position it has no dot, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ماں</span> <span class="trans">mɑñ</span> <span class="ipa">mãː</span> <span class="meaning">mother</span></span>, <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ٹاںگ</span> <span class="trans">ʈɑñg</span> <span class="ipa">tãːg</span> <span class="meaning">leg</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">کروں</span> <span class="trans">krvñ</span> <span class="ipa">karũː</span> <span class="meaning">I may do</span></span>. In Unicode there are different characters for each of these uses.</p>
+  <p>Vowels may be nasalised, like at the end of the French word <span class="name">élan</span>. This is indicated in Urdu by a glyph called <span class="name">nun ghunna</span> that looks like the letter <span class="name">nun</span> except that in word final position it has no dot, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ماں</span> <span class="trans">mɑñ</span> <span class="ipa">mãː</span> <span class="meaning">mother</span></span>, <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ٹاںگ</span> <span class="trans">ʈɑñg</span> <span class="ipa">tãːg</span> <span class="meaning">leg</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">کروں</span> <span class="trans">krvñ</span> <span class="ipa">karũː</span> <span class="meaning">I may do</span></span>. In Unicode there are different characters for each of these uses.</p>
 <p>The diacritic<span class="codepoint"><span lang="ur" dir="rtl">&#x25CC;&#x0658;</span> [<a href="/scripts/arabic/block#char0658"><span class="uname">U+0658 ARABIC MARK NOON GHUNNA​</span></a>]</span> is used when people want to make it clear that a <span class="name">noon</span> character represents nasalisation rather than the sound <span class="ipa">n</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ٹاںگ</span> <span class="trans">ʈɑñg</span> <span class="ipa">tãːg</span> <span class="meaning">leg</span></span>. It is not used in a standard way, just when the user prefers, and is fairly uncommon.&nbsp;</p>
 </section>
 
@@ -1349,7 +1349,7 @@ alveolar</th>
 
 <p>The alphabet standardised in 2004 by the National Language Authority in Pakistan counts 39 letters, and 18  digraphs representing aspirated consonants. Follow the links to the character notes for the letters described below to find examples and detailed information.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">پ␣ب␣ت␣ط␣د␣ٹ␣ڈ␣ك␣گ␣ق␣ء</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">پ␣ب␣ت␣ط␣د␣ٹ␣ڈ␣ک␣گ␣ق␣ء</figure>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">چ␣ج</figure>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ف␣و␣س␣ث␣ص␣ز␣ذ␣ض␣ظ␣ش␣ژ␣خ␣غ␣ہ␣ح␣ھ␣ع</figure>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">م␣ن␣ں</figure>
@@ -1371,13 +1371,12 @@ in Urdu, but it is also pronounced <span class="ipa">ɑː</span> or is silent in
 <figure class="characterBox auto" data-cols="ipa,trans,transc">وھ␣هھ</figure>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">مھ␣نھ</figure>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">رھ␣ڑھ␣لھ␣یھ</figure>
-</section>
 
 
 
 <section id="other_letters">
 <h4>Other</h4>
-<p>Other characters found in Urdu text include the following. These are introduced further down this page, but  you can, as usual, find out more by clicking on them.</p>
+<p>Other characters found in Urdu text include the following. These are introduced further down this page, but  you can, as usual, find out more by clicking on the code point links.</p>
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">آ␣ؤ␣ئ␣ي␣ۂ</figure>
 
@@ -1391,7 +1390,7 @@ in Urdu, but it is also pronounced <span class="ipa">ɑː</span> or is silent in
 
 
 
-<section id="conjuncts">
+<section id="clusters">
 <h3>Consonant clusters</h3>
 <p id="def-consonantcluster" class="explanatoryintro definitionStub"></p>
 
@@ -1404,14 +1403,14 @@ in Urdu, but it is also pronounced <span class="ipa">ɑː</span> or is silent in
 <figcaption>Two alternative shapes of sukun.</figcaption>
 </figure>
 
-<p>This diacritic is never written above the final character in a word, because as a rule a short vowel is not pronounced in this position.</p>
+<p>This diacritic is never written above the final character in a word, mainly because as a rule a short vowel is not pronounced in this position.</p>
 </section>
     
     
     
     
 <section id="doubling">
-<h3>Consonant lengthening</h3>
+<h3>Consonant lengthening &amp; gemination</h3>
 <p>Most native consonants may be lengthened, but not <span class="ipa">bʱ</span>, <span class="ipa">ɽ</span>, <span class="ipa">ɽʱ</span>, or <span class="ipa">ɦ</span>. Geminate consonants are always medial and preceded by one of <span class="ipa">ə</span>, <span class="ipa">ɪ</span>, or <span class="ipa">ʊ</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Hindustani_phonology#Consonants">wp</a></p>
 <p>In vowelled text, which is very rare, this is shown using the diacritic <span class="codepoint"><span lang="ur" dir="rtl">&#xA0;&#x0651;</span> <a href="/scripts/arabic/block#char0651">[<span class="uname">U+0651 ARABIC SHADDA​</span>]</a></span>, called <span class="name">taʃdiːd</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ستّر</span> <span class="trans">stᵚr</span> <span class="ipa">sattar</span> <span class="meaning">seventy</span></span>. More often than not, this is not written.</p>
 </section>
@@ -1451,8 +1450,9 @@ in Urdu, but it is also pronounced <span class="ipa">ɑː</span> or is silent in
 <section id="vowel_diacritics">
 <h3>Vowel diacritics</h3>
 
-<p>The following diacritics used to express vowels are described in <a class="secref">vowelsummary</a>.</p>
+<p>The following diacritics used to express vowels are mostly described in <a class="secref">vowelsummary</a>.</p>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">َ␣ً␣ُ␣ٌ␣ِ␣ٍ␣ْ␣ٗ␣ٓ␣ٰ␣ٖ␣٘</figure>
+<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0652;</span> [<a href="/scripts/arabic/block#char0652"><span class="uname">U+0652 ARABIC SUKUN</span></a>]</span> indicates no vowel (see <a class="secref">clusters</a>).</p>
 </section>
 
 
@@ -1507,7 +1507,7 @@ in Urdu, but it is also pronounced <span class="ipa">ɑː</span> or is silent in
  <p dir="rtl" lang="ur" class="large"><span class="ex">؜۵٬۴۳۲٫۱٪</span></p>
  <figcaption>The figure 5,432.1% using Urdu characters.</figcaption>
  </figure>
- <p>The percent sign is typed and stored after the numbers. Like the ASCII hyphen based expressions mentioned in <a class="secref">expressions</a>, it will appear to the left of a number if that number is preceded by Urdu characters. However, if the percentage appears alone on a line it is necessary to use an ALM formatting character just before it to prevent the sign appearing on the right.</p>
+ <p>The percent sign is typed and stored after the numbers. Like the numeric sequences using the ASCII hyphen (mentioned in <a class="secref">expressions</a>), it will appear to the left of a number if that number is preceded by Urdu characters. However, if the percentage appears alone or at the beginning of a line it is necessary to use an ALM formatting character just before it to prevent the sign appearing on the right.</p>
 </section>
 
 
@@ -1538,7 +1538,7 @@ in Urdu, but it is also pronounced <span class="ipa">ɑː</span> or is silent in
 <figcaption>An Urdu date (12 July 2002) in the Hijri calendar.</figcaption>
 </figure>
 
-<p class="observation">Note that the word <span class="name">hijri</span> in Arabic is written with <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0647;</span> [<a href="/scripts/arabic/block#char0647"><span class="uname">U+0647 ARABIC LETTER HEH</span></a>]</span> (<span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">هجري</span></span>), rather than <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06C1;</span> [<a href="/scripts/arabic/block#char06C1"><span class="uname">U+06C1 ARABIC LETTER HEH GOAL</span></a>]</span> (<span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ہجری</span></span>), and the abbreviation in Arabic is <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0647;&#x200D;</span> [<a href="/scripts/arabic/block#char0647"><span class="uname">U+0647 ARABIC LETTER HEH</span></a> + <a href="/scripts/punctuation/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span>, whereas in Urdu it is <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06BE;</span> [<a href="/scripts/arabic/block#char06BE"><span class="uname">U+06BE ARABIC LETTER HEH DOACHASHMEE</span></a>]</span>.</p>
+<p class="observation">Note: The word <span class="name">hijri</span> in Arabic is written with <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0647;</span> [<a href="/scripts/arabic/block#char0647"><span class="uname">U+0647 ARABIC LETTER HEH</span></a>]</span> (<span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">هجري</span></span>), rather than <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06C1;</span> [<a href="/scripts/arabic/block#char06C1"><span class="uname">U+06C1 ARABIC LETTER HEH GOAL</span></a>]</span> (<span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">ہجری</span></span>), and the abbreviation in Arabic is <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0647;&#x200D;</span> [<a href="/scripts/arabic/block#char0647"><span class="uname">U+0647 ARABIC LETTER HEH</span></a> + <a href="/scripts/punctuation/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span>, whereas in Urdu it is <span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x06BE;</span> [<a href="/scripts/arabic/block#char06BE"><span class="uname">U+06BE ARABIC LETTER HEH DOACHASHMEE</span></a>]</span>.</p>
 <p>Dates may also be indicated by placing the long sweep of <span class="codepoint"><span lang="ur" dir="rtl">&#x0601;</span> [<a href="/scripts/arabic/block#char0601"><span class="uname">U+0601 ARABIC SIGN SANAH</span></a>]</span> below the year digits.</p>
 
 <figure id="fig_sanah">
@@ -1558,9 +1558,24 @@ in Urdu, but it is also pronounced <span class="ipa">ɑː</span> or is silent in
 	
 	
 	
+<section id="punctuation">
+<h2>Punctuation</h2>
+
+<figure class="characterBox auto" data-cols="">٪␣٫␣٬␣؍␣،␣؛␣؟␣٪␣٫␣٬␣۔␣“␣”</figure>
+</section>
+
+
+
+
+	
+	
+	
 <section id="symbols">
 <h2>Symbol</h2>
 
+<figure class="characterBox auto" data-cols="">﷽</figure>
+
+<p>This is one of the few characters in the presentation forms blocks that is valid for use in normal content.</p>
 <p><span class="codepoint"><span lang="ur" dir="rtl">&#xFDFD;</span> [<a href="/scripts/arabic/block#charFDFD"><span class="uname">U+FDFD ARABIC LIGATURE BISMILLAH AR-RAHMAN AR-RAHEEM</span></a>]</span> is used by Muslims in various contexts including the constitutions of countries where Islam has a significant presence.  The shape varies significantly from font to font and usage to usage.</p>
 </section>
 
@@ -1576,10 +1591,9 @@ in Urdu, but it is also pronounced <span class="ipa">ɑː</span> or is silent in
 
 <p>The Arabic script uses a  number of Unicode characters that affect the way that other characters are rendered. Many of those have no visible form of their own. The following set of characters used in Urdu text does have a visual representation. </p>
 
-<figure class="characterBox auto" data-cols="">؀␣؁␣؂␣؃␣؄␣۝</figure>
+<figure class="characterBox auto" data-cols="" data-links="#number_sign, #dates, #xxx, #xxx, #dates, #xxx">؀␣؁␣؂␣؃␣؄␣۝</figure>
 
-<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0600;</span> [<a href="/scripts/arabic/block#char0600"><span class="uname">U+0600 ARABIC NUMBER SIGN</span></a>]</span> is described in <a class="secref">number_sign</a>.</p>
-<p><span class="codepoint" translate="no"><span lang="ur" dir="rtl">&#x0601;</span> [<a href="/scripts/arabic/block#char0601"><span class="uname">U+0601 ARABIC SIGN SANAH</span></a>]</span> is described in <a class="secref">dates</a>.</p>
+<p>Follow the links to learn more about each of these characters.</p>
 <p class="observation"><span class="leadin">Observation:</span> The subtending character display is broken in the Noto Nastaliq Urdu font. That font only produces the expected display if (a) a RTL override is applied to the characters, or (b) the SANAH is typed <em>after</em> the digits (in a RTL normal base direction, but not an override). The Awami Nastaliq font handles them as expected, as long as the sign precedes the digits and the base direction is set to RTL (but not if a directional override is applied).</p>
 <p>Urdu text also makes use of a relatively large set of invisible formatting characters, especially in plain text, many of which are used to manage text direction (see <a class="secref">directioncontrols</a>), and others are used to control cursive shaping behaviour (see <a class="secref">shapingcontrols</a>).</p>
 </section>
@@ -1597,33 +1611,63 @@ in Urdu, but it is also pronounced <span class="ipa">ɑː</span> or is silent in
 <section id="cursive">
 <h3>Cursive script</h3>
 <p>Arabic script joins letters together. Fonts need to produce the appropriate joining form for a code point, according to its visual context. This results in four different shapes for most letters (including an isolated shape). The highlights in <a class="figref">fig_cursive</a> below show the same letter, <span class="codepoint"><span dir="rtl" lang="ar">ع</span> <a target="c" href="/scripts/arabic/block#char0639">[<span class="uname">U+0639 ARABIC LETTER AIN</span>]</a></span>, with two different joining forms.&nbsp;</p>
-<figure id="fig_cursive"> <img src="images/cursive_shapes_ur.png" alt=" عقل ودیعت"/>
-     <figcaption>The letter <span class="codepoint"><span lang="ur" dir="rtl">&#x0639;</span> [<a href="/scripts/arabic/block#char0639"><span class="uname">U+0639 ARABIC LETTER AIN</span></a>]</span> in 2 different joining contexts.</figcaption>
-     </figure>
-    <p>A few Arabic script letters only join on the right-hand side. For Urdu these include:</p>
+
+<figure id="fig_cursive">
+<img class="ex" src="images/cursive_shapes_ur.png" alt="عقل ودیعت"/>
+<figcaption>The letter <span class="codepoint"><span lang="ur" dir="rtl">&#x0639;</span> [<a href="/scripts/arabic/block#char0639"><span class="uname">U+0639 ARABIC LETTER AIN</span></a>]</span> in 2 different joining contexts.</figcaption>
+</figure>
+
+<p>A few Arabic script letters only join on the right-hand side. For Urdu these include:</p>
 <figure class="auto" data-cols="trans,transc">و␣د␣ڈ␣ذ␣ر␣ز␣ژ␣ڑ␣ا␣ے</figure>
 
-<p>There are 2 Unicode blocks containing Arabic presentation forms: these contain individual characters corresponding to the various joining forms and ligatures.  With only a handful of exceptions, characters in those blocks should not be used for text content; they are only for managing legacy encodings. Instead, characters in the main Arabic block should be used, and the font will manage the necessary cursive shaping.
+<p>There are 2 Unicode blocks containing Arabic presentation forms: these contain individual characters corresponding to the various joining forms and ligatures.  With only a handful of exceptions, characters in those blocks should not be used for text content; they are only for managing legacy encodings. Instead, characters in the main Arabic block should be used, and the font will manage the necessary cursive shaping.</p>
 
 
 
 
 <section id="shapingcontrols"><h4>Managing glyph shaping</h4>
 
-<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">ZWJ</span> [<a href="/scripts/punctuation/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span> and <span class="codepoint" translate="no"><span class="uname" dir="ltr">ZWNJ</span> [<a target="c" href="/scripts/arabic/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a>]</span> are used to control the joining behaviour of cursive glyphs. They are particularly useful in educational contexts, but also have real world applications.</p>
-<p><span class="codepoint"><span class="uname" dir="ltr">ZWJ</span></span>  permits a letter to form a cursive connection without a visible neighbour. For example, the marker for hijri dates is an initial form of <span class="name">heh</span>, even though it doesn't join with anything to its left, ie. <span class="ex" dir="rtl" lang="ur">ه‍ </span>. For this, use <span class="codepoint"><span class="uname" dir="ltr">ZWJ</span></span> immediately after the <span class="name">heh</span>, eg. <span class="ex" dir="rtl" lang="ar">الاثنين 10 رجب 1415 ه‍.</span>. It can also be used for illustrating cursive joining forms, eg. <span class="charExample"><span class="ex" lang="ur" dir="rtl">ان‍‍ &nbsp; ‍س‍‍ &nbsp; ‍ان</span></span>. Characters from the Presentation Forms blocks in Unicode should not be used in such cases.</p>
-<p><span class="codepoint"><span class="uname" dir="ltr">ZWNJ</span></span> prevents two adjacent letters forming a cursive connection with each other when rendered, eg. <span class="charExample"><span class="ex" lang="ur" dir="rtl">ان‌س‌ان</span></span>.</p>
+<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">ZWJ</span> [<a href="/scripts/punctuation/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span> and <span class="codepoint" translate="no"><span class="uname" dir="ltr">ZWNJ</span> [<a target="c" href="/scripts/arabic/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a>]</span> are invisible formatting characters used to control the joining behaviour of cursive glyphs. They are particularly useful in educational contexts, but also have real world applications.</p>
+<p><span class="codepoint"><span class="uname" dir="ltr">ZWJ</span></span>  <em>permits</em> a letter to form a cursive connection without a visible neighbour. It can  be used for illustrating cursive joining forms, eg. <span class="charExample"><span class="ex" lang="ur" dir="rtl">ان‍‍ &nbsp; ‍س‍‍ &nbsp; ‍ان</span></span>. Characters from the Presentation Forms blocks in Unicode should not be used in such cases.</p>
+<p><span class="codepoint"><span class="uname" dir="ltr">ZWNJ</span></span> <em>prevents</em> two adjacent letters forming a cursive connection with each other when rendered, eg. <span class="charExample"><span class="ex" lang="ur" dir="rtl">ان‌س‌ان</span></span>.</p>
 <p><span class="codepoint" translate="no"><span class="uname" dir="ltr">CGJ</span> [<a target="c" href="/scripts/combining/block#char034F"><span class="uname">U+034F COMBINING GRAPHEME JOINER</span></a>]</span> is used in Arabic to produce special ordering of diacritics. The name is a misnomer, as it is generally used to <em>break</em> the normal sequence of diacritics.&nbsp;</p>
 </section>
 </section>
 
 
 
+
+
+
+
+<section id="fontstyle">
+<h3>Font styles</h3>
+<p>Urdu is typically written in a <span class="trans">nasta'liq</span> style, ie. the connected letters in a  word tend to follow a sloping baseline. This is achieved in Unicode by applying the correct font – the underlying characters used are not different for nasta'liq vs. other styles.</p>
+
+<figure id="fig_baseline">
+<p dir="rtl" lang="ur" class="large" style="margin-top: 1em; margin-bottom: 1em;"><span class="ex">مستحق</span> &nbsp;•&nbsp; <span class="ex">شخص</span> &nbsp;•&nbsp; <span class="ex">کیفیت</span></p>
+<figcaption>Sloping baselines and complex joining behaviours in Urdu nastaliq text.</figcaption>
+</figure>
+
+<p>Not only does the baseline slope for connected glyphs in a word, but the sloping sequences can overlap, as shown in <a class="figref">fig_overlap</a>, which uses the Awami Nastaliq font.</p>
+
+<figure id="fig_overlap">
+<img class="ex" src="images/sloping_baseline_overlap_ur.png" alt="391 میں تھیوفلس اعظم">
+<figcaption>Sloping baselines and complex joining behaviours in Urdu nastaliq text.</figcaption>
+</figure>
+
+</section>
+
+
+
+
+
+
+
 <section id="gsub">
 <h3>Context-based shaping</h3>
-<p>As in Arabic, <span class="trans">lam</span> followed by <span class="trans">alef</span> ligate, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">اسلام</span> <span class="trans">ɑslɑm</span> <span class="ipa">islam</span> <span class="meaning">Islam</span></span>. </p>
-
-
+<p>Context-based shaping is everwhere in Urdu due to the combination of the cursive behaviour of the script plus the strong tendency to arrange joined characters in cascades or vertical arrangements.</p>
+<p>As in Arabic, <span class="trans">lam</span> followed by <span class="trans">alef</span> ligates, eg. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">اسلام</span> <span class="trans">ɑslɑm</span> <span class="ipa">ɪslɑːm</span> <span class="meaning">Islam</span></span>, and there are other such commonly ligated forms. There are also common rules about special joining arrangements when certain characters appear side by side, for example a <span class="uname">KA</span> followed by an <span class="uname">ALEF</span> takes the special shape <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl"> کا</span></span>.</p>
 </section>
 
 
@@ -1632,7 +1676,64 @@ in Urdu, but it is also pronounced <span class="ipa">ɑː</span> or is silent in
 <section id="gpos">
 <h3>Context-based positioning</h3>
 
-<p class="prompts">tbd</p>
+<p>Positioning of cursive joining forms is already complicated in the nastaliq style because of the vertical placement; adding dots and hamzas then complicates matters in that they need to be aligned with the appropriate base character without overlapping adjacent character glyphs or other dots, etc.  Positioning vowel diacritics, shadda, etc. then adds to the complexity.</p>
+<p>The table in <a class="figref">fig_gpos</a> selects just a handful of situations to illustrate the kinds of positioning that take place.</p>
+
+
+<figure id="fig_gpos">
+<table>
+<thead>
+<tr><th>&nbsp;</th><th>nastaliq</th><th>naskh</th>
+<th>notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>A</th>
+<td class="large" lang="ur"><span class="ex">حیثیت</span></td>
+<td class="large" lang="ur"><span style="font-family: Scheherazade">حیثیت</span></td>
+<td>A relatively straightforward arrangement, except for the positioning (and context-based shaping) required to achieve the sloping baseline.</td>
+</tr>
+<tr>
+<th>B</th>
+<td class="large" lang="ur"><span class="ex">ویکیپیڈیا</span></td>
+<td class="large" lang="ur"><span style="font-family: Scheherazade">ویکیپیڈیا</span></td>
+<td>Here, the  dots have been arranged vertically so that they don't crash into each other. More radical arrangements of this kind will be seen in the following examples.</td>
+</tr>
+<tr>
+<th>C</th>
+<td style="text-align: center;"><img class="ex" src="images/diacritic_placement_ur.png" alt="پیٹی اؔبِیجیل"></td>
+<td class="large" lang="ur"><span style="font-family: Scheherazade">پیٹی اؔبِیجیل</span></td>
+<td>A similar situation, where additional horizontal and vertical spacing has been applied in order to allow room for the dots and other diacritics to appear without crashing into other glyphs or dots, etc.</td>
+</tr>
+<tr>
+<th>D</th>
+<td class="large" lang="ur"><span class="ex">چاہیئے</span></td>
+<td class="large" lang="ur"><span style="font-family: Scheherazade">چاہیئے</span></td>
+<td>It is common for diacritics of characters preceding <span class="uname">BAREE HEH</span> to be rendered below the latter character's glyph. Here we see  part of both an initial <span class="uname">HEH</span> and the 2 dots of a<span class="uname">YEH</span> separated from the other glyphs that make up those characters.</td>
+</tr>
+<tr>
+<th>E</th>
+<td class="large" lang="ur"><span class="ex">تصدیق</span></td>
+<td class="large" lang="ur"><span style="font-family: Scheherazade">تصدیق</span></td>
+<td>In this word, the 2 dots below the <span class="uname">YEH</span> create most of the horizontal space between the preceding <span class="uname">DAL</span> and following <span class="uname">QAF</span>. In the Nafees Nastaleeq font, the 2 dots are moved below and slightly under the <span class="uname">QAF</span>, reducing the overall horizontal with of the word.</td>
+</tr>
+<tr>
+<th>F</th>
+<td class="large" lang="ur"><span class="ex">اسلام</span></td>
+<td class="large" lang="ur"><span style="font-family: Scheherazade">اسلام</span></td>
+<td>Note the convention that the word-final <span class="uname">MEEM</span> here starts above the baseline, even though nothing follows it.</td>
+</tr>
+<tr>
+<th>G</th>
+<td style="text-align: center;"><img class="ex" src="images/interest_ur.png" alt="دلچسپی"></td>
+<td class="large" lang="ur"><span style="font-family: Scheherazade">دلچسپی</span></td>
+<td>A highly vertical arrangement using the Nafees Nastaleeq font, where dots are stacked together. (In the Awami and Noto nastaliq fonts this looks less vertical, ie. <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl">دلچسپی</span></span>.)</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Examples of glyph positioning in the nastaliq style.</figcaption>
+</figure>
 </section>
 
 
@@ -1641,21 +1742,8 @@ in Urdu, but it is also pronounced <span class="ipa">ɑː</span> or is silent in
   
 <section id="baselines">
 <h3>Baselines &amp; inline alignment</h3>
-<p>The alphabetic baseline is a strong feature of Arabic script on the whole, since characters tend to join there. The nastaliq style of the script, on the other hand, uses arrangements of joined glyphs that cascade downwards from right to left, and ressemble a strongly sloping baseline. See the example in Fig. <span class="figref">fig_baseline</span>.</p>
-</section>
-
-
-
-
-<section id="fontstyle">
-<h3>Font styles</h3>
-<p>Since the script is cursive (ie. letters are typically joined) the letter forms can vary considerably according to position.</p>
-			<p>Urdu is typically written in a <span class="trans">nasta'liq</span> style, ie. the connected letters in a word tend to follow a sloping baseline. This is
-				achieved in Unicode by applying the correct font – the underlying characters used are not different for nasta'liq vs. other styles.</p>
- <figure id="fig_baseline">
- <p dir="rtl" lang="ur" class="large" style="margin-top: 1em; margin-bottom: 1em;"><span class="ex">مستحق</span> &nbsp;•&nbsp; <span class="ex">شخص</span> &nbsp;•&nbsp; <span class="ex">کیفیت</span></p>
-    <figcaption>Sloping baselines in Urdu nastaliq text.</figcaption>
-</figure>
+<p>The alphabetic baseline is a strong feature of Arabic script on the whole, since characters tend to join there. The nastaliq style of the script, on the other hand, uses arrangements of joined glyphs that cascade downwards from right to left, and ressemble a strongly sloping baseline. See the examples in  <a class="figref">fig_baseline</a> and <a class="figref">fig_gpos</a>.</p>
+<p><a class="figref">fig_overlap</a> shows overlapping baselines in the Nafees Nastaliq font. (In the Awami and Noto fonts, there is no overlap for that text.)</p>
 </section>
 </section>
 
@@ -1788,7 +1876,7 @@ in Urdu, but it is also pronounced <span class="ipa">ɑː</span> or is silent in
 <h4>Breaking between Latin words</h4>
 <p>When a line break occurs in the middle of an embedded left-to-right sequence, the items in that sequence are rearranged visually so that the reading direction remains top-to-bottom. <a class="figref">latin_line_breaks</a> shows how two Latin words are apparently reordered in the flow of text to accommodate this rule.</p>
 <figure id="latin_line_breaks">
-<p><img src="images/latin_line_breaks_ur_1.png" alt="391 میں تھیوفلس اعظم (Patriarch Theophilus)کے حکم سے عیسائیوں نے اس کی کتابوں کو نیست و نابود کر دیا۔ کیونکہ ان کے خیال میں اس سے کفرپھیلنے کا اندیشہ تھا۔" style="margin-bottom: 1em;"></p>
+<p><img class="ex" src="images/latin_line_breaks_ur_1.png" alt="391 میں تھیوفلس اعظم (Patriarch Theophilus)کے حکم سے عیسائیوں نے اس کی کتابوں کو نیست و نابود کر دیا۔ کیونکہ ان کے خیال میں اس سے کفرپھیلنے کا اندیشہ تھا۔" style="margin-bottom: 1em;"></p>
 <p><img src="images/latin_line_breaks_ur_2.png" alt="Text with line break in Latin text."></p>
     <figcaption>Urdu with embedded Latin text. The lower of these two images shows the result of decreasing the line width, so that text wraps between a sequence of Latin words.</figcaption>
 </figure>
