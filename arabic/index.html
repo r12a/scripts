@@ -120,7 +120,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->11 May, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->12 May, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -1821,9 +1821,9 @@ alveolar</th>
 
 <section id="justify">
 <h3> Text alignment &amp; justification</h3>
-    <p class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</p>
-<p> Arabic script justification can use a number of different techniques. These include stretching the baseline and the glyphs of the text, expanding inter-word spaces, application of ligatures or swash forms, etc.. Typically these will be applied in combination. </p>
-<p>Where baseline stretching is applied, the rules for what can be stretched, and how much, are complicated, and differ across orthographies. Elongation is not normally used at all for the <span class="trans">ruq'a</span> writing style. Baseline extension is not a question of simply adding equal-length extensions across the line.</p>
+<p> Arabic script justification can be implemented using a number of different techniques. These include stretching the baseline and the glyphs of the text, expanding inter-word spaces, application of ligatures or swash forms, etc.. Typically these will be applied in combination.</p>
+<p>Rules can also differ by writing style: elongation is not normally used at all for <span class="trans">ruq'a</span> fonts.</p>
+<p>Where baseline stretching is applied, the rules for what can be stretched, and how much, are complicated, and differ across orthographies.  Unlike space-based width adjustments, baseline extension is not a question of simply adding equal-length extensions across the line.</p>
 
 <figure id="fig_tatweel_para">
 <p style="text-align: center;"><img style="width:60%" src="images/tatweel_para.jpg" alt="Justified Arabic text."></p>
@@ -1831,14 +1831,44 @@ alveolar</th>
 </figure>
 
 <p>The baseline extension character <span class="codepoint"><span lang="ar" dir="rtl">&#x0640;</span> <a target="c" href="/scripts/arabic/block#char0640">[<span class="uname">U+0640 ARABIC TATWEEL</span>]</a></span> is sometimes suggested as a way of producing justification by extending the baseline, however when a browser window is resized, or when new text is added near the start of a paragraph, lines wrap differently and all the places where tatweel would be needed have to be recalibrated. Thus tatweels only work for static text with fixed dimensions.</p>
-<p>Better quality justification systems stretch glyphs, rather than adding baseline extensions. This dynamic stretching of glyphs is often called 'kashida'. In some typesetting systems, such as InDesign, the stretching can be produced automatically without the need for tatweel characters.</p>
+<p>Better quality justification systems stretch glyphs, rather than adding baseline extensions. This dynamic stretching of glyphs is often called 'kashida'. In some typesetting systems, such as InDesign, the stretching can be produced automatically without the need for tatweel characters. InDesign has controls to vary the preferred length of the extensions. </p>
 
 <figure id="fig_kashida_justification">
-<p style="text-align: center;"><img style="width:60%" src="images/kashida-justification.png" alt="بعد زبع قرن من الغياب والشوق لرؤية الاهل توفيت الراكبة جورجيت بشير (69 عاما) وهي كندية من اصل مصري، داخل صالة يرانزيت مطار القاهرة بعد اول زيارة لها الى مصر متئثرة بإصابتها بهبوط حاد في الدورة الدموية قبل دقائق من صعودها الى الطائرة المصرية المتجهة الى الولايات المتحدة الاميركية." data-notes="36pt Arial, tatweel stylistic"></p>
+<p style="text-align: center;"><img style="width:60%" class="ex" src="images/kashida-justification.png" alt="بعد زبع قرن من الغياب والشوق لرؤية الاهل توفيت الراكبة جورجيت بشير (69 عاما) وهي كندية من اصل مصري، داخل صالة يرانزيت مطار القاهرة بعد اول زيارة لها الى مصر متئثرة بإصابتها بهبوط حاد في الدورة الدموية قبل دقائق من صعودها الى الطائرة المصرية المتجهة الى الولايات المتحدة الاميركية." data-notes="36pt Arial, tatweel stylistic"></p>
 <figcaption>The same text, but produced automatically by InDesign, without the use of tatweel.</figcaption>
 </figure>
 
-<p>InDesign has controls to vary the preferred length of the extensions. The baseline stretching in <a class="figref">fig_kashida_justification</a> is, however, flat. A more advanced system would instead produce elegantly curved kashidas more like handwritten text.</p>
+<p>Note that the result of the automatic justification in <a class="figref">fig_kashida_justification</a> is different from that in the newspaper clipping. For one thing, the kashida effect is only applied once per word (but is applied to most words). The rules determining which combinations of characters receive baseline stretching, and the extent of that stretching also differ.</p>
+<p>InDesign also allows fonts to substitute long swash variants for certain characters, which soak more some of the horizontal space.</p>
+
+<figure id="fig_kashida_swash">
+<p style="text-align: center;"><img style="width:60%" class="ex" src="images/kashida_swash.png" alt="بعد زبع قرن من الغياب والشوق لرؤية الاهل توفيت الراكبة جورجيت بشير (69 عاما) وهي كندية من اصل مصري، داخل صالة يرانزيت مطار القاهرة بعد اول زيارة لها الى مصر متئثرة بإصابتها بهبوط حاد في الدورة الدموية قبل دقائق من صعودها الى الطائرة المصرية المتجهة الى الولايات المتحدة الاميركية." data-notes="36pt Arial, tatweel stylistic"></p>
+<figcaption>The last 2 lines of the previous example, showing swash forms.</figcaption>
+</figure>
+
+<p>Well justified text would apply a mixture of swash characters, space stretching, kashidas and ligatures to achieve a visually appealing and effective justification. Also, the baseline stretching in  <a class="figref">fig_kashida_justification</a> is flat. A more advanced system would instead produce elegantly curved kashidas more like handwritten text.</p>
+
+<figure id="fig_kashida_curvilinear">
+<p style="text-align: center;"><img class="ex" src="images/kashida_curvilinear.gif" alt="محمد"></p>
+<figcaption>Curvilinear kashidas. (<a href="http://www.tug.org/TUGboat/tb27-2/tb87benatia.pdf" class="instructions">source</a>)</figcaption>
+</figure>
+
+<details>
+<summary class="explanatoryintro">Useful links</summary>
+<ul>
+<li><a href="http://www.tug.org/TUGboat/tb27-2/tb87benatia.pdf">Arabic text justification</a></li>
+<li><a href="https://helpx.adobe.com/indesign/using/arabic-hebrew.html">Arabic and Hebrew features in InDesign</a></li>
+<li><a href="https://www.decotype.com/pdfs/Tasmeem_Manual.pdf">Tasmeem manual</a></li>
+<li><a href="http://r12a.github.io/blog/201110.html#20140523">Typography questions for HTML &amp; CSS: Arabic justification</a></li>
+<li><a href="https://www.w3.org/TR/alreq/#h_justification">Text Layout Requirements for the Arabic Script, 4.2 Justification</a></li>
+<li><a href="https://winsoft-international.com/wp-content/uploads/2017/07/SD_IDCS6_UG-1.pdf">WinSoft International ScribeDOOR for InDesign CS5 &amp; CS6 user guide</a>, see p23</li>
+<li><a href="https://web.archive.org/web/20030628024130/http://www.microsoft.com/middleeast/Arabicdev/IE6/KBase.asp">Justifying Text using Cascading Style Sheets (CSS) in Internet Explorer 5.5/6.0</a></li>
+<li><a href="https://research.reading.ac.uk/typoarabic/on-arabic-justification-part-2-software-implementations/">On Arabic justification, part 2 – software implementations</a></li>
+<li><a href="https://quod.lib.umich.edu/j/jep/3336451.0013.105?rgn=main;view=fulltext">Justify Just or Just Justify</a></li>
+</ul>
+</details>
+
+
 <p>It is very common to see baseline stretching in modern Arabic text where a word or phrase is stretched to fill a particular space, eg. the Arabic tag line (<span class="ex" dir="rtl" lang="ar">الابداع المتجدد</span> <span class="meaning">Creativity renewed</span>) below the word Lexus in <a class="figref">fig_lexus</a> is stretched to be the same width.</p>
 <figure id="fig_lexus">
 <img src="images/stretch-plus-ligature-1.jpg" alt="Arabic text stretched to fit the width of the word Lexus.">
@@ -1857,8 +1887,6 @@ alveolar</th>
 
 <section id="letterspace">
 <h3>Letter spacing</h3>
-<p class="prompts">Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see above.).</p>
-
 <p>Spaces are not added between characters, with the exception of micro-spacing during justification, which is applied to word-medial letters that don't join to the left. On the other hand, the baseline between words is often stretched.</p>
 <p>It is quite common to see Arabic text stretched to fit a given width, as shown in <a class="figref">fig_lexus</a>, but that type of stretching is more akin to justification than the typical letter-spacing that is applied to other scripts. The amount of stretch is determined by the area that needs to be filled.</p>
 <p>In some cases, it may be that elongation of words <em>is</em> driven by stretching the distance between letters rather than matching an external template, for example to express emphasis or prolonged sound. However, as for justification, this is not normally based on an even amount of stretch between all letters, as letter-spacing tends to be in other scripts.</p>
