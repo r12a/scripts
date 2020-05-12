@@ -1475,7 +1475,7 @@ alveolar</th>
 
 <section id="cursive">
 <h3>Cursive script</h3>
-    <p class="prompts">tbd</p>
+
 <p>Arabic script joins letters together. This results in four different shapes for most letters (including an isolated shape). The highlights in the example below show the same letter,
   <span class="codepoint"><span lang="ar" dir="rtl">&#x0639;</span> <a target="c" href="/scripts/arabic/block#char0639">[<span class="uname">U+0639 ARABIC LETTER AIN</span>]</a></span>, with three different joining forms.</p>
       <figure>
@@ -1493,16 +1493,39 @@ alveolar</th>
 
  <section id="gsub">
 <h3>Context-based shaping</h3>
-<p><span class="leadin">Ligatures.</span> Ligated glyph forms are common in Arabic. Some, such as <span class="ex" lang="ar" dir="rtl">لا</span> are mandatory. Most of the remainder depend on the font style. The <span class="name">lam-alif</span> ligature also affects other characters that are based on the alif, such as for <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">لإ لأ لآ</span></span>.</p>
-<p>Traditional fonts tend to have more optional ligated forms than modern styles.</p>
- <!--p dir="rtl" lang="ar" class="large" style="font-family: scheherazade; font-size: 72px;"><span class="ex">المؤتمر</span></p>
- <p dir="rtl" lang="ar" class="large" style="font-family: amiri; font-size: 48px;"><span class="ex">المؤتمر</span></p-->
-   <figure>
-    <p style="text-align:center;"><img src="images/arabic_ligatures1.png" alt="المؤتمر" style="vertical-align:middle;"> &nbsp;vs.&nbsp; <img src="images/arabic_ligatures2.png" alt="المؤتمر" style="vertical-align:middle;"></p>
-     <figcaption>The same word with ligatures (right) and no ligatures (left).</figcaption>
+
+
+<p>In all but the most basic fonts, glyph shapes are highly variable  for Arabic letters. For example, <a class="figref">fig_mishafi_ka</a> shows a wide variety of shapes produced by default in the Mishafi font for <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0643;</span> [<a href="/scripts/arabic/block#char0643"><span class="uname">U+0643 ARABIC LETTER KAF</span></a>]</span> when followed by various letters.</p>
+
+<figure id="fig_mishafi_ka">
+<img src="images/mishafi_ka.png" alt="كا  كع كغ كح كخ كق كف كط كه كم كر كو كؤ كد كي كب كن كص كس">
+<figcaption>Glyph variation in the Mishafi font.</figcaption>
+</figure>
+
+
+
+
+<section id="gsub_teeth_letters">
+<h4>Teeth letters</h4>
+<p>A good font will  constantly change the shape of glyphs slightly so as to create a more aesthetically pleasing, and in some cases a more easily readable, flow.</p>
+    <figure>
+    <!--p dir="rtl" lang="ar" class="large"><span class="ex">ـدد</span> &nbsp; <span class="ex">تتـ</span> &nbsp; <span class="ex">سسـ</span> &nbsp; </p-->
+	<img src="images/initial_shape_variation.png" alt="ـدد       تتـ       سسـ ">
+       <figcaption>Three  examples where the same letter is repeated, but the glyph shapes differ.</figcaption>
  </figure>
-    <p>Ligatures are often used to manage justification. Since they generally reduce the horizontal width of a word, they can be used to fit more text on the end of a line, or balance baseline stretching.</p>
-<p><span class="leadin">Special joining forms.</span> In more traditional fonts, you will also often see the join between certain characters, when adjacent, above the baseline, like this: </p>
+ 
+ <p><a class="figref" href="#teeth_letters">teeth_letters</a> shows an example where the same word is displayed using different fonts.<a class="fnref" href="https://w3c.github.io/alreq/#the-so-called-teeth-letters">a</a> The font on the left applies rules to distinguish the letter bases clearly. Note, in particular, that although there are 3 letters which are repeated, none of those letters uses the same shape twice.</p>
+ <figure id="teeth_letters">
+    <p style="text-align:center;"><img src="images/teeth_letters.png" alt="بتثبيتين" style="vertical-align:middle;"></p>
+     <figcaption> The same word in two different fonts (Mishaf and Scheherazade).</figcaption>
+ </figure>
+ </section>
+  
+ 
+ 
+ <section id="gsub_special_join">
+<h4>Special joining forms</h4>
+<p>In more traditional fonts, you will also often see the join between certain characters, when adjacent, above the baseline, like this: </p>
     <p style="text-align:center;"><img src="images/arabic_shaping.png" alt=" "></p>
     <p>rather than  on the baseline, like this:</p>
     <p style="text-align:center;"><img src="images/arabic_shaping_flat.png" alt=" "></p>
@@ -1517,19 +1540,24 @@ alveolar</th>
     <p style="text-align:center;"><img src="images/vertical_joining.png" alt="نم نمل نجر نسيم نبات" style="vertical-align:middle;"></p>
      <figcaption> Vertical arrangements of letters in the word <span class="ex" lang="ar">خجمم</span>,</figcaption>
  </figure>
+</section>
 
-<p><span class="leadin">Teeth letters.</span> A good font will  constantly change the shape of glyphs slightly so as to create a more aesthetically pleasing, and in some cases a more easily readable, flow.</p>
-    <figure>
-    <!--p dir="rtl" lang="ar" class="large"><span class="ex">ـدد</span> &nbsp; <span class="ex">تتـ</span> &nbsp; <span class="ex">سسـ</span> &nbsp; </p-->
-	<img src="images/initial_shape_variation.png" alt="ـدد       تتـ       سسـ ">
-       <figcaption>Three  examples where the same letter is repeated, but the glyph shapes differ.</figcaption>
- </figure>
+
+
  
- <p><a class="figref" href="#teeth_letters">teeth_letters</a> shows an example where the same word is displayed using different fonts.<a class="fnref" href="https://w3c.github.io/alreq/#the-so-called-teeth-letters">a</a> The font on the left applies rules to distinguish the letter bases clearly. Note, in particular, that although there are 3 letters which are repeated, none of those letters uses the same shape twice.</p>
- <figure id="teeth_letters">
-    <p style="text-align:center;"><img src="images/teeth_letters.png" alt="بتثبيتين" style="vertical-align:middle;"></p>
-     <figcaption> The same word in two different fonts (Mishaf and Scheherazade).</figcaption>
+ 
+ <section id="gsub_ligatures">
+<h4>Ligatures</h4>
+ <p>Ligated glyph forms are common in Arabic. Some, such as <span class="ex" lang="ar" dir="rtl">لا</span> are mandatory. Most of the remainder depend on the font style. The <span class="name">lam-alif</span> ligature also affects other characters that are based on the alif, such as for <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">لإ لأ لآ</span></span>.</p>
+<p>Traditional fonts tend to have more optional ligated forms than modern styles.</p>
+ <!--p dir="rtl" lang="ar" class="large" style="font-family: scheherazade; font-size: 72px;"><span class="ex">المؤتمر</span></p>
+ <p dir="rtl" lang="ar" class="large" style="font-family: amiri; font-size: 48px;"><span class="ex">المؤتمر</span></p-->
+   <figure>
+    <p style="text-align:center;"><img src="images/arabic_ligatures1.png" alt="المؤتمر" style="vertical-align:middle;"> &nbsp;vs.&nbsp; <img src="images/arabic_ligatures2.png" alt="المؤتمر" style="vertical-align:middle;"></p>
+     <figcaption>The same word with ligatures (right) and no ligatures (left).</figcaption>
  </figure>
+    <p>Ligatures are often used to manage justification. Since they generally reduce the horizontal width of a word, they can be used to fit more text on the end of a line, or balance baseline stretching.</p>
+ </section>
 </section>
   
   
