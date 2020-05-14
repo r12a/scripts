@@ -120,7 +120,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->12 May, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->14 May, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -288,7 +288,7 @@ The script was first used to write texts in Arabic, most notably the Qurʼān, t
 <section id="expressions">
 <h3>Expressions &amp; sequences</h3>
 <p>A sequence of numbers, for example a range separated by hyphens,  runs right to left in the Arabic language (and Thaana or Syriac scripts), whereas for Persian language text (and in   Hebrew, N’Ko or Adlam scripts) it runs left to right.</p>
-<p><a class="figref">fig_range_ar</a> shows Arabic text, which is right-to-left overall, containing a numeric range that is also ordered RTL, ie. it starts with 10 and ends with 12:</p>
+<p><a class="figref">fig_range_ar</a> shows Arabic text  which is right-to-left overall, containing an ASCII-digit numeric range that is also ordered RTL, ie. it starts with 10 and ends with 12:</p>
 
 <figure id="fig_range_ar">
 <p dir="rtl" lang="ar" class="large"><span class="ex">في 10–12 آدار</span></p>
@@ -1635,6 +1635,7 @@ alveolar</th>
 <p>However, as mentioned in <a class="secref">numbers</a>, Arabic sometimes uses ASCII digit glyphs and other times uses local digit glyphs.  Some fonts and authoring applications allow you to choose which glyph shapes to use for the same underlying characters.</p>
 <p>Arabic fonts may also have alternative shapes for glyphs, which can be turned on in certain circumstances. For example, some fonts have a set of swash forms for certain characters, which can be used for justification, or just for effect.</p>
 
+
 <figure id="fig_jalt_table">
 <img src="images/jalt_table.png" alt="Jalt table">
 <figcaption>The jalt table in the Arabic Typesetting font contains alternative elongated forms. (<a href="https://quod.lib.umich.edu/j/jep/3336451.0013.105?rgn=main;view=fulltext#10.1">source</a>)</figcaption>
@@ -1653,7 +1654,15 @@ alveolar</th>
 <h3>Grapheme boundaries</h3>
 <p id="def-grapheme" class="explanatoryintro definitionStub"></p>
 
-<p class="prompts">tbd</p>
+<p>In most cases Arabic text uses precomposed characters and omits vowels. Therefore grapheme boundaries are consistent with individual letters. Where this is not the case, the additions are combining marks, and the Unicode grapheme cluster is designed to span combinations of base character plus any number of following combining marks.</p>
+<p>One potential complication is that fonts often render sequences of characters as ligated forms. The ligated forms are a font-specific feature, whereas grapheme clusters are based on code point sequences: some fonts may display the same sequence of characters without a ligated form. Most applications tend to move character by character through the text, producing situations like the cursor position in <a class="figref">fig_gc_ligature_cursor</a>.</p>
+
+<figure id="fig_gc_ligature_cursor">
+<img src="images/gc_ligature_cursor.png" alt="لم بلده كما" data-notes="mishafi 91px">
+<figcaption>The cursor positioned between <span class="trans">k</span> and <span class="trans">m</span> in the ligated form for <span class="charExample" translate="no"><span class="ex" lang="ar" dir="rtl">كما</span> <span class="trans">kmɑ</span></span>. (<a href="https://quod.lib.umich.edu/j/jep/3336451.0013.105?rgn=main;view=fulltext#10.1">source</a>)</figcaption>
+</figure>
+
+<p>This approach  allows for easy deletion or insertion of any component of a ligated form.</p>
 </section>
 
 
@@ -1855,9 +1864,16 @@ alveolar</th>
 
 <section id="justify">
 <h3> Text alignment &amp; justification</h3>
-<p> Arabic script justification can be implemented using a number of different techniques. These include stretching the baseline and the glyphs of the text, expanding inter-word spaces, application of ligatures or swash forms, etc.. Typically these will be applied in combination.</p>
-<p>Rules can also differ by writing style: elongation is not normally used at all for <span class="trans">ruq'a</span> fonts.</p>
-<p>Where baseline stretching is applied, the rules for what can be stretched, and how much, are complicated, and differ across orthographies.  Unlike space-based width adjustments, baseline extension is not a question of simply adding equal-length extensions across the line.</p>
+<p> Arabic script justification can be implemented using a number of different techniques, which ideally are applied in combination. These include:</p>
+<ul>
+<li> Adjustment of inter-word spaces.</li>
+<li>Micro-adjustments to the intra-word spaces that occur where characters don't join with the following letter.</li>
+<li>Use of wider glyph forms or swash forms for certain characters.</li>
+<li>Stretching the baseline connectors between letters, which we'll refer to here as <span class="name">kashida</span>.</li>
+<li>Application of ligated forms to reduce the width of certain words.</li>
+</ul>
+<p>(In hand-written manuscripts it is also possible to find instances where the letters the would appear at the end of the line are squeezed above the last word in the line, or hang into the margin.)</p>
+<p>The application of the various techniques is generally subject to rules governing the frequency and location of use of particular methods. Rules can  differ by writing style – for example, elongation is not normally used at all for <span class="trans">ruq'a</span> fonts. Where baseline stretching <em>is</em> applied, the rules for what can be stretched, and how much, are complicated. Unlike space-based width adjustments, baseline extension is not a question of simply adding equal-length extensions across the line.  The rules tend to  differ across orthographies, and eminent typographers of the past also had their own preferred or idiosyncratic rules.</p>
 
 <figure id="fig_tatweel_para">
 <p style="text-align: center;"><img style="width:60%" src="images/tatweel_para.jpg" alt="Justified Arabic text."></p>
@@ -1908,11 +1924,12 @@ alveolar</th>
 <img src="images/stretch-plus-ligature-1.jpg" alt="Arabic text stretched to fit the width of the word Lexus.">
 <figcaption>Arabic text being stretched to fit the width of text alongside it.</figcaption>
 </figure>
-<p class="instructions">Use the control below to see how your browser justifies the text sample here.</p>
+<p class="observation"><span class="leadin">Observation:</span> Text that is stretched in this manner very often has multiple kashidas per word. This is perhaps understandable, given that usually only a small number of words are involved.</p>
+<!--p class="instructions">Use the control below to see how your browser justifies the text sample here.</p>
     <p dir="rtl" lang="ar" id="justificationExample" style="text-align:start; font-size: 2em;">المادة 7 كل الناس سواسية أمام القانون ولهم الحق في التمتع بحماية متكافئة عنه دون أية تفرقة، كما أن لهم جميعاً الحق في حماية متساوية ضد أي تمييز يُخل بهذا الإعلان وضد أي تحريض على تمييز كهذا.</p>
     <p class="english" dir="ltr">
       <button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Justify   </button>
-    </p>
+    </p-->
 </section>
 
 
