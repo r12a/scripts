@@ -19,7 +19,7 @@ defList={
 
 "standalonevowel": 'Standalone vowels are not preceded by a consonant, and may appear at the beginning or in the middle of a word.',
 
-"grapheme": 'A <a class="termref" target="_blank" href="../glossary/#grapheme">grapheme</a> is a user-perceived unit of text. The Unicode Standard uses generalised rules to define \'<a class="termref" target="_blank" href="../glossary/#graphemecluster">grapheme clusters</a>\', which approximate the likely grapheme boundaries in a writing system.',
+"grapheme": 'A <a class="termref" target="_blank" href="../glossary/#grapheme">grapheme</a> is a user-perceived unit of text. The Unicode Standard uses generalised rules to define \'<a class="termref" target="_blank" href="../glossary/#graphemecluster">grapheme clusters</a>\', which approximate the likely grapheme boundaries in a writing system. Text operations that use graphemes as a unit of text include line-breaking, forwards deletion, cursor movement & selection, character counts, searching & matching, text insertion, line-breaking, justification, case conversions, and sorting.',
 
 "unchecked": '\'Checked\' means ending in the sound <span class="ipa">-p</span>, <span class="ipa">-t</span>, <span class="ipa">-k</span>, or <span class="ipa">-ʔ</span>. \'Unchecked\' means ending in  sonorants <span class="ipa">m, n, ŋ, w, j</span> or vowels.</p>',
 
