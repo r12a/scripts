@@ -34,6 +34,9 @@ div.indent {
 	background-color: #ffcfaf;
 	border-radius: 10px;
 }
+#reviewtable {
+	margin-left: 1em;
+	}
 #reviewtable td {
 	font-size: 70%;
 	border: 0;
@@ -43,7 +46,7 @@ div.indent {
 #reviewtable th {
 	font-size: 60%;
 	font-weight: normal;
-	text-align: left;
+	text-align: center;
 	vertical-align: bottom;
 }
 #reviewtable tr:hover {
@@ -59,52 +62,84 @@ div.indent {
 
 <script src="table.js"></script>
 <script src="/shared/code/boilerplate.js"></script>
-<script src="scriptdata.js"> </script>
+<!--script src="scriptdata.js"> </script-->
+<script src="../../app-charuse/langs.js"> </script>
+<script src="../../app-charuse/langscjk.js"> </script>
+<script>
+langs.cmn = langscjk.cmn
+langs.ja = langscjk.ja
+langs.ko = langscjk.ko
+langscjk = {}
+scriptData = []
+for (j=0;j<items.length;j++) {
+	scriptData.push(langs[items[j]])
+	scriptData[scriptData.length-1].id = items[j]
+	}
+langs = {}
+</script>
 </head>
 
 <body>
 <div id="header-boilerplate"></div>
-<script type="text/javascript">document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
 <h1>Script  comparison table</h1>
 <aside class="sidebar">
   <div class="noprint">
     <h2 class="flush"><a id="related">Related links</a></h2>
     <p><a href="/uniview/">UniView</a></p>
     <p><a href="/scripts/tutorial/">An Introduction to Writing Systems &amp; Unicode</a></p>
+    <p><a href="/scripts/">Scripts resources on this site</a></p>
   </div>
 </aside>
 <p id="status">Updated 
-<!-- #BeginDate format:En2 -->15-Aug-2018<!-- #EndDate -->
-&bull; tags <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>.</p>
+<!-- #BeginDate format:En2 -->28-May-2020<!-- #EndDate -->
+&bull; tags <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a>.</p>
 <div class="section">
-<p>This page provides information about  characteristics of a number of scripts.  It is not intended to be exhaustively scientific – merely to give a basic idea of what languages require what type of feature support. The symbol <img src="link.png" alt="details"/> after a script name points to a  page that gives a quick summary of the script.</p>
+<p>This page provides information about  the orthographic and typographic characteristics of a number of languages.  It is not intended to be exhaustively scientific – merely to give a basic idea of what languages require what type of feature support. The symbol <img src="link.png" alt="details"/> after a script name points to a  page that gives a quick summary of the script.</p>
 </div>
-<p class="instructions">Click on the column headings to sort by that column.</p>
+<p class="instructions">Click on the column headings to sort by that column. The initial order is by script code.</p>
 <div id="theTable"></div>
-<script type="text/javascript">resort('script');</script>
+<script>getCharacterStats(); resort('script')</script>
 <div class="section">
   <h2>Notes</h2>
   <p>The table is intended to provide a general indication only. There are things that could be disputed.</p>
-  <p><b class="leadin">Number of characters</b> This figure is based on a character count for Unicode blocks related to that script. It is approximate, however, for a number of reasons. Blocks such as punctuation are not included – this is just a figure for the main block or set of blocks dedicated to that script.</p>
-  <p>Very often a particular language will use only a small number of the total characters available in a script (think, for example, how many characters are used for English out of the 1,286 Latin characters). The figures also include archaic characters.</p>
-<p><b class="leadin">Combining characters.</b> This shows the subset of the number of characters that are combining characters. No attempt is made to indicate how many of the base characters each combining character can combine with. In some cases, this will be limited, but in most cases a combining character will combine with a fair number of base characters.</p>
-  <p><b class="leadin">Contextual positioning.</b> This is typically related to combining characters, and indicates that a typical font uses OpenType rules to position of a glyph according to the glyphs that surround it, eg. tone marks in Thai, or vowel signs in Arabic (if used). Nearly all scripts with combining characters will need some positioning rules to take account of where the combining character should be placed. This indicator is more concerned with whether that location varies significantly, depending on the surrounding context.</p>
-  <p><b class="leadin">Multiple combining characters.</b> Whether more than one combining character can be associated with a give base character.</p>
-  <p><b class="leadin">Vowel signs.</b> Whether the script uses vowel-signs to represent vowels (ie. is an abugida). The keyword 'standalone' indicates that some vowel signs are not combining characters.</p>
+  <p><b class="leadin">Total characters</b> This figure is based on the data in the <a href="../../app-charuse/">Character Usage Lookup</a> app. When there are 2 figures separated by a + sign, the first number indicates how many characters are in standard use, the second relates to additional infrequently used characters for that language.</p>
+<p>Note that the character counts reflect the characters needed to represent both precomposed and decomposed versions of content. For example, use of a character such as â would add 3 characters to the total count: â, a, and the combining circumflex. Use of ô would then add a further 2 (because the circumflex is already counted).</p>
+<p><b class="leadin">Combining marks.</b> Shows the subset of the number of characters that are combining characters. No attempt is made to indicate how many of the base characters each combining character can combine with. In some cases, this will be limited, but in most cases a combining character will combine with a fair number of base characters.</p>
+<p><b class="leadin">Context-based positioning.</b> This is typically related to combining characters, and indicates that a typical font uses OpenType rules to position of a glyph according to the glyphs that surround it, eg. tone marks in Thai, or vowel signs in Arabic (if used). Nearly all scripts with combining characters will need some positioning rules to take account of where the combining character should be placed. This indicator is more concerned with whether that location varies significantly, depending on the surrounding context.</p>
+  <p><b class="leadin">Multiple combining marks.</b> Whether more than one combining character can be associated with a give base character.</p>
+  <p><b class="leadin">Vowel signs.</b> Whether the script uses vowel-signs (matras) to represent vowels (ie. is an abugida). The keyword 'standalone' indicates that some vowel signs are not combining characters.</p>
   <p><b class="leadin">Case sensitive</b> Whether or not the script makes case distinctions.</p>
   <p><b class="leadin">Contextual shaping.</b> Whether different glyph shapes have to be used for a character depending on the visual context, eg. the RA in Myanmar that grows and shrinks to fit around the character is surrounds. Note that this does not include shaping for cursive scripts (see below).</p>
-  <p><b class="leadin">Cursive script.</b> Do the letters in this script join up, eg. as in Arabic?</p>
-  <p><b class="leadin">Text direction.</b> Is this a right-to-left script (which actually usually means that bidirectional behaviour needs to be supported, for numbers and embedded foreign text.) Is it used in a vertical orientation?</p>
-  <p><b class="leadin">Word separator.</b> Is this a script like Thai, where spaces are used to separate phrases, not words, or like Japanese and Chinese, that don't use spaces, or Ethiopic, that has its own word separator?</p>
+  <p><b class="leadin">Cursive script.</b> Do the letters in this script join up, eg. as in Arabic, N'Ko, or Mongolian?</p>
+  <p><span class="leadin">Format characters.</span> How many characters are used such as ZWSP, ZWJ, RLI, etc, ie. characters with the Unicode general property of 'Other'.</p>
+<p><b class="leadin">Text direction.</b> Is this a right-to-left script (which actually usually means that bidirectional behaviour needs to be supported, for numbers and embedded foreign text.) Is it used in a vertical orientation?</p>
+<p>A value of rtl* indicates that numbers run RTL.</p>
+<p><b class="leadin">Word separator.</b> Is this a script like Thai, where spaces are used to separate phrases, not words, or like Japanese and Chinese, that don't use spaces, or Ethiopic, that has its own word separator?</p>
   <p><b class="leadin">Baseline.</b> The baseline for Latin text is labelled 'mid'. Scripts designed like Indic scripts that hang from a high baseline, are labelled 'high'. Scripts like Chinese are labelled 'low'.</p>
   <p><b class="leadin">Text wrap.</b> At the end of a line, where is the typically break point? Is it between words, or characters? Entries labelled 'special' wrap at a character that is not a space, eg. Tibetan, which uses a tsheg between words, rather than a space.</p>
   <p><b class="leadin">Hyphenation.</b> Whether or not hyphenation is used with the script – by which is meant the addition of a mark at the end or beginning of a line when a word is broken at line end. Scripts that simply break text at syllable or character boundaries are not classed here as hyphenating. An asterisk indicates that practise varies for certain languages (for example, Uighur written with the Arabic script does hyphenate, but most other languages using Arabic script do not).</p>
   <p><b class="leadin">Justification.</b> What is the basic starting point for justification of text on a line? Typically this is related to the spaces between words. Here are the other alternatives listed: 'char' is typical of Chinese and Japanese, where justification starts with inter-character spaces; 'cluster'  refers to scripts such as in South East Asia, where word boundaries are taken into account, but spaces are used as phrase separators; 'word' is used for arabic-based scripts, where justification is commonly achieved by stretching the baseline or using ligatures.</p>
-  <p><b class="leadin">Region.</b> This rough grouping places the script in the region where it originated, so English is in Europe, and Arabic is in the Middle East. It serves to get a very rough idea of how things stack up on a regional basis.</p>
-  <p><b class="leadin">Digits.</b> Does the script have a set of native digits? Note that in some cases these may not be used for a particular language.</p>
-  <p><b class="leadin">Feature count.</b> This is a very simplistic indicator that simply awards one point for each column after the first three columns that doesn't read 'no', 'mid' or '0'.</p>
+  <p><b class="leadin">Native digits.</b> Does the script have a set of native digits? An asterisk indicates that native digits exist, but ASCII digits are mostly used.</p>
+<p><b class="leadin">Punctuation.</b> How many punctuation marks are used in this orthography. This figure may not account for all ASCII punctuation.</p>
+<p><b class="leadin">Region.</b> This rough grouping places the script in the region where it originated, so English is in Europe, and Arabic is in the West Asia. It serves to get a very rough idea of how things stack up on a regional basis. Regions are one of the following:</p>
+<ul>
+<li>nam (Northern America), </li>
+<li>sam (South America), </li>
+<li>cam (Central America), </li>
+<li>carib (Caribbean) </li>
+<li>eur (Europe - includes Russia to Urals and Georgia, but not Armenia or Azerbaijan) </li>
+<li>easia (East Asia - includes China, Mongolia, Japan, Korea) </li>
+<li>nasia (Northern Asia - Russia east of Urals) </li>
+<li>seasia (Southeast Asia - including Indonesia, Philippines </li>
+<li>casia (Central Asia - north of Iran, S of Russia, W of China) </li>
+<li>wasia (Western Asia - includes Armenian, Azerbaijan, Turkey, &amp; middle east) </li>
+<li>afr (Africa) </li>
+<li>oce (Oceania - includes Australia, NZ, and Pacific Islands)</li>
+</ul>
+<p><b class="leadin">Feature count.</b> This is a very crude indicator that simply awards one point for each column after the first three columns that doesn't read 'no', 'mid' or '0'.</p>
 </div>
 
-<div class="smallprint"><span id="version">Changed <a href="https://github.com/r12a/scripts/commits/gh-pages/featurelist"><span id="version-info"><!-- #BeginDate format:IS1m -->2018-08-15  9:03<!-- #EndDate --></span></a> GMT. &nbsp;•&nbsp; Send <a href="https://github.com/r12a/scripts/issues/new?title=%5Bfeature%20list%5D%20TITLE_GOES_HERE&amp;body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ffeaturelist%2F%0A%0A" target="_blank">feedback</a>. &nbsp;•&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Changed <a href="https://github.com/r12a/scripts/commits/gh-pages/featurelist"><span id="version-info"><!-- #BeginDate format:IS1m -->2020-05-28  19:46<!-- #EndDate --></span></a> GMT. &nbsp;•&nbsp; Send <a href="https://github.com/r12a/scripts/issues/new?title=%5Bfeature%20list%5D%20TITLE_GOES_HERE&amp;body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ffeaturelist%2F%0A%0A" target="_blank">feedback</a>. &nbsp;•&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 </body>
 </html>

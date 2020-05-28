@@ -1,3 +1,6 @@
+var items = ['fuf-adlm', 'arb', 'ha-arab', 'hy', 'ban-bali', 'bsq-bass', 'bn', 'bug-bugi', 'csw', 'chr', 'ru', 'hi', 'ks-deva', 'am', 'ka', 'el', 'gu', 'pa', 'ko', 'cmn', 'he', 'jv-java', 'ja', 'km', 'kn', 'lo', 'nod', 'kkh','lis', 'mid', 'ml','khk-mong', 'my', 'nqo', 'ory', 'si', 'su-sund', 'syc', 'tru', 'aii', 'tdd', 'khb', 'ta', 'blt', 'te', 'zgh', 'dv', 'th', 'bo', 'vai']
+	
+	
 
 var by = function (path, reverse, primer, then) {
     var get = function (obj, path) {
@@ -30,34 +33,37 @@ var by = function (path, reverse, primer, then) {
 
 function resort (column) { 
 
-	
 	scriptData.sort(by(column))
 	
 	var table = ''
 	table += '<table id="reviewtable"><thead><tr>';
 	
-	
-	
+
 	var tablecolumns = {
-		script:"Script name",
+		language:"Language",
+		script:"Script",
 		linked:" ", 
-		chars:"Number of characters", 
-		cchars:"Combining characters", 
+		chars:"Total chars", 
+		aux:"+", 
+		letters:"Letters", 
+		cchars:"Combining marks", 
 		gpos:"Context-based positioning", 
-		mcchars:"Multiple combining characters",
+		mcchars:"Multiple combining marks",
 		matras:"Vowel signs",
 		cs:"Case sensitive", 
 		gsub:"Contextual shaping", 
 		cursive:"Cursive script",
+		other:"Format chars",
 		dir:"Text direction",
 		wordsep:"Word separator",
 		baseline:"Baseline",
 		wrap:"Text wrap",
 		hyphenation:"Hyphen\u00ADation",
 		justify:"Justification",
-		digits:"Native digits?",
+		digits:"Native digits",
+		punctuation:"Punct-uation",
 		region:"Region of origin",
-		fcount:"Feature count"
+		fcount:"More info"
 		}	
 	
 	for (var col in tablecolumns) {
@@ -69,21 +75,37 @@ function resort (column) {
 	
 
 
-		for (var i=0;i<scriptData.length;i++) {
+		for (var i=0;i<items.length;i++) {
 			var fc = 0;
 			var linked = ''
-			table += '<tr>';
+			table += '<tr>'
+			
 			if (scriptData[i].linked) linked = " \u003Ca href='/scripts/"+scriptData[i].linked+"' target='_blank'>\u003Cimg src='link.png' alt='details'/>\u003C/a>"
+			
+			//table += '<td title="'+tablecolumns.language+'" style="text-align:right;white-space:nowrap;">'+scriptData[i].name.replace(/ \([^\)]+\)/,'')+'</td>'
+			table += '<td title="'+items[i]+'" style="text-align:right;white-space:nowrap;">'+scriptData[i].name.replace(/ \([^\)]+\)/,'')+'</td>'
+			
 			table += '<td title="'+tablecolumns.script+'" style="text-align:right;">'+scriptData[i].script+'</td>'
+			
 			table += '<td title="Link to more details">'+linked+'</td>'
-			table += '<td title="'+tablecolumns.numchars+'">'+scriptData[i].chars+'</td>';
-			table += '<td title="'+tablecolumns.cchars+'"'; if (scriptData[i].cchars!==0){table += 'class="y"'; fc++;} table += '>'+scriptData[i].cchars+'</td>';
-			table += '<td title="'+tablecolumns.gpos+'"'; if (scriptData[i].gpos!=='no'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].gpos+'</td>';
-			table += '<td title="'+tablecolumns.mcchars+'"'; if (scriptData[i].mcchars!=='no'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].mcchars+'</td>';
+			
+			table += '<td title="'+tablecolumns.numchars+'" style="text-align:right;padding-left: 1em;">'+scriptData[i].chars+'</td>'
+			
+			table += '<td title="Infequent characters" style="text-align:left;">'+scriptData[i].aux+'</td>'
+			
+			table += '<td title="'+tablecolumns.letters+'"'; if (scriptData[i].letters!==0){table += 'class="y"'; fc++;} table += '>'+scriptData[i].letters+'</td>'
+			
+			table += '<td title="'+tablecolumns.mark+'"'; if (scriptData[i].mark!==0){table += 'class="y"'; fc++;} table += '>'+scriptData[i].mark+'</td>'
+			
+			table += '<td title="'+tablecolumns.gpos+'"'; if (scriptData[i].gpos!=='no'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].gpos+'</td>'
+			
+			table += '<td title="'+tablecolumns.mcchars+'"'; if (scriptData[i].mcchars!=='no'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].mcchars+'</td>'
+			
 			table += '<td title="'+tablecolumns.matras+'"'; if (scriptData[i].matras!=='no' && scriptData[i].matras!=='n/a'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].matras+'</td>';
 			table += '<td title="'+tablecolumns.cs+'"'; if (scriptData[i].cs!=='no'){table += 'class="y"'; fc++; } table += '>'+scriptData[i].cs+'</td>';
 			table += '<td title="'+tablecolumns.gsub+'"'; if (scriptData[i].gsub!=='no'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].gsub+'</td>';
 			table += '<td title="'+tablecolumns.cursive+'"'; if (scriptData[i].cursive!=='no'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].cursive+'</td>';
+			table += '<td title="'+tablecolumns.other+'"'; if (scriptData[i].other!=='-'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].other+'</td>';
 			table += '<td title="'+tablecolumns.dir+'"'; if (scriptData[i].dir!=='ltr'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].dir+'</td>';
 			table += '<td title="'+tablecolumns.wordsep+'"'; if (scriptData[i].wordsep!=='space'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].wordsep+'</td>';
 			table += '<td title="'+tablecolumns.baseline+'"'; if (scriptData[i].baseline!=='mid'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].baseline+'</td>';
@@ -91,12 +113,75 @@ function resort (column) {
 			table += '<td title="'+tablecolumns.hyphenation+'"'; if (scriptData[i].hyphenation!=='no' && scriptData[i].hyphenation!=='?'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].hyphenation+'</td>';
 			table += '<td title="'+tablecolumns.justify+'"'; if (scriptData[i].justify!=='space'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].justify+'</td>';
 			table += '<td title="'+tablecolumns.digits+'"'; if (scriptData[i].digits!=='no'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].digits+'</td>';
+			table += '<td title="'+tablecolumns.punctuation+'"'; if (scriptData[i].punctuation!=='-'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].punctuation+'</td>';
 			table += '<td title="'+tablecolumns.region+'">'+scriptData[i].region+'</td>';
 			
-			table += '<td title="'+tablecolumns[15]+'">'+fc+'</td>';
+			//table += '<td title="'+tablecolumns[15]+'">'+fc+'</td>'
+//			table += '<td title="'+tablecolumns[15]+'"><a href="../../app-charuse/?language='+scriptData[i].id+'" style="font-size:80%;font-style:italic;">more</td>'
+			table += '<td title="Go to Charuse page for '+scriptData[i].id+'"><a href="../../app-charuse/?language='+scriptData[i].id+'" style="font-size:80%;font-style:italic;" target="_blank"><img src="link.png" alt="details"/></td>'
+			
 			table += '</tr>'+"\n";
-			}
+
+			
+
+}
 
 
 document.getElementById('theTable').innerHTML = table;
 }
+
+
+function getCharacterStats () {
+	for (var i=0;i<items.length;i++) {
+		if (scriptData[i]) {
+
+			var count = 0
+			var aux = 0
+			var charArray
+			charuseData = scriptData[i]
+
+			if (charuseData.number) {
+				charArray = [...charuseData.number]
+				scriptData[i].digits = charArray.length
+				count += charArray.length
+				}
+			else scriptData[i].digits = 'no'
+			
+			if (charuseData.letter) {
+				charArray = [...charuseData.letter]
+				scriptData[i].letters = charArray.length
+				count += charArray.length
+				}
+
+			if (charuseData.mark) {
+				charArray = [...charuseData.mark]
+				scriptData[i].mark = charArray.length
+				count += charArray.length
+				}
+			else scriptData[i].mark = '-'
+
+			if (charuseData.punctuation) {
+				charArray = [...charuseData.punctuation]
+				scriptData[i].punctuation = charArray.length
+				count += charArray.length
+				}
+			else scriptData[i].punctuation = '-'
+
+			if (charuseData.other) {
+				charArray = [...charuseData.other]
+				scriptData[i].other = charArray.length
+				count += charArray.length
+				}
+			else scriptData[i].other = '-'
+
+			if (charuseData.aux) {
+				charArray = [...charuseData.aux]
+				aux = '+'+charArray.length
+				}
+			else scriptData[i].aux = ''
+
+			scriptData[i].chars = count
+			if (aux > 0) scriptData[i].aux = aux
+			}
+		}
+	}
