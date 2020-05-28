@@ -127,39 +127,107 @@ function removeEditorNotes () {
 
 
 
-function makeSidePanel (script, otherlinks) {
-	console.log(script, otherlinks)
-	var ptr = ''
-	for (var i=0;i<scriptData.length;i++) if  (scriptData[i].script === script) {
-		ptr = scriptData[i]
-		break
-		}
 
+
+function makeSidePanel (id, otherlinks) {
+	if (typeof langs === 'undefined') return
+		
+	// get character counts in a way that works around surrogates
+	var letters = marks = punctuation = symbols = others = numbers = aux = 0
+	langs[id].letter ? letters = [...langs[id].letter].length : 0
+	langs[id].mark ? marks = [...langs[id].mark].length : 0
+	langs[id].punctuation ? punctuation = [...langs[id].punctuation].length : 0
+	langs[id].symbol ? symbols = [...langs[id].symbol].length : 0
+	langs[id].other ? others = [...langs[id].other].length : 0
+	langs[id].number ? numbers = [...langs[id].number].length : 0
+	langs[id].aux ? aux = [...langs[id].aux].length : 0
+	
+	total = letters + marks + punctuation + symbols + others + numbers 
+	
 	var out = ''
-	out += '<tr><th>Script name</th><td><p>'+script+'</td></tr>'
-	for (var feature in featureName) {
-		out += '<tr><th>'+featureName[feature]+'</th><td>'
-        if (    (feature==='chars' && ptr[feature]==='0') ||
-                (feature==='cchars' && ptr[feature]==='0') ||
-                (feature==='matras' && ptr[feature]==='no') ||
-                (feature==='mcchars' && ptr[feature]==='no') ||
-                (feature==='gpos' && ptr[feature]==='no') ||
-                (feature==='cs' && ptr[feature]==='no') ||
-                (feature==='cursive' && ptr[feature]==='no') ||
-                (feature==='gsub' && ptr[feature]==='no') ||
-                (feature==='dir' && ptr[feature]==='ltr') ||
-                (feature==='baseline' && ptr[feature]==='mid') ||
-                (feature==='digits' && ptr[feature]==='no') ||
-                (feature==='wordsep' && ptr[feature]==='space') ||
-                (feature==='justify' && ptr[feature]==='space') ||
-                (feature==='wrap' && ptr[feature]==='word') ||
-                (feature==='hyphenation' && ptr[feature]==='no') ||
-                (feature==='region')
-                ) { out += ptr[feature] }
-        else out +='<span class="tableHighlight">'+ptr[feature]+'</span>'
-        
-		out += '</td></tr>'
-		}
+	out += '<tr><th>Script code</th><td>'+langs[id].script+'</td></tr>'
+	out += '<tr><th>Language code</th><td>'+id+'</td></tr>'
+	out += '<tr><th>Script type</th><td class="tableHighlight">'+langs[id].type+'</td></tr>'
+	out += '<tr><th>Total characters</th><td class="tableHighlight" style="font-size: 150%;">'+parseInt(total).toLocaleString()
+	if (aux>0) out += ' <span style="font-size: 70%">+ '+aux+'</span>'
+	out += '</td></tr>'
+	out += '<tr><th>Letters</th><td class="tableHighlight">'+letters+'</td></tr>'
+
+	
+	out += '<tr><th>Combining marks</th><td'
+	if (marks!==0) out += ' class="tableHighlight"'
+	out += '>'+marks+'</td></tr>'
+	
+	if (punctuation!==0) out += '<tr><th>Punctuation</th><td class="tableHighlight">'+punctuation+'</td></tr>'
+	
+	if (symbols!==0) out += '<tr><th>Symbols</th><td class="tableHighlight">'+symbols+'</td></tr>'
+
+	if (others!==0) out += '<tr><th>Format codes</th><td class="tableHighlight">'+others+'</td></tr>'
+
+	out += '<tr><th>Native digits</th><td'
+	if (numbers!==0) out += ' class="tableHighlight"'
+	out += '>'+numbers+'</td></tr>'
+
+	out += '<tr><th>Other infrequent</th><td>'+aux+'</td></tr>'
+	
+	out += '<tr><th colspan="2">Character counts exclude ASCII.</td></tr>'
+	
+	out += '<tr style="line-height: .4;"><th>&nbsp;</th><td style="border:0;">&nbsp;</td></tr>'
+	
+	out += '<tr><th>Combines marks</th><td'
+	if (langs[id].mcchars!=='no') out += ' class="tableHighlight"'
+	out += '>'+langs[id].mcchars+'</td></tr>'
+	
+	out += '<tr><th>Vowel-signs</th><td'
+	if (langs[id].matras!=='no') out += ' class="tableHighlight"'
+	out += '>'+langs[id].matras+'</td></tr>'
+	
+	out += '<tr><th>Context-based positioning</th><td'
+	if (langs[id].gpos!=='no') out += ' class="tableHighlight"'
+	out += '>'+langs[id].gpos+'</td></tr>'
+	
+	out += '<tr><th>Case distinction</th><td'
+	if (langs[id].cs!=='no') out += ' class="tableHighlight"'
+	out += '>'+langs[id].cs+'</td></tr>'
+	
+	out += '<tr><th>Cursive script</th><td'
+	if (langs[id].cursive!=='no') out += ' class="tableHighlight"'
+	out += '>'+langs[id].cursive+'</td></tr>'
+	
+	out += '<tr><th>Contextual shaping</th><td'
+	if (langs[id].gsub!=='no') out += ' class="tableHighlight"'
+	out += '>'+langs[id].gsub+'</td></tr>'
+	
+	out += '<tr><th>Text direction</th><td'
+	if (langs[id].dir!=='ltr') out += ' class="tableHighlight"'
+	out += '>'+langs[id].dir+'</td></tr>'
+	
+	out += '<tr><th>Baseline</th><td'
+	if (langs[id].baseline!=='mid') out += ' class="tableHighlight"'
+	out += '>'+langs[id].baseline+'</td></tr>'
+	
+	out += '<tr><th>Word separator</th><td'
+	if (langs[id].wordsep!=='space') out += ' class="tableHighlight"'
+	out += '>'+langs[id].wordsep+'</td></tr>'
+	
+	out += '<tr><th>Wraps at</th><td'
+	if (langs[id].wrap!=='word') out += ' class="tableHighlight"'
+	out += '>'+langs[id].wrap+'</td></tr>'
+	
+	out += '<tr><th>Hyphenation</th><td'
+	if (langs[id].hyphenation!=='word') out += ' class="tableHighlight"'
+	out += '>'+langs[id].hyphenation+'</td></tr>'
+	
+	out += '<tr><th>Justification</th><td'
+	if (langs[id].justify!=='word') out += ' class="tableHighlight"'
+	out += '>'+langs[id].justify+'</td></tr>'
+	
+	
+	out += '<tr><th>Native speakers</th><td>'+parseInt(langs[id].speakers.replace(/~/g,'')).toLocaleString()+'</td></tr>'
+	
+	out += '<tr><th>Region</th><td>'+langs[id].region+'</td></tr>'
+	
+	langs = {}
 	
 	return out
 	}
@@ -843,5 +911,16 @@ function findIPA () {
 	}
 
 
+function copyToClipboard (node) {
+	var oldContent = node.textContent
+	node.textContent=node.textContent.replace(/\u200B/g,'')
+	node.contentEditable=true
+	node.focus()
+	document.execCommand('selectAll')
+	document.execCommand('copy')
+	node.contentEditable=false
+	node.textContent=oldContent
+	}
+	
 
 
