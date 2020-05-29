@@ -46,7 +46,7 @@ function resort (column) {
 		chars:"Total chars", 
 		aux:"+", 
 		letters:"Letters", 
-		cchars:"Combining marks", 
+		cchars:"Marks", 
 		gpos:"Context-based positioning", 
 		mcchars:"Multiple combining marks",
 		matras:"Vowel signs",
@@ -76,7 +76,6 @@ function resort (column) {
 
 
 		for (var i=0;i<items.length;i++) {
-			var fc = 0;
 			var linked = ''
 			table += '<tr>'
 			
@@ -93,44 +92,76 @@ function resort (column) {
 			
 			table += '<td title="Infequent characters" style="text-align:left;">'+scriptData[i].aux+'</td>'
 			
-			table += '<td title="'+tablecolumns.letters+'"'; if (scriptData[i].letters!==0){table += 'class="y"'; fc++;} table += '>'+scriptData[i].letters+'</td>'
+			table += '<td title="'+tablecolumns.letters+'"'
+			if (scriptData[i].letters!==0) table += 'class="y"'
+			table += '>'+scriptData[i].letters+'</td>'
 			
-			table += '<td title="'+tablecolumns.mark+'"'; if (scriptData[i].mark!==0){table += 'class="y"'; fc++;} table += '>'+scriptData[i].mark+'</td>'
+			table += '<td title="'+tablecolumns.mark+'"'
+			if (scriptData[i].mark!==0) table += 'class="y"'
+			table += '>'+scriptData[i].mark+'</td>'
 			
-			table += '<td title="'+tablecolumns.gpos+'"'; if (scriptData[i].gpos!=='no'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].gpos+'</td>'
+			table += '<td title="'+tablecolumns.gpos+'"'
+			if (scriptData[i].gpos!=='no') table += 'class="y"'
+			table += '>'+scriptData[i].gpos+'</td>'
 			
-			table += '<td title="'+tablecolumns.mcchars+'"'; if (scriptData[i].mcchars!=='no'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].mcchars+'</td>'
+			table += '<td title="'+tablecolumns.mcchars+'"'
+			if (scriptData[i].mcchars!=='no') table += 'class="y"'
+			table += '>'+scriptData[i].mcchars+'</td>'
 			
-			table += '<td title="'+tablecolumns.matras+'"'; if (scriptData[i].matras!=='no' && scriptData[i].matras!=='n/a'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].matras+'</td>'
+			table += '<td title="'+tablecolumns.matras+'"'
+			if (scriptData[i].matras!=='no' && scriptData[i].matras!=='n/a') table += 'class="y"'
+			table += '>'+scriptData[i].matras+'</td>'
 			
-			table += '<td title="'+tablecolumns.cs+'"'; if (scriptData[i].cs!=='no'){table += 'class="y"'; fc++; } table += '>'+scriptData[i].cs+'</td>'
+			table += '<td title="'+tablecolumns.cs+'"'
+			if (scriptData[i].cs!=='no') table += 'class="y"'
+			table += '>'+scriptData[i].cs+'</td>'
 			
-			table += '<td title="'+tablecolumns.gsub+'"'; if (scriptData[i].gsub!=='no'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].gsub+'</td>'
+			table += '<td title="'+tablecolumns.gsub+'"'
+			if (scriptData[i].gsub!=='no') table += 'class="y"'
+			table += '>'+scriptData[i].gsub+'</td>'
 			
-			table += '<td title="'+tablecolumns.cursive+'"'; if (scriptData[i].cursive!=='no'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].cursive+'</td>'
+			table += '<td title="'+tablecolumns.cursive+'"'
+			if (scriptData[i].cursive!=='no') table += 'class="y"'
+			table += '>'+scriptData[i].cursive+'</td>'
 			
-			table += '<td title="'+tablecolumns.other+'"'; if (scriptData[i].other!=='-'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].other+'</td>'
+			table += '<td title="'+tablecolumns.other+'"'
+			if (scriptData[i].other!=='-') table += 'class="y"'
+			table += '>'+scriptData[i].other+'</td>'
 			
-			table += '<td title="'+tablecolumns.dir+'"'; if (scriptData[i].dir!=='ltr'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].dir+'</td>'
+			table += '<td title="'+tablecolumns.dir+'"'
+			if (scriptData[i].dir!=='ltr') table += 'class="y"'
+			table += '>'+scriptData[i].dir+'</td>'
 			
-			table += '<td title="'+tablecolumns.baseline+'"'; if (scriptData[i].baseline!=='mid'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].baseline+'</td>'
+			table += '<td title="'+tablecolumns.baseline+'"'
+			if (scriptData[i].baseline!=='mid') table += 'class="y"'
+			table += '>'+scriptData[i].baseline+'</td>'
 
-			table += '<td title="'+tablecolumns.wordsep+'"'; if (scriptData[i].wordsep!=='space'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].wordsep+'</td>'
+			table += '<td title="'+tablecolumns.wordsep+'"'
+			if (scriptData[i].wordsep!=='space') table += 'class="y"'
+			table += '>'+scriptData[i].wordsep+'</td>'
 			
-			table += '<td title="'+tablecolumns.wrap+'"'; if (scriptData[i].wrap!=='word'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].wrap+'</td>'
+			table += '<td title="'+tablecolumns.wrap+'"'
+			if (scriptData[i].wrap!=='word') table += 'class="y"'
+			table += '>'+scriptData[i].wrap+'</td>'
 			
-			table += '<td title="'+tablecolumns.hyphenation+'"'; if (scriptData[i].hyphenation!=='no' && scriptData[i].hyphenation!=='?'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].hyphenation+'</td>'
+			table += '<td title="'+tablecolumns.hyphenation+'"'
+			if (scriptData[i].hyphenation!=='no' && scriptData[i].hyphenation!=='?') table += 'class="y"'
+			table += '>'+scriptData[i].hyphenation+'</td>'
 			
-			table += '<td title="'+tablecolumns.justify+'"'; if (scriptData[i].justify!=='space'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].justify+'</td>'
+			table += '<td title="'+tablecolumns.justify+'"'
+			if (scriptData[i].justify!=='space') table += 'class="y"'
+			table += '>'+scriptData[i].justify+'</td>'
 			
-			table += '<td title="'+tablecolumns.digits+'"'; if (scriptData[i].digits!=='no'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].digits+'</td>'
+			table += '<td title="'+tablecolumns.digits+'"'
+			if (scriptData[i].digits!=='no') table += 'class="y"'
+			table += '>'+scriptData[i].digits+'</td>'
 			
-			table += '<td title="'+tablecolumns.punctuation+'"'; if (scriptData[i].punctuation!=='-'){table += 'class="y"'; fc++;} table += '>'+scriptData[i].punctuation+'</td>'
+			table += '<td title="'+tablecolumns.punctuation+'"'
+			if (scriptData[i].punctuation!=='-') table += 'class="y"'
+			table += '>'+scriptData[i].punctuation+'</td>'
 			
 			table += '<td title="'+tablecolumns.region+'">'+scriptData[i].region+'</td>';
 			
-			//table += '<td title="'+tablecolumns[15]+'">'+fc+'</td>'
-//			table += '<td title="'+tablecolumns[15]+'"><a href="../../app-charuse/?language='+scriptData[i].id+'" style="font-size:80%;font-style:italic;">more</td>'
 			table += '<td title="Go to Charuse page for '+scriptData[i].id+'"><a href="../../app-charuse/?language='+scriptData[i].id+'" style="font-size:80%;font-style:italic;" target="_blank"><img src="link.png" alt="details"/></td>'
 			
 			table += '</tr>'+"\n";
