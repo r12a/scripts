@@ -149,12 +149,12 @@ function resort (column) {
 			table += '>'+scriptData[i].hyphenation+'</td>'
 			
 			table += '<td title="'+tablecolumns.justify+'"'
-			if (scriptData[i].justify!=='space') table += 'class="y"'
+			if (scriptData[i].justify!=='sp') table += 'class="y"'
 			table += '>'+scriptData[i].justify+'</td>'
 			
 			table += '<td title="'+tablecolumns.digits+'"'
 			if (scriptData[i].digits!=='no') table += 'class="y"'
-			table += '>'+scriptData[i].digits+'</td>'
+			table += '>'+scriptData[i].digits.toString()+'</td>'
 			
 			table += '<td title="'+tablecolumns.punctuation+'"'
 			if (scriptData[i].punctuation!=='-') table += 'class="y"'
