@@ -47,21 +47,22 @@ function resort (column) {
 		aux:"+", 
 		letters:"Letters", 
 		mark:"Marks", 
+		punctuation:"Punct\u00ADuation",
+		digits:"Native digits",
+		other:"Format chars",
+		type:"Type",
 		gpos:"Context-based positioning", 
 		mcchars:"Multiple combining marks",
 		matras:"Vowel signs",
 		cs:"Case sensitive", 
 		gsub:"Contextual shaping", 
 		cursive:"Cursive script",
-		other:"Format chars",
 		dir:"Text direction",
 		baseline:"Baseline",
 		wordsep:"Word separator",
 		wrap:"Text wrap",
 		hyphenation:"Hyphen\u00ADation",
 		justify:"Justification",
-		digits:"Native digits",
-		punctuation:"Punct\u00ADuation",
 		region:"Region of origin",
 		fcount:"More info"
 		}	
@@ -100,6 +101,22 @@ function resort (column) {
 			if (scriptData[i].mark!==0) table += 'class="y"'
 			table += '>'+scriptData[i].mark+'</td>'
 			
+			table += '<td title="'+tablecolumns.punctuation+'"'
+			if (scriptData[i].punctuation!=='0') table += 'class="y"'
+			table += '>'+scriptData[i].punctuation+'</td>'
+			
+			table += '<td title="'+tablecolumns.digits+'"'
+			if (scriptData[i].digits!==0) table += 'class="y"'
+			table += '>'+scriptData[i].digits.toString()+'</td>'
+			
+			table += '<td title="'+tablecolumns.other+'"'
+			if (scriptData[i].other!=='0') table += 'class="y"'
+			table += '>'+scriptData[i].other+'</td>'
+			
+			table += '<td title="'+tablecolumns.type+'"'
+			if (scriptData[i].type!=='alpha') table += 'class="y"'
+			table += '>'+scriptData[i].type+'</td>'
+			
 			table += '<td title="'+tablecolumns.gpos+'"'
 			if (scriptData[i].gpos!=='no') table += 'class="y"'
 			table += '>'+scriptData[i].gpos+'</td>'
@@ -124,10 +141,6 @@ function resort (column) {
 			if (scriptData[i].cursive!=='no') table += 'class="y"'
 			table += '>'+scriptData[i].cursive+'</td>'
 			
-			table += '<td title="'+tablecolumns.other+'"'
-			if (scriptData[i].other!=='0') table += 'class="y"'
-			table += '>'+scriptData[i].other+'</td>'
-			
 			table += '<td title="'+tablecolumns.dir+'"'
 			if (scriptData[i].dir!=='ltr') table += 'class="y"'
 			table += '>'+scriptData[i].dir+'</td>'
@@ -151,14 +164,6 @@ function resort (column) {
 			table += '<td title="'+tablecolumns.justify+'"'
 			if (scriptData[i].justify!=='sp') table += 'class="y"'
 			table += '>'+scriptData[i].justify+'</td>'
-			
-			table += '<td title="'+tablecolumns.digits+'"'
-			if (scriptData[i].digits!==0) table += 'class="y"'
-			table += '>'+scriptData[i].digits.toString()+'</td>'
-			
-			table += '<td title="'+tablecolumns.punctuation+'"'
-			if (scriptData[i].punctuation!=='0') table += 'class="y"'
-			table += '>'+scriptData[i].punctuation+'</td>'
 			
 			table += '<td title="'+tablecolumns.region+'">'+scriptData[i].region+'</td>';
 			
