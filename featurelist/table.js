@@ -55,7 +55,7 @@ function resort (column) {
 		vletter:"Vowel letters",
 		//vindep:"Independent vowels",
 		vmark:"Vowel marks",
-		vcircum:"Circumgraphs",
+		vcircum:"Circum\u00ADgraphs",
 		vprescript:"Prescript vowels",
 		//vhidden:"Hides vowels",
 		gpos:"Context-based positioning", 
@@ -275,11 +275,9 @@ function getCharacterStats () {
 
 			// deal with vowel characteristics
 			scriptData[i].vletter = '-'
-			scriptData[i].vindep = '-'
 			scriptData[i].vmark = '-'
 			scriptData[i].vprescript = '-'
 			scriptData[i].vcircum = '-'
-			scriptData[i].vhidden = '-'
 
 			if (charuseData.vowels) {
 				if (charuseData.vowels.includes('letters')) scriptData[i].vletter = 'l'
@@ -292,8 +290,7 @@ function getCharacterStats () {
 				if (charuseData.vowels.includes('circumgraphs')) scriptData[i].vcircum = 'c'
 				if (charuseData.vowels.includes('prescript')) scriptData[i].vprescript = 'p'
 				}
-			else { 
-				}
+			if (scriptData[i].type.includes('syll')) scriptData[i].vletter = 's'
 			}
 		}
 	}
