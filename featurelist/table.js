@@ -59,7 +59,7 @@ function resort (column) {
 		//vhidden:"Hides vowels",
 		gpos:"Context-based positioning", 
 		mcchars:"Multiple combining marks",
-		matras:"Vowel signs",
+		//matras:"Vowel signs",
 		cs:"Case sensitive", 
 		gsub:"Contextual shaping", 
 		cursive:"Cursive script",
@@ -155,9 +155,9 @@ function resort (column) {
 			if (scriptData[i].mcchars!=='no') table += 'class="y"'
 			table += '>'+scriptData[i].mcchars+'</td>'
 			
-			table += '<td title="'+tablecolumns.matras+'"'
-			if (scriptData[i].matras!=='no' && scriptData[i].matras!=='n/a') table += 'class="y"'
-			table += '>'+scriptData[i].matras+'</td>'
+			//table += '<td title="'+tablecolumns.matras+'"'
+			//if (scriptData[i].matras!=='no' && scriptData[i].matras!=='n/a') table += 'class="y"'
+			//table += '>'+scriptData[i].matras+'</td>'
 			
 			table += '<td title="'+tablecolumns.cs+'"'
 			if (scriptData[i].cs!=='no') table += 'class="y"'
