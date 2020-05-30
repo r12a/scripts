@@ -32,8 +32,14 @@ div.indent {
 	background-color: #FC6;
 	background-color: #ffe;
 	background-color: #ffcfaf;
-	border-radius: 10px;
-}
+	border-radius: 5px;
+	padding: 0 2px;
+	}
+.yy {
+	background-color: antiquewhite;
+	border-radius: 5px;
+	padding: 0 2px;
+	}
 #reviewtable {
 	margin-left: 1em;
 	}
@@ -48,10 +54,12 @@ div.indent {
 	font-weight: normal;
 	text-align: end;
 	vertical-align: bottom;
+	line-height: 5px;
 	}
 #reviewtable th a {
 	writing-mode: vertical-lr;
 	height: 15em;
+	line-height: 5px;
 	}
 #reviewtable tr:hover {
 	background-color: #eee;
@@ -110,10 +118,23 @@ langs = {}
   <p><b class="leadin">Total characters</b> This figure is based on the data in the <a href="../../app-charuse/">Character Usage Lookup</a> app. When there are 2 figures separated by a + sign, the first number indicates how many characters are in standard use, the second relates to additional infrequently used characters for that language.</p>
 <p>Note that the character counts reflect the characters needed to represent both precomposed and decomposed versions of content. For example, use of a character such as â would add 3 characters to the total count: â, a, and the combining circumflex. Use of ô would then add a further 2 (because the circumflex is already counted).</p>
 <p><b class="leadin">Combining marks.</b> Shows the subset of the number of characters that are combining characters. No attempt is made to indicate how many of the base characters each combining character can combine with. In some cases, this will be limited, but in most cases a combining character will combine with a fair number of base characters.</p>
+<p><b class="leadin">Type, etc.</b> The type column indicates whether the orthography is one of the following.</p>
+<ul>
+<li><em>alpha</em>: An alphabet, ie. vowels are written as letters.</li>
+<li><em>abjad</em>: An abjad, ie. vowels are normally not written.</li>
+<li><em>abug</em>: An abugida, ie. consonants carry an inherent vowel which is overridden by vowel-signs to express different vowel sounds.</li>
+<li><em>syll</em>: A syllabary, ie. characters generally represent a combination of consonant+vowel.</li>
+</ul>
+<p>Immediately after the type column there are 4 related columns with a different background that indicate how vowels are represented in the orthography. They cover the following:</p>
+<ul>
+<li><em>Vowel letters</em>: The orthography represents vowels that follow consonants using standalone letters. The default, <samp>l</samp> signifies that vowels are represesented by letters after the consonant. An abugida with the value 'l' here and  the value 'p' in the column for prescript vowels indicates that we are dealing with an orthography that uses the visual model, eg. Thai. <samp>iv</samp> indicates that the orthography uses independent vowels for vowel sounds that are not preceded by a consonant. <samp>(iv)</samp> indicates that there is an incomplete set of independent vowels, so the orthography will use a base character and vowel-signs to represent standalone vowels, too. An abugida with vowel-signs but no independent vowels also indicates that a combination of base and vowel-sign are used for standalone vowel sounds. <samp>ml</samp> indicates that the vowel letters are matres lectionis (which typically means that they are consonants too).</li>
+<li><em>Vowel marks</em>: The orthography uses combining marks to represent vowel sounds after a consonant. <samp>d</samp> indicates that these vowel sounds are represented by diacritics. Where languages such as Arabic and Hebrew normally don't write the diacritics, this column will contain <samp>(d)</samp>. Otherwise you should assume that diacritics normally remain visible. <samp>vs</samp> indicates that the combining marks are vowel-signs.</li>
+<li><em>Circumgraphs</em>: A <samp>c</samp> in this column indicates that the orthography displays vowel glyphs simultaneously on different sides of the base consonant, eg. certain Tamil vowel signs.</li>
+<li><em>Prescript vowels</em>: A <samp>p</samp> in this column indicates that some vowel signs, or parts of a circumgraph, appear to the left of the base consonant that they modify, eg. the short i in Hindi.</li>
+</ul>
 <p><b class="leadin">Context-based positioning.</b> This is typically related to combining characters, and indicates that a typical font uses OpenType rules to position of a glyph according to the glyphs that surround it, eg. tone marks in Thai, or vowel signs in Arabic (if used). Nearly all scripts with combining characters will need some positioning rules to take account of where the combining character should be placed. This indicator is more concerned with whether that location varies significantly, depending on the surrounding context.</p>
   <p><b class="leadin">Multiple combining marks.</b> Whether more than one combining character can be associated with a give base character.</p>
-  <p><b class="leadin">Vowel signs.</b> Whether the script uses vowel-signs (matras) to represent vowels (ie. is an abugida). The keyword 'standalone' indicates that some vowel signs are not combining characters.</p>
-  <p><b class="leadin">Case sensitive</b> Whether or not the script makes case distinctions.</p>
+<p><b class="leadin">Case sensitive</b> Whether or not the script makes case distinctions.</p>
   <p><b class="leadin">Contextual shaping.</b> Whether different glyph shapes have to be used for a character depending on the visual context, eg. the RA in Myanmar that grows and shrinks to fit around the character is surrounds. Note that this does not include shaping for cursive scripts (see below).</p>
   <p><b class="leadin">Cursive script.</b> Do the letters in this script join up, eg. as in Arabic, N'Ko, or Mongolian?</p>
   <p><span class="leadin">Format characters.</span> How many characters are used such as ZWSP, ZWJ, RLI, etc, ie. characters with the Unicode general property of 'Other'.</p>
@@ -171,6 +192,6 @@ langs = {}
 <p><b class="leadin">Feature count.</b> This is a very crude indicator that simply awards one point for each column after the first three columns that doesn't read 'no', 'mid' or '0'.</p>
 </div>
 
-<div class="smallprint"><span id="version">Changed <a href="https://github.com/r12a/scripts/commits/gh-pages/featurelist"><span id="version-info"><!-- #BeginDate format:IS1m -->2020-05-30  6:35<!-- #EndDate --></span></a> GMT. &nbsp;•&nbsp; Send <a href="https://github.com/r12a/scripts/issues/new?title=%5Bfeature%20list%5D%20TITLE_GOES_HERE&amp;body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ffeaturelist%2F%0A%0A" target="_blank">feedback</a>. &nbsp;•&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Changed <a href="https://github.com/r12a/scripts/commits/gh-pages/featurelist"><span id="version-info"><!-- #BeginDate format:IS1m -->2020-05-30  11:54<!-- #EndDate --></span></a> GMT. &nbsp;•&nbsp; Send <a href="https://github.com/r12a/scripts/issues/new?title=%5Bfeature%20list%5D%20TITLE_GOES_HERE&amp;body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ffeaturelist%2F%0A%0A" target="_blank">feedback</a>. &nbsp;•&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 </body>
 </html>

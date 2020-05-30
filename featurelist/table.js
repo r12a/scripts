@@ -51,6 +51,12 @@ function resort (column) {
 		digits:"Native digits",
 		other:"Format chars",
 		type:"Type",
+		vletter:"Vowel letters",
+		//vindep:"Independent vowels",
+		vmark:"Vowel marks",
+		vcircum:"Circumgraphs",
+		vprescript:"Prescript vowels",
+		//vhidden:"Hides vowels",
 		gpos:"Context-based positioning", 
 		mcchars:"Multiple combining marks",
 		matras:"Vowel signs",
@@ -116,6 +122,30 @@ function resort (column) {
 			table += '<td title="'+tablecolumns.type+'"'
 			if (scriptData[i].type!=='alpha') table += 'class="y"'
 			table += '>'+scriptData[i].type+'</td>'
+			
+			table += '<td title="'+tablecolumns.vletter+'"'
+			if (scriptData[i].vletter!=='-') table += 'class="yy"'
+			table += '>'+scriptData[i].vletter+'</td>'
+			
+			//table += '<td title="'+tablecolumns.vindep+'"'
+			//if (scriptData[i].vindep!=='-') table += 'class="y"'
+			//table += '>'+scriptData[i].vindep+'</td>'
+			
+			table += '<td title="'+tablecolumns.vmark+'"'
+			if (scriptData[i].vmark!=='-') table += 'class="yy"'
+			table += '>'+scriptData[i].vmark+'</td>'
+			
+			table += '<td title="'+tablecolumns.vcircum+'"'
+			if (scriptData[i].vcircum!=='-') table += 'class="yy"'
+			table += '>'+scriptData[i].vcircum+'</td>'
+			
+			table += '<td title="'+tablecolumns.vprescript+'"'
+			if (scriptData[i].vprescript!=='-') table += 'class="yy"'
+			table += '>'+scriptData[i].vprescript+'</td>'
+			
+			//table += '<td title="'+tablecolumns.vhidden+'"'
+			//if (scriptData[i].vhidden!=='-') table += 'class="y"'
+			//table += '>'+scriptData[i].vhidden+'</td>'
 			
 			table += '<td title="'+tablecolumns.gpos+'"'
 			if (scriptData[i].gpos!=='no') table += 'class="y"'
@@ -231,6 +261,38 @@ function getCharacterStats () {
 
 			scriptData[i].chars = count
 			if (aux > 0) scriptData[i].aux = aux
+
+
+
+			// deal with types
+			if (charuseData.type.includes('alpha')) scriptData[i].type = 'alpha'
+			if (charuseData.type.includes('abug')) scriptData[i].type = 'abug'
+			if (charuseData.type.includes('syll')) scriptData[i].type = 'syll'
+			if (charuseData.type.includes('ideo')) scriptData[i].type = 'syll'
+
+
+
+			// deal with vowel characteristics
+			scriptData[i].vletter = '-'
+			scriptData[i].vindep = '-'
+			scriptData[i].vmark = '-'
+			scriptData[i].vprescript = '-'
+			scriptData[i].vcircum = '-'
+			scriptData[i].vhidden = '-'
+
+			if (charuseData.vowels) {
+				if (charuseData.vowels.includes('letters')) scriptData[i].vletter = 'l'
+				if (charuseData.vowels.includes('matres')) scriptData[i].vletter = 'ml'
+				if (charuseData.vowels.includes('independent') && charuseData.vowels.includes('some')) scriptData[i].vletter = '(iv)'
+				else if (charuseData.vowels.includes('independent')) scriptData[i].vletter = 'iv'
+				if (charuseData.vowels.includes('diacritics') && charuseData.vowels.includes('hidden')) scriptData[i].vmark = '(d)'
+				else if (charuseData.vowels.includes('diacritics')) scriptData[i].vmark = 'd'
+				if (charuseData.vowels.includes('vowel-signs')) scriptData[i].vmark = 'vs'
+				if (charuseData.vowels.includes('circumgraphs')) scriptData[i].vcircum = 'c'
+				if (charuseData.vowels.includes('prescript')) scriptData[i].vprescript = 'p'
+				}
+			else { 
+				}
 			}
 		}
 	}
