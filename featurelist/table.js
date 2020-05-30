@@ -1,7 +1,9 @@
 
 var items = ['am', 'arb', 'hy', 'aii', 'ban-bali', 'bsq-bass', 'bn', 'bug-bugi', 'my', 'chr', 'dv', 'ka', 'gu', 'khk-mong', 'ha-arab', 'he', 'hi', 'ja', 'jv-java', 'kn', 'ks-deva', 'km', 'kkh', 'ko', 'lo', 'lis', 'ml', 'cmn', 'el', 'mid', 'nod', 'nqo', 'ory', 'fuf-adlm', 'pa', 'ru', 'si', 'zgh', 'su-sund', 'csw', 'syc', 'khb', 'tdd', 'blt', 'ta', 'te', 'th', 'bo', 'tru', 'vai']
 
-	
+
+
+
 
 var by = function (path, reverse, primer, then) {
     var get = function (obj, path) {
@@ -202,13 +204,19 @@ function resort (column) {
 			
 			table += '</tr>'+"\n";
 
-			
-
-}
+		}
 
 
-document.getElementById('theTable').innerHTML = table;
-}
+	document.getElementById('theTable').innerHTML = table
+	
+	var cells = document.querySelectorAll('#reviewtable td')
+	for (var i=0;i<cells.length;i++) cells[i].addEventListener('click', showContext)
+	}
+
+
+function showContext (evt) {
+	document.getElementById('hint').textContent = evt.target.title
+	}
 
 
 function getCharacterStats () {
