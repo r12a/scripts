@@ -40,13 +40,13 @@ function resort (column) {
 	
 
 	var tablecolumns = {
-		language:"Language",
+		name:"Language",
 		script:"Script",
 		linked:" ", 
 		chars:"Total chars", 
 		aux:"+", 
 		letters:"Letters", 
-		cchars:"Marks", 
+		mark:"Marks", 
 		gpos:"Context-based positioning", 
 		mcchars:"Multiple combining marks",
 		matras:"Vowel signs",
@@ -125,7 +125,7 @@ function resort (column) {
 			table += '>'+scriptData[i].cursive+'</td>'
 			
 			table += '<td title="'+tablecolumns.other+'"'
-			if (scriptData[i].other!=='-') table += 'class="y"'
+			if (scriptData[i].other!=='0') table += 'class="y"'
 			table += '>'+scriptData[i].other+'</td>'
 			
 			table += '<td title="'+tablecolumns.dir+'"'
@@ -153,11 +153,11 @@ function resort (column) {
 			table += '>'+scriptData[i].justify+'</td>'
 			
 			table += '<td title="'+tablecolumns.digits+'"'
-			if (scriptData[i].digits!=='no') table += 'class="y"'
+			if (scriptData[i].digits!==0) table += 'class="y"'
 			table += '>'+scriptData[i].digits.toString()+'</td>'
 			
 			table += '<td title="'+tablecolumns.punctuation+'"'
-			if (scriptData[i].punctuation!=='-') table += 'class="y"'
+			if (scriptData[i].punctuation!=='0') table += 'class="y"'
 			table += '>'+scriptData[i].punctuation+'</td>'
 			
 			table += '<td title="'+tablecolumns.region+'">'+scriptData[i].region+'</td>';
@@ -189,7 +189,7 @@ function getCharacterStats () {
 				scriptData[i].digits = charArray.length
 				count += charArray.length
 				}
-			else scriptData[i].digits = 'no'
+			else scriptData[i].digits = 0
 			
 			if (charuseData.letter) {
 				charArray = [...charuseData.letter]
@@ -202,21 +202,21 @@ function getCharacterStats () {
 				scriptData[i].mark = charArray.length
 				count += charArray.length
 				}
-			else scriptData[i].mark = '-'
+			else scriptData[i].mark = 0
 
 			if (charuseData.punctuation) {
 				charArray = [...charuseData.punctuation]
 				scriptData[i].punctuation = charArray.length
 				count += charArray.length
 				}
-			else scriptData[i].punctuation = '-'
+			else scriptData[i].punctuation = '0'
 
 			if (charuseData.other) {
 				charArray = [...charuseData.other]
 				scriptData[i].other = charArray.length
 				count += charArray.length
 				}
-			else scriptData[i].other = '-'
+			else scriptData[i].other = '0'
 
 			if (charuseData.aux) {
 				charArray = [...charuseData.aux]
