@@ -1,5 +1,5 @@
 
-var items = ['am', 'arb', 'hy', 'aii', 'ban-bali', 'bsq-bass', 'bn', 'bug-bugi', 'my', 'chr', 'dv', 'ka', 'gu', 'khk-mong', 'ha-arab', 'he', 'hi', 'ja', 'jv-java', 'kn', 'ks-deva', 'km', 'kkh', 'ko', 'lo', 'lis', 'ml', 'cmn', 'el', 'mid', 'nod', 'nqo', 'ory', 'fuf-adlm', 'pa', 'ru', 'si', 'zgh', 'su-sund', 'csw', 'syc', 'khb', 'tdd', 'blt', 'ta', 'te', 'th', 'bo', 'tru', 'vai']
+var items = ['am', 'arb', 'hy', 'aii', 'ban-bali', 'bsq-bass', 'bn', 'bug-bugi', 'my', 'chr', 'dv', 'ka', 'gu', 'khk-mong', 'ha', 'ha-arab', 'he', 'hi', 'ja', 'jv-java', 'kn', 'ks', 'ks-deva', 'km', 'kkh', 'ko', 'lo', 'lis', 'ml', 'cmn', 'el', 'mid', 'nod', 'nqo', 'ory', 'fuf-adlm', 'pa', 'ru', 'si', 'zgh', 'su-sund', 'csw', 'syc', 'khb', 'tdd', 'blt', 'ta', 'te', 'th', 'bo', 'tru', 'ug', 'ur', 'vai']
 
 
 
@@ -98,28 +98,28 @@ function resort (column) {
 			
 			table += '<td title="Link to more details">'+linked+'</td>'
 			
-			table += '<td title="'+tablecolumns.numchars+'" style="text-align:right;padding-left: 1em;">'+scriptData[i].chars+'</td>'
+			table += '<td title="'+tablecolumns.numchars+'" style="text-align:right;padding: 0 .5em;" class="y">'+scriptData[i].chars+'</td>'
 			
 			table += '<td title="Infequent characters" style="text-align:left;">'+scriptData[i].aux+'</td>'
 			
 			table += '<td title="'+tablecolumns.letters+'"'
-			if (scriptData[i].letters!==0) table += 'class="y"'
+			if (scriptData[i].letters!==0) table += 'class="yy"'
 			table += '>'+scriptData[i].letters+'</td>'
 			
 			table += '<td title="'+tablecolumns.mark+'"'
-			if (scriptData[i].mark!==0) table += 'class="y"'
+			if (scriptData[i].mark!==0) table += 'class="yy"'
 			table += '>'+scriptData[i].mark+'</td>'
 			
 			table += '<td title="'+tablecolumns.punctuation+'"'
-			if (scriptData[i].punctuation!=='0') table += 'class="y"'
+			if (scriptData[i].punctuation!=='0') table += 'class="yy"'
 			table += '>'+scriptData[i].punctuation+'</td>'
 			
 			table += '<td title="'+tablecolumns.digits+'"'
-			if (scriptData[i].digits!==0) table += 'class="y"'
+			if (scriptData[i].digits!==0) table += 'class="yy"'
 			table += '>'+scriptData[i].digits.toString()+'</td>'
 			
 			table += '<td title="'+tablecolumns.other+'"'
-			if (scriptData[i].other!=='0') table += 'class="y"'
+			if (scriptData[i].other!=='0') table += 'class="yy"'
 			table += '>'+scriptData[i].other+'</td>'
 			
 			table += '<td title="'+tablecolumns.type+'"'
