@@ -174,17 +174,28 @@ function makeSidePanel (id, otherlinks) {
 	
 	out += '<tr style="line-height: .4;"><th>&nbsp;</th><td style="border:0;">&nbsp;</td></tr>'
 	
-	out += '<tr><th>Combines marks</th><td'
-	if (langs[id].mcchars!=='no') out += ' class="tableHighlight"'
-	out += '>'+langs[id].mcchars+'</td></tr>'
+	//if (langs[id].vowels) out += '<tr><th>Vowels</th><td>'+langs[id].vowels+'</td></tr>'
+	if (langs[id].vowels) {
+		out += '<tr><th>Vowels</th><td'
+		if (langs[id].vowels!=='letters') out += ' class="tableHighlight"'
+		out += '>'+langs[id].vowels.replace(/, /g,'<br>')+'</td></tr>'
+		}
 	
-	out += '<tr><th>Vowel-signs</th><td'
-	if (langs[id].matras!=='no') out += ' class="tableHighlight"'
-	out += '>'+langs[id].matras+'</td></tr>'
+	//out += '<tr><th>Combines marks</th><td'
+	//if (langs[id].mcchars!=='no') out += ' class="tableHighlight"'
+	//out += '>'+langs[id].mcchars+'</td></tr>'
+	
+	//out += '<tr><th>Vowel-signs</th><td'
+	//if (langs[id].matras!=='no') out += ' class="tableHighlight"'
+	//out += '>'+langs[id].matras+'</td></tr>'
 	
 	out += '<tr><th>Context-based positioning</th><td'
 	if (langs[id].gpos!=='no') out += ' class="tableHighlight"'
 	out += '>'+langs[id].gpos+'</td></tr>'
+	
+	out += '<tr><th>Contextual shaping</th><td'
+	if (langs[id].gsub!=='no') out += ' class="tableHighlight"'
+	out += '>'+langs[id].gsub+'</td></tr>'
 	
 	out += '<tr><th>Case distinction</th><td'
 	if (langs[id].cs!=='no') out += ' class="tableHighlight"'
@@ -193,10 +204,6 @@ function makeSidePanel (id, otherlinks) {
 	out += '<tr><th>Cursive script</th><td'
 	if (langs[id].cursive!=='no') out += ' class="tableHighlight"'
 	out += '>'+langs[id].cursive+'</td></tr>'
-	
-	out += '<tr><th>Contextual shaping</th><td'
-	if (langs[id].gsub!=='no') out += ' class="tableHighlight"'
-	out += '>'+langs[id].gsub+'</td></tr>'
 	
 	out += '<tr><th>Text direction</th><td'
 	if (langs[id].dir!=='ltr') out += ' class="tableHighlight"'
