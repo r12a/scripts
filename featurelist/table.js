@@ -195,7 +195,7 @@ function resort (column) {
 			table += '>'+scriptData[i].hyphenation+'</td>'
 			
 			table += '<td title="'+tablecolumns.justify+'"'
-			if (scriptData[i].justify!=='sp') table += 'class="y"'
+			if (scriptData[i].justify!=='spaces') table += 'class="y"'
 			table += '>'+scriptData[i].justify+'</td>'
 			
 			table += '<td title="'+tablecolumns.region+'">'+scriptData[i].region+'</td>';
