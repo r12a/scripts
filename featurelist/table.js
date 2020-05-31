@@ -60,11 +60,11 @@ function resort (column) {
 		vcircum:"Circum\u00ADgraphs",
 		vprescript:"Prescript vowels",
 		//vhidden:"Hides vowels",
-		gpos:"Context-based positioning", 
-		mcchars:"Multiple combining marks",
+		gpos:"Contextual placement", 
+		//mcchars:"Multiple combining marks",
 		//matras:"Vowel signs",
-		cs:"Case sensitive", 
 		gsub:"Contextual shaping", 
+		cs:"Case sensitive", 
 		cursive:"Cursive script",
 		dir:"Text direction",
 		baseline:"Baseline",
@@ -154,21 +154,21 @@ function resort (column) {
 			if (scriptData[i].gpos!=='no') table += 'class="y"'
 			table += '>'+scriptData[i].gpos+'</td>'
 			
-			table += '<td title="'+tablecolumns.mcchars+'"'
-			if (scriptData[i].mcchars!=='no') table += 'class="y"'
-			table += '>'+scriptData[i].mcchars+'</td>'
+			//table += '<td title="'+tablecolumns.mcchars+'"'
+			//if (scriptData[i].mcchars!=='no') table += 'class="y"'
+			//table += '>'+scriptData[i].mcchars+'</td>'
 			
 			//table += '<td title="'+tablecolumns.matras+'"'
 			//if (scriptData[i].matras!=='no' && scriptData[i].matras!=='n/a') table += 'class="y"'
 			//table += '>'+scriptData[i].matras+'</td>'
 			
-			table += '<td title="'+tablecolumns.cs+'"'
-			if (scriptData[i].cs!=='no') table += 'class="y"'
-			table += '>'+scriptData[i].cs+'</td>'
-			
 			table += '<td title="'+tablecolumns.gsub+'"'
 			if (scriptData[i].gsub!=='no') table += 'class="y"'
 			table += '>'+scriptData[i].gsub+'</td>'
+			
+			table += '<td title="'+tablecolumns.cs+'"'
+			if (scriptData[i].cs!=='no') table += 'class="y"'
+			table += '>'+scriptData[i].cs+'</td>'
 			
 			table += '<td title="'+tablecolumns.cursive+'"'
 			if (scriptData[i].cursive!=='no') table += 'class="y"'
