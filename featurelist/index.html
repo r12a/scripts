@@ -132,11 +132,18 @@ resort('name')
 <section id="key">
   <h2>Key</h2>
   <p>The table is intended to provide a general indication only. There are things that could be disputed.</p>
-  <p><b class="leadin">Total characters</b> This figure is based on the data in the <a href="../../app-charuse/">Character Usage Lookup</a> app. When there are 2 figures separated by a + sign, the first number indicates how many characters are in standard use, the second relates to additional infrequently used characters for that language.</p>
+  <p><b class="leadin">Total characters, etc.</b> This figure is based on the data in the <a href="../../app-charuse/">Character Usage Lookup</a> app. When there are 2 figures separated by a + sign, the first number indicates how many characters are in standard use, the second relates to additional infrequently used characters for that language.</p>
 <p>Character counts do not include ASCII characters. It is assumed that those are available.</p>
 <p>Note also that the character counts reflect the characters needed to represent both precomposed and decomposed versions of content. For example, use of a character such as â would add 3 characters to the total count: â, a, and the combining circumflex. Use of ô would then add a further 2 (because the circumflex is already counted).</p>
-<p><b class="leadin">Combining marks.</b> Shows the subset of the number of characters that are combining characters. No attempt is made to indicate how many of the base characters each combining character can combine with. In some cases, this will be limited, but in most cases a combining character will combine with a fair number of base characters.</p>
-<p><span class="leadin">Format characters.</span> How many characters are used such as ZWSP, ZWJ, RLI, etc, ie. characters with the Unicode general property of 'Other'.</p>
+<p>The 5 columns to the right give character counts for specific types of character, per the Unicode general property assignment. These include:</p>
+<ul>
+<li><em>letters</em>: Most alphabetic and other basic letters.</li>
+<li><em>marks</em>: The subset of  characters that are combining characters. No attempt is made to indicate how many of the base characters each combining character can combine with. In some cases, this will be limited, but in most cases a combining character will combine with a fair number of base characters.</li>
+<li><em>punctuation</em>: Characters with the general property of punctuation.</li>
+<li><em>native digits</em>: Non-ASCII numeric digits, but also other numeric characters where applicable (eg.  characters for 20 and 30 in Amharic).</li>
+<li><em>format chars</em>: Characters with the general property 'other'. These are almost always formatting characters, such as those used for bidi control, or joining/non-joining. (These figures currently need to be updated.)</li>
+</ul>
+<p>As for the other character counts, these figures exclude ASCII characters, and include characters for any compositions and decompositions that may be applied (unless they are deprecated by the Unicode Standard).</p>
 <p><b class="leadin">Type, etc.</b> The type column indicates whether the orthography is one of the following.</p>
 <ul>
 <li><em>alpha</em>: An alphabet, ie. vowels are written as letters.</li>
@@ -163,8 +170,8 @@ resort('name')
 </ul-->
 <p><b class="leadin">Contextual placement.</b> This is typically related to combining characters, and indicates that a typical font uses OpenType rules to position of a glyph according to the glyphs that surround it, eg. tone marks in Thai, or vowel signs in Arabic (if used). Nearly all scripts with combining characters will need some positioning rules to take account of where the combining character should be placed. This indicator is more concerned with whether that location varies significantly, depending on the surrounding context.</p>
   <!--p><b class="leadin">Multiple combining marks.</b> Whether more than one combining character can be associated with a give base character.</p-->
+<p><b class="leadin">Contextual shaping.</b> Whether different glyph shapes have to be used for a character depending on the visual context, eg. the RA in Myanmar that grows and shrinks to fit around the character is surrounds. Note that this does not include shaping for cursive scripts.</p>
 <p><b class="leadin">Case sensitive</b> Whether or not the script makes case distinctions.</p>
-  <p><b class="leadin">Contextual shaping.</b> Whether different glyph shapes have to be used for a character depending on the visual context, eg. the RA in Myanmar that grows and shrinks to fit around the character is surrounds. Note that this does not include shaping for cursive scripts (see below).</p>
 <p><b class="leadin">Cursive script.</b> Do the letters in this script join up, eg. as in Arabic, N'Ko, or Mongolian?</p>
 <p><b class="leadin">Text direction.</b> Is this a right-to-left script (which actually usually means that bidirectional behaviour needs to be supported, for numbers and embedded foreign text.) Is it used in a vertical orientation?</p>
 <p>A value of rtl* indicates that numbers run RTL.</p>
@@ -200,8 +207,6 @@ resort('name')
 <li><em>other</em>: Some other mechanism is used, eg. multiple tseks at the line end in Tibetan.</li>
 <li><em>none</em>: Full justification is not a feature of the language, eg. Balinese.</li>
 </ul>
-<p><b class="leadin">Native digits.</b> Does the script have a set of native digits? An asterisk indicates that native digits exist, but ASCII digits are mostly used.</p>
-<p><b class="leadin">Punctuation.</b> How many punctuation marks are used in this orthography. This figure may not account for all ASCII punctuation.</p>
 <p><b class="leadin">Region.</b> This rough grouping places the script in the region where it originated, so English is in Europe, and Arabic is in the West Asia. It serves to get a very rough idea of how things stack up on a regional basis. Regions are one of the following:</p>
 <ul>
 <li>nam (Northern America), </li>
@@ -220,6 +225,6 @@ resort('name')
 <!--p><b class="leadin">Feature count.</b> This is a very crude indicator that simply awards one point for each column after the first three columns that doesn't read 'no', 'mid' or '0'.</p-->
 </section>
 
-<div class="smallprint"><span id="version">Changed <a href="https://github.com/r12a/scripts/commits/gh-pages/featurelist"><span id="version-info"><!-- #BeginDate format:IS1m -->2020-06-02  16:47<!-- #EndDate --></span></a> GMT. &nbsp;•&nbsp; Send <a href="https://github.com/r12a/scripts/issues/new?title=%5Bfeature%20list%5D%20TITLE_GOES_HERE&amp;body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ffeaturelist%2F%0A%0A" target="_blank">feedback</a>. &nbsp;•&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Changed <a href="https://github.com/r12a/scripts/commits/gh-pages/featurelist"><span id="version-info"><!-- #BeginDate format:IS1m -->2020-06-02  17:01<!-- #EndDate --></span></a> GMT. &nbsp;•&nbsp; Send <a href="https://github.com/r12a/scripts/issues/new?title=%5Bfeature%20list%5D%20TITLE_GOES_HERE&amp;body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ffeaturelist%2F%0A%0A" target="_blank">feedback</a>. &nbsp;•&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 </body>
 </html>
