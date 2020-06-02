@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<title>Canadian Aboriginal Syllabics/Eastern Canadian Inuktitut script summary</title>
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="description" content="Summary of the Canadian Aboriginal Syllabics script and the Eastern Canadian Inuktitut orthography."/>
+<link rel="stylesheet" href="../../shared/style/docs.css"/>
+<link rel="stylesheet" href="../common/local.css"/>
+<style>
+@font-face {
+    font-family: 'Noto Sans Canadian Aboriginal WF';
+    src: url('/shared/webfonts/notosanscanadianaboriginal-regular-webfont.woff2') format('woff2'),
+         url('/shared/webfonts/notosanscanadianaboriginal-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+#freeText {
+	font-size: 24px;
+	font-family: "Noto Sans Canadian Aboriginal WF", serif;
+    text-align: start;
+	line-height: 1.4;
+	}
+[lang=vai] { font-family: "Noto Sans Canadian Aboriginal WF", serif; font-size: 150%; }
+.large[lang=vai] { font-size: 300%;  text-align: center; line-height: 1; margin-top: 0; margin-bottom: 0; }
+.narrowlines .listPair { margin-bottom: 0.25em; }
+.syllableTable td { background-color: #fffdf5; color: brown; font-size: 120%;  }
+</style>
+
+<script src="../../shared/scriptdb/cans-ike.js"> </script>
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
+<script src="../../shared/code/all-names.js"></script>
+<script src="../../shared/code/character_conversion.js"></script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/fontlists/manage.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
+<script src="../common/functions.js"></script>
+<script src="../common/transliterate.js"></script>
+<script src="../common/prompts.js"> </script>
+<script src="../glossary/glossary.js"> </script>
+<script src="../../shared/code/getLinks.js"></script>
+<script src="/scripts/linkdata/linkdb.js"></script>
+<script src="../../app-charuse/langs.js"> </script>
+
+<script src="../../shared/fontlists/cans.js"> </script>
+<script src="ike-translit.js">  </script>
+</head>
+
+<body>
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
+</header>
+
+<h1>Canadian Aboriginal Syllabics/Eastern Canadian Inuktitut (draft)</h1>
+
+<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="Jump to top of page." title="Jump to top of page."/></a></nav>
+
+<aside class="sidebar">
+<nav>
+<h2 class="notoc flush"><a id="tochead">Contents</a></h2>
+<div id="toc"><!-- placeholder --></div>
+  </nav>
+
+ <div id="fontsetting" class="closed">
+  <h2 class="notoc"><a id="fonts">Fonts</a></h2>
+  <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
+   <p>Set font for examples<br/>
+   <select id="exfontswitchfont" 
+onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'vai');">
+      </select>
+      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+   <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
+onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'vai');" />
+ </p>
+
+      <p>Set font for sample<br/>
+      <select  id="slfontswitchfont" 
+onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+      </select>
+      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+    </p>
+
+ <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
+	return false;">
+      <p>Change size:<br />
+        <input id="slider" type="range" min="12" max="100" step="1" value="32">
+        &#xA0; <span id="sizeIndicator">32px</span><br />
+        <input id="multiplier" type="hidden" value="1" />
+        Multiplier:
+        <input type="radio" name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x1">1</label>
+        <input type="radio" name="step" id="x5" value="2"  onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x5">2</label>
+        <input type="radio" name="step" id="x10" value="10"  onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
+        <label for="x10">10</label>
+      </p>
+    </form>
+</div>
+</aside>
+
+
+<p id="status">Updated 
+  <!-- #BeginDate format:Sw1 -->2 June, 2020<!-- #EndDate -->
+  <span id="versionTop"></span>
+  </p>
+
+
+
+<div class="section">
+  <p>This page gathers together basic information about the Unified Canadian Aboriginal Syllabics (UCAS) script and its use for the Eastern Canadian Inuktitut language, focusing particularly on usage in Nunavut and Nunavik. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Inuktitut using Unicode; for greater details follow the footnote links (especially those with an arrow alongside them).</p>
+
+
+
+<details class="supportdocs noprint instructions">
+<summary>Related pages</summary>
+<!--p class="leadin">Script summary pages:</p>
+<ul>
+<li><a href="../arabic/hausa" class="linkHighlight">Hausa</a></li>
+<li><a href="../arabic/kashmiri" class="linkHighlight">Kashmiri </a></li>
+<li><a href="/scripts/arabic/uighur" class="linkHighlight">Uighur</a></li>
+<li><a href="/scripts/arabic/urdu" class="linkHighlight">Urdu </a></li>
+</ul-->
+<p class="leadin">Character notes:</p>
+<ul>
+<li><a class="linkHighlight" href="block">UCAS</a></li>
+</ul>
+<p class="leadin">Character apps:</p>
+<ul>
+<li><a href="../../pickers/cans-ike/" class="linkHighlight">Eastern Canadian Inuktitut</a></li>
+</ul>
+<p class="leadin">Other:</p>
+<ul>
+<li><a class="linkHighlight" href="../links?iso=Cans">Script links pages</a></li>
+<li><a class="linkHighlight" href="../#scriptnotes">Other script summaries</a></li>
+</ul>
+</details>
+
+<details class="supportdocs noprint">
+<summary class="instructions">About this page</summary>
+<p class="instructions"><span class="leadin">Transcriptions.</span> Unless in parentheses, the transcriptions in italics that follow Inuktitut text are a <a href="../glossary/#transliteration" class="termref">transliteration</a> developed for these pages. Those in parentheses follow one or more commonly used <a href="../glossary/#transcription" class="termref">transcription</a> methods. Transcriptions in <span style="white-space:nowrap;">⌈ corner brackets ⌋</span> are either phonemic or phonetic.</p>
+<p class="instructions noprint"><span class="leadin">Character lists.</span> Colours and annotations on panels listing characters are relevant to their use for the Inuktitut language. Panels with a yellow background contain commonly used characters for that language.</p>
+<p class="instructions noprint"><span class="leadin">Links to detailed character information.</span> Links on Unicode character names and links on code point values in character lists lead to character notes documents that list information character-by-character. This information is typically more detailed than that on this page. </p>
+<p class="instructions noprint"><span class="leadin">Detailed topic information.</span> Footnote  links with an arrow alongside take you to more detailed information on the current topic.</p>
+<p class="instructions noprint"><span class="leadin">Showing code points for examples.</span>Clicking on   Inuktitut  examples shows a list of the characters in that example. </p>
+<p class="instructions noprint"><span class="leadin">Changing fonts.</span>Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+</details>
+</div>
+
+
+
+<section id="sample">
+<h2>Sample (Inuktitut)</h2>
+  
+  <p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.</p>
+<div id="freeText" lang="vai" data-target="c" data-base="/scripts/cans/block" data-source="http://unicode.org/udhr/translations.html">
+<p  title="UDHR, article 1" onMouseUp="showtext('freeText')">ᐃᓚᖓ 1. ᐃᓅᔪᓕᒫᑦ ᐊᓂᖅᑎᕆᔪᓕᒫᑦ ᐃᓅᓚᐅᕐᒪᑕ ᐃᓱᒪᕐᓱᕐᖢᑎᒃ ᐊᒻᒪᓗ ᐊᔾᔨᐅᖃᑎᒌᒃᖢᑎᒃ ᓂᕐᓱᐊᖑᓂᒃᑯᑦ ᐊᒻᒪᓗ ᐱᔪᓐᓇᐃᑎᑎᒍᑦ. ᐃᓱᖃᖅᑐᖁᑎᖃᕐᑎᑕᐅᕙᓕᕐᐳᑦ ᐱᔾᔪᑎᖃᕐᓂᒃᑯᑦ ᖃᑕᙳᑎᒌᑦᑎᐊᕆᐊᖃᕐᓂᒃᑯᓪᓗ.</p>
+
+<p  title="UDHR, article 2" onMouseUp="showtext('freeText')">ᐃᓚᖕᒐ 2. ᑭᓇᒃᑯᑐᐃᓐᓇᓕᒫᑦᑎᐊᑦ ᐱᔪᒃᓴᐅᑕᐃᓐᓇᑦᑎᐊᖕᒍᕗᑦ ᑕᒪᐃᓐᓄᓕᒫᖅ ᐱᔪᓐᓇᐃᑎᓂᒃ ᐊᒻᒪᓗ ᐃᓱᒪᖅᓱᕈᓐᓇᐃᑎᓂᒃ ᐃᓕᖕᒐᓂᓕᐅᖅᑕᐅᓯᒪᔭᕇᖕᒪᑕ ᓇᓗᓇᐃᔭᐅᑎᖃᑦᑎᐊᑦᖢᑎᒃᓗ ᑖᒃᑯᑎᒎᓇᖅ, ᐊᔾᔨᐅᙱᖃᑎᒌᖕᓂᓕᕆᓗᐊᙱᓪᓗᑎᒃ ᓇᓪᓕᐊᒍᑐᐃᓐᓇᖅ, ᓲᕐᓗ ᓇᓂᕐᒥᐅᑕᐅᓂᕐᒥᒃᑎᒍᑦ, ᐅᕙᓂᖃᑎᒌᙱᓐᓂᕐᒥᖅᑎᒍᑦ, ᐊᕐᓇᐅᓂᖕᒍ ᐊᖕᒍᑕᐅᓂᖕᒐ ᐃᓱᒪᒋᓇᒍ, ᐅᖃᐅᓯᖃᖃᑎᒌᙱᓂᖅ, ᐅᒃᐱᕐᕕᖃᕐᓂᖅ ᑐᒃᓯᐊᕐᕕᖕᒥᖕᓂᒃ, ᒐᕙᒪᓕᕆᐅᑎᖃᕐᓂᖅ ᐅᕝᕙᓗ ᐊᓯᐊᒍᑦ ᑕᒪᒃᑯᐊ ᐃᓯᒪᒋᔪᓐᓇᖅᑕᖕᒋᑦ ᓯᖁᑎᒋᓇᒋᑦ, ᓇᓂᑐᐃᓐᓇᖅ ᓄᓇᒋᔭᐅᔪᒥᑦ ᐅᕝᕙᓘᓐᓃᑦ ᐊᓂᖅᑎᕆᔪᓐᓇᕐᓂᕐᒥᑎᒍᑦ, ᓄᓇᖃᖅᓂᒃᑯᑦ, ᐃᕐᓂᐊᖕᒍᓯᒪᓂᒃᑯᑦ ᐅᕝᕙᓘᓐᓃᑦ ᐊᓱᖕᒋᓐᓂᒃ. ᓯᓕᒃᑲᓐᓂᖅᑕᐅᖅ, ᐊᔾᔨᐅᙱᑎᑦᑎᔪᑕᐅᕙᒃᑐᑦ ᓴᓇᔭᐅᒪᔪᓐᓃᕐᓗᑎᒃ ᒐᕙᒪᐅᑎᓕᕆᔨᓄᐊᖅᑕᐅᕙᒃᑐᑦ, ᒪᓕᒐᑎᒍᑦ ᑲᒪᕕᒋᔪᓐᓇᖅᑕᖕᒐᒎᕈᑕᐅᕙᒃᑐᑦ ᐅᕝᕙᓘᓐᓃᑦ ᓯᕐᓚᔪᐊᕐᒥᐅᓄᑦ ᐊᑐᒐᐅᓕᖅᑕᖅᑐᑦ ᑎᑎᕋᕐᓯᒪᔪᑦ ᓄᓇᖓᓄᑦ ᓄᓇᖁᑎᒋᔭᐅᔪᒧᓪᓘᓐᓃᑦ ᓇᓪᓕᐊᕐᓄᑦ ᑖᓐᓇ ᐃᓄᒃᑐᖓ ᐊᑕᓪᓚᑦᑖᕐᒪᖔᑦ ᐸᓪᓗ, ᐃᓄᑑᔾᔨᓂᐊᕐᒪᖔᑦ, ᐊᖏᒐᒃᓴᐅᖕᒪᖔᑦ, ᓇᖕᒥᓂᖅ ᒐᕙᓕᐅᕿᒪᙱᑦᑑᖕᒪᖔᑦ ᐅᕝᕙᓘᓐᓃᑦ ᐅᖃᕐᓯᒪᓂᖓ ᓇᓪᓕᐊᑐᐃᓐᓇᖅ ᐊᓯᖏᑎᒍᑦ ᑭᒡᓕᓕᐅᕈᑕᐅᓯᒪᖃᑦᑕᖅᑐᑦ ᐱᖁᔭᕐᔪᐊᑦ ᐊᑕᔪᑐᖃᐃᑦ ᒪᓕᒃᖢᒋᑦ.</p>
+</div>
+ </section>
+  
+
+
+
+
+<section id="history">
+<h2>Usage &amp; history</h2>
+    <p>From <a href="http://scriptsource.org/scr/Arab">Scriptsource</a>: </p>
+
+
+<details>
+<summary>From <a href="http://scriptsource.org/scr/Bali">Scriptsource</a>:</summary>
+<blockquote>
+<p>The Vai script was created by Mɔmɔlu Duwalu Bukɛlɛ in the 1830s to represent the Vai language spoken by about 104,000 in what is now Liberia, and about 15,000 in Sierra Leone. Tradition states that, while Bukɛlɛ was working as a messenger on a Portuguese ship, he became curious about the written messages he carried, which enabled the recipients to understand the captain's wishes without hearing his spoken words. When he returned home, he had a dream in which a tall white man revealed a number of symbols which could be used to write the Vai language. Upon waking, he wrote these symbols down. </p>
+<p>An alternative theory proposes that the Vai syllabary was influenced by the Cherokee syllabary, to which it bears remarkable similarities. After the creation of the Cherokee syllabary in the early 1800s a number of Cherokee emigrated to West Africa. One particular Cherokee man, Austin Curtis, married into an influential family and became a chief himself. It is proposed that he might have contributed to the creation of the Vai script and influenced its form. </p>
+<p>In the 1960s Momolu Massaquoi at the University of Liberia proposed further minor modifications to some characters, to enable every legitimate syllable to be represented, and, largely as a result of his efforts and those of August Klingenheben, in 1962 the script was standardised. </p>
+<p>The script comprises 212 symbols, with every syllable in use being represented by a unique character. Forty or fifty of these characters are in much wider use than the others; many literates in fact find fifty characters adequate for their purposes. Although some glyphs representing a common place of articulation are related, there is no referable derivation of form or predictable application of diacritics. Tone is not represented, although Vai is a tonal language. ...</p>
+<p>Bukɛlɛ established schools throughout the Vai-speaking region to propagate his script, and literacy became widespread; by 1899 most of the Vai were said to be literate. During the C20th a lengthy manuscript was published, detailing clan histories, Biblical and Qur'anic translations, and folktales. There continues to be a market for Vai literature; The Institute for Liberian Languages publishes in the script. It is also widely used in commerce, as well as for newspapers, tombstones and in traditional rituals.</p>
+<p>&nbsp;</p>
+</blockquote>
+</details>
+
+
+
+<details>
+<summary>From <a href="https://en.wikipedia.org/wiki/Canadian_Aboriginal_syllabics">Wikipedia</a>:</summary>
+<blockquote>
+<p>Canadian syllabics are currently used to write all of the Cree languages from Naskapi (spoken in Quebec) to the Rocky Mountains, including Eastern Cree, Woods Cree, Swampy Cree and Plains Cree. They are also used to write Inuktitut in the eastern Canadian Arctic; there they are co-official with the Latin script in the territory of Nunavut. They are used regionally for the other large Canadian Algonquian language, Ojibwe, as well as for Blackfoot, where they are obsolete. Among the Athabaskan languages further to the west, syllabics have been used at one point or another to write Dakelh (Carrier), Chipewyan, Slavey, Tłı̨chǫ (Dogrib) and Dane-zaa (Beaver). Syllabics have occasionally been used in the United States by communities that straddle the border, but are principally a Canadian phenomenon.</p>
+</blockquote>
+</details>
+</section>
+
+
+
+
+
+  <div id="features">
+  <table>
+      <tbody id="featureTableBody">
+     </tbody>
+  </table>
+    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+</div>
+
+
+
+
+<section id="type">
+<h2>Basic features</h2>
+    <p>The Unified Canadian Aboriginal Syllabary is, as the name says, a <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#syllabary">syllabary</a></span>, ie. each symbol typically represents both a consonant and a vowel.  See the table to the right for a brief overview of features for the modern Eastern Canadian Inuktitut orthography.</p>
+</section>
+
+
+
+
+
+
+<section id="direction">
+<h2>Text direction</h2>
+    <p>The UCAS script is written horizontally and left to right.</p>
+  </section>
+ 
+  
+  
+  
+<section id="structure">
+<h2>Structure</h2>
+
+<p>The following indicates the syllabic structure of Inuktitut syllables.<a class="fnref" href="http://www.inuktitutcomputing.ca/Technocrats/ILFT_1.html">m</a></p>
+<p><code>(C)V(V)(C)</code></p>
+<p>A <code>VV</code> sequence may consist of a long vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="ike">ᐆᒪ</span> <span class="trans">ūmᵃ</span> <span class="ipa">uːma</span> <span class="meaning">this one's</span></span>, or a sequence of 2 different vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="ike">ᑕᐃᓇ</span> <span class="trans">tᵃinᵃ</span> <span class="ipa">taina</span> <span class="meaning">that one</span></span>. There a usually never more than two consecutive vowels</p>
+<p>Where a syllable with a closing consonant is followed by a syllable with an opening consonant, a cluster arises, eg. <span class="charExample" translate="no"><span class="ex" lang="ike">ᑐᒃᑐ</span> <span class="trans">tᵘktᵘ</span> <span class="ipa">tuktu</span> <span class="meaning">caribou</span></span>. Clusters are usually only 2 consonants in length. Special final consonant signs are used at the end of a syllable, or in other words at the beginning of a cluster.</p>
+<p>A single consonant in the middle of a word is the opening consonant of a syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="ike">ᐊᐃᕕᖅ</span> <span class="trans">aivⁱq</span> <span class="ipa">aiviq</span> <span class="meaning">walrus</span></span>.</p>
+</section>
+
+
+
+
+  
+<div id="showTranscriptions">
+<div>In yellow boxes, show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div>
+<label>Transliteration 
+<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
+<!--div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div-->
+</div>
+   
+    
+      
+
+
+
+<section id="phonology">
+<h2>Phonology</h2>
+   
+<section id="vowelPhonemes">
+<h3>Vowel sounds</h3>
+
+<p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+
+<section id="plain_vowels">
+<h4>Plain vowels</h4>
+
+<div style="margin-left: 7.5%;">
+<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="white"/>
+      <feComposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <!--image xlink:href="images/vowelgrid.gif" alt="Les caractères sont associés à des octets." x="0" y="0" width="400" height="200"></image--> 
+  <use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -->
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+  
+   <!-- mid close -->
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -->
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- open -->
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+  
+  <!-- close -->
+  <text x="32" y="15" class="ipa" text-anchor="end">i iː</text> 
+<text x="250" y="15" class="ipa">u uː</text> 
+
+  <!-- open -->
+<text x="106" y="195" class="ipa" text-anchor="end">a aː</text> 
+</svg>
+</div>
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Inuit_phonology">w</a>.</p>
+</section>
+</section>
+
+
+
+
+
+<section id="consonantSounds">
+<h3>Consonant sounds</h3>
+
+<p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+
+<table class="ipaTable">
+<thead>
+<tr>
+<th></th>
+<th>labial </th>
+<th>dental </th>
+<th>alveolar </th>
+<th>post-<br>
+alveolar</th>
+<th>palatal </th>
+<th>velar </th>
+<th>uvular</th>
+<th>glottal </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>stop</th>
+<td><span class="ipa">p</span></td>
+<td><span class="ipa">t</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="allophone">ɟ</span></td>
+<td><span class="ipa">k</span></td>
+<td><span class="ipa">q</span></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>fricative </th>
+<td><span class="ipa">v</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">s</span><br/>
+<span class="ipa">ɬ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɣ</span></td>
+<td><span class="ipa">ʁ</span></td>
+<td><span class="ipa">h</span></td>
+</tr>
+<tr>
+<th>nasal</th>
+<td><span class="ipa">m</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">n</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ŋ</span></td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>approximant</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">l</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">j</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th></th>
+<td class="mouth"><a href="../common/mouth/mouth_labial.png" target="_blank"><img src="../common/mouth/mouth_small_labial.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_dental.png" target="_blank"><img src="../common/mouth/mouth_small_dental.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_alveolar.png" target="_blank"><img src="../common/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_postalveolar.png" target="_blank"><img src="../common/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_palatal.png" target="_blank"><img src="../common/mouth/mouth_small_palatal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_velar.png" target="_blank"><img src="../common/mouth/mouth_small_velar.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_uvular.png" target="_blank"><img src="../common/mouth/mouth_small_uvular.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_glottal.png" target="_blank"><img src="../common/mouth/mouth_small_glottal.png" alt=" "/></a></td>
+</tr>
+</tbody>
+</table>
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Inuit_phonology">w</a>. Phones in a lighter colour are non-native or allophones.</p>
+</section>
+</section>      
+
+
+
+<section id="syllables">
+<h2>Syllables</h2>
+
+<p>The core of the script is a set of CV syllables, which are typically displayed as a table. In a few cases there are extra lines for syllables that end with nasalisation (indicated by ˜).</p>
+
+
+<section id="basic">
+<h3>Basic syllables</h3>
+
+
+<div style="display: flex; flex-direction: row; flex-wrap: wrap; margin-left: 7.5%; margin-right: 32%;">
+<table style="margin: 0;" class="syllableTable">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th><span class="ipa">e</span></th>
+<th><span class="ipa">i</span></th>
+<th><span class="ipa">a</span></th>
+<th><span class="ipa">o</span></th>
+<th><span class="ipa">u</span></th>
+<th><span class="ipa">ɔ</span></th>
+<th><span class="ipa">ɛ</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>&nbsp;</th>
+<td><span class="c" id="A500" data-c="cA500" title="U+A500: VAI SYLLABLE EE">ꔀ</span></td>
+<td><span class="c" id="A524" data-c="cA524" title="U+A524: VAI SYLLABLE I">ꔤ</span></td>
+<td><span class="c" id="A549" data-c="cA549" title="U+A549: VAI SYLLABLE A">ꕉ</span></td>
+<td><span class="c" id="A571" data-c="cA571" title="U+A571: VAI SYLLABLE OO">ꕱ</span></td>
+<td><span class="c" id="A595" data-c="cA595" title="U+A595: VAI SYLLABLE U">ꖕ</span></td>
+<td><span class="c" id="A5BA" data-c="cA5BA" title="U+A5BA: VAI SYLLABLE O">ꖺ</span></td>
+<td><span class="c" id="A5E1" data-c="cA5E1" title="U+A5E1: VAI SYLLABLE E">ꗡ</span></td>
+</tr>
+<tr>
+<th>˜</th>
+<td><span class="c" id="A501" data-c="cA501" title="U+A501: VAI SYLLABLE EEN">ꔁ</span></td>
+<td><span class="c" id="A525" data-c="cA525" title="U+A525: VAI SYLLABLE IN">ꔥ</span></td>
+<td><span class="c" id="A54A" data-c="cA54A" title="U+A54A: VAI SYLLABLE AN">ꕊ</span></td>
+<td><span class="c" id="A572" data-c="cA572" title="U+A572: VAI SYLLABLE OON">ꕲ</span></td>
+<td><span class="c" id="A596" data-c="cA596" title="U+A596: VAI SYLLABLE UN">ꖖ</span></td>
+<td><span class="c" id="A5BB" data-c="cA5BB" title="U+A5BB: VAI SYLLABLE ON">ꖻ</span></td>
+<td><span class="c" id="A5E2" data-c="cA5E2" title="U+A5E2: VAI SYLLABLE EN">ꗢ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">ŋ</span></th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="c" id="A54B" data-c="cA54B" title="U+A54B: VAI SYLLABLE NGAN">ꕋ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="c" id="A5BC" data-c="cA5BC" title="U+A5BC: VAI SYLLABLE NGON">ꖼ</span></td>
+<td> ɡ</td>
+</tr>
+<tr>
+<th><span class="ipa">h</span></th>
+<td><span class="c" id="A502" data-c="cA502" title="U+A502: VAI SYLLABLE HEE">ꔂ</span></td>
+<td><span class="c" id="A526" data-c="cA526" title="U+A526: VAI SYLLABLE HI">ꔦ</span></td>
+<td><span class="c" id="A54C" data-c="cA54C" title="U+A54C: VAI SYLLABLE HA">ꕌ</span></td>
+<td><span class="c" id="A573" data-c="cA573" title="U+A573: VAI SYLLABLE HOO">ꕳ</span></td>
+<td><span class="c" id="A597" data-c="cA597" title="U+A597: VAI SYLLABLE HU">ꖗ</span></td>
+<td><span class="c" id="A5BD" data-c="cA5BD" title="U+A5BD: VAI SYLLABLE HO">ꖽ</span></td>
+<td><span class="c" id="A5E4" data-c="cA5E4" title="U+A5E4: VAI SYLLABLE HE">ꗤ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">h˜</span></th>
+<td>&nbsp;</td>
+<td><span class="c" id="A527" data-c="cA527" title="U+A527: VAI SYLLABLE HIN">ꔧ</span></td>
+<td><span class="c" id="A54D" data-c="cA54D" title="U+A54D: VAI SYLLABLE HAN">ꕍ</span></td>
+<td>&nbsp;</td>
+<td><span class="c" id="A598" data-c="cA598" title="U+A598: VAI SYLLABLE HUN">ꖘ</span></td>
+<td><span class="c" id="A5BE" data-c="cA5BE" title="U+A5BE: VAI SYLLABLE HON">ꖾ</span></td>
+<td><span class="c" id="A5E5" data-c="cA5E5" title="U+A5E5: VAI SYLLABLE HEN">ꗥ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">w</span></th>
+<td><span class="c" id="A503" data-c="cA503" title="U+A503: VAI SYLLABLE WEE">ꔃ</span></td>
+<td><span class="c" id="A528" data-c="cA528" title="U+A528: VAI SYLLABLE WI">ꔨ</span></td>
+<td><span class="c" id="A54E" data-c="cA54E" title="U+A54E: VAI SYLLABLE WA">ꕎ</span></td>
+<td><span class="c" id="A574" data-c="cA574" title="U+A574: VAI SYLLABLE WOO">ꕴ</span></td>
+<td><span class="c" id="A599" data-c="cA599" title="U+A599: VAI SYLLABLE WU">ꖙ</span></td>
+<td><span class="c" id="A5BF" data-c="cA5BF" title="U+A5BF: VAI SYLLABLE WO">ꖿ</span></td>
+<td><span class="c" id="A5E6" data-c="cA5E6" title="U+A5E6: VAI SYLLABLE WE">ꗦ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">w˜</span></th>
+<td><span class="c" id="A504" data-c="cA504" title="U+A504: VAI SYLLABLE WEEN">ꔄ</span></td>
+<td><span class="c" id="A529" data-c="cA529" title="U+A529: VAI SYLLABLE WIN">ꔩ</span></td>
+<td><span class="c" id="A54F" data-c="cA54F" title="U+A54F: VAI SYLLABLE WAN">ꕏ</span></td>
+<td><span class="c" id="A575" data-c="cA575" title="U+A575: VAI SYLLABLE WOON">ꕵ</span></td>
+<td><span class="c" id="A59A" data-c="cA59A" title="U+A59A: VAI SYLLABLE WUN">ꖚ</span></td>
+<td><span class="c" id="A5C0" data-c="cA5C0" title="U+A5C0: VAI SYLLABLE WON">ꗀ</span></td>
+<td><span class="c" id="A5E7" data-c="cA5E7" title="U+A5E7: VAI SYLLABLE WEN">ꗧ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">p</span></th>
+<td><span class="c" id="A505" data-c="cA505" title="U+A505: VAI SYLLABLE PEE">ꔅ</span></td>
+<td><span class="c" id="A52A" data-c="cA52A" title="U+A52A: VAI SYLLABLE PI">ꔪ</span></td>
+<td><span class="c" id="A550" data-c="cA550" title="U+A550: VAI SYLLABLE PA">ꕐ</span></td>
+<td><span class="c" id="A576" data-c="cA576" title="U+A576: VAI SYLLABLE POO">ꕶ</span></td>
+<td><span class="c" id="A59B" data-c="cA59B" title="U+A59B: VAI SYLLABLE PU">ꖛ</span></td>
+<td><span class="c" id="A5C1" data-c="cA5C1" title="U+A5C1: VAI SYLLABLE PO">ꗁ</span></td>
+<td><span class="c" id="A5E8" data-c="cA5E8" title="U+A5E8: VAI SYLLABLE PE">ꗨ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">b</span></th>
+<td><span class="c" id="A506" data-c="cA506" title="U+A506: VAI SYLLABLE BHEE">ꔆ</span></td>
+<td><span class="c" id="A52B" data-c="cA52B" title="U+A52B: VAI SYLLABLE BHI">ꔫ</span></td>
+<td><span class="c" id="A551" data-c="cA551" title="U+A551: VAI SYLLABLE BHA">ꕑ</span></td>
+<td><span class="c" id="A577" data-c="cA577" title="U+A577: VAI SYLLABLE BHOO">ꕷ</span></td>
+<td><span class="c" id="A59C" data-c="cA59C" title="U+A59C: VAI SYLLABLE BHU">ꖜ</span></td>
+<td><span class="c" id="A5C2" data-c="cA5C2" title="U+A5C2: VAI SYLLABLE BHO">ꗂ</span></td>
+<td><span class="c" id="A5E9" data-c="cA5E9" title="U+A5E9: VAI SYLLABLE BHE">ꗩ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">ɓ</span></th>
+<td><span class="c" id="A507" data-c="cA507" title="U+A507: VAI SYLLABLE BEE">ꔇ</span></td>
+<td><span class="c" id="A52C" data-c="cA52C" title="U+A52C: VAI SYLLABLE BI">ꔬ</span></td>
+<td><span class="c" id="A552" data-c="cA552" title="U+A552: VAI SYLLABLE BA">ꕒ</span></td>
+<td><span class="c" id="A578" data-c="cA578" title="U+A578: VAI SYLLABLE BOO">ꕸ</span></td>
+<td><span class="c" id="A59D" data-c="cA59D" title="U+A59D: VAI SYLLABLE BU">ꖝ</span></td>
+<td><span class="c" id="A5C3" data-c="cA5C3" title="U+A5C3: VAI SYLLABLE BO">ꗃ</span></td>
+<td><span class="c" id="A5EA" data-c="cA5EA" title="U+A5EA: VAI SYLLABLE BE">ꗪ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">mɓ</span></th>
+<td><span class="c" id="A508" data-c="cA508" title="U+A508: VAI SYLLABLE MBEE">ꔈ</span></td>
+<td><span class="c" id="A52D" data-c="cA52D" title="U+A52D: VAI SYLLABLE MBI">ꔭ</span></td>
+<td><span class="c" id="A553" data-c="cA553" title="U+A553: VAI SYLLABLE MBA">ꕓ</span></td>
+<td><span class="c" id="A579" data-c="cA579" title="U+A579: VAI SYLLABLE MBOO">ꕹ</span></td>
+<td><span class="c" id="A59E" data-c="cA59E" title="U+A59E: VAI SYLLABLE MBU">ꖞ</span></td>
+<td><span class="c" id="A5C4" data-c="cA5C4" title="U+A5C4: VAI SYLLABLE MBO">ꗄ</span></td>
+<td><span class="c" id="A5EB" data-c="cA5EB" title="U+A5EB: VAI SYLLABLE MBE">ꗫ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">kp</span></th>
+<td><span class="c" id="A509" data-c="cA509" title="U+A509: VAI SYLLABLE KPEE">ꔉ</span></td>
+<td><span class="c" id="A52E" data-c="cA52E" title="U+A52E: VAI SYLLABLE KPI">ꔮ</span></td>
+<td><span class="c" id="A554" data-c="cA554" title="U+A554: VAI SYLLABLE KPA">ꕔ</span></td>
+<td><span class="c" id="A57A" data-c="cA57A" title="U+A57A: VAI SYLLABLE KPOO">ꕺ</span></td>
+<td><span class="c" id="A59F" data-c="cA59F" title="U+A59F: VAI SYLLABLE KPU">ꖟ</span></td>
+<td><span class="c" id="A5C5" data-c="cA5C5" title="U+A5C5: VAI SYLLABLE KPO">ꗅ</span></td>
+<td><span class="c" id="A5EC" data-c="cA5EC" title="U+A5EC: VAI SYLLABLE KPE">ꗬ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">kp˜</span></th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="c" id="A555" data-c="cA555" title="U+A555: VAI SYLLABLE KPAN">ꕕ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="c" id="A5ED" data-c="cA5ED" title="U+A5ED: VAI SYLLABLE KPEN">ꗭ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">mɡb</span></th>
+<td><span class="c" id="A50A" data-c="cA50A" title="U+A50A: VAI SYLLABLE MGBEE">ꔊ</span></td>
+<td><span class="c" id="A52F" data-c="cA52F" title="U+A52F: VAI SYLLABLE MGBI">ꔯ</span></td>
+<td><span class="c" id="A556" data-c="cA556" title="U+A556: VAI SYLLABLE MGBA">ꕖ</span></td>
+<td><span class="c" id="A57B" data-c="cA57B" title="U+A57B: VAI SYLLABLE MGBOO">ꕻ</span></td>
+<td><span class="c" id="A5A0" data-c="cA5A0" title="U+A5A0: VAI SYLLABLE MGBU">ꖠ</span></td>
+<td><span class="c" id="A5C6" data-c="cA5C6" title="U+A5C6: VAI SYLLABLE MGBO">ꗆ</span></td>
+<td>ɡ</td>
+</tr>
+<tr>
+<th><span class="ipa">ɡb</span></th>
+<td><span class="c" id="A50B" data-c="cA50B" title="U+A50B: VAI SYLLABLE GBEE">ꔋ</span></td>
+<td><span class="c" id="A530" data-c="cA530" title="U+A530: VAI SYLLABLE GBI">ꔰ</span></td>
+<td><span class="c" id="A557" data-c="cA557" title="U+A557: VAI SYLLABLE GBA">ꕗ</span></td>
+<td><span class="c" id="A57C" data-c="cA57C" title="U+A57C: VAI SYLLABLE GBOO">ꕼ</span></td>
+<td><span class="c" id="A5A1" data-c="cA5A1" title="U+A5A1: VAI SYLLABLE GBU">ꖡ</span></td>
+<td><span class="c" id="A5C7" data-c="cA5C7" title="U+A5C7: VAI SYLLABLE GBO">ꗇ</span></td>
+<td><span class="c" id="A5EF" data-c="cA5EF" title="U+A5EF: VAI SYLLABLE GBE">ꗯ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">ɡb˜</span></th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="c" id="A5C8" data-c="cA5C8" title="U+A5C8: VAI SYLLABLE GBON">ꗈ</span></td>
+<td><span class="c" id="A5F0" data-c="cA5F0" title="U+A5F0: VAI SYLLABLE GBEN">ꗰ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">f</span></th>
+<td><span class="c" id="A50C" data-c="cA50C" title="U+A50C: VAI SYLLABLE FEE">ꔌ</span></td>
+<td><span class="c" id="A531" data-c="cA531" title="U+A531: VAI SYLLABLE FI">ꔱ</span></td>
+<td><span class="c" id="A558" data-c="cA558" title="U+A558: VAI SYLLABLE FA">ꕘ</span></td>
+<td><span class="c" id="A57D" data-c="cA57D" title="U+A57D: VAI SYLLABLE FOO">ꕽ</span></td>
+<td><span class="c" id="A5A2" data-c="cA5A2" title="U+A5A2: VAI SYLLABLE FU">ꖢ</span></td>
+<td><span class="c" id="A5C9" data-c="cA5C9" title="U+A5C9: VAI SYLLABLE FO">ꗉ</span></td>
+<td><span class="c" id="A5F1" data-c="cA5F1" title="U+A5F1: VAI SYLLABLE FE">ꗱ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">v</span></th>
+<td><span class="c" id="A50D" data-c="cA50D" title="U+A50D: VAI SYLLABLE VEE">ꔍ</span></td>
+<td><span class="c" id="A532" data-c="cA532" title="U+A532: VAI SYLLABLE VI">ꔲ</span></td>
+<td><span class="c" id="A559" data-c="cA559" title="U+A559: VAI SYLLABLE VA">ꕙ</span></td>
+<td><span class="c" id="A57E" data-c="cA57E" title="U+A57E: VAI SYLLABLE VOO">ꕾ</span></td>
+<td><span class="c" id="A5A3" data-c="cA5A3" title="U+A5A3: VAI SYLLABLE VU">ꖣ</span></td>
+<td><span class="c" id="A5CA" data-c="cA5CA" title="U+A5CA: VAI SYLLABLE VO">ꗊ</span></td>
+<td><span class="c" id="A5F2" data-c="cA5F2" title="U+A5F2: VAI SYLLABLE VE">ꗲ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">t</span></th>
+<td><span class="c" id="A50E" data-c="cA50E" title="U+A50E: VAI SYLLABLE TEE">ꔎ</span></td>
+<td><span class="c" id="A533" data-c="cA533" title="U+A533: VAI SYLLABLE TI">ꔳ</span></td>
+<td><span class="c" id="A55A" data-c="cA55A" title="U+A55A: VAI SYLLABLE TA">ꕚ</span></td>
+<td><span class="c" id="A57F" data-c="cA57F" title="U+A57F: VAI SYLLABLE TOO">ꕿ</span></td>
+<td><span class="c" id="A5A4" data-c="cA5A4" title="U+A5A4: VAI SYLLABLE TU">ꖤ</span></td>
+<td><span class="c" id="A5CB" data-c="cA5CB" title="U+A5CB: VAI SYLLABLE TO">ꗋ</span></td>
+<td><span class="c" id="A5F3" data-c="cA5F3" title="U+A5F3: VAI SYLLABLE TE">ꗳ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">θ</span></th>
+<td><span class="c" id="A50F" data-c="cA50F" title="U+A50F: VAI SYLLABLE THEE">ꔏ</span></td>
+<td><span class="c" id="A534" data-c="cA534" title="U+A534: VAI SYLLABLE THI">ꔴ</span></td>
+<td><span class="c" id="A55B" data-c="cA55B" title="U+A55B: VAI SYLLABLE THA">ꕛ</span></td>
+<td><span class="c" id="A580" data-c="cA580" title="U+A580: VAI SYLLABLE THOO">ꖀ</span></td>
+<td><span class="c" id="A5A5" data-c="cA5A5" title="U+A5A5: VAI SYLLABLE THU">ꖥ</span></td>
+<td><span class="c" id="A5CC" data-c="cA5CC" title="U+A5CC: VAI SYLLABLE THO">ꗌ</span></td>
+<td><span class="c" id="A5F4" data-c="cA5F4" title="U+A5F4: VAI SYLLABLE THE">ꗴ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">d</span></th>
+<td><span class="c" id="A510" data-c="cA510" title="U+A510: VAI SYLLABLE DHEE">ꔐ</span></td>
+<td><span class="c" id="A535" data-c="cA535" title="U+A535: VAI SYLLABLE DHI">ꔵ</span></td>
+<td><span class="c" id="A55C" data-c="cA55C" title="U+A55C: VAI SYLLABLE DHA">ꕜ</span></td>
+<td><span class="c" id="A581" data-c="cA581" title="U+A581: VAI SYLLABLE DHOO">ꖁ</span></td>
+<td><span class="c" id="A5A6" data-c="cA5A6" title="U+A5A6: VAI SYLLABLE DHU">ꖦ</span></td>
+<td><span class="c" id="A5CD" data-c="cA5CD" title="U+A5CD: VAI SYLLABLE DHO">ꗍ</span></td>
+<td><span class="c" id="A5F5" data-c="cA5F5" title="U+A5F5: VAI SYLLABLE DHE">ꗵ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">ð</span></th>
+<td><span class="c" id="A511" data-c="cA511" title="U+A511: VAI SYLLABLE DHHEE">ꔑ</span></td>
+<td><span class="c" id="A536" data-c="cA536" title="U+A536: VAI SYLLABLE DHHI">ꔶ</span></td>
+<td><span class="c" id="A55D" data-c="cA55D" title="U+A55D: VAI SYLLABLE DHHA">ꕝ</span></td>
+<td><span class="c" id="A582" data-c="cA582" title="U+A582: VAI SYLLABLE DHHOO">ꖂ</span></td>
+<td><span class="c" id="A5A7" data-c="cA5A7" title="U+A5A7: VAI SYLLABLE DHHU">ꖧ</span></td>
+<td><span class="c" id="A5CE" data-c="cA5CE" title="U+A5CE: VAI SYLLABLE DHHO">ꗎ</span></td>
+<td><span class="c" id="A5F6" data-c="cA5F6" title="U+A5F6: VAI SYLLABLE DHHE">ꗶ</span></td>
+</tr>
+</tbody>
+</table>
+
+
+
+<table style="margin: 0;" class="syllableTable">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th><span class="ipa">e</span></th>
+<th><span class="ipa">i</span></th>
+<th><span class="ipa">a</span></th>
+<th><span class="ipa">o</span></th>
+<th><span class="ipa">u</span></th>
+<th><span class="ipa">ɔ</span></th>
+<th><span class="ipa">ɛ</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th><span class="ipa">l</span></th>
+<td><span class="c" id="A512" data-c="cA512" title="U+A512: VAI SYLLABLE LEE">ꔒ</span></td>
+<td><span class="c" id="A537" data-c="cA537" title="U+A537: VAI SYLLABLE LI">ꔷ</span></td>
+<td><span class="c" id="A55E" data-c="cA55E" title="U+A55E: VAI SYLLABLE LA">ꕞ</span></td>
+<td><span class="c" id="A583" data-c="cA583" title="U+A583: VAI SYLLABLE LOO">ꖃ</span></td>
+<td><span class="c" id="A5A8" data-c="cA5A8" title="U+A5A8: VAI SYLLABLE LU">ꖨ</span></td>
+<td><span class="c" id="A5CF" data-c="cA5CF" title="U+A5CF: VAI SYLLABLE LO">ꗏ</span></td>
+<td><span class="c" id="A5F7" data-c="cA5F7" title="U+A5F7: VAI SYLLABLE LE">ꗷ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">r</span></th>
+<td><span class="c" id="A513" data-c="cA513" title="U+A513: VAI SYLLABLE REE">ꔓ</span></td>
+<td><span class="c" id="A538" data-c="cA538" title="U+A538: VAI SYLLABLE RI">ꔸ</span></td>
+<td><span class="c" id="A55F" data-c="cA55F" title="U+A55F: VAI SYLLABLE RA">ꕟ</span></td>
+<td><span class="c" id="A584" data-c="cA584" title="U+A584: VAI SYLLABLE ROO">ꖄ</span></td>
+<td><span class="c" id="A5A9" data-c="cA5A9" title="U+A5A9: VAI SYLLABLE RU">ꖩ</span></td>
+<td><span class="c" id="A5D0" data-c="cA5D0" title="U+A5D0: VAI SYLLABLE RO">ꗐ</span></td>
+<td><span class="c" id="A5F8" data-c="cA5F8" title="U+A5F8: VAI SYLLABLE RE">ꗸ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">ɗ</span></th>
+<td><span class="c" id="A514" data-c="cA514" title="U+A514: VAI SYLLABLE DEE">ꔔ</span></td>
+<td><span class="c" id="A539" data-c="cA539" title="U+A539: VAI SYLLABLE DI">ꔹ</span></td>
+<td><span class="c" id="A560" data-c="cA560" title="U+A560: VAI SYLLABLE DA">ꕠ</span></td>
+<td><span class="c" id="A585" data-c="cA585" title="U+A585: VAI SYLLABLE DOO">ꖅ</span></td>
+<td><span class="c" id="A5AA" data-c="cA5AA" title="U+A5AA: VAI SYLLABLE DU">ꖪ</span></td>
+<td><span class="c" id="A5D1" data-c="cA5D1" title="U+A5D1: VAI SYLLABLE DO">ꗑ</span></td>
+<td><span class="c" id="A5F9" data-c="cA5F9" title="U+A5F9: VAI SYLLABLE DE">ꗹ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">nɗ</span></th>
+<td><span class="c" id="A515" data-c="cA515" title="U+A515: VAI SYLLABLE NDEE">ꔕ</span></td>
+<td><span class="c" id="A53A" data-c="cA53A" title="U+A53A: VAI SYLLABLE NDI">ꔺ</span></td>
+<td><span class="c" id="A561" data-c="cA561" title="U+A561: VAI SYLLABLE NDA">ꕡ</span></td>
+<td><span class="c" id="A586" data-c="cA586" title="U+A586: VAI SYLLABLE NDOO">ꖆ</span></td>
+<td><span class="c" id="A5AB" data-c="cA5AB" title="U+A5AB: VAI SYLLABLE NDU">ꖫ</span></td>
+<td><span class="c" id="A5D2" data-c="cA5D2" title="U+A5D2: VAI SYLLABLE NDO">ꗒ</span></td>
+<td><span class="c" id="A5FA" data-c="cA5FA" title="U+A5FA: VAI SYLLABLE NDE">ꗺ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">s</span></th>
+<td><span class="c" id="A516" data-c="cA516" title="U+A516: VAI SYLLABLE SEE">ꔖ</span></td>
+<td><span class="c" id="A53B" data-c="cA53B" title="U+A53B: VAI SYLLABLE SI">ꔻ</span></td>
+<td><span class="c" id="A562" data-c="cA562" title="U+A562: VAI SYLLABLE SA">ꕢ</span></td>
+<td><span class="c" id="A587" data-c="cA587" title="U+A587: VAI SYLLABLE SOO">ꖇ</span></td>
+<td><span class="c" id="A5AC" data-c="cA5AC" title="U+A5AC: VAI SYLLABLE SU">ꖬ</span></td>
+<td><span class="c" id="A5D3" data-c="cA5D3" title="U+A5D3: VAI SYLLABLE SO">ꗓ</span></td>
+<td><span class="c" id="A5FB" data-c="cA5FB" title="U+A5FB: VAI SYLLABLE SE">ꗻ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">ʃ</span></th>
+<td><span class="c" id="A517" data-c="cA517" title="U+A517: VAI SYLLABLE SHEE">ꔗ</span></td>
+<td><span class="c" id="A53C" data-c="cA53C" title="U+A53C: VAI SYLLABLE SHI">ꔼ</span></td>
+<td><span class="c" id="A563" data-c="cA563" title="U+A563: VAI SYLLABLE SHA">ꕣ</span></td>
+<td><span class="c" id="A588" data-c="cA588" title="U+A588: VAI SYLLABLE SHOO">ꖈ</span></td>
+<td><span class="c" id="A5AD" data-c="cA5AD" title="U+A5AD: VAI SYLLABLE SHU">ꖭ</span></td>
+<td><span class="c" id="A5D4" data-c="cA5D4" title="U+A5D4: VAI SYLLABLE SHO">ꗔ</span></td>
+<td><span class="c" id="A5FC" data-c="cA5FC" title="U+A5FC: VAI SYLLABLE SHE">ꗼ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">z</span></th>
+<td><span class="c" id="A518" data-c="cA518" title="U+A518: VAI SYLLABLE ZEE">ꔘ</span></td>
+<td><span class="c" id="A53D" data-c="cA53D" title="U+A53D: VAI SYLLABLE ZI">ꔽ</span></td>
+<td><span class="c" id="A564" data-c="cA564" title="U+A564: VAI SYLLABLE ZA">ꕤ</span></td>
+<td><span class="c" id="A589" data-c="cA589" title="U+A589: VAI SYLLABLE ZOO">ꖉ</span></td>
+<td><span class="c" id="A5AE" data-c="cA5AE" title="U+A5AE: VAI SYLLABLE ZU">ꖮ</span></td>
+<td><span class="c" id="A5D5" data-c="cA5D5" title="U+A5D5: VAI SYLLABLE ZO">ꗕ</span></td>
+<td><span class="c" id="A5FD" data-c="cA5FD" title="U+A5FD: VAI SYLLABLE ZE">ꗽ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">ʒ</span></th>
+<td><span class="c" id="A519" data-c="cA519" title="U+A519: VAI SYLLABLE ZHEE">ꔙ</span></td>
+<td><span class="c" id="A53E" data-c="cA53E" title="U+A53E: VAI SYLLABLE ZHI">ꔾ</span></td>
+<td><span class="c" id="A565" data-c="cA565" title="U+A565: VAI SYLLABLE ZHA">ꕥ</span></td>
+<td><span class="c" id="A58A" data-c="cA58A" title="U+A58A: VAI SYLLABLE ZHOO">ꖊ</span></td>
+<td><span class="c" id="A5AF" data-c="cA5AF" title="U+A5AF: VAI SYLLABLE ZHU">ꖯ</span></td>
+<td><span class="c" id="A5D6" data-c="cA5D6" title="U+A5D6: VAI SYLLABLE ZHO">ꗖ</span></td>
+<td><span class="c" id="A5FE" data-c="cA5FE" title="U+A5FE: VAI SYLLABLE ZHE">ꗾ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">ʧ</span></th>
+<td><span class="c" id="A51A" data-c="cA51A" title="U+A51A: VAI SYLLABLE CEE">ꔚ</span></td>
+<td><span class="c" id="A53F" data-c="cA53F" title="U+A53F: VAI SYLLABLE CI">ꔿ</span></td>
+<td><span class="c" id="A566" data-c="cA566" title="U+A566: VAI SYLLABLE CA">ꕦ</span></td>
+<td><span class="c" id="A58B" data-c="cA58B" title="U+A58B: VAI SYLLABLE COO">ꖋ</span></td>
+<td><span class="c" id="A5B0" data-c="cA5B0" title="U+A5B0: VAI SYLLABLE CU">ꖰ</span></td>
+<td><span class="c" id="A5D7" data-c="cA5D7" title="U+A5D7: VAI SYLLABLE CO">ꗗ</span></td>
+<td><span class="c" id="A5FF" data-c="cA5FF" title="U+A5FF: VAI SYLLABLE CE">ꗿ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">ʤ</span></th>
+<td><span class="c" id="A51B" data-c="cA51B" title="U+A51B: VAI SYLLABLE JEE">ꔛ</span></td>
+<td><span class="c" id="A540" data-c="cA540" title="U+A540: VAI SYLLABLE JI">ꕀ</span></td>
+<td><span class="c" id="A567" data-c="cA567" title="U+A567: VAI SYLLABLE JA">ꕧ</span></td>
+<td><span class="c" id="A58C" data-c="cA58C" title="U+A58C: VAI SYLLABLE JOO">ꖌ</span></td>
+<td><span class="c" id="A5B1" data-c="cA5B1" title="U+A5B1: VAI SYLLABLE JU">ꖱ</span></td>
+<td><span class="c" id="A5D8" data-c="cA5D8" title="U+A5D8: VAI SYLLABLE JO">ꗘ</span></td>
+<td><span class="c" id="A600" data-c="cA600" title="U+A600: VAI SYLLABLE JE">ꘀ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">nʤ</span></th>
+<td><span class="c" id="A51C" data-c="cA51C" title="U+A51C: VAI SYLLABLE NJEE">ꔜ</span></td>
+<td><span class="c" id="A541" data-c="cA541" title="U+A541: VAI SYLLABLE NJI">ꕁ</span></td>
+<td><span class="c" id="A568" data-c="cA568" title="U+A568: VAI SYLLABLE NJA">ꕨ</span></td>
+<td><span class="c" id="A58D" data-c="cA58D" title="U+A58D: VAI SYLLABLE NJOO">ꖍ</span></td>
+<td><span class="c" id="A5B2" data-c="cA5B2" title="U+A5B2: VAI SYLLABLE NJU">ꖲ</span></td>
+<td><span class="c" id="A5D9" data-c="cA5D9" title="U+A5D9: VAI SYLLABLE NJO">ꗙ</span></td>
+<td><span class="c" id="A601" data-c="cA601" title="U+A601: VAI SYLLABLE NJE">ꘁ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">j</span></th>
+<td><span class="c" id="A51D" data-c="cA51D" title="U+A51D: VAI SYLLABLE YEE">ꔝ</span></td>
+<td><span class="c" id="A542" data-c="cA542" title="U+A542: VAI SYLLABLE YI">ꕂ</span></td>
+<td><span class="c" id="A569" data-c="cA569" title="U+A569: VAI SYLLABLE YA">ꕩ</span></td>
+<td><span class="c" id="A58E" data-c="cA58E" title="U+A58E: VAI SYLLABLE YOO">ꖎ</span></td>
+<td><span class="c" id="A5B3" data-c="cA5B3" title="U+A5B3: VAI SYLLABLE YU">ꖳ</span></td>
+<td><span class="c" id="A5DA" data-c="cA5DA" title="U+A5DA: VAI SYLLABLE YO">ꗚ</span></td>
+<td><span class="c" id="A602" data-c="cA602" title="U+A602: VAI SYLLABLE YE">ꘂ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">k</span></th>
+<td><span class="c" id="A51E" data-c="cA51E" title="U+A51E: VAI SYLLABLE KEE">ꔞ</span></td>
+<td><span class="c" id="A543" data-c="cA543" title="U+A543: VAI SYLLABLE KI">ꕃ</span></td>
+<td><span class="c" id="A56A" data-c="cA56A" title="U+A56A: VAI SYLLABLE KA">ꕪ</span></td>
+<td><span class="c" id="A58F" data-c="cA58F" title="U+A58F: VAI SYLLABLE KOO">ꖏ</span></td>
+<td><span class="c" id="A5B4" data-c="cA5B4" title="U+A5B4: VAI SYLLABLE KU">ꖴ</span></td>
+<td><span class="c" id="A5DB" data-c="cA5DB" title="U+A5DB: VAI SYLLABLE KO">ꗛ</span></td>
+<td><span class="c" id="A603" data-c="cA603" title="U+A603: VAI SYLLABLE KE">ꘃ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">k˜</span></th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="c" id="A56B" data-c="cA56B" title="U+A56B: VAI SYLLABLE KAN">ꕫ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th><span class="ipa">ŋɡ</span></th>
+<td><span class="c" id="A51F" data-c="cA51F" title="U+A51F: VAI SYLLABLE NGGEE">ꔟ</span></td>
+<td><span class="c" id="A544" data-c="cA544" title="U+A544: VAI SYLLABLE NGGI">ꕄ</span></td>
+<td><span class="c" id="A56C" data-c="cA56C" title="U+A56C: VAI SYLLABLE NGGA">ꕬ</span></td>
+<td><span class="c" id="A590" data-c="cA590" title="U+A590: VAI SYLLABLE NGGOO">ꖐ</span></td>
+<td><span class="c" id="A5B5" data-c="cA5B5" title="U+A5B5: VAI SYLLABLE NGGU">ꖵ</span></td>
+<td><span class="c" id="A5DC" data-c="cA5DC" title="U+A5DC: VAI SYLLABLE NGGO">ꗜ</span></td>
+<td><span class="c" id="A604" data-c="cA604" title="U+A604: VAI SYLLABLE NGGE">ꘄ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">ŋɡ˜</span></th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="c" id="A605" data-c="cA605" title="U+A605: VAI SYLLABLE NGGEN">ꘅ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">ɡ</span></th>
+<td><span class="c" id="A520" data-c="cA520" title="U+A520: VAI SYLLABLE GEE">ꔠ</span></td>
+<td><span class="c" id="A545" data-c="cA545" title="U+A545: VAI SYLLABLE GI">ꕅ</span></td>
+<td><span class="c" id="A56D" data-c="cA56D" title="U+A56D: VAI SYLLABLE GA">ꕭ</span></td>
+<td><span class="c" id="A591" data-c="cA591" title="U+A591: VAI SYLLABLE GOO">ꖑ</span></td>
+<td><span class="c" id="A5B6" data-c="cA5B6" title="U+A5B6: VAI SYLLABLE GU">ꖶ</span></td>
+<td><span class="c" id="A5DD" data-c="cA5DD" title="U+A5DD: VAI SYLLABLE GO">ꗝ</span></td>
+<td><span class="c" id="A606" data-c="cA606" title="U+A606: VAI SYLLABLE GE">ꘆ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">ɡ</span></th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="c" id="A607" data-c="cA607" title="U+A607: VAI SYLLABLE GEN">ꘇ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">m</span></th>
+<td><span class="c" id="A521" data-c="cA521" title="U+A521: VAI SYLLABLE MEE">ꔡ</span></td>
+<td><span class="c" id="A546" data-c="cA546" title="U+A546: VAI SYLLABLE MI">ꕆ</span></td>
+<td><span class="c" id="A56E" data-c="cA56E" title="U+A56E: VAI SYLLABLE MA">ꕮ</span></td>
+<td><span class="c" id="A592" data-c="cA592" title="U+A592: VAI SYLLABLE MOO">ꖒ</span></td>
+<td><span class="c" id="A5B7" data-c="cA5B7" title="U+A5B7: VAI SYLLABLE MU">ꖷ</span></td>
+<td><span class="c" id="A5DE" data-c="cA5DE" title="U+A5DE: VAI SYLLABLE MO">ꗞ</span></td>
+<td><span class="c" id="A608" data-c="cA608" title="U+A608: VAI SYLLABLE ME">ꘈ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">n</span></th>
+<td><span class="c" id="A522" data-c="cA522" title="U+A522: VAI SYLLABLE NEE">ꔢ</span></td>
+<td><span class="c" id="A547" data-c="cA547" title="U+A547: VAI SYLLABLE NI">ꕇ</span></td>
+<td><span class="c" id="A56F" data-c="cA56F" title="U+A56F: VAI SYLLABLE NA">ꕯ</span></td>
+<td><span class="c" id="A593" data-c="cA593" title="U+A593: VAI SYLLABLE NOO">ꖓ</span></td>
+<td><span class="c" id="A5B8" data-c="cA5B8" title="U+A5B8: VAI SYLLABLE NU">ꖸ</span></td>
+<td><span class="c" id="A5DF" data-c="cA5DF" title="U+A5DF: VAI SYLLABLE NO">ꗟ</span></td>
+<td><span class="c" id="A609" data-c="cA609" title="U+A609: VAI SYLLABLE NE">ꘉ</span></td>
+</tr>
+<tr>
+<th><span class="ipa">ɲ</span></th>
+<td><span class="c" id="A523" data-c="cA523" title="U+A523: VAI SYLLABLE NYEE">ꔣ</span></td>
+<td><span class="c" id="A548" data-c="cA548" title="U+A548: VAI SYLLABLE NYI">ꕈ</span></td>
+<td><span class="c" id="A570" data-c="cA570" title="U+A570: VAI SYLLABLE NYA">ꕰ</span></td>
+<td><span class="c" id="A594" data-c="cA594" title="U+A594: VAI SYLLABLE NYOO">ꖔ</span></td>
+<td><span class="c" id="A5B9" data-c="cA5B9" title="U+A5B9: VAI SYLLABLE NYU">ꖹ</span></td>
+<td><span class="c" id="A5E0" data-c="cA5E0" title="U+A5E0: VAI SYLLABLE NYO">ꗠ</span></td>
+<td><span class="c" id="A60A" data-c="cA60A" title="U+A60A: VAI SYLLABLE NYE">ꘊ</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+<p>&quot;Forty or fifty of these characters are in much wider use than the others; many literates in fact find fifty characters adequate for their purposes.&quot;<a class="fnref" href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Vaii">s</a></p>
+
+<p>&quot;The script comprises 212 symbols, with every syllable in use being represented by a unique character. ... Although some glyphs representing a common place of articulation are related, there is no referable derivation of form or predictable application of diacritics.&quot;<a class="fnref" href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Vaii">s</a></p>
+
+<details>
+<summary>Show syllables as a list</summary>
+<figure class="characterBox auto" data-cols="ipa">ꔀ␣ꔁ␣ꔂ␣ꔃ␣ꔄ␣ꔅ␣ꔆ␣ꔇ␣ꔈ␣ꔉ␣ꔊ␣ꔋ␣ꔌ␣ꔍ␣ꔎ␣ꔏ␣ꔐ␣ꔑ␣ꔒ␣ꔓ␣ꔔ␣ꔕ␣ꔖ␣ꔗ␣ꔘ␣ꔙ␣ꔚ␣ꔛ␣ꔜ␣ꔝ␣ꔞ␣ꔟ␣ꔠ␣ꔡ␣ꔢ␣ꔣ␣ꔤ␣ꔥ␣ꔦ␣ꔧ␣ꔨ␣ꔩ␣ꔪ␣ꔫ␣ꔬ␣ꔭ␣ꔮ␣ꔯ␣ꔰ␣ꔱ␣ꔲ␣ꔳ␣ꔴ␣ꔵ␣ꔶ␣ꔷ␣ꔸ␣ꔹ␣ꔺ␣ꔻ␣ꔼ␣ꔽ␣ꔾ␣ꔿ␣ꕀ␣ꕁ␣ꕂ␣ꕃ␣ꕄ␣ꕅ␣ꕆ␣ꕇ␣ꕈ␣ꕉ␣ꕊ␣ꕋ␣ꕌ␣ꕍ␣ꕎ␣ꕏ␣ꕐ␣ꕑ␣ꕒ␣ꕓ␣ꕔ␣ꕕ␣ꕖ␣ꕗ␣ꕘ␣ꕙ␣ꕚ␣ꕛ␣ꕜ␣ꕝ␣ꕞ␣ꕟ␣ꕠ␣ꕡ␣ꕢ␣ꕣ␣ꕤ␣ꕥ␣ꕦ␣ꕧ␣ꕨ␣ꕩ␣ꕪ␣ꕫ␣ꕬ␣ꕭ␣ꕮ␣ꕯ␣ꕰ␣ꕱ␣ꕲ␣ꕳ␣ꕴ␣ꕵ␣ꕶ␣ꕷ␣ꕸ␣ꕹ␣ꕺ␣ꕻ␣ꕼ␣ꕽ␣ꕾ␣ꕿ␣ꖀ␣ꖁ␣ꖂ␣ꖃ␣ꖄ␣ꖅ␣ꖆ␣ꖇ␣ꖈ␣ꖉ␣ꖊ␣ꖋ␣ꖌ␣ꖍ␣ꖎ␣ꖏ␣ꖐ␣ꖑ␣ꖒ␣ꖓ␣ꖔ␣ꖕ␣ꖖ␣ꖗ␣ꖘ␣ꖙ␣ꖚ␣ꖛ␣ꖜ␣ꖝ␣ꖞ␣ꖟ␣ꖠ␣ꖡ␣ꖢ␣ꖣ␣ꖤ␣ꖥ␣ꖦ␣ꖧ␣ꖨ␣ꖩ␣ꖪ␣ꖫ␣ꖬ␣ꖭ␣ꖮ␣ꖯ␣ꖰ␣ꖱ␣ꖲ␣ꖳ␣ꖴ␣ꖵ␣ꖶ␣ꖷ␣ꖸ␣ꖹ␣ꖺ␣ꖻ␣ꖼ␣ꖽ␣ꖾ␣ꖿ␣ꗀ␣ꗁ␣ꗂ␣ꗃ␣ꗄ␣ꗅ␣ꗆ␣ꗇ␣ꗈ␣ꗉ␣ꗊ␣ꗋ␣ꗌ␣ꗍ␣ꗎ␣ꗏ␣ꗐ␣ꗑ␣ꗒ␣ꗓ␣ꗔ␣ꗕ␣ꗖ␣ꗗ␣ꗘ␣ꗙ␣ꗚ␣ꗛ␣ꗜ␣ꗝ␣ꗞ␣ꗟ␣ꗠ␣ꗡ␣ꗢ␣ꗣ␣ꗤ␣ꗥ␣ꗦ␣ꗧ␣ꗨ␣ꗩ␣ꗪ␣ꗫ␣ꗬ␣ꗭ␣ꗮ␣ꗯ␣ꗰ␣ꗱ␣ꗲ␣ꗳ␣ꗴ␣ꗵ␣ꗶ␣ꗷ␣ꗸ␣ꗹ␣ꗺ␣ꗻ␣ꗼ␣ꗽ␣ꗾ␣ꗿ␣ꘀ␣ꘁ␣ꘂ␣ꘃ␣ꘄ␣ꘅ␣ꘆ␣ꘇ␣ꘈ␣ꘉ␣ꘊ</figure>
+</details>
+
+</section>
+
+
+
+
+
+<section id="syllfinal">
+<h3>Syllable-final nasal</h3>
+
+<figure class="characterBox auto" data-cols="trans">&#xA60B;</figure>
+
+<p><span class="codepoint" translate="no"><span lang="vai">&#xA60B;</span> [<a href="/scripts/vai/block#charA60B"><span class="uname">U+A60B VAI SYLLABLE NG</span></a>]</span> represents a syllable-final nasal.</p>
+</section>
+
+
+
+
+
+<section id="vowelextension">
+<h3>Vowel lengthening</h3>
+
+<figure class="characterBox auto" data-cols="trans">&#xA60C;</figure>
+
+<p><span class="codepoint" translate="no"><span lang="vai">&#xA60C;</span> [<a href="/scripts/vai/block#charA60C"><span class="uname">U+A60C VAI SYLLABLE LENGTHENER</span></a>]</span> indicates that the vowel in the preceding syllable character should be lengthened.</p>
+<p>Alternatively, &quot;A long vowel may also be indicated by following the syllable with a syllable of the same vowel starting with h.&quot;<a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a> (By introducing ambiguity, texts using this approach are difficult to automatically convert from a Latin transcription to Vai characters.)</p>
+</section>
+
+
+
+
+
+<section id="historical">
+<h3>Historical syllables</h3>
+<p>&quot;One of Momolu Duwalu Bukele's cousins, Kaali Bala Ndole Wano, wrote a long manuscript around 1845 called the Book of Ndole or Book of Rora under the pen name Rora. This roughly fifty page manuscript contains several now obsolete symbols&quot;<a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a></p>
+
+<figure class="archaicBox auto" data-cols="ipa,trans">ꘐ␣ꘑ␣ꘒ␣ꘪ␣ꘫ</figure>
+
+<p>&quot;Originally there were separate glyphs for syllables ending in a nasal, such as <span class="ipa">don</span>, with a long vowel, such as <span class="ipa">soo</span>, with a diphthong, such as <span class="ipa">bai</span>, as well as <span class="ipa">bili</span> and <span class="ipa">sɛli</span>. However, these have been dropped from the modern script.&quot;<a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a></p>
+
+</section>
+
+</section>
+
+
+
+
+
+  
+<section id="logograms">
+<h2>Logograms</h2>
+<p>&quot;The oldest Vai texts used various logograms. Of these, only <span class="codepoint" translate="no"><span lang="vai">&#xA613;</span> [<a href="/scripts/vai/block#charA613"><span class="uname">U+A613 VAI SYMBOL FEENG</span></a>]</span> and <span class="codepoint" translate="no"><span lang="vai">&#xA618;</span> [<a href="/scripts/vai/block#charA618"><span class="uname">U+A618 VAI SYMBOL FAA</span></a>]</span> are still in use.&quot;<a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a></p>
+
+<figure class="auxiliaryBox auto" data-notes="thing,die/kill" data-cols="ipa,trans">ꘓ␣ꘘ</figure>
+
+<p>Others are:</p>
+<figure class="archaicBox auto" data-notes="foot,island,cow/case of gin,finished,go/carry/journey,hear/understand,enter,head/able to,named,small,slave" data-cols="ipa,trans">ꘔ␣ꘕ␣ꘖ␣ꘗ␣ꘙ␣ꘚ␣ꘛ␣ꘜ␣ꘝ␣ꘞ␣ꘟ</figure>
+
+<p>Three more characters, used to represent logograms in the book of Ndole, now just represent ordinary syllable characters.</p>
+<figure class="auto" data-notes="child/small,man,in" data-cols="ipa,trans">ꔔ␣ꕪ␣ꗑ</figure>
+
+</section>
+  
+
+
+
+
+  <section id="tones">
+<h2>Tones</h2>
+  <p>Although Vai is a tonal language, tone is not represented in the script. <a class="fnref" href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Vaii">s</a></p>
+</section>
+
+
+
+
+
+<section id="punctuation">
+<h2>Punctuation</h2>
+<p>Vai uses european punctuation, but also has a few distinct punctuation marks of its own. These are not listed in CLDR, nor used in UDHR, which uses european punctuation.</p>
+
+<figure class="auxiliaryBox auto" data-cols="trans">꘍␣꘎␣꘏␣꘎꘎</figure>
+
+
+</section>
+
+
+
+
+
+<section id="digits">
+<h2>Numbers</h2>
+<p>Vai uses european digits. &quot;In the 1920s Vai-specific digits were developed but never adopted.&quot;<a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a></p>
+
+<figure class="otherBox auto" data-cols="trans">꘠␣꘡␣꘢␣꘣␣꘤␣꘥␣꘦␣꘧␣꘨␣꘩</figure>
+
+</section>
+
+
+
+
+
+<section id="shaping">
+<h2>Glyph shaping &amp; positioning</h2>
+
+<p>Vai has no context-based shaping or positioning, and is not cursive. There is no case, or any other character transform that applications need to support.</p>
+<p>You can experiment with examples using the <a href="/pickers/vai/">Vai picker</a>.</p>
+
+
+
+
+<section id="fontstyle">
+<h3>Font styles</h3>
+<p class="prompts"> Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</p>
+</section>
+
+
+
+
+  
+<section id="baselines">
+<h3>Baselines &amp; inline alignment</h3>
+<p class="prompts">Does the script have special requirements for baseline alignment between mixed scripts and in general?</p>
+</section>
+</section>
+
+
+
+
+
+
+<section id="boundaries">
+<h2>Structural boundaries &amp; markers</h2>  
+  
+<section id="graphemes">
+<h3>Grapheme boundaries</h3>
+ <p class="explanatoryintro">A grapheme is a user-perceived unit of text. The Unicode Standard uses generalised rules to define 'grapheme clusters', which approximate the likely grapheme boundaries in a writing system.</p>
+
+<p class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements when double-clicking on the text, or moving through the text with the cursor, or backspace, etc.? </p>
+</section>
+
+
+
+
+  
+<section id="word">
+<h3>Word boundaries</h3>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+
+<p>Words are separated by spaces, however 'words' in Inuktitut can be quite complicated and often long, eg. <span class="trans">parimunngauniralauqsimanngittunga</span> means <span class="meaning">I never said I wanted to go to Paris</span>.<a class="fnref" href="http://www.inuktitutcomputing.ca/Technocrats/ILFT_1.html">m</a></p>
+</section>
+
+
+
+
+  
+<section id="phrase">
+<h3>Phrase &amp; section boundaries</h3>
+<p class="prompts">What characters are used to indicate the boundaries of phrases, sentences, and sections?</p>
+<p>Vai  uses western  punctuation and  a few indigenous punctuation marks listed above.</p>
+</section>
+
+
+
+
+
+<section id="bracketing">
+<h3>Bracketing &amp; parentheses</h3>
+<p class="prompts">What characters are used as parentheses, or to bracket information?</p>
+</section>
+
+
+
+
+  
+<section id="quotations">
+<h3>Quotations</h3>
+<p class="prompts">What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue?</p>
+</section>
+
+
+
+
+  
+<section id="hyphens">
+<h3>Abbreviation, ellipsis &amp; repetition</h3>
+<p class="prompts">What characters are used to indicate abbreviation, ellipsis &amp; repetition?</p>
+</section>
+
+
+
+
+  
+<section id="emphasis">
+<h3>Emphasis &amp; text decoration</h3>
+<p class="prompts">How are emphasis and highlighting achieved? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</p>
+</section>
+
+
+
+
+  
+<section id="inlinenotes">
+<h3>Inline notes &amp; annotations</h3>
+<p class="prompts">What mechanisms, if any, are used to create <u>inline</u> notes and annotations? (For referent-type notes such as footnotes, see below.)</p>
+</section>
+</section>
+ 
+ 
+ 
+ 
+ 
+<section id="paralayout">
+<h2>Line &amp; paragraph layout</h2>
+   
+      
+<section id="linebreak">
+<h3>Line breaking &amp; hyphenation</h3>
+
+<section id="hyphenation">
+<h4>Hyphenation</h4>
+
+<p>Inuktitut uses hyphenation when words are broken at the end of a line. This is quite important for Inuktitut because the words can become very long (see <a class="secref">word</a>).</p>
+</section>
+
+
+
+<section id="linebreak_props">
+<h4>Character properties</h4>
+
+<p>Characters used for the Vai  language have the following assignments related to line-break properties.</p>
+<table><tbody>
+<tr><th class="sg">AL</th><td class="count">271</td><td class="chars"><span class="exlist" lang="vai">ꔀ ꔁ ꔂ ꔃ ꔄ ꔅ ꔆ ꔇ ꔈ ꔉ ꔊ ꔋ ꔌ ꔍ ꔎ ꔏ ꔐ ꔑ ꔒ ꔓ ꔔ ꔕ ꔖ ꔗ ꔘ ꔙ ꔚ ꔛ ꔜ ꔝ ꔞ ꔟ ꔠ ꔡ ꔢ ꔣ ꔤ ꔥ ꔦ ꔧ ꔨ ꔩ ꔪ ꔫ ꔬ ꔭ ꔮ ꔯ ꔰ ꔱ ꔲ ꔳ ꔴ ꔵ ꔶ ꔷ ꔸ ꔹ ꔺ ꔻ ꔼ ꔽ ꔾ ꔿ ꕀ ꕁ ꕂ ꕃ ꕄ ꕅ ꕆ ꕇ ꕈ ꕉ ꕊ ꕋ ꕌ ꕍ ꕎ ꕏ ꕐ ꕑ ꕒ ꕓ ꕔ ꕕ ꕖ ꕗ ꕘ ꕙ ꕚ ꕛ ꕜ ꕝ ꕞ ꕟ ꕠ ꕡ ꕢ ꕣ ꕤ ꕥ ꕦ ꕧ ꕨ ꕩ ꕪ ꕫ ꕬ ꕭ ꕮ ꕯ ꕰ ꕱ ꕲ ꕳ ꕴ ꕵ ꕶ ꕷ ꕸ ꕹ ꕺ ꕻ ꕼ ꕽ ꕾ ꕿ ꖀ ꖁ ꖂ ꖃ ꖄ ꖅ ꖆ ꖇ ꖈ ꖉ ꖊ ꖋ ꖌ ꖍ ꖎ ꖏ ꖐ ꖑ ꖒ ꖓ ꖔ ꖕ ꖖ ꖗ ꖘ ꖙ ꖚ ꖛ ꖜ ꖝ ꖞ ꖟ ꖠ ꖡ ꖢ ꖣ ꖤ ꖥ ꖦ ꖧ ꖨ ꖩ ꖪ ꖫ ꖬ ꖭ ꖮ ꖯ ꖰ ꖱ ꖲ ꖳ ꖴ ꖵ ꖶ ꖷ ꖸ ꖹ ꖺ ꖻ ꖼ ꖽ ꖾ ꖿ ꗀ ꗁ ꗂ ꗃ ꗄ ꗅ ꗆ ꗇ ꗈ ꗉ ꗊ ꗋ ꗌ ꗍ ꗎ ꗏ ꗐ ꗑ ꗒ ꗓ ꗔ ꗕ ꗖ ꗗ ꗘ ꗙ ꗚ ꗛ ꗜ ꗝ ꗞ ꗟ ꗠ ꗡ ꗢ ꗣ ꗤ ꗥ ꗦ ꗧ ꗨ ꗩ ꗪ ꗫ ꗬ ꗭ ꗮ ꗯ ꗰ ꗱ ꗲ ꗳ ꗴ ꗵ ꗶ ꗷ ꗸ ꗹ ꗺ ꗻ ꗼ ꗽ ꗾ ꗿ ꘀ ꘁ ꘂ ꘃ ꘄ ꘅ ꘆ ꘇ ꘈ ꘉ ꘊ ꘋ ꘌ ꘓ ꘘ</span></td></tr>
+<tr><th class="sg">BA</th><td class="count">2</td><td class="chars"><span class="exlist" lang="vai">꘍ ꘏</span></td></tr>
+<tr><th class="sg">EX</th><td class="count">1</td><td class="chars"><span class="exlist" lang="vai">꘎</span></td></tr>
+</tbody></table>
+
+
+
+<details id="linebreak_details">
+<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BA (break after)</a> indicates that it is normal to break after that character.&nbsp;</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#EX">EX (exclamation mark/interrogation)</a> behave like closing characters, except in relation to postfix (PO) and non-starter characters (NS).</p>
+</details>
+</section>
+</section>
+
+
+
+
+<section id="hyphenation">
+<h3>Hyphenation</h3>
+<p class="prompts">Is hyphenation used, or something else?</p>
+</section>
+
+
+
+<section id="justification">
+<h3>Text alignment &amp; justification</h3>
+<p class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</p>
+</section>
+
+
+
+
+<section id="letterspace">
+<h3>Letter spacing</h3>
+<p class="prompts">Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see above.).</p>
+</section>
+
+
+
+
+<section id="lists">
+<h3>Counters, lists, etc.</h3>
+  
+<p class="prompts">Are there list or other counter styles in use?  If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed? </p>
+</section>
+
+
+
+
+  
+<section id="initials">
+<h3>Styling initials</h3>
+<p class="prompts">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? etc.</p>
+</section>
+</section>
+ 
+ 
+ 
+ 
+ 
+ <section id="pagelayout">
+<h2>Page &amp; book layout</h2>
+ 
+ <section id="generallayout">
+<h3>General page layout &amp; progression</h3>
+ <p class="prompts">How are the main text area and ancilliary areas positioned and defined? Are there any special requirements here, such as dimensions in characters for the Japanese kihon hanmen? The book cover for scripts that are read right-to-left scripts is on the right of the spine, rather than the left.  When content can flow vertically and to the left or right, how to specify the location of objects, text, etc. relative to the flow? Do tables and grid layouts work as expected? How do columns work in vertical text? Can you mix block of vertical and horizontal text? Does text scroll in a different direction?</p>
+</section>
+<section id="grids">
+<h3>Grids &amp; tables</h3>
+<p class="prompts">Does the script have special requirements for character grids or tables?</p>
+</section>
+
+
+
+
+  
+<section id="footnotes">
+<h3>Notes, footnotes, etc</h3>
+<p class="prompts">Does the script have special requirements for notes, footnotes, endnotes or other necessary annotations of this kind? (There is a section above for purely inline annotations, such as ruby or warichu. This section is more about annotation systems that separate the reference marks and the content of the notes.)</p>
+</section>
+
+
+
+
+  
+<section id="interaction">
+<h3>Forms &amp; user interaction</h3>
+<p class="prompts">Are vertical form controls needed? Are scroll bars in an unusual position? Other special requirements for user interaction?</p>
+</section>
+
+
+
+
+  
+<section id="headers">
+<h3>Page numbering, running headers, etc</h3>
+<p class="prompts">Are there special conventions for page numbering, or the way that running headers and the like are handled?</p>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="chars">
+<h2>Character lists</h2>
+  <p>Version 12.0 of the Unicode Standard has the following blocks dedicated to the Vai script (numbers in lists are non-ASCII only):</p>
+    <ul>
+<li><a href="/uniview/?block=vai">Vai</a> <span class="charCount">287 letters,  3 punctuation :   total 300</span></li>
+</ul>
+
+
+<p>The modern Vai orthography described here uses characters from the following Unicode blocks.</p>
+
+<table>
+<tbody>
+<tr>
+<th class="sg">Vai</th>
+<td class="count">269</td><td class="chars">ꔀ ꔁ ꔂ ꔃ ꔄ ꔅ ꔆ ꔇ ꔈ ꔉ ꔊ ꔋ ꔌ ꔍ ꔎ ꔏ ꔐ ꔑ ꔒ ꔓ ꔔ ꔕ ꔖ ꔗ ꔘ ꔙ ꔚ ꔛ ꔜ ꔝ ꔞ ꔟ ꔠ ꔡ ꔢ ꔣ ꔤ ꔥ ꔦ ꔧ ꔨ ꔩ ꔪ ꔫ ꔬ ꔭ ꔮ ꔯ ꔰ ꔱ ꔲ ꔳ ꔴ ꔵ ꔶ ꔷ ꔸ ꔹ ꔺ ꔻ ꔼ ꔽ ꔾ ꔿ ꕀ ꕁ ꕂ ꕃ ꕄ ꕅ ꕆ ꕇ ꕈ ꕉ ꕊ ꕋ ꕌ ꕍ ꕎ ꕏ ꕐ ꕑ ꕒ ꕓ ꕔ ꕕ ꕖ ꕗ ꕘ ꕙ ꕚ ꕛ ꕜ ꕝ ꕞ ꕟ ꕠ ꕡ ꕢ ꕣ ꕤ ꕥ ꕦ ꕧ ꕨ ꕩ ꕪ ꕫ ꕬ ꕭ ꕮ ꕯ ꕰ ꕱ ꕲ ꕳ ꕴ ꕵ ꕶ ꕷ ꕸ ꕹ ꕺ ꕻ ꕼ ꕽ ꕾ ꕿ ꖀ ꖁ ꖂ ꖃ ꖄ ꖅ ꖆ ꖇ ꖈ ꖉ ꖊ ꖋ ꖌ ꖍ ꖎ ꖏ ꖐ ꖑ ꖒ ꖓ ꖔ ꖕ ꖖ ꖗ ꖘ ꖙ ꖚ ꖛ ꖜ ꖝ ꖞ ꖟ ꖠ ꖡ ꖢ ꖣ ꖤ ꖥ ꖦ ꖧ ꖨ ꖩ ꖪ ꖫ ꖬ ꖭ ꖮ ꖯ ꖰ ꖱ ꖲ ꖳ ꖴ ꖵ ꖶ ꖷ ꖸ ꖹ ꖺ ꖻ ꖼ ꖽ ꖾ ꖿ ꗀ ꗁ ꗂ ꗃ ꗄ ꗅ ꗆ ꗇ ꗈ ꗉ ꗊ ꗋ ꗌ ꗍ ꗎ ꗏ ꗐ ꗑ ꗒ ꗓ ꗔ ꗕ ꗖ ꗗ ꗘ ꗙ ꗚ ꗛ ꗜ ꗝ ꗞ ꗟ ꗠ ꗡ ꗢ ꗣ ꗤ ꗥ ꗦ ꗧ ꗨ ꗩ ꗪ ꗫ ꗬ ꗭ ꗮ ꗯ ꗰ ꗱ ꗲ ꗳ ꗴ ꗵ ꗶ ꗷ ꗸ ꗹ ꗺ ꗻ ꗼ ꗽ ꗾ ꗿ ꘀ ꘁ ꘂ ꘃ ꘄ ꘅ ꘆ ꘇ ꘈ ꘉ ꘊ ꘋ ꘌ</td><td class="select" title="Copy to clipboard" onclick="copyToClipboard(this.previousSibling)"><img src="../../shared/images/copy.png" alt="Copy to clipboard" title="Copy to clipboard"></td></tr>
+</tbody>
+</table>
+
+<p>The infrequently used characters come from these blocks.</p>
+
+<table>
+<tbody>
+<tr>
+<th class="sg">Vai</th>
+<td class="count">5</td>
+<td class="chars">ꘓ ꘘ ꘍ ꘎ ꘏</td><td class="select" title="Copy to clipboard" onclick="copyToClipboard(this.previousSibling)"><img src="../../shared/images/copy.png" alt="Copy to clipboard" title="Copy to clipboard"></td></tr>
+</tbody>
+</table>
+
+
+<p> See also the <a href="../../app-charuse/?language=vai" target="_blank"> Character usage lookup</a> page, and the <a target="_blank" href="../featurelist/">Script Comparison Table</a>.</p>
+
+
+
+<!--p>Apart from ASCII characters, the Vai orthography described here uses 274 characters (and 5 more, used infrequently) from the following Unicode blocks: </p>
+    <ul>
+    <li> <a href="/uniview/?block=vai">Vai</a> <span class="charCount">269 letters : total  274 &nbsp; (+ 5 infrequent)</span></li>
+</ul>
+ <p><cite>Character Usage</cite> has information about the following orthographies associated with this script: <a href="/app-charuse/?language=vai" target="_blank">Vai</a></p>
+<p>For detailed character-specific information see the <a class="linkHighlight" href="/scripts/vai/block">Vai character notes</a>.</p-->
+</section>
+
+
+
+
+
+
+<section id="languages">
+<h2>Languages using the Vai script</h2>
+<p>According to ScriptSource, the Vai script is used for the following languages: </p>
+<ul>
+<li>Vai [vai]</li>
+</ul>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="refs">
+<h2>References</h2>
+<ol>
+<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN
+				0-19-507993-0</li>
+<li>[ <a class="fnref" href="http://www.languagegeek.com/inu/inu_syllabarium.html">i</a> ] <a href="http://www.languagegeek.com/inu/inu_syllabarium.html">ᐃᓄᒃᑎᑐᑦ – Inuktitut Syllabarium</a>, LanguageGeek</li>
+<li>[ <a class="fnref" href="http://www.inuktitutcomputing.ca/Technocrats/ILFT_1.html">m</a> ] Mick Mallon, <a href="http://www.inuktitutcomputing.ca/Technocrats/ILFT_1.html">Ittukuluuk Language Programs Iqaluit 2000</a></li>
+<li>[ <a class="fnref" href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Vaii">s</a> ] ScriptSource, <a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Vaii">Vai</a></li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode13.0.0/ch20.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode13.0.0/ch20.pdf">The Unicode Standard v13.0</a></li>
+<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Vai_syllabary">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Vai_syllabary">Vai syllabary</a></li>
+</ol>
+</section>
+
+
+
+
+
+<details>
+<summary class="prompts">Show stats</summary>
+
+<table id="charCountList">
+<tr><th>Main</th><td id="mainCharList"></td><td id="mainCharListTotal"></td></tr>
+<tr><th>Auxiliary</th><td id="auxCharList"></td><td id="auxCharListTotal"></td></tr>
+<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
+<tr><th>Other</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
+<tr><th>Deprecated</th><td id="deprecatedCharList"></td><td id="deprecatedCharListTotal"></td></tr>
+</table>
+</details>
+
+
+<div id="phoneLinks"></div>
+
+
+<div id="panel" style="display:none"></div>
+
+
+<div class="smallprint"><span id="version"></span></div>
+
+
+
+</body>
+<script>
+initialiseSummary('/scripts/cans/block','ike','ike','cans')
+autoTransliterate('ike')
+</script>
+</html>
