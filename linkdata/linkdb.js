@@ -1,4 +1,4 @@
-var scriptNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'jpan', 'khmr', 'laoo', 'lana', 'lisu', 'mand', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'taml', 'tavt', 'telu', 'thaa', 'thai', 'tibt', 'tfng'])
+var scriptNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cans', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'jpan', 'khmr', 'laoo', 'lana', 'lisu', 'mand', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'taml', 'tavt', 'telu', 'thaa', 'thai', 'tibt', 'tfng'])
 
 var scriptNotes= {
     'adlm':[['Adlam/Pular','adlam/']],
@@ -13,6 +13,7 @@ var scriptNotes= {
     'bass':[['Bassa Vah', 'bassavah/']], 
     'beng':[['Bengali/Bangla', 'bengali/']],
     'bugi':[['Buginese', 'buginese/']],
+    'cans':[['UCAS/Eastern Canadian Inuktitut', 'cans/']],
     'cher':[['Cherokee', 'cherokee/']],
     'cyrl':[['Cyrillic/Russian', 'cyrillic/']],
     'deva':[['Devanagari/Hindi', 'devanagari/'], 
@@ -119,13 +120,14 @@ var scriptNotesByRegion = {
 			   ['Javanese', 'javanese/'],
 			   ['Sundanese', 'sundanese/']
 			   ],
-	'Americas':[['Cherokee', 'cherokee/']
+	'Americas':[['Cherokee', 'cherokee/'],
+				['UCAS/Eastern Canadian Inuktitut', 'cans/']
 			    ]
 	}
 
 
 
-var charNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'jpan', 'khmr','laoo', 'lana', 'maka', 'mand', 'mlym', 'mong', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'tale', 'talu', 'tavt', 'taml', 'telu', 'thaa', 'thai', 'tibt', 'tfng', 'vaii'])
+var charNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cans', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'jpan', 'khmr','laoo', 'lana', 'maka', 'mand', 'mlym', 'mong', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'tale', 'talu', 'tavt', 'taml', 'telu', 'thaa', 'thai', 'tibt', 'tfng', 'vaii'])
 
 var charNotesList = {
     'adlm':'adlam/block',
@@ -135,6 +137,7 @@ var charNotesList = {
     'bass':'bassavah/block', 
     'beng':'bengali/block',
     'bugi':'buginese/block',
+    'cans':'cans/block',
     'cher':'cherokee/block',
     'cyrl':'cyrillic/block',
     'deva':'devanagari/block',
@@ -217,11 +220,12 @@ var charNotesList = {
     'thai':['Thai', 'thai/block'],
     'tibt':['Tibetan', 'tibetan/block'],
     'tfng':['Tifinagh', 'tifinagh/block'],
+    'cans':['UCAS', 'cans/block'],
     'vaii':['Vai', 'vai/block'],
     }
 
 
-var compChartSet= new Set(['adlm','arab','armn', 'bali', 'beng', 'bugi', 'cher', 'cyrl', 'deva', 'ethi', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'jpan', 'knda', 'khmr', 'laoo', 'latn', 'mlym', 'mand', 'mong', 'mymr', 'nkoo', 'orya', 'sinh', 'sund', 'syrc', 'taml', 'telu', 'thaa', 'thai', 'tibt', 'tfng', 'cans'])
+var compChartSet= new Set(['adlm','arab','armn', 'bali', 'beng', 'bugi', 'cans', 'cher', 'cyrl', 'deva', 'ethi', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'jpan', 'knda', 'khmr', 'laoo', 'latn', 'mlym', 'mand', 'mong', 'mymr', 'nkoo', 'orya', 'sinh', 'sund', 'syrc', 'taml', 'telu', 'thaa', 'thai', 'tibt', 'tfng', 'cans'])
 
 var examplePhraseSet = new Set(['arab','armn','cans','cher','cyrl','deva','ethi','grek','guru','hani','hebr','latn','khmr','hang','mong','mymr','telu','tfng','thai','tibt'])
 
