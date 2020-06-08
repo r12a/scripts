@@ -2128,7 +2128,7 @@ cans:{ script:"UCAS", code:"Cans", name:"Unified Canadian Aboriginal Syllabics",
 				],
 	unicode:{ 	}, 
 	charts:[	"Unified Canadian Aboriginal Syllabics", "Unified Canadian Aboriginal Syllabics Extended" ],
-	pickers:[	
+	pickers:[	{ name:"Eastern Canadian Inuktitut", url:"cans-ike" },
 				],
 	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-american.html#canadiansyllabics" }
 				],
