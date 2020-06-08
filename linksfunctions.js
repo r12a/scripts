@@ -17,6 +17,17 @@ function getData (script) {
 	out += lc
 	out += '</td></tr>'
 	
+	if (record.dates) {
+		var temp = ''
+		temp += '<tr><td>Chronology:</td><td>'
+		temp += '<p>'
+		if (record.end) temp+= 'Historic script <span style="font-size:80%;">('+record.dates+')</span>'
+		else if (record.current_usage) temp += record.dates+ ', <span style="font-size:80%">but with limited usage ('+record.current_usage+')</span>'
+		else temp += record.dates
+		temp += '</p>'
+		temp += '</td></tr>'
+		out += temp
+		}
 	if (record.info) {
 		out += '<tr><td>General info:</td><td>'
 		out += '<p><a href="http://www.unicode.org/versions/latest/ch'+chapters[lc]+'.pdf" >Unicode</a></p>'
@@ -67,12 +78,12 @@ function getData (script) {
 
 		// pickers
 		var temp = ''
-		temp += '<tr><td>Pickers:</td><td>'
+		temp += '<tr><td>Character apps:</td><td>'
 		for (let p=0;p<plist.length;p++) {
 			if (plist[p].tag === script) temp += '<p><a href="/pickers/'+plist[p].url+'" >'+plist[p].name+'</a></p>'
 			}
 		temp += '</td></tr>'
-		if (temp !== '<tr><td>Pickers:</td><td></td></tr>') out += temp
+		if (temp !== '<tr><td>Character apps:</td><td></td></tr>') out += temp
 
 		if (record.fontkey) {
 		var temp = ''
@@ -102,17 +113,6 @@ function getData (script) {
 		for (var r=0;r<record.other.length;r++) temp += '<p><a href="'+record.other[r].url+'" >'+record.other[r].name+'</a></p>'
 		temp += '</td></tr>'
 		if (temp !== '<tr><td>Other:</td><td></td></tr>') out += temp
-		}
-	if (record.dates) {
-		var temp = ''
-		temp += '<tr><td>Chronology:</td><td>'
-		temp += '<p>'
-		if (record.end) temp+= 'Historic script <span style="font-size:80%;">('+record.dates+')</span>'
-		else if (record.current_usage) temp += record.dates+ ', <span style="font-size:80%">but with limited usage ('+record.current_usage+')</span>'
-		else temp += record.dates
-		temp += '</p>'
-		temp += '</td></tr>'
-		out += temp
 		}
 	out += '</table></tbody>'
 	document.getElementById('out').innerHTML = out
