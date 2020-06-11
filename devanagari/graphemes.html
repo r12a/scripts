@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<title>Devanagari script summary</title>
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="description" content="Summary of the Devanagari script."/>
+<link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../common/local.css" />
+<style>
+@font-face {
+    font-family: 'webfont';
+    src: url('../../shared/webfonts/notoserifdevanagari-regular-webfont.woff2') format('woff2'),
+         url('../../shared/webfonts/notoserifdevanagari-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+#freeText {
+	font-size: 24px;
+	font-family: webfont, serif;
+    line-height: 1.6;
+	}
+@media print { #freeText { font-size: 18px; } }
+[lang=hi] { font-family: webfont, serif; font-size: 150%; }
+.large .ex { font-size: 400%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1.75; }
+.iso15919 { font-family: gentiumpluswf; }
+.breakpoint { border-left: 1px solid #9391DA; }
+</style>
+
+<script src="../../shared/scriptdb/devanagari_all.js"> </script>
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2019.js"></script>
+<script src="../../shared/code/all-names.js"></script>
+<script src="../../shared/code/character_conversion.js"></script>
+<script src="../../shared/code/show_codepoints.js"></script>
+<script src="../../shared/fontlists/manage.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
+<script src="../common/functions.js"></script>
+<!--script src="../common/block-functions.js"></script-->
+<script src="../../shared/code/getLinks.js"></script>
+<script src="../../scripts/linkdata/linkdb.js"></script>
+<script src="../featurelist/scriptdata.js"> </script>
+
+<script src="../../shared/fontlists/devanagari.js"> </script>
+</head>
+
+<body>
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
+</header>
+
+<h1>Typographic units in Indic scripts</h1>
+
+<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="Jump to top of page." title="Jump to top of page."/></a></nav>
+
+<aside class="sidebar">
+<div id="toc"><!-- placeholder --></div>
+</aside>
+
+
+<p id="status">Updated 
+  <!-- #BeginDate format:En2 -->08-Dec-2019<!-- #EndDate -->
+&bull; tags <a href="http://r12a.github.io/blog/index.php?tag=devanagari" title="Show all blog posts tagged with 'devanagari'">devanagari</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+
+
+
+<section>
+<p>For text operations including line breaking,  hyphenation, letter spacing, cursor movement, forward delete, dropped initials, and some vertical text, the basic unit of text is not always the character.</p>
+<p>This article looks at various different ways of defining such basic typographic units, working through a series of different scenarios. It also examines when the so-called 'orthographic syllable' concept is relevant.</p>
+<p class="instructions noprint">Clicking on red text examples, or highlighting part of the sample text shows a list of characters, with links to more details. Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+<p class="instructions">Unless in parentheses, the transcriptions in italics that follow Tamil text are a <a href="../glossary/#transliteration" class="termref">transliteration</a> developed for these pages. Those in parentheses are usually ISO transcriptions. Transcriptions in <span style="white-space:nowrap;">⌈ brackets ⌋</span> may be phonemic or phonetic.</p>
+</section>
+
+
+
+
+<section>
+<h2 id="structure">Basic code point based segmentation behaviours</h2>
+<p>For each of the operations mentioned above, it is necessary to segment the text within words into  atomic units. </p>
+<p>It is sometimes said that segmentation in South Asian scripts is based on an 'orthographic syllable'. This refers to a sequence containing any number of consonants with suppressed inherent vowels followed by another consonant with inherent vowel and/or  following combining characters.</p>
+<p>This is not really true. For example, <a class="figref">fig-single_characters</a> shows  the Hindi word <span class="charExample" translate="no"><span class="ex" lang="hi">कमरख</span> <span class="trans">kmrkʰ</span> <span class="ipa">kəmrəkʰ</span> <span class="meaning">starfruit</span></span>and its segmentation. Even though there is no vowel between the <span class="ipa">m</span> and the <span class="ipa">r</span>, the sequence does not form an unbreakable unit. (It is very common  (including for example in Devanagari, Bengali, and Gujurati) to find consonant clusters without any visible indication.)</p>
+<figure id="fig-single_characters">
+<p class="large"><span class="ex" lang="hi">क<span class="breakpoint">म</span><span class="breakpoint">र</span><span class="breakpoint">ख</span></span></p>
+<figcaption>A set of units that are simple characters.</figcaption>
+</figure>
+<p>Combining characters are always kept together with the preceding base letter. <a class="figref">fig-defense</a> shows segmentation for  the Hindi word <span class="charExample" translate="no"><span class="ex" lang="ks">डिफ़ेंस</span> <span class="trans">ɖipʰˑēm̽s</span> <span class="ipa">dɪfɛns</span> <span class="meaning">defence</span></span>. Note that the prescript vowel in the first syllable is kept with its base consonant, even though it is displayed to the left of it. Note also that in the middle syllable the base consonant is followed by 3 combining characters, all of which are kept with the base letter.</p>
+<figure id="fig-defense3">
+<p class="large"><span class="ex" lang="hi">डि<span class="breakpoint">फ़ें</span><span class="breakpoint">स</span></span></p>
+<figcaption>Multiple combining characters are kept with the base character.</figcaption>
+</figure>
+<p>Although, as mentioned above, consonant clusters are not always indicating in the writing, they often are. This can happen in one of two ways: (a) a <a href="../glossary/#virama" class="termref">virama</a> is displayed to the reader, or (b) the virama is hidden and the shape of the adjacent characters is changed – in other words, we are shown a <a href="../glossary/#conjunct" class="termref">conjunct</a>.</p>
+<p>In Unicode, either of these results is produced by adding a virama code point between the two (or more) consonants that constitute the cluster.</p>
+<p>When the virama is visibly displayed, not much changes in terms of segmentation, since the virama is a combining character. The more well-known example of this is the representation of consonant clusters in modern Tamil, which (with two exceptions) never forms conjuncts. <a class="figref">fig-yavattaiyum</a> shows the text units for the Tamil word <span class="charExample" translate="no"><span class="ex" lang="ta">யாவற்றையும்</span> <span class="trans">yɑ̄ʋr͓rʌʲyum͓</span> <span class="meaning">all</span></span>.  Note how the prescript vowel is displayed <em>between</em> the two <span class="charExample"><span class="trans">r</span></span> sounds, and the segmentation splits the <span class="charExample"><span class="trans">r͓rʌ</span></span>sequence.</p>
+<figure id="fig-yavattaiyum">
+<p class="large"><span class="ex" lang="hi">யா<span class="breakpoint">வ</span><span class="breakpoint">ற்</span><span class="breakpoint">றை</span><span class="breakpoint">யு</span><span class="breakpoint">ம்</span></span></p>
+<figcaption>Prescript vowel-signs in Tamil appear between consonants forming a cluster.</figcaption>
+</figure>
+<p>This continues to be the case when the virama is shown in Hindi text. Although a virama in a devanagari font usually produces some kind of conjunct, it is not always the case. Where the virama is visible, either because the font lacks a conjunct for the given sequence, or because the author wants to show the virama, the segmentation and placement of prescript vowels follows the same pattern as for Tamil. fig-south shows the segmentation and prescript vowel placement for the Hindi word <span class="charExample" translate="no"><span class="ex" lang="ks">दक्‌षिण</span> <span class="trans">dk͓ₓʂiɳ</span> <span class="ipa">dakʃīn</span> <span class="meaning">South</span></span> when the conjunct is displayed explicitly.</p>
+<figure id="fig-south">
+<p class="large"><span class="ex" lang="hi">द<span class="breakpoint">क्</span><span class="breakpoint">षि</span><span class="breakpoint">ण</span></span></p>
+<figcaption>When the virama is visibly displayed, prescript vowels appear before the consonant they are attached to.</figcaption>
+</figure>
+<p><em>Only</em> when a virama is hidden in favour of a conjunct does the 'orthographic syllable' rule apply. See <a class="figref">fig-south_conjunct</a>, where the prescript vowel appears to the left of both consonants in the cluster, and the conjunct is not broken. </p>
+<figure id="fig-south_conjunct">
+<p class="large"><span class="ex" lang="hi">द<span class="breakpoint">क्षि</span><span class="breakpoint">ण</span></span></p>
+<figcaption>When a conjunct is displayed, the prescript vowel is displayed to the left of the conjunct.</figcaption>
+</figure>
+<p>When a conjunct is displayed, it should not be broken apart. This means that (a) with any associated vowel-signs and diacritics, it constitutes something that should be treated as a unit of text for editing operations, and (b) that prescript vowel-signs appear to the left of the whole sequence, rather than to the left of the consonant they happen to follow.</p>
+<p>Some conjuncts can be quite complicated - show an example with RA and several other consonants. Also show marshmallow.</p>
+<p>In other words, this is less about a sequence of sounds or code points, and more about conjunct formation.</p>
+<p>Note also that shri only becomes a conjunct when -i is appended. There are other words with shr+vowel that are not conjuncts.</p>
+</section>
+
+
+
+
+<section>
+<h2 id="structure">Implementation considerations</h2>
+    <p>This creates a problem for proper segmentation of text containing conjuncts, because you can't tell from the sequence of code points whether or not a conjunct is being displayed to the reader.</p>
+<p>The Unicode Standard defines grapheme clusters to approximate the typographic units needed for the operations described in the introduction. A grapheme cluster is essentially a non-combining letter plus all the combining characters that follow it.</p>
+<p>As such, the grapheme cluster copes well with many situations where it is necessary to segment South Asian text. However, it runs into problems when it encounters conjuncts.</p>
+<p>The definition of grapheme cluster doesn't cause it to behave in any special way when it encounters a virama. It sees that as a combining character, so it groups it with the preceding consonant, but it doesn't take into account that this might be in the middle of a conjunct. <a class="figref">fig-south_conjunct</a>, therefore, will be spit into 4 segments instead of 3.</p>
+<p>Grapheme clusters work fine most of the time for modern Tamil, which only has 3 sequences that form conjuncts, but don't work well for scripts that generate many conjunct forms.</p>
+<p>Actually, the problem is more complicated. There is no way to tell, from the code points, whether the font will render a sequence of characters as a conjunct or not. If it doesn't, as in <a class="figref">fig-south, then the grapheme cluster rules do the right thing. But if it does, then it will produce too many segments.</a></p>
+<p>It's not currently clear how to get around this problem.</p>
+</section>
+<section>
+<h2 id="conjuncts">Glyph based behaviours</h2>
+    <p>For some operations, the segmentation doesn't rely solely on code point semantics.</p>
+<p>For example, during justification in Tamil for narrow column text (such as in newspapers), if no hyphenation is available, the text may be stretched to fit. In particular, if only one word will fit on a line it is commonly stretched to fit the whole line.</p>
+<p>This is done by inserting additional space between certain glyphs, rather than grapheme clusters. If a consonant is followed by a vowel-sign glyph that connects to the consonant shape there is usually no separation. However, if the vowel-sign doesn't connect, equal space is added between the glyph(s) for the vowel-sign and consonant as between two adjacent consonants. See xxxx</p>
+<p>Note also that space is introduced between a consonant and its prescript vowel-sign.</p>
+<p>&nbsp;</p>
+<p>In <a class="figref">fig-film</a> we see the Hindi word <span class="charExample" translate="no"><span class="ex" lang="ks">फिल्म</span> <span class="trans">pʰil͓m</span> <span class="ipa">fɪlm</span> <span class="meaning">film</span></span>and its expected segmentation. The final segment contains a consonant cluster which is rendered as a conjunct. Note that the virama is not visible in these examples, but the code point is there.</p>
+<figure id="fig-defense2">
+<p class="large"><span class="ex" lang="hi">फि<span class="breakpoint">ल्म</span></span></p>
+<figcaption>Multiple combining characters are kept with the base character.</figcaption>
+</figure>
+  </section>
+<section>
+<h2 id="refs">References</h2>
+  <ol>
+    <li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN 0-19-507993-0, pp487-497</li>
+<li>[ <sup><a href="http://en.wikipedia.org/wiki/Devanagari">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Devanagari">Devanagari</a></li>
+<li>[ <sup><a href="http://www.unicode.org/versions/latest/ch12.pdf">u</a></sup> ] The Unicode Standard v11.0, <a href="http://www.unicode.org/versions/latest/ch12.pdf">Devanagari</a></li>
+<li>[ <sup><a href="refs">s</a></sup> ] Rupert Snell &amp; Simon Weightman, Teach Yourself Hindi, ISBN 978-0-340-86687-0</li>
+<li>[ <sup><a href="https://www.w3.org/TR/ilreq/">i</a></sup> ]     Swaran Lata, Somnath Chandra, DeitY, Prashant Verma, Richard Ishida, <a href="https://www.w3.org/TR/ilreq/">Indic Layout Requirements</a></li>
+</ol>
+</section>
+
+
+
+<div class="smallprint"><span id="version">Last changed <a href="https://github.com/r12a/scripts/commits/gh-pages/devanagari"><span id="version-info"><!-- #BeginDate format:IS1m -->2019-12-08  5:37<!-- #EndDate --></span></a> GMT. &nbsp;&bull;&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bdevanagari%20summary%5D%20TITLE_GOES_HERE&body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fdevanagari%2F%0A%0A" target="_blank">comment</a>. &nbsp;&bull;&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
+
+<div id="featureTableBody"></div>
+<div id="panel" style="display:none"></div>
+</body>
+<script>
+initialiseSummary('/scripts/devanagari/block','hi','')
+</script>
+
+</html>
