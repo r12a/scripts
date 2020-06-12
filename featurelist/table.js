@@ -139,11 +139,11 @@ function resort (column) {
 			table += '>'+scriptData[i].vmark+'</td>'
 			
 			table += '<td title="'+tablecolumns.vcircum+'"'
-			if (scriptData[i].vcircum!=='-') table += 'class="yy"'
+			if (scriptData[i].vcircum!==0) table += 'class="yy"'
 			table += '>'+scriptData[i].vcircum+'</td>'
 			
 			table += '<td title="'+tablecolumns.vprescript+'"'
-			if (scriptData[i].vprescript!=='-') table += 'class="yy"'
+			if (scriptData[i].vprescript!==0) table += 'class="yy"'
 			table += '>'+scriptData[i].vprescript+'</td>'
 			
 			//table += '<td title="'+tablecolumns.vhidden+'"'
@@ -284,8 +284,8 @@ function getCharacterStats () {
 			// deal with vowel characteristics
 			scriptData[i].vletter = '-'
 			scriptData[i].vmark = '-'
-			scriptData[i].vprescript = '-'
-			scriptData[i].vcircum = '-'
+			scriptData[i].vprescript = 0
+			scriptData[i].vcircum = 0
 
 			if (charuseData.vowels) {
 				if (charuseData.vowels.includes('letters')) scriptData[i].vletter = 'l'
@@ -295,8 +295,20 @@ function getCharacterStats () {
 				if (charuseData.vowels.includes('diacritics') && charuseData.vowels.includes('hidden')) scriptData[i].vmark = '(d)'
 				else if (charuseData.vowels.includes('diacritics')) scriptData[i].vmark = 'd'
 				if (charuseData.vowels.includes('vowel-signs')) scriptData[i].vmark = 'vs'
-				if (charuseData.vowels.includes('circumgraphs')) scriptData[i].vcircum = 'c'
-				if (charuseData.vowels.includes('prescript')) scriptData[i].vprescript = 'p'
+				if (charuseData.vowels.includes('circumgraphs')) {
+					// get the number
+					temp1 = charuseData.vowels.split('circumgraph')
+					temp2 = temp1[0].split(' ')
+					temp3 = temp2[temp2.length-2]
+					scriptData[i].vcircum = parseInt(temp3)
+					}
+				if (charuseData.vowels.includes('prescript')) {
+					// get the number
+					temp1 = charuseData.vowels.split('prescript')
+					temp2 = temp1[0].split(' ')
+					temp3 = temp2[temp2.length-2]
+					scriptData[i].vprescript = parseInt(temp3)
+					}
 				}
 			if (scriptData[i].type.includes('syll')) scriptData[i].vletter = 's'
 			}
