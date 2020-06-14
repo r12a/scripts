@@ -1,8 +1,10 @@
 
 var items = ['am', 'arb', 'hy', 'aii', 'ban-bali', 'bsq-bass', 'bn', 'bug-bugi', 'my', 'chr', 'dv', 'ka', 'gu', 'khk-mong', 'ha', 'ha-arab', 'he', 'hi', 'ike', 'ja', 'jv-java', 'kn', 'ks', 'ks-deva', 'km', 'kkh', 'ko', 'lo', 'lis', 'ml', 'cmn', 'el', 'mid', 'nod', 'nqo', 'ory', 'fuf-adlm', 'pa', 'ru', 'si', 'zgh', 'su-sund', 'syc', 'khb', 'tdd', 'blt', 'ta', 'te', 'th', 'bo', 'tru', 'ug', 'ur', 'vai']
 
-
-
+var csubset = false
+var vsubset = false
+var resortCol = ''
+const REVERSE = true
 
 
 var by = function (path, reverse, primer, then) {
@@ -34,13 +36,16 @@ var by = function (path, reverse, primer, then) {
      
 
 
-function resort (column) { 
+function resort (column, reverse) { 
 
-	scriptData.sort(by(column))
+	scriptData.sort(by(column, reverse))
 	
 	var table = ''
 	table += '<table id="reviewtable"><thead><tr>';
 	
+	// sets of subcolumns, for toggles
+	var charsubset = new Set(['Letters','Marks', 'Punct\u00ADuation', 'Native digits', 'Format chars'])
+
 
 	var tablecolumns = {
 		name:"Language",
@@ -76,10 +81,45 @@ function resort (column) {
 		fcount:"More info"
 		}	
 	
-	for (var col in tablecolumns) {
-		table += '<th class="top"><a href="#theTable" onclick="resort(\''+col+'\'); return false;">'+tablecolumns[col]+'</a></th>'+"\n";
-		}
+	//for (var col in tablecolumns) {
+	//	table += '<th class="top" title="'+tablecolumns[col]+'"><a href="#theTable" onclick="resort(\''+col+'\'); return false;">'+tablecolumns[col]+'</a></th>'+"\n";
+	//	}
 	
+	table += '<th class="top" title="Language" style="text-align:right;"><a href="#theTable" onclick="resort(\'name\'); window.resortCol=\'name\';return false;">Language</a></th>\n'
+	table += '<th class="top" title="Script"><a href="#theTable" onclick="resort(\'script\'); window.resortCol=\'script\'; return false;">Script</a></th>\n'
+	table += '<th class="top" title="Link to details"><a href="#theTable"; return false;"> </a></th>\n'
+	table += '<th class="top" title="Total chars"><a href="#theTable" onclick="resort(\'chars\'); window.resortCol=\'chars\'; return false;">Total chars</a></th>\n'
+	table += '<th class="top" title="+"><a href="#theTable" onclick="resort(\'aux\'); window.resortCol=\'aux\'; return false;">+</a></th>\n'
+
+	if (window.csubset) {
+		table += '<th class="top charsubset" title="Letters"><a href="#theTable" onclick="resort(\'letters\', REVERSE); window.resortCol=\'letters\'; return false;">Letters</a></th>\n'
+		table += '<th class="top charsubset" title="Marks"><a href="#theTable" onclick="resort(\'mark\', REVERSE); window.resortCol=\'mark\'; return false;">Marks</a></th>\n'
+		table += '<th class="top charsubset" title="Punctuation"><a href="#theTable" onclick="resort(\'punctuation\', REVERSE); window.resortCol=\'punctuation\'; return false;">Punct\u00ADuation</a></th>\n'
+		table += '<th class="top charsubset" title="Native digits"><a href="#theTable" onclick="resort(\'digits\', REVERSE); window.resortCol=\'digits\'; return false;">Native digits</a></th>\n'
+		table += '<th class="top charsubset" title="Format chars"><a href="#theTable" onclick="resort(\'other\', REVERSE); window.resortCol=\'other\'; return false;">Format chars</a></th>\n'
+		}
+
+	table += '<th class="top" title="Type"><a href="#theTable" onclick="resort(\'type\'); window.resortCol=\'type\'; return false;">Type</a></th>\n'
+
+	if (window.vsubset) {
+		table += '<th class="top vsubset" title="Vowel letters"><a href="#theTable" onclick="resort(\'vletter\'); window.resortCol=\'vletter\'; return false;">Vowel letters</a></th>\n'
+		table += '<th class="top vsubset" title="Vowel marks"><a href="#theTable" onclick="resort(\'vmark\'); window.resortCol=\'vmark\'; return false;">Vowel marks</a></th>\n'
+		table += '<th class="top vsubset" title="Circum\u00ADgraphs"><a href="#theTable" onclick="resort(\'vcircum\', REVERSE); window.resortCol=\'vcircum\'; return false;">Circum\u00ADgraphs</a></th>\n'
+		table += '<th class="top vsubset" title="Prescript vowels"><a href="#theTable" onclick="resort(\'vprescript\', REVERSE); window.resortCol=\'vprescript\'; return false;">Prescript vowels</a></th>\n'
+		}
+
+	table += '<th class="top" title="Contextual placement"><a href="#theTable" onclick="resort(\'gpos\', REVERSE); window.resortCol=\'gpos\'; return false;">Contextual placement</a></th>\n'
+	table += '<th class="top" title="Contextual shaping"><a href="#theTable" onclick="resort(\'gsub\', REVERSE); window.resortCol=\'gsub\'; return false;">Contextual shaping</a></th>\n'
+	table += '<th class="top" title="Case sensitive"><a href="#theTable" onclick="resort(\'cs\', REVERSE); window.resortCol=\'cs\'; return false;">Case sensitive</a></th>\n'
+	table += '<th class="top" title="Cursive script"><a href="#theTable" onclick="resort(\'cursive\', REVERSE); window.resortCol=\'cursive\'; return false;">Cursive script</a></th>\n'
+	table += '<th class="top" title="Text direction"><a href="#theTable" onclick="resort(\'dir\', REVERSE); window.resortCol=\'dir\'; return false;">Text direction</a></th>\n'
+	table += '<th class="top" title="Baseline"><a href="#theTable" onclick="resort(\'baseline\'); window.resortCol=\'baseline\'; return false;">Baseline</a></th>\n'
+	table += '<th class="top" title="Word separator"><a href="#theTable" onclick="resort(\'wordsep\'); window.resortCol=\'wordsep\'; return false;">Word separator</a></th>\n'
+	table += '<th class="top" title="Text wrap"><a href="#theTable" onclick="resort(\'wrap\'); window.resortCol=\'wrap\'; return false;">Text wrap</a></th>\n'
+	table += '<th class="top" title="Hyphenation"><a href="#theTable" onclick="resort(\'hyphenation\', REVERSE); window.resortCol=\'hyphenation\'; return false;">Hyphen\u00ADation</a></th>\n'
+	table += '<th class="top" title="Justification"><a href="#theTable" onclick="resort(\'justify\'); window.resortCol=\'justify\'; return false;">Justification</a></th>\n'
+	table += '<th class="top" title="Region of origin"><a href="#theTable" onclick="resort(\'region\'); window.resortCol=\'region\'; return false;">Region of origin</a></th>\n'
+	table += '<th class="top" title="More info"><a href="#theTable">More info</a></th>\n'
 	
 	table += '</tr></thead><tbody>'
 	
@@ -91,66 +131,64 @@ function resort (column) {
 			
 			if (scriptData[i].linked) linked = " \u003Ca href='/scripts/"+scriptData[i].linked+"' target='_blank'>\u003Cimg src='link.png' alt='details'/>\u003C/a>"
 			
-			//table += '<td title="'+tablecolumns.language+'" style="text-align:right;white-space:nowrap;">'+scriptData[i].name.replace(/ \([^\)]+\)/,'')+'</td>'
-			table += '<td title="'+items[i]+'" style="text-align:right;white-space:nowrap;">'+scriptData[i].name.replace(/ \([^\)]+\)/,'')+'</td>'
+			table += '<td title="Language" style="text-align:right;white-space:nowrap;">'+scriptData[i].name.replace(/ \([^\)]+\)/,'')+'</td>'
 			
-			table += '<td title="'+tablecolumns.script+'" style="text-align:right;">'+scriptData[i].script+'</td>'
+			table += '<td title="Script" style="text-align:right;">'+scriptData[i].script+'</td>'
 			
 			table += '<td title="Link to more details">'+linked+'</td>'
 			
-			table += '<td title="'+tablecolumns.numchars+'" style="text-align:right;padding: 0 .5em;" class="y">'+scriptData[i].chars+'</td>'
+			table += '<td title="Total characters" style="text-align:right;padding: 0 .5em;" class="y">'+scriptData[i].chars+'</td>'
 			
 			table += '<td title="Infequent characters" style="text-align:left;">'+scriptData[i].aux+'</td>'
-			
-			table += '<td title="'+tablecolumns.letters+'"'
-			if (scriptData[i].letters!==0) table += 'class="yy"'
-			table += '>'+scriptData[i].letters+'</td>'
-			
-			table += '<td title="'+tablecolumns.mark+'"'
-			if (scriptData[i].mark!==0) table += 'class="yy"'
-			table += '>'+scriptData[i].mark+'</td>'
-			
-			table += '<td title="'+tablecolumns.punctuation+'"'
-			if (scriptData[i].punctuation!=='0') table += 'class="yy"'
-			table += '>'+scriptData[i].punctuation+'</td>'
-			
-			table += '<td title="'+tablecolumns.digits+'"'
-			if (scriptData[i].digits!==0) table += 'class="yy"'
-			table += '>'+scriptData[i].digits.toString()+'</td>'
-			
-			table += '<td title="'+tablecolumns.other+'"'
-			if (scriptData[i].other!=='0') table += 'class="yy"'
-			table += '>'+scriptData[i].other+'</td>'
-			
-			table += '<td title="'+tablecolumns.type+'"'
+
+
+			if (window.csubset) {
+				table += '<td title="Letters" class="charsubset'
+				if (scriptData[i].letters!==0) table += ' yy'
+				table += '">'+scriptData[i].letters+'</td>'
+
+				table += '<td title="Marks" class="charsubset'
+				if (scriptData[i].mark!==0) table += ' yy'
+				table += '">'+scriptData[i].mark+'</td>'
+
+				table += '<td title="Punctuation" class="charsubset'
+				if (scriptData[i].punctuation!=='0') table += ' yy'
+				table += '">'+scriptData[i].punctuation+'</td>'
+
+				table += '<td title="Native digits" class="charsubset'
+				if (scriptData[i].digits!==0) table += ' yy'
+				table += '">'+scriptData[i].digits.toString()+'</td>'
+
+				table += '<td title="Format characters" class="charsubset'
+				if (scriptData[i].other!=='0') table += ' yy'
+				table += '">'+scriptData[i].other+'</td>'
+				}
+
+
+			table += '<td title="Type"'
 			if (scriptData[i].type!=='alpha') table += 'class="y"'
 			table += '>'+scriptData[i].type+'</td>'
 			
-			table += '<td title="'+tablecolumns.vletter+'"'
-			if (scriptData[i].vletter!=='-') table += 'class="yy"'
-			table += '>'+scriptData[i].vletter+'</td>'
-			
-			//table += '<td title="'+tablecolumns.vindep+'"'
-			//if (scriptData[i].vindep!=='-') table += 'class="y"'
-			//table += '>'+scriptData[i].vindep+'</td>'
-			
-			table += '<td title="'+tablecolumns.vmark+'"'
-			if (scriptData[i].vmark!=='-') table += 'class="yy"'
-			table += '>'+scriptData[i].vmark+'</td>'
-			
-			table += '<td title="'+tablecolumns.vcircum+'"'
-			if (scriptData[i].vcircum!==0) table += 'class="yy"'
-			table += '>'+scriptData[i].vcircum+'</td>'
-			
-			table += '<td title="'+tablecolumns.vprescript+'"'
-			if (scriptData[i].vprescript!==0) table += 'class="yy"'
-			table += '>'+scriptData[i].vprescript+'</td>'
-			
-			//table += '<td title="'+tablecolumns.vhidden+'"'
-			//if (scriptData[i].vhidden!=='-') table += 'class="y"'
-			//table += '>'+scriptData[i].vhidden+'</td>'
-			
-			table += '<td title="'+tablecolumns.gpos+'"'
+			if (window.vsubset) {
+				table += '<td title="Vowel letters" class="vsubset'
+				if (scriptData[i].vletter!=='-') table += ' yy'
+				table += '">'+scriptData[i].vletter+'</td>'
+
+				table += '<td title="Vowel marks" class="vsubset'
+				if (scriptData[i].vmark!=='-') table += ' yy'
+				table += '">'+scriptData[i].vmark+'</td>'
+
+				table += '<td title="Circumgraphs" class="vsubset'
+				if (scriptData[i].vcircum!==0) table += ' yy'
+				table += '">'+scriptData[i].vcircum+'</td>'
+
+				table += '<td title="Prescript vowels" class="vsubset'
+				if (scriptData[i].vprescript!==0) table += ' yy'
+				table += '">'+scriptData[i].vprescript+'</td>'
+				}
+
+
+			table += '<td title="Contextual placement"'
 			if (scriptData[i].gpos!=='no') table += 'class="y"'
 			table += '>'+scriptData[i].gpos+'</td>'
 			
@@ -162,43 +200,43 @@ function resort (column) {
 			//if (scriptData[i].matras!=='no' && scriptData[i].matras!=='n/a') table += 'class="y"'
 			//table += '>'+scriptData[i].matras+'</td>'
 			
-			table += '<td title="'+tablecolumns.gsub+'"'
+			table += '<td title="Contextual shaping"'
 			if (scriptData[i].gsub!=='no') table += 'class="y"'
 			table += '>'+scriptData[i].gsub+'</td>'
 			
-			table += '<td title="'+tablecolumns.cs+'"'
+			table += '<td title="Case sensitive"'
 			if (scriptData[i].cs!=='no') table += 'class="y"'
 			table += '>'+scriptData[i].cs+'</td>'
 			
-			table += '<td title="'+tablecolumns.cursive+'"'
+			table += '<td title="Cursive script"'
 			if (scriptData[i].cursive!=='no') table += 'class="y"'
 			table += '>'+scriptData[i].cursive+'</td>'
 			
-			table += '<td title="'+tablecolumns.dir+'"'
+			table += '<td title="Text direction"'
 			if (scriptData[i].dir!=='ltr') table += 'class="y"'
 			table += '>'+scriptData[i].dir+'</td>'
 			
-			table += '<td title="'+tablecolumns.baseline+'"'
+			table += '<td title="Baseline"'
 			if (scriptData[i].baseline!=='mid') table += 'class="y"'
 			table += '>'+scriptData[i].baseline+'</td>'
 
-			table += '<td title="'+tablecolumns.wordsep+'"'
+			table += '<td title="Word separator"'
 			if (scriptData[i].wordsep!=='space') table += 'class="y"'
 			table += '>'+scriptData[i].wordsep+'</td>'
 			
-			table += '<td title="'+tablecolumns.wrap+'"'
+			table += '<td title="Text wrap"'
 			if (scriptData[i].wrap!=='word') table += 'class="y"'
 			table += '>'+scriptData[i].wrap+'</td>'
 			
-			table += '<td title="'+tablecolumns.hyphenation+'"'
+			table += '<td title="Hyphenation"'
 			if (scriptData[i].hyphenation!=='no' && scriptData[i].hyphenation!=='?') table += 'class="y"'
 			table += '>'+scriptData[i].hyphenation+'</td>'
 			
-			table += '<td title="'+tablecolumns.justify+'"'
+			table += '<td title="Justification"'
 			if (scriptData[i].justify!=='spaces') table += 'class="y"'
 			table += '>'+scriptData[i].justify+'</td>'
 			
-			table += '<td title="'+tablecolumns.region+'">'+scriptData[i].region+'</td>';
+			table += '<td title="Region of origin">'+scriptData[i].region+'</td>';
 			
 			table += '<td title="Go to Charuse page for '+scriptData[i].id+'"><a href="../../app-charuse/?language='+scriptData[i].id+'" style="font-size:80%;font-style:italic;" target="_blank"><img src="link.png" alt="details"/></td>'
 			
@@ -312,5 +350,31 @@ function getCharacterStats () {
 				}
 			if (scriptData[i].type.includes('syll')) scriptData[i].vletter = 's'
 			}
+		}
+	}
+
+
+
+function toggle (col) {
+	if (col === 'characters') cols = document.querySelectorAll(".charsubset")
+	else if  (col === 'vowels') cols = document.querySelectorAll(".vsubset")
+	else { console.log('Invalid parameter for toggle function.'); return }
+	
+	if (cols[0].style.display === 'none') for (i=0;i<cols.length;i++) cols[i].style.display = 'table-cell'
+	else for (i=0;i<cols.length;i++) cols[i].style.display = 'none'
+	}
+
+
+
+function toggle (col) {
+	if (col === 'characters') {
+		if (window.csubset) window.csubset = false
+		else window.csubset = true
+		resort(window.resortCol)
+		}
+	if (col === 'vowels') {
+		if (window.vsubset) window.vsubset = false
+		else window.vsubset = true
+		resort(window.resortCol)
 		}
 	}
