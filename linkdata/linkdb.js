@@ -19,7 +19,7 @@ var scriptNotes= {
     'deva':[['Devanagari/Hindi', 'devanagari/'], 
 			['Kashmiri', 'devanagari/kashmiri']
 			],
-    'ethi':[['Ethiopic', 'ethiopic/']],
+    'ethi':[['Ethiopic/Amharic', 'ethiopic/']],
     'geor':[['Georgian', 'georgian/']],
     'grek':[['Greek', 'greek/']],
     'gujr':[['Gujarati', 'gujarati/']],
@@ -59,19 +59,23 @@ var scriptNotes= {
     }
 
 var scriptNotesByRegion = {
-	'Africa':[['Adlam/Pular', 'adlam/'],
+	'Africa':[['Adlam', 'adlam/'],
+			  ['Amharic', 'ethiopic/'],
 			  ['Bassa Vah', 'bassavah/'],
 			  ['Ethiopic', 'ethiopic/'],
 			  ['Hausa (boko)', 'latin/hausa'],
 			  ['Hausa (ajami)', 'arabic/hausa'],
 			  ["N’Ko", 'nko'],
-			  ['(Neo-)Tifinagh/Tamazight', 'tifinagh/'],
+			  ['Pular', 'adlam/'],
+			  ['Tamazight', 'tifinagh/'],
+			  ['(Neo-)Tifinagh', 'tifinagh/'],
 			  ['Vai', 'vai/']
 			  ],
 	'Europe':[['Armenian','armenian/'],
-			  ['Cyrillic/Russian', 'cyrillic/'],
+			  ['Cyrillic', 'cyrillic/'],
 			  ['Georgian', 'georgian/'],
-			  ['Greek', 'greek/']
+			  ['Greek', 'greek/'],
+			  ['Russian', 'cyrillic/'],
 			  ],
 	'West&nbsp;Asia':[['Arabic','arabic/'],
 			  ['Assyrian Neo-Aramaic', 'syriac/syrc-aii'],
@@ -86,42 +90,56 @@ var scriptNotesByRegion = {
 				['Uighur', 'arabic/uighur']
 			  	],
 	'East&nbsp;Asia':[
-				['Han/Chinese', 'han/'],
-			    ['Hangul/Korean', 'hangul/'],
+				['Chinese', 'han/'],
+				['Han', 'han/'],
+			    ['Hangul', 'hangul/'],
 			    ['Japanese', 'jpan/'],
+			    ['Korean', 'hangul/'],
 			    ['Lisu', 'lisu/'],
 			    ['Mongolian', 'mongolian/']
 			    ],
-	'South&nbsp;Asia':[['Bengali/Bangla', 'bengali/'],
-			  ['Devanagari/Hindi', 'devanagari/'],
-			  ['Kashmiri (arab)', 'arabic/kashmiri'],
-			  ['Kashmiri (deva)', 'devanagari/kashmiri'],
-			  ['Gujarati', 'gujarati/'],
-			  ['Gurmukhi/Punjabi', 'gurmukhi/'],
-			  ['Malayalam', 'malayalam'],
-			  ['Sinhala', 'sinhala/'],
-			  ['Tamil', 'tamil/'],
-			  ['Telugu', 'telugu/'],
-			  ['Thaana/Dhivehi', 'thaana/'],
-			  ['Urdu', 'arabic/urdu']
+	'South&nbsp;Asia':[
+				['Bangla', 'bengali/'],
+				['Bengali', 'bengali/'],
+				['Devanagari', 'devanagari/'],
+				['Dhivehi', 'thaana/'],
+				['Gujarati', 'gujarati/'],
+				['Gurmukhi', 'gurmukhi/'],
+				['Hindi', 'devanagari/'],
+				['Kashmiri (arab)', 'arabic/kashmiri'],
+				['Kashmiri (deva)', 'devanagari/kashmiri'],
+				['Malayalam', 'malayalam'],
+				['Punjabi', 'gurmukhi/'],
+				['Sinhala', 'sinhala/'],
+				['Tamil', 'tamil/'],
+				['Telugu', 'telugu/'],
+				['Thaana', 'thaana/'],
+				['Urdu', 'arabic/urdu']
 			  ],
-	'SE&nbsp;Asia':[['Khmer', 'khmer/'],
-			   ['Lao', 'lao/'],
-			   ['Myanmar/Burmese', 'myanmar'],
-			   ['New Tai Lü', 'newtailue/'],
-			   ['Northern Thai', 'taitham/northernthai'],
-			   ['Tai Le/Tai Nüa', 'taile/'],
-			   ['Tai Tham/Tai Khün', 'taitham/'],
-			   ['Tai Viet/Tai Dam', 'taiviet/'],
-			   ['Thai', 'thai/']
+	'SE&nbsp;Asia':[
+				['Burmese', 'myanmar'],
+				['Khmer', 'khmer/'],
+				['Lao', 'lao/'],
+				['Myanmar', 'myanmar'],
+				['New Tai Lü', 'newtailue/'],
+				['Northern Thai', 'taitham/northernthai'],
+				['Tai Dam', 'taiviet/'],
+				['Tai Khün', 'taitham/'],
+				['Tai Le', 'taile/'],
+				['Tai Nüa', 'taile/'],
+				['Tai Tham', 'taitham/'],
+				['Tai Viet', 'taiviet/'],
+				['Thai', 'thai/']
 			   ],
-	'MSE Asia':[['Balinese', 'balinese/'],
-			   ['Buginese', 'buginese/'],
-			   ['Javanese', 'javanese/'],
-			   ['Sundanese', 'sundanese/']
+	'MSE Asia':[
+				['Balinese', 'balinese/'],
+				['Buginese', 'buginese/'],
+				['Javanese', 'javanese/'],
+				['Sundanese', 'sundanese/']
 			   ],
 	'Americas':[['Cherokee', 'cherokee/'],
-				['UCAS/Eastern Canadian Inuktitut', 'cans/']
+				['Eastern Canadian Inuktitut', 'cans/'],
+				['UCAS', 'cans/']
 			    ]
 	}
 
@@ -242,7 +260,22 @@ var gouFonts = { 'grek':'Greek', 'armn':'Armenian', 'hebr':'Hebrew', 'arab':'Ara
 var ssHistory = { 'grek':'wxsx5j4kzt', 'cyrl':'ngc339csy8', 'armn':'z35gwmg4ft', 'hebr':'qek84cbq5u', 'arab':'hqr6rc9md5', 'syrc':'hlvzdczufr', 'thaa':'n2tj49rr2n', 'nkoo':'mnqzubphu7', 'samr':'qv7wwr9xgp', 'mand':'djwvfmuu3h', 'deva':'b6c6j63sf5', 'beng':'f8jrlqwbac', 'guru':'fd27tquj5j', 'gujr':'yqug2kbjjr', 'orya':'znkmblg693', 'taml':'zw5nedjarb', 'telu':'sjrwm9ppr3', 'knda':'ur8y3qj6yk', 'mlym':'ypvmjurtyg', 'sinh':'sbwtu85wbv', 'thai':'d877ebfc65', 'laoo':'98522835fg', 'tibt':'mg8ulatcjb', 'mymr':'vcz6flwzqs', 'geor':'rbr2wkvu4m', 'ethi':'fvp74ug66k', 'cher':'nwnmgh2n8j', 'cans':'c36d846u2d', 'ogam':'d3z382ahas', 'runi':'ha667hekd4', 'tglg':'76d3376b7c', 'hano':'ga9dbe72a2', 'buhd':'h4446ag538', 'tagb':'d62f48hfad', 'khmr':'2269c7g9ee', 'mong':'xluqdp54ts', 'limb':'a2exgfkrmf', 'tale':'76c7d2ch4g', 'talu':'37fcf7h92b', 'bugi':'739e2e7g2e', 'lana':'gf97b8ad78', 'bali':'f2bb6f3bh9', 'sund':'3844bc8cea', 'batk':'geb5h358d3', 'lepc':'g6cv78jn42', 'olck':'rrkdvn7crf', 'glag':'lbhv6e4efr', 'copt':'msg4hep5ev', 'tfng':'wmx4utrkuc', 'jpan':'ly5dbxtthx', 'bopo':'tk449c64jh', 'yiii':'ejx9jwrd8e', 'lisu':'473c93dddf', 'vaii':'z8tk356ua7', 'bamu':'aeg5ah9fbg', 'sylo':'kylcx42avd', 'phag':'y22gh9p8g2', 'saur':'eqjs45mf8t', 'kali':'enl5dse8jv', 'rjng':'72d3ce3834', 'java':'db9724gea9', 'cham':'c4yzafta3f', 'tavt':'mn8j2mcblt', 'mtei':'x29ycx7hp5', 'hang':'umfm3ftrny', 'linb':'by38na5akh', 'lyci':'hsu56mxkr7', 'cari':'kqrxbcekmr', 'ital':'uk7vpcchbc', 'goth':'hj7ztebb5e', 'perm':'cqdluhalzh', 'ugar':'ffz7nkcxpb', 'xpeo':'pbjd5pecq6', 'dsrt':'tdjlnarc8y', 'shaw':'gj5fewb8ed', 'osma':'hg53222b9b', 'osge':'gm4pjj3qw7', 'elba':'fum3p8xz6v', 'lina':'rmvt9u45sq', 'cprt':'nywfdbys7b', 'armi':'ys8lxa9y4j', 'palm':'z3u3jwap6r', 'nbat':'kcjefvy9uw', 'hatr':'jpekrxh2wn', 'phnx':'ltk6h5bent', 'lydi':'hsu56mxkr7', 'mero':'ssxtjnbc7s', 'khar':'n974scptwz', 'sarb':'clvjlzfzv9', 'sarn':'gw3vnam33r', 'mani':'nnf3pjr2v3', 'avst':'appyvwf4ku', 'prti':'b7daarfs3a', 'phli':'ssmdqax9mt', 'phlp':'wqytv3ldez', 'orhk':'hpmlm9pjev', 'hung':'fx7n7tnxzt', 'brah':'nskejp3py5', 'kthi':'xa9swfhv9f', 'sora':'r4c4bsfy7v', 'cakm':'pdqjuf5k39', 'mahj':'kuegm6qedh', 'shrd':'spnpfarl4t', 'khoj':'r9e56hvyut', 'mult':'fptnmnhe3c', 'sind':'fykru6vn8h', 'gran':'qzhwzbsvm7', 'newa':'y53lggbts6', 'tirh':'wysbq8bpm4', 'sidd':'fcmrsmpp9f', 'modi':'tx5uz2hvvz', 'takr':'wvh5zdz7jl', 'ahom':'ky6s63f7fx', 'wara':'llvwz8vpn8', 'zanb':'j7rr9jgtyl', 'soyo':'lns82rb9hp', 'pauc':'t2uqldgjlv', 'bhks':'mcr57c34fw', 'marc':'h6ln54mufu', 'gonm':'vqhk6w3pgq', 'xsux':'yqbyb2mdz7', 'egyp':'q7yl4zu8eh', 'hluw':'tasanpp3u9', 'mroo':'b6ebw4c6al', 'bass':'3d6596eh4g', 'hmng':'ha2hg6d5b7', 'miao':'cb32gtbj58', 'tang':'rkw5m9sm64', 'nshu':'v39xawqg64', 'dupl':'sbhfvtwqkl', 'mend':'2874g2ehc8', 'adlm':'llp3cqd7gg', 'hani':'tsps57x35g', 'mede':'evyd5v7ebg', 'sogd':'xjh6av9y5z', 'sogo':'u9szp2wg4g', 'dogr':'ujs77ahv7k', 'gong':'r3u3b4rjy9', 'rogh':'mj3a6n78t2', 'maka':'wj3ak6u5s2', 'jpan':'lrnzlkagyq', 'elym':'bxzpxkpyu4', 'hmnp':'f6vf3vzlls', 'wcho':'besbhg4q95', 'nand':'pn37qqd7m4'
 }
 
-var chapters = { 'latn':'07', 'grek':'07', 'copt':'07', 'cyrl':'07', 'glag':'07', 'armn':'07', 'geor':'07', 'lina':'08', 'linb':'08', 'cprt':'08', 'lyci':'08', 'cari':'08', 'lydi':'08', 'ital':'08', 'runi':'08','hung':'08', 'goth':'08', 'elba':'08', 'aghb':'08', 'perm':'08',  'ogam':'08', 'shaw':'08', 'hebr':'09', 'arab':'09', 'syrc':'09', 'samr':'09', 'mand':'09',  'sarb':'10', 'sarn':'10', 'phnx':'10', 'armi':'10', 'mani':'10', 'prti':'10', 'phli':'10', 'plhp':'10', 'avst':'10', 'nbat':'10', 'palm':'10', 'hatr':'10', 'xsux':'11', 'ugar':'11', 'xpeo':'11', 'egyp':'11', 'mero':'11', 'hluw':'11', 'deva':'12', 'beng':'12', 'guru':'12', 'gujr':'12', 'orya':'12', 'taml':'12', 'telu':'12', 'knda':'12', 'mlym':'12', 'thaa':'13', 'sinh':'13', 'newa':'13', 'tibt':'13', 'mong':'13', 'limb':'13', 'mtei':'13', 'mroo':'13', 'wara':'13', 'olck':'13', 'cakm':'13', 'lepc':'13', 'saur':'13', 'gond':'13', 'gong':'13', 'brah':'14', 'khar':'14', 'bhks':'14', 'phag':'14', 'marc':'14', 'zanb':'14', 'soyo':'14', 'orhk':'14', 'sogd':'14', 'sogo':'14', 'sylo':'15', 'kthi':'15', 'shrd':'15', 'takr':'15', 'sidd':'15', 'mahj':'15', 'khoj':'15', 'sind':'15',  'mult':'15', 'tirh':'15', 'modi':'15', 'gran':'15', 'ahom':'15', 'sora':'15', 'dogr':'15', 'thai':'16', 'laoo':'16', 'mymr':'16', 'khmr':'16', 'tale':'16', 'talu':'16', 'lana':'16', 'tavt':'16', 'kali':'16', 'cham':'16', 'hmng':'16', 'pauc':'16', 'rogh':'16', 'tglg':'17', 'hano':'17', 'buhd':'17', 'tagb':'17', 'bugi':'17', 'bali':'17', 'java':'17', 'rjng':'17', 'batk':'17', 'sund':'17', 'maka':'17', 'hani':'18', 'bopo':'18', 'jpan':'18', 'jpan':'18', 'hang':'18',  'yiii':'18', 'nshu':'18', 'lisu':'18', 'miao':'18', 'tang':'18',  'ethi':'19',  'osma':'19', 'tfng':'19', 'nkoo':'19', 'vaii':'19', 'bamu':'19',  'bass':'19', 'mend':'19', 'adlm':'19', 'mede':'19', 'cher':'20', 'cans':'20', 'osge':'20', 'dsrt':'20', 'dupl':'21', 'sutton_signwriting':'21', 'xphais':'22', 'elym':'10', 'hmnp':'16', 'wcho':'13', 'nand':'15' 
+var chapters = { 
+'latn':'07', 'grek':'07', 'copt':'07', 'cyrl':'07', 'glag':'07', 'armn':'07', 'geor':'07',
+'lina':'08', 'linb':'08', 'cprt':'08', 'lyci':'08', 'cari':'08', 'lydi':'08', 'ital':'08', 'runi':'08','hung':'08', 'goth':'08', 'elba':'08', 'aghb':'08', 'perm':'08',  'ogam':'08', 'shaw':'08',
+'hebr':'09', 'arab':'09', 'syrc':'09', 'samr':'09', 'mand':'09',
+'sarb':'10', 'sarn':'10', 'phnx':'10', 'armi':'10', 'mani':'10', 'prti':'10', 'phli':'10', 'plhp':'10', 'avst':'10', 'elym':'10', 'nbat':'10', 'palm':'10', 'hatr':'10',
+'xsux':'11', 'ugar':'11', 'xpeo':'11', 'egyp':'11', 'mero':'11', 'hluw':'11',
+'deva':'12', 'beng':'12', 'guru':'12', 'gujr':'12', 'orya':'12', 'taml':'12', 'telu':'12', 'knda':'12', 'mlym':'12',
+'thaa':'13', 'sinh':'13', 'newa':'13', 'tibt':'13', 'mong':'13', 'limb':'13', 'mtei':'13', 'mroo':'13', 'wara':'13', 'olck':'13', 'cakm':'13', 'lepc':'13', 'saur':'13', 'gond':'13', 'gong':'13', 'wcho':'13',
+'brah':'14', 'khar':'14', 'bhks':'14', 'phag':'14', 'marc':'14', 'zanb':'14', 'soyo':'14', 'orhk':'14', 'sogd':'14', 'sogo':'14',
+'sylo':'15', 'kthi':'15', 'shrd':'15', 'takr':'15', 'sidd':'15', 'mahj':'15', 'khoj':'15', 'sind':'15',  'mult':'15', 'tirh':'15', 'modi':'15', 'nand':'15', 'gran':'15', 'ahom':'15', 'sora':'15', 'dogr':'15',
+'thai':'16', 'laoo':'16', 'mymr':'16', 'khmr':'16', 'tale':'16', 'talu':'16', 'lana':'16', 'tavt':'16', 'kali':'16', 'cham':'16', 'hmng':'16', 'pauc':'16', 'rogh':'16', 'hmnp':'16',
+'tglg':'17', 'hano':'17', 'buhd':'17', 'tagb':'17', 'bugi':'17', 'bali':'17', 'java':'17', 'rjng':'17', 'batk':'17', 'sund':'17', 'maka':'17',
+'hani':'18', 'bopo':'18', 'jpan':'18', 'hang':'18', 'yiii':'18', 'nshu':'18', 'lisu':'18', 'miao':'18', 'tang':'18',
+'ethi':'19',  'osma':'19', 'tfng':'19', 'nkoo':'19', 'vaii':'19', 'bamu':'19',  'bass':'19', 'mend':'19', 'adlm':'19', 'mede':'19',
+'cher':'20', 'cans':'20', 'osge':'20', 'dsrt':'20',
+'dupl':'21', 'sutton_signwriting':'21', 'xphais':'22', 
 }
 
 var OSDefaultFontsSet = new Set(['arab','armn','beng','cans','cher','deva','ethi','geor','gujr','guru','hebr','jpan','knda','khmr','hang','laoo','mlym','mong','mymr','talu','nkoo','orya','osma','phag','sinh','syrc','tale','taml','telu','thaa','thai','tibt','tfng','vaii','yiii'])
@@ -270,37 +303,39 @@ var blockStart = {
 var linkDB = { 
 
 ahom:{ script:"Ahom", code:"Ahom", dates:"15thC – today", start:"1400", end:"", origin:"South Asia", current_usage:"endangered",
-	info:{ 		scriptsource:"Ahom", wikipedia:"Ahom_alphabet", omniglot:"ahom" }, 
-	local: [	],
-	unicode:{ 	core:"ch15", historical:"ky6s63f7fx" }, 
-	charts:[	"Ahom" ],
-	pickers:[	
-				],
-	fontkey:[	
-				],
-	layout:[	
-				]
-	},
+info:{ scriptsource:"Ahom", wikipedia:"Ahom_alphabet", omniglot:"ahom" }, 
+local: [	],
+unicode:{ core:"ch15", historical:"ky6s63f7fx" }, 
+charts:[ "Ahom" ],
+pickers:[	],
+fontkey:[	],
+layout:[	]
+},
+
+adlm:{ script:"Adlam", code:"Adlm", name:"", dates:"1980s – today", start:"1980", end:"", origin:"Africa", current_usage:"",
+info:{ wikipedia:"Fula_alphabets#Adlam_alphabet", omniglot:"adlam" }, 
+local: [	],
+unicode:{ 	}, 
+charts:[ "Adlam" ],
+pickers:[	],
+fontkey:[	],
+layout:[	],
+other:[		]
+},
+	   
 
 arab:{ script:"Arabic",  code:"Arab", dates:"6thC – today", start:"500", end:"", origin:"West Asia", current_usage:"",
-	info:{ scriptsource:"Arab", wikipedia:"Arabic_script", omniglot:"arabic" }, 
-	local:[		],
-	unicode:{ 	core:"ch09", historical:"hqr6rc9md5" }, 
-	charts:[	"Arabic", "Arabic Supplement", "Arabic Extended-A", "Arabic Presentation Forms-A", "Arabic Presentation Forms-B" ],
-	pickers:[	{ name:"Arabic", url:"arabic" },
-				{ name:"Arabic Block", url:"arabicblock" },
-				{ name:"Persian", url:"persian" },
-				{ name:"Uighur", url:"uighur" },
-				{ name:"Urdu", url:"urdu" }
-				],
-	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-middle-eastern.html#arabic" }
-				],
-	layout:[	{ name:"Arabic Layout Requirements", url:"https://w3c.github.io/alreq/" },
-				{ name:"Arabic text justification", url:"http://www.tug.org/tugboat/tb27-2/tb87benatia.pdf" },
-				{ name:"Justify Just or Just Justify", url:"http://quod.lib.umich.edu/j/jep/3336451.0013.105?view=text;rgn=main" },
-				{ name:"Typography questions for HTML & CSS: Arabic", url:"https://r12a.github.io/blog/201110.html#20140523" },
-				{ name:"Rule-based expert system for Urdu nastaleeq justification", url:"http://www.cle.org.pk/Publication/papers/2004/rule-based-expert-system.pdf" }
-				]
+info:{ scriptsource:"Arab", wikipedia:"Arabic_script", omniglot:"arabic" }, 
+local:[ ],
+unicode:{ core:"ch09", historical:"hqr6rc9md5" },
+charts:[ "Arabic", "Arabic Supplement", "Arabic Extended-A", "Arabic Presentation Forms-A", "Arabic Presentation Forms-B" ],
+fontkey:[{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-middle-eastern.html#arabic" }],
+layout:[{ name:"Arabic Layout Requirements", url:"https://w3c.github.io/alreq/" },
+	{ name:"Arabic text justification", url:"http://www.tug.org/tugboat/tb27-2/tb87benatia.pdf" },
+	{ name:"Justify Just or Just Justify", url:"http://quod.lib.umich.edu/j/jep/3336451.0013.105?view=text;rgn=main" },
+	{ name:"Typography questions for HTML & CSS: Arabic", url:"https://r12a.github.io/blog/201110.html#20140523" },
+	{ name:"Rule-based expert system for Urdu nastaleeq justification", url:"http://www.cle.org.pk/Publication/papers/2004/rule-based-expert-system.pdf" }
+	]
 	},
 
 armn:{ script:"Armenian", code:"Armn", dates:"406 – today", start:"406", end:"", origin:"Europe", current_usage:"",
@@ -2209,22 +2244,6 @@ tang:{ script:"Tangut", code:"Tang", name:"", dates:"1036 – 16thC", start:"103
 				],
 	unicode:{ 	}, 
 	charts:[	"Tangut" ],
-	pickers:[	
-				],
-	fontkey:[	
-				],
-	layout:[	
-				],
-	other:[		
-				]
-	},
-	   
-adlm:{ script:"Adlam", code:"Adlm", name:"", dates:"1980s – today", start:"1980", end:"", origin:"Africa", current_usage:"",
-	info:{ 		wikipedia:"Fula_alphabets#Adlam_alphabet", omniglot:"adlam" }, 
-	local: [	
-				],
-	unicode:{ 	}, 
-	charts:[	"Adlam" ],
 	pickers:[	
 				],
 	fontkey:[	
