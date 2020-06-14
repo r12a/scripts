@@ -193,6 +193,7 @@ var charNotesList = {
     'grek':['Greek', 'greek/block'],
     'gujr':['Gujarati', 'gujarati/block'],
     'guru':['Gurmukhi', 'gurmukhi/block'],
+    'hani':['Punctuation', 'punctuation/block'],
     'hebr':['Hebrew', 'hebrew/block'],
     'java':['Javanese', 'javanese/block'],
     'khmr':['Khmer', 'khmer/block'],
