@@ -1,6 +1,6 @@
 var scriptNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cans', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'jpan', 'khmr', 'laoo', 'lana', 'lisu', 'mand', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'taml', 'tavt', 'telu', 'thaa', 'thai', 'tibt', 'tfng'])
 
-var scriptNotes= {
+var scriptNotes= {  // used by Script Links page
     'adlm':[['Adlam/Pular','adlam/']],
     'arab':[['Arabic','arabic/'], 
 			['Hausa (ajami)', 'arabic/hausa'],
@@ -58,7 +58,7 @@ var scriptNotes= {
     'vaii':[['Vai', 'vai/']],
     }
 
-var scriptNotesByRegion = {
+var scriptNotesByRegion = {  // used by script summary link page
 	'Africa':[['Adlam', 'adlam/'],
 			  ['Amharic', 'ethiopic/'],
 			  ['Bassa Vah', 'bassavah/'],
