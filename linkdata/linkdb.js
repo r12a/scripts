@@ -213,6 +213,7 @@ var charNotesList = {
     'guru':['Gurmukhi', 'gurmukhi/block'],
     'hani':['Punctuation', 'punctuation/block'],
     'hebr':['Hebrew', 'hebrew/block'],
+    'jpan':['Punctuation', 'punctuation/block'],
     'java':['Javanese', 'javanese/block'],
     'khmr':['Khmer', 'khmer/block'],
     'laoo':['Lao', 'lao/block'],
