@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-<meta charset="utf-8"/>
+<meta charset="utf-8">
 <title>Adlam/Pular script notes</title>
-<meta name="description" content="Summary of the Adlam script and Pular Adlam orthography."/>
-
-<link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../common/local.css" />
-<link rel="stylesheet" href="fuf.css" />
-
+<meta name="description" content="Summary of the Adlam script and Pular Adlam orthography.">
+<link rel="stylesheet" href="../../shared/style/docs.css">
+<link rel="stylesheet" href="../common/local.css">
+<link rel="stylesheet" href="fuf.css">
 <script src="../../shared/scriptdb/adlm.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
@@ -34,95 +32,82 @@
 <div id="header-boilerplate"></div>
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
 </header>
-
 <h1>Adlam/Pular (early draft)</h1>
 
-<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top"/></a></nav>
 
-  <aside class="sidebar"> 
-		<h2 class="notoc flush"><a id="tochead" name="tochead" tabindex="4">Contents</a></h2>
-		<div id="toc"><!-- placeholder --></div>
-
- <div id="fontsetting" class="closed">
-  <h2 class="notoc"><a id="fonts">Fonts</a></h2>
-  <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-   <p>Set font for examples<br/>
-      <select id="exfontswitchfont" 
-onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'fuf');">
-      </select>
-      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
-      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
-onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'fuf');" />
-    </p>
-
-      <p>Set font for sample<br/>
-      <select  id="slfontswitchfont" 
-onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
-      </select>
-      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
-    </p>
-
-    <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
-	return false;">
-      <p>Change size:<br />
-        <input id="slider" type="range" min="12" max="100" step="1" value="32">
-        &#xA0; <span id="sizeIndicator">32px</span><br />
-        <input id="multiplier" type="hidden" value="1" />
-        Multiplier:
-        <input type="radio" name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
-        <label for="x1">1</label>
-        <input type="radio" name="step" id="x5" value="2"  onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
-        <label for="x5">2</label>
-        <input type="radio" name="step" id="x10" value="10"  onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
-        <label for="x10">10</label>
-      </p>
-    </form>
+<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top"></a></nav>
+<aside class="sidebar">
+<h2 class="notoc flush"><a id="tochead" name="tochead" tabindex="4">Contents</a></h2>
+<div id="toc"><!-- placeholder --></div>
+<div id="fontsetting" class="closed">
+<h2 class="notoc"><a id="fonts">Fonts</a></h2>
+<div id="fontsettingswitch" title="Click to show/hide the panel." onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
+<p>Set font for examples<br>
+<select id="exfontswitchfont" onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'fuf');">
+</select>
+<script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
+<input id="exfontswitchsize" value="28" style="width:30px;" onchange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'fuf');" type="number"> </p>
+<p>Set font for sample<br>
+<select id="slfontswitchfont" onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
+</select>
+<script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
+</p>
+<form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
+document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';	return false;">
+<p>Change size:<br>
+<input id="slider" min="12" max="100" step="1" value="32" type="range">
+&nbsp; <span id="sizeIndicator">32px</span><br>
+<input id="multiplier" value="1" type="hidden"> Multiplier: <input name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" type="radio"> <label for="x1">1</label> <input name="step" id="x5" value="2" onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" type="radio"> <label for="x5">2</label> <input name="step" id="x10" value="10" onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
+document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" type="radio"> <label for="x10">10</label> </p>
+</form>
 </div>
 </aside>
 
-<p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->15 June, 2020<!-- #EndDate -->
-  <span id="versionTop"></span>
-  </p>
 
 
-	<div class="section">
-	  <p>This page gathers together basic information about the Adlam script and its use for the Pular language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Pular using Unicode.</p>
-<p><strong>Note that the Noto Sans font used for Adlam text on this page is largely based on an older set of shapes for Adlam letters. For more information see <a class="secref">variants</a>.</strong>
+
+<p id="status">Updated
+<!-- #BeginDate format:Sw1 -->15 June, 2020<!-- #EndDate --> <span id="versionTop"></span>
+</p>
 
 
 
 
+<div class="section">
+<p>This page gathers together basic information about the Adlam script and
+its use for the Pular language. It aims (generally) to provide an
+overview of the orthography and typographic features, and (specifically)
+to advise how to write Pular using Unicode.</p>
+<p><strong>The Noto Sans font used for joined text is not yet available
+from the Noto site. The Noto Sans <em>Unjoined</em> font used for
+Adlam text on this page is largely based on an older set of shapes for
+Adlam letters. For more information see <a class="secref">variants</a>.</strong>
+</p>
 <details>
 <summary class="instructions"><a href="../links?iso=Adlm">Related pages</a>.</summary>
 </details>
-
-
-
 <details>
-<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
+<summary class="supportdocs instructions"><a href="../#scriptnotes">Other
+script summaries</a>.</summary>
 </details>
-
-
-
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Adlam','Pular'); return false;">About this page</a></summary>
+<summary class="instructions"><a href="" onclick="showAbout(document.getElementById('about'),'Adlam','Pular'); return false;">About
+this page</a></summary>
 <div id="about"></div>
 </details>
 </div>
 
 
 
+
+
 <section id="sample">
 <h2>Sample (Adlam)</h2>
-  
-
-  <p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.</p>
-<div id="freeText" dir="rtl" lang="fuf" data-target="c" data-base="/scripts/adlam/block" data-source="http://unicode.org/udhr/translations.html">
+<p class="instructions noprint">Select part of this sample text to show a
+list of characters, with links to more details.</p>
+<div id="freeText" dir="rtl" data-target="c" data-base="/scripts/adlam/block" data-source="http://unicode.org/udhr/translations.html" lang="fuf">
  <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">𞤑𞤵𞥅𞤤𞤢𞤤 𞤺𞤢𞤣𞤢𞤲𞤢𞤤
 
 𞤋𞤲𞥆𞤢𞤥𞤢 𞤢𞥄𞤣𞤫𞥅𞤶𞤭 𞤬𞤮𞤬 𞤨𞤮𞤼𞤭⹁ 𞤲'𞤣𞤭𞤥𞤯𞤭𞤣𞤭 𞤫 𞤶𞤭𞤦𞤭𞤲𞤢𞤲𞥆𞤣𞤫 𞤼𞤮 𞤦𞤢𞤲𞥆𞤺𞤫 𞤸𞤢𞤳𞥆𞤫𞥅𞤶𞤭. 𞤉𞤩𞤫 𞤲'𞤺𞤮𞥅𞤣𞤭 𞤥𞤭𞥅𞤶𞤮 𞤫 𞤸𞤢𞤳𞥆𞤭𞤤𞤢𞤲𞤼𞤢𞥄𞤺𞤢𞤤 𞤫𞤼𞤫 𞤫𞤩𞤫 𞤨𞤮𞤼𞤭 𞤸𞤵𞥅𞤬𞤮 𞤲'𞤣𞤭𞤪𞤣𞤫 𞤫 𞤲'𞤣𞤫𞤪 𞤩 𞤭𞤴𞤲𞤺𞤵𞤴𞤵𞤥𞥆𞤢𞥄𞤺𞤵.</p>
@@ -136,195 +121,330 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
- 
 
 <section id="history">
 <h2>Usage &amp; history</h2>
-
-<p>The Adlam script was devised in the 1980s, and is nowadays used for writing the Fulani language, alongside Latin and Arabic orthographies. It is currently taught in Guinea, Nigeria, Liberia and other nearby countries.</p>
-<p>Name: <span class="charExample" translate="no"><span class="ex" lang="fuf" dir="rtl">𞤀𞤣𞤤𞤢𞤥 𞤆𞤵𞤤𞤢𞤪</span> <span class="ipa">Adlam Pular</span></span></p>
-<p>The script was developed by  two teenage brothers, Ibrahima and Abdoulaye Barry, so that their language could have its own script. The name of the script ‘Adlam’ reflects the first four characters in the repertoire: A, D, L, and M. </p>
-<p>After teaching their own family and local villagers to use the script for lessons in water hygiene and basic medical care, the brothers set up learning centres in Togo, Senegal, and Benin. Eventually, the means were available to print the script, and a newspaper and a number of printed books were published. After a period of imprisonment by the  Guinean government which was suspicious about the rapid spread of the script, followed by emigration to the USA, Ibrahim produced 3 fonts and a keyboard by 2012.</p>
-<p>The shapes of the glyphs used has evolved over time, and various changes were standardised in 2019, however some fonts have not yet caught up with these changes.</p>
-<p class="instructions">Sources: <a href="http://scriptsource.org/scr/Adlm">Scriptsource</a>, <a href="http://en.wikipedia.org/wiki/Adlam_alphabet">Wikipedia</a></p>
+<p>The Adlam script was devised in the 1980s, and is nowadays used for
+writing the Fulani language, alongside Latin and Arabic orthographies.
+It is currently taught in Guinea, Nigeria, Liberia and other nearby
+countries.</p>
+<p>Pular or Pulaar is the way the Fula people refer to their language in
+western dialects. In central and eastern dialects it is Fulfulde. The
+English names Fula(h) and Fulani originally come from Manding and Hausa,
+respectively. Sometimes the French name Peul (from Wolof) can be found.</p>
+<p>The spread of the script is occurring remarkably rapidly across the
+whole Pular/Fulfulde-speaking world, through a grass-roots movement. The
+new script appeals to Pular speakers, and its use is having a positive
+impact on general literacy among them.</p>
+<p>Name: <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="fuf">𞤀𞤣𞤤𞤢𞤥 𞤆𞤵𞤤𞤢𞤪</span> <span class="trans">Adlam
+Pular</span></span></p>
+<p>The script was developed by two teenage brothers, Ibrahima and
+Abdoulaye Barry, so that their language could have its own script. The
+name of the script ‘Adlam’ reflects the first four characters in the
+repertoire: A, D, L, and M. </p>
+<p>After teaching their own family and local villagers to use the script
+for lessons in water hygiene and basic medical care, the brothers set up
+learning centres in Togo, Senegal, and Benin. Eventually, the means were
+available to print the script, and a newspaper and a number of printed
+books were published.</p>
+<p>The shapes of the glyphs used has evolved over time, and various
+changes were standardised in 2019, however some fonts have not yet
+caught up with these changes.</p>
+<p class="instructions">Sources: <a href="http://scriptsource.org/scr/Adlm">Scriptsource</a>,
+<a href="http://en.wikipedia.org/wiki/Adlam_alphabet">Wikipedia</a></p>
 <section id="variants">
 <h3>Orthographic development &amp; variants</h3>
-<p>In 2019 the design of Adlam letter glyphs was overhauled in a proposal to the Unicode Consortium, which resulted in changes to the code chart. <a class="fnref" href="https://www.unicode.org/L2/L2019/19119r-adlam-font-repl.pdf">→p</a></p>
-
-    <figure id="variant_shapes">
-	<p><img src="images/adlam_block_2018.png" alt="Adlam 2018"/><img src="images/adlam_block_2019.png" alt="Adlam 2019"/><img id="notoShapes" src="images/adlam_block_font.png" style="display: none;height:694px" alt="Noto Sans Adlam"/></p>
-	<figcaption>Glyphs in the Unicode Adlam code chart showing pre-2019 (left) and post-2019 (right) shapes. Click 
-<button onclick="document.getElementById('notoShapes').style.display='inline'; return false;">here</button>
-to also show shapes produced by the Noto Sans Adlam font at the start of 2020.. Red underlines highlight some characters that don't resemble either of the other charts..</figcaption>
-  </figure>
-
-<p>Typical changes involved standardising the shapes across cursive forms, better distinctions between lower and uppercase forms, removal of some ascenders to avoid diacritic collisions, and then addition of some small ascenders to help distinguish joined forms. </p>
-<p>There were also some significant shape changes, particularly to make supplementary letters look more like those used for similar, standard sounds, or to make letters easier to read.</p>
-<p>Although there are not many Adlam Unicode fonts, and they will be changed, legacy forms are likely to persist for some time alongside the new forms. </p>
-<p>The 2017 release of the Noto Sans Adlam font (still in use in 2020, and used in this document!) contains a set of glyphs that sometimes match one or other of the shapes shown in <a class="figref">variant_shapes</a>, and sometimes use completely different shapes from either. An updated version of the font was expected with the release of Unicode v13. </p>
+<p>In 2019 the design of Adlam letter glyphs was overhauled in a
+proposal to the Unicode Consortium, which resulted in changes to the
+code chart. <a class="fnref more" href="https://www.unicode.org/L2/L2019/19119r-adlam-font-repl.pdf">p</a></p>
+<figure id="variant_shapes">
+<p><img src="images/adlam_block_2018.png" alt="Adlam 2018"><img src="images/adlam_block_2019.png" alt="Adlam 2019"><img id="notoShapes" src="images/adlam_block_font.png" style="display: none;height:694px" alt="Noto Sans Adlam"></p>
+<figcaption>Glyphs in the Unicode Adlam code chart showing pre-2019
+(left) and post-2019 (right) shapes. Click <button onclick="document.getElementById('notoShapes').style.display='inline'; return false;">here</button>
+to also show shapes produced by the Noto Sans Adlam font at the
+start of 2020.. Red underlines highlight some characters that don't
+resemble either of the other charts..</figcaption> </figure>
+<p>Typical changes involved standardising the shapes across cursive
+forms, better distinctions between lower and uppercase forms, removal
+of some ascenders to avoid diacritic collisions, and then addition of
+some small ascenders to help distinguish joined forms. </p>
+<p>There were also some significant shape changes, particularly to make
+supplementary letters look more like those used for similar, standard
+sounds, or to make letters easier to read.</p>
+<p>Although there are not many Adlam Unicode fonts, and they will be
+changed, legacy forms are likely to persist for some time alongside
+the new forms. </p>
+<p>The 2017 release of the Noto Sans Adlam font (still in use in 2020)
+contains a set of glyphs that sometimes match one or other of the
+shapes shown in <a class="figref">variant_shapes</a>, and sometimes
+use completely different shapes from either. An updated version of the
+font was expected with the release of Unicode v13. </p>
 </section>
 </section>
-
-
-
-
-
-  <div id="features">
-  <table>
-      <tbody id="featureTableBody">
-     </tbody>
-    </table>
-    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
-   </div>
-
-
-
-
+<div id="features">
+<table>
+<tbody id="featureTableBody">
+</tbody>
+</table>
+<p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+</div>
 <section id="type">
 <h2>Basic features</h2>
-<p>The Adlam script  is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#alphabet">alphabet</a></span>. Both consonants and vowels are indicated by letters.  See the table to the right for a brief overview of features for the Pular language.</p>
-  <p>The following list describes some distinctive characteristics of the Adlam script.</p>
+<p>The Adlam script is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#alphabet">alphabet</a></span>.
+Both consonants and vowels are indicated by letters. See the table to
+the right for a brief overview of features for the Pular language. (See
+the <a href="../../scripts/featurelist/#key">key</a>. Character counts
+exclude ASCII characters.)</p>
+<p>The following list describes some distinctive characteristics of the
+Adlam script.</p>
 <ul>
 <li>
-<p>The text direction is right-to-left and, unlike Arabic, numbers are also written right-to-left.</p></li>
+<p>The text direction is right-to-left and, unlike Arabic, numbers are
+also written right-to-left.</p>
+</li>
 <li>
-<p>The script can be written cursively or not. Non-joining fonts may be used for titles, etc.</p></li>
+<p>The script can be written cursively or not. Non-joining fonts may
+be used for titles, etc.</p>
+</li>
 <li>
-<p>The script is bicameral.</p></li>
+<p>The script is bicameral.</p>
+</li>
 </ul>
 </section>
-
-
-
-
-
-
 <section id="direction">
 <h2>Text direction</h2>
-    <p>Adlam text is written horizontally,  right to left.</p>
-<p>Like N'Ko but unlike Arabic, numbers are also written with digits in right-to-left order.</p>
-  </section>
-
-
-
-
+<p>Adlam text is written horizontally, right to left.</p>
+<p>Like N'Ko but unlike Arabic, numbers are also written with digits in
+right-to-left order.</p>
+</section>
 <!--section>
-<h2 id="structure">Structure</h2>
-    <p>@ Hausa has 3 syllable types: CV, CVV, and CVC, where VV can be a long vowel or a diphthong.<a class="fnref" href="#refs">c</a> The long vs. short vowel distinction is phonemically important, however when a syllable with a long vowel acquires and final consonant, the vowel is shortened.</p>
-<p>@ Consonant clusters may occur where syllables are side by side, but not within a syllable. Gemination is, however, a distinctive feature.<a class="fnref" href="#refs">c</a></p>
-<p>@ Semivowels <span class="ipa">ʷ</span> and <span class="ipa">ʲ</span> may occur after an initial consonant.</p>
-</section-->
-  
-  
-
-
-
+<h2 id="structure">Structure</h2>    <p>@ Hausa has 3 syllable types: CV, CVV, and CVC, where VV can be a long vowel or a diphthong.<a class="fnref" href="#refs">c</a> The long vs. short vowel distinction is phonemically important, however when a syllable with a long vowel acquires and final consonant, the vowel is shortened.</p><p>@ Consonant clusters may occur where syllables are side by side, but not within a syllable. Gemination is, however, a distinctive feature.<a class="fnref" href="#refs">c</a></p><p>@ Semivowels <span class="ipa">ʷ</span> and <span class="ipa">ʲ</span> may occur after an initial consonant.</p></section-->
 <div id="showTranscriptions">
 <div>Character lists show:</div>
-<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
-<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div>
-<label>Transliteration 
-<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
-<div><label>Latin <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+<div><label>Codepoint <input onchange="toggleTranscription('listUnum', this.checked)" checked="checked" type="checkbox"></label></div>
+<div><label>IPA <input onchange="toggleTranscription('listIPA', this.checked)" checked="checked" type="checkbox"></label></div>
+<div> <label>Transliteration <input onchange="toggleTranscription('listTrans', this.checked)" type="checkbox"></label></div>
+<div><label>Latin <input onchange="toggleTranscription('listTransc', this.checked)" type="checkbox"></label></div>
 </div>
-   
-    
-      
-
-
-
 <section id="vowelsummary">
 <h2>Vowels</h2>
-
-
 <section id="vowelSounds">
 <h3>Vowel sounds</h3>
-
-<p class="instructions">Click on the sound groups to see where else in the document each of the sounds are referred to.</p>
-
+<p class="instructions">Click on the sound groups to see where else in
+the document each of the sounds are referred to.</p>
 <!--p><span class="leadin">Plain vowels.</span></p-->
-
-
 <div style="margin-left: 7.5%;">
-<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
-
-  <defs>
-    <filter x="0" y="0" width="1" height="1" id="solid">
-      <feFlood flood-color="white"/>
-      <feComposite in="SourceGraphic" operator="xor"/>
-    </filter>
-  </defs>
-
-  <!--image xlink:href="images/vowelgrid.gif" alt="Les caractères sont associés à des octets." x="0" y="0" width="400" height="200"></image--> 
-  <use xlink:href="#arrowRight" x="155" y="25"></use> 
-  
-  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
-  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
-  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
-  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
-  
-  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
-  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
-  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
-  
-  <!-- close -->
-  <circle cx="40" cy="10" r="3" fill="#ccc"/>
-  <circle cx="140" cy="10" r="3" fill="#ccc"/>
-  <circle cx="240" cy="10" r="3" fill="#ccc"/>
-  
-   <!-- mid close -->
-  <circle cx="65" cy="70" r="3" fill="#ccc"/>
-  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
-  <circle cx="240" cy="70" r="3" fill="#ccc"/>
-  
-  <!-- mid open -->
-  <circle cx="90" cy="130" r="3" fill="#ccc"/>
-  <circle cx="165" cy="130" r="3" fill="#ccc"/>
-  <circle cx="240" cy="130" r="3" fill="#ccc"/>
-  
-  <!-- open -->
-  <circle cx="115" cy="190" r="3" fill="#ccc"/>
-  <circle cx="177" cy="190" r="3" fill="#ccc"/>
-  <circle cx="240" cy="190" r="3" fill="#ccc"/>
-  
-  
-  <!-- close -->
-  <text x="32" y="15" class="ipa" text-anchor="end">i iː</text> 
-  <text x="250" y="15" class="ipa">u uː</text> 
-
-  <!-- close mid -->
-  <text x="57" y="75" class="ipa" text-anchor="end">e eː</text> 
-  <text x="250" y="75" class="ipa">o oː</text> 
-
-  <!-- open mid -->
-  <text x="81" y="135" class="ipa" text-anchor="end">ɛ ɛː</text> 
-  <text x="250" y="135" class="ipa">ɔ ɔː</text> 
-
-  <!-- open -->
-  <text x="106" y="195" class="ipa" text-anchor="end">a aː</text> 
-</svg>
+<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG">
+<defs>
+<filter x="0" y="0" width="1" height="1" id="solid">
+<feFlood flood-color="white"></feFlood>
+<feComposite in="SourceGraphic" operator="xor"></feComposite> </filter>
+</defs>
+<!--image xlink:href="images/vowelgrid.gif" alt="Les caractères sont associés à des octets." x="0" y="0" width="400" height="200"></image-->
+<use xlink:href="#arrowRight" x="155" y="25"></use>
+<line x1="40" y1="10" x2="240" y2="10" stroke="#ccc"></line>
+<line x1="240" y1="10" x2="240" y2="190" stroke="#ccc"></line>
+<line x1="115" y1="190" x2="240" y2="190" stroke="#ccc"></line>
+<line x1="40" y1="10" x2="115" y2="190" stroke="#ccc"></line>
+<line x1="65" y1="70" x2="240" y2="70" stroke="#ccc"></line>
+<line x1="90" y1="130" x2="240" y2="130" stroke="#ccc"></line>
+<line x1="140" y1="10" x2="177" y2="190" stroke="#ccc"></line>
+<!-- close -->
+<circle cx="40" cy="10" r="3" fill="#ccc"></circle>
+<circle cx="140" cy="10" r="3" fill="#ccc"></circle>
+<circle cx="240" cy="10" r="3" fill="#ccc"></circle>
+<!-- mid close -->
+<circle cx="65" cy="70" r="3" fill="#ccc"></circle>
+<circle cx="152.5" cy="70" r="3" fill="#ccc"></circle>
+<circle cx="240" cy="70" r="3" fill="#ccc"></circle>
+<!-- mid open -->
+<circle cx="90" cy="130" r="3" fill="#ccc"></circle>
+<circle cx="165" cy="130" r="3" fill="#ccc"></circle>
+<circle cx="240" cy="130" r="3" fill="#ccc"></circle>
+<!-- open -->
+<circle cx="115" cy="190" r="3" fill="#ccc"></circle>
+<circle cx="177" cy="190" r="3" fill="#ccc"></circle>
+<circle cx="240" cy="190" r="3" fill="#ccc"></circle>
+<!-- close -->
+<text x="32" y="15" class="ipa" text-anchor="end">i iː</text>
+<text x="250" y="15" class="ipa">u uː</text>
+<!-- close mid -->
+<text x="57" y="75" class="ipa" text-anchor="end">e eː</text>
+<text x="250" y="75" class="ipa">o oː</text>
+<!-- open mid -->
+<text x="81" y="135" class="ipa" text-anchor="end">ɛ ɛː</text>
+<text x="250" y="135" class="ipa">ɔ ɔː</text>
+<!-- open -->
+<text x="106" y="195" class="ipa" text-anchor="end">a aː</text> </svg>
 </div>
-<!--p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">wp</a>.</p-->
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source <a class="fnref" href="https://en.wikipedia.org/wiki/Fula_language">w</a>.</p>
+<p>Short <span class="ipa">i e o u</span> vowel sounds can also be realized as <span class="ipa">ɪ ɛ ɔ ʊ</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Fula_language">w</a></p>
 </section>
 
 
 
 
 
+<section id="vowel_mappings">
+<h3>Vowel to script mapping</h3>
+<p>The following tables show how the above vowel sounds map to common characters or sequences of characters in vowelled text. The sections that follow this provide additional information. </p>
+
+<div id="mapv_high" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">i</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E92D;</span> [<a href="/scripts/adlam/block#char1E92D"><span class="uname">U+1E92D ADLAM SMALL LETTER I</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E90B;</span> [<a href="/scripts/adlam/block#char1E90B"><span class="uname">U+1E90B ADLAM CAPITAL LETTER I</span></a>]</span>&nbsp;</p>
+</div>
+</div><div class="mapItem">
+<div class="phone"><span class="ipa">iː</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E92D;&#x1E945;</span> [<a href="/scripts/adlam/block#char1E92D"><span class="uname">U+1E92D ADLAM SMALL LETTER I</span></a> + <a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E90B;&#x1E945;</span> [<a href="/scripts/adlam/block#char1E90B"><span class="uname">U+1E90B ADLAM CAPITAL LETTER I</span></a> + <a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span>&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">u</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E935;</span> [<a href="/scripts/adlam/block#char1E935"><span class="uname">U+1E935 ADLAM SMALL LETTER U</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E913;</span> [<a href="/scripts/adlam/block#char1E913"><span class="uname">U+1E913 ADLAM CAPITAL LETTER U</span></a>]</span>&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">uː</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E935;&#x1E945;</span> [<a href="/scripts/adlam/block#char1E935"><span class="uname">U+1E935 ADLAM SMALL LETTER U</span></a> + <a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E913;&#x1E945;</span> [<a href="/scripts/adlam/block#char1E913"><span class="uname">U+1E913 ADLAM CAPITAL LETTER U</span></a> + <a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span>&nbsp;</p>
+</div>
+</div>
+</div>
+<div id="mapv_hmid2" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">e</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E92B;&#x1E94A;</span> [<a href="/scripts/adlam/block#char1E92B"><span class="uname">U+1E92B ADLAM SMALL LETTER E</span></a> + <a href="/scripts/adlam/block#char1E94A"><span class="uname">U+1E94A ADLAM NUKTA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E909;&#x1E94A;</span> [<a href="/scripts/adlam/block#char1E909"><span class="uname">U+1E909 ADLAM CAPITAL LETTER E</span></a> + <a href="/scripts/adlam/block#char1E94A"><span class="uname">U+1E94A ADLAM NUKTA</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">eː</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E92B;&#x1E94A;&#x1E945;</span> [<a href="/scripts/adlam/block#char1E92B"><span class="uname">U+1E92B ADLAM SMALL LETTER E</span></a> + <a href="/scripts/adlam/block#char1E94A"><span class="uname">U+1E94A ADLAM NUKTA</span></a> + <a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E909;&#x1E94A;&#x1E945;</span> [<a href="/scripts/adlam/block#char1E909"><span class="uname">U+1E909 ADLAM CAPITAL LETTER E</span></a> + <a href="/scripts/adlam/block#char1E94A"><span class="uname">U+1E94A ADLAM NUKTA</span></a> + <a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">o</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E92E;&#x1E94A;</span> [<a href="/scripts/adlam/block#char1E92E"><span class="uname">U+1E92E ADLAM SMALL LETTER O</span></a> + <a href="/scripts/adlam/block#char1E94A"><span class="uname">U+1E94A ADLAM NUKTA</span></a>]</span>&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E90C;&#x1E94A;</span> [<a href="/scripts/adlam/block#char1E90C"><span class="uname">U+1E90C ADLAM CAPITAL LETTER O</span></a> + <a href="/scripts/adlam/block#char1E94A"><span class="uname">U+1E94A ADLAM NUKTA</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">oː</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E92E;&#x1E94A;&#x1E945;</span> [<a href="/scripts/adlam/block#char1E92E"><span class="uname">U+1E92E ADLAM SMALL LETTER O</span></a> + <a href="/scripts/adlam/block#char1E94A"><span class="uname">U+1E94A ADLAM NUKTA</span></a> + <a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E90C;&#x1E94A;&#x1E945;</span> [<a href="/scripts/adlam/block#char1E90C"><span class="uname">U+1E90C ADLAM CAPITAL LETTER O</span></a> + <a href="/scripts/adlam/block#char1E94A"><span class="uname">U+1E94A ADLAM NUKTA</span></a> + <a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span></p>
+</div>
+</div>
+</div>
+<div id="mapv_hmid" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɛ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E92B;</span> [<a href="/scripts/adlam/block#char1E92B"><span class="uname">U+1E92B ADLAM SMALL LETTER E</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E909;</span> [<a href="/scripts/adlam/block#char1E909"><span class="uname">U+1E909 ADLAM CAPITAL LETTER E</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɛː</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E92B;&#x1E945;</span> [<a href="/scripts/adlam/block#char1E92B"><span class="uname">U+1E92B ADLAM SMALL LETTER E</span></a> + <a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span>&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E909;&#x1E945;</span> [<a href="/scripts/adlam/block#char1E909"><span class="uname">U+1E909 ADLAM CAPITAL LETTER E</span></a> + <a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span>&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɔ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E92E;</span> [<a href="/scripts/adlam/block#char1E92E"><span class="uname">U+1E92E ADLAM SMALL LETTER O</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E90C;</span> [<a href="/scripts/adlam/block#char1E90C"><span class="uname">U+1E90C ADLAM CAPITAL LETTER O</span></a>]</span>&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɔː</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E92E;&#x1E945;</span> [<a href="/scripts/adlam/block#char1E92E"><span class="uname">U+1E92E ADLAM SMALL LETTER O</span></a> + <a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E90C;&#x1E945;</span> [<a href="/scripts/adlam/block#char1E90C"><span class="uname">U+1E90C ADLAM CAPITAL LETTER O</span></a> + <a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span>&nbsp;</p>
+</div>
+</div>
+</div>
+<div id="mapv_low" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">a</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E922;</span> [<a href="/scripts/adlam/block#char1E922"><span class="uname">U+1E922 ADLAM SMALL LETTER ALIF</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E900;</span> [<a href="/scripts/adlam/block#char1E900"><span class="uname">U+1E900 ADLAM CAPITAL LETTER ALIF</span></a>]</span>&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">aː</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E922;&#x1E944;</span> [<a href="/scripts/adlam/block#char1E922"><span class="uname">U+1E922 ADLAM SMALL LETTER ALIF</span></a> + <a href="/scripts/adlam/block#char1E944"><span class="uname">U+1E944 ADLAM ALIF LENGTHENER</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E900;&#x1E944;</span> [<a href="/scripts/adlam/block#char1E900"><span class="uname">U+1E900 ADLAM CAPITAL LETTER ALIF</span></a> + <a href="/scripts/adlam/block#char1E944"><span class="uname">U+1E944 ADLAM ALIF LENGTHENER</span></a>]</span></p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+</section>
 <section id="vowelLetters">
 <h3>Vowel letters</h3>
-
 <p>The basic vowel letters are:</p>
 <figure class="characterBox auto" data-select="first" data-cols="ipa,trans,transc">𞤭𞤋␣𞤵𞤓␣𞤫𞤉␣𞤮𞤌␣𞤢𞤀</figure>
-
-<p>The sounds <span class="ipa">e</span> and <span class="ipa">o</span> are written using <span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E94A;</span> [<a href="/scripts/adlam/block#char1E94A"><span class="uname">U+1E94A ADLAM NUKTA</span></a>]</span> over the open-mid vowels.</p>
+<p>The sounds <span class="ipa">e</span> and <span class="ipa">o</span>
+are written using <span class="codepoint" translate="no"><span dir="rtl" lang="fuf">𞥊</span> [<a href="/scripts/adlam/block#char1E94A"><span class="uname">U+1E94A ADLAM NUKTA</span></a>]</span> over the
+open-mid vowels.</p>
 <figure class="auto" data-cols="ipa,trans,transc">𞤉𞥊␣𞤫𞥊␣𞤌𞥊␣𞤮𞥊</figure>
-
-<p>Long vowel sounds are indicated using diacritics. There are 2 of these: <span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E945;</span> [<a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span> is used for all vowels except <span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E922;</span> [<a href="/scripts/adlam/block#char1E922"><span class="uname">U+1E922 ADLAM SMALL LETTER ALIF</span></a>]</span>, which uses <span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E944;</span> [<a href="/scripts/adlam/block#char1E944"><span class="uname">U+1E944 ADLAM ALIF LENGTHENER</span></a>]</span>.</p>
+<p>Long vowel sounds are indicated using diacritics. There are 2 of
+these: <span class="codepoint" translate="no"><span dir="rtl" lang="fuf">𞥅</span>
+[<a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945
+ADLAM VOWEL LENGTHENER</span></a>]</span> is used for all vowels
+except <span class="codepoint" translate="no"><span dir="rtl" lang="fuf">𞤢</span>
+[<a href="/scripts/adlam/block#char1E922"><span class="uname">U+1E922
+ADLAM SMALL LETTER ALIF</span></a>]</span>, which uses <span class="codepoint" translate="no"><span dir="rtl" lang="fuf">𞥄</span> [<a href="/scripts/adlam/block#char1E944"><span class="uname">U+1E944 ADLAM ALIF LENGTHENER</span></a>]</span>.</p>
 <figure class="auto" data-cols="ipa,trans,transc">𞤋𞥅␣𞤭𞥅␣𞤓𞥅␣𞤵𞥅␣𞤉𞥊𞥅␣𞤫𞥊𞥅␣𞤌𞥊𞥅␣𞤮𞥊𞥅␣𞤉𞥅␣𞤫𞥅␣𞤌𞥅␣𞤮𞥅␣𞤀𞥄␣𞤢𞥄</figure>
-<p>The latest glyph reform introduces visual differences between the shapes of the vowel lengthener (and to a lesser extent, the alif lengthener) above upper vs lowercase letters.<a class="fnref" href="https://www.unicode.org/L2/L2019/19119r-adlam-font-repl.pdf">→p</a> These differences can be seen in the list just above.</p><i> </i>
-<p>The  <span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E94A;</span> [<a href="/scripts/adlam/block#char1E94A"><span class="uname">U+1E94A ADLAM NUKTA</span></a>]</span> used to distinguish sounds <span class="ipa">e</span> and <span class="ipa">o</span> normally appears  above the base letter, but when the sound is lengthened the diacritic should appear below the base character, while the lengthening mark appears above, eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="fuf">𞤫𞥊𞥅</span> <span class="trans">ɛ˙ː</span> <span class="ipa">eː</span></span> and <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="fuf">𞤮𞥊𞥅</span> <span class="trans">ɔ˙ː</span> <span class="ipa">oː</span></span>. The nukta should be typed and stored before the lengthening mark.</p>
+<p>The latest glyph reform introduces visual differences between the
+shapes of the vowel lengthener (and to a lesser extent, the alif
+lengthener) above upper vs lowercase letters.<a class="fnref" href="https://www.unicode.org/L2/L2019/19119r-adlam-font-repl.pdf">→p</a>
+These differences can be seen in the list just above.</p>
+<i> </i>
+<p>The <span class="codepoint" translate="no"><span dir="rtl" lang="fuf">𞥊</span>
+[<a href="/scripts/adlam/block#char1E94A"><span class="uname">U+1E94A
+ADLAM NUKTA</span></a>]</span> used to distinguish sounds <span class="ipa">e</span> and <span class="ipa">o</span> normally
+appears above the base letter, but when the sound is lengthened the
+diacritic should appear below the base character, while the
+lengthening mark appears above, eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="fuf">𞤫𞥊𞥅</span> <span class="trans">ɛ˙ː</span>
+<span class="ipa">eː</span></span> and <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="fuf">𞤮𞥊𞥅</span> <span class="trans">ɔ˙ː</span>
+<span class="ipa">oː</span></span>. The nukta should be typed and
+stored before the lengthening mark.</p>
 </section>
 <section id="absence">
 <h3>Vowel absence</h3>
@@ -332,23 +452,17 @@ to also show shapes produced by the Noto Sans Adlam font at the start of 2020.. 
 <p>(See also <a class="secref">gemination</a>.)</p>
 </section>
 </section>
-
-
-
-
-
 <section id="adlamchar">
 <h2>Consonants</h2>
-
-
 <section id="consonantSounds">
 <h3>Consonant sounds</h3>
-<p class="instructions">Click on the sounds to see where else in the document they are referred to.</p>
-
+<p class="instructions">Click on the sounds to see where else in the
+document they are referred to.</p>
 <table class="ipaTable">
 <thead>
 <tr>
-<th></th>
+<th><br>
+</th>
 <th>labial </th>
 <th>dental </th>
 <th>alveolar </th>
@@ -366,16 +480,17 @@ alveolar</th>
 <th>stop</th>
 <td><span class="ipa">p</span> <span class="ipa">b</span><br>
 <span class="ipa">ɓ</span></td>
-<td><span class="ipa">t</span> <span class="ipa">d</span><br/>
-<span class="allophone">tˤ</span> <span class="allophone">dˤ</span><br/>
+<td><span class="ipa">t</span> <span class="ipa">d</span><br>
+<span class="allophone">tˤ</span> <span class="allophone">dˤ</span><br>
 <span class="ipa">ɗ</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td><span class="ipa">k</span> <span class="ipa">ɡ</span><br/><span class="allophone">k͡p</span> <span class="allophone">g͡b</span></td>
+<td><span class="ipa">k</span> <span class="ipa">ɡ</span><br>
+<span class="allophone">k͡p</span> <span class="allophone">g͡b</span></td>
 <td><span class="ipa">q</span></td>
 <td>&nbsp;</td>
-<td><span class="ipa">ʔ</span><br/>
+<td><span class="ipa">ʔ</span><br>
 <span class="ipa">ʔʲ</span></td>
 </tr>
 <tr>
@@ -394,7 +509,7 @@ alveolar</th>
 <th>fricative </th>
 <td><span class="ipa">f</span> <span class="allophone">v</span></td>
 <td><span class="allophone">θ</span></td>
-<td><span class="ipa">s</span> <span class="allophone">z</span><br/>
+<td><span class="ipa">s</span> <span class="allophone">z</span><br>
 <span class="allophone">sˤ</span> <span class="allophone">zˤ</span></td>
 <td>&nbsp;</td>
 <td><span class="allophone">ʃ</span></td>
@@ -413,7 +528,8 @@ alveolar</th>
 <td><span class="ipa">ŋ</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td></td>
+<td><br>
+</td>
 </tr>
 <tr>
 <th>approximant</th>
@@ -425,7 +541,8 @@ alveolar</th>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td></td>
+<td><br>
+</td>
 </tr>
 <tr>
 <th>trill/flap</th>
@@ -433,616 +550,578 @@ alveolar</th>
 <td>&nbsp;</td>
 <td><span class="ipa">r</span></td>
 <td>&nbsp;</td>
-<td></td>
-<td></td>
+<td><br>
+</td>
+<td><br>
+</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td></td>
+<td><br>
+</td>
 </tr>
 <tr>
-<th></th>
-<td class="mouth"><a href="../common/mouth/mouth_labial.png" target="_blank"><img src="../common/mouth/mouth_small_labial.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common/mouth/mouth_dental.png" target="_blank"><img src="../common/mouth/mouth_small_dental.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common/mouth/mouth_alveolar.png" target="_blank"><img src="../common/mouth/mouth_small_alveolar.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common/mouth/mouth_postalveolar.png" target="_blank"><img src="../common/mouth/mouth_small_postavleolar.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common/mouth/mouth_palatal.png" target="_blank"><img src="../common/mouth/mouth_small_palatal.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common/mouth/mouth_velar.png" target="_blank"><img src="../common/mouth/mouth_small_velar.png" alt=" "/></a></td>
-<td class="mouth"><a href="../common/mouth/mouth_uvular.png" target="_blank"><img src="../common/mouth/mouth_small_uvular.png" alt=" "/></a></td>
+<th><br>
+</th>
+<td class="mouth"><a href="../common/mouth/mouth_labial.png" target="_blank"><img src="../common/mouth/mouth_small_labial.png" alt=" "></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_dental.png" target="_blank"><img src="../common/mouth/mouth_small_dental.png" alt=" "></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_alveolar.png" target="_blank"><img src="../common/mouth/mouth_small_alveolar.png" alt=" "></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_postalveolar.png" target="_blank"><img src="../common/mouth/mouth_small_postavleolar.png" alt=" "></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_palatal.png" target="_blank"><img src="../common/mouth/mouth_small_palatal.png" alt=" "></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_velar.png" target="_blank"><img src="../common/mouth/mouth_small_velar.png" alt=" "></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_uvular.png" target="_blank"><img src="../common/mouth/mouth_small_uvular.png" alt=" "></a></td>
 <td class="mouth">&nbsp;</td>
-<td class="mouth"><a href="../common/mouth/mouth_glottal.png" target="_blank"><img src="../common/mouth/mouth_small_glottal.png" alt=" "/></a></td>
+<td class="mouth"><a href="../common/mouth/mouth_glottal.png" target="_blank"><img src="../common/mouth/mouth_small_glottal.png" alt=" "></a></td>
 </tr>
 </tbody>
 </table>
-
-<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">wp</a>. Phones in a lighter colour are non-native or allophones.</p>
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">wp</a>. Phones
+in a lighter colour are non-native or allophones.</p>
 </section>
-
-
-
-
 <section id="basicConsonants">
-<h3>Basic  consonants</h3>
+<h3>Basic consonants</h3>
 <p>The following are basic consonants for Fulah.</p>
-
 <figure class="characterBox auto" data-select="first" data-cols="ipa,trans,transc">𞤨𞤆␣𞤦𞤄␣𞤩𞤇␣𞤼𞤚␣𞤣𞤁␣𞤯𞤍␣𞤳𞤑␣𞤺𞤘␣𞤹𞤗</figure>
 <figure class="characterBox auto" data-select="first" data-cols="ipa,trans,transc">𞤷𞤕␣𞤶𞤔</figure>
 <figure class="characterBox auto" data-select="first" data-cols="ipa,trans,transc">𞤬𞤊␣𞤧𞤅␣𞤸𞤖</figure>
 <figure class="characterBox auto" data-select="first" data-cols="ipa,trans,transc">𞤥𞤃␣𞤲𞤐␣𞤻𞤙␣𞤽𞤛</figure>
 <figure class="characterBox auto" data-select="first" data-cols="ipa,trans,transc">𞤱𞤏␣𞤪𞤈␣𞤤𞤂␣𞤴𞤒␣𞤰𞤎</figure>
-
 </section>
-
-
-
 <section id="supplementary">
 <h3>Loan words &amp; proper nouns</h3>
-<p>A set of supplementary letters are used for loan words and proper nouns originated in neighbouring ethnic groups.<sup><a href="http://www.loc.gov/catdir/cpso/romanization/adlam.pdf"></a></sup></p>
-
+<p>A set of supplementary letters are used for loan words and proper
+nouns originated in neighbouring ethnic groups.<sup><a href="http://www.loc.gov/catdir/cpso/romanization/adlam.pdf"></a></sup></p>
 <figure class="characterBox auto" data-select="first" data-cols="ipa,trans,transc">𞤾𞤜␣𞤿𞤝␣𞥀𞤞␣𞥁𞤟␣𞥂𞤠␣𞥃𞤡</figure>
-
 </section>
-
-
-
 <section id="glottal">
 <h3>Glottal stop</h3>
-<p>When a consonant is followed immediately by a glottal stop and then a vowel Adlam uses the diacritic <span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E947;</span> [<a href="/scripts/adlam/block#char1E947"><span class="uname">U+1E947 ADLAM HAMZA</span></a>]</span> over the preceding consonant to indicate the glottal stop, eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="fuf">𞤗𞤵𞤪𞥇𞤢𞤲</span> <span class="trans">Qurʿan</span></span>.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n4628.pdf">e2</a></p>
+<p>When a consonant is followed immediately by a glottal stop and then a
+vowel Adlam uses the diacritic <span class="codepoint" translate="no"><span dir="rtl" lang="fuf">𞥇</span> [<a href="/scripts/adlam/block#char1E947"><span class="uname">U+1E947 ADLAM HAMZA</span></a>]</span> over the
+preceding consonant to indicate the glottal stop, eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="fuf">𞤗𞤵𞤪𞥇𞤢𞤲</span>
+<span class="trans">Qurʿan</span></span>.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n4628.pdf">e2</a></p>
 </section>
-
-
-
-
 <section id="nukta">
 <h3>Non-native sounds</h3>
-        
-  <p>Adlam has 3 diacritics for extending letters to cover non-native sounds (principally Arabic). <span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E948;</span> [<a href="/scripts/adlam/block#char1E948"><span class="uname">U+1E948 ADLAM CONSONANT MODIFIER</span></a>]</span> and <span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E94A;</span> [<a href="/scripts/adlam/block#char1E94A"><span class="uname">U+1E94A ADLAM NUKTA</span></a>]</span> are the basic characters. They are shown here with lowercase letters.</p>
-
+<p>Adlam has 3 diacritics for extending letters to cover non-native
+sounds (principally Arabic). <span class="codepoint" translate="no"><span dir="rtl" lang="fuf">𞥈</span> [<a href="/scripts/adlam/block#char1E948"><span class="uname">U+1E948 ADLAM CONSONANT MODIFIER</span></a>]</span>
+and <span class="codepoint" translate="no"><span dir="rtl" lang="fuf">𞥊</span>
+[<a href="/scripts/adlam/block#char1E94A"><span class="uname">U+1E94A
+ADLAM NUKTA</span></a>]</span> are the basic characters. They
+are shown here with lowercase letters.</p>
 <figure class="auto" data-cols="trans,ipa, transc">𞤧𞥈␣𞤣𞥈␣𞤼𞥈␣𞤶𞥈␣𞤢𞥈␣𞤺𞥈␣𞤸𞥈␣𞤧𞥊␣𞤶𞥊</figure>
-<p>The third diacritic, <span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E949;</span> [<a href="/scripts/adlam/block#char1E949"><span class="uname">U+1E949 ADLAM GEMINATE CONSONANT MODIFIER</span></a>]</span>, is used when  one of these modified letters is geminated.</p>
+<p>The third diacritic, <span class="codepoint" translate="no"><span dir="rtl" lang="fuf">𞥉</span> [<a href="/scripts/adlam/block#char1E949"><span class="uname">U+1E949 ADLAM GEMINATE CONSONANT MODIFIER</span></a>]</span>,
+is used when one of these modified letters is geminated.</p>
 </section>
-
-
-
-
 <section id="nasalisation">
 <h3>Nasalisation</h3>
-
 <figure class="characterBox auto" data-cols="trans">𞥋</figure>
-
-<p>Pre-nasalised consonants are indicated by adding <span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E94B;</span> [<a href="/scripts/adlam/block#char1E94B"><span class="uname">U+1E94B ADLAM NASALIZATION MARK</span></a>]</span> between <span class="uname">NA</span> and the consonant affected, eg. <span class="charExample" translate="no"><span class="ex" lang="fuf" dir="rtl">𞤸𞤭𞤲𞥋𞤣𞤵</span> <span class="trans">hin˜du</span> (<span class="trans">hi.ndu</span>) <span class="meaning">it</span></span> vs <span class="charExample" translate="no"><span class="ex" lang="fuf" dir="rtl">𞤸𞤭𞤲𞤣𞤵</span> <span class="trans">hindu</span> (<span class="trans">hin.du</span>) <span class="meaning">ancient</span></span>. In word-initial position, the same logic is applied, and so the word begins with <span class="charExample" translate="no"><span class="ex" lang="fuf" dir="rtl">𞤲𞥋</span></span>.</p>
-<p>This character was added to Unicode version 12. Prior to that, people used an apostrophe, but that doesn't produce the needed effect. (The webfont used with this page doesn't show the shape because the character is such a recent addition to Unicode, but if you click on the red text you will see the shape in an image.)</p>
-<p>If it appears between two letters that would normally join, the nasalisation character should not break that join.</p>
+<p>Pre-nasalised consonants are indicated by adding <span class="codepoint" translate="no"><span dir="rtl" lang="fuf">𞥋</span> [<a href="/scripts/adlam/block#char1E94B"><span class="uname">U+1E94B ADLAM NASALIZATION MARK</span></a>]</span>
+between <span class="uname">NA</span> and the consonant affected, eg.
+<span class="charExample" translate="no"><span class="ex" dir="rtl" lang="fuf">𞤸𞤭𞤲𞥋𞤣𞤵</span>
+<span class="trans">hin˜du</span> (<span class="trans">hi.ndu</span>)
+<span class="meaning">it</span></span> vs <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="fuf">𞤸𞤭𞤲𞤣𞤵</span>
+<span class="trans">hindu</span> (<span class="trans">hin.du</span>)
+<span class="meaning">ancient</span></span>. In word-initial
+position, the same logic is applied, and so the word begins with <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="fuf">𞤲𞥋</span></span>.</p>
+<p>This character was added to Unicode version 12. Prior to that, people
+used an apostrophe, but that doesn't produce the needed effect. (The
+webfont used with this page doesn't show the shape because the
+character is such a recent addition to Unicode, but if you click on
+the red text you will see the shape in an image.)</p>
+<p>If it appears between two letters that would normally join, the
+nasalisation character should not break that join.</p>
 </section>
-
-
-
-
 <section id="gemination">
 <h3>Gemination</h3>
-        
-  <p>Gemination of consonants is normally indicated using <span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E946;</span> [<a href="/scripts/adlam/block#char1E946"><span class="uname">U+1E946 ADLAM GEMINATION MARK</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="fuf" dir="rtl">𞤋𞤲𞥆𞤢𞤥𞤢</span> <span class="trans">In˖ama</span></span>.</p>
-<p>As mentioned in the previous section, however, letters that have consonant modifier diacrtics use a special code point, <span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E949;</span> [<a href="/scripts/adlam/block#char1E949"><span class="uname">U+1E949 ADLAM GEMINATE CONSONANT MODIFIER</span></a>]</span> that combines the gemination marker with the modifier.</p>
-<p>Letters that combine with <span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E94A;</span> [<a href="/scripts/adlam/block#char1E94A"><span class="uname">U+1E94A ADLAM NUKTA</span></a>]</span> should move that diacritic below the base character and keep the gemination mark above, eg. <span class="charExample" translate="no"><span class="ex" lang="fuf" dir="rtl">𞤧𞥊𞥆</span> <span class="trans">s˙˖</span></span> <span class="ednote">The Noto Sans font doesn't support that behaviour</span>.</p>
-<p>The latest glyph reform introduces small differences between the shapes of the gemination mark above upper vs lowercase letters.<a class="fnref" href="https://www.unicode.org/L2/L2019/19119r-adlam-font-repl.pdf">→p</a></p>
+<p>Gemination of consonants is normally indicated using <span class="codepoint" translate="no"><span dir="rtl" lang="fuf">𞥆</span> [<a href="/scripts/adlam/block#char1E946"><span class="uname">U+1E946 ADLAM GEMINATION MARK</span></a>]</span>,
+eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="fuf">𞤋𞤲𞥆𞤢𞤥𞤢</span> <span class="trans">In˖ama</span></span>.</p>
+<p>As mentioned in the previous section, however, letters that have
+consonant modifier diacrtics use a special code point, <span class="codepoint" translate="no"><span dir="rtl" lang="fuf">𞥉</span> [<a href="/scripts/adlam/block#char1E949"><span class="uname">U+1E949 ADLAM GEMINATE CONSONANT MODIFIER</span></a>]</span>
+that combines the gemination marker with the modifier.</p>
+<p>Letters that combine with <span class="codepoint" translate="no"><span dir="rtl" lang="fuf">𞥊</span> [<a href="/scripts/adlam/block#char1E94A"><span class="uname">U+1E94A ADLAM NUKTA</span></a>]</span> should move
+that diacritic below the base character and keep the gemination mark
+above, eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="fuf">𞤧𞥊𞥆</span> <span class="trans">s˙˖</span></span>
+<span class="ednote">The Noto Sans font doesn't support that behaviour</span>.</p>
+<p>The latest glyph reform introduces small differences between the
+shapes of the gemination mark above upper vs lowercase letters.<a class="fnref" href="https://www.unicode.org/L2/L2019/19119r-adlam-font-repl.pdf">→p</a></p>
 </section>
 </section>
-
-
-
-
-
-
 <section id="cchar">
 <h2>Combining marks</h2>
-<figure class="characterBox auto"  data-cols="">𞥊␣𞥆␣𞥅␣𞥄␣𞥈␣𞥉␣𞥇</figure>
-
-<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E947;</span> [<a href="/scripts/adlam/block#char1E947"><span class="uname">U+1E947 ADLAM HAMZA</span></a>]</span> represents a glottal stop (see <a class="secref">glottal</a>).</p>
-<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E944;</span> [<a href="/scripts/adlam/block#char1E944"><span class="uname">U+1E944 ADLAM ALIF LENGTHENER</span></a>]</span> and <span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E945;</span> [<a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span> are used to lengthen vowels (see <a class="secref">vowelLetters</a>).</p>
-<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E948;</span> [<a href="/scripts/adlam/block#char1E948"><span class="uname">U+1E948 ADLAM CONSONANT MODIFIER</span></a>]</span>, <span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E949;</span> [<a href="/scripts/adlam/block#char1E949"><span class="uname">U+1E949 ADLAM GEMINATE CONSONANT MODIFIER</span></a>]</span> and <span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E94A;</span> [<a href="/scripts/adlam/block#char1E94A"><span class="uname">U+1E94A ADLAM NUKTA</span></a>]</span> are used to extend the repertoire of letters (see <a class="secref">vowelLetters</a> and <a class="secref">nukta</a>).</p>
+<figure class="characterBox auto" data-cols="">𞥊␣𞥆␣𞥅␣𞥄␣𞥈␣𞥉␣𞥇</figure>
+<p><span class="codepoint" translate="no"><span dir="rtl" lang="fuf">𞥇</span>
+[<a href="/scripts/adlam/block#char1E947"><span class="uname">U+1E947
+ADLAM HAMZA</span></a>]</span> represents a glottal stop (see <a class="secref">glottal</a>).</p>
+<p><span class="codepoint" translate="no"><span dir="rtl" lang="fuf">𞥄</span>
+[<a href="/scripts/adlam/block#char1E944"><span class="uname">U+1E944
+ADLAM ALIF LENGTHENER</span></a>]</span> and <span class="codepoint" translate="no"><span dir="rtl" lang="fuf">𞥅</span> [<a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span>
+are used to lengthen vowels (see <a class="secref">vowelLetters</a>).</p>
+<p><span class="codepoint" translate="no"><span dir="rtl" lang="fuf">𞥈</span>
+[<a href="/scripts/adlam/block#char1E948"><span class="uname">U+1E948
+ADLAM CONSONANT MODIFIER</span></a>]</span>, <span class="codepoint" translate="no"><span dir="rtl" lang="fuf">𞥉</span> [<a href="/scripts/adlam/block#char1E949"><span class="uname">U+1E949 ADLAM GEMINATE CONSONANT MODIFIER</span></a>]</span>
+and <span class="codepoint" translate="no"><span dir="rtl" lang="fuf">𞥊</span>
+[<a href="/scripts/adlam/block#char1E94A"><span class="uname">U+1E94A
+ADLAM NUKTA</span></a>]</span> are used to extend the repertoire
+of letters (see <a class="secref">vowelLetters</a> and <a class="secref">nukta</a>).</p>
 </section>
-    
-    
-    
-    
-    
 <section id="punctuation">
 <h2>Punctuation</h2>
-		<p>The Adlam block contains the following punctuation marks.</p>
-
-<figure class="characterBox auto"  data-cols="trans">𞥟␣𞥞</figure>
-
-		<p>See <a class="secref">phrase</a> for details.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n4628.pdf"></a> The shapes of these punctuation marks was significantly changed in the 2019 shape reform, with the aim of making them more visually appealing.</p>
-<p>In addition to Western punctuation, Adlam also uses the following  punctuation marks.</p>
-
-<figure class="characterBox auto"  data-cols="trans">؟␣⁏␣⹁</figure>
-
-<p>The question mark, <span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x061F;</span> [<a href="/scripts/adlam/block#char061F"><span class="uname">U+061F ARABIC QUESTION MARK</span></a>]</span>, is from the Arabic block, but the comma and semicolon are <span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x2E41;</span> [<a href="/scripts/adlam/block#char2E41"><span class="uname">U+2E41 REVERSED COMMA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x204F;</span> [<a href="/scripts/adlam/block#char204F"><span class="uname">U+204F REVERSED SEMICOLON</span></a>]</span>, respectively, rather than the Arabic comma and semicolon. (The Arabic comma/semicolon are only used as carryovers from the older Adlam fonts.)<a class="fnref" href="#refs">n</a></p>
+<p>The Adlam block contains the following punctuation marks.</p>
+<figure class="characterBox auto" data-cols="trans">𞥟␣𞥞</figure>
+<p>See <a class="secref">phrase</a> for details.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n4628.pdf"></a>
+The shapes of these punctuation marks was significantly changed in the
+2019 shape reform, with the aim of making them more visually appealing.</p>
+<p>In addition to Western punctuation, Adlam also uses the following
+punctuation marks.</p>
+<figure class="characterBox auto" data-cols="trans">؟␣⁏␣⹁</figure>
+<p>The question mark, <span class="codepoint" translate="no"><span dir="rtl" lang="fuf">؟</span> [<a href="/scripts/adlam/block#char061F"><span class="uname">U+061F
+ARABIC QUESTION MARK</span></a>]</span>, is from the Arabic block,
+but the comma and semicolon are <span class="codepoint" translate="no"><span dir="rtl" lang="fuf">⹁</span> [<a href="/scripts/adlam/block#char2E41"><span class="uname">U+2E41 REVERSED COMMA</span></a>]</span> and <span class="codepoint" translate="no"><span dir="rtl" lang="fuf">⁏</span> [<a href="/scripts/adlam/block#char204F"><span class="uname">U+204F
+REVERSED SEMICOLON</span></a>]</span>, respectively, rather than
+the Arabic comma and semicolon. (The Arabic comma/semicolon are only
+used as carryovers from the older Adlam fonts.)<a class="fnref" href="#refs">n</a></p>
 </section>
-    
-    
-    
-    
-    
 <section id="symbols">
 <h2>Symbols</h2>
-		<p>The Adlam block has no symbols.</p>
+<p>The Adlam block has no symbols.</p>
 </section>
-
-
-
-
-
-
 <section id="formatting">
 <h2>Formatting characters</h2>
-<p class="observation"><span class="leadin">Observation:</span> It's not clear which formatting characters are used for Adlam, other than the likely use of ZWJ for educational purposes.</p>
+<p class="observation"><span class="leadin">Observation:</span> It's not
+clear which formatting characters are used for Adlam, other than the
+likely use of ZWJ for educational purposes.</p>
 </section>
-   
-    
-    
-    
-    
 <section id="numberdescn">
 <h2>Numbers</h2>
-
-  <section id="digits">
+<section id="digits">
 <h3>Digits</h3>
-
-    <p>Adlam uses native digits. </p>
- 
-<figure class="characterBox auto"  data-cols="trans,transc">𞥐␣𞥑␣𞥒␣𞥓␣𞥔␣𞥕␣𞥖␣𞥗␣𞥘␣𞥙</figure>
-
-<p>However, unlike other right-to-left scripts such as Arabic, Hebrew, Thaana, (but like N'Ko) the numbers are displayed <em>right-to-left</em>, with the most significant digit first.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n4628.pdf">e</a> This means that numbers don't produce bidirectional text in Adlam</p>
-    <!--figure>
-    <p dir="rtl" lang="nqo" class="large">ߝߌߟߊߣߊ߲ ߕߋ߬ߟߋ߫ <span class="ex">߂߇-߂߈/߂߀߁߀</span> ߕߊ߬ߡߌ߲߬ߣߍ߲ ߠߊ߫߸</p>
-    <figcaption>A date in N'Ko. All characters are read right to left, including numbers.</figcaption>
-  </figure-->
-<p>The shape of the digit 6 was significantly changed by the 2019 glyph shape reform to make it less similar to the letter <span class="uname">HA</span>.<a class="fnref" href="https://www.unicode.org/L2/L2019/19119r-adlam-font-repl.pdf">→p</a></p>
-<p>For thousands and decimal separators, Adlam uses a space and a period, respectively.<a class="fnref" href="#refs">n</a></p>
+<p>Adlam uses native digits. </p>
+<figure class="characterBox auto" data-cols="trans,transc">𞥐␣𞥑␣𞥒␣𞥓␣𞥔␣𞥕␣𞥖␣𞥗␣𞥘␣𞥙</figure>
+<p>However, unlike other right-to-left scripts such as Arabic, Hebrew,
+Thaana, (but like N'Ko) the numbers are displayed <em>right-to-left</em>,
+with the most significant digit first.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n4628.pdf">e</a>
+This means that numbers don't produce bidirectional text in Adlam</p>
+<!--figure>
+<p dir="rtl" lang="nqo" class="large">ߝߌߟߊߣߊ߲ ߕߋ߬ߟߋ߫ <span class="ex">߂߇-߂߈/߂߀߁߀</span> ߕߊ߬ߡߌ߲߬ߣߍ߲ ߠߊ߫߸</p>    <figcaption>A date in N'Ko. All characters are read right to left, including numbers.</figcaption>  </figure-->
+<p>The shape of the digit 6 was significantly changed by the 2019 glyph
+shape reform to make it less similar to the letter <span class="uname">HA</span>.<a class="fnref" href="https://www.unicode.org/L2/L2019/19119r-adlam-font-repl.pdf">→p</a></p>
+<p>For thousands and decimal separators, Adlam uses a space and a
+period, respectively.<a class="fnref" href="#refs">n</a></p>
 </section>
 </section>
-
-
-
-
-
-
 <section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
-
-<p>You can experiment with examples using the <a href="/pickers/adlm/">Adlam character app</a>.</p>
-
-
-
-
+<p>You can experiment with examples using the <a href="/pickers/adlm/">Adlam
+character app</a>.</p>
 <section id="writing_styles">
 <h3>Writing styles</h3>
-<p>Adlam is usually cursive, ie. letters in a word are joined up (see <a class="secref">cursive</a> and <a class="figref">fig_joined_writing_style</a>), however a non-cursive writing style (see <a class="figref">fig_unjoined_writing_style</a>) is sometimes used, mainly as display fonts for books and article titles as well as educational content (because the unconnected script is easier to learn).<a class="fnref" href="#refs">n</a></p>
-
+<p>Adlam is usually cursive, ie. letters in a word are joined up (see <a class="secref">cursive</a> and <a class="figref">fig_joined_writing_style</a>),
+however a non-cursive writing style (see <a class="figref">fig_unjoined_writing_style</a>)
+is sometimes used, mainly as display fonts for books and article
+titles as well as educational content (because the unconnected script
+is easier to learn).<a class="fnref" href="#refs">n</a></p>
 <figure id="fig_joined_writing_style">
-<p class="" lang="fuf">𞤑𞤵𞥅𞤤𞤢𞤤 𞤺𞤢𞤣𞤢𞤲𞤢𞤤 𞤋𞤲𞥆𞤢𞤥𞤢 𞤢𞥄𞤣𞤫𞥅𞤶𞤭 𞤬𞤮𞤬 𞤨𞤮𞤼𞤭، 𞤲ˈ𞤣𞤭𞤥𞤯𞤭𞤣𞤭 𞤫 𞤶𞤭𞤦𞤭𞤲𞤢𞤲𞥆𞤣𞤫 𞤼𞤮 𞤦𞤢𞤲𞥆𞤺𞤫 𞤸𞤢𞤳𞥆𞤫𞥅𞤶𞤭. 𞤉𞤩𞤫 𞤲ˈ𞤺𞤮𞥅𞤣𞤭 𞤥𞤭𞥅𞤶𞤮 𞤫 𞤸𞤢𞤳𞥆𞤭𞤤𞤢𞤲𞤼𞤢𞥄𞤺𞤢𞤤 𞤫𞤼𞤫 𞤫𞤩𞤫 𞤨𞤮𞤼𞤭 𞤸𞤵𞥅𞤬𞤮 𞤲ˈ𞤣𞤭𞤪𞤣𞤫 𞤫 𞤲ˈ𞤣𞤫𞤪 𞤩 𞤭𞤴𞤲𞤺𞤵𞤴𞤵𞤥𞥆𞤢𞥄𞤺𞤵.</p>
+<p class="" lang="fuf">𞤑𞤵𞥅𞤤𞤢𞤤 𞤺𞤢𞤣𞤢𞤲𞤢𞤤 𞤋𞤲𞥆𞤢𞤥𞤢
+𞤢𞥄𞤣𞤫𞥅𞤶𞤭 𞤬𞤮𞤬 𞤨𞤮𞤼𞤭، 𞤲ˈ𞤣𞤭𞤥𞤯𞤭𞤣𞤭 𞤫
+𞤶𞤭𞤦𞤭𞤲𞤢𞤲𞥆𞤣𞤫 𞤼𞤮 𞤦𞤢𞤲𞥆𞤺𞤫 𞤸𞤢𞤳𞥆𞤫𞥅𞤶𞤭. 𞤉𞤩𞤫
+𞤲ˈ𞤺𞤮𞥅𞤣𞤭 𞤥𞤭𞥅𞤶𞤮 𞤫 𞤸𞤢𞤳𞥆𞤭𞤤𞤢𞤲𞤼𞤢𞥄𞤺𞤢𞤤 𞤫𞤼𞤫
+𞤫𞤩𞤫 𞤨𞤮𞤼𞤭 𞤸𞤵𞥅𞤬𞤮 𞤲ˈ𞤣𞤭𞤪𞤣𞤫 𞤫 𞤲ˈ𞤣𞤫𞤪 𞤩
+𞤭𞤴𞤲𞤺𞤵𞤴𞤵𞤥𞥆𞤢𞥄𞤺𞤵.</p>
 <figcaption>Adlam content is usually in a cursive writing style.</figcaption>
 </figure>
-
 <figure id="fig_unjoined_writing_style">
-<p class="" lang="fuf" style="font-family: 'Noto Sans Adlam Unjoined WF';">𞤑𞤵𞥅𞤤𞤢𞤤 𞤺𞤢𞤣𞤢𞤲𞤢𞤤 𞤋𞤲𞥆𞤢𞤥𞤢 𞤢𞥄𞤣𞤫𞥅𞤶𞤭 𞤬𞤮𞤬 𞤨𞤮𞤼𞤭، 𞤲ˈ𞤣𞤭𞤥𞤯𞤭𞤣𞤭 𞤫 𞤶𞤭𞤦𞤭𞤲𞤢𞤲𞥆𞤣𞤫 𞤼𞤮 𞤦𞤢𞤲𞥆𞤺𞤫 𞤸𞤢𞤳𞥆𞤫𞥅𞤶𞤭. 𞤉𞤩𞤫 𞤲ˈ𞤺𞤮𞥅𞤣𞤭 𞤥𞤭𞥅𞤶𞤮 𞤫 𞤸𞤢𞤳𞥆𞤭𞤤𞤢𞤲𞤼𞤢𞥄𞤺𞤢𞤤 𞤫𞤼𞤫 𞤫𞤩𞤫 𞤨𞤮𞤼𞤭 𞤸𞤵𞥅𞤬𞤮 𞤲ˈ𞤣𞤭𞤪𞤣𞤫 𞤫 𞤲ˈ𞤣𞤫𞤪 𞤩 𞤭𞤴𞤲𞤺𞤵𞤴𞤵𞤥𞥆𞤢𞥄𞤺𞤵.</p>
-<figcaption>An unjoined writing style is used for titles and educational content.</figcaption>
-</figure>
-
+<p class="" style="font-family: 'Noto Sans Adlam Unjoined WF';" lang="fuf">𞤑𞤵𞥅𞤤𞤢𞤤
+𞤺𞤢𞤣𞤢𞤲𞤢𞤤 𞤋𞤲𞥆𞤢𞤥𞤢 𞤢𞥄𞤣𞤫𞥅𞤶𞤭 𞤬𞤮𞤬 𞤨𞤮𞤼𞤭،
+𞤲ˈ𞤣𞤭𞤥𞤯𞤭𞤣𞤭 𞤫 𞤶𞤭𞤦𞤭𞤲𞤢𞤲𞥆𞤣𞤫 𞤼𞤮 𞤦𞤢𞤲𞥆𞤺𞤫
+𞤸𞤢𞤳𞥆𞤫𞥅𞤶𞤭. 𞤉𞤩𞤫 𞤲ˈ𞤺𞤮𞥅𞤣𞤭 𞤥𞤭𞥅𞤶𞤮 𞤫
+𞤸𞤢𞤳𞥆𞤭𞤤𞤢𞤲𞤼𞤢𞥄𞤺𞤢𞤤 𞤫𞤼𞤫 𞤫𞤩𞤫 𞤨𞤮𞤼𞤭 𞤸𞤵𞥅𞤬𞤮
+𞤲ˈ𞤣𞤭𞤪𞤣𞤫 𞤫 𞤲ˈ𞤣𞤫𞤪 𞤩 𞤭𞤴𞤲𞤺𞤵𞤴𞤵𞤥𞥆𞤢𞥄𞤺𞤵.</p>
+<figcaption>An unjoined writing style is used for titles and
+educational content.</figcaption> </figure>
 </section>
-
-
-
-
 <section id="cursive">
 <h3>Cursive text</h3>
-<p>Fonts need to produce the appropriate joining form for a code point, according to its visual context.</p>
-  <figure>
-<p dir="rtl" lang="fuf" class="large"><span class="ex">𞤱𞤢𞥄𞤱𞤲𞤣𞤫 𞤱𞤮𞤲𞤣𞤫 𞤬𞤮𞤬</span></p>
-<figcaption>Cursive connections. Note the small variation in initial and final form of <span lang="nqo">𞤬</span>.</figcaption>
-</figure>
-    
-  <p>The cursive treatment doesn't produce major variations of the essential part of the glyph for a character (unlike Arabic), but there are some small adaptations.</p>
+<p>Fonts need to produce the appropriate joining form for a code point,
+according to its visual context.</p>
+<figure>
+<p dir="rtl" class="large" lang="fuf"><span class="ex">𞤱𞤢𞥄𞤱𞤲𞤣𞤫
+𞤱𞤮𞤲𞤣𞤫 𞤬𞤮𞤬</span></p>
+<figcaption>Cursive connections. Note the small variation in initial
+and final form of <span lang="nqo">𞤬</span>.</figcaption> </figure>
+<p>The cursive treatment doesn't produce major variations of the
+essential part of the glyph for a character (unlike Arabic), but there
+are some small adaptations.</p>
 </section>
-
-
-
-
-
 <section id="gsub">
 <h3>Context-based shaping</h3>
-<p>See <a class="secref">variants</a> for information about recent glyph shape changes.<a class="fnref" href="https://www.unicode.org/L2/L2019/19119r-adlam-font-repl.pdf"></a></p>
-<p>Context  affects the shapes of certain diacritics when placed over upper vs lowercase letters.<a class="fnref" href="https://www.unicode.org/L2/L2019/19119r-adlam-font-repl.pdf">→p</a></p>
+<p>See <a class="secref">variants</a> for information about recent
+glyph shape changes.<a class="fnref" href="https://www.unicode.org/L2/L2019/19119r-adlam-font-repl.pdf"></a></p>
+<p>Context affects the shapes of certain diacritics when placed over
+upper vs lowercase letters.<a class="fnref" href="https://www.unicode.org/L2/L2019/19119r-adlam-font-repl.pdf">→p</a></p>
 </section>
-
-
-
-
 <section id="gpos">
 <h3>Context-based positioning</h3>
-<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E94A;</span> [<a href="/scripts/adlam/block#char1E94A"><span class="uname">U+1E94A ADLAM NUKTA</span></a>]</span> usually sits above the letter it modifies, but if the letter is also lengthened or geminated, it moves below the letter and leaves the lengthening/gemination diacritic above.</p>
+<p><span class="codepoint" translate="no"><span dir="rtl" lang="fuf">𞥊</span>
+[<a href="/scripts/adlam/block#char1E94A"><span class="uname">U+1E94A
+ADLAM NUKTA</span></a>]</span> usually sits above the letter it
+modifies, but if the letter is also lengthened or geminated, it moves
+below the letter and leaves the lengthening/gemination diacritic
+above.</p>
 </section>
-
-
-
-
 <section id="fontstyle">
 <h3>Font styles</h3>
-<p>The Kigelia font may be the first italicised Adlam tyeface, but its development was based on requests from the community of users. Discussion with the community led to an italic form that leans to the right (unlike N'Ko).<a class="fnref" href="https://github.com/w3c/afrlreq/issues/3#issuecomment-512911833">g</a></p>
-
-    <figure>
-	<p><img src="images/italic.png" alt=""/></p>
-	<figcaption>An example of an italic typeface for Adlam.</figcaption>
-  </figure>
+<p>The Kigelia font may be the first italicised Adlam tyeface, but its
+development was based on requests from the community of users.
+Discussion with the community led to an italic form that leans to the
+right (unlike N'Ko).<a class="fnref" href="https://github.com/w3c/afrlreq/issues/3#issuecomment-512911833">g</a></p>
+<figure>
+<p><img src="images/italic.png" alt=""></p>
+<figcaption>An example of an italic typeface for Adlam.</figcaption> </figure>
 </section>
-
-
-
-
-  
 <section id="baselines">
 <h3>Baselines &amp; inline alignment</h3>
 <p class="prompts">tbd</p>
 </section>
-
-
-
-
 <section id="transforms">
 <h3>Transforming characters</h3>
-<p>Adlam is bicameral, so it is useful to be able to convert automatically between upper and lowercase characters.</p>
+<p>Adlam is bicameral, so it is useful to be able to convert
+automatically between upper and lowercase characters.</p>
 </section>
 </section>
-
-
-
-
-
-
 <section id="boundaries">
-<h2>Structural boundaries &amp; markers</h2>  
-  
+<h2>Structural boundaries &amp; markers</h2>
 <section id="graphemes">
 <h3>Grapheme boundaries</h3>
- <p class="explanatoryintro">A grapheme is a user-perceived unit of text. The Unicode Standard uses generalised rules to define 'grapheme clusters', which approximate the likely grapheme boundaries in a writing system.</p>
-
+<p class="explanatoryintro">A grapheme is a user-perceived unit of text.
+The Unicode Standard uses generalised rules to define 'grapheme
+clusters', which approximate the likely grapheme boundaries in a
+writing system.</p>
 <p class="prompts">tbd</p>
 </section>
-
-
-
-
-  
 <section id="word">
 <h3>Word boundaries</h3>
- <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+<p class="explanatoryintro">The concept of 'word' is difficult to define
+in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What
+is a word?</a>). Here, a word is a vaguely-defined, but recognisable
+semantic unit that is typically smaller than a phrase and may comprise
+one or more syllables.</p>
 <p>Adlam words are separated by spaces.</p>
 </section>
-
-
-
-
-  
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
-<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E95F;</span> [<a href="/scripts/adlam/block#char1E95F"><span class="uname">U+1E95F ADLAM INITIAL QUESTION MARK</span></a>]</span> and <span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E95E;</span> [<a href="/scripts/adlam/block#char1E95E"><span class="uname">U+1E95E ADLAM INITIAL EXCLAMATION MARK</span></a>]</span> are used to begin a phrase that is a question or exclamation, respectively, much like ¿ and ¡ in Spanish. The phrase ends using an Arabic question mark or ASCII exclamation mark, eg. <span class="charExample" translate="no"><span class="ex" lang="fuf" dir="rtl">𞥟 𞤢𞤤𞤢𞥄 ؟</span> <span class="trans">¿ alaˉ ?</span> <span class="meaning">no?</span></span>and <span class="charExample" translate="no"><span class="ex" lang="fuf" dir="rtl">𞥞 𞤢𞤤𞤢𞥄 !</span> <span class="trans">¡ alaˉ !</span> <span class="meaning">no!</span></span>.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n4628.pdf">e2 </a>The punctuation marks appear to be separated from the rest of the text by a space.</p>
-<p>In addition to Western punctuation, Adlam also uses the following  punctuation marks.</p>
-<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x2E41;</span> [<a href="/scripts/adlam/block#char2E41"><span class="uname">U+2E41 REVERSED COMMA</span></a>]</span></p>
-<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x204F;</span> [<a href="/scripts/adlam/block#char204F"><span class="uname">U+204F REVERSED SEMICOLON</span></a>]</span></p>
-<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x061F;</span> [<a href="/scripts/adlam/block#char061F"><span class="uname">U+061F ARABIC QUESTION MARK</span></a>]</span>&nbsp;</p>
+<p><span class="codepoint" translate="no"><span dir="rtl" lang="fuf">𞥟</span>
+[<a href="/scripts/adlam/block#char1E95F"><span class="uname">U+1E95F
+ADLAM INITIAL QUESTION MARK</span></a>]</span> and <span class="codepoint" translate="no"><span dir="rtl" lang="fuf">𞥞</span> [<a href="/scripts/adlam/block#char1E95E"><span class="uname">U+1E95E ADLAM INITIAL EXCLAMATION MARK</span></a>]</span>
+are used to begin a phrase that is a question or exclamation,
+respectively, much like ¿ and ¡ in Spanish. The phrase ends using an
+Arabic question mark or ASCII exclamation mark, eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="fuf">𞥟 𞤢𞤤𞤢𞥄 ؟</span>
+<span class="trans">¿ alaˉ ?</span> <span class="meaning">no?</span></span>and
+<span class="charExample" translate="no"><span class="ex" dir="rtl" lang="fuf">𞥞
+𞤢𞤤𞤢𞥄 !</span> <span class="trans">¡ alaˉ !</span> <span class="meaning">no!</span></span>.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n4628.pdf">e2
+</a>The punctuation marks appear to be separated from the rest of
+the text by a space.</p>
+<p>In addition to Western punctuation, Adlam also uses the following
+punctuation marks.</p>
+<p><span class="codepoint" translate="no"><span dir="rtl" lang="fuf">⹁</span>
+[<a href="/scripts/adlam/block#char2E41"><span class="uname">U+2E41
+REVERSED COMMA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span dir="rtl" lang="fuf">⁏</span>
+[<a href="/scripts/adlam/block#char204F"><span class="uname">U+204F
+REVERSED SEMICOLON</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span dir="rtl" lang="fuf">؟</span>
+[<a href="/scripts/adlam/block#char061F"><span class="uname">U+061F
+ARABIC QUESTION MARK</span></a>]</span>&nbsp;</p>
 </section>
-
-
-
-
-
 <section id="bracketing">
 <h3>Bracketing &amp; range markers</h3>
 <p class="prompts">tbd</p>
 </section>
-
-
-
-
-  
 <section id="quotations">
 <h3>Quotations</h3>
 <p class="prompts">tbd</p>
 </section>
-
-
-
-
-  
 <section id="emphasis">
 <h3>Emphasis &amp; text decoration</h3>
 <p class="prompts">tbd</p>
 </section>
-
-
-
-
-  
 <section id="abbrev">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
 <p class="prompts">tbd</p>
 </section>
-
-
-
-
-
 <section id="otherPunctuation">
 <h3>Other punctuation</h3>
-
 <p class="prompts">tbd</p>
 </section>
-
-
-
-
-  
 <section id="inlinenotes">
 <h3>Inline notes &amp; annotations</h3>
 <p class="prompts">tbd</p>
 </section>
 </section>
- 
- 
- 
- 
- 
 <section id="paralayout">
 <h2>Line &amp; paragraph layout</h2>
-   
-      
-  <section id="linebreak">
+<section id="linebreak">
 <h3>Line breaking &amp; hyphenation</h3>
 <p>Adlam text breaks primarily at the spaces around words.</p>
-
-
-
-
 <section id="linebreak_props">
 <h4>Character properties</h4>
-<p>Characters used for the Pula  language have the following assignments related to line-break properties.</p>
-<table><tbody>
-<tr><th class="sg">AL</th><td class="count">70</td><td class="chars"><span class="exlist" lang="xx">𞤭 𞤋 𞤵 𞤓 𞤫 𞤉 𞤮 𞤌 𞤢 𞤀 𞤨 𞤆 𞤦 𞤄 𞤩 𞤇 𞤼 𞤚 𞤣 𞤁 𞤯 𞤍 𞤳 𞤑 𞤺 𞤘 𞤹 𞤗 𞤷 𞤕 𞤶 𞤔 𞤬 𞤊 𞤧 𞤅 𞤸 𞤖 𞤥 𞤃 𞤲 𞤐 𞤻 𞤙 𞤽 𞤛 𞤱 𞤏 𞤪 𞤈 𞤤 𞤂 𞤴 𞤒 𞤰 𞤎 𞤾 𞤜 𞤿 𞤝 𞥀 𞤞 𞥁 𞤟 𞥂 𞤠 𞥃 𞤡 𞥋 ⁏</span></td></tr>
-<tr><th class="sg">BA</th><td class="count">1</td><td class="chars"><span class="exlist" lang="xx">⹁</span></td></tr>
-<tr><th class="sg">CM</th><td class="count">7</td><td class="chars"><span class="exlist" lang="xx">𞥊 𞥆 𞥅 𞥄 𞥈 𞥉 𞥇</span></td></tr>
-<tr><th class="sg">EX</th><td class="count">1</td><td class="chars"><span class="exlist" lang="xx">؟</span></td></tr>
-<tr><th class="sg">NU</th><td class="count">10</td><td class="chars"><span class="exlist" lang="xx">𞥐 𞥑 𞥒 𞥓 𞥔 𞥕 𞥖 𞥗 𞥘 𞥙</span></td></tr>
-<tr><th class="sg">OP</th><td class="count">2</td><td class="chars"><span class="exlist" lang="xx">𞥟 𞥞</span></td></tr>
-</tbody></table>
-
-
-
+<p>Characters used for the Pula language have the following
+assignments related to line-break properties.</p>
+<table>
+<tbody>
+<tr>
+<th class="sg">AL</th>
+<td class="count">70</td>
+<td class="chars"><span class="exlist" lang="xx">𞤭 𞤋 𞤵 𞤓 𞤫
+	𞤉 𞤮 𞤌 𞤢 𞤀 𞤨 𞤆 𞤦 𞤄 𞤩 𞤇 𞤼 𞤚 𞤣 𞤁 𞤯 𞤍 𞤳 𞤑 𞤺
+	𞤘 𞤹 𞤗 𞤷 𞤕 𞤶 𞤔 𞤬 𞤊 𞤧 𞤅 𞤸 𞤖 𞤥 𞤃 𞤲 𞤐 𞤻 𞤙 𞤽
+	𞤛 𞤱 𞤏 𞤪 𞤈 𞤤 𞤂 𞤴 𞤒 𞤰 𞤎 𞤾 𞤜 𞤿 𞤝 𞥀 𞤞 𞥁 𞤟 𞥂
+	𞤠 𞥃 𞤡 𞥋 ⁏</span></td>
+</tr>
+<tr>
+<th class="sg">BA</th>
+<td class="count">1</td>
+<td class="chars"><span class="exlist" lang="xx">⹁</span></td>
+</tr>
+<tr>
+<th class="sg">CM</th>
+<td class="count">7</td>
+<td class="chars"><span class="exlist" lang="xx">𞥊 𞥆 𞥅 𞥄 𞥈
+	𞥉 𞥇</span></td>
+</tr>
+<tr>
+<th class="sg">EX</th>
+<td class="count">1</td>
+<td class="chars"><span class="exlist" lang="xx">؟</span></td>
+</tr>
+<tr>
+<th class="sg">NU</th>
+<td class="count">10</td>
+<td class="chars"><span class="exlist" lang="xx">𞥐 𞥑 𞥒 𞥓 𞥔
+	𞥕 𞥖 𞥗 𞥘 𞥙</span></td>
+</tr>
+<tr>
+<th class="sg">OP</th>
+<td class="count">2</td>
+<td class="chars"><span class="exlist" lang="xx">𞥟 𞥞</span></td>
+</tr>
+</tbody>
+</table>
 <details id="linebreak_details">
 <summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BA (break after)</a> indicates that it is normal to break after that character.&nbsp;</p>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#EX">EX (exclamation mark/interrogation)</a> behave like closing characters, except in relation to postfix (PO) and non-starter characters (NS).</p>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">NU (number)</a> behaves like ordinary characters (AL) in the context of most characters but activate the prefix and postfix behavior of prefix and postfix characters.</p>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#OP">OP (open punctuation)</a> 	should be kept with the character that follows. This is desirable, even if there are intervening space characters, as it prevents the appearance of a bare opening punctuation mark at the end of a line.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL
+(ordinary alphabetic and symbol characters)</a> requires other
+characters to provide break opportunities; otherwise, unless
+tailored rules are applied, no line breaks are allowed between
+pairs of them.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BA
+(break after)</a> indicates that it is normal to break after
+that character.&nbsp;</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM
+(combining mark)</a> takes on the behaviour of its base
+character.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#EX">EX
+(exclamation mark/interrogation)</a> behave like closing
+characters, except in relation to postfix (PO) and non-starter
+characters (NS).</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">NU
+(number)</a> behaves like ordinary characters (AL) in the
+context of most characters but activate the prefix and postfix
+behavior of prefix and postfix characters.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#OP">OP
+(open punctuation)</a> should be kept with the character that
+follows. This is desirable, even if there are intervening space
+characters, as it prevents the appearance of a bare opening
+punctuation mark at the end of a line.</p>
 </details>
 </section>
 </section>
-
-
-
- <section id="justification">
+<section id="justification">
 <h3>Text alignment &amp; justification</h3>
-    <p class="prompts">tbd</p>
-</section>
-
-
-
-
- <section id="letterspace">
-<h3>Letter spacing</h3>
-    <p class="prompts">tbd</p>
-</section>
-
-
-
-
-<section id="lists">
-<h3>Counters, lists, etc.</h3>
-  
 <p class="prompts">tbd</p>
 </section>
-
-
-
-
-  
+<section id="letterspace">
+<h3>Letter spacing</h3>
+<p class="prompts">tbd</p>
+</section>
+<section id="lists">
+<h3>Counters, lists, etc.</h3>
+<p class="prompts">tbd</p>
+</section>
 <section id="initials">
 <h3>Styling initials</h3>
 <p class="prompts">tbd</p>
 </section>
 </section>
- 
- 
- 
- 
- 
- <section id="pagelayout">
+<section id="pagelayout">
 <h2>Page &amp; book layout</h2>
- 
-  <section id="generallayout">
+<section id="generallayout">
 <h3>General page layout &amp; progression</h3>
-    <p class="prompts">tbd</p>
+<p class="prompts">tbd</p>
 </section>
-
-
-
-
-
 <section id="grids">
 <h3>Grids &amp; tables</h3>
 <p class="prompts">tbd</p>
 </section>
-
-
-
-
-  
 <section id="footnotes">
 <h3>Notes, footnotes, etc</h3>
 <p class="prompts">tbd</p>
 </section>
-
-
-
-
-  
 <section id="interaction">
 <h3>Forms &amp; user interaction</h3>
 <p class="prompts">tbd</p>
 </section>
-
-
-
-
-  
 <section id="headers">
 <h3>Page numbering, running headers, etc</h3>
 <p class="prompts">tbd</p>
 </section>
 </section>
-
-
-
-
-
-
-
-
- <section id="chars">
+<section id="chars">
 <h2>Character lists</h2>
-  <p>Version 12.0 of the Unicode Standard has the following block dedicated to the Adlam script (numbers in lists are non-ASCII only):</p>
-    <ul>
-      <li> <a href="/uniview/?block=adlam">Adlam</a> <span class="charCount">69 letters, 7 marks, 10 digits, 2 punctuation :   total 88</span></li>
+<p>Version 12.0 of the Unicode Standard has the following block dedicated
+to the Adlam script (numbers in lists are non-ASCII only):</p>
+<ul>
+<li> <a href="/uniview/?block=adlam">Adlam</a> <span class="charCount">69
+letters, 7 marks, 10 digits, 2 punctuation : total 88</span></li>
 </ul>
-
-<p>The Pular orthography described here uses characters from the following Unicode blocks.</p>
-
+<p>The Pular orthography described here uses characters from the following
+Unicode blocks.</p>
 <table>
 <tbody>
-<tr><th class="sg">Adlam</th><td class="count">88</td><td class="chars">𞤀​𞤁​𞤂​𞤃​𞤄​𞤅​𞤆​𞤇​𞤈​𞤉​𞤊​𞤋​𞤌​𞤍​𞤎​𞤏​𞤐​𞤑​𞤒​𞤓​𞤔​𞤕​𞤖​𞤗​𞤘​𞤙​𞤚​𞤛​𞤜​𞤝​𞤞​𞤟​𞤠​𞤡​𞤢​𞤣​𞤤​𞤥​𞤦​𞤧​𞤨​𞤩​𞤪​𞤫​𞤬​𞤭​𞤮​𞤯​𞤰​𞤱​𞤲​𞤳​𞤴​𞤵​𞤶​𞤷​𞤸​𞤹​𞤺​𞤻​𞤼​𞤽​𞤾​𞤿​𞥀​𞥁​𞥂​𞥃​𞥄​𞥅​𞥆​𞥇​𞥈​𞥉​𞥊​𞥋​𞥐​𞥑​𞥒​𞥓​𞥔​𞥕​𞥖​𞥗​𞥘​𞥙​𞥞​𞥟</td><td class="select" title="Copy to clipboard" onclick="copyToClipboard(this.previousSibling)"><img src="../../shared/images/copy.png" alt="Copy to clipboard" title="Copy to clipboard"></td></tr>
-<tr><th class="sg">Arabic</th><td class="count">1</td><td class="chars">؟</td><td class="select" title="Copy to clipboard" onclick="copyToClipboard(this.previousSibling)"><img src="../../shared/images/copy.png" alt="Copy to clipboard" title="Copy to clipboard"></td></tr>
-<tr><th class="sg">General Punctuation</th><td class="count">1</td><td class="chars">⁏</td><td class="select" title="Copy to clipboard" onclick="copyToClipboard(this.previousSibling)"><img src="../../shared/images/copy.png" alt="Copy to clipboard" title="Copy to clipboard"></td></tr>
-<tr><th class="sg">Supplemental Punctuation</th><td class="count">1</td><td class="chars">⹁</td><td class="select" title="Copy to clipboard" onclick="copyToClipboard(this.previousSibling)"><img src="../../shared/images/copy.png" alt="Copy to clipboard" title="Copy to clipboard"></td></tr>
+<tr>
+<th class="sg">Adlam</th>
+<td class="count">88</td>
+<td class="chars">𞤀​𞤁​𞤂​𞤃​𞤄​𞤅​𞤆​𞤇​𞤈​𞤉​𞤊​𞤋​𞤌​𞤍​𞤎​𞤏​𞤐
+​𞤑​𞤒​𞤓​𞤔​𞤕​𞤖​𞤗​𞤘​𞤙​𞤚​𞤛​𞤜​𞤝​𞤞​𞤟​𞤠​𞤡​𞤢​𞤣​𞤤​𞤥​𞤦
+​𞤧​𞤨​𞤩​𞤪​𞤫​𞤬​𞤭​𞤮​𞤯​𞤰​𞤱​𞤲​𞤳​𞤴​𞤵​𞤶​𞤷​𞤸​𞤹​𞤺​𞤻​𞤼
+​𞤽​𞤾​𞤿​𞥀​𞥁​𞥂​𞥃​𞥄​𞥅​𞥆​𞥇​𞥈​𞥉​𞥊​𞥋​𞥐​𞥑​𞥒​𞥓​𞥔​𞥕​𞥖
+​𞥗​𞥘​𞥙​𞥞​𞥟</td>
+<td class="select" title="Copy to clipboard" onclick="copyToClipboard(this.previousSibling)"><img src="../../shared/images/copy.png" alt="Copy to clipboard" title="Copy to clipboard"></td>
+</tr>
+<tr>
+<th class="sg">Arabic</th>
+<td class="count">1</td>
+<td class="chars">؟</td>
+<td class="select" title="Copy to clipboard" onclick="copyToClipboard(this.previousSibling)"><img src="../../shared/images/copy.png" alt="Copy to clipboard" title="Copy to clipboard"></td>
+</tr>
+<tr>
+<th class="sg">General Punctuation</th>
+<td class="count">1</td>
+<td class="chars">⁏</td>
+<td class="select" title="Copy to clipboard" onclick="copyToClipboard(this.previousSibling)"><img src="../../shared/images/copy.png" alt="Copy to clipboard" title="Copy to clipboard"></td>
+</tr>
+<tr>
+<th class="sg">Supplemental Punctuation</th>
+<td class="count">1</td>
+<td class="chars">⹁</td>
+<td class="select" title="Copy to clipboard" onclick="copyToClipboard(this.previousSibling)"><img src="../../shared/images/copy.png" alt="Copy to clipboard" title="Copy to clipboard"></td>
+</tr>
 </tbody>
 </table>
-
-
-
 <!--p>@ The infrequently used characters come from these blocks.</p>
-
-<table>
-<tbody>
-<tr><th class="sg">Arabic</th><td class="count">10</td><td class="chars">؍ ـ ٬ ٭ ٱ پ چ ڢ ڤ ڧ</td><td class="select" title="Copy to clipboard" onclick="copyToClipboard(this.previousSibling)"><img src="../../shared/images/copy.png" alt="Copy to clipboard" title="Copy to clipboard"></td></tr>
-<tr><th class="sg">Arabic Extended-A</th><td class="count">1</td><td class="chars">ࢲ</td><td class="select" title="Copy to clipboard" onclick="copyToClipboard(this.previousSibling)"><img src="../../shared/images/copy.png" alt="Copy to clipboard" title="Copy to clipboard"></td></tr>
-<tr><th class="sg">Arabic Presentation Forms-A</th><td class="count">1</td><td class="chars">ﷲ</td><td class="select" title="Copy to clipboard" onclick="copyToClipboard(this.previousSibling)"><img src="../../shared/images/copy.png" alt="Copy to clipboard" title="Copy to clipboard"></td></tr>
-</tbody>
-</table-->
-
-
-<p>@ See also the <a href="../../app-charuse/?language=fuf-adlm" target="_blank"> Character usage lookup</a> page, and the <a target="_blank" href="../featurelist/">Script Comparison Table</a>.</p>
-
-
-
+<table><tbody><tr><th class="sg">Arabic</th><td class="count">10</td><td class="chars">؍ ـ ٬ ٭ ٱ پ چ ڢ ڤ ڧ</td><td class="select" title="Copy to clipboard" onclick="copyToClipboard(this.previousSibling)"><img src="../../shared/images/copy.png" alt="Copy to clipboard" title="Copy to clipboard"></td></tr><tr><th class="sg">Arabic Extended-A</th><td class="count">1</td><td class="chars">ࢲ</td><td class="select" title="Copy to clipboard" onclick="copyToClipboard(this.previousSibling)"><img src="../../shared/images/copy.png" alt="Copy to clipboard" title="Copy to clipboard"></td></tr><tr><th class="sg">Arabic Presentation Forms-A</th><td class="count">1</td><td class="chars">ﷲ</td><td class="select" title="Copy to clipboard" onclick="copyToClipboard(this.previousSibling)"><img src="../../shared/images/copy.png" alt="Copy to clipboard" title="Copy to clipboard"></td></tr></tbody></table-->
+<p>@ See also the <a href="../../app-charuse/?language=fuf-adlm" target="_blank">
+Character usage lookup</a> page, and the <a target="_blank" href="../featurelist/">Script
+Comparison Table</a>.</p>
 <!--p>Apart from ASCII characters, the Pular orthography described here uses 88 characters  from the following Unicode blocks: </p>
-    <ul>
-    <li> <a href="/uniview/?block=nko">Adlam</a> <span class="charCount">69 letters, 7 marks, 2 punctuation, 10 numbers :   total 88</span></li>
-    <li> <a href="/uniview/?block=arabic">Arabic</a> <span class="charCount">1 punctuation : total 1</span></li>
-<li> <a href="/uniview/?block=general_punctuation">General punctuation</a> <span class="charCount">1 punctuation : total 1</span></li>
-<li> <a href="/uniview/?block=supplemental_punctuation">Supplemental punctuation</a> <span class="charCount">1 punctuation : total 1</span></li>
-</ul>
- <p><cite>Character Usage</cite> has information about the following orthographies associated with this script: <a href="/app-charuse/?language=fuf-adlm" target="_blank">Pular</a></p>
-<p>For detailed character-specific information see the <a class="linkHighlight" href="/scripts/adlam/block">Adlam character notes</a>.</p-->
+<ul>    <li> <a href="/uniview/?block=nko">Adlam</a> <span class="charCount">69 letters, 7 marks, 2 punctuation, 10 numbers :   total 88</span></li>    <li> <a href="/uniview/?block=arabic">Arabic</a> <span class="charCount">1 punctuation : total 1</span></li><li> <a href="/uniview/?block=general_punctuation">General punctuation</a> <span class="charCount">1 punctuation : total 1</span></li><li> <a href="/uniview/?block=supplemental_punctuation">Supplemental punctuation</a> <span class="charCount">1 punctuation : total 1</span></li></ul> <p><cite>Character Usage</cite> has information about the following orthographies associated with this script: <a href="/app-charuse/?language=fuf-adlm" target="_blank">Pular</a></p><p>For detailed character-specific information see the <a class="linkHighlight" href="/scripts/adlam/block">Adlam character notes</a>.</p-->
 </section>
-
-
-
-
-
-
 <section id="languages">
 <h2>Languages using the Adlam script</h2>
-<p>According to ScriptSource, the Adlam script is used for the following languages: </p>
+<p>According to ScriptSource, the Adlam script is used for the following
+languages: </p>
 <ul>
 <li>Fular [ful]</li>
 <li>Pular [fuf]</li>
 </ul>
 </section>
-
-
-
-
-
-
-
-
 <section id="acknowledgements">
 <h2>Acknowledgements</h2>
-<p>Thanks to the following people for making useful suggestions that were incorporated into the text: Neil Patel.</p>
+<p>Thanks to the following people for making useful suggestions that were
+incorporated into the text: Neil Patel.</p>
 </section>
-
-
-
-
-
-
-
-
 <section id="refs">
 <h2>References</h2>
 <ol>
-<li>[ <a class="fnref" href="https://www.unicode.org/L2/L2018/18282r-adlam.pdf">b</a> ] Abdoulaye Barry, Ibrahima Barry, Peter Constable, Andrew Glass, <a href="https://www.unicode.org/L2/L2018/18282r-adlam.pdf"><cite>Proposal to encode ADLAM NASALIZATION MARK for ADLaM script</cite></a></li>
-<li>[ <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n4628.pdf">e</a> ] Michael Everson, <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n4628.pdf"><cite>Proposal for encoding the Adlam script in the SMP of the UCS</cite></a></li>
-<li>[ <a class="fnref" href="https://github.com/w3c/afrlreq/issues">g</a> ]  Github repository, <a href="https://github.com/w3c/afrlreq/issues">Afrlreq</a></li>
-<li>[ <a class="fnref" href="#refs">n</a> ] Private correspondence with Neil Patel</li>
-<li>[ <a class="fnref" href="https://www.omniglot.com/writing/adlam.htm">o</a> ] Omniglot, <a href="https://www.omniglot.com/writing/adlam.htm">Adlam</a></li>
-<li>[ <a class="fnref" href="https://www.unicode.org/L2/L2019/19119r-adlam-font-repl.pdf">p</a> ] Neil Patel and Mark Jamra (JamraPatel), Craig Cornelius (Google), Ibrahima Barry, Abdoulaye Barry, <a href="https://www.unicode.org/L2/L2019/19119r-adlam-font-repl.pdf"><cite>Replacement of Adlam Reference Font in Codesheet to Updated Design</cite></a></li>
-<li>[ <a class="fnref" href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&amp;uid=aggc6af8cc">s</a> ] ScriptSource, <a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&amp;uid=aggc6af8cc">Adlam</a></li>
-<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch19.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch19.pdf">The Unicode Standard v11.0</a></li>
-<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Adlam_script">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Adlam_script">Adlam script</a></li>
+<li>[ <a class="fnref" href="https://www.unicode.org/L2/L2018/18282r-adlam.pdf">b</a>
+] Abdoulaye Barry, Ibrahima Barry, Peter Constable, Andrew Glass, <a href="https://www.unicode.org/L2/L2018/18282r-adlam.pdf"><cite>Proposal
+to encode ADLAM NASALIZATION MARK for ADLaM script</cite></a></li>
+<li>[ <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n4628.pdf">e</a>
+] Michael Everson, <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n4628.pdf"><cite>Proposal
+for encoding the Adlam script in the SMP of the UCS</cite></a></li>
+<li>[ <a class="fnref" href="https://github.com/w3c/afrlreq/issues">g</a>
+] Github repository, <a href="https://github.com/w3c/afrlreq/issues">Afrlreq</a></li>
+<li>[ <a class="fnref" href="#refs">n</a> ] Private correspondence with
+Neil Patel</li>
+<li>[ <a class="fnref" href="https://www.omniglot.com/writing/adlam.htm">o</a>
+] Omniglot, <a href="https://www.omniglot.com/writing/adlam.htm">Adlam</a></li>
+<li>[ <a class="fnref" href="https://www.unicode.org/L2/L2019/19119r-adlam-font-repl.pdf">p</a>
+] Neil Patel and Mark Jamra (JamraPatel), Craig Cornelius (Google),
+Ibrahima Barry, Abdoulaye Barry, <a href="https://www.unicode.org/L2/L2019/19119r-adlam-font-repl.pdf"><cite>Replacement
+of Adlam Reference Font in Codesheet to Updated Design</cite></a></li>
+<li>[ <a class="fnref" href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&amp;uid=aggc6af8cc">s</a>
+] ScriptSource, <a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&amp;uid=aggc6af8cc">Adlam</a></li>
+<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch19.pdf">u</a>
+] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch19.pdf">The
+Unicode Standard v11.0</a></li>
+<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Adlam_script">w</a>
+] Wikipedia, <a href="http://en.wikipedia.org/wiki/Adlam_script">Adlam
+script</a></li>
+<li>[ <a href="https://www.youtube.com/watch?v=NPQ7ufjN2i8" class="fnref">ya</a>
+] Abdoulaye and Ibrahim Barry, <a href="https://www.youtube.com/watch?v=NPQ7ufjN2i8">The
+ADLaM Story</a>, Youtube</li>
+<li>[ <a href="https://www.youtube.com/watch?v=PXN4aciv19U" class="fnref">yi</a>
+] Abdoulaye &amp; Ibrahima Barry, Mark Jamara, Neil Patel, <a href="https://www.youtube.com/watch?v=PXN4aciv19U">Inventing
+the Adlam Script</a>, Youtube</li>
 </ol>
 </section>
-
-
-
-
-
 <details>
 <summary class="prompts">Show stats</summary>
-
 <table id="charCountList">
-<tr><th>Main</th><td id="mainCharList"></td><td id="mainCharListTotal"></td></tr>
-<tr><th>Auxiliary</th><td id="auxCharList"></td><td id="auxCharListTotal"></td></tr>
-<tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
-<tr><th>Other</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
-<tr><th>Deprecated</th><td id="deprecatedCharList"></td><td id="deprecatedCharListTotal"></td></tr>
+<tbody>
+<tr>
+<th>Main</th>
+<td id="mainCharList"><br>
+</td>
+<td id="mainCharListTotal"><br>
+</td>
+</tr>
+<tr>
+<th>Auxiliary</th>
+<td id="auxCharList"><br>
+</td>
+<td id="auxCharListTotal"><br>
+</td>
+</tr>
+<tr>
+<th>Archaic</th>
+<td id="archaicCharList"><br>
+</td>
+<td id="archaicCharListTotal"><br>
+</td>
+</tr>
+<tr>
+<th>Other</th>
+<td id="otherCharList"><br>
+</td>
+<td id="otherCharListTotal"><br>
+</td>
+</tr>
+<tr>
+<th>Deprecated</th>
+<td id="deprecatedCharList"><br>
+</td>
+<td id="deprecatedCharListTotal"><br>
+</td>
+</tr>
+</tbody>
 </table>
 </details>
-
-
 <div id="phoneLinks"></div>
-
-
-
 <div id="panel" style="display:none"></div>
-
 <div class="smallprint"><span id="version"></span></div>
-
-
 <script>
 initialiseSummary('/scripts/adlam/block','fuf','fuf-adlm','adlam')
 autoTransliterate('fuf')
 </script>
 
-</body>
-</html>
+
+</body></html>
