@@ -221,10 +221,68 @@ be used for titles, etc.</p>
 </section>
 <section id="direction">
 <h2>Text direction</h2>
-<p>Adlam text is written horizontally, right to left.</p>
-<p>Like N'Ko but unlike Arabic, numbers are also written with digits in
+<p>Adlam text is written horizontally, with successive lines progressing down the page.</p>
+<p>Inline text is right-to-left in the main but, as in most right-to-left scripts,  embedded left-to-right script text are written left-to-right (producing 'bidirectional' text). However, like  N'Ko but unlike Arabic, numbers are also written with digits in
 right-to-left order.</p>
+
+<figure id="fig_bidi">
+<p dir="rtl" lang="fuf" class="medium" style="text-align: start;"><span class="ex" style="white-space: nowrap;">𞤑𞤮 𞤯𞤵𞤥 𞤱𞤮𞤲𞤭 𞤧𞤢𞤦𞤵 𞤸𞤢𞥄 𞤫 𞤸𞤭𞤼𞤢𞥄𞤲𞤣𞤫<br><span style="color:red">𞥑𞥙𞥘𞥕</span>⹁ 𞤥𞤢𞤲𞤳𞤭𞤪𞤺𞤢𞤤 𞤤𞤫𞤧𞤣𞤭 𞤊𞤢𞤪𞤢𞤲𞤧𞤭<br>
+𞤭𞤲𞥆𞤫𞤼𞤫𞥅𞤲𞤺𞤢𞤤 <span style="color:red">BNP Paribas</span> 𞤴𞤮 𞤢𞤪𞤵  𞤵𞤣𞥆𞤭𞤼𞤢<br>𞤧𞤢𞤤𞤲𞤣𞤵 𞤫 𞤤𞤫𞤴𞤣𞤭 𞤘𞤭𞤲𞤫 𞤱𞤭𞤫𞤼𞤫𞥅𞤲𞤣𞤵<br>𞤄𞤭𞤧𞤭𞥅𞤺𞤭𞥅 (BICIGUI).</span></p>
+<figcaption>Adlam-script words are read right-to-left, starting from the right of this line, but 'BNP Paribas' is read left-to-right. The number <bdi>𞥑𞥙𞥘𞥕</bdi> (1985) on the other hand is written right-to-left.</figcaption>
+</figure>
+
+<p>The Unicode Bidirectional Algorithm automatically takes care of the ordering for all the text in <a class="figref">fig_bidi</a>, as long as the 'base direction' is set to RTL. In HTML this can be set using the <code>dir</code> attribute, or in plain text using <a href="#directioncontrols">formatting controls</a>.</p>
+<p>If the base direction is not set appropriately, the directional runs will be ordered incorrectly as shown in <a class="figref">fig_bidi_no_base_direction</a>.</p>
+
+<figure id="fig_bidi_no_base_direction">
+<p dir="rtl" class="small" lang="fuf" style="white-space: nowrap; margin: auto;">𞤑𞤮𞤲𞤮 𞤳𞤮 𞤫 𞤬𞤫𞤣𞥆𞤫 PAIGC 𞤮 𞤶𞤫𞤴𞤢𞥄.</p>
+<p class="small" lang="fuf" style="white-space: nowrap; margin: auto;">𞤑𞤮𞤲𞤮 𞤳𞤮 𞤫 𞤬𞤫𞤣𞥆𞤫 PAIGC 𞤮 𞤶𞤫𞤴𞤢𞥄.</p>
+<figcaption class="instructions">The exact same sequence of characters with the base direction set to RTL (top), and with no  base direction set on this LTR page (bottom).</figcaption>
+</figure>
+
+<p>For more information about how directionality and base direction work, see <a href="https://www.w3.org/International/articles/inline-bidi-markup/uba-basics.en">Unicode Bidirectional Algorithm basics</a>. For information about plain text formatting characters see <a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls.en">How to use Unicode controls for bidi text</a>. And for working with markup in HTML, see <a href="https://www.w3.org/International/tutorials/bidi-xhtml/">Creating HTML Pages in Arabic, Hebrew and Other Right-to-left Scripts</a>.</p>
+<p>On this page, see also <a class="secref">expressions</a> and <a class="secref">breaking_latin</a> for additional features related to direction.</p>
 </section>
+
+
+
+
+
+
+<section id="directioncontrols">
+<h3>Managing text direction</h3>
+
+<p>Unicode provides a set of 10 formatting characters that can be used to control the direction of text when displayed. These characters have no visual form in the rendered text, however text editing applications may have a way to show their location.</p>
+<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">RLE</span> [<a target="c" href="/scripts/arabic/block#char202B"><span class="uname">U+202B RIGHT-TO-LEFT EMBEDDING</span></a>]</span>, <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRE</span> [<a target="c" href="/scripts/arabic/block#char202A"><span class="uname">U+202A LEFT-TO-RIGHT EMBEDDING</span></a>]</span>, and <span class="codepoint" translate="no"><span class="uname" dir="ltr">PDF</span> [<a target="c" href="/scripts/arabic/block#char202C"><span class="uname">U+202C POP DIRECTIONAL FORMATTING</span></a>]</span> are in widespread use to set the base direction of a range of characters.  <span class="uname">RLE/LRE</span> come at the start, and  <span class="uname">PDF</span> at the end of a range of characters for which the base direction is to be set.</p>
+<p>More recently, the Unicode Standard added a set of characters which do the same thing but also isolate the content from surrounding characters, in order to avoid directional spillover effects. They are <span class="codepoint" translate="no"><span class="uname" dir="ltr">RLI</span> [<a target="c" href="/scripts/arabic/block#char2067"><span class="uname">U+2067 RIGHT-TO-LEFT ISOLATE</span></a>]</span>, <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRI</span> [<a target="c" href="/scripts/arabic/block#char2066"><span class="uname">U+2066 LEFT-TO-RIGHT ISOLATE</span></a>]</span>, and <span class="codepoint" translate="no"><span class="uname" dir="ltr">PDI</span> [<a target="c" href="/scripts/arabic/block#char2069"><span class="uname">U+2069 POP DIRECTIONAL ISOLATE</span></a>]</span>.  The Unicode Standard recommends that these be used instead, however some applications  don't yet recognise them. </p>
+<p>There is also <span class="codepoint" translate="no"><span class="uname" dir="ltr">FSI</span> [<a target="c" href="/scripts/arabic/block#char2068"><span class="uname">U+2068 FIRST STRONG ISOLATE</span></a>]</span>, used initially to set the base direction according to the first recognised strongly-directional character.</p>
+<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">ALM</span> [<a target="c" href="/scripts/arabic/block#char061C"><span class="uname">U+061C ARABIC LETTER MARK</span></a>]</span> is used to produce correct sequencing of numeric data. Follow the link and see <a class="secref">expressions</a> for details.&nbsp;</p>
+<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">RLM</span> [<a target="c" href="/scripts/arabic/block#char200F"><span class="uname">U+200F RIGHT-TO-LEFT MARK</span></a>]</span> and <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRM</span> [<a target="c" href="/scripts/arabic/block#char200E"><span class="uname">U+200E LEFT-TO-RIGHT MARK</span></a>]</span> are invisible characters with strong directional properties that are also sometimes used to produce the correct ordering of text.</p>
+<p>For more information about how to use these formatting characters see <a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls.en"><cite>How to use Unicode controls for bidi text</cite></a>. Note, however, that when writing HTML you should generally use markup rather than these control codes. For information about that, see <a href="https://www.w3.org/International/tutorials/bidi-xhtml/"><cite>Creating HTML Pages in Arabic, Hebrew and Other Right-to-left Scripts</cite></a>.</p>
+</section>
+
+
+
+
+
+
+<section id="layoutdirection">
+<h3>Layout direction</h3>
+
+<p>The right-to-left orientation of the script affects the direction of page layout, and of the layout of items within the page. See also book direction.</p>
+<p>The page shown in <a class="figref">fig_layout</a> is the mirror-image of pages in, say, French. Note the various navigation items on the page, and the progression of numbers at the bottom of the page.</p>
+
+<figure id="fig_layout">
+<img src="images/layout.png" alt="Picture of the web page at https://heslal.com">
+<figcaption>An Adlam web page, where the  layout and navigational aids are also ordered right-to-left.</figcaption>
+</figure>
+
+<p>On the other hand, the video controls assume a LTR direction. This is mostly constrained by technology at the moment, and whether or not this is acceptable is still being debated.</p>
+</section>
+
+
+
+
 <!--section>
 <h2 id="structure">Structure</h2>    <p>@ Hausa has 3 syllable types: CV, CVV, and CVC, where VV can be a long vowel or a diphthong.<a class="fnref" href="#refs">c</a> The long vs. short vowel distinction is phonemically important, however when a syllable with a long vowel acquires and final consonant, the vowel is shortened.</p><p>@ Consonant clusters may occur where syllables are side by side, but not within a syllable. Gemination is, however, a distinctive feature.<a class="fnref" href="#refs">c</a></p><p>@ Semivowels <span class="ipa">ʷ</span> and <span class="ipa">ʲ</span> may occur after an initial consonant.</p></section-->
 
@@ -289,8 +347,8 @@ the document each of the sounds are referred to.</p>
 <text x="32" y="15" class="ipa" text-anchor="end">i iː</text>
 <text x="250" y="15" class="ipa">u uː</text>
 <!-- close mid -->
-<text x="57" y="75" class="ipa" text-anchor="end">e eː</text>
-<text x="250" y="75" class="ipa">o oː</text>
+<text x="57" y="75" class="allophone" text-anchor="end">e eː</text>
+<text x="250" y="75" class="allophone">o oː</text>
 <!-- open mid -->
 <text x="81" y="135" class="ipa" text-anchor="end">ɛ ɛː</text>
 <text x="250" y="135" class="ipa">ɔ ɔː</text>
@@ -321,7 +379,7 @@ the document each of the sounds are referred to.</p>
 <div class="phone"><span class="ipa">iː</span></div>
 <div class="posn">&nbsp;</div>
 <div>
-<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E92D;&#x1E945;</span> [<a href="/scripts/adlam/block#char1E92D"><span class="uname">U+1E92D ADLAM SMALL LETTER I</span></a> + <a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E92D;&#x1E945;</span> [<a href="/scripts/adlam/block#char1E92D"><span class="uname">U+1E92D ADLAM SMALL LETTER I</span></a> + <a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="fuf" dir="rtl">𞤤𞤭𞥅𞤲𞥋𞤺𞤵</span> <span class="trans">liːn˜gu</span> (<span class="trans">liingu</span>) <span class="ipa">liːᵑɡu</span> <span class="meaning">fish</span></span>.</p>
 <p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E90B;&#x1E945;</span> [<a href="/scripts/adlam/block#char1E90B"><span class="uname">U+1E90B ADLAM CAPITAL LETTER I</span></a> + <a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span>&nbsp;</p>
 </div>
 </div>
@@ -393,7 +451,7 @@ the document each of the sounds are referred to.</p>
 <div class="phone"><span class="ipa">ɛː</span></div>
 <div class="posn">&nbsp;</div>
 <div>
-<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E92B;&#x1E945;</span> [<a href="/scripts/adlam/block#char1E92B"><span class="uname">U+1E92B ADLAM SMALL LETTER E</span></a> + <a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span>&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E92B;&#x1E945;</span> [<a href="/scripts/adlam/block#char1E92B"><span class="uname">U+1E92B ADLAM SMALL LETTER E</span></a> + <a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span>&nbsp;, eg. <span class="charExample" translate="no"><span class="ex" lang="fuf" dir="rtl">𞤸𞤫𞥅𞤲</span> <span class="trans">hɛːn</span> (<span class="trans">heen</span>) <span class="ipa">hɛːn</span> <span class="meaning">some</span></span>.</p>
 <p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E909;&#x1E945;</span> [<a href="/scripts/adlam/block#char1E909"><span class="uname">U+1E909 ADLAM CAPITAL LETTER E</span></a> + <a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span>&nbsp;</p>
 </div>
 </div>
@@ -409,7 +467,7 @@ the document each of the sounds are referred to.</p>
 <div class="phone"><span class="ipa">ɔː</span></div>
 <div class="posn">&nbsp;</div>
 <div>
-<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E92E;&#x1E945;</span> [<a href="/scripts/adlam/block#char1E92E"><span class="uname">U+1E92E ADLAM SMALL LETTER O</span></a> + <a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E92E;&#x1E945;</span> [<a href="/scripts/adlam/block#char1E92E"><span class="uname">U+1E92E ADLAM SMALL LETTER O</span></a> + <a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="fuf" dir="rtl">𞤮𞥅𞤤𞤮</span> <span class="trans">ɔːlɔ</span> (<span class="trans">oolo</span>) <span class="ipa">ɔːlɔ</span> <span class="meaning">yellow</span></span>.</p>
 <p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E90C;&#x1E945;</span> [<a href="/scripts/adlam/block#char1E90C"><span class="uname">U+1E90C ADLAM CAPITAL LETTER O</span></a> + <a href="/scripts/adlam/block#char1E945"><span class="uname">U+1E945 ADLAM VOWEL LENGTHENER</span></a>]</span>&nbsp;</p>
 </div>
 </div>
@@ -688,7 +746,7 @@ in a lighter colour are non-native or allophones.</p>
 <div class="phone"><span class="ipa">ⁿd</span></div>
 <div class="posn">&nbsp;</div>
 <div>
-<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E932;&#x1E94B;&#x1E923;</span> [<a href="/scripts/adlam/block#char1E932"><span class="uname">U+1E932 ADLAM SMALL LETTER NUN</span></a> + <a href="/scripts/adlam/block#char1E94B"><span class="uname">U+1E94B ADLAM NASALIZATION MARK</span></a> + <a href="/scripts/adlam/block#char1E923"><span class="uname">U+1E923 ADLAM SMALL LETTER DAALI</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="fuf" dir="rtl">𞤲𞥋𞤣𞤢𞤲𞤳𞤭</span> <span class="trans">n˜danki</span> (<span class="trans">ndanki</span>) <span class="ipa">ⁿdanki</span> <span class="meaning">bed</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E932;&#x1E94B;&#x1E923;</span> [<a href="/scripts/adlam/block#char1E932"><span class="uname">U+1E932 ADLAM SMALL LETTER NUN</span></a> + <a href="/scripts/adlam/block#char1E94B"><span class="uname">U+1E94B ADLAM NASALIZATION MARK</span></a> + <a href="/scripts/adlam/block#char1E923"><span class="uname">U+1E923 ADLAM SMALL LETTER DAALI</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="fuf" dir="rtl">𞤣𞤢𞥄𞤲𞥋𞤣𞤫</span> <span class="trans">daˉn˜dɛ</span> (<span class="trans">daande</span>) <span class="ipa">daːⁿdɛ</span> <span class="meaning">neck</span></span>.</p>
 <p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x1E910;&#x1E94B;&#x1E901;</span> [<a href="/scripts/adlam/block#char1E910"><span class="uname">U+1E910 ADLAM CAPITAL LETTER NUN</span></a> + <a href="/scripts/adlam/block#char1E94B"><span class="uname">U+1E94B ADLAM NASALIZATION MARK</span></a> + <a href="/scripts/adlam/block#char1E901"><span class="uname">U+1E901 ADLAM CAPITAL LETTER DAALI</span></a>]</span></p>
 </div>
 </div>
@@ -746,6 +804,7 @@ in a lighter colour are non-native or allophones.</p>
 <div class="posn">&nbsp;</div>
 <div>
 <p><span class="codepoint" translate="no">&nbsp;<span dir="rtl" lang="fuf">𞥇</span> &nbsp; [<a href="/scripts/adlam/block#char1E947"><span class="uname">U+1E947 ADLAM HAMZA</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="fuf">𞤗𞤵𞤪𞥇𞤢𞤲</span> <span class="trans">Qurʿan</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="fuf" dir="rtl">&#x2019;</span> [<a href="/scripts/adlam/block#char2019"><span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="fuf" dir="rtl">𞤧𞤢𞥄𞥋𞤭</span> <span class="trans">saˉ˜i</span> (<span class="trans">saa’i</span>) <span class="ipa">saːʔi</span> <span class="meaning">hour</span></span>.&nbsp;</p>
 </div>
 </div>
 </div>
@@ -1164,6 +1223,7 @@ and final form of <span lang="nqo">𞤬</span>.</figcaption> </figure>
 <p>The cursive treatment doesn't produce major variations of the
 essential part of the glyph for a character (unlike Arabic), but there
 are some small adaptations.</p>
+<p>Unlike Arabic and Syriac scripts, no glyphs join only on one side.</p>
 </section>
 <section id="gsub">
 <h3>Context-based shaping</h3>
