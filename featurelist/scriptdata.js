@@ -85,7 +85,7 @@ var scriptData = [
 
 { script:"Tai Viet", language:"Tai Dam",  id:"blt", type:"alpha", chars:72, cchars:9, cs:"no", gpos:"yes", mcchars:"yes", matras: "visual", gsub:"no", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"?", justify:"?", digits:"no", region:"Asia SE", linked:"taiviet" },
 
-{ script:"Tamil", language:"Tamil",  id:"ta", type:"abugida", chars:72, cchars:14, cs:"no", gpos:"yes", mcchars:"yes", matras: "yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"?", justify:"space", digits:"yes", region:"Asia S", linked:"tamil" },
+{ script:"Tamil", language:"Tamil",  id:"ta", type:"abugida", chars:72, cchars:14, cs:"no", gpos:"yes", mcchars:"yes", matras: "yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"yes", justify:"space", digits:"yes", region:"Asia S", linked:"tamil" },
 
 { script:"Telugu", language:"Telugu",  id:"te", type:"abugida", chars:96, cchars:22, cs:"no", gpos:"yes", mcchars:"yes", matras: "yes", gsub:"yes", cursive:"no", dir:"ltr", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"?", justify:"space", digits:"yes", region:"Asia S" },
 
