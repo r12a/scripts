@@ -688,3 +688,27 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
 
 
 
+
+function showAbout (node, script, language) {
+// Displays/hides the 'About this document' details
+
+if (node.innerHTML == '') {
+	console.log(node.parentNode)
+	node.innerHTML = `
+    <p class="instructions"><span class="leadin">Showing codepoints for examples.</span>If you click on example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
+<p class="instructions"><span class="leadin">Finding characters.</span> To find a character by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or its hex number in the <samp>Find</samp> control, bottom left.</p>
+    <p class="instructions"><span class="leadin">Fonts.</span> To view this page as intended, you need   ${script} fonts.  The page comes with a webfont. Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system.</p>
+<p class="instructions">The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. If there is no glyph and you want to see what it looks like, click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
+    <p class="instructions"><span class="leadin">Language usage lists.</span> Information about languages that use these characters is taken from the list maintained for the <a href="../../app-charuse/">Character usage lookup</a> app. The list is not exhaustive.</p>
+<p class="instructions"><span class="leadin">References &amp; further information.</span> References are indicated by superscript letters, optionally followed by page numbers. Wherever possible, those contain direct links to the source material. When there is also an arrow → it is worth following the link for  additional information. The references are listed at the bottom of the page, but the links should take you to the exact location of the source, wherever possible.</p>
+    <p class="instructions"><span class="leadin">UniView.</span><a href="../../uniview/">UniView</a>'s notes feature pulls in information about characters from this page.</p>
+	` 
+	node.parentNode.open = true
+	}
+else { 
+	node.parentNode.open = false
+	node.innerHTML = ''
+	}
+}
+
+
