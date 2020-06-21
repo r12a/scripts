@@ -19,6 +19,8 @@
 <script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
+<script src="../common/egcode.js"></script>
+<script src="examples.js"></script>
 
 <script src="../../uniview/descriptions.js"></script> 
 <script src="../../uniview/u.js"></script> 
@@ -38,7 +40,7 @@
 </header>
 <h1>Tamil character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a></nav>
+<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
 
 <aside class="sidebar">
   <nav>
@@ -75,49 +77,39 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->31 March, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->21 June, 2020<!-- #EndDate -->
 &bull; tags <a href="https://r12a.github.io/blog/index.php?tag=tamil" title="Show all blog posts tagged with 'tamil'">tamil</a>, <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 <section>
-  <p>This page lists characters in the following Unicode  blocks and gathers information about them from various sources. </p>
+  <p>This page lists characters in the following Unicode  block and gathers information about them from various sources. </p>
   <ul>
     <li><a href="../../uniview/?block=tamil" target="_blank">Tamil</a></li>
   </ul>
+<p>Tamil has a fairly complicated set of rules and variations on pronunciation, and the writing system abstracts away from the detail. Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription. For example, the symbol <span class="ipa">a</span> represents a set of central sounds which may be written <span class="ipa">a</span>, <span class="ipa">ə</span>, or <span class="ipa">ʌ</span> in more detailed transcriptions.</p>
 
-
-<details class="supportdocs noprint instructions">
-<summary>Related pages</summary>
-<p class="leadin">Script summary page:</p>
-<ul>
-<li><a href="index" class="linkHighlight">Tamil</a></li>
-</ul>
-<!--p class="leadin">Character notes:</p>
-<ul>
-<li><a href="../combining/block" class="linkHighlight">Combining characters</a></li>
-<li><a href="../arabic/block" class="linkHighlight">Arabic</a></li>
-</ul-->
-<p class="leadin">Character app:</p>
-<ul>
-<li><a href="../../pickers/tamil/" class="linkHighlight">Tamil</a></li>
-</ul>
-<p class="leadin">Other:</p>
-<ul>
-<li><a class="linkHighlight" href="../links?iso=Taml">Script links pages</a></li>
-</ul>
-</details>
 
 
 <details>
-<summary class="instructions">About this page</summary>
-    <p class="instructions"><span class="leadin">Showing codepoints for examples.</span>If you click on example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
-<p class="instructions"><span class="leadin">Finding characters.</span> To find a character by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or its hex number in the <samp>Find</samp> control, bottom left.</p>
-    <p class="instructions"><span class="leadin">Fonts.</span> To view this page as intended, you need   Tamil fonts.  The page comes with a  Noto Sans Tamil webfont. Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system. </p>
-<p class="instructions">The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. If there is no glyph and you want to see what it looks like, click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
-    <p class="instructions"><span class="leadin">Language usage lists.</span> Information about languages that use these characters is taken from the list maintained for the <a href="../../app-charuse/">Character usage lookup</a> app. The list is not exhaustive.</p>
-<p class="instructions"><span class="leadin">References &amp; further information.</span> References are indicated by superscript letters, optionally followed by page numbers. Wherever possible, those contain direct links to the source material. When there is also an arrow → it is worth following the link for  additional information. The references are listed at the bottom of the page, but the links should take you to the exact location of the source, wherever possible.</p>
-    <p class="instructions"><span class="leadin">UniView.</span><a href="../../uniview/">UniView</a>'s notes feature pulls in information about characters from this page.</p>
+<summary class="instructions"><a href="../links?iso=Taml">Related pages</a>.</summary>
+</details>
+
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#charnotes">Other character notes</a>.</summary>
+</details>
+
+
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Tamil','Tamil'); return false;">About this page</a></summary>
+<div id="about"></div>
 <p id="charliststr" class="instructions"></p>
 </details>
 </section>
+
+
+
+
 </div>
 <section id="consonants">
 <h2>Consonants</h2>
@@ -129,12 +121,19 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0B95">See in UniView</a></p>
 
     <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> vallinam consonant</p>
-        <p><span class="ipa">k</span>  word-initial and in a doubled consonant.</p>
-        <p><span class="ipa">x ɣ h ∅</span> when intervocalic.</p>
-<p><span class="ipa">ɡ</span> when post-nasal.</p>
-<p><span class="ipa">x</span> when preceded by <span class="codepoint"><span lang="ta">ஃ</span> <a href="/scripts/block/tamil#char0B83">[<span class="uname">U+0B83 TAMIL SIGN VISARGA</span>]</a></span>, eg.  <span class="charExample" translate="no"><span class="ex" lang="ta">செங்கிஸ் ஃகான்</span> <span class="trans">ceŋ͓kis͓ ˑkɑ̄n͓</span> <span class="meaning">Gengis Khan</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Tamil_script#Grantha_consonants_used_in_Tamil">w</a></p>
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0B92;</p>
+<p><span class="ipa">k</span>  when</p>
+<ul>
+<li>word-initial, eg. <span class="eg" lang="ta">கால்</span>,  </li>
+<li>geminated, eg. <span class="eg" lang="ta">மக்கள்</span>, or</li>
+<li> in a cluster, eg. <span class="eg" lang="ta">கற்க</span>.</li>
+</ul>
+<p><span class="ipa">g</span> when intervocalic, eg. <span class="eg" lang="ta">பாகு</span>. Other sources list <span class="ipa">x ɣ h ∅</span>.</p>
+<p><span class="ipa">ɡ</span> when post-nasal, eg. <span class="eg" lang="ta">அங்கே</span>.</p>
+<p><span class="ipa">x</span> when preceded by <span class="codepoint"><span lang="ta">ஃ</span> <a href="/scripts/block/tamil#char0B83">[<span class="uname">U+0B83 TAMIL SIGN VISARGA</span>]</a></span>, eg. <span class="eg" lang="ta">செங்கிஸ் ஃகான்</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Tamil_script#Grantha_consonants_used_in_Tamil">w</a></p>
+<p><span class="ipa">kʂ</span> as the digraph <span class="codepoint" translate="no"><span lang="ta">க்ஷ</span> [<a href="/scripts/tamil/block#char0B95" target="c"><span class="uname">U+0B95 TAMIL LETTER KA</span></a> + <a href="/scripts/tamil/block#char0BCD" target="c"><span class="uname">U+0BCD TAMIL SIGN VIRAMA</span></a> + <a href="/scripts/tamil/block#char0BB7" target="c"><span class="uname">U+0BB7 TAMIL LETTER SSA</span></a>]</span>, eg. <span class="eg" lang="ta">காமாக்ஷி</span></p>
 </div>
         <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
@@ -148,10 +147,16 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0B99">See in UniView</a></p>
 
     <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> mellinam consonant</p>
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0B99;</p>
+<p><span class="ipa">ŋ</span> when </p>
+<ul>
+<li> geminated, eg. <span class="eg" lang="ta">அங்ஙனம்</span>, or</li>
+<li>in a cluster, eg. <span class="eg" lang="ta">அங்கே</span>.</li>
+</ul>
 </div>
-        <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
+<p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
     </div>
   </div>
@@ -161,19 +166,20 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
     <p class="charname"><strong>U+0B9A</strong> <a href="#char0B9A">TAMIL LETTER CA</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0B9A">See in UniView</a></p>
 
-    <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> vallinam consonant</p>
-        <p><span class="ipa">t͡ʃ ~ s</span> typically when word-initial. </p>
-<p><span class="ipa">tːʃ</span> in a doubled consonant.</p>
-<p><span class="ipa">s</span> <span class="ipa">ʒ</span> when intervocalic.</p>
-<p><span class="ipa">d͡ʒ</span> when post-nasal.</p>
-        
-              </div>
-        <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
+<div class="notes">
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0B9A;</p>
+<p><span class="ipa">t͡ʃ ~ s</span>  when word-initial, eg. <span class="eg" lang="ta">சின்ன</span>. </p>
+<p><span class="ipa">tːʃ</span> when geminated, eg. <span class="eg" lang="ta">பேச்சு</span>, or when following a stop consonant, eg. <span class="eg" lang="ta">கட்சி</span>.</p>
+<p><span class="ipa">s~ʒ</span> when intervocalic, eg. <span class="eg" lang="ta">பாசம்</span>.</p>
+<p><span class="ipa">d͡ʒ</span> when post-nasal, eg. <span class="eg" lang="ta">இஞ்சி</span>.</p>
 
-    </div>
-  </div>
+</div>
+<p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
+
+</div>
+</div>
   
   <div class="character" id='char0B9C'>
     <div class="charimg">&#x0B9C;</div>
@@ -182,9 +188,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
     <div class="notes">
       <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> grantha consonant</p>
-        <p><span class="ipa">d͡ʒ</span> generally.</p>
-        <p><span class="ipa">z</span> when preceded by <span class="codepoint"><span lang="ta">ஃ</span> <a href="/scripts/block/tamil#char0B83">[<span class="uname">U+0B83 TAMIL SIGN VISARGA</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">ஃஜிரொக்ஸ்</span> <span class="trans">ˑʤiɾok͓s͓</span> <span class="ipa">ziɾoks</span> <span class="meaning">Xerox</span></span>. </p>
+        <p class="titlepara"><span class="title">Tamil</span></p>
+ <p class="insertTranscription">&#x0B9C;</p>
+       <p><span class="ipa">d͡ʒ</span> generally.</p>
+        <p><span class="ipa">z</span> when preceded by <span class="codepoint"><span lang="ta">ஃ</span> <a href="/scripts/block/tamil#char0B83">[<span class="uname">U+0B83 TAMIL SIGN VISARGA</span>]</a></span>, eg. <span class="eg" lang="ta">ஃஜிரொக்ஸ்</span>. </p>
         
       </div>
         <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
@@ -198,7 +205,14 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
     <div class="notes">
       <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> mellinam consonant</p>
+        <p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0B9E;</p>
+<p><span class="ipa">ɲ</span>  when </p>
+<ul>
+<li>initial, eg. <span class="eg" lang="ta">ஞானம்</span>,</li>
+<li> geminated, eg. <span class="eg" lang="ta">அஞ்ஞானம்</span>, or</li>
+<li>in a cluster, eg. <span class="eg" lang="ta">இஞ்சி</span>.</li>
+</ul>
 </div>
         <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
@@ -210,19 +224,20 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
     <p class="charname"><strong>U+0B9F</strong> <a href="#char0B9F">TAMIL LETTER TTA</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0B9F">See in UniView</a></p>
 
-    <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> vallinam consonant</p>
-        <p>Doesn't occur initially.</p>
-<p><span class="ipa">ʈ</span>  when  in a doubled consonant.</p>
-        <p><span class="ipa">ɽ</span> when intervocalic.</p>
-<p><span class="ipa">ɖ</span> when post-nasal.</p>
-        
-              </div>
-        <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
+<div class="notes">
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span> vallinam consonant</p>
+<p class="insertTranscription">&#x0B9F;</p>
+<p>Doesn't occur initially.</p>
+<p><span class="ipa">ʈ</span>  when  geminated, eg. <span class="eg" lang="ta">பட்டு</span>.</p>
+<p><span class="ipa">ɽ~ɖ</span> when intervocalic, eg. <span class="eg" lang="ta">படி</span>.</p>
+<p><span class="ipa">ɖ</span> when post-nasal, eg. <span class="eg" lang="ta">வண்டி</span>.</p>
 
-    </div>
-  </div>
+</div>
+<p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
+
+</div>
+</div>
   
   <div class="character" id='char0BA3'>
     <div class="charimg">&#x0BA3;</div>
@@ -231,7 +246,9 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
     <div class="notes">
       <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> mellinam consonant</p>
+        <p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BA3;</p>
+<p><span class="ipa">ɳ</span>  when in a cluster, eg. <span class="eg" lang="ta">வண்டி</span>, or geminated, eg. <span class="eg" lang="ta">வண்ணம்</span>.</p>
 </div>
         <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
@@ -242,19 +259,24 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
     <div class="charimg">&#x0BA4;</div>
     <p class="charname"><strong>U+0BA4</strong> <a href="#char0BA4">TAMIL LETTER TA</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0BA4">See in UniView</a></p>
+<div class="notes">
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BA4;</p>
+<p><span class="ipa">t̪</span>  when </p>
+<ul>
+<li>word-initial, eg. <span class="eg" lang="ta">தனி</span>, </li>
+<li>in a doubled consonant, eg. <span class="eg" lang="ta">பத்து</span>, or </li>
+<li>after a stop, eg. <span class="eg" lang="ta">யுக்தி</span>.</li>
+</ul>
+<p><span class="ipa">ð</span> when intervocalic, eg. <span class="eg" lang="ta">நல்லது</span>.</p>
+<p><span class="ipa">d̪</span> when post-nasal, eg. <span class="eg" lang="ta">பந்து</span>.</p>
 
-    <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> vallinam consonant</p>
-        <p><span class="ipa">t̪</span> typically when word-initial and in a doubled consonant.</p>
-        <p><span class="ipa">ð</span> when intervocalic.</p>
-<p><span class="ipa">d̪</span> when post-nasal.</p>
-        
-              </div>
-        <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
+</div>
+<p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
-    </div>
-  </div>
+</div>
+</div>
   
   <div class="character" id='char0BA8'>
     <div class="charimg">&#x0BA8;</div>
@@ -263,7 +285,9 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
     <div class="notes">
       <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> mellinam consonant</p>
+        <p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BA8;</p>
+<p><span class="ipa">t̪</span> eg. <span class="eg" lang="ta">பந்து</span>.</p>
 </div>
         <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
@@ -290,12 +314,18 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0BAA">See in UniView</a></p>
 
     <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> vallinam consonant</p>
-        <p><span class="ipa">p</span>  when word-initial and in a doubled consonant.</p>
-<p><span class="ipa">β~w</span> when intervocalic.</p>
-        <p><span class="ipa">b</span> when post-nasal.</p>
-        <p><span class="ipa">f</span> when preceded by <span class="codepoint"><span lang="ta">ஃ</span> <a href="/scripts/block/tamil#char0B83">[<span class="uname">U+0B83 TAMIL SIGN VISARGA</span>]</a></span>, eg.  <span class="charExample" translate="no"><span class="ex" lang="ta">ஃபீசு</span> <span class="trans">ˑpīcu</span> <span class="ipa">fiːsɯ</span> <span class="meaning">fees</span></span>.</p>
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BAA;</p>
+<p><span class="ipa">p</span>  when </p>
+<ul>
+<li>word-initial, eg. <span class="eg" lang="ta">பத்து</span>, </li>
+<li> in a doubled consonant, eg. <span class="eg" lang="ta">அப்பன்</span> or </li>
+<li>in a cluster, eg. <span class="eg" lang="ta">விற்பனை</span>.</li>
+</ul>
+<p><span class="ipa">b</span> when intervocalic, eg. <span class="eg" lang="ta">ஆபத்து</span>. Some sources say <span class="ipa">β~w</span>.</p>
+<p><span class="ipa">b</span> when post-nasal, eg. <span class="eg" lang="ta">அன்பு</span>.</p>
+<p><span class="ipa">f</span> when preceded by <span class="codepoint"><span lang="ta">ஃ</span> <a href="/scripts/block/tamil#char0B83">[<span class="uname">U+0B83 TAMIL SIGN VISARGA</span>]</a></span>, eg.  <span class="eg" lang="ta">ஃபீசு</span>. Sometimes this sound is produced just using this character alone, for foreign words.</p>
         
     </div>
         <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
@@ -310,7 +340,15 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
     <div class="notes">
       <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> mellinam consonant</p>
+        <p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BAE;</p>
+<p><span class="ipa">m</span>  when</p>
+<ul>
+<li>initial, eg. <span class="eg" lang="ta">மலை</span>.</li>
+<li>geminated, eg. <span class="eg" lang="ta">மலை</span>.</li>
+<li>in a cluster, eg. <span class="eg" lang="ta">மலை</span>, and </li>
+<li>finally, eg. <span class="eg" lang="ta">வண்ணம்</span>.</li>
+</ul>
 </div>
         <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
@@ -323,10 +361,16 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0BAF">See in UniView</a></p>
 
     <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> idaiyinam consonant</p>
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BAF;</p>
+<p><span class="ipa">j</span> when </p>
+<ul>
+<li>initial, eg. <span class="eg" lang="ta">யானை</span>,  or</li>
+<li>geminated, eg. <span class="eg" lang="ta">உய்ய</span>,</li>
+</ul>
 </div>
-        <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
+<p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
     </div>
   </div>
@@ -337,10 +381,12 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0BB0">See in UniView</a></p>
 
     <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> idaiyinam consonant</p>
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BB0;</p>
+<p><span class="ipa">ɾ</span>  eg. <span class="eg" lang="ta">கரி</span>.</p>
 </div>
-        <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
+<p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
     </div>
   </div>
@@ -352,11 +398,12 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
     <div class="notes">
       <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> idaiyinam consonant</p>
-	<p>Doesn't occur initially.</p>
-<p><span class="ipa">tːr</span> in a doubled consonant.</p>
+        <p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BB1;</p>
+<p>Doesn't occur initially.</p>
+<p><span class="ipa">ttr</span> when geminated, eg. <span class="eg" lang="ta">பற்றி</span>.</p>
 <p><span class="ipa">r</span> when intervocalic.</p>
-<p><span class="ipa">(d)r</span> when post-nasal.</p>
+<p><span class="ipa">(d)r</span> when post-nasal, eg. <span class="eg" lang="ta">ஒன்று</span>.</p>
 </div>
         <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
@@ -369,10 +416,17 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0BB2">See in UniView</a></p>
 
     <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> idaiyinam consonant</p>
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BB2;</p>
+<p><span class="ipa">l</span> when </p>
+<ul>
+<li>between vowels, eg. <span class="eg" lang="ta">வலி</span>, </li>
+<li>geminated, eg. <span class="eg" lang="ta">வல்லி</span>, or</li>
+<li><span class="ipa">fin</span>al, eg. <span class="eg" lang="ta">வந்தால்</span>.</li>
+</ul>
 </div>
-        <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
+<p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
     </div>
   </div>
@@ -383,10 +437,18 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0BB3">See in UniView</a></p>
 
     <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> idaiyinam consonant</p>
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BB3;</p>
+<p>Doesn't occur word-initially.</p>
+<p><span class="ipa">ɭ</span> when </p>
+<ul>
+<li>between vowels, eg. <span class="eg" lang="ta">வளி</span>, </li>
+<li>geminated, eg. <span class="eg" lang="ta">வள்ளி</span>, or</li>
+<li>final, eg. <span class="eg" lang="ta">வந்தாள்</span>.</li>
+</ul>
 </div>
-        <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
+<p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
     </div>
   </div>
@@ -397,10 +459,12 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0BB4">See in UniView</a></p>
 
     <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> idaiyinam consonant</p>
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BB4;</p>
+<p><span class="ipa">ɽ</span> when intervocalic, eg. <span class="eg" lang="ta">வழி</span>.</p>
 </div>
-        <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
+<p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
     </div>
   </div>
@@ -411,10 +475,16 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0BB5">See in UniView</a></p>
 
     <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> idaiyinam consonant</p>
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BB5;</p>
+<p><span class="ipa">ʋ</span> when </p>
+<ul>
+<li>initial, eg. <span class="eg" lang="ta">வழி</span>, or</li>
+<li> geminated, eg. <span class="eg" lang="ta">அவ்வழி</span>.</li>
+</ul>
 </div>
-        <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
+<p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
     </div>
   </div>
@@ -427,6 +497,8 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
     <div class="notes">
       <div class="letter tamil">
         <p class="titlepara"><span class="title">Tamil</span> grantha consonant</p>
+<p class="insertTranscription">&#x0BB6;</p>
+<p><span class="ipa">ʃ</span>   eg. <span class="eg" lang="ta">ஶிவா</span>. </p>
 <p>This character is not commonly used, except in the <span class='trans'>ʃ͓ɾī</span> ligature <span class='ex' lang='ta'  xml:lang='ta'>ஶ்ரீ</span>.  (Other ligatures with MA, YA, RA, and VA are found in archaic forms of Tamil only.)</p><p>The syllable <span class="charExample"><span class="ipa" style="background-color: transparent;">ʃri</span></span> can be written with two different initial letters: <span class="codepoint" translate="no"><span lang="ta">ஶ</span> [<a href="/scripts/tamil/block#char0BB6"><span class="uname">U+0BB6 TAMIL LETTER SHA</span></a>]</span> (ie. <span class="charExample" translate="no"><span class="ex" lang="ta">ஶ்ரீ</span> <span class="trans">ʃ͓ɾī</span></span>) or <span class="codepoint" translate="no"><span lang="ta">ஸ</span> [<a href="/scripts/tamil/block#char0BB8"><span class="uname">U+0BB8 TAMIL LETTER SA</span></a>]</span> (ie.<span class="charExample" translate="no"><span class="ex" lang="ta">ஸ்ரீ</span> <span class="trans">s͓ɾī</span></span>). The result looks identical. Since 2005, the Unicode Consortium has recommended use of the former, but both are still in wide circulation, so Unicode 12 recommends that both be treated as equivalent sequences.<a class="fnref" href="http://www.unicode.org/versions/Unicode7.0.0/ch12.pdf">u493-4</a></p>
         
 </div>
@@ -441,7 +513,9 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
     <div class="notes">
       <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> grantha consonant</p>
+        <p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BB7;</p>
+<p><span class="ipa">ʂ</span>   eg. <span class="eg" lang="ta">உஷா</span>. </p>
 </div>
         <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
@@ -455,7 +529,9 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
     <div class="notes">
       <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> grantha consonant</p>
+        <p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BB8;</p>
+<p><span class="ipa">s</span> eg. <span class="eg" lang="ta">ஸந்தியா</span></p>
 <p><span class="ipa">ks</span> when preceded by <span class="codepoint"><span lang="ta">ஃ</span> <a href="/scripts/block/tamil#char0B83">[<span class="uname">U+0B83 TAMIL SIGN VISARGA</span>]</a></span>, eg.  <span class="charExample" translate="no"><span class="ex" lang="ta">ரெஃஸ்</span> <span class="trans">ɾeˑs͓</span> <span class="ipa">rex</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Tamil_script#Grantha_consonants_used_in_Tamil">w</a></p>
 </div>
         <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
@@ -470,8 +546,9 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
     <div class="notes">
       <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> grantha consonant</p>
-</div>
+        <p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BB9;</p>
+<p><span class="ipa">h</span> eg. <span class="eg" lang="ta">ஹரி</span></p></div>
         <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
     </div>
@@ -496,8 +573,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0B85">See in UniView</a></p>
 
     <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> independent vowel</p>
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0B85;</p>
+<p><span class="ipa">a</span> eg. <span class="eg" lang="ta">அழகு</span>.</p>
 </div>
         <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
@@ -510,12 +589,14 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0B86">See in UniView</a></p>
 
     <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> independent vowel</p>
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0B86;</p>
+<p><span class="ipa">aː</span> eg. <span class="eg" lang="ta">ஆண்</span>.</p>
 </div>
-        <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
+<p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
-    </div>
+  </div>
   </div>
   
   <div class="character" id='char0B87'>
@@ -524,12 +605,14 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0B87">See in UniView</a></p>
 
     <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> independent vowel</p>
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0B87;</p>
+<p><span class="ipa">i</span> eg. <span class="eg" lang="ta">இலை</span>.</p>
 </div>
-        <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
+<p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
-    </div>
+  </div>
   </div>
   
   <div class="character" id='char0B88'>
@@ -538,12 +621,14 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0B88">See in UniView</a></p>
 
     <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> independent vowel</p>
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0B88;</p>
+<p><span class="ipa">iː</span> eg. <span class="eg" lang="ta">ஈரல்</span>.</p>
 </div>
-        <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
+<p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
-    </div>
+  </div>
   </div>
   
   <div class="character" id='char0B89'>
@@ -552,12 +637,14 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0B89">See in UniView</a></p>
 
     <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> independent vowel</p>
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0B89;</p>
+<p><span class="ipa">u</span> eg. <span class="eg" lang="ta">உண்</span>.</p>
 </div>
-        <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
+<p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
-    </div>
+  </div>
   </div>
   
   <div class="character" id='char0B8A'>
@@ -566,12 +653,14 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0B8A">See in UniView</a></p>
 
     <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> independent vowel</p>
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0B8A;</p>
+<p><span class="ipa">uː</span> eg. <span class="eg" lang="ta">ஊது</span>.</p>
 </div>
-        <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
+<p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
-    </div>
+  </div>
   </div>
   
   <div class="character" id='char0B8E'>
@@ -580,12 +669,14 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0B8E">See in UniView</a></p>
 
     <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> independent vowel</p>
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0B8E;</p>
+<p><span class="ipa">e</span> eg. <span class="eg" lang="ta">எலும்பு</span>.</p>
 </div>
-        <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
+<p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
-    </div>
+  </div>
   </div>
   
   <div class="character" id='char0B8F'>
@@ -594,12 +685,14 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0B8F">See in UniView</a></p>
 
     <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> independent vowel</p>
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0B8F;</p>
+<p><span class="ipa">eː</span> eg. <span class="eg" lang="ta">ஏரி</span>.</p>
 </div>
-        <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
+<p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
-    </div>
+  </div>
   </div>
   
   <div class="character" id='char0B90'>
@@ -608,11 +701,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0B90">See in UniView</a></p>
 
     <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> independent vowel</p>
-        <p><span class="ipa">ʌj</span></p>
-        
-              </div>
+    <div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0B90;</p>
+<p><span class="ipa">aɪ</span> eg. <span class="eg" lang="ta">ஐந்து</span>.</p>
+</div>
         <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
     </div>
@@ -624,11 +717,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0B92">See in UniView</a></p>
 
     <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> independent vowel</p>
-        <p><span class="ipa">o</span></p>
-        
-              </div>
+    <div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0B92;</p>
+<p><span class="ipa">o</span> eg. <span class="eg" lang="ta">ஒன்று</span>.</p>
+</div>
         <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
     </div>
@@ -640,11 +733,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0B93">See in UniView</a></p>
 
     <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> independent vowel</p>
-        <p><span class="ipa">oː</span></p>
-        
-              </div>
+    <div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0B93;</p>
+<p><span class="ipa">oː</span></p>
+</div>
         <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
     </div>
@@ -658,8 +751,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
     <p class='subtitle'>Description in the Unicode standard:</p>
     <div class='unicodenotes'>≡ 0B92 0BD7</div>
     <div class="notes">
-      <div class="letter tamil">
-        <p class="titlepara"><span class="title">Tamil</span> independent vowel</p>
+    <div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0B94;</p>
+<p><span class="ipa">aʊ</span></p>
 </div>
         <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
@@ -679,8 +774,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0BBE">See in UniView</a></p>
 
   <div class="notes">
-    <div class="letter tamil">
-      <p class="titlepara"><span class="title">Tamil</span> vowel sign</p>
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BBE;</p>
+<p><span class="ipa">aː</span> eg. <span class="eg" lang="ta">கால்</span>.</p>
 <p>This character can also be used in another way, but it is not recommended.  Decomposed forms of <span class="codepoint"><span lang="ta">ொ</span> <a href="/scripts/block/tamil#char0BCA">[<span class="uname">U+0BCA TAMIL VOWEL SIGN O</span>]</a></span> and <span class="codepoint"><span lang="ta">ோ</span> <a href="/scripts/block/tamil#char0BCB">[<span class="uname">U+0BCB TAMIL VOWEL SIGN OO</span>]</a></span> are each  represented by two characters, <span class="codepoint"><span lang="ta">ெ</span> <a href="/scripts/block/tamil#char0BC6">[<span class="uname">U+0BC6 TAMIL VOWEL SIGN E</span>]</a></span> or <span class="codepoint"><span lang="ta">ே</span> <a href="/scripts/block/tamil#char0BC7">[<span class="uname">U+0BC7 TAMIL VOWEL SIGN EE</span>]</a></span> , respectively, and this character.  When used this way, both combining characters must appear after the base consonant(s), and this character must come second.<sup>3</sup></p>
 </div>
 <p class="ref">Refs:  [1] <a href="/scripts/references/">[Daniels]</a> p426; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a>; [3] <a href="http://www.unicode.org/versions/Unicode5.2.0/ch09.pdf">The Unicode Standard v5.2</a> pp290-291</p>
@@ -691,10 +788,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   <div class="charimg">&#x0BBF;</div>
   <p class="charname"><strong>U+0BBF</strong> <a href="#char0BBF">TAMIL VOWEL SIGN I</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0BBF">See in UniView</a></p>
-
-  <div class="notes">
-    <div class="letter tamil">
-      <p class="titlepara"><span class="title">Tamil</span> vowel sign</p>
+<div class="notes">
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BBF;</p>
+<p><span class="ipa">i</span> eg. <span class="eg" lang="ta">கிரி</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p426; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
   </div>
@@ -705,9 +803,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   <p class="charname"><strong>U+0BC0</strong> <a href="#char0BC0">TAMIL VOWEL SIGN II</a></p>
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0BC0">See in UniView</a></p>
 
-  <div class="notes">
-    <div class="letter tamil">
-      <p class="titlepara"><span class="title">Tamil</span> vowel sign</p>
+<div class="notes">
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BC0;</p>
+<p><span class="ipa">iː</span> eg. <span class="eg" lang="ta">கீரி</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p426; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
   </div>
@@ -719,8 +819,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0BC1">See in UniView</a></p>
 
   <div class="notes">
-    <div class="letter tamil">
-      <p class="titlepara"><span class="title">Tamil</span> vowel sign</p>
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BC1;</p>
+<p><span class="ipa">u</span> eg. <span class="eg" lang="ta">குடம்</span>, <span class="eg" lang="ta">அழகு</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p426; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
   </div>
@@ -732,8 +834,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0BC2">See in UniView</a></p>
 
   <div class="notes">
-    <div class="letter tamil">
-      <p class="titlepara"><span class="title">Tamil</span> vowel sign</p>
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BC2;</p>
+<p><span class="ipa">uː</span> eg. <span class="eg" lang="ta">கூடம்</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p426; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
   </div>
@@ -746,9 +850,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
   <p class='subtitle'>Description in the Unicode standard:</p>
   <div class='unicodenotes'>• stands to the left of the consonant</div>
-  <div class="notes">
-    <div class="letter tamil">
-      <p class="titlepara"><span class="title">Tamil</span> vowel sign</p>
+<div class="notes">
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BC6;</p>
+<p><span class="ipa">e</span> eg. <span class="eg" lang="ta">கெடு</span>.</p>
 <p>This character can also be used, followed by <span class="codepoint"><span lang="ta">ா</span> <a href="/scripts/block/tamil#char0BBE">[<span class="uname">U+0BBE TAMIL VOWEL SIGN AA</span>]</a></span> to represent a decomposed <span class="codepoint"><span lang="ta">ொ</span> <a href="/scripts/block/tamil#char0BCA">[<span class="uname">U+0BCA TAMIL VOWEL SIGN O</span>]</a></span>, or followed by <span class="codepoint"><span lang="ta">ௗ</span> <a href="/scripts/block/tamil#char0BD7">[<span class="uname">U+0BD7 TAMIL AU LENGTH MARK</span>]</a></span> to represent <span class="codepoint"><span lang="ta">ௌ</span> <a href="/scripts/block/tamil#char0BCC">[<span class="uname">U+0BCC TAMIL VOWEL SIGN AU</span>]</a></span>, but neither approach is recommended.  You should just use the single character. When used this way, both combining characters must appear after the base consonant(s), and this character must come first.<sup>3</sup></p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p426; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a>; [3] <a href="http://www.unicode.org/versions/Unicode5.2.0/ch09.pdf">The Unicode Standard v5.2</a> pp290-291</p>
@@ -763,8 +869,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   <p class='subtitle'>Description in the Unicode standard:</p>
   <div class='unicodenotes'>• stands to the left of the consonant</div>
   <div class="notes">
-    <div class="letter tamil">
-      <p class="titlepara"><span class="title">Tamil</span> vowel sign</p>
+ <div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BC7;</p>
+<p><span class="ipa">eː</span> eg. <span class="eg" lang="ta">கேடு</span>.</p>
 <p>This character can also be used, followed by <span class="codepoint"><span lang="ta">ா</span> <a href="/scripts/block/tamil#char0BBE">[<span class="uname">U+0BBE TAMIL VOWEL SIGN AA</span>]</a></span> to represent the decomposed version of <span class="codepoint"><span lang="ta">ோ</span> <a href="/scripts/block/tamil#char0BCB">[<span class="uname">U+0BCB TAMIL VOWEL SIGN OO</span>]</a></span>, but this is not recommended.  You should just use the single character. When used this way, both combining characters must appear after the base consonant(s), and this character must come first.<sup>3</sup></p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p426; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a>; [3] <a href="http://www.unicode.org/versions/Unicode5.2.0/ch09.pdf">The Unicode Standard v5.2</a> pp290-291</p>
@@ -779,10 +887,11 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   <p class='subtitle'>Description in the Unicode standard:</p>
   <div class='unicodenotes'>• stands to the left of the consonant</div>
   <div class="notes">
-    <div class="letter tamil">
-      <p class="titlepara"><span class="title">Tamil</span> vowel sign</p>
-<p>In traditional Tamil orthography the shape of this character changes to <img src="/scripts/tamil/images/0BC8elephant.png" alt="picture" height="20"  width="17" /> in conjunction with the following characters: <span class="ex" lang='ta'  xml:lang='ta'>ண ன ல ள</span>.  However, this shape is not used in modern Tamil writing.</p>
-      
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BC8;</p>
+<p><span class="ipa">aɪ</span>, eg. <span class="eg" lang="ta">கைது</span>.</p>
+<p>In traditional Tamil orthography the shape of this character changes to <img src="/scripts/tamil/images/0BC8elephant.png" alt="picture" height="20"  width="17" /> in conjunction with the following characters: <span class="ex" lang='ta'  xml:lang='ta'>ண ன ல ள</span>.  However, this shape is not used in modern Tamil writing.</p>    
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p426; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a>; [3] <a href="http://www.unicode.org/versions/Unicode5.2.0/ch09.pdf">The Unicode Standard v5.2</a> pp293-294</p>
   </div>
@@ -794,8 +903,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0BCA">See in UniView</a></p>
 
   <div class="notes">
-    <div class="letter tamil">
-      <p class="titlepara"><span class="title">Tamil</span> vowel sign</p>
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BCA;</p>
+<p><span class="ipa">o</span>, eg. <span class="eg" lang="ta">கொடு</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p426; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
   </div>
@@ -807,8 +918,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0BCB">See in UniView</a></p>
 
   <div class="notes">
-    <div class="letter tamil">
-      <p class="titlepara"><span class="title">Tamil</span> vowel sign</p>
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BCB;</p>
+<p><span class="ipa">oː</span>, eg. <span class="eg" lang="ta">கோடு</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p426; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
   </div>
@@ -820,8 +933,10 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=0BCC">See in UniView</a></p>
 
   <div class="notes">
-    <div class="letter tamil">
-      <p class="titlepara"><span class="title">Tamil</span> vowel sign</p>
+<div class="letter tamil">
+<p class="titlepara"><span class="title">Tamil</span></p>
+<p class="insertTranscription">&#x0BCC;</p>
+<p><span class="ipa">aʊ</span>, eg. <span class="eg" lang="ta">கௌதாரி</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p426; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
   </div>
@@ -883,11 +998,12 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
         <p class="titlepara"><span class="title">Tamil</span> symbol, <span class='name'>āytam</span> <span class='ex' lang='ta'  xml:lang='ta'>ஆய்தம்</span></p>
         <p>Returned to use in the modern script to form the following non-native fricatives from plosives:</p>
         <ul>
-<li><span style="" class="ipa">f</span> from <span class="codepoint"><span lang="ta">ப</span> <a href="/scripts/block/tamil#char0BAA">[<span class="uname">U+0BAA TAMIL LETTER PA</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">ஃபீசு</span> <span class="trans">ˑpīcu</span> <span class="ipa">fiːsɯ</span> <span class="meaning">fees</span></span>.</li>
-<li><span style="" class="ipa">z</span> from <span class="codepoint"><span lang="ta">ஜ</span> <a href="/scripts/block/tamil#char0B9C">[<span class="uname">U+0B9C TAMIL LETTER JA</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">ஃஜிரொக்ஸ்</span> <span class="trans">ˑʤiɾok͓s͓</span> <span class="ipa">ziɾoks</span> <span class="meaning">Xerox</span></span>. </li>
+<li><span style="" class="ipa">f</span> from <span class="codepoint"><span lang="ta">ப</span> <a href="/scripts/block/tamil#char0BAA">[<span class="uname">U+0BAA TAMIL LETTER PA</span>]</a></span>, eg. <span class="eg" lang="ta">ஃபீசு</span>.</li>
+<li><span style="" class="ipa">z</span> from <span class="codepoint"><span lang="ta">ஜ</span> <a href="/scripts/block/tamil#char0B9C">[<span class="uname">U+0B9C TAMIL LETTER JA</span>]</a></span>, eg. <span class="eg" lang="ta">ஃஜிரொக்ஸ்</span>. </li>
 <li><span style="" class="ipa">ks</span> from <span class="codepoint" translate="no"><span lang="ta">&#x0BB8;</span> [<a href="/scripts/tamil/block#char0BB8"><span class="uname">U+0BB8 TAMIL LETTER SA</span></a>]</span>, eg.  <span class="charExample" translate="no"><span class="ex" lang="ta">ரெஃஸ்</span> <span class="trans">ɾeˑs͓</span> <span class="ipa">rex</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Tamil_script#Grantha_consonants_used_in_Tamil">w</a></li>
-<li><span class="ipa">x</span> from <span class="codepoint"><span lang="ta">ஃ</span> <a href="/scripts/block/tamil#char0B83">[<span class="uname">U+0B83 TAMIL SIGN VISARGA</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">செங்கிஸ் ஃகான்</span> <span class="trans">ceŋ͓kis͓ ˑkɑ̄n͓</span> <span class="meaning">Gengis Khan</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Tamil_script#Grantha_consonants_used_in_Tamil">w</a></li>
+<li><span class="ipa">x</span> from <span class="codepoint"><span lang="ta">ஃ</span> <a href="/scripts/block/tamil#char0B83">[<span class="uname">U+0B83 TAMIL SIGN VISARGA</span>]</a></span>, eg. <span class="eg" lang="ta">செங்கிஸ் ஃகான்</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Tamil_script#Grantha_consonants_used_in_Tamil">w</a></li>
 </ul>
+<p>Note that a vowel-sign can occur between the visarga and the other consonant –  ie. the two are not treated as an indivisible unit, eg. <span class="eg" lang="ta">ஃபோரியர்</span>.</p>
         </div>
         <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p428; [2] <a href="http://en.wikipedia.org/wiki/Tamil_script">Wikipedia: Tamil Script</a></p>
 
@@ -1309,7 +1425,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 
-<script src="../../shared/scriptdb/tamil.js">  </script>
+<script src="../../shared/scriptdb/taml.js">  </script>
 
 <script>
 replaceStuff('Tamil', 'tamil', spreadsheet, '', 'ta', '', cols, false)
@@ -1350,6 +1466,7 @@ Currency symbol;currency;0BF9
 
 <script>
 initialise('/scripts/tamil/block','tamil')
+addExamples()
 autoTransliterate('ta')
 </script>
 </body>
