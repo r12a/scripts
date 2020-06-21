@@ -19,6 +19,8 @@
 <script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
+<script src="../common/egcode.js"></script>
+<script src="examples.js"></script>
 
 <script src="../../uniview/descriptions.js"></script> 
 <script src="../../uniview/u.js"></script> 
@@ -42,7 +44,7 @@
 </header>
 <h1>UCAS character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a></nav>
+<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
 
 <aside class="sidebar">
   <nav>
@@ -79,7 +81,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->2 June, 2020<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->21 June, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -89,37 +91,25 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <ul>
 <li><a href="../../uniview/?block=unified_canadian_aboriginal_syllabics" target="_blank">Unified Canadian Aboriginal Syllabics</a></li>
    </ul>
-<details class="supportdocs noprint instructions">
-<summary>Related pages</summary>
-<p class="leadin">Script summary pages:</p>
-<ul>
-<li><a href="index" class="linkHighlight">UCAS/Eastern Canadian Inuktitut</a></li>
-</ul>
-<!--p class="leadin">Character notes:</p>
-<ul>
-<li><a href="../combining/block" class="linkHighlight">Combining characters</a></li>
-<li><a href="../arabic/block" class="linkHighlight">Arabic</a></li>
-</ul-->
-<p class="leadin">Character apps:</p>
-<ul>
-<li><a href="../../pickers/cans-ike/" class="linkHighlight">Eastern Canadian Inuktitut</a></li>
-</ul>
-<p class="leadin">Other:</p>
-<ul>
-<li><a class="linkHighlight" href="../links?iso=Cans">Script links pages</a></li>
-</ul>
-</details>
+<p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription. In addition, different dialects of Inuktitut may show some divergences in pronunciation.</p>
+
 
 
 <details>
-<summary class="instructions">About this page</summary>
-    <p class="instructions"><span class="leadin">Showing codepoints for examples.</span>If you click on example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
-<p class="instructions"><span class="leadin">Finding characters.</span> To find a character by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or its hex number in the <samp>Find</samp> control, bottom left.</p>
-    <p class="instructions"><span class="leadin">Fonts.</span> To view this page as intended, you need   a Canadian Syllabic font.  The page comes with a  Noto Sans Canadian Aboriginal webfont. Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system. </p>
-<p class="instructions">The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. If there is no glyph and you want to see what it looks like, click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
-    <p class="instructions"><span class="leadin">Language usage lists.</span> Information about languages that use these characters is taken from the list maintained for the <a href="../../app-charuse/">Character usage lookup</a> app. The list is not exhaustive.</p>
-<p class="instructions"><span class="leadin">References &amp; further information.</span> References are indicated by superscript letters, optionally followed by page numbers. Wherever possible, those contain direct links to the source material. When there is also an arrow → it is worth following the link for  additional information. The references are listed at the bottom of the page, but the links should take you to the exact location of the source, wherever possible.</p>
-    <p class="instructions"><span class="leadin">UniView.</span><a href="../../uniview/">UniView</a>'s notes feature pulls in information about characters from this page.</p>
+<summary class="instructions"><a href="../links?iso=Cans">Related pages</a>.</summary>
+</details>
+
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#charnotes">Other character notes</a>.</summary>
+</details>
+
+
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'UCAS','Inuktitut'); return false;">About this page</a></summary>
+<div id="about"></div>
 <p id="charliststr" class="instructions"></p>
 </details>
 </section>
@@ -5945,12 +5935,13 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 
+<!-- replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, showShape) -->
 
 
-<script src="../../shared/scriptdb/vai.js">  </script>
+<script src="../../shared/scriptdb/cans-ike.js">  </script>
 
 <script>
-replaceStuff('Vai', 'vai', spreadsheet, '', 'vai', '', cols, false)
+replaceStuff('Inuktitut', 'ike', spreadsheet, '', 'ike', '', cols, false)
 </script> 
 
 
@@ -5964,6 +5955,7 @@ replaceStuff('Vai', 'vai', spreadsheet, '', 'vai', '', cols, false)
 
 <script>
 initialise('/scripts/cans/block','ike')
+addExamples()
 autoTransliterate('ike')
 </script>
 </body>
