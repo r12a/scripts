@@ -5,6 +5,7 @@
 function initialise (base, dir) {
     createtoc(3)
 	doHeadersFooters(dir)
+	if (typeof addExamples !== 'undefined') addExamples(base, '')
     initialiseShowNames(base, '')
     checkForCharParam()
     addLangInfo()

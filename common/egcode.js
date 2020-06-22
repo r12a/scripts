@@ -7,7 +7,7 @@ function addExamples () {
 		temp = egArray[i].split('|')
 		egList[temp[0]] = egArray[i]
 		}
-	//console.log(egArray, egList)
+	//console.log('egArray',egArray,'egList', egList)
 	
 	nodes = document.querySelectorAll('.eg')
 	//console.log(nodes.length,' nodes found')
