@@ -19,6 +19,8 @@
 <script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
+<script src="../common/egcode.js"></script>
+<script src="examples.js"></script>
 
 <script src="../../uniview/descriptions.js"></script> 
 <script src="../../uniview/u.js"></script> 
@@ -41,7 +43,7 @@
 </header>
 <h1>Khmer character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a></nav>
+<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
 
 <aside class="sidebar">
   <nav>
@@ -78,34 +80,40 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->20 January, 2020<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->22 June, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
 
 <section>
-   <p>This page lists characters in the following Unicode  block and provides information about them. </p>
+   <p>This page lists characters in the following Unicode  blocks and gathers information about them from various sources. </p>
 <ul>
 <li><a href="../../uniview/?block=khmer" target="_blank">Khmer</a></li>
 <li><a href="../../uniview/?block=khmer_symbols" target="_blank">Khmer Symbols</a></li>
    </ul>
-   <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-<p>For details about how the script works, see <a class="linkHighlight" href="index">Khmer</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Khmr">Script links pages</a>.</p>
+   <p>The level of detail in the phonetic transcriptions shown below may vary according to the source. The transcriptions are generally intended to merely give an idea of the pronunciation.</p>
 
-<p>Find <input type="text" id="findInput"
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
 
-<p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example. Click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
+
 <details>
-<summary class="instructions">Read more about how to use this page.</summary>
-    <p class="instructions">To <strong>find a character</strong> by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or the hex number in the <samp>Find</samp> control above.</p>
-    <p class="instructions">To view this page as intended, you  need a <strong>Khmer font</strong>.  This page comes with Noto Sans Khmer, Noto Serif Khmer, and Battambang webfonts. Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system.  For transcriptions I recommend the excellent and free <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;item_id=DoulosSILfont">Doulos SIL font</a>. The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. (If there is no glyph and you want to see what it looks like, click on <samp>See in UniView</samp>.)</p>
-    <p class="instructions"><strong>Information about languages</strong> that use these characters is taken from the list maintained for the Character Use app. The list is not exhaustive.</p>
-    <p class="instructions"><strong>Transliterations</strong> provide a single correspondence between a Khmer symbol and a Latin symbol, so that the process is reversible. The system used is a cross between the ALA LOC and UNGEGN systems, with a few small additions to help eliminate ambiguity. The transliterations should show inherent vowels. <strong>Transcriptions</strong> provide a Latin version of the Khmer text that is closer to the actual pronunciation, but is not reversible. Mostly IPA transcriptions are used here, but in some cases a transcription based on UNGEGN with modifications is used.  <strong>The Khmer to UNGEGN converter above the window is still in development.</strong></p>
-<p class="instructions"><strong>References</strong> are indicated by superscript characters. Wherever possible, those contain direct links to the source material. When such a pointer is alongside an arrow → it means that it's worth following the link for the additional information it provides. Digits refer to the main sources, which are listed at the bottom of a set of notes.</p>
-<p class="instructions">When you are using UniView and you turn on <samp>Show notes</samp>, UniView will pull in information about characters from this page.</p>
+<summary class="instructions"><a href="../links?iso=Khmr">Related pages</a>.</summary>
+</details>
+
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#charnotes">Other character notes</a>.</summary>
+</details>
+
+
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Khmer','Khmer'); return false;">About this page</a></summary>
+<div id="about"></div>
 <p id="charliststr" class="instructions"></p>
 </details>
+
+<!--p class="instructions"><strong>Transliterations</strong> provide a single correspondence between a Khmer symbol and a Latin symbol, so that the process is reversible. The system used is a cross between the ALA LOC and UNGEGN systems, with a few small additions to help eliminate ambiguity. The transliterations should show inherent vowels. <strong>Transcriptions</strong> provide a Latin version of the Khmer text that is closer to the actual pronunciation, but is not reversible. Mostly IPA transcriptions are used here, but in some cases a transcription based on UNGEGN with modifications is used.  <strong>The Khmer to UNGEGN converter above the window is still in development.</strong></p-->
 </section>
 </div>
 
@@ -1027,12 +1035,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 
 <div class="letter khmer">
-<p class="titlepara"><span class="title">Khmer</span> 
- <span class="charName"><span class="localName" lang="km">ស្រៈឥ</span> <span class="ipa">sraʔ ʔeʔ</span></span></p>
+<p class="titlepara"><span class="title">Khmer</span></p>
  
-        
-        <p><span class="ipa">ʔə</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ឥត</span> <span class="trans">ịt</span> <span class="ipa">ʔət</span> <span class="meaning">not</span></span>.</p>
-        <p><span class="ipa">ʔɨ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ឥត</span> <span class="trans">ịt</span> <span class="ipa">ʔət</span> <span class="meaning">not</span></span></p>
+ <p class="insertTranscription">&#x17A5;</p>
+       
+        <p><span class="ipa">ʔə</span> eg. <span class="charExample" translate="no"><span class="ex" lang="km">ឥត</span> <span class="trans">ịt</span> <span class="ipa">ʔət</span> <span class="meaning">not</span></span>.</p>
+        <p><span class="ipa">ʔɨ</span> eg. <span class="eg" lang="km">ឥន្ទុ</span>.</p>
+<p><span class="ipa">ʔəj</span> eg. <span class="eg" lang="km">ឥឡូវ</span>.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1052,8 +1061,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 
 <div class="letter khmer">
-<p class="titlepara"><span class="title">Khmer</span> 
- <span class="charName"><span class="localName" lang="km">ស្រៈឦ</span> <span class="ipa">sraʔ ʔəj</span></span></p>
+<p class="titlepara"><span class="title">Khmer</span></p>
+<p class="insertTranscription">&#x17A6;</p>
+<p><span class="ipa">ʔəj</span>  eg. <span class="eg" lang="km">ឦសាន</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://www.pratyeka.org/csw/hlp-csw.pdf" target="_blank">Huffman</a>,
@@ -1072,8 +1082,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 
 <div class="letter khmer">
-<p class="titlepara"><span class="title">Khmer</span> 
- <span class="charName"><span class="localName" lang="km">ស្រៈឧ</span> <span class="ipa">sraʔ ʔo</span></span></p>
+<p class="titlepara"><span class="title">Khmer</span></p>
+<p class="insertTranscription">&#x17A7;</p>
+<p><span class="ipa">u</span>, eg. <span class="eg" lang="km">ឧបម៉ា</span>.</p>
+<p><span class="ipa">o</span>, eg. <span class="eg" lang="km">ឧកញ៉ា</span>.</p>
+<p><span class="ipa">ao</span>, eg. <span class="eg" lang="km">ឧបាសក</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://www.pratyeka.org/csw/hlp-csw.pdf" target="_blank">Huffman</a>,
@@ -1094,6 +1107,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter khmer">
 <p class="titlepara"><span class="title">Khmer</span> 
  <span class="charName"><span class="localName" lang="km">ស្រៈឩ</span> <span class="ipa">sraʔ ʔou</span></span></p>
+<p class="insertTranscription">&#x17A9;</p>
+<p><span class="ipa">ou</span> eg. <span class="eg" lang="km">ឩដ្ឋ</span>.</p>
+<p><span class="ipa">uː</span> eg. <span class="eg" lang="km">ឩន</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://www.pratyeka.org/csw/hlp-csw.pdf" target="_blank">Huffman</a>,
@@ -1112,8 +1128,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 
 <div class="letter khmer">
-<p class="titlepara"><span class="title">Khmer</span> 
- <span class="charName"><span class="localName" lang="km">ស្រៈឪ</span> <span class="ipa">sraʔ ʔəw</span></span></p>
+<p class="titlepara"><span class="title">Khmer</span></p>
+<p class="insertTranscription">&#x17AA;</p>
+<p><span class="ipa">ʔəw</span>  eg. <span class="eg" lang="km">ឪពុក</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://www.pratyeka.org/csw/hlp-csw.pdf" target="_blank">Huffman</a>,
@@ -1212,8 +1229,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 
 <div class="letter khmer">
-<p class="titlepara"><span class="title">Khmer</span> 
- <span class="charName"><span class="localName" lang="km">ស្រៈឯ</span> <span class="ipa">sraʔ ʔae</span></span></p>
+<p class="titlepara"><span class="title">Khmer</span></p>
+<p class="insertTranscription">&#x17AF;</p>
+<p><span class="ipa">ae</span>  eg. <span class="eg" lang="km">ឯ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://www.pratyeka.org/csw/hlp-csw.pdf" target="_blank">Huffman</a>,
@@ -1232,8 +1250,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 
 <div class="letter khmer">
-<p class="titlepara"><span class="title">Khmer</span> 
- <span class="charName"><span class="localName" lang="km">ស្រៈឰ</span> <span class="ipa">sraʔ ʔaj</span></span></p>
+<p class="titlepara"><span class="title">Khmer</span></p>
+<p class="insertTranscription">&#x17B0;</p>
+<p><span class="ipa">aj</span>, eg. <span class="eg" lang="km">ឰរាវ័ណ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://www.pratyeka.org/csw/hlp-csw.pdf" target="_blank">Huffman</a>,
@@ -1252,8 +1271,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 
 <div class="letter khmer">
-<p class="titlepara"><span class="title">Khmer</span> 
- <span class="charName"><span class="localName" lang="km">ស្រៈឱ</span> <span class="ipa">sraʔ ʔao</span></span></p>
+<p class="titlepara"><span class="title">Khmer</span></p>
+<p class="insertTranscription">&#x17B1;</p>
+<p><span class="ipa">ao</span>, eg. <span class="eg" lang="km">ឱប</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://www.pratyeka.org/csw/hlp-csw.pdf" target="_blank">Huffman</a>,
@@ -1274,6 +1294,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter khmer">
 <p class="titlepara"><span class="title">Khmer</span> 
  <span class="charName"><span class="localName" lang="km">ស្រៈឲ</span> <span class="ipa">sraʔ ʔao</span></span>        </p>
+<p class="insertTranscription">&#x17B2;</p>
+<p><span class="ipa">ao</span>, eg. <span class="eg" lang="km">ឲ្យ</span>.</p>
 <p>This is a variant of <span class="codepoint" translate="no"><span lang="km">&#x17B1;</span> [<a href="/scripts/khmer/block#char17B1"><span class="uname">U+17B1 KHMER INDEPENDENT VOWEL QOO TYPE ONE</span></a>]</span> that is only used, according to Unicode, in two words, one of which, <span class="charExample" translate="no"><span class="ex" lang="km">ឲ្យ</span> <span class="trans">ạᵒ͓y̱</span> <span class="ipa">ʔaoj</span> <span class="meaning">to give</span></span>, is very common however.</p>
       
 </div>
@@ -1294,9 +1316,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 
 <div class="letter khmer">
-<p class="titlepara"><span class="title">Khmer</span> 
- <span class="charName"><span class="localName" lang="km">ស្រៈឳ</span> <span class="ipa">sraʔ ʔaw</span></span></p>
- 
+<p class="titlepara"><span class="title">Khmer</span></p>
+<p class="insertTranscription">&#x17B3;</p>
+<p><span class="ipa">aw</span>, eg. <span class="eg" lang="km">ឳទក</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://www.pratyeka.org/csw/hlp-csw.pdf" target="_blank">Huffman</a>,
@@ -1323,17 +1345,25 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 
 <div class="letter khmer">
-<p class="titlepara"><span class="title">Khmer</span> 
- <span class="charName"><span class="localName" lang="km">ស្រៈ អា</span> <span class="ipa">s͓rà ʼā</span></span></p>
-         <p><span class="ipa">aː</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ណា</span> <span class="trans">nā</span> <span class="ipa">naː</span> <span class="meaning">which, where</span></span></p>
-        <p><span class="ipa">iə</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ជា</span> <span class="trans">c̱ā</span> <span class="ipa">ciə</span> <span class="meaning">to be</span></span>.</p>
-        <p>In combination with a following nikahit <span class="ex" lang="km">អាំ</span> this is regarded as a letter of the Khmer alphabet. Sounds are:</p>
-        <p><span class="ipa">am</span> after an <span class="ipa">ɑː</span> class consonant.</p>
-        <p><span class="ipa">oə̯m</span> after an <span class="ipa">ɔː</span> class consonant.</p>
-        <p>In combination with a following nikahit and <span class="name">ŋɔː</span> <span class="ex" lang="km">អាំង</span>:</p>
-        <p><span class="ipa">aŋ</span> after an <span class="ipa">ɑː</span> class consonant.</p>
-        <p><span class="ipa">ɛaŋ</span> after an <span class="ipa">ɔː</span> class consonant.</p>
-
+<p class="titlepara"><span class="title">Khmer</span></p>
+ <p class="insertTranscription">&#x17B6;</p>
+        <p><span class="leadin">ɑː class.</span> <span class="ipa">aː</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ណា</span> <span class="trans">nā</span> <span class="ipa">naː</span> <span class="meaning">which, where</span></span></p>
+        <p><span class="leadin">ɔː class.</span> <span class="ipa">iə</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ជា</span> <span class="trans">c̱ā</span> <span class="ipa">ciə</span> <span class="meaning">to be</span></span>.</p>
+        <p><span class="leadin">Combinations.</span> In the combination <span class="codepoint" translate="no"><span lang="km">&#x17B6;&#x17C6;</span> [<a href="/scripts/khmer/block#char17B6"><span class="uname">U+17B6 KHMER VOWEL SIGN AA</span></a> + <a href="/scripts/khmer/block#char17C6"><span class="uname">U+17C6 KHMER SIGN NIKAHIT</span></a>]</span> this is regarded as a letter of the Khmer alphabet. Sounds are:</p>
+        <ul>
+<li><span class="ipa">am</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="eg" lang="km">ចាំ</span>.</li>
+<li><span class="ipa">oə̯m</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="eg" lang="km">ជាំ</span>.</li>
+</ul>
+        <p>The combination <span class="codepoint" translate="no"><span lang="km">&#x17B6;&#x17C6;&#x1784;</span> [<a href="/scripts/khmer/block#char17B6"><span class="uname">U+17B6 KHMER VOWEL SIGN AA</span></a> + <a href="/scripts/khmer/block#char17C6"><span class="uname">U+17C6 KHMER SIGN NIKAHIT</span></a> + <a href="/scripts/khmer/block#char1784"><span class="uname">U+1784 KHMER LETTER NGO</span></a>]</span> gives:</p>
+        <ul>
+<li><span class="ipa">aŋ</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="eg" lang="km">តាំង</span>.</li>
+<li><span class="ipa">ɛaŋ</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="eg" lang="km">ទាំង</span>.</li>
+</ul>
+<p>The combination <span class="codepoint" translate="no"><span lang="km">&#x17B6;&#x200B;&#x17CB;</span> [<a href="/scripts/khmer/block#char17B6"><span class="uname">U+17B6 KHMER VOWEL SIGN AA</span></a> + <a href="/scripts/khmer/block#char17CB"><span class="uname">U+17CB KHMER SIGN BANTOC</span></a>]</span>, where <em>the bantoc sits over a following consonant</em>, gives:</p>
+<ul>
+<li><span class="ipa">eə̯</span> before a velar consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ពាក់</span> <span class="trans">p̱āk˘</span> <span class="ipa">peə̯k</span> <span class="meaning">to wear</span></span> (cf. <span class="charExample" translate="no"><span class="ex" lang="km">ពាក្យ</span> <span class="trans">p̱āk͓y̱</span> <span class="ipa">piək</span> <span class="meaning">word</span></span>).</li>
+<li><span class="ipa">oə̯</span> elsewhere, eg. <span class="charExample" translate="no"><span class="ex" lang="km">មាន់</span> <span class="trans">m̱āṉ˘</span> <span class="ipa">moə̯n</span> <span class="meaning">to wear</span></span> (cf. <span class="charExample" translate="no"><span class="ex" lang="km">មាន</span> <span class="trans">m̱āṉ</span> <span class="ipa">miən</span> <span class="meaning">word</span></span>).</li>
+</ul>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://www.pratyeka.org/csw/hlp-csw.pdf" target="_blank">Huffman</a>,
@@ -1352,14 +1382,14 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 
 <div class="letter khmer">
-<p class="titlepara"><span class="title">Khmer</span> 
- <span class="charName"><span class="localName" lang="km">ស្រៈ អិ</span> <span class="ipa">sraʔ ʔi</span></span></p>
+<p class="titlepara"><span class="title">Khmer</span></p>
  
-        
-        <p><span class="ipa">e</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ចិត្ដ</span> <span class="trans">cit͓ɗ</span> <span class="ipa">cet</span> <span class="meaning">heart</span></span>.</p>
-        <p><span class="ipa">i</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">វិញ</span> <span class="trans">v̱iɲ</span> <span class="ipa">ʋiɲ</span> <span class="meaning">instead, again</span></span>.</p>
-        <p>In combination with a following <span class="name">reahmuk</span> <span class="ex" lang="km">អិះ</span> this is regarded as a letter of the Khmer alphabet. (It has the same sound, followed by <span class="ipa">h</span>), eg. <span class="charExample" translate="no"><span class="ex" lang="km">ជិះ</span> <span class="trans">c̱ih̽</span> <span class="ipa">cih</span> <span class="meaning">to ride</span></span>.  This combination has the same sound as <span class="ex" lang="km">អេះ</span>, but this is much less common.</p>
-      
+<p class="insertTranscription">&#x17B7;</p>
+       
+        <p><span class="leadin">ɑː class.</span> <span class="ipa">e</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ចិត្ដ</span> <span class="trans">cit͓ɗ</span> <span class="ipa">cet</span> <span class="meaning">heart</span></span>. It is followed by a glottal stop in stressed syllables, eg. <span class="eg" lang="km">មតិ</span>, but not in unstressed, eg. <span class="eg" lang="km">កិរិយា</span>.</p>
+        <p><span class="leadin">ɔː class.</span> <span class="ipa">i</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">វិញ</span> <span class="trans">v̱iɲ</span> <span class="ipa">ʋiɲ</span> <span class="meaning">instead, again</span></span>. Followed by glottal stop in stressed syllables, eg. <span class="eg" lang="km">លទ្ធិ</span>, but not in unstressed, eg. <span class="eg" lang="km">និទាន</span>.</p>
+        <p><span class="leadin">Combinations.</span> The combination <span class="codepoint" translate="no"><span lang="km">&#x17B7;&#x17C7;</span> [<a href="/scripts/khmer/block#char17B7"><span class="uname">U+17B7 KHMER VOWEL SIGN I</span></a> + <a href="/scripts/khmer/block#char17C7"><span class="uname">U+17C7 KHMER SIGN REAHMUK</span></a>]</span> is regarded as a letter of the Khmer alphabet. (The combination produces the same sounds as above, but followed by <span class="ipa">h</span>), eg. <span class="charExample" translate="no"><span class="ex" lang="km">ជិះ</span> <span class="trans">c̱ih̽</span> <span class="ipa">cih</span> <span class="meaning">to ride</span></span>.  This combination has the same sound as <span class="codepoint" translate="no"><span lang="km">&#x17C1;&#x17C7;</span> [<a href="/scripts/khmer/block#char17C1"><span class="uname">U+17C1 KHMER VOWEL SIGN E</span></a> + <a href="/scripts/khmer/block#char17C7"><span class="uname">U+17C7 KHMER SIGN REAHMUK</span></a>]</span>, but  is much less common.</p>
+<p><span class="ipa">əj</span> for the combination <span class="codepoint" translate="no"><span lang="km">–ិយ</span> [<a href="/scripts/khmer/block#char17B7" target="c"><span class="uname">U+17B7 KHMER VOWEL SIGN I</span></a> + <a href="/scripts/khmer/block#char1799" target="c"><span class="uname">U+1799 KHMER LETTER YO</span></a>]</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="eg" lang="km">ចេតិយ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://www.pratyeka.org/csw/hlp-csw.pdf" target="_blank">Huffman</a>,
@@ -1381,10 +1411,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Khmer</span> 
  <span class="charName"><span class="localName" lang="km">ស្រៈ អី</span> <span class="ipa">sraʔ ʔəj</span></span></p>
  
-        
-        <p><span class="ipa">əj</span> after an <span class="ipa">ɑː</span> class consonant.</p>
-        <p><span class="ipa">iː</span> after an <span class="ipa">ɔː</span> class consonant.</p>
-        <p><span class="name"></span></p>
+<p class="insertTranscription">&#x17B8;</p>
+      
+        <p><span class="leadin">ɑː class.</span> <span class="ipa">əj</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="eg" lang="km">បី</span>.</p>
+        <p><span class="leadin">ɔː class.</span> <span class="ipa">iː</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="eg" lang="km">ពីរ</span>.</p>
+        <p><span class="leadin">Combinations.</span> Also pronounced <span class="ipa">iː</span> when it occurs in the combination <span class="codepoint" translate="no"><span lang="km">&#x17B7;&#x1799;</span> [<a href="/scripts/khmer/block#char17B7"><span class="uname">U+17B7 KHMER VOWEL SIGN I</span></a> + <a href="/scripts/khmer/block#char1799"><span class="uname">U+1799 KHMER LETTER YO</span></a>]</span>, eg. <span class="eg" lang="km">ឥន្ត្រិយ</span>.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1407,9 +1438,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Khmer</span> 
  <span class="charName"><span class="localName" lang="km">ស្រៈ អឹ</span> <span class="ipa">sraʔ ʔə</span></span></p>
  
-        
-        <p><span class="ipa">ə</span> after an <span class="ipa">ɑː</span> class consonant.</p>
-        <p><span class="ipa">ɨ</span> after an <span class="ipa">ɔː</span> class consonant.</p>
+<p class="insertTranscription">&#x17B9;</p>
+       
+        <p><span class="leadin">ɑː class.</span> <span class="ipa">ə</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="eg" lang="km">ដឹក</span>.</p>
+        <p><span class="leadin">ɔː class.</span> <span class="ipa">ɨ</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="eg" lang="km">ទឹក</span>.</p>
+<p><span class="leadin">Combinations.</span> <span class="ipa">əh</span> in the combination <span class="codepoint" translate="no"><span lang="km">–ឹះ</span> [<a href="/scripts/khmer/block#char17B9" target="c"><span class="uname">U+17B9 KHMER VOWEL SIGN Y</span></a> + <a href="/scripts/khmer/block#char17C7" target="c"><span class="uname">U+17C7 KHMER SIGN REAHMUK</span></a>]</span>, eg. <span class="eg" lang="km">ឆ្កឹះ</span>.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1432,9 +1465,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Khmer</span> 
  <span class="charName"><span class="localName" lang="km">ស្រៈ អឺ</span> <span class="ipa">sraʔ ʔəɨ</span></span></p>
  
-        
-        <p><span class="ipa">əɨ</span> after an <span class="ipa">ɑː</span> class consonant.</p>
-        <p><span class="ipa">ɨː</span> after an <span class="ipa">ɔː</span> class consonant.</p>
+<p class="insertTranscription">&#x17BA;</p>
+       
+        <p><span class="ipa">əɨ</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="eg" lang="km">ដឺ</span>.</p>
+        <p><span class="ipa">ɨː</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="eg" lang="km">គឺ</span>.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1457,11 +1491,19 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Khmer</span> 
  <span class="charName"><span class="localName" lang="km">ស្រៈ អុ</span> <span class="ipa">sraʔ ʔo</span></span></p>
  
-        
-        <p><span class="ipa">o</span> after an <span class="ipa">ɑː</span> class consonant.</p>
-        <p><span class="ipa">u</span> after an <span class="ipa">ɔː</span> class consonant.</p>
-        <p>In combination with a following <span class="name">reə̯hmuk</span> <span class="ex" lang="km">អុះ</span> this is regarded as a letter of the Khmer alphabet. (It has the same sound, followed by <span class="ipa">h</span>), eg. <span class="charExample" translate="no"><span class="ex" lang="km">ចុះ</span> <span class="trans">cuh̽</span> <span class="ipa">coh</span> <span class="meaning">so?</span></span>.</p>
-      
+<p class="insertTranscription">&#x17BB;</p>       
+        <p><span class="leadin"><span class="ipa">ɑː</span> class.</span> <span class="ipa">o</span> after an <span class="ipa">ɑː</span> class consonant. It is followed by a glottal stop in open stressed syllables, eg. <span class="eg" lang="km">វត្តុ</span>, but not in unstressed, eg. <span class="eg" lang="km">កុមារ</span>.</p>
+        <p><span class="leadin"> <span class="ipa">ɔː</span> class.</span> <span class="ipa">u</span> after an <span class="ipa">ɔː</span> class consonant. It is followed by a glottal stop in stressed syllables, eg. <span class="eg" lang="km">វិទ្យុ</span>, but not in unstressed, eg. <span class="eg" lang="km">គុលិកា</span>.</p>
+        <p><span class="leadin">Combinations.</span> The combination <span class="codepoint" translate="no"><span lang="km">&#x17BB;&#x17C7;</span> [<a href="/scripts/khmer/block#char17BB"><span class="uname">U+17BB KHMER VOWEL SIGN U</span></a> + <a href="/scripts/khmer/block#char17C7"><span class="uname">U+17C7 KHMER SIGN REAHMUK</span></a>]</span> is regarded as a letter of the Khmer alphabet, and is pronounced:</p>
+<ul>
+<li><span class="ipa">oh</span> after an <span class="ipa">ɑː</span> class consonant,  eg. <span class="eg" lang="km">ចុះ</span>.</li>
+<li><span class="ipa">uh</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="eg" lang="km">ពុះ</span>.</li>
+</ul>
+<p>The combination <span class="codepoint" translate="no"><span lang="km">&#x17BB;&#x17C6;</span> [<a href="/scripts/khmer/block#char17BB"><span class="uname">U+17BB KHMER VOWEL SIGN U</span></a> + <a href="/scripts/khmer/block#char17C6"><span class="uname">U+17C6 KHMER SIGN NIKAHIT</span></a>]</span> is pronounced: </p>
+<ul>
+<li><span class="ipa">om</span> after an <span class="ipa">ɑː</span> class consonant,  eg. <span class="eg" lang="km">ដុំ</span>.</li>
+<li><span class="ipa">um</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="eg" lang="km">ទុំ</span>.</li>
+</ul>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://www.pratyeka.org/csw/hlp-csw.pdf" target="_blank">Huffman</a>,
@@ -1480,12 +1522,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 
 <div class="letter khmer">
-<p class="titlepara"><span class="title">Khmer</span> 
- <span class="charName"><span class="localName" lang="km">ស្រៈ អូ</span> <span class="ipa">sraʔ ʔū</span></span></p>
+<p class="titlepara"><span class="title">Khmer</span></p>
  
-        
-        <p><span class="ipa">ou</span> after an <span class="ipa">ɑː</span> class consonant.</p>
-        <p><span class="ipa">uː</span> after an <span class="ipa">ɔː</span> class consonant.</p>
+ <p class="insertTranscription">&#x17BC;</p>
+      
+<p><span class="leadin">ɑː class.</span> <span class="ipa">ou</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="eg" lang="km">កូរ</span>.</p>
+        <p><span class="leadin">ɔː class.</span> <span class="ipa">uː</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="eg" lang="km">គូ</span>.</p>
+<p><span class="leadin">Combinations.</span> <span class="ipa">ɨw</span> in the combination <span class="codepoint" translate="no"><span lang="km">&#x17BC;&#x179C;</span> [<a href="/scripts/khmer/block#char17BC"><span class="uname">U+17BC KHMER VOWEL SIGN UU</span></a> + <a href="/scripts/khmer/block#char179C"><span class="uname">U+179C KHMER LETTER VO</span></a>]</span>, eg. <span class="eg" lang="km">នូវ</span>.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1508,8 +1551,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Khmer</span> 
  <span class="charName"><span class="localName" lang="km">ស្រៈ អួ</span> <span class="ipa">sraʔ ʔua</span></span></p>
  
-        
-        <p><span class="ipa">uə</span> after any class of consonant.</p>
+<p class="insertTranscription">&#x17C5;</p>
+       
+        <p><span class="ipa">uə</span> after any class of consonant, eg. <span class="eg" lang="km">កួរ</span> and <span class="eg" lang="km">គួរ</span>.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1532,9 +1576,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Khmer</span> 
  <span class="charName"><span class="localName" lang="km">ស្រៈ អើ</span> <span class="ipa">sraʔ ʔaə</span></span></p>
  
-        
-        <p><span class="ipa">aə</span> after an <span class="ipa">ɑː</span> class consonant.</p>
-        <p><span class="ipa">əː</span> after an <span class="ipa">ɔː</span> class consonant.</p>
+<p class="insertTranscription">&#x17BE;</p>
+<p><span class="leadin">ɑː class.</span> <span class="ipa">aə</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="eg" lang="km">បើ</span>.</p>
+        <p><span class="leadin">ɔː class.</span> <span class="ipa">əː</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="eg" lang="km">ឈើ</span>.</p>
+<p><span class="leadin">Combinations.</span> <span class="ipa">əh</span> in the combination <span class="codepoint" translate="no"><span lang="km">–ើះ</span> [<a href="/scripts/khmer/block#char17BE" target="c"><span class="uname">U+17BE KHMER VOWEL SIGN OE</span></a> + <a href="/scripts/khmer/block#char17C7" target="c"><span class="uname">U+17C7 KHMER SIGN REAHMUK</span></a>]</span>, eg. <span class="eg" lang="km">ចង្កើះ</span>  (normally spelled <span class="charExample" translate="no"><span class="ex" lang="km">ចង្កឹះ</span> <span class="trans">cŋ͓kɨh̽</span></span>).</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1557,8 +1602,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Khmer</span> 
  <span class="charName"><span class="localName" lang="km">ស្រៈ អឿ</span> <span class="ipa">sraʔ ʔɨə</span></span></p>
  
-        
-        <p><span class="ipa">ɨə</span> after any class of consonant.</p>
+<p class="insertTranscription">&#x17C0;</p>
+      
+        <p><span class="ipa">ɨə</span> after any class of consonant, eg. <span class="eg" lang="km">តឿ</span> and <span class="eg" lang="km">ជឿ</span>.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1581,8 +1627,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Khmer</span> 
  <span class="charName"><span class="localName" lang="km">ស្រៈ អៀ</span> <span class="ipa">sraʔ ʔiə</span></span></p>
  
-        
-        <p><span class="ipa">iə</span> after any class of consonant.</p>
+<p class="insertTranscription">&#x17C0;</p>
+       
+        <p><span class="ipa">iə</span> after any class of consonant, eg. <span class="eg" lang="km">តៀប</span> and <span class="eg" lang="km">ទៀប</span>.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1605,16 +1652,16 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Khmer</span> 
  <span class="charName"><span class="localName" lang="km">ស្រៈ អេ</span> <span class="ipa">sraʔ ʔei</span></span></p>
  
-        
-        <p><span class="ipa">ei</span> after an <span class="ipa">ɑː</span> class consonant.</p>
-        <p><span class="ipa">eː</span> after an <span class="ipa">ɔː</span> class consonant.</p>
-        <p>Combined with <span class="name">reə̯hmuk</span> <span class="ex" lang="km">អេះ</span>:</p>
+<p class="insertTranscription">&#x17C1;</p>
+       
+<p><span class="leadin"><span class="ipa">ɑː</span> class.</span> <span class="ipa">ei</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="eg" lang="km">កេរ្តិ៍</span>.</p>
+        <p><span class="leadin"><span class="ipa">ɔː</span> class.</span> <span class="ipa">eː</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="eg" lang="km">គេ</span>, but <span class="ipa">ɨ</span> before palatals, eg. <span class="eg" lang="km">ពេញ</span>.</p>
+        <p><span class="leadin">Combinations.</span> The combination <span class="codepoint" translate="no"><span lang="km">&#x17C1;&#x17C7;</span> [<a href="/scripts/khmer/block#char17C1"><span class="uname">U+17C1 KHMER VOWEL SIGN E</span></a> + <a href="/scripts/khmer/block#char17C7"><span class="uname">U+17C7 KHMER SIGN REAHMUK</span></a>]</span> is pronounced:</p>
         <ul>
-          <li><span class="ipa">eh</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">សេះ</span> <span class="trans">seh̽</span> <span class="ipa">seh</span> <span class="meaning">horse</span></span>.</li>
+        <li><span class="ipa">eh</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">សេះ</span> <span class="trans">seh̽</span> <span class="ipa">seh</span> <span class="meaning">horse</span></span>.</li>
           <li><span class="ipa">ih</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">នេះ</span> <span class="trans">ṉeh̽</span> <span class="ipa">nih</span> <span class="meaning">this</span></span>.</li>
-          <li>This combination has the same sound as <span class="ex" lang="km">អិះ</span>, but this is much more common.</li>
-        </ul>
-      
+</ul>
+ <p>This combination has the same sound as <span class="codepoint" translate="no"><span lang="km">&#x17B7;&#x17C7;</span> [<a href="/scripts/khmer/block#char17B7"><span class="uname">U+17B7 KHMER VOWEL SIGN I</span></a> + <a href="/scripts/khmer/block#char17C7"><span class="uname">U+17C7 KHMER SIGN REAHMUK</span></a>]</span>, but is much more common.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://www.pratyeka.org/csw/hlp-csw.pdf" target="_blank">Huffman</a>,
@@ -1636,9 +1683,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Khmer</span> 
  <span class="charName"><span class="localName" lang="km">ស្រៈ អែ</span> <span class="ipa">sraʔ ʔae</span></span></p>
  
-        
-        <p><span class="ipa">ae</span> after an <span class="ipa">ɑː</span> class consonant.</p>
-        <p><span class="ipa">ɛː</span> after an <span class="ipa">ɔː</span> class consonant.</p>
+<p class="insertTranscription">&#x17C2;</p>
+       
+<p><span class="leadin">ɑː class.</span> <span class="ipa">ae</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="eg" lang="km">កែ</span>.</p>
+        <p><span class="leadin">ɔː class.</span> <span class="ipa">ɛː</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="eg" lang="km">គែ</span>.</p>
+<p><span class="leadin">Combinations.</span> <span class="ipa">eh</span> for the combination <span class="codepoint" translate="no"><span lang="km">&#x17C2;&#x17C7;</span> [<a href="/scripts/khmer/block#char17C2"><span class="uname">U+17C2 KHMER VOWEL SIGN AE</span></a> + <a href="/scripts/khmer/block#char17C7"><span class="uname">U+17C7 KHMER SIGN REAHMUK</span></a>]</span> after an <span class="trans">ɔ</span>-class consonant.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1661,9 +1710,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Khmer</span> 
  <span class="charName"><span class="localName" lang="km">ស្រៈ អៃ</span> <span class="ipa">sraʔ ʔaj</span></span></p>
  
-        
-        <p><span class="ipa">aj</span> after an <span class="ipa">ɑː</span> class consonant.</p>
-        <p><span class="ipa">ɨj</span> after an <span class="ipa">ɔː</span> class consonant.</p>
+<p class="insertTranscription">&#x17C3;</p>
+      
+        <p><span class="leadin">ɑː class.</span> <span class="ipa">aj</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="eg" lang="km">ប្រៃ</span>.</p>
+        <p><span class="leadin">ɔː class.</span> <span class="ipa">ɨj</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="eg" lang="km">ព្រៃ</span>.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1686,10 +1736,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Khmer</span> 
  <span class="charName"><span class="localName" lang="km">ស្រៈ អោ</span> <span class="ipa">sraʔ ʔao</span></span></p>
  
-        
-        <p><span class="ipa">ao</span> after an <span class="ipa">ɑː</span> class consonant.</p>
-        <p><span class="ipa">oː</span> after an <span class="ipa">ɔː</span> class consonant.</p>
-        <p>Combined with <span class="name">reə̯hmuk</span> <span class="ex" lang="km">អោះ</span>:</p>
+<p class="insertTranscription">&#x17C4;</p>
+      
+        <p><span class="leadin">ɑː class</span> <span class="ipa">ao</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="eg" lang="km">កោរ</span>.</p>
+        <p><span class="leadin">oː class</span> <span class="ipa">oː</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="eg" lang="km">គោ</span>.</p>
+        <p><span class="leadin">Combinations.</span> The combination <span class="codepoint" translate="no"><span lang="km">&#x17C4;&#x17C7;</span> [<a href="/scripts/khmer/block#char17C4"><span class="uname">U+17C4 KHMER VOWEL SIGN OO</span></a> + <a href="/scripts/khmer/block#char17C7"><span class="uname">U+17C7 KHMER SIGN REAHMUK</span></a>]</span> is pronounced:</p>
         <ul>
           <li><span class="ipa">ɑh</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">នៅណោះ</span> <span class="trans">ṉaʷnoh̽</span> <span class="ipa">nəɨnɔh</span> <span class="meaning">over there</span></span>.</li>
           <li><span class="ipa">uəh</span> or <span class="ipa">uh</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ឈ្មោះ</span> <span class="trans">c̱ʰ͓m̱oh̽</span> <span class="ipa">cʰmuə</span> <span class="meaning">name</span></span>, <span class="charExample" translate="no"><span class="ex" lang="km">នោះ</span> <span class="trans">ṉoh̽</span> <span class="ipa">nuh</span> <span class="meaning">that</span></span>.</li>
@@ -1716,9 +1767,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Khmer</span> 
  <span class="charName"><span class="localName" lang="km">ស្រៈ អៅ</span> <span class="ipa">sraʔ ʔaw</span></span></p>
  
-        
-        <p><span class="ipa">aw</span> after an <span class="ipa">ɑː</span> class consonant.</p>
-        <p><span class="ipa">ɨw</span> after an <span class="ipa">ɔː</span> class consonant.</p>
+<p class="insertTranscription">&#x17C5;</p>
+      
+        <p><span class="leadin">ɑː class</span> <span class="ipa">aw</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="eg" lang="km">តៅ</span>.</p>
+        <p><span class="leadin">ɔː class</span> <span class="ipa">ɨw</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="eg" lang="km">ទៅ</span>.</p>
       
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1740,21 +1792,22 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Khmer</span> 
  <span class="charName"><span class="localName" lang="km">និគ្គហិត</span> <span class="ipa">nikkɔːhet</span></span></p>
  
-        
-        <p>Although it can be equated with the anusvara in Sanskrit, this is usually regarded as a vowel sign or a part of a vowel sign in Khmer.</p>
-        <p><span class="ipa">ɑm</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">កំពុង</span> <span class="trans">km̽p̱uŋ</span> <span class="ipa">kɑmpuŋ</span> <span class="meaning">present tense marker</span></span>.</p>
-        <p><span class="ipa">um</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">រំភើប</span> <span class="trans">ṟm̽p̱ʰaᵊb</span> <span class="ipa">rumɓəːpʰ</span> <span class="meaning">excited</span></span>.</p>
-        <p>Combined with <span class="name">sra-o</span> <span class="ex" lang="km">អុ</span>:</p>
+ <p class="insertTranscription">&#x17C6;</p>       
+       
+<p>Although it can be equated with the anusvara in Sanskrit, this is usually regarded as a vowel sign or a part of a vowel sign in Khmer.</p>
+        <p><span class="leadin">ɑː class</span> <span class="ipa">ɑm</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">កំពុង</span> <span class="trans">km̽p̱uŋ</span> <span class="ipa">kɑmpuŋ</span> <span class="meaning">present tense marker</span></span>.</p>
+        <p><span class="leadin">ɔː class</span> <span class="ipa">um</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">រំភើប</span> <span class="trans">ṟm̽p̱ʰaᵊb</span> <span class="ipa">rumɓəːpʰ</span> <span class="meaning">excited</span></span>.</p>
+        <p><span class="leadin">Combinations.</span> The combination <span class="codepoint" translate="no"><span lang="km">&#x17BB;&#x17C6;</span> [<a href="/scripts/khmer/block#char17BB"><span class="uname">U+17BB KHMER VOWEL SIGN U</span></a> + <a href="/scripts/khmer/block#char17C6"><span class="uname">U+17C6 KHMER SIGN NIKAHIT</span></a>]</span> is pronounced:</p>
         <ul>
           <li><span class="ipa">om</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ធំ</span> <span class="trans">ṯʰm̽</span> <span class="ipa">tʰɑm</span> <span class="meaning">big</span></span>.</li>
           <li><span class="ipa">um</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ខ្លាឃ្មុំ</span> <span class="trans">kʰ͓ḻāḵʰ͓m̱um̽</span> <span class="ipa">kʰlaːkʰmum</span> <span class="meaning">bear</span></span>.</li>
         </ul>
-        <p>Combined with <span class="name">sra-aː</span> <span class="ex" lang="km">អា</span>:</p>
+        <p>The combination <span class="codepoint" translate="no"><span lang="km">&#x17B6;&#x17C6;</span> [<a href="/scripts/khmer/block#char17B6"><span class="uname">U+17B6 KHMER VOWEL SIGN AA</span></a> + <a href="/scripts/khmer/block#char17C6"><span class="uname">U+17C6 KHMER SIGN NIKAHIT</span></a>]</span> is:</p>
         <ul>
           <li><span class="ipa">am</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ដាំ</span> <span class="trans">ɗām̽</span> <span class="ipa">ɗam</span> <span class="meaning">to plant</span></span>.</li>
           <li><span class="ipa">oə̯m</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">នាំ</span> <span class="trans">ṉām̽</span> <span class="ipa">noə̯m</span> <span class="meaning">to lead</span></span>.</li>
         </ul>
-        <p>Combined with <span class="name">sra-aː</span> and <span class="name">ŋɔː</span> <span class="ex" lang="km">អាង</span>:</p>
+        <p>The combination <span class="codepoint" translate="no"><span lang="km">&#x17B6;&#x17C6;&#x1784;</span> [<a href="/scripts/khmer/block#char17B6"><span class="uname">U+17B6 KHMER VOWEL SIGN AA</span></a> + <a href="/scripts/khmer/block#char17C6"><span class="uname">U+17C6 KHMER SIGN NIKAHIT</span></a> + <a href="/scripts/khmer/block#char1784"><span class="uname">U+1784 KHMER LETTER NGO</span></a>]</span> is:</p>
         <ul>
           <li><span class="ipa">aŋ</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ម្ហូបបារាំង</span> <span class="trans">m̱͓hūbbāṟām̽ŋ</span> <span class="ipa">mhouɓɓaːraŋ</span> <span class="meaning">French food</span></span>.</li>
           <li><span class="ipa">eə̯ŋ</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ទាំង</span> <span class="trans">ṯām̽ŋ</span> <span class="ipa">teə̯ŋ</span> <span class="meaning">including, both</span></span>.</li>
@@ -1781,10 +1834,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Khmer</span> 
  <span class="charName"><span class="localName" lang="km">រះមុខ</span> <span class="ipa">reə̆hmuk</span></span></p>
  
-        
-        <p>Although it can be equated with the visarga in Sanskrit, this is regarded as a vowel sign or part of a vowel sign in Khmer.</p>
-        <p><span class="ipa">ah</span> with an <span class="ipa">ɑː</span> class inherent vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ខ្លះ</span> <span class="trans">kʰ͓ḻh̽</span> <span class="ipa">klɑh</span> <span class="meaning">some</span></span>.</p>
-        <p><span class="ipa">eə̆h</span> with an <span class="ipa">ɔː</span> class inherent vowel or an <span class="ipa">ɔː</span> class <span class="name">sra-aː</span> <span class="ex" lang="km">អា</span>, eg. <span class="ex" lang="km">ផ្ទះ</span> <span class="ipa">pteə̆h</span> <span class="meaning">house, home</span>.</p>
+   <p class="insertTranscription">&#x17C7;</p>
+     
+<p>Although it can be equated with the visarga in Sanskrit, this is regarded as a vowel sign or part of a vowel sign in Khmer.</p>
+        <p><span class="leadin">ɑː class</span> <span class="ipa">ah</span> with an <span class="ipa">ɑː</span> class inherent vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ខ្លះ</span> <span class="trans">kʰ͓ḻh̽</span> <span class="ipa">klɑh</span> <span class="meaning">some</span></span>.</p>
+        <p><span class="leadin">ɔː class</span> <span class="ipa">eə̆h</span> with an <span class="ipa">ɔː</span> class inherent vowel or an <span class="ipa">ɔː</span> class <span class="name">sra-aː</span> <span class="ex" lang="km">អា</span>, eg. <span class="ex" lang="km">ផ្ទះ</span> <span class="ipa">pteə̆h</span> <span class="meaning">house, home</span>.</p>
         <p><span class="ipa">h</span> after the normal sounds of short vowels <span class="name">sra-e</span> <span class="ex" lang="km">អិ</span>, <span class="name">sra-ə</span> <span class="ex" lang="km">អឹ</span>, and <span class="name">sra-o</span> <span class="ex" lang="km">អុ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ជិះ</span> <span class="trans">c̱ih̽</span> <span class="ipa">cih</span> <span class="meaning">to ride</span></span>, <span class="charExample" translate="no"><span class="ex" lang="km">កឹះ</span> <span class="trans">kɨh̽</span> <span class="ipa">kəh</span> <span class="meaning">to scratch</span></span>, <span class="charExample" translate="no"><span class="ex" lang="km">ពុះ</span> <span class="trans">p̱uh̽</span> <span class="ipa">puh</span> <span class="meaning">to boil</span></span>.</p>
         <p><span class="ipa">ih</span> with <span class="name">sra-ei</span> <span class="ex" lang="km">អេ</span> as an <span class="ipa">ɔː</span> class vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">នេះ</span> <span class="trans">ṉeh̽</span> <span class="ipa">nih</span> <span class="meaning">this</span></span>.</p>
         <p><span class="ipa">eh</span> with <span class="name">sra-ei</span> <span class="ex" lang="km">អេ</span> or <span class="name">sra-aj</span> <span class="ex" lang="km">អៃ</span> as an <span class="ipa">ɑː</span> class vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="km">សេះ</span> <span class="trans">seh̽</span> <span class="ipa">seh</span> <span class="meaning">horse</span></span>, <span class="charExample" translate="no"><span class="ex" lang="km">កែះ</span> <span class="trans">kæh̽</span> <span class="ipa">keh</span> <span class="meaning">wild goat</span></span>.</p>
@@ -2027,17 +2081,20 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="unicodenotes"></div>
 <div class="notes">
 <div class="letter khmer">
-<p class="titlepara"><span class="title">Khmer</span> 
- <span class="charName"><span class="localName" lang="km">សំយោគសញ្ញា</span> <span class="ipa">sanjoːksaɲɲaː</span></span></p>
+<p class="titlepara"><span class="title">Khmer</span></p>
  
-        
-        <p><span class="ipa">a</span> over an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ស័កិ្ត</span> <span class="trans">săki͓t</span> <span class="ipa">sak</span> <span class="meaning">rank</span></span>; <span class="charExample" translate="no"><span class="ex" lang="km">ស័កិ្ត</span> <span class="trans">săki͓t</span> <span class="ipa">sak</span> <span class="meaning">rank</span></span>.</p>
-        <p><span class="ipa">oə̯</span> over an <span class="ipa">ɔː</span> class consonant, in general, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ទ័ព</span> <span class="trans">ṯăp̱</span> <span class="ipa">toə̯p</span> <span class="meaning">army</span></span>.</p>
-        <p><span class="ipa">eə̯</span> over an <span class="ipa">ɔː</span> class consonant followed by <span class="name">ŋɔː</span> <span class="ex" lang="km">ង</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="km">វ័ង</span> <span class="trans">v̱ăŋ</span> <span class="ipa">ʋeə̯ŋ</span> <span class="meaning">palace</span></span>.</p>
-        <p>(Note that all of the above are the same as if a <span class="name">sra-aː</span> plus <span class="name">niʔkəhət </span> had been used.)</p>
-        <p><span class="ipa">ɔə</span> over a consonant followed by <span class="name">rɔː</span> <span class="ex" lang="km">រ</span> (these are always <span class="ipa">ɔː</span> class consonants), eg. <span class="charExample" translate="no"><span class="ex" lang="km">ជ័រ</span> <span class="trans">c̱ăṟ</span> <span class="ipa">cɔə</span> <span class="meaning">resin</span></span>.</p>
-        <p><span class="ipa">ɨ</span> over an <span class="ipa">ɔː</span> class consonant followed by <span class="name">jɔː</span> <span class="ex" lang="km">យ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ជ័យ</span> <span class="trans">c̱ăy̱</span> <span class="ipa">cɨj</span> <span class="meaning">victory</span></span>.</p>
-        <p>Gilbert &amp; Hang say that the sound is <span class="ipa">e</span> usually, when over <span class="name">ʋɔː</span> <span class="ex" lang="km">វ</span> or <span class="name">nɔː</span> <span class="ex" lang="km">ន</span>.</p>
+<p class="insertTranscription">&#x17D0;</p>
+    
+<p><span class="leadin">ɑː class.</span> <span class="ipa">a</span> over an <span class="ipa">ɑː</span> class consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ស័កិ្ត</span> <span class="trans">săki͓t</span> <span class="ipa">sak</span> <span class="meaning">rank</span></span>; <span class="eg" lang="km">ស័ក</span>.</p>
+<p><span class="ipa">eə̆</span> before velar finals, eg. <span class="eg" lang="km">ល័ខ</span> and <span class="charExample" translate="no"><span class="ex" lang="km">វ័ង</span> <span class="trans">v̱ăŋ</span> <span class="ipa">ʋeə̯ŋ</span> <span class="meaning">palace</span></span></p>
+        <p><span class="leadin">ɔː class.</span> <span class="ipa">oə̯</span> over an <span class="ipa">ɔː</span> class consonant, in general, eg. <span class="charExample" translate="no"><span class="ex" lang="km">ទ័ព</span> <span class="trans">ṯăp̱</span> <span class="ipa">toə̯p</span> <span class="meaning">army</span></span>.</p>
+<p><span class="ipa">ɔə</span> over a consonant followed by <span class="codepoint" translate="no"><span lang="km">&#x179A;</span> [<a href="/scripts/khmer/block#char179A"><span class="uname">U+179A KHMER LETTER RO</span></a>]</span> (these are always <span class="ipa">ɔː</span> class consonants), eg. <span class="charExample" translate="no"><span class="ex" lang="km">ជ័រ</span> <span class="trans">c̱ăṟ</span> <span class="ipa">cɔə</span> <span class="meaning">resin</span></span>.</p>
+<p>(Note that all of the above are the same as if a <span class="name">sra-aː</span> plus <span class="name">niʔkəhət </span> had been used.)</p>
+<p><span class="leadin">Combinations.</span>The combination <span class="codepoint" translate="no"><span lang="km">&#x17D0;&#x1799;</span> [<a href="/scripts/khmer/block#char17D0"><span class="uname">U+17D0 KHMER SIGN SAMYOK SANNYA</span></a> + <a href="/scripts/khmer/block#char1799"><span class="uname">U+1799 KHMER LETTER YO</span></a>]</span> is pronounced:</p>
+<p><span class="ipa">aj</span> after an <span class="ipa">ɑː</span> class consonant, eg. <span class="eg" lang="km">សម័យ</span>.</p>
+<p><span class="ipa">ɨj</span> after an <span class="ipa">ɔː</span> class consonant, eg. <span class="eg" lang="km">ជ័យ</span>.</p>
+<p>Gilbert &amp; Hang say that the sound is <span class="ipa">e</span> usually, when over <span class="name">ʋɔː</span> <span class="ex" lang="km">វ</span> or <span class="name">nɔː</span> <span class="ex" lang="km">ន</span>.</p>
+<p><span class="ipa">ɔə</span> in the combination <span class="codepoint" translate="no"><span lang="km">–័រ</span> [<a href="/scripts/khmer/block#char17D0" target="c"><span class="uname">U+17D0 KHMER SIGN SAMYOK SANNYA</span></a> + <a href="/scripts/khmer/block#char179A" target="c"><span class="uname">U+179A KHMER LETTER RO</span></a>]</span>, eg. <span class="eg" lang="km">ជ័រ</span>.</p>
         <!--p><These combinations are usually followed by 1799:   KHMER LETTER YO, giving the sound <span class="ipa">ej</span>, eg. <span class="ex" lang="km">ន័យ</span> <span class="ipa">ney</span> <span class="meaning">meaning</span>; <span class="ex" lang="km">វ័យ</span> <span class="ipa">ʋey</span> <span class="meaning">age</span>.</p-->
         <!--p><span class="ipa">a</span> usually, over other consonants, eg. <span class="ex" lang="km">បណ្ណាល័យ</span> <span class="ipa">ɓan naː laj</span> <span class="meaning">library</span>; <span class="ex" lang="km">រហ័ស</span> <span class="ipa">la hah</span> <span class="meaning">fast</span></p-->
         <!--p><span class="ipa">oa</span> on other occasions, eg. <span class="ex" lang="km">កងទ័ព</span> <span class="ipa">kɔŋ toaɓ</span> <span class="meaning">army</span>; <span class="ex" lang="km">ទំព័រ</span> <span class="ipa">ɗəm poa</span> <span class="meaning">age</span></p-->
@@ -2811,7 +2868,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 
-<script src="../../shared/scriptdb/khmer.js"></script>
+<script src="../../shared/scriptdb/khmr.js"></script>
 <script>
 replaceStuff('Khmer', 'khmer', spreadsheet, '', 'km', '', cols, false)
 
@@ -2828,6 +2885,7 @@ replaceStuff('Khmer', 'khmer', spreadsheet, '', 'km', '', cols, false)
 
 <script>
 initialise('/scripts/khmer/block','khmer')
+addExamples()
 autoTransliterate('km')
 </script>
 </body>
