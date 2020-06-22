@@ -9,6 +9,7 @@ var examples = `
 ពាំ|to carry in the beak|poə̆m
 ពាម|mouth of a river|piəm
 ឪពុក|father|ʔəwpuk
+ប៉ា|father|paː
 ឲ្យ|to give|jʔaoj
 ឮ|to hear|lɨː
 ពេទ្យ|medical|peit
@@ -118,7 +119,7 @@ var examples = `
 បូរាណ|ancient|ɓouraːn
 ទាញ|to pull|tiəɲ
 ដឹង|to know|ɗəŋ
-រីញ|dried up|riːɲ
+រីញ|dried up|riːŋ
 អាវ|shirt|ʔaːw
 ហៅ|to call|haw
 បាយ|cooked rice, food|ɓaːj
@@ -213,7 +214,6 @@ var examples = `
 ឲ្យ|to give|jʔaoj
 ឥន្ទុ|the moon|ʔɨntuʔ
 ឥត|not|ʔət
-ឪពុក|father|ʔəwpuk
 ឥឡូវ|now|ʔəjləw
 ឦសាន|northeast|ʔəjsaːn
 ឧកញ៉ា|official of ministerial rank|ʔokɲaː
@@ -234,6 +234,11 @@ var examples = `
 ចិត្ដ|heart|cet
 ចុះ|so?|coh
 ចង្កើះ|chopsticks|cɑŋkəh
+អី|what|ʔī
+កាហ្វេ|coffee|kaː fei
+ហ្វូង|crowd|ʋouŋ
+ខ្មែរ|Cambodian|kmae
+សូមទោស|I beg your pardon|soum toːs
 
 `
 
