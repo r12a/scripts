@@ -19,6 +19,8 @@
 <script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
+<script src="../common/egcode.js"></script>
+<script src="examples.js"></script>
 
 <script src="../../uniview/descriptions.js"></script> 
 <script src="../../uniview/u.js"></script> 
@@ -72,34 +74,37 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 </aside>
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->20 January, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->23 June, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
 
 <section>
-  <p>This page lists characters in the following Unicode  block and provides information about them.</p>
+  <p>This page lists characters in the following Unicode  blocks and gathers information about them from various sources. </p>
   <ul>
     <li><a href="../../uniview/?block=devanagari" target="_blank">Devanagari</a></li>
     <li><a href="../../uniview/?block=devanagari_extended" target="_blank">Devanagari Extended</a></li>
   </ul>
-  <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-<p>For details about how the script works, see  <a class="linkHighlight" href="index">Devanagari/Hindi</a>, and <a class="linkHighlight" href="kashmiri">Kashmiri</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Deva">Script links pages</a>.</p>
-<p><span style="text-align: start;">We have usage data for the following 10 languages that use the Devanagari script</span>: Bhojpuri, Bodo, Hindi, Konkani, Kashmiri, Magahi, Maithili, Marathi, Nepali, Sanskrit.</p>
+  <p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
-<p>Find <input type="text" id="findInput"
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
 
-<p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example. Click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
+
 <details>
-<summary class="instructions">Read more about how to use this page.</summary>
-    <p class="instructions">To <strong>find a character</strong> by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or the hex number in the <samp>Find</samp> control above.</p>
-    <p class="instructions">To view this page as intended, you  need a <strong>Devanagari font</strong>.  This page comes with a Noto Sans Devanagari webfont. Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system.  For transcriptions I recommend the excellent and free <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;item_id=DoulosSILfont">Doulos SIL font</a>. The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. (If there is no glyph and you want to see what it looks like, click on <samp>See in UniView</samp>.)</p>
-    <p class="instructions"><strong>Information about languages</strong> that use these characters is taken from the list maintained for the Character Use app. The list is not exhaustive.</p>
-<p class="instructions"><strong>References</strong> are indicated by superscript characters. Wherever possible, those contain direct links to the source material. When such a pointer is alongside an arrow → it means that it's worth following the link for the additional information it provides. Digits refer to the main sources, which are listed at the bottom of a set of notes.</p>
-<p class="instructions">When you are using UniView and you turn on <samp>Show notes</samp>, UniView will pull in information about characters from this page.</p>
-<p id="charliststr" class="instructions"></p>
+<summary class="instructions"><a href="../links?iso=Deva">Related pages</a>.</summary>
+</details>
 
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#charnotes">Other character notes</a>.</summary>
+</details>
+
+
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Devanagari','Hindi'); return false;">About this page</a></summary>
+<div id="about"></div>
+<p id="charliststr" class="instructions"></p>
 </details>
 </section>
 </div>
@@ -119,7 +124,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
 <div class="letter hindi">
   <p class="titlepara"><span class="title">Hindi</span> consonant</p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="hi">कोड</span> <span class="trans">kōɖ</span> <span class="ipa">koːd</span> <span class="meaning">code</span></span>.</p>
+<p>eg. <span class="eg" lang="hi">कोड</span>.</p>
 <p><span class="ipa">q</span> when followed by <span class="codepoint"><span lang="hi">&#x093C;</span> <a href="#char093C">[<span class="uname">U+093C DEVANAGARI SIGN NUKTA</span>]</a></span>. See <span class="codepoint"><span lang="hi">&#x0958;</span> <a href="#char0958">[<span class="uname">U+0958 DEVANAGARI LETTER QA</span>]</a></span>, but note that  Unicode NFC normalization produces the decomposed sequence. </p>
       </div>
     </div>
@@ -514,7 +519,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter hindi">
         <p class="titlepara"><span class="title">Hindi</span> consonant</p>
-      <p><span class="ipa">v</span> and <span class="ipa">w</span> are allophones that are both represented by this letter in Hindi. Compare <span class="charExample" translate="no"><span class="ex" lang="hi">व्रत</span> <span class="trans">ʋ͓rt</span> <span class="ipa">ʋrʌt</span> <span class="meaning">fast</span></span> and <span class="charExample" translate="no"><span class="ex" lang="hi">पकवान</span> <span class="trans">pkʋān</span> <span class="ipa">pakwaːn</span> <span class="meaning">food dish</span></span>. Native speakers tend to use the correct pronunciation without awareness of the difference. <a class="fnref" href="https://en.wikipedia.org/wiki/Devanagari#Allophony_of_'v'_and_'w'_in_Hindi">w</a></p>
+      <p><span class="ipa">v</span> and <span class="ipa">w</span> are allophones that are both represented by this letter in Hindi. Compare <span class="eg" lang="hi">व्रत</span> and <span class="eg" lang="hi">पकवान</span>. Native speakers tend to use the correct pronunciation without awareness of the difference. <a class="fnref" href="https://en.wikipedia.org/wiki/Devanagari#Allophony_of_'v'_and_'w'_in_Hindi">w</a></p>
 </div>
     </div>
   </div>
@@ -1325,7 +1330,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter hindi">
 <p class="titlepara"><span class="title">Hindi</span></p>
 <p><span class="codepoint" translate="no"><span lang="hi">&#x0901;</span> [<a href="devanagari#char0901"><span class="uname">U+0901 DEVANAGARI SIGN CANDRABINDU</span></a>]</span> nasalises the vowel in a syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">मुँह</span> <span class="trans">muŋ̽h</span> <span class="meaning">mouth</span></span>. Any vowel in Hindi can be nasalised in this way, except for the vocalics. <a class="fnref" href="refs">s</a></p>
-<p>When a vowel-sign rises above the head line, the glyph for this character may be simplified to  just a dot (which resembles the anusvara).<a class="fnref" href="refs"> s</a> It appears that this is normally achieved by using an anusvara instead of candrabindu, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">हैं</span> <span class="trans">hɛ̄m̽</span> <span class="ipa">ɦɛ̃</span> <span class="meaning">are</span></span>.</p>
+<p>When a vowel-sign rises above the head line, the glyph for this character may be simplified to  just a dot (which resembles the anusvara).<a class="fnref" href="refs"> s</a> It appears that this is normally achieved by using an anusvara instead of candrabindu, eg. <span class="eg" lang="hi">हैं</span>.</p>
 </div>
 </div>
   </div>
@@ -1337,8 +1342,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
 <div class="letter hindi">
 <p class="titlepara"><span class="title">Hindi</span> <span class="name">anusvara</span></p>
-        <p>Can represent a nasal that is homorganic with a following consonant that is the first letter in a conjunct. It is positioned over the previous consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">हिंदी</span> <span class="trans">him̽dī</span> <span class="ipa">hindiː</span> <span class="meaning">Hindi</span></span>.</p>
-        <p>Most words that use the anusvara can also be written using the consonant itself, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">हिन्दी</span> <span class="trans">hin͓dī</span></span>, although in some cases the anusvara form is more common. For example, <span class="charExample" translate="no"><span class="ex" lang="hi">पंजाब</span> <span class="trans">pm̽jāb</span> <span class="ipa">pañjāb</span> <span class="meaning">Punjab</span></span> is much more common than <span class="charExample" translate="no"><span class="ex" lang="hi">पञ्जाब</span> <span class="trans">pɲ͓jāb</span></span>.</p>
+        <p>Can represent a nasal that is homorganic with a following consonant that is the first letter in a conjunct. It is positioned over the previous consonant, eg. <span class="eg" lang="hi">हिंदी</span>.</p>
+        <p>Most words that use the anusvara can also be written using the consonant itself, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">हिन्दी</span> <span class="trans">hin͓dī</span></span>, although in some cases the anusvara form is more common. For example, <span class="eg" lang="hi">पंजाब</span> is much more common than <span class="charExample" translate="no"><span class="ex" lang="hi">पञ्जाब</span> <span class="trans">pɲ͓jāb</span></span>.</p>
       </div>
     </div>
   </div>
@@ -1823,6 +1828,82 @@ Cantillation marks (svara) for the Samaveda;cantillation;A8E0:A8F1
 Marks of nasalization;nasalization;A8F2-A8F7
 Editorial marks;editorial;A8F8-A8FB
   --> 
+
+
+
+
+
+
+
+
+<!--   EXTRACT VOCAB .  -->
+<!--span class="charExample" translate="no"><span class="ex" lang="th">ธรรม</span> <span class="trans">ṯ̇ʰṟṟm̱</span> <span class="ipa">tʰam</span> <span class="meaning">justice</span></span-->
+<p><button onClick="extractVocab('hi')">Extract vocab</button></p>
+<textarea id="vocabOut" placeholder="Set the language!"></textarea>
+<script>
+function extractVocab(lang) {
+	out = ''
+	nodes = document.querySelectorAll('.charExample')
+	console.log(nodes.length,' nodes')
+	for (i=0;i<nodes.length;i++) {
+		if (! nodes[i].querySelector('.ex')) {
+			console.log('No nativeStr',nodes[i])
+			continue
+			}
+		console.log(nodes[i].querySelector('.ex').lang)
+		if (nodes[i].querySelector('.ex').lang  !== lang) continue
+		nativeStr = nodes[i].querySelector('.ex').textContent
+		
+		trans = nodes[i].querySelectorAll('.trans')
+		if (trans.length == 0) continue
+		else if (trans.length > 1) transStr = trans[1].textContent
+		else transStr = ''
+		
+		ipa = nodes[i].querySelectorAll('.ipa')
+		if (ipa.length > 0) ipaStr = ipa[0].textContent
+		else ipaStr = ''
+
+		meaning = nodes[i].querySelectorAll('.meaning')
+		if (meaning.length > 0) meaningStr = meaning[0].textContent
+		else continue
+
+		if (ipaStr == '' && meaningStr == '') continue
+		
+		out += nativeStr + '|' + meaningStr
+		if (ipaStr) out += '|' + ipaStr
+		if (transStr) out += ' (' + transStr + ')'
+		out += '\n'
+		}
+	//document.getElementById('vocabOut').value = out
+	items = out.split('\n')
+	//charlist = items.sort()
+	const uniqueSet = new Set(items)
+	charlist = [...uniqueSet]
+	charlist.sort()
+	
+	document.getElementById('vocabOut').value = charlist.join('\n')
+	document.getElementById('vocabOut').select()
+	}
+</script>
+<p>Merge lists</p>
+<textarea id="sortedVocabOut" placeholder="Add lists here."></textarea>
+<p><button onClick="sortVocab()">Sort &amp; merge vocab</button></p>
+<textarea id="finalVocabList" placeholder="Final, sorted list."></textarea>
+<script>
+function sortVocab() {
+	items = document.getElementById('sortedVocabOut').value.split('\n')
+	const uniqueSet = new Set(items)
+	charlist = [...uniqueSet]
+	charlist.sort()
+	document.getElementById('finalVocabList').value = charlist.join('\n')
+	}
+</script>
+<!--    END OF VOCAB EXTRACTION CODE   -->
+
+
+
+
+
 
 <script>
 initialise('/scripts/devanagari/block','devanagari')
