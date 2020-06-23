@@ -81,7 +81,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->21 June, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->23 June, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -94,7 +94,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <p>The page also lists characters from the <a href="../../uniview/?block=combining_diacritical_marks" target="_blank">Combining Diacritical Marks</a> and <a href="../../uniview/?block=arabic" target="_blank">Arabic</a> blocks that are commonly used by languages using the Syriac script.</p>
 
-<p>Tamil has a fairly complicated set of rules and variations on pronunciation, and the writing system abstracts away from the detail. Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription. For example, the symbol <span class="ipa">a</span> represents a set of central sounds which may be written <span class="ipa">a</span>, <span class="ipa">ə</span>, or <span class="ipa">ʌ</span> in more detailed transcriptions.</p>
+<p> Phonetic transcriptions should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
 
 
@@ -307,6 +307,75 @@ replaceStuff('Tamil', 'tamil', spreadsheet, '', 'ta', '', cols, false)
 
 
 
+
+
+
+
+
+
+<!--   EXTRACT VOCAB .  -->
+<!--span class="charExample" translate="no"><span class="ex" lang="th">ธรรม</span> <span class="trans">ṯ̇ʰṟṟm̱</span> <span class="ipa">tʰam</span> <span class="meaning">justice</span></span-->
+<p><button onClick="extractVocab('ar')">Extract vocab</button></p>
+<textarea id="vocabOut" placeholder="Set the language!"></textarea>
+<script>
+function extractVocab(lang) {
+	out = ''
+	nodes = document.querySelectorAll('.charExample')
+	console.log(nodes.length,' nodes')
+	for (i=0;i<nodes.length;i++) {
+		if (! nodes[i].querySelector('.ex')) {
+			console.log('No nativeStr',nodes[i])
+			continue
+			}
+		console.log(nodes[i].querySelector('.ex').lang)
+		if (nodes[i].querySelector('.ex').lang  !== lang) continue
+		nativeStr = nodes[i].querySelector('.ex').textContent
+		
+		trans = nodes[i].querySelectorAll('.trans')
+		if (trans.length == 0) continue
+		else if (trans.length > 1) transStr = trans[1].textContent
+		else transStr = ''
+		
+		ipa = nodes[i].querySelectorAll('.ipa')
+		if (ipa.length > 0) ipaStr = ipa[0].textContent
+		else ipaStr = ''
+
+		meaning = nodes[i].querySelectorAll('.meaning')
+		if (meaning.length > 0) meaningStr = meaning[0].textContent
+		else continue
+
+		if (ipaStr == '' && meaningStr == '') continue
+		
+		out += nativeStr + '|' + meaningStr
+		if (ipaStr) out += '|' + ipaStr
+		if (transStr) out += ' (' + transStr + ')'
+		out += '\n'
+		}
+	//document.getElementById('vocabOut').value = out
+	items = out.split('\n')
+	//charlist = items.sort()
+	const uniqueSet = new Set(items)
+	charlist = [...uniqueSet]
+	charlist.sort()
+	
+	document.getElementById('vocabOut').value = charlist.join('\n')
+	document.getElementById('vocabOut').select()
+	}
+</script>
+<p>Merge lists</p>
+<textarea id="sortedVocabOut" placeholder="Add lists here."></textarea>
+<p><button onClick="sortVocab()">Sort &amp; merge vocab</button></p>
+<textarea id="finalVocabList" placeholder="Final, sorted list."></textarea>
+<script>
+function sortVocab() {
+	items = document.getElementById('sortedVocabOut').value.split('\n')
+	const uniqueSet = new Set(items)
+	charlist = [...uniqueSet]
+	charlist.sort()
+	document.getElementById('finalVocabList').value = charlist.join('\n')
+	}
+</script>
+<!--    END OF VOCAB EXTRACTION CODE   -->
 
 
 
