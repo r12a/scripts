@@ -19,9 +19,11 @@
 <script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
+<script src="../common/egcode.js"></script>
+<script src="examples.js"></script>
 
-<script type="text/javascript" src="../../uniview/descriptions.js"></script> 
-<script type="text/javascript" src="../../uniview/u.js"></script> 
+<script src="../../uniview/descriptions.js"></script> 
+<script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/lao.js"> </script>
 <script src="lo-translit.js">  </script>
@@ -38,7 +40,8 @@
 </header>
 <h1>Lao character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a></nav>
+<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
+
 
 <aside class="sidebar">
   <h2 class="notoc flush"><a id="tochead">Contents</a></h2>
@@ -74,7 +77,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->20 January, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->25 June, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -83,21 +86,27 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   <ul>
     <li><a href="../../uniview/?block=lao" target="_blank">Lao</a></li>
   </ul>
-  <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-  <p>For details about how the script works, see <a class="linkHighlight" href="index">Lao</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Laoo">Script links pages</a>.</p>
-<p><span style="text-align: start;">We have usage data for the following  language that uses the Lao script</span>: Lao.</p>
+  <p>See also the companion document, <a href="." class="linkHighlight">Lao</a>, for a summary of the Lao script and its use for the Lao language.</p>
 
-<p>Find <input type="text" id="findInput"
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+<p> Phonetic transcriptions should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
-<p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example. Click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
+
+
 <details>
-<summary class="instructions">Read more about how to use this page.</summary>
-    <p class="instructions">To <strong>find a character</strong> by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or the hex number in the <samp>Find</samp> control above.</p>
-    <p class="instructions">To view this page as intended, you  need a <strong>Lao font</strong>.  This page comes with Noto Sans Lao and Noto Serif Lao webfonts. Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system.  For transcriptions I recommend the excellent and free <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;item_id=DoulosSILfont">Doulos SIL font</a>. The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. (If there is no glyph and you want to see what it looks like, click on <samp>See in UniView</samp>.)</p>
-    <p class="instructions"><strong>Information about languages</strong> that use these characters is taken from the list maintained for the Character Use app. The list is not exhaustive.</p>
-<p class="instructions"><strong>References</strong> are indicated by superscript characters. Wherever possible, those contain direct links to the source material. When such a pointer is alongside an arrow → it means that it's worth following the link for the additional information it provides. Digits refer to the main sources, which are listed at the bottom of a set of notes.</p>
-<p class="instructions">When you are using UniView and you turn on <samp>Show notes</samp>, UniView will pull in information about characters from this page.</p>
+<summary class="instructions"><a href="../links?iso=Laoo">Related pages</a>.</summary>
+</details>
+
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#charnotes">Other character notes</a>.</summary>
+</details>
+
+
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Lao','Lao'); return false;">About this page</a></summary>
+<div id="about"></div>
 <p id="charliststr" class="instructions"></p>
 </details>
 </section>
@@ -117,7 +126,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
   
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo"> ກ ໄກ່ </span> <span class="transliteratedname trans">kɔː kāi</span></span> <span class="ipa">k</span></p>
-        <p>Same sound as initial and final, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ໄກ່</span> <span class="trans">aʲk̯¹</span> <span class="ipa">kāi</span> <span class="meaning">chicken</span></span>.</p>
+        <p>Same sound as initial and final, eg. <span class="eg" lang="lo">ໄກ່</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461, <a href="block#refs" target="_blank">Simmala</a> p52, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
 </div>
@@ -131,7 +140,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo"> ຂ ໄຂ່ </span> <span class="transliteratedname trans">kʰɔ̌ː kʰāi</span></span> <span class="ipa">kʰ, x</span></p>
-<p>Syllable-initial  only, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ໄຂ່</span> <span class="trans">aʲkʰ¹</span> <span class="ipa">kʰāi</span> <span class="meaning">egg</span></span></p>
+<p>Syllable-initial  only, eg. <span class="eg" lang="lo">ໄຂ່</span></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461, <a href="block#refs" target="_blank">Simmala</a> p100, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
 </div>
@@ -145,7 +154,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo"> ຄ ຄວາຢ </span> <span class="transliteratedname trans">kʰɔ́ː kʷʰáːj</span></span> <span class="ipa">kʰ, x</span></p>
-<p>Syllable-initial  only, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ຄວາຢ</span> <span class="trans">ḵʰw̱āy̯</span> <span class="ipa">kʷʰáːj</span> <span class="meaning">water buffalo</span></span>.</p>
+<p>Syllable-initial  only, eg. <span class="eg" lang="lo">ຄວາຢ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461, <a href="block#refs" target="_blank">Simmala</a> p123, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
 </div>
@@ -159,7 +168,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo">ງ ງົວ</span> ŋɔ́ː <span class="transliteratedname trans">ŋúə</span></span> <span class="ipa">ŋ</span></p>
-<p>Same sound as both initial and final, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ງົວ</span> <span class="trans">ŋ̱ow̱</span> <span class="ipa">ŋúə</span> <span class="meaning">snake</span></span>.</p>
+<p>Same sound as both initial and final, eg. <span class="eg" lang="lo">ງົວ</span>.</p>
 <p>A preceding silent h <span class='ex' lang='lo'  xml:lang='lo'>ຫງ</span> changes the default tone to high.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461, <a href="block#refs" target="_blank">Simmala</a> p52, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
@@ -174,7 +183,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo"> ຈ ຈອກ <span class="transliteratedname trans">tɕ</span>ɔ̀ː </span> <span class="transliteratedname trans">tɕɔ̏ːk</span></span> <span class="ipa">tɕ</span></p>
-<p>Syllable-initial  only, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ຈອກ</span> <span class="trans">cʔk̯</span> <span class="ipa">tɕɔ̏ːk</span> <span class="meaning">glass</span></span>.</p>
+<p>Syllable-initial  only, eg. <span class="eg" lang="lo">ຈອກ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461, <a href="block#refs" target="_blank">Simmala</a> p29, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
 </div>
@@ -188,7 +197,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo"> ຍ ຍຸງ </span> <span class="transliteratedname trans">ɲɔ́ː ɲúŋ</span></span> <span class="ipa">ɲ, -j</span></p>
-<p><span class="ipa">ɲ</span> initially; <span class='ipa'>j</span> finally, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ຍຸງ</span> <span class="trans">ɲ̱uŋ̱</span> <span class="ipa">ɲúŋ</span> <span class="meaning">mosquito</span></span>. </p>
+<p><span class="ipa">ɲ</span> initially; <span class='ipa'>j</span> finally, eg. <span class="eg" lang="lo">ຍຸງ</span>. </p>
 <p>A preceding silent h <span class='ex' lang='lo'  xml:lang='lo'>ຫຍ</span> changes the default tone to high.</p>
 <p>Used as a component in the following vowels:</p>
 <p><span class='ipa'>ia</span> <span class='ex' lang='lo'  xml:lang='lo'>ເ-ັຍະ</span> and <span class='ex' lang='lo'  xml:lang='lo'>ເ-ັຍ</span></p>
@@ -215,7 +224,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo">ຕ ຕາ</span> <span class="transliteratedname trans">tɔ̀ː tàː</span></span> <span class="ipa">t</span></p>
-<p>Syllable-initial  only, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ຕາ</span> <span class="trans">t̯ā</span> <span class="ipa">tàː</span> <span class="meaning">eye</span></span>.</p>
+<p>Syllable-initial  only, eg. <span class="eg" lang="lo">ຕາ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461, <a href="block#refs" target="_blank">Simmala</a> p29, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
 </div>
@@ -229,7 +238,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo">ຖ ຖົງ</span> tʰɔ̌ː <span class="transliteratedname trans">tʰǒŋ</span></span> <span class="ipa">tʰ</span></p>
-<p>Syllable-initial  only, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ຖົງ</span> <span class="trans">tʰoŋ̱</span> <span class="ipa">tʰǒŋ</span> <span class="meaning">stocking</span></span>.</p>
+<p>Syllable-initial  only, eg. <span class="eg" lang="lo">ຖົງ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461, <a href="block#refs" target="_blank">Simmala</a> p100, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
 </div>
@@ -243,7 +252,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo">ທ ທຸງ</span> <span class="transliteratedname trans"> tʰɔ́ː tʰúŋ</span></span> <span class="ipa">tʰ</span></p>
-<p>Syllable-initial  only, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ທຸງ</span> <span class="trans">ṯʰuŋ̱</span> <span class="ipa">tʰúŋ</span> <span class="meaning">flag</span></span>.</p>
+<p>Syllable-initial  only, eg. <span class="eg" lang="lo">ທຸງ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461, <a href="block#refs" target="_blank">Simmala</a> p123, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
 </div>
@@ -257,7 +266,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo"> ດ ເດັກ </span> <span class="transliteratedname trans">dɔ̀ː dék</span></span> <span class="ipa">d, -t</span></p>
-<p><span class="ipa">d</span> initially; <span class='ipa'>t</span> finally, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ເດັກ</span> <span class="trans">ēd̯äk̯</span> <span class="ipa">dék</span> <span class="meaning">child</span></span>.</p>
+<p><span class="ipa">d</span> initially; <span class='ipa'>t</span> finally, eg. <span class="eg" lang="lo">ເດັກ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461, <a href="block#refs" target="_blank">Simmala</a> p29, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
 </div>
@@ -271,7 +280,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo">ນ ນົກ</span> <span class="transliteratedname trans">nɔ́ː nōk</span></span> <span class="ipa">n</span></p>
-<p>Same sound as initial and final, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ນົກ</span> <span class="trans">ṉok̯</span> <span class="ipa">nōk</span> <span class="meaning">bird</span></span>.</p>
+<p>Same sound as initial and final, eg. <span class="eg" lang="lo">ນົກ</span>.</p>
 <p>A preceding silent h <span class='ex' lang='lo'  xml:lang='lo'>ຫນ</span> changes the default tone to high.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461, <a href="block#refs" target="_blank">Simmala</a> p123, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
@@ -286,7 +295,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo">ປ ປາ</span> <span class="transliteratedname trans">pɔ̀ː paː</span></span> <span class="ipa">p</span></p>
-<p>Syllable-initial  only, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ປາ</span> <span class="trans">p̯ā</span> <span class="ipa">paː</span> <span class="meaning">fish</span></span>.</p>
+<p>Syllable-initial  only, eg. <span class="eg" lang="lo">ປາ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461, <a href="block#refs" target="_blank">Simmala</a> p29, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
 </div>
@@ -300,7 +309,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo">ຜ ເຜິ້ງ</span> pʰɔ̌ː <span class="transliteratedname trans">pʰɤ̏ŋ</span></span> <span class="ipa">pʰ</span></p>
-<p>Syllable-initial  only, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ເຜິ້ງ</span> <span class="trans">ēpʰi²ŋ̱</span> <span class="ipa">pʰɤ̏ŋ</span> <span class="meaning">bee</span></span>.</p>
+<p>Syllable-initial  only, eg. <span class="eg" lang="lo">ເຜິ້ງ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461, <a href="block#refs" target="_blank">Simmala</a> p100, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
 </div>
@@ -314,7 +323,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo">ພ ພູ</span> <span class="transliteratedname trans">pʰɔ́ː pʰúː</span></span> <span class="ipa">pʰ</span></p>
-<p>Syllable-initial  only, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ພູ</span> <span class="trans">p̱ʰū</span> <span class="ipa">pʰúː</span> <span class="meaning">mountain</span></span>.</p>
+<p>Syllable-initial  only, eg. <span class="eg" lang="lo">ພູ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461, <a href="block#refs" target="_blank">Simmala</a> p123, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
 </div>
@@ -328,7 +337,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo">ບ ແບ້</span> <span class="transliteratedname trans">bɔ̀ː bɛ̑ː</span></span> <span class="ipa">b, -p</span></p>
-<p><span class="ipa">b</span> initially; <span class='ipa'>p</span> finally, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ແບ້</span> <span class="trans">ɛ̄b̯²</span> <span class="ipa">bɛ̑ː</span> <span class="meaning">goat</span></span>.</p>
+<p><span class="ipa">b</span> initially; <span class='ipa'>p</span> finally, eg. <span class="eg" lang="lo">ແບ້</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461, <a href="block#refs" target="_blank">Simmala</a> p29, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
 </div>
@@ -342,7 +351,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo">ມ ແມວ</span> <span class="transliteratedname trans">mɔ́ː mɛ́ːw</span></span> <span class="ipa">m</span></p>
-<p>Same sound as initial and final, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ແມວ</span> <span class="trans">ɛ̄m̱w̱</span> <span class="ipa">mɛ́ːw</span> <span class="meaning">cat</span></span>.</p>
+<p>Same sound as initial and final, eg. <span class="eg" lang="lo">ແມວ</span>.</p>
 <p>A preceding silent h <span class='ex' lang='lo'  xml:lang='lo'>ຫມ</span> changes the default tone to high.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461, <a href="block#refs" target="_blank">Simmala</a> p123, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
@@ -357,7 +366,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo">ລ ລີງ</span> lɔ́ː <span class="transliteratedname trans">líːŋ</span></span> <span class="ipa">l</span></p>
-<p><span class="ipa">l</span> initially; <span class='ipa'>n</span> finally, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ລີງ</span> <span class="trans">ḻīŋ̱</span> <span class="ipa">líːŋ</span> <span class="meaning">monkey</span></span>.</p>
+<p><span class="ipa">l</span> initially; <span class='ipa'>n</span> finally, eg. <span class="eg" lang="lo">ລີງ</span>.</p>
 <p>A preceding silent h <span class='ex' lang='lo'  xml:lang='lo'>ຫລ</span> changes the default tone to high.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461, <a href="block#refs" target="_blank">Simmala</a> p123, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
@@ -372,7 +381,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo">ຢ ຢາ</span> <span class="transliteratedname trans">jɔ̀ː jaː</span></span> <span class="ipa">j</span></p>
-<p>Same sound as initial and final, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ຢາ</span> <span class="trans">y̯ā</span> <span class="ipa">jaː</span> <span class="meaning">medecine</span></span>.</p>
+<p>Same sound as initial and final, eg. <span class="eg" lang="lo">ຢາ</span>.</p>
 <p>A conjunct form related etymologically to the Thai <span class='ex' lang='th'  xml:lang='th'>อย</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461, <a href="block#refs" target="_blank">Simmala</a> p29, 176, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
@@ -389,7 +398,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo">ຣະຄັງ</span> <span class="transliteratedname trans">rākʰáŋ</span></span> <span class="ipa">r, l, -n</span></p>
-<p><span class="ipa">r, l</span> as initial, <span class="ipa">-n</span> as final, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ຣະຄັງ</span> <span class="trans">ṟaḵʰäŋ̱</span> <span class="ipa">rākʰáŋ</span> <span class="meaning">bell</span></span>.</p>
+<p><span class="ipa">r, l</span> as initial, <span class="ipa">-n</span> as final, eg. <span class="eg" lang="lo">ຣະຄັງ</span>.</p>
 <p>Officially removed from the alphabet by the Ministry of Education, it is still used occasionally to transliterate Indic or other foreign words into Lao, eg. <span class='ex' lang='lo'  xml:lang='lo'>ຝຣັ່ງ</span> <span class='ipa'>flaŋ</span> <span class='meaning'>foreigner</span>.  It is generally used to represent the letter 'r': the sound <span class='ipa'>r</span> no longer exists in Lao.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461-2, <a href="block#refs" target="_blank">Simmala</a> p248, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
@@ -405,7 +414,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo">ວ ວີ</span> vɔ́ː <span class="transliteratedname trans">víː</span></span> <span class="ipa">ʋ, w, -w</span></p>
 <p>A preceding silent h <span class='ex' lang='lo'  xml:lang='lo'>ຫວ</span> changes the default tone to high.</p>
-<p><span class="ipa">v</span> as an initial consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ວີ</span> <span class="trans">w̱ī</span> <span class="ipa">víː</span> <span class="meaning">fan</span></span>.</p>
+<p><span class="ipa">v</span> as an initial consonant, eg. <span class="eg" lang="lo">ວີ</span>.</p>
 <p><span class="ipa">uːə</span> when used alone as a vowel.</p>
 <p>Used as a component in the following vowels:</p>
         <p><span class='ipa'>ua</span> <span class='ex' lang='lo'  xml:lang='lo'>-ົວະ</span> or <span class='ex' lang='lo'  xml:lang='lo'>-ົວ</span></p>
@@ -430,7 +439,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo">ຫ ຫ່ານ</span> <span class="transliteratedname trans">hɔ̌ː hāːn</span></span> <span class="ipa">h</span></p>
-<p>Syllable-initial  only, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ຫ່ານ</span> <span class="trans">h¹āṉ</span> <span class="ipa">hāːn</span> <span class="meaning">goose</span></span>.</p>
+<p>Syllable-initial  only, eg. <span class="eg" lang="lo">ຫ່ານ</span>.</p>
 <p>This is used (silently) before the following initial consonants to change their default tone value: <span class='ex' lang='lo'  xml:lang='lo'>ລມນງຍວ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461, <a href="block#refs" target="_blank">Simmala</a> p100, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
@@ -445,7 +454,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo">ຮ ເຮືອນ</span> <span class="transliteratedname trans">hɔ́ː hɯ́ːən</span></span> <span class="ipa">h</span></p>
-<p>Syllable-initial  only, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ເຮືອນ</span> <span class="trans">ēẖɯ̄ʔṉ</span> <span class="ipa">hɯ́ːən</span> <span class="meaning">house</span></span>.</p>
+<p>Syllable-initial  only, eg. <span class="eg" lang="lo">ເຮືອນ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461, <a href="block#refs" target="_blank">Simmala</a> p123, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
 </div>
@@ -459,7 +468,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo">ສ ເສືອ</span> <span class="transliteratedname trans">sɔ̌ː sɯ̌ːə</span></span> <span class="ipa">s</span></p>
-<p>Syllable-initial  only, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ເສືອ</span> <span class="trans">ēsɯ̄ʔ</span> <span class="ipa">sɯ̌ːə</span> <span class="meaning">tiger</span></span>.</p>
+<p>Syllable-initial  only, eg. <span class="eg" lang="lo">ເສືອ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461, <a href="block#refs" target="_blank">Simmala</a> p100, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
 </div>
@@ -473,7 +482,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo">ຊ ຊ້າງ</span> <span class="transliteratedname trans">sɔ́ː sâːŋ</span></span> <span class="ipa">s</span></p>
-<p>Syllable-initial  only, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ຊ້າງ</span> <span class="trans">s̱²āŋ̱</span> <span class="ipa">sâːŋ</span> <span class="meaning">elephant</span></span>.</p>
+<p>Syllable-initial  only, eg. <span class="eg" lang="lo">ຊ້າງ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461, <a href="block#refs" target="_blank">Simmala</a> p123, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
 </div>
@@ -489,7 +498,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo">ຝ ຝົນ</span> <span class="transliteratedname trans"> fɔ̌ː fǒn</span></span> <span class="ipa">f</span></p>
-<p>Syllable-initial  only, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ຝົນ</span> <span class="trans">foṉ</span> <span class="ipa">fǒn</span> <span class="meaning">rain</span></span>.</p>
+<p>Syllable-initial  only, eg. <span class="eg" lang="lo">ຝົນ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461, <a href="block#refs" target="_blank">Simmala</a> p100, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
 </div>
@@ -505,7 +514,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo"> ຟ ໄຟ fɔ́ː </span> <span class="transliteratedname trans">fáj</span></span> <span class="ipa">f</span></p>
-<p>Syllable-initial  only, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ໄຟ</span> <span class="trans">aʲf̱</span> <span class="ipa">fáj</span> <span class="meaning">fire</span></span>.</p>
+<p>Syllable-initial  only, eg. <span class="eg" lang="lo">ໄຟ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p461, <a href="block#refs" target="_blank">Simmala</a> p123, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
 </div>
@@ -519,8 +528,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo">ອ ໂອ</span> <span class="transliteratedname trans">ɔ̀ː ʔòː</span></span> <span class="ipa">ʔ</span>      </p>
-<p>Used to support vowels when there is no syllable initial consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ໂອ</span> <span class="trans">ōʔ</span> <span class="ipa">ʔòː</span> <span class="meaning">bowl</span></span>.</p>
-<p><span class="ipa">ɔː</span> when used alone as a vowel in a closed syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ຈອກ</span> <span class="trans">cʔk̯</span> <span class="ipa">tɕɔ̏ːk</span> <span class="meaning">glass</span></span>.</p>
+<p>Used to support vowels when there is no syllable initial consonant, eg. <span class="eg" lang="lo">ໂອ</span>.</p>
+<p><span class="ipa">ɔː</span> when used alone as a vowel in a closed syllable, eg. <span class="eg" lang="lo">ຈອກ</span>.</p>
       <p>Also used as a component in the following vowels:</p>
       <p><span class='ipa'>oːj</span> <span class='ex' lang='lo'  xml:lang='lo'>-ັອ-</span></p>
 <p><span class='ipa'>ɔːj</span> <span class='ex' lang='lo'  xml:lang='lo'>-ອຍ</span></p>
@@ -657,7 +666,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo"></span> <span class="transliteratedname trans"></span></span> <span class="ipa">aʔ, a</span></p>
-<p><span class="ipa">-a</span> in open syllables (cf. &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="lo">&#x0EB1;</span> [<a href="/scripts/lao/block#char0EB1"><span class="uname">U+0EB1 LAO VOWEL SIGN MAI KAN</span></a>]</span>), eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ລະດັບ</span> <span class="trans">ḻad̯äb̯</span> <span class="meaning">level</span></span>.</p>
+<p><span class="ipa">-a</span> in open syllables (cf. &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="lo">&#x0EB1;</span> [<a href="/scripts/lao/block#char0EB1"><span class="uname">U+0EB1 LAO VOWEL SIGN MAI KAN</span></a>]</span>), eg. <span class="eg" lang="lo">ລະດັບ</span>.</p>
 <p>Also used as an indication of shortness in the following syllable-final short vowels:</p>
 <p><span class="ipa">-e</span> <span class='ex' lang='lo'  xml:lang='lo'>ເ-ະ</span></p>
 <p><span class="ipa">-ɛ</span> <span class='ex' lang='lo'  xml:lang='lo'>ແ-ະ</span></p>
@@ -678,7 +687,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo">ໄມ້ກັນ</span> <span class="transliteratedname trans">mâj kàn</span></span> <span class="ipa">aʔ, a</span></p>
-<p><span class="ipa">-a-</span> in closed syllables (cf. <span class="codepoint" translate="no"><span lang="lo">&#x0EB0;</span> [<a href="/scripts/lao/block#char0EB0"><span class="uname">U+0EB0 LAO VOWEL SIGN A</span></a>]</span>), eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ລະດັບ</span> <span class="trans">ḻad̯äb̯</span> <span class="meaning">level</span></span>.</p>
+<p><span class="ipa">-a-</span> in closed syllables (cf. <span class="codepoint" translate="no"><span lang="lo">&#x0EB0;</span> [<a href="/scripts/lao/block#char0EB0"><span class="uname">U+0EB0 LAO VOWEL SIGN A</span></a>]</span>), eg. <span class="eg" lang="lo">ລະດັບ</span>.</p>
 <p>Also a component in the following vowels:</p>
 <p><span class="ipa">-e-</span> <span class='ex' lang='lo'  xml:lang='lo'>ເ-ັ-</span> (short)</p>
 <p><span class="ipa">-ɛ-</span> <span class='ex' lang='lo'  xml:lang='lo'>ແ-ັ-</span> (short)</p>
@@ -700,7 +709,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo"></span> <span class="transliteratedname trans"></span></span> <span class="ipa">aː</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ສາມ</span> <span class="trans">sām̱</span> <span class="ipa">sam</span> <span class="meaning">three</span></span>.</p>
+<p>eg. <span class="eg" lang="lo">ສາມ</span>.</p>
         <p>Also used in the following vowels:</p>
         <p><span class="ipa">aw</span> <span class='ex' lang='lo'  xml:lang='lo'>ເ-ົາ</span></p>
         <p><span class="ipa">aːj</span> <span class='ex' lang='lo'  xml:lang='lo'>-າຍ</span></p>
@@ -1006,7 +1015,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <div class="letter lao">
 <p class="titlepara"><span class="title">Lao</span> <span class="name"><span class="localname" dir="ltr" lang="lo"></span> <span class="transliteratedname trans"></span></span> <span class="ipa">n</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="lo">ໜຶ່ງ</span> <span class="trans">nɯ¹ŋ̱</span> <span class="ipa">nueng</span> <span class="meaning">one</span></span>.</p>
+<p>eg. <span class="eg" lang="lo">ໜຶ່ງ</span>.</p>
 <p>A ligature representing <span class="codepoint" translate="no"><span lang="lo">&#x0EAB;</span> + <span lang="lo">&#x0E99;</span> [<a href="/scripts/lao/block#char0EAB"><span class="uname">U+0EAB LAO LETTER HO SUNG</span></a> + <a href="/scripts/lao/block#char0E99"><span class="uname">U+0E99 LAO LETTER NO</span></a>]</span>.  This sequence changes the consonant class of the latter to high. The sequence can also be written <span class='ex' lang='lo'  xml:lang='lo'>ຫນ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="block#refs" target="_blank">Daniels</a> p462, <a href="block#refs" target="_blank">Simmala</a> p176, <a href="https://en.wikipedia.org/wiki/Lao_alphabet" target="_blank">Wikipedia</a> </p>
@@ -1234,5 +1243,5 @@ Shan symbols;shans;109E-109F
 initialise('/scripts/lao/block','lao')
 autoTransliterate('lo')
 </script>
-</body>
+
 </html>
