@@ -19,6 +19,8 @@
 <script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
+<script src="../common/egcode.js"></script>
+<script src="examples.js"></script>
 
 <script src="../../uniview/descriptions.js"></script> 
 <script src="../../uniview/u.js"></script> 
@@ -38,7 +40,8 @@
 </header>
 <h1>Tibetan character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a></nav>
+<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
+
 
 <aside class="sidebar">
   <nav>
@@ -74,7 +77,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->20 January, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->25 June, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -84,21 +87,26 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   <ul>
     <li><a href="../../uniview/?block=tibetan" target="_blank">Tibetan</a></li>
   </ul>
-  <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-  <p>For details about how the script works, see the <a class="linkHighlight" href="index">Tibetan</a> summary.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Tibt">Script links pages</a>.</p>
-<p><span style="text-align: start;">We have usage data for the following 2 languages that use the Cyrillic script</span>: Tibetan, Dzongkha.</p>
+<p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
-<p>Find <input type="text" id="findInput"
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
 
-<p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example. Click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
+
+
 <details>
-<summary class="instructions">Read more about how to use this page.</summary>
-    <p class="instructions">To <strong>find a character</strong> by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or the hex number in the <samp>Find</samp> control above.</p>
-    <p class="instructions">To view this page as intended, you  need a <strong>Tibetan font</strong>.  This page comes with a Noto Sans Tibetan webfont. Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system.  For transcriptions I recommend the excellent and free <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;item_id=DoulosSILfont">Doulos SIL font</a>. The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. (If there is no glyph and you want to see what it looks like, click on <samp>See in UniView</samp>.)</p>
-    <p class="instructions"><strong>Information about languages</strong> that use these characters is taken from the list maintained for the Character Use app. The list is not exhaustive.</p>
-<p class="instructions"><strong>References</strong> are indicated by superscript characters. Wherever possible, those contain direct links to the source material. When such a pointer is alongside an arrow → it means that it's worth following the link for the additional information it provides. Digits refer to the main sources, which are listed at the bottom of a set of notes.</p>
-<p class="instructions">When you are using UniView and you turn on <samp>Show notes</samp>, UniView will pull in information about characters from this page.</p>
+<summary class="instructions"><a href="../links?iso=Tibt">Related pages</a>.</summary>
+</details>
+
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
+</details>
+
+
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Tibetan','Tibetan'); return false;">About this page</a></summary>
+<div id="about"></div>
 <p id="charliststr" class="instructions"></p>
 </details>
 </section>
@@ -138,7 +146,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter tibetan">
         <p class="titlepara"><span class="title">Tibetan</span> consonant</p>
-        <p><span class="ipa">ká</span>, eg, <span class="charExample" translate="no"><span class="ex" lang="bo">དཀར་པོ་</span> <span class="trans">dkar-po</span> <span class="ipa">karpo</span> <span class="meaning">white</span></span>.</p>
+        <p><span class="ipa">ká</span>, eg, <span class="eg" lang="bo">དཀར་པོ་</span>.</p>
         <p>Used with subscripts, <span class="ex" lang="bo">ཀྱ</span> <span class="ipa">kja</span>, <span class="ex" lang="bo">ཀྲ</span> <span class="ipa">tra</span>, <span class="ex" lang="bo">ཀླ</span> <span class="ipa">la</span>, <span class="ex" lang="bo">སྐ</span> <span class="ipa">ka</span>.</p>
         <p>Subjoined form is <span class="codepoint"><span lang="bo">&#xA0;&#xA0;&#x0F90;</span> <a href="#char0F90">[<span class="uname">U+0F90 TIBETAN SUBJOINED LETTER KA</span>]</a></span>.</p>
       </div>
@@ -154,7 +162,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter tibetan">
         <p class="titlepara"><span class="title">Tibetan</span> consonant</p>
-        <p><span class="ipa">kʰá</span> eg. <span class="charExample" translate="no"><span class="ex" lang="bo">ཁ་ཁེབ་</span> <span class="trans">kha-kheb</span> <span class="ipa">kʰa-kʰep</span> <span class="meaning">cover</span></span>.</p>
+        <p><span class="ipa">kʰá</span> eg. <span class="eg" lang="bo">ཁ་ཁེབ་</span>.</p>
         <p>Used with subscripts, <span class="ex" lang="bo">ཁྱ</span> <span class="ipa">kʰja</span>, <span class="ex" lang="bo">ཁྲ</span> <span class="ipa">tʰra</span>, <span class="ex" lang="bo">ཁྭ</span> <span class="ipa">ka</span>.</p>
         <p>Subjoined form is <span class="codepoint"><span lang="bo">&#xA0;&#xA0;&#x0F91;</span> <a href="#char0F91">[<span class="uname">U+0F91 TIBETAN SUBJOINED LETTER KHA</span>]</a></span>.</p>
       </div>
@@ -172,7 +180,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         <p class="titlepara"><span class="title">Tibetan</span> consonant</p>
         <p><span class="ipa">kà</span>, <span class="ipa">kʰà</span></p>
         <p>Used as a prefix with 11 consonants.</p>
-        <p><span class="ipa">g</span> when used as a suffix, eg. <span class="charExample" translate="no"><span class="ex" lang="bo">དག་</span> <span class="trans">dag</span> <span class="ipa">dag</span> <span class="meaning">I</span></span>.</p>
+        <p><span class="ipa">g</span> when used as a suffix, eg. <span class="eg" lang="bo">དག་</span>.</p>
         <p>Used with subscripts, <span class="ex" lang="bo">གྱ</span> <span class="ipa">gja</span>, <span class="ex" lang="bo">གྲ</span> <span class="ipa">dra</span>, <span class="ex" lang="bo">བླ</span> <span class="ipa">la</span>, <span class="ex" lang="bo">གྭ</span> <span class="ipa">ga</span>.</p>
         <p>Subjoined form is <span class="codepoint"><span lang="bo">&#xA0;&#x0F92;</span> <a href="#char0F92">[<span class="uname">U+0F92 TIBETAN SUBJOINED LETTER GA</span>]</a></span>.</p>
       </div>
@@ -283,7 +291,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter tibetan">
         <p class="titlepara"><span class="title">Tibetan</span> consonant</p>
-        <p>Used for transcribing other languages, and also to distinguish foreign loan words from sequences of Tibetan syllables,  eg. <span class="charExample" translate="no"><span class="ex" lang="bo">མོ་ཊ་</span> <span class="trans">mo-ṭa</span> <span class="ipa">mo-ta</span> <span class="meaning">car</span></span>.</p>
+        <p>Used for transcribing other languages, and also to distinguish foreign loan words from sequences of Tibetan syllables,  eg. <span class="eg" lang="bo">མོ་ཊ་</span>.</p>
         <p>The shape is a reversed version of <span class="codepoint"><span lang="bo">&#x0F4F;</span> <a href="#char0F4F">[<span class="uname">U+0F4F TIBETAN LETTER TA</span>]</a></span>.</p>
         <p>Subjoined form is <span class="codepoint"><span lang="bo">&#xA0;&#x0F9A;</span> <a href="#char0F9A">[<span class="uname">U+0F9A TIBETAN SUBJOINED LETTER TTA</span>]</a></span>.</p>
       </div>
@@ -315,7 +323,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter tibetan">
         <p class="titlepara"><span class="title">Tibetan</span> consonant</p>
-        <p>Used for transcribing other languages, and also to distinguish foreign loan words from sequences of Tibetan syllables,  eg. <span class="charExample" translate="no"><span class="ex" lang="bo"> ཁ་ཎ་ཌ་</span> <span class="trans">kha-ṇa-ḍa</span> (<span class="trans">kha-ṇa-ḍa</span>) <span class="ipa">Canada</span></span>.</p>
+        <p>Used for transcribing other languages, and also to distinguish foreign loan words from sequences of Tibetan syllables,  eg. <span class="eg" lang="bo">ཁ་ཎ་ཌ་</span>.</p>
         <p>The shape is a reversed version of <span class="codepoint"><span lang="bo">&#x0F51;</span> <a href="#char0F51">[<span class="uname">U+0F51 TIBETAN LETTER DA</span>]</a></span>.</p>
         <p>Subjoined form is <span class="codepoint"><span lang="bo">&#xA0;&#x0F9C;</span> <a href="#char0F9C">[<span class="uname">U+0F9C TIBETAN SUBJOINED LETTER DDA</span>]</a></span>.</p>
       </div>
@@ -348,7 +356,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter tibetan">
         <p class="titlepara"><span class="title">Tibetan</span> consonant</p>
-        <p>Used for transcribing other languages, and also to distinguish foreign loan words from sequences of Tibetan syllables,  eg. <span class="charExample" translate="no"><span class="ex" lang="bo"> ཁ་ཎ་ཌ་</span> <span class="trans">kha-ṇa-ḍa</span> (<span class="trans">kha-ṇa-ḍa</span>) <span class="ipa">Canada</span></span>.</p>
+        <p>Used for transcribing other languages, and also to distinguish foreign loan words from sequences of Tibetan syllables,  eg. <span class="eg" lang="bo">ཁ་ཎ་ཌ་</span>.</p>
         <p>The shape is a reversed version of <span class="codepoint"><span lang="bo">&#x0F53;</span> <a href="#char0F53">[<span class="uname">U+0F53 TIBETAN LETTER NA</span>]</a></span>.</p>
         <p>Subjoined form is <span class="codepoint"><span lang="bo">&#xA0;&#x0F9E;</span> <a href="#char0F9E">[<span class="uname">U+0F9E TIBETAN SUBJOINED LETTER NNA</span>]</a></span>.</p>
       </div>
@@ -397,9 +405,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       <div class="letter tibetan">
         <p class="titlepara"><span class="title">Tibetan</span> consonant</p>
         <p><span class="ipa">tá</span>, <span class="ipa">tʰá</span></p>
-        <p>Used as a prefix with 6 consonants, eg. <span class="charExample" translate="no"><span class="ex" lang="bo">དགའ་</span> <span class="trans">dga</span> <span class="ipa">gà</span> <span class="meaning">virtue</span></span>.</p>
-        <p>Modifies the root vowel when used as a suffix, eg. <span class="charExample" translate="no"><span class="ex" lang="bo">བསད་</span> <span class="trans">bsad</span> <span class="ipa">sɛ́</span> <span class="meaning">killed</span></span>.</p>
-        <p>Until the 19th century, was used as a silent secondary suffix, but not officially in modern Tibetan, eg. <span class="charExample" translate="no"><span class="ex" lang="bo">གྱུརད་</span> <span class="trans">gyurd</span> <span class="ipa">kjùr</span> <span class="meaning">became</span></span>.</p>
+        <p>Used as a prefix with 6 consonants, eg. <span class="eg" lang="bo">དགའ་</span>.</p>
+        <p>Modifies the root vowel when used as a suffix, eg. <span class="eg" lang="bo">བསད་</span>.</p>
+        <p>Until the 19th century, was used as a silent secondary suffix, but not officially in modern Tibetan, eg. <span class="eg" lang="bo">གྱུརད་</span>.</p>
         <p>Used with subscripts, <span class="ex" lang="bo">དྲ</span> <span class="ipa">dra</span>, <span class="ex" lang="bo">དྭ</span> <span class="ipa">da</span>.</p>
         <p>Subjoined form is <span class="codepoint"><span lang="bo">&#xA0;&#x0FA1;</span> <a href="#char0FA1">[<span class="uname">U+0FA1 TIBETAN SUBJOINED LETTER DA</span>]</a></span>.</p>
       </div>
@@ -432,7 +440,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       <div class="letter tibetan">
         <p class="titlepara"><span class="title">Tibetan</span> consonant</p>
         <p><span class="ipa">nà</span></p>
-        <p><span class="ipa">n</span> when used as a suffix, but it also modifies the root vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="bo">བདུན་</span> <span class="trans">bdun</span> <span class="ipa">dỳn</span> <span class="meaning">seven</span></span>.</p>
+        <p><span class="ipa">n</span> when used as a suffix, but it also modifies the root vowel, eg. <span class="eg" lang="bo">བདུན་</span>.</p>
         <p>Used with subscript <span class="ex" lang="bo">ནྲ</span> <span class="ipa">na</span>.</p>
         <p>Subjoined form is <span class="codepoint"><span lang="bo">&#xA0;&#x0FA3;</span> <a href="#char0FA3">[<span class="uname">U+0FA3 TIBETAN SUBJOINED LETTER NA</span>]</a></span>.</p>
       </div>
@@ -449,7 +457,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       <div class="letter tibetan">
         <p class="titlepara"><span class="title">Tibetan</span> consonant</p>
         <p><span class="ipa">pá</span></p>
-        <p>Used with subscripts, <span class="ex" lang="bo">པྱ</span> <span class="ipa">cja</span>, <span class="ex" lang="bo">པྲ</span> <span class="ipa">tra</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bo">སྤྱིར་</span> <span class="trans">spyir</span> <span class="ipa">ʧí</span> <span class="meaning">general</span></span>.</p>
+        <p>Used with subscripts, <span class="ex" lang="bo">པྱ</span> <span class="ipa">cja</span>, <span class="ex" lang="bo">པྲ</span> <span class="ipa">tra</span>, eg. <span class="eg" lang="bo">སྤྱིར་</span>.</p>
         <p>Subjoined form is <span class="codepoint"><span lang="bo">&#xA0;&#x0FA4;</span> <a href="#char0FA4">[<span class="uname">U+0FA4 TIBETAN SUBJOINED LETTER PA</span>]</a></span>.</p>
       </div>
         <p class="ref">Refs: <a href="#danielsref">Daniels, p431-436</a></p>
@@ -482,7 +490,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         <p class="titlepara"><span class="title">Tibetan</span> consonant</p>
         <p><span class="ipa">pà</span>, <span class="ipa">pʰà</span></p>
         <p>Used as a prefix before 10 consonants.</p>
-        <p><span class="ipa">b</span> when used as a suffix, eg. <span class="charExample" translate="no"><span class="ex" lang="bo">བསྒྲུབས་</span> <span class="trans">bsgrubs</span> <span class="ipa">ɖɹúb</span> <span class="meaning">established</span></span>.</p>
+        <p><span class="ipa">b</span> when used as a suffix, eg. <span class="eg" lang="bo">བསྒྲུབས་</span>.</p>
         <p>Used with subscripts, <span class="ex" lang="bo">བྱ</span> <span class="ipa">ʤja</span>, <span class="ex" lang="bo">བྲ</span> <span class="ipa">tra</span>, <span class="ex" lang="bo">བླ</span> <span class="ipa">la</span>.</p>
         <p>Subjoined form is <span class="codepoint"><span lang="bo">&#xA0;&#x0FA6;</span> <a href="#char0FA6">[<span class="uname">U+0FA6 TIBETAN SUBJOINED LETTER BA</span>]</a></span>.</p>
       </div>
@@ -516,7 +524,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         <p class="titlepara"><span class="title">Tibetan</span> consonant</p>
         <p><span class="ipa">mà</span></p>
         <p>Used as a prefix before 11 consonants.</p>
-        <p><span class="ipa">m</span> when used as a suffix, eg. <span class="charExample" translate="no"><span class="ex" lang="bo">འགྲེམས་སྟོན་</span> <span class="trans">'grems-ston</span> <span class="ipa">ɖɹem-ton</span> <span class="meaning">exhibition</span></span>.</p>
+        <p><span class="ipa">m</span> when used as a suffix, eg. <span class="eg" lang="bo">འགྲེམས་སྟོན་</span>.</p>
         <p>Used with subscripts, <span class="ex" lang="bo">མྱ</span> <span class="ipa">ɲa</span>, <span class="ex" lang="bo">མྲ</span> <span class="ipa">ma</span>.</p>
         <p>Subjoined form is <span class="codepoint"><span lang="bo">&#xA0;&#x0FA8;</span> <a href="#char0FA8">[<span class="uname">U+0FA8 TIBETAN SUBJOINED LETTER MA</span>]</a></span>.</p>
       </div>
@@ -644,12 +652,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       <div class="letter tibetan">
         <p class="titlepara"><span class="title">Tibetan</span> consonant, <span class="name">'a-chung</span></p>
         <p><span class="ipa">à</span></p>
-        <p>Used as a prefix before 10 consonants, eg. <span class="charExample" translate="no"><span class="ex" lang="bo">འཁོར་ལོ་</span> <span class="trans">'khor-lo</span> <span class="ipa">kor-lo</span> <span class="meaning">wheel</span></span>.</p>
+        <p>Used as a prefix before 10 consonants, eg. <span class="eg" lang="bo">འཁོར་ལོ་</span>.</p>
         <p><span class="ipa">a</span> when used as a suffix.</p>
-        <p>May also nasalise the juncture of two morphemes, as in <span class="charExample" translate="no"><span class="ex" lang="bo">དགེ་འདུན་</span> <span class="trans">dge-'dun</span> (<span class="trans">dge-'dun</span>) <span class="meaning">buddhist community</span></span>, pronounced <span class="ipa">ɡenyn</span>.</p>
+        <p>May also nasalise the juncture of two morphemes, as in <span class="eg" lang="bo">དགེ་འདུན་</span>, pronounced <span class="ipa">ɡenyn</span>.</p>
         <p>Can be used as a base for dependent vowel signs, in which case the <span class="ipa">a</span> sound is replaced by that of the vowel. It has a low tone (cf. <span class="codepoint"><span lang="bo">&#x0F68;</span> <a href="#char0F68">[<span class="uname">U+0F68 TIBETAN LETTER A</span>]</a></span>).</p>
-        <p>Other than loanwords, Tibetan only allows diphthongs in diminutive expressions. 'A-chung is used to write these, as in the following: <span class="charExample" translate="no"><span class="ex" lang="bo">མི་</span> <span class="trans">mi</span> (<span class="trans">mi</span>) <span class="meaning">person</span></span> &gt; <span class="charExample" translate="no"><span class="ex" lang="bo">མེའུ་</span> <span class="trans">me'u</span> (<span class="trans">me'u</span>) <span class="meaning">dwarf</span></span>; <span class="charExample" translate="no"><span class="ex" lang="bo">རྡོ་</span> <span class="trans">rdo</span> (<span class="trans">rdo</span>) <span class="meaning">stone</span></span> &gt; <span class="charExample" translate="no"><span class="ex" lang="bo">རྡེའུ་</span> <span class="trans">rde'u</span> (<span class="trans">rde'u</span>) <span class="meaning">pebble</span></span>.</p>
-        <p>Can be used to disambiguate the location of an inherent vowel in a syllable. The sequence <span class="charExample" translate="no"><span class="ex" lang="bo">དག་</span> <span class="trans">dag</span> <span class="ipa">dàg</span> <span class="meaning">I</span></span> is interpreted as CVC. To express CCV add 'a-chung, eg. <span class="charExample" translate="no"><span class="ex" lang="bo">དགའ་</span> <span class="trans">dga</span> <span class="ipa">gà</span> <span class="meaning">virtue</span></span>.</p>
+        <p>Other than loanwords, Tibetan only allows diphthongs in diminutive expressions. 'A-chung is used to write these, as in the following: <span class="eg" lang="bo">མི་</span> &gt; <span class="eg" lang="bo">མེའུ་</span>; <span class="eg" lang="bo">རྡོ་</span> &gt; <span class="eg" lang="bo">རྡེའུ་</span>.</p>
+        <p>Can be used to disambiguate the location of an inherent vowel in a syllable. The sequence <span class="eg" lang="bo">དག་</span> is interpreted as CVC. To express CCV add 'a-chung, eg. <span class="eg" lang="bo">དགའ་</span>.</p>
         <p>Subjoined form is <span class="codepoint"><span lang="bo">&#xA0;&#x0FB0;</span> <a href="#char0FB0">[<span class="uname">U+0FB0 TIBETAN SUBJOINED LETTER -A</span>]</a></span>.</p>
       </div>
         <p class="ref">Refs: <a href="#danielsref">Daniels, p431-436</a>, <a href="http://www.unicode.org/versions/Unicode6.3.0/ch10.pdf">The Unicode Standard 6.3, pp325-344</a></p>
@@ -679,8 +687,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter tibetan">
         <p class="titlepara"><span class="title">Tibetan</span> consonant</p>
-        <p><span class="ipa">rà</span>,  eg. <span class="charExample" translate="no"><span class="ex" lang="bo">རེ་བ་</span> <span class="trans">re-ba</span> <span class="ipa">re-wa</span> <span class="meaning">hope</span></span>.</p>
-        <p><span class="ipa">r</span> when used as a suffix, eg. <span class="charExample" translate="no"><span class="ex" lang="bo">འཁོར་ལོ་</span> <span class="trans">'khor-lo</span> <span class="ipa">kor-lo</span> <span class="meaning">wheel</span></span>.</p>
+        <p><span class="ipa">rà</span>,  eg. <span class="eg" lang="bo">རེ་བ་</span>.</p>
+        <p><span class="ipa">r</span> when used as a suffix, eg. <span class="eg" lang="bo">འཁོར་ལོ་</span>.</p>
         <p>Used as a superscript with 13 consonants, <span class="ex" lang="bo">རྐ</span> <span class="ipa">ka</span> <span class="ex" lang="bo">རྒ</span> <span class="ipa">ga</span> <span class="ex" lang="bo">རྔ</span> <span class="ipa">ŋa</span> <span class="ex" lang="bo">རྗ</span> <span class="ipa">ʤa</span> <span class="ex" lang="bo">རྙ</span> <span class="ipa">ɲa</span> <span class="ex" lang="bo">རྟ</span> <span class="ipa">ta</span> <span class="ex" lang="bo">རྡ</span> <span class="ipa">da</span> <span class="ex" lang="bo">རྣ</span> <span class="ipa">na</span> <span class="ex" lang="bo">རྦ</span> <span class="ipa">ba</span> <span class="ex" lang="bo">རྨ</span> <span class="ipa">ma</span> <span class="ex" lang="bo">རྩ</span> <span class="ipa">tsa</span> <span class="ex" lang="bo">རྫ</span> <span class="ipa">dza</span> <span class="ex" lang="bo">རླ</span> <span class="ipa">la</span> <span class="ex" lang="bo">རྭ</span> <span class="ipa">ra</span>.</p>
         <p>The shape at the top of a stack can vary, depending on the subjoined consonant that follows. Usually it has a reduced form, eg. <span class="charExample" translate="no"><span class="ex" lang="bo">རྐ</span> <span class="trans">rka</span></span> (<span class="trans">rka</span></span>), but other times it retains its full form, eg. <span class="charExample" translate="no"><span class="ex" lang="bo">རྙ</span> <span class="trans">rnya</span> (<span class="trans">rnya</span>)</span>. Use the standard character always: the font will choose the appropriate glyph for the context</p>
         <p>Subjoined form is <span class="codepoint"><span lang="bo">&#xA0;&#x0FB2;</span> <a href="#char0FB2">[<span class="uname">U+0FB2 TIBETAN SUBJOINED LETTER RA</span>]</a></span>.</p>
@@ -750,7 +758,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         <p><span class="ipa">sá</span></p>
         <p>Used as a prefix with 11 consonants.</p>
         <p><span class="ipa">W</span>hen used as a suffix modifies the root vowel's value.</p>
-        <p>Only two characters can appear in the secondary suffix location, according to Tibetan grammar, and <span class="ex" lang="bo">ས</span> is one. A character in this position adds no sound, nor does it affect the sounds in the rest of the syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="bo">བསྒྲུབས་</span> <span class="trans">bsgrubs</span> <span class="ipa">ɖɹúb</span> <span class="meaning">established</span></span>.&nbsp;</p>
+        <p>Only two characters can appear in the secondary suffix location, according to Tibetan grammar, and <span class="ex" lang="bo">ས</span> is one. A character in this position adds no sound, nor does it affect the sounds in the rest of the syllable, eg. <span class="eg" lang="bo">བསྒྲུབས་</span>.&nbsp;</p>
         <p>Used as superscript with 13 consonants, <span class="ex" lang="bo">སྐ</span> <span class="ipa">ka</span> <span class="ex" lang="bo">སྒ</span> <span class="ipa">ga</span> <span class="ex" lang="bo">སྔ</span> <span class="ipa">ŋa</span> <span class="ex" lang="bo">སྙ</span> <span class="ipa">ɲa</span> <span class="ex" lang="bo">སྟ</span> <span class="ipa">ta</span> <span class="ex" lang="bo">སྡ</span> <span class="ipa">da</span> <span class="ex" lang="bo">སྡ</span> <span class="ipa">na</span> <span class="ex" lang="bo">སྤ</span> <span class="ipa">pa</span> <span class="ex" lang="bo">སྦ</span> <span class="ipa">ba</span> <span class="ex" lang="bo">སྨ</span> <span class="ipa">ma</span> <span class="ex" lang="bo">སྩ</span> <span class="ipa">tsa</span> <span class="ex" lang="bo">སྲ</span> <span class="ipa">sa</span> <span class="ex" lang="bo">སླ</span> <span class="ipa">la</span>.</p>
         <p>Subjoined form is <span class="codepoint"><span lang="bo">&#xA0;&#x0FB6;</span> <a href="#char0FB6">[<span class="uname">U+0FB6 TIBETAN SUBJOINED LETTER SA</span>]</a></span>.</p>
       </div>
@@ -838,7 +846,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter tibetan">
         <p class="titlepara"><span class="title">Tibetan</span> subjoined consonant</p>
-        <p>Used with superscripts, <span class="ex" lang="bo">རྐ</span> <span class="ipa">ka</span>, <span class="ex" lang="bo">ལྐ</span> <span class="ipa">ka</span>, <span class="ex" lang="bo">སྐ</span> <span class="ipa">ka</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bo">སྐར་ཆ་</span> <span class="trans">skar-cha</span> (<span class="trans">skar-cha</span>) <span class="ipa">karcʰe</span> <span class="meaning">second</span></span>.</p>
+        <p>Used with superscripts, <span class="ex" lang="bo">རྐ</span> <span class="ipa">ka</span>, <span class="ex" lang="bo">ལྐ</span> <span class="ipa">ka</span>, <span class="ex" lang="bo">སྐ</span> <span class="ipa">ka</span>, eg. <span class="eg" lang="bo">སྐར་ཆ་</span>.</p>
         <p>Head form is <span class="codepoint"><span lang="bo">&#x0F40;</span> <a href="#char0F40">[<span class="uname">U+0F40 TIBETAN LETTER KA</span>]</a></span>.</p>
         </div>
         <p class="ref">Refs: <a href="#danielsref">Daniels, p431-436</a>, <a href="http://www.learntibetan.net/">The Tibetan Language Student</a></p>
@@ -1323,7 +1331,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       <div class="letter tibetan">
         <p class="titlepara"><span class="title">Tibetan</span> subjoined consonant</p>
         <p><span class="ipa">à</span></p>
-        <p>A subjoined 'a-chung is used to express long vowels in loan words (Tibetan doesn't have them natively), such as those borrowed from Chinese, Hindi and Mongolian. For example, <span class="charExample" translate="no"><span class="ex" lang="bo">ཏཱ་བླ་མ་</span> <span class="trans">tā-bla-ma</span> (<span class="trans">tā-bla-ma</span>) <span class="meaning">grand lama</span></span> (ta from Chinese), and <span class="charExample" translate="no"><span class="ex" lang="bo">ཤྲཱི་</span> <span class="trans">shrī</span> (<span class="trans">shrī</span>) <span class="ipa">wealth</span></span> from Sanskrit. For this purpose you should use <span class="codepoint"><span lang="bo">&nbsp;ཱ</span> <a href="#char0F71">[<span class="uname">U+0F71 TIBETAN VOWEL SIGN AA</span>]</a></span>, and not <span class="codepoint"><span lang="bo">&nbsp;ྰ</span> <a href="#char0FB0">[<span class="uname">U+0FB0 TIBETAN SUBJOINED LETTER -A</span>]</a></span>.</p>
+        <p>A subjoined 'a-chung is used to express long vowels in loan words (Tibetan doesn't have them natively), such as those borrowed from Chinese, Hindi and Mongolian. For example, <span class="eg" lang="bo">ཏཱ་བླ་མ་</span> (ta from Chinese), and <span class="eg" lang="bo">ཤྲཱི་</span> from Sanskrit. For this purpose you should use <span class="codepoint"><span lang="bo">&nbsp;ཱ</span> <a href="#char0F71">[<span class="uname">U+0F71 TIBETAN VOWEL SIGN AA</span>]</a></span>, and not <span class="codepoint"><span lang="bo">&nbsp;ྰ</span> <a href="#char0FB0">[<span class="uname">U+0FB0 TIBETAN SUBJOINED LETTER -A</span>]</a></span>.</p>
         <p>The Unicode Standard says of SUBJOINED LETTER -A: "U+0FB0 TIBETAN SUBJOINED LETTER -A ( a-chung ) should be used only in the very rare cases where a full-sized subjoined a-chung letter is required. The small vowel lengthening a-chung encoded as U+0F71 TIBETAN VOWEL SIGN AA is far more frequently used in Tibetan text, and it is therefore recommended that implementations treat this character (rather than U+0FB0) as the normal subjoined a-chung".</p>
         <p>Head form is <span class="codepoint"><span lang="bo">&#x0F60;</span> <a href="#char0F60">[<span class="uname">U+0F60 TIBETAN LETTER -A</span>]</a></span>.</p>
         </div>
@@ -1566,7 +1574,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       <div class="letter tibetan">
         <p class="titlepara"><span class="title">Tibetan</span> vowel lengthening mark</p>
         <p><span class="ipa">à</span></p>
-        <p>A subjoined 'a-chung is used to express long vowels in loan words (Tibetan doesn't have them natively), such as those borrowed from Chinese, Hindi and Mongolian. For <span class="charExample" translate="no"><span class="ex" lang="bo">ཏཱ་བླ་མ་</span> <span class="trans">tā-bla-ma</span> (<span class="trans">tā-bla-ma</span>) <span class="meaning">grand lama</span></span> (ta from Chinese), and <span class="charExample" translate="no"><span class="ex" lang="bo">ཤྲཱི་</span> <span class="trans">shrī</span> (<span class="trans">shrī</span>) <span class="ipa">wealth</span></span> from Sanskrit. For this purpose you should use <span class="codepoint"><span lang="bo">&#xA0;&#x0F71;</span> <a href="#char0F71">[<span class="uname">U+0F71 TIBETAN VOWEL SIGN AA</span>]</a></span>, and not <span class="codepoint"><span lang="bo">&#xA0;&#x0FB0;</span> <a href="#char0FB0">[<span class="uname">U+0FB0 TIBETAN SUBJOINED LETTER -A</span>]</a></span>.</p>
+        <p>A subjoined 'a-chung is used to express long vowels in loan words (Tibetan doesn't have them natively), such as those borrowed from Chinese, Hindi and Mongolian. For <span class="eg" lang="bo">ཏཱ་བླ་མ་</span> (ta from Chinese), and <span class="eg" lang="bo">ཤྲཱི་</span> from Sanskrit. For this purpose you should use <span class="codepoint"><span lang="bo">&#xA0;&#x0F71;</span> <a href="#char0F71">[<span class="uname">U+0F71 TIBETAN VOWEL SIGN AA</span>]</a></span>, and not <span class="codepoint"><span lang="bo">&#xA0;&#x0FB0;</span> <a href="#char0FB0">[<span class="uname">U+0FB0 TIBETAN SUBJOINED LETTER -A</span>]</a></span>.</p>
         <p>The Unicode Standard says of SUBJOINED LETTER -A: "U+0FB0 TIBETAN SUBJOINED LETTER -A ( a-chung ) should be used only in the very rare cases where a full-sized subjoined a-chung letter is required. The small vowel lengthening a-chung encoded as U+0F71 TIBETAN VOWEL SIGN AA is far more frequently used in Tibetan text, and it is therefore recommended that implementations treat this character (rather than U+0FB0) as the normal subjoined a-chung".</p>
       </div>
         <p class="ref">Refs: <a href="#danielsref">Daniels, p431-436</a>, <a href="http://www.unicode.org/versions/Unicode6.3.0/ch10.pdf">The Unicode Standard 6.3, pp325-344</a></p>
