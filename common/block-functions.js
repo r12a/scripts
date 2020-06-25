@@ -67,7 +67,7 @@ function doHeadersFooters (dir) {
 	
 	out += '/<a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/'+directory+'/block.html" title="Show commits for scripts/'+filename+'/block.">block</a>'
 	
-	out += ' &bull; leave a <a target="_blank" href="https://github.com/w3c/i18n-drafts/issues/new?title=['+dir.replace(/index/,'')+'/block]%20%20BRIEF_TITLE_GOES_HERE&body=%5Bsource%5D%20https%3A%2F%2Fr12a.github.io%2Fscripts%2F'+dir+'/block%0A%0A" title="Leave a comment.">comment</a>'
+	out += ' &bull; leave a <a target="_blank" href="https://github.com/r12a/scripts/issues/new?title=['+dir.replace(/index/,'')+'/block]%20%20BRIEF_TITLE_GOES_HERE&body=%5Bsource%5D%20https%3A%2F%2Fr12a.github.io%2Fscripts%2F'+dir+'/block%0A%0A" title="Leave a comment.">comment</a>'
 	
 	document.getElementById('versionTop').innerHTML = out
 	
