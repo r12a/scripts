@@ -19,6 +19,8 @@
 <script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
+<script src="../common/egcode.js"></script>
+<script src="examples.js"></script>
 
 <script src="../../uniview/descriptions.js"></script> 
 <script src="../../uniview/u.js"></script> 
@@ -41,7 +43,7 @@
 </header>
 <h1>Sundanese character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a></nav>
+<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
 
 <aside class="sidebar">
   <nav>
@@ -78,7 +80,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->20 January, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->25 June, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -89,22 +91,25 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
      <li><a href="../../uniview/?block=sundanese" target="_blank">Sundanese</a></li>
      <li><a href="../../uniview/?block=sundanese_supplement" target="_blank">Sundanese supplement</a></li>
    </ul>
-   <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-<p>For details about how the script works, see the <a class="linkHighlight" href="index">Sundanese</a> summary.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Sund">Script links pages</a>.</p>
-<p><span style="text-align: start;">We have usage data for the following language that uses the Sundanese script</span>: <span style="text-align: start;">Sundanese</span>.</p>
+   <p> Phonetic transcriptions should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
-<p>Find <input type="text" id="findInput"
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
 
-<p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example. Click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
 
 <details>
-<summary class="instructions">Read more about how to use this page.</summary>
-    <p class="instructions">To <strong>find a character</strong> by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or the hex number in the <samp>Find</samp> control above.</p>
-    <p class="instructions">To view this page as intended, you  need a <strong>Sundanese font</strong>.  This page comes with a Noto Sans Sundanese webfont and a Sundanese Unicode 2013 webfont. The former has better coverage of the repertoire (including the supplement block), but the latter has better rendering behaviour. Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system.  For transcriptions I recommend the excellent and free <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;item_id=DoulosSILfont">Doulos SIL font</a>. The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. (If there is no glyph and you want to see what it looks like, click on <samp>See in UniView</samp>.)</p>
-    <p class="instructions"><strong>Information about languages</strong> that use these characters is taken from the list maintained for the Character Use app. The list is not exhaustive.</p>
-<p class="instructions"><strong>References</strong> are indicated by superscript characters. Wherever possible, those contain direct links to the source material. When such a pointer is alongside an arrow → it means that it's worth following the link for the additional information it provides. Digits refer to the main sources, which are listed at the bottom of a set of notes.</p>
-<p class="instructions">When you are using UniView and you turn on <samp>Show notes</samp>, UniView will pull in information about characters from this page.</p>
+<summary class="instructions"><a href="../links?iso=Sund">Related pages</a>.</summary>
+</details>
+
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#charnotes">Other character notes</a>.</summary>
+</details>
+
+
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Sundanese','Sundanese'); return false;">About this page</a></summary>
+<div id="about"></div>
 <p id="charliststr" class="instructions"></p>
 </details>
 </section>
@@ -455,7 +460,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> consonant &nbsp;&nbsp;     <span class="trans">kh</span></p>
-<p>Used for writing Arabic <span class="ex" lang="ar">خ</span>, eg. <span class="charExample"><span class="ex" lang="su">ᮮᮥᮯᮥ</span> <span class="trans">xušu</span> (<span class="trans">xušu</span>) (<span class="trans">خاشع</span>) <span class="meaning">state of grace</span></span>. Not widely used.</p>
+<p>Used for writing Arabic <span class="ex" lang="ar">خ</span>, eg. <span class="eg" lang="su">ᮮᮥᮯᮥ</span>. Not widely used.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -470,7 +475,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> consonant &nbsp;&nbsp;     <span class="trans">sy</span></p>
-<p>Used for writing Arabic <span class="ex" lang="ar">ش</span>, eg. <span class="charExample"><span class="ex" lang="su">ᮮᮥᮯᮥ</span> <span class="trans">xušu</span> (<span class="trans">xušu</span>) (<span class="trans">خاشع</span>) <span class="meaning">state of grace</span></span>. Not widely used.</p>
+<p>Used for writing Arabic <span class="ex" lang="ar">ش</span>, eg. <span class="eg" lang="su">ᮮᮥᮯᮥ</span>. Not widely used.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -508,7 +513,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> medial consonant <span class="name">panyakra</span>&nbsp;&nbsp;     <span class="trans">-r-</span></p>
-<p>Used after a syllable-initial consonant, eg. <span class="charExample"><span class="ex" lang="su">ᮃᮌᮢᮤᮊᮥᮜ᮪ᮒᮥᮁ</span> <span class="trans">agrikultur</span> (<span class="trans">agrikultur</span>) <span class="meaning">agriculture</span></span>.</p>
+<p>Used after a syllable-initial consonant, eg. <span class="eg" lang="su">ᮃᮌᮢᮤᮊᮥᮜ᮪ᮒᮥᮁ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -523,7 +528,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> medial consonant <span class="name">panyiku</span>&nbsp;&nbsp;     <span class="trans">-l-</span></p>
-<p>Used after a syllable-initial consonant, eg. <span class="charExample"><span class="ex" lang="su">ᮄᮊᮣᮤᮙ᮪</span> <span class="trans">iklim</span> (<span class="trans">iklim</span>)  <span class="meaning">climate</span></span>.</p>
+<p>Used after a syllable-initial consonant, eg. <span class="eg" lang="su">ᮄᮊᮣᮤᮙ᮪</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -550,7 +555,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> syllable-final consonant <span class="name">panayecek</span> &nbsp;&nbsp;     <span class="trans">-ng</span></p>
-<p><span class="ipa">ŋ</span> as a syllable-final sound, eg. <span class="charExample"><span class="ex" lang="su">ᮙᮀᮌᮥ</span> <span class="trans">manggu</span> (<span class="trans">manggu</span>) <span class="meaning">mangosteen</span></span>.</p>
+<p><span class="ipa">ŋ</span> as a syllable-final sound, eg. <span class="eg" lang="su">ᮙᮀᮌᮥ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -565,7 +570,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> syllable-final consonant <span class="name">panglayar</span> &nbsp;&nbsp;     <span class="trans">-r</span></p>
-<p><span class="ipa">r</span> as a syllable-final sound, eg. <span class="charExample"><span class="ex" lang="su">ᮕᮞᮤᮁ</span> <span class="trans">pasir</span> (<span class="trans">pasir</span>) <span class="meaning">hill</span></span>.</p>
+<p><span class="ipa">r</span> as a syllable-final sound, eg. <span class="eg" lang="su">ᮕᮞᮤᮁ</span> .</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -580,7 +585,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> syllable-final consonant <span class="name">pangwisad</span> &nbsp;&nbsp;     <span class="trans">-h</span></p>
-<p><span class="ipa">h</span> as a syllable-final sound, eg. <span class="charExample"><span class="ex" lang="su">ᮃᮘᮂ-ᮃᮘᮂ</span> <span class="trans">abah-abah</span> (<span class="trans">abah-abah</span>) <span class="meaning">goods.</span></span></p>
+<p><span class="ipa">h</span> as a syllable-final sound, eg. <span class="eg" lang="su">ᮃᮘᮂ-ᮃᮘᮂ</span> </p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -719,7 +724,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> virama <span class="name">patén</span> or <span class="name">pamaéh</span> &nbsp;</p>
-<p>Visible indicator of a killed vowel, eg. <span class="charExample"><span class="ex" lang="su">ᮃᮊ᮪ᮞᮛ</span> <span class="trans">aksara</span> (<span class="trans">aksara</span>)</span>.</p>
+<p>Visible indicator of a killed vowel, eg. <span class="eg" lang="su">ᮃᮊ᮪ᮞᮛ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -777,7 +782,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> independent vowel &nbsp;&nbsp;     <span class="trans">i</span></p>
-<p><span class="ipa">i</span>, eg. <span class="charExample"><span class="ex" lang="su">ᮄᮊᮣᮤᮙ᮪</span> <span class="trans">iklim</span> (<span class="trans">iklim</span>) <span class="meaning">climate</span></span>.</p>
+<p><span class="ipa">i</span>, eg. <span class="eg" lang="su">ᮄᮊᮣᮤᮙ᮪</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -807,7 +812,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p>The corresponding vowel-sign is <span class="codepoint"><span lang="su">&#xA0;&#x1BA6;</span> <a href="/scripts/sundanese/block#char1BA6">[<span class="uname">U+1BA6 SUNDANESE VOWEL SIGN PANAELAENG​</span>]</a></span>.</p>
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> independent vowel &nbsp;&nbsp;     <span class="trans">é</span></p>
-<p><span class="ipa">e</span>, eg. <span class="charExample"><span class="ex" lang="su">ᮆᮜ᮪ᮙᮥ</span> <span class="trans">élmu</span> (<span class="trans">élmu</span>) <span class="meaning">science</span></span>.</p>
+<p><span class="ipa">e</span>, eg. <span class="eg" lang="su">ᮆᮜ᮪ᮙᮥ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -871,7 +876,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> vowel-sign <span class="name">panghulu</span>&nbsp;&nbsp;     <span class="trans">i</span></p>
-<p>eg. <span class="charExample"><span class="ex" lang="su">ᮄᮊᮣᮤᮙ᮪</span> <span class="trans">iklim</span> (<span class="trans">iklim</span>) <span class="meaning">climate</span></span>.</p>
+<p>eg. <span class="eg" lang="su">ᮄᮊᮣᮤᮙ᮪</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -886,7 +891,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> vowel-sign <span class="name">panyuku</span>&nbsp;&nbsp;     <span class="trans">u</span></p>
-<p>eg. <span class="charExample"><span class="ex" lang="su">ᮆᮜ᮪ᮙᮥ</span> <span class="trans">élmu</span> (<span class="trans">élmu</span>)  <span class="meaning">science</span></span>.</p>
+<p>eg. <span class="eg" lang="su">ᮆᮜ᮪ᮙᮥ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -901,7 +906,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> vowel-sign <span class="name">panéléng</span>&nbsp;&nbsp;     <span class="trans">é</span></p>
-<p>This vowel-sign is displayed to the left of the base character, eg. <span class="charExample"><span class="ex" lang="su">ᮛᮦᮌᮀ</span> <span class="trans">régang</span> (<span class="trans">régang</span>) <span class="meaning">stick</span></span>.</p>
+<p>This vowel-sign is displayed to the left of the base character, eg. <span class="eg" lang="su">ᮛᮦᮌᮀ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -916,7 +921,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter sundanese">
 <p class="titlepara"><span class="title">Sundanese</span> vowel-sign <span class="name">panolong</span>&nbsp;&nbsp;     <span class="trans">o</span></p>
-<p>eg. <span class="charExample"><span class="ex" lang="su">ᮌᮨᮜᮧᮙ᮪ᮘᮀ ᮙᮤᮊᮢᮧ</span> <span class="trans">gelombang mikro</span> (<span class="trans">gelombang mikro</span>) <span class="meaning">microwave</span></span>.</p>
+<p>eg. <span class="eg" lang="su">ᮌᮨᮜᮧᮙ᮪ᮘᮀ ᮙᮤᮊᮢᮧ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Sundanese" target="_blank">Unicode10 pp677-678</a>  
@@ -970,7 +975,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter sundanese">
   <p class="titlepara"><span class="title">Sundanese</span> sign &nbsp;&nbsp;     <span class="name">avagraha</span></p>
 <p>Not used in modern Sundanese.</p>
-<p>In older Sundanese orthography  it kills the vowel of a preceding consonant but introduces a hiatus before an initial  <span class="trans">a-</span>, eg. <span class="charExample"><span class="ex" lang="su">ᮃᮜᮥᮔᮺᮌᮥᮀ</span> <span class="trans">alun-agung</span> (<span class="trans">alun-agung</span>) <span class="meaning">tidal wave</span></span>. This could also be written as two words, ie. <span class="charExample"><span class="ex" lang="su">ᮃᮜᮥᮔ᮪ ᮃᮌᮥᮀ</span> <span class="trans">ạlunˣ ạguŋ̽</span></span>.</p>
+<p>In older Sundanese orthography  it kills the vowel of a preceding consonant but introduces a hiatus before an initial  <span class="trans">a-</span>, eg. <span class="eg" lang="su">ᮃᮜᮥᮔᮺᮌᮥᮀ</span>. This could also be written as two words, ie. <span class="charExample"><span class="ex" lang="su">ᮃᮜᮥᮔ᮪ ᮃᮌᮥᮀ</span> <span class="trans">ạlunˣ ạguŋ̽</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
   [1] <a href="https://en.wikipedia.org/wiki/Sundanese_alphabet" target="_blank">Everson2</a> </p>
@@ -1291,6 +1296,7 @@ replaceStuff('Sundanese', 'sundanese', spreadsheet, '', 'su', '', cols, false)
 
 
 <div class="smallprint"><span id="version"></span></div>
+
 
 
 <script>
