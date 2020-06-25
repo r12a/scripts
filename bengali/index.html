@@ -4,35 +4,11 @@
 <head>
 <meta charset="utf-8"/>
 <title>Bengali script summary</title>
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <meta name="description" content="Summary of the Bengali script."/>
 
 <link rel="stylesheet" href="../../shared/style/docs.css" />
 <link rel="stylesheet" href="../common/local.css" />
-<style>
-@font-face {
-	font-family: 'webfont';
-	src: 	local('Noto Sans Bengali'),
-			url('/shared/webfonts/NotoSansBengali-Regularwebfont.woff2') format('woff2'),  
-			url('/shared/webfonts/NotoSansBengali-Regularwebfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	}
-
-#freeText {
-	font-size: 28px;
-	font-family: webfont, serif;
-	text-align: start;
-    line-height: 1.4;
-	}
-@media print { #freeText { font-size: 18px; } }
-[lang=bn] { font-family: webfont, SolaimanLipi, Likhan, "Bangla Sangam MN", "Shonar Bangla", "Vrinda", "Lohit Bengali", "Noto Sans Bengali", "Arial Unicode MS", sans-serif; font-size: 150%; }
-.large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
-
-.iso15919 { font-family: "Gentium Plus", Gentium, "Lucida Sans Unicode", "Lucida Grande", 'lucida sans', "helvetica neue", sans-serif;
-font-size: 1.1em;
-font-weight: 300; }
-</style>
+<link rel="stylesheet" href="bn.css" />
 
 <script src="../../shared/scriptdb/beng.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
@@ -49,6 +25,8 @@ font-weight: 300; }
 <script src="../../shared/code/getLinks.js"></script>
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
+<script src="../common/egcode.js"></script>
+<script src="examples.js"></script>
 
 <script src="bn-translit.js">  </script>
 <script src="../../shared/fontlists/bengali.js"> </script>
@@ -114,7 +92,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->12 June, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->25 June, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -122,10 +100,20 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <section>
 <p>This page gathers together basic information about the Bengali script and its use for the Bangla language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Bengali using Unicode.</p>
 
+<p>See also the companion document, <a href="block" class="linkHighlight">Bengali character notes</a>, for detailed information about specific Unicode characters.</p>
+<p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
+
+
 
 
 <details>
 <summary class="instructions"><a href="../links?iso=Beng">Related pages</a></summary>
+</details>
+
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
 </details>
 
 
@@ -503,7 +491,7 @@ two, when influenced by surrounding sounds.) Bengalis are not always aware of th
 							class="ipa">o</span>, not <span class="ipa">o</span>..<span class="ipa">ɔ</span>, eg. <span class="ex" lang="bn">গরম</span> <span class="trans">gɔrôm</span>, <span class="meaning">hot</span>. However, exceptions occur for prefixes, such as <span class="ipa">prɔ-</span>, <span class="ipa">ɔ-</span>, and <span class="ipa">sɔ-</span>. <a class="fnref" href="#refs">r8</a></p>
 				</li>
 				<li>
-					<p>When pronounced at the end of a word after a conjunct consonant, the inherent vowel is always  <span class="ipa">o</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">যুদ্ধ</span> <span class="trans">ýud͓dʰ</span> <span class="ipa">ʤuddʰo</span> <span class="meaning">war</span></span>. <a class="fnref" href="#refs">r8</a></p>
+					<p>When pronounced at the end of a word after a conjunct consonant, the inherent vowel is always  <span class="ipa">o</span>, eg. <span class="eg" lang="bn">যুদ্ধ</span>. <a class="fnref" href="#refs">r8</a></p>
 				</li>
 <li>
 <p>The pronunciation tends to be <span class="ipa">o</span> when followed by a one of <span class="ipa">i, j, u, w</span> either immediately or in the next syllable, but <span class="ipa">ɔ</span> otherwise. <a class="fnref" href="#refs">d400</a></p>
@@ -522,9 +510,9 @@ two, when influenced by surrounding sounds.) Bengalis are not always aware of th
 <figure class="characterBox auto"  data-cols="ipa,trans,transc">ি␣ী␣ু␣ূ␣ে␣ো␣া␣ ␣ৈ␣ৌ</figure>
 <p>Bengali has lost the distinction between short and long vowels in pronunciation, but retains the difference in spelling.</p>
 <p>The variation in pronunciation for the vowel-signs above can often be explained by <a href="#vowelharmonydesc">vowel harmony</a>.</p>
-<p>Although it is one of the standard sounds of Bangla, <span class="ipa">ɛ</span> doesn't have a specific vowel-sign allocated to it. It tends to be represented by combinations of other characters, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ত্যাগ</span> <span class="trans">t͓ʲɑg</span> <span class="ipa">tɛg</span> <span class="meaning">leave</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Bengali_alphabet#cite_note-%C9%9B-6">w</a></p>
+<p>Although it is one of the standard sounds of Bangla, <span class="ipa">ɛ</span> doesn't have a specific vowel-sign allocated to it. It tends to be represented by combinations of other characters, eg. <span class="eg" lang="bn">ত্যাগ</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Bengali_alphabet#cite_note-%C9%9B-6">w</a></p>
 <p><span class="codepoint" translate="no"><span lang="bn">&#x09CB;</span> [<a href="/scripts/bengali/block#char09CB"><span class="uname">U+09CB BENGALI VOWEL SIGN O</span></a>]</span> was originally pronounced <span class="ipa">ʊ</span>, and that pronunciation sometimes persists alongside the <span class="ipa">o</span> that came from Sanskrit, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">নোংরা</span> <span class="trans">noŋ̽rɑ</span> <span class="meaning">foul</span></span> can be pronounced <span class="charExample"><span class="ipa">nʊŋra</span></span> or <span class="charExample"><span class="ipa">noŋra</span></span>.</p>
-<p>Two of the vowel-signs (and independent vowels) represent diphthongs (<span class="ipa">oi̯ </span> and <span class="ipa">ou̯</span>). However, most of the many  diphthongs are represented by a sequence of vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">কেউ</span> <span class="trans">keụ</span> <span class="ipa">keu̯</span> <span class="meaning">somebody</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Bengali_alphabet#Vowels">w</a></p>
+<p>Two of the vowel-signs (and independent vowels) represent diphthongs (<span class="ipa">oi̯ </span> and <span class="ipa">ou̯</span>). However, most of the many  diphthongs are represented by a sequence of vowels, eg. <span class="eg" lang="bn">কেউ</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Bengali_alphabet#Vowels">w</a></p>
 <p>Bengali vowel signs are all combining characters. In principle a single character is used per base consonant, but 2 vowel signs decompose to more than one character (see  <a class="secref">multipart</a>). All vowel-signs are typed and stored <em>after</em> the base consonant, whether or not they precede it when displayed. The font takes care of the glyph positioning.</p>
 <p>Almost all of the  vowel-signs are <em>spacing</em> combining characters, meaning that they consume horizontal space when added to a base consonant.. </p>
 <p>See also <a class="sectionref">vocalics</a>.</p>
@@ -536,80 +524,80 @@ two, when influenced by surrounding sounds.) Bengalis are not always aware of th
 <section id="diphthongs">
 <h3>Diphthongs</h3>
 
-<p>Two of the vowel-signs (and independent vowels) represent diphthongs (<span class="ipa">oi̯</span> and <span class="ipa">ou̯</span>). However, most of the many  diphthongs are represented by a sequence of vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">কেউ</span> <span class="trans">keụ</span> <span class="ipa">keu̯</span> <span class="meaning">somebody</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Bengali_alphabet#Vowels">w</a></p>
+<p>Two of the vowel-signs (and independent vowels) represent diphthongs (<span class="ipa">oi̯</span> and <span class="ipa">ou̯</span>). However, most of the many  diphthongs are represented by a sequence of vowels, eg. <span class="eg" lang="bn">কেউ</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Bengali_alphabet#Vowels">w</a></p>
 <p>The sequences tend to represent the off-glide using independent vowels <span class="codepoint" translate="no"><span lang="bn">&#x0987;</span> [<a href="/scripts/bengali/block#char0987"><span class="uname">U+0987 BENGALI LETTER I</span></a>]</span>, <span class="codepoint" translate="no"><span lang="bn">&#x0989;</span> [<a href="/scripts/bengali/block#char0989"><span class="uname">U+0989 BENGALI LETTER U</span></a>]</span> or <span class="codepoint" translate="no"><span lang="bn">&#x0993;</span> [<a href="/scripts/bengali/block#char0993"><span class="uname">U+0993 BENGALI LETTER O</span></a>]</span>, or <span class="codepoint" translate="no"><span lang="bn">&#x09AF;</span> + <span lang="bn">&#x09BC;</span> [<a href="/scripts/bengali/block#char09AF"><span class="uname">U+09AF BENGALI LETTER YA</span></a> + <a href="/scripts/bengali/block#char09BC"><span class="uname">U+09BC BENGALI SIGN NUKTA</span></a>]</span> (for <span class="ipa">e̯</span>).</p>
 <p>Following are some examples of diphthongs.</p>
 <table>
 <tbody>
 <tr>
 <th scope="row"><span class="ipa">ii̯</span></th>
-<td><span class="charExample" translate="no"><span class="ex" lang="bn">পাখিই</span> <span class="trans">pɑkʰiị</span> <span class="ipa">pa.kʰii̯</span> <span class="meaning">birds</span></span>&nbsp;</td>
+<td><span class="eg" lang="bn">পাখিই</span>&nbsp;</td>
 <td><span class="ex" lang="bn">খিই</span></td>
 </tr>
 <tr>
 <th scope="row"><span class="ipa">ei̯</span></th>
-<td><span class="charExample" translate="no"><span class="ex" lang="bn">পারেই</span> <span class="trans">pɑreị</span> <span class="ipa">pa.rei̯</span> <span class="meaning">maybe</span></span>&nbsp;</td>
+<td><span class="eg" lang="bn">পারেই</span>&nbsp;</td>
 <td><span class="ex" lang="bn">রেই</span></td>
 </tr>
 <tr>
 <th scope="row"><span class="ipa">ai̯</span></th>
-<td><span class="charExample" translate="no"><span class="ex" lang="bn">অনলাইন</span> <span class="trans">ɔ̣nlɑịn</span> <span class="ipa">ɔn.lai̯n</span> <span class="meaning">online</span></span>&nbsp;</td>
+<td><span class="eg" lang="bn">অনলাইন</span>&nbsp;</td>
 <td><span class="ex" lang="bn">লাই</span></td>
 </tr>
 <tr>
 <th scope="row"><span class="ipa">oi̯</span></th>
-<td><span class="charExample" translate="no"><span class="ex" lang="bn">তাথৈ</span> <span class="trans">tɑtʰoʲ</span> <span class="ipa">ta.tʰoi̯</span> <span class="meaning">there</span>, <span class="charExample" translate="no"><span class="ex" lang="bn">তেরই</span> <span class="trans">terị</span> <span class="ipa">tæ.roi̯</span> <span class="meaning">thirteen</span></span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">তাথৈ</span> <span class="trans">tɑtʰoʲ</span> <span class="ipa">ta.tʰoi̯</span> <span class="meaning">there</span>, <span class="eg" lang="bn">তেরই</span></span></td>
 <td><span class="ex" lang="bn">থৈ</span>, <span class="ex" lang="bn">রই</span></td>
 </tr>
 <tr>
 <th scope="row"><span class="ipa">ui̯</span></th>
-<td><span class="charExample" translate="no"><span class="ex" lang="bn">বাবুই</span> <span class="trans">bɑbuị</span> <span class="ipa">ba.bui̯</span> <span class="meaning">baby</span></span>&nbsp;</td>
+<td><span class="eg" lang="bn">বাবুই</span>&nbsp;</td>
 <td><span class="ex" lang="bn">বুই</span></td>
 </tr>
 <tr>
 <th scope="row">
 <span class="ipa">iu̯</span></th>
-<td><span class="charExample" translate="no"><span class="ex" lang="bn">পারফিউম</span> <span class="trans">pɑrpʰiụm</span> <span class="ipa">par.fiu̯m</span> <span class="meaning">perfume</span></span></td>
+<td><span class="eg" lang="bn">পারফিউম</span></td>
 <td><span class="ex" lang="bn">ফিউ</span></td>
 </tr>
 <tr>
 <th scope="row"><span class="ipa">eu̯</span></th>
-<td><span class="charExample" translate="no"><span class="ex" lang="bn">যেকেউ</span> <span class="trans">ʲekeụ</span> <span class="ipa">d͡ʒe.keu̯</span> <span class="meaning">anyone</span></span>&nbsp;</td>
+<td><span class="eg" lang="bn">যেকেউ</span>&nbsp;</td>
 <td><span class="ex" lang="bn">কেউ</span></td>
 </tr>
 <tr>
 <th scope="row"><span class="ipa">ou̯</span></th>
-<td><span class="charExample" translate="no"><span class="ex" lang="bn">ধৌত</span> <span class="trans">dʰoʷt</span> <span class="ipa">dʰou̯.to</span> <span class="meaning">wash</span></span>&nbsp;</td>
+<td><span class="eg" lang="bn">ধৌত</span>&nbsp;</td>
 <td><span class="ex" lang="bn">ধৌ</span></td>
 </tr>
 <tr>
 <th scope="row"><span class="ipa">au̯</span></th>
-<td><span class="charExample" translate="no"><span class="ex" lang="bn">একাউন্ট</span> <span class="trans">ẹkɑụn͓ʈ</span> <span class="ipa">æ.kau̯nʈ</span> <span class="meaning">account</span></span>&nbsp;</td>
+<td><span class="eg" lang="bn">একাউন্ট</span>&nbsp;</td>
 <td><span class="ex" lang="bn">কাউ</span></td>
 </tr>
 <tr>
 <th scope="row"><span class="ipa">ɔe̯</span></th>
-<td><span class="charExample"><span class="charExample" translate="no"><span class="ex" lang="bn">ভয়</span> <span class="trans">bʰýˑ</span> <span class="ipa">bʰɔe̯</span> <span class="meaning">fear</span></span></span></td>
+<td><span class="charExample"><span class="eg" lang="bn">ভয়</span></span></td>
 <td><span class="ex" lang="bn">ভয়</span></td>
 </tr>
 <tr>
 <th scope="row"><span class="ipa">ae̯</span></th>
-<td><span class="charExample" translate="no"><span class="ex" lang="bn">আয়রন</span> <span class="trans">ɑ̣ʲˑrn</span> <span class="ipa">ae̯.rɔn</span> <span class="meaning">iron</span></span>&nbsp;</td>
+<td><span class="eg" lang="bn">আয়রন</span>&nbsp;</td>
 <td><span class="ex" lang="bn">আয়</span></td>
 </tr>
 <tr>
 <th scope="row"><span class="ipa">oo̯</span></th>
-<td><span class="charExample" translate="no"><span class="ex" lang="bn">দুঃখও</span> <span class="trans">duh̽kʰọ</span> <span class="ipa">duk.kʰoo̯</span> <span class="meaning">sadness</span></span>&nbsp;</td>
+<td><span class="eg" lang="bn">দুঃখও</span>&nbsp;</td>
 <td><span class="ex" lang="bn">খও</span></td>
 </tr>
 <tr>
 <th scope="row"><span class="ipa">ɔo̯</span></th>
-<td><span class="charExample" translate="no"><span class="ex" lang="bn">তওবার</span> <span class="trans">tọbɑr</span> <span class="ipa">tɔo̯.bar</span> <span class="meaning">repentance</span></span>&nbsp;</td>
+<td><span class="eg" lang="bn">তওবার</span>&nbsp;</td>
 <td><span class="ex" lang="bn">তও</span></td>
 </tr>
 <tr>
 <th scope="row"><span class="ipa">ao̯</span></th>
-<td><span class="charExample" translate="no"><span class="ex" lang="bn">এছাড়াও</span> <span class="trans">ẹcʰɑɖˑɑọ</span> <span class="ipa">e.t͡ʃʰa.rao̯</span> <span class="meaning">also</span></span>&nbsp;</td>
+<td><span class="eg" lang="bn">এছাড়াও</span>&nbsp;</td>
 <td><span class="ex" lang="bn">ড়াও</span></td>
 </tr>
 </tbody>
@@ -660,7 +648,7 @@ two, when influenced by surrounding sounds.) Bengalis are not always aware of th
 <section id="nasalisation">
 <h3 id="h_nasalisation">Nasalisation</h3>
 
-<p><span class="codepoint" translate="no"><span lang="bn">&#x0981;</span> [<a href="/scripts/bengali/block#char0981"><span class="uname">U+0981 BENGALI SIGN CANDRABINDU</span></a>]</span> nasalises the vowel in a syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">হ্যাঁ</span> <span class="trans">h͓ýɑm̽</span> <span class="meaning">yes</span></span>, <span class="charExample" translate="no"><span class="ex" lang="bn">হাঁপান</span> <span class="trans">hɑm̽pɑn</span> <span class="ipa">hɑ̃pɑn</span> <span class="meaning">to pant</span></span>. Nasalised vowels include <span class="ipa">ĩ ũ ẽ õ ɛ̃ ɔ̃  ã</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="bn">&#x0981;</span> [<a href="/scripts/bengali/block#char0981"><span class="uname">U+0981 BENGALI SIGN CANDRABINDU</span></a>]</span> nasalises the vowel in a syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">হ্যাঁ</span> <span class="trans">h͓ýɑm̽</span> <span class="meaning">yes</span></span>, <span class="eg" lang="bn">হাঁপান</span>. Nasalised vowels include <span class="ipa">ĩ ũ ẽ õ ɛ̃ ɔ̃  ã</span>.</p>
         <p>The <span class="name">candrabindu</span> appears over the top of an independent vowel, but over the basic consonant when a vowel sign is attached, not over the vowel sign, In the sequence of characters, however, this should occur after any combining vowel sign associated with the same syllable.</p>
 <p>This positioning is not evident when using the Noto Sans webfont, but if you apply another font, such as Kohinoor Bangla, it appears in the correct location. Note how the base consonant is identified correctly in the second word below, even though it is 4 code points away.</p>
     <figure>
@@ -884,7 +872,7 @@ alveolar</th>
 <p>True retroflex (<span class="name">murdhonno</span>) consonants are not found in Bengali. They are apical postalveolar in Western Dialects. In other dialects, they are fronted to apical alveolar.<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">wp</a></p>
 <p><span class="ipa">r</span> occurs word-initially, whereas <span class="ipa">ɾ</span> occurs medially and finally. Both sounds are written using <span class="codepoint" translate="no"><span lang="bn">&#x09B0;</span> [<a href="/scripts/bengali/block#char09B0"><span class="uname">U+09B0 BENGALI LETTER RA</span></a>]</span>.<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">wp</a></p>
 <p><span class="ipa">s</span> and <span class="ipa">ʃ</span> are often merged. <span class="ipa">z</span> is found mainly in foreign words.<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">wp</a></p>
-<p>In the  Bangla spoken in Dhaka, <span class="ipa">ɾ</span> and <span class="ipa">ɽ</span> are often indistinct phonemically, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">করা</span> <span class="trans">krɑ</span> <span class="ipa">kɔɾa</span> <span class="meaning">do</span></span> and <span class="charExample" translate="no"><span class="ex" lang="bn">কড়া</span> <span class="trans">kɖˑɑ</span> <span class="ipa">kɔɽa</span> <span class="meaning">strict</span></span> can be homophonous.<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">wp</a></p>
+<p>In the  Bangla spoken in Dhaka, <span class="ipa">ɾ</span> and <span class="ipa">ɽ</span> are often indistinct phonemically, eg. <span class="eg" lang="bn">করা</span> and <span class="eg" lang="bn">কড়া</span> can be homophonous.<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">wp</a></p>
 <p><span class="ipa">j</span> and <span class="ipa">w</span> are pronunciations of <span class="codepoint" translate="no"><span lang="bn">&#x09AF;</span> + <span lang="bn">&#x09BC;</span> [<a href="/scripts/bengali/block#char09AF"><span class="uname">U+09AF BENGALI LETTER YA</span></a> + <a href="/scripts/bengali/block#char09BC"><span class="uname">U+09BC BENGALI SIGN NUKTA</span></a>]</span> when it appears between certain vowels.</p>
 </section>
 
@@ -902,14 +890,14 @@ alveolar</th>
 <figure class="characterBox auto"  data-cols="ipa,trans,transc">র␣ল</figure>
 
 <p>The detailed information about pronunciation of the characters listed in this section (especially with respect to consonant clusters) can be found by following the links to the <a href="block">character notes</a> document. We mention a few salient points below.</p>
-<p><span class="codepoint" translate="no"><span lang="bn">&#x099C;</span> [<a href="/scripts/bengali/block#char099C"><span class="uname">U+099C BENGALI LETTER JA</span></a>]</span> is sometimes pronounced z in Bengali words, but is also used in foreign words, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">জাকাত</span> <span class="trans">ʤɑkɑt</span> <span class="ipa">zakat</span> <span class="meaning">Zakah charity</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="bn">আজিজ</span> <span class="trans">ɑʤiʤ</span> <span class="ipa">aziz</span> <span class="meaning">Aziz</span></span>.</p>
-<p><span class="codepoint" translate="no"><span lang="bn">&#x09AF;</span> [<a href="/scripts/bengali/block#char09AF"><span class="uname">U+09AF BENGALI LETTER YA</span></a>]</span> is pronounced <span class="ipa">d͡ʒ</span> only at the beginning of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">যখন</span> <span class="trans">ýkʰn</span> <span class="ipa">ʤɔkʰon</span> <span class="meaning">when</span></span>. When used in a consonant cluster it doubles the length of the preceeding consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">জন্য</span> <span class="trans">ʤn͓ý</span> <span class="ipa">ʤɔnno</span> <span class="meaning">for</span></span>, or modifies the following vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ব্যথা</span> <span class="trans">b͓ýtʰɑ</span> <span class="ipa">bætʰɑ</span> <span class="meaning">pain</span></span>.&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="bn">&#x099C;</span> [<a href="/scripts/bengali/block#char099C"><span class="uname">U+099C BENGALI LETTER JA</span></a>]</span> is sometimes pronounced z in Bengali words, but is also used in foreign words, eg. <span class="eg" lang="bn">জাকাত</span>, and <span class="eg" lang="bn">আজিজ</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="bn">&#x09AF;</span> [<a href="/scripts/bengali/block#char09AF"><span class="uname">U+09AF BENGALI LETTER YA</span></a>]</span> is pronounced <span class="ipa">d͡ʒ</span> only at the beginning of a word, eg. <span class="eg" lang="bn">যখন</span>. When used in a consonant cluster it doubles the length of the preceeding consonant, eg. <span class="eg" lang="bn">জন্য</span>, or modifies the following vowel, eg. <span class="eg" lang="bn">ব্যথা</span>.&nbsp;</p>
 <p><span class="codepoint" translate="no"><span lang="bn">&#x09AC;</span> [<a href="/scripts/bengali/block#char09AC"><span class="uname">U+09AC BENGALI LETTER BA</span></a>]</span> in word-initial conjuncts can  be silent, and in conjuncts between vowels can lengthen the previous consonant.</p>
 <p>Two more characters are specifically for Assamese.</p>
 
 <figure class="otherBox auto"  data-cols="ipa,trans,transc">ৰ␣ৱ</figure>
 
-<p>The consonant cluster <span class="ex" lang="bn" >ক্ষ</span> <span class="trans">k͓ʃ̇</span> is called <span class="name">khiyɔ</span> and is often treated as a letter of the alphabet in that some dictionaries give it it's own section, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ক্ষুদ্র</span> <span class="trans">k͓ʃ̇ud͓r</span> <span class="ipa">kʰudro</span> <span class="meaning">small</span></span>.</p>
+<p>The consonant cluster <span class="ex" lang="bn" >ক্ষ</span> <span class="trans">k͓ʃ̇</span> is called <span class="name">khiyɔ</span> and is often treated as a letter of the alphabet in that some dictionaries give it it's own section, eg. <span class="eg" lang="bn">ক্ষুদ্র</span>.</p>
 </section>
 
 
@@ -942,15 +930,15 @@ alveolar</th>
 <h3 id="h_finals">Final consonants</h3>
 
 <p>One letter and 2 diacritics represent syllable-final consonant sounds.</p>
-<p><span class="codepoint" translate="no"><span lang="bn">&#x09CE;</span> [<a href="/scripts/bengali/block#char09CE"><span class="uname">U+09CE BENGALI LETTER KHANDA TA</span></a>]</span>, pronounced <span class="ipa">t</span>, is a variant form of <span class="codepoint" translate="no"><span lang="bn">&#x09A4;</span> [<a href="/scripts/bengali/block#char09A4"><span class="uname">U+09A4 BENGALI LETTER TA</span></a>]</span> that was added to Unicode 4.1 as a separate character. In some words a <span class="name">tɔ</span> that has no following inherent or other vowel may have this shape. It either comes at the end of words, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">হঠাৎ</span> <span class="trans">hʈʰɑt̽</span> <span class="ipa">hɔʈʰɑt</span> <span class="meaning">suddenly</span></span>, or before a consonant that doesn't naturally combine with <span class="name">tɔ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">উৎসব</span> <span class="trans">ụt̽ʃ̈b</span> <span class="ipa">utʃɔb</span> <span class="meaning">festival</span></span> or <span class="charExample" translate="no"><span class="ex" lang="bn">সৎমা</span> <span class="trans">ʃ̈t̽mɑ</span> <span class="ipa">ʃɔtmɑ</span> <span class="meaning">step-mother</span></span>. Many such words, however, use <span class="ex" lang="bn">ত</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">সদাত্মা</span> <span class="trans">ʃ̈dɑt͓mɑ</span> <span class="ipa">ʃadɑtːɑ</span></span>. It's not possible to say which will be used.</p>
-<p><span class="codepoint" translate="no"><span lang="bn">&#x0982;</span> [<a href="/scripts/bengali/block#char0982"><span class="uname">U+0982 BENGALI SIGN ANUSVARA</span></a>]</span> is a final nasal <span class="ipa">ŋ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বাংলা</span> <span class="trans">bɑŋ̽lɑ</span> <span class="ipa">bɑŋlɑ</span> <span class="meaning">Bengali (language)</span></span>.</p>
-        <p>Sometimes spelling is inconsistent, especially when this or <span class="codepoint" translate="no"><span lang="bn">&#x0999;</span> [<a href="/scripts/bengali/block#char0999"><span class="uname">U+0999 BENGALI LETTER NGA</span></a>]</span> are used in a conjunct, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">সাঙঘাতিক</span> <span class="trans">ʃ̈ɑŋgʰɑtik</span></span> or <span class="charExample" translate="no"><span class="ex" lang="bn">সাংঘাতিক</span> <span class="trans">ʃ̈ɑŋ̽gʰɑtik</span> <span class="ipa">ʃ̈ɑŋgʰɑtik</span> <span class="meaning">terrible</span></span>; <span class="charExample" translate="no"><span class="ex" lang="bn">রঙ</span> <span class="trans">rŋ</span></span> or <span class="charExample" translate="no"><span class="ex" lang="bn">রং</span> <span class="trans">rŋ̽</span> <span class="ipa">rɔŋ</span> <span class="meaning">colour</span></span>. However, in certain words the spelling is fixed. <span class="charExample" translate="no"><span class="ex" lang="bn">বাংলা</span></span> is one such word.  But, since this cannot support vowel signs, the word for Bengali nation (rather than language) has to be spelled with <span class="codepoint" translate="no"><span lang="bn">&#x0999;</span> [<a href="/scripts/bengali/block#char0999"><span class="uname">U+0999 BENGALI LETTER NGA</span></a>]</span>, ie. <span class="charExample" translate="no"><span class="ex" lang="bn">বাঙালী</span> <span class="trans">bɑŋɑlī</span> <span class="ipa">bɑŋgɑlī</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="bn">&#x09CE;</span> [<a href="/scripts/bengali/block#char09CE"><span class="uname">U+09CE BENGALI LETTER KHANDA TA</span></a>]</span>, pronounced <span class="ipa">t</span>, is a variant form of <span class="codepoint" translate="no"><span lang="bn">&#x09A4;</span> [<a href="/scripts/bengali/block#char09A4"><span class="uname">U+09A4 BENGALI LETTER TA</span></a>]</span> that was added to Unicode 4.1 as a separate character. In some words a <span class="name">tɔ</span> that has no following inherent or other vowel may have this shape. It either comes at the end of words, eg. <span class="eg" lang="bn">হঠাৎ</span>, or before a consonant that doesn't naturally combine with <span class="name">tɔ</span>, eg. <span class="eg" lang="bn">উৎসব</span> or <span class="eg" lang="bn">সৎমা</span>. Many such words, however, use <span class="ex" lang="bn">ত</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">সদাত্মা</span> <span class="trans">ʃ̈dɑt͓mɑ</span> <span class="ipa">ʃadɑtːɑ</span></span>. It's not possible to say which will be used.</p>
+<p><span class="codepoint" translate="no"><span lang="bn">&#x0982;</span> [<a href="/scripts/bengali/block#char0982"><span class="uname">U+0982 BENGALI SIGN ANUSVARA</span></a>]</span> is a final nasal <span class="ipa">ŋ</span>, eg. <span class="eg" lang="bn">বাংলা</span>.</p>
+        <p>Sometimes spelling is inconsistent, especially when this or <span class="codepoint" translate="no"><span lang="bn">&#x0999;</span> [<a href="/scripts/bengali/block#char0999"><span class="uname">U+0999 BENGALI LETTER NGA</span></a>]</span> are used in a conjunct, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">সাঙঘাতিক</span> <span class="trans">ʃ̈ɑŋgʰɑtik</span></span> or <span class="eg" lang="bn">সাংঘাতিক</span>; <span class="charExample" translate="no"><span class="ex" lang="bn">রঙ</span> <span class="trans">rŋ</span></span> or <span class="eg" lang="bn">রং</span>. However, in certain words the spelling is fixed. <span class="charExample" translate="no"><span class="ex" lang="bn">বাংলা</span></span> is one such word.  But, since this cannot support vowel signs, the word for Bengali nation (rather than language) has to be spelled with <span class="codepoint" translate="no"><span lang="bn">&#x0999;</span> [<a href="/scripts/bengali/block#char0999"><span class="uname">U+0999 BENGALI LETTER NGA</span></a>]</span>, ie. <span class="charExample" translate="no"><span class="ex" lang="bn">বাঙালী</span> <span class="trans">bɑŋɑlī</span> <span class="ipa">bɑŋgɑlī</span></span>.</p>
 <p><span class="codepoint" translate="no"><span lang="bn">&#x0983;</span> [<a href="/scripts/bengali/block#char0983"><span class="uname">U+0983 BENGALI SIGN VISARGA</span></a>]</span> has two different effects:</p>
         <ul>
-<li>Producing vigorous final aspiration <span class="ipa">ɦ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বাঃ</span> <span class="trans">bɑh̽</span> <span class="ipa">bɑːɦ</span> <span class="meaning">left</span></span>.</li>
-<li>Lengthening the following consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">নিঃশব্দ</span> <span class="trans">nih̽ʃb͓d</span> <span class="ipa">niʃʃɔbdo</span> <span class="meaning">silence</span></span>.  There is no aspiration.</li>
+<li>Producing vigorous final aspiration <span class="ipa">ɦ</span>, eg. <span class="eg" lang="bn">বাঃ</span>.</li>
+<li>Lengthening the following consonant, eg. <span class="eg" lang="bn">নিঃশব্দ</span>.  There is no aspiration.</li>
 </ul>
-        <p>The only common colloquial words containing this sign are <span class="charExample" translate="no"><span class="ex" lang="bn">বাঃ</span> <span class="trans">bɑh̽</span> <span class="ipa">bɑːɦ</span> <span class="meaning">left</span></span> and <span class="charExample" translate="no"><span class="ex" lang="bn">দুঃখ</span> <span class="trans">duh̽kʰ</span> <span class="ipa">dukkʰo</span> <span class="meaning">sorrow</span></span>.</p>
+        <p>The only common colloquial words containing this sign are <span class="eg" lang="bn">বাঃ</span> and <span class="eg" lang="bn">দুঃখ</span>.</p>
         <p>In the sequence of characters, these should all occur after any combining vowel sign associated with the same syllable. None carry vowel signs.</p>
 
 <p>See also the <span class="name">candrabindu</span> diacritic, which <a href="#nasalisation">nasalises</a> a vowel.</p>
@@ -974,12 +962,12 @@ alveolar</th>
 
 	<p>The absence of vowels between consonants can be represented in the following ways:</p>
 			<ul>
-			  <li>with no special rendering, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">করতাল</span> <span class="trans">krtɑl</span> <span class="ipa">kɔrtɑl</span> <span class="meaning">cymbal</span></span>.</li>
-		    <li>by specially shaped combinations of character glyphs, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">গন্ধ</span> <span class="trans">gn͓dʰ</span> <span class="ipa">gɔndʰo</span> <span class="meaning">scent</span></span>. Where the approach changes the shape of the constituent consonants, the cluster is referred to as a <span class="name">conjunct</span>.</li>
-			  <li>by showing the virama (called <span class="charExample" translate="no"><span class="ex" lang="bn">হসন্ত</span> <span class="trans">hʃ̈n͓t</span> <span class="ipa">hɔsonto</span></span> in Bengali), eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ফ্‌ল্যাট</span> <span class="trans">pʰ͓‌l͓ýɑʈ</span> <span class="ipa">pʰlæʈ</span> <span class="meaning">flat</span></span>. </li>
+			  <li>with no special rendering, eg. <span class="eg" lang="bn">করতাল</span>.</li>
+		    <li>by specially shaped combinations of character glyphs, eg. <span class="eg" lang="bn">গন্ধ</span>. Where the approach changes the shape of the constituent consonants, the cluster is referred to as a <span class="name">conjunct</span>.</li>
+			  <li>by showing the virama (called <span class="charExample" translate="no"><span class="ex" lang="bn">হসন্ত</span> <span class="trans">hʃ̈n͓t</span> <span class="ipa">hɔsonto</span></span> in Bengali), eg. <span class="eg" lang="bn">ফ্‌ল্যাট</span>. </li>
 <li>where a  syllable-final consonant diacritic is followed by a regular consonant.</li>
     </ul>
-			<p>Unlike languages written in the Devanagari script, consonant clusters are often not represented as conjuncts in Bengali. It is necessary to just know that the vowel should not be pronounced, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">রিকশা</span> <span class="trans">rikʃɑ</span> <span class="ipa">rikʃɑ</span> <span class="meaning">rickshaw</span></span>. Grammatical suffixes and endings are typically written without conjuncts, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">খাননা</span> <span class="trans">kʰɑnnɑ</span> <span class="ipa">kʰɑnnɑ</span></span>, which is the present tense form <span class="ipa">khan</span> plus negative suffix <span class="ipa">na</span>; <span class="charExample" translate="no"><span class="ex" lang="bn">করছ</span> <span class="trans">krcʰ</span> <span class="ipa">korcʰo</span></span>, which is stem <span class="trans">kôr</span> from <span class="trans">kôra</span> plus present continuous ending <span class="trans">chô</span>.</p>
+			<p>Unlike languages written in the Devanagari script, consonant clusters are often not represented as conjuncts in Bengali. It is necessary to just know that the vowel should not be pronounced, eg. <span class="eg" lang="bn">রিকশা</span>. Grammatical suffixes and endings are typically written without conjuncts, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">খাননা</span> <span class="trans">kʰɑnnɑ</span> <span class="ipa">kʰɑnnɑ</span></span>, which is the present tense form <span class="ipa">khan</span> plus negative suffix <span class="ipa">na</span>; <span class="charExample" translate="no"><span class="ex" lang="bn">করছ</span> <span class="trans">krcʰ</span> <span class="ipa">korcʰo</span></span>, which is stem <span class="trans">kôr</span> from <span class="trans">kôra</span> plus present continuous ending <span class="trans">chô</span>.</p>
 <p>In all cases except the the one just described, the underlying mechanism in terms of codepoints involves adding <span class="codepoint" translate="no"><span lang="bn">&#x09CD;</span> [<a href="/scripts/bengali/block#char09CD"><span class="uname">U+09CD BENGALI SIGN VIRAMA</span></a>]</span> (called <span class="charExample" translate="no"><span class="ex" lang="bn">হসন্ত</span> <span class="trans">hʃ̈n͓t</span> <span class="ipa">hɔʃonto</span></span> in Bengali) between the consonants in the cluster, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ক্ষ</span> <span class="trans">k͓ʃ̇</span></span> is produced by the sequence <span class="codepoint" translate="no"><span lang="bn">&#x0995;</span> + <span lang="bn">&#x09CD;</span> + <span lang="bn">&#x09B7;</span> [<a href="/scripts/bengali/block#char0995"><span class="uname">U+0995 BENGALI LETTER KA</span></a> + <a href="/scripts/bengali/block#char09CD"><span class="uname">U+09CD BENGALI SIGN VIRAMA</span></a> + <a href="/scripts/bengali/block#char09B7"><span class="uname">U+09B7 BENGALI LETTER SSA</span></a>]</span>.</p>
 <p>The font usually determines which visual method is used, although it is possible to influence this (see below). </p>
 <p>Quite often, clustered consonants are pronounced differently than you would expect. In particular, conjuncts ending with <span class="codepoint" translate="no"><span lang="bn">&#x09AC;</span> [<a href="/scripts/bengali/block#char09AC"><span class="uname">U+09AC BENGALI LETTER BA</span></a>]</span> or <span class="codepoint" translate="no"><span lang="bn">&#x09AE;</span> [<a href="/scripts/bengali/block#char09AE"><span class="uname">U+09AE BENGALI LETTER MA</span></a>]</span> tend to not pronounce the latter, but double the length of the consonant before it, eg. .</p>
@@ -1207,9 +1195,9 @@ alveolar</th>
 <section id="halfforms">
 <h3 id="h_halfforms">Merging shapes as conjuncts</h3>
 
-<p>Conjunct shapes are most commonly formed by arranging the components vertically, reducing and combining the shapes of the individual components as needed, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">স+থ→স্থ</span> <span class="trans">ʃ͓̈tʰ</span></span> in <span class="charExample" translate="no"><span class="ex" lang="bn">আস্থা</span> <span class="trans">ɑʃ͓̈tʰɑ</span> <span class="ipa">ɑʃtʰɑ</span> <span class="meaning">trust</span></span>, or <span class="charExample" translate="no"><span class="ex" lang="bn">ল+ল→ল্ল</span> <span class="trans">l͓l</span></span> in <span class="charExample" translate="no"><span class="ex" lang="bn">ঝিল্লি</span> <span class="trans">ʤʰil͓li</span> <span class="ipa">ʤʰilli</span> <span class="meaning">grasshopper</span></span>.</p>
-<p>Many conjuncts are formed by combining components horizontally, eg.  <span class="charExample" translate="no"><span class="ex" lang="bn">ম+প→ম্প</span> <span class="trans">m͓p</span></span> in <span class="charExample" translate="no"><span class="ex" lang="bn">ক্যম্পাস</span> <span class="trans">k͓ým͓pɑʃ̈</span> <span class="ipa">kyæmpas</span> <span class="meaning">campus</span></span>, or <span class="charExample" translate="no"><span class="ex" lang="bn">চ+চ→চ্চ</span> <span class="trans">c͓c</span></span> in <span class="charExample" translate="no"><span class="ex" lang="bn">উচ্চারণ</span> <span class="trans">ục͓cɑrn̈</span> <span class="ipa">ut͡ʃɑrɔn</span> <span class="meaning">pronunciation</span></span>.</p>
-<p>A small set of conjuncts combines the consonants into a  ligated shape, where individual components can't be easily discerned, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ষ+ট→ষ্ট</span> <span class="trans">ʃ͓̇ʈ</span></span> in <span class="charExample" translate="no"><span class="ex" lang="bn">খ্রিষ্টান</span> <span class="trans">kʰ͓riʃ͓̇ʈɑn</span> <span class="ipa">kʰriʂʈan</span> <span class="meaning">christian</span></span>, or <span class="charExample" translate="no"><span class="ex" lang="bn">ক+ষ→ক্ষ</span> <span class="trans">k͓ʃ̇</span></span> in <span class="charExample" translate="no"><span class="ex" lang="bn">ক্ষণ</span> <span class="trans">k͓ʃ̇n̈</span> <span class="ipa">kʃon</span> <span class="meaning">moment</span></span>.</p>
+<p>Conjunct shapes are most commonly formed by arranging the components vertically, reducing and combining the shapes of the individual components as needed, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">স+থ→স্থ</span> <span class="trans">ʃ͓̈tʰ</span></span> in <span class="eg" lang="bn">আস্থা</span>, or <span class="charExample" translate="no"><span class="ex" lang="bn">ল+ল→ল্ল</span> <span class="trans">l͓l</span></span> in <span class="eg" lang="bn">ঝিল্লি</span>.</p>
+<p>Many conjuncts are formed by combining components horizontally, eg.  <span class="charExample" translate="no"><span class="ex" lang="bn">ম+প→ম্প</span> <span class="trans">m͓p</span></span> in <span class="eg" lang="bn">ক্যম্পাস</span>, or <span class="charExample" translate="no"><span class="ex" lang="bn">চ+চ→চ্চ</span> <span class="trans">c͓c</span></span> in <span class="eg" lang="bn">উচ্চারণ</span>.</p>
+<p>A small set of conjuncts combines the consonants into a  ligated shape, where individual components can't be easily discerned, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ষ+ট→ষ্ট</span> <span class="trans">ʃ͓̇ʈ</span></span> in <span class="eg" lang="bn">খ্রিষ্টান</span>, or <span class="charExample" translate="no"><span class="ex" lang="bn">ক+ষ→ক্ষ</span> <span class="trans">k͓ʃ̇</span></span> in <span class="eg" lang="bn">ক্ষণ</span>.</p>
 
 <p>Different fonts may combine the same letters in different ways. The following figures shows characters that are combined in different ways by different fonts.</p>
     <figure>
@@ -1225,9 +1213,9 @@ alveolar</th>
 <h3 id="h_raconjuncts">Conjuncts with <span class="name">ra</span> and <span class="name">ma</span></h3>
 
 			<p>Like other scripts, initially <span class="codepoint"><span lang="bn">&#x09B0;</span> <a href="/scripts/bengali/block#char09B0">[<span class="uname">U+09B0 BENGALI LETTER RA</span>]</a></span> is displayed in a non-standard way in consonant clusters. </p>
-<p>An  <span class="ipa">r</span> that is pronounced at the start of a cluster is displayed as a mark above the following consonant(s), eg. <span class="trans">rt</span> in <span class="ex" lang="bn">গর্ত</span> <span class="trans">gɔrtô</span> <span class="meaning">hole</span>. Unlike Devanagari, it doesn't appear to be displayed above the vowel-sign of the orthographic syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">কুর্তা</span> <span class="trans">kur͓tɑ</span> <span class="ipa">kurtɑ</span> <span class="meaning">Indian shirt</span></span>. Like other consonant clusters, it may not involve a conjunct at all, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">কারসাজি</span> <span class="trans">kɑrʃ̈ɑʤi</span> <span class="ipa">kɑrʃɑʤi</span> <span class="meaning">trickery</span></span>.</p>
+<p>An  <span class="ipa">r</span> that is pronounced at the start of a cluster is displayed as a mark above the following consonant(s), eg. <span class="trans">rt</span> in <span class="ex" lang="bn">গর্ত</span> <span class="trans">gɔrtô</span> <span class="meaning">hole</span>. Unlike Devanagari, it doesn't appear to be displayed above the vowel-sign of the orthographic syllable, eg. <span class="eg" lang="bn">কুর্তা</span>. Like other consonant clusters, it may not involve a conjunct at all, eg. <span class="eg" lang="bn">কারসাজি</span>.</p>
 <p>A  trailing <span class="name">rɔ</span> is typically displayed as a wavy line below the other consonants, eg. <span class="trans">gr</span> in <span class="ex" lang="bn">গ্রাম</span> <span class="trans">gram</span> <span class="meaning">village</span>.</p>
-<p>A cluster-final <span class="ipa">m</span> is also displayed in a characteristic way, as a long line to the right with an appendage to the left at the bottom, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">উন্মত্ত</span> <span class="trans">ụn͓mt͓t</span> <span class="ipa">unmɔtto</span> <span class="meaning">insane</span></span>.</p>
+<p>A cluster-final <span class="ipa">m</span> is also displayed in a characteristic way, as a long line to the right with an appendage to the left at the bottom, eg. <span class="eg" lang="bn">উন্মত্ত</span>.</p>
 </section>
 
 
@@ -1251,7 +1239,7 @@ alveolar</th>
                 
                 
                 
-<p>When the virama is  used  it may be because the font doesn't have a particular conjunct ligature, but it may also be visible in places where the phonology is unusual, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ফ্‌ল্যাট</span> <span class="trans">pʰ͓‌l͓ýɑʈ</span> <span class="ipa">pʰlæʈ</span> <span class="meaning">flat</span></span>; <span class="charExample" translate="no"><span class="ex" lang="bn">লান্‌চ</span> <span class="trans">lɑn͓‌c</span> <span class="ipa">lɑnt͡ʃ</span> <span class="meaning">lunch</span></span> (though these may also be spelled with conjuncts, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ফ্ল্যাট</span> <span class="trans">pʰ͓l͓ýɑʈ</span></span>). It is also quite common to see <span class="charExample" translate="no"><span class="ex" lang="bn">উদ্‌যাপন</span> <span class="trans">ụd͓‌ýɑpn</span></span> to distinguish it from words like <span class="charExample" translate="no"><span class="ex" lang="bn">উদ্যান</span> <span class="trans">ụd͓ýɑn</span></span>. These words are etymologically related, but distinct phonetically.</p>
+<p>When the virama is  used  it may be because the font doesn't have a particular conjunct ligature, but it may also be visible in places where the phonology is unusual, eg. <span class="eg" lang="bn">ফ্‌ল্যাট</span>; <span class="eg" lang="bn">লান্‌চ</span> (though these may also be spelled with conjuncts, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ফ্ল্যাট</span> <span class="trans">pʰ͓l͓ýɑʈ</span></span>). It is also quite common to see <span class="charExample" translate="no"><span class="ex" lang="bn">উদ্‌যাপন</span> <span class="trans">ụd͓‌ýɑpn</span></span> to distinguish it from words like <span class="charExample" translate="no"><span class="ex" lang="bn">উদ্যান</span> <span class="trans">ụd͓ýɑn</span></span>. These words are etymologically related, but distinct phonetically.</p>
 <p>Again, if a visible virama is wanted but not what the font does by default, it is possible to force it by inserting a <span class="uname">ZWNJ</span> character after the virama.</p>
 </section>
 
@@ -1887,6 +1875,5 @@ alveolar</th>
 initialiseSummary('/scripts/bengali/block','bn','bn','bengali')
 autoTransliterate('bn')
 </script>
-
 </body>
 </html>

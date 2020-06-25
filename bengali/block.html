@@ -19,6 +19,8 @@
 <script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
+<script src="../common/egcode.js"></script>
+<script src="examples.js"></script>
 
 <script src="../../uniview/descriptions.js"></script> 
 <script src="../../uniview/u.js"></script> 
@@ -38,7 +40,7 @@
 </header>
 <h1>Bengali character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a></nav>
+<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
 
 <aside class="sidebar">
   <h2 class="notoc flush"><a id="tochead">Contents</a></h2>
@@ -72,7 +74,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->20 January, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->25 June, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -84,23 +86,27 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
     <li><a href="../../uniview/?block=bengali" target="_blank">Bengali</a></li>
 </ul>
 
-<p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places.</p>
-<p>For details about how the script works, see <a class="linkHighlight" href="index">Bengali/Bangla</a>. For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Beng">Script links pages</a>.</p>
-<p><span style="text-align: start;">We have usage data for the following 2 languages that use the Bengali script</span>: Assamese, Bengali.</p>
+<p>See also the companion document, <a href="." class="linkHighlight">Bengali/Bangla</a>, for a summary of the Bengali script and its use for the Bangla language.</p>
+<p> Phonetic transcriptions should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
-<p>Find <input type="text" id="findInput"
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
 
-<p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example. Click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
+
 <details>
-<summary class="instructions">Read more about how to use this page.</summary>
-    <p class="instructions">To <strong>find a character</strong> by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or the hex number in the <samp>Find</samp> control above.</p>
-    <p class="instructions">To view this page as intended, you  need a <strong>Bengali font</strong>.  This page comes with a Noto Sans Bengali webfont. Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system.  For transcriptions I recommend the excellent and free <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;item_id=DoulosSILfont">Doulos SIL font</a>. The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. (If there is no glyph and you want to see what it looks like, click on <samp>See in UniView</samp>.)</p>
-    <p class="instructions"><strong>Information about languages</strong> that use these characters is taken from the list maintained for the Character Use app. The list is not exhaustive.</p>
-<p class="instructions"><strong>References</strong> are indicated by superscript characters. Wherever possible, those contain direct links to the source material. When such a pointer is alongside an arrow → it means that it's worth following the link for the additional information it provides. Digits refer to the main sources, which are listed at the bottom of a set of notes.</p>
-<p class="instructions">When you are using UniView and you turn on <samp>Show notes</samp>, UniView will pull in information about characters from this page.</p>
-<p id="charliststr" class="instructions"></p>
+<summary class="instructions"><a href="../links?iso=Beng">Related pages</a>.</summary>
+</details>
 
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#charnotes">Other character notes</a>.</summary>
+</details>
+
+
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Bengali','Bangla'); return false;">About this page</a></summary>
+<div id="about"></div>
+<p id="charliststr" class="instructions"></p>
 </details>
 </section>
 </div>
@@ -128,7 +134,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">~</span>, <span class="name">cɔndrôbindu</span> <span class="ex" lang="bn" >চন্দ্রবিন্দু</span></p>
-        <p>Appears over the top of an independent vowel, but over the basic consonant when a vowel sign is attached, not over the vowel sign, eg. <span class="charExample" translate="no"><span class="charExample" translate="no"><span class="ex" lang="bn">হ্যাঁ</span> <span class="trans">h͓ýɑm̽</span> <span class="ipa">hæ̃</span> <span class="meaning">yes</span></span></span>, <span class="charExample" translate="no"><span class="ex" lang="bn">হাঁপান</span> <span class="trans">hɑm̽pɑn</span> <span class="ipa">hɑ̃pɑn</span> <span class="meaning">to pant</span></span>.</p>
+        <p>Appears over the top of an independent vowel, but over the basic consonant when a vowel sign is attached, not over the vowel sign, eg. <span class="charExample" translate="no"><span class="eg" lang="bn">হ্যাঁ</span></span>, <span class="eg" lang="bn">হাঁপান</span>.</p>
         <p>In the sequence of characters, this should occur after any combining vowel sign associated with the same syllable.</p>
         <p><span class="name">ʧɔndrobindu</span> means <span class="meaning">moon dot</span>.</p>
 </div>
@@ -145,9 +151,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">ɱ</span>, <span class="name">ônusvar</span> <span class="ex" lang="bn" >অনুস্বার</span> or <span class="name">ônusvôr</span> <span class="ex" lang="bn" >অনুস্বর</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বাংলা</span> <span class="trans">bɑŋ̽lɑ</span> <span class="ipa">bɑŋlɑ</span> <span class="meaning">Bengali (language)</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">বাংলা</span>.</p>
         <p>In the sequence of characters, this should occur after any combining vowel sign associated with the same syllable. It never has a vowel sign.</p>
-        <p>Sometimes spelling is inconsistent, especially when this or <span class="codepoint" translate="no"><span lang="bn">&#x0999;</span> [<a href="/scripts/bengali/block#char0999"><span class="uname">U+0999 BENGALI LETTER NGA</span></a>]</span> are used in a conjunct, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">সাঙঘাতিক</span> <span class="trans">ʃ̈ɑŋgʰɑtik</span></span> or <span class="charExample" translate="no"><span class="ex" lang="bn">সাংঘাতিক</span> <span class="trans">ʃ̈ɑŋ̽gʰɑtik</span> <span class="ipa">ʃɑŋɡʰɑtik</span> <span class="meaning">terrible</span></span>; <span class="charExample" translate="no"><span class="ex" lang="bn">রঙ</span> <span class="trans">rŋ</span></span> or <span class="charExample" translate="no"><span class="ex" lang="bn">রং</span> <span class="trans">rŋ̽</span> <span class="ipa">rɔŋ</span> <span class="meaning">colour</span></span>.</p>
+        <p>Sometimes spelling is inconsistent, especially when this or <span class="codepoint" translate="no"><span lang="bn">&#x0999;</span> [<a href="/scripts/bengali/block#char0999"><span class="uname">U+0999 BENGALI LETTER NGA</span></a>]</span> are used in a conjunct, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">সাঙঘাতিক</span> <span class="trans">ʃ̈ɑŋgʰɑtik</span></span> or <span class="eg" lang="bn">সাংঘাতিক</span>; <span class="charExample" translate="no"><span class="ex" lang="bn">রঙ</span> <span class="trans">rŋ</span></span> or <span class="eg" lang="bn">রং</span>.</p>
         <p>However, in certain words the spelling is fixed. <span class="charExample" translate="no"><span class="ex" lang="bn">বাংলা</span></span> is one such word.  However, since this cannot support vowel signs, the word for Bengali nation (rather than language) has to be spelled with <span class="codepoint" translate="no"><span lang="bn">&#x0999;</span> [<a href="/scripts/bengali/block#char0999"><span class="uname">U+0999 BENGALI LETTER NGA</span></a>]</span>, ie. <span class="charExample" translate="no"><span class="ex" lang="bn">বাঙালী</span> <span class="trans">bɑŋɑlī</span> <span class="ipa">bɑŋgɑlī</span></span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p399-402 [2] <a href="#refs">[Radice]</a> p13-14 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
@@ -164,10 +170,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">ḥ</span>, <span class="name">bisɔrgô</span> <span class="ex" lang="bn" >বিসর্গ</span></p>
         <p>This sign has two different effects:</p>
         <ul>
-<li>Lengthening the following consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">নিঃশব্দ</span> <span class="trans">nih̽ʃb͓d</span> <span class="ipa">niʃʃɔbdo</span> <span class="meaning">silence</span></span>.  There is no aspiration.</li>
-<li>Producing vigorous final aspiration, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বাঃ</span> <span class="trans">bɑh̽</span> <span class="ipa">bɑːɦ</span> <span class="meaning">left</span></span>.</li>
+<li>Lengthening the following consonant, eg. <span class="eg" lang="bn">নিঃশব্দ</span>.  There is no aspiration.</li>
+<li>Producing vigorous final aspiration, eg. <span class="eg" lang="bn">বাঃ</span>.</li>
 </ul>
-        <p>The only common colloquial words containing this sign are <span class="charExample" translate="no"><span class="ex" lang="bn">বাঃ</span> <span class="trans">bɑh̽</span> <span class="ipa">bɑːɦ</span> <span class="meaning">left</span></span> and <span class="charExample" translate="no"><span class="ex" lang="bn">দুঃখ</span> <span class="trans">duh̽kʰ</span> <span class="ipa">dukkʰo</span> <span class="meaning">sorrow</span></span>.</p>
+        <p>The only common colloquial words containing this sign are <span class="eg" lang="bn">বাঃ</span> and <span class="eg" lang="bn">দুঃখ</span>.</p>
         <p>In the sequence of characters, this should occur after any combining vowel sign associated with the same syllable.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p399-402 [2] <a href="#refs">[Radice]</a> p255 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
@@ -281,9 +287,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">k</span>, <span class="name">kɔ</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">কলম</span> <span class="trans">klm</span> <span class="ipa">kɔlom</span> <span class="meaning">pen</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">কলম</span>.</p>
         <p><span class="leadin">Conjuncts with unusual pronunciations:</span></p>
-        <p><span class="ex" lang="bn" >ক্ষ</span> <span class="trans">k͓ʃ̇</span>, <span class="ipa">kʰ</span> when initial, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ক্ষুদ্র</span> <span class="trans">k͓ʃ̇ud͓r</span> <span class="ipa">kʰudro</span> <span class="meaning">small</span></span>. <span class="ipa">kːʰ</span> in the middle of a word. Note: this conjunct is called <span class="name">khiyɔ</span> and is often treated as a letter of the alphabet in that some dictionaries give it it's own section.</p>
+        <p><span class="ex" lang="bn" >ক্ষ</span> <span class="trans">k͓ʃ̇</span>, <span class="ipa">kʰ</span> when initial, eg. <span class="eg" lang="bn">ক্ষুদ্র</span>. <span class="ipa">kːʰ</span> in the middle of a word. Note: this conjunct is called <span class="name">khiyɔ</span> and is often treated as a letter of the alphabet in that some dictionaries give it it's own section.</p>
         <p><span class="ex" lang="bn">ক্ষ্ন</span> <span class="trans">k͓ʃ͓̇n</span>, <span class="ipa">kkʰn</span></p>
         <p><span class="ex" lang="bn">ক্ষ্ম</span> <span class="trans">k͓ʃ͓̇m</span>, <span class="ipa">kkʰ</span></p>
         <p><span class="ex" lang="bn">ক্ষ্য</span> <span class="trans">k͓ʃ͓̇ý</span>, <span class="ipa">kkʰ</span></p>
@@ -300,7 +306,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">kh</span>, <span class="name">khɔ</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">খবর</span> <span class="trans">kʰbr</span> <span class="ipa">kʰɔbor</span> <span class="meaning">news</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">খবর</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p400 [2] <a href="#refs">[Radice]</a> pp12-13 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
     </div>
@@ -314,7 +320,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">g</span>, <span class="name">gɔ</span> </p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">গতকাল</span> <span class="trans">gtkɑl</span> <span class="ipa">gɔtokɑl</span> <span class="meaning">yesterday</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">গতকাল</span>.</p>
         <p><span class="leadin">Shape variants.</span> When combined with <span class="codepoint" translate="no"><span lang="bn">&nbsp;&#x09C1;</span> [<a href="/scripts/bengali/block#char09C1"><span class="uname">U+09C1 BENGALI VOWEL SIGN U</span></a>]</span> the form <span class="ex" lang="bn">গু</span> is common in handwriting and older typefaces. The <span class="name">u</span> can also be written below the consonant, especially in newspapers, ie. <span class="charExample" translate="no"><span class="ex" lang="bn">গ‌ু</span></span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p400 [2] <a href="#refs">[Radice]</a> pp3,4 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
@@ -329,7 +335,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">gh</span>, <span class="name">ghɔ</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ঘর</span> <span class="trans">gʰr</span> <span class="ipa">gʰɔr</span> <span class="meaning">room, house</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">ঘর</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p400 [2] <a href="#refs">[Radice]</a> p42 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
     </div>
@@ -343,7 +349,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
     <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">ŋ</span>, <span class="name">uŋɔ</span>        </p>
-<p>Some speakers will pronounce a hard <span class="ipa">ɡ</span> in a word like <span class="charExample" translate="no"><span class="ex" lang="bn">বাঙালী</span> <span class="trans">bɑŋɑlī</span> <span class="ipa">bɑŋɡɑliː</span> <span class="meaning">Bengali</span></span>, while others will either soften it or omit it.</p>
+<p>Some speakers will pronounce a hard <span class="ipa">ɡ</span> in a word like <span class="eg" lang="bn">বাঙালী</span>, while others will either soften it or omit it.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p400 [2] <a href="#refs">[Radice]</a> pp9, 10 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
     </div>
@@ -357,7 +363,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">c</span>, <span class="name">cɔ</span> </p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">চক্র</span> <span class="trans">ck͓r</span> <span class="ipa">t͡ʃɔkro</span> <span class="meaning">wheel</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">চক্র</span>.</p>
         <p><span class="leadin">Conjuncts with unusual pronunciations:</span></p>
         <p><span class="ex" lang="bn">চ্ছ্ব</span> <span class="trans">c͓cʰ͓b</span>, <span class="ipa">ccʰ</span></p>
 </div>
@@ -373,7 +379,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">ch</span>, <span class="name">chɔ</span> </p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ছাতা</span> <span class="trans">cʰɑtɑ</span> <span class="ipa">t͡ʃʰɑtɑ</span> <span class="meaning">umbrella</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">ছাতা</span>.</p>
         <p>Aspiration is stronger at the beginning of a word than in the middle or at the end.</p>
         <p><span class="ipa">s</span> when pronounced by some people.</p>
         <p><span class="leadin">Conjuncts with unusual pronunciations:</span></p>
@@ -391,7 +397,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">j</span>, <span class="name">bôr͟gīyô jɔ</span> <span class="ex" lang="bn" >বর্গীয় জ</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">জগৎ</span> <span class="trans">ʤgt̽</span> <span class="ipa">ʤɔɡot</span> <span class="meaning">world</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">জগৎ</span>.</p>
         <p><span class="ipa">z</span> In Bangladesh this can sound more like <span class="ipa">z</span>, especially in words of Perso-Arabic origin, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">নামাজ</span> <span class="trans">nɑmɑʤ</span> <span class="meaning">prayers</span></span>, pronounced <span class="ipa">namaz</span>.</p>
         <p><span class="leadin">Unusual conjunct pronunciations:</span></p>
         <p><span class="ex" lang="bn">জ্ঞ</span> <span class="trans">jñ</span>, <span class="ipa">ɡ</span> at the beginning of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">জ্ঞান</span> <span class="trans">ʤ͓ñɑn</span> <span class="meaning">knowledge</span></span>, pronounced <span class="ipa">ɡæn</span>, or <span class="ipa">ɡɡ</span> between vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বিজ্ঞান</span> <span class="trans">biʤ͓ñɑn</span> <span class="meaning">science</span></span>, pronounced <span class="ipa">biɡɡæn</span>. (Note how it also changes a following <span class="trans">a</span> to <span class="ipa">æ</span>.)</p>
@@ -409,7 +415,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">jh</span>, <span class="name">jhɔ</span> </p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ঝড়</span> <span class="trans">ʤʰɖˑ</span> <span class="ipa">ʤʰɔɽ</span> <span class="meaning">storm</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">ঝড়</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p400 [2] <a href="#refs">[Radice]</a> pp 38 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
     </div>
@@ -440,7 +446,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">ʈ</span>, <span class="name">ʈɔ</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">টাকা</span> <span class="trans">ʈɑkɑ</span> <span class="ipa">ʈɑkɑ</span> <span class="meaning">money</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">টাকা</span>.</p>
         <p>Note that Bengali retroflex consonants do not involve the tongue being curled around or pointed vertically upwards, as in other Indic languages. The tip of the tongue is touched against the alveolar ridge.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p400 [2] <a href="#refs">[Radice]</a> p 23 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
@@ -455,7 +461,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">ʈh</span>, <span class="name">ʈhɔ</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ঠাণ্ডা</span> <span class="trans">ʈʰɑn͓̈ɖɑ</span> <span class="ipa">ʈʰɑnɖɑ</span> <span class="meaning">cold</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">ঠাণ্ডা</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p400 [2] <a href="#refs">[Radice]</a> p38 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
     </div>
@@ -469,7 +475,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">ɖ</span>, <span class="name">ɖɔ</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ডাক্তার</span> <span class="trans">ɖɑk͓tɑr</span> <span class="ipa">ɖɑktɑr</span> <span class="meaning">doctor</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">ডাক্তার</span>.</p>
         <p><span class="ipa">ɽ</span> with <span class="codepoint"><span lang="bn">&#x09BC;</span> <a href="#char09BC">[<span class="uname">U+09BC BENGALI SIGN NUKTA</span>]</a></span>. See  <span class="codepoint"><span lang="bn">&#x09DC;</span> <a href="#char09DC">[<span class="uname">U+09DC BENGALI LETTER RRA</span>]</a></span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p400 [2] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a> [3] <a href="#refs">[Radice]</a> p28, 29 </p>
@@ -484,7 +490,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">ɖh</span>, <span class="name">ɖhɔ</span> <span class="trans">ɖh</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ঢেউ</span> <span class="trans">ɖʰeụ</span> <span class="ipa">ɖʰeu</span> <span class="meaning">wave</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">ঢেউ</span>.</p>
         <p>Rather uncommon, even though it is used in the name of the Bangladeshi capital, <span class="charExample" translate="no"><span class="ex" lang="bn">ঢাকা</span> <span class="trans">ɖʰɑkɑ</span> <span class="ipa">ɖʰɑkɑ</span></span>, and some other quite common words<sup>4</sup>.</p>
         <p><span class="ipa">ɽ</span> or <span class="ipa">ɽh</span> with <a href="#char09BC"><span class="uname">U+09BC BENGALI SIGN NUKTA</span></a>. See <span class="codepoint"><span lang="bn">&#xA0;&#x09DD;</span> <a href="#char09DD">[<span class="uname">U+09DD BENGALI LETTER RHA</span></a></span>. </p>
 </div>
@@ -500,7 +506,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">ɳ</span>, <span class="name">mūrdhônyô ɳɔ</span> <span class="ex" lang="bn" >মূর্ধন্য ণ</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">হরিণ</span> <span class="trans">hrin̈</span> <span class="ipa">horin</span> <span class="meaning">deer</span></span>. This is pronounced exactly the same as <span class="name">dɔntyô nɔ</span>.</p>
+        <p>eg. <span class="eg" lang="bn">হরিণ</span>. This is pronounced exactly the same as <span class="name">dɔntyô nɔ</span>.</p>
         <p><span class="leadin">Unusual conjunct pronunciations:</span></p>
         <p><span class="ex" lang="bn">হ্ণ</span> <span class="trans">h͓n̈</span>, <span class="ipa">nh</span> or <span class="ipa">nn</span></p>
 </div>
@@ -516,15 +522,15 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">t</span>, <span class="name">tɔ</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">তারা</span> <span class="trans">tɑrɑ</span> <span class="ipa">tɑrɑ</span> <span class="meaning">star</span></span>. The tongue is further forward than the English t.</p>
+        <p>eg. <span class="eg" lang="bn">তারা</span>. The tongue is further forward than the English t.</p>
         <p><span class="leadin">Unusual conjunct pronunciations:</span></p>
         <p><span class="ex" lang="bn">ত্ম</span> <span class="trans">tm</span>, <span class="ipa">tː</span></p>
         <p><span class="ex" lang="bn">ত্ব</span> <span class="trans">tb</span>, <span class="ipa">tː</span></p>
         <p><span class="ex" lang="bn">ত্ম্য</span> <span class="trans">tmy̌</span>, <span class="ipa">tː</span></p>
         <p><span class="ex" lang="bn">স্ত্য</span> <span class="trans">sty̌</span>, <span class="ipa">stː</span></p>
-        <p><span class="leadin">Special vowel combinations:</span> The syllable <span class="trans">ntu</span> can be written in modern typefaces with the <span class="name">u</span> below the <span class="trans">nt</span> conjunct, but in older print a special arrangement incorporates all three sounds together, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">কিন্তু</span> <span class="trans">kin͓tu</span> <span class="ipa">kintu</span> <span class="meaning">but</span></span>.</p>
+        <p><span class="leadin">Special vowel combinations:</span> The syllable <span class="trans">ntu</span> can be written in modern typefaces with the <span class="name">u</span> below the <span class="trans">nt</span> conjunct, but in older print a special arrangement incorporates all three sounds together, eg. <span class="eg" lang="bn">কিন্তু</span>.</p>
         <p>The combination <span class="trans">tru</span> is represented by <span class="ex" lang="bn">ত্রু</span>.</p>
-        <p><span class="leadin">Khanda ta</span> In some words a <span class="name">tɔ</span> that has no following inherent or other vowel may have a shape like <span class="ex" lang="bn">ৎ</span>. It is called <span class="charExample" translate="no"><span class="ex" lang="bn">খণ্ড ত</span> <span class="trans">kʰn͓̈ɖ t</span> <span class="ipa">kʰɔnɖo tɔ</span></span>. It either comes at the end of words, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">হঠাৎ</span> <span class="trans">hʈʰɑt̽</span> <span class="ipa">hɔʈʰɑt</span> <span class="meaning">suddenly</span></span>, or before a consonant that doesn't naturally combine with <span class="name">tɔ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">উৎসব</span> <span class="trans">ụt̽ʃ̈b</span> <span class="ipa">utʃɔb</span> <span class="meaning">festival</span></span>. Many such words, however, use <span class="ex" lang="bn">ত</span>. It's not possible to say which will be used.</p>
+        <p><span class="leadin">Khanda ta</span> In some words a <span class="name">tɔ</span> that has no following inherent or other vowel may have a shape like <span class="ex" lang="bn">ৎ</span>. It is called <span class="charExample" translate="no"><span class="ex" lang="bn">খণ্ড ত</span> <span class="trans">kʰn͓̈ɖ t</span> <span class="ipa">kʰɔnɖo tɔ</span></span>. It either comes at the end of words, eg. <span class="eg" lang="bn">হঠাৎ</span>, or before a consonant that doesn't naturally combine with <span class="name">tɔ</span>, eg. <span class="eg" lang="bn">উৎসব</span>. Many such words, however, use <span class="ex" lang="bn">ত</span>. It's not possible to say which will be used.</p>
         <p>Unicode 4.1 added a separate character for <span class="name">khɔɳɖȏ tɔ</span>, <span class="codepoint"><span lang="bn">&#x09CE;</span> <a href="#char09CE">[<span class="uname">U+09CE BENGALI LETTER KHANDA TA</span>]</a></span>,  which should be used when this shape is needed. (This replaces a previous approach that required the use of <span class="codepoint"><span lang="bn">&#x09A4;</span> <a href="#char09A4">[<span class="uname">U+09A4 BENGALI LETTER TA</span>]</a></span> + <span class="codepoint"><span lang="bn">&#xA0;&#x09CD;</span> <a href="#char09CD">[<span class="uname">U+09CD BENGALI SIGN VIRAMA</span>]</a></span> + <a href="#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>.)</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p400 [2] <a href="#refs">[Radice]</a> pp23, 39 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
@@ -539,7 +545,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">th</span>, <span class="name">thɔ</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">থামা</span> <span class="trans">tʰɑmɑ</span> <span class="ipa">tʰɑmɑ</span> <span class="meaning">to stop</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">থামা</span>.</p>
         <p>When the English sound 'th' as in 'thin' is transliterated into Bengali, this is the sound that is used.</p>
         <p><span class="leadin">Unusual conjunct pronunciations:</span></p>
         <p><span class="ex" lang="bn">থ্ব</span> <span class="trans">tʰ͓b</span>, <span class="ipa">ttʰ</span></p>
@@ -556,7 +562,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">d</span>, <span class="name">dɔ</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">দাদী</span> <span class="trans">dɑdī</span> <span class="ipa">dɑdiː</span> <span class="meaning">grandmother</span></span>. Produced with the teeth firmly against the top front teeth.</p>
+        <p>eg. <span class="eg" lang="bn">দাদী</span>. Produced with the teeth firmly against the top front teeth.</p>
         <p>When the English sound 'th' as in 'then' is transliterated into Bengali, this is the sound that is used.</p>
         <p><span class="leadin">Unusual conjunct pronunciations.</span></p>
         <p><span class="ex" lang="bn">দ্ম</span> <span class="trans">d͓m</span> <span class="ipa">dd</span></p>
@@ -575,7 +581,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">dh</span>, <span class="name">dhɔ</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ধন্যবাদ</span> <span class="trans">dʰn͓ýbɑd</span> <span class="ipa">dʰonjobɑd</span> <span class="meaning">thank you</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">ধন্যবাদ</span>.</p>
         <p><span class="leadin">Unusual conjunct pronunciations.</span></p>
         <p><span class="ex" lang="bn">ধ্ব</span> <span class="trans">dʰ͓b</span>, <span class="ipa">ddʰ</span></p>
 </div>
@@ -590,8 +596,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
 <div class="letter bengali">
 <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">n</span>, <span class="name">dɔntyô nɔ</span> <span class="ex" lang="bn" >দন্ত্য ন</span> </p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">নদী</span> <span class="trans">ndī</span> <span class="ipa">nodiː</span> <span class="meaning">river</span></span>.</p>
-        <p><span class="leadin">Special vowel combinations.</span> The syllable <span class="trans">ntu</span> can be written in modern typefaces with the <span class="name">u</span> below the <span class="trans">nt</span> conjunct, but in older print a special arrangement incorporates all three sounds together, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">কিন্তু</span> <span class="trans">kin͓tu</span> <span class="ipa">kintu</span> <span class="meaning">but</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">নদী</span>.</p>
+        <p><span class="leadin">Special vowel combinations.</span> The syllable <span class="trans">ntu</span> can be written in modern typefaces with the <span class="name">u</span> below the <span class="trans">nt</span> conjunct, but in older print a special arrangement incorporates all three sounds together, eg. <span class="eg" lang="bn">কিন্তু</span>.</p>
         <p><span class="leadin">Unusual conjunct pronunciations.</span></p>
         <p><span class="ex" lang="bn">হ্ণ</span> <span class="trans">h͓n̈</span>, <span class="ipa">nh</span> or <span class="ipa">nn</span></p>
         <p><span class="ex" lang="bn">হ্ন</span> <span class="trans">h͓n</span>, <span class="ipa">nh</span> or <span class="ipa">nn</span></p>
@@ -608,7 +614,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">p</span>, <span class="name">pɔ</span> </p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">পথ</span> <span class="trans">ptʰ</span> <span class="ipa">pɔtʰ</span> <span class="meaning">path, road</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">পথ</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p400 [2] <a href="#refs">[Radice]</a> p31 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
     </div>
@@ -622,7 +628,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">ph</span>, <span class="name">phɔ</span> </p>
-        <p><span class="ipa">pf</span> or <span class="ipa">pʰ</span> or <span class="ipa">f</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ফটো</span> <span class="trans">pʰʈo</span> <span class="ipa">pfoʈo</span> <span class="meaning">photo</span></span>.</p>
+        <p><span class="ipa">pf</span> or <span class="ipa">pʰ</span> or <span class="ipa">f</span>, eg. <span class="eg" lang="bn">ফটো</span>.</p>
         <p>Some pronounce as <span class="ipa">pʰ</span> with aspiration, but many (especially in Bangladesh) pronounce more like <span class="ipa">f</span>. In West Bengal it is more like the <span class="ipa">pf</span> in the German 'pfennig', and this is a fairly standard rendering.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p400 [2] <a href="#refs">[Radice]</a> p28 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
@@ -637,11 +643,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">b</span> or <span class="trans">v</span>, <span class="name">bɔ</span> </p>
-        <p><span class="ipa">b</span> when not in a conjunct, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বড়</span> <span class="trans">bɖˑ</span> <span class="ipa">bɔɽo</span> <span class="meaning">big</span></span>. The <span class="ipa">v</span> in Sanskrit has disappeared in Bengali, to be replaced by <span class="ipa">b</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বিষ্ণু</span> <span class="trans">biʃ͓̇n̈u</span> <span class="ipa">biʃnu</span> <span class="meaning">Vishnu</span></span>.</p>
+        <p><span class="ipa">b</span> when not in a conjunct, eg. <span class="eg" lang="bn">বড়</span>. The <span class="ipa">v</span> in Sanskrit has disappeared in Bengali, to be replaced by <span class="ipa">b</span>, eg. <span class="eg" lang="bn">বিষ্ণু</span>.</p>
         <p>Called <span class="name">bɔ-pfɔlɑ</span> <span class="ex" lang="bn" >ব-ফলা</span> when non-initial in conjuncts, when it has one of the following two pronunciations.</p>
-        <p><span class="ipa">∅</span> in word initial in a conjunct, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">স্বামী</span> <span class="trans">ʃ͓̈bɑmī</span> <span class="ipa">ʃɑmiː</span> <span class="meaning">husband</span></span>, or <span class="charExample" translate="no"><span class="ex" lang="bn">জ্বর</span> <span class="trans">ʤ͓br</span> <span class="ipa">ʤɔr</span> <span class="meaning">fever</span></span>.</p>
-        <p>Lengthens consonants in conjuncts between vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বিশ্ব</span> <span class="trans">biʃ͓b</span> <span class="ipa">biʃʃo</span> <span class="meaning">universe</span></span>.</p>
-        <p>Note that it is still pronounced <span class="ipa">b</span> sometimes in <span class="ex" lang="bn" >ম্ব</span> conjuncts in words of English or Sanskrit origin, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">নম্বর</span> <span class="trans">nm͓br</span> <span class="ipa">nɔmbor</span> <span class="meaning">number</span></span>.  By contrast, the Bengali word <span class="charExample" translate="no"><span class="ex" lang="bn">সম্বন্ধে</span> <span class="trans">ʃ̈m͓bn͓dʰe</span> <span class="meaning">about</span></span> is  pronounced <span class="ipa">ʃɔmmɔndʰe</span>.</p>
+        <p><span class="ipa">∅</span> in word initial in a conjunct, eg. <span class="eg" lang="bn">স্বামী</span>, or <span class="eg" lang="bn">জ্বর</span>.</p>
+        <p>Lengthens consonants in conjuncts between vowels, eg. <span class="eg" lang="bn">বিশ্ব</span>.</p>
+        <p>Note that it is still pronounced <span class="ipa">b</span> sometimes in <span class="ex" lang="bn" >ম্ব</span> conjuncts in words of English or Sanskrit origin, eg. <span class="eg" lang="bn">নম্বর</span>.  By contrast, the Bengali word <span class="charExample" translate="no"><span class="ex" lang="bn">সম্বন্ধে</span> <span class="trans">ʃ̈m͓bn͓dʰe</span> <span class="meaning">about</span></span> is  pronounced <span class="ipa">ʃɔmmɔndʰe</span>.</p>
         <p><span class="leadin">Unusual conjunct pronunciations.</span></p>
         <p><span class="ex" lang="bn">চ্ছ্ব</span> <span class="trans">c͓cʰ͓b</span>, <span class="ipa">ccʰ</span></p>
         <p><span class="ex" lang="bn">জ্জ্ব</span> <span class="trans">ʤ͓ʤ͓b</span>, <span class="ipa">jj</span></p>
@@ -666,7 +672,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">bh</span>, <span class="name">bhɔ</span> </p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ভাল</span> <span class="trans">bʰɑl</span> <span class="ipa">bʰɑlo</span> <span class="meaning">good</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">ভাল</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p400 [2] <a href="#refs">[Radice]</a> p35 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
     </div>
@@ -680,7 +686,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">m</span>, <span class="name">mɔ</span> </p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">মজার</span> <span class="trans">mʤɑr</span> <span class="ipa">mɔʤɑr</span> <span class="meaning">funny</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">মজার</span>.</p>
         <p>Lengthens consonants as the final letter in a conjunct.</p>
 <p><span class="leadin">Unusual conjunct pronunciations.</span></p>
         <p><span class="ex" lang="bn">ক্ষ্ম</span> <span class="trans">k͓ʃ͓̇m</span> <span class="ipa">kkʰ</span></p>
@@ -691,7 +697,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         <p><span class="ex" lang="bn">ল্ম</span> <span class="trans">l͓m</span> <span class="ipa">ll</span></p>
         <p><span class="ex" lang="bn">শ্ম</span> <span class="trans">ʃ͓m</span> <span class="ipa">ʃʃ</span></p>
         <p><span class="ex" lang="bn">ষ্ম</span> <span class="trans">ʃ͓̇m</span> <span class="ipa">ʃʃ</span></p>
-        <p><span class="ex" lang="bn">স্ম</span> <span class="trans">ʃ͓̈m</span> <span class="ipa">ʃʃ</span> with perhaps some nasalisation of the preceding vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ভস্ম</span> <span class="trans">bʰʃ͓̈m</span> <span class="ipa">bʰɔ̃ʃʃo</span> <span class="meaning">XXXX</span></span>; or with a vocalic r vowel sign <span class="ipa">s</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">স্মৃতি</span> <span class="trans">ʃ͓̈mr̥ti</span> <span class="ipa">sriti</span> <span class="meaning">memories</span></span>.</p>
+        <p><span class="ex" lang="bn">স্ম</span> <span class="trans">ʃ͓̈m</span> <span class="ipa">ʃʃ</span> with perhaps some nasalisation of the preceding vowel, eg. <span class="eg" lang="bn">ভস্ম</span>; or with a vocalic r vowel sign <span class="ipa">s</span>, eg. <span class="eg" lang="bn">স্মৃতি</span>.</p>
         <p><span class="ex" lang="bn">হ্ম</span> <span class="trans">h͓m</span> <span class="ipa">mh</span> or <span class="ipa">mm</span></p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p400 [2] <a href="#refs">[Radice]</a> pp3, 4, 265-270 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
@@ -706,14 +712,14 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">y̌</span>, <span class="name">ɔntɔḥsthô y̌ɔ</span> <span class="ex" lang="bn" >অন্তঃস্থ য</span></p>
-        <p><span class="ipa">ʤ</span> at the beginning of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">যখন</span> <span class="trans">ýkʰn</span> <span class="ipa">ʤɔkʰon</span> <span class="meaning">when</span></span>.  In Bangladesh this can sound more like z, especially in words of Perso-Arabic origin.</p>
+        <p><span class="ipa">ʤ</span> at the beginning of a word, eg. <span class="eg" lang="bn">যখন</span>.  In Bangladesh this can sound more like z, especially in words of Perso-Arabic origin.</p>
         <p>When it occurs as the last member of a consonant cluster it has a special shape <img src="images/yaphala.png" alt="yaphala" />, and is called <span class="name">ʤɔ-pfɔlɑ</span> <span class="ex" lang="bn" >য-ফলা</span>. </p>
         <p><span class="leadin">Conjunct pronunciations.</span></p>
         <ul>
-          <li>Lengthens consonants when non-initial in a cluster, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">জন্য</span> <span class="trans">ʤn͓ý</span> <span class="ipa">ʤɔnno</span> <span class="meaning">for</span></span>. </li>
-          <li><span class="ipa">æ</span> when followed by the vowel sign <span class="name">a-kar</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">হ্যাঁ</span> <span class="trans">h͓ýɑm̽</span> <span class="ipa">hæ̃</span> <span class="meaning">yes</span></span> or  <span class="charExample" translate="no"><span class="ex" lang="bn">ব্যাঙ্ক</span> <span class="trans">b͓ýɑŋ͓k</span> <span class="ipa">bæŋk</span> <span class="meaning">bank</span></span>. There are exceptions to the previous rule, when the <span class="name">a-kar</span> produces its normal value, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ব্যাখ্যা</span> <span class="trans">b͓ýɑkʰ͓ýɑ</span> <span class="ipa">bækkʰa</span> <span class="meaning">explanation</span></span> and <span class="charExample" translate="no"><span class="ex" lang="bn">সন্ধ্যা</span> <span class="trans">ʃ̈n͓dʰ͓ýɑ</span> <span class="ipa">ʃonddʰa</span> <span class="meaning">evening</span></span>.</li>
-          <li><span class="ipa">æ</span> when there is no vowel sign and the following syllable is not <span class="trans">i</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ব্যথা</span> <span class="trans">b͓ýtʰɑ</span> <span class="ipa">bætʰɑ</span> <span class="meaning">pain</span></span>.</li>
-          <li><span class="ipa">e</span> when there is no vowel sign and the following syllable is <span class="trans">i</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ব্যক্তি</span> <span class="trans">b͓ýk͓ti</span> <span class="ipa">bekti</span> <span class="meaning">person</span></span>.</li>
+          <li>Lengthens consonants when non-initial in a cluster, eg. <span class="eg" lang="bn">জন্য</span>. </li>
+          <li><span class="ipa">æ</span> when followed by the vowel sign <span class="name">a-kar</span>, eg. <span class="eg" lang="bn">হ্যাঁ</span> or  <span class="eg" lang="bn">ব্যাঙ্ক</span>. There are exceptions to the previous rule, when the <span class="name">a-kar</span> produces its normal value, eg. <span class="eg" lang="bn">ব্যাখ্যা</span> and <span class="eg" lang="bn">সন্ধ্যা</span>.</li>
+          <li><span class="ipa">æ</span> when there is no vowel sign and the following syllable is not <span class="trans">i</span>, eg. <span class="eg" lang="bn">ব্যথা</span>.</li>
+          <li><span class="ipa">e</span> when there is no vowel sign and the following syllable is <span class="trans">i</span>, eg. <span class="eg" lang="bn">ব্যক্তি</span>.</li>
         </ul>
         <p><span class="leadin">Unusual conjunct pronunciations.</span></p>
         <p><span class="ex" lang="bn">ক্ষ্য</span> <span class="trans">k͓ʃ͓̇ý</span> <span class="ipa">kkʰ</span></p>
@@ -728,7 +734,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         <p>The Unicode Standard clarifies how to address this.  Use <a href="#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a> to consistently produce the second form, as shown below:</p>
         <p><span class="ex" lang="bn" >র</span> + virama + <span class="ex" lang="bn">য</span> = <span class="ex" lang="bn">র্য</span></p>
         <p><span class="ex" lang="bn" >র</span> + zwj + virama + <span class="ex" lang="bn">য</span> = <span class="ex" lang="bn" >র‌্য</span></p>
-        <p><span class="leadin">Following independent vowels.</span><span class="name">y̌ɔ-phɔla</span> can also be used after independent vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">অ্যাটর্নি</span> <span class="trans">ɔ̣͓ýɑʈr͓ni</span> <span class="ipa">ɔæʈorni</span> <span class="meaning">attorney</span></span>,  <span class="charExample" translate="no"><span class="ex" lang="bn">হোয়াটসঅ্যাপ</span> <span class="trans">hoýˑɑʈʃ̈ɔ̣͓ýɑp</span> <span class="ipa">hoyɑʈʃɔæp</span> <span class="meaning">WhatsApp</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="bn">এ্যাডভোকেট</span> <span class="trans">ẹ͓ýɑɖbʰokeʈ</span> <span class="ipa">eæɖbʰokeʈ</span> <span class="meaning">advocate</span></span>. This creates an independent form of the sound <span class="ipa">æ</span>, combining the <span class="charExample"><span class="trans">yā</span> which represents that sound with a base vowel</span>. It appears to be used mostly in transliterations of borrowed words.</p>
+        <p><span class="leadin">Following independent vowels.</span><span class="name">y̌ɔ-phɔla</span> can also be used after independent vowels, eg. <span class="eg" lang="bn">অ্যাটর্নি</span>,  <span class="eg" lang="bn">হোয়াটসঅ্যাপ</span>, and <span class="eg" lang="bn">এ্যাডভোকেট</span>. This creates an independent form of the sound <span class="ipa">æ</span>, combining the <span class="charExample"><span class="trans">yā</span> which represents that sound with a base vowel</span>. It appears to be used mostly in transliterations of borrowed words.</p>
         <p><span class="leadin">With nukta.</span><span class="ipa">j, e, w</span> when followed by <span class="codepoint"><span lang="bn">&#xA0;&#x09BC;</span> <a href="#char09BC">[<span class="uname">U+09BC BENGALI SIGN NUKTA</span>]</a></span>. See  <span class="codepoint"><span lang="bn">&#x09DF;</span> <a href="#char09DF">[<span class="uname">U+09DF BENGALI LETTER YYA</span>]</a></span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p400 [2] <a href="#refs">[Radice]</a> pp13, 25-26, 265-270 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
@@ -743,11 +749,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">r</span>, <span class="name">rɔ</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">রওয়া</span> <span class="trans">rọýˑɑ</span> <span class="ipa">rowɑ</span> <span class="meaning">to remain</span></span>. Rolled, but at the end of a word in particular the tongue only flaps once or twice.</p>
+        <p>eg. <span class="eg" lang="bn">রওয়া</span>. Rolled, but at the end of a word in particular the tongue only flaps once or twice.</p>
 <p>Note that there is no decomposition for this character, even though it looks like other characters with nukta.</p>
-        <p><span class="leadin">Conjunct appearance.</span> When it occurs as the second element in a conjunct it is typically written as a wavy horizontal line, so <span class="ex" lang="bn">ব</span> + <span class="ex" lang="bn">র</span> = <span class="ex" lang="bn">ব্র</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">যাত্রা</span> <span class="trans">ýɑt͓rɑ</span> <span class="ipa">ʤɑtrɑ</span> <span class="meaning">journey</span></span>. This mark is called <span class="name">rɔ-pfɔlɑ</span> <span class="ex" lang="bn" >র-ফলা</span>.</p>
-        <p>When it occurs as the first element in a conjunct it is typically written as a diagonal stroke above the consonant that follows it, so <span class="ex" lang="bn">র</span> + <span class="ex" lang="bn">য</span> = <span class="ex" lang="bn">র্য</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বর্ণ</span> <span class="trans">br͓n̈</span> <span class="ipa">bɔrno</span> <span class="meaning">colour</span></span>. This mark is called <span class="name">repf</span> <span class="ex" lang="bn" >রেফ</span>.</p>
-        <p><span class="leadin">Unusual vowel combinations.</span> To avoid clashing with the dot, the vowel sign for <span class="name">u</span> appears to the side when attached to <span class="name">rɔ</span>, ie. <span class="ex" lang="bn">রু</span>. Similarly, the vowel sign for <span class="name">ū</span> appears to the side, ie. <span class="ex" lang="bn">রূ</span>, when attached to <span class="name">rɔ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ভুরু</span> <span class="trans">bʰuru</span> <span class="ipa">bʰuru</span> <span class="meaning">eyebrow</span></span>.</p>
+        <p><span class="leadin">Conjunct appearance.</span> When it occurs as the second element in a conjunct it is typically written as a wavy horizontal line, so <span class="ex" lang="bn">ব</span> + <span class="ex" lang="bn">র</span> = <span class="ex" lang="bn">ব্র</span>, eg. <span class="eg" lang="bn">যাত্রা</span>. This mark is called <span class="name">rɔ-pfɔlɑ</span> <span class="ex" lang="bn" >র-ফলা</span>.</p>
+        <p>When it occurs as the first element in a conjunct it is typically written as a diagonal stroke above the consonant that follows it, so <span class="ex" lang="bn">র</span> + <span class="ex" lang="bn">য</span> = <span class="ex" lang="bn">র্য</span>, eg. <span class="eg" lang="bn">বর্ণ</span>. This mark is called <span class="name">repf</span> <span class="ex" lang="bn" >রেফ</span>.</p>
+        <p><span class="leadin">Unusual vowel combinations.</span> To avoid clashing with the dot, the vowel sign for <span class="name">u</span> appears to the side when attached to <span class="name">rɔ</span>, ie. <span class="ex" lang="bn">রু</span>. Similarly, the vowel sign for <span class="name">ū</span> appears to the side, ie. <span class="ex" lang="bn">রূ</span>, when attached to <span class="name">rɔ</span>, eg. <span class="eg" lang="bn">ভুরু</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p400 [2] <a href="#refs">[Radice]</a> pp3, 4, 33, 265-270 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
     </div>
@@ -761,7 +767,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
       <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">l</span>, <span class="name">lɔ</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">লওয়া</span> <span class="trans">lọýˑɑ</span> <span class="ipa">lɔowɑ</span> <span class="meaning">to take</span></span>. Never a dark l.</p>
+        <p>eg. <span class="eg" lang="bn">লওয়া</span>. Never a dark l.</p>
       <p><span class="leadin">Unusual conjunct pronunciations.</span></p>
         <p><span class="ex" lang="bn">ল্ম</span> <span class="trans">l͓m</span> <span class="ipa">ll</span></p>
 </div>
@@ -777,13 +783,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">ʃ</span>, <span class="name">talôbyô ʃɔ</span> <span class="ex" lang="bn" >তালব্য শ</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">শাপ</span> <span class="trans">ʃɑp</span> <span class="ipa">ʃɑp</span> <span class="meaning">curse</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">শাপ</span>.</p>
         <p><span class="ipa">s</span> possible in Bangladesh, or in English words that use the sound <span class="ipa">s</span>.</p>
         <p><span class="leadin">Unusual conjunct pronunciations.</span></p>
         <p><span class="ex" lang="bn">শ্ম</span> <span class="trans">ʃ͓m</span> <span class="ipa">ʃʃ</span></p>
         <p><span class="ex" lang="bn">শ্র</span> <span class="trans">ʃ͓r</span><span class="ipa">sr</span></p>
         <p><span class="ex" lang="bn">শ্ব</span> <span class="trans">ʃ͓b</span> <span class="ipa">ʃʃ</span></p>
-        <p><span class="leadin">Unusual vowel combinations.</span> When combining <span class="ex" lang="bn">শ</span> with <span class="name">u</span> the form <span class="ex" lang="bn">শু</span> is common in handwriting and older typefaces, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">শুধু</span> <span class="trans">ʃudʰu</span> <span class="ipa">ʃudʰu</span> <span class="meaning">only</span></span>. The <span class="name">u</span> can also be written below the consonant, especially in newspapers.</p>
+        <p><span class="leadin">Unusual vowel combinations.</span> When combining <span class="ex" lang="bn">শ</span> with <span class="name">u</span> the form <span class="ex" lang="bn">শু</span> is common in handwriting and older typefaces, eg. <span class="eg" lang="bn">শুধু</span>. The <span class="name">u</span> can also be written below the consonant, especially in newspapers.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p400 [2] <a href="#refs">[Radice]</a> pp9,10, 265-270 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
     </div>
@@ -817,14 +823,14 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">s</span>, <span class="name">dɔntyô sɔ</span> <span class="ex" lang="bn" >দন্ত্য স</span> <span class="trans">s</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">সকাল</span> <span class="trans">ʃ̈kɑl</span> <span class="ipa">ʃɔkɑl</span> <span class="meaning">morning</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">সকাল</span>.</p>
         <p><span class="ipa">s</span> possible in Bangladesh, or in English words that use the sound <span class="ipa">s</span>.</p>
         <p><span class="leadin">Conjunct pronunciations.</span> Typically pronounced <span class="ipa">s</span> in the following conjuncts:</p>
         <p><span class="ex" lang="bn">স্ত</span> <span class="trans">ʃ͓̈t</span> <span class="ipa">st</span></p>
         <p><span class="ex" lang="bn">স্থ</span> <span class="trans">ʃ͓̈tʰ</span> <span class="ipa">stʰ</span></p>
         <p><span class="ex" lang="bn">স্ন</span> <span class="trans">ʃ͓̈n</span> <span class="ipa">sn</span></p>
         <p><span class="ex" lang="bn">স্ত্র</span> <span class="trans">ʃ͓̈t͓r</span> <span class="ipa">str</span></p>
-        <p><span class="ex" lang="bn">স্ম</span> <span class="trans">ʃ͓̈m</span> <span class="ipa">ʃʃ</span> may involve some nasalisation of the preceding vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ভস্ম</span> <span class="trans">bʰʃ͓̈m</span> <span class="ipa">bʰɔ̃ʃʃo</span> <span class="meaning">XXXX</span></span>; but <span class="ipa">s</span> when this conjunct is followed by a vocalic r vowel sign , eg. <span class="charExample" translate="no"><span class="ex" lang="bn">স্মৃতি</span> <span class="trans">ʃ͓̈mr̥ti</span> <span class="ipa">sriti</span> <span class="meaning">memory</span></span>.</p>
+        <p><span class="ex" lang="bn">স্ম</span> <span class="trans">ʃ͓̈m</span> <span class="ipa">ʃʃ</span> may involve some nasalisation of the preceding vowel, eg. <span class="eg" lang="bn">ভস্ম</span>; but <span class="ipa">s</span> when this conjunct is followed by a vocalic r vowel sign , eg. <span class="eg" lang="bn">স্মৃতি</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p400 [2] <a href="#refs">[Radice]</a> pp9,10, 265-270 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
     </div>
@@ -838,14 +844,14 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">h</span>, <span class="name">hɔ</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">হল</span> <span class="trans">hl</span> <span class="ipa">hɔl</span> <span class="meaning">(student) hall</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">হল</span>.</p>
         <p><span class="leadin">Unusual conjunct pronunciations.</span></p>
         <p><span class="ex" lang="bn">হ্ণ</span> <span class="trans">h͓n̈</span> <span class="ipa">nh</span> or <span class="ipa">nn</span></p>
         <p><span class="ex" lang="bn">হ্ন</span> <span class="trans">h͓n</span> <span class="ipa">nh</span> or <span class="ipa">nn</span></p>
         <p><span class="ex" lang="bn">হ্ম</span> <span class="trans">h͓m</span> <span class="ipa">mh</span> or <span class="ipa">mm</span></p>
         <p><span class="ex" lang="bn">হ্য</span> <span class="trans">h͓ý</span> <span class="ipa">jj</span></p>
         <p><span class="ex" lang="bn">হ্ব</span> <span class="trans">h͓b</span> <span class="ipa">hu</span> or <span class="ipa">ho</span> or <span class="ipa">hb</span>, depending on the speaker.</p>
-        <p><span class="leadin">Shape variants.</span> <span class="trans">hṛ</span> traditionally looks like <span class="ex" lang="bn">হৃ</span>, although modern computer typefaces tend to put the normal vowel sign under the consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">হৃদয়</span> <span class="trans">hr̥dýˑ</span> <span class="ipa">hridɔj</span> <span class="meaning">heart</span></span>.</p>
+        <p><span class="leadin">Shape variants.</span> <span class="trans">hṛ</span> traditionally looks like <span class="ex" lang="bn">হৃ</span>, although modern computer typefaces tend to put the normal vowel sign under the consonant, eg. <span class="eg" lang="bn">হৃদয়</span>.</p>
         <p>Also, <span class="trans">hu</span> traditionally looks like <span class="ex" lang="bn">হু</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p400 [2] <a href="#refs">[Radice]</a> p25 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a>; [4] <a href="#refs">Corrrespondance [Bhattacharya]</a></p>
@@ -870,7 +876,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">ṯ</span>, <span class="name">khɔɳɖȏ tɔ</span> <span class="ex" lang="bn" >খণ্ড ত্‌</span></p>
         <p>The tongue is further forward than the English t.</p>
         <p>This is a variant form of <span class="ex" lang="bn">ত</span> that was added to Unicode 4.1 as a separate character and  should be used when this shape is needed. (This replaces an earlier approach that required the use of <span class="codepoint"><span lang="bn">&#x09A4;</span> <a href="#char09A4">[<span class="uname">U+09A4 BENGALI LETTER TA</span>]</a></span> + <span class="codepoint"><span lang="bn">&#xA0;&#x09CD;</span> <a href="#char09CD">[<span class="uname">U+09CD BENGALI SIGN VIRAMA</span>]</a></span> + <a href="#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>.)</p>
-        <p>In some words a <span class="name">tɔ</span> that has no following inherent or other vowel may have this shape. It either comes at the end of words, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">হঠাৎ</span> <span class="trans">hʈʰɑt̽</span> <span class="ipa">hɔʈʰɑt</span> <span class="meaning">suddenly</span></span>, or before a consonant that doesn't naturally combine with <span class="name">tɔ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">উৎসব</span> <span class="trans">ụt̽ʃ̈b</span> <span class="ipa">utʃɔb</span> <span class="meaning">festival</span></span> or <span class="charExample" translate="no"><span class="ex" lang="bn">সৎমা</span> <span class="trans">ʃ̈t̽mɑ</span> <span class="ipa">ʃɔtmɑ</span> <span class="meaning">step-mother</span></span>. Many such words, however, use <span class="ex" lang="bn">ত</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">সদাত্মা</span> <span class="trans">ʃ̈dɑt͓mɑ</span></span>. It's not possible to say which will be used.</p>
+        <p>In some words a <span class="name">tɔ</span> that has no following inherent or other vowel may have this shape. It either comes at the end of words, eg. <span class="eg" lang="bn">হঠাৎ</span>, or before a consonant that doesn't naturally combine with <span class="name">tɔ</span>, eg. <span class="eg" lang="bn">উৎসব</span> or <span class="eg" lang="bn">সৎমা</span>. Many such words, however, use <span class="ex" lang="bn">ত</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">সদাত্মা</span> <span class="trans">ʃ̈dɑt͓mɑ</span></span>. It's not possible to say which will be used.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="http://www.unicode.org/versions/Unicode5.2.0/ch09.pdf">The Unicode Standard 5.2</a> p281 [2] <a href="#refs">[Radice]</a> p39 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a>; [4] <a href="#refs">[Bhattacharya]</a></p>
     </div>
@@ -884,7 +890,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">ɽ</span>, <span class="name">ɽɔ</span></p>
-        <p>retroflex flap, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ওড়া</span> <span class="trans">ọɖˑɑ</span> <span class="ipa">oɽɑ</span> <span class="meaning">to fly</span></span>. Curl tongue as if for <span class="ipa">ɖ</span> but before making contact with the alveolar ridge flap the tongue down smartly to make audible contact with the bottom of the mouth.</p>
+        <p>retroflex flap, eg. <span class="eg" lang="bn">ওড়া</span>. Curl tongue as if for <span class="ipa">ɖ</span> but before making contact with the alveolar ridge flap the tongue down smartly to make audible contact with the bottom of the mouth.</p>
         <p>In Sanskrit this was merely an allophone of <span class="codepoint"><span lang="bn">&#x09A1;</span> <a href="#char09A1">[<span class="uname">U+09A1 BENGALI LETTER DDA</span>]</a></span> between vowels. The distinguishing dot was added to the Bengali script in the 19th century.  Now it is regarded as a letter of the alphabet.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p399-402 [2] <a href="#refs">[Radice]</a> p29 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
@@ -899,7 +905,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">ɽh</span>, <span class="name">ɽhɔ</span>        </p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">আষাঢ়</span> <span class="trans">ɑʃ̇ɑɖʰˑ</span> <span class="ipa">ɑʃɑɽ</span> <span class="meaning">June-July</span></span>.</p>
+<p>eg. <span class="eg" lang="bn">আষাঢ়</span>.</p>
         <p>Theoretically the aspirated version of <span class="codepoint" translate="no"><span lang="bn">&#x09DC;</span> [<a href="/scripts/bengali/block#char09DC"><span class="uname">U+09DC BENGALI LETTER RRA</span></a>]</span>, but in practice not normally pronounced with aspiration. Occasionally, however, it may be, as in <span class="charExample" translate="no"><span class="ex" lang="bn">রাঢ়</span> <span class="trans">rɑɖʰˑ</span> <span class="meaning">Radha</span></span>. </p>
 <p>A very rare letter, the only common word in which it appears is the Bengali month shown in the example above.</p>
 </div>
@@ -917,9 +923,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         <p class="titlepara"><span class="title">Bengali</span> consonant, <span class="trans">y</span>, <span class="name">ɔntɔḥsthô ɔ</span> <span class="ex" lang="bn" >অন্তঃস্থ য়</span>        </p>
 <p>Represents one of the following sounds.</p>
         <p><span class="ipa">j</span> between <span class="ipa">i...e</span>, <span class="ipa">a...u</span>, or <span class="ipa">e...e</span>. </p>
-        <p><span class="ipa">e</span> after another vowel, particularly after <span class="ipa">ɔ</span>, <span class="ipa">a</span> or <span class="ipa">o</span>, eg. <span class="charExample"><span class="charExample" translate="no"><span class="ex" lang="bn">ভয়</span> <span class="trans">bʰýˑ</span> <span class="ipa">bʰɔe̯</span> <span class="meaning">fear</span></span></span>.</p>
-        <p><span class="ipa">w</span> (light, like French 'oui') between <span class="ipa">o...a</span> , eg. <span class="charExample" translate="no"><span class="ex" lang="bn">খাওয়া</span> <span class="trans">kʰɑọýˑɑ</span> <span class="ipa">kʰao̯wa</span> <span class="meaning">to eat, drink</span></span>.</p>
-        <p>Sometimes it is scarcely pronounced at all, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">মেয়ে</span> <span class="trans">meýˑe</span> <span class="ipa">mee</span> <span class="meaning">girl, woman</span></span>.</p>
+        <p><span class="ipa">e</span> after another vowel, particularly after <span class="ipa">ɔ</span>, <span class="ipa">a</span> or <span class="ipa">o</span>, eg. <span class="charExample"><span class="eg" lang="bn">ভয়</span></span>.</p>
+        <p><span class="ipa">w</span> (light, like French 'oui') between <span class="ipa">o...a</span> , eg. <span class="eg" lang="bn">খাওয়া</span>.</p>
+        <p>Sometimes it is scarcely pronounced at all, eg. <span class="eg" lang="bn">মেয়ে</span>.</p>
         <p>The dot was added in the 19th century, to contrast this with <span class="name">ɔntɔḥsthô y̌ɔ</span> (<span class="codepoint"><span lang="bn">&#x09AF;</span> <a href="#char09AF">[<span class="uname">U+09AF BENGALI LETTER YA</span>]</a></span>).</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p399-402 [2] <a href="#refs">[Radice]</a> p13, 26 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
@@ -981,8 +987,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> independent vowel, <span class="trans">ɔ</span> or <span class="trans">ô</span>, <span class="name">ɔ-kar</span></p>
-        <p><span class="ipa">ɔ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">অঙ্ক</span> <span class="trans">ɔ̣ŋ͓k</span> <span class="ipa">ɔŋko</span> <span class="meaning">mathematics</span></span>.</p>
-        <p><span class="ipa">o</span> where the vowel harmony effect applies, if the vowel in the following syllable is one of <span class="ipa">i</span> or <span class="ipa">u</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">অভিধান</span> <span class="trans">ɔ̣bʰidʰɑn</span> <span class="ipa">obʰidʰɑn</span> <span class="meaning">dictionary</span></span>.</p>
+        <p><span class="ipa">ɔ</span>, eg. <span class="eg" lang="bn">অঙ্ক</span>.</p>
+        <p><span class="ipa">o</span> where the vowel harmony effect applies, if the vowel in the following syllable is one of <span class="ipa">i</span> or <span class="ipa">u</span>, eg. <span class="eg" lang="bn">অভিধান</span>.</p>
         <p>There is no equivalent vowel sign, since this equates to the inherent vowel when preceded by a consonant.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p400 [2] <a href="#refs">[Radice]</a> pp9, 275 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
@@ -997,7 +1003,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
     <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> independent vowel, <span class="trans">a</span>, <span class="name">a-kar</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">আকাশ</span> <span class="trans">ɑkɑʃ</span> <span class="ipa">ɑkɑʃ</span> <span class="meaning">sky</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">আকাশ</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p399-402 [2] <a href="#refs">[Radice]</a> p2-4 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
     </div>
@@ -1011,7 +1017,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
     <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> independent vowel, <span class="trans">i</span>, <span class="name">hrɔsvô i</span> <span class="ex" lang="bn" >হ্রস্ব ই</span> </p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ইংরেজ</span> <span class="trans">ịŋ̽reʤ</span> <span class="ipa">iŋreʤ</span> <span class="meaning">English</span></span>; <span class="charExample" translate="no"><span class="ex" lang="bn">ভাই</span> <span class="trans">bʰɑị</span> <span class="ipa">bʰɑi</span> <span class="meaning">brother</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">ইংরেজ</span>; <span class="eg" lang="bn">ভাই</span>.</p>
         <p><span class="ipa">e</span> where the vowel harmony effect applies, if the vowel in the following syllable is one of <span class="ipa">ɔ, o, e</span> or <span class="ipa">a</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p399-402 [2] <a href="#refs">[Radice]</a> p2, 4-5 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
@@ -1026,7 +1032,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
     <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> independent vowel, <span class="trans">ī</span>, <span class="name">dīrghô ī</span> <span class="ex" lang="bn" >দীর্ঘ ঈ</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ঈদ</span> <span class="trans">ị̄d</span> <span class="ipa">iːd</span> <span class="meaning">Eid</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">ঈদ</span>.</p>
         <p>Bengali has lost the distinction between short and long i vowels in pronunciation, but retains the difference in spelling.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p399-402 [2] <a href="#refs">[Radice]</a> p2, 4-5 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
@@ -1041,8 +1047,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
     <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> independent vowel, <span class="trans">u</span>, <span class="name">hrɔsvô u</span> <span class="ex" lang="bn" >হ্রস্ব উ</span></p>
-        <p><span class="ipa">u</span> pronounced with the lips very rounded, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">উঁচু</span> <span class="trans">ụm̽cu</span> <span class="ipa">ũt͡ʃu</span> <span class="meaning">height</span></span>.</p>
-        <p><span class="ipa">o</span> where the vowel harmony effect applies, if the vowel in the following syllable is one of <span class="ipa">ɔ o e a</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">উচ্চারন</span> <span class="trans">ục͓cɑrn</span> <span class="ipa">ut͡ʃt͡ʃɑrɔn</span> <span class="meaning">pronunciation</span></span>.</p>
+        <p><span class="ipa">u</span> pronounced with the lips very rounded, eg. <span class="eg" lang="bn">উঁচু</span>.</p>
+        <p><span class="ipa">o</span> where the vowel harmony effect applies, if the vowel in the following syllable is one of <span class="ipa">ɔ o e a</span>, eg. <span class="eg" lang="bn">উচ্চারন</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p399-402 [2] <a href="#refs">[Radice]</a> p2, 5, 11, 275 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
     </div>
@@ -1071,7 +1077,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
     <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> independent vowel, <span class="trans">ṛ</span>, <span class="name">vocalic r</span></p>
-        <p><span class="ipa">ri</span> pronounced with the lips very rounded, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ঋতু</span> <span class="trans">r̥̣tu</span> <span class="ipa">ritu</span> <span class="meaning">season</span></span>.</p>
+        <p><span class="ipa">ri</span> pronounced with the lips very rounded, eg. <span class="eg" lang="bn">ঋতু</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p399-402 [2] <a href="#refs">[Radice]</a> p41 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
     </div>
@@ -1098,8 +1104,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
     <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> indepent vowel, <span class="trans">e</span> or <span class="trans">æ</span>, <span class="name">e-kar</span> </p>
-        <p><span class="ipa">e</span> where the vowel harmony effect applies, if the vowel in the following syllable is one of <span class="ipa">i u</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">একটু</span> <span class="trans">ẹkʈu</span> <span class="ipa">ekʈu</span> <span class="meaning">a little</span></span>.</p>
-        <p><span class="ipa">æ</span> where the vowel harmony effect applies, if the vowel in the following syllable is one of <span class="ipa">ɔ o e a</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">একবার</span> <span class="trans">ẹkbɑr</span> <span class="ipa">ækbɑr</span> <span class="meaning">once</span></span>.</p>
+        <p><span class="ipa">e</span> where the vowel harmony effect applies, if the vowel in the following syllable is one of <span class="ipa">i u</span>, eg. <span class="eg" lang="bn">একটু</span>.</p>
+        <p><span class="ipa">æ</span> where the vowel harmony effect applies, if the vowel in the following syllable is one of <span class="ipa">ɔ o e a</span>, eg. <span class="eg" lang="bn">একবার</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p399-402 [2] <a href="#refs">[Radice]</a> p12-13, 16-17 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
     </div>
@@ -1128,8 +1134,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> indepent vowel, <span class="trans">o</span>, <span class="name">o-kar</span></p>
         <p><span class="ipa">o</span> pronounced with the lips very rounded.</p>
-        <p><span class="ipa">u</span> where the vowel harmony effect applies, if the vowel in the following syllable is one of <span class="ipa">i u</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ওদিকে</span> <span class="trans">ọdike</span> <span class="ipa">odike</span> <span class="meaning">in that direction</span></span>.</p>
-        <p><span class="ipa">ɔ</span> if the vowel in the following syllable is one of <span class="ipa">ɔ o e a</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ওড়া</span> <span class="trans">ọɖˑɑ</span> <span class="ipa">oɽɑ</span> <span class="meaning">to fly</span></span>.</p>
+        <p><span class="ipa">u</span> where the vowel harmony effect applies, if the vowel in the following syllable is one of <span class="ipa">i u</span>, eg. <span class="eg" lang="bn">ওদিকে</span>.</p>
+        <p><span class="ipa">ɔ</span> if the vowel in the following syllable is one of <span class="ipa">ɔ o e a</span>, eg. <span class="eg" lang="bn">ওড়া</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p399-402 [2] <a href="#refs">[Radice]</a> p8, 10, 275 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
     </div>
@@ -1143,7 +1149,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
     <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> indepent vowel, <span class="trans">oǔ</span>, <span class="name">oǔ-kar</span></p>
-        <p><span class="ipa">ow</span> diphthong, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ঔষুধ</span> <span class="trans">ọʷʃ̇udʰ</span> <span class="ipa">owʃudʰ</span> <span class="meaning">medecine</span></span>.</p>
+        <p><span class="ipa">ow</span> diphthong, eg. <span class="eg" lang="bn">ঔষুধ</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p399-402 [2] <a href="#refs">[Radice]</a> p17 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
     </div>
@@ -1166,10 +1172,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       <p>ISO 15919 <span class="trans">ā</span> </p>
       <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> vowel sign, <span class="trans">a</span>, <span class="name">a-kar</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">কাটা</span> <span class="trans">kɑʈɑ</span> <span class="ipa">kɑʈɑ</span> <span class="meaning">to cut</span></span>.</p>
-        <p><span class="ipa">æ</span> after <span class="ex" lang="bn">জ্ঞ</span> <span class="trans">ʤ͓ñ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">জ্ঞান</span> <span class="trans">ʤ͓ñɑn</span> <span class="ipa">ɡæn</span> <span class="meaning">knowledge</span></span>; <span class="charExample" translate="no"><span class="ex" lang="bn">বিজ্ঞান</span> <span class="trans">biʤ͓ñɑn</span> <span class="ipa">biɡɡæn</span> <span class="meaning">science</span></span>.</p>
-        <p><span class="ipa">æ</span> when following <span class="name">y̌ɔ-phɔla</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">হ্যাঁ</span> <span class="trans">h͓ýɑm̽</span> <span class="ipa">hæ̃</span> <span class="meaning">yes</span></span>; <span class="charExample" translate="no"><span class="ex" lang="bn">ব্যাঙ্ক</span> <span class="trans">b͓ýɑŋ͓k</span> <span class="ipa">bæŋk</span> <span class="meaning">bank</span></span>.</p>
-        <p>There are exceptions to the previous rule, when the <span class="name">a-kar</span> produces its normal value, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ব্যাখ্যা</span> <span class="trans">b͓ýɑkʰ͓ýɑ</span> <span class="ipa">bækkʰa</span> <span class="meaning">explanation</span></span>; another exception would be a word like <span class="charExample" translate="no"><span class="ex" lang="bn">সন্ধ্যা</span> <span class="trans">ʃ̈n͓dʰ͓ýɑ</span> <span class="ipa">ʃonddʰa</span> <span class="meaning">evening</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">কাটা</span>.</p>
+        <p><span class="ipa">æ</span> after <span class="ex" lang="bn">জ্ঞ</span> <span class="trans">ʤ͓ñ</span>, eg. <span class="eg" lang="bn">জ্ঞান</span>; <span class="eg" lang="bn">বিজ্ঞান</span>.</p>
+        <p><span class="ipa">æ</span> when following <span class="name">y̌ɔ-phɔla</span>, eg. <span class="eg" lang="bn">হ্যাঁ</span>; <span class="eg" lang="bn">ব্যাঙ্ক</span>.</p>
+        <p>There are exceptions to the previous rule, when the <span class="name">a-kar</span> produces its normal value, eg. <span class="eg" lang="bn">ব্যাখ্যা</span>; another exception would be a word like <span class="eg" lang="bn">সন্ধ্যা</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p399-402 [2] <a href="#refs">[Radice]</a> p2-4, 26, 82 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
     </div>
@@ -1183,8 +1189,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
     <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> vowel sign, <span class="trans">i</span>, <span class="name">hrɔsvô i</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বিড়ি</span> <span class="trans">biɖˑi</span> <span class="ipa">biɽi</span> <span class="meaning">cigarette</span></span>.</p>
-        <p><span class="ipa">e</span> where the vowel harmony effect applies, if the vowel in the following syllable is one of <span class="ipa">ɔ o e</span> or <span class="ipa">a</span>, <span class="charExample" translate="no"><span class="ex" lang="bn">বিড়াল</span> <span class="trans">biɖˑɑl</span> <span class="ipa">beɽɑl</span> <span class="meaning">cat</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">বিড়ি</span>.</p>
+        <p><span class="ipa">e</span> where the vowel harmony effect applies, if the vowel in the following syllable is one of <span class="ipa">ɔ o e</span> or <span class="ipa">a</span>, <span class="eg" lang="bn">বিড়াল</span>.</p>
         <p>This vowel sign appears to the left of the base consonant.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p399-402 [2] <a href="#refs">[Radice]</a> p2, 4-5 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
@@ -1199,7 +1205,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
     <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> vowel sign, <span class="trans">ī</span>, <span class="name">dīrghô ī</span> </p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বীর</span> <span class="trans">bīr</span> <span class="ipa">biːr</span> <span class="meaning">hero</span></span>.</p>
+        <p>eg. <span class="eg" lang="bn">বীর</span>.</p>
         <p>Bengali has lost the distinction between short and long i vowels in pronunciation, but retains the difference in spelling.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p399-402 [2] <a href="#refs">[Radice]</a> p2, 4-5 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
@@ -1214,9 +1220,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
     <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> vowel sign, <span class="trans">u</span>, <span class="name">hrɔsvô u</span></p>
-        <p>pronounced with the lips very rounded, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বুক</span> <span class="trans">buk</span> <span class="ipa">buk</span> <span class="meaning">breast, chest</span></span>.</p>
-        <p><span class="ipa">o</span> where the vowel harmony effect applies, if the vowel in the following syllable is one of <span class="ipa">ɔ o e a</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বুড়ো</span> <span class="trans">buɖˑo</span> <span class="ipa">buɽo</span> <span class="meaning">old man</span></span>.</p>
-        <p><span class="leadin">Shape variants.</span> To avoid clashing with the dot, this vowel sign appears to the side when attached to <span class="name">rɔ</span>, ie. <span class="ex" lang="bn">রু</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">রুগী</span> <span class="trans">rugī</span> <span class="ipa">ruɡiː</span> <span class="meaning">ill, sick</span></span>/</p>
+        <p>pronounced with the lips very rounded, eg. <span class="eg" lang="bn">বুক</span>.</p>
+        <p><span class="ipa">o</span> where the vowel harmony effect applies, if the vowel in the following syllable is one of <span class="ipa">ɔ o e a</span>, eg. <span class="eg" lang="bn">বুড়ো</span>.</p>
+        <p><span class="leadin">Shape variants.</span> To avoid clashing with the dot, this vowel sign appears to the side when attached to <span class="name">rɔ</span>, ie. <span class="ex" lang="bn">রু</span>, eg. <span class="eg" lang="bn">রুগী</span>/</p>
         <p>When combining with <span class="codepoint"><span lang="bn">&#x09B6;</span> <a href="#char09B6">[<span class="uname">U+09B6 BENGALI LETTER SHA</span>]</a></span> the form <span class="ex" lang="bn">শু</span> is common in handwriting and older typefaces. The <span class="name">hrɔsvô u</span> can also be written below the consonant, especially in newspapers. A similar phenomenon occurs with the letter <span class="codepoint"><span lang="bn">&#x0997;</span> <a href="#char0997">[<span class="uname">U+0997 BENGALI LETTER GA</span>]</a></span>, ie. <span class="ex" lang="bn">গু</span>.</p>
         <p>Also, <span class="trans">hu</span> traditionally looks like <span class="ex" lang="bn">হু</span>.</p>
 </div>
@@ -1232,9 +1238,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
     <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> vowel sign, <span class="trans">ū</span>, <span class="name">dīrghô ū</span></p>
-        <p>pronounced with the lips very rounded, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">মূল</span> <span class="trans">mūl</span> <span class="ipa">muːl</span> <span class="meaning">root</span></span>.</p>
+        <p>pronounced with the lips very rounded, eg. <span class="eg" lang="bn">মূল</span>.</p>
         <p>Bengali has lost the distinction between short and long u vowels in pronunciation, but retains the difference in spelling.</p>
-        <p><span class="leadin">Shape variants.</span> To avoid clashing with the dot, this vowel sign appears to the side when attached to <span class="name">rɔ</span>, ie. <span class="ex" lang="bn" >রূ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">রূপ</span> <span class="trans">rūp</span> <span class="ipa">ruːp</span> <span class="meaning">figure, form</span></span>.</p>
+        <p><span class="leadin">Shape variants.</span> To avoid clashing with the dot, this vowel sign appears to the side when attached to <span class="name">rɔ</span>, ie. <span class="ex" lang="bn" >রূ</span>, eg. <span class="eg" lang="bn">রূপ</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p399-402 [2] <a href="#refs">[Radice]</a> p2, 5, 11, 275 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
     </div>
@@ -1248,9 +1254,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
     <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> vowel sign, <span class="trans">ṛ</span>, <span class="name">vocalic r</span> </p>
-        <p>pronounced with the lips very rounded, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বৃহৎ</span> <span class="trans">br̥ht̽</span> <span class="ipa">brihɔt</span> <span class="meaning">huge</span></span>.</p>
+        <p>pronounced with the lips very rounded, eg. <span class="eg" lang="bn">বৃহৎ</span>.</p>
         <p><span class="leadin">Shape variants.</span> The vowel sign is attached to the bottom of the consonant, but some computer typefaces position it slightly to the right.</p>
-        <p><span class="trans">hṛ</span> traditionally looks like <span class="ex" lang="bn">হৃ</span>, although modern computer typefaces tend to put the normal vowel sign under the consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">হৃদয়</span> <span class="trans">hr̥dýˑ</span> <span class="ipa">hridɔý</span> <span class="meaning">heart</span></span>.</p>
+        <p><span class="trans">hṛ</span> traditionally looks like <span class="ex" lang="bn">হৃ</span>, although modern computer typefaces tend to put the normal vowel sign under the consonant, eg. <span class="eg" lang="bn">হৃদয়</span>.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p399-402 [2] <a href="#refs">[Radice]</a> p41 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
     </div>
@@ -1278,10 +1284,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
     <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> vowel sign, <span class="trans">e</span>, <span class="name">e-kar</span></p>
-        <p>eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বেগ</span> <span class="trans">beg</span> <span class="ipa">beg</span> <span class="meaning">speed</span></span>.</p>
-        <p><span class="ipa">e</span> where the vowel harmony effect applies, if the vowel in the following syllable is one of <span class="ipa">i u</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বেগুন</span> <span class="trans">begun</span> <span class="ipa">begun</span> <span class="meaning">eggplant</span></span>.</p>
-        <p><span class="ipa">æ</span> where the vowel harmony effect applies, if the vowel in the following syllable is one of <span class="ipa">ɔ o e a, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বেলা</span> <span class="trans">belɑ</span> <span class="ipa">bælɑ</span> <span class="meaning">time of day</span></span></span>.</p>
-        <p>The pronounciation <span class="ipa">æ</span> is generally used in common words such as <span class="charExample" translate="no"><span class="ex" lang="bn">কেন</span> <span class="trans">ken</span> <span class="ipa">kæno</span> <span class="meaning">why</span></span> or <span class="charExample" translate="no"><span class="ex" lang="bn">কেমন</span> <span class="trans">kemn</span> <span class="ipa">kæmɔn</span> <span class="meaning">how</span></span>, and certain verb forms. Some speakers in Bangladesh may not clearly distinguish between the <span class="ipa">æ</span> and <span class="ipa">e</span>, but they do know which is appropriate if asked.</p>
+        <p>eg. <span class="eg" lang="bn">বেগ</span>.</p>
+        <p><span class="ipa">e</span> where the vowel harmony effect applies, if the vowel in the following syllable is one of <span class="ipa">i u</span>, eg. <span class="eg" lang="bn">বেগুন</span>.</p>
+        <p><span class="ipa">æ</span> where the vowel harmony effect applies, if the vowel in the following syllable is one of <span class="ipa">ɔ o e a, eg. <span class="eg" lang="bn">বেলা</span></span>.</p>
+        <p>The pronounciation <span class="ipa">æ</span> is generally used in common words such as <span class="eg" lang="bn">কেন</span> or <span class="eg" lang="bn">কেমন</span>, and certain verb forms. Some speakers in Bangladesh may not clearly distinguish between the <span class="ipa">æ</span> and <span class="ipa">e</span>, but they do know which is appropriate if asked.</p>
         <p><span class="leadin">Shape variants.</span> In higher quality printing the horizontal line may be omitted at the beginning of a word.</p>
         <p>This vowel sign is written before its base.</p>
 </div>
@@ -1297,8 +1303,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
     <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> vowel sign, <span class="trans">oǐ</span>, <span class="name">oǐ-kar</span> </p>
-        <p><span class="ipa">oi̯</span> diphthong, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">তৈরি</span> <span class="trans">toʲri</span> <span class="ipa">toi̯ri</span> <span class="meaning">to make</span></span>.</p>
-        <p>Note that the sound can also be represented by the inherent vowel plus <span class="name">hrɔʃʃo i</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বই</span> <span class="trans">bị</span> <span class="ipa">boi̯</span> <span class="meaning">book</span></span>. The combination of <span class="name">o-kar</span> plus <span class="name"></span>hrɔʃʃo i can also occur, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">ওই</span> <span class="trans">ọị</span> <span class="ipa">oi̯</span> <span class="meaning">demonstrative</span></span>.</p>
+        <p><span class="ipa">oi̯</span> diphthong, eg. <span class="eg" lang="bn">তৈরি</span>.</p>
+        <p>Note that the sound can also be represented by the inherent vowel plus <span class="name">hrɔʃʃo i</span>, eg. <span class="eg" lang="bn">বই</span>. The combination of <span class="name">o-kar</span> plus <span class="name"></span>hrɔʃʃo i can also occur, eg. <span class="eg" lang="bn">ওই</span>.</p>
         <p>This vowel sign is written before its base.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p399-402 [2] <a href="#refs">[Radice]</a> p35 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
@@ -1320,10 +1326,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
     <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> vowel sign, <span class="trans">o</span>, <span class="name">o-kar</span></p>
-        <p><span class="ipa">o</span> pronounced with the lips very rounded, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বোন</span> <span class="trans">bon</span> <span class="ipa">bon</span> <span class="meaning">sister</span></span>.</p>
-        <p><span class="ipa">u</span> where the vowel harmony effect applies, if the vowel in the following syllable is one of <span class="ipa">i u</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">কোকিল</span> <span class="trans">kokil</span> <span class="ipa">kukil</span> <span class="meaning">cuckoo</span></span>.</p>
+        <p><span class="ipa">o</span> pronounced with the lips very rounded, eg. <span class="eg" lang="bn">বোন</span>.</p>
+        <p><span class="ipa">u</span> where the vowel harmony effect applies, if the vowel in the following syllable is one of <span class="ipa">i u</span>, eg. <span class="eg" lang="bn">কোকিল</span>.</p>
 <p><span class="ipa">ʊ</span> originally, and that pronunciation sometimes persists alongside the <span class="ipa">o</span> that came from Sanskrit, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">নোংরা</span> <span class="trans">noŋ̽rɑ</span> <span class="meaning">foul</span></span> can be pronounced <span class="charExample"><span class="ipa">nʊŋra</span></span> or <span class="charExample"><span class="ipa">noŋra</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Bengali_alphabet#cite_note-%C9%9B-6">w</a></p>        
-<p><span class="ipa">ɔ</span> if the vowel in the following syllable is one of <span class="ipa">ɔ o e a, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">বোকা</span> <span class="trans">bokɑ</span> <span class="ipa">bɔkɑ</span> <span class="meaning">stupid</span></span></span>.</p>
+<p><span class="ipa">ɔ</span> if the vowel in the following syllable is one of <span class="ipa">ɔ o e a, eg. <span class="eg" lang="bn">বোকা</span></span>.</p>
         <p>Inconsistent spellings sometimes arise with this letter due to the sound <span class="ipa">o</span> being also an inherent vowel sound, eg. <span class="trans">bhalo</span>, <span class="meaning">good, well</span> can be spelled either <span class="ex" lang="bn">ভালো</span> or <span class="ex" lang="bn">ভাল</span>.</p>
         <p><span class="leadin">Alternative code points.</span> The vowel sign appears on both sides of the base. The vowel sign can also be represented in Unicode by <span class="codepoint"><span lang="bn">&#xA0;&#x09C7;</span> <a href="#char09C7">[<span class="uname">U+09C7 BENGALI VOWEL SIGN E</span>]</a></span> + <span class="codepoint"><span lang="bn">&#xA0;&#x09BE;</span> <a href="#char09BE">[<span class="uname">U+09BE BENGALI VOWEL SIGN AA</span>]</a></span>, but this is for compatibility with encodings that represent the vowel in this way. Normally you should not use that approach.</p>
 </div>
@@ -1339,7 +1345,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       
     <div class="letter bengali">
         <p class="titlepara"><span class="title">Bengali</span> indepent vowel, <span class="trans">oǔ</span>, <span class="name">oǔ-kar</span></p>
-        <p><span class="ipa">ow</span> diphthong, eg. <span class="charExample" translate="no"><span class="ex" lang="bn">নৌকো</span> <span class="trans">noʷko</span> <span class="ipa">nou̯ko</span> <span class="meaning">boat</span></span>.</p>
+        <p><span class="ipa">ow</span> diphthong, eg. <span class="eg" lang="bn">নৌকো</span>.</p>
         <p><span class="leadin">Alternative code points.</span> The vowel sign appears on both sides of the base. The vowel sign can also be represented in Unicode by <span class="codepoint"><span lang="bn">&#xA0;&#x09C7;</span> <a href="#char09C7">[<span class="uname">U+09C7 BENGALI VOWEL SIGN E</span>]</a></span> + <span class="codepoint"><span lang="bn">&#xA0;&#x09D7;</span> <a href="#char09D7">[<span class="uname">U+09D7 BENGALI AU LENGTH MARK</span>]</a></span>, but this is for compatibility with encodings that represent the vowel in this way. Normally you should not use that approach.</p>
 </div>
 <p class="ref">Refs:  [1] <a href="#refs">[Daniels]</a> p399-402 [2] <a href="#refs">[Radice]</a> p17 [3] <a href="http://en.wikipedia.org/wiki/Bengali_script">Wikipedia: Bengali Script</a></p>
@@ -1704,7 +1710,6 @@ Historic symbols for fractional values;fractions;09F4-09F9
 Currency signs;currency;09F2-09F3 09FB-09FB
 
 --> 
-
 
 <script>
 initialise('/scripts/bengali/block','bengali')
