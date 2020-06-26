@@ -3,28 +3,11 @@
 <head>
 <meta charset="utf-8"/>
 <title>Cherokee script summary</title>
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <meta name="description" content="Summary of the Cherokee script."/>
+
 <link rel="stylesheet" href="../../shared/style/docs.css" />
 <link rel="stylesheet" href="../common/local.css" />
-<style>
-@font-face {
-    font-family: 'webfont';
-    src: url('/shared/webfonts/notosanscherokee-regular-webfont.woff2') format('woff2'),
-         url('/shared/webfonts/notosanscherokee-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-	}
-#freeText, #freeText2 {
-	font-size: 24px;
-	font-family: webfont, serif;
-    line-height: 1.4;
-	}
-@media print { #freeText, #freeText2 { font-size: 18px; } }
-[lang=chr] { font-family: webfont, serif; font-size: 140%; }
-.large .ex { font-size: 300%; }
-details figure { margin-left: 0; margin-right: 0; }
-</style>
+<link rel="stylesheet" href="chr.css" />
 
 <script src="../../shared/scriptdb/cher.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
@@ -41,6 +24,8 @@ details figure { margin-left: 0; margin-right: 0; }
 <script src="../../shared/code/getLinks.js"></script>
 <script src="../linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
+<script src="../common/egcode.js"></script>
+<script src="examples.js"></script>
 
 <script src="../../shared/fontlists/cherokee.js"> </script>
 <script src="chr-translit.js">  </script>
@@ -103,46 +88,34 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->11 June, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->26 June, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
 
 <div class="section">
   <p>This page gathers together basic information about the Cherokee script and its use for the Cherokee language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Cherokee using Unicode.</p>
+<p>See also the companion document, <a href="block" class="linkHighlight">Cherokee character notes</a>, for detailed information about specific Unicode characters.</p>
+<p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
 
 
-<details class="supportdocs noprint instructions">
-<summary>Related pages</summary>
-<!--p class="leadin">Script summary pages:</p>
-<ul>
-<li><a href="../arabic/hausa" class="linkHighlight">Hausa</a></li>
-<li><a href="../arabic/kashmiri" class="linkHighlight">Kashmiri </a></li>
-</ul-->
-<p class="leadin">Character notes:</p>
-<ul>
-<li><a class="linkHighlight" href="block">Cherokee</a></li>
-</ul>
-<p class="leadin">Character apps:</p>
-<ul>
-<li><a href="../../pickers/cherokee/" class="linkHighlight">Cherokee</a></li>
-</ul>
-<p class="leadin">Other:</p>
-<ul>
-<li><a class="linkHighlight" href="../links?iso=Cher">Script links pages</a></li>
-<li><a class="linkHighlight" href="../#scriptnotes">Other script summaries</a></li>
-</ul>
+
+<details>
+<summary class="instructions"><a href="../links?iso=Cher">Related pages</a>.</summary>
 </details>
 
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
+</details>
+
+
+
 <details class="supportdocs noprint">
-<summary class="instructions">About this page</summary>
-<p class="instructions"><span class="leadin">Transcriptions.</span> Unless in parentheses, the transcriptions in italics that follow Cherokee text are a <a href="../glossary/#transliteration" class="termref">transliteration</a> developed for these pages. Those in parentheses follow one or more commonly used <a href="../glossary/#transcription" class="termref">transcription</a> methods. Transcriptions in <span style="white-space:nowrap;">⌈ corner brackets ⌋</span> are either phonemic or phonetic.</p>
-<p class="instructions noprint"><span class="leadin">Character lists.</span> Colours and annotations on panels listing characters are relevant to their use for the Cherokee language. Panels with a yellow background contain commonly used characters for that language.</p>
-<p class="instructions noprint"><span class="leadin">Links to detailed character information.</span> Links on Unicode character names and links on code point values in character lists lead to character notes documents that list information character-by-character. This information is typically more detailed than that on this page. </p>
-<p class="instructions noprint"><span class="leadin">Detailed topic information.</span> Footnote  links with an arrow alongside take you to more detailed information on the current topic.</p>
-<p class="instructions noprint"><span class="leadin">Showing code points for examples.</span>Clicking on   Cherokee  examples shows a list of the characters in that example. </p>
-<p class="instructions noprint"><span class="leadin">Changing fonts.</span>Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Cherokee','Cherokee'); return false;">About this page</a></summary>
+<div id="about"></div>
 </details>
 </div>
 
@@ -478,8 +451,8 @@ alveolar</th>
 
 <section id="vowel_chars">
 <h3>'Vowel' characters</h3>
-    <p>The six vowel characters, when they appear at the start of a word represent plain vowel sounds, eg. <span class="charExample" translate="no"><span class="ex" lang="chr">ᎠᎹ</span> <span class="trans">a-ma</span> <span class="ipa">ama</span> <span class="meaning">water</span></span>.</p>
-    <p>Elsewhere they represent a syllable starting with <span class="ipa">ʔ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="chr">ᎯᎠ</span> <span class="trans">hi-a</span> <span class="ipa">hiʔa</span> <span class="meaning">this</span></span>.<a class="fnref" href="#refs">d</a></p>
+    <p>The six vowel characters, when they appear at the start of a word represent plain vowel sounds, eg. <span class="eg" lang="chr">ᎠᎹ</span>.</p>
+    <p>Elsewhere they represent a syllable starting with <span class="ipa">ʔ</span>, eg. <span class="eg" lang="chr">ᎯᎠ</span>.<a class="fnref" href="#refs">d</a></p>
  
 <figure class="auto bicameral" data-cols="ipa,trans">Ꭰꭰ␣Ꭱꭱ␣Ꭲꭲ␣Ꭳꭳ␣Ꭴꭴ␣Ꭵꭵ</figure>
 
@@ -489,7 +462,7 @@ alveolar</th>
     
     <section id="vowel_length">
 <h3>Vowel length and tone</h3>
-    <p>The vowel in a CV syllable doesn't distinguish between short and long vowel sounds, nor does it indicate tonal values, eg.  <span class="charExample" translate="no"><span class="ex" lang="chr">ᎠᎹ</span> <span class="trans">a-ma</span> <span class="ipa">ama</span> <span class="meaning">water</span></span>  and  <span class="charExample" translate="no"><span class="ex" lang="chr">ᎠᎹ</span> <span class="trans">a-ma</span> <span class="ipa">aːma</span> <span class="meaning">salt</span></span> are written the same, although the vowels are of different lengths and the tones (low vs high, respectively) are different.<a class="fnref" href="#refs">d</a></p>
+    <p>The vowel in a CV syllable doesn't distinguish between short and long vowel sounds, nor does it indicate tonal values, eg.  <span class="eg" lang="chr">ᎠᎹ</span>  and  <span class="eg" lang="chr">ᎠᎹ</span> are written the same, although the vowels are of different lengths and the tones (low vs high, respectively) are different.<a class="fnref" href="#refs">d</a></p>
     </section>
     
     
@@ -497,9 +470,9 @@ alveolar</th>
     
     <section id="syllable_final">
 <h3>Syllable final consonants</h3>
-    <p>Each character may not only end with a vowel, but may also end with <span class="ipa">ʔ</span> or <span class="ipa">h</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="chr">ᏑᏗ</span> <span class="trans">su-di</span> <span class="ipa">suhti</span> <span class="meaning">fishhook</span></span> and <span class="charExample" translate="no"><span class="ex" lang="chr">ᏔᎵ</span> <span class="trans">ta-li</span> <span class="ipa">tʰaʔli</span> <span class="meaning">two</span></span> are written with just two characters.</p>
+    <p>Each character may not only end with a vowel, but may also end with <span class="ipa">ʔ</span> or <span class="ipa">h</span>, eg. <span class="eg" lang="chr">ᏑᏗ</span> and <span class="eg" lang="chr">ᏔᎵ</span> are written with just two characters.</p>
     <p>There is one distinctive pair related to syllables ending with h: <span class="charExample"><span class="ex" lang="chr">Ꮎ</span> <span class="ipa">na</span></span> is contrasted with <span class="charExample"><span class="ex" lang="chr">Ꮐ</span> <span class="ipa">nah</span></span>.</p>
-    <p>Syllables that end with an <span class="ipa">s</span> sound can be written using <span class="codepoint"><span lang="chr">&#x13CD;</span> <a href="/scripts/cherokee/block#char13CD">[<span class="uname">U+13CD CHEROKEE LETTER S</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="chr">ᎯᏴᏫᏯᏍ</span> <span class="trans">hi-yv-wi-ya-s</span> <span class="ipa">hijə̃ːwiːjaːs</span> <span class="meaning">Are you an Indian?</span></span><sup> 2</sup></p>
+    <p>Syllables that end with an <span class="ipa">s</span> sound can be written using <span class="codepoint"><span lang="chr">&#x13CD;</span> <a href="/scripts/cherokee/block#char13CD">[<span class="uname">U+13CD CHEROKEE LETTER S</span>]</a></span>, eg. <span class="eg" lang="chr">ᎯᏴᏫᏯᏍ</span><sup> 2</sup></p>
     </section>
     
     
@@ -508,16 +481,16 @@ alveolar</th>
     <section id="aspiration">
 <h3>Syllable initial aspiration</h3>
     <p>Only 6 syllable pairs distinguish between aspirated and non-aspirated sounds at the start of a syllable.</p>
-    <p>Only one nasal syllable makes this distinction, ie. <span class="charExample" translate="no"><span class="ex" lang="chr">ᎬᎾ</span> <span class="trans">gv-na</span> <span class="ipa">kə̃ːna</span> <span class="meaning">I'm alive</span></span> versus <span class="charExample" translate="no"><span class="ex" lang="chr">ᎬᎿ</span> <span class="trans">gv-hna</span> <span class="ipa">kə̃ːhna</span> <span class="meaning">she's alive</span></span>. However, <span class="charExample" translate="no"><span class="ex" lang="chr">ᎬᏂᎭ</span> <span class="trans">gv-ni-ha</span></span>  could be either <span class="ipa">kə̃ːniha</span> <span class="meaning">I'm striking it</span> or <span class="ipa">kə̃ːhniha</span> <span class="trans">gv-ni-ha</span> <span class="meaning">she's striking it</span>.</p>
-    <p>There are five pairs of characters that make this distinction for stops or affricates: <span class="ex" lang="chr">Ꭶ+Ꭷ, Ꮣ+Ꮤ, Ꮥ+Ꮦ, Ꮧ+Ꮨ, Ꮬ+Ꮭ</span>. For example, it is possible to distinguish between the first two syllables of <span class="charExample" translate="no"><span class="ex" lang="chr">ᎧᎦᎵ</span> <span class="trans">ka-ga-li</span> <span class="ipa">kʰaːkaʔli</span> <span class="meaning">February</span></span>, but not between the two meanings of <span class="charExample" translate="no"><span class="ex" lang="chr">ᎪᎳ</span> <span class="trans">go-la</span></span>, ie. <span class="ipa">koːla</span> <span class="meaning">winter</span> and <span class="ipa">kʰoːla</span> <span class="meaning">bone</span>.<a class="fnref" href="#refs">d</a></p>
+    <p>Only one nasal syllable makes this distinction, ie. <span class="eg" lang="chr">ᎬᎾ</span> versus <span class="eg" lang="chr">ᎬᎿ</span>. However, <span class="charExample" translate="no"><span class="ex" lang="chr">ᎬᏂᎭ</span> <span class="trans">gv-ni-ha</span></span>  could be either <span class="ipa">kə̃ːniha</span> <span class="meaning">I'm striking it</span> or <span class="ipa">kə̃ːhniha</span> <span class="trans">gv-ni-ha</span> <span class="meaning">she's striking it</span>.</p>
+    <p>There are five pairs of characters that make this distinction for stops or affricates: <span class="ex" lang="chr">Ꭶ+Ꭷ, Ꮣ+Ꮤ, Ꮥ+Ꮦ, Ꮧ+Ꮨ, Ꮬ+Ꮭ</span>. For example, it is possible to distinguish between the first two syllables of <span class="eg" lang="chr">ᎧᎦᎵ</span>, but not between the two meanings of <span class="charExample" translate="no"><span class="ex" lang="chr">ᎪᎳ</span> <span class="trans">go-la</span></span>, ie. <span class="ipa">koːla</span> <span class="meaning">winter</span> and <span class="ipa">kʰoːla</span> <span class="meaning">bone</span>.<a class="fnref" href="#refs">d</a></p>
     </section>
     
     
     
     <section id="clusters">
 <h3>Consonant clusters</h3>
-    <p>With one exception, consonant clusters are managed by using a normal syllabic character but ignoring the ('dummy') vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="chr">ᎦᎵᏉᎩ</span> <span class="trans">ga-li-qo-gi</span> <span class="ipa">kaɬkʷoːki</span> <span class="meaning">seven</span></span> or <span class="charExample" translate="no"><span class="ex" lang="chr">ᎬᏙᎠ</span> <span class="trans">gv-do-a</span> <span class="ipa">ktʰoːʔa</span> <span class="meaning">it's hanging</span></span>. The character chosen is largely up to the writer, but some words bring in etymological connections.</p>
-    <p>The exception is <span class="codepoint"><span lang="chr">&#x13CD;</span> <a href="/scripts/cherokee/block#char13CD">[<span class="uname">U+13CD CHEROKEE LETTER S</span>]</a></span>, which is not followed by a vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="chr">ᏍᎪᎯ</span> <span class="trans">s-go-hi</span> <span class="ipa">skoːhi</span> <span class="meaning">ten</span></span>.<a class="fnref" href="#refs">d</a></p>
+    <p>With one exception, consonant clusters are managed by using a normal syllabic character but ignoring the ('dummy') vowel, eg. <span class="eg" lang="chr">ᎦᎵᏉᎩ</span> or <span class="eg" lang="chr">ᎬᏙᎠ</span>. The character chosen is largely up to the writer, but some words bring in etymological connections.</p>
+    <p>The exception is <span class="codepoint"><span lang="chr">&#x13CD;</span> <a href="/scripts/cherokee/block#char13CD">[<span class="uname">U+13CD CHEROKEE LETTER S</span>]</a></span>, which is not followed by a vowel, eg. <span class="eg" lang="chr">ᏍᎪᎯ</span>.<a class="fnref" href="#refs">d</a></p>
     </section>
     
     
@@ -539,7 +512,7 @@ alveolar</th>
 <figure class="auxiliaryBox auto" data-cols="">̣␣̱␣̤␣̰</figure>
 
 <p><span class="codepoint" translate="no"><span lang="chr">&nbsp;&#x0323;</span> [<a href="../latin/block#char0323"><span class="uname">U+0323 COMBINING DOT BELOW</span></a>]</span> indicates  shifts  in  consonant  readings – such  as  voiced  to  voiceless,  voiceless  to voiced; for example, where <span class="ex" lang="chr">Ꭺ</span> is <span class="ipa">ko</span>, <span class="ex" lang="chr">Ꭺ̣</span> would be <span class="ipa">kʰo</span>.</p>
-<p><span class="codepoint" translate="no"><span lang="chr">&nbsp;&#x0331;</span> [<a href="../latin/block#char0331"><span class="uname">U+0331 COMBINING MACRON BELOW</span></a>]</span> indicates  the  dropping  of  a  vowel; for example, Oklahoma could be written <span class="charExample" translate="no"><span class="charExample" translate="no"><span class="ex" lang="chr">ᎣᎦ̱ᎳᎰᎹ</span> <span class="trans">o-ga̱-la-ho-ma</span></span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="chr">&nbsp;&#x0331;</span> [<a href="../latin/block#char0331"><span class="uname">U+0331 COMBINING MACRON BELOW</span></a>]</span> indicates  the  dropping  of  a  vowel; for example, Oklahoma could be written <span class="charExample" translate="no"><span class="ex" lang="chr">ᎣᎦ̱ᎳᎰᎹ</span> <span class="trans">o-ga̱-la-ho-ma</span></span>.</p>
 <p>When  a consonant is both shifted <em>and</em> has its vowel dropped, <span class="codepoint" translate="no"><span lang="chr">&nbsp;&#x0324;</span> [<a href="../latin/block#char0324"><span class="uname">U+0324 COMBINING DIAERESIS BELOW</span></a>]</span> is used.</p>
 <p>Nasalisation is only very rarely marked: in such cases, it can be indicated using <span class="codepoint" translate="no"><span lang="chr">&nbsp;&#x0330;</span> [<a href="../latin/block#char0330"><span class="uname">U+0330 COMBINING TILDE BELOW​</span></a>]</span>.</p>
 </section>
@@ -901,5 +874,4 @@ alveolar</th>
 initialiseSummary('/scripts/cherokee/block','chr','chr','cherokee')
 autoTransliterate('chr')
 </script>
-
 </html>
