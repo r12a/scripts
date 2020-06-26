@@ -19,14 +19,14 @@
 <script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
+<script src="../common/egcode.js"></script>
+<script src="examples.js"></script>
 
 <script src="../../uniview/descriptions.js"></script> 
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/nko.js"> </script>
 <script src="nqo-translit.js">  </script>
-
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 <style id="includeStyles"></style>
 <style>
@@ -39,9 +39,10 @@
 <div id="header-boilerplate"></div>
   <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script> 
 </header>
-<h1> N'Ko character notes</h1>
+<h1> N’Ko character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a></nav>
+<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
+
 
 <aside class="sidebar">
   <nav>
@@ -78,31 +79,35 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->20 January, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->26 June, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
-
 
 <section>
    <p>This page lists characters in the following Unicode  block and provides information about them.</p>
    <ul>
      <li><a href="../../uniview/?block=nko" target="_blank">N'Ko</a></li>
    </ul>
-   <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places.</p>
-<p>For details about how the script works, see <a class="linkHighlight" href="index">N'Ko</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Nkoo">Script links pages</a>.</p>
-<p><span style="text-align: start;">We have usage data for the following  language that uses the N'Ko script</span>: <span style="text-align: start;">N'Ko</span>.</p>
+<p>See also the companion document, <a href="." class="linkHighlight">N’Ko</a>, for a summary of the N’Ko script and its use for the N’Ko Kangbe koiné.</p>
+<p> Phonetic transcriptions should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
-<p>Find <input type="text" id="findInput"
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
 
-<p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example. Click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
+
 <details>
-<summary class="instructions">Read more about how to use this page.</summary>
-    <p class="instructions">To <strong>find a character</strong> by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or the hex number in the <samp>Find</samp> control above.</p>
-    <p class="instructions">To view this page as intended, you  need an <strong>N'Ko font</strong>.  This page comes with a Noto Sans N'Ko webfont. Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system.  For transcriptions I recommend the excellent and free <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;item_id=DoulosSILfont">Doulos SIL font</a>. The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. (If there is no glyph and you want to see what it looks like, click on <samp>See in UniView</samp>.)</p>
-    <p class="instructions"><strong>Information about languages</strong> that use these characters is taken from the list maintained for the Character Use app. The list is not exhaustive.</p>
-<p class="instructions"><strong>References</strong> are indicated by superscript characters. Wherever possible, those contain direct links to the source material. When such a pointer is alongside an arrow → it means that it's worth following the link for the additional information it provides. Digits refer to the main sources, which are listed at the bottom of a set of notes.</p>
-<p class="instructions">When you are using UniView and you turn on <samp>Show notes</samp>, UniView will pull in information about characters from this page.</p>
+<summary class="instructions"><a href="../links?iso=Nkoo">Related pages</a>.</summary>
+</details>
+
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#charnotes">Other character notes</a>.</summary>
+</details>
+
+
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'N’Ko','N’Ko'); return false;">About this page</a></summary>
+<div id="about"></div>
 <p id="charliststr" class="instructions"></p>
 </details>
 </section>
@@ -323,7 +328,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter kangbe">
 <p class="titlepara"><span class="title">Kangbe</span> abstract consonant </p>
-<p>Indicates a NA mutated by a preceding nasal, either word-internally or across word boundaries,<sup>1</sup> eg. <span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">ߘߋ߲ߣߍ߲ ߠߎ߬ ߟߊ߫ ߓߋߟߋ߲ߠߊ</span> <span class="trans">de˜nɛ˜ łu² la¹ bele˜ła</span> <span class="ipa">dẽnɛ̃ łu la belẽła</span> <span class="meaning">a speech from the children</span></span>.</p>
+<p>Indicates a NA mutated by a preceding nasal, either word-internally or across word boundaries,<sup>1</sup> eg. <span class="eg" lang="nqo" dir="rtl">ߘߋ߲ߣߍ߲ ߠߎ߬ ߟߊ߫ ߓߋߟߋ߲ߠߊ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
   [1] [Unicode] <a href="http://www.unicode.org/versions/latest/ch19.pdf#NKo" target="_blank">p738</a>&nbsp;
@@ -423,7 +428,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
   <div class="letter kangbe">
     <p class="titlepara"><span class="title">Kangbe</span> abstract consonant </p>
-    <p>Indicates a NYA mutated by a preceding nasal, either word-internally or across word boundaries,<sup>1</sup> eg. <span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">ߊ߲ ߧߴߌ ߝߏ߬ ߟߊ߫ ߸ ߞߵߌ ߞߎߟߎ߲ߖߋ߲.</span> <span class="trans">a˜ j⁸i fo² la¹ , k⁹i kulu˜ʤe˜.</span> <span class="meaning">We give you thanks.</span></span></p>
+    <p>Indicates a NYA mutated by a preceding nasal, either word-internally or across word boundaries,<sup>1</sup> eg. <span class="eg" lang="nqo" dir="rtl">ߊ߲ ߧߴߌ ߝߏ߬ ߟߊ߫ ߸ ߞߵߌ ߞߎߟߎ߲ߖߋ߲.</span></p>
   </div>
   <p class="ref"><a href="#refs">Refs</a>:
     [1] [Unicode] <a href="http://www.unicode.org/versions/latest/ch19.pdf#NKo" target="_blank">p738</a>&nbsp; 
@@ -660,8 +665,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
   <div class="letter kangbe">
     <p class="titlepara"><span class="title">Kangbe</span> tone mark</p>
-    <p>Tone mark indicating a short rising tone.<sup></sup></p>
-    <p>Also used to indicate the first ordinal, eg. <span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">߁߭</span> <span class="trans">1³</span> <span class="meaning">first</span></span>.<sup>1</sup></p>
+    <p>Tone mark indicating a short rising tone.</p>
+    <p>Also used to indicate the first ordinal, eg. <span class="eg" lang="nqo" dir="rtl">߁߭</span>.<sup>1</sup></p>
     <p>For ordinal numbers after the first see <span class="codepoint"><span lang="nqo" dir="rtl">&nbsp;&#x07F2;</span> <a href="/scripts/nko/block#char07F2">[<span class="uname">U+07F2 NKO COMBINING NASALIZATION MARK​</span>]</a></span>.</p>
     <p>Also used     above  consonants to represent sounds from other languages, particularly French and Arabic, as follows:</p>
     <table>
@@ -881,7 +886,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
   <div class="letter kangbe">
     <p class="titlepara"><span class="title">Kangbe</span> nasalisation mark</p>
     <p>Applied to a vowel to indicate nasalisation, eg. <span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">ߣߌ߲߬</span> <span class="trans">ni˜²</span></span>. It should be input between the base character and any of the tone marks.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2765.pdf">e</a></p>
-    <p>Also used to indicate an ordinal number (except for the first), eg. <span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">߂߲</span> <span class="trans">2˜</span> <span class="meaning">second</span></span>. When there are multiple digits in a number, the diacritic appears only under the last in sequence, eg. <span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">߁߂߃߲</span> <span class="trans">123˜</span> <span class="meaning">123rd</span></span>.<sup>1</sup></p>
+    <p>Also used to indicate an ordinal number (except for the first), eg. <span class="eg" lang="nqo" dir="rtl">߂߲</span>. When there are multiple digits in a number, the diacritic appears only under the last in sequence, eg. <span class="eg" lang="nqo" dir="rtl">߁߂߃߲</span>.<sup>1</sup></p>
     <p>For the first ordinal number, see <span class="codepoint"><span lang="nqo" dir="rtl">&nbsp;&#x07ED;</span> <a href="/scripts/nko/block#char07ED">[<span class="uname">U+07ED NKO COMBINING SHORT RISING TONE​</span>]</a></span>.</p>
   </div>
   <p class="ref"><a href="#refs">Refs</a>:
