@@ -1,7 +1,7 @@
 function addExamples () {
 	// read the data into egList
-	egArray = examples.split("\n")
-	egList = {}
+	var egArray = examples.split("\n")
+	var egList = {}
 	for (i=0;i<egArray.length;i++) {
 		if (egArray[i] == '') continue
 		temp = egArray[i].split('|')
@@ -9,16 +9,18 @@ function addExamples () {
 		}
 	//console.log('egArray',egArray,'egList', egList)
 	
-	nodes = document.querySelectorAll('.eg')
+	var nodes = document.querySelectorAll('.eg')
 	//console.log(nodes.length,' nodes found')
-	for (n=0;n<nodes.length;n++) {
+	for (let n=0;n<nodes.length;n++) {
 		//console.log('Looking for ',nodes[n].textContent)
 		//console.log('Language is ',nodes[n].lang)
 		if (egList[nodes[n].textContent]) {
-			temp = egList[nodes[n].textContent].split('|')
-			out = '<span class="charExample" translate="no"><span class="ex" lang="'
+			var temp = egList[nodes[n].textContent].split('|')
+			var out = '<span class="charExample" translate="no"><span class="ex" lang="'
 			out += nodes[n].lang
-			out += '">'
+			out += '"'
+			if (nodes[n].dir === 'rtl') out += ' dir="rtl"'
+			out += '>'
 			out += temp[0]
 			out += '</span> <span class="trans">xxx</span>'
 			ipa = ''
