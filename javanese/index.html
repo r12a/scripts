@@ -3,35 +3,11 @@
 <head>
 <meta charset="utf-8"/>
 <title>Javanese script summary</title>
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <meta name="description" content="Summary of the Javanese script."/>
+
 <link rel="stylesheet" href="../../shared/style/docs.css" />
 <link rel="stylesheet" href="../common/local.css" />
-<style>
-@font-face {
-    font-family: 'Noto Sans Javanese WF';
-    src: url('/shared/webfonts/notosansjavanese-regular-webfont.woff2') format('woff2'),
-         url('/shared/webfonts/notosansjavanese-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-	}
-@font-face {
-    font-family: 'Tuladha Jejeg WF';
-    src: url('/shared/webfonts/TuladhaJejeg_gr.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-	}
-#freeText {
-	font-size: 28px;
-	font-family: 'Tuladha Jejeg WF', 'Tuladha Jejeg', 'Javanese Text', Yogyakarta, Yogya, 'Noto Sans Javanese WF', serif;
-	text-align: start;
-	line-height: 2.5;
-	}
-@media print { #freeText { font-size: 24px; } }
-[lang=jv] { font-family: 'Tuladha Jejeg WF', 'Tuladha Jejeg', 'Javanese Text', Yogyakarta, Yogya, 'Noto Sans Javanese WF', serif; font-size: 140%; }
-.large { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
-.latin { font-family: gentiumpluswf; }
-</style>
+<link rel="stylesheet" href="jv.css" />
 
 <script src="../../shared/scriptdb/java-jv.js"> </script>
 <script src="/shared/code/boilerplate.js"></script>
@@ -48,6 +24,8 @@
 <script src="/shared/code/getLinks.js"></script>
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
+<script src="../common/egcode.js"></script>
+<script src="examples.js"></script>
 
 <script src="/shared/fontlists/javanese.js"> </script>
 <script src="jv-translit.js">  </script>
@@ -112,47 +90,37 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->11 June, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->26 June, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
 
 <section>
   <p>This page gathers together basic information about the Javanese script and its use for the Javanese language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Javanese using Unicode.</p>
+<p>See also the companion document, <a href="block" class="linkHighlight">Javanese character notes</a>, for detailed information about specific Unicode characters.</p>
+<p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
 
 
-<details class="supportdocs noprint instructions">
-<summary>Related pages</summary>
-<!--p class="leadin">Script summary pages:</p>
-<ul>
-<li><a href="../arabic/hausa" class="linkHighlight">Hausa</a></li>
-<li><a href="../arabic/kashmiri" class="linkHighlight">Kashmiri </a></li>
-</ul-->
-<p class="leadin">Character notes:</p>
-<ul>
-<li><a class="linkHighlight" href="block">Javanese</a></li>
-</ul>
-<p class="leadin">Character apps:</p>
-<ul>
-<li><a href="../../pickers/javanese/" class="linkHighlight">Javanese</a></li>
-</ul>
-<p class="leadin">Other:</p>
-<ul>
-<li><a class="linkHighlight" href="../links?iso=Java">Script links pages</a></li>
-<li><a class="linkHighlight" href="../#scriptnotes">Other script summaries</a></li>
-</ul>
+
+<details>
+<summary class="instructions"><a href="../links?iso=Java">Related pages</a>.</summary>
 </details>
+
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
+</details>
+
+
 
 <details class="supportdocs noprint">
-<summary class="instructions">About this page</summary>
-<p class="instructions"><span class="leadin">Transcriptions.</span> Unless in parentheses, the transcriptions in italics that follow Javanese text are a <a href="../glossary/#transliteration" class="termref">transliteration</a> developed for these pages. Those in parentheses follow one or more commonly used <a href="../glossary/#transcription" class="termref">transcription</a> methods. Transcriptions in <span style="white-space:nowrap;">⌈ corner brackets ⌋</span> are either phonemic or phonetic.</p>
-<p class="instructions noprint"><span class="leadin">Character lists.</span> Colours and annotations on panels listing characters are relevant to their use for the Javanese language. Panels with a yellow background contain commonly used characters for that language.</p>
-<p class="instructions noprint"><span class="leadin">Links to detailed character information.</span> Links on Unicode character names and links on code point values in character lists lead to character notes documents that list information character-by-character. This information is typically more detailed than that on this page. </p>
-<p class="instructions noprint"><span class="leadin">Detailed topic information.</span> Footnote  links with an arrow alongside take you to more detailed information on the current topic.</p>
-<p class="instructions noprint"><span class="leadin">Showing code points for examples.</span>Clicking on   Javanese  examples shows a list of the characters in that example. </p>
-<p class="instructions noprint"><span class="leadin">Changing fonts.</span>Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Javanese','Javanese'); return false;">About this page</a></summary>
+<div id="about"></div>
 </details>
+
+
 <p class="instructions"><strong>Note: There are currently difficulties in finding a workable Unicode font for Javanese. The original Noto Sans Javanese font uses shapes that are over-simplified for some Javanese users but the latest version is better, and the often recommended font, Tuladha Jejeg, is based on Graphite technology, and so only works on Firefox with Graphite rendering enabled (ie. not on iOS). The default webfont for this page is a Tuladha Jejeg webfont. If not using Firefox, you can switch between fonts using the vertical blue bar, bottom right.</strong></p>
 </section>
 
@@ -249,7 +217,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <li>A is <span class="codepoint"><span lang="jv">&#x25CC;&#xA9B4;</span> <a href="/scripts/javanese/block#charA9B4">[<span class="uname">U+A9B4 JAVANESE VOWEL SIGN TARUNG​</span>]</a></span>, and </li>
 <li>Z is one of the syllable-final consonants.</li>
 </ul>
-<p>The initial consonant cluster may represent a word-initial cluster such as <span class="trans">mb</span>, <span class="trans">nd</span>, <span class="trans">ndh</span>, <span class="trans">nj</span> or <span class="trans">nng</span>,<a class="fnref" href="#refs">c</a> eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦩꦧꦸꦫꦸ</span> <span class="trans">mburu</span> <span class="meaning">hunting</span></span>, or it may represent the final consonant of a preceding syllable and the initial consonant of another, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦲꦏ꧀ꦱꦫ</span> <span class="trans">hk͓sr</span> <span class="trans">(aksara)</span> <span class="meaning">characters</span></span>.</p>
+<p>The initial consonant cluster may represent a word-initial cluster such as <span class="trans">mb</span>, <span class="trans">nd</span>, <span class="trans">ndh</span>, <span class="trans">nj</span> or <span class="trans">nng</span>,<a class="fnref" href="#refs">c</a> eg. <span class="eg" lang="jv">ꦩꦧꦸꦫꦸ</span>, or it may represent the final consonant of a preceding syllable and the initial consonant of another, eg. <span class="eg" lang="jv">ꦲꦏ꧀ꦱꦫ</span>.</p>
 <p>Root words are typically disyllables of the form Cˡ V Cˡ V Cˡ, where Cˡ represents an optional consonant or consonant cluster, and V represents a vowel. Most commonly, this represents CVCVC, followed by CVCCVC.<a class="fnref" href="#refs">c</a></p>
 </section>
 
@@ -459,8 +427,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
 
 <p>Javanese  has two ways to represent standalone vowels.</p>
-<p>The normal way  is to combine a vowel sign with <span class="codepoint"><span lang="jv">&#xA9B2;</span> <a href="/scripts/javanese/block#charA9B2">[<span class="uname">U+A9B2 JAVANESE LETTER HA</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦲꦪꦸ</span> <span class="trans">hyu</span> <span class="trans">(ayu)</span> <span class="meaning">graceful</span></span>. </p>
-<p>The independent vowel <em>letters</em> are used in Javanese to distinguish proper nouns or foreign words from ordinary words, eg.  compare <span class="charExample" translate="no"><span class="ex" lang="jv">ꦄꦪꦸ</span> <span class="trans">ạyu</span> <span class="meaning">Ayu</span></span>, a personal name, with the previous example.<a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></p>
+<p>The normal way  is to combine a vowel sign with <span class="codepoint"><span lang="jv">&#xA9B2;</span> <a href="/scripts/javanese/block#charA9B2">[<span class="uname">U+A9B2 JAVANESE LETTER HA</span>]</a></span>, eg. <span class="eg" lang="jv">ꦲꦪꦸ</span>. </p>
+<p>The independent vowel <em>letters</em> are used in Javanese to distinguish proper nouns or foreign words from ordinary words, eg.  compare <span class="eg" lang="jv">ꦄꦪꦸ</span>, a personal name, with the previous example.<a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></p>
       <p>There are 8 independent vowel letters, of which 6 are used in modern text. </p>
  
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ꦆ␣ꦇ␣ꦈ␣ꦌ␣ꦎ␣ꦄ</figure>
@@ -487,7 +455,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ꦉ␣ꦊ␣ꦋ</figure>
 
-<p>These three characters are treated as   vowels in other scripts, such as Balinese, but as consonants in Javanese. They represent the sounds <span class="ipa">rə</span>, <span class="ipa">lə</span> and <span class="ipa">lɤ</span>,  eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦊꦩꦃꦊꦩ꧀ꦧꦸꦠ꧀</span> <span class="trans">l̥mh̽l̥m͓but͓ </span> <span class="trans">(lemah lembut)</span> <span class="meaning">gentle</span></span>.<a class="fnref" href="#refs">d</a> </p>
+<p>These three characters are treated as   vowels in other scripts, such as Balinese, but as consonants in Javanese. They represent the sounds <span class="ipa">rə</span>, <span class="ipa">lə</span> and <span class="ipa">lɤ</span>,  eg. <span class="eg" lang="jv">ꦊꦩꦃꦊꦩ꧀ꦧꦸꦠ꧀</span>.<a class="fnref" href="#refs">d</a> </p>
 <p>Javanese vocalics have no corresponding vowel-signs. They do, however, have conjoint forms.</p>
 </section>
  
@@ -680,7 +648,7 @@ alveolar</th>
 
 
 
-  <p>These indicate that the consonant doesn't start a new syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦥꦿꦩꦸꦏ</span> <span class="trans">pr̆muk</span> <span class="ipa">pramuka</span> <span class="meaning">scout</span></span>,  <span class="charExample" translate="no"><span class="ex" lang="jv">ꦏꦾꦲꦶꦏꦤ꧀ꦗꦼꦁ</span> <span class="trans">ky̆hikn͓ʤəŋ̽</span> <span class="ipa">kyai kanjeng</span></span>, <span class="charExample" translate="no"><span class="ex" lang="jv">ꦕꦕꦶꦁꦏꦽꦩꦶ</span> <span class="trans">ʧʧiŋ̽kr̥̆mi</span> <span class="ipa">cacing kremi</span></span>.</p>
+  <p>These indicate that the consonant doesn't start a new syllable, eg. <span class="eg" lang="jv">ꦥꦿꦩꦸꦏ</span>,  <span class="charExample" translate="no"><span class="ex" lang="jv">ꦏꦾꦲꦶꦏꦤ꧀ꦗꦼꦁ</span> <span class="trans">ky̆hikn͓ʤəŋ̽</span> <span class="ipa">kyai kanjeng</span></span>, <span class="charExample" translate="no"><span class="ex" lang="jv">ꦕꦕꦶꦁꦏꦽꦩꦶ</span> <span class="trans">ʧʧiŋ̽kr̥̆mi</span> <span class="ipa">cacing kremi</span></span>.</p>
   </section>
 
 
@@ -693,7 +661,7 @@ alveolar</th>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ꦀ␣ꦁ␣ꦂ␣ꦃ</figure>
 
 
-<p>Examples: <span class="charExample" translate="no"><span class="ex" lang="jv">ꦱꦼꦏꦺꦴꦭꦃ</span> <span class="trans">səkeːlh̽</span> <span class="trans">(sekolah)</span> <span class="meaning">school</span></span>, <span class="charExample" translate="no"><span class="ex" lang="jv">ꦥꦼꦫꦲꦸꦭꦪꦂ</span> <span class="trans">pərhulyr̽</span> <span class="trans">(perahu layar)</span> <span class="meaning">sailboat</span></span>, <span class="charExample" translate="no"><span class="ex" lang="jv">ꦥꦼꦠꦼꦁ</span> <span class="trans">pətəŋ̽</span> <span class="trans">(peteng)</span> <span class="meaning">dark</span></span>.</p>
+<p>Examples: <span class="eg" lang="jv">ꦱꦼꦏꦺꦴꦭꦃ</span>, <span class="eg" lang="jv">ꦥꦼꦫꦲꦸꦭꦪꦂ</span>, <span class="eg" lang="jv">ꦥꦼꦠꦼꦁ</span>.</p>
   </section>
 </section>
 
@@ -742,7 +710,7 @@ alveolar</th>
 
 <section id="conjoined">
 <h3>Conjoined consonants</h3>
-    <p>Some consonants in non-initial positions in a cluster remain side by side, but the non-initial consonant uses a special conjoined form, eg.  the <span class="trans">s</span>, which is normally shaped <span class="charExample" translate="no"><span class="ex" lang="tmp">ꦱ</span>, loses some shaping to its left side</span> in <span class="charExample" translate="no"><span class="ex" lang="jv">ꦲꦏ꧀ꦱꦫ</span> <span class="trans">hk͓sr</span> <span class="trans">(aksara)</span> <span class="meaning">alphabet</span></span>, which is characteristic of all these conjoined forms.</p>
+    <p>Some consonants in non-initial positions in a cluster remain side by side, but the non-initial consonant uses a special conjoined form, eg.  the <span class="trans">s</span>, which is normally shaped <span class="charExample" translate="no"><span class="ex" lang="tmp">ꦱ</span>, loses some shaping to its left side</span> in <span class="eg" lang="jv">ꦲꦏ꧀ꦱꦫ</span>, which is characteristic of all these conjoined forms.</p>
 
 <figure class="auto bicameral" data-cols="" data-notes="p͓p,P͓P,r̥͓r̥,s͓s,h͓h">ꦥ꧀ꦥ␣ꦦ꧀ꦦ␣ꦉ꧀ꦉ␣ꦱ꧀ꦱ␣ꦲ꧀ꦲ</figure>
 <p class="instructions">Again, some fonts may produce more conjoined pairs than others. Use the control behind the vertical blue bar to apply a different font.</p>
@@ -754,7 +722,7 @@ alveolar</th>
 
   <section id="vowel_absence">
 <h3>Visible pangkon</h3>
-<p>Occasionally <span class="codepoint"><span lang="jv">&#x25CC;&#xA9C0;</span> <a href="/scripts/javanese/block#charA9C0">[<span class="uname">U+A9C0 JAVANESE PANGKON​</span>]</a></span> may be visible in the middle of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦧꦶꦱ꧀ꦠꦿꦤ꧀​ꦱ꧀ꦗꦏꦂꦠ</span> <span class="trans">bis͓tr̆n͓␣s͓ʤkr̽t</span> <span class="trans">(bis transjakarta)</span> <span class="meaning">Transjakarta Bus</span></span>. </p>
+<p>Occasionally <span class="codepoint"><span lang="jv">&#x25CC;&#xA9C0;</span> <a href="/scripts/javanese/block#charA9C0">[<span class="uname">U+A9C0 JAVANESE PANGKON​</span>]</a></span> may be visible in the middle of a word, eg. <span class="eg" lang="jv">ꦧꦶꦱ꧀ꦠꦿꦤ꧀​ꦱ꧀ꦗꦏꦂꦠ</span>. </p>
 <p><span class="ednote">It's not clear from the Unicode Standard how to achieve this, however a zero width space works, and so does a zero width non-joiner.</span></p>
   </section>
 </section> 
@@ -786,7 +754,7 @@ alveolar</th>
    
 <figure class="characterBox auto" data-cols="trans">꧊␣꧋␣꧌␣꧍␣꧈␣꧉␣꧇␣ꧏ␣꧁␣꧂␣꧅␣꧄␣꧃␣꧆</figure>
 
-<p>The following 2 characters are used to represent correction marks in handwriting (see <a class="secref">correction</a>)<a class="secref"></a>.</p>
+<p>The following 2 characters are used to represent correction marks in handwriting (see <a class="secref">correction</a>).</p>
    
 <figure class="auxiliaryBox auto" data-cols="">꧞␣꧟</figure>
 
@@ -804,7 +772,7 @@ alveolar</th>
 
 <figure class="characterBox auto" data-cols="trans,transc">꧐␣꧑␣꧒␣꧓␣꧔␣꧕␣꧖␣꧗␣꧘␣꧙</figure>
 
-    <p>Several of the digits are identical to letters of the alphabet, so  <span class="codepoint"><span lang="jv">&#xA9C7;</span> <a href="/scripts/javanese/block#charA9C7">[<span class="uname">U+A9C7 JAVANESE PADA PANGKAT</span>]</a></span> is often used around numbers, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">:꧑꧕:ꦎꦏ꧀ꦠꦺꦴꦧꦼꦂ:꧒꧐꧑꧒:</span> <span class="trans">:15:ọk͓teːbər̽:2012:</span> <span class="meaning">15 october 2012</span></span>.</p>
+    <p>Several of the digits are identical to letters of the alphabet, so  <span class="codepoint"><span lang="jv">&#xA9C7;</span> <a href="/scripts/javanese/block#charA9C7">[<span class="uname">U+A9C7 JAVANESE PADA PANGKAT</span>]</a></span> is often used around numbers, eg. <span class="eg" lang="jv">:꧑꧕:ꦎꦏ꧀ꦠꦺꦴꦧꦼꦂ:꧒꧐꧑꧒:</span>.</p>
     <figure>
 	  <p dir="rtl" lang="jv" class="large">ꦠꦶꦁꦏꦠ꧀<span class="ex">꧇꧒꧕꧇</span></p>
       <figcaption>Pada pangkat used to indicate numbers.</figcaption>
@@ -1009,8 +977,8 @@ alveolar</th>
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
 <section id="abbreviation">
 <h4>Abbreviation</h4>
-<p>According to Everson <span class="codepoint"><span lang="jv">&#xA9C8;</span> <a href="/scripts/javanese/block#charA9C8">[<span class="uname">U+A9C8 JAVANESE PADA LINGSA</span>]</a></span> is used for acronyms, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">꧈ꦢꦺ꧈ꦲ꧈ꦌꦭ꧀꧈</span> <span class="trans">,de,h,ẹl͓,</span> <span class="meaning">DHL</span></span>.</p>
-<p>It is also used after initials in a name, eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦫ꧈ꦩ꧈ꦯꦸꦭꦂꦠ</span> <span class="trans">r,m,Sulr̽t</span> <span class="meaning">R. M. Sularta</span></span>.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3319.pdf">e</a></p>
+<p>According to Everson <span class="codepoint"><span lang="jv">&#xA9C8;</span> <a href="/scripts/javanese/block#charA9C8">[<span class="uname">U+A9C8 JAVANESE PADA LINGSA</span>]</a></span> is used for acronyms, eg. <span class="eg" lang="jv">꧈ꦢꦺ꧈ꦲ꧈ꦌꦭ꧀꧈</span>.</p>
+<p>It is also used after initials in a name, eg. <span class="eg" lang="jv">ꦫ꧈ꦩ꧈ꦯꦸꦭꦂꦠ</span>.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3319.pdf">e</a></p>
 </section>
 
 
@@ -1038,8 +1006,12 @@ alveolar</th>
   
 <section id="inlinenotes">
 <h3>Inline notes &amp; annotations</h3>
-<p><span class="leadin">Correction marks.</span>According to Wikipedia <span class="codepoint"><span lang="jv">&#xA9DF;</span> <a href="/scripts/javanese/block#charA9DF">[<span class="uname">U+A9DF JAVANESE PADA ISEN-ISEN</span>]</a></span> is used in handwriting to indicate a correction in Yogyakarta, eg. where a scribe wanted to write <span class="trans">pada luhur</span> but actually wrote <span class="trans">pada wu..</span> they would use this mark as follows: <span class="charExample"><span class="ex" lang="jv">ꦥꦢꦮꦸ꧟꧟꧟ꦭꦸꦲꦸꦂ</span></span>.</p>
+
+<section id="correction">
+<h4>Correction marks</h4>
+<p>According to Wikipedia <span class="codepoint"><span lang="jv">&#xA9DF;</span> <a href="/scripts/javanese/block#charA9DF">[<span class="uname">U+A9DF JAVANESE PADA ISEN-ISEN</span>]</a></span> is used in handwriting to indicate a correction in Yogyakarta, eg. where a scribe wanted to write <span class="trans">pada luhur</span> but actually wrote <span class="trans">pada wu..</span> they would use this mark as follows: <span class="charExample"><span class="ex" lang="jv">ꦥꦢꦮꦸ꧟꧟꧟ꦭꦸꦲꦸꦂ</span></span>.</p>
 <p>In Yogyakarta they would use the character <span class="codepoint"><span lang="jv">꧞</span> <a href="/scripts/javanese/block#charA9DE">[<span class="uname">U+A9DE JAVANESE PADA TIRTA TUMETES</span>]</a></span> instead.</p>
+</section>
 </section>
 </section>
 
