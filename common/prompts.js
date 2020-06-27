@@ -68,6 +68,7 @@ function setContentPrompts () {
 				if (promptPara) promptPara.textContent = contentPrompts[thePrompt]
 				}
 			 }
+		contentPrompts = {}
 		}
 	}
 
