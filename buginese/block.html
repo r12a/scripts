@@ -4,6 +4,7 @@
 <meta charset="utf-8"/>
 <title>Buginese character notes</title>
 <meta name="description" content="Notes about characters in the Unicode Buginese script blocks."/>
+
 <link rel="stylesheet" href="../../shared/style/docs.css" />
 <link rel="stylesheet" href="../common/block-style.css" />
 <link rel="stylesheet" href="local.css" />
@@ -19,9 +20,11 @@
 <script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
+<script src="../common/egcode.js"></script>
+<script src="examples.js"></script>
 
-<script type="text/javascript" src="../../uniview/descriptions.js"></script> 
-<script type="text/javascript" src="../../uniview/u.js"></script> 
+<script src="../../uniview/descriptions.js"></script> 
+<script src="../../uniview/u.js"></script> 
 
 <script src="/shared/fontlists/buginese.js"> </script>
 <script src="bug-translit.js">  </script>
@@ -41,7 +44,7 @@
 </header>
 <h1>Buginese character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a></nav>
+<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
 
 <aside class="sidebar">
   <nav>
@@ -78,7 +81,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->20 January, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->27 June, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -88,23 +91,27 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
    <ul>
      <li><a href="../../uniview/?block=buginese" target="_blank">Buginese</a></li>
    </ul>
-   <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places.</p>
-<p>For details about how the script works, see the <a class="linkHighlight" href="index">Buginese</a> summary.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Bugi">Script links pages</a>.</p>
-<p><span style="text-align: start;">We have usage data for the following language that uses the Buginese script</span>: <span style="text-align: start;">Buginese</span>.</p>
+<p>See also the companion document, <a href="." class="linkHighlight">Buginese</a>, for a summary of the Buginese script and its use for the Bugis language.</p>
+<p> Phonetic transcriptions should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
-<p>Find <input type="text" id="findInput"
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
 
-<p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example. Click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
+
 <details>
-<summary class="instructions">Read more about how to use this page.</summary>
-    <p class="instructions">To <strong>find a character</strong> by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or the hex number in the <samp>Find</samp> control above.</p>
-    <p class="instructions">To view this page as intended, you  need a <strong>Buginese font</strong>.  This page comes with a Noto Sans Buginese webfont. Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system.  For transcriptions I recommend the excellent and free <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;item_id=DoulosSILfont">Doulos SIL font</a>. The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. (If there is no glyph and you want to see what it looks like, click on <samp>See in UniView</samp>.)</p>
-    <p class="instructions"><strong>Information about languages</strong> that use these characters is taken from the list maintained for the Character Use app. The list is not exhaustive.</p>
-<p class="instructions"><strong>References</strong> are indicated by superscript characters. Wherever possible, those contain direct links to the source material. When such a pointer is alongside an arrow → it means that it's worth following the link for the additional information it provides. Digits refer to the main sources, which are listed at the bottom of a set of notes.</p>
-<p class="instructions">When you are using UniView and you turn on <samp>Show notes</samp>, UniView will pull in information about characters from this page.</p>
-<p id="charliststr" class="instructions"></p>
+<summary class="instructions"><a href="../links?iso=Bugi">Related pages</a>.</summary>
+</details>
 
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#charnotes">Other character notes</a>.</summary>
+</details>
+
+
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Buginese','Bugis'); return false;">About this page</a></summary>
+<div id="about"></div>
+<p id="charliststr" class="instructions"></p>
 </details>
 </section>
 </div>
@@ -126,7 +133,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">k</span></p>
-<p><span class="ipa">kɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨀᨆᨗᨔᨗ</span> <span class="trans">kamisi</span> (<span class="trans">kamisi</span>) <span class="meaning">Thursday</span></span>.</p>
+<p><span class="ipa">kɑ</span>, eg. <span class="eg" lang="bug">ᨀᨆᨗᨔᨗ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -144,7 +151,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp; <span class="trans">g</span></p>
-<p><span class="ipa">gɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨅᨔ ᨕᨘᨁᨗ</span> <span class="trans">basa ugi</span> (<span class="trans">basa ugi</span>) <span class="meaning">Buginese language</span></span>.</p>
+<p><span class="ipa">gɑ</span>, eg. <span class="eg" lang="bug">ᨅᨔ ᨕᨘᨁᨗ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -180,7 +187,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp; <span class="trans">p</span></p>
-<p><span class="ipa">pɑ, eg. <span class="charExample"><span class="ex" lang="bug">ᨒᨄ</span> <span class="trans">lapa</span> (<span class="trans">lapa</span>) <span class="meaning">lava</span></span>.</span></p>
+<p><span class="ipa">pɑ, eg. <span class="eg" lang="bug">ᨒᨄ</span>.</span></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -200,7 +207,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">b</span></p>
-<p><span class="ipa">bɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨕᨑᨅ</span> <span class="trans">araba</span> (<span class="trans">araba</span>) <span class="meaning">Wednesday</span></span>.</p>
+<p><span class="ipa">bɑ</span>, eg. <span class="eg" lang="bug">ᨕᨑᨅ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -218,7 +225,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">m</span></p>
-<p><span class="ipa">mɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨀᨆᨗᨔᨗ</span> <span class="trans">kamisi</span> (<span class="trans">kamisi</span>) <span class="meaning">Thursday</span></span>.</div>
+<p><span class="ipa">mɑ</span>, eg. <span class="eg" lang="bug">ᨀᨆᨗᨔᨗ</span>.</div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
    [2] [Unicode] <a href="http://www.unicode.org/versions/latest/ch17.pdf#Buginese" target="_blank">pp663-664</a>  
@@ -235,7 +242,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">t</span></p>
-<p><span class="ipa">tɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨔᨈᨘ</span> <span class="trans">satung</span> (<span class="trans">satung</span>) <span class="meaning">Saturday</span></span>.</p>
+<p><span class="ipa">tɑ</span>, eg. <span class="eg" lang="bug">ᨔᨈᨘ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -253,7 +260,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">d</span></p>
-<p><span class="ipa">dɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨄᨉᨚᨕᨂᨛ</span> <span class="trans">paddoangeng</span> (<span class="trans">paddoangeng</span>) <span class="meaning">prayers</span></span>.</p>
+<p><span class="ipa">dɑ</span>, eg. <span class="eg" lang="bug">ᨄᨉᨚᨕᨂᨛ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -271,7 +278,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">n</span></p>
-<p><span class="ipa">nɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨕᨗᨊ</span> <span class="trans">ina</span> (<span class="trans">ina</span>) <span class="ipa">mother</span></span>.</p>
+<p><span class="ipa">nɑ</span>, eg. <span class="eg" lang="bug">ᨒᨄ</span>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -289,7 +296,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">c</span></p>
-<p><span class="ipa">cɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨆᨌ</span> <span class="trans">maca</span> (<span class="trans">maca</span>) <span class="meaning">clever</span></span>.</p>
+<p><span class="ipa">cɑ</span>, eg. <span class="eg" lang="bug">ᨆᨌ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -307,7 +314,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">j</span></p>
-<p><span class="ipa">ɟɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨍᨘᨆ</span> <span class="trans">juma</span> <span class="ipa">juma</span> <span class="meaning">Friday</span></span>.</p>
+<p><span class="ipa">ɟɑ</span>, eg. <span class="eg" lang="bug">ᨔᨒᨔ</span>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -368,7 +375,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">r</span></p>
-<p><span class="ipa">rɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨅᨗᨌᨑ</span> <span class="trans">bicara</span> (<span class="trans">bicara</span>) <span class="meaning">language</span></span>.</p>
+<p><span class="ipa">rɑ</span>, eg. <span class="eg" lang="bug">ᨅᨗᨌᨑ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -386,7 +393,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">l</span></p>
-<p><span class="ipa">lɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨒᨄ</span> <span class="trans">lapa</span> (<span class="trans">lapa</span>) <span class="ipa">lava</span></span>.</p>
+<p><span class="ipa">lɑ</span>, eg. <span class="eg" lang="bug">ᨒᨄ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -404,7 +411,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">w</span></p>
-<p><span class="ipa">wɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨓᨕᨙ</span> <span class="trans">wae</span> (<span class="trans">wae</span>) <span class="meaning">water</span></span>.</p>
+<p><span class="ipa">wɑ</span>, eg. <span class="eg" lang="bug">ᨓᨕᨙ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -422,7 +429,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">s</span></p>
-<p><span class="ipa">sɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨔᨒᨔ</span> <span class="trans">salasa</span> <span class="ipa">sɑlɑːsɑ</span> <span class="meaning">Tuesday</span></span>.</p>
+<p><span class="ipa">sɑ</span>, eg. <span class="eg" lang="bug">ᨔᨒᨔ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -440,7 +447,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">h</span></p>
-<p><span class="ipa">hɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨕᨛᨔᨚ ᨕᨖᨕᨗ</span> <span class="trans">əso ahai</span> (<span class="trans">əso ahai</span>) <span class="meaning">Sunday</span></span>.</p>
+<p><span class="ipa">hɑ</span>, eg. <span class="eg" lang="bug">ᨕᨛᨔᨚ ᨕᨖᨕᨗ</span>.</p>
 <p>This letter is used to represent Arabic sounds.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
@@ -545,7 +552,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> consonant &nbsp;&nbsp;   <span class="trans">a</span></p>
-<p><span class="ipa">ɑ</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨕᨔᨘ</span> <span class="trans">asu</span> (<span class="trans">asu</span>) <span class="meaning">dog</span></span>, or used in combination with vowel-signs to make independent vowels, eg. <span class="charExample"><span class="ex" lang="bug">ᨕᨗᨊ</span> <span class="trans">ina</span> (<span class="trans">ina</span>) <span class="ipa">mother</span></span>.</p>
+<p><span class="ipa">ɑ</span>, eg. <span class="eg" lang="bug">ᨕᨔᨘ</span>, or used in combination with vowel-signs to make independent vowels, eg. <span class="eg" lang="bug">ᨕᨗᨊ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -569,7 +576,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> vowel-sign &nbsp;&nbsp;   <span class="trans">i</span></p>
-<p><span class="ipa">i</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨀᨆᨗᨔᨗ</span> <span class="trans">kamisi</span> <span class="ipa">kɑmɪːsɪ</span> <span class="meaning">Thursday</span></span>.</p>
+<p><span class="ipa">i</span>, eg. <span class="eg" lang="bug">ᨀᨆᨗᨔᨗ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -587,7 +594,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> vowel-sign &nbsp;&nbsp;   <span class="trans">u</span></p>
-<p><span class="ipa">u</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨍᨘᨆ</span> <span class="trans">juma</span> (<span class="trans">juma</span>) <span class="meaning">Friday </span></span>.
+<p><span class="ipa">u</span>, eg. <span class="eg" lang="bug">ᨍᨘᨆ</span>.
 </p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
@@ -606,7 +613,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> vowel-sign &nbsp;&nbsp;   <span class="trans">e</span></p>
-<p><span class="ipa">e</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨕᨙᨔᨙᨊᨙ</span> <span class="trans">eseneng</span> <span class="ipa">eseneŋ</span> <span class="meaning">Monday</span></span>. This vowel-sign appears to the left of the base character.</p>
+<p><span class="ipa">e</span>, eg. <span class="eg" lang="bug">ᨕᨙᨔᨙᨊᨙ</span>. This vowel-sign appears to the left of the base character.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
@@ -642,7 +649,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter buginese">
 <p class="titlepara"><span class="title">Buginese</span> vowel-sign &nbsp;&nbsp;   <span class="trans">ə</span></p>
-<p><span class="ipa">ə</span>, eg. <span class="charExample"><span class="ex" lang="bug">ᨕᨛᨔᨚ ᨕᨖᨕᨗ</span> <span class="trans">əso ahai</span> (<span class="trans">əso ahai</span>) <span class="meaning">Sunday</span></span>.</p>
+<p><span class="ipa">ə</span>, eg. <span class="eg" lang="bug">ᨕᨛᨔᨚ ᨕᨖᨕᨗ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
    [1] [Daniels] p480  
