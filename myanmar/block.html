@@ -19,6 +19,8 @@
 <script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
+<script src="../common/egcode.js"></script>
+<script src="examples.js"></script>
 
 <script src="../../uniview/descriptions.js"></script> 
 <script src="../../uniview/u.js"></script> 
@@ -26,7 +28,6 @@
 <script src="../../shared/fontlists/myanmar.js"> </script>
 <script src="my-translit.js">  </script>
 
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 <style id="includeStyles"></style>
 </head>
@@ -38,7 +39,7 @@
 </header>
 <h1>Myanmar character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a></nav>
+<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
 
 <aside class="sidebar">
   <h2 class="notoc flush"><a id="tochead">Contents</a></h2>
@@ -72,7 +73,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->20 January, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->27 June, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -82,21 +83,26 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   <ul>
     <li><a href="../../uniview/?block=myanmar" target="_blank">Myanmar</a></li>
   </ul>
-  <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-<p>For details about how the script works, see <a class="linkHighlight" href="index">Myanmar/Burmese</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Mymr">Script links pages</a>.</p>
-<p><span style="text-align: start;">We have usage data for the following 3 languages that use the Myanmar script</span>: Mon, Burmese, Shan.</p>
+<p>See also the companion document, <a href="." class="linkHighlight">Myanmar/Burmese</a>, for a summary of the Myanmar script and its use for the Burmese language.</p>
+<p> Phonetic transcriptions should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
-<p>Find <input type="text" id="findInput"
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
 
-<p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example. Click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
+
 <details>
-<summary class="instructions">Read more about how to use this page.</summary>
-    <p class="instructions">To <strong>find a character</strong> by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or the hex number in the <samp>Find</samp> control above.</p>
-    <p class="instructions">To view this page as intended, you  need a <strong>Myanmar font</strong>.  This page comes with Noto Sans Myanmar and Myanmar3 webfonts. Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system.  For transcriptions I recommend the excellent and free <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;item_id=DoulosSILfont">Doulos SIL font</a>. The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. (If there is no glyph and you want to see what it looks like, click on <samp>See in UniView</samp>.)</p>
-    <p class="instructions"><strong>Information about languages</strong> that use these characters is taken from the list maintained for the Character Use app. The list is not exhaustive.</p>
-<p class="instructions"><strong>References</strong> are indicated by superscript characters. Wherever possible, those contain direct links to the source material. When such a pointer is alongside an arrow → it means that it's worth following the link for the additional information it provides. Digits refer to the main sources, which are listed at the bottom of a set of notes.</p>
-<p class="instructions">When you are using UniView and you turn on <samp>Show notes</samp>, UniView will pull in information about characters from this page.</p>
+<summary class="instructions"><a href="../links?iso=Mymr">Related pages</a>.</summary>
+</details>
+
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#charnotes">Other character notes</a>.</summary>
+</details>
+
+
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Myanmar','Burmese'); return false;">About this page</a></summary>
+<div id="about"></div>
 <p id="charliststr" class="instructions"></p>
 </details>
 </section>
@@ -119,10 +125,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">k</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ကား</span> <span class="trans">ka²</span> <span class="ipa">ká</span> <span class="meaning">car</span></span>.</p>
-        <p><span class="ipa">ʔ</span> in final position in native syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဘက်</span> <span class="trans">ḃkˣ</span> <span class="ipa">bɛʔ</span> <span class="meaning">side</span></span>.</p>
-        <p><span class="ipa">g</span> where affected by sandhi (typically non-word-initial, and not preceded by a glottal stop or <span lang="my">အ</span> prefix), eg. <span class="charExample" translate="no"><span class="ex" lang="my">တကယ်ပါ</span> <span class="trans">tkyˣpä</span> <span class="ipa">da̰gɛ̀bà</span> <span class="meaning">certainly, really</span></span>.</p>
-        <p><span class="ipa">tɕ</span> in combination with a following <span class="codepoint"><span lang="my">&#xA0;&#x103B;</span> <a href="#char103B">[<span class="uname">U+103B MYANMAR CONSONANT SIGN MEDIAL YA</span>]</a></span> or <span class="codepoint"><span lang="my">&#xA0;&#x103C;</span> <a href="#char103C">[<span class="uname">U+103C MYANMAR CONSONANT SIGN MEDIAL RA</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ကျောင်း</span> <span class="trans">ky̆eaŋˣ²</span> <span class="ipa">tɕáʊɴ</span> <span class="meaning">school</span></span>, <span class="charExample" translate="no"><span class="ex" lang="my">ကြိုက်</span> <span class="trans">kj̆iukˣ</span> <span class="ipa">tɕaɪʔ</span> <span class="meaning">like</span></span>.</p>
+        <p><span class="ipa">k</span>, eg. <span class="eg" lang="my">ကား</span>.</p>
+        <p><span class="ipa">ʔ</span> in final position in native syllables, eg. <span class="eg" lang="my">ဘက်</span>.</p>
+        <p><span class="ipa">g</span> where affected by sandhi (typically non-word-initial, and not preceded by a glottal stop or <span lang="my">အ</span> prefix), eg. <span class="eg" lang="my">တကယ်ပါ</span>.</p>
+        <p><span class="ipa">tɕ</span> in combination with a following <span class="codepoint"><span lang="my">&#xA0;&#x103B;</span> <a href="#char103B">[<span class="uname">U+103B MYANMAR CONSONANT SIGN MEDIAL YA</span>]</a></span> or <span class="codepoint"><span lang="my">&#xA0;&#x103C;</span> <a href="#char103C">[<span class="uname">U+103C MYANMAR CONSONANT SIGN MEDIAL RA</span>]</a></span>, eg. <span class="eg" lang="my">ကျောင်း</span>, <span class="eg" lang="my">ကြိုက်</span>.</p>
       </div>
     </div>
   </div>
@@ -135,9 +141,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">kʰ</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">kʰ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ခေါက်ဆွဲ</span> <span class="trans">kʰeäkˣṡʰw̆ɛ</span> <span class="ipa">kʰaʊʔ sʰwɛ́</span> <span class="meaning">noodles</span></span>.</p>
-        <p><span class="ipa">g</span> where affected by sandhi (typically non-word-initial, and not preceded by a glottal stop or <span lang="my">အ</span> prefix), eg. <span class="charExample" translate="no"><span class="ex" lang="my">ပြီးခဲ့တဲ့လ</span> <span class="trans">pj̆ï²kʰɛ¹tɛ¹l</span> <span class="ipa">pjígɛ̰dɛ̰la̰</span> <span class="meaning">last month</span></span>.</p>
-        <p><span class="ipa">tɕʰ</span> in combination with a following <span class="codepoint"><span lang="my">&#xA0;&#x103B;</span> <a href="#char103B">[<span class="uname">U+103B MYANMAR CONSONANT SIGN MEDIAL YA</span>]</a></span> or <span class="codepoint"><span lang="my">&#xA0;&#x103C;</span> <a href="#char103C">[<span class="uname">U+103C MYANMAR CONSONANT SIGN MEDIAL RA</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ချယ်</span> <span class="trans">kʰy̆yˣ</span> <span class="ipa">tɕʰɛ̀</span> <span class="meaning">cook</span></span>.</p>
+        <p><span class="ipa">kʰ</span>, eg. <span class="eg" lang="my">ခေါက်ဆွဲ</span>.</p>
+        <p><span class="ipa">g</span> where affected by sandhi (typically non-word-initial, and not preceded by a glottal stop or <span lang="my">အ</span> prefix), eg. <span class="eg" lang="my">ပြီးခဲ့တဲ့လ</span>.</p>
+        <p><span class="ipa">tɕʰ</span> in combination with a following <span class="codepoint"><span lang="my">&#xA0;&#x103B;</span> <a href="#char103B">[<span class="uname">U+103B MYANMAR CONSONANT SIGN MEDIAL YA</span>]</a></span> or <span class="codepoint"><span lang="my">&#xA0;&#x103C;</span> <a href="#char103C">[<span class="uname">U+103C MYANMAR CONSONANT SIGN MEDIAL RA</span>]</a></span>, eg. <span class="eg" lang="my">ချယ်</span>.</p>
       </div>
     </div>
   </div>
@@ -150,8 +156,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">g</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဂဏန်း</span> <span class="trans">gṅnˣ²</span> <span class="ipa">ga̰náɴ</span> <span class="meaning">crab</span></span>.</p>
-        <p><span class="ipa">dʑ</span> in combination with a following <span class="codepoint"><span lang="my">&#xA0;&#x103B;</span> <a href="#char103B">[<span class="uname">U+103B MYANMAR CONSONANT SIGN MEDIAL YA</span>]</a></span> or <span class="codepoint"><span lang="my">&#xA0;&#x103C;</span> <a href="#char103C">[<span class="uname">U+103C MYANMAR CONSONANT SIGN MEDIAL RA</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဂျပန်</span> <span class="trans">gy̆pnˣ</span> <span class="ipa">dʑa̰pàɴ</span> <span class="meaning">Japan</span></span>.</p>
+        <p><span class="ipa">g</span>, eg. <span class="eg" lang="my">ဂဏန်း</span>.</p>
+        <p><span class="ipa">dʑ</span> in combination with a following <span class="codepoint"><span lang="my">&#xA0;&#x103B;</span> <a href="#char103B">[<span class="uname">U+103B MYANMAR CONSONANT SIGN MEDIAL YA</span>]</a></span> or <span class="codepoint"><span lang="my">&#xA0;&#x103C;</span> <a href="#char103C">[<span class="uname">U+103C MYANMAR CONSONANT SIGN MEDIAL RA</span>]</a></span>, eg. <span class="eg" lang="my">ဂျပန်</span>.</p>
       </div>
     </div>
   </div>
@@ -180,7 +186,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
         <p><span class="ipa">ŋ</span> , eg. <span class="ex" lang="my">ငါး</span> <span class="ipa">ŋá</span> <span class="meaning">fish</span>.</p>
         <p>Vowel nasalisation in final position in native syllables, eg. <span class="ex" lang="my">ဝင်</span> <span class="ipa">wɪ̀ɴ</span> <span class="meaning">enter</span>.</p>
-        <p>When this is the first consonant in a consonant cluster and non-word-final, it rises over the second letter and keeps its virama, rather than pushing the second consonant below it, eg. <span class="charExample" translate="no"><span class="ex" lang="my">အင်္ဂလန်</span> <span class="trans">ʔŋˣ͓glnˣ</span> <span class="ipa">ʔɪ̀ɴga̰làɴ</span> <span class="meaning">England</span></span>. This is called '<a href="/scripts/myanmar/#kinzi">kinzi</a>' <span class="ex" lang="my">ကင်းစီး</span> <span class="ipa">kɪ́ɴzí</span>.</p>
+        <p>When this is the first consonant in a consonant cluster and non-word-final, it rises over the second letter and keeps its virama, rather than pushing the second consonant below it, eg. <span class="eg" lang="my">အင်္ဂလန်</span>. This is called '<a href="/scripts/myanmar/#kinzi">kinzi</a>' <span class="ex" lang="my">ကင်းစီး</span> <span class="ipa">kɪ́ɴzí</span>.</p>
         <p>Before Unicode 5.1 it was  occasionally difficult to automatically detect whether a kinzi followed by a medial consonant spans two syllables or not.  This was fixed in Unicode 5.1.  The required sequence of characters to represent a kinzi is: </p>
         <p><span class="codepoint"><span lang="my">&#x1004;</span> <a href="#char1004">[<span class="uname">U+1004 MYANMAR LETTER NGA</span>]</a></span><br>
           <span class="codepoint"><span lang="my">&#xA0;&#x103A;</span> <a href="#char103A">[<span class="uname">U+103A MYANMAR SIGN ASAT</span>]</a></span><br>
@@ -200,9 +206,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
         <p><span class="ipa">s</span> , eg. <span class="ex" lang="my">စာအှပ်</span> <span class="ipa">sàʔoʊʔ</span> <span class="meaning">book</span>.</p>
-        <p><span class="ipa">ʔ</span> in final position in native syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ရစ်</span> <span class="trans">ṙṡˣ</span> <span class="ipa">jɪʔ</span> <span class="meaning">pheasant</span></span>.</p>
-        <p><span class="ipa">z</span> where affected by sandhi (typically non-word-initial, and not preceded by a glottal stop or <span lang="my">အ</span> prefix), but also, irregularly, in word-initial position, eg. <span class="charExample" translate="no"><span class="ex" lang="my">စေတီ</span> <span class="trans">ṡetï</span> <span class="ipa">zèdì</span> <span class="meaning">table</span></span>.</p>
-        <p><span class="ipa">z</span> in combination with <span class="codepoint"><span lang="my">&#xA0;&#x103B;</span> <a href="#char103B">[<span class="uname">U+103B MYANMAR CONSONANT SIGN MEDIAL YA</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">စျေး</span> <span class="trans">ṡy̆e²</span> <span class="ipa">zé</span> <span class="meaning">market</span></span>.</p>
+        <p><span class="ipa">ʔ</span> in final position in native syllables, eg. <span class="eg" lang="my">ရစ်</span>.</p>
+        <p><span class="ipa">z</span> where affected by sandhi (typically non-word-initial, and not preceded by a glottal stop or <span lang="my">အ</span> prefix), but also, irregularly, in word-initial position, eg. <span class="eg" lang="my">စေတီ</span>.</p>
+        <p><span class="ipa">z</span> in combination with <span class="codepoint"><span lang="my">&#xA0;&#x103B;</span> <a href="#char103B">[<span class="uname">U+103B MYANMAR CONSONANT SIGN MEDIAL YA</span>]</a></span>, eg. <span class="eg" lang="my">စျေး</span>.</p>
       </div>
     </div>
   </div>
@@ -216,7 +222,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
         <p><span class="ipa">sʰ</span>, eg. <span class="ex" lang="my">ဆိုင်</span> <span class="ipa">sʰàɪɴ</span> <span class="meaning">shop</span>.</p>
-        <p><span class="ipa">z</span> where affected by sandhi (typically non-word-initial, and not preceded by a glottal stop or <span lang="my">အ</span> prefix), eg. <span class="charExample" translate="no"><span class="ex" lang="my">ထမင်းဆိုင်</span> <span class="trans">tʰmŋˣ²ṡʰiuŋˣ</span> <span class="ipa">tʰa̰mɪ́ɴzàɪɴ</span> <span class="meaning">restaurant</span></span> (but <span class="charExample" translate="no"><span class="ex" lang="my">တစ်ဆယ်</span> <span class="trans">tṡˣṡʰyˣ</span> <span class="meaning">ten</span></span> is pronounced <span class="ipa">tɪʔsʰɛ̀</span> not <span class="ipa">tɪʔzɛ̀</span>).</p>
+        <p><span class="ipa">z</span> where affected by sandhi (typically non-word-initial, and not preceded by a glottal stop or <span lang="my">အ</span> prefix), eg. <span class="eg" lang="my">ထမင်းဆိုင်</span> (but <span class="charExample" translate="no"><span class="ex" lang="my">တစ်ဆယ်</span> <span class="trans">tṡˣṡʰyˣ</span> <span class="meaning">ten</span></span> is pronounced <span class="ipa">tɪʔsʰɛ̀</span> not <span class="ipa">tɪʔzɛ̀</span>).</p>
       </div>
     </div>
   </div>
@@ -229,7 +235,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">z</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဇွန်း</span> <span class="trans">żw̆nˣ²</span> <span class="ipa">zʊ́ɴ</span> <span class="meaning">spoon</span></span>.</p>
+        <p><span class="ipa">z</span>, eg. <span class="eg" lang="my">ဇွန်း</span>.</p>
       </div>
     </div>
   </div>
@@ -242,7 +248,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">z</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">စျေး</span> <span class="trans">ṡy̆e²</span> <span class="ipa">zé</span> <span class="meaning">market</span></span>.</p>
+        <p><span class="ipa">z</span>, eg. <span class="eg" lang="my">စျေး</span>.</p>
         <p>Rarely used.</p>
       </div>
     </div>
@@ -257,7 +263,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
         <p><span class="ipa">ɲ</span>. Rare in initial position.</p>
-        <p> It is also uncommon in final position, but it has come to be used to produce nasalisation, whereas <span class="codepoint"><span lang="my">&#x100A;</span> <a href="#char100A">[<span class="uname">U+100A MYANMAR LETTER NNYA</span>]</a></span> produces none,  eg. <span class="charExample" translate="no"><span class="ex" lang="my">လေယာဉ်</span> <span class="trans">leyaɲ̇ˣ</span> <span class="ipa">lèjaɴ</span> <span class="meaning">airplane</span></span>. Compare <span class="charExample" translate="no"><span class="ex" lang="my">ညဉ်</span> <span class="trans">ɲɲ̇ˣ</span> <span class="ipa">ɲɪ̀ɴ</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="my">ညည်း</span> <span class="trans">ɲɲˣ²</span> <span class="ipa">ɲí</span></span>.</p>
+        <p> It is also uncommon in final position, but it has come to be used to produce nasalisation, whereas <span class="codepoint"><span lang="my">&#x100A;</span> <a href="#char100A">[<span class="uname">U+100A MYANMAR LETTER NNYA</span>]</a></span> produces none,  eg. <span class="eg" lang="my">လေယာဉ်</span>. Compare <span class="charExample" translate="no"><span class="ex" lang="my">ညဉ်</span> <span class="trans">ɲɲ̇ˣ</span> <span class="ipa">ɲɪ̀ɴ</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="my">ညည်း</span> <span class="trans">ɲɲˣ²</span> <span class="ipa">ɲí</span></span>.</p>
       </div>
     </div>
   </div>
@@ -270,8 +276,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">ɲ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ညာ</span> <span class="trans">ɲa</span> <span class="ipa">ɲà</span> <span class="meaning">right</span></span>.</p>
-        <p>Unlike other nasals, this is silent in syllable final position, eg. <span class="charExample" translate="no"><span class="ex" lang="my">အမည်း</span> <span class="trans">ʔmɲˣ²</span> <span class="ipa">ʔa̰mɛ́</span> <span class="meaning">black</span></span>.  Compare with <span class="codepoint"><span lang="my">&#x1009;</span> <a href="#char1009">[<span class="uname">U+1009 MYANMAR LETTER NYA</span>]</a></span>, which does produce nasalisation at the end of a syllable, ie. <span class="charExample" translate="no"><span class="ex" lang="my">ညဉ်</span> <span class="trans">ɲɲ̇ˣ</span> <span class="ipa">ɲɪ̀ɴ</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="my">ညည်း</span> <span class="trans">ɲɲˣ²</span> <span class="ipa">ɲí</span></span>.</p>
+        <p><span class="ipa">ɲ</span>, eg. <span class="eg" lang="my">ညာ</span>.</p>
+        <p>Unlike other nasals, this is silent in syllable final position, eg. <span class="eg" lang="my">အမည်း</span>.  Compare with <span class="codepoint"><span lang="my">&#x1009;</span> <a href="#char1009">[<span class="uname">U+1009 MYANMAR LETTER NYA</span>]</a></span>, which does produce nasalisation at the end of a syllable, ie. <span class="charExample" translate="no"><span class="ex" lang="my">ညဉ်</span> <span class="trans">ɲɲ̇ˣ</span> <span class="ipa">ɲɪ̀ɴ</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="my">ညည်း</span> <span class="trans">ɲɲˣ²</span> <span class="ipa">ɲí</span></span>.</p>
       </div>
     </div>
   </div>
@@ -315,7 +321,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">d</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ကဏ္ဍ</span> <span class="trans">kṅ͓ḋ</span> <span class="ipa">kàɴda̰</span> <span class="meaning">section</span></span>.</p>
+        <p><span class="ipa">d</span>, eg. <span class="eg" lang="my">ကဏ္ဍ</span>.</p>
         <p>Rarely used in modern Burmese.  Primarily used in words of Pali origin.</p>
       </div>
     </div>
@@ -343,7 +349,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">n</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဂဏန်း</span> <span class="trans">gṅnˣ²</span> <span class="ipa">ga̰náɴ</span> <span class="meaning">crab</span></span>.</p>
+        <p><span class="ipa">n</span>, eg. <span class="eg" lang="my">ဂဏန်း</span>.</p>
         <p>Rarely used.  Primarily used in words of Pali origin.</p>
       </div>
     </div>
@@ -358,8 +364,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
         <p><span class="ipa">t</span>, eg. <span class="ex" lang="my">တက်</span> <span class="ipa">tɛʔ</span> <span class="meaning">to be able to</span>.</p>
-        <p><span class="ipa">ʔ</span> in final position in native syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="my">အိတ်</span> <span class="trans">ʔitˣ</span> <span class="ipa">ʔeɪʔ</span> <span class="meaning">bag</span></span>.</p>
-        <p><span class="ipa">d</span> where affected by sandhi (typically non-word-initial, and not preceded by a glottal stop or <span lang="my">အ</span> prefix), eg. <span class="charExample" translate="no"><span class="ex" lang="my">သတင်းစာ</span> <span class="trans">θtŋˣ²ṡa</span> <span class="ipa">θa̰dɪ́ɴzà</span> <span class="meaning">farmer</span></span>, but also, irregularly, in word-initial position.</p>
+        <p><span class="ipa">ʔ</span> in final position in native syllables, eg. <span class="eg" lang="my">အိတ်</span>.</p>
+        <p><span class="ipa">d</span> where affected by sandhi (typically non-word-initial, and not preceded by a glottal stop or <span lang="my">အ</span> prefix), eg. <span class="eg" lang="my">သတင်းစာ</span>, but also, irregularly, in word-initial position.</p>
       </div>
     </div>
   </div>
@@ -373,7 +379,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
         <p><span class="ipa">tʰ</span>, eg. <span class="ex" lang="my">ထီး</span> <span class="ipa">tʰí</span> <span class="meaning">umbrella</span>.</p>
-        <p><span class="ipa">d</span> where affected by sandhi (typically non-word-initial, and not preceded by a glottal stop or <span lang="my">အ</span> prefix), eg. <span class="charExample" translate="no"><span class="ex" lang="my">အကျဉ်းထောင်</span> <span class="trans">ʔky̆ɲ̇ˣ²tʰeaŋˣ</span> <span class="ipa">ʔa̰dʑɪ́ɴdàʊɴ</span> <span class="meaning">prison</span></span>, but also, irregularly, in word-initial position, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ထားဝယ်</span> <span class="trans">tʰa²wyˣ</span> <span class="ipa">dáwɛ̀</span> <span class="meaning">Tavoy/Dawei</span></span>.</p>
+        <p><span class="ipa">d</span> where affected by sandhi (typically non-word-initial, and not preceded by a glottal stop or <span lang="my">အ</span> prefix), eg. <span class="eg" lang="my">အကျဉ်းထောင်</span>, but also, irregularly, in word-initial position, eg. <span class="eg" lang="my">ထားဝယ်</span>.</p>
       </div>
     </div>
   </div>
@@ -386,7 +392,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">d</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဒေါ်လေး</span> <span class="trans">deäˣle²</span> <span class="ipa">dɔ̀lé</span> <span class="meaning">aunt</span></span>.</p>
+        <p><span class="ipa">d</span>, eg. <span class="eg" lang="my">ဒေါ်လေး</span>.</p>
       </div>
     </div>
   </div>
@@ -399,7 +405,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">d</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဓာတ်</span> <span class="trans">d̊atˣ</span> <span class="ipa">daʔ</span> <span class="meaning">electric</span></span>.</p>
+        <p><span class="ipa">d</span>, eg. <span class="eg" lang="my">ဓာတ်</span>.</p>
       </div>
     </div>
   </div>
@@ -412,8 +418,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">n</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">နာရီ</span> <span class="trans">naṙï</span> <span class="ipa">nàjì</span> <span class="meaning">hour</span></span>.</p>
-        <p>Nasalises the vowel in final position in native syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ပန်း</span> <span class="trans">pnˣ²</span> <span class="ipa">páɴ</span> <span class="meaning">flower</span></span>.</p>
+        <p><span class="ipa">n</span>, eg. <span class="eg" lang="my">နာရီ</span>.</p>
+        <p>Nasalises the vowel in final position in native syllables, eg. <span class="eg" lang="my">ပန်း</span>.</p>
       </div>
     </div>
   </div>
@@ -426,9 +432,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">p</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ပိုက်ဆံ</span> <span class="trans">piukˣṡʰn̽</span> <span class="ipa">paɪʔsʰàɴ</span> <span class="meaning">money</span></span>.</p>
-        <p><span class="ipa">ʔ</span> in final position in native syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="my">သိပ်</span> <span class="trans">θipˣ</span> <span class="ipa">θeɪʔ</span> <span class="meaning">very</span></span>.</p>
-        <p><span class="ipa">b</span> where affected by sandhi (typically non-word-initial, and not preceded by a glottal stop or <span lang="my">အ</span> prefix), but also, irregularly, in word-initial position, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ပုဂံ</span> <span class="trans">pugn̽</span> <span class="ipa">bəgàɴ</span> <span class="meaning">Pagan/Bagan</span></span>.</p>
+        <p><span class="ipa">p</span>, eg. <span class="eg" lang="my">ပိုက်ဆံ</span>.</p>
+        <p><span class="ipa">ʔ</span> in final position in native syllables, eg. <span class="eg" lang="my">သိပ်</span>.</p>
+        <p><span class="ipa">b</span> where affected by sandhi (typically non-word-initial, and not preceded by a glottal stop or <span lang="my">အ</span> prefix), but also, irregularly, in word-initial position, eg. <span class="eg" lang="my">ပုဂံ</span>.</p>
       </div>
     </div>
   </div>
@@ -441,9 +447,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">pʰ</span>, <span class="charExample" translate="no"><span class="ex" lang="my">ဖိနပ်</span> <span class="trans">pʰinpˣ</span> <span class="ipa">pʰənaʔ</span> <span class="meaning">shoe</span></span>.</p>
+        <p><span class="ipa">pʰ</span>, <span class="eg" lang="my">ဖိနပ်</span>.</p>
         <p>This is used to represent the foriegn sound <span class="ipa">f</span>.</p>
-        <p><span class="ipa">b</span> where affected by sandhi (typically non-word-initial, and not preceded by a glottal stop or <span lang="my">အ</span> prefix), eg. <span class="charExample" translate="no"><span class="ex" lang="my">ပြောင်းဖူး</span> <span class="trans">pj̆eaŋˣ²pʰu̇²</span> <span class="ipa">pjáʊɴbú</span> <span class="meaning">corn</span></span>.</p>
+        <p><span class="ipa">b</span> where affected by sandhi (typically non-word-initial, and not preceded by a glottal stop or <span lang="my">အ</span> prefix), eg. <span class="eg" lang="my">ပြောင်းဖူး</span>.</p>
       </div>
     </div>
   </div>
@@ -456,7 +462,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">b</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဗိုက်ဆာတယ်</span> <span class="trans">biukˣṡʰatyˣ</span> <span class="ipa">baɪʔsʰàdɛ̀</span> <span class="meaning">to be hungry</span></span>.</p>
+        <p><span class="ipa">b</span>, eg. <span class="eg" lang="my">ဗိုက်ဆာတယ်</span>.</p>
         <p>Also used to represent the foriegn sound <span class="ipa">v</span> or occasionally in the combination <span class="ex" lang="my">ဗွ</span> <span class="trans">bw̱</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">တီဗွီ</span> <span class="trans">tïbw̆ï</span> <span class="ipa">tìbwì</span></span>.</p>
       </div>
     </div>
@@ -470,8 +476,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">b</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဘဲ</span> <span class="trans">ḃɛ</span> <span class="ipa">bɛ́</span> <span class="meaning">duck</span></span>.</p>
-        <p><span class="ipa">pʰ</span> sometimes at the beginning of words or particles, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဘုရား</span> <span class="trans">ḃuṙa²</span> <span class="ipa">pʰəjá</span> <span class="meaning">pagoda</span></span>.</p>
+        <p><span class="ipa">b</span>, eg. <span class="eg" lang="my">ဘဲ</span>.</p>
+        <p><span class="ipa">pʰ</span> sometimes at the beginning of words or particles, eg. <span class="eg" lang="my">ဘုရား</span>.</p>
       </div>
     </div>
   </div>
@@ -484,8 +490,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">m</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">မာ</span> <span class="trans">ma</span> <span class="ipa">mà</span> <span class="meaning">hard</span></span>.</p>
-        <p>Nasalises the vowel in final position in native syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="my">အိမ်</span> <span class="trans">ʔimˣ</span> <span class="ipa">ʔèɪɴ</span> <span class="meaning">house, home</span></span>.</p>
+        <p><span class="ipa">m</span>, eg. <span class="eg" lang="my">မာ</span>.</p>
+        <p>Nasalises the vowel in final position in native syllables, eg. <span class="eg" lang="my">အိမ်</span>.</p>
       </div>
     </div>
   </div>
@@ -498,8 +504,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">j</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ယောက်ျား</span> <span class="trans">yeakˣy̆a²</span> <span class="ipa">jaʊʔtɕá</span> <span class="meaning">man, husband</span></span>.</p>
-        <p><span class="ipa">ɛ</span> in final position with <span class="codepoint"><span lang="my">&#xA0;&#x103A;</span> <a href="#char103A">[<span class="uname">U+103A MYANMAR SIGN ASAT</span>]</a></span> this indicates the low tone of the vowel <span class="ex" lang="my">အဲ</span> , eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဘယ်</span> <span class="trans">ḃyˣ</span> <span class="ipa">bɛ̀</span> <span class="meaning">which</span></span>.</p>
+        <p><span class="ipa">j</span>, eg. <span class="eg" lang="my">ယောက်ျား</span>.</p>
+        <p><span class="ipa">ɛ</span> in final position with <span class="codepoint"><span lang="my">&#xA0;&#x103A;</span> <a href="#char103A">[<span class="uname">U+103A MYANMAR SIGN ASAT</span>]</a></span> this indicates the low tone of the vowel <span class="ex" lang="my">အဲ</span> , eg. <span class="eg" lang="my">ဘယ်</span>.</p>
         <p>For the medial form see <span class="codepoint"><span lang="my">&#xA0;&#x103B;</span> <a href="#char103B">[<span class="uname">U+103B MYANMAR CONSONANT SIGN MEDIAL YA</span>]</a></span>.</p>
       </div>
     </div>
@@ -513,9 +519,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">j</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ရေ</span> <span class="trans">ṙe</span> <span class="ipa">jè</span> <span class="meaning">water</span></span>.</p>
-        <p><span class="ipa">r</span> in loan words, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ရေဒီယို</span> <span class="trans">ṙedïyiu</span> <span class="ipa">rèdìjò</span> <span class="meaning">radio</span></span>.</p>
-        <p><span class="ipa">ʃ</span> when followed by medial ha, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ရှိတယ်</span> <span class="trans">ṙh̆ityˣ</span> <span class="ipa">ʃḭdɛ̀</span> <span class="meaning">to have</span></span>.</p>
+        <p><span class="ipa">j</span>, eg. <span class="eg" lang="my">ရေ</span>.</p>
+        <p><span class="ipa">r</span> in loan words, eg. <span class="eg" lang="my">ရေဒီယို</span>.</p>
+        <p><span class="ipa">ʃ</span> when followed by medial ha, eg. <span class="eg" lang="my">ရှိတယ်</span>.</p>
         <p>For the medial form see <span class="codepoint"><span lang="my">&#xA0;&#x103C;</span> <a href="#char103C">[<span class="uname">U+103C MYANMAR CONSONANT SIGN MEDIAL RA</span>]</a></span>.</p>
       </div>
     </div>
@@ -530,8 +536,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
         <p><span class="ipa">l</span>, eg. <span class="ex" lang="my">လွတ်လပ်</span> <span class="ipa">lʊʔlaʔ</span> <span class="meaning">independent</span>.</p>
-        <p><span class="ipa">ʃ</span> or <span class="ipa">hlj</span> in the combination <span class="ex" lang="my">လျှ</span><!--, eg. <span class="ex" lang="my"></span> <span class="ipa"></span>  (<span class="meaning"></span>).-->, eg. <span class="charExample" translate="no"><span class="ex" lang="my">လမ်းလျှောက်တယ်</span> <span class="trans">lmˣ²ly̆h̆eakˣtyˣ</span> <span class="ipa">láɴʃaʊʔtɛ̀</span> <span class="meaning">to walk</span></span>.</p>
-        <p>Silent at the end of some Pali words, eg. <span class="charExample" translate="no"><span class="ex" lang="my">တက္ကသိုလ်</span> <span class="trans">tk͓kθiulˣ</span> <span class="ipa">təʔkəθò</span> <span class="meaning">university</span></span>; <span class="charExample" translate="no"><span class="ex" lang="my">ဗိုလ်</span> <span class="trans">biulˣ</span> <span class="ipa">bò</span> <span class="meaning">lieutenant</span></span>.</p>
+        <p><span class="ipa">ʃ</span> or <span class="ipa">hlj</span> in the combination <span class="ex" lang="my">လျှ</span><!--, eg. <span class="ex" lang="my"></span> <span class="ipa"></span>  (<span class="meaning"></span>).-->, eg. <span class="eg" lang="my">လမ်းလျှောက်တယ်</span>.</p>
+        <p>Silent at the end of some Pali words, eg. <span class="eg" lang="my">တက္ကသိုလ်</span>; <span class="eg" lang="my">ဗိုလ်</span>.</p>
       </div>
     </div>
   </div>
@@ -544,7 +550,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">w</span>, <span class="charExample" translate="no"><span class="ex" lang="my">ဝန်ကြီး</span> <span class="trans">wnˣkj̆ï²</span> <span class="ipa">wʊ̀ɴtɕí</span> <span class="meaning">minister</span></span>.</p>
+        <p><span class="ipa">w</span>, <span class="eg" lang="my">ဝန်ကြီး</span>.</p>
         <p>For the medial form see <span class="codepoint"><span lang="my">&#xA0;&#x103D;</span> <a href="#char103D">[<span class="uname">U+103D MYANMAR CONSONANT SIGN MEDIAL WA</span>]</a></span>.</p>
       </div>
     </div>
@@ -558,8 +564,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">θ</span> eg. <span class="charExample" translate="no"><span class="ex" lang="my">သိုး</span> <span class="trans">θiu²</span> <span class="ipa">θóʊɴ</span> <span class="meaning">three</span></span>.</p>
-        <p><span class="ipa">ð</span> where affected by sandhi (typically non-word-initial, and not preceded by a glottal stop or <span lang="my">အ</span> prefix), eg. <span class="charExample" translate="no"><span class="ex" lang="my">ပန်းသီး</span> <span class="trans">pnˣ²θï²</span> <span class="ipa">páɴðí</span> <span class="meaning">apple</span></span>.</p>
+        <p><span class="ipa">θ</span> eg. <span class="eg" lang="my">သိုး</span>.</p>
+        <p><span class="ipa">ð</span> where affected by sandhi (typically non-word-initial, and not preceded by a glottal stop or <span lang="my">အ</span> prefix), eg. <span class="eg" lang="my">ပန်းသီး</span>.</p>
         <p>When doubled, the result is commonly the special character <span class="codepoint"><span lang="my">&#x103F;</span> <a href="#char103F">[<span class="uname">U+103F MYANMAR LETTER GREAT SA</span>]</a></span>, rather than <span class="ex" lang="my">သ္သ</span>. <span  class="ex" lang="my">သ်သ</span> is used across word boundaries.</p>
       </div>
     </div>
@@ -573,7 +579,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">h</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဟုတ်ကဲ့</span> <span class="trans">hutˣkɛ¹</span> <span class="ipa">hoʊʔkɛ̰</span> <span class="meaning">yes</span></span>.</p>
+        <p><span class="ipa">h</span>, eg. <span class="eg" lang="my">ဟုတ်ကဲ့</span>.</p>
         <p>For the medial form see <span class="codepoint"><span lang="my">&#xA0;&#x103E;</span> <a href="#char103E">[<span class="uname">U+103E MYANMAR CONSONANT SIGN MEDIAL HA</span>]</a></span>.</p>
       </div>
     </div>
@@ -587,7 +593,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">l</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">စကြဝဠာ</span> <span class="trans">ṡkj̆wl̇a</span> <span class="ipa">seja̰wə̰là</span> <span class="meaning">universe</span></span>, <span class="charExample" translate="no"><span class="ex" lang="my">ဂဠုန်</span> <span class="trans">gl̇unˣ</span> <span class="ipa">gəlòʊɴ</span> <span class="meaning">Garuda</span></span>.</p>
+        <p><span class="ipa">l</span>, eg. <span class="eg" lang="my">စကြဝဠာ</span>, <span class="eg" lang="my">ဂဠုန်</span>.</p>
         <p>Rarely used.</p>
       </div>
     </div>
@@ -601,7 +607,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant ligature<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">θ</span> Used to represent a doubled <span class="codepoint"><span lang="my">&#x101E;</span> <a href="#char101E">[<span class="uname">U+101E MYANMAR LETTER SA</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">သဿ</span> <span class="trans">θθː</span> <span class="ipa">θa̰θθa̰</span> <span class="meaning">Pali corn, crop</span></span>, rather than *<span class="ex" lang="my">သသ္သ</span>. </p>
+        <p><span class="ipa">θ</span> Used to represent a doubled <span class="codepoint"><span lang="my">&#x101E;</span> <a href="#char101E">[<span class="uname">U+101E MYANMAR LETTER SA</span>]</a></span>, eg. <span class="eg" lang="my">သဿ</span>, rather than *<span class="ex" lang="my">သသ္သ</span>. </p>
         <p>In modern Burmese, <span class="ex" lang="my" >ဿ</span> appears within words, whereas <span class="ex" lang="my" >သ်သ</span> is used across word boundaries. </p>
         <p><span class="ref">Refs: [<a href="#refs">Uniprop</a>] 3 </span></p>
       </div>
@@ -623,10 +629,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> medial consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">j</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ပျော်</span> <span class="trans">py̆eaˣ</span> <span class="ipa">pjɔ̀</span> <span class="meaning">happy</span></span>.</p>
-        <p><span class="ipa">tɕ</span> or <span class="ipa">tɕʰ </span>in combination with an unvoiced velar stop, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ကျား</span> <span class="trans">ky̆a²</span> <span class="ipa">tɕá</span> <span class="meaning">tiger</span></span>, <span class="charExample" translate="no"><span class="ex" lang="my">ချက်</span> <span class="trans">kʰy̆kˣ</span> <span class="ipa">tɕʰɛʔ</span> <span class="meaning">cook</span></span>.</p>
-        <p><span class="ipa">dʑ</span> in combination with a voiced velar stop, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဂျပန်</span> <span class="trans">gy̆pnˣ</span> <span class="ipa">dʑəpàɴ</span> <span class="meaning">Japan</span></span>.</p>
-        <p> <span class="ipa">ʃ</span> in the combinations <span class="ex" lang="my">သျှ</span> and <span class="ex" lang="my">လျှ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">လမ်းလျှောက်တယ်</span> <span class="trans">lmˣ²ly̆h̆eakˣtyˣ</span> <span class="ipa">láɴʃaʊʔtɛ̀</span> <span class="meaning">to walk</span></span>.</p>
+        <p><span class="ipa">j</span>, eg. <span class="eg" lang="my">ပျော်</span>.</p>
+        <p><span class="ipa">tɕ</span> or <span class="ipa">tɕʰ </span>in combination with an unvoiced velar stop, eg. <span class="eg" lang="my">ကျား</span>, <span class="eg" lang="my">ချက်</span>.</p>
+        <p><span class="ipa">dʑ</span> in combination with a voiced velar stop, eg. <span class="eg" lang="my">ဂျပန်</span>.</p>
+        <p> <span class="ipa">ʃ</span> in the combinations <span class="ex" lang="my">သျှ</span> and <span class="ex" lang="my">လျှ</span>, eg. <span class="eg" lang="my">လမ်းလျှောက်တယ်</span>.</p>
         <p>Generally only used with bilabial and velar consonants (<span class="ex" lang="my">က ခ ဂ ဃ င ပ ဖ ဗ မ လ သ</span>). All typical combinations with other medials (shown here on မ <span class="ipa">m</span>) are <span class="ex" lang="my">မျှ မျွ မျွှ</span> <span class="ipa">mj̥ mjw mjw̥</span>.<a class="fnref" href="http://en.wikipedia.org/wiki/Burmese_alphabet">wpAlpha</a></p>
       </div>
     </div>
@@ -640,9 +646,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> medial consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">j</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ပြည်</span> <span class="trans">pj̆ɲˣ</span> <span class="ipa">pjɛ</span> <span class="meaning">country</span></span>.</p>
-        <p><span class="ipa">tɕ</span> or <span class="ipa">tɕʰ </span>in combination with an unvoiced velar stop, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ကြက်</span> <span class="trans">kj̆kˣ</span> <span class="ipa">tɕɛʔ</span> <span class="meaning">chicken</span></span>.</p>
-        <p><span class="ipa">dʑ</span> in combination with a voiced velar stop, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ကြား</span> <span class="trans">kj̆a²</span> <span class="ipa">dʑá</span> <span class="meaning">between</span></span>.</p>
+        <p><span class="ipa">j</span>, eg. <span class="eg" lang="my">ပြည်</span>.</p>
+        <p><span class="ipa">tɕ</span> or <span class="ipa">tɕʰ </span>in combination with an unvoiced velar stop, eg. <span class="eg" lang="my">ကြက်</span>.</p>
+        <p><span class="ipa">dʑ</span> in combination with a voiced velar stop, eg. <span class="eg" lang="my">ကြား</span>.</p>
         <p><span class="ipa">ɲ</span> in combination with a voiced velar nasal, eg. tbd<span class="meaning"></span>.</p>
         <p>Generally only used with bilabial and velar consonants (<span class="ex" lang="my">က ခ ဂ ဃ င ပ ဖ ဗ မ လ သ</span>),  (but in Pali and Sanskrit loanwords, can be used for other consonants as well e.g. <span class="charExample" translate="no"><span class="ex" lang="my">ဣန္ဒြေ</span> <span class="trans">ịn͓dj̆e</span> <span class="ipa">ʔḭɴdjè</span></span>). All typical combinations with other medials (shown here on မ <span class="ipa">m</span>) are <span class="ex" lang="my">မြှ မြွ မြွှ</span> <span class="ipa">mj̥ mjw mjw̥</span>.<a class="fnref" href="http://en.wikipedia.org/wiki/Burmese_alphabet">wpAlpha</a></p>
       </div>
@@ -657,7 +663,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> medial consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">w</span> eg. <span class="charExample" translate="no"><span class="ex" lang="my">သွား</span> <span class="trans">θw̆a²</span> <span class="ipa">θwà</span> <span class="meaning">to go</span></span>.</p>
+        <p><span class="ipa">w</span> eg. <span class="eg" lang="my">သွား</span>.</p>
         <p>All typical combinations with other medials (shown here on မ <span class="ipa">m</span>) are <span class="ex" lang="my">မျွ မျွှ မြွ မြွှ မွှ</span> <span class="ipa">mjw mjw̥ mjw mjw̥ m̥w</span>.<a class="fnref" href="http://en.wikipedia.org/wiki/Burmese_alphabet">wpAlpha</a></p>
       </div>
     </div>
@@ -671,10 +677,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> medial consonant<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p>Adds heavy aspiration to the preceding consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="my">နှာ</span> <span class="trans">nh̆a</span> <span class="ipa">n̥à</span> <span class="meaning">nose</span></span>.  Used when there is no consonant that is aspirated in its own right.</p>
+        <p>Adds heavy aspiration to the preceding consonant, eg. <span class="eg" lang="my">နှာ</span>.  Used when there is no consonant that is aspirated in its own right.</p>
         <p>Special combinations:</p>
-        <p><span class="ipa">ʃ</span> in combination with <span class="ex" lang="my">ရ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ရှိတယ်</span> <span class="trans">ṙh̆ityˣ</span> <span class="ipa">ʃḭdɛ̀</span> <span class="meaning">to have</span></span>.</p>
-        <p> <span class="ipa">ʃ</span> in the combinations <span class="ex" lang="my">သျှ</span> and <span class="ex" lang="my">လျှ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">လျှာ</span> <span class="trans">ly̆h̆a</span> <span class="ipa">ʃà</span> <span class="meaning">tongue</span></span>.</p>
+        <p><span class="ipa">ʃ</span> in combination with <span class="ex" lang="my">ရ</span>, eg. <span class="eg" lang="my">ရှိတယ်</span>.</p>
+        <p> <span class="ipa">ʃ</span> in the combinations <span class="ex" lang="my">သျှ</span> and <span class="ex" lang="my">လျှ</span>, eg. <span class="eg" lang="my">လျှာ</span>.</p>
         <p>Occurs with the following consonants <span class="ex" lang="my">င ည ဉ န မ လ ဝ ယ ရ</span>. All typical combinations with other medials (shown here on မ <span class="ipa">m</span>) are <span class="ex" lang="my">မျှ မျွှ မြှ မြွှ မွှ</span> <span class="ipa">mj̥ mjw̥ mj̥ mjw̥ mw̥</span>.<a class="fnref" href="http://en.wikipedia.org/wiki/Burmese_alphabet">wpAlpha</a> </p>
       </div>
     </div>
@@ -956,9 +962,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> consonant / initial vowel <!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
         <p><span class="ipa">ʔ</span> as a vowel support sign.   The combination of this character and a
-          vowel sign is the normal native way of showing syllable initial vowels. For instance, <span class="ex" lang="my" xml:lang="my">အိ</span> is the standard Burmese way to represent an initial <span class="ipa">i</span> vowel. Examples: <span class="charExample" translate="no"><span class="ex" lang="my">အိတ်</span> <span class="trans">ʔitˣ</span> <span class="ipa">ʔeɪʔ</span> <span class="meaning">bag</span></span>, <span class="charExample" translate="no"><span class="ex" lang="my">အားကစား</span> <span class="trans">ʔa²kṡa²</span> <span class="ipa">ʔágəzá</span> <span class="meaning">sport,athletics</span></span>, <span class="charExample" translate="no"><span class="ex" lang="my">အုန်းသီး</span> <span class="trans">ʔunˣ²θï²</span> <span class="ipa">ʔóʊɴdʰí</span> <span class="meaning">coconut</span></span>, <span class="charExample" translate="no"><span class="ex" lang="my">အောက်တိုဘာ</span> <span class="trans">ʔeakˣtiuḃa</span> <span class="ipa">ʔaʊʔtòbà</span> <span class="meaning">October</span></span>.</p>
+          vowel sign is the normal native way of showing syllable initial vowels. For instance, <span class="ex" lang="my" xml:lang="my">အိ</span> is the standard Burmese way to represent an initial <span class="ipa">i</span> vowel. Examples: <span class="eg" lang="my">အိတ်</span>, <span class="eg" lang="my">အားကစား</span>, <span class="eg" lang="my">အုန်းသီး</span>, <span class="eg" lang="my">အောက်တိုဘာ</span>.</p>
         <p>As a syllable initial vowel without any other vowel sign attached it  sounds like:</p>
-        <p><span class="ipa">a</span> in open syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="my">အရိပ်</span> <span class="trans">ʔṙipˣ</span> <span class="ipa">ʔa̰jeɪʔ</span> <span class="meaning">shadow</span></span>, although this is often reduced to <span class="ipa">ə</span>.</p>
+        <p><span class="ipa">a</span> in open syllables, eg. <span class="eg" lang="my">အရိပ်</span>, although this is often reduced to <span class="ipa">ə</span>.</p>
         <p><span class="ipa">ɪ, ɛ, a, ɪɴ, aɴ</span> in closed syllables, per the following table, where the end consonant in the rhyme is shown across the top:</p>
         <table>
           <tbody>
@@ -974,7 +980,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
               <td><span class="sectionstart">ɛʔ</span></td>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
-              <td><span class="charExample" translate="no"><span class="ex" lang="my">အက္ခရာ</span> <span class="trans">ʔk͓kʰṙa</span> <span class="ipa">ʔɛʔkʰəjà</span> <span class="meaning">character, script</span></span></td>
+              <td><span class="eg" lang="my">အက္ခရာ</span></td>
             </tr>
             <tr>
               <th scope="row"><span class="ex">စ်</span></th>
@@ -995,14 +1001,14 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
               <td>aʔ</td>
               <td>&nbsp;</td>
               <td>&nbsp;</td>
-              <td><span class="charExample" translate="no"><span class="ex" lang="my">အပ်ချုပ်သမား</span> <span class="trans">ʔpˣkʰy̆upˣθma²</span> <span class="ipa">ʔaʔtɕʰoʊʔθəmá</span> <span class="meaning">tailor</span></span></td>
+              <td><span class="eg" lang="my">အပ်ချုပ်သမား</span></td>
             </tr>
             <tr>
               <th scope="row"><span class="ex">င်</span></th>
               <td><span class="sectionstart">ɪ̀ɴ</span></td>
               <td><span class="sectionstart">ɪ̰ɴ</span></td>
               <td><span class="sectionstart">ɪ́ɴ</span></td>
-              <td><span class="charExample" translate="no"><span class="ex" lang="my">အင်္ဂလန်</span> <span class="trans">ʔŋˣ͓glnˣ</span> <span class="ipa">ʔɪ̀ɴgə̰làɴ</span> <span class="meaning">England</span></span></td>
+              <td><span class="eg" lang="my">အင်္ဂလန်</span></td>
             </tr>
             <tr>
               <th scope="row"><span class="ex">ည်</span></th>
@@ -1023,7 +1029,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
               <td>àɴ</td>
               <td>a̰ɴ</td>
               <td>áɴ</td>
-              <td><span class="charExample" translate="no"><span class="ex" lang="my">အန္တရာယ်</span> <span class="trans">ʔn͓tṙayˣ</span> <span class="ipa">ʔàɴdəje</span> <span class="meaning">danger</span></span></td>
+              <td><span class="eg" lang="my">အန္တရာယ်</span></td>
             </tr>
             <tr>
               <th scope="row"><span class="ex">မ်</span></th>
@@ -1074,7 +1080,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> initial vowel <!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">ʔì</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဤ</span> <span class="trans">ị̈</span> <span class="ipa">ʔì</span> <span class="meaning">this</span></span>. </p>
+        <p><span class="ipa">ʔì</span>, eg. <span class="eg" lang="my">ဤ</span>. </p>
         <p>Alternative character for 'long' version of primary front vowel, used in syllable initial position, and indicating low tone, cf. <span class="ex" lang="my">အီ</span> which uses the vowel support character and vowel-sign.</p>
         <p>Used in a few words only (typically Indian loan words). Also used in Burmese literary form for 'this', shown above; alternative spelling is <span class="ex" lang="my">ဒီ</span>.</p>
       </div>
@@ -1089,7 +1095,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> initial vowel <!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">ʔṵ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဥ</span> <span class="trans">ụ</span> <span class="ipa">ʔṵ</span> <span class="meaning">egg</span></span>. </p>
+        <p><span class="ipa">ʔṵ</span>, eg. <span class="eg" lang="my">ဥ</span>. </p>
         <p>Alternative character for 'short' version of primary back vowel, used in syllable initial position, and indicating creaky tone, cf. <span class="ex" lang="my">အု</span> which uses the vowel support character  and vowel-sign.</p>
         <p>Used in a few words only (typically Indian loan words).</p>
       </div>
@@ -1105,7 +1111,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> initial vowel <!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">ʔù</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဦး</span> <span class="trans">ụ̇²</span> <span class="ipa">ʔù</span> <span class="meaning">uncle, Mr.</span></span> </p>
+        <p><span class="ipa">ʔù</span>, eg. <span class="eg" lang="my">ဦး</span> </p>
         <p>Alternative character for 'long' version of primary back vowel, used in syllable initial position, and indicating low tone, cf. <span class="ex" lang="my">အူ</span> which uses the vowel support character and vowel-sign.</p>
         <p>Used in a few words only (typically Indian loan words).</p>
       </div>
@@ -1120,7 +1126,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> initial vowel <!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">ʔè</span><!--, eg. <span class="ex" lang="my"></span> <span class="ipa"></span>  (<span class="meaning"></span>). -->, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဧရာဝတီ</span> <span class="trans">ẹṙawtï</span> <span class="ipa">ʔèjàwa̰dì</span> <span class="meaning">Irawaddy river</span></span>, <span class="charExample" translate="no"><span class="ex" lang="my">ဧက</span> <span class="trans">ẹk</span> <span class="ipa">ʔèka̰</span> <span class="meaning">acre</span></span>.</p>
+        <p><span class="ipa">ʔè</span><!--, eg. <span class="ex" lang="my"></span> <span class="ipa"></span>  (<span class="meaning"></span>). -->, eg. <span class="eg" lang="my">ဧရာဝတီ</span>, <span class="eg" lang="my">ဧက</span>.</p>
         <p>Alternative character for high front mid vowel, used in syllable initial position, and indicating creaky tone. Cf. <span class="ex" lang="my">အေ့</span> which uses the vowel support character and vowel-sign.</p>
         <p>Used in a few words only (typically Indian loan words).</p>
       </div>
@@ -1142,7 +1148,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> initial vowel <!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">ʔɔ́</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဩဂုတ်</span> <span class="trans">ɔ̣gutˣ</span> <span class="ipa">ʔɔ́goʊʔ</span> <span class="meaning">August</span></span>, <span class="charExample" translate="no"><span class="ex" lang="my">ဩဇာသီး</span> <span class="trans">ɔ̣żaθï²</span> <span class="ipa">ʔɔ́zàðí</span> <span class="meaning">custard apple</span></span>.</p>
+        <p><span class="ipa">ʔɔ́</span>, eg. <span class="eg" lang="my">ဩဂုတ်</span>, <span class="eg" lang="my">ဩဇာသီး</span>.</p>
         <p>Alternative character for low back mid vowel, used in syllable initial position, and indicating high tone. Cf. <span class="ex" lang="my">အော</span> which uses the vowel support character and vowel-signs.</p>
         <p>Used a few words only (typically Indian loan words).</p>
       </div>
@@ -1181,16 +1187,16 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> vowel sign <!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p>Shapes like <span class="ex" lang="my" style="font-family:Myanmar2">ဝာ</span> <span class="ipa">wa</span> are hard to distinguish from shapes like <span class="ex" lang="my">တ</span> <span class="ipa">ta</span>, so this taller alternative to <span class="codepoint"><span lang="my">&#xA0;&#x102C;</span> <a href="#char102C">[<span class="uname">U+102C MYANMAR VOWEL SIGN AA</span>]</a></span> is used where needed to avoid visual confusion. Whether alone or as part of a complex vowel, it is  used after the following consonants: <span class="ex" lang="my">ဝ ခ ဂ င ဒ ပ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ပေါင်</span> <span class="trans">peäŋˣ</span> <span class="ipa">pàʊɴ</span> <span class="meaning">thigh</span></span>. Where there is no ambiguity, however, the normal shape is used, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ပြောင်းဖူး</span> <span class="trans">pj̆eaŋˣ²pʰu̇²</span> <span class="ipa">pjáʊɴbú</span> <span class="meaning">corn</span></span>.</p>
+        <p>Shapes like <span class="ex" lang="my" style="font-family:Myanmar2">ဝာ</span> <span class="ipa">wa</span> are hard to distinguish from shapes like <span class="ex" lang="my">တ</span> <span class="ipa">ta</span>, so this taller alternative to <span class="codepoint"><span lang="my">&#xA0;&#x102C;</span> <a href="#char102C">[<span class="uname">U+102C MYANMAR VOWEL SIGN AA</span>]</a></span> is used where needed to avoid visual confusion. Whether alone or as part of a complex vowel, it is  used after the following consonants: <span class="ex" lang="my">ဝ ခ ဂ င ဒ ပ</span>, eg. <span class="eg" lang="my">ပေါင်</span>. Where there is no ambiguity, however, the normal shape is used, eg. <span class="eg" lang="my">ပြောင်းဖူး</span>.</p>
         <p><strong>On its own:</strong></p>
-        <p><span class="ipa">a</span> Used only in open syllables. Low tone by default, eg. <span class="charExample" translate="no"><span class="ex" lang="my">တံဂါ</span> <span class="trans">tn̽gä</span> <span class="ipa">təɴgà</span> <span class="meaning">fisherman</span></span>. High tone with visarga, eg. <span class="charExample" translate="no"><span class="ex" lang="my">တံခါး</span> <span class="trans">tn̽kʰä²</span> <span class="ipa">dəgá</span> <span class="meaning">door</span></span>. </p>
+        <p><span class="ipa">a</span> Used only in open syllables. Low tone by default, eg. <span class="eg" lang="my">တံဂါ</span>. High tone with visarga, eg. <span class="eg" lang="my">တံခါး</span>. </p>
         <p>For creaky tone use inherent vowel, instead.</p>
         <p><strong>With <span class="codepoint"><span lang="my">&#xA0;&#x1031;</span> <a href="#char1031">[<span class="uname">U+1031 MYANMAR VOWEL SIGN E</span>]</a></span> (</strong><span class="ex" lang="my">အေါ</span>)</p>
         <p>The vowel signs surround the base character. </p>
-        <p><span class="ipa">ɔ</span> in open syllables. High tone by default, eg. tbd; Creaky tone with low dot, eg. <span class="ex" lang="my">ပေါ့တယ်</span> <span class="charExample" translate="no"><span class="ex" lang="my">ပေါ့တယ်</span> <span class="trans">peä¹tyˣ</span> <span class="ipa">pɔ̰dɛ̀</span> <span class="meaning">bland, tasteless</span></span>. </p>
-        <p>Use asat for low tone,  eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဒေါ်လေး</span> <span class="trans">deäˣle²</span> <span class="ipa">dɔlè</span> <span class="meaning">aunt</span></span>. Note how the asat combines in a special way with the shape.</p>
-        <p><span class="ipa">aʊ</span> in closed syllables. Usually combines with only the following finals, <span class="ex" lang="my">က င</span>. Low tone by default, eg. <span class="charExample" translate="no"><span class="ex" lang="my">သန်းခေါင်</span> <span class="trans">θnˣ²kʰeäŋˣ</span> <span class="ipa">dəgàʊɴ</span> <span class="meaning">midnight</span></span>. Creaky tone with low dot, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ပေါ့တယ်</span> <span class="trans">peä¹tyˣ</span> <span class="ipa">pɔ̰dɛ̀</span> <span class="meaning">to be light</span></span>. High tone with visarga, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ခေါင်း</span> <span class="trans">kʰeäŋˣ²</span> <span class="ipa">kʰáʊɴ</span> <span class="meaning">head</span></span>. (Stopped tone with the stop final, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ပြတင်းပေါက်</span> <span class="trans">pj̆tŋˣ²peäkˣ</span> <span class="ipa">bədɪ́ɴbaʊʔ</span> <span class="meaning">window</span></span>. )</p>
-        <p>As an initial vowel this is usually <span class="ex" lang="my">အေါ</span> but some words, particularly Indian loan words or words in the literary style, use the following alternative single characters: <span class="codepoint"><span lang="my">&#x1029;</span> <a href="#char1029">[<span class="uname">U+1029 MYANMAR LETTER O</span>]</a></span> for high tone, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဩဂုတ်</span> <span class="trans">ɔ̣gutˣ</span> <span class="ipa">ʔɔ́goʊʔ</span> <span class="meaning">August</span></span>; <span class="codepoint"><span lang="my">&#x102A;</span> <a href="#char102A">[<span class="uname">U+102A MYANMAR LETTER AU</span>]</a></span> for low tone.</p>
+        <p><span class="ipa">ɔ</span> in open syllables. High tone by default, eg. tbd; Creaky tone with low dot, eg. <span class="ex" lang="my">ပေါ့တယ်</span> <span class="eg" lang="my">ပေါ့တယ်</span>. </p>
+        <p>Use asat for low tone,  eg. <span class="eg" lang="my">ဒေါ်လေး</span>. Note how the asat combines in a special way with the shape.</p>
+        <p><span class="ipa">aʊ</span> in closed syllables. Usually combines with only the following finals, <span class="ex" lang="my">က င</span>. Low tone by default, eg. <span class="eg" lang="my">သန်းခေါင်</span>. Creaky tone with low dot, eg. <span class="eg" lang="my">ပေါ့တယ်</span>. High tone with visarga, eg. <span class="eg" lang="my">ခေါင်း</span>. (Stopped tone with the stop final, eg. <span class="eg" lang="my">ပြတင်းပေါက်</span>. )</p>
+        <p>As an initial vowel this is usually <span class="ex" lang="my">အေါ</span> but some words, particularly Indian loan words or words in the literary style, use the following alternative single characters: <span class="codepoint"><span lang="my">&#x1029;</span> <a href="#char1029">[<span class="uname">U+1029 MYANMAR LETTER O</span>]</a></span> for high tone, eg. <span class="eg" lang="my">ဩဂုတ်</span>; <span class="codepoint"><span lang="my">&#x102A;</span> <a href="#char102A">[<span class="uname">U+102A MYANMAR LETTER AU</span>]</a></span> for low tone.</p>
       </div>
     </div>
   </div>
@@ -1205,16 +1211,16 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         <p class="titlepara"><span class="title">Burmese</span> vowel sign 
           <!--, <span class="name">cɔː</span>  <span lang="my"></span>--> 
         </p>
-        <p>Shapes like <span class="ex" lang="my" style="font-family:Myanmar2">ဝာ</span> <span class="ipa">wa</span> are hard to distinguish from shapes like <span class="ex" lang="my">တ</span> <span class="ipa">ta</span>, so a taller alternative to this character, <span class="codepoint"><span lang="my">&#xA0;&#x102B;</span> <a href="#char102B">[<span class="uname">U+102B MYANMAR VOWEL SIGN TALL AA</span>]</a></span>, is used where needed to avoid visual confusion. Whether alone or as part of a complex vowel, it is  used after the following consonants: <span class="ex" lang="my">ဝ ခ ဂ င ဒ ပ</span>, eg. <span class="ex" lang="my">ပေါင်</span> <span class="ipa">pàʊɴ</span> <span class="meaning">thigh</span>. Where there is no ambiguity, however, this normal shape is used, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ပြောင်းဖူး</span> <span class="trans">pj̆eaŋˣ²pʰu̇²</span> <span class="ipa">pjáʊɴbú</span> <span class="meaning">corn</span></span>.</p>
+        <p>Shapes like <span class="ex" lang="my" style="font-family:Myanmar2">ဝာ</span> <span class="ipa">wa</span> are hard to distinguish from shapes like <span class="ex" lang="my">တ</span> <span class="ipa">ta</span>, so a taller alternative to this character, <span class="codepoint"><span lang="my">&#xA0;&#x102B;</span> <a href="#char102B">[<span class="uname">U+102B MYANMAR VOWEL SIGN TALL AA</span>]</a></span>, is used where needed to avoid visual confusion. Whether alone or as part of a complex vowel, it is  used after the following consonants: <span class="ex" lang="my">ဝ ခ ဂ င ဒ ပ</span>, eg. <span class="ex" lang="my">ပေါင်</span> <span class="ipa">pàʊɴ</span> <span class="meaning">thigh</span>. Where there is no ambiguity, however, this normal shape is used, eg. <span class="eg" lang="my">ပြောင်းဖူး</span>.</p>
         <p><strong>On its own:</strong></p>
-        <p><span class="ipa">a</span> Used only in open syllables. Low tone by default, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဆရာ</span> <span class="trans">ṡʰṙa</span> <span class="ipa">sʰəjà</span> <span class="meaning">teacher</span></span>. High tone with visarga, eg. <span class="charExample" translate="no"><span class="ex" lang="my">နွား</span> <span class="trans">nw̆a²</span> <span class="ipa">nwá</span> <span class="meaning">cow</span></span>.</p>
+        <p><span class="ipa">a</span> Used only in open syllables. Low tone by default, eg. <span class="eg" lang="my">ဆရာ</span>. High tone with visarga, eg. <span class="eg" lang="my">နွား</span>.</p>
         <p>For creaky tone use inherent vowel, instead.</p>
         <p><strong>With <span class="codepoint"><span lang="my">&#xA0;&#x1031;</span> <a href="#char1031">[<span class="uname">U+1031 MYANMAR VOWEL SIGN E</span>]</a></span></strong> (<span class="ex" lang="my">အော</span>)</p>
         <p>The vowel signs surround the base character. </p>
-        <p><span class="ipa">ɔ</span> in open syllables. High tone by default, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ထောပတ်သီး</span> <span class="trans">tʰeaptˣθï²</span> <span class="ipa">tʰɔ́baʔdʰí</span> <span class="meaning">banana</span></span>. Creaky tone with low dot, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ပျော့တယ်</span> <span class="trans">py̆ea¹tyˣ</span> <span class="ipa">pjɔ̰dɛ̀</span> <span class="meaning">to be soft</span></span>. </p>
-        <p>Use asat for low tone,  eg. <span class="charExample" translate="no"><span class="ex" lang="my">ပျော်တယ်</span> <span class="trans">py̆eaˣtyˣ</span> <span class="ipa">pjɔ̀dɛ̀</span> <span class="meaning">to be happy</span></span>.</p>
-        <p><span class="ipa">aʊ</span> in closed syllables. Usually combines with only the following finals, <span class="ex" lang="my">က င</span>. Low tone by default, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ကြောင်</span> <span class="trans">kj̆eaŋˣ</span> <span class="ipa">dʑàʊɴ</span> <span class="meaning">cat</span></span>. Creaky tone with low dot, eg. <span class="charExample" translate="no"><span class="ex" lang="my">စောင့်တယ်</span> <span class="trans">ṡeaŋ¹ˣtyˣ</span> <span class="ipa">sa̰ʊɴdɛ̀</span> <span class="meaning">to wait</span></span>. High tone with visarga, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ကျောင်း</span> <span class="trans">ky̆eaŋˣ²</span> <span class="ipa">dʑáʊɴ</span> <span class="meaning">school</span></span>. (Stopped tone with the stop final, eg. <span class="charExample" translate="no"><span class="ex" lang="my">နောက်လ</span> <span class="trans">neakˣl</span> <span class="ipa">naʊʔla̰</span> <span class="meaning">next month</span></span>. )</p>
-        <p>As an initial vowel this is usually <span class="ex" lang="my">အော</span> but some words, particularly Indian loan words or words in the literary style, use the following alternative single characters: <span class="codepoint"><span lang="my">&#x1029;</span> <a href="#char1029">[<span class="uname">U+1029 MYANMAR LETTER O</span>]</a></span> for high tone, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဩဂုတ်</span> <span class="trans">ɔ̣gutˣ</span> <span class="ipa">ʔɔ́goʊʔ</span> <span class="meaning">August</span></span>; <span class="codepoint"><span lang="my">&#x102A;</span> <a href="#char102A">[<span class="uname">U+102A MYANMAR LETTER AU</span>]</a></span> for low tone.</p>
+        <p><span class="ipa">ɔ</span> in open syllables. High tone by default, eg. <span class="eg" lang="my">ထောပတ်သီး</span>. Creaky tone with low dot, eg. <span class="eg" lang="my">ပျော့တယ်</span>. </p>
+        <p>Use asat for low tone,  eg. <span class="eg" lang="my">ပျော်တယ်</span>.</p>
+        <p><span class="ipa">aʊ</span> in closed syllables. Usually combines with only the following finals, <span class="ex" lang="my">က င</span>. Low tone by default, eg. <span class="eg" lang="my">ကြောင်</span>. Creaky tone with low dot, eg. <span class="eg" lang="my">စောင့်တယ်</span>. High tone with visarga, eg. <span class="eg" lang="my">ကျောင်း</span>. (Stopped tone with the stop final, eg. <span class="eg" lang="my">နောက်လ</span>. )</p>
+        <p>As an initial vowel this is usually <span class="ex" lang="my">အော</span> but some words, particularly Indian loan words or words in the literary style, use the following alternative single characters: <span class="codepoint"><span lang="my">&#x1029;</span> <a href="#char1029">[<span class="uname">U+1029 MYANMAR LETTER O</span>]</a></span> for high tone, eg. <span class="eg" lang="my">ဩဂုတ်</span>; <span class="codepoint"><span lang="my">&#x102A;</span> <a href="#char102A">[<span class="uname">U+102A MYANMAR LETTER AU</span>]</a></span> for low tone.</p>
       </div>
     </div>
   </div>
@@ -1228,14 +1234,14 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> vowel sign<!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
         <p><strong>On its own:</strong></p>
-        <p><span class="ipa">i</span> in open syllables. Creaky tone only, eg. <span class="charExample" translate="no"><span class="ex" lang="my">အဘိဓာန်</span> <span class="trans">ʔḃid̊anˣ</span> <span class="ipa">ʔa̰bḭdaɴ</span> <span class="meaning">dictionary</span></span>. </p>
+        <p><span class="ipa">i</span> in open syllables. Creaky tone only, eg. <span class="eg" lang="my">အဘိဓာန်</span>. </p>
         <p>For high and low tones use <span class="codepoint"><span lang="my">&#xA0;&#x102E;</span> <a href="#char102E">[<span class="uname">U+102E MYANMAR VOWEL SIGN II</span>]</a></span>.</p>
-        <p><span class="ipa">eɪ</span> in closed syllables. Usually combines with the  nasal finals <span class="ex" lang="my">န မ</span> (or the anusvara). Low tone by default, eg. <span class="charExample" translate="no"><span class="ex" lang="my">အိမ်</span> <span class="trans">ʔimˣ</span> <span class="ipa">ʔèɪɴ</span> <span class="meaning">house</span></span>. Creaky tone with low dot, eg. tbd. High tone with visarga, eg. <span class="charExample" translate="no"><span class="ex" lang="my">တစ်သိန်း</span> <span class="trans">tṡˣθinˣ²</span> <span class="ipa">təθéɪɴ</span> <span class="meaning">hundred thousand</span></span>. Stopped tone with the stop finals <span class="ex" lang="my">တ ပ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">အိတ်</span> <span class="trans">ʔitˣ</span> <span class="ipa">ʔeɪʔ</span> <span class="meaning">bag</span></span>.</p>
-        <p>As an initial vowel this is usually <span class="ex">အိ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">အိန္ဒိယ</span> <span class="trans">ʔin͓diy</span> <span class="ipa">ʔèɪɴdḭja̰</span> <span class="meaning">India</span></span>, but some words, particularly Indian loan words or words in the literary style, use the following alternative single character: <span class="codepoint"><span lang="my">&#x1023;</span> <a href="#char1023">[<span class="uname">U+1023 MYANMAR LETTER I</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဣန္ဒြေ</span> <span class="trans">ịn͓dj̆e</span> <span class="ipa">ʔḭɴdjè</span></span>.</p>
+        <p><span class="ipa">eɪ</span> in closed syllables. Usually combines with the  nasal finals <span class="ex" lang="my">န မ</span> (or the anusvara). Low tone by default, eg. <span class="eg" lang="my">အိမ်</span>. Creaky tone with low dot, eg. tbd. High tone with visarga, eg. <span class="eg" lang="my">တစ်သိန်း</span>. Stopped tone with the stop finals <span class="ex" lang="my">တ ပ</span>, eg. <span class="eg" lang="my">အိတ်</span>.</p>
+        <p>As an initial vowel this is usually <span class="ex">အိ</span>, eg. <span class="eg" lang="my">အိန္ဒိယ</span>, but some words, particularly Indian loan words or words in the literary style, use the following alternative single character: <span class="codepoint"><span lang="my">&#x1023;</span> <a href="#char1023">[<span class="uname">U+1023 MYANMAR LETTER I</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဣန္ဒြေ</span> <span class="trans">ịn͓dj̆e</span> <span class="ipa">ʔḭɴdjè</span></span>.</p>
         <p><strong>With <span class="codepoint"><span lang="my">&#xA0;&#x102F;</span> <a href="#char102F">[<span class="uname">U+102F MYANMAR VOWEL SIGN U</span>]</a></span></strong> (<span class="ex" lang="my">အို</span>)</p>
         <p>The vowel signs surround the base character vertically. </p>
-        <p><span class="ipa">o</span> in open syllables. Low tone by default, eg. <span class="charExample" translate="no"><span class="ex" lang="my">အညို</span> <span class="trans">ʔɲiu</span> <span class="ipa">ʔəɲò</span> <span class="meaning">brown</span></span>. Creaky tone with low dot, eg. <span class="charExample" translate="no"><span class="ex" lang="my">နို့နဲ့</span> <span class="trans">niu¹nɛ¹</span> <span class="ipa">no̰nɛ̰</span> <span class="meaning">with milk</span></span>. High tone with visarga, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဆိုး</span> <span class="trans">ṡʰiu²</span> <span class="ipa">sʰó</span> <span class="meaning">bad</span></span>.</p>
-        <p> <span class="ipa">aɪ</span> in closed syllables. Usually combines with only the nasal final <span class="ex" lang="my">င</span>. Low tone by default, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဆိုင်</span> <span class="trans">ṡʰiuŋˣ</span> <span class="ipa">sʰàɪɴ</span> <span class="meaning">store</span></span>. Creaky tone with low dot, eg. tbd. High tone with visarga, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ထိုင်းနိုင်ဂံ</span> <span class="trans">tʰiuŋˣ²niuŋˣgn̽</span> <span class="ipa">tʰáɪɴnàɪɴgàɴ</span> <span class="meaning">Thailand</span></span>. Stopped tone only with   final <span class="ex" lang="my">က</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">လိုက်</span> <span class="trans">liukˣ</span> <span class="ipa">laɪʔ</span> <span class="meaning">follow</span></span>.</p>
+        <p><span class="ipa">o</span> in open syllables. Low tone by default, eg. <span class="eg" lang="my">အညို</span>. Creaky tone with low dot, eg. <span class="eg" lang="my">နို့နဲ့</span>. High tone with visarga, eg. <span class="eg" lang="my">ဆိုး</span>.</p>
+        <p> <span class="ipa">aɪ</span> in closed syllables. Usually combines with only the nasal final <span class="ex" lang="my">င</span>. Low tone by default, eg. <span class="eg" lang="my">ဆိုင်</span>. Creaky tone with low dot, eg. tbd. High tone with visarga, eg. <span class="eg" lang="my">ထိုင်းနိုင်ဂံ</span>. Stopped tone only with   final <span class="ex" lang="my">က</span>, eg. <span class="eg" lang="my">လိုက်</span>.</p>
         <p>As an initial vowel this is <span class="ex">အို</span>.</p>
       </div>
     </div>
@@ -1249,9 +1255,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> vowel sign <!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">i</span> Used only in open syllables. Low tone by default, eg. <span class="charExample" translate="no"><span class="ex" lang="my">စေတီ</span> <span class="trans">ṡetï</span> <span class="ipa">zèdì</span> <span class="meaning">table</span></span>. High tone with visarga, eg. <span class="charExample" translate="no"><span class="ex" lang="my">မီး</span> <span class="trans">mï²</span> <span class="ipa">mí</span> <span class="meaning">fire</span></span>. </p>
+        <p><span class="ipa">i</span> Used only in open syllables. Low tone by default, eg. <span class="eg" lang="my">စေတီ</span>. High tone with visarga, eg. <span class="eg" lang="my">မီး</span>. </p>
         <p>For creaky tone, use <span class="codepoint"><span lang="my">&#xA0;&#x102D;</span> <a href="#char102D">[<span class="uname">U+102D MYANMAR VOWEL SIGN I</span>]</a></span>.</p>
-        <p>As an initial vowel this is usually <span class="ex">အီ</span> but some words, particularly Indian loan words or words in the literary style, use the following alternative single character: <span class="codepoint"><span lang="my">&#x1024;</span> <a href="#char1024">[<span class="uname">U+1024 MYANMAR LETTER II</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဤ</span> <span class="trans">ị̈</span> <span class="ipa">ʔì</span> <span class="meaning">this</span></span>.</p>
+        <p>As an initial vowel this is usually <span class="ex">အီ</span> but some words, particularly Indian loan words or words in the literary style, use the following alternative single character: <span class="codepoint"><span lang="my">&#x1024;</span> <a href="#char1024">[<span class="uname">U+1024 MYANMAR LETTER II</span>]</a></span>, eg. <span class="eg" lang="my">ဤ</span>.</p>
         <p>In the distant past, this letter represented a long vowel and <span class="codepoint"><span lang="my">&#xA0;&#x102D;</span> <a href="#char102D">[<span class="uname">U+102D MYANMAR VOWEL SIGN I</span>]</a></span> represented a short vowel. Now, the only difference is tonal.</p>
       </div>
     </div>
@@ -1265,16 +1271,16 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> vowel sign <!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p>When something else extends below the base consonant, the glyph for this character is usually drawn to the right of the stack, eg. <span class="charExample" translate="no"><span class="ex" lang="my">လူမျိုး</span> <span class="trans">lu̇my̆iu²</span> <span class="ipa">lùmjó</span> <span class="meaning">nationality</span></span>. An exception is <span class="charExample" translate="no"><span class="ex" lang="my">လားရှိုး</span> <span class="trans">la²ṙh̆iu²</span> <span class="ipa">láʃó</span> <span class="meaning">Lashio</span></span>.</p>
+        <p>When something else extends below the base consonant, the glyph for this character is usually drawn to the right of the stack, eg. <span class="eg" lang="my">လူမျိုး</span>. An exception is <span class="eg" lang="my">လားရှိုး</span>.</p>
         <p><strong>On its own:</strong></p>
-        <p><span class="ipa">u</span> in open syllables.  Creaky tone only, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဟင်းနုနွယ်</span> <span class="trans">hŋˣ²nunw̆yˣ</span> <span class="ipa">hɪ́ɴnṵnwɛ̀</span> <span class="meaning">amaranth</span></span>.</p>
+        <p><span class="ipa">u</span> in open syllables.  Creaky tone only, eg. <span class="eg" lang="my">ဟင်းနုနွယ်</span>.</p>
         <p>For high and low tones use <span class="codepoint"><span lang="my">&#xA0;&#x1030;</span> <a href="#char1030">[<span class="uname">U+1030 MYANMAR VOWEL SIGN UU</span>]</a></span>.</p>
-        <p><span class="ipa">oʊ</span> in closed syllables. Usually combines with the nasal finals <span class="ex" lang="my">န မ</span> (or the anusvara). Low tone by default, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ရန်ကုန်</span> <span class="trans">ṙnˣkunˣ</span> <span class="ipa">jàɴgòʊɴ</span> <span class="meaning">Rangoon</span></span>. Creaky tone with low dot, eg. <span class="charExample" translate="no"><span class="ex" lang="my">မုန့်ဆိုင်</span> <span class="trans">mun¹ˣṡʰiuŋˣ</span> <span class="ipa">mo̰ʊɴzàɪɴ</span> <span class="meaning">bakery</span></span>. High tone with visarga, eg. <span class="charExample" translate="no"><span class="ex" lang="my">သုံး</span> <span class="trans">θun̽²</span> <span class="ipa">tʰóʊɴ</span> <span class="meaning">three</span></span>. Stopped tone with the stop finals <span class="ex" lang="my">တ ပ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">စာအုပ်</span> <span class="trans">ṡaʔupˣ</span> <span class="ipa">sàʔoʊʔ</span> <span class="meaning">book</span></span>.</p>
-        <p>As an initial vowel this is usually <span class="ex">အု</span>, eg. tbd<span class="meaning"></span>, but some words, particularly Indian loan words or words in the literary style, use the  alternative single character <span class="codepoint"><span lang="my">&#x1025;</span> <a href="#char1025">[<span class="uname">U+1025 MYANMAR LETTER U</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">မုန်လာဥနီ</span> <span class="trans">munˣlaụnï</span> <span class="ipa">mòʊɴlàʔṵnì</span> <span class="meaning">carrots</span></span>, <span class="charExample" translate="no"><span class="ex" lang="my">ဥစ္စာ</span> <span class="trans">ụṡ͓ṡa</span> <span class="ipa">ʔoʊʔsà</span> <span class="meaning">property</span></span>.</p>
+        <p><span class="ipa">oʊ</span> in closed syllables. Usually combines with the nasal finals <span class="ex" lang="my">န မ</span> (or the anusvara). Low tone by default, eg. <span class="eg" lang="my">ရန်ကုန်</span>. Creaky tone with low dot, eg. <span class="eg" lang="my">မုန့်ဆိုင်</span>. High tone with visarga, eg. <span class="eg" lang="my">သုံး</span>. Stopped tone with the stop finals <span class="ex" lang="my">တ ပ</span>, eg. <span class="eg" lang="my">စာအုပ်</span>.</p>
+        <p>As an initial vowel this is usually <span class="ex">အု</span>, eg. tbd<span class="meaning"></span>, but some words, particularly Indian loan words or words in the literary style, use the  alternative single character <span class="codepoint"><span lang="my">&#x1025;</span> <a href="#char1025">[<span class="uname">U+1025 MYANMAR LETTER U</span>]</a></span>, eg. <span class="eg" lang="my">မုန်လာဥနီ</span>, <span class="eg" lang="my">ဥစ္စာ</span>.</p>
         <p><strong>With <span class="codepoint"><span lang="my">&#xA0;&#x102D;</span> <a href="#char102D">[<span class="uname">U+102D MYANMAR VOWEL SIGN I</span>]</a></span></strong> (<span class="ex" lang="my">အို</span>)</p>
         <p>The vowel signs surround the base character vertically. </p>
-        <p><span class="ipa">o</span> in open syllables. Low tone by default, eg. <span class="charExample" translate="no"><span class="ex" lang="my">အညို</span> <span class="trans">ʔɲiu</span> <span class="ipa">ʔəɲò</span> <span class="meaning">brown</span></span>. Creaky tone with low dot, eg. <span class="charExample" translate="no"><span class="ex" lang="my">နို့နဲ့</span> <span class="trans">niu¹nɛ¹</span> <span class="ipa">no̰nɛ̰</span> <span class="meaning">with milk</span></span>. High tone with visarga, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဆိုး</span> <span class="trans">ṡʰiu²</span> <span class="ipa">sʰó</span> <span class="meaning">bad</span></span>.</p>
-        <p> <span class="ipa">aɪ</span> in closed syllables. Usually combines with only the nasal final <span class="ex" lang="my">င</span>. Low tone by default, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဆိုင်</span> <span class="trans">ṡʰiuŋˣ</span> <span class="ipa">sʰàɪɴ</span> <span class="meaning">store</span></span>. Creaky tone with low dot, eg. tbd. High tone with visarga, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ထိုင်းနိုင်ဂံ</span> <span class="trans">tʰiuŋˣ²niuŋˣgn̽</span> <span class="ipa">tʰáɪɴnàɪɴgàɴ</span> <span class="meaning">Thailand</span></span>. Stopped tone only with   final <span class="ex" lang="my">က</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">လိုက်</span> <span class="trans">liukˣ</span> <span class="ipa">laɪʔ</span> <span class="meaning">follow</span></span>.</p>
+        <p><span class="ipa">o</span> in open syllables. Low tone by default, eg. <span class="eg" lang="my">အညို</span>. Creaky tone with low dot, eg. <span class="eg" lang="my">နို့နဲ့</span>. High tone with visarga, eg. <span class="eg" lang="my">ဆိုး</span>.</p>
+        <p> <span class="ipa">aɪ</span> in closed syllables. Usually combines with only the nasal final <span class="ex" lang="my">င</span>. Low tone by default, eg. <span class="eg" lang="my">ဆိုင်</span>. Creaky tone with low dot, eg. tbd. High tone with visarga, eg. <span class="eg" lang="my">ထိုင်းနိုင်ဂံ</span>. Stopped tone only with   final <span class="ex" lang="my">က</span>, eg. <span class="eg" lang="my">လိုက်</span>.</p>
         <p>As an initial vowel this is <span class="ex">အို</span>.</p>
       </div>
     </div>
@@ -1288,10 +1294,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> vowel sign <!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p>When something else extends below the base consonant, the glyph for this character is drawn to the right of the stack, eg. <span class="charExample" translate="no"><span class="ex" lang="my">အဖြူ</span> <span class="trans">ʔpʰj̆u̇</span> <span class="ipa">ʔa̰pʰjù</span> <span class="meaning">white</span></span>, <span class="charExample" translate="no"><span class="ex" lang="my">ပသျှူး</span> <span class="trans">pθy̆h̆u̇²</span> <span class="ipa">pa̰ʃú</span> <span class="meaning">Malay</span></span>.</p>
-        <p><span class="ipa">u</span> Used only in open syllables. Low tone by default, eg. <span class="ex" lang="my">တူ</span> <span class="ipa">tù</span> <span class="meaning">chopsticks</span><span class="meaning"></span>. High tone with visarga, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဗုဒ္ဓဟူးနေ့</span> <span class="trans">bud͓d̊hu̇²ne¹</span> <span class="ipa">boʊʔdəhúnḛ</span> <span class="meaning">Wednesday</span></span>. </p>
+        <p>When something else extends below the base consonant, the glyph for this character is drawn to the right of the stack, eg. <span class="eg" lang="my">အဖြူ</span>, <span class="eg" lang="my">ပသျှူး</span>.</p>
+        <p><span class="ipa">u</span> Used only in open syllables. Low tone by default, eg. <span class="ex" lang="my">တူ</span> <span class="ipa">tù</span> <span class="meaning">chopsticks</span><span class="meaning"></span>. High tone with visarga, eg. <span class="eg" lang="my">ဗုဒ္ဓဟူးနေ့</span>. </p>
         <p>For creaky tone, use <span class="codepoint"><span lang="my">&#xA0;&#x102F;</span> <a href="#char102F">[<span class="uname">U+102F MYANMAR VOWEL SIGN U</span>]</a></span>.</p>
-        <p>As an initial vowel this is usually <span class="ex">အူ</span> but some words, particularly Indian loan words or words in the literary style, use the  alternative single character: <span class="codepoint"><span lang="my">&#x1026;</span> <a href="#char1026">[<span class="uname">U+1026 MYANMAR LETTER UU</span>]</a></span>, eg <span class="charExample" translate="no"><span class="ex" lang="my">ဦးလေး</span> <span class="trans">ụ̇²le²</span> <span class="ipa">úlé</span> <span class="meaning">uncle</span></span>.</p>
+        <p>As an initial vowel this is usually <span class="ex">အူ</span> but some words, particularly Indian loan words or words in the literary style, use the  alternative single character: <span class="codepoint"><span lang="my">&#x1026;</span> <a href="#char1026">[<span class="uname">U+1026 MYANMAR LETTER UU</span>]</a></span>, eg <span class="eg" lang="my">ဦးလေး</span>.</p>
         <p>In the distant past, this letter represented a long vowel and <span class="codepoint"><span lang="my">&#xA0;&#x102F;</span> <a href="#char102F">[<span class="uname">U+102F MYANMAR VOWEL SIGN U</span>]</a></span> represented a short vowel. Now, the only difference is tonal.</p>
       </div>
     </div>
@@ -1308,14 +1314,14 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         <p class="titlepara"><span class="title">Burmese</span> vowel sign <!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
         <p>Appears to the left of the consonant or consonant cluster. </p>
         <p><strong>On its own:</strong></p>
-        <p><span class="ipa">e</span> Used only in open syllables.  Low tone by default, eg. <span class="charExample" translate="no"><span class="ex" lang="my">မြေပုံ</span> <span class="trans">mj̆epun̽</span> <span class="ipa">mjèbòʊɴ</span> <span class="meaning">map</span></span>. Creaky tone with low dot, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ရှေ့</span> <span class="trans">ṙh̆e¹</span> <span class="ipa">ʃḛ</span> <span class="meaning">front</span></span>. High tone with visarga, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဆေးရုံ</span> <span class="trans">ṡʰe²ṙun̽</span> <span class="ipa">sʰéjòʊɴ</span> <span class="meaning">hospital</span></span>.</p>
-        <p>As an initial vowel this is usually <span class="ex">အေ</span> but some words, particularly Indian loan words or words in the literary style, use the  alternative single character: <span class="codepoint"><span lang="my">&#x1027;</span> <a href="#char1027">[<span class="uname">U+1027 MYANMAR LETTER E</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဧက</span> <span class="trans">ẹk</span> <span class="ipa">ʔèka̰</span> <span class="meaning">acre</span></span>.</p>
+        <p><span class="ipa">e</span> Used only in open syllables.  Low tone by default, eg. <span class="eg" lang="my">မြေပုံ</span>. Creaky tone with low dot, eg. <span class="eg" lang="my">ရှေ့</span>. High tone with visarga, eg. <span class="eg" lang="my">ဆေးရုံ</span>.</p>
+        <p>As an initial vowel this is usually <span class="ex">အေ</span> but some words, particularly Indian loan words or words in the literary style, use the  alternative single character: <span class="codepoint"><span lang="my">&#x1027;</span> <a href="#char1027">[<span class="uname">U+1027 MYANMAR LETTER E</span>]</a></span>, eg. <span class="eg" lang="my">ဧက</span>.</p>
         <p><strong>With <span class="codepoint"><span lang="my">&#xA0;&#x102C;</span> <a href="#char102C">[<span class="uname">U+102C MYANMAR VOWEL SIGN AA</span>]</a></span> (</strong><span class="ex" lang="my">အော</span>)</p>
         <p>The vowel signs surround the base character. </p>
-        <p><span class="ipa">ɔ</span> in open syllables. High tone by default, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ထောပတ်သီး</span> <span class="trans">tʰeaptˣθï²</span> <span class="ipa">tʰɔ́baʔdʰí</span> <span class="meaning">banana</span></span>. Creaky tone with low dot, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ပျော့တယ်</span> <span class="trans">py̆ea¹tyˣ</span> <span class="ipa">pjɔ̰dɛ̀</span> <span class="meaning">to be soft</span></span>. </p>
-        <p>Use asat for low tone,  eg. <span class="charExample" translate="no"><span class="ex" lang="my">ပျော်တယ်</span> <span class="trans">py̆eaˣtyˣ</span> <span class="ipa">pjɔ̀dɛ̀</span> <span class="meaning">to be happy</span></span>.</p>
-        <p><span class="ipa">aʊ</span> in closed syllables. Usually combines with only the following finals, <span class="ex" lang="my">က င</span>. Low tone by default, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ကြောင်</span> <span class="trans">kj̆eaŋˣ</span> <span class="ipa">dʑàʊɴ</span> <span class="meaning">cat</span></span>. Creaky tone with low dot, eg. <span class="charExample" translate="no"><span class="ex" lang="my">စောင့်တယ်</span> <span class="trans">ṡeaŋ¹ˣtyˣ</span> <span class="ipa">sa̰ʊɴdɛ̀</span> <span class="meaning">to wait</span></span>. High tone with visarga, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ကျောင်း</span> <span class="trans">ky̆eaŋˣ²</span> <span class="ipa">dʑáʊɴ</span> <span class="meaning">school</span></span>. (Stopped tone with the stop final, eg. <span class="charExample" translate="no"><span class="ex" lang="my">နောက်လ</span> <span class="trans">neakˣl</span> <span class="ipa">naʊʔla̰</span> <span class="meaning">next month</span></span>. )</p>
-        <p>As an initial vowel this is usually <span class="ex" lang="my">အော</span> but some words, particularly Indian loan words or words in the literary style, use the following alternative single characters: <span class="codepoint"><span lang="my">&#x1029;</span> <a href="#char1029">[<span class="uname">U+1029 MYANMAR LETTER O</span>]</a></span> for high tone, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဩဂုတ်</span> <span class="trans">ɔ̣gutˣ</span> <span class="ipa">ʔɔ́goʊʔ</span> <span class="meaning">August</span></span>; <span class="codepoint"><span lang="my">&#x102A;</span> <a href="#char102A">[<span class="uname">U+102A MYANMAR LETTER AU</span>]</a></span> for low tone.</p>
+        <p><span class="ipa">ɔ</span> in open syllables. High tone by default, eg. <span class="eg" lang="my">ထောပတ်သီး</span>. Creaky tone with low dot, eg. <span class="eg" lang="my">ပျော့တယ်</span>. </p>
+        <p>Use asat for low tone,  eg. <span class="eg" lang="my">ပျော်တယ်</span>.</p>
+        <p><span class="ipa">aʊ</span> in closed syllables. Usually combines with only the following finals, <span class="ex" lang="my">က င</span>. Low tone by default, eg. <span class="eg" lang="my">ကြောင်</span>. Creaky tone with low dot, eg. <span class="eg" lang="my">စောင့်တယ်</span>. High tone with visarga, eg. <span class="eg" lang="my">ကျောင်း</span>. (Stopped tone with the stop final, eg. <span class="eg" lang="my">နောက်လ</span>. )</p>
+        <p>As an initial vowel this is usually <span class="ex" lang="my">အော</span> but some words, particularly Indian loan words or words in the literary style, use the following alternative single characters: <span class="codepoint"><span lang="my">&#x1029;</span> <a href="#char1029">[<span class="uname">U+1029 MYANMAR LETTER O</span>]</a></span> for high tone, eg. <span class="eg" lang="my">ဩဂုတ်</span>; <span class="codepoint"><span lang="my">&#x102A;</span> <a href="#char102A">[<span class="uname">U+102A MYANMAR LETTER AU</span>]</a></span> for low tone.</p>
       </div>
     </div>
   </div>
@@ -1328,9 +1334,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> vowel sign <!--, <span class="name">cɔː</span>  <span lang="my"></span>--></p>
-        <p><span class="ipa">ɛ</span> Used only in open syllables.  High tone by default, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ခဲတံ</span> <span class="trans">kʰɛtn̽</span> <span class="ipa">kʰɛ́dàɴ</span> <span class="meaning">pencil</span></span>. Creaky tone with low dot, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ပြီခဲ့တဲ့လ</span> <span class="trans">pj̆ïkʰɛ¹tɛ¹l</span> <span class="ipa">pìgɛ̰dɛ̰la̰</span> <span class="meaning">last month</span></span>.</p>
+        <p><span class="ipa">ɛ</span> Used only in open syllables.  High tone by default, eg. <span class="eg" lang="my">ခဲတံ</span>. Creaky tone with low dot, eg. <span class="eg" lang="my">ပြီခဲ့တဲ့လ</span>.</p>
         <p>For low tone, use <span class="codepoint"><span lang="my">&#x101A;</span> <a href="#char101A">[<span class="uname">U+101A MYANMAR LETTER YA</span>]</a></span> with <span class="codepoint"><span lang="my">&#xA0;&#x103A;</span> <a href="#char103A">[<span class="uname">U+103A MYANMAR SIGN ASAT</span>]</a></span> (<span class="ex" lang="my" xml:lang="my">အယ်</span>).</p>
-        <p>As an initial vowel this is <span class="ex">အဲ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">အဲဒါ</span> <span class="trans">ʔɛdä</span> <span class="ipa">ʔɛ́dà</span> <span class="meaning">that</span></span>.</p>
+        <p>As an initial vowel this is <span class="ex">အဲ</span>, eg. <span class="eg" lang="my">အဲဒါ</span>.</p>
       </div>
     </div>
   </div>
@@ -1589,7 +1595,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> combining mark <!--, <span class="name">cɔː</span>  <span class="ex" lang="my"></span>--></p>
-        <p>Indicates the creaky tone, eg. <span class="charExample" translate="no"><span class="ex" lang="my">မေ့</span> <span class="trans">me¹</span> <span class="ipa">mḛ</span> <span class="meaning">forget</span></span>. Not always needed, since the rhyme sometimes produces the creaky tone by default, eg. <span class="charExample" translate="no"><span class="ex" lang="my">လ</span> <span class="trans">l</span> <span class="ipa">la̰</span> <span class="meaning">month</span></span>.</p>
+        <p>Indicates the creaky tone, eg. <span class="eg" lang="my">မေ့</span>. Not always needed, since the rhyme sometimes produces the creaky tone by default, eg. <span class="eg" lang="my">လ</span>.</p>
       </div>
     </div>
   </div>
@@ -1602,7 +1608,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
     <div class="notes">
       <div class="letter burmese">
         <p class="titlepara"><span class="title">Burmese</span> combining mark <!--, <span class="name">cɔː</span>  <span class="ex" lang="my"></span>--></p>
-        <p>Indicates the high tone, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ကား</span> <span class="trans">ka²</span> <span class="ipa">ká</span> <span class="meaning">car</span></span>. Not always needed, since the rhyme sometimes produces the creaky tone by default, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ခဲတံ</span> <span class="trans">kʰɛtn̽</span> <span class="ipa">kʰɛ́dàɴ</span> <span class="meaning">pencil</span></span>.</p>
+        <p>Indicates the high tone, eg. <span class="eg" lang="my">ကား</span>. Not always needed, since the rhyme sometimes produces the creaky tone by default, eg. <span class="eg" lang="my">ခဲတံ</span>.</p>
       </div>
     </div>
   </div>
@@ -1682,7 +1688,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
           <!--, <span class="name">cɔː</span>  <span class="ex" lang="my"></span>-->
         </p>
         <p>Kills the inherent vowel and produces a stacked conjunct cluster.</p>
-        <p>In many multi-syllabic words (mostly derived from Pali), consonants that have no intervening inherent vowel are arranged such that the consonant cluster is stacked. The second consonant appears below the first, eg. <span class="charExample" translate="no"><span class="ex" lang="my">မန္တလေး</span> <span class="trans">mn͓tle²</span> <span class="ipa">màɴda̰lé</span> <span class="meaning">Mandalay</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="my">ဗုဒ္ဓ</span> <span class="trans">bud͓d̊</span> <span class="meaning">Buddha</span></span>. The virama character is used between consonants to signal that they should combine in this way, but it is not visible in the end result.</p>
+        <p>In many multi-syllabic words (mostly derived from Pali), consonants that have no intervening inherent vowel are arranged such that the consonant cluster is stacked. The second consonant appears below the first, eg. <span class="eg" lang="my">မန္တလေး</span>, and <span class="charExample" translate="no"><span class="ex" lang="my">ဗုဒ္ဓ</span> <span class="trans">bud͓d̊</span> <span class="meaning">Buddha</span></span>. The virama character is used between consonants to signal that they should combine in this way, but it is not visible in the end result.</p>
         <p>Note that as of Unicode 5.1 this character is no longer used to indicate syllable final consonants with a visible asat character.  For that use <span class="codepoint"><span lang="my">&#xA0;&#x103A;</span> <a href="#char103A">[<span class="uname">U+103A MYANMAR SIGN ASAT</span>]</a></span>.</p>
       </div>
     </div>
@@ -1698,7 +1704,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
         <p class="titlepara"><span class="title">Burmese</span> mark, <span class="name">əθaʔ</span> <span class="ex" lang="my">အသတ်</span></p>
         <p>Used over any of the  syllable-final consonants when no stacking takes place,  eg. <span class="charExample" translate="no"><span class="ex" lang="my">စပ်</span> <span class="trans">ṡpˣ</span> <span class="ipa">saʔ</span></span>.</p>
         <p>This character was introduced in Unicode 5.1 and replaces the former use of <a href="#char1039"><span class="uname">U+1039 MYANMAR SIGN VIRAMA</span></a> plus <a href="#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a> to achieve the same effect. For stacked consonant clusters use <a href="#char1039"><span class="uname">U+1039 MYANMAR SIGN VIRAMA</span></a>.</p>
-        <p>This character is also used in combination with other characters to produce a vowel plus tone combination,  eg. <span class="charExample" translate="no"><span class="ex" lang="my">ဘယ်</span> <span class="trans">ḃyˣ</span> <span class="ipa">bɛ̀</span> <span class="meaning">which</span></span>. When used this way it is called <span class="name">ʃḛtʰó</span> <span class="ex" lang="my">ရှေ့ထိုး</span>. </p>
+        <p>This character is also used in combination with other characters to produce a vowel plus tone combination,  eg. <span class="eg" lang="my">ဘယ်</span>. When used this way it is called <span class="name">ʃḛtʰó</span> <span class="ex" lang="my">ရှေ့ထိုး</span>. </p>
         <p>It is also sometimes used in Pali or Sanskrit words with characters other than those above.</p>
       </div>
     </div>
