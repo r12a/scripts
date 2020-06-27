@@ -1,5 +1,6 @@
-function addExamples () {
+function addExamples (langFilter) {
 	// read the data into egList
+	if (typeof langFilter === 'undefined') alert('addExamples call needs to specify a language')
 	var egArray = examples.split("\n")
 	var egList = {}
 	for (i=0;i<egArray.length;i++) {
@@ -9,12 +10,13 @@ function addExamples () {
 		}
 	//console.log('egArray',egArray,'egList', egList)
 	
-	var nodes = document.querySelectorAll('.eg')
-	//console.log(nodes.length,' nodes found')
+	var selector = '.eg[lang='+langFilter+']'
+	var nodes = document.querySelectorAll(selector)
+	console.log(nodes.length,' example nodes to expand')
 	for (let n=0;n<nodes.length;n++) {
 		//console.log('Looking for ',nodes[n].textContent)
 		//console.log('Language is ',nodes[n].lang)
-		if (egList[nodes[n].textContent]) {
+		if (nodes[n].lang === langFilter && egList[nodes[n].textContent]) {
 			var temp = egList[nodes[n].textContent].split('|')
 			var out = '<span class="charExample" translate="no"><span class="ex" lang="'
 			out += nodes[n].lang

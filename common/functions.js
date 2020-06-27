@@ -3,7 +3,7 @@ function initialiseSummary (base, lang, tableName, dir) {
 	doHeadersFooters(dir)
 	runCharCounts()
     makeTables(lang)
-	if (typeof addExamples !== 'undefined') addExamples(base, 'c')
+	if (typeof addExamples !== 'undefined') addExamples(lang)
     initialiseShowNames(base, 'c')
     document.getElementById('featureTableBody').innerHTML = makeSidePanel(tableName,"")
     createtoc(3)

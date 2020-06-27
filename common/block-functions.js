@@ -5,7 +5,6 @@
 function initialise (base, dir) {
     createtoc(3)
 	doHeadersFooters(dir)
-	if (typeof addExamples !== 'undefined') addExamples(base, '')
     initialiseShowNames(base, '')
     checkForCharParam()
     addLangInfo()
@@ -339,7 +338,8 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
 	var charList = chars.split('\n')
     var div, p, span
 	parseSpreadsheet(chars)
-   		
+   	var missing = ''
+	
     for (var x=0; x<charList.length; x++) { 
         if (charList[x].trim() == '') continue
         var items = charList[x].split('\t')
@@ -360,7 +360,8 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
         var hex = dec.toString(16).toUpperCase()
         while (hex.length < 4) hex = '0'+hex
         
-        if (! document.getElementById('char'+hex)) console.log('This page needs: ',items[0],hex)
+        //if (! document.getElementById('char'+hex)) console.log('This page needs: ',items[0],hex)
+        if (! document.getElementById('char'+hex)) missing += items[0]+' '+hex+', '
 		
         else if (U[dec]) {
             out = ''
@@ -682,7 +683,7 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
 				}
 			}
         }
-
+	console.log('Missing characters: ',missing)
 	}
 
 
