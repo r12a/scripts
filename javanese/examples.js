@@ -1,4 +1,4 @@
-var examples = `
+autoExpandExamples.jv = `
 :꧑꧕:ꦎꦏ꧀ꦠꦺꦴꦧꦼꦂ:꧒꧐꧑꧒:|15 october 2012
 ꦄꦪꦸ|Ayu (personal name)
 ꦊꦩꦃꦊꦩ꧀ꦧꦸꦠ꧀|gentle|(lemah lembut)

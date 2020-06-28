@@ -1,4 +1,4 @@
-var examples = `
+autoExpandExamples.ta = `
 இலை|leaf|ʔil̪aɪ̯ (ilai)
 ஈரல்|liver|ʔiːɾ̪al̪ (īral)
 உண்|to eat|ʔuɳ (uṇ)

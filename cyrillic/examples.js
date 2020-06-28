@@ -1,4 +1,4 @@
-var examples = `
+autoExpandExamples.ru = `
 брат|brother|brat
 брать|to take|bratʲ
 за́мок|castle|zamak

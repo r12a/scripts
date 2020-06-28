@@ -1,4 +1,4 @@
-var examples = `
+autoExpandExamples.ike = `
 ᐃᓄᒃᑎᑐᑦ‎|Inuktitut|inuktitut‎
 ᐊᐃᕕᖅ|walrus|aiviq
 ᑐᒃᑐ|caribou|tuktu

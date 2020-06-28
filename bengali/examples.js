@@ -1,4 +1,4 @@
-var examples = `
+autoExpandExamples.bn = `
 
 অঙ্ক|mathematics|ɔŋko
 অনলাইন|online|ɔn.lai̯n

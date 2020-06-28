@@ -1,4 +1,4 @@
-var examples = `
+autoExpandExamples.su = `
 
 ᮃᮀᮊᮥᮒᮔ᮪|transport|(angkutan)
 ᮃᮌᮢᮤᮊᮥᮜ᮪ᮒᮥᮁ|agriculture|(agrikultur)

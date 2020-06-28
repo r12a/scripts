@@ -1,4 +1,4 @@
-var examples = `
+autoExpandExamples.chr = `
 ᎠᎹ|salt|aːma
 ᎠᎹ|water|ama
 ᎦᎵᏉᎩ|seven|kaɬkʷoːki

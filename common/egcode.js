@@ -1,7 +1,11 @@
-function addExamples (langFilter) {
+
+var autoExpandExamples = {}
+
+
+function addExamples (langFilter) { console.log('langFilter:', langFilter, autoExpandExamples[langFilter])
 	// read the data into egList
 	if (typeof langFilter === 'undefined') alert('addExamples call needs to specify a language')
-	var egArray = examples.split("\n")
+	var egArray = autoExpandExamples[langFilter].split("\n")
 	var egList = {}
 	for (i=0;i<egArray.length;i++) {
 		if (egArray[i] == '') continue
@@ -43,6 +47,7 @@ function addExamples (langFilter) {
 		}
 	egArray = []
 	egList = {}
+	//autoExpandExamples = {}
 	}
 
 //<span class="charExample" translate="no"><span class="ex" lang="ta">கேடு</span> <span class="trans">kēʈu</span> <span class="ipa">keːɖʉ</span> <span class="meaning">destruction</span></span>

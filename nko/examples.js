@@ -1,4 +1,4 @@
-var examples = `
+autoExpandExamples.nqo = `
 ߁߭|first
 ߂߲|second
 ߊ߲ ߧߴߌ ߝߏ߬ ߟߊ߫ ߸ ߞߵߌ ߞߎߟߎ߲ߖߋ߲.|We give you thanks.

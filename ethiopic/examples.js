@@ -1,4 +1,4 @@
-var examples = `
+autoExpandExamples.am = `
 
 ስም|name|sɨm
 አየሩ|the weather|əyyəru
