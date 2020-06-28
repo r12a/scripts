@@ -3,30 +3,11 @@
 <head>
 <meta charset="utf-8"/>
 <title>Mongolian script summary</title>
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <meta name="description" content="Summary of the Mongolian script."/>
+
 <link rel="stylesheet" href="../../shared/style/docs.css"/>
 <link rel="stylesheet" href="../common/local.css"/>
-<style>
-@font-face {
-    font-family: 'Noto Serif Mongolian WF';
-    src: url('/shared/webfonts/notosansmongolian-regular-webfont.woff2') format('woff2'),
-         url('/shared/webfonts/notosansmongolian-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-	}
-#freeText {
-	font-size: 24px;
-	font-family: "Noto Serif Mongolian WF", serif;
-    text-align: start;
-	line-height: 1.4;
-	}
-@media print { #freeText { font-size: 18px; } }
-[lang=mn] { font-family: "Mongolian Baiti", "Noto Serif Mongolian WF", serif; font-size: 150%; writing-mode:vertical-lr; }
-.large[lang=mn] { font-size: 300%;  text-align: center; line-height: 1; margin-top: 0; margin-bottom: 0; }
-.narrowlines .listPair { margin-bottom: 0.25em; }
-figure div[lang=mn] { writing-mode: vertical-lr; font-size: 200%; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; width: 100%;}
-</style>
+<link rel="stylesheet" href="mn.css"/>
 
 <script src="../../shared/scriptdb/mong-mn.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
@@ -43,6 +24,8 @@ figure div[lang=mn] { writing-mode: vertical-lr; font-size: 200%; display: flex;
 <script src="../../shared/code/getLinks.js"></script>
 <script src="../linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
+<script src="../common/egcode.js"></script>
+<script src="mn-examples.js"></script>
 
 <script src="../../shared/fontlists/mongolian.js"> </script>
 <script src="mn-translit.js">  </script>
@@ -107,7 +90,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->10 June, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->28 June, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -118,36 +101,27 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-<details class="supportdocs noprint instructions">
-<summary>Related pages</summary>
-<!--p class="leadin">Script summary pages:</p>
-<ul>
-<li><a href="../arabic/hausa" class="linkHighlight">Hausa</a></li>
-<li><a href="../arabic/kashmiri" class="linkHighlight">Kashmiri </a></li>
-</ul-->
-<p class="leadin">Character notes:</p>
-<ul>
-<li><a class="linkHighlight" href="block">Mongolian</a></li>
-</ul>
-<p class="leadin">Character apps:</p>
-<ul>
-<li><a href="../../pickers/mongolian/" class="linkHighlight">Mongolian</a></li>
-</ul>
-<p class="leadin">Other:</p>
-<ul>
-<li><a class="linkHighlight" href="../links?iso=Mong">Script links pages</a></li>
-<li><a class="linkHighlight" href="../#scriptnotes">Other script summaries</a></li>
-</ul>
+<p>See also the companion document, <a href="block" class="linkHighlight">Mongolian character notes</a>, for detailed information about specific Unicode characters.</p>
+<p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
+
+
+
+
+<details>
+<summary class="instructions"><a href="../links?iso=Mong">Related pages</a>.</summary>
 </details>
 
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
+</details>
+
+
+
 <details class="supportdocs noprint">
-<summary class="instructions">About this page</summary>
-<p class="instructions"><span class="leadin">Transcriptions.</span> Unless in parentheses, the transcriptions in italics that follow Mongolian text are a <a href="../glossary/#transliteration" class="termref">transliteration</a> developed for these pages. Those in parentheses follow one or more commonly used <a href="../glossary/#transcription" class="termref">transcription</a> methods. Transcriptions in <span style="white-space:nowrap;">⌈ corner brackets ⌋</span> are either phonemic or phonetic.</p>
-<p class="instructions noprint"><span class="leadin">Character lists.</span> Colours and annotations on panels listing characters are relevant to their use for the Mongolian language. Panels with a yellow background contain commonly used characters for that language.</p>
-<p class="instructions noprint"><span class="leadin">Links to detailed character information.</span> Links on Unicode character names and links on code point values in character lists lead to character notes documents that list information character-by-character. This information is typically more detailed than that on this page. </p>
-<p class="instructions noprint"><span class="leadin">Detailed topic information.</span> Footnote  links with an arrow alongside take you to more detailed information on the current topic.</p>
-<p class="instructions noprint"><span class="leadin">Showing code points for examples.</span>Clicking on   Mongolian  examples shows a list of the characters in that example. </p>
-<p class="instructions noprint"><span class="leadin">Changing fonts.</span>Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Mongolian','Mongolian'); return false;">About this page</a></summary>
+<div id="about"></div>
 </details>
 </div>
 
@@ -525,7 +499,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
   <section id="suffixes">
 <h3>Suffixes</h3>
-<p>Many Mongolian suffixes are separated from the root or other suffixes by a small gap, eg. <span class="charExample" translate="no"><span class="ex" lang="mn">ᠭᠠᠵᠠᠷ ᠠ</span> <span class="trans">gaʤar-a</span> <span class="meaning">to the country</span></span>. The Unicode Standard provides <a href="/scripts/punctuation/block#char202F"><span class="uname">U+202F NARROW NO-BREAK SPACE</span></a> for this gap, which is thinner than a normal space, and doesn't provide an opportunity for line-breaking.</p>
+<p>Many Mongolian suffixes are separated from the root or other suffixes by a small gap, eg. <span class="eg" lang="mn">ᠭᠠᠵᠠᠷ ᠠ</span>. The Unicode Standard provides <a href="/scripts/punctuation/block#char202F"><span class="uname">U+202F NARROW NO-BREAK SPACE</span></a> for this gap, which is thinner than a normal space, and doesn't provide an opportunity for line-breaking.</p>
 <p>Characters following <a href="/scripts/punctuation/block#char202F"><span class="uname">U+202F NARROW NO-BREAK SPACE</span></a>may take on special shapes.</p>
 </section>
 
@@ -540,8 +514,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <p><span class="codepoint" translate="no"><a href="/scripts/mongolian/block#char180E"><span class="uname">U+180E MONGOLIAN VOWEL SEPARATOR</span></a></span> is used where a final <span class="codepoint"><span class="cpchar" lang="mn">ᠠ</span> <a href="/scripts/mongolian/block#char1820">[<span class="uname">U+1820 MONGOLIAN LETTER A</span>]</a></span> or <span class="codepoint"><span class="cpchar" lang="mn">ᠡ</span> <a href="/scripts/mongolian/block#char1821">[<span class="uname">U+1821 MONGOLIAN LETTER E</span>]</a></span> vowel is separated from the rest of a word.</p>
 <p>Unlike characters following <a href="/scripts/punctuation/block#char202F"><span class="uname">U+202F NARROW NO-BREAK SPACE</span></a>, the <span class="name">A</span> or <span class="name">E</span> following a word is not a suffix, but an integral part of the word. Whether a final <span class="name">A</span> or <span class="name">E</span> is joined or separated is a purely lexical decision, and not an instance of varying orthography. </p>
 <p>MVS always requires the forward tail form of the following <span class="name">A</span> or <span class="name">E</span> letter. The preceding letter form varies according to the letter, and in some cases whether this is traditional or modern orthography. Examples: </p>
-        <p>Without MVS: <span class="charExample" translate="no"><span class="ex" lang="mn">ᠬᠠᠨᠠ</span> <span class="trans">xana</span> <span class="meaning">outer casing of a vein</span></span></p>
-  <p>With MVS: <span class="charExample" translate="no"><span class="ex" lang="mn">ᠬᠠᠨ᠎ᠠ</span> <span class="trans">xan·a</span> <span class="meaning">wall of tent</span></span></p>
+        <p>Without MVS: <span class="eg" lang="mn">ᠬᠠᠨᠠ</span></p>
+  <p>With MVS: <span class="eg" lang="mn">ᠬᠠᠨ᠎ᠠ</span></p>
   <p>Not used for Todo, Manchu or Sibe.</p>
 </section>
 </section>   
