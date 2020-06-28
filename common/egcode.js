@@ -28,7 +28,8 @@ function addExamples (langFilter) { console.log('langFilter:', langFilter, autoE
 			if (nodes[n].dir === 'rtl') out += ' dir="rtl"'
 			out += '>'
 			out += temp[0]
-			out += '</span> <span class="trans">xxx</span>'
+			out += '</span>'
+			if (! nodes[n].classList.contains('latn')) out += ' <span class="trans">xxx</span>'
 			ipa = ''
 			transcription = ''
 			if (temp[2] && temp[2].includes('(')) {
