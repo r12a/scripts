@@ -3,30 +3,11 @@
 <head>
 <meta charset="utf-8"/>
 <title>Gurmukhi script summary</title>
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <meta name="description" content="Summary of the Gurmukhi script."/>
+
 <link rel="stylesheet" href="../../shared/style/docs.css" />
 <link rel="stylesheet" href="../common/local.css" />
-<style>
-@font-face {
-    font-family: 'Noto Sans Gurmukhi WF';
-    src: url('/shared/webfonts/NotoSansGurmukhi-Regularwebfont.woff2') format('woff2'),
-         url('/shared/webfonts/NotoSansGurmukhi-Regularwebfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-	}
-#freeText {
-	font-size: 24px;
-	font-family: "Noto Sans Gurmukhi WF", serif;
-    text-align: start;
-	line-height: 1.4;
-	}
-@media print { #freeText { font-size: 18px; } }
-[lang=pa] { font-family: "Noto Sans Gurmukhi WF", serif; font-size: 150%; }
-.large[lang=pa] { font-size: 300%;  text-align: center; line-height: 1; margin-top: 0; margin-bottom: 0; }
-.narrowlines .listPair { margin-bottom: 0.25em; }
-a { font-weight: 400; }
-</style>
+<link rel="stylesheet" href="pa.css" />
 
 <script src="../../shared/scriptdb/punjabi.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
@@ -43,6 +24,8 @@ a { font-weight: 400; }
 <script src="../../shared/code/getLinks.js"></script>
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
+<script src="../common/egcode.js"></script>
+<script src="pa-examples.js"></script>
 
 <script src="../../shared/fontlists/gurmukhi.js"> </script>
 <script src="pa-translit.js">  </script>
@@ -107,7 +90,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->12 June, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->28 June, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -116,11 +99,19 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <div class="section">
 <p>This page gathers together basic information about the Gurmukhi script and its use for the Punjabi language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Punjabi using Unicode.</p>
 
+<p>See also the companion document, <a href="block" class="linkHighlight">Gurmukhi character notes</a>, for detailed information about specific Unicode characters.</p>
+<p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
 
 
 <details>
 <summary class="instructions"><a href="../links?iso=Guru">Related pages</a>.</summary>
+</details>
+
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
 </details>
 
 
@@ -479,8 +470,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <p>Other than the inherent vowel, vowel sounds that follow a consonant sound are represented using vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="tmp">ਕੀ</span> <span class="ipa">ki</span></span>. This includes no diphthongs, 1 prescript sign, and no circumgraphs.</p>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ੀ␣ੂ␣ਿ␣ੁ␣ੇ␣ੋ␣ੈ␣ੌ␣ਾ</figure>
-<p>Vowels <span class="trans">i</span> and <span class="trans">u</span> may be pronounced differently in certain contexts. With a high tone they represent <span class="trans">é</span> and <span class="trans">ó</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਕਿਹੜਾ</span> <span class="trans">kɪhɽā</span> <span class="ipa">kéɽɑ</span> <span class="meaning">who</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="pa">ਕੁਹੜਾ</span> <span class="trans">kʊhɽā</span> <span class="ipa">kóɽɑ</span> <span class="meaning">leper</span></span>. <a class="fnref" href="#refs">d</a></p>
-<p>Combined with a preceding <span class="trans">ah</span> they produce <span class="trans">ǽ</span> and <span class="trans">ɔ́</span>, respectively, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਕਹਿਣਾ</span> <span class="trans">khɪɳā</span> <span class="ipa">kǽɳɑ</span> <span class="meaning">to say</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="pa">ਵਹੁਟੀ</span> <span class="trans">vhʊʈī</span> <span class="ipa">wɔ́ʈi</span> <span class="meaning">bride</span></span>.<a class="fnref" href="#refs"> d</a></p>
+<p>Vowels <span class="trans">i</span> and <span class="trans">u</span> may be pronounced differently in certain contexts. With a high tone they represent <span class="trans">é</span> and <span class="trans">ó</span>, eg. <span class="eg" lang="pa">ਕਿਹੜਾ</span>, and <span class="eg" lang="pa">ਕੁਹੜਾ</span>. <a class="fnref" href="#refs">d</a></p>
+<p>Combined with a preceding <span class="trans">ah</span> they produce <span class="trans">ǽ</span> and <span class="trans">ɔ́</span>, respectively, eg. <span class="eg" lang="pa">ਕਹਿਣਾ</span>, and <span class="eg" lang="pa">ਵਹੁਟੀ</span>.<a class="fnref" href="#refs"> d</a></p>
 <p>Gujarati vowel-signs are all combining characters. A single Unicode character is used per base consonant, and there are no vowel-signs with multiple parts. All vowel-signs are typed and stored after the base consonant, whether or not they precede it when displayed, and the font puts them in the correct place for display.</p>
 <p>Three  of the vowel-signs are <a class="termref" href="../glossary/#spacingmark">spacing marks</a>, meaning that they consume horizontal space when added to a base consonant.</p>
 </section>
@@ -509,7 +500,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <section id="absence">
 <h3>Vowel absence</h3>
-<p>Unlike  most other indic scripts,  there is generally no indication when a consonant is not pronounced with a following vowel. (For the few occasions where this is made clear see the section <a class="#secref">consonantClusters</a>.) Generally speaking, the reader simply has to know whether an inherent vowel is pronounced or not, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਉਤਸੁਕ</span> <span class="trans">ʊ̣tsʊk</span> <span class="ipa">utsuk</span> <span class="meaning">curious</span></span>.</p>
+<p>Unlike  most other indic scripts,  there is generally no indication when a consonant is not pronounced with a following vowel. (For the few occasions where this is made clear see the section <a class="#secref">consonantClusters</a>.) Generally speaking, the reader simply has to know whether an inherent vowel is pronounced or not, eg. <span class="eg" lang="pa">ਉਤਸੁਕ</span>.</p>
 <p>The inherent vowel is generally not pronounced at the end of a word (see the previous example).</p>
 <p>Gurmukhi uses <span class="codepoint" translate="no"><span lang="pa">&#x0A4D;</span> [<a href="/scripts/gurmukhi/block#char0A4D"><span class="uname">U+0A4D GURMUKHI SIGN VIRAMA</span></a>]</span> (called halant in Punjabi) to kill the inherent vowel after a consonant. It is rarely seen. As just mentioned, no virama is used at the end of a word, nor in many other situations. It is also usually hidden when the consonant is part of a consonant cluster.</p>
 <p>The virama is visible, however, if the consonant isn't followed by a consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਕ੍</span> <span class="trans">k͓</span></span> explicitly represents just the sound k. </p>
@@ -549,8 +540,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <section id="nasalisation">
 <h3>Nasalisation</h3>
 <p>Two separate diacritics are used to indicate nasalisation.</p>
-<p> <span class="codepoint" translate="no"><span lang="pa">&#x0A70;</span> [<a href="/scripts/gurmukhi/block#char0A70"><span class="uname">U+0A70 GURMUKHI TIPPI</span></a>]</span> is used with vowels <span class="trans">a</span>, <span class="trans">i</span>, <span class="trans">u</span>, and with final <span class="trans">ū</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਮੂੰਡਾ</span> <span class="trans">mūŋ̽ɖā</span> <span class="ipa">muɳɖɑ</span> <span class="meaning">boy</span></span>.</p>
-<p> <span class="codepoint" translate="no"><span lang="pa">&#x0A02;</span> [<a href="/scripts/gurmukhi/block#char0A02"><span class="uname">U+0A02 GURMUKHI SIGN BINDI</span></a>]</span> is used for all other vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਸ਼ਾਂਤ</span> <span class="trans">ʃā˜t</span> <span class="ipa">ʃɑ̃t</span> <span class="meaning">peaceful</span></span>.</p>
+<p> <span class="codepoint" translate="no"><span lang="pa">&#x0A70;</span> [<a href="/scripts/gurmukhi/block#char0A70"><span class="uname">U+0A70 GURMUKHI TIPPI</span></a>]</span> is used with vowels <span class="trans">a</span>, <span class="trans">i</span>, <span class="trans">u</span>, and with final <span class="trans">ū</span>, eg. <span class="eg" lang="pa">ਮੂੰਡਾ</span>.</p>
+<p> <span class="codepoint" translate="no"><span lang="pa">&#x0A02;</span> [<a href="/scripts/gurmukhi/block#char0A02"><span class="uname">U+0A02 GURMUKHI SIGN BINDI</span></a>]</span> is used for all other vowels, eg. <span class="eg" lang="pa">ਸ਼ਾਂਤ</span>.</p>
 <p>These diacritics can also signal <a href="#gemination">gemination</a> of a following <span class="trans">m</span> or <span class="trans">n</span>.</p>
 <p>Note that if a <span class="trans">tippi</span> is used in a location where <span class="trans">bindi</span> is more appropriate, some fonts may silently convert the shape to a dot.</p>
 <figure>
@@ -724,8 +715,8 @@ alveolar</th>
 <figure class="auto" data-cols="ipa,trans,transc">ਘ␣ਝ␣ਢ␣ਧ␣ਭ</figure>
 
 
-<p>The letters above<span class="charExample" translate="no"><span class="trans"></span></span> indicate a low tone when at the beginning of a word or syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਘੋੜਾ</span> <span class="trans">gʰoɽā</span> <span class="ipa">kòɽɑ</span> <span class="meaning">horse</span></span>, or medially between a short and long vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਪਘਾਰਨਾ</span> <span class="trans">pgʰārnā</span> <span class="ipa">pəɡɑ̀rnɑ</span> <span class="meaning">to melt</span></span>.  They indicate a high  tone when elsewhere, eg. <!--span class="charExample" translate="no"><span class="ex" lang="pa">ਘੜ</span> <span class="trans">gʰᵃṛ</span> <span class="ipa">kə̀ɽ</span> <span class="meaning">house</span></span>, and--> <span class="charExample" translate="no"><span class="ex" lang="pa">ਕੁਝ</span> <span class="trans">kʊʤʰ</span> <span class="ipa">kúʤ</span> <span class="meaning">something</span></span>.<a class="fnref" href="http://www.omniglot.com/writing/punjabi.htm"> o</a></p>
-<p>In addition, the consonant <span class="codepoint" translate="no"><span lang="pa">&#x0A39;</span> [<a href="/scripts/gurmukhi/block#char0A39"><span class="uname">U+0A39 GURMUKHI LETTER HA</span></a>]</span> is only pronounced <span class="ipa">h</span> when it occurs word initially, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਹਰੀ</span> <span class="trans">hrī</span> <span class="ipa">həri</span> <span class="meaning">green</span></span>. In other locations it is unpronounced and  indicates that the preceding vowel has a high tone, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਮੀਹ</span> <span class="trans">mīh</span> <span class="ipa">mí</span> <span class="meaning">rain</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="pa">ਚੜ੍ਹ</span> <span class="trans">ʧɽ͓h</span> <span class="ipa">ʧə́ɽ</span> <span class="meaning">climb</span></span>. When used after a consonant, it appears subjoined below that consonant.<a class="fnref" href="#refs">d</a></p>
+<p>The letters above<span class="charExample" translate="no"><span class="trans"></span></span> indicate a low tone when at the beginning of a word or syllable, eg. <span class="eg" lang="pa">ਘੋੜਾ</span>, or medially between a short and long vowel, eg. <span class="eg" lang="pa">ਪਘਾਰਨਾ</span>.  They indicate a high  tone when elsewhere, eg. <!--span class="charExample" translate="no"><span class="ex" lang="pa">ਘੜ</span> <span class="trans">gʰᵃṛ</span> <span class="ipa">kə̀ɽ</span> <span class="meaning">house</span></span>, and--> <span class="eg" lang="pa">ਕੁਝ</span>.<a class="fnref" href="http://www.omniglot.com/writing/punjabi.htm"> o</a></p>
+<p>In addition, the consonant <span class="codepoint" translate="no"><span lang="pa">&#x0A39;</span> [<a href="/scripts/gurmukhi/block#char0A39"><span class="uname">U+0A39 GURMUKHI LETTER HA</span></a>]</span> is only pronounced <span class="ipa">h</span> when it occurs word initially, eg. <span class="eg" lang="pa">ਹਰੀ</span>. In other locations it is unpronounced and  indicates that the preceding vowel has a high tone, eg. <span class="eg" lang="pa">ਮੀਹ</span>, and <span class="eg" lang="pa">ਚੜ੍ਹ</span>. When used after a consonant, it appears subjoined below that consonant.<a class="fnref" href="#refs">d</a></p>
 <p>When the letter ha follows a short <span class="trans">i</span> or <span class="trans">u</span>, it changes the vowel's phonetic value from [ɪ] and [ʊ] to [é] and [ó], respectively, and indicates a high tone.</p>
 <p>According to Omniglot, the conjuncts <span class="charExample" translate="no"><span class="ex" lang="pa">ਗ੍ਹ</span> <span class="trans">g͓h</span></span>, <span class="charExample" translate="no"><span class="ex" lang="pa">ਜ੍ਹ</span> <span class="trans">ʤ͓h</span></span>, <span class="charExample" translate="no"><span class="ex" lang="pa">ਢ੍ਹ</span> <span class="trans">ɖʰ͓h</span></span>, <span class="charExample" translate="no"><span class="ex" lang="pa">ਦ੍ਹ</span> <span class="trans">d͓h</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="pa">ਬ੍ਹ</span> <span class="trans">b͓h</span></span> indicate a level tone when at the beginning of a word or syllable, and a low rising tone when elsewhere.<a class="fnref" href="http://www.omniglot.com/writing/punjabi.htm">o</a></p>
 <p>The diacritic <span class="codepoint" translate="no"><span lang="pa">&#x0A51;</span> [<a href="/scripts/gurmukhi/block#char0A51"><span class="uname">U+0A51 GURMUKHI SIGN UDAAT​</span></a>]</span> can also be used in older texts to indicate a high tone.</p>
@@ -754,7 +745,7 @@ alveolar</th>
 <p class="explanatoryintro">When the shapes of constituent consonants in a cluster are changed or merged to indicate the lack of intervening vowels, this is referred to as a conjunct.</p>
 <p>Clusters of consonants without intervening vowel sounds are generally not marked in Gurmukhi. There are just a few exceptions to that rule, and in each case the cluster is marked by a subjoined version of the second consonant.</p>
 <p>The character <span class="trans">h</span> in non-initial position is used to indicate tones (see <a class="secref">consonant_tones</a>). When  the <span class="trans">h</span> follows a consonant, it is subjoined to it, eg. ਚੜ੍ਹ ʧɽ͓h ʧə́ɽ climb.</p>
-<p>Syllable-initial clusters also occur with <span class="trans">r</span> and <span class="trans">v</span>, and are also indicated using subjoined forms, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਪ੍ਰਬੰਧ</span> <span class="trans">p͓rbŋ̽dʰ</span> <span class="ipa">prəbə́nd̪</span> <span class="meaning">government</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="pa">ਸ੍ਵਰਗ</span> <span class="trans">s͓vrg</span> <span class="ipa">svərəg</span> <span class="meaning">heaven</span></span>. Subjoined <span class="trans">v</span> is much less common in modern text.</p>
+<p>Syllable-initial clusters also occur with <span class="trans">r</span> and <span class="trans">v</span>, and are also indicated using subjoined forms, eg. <span class="eg" lang="pa">ਪ੍ਰਬੰਧ</span>, and <span class="eg" lang="pa">ਸ੍ਵਰਗ</span>. Subjoined <span class="trans">v</span> is much less common in modern text.</p>
 <p>The way to indicate the above conjunct clusters is to add <span class="codepoint" translate="no"><span lang="pa">&#x0A4D;</span> [<a href="/scripts/gurmukhi/block#char0A4D"><span class="uname">U+0A4D GURMUKHI SIGN VIRAMA​</span></a>]</span> before the subjoined character, eg. <span class="ex">ਪ੍ਰ</span> is produced by the sequence <span class="codepoint" translate="no"><span lang="pa">&#x0A2A;</span> + <span lang="pa">&#x0A4D;</span> + <span lang="pa">&#x0A30;</span> [<a href="/scripts/gurmukhi/block#char0A2A"><span class="uname">U+0A2A GURMUKHI LETTER PA</span></a> + <a href="/scripts/gurmukhi/block#char0A4D"><span class="uname">U+0A4D GURMUKHI SIGN VIRAMA</span></a> + <a href="/scripts/gurmukhi/block#char0A30"><span class="uname">U+0A30 GURMUKHI LETTER RA</span></a>]</span>.</p>
 <p>The virama may also be used occasionally to suppress the vowel  in Sanskritised text, or in dictionaries for extra phonetic information.<a class="fnref" href="http://en.wikipedia.org/wiki/Gurmukhi_script">w</a></p>
 <p>Occasionally, a cluster ending with <span class="trans">y</span>  is rendered using <span class="codepoint" translate="no"><span lang="pa">&#x0A75;</span> [<a href="/scripts/gurmukhi/block#char0A75"><span class="uname">U+0A75 GURMUKHI SIGN YAKASH​</span></a>]</span>, eg. .<span class="charExample" translate="no"><span class="ex" lang="pa">ਕਲੵਚਰੈ</span> <span class="trans">kly̆ʧrɛ</span></span>, though this appears to be quite rare.</p>
@@ -767,13 +758,13 @@ alveolar</th>
 <section id="gemination">
 <h3>Geminated consonants</h3>
 
-<p>Doubling or reinforcement of a consonant sound is indicated, unusually for an indic script, using a diacritic, <span class="codepoint" translate="no"><span lang="pa">&#x0A71;</span> [<a href="/scripts/gurmukhi/block#char0A71"><span class="uname">U+0A71 GURMUKHI ADDAK​</span></a>]</span>. It is typed before the consonant (In this way it resembles the small <span class="trans">tsu</span> in Japanese), and is placed to the left of the consonant it affects (not over it), eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਪੱਕੀ</span> <span class="trans">p˖kī</span> <span class="ipa">pəkki</span> <span class="meaning">ripe</span></span>.</p>
+<p>Doubling or reinforcement of a consonant sound is indicated, unusually for an indic script, using a diacritic, <span class="codepoint" translate="no"><span lang="pa">&#x0A71;</span> [<a href="/scripts/gurmukhi/block#char0A71"><span class="uname">U+0A71 GURMUKHI ADDAK​</span></a>]</span>. It is typed before the consonant (In this way it resembles the small <span class="trans">tsu</span> in Japanese), and is placed to the left of the consonant it affects (not over it), eg. <span class="eg" lang="pa">ਪੱਕੀ</span>.</p>
 <p>The diacritic may appear over the right side of the preceding consonant, but if that consonant has a vowel sign or extension above the horizontal topline, it may be displayed on a short extension of the joining line. See the example below for the Gurmukhi MT font when displaying <span class="charExample" translate="no"><span class="ex" lang="pa">ਭੁੱਲ ਭੇੱਲ ਉੱਛਲ</span></span>.</p>
 <figure>
 <p lang="pa"><img src="images/addak.png" alt="ਭੁੱਲ ਭੇੱਲ ਉੱਛਲ"></p>
 <figcaption>Placement of the addak diacritic.</figcaption>
 </figure>
-<p>Geminated <span class="trans">mm</span> and <span class="trans">nn</span> may be written using a <a href="#nasalisation">nasalisation diacritic</a><span class="codepoint" translate="no"></span> associated with the preceding vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਲੰਮੀ</span> <span class="trans">lŋ̽mī</span> <span class="ipa">ləmmi</span> <span class="meaning">long</span></span>.<a class="fnref" href="#refs"> d</a></p>
+<p>Geminated <span class="trans">mm</span> and <span class="trans">nn</span> may be written using a <a href="#nasalisation">nasalisation diacritic</a><span class="codepoint" translate="no"></span> associated with the preceding vowel, eg. <span class="eg" lang="pa">ਲੰਮੀ</span>.<a class="fnref" href="#refs"> d</a></p>
 <p>&nbsp;</p>
 </section>
 
