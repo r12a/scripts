@@ -18,14 +18,14 @@
 <script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
+<script src="../common/egcode.js"></script>
+<script src="lis-examples.js"></script>
 
 <script src="../../uniview/descriptions.js"></script> 
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/lisu.js"> </script>
 <script src="lis-translit.js">  </script>
-
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 <style id="includeStyles"></style>
 </head>
@@ -37,7 +37,7 @@
 </header>
 <h1>Lisu character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a></nav>
+<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
 
 <aside class="sidebar">
   <h2 class="notoc flush"><a id="tochead">Contents</a></h2>
@@ -70,7 +70,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->20 January, 2020<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->28 June, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -80,22 +80,28 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
   <ul>
     <li><a href="../../uniview/?block=lisu" target="_blank">Lisu</a></li>
   </ul>
-  <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-  <!--p>For a summary of the script and its use in  writing systems, see the page <a class="linkHighlight" href="/scripts/lisu/">Lisu script summary</a>.   For similar information related to other scripts, see <a href="/r12a.github.io/doclist#charnotes">this list</a>.</p-->
-  <p>For details about how the script works, see the <a class="linkHighlight" href="index">Lisu (Fraser script)</a> summary.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Lisu">Script links pages</a>.</p>
-<p><span style="text-align: start;">We have usage data for the following  language that uses the Lisu script</span>: Lisu.</p>
+<p>See also the companion document, <a href="." class="linkHighlight">Lisu (Fraser script)</a>, for a summary of the Lisu script and its use for the Lisu language.</p>
+<!--p>The page also lists characters from the <a href="../../uniview/?block=combining_diacritical_marks" target="_blank">Combining Diacritical Marks</a> and <a href="../../uniview/?block=arabic" target="_blank">Arabic</a> blocks that are commonly used by languages using the Syriac script.</p-->
 
-<p>Find <input type="text" id="findInput"
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+<p> Phonetic transcriptions should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
-<p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example. Click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
+
+
 <details>
-<summary class="instructions">Read more about how to use this page.</summary>
-    <p class="instructions">To <strong>find a character</strong> by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or the hex number in the <samp>Find</samp> control above.</p>
-    <p class="instructions">To view this page as intended, you  need a <strong>Lisu font</strong>.  This page comes with a Noto Sans Lisu webfont. Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system.  For transcriptions I recommend the excellent and free <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;item_id=DoulosSILfont">Doulos SIL font</a>. The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. (If there is no glyph and you want to see what it looks like, click on <samp>See in UniView</samp>.)</p>
-    <p class="instructions"><strong>Information about languages</strong> that use these characters is taken from the list maintained for the Character Use app. The list is not exhaustive.</p>
-<p class="instructions"><strong>References</strong> are indicated by superscript characters. Wherever possible, those contain direct links to the source material. When such a pointer is alongside an arrow → it means that it's worth following the link for the additional information it provides. Digits refer to the main sources, which are listed at the bottom of a set of notes.</p>
-<p class="instructions">When you are using UniView and you turn on <samp>Show notes</samp>, UniView will pull in information about characters from this page.</p>
+<summary class="instructions"><a href="../links?iso=Lisu">Related pages</a>.</summary>
+</details>
+
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#charnotes">Other character notes</a>.</summary>
+</details>
+
+
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Lisu','Lisu'); return false;">About this page</a></summary>
+<div id="about"></div>
 <p id="charliststr" class="instructions"></p>
 </details>
 </section>
@@ -662,6 +668,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <script>
 replaceStuff('Lisu', 'lisu', spreadsheet, '', 'lis', '', cols, false)
+addExamples('lis')
 </script> 
 
 
