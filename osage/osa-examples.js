@@ -42,8 +42,8 @@ autoExpandExamples.osa = `
 𐓩𐓪͘𐓬ʼ𐓣|scarf|nõpˀi
 𐓪͘𐓵𐓟|to throw away|õðɛ
 𐓪𐓤ʼ𐓪́|hole|okˀó
-𐓪𐓤𐓣́𐓬𐓯𐓟|be true to one's own|okípʃɛ
-𐓪𐓬𐓸𐓘́|down the middle|opxá
+𐓪𐓤𐓣𐓬𐓯𐓟|be true to one's own|okípʃɛ
+𐓪𐓬𐓸𐓘|down the middle|opxá
 𐓬𐓘̄𐓹𐓪́|hill, mountain|pɑːɣó
 𐓬𐓘𐓢𐓶|hair|pɑhʲu
 𐓬𐓘𐓯𐓝𐓟𐓤𐓘|strawberry|pɑʃt͡ʃɛkɑ
