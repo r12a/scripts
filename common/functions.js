@@ -932,3 +932,13 @@ function copyToClipboard (node) {
 	
 
 
+function showTransliterations (yes) {
+	if (! yes) {
+		var nodes = document.querySelectorAll('.charExample .trans')
+		for (let n=0;n<nodes.length;n++) nodes[n].style.display = 'none'
+		}
+	else {
+		var nodes = document.querySelectorAll('.charExample .trans')
+		for (let n=0;n<nodes.length;n++) nodes[n].style.display = 'inline'
+		}
+	}
