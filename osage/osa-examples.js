@@ -207,7 +207,7 @@ autoExpandExamples.osa = `
 𐓷𐓣͘𐓤𐓯𐓟|truth|wĩ́kʃɛ
 𐓷𐓣͘𐓸𐓲𐓟|one|wĩ́xt͡sɛ
 𐓷𐓣𐓜𐓣𐓡𐓣𐓲𐓟|I tease you|wibɹihit͡sɛ
-𐓷𐓣𐓞𐓪𐓯𐓬𐓘|my grandchild|wit͡ʃᶣóʃpɑ
+𐓷𐓣𐓞𐓪𐓯𐓬𐓘|my grandchild|wiʰt͡ʃóʃpɑ
 𐓷𐓣𐓱𐓟𐓻𐓣͘|my younger sister|wiʰtɛ́ʒĩ
 𐓷𐓣𐓳𐓣𐓨𐓣|my aunt|wiʰt͡sími
 𐓷𐓣𐓳𐓪𐓯𐓬𐓘|grandchild|wiʰt͡sóʃpɑ
