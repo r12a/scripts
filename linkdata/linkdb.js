@@ -40,6 +40,7 @@ var scriptNotes= {  // used by Script Links page
     'mlym':[['Malayalam', 'malayalam']],
     'mymr':[['Myanmar/Burmese', 'myanmar']],
     'nkoo':[["N’Ko", 'nko']],
+    'osge':[["Osage", 'osage']],
     'sinh':[['Sinhala', 'sinhala/']],
     'sund':[['Sundanese', 'sundanese/']],
     'syrc':[['Syriac', 'syriac/'],
@@ -139,6 +140,7 @@ var scriptNotesByRegion = {  // used by script summary link page
 			   ],
 	'Americas':[['Cherokee', 'cherokee/'],
 				['Eastern Canadian Inuktitut', 'cans/'],
+				['Osage', 'osage/']
 				['UCAS', 'cans/']
 			    ]
 	}
@@ -177,6 +179,7 @@ var charNotesList = {
     'mong':'mongolian/block',
     'mymr':'myanmar/block',
     'nkoo':'nko/block',
+    'osge':'osage/block',
     'runr':'runic/block',
     'sinh':'sinhala/block',
     'sund':'sundanese/block',
@@ -226,6 +229,7 @@ var charNotesList = {
     'mymr':['Myanmar', 'myanmar/block'],
     'talu':['New&nbsp;Tai&nbsp;Lue', 'newtailue/block'],
     'nkoo':['NKo', 'nko/block'],
+    'osge':['Osage', 'osage/block'],
 	'punctuation':['Punctuation', 'punctuation/block'],
     'runr':['Runic', 'runic/block'],
     'sinh':['Sinhala', 'sinhala/block'],
