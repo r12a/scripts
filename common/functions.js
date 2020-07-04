@@ -12,6 +12,7 @@ function initialiseSummary (base, lang, tableName, dir) {
 	if (typeof(contentPrompts) !== 'undefined') setContentPrompts()
 	setFindIPA()
 	setupBlockLinks()
+	setTranslitToggle()
     }
 
 
@@ -721,7 +722,7 @@ function initialiseShowNames (base, target) {
 
 function showNameDetailsEvent (evt) { 
 	// base is set at the bottom of the source page
-	showNameDetails(evt.target.textContent, evt.target.lang, window.base, 'c', document.getElementById('panel'), 'list' )
+	showNameDetails(evt.target.textContent, evt.target.lang, window.base, 'c', document.getElementById('panel'), 'list', '' )
 	}
 
 /*
@@ -943,3 +944,33 @@ function showTransliterations (yes) {
 		for (let n=0;n<nodes.length;n++) nodes[n].style.display = 'inline'
 		}
 	}
+
+
+
+function setTranslitToggle () {
+	// adds a checkbox to the sliding selector to 
+	// switch transliterations on/off
+	
+	var checkboxList = document.getElementById('showTranscriptions')
+	if (checkboxList === null) {
+		console.log("Couldn't find sliding checkbox!")
+		return
+		}
+	var div = document.createElement('div')
+	div.id = 'translitToggle'
+	var label = document.createElement('label')
+	var input = document.createElement('input')
+	input.type = 'checkbox'
+	label.appendChild(document.createTextNode('Show transliterations '))
+	label.appendChild(input)
+	label.onclick = showTransliterationsEvt
+	div.appendChild(label)
+	checkboxList.appendChild(div)
+	}
+
+function showTransliterationsEvt (evt) { 
+	showTransliterations(evt.target.checked )
+	}
+
+
+
