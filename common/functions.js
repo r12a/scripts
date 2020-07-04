@@ -382,7 +382,8 @@ function makeTables (lang) {
                 if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.ipaLoc]) ch = window.spreadsheetRows[char][cols.ipaLoc]
                 else ch = '&nbsp;'
                 if (ch === '&nbsp;') out += '<span>&nbsp;</span>'
-                else out += '<span class="listIPA">'+ch.replace(/ /g,'<i>~</i>')+'</span>'
+                else out += '<span class="listIPA">'+ch.replace(/ /g,' ')+'</span>'
+                //else out += '<span class="listIPA">'+ch.replace(/ /g,'<i>~</i>')+'</span>'
                 }
 
             if (ipa.length > 0) {
