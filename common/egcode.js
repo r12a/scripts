@@ -38,7 +38,7 @@ function addExamples (langFilter) { console.log('langFilter:', langFilter, autoE
 				transcription = temptemp[1].replace(/\)/,'')
 				}
 			else if (temp[2]) ipa = temp[2]
-			if (transcription) out += ' (<span class="trans">'+transcription+'</span>)'
+			if (transcription) out += ' (<span class="transc">'+transcription+'</span>)'
 			if (ipa) out += ' <span class="ipa">'+ipa+'</span>'
 			if (temp[1]) out += ' <span class="meaning">'+temp[1]+'</span>'
 			out += '</span>'
