@@ -1,5 +1,5 @@
 
-var items = ['am', 'arb', 'hy', 'aii', 'ban-bali', 'bsq-bass', 'bn', 'bug-bugi', 'my', 'chr', 'dv', 'ka', 'gu', 'khk-mong', 'ha', 'ha-arab', 'he', 'hi', 'ike', 'ja', 'jv-java', 'kn', 'ks', 'ks-deva', 'km', 'kkh', 'ko', 'lo', 'lis', 'ml', 'cmn', 'el', 'mid', 'nod', 'nqo', 'ory', 'fuf-adlm', 'pa', 'ru', 'si', 'zgh', 'su-sund', 'syc', 'khb', 'tdd', 'blt', 'ta', 'te', 'th', 'bo', 'tru', 'ug', 'ur', 'vai']
+var items = ['am', 'arb', 'hy', 'aii', 'ban-bali', 'bsq-bass', 'bn', 'bug-bugi', 'my', 'chr', 'dv', 'ka', 'gu', 'khk-mong', 'ha', 'ha-arab', 'he', 'hi', 'ike', 'ja', 'jv-java', 'kn', 'ks', 'ks-deva', 'km', 'kkh', 'ko', 'lo', 'lis', 'ml', 'cmn', 'el', 'mid', 'nod', 'nqo', 'ory', 'fuf-adlm', 'pa', 'ru', 'si', 'zgh', 'su-sund', 'syc', 'khb', 'tdd', 'blt', 'ta', 'te', 'th', 'bo', 'tru', 'ug', 'ur', 'vai', 'osa']
 
 var csubset = false
 var vsubset = false
