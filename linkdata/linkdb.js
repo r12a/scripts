@@ -1,4 +1,4 @@
-var scriptNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cans', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'jpan', 'khmr', 'laoo', 'lana', 'lisu', 'mand', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'taml', 'tavt', 'telu', 'thaa', 'thai', 'tibt', 'tfng'])
+var scriptNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cans', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'jpan', 'khmr', 'laoo', 'lana', 'lisu', 'mand', 'mymr', 'nkoo', 'osge', 'sinh', 'sund', 'syrc', 'taml', 'tavt', 'telu', 'thaa', 'thai', 'tibt', 'tfng'])
 
 var scriptNotes= {  // used by Script Links page
     'adlm':[['Adlam/Pular','adlam/']],
@@ -140,14 +140,14 @@ var scriptNotesByRegion = {  // used by script summary link page
 			   ],
 	'Americas':[['Cherokee', 'cherokee/'],
 				['Eastern Canadian Inuktitut', 'cans/'],
-				['Osage', 'osage/']
+				['Osage', 'osage/'],
 				['UCAS', 'cans/']
 			    ]
 	}
 
 
 
-var charNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cans', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'jpan', 'khmr','laoo', 'lana', 'maka', 'mand', 'mlym', 'mong', 'mymr', 'nkoo', 'sinh', 'sund', 'syrc', 'tale', 'talu', 'tavt', 'taml', 'telu', 'thaa', 'thai', 'tibt', 'tfng', 'vaii'])
+var charNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cans', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'jpan', 'khmr','laoo', 'lana', 'maka', 'mand', 'mlym', 'mong', 'mymr', 'nkoo', 'osge', 'sinh', 'sund', 'syrc', 'tale', 'talu', 'tavt', 'taml', 'telu', 'thaa', 'thai', 'tibt', 'tfng', 'vaii'])
 
 var charNotesList = {
     'adlm':'adlam/block',
