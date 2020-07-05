@@ -4,6 +4,7 @@
 <meta charset="utf-8"/>
 <title>Tai Viet character notes</title>
 <meta name="description" content="Notes about characters in the Unicode Tai Viet script blocks."/>
+
 <link rel="stylesheet" href="../../shared/style/docs.css" />
 <link rel="stylesheet" href="../common/block-style.css" />
 <link rel="stylesheet" href="local.css" />
@@ -19,6 +20,8 @@
 <script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
+<script src="../common/egcode.js"></script>
+<script src="blt-examples.js"></script>
 
 <script src="../../uniview/descriptions.js"></script> 
 <script src="../../uniview/u.js"></script> 
@@ -26,7 +29,6 @@
 <script src="../../shared/fontlists/taiviet.js"> </script>
 <script src="blt-translit.js">  </script>
 
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 <style id="includeStyles"></style>
 <style>
@@ -41,7 +43,8 @@
 </header>
 <h1>Tai Viet character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a></nav>
+<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
+
 
 <aside class="sidebar">
   <nav>
@@ -78,7 +81,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->20 January, 2020<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->5 July, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -89,20 +92,28 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <li><a href="../../uniview/?block=taiviet" target="_blank">Tai Viet</a></li>
 </ul>
    <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-<p>For details about how the script works, see the <a class="linkHighlight" href="index">Tai Viet/Tai Dam</a> summary. For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Tavt">Script links pages</a>.</p>
-<p><span style="text-align: start;">We have usage data for the following language that uses the Tai Viet script</span>: Tai Dam.</p>
+<p>See also the companion document, <a href="." class="linkHighlight">Tai Viet/Tai Dam</a>, for a summary of the Tai Viet script and its use for the Tai Dam language.</p>
+<!--p>The page also lists characters from the <a href="../../uniview/?block=combining_diacritical_marks" target="_blank">Combining Diacritical Marks</a> and <a href="../../uniview/?block=arabic" target="_blank">Arabic</a> blocks that are commonly used by languages using the Syriac script.</p-->
 
-<p>Find <input type="text" id="findInput"
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+<p> Phonetic transcriptions should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
-<p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example. Click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
+
+
 <details>
-<summary class="instructions">Read more about how to use this page.</summary>
-    <p class="instructions">To <strong>find a character</strong> by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or the hex number in the <samp>Find</samp> control above.</p>
-    <p class="instructions">To view this page as intended, you  need a <strong>Tai Viet font</strong>.  This page comes with a Tai Viet webfont. Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system.  For transcriptions I recommend the excellent and free <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;item_id=DoulosSILfont">Doulos SIL font</a>. The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. (If there is no glyph and you want to see what it looks like, click on <samp>See in UniView</samp>.)</p>
-    <p class="instructions"><strong>Information about languages</strong> that use these characters is taken from the list maintained for the Character Use app. The list is not exhaustive.</p>
-<p class="instructions"><strong>References</strong> are indicated by superscript characters. Wherever possible, those contain direct links to the source material. When such a pointer is alongside an arrow → it means that it's worth following the link for the additional information it provides. Digits refer to the main sources, which are listed at the bottom of a set of notes.</p>
-<p class="instructions">When you are using UniView and you turn on <samp>Show notes</samp>, UniView will pull in information about characters from this page.</p>
+<summary class="instructions"><a href="../links?iso=Tavt">Related pages</a>.</summary>
+</details>
+
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#charnotes">Other character notes</a>.</summary>
+</details>
+
+
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Tai Viet','Tai Dam'); return false;">About this page</a></summary>
+<div id="about"></div>
 <p id="charliststr" class="instructions"></p>
 </details>
 </section>
@@ -125,7 +136,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">k</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪶꪁꪙ</span> <span class="trans">okn</span> <span class="ipa">kon⁴</span> <span class="meaning">to stir</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪶꪁꪙ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -145,8 +156,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">k, -ʔ</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪀꪚꪾ</span> <span class="trans">ḵaᵖ</span> <span class="ipa">kap²</span> <span class="meaning">with, and</span></span>.</p>
-<p><span class="ipa">k</span> or <span class="ipa">ʔ </span>when syllable final, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪀ꪿ꪙ</span> <span class="trans">ɛḵ¹n</span> <span class="ipa">kɛn²</span> <span class="meaning">seed</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪀꪚꪾ</span>.</p>
+<p><span class="ipa">k</span> or <span class="ipa">ʔ </span>when syllable final, eg. <span class="eg" lang="blt">ꪵꪀ꪿ꪙ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -218,8 +229,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">ŋ</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹꪉꪱ</span> <span class="trans">ɨᵊŋā</span> <span class="ipa">ŋaːw¹</span> <span class="meaning">reflection</span></span>.</p>
-<p>This letter is the one used for syllable final position, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹꪬꪰꪉ</span> <span class="trans">ɨᵊẖaŋ</span> <span class="ipa">həŋ¹</span> <span class="meaning">long</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪹꪉꪱ</span>.</p>
+<p>This letter is the one used for syllable final position, eg. <span class="eg" lang="blt">ꪹꪬꪰꪉ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -343,7 +354,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">t</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪔꪰꪒ</span> <span class="trans">ṯaḏ</span> <span class="ipa">tat²</span> <span class="meaning">to cut</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪔꪰꪒ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -402,8 +413,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">d, -t</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪼꪒ꫁</span> <span class="trans">aʲḏ²</span> <span class="ipa">daj³</span> <span class="meaning">to attain</span></span>.</p>
-<p><span class="ipa">t</span> when syllable final. eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪔꪰꪒ</span> <span class="trans">ṯaḏ</span> <span class="ipa">tat²</span> <span class="meaning">to cut</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪼꪒ꫁</span>.</p>
+<p><span class="ipa">t</span> when syllable final. eg. <span class="eg" lang="blt">ꪔꪰꪒ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -423,7 +434,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">n</span></p>
-<p>This letter is the one used for syllable final position, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪜꪳꪙ</span> <span class="trans">p̄ɨn</span> <span class="ipa">pɨn¹</span> <span class="meaning">arrow</span></span>.</p>
+<p>This letter is the one used for syllable final position, eg. <span class="eg" lang="blt">ꪜꪳꪙ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -469,7 +480,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">p</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪜꪳꪙ</span> <span class="trans">p̄ɨn</span> <span class="ipa">pɨn¹</span> <span class="meaning">arrow</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪜꪳꪙ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -529,7 +540,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">b, -p</span></p>
 <p><span class="ipa">p</span> when syllable final.</p>
-<p>This letter is also used as part of a final vowel <span class="ipa">ap </span><span class="charExample" translate="no"><span class="ex" lang="blt">ꪚꪾ</span></span> in some dialects of the script. Note that the sequence of code points is different than you would expect from the pronunciation, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪀꪚꪾ</span> <span class="trans">ḵaᵖ</span> <span class="ipa">kap²</span> <span class="meaning">with, and</span></span>.</p>
+<p>This letter is also used as part of a final vowel <span class="ipa">ap </span><span class="charExample" translate="no"><span class="ex" lang="blt">ꪚꪾ</span></span> in some dialects of the script. Note that the sequence of code points is different than you would expect from the pronunciation, eg. <span class="eg" lang="blt">ꪀꪚꪾ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -549,8 +560,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">m</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪣꪸ</span> <span class="trans">miᵊ</span> <span class="ipa">miə⁴</span> <span class="meaning">wife</span></span>.</p>
-<p>This letter is the one used for syllable final position, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹꪔꪸꪣ</span> <span class="trans">ɨᵊṯiᵊm</span> <span class="ipa">tem¹</span> <span class="meaning">full</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪣꪸ</span>.</p>
+<p>This letter is the one used for syllable final position, eg. <span class="eg" lang="blt">ꪹꪔꪸꪣ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -636,7 +647,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">j</span></p>
 <p>This letter is the one used for syllable final position.</p>
-<p>The traditional sequence <span class="charExample"><span class="ex" lang="blt">ꪵ-ꪫ</span></span> is ambiguous in open  syllables. It can be  interpreted as either <span class="ipa">Cɛw</span>, or as <span class="ipa">Cʷɛ</span> (where C represents a  velar consonant). To eliminate this  ambiguity, the character <span class="codepoint" translate="no"><span lang="blt">&#xAAA5;</span> [<a href="/scripts/taiviet/block#charAAA5"><span class="uname">U+AAA5 TAI VIET LETTER HIGH YO</span></a>]</span> is sometimes appended to the  end of the sequence to indicate the second  pronunciation eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪁꪫꪥ</span> <span class="trans">ɛkwy</span> <span class="ipa">kʷɛ²</span> <span class="meaning">cinnamon</span></span>. Since <span class="ipa">j</span> never occurs after <span class="ipa">ɛ</span>, this can be done without creating a new  ambiguity. This spelling is only used in  some dialects of the traditional script. However, it has been adopted as a standard  spelling in a project sponsored by the  Son La Department of Science and  Technology. <span class="ref"><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b6</a></span></p>
+<p>The traditional sequence <span class="charExample"><span class="ex" lang="blt">ꪵ-ꪫ</span></span> is ambiguous in open  syllables. It can be  interpreted as either <span class="ipa">Cɛw</span>, or as <span class="ipa">Cʷɛ</span> (where C represents a  velar consonant). To eliminate this  ambiguity, the character <span class="codepoint" translate="no"><span lang="blt">&#xAAA5;</span> [<a href="/scripts/taiviet/block#charAAA5"><span class="uname">U+AAA5 TAI VIET LETTER HIGH YO</span></a>]</span> is sometimes appended to the  end of the sequence to indicate the second  pronunciation eg. <span class="eg" lang="blt">ꪵꪁꪫꪥ</span>. Since <span class="ipa">j</span> never occurs after <span class="ipa">ɛ</span>, this can be done without creating a new  ambiguity. This spelling is only used in  some dialects of the traditional script. However, it has been adopted as a standard  spelling in a project sponsored by the  Son La Department of Science and  Technology. <span class="ref"><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b6</a></span></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -669,10 +680,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">v, -w</span></p>
-<p>This letter is the one used for syllable final <span class="ipa">w</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪔꪲꪫ</span> <span class="trans">ṯiw</span> <span class="ipa">tʰiw¹</span> <span class="meaning">to whistle</span></span>.</p>
+<p>This letter is the one used for syllable final <span class="ipa">w</span>, eg. <span class="eg" lang="blt">ꪔꪲꪫ</span>.</p>
 <p>This  letter is also used to labialise initial velar consonants when appearing immediately after the consonant. <span class="ref"><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b4</a></span> The placement of a vowel sign can help avoid ambiguity here: compare <span class="charExample" translate="no"><span class="ex" lang="blt">ꪀꪲꪫ</span> <span class="trans">ḵiw</span> <span class="ipa">kiw</span></span> vs. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪀꪫꪲ</span> <span class="trans">ḵʷi</span> <span class="ipa">kʷi</span></span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b5</a></p>
 <p>Also occurs in the following vowel:</p>
-<p><span class="ipa">ʷɛ</span> <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵ-ꪫ</span></span>, where the missing consonant is velar, and the result is a labialised velar consonant followed by <span class="ipa">ɛ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪁꪫꪥ</span> <span class="trans">ɛkwy</span> <span class="ipa">kʷɛ²</span> <span class="meaning">cinnamon</span></span>.</p>
+<p><span class="ipa">ʷɛ</span> <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵ-ꪫ</span></span>, where the missing consonant is velar, and the result is a labialised velar consonant followed by <span class="ipa">ɛ</span>, eg. <span class="eg" lang="blt">ꪵꪁꪫꪥ</span>.</p>
 <p>The traditional sequence <span class="charExample"><span class="ex" lang="blt">ꪵ-ꪫ</span></span> is ambiguous in open  syllables. It can be  interpreted as either <span class="ipa">Cɛw</span>, or as <span class="ipa">Cʷɛ</span> (where C represents a  velar consonant). To eliminate this  ambiguity, the character  <span class="codepoint" translate="no"><span lang="blt">&#xAAA5;</span> [<a href="/scripts/taiviet/block#charAAA5"><span class="uname">U+AAA5 TAI VIET LETTER HIGH YO</span></a>]</span>  is sometimes appended to the  end of the sequence to indicate the second  pronunciation (as in the earlier example). Since <span class="ipa">j</span> never occurs after  <span class="ipa">ɛ</span>, this can be done without creating a new  ambiguity. This spelling is only used in  some dialects of the traditional script. However, it has been adopted as a standard  spelling in a project sponsored by the  Son La Department of Science and  Technology. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b6</a></p>
 <p>Alternatively, the position of a tone mark can help disambiguate the pronunciation. Compare <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪀ꫁ꪫ</span> <span class="trans">ɛḵ²w</span> <span class="ipa">kɛw³</span></span> and <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪀꪫ꫁</span> <span class="trans">ɛḵw²</span> <span class="ipa">kʷɛ³</span></span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b5</a></p>
 </div>
@@ -707,7 +718,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">h</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪭꪴꪒ</span> <span class="trans">huḏ</span> <span class="ipa">hut⁴</span> <span class="meaning">article</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪭꪴꪒ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -727,7 +738,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">h</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹꪬꪰꪉ</span> <span class="trans">ɨᵊẖaŋ</span> <span class="ipa">həŋ¹</span> <span class="meaning">long</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪹꪬꪰꪉ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -760,7 +771,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">x</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪄꪴ꪿ꪙ</span> <span class="trans">x̱u¹n</span> <span class="ipa">xun²</span> <span class="meaning">dust</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪄꪴ꪿ꪙ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -793,7 +804,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">s</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹꪎ</span> <span class="trans">ɨᵊs̱</span> <span class="ipa">sia¹</span> <span class="meaning">tiger</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪹꪎ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -859,7 +870,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">ʔ, ɔ</span></p>
-<p>Functions as both a consonant and a vowel. Used as a base for independent vowel sounds. In the following example it appears as both, being a vowel base for itself, <span class="charExample" translate="no"><span class="ex" lang="blt">ꪮꪮꪀ</span> <span class="trans">ʔ̱ʔ̱ḵ</span> <span class="ipa">ʔɔʔ²</span> <span class="meaning">to go out</span></span>.</p>
+<p>Functions as both a consonant and a vowel. Used as a base for independent vowel sounds. In the following example it appears as both, being a vowel base for itself, <span class="eg" lang="blt">ꪮꪮꪀ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -890,7 +901,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">kon⁴</span></p>
-<p>Used with the meaning <span class="meaning">person</span>. The  ligature is used to distinguish  between homophonous words such as <span class="charExample" translate="no"><span class="ex" lang="blt">ꫛ</span> <span class="trans">kⁿ</span> <span class="ipa">kon⁴</span> <span class="meaning">person</span></span> and <span class="charExample" translate="no"><span class="ex" lang="blt">ꪶꪁꪙ</span> <span class="trans">okn</span> <span class="ipa">kon⁴</span> <span class="meaning">to stir</span></span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b9</a></p>
+<p>Used with the meaning <span class="meaning">person</span>. The  ligature is used to distinguish  between homophonous words such as <span class="eg" lang="blt">ꫛ</span> and <span class="eg" lang="blt">ꪶꪁꪙ</span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b9</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -948,7 +959,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">aj</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪼꪒ꫁</span> <span class="trans">aʲḏ²</span> <span class="ipa">daj³</span> <span class="meaning">to attain</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪼꪒ꫁</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -970,7 +981,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">əw</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪻꪐ꪿</span> <span class="trans">əʷɲ̄¹</span> <span class="ipa">ɲəw²</span> <span class="meaning">large, big</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪻꪐ꪿</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -992,9 +1003,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">ɛ</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪀ꪿ꪙ</span> <span class="trans">ɛḵ¹n</span> <span class="ipa">kɛn²</span> <span class="meaning">seed</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪵꪀ꪿ꪙ</span>.</p>
 <p>Also occurs in the following vowel:</p>
-<p><span class="ipa">ʷɛ</span> <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵ-ꪫ</span></span>, where the missing consonant is velar, and the result is a labialised velar consonant followed by <span class="ipa">ɛ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪁꪫꪥ</span> <span class="trans">ɛkwy</span> <span class="ipa">kʷɛ²</span> <span class="meaning">cinnamon</span></span>.</p>
+<p><span class="ipa">ʷɛ</span> <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵ-ꪫ</span></span>, where the missing consonant is velar, and the result is a labialised velar consonant followed by <span class="ipa">ɛ</span>, eg. <span class="eg" lang="blt">ꪵꪁꪫꪥ</span>.</p>
 <p>The traditional sequence <span class="charExample"><span class="ex" lang="blt">ꪵ-ꪫ</span></span> is ambiguous in open  syllables. It can be  interpreted as either <span class="ipa">Cɛw</span>, or as <span class="ipa">Cʷɛ</span> (where C represents a  velar consonant). To eliminate this  ambiguity, the character  <span class="codepoint" translate="no"><span lang="blt">&#xAAA5;</span> [<a href="/scripts/taiviet/block#charAAA5"><span class="uname">U+AAA5 TAI VIET LETTER HIGH YO</span></a>]</span>  is sometimes appended to the  end of the sequence to indicate the second  pronunciation (as in the earlier example). Since <span class="ipa">j</span> never occurs after  <span class="ipa">ɛ</span>, this can be done without creating a new  ambiguity. This spelling is only used in  some dialects of the traditional script. However, it has been adopted as a standard  spelling in a project sponsored by the  Son La Department of Science and  Technology. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b6</a></p>
 <p>Alternatively, the position of a tone mark can help disambiguate the pronunciation. Compare <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪀ꫁ꪫ</span> <span class="trans">ɛḵ²w</span> <span class="ipa">kɛw³</span></span> and <span class="charExample" translate="no"><span class="ex" lang="blt">ꪵꪀꪫ꫁</span> <span class="trans">ɛḵw²</span> <span class="ipa">kʷɛ³</span></span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b5</a></p>
 </div>
@@ -1018,11 +1029,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">ɨə</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹꪎ</span> <span class="trans">ɨᵊs̱</span> <span class="ipa">sia¹</span> <span class="meaning">tiger</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪹꪎ</span>.</p>
 <p>Also occurs in the following vowels:</p>
-<p><span class="ipa">e</span> <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹ-ꪸ</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹꪔꪸꪣ</span> <span class="trans">ɨᵊṯiᵊm</span> <span class="ipa">tem¹</span> <span class="meaning">full</span></span>.</p>
-<p><span class="ipa">ə</span> <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹ-ꪰ</span></span>, eg <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹꪬꪰꪉ</span> <span class="trans">ɨᵊẖaŋ</span> <span class="ipa">həŋ¹</span> <span class="meaning">long</span></span>.</p>
-<p><span class="ipa">aːw</span> <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹ-ꪱ</span></span>, eg <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹꪉꪱ</span> <span class="trans">ɨᵊŋā</span> <span class="ipa">ŋaːw¹</span> <span class="meaning">reflection</span></span>.</p>
+<p><span class="ipa">e</span> <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹ-ꪸ</span></span>, eg. <span class="eg" lang="blt">ꪹꪔꪸꪣ</span>.</p>
+<p><span class="ipa">ə</span> <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹ-ꪰ</span></span>, eg <span class="eg" lang="blt">ꪹꪬꪰꪉ</span>.</p>
+<p><span class="ipa">aːw</span> <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹ-ꪱ</span></span>, eg <span class="eg" lang="blt">ꪹꪉꪱ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1044,7 +1055,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">o</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪶꪄꪙ</span> <span class="trans">ox̱n</span> <span class="ipa">xon¹</span> <span class="meaning">fur, feather</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪶꪄꪙ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1072,9 +1083,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">a</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪔꪰꪒ</span> <span class="trans">ṯaḏ</span> <span class="ipa">tat²</span> <span class="meaning">to cut</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪔꪰꪒ</span>.</p>
 <p>Also occurs in the following vowel:</p>
-<p><span class="ipa">ə</span> <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹ-ꪰ</span></span>, eg <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹꪬꪰꪉ</span> <span class="trans">ɨᵊẖaŋ</span> <span class="ipa">həŋ¹</span> <span class="meaning">long</span></span>.</p>
+<p><span class="ipa">ə</span> <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹ-ꪰ</span></span>, eg <span class="eg" lang="blt">ꪹꪬꪰꪉ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1094,9 +1105,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">aː</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪮ꪿ꪱꪉ</span> <span class="trans">ʔ¹āŋ</span> <span class="ipa">ʔaːŋ²</span> <span class="meaning">basin, tub</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪮ꪿ꪱꪉ</span>.</p>
 <p>Also occurs in the following vowel:</p>
-<p><span class="ipa">aːw</span> <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹ-ꪱ</span></span>, eg <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹꪉꪱ</span> <span class="trans">ɨᵊŋā</span> <span class="ipa">ŋaːw¹</span> <span class="meaning">reflection</span></span>.</p>
+<p><span class="ipa">aːw</span> <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹ-ꪱ</span></span>, eg <span class="eg" lang="blt">ꪹꪉꪱ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1116,7 +1127,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">i</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪔꪲꪫ</span> <span class="trans">ṯiw</span> <span class="ipa">tʰiw¹</span> <span class="meaning">to whistle</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪔꪲꪫ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1136,7 +1147,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">ɨ</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪜꪳꪙ</span> <span class="trans">p̄ɨn</span> <span class="ipa">pɨn¹</span> <span class="meaning">arrow</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪜꪳꪙ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1156,7 +1167,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">u</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪄꪴ꪿ꪙ</span> <span class="trans">x̱u¹n</span> <span class="ipa">xun²</span> <span class="meaning">dust</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪄꪴ꪿ꪙ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1176,7 +1187,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">ɔ</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪝꪷ</span> <span class="trans">pɔ</span> <span class="ipa">pɔ⁴</span> <span class="meaning">enough</span></span>. Only used in open syllables.</p>
+<p>eg. <span class="eg" lang="blt">ꪝꪷ</span>. Only used in open syllables.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1196,9 +1207,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">am</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪁꪾ</span> <span class="trans">kaᵐ</span> <span class="ipa">kam⁴</span> <span class="meaning">gold</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪁꪾ</span>.</p>
 <p>Also used in the following final vowel in some dialects of the script, where the sequence of code points is different than you would expect from the pronunciation:</p>
-<p><span class="ipa">ap </span><span class="charExample" translate="no"><span class="ex" lang="blt">ꪚꪾ</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪀꪚꪾ</span> <span class="trans">ḵaᵖ</span> <span class="ipa">kap²</span> <span class="meaning">with, and</span></span>.</p>
+<p><span class="ipa">ap </span><span class="charExample" translate="no"><span class="ex" lang="blt">ꪚꪾ</span></span>, eg. <span class="eg" lang="blt">ꪀꪚꪾ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1218,7 +1229,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">an</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪜ꫁ꪽ</span> <span class="trans">p̄²aⁿ</span> <span class="ipa">pan³</span> <span class="meaning">to squeeze</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪜ꫁ꪽ</span>.</p>
 <p>In some dialects, this letter can be used in isolation to represent the  word <span class="ipa">nan⁶</span> <span class="meaning">that</span>. </p>
 </div>
 
@@ -1239,9 +1250,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">iə</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪣꪸ</span> <span class="trans">miᵊ</span> <span class="ipa">miə⁴</span> <span class="meaning">wife</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪣꪸ</span>.</p>
 <p>Also occurs in the following vowel:</p>
-<p><span class="ipa">e</span> <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹ-ꪸ</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹꪔꪸꪣ</span> <span class="trans">ɨᵊṯiᵊm</span> <span class="ipa">tem¹</span> <span class="meaning">full</span></span>.</p>
+<p><span class="ipa">e</span> <span class="charExample" translate="no"><span class="ex" lang="blt">ꪹ-ꪸ</span></span>, eg. <span class="eg" lang="blt">ꪹꪔꪸꪣ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1261,7 +1272,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taidam">
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa">uə</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪎ꫁ꪺꪉ</span> <span class="trans">s̱²uᵊŋ</span> <span class="ipa">suəŋ³</span> <span class="meaning">trousers</span></span>.</p>
+<p>eg. <span class="eg" lang="blt">ꪎ꫁ꪺꪉ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1300,7 +1311,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <span class="name">
 <span class="transliteratedname trans">mai ek</span></span></p>
 <p>Used only on unchecked syllables (ie. not ending in -p, -t, or -k).</p>
-<p>Sets <strong>tone 5</strong> for high  onsets, eg. TBD, <strong>and tone 2</strong> for low, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪄꪴ꪿ꪙ</span> <span class="trans">x̱u¹n</span> <span class="ipa">xun²</span> <span class="meaning">dust</span></span>.</p>
+<p>Sets <strong>tone 5</strong> for high  onsets, eg. TBD, <strong>and tone 2</strong> for low, eg. <span class="eg" lang="blt">ꪄꪴ꪿ꪙ</span>.</p>
 <p>Combining tone marks were originated by Tai Dam speakers in the United  States, using Lao tone marks. The Tai community in Vietnam, however, invented their own spacing tone marks written on the base  line at the end of the syllable. This mark corresponds to <span class="codepoint" translate="no"><span lang="blt">&#xAAC0;</span> [<a href="/scripts/taiviet/block#charAAC0"><span class="uname">U+AAC0 TAI VIET TONE MAI NUENG</span></a>]</span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b7</a></p>
 </div>
 
@@ -1322,7 +1333,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <span class="name">
 <span class="transliteratedname trans">mai song</span></span></p>
 <p>Used only on unchecked syllables (ie. not ending in -p, -t, or -k).</p>
-<p>Sets <strong>tone 6</strong> for high  onsets, eg. TBD, <strong>and tone 3</strong> for low, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪎ꫁ꪺꪉ</span> <span class="trans">s̱²uᵊŋ</span> <span class="ipa">suəŋ³</span> <span class="meaning">trousers</span></span>.</p>
+<p>Sets <strong>tone 6</strong> for high  onsets, eg. TBD, <strong>and tone 3</strong> for low, eg. <span class="eg" lang="blt">ꪎ꫁ꪺꪉ</span>.</p>
 <p>Combining tone marks were originated by Tai Dam speakers in the United  States, using Lao tone marks. The Tai community in Vietnam, however, invented their own spacing tone marks written on the base  line at the end of the syllable. This mark corresponds to <span class="codepoint" translate="no"><span lang="blt">&#xAAC2;</span> [<a href="/scripts/taiviet/block#charAAC2"><span class="uname">U+AAC2 TAI VIET TONE MAI SONG</span></a>]</span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b7</a></p>
 </div>
 
@@ -1352,7 +1363,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa"></span></p>
 <p>Written at the end of  unchecked syllables (ie. not ending in -p, -t, or -k).</p>
-<p>Sets <strong>tone 5</strong> for high  onsets, eg. TBD, <strong>and tone 2</strong> for low, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪄꪴꪙꫀ</span> <span class="trans">x̱un¹̱</span> <span class="ipa">xun²</span> <span class="meaning">dust</span></span>.</p>
+<p>Sets <strong>tone 5</strong> for high  onsets, eg. TBD, <strong>and tone 2</strong> for low, eg. <span class="eg" lang="blt">ꪄꪴꪙꫀ</span>.</p>
 <p>Spacing tone marks were originated by the Tai community in Vietnam. Tai Dam speakers in the United  States, however, invented their own combining  tone marks based on Lao. This character corresponds to <span class="codepoint" translate="no"><span lang="blt">&#xAABF;</span> [<a href="/scripts/taiviet/block#charAABF"><span class="uname">U+AABF TAI VIET TONE MAI EK​</span></a>]</span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b7</a></p>
 </div>
 
@@ -1373,7 +1384,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Tai Dam</span> 
 <span class="ipa"></span></p>
 <p>Written at the end of  unchecked syllables (ie. not ending in -p, -t, or -k).</p>
-<p>Sets <strong>tone 6</strong> for high  onsets, eg. TBD, <strong>and tone 3</strong> for low, eg. <span class="charExample" translate="no"><span class="ex" lang="blt">ꪎꪺꪉꫂ</span> <span class="trans">s̱uᵊŋ²̱</span> <span class="ipa">suəŋ³</span> <span class="meaning">trousers</span></span>.</p>
+<p>Sets <strong>tone 6</strong> for high  onsets, eg. TBD, <strong>and tone 3</strong> for low, eg. <span class="eg" lang="blt">ꪎꪺꪉꫂ</span>.</p>
 <p>Spacing tone marks were originated by the Tai community in Vietnam. Tai Dam speakers in the United  States, however, invented their own combining  tone marks based on Lao. This character corresponds to <span class="codepoint" translate="no"><span lang="blt">&#xAAC1;</span> [<a href="/scripts/taiviet/block#charAAC1"><span class="uname">U+AAC1 TAI VIET TONE MAI THO​</span></a>]</span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3220.pdf" target="_blank">b7</a></p>
 </div>
 
@@ -1471,10 +1482,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 
-<script src="../../shared/scriptdb/taiviet.js">  </script>
+<script src="../../shared/scriptdb/tavt.js">  </script>
 
 <script>
 replaceStuff('Tai Dam', 'taidam', spreadsheet, '', 'blt', '', cols, false)
+addExamples('blt')
 </script> 
 
 
