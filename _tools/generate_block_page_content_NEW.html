@@ -23,6 +23,7 @@
 <label> Bicameral: <input type="checkbox" id="bicameral"/></label>
 <label> Language: <input type="text" id="lang" style="width: 3em;"/></label>
 <label> Direction: <input type="text" id="dir" style="width: 3em;"/></label>
+<label> Add letter: <input type="checkbox" id="letter" checked></label>
 
 <button style="font-size: 150%;" onClick="bicameral=false; 
 if(document.getElementById('bicameral').checked) bicameral = true; 
@@ -50,7 +51,7 @@ document.getElementById('out').select()">Go</button>
 
 
 <div class="smallprint"><span id="version">First published  3 Feb 2008.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2020-01-23  10:30<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2020-07-05  16:46<!-- #EndDate --> 
 </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 <script>
@@ -148,6 +149,16 @@ function makeListFromChars (chars, bicameral, lang, dir) {
 			out += '<p class="univiewLink"><a target="_blank" href="/uniview/?char='+hex+'">See in UniView</a></p>\n'
             out += '<div class="unicodenotes"></div>\n'           
             out += '<div class="notes">\n'           
+
+			if (document.getElementById('letter').checked) {
+				out += '<div class="letter '+lang+'">'
+				out += '<p class="titlepara">'+lang+'Title</p>\n'
+				out += '<p class="insertTranscription">&#x'+hex+';</p>\n'
+				out += '<p>xxx</p>\n'
+				out += '</div>\n'
+				}
+
+
 
             // add references
             //if (document.getElementById('refs') !== '') out += '\n'+document.getElementById('refs').value+'\n'
