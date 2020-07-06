@@ -3,37 +3,10 @@
 <head>
 <meta charset="utf-8"/>
 <title>Telugu script notes</title>
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <meta name="description" content="Summary of the Telugu script."/>
 <link rel="stylesheet" href="../../shared/style/docs.css" />
 <link rel="stylesheet" href="../common/local.css" />
-<!--link rel="stylesheet" href="../style/print.css"/-->
-<style>
-@font-face {
-    font-family: 'Noto Sans Telugu WF';
-    src: url('../../shared/webfonts/notosanstelugu-regular-webfont.woff2') format('woff2'),
-         url('../../shared/webfonts/notosanstelugu-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-	}
-@font-face {
-	font-family: 'Noto Serif thisScript WF';
-	src: 	local('Noto Serif thisScript'),
-			url('../../shared/webfonts/notoserifthisscript-regularwebfont.woff2') format('woff2'),  
-			url('../../shared/webfonts/notoserifthisscript-regularwebfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	}
-#freeText {
-	font-size: 28px;
-	font-family: Noto Sans Telugu WF, serif;
-	text-align: start;
-    line-height: 2;
-	}
-@media print { #freeText { font-size: 18px; } }
-[lang=tmp] { font-family: Noto Sans Telugu WF, 'thisScript WF', serif; font-size: 140%; }
-.large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }	
-</style>
+<link rel="stylesheet" href="te.css" />
 
 <script src="../../shared/scriptdb/telu.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
@@ -51,8 +24,10 @@
 <script src="../linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../glossary/glossary.js"> </script>
+<script src="../common/egcode.js"></script>
+<script src="te-examples.js"></script>
 
-<script src="../../shared/fontlists/thisscript.js"> </script>
+<script src="../../shared/fontlists/telu.js"> </script>
 <script src="te-translit.js">  </script>
 </head>
 
@@ -112,7 +87,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->13 June, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->6 July, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -123,8 +98,20 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
+<p>See also the companion document, <a href="block" class="linkHighlight">Telugu character notes</a>, for detailed information about specific Unicode characters.</p>
+<p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
+
+
+
+
 <details>
 <summary class="instructions"><a href="../links?iso=Telu">Related pages</a>.</summary>
+</details>
+
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
 </details>
 
 
@@ -218,7 +205,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
     <p>The typical unit of the orthography is the orthographic syllable, consisting of a consonant and vowel (CV) core and, optionally, one or more preceding consonants. Consonant letters by themselves constitute a CV unit, where the V is an <i class="term">inherent vowel</i>.  A dependent <i class="term">vowel-sign</i> is used to represent the V in CV units where  V is not the inherent vowel.</p>
 <p>In some cases, diacritics can be used to represent a syllable-final nasal.</p>
 <p>Telugu words almost always end in short vowels, although modern Telugu allows <span class="ipa">m</span>, <span class="ipa">n</span>, <span class="ipa">y</span>, and <span class="ipa">w</span> to end a word, and loan words sometimes end with long vowels.<a class="fnref" href="https://en.wikipedia.org/wiki/Telugu_language#Phonology">wl</a></p>
-<p>Geminate consonants are also a common feature of Telugu, mostly in word-medial positions, and are distinctive, eg. <span class="charExample" translate="no"><span class="ex" lang="te">గది</span> <span class="trans">gdi</span> <span class="ipa">ɡɐdi</span> <span class="meaning">room</span></span> vs. <span class="charExample" translate="no"><span class="ex" lang="te">గద్ది</span> <span class="trans">gd͓di</span> <span class="ipa">ɡɐdːi</span> <span class="meaning">throne</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Telugu_language#Phonology">wl</a></p>
+<p>Geminate consonants are also a common feature of Telugu, mostly in word-medial positions, and are distinctive, eg. <span class="eg" lang="te">గది</span> vs. <span class="eg" lang="te">గద్ది</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Telugu_language#Phonology">wl</a></p>
 <p>Unlike some other Dravidian languages, voiced sounds were always part of the Telugu language.<a class="fnref" href="https://en.wikipedia.org/wiki/Telugu_language#Phonology">wl</a></p>
 <p>Retroflex consonants appear initially (apart from <span class="ipa">ɳ</span> and <span class="ipa">ɭ</span>), and medially, where they may be part of a retroflex cluster.<a class="fnref" href="https://en.wikipedia.org/wiki/Telugu_language#Phonology">wl</a></p>
 <p><span class="ipa">j</span> occurs in word-initial position only in borrowed words, such as <span class="ipa">jɐnɡu</span> <span class="meaning">young</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Telugu_language#Phonology">wl</a></p>
@@ -631,8 +618,8 @@ alveolar</th>
 <section id="finals">
 <h3>Syllable-final consonants</h3>
 	<p>There are several ways of representing syllable-final nasals.</p>
-<p>Nasals can be written using <span class="codepoint" translate="no"><span lang="te">&#x0C02;</span> [<a href="/scripts/telugu/block#char0C02"><span class="uname">U+0C02 TELUGU SIGN ANUSVARA</span></a>]</span>. Before a plosive this is pronounced as a homorganic nasal, eg. <span class="charExample" translate="no"><span class="ex" lang="te">అంగము</span> <span class="trans">ạm̽gmu</span> <span class="ipa">aŋgamu</span> <span class="meaning">limb</span></span>. It is pronounced <span class="ipa">m</span> when followed by a non-plosive consonant, or at the end of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="te">సింహ</span> <span class="trans">sim̽h</span> <span class="ipa">simha</span> <span class="meaning">lion</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="te">లగాం</span> <span class="trans">lgām̽</span> <span class="ipa">lagaːm</span> <span class="meaning">bridle</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Telugu_language#Phonology">d415</a></p>
-<p>Syllable final h (usually pronounced ha) can be written with <span class="codepoint" translate="no"><span lang="te">&#x0C03;</span> [<a href="/scripts/telugu/block#char0C03"><span class="uname">U+0C03 TELUGU SIGN VISARGA</span></a>]</span>, which is principally used for Sanskrit words, eg. <span class="charExample" translate="no"><span class="ex" lang="te">పునః</span> <span class="trans">punh̽</span> <span class="ipa">punaha</span> <span class="meaning">again</span></span>.</p>
+<p>Nasals can be written using <span class="codepoint" translate="no"><span lang="te">&#x0C02;</span> [<a href="/scripts/telugu/block#char0C02"><span class="uname">U+0C02 TELUGU SIGN ANUSVARA</span></a>]</span>. Before a plosive this is pronounced as a homorganic nasal, eg. <span class="eg" lang="te">అంగము</span>. It is pronounced <span class="ipa">m</span> when followed by a non-plosive consonant, or at the end of a word, eg. <span class="eg" lang="te">సింహ</span>, and <span class="eg" lang="te">లగాం</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Telugu_language#Phonology">d415</a></p>
+<p>Syllable final h (usually pronounced ha) can be written with <span class="codepoint" translate="no"><span lang="te">&#x0C03;</span> [<a href="/scripts/telugu/block#char0C03"><span class="uname">U+0C03 TELUGU SIGN VISARGA</span></a>]</span>, which is principally used for Sanskrit words, eg. <span class="eg" lang="te">పునః</span>.</p>
 <p>The Unicode Standard describes a final <span class="ipa">n</span> sound that is represented by <span class="codepoint" translate="no"><span lang="te">&#x0C28;</span> + <span lang="te">&#x0C4D;</span> [<a href="/scripts/telugu/block#char0C28"><span class="uname">U+0C28 TELUGU LETTER NA</span></a> + <a href="/scripts/telugu/block#char0C4D"><span class="uname">U+0C4D TELUGU SIGN VIRAMA</span></a>]</span>. The modern shape of that would be <span class="charExample" translate="no"><span class="ex" lang="te">న్</span> <span class="trans">n͓</span></span>, but there is an older shape called <span class="name">nakāra pollu</span> which can be produced, if the fonts supports it. The difference is only font based. To prevent the virama joining the final n with an immediately following consonant, use ZWNJ after the virama.<a class="fnref" href="https://www.unicode.org/versions/latest/ch12.pdf">u500</a></p>
 </section>
 </section>
@@ -688,7 +675,7 @@ alveolar</th>
 
 <figure class="auto" data-cols="trans,transc">ప్ప␣బ్బ␣ఫ్ఫ␣భ్భ␣క్క␣స్స␣శ్శ␣మ్మ␣న్న␣వ్వ␣ళ్ళ␣య్య</figure>
 
-<p>In a cluster of this kind, any vowel-sign is attached to the initial consonant letter, eg. <span class="charExample" translate="no"><span class="ex" lang="te">అన్నీ</span> <span class="trans">ạn͓nī</span> <span class="ipa">anːi</span> <span class="meaning">all</span></span>.</p>
+<p>In a cluster of this kind, any vowel-sign is attached to the initial consonant letter, eg. <span class="eg" lang="te">అన్నీ</span>.</p>
 </section>
 
 
@@ -697,7 +684,7 @@ alveolar</th>
 
 <section id="reph">
 <h3>Reph form of <span class="uname" style="text-transform: none;">RA</span></h3>
-<p>In modern Telugu clusters that begin with <span class="trans">r</span> are formed in the normal way, eg. <span class="charExample" translate="no"><span class="ex" lang="te">గూర్చి</span> <span class="trans">gūr͓ci</span> <span class="ipa">guːrt͡ʃi</span> <span class="meaning">about</span></span>. </p>
+<p>In modern Telugu clusters that begin with <span class="trans">r</span> are formed in the normal way, eg. <span class="eg" lang="te">గూర్చి</span>. </p>
 <p>In older texts, however, the <span class="trans">r</span> is represented as a special form to the right of the second consonant, and the second consonant is left intact and carries any vowel-signs. See <a class="figref">fig_gurci</a> for an example. This effect can be produced in Unicode using ZWJ immediately after the virama, eg. in this case, <span class="codepoint" translate="no"><span lang="te">&#x0C30;</span> + <span lang="te">&#x0C4D;</span> + <span lang="te">ZWJ</span> + <span lang="te">&#x0C1A;</span> [<a href="/scripts/telugu/block#char0C30"><span class="uname">U+0C30 TELUGU LETTER RA</span></a> + <a href="/scripts/telugu/block#char0C4D"><span class="uname">U+0C4D TELUGU SIGN VIRAMA</span></a> + <a href="/scripts/telugu/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a> + <a href="/scripts/telugu/block#char0C1A"><span class="uname">U+0C1A TELUGU LETTER CA</span></a>]</span>, although not all fonts support it.</p>
 
 <figure id="fig_gurci">

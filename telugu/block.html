@@ -19,6 +19,8 @@
 <script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
+<script src="../common/egcode.js"></script>
+<script src="te-examples.js"></script>
 
 <script src="../../uniview/descriptions.js"></script> 
 <script src="../../uniview/u.js"></script> 
@@ -42,7 +44,8 @@
 </header>
 <h1>Telugu character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a></nav>
+<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
+
 
 <aside class="sidebar">
   <nav>
@@ -79,7 +82,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->31 January, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->6 July, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -89,22 +92,28 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <ul>
 <li><a href="../../uniview/?block=telugu" target="_blank">Telugu</a></li>
    </ul>
-   <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-<p>For details about how the script works, see the <a class="linkHighlight" href="index">Telugu</a> summary. For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Taml">Script links pages</a>.</p>
-<p><span style="text-align: start;">We have usage data for the following language that uses the Telugu script</span>: <span style="text-align: start;">Telugu</span>.</p>
+<p>See also the companion document, <a href="." class="linkHighlight">Telugu</a>, for a summary of the Telugu script and its use for the Telugu language.</p>
+<!--p>The page also lists characters from the <a href="../../uniview/?block=combining_diacritical_marks" target="_blank">Combining Diacritical Marks</a> and <a href="../../uniview/?block=arabic" target="_blank">Arabic</a> blocks that are commonly used by languages using the Syriac script.</p-->
 
-<p>Find <input type="text" id="findInput"
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+<p> Phonetic transcriptions should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
-<p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example. Click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
+
+
 <details>
-<summary class="instructions">Read more about how to use this page.</summary>
-    <p class="instructions">To <strong>find a character</strong> by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure hex codepoint number, all in uppercase. Or type the character or the hex number in the <samp>Find</samp> control just above.</p>
-    <p class="instructions">To view this page as intended, you  need a <strong>Telugu font</strong>.  This page comes with a Noto Sans Telugu webfont. Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system.  For transcriptions I recommend the excellent and free <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;item_id=DoulosSILfont">Doulos SIL font</a>. The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. (If there is no glyph and you want to see what it looks like, click on <samp>See in UniView</samp>.)</p>
-    <p class="instructions"><strong>Information about languages</strong> that use these characters is taken from the list maintained for the <a href="../../app-charuse/">Character Use app</a>. The list is not exhaustive.</p>
-<p class="instructions">The <strong>transliteration scheme </strong>was developed by myself, and, where possible, uses symbols that represent sounds typically associated with their equivalents, rather than the sometimes fairly arbitrary selection of diacritics found in other systems. Of course, the complexities of mapping graphemes to sounds means that this is far from a real phonetic transcription, but the process is reversible (unlike most transcriptions).</p>
-<p class="instructions"><strong>References</strong> are indicated by superscript characters. Wherever possible, those contain direct links to the source material. When such a pointer is alongside an arrow → it means that it's worth following the link for the additional information it provides. Digits refer to the main sources, which are listed at the bottom of a set of notes.</p>
-<p class="instructions">When you are using UniView and you turn on <samp>Show notes</samp>, UniView will pull in information about characters from this page.</p>
+<summary class="instructions"><a href="../links?iso=Telu">Related pages</a>.</summary>
+</details>
+
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#charnotes">Other character notes</a>.</summary>
+</details>
+
+
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Telugu','Telugu'); return false;">About this page</a></summary>
+<div id="about"></div>
 <p id="charliststr" class="instructions"></p>
 </details>
 </section>
@@ -151,8 +160,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter te">
 <p class="titlepara">Telugu</p>
-<p><span class="ipa">m, n, ŋ</span> as a homorganic nasal when it occurs before a plosive,  eg. <span class="charExample" translate="no"><span class="ex" lang="te">అంగము</span> <span class="trans">ạm̽gmu</span> <span class="ipa">aŋgamu</span> <span class="meaning">limb</span></span>. </p>
-<p><span class="ipa">m</span> when followed by a non-plosive consonant, or at the end of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="te">సింహ</span> <span class="trans">sim̽h</span> <span class="ipa">simha</span> <span class="meaning">lion</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="te">లగాం</span> <span class="trans">lgām̽</span> <span class="ipa">lagaːm</span> <span class="meaning">bridle</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Telugu_language#Phonology">d415</a>&nbsp;</p>
+<p><span class="ipa">m, n, ŋ</span> as a homorganic nasal when it occurs before a plosive,  eg. <span class="eg" lang="te">అంగము</span>. </p>
+<p><span class="ipa">m</span> when followed by a non-plosive consonant, or at the end of a word, eg. <span class="eg" lang="te">సింహ</span>, and <span class="eg" lang="te">లగాం</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Telugu_language#Phonology">d415</a>&nbsp;</p>
 </div>
 </div>
 </div>
@@ -165,7 +174,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter te">
 <p class="titlepara">Telugu</p>
-<p><span class="ipa">h, ha</span>, usually the latter,  used in syllable-final position, principally for Sanskrit words, eg. <span class="charExample" translate="no"><span class="ex" lang="te">పునః</span> <span class="trans">punh̽</span> <span class="ipa">punaha</span> <span class="meaning">again</span></span>.</p>
+<p><span class="ipa">h, ha</span>, usually the latter,  used in syllable-final position, principally for Sanskrit words, eg. <span class="eg" lang="te">పునః</span>.</p>
 </div>
 </div>
 </div>
@@ -249,7 +258,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter te">
 <p class="titlepara"><span class="title">Telugu</span></p>
-<p><span class="ipa>">ru</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="te">ఋజువు</span> <span class="trans">r̥̣ɟuʋu</span> <span class="meaning">evidence</span></span>.</p>
+<p><span class="ipa>">ru</span>, eg. <span class="eg" lang="te">సమృద్ధిగా</span>
 </div>
 </div>
 </div>
@@ -394,8 +403,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter te">
 <p class="titlepara"><span class="title">Telugu</span></p>
-<p><span class="ipa">t͡ʃ</span> in native Dravidian words before <span class="ipa">i</span> and <span class="ipa">e</span> sounds (long or short), and in Sanskrit words, eg. <span class="charExample" translate="no"><span class="ex" lang="te">చలనము</span> <span class="trans">clnmu</span> <span class="ipa">t͡ʃʌlənəmu</span> <span class="meaning">motion</span></span>.</p>
-<p><span class="ipa">t͡s</span> in native Dravidian words when followed by <span class="ipa">a</span>, <span class="ipa">o</span> or <span class="ipa">u</span> sounds, eg. <span class="charExample" translate="no"><span class="ex" lang="te">చాలా</span> <span class="trans">cālā</span> <span class="ipa">t͡saːlaː</span> <span class="meaning">many</span></span><span class="charExample" translate="no"><span class="meaning"></span></span>.<a class="fnref" href="#refs">d417</a></p>
+<p><span class="ipa">t͡ʃ</span> in native Dravidian words before <span class="ipa">i</span> and <span class="ipa">e</span> sounds (long or short), and in Sanskrit words, eg. <span class="eg" lang="te">చలనము</span>.</p>
+<p><span class="ipa">t͡s</span> in native Dravidian words when followed by <span class="ipa">a</span>, <span class="ipa">o</span> or <span class="ipa">u</span> sounds, eg. <span class="eg" lang="te">చాలా</span>.<a class="fnref" href="#refs">d417</a></p>
 <p>This precomposed, single character should be used rather than the combination of <span class="codepoint" translate="no"><span lang="te">&#x0C46;</span> + <span lang="te">&#x0C55;</span> [<a href="/scripts/telugu/block#char0C46"><span class="uname">U+0C46 TELUGU VOWEL SIGN E</span></a> + <a href="/scripts/telugu/block#char0C55"><span class="uname">U+0C55 TELUGU LENGTH MARK</span></a>]</span>. This character doesn't decompose.</p>
 </div>
 </div>
@@ -409,8 +418,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter te">
 <p class="titlepara"><span class="title">Telugu</span></p>
-<p><span class="ipa">d͡ʒ</span> in native Dravidian words before <span class="ipa">i</span> and <span class="ipa">e</span> sounds (long or short), and in Sanskrit words, eg. <span class="charExample" translate="no"><span class="ex" lang="te">జన్మము</span> <span class="trans">ɟn͓mmu</span> <span class="ipa">d͡ʒʌnməmu</span> <span class="meaning">birth</span></span>.</p>
-<p><span class="ipa">d͡z</span> in native Dravidian words when followed by <span class="ipa">a</span>, <span class="ipa">o</span> or <span class="ipa">u</span> sounds, eg. <span class="charExample" translate="no"><span class="ex" lang="te">జాగు</span> <span class="trans">ɟāgu</span> <span class="ipa">d͡zaːgu</span> <span class="meaning">delay</span></span><span class="charExample" translate="no"><span class="meaning"></span></span>.<a class="fnref" href="#refs">d417</a></p>
+<p><span class="ipa">d͡ʒ</span> in native Dravidian words before <span class="ipa">i</span> and <span class="ipa">e</span> sounds (long or short), and in Sanskrit words, eg. <span class="eg" lang="te">జన్మము</span>.</p>
+<p><span class="ipa">d͡z</span> in native Dravidian words when followed by <span class="ipa">a</span>, <span class="ipa">o</span> or <span class="ipa">u</span> sounds, eg. <span class="eg" lang="te">జాగు</span>.<a class="fnref" href="#refs">d417</a></p>
 <p>This precomposed, single character should be used rather than the combination of <span class="codepoint" translate="no"><span lang="te">&#x0C46;</span> + <span lang="te">&#x0C55;</span> [<a href="/scripts/telugu/block#char0C46"><span class="uname">U+0C46 TELUGU VOWEL SIGN E</span></a> + <a href="/scripts/telugu/block#char0C55"><span class="uname">U+0C55 TELUGU LENGTH MARK</span></a>]</span>. This character doesn't decompose.</p>
 </div>
 </div>
@@ -424,8 +433,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter te">
 <p class="titlepara">Telugu</p>
-<p><span class="ipa">d͡ʒ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="te">ప్రజలు</span> <span class="trans">p͓rɟlu</span> <span class="ipa">prad͡ʒalu</span> <span class="meaning">people</span></span>.</p>
-<p><span class="ipa">ɟ</span> in the consonant cluster <span class="charExample" translate="no"><span class="ex" lang="te">జ్ఞ</span> <span class="trans">ɟ͓ɲ</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="te">జ్ఞానము</span> <span class="trans">ɟ͓ɲānmu</span> <span class="ipa">ɟɲaːnəmu</span> <span class="meaning">knowledge</span></span>.<a class="fnref" href="#refs">d</a></p>
+<p><span class="ipa">d͡ʒ</span>, eg. <span class="eg" lang="te">ప్రజలు</span>.</p>
+<p><span class="ipa">ɟ</span> in the consonant cluster <span class="charExample" translate="no"><span class="ex" lang="te">జ్ఞ</span> <span class="trans">ɟ͓ɲ</span></span>, eg. <span class="eg" lang="te">జ్ఞానము</span>.<a class="fnref" href="#refs">d</a></p>
 </div>
 </div>
 </div>
@@ -694,8 +703,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter te">
 <p class="titlepara">Telugu</p>
-<p><span class="ipa">h</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="te">మహిళ</span> <span class="trans">mhiɭ</span> <span class="ipa">mahiɭa</span> <span class="meaning">woman</span></span>.</p>
-<p>In clusters where this occurs initially, the order of sounds may be reversed, eg. <span class="charExample" translate="no"><span class="ex" lang="te">చిహ్నము</span> <span class="trans">cih͓nmu</span> <span class="ipa">t͡ʃinha</span> <span class="meaning">sign</span></span>.<a class="fnref" href="#refs">d417</a></p>
+<p><span class="ipa">h</span>, eg. <span class="eg" lang="te">మహిళ</span>.</p>
+<p>In clusters where this occurs initially, the order of sounds may be reversed, eg. <span class="eg" lang="te">చిహ్నము</span>.<a class="fnref" href="#refs">d417</a></p>
 </div>
 </div>
 </div>
@@ -735,7 +744,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter te">
 <p class="titlepara"><span class="title">Telugu</span></p>
 <p>aː but ...</p>
-<p>æː when it occurs in the past tense suffix, eg. <span class="charExample" translate="no"><span class="ex" lang="te">తాగాను</span> <span class="trans">tāgānu</span> <span class="ipa">taːgæːnu</span> <span class="meaning">I drank</span></span>.<a class="fnref" href="#refs">d417</a></p>
+<p>æː when it occurs in the past tense suffix, eg. <span class="eg" lang="te">తాగాను</span>.<a class="fnref" href="#refs">d417</a></p>
 </div>
 </div>
 </div>
@@ -788,7 +797,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter te">
 <p class="titlepara"><span class="title">Telugu </span></p>
-<p><span class="ipa">ru</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="te">సమృద్ధిగా</span> <span class="trans">smr̥d͓dʰigā</span> <span class="meaning">rich</span></span>.</p>
+<p><span class="ipa">ru</span>, eg. <span class="eg" lang="te">సమృద్ధిగా</span>.</p>
 </div>
 </div>
 </div>
@@ -820,7 +829,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter te">
 <p class="titlepara"><span class="title">Telugu</span></p>
 <p><span class="ipa">eː</span>, but</p>
-<p><span class="ipa">æː</span> when the first syllable in a word followed by <span class="ipa">a</span> or aː, eg. <span class="charExample" translate="no"><span class="ex" lang="te">మేడ</span> <span class="trans">mēɖ</span> <span class="ipa">mæːɽa</span> <span class="meaning">mansion</span></span>.<a class="fnref" href="#refs">d417</a></p>
+<p><span class="ipa">æː</span> when the first syllable in a word followed by <span class="ipa">a</span> or aː, eg. <span class="eg" lang="te">మేడ</span>.<a class="fnref" href="#refs">d417</a></p>
 <p>This precomposed, single character should be used rather than the combination of <span class="codepoint" translate="no"><span lang="te">&#x0C46;</span> + <span lang="te">&#x0C55;</span> [<a href="/scripts/telugu/block#char0C46"><span class="uname">U+0C46 TELUGU VOWEL SIGN E</span></a> + <a href="/scripts/telugu/block#char0C55"><span class="uname">U+0C55 TELUGU LENGTH MARK</span></a>]</span>. This character doesn't decompose.</p>
 </div>
 </div>
@@ -1250,7 +1259,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <script>
 replaceStuff('Telugu', 'te', spreadsheet, '', 'te', '', cols, true)
-
+addExamples('te')
 //replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, showShape)
 </script> 
 
