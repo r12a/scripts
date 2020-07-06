@@ -3,37 +3,11 @@
 <head>
 <meta charset="utf-8"/>
 <title>Malayalam script notes</title>
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <meta name="description" content="Summary of the Malayalam script."/>
+
 <link rel="stylesheet" href="../../shared/style/docs.css" />
 <link rel="stylesheet" href="../common/local.css" />
-<!--link rel="stylesheet" href="../style/print.css"/-->
-<style>
-@font-face {
-    font-family: 'Malayalam WF';
-    src: url('../../shared/webfonts/NotoSansMalayalamUI-Regularwebfont.woff2') format('woff2'),
-         url('../../shared/webfonts/NotoSansMalayalamUI-Regularwebfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-	}
-@font-face {
-	font-family: 'Noto Serif Malayalam WF';
-	src: 	local('Noto Serif Malayalam'),
-			url('../../shared/webfonts/notoserifmalayalam-regular-webfont.woff2') format('woff2'),  
-			url('../../shared/webfonts/notoserifmalayalam-regular-webfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	}
-#freeText {
-	font-size: 28px;
-	font-family: Noto Serif Malayalam WF, serif;
-	text-align: start;
-    line-height: 2;
-	}
-@media print { #freeText { font-size: 18px; } }
-[lang=ml] { font-family: "Noto Serif Malayalam WF", 'Malayalam WF', serif; font-size: 140%; }
-.large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }	
-</style>
+<link rel="stylesheet" href="ml.css" />
 
 <script src="../../shared/scriptdb/malayalam.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
@@ -50,6 +24,8 @@
 <script src="../../shared/code/getLinks.js"></script>
 <script src="../linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
+<script src="../common/egcode.js"></script>
+<script src="ml-examples.js"></script>
 
 <script src="../../shared/fontlists/malayalam.js"> </script>
 <script src="ml-translit.js">  </script>
@@ -113,7 +89,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->13 June, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->6 July, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -125,8 +101,20 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
+<p>See also the companion document, <a href="block" class="linkHighlight">Malayalam character notes</a>, for detailed information about specific Unicode characters.</p>
+<p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
+
+
+
+
 <details>
 <summary class="instructions"><a href="../links?iso=Mlym">Related pages</a>.</summary>
+</details>
+
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
 </details>
 
 
@@ -382,8 +370,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <h3>Vowel absence &amp; half-u</h3>
 <p>Malayalam uses &nbsp;<span class="codepoint" translate="no"><span lang="ml">&#x0D4D;</span> [<a href="/scripts/malayalam/block#char0D4D"><span class="uname">U+0D4D MALAYALAM SIGN VIRAMA</span></a>]</span> (in Malayalam called <span class="charExample" translate="no"><span class="ex" lang="ml">ചന്ദ്രക്കല</span> <span class="trans">cn͓d͓rk͓kl (candrakkala)</span> <span class="ipa">ʧand̪r̪akkala</span></span>) to kill the inherent vowel after a consonant, eg.<span class="charExample" translate="no"><span class="ex" lang="ml"> ക്</span> <span class="trans">k͓</span></span> explicitly represents just the sound k. </p>
 <p>However, in modern text, at the end of a word the combination <span class="charExample" translate="no"><span class="ex" lang="ml"> ക്</span> <span class="trans">k͓</span></span> may also represent the sound <span class="ipa">kə̆</span> or <span class="ipa">kɨ̆</span> (depending on dialect). The transcription for this is usually <span class="trans">ŭ</span>, and it is called <span class="name">half-u</span>.</p>
-<p>In older documents the <span class="name">half-u</span> was typically written with a <span class="trans">u</span> vowel-sign plus <span class="name">chandrakkala</span>, which is not ambiguous, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">പാലു്</span> <span class="trans">pālu͓</span> <span class="ipa">pālə̆</span> <span class="meaning">milk</span></span>.</p>
-<p>The Unicode Standard provides examples of <span class="name">half-u</span> occurring in positions that are not word-final (that is, not immediately before a space), eg. <span class="charExample" translate="no"><span class="ex" lang="ml">ഐശീല്ം</span> <span class="trans">ạʲʃīl͓m̽ (aiśīlŭṃ)</span> <span class="ipa">ai̯ʃiːləm</span> <span class="meaning">than ice</span></span>. In another example, the <span class="name">chandrakkala</span> is attached to an independent vowel letter, and overrides the sound of that letter, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">എ്ന്നാ</span> <span class="trans">ẹ͓n͓nā</span> <span class="ipa">ənnaː</span> <span class="meaning">on which day?</span></span></p>
+<p>In older documents the <span class="name">half-u</span> was typically written with a <span class="trans">u</span> vowel-sign plus <span class="name">chandrakkala</span>, which is not ambiguous, eg. <span class="eg" lang="ml">പാലു്</span>.</p>
+<p>The Unicode Standard provides examples of <span class="name">half-u</span> occurring in positions that are not word-final (that is, not immediately before a space), eg. <span class="eg" lang="ml">ഐശീല്ം</span>. In another example, the <span class="name">chandrakkala</span> is attached to an independent vowel letter, and overrides the sound of that letter, eg. <span class="eg" lang="ml">എ്ന്നാ</span></p>
 <p>The <span class="name">chandrakkala</span> is always written after any vowel-sign and before any final consonant (such as anusvara).</p>
 <p>See also <a class="secref">clusters</a>, where the <span class="name">chandrakkala</span> can be hidden between consonant clusters, and <a class="secref">finals</a>.</p>
 </section>
@@ -399,7 +387,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <p>Other than the inherent vowel, vowel sounds that follow a consonant sound are represented using vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">കി</span> <span class="ipa">ki</span></span>. This includes 3 diphthongs, 3 prescript signs, and 3 circumgraphs.</p>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ി␣ീ␣ു␣ൂ␣െ␣േ␣ൊ␣ോ␣ാ␣ൈ␣ൗ␣ൌ</figure>
 <p>In modern text, <span class="codepoint" translate="no"><span lang="ml">&#x0D57;</span> [<a href="/scripts/malayalam/block#char0D57"><span class="uname">U+0D57 MALAYALAM AU LENGTH MARK</span></a>]</span> has become a dominant way to write the vowel <span class="ipa">au̯</span>, rather than <span class="codepoint" translate="no"><span lang="ml">&#x0D4C;</span> [<a href="/scripts/malayalam/block#char0D4C"><span class="uname">U+0D4C MALAYALAM VOWEL SIGN AU</span></a>]</span>. </p>
-<p>Vowel-signs may also be attached to digits, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">355ാം</span> <span class="trans">355ām̽</span> <span class="meaning">355th</span></span>. <sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u505</a></sup></p>
+<p>Vowel-signs may also be attached to digits, eg. <span class="eg" lang="ml">355ാം</span>.<sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u505</a></sup></p>
 
 <p>Malayalam vowel-signs are all combining characters. In principle a single Unicode character is used per base consonant, even if the vowel-signs appear on both sides of the base consonant, but 3 vowel signs decompose to more than one character. See also <a class="secref">multipart</a>. All vowel-signs are typed and stored after the base consonant, and the font puts them in the correct place for display.</p>
 <p>All of the vowel-signs are <em>spacing</em> marks, meaning that they consume horizontal space when added to a base consonant.</p>
@@ -621,7 +609,7 @@ alveolar</th>
 
 <figure class="archaicBox auto" data-cols="ipa,trans,transc">ഩ␣ഺ</figure>
 
-<p><span class="charExample" translate="no">The conjunct <span class="ex" lang="ml">ക്ഷ</span> <span class="trans">k͓ʂ</span></span> is conventionally regarded as an additional letter. <sup><a href="#refs">d420</a></sup></p>
+<p>The conjunct <span class="ex" lang="ml">ക്ഷ</span> <span class="trans">k͓ʂ</span> is conventionally regarded as an additional letter. <sup><a href="#refs">d420</a></sup></p>
 </section>
 
 
@@ -631,7 +619,7 @@ alveolar</th>
 
 <section id="finals">
 <h3>Syllable-final consonants</h3>
-<p>Words ending with <span class="name">chandrakkala</span> may be pronounced with a half-u sound after. In order to indicate a consonant with no following vowel sound at all the following <span class="name">chillu</span> (or <span class="name">cillakṣaram</span>) characters can be used, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">വില്ലൻ</span> <span class="trans">ʋil͓ln̽</span> <span class="ipa">ʋillan</span> <span class="meaning">villain</span></span>.</p>
+<p>Words ending with <span class="name">chandrakkala</span> may be pronounced with a half-u sound after. In order to indicate a consonant with no following vowel sound at all the following <span class="name">chillu</span> (or <span class="name">cillakṣaram</span>) characters can be used, eg. <span class="eg" lang="ml">വില്ലൻ</span>.</p>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ൿ␣ൺ␣ൻ␣ർ␣ൽ␣ൾ</figure>
 
 <p><span class="codepoint" translate="no"><span lang="ml">&#x0D7F;</span> [<a href="/scripts/malayalam/block#char0D7F"><span class="uname">U+0D7F MALAYALAM LETTER CHILLU K</span></a>]</span> is relatively rare.<sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u505</a></sup></p>
@@ -639,7 +627,7 @@ alveolar</th>
 <figure class="otherBox auto" data-cols="">ൔ␣ൕ␣ൖ</figure>
 
 <p>In older Unicode text the first 5 chillus in the list above were written using the combination <span class="uname">consonant+VIRAMA+ZWJ</span>, but since the introduction of the chillu characters in Unicode v5.1 these precomposed characters are recommended.</p>
-<p>Malayalam also uses the anusvara and visarga as syllable-final characters, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">ദുഃഖം</span> <span class="trans">duh̽kʰm̽</span> <span class="ipa">d̪uɦkʰam</span> <span class="meaning">sorrow</span></span>.</p>
+<p>Malayalam also uses the anusvara and visarga as syllable-final characters, eg. <span class="eg" lang="ml">ദുഃഖം</span>.</p>
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ം␣ഃ</figure>
 
@@ -759,10 +747,10 @@ http://localhost/pickers/malayalam/?text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3
 
 <section id="rra_conjuncts">
 <h3>Clusters with  <span class="charExample" translate="no"><span lang="ml">റ</span></span> (<span class="uname" style="text-transform: uppercase;">RRA</span>)</h3>
-	<p>The conjunct <span class="charExample" translate="no"><span class="ex" lang="ml">റ്റ</span> <span class="trans">ṙ͓ṙ</span></span> is always pronounced <span class="ipa">tta</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">പാറ്റ</span> <span class="trans">pāṙ͓ṙ</span> <span class="ipa">paːtta</span> <span class="meaning">cockroach</span></span>.</p>
-<p>The same word could be spelled <span class="charExample" translate="no"><span class="ex" lang="ml">പാററ</span> <span class="trans">pāṙṙ</span></span>, and until the 1960s, when the stacked version began to appear, would have been, but this would be ambiguous, cf. <span class="charExample" translate="no"><span class="ex" lang="ml">ടെംപററി</span> <span class="trans">ʈem̽pṙṙi</span> <span class="ipa">ʈemparari</span> <span class="meaning">temporary</span></span>.<sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u506</a></sup> It would be particularly ambiguous when there are more than 2 <span class="uname">RRA</span> characters side by side, eg. compare <span class="charExample" translate="no"><span class="ex" lang="ml">കിലോമീറ്ററുകൾ</span> <span class="trans">kilōmīṙ͓ṙṙukɭ̽</span> <span class="ipa">kiloːmiːṯṯarukaɭ</span> <span class="meaning">kilometers</span></span> with <span class="charExample" translate="no"><span class="ex" lang="ml">കിലോമീറററുകൾ</span> <span class="trans">kilōmīṙṙṙukɭ̽</span></span>.</p>
-<p>If a word with the sound <span class="ipa">tt</span> is spelled using an unstacked pair of these characters, the pair acts as a single unit with prescript vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">മാറെറാലി</span> <span class="trans">māṙeṙāli</span> <span class="ipa">maːṯṯoli</span> <span class="meaning">echo</span></span>. To achieve the correct positioning of vowel-signs here, however, it is necessary to use the decomposed forms of the vowel (see the transcription). Otherwise you would end up with <span class="charExample" translate="no"><span class="ex" lang="ml">മാററൊലി</span> <span class="trans">māṙṙoli</span></span>, where the prescript part of the vowel is in the wrong place.</p>
-<p>Similarly, <span class="charExample" translate="no"><span class="ex" lang="ml">ൻ്റ</span> <span class="trans">n͓̽ṙ</span></span> is always pronounced <span class="ipa">nta</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">ആൻ്റോ</span> <span class="trans">ận͓̽ṙō</span> <span class="ipa">aːntoː</span> <span class="meaning">proper name</span></span>.</p>
+	<p>The conjunct <span class="charExample" translate="no"><span class="ex" lang="ml">റ്റ</span> <span class="trans">ṙ͓ṙ</span></span> is always pronounced <span class="ipa">tta</span>, eg. <span class="eg" lang="ml">പാറ്റ</span>.</p>
+<p>The same word could be spelled <span class="charExample" translate="no"><span class="ex" lang="ml">പാററ</span> <span class="trans">pāṙṙ</span></span>, and until the 1960s, when the stacked version began to appear, would have been, but this would be ambiguous, cf. <span class="eg" lang="ml">ടെംപററി</span>.<sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u506</a></sup> It would be particularly ambiguous when there are more than 2 <span class="uname">RRA</span> characters side by side, eg. compare <span class="eg" lang="ml">കിലോമീറ്ററുകൾ</span> with <span class="charExample" translate="no"><span class="ex" lang="ml">കിലോമീറററുകൾ</span> <span class="trans">kilōmīṙṙṙukɭ̽</span></span>.</p>
+<p>If a word with the sound <span class="ipa">tt</span> is spelled using an unstacked pair of these characters, the pair acts as a single unit with prescript vowels, eg. <span class="eg" lang="ml">മാറെറാലി</span>. To achieve the correct positioning of vowel-signs here, however, it is necessary to use the decomposed forms of the vowel (see the transcription). Otherwise you would end up with <span class="charExample" translate="no"><span class="ex" lang="ml">മാററൊലി</span> <span class="trans">māṙṙoli</span></span>, where the prescript part of the vowel is in the wrong place.</p>
+<p>Similarly, <span class="charExample" translate="no"><span class="ex" lang="ml">ൻ്റ</span> <span class="trans">n͓̽ṙ</span></span> is always pronounced <span class="ipa">nta</span>, eg. <span class="eg" lang="ml">ആൻ്റോ</span>.</p>
 <p>According to the Unicode Standard, an alternative spelling exists without the stack, ie. <span class="charExample" translate="no"><span class="ex" lang="ml">ആൻേറാ</span> <span class="trans">ận̽ēṙā</span> <span class="ipa">aːntoː</span></span> (note that again we had to split the vowel), but this can also lead to ambiguity.<sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u506</a></sup></p>
 </section>
     
