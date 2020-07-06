@@ -19,14 +19,14 @@
 <script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
+<script src="../common/egcode.js"></script>
+<script src="tdd-examples.js"></script>
 
 <script src="../../uniview/descriptions.js"></script> 
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/taile.js"> </script>
 <script src="tdd-translit.js">  </script>
-
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 <style id="includeStyles"></style>
 </head>
@@ -38,7 +38,8 @@
 </header>
 <h1>Tai Le character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a></nav>
+<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
+
 
 <aside class="sidebar">
   <nav>
@@ -75,7 +76,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->20 January, 2020<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->6 July, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -85,22 +86,28 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <ul>
 <li><a href="../../uniview/?block=taile" target="_blank">Tai Le</a></li>
    </ul>
-   <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-<p><!--For a summary of the script and its use in  writing systems, see the page <a class="linkHighlight" href="/scripts/taile/">Tai Le script summary</a>.-->For details about how the script works, see the <a class="linkHighlight" href="index">Tai Le/Tai Nüa</a> summary.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Tale">Script links pages</a>.</p>
-<p><span style="text-align: start;">We have usage data for the following  language that uses the Tai Le script</span>: Tai Nüa.</p>
+<p>See also the companion document, <a href="." class="linkHighlight">Tai Le/</a><a class="linkHighlight" href="index">Tai Nüa</a>, for a summary of the UCAS script and its use for the Inuktitut language.</p>
+<!--p>The page also lists characters from the <a href="../../uniview/?block=combining_diacritical_marks" target="_blank">Combining Diacritical Marks</a> and <a href="../../uniview/?block=arabic" target="_blank">Arabic</a> blocks that are commonly used by languages using the Syriac script.</p-->
 
-<p>Find <input type="text" id="findInput"
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+<p> Phonetic transcriptions should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
-<p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example. Click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
+
 
 <details>
-<summary class="instructions">Read more about how to use this page.</summary>
-    <p class="instructions">To <strong>find a character</strong> by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or the hex number in the <samp>Find</samp> control above.</p>
-    <p class="instructions">To view this page as intended, you  need a <strong>Tai Le font</strong>.  A Tai Le webfont is provided with this page. Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system.  For transcriptions I recommend the excellent and free <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;item_id=DoulosSILfont">Doulos SIL font</a>. The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. (If there is no glyph and you want to see what it looks like, click on <samp>See in UniView</samp>.)</p>
-    <p class="instructions"><strong>Information about languages</strong> that use these characters is taken from the list maintained for the Character Use app. The list is not exhaustive.</p>
-<p class="instructions"><strong>References</strong> are indicated by superscript characters. Wherever possible, those contain direct links to the source material. When such a pointer is alongside an arrow → it means that it's worth following the link for the additional information it provides. Digits refer to the main sources, which are listed at the bottom of a set of notes.</p>
-<p class="instructions">When you are using UniView and you turn on <samp>Show notes</samp>, UniView will pull in information about characters from this page.</p>
+<summary class="instructions"><a href="../links?iso=Tale">Related pages</a>.</summary>
+</details>
+
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#charnotes">Other character notes</a>.</summary>
+</details>
+
+
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Tai Le','Tai Nüa'); return false;">About this page</a></summary>
+<div id="about"></div>
 <p id="charliststr" class="instructions"></p>
 </details>
 </section>
@@ -520,7 +527,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <section id="tones">
 <h2>Tone letters</h2>
-<p>The first tone, pitch 33, has no marker, eg. <span class="charExample" translate="no"><span class="ex" lang="tdd">ᥛᥥ</span> <span class="trans">me¹̱</span> <span class="meaning">mother</span></span>.</p>
+<p>The first tone, pitch 33, has no marker, eg. <span class="eg" lang="tdd">ᥛᥥ</span>.</p>
   
   
 <div class="character" id="char1970">
@@ -532,7 +539,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Tai Nüa</span></p>
 <p> 55 pitch.<a class="fnref" href="http://www.seasite.niu.edu/tai/TaiDehong/">t</a></p>
 <p>Tone letter introduced in 1988, during the 4th script reform, that appears  after all previous letters in a syllable.</p>
-<p>Occurs in open  syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="tdd">ᥛᥣ&#x1970;</span> <span class="trans">ma²̱</span> <span class="meaning">to come</span></span>.</p>
+<p>Occurs in open  syllables, eg. <span class="eg" lang="tdd">ᥛᥣ&#x1970;</span>.</p>
 <p class="tonePairing">The corresponding diacritic introduced during the 3rd reform, in 1963/1964, is <span class="codepoint" translate="no"><span lang="tdd">&#x0308;</span> [<a href="/scripts/taile/block#char0308"><span class="uname">U+0308 COMBINING DIAERESIS</span></a>]</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Tai_Le_script">w</a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -551,7 +558,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Tai Nüa</span></p>
 <p> 11 pitch.<a class="fnref" href="http://www.seasite.niu.edu/tai/TaiDehong/">t</a></p>
 <p>Tone letter introduced in 1988, during the 4th script reform, that appears  after all previous letters in a syllable. </p>
-<p>Occurs in open and checked (ie. ending in -p, -t, -k) syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="tdd">ᥛᥣ&#x1971;</span> <span class="trans">ma³̱</span> <span class="meaning">shoulder</span></span>, <span class="charExample" translate="no"><span class="ex" lang="tdd">ᥞᥨᥐᥱ</span> <span class="trans">hok³̱</span> <span class="meaning">six</span></span>.</p>
+<p>Occurs in open and checked (ie. ending in -p, -t, -k) syllables, eg. <span class="eg" lang="tdd">ᥛᥣ&#x1971;</span>, <span class="eg" lang="tdd">ᥞᥨᥐᥱ</span>.</p>
 <p class="tonePairing">The corresponding diacritic introduced during the 3rd reform, in 1963/1964, is <span class="codepoint" translate="no"><span lang="en-fonipa">&#x030C;</span> [<a href="/scripts/latin/block#char030C"><span class="uname">U+030C COMBINING CARON</span></a>]</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Tai_Le_script">w</a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -570,7 +577,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Tai Nüa</span></p>
 <p> 31 pitch.<a class="fnref" href="http://www.seasite.niu.edu/tai/TaiDehong/">t</a></p>
 <p>Tone letter introduced in 1988, during the 4th script reform, that appears  after all previous letters in a syllable.</p>
-<p>Occurs in open  syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="tdd">ᥛᥣ&#x1972;</span> <span class="trans">ma⁴̱</span> <span class="meaning">hemp</span></span>.</p>
+<p>Occurs in open  syllables, eg. <span class="eg" lang="tdd">ᥛᥣ&#x1972;</span>.</p>
 <p class="tonePairing">The corresponding diacritic introduced during the 3rd reform, in 1963/1964, is <span class="codepoint" translate="no"><span lang="en-fonipa">&#x0300;</span> [<a href="/scripts/latin/block#char0300"><span class="uname">U+0300 COMBINING GRAVE ACCENT</span></a>]</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Tai_Le_script">w</a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -590,7 +597,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Tai Nüa</span></p>
 <p> 53 pitch.<a class="fnref" href="http://www.seasite.niu.edu/tai/TaiDehong/">t</a></p>
 <p>Tone letter introduced in 1988, during the 4th script reform, that appears  after all previous letters in a syllable. </p>
-<p>Occurs in open and checked (ie. ending in -p, -t, -k) syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="tdd">ᥛᥣ&#x1973;</span> <span class="trans">ma⁵̱</span> <span class="meaning">horse</span></span>, <span class="charExample" translate="no"><span class="ex" lang="tdd">ᥘᥩᥐᥳ</span> <span class="trans">lɔk⁴̱</span> <span class="meaning">outside</span></span>.</p>
+<p>Occurs in open and checked (ie. ending in -p, -t, -k) syllables, eg. <span class="eg" lang="tdd">ᥛᥣ&#x1973;</span>, <span class="eg" lang="tdd">ᥘᥩᥐᥳ</span>.</p>
 <p class="tonePairing">The corresponding diacritic introduced during the 3rd reform, in 1963/1964, is <span class="codepoint" translate="no"><span lang="en-fonipa">&#x0307;</span> [<a href="/scripts/latin/block#char0307"><span class="uname">U+0307 COMBINING DOT ABOVE</span></a>]</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Tai_Le_script">w</a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -610,7 +617,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Tai Nüa</span></p>
 <p> 24 pitch.<a class="fnref" href="http://www.seasite.niu.edu/tai/TaiDehong/">t</a></p>
 <p>Tone letter introduced in 1988, during the 4th script reform, that appears  after all previous letters in a syllable. </p>
-<p>Occurs in open and checked (ie. ending in -p, -t, -k) syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="tdd">ᥛᥣ&#x1974;</span> <span class="trans">ma⁶̱</span> <span class="meaning">dog</span></span>, <span class="charExample" translate="no"><span class="ex" lang="tdd">ᥘᥣᥐᥴ</span> <span class="trans">lak⁶̱</span> <span class="meaning">heavy</span></span>.</p>
+<p>Occurs in open and checked (ie. ending in -p, -t, -k) syllables, eg. <span class="eg" lang="tdd">ᥛᥣ&#x1974;</span>, <span class="eg" lang="tdd">ᥘᥣᥐᥴ</span>.</p>
 <p class="tonePairing">The corresponding diacritic introduced during the 3rd reform, in 1963/1964, is <span class="codepoint" translate="no"><span lang="en-fonipa">&#x0301;</span> [<a href="/scripts/latin/block#char0301"><span class="uname">U+0301 COMBINING ACUTE ACCENT</span></a>]</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Tai_Le_script">w</a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -641,6 +648,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 <script>
 replaceStuff('Tai Nüa', 'tainua', spreadsheet, '', 'tdd', '', cols, false)
+addExamples('tdd')
 </script> 
 
 
