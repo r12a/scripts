@@ -1,0 +1,130 @@
+<span class="charExample" translate="no"><span class="ex" lang="ml">([^<]+)</span> <span class="trans">([^<]+)</span> <span class="ipa">([^<]+)</span> <span class="meaning">([^<]+)</span></span>
+
+
+
+
+<span class="eg" lang="ml">$1</span>
+
+
+
+
+
+**Misc**
+- [ ] find vocab for remaining phones in map
+- [ ] add links to newspapers, etc.
+
+**Quick standardisation**
+- [ ] **summary**
+    - [ ] move CSS into external file
+    - [ ] link to 'other summaries'
+    - [ ] add para about phonetic transcriptions to intro
+    - [ ] link to characters page
+- [ ] **block**
+    - [ ] check has latest template at top
+    - [ ] add auto transcription
+    - [ ] link to summary page
+    - [ ] update fixed nav with search
+- [ ] **picker**
+    - [ ] simplify placeholder text to 'Type assist (T) is on.'
+    - [ ] check that works on iPad
+    - [ ] add Make Vocab
+- [ ] **examples**
+    - [ ] extract terms & add to examples.js
+    - [ ] add new examples mechanism (2 lines at top)
+    - [ ] replace current examples with class=eg ones
+        - [ ] summary
+        - [ ] block
+
+**In depth standardisation**
+- [ ] **history & usage** rewrite
+- [ ] **map** - should tally with block data
+    - [ ] vowels
+    - [ ] consonants
+- [ ] **spreadsheet** review
+    - [ ] key 
+        - [ ] make keys conform to most common transcription
+        - [ ] move transcription column next to 
+        - [ ] order items to facilitate best order for display of items on keypress
+    - [ ] check IPA transcriptions are accurate
+    - [ ] translit - symbols should be initially based on IPA transcription (check c, j, y) with optimisations, BUT composites should show components
+    - [ ] check that all punctuation & symbols match standard mappings
+- [ ] **block**
+    - [ ] reorganise to be in Unicode code page order
+    - [ ] check examples & pronunciation
+    - [ ] move transcription up in each yellow box
+
+**Source review**:
+
+- [ ] The World's Writing Systems
+- [ ] The Unicode Standard v13.0
+- [ ] Wikipedia
+
+
+
+
+
+
+<!--   EXTRACT VOCAB .  -->
+<!--span class="charExample" translate="no"><span class="ex" lang="th">ธรรม</span> <span class="trans">ṯ̇ʰṟṟm̱</span> <span class="ipa">tʰam</span> <span class="meaning">justice</span></span-->
+<p><button onClick="extractVocab('ug')">Extract vocab</button></p>
+<textarea id="vocabOut" placeholder="Set the language!"></textarea>
+<script>
+function extractVocab(lang) {
+	out = ''
+	nodes = document.querySelectorAll('.charExample')
+	console.log(nodes.length,' nodes')
+	for (i=0;i<nodes.length;i++) {
+		if (! nodes[i].querySelector('.ex')) {
+			console.log('No nativeStr',nodes[i])
+			continue
+			}
+		console.log(nodes[i].querySelector('.ex').lang)
+		if (nodes[i].querySelector('.ex').lang  !== lang) continue
+		nativeStr = nodes[i].querySelector('.ex').textContent
+		
+		trans = nodes[i].querySelectorAll('.trans')
+		if (trans.length == 0) continue
+		else if (trans.length > 1) transStr = trans[1].textContent
+		else transStr = ''
+		
+		ipa = nodes[i].querySelectorAll('.ipa')
+		if (ipa.length > 0) ipaStr = ipa[0].textContent
+		else ipaStr = ''
+
+		meaning = nodes[i].querySelectorAll('.meaning')
+		if (meaning.length > 0) meaningStr = meaning[0].textContent
+		else continue
+
+		if (ipaStr == '' && meaningStr == '') continue
+		
+		out += nativeStr + '|' + meaningStr
+		if (ipaStr) out += '|' + ipaStr
+		if (transStr) out += ' (' + transStr + ')'
+		out += '\n'
+		}
+	//document.getElementById('vocabOut').value = out
+	items = out.split('\n')
+	//charlist = items.sort()
+	const uniqueSet = new Set(items)
+	charlist = [...uniqueSet]
+	charlist.sort()
+	
+	document.getElementById('vocabOut').value = charlist.join('\n')
+	document.getElementById('vocabOut').select()
+	}
+</script>
+<p>Merge lists</p>
+<textarea id="sortedVocabOut" placeholder="Add lists here."></textarea>
+<p><button onClick="sortVocab()">Sort &amp; merge vocab</button></p>
+<textarea id="finalVocabList" placeholder="Final, sorted list."></textarea>
+<script>
+function sortVocab() {
+	items = document.getElementById('sortedVocabOut').value.split('\n')
+	const uniqueSet = new Set(items)
+	charlist = [...uniqueSet]
+	charlist.sort()
+	document.getElementById('finalVocabList').value = charlist.join('\n')
+	document.getElementById('finalVocabList').select()
+	}
+</script>
+<!--    END OF VOCAB EXTRACTION CODE   -->
