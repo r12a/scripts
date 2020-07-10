@@ -3,62 +3,11 @@
 <head>
 <meta charset="utf-8"/>
 <title>Tai Tham script summary</title>
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <meta name="description" content="Summary of the Tai Tham script."/>
+
 <link rel="stylesheet" href="../../shared/style/docs.css"/>
 <link rel="stylesheet" href="../common/local.css"/>
-<style>
-@font-face {
-    font-family: 'Noto Serif Tai Tham WF';
-    src: url('../../shared/webfonts/notosanstaitham-regular-webfont.woff2') format('woff2'),
-         url('../../shared/webfonts/notosanstaitham-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-	}
-@font-face {
-    font-family: 'Lamphun WF';
-    src: url('../../shared/webfonts/lamphun-webfont.woff2') format('woff2'),
-         url('../../shared/webfonts/lamphun-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-	}
-@font-face {
-    font-family: 'Lanna Alif WF';
-    src: url('../../shared/webfonts/lannaalif-v1-03-webfont.woff2') format('woff2'),
-         url('../../shared/webfonts/lannaalif-v1-03-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-	}
-@font-face {
-    font-family: 'A Tai Tham KH New WF';
-    src: url('../../shared/webfonts/a_tai_tham_kh_new-webfont.woff2') format('woff2'),
-         url('../../shared/webfonts/a_tai_tham_kh_new-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-	}
-
-#freeText {
-	font-size: 24px;
-	font-family: "A Tai Tham KH New WF", serif;
-    text-align: start;
-	line-height: 1.4;
-	}
-@media print { #freeText { font-size: 18px; } }
-[lang=nod] { font-family: "Lamphun WF", serif; font-size: 230%; }
-[lang=kkh] { font-family: "A Tai Tham KH New WF", serif; font-size: 150%; }
-.large[lang=nod] { font-size: 300%;  text-align: center; line-height: 1; margin-top: 0; margin-bottom: 0; }
-.large[lang=kkh] { font-size: 300%;  text-align: center; line-height: 1; margin-top: 0; margin-bottom: 0; }
-.narrowlines .listPair { margin-bottom: 0.25em; }
-.large1 {font-size: 300%;  text-align: center; line-height: 1; margin-top: 0; margin-bottom: 0; }
-.large1 {font-size: 300%;  text-align: center; line-height: 1; margin-top: 0; margin-bottom: 0; }
-/*
-.ex:before {
-    content: attr(lang);
-    font-size: 12px;
-    color: #aaa;
-    vertical-align: top;
-    }*/
-</style>
+<link rel="stylesheet" href="kkh.css"/>
 
 <script src="../../shared/scriptdb/lana-kkh.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
@@ -75,6 +24,8 @@
 <script src="../../shared/code/getLinks.js"></script>
 <script src="../linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
+<script src="../common/egcode.js"></script>
+<script src="kkh-examples.js"></script>
 
 <script src="kkh-translit.js">  </script>
 <script src="nod-translit.js">  </script>
@@ -88,7 +39,6 @@
 </header>
 
 <h1>Tai Tham/Khün (draft)</h1>
-
 <nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="Jump to top of page." title="Jump to top of page."/></a></nav>
 
 <aside class="sidebar">
@@ -140,7 +90,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->12 June, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->10 July, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -148,39 +98,27 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <div class="section">
 <p>This page gathers together basic information about the Tai Tham script and its use for the Khün language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Khün using Unicode.</p>
+<p>See also the companion document, <a href="block" class="linkHighlight">Tai Tham character notes</a>, for detailed information about specific Unicode characters.</p>
+<p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
 
 
-<details class="supportdocs noprint instructions">
-<summary>Related pages</summary>
-<p class="leadin">Other script summary pages:</p>
-<ul>
-<li><a href="northernthai.html" class="linkHighlight">Northern Thai</a></li>
-</ul>
-<p class="leadin">Character notes:</p>
-<ul>
-<li><a class="linkHighlight" href="block">Tai Tham</a></li>
-</ul>
-<p class="leadin">Character apps:</p>
-<ul>
-<li><a class="linkHighlight" href="../../pickers/lana-kkh/">Tai Khün</a></li>
-<li><a class="linkHighlight" href="../../pickers/lana-nod/">Northern Thai</a></li>
-</ul>
-<p class="leadin">Other:</p>
-<ul>
-<li><a class="linkHighlight" href="../links?iso=Lana">Script links pages</a></li>
-<li><a class="linkHighlight" href="../#scriptnotes">Other script summaries</a></li>
-</ul>
+
+<details>
+<summary class="instructions"><a href="../links?iso=Lana">Related pages</a>.</summary>
 </details>
 
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
+</details>
+
+
+
 <details class="supportdocs noprint">
-<summary class="instructions">About this page</summary>
-<p class="instructions"><span class="leadin">Transcriptions.</span> Unless in parentheses, the transcriptions in italics that follow Tai Tham text are a <a href="../glossary/#transliteration" class="termref">transliteration</a> developed for these pages. Those in parentheses follow one or more commonly used <a href="../glossary/#transcription" class="termref">transcription</a> methods. Transcriptions in <span style="white-space:nowrap;">⌈ corner brackets ⌋</span> are either phonemic or phonetic.</p>
-<p class="instructions noprint"><span class="leadin">Character lists.</span> Colours and annotations on panels listing characters are relevant to their use for the Khün language. Panels with a yellow background contain commonly used characters for that language.</p>
-<p class="instructions noprint"><span class="leadin">Links to detailed character information.</span> Links on Unicode character names and links on code point values in character lists lead to character notes documents that list information character-by-character. This information is typically more detailed than that on this page. </p>
-<p class="instructions noprint"><span class="leadin">Detailed topic information.</span> Footnote  links with an arrow alongside take you to more detailed information on the current topic.</p>
-<p class="instructions noprint"><span class="leadin">Showing code points for examples.</span>Clicking on   Khün  examples shows a list of the characters in that example. </p>
-<p class="instructions noprint"><span class="leadin">Changing fonts.</span>Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Tai Tham','Tai Khün'); return false;">About this page</a></summary>
+<div id="about"></div>
 </details>
 </div>
 
@@ -236,7 +174,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <p>The following list describes some distinctive characteristics of the Tai Tham script.</p>
 <ul>
 <li>The script tries to create vertical stacks where possible, and there is a general preference to place only one character at a time  below the base onset, although there are exceptions. Syllable-final consonants tend to appear below the initial consonant, however if they follow a subscript vowel-sign they are rendered alongside the onset consonant.</li>
-<li>Tai Tham is  unusual among abugidas in that stacking consonants doesn't always kill the vowel between them. The <span class="name">sakot</span>  character often serves just to indicate that a following consonant character is subjoined. It can be used to subjoin a consonant after a <em>dependent</em> vowel sign or tone mark, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩈᩣ᩠ᨾ</span> <span class="trans">sā˖m̱</span> <span class="ipa">saːm¹</span> <span class="meaning">three</span></span>.</li>
+<li>Tai Tham is  unusual among abugidas in that stacking consonants doesn't always kill the vowel between them. The <span class="name">sakot</span>  character often serves just to indicate that a following consonant character is subjoined. It can be used to subjoin a consonant after a <em>dependent</em> vowel sign or tone mark, eg. <span class="eg" lang="kkh">ᩈᩣ᩠ᨾ</span>.</li>
 <li>The first consonant of a syllable may be subjoined below the final consonant of the preceding syllable.</li>
 <li>Vowel-signs can appear above, below, to the left or to the right of the base consonant, and sometimes all four together.</li>
 <li>A number of characters are used to represent superscript syllable-final consonants, however they are not always used, and usage varies by language.</li>
@@ -893,8 +831,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ᩍ␣ᩎ␣ᩏ␣ᩐ␣ᩑ␣ᩒ␣ᩋ</figure>
 
 
-<p>The 6 vowel letters are used in syllable-initial position where there is no consonant onset, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩑᨠ</span> <span class="trans">ẹk</span> <span class="ipa">eːk³</span> <span class="meaning">one</span></span>. </p>
-<p>The use of independent vowels is lexically constrained: for other vowels not preceded by a consonant Tai Tham uses <span class="codepoint" translate="no"><span lang="kkh">&#x1A4B;</span> [<a href="/scripts/taitham/block#char1A4B"><span class="uname">U+1A4B TAI THAM LETTER A</span></a>]</span> with a vowel-sign, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩋᩧ᩠ᨷ</span> <span class="trans">ʔ̯ɯ˖b̯</span> <span class="ipa">ɯp²</span> <span class="meaning">starve</span></span>.</p>
+<p>The 6 vowel letters are used in syllable-initial position where there is no consonant onset, eg. <span class="eg" lang="kkh">ᩑᨠ</span>. </p>
+<p>The use of independent vowels is lexically constrained: for other vowels not preceded by a consonant Tai Tham uses <span class="codepoint" translate="no"><span lang="kkh">&#x1A4B;</span> [<a href="/scripts/taitham/block#char1A4B"><span class="uname">U+1A4B TAI THAM LETTER A</span></a>]</span> with a vowel-sign, eg. <span class="eg" lang="kkh">ᩋᩧ᩠ᨷ</span>.</p>
 <p><span class="codepoint" translate="no"><span lang="kkh">&#x1A52;</span> [<a href="/scripts/taitham/block#char1A52"><span class="uname">U+1A52 TAI THAM LETTER OO</span></a>]</span> is not used in Northern Thai.<a class="fnref" href="http://www.unicode.org/versions/latest/ch16.pdf">u654</a></p>
 </section>
 </section>
@@ -1307,7 +1245,7 @@ alveolar</th>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ᨺ␣ᩈ␣ᩆ␣ᩇ␣ᩉ</figure>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ᩀ</figure>
 
-<p> High and low consonants usually come in pairs, but where they don't the high variant is normally given by subjoining the low consonant below <span class="codepoint" translate="no"><span lang="kkh">&#x1A49;</span> [<a href="/scripts/taitham/block#char1A49"><span class="uname">U+1A49 TAI THAM LETTER HIGH HA</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩉ᩠ᨶᩧ᩵ᨦ</span> <span class="trans">h˖ṉɯ¹ṉ̇</span> <span class="ipa">nɯɲ³</span> <span class="meaning">one</span></span>.</p>
+<p> High and low consonants usually come in pairs, but where they don't the high variant is normally given by subjoining the low consonant below <span class="codepoint" translate="no"><span lang="kkh">&#x1A49;</span> [<a href="/scripts/taitham/block#char1A49"><span class="uname">U+1A49 TAI THAM LETTER HIGH HA</span></a>]</span>, eg. <span class="eg" lang="kkh">ᩉ᩠ᨶᩧ᩵ᨦ</span>.</p>
 <p>A few consonants have different phonetic realisations in Northern Thai, and <span class="codepoint" translate="no"><span lang="nod">&#x1A22;</span> [<a href="/scripts/taitham/block#char1A22"><span class="uname">U+1A22 TAI THAM LETTER HIGH KXA</span></a>]</span> is used in Northern Thai but not by Tai Khün.</p>
 <figure class="otherBox auto" data-cols="">ᨢ</figure>
 </section>
@@ -1318,7 +1256,7 @@ alveolar</th>
 <section id="midclass">
 <h3>Mid class  consonants</h3>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ᨷ␣ᨯ␣ᩋ</figure>
-<p><span class="codepoint" translate="no"><span lang="kkh">&#x1A4B;</span> [<a href="/scripts/taitham/block#char1A4B"><span class="uname">U+1A4B TAI THAM LETTER A</span></a>]</span> represents a glottal stop. It can be used with vowels at the beginning of a syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩋᩧ᩠ᨷ</span> <span class="trans">ʔ̯ɯ˖b̯</span> <span class="ipa">ɯp²</span> <span class="meaning">starve</span></span>. Note that this can have very different shapes, as shown by the Northern Thai font (<span class="charExample"><span class="ex" lang="nod">ᩋ</span></span>) and the Khün font (<span class="charExample"><span class="ex" lang="kkh">ᩋ</span></span>).</p>
+<p><span class="codepoint" translate="no"><span lang="kkh">&#x1A4B;</span> [<a href="/scripts/taitham/block#char1A4B"><span class="uname">U+1A4B TAI THAM LETTER A</span></a>]</span> represents a glottal stop. It can be used with vowels at the beginning of a syllable, eg. <span class="eg" lang="kkh">ᩋᩧ᩠ᨷ</span>. Note that this can have very different shapes, as shown by the Northern Thai font (<span class="charExample"><span class="ex" lang="nod">ᩋ</span></span>) and the Khün font (<span class="charExample"><span class="ex" lang="kkh">ᩋ</span></span>).</p>
 </section>
 
 
@@ -1345,7 +1283,7 @@ alveolar</th>
 
 <figure class="characterBox auto" data-cols="ipa,trans">ᩕ␣ᩖ</figure>
 
-<p>In addition, a subjoined <span class="ipa">w̱</span> is often found in a syllable-initial cluster, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨣ᩠ᩅᩣ᩠ᨿ</span> <span class="trans">ḵ˖w̱ā˖ɲ̱̇</span> <span class="ipa">kwaːj²</span> <span class="meaning">buffalo</span></span>.</p>
+<p>In addition, a subjoined <span class="ipa">w̱</span> is often found in a syllable-initial cluster, eg. <span class="eg" lang="kkh">ᨣ᩠ᩅᩣ᩠ᨿ</span>.</p>
 <p>Other syllable-initial clusters include the combination of <span class="codepoint" translate="no"><span lang="kkh">&#x1A49;</span> [<a href="/scripts/taitham/block#char1A49"><span class="uname">U+1A49 TAI THAM LETTER HIGH HA</span></a>]</span> plus a subjoined low class consonant to give a high class version, as mentioned just above.</p>
 <p>Medial characters are useful, as they can signal the difference between a consonant cluster and an initial-final sequence, ie. using a subjoined <span class="trans">l</span>. Some fonts, however, don't make that distinction clear.<a class="fnref" href="#refs">h</a></p>
 </section>
@@ -1356,8 +1294,8 @@ alveolar</th>
 <section id="finals">
 <h3>Final consonants</h3>
 
-<p>Tai Tham text commonly renders syllable-final consonants using regular consonant code points, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩑᨠ</span> <span class="trans">ẹk</span> <span class="ipa">eːk³</span> <span class="meaning">one</span></span>, but sometimes the special combining characters shown below are used. </p>
-<p>When regular consonants are used they are commonly subjoined, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩣ᩠ᩁ</span> <span class="trans">kā˖r</span> <span class="ipa">kan¹</span> <span class="meaning">work</span></span>, but not always. For example, when preceded by a subscript vowel a final consonant may be rendered on the baseline, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩃᩪᨠ</span> <span class="trans">ḻūk</span> <span class="ipa">luːk⁴</span> <span class="meaning">offspring</span></span>. On the other hand, sometimes in Khün the consonant is subjoined and the subscript vowel is moved to the side of the stack, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨧ᩠ᨷᩪ</span> <span class="trans">c˖b̯ū</span> <span class="ipa">cuːp³</span> <span class="meaning">kiss</span></span>. (In Lanna, all three may be stacked, ie. <span class="charExample"><span class="ex" lang="nod">ᨧ᩠ᨷᩪ</span></span>.) In either case, due to font design or USE (the Universal Shaping Engine) the characters may have to be typed in an order that departs from the spoken order so that they look as expected.</p>
+<p>Tai Tham text commonly renders syllable-final consonants using regular consonant code points, eg. <span class="eg" lang="kkh">ᩑᨠ</span>, but sometimes the special combining characters shown below are used. </p>
+<p>When regular consonants are used they are commonly subjoined, eg. <span class="eg" lang="kkh">ᨠᩣ᩠ᩁ</span>, but not always. For example, when preceded by a subscript vowel a final consonant may be rendered on the baseline, eg. <span class="eg" lang="kkh">ᩃᩪᨠ</span>. On the other hand, sometimes in Khün the consonant is subjoined and the subscript vowel is moved to the side of the stack, eg. <span class="eg" lang="kkh">ᨧ᩠ᨷᩪ</span>. (In Lanna, all three may be stacked, ie. <span class="charExample"><span class="ex" lang="nod">ᨧ᩠ᨷᩪ</span></span>.) In either case, due to font design or USE (the Universal Shaping Engine) the characters may have to be typed in an order that departs from the spoken order so that they look as expected.</p>
 <p>The following diacritics are sometimes used for syllable-final consonants. For more details about usage, click on the characters and follow the links to the character notes.</p>
 
 <figure class="characterBox auto" data-cols="ipa,trans">᩺␣ᩙ␣ᩴ␣ᩘ␣ᩜ␣ᩝ␣ᩞ</figure>
@@ -1381,9 +1319,9 @@ alveolar</th>
 
 
 <p>The first  of these is a special-use consonant diacritic. The second two are ligatures.</p>
-<p><span class="codepoint" translate="no"><span lang="kkh">&#x1A5B;</span> [<a href="/scripts/taitham/block#char1A5B"><span class="uname">U+1A5B TAI THAM CONSONANT SIGN HIGH RATHA OR LOW PA​</span></a>]</span> represents two different functions with the same appearance. It represents <span class="codepoint" translate="no"><span lang="kkh">ᨮ</span> [<a href="/scripts/taitham/block#char1A2E"><span class="uname">U+1A2E TAI THAM LETTER HIGH RATHA</span></a>]</span> in <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩈᨱᩛᩣ᩠ᨶ</span> <span class="trans">sṇ̱ᵽā˖ṉ</span> <span class="meaning">shape</span></span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e </a>And it represents <span class="codepoint" translate="no"><span lang="kkh">ᨻ</span> [<a href="/scripts/taitham/block#char1A3B"><span class="uname">U+1A3B TAI THAM LETTER LOW PA</span></a>]</span> in <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩋᨾᩛ</span> <span class="trans">ʔ̯m̱ᵽ</span> <span class="meaning">mango</span></span>. (Compare with the somewhat rare subjoined form, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨷᩢᨱ᩠ᨻᨷᩩᩁᩩᩇ</span> <span class="trans">b̯áṇ̱˖p̄b̯uruṣ</span> <span class="meaning">disciple</span></span>.)<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a>&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="kkh">&#x1A5B;</span> [<a href="/scripts/taitham/block#char1A5B"><span class="uname">U+1A5B TAI THAM CONSONANT SIGN HIGH RATHA OR LOW PA​</span></a>]</span> represents two different functions with the same appearance. It represents <span class="codepoint" translate="no"><span lang="kkh">ᨮ</span> [<a href="/scripts/taitham/block#char1A2E"><span class="uname">U+1A2E TAI THAM LETTER HIGH RATHA</span></a>]</span> in <span class="eg" lang="kkh">ᩈᨱᩛᩣ᩠ᨶ</span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e </a>And it represents <span class="codepoint" translate="no"><span lang="kkh">ᨻ</span> [<a href="/scripts/taitham/block#char1A3B"><span class="uname">U+1A3B TAI THAM LETTER LOW PA</span></a>]</span> in <span class="eg" lang="kkh">ᩋᨾᩛ</span>. (Compare with the somewhat rare subjoined form, eg. <span class="eg" lang="kkh">ᨷᩢᨱ᩠ᨻᨷᩩᩁᩩᩇ</span>.)<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a>&nbsp;</p>
 <p>Khün  uses <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨭᩛ</span></span>, which is <span class="codepoint" translate="no"><span lang="kkh">ᨭ</span> + <span lang="kkh">&nbsp;ᩛ</span> [<a href="/scripts/taitham/block#char1A2D"><span class="uname">U+1A2D TAI THAM LETTER RATA</span></a> + <a href="/scripts/taitham/block#char1A5B"><span class="uname">U+1A5B TAI THAM CONSONANT SIGN HIGH RATHA OR LOW PA​</span></a>]</span> instead of <span class="codepoint" translate="no"><span lang="kkh">ᨮ</span> [<a href="/scripts/taitham/block#char1A2E"><span class="uname">U+1A2E TAI THAM LETTER HIGH RATHA</span></a>]</span>.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a>&nbsp;</p>
-<p><span class="codepoint" translate="no"><span lang="kkh">&#x1A53;</span> [<a href="/scripts/taitham/block#char1A53"><span class="uname">U+1A53 TAI THAM LETTER LAE</span></a>]</span> represents the combination <span class="codepoint" translate="no"><span lang="kkh">ᩃ</span> + <span lang="kkh">ᩯ</span> [<a href="/scripts/taitham/block#char1A43"><span class="uname">U+1A43 TAI THAM LETTER LA</span></a> + <a href="/scripts/taitham/block#char1A6F"><span class="uname">U+1A6F TAI THAM VOWEL SIGN AE</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩈᩮᩓ᩠ᩅ᩶</span> <span class="trans">selₔ˖w̱²</span> <span class="ipa">seː¹lɛːw⁶</span> <span class="meaning">already</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="kkh">&#x1A53;</span> [<a href="/scripts/taitham/block#char1A53"><span class="uname">U+1A53 TAI THAM LETTER LAE</span></a>]</span> represents the combination <span class="codepoint" translate="no"><span lang="kkh">ᩃ</span> + <span lang="kkh">ᩯ</span> [<a href="/scripts/taitham/block#char1A43"><span class="uname">U+1A43 TAI THAM LETTER LA</span></a> + <a href="/scripts/taitham/block#char1A6F"><span class="uname">U+1A6F TAI THAM VOWEL SIGN AE</span></a>]</span>, eg. <span class="eg" lang="kkh">ᩈᩮᩓ᩠ᩅ᩶</span>.</p>
 <p> <span class="codepoint" translate="no"><span lang="kkh">&#x1A54;</span> [<a href="/scripts/taitham/block#char1A54"><span class="uname">U+1A54 TAI THAM LETTER GREAT SA</span></a>]</span> represents geminated <span class="codepoint" translate="no"><span lang="kkh">ᩈ</span> [<a href="/scripts/taitham/block#char1A48"><span class="uname">U+1A48 TAI THAM LETTER HIGH SA</span></a>]</span>.</p>
 
 <figure class="otherBox auto" data-cols="trans">ᩚ</figure>
@@ -1399,15 +1337,15 @@ alveolar</th>
 <h3>Subjoined consonants</h3>
   <p>Tai Tham is unusual in that subjoined consonants do not only appear where there are consonant clusters. There is a natural tendency to attempt to stack consonants, usually 2 high, whenever possible.</p>
 <p><span class="codepoint" translate="no"><span lang="kkh">&nbsp;&#x1A60;</span> [<a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT​</span></a>]</span> is an invisible character used to produce the subjoined form of a consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᨠ</span></span> vs. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠ᩠ᨠ</span></span>.&nbsp;</p>
-<p>Unlike  the virama in most brahmi-derived scripts, sakot doesn't necessarily kill the vowel between two consonants, nor does it create <a class="termref" href="../glossary/#conjunct">conjuncts</a> in the sense of merged shapes. For example, in <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨨ᩠ᩃᩣ᩠ᨯ</span> <span class="trans">cʰ˖ḻā˖d̯</span> <span class="ipa">cʰa² laːt⁴</span> <span class="meaning">clever</span></span> the inherent vowel after <span class="trans">c</span> is not suppressed.</p>
-<p>Also unusually, <span class="name">sakot</span> can follow a vowel-sign. For example, in <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩈᩣ᩠ᨾ</span> <span class="trans">sā˖m̱</span> <span class="ipa">saːm¹</span> <span class="meaning">three</span></span> the <span class="name">sakot</span> is used to position the final consonant in the syllable below the vowel-sign. This is quite common. A subjoined consonant can also follow a digit, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">᪓᩠ᨴ</span> <span class="trans">3̣˖ṯ</span> <span class="ipa">saːm tiː</span> <span class="meaning">three times</span></span>.</p>
+<p>Unlike  the virama in most brahmi-derived scripts, sakot doesn't necessarily kill the vowel between two consonants, nor does it create <a class="termref" href="../glossary/#conjunct">conjuncts</a> in the sense of merged shapes. For example, in <span class="eg" lang="kkh">ᨨ᩠ᩃᩣ᩠ᨯ</span> the inherent vowel after <span class="trans">c</span> is not suppressed.</p>
+<p>Also unusually, <span class="name">sakot</span> can follow a vowel-sign. For example, in <span class="eg" lang="kkh">ᩈᩣ᩠ᨾ</span> the <span class="name">sakot</span> is used to position the final consonant in the syllable below the vowel-sign. This is quite common. A subjoined consonant can also follow a digit, eg. <span class="eg" lang="kkh">᪓᩠ᨴ</span>.</p>
 <figure>
 <p lang="kkh" class="large"><span class="ex">ᩈᩣ᩠ᨾ</span></p>
 <figcaption>A subjoined consonant positioned below a vowel-sign.</figcaption>
 </figure>
-<p>Tai Tham will usually attempt to subjoin non-initial consonants, although generally only two characters deep. Sequences of 2 subjoined characters exist,  but in Tai Khün the second subjoined character joins to the right of the stack, rather than sitting below it, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠ᩠ᩅ᩠ᨿᩁ</span> <span class="trans">k˖w̱˖ȳr</span> <span class="ipa">kweːn¹</span> <span class="meaning">ox-cart</span></span>. In Northern Thai, however, they may all be stacked, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠ᩠ᩅ᩠ᨿᩁ</span></span></p>
-<p>A consequence of this shallow subjoining is that a subscript vowel will typically cause a final consonant to not be subjoined, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩃᩪᨠ</span> <span class="trans">ḻūk</span> <span class="ipa">luːk⁴</span> <span class="meaning">offspring</span></span>. However, this is not always the case. In Khün, <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨧ᩠ᨷᩪ</span> <span class="trans">c˖b̯ū</span> <span class="ipa">cuːp³</span> <span class="meaning">kiss</span></span> the final <span class="trans">b</span> is subjoined under the onset consonant, and the normally subscript vowel is moved to the side. (In Northern Thai, however, this may be displayed as a single stack, ie. <span class="charExample"><span class="ex" lang="nod">ᨧ᩠ᨷᩪ</span></span>.)</p>
-<p>Subjoined consonants are not only syllable-final consonants. The first consonant in a following syllable may also be subjoined, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨳ᩠ᨶ᩻ᩫᩁ</span> <span class="trans">tʰ˖ṉ᩻ɔ̈ṟ</span> <span class="ipa">tʰanon</span> <span class="meaning">path</span></span> (final <span class="trans">r</span> is pronounced as <span class="ipa">n</span>). <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="http://www.unicode.org/versions/latest/ch16.pdf">u654</a></p>
+<p>Tai Tham will usually attempt to subjoin non-initial consonants, although generally only two characters deep. Sequences of 2 subjoined characters exist,  but in Tai Khün the second subjoined character joins to the right of the stack, rather than sitting below it, eg. <span class="eg" lang="kkh">ᨠ᩠ᩅ᩠ᨿᩁ</span>. In Northern Thai, however, they may all be stacked, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠ᩠ᩅ᩠ᨿᩁ</span></span></p>
+<p>A consequence of this shallow subjoining is that a subscript vowel will typically cause a final consonant to not be subjoined, eg. <span class="eg" lang="kkh">ᩃᩪᨠ</span>. However, this is not always the case. In Khün, <span class="eg" lang="kkh">ᨧ᩠ᨷᩪ</span> the final <span class="trans">b</span> is subjoined under the onset consonant, and the normally subscript vowel is moved to the side. (In Northern Thai, however, this may be displayed as a single stack, ie. <span class="charExample"><span class="ex" lang="nod">ᨧ᩠ᨷᩪ</span></span>.)</p>
+<p>Subjoined consonants are not only syllable-final consonants. The first consonant in a following syllable may also be subjoined, eg. <span class="eg" lang="kkh">ᨳ᩠ᨶ᩻ᩫᩁ</span> (final <span class="trans">r</span> is pronounced as <span class="ipa">n</span>). <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="http://www.unicode.org/versions/latest/ch16.pdf">u654</a></p>
 <p>Not all consonants traditionally have subjoined forms, but modern innovations in borrowed terminology suggest that fonts should provide them for all consonants except the old vocalic letters. <a class="fnref" href="http://www.unicode.org/versions/latest/ch16.pdf">u654</a></p>
 </section>
   
@@ -1694,7 +1632,7 @@ alveolar</th>
 <figure class="characterBox auto" data-cols="trans">᩠␣᩼</figure>
 
 <p><span class="codepoint" translate="no"><span lang="kkh">&#x1A60;</span> [<a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT​</span></a>]</span> is used to create a subjoined consonant. See <a class="secref">subjoined</a>.</p>
-<p><span class="codepoint" translate="no"><span lang="kkh">&nbsp;&#x1A7C;</span> [<a href="/scripts/taikhuen/block#char1A7C"><span class="uname">U+1A7C TAI THAM SIGN KHUEN-LUE KARAN</span></a>]</span> is written over a consonant (normally in final position) when that consonant is not  to be pronounced. Frequently used in loans from languages with consonant clusters in the coda such  as Pali, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩈᩫ᩠ᨾᨷᩪᩁ᩠᩼ᨱ</span> <span class="trans">sɔ̈˖m̱b̯ūr˖˚ṇ̱</span> <span class="ipa">som¹buːn²</span> <span class="meaning">perfect</span></span> or English <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨼᩥ᩠ᩃ᩼ᨾ</span> <span class="trans">f̱i˖ḻ˚m̱</span> <span class="ipa">fim²</span> <span class="meaning">film</span></span>.<a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o149</a> Northern Thai would use <span class="codepoint" translate="no"><span lang="nod"> ᩺</span> [<a href="/scripts/taitham/block#char1A7A"><span class="uname">U+1A7A TAI THAM SIGN RA HAAM​</span></a>]</span>, ie. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨼᩥ᩠ᩃ᩺ᨾ</span> <span class="trans">f̱i˖ḻ˟m̱</span> <span class="ipa">fim²</span></span>.<a class="fnref" href="#refs">p</a></p>
+<p><span class="codepoint" translate="no"><span lang="kkh">&nbsp;&#x1A7C;</span> [<a href="/scripts/taikhuen/block#char1A7C"><span class="uname">U+1A7C TAI THAM SIGN KHUEN-LUE KARAN</span></a>]</span> is written over a consonant (normally in final position) when that consonant is not  to be pronounced. Frequently used in loans from languages with consonant clusters in the coda such  as Pali, eg. <span class="eg" lang="kkh">ᩈᩫ᩠ᨾᨷᩪᩁ᩠᩼ᨱ</span> or English <span class="eg" lang="kkh">ᨼᩥ᩠ᩃ᩼ᨾ</span>.<a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o149</a> Northern Thai would use <span class="codepoint" translate="no"><span lang="nod"> ᩺</span> [<a href="/scripts/taitham/block#char1A7A"><span class="uname">U+1A7A TAI THAM SIGN RA HAAM​</span></a>]</span>, ie. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨼᩥ᩠ᩃ᩺ᨾ</span> <span class="trans">f̱i˖ḻ˟m̱</span> <span class="ipa">fim²</span></span>.<a class="fnref" href="#refs">p</a></p>
 
 <figure class="otherBox auto" data-cols="">᩻␣᩿</figure>
 
@@ -1778,14 +1716,14 @@ figure class="characterBox auto" data-cols="ipa,trans,transc" data-ipa=",,kʰá,
 <section id="gsub">
 <h3>Context-based shaping &amp; positioning</h3>
 <p>There is not so much contextual shaping in Tai Tham as in many other Brahmi-descended scripts. One particularly noticeable example of contextual shaping is the realisation of <span class="codepoint" translate="no"><span lang="kkh">&#x1A2C;</span> + <span lang="kkh">&#x1A60;</span> + <span lang="kkh">&#x1A2C;</span> [<a href="/scripts/taikhuen/block#char1A2C"><span class="uname">U+1A2C TAI THAM LETTER NYA</span></a> + <a href="/scripts/taikhuen/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT</span></a> + <a href="/scripts/taikhuen/block#char1A2C"><span class="uname">U+1A2C TAI THAM LETTER NYA</span></a>]</span>, which moves the initial character upwards rather than subjoining the second, ie. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨬ᩠ᨬ</span></span>.</p>
-<p>Another common ligature is <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨶᩣ</span></span>, which is composed of <span class="codepoint" translate="no"><span lang="kkh">&#x1A36;</span> + <span lang="kkh">&#x1A63;</span> [<a href="/scripts/taikhuen/block#char1A36"><span class="uname">U+1A36 TAI THAM LETTER NA</span></a> + <a href="/scripts/taikhuen/block#char1A63"><span class="uname">U+1A63 TAI THAM VOWEL SIGN AA</span></a>]</span>. It forms even when <span class="uname">NA</span> has non-spacing subscripts, and even <span class="uname">MEDIAL RA</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩋᩫᨶ᩠ᨲᩕᩣ᩠ᨿ</span> <span class="trans">ʔ̯oṉ˖tr̆ā˖ɲ̱̇</span> <span class="ipa">ʔontʰalaːi</span> <span class="meaning">danger</span></span>. Pali must regularly handle the nominative singular ending for present participles, <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨶ᩠ᨲᩮᩣ</span> <span class="trans">ṉ˖teā</span></span>.<a class="fnref" href="#refs">r</a></p>
+<p>Another common ligature is <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨶᩣ</span></span>, which is composed of <span class="codepoint" translate="no"><span lang="kkh">&#x1A36;</span> + <span lang="kkh">&#x1A63;</span> [<a href="/scripts/taikhuen/block#char1A36"><span class="uname">U+1A36 TAI THAM LETTER NA</span></a> + <a href="/scripts/taikhuen/block#char1A63"><span class="uname">U+1A63 TAI THAM VOWEL SIGN AA</span></a>]</span>. It forms even when <span class="uname">NA</span> has non-spacing subscripts, and even <span class="uname">MEDIAL RA</span>, eg. <span class="eg" lang="kkh">ᩋᩫᨶ᩠ᨲᩕᩣ᩠ᨿ</span>. Pali must regularly handle the nominative singular ending for present participles, <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨶ᩠ᨲᩮᩣ</span> <span class="trans">ṉ˖teā</span></span>.<a class="fnref" href="#refs">r</a></p>
 
 <p>Placement of tone marks often involves special shaping and positioning. See the positions in the examples below.</p>
 <figure>
 <p lang="nod" class="large1"><span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩥ᩶ ᨠᩥ᩵</span></span><br/><br/><span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩥ᩶ ᨠᩥ᩵</span></span></p>
 <figcaption>Positioning of tone marks next to a superscript vowel in the Lanna Alif font<span class="trans"></span> (top), and the A Tai Tham KH New font (bottom).</figcaption>
 </figure>
-<p>In the A Tai Tham KH New font, a 2nd-tone mark following <span class="codepoint" translate="no"><span lang="kkh">&nbsp;&#x1A62;</span> [<a href="/scripts/taitham/block#char1A62"><span class="uname">U+1A62 TAI THAM VOWEL SIGN MAI SAT​</span></a>]</span> loses its uptick to create two parallel lines, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨡᩮᩢ᩶ᩣ</span> <span class="trans">kʰeá²ā</span> <span class="ipa">kʰaw⁵</span> <span class="meaning">rice</span></span>.</p>
+<p>In the A Tai Tham KH New font, a 2nd-tone mark following <span class="codepoint" translate="no"><span lang="kkh">&nbsp;&#x1A62;</span> [<a href="/scripts/taitham/block#char1A62"><span class="uname">U+1A62 TAI THAM VOWEL SIGN MAI SAT​</span></a>]</span> loses its uptick to create two parallel lines, eg. <span class="eg" lang="kkh">ᨡᩮᩢ᩶ᩣ</span>.</p>
 </section>
 
 

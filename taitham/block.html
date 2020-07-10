@@ -18,14 +18,15 @@
 <script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
+<script src="../common/egcode.js"></script>
+<script src="kkh-examples.js"></script>
+<script src="nod-examples.js"></script>
 
 <script src="../../uniview/descriptions.js"></script> 
 <script src="../../uniview/u.js"></script> 
 
 <script src="../../shared/fontlists/taitham.js"> </script>
 <script src="kkh-translit.js">  </script>
-
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 <style id="includeStyles"></style>
 <style>
@@ -40,7 +41,7 @@
 </header>
 <h1>Tai Tham character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a></nav>
+<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
 
 <aside class="sidebar">
   <nav>
@@ -77,7 +78,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->20 January, 2020<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->10 July, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -88,21 +89,28 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <li><a href="../../uniview/?block=taitham" target="_blank">Tai Tham</a></li>
    </ul>
    <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-<p>For details about how the script works, see <a class="linkHighlight" href="index">Tai Tham/Khün</a>, and <a class="linkHighlight" href="northernthai">Northern Thai</a>.   For further information related to this and other scripts, see the <a class="linkHighlight" href="../links?iso=Lana">Script links pages</a>.</p>
-<p>In order to allow the fonts to work on all platforms, rather than use '-' as a generic base for vowels and diacritics, this document uses the character <span class="uname">WA</span>, which is a simple circle. The transliterations are home-grown and language-specific.</p>
-<p><span style="text-align: start;">We have usage data for the following 2 languages that use the Tai Tham script</span>: Khün, Northern Thai.</p>
+<p>See also the companion document, <a href="." class="linkHighlight">Tai Tham/Khün</a>, for a summary of the Tai Tham script and its use for the Tai Khün language.</p>
+<!--p>The page also lists characters from the <a href="../../uniview/?block=combining_diacritical_marks" target="_blank">Combining Diacritical Marks</a> and <a href="../../uniview/?block=arabic" target="_blank">Arabic</a> blocks that are commonly used by languages using the Syriac script.</p-->
 
-<p>Find <input type="text" id="findInput"
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+<p> Phonetic transcriptions should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
-<p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example. Click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
+
+
 <details>
-<summary class="instructions">Read more about how to use this page.</summary>
-    <p class="instructions">To <strong>find a character</strong> by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or the hex number in the <samp>Find</samp> control above.</p>
-    <p class="instructions">To view this page as intended, you  need a <strong>Tai Tham font</strong>.  This page comes with a Tai Tham webfont. Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system.  For transcriptions I recommend the excellent and free <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;item_id=DoulosSILfont">Doulos SIL font</a>. The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. (If there is no glyph and you want to see what it looks like, click on <samp>See in UniView</samp>.)</p>
-    <p class="instructions"><strong>Information about languages</strong> that use these characters is taken from the list maintained for the Character Use app. The list is not exhaustive.</p>
-<p class="instructions"><strong>References</strong> are indicated by superscript characters. Wherever possible, those contain direct links to the source material. When such a pointer is alongside an arrow → it means that it's worth following the link for the additional information it provides. Digits refer to the main sources, which are listed at the bottom of a set of notes.</p>
-<p class="instructions">When you are using UniView and you turn on <samp>Show notes</samp>, UniView will pull in information about characters from this page.</p>
+<summary class="instructions"><a href="../links?iso=Lana">Related pages</a>.</summary>
+</details>
+
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#charnotes">Other character notes</a>.</summary>
+</details>
+
+
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Tai Tham','Tai Khün'); return false;">About this page</a></summary>
+<div id="about"></div>
 <p id="charliststr" class="instructions"></p>
 </details>
 </section>
@@ -125,11 +133,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩥ᩠ᨶ</span> <span class="trans">ki˖ṉ</span> <span class="ipa">kin¹</span> <span class="meaning">eat</span></span>; <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨽᩥ᩠ᨠ</span> <span class="trans">p̱ʰi˖k</span> <span class="ipa">pʰik⁶</span> <span class="meaning">chilli</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᨠᩥ᩠ᨶ</span>; <span class="eg" lang="kkh">ᨽᩥ᩠ᨠ</span>.</p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara">Northern Thai</p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩥ᩠ᨶ</span> <span class="trans">ki˖ṉ</span> <span class="ipa">kin¹</span> <span class="meaning">eat</span></span>; <span class="charExample" translate="no"><span class="ex" lang="nod">ᨻᩕᩥ᩠ᨠ</span> <span class="trans">p̱r̆i˖k</span> <span class="meaning">chilli</span></span>.<a class="fnref" href="#refs">r</a></p>
+<p>eg. <span class="eg" lang="nod">ᨠᩥ᩠ᨶ</span>; <span class="eg" lang="nod">ᨻᩕᩥ᩠ᨠ</span>.<a class="fnref" href="#refs">r</a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -146,11 +154,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨡᩮᩢ᩶ᩣ</span> <span class="trans">kʰeá²ā</span> <span class="ipa">kʰaw⁵</span> <span class="meaning">rice</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᨡᩮᩢ᩶ᩣ</span>.</p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara">Northern Thai</p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨡᩮᩢ᩶ᩣ</span> <span class="trans">xeá²ā</span> <span class="ipa">kʰaw⁵</span> <span class="meaning">rice</span></span>.<a class="fnref" href="#refs">r</a></p>
+<p>eg. <span class="eg" lang="nod">ᨡᩮᩢ᩶ᩣ</span>.<a class="fnref" href="#refs">r</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -187,7 +195,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Northern Thai + Tai Khün</span> <span class="ipa">ka, -k᷇</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨣᩮᩢᩤ</span> <span class="trans">ḵeáä</span> <span class="ipa">ko⁵</span> <span class="meaning">eldest</span></span>.</p>
+<p>eg. <span class="eg" lang="nod">ᨣᩮᩢᩤ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -207,7 +215,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span>
 <span class="ipa">kʰa᷇</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨤᩫ᩠ᨶ</span> <span class="trans">ḵ̇ʰɔ̈˖ṉ</span> <span class="ipa">kʰɔn²</span> <span class="meaning">person</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᨤᩫ᩠ᨶ</span>.</p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai</span>
@@ -252,7 +260,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Northern Thai + Tai Khün</span> <span class="ipa">ŋa᷇, -ŋ</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨦᩫ᩠ᨶ</span> <span class="trans">ŋ̱ö˖ṉ</span> <span class="ipa">ŋɔn²</span> <span class="meaning">money</span></span>; <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨴᩢ᩠ᨦ</span> <span class="trans">ṯá˖ŋ̱</span> <span class="ipa">taŋ²</span> <span class="meaning">all</span></span>,</p>
+<p>eg. <span class="eg" lang="kkh">ᨦᩫ᩠ᨶ</span>; <span class="eg" lang="kkh">ᨴᩢ᩠ᨦ</span>,</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -269,11 +277,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara">Tai Khün</p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨧ᩠ᨷᩪ</span> <span class="trans">c˖b̯ū</span> <span class="ipa">cuːp³</span> <span class="meaning">kiss</span></span>. Note that, in order to achieve the intended visual output, the input order here has been dictated by the (lack of ) capabilities of the font.</p>
+<p>eg. <span class="eg" lang="kkh">ᨧ᩠ᨷᩪ</span>. Note that, in order to achieve the intended visual output, the input order here has been dictated by the (lack of ) capabilities of the font.</p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara">Northern Thai</p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨧ᩠ᨷᩪ</span> <span class="trans">c˖b̯ū</span> <span class="ipa">cuːp³</span> <span class="meaning">kiss</span></span>. Note that, in order to achieve the intended visual output, the input order here has been dictated by the (lack of ) capabilities of the font.</p>
+<p>eg. <span class="eg" lang="nod">ᨧ᩠ᨷᩪ</span>. Note that, in order to achieve the intended visual output, the input order here has been dictated by the (lack of ) capabilities of the font.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -318,7 +326,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span> <span class="ipa">ca᷇</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨩᩭ᩵</span> <span class="trans">c̱ë¹</span> <span class="ipa">cɔːj⁴</span> <span class="meaning">help</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᨩᩭ᩵</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -339,7 +347,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title"> Tai Khün</span><span class="ipa">sa᷇</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨪᩨ᩶</span> <span class="trans">ṡ̱ɯ̄²</span> <span class="ipa">sɯː⁶</span> <span class="meaning">buy</span></span>.&nbsp;</p>
+<p>eg. <span class="eg" lang="kkh">ᨪᩨ᩶</span>.&nbsp;</p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai </span><span class="ipa">sa᷇</span></p>
@@ -364,7 +372,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span>
 <span class="ipa">cʰa᷇, -cʰ-</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨨ᩠ᩃᩣ᩠ᨯ</span> <span class="trans">cʰ˖ḻā˖d̯</span> <span class="ipa">cʰa² laːt⁴</span> <span class="meaning">clever</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᨨ᩠ᩃᩣ᩠ᨯ</span>.</p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai</span>
@@ -452,11 +460,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨯᩱ᩶</span> <span class="trans">d̯aʲ²</span> <span class="ipa">daj⁵</span> <span class="meaning">did</span></span>; <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩣ᩠ᨯ</span> <span class="trans">kā˖d̯</span> <span class="ipa">kaːt³</span> <span class="meaning">market</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᨯᩱ᩶</span>; <span class="eg" lang="kkh">ᨠᩣ᩠ᨯ</span>.</p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨯᩱ᩶</span> <span class="trans">d̯aʲ²</span> <span class="ipa">daj⁵</span> <span class="meaning">did</span></span>; <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩣ᩠ᨯ</span> <span class="trans">kā˖d̯</span> <span class="ipa">kaːt³</span> <span class="meaning">market</span></span>.</p>
+<p>eg. <span class="eg" lang="nod">ᨯᩱ᩶</span>; <span class="eg" lang="nod">ᨠᩣ᩠ᨯ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -503,7 +511,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span>
 <span class="ipa">tá, -t</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨲᩫ᩠ᩅ</span> <span class="trans">tö˖w̱</span> <span class="ipa">toː¹</span> <span class="meaning">animal classifier</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᨲᩫ᩠ᩅ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -521,11 +529,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨳ᩶ᩣ</span> <span class="trans">tʰ²ā</span> <span class="ipa">tʰaː⁵</span> <span class="meaning">wait</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᨳ᩶ᩣ</span>.</p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨳ᩶ᩣ</span> <span class="trans">tʰ²ā</span> <span class="ipa">tʰaː⁵</span> <span class="meaning">wait</span></span>.</p>
+<p>eg. <span class="eg" lang="nod">ᨳ᩶ᩣ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -543,11 +551,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title"> Tai Khün</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨴᩢ᩠ᨦ</span> <span class="trans">ṯá˖ŋ̱</span> <span class="ipa">taŋ²</span> <span class="meaning">all</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᨴᩢ᩠ᨦ</span>.</p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title"> Northern Thai</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨴᩢ᩠ᨦ</span> <span class="trans">ṯá˖ŋ̱</span> <span class="ipa">taŋ²</span> <span class="meaning">all</span></span>.</p>
+<p>eg. <span class="eg" lang="nod">ᨴᩢ᩠ᨦ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -581,7 +589,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title"> Tai Khün</span>
 <span class="ipa">na᷇, -n</span></p>
 <p>The combination of <span class="codepoint" translate="no"><span lang="nod">&#x1A36;</span> + <span lang="nod">&#xA0;&#x1A63;</span> [<a href="/scripts/taitham/block#char1A36"><span class="uname">U+1A36 TAI THAM LETTER NA</span></a> + <a href="/scripts/taitham/block#char1A63"><span class="uname">U+1A63 TAI THAM VOWEL SIGN AA​</span></a>]</span> forms a ligature, <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨶᩣ</span></span>.</p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨶᩦ᩶</span> <span class="trans">ṉī²</span> <span class="ipa">niː⁶</span> <span class="meaning">this</span></span>; <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩁᩮᩨ᩠ᨶ</span> <span class="trans">reɯ˖̄ṉ</span> <span class="ipa">rɤːn²</span> <span class="meaning">house</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᨶᩦ᩶</span>; <span class="eg" lang="kkh">ᩁᩮᩨ᩠ᨶ</span>.</p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai</span>
@@ -605,7 +613,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taikhun">
 <p class="titlepara"><span class="title"> Tai Khün</span>
 <span class="ipa">ba, -p</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩉᩬᨷ</span> <span class="trans">hɔ̱b̯</span> <span class="ipa">hɔːp³</span> <span class="meaning">carry</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᩉᩬᨷ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -623,7 +631,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span>
 <span class="ipa">pá</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨸ᩶ᩣ</span> <span class="trans">pā²</span> <span class="ipa">paː⁵</span> <span class="meaning">auntie</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᨸ᩶ᩣ</span>.</p>
 </div>
 <p class="usage">Not used for writing Pali. <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o</a> p148</p>
 
@@ -644,7 +652,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span>
 <span class="ipa">pʰá, -pʰ-</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨲᩯ᩠ᨠᨹᩯ᩵</span> <span class="trans">tɛ˖kpʰɛ¹</span> <span class="ipa">tɛːk³pʰɛː³</span> <span class="meaning">multiply</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᨲᩯ᩠ᨠᨹᩯ᩵</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -686,11 +694,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span></p>
 <p><span class="subjoined">The subjoined form is somewhat rare, see instead <span class="codepoint" translate="no"><span lang="nod">&#xA0;&#x1A5B;</span> [<a href="/scripts/taitham/block#char1A5B"><span class="uname">U+1A5B TAI THAM CONSONANT SIGN HIGH RATHA OR LOW PA​</span></a>]</span>.</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨻᩳ᩵ᨾᩯ᩵</span> <span class="trans">p̱ɔ̂¹m̱ɛ¹</span> <span class="ipa">pɔː⁴mɛː⁴</span> <span class="meaning">parents</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᨻᩳ᩵ᨾᩯ᩵</span>.</p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨻᩬᩴ᩵ᨾᩯ᩵</span> <span class="trans">p̱ɔ̱ŋ̊¹m̱ɛ¹</span> <span class="ipa">pɔː⁴mɛː⁴</span> <span class="meaning">parents</span></span>.<a class="fnref" href="#refs">r</a></p>
+<p>eg. <span class="eg" lang="nod">ᨻᩬᩴ᩵ᨾᩯ᩵</span>.<a class="fnref" href="#refs">r</a></p>
 </div>
 <div class="letter taiklu">
 <p class="titlepara"><span class="title">Tai Lü</span></p>
@@ -714,7 +722,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai</span> <span class="ipa">ha᷇</span></p>
-<p><span class="subjoined">Subjoined form of this character is a recent innovation.</span> Example of subjoined form for modern loan word: <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩢᩬᩃ᩠ᨼ᩺</span> <span class="trans">káɔ̱ḻ˖f̱˟</span> <span class="ipa">kɔlf</span> <span class="meaning">golf</span></span>.</p>
+<p><span class="subjoined">Subjoined form of this character is a recent innovation.</span> Example of subjoined form for modern loan word: <span class="eg" lang="nod">ᨠᩢᩬᩃ᩠ᨼ᩺</span>.</p>
 </div>
 <p class="usage">Not used for writing Pali. <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o</a> p148</p>
 
@@ -736,7 +744,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span>
 <span class="ipa">pʰa᷇, -p</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨽᩥ᩠ᨠ</span> <span class="trans">p̄ʰi˖k</span> <span class="ipa">pʰik⁶</span> <span class="meaning">chili</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᨽᩥ᩠ᨠ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -754,7 +762,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span>
 <span class="ipa">ma᷇, -m</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨾᩣ</span> <span class="trans">m̱ā</span> <span class="ipa">maː²</span> <span class="meaning">come</span></span>; <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩈᩣ᩠ᨾ</span> <span class="trans">sā˖m̱</span> <span class="ipa">saːm¹</span> <span class="meaning">three</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᨾᩣ</span>; <span class="eg" lang="kkh">ᩈᩣ᩠ᨾ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -773,7 +781,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span> <span class="ipa">ja᷇, -j</span></p>
 <p><span class="altTone">An alternative mid tone equivalent is  <span class="codepoint" translate="no"><span lang="nod">&#x1A40;</span> [<a href="/scripts/taitham/block#char1A40"><span class="uname">U+1A40 TAI THAM LETTER HIGH YA</span></a>]</span> (used only rarely).</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩉᩱ᩠ᨿ᩵</span> <span class="trans">haʲ˖ȳ¹</span> <span class="ipa">jaj³</span> <span class="meaning">big</span></span>; <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨣ᩠ᩅᩣ᩠ᨿ</span> <span class="trans">ḵ˖w̱ā˖ȳ</span> <span class="ipa">kwaːj²</span> <span class="meaning">buffalo</span></span>. (The order of codepoint in the word 'big' was changed here to fit the default font used for Khün, which doesn't handle prescript vowels well with conjuncts. The order should be <span class="trans">h˖y̱aʲ¹</span>, which looks like <span class="ex" lang="nod">ᩉ᩠ᨿᩱ᩵</span> with the default Northern Thai font.)<a class="fnref" href="#refs">r</a></p>
+<p>eg. <span class="eg" lang="kkh">ᩉᩱ᩠ᨿ᩵</span>; <span class="eg" lang="kkh">ᨣ᩠ᩅᩣ᩠ᨿ</span>. (The order of codepoint in the word 'big' was changed here to fit the default font used for Khün, which doesn't handle prescript vowels well with conjuncts. The order should be <span class="trans">h˖y̱aʲ¹</span>, which looks like <span class="ex" lang="nod">ᩉ᩠ᨿᩱ᩵</span> with the default Northern Thai font.)<a class="fnref" href="#refs">r</a></p>
 <p><span class="ipa">ɔːj</span> as a vowel, eg. </p>
 </div>
 <div class="letter northernthai">
@@ -796,7 +804,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span></p>
-<p>This character  is  only  used  for  four  lexemes:  <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩀᩪ᩵</span> <span class="trans">yū¹</span> <span class="meaning">to be situated</span></span>,  <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩀ᩵ᩣ</span> <span class="trans">y¹ā</span> <span class="meaning">don't (command)</span></span>,  <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩀ᩵ᩣ᩠ᨦ</span> <span class="trans">y¹ā˖ŋ̱</span> <span class="meaning">type, sort</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩀᩣ᩠ᨠ</span> <span class="trans">yā˖k</span> <span class="meaning">to want</span></span>. <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o151</a></p>
+<p>This character  is  only  used  for  four  lexemes:  <span class="eg" lang="kkh">ᩀᩪ᩵</span>,  <span class="eg" lang="kkh">ᩀ᩵ᩣ</span>,  <span class="eg" lang="kkh">ᩀ᩵ᩣ᩠ᨦ</span>, and <span class="eg" lang="kkh">ᩀᩣ᩠ᨠ</span>. <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o151</a></p>
 <p>This letter is actually mid-class, rather than high, in Khün (although high in eastern Tai Lü).<a class="fnref" href="#refs">r</a></p>
 </div>
 <div class="letter northernthai">
@@ -822,8 +830,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span>
 <span class="ipa">ra᷇, -n</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩁᩮᩨ᩠ᨶ</span> <span class="trans">reɯ˖̄ṉ</span> <span class="ipa">rɤːn²</span> <span class="meaning">house</span></span>.</p>
-<p><span class="ipa">n</span> at the end of a syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩣ᩠ᩁ</span> <span class="trans">kā˖r</span> <span class="ipa">kaːn¹</span> <span class="meaning">work</span></span>. </p>
+<p>eg. <span class="eg" lang="kkh">ᩁᩮᩨ᩠ᨶ</span>.</p>
+<p><span class="ipa">n</span> at the end of a syllable, eg. <span class="eg" lang="kkh">ᨠᩣ᩠ᩁ</span>. </p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai</span></p>
@@ -864,7 +872,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩃᩩᨦ</span> <span class="trans">ḻuŋ̱</span> <span class="ipa">luŋ²</span> <span class="meaning">uncle</span></span>; <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨨ᩠ᩃᩣ᩠ᨯ</span> <span class="trans">cʰ˖ḻā˖d̯</span> <span class="ipa">cʰa² laːt⁴</span> <span class="meaning">clever</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᩃᩩᨦ</span>; <span class="eg" lang="kkh">ᨨ᩠ᩃᩣ᩠ᨯ</span>.</p>
 <p>See also the medial form &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="kkh">&#x1A56;</span> [<a href="/scripts/taitham/block#char1A56"><span class="uname">U+1A56 TAI THAM CONSONANT SIGN MEDIAL LA​</span></a>]</span>. It is not clear when the subjoined form is used vs. the medial form. In the same Tai Khün book, Wordingham found both the spellings <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨲᩖᩬᨯ</span> <span class="trans">tl̆ɔ̄d̯</span></span> and <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨲ᩠ᩃᩬᨯ</span> <span class="trans">t˖ḻɔ̄d̯</span></span> for the same word.</p>
 <p>He writes: &quot;There is one generally applicable rule, namely that as a subscript coda consonant, &lt;+ḻ&gt; is used.  I've found only two exceptions.&quot;<a class="fnref" href="#refs">r</a></p>
 </div>
@@ -904,7 +912,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span>
 <span class="ipa">wa᷇, -w</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩅᩢ᩠ᨶ</span> <span class="trans">w̱á˖ṉ</span> <span class="ipa">wan²</span> <span class="meaning">day</span></span>; <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨲᩫ᩠ᩅ</span> <span class="trans">tɔ̈˖w̱</span> <span class="ipa">toː¹</span> <span class="meaning">animal classifier</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᩅᩢ᩠ᨶ</span>; <span class="eg" lang="kkh">ᨲᩫ᩠ᩅ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -971,7 +979,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span>
 <span class="ipa">sá, -t</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩈᩣ᩠ᨾ</span> <span class="trans">sā˖m̱</span> <span class="ipa">saːm¹</span> <span class="meaning">three</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᩈᩣ᩠ᨾ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -988,7 +996,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩉᩬᨷ</span> <span class="trans">hɔ̱b̯</span> <span class="ipa">hɔːp³</span> <span class="meaning">carry</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᩉᩬᨷ</span>.</p>
 <p>‘Leading ha’  is also used to change the class (to high) of the  eight  low  class  consonant  graphemes  that do  not  have  corresponding  high  class  graphemes,  ie.  the  nasals and resonants <span class="ex list" lang="kkh">ᩉ᩠ᨦ ᩉ᩠ᨬ ᩉ᩠ᨶ ᩉ᩠ᨾ ᩉ᩠ᨿ ᩉᩕ ᩉᩖ ᩉ᩠ᩅ</span>. <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o151.</a> Note that two of the preceding clusters use medials, rather than subjoined forms.</p>
 </div>
 <div class="letter northernthai">
@@ -1032,10 +1040,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p>Represents the independent vowel <span class="ipa">ʔa</span> in Pali, but acts as a consonant in Khün.</p>
 <p>Examples of usage:</p>
 <p><span class="ipa">ʔaː</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩋᩣ</span></span></p>
-<p><span class="ipa">ʔɯː</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩋᩨ</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩋᩨ᩠᩵ᨶ</span> <span class="trans">ʔ̯ɯ̄˖¹ṉ</span> <span class="ipa">ɯːn³</span> <span class="meaning">other</span></span>.</p>
-<p><span class="ipa">ʔɯ</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩋᩧ</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩋᩧ᩠ᨷ</span> <span class="trans">ʔ̯ɯ˖b̯</span> <span class="ipa">ɯp²</span> <span class="meaning">starve</span></span>.</p>
-<p><span class="ipa">ʔɤː</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩋᩮᩨ</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩋᩮᩨ᩠᩶ᨿ</span> <span class="trans">ʔ̯eɯ̄˖²ȳ</span> <span class="ipa">ɤːj²</span> <span class="meaning">Uhy (name)</span></span>.</p>
-<p><span class="ipa">ʔɔː</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩋᩬ</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩋᩬᨾᩅᩱ᩶</span> <span class="trans">ʔ̯ɔ̱m̱w̱aʲ²</span> <span class="ipa">ɔːm²waj⁶</span> <span class="meaning">save</span></span>.</p>
+<p><span class="ipa">ʔɯː</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩋᩨ</span></span>, eg. <span class="eg" lang="kkh">ᩋᩨ᩠᩵ᨶ</span>.</p>
+<p><span class="ipa">ʔɯ</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩋᩧ</span></span>, eg. <span class="eg" lang="kkh">ᩋᩧ᩠ᨷ</span>.</p>
+<p><span class="ipa">ʔɤː</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩋᩮᩨ</span></span>, eg. <span class="eg" lang="kkh">ᩋᩮᩨ᩠᩶ᨿ</span>.</p>
+<p><span class="ipa">ʔɔː</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩋᩬ</span></span>, eg. <span class="eg" lang="kkh">ᩋᩬᨾᩅᩱ᩶</span>.</p>
 <p>Also used with <span class="codepoint" translate="no"><span lang="kkh">&#x1A63;</span> [<a href="/scripts/taikhuen/block#char1A63"><span class="uname">U+1A63 TAI THAM VOWEL SIGN AA</span></a>]</span> to create the independent vowel <span class="ipa">a<span class="ipa">ː</span></span>, ie. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩋᩣ</span></span>.</p>
 </div>
 <div class="letter northernthai">
@@ -1142,8 +1150,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taikhun">
 <p class="titlepara"><span class="title"> Tai Khün</span>
 <span class="ipa">ʔuː</span>²</p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩐ᩶ᩣ</span> <span class="trans">ụ̄²ā</span> <span class="ipa">aw²</span> <span class="meaning">take</span></span>.</p>
-<p>Can also be combined with dependent vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩐ᩶ᩣ</span> <span class="trans">ụ̄²ā</span> <span class="ipa">aw²</span> <span class="meaning">take</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᩐ᩶ᩣ</span>.</p>
+<p>Can also be combined with dependent vowels, eg. <span class="eg" lang="kkh">ᩐ᩶ᩣ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -1160,7 +1168,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span>
 <span class="ipa">ʔeː²</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩑᨠ</span> <span class="trans">ẹk</span> <span class="ipa">eːk³</span> <span class="meaning">one</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᩑᨠ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1205,7 +1213,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span></p>
-<p>Eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩈᩮᩓ᩠ᩅ᩶</span> <span class="trans">selₔ˖w̱²</span> <span class="ipa">seː¹lɛːw⁶</span> <span class="meaning">already</span></span>.</p>
+<p>Eg. <span class="eg" lang="kkh">ᩈᩮᩓ᩠ᩅ᩶</span>.</p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai</span></p>
@@ -1252,14 +1260,14 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span>
 <span class="ipa">ʰ</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨷᩕᩰ᩠ᨯ</span> <span class="trans">b̯r̆o˖d̯</span> <span class="ipa">broːt³</span> <span class="meaning">help (royal)</span></span>.</p>
-<p>For use in initial clusters with unaspirated velar, dental and labial plosives:  <span class="ex list" lang="kkh">ᨠᩕ ᨣᩕ ᨲᩕ ᨷᩕ ᨻᩕ</span> . The trill is not pronounced but the plosive becomes aspirated, the tone  class  remaining  the  same  as  for  the  unaspirated  plosive, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨲᩕᩯ</span> <span class="trans">tr̆ɛ</span> <span class="ipa">tʰɛː¹</span> <span class="meaning">bugle</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᨷᩕᩰ᩠ᨯ</span>.</p>
+<p>For use in initial clusters with unaspirated velar, dental and labial plosives:  <span class="ex list" lang="kkh">ᨠᩕ ᨣᩕ ᨲᩕ ᨷᩕ ᨻᩕ</span> . The trill is not pronounced but the plosive becomes aspirated, the tone  class  remaining  the  same  as  for  the  unaspirated  plosive, eg. <span class="eg" lang="kkh">ᨲᩕᩯ</span>.</p>
 <p>There  are  signs  that modern spelling practice is  changing for these clusters to reflect the pronunciation rather than the etymology, ie. these clusters are being  replaced by the homorganic aspirated plosive with the same tone class.<a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o151</a></p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai</span>
 <span class="ipa">r</span>, <span class="ipa">ʰ</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩕᩣ᩠ᨷ</span> <span class="trans">kr̆ā˖b̯</span> <span class="ipa">kʰaːp</span> <span class="meaning">to prostrate oneself</span></span>.</p>
+<p>eg. <span class="eg" lang="nod">ᨠᩕᩣ᩠ᨷ</span>.</p>
 <p>When not silent, this has an aspirating/fricativising effect and/or the sound /l/, the latter preceded by an anaptyctic vowel.<a class="fnref" href="#refs">r</a></p>
 </div>
 
@@ -1278,7 +1286,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title"> Tai Khün</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩉᩖᨯᩬ</span> <span class="trans">hl̆d̯ɔ̱</span> <span class="ipa">lɔːt³</span> <span class="meaning">tube</span></span>. (Note that in this example the order of code points has to be manipulated to meet visual layout needs.)</p>
+<p>eg. <span class="eg" lang="kkh">ᩉᩖᨯᩬ</span>. (Note that in this example the order of code points has to be manipulated to meet visual layout needs.)</p>
 <p>For use in initial clusters. Note that this is  used with <span class="trans">h</span> to give the high tone version of <span class="trans">ḻ</span>, ie. <span class="charExample" translate="no"><span class="ex" lang="nod">ᩉᩖ</span></span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩉᩖ</span></span>.</p>
 </div>
 <div class="letter northernthai">
@@ -1382,8 +1390,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="titlepara"><span class="title">Northern Thai</span>
 <span class="ipa">p, tʰ</span></p>
 <p>Has two readings. </p>
-<p>It represents <span class="codepoint" translate="no"><span lang="nod">&#x1A2E;</span> [<a href="/scripts/taitham/block#char1A2E"><span class="uname">U+1A2E TAI THAM LETTER HIGH RATHA</span></a>]</span> in <span class="charExample" translate="no"><span class="ex" lang="nod">ᩈᨱᩛᩣ᩠ᨶ</span> <span class="trans">sṉ̇ᵽā˖ṉ</span> <span class="meaning">shape</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="nod">ᩁᨭᩛᨷᩣ᩠ᩃ</span> <span class="trans">rṫᵽb̯ā˖ḻ</span> <span class="meaning">government</span></span>. (Compare with the rare normal subjoined form, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᩈᨳᨷᩢ᩠ᨶ‍ᩁᩣᨩᨽᩢ᩠ᨮ‍ᨩ᩠ᩀᨦ‍ᩉ᩠ᨾᩱ᩵</span> <span class="trans">stʰb̯á˖ṉ‍rāc̱p̱ʰá˖ṫʰ‍c̱˖yŋ̱‍h˖m̱aʲ¹</span> <span class="meaning">Chiang Mai College of Further Education</span></span>.)<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a></p>
-<p>It represents <span class="codepoint" translate="no"><span lang="nod">&#x1A3B;</span> [<a href="/scripts/taitham/block#char1A3B"><span class="uname">U+1A3B TAI THAM LETTER LOW PA</span></a>]</span> in <span class="charExample" translate="no"><span class="ex" lang="nod">ᩋᨾᩛ</span> <span class="trans">ʔ̯m̱ᵽ</span> <span class="meaning">mango</span></span> and <span class="charExample" translate="no"><span class="ex" lang="nod">ᩈᨻᩛ</span> <span class="trans">sp̱ᵽ</span> <span class="meaning">omniscience</span></span>. (Compare with the somewhat rare subjoined form, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨷᩢᨱ᩠ᨻᨷᩩᩁᩩᩇ</span> <span class="trans">b̯áṉ̇˖p̱b̯uruṡ</span> <span class="meaning">disciple</span></span>.)<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a></p>
+<p>It represents <span class="codepoint" translate="no"><span lang="nod">&#x1A2E;</span> [<a href="/scripts/taitham/block#char1A2E"><span class="uname">U+1A2E TAI THAM LETTER HIGH RATHA</span></a>]</span> in <span class="eg" lang="nod">ᩈᨱᩛᩣ᩠ᨶ</span>, and <span class="eg" lang="nod">ᩁᨭᩛᨷᩣ᩠ᩃ</span>. (Compare with the rare normal subjoined form, eg. <span class="eg" lang="nod">ᩈᨳᨷᩢ᩠ᨶ‍ᩁᩣᨩᨽᩢ᩠ᨮ‍ᨩ᩠ᩀᨦ‍ᩉ᩠ᨾᩱ᩵</span>.)<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a></p>
+<p>It represents <span class="codepoint" translate="no"><span lang="nod">&#x1A3B;</span> [<a href="/scripts/taitham/block#char1A3B"><span class="uname">U+1A3B TAI THAM LETTER LOW PA</span></a>]</span> in <span class="eg" lang="nod">ᩋᨾᩛ</span> and <span class="eg" lang="nod">ᩈᨻᩛ</span>. (Compare with the somewhat rare subjoined form, eg. <span class="eg" lang="nod">ᨷᩢᨱ᩠ᨻᨷᩩᩁᩩᩇ</span>.)<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a></p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -1449,7 +1457,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=1A60">See in UniView</a></p>
 <div class="notes">
 <div class="letter">
-<p>Used to cause stacking of consonants. Note that, unlike most other Brahmi scripts, this doesn't necessarily kill the vowel between the consonants.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf"></a> Also unusually, it can also be used after vowel signs, and digits, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">᪓᩠ᨴ</span> <span class="trans">3̣˖ṯ</span> <span class="ipa">saːm tiː</span> <span class="meaning">three times</span></span>.</p>
+<p>Used to cause stacking of consonants. Note that, unlike most other Brahmi scripts, this doesn't necessarily kill the vowel between the consonants.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf"></a> Also unusually, it can also be used after vowel signs, and digits, eg. <span class="eg" lang="nod">᪓᩠ᨴ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -1475,7 +1483,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p><span class="ipa">-a</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩡ</span> <span class="trans">ka</span></span></p>
 <p>Used for several mid and low vowels to signal the short vowel, rather than the long, in open syllables.<a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o152</a> Participates in the following vowel-sign sequences.</p>
 <p><span class="ipa">-eʔ</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩡ</span> <span class="trans">kēa</span></span></p>
-<p><span class="ipa">-ɤʔ</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩬᩨᩡ</span> <span class="trans">kēɔ̄ɯ̄a</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨸᩮᩬᩨᩡ</span> <span class="trans">peɯ̄ɔ̱a</span> <span class="ipa">pɤ²</span> <span class="meaning">mud</span></span>.</p>
+<p><span class="ipa">-ɤʔ</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩬᩨᩡ</span> <span class="trans">kēɔ̄ɯ̄a</span></span>, eg. <span class="eg" lang="kkh">ᨸᩮᩬᩨᩡ</span>.</p>
 <p><span class="ipa">-ɛʔ</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩯᩡ</span> <span class="trans">kɛa</span></span></p>
 <p><span class="ipa">-oʔ</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩰᩡ</span> <span class="trans">kōa</span></span></p>
 <p><span class="ipa">-oʔ</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠ᩠ᩅᩫᩡ</span> <span class="trans">k˖w̱ɔ̈a</span></span></p>
@@ -1483,7 +1491,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai</span></p>
-<p>Used  to signal the short vowel, rather than the long, in open syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨿᩡ</span> <span class="trans">ɲ̱̇ʔ</span> <span class="ipa">ɲa᷇ʔ</span> <span class="meaning">do</span></span>. Short, open vowels always end with a glottal stop. Although this vowel is not formally equated with a glottal stop, there is always an unwritten glottal stop where it appears.</p>
+<p>Used  to signal the short vowel, rather than the long, in open syllables, eg. <span class="eg" lang="nod">ᨿᩡ</span>. Short, open vowels always end with a glottal stop. Although this vowel is not formally equated with a glottal stop, there is always an unwritten glottal stop where it appears.</p>
 <p>Participates in the following vowel-sign sequences.</p>
 <p><span class="ipa">-eʔ</span> <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩮᩡ</span> <span class="trans">-eȧʷ</span></span></p>
 <p><span class="ipa">-oʔ</span> <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩰᩡ</span> <span class="trans">-ōȧʷ</span></span></p>
@@ -1510,15 +1518,15 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨴᩢ᩠ᨦ</span> <span class="trans">ṯá˖ŋ̱</span> <span class="ipa">taŋ²</span> <span class="meaning">all</span></span>. </p>
+<p>eg. <span class="eg" lang="kkh">ᨴᩢ᩠ᨦ</span>. </p>
 <p>Participates in the following vowel-sign sequences: <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o152-3</a></p>
-<p><span class="ipa">-aw</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩢᩣ</span> <span class="trans">kēáā</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨡᩮᩢᩣ</span> <span class="trans">kʰeáā</span> <span class="ipa">kʰaw¹</span> <span class="meaning">they</span></span>.</p>
+<p><span class="ipa">-aw</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩢᩣ</span> <span class="trans">kēáā</span></span>, eg. <span class="eg" lang="kkh">ᨡᩮᩢᩣ</span>.</p>
 <p><span class="ipa">-o</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩰᩢ</span> <span class="trans">kōá</span></span></p>
-<p>Note how the second tone mark combined with this character may make it appear as if doubled, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨶᩢ᩠᩶ᨶ</span> <span class="trans">ṉá˖²ṉ</span> <span class="ipa">nan⁶</span> <span class="meaning">that</span></span>. In some fonts, it is not immediately apparent whether the diagonal line represents this vowel or a tone mark unless you know the word.</p>
+<p>Note how the second tone mark combined with this character may make it appear as if doubled, eg. <span class="eg" lang="kkh">ᨶᩢ᩠᩶ᨶ</span>. In some fonts, it is not immediately apparent whether the diagonal line represents this vowel or a tone mark unless you know the word.</p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai</span><span class="ipa">-a-</span></p>
-<p>Used alone, a vowel in closed syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨾᩢ᩠ᨠ</span> <span class="trans">m̱á˖k</span> <span class="ipa">ma᷇k</span> <span class="meaning">to like</span></span>.</p>
+<p>Used alone, a vowel in closed syllables, eg. <span class="eg" lang="nod">ᨾᩢ᩠ᨠ</span>.</p>
 <p>Participates in the following vowel-sign sequences, where it often indicates a short vowel.</p>
 <p><span class="ipa"> -e-</span> <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩮᩢᨠ</span> <span class="trans">-eá</span></span></p>
 <p><span class="ipa"> -ɛ-</span> <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩯᩢᨠ</span> <span class="trans">-ɛ̄á</span></span></p>
@@ -1530,11 +1538,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p><span class="ipa">-ia-</span> <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩮᩬᩨᩢᨠ</span> <span class="trans">-eɔ̄ɯ̄á</span></span></p>
 <p><span class="ipa">-ua-</span> <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠ᩠ᩅᩢᨠ</span> <span class="trans">-˖w̱á</span></span></p>
 <p>Also used to represent a syllable-final <span class="ipa">-k</span> sound. The following words are examples.<a class="fnref" href="#refs">r</a></p>
-<p><span class="charExample" translate="no"><span class="ex" lang="nod">ᩁᩢ</span> <span class="trans">ṟá</span> <span class="ipa">hak⁶</span> <span class="meaning">love</span></span></p>
-<p><span class="charExample" translate="no"><span class="ex" lang="nod">ᨾᩢᩣ</span> <span class="trans">m̱áā</span> <span class="ipa">maːk⁴</span> <span class="meaning">a lot</span></span></p>
-<p><span class="charExample" translate="no"><span class="ex" lang="nod">ᨯᩬᩢᩡ</span> <span class="trans">d̯ɔ̄áʔ</span> <span class="ipa">dɔːk³</span> <span class="meaning">flower</span></span></p>
-<p><span class="charExample" translate="no"><span class="ex" lang="nod">ᨻ᩠ᩅᩢ</span> <span class="trans">p̱˖w̱á</span> <span class="ipa">puak⁴</span> <span class="meaning">group</span></span></p>
-<p><span class="charExample" translate="no"><span class="ex" lang="nod">ᩃᩪᩢ</span> <span class="trans">ḻūá</span> <span class="meaning">luːk⁴</span></span>&nbsp;</p>
+<p><span class="eg" lang="nod">ᩁᩢ</span></p>
+<p><span class="eg" lang="nod">ᨾᩢᩣ</span></p>
+<p><span class="eg" lang="nod">ᨯᩬᩢᩡ</span></p>
+<p><span class="eg" lang="nod">ᨻ᩠ᩅᩢ</span></p>
+<p><span class="eg" lang="nod">ᩃᩪᩢ</span>&nbsp;</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -1556,19 +1564,19 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 </div>
 <div class="letter taikhun">
 <p class="titlepara"><span class="title"> Tai Khün</span><span class="ipa">-aː, -aː-</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩈᩣ᩠ᨾ</span> <span class="trans">sā˖m̱</span> <span class="ipa">saːm¹</span> <span class="meaning">three</span></span></p>
+<p>eg. <span class="eg" lang="kkh">ᩈᩣ᩠ᨾ</span></p>
 <p>Participates in the following vowel-sign sequences: <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o152-3</a></p>
 <p><span class="ipa">-aw</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩢᩣ</span> <span class="trans">kēáā</span></span></p>
 <p><span class="ipa">ʔaː</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩋᩣ</span> <span class="trans">ʔ̯ā</span></span></p>
-<p>Note that in the combination <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩣᩴ</span> <span class="trans">kāŋ̊</span></span> the vowel is shortened, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨧᩨᨪ᩶ᩣᩴ</span> <span class="trans">cɯ̄ṡ̱²āŋ̊</span> <span class="ipa">cɯː¹sam⁶</span> <span class="meaning">again</span></span>.</p>
+<p>Note that in the combination <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩣᩴ</span> <span class="trans">kāŋ̊</span></span> the vowel is shortened, eg. <span class="eg" lang="kkh">ᨧᩨᨪ᩶ᩣᩴ</span>.</p>
 <p>The combination of <span class="codepoint" translate="no"><span lang="nod">&#x1A36;</span> + <span lang="nod">&#xA0;&#x1A63;</span> [<a href="/scripts/taitham/block#char1A36"><span class="uname">U+1A36 TAI THAM LETTER NA</span></a> + <a href="/scripts/taitham/block#char1A63"><span class="uname">U+1A63 TAI THAM VOWEL SIGN AA​</span></a>]</span> forms a ligature, <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨶᩣ</span></span>.</p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai</span><span class="ipa">-aː, -aː-</span></p>
-<p>Used alone, a long vowel, in open or closed syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨡ᩶ᩣ</span> <span class="trans">x²ā</span> <span class="ipa">xa᷇ː</span> <span class="meaning">I, me</span></span>, <span class="charExample" translate="no"><span class="ex" lang="nod">ᩉᩖᩣ᩠ᨠ</span> <span class="trans">hl̆ā˖k</span> <span class="ipa">làːk</span> <span class="meaning">to differ from others</span></span>.</p>
+<p>Used alone, a long vowel, in open or closed syllables, eg. <span class="eg" lang="nod">ᨡ᩶ᩣ</span>, <span class="eg" lang="nod">ᩉᩖᩣ᩠ᨠ</span>.</p>
 <p>Participates in the following vowel-sign sequence.</p>
 <p><span class="ipa">-aw</span> <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩮᩢᩣ</span> <span class="trans">-eáā</span></span></p>
-<p>The combination of <span class="codepoint" translate="no"><span lang="nod">&#x1A36;</span> + <span lang="nod">&#xA0;&#x1A63;</span> [<a href="/scripts/taitham/block#char1A36"><span class="uname">U+1A36 TAI THAM LETTER NA</span></a> + <a href="/scripts/taitham/block#char1A63"><span class="uname">U+1A63 TAI THAM VOWEL SIGN AA​</span></a>]</span> forms a ligature, <span class="charExample" translate="no"><span class="ex" lang="nod">ᨶᩣ</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨶᩣᩴ</span> <span class="trans">ṉāŋ̊</span> <span class="ipa">nam</span> <span class="meaning">lead</span></span>.</p>
+<p>The combination of <span class="codepoint" translate="no"><span lang="nod">&#x1A36;</span> + <span lang="nod">&#xA0;&#x1A63;</span> [<a href="/scripts/taitham/block#char1A36"><span class="uname">U+1A36 TAI THAM LETTER NA</span></a> + <a href="/scripts/taitham/block#char1A63"><span class="uname">U+1A63 TAI THAM VOWEL SIGN AA​</span></a>]</span> forms a ligature, <span class="charExample" translate="no"><span class="ex" lang="nod">ᨶᩣ</span></span>, eg. <span class="eg" lang="nod">ᨶᩣᩴ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -1589,9 +1597,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 </div>
 <div class="letter taikhun">
 <p class="titlepara"><span class="title"> Tai Khün</span><span class="ipa">-aː-</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨣᩢ᩠ᨶᩅᩤ᩵</span> <span class="trans">ḵá˖ṉw̱ä¹</span> <span class="ipa">kan²wa⁴ː</span> <span class="meaning">if</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᨣᩢ᩠ᨶᩅᩤ᩵</span>.</p>
 <p>Participates in the following vowel-sign sequence: <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o152-3</a></p>
-<p><span class="ipa">-aw</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨣᩮᩢᩤ</span> <span class="trans">ḵēáä</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨣᩮᩢᩤ</span> <span class="trans">ḵēáä</span> <span class="ipa">kaw⁵</span> <span class="meaning">eldest</span></span>.</p>
+<p><span class="ipa">-aw</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨣᩮᩢᩤ</span> <span class="trans">ḵēáä</span></span>, eg. <span class="eg" lang="kkh">ᨣᩮᩢᩤ</span>.</p>
 <p>Note that in the combination <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩤᩴ</span> <span class="trans">käŋ̊</span></span> the vowel is shortened.</p>
 </div>
 <div class="letter northernthai">
@@ -1617,11 +1625,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taikhun">
 <p class="titlepara"><span class="title"> Tai Khün</span>
 <span class="ipa">-i, -i-</span></p>
-<p>Short vowel, in open or closed syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩥ᩠ᨶ</span> <span class="trans">ki˖ṉ</span> <span class="ipa">kin¹</span> <span class="meaning">eat</span></span>.</p>
+<p>Short vowel, in open or closed syllables, eg. <span class="eg" lang="kkh">ᨠᩥ᩠ᨶ</span>.</p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai</span> <span class="ipa">-i, -i-</span></p>
-<p>Used alone, a short vowel,  in open or closed syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨤᩥ᩠ᨦ</span> <span class="trans">ẋ̱i˖ŋ̱</span> <span class="ipa">xīŋ</span> <span class="meaning">you</span></span>.</p>
+<p>Used alone, a short vowel,  in open or closed syllables, eg. <span class="eg" lang="nod">ᨤᩥ᩠ᨦ</span>.</p>
 <p>Participates in the following vowel-sign sequences.</p>
 <p><span class="ipa"> -ɜ-</span> <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩮᩥᩢᨠ</span> <span class="trans">keiák</span></span></p>
 <p><span class="ipa">-ɜʔ</span> <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩮᩬᩥᩡ</span> <span class="trans">keɔ̄iʔ</span></span></p>
@@ -1644,11 +1652,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span><span class="ipa">-iː, -iː-</span></p>
-<p>Long vowel, in open or closed syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨶᩦ᩶</span> <span class="trans">ṉī²</span> <span class="ipa">niː⁶</span> <span class="meaning">this</span></span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o152-3</a></p>
+<p>Long vowel, in open or closed syllables, eg. <span class="eg" lang="kkh">ᨶᩦ᩶</span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o152-3</a></p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai</span><span class="ipa">-iː, -iː-</span></p>
-<p>Long vowel, used in open or closed syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨾᩦ᩠ᨯ</span> <span class="trans">m̱ī˖d̯</span> <span class="ipa">mîːt</span> <span class="meaning">knife</span></span>.</p>
+<p>Long vowel, used in open or closed syllables, eg. <span class="eg" lang="nod">ᨾᩦ᩠ᨯ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -1665,11 +1673,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span><span class="ipa">-ɯ, -ɯ-</span></p>
-<p>Short vowel, in open or closed syllables,  eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩉ᩠ᨶᩧ᩵ᨦ</span> <span class="trans">h˖ṉɯ¹ŋ̱</span> <span class="ipa">nɯɲ³</span> <span class="meaning">one</span></span>.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o152-3</a></p>
+<p>Short vowel, in open or closed syllables,  eg. <span class="eg" lang="kkh">ᩉ᩠ᨶᩧ᩵ᨦ</span>.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o152-3</a></p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai </span><span class="ipa">-ɯ, -ɯ-</span></p>
-<p>Short vowel, used in open or closed syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨾᩧ᩠ᨦ</span> <span class="trans">m̱ɯ˖ŋ̱</span> <span class="ipa">mɯ̄ŋ</span> <span class="meaning">you</span></span>.</p>
+<p>Short vowel, used in open or closed syllables, eg. <span class="eg" lang="nod">ᨾᩧ᩠ᨦ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -1686,15 +1694,15 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title"> Tai Khün</span><span class="ipa">-ɯː, -ɯː-</span></p>
-<p>Long vowel, in open or closed syllables,  eg.  <span class="charExample" translate="no"><span class="ex" lang="nod">ᨩᩨ᩵</span> <span class="trans">c̱ɯ̄¹</span> <span class="ipa">cɯː⁴</span> <span class="meaning">to be named</span></span>.</p>
+<p>Long vowel, in open or closed syllables,  eg.  <span class="eg" lang="nod">ᨩᩨ᩵</span>.</p>
 <p>Participates in the following vowel-sign sequences.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o152-3</a></p>
 <p><span class="ipa">-ɤʔ</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩬᩨᩡ</span> <span class="trans">kēɔ̄ɯ̄a</span></span></p>
-<p><span class="ipa">-ɤː</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩬᩨ</span> <span class="trans">kēɔ̄ɯ̄</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩬᩨ</span> <span class="trans">kēɔ̄ɯ̄</span> <span class="ipa">kɤː¹</span> <span class="meaning">salt</span></span>.</p>
-<p><span class="ipa">-ɤː</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩨ</span> <span class="trans">kēɯ̄</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩁᩮᩨ᩠ᨶ</span> <span class="trans">reɯ˖̄ṉ</span> <span class="ipa">rɤːn²</span> <span class="meaning">house</span></span>.</p>
+<p><span class="ipa">-ɤː</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩬᩨ</span> <span class="trans">kēɔ̄ɯ̄</span></span>, eg. <span class="eg" lang="kkh">ᨠᩮᩬᩨ</span>.</p>
+<p><span class="ipa">-ɤː</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩨ</span> <span class="trans">kēɯ̄</span></span>, eg. <span class="eg" lang="kkh">ᩁᩮᩨ᩠ᨶ</span>.</p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Tha</span><span class="ipa">-ɯː, -ɯː-</span></p>
-<p>Used alone, a long vowel, in open or closed syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᩉᩨ᩶</span> <span class="trans">hɯ̄²</span> <span class="ipa">hɯ᷇ː</span> <span class="meaning">give</span></span>.</p>
+<p>Used alone, a long vowel, in open or closed syllables, eg. <span class="eg" lang="nod">ᩉᩨ᩶</span>.</p>
 <p>Participates in the following vowel-sign sequences.</p>
 <p><span class="ipa">-ia-</span> <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩮᩬᩨᩢᨠ</span> <span class="trans">keɔ̄ɯ̄ák</span></span></p>
 <p><span class="ipa"> -ɯa</span> <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩮᩬᩨᩋᩡ</span> <span class="trans">keɔ̄ɯ̄ʔ̯ʔ</span></span></p>
@@ -1716,11 +1724,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span><span class="ipa">-u, -u-</span></p>
-<p>Short vowel, in open or closed syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩃᩩᨦ</span> <span class="trans">ḻuŋ̱</span> <span class="ipa">luŋ²</span> <span class="meaning">uncle</span></span>.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o152-3</a></p>
+<p>Short vowel, in open or closed syllables, eg. <span class="eg" lang="kkh">ᩃᩩᨦ</span>.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o152-3</a></p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai </span><span class="ipa">-u, -u-</span></p>
-<p>Short vowel, used in open or closed syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨿᩩᨦ</span> <span class="trans">ɲ̱̇uŋ̱</span> <span class="ipa">ɲūŋ</span> <span class="meaning">mosquito</span></span>.</p>
+<p>Short vowel, used in open or closed syllables, eg. <span class="eg" lang="nod">ᨿᩩᨦ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -1737,13 +1745,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title"> Tai Khün</span><span class="ipa">-uː, -uː-</span></p>
-<p>Short vowel, in open or closed syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩃᩪᨠ</span> <span class="trans">ḻūk</span> <span class="ipa">luːk⁴</span> <span class="meaning">offspring</span></span>.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o152-3</a></p>
-<p>If there is a subjoined character in the same cluster, this vowel may be displayed in elongated form to the right of the stack, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩉ᩠ᨾᩪᨶ᩶ᩭ</span> <span class="trans">h˖m̱ūṉ²oʲ</span> <span class="ipa">muː¹nɔːj⁶</span> <span class="meaning">piglet</span></span>. </p>
-<p>Note that in <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨧ᩠ᨷᩪ</span> <span class="trans">c˖b̯ū</span> <span class="ipa">cuːp³</span> <span class="meaning">kiss</span></span> the expected order of code points has to be changed in some fonts because they or USE doesn't yet support the natural codepoint order.</p>
+<p>Short vowel, in open or closed syllables, eg. <span class="eg" lang="kkh">ᩃᩪᨠ</span>.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o152-3</a></p>
+<p>If there is a subjoined character in the same cluster, this vowel may be displayed in elongated form to the right of the stack, eg. <span class="eg" lang="kkh">ᩉ᩠ᨾᩪᨶ᩶ᩭ</span>. </p>
+<p>Note that in <span class="eg" lang="kkh">ᨧ᩠ᨷᩪ</span> the expected order of code points has to be changed in some fonts because they or USE doesn't yet support the natural codepoint order.</p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai</span><span class="ipa">-uː, -uː-</span></p>
-<p>Long vowel, used in open or closed syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᩁᩪ᩶</span> <span class="trans">ṟū²</span> <span class="ipa">húː</span> <span class="meaning">to know</span></span>.</p>
+<p>Long vowel, used in open or closed syllables, eg. <span class="eg" lang="nod">ᩁᩪ᩶</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -1761,14 +1769,14 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title"> Tai Khün</span><span class="ipa">-ɔ-</span></p>
-<p>Used alone, a short vowel, in  closed syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨤᩫ᩠ᨶ</span> <span class="trans">ḵ̇ʰɔ̈˖ṉ</span> <span class="ipa">kʰɔn²</span> <span class="meaning">person</span></span>.</p>
+<p>Used alone, a short vowel, in  closed syllables, eg. <span class="eg" lang="kkh">ᨤᩫ᩠ᨶ</span>.</p>
 <p>Participates in the following vowel-sign sequences. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o152-3</a></p>
-<p><span class="ipa">-oː</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠ᩠ᩅᩫ</span> <span class="trans">k˖w̱ɔ̈</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨲᩫ᩠ᩅ</span> <span class="trans">tɔ̈˖w̱</span> <span class="ipa">toː¹</span> <span class="meaning">animal classifier</span></span>.</p>
+<p><span class="ipa">-oː</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠ᩠ᩅᩫ</span> <span class="trans">k˖w̱ɔ̈</span></span>, eg. <span class="eg" lang="kkh">ᨲᩫ᩠ᩅ</span>.</p>
 <p><span class="ipa">-oʔ</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠ᩠ᩅᩫᩡ</span> <span class="trans">k˖w̱ɔ̈a</span></span></p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai</span></p>
-<p>Used alone, a short vowel, in  closed syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᩃᩫ᩠᩵ᨶ</span> <span class="trans">ḻo˖¹ṉ</span> <span class="ipa">lôn</span> <span class="meaning">run</span></span>.</p>
+<p>Used alone, a short vowel, in  closed syllables, eg. <span class="eg" lang="nod">ᩃᩫ᩠᩵ᨶ</span>.</p>
 <p>Participates in the following vowel-sign sequences.</p>
 <p><span class="ipa">-oː-</span> <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩰᩫᨠ</span> <span class="trans">kōok</span></span></p>
 <p><span class="ipa">-ua</span> <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠ᩠ᩅᩫᩡ</span> <span class="trans">k˖w̱oʔ</span></span></p>
@@ -1789,15 +1797,15 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title"> Tai Khün</span></p>
-<p>Used alone, a long vowel,  in  closed syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩉᩬᨷ</span> <span class="trans">hɔ̱b̯</span> <span class="ipa">hɔːp³</span> <span class="meaning">carry</span></span>.</p>
+<p>Used alone, a long vowel,  in  closed syllables, eg. <span class="eg" lang="kkh">ᩉᩬᨷ</span>.</p>
 <p>Participates in the following vowel-sign sequences.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o152-3</a></p>
-<p><span class="charExample"><span class="ipa">-ɤː</span></span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩬᩨ</span> <span class="trans">kēɔ̄ɯ̄</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩨᩬ</span> <span class="trans">keɯ̄ɔ̱</span> <span class="ipa">kɤː¹</span> <span class="meaning">salt</span></span>.</p>
+<p><span class="charExample"><span class="ipa">-ɤː</span></span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩬᩨ</span> <span class="trans">kēɔ̄ɯ̄</span></span>, eg. <span class="eg" lang="kkh">ᨠᩮᩨᩬ</span>.</p>
 <p><span class="charExample"><span class="ipa">-ɤʔ</span></span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩬᩨᩡ</span> <span class="trans">kēɔ̄ɯ̄a</span></span></p>
 <p><span class="charExample"><span class="ipa">-ɔʔ</span></span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩰᩬᩡ</span> <span class="trans">kōɔ̄a</span></span></p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai</span></p>
-<p>Used alone, a long vowel,  in open or closed syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨻᩬ᩵ᩴ</span> <span class="trans">p̱ɔ̄¹ŋ̊</span> <span class="ipa">pɔ̂ː</span> <span class="meaning">father</span></span>, <span class="charExample" translate="no"><span class="ex" lang="nod">ᩁᩬ᩶ᩁ</span> <span class="trans">ṟɔ̄²ṟ</span> <span class="ipa">hɔ́ːn</span> <span class="meaning">hot</span></span>.</p>
+<p>Used alone, a long vowel,  in open or closed syllables, eg. <span class="eg" lang="nod">ᨻᩬ᩵ᩴ</span>, <span class="eg" lang="nod">ᩁᩬ᩶ᩁ</span>.</p>
 <p>Participates in the following vowel-sign sequences.</p>
 <p><span class="ipa">-ɜʔ</span> <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩮᩬᩥᩡ</span> <span class="trans">keɔ̄iʔ</span></span></p>
 <p><span class="ipa">-ɜː-</span> <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩮᩬᩥᨠ</span> <span class="trans">keɔ̄ik</span></span></p>
@@ -1827,7 +1835,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span>
 <span class="ipa">-ɔːj</span></p>
-<p>A long diphthong, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩉ᩠ᨾᩪᨶ᩶ᩭ</span> <span class="trans">h˖m̱ūṉ²oʲ</span> <span class="ipa">muː¹nɔːj⁶</span> <span class="meaning">piglet</span></span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o152-3</a></p>
+<p>A long diphthong, eg. <span class="eg" lang="kkh">ᩉ᩠ᨾᩪᨶ᩶ᩭ</span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o152-3</a></p>
 </div>
 <p class="usage">Not used in Northern Thai. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a></p>
 
@@ -1847,18 +1855,18 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span></p>
-<p>Used alone, a long vowel,  in open or closed syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩈᩮᩃᩯ᩠ᩅ᩶</span> <span class="trans">seḻɛ˖w̱²</span> <span class="ipa">seː¹lɛːw⁶</span> <span class="meaning">already</span></span>.</p>
+<p>Used alone, a long vowel,  in open or closed syllables, eg. <span class="eg" lang="kkh">ᩈᩮᩃᩯ᩠ᩅ᩶</span>.</p>
 <p>Participates in the following vowel-sign sequences.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o152-3</a></p>
-<p><span class="ipa">-eʔ</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩡ</span> <span class="trans">kēa</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮ᩠ᨷᩉᩬᨾ</span> <span class="trans">ke˖b̯hɔ̱m̱</span> <span class="ipa">kep²hɔːm¹</span> <span class="meaning">accumulate</span></span>.</p>
-<p><span class="charExample"><span class="ipa">-ɤː</span></span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩬᩨ</span> <span class="trans">kēɔ̄ɯ̄</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩬᩨ</span> <span class="trans">keɯ̄ō</span> <span class="ipa">kɤː¹</span> <span class="meaning">salt</span></span>.</p>
+<p><span class="ipa">-eʔ</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩡ</span> <span class="trans">kēa</span></span>, eg. <span class="eg" lang="kkh">ᨠᩮ᩠ᨷᩉᩬᨾ</span>.</p>
+<p><span class="charExample"><span class="ipa">-ɤː</span></span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩬᩨ</span> <span class="trans">kēɔ̄ɯ̄</span></span>, eg. <span class="eg" lang="kkh">ᨠᩮᩬᩨ</span>.</p>
 <p><span class="charExample"><span class="ipa">-ɤː-</span></span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩨ</span> <span class="trans">kēɯ̄</span></span></p>
 <p><span class="charExample"><span class="ipa">-ɤʔ</span></span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩬᩨᩡ</span> <span class="trans">kēɔ̄ɯ̄a</span></span></p>
 <p><span class="charExample"><span class="ipa">-ia</span></span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮ᩠ᨿ</span> <span class="trans">kē˖y̱</span></span></p>
-<p><span class="charExample"><span class="ipa">-aw</span></span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩢᩣ</span> <span class="trans">kēáā</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨡᩮᩢᩣ</span> <span class="trans">kʰeáā</span> <span class="ipa">kʰaw¹</span> <span class="meaning">they</span></span>.</p>
+<p><span class="charExample"><span class="ipa">-aw</span></span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩮᩢᩣ</span> <span class="trans">kēáā</span></span>, eg. <span class="eg" lang="kkh">ᨡᩮᩢᩣ</span>.</p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai </span></p>
-<p>Used alone, a long vowel,  in open or closed syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨸᩮ᩠ᨶ</span> <span class="trans">pe˖ṉ</span> <span class="ipa">pěn</span> <span class="meaning">to be</span></span>.</p>
+<p>Used alone, a long vowel,  in open or closed syllables, eg. <span class="eg" lang="nod">ᨸᩮ᩠ᨶ</span>.</p>
 <p>Participates in the following vowel-sign sequences.</p>
 <p><span class="ipa">-e-</span> <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩮᩢᨠ</span> <span class="trans">keák</span></span></p>
 <p><span class="ipa">-eʔ</span> <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩮᩡ</span> <span class="trans">keʔ</span></span></p>
@@ -1891,14 +1899,14 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span></p>
-<p>Used alone, a long vowel,  in open or closed syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨲᩯ᩠ᨠᨹᩯ᩵</span> <span class="trans">tɛ˖kpʰɛ¹</span> <span class="ipa">tɛːk³pʰɛː³</span> <span class="meaning">multiply</span></span>.</p>
+<p>Used alone, a long vowel,  in open or closed syllables, eg. <span class="eg" lang="kkh">ᨲᩯ᩠ᨠᨹᩯ᩵</span>.</p>
 <p>Participates in the following vowel-sign sequence.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o152-3</a></p>
 <p><span class="ipa">-ɛʔ</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩯᩡ</span> <span class="trans">kɛa</span></span></p>
-<p>The example <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩈᩯᨯ᩠ᨦ</span> <span class="trans">sɛd̯˖ŋ̱</span> <span class="ipa">sa²dɛːŋ²</span> <span class="meaning">show shows this character twice removed from the consonant it is pronounced after.</span></span> It's not clear what the sequence of characters should be to achieve this.</p>
+<p>The example <span class="eg" lang="kkh">ᩈᩯᨯ᩠ᨦ</span> shows this character twice removed from the consonant it is pronounced after. It's not clear what the sequence of characters should be to achieve this.</p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai</span></p>
-<p>Used alone, a long vowel,  in open or closed syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨾᩯ᩵</span> <span class="trans">m̱ɛ̄¹</span> <span class="ipa">mɛ̂ː</span> <span class="meaning">mother</span></span>, <span class="charExample" translate="no"><span class="ex" lang="nod">ᩋᩯ᩠᩵ᩅ</span> <span class="trans">ʔ̯ɛ̄˖¹w̱</span> <span class="ipa">ʔɛ̀ːw</span> <span class="meaning">travel</span></span>.</p>
+<p>Used alone, a long vowel,  in open or closed syllables, eg. <span class="eg" lang="nod">ᨾᩯ᩵</span>, <span class="eg" lang="nod">ᩋᩯ᩠᩵ᩅ</span>.</p>
 <p>Participates in the following vowel-sign sequences.</p>
 <p><span class="ipa">-ɛ-</span> <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩯᩢᨠ</span> <span class="trans">kɛ̄ák</span></span></p>
 <p><span class="ipa">-ɛʔ</span> <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩯᩡ</span> <span class="trans">kɛ̄ʔ</span></span></p>
@@ -1919,7 +1927,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span></p>
-<p>Used alone, a long vowel,  in open or closed syllables, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨷᩕᩰ᩠ᨯ</span> <span class="trans">b̯r̆o˖d̯</span> <span class="ipa">broːt³</span> <span class="meaning">help (royal)</span></span>.</p>
+<p>Used alone, a long vowel,  in open or closed syllables, eg. <span class="eg" lang="kkh">ᨷᩕᩰ᩠ᨯ</span>.</p>
 <p>Participates in the following vowel-sign sequences.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o152-3</a></p>
 <p><span class="charExample"><span class="ipa">-oʔ</span></span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩰᩡ</span> <span class="trans">kōa</span></span></p>
 <p><span class="charExample"><span class="ipa">-ɔʔ</span></span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩰᩬᩡ</span> <span class="trans">kōɔ̄a</span></span></p>
@@ -1948,13 +1956,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span><span class="ipa">-aj</span></p>
-<p>Diphthong, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩱ᩵</span> <span class="trans">kaʲ¹</span> <span class="ipa">kaj³</span> <span class="meaning">chicken</span></span>.</p>
+<p>Diphthong, eg. <span class="eg" lang="kkh">ᨠᩱ᩵</span>.</p>
 <p>Participates in the following vowel-sign sequence.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o152-3</a></p>
-<p><span class="ipa">-aj</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩱ᩠ᨿ</span> <span class="trans">kaʲ˖y̱</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩉᩱ᩠ᨿ᩵</span> <span class="trans">haʲ˖ȳ¹</span> <span class="ipa">jaj³</span> <span class="meaning">big</span></span>.</p>
+<p><span class="ipa">-aj</span> <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩱ᩠ᨿ</span> <span class="trans">kaʲ˖y̱</span></span>, eg. <span class="eg" lang="kkh">ᩉᩱ᩠ᨿ᩵</span>.</p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai</span><span class="ipa">-aj</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᩉᩱ᩵</span> <span class="trans">haʲ¹</span> <span class="ipa">hai</span> <span class="meaning">hit</span></span>. Can also be written with a following <span class="uname">YA</span>, to give the same sound, eg. <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf"></a><span class="charExample" translate="no"><span class="ex" lang="nod">ᨴᩱ᩠ᨿ</span> <span class="trans">ṯaʲ˖ɲ̱̇</span> <span class="ipa">tai</span> <span class="meaning">Thailand</span></span>.</p>
+<p>eg. <span class="eg" lang="nod">ᩉᩱ᩵</span>. Can also be written with a following <span class="uname">YA</span>, to give the same sound, eg. <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf"></a><span class="eg" lang="nod">ᨴᩱ᩠ᨿ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -1971,7 +1979,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨩᩲ᩶</span> <span class="trans">c̱ȧʲ²</span> <span class="ipa">t͡ɕáj</span> <span class="meaning">use</span></span>.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf"></a></p>
+<p>eg. <span class="eg" lang="nod">ᨩᩲ᩶</span>.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf"></a></p>
 <p>The original pronunciation for this letter was <span class="ipa">aɯ</span>, after which it shifted to <span class="ipa">aj</span>, which made it largely redundant because <span class="codepoint" translate="no"><span lang="nod">&#x1A71;</span> [<a href="/scripts/taitham/block#char1A71"><span class="uname">U+1A71 TAI THAM VOWEL SIGN AI</span></a>]</span> already represents that sound.<a class="fnref" href="#refs">r</a></p>
 </div>
 <p class="usage">Not used in Tai Khün. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a></p>
@@ -1992,11 +2000,11 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title"> Tai Khün</span></p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨻᩳᨾᩯ᩵</span> <span class="trans">p̄ɔ̂m̱ɛ¹</span> <span class="ipa">pɔː⁴mɛː⁴</span> <span class="meaning">parents</span></span>.</p>
+<p>eg. <span class="eg" lang="kkh">ᨻᩳᨾᩯ᩵</span>.</p>
 </div>
 <div class="letter northernthai">
 <p class="titlepara"><span class="title"> Northern Tha</span>i</p>
-<p>eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨾᩳ</span> <span class="trans">m̱aʷ</span> <span class="ipa">maw</span> <span class="meaning">drunk</span></span>.</p>
+<p>eg. <span class="eg" lang="nod">ᨾᩳ</span>.</p>
 <p>Little used.<a class="fnref" href="#refs">r</a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -2019,7 +2027,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p>Used to mark final <span class="ipa">-ŋ</span> with the short vowels <span class="ipa">a, i, u</span> in Pali words. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e153</a></p>
 <p>Tai Khün and Tai Lü render it over the vowel sign. <span class="codepoint" translate="no">R</span>egardless of visual placement, this character should come after the vowel sign (in the same way as it does in Khmer, eg. <span class="charExample" translate="no"><span class="ex" lang="km">កាំ</span></span>). <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e153</a></p>
 <p>Used in the following vowels: <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o152-3</a></p>
-<p><span class="ipa">-am</span> <span class="charExample" translate="no"><span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩣᩴ</span> <span class="trans">kāŋ̊</span></span></span> or <span class="charExample" translate="no"><span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩤᩴ</span> <span class="trans">käŋ̊</span></span></span> Note that the vowel is shortened, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨧᩨᨪ᩶ᩣᩴ</span> <span class="trans">cɯ̄ṡ̱²āŋ̊</span> <span class="ipa">cɯː¹sam⁶</span> <span class="meaning">again</span></span>. This combination is used to write many native words. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e153</a></p>
+<p><span class="ipa">-am</span> <span class="charExample" translate="no"><span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩣᩴ</span> <span class="trans">kāŋ̊</span></span></span> or <span class="charExample" translate="no"><span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩤᩴ</span> <span class="trans">käŋ̊</span></span></span> Note that the vowel is shortened, eg. <span class="eg" lang="kkh">ᨧᩨᨪ᩶ᩣᩴ</span>. This combination is used to write many native words. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e153</a></p>
 <p><span class="ipa">-eːw</span> <span class="charExample" translate="no"><span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠ᩠ᨿᩴ</span> <span class="trans">k˖y̱ŋ̊</span></span></span></p>
 </div>
 <div class="letter northernthai">
@@ -2027,10 +2035,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p><span class="ipa">-ŋ</span>, eg. <span class="ex" lang="nod">ᨠᩴ</span> <span class="trans">kŋ̊</span> <span class="ipa">kaŋ</span>, <span class="ex" lang="nod">ᨠᩥᩴ</span> <span class="trans">kiŋ̊</span> <span class="ipa">kiŋ</span>.</p>
 <p>Used to mark final <span class="ipa">-ŋ</span> with the short vowels <span class="ipa">a, i, u</span> in Pali words. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e153</a></p>
 <p>When used with <span class="codepoint" translate="no"><span lang="nod">&#x1A63;</span> [<a href="/scripts/taitham/block#char1A63"><span class="uname">U+1A63 TAI THAM VOWEL SIGN AA</span></a>]</span> or <span class="codepoint" translate="no"><span lang="nod">&#x1A64;</span> [<a href="/scripts/taitham/block#char1A64"><span class="uname">U+1A64 TAI THAM VOWEL SIGN TALL AA</span></a>]</span>, Northern Thai often follows the Thai model, which places the <span class="uname">MAI KANG</span> to the left of the vowel (overlapping the preceding consonant) It may however also appear over the vowel, and can appear over the gap between preceding consonant and vowel. When it appears over just the vowel, it doesn't attract the tone mark, but in other positions it does.<a class="fnref" href="#refs">r</a> <span class="codepoint" translate="no">R</span>egardless of visual placement, this character should be typed and stored after the vowel sign (in the same way as it does in Khmer, eg. <span class="charExample" translate="no"><span class="ex" lang="km">កាំ</span></span>). <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e153</a></p>
-<p>In <span class="charExample" translate="no"><span class="ex" lang="nod">ᩅᩣᩴ</span></span> or <span class="charExample" translate="no"><span class="ex" lang="nod">ᨣᩤᩴ</span></span> <span class="charExample"><span class="ipa">-am</span></span> note that the vowel is shortened, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᩌᩣᩴ</span> <span class="trans">ẖāŋ̊</span> <span class="ipa">ham</span> <span class="meaning">sprinkle</span></span>, <span class="charExample" translate="no"><span class="ex" lang="nod">ᩉ᩠ᨾ᩵ᩣᩴ</span> <span class="trans">h˖m̱¹āŋ̊</span> <span class="ipa">mam</span> <span class="meaning">eat</span></span>. This combination is used to write many native words.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e153</a></p>
-<p><span class="ipa">-ɔː</span> sometimes, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨷᩴ᩵</span> <span class="trans">b̯ŋ̊¹</span> <span class="ipa">bɔ̀ː</span> <span class="meaning">no</span></span>, <span class="charExample" translate="no"><span class="ex" lang="nod">ᨣᩴ</span> <span class="trans">ḵŋ̊</span> <span class="ipa">kɔː</span> <span class="meaning">then</span></span>.</p>
+<p>In <span class="charExample" translate="no"><span class="ex" lang="nod">ᩅᩣᩴ</span></span> or <span class="charExample" translate="no"><span class="ex" lang="nod">ᨣᩤᩴ</span></span> <span class="charExample"><span class="ipa">-am</span></span> note that the vowel is shortened, eg. <span class="eg" lang="nod">ᩌᩣᩴ</span>, <span class="eg" lang="nod">ᩉ᩠ᨾ᩵ᩣᩴ</span>. This combination is used to write many native words.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e153</a></p>
+<p><span class="ipa">-ɔː</span> sometimes, eg. <span class="eg" lang="nod">ᨷᩴ᩵</span>, <span class="eg" lang="nod">ᨣᩴ</span>.</p>
 <p>Participates in the following vowel-sign sequence.</p>
-<p><span class="ipa">-ɔː</span> <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩬᩴ</span> <span class="trans">kɔ̄ŋ̊</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨻᩬ᩵ᩴ</span> <span class="trans">p̱ɔ̄¹ŋ̊</span> <span class="ipa">pɔ̂ː</span> <span class="meaning">father</span></span>.</p>
+<p><span class="ipa">-ɔː</span> <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩬᩴ</span> <span class="trans">kɔ̄ŋ̊</span></span>, eg. <span class="eg" lang="nod">ᨻᩬ᩵ᩴ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>: <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, <a href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf" target="_blank">Owen</a> </p>
 </div>
@@ -2057,8 +2065,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter">
 <p>Used only on unchecked syllables (ie. not ending in -p, -t, or -k).</p>
-<p>In the 6 tone system, <strong>sets tone 3</strong> for high and mid onsets, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩱ᩵</span> <span class="trans">kaʲ¹</span> <span class="ipa">kaj³</span> <span class="meaning">chicken </span></span>, <strong>and tone 4</strong> for low, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨩᩭ᩵</span> <span class="trans">c̱oʲ¹</span> <span class="ipa">cɔːj⁴</span> <span class="meaning">help</span></span>.</p>
-<p>In the 5 tone system, always <strong>sets  tone 4</strong>, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨠᩱ᩵</span> <span class="trans">kaʲ¹</span> <span class="ipa">kaj⁴</span> <span class="meaning">chicken</span></span>. </p>
+<p>In the 6 tone system, <strong>sets tone 3</strong> for high and mid onsets, eg. <span class="eg" lang="kkh">ᨠᩱ᩵</span>, <strong>and tone 4</strong> for low, eg. <span class="eg" lang="kkh">ᨩᩭ᩵</span>.</p>
+<p>In the 5 tone system, always <strong>sets  tone 4</strong>, eg. <span class="eg" lang="kkh">ᨠᩱ᩵</span>. </p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -2075,7 +2083,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter">
 <p>Used only on unchecked syllables (ie. not ending in -p, -t, or -k).
-<p><strong>Sets tone 5</strong> for high and mid onsets, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨳ᩶ᩣ</span> <span class="trans">tʰ²ā</span> <span class="ipa">tʰaː⁵</span> <span class="meaning">wait</span></span>, <strong>and tone 6</strong> for low, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨶᩢ᩠᩶ᨶ</span> <span class="trans">ṉá˖²ṉ</span> <span class="ipa">nan⁶</span> <span class="meaning">that</span></span>.</p>
+<p><strong>Sets tone 5</strong> for high and mid onsets, eg. <span class="eg" lang="kkh">ᨳ᩶ᩣ</span>, <strong>and tone 6</strong> for low, eg. <span class="eg" lang="kkh">ᨶᩢ᩠᩶ᨶ</span>.</p>
 
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -2160,7 +2168,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <p class="univiewLink"><a target="_blank" href="/uniview/?char=1A60">See in UniView</a></p>
 <div class="notes">
 <div class="letter">
-<p>Used to cause stacking of consonants. Note that, unlike most other Brahmi scripts, this doesn't necessarily kill the vowel between the consonants.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf"></a> Also unusually, it can also be used after vowel signs, and digits, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">᪓᩠ᨴ</span> <span class="trans">3̣˖ṯ</span> <span class="ipa">saːm tiː</span> <span class="meaning">three times</span></span>.</p>
+<p>Used to cause stacking of consonants. Note that, unlike most other Brahmi scripts, this doesn't necessarily kill the vowel between the consonants.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf"></a> Also unusually, it can also be used after vowel signs, and digits, eg. <span class="eg" lang="nod">᪓᩠ᨴ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -2190,7 +2198,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <ul>
 <li> to indicate a final consonant by removing the inherent vowel sign, such as <span class="charExample" translate="no"><span class="ex" lang="nod">ᩃ᩺</span> <span class="trans">ḻ˟</span></span>, </li>
 <li>in the commonest use, over a stack of two consonants, to remove the implicit vowel.  As Tai syllables can only have one final consonant, the second (and graphically lower) consonant is then automatically dropped.<a class="fnref" href="#refs">r</a></li>
-<li>to indicate an elided consonant sound, eg. the <span class="ipa">l</span> in <span class="charExample" translate="no"><span class="ex" lang="nod">ᨼᩥᩃ᩠ᨾ᩺</span> <span class="trans">f̱iḻ˖m̱r̽</span> <span class="ipa">fim²</span> <span class="meaning">film</span></span>,<a class="fnref" href="#refs">c</a></li>
+<li>to indicate an elided consonant sound, eg. the <span class="ipa">l</span> in <span class="eg" lang="nod">ᨼᩥᩃ᩠ᨾ᩺</span>,<a class="fnref" href="#refs">c</a></li>
 <!--li>to indicate an elided consonant sound, eg. the <span class="ipa">l</span> in <span class="charExample" translate="no"><span class="ex" lang="nod">ᨼᩥ᩠ᩃ᩺ᨾ</span> <span class="trans">f̱i˖ḻ˟m̱</span> <span class="ipa">fim²</span></span>,<a class="fnref" href="#refs">c</a></li-->
 </ul>
 <p><span class="ednote">(Note that the Unicode description suggests that <strong>following characters</strong> are silenced, rather than preceding sounds.)</span></p>
@@ -2216,9 +2224,9 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter northernthai">
 <p class="titlepara"><span class="title">Northern Thai</span></p>
-<p>Used at the end of a word to indicate that it should be repeated, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨲ᩵ᩣ᩠ᨦ</span> <span class="trans">t¹ā˖ŋ̱</span> <span class="ipa">taːŋ</span> <span class="meaning">to be different</span></span>, vs. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨲ᩵ᩣ᩠ᨦ᩻</span> <span class="trans">t¹ā˖ŋ̱ʻ</span> <span class="ipa">taːŋ taːŋ</span> <span class="meaning">different in my view</span></span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a></p>
-<p>Also used to indicate 'double-acting' consonants, stored where the consonant would be stored if there were a separate consonant used, eg. compare <span class="charExample" translate="no"><span class="ex" lang="nod">ᨡᩮᩢ᩶ᩣᨡᩬᨦ</span> <span class="trans">xeá²āxɔ̱ŋ̱</span> <span class="ipa">xo²xɔŋ</span> <span class="meaning">belongings</span></span> with an alternative spelling using this diacritic, <span class="charExample" translate="no"><span class="ex" lang="nod">ᨡᩮᩢ᩶᩻ᩬᩣ᩠ᨦ</span> <span class="trans">xeá²ʻɔ̱ā˖ŋ̱</span></span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a></p>
-<p>A third use is somewhat different. A subjoined letter may be medial, final, or  the start of a new syllable. Mai sam can be used to indicate that a consonant begins a new syllable, in which case it is stored following the subjoined form and indicates that it is the consonant   that starts the new syllable, eg. compare <span class="charExample" translate="no"><span class="ex" lang="nod">ᨳᩫ᩠ᨶᩁ</span> <span class="trans">tʰɔ̈˖ṉr</span> <span class="ipa">tʰonra</span></span> with <span class="charExample" translate="no"><span class="ex" lang="nod">ᨳᩫ᩠ᨶ᩻ᩁ</span> <span class="trans">tʰɔ̈˖ṉʻr</span> <span class="ipa">tʰanon</span> <span class="meaning">path</span></span> (final <span class="trans">r</span> is pronounced as <span class="ipa">n</span>). <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a></p>
+<p>Used at the end of a word to indicate that it should be repeated, eg. <span class="eg" lang="nod">ᨲ᩵ᩣ᩠ᨦ</span>, vs. <span class="eg" lang="nod">ᨲ᩵ᩣ᩠ᨦ᩻</span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a></p>
+<p>Also used to indicate 'double-acting' consonants, stored where the consonant would be stored if there were a separate consonant used, eg. compare <span class="eg" lang="nod">ᨡᩮᩢ᩶ᩣᨡᩬᨦ</span> with an alternative spelling using this diacritic, <span class="charExample" translate="no"><span class="ex" lang="nod">ᨡᩮᩢ᩶᩻ᩬᩣ᩠ᨦ</span> <span class="trans">xeá²ʻɔ̱ā˖ŋ̱</span></span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a></p>
+<p>A third use is somewhat different. A subjoined letter may be medial, final, or  the start of a new syllable. Mai sam can be used to indicate that a consonant begins a new syllable, in which case it is stored following the subjoined form and indicates that it is the consonant   that starts the new syllable, eg. compare <span class="charExample" translate="no"><span class="ex" lang="nod">ᨳᩫ᩠ᨶᩁ</span> <span class="trans">tʰɔ̈˖ṉr</span> <span class="ipa">tʰonra</span></span> with <span class="eg" lang="nod">ᨳᩫ᩠ᨶ᩻ᩁ</span> (final <span class="trans">r</span> is pronounced as <span class="ipa">n</span>). <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a></p>
 </div>
 <p class="ref"><a href="#refs">General sources</a>:
    <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf" target="_blank">Everson</a>, 
@@ -2236,7 +2244,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="notes">
 <div class="letter taikhun">
 <p class="titlepara"><span class="title">Tai Khün</span></p>
-<p>Written over a consonant (normally in final position) when that consonant is not  to be pronounced. Frequently used in loans from languages with consonant clusters in the coda such  as Pali, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩈᩫ᩠ᨾᨷᩪᩁ᩠᩼ᨱ</span> <span class="trans">sɔ̈˖m̱b̯ūr˖˚ṇ̱</span> <span class="ipa">som¹buːn²</span> <span class="meaning">perfect</span></span> or English <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨼᩥ᩠ᩃ᩼ᨾ</span> <span class="trans">f̱i˖ḻ˚m̱</span> <span class="ipa">fim²</span> <span class="meaning">film</span></span>. <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o</a> p149</p>
+<p>Written over a consonant (normally in final position) when that consonant is not  to be pronounced. Frequently used in loans from languages with consonant clusters in the coda such  as Pali, eg. <span class="eg" lang="kkh">ᩈᩫ᩠ᨾᨷᩪᩁ᩠᩼ᨱ</span> or English <span class="eg" lang="kkh">ᨼᩥ᩠ᩃ᩼ᨾ</span>. <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o</a> p149</p>
 </div>
 <p>Northern Thai would use <span class="codepoint" translate="no"><span lang="nod">&#x20;&#x1A7A;</span> [<a href="/scripts/taitham/block#char1A7A"><span class="uname">U+1A7A TAI THAM SIGN RA HAAM​</span></a>]</span>.</p>
 <p class="ref"><a href="#refs">General sources</a>:
@@ -2721,7 +2729,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <div class="unicodenotes">→ (thai character maiyamok - 0E46)</div>
 <div class="notes">
 <div class="letter">
-<p>Used to indicate reduplication of the preceding word, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨴᩩᨠᪧ</span> <span class="trans">ṯukᪧ</span> <span class="ipa">tuk⁶tuk⁶</span> <span class="meaning">every</span></span>. Adverbs,  for example, are often derived by reduplicating an adjective. <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o</a> p149</p>
+<p>Used to indicate reduplication of the preceding word, eg. <span class="eg" lang="kkh">ᨴᩩᨠᪧ</span>. Adverbs,  for example, are often derived by reduplicating an adjective. <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o</a> p149</p>
 </div>
 
 <p class="ref"><a href="#refs">General sources</a>:
@@ -2898,7 +2906,7 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <script src="kkh-translit.js">  </script>
 <script>
 replaceStuff('Tai Khün', 'taikhun', spreadsheet, '', 'kkh', '', cols, false)
-autoTransliterate('kkh')
+addExamples('kkh')
 </script> 
 
 
@@ -2913,7 +2921,7 @@ autoTransliterate('kkh')
 <script src="nod-translit.js">  </script>
 <script>
 replaceStuff('Northern Thai', 'northernthai', spreadsheet, '', 'nod', '', cols, false)
-autoTransliterate('nod')
+addExamples('nod')
 </script> 
 
 
