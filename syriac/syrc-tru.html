@@ -3,81 +3,11 @@
 <head>
 <meta charset="utf-8"/>
 <title>Turoyo script summary</title>
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <meta name="description" content="Summary of the Syriac script."/>
+
 <link rel="stylesheet" href="../../shared/style/docs.css" />
 <link rel="stylesheet" href="../common/local.css" />
-<style>
-@font-face {
-    font-family: 'eastern';
-    src: url('/shared/webfonts/notosanssyriaceastern-regular-webfont.woff2') format('woff2'),
-         url('/shared/webfonts/notosanssyriaceastern-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-	}
-@font-face {
-    font-family: 'estrangela';
-    src: url('/shared/webfonts/notosanssyriacestrangela-regular-webfont.woff2') format('woff2'),
-         url('/shared/webfonts/notosanssyriacestrangela-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-	}
-@font-face {
-    font-family: 'western';
-    src: url('/shared/webfonts/notosanssyriacwestern-regular-webfont.woff2') format('woff2'),
-         url('/shared/webfonts/notosanssyriacwestern-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-	}
-@font-face {
-    font-family: 'Adiabene WF';
-    src: url('/shared/webfonts/syrcomadiabene.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-	}
-@font-face {
-    font-family: 'Estrangela Edessa WF';
-    src: url('/shared/webfonts/syrcomedessa.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-	}
-@font-face {
-    font-family: 'Serta Jerusalem WF';
-    src: url('/shared/webfonts/syrcomjerusalem.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-	}
-#eastern {
-	font-size: 40px;
-	font-family: 'Adiabene WF', eastern, serif;
-	text-align: start;
-    line-height: 1.4;
-	}
-#estrangela {
-	font-size: 40px;
-	font-family: 'Estrangela Edessa WF', estrangela, serif;
-	text-align: start;
-    line-height: 1.4;
-	}
-#western {
-	font-size: 40px;
-	font-family: 'Serta Jerusalem WF', western, serif;
-	text-align: start;
-    line-height: 1.4;
-	}
-@media print { #eastern { font-size: 18px; } }
-@media print { #estrangela { font-size: 18px; } }
-@media print { #western { font-size: 18px; } }
-[lang=tru] { font-family: 'Serta Jerusalem WF', western, serif; font-size: 180%; }
-[lang=syr-syrj] { font-family: western, serif; font-size: 180%; }
-
-[lang=syr-syrc] { font-family: eastern, serif; font-size: 140%; }
-[lang=syr-syrn] { font-family: eastern, serif; font-size: 140%; }
-[lang=syr-syre] { font-family: estrangela, serif; font-size: 140%; }
-[lang=aii] { font-family: 'Adiabene WF', "East Syriac Ctesiphon", "East Syriac Adiabene", eastern, serif; font-size: 180%; }
-.large .ex { font-size: 300%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
-.medium .ex { font-size: 150%; margin-top: .5em; margin-bottom: 0.5em; line-height: 1; }
-</style>
+<link rel="stylesheet" href="tru.css" />
 
 <script src="../../shared/scriptdb/syrc-tru.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
@@ -94,6 +24,8 @@
 <script src="../../shared/code/getLinks.js"></script>
 <script src="../../scripts/linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
+<script src="../common/egcode.js"></script>
+<script src="tru-examples.js"></script>
 
 <script src="../../shared/fontlists/syriac.js"> </script>
 <script src="tru-translit.js">  </script>
@@ -158,7 +90,7 @@ onchange="document.getElementById('eastern').style.fontFamily = document.getElem
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->10 June, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->10 July, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -167,40 +99,27 @@ onchange="document.getElementById('eastern').style.fontFamily = document.getElem
   <p>This page gathers together basic information about the Syriac script and its use for the Turoyo (Surayt) language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Turoyo using Unicode.</p>
   
   
-<details class="supportdocs noprint instructions">
-<summary>Related pages</summary>
-<p class="leadin">Script summary pages:</p>
-<ul>
-<li><a href="index" class="linkHighlight">Syriac</a></li>
-<li><a href="syrc-aii" class="linkHighlight">Assyrian Neo-Aramaic</a></li>
-</ul>
-<p class="leadin">Character notes:</p>
-<ul>
-<li><a href="block" class="linkHighlight">Syriac</a></li>
-<li><a href="../combining/block" class="linkHighlight">Combining characters</a></li>
-<li><a href="../arabic/block" class="linkHighlight">Arabic</a></li>
-</ul>
-<p class="leadin">Character apps:</p>
-<ul>
-<li><a href="../../pickers/syrc-tru/" class="linkHighlight">Turoyo</a></li>
-<li><a href="../../pickers/syriac/" class="linkHighlight">Syriac</a></li>
-<li><a href="../../pickers/syrc-aii/" class="linkHighlight">Assyrian Neo-Aramaic</a></li>
-</ul>
-<p class="leadin">Other:</p>
-<ul>
-<li><a class="linkHighlight" href="../links?iso=Syrc">Script links pages</a></li>
-</ul>
+<p>See also the companion document, <a href="block" class="linkHighlight">Syriac character notes</a>, for detailed information about specific Unicode characters.</p>
+<p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
+
+
+
+
+<details>
+<summary class="instructions"><a href="../links?iso=Syrc">Related pages</a>.</summary>
 </details>
 
 
+
+<details>
+<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
+</details>
+
+
+
 <details class="supportdocs noprint">
-<summary class="instructions">About this page</summary>
-<p class="instructions"><span class="leadin">Transcriptions.</span> Unless in parentheses, the transcriptions in italics that follow Turoyo text are a <a href="../glossary/#transliteration" class="termref">transliteration</a> developed for these pages. Those in parentheses follow one or more commonly used <a href="../glossary/#transcription" class="termref">transcription</a> methods. Transcriptions in <span style="white-space:nowrap;">⌈ corner brackets ⌋</span> are either phonemic or phonetic.</p>
-<p class="instructions noprint"><span class="leadin">Character lists.</span> Colours and annotations on panels listing characters are relevant to their use for the Turoyo language. Panels with a yellow background contain commonly used characters for that language.</p>
-<p class="instructions noprint"><span class="leadin">Links to detailed character information.</span> Links on Unicode character names and links on code point values in character lists lead to character notes documents that list information character-by-character. This information is typically more detailed than that on this page. </p>
-<p class="instructions noprint"><span class="leadin">Detailed topic information.</span> Footnote  links with an arrow alongside take you to more detailed information on the current topic.</p>
-<p class="instructions noprint"><span class="leadin">Showing code points for examples.</span>Clicking on Turoyo  examples shows a list of the characters in that example. </p>
-<p class="instructions noprint"><span class="leadin">Changing fonts.</span>Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Syriac','Turoyo'); return false;">About this page</a></summary>
+<div id="about"></div>
 </details>
 </section>
 
@@ -470,12 +389,12 @@ onchange="document.getElementById('eastern').style.fontFamily = document.getElem
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ܐ␣ܝ␣ܘ</figure>
 
-<p><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0718;</span> [<a href="/scripts/syriac/block#char0718"><span class="uname">U+0718 SYRIAC LETTER WAW</span></a>]</span> represents <span class="ipa">u</span> if preceded by a consonant without an immediately following vowel (either a diacritic or a mater lectionis), eg. <span class="charExample"><span class="ex" dir="rtl" lang="tru">ܩܘܝܡܐ</span> <span class="trans">qwymʾ</span> <span class="ipa">qujama</span> <span class="meaning">subsistence</span></span> and also <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="tru">ܚܰܠܘܐ</span> <span class="trans">ħalwʾ</span> (<span class="trans">ḥalwo</span>) <span class="meaning">milk</span></span>. If it doesn't have a vowel diacritic but the preceding consonant has, it represents part of the diphthong <span class="ipa">aw</span>, eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="tru">ܕܰܘܡܐ</span> <span class="trans">dawmʾ</span> (<span class="trans">dawmo</span>) <span class="meaning">tree</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a></p>
-<p><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x071D;</span> [<a href="/scripts/syriac/block#char071D"><span class="uname">U+071D SYRIAC LETTER YUDH</span></a>]</span> works in the same way to produce <span class="ipa">i</span>, eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="tru">ܪܝܫܐ</span> <span class="trans">ryʃʾ</span> (<span class="trans">rišo</span>) <span class="meaning">head</span></span> and  <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="tru">ܐܰܕܠܰܠܝܐ</span> <span class="trans">ʾadlalyʾ</span> (<span class="trans">adlalyo</span>) <span class="meaning">tonight</span></span>. As part of a diphthong it represents <span class="ipa">j</span>, eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="tru">ܐܰܝܕܰܪܒܐ</span> <span class="trans">ʾaydarbʾ</span> (<span class="trans">aydarbo</span>) <span class="meaning">how</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a></p>
-<p><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0710;</span> [<a href="/scripts/syriac/block#char0710"><span class="uname">U+0710 SYRIAC LETTER ALAPH</span></a>]</span> behaves in a similar way to produce <span class="ipa">o</span>, eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="tru">ܒܰܗܪܐ</span> <span class="trans">bahrʾ</span> (<span class="trans">bahro</span>) <span class="meaning">light</span></span>, but also adds a couple of wrinkles:<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a></p>
+<p><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0718;</span> [<a href="/scripts/syriac/block#char0718"><span class="uname">U+0718 SYRIAC LETTER WAW</span></a>]</span> represents <span class="ipa">u</span> if preceded by a consonant without an immediately following vowel (either a diacritic or a mater lectionis), eg. <span class="charExample"><span class="ex" dir="rtl" lang="tru">ܩܘܝܡܐ</span> <span class="trans">qwymʾ</span> <span class="ipa">qujama</span> <span class="meaning">subsistence</span></span> and also <span class="eg" lang="tru" dir="rtl">ܚܰܠܘܐ</span>. If it doesn't have a vowel diacritic but the preceding consonant has, it represents part of the diphthong <span class="ipa">aw</span>, eg. <span class="eg" lang="tru" dir="rtl">ܕܰܘܡܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a></p>
+<p><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x071D;</span> [<a href="/scripts/syriac/block#char071D"><span class="uname">U+071D SYRIAC LETTER YUDH</span></a>]</span> works in the same way to produce <span class="ipa">i</span>, eg. <span class="eg" lang="tru" dir="rtl">ܪܝܫܐ</span> and  <span class="eg" lang="tru" dir="rtl">ܐܰܕܠܰܠܝܐ</span>. As part of a diphthong it represents <span class="ipa">j</span>, eg. <span class="eg" lang="tru" dir="rtl">ܐܰܝܕܰܪܒܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a></p>
+<p><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0710;</span> [<a href="/scripts/syriac/block#char0710"><span class="uname">U+0710 SYRIAC LETTER ALAPH</span></a>]</span> behaves in a similar way to produce <span class="ipa">o</span>, eg. <span class="eg" lang="tru" dir="rtl">ܒܰܗܪܐ</span>, but also adds a couple of wrinkles:<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a></p>
 <ul>
-<li>All word-initial vowels are written using the normal diacritic or mater lectionis preceded by a silent <span class="name">olaf</span>, eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="tru">ܐܰܬ݂ܡܷܠ</span> <span class="trans">ʾat‐̣məl</span> (<span class="trans">aṯmël</span>) <span class="meaning">yesterday</span></span> (which uses a diacritic), and <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="tru">ܐܝܠܷܢ</span> <span class="trans">ʾylən</span> (<span class="trans">ilën</span>) <span class="meaning">September</span></span> (which uses a mater lectionis for the vowel sound).<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a>&nbsp;</li>
-<li>It also appears silently, after the appropriate vowel diacritic, at the end of words that end in <span class="ipa">a</span> or <span class="ipa">e</span>, eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="tru">ܒܳܬܶܐ</span> <span class="trans">boteʾ</span> (<span class="trans">bote</span>) <span class="meaning">houses</span></span>, and <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="tru">ܒܝܪܰܐ</span> <span class="trans">byraʾ</span> (<span class="trans">bira</span>) <span class="meaning">beer</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a></li>
+<li>All word-initial vowels are written using the normal diacritic or mater lectionis preceded by a silent <span class="name">olaf</span>, eg. <span class="eg" lang="tru" dir="rtl">ܐܰܬ݂ܡܷܠ</span> (which uses a diacritic), and <span class="eg" lang="tru" dir="rtl">ܐܝܠܷܢ</span> (which uses a mater lectionis for the vowel sound).<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a>&nbsp;</li>
+<li>It also appears silently, after the appropriate vowel diacritic, at the end of words that end in <span class="ipa">a</span> or <span class="ipa">e</span>, eg. <span class="eg" lang="tru" dir="rtl">ܒܳܬܶܐ</span>, and <span class="eg" lang="tru" dir="rtl">ܒܝܪܰܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a></li>
 </ul>
 </section>
 	
@@ -690,9 +609,9 @@ alveolar</th>
   <figure class="characterBox auto" data-cols="ipa,trans,transc">ܘ␣ܪ␣ܠ␣ܝ</figure>
 
 <p><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0710;</span> [<a href="/scripts/syriac/block#char0710"><span class="uname">U+0710 SYRIAC LETTER ALAPH</span></a>]</span> is also regarded as a consonant. Its use is described in <a class="secref">consonant_vowels</a>.&nbsp;</p>
-<p>Unusually for the Syriac script, the default pronunciation of <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0726;</span> [<a href="/scripts/syriac/block#char0726"><span class="uname">U+0726 SYRIAC LETTER PE</span></a>]</span> is the fricative <span class="ipa">f</span>, eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="tru">ܦܶܡܐ</span> <span class="trans">femʾ</span> (<span class="trans">femo</span>) <span class="meaning">mouth</span></span>. To indicate <span class="ipa">p</span>, which seems to be mostly used for loan words, add &nbsp;<span class="codepoint" translate="no"><span lang="syr-syrj" dir="rtl">&#x0741;</span> [<a href="/scripts/syriac/block#char0741"><span class="uname">U+0741 SYRIAC QUSHSHAYA</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="tru">ܦ݁ܠܰܢ</span> <span class="trans">f‐̇lan</span> (<span class="trans">plan</span>) <span class="meaning">plan</span></span>.</p>
+<p>Unusually for the Syriac script, the default pronunciation of <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0726;</span> [<a href="/scripts/syriac/block#char0726"><span class="uname">U+0726 SYRIAC LETTER PE</span></a>]</span> is the fricative <span class="ipa">f</span>, eg. <span class="eg" lang="tru" dir="rtl">ܦܶܡܐ</span>. To indicate <span class="ipa">p</span>, which seems to be mostly used for loan words, add &nbsp;<span class="codepoint" translate="no"><span lang="syr-syrj" dir="rtl">&#x0741;</span> [<a href="/scripts/syriac/block#char0741"><span class="uname">U+0741 SYRIAC QUSHSHAYA</span></a>]</span>, eg. <span class="eg" lang="tru" dir="rtl">ܦ݁ܠܰܢ</span>.</p>
 <p><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0714;</span> [<a href="/scripts/syriac/block#char0714"><span class="uname">U+0714 SYRIAC LETTER GAMAL GARSHUNI</span></a>]</span> is used as a standard letter of the alphabet in Turoyo, whereas in other uses of the Syriac script it is only used for writing Arabic (Garshuni).</p>
-<p><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0717;</span> [<a href="/scripts/syriac/block#char0717"><span class="uname">U+0717 SYRIAC LETTER HE</span></a>]</span> is silent when used as a grammatical indicator at the end of a word after <span class="ipa">e</span> or <span class="ipa">a</span> when it represents a personal ending or pronominal suffix, eg. <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="tru">ܓܪܷܫܠܶܗ</span> <span class="trans">grəʃleh</span> (<span class="trans">grëšle</span>) <span class="meaning">he pulled</span></span>, <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="tru">ܓܪܷܫܠܰܗ</span> <span class="trans">grəʃlah</span> (<span class="trans">grëšla</span>) <span class="meaning">she pulled</span></span>; <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="tru">ܒܰܒܶܗ</span> <span class="trans">babeh</span> (<span class="trans">babe</span>) <span class="meaning">his father</span></span>, <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="tru">ܒܰܒܰܗ</span> <span class="trans">babah</span> (<span class="trans">baba</span>) <span class="meaning">her father</span></span>; etc.&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0717;</span> [<a href="/scripts/syriac/block#char0717"><span class="uname">U+0717 SYRIAC LETTER HE</span></a>]</span> is silent when used as a grammatical indicator at the end of a word after <span class="ipa">e</span> or <span class="ipa">a</span> when it represents a personal ending or pronominal suffix, eg. <span class="eg" lang="tru" dir="rtl">ܓܪܷܫܠܶܗ</span>, <span class="eg" lang="tru" dir="rtl">ܓܪܷܫܠܰܗ</span>; <span class="eg" lang="tru" dir="rtl">ܒܰܒܶܗ</span>, <span class="eg" lang="tru" dir="rtl">ܒܰܒܰܗ</span>; etc.&nbsp;</p>
 <p>Isolated versions of 3 letters, such as may be found in counter styles, are usually presented as a doubled letter, using intial and final forms, ie. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܟܟ</span></span>, <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܡܡ</span></span>, and <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܢܢ</span></span>.</p>
 </section>
 
@@ -718,8 +637,8 @@ alveolar</th>
 <section id="consonant_clusters">
 <h3>Consonant clusters</h3>
     
-    <p>There is no equivalent to the Arabic sukun to indicate clusters of consonant sounds.<sup></sup> Consonant letters are simply juxtaposed with no intervening vowel diacritics, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܬܰܚܪܰܙܬܐ</span> <span class="trans">taħraztʾ</span> (<span class="trans">taḥrazto</span>) <span class="meaning">programme</span></span>.</p>
-<p>Geminated consonants are written by doubling the letter, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܛܷܒܒܶܐ</span> <span class="trans">tˤəbbeʾ</span> (<span class="trans">ṭëbbe</span>) <span class="meaning">football</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܩܰܫܫܐ</span> <span class="trans">qaʃʃʾ</span> (<span class="trans">qaššo</span>) <span class="meaning">grandfather</span></span>.</p>
+    <p>There is no equivalent to the Arabic sukun to indicate clusters of consonant sounds.<sup></sup> Consonant letters are simply juxtaposed with no intervening vowel diacritics, eg. <span class="eg" lang="tru" dir="rtl">ܬܰܚܪܰܙܬܐ</span>.</p>
+<p>Geminated consonants are written by doubling the letter, eg. <span class="eg" lang="tru" dir="rtl">ܛܷܒܒܶܐ</span>, and <span class="eg" lang="tru" dir="rtl">ܩܰܫܫܐ</span>.</p>
 </section>
 </section>
 	

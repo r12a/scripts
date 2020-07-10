@@ -19,6 +19,10 @@
 <script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
+<script src="../common/egcode.js"></script>
+<script src="syr-examples.js"></script>
+<script src="aii-examples.js"></script>
+<script src="tru-examples.js"></script>
 
 <script src="../../uniview/descriptions.js"></script> 
 <script src="../../uniview/u.js"></script> 
@@ -27,8 +31,6 @@
 <script src="syr-translit.js">  </script>
 <script src="aii-translit.js">  </script>
 <script src="tru-translit.js">  </script>
-
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 <style id="includeStyles"></style>
 <style>
@@ -44,6 +46,71 @@
   <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script> 
 </header>
 <h1> Syriac character notes</h1>
+<!--   EXTRACT VOCAB .  -->
+<!--span class="charExample" translate="no"><span class="ex" lang="th">ธรรม</span> <span class="trans">ṯ̇ʰṟṟm̱</span> <span class="ipa">tʰam</span> <span class="meaning">justice</span></span-->
+<p>Language code: <input type="text" id="pppp"></p>
+<p><button onClick="extractVocab(document.getElementById('pppp').value)">Extract vocab</button></p>
+<textarea id="vocabOut" placeholder="Set the language!"></textarea>
+<script>
+function extractVocab(lang) {
+	out = ''
+	nodes = document.querySelectorAll('.charExample')
+	console.log(nodes.length,' nodes')
+	for (i=0;i<nodes.length;i++) {
+		if (! nodes[i].querySelector('.ex')) {
+			console.log('No nativeStr',nodes[i])
+			continue
+			}
+		console.log(nodes[i].querySelector('.ex').lang)
+		if (nodes[i].querySelector('.ex').lang  !== lang) continue
+		nativeStr = nodes[i].querySelector('.ex').textContent
+		
+		trans = nodes[i].querySelectorAll('.trans')
+		if (trans.length == 0) continue
+		else if (trans.length > 1) transStr = trans[1].textContent
+		else transStr = ''
+		
+		ipa = nodes[i].querySelectorAll('.ipa')
+		if (ipa.length > 0) ipaStr = ipa[0].textContent
+		else ipaStr = ''
+
+		meaning = nodes[i].querySelectorAll('.meaning')
+		if (meaning.length > 0) meaningStr = meaning[0].textContent
+		else continue
+
+		if (ipaStr == '' && meaningStr == '') continue
+		
+		out += nativeStr + '|' + meaningStr
+		if (ipaStr) out += '|' + ipaStr
+		if (transStr) out += ' (' + transStr + ')'
+		out += '\n'
+		}
+	//document.getElementById('vocabOut').value = out
+	items = out.split('\n')
+	//charlist = items.sort()
+	const uniqueSet = new Set(items)
+	charlist = [...uniqueSet]
+	charlist.sort()
+	
+	document.getElementById('vocabOut').value = charlist.join('\n')
+	document.getElementById('vocabOut').select()
+	}
+</script>
+<p>Merge lists</p>
+<textarea id="sortedVocabOut" placeholder="Add lists here."></textarea>
+<p><button onClick="sortVocab()">Sort &amp; merge vocab</button></p>
+<textarea id="finalVocabList" placeholder="Final, sorted list."></textarea>
+<script>
+function sortVocab() {
+	items = document.getElementById('sortedVocabOut').value.split('\n')
+	const uniqueSet = new Set(items)
+	charlist = [...uniqueSet]
+	charlist.sort()
+	document.getElementById('finalVocabList').value = charlist.join('\n')
+	document.getElementById('finalVocabList').select()
+	}
+</script>
+<!--    END OF VOCAB EXTRACTION CODE   -->
 
 <nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br>
 <input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;"
@@ -84,7 +151,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->29 March, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->10 July, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -94,51 +161,29 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <ul>
 <li><a href="../../uniview/?block=syriac" target="_blank">Syriac</a></li>
    </ul>
+<p>See also the companion document, <a href="." class="linkHighlight">Syriac</a>, for a summary of the Syriac script and its use for the Syriac language.</p>
 <p>The page also lists characters from the <a href="../../uniview/?block=combining_diacritical_marks" target="_blank">Combining Diacritical Marks</a> and <a href="../../uniview/?block=arabic" target="_blank">Arabic</a> blocks that are commonly used by languages using the Syriac script.</p>
 <p>There are many dialectal variations in pronunciation of the languages listed here. The phonetic information on this page for Syriac is fairly generalised. On the other hand, the pronunciation given for Assyrian Neo-Aramaic and Turoyo reflects specific dialects, chosen because there is reasonably good documentation. The Assyrian is based on a course in reading Assyrian by Dr. Madeleine Davis Moradkhan, who based her approach on the &quot;Assyrian Reader for Adult Beginners&quot; by Haido &amp; Yousif. The  notes  also contain information about correspondences in the Urmian dialect. The Turoyo dialect used here is that described by the Aramaic Online Project (2014-2017) edited by Shabo Talay, and the accompanying course <a href="https://textbook.surayt.com/en/Level%20A/0">ܫܠܳܡܐ ܣܘܪܰܝܬ Šlomo Surayt An Introductory Course to Surayt-Aramaic (Turoyo)</a>.</p>
 
-<!--p>Find <input type="text" id="findInput"
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p-->
-
-<!--p class="instructions">If you click on example text, you will see  at the bottom right of the page a list of the characters that make up the example. Click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p-->
-<!--p><span style="text-align: start;">We have usage data for the following 3 languages that use the Syriac script</span>: Syriac, Assyrian Neo-Aramaic, Turoyo.</p-->
 
 
-<details class="supportdocs noprint instructions">
-<summary>Related pages</summary>
-<p class="leadin">Script summary pages:</p>
-<ul>
-<li><a href="index" class="linkHighlight">Syriac</a></li>
-<li><a href="syrc-aii" class="linkHighlight">Assyrian Neo-Aramaic</a></li>
-<li><a href="syrc-tru" class="linkHighlight">Turoyo</a></li>
-</ul>
-<p class="leadin">Character notes:</p>
-<ul>
-<li><a href="../combining/block" class="linkHighlight">Combining characters</a></li>
-<li><a href="../arabic/block" class="linkHighlight">Arabic</a></li>
-</ul>
-<p class="leadin">Character apps:</p>
-<ul>
-<li><a href="../../pickers/syrc-aii/" class="linkHighlight">Assyrian Neo-Aramaic</a></li>
-<li><a href="../../pickers/syriac/" class="linkHighlight">Syriac</a></li>
-<li><a href="../../pickers/syrc-tru/" class="linkHighlight">Turoyo</a></li>
-</ul>
-<p class="leadin">Other:</p>
-<ul>
-<li><a class="linkHighlight" href="../links?iso=Syrc">Script links pages</a></li>
-</ul>
-</details>
 
 
 <details>
-<summary class="instructions">Notes on using this page</summary>
-    <p class="instructions"><span class="leadin">Showing codepoints for examples.</span>If you click on example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
-<p class="instructions"><span class="leadin">Finding characters.</span> To find a character by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or its hex number in the <samp>Find</samp> control, bottom left.</p>
-    <p class="instructions"><span class="leadin">Fonts.</span> To view this page as intended, you need   Syriac fonts.  The page comes with a Noto webfont and one other for each of the major styles of Syriac writing: Noto Sans Syriac Eastern, Noto Sans Syriac Estrangelo,  Noto Sans Syriac Western, Estrangelo Edessa, East Syriac Adiabene, and Serto Jerusalem. Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system. </p>
-<p class="instructions">The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. If there is no glyph and you want to see what it looks like, click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
-    <p class="instructions"><span class="leadin">Language usage lists.</span> Information about languages that use these characters is taken from the list maintained for the <a href="../../app-charuse/">Character usage lookup</a> app. The list is not exhaustive.</p>
-<p class="instructions"><span class="leadin">References &amp; further information.</span> References are indicated by superscript letters, optionally followed by page numbers. Wherever possible, those contain direct links to the source material. When there is also an arrow → it is worth following the link for  additional information. The references are listed at the bottom of the page, but the links should take you to the exact location of the source, wherever possible.</p>
-    <p class="instructions"><span class="leadin">UniView.</span><a href="../../uniview/">UniView</a>'s notes feature pulls in information about characters from this page.</p>
+<summary class="instructions"><a href="../links?iso=Syrc">Related pages</a>.</summary>
+</details>
+
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#charnotes">Other character notes</a>.</summary>
+</details>
+
+
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Syriac','Syriac'); return false;">About this page</a></summary>
+<div id="about"></div>
 <p id="charliststr" class="instructions"></p>
 </details>
 </section>
@@ -168,7 +213,7 @@ western styles (top to bottom).</span><span class="ex" lang="syr">ܐ ـܐ ܕܐ</
 
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span> &nbsp;&nbsp;&nbsp; <span class="trans">ʾ</span>, or as mater lectionis <span class="trans">a</span></p>
-<p>This serves as a vowel carrier at the beginning of a word, and silently follows most words ending in <span class="ipa">ɑ</span> or <span class="ipa">e</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܐܲܩܠܵܐ</span> <span class="trans">ʾaqlāʾ</span> <span class="ipa">aqlɑ</span> <span class="meaning">foot</span></span>.</p>
+<p>This serves as a vowel carrier at the beginning of a word, and silently follows most words ending in <span class="ipa">ɑ</span> or <span class="ipa">e</span>, eg. <span class="eg" lang="aii" dir="rtl">ܐܲܩܠܵܐ</span>.</p>
 <p>Word-internal usage is not fully clear. In some cases, it appears to allow for a separate vowel sound, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܦܵܐܹܣ</span> <span class="trans">paʿes</span> <span class="ipa">pʰaeʃ</span> <span class="meaning">become</span></span>. Not clear whether there is usually a glottal stop in such situations.</p>
 <p>In words like <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܚܐܵܛܵܐ</span> <span class="trans">xʾāᵵāʾ</span> <span class="meaning">to sew</span></span> or <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܪܐܵܫܵܐ</span> <span class="trans">rʾāʃāʾ</span> <span class="meaning">to awaken</span></span> it separates the vowel from the first consonant, as if there is a glottal stop. (In a situation like <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒܐܵܗܵܐ</span> <span class="trans">bʾāhāʾ</span> <span class="meaning">by this</span></span> the word has been prefixed with a single-letter preposition.)</p>
 <p>In other words, such as <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܠܵܐܝ ܠܵܐܝ</span> <span class="trans">lāʾy lāʾy</span> <span class="meaning">lullaby</span></span>, it seems to have a lengthening function.</p>
@@ -177,11 +222,11 @@ western styles (top to bottom).</span><span class="ex" lang="syr">ܐ ـܐ ܕܐ</
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span></p>
 <p><span class="ipa">∅</span> where it occurs at the start or end of a word, in conjunction with other vowel diacritics. </p>
-<p>All word-initial vowels are written using the normal diacritic or mater lectionis preceded by a silent <span class="name">olaf</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܰܬ݂ܡܷܠ</span> <span class="trans">ʾat‐̣məl</span> (<span class="trans">aṯmël</span>) <span class="meaning">yesterday</span></span> (which uses a diacritic), and <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܝܠܷܢ</span> <span class="trans">ʾylən</span> (<span class="trans">ilën</span>) <span class="meaning">September</span></span> (which uses a mater lectionis for the vowel sound).<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a></p>
-<p>It also appears silently, after the appropriate vowel diacritic, at the end of words that end in <span class="ipa">a</span> or <span class="ipa">e</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܒܳܬܶܐ</span> <span class="trans">boteʾ</span> (<span class="trans">bote</span>) <span class="meaning">houses</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܒܝܪܰܐ</span> <span class="trans">byraʾ</span> (<span class="trans">bira</span>) <span class="meaning">beer</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a></p>
-<p><span class="ipa">o</span> as mater lectionis when it appears at the end of a word without a preceding vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܒܰܗܪܐ</span> <span class="trans">bahrʾ</span> (<span class="trans">bahro</span>) <span class="meaning">light</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a></p>
+<p>All word-initial vowels are written using the normal diacritic or mater lectionis preceded by a silent <span class="name">olaf</span>, eg. <span class="eg" lang="tru" dir="rtl">ܐܝܠܷܢ</span>span class="trans">ilën</span>) <span class="meaning">September</span></span> (which uses a mater lectionis for the vowel sound).<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a></p>
+<p>It also appears silently, after the appropriate vowel diacritic, at the end of words that end in <span class="ipa">a</span> or <span class="ipa">e</span>, eg. <span class="eg" lang="tru" dir="rtl">ܒܳܬܶܐ</span>, and <span class="eg" lang="tru" dir="rtl">ܒܝܪܰܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a></p>
+<p><span class="ipa">o</span> as mater lectionis when it appears at the end of a word without a preceding vowel, eg. <span class="eg" lang="tru" dir="rtl">ܒܰܗܪܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a></p>
 <p class="ednote"><i>Observation:</i> I found only one instance of olaf appearing inside a word. See the third word in <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܕܠܐ ܗܳܘܰܠܟ݂ܘ ܫܘܐܠܶܐ ܚܪܶܢܶܐ، ܓܷܕ ܥܷܒܪܝܢܰܐ</span> <span class="trans">dlʾ howalk‐̣w ʃwʾleʾ ħreneʾ, gəd ʕəbrynaʾ</span> (<span class="trans">d lo howalxu šuwole ḥrene, gëd cëbrina</span>)</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a></p>
-<!--p>Alongside <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0720;</span> [<a href="/scripts/syriac/block#char0720"><span class="uname">U+0720 SYRIAC LETTER LAMADH</span></a>]</span> in the serto style the angle and shape of this letter adapts. The sequence , eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܠܦ</span> <span class="trans">ʾlp</span> (<span class="trans">ʾālap̄</span>) <span class="meaning">alaph</span></span> but <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܠܐ</span> <span class="trans">lʾ</span> (<span class="trans">lâ</span>) <span class="meaning">not</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a></p-->
+<!--p>Alongside <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0720;</span> [<a href="/scripts/syriac/block#char0720"><span class="uname">U+0720 SYRIAC LETTER LAMADH</span></a>]</span> in the serto style the angle and shape of this letter adapts. The sequence , eg. <span class="eg" lang="tru" dir="rtl">ܐܠܦ</span> but <span class="eg" lang="tru" dir="rtl">ܠܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.4?content-fragment-id=1750">a</a></p-->
 </div>
 
 <p class="ref"><a href="#refs">Refs</a>:
@@ -209,15 +254,15 @@ western styles (top to bottom).</span><span class="ex" lang="syr">ܒ ܒـܒـܒ<
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
-<p><span class="ipa">b</span> when hard, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒܵܒܵܐ</span> <span class="trans">bābāʾ</span> <span class="ipa">bɑbɑ</span> <span class="meaning">father</span></span>.</p>
-<p> <span class="ipa">v</span> (<span class="trans">ḇ</span>) when soft, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܣܵܒ݂ܵܐ</span> <span class="trans">sābˑāʾ</span> <span class="ipa">sɑvɑ</span> <span class="meaning">old man</span></span>.</p>
-<p>At the beginning of a word this may represent the preposition <span class="meaning">by</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒܐܵܗܵܐ</span> <span class="trans">bʾāhāʾ</span> <span class="ipa">baɑhɑ</span> <span class="meaning">by this</span></span>. If the following consonant is the beginning of a cluster, this preposition is written with the vowel diacritic &nbsp; <span class="codepoint" translate="no"><span lang="syr-syrn" dir="rtl">&#x0732;</span> [<a href="/scripts/syriac/block#char0732"><span class="uname">U+0732 SYRIAC PTHAHA DOTTED</span></a>]</span>, but otherwise not.</p>
+<p><span class="ipa">b</span> when hard, eg. <span class="eg" lang="aii" dir="rtl">ܒܵܒܵܐ</span>.</p>
+<p> <span class="ipa">v</span> (<span class="trans">ḇ</span>) when soft, eg. <span class="eg" lang="aii" dir="rtl">ܣܵܒ݂ܵܐ</span>.</p>
+<p>At the beginning of a word this may represent the preposition <span class="meaning">by</span>, eg. <span class="eg" lang="aii" dir="rtl">ܒܐܵܗܵܐ</span>. If the following consonant is the beginning of a cluster, this preposition is written with the vowel diacritic &nbsp; <span class="codepoint" translate="no"><span lang="syr-syrn" dir="rtl">&#x0732;</span> [<a href="/scripts/syriac/block#char0732"><span class="uname">U+0732 SYRIAC PTHAHA DOTTED</span></a>]</span>, but otherwise not.</p>
 <p><span class="leadin">Urmian dialect.</span> <span class="ipa">w</span> when soft. <span class="ipa">v</span> has become <span class="ipa">w</span> in most modern dialects, and can form diphthongs with a preceding vowel.<a class="fnref" href="https://en.wikipedia.org/wiki/Bet_(letter)#Syriac_Beth">w</a></p>
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span>&nbsp;</p>
 <p><span class="ipa">b</span> when hard, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܒܝܬ</span> <span class="trans">byt</span> (<span class="trans">bēṯ</span>)</span>.</p>
-<p><span class="ipa">v</span> (<span class="trans">v</span>) when soft, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܒ݂ܝܠܠܰܐ</span> <span class="trans">b‐̣yllȧʾ</span> (<span class="trans">villa</span>) <span class="meaning">villa</span></span>.</p>
+<p><span class="ipa">v</span> (<span class="trans">v</span>) when soft, eg. <span class="eg" lang="tru" dir="rtl">ܒ݂ܝܠܠܰܐ</span>.</p>
 <p>Words that in Syriac are written using <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܒ݂</span></span> tend to be written in Turoyo using <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0718;</span> [<a href="/scripts/syriac/block#char0718"><span class="uname">U+0718 SYRIAC LETTER WAW</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="syr-syrn" dir="rtl">ܕܰܗܒ݂ܐ</span> <span class="trans">dȧhb‐̣ʾ</span> (<span class="trans">dahḇo</span>) <span class="meaning">gold</span></span> becomes <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܕܰܗܘܐ</span> <span class="trans">dȧhwʾ</span> (<span class="trans">dahwo</span>)</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/1?content-fragment-id=1736">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
@@ -244,13 +289,13 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܓ ܓـܓـܓ</
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span>&nbsp;</p>
 <p><span class="ipa">g</span> when hard, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܓܵܘܙܵܐ</span> <span class="trans">gāwzāʾ</span> (<span class="trans">gāwzā</span>) <span class="meaning">walnut</span></span>.</p>
-<p><span class="ipa">ʁ</span> (<span class="trans">ḡ</span>) when soft, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܣܪܵܓ݂ܵܐ</span> <span class="trans">srāgˑāʾ</span> <span class="ipa">ʃrɑʁɑ</span> <span class="meaning">lamp</span></span>.<a class="fnref" href="#refs">r33</a> Other dialects may produce <span class="ipa">ɟ, ʔ, j</span>.</p>
-<p><span class="leadin">With <span class="trans">maǧlīyānā</span>.</span><span class="ipa">d͡ʒ</span> (<span class="trans">ǧ</span>) as <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܓ̰</span></span> when combined with <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0330;</span> &nbsp;[<a href="/scripts/syriac/block#char0330"><span class="uname">U+0330 COMBINING TILDE BELOW</span></a>]</span> (<span class="name">maǧlīyānā</span>), eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܓ̰ܘܼܢܵܐ</span> <span class="trans">g˷wināʾ</span> <span class="ipa">d͡ʒunɑ</span> <span class="meaning">veil</span></span><!--span class="charExample"><span class="ex" lang="aii" dir="rtl">ܒܘܼܓ̰ܪܹ̈ܐ</span> <span class="trans">buʤrī</span> (<span class="trans">bûʤreʾ</span>) <span class="meaning">cultivated</span></span-->.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a> Used for words borrowed into Assyrian, rather than native words.</p>
+<p><span class="ipa">ʁ</span> (<span class="trans">ḡ</span>) when soft, eg. <span class="eg" lang="aii" dir="rtl">ܣܪܵܓ݂ܵܐ</span>.<a class="fnref" href="#refs">r33</a> Other dialects may produce <span class="ipa">ɟ, ʔ, j</span>.</p>
+<p><span class="leadin">With <span class="trans">maǧlīyānā</span>.</span><span class="ipa">d͡ʒ</span> (<span class="trans">ǧ</span>) as <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܓ̰</span></span> when combined with <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0330;</span> &nbsp;[<a href="/scripts/syriac/block#char0330"><span class="uname">U+0330 COMBINING TILDE BELOW</span></a>]</span> (<span class="name">maǧlīyānā</span>), eg. <span class="eg" lang="aii" dir="rtl">ܓ̰ܘܼܢܵܐ</span><!--span class="charExample"><span class="ex" lang="aii" dir="rtl">ܒܘܼܓ̰ܪܹ̈ܐ</span> <span class="trans">buʤrī</span> (<span class="trans">bûʤreʾ</span>) <span class="meaning">cultivated</span></span-->.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a> Used for words borrowed into Assyrian, rather than native words.</p>
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span>&nbsp;</p>
-<p><span class="ipa">g</span> when hard, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܓܘܫܡܐ</span> <span class="trans">gwʃmʾ</span> (<span class="trans">gušmo</span>) <span class="meaning">body</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
-<p><span class="ipa">ɣ</span> (<span class="trans">ġ</span>) when soft, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܓ݂ܰܠܛܐ</span> <span class="trans">g‐̣ȧltˤʾ</span> (<span class="trans">ġalṭo</span>) <span class="meaning">mistake</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
+<p><span class="ipa">g</span> when hard, eg. <span class="eg" lang="tru" dir="rtl">ܓܘܫܡܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
+<p><span class="ipa">ɣ</span> (<span class="trans">ġ</span>) when soft, eg. <span class="eg" lang="tru" dir="rtl">ܓ݂ܰܠܛܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
 <p>(For <span class="ipa">d͡ʒ</span> see <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0714;</span> [<a href="/scripts/syriac/block#char0714"><span class="uname">U+0714 SYRIAC LETTER GAMAL GARSHUNI</span></a>]</span>.)</p></div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -278,15 +323,15 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܕ ـܕ</span> 
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span>&nbsp;</p>
-<p><span class="ipa">d</span> when hard, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܕܵܕܵܐ</span> <span class="trans">dādāʾ</span> <span class="ipa">dɑdɑ</span> <span class="meaning">uncle</span></span>.</p>
-<p><span class="ipa">ð</span> (<span class="trans">ḏ</span>) when soft, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܐܵܕ݂ܵܪ</span> <span class="trans">ʾādˑār</span> <span class="ipa">ɑðɑr</span> <span class="meaning">March</span></span>.</p>
-<p>At the beginning of a word this may represent the preposition <span class="meaning">of</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܚܵܬܵܐ ܕܲܒܪܵܬܵܐ</span> <span class="trans">ħātāʾ dabrātāʾ</span> <span class="ipa">xɑtɑ dabrɑtɑ</span> <span class="meaning">sister of girl</span></span>. If the following consonant is the beginning of a cluster, this preposition is written with the vowel diacritic &nbsp; <span class="codepoint" translate="no"><span lang="syr-syrn" dir="rtl">&#x0732;</span> [<a href="/scripts/syriac/block#char0732"><span class="uname">U+0732 SYRIAC PTHAHA DOTTED</span></a>]</span>, but otherwise not.</p>
+<p><span class="ipa">d</span> when hard, eg. <span class="eg" lang="aii" dir="rtl">ܕܵܕܵܐ</span>.</p>
+<p><span class="ipa">ð</span> (<span class="trans">ḏ</span>) when soft, eg. <span class="eg" lang="aii" dir="rtl">ܐܵܕ݂ܵܪ</span>.</p>
+<p>At the beginning of a word this may represent the preposition <span class="meaning">of</span>, eg. <span class="eg" lang="aii" dir="rtl">ܚܵܬܵܐ ܕܲܒܪܵܬܵܐ</span>. If the following consonant is the beginning of a cluster, this preposition is written with the vowel diacritic &nbsp; <span class="codepoint" translate="no"><span lang="syr-syrn" dir="rtl">&#x0732;</span> [<a href="/scripts/syriac/block#char0732"><span class="uname">U+0732 SYRIAC PTHAHA DOTTED</span></a>]</span>, but otherwise not.</p>
 <p><span class="leadin">Urmian dialect.</span> Soft sound not used. Words are written and pronounced as <span class="trans">d</span>.</p>
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span>&nbsp;</p>
-<p><span class="ipa">d</span> when hard, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܕܰܪܓ݂ܐ</span> <span class="trans">dȧrg‐̣ʾ</span> (<span class="trans">darġo</span>) <span class="meaning">stair</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
-<p><span class="ipa">ð</span> (<span class="trans">ḏ</span>) when soft, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܰܕ݂ܢܐ</span> <span class="trans">ʾȧd‐̣nʾ</span> (<span class="trans">aḏno</span>) <span class="meaning">ear</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
+<p><span class="ipa">d</span> when hard, eg. <span class="eg" lang="tru" dir="rtl">ܕܰܪܓ݂ܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
+<p><span class="ipa">ð</span> (<span class="trans">ḏ</span>) when soft, eg. <span class="eg" lang="tru" dir="rtl">ܐܰܕ݂ܢܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -315,12 +360,12 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܗ ـܗ</span> 
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
-<p><span class="ipa">h</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܗܵܘܵܐ</span> <span class="trans">hāwāʾ</span> <span class="ipa">hɑwɑ</span> <span class="meaning">air</span></span>, <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܐܵܗܵܐ</span> <span class="trans">ʾahaʾ</span> <span class="ipa">ɑhɑ</span> <span class="meaning">this</span></span>.</p>
+<p><span class="ipa">h</span>, eg. <span class="eg" lang="aii" dir="rtl">ܗܵܘܵܐ</span>, <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܐܵܗܵܐ</span> <span class="trans">ʾahaʾ</span> <span class="ipa">ɑhɑ</span> <span class="meaning">this</span></span>.</p>
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span></p>
-<p><span class="ipa">h</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܗܶܫ</span> <span class="trans">hėʃ</span> (<span class="trans">heš</span>) <span class="meaning">still</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.2?content-fragment-id=1748">a</a></p>
-<p><span class="ipa">∅</span> when used as a grammatical indicator at the end of a word after <span class="ipa">e</span> or <span class="ipa">a</span> when it represents a personal ending or pronominal suffix, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܓܪܷܫܠܶܗ</span> <span class="trans">grəʃleh</span> (<span class="trans">grëšle</span>) <span class="meaning">he pulled</span></span>, <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܓܪܷܫܠܰܗ</span> <span class="trans">grəʃlah</span> (<span class="trans">grëšla</span>) <span class="meaning">she pulled</span></span>; <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܒܰܒܶܗ</span> <span class="trans">babeh</span> (<span class="trans">babe</span>) <span class="meaning">his father</span></span>, <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܒܰܒܰܗ</span> <span class="trans">babah</span> (<span class="trans">baba</span>) <span class="meaning">her father</span></span>; etc.</p>
+<p><span class="ipa">h</span>, eg. <span class="eg" lang="tru" dir="rtl">ܗܶܫ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.2?content-fragment-id=1748">a</a></p>
+<p><span class="ipa">∅</span> when used as a grammatical indicator at the end of a word after <span class="ipa">e</span> or <span class="ipa">a</span> when it represents a personal ending or pronominal suffix, eg. <span class="eg" lang="tru" dir="rtl">ܓܪܷܫܠܶܗ</span>, <span class="eg" lang="tru" dir="rtl">ܓܪܷܫܠܰܗ</span>; <span class="eg" lang="tru" dir="rtl">ܒܰܒܶܗ</span>, <span class="eg" lang="tru" dir="rtl">ܒܰܒܰܗ</span>; etc.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -350,7 +395,7 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܘ ـܘ</span> 
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
 <p><span class="ipa">w</span> as a consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܗܵܘܵܐ</span> <span class="trans">hāwāʾ</span> (<span class="trans">hāwā</span>) <span class="meaning">air</span></span>. (<span class="ipa">v</span> in the Urmian dialect.)</p>
 <p><span class="ipa">w</span> as part of a diphthong, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܓܵܘܙܵܐ</span> <span class="trans">gāwzāʾ</span> (<span class="trans">gāwzā</span>) <span class="meaning">walnut</span></span>.</p>
-<p>At the beginning of a word this may represent the conjunction <span class="meaning">and</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒܪܵܬܵܐ ܘܝܵـܠܵܐ</span> <span class="trans">brātāʾ wyā_lāʾ</span> <span class="ipa">brɑtɑ wayɑlɑ</span> <span class="meaning">girl and boy</span></span>. If the following consonant is the beginning of a cluster, this preposition is written with the vowel diacritic &nbsp; <span class="codepoint" translate="no"><span lang="syr-syrn" dir="rtl">&#x0732;</span> [<a href="/scripts/syriac/block#char0732"><span class="uname">U+0732 SYRIAC PTHAHA DOTTED</span></a>]</span>, but otherwise not.</p>
+<p>At the beginning of a word this may represent the conjunction <span class="meaning">and</span>, eg. <span class="eg" lang="aii" dir="rtl">ܒܪܵܬܵܐ ܘܝܵـܠܵܐ</span>. If the following consonant is the beginning of a cluster, this preposition is written with the vowel diacritic &nbsp; <span class="codepoint" translate="no"><span lang="syr-syrn" dir="rtl">&#x0732;</span> [<a href="/scripts/syriac/block#char0732"><span class="uname">U+0732 SYRIAC PTHAHA DOTTED</span></a>]</span>, but otherwise not.</p>
 <p><span class="leadin">Urmian dialect.</span> The consonant is pronounced <span class="ipa">v</span>.</p>
 <p>&nbsp;</p>
 <p><span class="ipa">u</span> when representing a vowel, eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܩܘܝܡܐ</span> <span class="trans">qûymʾ</span> <span class="ipa">qujama</span> <span class="meaning">subsistence</span></span>. </p>
@@ -359,11 +404,11 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܘ ـܘ</span> 
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span></p>
-<p><span class="ipa">w</span> as a consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܘܰܥܕܐ</span> <span class="trans">wȧʕdʾ</span> (<span class="trans">wacdo</span>) <span class="meaning">appointment</span></span>.</p>
-<p><span class="ipa">u</span> as mater lectionis, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܕܘܟܬܐ</span> <span class="trans">dwktʾ</span> (<span class="trans">dukṯo</span>) <span class="meaning">place</span></span>. Note that no vowel diacritic is used. </p>
-<p>The following shows both uses in a single word, <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܰܪܢܘܘܳܐ</span> <span class="trans">ʾȧrnwwåʾ</span> (<span class="trans">arnuwo</span>) <span class="meaning">rabbit</span></span>.</p>
-<p>This letter is also used without a vowel diacritic for the diphthong <span class="ipa">aw</span> eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܕܰܘܡܐ</span> <span class="trans">dawmʾ</span> (<span class="trans">dawmo</span>) <span class="meaning">tree</span></span>.</p>
-<p>It can also appear without a diacritic when a word ends in <span class="ipa">o</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܚܰܠܘܐ</span> <span class="trans">ħalwʾ</span> (<span class="trans">ḥalwo</span>) <span class="meaning">milk</span></span>.</p>
+<p><span class="ipa">w</span> as a consonant, eg. <span class="eg" lang="tru" dir="rtl">ܘܰܥܕܐ</span>.</p>
+<p><span class="ipa">u</span> as mater lectionis, eg. <span class="eg" lang="tru" dir="rtl">ܕܘܟܬܐ</span>. Note that no vowel diacritic is used. </p>
+<p>The following shows both uses in a single word, <span class="eg" lang="tru" dir="rtl">ܐܰܪܢܘܘܳܐ</span>.</p>
+<p>This letter is also used without a vowel diacritic for the diphthong <span class="ipa">aw</span> eg. <span class="eg" lang="tru" dir="rtl">ܕܰܘܡܐ</span>.</p>
+<p>It can also appear without a diacritic when a word ends in <span class="ipa">o</span>, eg. <span class="eg" lang="tru" dir="rtl">ܚܰܠܘܐ</span>.</p>
 </div>
 
 <p class="ref"><a href="#refs">Refs</a>:
@@ -396,8 +441,8 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܙ ـܙ</span> 
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span></p>
-<p><span class="ipa">z</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܙܰܒܢܐ</span> <span class="trans">zȧbnʾ</span> (<span class="trans">zabno</span>) <span class="meaning">time</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
-<p><span class="leadin">With <span class="trans">maǧlīyānā</span>.</span><span class="ipa">ʒ</span> (<span class="trans">ž</span>) as <span class="charExample"><span class="ex" lang="syr-Syre" dir="rtl">ܙ̰</span></span> when combined with <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0330;</span> &nbsp;[<a href="/scripts/syriac/block#char0330"><span class="uname">U+0330 COMBINING TILDE BELOW</span></a>]</span> (<span class="name">maǧlīyānā</span>), eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܙ̰ܱܒܰܫܶܐ</span> <span class="trans">z‐̰ạbȧʃėʾ</span> (<span class="trans">žäbaše</span>) <span class="meaning">watermelon</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
+<p><span class="ipa">z</span>, eg. <span class="eg" lang="tru" dir="rtl">ܙܰܒܢܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
+<p><span class="leadin">With <span class="trans">maǧlīyānā</span>.</span><span class="ipa">ʒ</span> (<span class="trans">ž</span>) as <span class="charExample"><span class="ex" lang="syr-Syre" dir="rtl">ܙ̰</span></span> when combined with <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0330;</span> &nbsp;[<a href="/scripts/syriac/block#char0330"><span class="uname">U+0330 COMBINING TILDE BELOW</span></a>]</span> (<span class="name">maǧlīyānā</span>), eg. <span class="eg" lang="tru" dir="rtl">ܙ̰ܱܒܰܫܶܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -421,11 +466,11 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܚ ܚـܚـܚ</
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
-<p><span class="ipa">x</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܚܵܘܵܐ</span> <span class="trans">ħāwāʾ</span> <span class="ipa">xɑwɑ</span> <span class="meaning">Eve</span></span>.</p>
+<p><span class="ipa">x</span>, eg. <span class="eg" lang="aii" dir="rtl">ܚܵܘܵܐ</span>.</p>
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span></p>
-<p><span class="ipa">ħ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܚܳܠܐ</span> <span class="trans">ħålʾ</span> (<span class="trans">ḥolo</span>) <span class="meaning">uncle</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
+<p><span class="ipa">ħ</span>, eg. <span class="eg" lang="tru" dir="rtl">ܚܳܠܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -449,11 +494,11 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܛ ܛـܛـܛ</
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
-<p><span class="ipa">t</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܛܲܪܦܵܐ</span> <span class="trans">ᵵarpāʾ</span> <span class="ipa">tˤarrpɑ</span> <span class="meaning">leaf</span></span><!--span class="charExample"><span class="ex" lang="aii" dir="rtl">ܪܗܸܛܪ̈ܵܝܹܐ</span> <span class="trans">rhɪtrajɪ</span> <span class="ipa">rhĭṭ"rayeʾ</span> <span class="meaning">eloquent</span></span-->.</p>
+<p><span class="ipa">t</span>, eg. <span class="eg" lang="aii" dir="rtl">ܛܲܪܦܵܐ</span><!--span class="charExample"><span class="ex" lang="aii" dir="rtl">ܪܗܸܛܪ̈ܵܝܹܐ</span> <span class="trans">rhɪtrajɪ</span> <span class="ipa">rhĭṭ"rayeʾ</span> <span class="meaning">eloquent</span></span-->.</p>
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span></p>
-<p><span class="ipa">tˤ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܛܷܒܒܰܟܼ</span> <span class="trans">tˤẹbbȧki</span> (<span class="trans">ṭëbbax</span>) <span class="meaning">august</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
+<p><span class="ipa">tˤ</span>, eg. <span class="eg" lang="tru" dir="rtl">ܛܷܒܒܰܟܼ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -488,11 +533,11 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܝ ܝـܝـܝ</
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span></p>
-<p><span class="ipa">j</span> as a consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܒ̣ܝܝܰܢܰܐ</span> <span class="trans">b‐̜yyȧnȧʾ</span> (<span class="trans">Viyana</span>) <span class="meaning">Vienna</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܣܷܣܝܐ</span> <span class="trans">sẹsyʾ</span> (<span class="trans">sësyo</span>) <span class="meaning">horse</span></span>.</p>
-<p><span class="ipa">i</span> as mater lectionis, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܪܝܫܐ</span> <span class="trans">ryʃʾ</span> (<span class="trans">rišo</span>) <span class="meaning">head</span></span>. No vowel diacritic is used.</p>
-<p>The following shows both uses in a single word, <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܥܰܨܪܝـܝܶܐ</span> <span class="trans">ʕȧsˤryـyėʾ</span> (<span class="trans">caṣriye</span>) <span class="meaning">evening</span></span>.</p>
-<p>This letter is also used without a vowel diacritic for the diphthong <span class="ipa">aj</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܰܝܕܰܪܒܐ</span> <span class="trans">ʾaydarbʾ</span> (<span class="trans">aydarbo</span>) <span class="meaning">how</span></span>.</p>
-<p>It can also appear without a diacritic when a word ends in <span class="ipa">o</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܰܕܠܰܠܝܐ</span> <span class="trans">ʾadlalyʾ</span> (<span class="trans">adlalyo</span>) <span class="meaning">tonight</span></span>.</p>
+<p><span class="ipa">j</span> as a consonant, eg. <span class="eg" lang="tru" dir="rtl">ܒ̣ܝܝܰܢܰܐ</span>, and <span class="eg" lang="tru" dir="rtl">ܣܷܣܝܐ</span>.</p>
+<p><span class="ipa">i</span> as mater lectionis, eg. <span class="eg" lang="tru" dir="rtl">ܪܝܫܐ</span>. No vowel diacritic is used.</p>
+<p>The following shows both uses in a single word, <span class="eg" lang="tru" dir="rtl">ܥܰܨܪܝـܝܶܐ</span>.</p>
+<p>This letter is also used without a vowel diacritic for the diphthong <span class="ipa">aj</span>, eg. <span class="eg" lang="tru" dir="rtl">ܐܰܝܕܰܪܒܐ</span>.</p>
+<p>It can also appear without a diacritic when a word ends in <span class="ipa">o</span>, eg. <span class="eg" lang="tru" dir="rtl">ܐܰܕܠܰܠܝܐ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -520,17 +565,17 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܟ ܟـܟـܟ</
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
-<p><span class="ipa">k</span> when hard, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܟܲܠܒܵܐ</span> <span class="trans">kalbāʾ</span> <span class="ipa">kallbɑ</span> <span class="meaning">dog</span></span><!--span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܟܲܟܪܵܐ</span> <span class="trans">kakrāʾ</span> (<span class="trans">kakrā</span>) <span class="meaning">talent</span></span-->.<a class="fnref" href="#refs">r9</a></p>
-<p><span class="ipa">ħ</span> (<span class="trans">ḵ</span>) when soft, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒܲܟ݂ܬܵܐ</span> <span class="trans">bakˑtāʾ</span> <span class="ipa">baħtɑ</span> <span class="meaning">wife</span></span>.<a class="fnref" href="#refs">r35</a></p>
+<p><span class="ipa">k</span> when hard, eg. <span class="eg" lang="aii" dir="rtl">ܟܲܠܒܵܐ</span><!--span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܟܲܟܪܵܐ</span> <span class="trans">kakrāʾ</span> (<span class="trans">kakrā</span>) <span class="meaning">talent</span></span-->.<a class="fnref" href="#refs">r9</a></p>
+<p><span class="ipa">ħ</span> (<span class="trans">ḵ</span>) when soft, eg. <span class="eg" lang="aii" dir="rtl">ܒܲܟ݂ܬܵܐ</span>.<a class="fnref" href="#refs">r35</a></p>
 <p class="observation"><i>Observation:</i> There seems to be an alternative form for this letter when used in (proper) isolation, that ressembles an initial form but has a tail. See for example <a href="#refs">page 9</a> of Davis.</p>
 <p><span class="leadin">Urmian dialect.</span> Pronounced <span class="ipa">x</span>.</p>
-<p><span class="leadin">With <span class="trans">maǧlīyānā</span>.</span><span class="ipa">t͡ʃ</span> (č) as <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܟ̰ܟ</span></span> when combined with <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0330;</span> &nbsp;[<a href="/scripts/syriac/block#char0330"><span class="uname">U+0330 COMBINING TILDE BELOW</span></a>]</span> (<span class="name">maǧlīyānā</span>), eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܟ̰ܵܐܝ</span> <span class="trans">k˷āʾy</span> <span class="ipa">t͡ʃaj</span> <span class="meaning">tea</span></span>. Mostly used for words borrowed from the Turkish language.<a class="fnref" href="#refs">r35</a></p>
+<p><span class="leadin">With <span class="trans">maǧlīyānā</span>.</span><span class="ipa">t͡ʃ</span> (č) as <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܟ̰ܟ</span></span> when combined with <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0330;</span> &nbsp;[<a href="/scripts/syriac/block#char0330"><span class="uname">U+0330 COMBINING TILDE BELOW</span></a>]</span> (<span class="name">maǧlīyānā</span>), eg. <span class="eg" lang="aii" dir="rtl">ܟ̰ܵܐܝ</span>. Mostly used for words borrowed from the Turkish language.<a class="fnref" href="#refs">r35</a></p>
 
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span></p>
-<p><span class="ipa">k</span> when hard, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܟܰܓ݂ܰܬ</span> <span class="trans">kȧg‐̣ȧt</span> (<span class="trans">kaġat</span>) <span class="meaning">paper</span></span>.&nbsp;</p>
-<p><span class="ipa">x</span> (<span class="trans">x</span>) when soft, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܟ݂ܰܒܪܐ</span> <span class="trans">k‐̣ȧbrʾ</span> (<span class="trans">xabro</span>) <span class="meaning">word</span></span>.</p>
+<p><span class="ipa">k</span> when hard, eg. <span class="eg" lang="tru" dir="rtl">ܟܰܓ݂ܰܬ</span>.&nbsp;</p>
+<p><span class="ipa">x</span> (<span class="trans">x</span>) when soft, eg. <span class="eg" lang="tru" dir="rtl">ܟ݂ܰܒܪܐ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -554,12 +599,12 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܠ ܠـܠـܠ</
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
-<p><span class="ipa">l</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܠܲܦܵܐ</span> <span class="trans">lapāʾ</span> <span class="ipa">lappɑ</span> <span class="meaning">wave</span></span><!--span class="charExample"><span class="ex" lang="aii" dir="rtl">ܕܠܐ</span> <span class="trans">dlaʾ</span> <span class="ipa">dla</span> <span class="meaning">without</span></span-->.</p>
-<p>At the beginning of a word this may represent the preposition <span class="meaning">to</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܕܵܫܢܵܐ ܠܲܒܪܵܬܵܐ</span> <span class="trans">dāʃnāʾ labrātāʾ</span> <span class="ipa">dɑʃnɑ labrɑtɑ</span> <span class="meaning">gift to the girl</span></span>. If the following consonant is the beginning of a cluster, this preposition is written with the vowel diacritic &nbsp; <span class="codepoint" translate="no"><span lang="syr-syrn" dir="rtl">&#x0732;</span> [<a href="/scripts/syriac/block#char0732"><span class="uname">U+0732 SYRIAC PTHAHA DOTTED</span></a>]</span>, but otherwise not.</p>
+<p><span class="ipa">l</span>, eg. <span class="eg" lang="aii" dir="rtl">ܠܲܦܵܐ</span><!--span class="charExample"><span class="ex" lang="aii" dir="rtl">ܕܠܐ</span> <span class="trans">dlaʾ</span> <span class="ipa">dla</span> <span class="meaning">without</span></span-->.</p>
+<p>At the beginning of a word this may represent the preposition <span class="meaning">to</span>, eg. <span class="eg" lang="aii" dir="rtl">ܕܵܫܢܵܐ ܠܲܒܪܵܬܵܐ</span>. If the following consonant is the beginning of a cluster, this preposition is written with the vowel diacritic &nbsp; <span class="codepoint" translate="no"><span lang="syr-syrn" dir="rtl">&#x0732;</span> [<a href="/scripts/syriac/block#char0732"><span class="uname">U+0732 SYRIAC PTHAHA DOTTED</span></a>]</span>, but otherwise not.</p>
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span></p>
-<p><span class="ipa">l</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܫܠܳܡܐ</span> <span class="trans">ʃlåmʾ</span> (<span class="trans">šlomo</span>) <span class="meaning">hello</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.2?content-fragment-id=1748">a</a></p>
+<p><span class="ipa">l</span>, eg. <span class="eg" lang="tru" dir="rtl">ܫܠܳܡܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.2?content-fragment-id=1748">a</a></p>
 <p>Note how the isolated and final forms are represented by a glyph that doubles the strokes. In certain combinations, this also produces special forms: when doubled, it is written <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܠܠ</span> <span class="trans">ll</span></span>; followed by <span class="name">olaf</span> it is written <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܠܐ</span> <span class="trans">lʾ</span></span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
@@ -585,11 +630,11 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܡ ܡـܡـܡ</
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
-<p><span class="ipa">m</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܡܲܠܟܵܐ</span> <span class="trans">malkāʾ</span> <span class="ipa">mallkɑ</span> <span class="meaning">king</span></span><!--span class="charExample"><span class="ex" lang="aii" dir="rtl">ܐܘ݂ܡܬܵܐ</span> <span class="trans">ʾûmtaʾ</span> <span class="ipa">ʔumtʰa</span> <span class="meaning">nation</span></span-->.</p>
+<p><span class="ipa">m</span>, eg. <span class="eg" lang="aii" dir="rtl">ܡܲܠܟܵܐ</span><!--span class="charExample"><span class="ex" lang="aii" dir="rtl">ܐܘ݂ܡܬܵܐ</span> <span class="trans">ʾûmtaʾ</span> <span class="ipa">ʔumtʰa</span> <span class="meaning">nation</span></span-->.</p>
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span></p>
-<p><span class="ipa">m</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܡܘܟܠܐ</span> <span class="trans">mwklʾ</span> (<span class="trans">muklo</span>) <span class="meaning">food</span></span>.</p>
+<p><span class="ipa">m</span>, eg. <span class="eg" lang="tru" dir="rtl">ܡܘܟܠܐ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -614,11 +659,11 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܢ ܢـܢـܢ</
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
-<p><span class="ipa">n</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܢܵܬܵܐ</span> <span class="trans">nātāʾ</span> <span class="ipa">nɑtɑ</span> <span class="meaning">ear</span></span><!--span class="charExample"><span class="ex" lang="aii" dir="rtl">ܐܸܢ</span> <span class="trans">ʾĭn</span> <span class="ipa">ʔɪn</span> <span class="meaning">if</span></span-->.</p>
+<p><span class="ipa">n</span>, eg. <span class="eg" lang="aii" dir="rtl">ܢܵܬܵܐ</span><!--span class="charExample"><span class="ex" lang="aii" dir="rtl">ܐܸܢ</span> <span class="trans">ʾĭn</span> <span class="ipa">ʔɪn</span> <span class="meaning">if</span></span-->.</p>
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span></p>
-<p><span class="ipa">n</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܰܚܘܢܐ</span> <span class="trans">ʾȧħwnʾ</span> (<span class="trans">aḥuno</span>) <span class="meaning">brother</span></span>.</p>
+<p><span class="ipa">n</span>, eg. <span class="eg" lang="tru" dir="rtl">ܐܰܚܘܢܐ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -644,11 +689,11 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܣ ܣـܣـܣ</
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
-<p><span class="ipa">s</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܣܵܠܵܐ</span> <span class="trans">sālāʾ</span> <span class="ipa">sɑlɑ</span> <span class="meaning">basket</span></span>.</p>
+<p><span class="ipa">s</span>, eg. <span class="eg" lang="aii" dir="rtl">ܣܵܠܵܐ</span>.</p>
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span></p>
-<p><span class="ipa">s</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܣܷܣܝܐ</span> <span class="trans">sẹsyʾ</span> (<span class="trans">sësyo</span>) <span class="meaning">horse</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/1?content-fragment-id=1736">a</a></p>
+<p><span class="ipa">s</span>, eg. <span class="eg" lang="tru" dir="rtl">ܣܷܣܝܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/1?content-fragment-id=1736">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -695,12 +740,12 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܥ ܥـܥـܥ</
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span> <span class="charExample"><span class="ex" lang="aii" dir="rtl">&#x0725; &#x0725;&#x0725;&#x0725;</span></span> &nbsp;&nbsp; <span class="trans">ʿ</span></p>
-<p><span class="ipa">ʔ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܥܲܡ</span> <span class="trans">ʿam</span> <span class="ipa">ʕam</span> <span class="meaning">with</span></span>.</p>
+<p><span class="ipa">ʔ</span>, eg. <span class="eg" lang="aii" dir="rtl">ܥܲܡ</span>.</p>
 <p><span class="leadin">Urmian dialect.</span> This is not pronounced, and simply serves as a carrier for <span class="trans">a</span> or <span class="trans">e</span> sounds.<a class="fnref" href="#refs">r</a></p>
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span></p>
-<p><span class="ipa">ʕ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܥܰܝܢܐ</span> <span class="trans">ʕȧynʾ</span> (<span class="trans">cayno</span>) <span class="meaning">eye</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
+<p><span class="ipa">ʕ</span>, eg. <span class="eg" lang="tru" dir="rtl">ܥܰܝܢܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -727,13 +772,13 @@ western styles (top to bottom).</span><span class="ex" lang="syr">ܦ ܦـܦـܦ<
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
-<p><span class="ipa">p</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܦܵܓܵܐ</span> <span class="trans">pāgāʾ</span> <span class="ipa">pɑgɑ</span> <span class="meaning">stable</span></span><!--span class="charExample"><span class="ex" lang="aii" dir="rtl">ܦܵܝܫܝܼ</span> <span class="trans">payšî</span> <span class="ipa">pʰeʃi</span> <span class="meaning">become</span></span-->.</p>
+<p><span class="ipa">p</span>, eg. <span class="eg" lang="aii" dir="rtl">ܦܵܓܵܐ</span><!--span class="charExample"><span class="ex" lang="aii" dir="rtl">ܦܵܝܫܝܼ</span> <span class="trans">payšî</span> <span class="ipa">pʰeʃi</span> <span class="meaning">become</span></span-->.</p>
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span></p>
 <p>The standard pronunciation, without any diacritic,  is <span class="ipa">f</span>. To indicate <span class="ipa">p</span>, add <span class="codepoint"><span lang="syr-syre" dir="rtl">&#x0741;</span> <a href="/scripts/syriac/block#char0741">[<span class="uname">U+0741 SYRIAC QUSHSHAYA</span>]</a></span>, ie. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܦ݁</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Turoyo_language#Alphabet">w</a><a class="fnref" href="https://textbook.surayt.com/en/Level%20A/1?content-fragment-id=1736">a</a></p>
-<p><span class="ipa">f</span> (<span class="trans">f</span>) when soft, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܦܶܡܐ</span> <span class="trans">pėmʾ</span> (<span class="trans">femo</span>) <span class="meaning">mouth</span></span>.</p>
-<p><span class="ipa">p</span> (<span class="trans">p</span>) when hard, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܦ݁ܠܰܢ</span> <span class="trans">p‐̇lȧn</span> (<span class="trans">plan</span>) <span class="meaning">plan</span></span>.</p>
+<p><span class="ipa">f</span> (<span class="trans">f</span>) when soft, eg. <span class="eg" lang="tru" dir="rtl">ܦܶܡܐ</span>.</p>
+<p><span class="ipa">p</span> (<span class="trans">p</span>) when hard, eg. <span class="eg" lang="tru" dir="rtl">ܦ݁ܠܰܢ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -764,7 +809,7 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܨ ـܨ</span> 
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span></p>
-<p><span class="ipa">sˤ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܨܰܦܪܐ</span> <span class="trans">sˤȧfrʾ</span> (<span class="trans">ṣafro</span>) <span class="meaning">morning</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/1?content-fragment-id=1736">a</a></p>
+<p><span class="ipa">sˤ</span>, eg. <span class="eg" lang="tru" dir="rtl">ܨܰܦܪܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/1?content-fragment-id=1736">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -788,11 +833,11 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܩ ܩـܩـܩ</
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
-<p><span class="ipa">q</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܩܵܝܵܐ</span> <span class="trans">qāyāʾ</span> <span class="ipa">qɑjɑ</span> <span class="meaning">rock</span></span><!--span class="charExample"><span class="ex" lang="aii" dir="rtl">ܩܘ݂ܝܵܡܵܐ</span> <span class="trans">qûyamaʾ</span> <span class="ipa">qujama</span> <span class="meaning">subsistence</span></span-->.</p>
+<p><span class="ipa">q</span>, eg. <span class="eg" lang="aii" dir="rtl">ܩܵܝܵܐ</span><!--span class="charExample"><span class="ex" lang="aii" dir="rtl">ܩܘ݂ܝܵܡܵܐ</span> <span class="trans">qûyamaʾ</span> <span class="ipa">qujama</span> <span class="meaning">subsistence</span></span-->.</p>
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span></p>
-<p><span class="ipa">q</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܩܰܚܘܰܐ</span> <span class="trans">qȧħwȧʾ</span> (<span class="trans">qaḥwa</span>) <span class="meaning">coffee</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/1?content-fragment-id=1736">a</a></p>
+<p><span class="ipa">q</span>, eg. <span class="eg" lang="tru" dir="rtl">ܩܰܚܘܰܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/1?content-fragment-id=1736">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -818,11 +863,11 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܪ ـܪ</span> 
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
-<p><span class="ipa">r</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܪܲܡܫܵܐ</span> <span class="trans">ramʃāʾ</span> <span class="ipa">ramʃɑ</span> <span class="meaning">evening</span></span><!--span class="charExample"><span class="ex" lang="aii" dir="rtl">ܡܵܪܹܐ</span> <span class="trans">mareʾ</span> <span class="ipa">marɪ</span> <span class="meaning">possessor of</span></span-->.</p>
+<p><span class="ipa">r</span>, eg. <span class="eg" lang="aii" dir="rtl">ܪܲܡܫܵܐ</span><!--span class="charExample"><span class="ex" lang="aii" dir="rtl">ܡܵܪܹܐ</span> <span class="trans">mareʾ</span> <span class="ipa">marɪ</span> <span class="meaning">possessor of</span></span-->.</p>
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span></p>
-<p><span class="ipa">r</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܪܰܒܷܥ</span> <span class="trans">rȧbẹʕ</span> (<span class="trans">rabëc</span>) <span class="meaning">spring</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/1?content-fragment-id=1736">a</a></p>
+<p><span class="ipa">r</span>, eg. <span class="eg" lang="tru" dir="rtl">ܪܰܒܷܥ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/1?content-fragment-id=1736">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -847,13 +892,13 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܫ ܫـܫـܫ</
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
-<p><span class="ipa">ʃ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܫܠܵܡܵܐ</span> <span class="trans">ʃlāmāʾ</span> <span class="ipa">ʃlɑmɑ</span> <span class="meaning">peace</span></span><!--span class="charExample"><span class="ex" lang="aii" dir="rtl">ܠܸܫܵܢܵܐ</span> <span class="trans">lĭšanaʾ</span> <span class="ipa">liʃana</span> <span class="meaning">language</span></span-->.</p>
-<p><span class="leadin">With <span class="trans">maǧlīyānā</span>.</span><span class="ipa">ʒ</span> (<span class="trans">ẑ</span>) as  <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܫ̃</span></span>. or <span class="charExample" translate="no"><span class="ex" lang="syr" dir="rtl">ܫ̰</span></span>, when combined with <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0330;</span> &nbsp;[<a href="/scripts/syriac/block#char0330"><span class="uname">U+0330 COMBINING TILDE BELOW</span></a>]</span> or <span class="codepoint"><span lang="syr-Syre" dir="rtl">&#x0303;</span> &#xA0;<a href="/scripts/syriac/block#char0303">[<span class="uname">U+0303 COMBINING TILDE​</span>] </a></span>(<span class="name">maǧlīyānā</span>), eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܡܝܼܫ̰</span> <span class="trans">myiʃ˷</span> <span class="ipa">miʒ</span> <span class="meaning">fog</span></span>. Used for words borrowed from other languages.</p>
+<p><span class="ipa">ʃ</span>, eg. <span class="eg" lang="aii" dir="rtl">ܫܠܵܡܵܐ</span><!--span class="charExample"><span class="ex" lang="aii" dir="rtl">ܠܸܫܵܢܵܐ</span> <span class="trans">lĭšanaʾ</span> <span class="ipa">liʃana</span> <span class="meaning">language</span></span-->.</p>
+<p><span class="leadin">With <span class="trans">maǧlīyānā</span>.</span><span class="ipa">ʒ</span> (<span class="trans">ẑ</span>) as  <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܫ̃</span></span>. or <span class="charExample" translate="no"><span class="ex" lang="syr" dir="rtl">ܫ̰</span></span>, when combined with <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0330;</span> &nbsp;[<a href="/scripts/syriac/block#char0330"><span class="uname">U+0330 COMBINING TILDE BELOW</span></a>]</span> or <span class="codepoint"><span lang="syr-Syre" dir="rtl">&#x0303;</span> &#xA0;<a href="/scripts/syriac/block#char0303">[<span class="uname">U+0303 COMBINING TILDE​</span>] </a></span>(<span class="name">maǧlīyānā</span>), eg. <span class="eg" lang="aii" dir="rtl">ܡܝܼܫ̰</span>. Used for words borrowed from other languages.</p>
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span></p>
-<p><span class="ipa">ʃ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܫܰܬܐ</span> <span class="trans">ʃȧtʾ</span> (<span class="trans">šato</span>) <span class="meaning">year</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/1?content-fragment-id=1736">a</a></p>
-<p><span class="leadin">With <span class="trans">maǧlīyānā</span>.</span><span class="ipa">t͡ʃ</span>  (<span class="trans">č</span>) as <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܫ̰</span></span>, when combined with <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0330;</span> &nbsp;[<a href="/scripts/syriac/block#char0330"><span class="uname">U+0330 COMBINING TILDE BELOW</span></a>]</span> (<span class="name">maǧlīyānā</span>), eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܫ̰ܰܢܛܰܐ</span> <span class="trans">ʃ‐̰ȧntˤȧʾ</span> (<span class="trans">čanṭa</span>) <span class="meaning">bag</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/1?content-fragment-id=1736">a</a></p>
+<p><span class="ipa">ʃ</span>, eg. <span class="eg" lang="tru" dir="rtl">ܫܰܬܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/1?content-fragment-id=1736">a</a></p>
+<p><span class="leadin">With <span class="trans">maǧlīyānā</span>.</span><span class="ipa">t͡ʃ</span>  (<span class="trans">č</span>) as <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܫ̰</span></span>, when combined with <span class="codepoint" translate="no"><span lang="tru" dir="rtl">&#x0330;</span> &nbsp;[<a href="/scripts/syriac/block#char0330"><span class="uname">U+0330 COMBINING TILDE BELOW</span></a>]</span> (<span class="name">maǧlīyānā</span>), eg. <span class="eg" lang="tru" dir="rtl">ܫ̰ܰܢܛܰܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/1?content-fragment-id=1736">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -881,14 +926,14 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܬ ـܬ</span> 
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
-<p><span class="ipa">t</span> when hard, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܬܲܠܓܵܐ</span> <span class="trans">talgāʾ</span> <span class="ipa">talgɑ</span> <span class="meaning">snow</span></span><!--span class="charExample"><span class="ex" lang="aii" dir="rtl">ܡܵܦܬܘܼܝܹܐ</span> <span class="trans">maptûyeʾ</span> <span class="ipa">mapʰtʰujɪ</span> <span class="meaning">expand</span></span-->.</p>
-<p><span class="ipa">θ</span> (<span class="trans">ṯ</span>) when soft, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܐܵܬ݂ܘܿܪ</span> <span class="trans">ʾātˑwor</span> <span class="ipa">ɑθor</span> <span class="meaning">Assyria</span></span>.</p>
+<p><span class="ipa">t</span> when hard, eg. <span class="eg" lang="aii" dir="rtl">ܬܲܠܓܵܐ</span><!--span class="charExample"><span class="ex" lang="aii" dir="rtl">ܡܵܦܬܘܼܝܹܐ</span> <span class="trans">maptûyeʾ</span> <span class="ipa">mapʰtʰujɪ</span> <span class="meaning">expand</span></span-->.</p>
+<p><span class="ipa">θ</span> (<span class="trans">ṯ</span>) when soft, eg. <span class="eg" lang="aii" dir="rtl">ܐܵܬ݂ܘܿܪ</span>.</p>
 <p><span class="leadin">Urmian dialect.</span> Soft form not used. Words are written and pronounced <span class="ipa">t</span>.<a class="fnref" href="#refs">r34</a></p>
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span></p>
-<p><span class="ipa">t</span> when hard, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܬܰܠܓܐ</span> <span class="trans">tȧlgʾ</span> (<span class="trans">talgo</span>) <span class="meaning">snow</span></span>.</p>
-<p><span class="ipa">θ</span> (<span class="trans">ṯ</span>) when soft, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܰܬ݂ܬܐ</span> <span class="trans">ʾȧt‐̣tʾ</span> (<span class="trans">aṯto</span>) <span class="meaning">woman</span></span>.</p>
+<p><span class="ipa">t</span> when hard, eg. <span class="eg" lang="tru" dir="rtl">ܬܰܠܓܐ</span>.</p>
+<p><span class="ipa">θ</span> (<span class="trans">ṯ</span>) when soft, eg. <span class="eg" lang="tru" dir="rtl">ܐܰܬ݂ܬܐ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -1154,10 +1199,10 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܜ ܜܜܜ</span
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span>&nbsp;&nbsp;<span class="trans">ă</span></p>
-<p><span class="ipa">a</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܕܲܪܬܵܐ</span> <span class="trans">dartāʾ</span> <span class="ipa">darrtɑ</span> <span class="meaning">courtyard</span></span>. This is a shorter vowel than <span class="codepoint" translate="no"><span lang="syr-syrn" dir="rtl">&#x0735;</span> [<a href="/scripts/syriac/block#char0735"><span class="uname">U+0735 SYRIAC ZQAPHA DOTTED</span></a>]</span> and  the phonetic realisation is central, such as <span class="ipa">ä</span> or <span class="ipa">ɐ</span>.</p>
-<p>Consonants following this vowel are usually geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܣܲܡܲܐ</span> <span class="trans">samaʾ</span> <span class="ipa">samma</span> <span class="meaning">poison</span></span>.</p>
-<p><span class="leadin">Urmian dialect.</span> Can be pronounced the same way, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܥܲܡ</span> <span class="trans">ʿam</span> <span class="ipa">amm</span> <span class="meaning">with</span></span>, but may also be pronounced <span class="ipa">æ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܐܲܠܵܗܵܐ</span> <span class="trans">ʾalāhāʾ</span> <span class="ipa">ælæhæ</span> <span class="meaning">God</span></span>, or as <span class="ipa">ɛ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܟܲܠܒܵܐ</span> <span class="trans">kalbāʾ</span> <span class="ipa">kɛlba</span> <span class="meaning">dog</span></span>.</p>
-<p>When followed by <span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x0718;</span> [<a href="/scripts/syriac/block#char0718"><span class="uname">U+0718 SYRIAC LETTER WAW</span></a>]</span> without a vowel, this becomes <span class="ipa">o</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܡܲܘܡܼܬܵܐ</span> <span class="trans">mawmitāʾ</span> <span class="ipa">momitɑ</span> <span class="meaning">oath</span></span>. Followed by <span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x071D;</span> [<a href="/scripts/syriac/block#char071D"><span class="uname">U+071D SYRIAC LETTER YUDH</span></a>]</span> with no vowel, this becomes <span class="ipa">ɛ</span> (<span class="trans">é</span>), eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒܲܝܬܵܐ</span> <span class="trans">baytāʾ</span> <span class="ipa">bɛta</span> <span class="meaning">house</span></span>.</p>
+<p><span class="ipa">a</span>, eg. <span class="eg" lang="aii" dir="rtl">ܕܲܪܬܵܐ</span>. This is a shorter vowel than <span class="codepoint" translate="no"><span lang="syr-syrn" dir="rtl">&#x0735;</span> [<a href="/scripts/syriac/block#char0735"><span class="uname">U+0735 SYRIAC ZQAPHA DOTTED</span></a>]</span> and  the phonetic realisation is central, such as <span class="ipa">ä</span> or <span class="ipa">ɐ</span>.</p>
+<p>Consonants following this vowel are usually geminated, eg. <span class="eg" lang="aii" dir="rtl">ܣܲܡܲܐ</span>.</p>
+<p><span class="leadin">Urmian dialect.</span> Can be pronounced the same way, eg. <span class="eg" lang="aii" dir="rtl">ܥܲܡ</span>, but may also be pronounced <span class="ipa">æ</span>, eg. <span class="eg" lang="aii" dir="rtl">ܐܲܠܵܗܵܐ</span>, or as <span class="ipa">ɛ</span>, eg. <span class="eg" lang="aii" dir="rtl">ܟܲܠܒܵܐ</span>.</p>
+<p>When followed by <span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x0718;</span> [<a href="/scripts/syriac/block#char0718"><span class="uname">U+0718 SYRIAC LETTER WAW</span></a>]</span> without a vowel, this becomes <span class="ipa">o</span>, eg. <span class="eg" lang="aii" dir="rtl">ܡܲܘܡܼܬܵܐ</span>. Followed by <span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x071D;</span> [<a href="/scripts/syriac/block#char071D"><span class="uname">U+071D SYRIAC LETTER YUDH</span></a>]</span> with no vowel, this becomes <span class="ipa">ɛ</span> (<span class="trans">é</span>), eg. <span class="eg" lang="aii" dir="rtl">ܒܲܝܬܵܐ</span>.</p>
 <p>This makes the latter combinations sound the same as similar combinations with <span class="codepoint" translate="no"><span lang="syr-syrn" dir="rtl">&#x0735;</span> [<a href="/scripts/syriac/block#char0735"><span class="uname">U+0735 SYRIAC ZQAPHA DOTTED</span></a>]</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
@@ -1182,8 +1227,8 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܜ ܜܜܜ</span
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
 <p><span class="ipa">ɑ</span> (<span class="trans">ā</span> or <span class="trans">â</span>), eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܐܵܗܵܐ</span> <span class="trans">ʾahaʾ</span> <span class="ipa">ɑhɑ</span> <span class="meaning">this</span></span>.</p>
 <p><span class="leadin">Urmian dialect.</span>Often more like <span class="ipa">æ</span> (<span class="trans">a</span>), but also <span class="ipa">ɑ</span> (<span class="trans">â</span>) in certain words.</p>
-<p>When followed by <span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x0718;</span> [<a href="/scripts/syriac/block#char0718"><span class="uname">U+0718 SYRIAC LETTER WAW</span></a>]</span> without a vowel, this becomes <span class="ipa">o</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܓܵܘ</span> <span class="trans">gāw</span> <span class="ipa">go</span> <span class="meaning">inside</span></span>.</p>
-<p>Followed by <span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x071D;</span> [<a href="/scripts/syriac/block#char071D"><span class="uname">U+071D SYRIAC LETTER YUDH</span></a>]</span> with no vowel, this becomes <span class="ipa">ɛ</span> (<span class="trans">é</span>), eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܕܵܝܒܵܐ</span> <span class="trans">dāybāʾ</span> <span class="ipa">dɛva</span> <span class="meaning">demon</span></span>, although there are exceptions, such as <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܦܵܝܕܵܐ</span> <span class="trans">pāydāʾ</span> <span class="ipa">pajda</span> <span class="meaning">benefit</span></span>.</p>
+<p>When followed by <span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x0718;</span> [<a href="/scripts/syriac/block#char0718"><span class="uname">U+0718 SYRIAC LETTER WAW</span></a>]</span> without a vowel, this becomes <span class="ipa">o</span>, eg. <span class="eg" lang="aii" dir="rtl">ܓܵܘ</span>.</p>
+<p>Followed by <span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x071D;</span> [<a href="/scripts/syriac/block#char071D"><span class="uname">U+071D SYRIAC LETTER YUDH</span></a>]</span> with no vowel, this becomes <span class="ipa">ɛ</span> (<span class="trans">é</span>), eg. <span class="eg" lang="aii" dir="rtl">ܕܵܝܒܵܐ</span>, although there are exceptions, such as <span class="eg" lang="aii" dir="rtl">ܦܵܝܕܵܐ</span>.</p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -1206,8 +1251,8 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܜ ܜܜܜ</span
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span>&nbsp;&nbsp;<span class="trans">ĭ</span></p>
-<p><span class="ipa">ɪ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܫܸܡܫܵܐ</span> <span class="trans">ʃemʃāʾ</span> <span class="ipa">ʃɪmʃɑ</span> <span class="meaning">sun</span></span>.</p>
-<p><span class="leadin">Urmian dialect.</span> Many words are pronounced with this sound rather than a, and this often leads to a spelling change also, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܕܲܫܬܵܐ</span> <span class="trans">daʃtāʾ</span> <span class="ipa">daʃta</span> <span class="meaning">plain, field</span></span> may be spelled <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܕܸܫܬܵܐ</span> <span class="trans">deʃtāʾ</span></span>.<a class="fnref" href="#refs">r18</a></p>
+<p><span class="ipa">ɪ</span>, eg. <span class="eg" lang="aii" dir="rtl">ܫܸܡܫܵܐ</span>.</p>
+<p><span class="leadin">Urmian dialect.</span> Many words are pronounced with this sound rather than a, and this often leads to a spelling change also, eg. <span class="eg" lang="aii" dir="rtl">ܕܲܫܬܵܐ</span> may be spelled <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܕܸܫܬܵܐ</span> <span class="trans">deʃtāʾ</span></span>.<a class="fnref" href="#refs">r18</a></p>
 <p>&nbsp;</p>
 <p><span class="ipa">ɛ</span> is the standard pronunciation.</p>
 <p><span class="ipa">ɪ</span> often in East Syriac dialects (when it may be transcribed <span class="trans">i</span>), eg. <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܠܸܫܵܢܵܐ</span> <span class="trans">lĭšanaʾ</span> <span class="ipa">lɪʃana</span> <span class="meaning">language</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Syriac_alphabet#Vowels">w</a></p>
@@ -1233,8 +1278,8 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܜ ܜܜܜ</span
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span>&nbsp;&nbsp;<span class="trans">e</span></p>
-<p><span class="ipa">e</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܪܹܫܵܐ</span> <span class="trans">rēʃāʾ</span> <span class="ipa">reʃɑ</span> <span class="meaning">head</span></span>.</p>
-<p> It is also the pronunciation when this is followed by <span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x071D;</span> [<a href="/scripts/syriac/block#char071D"><span class="uname">U+071D SYRIAC LETTER YUDH</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܐܹܝܠ</span> <span class="trans">ʾēyl</span> <span class="ipa">el</span> <span class="meaning">God</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Syriac_alphabet#Vowels">w</a></p>
+<p><span class="ipa">e</span>, eg. <span class="eg" lang="aii" dir="rtl">ܪܹܫܵܐ</span>.</p>
+<p> It is also the pronunciation when this is followed by <span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x071D;</span> [<a href="/scripts/syriac/block#char071D"><span class="uname">U+071D SYRIAC LETTER YUDH</span></a>]</span>, eg. <span class="eg" lang="aii" dir="rtl">ܐܹܝܠ</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Syriac_alphabet#Vowels">w</a></p>
 <p><span class="leadin">Urmian dialect.</span> Pronounced <span class="ipa">i</span>.</p>
 <p>&nbsp;</p>
 <p><span class="ipa">e</span> is the standard pronunciation. It is also the pronunciation when this is followed by <span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x071D;</span> [<a href="/scripts/syriac/block#char071D"><span class="uname">U+071D SYRIAC LETTER YUDH</span></a>]</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Syriac_alphabet#Vowels">w</a></p>
@@ -1260,10 +1305,10 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܜ ܜܜܜ</span
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
-<p>Always used with <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x0718;</span> <a href="/scripts/syriac/block#char0718">[<span class="uname">U+0718 SYRIAC LETTER WAW</span>]</a></span> or  <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x071D;</span> <a href="/scripts/syriac/block#char071D">[<span class="uname">U+071D SYRIAC LETTER YUDH</span>]</a></span>. This combination follows <span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x0710;</span> [<a href="/scripts/syriac/block#char0710"><span class="uname">U+0710 SYRIAC LETTER ALAPH</span></a>]</span> at the start of a word, just like other vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܐܝܼܠܵܢܵܐ</span> <span class="trans">ʾyilānāʾ</span> <span class="ipa">ilɑnɑ</span> <span class="meaning">tree</span></span>.</p>
-<p><span class="ipa">i</span>  with <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x071D;</span> <a href="/scripts/syriac/block#char071D">[<span class="uname">U+071D SYRIAC LETTER YUDH</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܢܝܼܫܵܐ</span> <span class="trans">nyiʃāʾ</span> <span class="ipa">niʃa</span> <span class="meaning">aim, purpose</span></span>. The two together may be transcribed as <span class="trans">î</span>. Many imperatives end in this vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒܢܝܼ</span> <span class="trans">bnyi</span> <span class="ipa">bni</span> <span class="meaning">build</span></span>, as do 1st person singular possessive pronouns, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒܵܒܝܼ</span> <span class="trans">bābyi</span> <span class="ipa">bɑbi</span> <span class="meaning">my father</span></span>.<a class="fnref" href="#refs">r20</a></p>
+<p>Always used with <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x0718;</span> <a href="/scripts/syriac/block#char0718">[<span class="uname">U+0718 SYRIAC LETTER WAW</span>]</a></span> or  <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x071D;</span> <a href="/scripts/syriac/block#char071D">[<span class="uname">U+071D SYRIAC LETTER YUDH</span>]</a></span>. This combination follows <span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x0710;</span> [<a href="/scripts/syriac/block#char0710"><span class="uname">U+0710 SYRIAC LETTER ALAPH</span></a>]</span> at the start of a word, just like other vowels, eg. <span class="eg" lang="aii" dir="rtl">ܐܝܼܠܵܢܵܐ</span>.</p>
+<p><span class="ipa">i</span>  with <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x071D;</span> <a href="/scripts/syriac/block#char071D">[<span class="uname">U+071D SYRIAC LETTER YUDH</span>]</a></span>, eg. <span class="eg" lang="aii" dir="rtl">ܢܝܼܫܵܐ</span>. The two together may be transcribed as <span class="trans">î</span>. Many imperatives end in this vowel, eg. <span class="eg" lang="aii" dir="rtl">ܒܢܝܼ</span>, as do 1st person singular possessive pronouns, eg. <span class="eg" lang="aii" dir="rtl">ܒܵܒܝܼ</span>.<a class="fnref" href="#refs">r20</a></p>
 <p>The sound <span class="ipa">ija</span> can be written with a single yodh consonant, and vowel diacritics both above and below it, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܐܝܼܛܵܠܝܼܵܐ</span> <span class="trans">ʾyitˤālyiāʾ</span> (<span class="trans">iṭaliya</span>) <span class="meaning">Italy</span></span>.<a class="fnref" href="#refs">r20</a></p>
-<p><span class="ipa">u</span>  with <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x0718;</span> <a href="/scripts/syriac/block#char0718">[<span class="uname">U+0718 SYRIAC LETTER WAW</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܢܘܼܢܵܐ</span> <span class="trans">nwināʾ</span> <span class="ipa">nuːna</span> <span class="meaning">fish</span></span>. The two together may be transcribed as <span class="trans">û</span>. Before a consonant cluster this vowel is pronounced shorter, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܩܘܼܦܬܵܐ</span> <span class="trans">qwiptāʾ</span> <span class="ipa">qupta</span> <span class="meaning">owl</span></span>.<a class="fnref" href="#refs">r26</a></p>
+<p><span class="ipa">u</span>  with <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x0718;</span> <a href="/scripts/syriac/block#char0718">[<span class="uname">U+0718 SYRIAC LETTER WAW</span>]</a></span>, eg. <span class="eg" lang="aii" dir="rtl">ܢܘܼܢܵܐ</span>. The two together may be transcribed as <span class="trans">û</span>. Before a consonant cluster this vowel is pronounced shorter, eg. <span class="eg" lang="aii" dir="rtl">ܩܘܼܦܬܵܐ</span>.<a class="fnref" href="#refs">r26</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -1286,7 +1331,7 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܜ ܜܜܜ</span
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span>&nbsp;&nbsp;<span class="trans">ô</span></p>
 <p>Always used with <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x0718;</span> <a href="/scripts/syriac/block#char0718">[<span class="uname">U+0718 SYRIAC LETTER WAW</span>]</a></span>.</p>
-<p><span class="ipa">o</span> (with <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x0718;</span> <a href="/scripts/syriac/block#char0718">[<span class="uname">U+0718 SYRIAC LETTER WAW</span>]</a></span>), eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܡܘܿܕܵܐ</span> <span class="trans">mwodāʾ</span> <span class="ipa">modɑ</span> <span class="meaning">bowl</span></span>. The two together may be transcribed as <span class="trans">ô</span>.</p>
+<p><span class="ipa">o</span> (with <span class="codepoint"><span lang="syr-syrc" dir="rtl">&#x0718;</span> <a href="/scripts/syriac/block#char0718">[<span class="uname">U+0718 SYRIAC LETTER WAW</span>]</a></span>), eg. <span class="eg" lang="aii" dir="rtl">ܡܘܿܕܵܐ</span>. The two together may be transcribed as <span class="trans">ô</span>.</p>
 <p><span class="leadin">Urmian dialect.</span> Pronounced <span class="ipa">u</span>.<a class="fnref" href="#refs">r27</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
@@ -1319,7 +1364,7 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܜ ܜܜܜ</span
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span> &nbsp;&nbsp; <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
-<p><span class="ipa">a</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܡܰܠܟܘܬ݂ܐ</span> <span class="trans">malkwtiʾ</span> (<span class="trans">malkuṯo</span>) <span class="meaning">kingdom</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.2?content-fragment-id=1748">a</a></p>
+<p><span class="ipa">a</span>, eg. <span class="eg" lang="tru" dir="rtl">ܡܰܠܟܘܬ݂ܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.2?content-fragment-id=1748">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -1341,7 +1386,7 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܜ ܜܜܜ</span
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span> &nbsp;&nbsp; <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
-<p><span class="ipa">a</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܓ݂ܱܠܱܒܶܐ</span> <span class="trans">g‐̣äläbeʾ</span> (<span class="trans">ġäläbe</span>) <span class="meaning">many</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.2?content-fragment-id=1748">a</a></p>
+<p><span class="ipa">a</span>, eg. <span class="eg" lang="tru" dir="rtl">ܓ݂ܱܠܱܒܶܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.2?content-fragment-id=1748">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -1363,7 +1408,7 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܜ ܜܜܜ</span
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span> &nbsp;&nbsp; <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
-<p><span class="ipa">ɒ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܳܬ݂ܐ</span> <span class="trans">ʾot‐̣ʾ</span> (<span class="trans">oṯo</span>) <span class="meaning">sign</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.2?content-fragment-id=1748">a</a></p>
+<p><span class="ipa">ɒ</span>, eg. <span class="eg" lang="tru" dir="rtl">ܐܳܬ݂ܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.2?content-fragment-id=1748">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -1404,7 +1449,7 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܜ ܜܜܜ</span
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span> &nbsp;&nbsp; <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
-<p><span class="ipa">e</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܶܡܐ</span> <span class="trans">ʾemʾ</span> (<span class="trans">emo</span>) <span class="meaning">mother</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.2?content-fragment-id=1748">a</a></p>
+<p><span class="ipa">e</span>, eg. <span class="eg" lang="tru" dir="rtl">ܐܶܡܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.2?content-fragment-id=1748">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -1426,7 +1471,7 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܜ ܜܜܜ</span
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span> &nbsp;&nbsp; <span class="name" lang="syr-Syrc"></span> <span class="trans"></span></p>
-<p><span class="ipa">ə</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="tru" dir="rtl">ܐܷܫܡܐ</span> <span class="trans">ʾəʃmʾ</span> (<span class="trans">ëšmo</span>) <span class="meaning">name</span></span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.2?content-fragment-id=1748">a</a></p>
+<p><span class="ipa">ə</span>, eg. <span class="eg" lang="tru" dir="rtl">ܐܷܫܡܐ</span>.<a class="fnref" href="https://textbook.surayt.com/en/Level%20A/2.2?content-fragment-id=1748">a</a></p>
 </div>
 <p class="ref"><a href="#refs">Refs</a>:
     [1] <a href="http://www.unicode.org/versions/latest/ch09.pdf" target="_blank">Unicode9 pp392-400</a>&nbsp; 
@@ -1530,7 +1575,7 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܜ ܜܜܜ</span
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian</span></p>
-<p>Not usually used, but may be used, especially in older texts, to emphasise the sound of 5 consonants: <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒ ܓ ܕ ܟ ܬ</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܫܸܬ݁ܠܵܐ</span> <span class="trans">ʃɪt˙lāʾ</span> <span class="ipa">ʃɪttlɑ</span> <span class="meaning">young plant</span></span> or <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܕܘܼܓ݁ܠܵܐ</span> <span class="trans">dwig˙lāʾ</span> <span class="ipa">dugglɑ</span> <span class="meaning">lie</span></span>.</p>
+<p>Not usually used, but may be used, especially in older texts, to emphasise the sound of 5 consonants: <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒ ܓ ܕ ܟ ܬ</span></span>, eg. <span class="eg" lang="aii" dir="rtl">ܫܸܬ݁ܠܵܐ</span> or <span class="eg" lang="aii" dir="rtl">ܕܘܼܓ݁ܠܵܐ</span>.</p>
 </div>
 <div class="letter tru">
 <p class="titlepara"><span class="title">Turoyo</span></p>
@@ -1586,7 +1631,7 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܜ ܜܜܜ</span
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian</span></p>
-<p> Silences a letter, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܫܲܢ݇ܬܵܐ</span> <span class="trans">ʃan′tāʾ</span> <span class="ipa">ʃattɑ</span> <span class="meaning">year</span></span>.</p>
+<p> Silences a letter, eg. <span class="eg" lang="aii" dir="rtl">ܫܲܢ݇ܬܵܐ</span>.</p>
 <p>Frequently, its use in the modern Aramaic koine is to bridge differences in dialects. For example, <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="aii">ܒܬ݇ܪ</span> <span class="trans">bt݇r</span> <span class="meaning">after</span></span>, is pronounced <span class="ipa">baθar</span> in some modern dialects, harking back to the classical pronunciation, but <span class="ipa">bar</span> in Urmi and the koine.</p>
 <p>Occasionally the diacritic is used below the base, in which case use <span class="codepoint" translate="no"><span lang="aii" dir="rtl">&#x0748;</span> [<a href="/scripts/syriac/block#char0748"><span class="uname">U+0748 SYRIAC OBLIQUE LINE BELOW</span></a>]</span>.</p>
 <p>The letters <span class="charExample"><span class="exlist" dir="rtl" lang="aii">ܐ ܥ ܗ ܝ</span></span>, when included for etymological reasons, are often silent, though without using the talqana.<a class="fnref" href="http://www.unicode.org/L2/L1998/98050-syriac-proposal.pdf">n</a>&nbsp;</p>
@@ -2025,7 +2070,7 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܜ ܜܜܜ</span
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
-<p>In sequences of 3 consonants without intervening vowels this is used below the second to contract the pronunciation of the letter and add a very short vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܡܲܩܕ̄ܫܵܐ</span> <span class="trans">maqd̄ʃāʾ</span> <span class="ipa">maqdᵊʃɑ</span> <span class="meaning">sanctuary</span></span>, <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܡܲܕܒ̄ܚܵܐ</span> <span class="trans">madb̄xāʾ</span> <span class="ipa">madbᵊxɑ</span> <span class="meaning">alter</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܚܲܪܕ̄ܠܵܐ</span> <span class="trans">xard̄lāʾ</span> <span class="ipa">xardᵊlɑ</span> <span class="meaning">mustard</span></span>.<a class="fnref" href="#refs">r53</a> </p>
+<p>In sequences of 3 consonants without intervening vowels this is used below the second to contract the pronunciation of the letter and add a very short vowel, eg. <span class="eg" lang="aii" dir="rtl">ܡܲܩܕ̄ܫܵܐ</span>, <span class="eg" lang="aii" dir="rtl">ܡܲܕܒ̄ܚܵܐ</span>, and <span class="eg" lang="aii" dir="rtl">ܚܲܪܕ̄ܠܵܐ</span>.<a class="fnref" href="#refs">r53</a> </p>
 <p>It is NOT used with the following consonants: <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܐ ܗ ܘ ܝ ܠ ܡ ܢ ܥ ܪ</span></span>.</p>
 <p>It is mostly found in older texts, or the writings of modern authors wanting to adhere to the full rules of Assyrian spelling, and is practically obsolete in everyday use.<a class="fnref" href="#refs">r32</a></p>
 </div>
@@ -2040,7 +2085,7 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܜ ܜܜܜ</span
 <div class="notes">
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian</span>&nbsp;</p>
-<p>Used to disambiguate certain letters, morphemes or words, eg. the masc. and fem. personal pronouns, <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܗ̇ܘ</span> <span class="trans">ḣw</span> <span class="ipa">aw</span></span> and <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܗ̇ܝ</span> <span class="trans">ḣy</span> <span class="ipa">aj</span></span>, and their corresponding demonstratives.  The dot is also written over the 3rd person fem. suffix <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܘܗ̇</span> <span class="trans">-wḣ</span> <span class="ipa">-o</span></span>. Examples include <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܐܝܼܕ݂ܵܗ̇</span> <span class="trans">ʾyidˑāh‐͑</span> <span class="ipa">iðɑ</span> <span class="meaning">her hand</span></span> and <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܐ݇ܬܹܐ ܠܵܗ̇</span> <span class="trans">ʾ′tēʾ lāh‐͑</span> <span class="ipa">telɑ</span> <span class="meaning">she came</span></span>.</p>
+<p>Used to disambiguate certain letters, morphemes or words, eg. the masc. and fem. personal pronouns, <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܗ̇ܘ</span> <span class="trans">ḣw</span> <span class="ipa">aw</span></span> and <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܗ̇ܝ</span> <span class="trans">ḣy</span> <span class="ipa">aj</span></span>, and their corresponding demonstratives.  The dot is also written over the 3rd person fem. suffix <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܘܗ̇</span> <span class="trans">-wḣ</span> <span class="ipa">-o</span></span>. Examples include <span class="eg" lang="aii" dir="rtl">ܐܝܼܕ݂ܵܗ̇</span> and <span class="eg" lang="aii" dir="rtl">ܐ݇ܬܹܐ ܠܵܗ̇</span>.</p>
 <p>The dot above also distinguishes <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܡ̇ܢ</span> <span class="trans">ṁn</span> <span class="ipa">man</span> <span class="meaning">who</span></span> from <span class="charExample"><span class="ex" lang="aii" dir="rtl">ܡ̣ܢ</span> <span class="trans">ṃn</span> <span class="ipa">mɪn</span> <span class="meaning">from</span></span>, with a dot below. </p>
 <p>See also &nbsp; <span class="codepoint" translate="no"><span lang="syr-syrn" dir="rtl">&#x0323;</span> [<a href="/scripts/combining/block#char0323"><span class="uname">U+0323 COMBINING DOT BELOW</span></a>]</span>.</p>
 </div>
@@ -2059,13 +2104,13 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܜ ܜܜܜ</span
   <p>Used to represent the Syriac <a class="trans">syame</a> (<span class="name" lang="syr" dir="rtl">ܣܝ̈ܡܐ</span>), which indicates plural nouns, adjectives and participles. It is needed because many plural words would otherwise look the same as the singular word, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܡܠܟܐ</span> <span class="trans">mlkʾ</span> <span class="trans">(malkā)</span> <span class="meaning">king</span></span> could otherwise be also read as <span class="charExample"><span class="trans">malkē</span> <span class="meaning">kings</span></span>. Instead, the plural form can be written as <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܡܠܟ̈ܐ</span> <span class="trans">mlk̋ʾ</span></span>.</p>
   <p>Although it's not strictly needed for non-regular words, it is also used for them, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒܝܬܐ</span> <span class="trans">bytʾ</span> <span class="trans">(baytā)</span> <span class="meaning">house</span></span> and <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒ̈ܬܐ</span> <span class="trans">b̋tʾ</span> <span class="trans">(bāttē)</span> <span class="meaning">houses</span></span>.</p>
 <p>Some modern usage, however, omits this diacritic when vowel marks are present, because it is redundant.</p>
-  <p>An author can place this mark above any letter in a word, but if the word contains one or more　<span class="codepoint"><span lang="aii" dir="rtl">&#x072A;</span> <a href="/scripts/syriac/block#char072A">[<span class="uname">U+072A SYRIAC LETTER RISH</span>]</a></span> the mark is generally placed over the one which is nearest the word end, and replaces the single dot above it, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܢܘܼܟ݂ܪ̈ܵܝܹܐ</span> <span class="trans">nwik‐̣r‐̈āyēʾ</span> <span class="ipa">nuxrajɪ</span> <span class="meaning">foreign</span></span>.</p>
+  <p>An author can place this mark above any letter in a word, but if the word contains one or more　<span class="codepoint"><span lang="aii" dir="rtl">&#x072A;</span> <a href="/scripts/syriac/block#char072A">[<span class="uname">U+072A SYRIAC LETTER RISH</span>]</a></span> the mark is generally placed over the one which is nearest the word end, and replaces the single dot above it, eg. <span class="eg" lang="aii" dir="rtl">ܢܘܼܟ݂ܪ̈ܵܝܹܐ</span>.</p>
   <p>Other likely locations include low rising letters, and letters near the middle or end of a word.<a class="fnref" href="https://en.wikipedia.org/wiki/Syriac_alphabet">w</a></p>
 <p>It is also used in Garshuni texts for the Arabic <span class="name">teh marbuta</span>.<a class="fnref" href="http://www.unicode.org/L2/L1998/98050-syriac-proposal.pdf">n</a></p>
 </div>
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian</span>&nbsp;</p>
-<p>Examples of use: <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܒܢܵܬܹ̈ܐ</span> <span class="trans">bnātē˖ʾ</span> <span class="ipa">bnɑte</span> <span class="meaning">girls</span></span>, <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܝܵܠܹ̈ܐ</span> <span class="trans">yālē˖ʾ</span> <span class="ipa">jɑle</span> <span class="meaning">boys</span></span>, <a class="fnref" href="http://www.unicode.org/L2/L1998/98050-syriac-proposal.pdf"></a><span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܗܵܘܢܵܢܹ̈ܐ</span> <span class="trans">hāwnānē˖ʾ</span> <span class="ipa">hɑwnane</span> <span class="meaning">wise</span></span>, <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܪ̈ܵܡܹܐ</span> <span class="trans">r˖āmēʾ</span> <span class="ipa">rɑme</span> <span class="meaning">tall</span></span>, <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܫܲܪܝܼܪܹ̈ܥ</span> <span class="trans">ʃaryirē˖ʿ</span> <span class="ipa">ʃarire</span> <span class="meaning">true., honest</span></span>, <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܡܵܬ݂ܘܵܬܹ̈ܐ</span> <span class="trans">mātˑwātē˖ʾ</span> <span class="ipa">mɑθwɑte</span> <span class="meaning">villages</span></span>.</p>
+<p>Examples of use: <span class="eg" lang="aii" dir="rtl">ܒܢܵܬܹ̈ܐ</span>, <span class="eg" lang="aii" dir="rtl">ܝܵܠܹ̈ܐ</span>, <a class="fnref" href="http://www.unicode.org/L2/L1998/98050-syriac-proposal.pdf"></a><span class="eg" lang="aii" dir="rtl">ܗܵܘܢܵܢܹ̈ܐ</span>, <span class="eg" lang="aii" dir="rtl">ܪ̈ܵܡܹܐ</span>, <span class="eg" lang="aii" dir="rtl">ܫܲܪܝܼܪܹ̈ܥ</span>, <span class="eg" lang="aii" dir="rtl">ܡܵܬ݂ܘܵܬܹ̈ܐ</span>.</p>
 </div>
 </div>
 </div>
@@ -2150,7 +2195,7 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܜ ܜܜܜ</span
 </div>
 <div class="letter syr">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span>&nbsp;</p>
-<p>Used  to indicate <span class="ipa">f</span> (<span class="trans">p̄</span>), a soft pronunciation of <span class="codepoint" translate="no"><span lang="syr" dir="rtl">&#x0726;</span> [<a href="/scripts/syriac/block#char0726"><span class="uname">U+0726 SYRIAC LETTER PE</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܬܸܦ̮ܠܵܐ</span> <span class="trans">tɪpˇlāʾ</span> <span class="ipa">tɪfflɑ</span> <span class="meaning">infant</span></span>.<a class="fnref" href="#refs">r36</a> Called <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܩܝܸܫܬܵܐ݂݂</span> <span class="ipa">qiʃtɑ</span></span>.</p>
+<p>Used  to indicate <span class="ipa">f</span> (<span class="trans">p̄</span>), a soft pronunciation of <span class="codepoint" translate="no"><span lang="syr" dir="rtl">&#x0726;</span> [<a href="/scripts/syriac/block#char0726"><span class="uname">U+0726 SYRIAC LETTER PE</span></a>]</span>, eg. <span class="eg" lang="aii" dir="rtl">ܬܸܦ̮ܠܵܐ</span>.<a class="fnref" href="#refs">r36</a> Called <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܩܝܸܫܬܵܐ݂݂</span> <span class="ipa">qiʃtɑ</span></span>.</p>
 <p><span class="leadin">Urmian dialect.</span> <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܦ̮</span></span> may be pronounced <span class="ipa">u</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܪܲܦ̮ܫܵܐ</span> <span class="trans">rapˇʃāʾ</span> <span class="ipa">ruʃɑ</span></span>, or <span class="ipa">o</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܢܲܦ̮ܫܵܐ</span> <span class="trans">napˇʃāʾ</span> <span class="ipa">noʃɑ</span></span>, or <span class="ipa">f</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܬܲܦ̮ܬܘܼܫܹܐ</span> <span class="trans">tapˇtwiʃēʾ</span> <span class="ipa">taftuʃi</span></span>.</p>
 </div>
 </div>
@@ -2188,9 +2233,9 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܜ ܜܜܜ</span
 <div class="notes">
 <div class="letter aii">
 <p class="titlepara"><span class="title">Assyrian Neo-Aramaic</span></p>
-<p>In sequences of 3 consonants without intervening vowels this is used below the second to 'extend and join their sounds'.<a class="fnref" href="#refs">r52</a> It is only used with the following consonants: <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܐ ܗ ܘ ܝ ܠ ܡ ܢ ܥ ܪ</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܢܸܫܡ̱ܬܵܐ</span> <span class="trans">nɪʃm̱tāʾ</span> <span class="ipa">niʃmmtɑ</span> <span class="meaning">breath</span></span>, <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܡܲܕܢ̱ܚܵܐ</span> <span class="trans">madṉxāʾ</span> <span class="ipa">madnnxɑ</span> <span class="meaning">East</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܡܲܥܪ̱ܒ݂ܵܐ</span> <span class="trans">maʿṟbˑāʾ</span> <span class="ipa">maʕrrvɑ</span> <span class="meaning">West</span></span>.</p>
+<p>In sequences of 3 consonants without intervening vowels this is used below the second to 'extend and join their sounds'.<a class="fnref" href="#refs">r52</a> It is only used with the following consonants: <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܐ ܗ ܘ ܝ ܠ ܡ ܢ ܥ ܪ</span></span>, eg. <span class="eg" lang="aii" dir="rtl">ܢܸܫܡ̱ܬܵܐ</span>, <span class="eg" lang="aii" dir="rtl">ܡܲܕܢ̱ܚܵܐ</span>, and <span class="eg" lang="aii" dir="rtl">ܡܲܥܪ̱ܒ݂ܵܐ</span>.</p>
 <p>It is mostly found in older texts, or the writings of modern authors wanting to adhere to the full rules of Assyrian spelling, and is practically obsolete in everyday use.<a class="fnref" href="#refs">r52</a></p>
-<p><span class="leadin">Urmian dialect.</span> To make it easier to pronounce these sequences, Urmian pronunciation adds short vowels after the first or second letters, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܡܲܙܡ̱ܪܵܢܵܐ</span> <span class="trans">mazm̱rānāʾ</span> <span class="ipa">mazmmrɑnɑ</span></span> becomes <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܡܲܙܡܸܪܵܢܵܐ</span> <span class="trans">mazmɪrānāʾ</span> <span class="ipa">mezmɪrɑnɑ</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܡܲܕܢ̱ܚܵܐ</span> <span class="trans">madṉxāʾ</span> <span class="ipa">madnxɑ</span> <span class="meaning">East</span></span> becomes <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܡܲܕܸܢܚܵܐ</span> <span class="trans">madɪnxāʾ</span> <span class="ipa">medɪnxa</span></span>.<a class="fnref" href="#refs">r53</a></p>
+<p><span class="leadin">Urmian dialect.</span> To make it easier to pronounce these sequences, Urmian pronunciation adds short vowels after the first or second letters, eg. <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܡܲܙܡ̱ܪܵܢܵܐ</span> <span class="trans">mazm̱rānāʾ</span> <span class="ipa">mazmmrɑnɑ</span></span> becomes <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܡܲܙܡܸܪܵܢܵܐ</span> <span class="trans">mazmɪrānāʾ</span> <span class="ipa">mezmɪrɑnɑ</span></span>, and <span class="eg" lang="aii" dir="rtl">ܡܲܕܢ̱ܚܵܐ</span> becomes <span class="charExample" translate="no"><span class="ex" lang="aii" dir="rtl">ܡܲܕܸܢܚܵܐ</span> <span class="trans">madɪnxāʾ</span> <span class="ipa">medɪnxa</span></span>.<a class="fnref" href="#refs">r53</a></p>
 </div>
 </div>
 </div>
@@ -2279,6 +2324,7 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܜ ܜܜܜ</span
 
 <script>
 replaceStuff('Syriac', 'syr', spreadsheet, '', 'syr', 'rtl', cols, false)
+addExamples('syc')
 </script> 
 
 
@@ -2292,6 +2338,7 @@ replaceStuff('Syriac', 'syr', spreadsheet, '', 'syr', 'rtl', cols, false)
 
 <script>
 replaceStuff('Assyrian Neo-Aramaic', 'aii', spreadsheet, '', 'aii', 'rtl', cols, false)
+addExamples('aii')
 </script> 
 
 
@@ -2305,6 +2352,7 @@ replaceStuff('Assyrian Neo-Aramaic', 'aii', spreadsheet, '', 'aii', 'rtl', cols,
 
 <script>
 replaceStuff('Turoyo', 'tru', spreadsheet, '', 'tru', 'rtl', cols, false)
+addExamples('tru')
 </script> 
 
 
