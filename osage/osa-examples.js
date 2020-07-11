@@ -131,6 +131,7 @@ autoExpandExamples.osa = `
 𐓬𐓯𐓟|pound|pʃɛ
 𐓬𐓯𐓣|I arrived there|pʃi
 𐓭𐓘𐓺𐓟|evening|ʰpɑzɛ́
+𐓬𐓘𐓺𐓟|evening|ʰpɑzɛ́
 𐓭𐓟𐓲𐓟|fire|ʰpɛ́ːt͡sɛ
 𐓭𐓣𐓪͘|know|ʰpíõ
 𐓭𐓣𐓻𐓣|bad|ʰpíːʒi
@@ -171,6 +172,7 @@ autoExpandExamples.osa = `
 𐓲𐓟|buffalo|t͡sɛ
 𐓲𐓟𐓤𐓘|new|t͡sɛkɑ
 𐓳𐓣|house|ʰt͡si
+𐓲𐓣|house|ʰt͡si
 𐓳𐓶𐓤𐓟|spoon|ʰt͡súkɛ
 𐓵𐓘͘𐓲𐓟|heart|ðɑ̃́ːt͡sɛ
 𐓵𐓘𐓤ʼ𐓣͘|spit|ðɑːkˀĩ
@@ -208,6 +210,7 @@ autoExpandExamples.osa = `
 𐓷𐓣͘𐓸𐓲𐓟|one|wĩ́xt͡sɛ
 𐓷𐓣𐓜𐓣𐓡𐓣𐓲𐓟|I tease you|wibɹihit͡sɛ
 𐓷𐓣𐓞𐓪𐓯𐓬𐓘|my grandchild|wiʰt͡ʃóʃpɑ
+𐓷𐓣𐓝𐓪𐓯𐓬𐓘|my grandchild|wiʰt͡ʃóʃpɑ
 𐓷𐓣𐓱𐓟𐓻𐓣͘|my younger sister|wiʰtɛ́ʒĩ
 𐓷𐓣𐓳𐓣𐓨𐓣|my aunt|wiʰt͡sími
 𐓷𐓣𐓳𐓪𐓯𐓬𐓘|grandchild|wiʰt͡sóʃpɑ
