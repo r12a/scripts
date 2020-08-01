@@ -3,7 +3,7 @@
 
 <head>
 <meta charset="utf-8"/>
-<title>Fonts on Windows7 and Mac</title>
+<title>Font tester</title>
 <meta name="description" content="A list of fonts supplied with Windows7 and Mac OS X, by script."/>
 <link rel="stylesheet" href="../../shared/style/docs.css" />
 	
@@ -23,10 +23,10 @@
 
 
 .trigger { color: teal; cursor: pointer; }
-.sample { font-size: 28px; white-space: nowrap; color: black; overflow: hidden; width: 80%; margin-left: 7.5%; line-height: 3; margin-bottom: 1em; text-align: start; }
+.sample { font-size: 60px; white-space: nowrap; color: black; overflow: hidden; width: 80%; margin-left: 7.5%; line-height: 2; margin-bottom: 1em; text-align: start; }
 .fontItem { margin-bottom: 0; width: 80%; text-align: start; }
 .fontlist { font-size: 80%; }
-.infoIcon { color: tan; font-size: 80%; margin-left: 2em; }
+.infoIcon { color: tan; font-size: 80%; margin-left: 1em; }
 b {
     font-size: 1.2em;
     color: #aaa;
@@ -50,6 +50,8 @@ b {
 	margin-bottom: 0;
 	}
 </style>
+<style id="fontSizeStyling">.text { font-size: 60px; }</style> <!-- this sets the default, but is changed by scripting -->
+
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/fontdb/db.js"></script>
 
@@ -65,13 +67,17 @@ console.log('FontDB', fontDB)
 function getSection (script, scriptName, sample, style='') {
 	var out = '<section id="'+script+style+'">'
 	out += '<h2>'+scriptName+'</h2>'
+	var lastStyle = ''
 	
 	// find relevant records
 	for (let r=0;r<fontDB.length;r++) { 
 		//if (style) console.log('[r]',fontDB[r].locales,'[r]',fontDB[r].style)
 	
 		if ((fontDB[r].locales.has(script) && style === '') || 
-			(fontDB[r].style && fontDB[r].locales.has(script) && fontDB[r].style.has(style))) {
+			(fontDB[r].style && fontDB[r].locales.has(script) && fontDB[r].style === style)) {
+			
+			// skip fonts that are not from one of the main sources
+			if (fontDB[r].locales.has('other')) continue
 			
 			// check against requested sources
 			if (
@@ -85,6 +91,14 @@ function getSection (script, scriptName, sample, style='') {
 			
 			
 			out += '<div>'
+			if (fontDB[r].style && fontDB[r].style !== lastStyle) {
+				out += '<div style="color:#ccc; font-size:140%; margin: 0 2em; cursor: pointer; float:right; margin-right: 2em; font-variant-caps: all-small-caps; color:tan;" onclick="this.parentNode.style.display = \'none\'">'
+				if (fontDB[r].style === 'serif') out += 'modulated'
+				else if (fontDB[r].style === 'sans') out += 'monochrome'
+				else out += fontDB[r].style
+				out += '</div> '
+				lastStyle = fontDB[r].style
+				}
 			out += '<p class="fontItem">'
 			if (fontDB[r].system) {
 				if (fontDB[r].system.has('mac')) out += '<img src="images/mac.png" width="25" height="22" alt="Mac"> '
@@ -93,18 +107,22 @@ function getSection (script, scriptName, sample, style='') {
 				if (fontDB[r].system.has('sil')) out += '<b>S</b> '
 				}
 			out += '<span class="fontname">'+fontDB[r].name
-			out += '<span style="color:#ccc; font-size:80%; margin: 0 2em; cursor: pointer;" onclick="this.parentNode.parentNode.parentNode.style.display = \'none\'">X</span> '
+			out += '<span style="color:#ccc; font-size:80%; margin: 0 1em; cursor: pointer;" onclick="this.parentNode.parentNode.parentNode.style.display = \'none\'">X</span> '
 			if (fontDB[r].notes) out += '<span class="infoIcon">🛈 '+fontDB[r].notes+'</span>'
 			out += '</span></p>'
 
 			if (document.getElementById('showFonts').checked) {
-				out += '<div class="sample"'
-				out += 'dir="auto" style="font-family:\''+fontDB[r].name+'\', \'Adobe NotDef\'">'+sample+'</div>'
+				out += '<div class="sample text"'
+				out += 'dir="auto" style="font-family:\''+fontDB[r].name+'\', \'Adobe NotDef\'">'
+				if (document.getElementById('inputText').value !== '') out += document.getElementById('inputText').value
+				else out += sample
+				out += '</div>'
 				}
 			
 			if (document.getElementById('showGraphics').checked) {
 				out += '<div class="sample"'
-				out += 'dir="auto" style="font-family:\''+fontDB[r].name+'\', \'Adobe NotDef\'"><img src="img/'+script+'/'+fontDB[r].name.toLowerCase().replace(/ /g,'')+'.png" alt="'+sample+'"></div>'
+				//out += 'dir="auto" style="font-family:\''+fontDB[r].name+'\', \'Adobe NotDef\'"><img src="img/'+script+'/'+fontDB[r].name.toLowerCase().replace(/ /g,'')+'.png" alt="'+sample+'"></div>'
+				out += 'dir="auto" style="font-family:\''+fontDB[r].name+'\', \'Adobe NotDef\'"><img src="img/'+script+'/'+fontDB[r].name.toLowerCase().replace(/ /g,'')+'.png" alt="'+'NOT FOUND'+'"></div>'
 				}
 
 			out += '</div>'
@@ -116,7 +134,15 @@ function getSection (script, scriptName, sample, style='') {
 
 function getResult (title, tag, sample, style) {
 	document.getElementById('result').innerHTML = getSection(tag, title, sample, style)
+	window.location = '#result'
 	}
+
+
+function changeFontSize ( newSize ) {
+	document.getElementById( 'fontSizeStyling' ).innerHTML = '.text { font-size: '+newSize + 'px; }'
+	document.getElementById( 'sizeIndicator' ).innerHTML = newSize + 'px'
+	}
+
 </script>
 
 </head>
@@ -127,7 +153,7 @@ function getResult (title, tag, sample, style) {
 	<script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Fonts supplied with Windows, Mac, Noto, &amp; SIL</h1>
+<h1>Fonts supplied by Windows, Mac, Noto, &amp; SIL</h1>
 
     <aside class="sidebar">
       <!--div class="noprint">
@@ -136,20 +162,25 @@ function getResult (title, tag, sample, style) {
 	  <a href="#arab">arabic</a></p>
       </div-->
       <div class="noprint">
-        <h2 class="notoc"><a id="links">Related</a></h2>
+        <h2 class="notoc flush"><a id="links">Related</a></h2>
         <p style="line-height: 1.3em"><a href="/scripts/featurelist/">Script features by language</a></p>
       </div>
     </aside>
 
 
 
-<p id="status">Updated Wed 15 Oct 2014  &bull; tags  <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+<p id="status">Updated Wed 31 Jul 2020  &bull; tags  <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 <p>This page provides a (not exhaustive) list of fonts, grouped by script, that are available via the Windows and Mac OS X operating systems, as well as Google's Noto fonts and SIL fonts. Note that some  of the Windows and Mac fonts have to be downloaded by the user before they can be applied to text.</p>
-<p><label><input id="showGraphics" type="checkbox" checked> Show font samples as images</label><br><label><input type="checkbox" id="showFonts"> Show using fonts available on this computer</label></p>
+<div style="margin-left: 7.5%;">
+<div><label><input id="showGraphics" type="checkbox" checked> Show font samples as images</label></div>
+<div><label><input type="checkbox" id="showFonts"> Show using fonts available on this computer</label></div>
+<div style="margin-left: 2em; font-size: 90%; color: tan;">Use this alternative text: <input placeholder="Leave blank for the default sample text" type="text" id="inputText" style="width: 40%;"></div>
+<div style="margin-left: 2em; font-size: 90%; color: tan;">Change font display size: <input id="fontSizeSlider" type="range" min="20" max="150" step="1" value="60" oninput="changeFontSize(this.value)" style="width:10em;"> <span id="sizeIndicator" style="font-size:80%;">60</span>px</div>
+</div>
 
 <p><span style="font-weight: bold;">Show fonts for:</span><br>
-<label><input type="checkbox" checked id="showMac"> Mac</label> &nbsp;
+<label><input id="showMac" type="checkbox" checked> Mac</label> &nbsp;
 <label><input type="checkbox" checked id="showWin"> Windows</label> &nbsp;
 <label><input type="checkbox" checked id="showNoto"> Noto</label> &nbsp;
 <label><input type="checkbox" checked id="showSIL"> SIL</label></p>
@@ -158,11 +189,15 @@ function getResult (title, tag, sample, style) {
 
 <p><span style="font-weight: bold;">Choose a script:</span><br>
 <span class="trigger" onclick="getResult('Adlam','adlm', '𞤑𞤵𞥅𞤤𞤢𞤤 𞤺𞤢𞤣𞤢𞤲𞤢𞤤 𞤋𞤲𞥆𞤢𞤥𞤢 𞤢𞥄𞤣𞤫𞥅𞤶𞤭 𞤬𞤮𞤬 𞤨𞤮𞤼𞤭، 𞤲𞥋𞤣𞤭𞤥𞤯𞤭𞤣𞤭 𞤫 𞤶𞤭𞤦𞤭𞤲𞤢𞤲𞥆𞤣𞤫 𞤼𞤮 𞤦𞤢𞤲𞥆𞤺𞤫 𞤸𞤢𞤳𞥆𞤫𞥅𞤶𞤭.')">adlam</span> • 
-<span class="trigger" onclick="getResult('Armenian','armn', 'Բոլոր մարդիկ ծնվում են ազատ ու հավասար իրենց արժանապատվությամբ ու իրավունքներով։ Նրանք ունեն բանականություն ու խիղճ և միմյանց պետք է եղբայրաբար վերաբերվեն։')">armenian</span> • 
 <span class="trigger" onclick="getResult('Arabic','arab', 'يولد جميع الناس أحرارًا متساوين في الكرامة والحقوق. وقد وهبوا عقلاً وضميرًا وعليهم أن يعامل بعضهم بعضًا بروح الإخاء.')">arabic</span> ( 
 <span class="trigger" onclick="getResult('Arabic (Kufi)','arab', 'يولد جميع الناس أحرارًا متساوين في الكرامة والحقوق. وقد وهبوا عقلاً وضميرًا وعليهم أن يعامل بعضهم بعضًا بروح الإخاء.', 'kufi')">kufi</span> • 
-<span class="trigger" onclick="getResult('Arabic (Nastaliq)','arab', 'يولد جميع الناس أحرارًا متساوين في الكرامة والحقوق. وقد وهبوا عقلاً وضميرًا وعليهم أن يعامل بعضهم بعضًا بروح الإخاء.', 'aran')">nastaliq</span> ) • 
+<span class="trigger" onclick="getResult('Arabic (Nastaliq)','arab', 'يولد جميع الناس أحرارًا متساوين في الكرامة والحقوق. وقد وهبوا عقلاً وضميرًا وعليهم أن يعامل بعضهم بعضًا بروح الإخاء.', 'nastaliq')">nastaliq</span> • 
+<span class="trigger" onclick="getResult('Arabic (Ajami)','arab-ajami', 'يولد جميع الناس أحرارًا متساوين في الكرامة والحقوق. وقد وهبوا عقلاً وضميرًا وعليهم أن يعامل بعضهم بعضًا بروح الإخاء.')">ajami</span> ) • 
+<span class="trigger" onclick="getResult('Armenian','armn', 'Բոլոր մարդիկ ծնվում են ազատ ու հավասար իրենց արժանապատվությամբ ու իրավունքներով։ Նրանք ունեն բանականություն ու խիղճ և միմյանց պետք է եղբայրաբար վերաբերվեն։')">armenian</span> • 
+<span class="trigger" onclick="getResult('Balinese','bali', 'ᬫᬓᬲᬫᬶᬫᬦᬸᬲᬦᬾᬓᬳᭂᬫ᭄ᬩᬲᬶᬦ᭄ᬫᬳᬃᬤᬶᬓᬮᬦ᭄ᬧᬢᭂᬄᬲᬚ᭄ᬭᭀᬦᬶᬂᬓᬳᬦᬦ᭄ᬮᬦ᭄ᬓ᭄ᬯᬲ᭟')">balinese</span> • 
+<span class="trigger" onclick="getResult('Bassa Vah','bass', '𖫞𖫫𖫰 𖫐𖫭𖫱𖫐-𖫗𖫭𖫰𖫞𖫭𖫰 𖫑𖫫𖫱 𖫔𖫬𖫱𖫞𖫬𖫱𖫭𖫱𖫐-𖫕𖫭𖫰  𖫔𖫪𖫰𖫐𖫬𖫲𖫐, 𖫞𖫫𖫰𖫬𖫱 𖫕𖫨𖫲𖫐𖫪𖫳𖫐-𖫕𖫪𖫱 𖫒𖫫𖫰𖫭𖫰𖫐 𖫛𖫩𖫰𖫞𖫩𖫰𖫬𖫲 𖫔𖫬𖫰𖫭𖫱𖫐-𖫛𖫨𖫲𖫐𖫵')">bassa vah</span> • 
 <span class="trigger" onclick="getResult('Bengali','beng', 'সমস্ত মানুষ স্বাধীনভাবে সমান মর্যাদা এবং অধিকার নিয়ে জন্মগ্রহণ করে। তাঁদের বিবেক এবং বুদ্ধি আছে ; সুতরাং সকলেরই একে অপরের প্রতি ভ্রাতৃত্বসুলভ মনোভাব নিয়ে আচরণ করা উচিত্‍।')">bengali</span> • 
+<span class="trigger" onclick="getResult('Buginese','bugi', 'ᨔᨗᨊᨗᨊ ᨑᨘᨄ ᨈᨕᨘ ᨑᨗ ᨍᨍᨗᨕᨂᨗ ᨑᨗᨒᨗᨊᨚᨕᨙ ᨊᨄᨘᨊᨕᨗ ᨆᨊᨙᨂᨗ ᨑᨗᨕᨔᨙᨂᨙ ᨕᨒᨙᨅᨗᨑᨙ᨞')">buginese</span> • 
 <span class="trigger" onclick="getResult('Canadian Syllabics','cans', 'ᐃᓅᔪᓕᒫᑦ ᐊᓂᖅᑎᕆᔪᓕᒫᑦ ᐃᓅᓚᐅᕐᒪᑕ ᐃᓱᒪᕐᓱᕐᖢᑎᒃ ᐊᒻᒪᓗ ᐊᔾᔨᐅᖃᑎᒌᒃᖢᑎᒃ ᓂᕐᓱᐊᖑᓂᒃᑯᑦ ᐊᒻᒪᓗ ᐱᔪᓐᓇᐃᑎᑎᒍᑦ. ᐃᓱᖃᖅᑐᖁᑎᖃᕐᑎᑕᐅᕙᓕᕐᐳᑦ ᐱᔾᔪᑎᖃᕐᓂᒃᑯᑦ ᖃᑕᙳᑎᒌᑦᑎᐊᕆᐊᖃᕐᓂᒃᑯᓪᓗ.')">canadian syllabics</span> • 
 <span class="trigger" onclick="getResult('Cherokee','cher', 'ᏂᎦᏓ ᎠᏂᏴᏫ ᎤᎾᏕᏅᎢ ᎤᎾᏚᏓᎴᏓ ᎠᎴ ᎡᏧᎳᎭᏉ ᎾᎢ ᎠᏢᏉᏙᏗ ᎠᎴ ᎤᏂᎲ ᎢᏳᎾᏛᏗᎢ. ᎾᏍᎩᎾᏃ ᎤᎵᏍᎪᎸᏔᏅᎩ ᎤᏠᏯᏍᏗ ᏅᏰᎵᏛᎩ ᎠᎴ ᎠᏓᏅᏖᏟᏓᏍᏗ ᎠᎴ ᎡᎵᏍᏗ ᏏᏴᏫᎭ ᏂᏚᎾᏓᏛᎾᏕᎬᎩ Ꮎ ᏗᎾᏓᏅᏟ ᎠᏓᏅᏙ ᎬᏗ.')">cherokee</span> • 
 <span class="trigger" onclick="getResult('Chinese (simplified)','hans', '人人生而自由,在尊严和权利上一律平等。他们赋有理性和良心,并应以兄弟关系的精神相对待。')">chinese, simplified</span> • 
@@ -182,7 +217,11 @@ function getResult (title, tag, sample, style) {
 <span class="trigger" onclick="getResult('Korean','kore', '모든 인간은 태어날 때부터 자유로우며 그 존엄과 권리에 있어 동등하다. 인간은 천부적으로 이성과 양심을 부여받았으며 서로 형제애의 정신으로 행동하여야 한다.')">korean</span> • 
 <span class="trigger" onclick="getResult('Lao','laoo', 'ມະນຸດເກີດມາມີສິດເສລີພາບ ແລະ ສະເໝີໜ້າກັນໃນທາງກຽດຕິສັກ ແລະ ທາງສິດດ້ວຍມະນຸດມີສະຕິສຳປັດຊັນຍະ(ຮູ້ດີຮູ້ຊົ່ວ)ແລະມີມະໂນທຳຈື່ງຕ້ອງປະພຶດຕົນຕໍ່ກັນໃນທາງພີ່ນ້ອງ.')">lao</span> • 
 <span class="trigger" onclick="getResult('Latin','latn', 'Gbogbo ènìyàn ni a bí ní òmìnira; iyì àti è̩tó̩ kò̩ò̩kan sì dó̩gba. Wó̩n ní è̩bùn ti làákàyè àti ti è̩rí‐o̩kàn, ó sì ye̩ kí wo̩n ó máa hùwà sí ara wo̩n gé̩gé̩ bí o̩mo̩ ìyá.')">latin</span> • 
+<span class="trigger" onclick="getResult('Lepcha','lepc', '᰿᱁᰿ ᰂᰮᰦᰧᰛᰶᰩᰕ ᰂᰮᰦᰧᰛᰶ ᰣᰦᰜᰬᰮᰦᰌ ᰧᰌᰜᰬ ᰵᰧᰣᰶ ᰿᱂᰿ ᰂᰮᰦᰧᰛᰶ ᰣᰦᰩᰮᰍ ᰂᰮᰦᰧᰛᰶᰩᰕ ᰣᰦᰩᰮᰍ ᰿᱃᰿ ᰠᰛᰵᰩ ᰀᰦᰚᰫ')">lepcha</span> • 
+<span class="trigger" onclick="getResult('Limbu','limb', 'ᤂᤡᤷᤗᤡ ᤕᤠ᤺ᤶᤒᤰ ᤆᤠ᤺ᤣᤰᤁᤡ ᤁᤧᤘᤠ᤹ᤒᤠ ᤔᤏᤠᤜᤠ᤹ ᤁᤢᤓᤡ᤺ᤰᤔᤠᤴ ᤔᤧᤂᤧᤵᤛᤢᤴᤏᤠᤔᤧᤴᤏᤧ ᤋᤁᤠᤳ, ᤑᤧᤈᤠ, ᤘᤠᤑᤣ᤹ ᤔᤧᤕᤠᤱᤛᤡᤱᤅᤠᤱ ᤂᤧᤴ ᤐᤡᤳᤁᤶᤒᤠᤸᤗᤧ ᤁᤢᤓᤠ᤹ᤛᤧ ᤔᤧᤗ᤺ᤴᤍᤧ ᤔᤧᤗᤥ᤺ᤰᤋᤧ॥ ᤁᤖ ᤂᤧᤴ ᤐᤡᤳᤁᤶᤒᤠ ᤘᤕᤧᤒᤠ ᤍᤧᤴ ᤕᤥ ᤔᤧᤃᤧᤖᤧᤃᤖ, ᤂᤧᤴ ᤀᤣᤖᤧᤖ ᤕᤧᤒᤧ॥ ᤛᤣᤃᤣᤒᤠ᤺ᤴ ᤛᤧᤰᤂᤠᤛᤠᤱ ᤜᤥ᤺ᤵᤋᤧ॥ ᤂᤧᤴ ᤁᤢᤓᤠ᤹ᤛᤧ ᤁᤧᤍᤠᤒᤠᤜᤠ᤹ᤖᤧ ᤂᤢᤴᤇᤡ᤹ ᤛᤠᤰᤁᤧᤴ ᤐᤥᤃᤧ॥ ')">limbu</span> • 
+<span class="trigger" onclick="getResult('Lisu','lisu', 'ꓞꓳ ꓘꓹ ꓠꓯꓹꓼ ꓢꓲ ꓫꓬ ꓟ ꓙ ꓖꓴ ꓗꓪ ꓟꓬꓱꓽ ꓧꓳꓽ ꓢꓴ ꓠꓬ꓾ ꓞꓳ ꓘꓹ ꓗꓪ ꓟ ꓞꓳ ꓟ ꓐꓴ ꓔꓯ ꓮ ꓡꓲ ꓬꓰ ꓠꓯꓹ ꓟ꓾ ꓟꓬꓱꓽ ꓔꓯ ꓧꓳꓽ ꓪꓴꓸ ꓟꓴ ꓢꓴ ꓬꓲ ꓜꓴꓻ ꓤ (Committee) ꓕꓲ ꓜꓴꓻ ꓢꓲꓺ ꓖꓶ ꓠꓯꓹ ꓡꓳ꓿')">lisu</span> • 
 <span class="trigger" onclick="getResult('Malayalam','mlym', 'മനുഷ്യരെല്ലാവരും തുല്യാവകാശങ്ങളോടും അന്തസ്സോടും സ്വാതന്ത്ര്യത്തോടുംകൂടി ജനിച്ചിട്ടുള്ളവരാണ്‌. അന്യോന്യം ഭ്രാതൃഭാവത്തോടെ പെരുമാറുവാനാണ്‌ മനുഷ്യന്നു വിവേകബുദ്ധിയും മനസ്സാക്ഷിയും സിദ്ധമായിരിക്കുന്നത്‌.')">malayalam</span> • 
+<span class="trigger" onclick="getResult('Mandaic','mand', 'ࡊࡋ ࡁࡓ ࡀࡍࡀࡔࡀ ࡌࡉࡕࡋࡉࡓ ࡔࡀࡅࡉࡀ ࡁࡏࡒࡀࡓࡀ ࡅࡀࡂࡓࡉࡀ࡞')">mandaic</span> • 
 <span class="trigger" onclick="getResult('Mongolian','mong', 'ᠬᠦᠮᠦᠨ ᠪᠦᠷ ᠲᠥᠷᠥᠵᠦ ᠮᠡᠨᠳᠡᠯᠡᠬᠦ ᠡᠷᠬᠡ ᠴᠢᠯᠥᠭᠡ ᠲᠡᠢ᠂ ᠠᠳᠠᠯᠢᠬᠠᠨ ᠨᠡᠷ᠎ᠡ ᠲᠥᠷᠥ ᠲᠡᠢ᠂ ᠢᠵᠢᠯ ᠡᠷᠬᠡ ᠲᠡᠢ ᠪᠠᠢᠠᠭ᠃ ᠣᠶᠤᠨ ᠤᠬᠠᠭᠠᠨ᠂ ᠨᠠᠨᠳᠢᠨ ᠴᠢᠨᠠᠷ ᠵᠠᠶᠠᠭᠠᠰᠠᠨ ᠬᠦᠮᠦᠨ ᠬᠡᠭᠴᠢ ᠥᠭᠡᠷ᠎ᠡ ᠬᠣᠭᠣᠷᠣᠨᠳᠣ᠎ᠨ ᠠᠬᠠᠨ ᠳᠡᠭᠦᠦ ᠢᠨ ᠦᠵᠢᠯ ᠰᠠᠨᠠᠭᠠ ᠥᠠᠷ ᠬᠠᠷᠢᠴᠠᠬᠥ ᠤᠴᠢᠷ ᠲᠠᠢ᠃')">mongolian</span> • 
 <span class="trigger" onclick="getResult('Myanmar','mymr', 'လူတိုင်းသည် တူညီ လွတ်လပ်သော ဂုဏ်သိက္ခာဖြင့် လည်းကောင်း၊ တူညီလွတ်လပ်သော အခွင့်အရေးများဖြင့် လည်းကောင်း၊ မွေးဖွားလာသူများ ဖြစ်သည်။ ထိုသူတို့၌ ပိုင်းခြား ဝေဖန်တတ်သော ဉာဏ်နှင့် ကျင့်ဝတ် သိတတ်သော စိတ်တို့ရှိကြ၍ ထိုသူတို့သည် အချင်းချင်း မေတ္တာထား၍ ဆက်ဆံကျင့်သုံးသင့်၏။')">myanmar</span> • 
 <span class="trigger" onclick="getResult('New Tai Lue','talu', 'ᦂᦵᧈ ᦂᦵᦲ ᦂᦵᧀ ᦂᦵᧀᧉ ᦁᦶᦗ ...')">new tai lue</span> • 
@@ -191,10 +230,13 @@ function getResult (title, tag, sample, style) {
 <span class="trigger" onclick="getResult('Osage','osge', '𐒻𐓲𐓣𐓤𐓪 𐓰𐓘͘𐓤𐓘 𐓷𐓣͘ 𐓘𐓵𐓟 𐓘𐓬𐓘—𐓤𐓘𐓸𐓘 𐓤𐓯𐓣 𐓘𐓵𐓟 𐓘𐓬𐓘, 𐓪𐓬𐓸𐓘. 𐓏𐓟𐓲’𐓘 𐓷𐓣͘ 𐓣𐓵𐓘𐓬𐓟. 𐓏𐓘𐓲’𐓘 𐓘𐓤𐓸𐓘 “𐒼𐓪𐓰𐓘𐓡𐓘 𐓨𐓘𐓵𐓣͘,” 𐓘𐓤𐓸𐓘. 𐒻𐓲𐓣𐓤𐓪 𐓰𐓘͘𐓤𐓘 𐓘𐓬𐓘, “𐓍𐓣𐓟 𐓵𐓣𐓟 𐓤𐓪𐓰𐓘𐓡𐓘 𐓨𐓘𐓵𐓣͘ 𐓷𐓣𐓩𐓘͘𐓮𐓰𐓘 𐓰𐓛͘ 𐓨𐓣͘𐓤𐓯𐓟,” 𐒻𐓲𐓣𐓤𐓪 𐓰𐓘͘𐓤𐓘 𐓘𐓪𐓘 𐓟𐓤𐓣𐓟 𐓘𐓬𐓘.')">osage</span> • 
 <span class="trigger" onclick="getResult('Osmanya','osma', '𐒛𐒆𐒖𐒒𐒖𐒔𐒖 𐒊𐒖𐒑𐒑𐒛𐒒𐒂𐒕𐒈 𐒓𐒚𐒄𐒓 𐒊𐒖𐒉𐒛 𐒘𐒈𐒖𐒌𐒝 ...')">osmanya</span> • 
 <span class="trigger" onclick="getResult('Phags-pa','phag', 'ꡀꡁꡂꡃ ꡄꡅꡆꡇ ꡈꡉꡊꡋ ꡌꡍꡎꡏ ...')">phags-pa</span> • 
+<span class="trigger" onclick="getResult('Runic','runr', 'ᚢᚴ᛬​ᛋᛁᛘ᛬​ᛚᛅᛁᚦ᛬​ᛅᛏ᛬​ᛁᚢᛚᚢᛘ᛬​ᚴᚢᚱᚦᚢᛋᚴ᛬​ᛘᛁᚾ᛬​ᚦᛅᚱ᛬​ᚢᚴᛅᛏᛁᚱ')">runic</span> • 
 <span class="trigger" onclick="getResult('Sinhala','sinh', 'සියලු මනුෂ්‍යයෝ නිදහස්ව උපත ලබා ඇත. ගරුත්වයෙන් හා අයිතිවාසිකම්වලින් සමාන වෙති. යුක්ති අයුක්ති පිළිබඳ හැඟීමෙන් හා හෘදය සාක්ෂියෙන් යුත් ඔවුන්, ඔවුනොවුන්ට සැළකිය යුත්තේ සහෝදරත්වය පිළිබඳ හැඟීමෙනි.')">sinhala</span> • 
+<span class="trigger" onclick="getResult('Sundanese','sund', 'ᮙᮛᮔᮨᮂᮔ ᮓᮤᮘᮨᮛᮨ ᮃᮊᮜ᮪ ᮏᮩᮀ ᮠᮒᮨ ᮔᮥᮛᮔᮤ, ᮎᮙ᮪ᮕᮥᮁ-ᮌᮅᮜ᮪ ᮏᮩᮀ ᮞᮞᮙᮔ ᮃᮚ ᮓᮤᮔ ᮞᮥᮙᮔᮨᮒ᮪ ᮓᮥᮓᮥᮜᮥᮛᮔ᮪.')">sundanese</span> • 
 <span class="trigger" onclick="getResult('Syriac','syrc', 'ܟܠ ܒܪܢܫܐ ܒܪܝܠܗ ܚܐܪܐ ܘܒܪܒܪ ܓܘ ܐܝܩܪܐ ܘܙܕܩܐ. ܘܦܝܫܝܠܗ ܝܗܒܐ ܗܘܢܐ ܘܐܢܝܬ. ܒܘܕ ܕܐܗܐ ܓܫܩܬܝ ܥܠ ܐܚܪܢܐ ܓܪܓ ܗܘܝܐ ܒܚܕ ܪܘܚܐ ܕܐܚܢܘܬܐ.')">syriac</span> • 
 <span class="trigger" onclick="getResult('Tai Le','tale', 'ᥐᥠᥰ ᥑᥡᥱ ᥒᥢᥲ ᥓᥣᥳ ᥔᥤᥴ ᥔᥕᥖᥤ ᥘᥙᥚᥛᥫ ᥞᥭ ...')">tai le</span> • 
 <span class="trigger" onclick="getResult('Tai Tham','lana', 'ᨾᨶᩩᩔ᩼ᨴ᩠ᨦᩢᩉᩖᩣ᩠ᨿᨠᩮ᩠ᨯᩨᨾᩣᨾᩦᨻ᩠ᨦᩈᩁᩓᩢᨹ᩠ᨿ᩵ᨦᨻ᩠ᨿᨦᨠ᩠ᨶᩢ ᨶᩱᨠᩥᨲ᩠ᨲᩥᩈ᩠ᨠᩢ ᩓᩢᩈᩥᨴ᩠ᨵᩥ ᨲ᩵ᩣ᩠ᨦᨣᩳ᩶ᨣᩢᨾᩦᨾᨶᩮᩣᨵᨾ᩠ᨾ᩼ᩓᩢ ᨣ᩠ᩅᩁᨷᨭᩥᨷ᩠ᨲᩢᨲᩳ᩵ᨠ᩠ᨶᩢᨯᩢ᩠ᩅ᩠ᨿᨣ᩠ᩅᩣ᩠ᨾᨹ᩠ᨿ᩵ᨦᨻ᩠ᨿᨦᨠ᩠ᨶᩢ ᨴᩩᨠᨤ᩠ᨶᩫᨾᩦᩈᩥᨴ᩠ᨵᩥᩓᩢᨻ᩠ᨦᩈᩁᨽᩣ᩠ᨷ ᨲᩣ᩠ᨾᨴᩦ᩵ᨯᩱᩢᨠ᩵ᩣ᩠ᩅᩅᩱᩢᨶᩱᨡᩳ᩶ᨠᨲᩥᨠᩣᩋ᩠ᨶᩢᨶᩦ᩶ ᨯᩰ᩠ᨿᨷᩢᨯᩱᩢᨲᩯ᩠ᨠᨲ᩵ᩣ᩠ᨦᨠ᩠ᨶᩢ ᨷᩢᩅᩤ᩵ᩋ᩠ᨶᩢᨯᩱ ᩉᩮ᩠ᨾᩨᩁᩅᩤ᩵ ᨩᩮ᩠ᩋᩨ᩶ᨩᩣ᩠ᨲ ᨹ᩠ᩅᩥ ᨻ᩠ᨿᨯ ᨽᩣᩈᩣ ᩈᩣᩈᨶᩣ ᨣ᩠ᩅᩣ᩠ᨾᨣ᩠ᨯᩧᩉ᩠ᨶᩢᨴᩤ᩠ᨦᨠᩣ᩠ᩁᨾᩮ᩠ᨦᩨ ᩉᩕᩨᨴᩤ᩠ᨦᩋ᩠ᨶᩨ᩵ᪧ ᨩᩣ᩠ᨲᨩᩮ᩠ᩋᩨ᩶ ᩈ᩠ᨦᩢᨣ᩠ᨾᩫ ᩈᩫ᩠ᨾᨷ᩠ᨲᩢ ᨩᩣ᩠ᨲᨠᩮ᩠ᨯᩨ ᩉᩕᩨᩈᨳᩣᨶᩋ᩠ᨶᩨ᩵ᪧ ᨳᩯ᩠ᨦᩢᨷᩕᨠᩣ᩠ᩁᩉ᩠ᨶᩧ᩵ᨦ ᨷᩢᨾᩦᨣ᩠ᩅᩣ᩠ᨾᨲᩯ᩠ᨠᨲ᩵ᩣ᩠ᨦᨠ᩠ᨶᩢ ᨷᩢᩅᩤ᩵ᨴᩤ᩠ᨦᨠᩣ᩠ᩁᨾᩮ᩠ᨦᩨ ᨠᩣ᩠ᩁᩈᩣ᩠ᩁᨠᩣ᩠ᩁᩃᩩᨾ ᨠᩣ᩠ᨦᨲ᩵ᩣ᩠ᨦᨷᩤ᩠ᨶᩢᨲ᩵ᩣ᩠ᨦᨾᩮ᩠ᨦᩨ ᩉᩕᩨᨠᩣ᩠ᩁᨶᩱᨯ᩠ᨶᩥᨯᩯ᩠ᨶᨴᩦ᩵ᨤ᩠ᨶᩫᩋᩣᩈᩱ᩠ᨿᩀᩪ᩵ ᨷᩢᩅᩤ᩵ᨯ᩠ᨶᩥᨯᩯ᩠ᨶᨶᩦ᩶ᨧᩢᨸᩮ᩠ᨶᩑᨠᩁᩣ᩠ᨩ ᩀᩪ᩵ᨶᩱᨣ᩠ᩅᩣ᩠ᨾᨸ᩠ᨠᩫᨣᩕ᩠ᩋᨦᨡ᩠ᩋᨦᨲ᩠ᨶᩫ ᩉᩕᩨᩀᩪ᩵ᨲᩱᩢᩋᩴᩣᨶᩣ᩠ᨧᨲ᩠ᨶᩫᨯᩱᪧᨴ᩠ᨦᩢᩈᩢ᩠ᨿᨦ')">tai tham</span> • 
+<span class="trigger" onclick="getResult('Tai Viet','tavt', 'ꪹꪕꪸꪉ ꪀꪱ ꪋꪴ ꫛ ꪎꪲꪉ ꪮꪮꪀ ꪣꪱ ꪻꪠ ꪁꪷ ꪻꪬ ꪼꪒ ꪕꪳ ꪕꪱꪉ ꪀꪾꪚ ꪹꪋꪷꪉ ꪝꪸꪉ ꪕꪮꪥ ꪩꪾ ꫛ ꪶꪔꪙ ꪠꪴ - ꪋꪴ ꪬꪺ ꫛ ꪻꪠ ꪁꪷ ꪻꪬ ꪣꪲ ꪁꪫꪸꪙ ꪎꪱꪉ ꪶꪎꪣ ꪩꪺꪉ ꪹꪥꪸꪒ ꫛ ꪀꪾꪚ ꪹꪥꪸꪒ ꪻꪊ ꪚꪴꪙ ꪀꪾꪚ ꪼꪒ ꪹꪚꪷꪉ ꪒꪲ ꪀꪾꪚ ꪫꪸꪀ ꪭꪰꪀ ꪵꪝꪉ ꪹꪏꪉ ꪹꪭꪙ ꪒꪸꪫ.')">tai viet</span> • 
 <span class="trigger" onclick="getResult('Tamil','taml', 'மனிதப் பிறிவியினர் சகலரும் சுதந்திரமாகவே பிறக்கின்றனர்; அவர்கள் மதிப்பிலும், உரிமைகளிலும் சமமானவர்கள், அவர்கள் நியாயத்தையும் மனச்சாட்சியையும் இயற்பண்பாகப் பெற்றவர்கள். அவர்கள் ஒருவருடனொருவர் சகோதர உணர்வுப் பாங்கில் நடந்துகொள்ளல் வேண்டும்.')">tamil</span> • 
 <span class="trigger" onclick="getResult('Telugu','telu', 'ప్రతిపత్తిస్వత్వముల విషయమున మానవులెల్లరును జన్మతః స్వతంత్రులును సమానులును నగుదురు. వారు వివేచన-అంతఃకరణ సంపన్నులగుటచే పరస్పరము భ్రాతృభావముతో వర్తింపవలయును.')">telugu</span> • 
 <span class="trigger" onclick="getResult('Thaana','thaa', 'ހުރިހާ އިންސާނުންވެސް ދުނިޔެއަށް އުފަންވަނީ، މިނިވަންކަމުގައި، ހަމަހަމަ ޙައްޤުތަކަކާއެކު، ހަމަހަމަ ދަރަޖައެއްގައި ކަމޭހިތެވިގެންވާ ބައެއްގެ ގޮތުގައެވެ. ހެޔޮ ވިސްނުމާއި، ހެޔޮބުއްދީގެ ބާރު އެމީހުންނަށް ލިބިގެންވެއެވެ.')">thaana</span> • 
@@ -317,65 +359,19 @@ function getResult (title, tag, sample, style) {
 
 
 
-<!--script>
-sections = document.querySelectorAll('.out')
-for (n=0;n<sections.length;n++) sections[n].innerHTML = getSection(sections[n].dataset.iso, sections[n].dataset.name, sections[n].dataset.sample, sections[n].dataset.style)
-</script-->
-
-
-
-
-
 <section id="notes">
 <h2>Notes</h2>
-<p>The text used is as much as would fit on one line of article 1 of the <a href="http://www.ohchr.org/EN/UDHR/Pages/SearchByLang.aspx">Universal Declaration of Human Rights</a>, taken from <a href="http://unicode.org/udhr/index_by_name.html">this Unicode page</a>, wherever I could find it. I created a few instances myself, where it was missing, and occasionally I resorted to arbitrary lists of characters.</p>
-<p>In some cases, a square box with a cross in it is displayed. This indicates that the font doesn't cover all the glyphs needed to represent the sample text. Most often this applies to punctuation or other common characters. In normal use in a Web browser, glyphs for such characters will be backfilled by using a glyph from some other font.</p>
-<p>All fonts are set to 28px in size.</p>
+<p>The default text used is  article 1 of the <a href="http://www.ohchr.org/EN/UDHR/Pages/SearchByLang.aspx">Universal Declaration of Human Rights</a>, taken from <a href="https://unicode.org/udhr/translations.html">this Unicode page</a>, wherever I could find it. I created a few instances myself, where it was missing, and occasionally I resorted to arbitrary lists of characters.</p>
+<p>In some cases, a square box with a cross in it is displayed (this only occurs in the text view if you have the Adobe NotDef font installed). This indicates that the font doesn't cover all the glyphs needed to represent the sample text. Most often this applies to punctuation or other common characters. In normal use in a Web browser, glyphs for such characters will be backfilled by using a glyph from some other font.</p>
+<p>All fonts are set to 28px in size. They are roughly grouped with other similar fonts, eg. modulated, monochrome, naskh, nastaliq, no-circle, slanted, kai, etc. 'Modulated' means that strokes have varying widths (and usually have tapered or pointed ends), whereas 'monochrome' fonts have strokes that are generally the same width (and stroke ends are usually squared off).</p>
 </section>
 
 
 
-<div class="smallprint"><span id="version">First published  14 Feb 2014.  This versio<!-- #BeginDate format:IS1m -->2020-07-31  13:28<!-- #EndDate -->0-07-27  9:10<!-- #EndDate --> 
+<div class="smallprint"><span id="version">First published  14 Feb 2014.  This versio<!-- #BeginDate format:IS1m -->2020-08-01  16:27<!-- #EndDate -->0-07-27  9:10<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 
-<!--script>
-var notes = document.getElementById('notes').getElementsByTagName('div');
-for (var i=0; i<notes.length; i++) { notes[i].style.display = 'none'; }
-
-function event_clickOnFontImage () {
-	showtext(this);
-	}
-
-var fontitems = document.getElementById('fontlist').getElementsByTagName('img');
-for (var i=0; i<fontitems.length; i++) { 
-	if (fontitems[i].alt == ' ') {
-		fontitems[i].onclick = event_clickOnFontImage; 
-		}
-	}
-
-</script>
-
-<script>
-function showtext(font) {
-	document.getElementById('testarea').style.display = 'block';
-	text = font.parentNode.parentNode.title;
-	spans = font.parentNode.getElementsByTagName('span');
-	for (var i=0; i<spans.length; i++) {
-		if (spans[i].className == 'fontname') {
-			fontname = spans[i].firstChild.data;
-			}
-		}
-	document.getElementById('textarea').innerHTML = text;
-	document.getElementById('textarea').style.fontFamily = fontname;
-	if (font.parentNode.className == 'rtl') { 
-		document.getElementById('textarea').dir = 'rtl';
-		}
-	else {
-		document.getElementById('textarea').dir = 'ltr';
-		}
-	}
-</script-->
 
 
 <div id="testarea" style="display: none;">
