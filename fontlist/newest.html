@@ -51,6 +51,7 @@ b {
 	}
 </style>
 <style id="fontSizeStyling">.text { font-size: 60px; }</style> <!-- this sets the default, but is changed by scripting -->
+<style id="fontWhiteSpace">.text { white-space: nowrap; }</style> <!-- this sets the default, but is changed by scripting -->
 
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/fontdb/db.js"></script>
@@ -114,7 +115,10 @@ function getSection (script, scriptName, sample, style='') {
 			if (document.getElementById('showFonts').checked) {
 				out += '<div class="sample text"'
 				out += 'dir="auto" style="font-family:\''+fontDB[r].name+'\', \'Adobe NotDef\'">'
-				if (document.getElementById('inputText').value !== '') out += document.getElementById('inputText').value
+				if (document.getElementById('inputText').value !== '') {
+					out += document.getElementById('inputText').value
+					//document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: normal; }'// remove white space
+					}
 				else out += sample
 				out += '</div>'
 				}
@@ -163,20 +167,27 @@ function changeFontSize ( newSize ) {
       </div-->
       <div class="noprint">
         <h2 class="notoc flush"><a id="links">Related</a></h2>
-        <p style="line-height: 1.3em"><a href="/scripts/featurelist/">Script features by language</a></p>
+        <p style="line-height: 1.3em"><a href="/scripts/featurelist/" target="_blank">Script features by language</a></p>
+        <p style="line-height: 1.3em"><a href="/app-charuse/" target="_blank">Character usage by language</a></p>
       </div>
     </aside>
 
 
 
-<p id="status">Updated Wed 31 Jul 2020  &bull; tags  <a href="https://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+<p id="status">Updated 
+<!-- #BeginDate format:Sw1 -->2 August, 2020<!-- #EndDate -->
+  <span id="versionTop">• recent changes 
+  <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages" title="Show commits for the whole scripts repository.">scripts</a>/<a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/fontlist" title="Show commits for scripts/fontlist.">fontlist</a> • leave a <a target="_blank" href="https://github.com/r12a/scripts/issues/new?title=[fontlist]%20%20BRIEF_TITLE_GOES_HERE&amp;body=%5Bsource%5D%20https%3A%2F%2Fr12a.github.io%2Fscripts%2Ffontlist%0A%0A" title="Leave a comment.">comment</a></span>
+  </p>
+  
 
 <p>This page provides a (not exhaustive) list of fonts, grouped by script, that are available via the Windows and Mac OS X operating systems, as well as Google's Noto fonts and SIL fonts. Note that some  of the Windows and Mac fonts have to be downloaded by the user before they can be applied to text.</p>
 <div style="margin-left: 7.5%;">
 <div><label><input id="showGraphics" type="checkbox" checked> Show font samples as images</label></div>
 <div><label><input type="checkbox" id="showFonts"> Show using fonts available on this computer</label></div>
 <div style="margin-left: 2em; font-size: 90%; color: tan;">Use this alternative text: <input placeholder="Leave blank for the default sample text" type="text" id="inputText" style="width: 40%;"></div>
-<div style="margin-left: 2em; font-size: 90%; color: tan;">Change font display size: <input id="fontSizeSlider" type="range" min="20" max="150" step="1" value="60" oninput="changeFontSize(this.value)" style="width:10em;"> <span id="sizeIndicator" style="font-size:80%;">60</span>px</div>
+<div style="margin-left: 2em; font-size: 90%; color: tan;">Change font display size: <input id="fontSizeSlider" type="range" min="20" max="150" step="1" value="60" oninput="changeFontSize(this.value)" style="width:10em;"> <span id="sizeIndicator" style="font-size:80%;">60px</span></div>
+<div style="margin-left: 2em; font-size: 90%; color: tan;">Lines: <label><input name="whitespaceSetting" type="radio" checked onclick="document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: nowrap; }'"> no wrap</label> <label><input id="wrapLines" name="whitespaceSetting" type="radio"  onclick="document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: normal; }'" style="margin-left: 2em;"> wrap</label></div>
 </div>
 
 <p><span style="font-weight: bold;">Show fonts for:</span><br>
@@ -261,7 +272,7 @@ function changeFontSize ( newSize ) {
 
 
 
-<div class="out" data-iso="adlm" data-name="Adlam" data-sample="𞤑𞤵𞥅𞤤𞤢𞤤 𞤺𞤢𞤣𞤢𞤲𞤢𞤤 𞤋𞤲𞥆𞤢𞤥𞤢 𞤢𞥄𞤣𞤫𞥅𞤶𞤭 𞤬𞤮𞤬 𞤨𞤮𞤼𞤭، 𞤲𞥋𞤣𞤭𞤥𞤯𞤭𞤣𞤭 𞤫 𞤶𞤭𞤦𞤭𞤲𞤢𞤲𞥆𞤣𞤫 𞤼𞤮 𞤦𞤢𞤲𞥆𞤺𞤫 𞤸𞤢𞤳𞥆𞤫𞥅𞤶𞤭." data-style=""></div>
+<!--div class="out" data-iso="adlm" data-name="Adlam" data-sample="𞤑𞤵𞥅𞤤𞤢𞤤 𞤺𞤢𞤣𞤢𞤲𞤢𞤤 𞤋𞤲𞥆𞤢𞤥𞤢 𞤢𞥄𞤣𞤫𞥅𞤶𞤭 𞤬𞤮𞤬 𞤨𞤮𞤼𞤭، 𞤲𞥋𞤣𞤭𞤥𞤯𞤭𞤣𞤭 𞤫 𞤶𞤭𞤦𞤭𞤲𞤢𞤲𞥆𞤣𞤫 𞤼𞤮 𞤦𞤢𞤲𞥆𞤺𞤫 𞤸𞤢𞤳𞥆𞤫𞥅𞤶𞤭." data-style=""></div>
 
 <div class="out" data-iso="armn" data-name="Armenian" data-sample="Բոլոր մարդիկ ծնվում են ազատ ու հավասար իրենց արժանապատվությամբ ու իրավունքներով։ Նրանք ունեն բանականություն ու խիղճ և միմյանց պետք է եղբայրաբար վերաբերվեն։"></div>
 
@@ -353,28 +364,39 @@ function changeFontSize ( newSize ) {
 
 <div class="out" data-iso="vaii" data-name="Vai" data-sample="ꕉꕜꕮ ꔔꘋ ꖸ ꔰ ꗋꘋ ꕮꕨ ꔔꘋ ꖸ ꕎ ꕉꖸꕊ ꕴꖃ ꕃꔤꘂ ꗱ, ꕉꖷ ꗪꗡ ꔻꔤ ꗏꗒꗡ ꕎ ꗪ ꕉꖸꕊ ꖏꕎ. ꕉꕡ ꖏ ꗳꕮꕊ ꗏ ꕪ ꗓ ꕉꖷ ꕉꖸ ꕘꕞ ꗪ. ꖏꖷ ꕉꖸꔧ ꖏ ꖸ ꕚꕌꘂ ꗷꔤ ꕞ ꘃꖷ ꘉꔧ ꗠꖻ ꕞ ꖴꘋ ꔳꕩ ꕉꖸ ꗳ."></div>
 
-<div class="out" data-iso="yiii" data-name="Yi" data-sample="ꊿꂷꃅꃧꐨꐥ, ꌅꅍꀂꏽꐯꒈꃅꐥꌐ. ꊿꊇꉪꍆꌋꆀꁨꉌꑌꐥ, ꄷꀋꁨꂛꊨꅫꃀꃅꐥꄡꑟ."></div>
+<div class="out" data-iso="yiii" data-name="Yi" data-sample="ꊿꂷꃅꃧꐨꐥ, ꌅꅍꀂꏽꐯꒈꃅꐥꌐ. ꊿꊇꉪꍆꌋꆀꁨꉌꑌꐥ, ꄷꀋꁨꂛꊨꅫꃀꃅꐥꄡꑟ."></div-->
 
 
 
 
 
-<section id="notes">
-<h2>Notes</h2>
-<p>The default text used is  article 1 of the <a href="http://www.ohchr.org/EN/UDHR/Pages/SearchByLang.aspx">Universal Declaration of Human Rights</a>, taken from <a href="https://unicode.org/udhr/translations.html">this Unicode page</a>, wherever I could find it. I created a few instances myself, where it was missing, and occasionally I resorted to arbitrary lists of characters.</p>
-<p>In some cases, a square box with a cross in it is displayed (this only occurs in the text view if you have the Adobe NotDef font installed). This indicates that the font doesn't cover all the glyphs needed to represent the sample text. Most often this applies to punctuation or other common characters. In normal use in a Web browser, glyphs for such characters will be backfilled by using a glyph from some other font.</p>
-<p>All fonts are set to 28px in size. They are roughly grouped with other similar fonts, eg. modulated, monochrome, naskh, nastaliq, no-circle, slanted, kai, etc. 'Modulated' means that strokes have varying widths (and usually have tapered or pointed ends), whereas 'monochrome' fonts have strokes that are generally the same width (and stroke ends are usually squared off).</p>
-</section>
+<details style="margin-left: 7.5%; margin-top: 4em; text-align: left;" id="notesSection">
+<summary dir="rtl" style="list-style: none"><span style="color:white;background-color:#60ADFB; padding:.2em .4em; border-radius:5px; cursor:pointer; ">Notes</span></summary>
+
+<!--details id="notes">
+<summary style="margin-left:7.5%; font-style: italic;">Show notes</summary-->
+<h2>General usage</h2>
+<p>The default text used is  article 1 of the <a href="http://www.ohchr.org/EN/UDHR/Pages/SearchByLang.aspx">Universal Declaration of Human Rights</a>, taken from <a href="https://unicode.org/udhr/translations.html">this Unicode page</a>, wherever I could find it. I created a few instances myself, where it was missing, and occasionally I resorted to other texts or even arbitrary lists of characters.</p>
+<p>In some cases, a square box with a cross in it is displayed (this only occurs in the text view if you have the Adobe NotDef font installed). This indicates that the font doesn't cover all the glyphs needed to represent the sample text. Most often this applies to punctuation or other common characters. In Latin text, in particular, it indicates which fonts support extended characters and which don't. In normal use in a Web browser, glyphs for such characters will be backfilled by using a glyph from some other font.</p>
+<p>All fonts are set to 28px in size. They are roughly grouped with other similar fonts, eg. modulated, monochrome, naskh, nastaliq, no-circle, slanted, kai, etc. 'Modulated' means that strokes have varying widths (and usually have tapered or pointed ends), whereas 'monochrome' fonts have strokes that are generally the same width (and stroke ends are usually squared off). In some cases, the choice between these two categories is difficult to make. Other categories override the modulated/monochrome distinction: for example, Arabic kufi or nastaliq fonts are grouped under separate headings and are not found in the modulated or monochrome groups.</p>
+
+<h2>Checking language-specific repertoires</h2>
+<p>If you want to check whether a font or set of fonts supports the characters needed for a particular language, follow these steps.</p>
+<ol>
+<li>Open the <a href="../../app-charuse/">Character usage lookup</a> app, and find the language.</li>
+<li>Scroll down the page to find the link <samp>Check for fonts</samp> and click on it.</li>
+<li>A new page will open showing how the characters are rendered by each font.</li>
+</ol>
+<p>Note that it is much easier to see which characters are and are not supported if you have installed the <a href="https://github.com/adobe-fonts/adobe-notdef">Adobe NotDef font</a>, since this will cause the missing characters to be rendered as square boxes.</p>
+</details>
 
 
 
-<div class="smallprint"><span id="version">First published  14 Feb 2014.  This versio<!-- #BeginDate format:IS1m -->2020-08-01  16:27<!-- #EndDate -->0-07-27  9:10<!-- #EndDate --> 
-  </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
+
+<div class="smallprint"><span id="version">See <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/fontlist/index.html">recent changes</a>. &nbsp;•&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bfontlist%5D%20TITLE_GOES_HERE&amp;body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ffontlist%2F%0A%0A" target="_blank">comment</a>. &nbsp;•&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
-
-
-<div id="testarea" style="display: none;">
+<!--div id="testarea" style="display: none;">
 <div style="float:right; color: gray; padding: 10px; font-size:12px; cursor:pointer;" onclick="document.getElementById('testarea').style.display = 'none';">Close</div>
 <div id="textarea"> </div>
 <form oninput="document.getElementById('textarea').style.fontSize = this.slider.value+'px'; 
@@ -383,7 +405,27 @@ function changeFontSize ( newSize ) {
 Change size: <input id="slider" type="range" min="14" max="100" step="1" value="28"> 
 	&#xA0; <span id="sizeIndicator">28px</span>
 </form>
-</div>
+</div-->
 
+
+<script>
+// check for parameters and take appropriate action
+var scriptParameter, textParameter
+parameters = location.search.split('&');
+parameters[0] = parameters[0].substring(1);
+for (var p=0;p<parameters.length;p++) {  
+	pairs = parameters[p].split('=');
+	if (pairs[0] == 'script') { if (pairs[1]) { scriptParameter = pairs[1] } }
+	if (pairs[0] === 'text') { if (pairs[1]) { textParameter = pairs[1] } }
+	}
+if (scriptParameter && textParameter) {
+	document.getElementById('showGraphics').checked = false
+	document.getElementById('wrapLines').checked = true
+	document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: normal; }'
+	document.getElementById('showFonts').checked = true
+	document.getElementById('inputText').value = decodeURI(textParameter)
+	getResult(scriptParameter,scriptParameter, decodeURI(textParameter))
+	}
+</script>
 </body>
 </html>
