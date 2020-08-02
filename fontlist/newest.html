@@ -94,7 +94,7 @@ function getSection (script, scriptName, sample, style='') {
 			if (fontDB[r].style && fontDB[r].style !== lastStyle) {
 				out += '<div style="color:#ccc; font-size:140%; margin: 0 2em; cursor: pointer; float:right; margin-right: 2em; font-variant-caps: all-small-caps; color:tan;" onclick="this.parentNode.style.display = \'none\'">'
 				if (fontDB[r].style === 'serif') out += 'modulated'
-				else if (fontDB[r].style === 'sans') out += 'monochrome'
+				else if (fontDB[r].style === 'sans') out += 'monoline'
 				else out += fontDB[r].style
 				out += '</div> '
 				lastStyle = fontDB[r].style
@@ -268,7 +268,7 @@ function changeFontSize ( newSize ) {
 
 
 
-<details style="margin-left: 7.5%; margin-top: 4em; text-align: left;" id="notesSection">
+<detailsx style="margin-left: 7.5%; margin-top: 4em; text-align: left;" id="notesSection">
 <summary dir="rtl" style="list-style: none"><span style="color:white;background-color:#60ADFB; padding:.2em .4em; border-radius:5px; cursor:pointer; ">Notes</span></summary>
 
 <!--details id="notes">
@@ -276,7 +276,31 @@ function changeFontSize ( newSize ) {
 <h2>General usage</h2>
 <p>The default text used is  article 1 of the <a href="http://www.ohchr.org/EN/UDHR/Pages/SearchByLang.aspx">Universal Declaration of Human Rights</a>, taken from <a href="https://unicode.org/udhr/translations.html">this Unicode page</a>, wherever I could find it. I created a few instances myself, where it was missing, and occasionally I resorted to other texts or even arbitrary lists of characters.</p>
 <p>In some cases, a square box with a cross in it is displayed (this only occurs in the text view if you have the Adobe NotDef font installed). This indicates that the font doesn't cover all the glyphs needed to represent the sample text. Most often this applies to punctuation or other common characters. In Latin text, in particular, it indicates which fonts support extended characters and which don't. In normal use in a Web browser, glyphs for such characters will be backfilled by using a glyph from some other font.</p>
-<p>All fonts are set to 28px in size. They are roughly grouped with other similar fonts, eg. modulated, monochrome, naskh, nastaliq, no-circle, slanted, kai, etc. 'Modulated' means that strokes have varying widths (and usually have tapered or pointed ends), whereas 'monochrome' fonts have strokes that are generally the same width (and stroke ends are usually squared off). In some cases, the choice between these two categories is difficult to make. Other categories override the modulated/monochrome distinction: for example, Arabic kufi or nastaliq fonts are grouped under separate headings and are not found in the modulated or monochrome groups.</p>
+<p>All images are set to 28px in size. </p>
+
+<h2>Font groupings</h2>
+<p>Fonts are <em>roughly</em> grouped with other similar fonts, in way that seems useful, but may not be scientific.</p>
+<p><em>By default</em>, fonts fall into one of the following two categories: 'modulated', indicates that strokes have varying widths  (and usually have tapered or pointed ends), whereas 'monoline' fonts have strokes that are generally the same width (and stroke ends are usually squared off). In some cases, the choice between these two categories is difficult to make. Also, some of the larger fonts (esp. Arial Unicode MS) may render some scripts with modulated glyphs and others with monoline, all within the same font. Use this tagging as a rough guide only.</p>
+<p>A number of other groupings are used, and fonts to which they apply appear in those groups, regardless of modulated/monoline characteristics. </p>
+<p>Here is the current list of groups:</p>
+<ul>
+<li><b class="styleName">Modulated</b> (listed as 'Song' for Chinese (sometimes called 'Ming'), and 'Mincho' for Japanese)</li>
+<li><b class="styleName">Monoline</b> (listed as 'Hei' or 'Gothic' for Chinese, Japanese &amp; Korean)</li>
+<li><b class="styleName">Fangsong</b> (Simplified Chinese)</li>
+<li><b class="styleName">Kai</b> (Simplified &amp; Traditional Chinese)</li>
+<li><b class="styleName">Rounded</b> (Japanese)</li>
+<li><b class="styleName">Loopless</b> (Thai)</li>
+<li><b class="styleName">Thuluth</b> (Arabic)</li>
+<li><b class="styleName">Ruqa</b> (Arabic)</li>
+<li><b class="styleName">Kano</b> (Arabic)</li>
+<li><b class="styleName">Kufi</b> (Arabic)</li>
+<li><b class="styleName">Nastaliq</b> (Arabic)</li>
+<li><b class="styleName">Slanted</b></li>
+<li><b class="styleName">Mool</b> (Khmer)</li>
+<li><b class="styleName">Heavy</b> (fonts that have substantial weight in regular versions)</li>
+<li><b class="styleName">Monospaced</b> (or fixed width)</li>
+<li><b class="styleName">Other</b> (mostly includes approximations to handwriting, but may also contain other unusual styles).</li>
+</ul>
 
 <h2>Checking language-specific repertoires</h2>
 <p>If you want to check whether a font or set of fonts supports the characters needed for a particular language, follow these steps.</p>
@@ -286,7 +310,7 @@ function changeFontSize ( newSize ) {
 <li>A new page will open showing how the characters are rendered by each font.</li>
 </ol>
 <p>Note that it is much easier to see which characters are and are not supported if you have installed the <a href="https://github.com/adobe-fonts/adobe-notdef">Adobe NotDef font</a>, since this will cause the missing characters to be rendered as square boxes.</p>
-</details>
+</detailsx>
 
 
 
