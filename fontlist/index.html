@@ -63,7 +63,14 @@ for (let font=0;font<fontDB.length;font++) {
 	var fontName = fontDB[font].name
 	if (typeof fontInfo[fontName] !== 'undefined') fontDB[font].notes = fontInfo[fontName].notes
 	}
-console.log('FontDB', fontDB)
+	//console.log('FontDB', fontDB)
+
+// state variables, used to redraw on change to checkboxes
+currentTag = ''
+currentTitle = ''
+currentSample = ''
+currentStyle = ''
+
 
 
 function getSection (script, scriptName, sample, style='') {
@@ -92,7 +99,7 @@ function getSection (script, scriptName, sample, style='') {
 			
 			out += '<div>'
 			if (fontDB[r].style && fontDB[r].style !== lastStyle) {
-				out += '<div style="color:#ccc; font-size:140%; margin: 0 2em; cursor: pointer; float:right; margin-right: 2em; font-variant-caps: all-small-caps; color:tan;" onclick="this.parentNode.style.display = \'none\'">'
+				out += '<div style="color:#ccc; font-size:140%; margin: 0 2em; cursor: pointer; float:right; margin-right: 2em; font-variant-caps: all-small-caps; color:tan;">'
 				if (fontDB[r].style === 'serif') out += 'modulated'
 				else if (fontDB[r].style === 'sans') out += 'monoline'
 				else out += fontDB[r].style
@@ -134,11 +141,19 @@ function getSection (script, scriptName, sample, style='') {
 	}
 
 function getResult (title, tag, sample, style) {
+	if (tag == '') return
 	document.getElementById('result').innerHTML = getSection(tag, title, sample, style)
 	window.location = '#result'
+	currentTag = tag
+	currentTitle = title
+	currentSample = sample
+	currentStyle = style
 	}
 
 
+function refresh () {
+	getResult(window.currentTitle, window.currentTag, window.currentSample, window.currentStyle)
+	}
 function changeFontSize ( newSize ) {
 	document.getElementById( 'fontSizeStyling' ).innerHTML = '.text { font-size: '+newSize + 'px; }'
 	document.getElementById( 'sizeIndicator' ).innerHTML = newSize + 'px'
@@ -167,7 +182,7 @@ function changeFontSize ( newSize ) {
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->3 August, 2020<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->4 August, 2020<!-- #EndDate -->
   <span id="versionTop">• recent changes 
   <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages" title="Show commits for the whole scripts repository.">scripts</a>/<a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/fontlist" title="Show commits for scripts/fontlist.">fontlist</a> • leave a <a target="_blank" href="https://github.com/r12a/scripts/issues/new?title=[fontlist]%20%20BRIEF_TITLE_GOES_HERE&amp;body=%5Bsource%5D%20https%3A%2F%2Fr12a.github.io%2Fscripts%2Ffontlist%0A%0A" title="Leave a comment.">comment</a></span>
   </p>
@@ -183,10 +198,10 @@ function changeFontSize ( newSize ) {
 </div>
 
 <p><span style="font-weight: bold;">Show fonts for:</span><br>
-<label><input id="showMac" type="checkbox" checked> Mac</label> &nbsp;
-<label><input type="checkbox" checked id="showWin"> Windows</label> &nbsp;
-<label><input type="checkbox" checked id="showNoto"> Noto</label> &nbsp;
-<label><input type="checkbox" checked id="showSIL"> SIL</label></p>
+<label><input type="checkbox" checked id="showMac" onChange="refresh()"> Mac</label> &nbsp;
+<label><input type="checkbox" checked id="showWin" onChange="refresh()"> Windows</label> &nbsp;
+<label><input type="checkbox" checked id="showNoto" onChange="refresh()"> Noto</label> &nbsp;
+<label><input type="checkbox" checked id="showSIL" onChange="refresh()"> SIL</label></p>
 
 
 
