@@ -143,7 +143,7 @@ function getSection (script, scriptName, sample, style='') {
 function getResult (title, tag, sample, style) {
 	if (tag == '') return
 	document.getElementById('result').innerHTML = getSection(tag, title, sample, style)
-	window.location = '#result'
+	//window.location = '#result'
 	currentTag = tag
 	currentTitle = title
 	currentSample = sample
@@ -190,9 +190,9 @@ function changeFontSize ( newSize ) {
 
 <p>This page provides a (not exhaustive) list of fonts, grouped by script, that are available via the Windows 10 and Mac OS X operating systems, as well as Google's Noto fonts and SIL fonts. Note that some  of the Windows and Mac fonts have to be downloaded by the user before they can be applied to text.</p>
 <div style="margin-left: 7.5%;">
-<div><label><input id="showGraphics" type="checkbox" checked> Show font samples as images</label></div>
-<div><label><input type="checkbox" id="showFonts"> Show using fonts available on this computer</label></div>
-<div style="margin-left: 2em; font-size: 90%; color: tan;">Use this alternative text: <input placeholder="Leave blank for the default sample text" type="text" id="inputText" style="width: 40%;"></div>
+<div><label><input id="showGraphics" type="checkbox" checked onChange="refresh()"> Show font samples as images</label></div>
+<div><label><input type="checkbox" id="showFonts" onChange="refresh()"> Show using fonts available on this computer</label></div>
+<div style="margin-left: 2em; font-size: 90%; color: tan;">Use this alternative text: <input placeholder="Leave blank for the default sample text" type="text" id="inputText" style="width: 40%;" onChange="refresh()"></div>
 <div style="margin-left: 2em; font-size: 90%; color: tan;">Change font display size: <input id="fontSizeSlider" type="range" min="20" max="150" step="1" value="60" oninput="changeFontSize(this.value)" style="width:15em;"> <span id="sizeIndicator" style="font-size:80%;">60px</span></div>
 <div style="margin-left: 2em; font-size: 90%; color: tan;">Lines: <label><input name="whitespaceSetting" type="radio" checked onclick="document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: nowrap; }'"> no wrap</label> <label><input id="wrapLines" name="whitespaceSetting" type="radio"  onclick="document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: normal; }'" style="margin-left: 2em;"> wrap</label></div>
 </div>
@@ -423,6 +423,7 @@ if (scriptParameter && textParameter) {
 	document.getElementById('showFonts').checked = true
 	document.getElementById('inputText').value = decodeURI(textParameter)
 	getResult(scriptParameter,scriptParameter, decodeURI(textParameter))
+	window.location = '#result'
 	}
 </script>
 </body>
