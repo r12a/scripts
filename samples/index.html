@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+<meta charset="utf-8"/>
+<title>Samples</title>
+<meta name="description" content="Shows sample texts, by script."/>
+<script src="../../shared/phrasedb/db.js"> </script>
+<script src="../../shared/phrasedb/samplescripts.js"> </script>
+
+<link rel="stylesheet" href="../../shared/style/docs.css" />
+<style>
+.phrase { text-align: start; }
+
+.trigger { color: teal; cursor: pointer; }
+.sample { font-size: 60px; white-space: nowrap; color: black; overflow: hidden; width: 80%; margin-left: 7.5%;  line-height: 1; text-align: start; }
+.fontItem { margin-bottom: 0; width: 80%; text-align: start; }
+.fontlist { font-size: 80%; }
+.infoIcon { color: tan; font-size: 80%; margin-left: 1em; }
+.text {  line-height: 2; }
+b {
+    font-size: 1.2em;
+    color: #aaa;
+    margin-right: .25em;
+	font-weight: bold;
+	font-style: italic;
+	border: 1px solid #ccc;
+	padding: 0 4px;
+	border-radius: 5px;
+	}
+#testarea { font-size: 16px; position: fixed; bottom: 20px; right: 20px; padding: 10px; width: 80%; background-color: #FFE; color: #444;  border: 1px solid #CCC; 	
+	box-shadow: 7px 7px 5px #888; 
+	border-radius: 10px; 
+	}
+#textarea { font-size: 28px; text-align: left; }
+#picture {
+	margin-top: 1em;
+	margin-bottom: 0;
+	}
+</style>
+<style id="fontFamilyStyling">.phrase { font-family: ; }</style> <!-- this sets the default, but is changed by scripting -->
+<style id="fontSizeStyling">.phrase { font-size: 28px; }</style> <!-- this sets the default, but is changed by scripting -->
+<style id="fontWhiteSpace">.text { white-space: nowrap; }</style> <!-- this sets the default, but is changed by scripting -->
+
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/fontdb/db.js"></script>
+
+<script>
+// add notes to fontDB
+for (let font=0;font<fontDB.length;font++) {
+	var fontName = fontDB[font].name
+	if (typeof fontInfo[fontName] !== 'undefined') fontDB[font].notes = fontInfo[fontName].notes
+	}
+	//console.log('FontDB', fontDB)
+
+// state variables, used to redraw on change to checkboxes
+currentTag = ''
+currentTitle = ''
+currentSample = ''
+currentStyle = ''
+
+
+
+function getSection (script) {
+	var out
+	out = '<section id="'+script+'">'
+	out += '<h2>'+sampleScriptsIndex[script].name+'</h2>'
+	
+	for (let l=0;l<sampleScriptsIndex[script].langs.length;l++) {
+		sample = phraseDB[sampleScriptsIndex[script].langs[l]]
+		
+		out += '<section>'
+		out += '<h3 id="'+sampleScriptsIndex[script].langs[l]+'">'+sample.name+'</h3>'
+		out += '<p lang="'+sampleScriptsIndex[script].langs[l]+'" title="UDHR §1" class="phrase" dir="auto">'
+		out += phraseDB[sampleScriptsIndex[script].langs[l]].text
+		out += '</p>'
+		out += '</section>'
+		}
+	out += '</section>'
+	document.getElementById('result').innerHTML = out
+	}
+
+function getResult (title, tag, sample, style) {
+	if (tag == '') return
+	document.getElementById('result').innerHTML = getSection(tag, title, sample, style)
+	//window.location = '#result'
+	currentTag = tag
+	currentTitle = title
+	currentSample = sample
+	currentStyle = style
+	}
+
+
+function refresh () {
+	getResult(window.currentTitle, window.currentTag, window.currentSample, window.currentStyle)
+	}
+function changeFontSize ( newSize ) {
+	document.getElementById( 'fontSizeStyling' ).innerHTML = '.phrase { font-size: '+newSize + 'px; }'
+	document.getElementById( 'sizeIndicator' ).innerHTML = newSize + 'px'
+	}
+function changeFontFamily ( newFont ) {
+	document.getElementById( 'fontFamilyStyling' ).innerHTML = '.phrase { font-family: '+newFont + '; }'
+	document.getElementById( 'inputText' ).innerHTML = newFont
+	}
+
+</script>
+
+</head>
+
+<body>
+<header>
+    <div id="header-boilerplate"></div>
+	<script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
+</header>
+
+<h1>Samples</h1>
+
+    <aside class="sidebar">
+      <div class="noprint">
+        <h2 class="notoc flush"><a id="links">Related</a></h2>
+        <p style="line-height: 1.3em"><a href="/scripts/featurelist/" target="_blank">Script features by language</a></p>
+        <p style="line-height: 1.3em"><a href="/app-charuse/" target="_blank">Character usage by language</a></p>
+      </div>
+    </aside>
+
+
+
+<p id="status">Updated 
+<!-- #BeginDate format:Sw1 -->8 August, 2020<!-- #EndDate -->
+  <span id="versionTop">• recent changes 
+  <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages" title="Show commits for the whole scripts repository.">scripts</a>/<a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/fontlist" title="Show commits for scripts/fontlist.">fontlist</a> • leave a <a target="_blank" href="https://github.com/r12a/scripts/issues/new?title=[fontlist]%20%20BRIEF_TITLE_GOES_HERE&amp;body=%5Bsource%5D%20https%3A%2F%2Fr12a.github.io%2Fscripts%2Ffontlist%0A%0A" title="Leave a comment.">comment</a></span>
+  </p>
+  
+
+<p>This page provides samples of text in various languages, grouped by script. You can specify a particular font if you have it on your device (except that Safari only allows system fonts).</p>
+<div style="margin-left: 7.5%;">
+<div style="margin-left: 2em; font-size: 90%; color: tan;">Use this font: 
+<input placeholder="" type="text" id="inputText" style="width: 40%;" onChange="changeFontFamily(this.value)"></div>
+<div style="margin-left: 2em; font-size: 90%; color: tan;">Change font display size: <input id="fontSizeSlider" type="range" min="20" max="150" step="1" value="28" oninput="changeFontSize(this.value)" style="width:15em;"> <span id="sizeIndicator" style="font-size:80%;">28px</span></div>
+<div style="margin-left: 2em; font-size: 90%; color: tan;">Lines: <label><input name="whitespaceSetting" type="radio" checked onclick="document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: nowrap; }'"> no wrap</label> <label><input id="wrapLines" name="whitespaceSetting" type="radio"  onclick="document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: normal; }'" style="margin-left: 2em;"> wrap</label></div>
+</div>
+
+
+
+<p><span style="font-weight: bold;">Choose a script:</span><br>
+<span class="trigger" onclick="getSection('adlm')">adlam</span> • 
+
+<span class="trigger" onclick="getSection('arab')">arabic</span> • 
+
+<span class="trigger" onclick="getSection('armn')">armenian</span> • 
+
+<span class="trigger" onclick="getSection('bali')">balinese</span> • 
+
+<span class="trigger" onclick="getSection('bass')">bassa vah</span> • 
+
+<span class="trigger" onclick="getSection('beng')">bengali</span> • 
+
+<span class="trigger" onclick="getSection('bugi')">buginese</span> • 
+
+<span class="trigger" onclick="getSection('buhd')">buhid</span> • 
+
+<span class="trigger" onclick="getSection('cans')">canadian syllabics</span> • 
+
+<span class="trigger" onclick="getSection('cakm')">chakma</span> • 
+
+<span class="trigger" onclick="getSection('cher')">cherokee</span> • 
+
+<span class="trigger" onclick="getSection('hani')">chinese</span> • 
+
+<span class="trigger" onclick="getSection('copt')">coptic</span> • 
+
+<span class="trigger" onclick="getSection('cyrl')">cyrillic</span> • 
+
+<span class="trigger" onclick="getSection('deva')">devanagari</span> • 
+
+<span class="trigger" onclick="getSection('ethi')">ethiopic</span> • 
+
+<span class="trigger" onclick="getSection('geor')">georgian</span> • 
+
+<span class="trigger" onclick="getSection('grek')">greek</span> • 
+
+<span class="trigger" onclick="getSection('gujr')">gujarati</span> • 
+
+<span class="trigger" onclick="getSection('gong')">gunjala gondi</span> • 
+
+<span class="trigger" onclick="getSection('guru')">gurmukhi</span> • 
+
+<span class="trigger" onclick="getSection('hano')">hanunoo</span> • 
+
+<span class="trigger" onclick="getSection('hebr')">hebrew</span> • 
+
+<span class="trigger" onclick="getSection('jpan')">japanese</span> • 
+
+<span class="trigger" onclick="getSection('java')">javanese</span> • 
+
+<span class="trigger" onclick="getSection('knda')">kannada</span> • 
+
+<span class="trigger" onclick="getSection('khmr')">khmer</span> • 
+
+<span class="trigger" onclick="getSection('kore')">korean</span> • 
+
+<span class="trigger" onclick="getSection('laoo')">lao</span> • 
+
+<span class="trigger" onclick="getSection('latn')">latin</span> • 
+
+<span class="trigger" onclick="getSection('lepc')">lepcha</span> • 
+
+<span class="trigger" onclick="getSection('limb')">limbu</span> • 
+
+<span class="trigger" onclick="getSection('lisu')">lisu</span> • 
+
+<span class="trigger" onclick="getSection('maka')">makasar</span> • 
+
+<span class="trigger" onclick="getSection('mlym')">malayalam</span> • 
+
+<span class="trigger" onclick="getSection('mand')">mandaic</span> •
+
+<span class="trigger" onclick="getSection('mtei')">meetei mayek</span> •
+
+<span class="trigger" onclick="getSection('mong')">mongolian</span> • 
+
+<span class="trigger" onclick="getSection('mymr')">myanmar</span> • 
+
+<span class="trigger" onclick="getSection('talu')">new tai lue</span> • 
+
+<span class="trigger" onclick="getSection('nkoo')">n'ko</span> • 
+
+<span class="trigger" onclick="getSection('olck')">ol&nbsp;chiki</span> • 
+
+<span class="trigger" onclick="getSection('orya')">oriya</span> • 
+
+<span class="trigger" onclick="getSection('osge')">osage</span> • 
+
+<span class="trigger" onclick="getSection('osma')">osmanya</span> • 
+
+<span class="trigger" onclick="getSection('phag')">phags-pa</span> • 
+
+<span class="trigger" onclick="getSection('runr')">runic</span> • 
+
+<span class="trigger" onclick="getSection('sinh')">sinhala</span> • 
+
+<span class="trigger" onclick="getSection('sund')">sundanese</span> • 
+
+<span class="trigger" onclick="getSection('syrc')">syriac</span> • 
+
+<span class="trigger" onclick="getSection('tale')">tai le</span> • 
+
+<span class="trigger" onclick="getSection('tagb')">tagbanwa</span> • 
+
+<span class="trigger" onclick="getSection('lana')">tai tham</span> • 
+
+<span class="trigger" onclick="getSection('tavt')">tai viet</span> • 
+
+<span class="trigger" onclick="getSection('taml')">tamil</span> • 
+
+<span class="trigger" onclick="getSection('telu')">telugu</span> • 
+
+<span class="trigger" onclick="getSection('thaa')">thaana</span> • 
+
+<span class="trigger" onclick="getSection('thai')">thai</span> • 
+
+<span class="trigger" onclick="getSection('tibt')">tibetan</span> • 
+
+<span class="trigger" onclick="getSection('tfng')">tifinagh</span> • 
+
+<span class="trigger" onclick="getSection('vaii')">vai</span> • 
+
+<span class="trigger" onclick="getSection('yiii')">yi</span> 
+</p>
+
+
+<details>
+<summary style="font-style: italic; margin-left: 7.5%; font-size:80%;">More scripts</summary>
+
+<p>
+<span class="trigger" dir="rtl" onclick="getSection('hung')">old hungarian</span> • 
+
+<span class="trigger" onclick="getSection('saur')">saurashtra</span> • 
+
+<span class="trigger" onclick="getSection('shaw')">shavian</span> • 
+</p>
+
+</details>
+
+
+
+
+
+
+
+<br style="clear:both">
+<div id="result"></div>
+
+
+
+
+
+
+
+<details style="margin-left: 7.5%; margin-top: 4em; text-align: left;" id="notesSection">
+<summary dir="rtl" style="list-style: none"><span style="color:white;background-color:#60ADFB; padding:.2em .4em; border-radius:5px; cursor:pointer; ">Notes</span></summary>
+
+<h2>General usage</h2>
+<p>The default text used is  article 1 of the <a href="http://www.ohchr.org/EN/UDHR/Pages/SearchByLang.aspx">Universal Declaration of Human Rights</a>, taken from <a href="https://unicode.org/udhr/translations.html">this Unicode page</a>, wherever I could find it. I created a few instances myself, where it was missing, and occasionally I resorted to other texts or even arbitrary lists of characters. I'm indebted to Omniglot for many of the less common samples.</p>
+<p>In some cases, a square box with a cross in it is displayed (this only occurs in the text view if you have the Adobe NotDef font installed). This indicates that the font doesn't cover all the glyphs needed to represent the sample text. Most often this applies to punctuation or other common characters. In Latin text, in particular, it indicates which fonts support extended characters and which don't. In normal use in a Web browser, glyphs for such characters will be backfilled by using a glyph from some other font.</p>
+<p>All images are set to 28px in size by default, but this can be changed. </p>
+
+</details>
+
+
+
+
+<div class="smallprint"><span id="version">See <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/fontlist/index.html">recent changes</a>. &nbsp;•&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bfontlist%5D%20TITLE_GOES_HERE&amp;body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ffontlist%2F%0A%0A" target="_blank">comment</a>. &nbsp;•&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
+
+
+<script>
+// check for parameters and take appropriate action
+var scriptParameter, textParameter
+parameters = location.search.split('&');
+parameters[0] = parameters[0].substring(1);
+for (var p=0;p<parameters.length;p++) {  
+	pairs = parameters[p].split('=');
+	if (pairs[0] == 'script') { if (pairs[1]) { scriptParameter = pairs[1] } }
+	if (pairs[0] === 'text') { if (pairs[1]) { textParameter = pairs[1] } }
+	}
+if (scriptParameter && textParameter) {
+	document.getElementById('showGraphics').checked = false
+	document.getElementById('wrapLines').checked = true
+	document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: normal; }'
+	document.getElementById('showFonts').checked = true
+	document.getElementById('inputText').value = decodeURI(textParameter)
+	getResult(scriptParameter,scriptParameter, decodeURI(textParameter))
+	window.location = '#result'
+	}
+else if (scriptParameter) {
+	document.getElementById('wrapLines').checked = false
+	document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: wrap; }'
+	document.getElementById('inputText').value = ''
+	getSection(scriptParameter)
+	window.location = '#result'
+	}
+</script>
+</body>
+</html>
