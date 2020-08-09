@@ -1,6 +1,82 @@
-var scriptNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cans', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'jpan', 'khmr', 'laoo', 'lana', 'lisu', 'mand', 'mymr', 'nkoo', 'osge', 'sinh', 'sund', 'syrc', 'taml', 'tavt', 'telu', 'thaa', 'thai', 'tibt', 'tfng'])
 
-var scriptNotes= {  // used by Script Links page
+
+// Selections available when using the Font Lister app, used by Script Links page
+var fontLister = {  
+    'adlm':[['Adlam','adlm']],
+    'arab':[['Arabic','arab'], 
+			['African', 'arab-afr'],
+			['Nastaliq', 'arab-aran'],
+			], 
+    'armn':[['Armenian','armn']],
+    'bali':[['Balinese', 'bali']], 
+    'bass':[['Bassa Vah', 'bass']], 
+    'beng':[['Bengali', 'beng']],
+    'bugi':[['Buginese', 'bugi']],
+    'buhd':[['Buhid', 'buhd']],
+    'cans':[['UCAS', 'cans']],
+    'cakm':[['Chakma', 'cakm']],
+    'cher':[['Cherokee', 'cher']],
+    'copt':[['Coptic', 'copt']],
+    'cyrl':[['Cyrillic', 'cyrl']],
+    'deva':[['Devanagari', 'deva']],
+    'ethi':[['Ethiopic', 'ethi']],
+    'geor':[['Georgian', 'geor']],
+    'grek':[['Greek', 'grek']],
+    'gujr':[['Gujarati', 'gujr']],
+    'gong':[['Gunjala Gondi', 'gong']],
+    'guru':[['Gurmukhi', 'guru']],
+    'hano':[['Hanunoo', 'hano']],
+    'hani':[['Simplified Chinese', 'hans'],
+    		['Traditional Chinese', 'hant']],
+    'hang':[['Hangul', 'hang']],
+    'hebr':[['Hebrew', 'hebr']],
+    'hung':[['Old Hungarian', 'hung']],
+    'jpan':[['Japanese', 'jpan']],
+    'java':[['Javanese', 'java']],
+    'khmr':[['Khmer', 'khmer']],
+    'knda':[['Kannada', 'knda']],
+    'laoo':[['Lao', 'laoo']],
+    'lana':[['Tai Tham', 'lana']],
+    'latn':[['Latin', 'latn']],
+    'lepc':[['Lepcha', 'lepc']],
+    'limb':[['Limbu', 'limb']],
+    'lisu':[['Lisu', 'lisu']],
+    'mand':[['Mandaic', 'mand']],
+    'mend':[['Mende Kikakui', 'mend']],
+    'mong':[['Mongolian', 'mong']],
+    'mlym':[['Malayalam', 'mlym']],
+    'mtei':[['Meetei Mayek', 'mtei']],
+    'mymr':[['Myanmar', 'mymr']],
+    'nkoo':[["N’Ko", 'nkoo']],
+    'osge':[["Osage", 'osge']],
+    'olck':[["Ol Chiki", 'olck']],
+    'orya':[["Oriya", 'orya']],
+    'osma':[["Osmanya", 'osma']],
+    'phag':[["PhagsPa", 'phag']],
+    'runr':[["Runic", 'runr']],
+    'saur':[['Saurashtra', 'saur']],
+    'shaw':[['Shavian', 'shaw']],
+    'sinh':[['Sinhala', 'sinh']],
+    'sund':[['Sundanese', 'sund']],
+    'syrc':[['Syriac', 'syrc']],
+    'tale':[['Tai Le', 'tale']],
+    'tagb':[['Tagbanwa', 'tagb']],
+    'talu':[['New Tai Lü', 'talu']],
+    'taml':[['Tamil', 'taml']],
+    'telu':[['Telugu', 'telu']],
+    'tavt':[['Tai Viet', 'tavt']],
+    'thaa':[['Thaana', 'thaa']],
+    'thai':[['Thai', 'thai']],
+    'tibt':[['Tibetan', 'tibt']],
+    'tfng':[['Tifinagh', 'tfng']],
+    'vaii':[['Vai', 'vaii']],
+    'yiii':[['Yi', 'yiii']],
+    }
+
+
+
+// Script summary pages, used by Script Links page
+var scriptNotes= {  
     'adlm':[['Adlam/Pular','adlam/']],
     'arab':[['Arabic','arabic/'], 
 			['Hausa (ajami)', 'arabic/hausa'],
@@ -59,7 +135,11 @@ var scriptNotes= {  // used by Script Links page
     'vaii':[['Vai', 'vai/']],
     }
 
-var scriptNotesByRegion = {  // used by script summary link page
+
+
+
+// Script summary selector, used by script summary link page
+var scriptNotesByRegion = {  
 	'Africa':[['Adlam', 'adlam/'],
 			  ['Amharic', 'ethiopic/'],
 			  ['Bassa Vah', 'bassavah/'],
@@ -147,56 +227,8 @@ var scriptNotesByRegion = {  // used by script summary link page
 
 
 
-var charNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cans', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'jpan', 'khmr','laoo', 'lana', 'maka', 'mand', 'mlym', 'mong', 'mymr', 'nkoo', 'osge', 'sinh', 'sund', 'syrc', 'tale', 'talu', 'tavt', 'taml', 'telu', 'thaa', 'thai', 'tibt', 'tfng', 'vaii'])
 
-var charNotesList = {
-    'adlm':'adlam/block',
-    'armn':'armenian/block',
-    'arab':'arabic/block', 
-    'bali':'balinese/block', 
-    'bass':'bassavah/block', 
-    'beng':'bengali/block',
-    'bugi':'buginese/block',
-    'cans':'cans/block',
-    'cher':'cherokee/block',
-    'cyrl':'cyrillic/block',
-    'deva':'devanagari/block',
-    'ethi':'ethiopic/block',
-    'geor':'georgian/block',
-    'grek':'greek/block',
-    'gujr':'gujarati/block',
-    'guru':'gurmukhi/block',
-    'hebr':'hebrew/block',
-    'java':'javanese/block',
-    'khmr':'khmer/block',
-    'lana':'taitham/block',
-    'laoo':'lao/block',
-    'lisu':'lisu/block',
-    'latn':'latin/block',
-    'maka':'makasar/block',
-    'mand':'mandaic/block',
-    'mlym':'malayalam/block',
-    'mong':'mongolian/block',
-    'mymr':'myanmar/block',
-    'nkoo':'nko/block',
-    'osge':'osage/block',
-    'runr':'runic/block',
-    'sinh':'sinhala/block',
-    'sund':'sundanese/block',
-    'syrc':'syriac/block',
-    'tale':'taile/block',
-    'talu':'newtailue/block',
-    'taml':'tamil/block',
-    'telu':'telugu/block',
-    'tavt':'taiviet/block',
-    'thaa':'thaana/block',
-    'thai':'thai/block',
-    'tibt':'tibetan/block',
-    'tfng':'tifinagh/block',
-    'vaii':'vai/block'
-    }
-
-
+// Locations of character notes pages,  used by Script Links page
 var charNotesList = {
     'adlm':['Adlam', 'adlam/block'],
     'armn':['Armenian', 'armenian/block'],
@@ -249,22 +281,67 @@ var charNotesList = {
     }
 
 
-var compChartSet= new Set(['adlm','arab','armn', 'bali', 'beng', 'bugi', 'cans', 'cher', 'cyrl', 'deva', 'ethi', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'jpan', 'knda', 'khmr', 'laoo', 'latn', 'mlym', 'mand', 'mong', 'mymr', 'nkoo', 'orya', 'sinh', 'sund', 'syrc', 'taml', 'telu', 'thaa', 'thai', 'tibt', 'tfng', 'cans'])
 
-var examplePhraseSet = new Set(['arab','armn','cans','cher','cyrl','deva','ethi','grek','guru','hani','hebr','latn','khmr','hang','mong','mymr','telu','tfng','thai','tibt'])
-
-var scriptSummarySet = new Set(['arab','cyrl','deva','grek','hani','hang','hebr','jpan','thai','tibt'])
-
-var googleFontSet= new Set(['arab','armn','avst','bali','bamum','batk','beng','brah','bugi','buhd','cans','cari','cham','cher','copt','xsux','cprt','dsrt','deva','egyp','ethi','geor','glag','goth','gujr','guru','hano','hebr','armi','inscriptional_pahlavi','phli','java','kait','knda','kali','khar','khmr','laoo','lepcha','limb','linb','lisu','lyci','lydin','mlym','mand','mtei','mong','mymr','nkoo','talu','ogam','olck','ital','xpeo','sarb','orhk','orya','osge', 'osma','phag','phnx','rjng','runi','samr','saur','shaw','sinh','sund','sylo','syrc','tglg','tagb','tale','lana','tavt','taml','telu','thaa','thai','tibt','tfng','ugar','vaii','yiii'])
-
-var googleEASet= new Set([])
-
-var gouFonts = { 'grek':'Greek', 'armn':'Armenian', 'hebr':'Hebrew', 'arab':'Arabic', 'syrc':'Syriac', 'thaa':'Thaana', 'nkoo':'NKo', 'deva':'Devanagari', 'beng':'Bengali', 'guru':'Gurmukhi', 'gujr':'Gujarati', 'orya':'Oriya', 'taml':'Tamil', 'telu':'Telugu', 'knda':'Kannada', 'mlym':'Malayalam', 'sinh':'Sinhala', 'thai':'Thai', 'laoo':'Lao', 'tibt':'Tibetan', 'mymr':'Myanmar', 'georgian':'Georgian', 'ethiopic':'Ethiopic', 'cherokee':'Cherokee', 'ucas':'Canadian', 'ogham':'Ogham', 'runr':'Runic', 'tagalog':'Tagalog', 'hanunoo':'Hanunoo', 'buhid':'Buhid', 'tagb':'Tagbanwa', 'khmr':'Khmer', 'mong':'Mongolian', 'limb':'Limbu', 'tale':'TaiLe', 'bugi':'Buginese', 'glag':'Glagolitic', 'copt':'Coptic', 'tfng':'Tifinagh', 'jpan':'Japanese', 'yiii':'Yi', 'sylo':'SylotiNagri', 'phag':'Phagspa', 'hang':'Korean', 'linb':'LinearBSyllabary', 'xphais':'Phaistos', 'ital':'OldItalic', 'goth':'Gothic', 'ugar':'Ugaritic', 'dsrt':'Deseret', 'shaw':'Shavian', 'osma':'Osmanya','lina':'Linear_A', 'cprt':'Cypriot', 'phnx':'Phoenician', 'khar':'Kharoshthi', 'ahom':'Ahom'
+// orthography comparison table (/scripts/featurelist/) NEW ONE with language data
+var orthoChart = {
+'adlm':'Pular',
+'arab':'MS Arabic, Hausa, Kashmiri, Urdu, Uighur',
+'armn':'Armenian',
+'bali':'Balinese',
+'bass':'Bassa Vah',
+'beng':'Bengali',
+'bugi':'Buginese',
+'cans':'Eastern Canadian Inuktitut', 
+'cher':'Cherokee',
+'cyrl':'Russian',
+'deva':'Hindi, Kashmiri',
+'ethi':'Amharic',
+'geor':'Georgian',
+'grek':'Modern Greek',
+'gujr':'Gujarati',
+'guru':'Punjabi',
+'hani':'Mandarin Chinese',
+'hang':'Korean',
+'hebr':'Hebrew',
+'java':'Javanese',
+'jpan':'Japanese',
+'knda':'Kannada',
+'khmr':'Khmer',
+'lana':'Khün, Northern Thai',
+'laoo':'Lao',
+'latn':'Hausa',
+'lisu':'Lisua',
+'mand':'Neo-Mandaic',
+'mlym':'Malayalam',
+'mong':'Halh Mongolian',
+'mymr':'Burmese',
+'nkoo':'N’Ko',
+'orya':'Odia',
+'osge':'Osage',
+'sinh':'Sinhala',
+'sund':'Sundanese',
+'syrc':'Syriac, Turoyo, Assyrian Neo-Aramaic',
+'tale':'Tai Nüa',
+'talu':'Tai Lü',
+'taml':'Tamil',
+'tavt':'Tai Dam',
+'telu':'Telugu',
+'tfng':'Standard Moroccan Tamazight',
+'thaa':'Dhivehi',
+'thai':'Thai',
+'tibt':'Tibetan',
+'vai':'Vai',
 }
 
+
+
+
+// used by Script Links page, URL endings for scriptsource historical bibliograpy
 var ssHistory = { 'grek':'wxsx5j4kzt', 'cyrl':'ngc339csy8', 'armn':'z35gwmg4ft', 'hebr':'qek84cbq5u', 'arab':'hqr6rc9md5', 'syrc':'hlvzdczufr', 'thaa':'n2tj49rr2n', 'nkoo':'mnqzubphu7', 'samr':'qv7wwr9xgp', 'mand':'djwvfmuu3h', 'deva':'b6c6j63sf5', 'beng':'f8jrlqwbac', 'guru':'fd27tquj5j', 'gujr':'yqug2kbjjr', 'orya':'znkmblg693', 'taml':'zw5nedjarb', 'telu':'sjrwm9ppr3', 'knda':'ur8y3qj6yk', 'mlym':'ypvmjurtyg', 'sinh':'sbwtu85wbv', 'thai':'d877ebfc65', 'laoo':'98522835fg', 'tibt':'mg8ulatcjb', 'mymr':'vcz6flwzqs', 'geor':'rbr2wkvu4m', 'ethi':'fvp74ug66k', 'cher':'nwnmgh2n8j', 'cans':'c36d846u2d', 'ogam':'d3z382ahas', 'runi':'ha667hekd4', 'tglg':'76d3376b7c', 'hano':'ga9dbe72a2', 'buhd':'h4446ag538', 'tagb':'d62f48hfad', 'khmr':'2269c7g9ee', 'mong':'xluqdp54ts', 'limb':'a2exgfkrmf', 'tale':'76c7d2ch4g', 'talu':'37fcf7h92b', 'bugi':'739e2e7g2e', 'lana':'gf97b8ad78', 'bali':'f2bb6f3bh9', 'sund':'3844bc8cea', 'batk':'geb5h358d3', 'lepc':'g6cv78jn42', 'olck':'rrkdvn7crf', 'glag':'lbhv6e4efr', 'copt':'msg4hep5ev', 'tfng':'wmx4utrkuc', 'jpan':'ly5dbxtthx', 'bopo':'tk449c64jh', 'yiii':'ejx9jwrd8e', 'lisu':'473c93dddf', 'vaii':'z8tk356ua7', 'bamu':'aeg5ah9fbg', 'sylo':'kylcx42avd', 'phag':'y22gh9p8g2', 'saur':'eqjs45mf8t', 'kali':'enl5dse8jv', 'rjng':'72d3ce3834', 'java':'db9724gea9', 'cham':'c4yzafta3f', 'tavt':'mn8j2mcblt', 'mtei':'x29ycx7hp5', 'hang':'umfm3ftrny', 'linb':'by38na5akh', 'lyci':'hsu56mxkr7', 'cari':'kqrxbcekmr', 'ital':'uk7vpcchbc', 'goth':'hj7ztebb5e', 'perm':'cqdluhalzh', 'ugar':'ffz7nkcxpb', 'xpeo':'pbjd5pecq6', 'dsrt':'tdjlnarc8y', 'shaw':'gj5fewb8ed', 'osma':'hg53222b9b', 'osge':'gm4pjj3qw7', 'elba':'fum3p8xz6v', 'lina':'rmvt9u45sq', 'cprt':'nywfdbys7b', 'armi':'ys8lxa9y4j', 'palm':'z3u3jwap6r', 'nbat':'kcjefvy9uw', 'hatr':'jpekrxh2wn', 'phnx':'ltk6h5bent', 'lydi':'hsu56mxkr7', 'mero':'ssxtjnbc7s', 'khar':'n974scptwz', 'sarb':'clvjlzfzv9', 'sarn':'gw3vnam33r', 'mani':'nnf3pjr2v3', 'avst':'appyvwf4ku', 'prti':'b7daarfs3a', 'phli':'ssmdqax9mt', 'phlp':'wqytv3ldez', 'orhk':'hpmlm9pjev', 'hung':'fx7n7tnxzt', 'brah':'nskejp3py5', 'kthi':'xa9swfhv9f', 'sora':'r4c4bsfy7v', 'cakm':'pdqjuf5k39', 'mahj':'kuegm6qedh', 'shrd':'spnpfarl4t', 'khoj':'r9e56hvyut', 'mult':'fptnmnhe3c', 'sind':'fykru6vn8h', 'gran':'qzhwzbsvm7', 'newa':'y53lggbts6', 'tirh':'wysbq8bpm4', 'sidd':'fcmrsmpp9f', 'modi':'tx5uz2hvvz', 'takr':'wvh5zdz7jl', 'ahom':'ky6s63f7fx', 'wara':'llvwz8vpn8', 'zanb':'j7rr9jgtyl', 'soyo':'lns82rb9hp', 'pauc':'t2uqldgjlv', 'bhks':'mcr57c34fw', 'marc':'h6ln54mufu', 'gonm':'vqhk6w3pgq', 'xsux':'yqbyb2mdz7', 'egyp':'q7yl4zu8eh', 'hluw':'tasanpp3u9', 'mroo':'b6ebw4c6al', 'bass':'3d6596eh4g', 'hmng':'ha2hg6d5b7', 'miao':'cb32gtbj58', 'tang':'rkw5m9sm64', 'nshu':'v39xawqg64', 'dupl':'sbhfvtwqkl', 'mend':'2874g2ehc8', 'adlm':'llp3cqd7gg', 'hani':'tsps57x35g', 'mede':'evyd5v7ebg', 'sogd':'xjh6av9y5z', 'sogo':'u9szp2wg4g', 'dogr':'ujs77ahv7k', 'gong':'r3u3b4rjy9', 'rogh':'mj3a6n78t2', 'maka':'wj3ak6u5s2', 'jpan':'lrnzlkagyq', 'elym':'bxzpxkpyu4', 'hmnp':'f6vf3vzlls', 'wcho':'besbhg4q95', 'nand':'pn37qqd7m4'
 }
 
+
+// chapter numbers in Unicode Standard - should be checked after each release
 var chapters = { 
 'latn':'07', 'grek':'07', 'copt':'07', 'cyrl':'07', 'glag':'07', 'armn':'07', 'geor':'07',
 'lina':'08', 'linb':'08', 'cprt':'08', 'lyci':'08', 'cari':'08', 'lydi':'08', 'ital':'08', 'runi':'08','hung':'08', 'goth':'08', 'elba':'08', 'aghb':'08', 'perm':'08',  'ogam':'08', 'shaw':'08',
@@ -283,13 +360,7 @@ var chapters = {
 'dupl':'21', 'sutton_signwriting':'21', 'xphais':'22', 
 }
 
-var OSDefaultFontsSet = new Set(['arab','armn','beng','cans','cher','deva','ethi','geor','gujr','guru','hebr','jpan','knda','khmr','hang','laoo','mlym','mong','mymr','talu','nkoo','orya','osma','phag','sinh','syrc','tale','taml','telu','thaa','thai','tibt','tfng','vaii','yiii'])
 
-var typographyDocSet =  new Set(['arab','hani','ethi','deva','jpan','hang','tibt'])
-
-var w3cTypographySet =  new Set(['arab','hani','ethi','hebr','deva','jpan','hang','latn','mong','thai','tibt'])
-
-var w3cTypeSampleSet =  new Set(['arab','hani','cyrl','ethi','grek','hebr','jpan','hang','mong','deva','thai','tibt'])
 
 var blockStart = { 
 'basic_latin':'0000', 'latin-1_supplement':'0080', 'latin_extended-a':'0100', 'latin_extended-b':'0180', 'ipa_extensions':'0250', 'spacing_modifier_letters':'02B0', 'combining_diacritical_marks':'0300', 'greek_and_coptic':'0370', 'cyrillic':'0400', 'cyrillic_supplement':'0500', 'armenian':'0530', 'hebrew':'0590', 'arabic':'0600', 'syriac':'0700', 'arabic_supplement':'0750', 'thaana':'0780', 'nko':'07C0', 'samaritan':'0800', 'mandaic':'0840', 'syriac_supplement':'0860', 'arabic_extended-a':'08A0', 'devanagari':'0900', 'bengali':'0980', 'gurmukhi':'0A00', 'gujarati':'0A80', 'oriya':'0B00', 'tamil':'0B80', 'telugu':'0C00', 'kannada':'0C80', 'malayalam':'0D00', 'sinhala':'0D80', 'thai':'0E00', 'lao':'0E80', 'tibetan':'0F00', 'myanmar':'1000', 'georgian':'10A0', 'hangul_jamo':'1100', 'ethiopic':'1200', 'ethiopic_supplement':'1380', 'cherokee':'13A0', 'unified_canadian_aboriginal_syllabics':'1400', 'ogham':'1680', 'runic':'16A0', 'tagalog':'1700', 'hanunoo':'1720', 'buhid':'1740', 'tagbanwa':'1760', 'khmer':'1780', 'mongolian':'1800', 'unified_canadian_aboriginal_syllabics_extended':'18B0', 'limbu':'1900', 'tai_le':'1950', 'new_tai_lue':'1980', 'khmer_symbols':'19E0', 'buginese':'1A00', 'tai_tham':'1A20', 'combining_diacritical_marks_extended':'1AB0', 'balinese':'1B00', 'sundanese':'1B80', 'batak':'1BC0', 'lepcha':'1C00', 'ol_chiki':'1C50', 'cyrillic_extended-c':'1C80', 'sundanese_supplement':'1CC0', 'vedic_extensions':'1CD0', 'phonetic_extensions':'1D00', 'phonetic_extensions_supplement':'1D80', 'combining_diacritical_marks_supplement':'1DC0', 'latin_extended_additional':'1E00', 'greek_extended':'1F00', 'general_punctuation':'2000', 'superscripts_and_subscripts':'2070', 'currency_symbols':'20A0', 'combining_diacritical_marks_for_symbols':'20D0', 'letterlike_symbols':'2100', 'number_forms':'2150', 'arrows':'2190', 'mathematical_operators':'2200', 'miscellaneous_technical':'2300', 'control_pictures':'2400', 'optical_character_recognition':'2440', 'enclosed_alphanumerics':'2460', 'box_drawing':'2500', 'block_elements':'2580', 'geometric_shapes':'25A0', 'miscellaneous_symbols':'2600', 'dingbats':'2700', 'miscellaneous_mathematical_symbols-a':'27C0', 'supplemental_arrows-a':'27F0', 'braille_patterns':'2800', 'supplemental_arrows-b':'2900', 'miscellaneous_mathematical_symbols-b':'2980', 'supplemental_mathematical_operators':'2A00', 'miscellaneous_symbols_and_arrows':'2B00', 'glagolitic':'2C00', 'latin_extended-c':'2C60', 'coptic':'2C80', 'georgian_supplement':'2D00', 'tifinagh':'2D30', 'ethiopic_extended':'2D80', 'cyrillic_extended-a':'2DE0', 'supplemental_punctuation':'2E00', 'cjk_radicals_supplement':'2E80', 'kangxi_radicals':'2F00', 'ideographic_description_characters':'2FF0', 'cjk_symbols_and_punctuation':'3000', 'hiragana':'3040', 'katakana':'30A0', 'bopomofo':'3100', 'hangul_compatibility_jamo':'3130', 'kanbun':'3190', 'bopomofo_extended':'31A0', 'cjk_strokes':'31C0', 'katakana_phonetic_extensions':'31F0', 'enclosed_cjk_letters_and_months':'3200', 'cjk_compatibility':'3300', 'cjk_unified_ideographs_extension_a':'3400', 'yijing_hexagram_symbols':'4DC0', 'cjk_unified_ideographs':'4E00', 'yi_syllables':'A000', 'yi_radicals':'A490', 'lisu':'A4D0', 'vai':'A500', 'cyrillic_extended-b':'A640', 'bamum':'A6A0', 'modifier_tone_letters':'A700', 'latin_extended-d':'A720', 'syloti_nagri':'A800', 'common_indic_number_forms':'A830', 'phags-pa':'A840', 'saurashtra':'A880', 'devanagari_extended':'A8E0', 'kayah_li':'A900', 'rejang':'A930', 'hangul_jamo_extended-a':'A960', 'javanese':'A980', 'myanmar_extended-b':'A9E0', 'cham':'AA00', 'myanmar_extended-a':'AA60', 'tai_viet':'AA80', 'meetei_mayek_extensions':'AAE0', 'ethiopic_extended-a':'AB00', 'latin_extended-e':'AB30', 'cherokee_supplement':'AB70', 'meetei_mayek':'ABC0', 'hangul_syllables':'AC00', 'hangul_jamo_extended-b':'D7B0', 'high_surrogates':'D800', 'high_private_use_surrogates':'DB80', 'low_surrogates':'DC00', 'private_use_area':'E000', 'cjk_compatibility_ideographs':'F900', 'alphabetic_presentation_forms':'FB00', 'arabic_presentation_forms-a':'FB50', 'variation_selectors':'FE00', 'vertical_forms':'FE10', 'combining_half_marks':'FE20', 'cjk_compatibility_forms':'FE30', 'small_form_variants':'FE50', 'arabic_presentation_forms-b':'FE70', 'halfwidth_and_fullwidth_forms':'FF00', 'specials':'FFF0', 'linear_b_syllabary':'10000', 'linear_b_ideograms':'10080', 'aegean_numbers':'10100', 'ancient_greek_numbers':'10140', 'ancient_symbols':'10190', 'phaistos_disc':'101D0', 'lycian':'10280', 'carian':'102A0', 'coptic_epact_numbers':'102E0', 'old_italic':'10300', 'gothic':'10330', 'old_permic':'10350', 'ugaritic':'10380', 'old_persian':'103A0', 'deseret':'10400', 'shavian':'10450', 'osmanya':'10480', 'osage':'104B0', 'elbasan':'10500', 'caucasian_albanian':'10530', 'linear_a':'10600', 'cypriot_syllabary':'10800', 'imperial_aramaic':'10840', 'palmyrene':'10860', 'nabataean':'10880', 'hatran':'108E0', 'phoenician':'10900', 'lydian':'10920', 'meroitic_hieroglyphs':'10980', 'meroitic_cursive':'109A0', 'kharoshthi':'10A00', 'old_south_arabian':'10A60', 'old_north_arabian':'10A80', 'manichaean':'10AC0', 'avestan':'10B00', 'inscriptional_parthian':'10B40', 'inscriptional_pahlavi':'10B60', 'psalter_pahlavi':'10B80', 'old_turkic':'10C00', 'old_hungarian':'10C80', 'rumi_numeral_symbols':'10E60', 'brahmi':'11000', 'kaithi':'11080', 'sora_sompeng':'110D0', 'chakma':'11100', 'mahajani':'11150', 'sharada':'11180', 'sinhala_archaic_numbers':'111E0', 'khojki':'11200', 'multani':'11280', 'khudawadi':'112B0', 'grantha':'11300', 'newa':'11400', 'tirhuta':'11480', 'siddham':'11580', 'modi':'11600', 'mongolian_supplement':'11660', 'takri':'11680', 'ahom':'11700', 'warang_citi':'118A0', 'zanabazar_square':'11A00', 'soyombo':'11A50', 'pau_cin_hau':'11AC0', 'bhaiksuki':'11C00', 'marchen':'11C70', 'masaram_gondi':'11D00', 'cuneiform':'12000', 'cuneiform_numbers_and_punctuation':'12400', 'early_dynastic_cuneiform':'12480', 'egyptian_hieroglyphs':'13000', 'anatolian_hieroglyphs':'14400', 'bamum_supplement':'16800', 'mro':'16A40', 'bassa_vah':'16AD0', 'pahawh_hmong':'16B00', 'miao':'16F00', 'ideographic_symbols_and_punctuation':'16FE0', 'tangut':'17000', 'tangut_components':'18800', 'kana_supplement':'1B000', 'kana_extended-a':'1B100', 'nushu':'1B170', 'duployan':'1BC00', 'shorthand_format_controls':'1BCA0', 'byzantine_musical_symbols':'1D000', 'musical_symbols':'1D100', 'ancient_greek_musical_notation':'1D200', 'tai_xuan_jing_symbols':'1D300', 'counting_rod_numerals':'1D360', 'mathematical_alphanumeric_symbols':'1D400', 'sutton_signwriting':'1D800', 'glagolitic_supplement':'1E000', 'mende_kikakui':'1E800', 'adlam':'1E900', 'arabic_mathematical_alphabetic_symbols':'1EE00', 'mahjong_tiles':'1F000', 'domino_tiles':'1F030', 'playing_cards':'1F0A0', 'enclosed_alphanumeric_supplement':'1F100', 'enclosed_ideographic_supplement':'1F200', 'miscellaneous_symbols_and_pictographs':'1F300', 'emoticons':'1F600', 'ornamental_dingbats':'1F650', 'transport_and_map_symbols':'1F680', 'alchemical_symbols':'1F700', 'geometric_shapes_extended':'1F780', 'supplemental_arrows-c':'1F800', 'supplemental_symbols_and_pictographs':'1F900', 'cjk_unified_ideographs_extension_b':'20000', 'cjk_unified_ideographs_extension_c':'2A700', 'cjk_unified_ideographs_extension_d':'2B740', 'cjk_unified_ideographs_extension_e':'2B820', 'cjk_compatibility_ideographs_supplement':'2F800', 'tags':'E0000', 'variation_selectors_supplement':'E0100', 'supplementary_private_use_area-a':'F0000', 'supplementary_private_use_area-b':'100000',  'medefaidrin':'16E40','sogdian':'10F30', 'old_sogdian':'10F00', 'dogra':'11800', 'gunjala_gondi':'11D60', 'hanifi_rohingya':'10D00', 'makasar':'11EE0', 'georgian_extended':'1C90', 'elymaic':'10FE0', 'nyiakeng_puachue_hmong':'1E100', 'wancho':'1E2C0', 'nandinagari':'119A0'
@@ -298,24 +369,60 @@ var blockStart = {
 
 
 // NOTES
+
+/*
+
+ahom:{ script:"Ahom", code:"Ahom", name:"Ahom (other names)"
+// script: for main title & menu & some links, it is the plain script name
+// code: initial cap, used for scriptsource link
+// use name also if there are alternative names
+dates:"15thC – today", start:"1400", end:"", current_usage:""
 // current_usage should be empty if the script is in active use by a large number of people, or if the script isn't in use today
 // if not, use one of the following labels: limited, endangered, liturgical, notation
 // the end field should be empty for scripts that are not historic
 // script dates mostly from http://www.worldswritingsystems.org/
+status:""
+// allows for more information about the script's use, for modern scripts
+origin:"South Asia", current_usage:"endangered",
+info:{ wikipedia:"Ahom_alphabet", omniglot:"ahom" },
+// link end text, unicode & scriptsource info is obtained elsewhere, this is just for wikipedia & omniglot
+// occasionally, if it doesn't use a standard url, omniglot may contain a full url
+local: 	[{ name:"Introduction to Indic Scripts", url:"indic-overview" }
+		],
+// local: other useful descriptions on r12a site
+charts:[ "Ahom" ],
+layout:[	]
+},
 
 
+*/
         
 var linkDB = { 
 
-ahom:{ script:"Ahom", code:"Ahom", dates:"15thC – today", start:"1400", end:"", origin:"South Asia", current_usage:"endangered",
+
+deva:
+{ script:"Devanagari", code:"Deva", name:"", 
+dates:"11thC – today", start:"1100", end:"", 
+origin:"South Asia", current_usage:"",
+info:	{ wikipedia:"Devanagari", omniglot:"devanagari" }, 
+local: 	[{ name:"Introduction to Indic Scripts", url:"indic-overview" }
+		],
+charts:	["Devanagari", "Devanagari Extended", "Vedic Extensions" ],
+layout:	[]
+},
+
+
+
+ahom:{ script:"Ahom", code:"Ahom", 
+dates:"15thC – today", start:"1400", end:"", current_usage:"endangered", 
+status: "",
+origin:"South Asia",
 info:{ scriptsource:"Ahom", wikipedia:"Ahom_alphabet", omniglot:"ahom" }, 
 local: [	],
-unicode:{ core:"ch15", historical:"ky6s63f7fx" }, 
 charts:[ "Ahom" ],
-pickers:[	],
-fontkey:[	],
 layout:[	]
 },
+  
 
 adlm:{ script:"Adlam", code:"Adlm", name:"", dates:"1980s – today", start:"1980", end:"", origin:"Africa", current_usage:"",
 info:{ wikipedia:"Fula_alphabets#Adlam_alphabet", omniglot:"adlam" }, 
@@ -329,8 +436,10 @@ other:[		]
 },
 	   
 
-arab:{ script:"Arabic",  code:"Arab", dates:"6thC – today", start:"500", end:"", origin:"West Asia", current_usage:"",
-info:{ scriptsource:"Arab", wikipedia:"Arabic_script", omniglot:"arabic" }, 
+arab:{ script:"Arabic",  code:"Arab", 
+dates:"6thC – today", start:"500", end:"", current_usage:"",
+origin:"West Asia", 
+info:{ wikipedia:"Arabic_script", omniglot:"arabic" }, 
 local:[ ],
 unicode:{ core:"ch09", historical:"hqr6rc9md5" },
 charts:[ "Arabic", "Arabic Supplement", "Arabic Extended-A", "Arabic Presentation Forms-A", "Arabic Presentation Forms-B" ],
@@ -1077,22 +1186,6 @@ cakm:{ script:"Chakma", code:"Cakm", name:"", dates:"8thC – today", start:"700
 	pickers:[	
 				],
 	fontkey:[	
-				],
-	layout:[	
-				]
-	},
-  
-deva:{ script:"Devanagari", code:"Deva", name:"", dates:"11thC – today", start:"1100", end:"", origin:"South Asia", current_usage:"",
-	info:{ 		wikipedia:"Devanagari", omniglot:"devanagari" }, 
-	local: [	{ name:"Introduction to Indic Scripts", url:"indic-overview" }
-				],
-	unicode:{ 	}, 
-	charts:[	"Devanagari", "Devanagari Extended", "Vedic Extensions" ],
-	pickers:[	{ name:"Devanagari", url:"devanagari" },
-				{ name:"Hindi", url:"hindi" },
-				{ name:"Kashmiri", url:"kashmiri" }
-				],
-	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-south-asian.html#devanagari" }
 				],
 	layout:[	
 				]
@@ -2455,3 +2548,91 @@ sogd:{ script:"Sogdian", code:"Sogd", name:"", dates:"7thC – 14thC", start:"60
 }
 
 
+// OBSOLETE STUFF FOLLOWS
+
+// OBSOLETE ??
+var scriptNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cans', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'jpan', 'khmr', 'laoo', 'lana', 'lisu', 'mand', 'mymr', 'nkoo', 'osge', 'sinh', 'sund', 'syrc', 'taml', 'tavt', 'telu', 'thaa', 'thai', 'tibt', 'tfng'])
+
+// OBSOLETE
+var fontListerSet= new Set(['adlm', 'armn', 'arab', 'bali', 'bass', 'beng','bugi', 'buhd', 'cans', 'chakm', 'cher', 'copt', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'gong', 'guru', 'hani', 'hang', 'hebr', 'java', 'jpan', 'khmr', 'laoo', 'lana', 'lisu', 'mand', 'mymr', 'nkoo', 'osge', 'sinh', 'sund', 'syrc', 'taml', 'tavt', 'telu', 'thaa', 'thai', 'tibt', 'tfng'])
+
+// OBSOLETE ??
+var charNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cans', 'cher', 'cyrl', 'deva', 'ethi', 'geor', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'jpan', 'khmr','laoo', 'lana', 'maka', 'mand', 'mlym', 'mong', 'mymr', 'nkoo', 'osge', 'sinh', 'sund', 'syrc', 'tale', 'talu', 'tavt', 'taml', 'telu', 'thaa', 'thai', 'tibt', 'tfng', 'vaii'])
+
+
+// OBSOLETE !
+var charNotesList = {
+    'adlm':'adlam/block',
+    'armn':'armenian/block',
+    'arab':'arabic/block', 
+    'bali':'balinese/block', 
+    'bass':'bassavah/block', 
+    'beng':'bengali/block',
+    'bugi':'buginese/block',
+    'cans':'cans/block',
+    'cher':'cherokee/block',
+    'cyrl':'cyrillic/block',
+    'deva':'devanagari/block',
+    'ethi':'ethiopic/block',
+    'geor':'georgian/block',
+    'grek':'greek/block',
+    'gujr':'gujarati/block',
+    'guru':'gurmukhi/block',
+    'hebr':'hebrew/block',
+    'java':'javanese/block',
+    'khmr':'khmer/block',
+    'lana':'taitham/block',
+    'laoo':'lao/block',
+    'lisu':'lisu/block',
+    'latn':'latin/block',
+    'maka':'makasar/block',
+    'mand':'mandaic/block',
+    'mlym':'malayalam/block',
+    'mong':'mongolian/block',
+    'mymr':'myanmar/block',
+    'nkoo':'nko/block',
+    'osge':'osage/block',
+    'runr':'runic/block',
+    'sinh':'sinhala/block',
+    'sund':'sundanese/block',
+    'syrc':'syriac/block',
+    'tale':'taile/block',
+    'talu':'newtailue/block',
+    'taml':'tamil/block',
+    'telu':'telugu/block',
+    'tavt':'taiviet/block',
+    'thaa':'thaana/block',
+    'thai':'thai/block',
+    'tibt':'tibetan/block',
+    'tfng':'tifinagh/block',
+    'vaii':'vai/block'
+    }
+
+
+
+
+// orthography comparison table (/scripts/featurelist/)  OBSOLETE !
+var compChartSet= new Set(['adlm','arab','armn', 'bali', 'beng', 'bugi', 'cans', 'cher', 'cyrl', 'deva', 'ethi', 'grek', 'gujr', 'guru', 'hani', 'hang', 'hebr', 'java', 'jpan', 'knda', 'khmr', 'laoo', 'latn', 'mlym', 'mand', 'mong', 'mymr', 'nkoo', 'orya', 'sinh', 'sund', 'syrc', 'taml', 'telu', 'thaa', 'thai', 'tibt', 'tfng', 'cans'])
+
+
+
+
+var scriptSummarySet = new Set(['arab','cyrl','deva','grek','hani','hang','hebr','jpan','thai','tibt'])
+
+var googleFontSet= new Set(['arab','armn','avst','bali','bamum','batk','beng','brah','bugi','buhd','cans','cari','cham','cher','copt','xsux','cprt','dsrt','deva','egyp','ethi','geor','glag','goth','gujr','guru','hano','hebr','armi','inscriptional_pahlavi','phli','java','kait','knda','kali','khar','khmr','laoo','lepcha','limb','linb','lisu','lyci','lydin','mlym','mand','mtei','mong','mymr','nkoo','talu','ogam','olck','ital','xpeo','sarb','orhk','orya','osge', 'osma','phag','phnx','rjng','runi','samr','saur','shaw','sinh','sund','sylo','syrc','tglg','tagb','tale','lana','tavt','taml','telu','thaa','thai','tibt','tfng','ugar','vaii','yiii'])
+
+var googleEASet= new Set([])
+
+var gouFonts = { 'grek':'Greek', 'armn':'Armenian', 'hebr':'Hebrew', 'arab':'Arabic', 'syrc':'Syriac', 'thaa':'Thaana', 'nkoo':'NKo', 'deva':'Devanagari', 'beng':'Bengali', 'guru':'Gurmukhi', 'gujr':'Gujarati', 'orya':'Oriya', 'taml':'Tamil', 'telu':'Telugu', 'knda':'Kannada', 'mlym':'Malayalam', 'sinh':'Sinhala', 'thai':'Thai', 'laoo':'Lao', 'tibt':'Tibetan', 'mymr':'Myanmar', 'georgian':'Georgian', 'ethiopic':'Ethiopic', 'cherokee':'Cherokee', 'ucas':'Canadian', 'ogham':'Ogham', 'runr':'Runic', 'tagalog':'Tagalog', 'hanunoo':'Hanunoo', 'buhid':'Buhid', 'tagb':'Tagbanwa', 'khmr':'Khmer', 'mong':'Mongolian', 'limb':'Limbu', 'tale':'TaiLe', 'bugi':'Buginese', 'glag':'Glagolitic', 'copt':'Coptic', 'tfng':'Tifinagh', 'jpan':'Japanese', 'yiii':'Yi', 'sylo':'SylotiNagri', 'phag':'Phagspa', 'hang':'Korean', 'linb':'LinearBSyllabary', 'xphais':'Phaistos', 'ital':'OldItalic', 'goth':'Gothic', 'ugar':'Ugaritic', 'dsrt':'Deseret', 'shaw':'Shavian', 'osma':'Osmanya','lina':'Linear_A', 'cprt':'Cypriot', 'phnx':'Phoenician', 'khar':'Kharoshthi', 'ahom':'Ahom'
+}
+
+
+var OSDefaultFontsSet = new Set(['arab','armn','beng','cans','cher','deva','ethi','geor','gujr','guru','hebr','jpan','knda','khmr','hang','laoo','mlym','mong','mymr','talu','nkoo','orya','osma','phag','sinh','syrc','tale','taml','telu','thaa','thai','tibt','tfng','vaii','yiii'])
+
+var typographyDocSet =  new Set(['arab','hani','ethi','deva','jpan','hang','tibt'])
+
+var w3cTypographySet =  new Set(['arab','hani','ethi','hebr','deva','jpan','hang','latn','mong','thai','tibt'])
+
+var w3cTypeSampleSet =  new Set(['arab','hani','cyrl','ethi','grek','hebr','jpan','hang','mong','deva','thai','tibt'])
+
+var examplePhraseSet = new Set(['arab','armn','cans','cher','cyrl','deva','ethi','grek','guru','hani','hebr','latn','khmr','hang','mong','mymr','telu','tfng','thai','tibt'])
