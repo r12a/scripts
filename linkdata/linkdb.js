@@ -9,6 +9,7 @@ var fontLister = {
 			], 
     'armn':[['Armenian','armn']],
     'bali':[['Balinese', 'bali']], 
+    'bamu':[['Bamum', 'bamu']], 
     'bass':[['Bassa Vah', 'bass']], 
     'beng':[['Bengali', 'beng']],
     'bugi':[['Buginese', 'bugi']],
