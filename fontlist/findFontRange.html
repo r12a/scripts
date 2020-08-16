@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+<meta charset="utf-8"/>
+<title>getImage</title>
+<link rel="stylesheet" href="../../shared/style/docs.css" />
+	
+
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/phrasedb/db.js"></script>
+
+<style>
+.legend { font-family: Raleway; }
+</style>
+</head>
+
+<body>
+<!--header>
+    <div id="header-boilerplate"></div>
+	<script>document.getElementById('header-boilerplate').innerHTML = bp_header('/images/world.gif','docs');</script>
+</header-->
+
+<h1>Find font range</h1>
+
+<p>Checks what scripts are supported by a font.</p>
+
+<script>
+function showFont () {
+	var fontname = document.getElementById('in').value
+
+	document.getElementById('fontLarge').style.fontFamily = '"'+fontname+'", "Unicode BMP Fallback SIL", "adobe notdef"'
+	}
+</script>
+
+<p>Font name: <input type="text" id="in" onchange="showFont()"> <button onClick="showFont()">GO</button></p>
+
+
+<div dir="ltr" id="fontLarge" style="text-align: start; font-size: 24px; width:100%; line-height: 1.2; vertical-align: middle; color:black; white-space: nowrap;">
+
+<p><span class="legend">Adlam</span> 𞤘𞤮𞥅𞤼𞤮</p>
+<p><span class="legend">Arabic</span> <span>متساوين</span></p>
+<p><span class="legend">Armenian</span> <span>ծնվում</span></p>
+<p><span class="legend">Balinese</span> <span>ᬫᬓᬲᬫᬶᬫᬦᬸ</span></p>
+<p><span class="legend">Bamum</span> <span>ꛦ-ꚳꛊꚤ</span></p>
+<p><span class="legend">Bassa Vah</span> <span>𖫞𖫫𖫰 𖫐𖫭𖫱𖫐</span></p>
+<p><span class="legend">Bengali</span> <span>স্বাধীনভাবে</span></p>
+<p><span class="legend">Buginese</span> <span>ᨍᨍᨗᨕᨂᨗ</span></p>
+<p><span class="legend">Buhid</span> <span>ᝃᝊᝓᝌᝓᝊᝓᝌᝓ</span></p>
+<p><span class="legend">Canadian</span> <span>ᐃᓅᔪᓕᒫᑦ </span></p>
+<p><span class="legend">Latin</span> <span>hello there</span></p>
+
+
+
+</div>
+
+
+<script>
+var scriptSelection = ['yo', 'fuf-adlm', 'arb', 'hy', 'ban', 'bax', 'bsq', 'bn', 'bug', 'bku-buhd', 'ike', 'ccp', 'chr', 'zh-hans', 'zh-hant', 'cop', 'ru', 'hi', 'am', 'ka', 'el', 'gu', 'gon', 'pa', 'hnn', 'he', 'ja', 'jv', 'ka', 'km', 'ko', 'lo', 'lep', 'lif', 'lis', 'mak', 'ml', 'mid', 'mni', 'men', 'khk', 'my', 'khb', 'nqo', 'sat', 'ory', 'osa', 'so-osma', 'non-runr', 'si', 'su', 'aii', 'tdd', 'tbw', 'kkh', 'blt', 'ta', 'te', 'dv', 'th', 'bo', 'zgh', 'vai', 'ii']
+
+var out = ''
+for (i=0;i<scriptSelection.length;i++) {
+	console.log(scriptSelection[i])
+	out += '<p><span class="legend">'+phraseDB[scriptSelection[i]].name+'</span> <span>'+phraseDB[scriptSelection[i]].text+'</span></p>'
+	}
+document.getElementById('fontLarge').innerHTML = out
+</script>
+
+
+</body>
+</html>
