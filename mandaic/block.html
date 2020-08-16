@@ -8,25 +8,24 @@
 <link rel="stylesheet" href="../common/block-style.css" />
 <link rel="stylesheet" href="local.css" />
 
+<script src="../../shared/fontdb/db.js"> </script>
+<script src="../../shared/fontdb/managefonts.js"></script>
+
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
-<script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
 <script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
+<script src="mid-translit.js">  </script>
 
 <script src="../../uniview/descriptions.js"></script> 
 <script src="../../uniview/u.js"></script> 
 
-<script src="../../shared/fontlists/mandaic.js"> </script>
-<script src="mid-translit.js">  </script>
-
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 <style id="includeStyles"></style>
 <style>
@@ -57,29 +56,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
   <div id="fontsetting" class="closed">
-    <h2 class="notoc"><a id="fonts">Fonts</a></h2>
-    <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-     <p>Set font for large boxes<br/>
-      <select  id="slfontswitchfont" 
-onchange="var params = this.value.split(':');setBoxFont(params[0]);">
-      </select>
-      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
-    </p>
-   <p>Set font for examples<br/>
-      <select id="exfontswitchfont" 
-onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'nqo');">
-      </select>
-      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
-      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
-onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'nqo');" />
-    </p>
-    <p onclick="newfont=prompt('Enter the font name. (Only spaces, hyphens, underlines and alphanum allowed.)', '...'); addFontToLists(newfont, 'exfontswitchfont,slfontswitchfont');" style="cursor:pointer;">Add a font to these lists</p>
   </div>
 </aside>
 
 <div id="intro">
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->31 March, 2020<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->16 August, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -89,38 +71,29 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 <ul>
 <li><a href="../../uniview/?block=mandaic" target="_blank">Mandaic</a></li>
    </ul>
-   <p>The page also lists characters from the  <a href="../../uniview/?block=arabic" target="_blank">Arabic</a> block that are commonly used by  Mandaic.</p>
-<details class="supportdocs noprint instructions">
-<summary>Related pages</summary>
-<p class="leadin">Script summary page:</p>
-<ul>
-<li><a href="index" class="linkHighlight">Mandaic</a></li>
-</ul>
-<!--p class="leadin">Character notes:</p>
-<ul>
-<li><a href="../combining/block" class="linkHighlight">Combining characters</a></li>
-<li><a href="../arabic/block" class="linkHighlight">Arabic</a></li>
-</ul-->
-<p class="leadin">Character apps:</p>
-<ul>
-<li><a href="../../pickers/mandaic/" class="linkHighlight">Mandaic</a></li>
-</ul>
-<p class="leadin">Other:</p>
-<ul>
-<li><a class="linkHighlight" href="../links?iso=Mand">Script links pages</a></li>
-</ul>
-</details>
+<p>See also the companion document, <a href="." class="linkHighlight">Mandaic</a>, for a summary of the Mandaic script and its use for the Neo-Mandaic language.</p>
+<p>The page also lists characters from the  <a href="../../uniview/?block=arabic" target="_blank">Arabic</a> block that are commonly used by  Mandaic.</p>
+
+
+<p> Phonetic transcriptions should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
+
 
 
 <details>
-<summary class="instructions">About this page</summary>
-    <p class="instructions"><span class="leadin">Showing codepoints for examples.</span>If you click on example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
-<p class="instructions"><span class="leadin">Finding characters.</span> To find a character by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or its hex number in the <samp>Find</samp> control, bottom left.</p>
-    <p class="instructions"><span class="leadin">Fonts.</span> To view this page as intended, you need   Mandaic fonts.  The page comes with a  Noto Sans Mandaic webfont. Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system. </p>
-<p class="instructions">The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. If there is no glyph and you want to see what it looks like, click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
-    <p class="instructions"><span class="leadin">Language usage lists.</span> Information about languages that use these characters is taken from the list maintained for the <a href="../../app-charuse/">Character usage lookup</a> app. The list is not exhaustive.</p>
-<p class="instructions"><span class="leadin">References &amp; further information.</span> References are indicated by superscript letters, optionally followed by page numbers. Wherever possible, those contain direct links to the source material. When there is also an arrow → it is worth following the link for  additional information. The references are listed at the bottom of the page, but the links should take you to the exact location of the source, wherever possible.</p>
-    <p class="instructions"><span class="leadin">UniView.</span><a href="../../uniview/">UniView</a>'s notes feature pulls in information about characters from this page.</p>
+<summary class="instructions"><a href="../links?iso=Mand">Related pages</a>.</summary>
+</details>
+
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#charnotes">Other character notes</a>.</summary>
+</details>
+
+
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Mandaic','Neo-Mandaic'); return false;">About this page</a></summary>
+<div id="about"></div>
 <p id="charliststr" class="instructions"></p>
 </details>
 </section>
@@ -855,6 +828,7 @@ replaceStuff('Mandaic', 'mandaic', spreadsheet, '', 'mid', '', cols, false)
 <script>
 initialise('/scripts/mandaic/block','mandaic')
 autoTransliterate('mid')
+makeFontChanger('mid', 'mand', ["Noto Sans Mandaic WF"], '24px')
 </script>
 </body>
 </html>

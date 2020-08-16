@@ -9,13 +9,15 @@
 <link rel="stylesheet" href="../common/local.css" />
 <link rel="stylesheet" href="ha.css" />
 
+<script src="../../shared/fontdb/db.js"> </script>
+<script src="../../shared/fontdb/managefonts.js"></script>
+
 <script src="../../shared/scriptdb/hausab.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
-<script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
 <script src="../common/transliterate.js"></script>
@@ -26,8 +28,6 @@
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../common/egcode.js"></script>
 <script src="ha-examples.js"></script>
-
-<script src="../../shared/fontlists/latin.js"> </script>
 <script src="ha-translit.js">  </script>
 </head>
 
@@ -44,50 +44,13 @@
 <aside class="sidebar">
 <div id="toc"><!-- placeholder --></div>
 
- <div id="fontsetting" class="closed">
-  <h2 class="notoc"><a id="fonts">Fonts</a></h2>
-  <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-   <p>Set font for examples<br/>
-      <select id="exfontswitchfont" 
-onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'hi');">
-      </select>
-      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
-      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
-onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'hi');" />
-    </p>
-
-      <p>Set font for sample<br/>
-      <select  id="slfontswitchfont" 
-onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
-      </select>
-      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
-    </p>
-
-    <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
-	return false;">
-      <p>Change size:<br />
-        <input id="slider" type="range" min="12" max="100" step="1" value="32">
-        &#xA0; <span id="sizeIndicator">32px</span><br />
-        <input id="multiplier" type="hidden" value="1" />
-        Multiplier:
-        <input type="radio" name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
-        <label for="x1">1</label>
-        <input type="radio" name="step" id="x5" value="2"  onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
-        <label for="x5">2</label>
-        <input type="radio" name="step" id="x10" value="10"  onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
-        <label for="x10">10</label>
-      </p>
-    </form>
+<div id="fontsetting" class="closed">
 </div>
 </aside>
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->28-Jun-2020<!-- #EndDate -->
+  <!-- #BeginDate format:En2 -->16-Aug-2020<!-- #EndDate -->
 &bull; tags <a href="http://r12a.github.io/blog/index.php?tag=latin" title="Show all blog posts tagged with 'latin'">latin</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 
 
@@ -124,7 +87,9 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <h2 href="#sample">Sample</h2>
   
   
-<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.</p>
+<p class="instructions noprint">Select part of this sample text to show a
+list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="24" 
+oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">24px</span></p>
 
 <div id="freeText" dir="ltr" lang="ha" contenteditable="true">
 <p  title="UDHR." onMouseUp="showtext('freeText')" data-source="https://unicode.org/udhr/d/udhr_hau_NG.html">[Nigeria] Abin nufi ga ilimi shi ne: ya sama wa ɗan-adam jin daɗin rayuwa da ƙarfafa kiyayewa da hakkokinsa da muhimman abubuwan da ʼyancinsa ya ƙunsa. Ya kamata ilimi ya kawo fahimtar juna da ragowa da aminci tsakanin ƙasashe da tsakanin ʼyan-adam, kome launin fatarsu da addinin da suke bi, ya kuma ƙarfafa ƙoƙarin da Majalisar Ɗinkin Duniya take yi domin a sami zaman lafiya da kwanciyar hankali a duniya.</p>
@@ -927,6 +892,7 @@ alveolar</th>
 <script>
 initialiseSummary('/scripts/latin/block','ha','ha','latin/hausa')
 autoTransliterate('ha')
+makeFontChanger('ha', 'latn-ha', ["Gentium Plus WF"], '24px')
 </script>
 
 </html>

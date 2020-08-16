@@ -8,12 +8,14 @@
 <link rel="stylesheet" href="../common/block-style.css" />
 <link rel="stylesheet" href="local.css" />
 
+<script src="../../shared/fontdb/db.js"> </script>
+<script src="../../shared/fontdb/managefonts.js"></script>
+
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
-<script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
 <script src="../common/transliterate.js"></script>
@@ -21,12 +23,11 @@
 <script src="../../app-charuse/langs.js"></script>
 <script src="../common/egcode.js"></script>
 <script src="examples.js"></script>
+<script src="el-translit.js">  </script>
 
 <script src="../../uniview/descriptions.js"></script> 
 <script src="../../uniview/u.js"></script> 
 
-<script src="../../shared/fontlists/grek.js"> </script>
-<script src="el-translit.js">  </script>
 
 <style id="includeStyles"></style>
 <style>
@@ -55,23 +56,6 @@
   
   
   <div id="fontsetting" class="closed">
-    <h2 class="notoc"><a id="fonts">Fonts</a></h2>
-    <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-     <p>Set font for large boxes<br/>
-      <select  id="slfontswitchfont" 
-onchange="var params = this.value.split(':');setBoxFont(params[0]);">
-      </select>
-      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
-    </p>
-   <p>Set font for Greek examples<br/>
-      <select id="exfontswitchfont" 
-onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'el');">
-      </select>
-      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
-      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
-onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'el');" />
-    </p>
-    <p onclick="newfont=prompt('Enter the font name. (Only spaces, hyphens, underlines and alphanum allowed.)', '...'); addFontToLists(newfont, 'exfontswitchfont,slfontswitchfont');" style="cursor:pointer;">Add a font to these lists</p>
   </div>
 </aside>
 
@@ -79,7 +63,7 @@ onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->27 June, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->16 August, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -1490,6 +1474,7 @@ addExamples('el')
 <script>
 initialise('/scripts/greek/block','greek')
 autoTransliterate('el')
+makeFontChanger('el', 'grek', ["Gentium Plus WF"], '24px')
 </script>
 </body>
 </html>

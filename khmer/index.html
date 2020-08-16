@@ -10,13 +10,15 @@
 <link rel="stylesheet" href="../common/local.css" />
 <link rel="stylesheet" href="km.css" />
 
+<script src="../../shared/fontdb/db.js"> </script>
+<script src="../../shared/fontdb/managefonts.js"></script>
+
 <script src="../../shared/scriptdb/khmer.js"> </script>
 <script src="/shared/code/boilerplate.js"></script>
 <script src="/shared/code/toc_2020.js"></script>
 <script src="/shared/code/all-names.js"></script>
 <script src="/shared/code/character_conversion.js"></script>
 <script src="/shared/code/show_codepoints.js"></script>
-<script src="/shared/fontlists/manage.js"></script>
 <script src="/shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
 <script src="../common/transliterate.js"></script>
@@ -27,9 +29,7 @@
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../common/egcode.js"></script>
 <script src="examples.js"></script>
-
 <script src="km-translit.js">  </script>
-<script src="/shared/fontlists/khmer.js"> </script>
 </head>
 
 <body>
@@ -46,49 +46,12 @@
 <h2 class="notoc flush"><a id="tochead">Contents</a></h2>
 <div id="toc"><!-- placeholder --></div>
         
- <div id="fontsetting" class="closed">
-  <h2 class="notoc"><a id="fonts">Fonts</a></h2>
-  <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-   <p>Set font for examples<br/>
-      <select id="exfontswitchfont" 
-onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'km');">
-      </select>
-      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
-      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
-onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'km');" />
-    </p>
-
-      <p>Set font for sample<br/>
-      <select  id="slfontswitchfont" 
-onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
-      </select>
-      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
-    </p>
-
-    <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
-	return false;">
-      <p>Change size:<br />
-        <input id="slider" type="range" min="12" max="100" step="1" value="32">
-        &#xA0; <span id="sizeIndicator">32px</span><br />
-        <input id="multiplier" type="hidden" value="1" />
-        Multiplier:
-        <input type="radio" name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
-        <label for="x1">1</label>
-        <input type="radio" name="step" id="x5" value="2"  onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
-        <label for="x5">2</label>
-        <input type="radio" name="step" id="x10" value="10"  onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
-        <label for="x10">10</label>
-      </p>
-    </form>
+<div id="fontsetting" class="closed">
 </div>
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->22 July, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->16 August, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
   
@@ -127,7 +90,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <h2>Sample (Khmer)</h2>
   
 
-  <p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.</p>
+<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
+
 <div id="freeText" dir="ltr" lang="km" data-target="c" data-base="/scripts/khmer/block" data-source="http://unicode.org/udhr/d/udhr_khm.html/">
 <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">មាត្រា ១ មនុស្សទាំងអស់ កើតមកមានសេរីភាព និងសមភាព ក្នុងផ្នែកសេចក្ដីថ្លៃថ្នូរនិងសិទ្ធិ។ មនុស្ស មានវិចារណញ្ញាណនិងសតិសម្បជញ្ញៈជាប់ពីកំណើត ហើយគប្បីប្រព្រឹត្ដចំពោះគ្នាទៅវិញទៅមក ក្នុង ស្មារតីភាតរភាពជាបងប្អូន។</p>
 <p title="UDHR, article 2" onMouseUp="showtext('freeText')">មាត្រា ២ មនុស្សម្នាក់ៗ អាចប្រើប្រាស់សិទ្ធិនិងសេរីភាពទាំងអស់ ដែលមានចែងក្នុងសេចក្ដីប្រកាសនេះ ដោយគ្មានការប្រកាន់បែងចែកបែបណាមួយ មានជាអាទិ៍ ពូជសាសន៍ ពណ៌សម្បុរ ភេទ ភាសា សាសនា មតិនយោបាយ ឬមតិផ្សេងៗទៀត ដើមកំណើតជាតិ ឬសង្គម ទ្រព្យសម្បត្ដិ កំណើត ឬស្ថានភាព ដទៃៗទៀតឡើយ។ លើសពីនេះ មិនត្រូវធ្វើការប្រកាន់បែងចែកណាមួយ ដោយសំអាងទៅលើឋានៈខាងនយោបាយ ខាងដែនសមត្ថកិច្ច ឬខាងអន្ដរជាតិរបស់ប្រទេស ឬដែនដីដែលបុគ្គលណាម្នាក់រស់នៅ ទោះបីជាប្រទេស ឬដែនដីនោះឯករាជ្យក្ដី ស្ថិតក្រោមអាណាព្យាបាលក្ដី ឬគ្មានស្វ័យគ្រប់គ្រងក្ដី ឬស្ថិតក្រោមការដាក់ កម្រិតផ្សេងទៀតណាមួយ ដល់អធិបតេយ្យភាពក្ដី។</p>
@@ -2731,6 +2695,7 @@ runCharCount('.deprecatedBox', 'deprecatedCharList')
 <script>
 initialiseSummary('/scripts/khmer/block','km','km','khmer')
 autoTransliterate('km')
+makeFontChanger('km', 'khmr', ["Khmer OS Battambang WF", "Noto Serif Khmer WF"], '24px')
 </script>
 
 </body>

@@ -9,12 +9,14 @@
 <link rel="stylesheet" href="../common/block-style.css" />
 <link rel="stylesheet" href="local.css" />
 
+<script src="../../shared/fontdb/db.js"> </script>
+<script src="../../shared/fontdb/managefonts.js"></script>
+
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
-<script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
 <script src="../common/transliterate.js"></script>
@@ -36,7 +38,6 @@
 <script src="ug-translit.js">  </script>
 <script src="ur-translit.js">  </script>
 <script src="ks-translit.js">  </script>
-<script src="../../shared/fontlists/arabic.js"> </script>
 
 
 <style id="includeStyles"></style>
@@ -70,38 +71,13 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
   </nav>
   
   
-  <div id="fontsetting" class="closed">
-    <h2 class="notoc"><a id="fonts">Fonts</a></h2>
-    <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-    <p>Set  font for the large box<br/>
-      <select  id="slfontswitchfont" 
-onchange="var params = this.value.split(':');setBoxFont(params[0]);">
-      </select>
-      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
-    </p>
-    <p>Set font for Arabic examples<br/>
-      <select id="exfontswitchfont" 
-onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'ar');">
-      </select>
-      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
-      <input id="exfontswitchsize" type="number" value="28" style="width: 30px;"
-onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'ar');" />
-    </p>
-    <p>Set font for Urdu examples<br/>
-      <select id="ex2fontswitchfont" 
-onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#ex2fontswitchsize').value+'px', 'ur');">
-      </select>
-      <script>document.getElementById('ex2fontswitchfont').innerHTML = fontSelection</script>
-      <input id="ex2fontswitchsize" type="number" value="28" style="width: 30px;"
-onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'ur');" />
-    </p>
-    <p onclick="newfont=prompt('Enter the font name. (Only spaces, hyphens, underlines and alphanum allowed.)', '...'); addFontToLists(newfont, 'exfontswitchfont,ex2fontswitchfont,slfontswitchfont');" style="cursor:pointer;">Add a font to these lists</p>
-  </div>
+<div id="fontsetting" class="closed">
+</div>
 </aside>
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->27 June, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->16 August, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -6739,6 +6715,7 @@ autoTransliterate('ha')
 autoTransliterate('ug')
 autoTransliterate('ur')
 autoTransliterate('ks')
+makeFontChanger('ar,fa,ha,ks,ug,ur', 'arab', ["Scheherazade WF", "Awami Nastaliq WF","Noto Nastaliq Urdu WF","Alkalami WF"], '32px')
 </script>
 
 

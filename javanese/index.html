@@ -9,13 +9,15 @@
 <link rel="stylesheet" href="../common/local.css" />
 <link rel="stylesheet" href="jv.css" />
 
+<script src="../../shared/fontdb/db.js"> </script>
+<script src="../../shared/fontdb/managefonts.js"></script>
+
 <script src="../../shared/scriptdb/java-jv.js"> </script>
 <script src="/shared/code/boilerplate.js"></script>
 <script src="/shared/code/toc_2020.js"></script>
 <script src="/shared/code/all-names.js"></script>
 <script src="/shared/code/character_conversion.js"></script>
 <script src="/shared/code/show_codepoints.js"></script>
-<script src="/shared/fontlists/manage.js"></script>
 <script src="/shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
 <script src="../common/transliterate.js"></script>
@@ -26,8 +28,6 @@
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../common/egcode.js"></script>
 <script src="examples.js"></script>
-
-<script src="/shared/fontlists/javanese.js"> </script>
 <script src="jv-translit.js">  </script>
 </head>
 
@@ -47,50 +47,13 @@
 <div id="toc"><!-- placeholder --></div>
   </nav>
 
- <div id="fontsetting" class="closed">
-  <h2 class="notoc"><a id="fonts">Fonts</a></h2>
-  <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-   <p>Set font for examples<br/>
-   <select id="exfontswitchfont" 
-onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'jv');">
-      </select>
-      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
-   <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
-onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'jv');" />
- </p>
-
-      <p>Set font for sample<br/>
-      <select  id="slfontswitchfont" 
-onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
-      </select>
-      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
-    </p>
-
- <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
-	return false;">
-      <p>Change size:<br />
-        <input id="slider" type="range" min="12" max="100" step="1" value="32">
-        &#xA0; <span id="sizeIndicator">32px</span><br />
-        <input id="multiplier" type="hidden" value="1" />
-        Multiplier:
-        <input type="radio" name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
-        <label for="x1">1</label>
-        <input type="radio" name="step" id="x5" value="2"  onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
-        <label for="x5">2</label>
-        <input type="radio" name="step" id="x10" value="10"  onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
-        <label for="x10">10</label>
-      </p>
-    </form>
+<div id="fontsetting" class="closed">
 </div>
 </aside>
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->26 June, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->16 August, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -130,7 +93,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <h2>Sample (Javanese)</h2>
   
 
-  <p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.</p>
+<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
+
 <div id="freeText" dir="ltr" lang="jv" data-target="c" data-base="/scripts/javanese/block" data-source="https://unicode.org/udhr/d/udhr_jav_java.html">
 <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">ꦧꦧ꧀꧇꧑꧇​꧋ꦱ​ꦧꦼ​ꦤ꧀ꦲꦸ​ꦮꦺꦴꦁ​ꦏ​ꦭ​ꦲꦶ​ꦫ​ꦏꦺ​ꦏ​ꦤ꧀ꦛꦶ​ꦩꦂ​ꦢꦶ​ꦏ​ꦭ​ꦤ꧀ꦢꦂ​ꦧꦺ​ꦩꦂ​ꦠ​ꦧ​ꦠ꧀ꦭ​ꦤ꧀ꦲ​ꦏ꧀ꦲ​ꦏ꧀ꦏꦁ​ꦥ​ꦝ꧉​ꦏ​ꦧꦺꦃ​ꦥꦶ​ꦤ​ꦫꦶ​ꦔ​ꦤ꧀ꦲ​ꦏ​ꦭ꧀ꦭ​ꦤ꧀ꦏ​ꦭ꧀ꦧꦸ​ꦱꦂ​ꦠ​ꦏ​ꦲ​ꦗ​ꦧ꧀ꦥ​ꦱꦿ​ꦮꦸꦁ​ꦔ​ꦤ꧀ꦲꦁ​ꦒꦺꦴ​ꦤꦺ​ꦩꦼ​ꦩꦶ​ꦠꦿ​ꦤ꧀ꦱꦶ​ꦗꦶ​ꦭ​ꦤ꧀ꦱꦶ​ꦗꦶ​ꦤꦺ​ꦏ​ꦤ꧀ꦛꦶ​ꦗꦶ​ꦮꦺꦴ​ꦱꦸ​ꦩ​ꦢꦸ​ꦭꦸꦂ꧉</p>
 <p title="UDHR, article 2" onMouseUp="showtext('freeText')">ꦧꦧ꧀꧇꧒꧇​꧋ꦱꦧꦼꦤ꧀ꦲꦸꦮꦺꦴꦁꦢꦂ​ꦧꦺꦲꦏ꧀ꦠꦸꦩꦿꦥ꧀ꦲ​ꦏ꧀ꦭꦤ꧀ꦏꦧꦼꦧꦱ꧀ꦱꦤ꧀ꦏꦧꦼꦧ​ꦱ꧀ꦱꦤ꧀ꦏꦁꦠꦶꦤꦸ​ꦭꦶꦱ꧀ꦲꦶꦁꦥꦿꦚꦠꦤ꧀ꦲꦸ​ꦩꦸꦩ꧀ꦲꦶ​ꦏꦶꦠꦤ꧀ꦥꦥꦶ​ꦭꦶꦃꦏꦱꦶꦃ꧈​ꦏꦧꦺꦃꦮꦫꦠꦭꦤ꧀ꦲ​ꦢꦶꦭ꧀ꦲꦶꦁꦱꦩꦸꦧꦫꦁ꧈​ꦏꦪꦠꦧꦺꦢꦧꦺꦢ​ꦤꦶꦁꦫꦱ꧀​ ꦮꦂꦤꦤꦶꦁꦲꦮꦏ꧀​ ꦧꦺꦢꦧꦺꦢ​ꦤꦶꦁꦭꦤꦁꦭꦤ꧀ꦮꦢꦺꦴꦤ꧀​ ꦧꦱ꧈​ꦄꦒꦩ꧈​ꦥꦸꦭꦶꦠꦶꦏ꧀ ꦭꦤ꧀ꦥꦤꦼꦩꦸ​ꦭꦶꦪꦤꦺ꧈​ꦲꦱꦭ꧀ꦲꦸꦱꦸꦭ꧀ꦱꦸ​ꦏꦸꦧꦁꦱꦭ​ꦤ꧀ꦧꦼꦧꦿꦪꦤ꧀​ ꦲꦏ꧀ꦢꦂꦧꦺ꧈​ꦠꦠꦭꦲꦶꦂꦭꦤ꧀ꦏ​ꦭꦸꦁꦒꦸꦃꦲꦤ꧀ꦭꦶꦪꦤꦺ꧉</p>
@@ -1277,6 +1241,7 @@ alveolar</th>
 <script>
 initialiseSummary('/scripts/javanese/block','jv','jv-java','javanese')
 autoTransliterate('jv')
+makeFontChanger('jv', 'java', ["Tuladha Jejeg WF", "Noto Sans Javanese WF"], '24px')
 </script>
 
 </html>

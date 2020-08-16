@@ -9,13 +9,15 @@
 <link rel="stylesheet" href="../common/local.css" />
 <link rel="stylesheet" href="hi.css" />
 
+<script src="../../shared/fontdb/db.js"> </script>
+<script src="../../shared/fontdb/managefonts.js"></script>
+
 <script src="../../shared/scriptdb/deva-hi.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
-<script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
 <script src="../common/transliterate.js"></script>
@@ -26,8 +28,6 @@
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../common/egcode.js"></script>
 <script src="examples.js"></script>
-
-<script src="../../shared/fontlists/devanagari.js"> </script>
 <script src="hi-translit.js">  </script>
 </head>
 
@@ -44,50 +44,13 @@
 <aside class="sidebar">
 <div id="toc"><!-- placeholder --></div>
 
- <div id="fontsetting" class="closed">
-  <h2 class="notoc"><a id="fonts">Fonts</a></h2>
-  <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-   <p>Set font for examples<br/>
-      <select id="exfontswitchfont" 
-onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'hi');">
-      </select>
-      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
-      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
-onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'hi');" />
-    </p>
-
-      <p>Set font for sample<br/>
-      <select  id="slfontswitchfont" 
-onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
-      </select>
-      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
-    </p>
-
-    <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
-	return false;">
-      <p>Change size:<br />
-        <input id="slider" type="range" min="12" max="100" step="1" value="32">
-        &#xA0; <span id="sizeIndicator">32px</span><br />
-        <input id="multiplier" type="hidden" value="1" />
-        Multiplier:
-        <input type="radio" name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
-        <label for="x1">1</label>
-        <input type="radio" name="step" id="x5" value="2"  onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
-        <label for="x5">2</label>
-        <input type="radio" name="step" id="x10" value="10"  onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
-        <label for="x10">10</label>
-      </p>
-    </form>
+<div id="fontsetting" class="closed">
 </div>
 </aside>
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->25 June, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->16 August, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -122,7 +85,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <h2 href="#sample">Sample (hindi)</h2>
   
   
-  <p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.</p>
+<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
+
 <div id="freeText" dir="ltr" lang="hi" contenteditable="true">
 <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">अनुच्छेद १. सभी मनुष्यों को गौरव और अधिकारों के मामले में जन्मजात स्वतन्त्रता और समानता प्राप्त है । उन्हें बुद्धि और अन्तरात्मा की देन प्राप्त है और परस्पर उन्हें भाईचारे के भाव से बर्ताव करना चाहिए ।</p>
 <p title="UDHR, article 2" onMouseUp="showtext('freeText')">अनुच्छेद २. सभी को इस घोषणा में सन्निहित सभी अधिकारों और आज़ादियों को प्राप्त करने का हक़ है और इस मामले में जाति, वर्ण, लिंग, भाषा, धर्म, राजनीति या अन्य विचार-प्रणाली, किसी देश या समाज विशेष में जन्म, सम्पत्ति या किसी प्रकार की अन्य मर्यादा आदि के कारण भेदभाव का विचार न किया जाएगा । इसके अतिरिक्त, चाहे कोई देश या प्रदेश स्वतन्त्र हो, संरक्षित हो, या स्त्रशासन रहित हो या परिमित प्रभुसत्ता वाला हो, उस देश या प्रदेश की राजनैतिक, क्षेत्रीय या अन्तर्राष्ट्रीय स्थिति के आधार पर वहां के निवासियों के प्रति कोई फ़रक़ न रखा जाएगा ।</p>
@@ -2240,6 +2204,7 @@ data-cols="">क␣ख␣ग␣घ␣ङ␣च␣छ␣ज␣झ␣ञ␣ट␣�
 <script>
 initialiseSummary('/scripts/devanagari/block','hi','hi','devanagari/index')
 autoTransliterate('hi')
+makeFontChanger('hi', 'deva', ["Noto Serif Devanagari WF"], '24px')
 </script>
 
 </html>

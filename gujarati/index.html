@@ -9,13 +9,15 @@
 <link rel="stylesheet" href="../common/local.css" />
 <link rel="stylesheet" href="gu.css" />
 
+<script src="../../shared/fontdb/db.js"> </script>
+<script src="../../shared/fontdb/managefonts.js"></script>
+
 <script src="../../shared/scriptdb/gujarati.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
-<script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
 <script src="../common/transliterate.js"></script>
@@ -26,8 +28,6 @@
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../common/egcode.js"></script>
 <script src="gu-examples.js"></script>
-
-<script src="../../shared/fontlists/gujarati.js"> </script>
 <script src="gu-translit.js">  </script>
 </head>
 
@@ -46,49 +46,12 @@
 		<div id="toc"><!-- placeholder --></div>
 
  <div id="fontsetting" class="closed">
-  <h2 class="notoc"><a id="fonts">Fonts</a></h2>
-  <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-   <p>Set font for examples<br/>
-      <select id="exfontswitchfont" 
-onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'gu');">
-      </select>
-      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
-      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
-onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'gu');" />
-    </p>
-
-      <p>Set font for sample<br/>
-      <select  id="slfontswitchfont" 
-onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
-      </select>
-      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
-    </p>
-
-    <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
-	return false;">
-      <p>Change size:<br />
-        <input id="slider" type="range" min="12" max="100" step="1" value="32">
-        &#xA0; <span id="sizeIndicator">32px</span><br />
-        <input id="multiplier" type="hidden" value="1" />
-        Multiplier:
-        <input type="radio" name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
-        <label for="x1">1</label>
-        <input type="radio" name="step" id="x5" value="2"  onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
-        <label for="x5">2</label>
-        <input type="radio" name="step" id="x10" value="10"  onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
-        <label for="x10">10</label>
-      </p>
-    </form>
 </div>
 </aside>
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->6 July, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->16 August, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -130,7 +93,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <h2>Sample (Gujarati)</h2>
   
 
-  <p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.</p>
+<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
+
 <div id="freeText" dir="ltr" lang="gu" data-target="c" data-base="/scripts/gujarati/block" data-source="https://unicode.org/udhr/d/udhr_guj.html">
 <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">અનુચ્છેદ ૧:
 
@@ -495,10 +459,10 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <p>The following list shows where vowel-signs are positioned around a base consonant to produce vowels, and how many instances of that pattern there are.</p>
 <ul>
-<li>1 prescript, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">કિ</span> <span class="trans">ki</span></span></li>
-<li>5 postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">કા</span> <span class="trans">kə</span></span></li>
-<li>3 superscript, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">કે</span> <span class="trans">ke</span></span></li>
-<li>2 subscript, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">કુ</span> <span class="trans">ku</span></span></li>
+<li>1 prescript, eg. <span class="charExample" translate="no"><span class="ex" lang="gu">કિ</span> <span class="trans">ki</span></span></li>
+<li>5 postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="gu">કા</span> <span class="trans">kə</span></span></li>
+<li>3 superscript, eg. <span class="charExample" translate="no"><span class="ex" lang="gu">કે</span> <span class="trans">ke</span></span></li>
+<li>2 subscript, eg. <span class="charExample" translate="no"><span class="ex" lang="gu">કુ</span> <span class="trans">ku</span></span></li>
 </ul>
 </section>
 
@@ -1399,6 +1363,7 @@ An important consequence of representing clusters in this way is that the syllab
 <script>
 initialiseSummary('/scripts/gujarati/block','gu','gu','gujarati')
 autoTransliterate('gu')
+makeFontChanger('gu', 'gujr', ["Noto Serif Gujarati WF", "Noto Sans Gujarati WF"], '24px')
 </script>
 
 </body>

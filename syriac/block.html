@@ -8,12 +8,14 @@
 <link rel="stylesheet" href="../common/block-style.css" />
 <link rel="stylesheet" href="local.css" />
 
+<script src="../../shared/fontdb/db.js"> </script>
+<script src="../../shared/fontdb/managefonts.js"></script>
+
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
-<script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
 <script src="../common/transliterate.js"></script>
@@ -27,7 +29,6 @@
 <script src="../../uniview/descriptions.js"></script> 
 <script src="../../uniview/u.js"></script> 
 
-<script src="../../shared/fontlists/syriac.js"> </script>
 <script src="syr-translit.js">  </script>
 <script src="aii-translit.js">  </script>
 <script src="tru-translit.js">  </script>
@@ -46,71 +47,6 @@
   <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script> 
 </header>
 <h1> Syriac character notes</h1>
-<!--   EXTRACT VOCAB .  -->
-<!--span class="charExample" translate="no"><span class="ex" lang="th">ธรรม</span> <span class="trans">ṯ̇ʰṟṟm̱</span> <span class="ipa">tʰam</span> <span class="meaning">justice</span></span-->
-<p>Language code: <input type="text" id="pppp"></p>
-<p><button onClick="extractVocab(document.getElementById('pppp').value)">Extract vocab</button></p>
-<textarea id="vocabOut" placeholder="Set the language!"></textarea>
-<script>
-function extractVocab(lang) {
-	out = ''
-	nodes = document.querySelectorAll('.charExample')
-	console.log(nodes.length,' nodes')
-	for (i=0;i<nodes.length;i++) {
-		if (! nodes[i].querySelector('.ex')) {
-			console.log('No nativeStr',nodes[i])
-			continue
-			}
-		console.log(nodes[i].querySelector('.ex').lang)
-		if (nodes[i].querySelector('.ex').lang  !== lang) continue
-		nativeStr = nodes[i].querySelector('.ex').textContent
-		
-		trans = nodes[i].querySelectorAll('.trans')
-		if (trans.length == 0) continue
-		else if (trans.length > 1) transStr = trans[1].textContent
-		else transStr = ''
-		
-		ipa = nodes[i].querySelectorAll('.ipa')
-		if (ipa.length > 0) ipaStr = ipa[0].textContent
-		else ipaStr = ''
-
-		meaning = nodes[i].querySelectorAll('.meaning')
-		if (meaning.length > 0) meaningStr = meaning[0].textContent
-		else continue
-
-		if (ipaStr == '' && meaningStr == '') continue
-		
-		out += nativeStr + '|' + meaningStr
-		if (ipaStr) out += '|' + ipaStr
-		if (transStr) out += ' (' + transStr + ')'
-		out += '\n'
-		}
-	//document.getElementById('vocabOut').value = out
-	items = out.split('\n')
-	//charlist = items.sort()
-	const uniqueSet = new Set(items)
-	charlist = [...uniqueSet]
-	charlist.sort()
-	
-	document.getElementById('vocabOut').value = charlist.join('\n')
-	document.getElementById('vocabOut').select()
-	}
-</script>
-<p>Merge lists</p>
-<textarea id="sortedVocabOut" placeholder="Add lists here."></textarea>
-<p><button onClick="sortVocab()">Sort &amp; merge vocab</button></p>
-<textarea id="finalVocabList" placeholder="Final, sorted list."></textarea>
-<script>
-function sortVocab() {
-	items = document.getElementById('sortedVocabOut').value.split('\n')
-	const uniqueSet = new Set(items)
-	charlist = [...uniqueSet]
-	charlist.sort()
-	document.getElementById('finalVocabList').value = charlist.join('\n')
-	document.getElementById('finalVocabList').select()
-	}
-</script>
-<!--    END OF VOCAB EXTRACTION CODE   -->
 
 <nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br>
 <input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;"
@@ -129,29 +65,12 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
   <div id="fontsetting" class="closed">
-    <h2 class="notoc"><a id="fonts">Fonts</a></h2>
-    <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-     <p>Set font for large boxes<br/>
-      <select  id="slfontswitchfont" 
-onchange="var params = this.value.split(':');setBoxFont(params[0]);">
-      </select>
-      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
-    </p>
-   <p>Set font for examples<br/>
-      <select id="exfontswitchfont" 
-onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'syr-Syrc');">
-      </select>
-      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
-      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
-onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'syr-Syrc');" />
-    </p>
-    <p onclick="newfont=prompt('Enter the font name. (Only spaces, hyphens, underlines and alphanum allowed.)', '...'); addFontToLists(newfont, 'exfontswitchfont,slfontswitchfont');" style="cursor:pointer;">Add a font to these lists</p>
   </div>
 </aside>
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->10 July, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->16 August, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -2325,6 +2244,7 @@ western styles (top to bottom)</span><span class="ex" lang="syr">ܜ ܜܜܜ</span
 <script>
 replaceStuff('Syriac', 'syr', spreadsheet, '', 'syr', 'rtl', cols, false)
 addExamples('syc')
+makeFontChanger('syr,syc,syr-syre,syr-syrn,syr-syrj,aii,tru', 'syrc', ["Estrangelo Edessa WF", "East Syriac Adiabene WF", "Serto Jerusalem WF", "Noto Sans Syriac Eastern", "Noto Sans Syriac Estrangela", "Noto Sans Syriac Western"], '24px')
 </script> 
 
 

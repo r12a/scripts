@@ -7,13 +7,16 @@
 <link rel="stylesheet" href="../../shared/style/docs.css">
 <link rel="stylesheet" href="../common/local.css">
 <link rel="stylesheet" href="fuf.css">
+
+<script src="../../shared/fontdb/db.js"> </script>
+<script src="../../shared/fontdb/managefonts.js"></script>
+
 <script src="../../shared/scriptdb/adlm.js"> </script>
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
-<script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/functions.js"></script>
 <script src="../common/transliterate.js"></script>
@@ -24,8 +27,6 @@
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../common/egcode.js"></script>
 <script src="fuf-examples.js"></script>
-
-<script src="../../shared/fontlists/adlm.js"> </script>
 <script src="fuf-translit.js">  </script>
 </head>
 
@@ -42,28 +43,6 @@
 <h2 class="notoc flush"><a id="tochead" name="tochead" tabindex="4">Contents</a></h2>
 <div id="toc"><!-- placeholder --></div>
 <div id="fontsetting" class="closed">
-<h2 class="notoc"><a id="fonts">Fonts</a></h2>
-<div id="fontsettingswitch" title="Click to show/hide the panel." onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-<p>Set font for examples<br>
-<select id="exfontswitchfont" onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'fuf');">
-</select>
-<script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
-<input id="exfontswitchsize" value="28" style="width:30px;" onchange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'fuf');" type="number"> </p>
-<p>Set font for sample<br>
-<select id="slfontswitchfont" onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
-</select>
-<script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
-</p>
-<form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
-document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';	return false;">
-<p>Change size:<br>
-<input id="slider" min="12" max="100" step="1" value="32" type="range">
-&nbsp; <span id="sizeIndicator">32px</span><br>
-<input id="multiplier" value="1" type="hidden"> Multiplier: <input name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" type="radio"> <label for="x1">1</label> <input name="step" id="x5" value="2" onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" type="radio"> <label for="x5">2</label> <input name="step" id="x10" value="10" onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" type="radio"> <label for="x10">10</label> </p>
-</form>
 </div>
 </aside>
 
@@ -71,7 +50,7 @@ document.getElementById('sizeIndicator').innerHTML = (document.getElementById('s
 
 
 <p id="status">Updated
-<!-- #BeginDate format:Sw1 -->27 July, 2020<!-- #EndDate --> <span id="versionTop"></span>
+<!-- #BeginDate format:Sw1 -->15 August, 2020<!-- #EndDate --> <span id="versionTop"></span>
 </p>
 
 
@@ -110,12 +89,13 @@ this page</a></summary>
 <section id="sample">
 <h2>Sample (Adlam)</h2>
 <p class="instructions noprint">Select part of this sample text to show a
-list of characters, with links to more details.</p>
+list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" 
+oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
 <div id="freeText" dir="rtl" data-target="c" data-base="/scripts/adlam/block" data-source="http://unicode.org/udhr/translations.html" lang="fuf">
  <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">𞤑𞤵𞥅𞤤𞤢𞤤 𞤺𞤢𞤣𞤢𞤲𞤢𞤤
 
 𞤋𞤲𞥆𞤢𞤥𞤢 𞤢𞥄𞤣𞤫𞥅𞤶𞤭 𞤬𞤮𞤬 𞤨𞤮𞤼𞤭⹁ 𞤲'𞤣𞤭𞤥𞤯𞤭𞤣𞤭 𞤫 𞤶𞤭𞤦𞤭𞤲𞤢𞤲𞥆𞤣𞤫 𞤼𞤮 𞤦𞤢𞤲𞥆𞤺𞤫 𞤸𞤢𞤳𞥆𞤫𞥅𞤶𞤭. 𞤉𞤩𞤫 𞤲'𞤺𞤮𞥅𞤣𞤭 𞤥𞤭𞥅𞤶𞤮 𞤫 𞤸𞤢𞤳𞥆𞤭𞤤𞤢𞤲𞤼𞤢𞥄𞤺𞤢𞤤 𞤫𞤼𞤫 𞤫𞤩𞤫 𞤨𞤮𞤼𞤭 𞤸𞤵𞥅𞤬𞤮 𞤲'𞤣𞤭𞤪𞤣𞤫 𞤫 𞤲'𞤣𞤫𞤪 𞤩 𞤭𞤴𞤲𞤺𞤵𞤴𞤵𞤥𞥆𞤢𞥄𞤺𞤵.</p>
-<p  title="UDHR, article 2" onMouseUp="showtext('freeText')">𞤑𞤵𞥅𞤤𞤢𞤤 𞥒
+<p title="UDHR, article 2" onMouseUp="showtext('freeText')">𞤑𞤵𞥅𞤤𞤢𞤤 𞥒
 
 𞤘𞤮𞥅𞤼𞤮 𞤳𞤢𞤤𞤢 𞤭𞤲𞤢 𞤱𞤢𞥄𞤱𞤭 𞤸𞤮𞤳𞥆𞤵𞤲𞤣𞤫 𞤸𞤮𞥅𞤪𞤫 𞤥𞤵𞤥 𞤸𞤢𞤳𞥆𞤫𞥅𞤶𞤭 𞤫 𞤲'𞤣𞤭𞤥𞤢 𞤺𞤵𞥅𞤶𞤭 𞤳𞤢𞥄𞤤𞤢𞥄𞤯𞤭 𞤫 𞤲𞤢𞤲𞤮𞤲𞤣𞤭𞤪𞤢𞤤𞤲𞤺𞤢𞤤 𞤼𞤢𞤱𞤢 𞤢𞤤𞤢𞥄 𞤨𞤢𞤤𞤼𞤢𞤺𞤮𞤤 𞤲'𞤺𞤵𞤪𞤵⹁𞤐'𞤦𞤢𞤴𞤣𞤭⹁ 𞤤𞤫𞤻𞤮𞤤⹁ 𞤯𞤫𞤥𞤲𞤺𞤢𞤤⹁ 𞤣𞤭𞥅𞤲𞤫⹁ 𞤭𞤱𞤣𞤭 𞤤𞤫𞤴𞤣𞤭 𞤱𞤢𞤤𞥆𞤢 𞤪𞤫𞤲𞥆𞤣𞤮⹁ 𞤣𞤢𞤻𞤢𞤤⹁ 𞤶𞤭𞤦𞤭𞤲𞤢𞤲𞤣𞤫 𞤱𞤢𞤤𞥆𞤢 𞤳𞤢𞤤𞤢 𞤲'𞤺𞤮𞤲𞤳𞤢. 𞤉 𞤳𞤮 𞤬𞤢𞤱𞤼𞤭𞥅 𞤸𞤫𞥅𞤲 𞤸𞤢𞤴 𞤨𞤢𞤤𞤼𞤮𞥅𞤪 𞤺𞤮𞥅𞤼𞤮 𞤱𞤮𞥅𞤣𞤢𞤼𞤢𞥄 𞤫 𞤣𞤮𞤱 𞤴𞤮𞤱𞤭𞤼𞤢𞥄𞤣𞤫 𞤫 𞤣𞤢𞤱𞤪𞤵𞤺𞤮𞤤⹁ 𞤻𞤢𞥄𞤱𞤮𞥅𞤪𞤫 𞤸𞤢𞤳𞥆𞤵𞤲𞤣𞤫 𞤤𞤫𞤴𞤯𞤫𞥅𞤤𞤫 𞤬𞤢𞤱𞤢𞥄𞤣𞤫 𞤫 𞤲𞤫𞤯𞥆𞤮 𞤵𞤥𞥆𞤭𞥅𞤯𞤮 𞤤𞤫𞤴𞤣𞤭 𞤱𞤢𞤤𞥆𞤢 𞤲𞤫𞤯𞥆𞤮 𞤥𞤮 𞤴𞤮𞤱𞤭𞤼𞤢𞥄𞤳𞤭 𞤥𞤢𞥄 𞤱𞤮𞤲𞤭 𞤨𞤢𞤱𞤭𞤯𞤮 𞤴𞤢𞤥𞤭𞤪𞤮𞥅𞤪𞤫 𞤤𞤢𞥄𞤱𞤯𞤭𞤲𞤢𞥄𞤲𞤣𞤫 𞤱𞤢𞥄𞤱𞤲𞤣𞤫 𞤱𞤮𞤲𞤣𞤫 𞤬𞤮𞤬.</p>
 <!-- Source: https://unicode.org/udhr/d/udhr_fuf_adlm.html -->
@@ -1763,9 +1743,11 @@ the Adlam Script</a>, Youtube</li>
 <div id="phoneLinks"></div>
 <div id="panel" style="display:none"></div>
 <div class="smallprint"><span id="version"></span></div>
+
 <script>
 initialiseSummary('/scripts/adlam/block','fuf','fuf-adlm','adlam')
 autoTransliterate('fuf')
+makeFontChanger('fuf', 'adlm', ["Noto Sans Adlam WF","Noto Sans Adlam Unjoined WF"], '24px')
 </script>
 </body>
 </html>
