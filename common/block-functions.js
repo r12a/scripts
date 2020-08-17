@@ -668,7 +668,8 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
 				for (var it=0;it<insertTranscriptions.length;it++) {
 					para = ''
 					for (let i=0;i<cols.othertranscriptions.length;i++) {
-						if (spreadsheetRows[insertTranscriptions[it].textContent][cols.othertranscriptions[i][0]]) {
+						if (spreadsheetRows[insertTranscriptions[it].textContent] && spreadsheetRows[insertTranscriptions[it].textContent][cols.othertranscriptions[i][0]]) {
+						//if (spreadsheetRows[insertTranscriptions[it]] && spreadsheetRows[insertTranscriptions[it].textContent][cols.othertranscriptions[i][0]]) {
 							//para += cols.othertranscriptions[i][1]+': <span class="trans">'+items[cols.othertranscriptions[i][0]].replace(/ /g,', ')+'</span>'
 							para += cols.othertranscriptions[i][1]+': <span class="trans">'+spreadsheetRows[insertTranscriptions[it].textContent][cols.othertranscriptions[i][0]]+'</span>'
 							if (i<cols.othertranscriptions.length-1) para += ', &nbsp; '
