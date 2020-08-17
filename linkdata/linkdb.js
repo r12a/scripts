@@ -48,6 +48,7 @@ var fontLister = {
     'mlym':[['Malayalam', 'mlym']],
     'mtei':[['Meetei Mayek', 'mtei']],
     'mymr':[['Myanmar', 'mymr']],
+    'newa':[["Newa", 'newa']],
     'nkoo':[["N’Ko", 'nkoo']],
     'osge':[["Osage", 'osge']],
     'olck':[["Ol Chiki", 'olck']],
@@ -235,6 +236,7 @@ var charNotesList = {
     'armn':['Armenian', 'armenian/block'],
     'arab':['Arabic', 'arabic/block'], 
     'bali':['Balinese', 'balinese/block'], 
+    'bamu':['Bamum', 'bamum/block'], 
     'bass':['Bassa Vah', 'bassavah/block'], 
     'beng':['Bengali', 'bengali/block'],
     'bugi':['Buginese', 'buginese/block'],
@@ -261,6 +263,7 @@ var charNotesList = {
     'mong':['Mongolian', 'mongolian/block'],
     'mymr':['Myanmar', 'myanmar/block'],
     'talu':['New&nbsp;Tai&nbsp;Lue', 'newtailue/block'],
+    'newar':['Newar', 'newa/block'],
     'nkoo':['NKo', 'nko/block'],
     'osge':['Osage', 'osage/block'],
 	'punctuation':['Punctuation', 'punctuation/block'],
@@ -2289,21 +2292,14 @@ osge:{ script:"Osage", code:"Osge", name:"", dates:"2006 – today", start:"2006
 				]
 	},
 	   
-newa:{ script:"Newa", code:"Newa", name:"Newa (Newar, Newari, Nepāla lipi)", dates:"10thC – today", start:"900", end:"", origin:"South Asia", current_usage:"",
-	info:{ 		wikipedia:"Prachalit_Nepal_alphabet", omniglot:"" }, 
-	local: [	
-				],
-	unicode:{ 	}, 
-	charts:[	"Newa" ],
-	pickers:[	
-				],
-	fontkey:[	
-				],
-	layout:[	
-				],
-	other:[		
-				]
-	},
+newa:{ script:"Newa", code:"Newa", name:"Newa (Newar, Newari, Nepāla lipi)", 
+dates:"10thC – today", start:"900", end:"", 
+origin:"South Asia", current_usage:"",
+info: {wikipedia:"Prachalit_Nepal_alphabet", omniglot:"newa" }, 
+local: 	[],
+charts:	["Newa" ],
+layout:	[],
+},
 	   
 bhks:{ script:"Bhaiksuki", code:"Bhks", name:"", dates:"11thC – 12thC", start:"1000", end:"1200", origin:"South Asia", current_usage:"",
 	info:{ 		wikipedia:"Bhaiksuki_alphabet", omniglot:"" }, 
@@ -2562,7 +2558,7 @@ var charNotesSet= new Set(['armn','arab', 'bali', 'beng','bugi', 'cans', 'cher',
 
 
 // OBSOLETE !
-var charNotesList = {
+var charNotesListX = {
     'adlm':'adlam/block',
     'armn':'armenian/block',
     'arab':'arabic/block', 
