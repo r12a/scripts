@@ -55,6 +55,7 @@ var fontLister = {
     'orya':[["Oriya", 'orya']],
     'osma':[["Osmanya", 'osma']],
     'phag':[["PhagsPa", 'phag']],
+    'rohg':[["Hanifi Rohingya", 'rohg']],
     'runr':[["Runic", 'runr']],
     'saur':[['Saurashtra', 'saur']],
     'shaw':[['Shavian', 'shaw']],
@@ -2413,21 +2414,15 @@ sogd:{ script:"Sogdian", code:"Sogd", name:"", dates:"7thC – 14thC", start:"60
 				]
 	},
    
-'rohg':{ script:"Hanifi Rohingya", code:"Rohg", name:"", dates:"20thC – today", start:"1900", end:"", origin:"Southeast Asia", current_usage:"endangered",
-	info:{ 		wikipedia:"Hanifi_Rohingya_script", omniglot:"rohingya.htm#hanifi" }, 
-	local: [	
-				],
-	unicode:{ 	}, 
-	charts:[	"Hanifi Rohingya" ],
-	pickers:[	
-				],
-	fontkey:[	
-				],
-	layout:[	
-				],
-	other:[		
-				]
-	},
+'rohg':{ script:"Hanifi Rohingya", code:"Rohg", name:"", 
+dates:"20thC – today", start:"1900", end:"", 
+origin:"Southeast Asia", current_usage:"endangered",
+info:{ wikipedia:"Hanifi_Rohingya_script", omniglot:"rohingya.htm#hanifi" }, 
+local: [],
+charts:[ "Hanifi Rohingya" ],
+layout:[],
+other:[	]
+},
    
 'gong':{ script:"Gunjala Gondi", code:"Gong", name:"", dates:"18thC", start:"1700", end:"1800", origin:"South Asia", current_usage:"isolated manuscripts",
 	info:{ 		wikipedia:"Gunjala_Gondi_Lipi", omniglot:"" }, 
