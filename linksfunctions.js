@@ -65,7 +65,7 @@ function getData (script) {
 
 
 	// character detail
-	if (record.unicode) {
+	if (charNotesList[lc] && ssHistory[lc]) {
 		out += '<tr><td>Character detail:</td><td>'
 		if (charNotesList[lc]) out += '<p><a href="/scripts/'+charNotesList[lc][1]+'">Character notes</a></p>'
 		out += '<p><a href="http://scriptsource.org/entry/'+ssHistory[lc]+'" >Unicode historical documents</a></p>'
