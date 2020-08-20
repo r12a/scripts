@@ -349,24 +349,6 @@ function makeTables (lang) {
                 else out += '<span>&nbsp;</span>'
                 }
 
-			
-            // print the code point values
-            out += '<span class="listUnum">'
-			charList = [... chars[i]]
-            for (let z=0;z<charList.length;z++) {
-                var hex = charList[z].codePointAt(0)
-                if (ignorableChar && ignorableChar === hex) continue // ignore specified character
-                if (vowelcluster && hex === 45) continue // ignore hyphens - this should be phased out
-                hex = hex.toString(16).toUpperCase()
-                while (hex.length < 4) hex = '0'+hex
-				
-				if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.block]) out += '<a href="/scripts/'+window.spreadsheetRows[char][cols.block]+'/block#char'+hex+'" target="c">'
-                out += hex
-				if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.block]) out += '</a>'
-                if (charList.length>1 && z<charList.length-1) out += '<br/>'
-                }
-                out += '</span>'
-
             /*for (let z=0;z<chars[i].length;z++) {
                 var hex = chars[i].codePointAt(z)
                 if (ignorableChar && ignorableChar === hex) continue // ignore specified character
@@ -431,6 +413,25 @@ function makeTables (lang) {
                 if (links[i]) out += '<a href="'+links[i]+'">link</a>'
                 else out += '<span>&nbsp;</span>'
                 }
+
+			
+            // print the code point values
+            out += '<span class="listUnum">'
+			charList = [... chars[i]]
+            for (let z=0;z<charList.length;z++) {
+                var hex = charList[z].codePointAt(0)
+                if (ignorableChar && ignorableChar === hex) continue // ignore specified character
+                if (vowelcluster && hex === 45) continue // ignore hyphens - this should be phased out
+                hex = hex.toString(16).toUpperCase()
+                while (hex.length < 4) hex = '0'+hex
+				
+				if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.block]) out += '<a href="/scripts/'+window.spreadsheetRows[char][cols.block]+'/block#char'+hex+'" target="c">'
+                out += hex
+				if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.block]) out += '</a>'
+                if (charList.length>1 && z<charList.length-1) out += '<br/>'
+                }
+                out += '</span>'
+
 
             out += '</div>'
             }
