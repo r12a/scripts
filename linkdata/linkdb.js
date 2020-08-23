@@ -7,6 +7,7 @@ var fontLister = {
 			['African', 'arab-afr'],
 			['Nastaliq', 'arab-aran'],
 			], 
+    'armi':[['Imperial Aramaic','armi']],
     'armn':[['Armenian','armn']],
     'bali':[['Balinese', 'bali']], 
     'bamu':[['Bamum', 'bamu']], 
@@ -55,6 +56,7 @@ var fontLister = {
     'orya':[["Oriya", 'orya']],
     'osma':[["Osmanya", 'osma']],
     'phag':[["PhagsPa", 'phag']],
+    'phnx':[["Phoenician", 'phnx']],
     'rohg':[["Hanifi Rohingya", 'rohg']],
     'runr':[["Runic", 'runr']],
     'saur':[['Saurashtra', 'saur']],
@@ -882,18 +884,14 @@ hluw:{ script:"Anatolian Hieroglyphs", code:"Hluw", name:"Anatolian (Luwian/Hitt
 				]
 	},
 
-armi:{ script:"Aramaic", code:"Armi", dates:"BCE 8thC – BCE 4thC", start:"-800", end:"-400", origin:"West Asia", current_usage:"",
-	info:{ 		wikipedia:"Aramaic_alphabet", omniglot:"aramaic" }, 
-	local: [	],
-	unicode:{ 	}, 
-	charts:[	"Imperial Aramaic" ],
-	pickers:[	
-				],
-	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-middle-eastern.html#imperialaramaic" }
-				],
-	layout:[	
-				]
-	},
+armi:{ script:"Aramaic", code:"Armi", 
+dates:"BCE 8thC – BCE 4thC", start:"-800", end:"-400", 
+origin:"West Asia", current_usage:"",
+info:{ wikipedia:"Aramaic_alphabet", omniglot:"aramaic" }, 
+local: [],
+charts:[ "Imperial Aramaic" ],
+layout:[]
+},
 
 avst:{ script:"Avestan", code:"Avst", dates:"6thC – today", start:"500", end:"", origin:"West Asia", current_usage:"liturgical",
 	info:{ 		wikipedia:"Avestan_alphabet", omniglot:"avestan" }, 
@@ -1104,18 +1102,14 @@ prti:{ script:"Inscriptional Parthian", code:"Prti", name:"", dates:"2ndC – 29
 				]
 	},
   
-phnx:{ script:"Phoenician", code:"Phnx", name:"", dates:"BCE 12thC – BCE 2ndC", start:"1200", end:"200", origin:"West Asia", current_usage:"",
-	info:{ 		wikipedia:"Phoenician_alphabet", omniglot:"phoenician" }, 
-	local: [	],
-	unicode:{ 	}, 
-	charts:[	"Phoenician" ],
-	pickers:[	
-				],
-	fontkey:[	 { name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-middle-eastern.html#phoenician" }
-				],
-	layout:[	
-				]
-	},
+phnx:{ script:"Phoenician", code:"Phnx", name:"", 
+dates:"BCE 12thC – BCE 2ndC", start:"1200", end:"200", 
+origin:"West Asia", current_usage:"",
+info:{ wikipedia:"Phoenician_alphabet", omniglot:"phoenician" }, 
+local: [],
+charts:[ "Phoenician" ],
+layout:[]
+},
   
 samr:{ script:"Samaritan", code:"Samr", name:"", dates:"BCE 3rdC – today", start:"-300", end:"", origin:"West Asia", current_usage:"small community, liturgical",
 	info:{ 		wikipedia:"Samaritan_alphabet", omniglot:"samaritan" }, 
