@@ -2,7 +2,7 @@
 var autoExpandExamples = {}
 
 
-function addExamples (langFilter) { console.log('langFilter:', langFilter, autoExpandExamples[langFilter])
+function addExamples (langFilter) { //console.log('langFilter:', langFilter, autoExpandExamples[langFilter])
 	// read the data into egList
 	if (typeof langFilter === 'undefined') alert('addExamples call needs to specify a language')
 	var egArray = autoExpandExamples[langFilter].split("\n")
