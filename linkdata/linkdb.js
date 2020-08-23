@@ -21,6 +21,7 @@ var fontLister = {
     'copt':[['Coptic', 'copt']],
     'cyrl':[['Cyrillic', 'cyrl']],
     'deva':[['Devanagari', 'deva']],
+    'elym':[['Elymaic', 'elym']],
     'ethi':[['Ethiopic', 'ethi']],
     'geor':[['Georgian', 'geor']],
     'grek':[['Greek', 'grek']],
@@ -31,6 +32,7 @@ var fontLister = {
     'hani':[['Simplified Chinese', 'hans'],
     		['Traditional Chinese', 'hant']],
     'hang':[['Hangul', 'hang']],
+    'hatr':[['Hatran', 'hatr']],
     'hebr':[['Hebrew', 'hebr']],
     'hung':[['Old Hungarian', 'hung']],
     'jpan':[['Japanese', 'jpan']],
@@ -57,6 +59,7 @@ var fontLister = {
     'osma':[["Osmanya", 'osma']],
     'phag':[["PhagsPa", 'phag']],
     'phnx':[["Phoenician", 'phnx']],
+    'prti':[["Parthian", 'prti']],
     'rohg':[["Hanifi Rohingya", 'rohg']],
     'runr':[["Runic", 'runr']],
     'saur':[['Saurashtra', 'saur']],
@@ -933,18 +936,14 @@ xsux:{ script:"Cuneiform", code:"Xsux", dates:"BCE 29thC – 1stC CE", start:"-2
 				]
 	},
 
-hatr:{ script:"Hatran", code:"Hatr", dates:"BCE 98 – 240 CE", start:"-98", end:"240", origin:"West Asia", current_usage:"",
-	info:{ 		wikipedia:"Aramaic_of_Hatra", omniglot:"" }, 
-	local: [	],
-	unicode:{ 	}, 
-	charts:[	"Hatran" ],
-	pickers:[	
-				],
-	fontkey:[	
-				],
-	layout:[	
-				]
-	},
+hatr:{ script:"Hatran", code:"Hatr", 
+dates:"BCE 98 – 240 CE", start:"-98", end:"240", 
+origin:"West Asia", current_usage:"",
+info:{ wikipedia:"Aramaic_of_Hatra", omniglot:"" }, 
+local: [],
+charts:[ "Hatran" ],
+layout:[]
+},
 
 hebr:{ script:"Hebrew", code:"Hebr", dates:"BCE 3rdC – today", start:"-300", end:"", origin:"West Asia", current_usage:"",
 	info:{ 		wikipedia:"Hebrew_script", omniglot:"hebrew" }, 
@@ -1089,18 +1088,14 @@ palm:{ script:"Palmyrene", code:"Palm", name:"", dates:"BCE 1stC – 3rdC CE", s
 				]
 	},
   
-prti:{ script:"Inscriptional Parthian", code:"Prti", name:"", dates:"2ndC – 292", start:"100", end:"292", origin:"West Asia", current_usage:"",
-	info:{ 		wikipedia:"Inscriptional_Parthian#Written_Parthian", omniglot:"mpersian" }, 
-	local: [	],
-	unicode:{ 	}, 
-	charts:[	"Inscriptional Parthian" ],
-	pickers:[	
-				],
-	fontkey:[	 { name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-middle-eastern.html#inscriptionalparthian" }
-				],
-	layout:[	
-				]
-	},
+prti:{ script:"Inscriptional Parthian", code:"Prti", name:"", 
+dates:"2ndC – 292", start:"100", end:"292", 
+origin:"West Asia", current_usage:"",
+info:{ wikipedia:"Inscriptional_Parthian#Written_Parthian", omniglot:"mpersian" }, 
+local: [],
+charts:[ "Inscriptional Parthian" ],
+layout:[]
+},
   
 phnx:{ script:"Phoenician", code:"Phnx", name:"", 
 dates:"BCE 12thC – BCE 2ndC", start:"1200", end:"200", 
@@ -2452,7 +2447,7 @@ other:[	]
 	},
    
 'nand':{ script:"Nandinagari", code:"Nand", name:"", dates:"8thC – 18thC", start:"800", end:"1800", origin:"South Asia", current_usage:"",
-	info:{ 		wikipedia:"Elymaic", omniglot:"" }, 
+	info:{ 		wikipedia:"Nandinagari", omniglot:"" }, 
 	local: [	
 				],
 	unicode:{ 	}, 
@@ -2467,20 +2462,14 @@ other:[	]
 				]
 	},
    
-'elym':{ script:"Elymaic", code:"Elym", name:"", dates:"BCE 5thC – BCE 3rdC", start:"-500", end:"-300", origin:"West Asia", current_usage:"",
-	info:{ 		wikipedia:"Elymaic", omniglot:"" }, 
-	local: [	
-				],
-	unicode:{ 	}, 
-	charts:[	"Elymaic" ],
-	pickers:[	
-				],
-	fontkey:[	
-				],
-	layout:[	
-				],
-	other:[		
-				]
+'elym':{ script:"Elymaic", code:"Elym", name:"", 
+dates:"BCE 5thC – BCE 3rdC", start:"-500", end:"-300", 
+origin:"West Asia", current_usage:"",
+info:{ wikipedia:"Elymaic", omniglot:"" }, 
+local: [],
+charts:[ "Elymaic" ],
+layout:[],
+other:[]
 	},
    
 'hmnp':{ script:"Nyiakeng Puachue Hmong", code:"Hmnp", name:"", dates:"1980s – today", start:"1980", end:"", origin:"Southeast Asia", current_usage:"small community",
