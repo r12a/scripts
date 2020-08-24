@@ -59,6 +59,7 @@ var fontLister = {
     'osma':[["Osmanya", 'osma']],
     'phag':[["PhagsPa", 'phag']],
     'phnx':[["Phoenician", 'phnx']],
+    'phli':[["Pahlavi", 'phli']],
     'prti':[["Parthian", 'prti']],
     'rohg':[["Hanifi Rohingya", 'rohg']],
     'runr':[["Runic", 'runr']],
@@ -1049,18 +1050,14 @@ sarb:{ script:"Old South Arabian", code:"Sarb", name:"", dates:"BCE 8thC – 7th
 				]
 	},
   
-phli:{ script:"Inscriptional Pahlavi", code:"Phli", name:"", dates:"2ndC – 5thC", start:"100", end:"500", origin:"West Asia", current_usage:"",
-	info:{ 		wikipedia:"Inscriptional_Pahlavi", omniglot:"mpersian" }, 
-	local: [	],
-	unicode:{ 	}, 
-	charts:[	"Inscriptional Pahlavi" ],
-	pickers:[	
-				],
-	fontkey:[	 { name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-middle-eastern.html#inscriptionalpahlavi" }
-				],
-	layout:[	
-				]
-	},
+phli:{ script:"Inscriptional Pahlavi", code:"Phli", name:"", 
+dates:"2ndC – 5thC", start:"100", end:"500", 
+origin:"West Asia", current_usage:"",
+info:{ wikipedia:"Inscriptional_Pahlavi", omniglot:"mpersian" }, 
+local: [],
+charts:[ "Inscriptional Pahlavi" ],
+layout:[]
+},
   
 phlp:{ script:"Psalter Pahlavi", code:"Phlp", name:"", dates:"6thC – 7thC", start:"500", end:"700", origin:"West Asia", current_usage:"",
 	info:{ 		wikipedia:"Pahlavi_scripts", omniglot:"mpersian" }, 
