@@ -51,12 +51,14 @@ var fontLister = {
     'mlym':[['Malayalam', 'mlym']],
     'mtei':[['Meetei Mayek', 'mtei']],
     'mymr':[['Myanmar', 'mymr']],
+    'nbat':[["Nabataean", 'nbat']],
     'newa':[["Newa", 'newa']],
     'nkoo':[["N’Ko", 'nkoo']],
     'osge':[["Osage", 'osge']],
     'olck':[["Ol Chiki", 'olck']],
     'orya':[["Oriya", 'orya']],
     'osma':[["Osmanya", 'osma']],
+    'palm':[["Palmyrene", 'palm']],
     'phag':[["PhagsPa", 'phag']],
     'phnx':[["Phoenician", 'phnx']],
     'phli':[["Pahlavi", 'phli']],
@@ -78,6 +80,7 @@ var fontLister = {
     'thai':[['Thai', 'thai']],
     'tibt':[['Tibetan', 'tibt']],
     'tfng':[['Tifinagh', 'tfng']],
+    'ugar':[['Ugaritic', 'ugar']],
     'vaii':[['Vai', 'vaii']],
     'yiii':[['Yi', 'yiii']],
     }
@@ -923,19 +926,14 @@ cari:{ script:"Carian", code:"Cari", dates:"BCE 7thC – BCE 3rdC", start:"-700"
 				]
 	},
 
-xsux:{ script:"Cuneiform", code:"Xsux", dates:"BCE 29thC – 1stC CE", start:"-2900", end:"100", origin:"West Asia", current_usage:"",
-	info:{ 		wikipedia:"Cuneiform_script", omniglot:"cuneiform" }, 
-	local: [	],
-	unicode:{ 	}, 
-	charts:[	"Cuneiform", "Early Dynastic Cuneiform", "Cuneiform Numbers and Punctuation", "Old Persian", "Ugaritic" ],
-	pickers:[	
-				],
-	fontkey:[	{ name:"Gallery of Unicode Fonts", url:"http://www.wazu.jp/#cuneiform" },
-			    { name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-middle-eastern.html#akkadian" }
-				],
-	layout:[	
-				]
-	},
+xsux:{ script:"Cuneiform", code:"Xsux", 
+dates:"BCE 29thC – 1stC CE", start:"-2900", end:"100", 
+origin:"West Asia", current_usage:"",
+info:{ wikipedia:"Cuneiform_script", omniglot:"cuneiform" }, 
+local: [],
+charts:[ "Cuneiform", "Early Dynastic Cuneiform", "Cuneiform Numbers and Punctuation", "Old Persian", "Ugaritic" ],
+layout:[]
+},
 
 hatr:{ script:"Hatran", code:"Hatr", 
 dates:"BCE 98 – 240 CE", start:"-98", end:"240", 
@@ -998,18 +996,14 @@ mand:{ script:"Mandaic", code:"Mand", name:"", dates:"2ndC – today", start:"10
 				]
 	},
 
-nbat:{ script:"Nabataean", code:"Nbat", name:"", dates:"BCE 2ndC – 4thC CE", start:"-200", end:"400", origin:"West Asia", current_usage:"",
-	info:{ 		wikipedia:"Nabataean_alphabet", omniglot:"nabataean" }, 
-	local: [	],
-	unicode:{ 	}, 
-	charts:[	"Nabataean" ],
-	pickers:[	
-				],
-	fontkey:[	 
-				],
-	layout:[	
-				]
-	},
+nbat:{ script:"Nabataean", code:"Nbat", name:"", 
+dates:"BCE 2ndC – 4thC CE", start:"-200", end:"400", 
+origin:"West Asia", current_usage:"",
+info:{ wikipedia:"Nabataean_alphabet", omniglot:"nabataean" }, 
+local: [],
+charts:[ "Nabataean" ],
+layout:[]
+},
 
 narb:{ script:"Old North Arabian", code:"Narb", name:"", dates:"BCE 550 – 4thC CE", start:"-550", end:"400", origin:"West Asia", current_usage:"",
 	info:{ 		wikipedia:"Old_North_Arabian", omniglot:"" }, 
@@ -1072,18 +1066,14 @@ phlp:{ script:"Psalter Pahlavi", code:"Phlp", name:"", dates:"6thC – 7thC", st
 				]
 	},
   
-palm:{ script:"Palmyrene", code:"Palm", name:"", dates:"BCE 1stC – 3rdC CE", start:"-100", end:"200", origin:"West Asia", current_usage:"",
-	info:{ 		wikipedia:"Palmyrene_alphabet", omniglot:"" }, 
-	local: [	],
-	unicode:{ 	}, 
-	charts:[	"Palmyrene" ],
-	pickers:[	
-				],
-	fontkey:[	 
-				],
-	layout:[	
-				]
-	},
+palm:{ script:"Palmyrene", code:"Palm", name:"", 
+dates:"BCE 1stC – 3rdC CE", start:"-100", end:"200", 
+origin:"West Asia", current_usage:"",
+info:{ wikipedia:"Palmyrene_alphabet", omniglot:"" }, 
+local: [],
+charts:[ "Palmyrene" ],
+layout:[]
+},
   
 prti:{ script:"Inscriptional Parthian", code:"Prti", name:"", 
 dates:"2ndC – 292", start:"100", end:"292", 
