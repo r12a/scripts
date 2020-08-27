@@ -53,12 +53,12 @@ function addExamples (langFilter) { //console.log('langFilter:', langFilter, aut
 			if (transcription) out += ' (<bdi class="transc">'+transcription+'</bdi>)'
 			
 			// alt
-			if (temp[4]) {
+			if (temp[3]) {
 				out += ' (<bdi lang="'
 				out += nodes[n].lang
 				out += '"'
 				if (nodes[n].dir === 'rtl') out += ' dir="rtl"'
-				out += '>'+temp[4]+'</bdi>)'
+				out += '>'+temp[3]+'</bdi>)'
 				}
 			
 			// ipa
