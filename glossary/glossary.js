@@ -15,9 +15,9 @@ defList={
 
 "letterspacing": 'Unlike justification, which fits text within a fixed space, letter-spacing adds regular amounts of space between letters, and the resulting length is a by-product of that.',
 
-"materlectionis": 'In the spelling of Arabic and some other Semitic languages, matres lectionis refers to the use of certain consonants to indicate a vowel. <sup><a href="https://en.wikipedia.org/wiki/Mater_lectionis">w</a></sup>',
+"materlectionis": 'In the spelling of Arabic, Hebrew, and other Semitic languages, mater lectionis refers to a consonant that is used to indicate the location of a vowel.<a class="fnref" href="https://en.wikipedia.org/wiki/Mater_lectionis">w</a>',
 
-"standalonevowel": 'Standalone vowels are not preceded by a consonant, and may appear at the beginning or in the middle of a word.',
+"standalonevowel": 'Standalone vowels are not preceded by a consonant sound, and may appear at the beginning or in the middle of a word.',
 
 "grapheme": 'A <a class="termref" target="_blank" href="../glossary/#grapheme">grapheme</a> is a user-perceived unit of text. The Unicode Standard uses generalised rules to define \'<a class="termref" target="_blank" href="../glossary/#graphemecluster">grapheme clusters</a>\', which approximate the likely grapheme boundaries in a writing system. Text operations that use graphemes as a unit of text include line-breaking, forwards deletion, cursor movement & selection, character counts, searching & matching, text insertion, line-breaking, justification, case conversions, and sorting.',
 
