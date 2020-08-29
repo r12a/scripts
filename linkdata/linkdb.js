@@ -21,6 +21,7 @@ var fontLister = {
     'copt':[['Coptic', 'copt']],
     'cyrl':[['Cyrillic', 'cyrl']],
     'deva':[['Devanagari', 'deva']],
+    'egyp':[['Egyptian Hieroglyphs', 'egyp']],
     'elym':[['Elymaic', 'elym']],
     'ethi':[['Ethiopic', 'ethi']],
     'geor':[['Georgian', 'geor']],
@@ -773,18 +774,14 @@ copt:{ script:"Coptic", code:"Copt", dates:"4thC – 14thC", start:"300", end:"1
 				]
 	},
 
-egyp:{ script:"Egyptian Hieroglyphs", code:"Egyp", dates:"BCE 30thC – 1stC CE", start:"-3000", end:"100", origin:"Africa", current_usage:"",
-	info:{ 		wikipedia:"Egyptian_hieroglyphs", omniglot:"egyptian" }, 
-	local: [	],
-	unicode:{ 	}, 
-	charts:[	"Egyptian Hieroglyphs" ],
-	pickers:[	{ name:"Egyptian hieroglyphs", url:"egyptian" }
-				],
-	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-african.html#egyptianhieroglyphs" }
-				],
-	layout:[	
-				]
-	},
+egyp:{ script:"Egyptian Hieroglyphs", code:"Egyp", 
+dates:"BCE 30thC – 1stC CE", start:"-3000", end:"100", 
+origin:"Africa", current_usage:"",
+info:{ wikipedia:"Egyptian_hieroglyphs", omniglot:"egyptian" }, 
+local: [],
+charts:[ "Egyptian Hieroglyphs" ],
+layout:[]
+},
 
 ethi:{ script:"Ethiopic", code:"Ethi", dates:"BCE 4thC – today", start:"-400", end:"", origin:"Africa", current_usage:"",
 	info:{ 		wikipedia:"Ge'ez_script", omniglot:"ethiopic" }, 
