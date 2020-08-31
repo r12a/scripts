@@ -9,112 +9,121 @@
 */
 autoExpandExamples.he = `
 
+
+אבטחה|security|afta'xa|אַבְטָחָה
+אופה|baker|oˈfe|אוֹפֶה
+איך|how|ex|אֵיךְ
 אם|if|ʔim|אִם
-בּי|in me|bi|בִּי
 בִּי|in me|bi
+בּז|beige|ˈbeʒ|בֵּז
+בּי|in me|bi|בִּי
 בּן|son|ben|בֵּן
 בן|son|bɛn|בֵּן
+גְּמָלִים|camels|ɡmaˈlim
 גּברת|Mrs.||גְּבֶרֶת
 גּג|roof|gag|גַּג
+גּם|also|gam|גַּם
+גּמלים|camels|ɡmaˈlim|גְּמָלִים
+גּ׳ירפה|giraffe|dʒiˈrafa|גִּ׳ירָפָה
 גג|roof|gag|גַּג
 ג׳וּק|roach|ʤuk
+דּוּד|boiler|dud
+דּלק|fuel|ˈdelek|דֶּלֶק
+דוד|dud|boiler|דּוּד
 ד׳ו אל-חיג׳ה|(Dhu al-Hijjah)|ذو الحجة
 הד|echo|hɛd|הֵד
+הד|echo|ˈhed|הֵד
 הוּא|he|hu
+וו|hook|vav|וָו
 זה|this|ze|זֶה
+זכוּת|a right|sxut|זְכוּת
 ז׳רגון|jargon|ʒarɡon|זָ׳רְגוֹן
+חם|hot|ˈħam|חַם
 חם|hot|χam|חַם
-טוב|good|tov|טוֹב
+חשׁבּון|a bill|xeʒ'bon|חֶשְׁבּוֹן
 טוֹב|good|tɔv
-ים|sea|yam|יָם
-לי|to me|li|לִי
+טוב|good|tov|טוֹב
+יום|day|ˈjom|יוֹם
+ים|sea|jam|יָם
+כְּתֻמִּים|oranges|kətumˈmim
+כּה|so|ko|כֹּה
+כּל|all|ˈkol|כֹּל
+כּתמּים|oranges|kətumˈmim|כְּתֻמִּים
+כה|so|ko|כֹּה
+לִגְוֺעַ|to agonise|liɡˈvo.a
+לֹא|no|lo
+לא|no|ˈlo|לֹא
+לגוע|to agonise|liɡˈvo.a|לִגְוֺעַ
 לו|to him|lo|לוֹ
+לי|to me|li|לִי
+לסגּר|to close|liz'ɡoʁ|לִסְגֹּר
+מֵידָע|information|meda
+מדפּסת|printer|mat'peset|מַדְפֶּסֶת
+מה|what|ma|מָה
 מוּם|defect|mum
-סכך|branch-roofing|sχaχ|סְכָךְ
+מועיל|useful|moʔil|מוֹעִיל
+מידע|information|meda|מֵידָע
+נְמָלִים|ants|nemaˈlim
+נִין|grandson|nin
+נֵבֶל|harp|ˈnevel
+נבל|harp|ˈnevel|נֵבֶל
+נין|grandson|nin|נִין
+נמלים|ants|nemaˈlim|נְמָלִים
+נס|miracle|ˈnes|נֵס
 סוף|end|sof|סוֹף
+סוף|end|ˈsof|סוֹף
+סכך|branch-roofing|sχaχ|סְכָךְ
+עדלאידע|Purim parade|adlɔjada|עַדְלֹאיָדַע
 עונטה|boastful act|awanta|עָוָנְטָה
+עיר|city|iʁ|עִיר
+עם|with|ʕim|עִם
+פֹּה‎‎|here|po
 פּה|here|po|פֹּה
+פּה|mouth|ˈpe|פֶּה
+פּה‎|here|po|פֹּה‎
+פּינגּוין|penguin|ˈpinɡwin|פִּינְגְּוִין
+פספס|missed|fisfɛs|פִסְפֵס
+צי|fleet|ˈtsi|צִי
+ציץ|bud|ʦiʦ|צִיץ
+קוֹל|sound|kɔl
 קול|sound|kol|קוֹל
-ריצ׳רץ׳|zip|ʁiʧʁaʧ
+קול|sound|kɔl|קוֹל
+קט|tiny|kat|קָט
+רִאשׁוֹן|first|riʃɔn
+ראיון|interview|reʔaˈjon|רֵאָיוֹן
+ראש|head|ˈroʃ|רֹאשׁ
+ראשון|first|riʃɔn|רִאשׁוֹן
+ריצ׳רץ׳|zip|ʁit͡ʃʁat͡ʃ
 ר׳ג׳ר|Ghajar
+שָׁאַל|asked|ʃaʔal
+שָׁנָה|year|ʃaˈna
 שׁם|there|ʃam|שָׁם
-שם|there/put|ʃam/sam|שָׁם/שָׂם
 שׂם|put|sam|שָׂם
-שופּ|shop|ʃop|שׁוֹפּ
+שאל|asked|ʃaʔal|שָׁאַל
 שופ|shop|ʃop|שׁוֹפּ
+שופּ|shop|ʃop|שׁוֹפּ
 שייח|Sheikh (شيخ)
 שייח׳|Sheikh (شيخ)
+שם|there/put|ʃam/sam|שָׁם/שָׂם
+שנה|year|ʃaˈna|שָׁנָה
+תֹּאַר|epithet|ˈto.aʁ
+תּאר|epithet|ˈto.aʁ|תֹּאַר
 תּוּת|strawberry|tut
+תּן|jackal|ˈtan|תַּן
+תּשוּקה|passion|t͡ʃuˈka|תְּשׁוּקָה
 תות|strawberry|tut|תּוּת
 תל־אביב|Tel Aviv
 ת׳רסטון|Thurston
-דּוּד|dud|boiler
-דוד|dud|boiler|דּוּד
-כּה|so|ko|כֹּה
-כה|so|ko|כֹּה
 
-קט|tiny|kat|קָט
-ציץ|bud|ʦiʦ|צִיץ
-פספס|missed|fisfɛs|פִסְפֵס
-עדלאידע|Purim parade|adlɔjada|עַדְלֹאיָדַע
-עיר|city|iʁ|עִיר
-מועיל|useful|moʔil|מוֹעִיל
-מידע|information|meda|מֵידָע
-מֵידָע|information|meda
+אישּ|man|iʃ|אִישּ
+אדמּה|red|adu'ma|אֲדֻמָּה
+אם|mother|em|אֵם
+אור|light|or|אוֹר
+אב|father|av|אָב
+תּעבד|you will work|taː'vod|תַּעֲבֹד
+שׁעונים|watches|ʃoː'nim|שְׁעוֹנִים
+זמן‎|time|zman|זְמַן‎
 
-פּה|mouth|ˈpe|פֶּה
-מה|what|ma|מָה
-אופה|baker|oˈfe|אוֹפֶה
-תּן|jackal|ˈtan|תַּן
-צי|fleet|ˈtsi|צִי
-סוף|end|ˈsof|סוֹף
-נס|miracle|ˈnes|נֵס
-תּשוּקה|passion|tʃuˈka|תְּשׁוּקָה
-שנה|year|ʃaˈna|שָׁנָה
-יום|day|ˈjom|יוֹם
-כּל|all|ˈkol|כֹּל
-איך|how|ex|אֵיךְ
-חם|hot|ˈħam|חַם
-ראיון|interview|reʔaˈjon|רֵאָיוֹן
-נבל|harp|ˈnevel|נֵבֶל
-נֵבֶל|harp|ˈnevel
-דּלק|fuel|ˈdelek|דֶּלֶק
-זה|this|ze|זֶה
-גּ׳ירפה|giraffe|dʒiˈrafa|גִּ׳ירָפָה
-בּז|beige|ˈbeʒ|בֵּז
-פּינגּוין|penguin|ˈpinɡwin|פִּינְגְּוִין
-גּם|also|gam|גַּם
-ראש|head|ˈroʃ|רֹאשׁ
-עם|with|ʕim|עִם
-הד|echo|ˈhed|הֵד
-
-
-נמלים|ants|nemaˈlim|נְמָלִים
-גּמלים|camels|ɡmaˈlim|גְּמָלִים
-נְמָלִים|ants|nemaˈlim
-גְּמָלִים|camels|ɡmaˈlim
-שאל|asked|ʃaʔal|שָׁאַל
-שָׁאַל|asked|ʃaʔal
-שנה|year|ʃaˈna|שָׁנָה
-שָׁנָה|year|ʃaˈna
-פּה‎|here|po|פֹּה‎
-פֹּה‎‎|here|po
-קול|sound|kɔl|קוֹל
-קוֹל|sound|kɔl
-לגוע|to agonise|liɡˈvo.a|לִגְוֺעַ
-לִגְוֺעַ|to agonise|liɡˈvo.a
-לא|no|ˈlo|לֹא
-לֹא|no|lo
-תּאר|epithet|ˈto.aʁ|תֹּאַר
-תֹּאַר|epithet|ˈto.aʁ
-כְּתֻמִּים|oranges|kətumˈmim
-כּתמּים|oranges|kətumˈmim|כְּתֻמִּים
-ראשון|first|riʃɔn|רִאשׁוֹן
-רִאשׁוֹן|first|riʃɔn
-נין|grandson|nin|נִין
-נִין|grandson|nin
-
-וו|hook|vav|וָו
 
 `
 
