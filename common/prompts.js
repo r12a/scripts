@@ -26,7 +26,9 @@ var contentPrompts = {
 
 "emphasis":"How are emphasis and highlighting achieved?\n• If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself?\n• Is it important to skip characters when underlining, etc?\n• How do things change for vertically set text?",
 
-"otherPunctuation":"Punctuation not already mentioned, such as dashes, connectors, separators, etc.",
+"otherinline":"Any other form of highlighting or marking of text, such as underlining, numeric overbars, etc.",
+
+"otherpunctuation":"Punctuation not already mentioned, such as dashes, connectors, separators, etc.",
 
 "inlinenotes":"What mechanisms, if any, are used to create *inline* notes and annotations? (For referent-type notes such as footnotes, see below.)",
 
@@ -50,6 +52,10 @@ var contentPrompts = {
 
 "headers":"Are there special conventions for page numbering, or the way that running headers and the like are handled?",
 
+"writingstyles":"How are fonts grouped into recognisable writing styles? How is each writing style used?",
+
+"transforms":"Is the orthography bicameral? Are there other character pairings, especially when transforms are needed to convert between the two?",
+
 }
 
 
@@ -58,6 +64,7 @@ var contentPrompts = {
 
 function setContentPrompts () {
 	if (contentPrompts) {
+		// set the prompts in the titles
 		for (thePrompt in contentPrompts) {
 			var node = document.getElementById(thePrompt)
 			if (node) {		 	
@@ -68,6 +75,13 @@ function setContentPrompts () {
 				if (promptPara) promptPara.textContent = contentPrompts[thePrompt]
 				}
 			 }
+			 
+		// set the prompts in the initial paras of shaping and pagelayout
+		for (thePrompt in contentPrompts) {
+			var node = document.getElementById(thePrompt+'Inline')
+			if (node) node.title = contentPrompts[thePrompt]
+			}
+
 		contentPrompts = {}
 		}
 	}
