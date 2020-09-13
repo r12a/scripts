@@ -1452,60 +1452,6 @@
 
 
 
-<!--span class="charExample" translate="no"><span class="ex" lang="th">ธรรม</span> <span class="trans">ṯ̇ʰṟṟm̱</span> <span class="ipa">tʰam</span> <span class="meaning">justice</span></span-->
-<p><button onClick="extractVocab()">Extract vocab</button></p>
-<textarea id="vocabOut" placeholder="temp"></textarea>
-<script>
-function extractVocab() {
-	out = ''
-	nodes = document.querySelectorAll('.charExample')
-	console.log(nodes.length,' nodes')
-	for (i=0;i<nodes.length;i++) {
-		nativeStr = nodes[i].querySelector('.ex').textContent
-		
-		trans = nodes[i].querySelectorAll('.trans')
-		if (trans.length == 0) continue
-		else if (trans.length > 1) transStr = trans[1].textContent
-		else transStr = ''
-		
-		ipa = nodes[i].querySelectorAll('.ipa')
-		if (ipa.length > 0) ipaStr = ipa[0].textContent
-		else ipaStr = ''
-
-		meaning = nodes[i].querySelectorAll('.meaning')
-		if (meaning.length > 0) meaningStr = meaning[0].textContent
-		else continue
-
-		if (ipaStr == '' && meaningStr == '') continue
-		
-		out += nativeStr + '|' + meaningStr
-		if (ipaStr) out += '|' + ipaStr
-		if (transStr) out += ' (' + transStr + ')'
-		out += '\n'
-		}
-	//document.getElementById('vocabOut').value = out
-	items = out.split('\n')
-	//charlist = items.sort()
-	const uniqueSet = new Set(items)
-	charlist = [...uniqueSet]
-	charlist.sort()
-	
-	document.getElementById('vocabOut').value = charlist.join('\n')
-	document.getElementById('vocabOut').select()
-	}
-</script>
-<textarea id="sortedVocabOut" placeholder="Add result here."></textarea>
-<p><button onClick="sortVocab()">Sort vocab</button></p>
-<textarea id="finalVocabList" placeholder="Final, sorted list."></textarea>
-<script>
-function sortVocab() {
-	items = document.getElementById('sortedVocabOut').value.split('\n')
-	const uniqueSet = new Set(items)
-	charlist = [...uniqueSet]
-	charlist.sort()
-	document.getElementById('finalVocabList').value = charlist.join('\n')
-	}
-</script>
 
 
 

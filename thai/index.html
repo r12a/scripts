@@ -2616,6 +2616,9 @@ alveolar</th>
       <button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Justify   </button>
     </p>
 
+
+
+
 <section id="para_indent">
 <h4>Paragraph indentation</h4>
 <p>Thai does indent the initial line of a paragraph.</p>
@@ -2756,7 +2759,7 @@ alveolar</th>
 data-cols="">ก␣ข␣ค␣ง␣จ␣ฉ␣ช␣ซ␣ฌ␣ญ␣ฎ␣ฏ␣ฐ␣ฑ␣ฒ␣ณ␣ด␣ต␣ถ␣ท␣ธ␣น␣บ␣ป␣ผ␣ฝ␣พ␣ฟ␣ภ␣ม␣ย␣ร␣ล␣ว␣ศ␣ษ␣ส␣ห␣ฬ␣อ␣ฮ</figure>
 <p>&nbsp;</p>
 </section>
-
+</section>
 
 
 
@@ -2887,7 +2890,7 @@ data-cols="">ก␣ข␣ค␣ง␣จ␣ฉ␣ช␣ซ␣ฌ␣ญ␣ฎ␣�
     <li> <a href="/uniview/?block=general_punctuation">General punctuation</a> <span class="charCount">4 punctuation : total 4 &nbsp; (+ 6 infrequent)</span></li>
 </ul>
  <p><cite>Character Usage</cite> has information about the following orthography associated with this script: <a href="/app-charuse/?language=th" target="_blank">Thai</a></p>
-<p>For detailed character-specific information see the <a class="linkHighlight" href="/scripts/thai/block">Thai character notes</a-->.</p>
+<p>For detailed character-specific information see the <a class="linkHighlight" href="/scripts/thai/block">Thai character notes</a>.</p-->
 </section>
 
 
@@ -3015,62 +3018,6 @@ runCharCount('.deprecatedBox', 'deprecatedCharList')
 
 <div class="smallprint"><span id="version"></span></div>
 
-
-
-<!--span class="charExample" translate="no"><span class="ex" lang="th">ธรรม</span> <span class="trans">ṯ̇ʰṟṟm̱</span> <span class="ipa">tʰam</span> <span class="meaning">justice</span></span-->
-<p><button onClick="extractVocab()">Extract vocab</button></p>
-<textarea id="vocabOut" placeholder="temp"></textarea>
-<script>
-function extractVocab() {
-	out = ''
-	nodes = document.querySelectorAll('.charExample')
-	console.log(nodes.length,' nodes')
-	for (i=0;i<nodes.length;i++) {
-		nativeStr = nodes[i].querySelector('.ex').textContent
-		
-		trans = nodes[i].querySelectorAll('.trans')
-		if (trans.length == 0) continue
-		else if (trans.length > 1) transStr = trans[1].textContent
-		else transStr = ''
-		
-		ipa = nodes[i].querySelectorAll('.ipa')
-		if (ipa.length > 0) ipaStr = ipa[0].textContent
-		else ipaStr = ''
-
-		meaning = nodes[i].querySelectorAll('.meaning')
-		if (meaning.length > 0) meaningStr = meaning[0].textContent
-		else continue
-
-		if (ipaStr == '' && meaningStr == '') continue
-		
-		out += nativeStr + '|' + meaningStr
-		if (ipaStr) out += '|' + ipaStr
-		if (transStr) out += ' (' + transStr + ')'
-		out += '\n'
-		}
-	//document.getElementById('vocabOut').value = out
-	items = out.split('\n')
-	//charlist = items.sort()
-	const uniqueSet = new Set(items)
-	charlist = [...uniqueSet]
-	charlist.sort()
-	
-	document.getElementById('vocabOut').value = charlist.join('\n')
-	document.getElementById('vocabOut').select()
-	}
-</script>
-<textarea id="sortedVocabOut" placeholder="Add result here."></textarea>
-<p><button onClick="sortVocab()">Sort vocab</button></p>
-<textarea id="finalVocabList" placeholder="Final, sorted list."></textarea>
-<script>
-function sortVocab() {
-	items = document.getElementById('sortedVocabOut').value.split('\n')
-	const uniqueSet = new Set(items)
-	charlist = [...uniqueSet]
-	charlist.sort()
-	document.getElementById('finalVocabList').value = charlist.join('\n')
-	}
-</script>
 
 
 </body>
