@@ -51,7 +51,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->16 August, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->12 September, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -930,17 +930,405 @@ Affricate </th>
 <p><span class="codepoint" translate="no"><span lang="ks">&#x20B9;</span> [<a href="/scripts/devanagari/block#char20B9"><span class="uname">U+20B9 INDIAN RUPEE SIGN</span></a>]</span> is the symbol introduced by the Government of India in 2010 as the official currency symbol for the Indian rupee (INR). <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch22.pdf">u</a></p>
 </section-->
 </section>
-  
-  
-  
-  
-  <section id="context">
+
+
+
+
+
+
+<section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
+
+<p class="instructions">This section brings together information about the following topics:
+<span id="writingstylesInline">writing styles</span>; 
+<span id="cursiveInline">cursive text</span>;
+<span id="gsubInline">context-based shaping</span>;
+<span id="gposInline">context-based positioning</span>;
+<span id="baselinesInline">baselines, line height, etc.</span>;
+<span id="fontstyleInline">font styles</span>;
+<span id="transformsInline">case &amp; other character transforms</span>.
+</p>
+
+<p class="instructions">You can experiment with examples using the <a href="../../pickers/deva-ks/">Kashmiri character app</a>.</p>
+
+<p>Kashmiri text written with the devanagari script is not cursive (ie. joined up like Arabic), however there is a significant amount of interaction between glyphs, and some joining, around consonant clusters.</p>
+<p>The orthography has no case distinction, and no special transforms are needed to convert between characters.</p>
 <p>See the <a href="index#context">Devanagari overview</a>.<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf"></a></p>
+
+<!--section id="writing_styles">
+<h3>Writing styles</h3>
+
+<p>Urdu is normally written in a <span class="trans">nasta'liq</span> writing style. Key features include a sloping baseline for joined letters, and overall complex shaping and positioning for base letters and diacritics alike. There are also distinctive shapes for many glyphs and ligatures.</p>
+
+<figure id="fig_baseline">
+<p dir="rtl" lang="ur" class="large" style="margin-top: 1em; margin-bottom: 1em;"><span class="ex">مستحق</span> &nbsp;•&nbsp; <span class="ex">شخص</span> &nbsp;•&nbsp; <span class="ex">کیفیت</span></p>
+<figcaption>Sloping baselines and complex joining behaviours in Urdu nastaliq text.</figcaption>
+</figure>
+
+<p>This is achieved in Unicode by applying the correct font – the underlying characters used are not different for nasta'liq vs. other styles.</p>
+
+<figure id="fig_nastaliq_style">
+<p dir="rtl" lang="ur" class="medium" style="line-height: 2.5"> کوئی شخص محض حاکم کی مرضی پر اپنی قومیت سے محروم نہیں کیا جائے گا اور اس کو قومیت تبدیل کرنے کا حق دینے سے انکار نہ کیا جائے گا۔</p>
+<figcaption>Urdu is normally written in the nasta'liq writing style.</figcaption>
+</figure>
+
+
+<figure id="fig_naskh_style">
+<p dir="rtl" lang="ur" class="medium" style="font-family: Scheherazade; font-size: 240%;"> کوئی شخص محض حاکم کی مرضی پر اپنی قومیت سے محروم نہیں کیا جائے گا اور اس کو قومیت تبدیل کرنے کا حق دینے سے انکار نہ کیا جائے گا۔</p>
+<figcaption>The same text, written in a standard naskh writing style.</figcaption>
+</figure>
+</section>
+
+
+
+
+
+
+
+<section id="cursive">
+<h3>Cursive text</h3>
+
+  <p class="prompts">tbd</p>
+<p>N'Ko is usually cursive, ie. letters in a word are joined up. </p>
+<p>Fonts need to produce the appropriate joining form for a code point, according to its visual context.</p>
+  <figure>
+<p dir="rtl" lang="nqo" class="large"><span class="ex">ߕߟߋ߬ߓߊ߰ߓߟߐߟߐ</span></p>
+<figcaption>Cursive connections in a word. Note that here is both a medial and final form of <span lang="nqo">ߐ</span>.</figcaption>
+</figure>
+    
+  <p>The cursive treatment doesn't produce significant variations of the essential part of the glyph for a character (unlike Arabic).</p>
+  <p>Non-cursive fonts are sometimes used, mainly as display fonts for books and article titles. <sup><a href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></sup></p>
+</section>
+
+
+
+
+
+<section id="gsub">
+<h3>Context-based shaping</h3>
+
+  <p class="prompts">tbd</p>
+<p>@ None of the characters require special shaping based on the visual context.</p>
+<p>@ Many of the subjoined and post-fixed consonant forms have different shapes from the standard glyph for that character, for example <span class="name">na</span> <span class="charExample"><span class="ex" lang="tmp">ᬦ</span></span>  becomes &nbsp; <span class="charExample"><span class="ex" lang="tmp">᭄ᬦ</span></span>.</p>
+<p>@ In addition, many conjunct clusters combine characters with special  shapes, or subtly change parts of glyphs to join smoothly. Often the changes are significant, especially the medial consonants, ya, ra, wa and la. For example, see the sequence &lt;ba, adeg-adeg, ra, adeg-adeg, ya&gt; in <span class="charExample" translate="no"><span class="ex" lang="tmp">ᬩ᭄ᬭ᭄ᬬᬕ᭄</span> <span class="trans">b͓r͓yg͓ (briag)</span> <span class="meaning">laughter</span></span>.</p>
+<p>@ Combining vowel signs can also have different shapes depending on the context. For example, the vowel sign tedung typically ligates with the preceding consonant, eg. <span class="name">ha</span> is <span class="charExample"><span class="ex" lang="tmp">ᬳ</span></span>  but <span class="name">&lt;ha, tedong&gt;</span> is <span class="charExample"><span class="ex" lang="tmp">ᬳᬵ</span></span>  and <span class="name">subjoined ya</span> is &nbsp; <span class="charExample"><span class="ex" lang="tmp" style="font-family: 'Aksara Bali WF'!important;">᭄ᬬ</span></span>  but <span class="name">&lt;consonant, adeg-adeg, ya, tedong&gt;</span> can be rendered as &nbsp; <span class="charExample"><span class="ex" style="font-family: 'Aksara Bali WF'!important;" lang="tmp">᭄ᬬᬵ</span></span>.</p>
+</section>
+
+
+
+
+<section id="gpos">
+<h3>Context-based positioning</h3>
+
+			<p class="prompts">tbd</p>
+<p>@ Prescript vowels are visually ordered, and therefore do not need to be positioned by the font.</p>
+<p>@ Vowel-signs, tones, and one consonant, on the other hand, are combining characters that need to be correctly positioned relative to the base character, and multiple marks can be combined with a single base character.</p>
+<p>@ When a vowel and a final consonant sign both appear above a consonant, they are placed side by side, eg. <span class="charExample" translate="no"><span class="ex" lang="tmp">ᬱᬫ᭄ᬧᬶᬂ</span> <span class="trans">sm͓piŋ̇̽ (samping)</span> <span class="meaning">side</span></span>.</p>
+<p>@ Include info about multiple combining characters.</p>
+</section>
+
+
+
+
+  
+<section id="baselines">
+<h3>Baselines, line height, etc.</h3>
+<p class="prompts">tbd</p>
+<p>@ Lao has no special requirements for baseline alignment between mixed scripts and in general.</p>
+</section-->
+
+
+
+
+<section id="fontstyle">
+<h3>Font styles</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+<!--section id="transforms">
+<h3>Case &amp; other character transforms</h3>
+
+<p class="prompts">tbd</p>
+
+<p>@ Lao has no case distinction or other correspondences between glyphs.</p>
+<p>@ Armenian is bicameral, and applications may need to enable transforms to allow the user to switch between cases.</p>
+</section-->
+</section>  
+
+
+
+
+
+
+
+<section id="boundaries">
+<h2>Structural boundaries &amp; markers</h2>  
+  
+<section id="graphemes">
+<h3>Grapheme boundaries</h3>
+<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+  
+<section id="word">
+<h3>Word boundaries</h3>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+  
+<section id="phrase">
+<h3>Phrase &amp; section boundaries</h3>
+
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+
+<section id="bracketing">
+<h3>Parentheses &amp; brackets</h3>
+<p class="prompts">tbd</p>
+
+<p><span class="codepoint" translate="no"><span lang="ta">(</span> [<a href="/scripts/tamil/block#char0028"><span class="uname">U+0028 LEFT PARENTHESIS</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ta">)</span> [<a href="/scripts/tamil/block#char0029"><span class="uname">U+0029 RIGHT PARENTHESIS</span></a>]</span> are used for parentheses.&nbsp;</p>
+</section>
+
+
+
+
+  
+<section id="quotations">
+<h3>Quotations</h3>
+<p class="prompts">tbd</p>
+<p>The default quote marks for Kashmiri are <span class="codepoint" translate="no"><span lang="ta">“</span> [<span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span>]</span> at the start, and <span class="codepoint" translate="no"><span lang="ta">”</span> [<span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span>]</span> at the end.<a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/ta.html">c</a></p>
+<p>When an additional quote is embedded within the first, the quote marks are <span class="codepoint" translate="no"><span lang="ta">‘</span> [<span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span>]</span> and <span class="codepoint" translate="no"><span lang="ta">’</span> [<span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span>]</span>.<a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/ta.html">c</a></p>
+</section>
+
+
+
+
+  
+<section id="emphasis">
+<h3>Emphasis</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+  
+<section id="abbrev">
+<h3>Abbreviation, ellipsis &amp; repetition</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+  
+<section id="inlinenotes">
+<h3>Inline notes &amp; annotations</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+
+<section id="otherinline">
+<h3>Other inline ranges</h3>
+
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+
+<section id="otherpunctuation">
+<h3>Other punctuation</h3>
+
+<p class="prompts">tbd</p>
+</section>
+</section>
+
+
+
+
+
+
+<section id="paralayout">
+<h2>Line &amp; paragraph layout</h2>
+   
+      
+<section id="linebreak">
+<h3>Line breaking &amp; hyphenation</h3>
+<p class="prompts">tbd</p>
+<section id="linebreak_props">
+<h4>Character properties</h4>
+<p>Characters used for the Kashmiri  language have the following <em>default</em> assignments related to line-break properties, according to the Unicode Standard. Some tailoring may be needed for thisLanguage language text.</p>
+<table><tbody>
+<tr><th class="sg">AL</th><td class="count">1</td><td class="chars"><span class="exlist" lang="xx">๏</span></td></tr>
+<tr><th class="sg">B2</th><td class="count">1</td><td class="chars"><span class="exlist" lang="xx">—</span></td></tr>
+<tr><th class="sg">BA</th><td class="count">4</td><td class="chars"><span class="exlist" lang="xx">๚๛‐–</span></td></tr>
+<tr><th class="sg">IN</th><td class="count">1</td><td class="chars"><span class="exlist" lang="xx">…</span></td></tr>
+<tr><th class="sg">NU</th><td class="count">10</td><td class="chars"><span class="exlist" lang="xx">๐๑๒๓๔๕๖๗๘๙</span></td></tr>
+<tr><th class="sg">PO</th><td class="count">2</td><td class="chars"><span class="exlist" lang="xx">′″</span></td></tr>
+<tr><th class="sg">PR</th><td class="count">1</td><td class="chars"><span class="exlist" lang="xx">฿</span></td></tr>
+<tr><th class="sg">QU</th><td class="count">4</td><td class="chars"><span class="exlist" lang="xx">‘’“”</span></td></tr>
+<tr><th class="sg">SA</th><td class="count">70</td><td class="chars"><span class="exlist" lang="xx">กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรฤลฦวศษสหฬอฮฯะาำเแโใไๅๆัิีึืุู็่้๊๋์</span></td></tr>
+</tbody></table>
+
+
+
+<detailsx id="linebreak_details">
+<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AI">AI (ambiguous, alphabetic or Ideograph)</a> line breaking behavior  depends on the context, and may reflect  different rules in East Asian and other contexts.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">B2 (break opportunity before and after)</a> the EM DASH  used to set off parenthetical text may allow line breaks before or after, but may also be affected by local orthographic rules.&nbsp;</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BB (break before)</a> indicates that characters  move to the next line at a line break and thus provide a line break opportunity before.&nbsp;</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BA (break after)</a> indicates that it is normal to break after that character.&nbsp;</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CL">CL (close punctuation)</a>  should be kept with the preceding character.&nbsp;The class CL is closely related to the class CP (Close Parenthesis). They differ only in that CP will not introduce a break when followed by a letter or number, which prevents breaks within constructs like “(s)he”.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CP">CP (closing parenthesis)</a> will not cause a break opportunity when appearing in contexts like “(s)he.” In all other respects the breaking behavior of CP and CL are the same.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#EX">EX (exclamation mark/interrogation)</a> behave like closing characters, except in relation to postfix (PO) and non-starter characters (NS).</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#GL">GL (non-breaking “glue&quot;)</a> non-tailorable, non-breaking characters prohibit breaks on either side, but that prohibition can be overridden by SP or ZW.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#H2">HY (hyphen)</a> additional context analysis is required to distinguish usage of this character as a hyphen from its usage as a minus sign (or indicator of numerical range). If used as hyphen, it acts like U+2010 HYPHEN, which has line break class BA.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">IN (inseparable characters)</a> is intended to be used consecutively. There is never a line break between two characters of this class.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">ID (ideographic)</a> do not require other characters to provide break opportunities; lines can ordinarily break before and after and between pairs of ideographic characters. Note that this class also includes characters other than Han ideographs..</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">IS (infix numeric separators)</a> usually occurs inside a numerical expression and may not be separated from the numeric characters that follow, unless a space character intervenes. For example, there is no break in “100.00” or “10,000”, nor in “12:59”..</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">NS (nonstarters)</a> cannot start a line, but unlike CL they may allow a break in some contexts when they follow one or more space characters.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">NU (number)</a> behaves like ordinary characters (AL) in the context of most characters but activate the prefix and postfix behavior of prefix and postfix characters.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#OP">OP (open punctuation)</a> 	should be kept with the character that follows. This is desirable, even if there are intervening space characters, as it prevents the appearance of a bare opening punctuation mark at the end of a line.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#OP">PO (postfix numeric)</a> usually follows a numerical expression and may not be separated from preceding numeric characters or preceding closing characters, even if one or more space characters intervene. For example, there is no break opportunity in “(12.00) %”.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#PR">PR (numeric prefix)</a>  may not be separated from following numeric characters or following opening characters, even if a space character intervenes. For example, there is no break opportunity in “฿ (100.00)”.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#SA">QU (quotation)</a> characters can be opening or closing, or even both, depending on usage. The default is to treat them as both opening and closing.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#SA">SA (Southeast Asian)</a> require morphological analysis to determine break opportunities, in a way similar to a hyphenation algorithm. No break opportunities will be found otherwise. Complex context analysis, often involving dictionary lookup of some form, is required to determine non-emergency line breaks. If such analysis is not available, it is recommended to treat them as AL.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#SA">SY (symbols allowing break after)</a> provides a break opportunity after, except in front of digits, so as to not break “1/2” or “06/07/99”.</p>
+<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#SA">ZW (ZERO WIDTH SPACE, ZWSP)</a> enables  invisible break opportunities wherever <span class="uname">SPACE</span> cannot be used. It  has no width, and is treated as if it wasn't there during justification.</p>
+</details>
+</section>
+</section>
+
+
+
+<section id="justification">
+<h3>Text alignment &amp; justification</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+<section id="letterspace">
+<h3>Letter spacing</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+
+
+<section id="lists">
+<h3>Counters, lists, etc.</h3>
+  
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+
+
+
+  
+<section id="initials"> </section>
+<section id="initials">
+<h3>Styling initials</h3>
+<p class="prompts">tbd</p>
+</section>
 </section>
   
+
+
+
+
+
+<section id="pagelayout">
+<h2>Page &amp; book layout</h2>
+
+<p class="instructions">This section is for  any features that are specific to Kashmiri written in the devanagari script and that relate to the following topics:
+<span id="generallayoutInline">general page layout &amp; progression</span>; 
+<span id="gridsInline">grids &amp; tables</span>;
+<span id="footnotesInline">notes, footnotes, etc</span>;
+<span id="interactionInline">forms &amp; user interaction</span>;
+<span id="headersInline">page numbering, running headers, etc</span>.
+</p>
+
+
+
+
+
+<!--section id="generallayout">
+<h3>General page layout &amp; progression</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+
+<section id="grids">
+<h3>Grids &amp; tables</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
   
+<section id="footnotes">
+<h3>Notes, footnotes, etc</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
   
+<section id="interaction">
+<h3>Forms &amp; user interaction</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+  
+<section id="headers">
+<h3>Page numbering, running headers, etc</h3>
+<p class="prompts">tbd</p>
+</section-->
+</section>
+
+
+
+
+
+
 
 <section>
 <h2>Character lists</h2>

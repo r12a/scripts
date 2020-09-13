@@ -28,7 +28,8 @@
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../common/egcode.js"></script>
-<script src="examples.js"></script>
+
+<script src="bn-examples.js"></script>
 <script src="bn-translit.js">  </script>
 </head>
 
@@ -55,7 +56,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->16 August, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->13 September, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -1339,28 +1340,93 @@ alveolar</th>
 
 
 <section id="shaping">
-<h2 id="h_shaping">Glyph shaping &amp; positioning</h2>
+<h2>Glyph shaping &amp; positioning</h2>
 
-<p>You can experiment with examples using the <a href="/pickers/bengali/">Bengali character app</a>.</p>
-<p>Bengali is not a cursive script, and no character transforms are needed.</p>
+<p class="instructions">This section brings together information about the following topics:
+<span id="writingstylesInline">writing styles</span>; 
+<span id="cursiveInline">cursive text</span>;
+<span id="gsubInline">context-based shaping</span>;
+<span id="gposInline">context-based positioning</span>;
+<span id="baselinesInline">baselines, line height, etc.</span>;
+<span id="fontstyleInline">font styles</span>;
+<span id="transformsInline">case &amp; other character transforms</span>.
+</p>
+
+<p class="instructions">You can experiment with examples using the <a href="../../pickers/bengali/">Bengali character app</a>.</p>
+
+<p>Bengali text is not cursive (ie. joined up like Arabic), however there is a significant amount of interaction between glyphs, and some joining, around consonant clusters.</p>
+<p>The orthography has no case distinction, and no special transforms are needed to convert between characters.</p>
+
+<!--section id="writing_styles">
+<h3>Writing styles</h3>
+
+<p>Urdu is normally written in a <span class="trans">nasta'liq</span> writing style. Key features include a sloping baseline for joined letters, and overall complex shaping and positioning for base letters and diacritics alike. There are also distinctive shapes for many glyphs and ligatures.</p>
+
+<figure id="fig_baseline">
+<p dir="rtl" lang="ur" class="large" style="margin-top: 1em; margin-bottom: 1em;"><span class="ex">مستحق</span> &nbsp;•&nbsp; <span class="ex">شخص</span> &nbsp;•&nbsp; <span class="ex">کیفیت</span></p>
+<figcaption>Sloping baselines and complex joining behaviours in Urdu nastaliq text.</figcaption>
+</figure>
+
+<p>This is achieved in Unicode by applying the correct font – the underlying characters used are not different for nasta'liq vs. other styles.</p>
+
+<figure id="fig_nastaliq_style">
+<p dir="rtl" lang="ur" class="medium" style="line-height: 2.5"> کوئی شخص محض حاکم کی مرضی پر اپنی قومیت سے محروم نہیں کیا جائے گا اور اس کو قومیت تبدیل کرنے کا حق دینے سے انکار نہ کیا جائے گا۔</p>
+<figcaption>Urdu is normally written in the nasta'liq writing style.</figcaption>
+</figure>
+
+
+<figure id="fig_naskh_style">
+<p dir="rtl" lang="ur" class="medium" style="font-family: Scheherazade; font-size: 240%;"> کوئی شخص محض حاکم کی مرضی پر اپنی قومیت سے محروم نہیں کیا جائے گا اور اس کو قومیت تبدیل کرنے کا حق دینے سے انکار نہ کیا جائے گا۔</p>
+<figcaption>The same text, written in a standard naskh writing style.</figcaption>
+</figure>
+</section>
+
+
+
+
+
+
+
+<section id="cursive">
+<h3>Cursive text</h3>
+
+  <p class="prompts">tbd</p>
+<p>N'Ko is usually cursive, ie. letters in a word are joined up. </p>
+<p>Fonts need to produce the appropriate joining form for a code point, according to its visual context.</p>
+  <figure>
+<p dir="rtl" lang="nqo" class="large"><span class="ex">ߕߟߋ߬ߓߊ߰ߓߟߐߟߐ</span></p>
+<figcaption>Cursive connections in a word. Note that here is both a medial and final form of <span lang="nqo">ߐ</span>.</figcaption>
+</figure>
+    
+  <p>The cursive treatment doesn't produce significant variations of the essential part of the glyph for a character (unlike Arabic).</p>
+  <p>Non-cursive fonts are sometimes used, mainly as display fonts for books and article titles. <sup><a href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></sup></p>
+</section>
 
 
 
 
 
 <section id="gsub">
-<h3 id="h_gsub">Context-based shaping</h3>
+<h3>Context-based shaping</h3>
 
-<p class="prompts">tbd</p>
+  <p class="prompts">tbd</p>
+<p>@ None of the characters require special shaping based on the visual context.</p>
+<p>@ Many of the subjoined and post-fixed consonant forms have different shapes from the standard glyph for that character, for example <span class="name">na</span> <span class="charExample"><span class="ex" lang="tmp">ᬦ</span></span>  becomes &nbsp; <span class="charExample"><span class="ex" lang="tmp">᭄ᬦ</span></span>.</p>
+<p>@ In addition, many conjunct clusters combine characters with special  shapes, or subtly change parts of glyphs to join smoothly. Often the changes are significant, especially the medial consonants, ya, ra, wa and la. For example, see the sequence &lt;ba, adeg-adeg, ra, adeg-adeg, ya&gt; in <span class="charExample" translate="no"><span class="ex" lang="tmp">ᬩ᭄ᬭ᭄ᬬᬕ᭄</span> <span class="trans">b͓r͓yg͓ (briag)</span> <span class="meaning">laughter</span></span>.</p>
+<p>@ Combining vowel signs can also have different shapes depending on the context. For example, the vowel sign tedung typically ligates with the preceding consonant, eg. <span class="name">ha</span> is <span class="charExample"><span class="ex" lang="tmp">ᬳ</span></span>  but <span class="name">&lt;ha, tedong&gt;</span> is <span class="charExample"><span class="ex" lang="tmp">ᬳᬵ</span></span>  and <span class="name">subjoined ya</span> is &nbsp; <span class="charExample"><span class="ex" lang="tmp" style="font-family: 'Aksara Bali WF'!important;">᭄ᬬ</span></span>  but <span class="name">&lt;consonant, adeg-adeg, ya, tedong&gt;</span> can be rendered as &nbsp; <span class="charExample"><span class="ex" style="font-family: 'Aksara Bali WF'!important;" lang="tmp">᭄ᬬᬵ</span></span>.</p>
 </section>
 
 
 
 
 <section id="gpos">
-<h3 id="h_gpos">Context-based positioning</h3>
+<h3>Context-based positioning</h3>
 
-<p class="prompts">tbd</p>
+			<p class="prompts">tbd</p>
+<p>@ Prescript vowels are visually ordered, and therefore do not need to be positioned by the font.</p>
+<p>@ Vowel-signs, tones, and one consonant, on the other hand, are combining characters that need to be correctly positioned relative to the base character, and multiple marks can be combined with a single base character.</p>
+<p>@ When a vowel and a final consonant sign both appear above a consonant, they are placed side by side, eg. <span class="charExample" translate="no"><span class="ex" lang="tmp">ᬱᬫ᭄ᬧᬶᬂ</span> <span class="trans">sm͓piŋ̇̽ (samping)</span> <span class="meaning">side</span></span>.</p>
+<p>@ Include info about multiple combining characters.</p>
 </section>
 
 
@@ -1368,17 +1434,30 @@ alveolar</th>
 
   
 <section id="baselines">
-<h3 id="h_baselines">Baselines &amp; inline alignment</h3>
+<h3>Baselines, line height, etc.</h3>
 <p class="prompts">tbd</p>
-</section>
+<p>@ Lao has no special requirements for baseline alignment between mixed scripts and in general.</p>
+</section-->
 
 
 
 
 <section id="fontstyle">
-<h3 id="h_fontstyle">Font styles</h3>
+<h3>Font styles</h3>
 <p class="prompts">tbd</p>
 </section>
+
+
+
+
+<!--section id="transforms">
+<h3>Case &amp; other character transforms</h3>
+
+<p class="prompts">tbd</p>
+
+<p>@ Lao has no case distinction or other correspondences between glyphs.</p>
+<p>@ Armenian is bicameral, and applications may need to enable transforms to allow the user to switch between cases.</p>
+</section-->
 </section>
 
 
@@ -1412,7 +1491,7 @@ alveolar</th>
 
    
 <section id="phrase">
-<h3 id="h_phrase">Phrase boundaries</h3>
+<h3 id="h_phrase">Phrase &amp; section boundaries</h3>
 <p>The danda, <span class="codepoint"><span lang="bn">&#x0964;</span> <a href="/scripts/bengali/block#char0964">[<span class="uname">U+0964 DEVANAGARI DANDA</span>]</a></span>, is used for sentence final punctuation. </p>
 <p class="observation"><span class="leadin">Observation:</span> <span class="ed">I haven't seen much evidence for the use of the double danda, <span class="codepoint"><span lang="bn">&#x0965;</span> <a href="/scripts/bengali/block#char0965">[<span class="uname">U+0965 DEVANAGARI DOUBLE DANDA</span>]</a></span>.</span></p>
   <p>Western punctuation, such as commas, semicolons, colons, quotation marks and hyphens are also used quite commonly. </p>
@@ -1422,7 +1501,7 @@ alveolar</th>
 
 
 <section id="bracketing">
-<h3 id="h_bracketing">Bracketing &amp; parentheses</h3>
+<h3 id="h_bracketing">Parentheses &amp; brackets</h3>
 <p class="prompts">tbd</p>
 </section>
 
@@ -1458,9 +1537,18 @@ alveolar</th>
 
 
 
+  
+<section id="inlinenotes">
+<h3 id="h_inlinenotes">Inline notes &amp; annotations</h3>
+<p class="prompts">tbd</p>
+</section>
 
-<section id="otherPunctuation">
-<h3>Other punctuation</h3>
+
+
+
+
+<section id="otherinline">
+<h3>Other inline ranges</h3>
 
 <p class="prompts">tbd</p>
 </section>
@@ -1468,9 +1556,10 @@ alveolar</th>
 
 
 
-  
-<section id="inlinenotes">
-<h3 id="h_inlinenotes">Inline notes &amp; annotations</h3>
+
+<section id="otherpunctuation">
+<h3>Other punctuation</h3>
+
 <p class="prompts">tbd</p>
 </section>
 </section>
@@ -1608,13 +1697,12 @@ alveolar</th>
 <figcaption>Numbers produced by the <span class="kw" translate="no">tamil</span> numeric counter style.</figcaption>
 </figure>
 </section>
-</section>
 
 
 
 
-<section id="initails">
-<h3 id="h_initails">Styling initials</h3>
+<section id="initials">
+<h3 id="h_initials">Styling initials</h3>
 <p>Initial letter styling can be applied to Bengali text.</p>
 </section>
 </section> 
@@ -1622,11 +1710,26 @@ alveolar</th>
 
 
 
+
+
+
 <section id="pagelayout">
-<h2 id="h_pagelayout">Page &amp; book layout</h2>
- 
-<section id="generallayout">
-<h3 id="h_generallayout">General page layout &amp; progression</h3>
+<h2>Page &amp; book layout</h2>
+
+<p class="instructions">This section is for  any features that are specific to Bengali and that relate to the following topics:
+<span id="generallayoutInline">general page layout &amp; progression</span>; 
+<span id="gridsInline">grids &amp; tables</span>;
+<span id="footnotesInline">notes, footnotes, etc</span>;
+<span id="interactionInline">forms &amp; user interaction</span>;
+<span id="headersInline">page numbering, running headers, etc</span>.
+</p>
+
+
+
+
+
+<!--section id="generallayout">
+<h3>General page layout &amp; progression</h3>
 <p class="prompts">tbd</p>
 </section>
 
@@ -1635,7 +1738,7 @@ alveolar</th>
 
 
 <section id="grids">
-<h3 id="h_grids">Grids &amp; tables</h3>
+<h3>Grids &amp; tables</h3>
 <p class="prompts">tbd</p>
 </section>
 
@@ -1644,7 +1747,7 @@ alveolar</th>
 
   
 <section id="footnotes">
-<h3 id="h_footnotes">Notes, footnotes, etc</h3>
+<h3>Notes, footnotes, etc</h3>
 <p class="prompts">tbd</p>
 </section>
 
@@ -1653,7 +1756,7 @@ alveolar</th>
 
   
 <section id="interaction">
-<h3 id="h_interaction">Forms &amp; user interaction</h3>
+<h3>Forms &amp; user interaction</h3>
 <p class="prompts">tbd</p>
 </section>
 
@@ -1662,9 +1765,9 @@ alveolar</th>
 
   
 <section id="headers">
-<h3 id="h_headers">Page numbering, running headers, etc</h3>
+<h3>Page numbering, running headers, etc</h3>
 <p class="prompts">tbd</p>
-</section>
+</section-->
 </section>
   
   

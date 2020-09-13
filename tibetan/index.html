@@ -28,7 +28,8 @@
 <script src="../../scripts/linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../common/egcode.js"></script>
-<script src="examples.js"></script>
+
+<script src="bo-examples.js"></script>
 <script src="bo-translit.js">  </script>
 </head>
 
@@ -54,7 +55,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->16 August, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->13 September, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -894,15 +895,22 @@ alveolar</th>
 
 <section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
-  <p>Tibetan requires many rules to position glyphs correctly, and also to shape characters according to context.</p>
-<p>You can experiment with examples using the <a href="/pickers/tibetan/">Tibetan picker</a>.</p>
-  
-  
-  
-   
-  
-  
-  <section id="gsub">
+
+
+<p class="instructions">This section brings together information about the following topics:
+<span id="writingstylesInline">writing styles</span>; 
+<span id="cursiveInline">cursive text</span>;
+<span id="gsubInline">context-based shaping</span>;
+<span id="gposInline">context-based positioning</span>;
+<span id="baselinesInline">baselines, line height, etc.</span>;
+<span id="fontstyleInline">font styles</span>;
+<span id="transformsInline">case &amp; other character transforms</span>.
+</p>
+
+<p class="instructions">You can experiment with examples using the <a href="/pickers/tibetan/">Tibetan picker</a>.</p>
+<p>Tibetan requires many rules to position glyphs correctly, and also to shape characters according to context.</p>
+<p>The orthography has no case distinction, and no special transforms are needed to convert between characters.</p>
+<section id="gsub">
 <h3>Context-based shaping</h3>
 <p>Glyphs in Tibetan script need to be adapted sometimes to suit the context in which the character is used. A particularly prevalent example is that of the letter <span class="codepoint"><span lang="bo">&#x0F62;</span> <a href="/scripts/tibetan/block#char0F62">[<span class="uname">U+0F62 TIBETAN LETTER RA</span>]</a></span>. When used at the top of a stack it has an abbreviated form, as shown by the grey highlight in the example below on the left.</p>
     <p>The example on the right shows what a normal RA looks like. This is the same underlying character. The shape is determined by rules in the font.</p>
@@ -939,15 +947,6 @@ alveolar</th>
 
 <section id="fontstyle">
 <h3>Font styles</h3>
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
-<section id="transforms">
-<h3>Transforming characters</h3>
-
 <p class="prompts">tbd</p>
 </section>
 </section>
@@ -1051,7 +1050,7 @@ alveolar</th>
 
     
 <section id="brackets">
-<h3>Bracketing &amp; range markers</h3>
+<h3>Parentheses &amp; brackets</h3>
 <p><span class="codepoint"><span lang="bo">&#x0F3C;</span> <a href="/scripts/tibetan/block#char0F3C">[<span class="uname">U+0F3C TIBETAN MARK ANG KHANG GYON</span>]</a></span> and <span class="codepoint"><span lang="bo">&#x0F3D;</span> <a href="/scripts/tibetan/block#char0F3D">[<span class="uname">U+0F3D TIBETAN MARK ANG KHANG GYAS</span>]</a></span> are paired punctuation used to form a roof over one or more digits or words. The right-hand character can also be used much like a single parenthesis in list counters.</p>
 	  <p><span class="codepoint"><span lang="bo">&#xA0;&#x0F3E;</span> <a href="/scripts/tibetan/block#char0F3E">[<span class="uname">U+0F3E TIBETAN SIGN YAR TSHES​</span>]</a></span> and <span class="codepoint"><span lang="bo">&#xA0;&#x0F3F;</span> <a href="/scripts/tibetan/block#char0F3F">[<span class="uname">U+0F3F TIBETAN SIGN MAR TSHES​</span>]</a></span> are also paired characters used in combination with digits.</p>
 </section>
@@ -1099,9 +1098,18 @@ alveolar</th>
 
 
 
+  
+<section id="inlinenotes">
+<h3>Inline notes &amp; annotations</h3>
+<p class="prompts">tbd</p>
+</section>
 
-<section id="otherPunctuation">
-<h3>Other punctuation</h3>
+
+
+
+
+<section id="otherinline">
+<h3>Other inline ranges</h3>
 
 <p class="prompts">tbd</p>
 </section>
@@ -1109,9 +1117,10 @@ alveolar</th>
 
 
 
-  
-<section id="inlinenotes">
-<h3>Inline notes &amp; annotations</h3>
+
+<section id="otherpunctuation">
+<h3>Other punctuation</h3>
+
 <p class="prompts">tbd</p>
 </section>
 </section>
@@ -1331,10 +1340,21 @@ alveolar</th>
 
 
 
-
-<section id="page">
+<section id="pagelayout">
 <h2>Page &amp; book layout</h2>
- 
+
+<p class="instructions">This section is for  any features that are specific to Tibetan and that relate to the following topics:
+<span id="generallayoutInline">general page layout &amp; progression</span>; 
+<span id="gridsInline">grids &amp; tables</span>;
+<span id="footnotesInline">notes, footnotes, etc</span>;
+<span id="interactionInline">forms &amp; user interaction</span>;
+<span id="headersInline">page numbering, running headers, etc</span>.
+</p>
+
+
+
+
+
 <section id="generallayout">
 <h3>General page layout &amp; progression</h3>
 <p>In pechas, Tibetan text is written inside a visible box which defines the margin of the page. In more recent publications this box may be invisible. Modern publications also use paragraphs. The initial line of a new paragraph may be indented.</p>
@@ -1344,10 +1364,10 @@ alveolar</th>
 
 
 
-<section id="grids">
+<!--section id="grids">
 <h3>Grids &amp; tables</h3>
 <p class="prompts">tbd</p>
-</section>
+</section-->
 
 
 
@@ -1361,7 +1381,7 @@ alveolar</th>
 
 
   
-<section id="interaction">
+<!--section id="interaction">
 <h3>Forms &amp; user interaction</h3>
 <p class="prompts">tbd</p>
 </section>
@@ -1373,8 +1393,9 @@ alveolar</th>
 <section id="headers">
 <h3>Page numbering, running headers, etc</h3>
 <p class="prompts">tbd</p>
+</section-->
 </section>
-</section>
+
 
 
 

@@ -27,6 +27,7 @@
 <script src="../linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../common/egcode.js"></script>
+
 <script src="mn-examples.js"></script>
 <script src="mn-translit.js">  </script>
 </head>
@@ -53,7 +54,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->16 August, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->12 September, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -770,12 +771,21 @@ nʲ</span></td>
 
   <section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
+
+<p class="instructions">This section brings together information about the following topics:
+<span id="writingstylesInline">writing styles</span>; 
+<span id="cursiveInline">cursive text</span>;
+<span id="gsubInline">context-based shaping</span>;
+<span id="gposInline">context-based positioning</span>;
+<span id="baselinesInline">baselines, line height, etc.</span>;
+<span id="fontstyleInline">font styles</span>;
+<span id="transformsInline">case &amp; other character transforms</span>.
+</p>
+
+<p class="instructions">You can experiment with examples using the <a href="/pickers/mongolian/">Mongolian character app</a>.</p>
+<p>The orthography has no case distinction, and no special transforms are needed to convert between characters.</p>
+
 <p>Most of the complexity of the Mongolian traditional script has to do with two things: (1) characters are allocated on the basis of phonemic differences, but many characters share identical shapes, and (2) there are many variant forms for a given character, some of which cannot be produced automatically.</p>
-<p>You can experiment with examples using the <a href="/pickers/mongolian/">Mongolian character app</a>.</p>
-
-
-
-
 <section id="cursive">
 <h3>Cursive shaping</h3>
 <p>Similarly to the Arabic script, Mongolian letters within a word tend to be joined cursively along the centre baseline, and the shapes of joined characters can vary significantly in various positions. Unlike Arabic, and many other cursive scripts, there are no characters that only join on one side.</p>
@@ -809,15 +819,6 @@ nʲ</span></td>
 
 <section id="fontstyle">
 <h3>Font styles</h3>
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
-<section id="transforms">
-<h3>Transforming characters</h3>
-
 <p class="prompts">tbd</p>
 </section>
 </section>
@@ -857,26 +858,9 @@ nʲ</span></td>
 
 
 <section id="bracketing">
-<h3>Bracketing &amp; range markers</h3>
+<h3>Parentheses &amp; brackets</h3>
+<p class="prompts">tbd</p>
 
-<p>Underlines run down the right side of vertical lines of Mongolian text. Lines down the left side are equivalent to overline in English text.<a class="fnref" href="https://w3c.github.io/mlreq/#h_text_decoration">n</a></p>
-<p>The side of the vertical line for underlines doesn't change for embedded Latin text. Since Latin text runs down the page, this makes the underline run across the top of the Latin letters. See the red line in <a class="figref" href="#text_decoration_mixed">the figure below</a>.<a class="fnref" href="https://w3c.github.io/mlreq/#h_text_decoration">n</a></p>
-<figure id="text_decoration_mixed">
-<p><a href="images/text_decoration_mixed.png" target="_blank"><img src="images/text_decoration_mixed.png" alt=""/></a></p>
-<figcaption>Underline in Mongolian text with embedded Latin content.</figcaption>
-</figure>
-   <p>There are a number of different styles of underlining in use, as shown in <a class="figref" href="#underline_styles">the figure below</a>.<a class="fnref" href="https://github.com/w3c/mlreq/issues/10">g</a></p>
-<figure id="underline_styles">
-<p><a href="images/underline_styles.jpg" target="_blank"><img src="images/underline_styles.jpg" alt="" style="width: 100%;"/></a></p>
-<figcaption>Various underline styles in Mongolian text. (Click on the picture to see larger.)</figcaption>
-</figure>
-<p>If an underline is styled so that it leaves a gap below spaces that separate words, the underline should not also leave gaps below the narrow spaces used to separate some suffixes from the word root. The desired outcome is that shown here, however implementations may vary.<a class="fnref" href="https://github.com/w3c/mlreq/issues/9">g</a></p>
-<div class="figwrap">
-<figure id="nnbsp_underline">
-<p><img src="images/nnbsp_underline.png" alt=""/></p>
-<figcaption>Underlining with gaps doesn't leave a gap between roots and suffixes.</figcaption>
-</figure>
-</div>
 </section>
 
 
@@ -908,16 +892,6 @@ nʲ</span></td>
 
 
 
-
-<section id="otherPunctuation">
-<h3>Other punctuation</h3>
-
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
   
 <section id="inlinenotes">
 <h3>Inline notes &amp; annotations</h3>
@@ -930,6 +904,41 @@ nʲ</span></td>
 </section>
 
 
+
+
+
+<section id="otherinline">
+<h3>Other inline ranges</h3>
+
+<p>Underlines run down the right side of vertical lines of Mongolian text. Lines down the left side are equivalent to overline in English text.<a class="fnref" href="https://w3c.github.io/mlreq/#h_text_decoration">n</a></p>
+<p>The side of the vertical line for underlines doesn't change for embedded Latin text. Since Latin text runs down the page, this makes the underline run across the top of the Latin letters. See the red line in <a class="figref" href="#text_decoration_mixed">the figure below</a>.<a class="fnref" href="https://w3c.github.io/mlreq/#h_text_decoration">n</a></p>
+<figure id="text_decoration_mixed">
+<p><a href="images/text_decoration_mixed.png" target="_blank"><img src="images/text_decoration_mixed.png" alt=""/></a></p>
+<figcaption>Underline in Mongolian text with embedded Latin content.</figcaption>
+</figure>
+   <p>There are a number of different styles of underlining in use, as shown in <a class="figref" href="#underline_styles">the figure below</a>.<a class="fnref" href="https://github.com/w3c/mlreq/issues/10">g</a></p>
+<figure id="underline_styles">
+<p><a href="images/underline_styles.jpg" target="_blank"><img src="images/underline_styles.jpg" alt="" style="width: 100%;"/></a></p>
+<figcaption>Various underline styles in Mongolian text. (Click on the picture to see larger.)</figcaption>
+</figure>
+<p>If an underline is styled so that it leaves a gap below spaces that separate words, the underline should not also leave gaps below the narrow spaces used to separate some suffixes from the word root. The desired outcome is that shown here, however implementations may vary.<a class="fnref" href="https://github.com/w3c/mlreq/issues/9">g</a></p>
+<div class="figwrap">
+<figure id="nnbsp_underline">
+<p><img src="images/nnbsp_underline.png" alt=""/></p>
+<figcaption>Underlining with gaps doesn't leave a gap between roots and suffixes.</figcaption>
+</figure>
+</div>
+</section>
+
+
+
+
+
+<section id="otherpunctuation">
+<h3>Other punctuation</h3>
+
+<p class="prompts">tbd</p>
+</section>
 </section>
  
  
@@ -1075,15 +1084,24 @@ nʲ</span></td>
 <p>When mixed with other languages, the text in those languages should also be centre-aligned along the Mongolian baseline.<a class="fnref" href="https://w3c.github.io/mlreq/#mixed_arrangement_alphanum">n</a></p>
 </section>
 </section>
- 
- 
- 
- 
- 
- <section id="pagelayout">
+
+
+
+
+
+
+<section id="pagelayout">
 <h2>Page &amp; book layout</h2>
  
-  <section id="generallayout">
+ <p class="instructions">This section is for  any features that are specific to Mongolian and that relate to the following topics:
+<span id="generallayoutInline">general page layout &amp; progression</span>; 
+<span id="gridsInline">grids &amp; tables</span>;
+<span id="footnotesInline">notes, footnotes, etc</span>;
+<span id="interactionInline">forms &amp; user interaction</span>;
+<span id="headersInline">page numbering, running headers, etc</span>.
+</p>
+
+<section id="generallayout">
 <h3>General page layout &amp; progression</h3>
 <p>Generally, book binding is on the left, and pages are turned towards the left, unlike books set vertically in Chinese or Japanese.<a class="fnref" href="https://w3c.github.io/mlreq/#https://w3c.github.io/mlreq/#h_binding">n</a></p>
 <figure id="page_turning">
@@ -1104,7 +1122,7 @@ nʲ</span></td>
 
 
 
-<section id="grids">
+<!--section id="grids">
 <h3>Grids &amp; tables</h3>
 <p class="prompts">tbd</p>
 </section>
@@ -1116,7 +1134,7 @@ nʲ</span></td>
 <section id="footnotes">
 <h3>Notes, footnotes, etc</h3>
 <p class="prompts">tbd</p>
-</section>
+</section-->
 
 
 
