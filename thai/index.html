@@ -53,7 +53,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->13 September, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->21 September, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -88,7 +88,7 @@
 
 
 <section id="sample">
-<h2>Sample</h2>
+<h2>Sample (Thai)</h2>
 <p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
 
   
@@ -129,11 +129,14 @@
 
 <section id="type">
 <h2>Basic features</h2>
-    <p>Thai is an <span class="newterm">abugida</span>. Consonant letters have an inherent vowel sound. Vowel-signs are attached to the consonant to produce a different vowel.   See the table to the right for a brief overview of features for the modern Thai orthography.
+    <p>Thai is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>. Consonant letters have an inherent vowel sound. Vowel-signs are attached to the consonant to produce a different vowel.   See the table to the right for a brief overview of features for the modern Thai orthography.
 (See the <a href="../../scripts/featurelist/#key">key</a>. Character counts exclude ASCII characters.)</p>
 <p>Unlike devanagari, multiple vowel-signs may be used with a single character, and those positioned to the left of the consonant(s) are not combining characters.</p>
-    <p>Like indic scripts, Thai is based on orthographic syllables, so the vowel-sign is actually attached to the syllable. An orthographic syllable includes clusters of consonants without intervening vowel sounds. These clusters are typically represented as partially merged forms, called conjuncts.</p>
+    <p>Like indic scripts, Thai is based on orthographic syllables, so the vowel-sign is actually attached to the syllable. An orthographic syllable includes clusters of consonants without intervening vowel sounds. There are no conjunct forms.</p>
 <p>Thai has no subjoined consonants, nor does it have any code points dedicated to medial or final consonants, although consonants do appear in those positions, eg. <span class="eg" lang="th">โปรแกรม</span>.</p>
+<p>Thai is tonal All consonants are associated with a high, mid, or low register. The tone applied to a syllable depends on a combination of the consonant used, whether or not the syllable is checked, and any tone marks.</p>
+<p>Thai has native digits, and they are commonly used. </p>
+<p>Spaces are used to separate phrases, rather than words.</p>
 </section>
 
 
@@ -166,7 +169,11 @@
 
 <section id="vowels">
 <h2>Vowels</h2>
-<p>All consonant letters have an inherent vowel sound. Other than the inherent vowel, vowel sounds that follow a consonant sound are represented using vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="khb">กิ</span> <span class="trans">ki</span></span>. This includes  2 diphthongs each  represented by a single code point, 5 prescript signs, and 34 circumgraphs.</p>
+<p>The Thai orthography has an inherent vowel, and uses vowel-signs. Only vowel-signs that appear above or below the consonant are combining marks; The others are ordinary characters that are typed in the order seen. There are no independent vowels, and standalone vowel sounds are written using  vowel-signs applied to <span class="codepoint" translate="no"><span lang="th">&#x0E2D;</span> [<a href="/scripts/thai/block#char0E2D"><span class="uname">U+0E2D THAI CHARACTER O ANG</span></a>]</span>.</p>
+<p>Vowels are often written differently when they appear in a closed vs. open syllable.</p>
+<p>Vowel-signs may be combined with other vowel-signs or characters to represent a particular vowel sound. Such 'composite' vowels can involve up to 4 glyphs, and glyphs can surround the base consonant(s) on up to 3 sides, eg. <span class="charExample" translate="no"><span class="ex" lang="th">เกียะ</span> <span class="transc">ek̯īy̱a</span> <span class="ipa">kiːa</span></span>.</p>
+<p>See also <a class="sectionref">vocalics</a>.</p>
+<p class="instructions">Dashes are used to  indicate whether the character represents a vowel sound in a closed   or an open syllable.</p>
 
 
 <section id="vowelPhonemes">
@@ -301,8 +308,6 @@
 
 <section id="diphthongs">
 <h4>Diphthongs</h4>
-<p>There are a  number of diphthongs and 3 triphthongs in Thai, the majority ending in <span class="ipa">j</span> or <span class="ipa">w</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Thai_language#Phonology">wp</a></p>
-
 <table class="ipaTable" style="display: none">
 <thead>
 <tr>
@@ -412,9 +417,9 @@ uəj</span></td>
   <!-- open -->
   <text x="106" y="195" class="ipa" text-anchor="end" filter="url(#solid)">aj aːj aw aːw</text>
   <text x="106" y="195" class="ipa" text-anchor="end">aj aːj aw aːw</text> 
-
 </svg>
 </div>
+<p>The majority of diphthongs and all 3 triphthongs in Thai end in <span class="ipa">j</span> or <span class="ipa">w</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Thai_language#Phonology">w</a> The exceptions are a handful of diphthongs that end in <span class="ipa">ə</span>.</p>
 </section>
 </section>
 
@@ -426,7 +431,7 @@ uəj</span></td>
 <section id="inherent">
 <h3>Inherent vowel</h3>
 <p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
-<p>The inherent vowel is pronounced <span class="ipa">o</span> inside a closed syllable, and <span class="ipa">a</span> in an open syllable.  So <span class="charExample" translate="no"><span class="ex" lang="tmp">ก</span></span> is pronounced <span class="ipa">ka</span>.</p>
+<p>The inherent vowel is pronounced <span class="ipa">o</span> inside a closed syllable, and <span class="ipa">a</span> in an open syllable.  So <span class="codepoint" translate="no"><span lang="th">&#x0E01;</span> [<a href="/scripts/thai/block#char0E01"><span class="uname">U+0E01 THAI CHARACTER KO KAI</span></a>]</span> is pronounced <span class="ipa">ka</span>.</p>
 </section>
 
 
@@ -436,29 +441,23 @@ uəj</span></td>
 <h3>Vowel signs</h3>
 <p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
 
-<!--p>Other than the inherent vowel, vowel sounds that follow a consonant sound are represented using vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="khb">กิ</span> <span class="trans">ki</span></span>. This includes  2 diphthongs each  represented by a single code point, 5 prescript signs, and 34 circumgraphs. We include here a number of consonant letters which also play a role as vowel-signs.</p-->
-<p>Vowel signs in Thai are a mixture of combining characters and ordinary spacing characters, Only the superscript and subscript vowel-signs are combining characters. We include here a number of consonant letters which also play a role as vowel-signs.</p>
-<p>Vowel-signs are very often combined to create additional sounds.</p>
-<p>See also <a class="sectionref">vocalics</a>.</p>
-
-
-
-
+<p>Non-inherent  vowel sounds that follow a consonant  are represented using <span class="name">vowel-signs</span>, eg. <span class="codepoint" translate="no"><span lang="th">&#x0E01;&#x0E34;</span> [<a href="/scripts/thai/block#char0E01"><span class="uname">U+0E01 THAI CHARACTER KO KAI</span></a> + <a href="/scripts/thai/block#char0E34"><span class="uname">U+0E34 THAI CHARACTER SARA I</span></a>]</span> is pronounced <span class="ipa">ki</span>.</p>
+<p>Vowel signs in Thai are a mixture of combining characters and ordinary spacing characters, Only the superscript and subscript vowel-signs are combining characters.</p>
 <section id="prescript_vowels">
 <h4>Prescript vowel signs</h4>
+<p>Five vowel-signs appear to the left of the onset consonant, eg. <span class="eg" lang="th">ไข่</span>
+.</p>
 <figure class="characterBox auto"  data-cols="ipa,trans,transc">เ␣แ␣ใ␣ไ␣โ</figure>
-
-
-<p>Thai uses a visual encoding model. Of the vowel-signs, 5 appear to the left of the onset consonant. These characters are not combining characters, and are typed and stored before the base.</p>
-<p>Note that these vowel-signs are placed before the start of the <em>syllable</em>. This means that a word with a consonant cluster at the start separates the prescript vowel from any postscript vowels by more than one consonant character, eg. <span class="eg" lang="th">เปล่า</span>.</p>
-<div class="infoIcon"><img src="../../shared/images/info.png" alt="ℹ"></div>
-<p><span class="codepoint" translate="no"><span lang="th">&#x0E41;</span> [<a href="/scripts/thai/block#char0E41"><span class="uname">U+0E41 THAI CHARACTER SARA AE</span></a>]</span> should not be typed as two successive <span class="codepoint" translate="no"><span lang="th">&#x0E40;</span> [<a href="/scripts/thai/block#char0E40"><span class="uname">U+0E40 THAI CHARACTER SARA E</span></a>]</span> characters.</p>
+<p>Thai uses a visual encoding model and these  are not combining characters. They are typed and stored before the base.</p>
+<p>These vowel-signs are placed before the start of the <em>syllable</em>. This means that a word with a consonant cluster at the start separates the prescript vowel from any postscript vowels by more than one consonant character, eg. <span class="eg" lang="th">เปล่า</span>.</p>
+<p class="info"><span class="codepoint" translate="no"><span lang="th">&#x0E41;</span> [<a href="/scripts/thai/block#char0E41"><span class="uname">U+0E41 THAI CHARACTER SARA AE</span></a>]</span> should not be typed as two successive <span class="codepoint" translate="no"><span lang="th">&#x0E40;</span> [<a href="/scripts/thai/block#char0E40"><span class="uname">U+0E40 THAI CHARACTER SARA E</span></a>]</span> characters.</p>
 </section>
 
 
 
 <section id="other_vowels">
 <h4>Other vowel signs</h4>
+<p>The following characters are also used to indicate vowel sounds, sometimes on their own, and sometimes in combination with others.</p>
 <figure class="characterBox auto"  data-cols="ipa,trans,transc">ิ␣ี␣ึ␣ื␣ุ␣ู␣ะ␣ั␣า␣ำ</figure>
 <p><span class="codepoint" translate="no"><span lang="th">&#x0E30;</span> [<a href="/scripts/thai/block#char0E30"><span class="uname">U+0E30 THAI CHARACTER SARA A</span></a>]</span> and <span class="codepoint" translate="no"><span lang="th">&#x0E32;</span> [<a href="/scripts/thai/block#char0E32"><span class="uname">U+0E32 THAI CHARACTER SARA AA</span></a>]</span> are normal spacing characters; the rest are combining characters.</p>
 <p><span class="codepoint" translate="no"><span lang="th">&#x0E33;</span> [<a href="/scripts/thai/block#char0E33"><span class="uname">U+0E33 THAI CHARACTER SARA AM</span></a>]</span> is classed as a vowel, but also contains the final consonant <span class="ipa">m</span>, represented by a built-in <span class="name">nikhahit</span> (cf. <span class="codepoint" translate="no"><span lang="th">&#xA0;&#x0E4D;</span> [<a href="/scripts/thai/block#char0E4D"><span class="uname">U+0E4D THAI CHARACTER NIKHAHIT​</span></a>]</span>).</p>
@@ -470,38 +469,28 @@ uəj</span></td>
 
 
 <section id="consonant_vowels">
-<h3>Consonants pronounced as vowels</h3>
+<h3>Consonants &amp; other symbols used for vowels</h3>
+
+<p>The following characters are also used to create vowel sounds, either alone or as part of a composite vowel.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">อ␣ย␣ว␣ร␣็</figure>
 
 
 <p>The consonant <span class="codepoint" translate="no"><span lang="th">&#x0E2D;</span> [<a href="/scripts/thai/block#char0E2D"><span class="uname">U+0E2D THAI CHARACTER O ANG</span></a>]</span> can also be pronounced as the vowel<span class="ipa">ɔː</span> when it appears alone after a base consonant.</p>
 <p>Many of the vowel combinations involve <span class="codepoint" translate="no"><span lang="th">&#x0E22;</span> [<a href="/scripts/thai/block#char0E22"><span class="uname">U+0E22 THAI CHARACTER YO YAK</span></a>]</span> and/or  <span class="codepoint" translate="no"><span lang="th">&#x0E27;</span> [<a href="/scripts/thai/block#char0E27"><span class="uname">U+0E27 THAI CHARACTER WO WAEN</span></a>]</span> to create diphthongs.</p>
 <p>The consonant <span class="codepoint" translate="no"><span lang="th">&#x0E23;</span> [<a href="/scripts/thai/block#char0E23"><span class="uname">U+0E23 THAI CHARACTER RO RUA</span></a>]</span> is pronounced as a vowel <span class="ipa">a</span> when doubled medially, eg. <span class="eg" lang="th">ธรรม</span>. When   doubled at the end of a syllable it is pronounced <span class="ipa">an</span>, eg. <span class="eg" lang="th">กรรไกร</span>. Note, however, that this may also constitute the end and beginning of two syllables, eg. <span class="eg" lang="th">ภรรยา</span>.</p>
-</section>
 
 
 
-
-<section id="complex_vowels">
-<h3>Vowel-sign combinations</h3>
-
-<p>The various vowel-signs described just above, along with <span class="codepoint" translate="no"><span lang="th">&#x0E2D;</span> [<a href="/scripts/thai/block#char0E2D"><span class="uname">U+0E2D THAI CHARACTER O ANG</span></a>]</span>, <span class="codepoint" translate="no"><span lang="th">&#x0E22;</span> [<a href="/scripts/thai/block#char0E22"><span class="uname">U+0E22 THAI CHARACTER YO YAK</span></a>]</span>, <span class="codepoint" translate="no"><span lang="th">&#x0E27;</span> [<a href="/scripts/thai/block#char0E27"><span class="uname">U+0E27 THAI CHARACTER WO WAEN</span></a>]</span>, and <span class="codepoint" translate="no"><span lang="th">&#xA0;&#x0E47;</span> [<a href="/scripts/thai/block#char0E47"><span class="uname">U+0E47 THAI CHARACTER MAITAIKHU​</span></a>]</span> can be mixed together to produce additional sounds, as shown in the vowel mapping tables above. The following list shows the various combinations ordered by shape.</p>
-
-<figure class="auto vowelcluster"  data-cols="ipa,trans,transc">-ือ␣-็อ␣-ัว␣-ัย␣-ิว␣-าว␣-าย␣-อย␣-ุย␣-ูย␣-วย␣เ-ะ␣เ-็␣เ-อ␣เ-ิ␣เ-ว␣เ-า␣เ-ย␣แ-ว␣แ-ะ␣แ-็␣โ-ะ␣โ-ย␣ไ-ย␣-็อย␣-ัวะ␣เ-าะ␣เ-อะ␣เ-ือ␣เ-็ว␣เ-ีย␣เ-ียะ␣เ-ือะ␣เ-ียว␣เ-ือย␣ฤๅ␣ฦๅ</figure>
-
-<!--figure class="auto vowelcluster"  data-cols="ipa,trans,transc">-ิว␣เ-ีย␣เ-ียะ␣เ-ียว␣-ือ␣เ-ือ␣เ-ือะ␣เ-ือย␣-ัว␣-ุย␣-ูย␣-วย␣-ัวะ␣เ-ะ␣เ-็␣เ-ว␣แ-ว␣เ-็ว␣เ-อะ␣เ-อ␣เ-ิ␣เ-ย␣-็อ␣โ-ะ␣แ-ะ␣แ-็␣เ-าะ␣-อย␣โ-ย␣-็อย ␣-ัย␣-าว␣-าย␣เ-า␣ไ-ย</figure-->
-<!--figure class="auto vowelcluster"  data-cols="ipa,trans,transc">เ-ียะ␣เ-ีย␣-ิว␣เ-ียว␣ ␣-ือ␣เ-ือะ␣เ-ือ␣เ-ือย␣ ␣-ัวะ␣-ัว␣-ุย␣-ูย␣-วย</figure>
-<figure class="auto vowelcluster"  data-cols="ipa,trans,transc">เ-ะ␣เ-็␣เ-็ว␣เ-ว␣แ-ว␣ ␣เ-อะ␣เ-อ␣เ-ิ␣เ-ย␣ ␣-็อ␣โ-ะ</figure>
-<figure class="auto vowelcluster"  data-cols="ipa,trans,transc">แ-ะ␣แ-็␣ ␣เ-าะ␣-็อย␣-อย␣โ-ย</figure>
-<figure class="auto vowelcluster"  data-cols="ipa,trans,transc">-ัย␣ไ-ย␣-าย␣เ-า␣-าว</figure-->
-</section>
 
 
 
 
 <section id="maitaikhu">
-<h3>Maitaikhu</h3>
+<h4>Maitaikhu</h4>
 
-<p>&nbsp;<span class="codepoint" translate="no"><span lang="th">&#xA0;&#x0E47;</span> [<a href="/scripts/thai/block#char0E47"><span class="uname">U+0E47 THAI CHARACTER MAITAIKHU​</span></a>]</span> converts vowels produced by the following three vowel signs to short vowels when they occur in medial position: </p>
+<p><span class="codepoint" translate="no"><span lang="th">&nbsp;&#x0E47;</span> [<a href="/scripts/thai/block#char0E47"><span class="uname">U+0E47 THAI CHARACTER MAITAIKHU</span></a>]</span> is used to shorten vowel sounds, but also occasionally operates as a vowel-sign in its own right.&nbsp;</p>
+<p>It converts vowels produced by the following three vowel signs to short vowels when they occur in medial position: </p>
 <ul>
 <li><span class="ex" lang="th">–็อ–</span> <span class="ipa">ɔː</span> becomes <span class="ipa">ɔ</span>, </li>
 <li><span class="ex" lang="th">เ–็–</span> <span class="ipa">eː</span> becomes <span class="ipa">e</span>, eg. <span class="eg" lang="th">เด็ก</span>, and</li>
@@ -509,11 +498,118 @@ uəj</span></td>
 </ul>
 <p>It is also used for <span class="ipa">ew</span> <span class="ex" lang="th">เ–็ว</span> (<span class="ipa">eːw</span> &gt; <span class="ipa">ew</span>), eg. <span class="eg" lang="th">เร็ว</span>.</p>
 <p> One word consists of consonant + short symbol: <span class="ex" lang="th">ก็</span> <span class="ipa">gɔ</span>.</p>
-<!--details>
-<summary class="instructions">See the same list, ordered by shape</summary>
-<figure class="auto vowelcluster"  data-cols="ipa,trans,transc">-ือ␣-็อ␣-ัว␣-ัย␣-ิว␣-าว␣-าย␣-อย␣-ุย␣-ูย␣-วย␣เ-ะ␣เ-็␣เ-อ␣เ-ิ␣เ-ว␣เ-า␣เ-ย␣แ-ว␣แ-ะ␣แ-็␣โ-ะ␣โ-ย␣ไ-ย␣-็อย␣-ัวะ␣เ-าะ␣เ-อะ␣เ-ือ␣เ-็ว␣เ-ีย␣เ-ียะ␣เ-ือะ␣เ-ียว␣เ-ือย␣ฤๅ␣ฦๅ</figure>
-</details-->
 </section>
+</section>
+
+
+
+
+
+<section id="vowelgraphemes">
+<h3>Composite vowels</h3>
+
+<p>All vowels represented by combinations of the above characters:</p>
+
+<figure class="characterBox auto vowelcluster"  data-cols="ipa,trans,transc">–ือ␣เ–ะ␣เ–็␣เ–อะ␣เ–อ␣เ–ิ␣โ–ะ␣–็อ␣แ–ะ␣แ–็␣เ–าะ␣ ␣เ–ียะ␣เ–ีย␣เ–ียว␣–ิว␣เ–ือะ␣เ–ือ␣เ–ือย␣–ัวะ␣–ัว␣–วย␣–ุย␣–ูย␣เ–็ว␣เ–ว␣เ–ย␣แ–ว␣–็อย␣โ–ย␣–อย␣–ัย␣ไ–ย␣–าย␣เ–า␣–าว␣ ␣ฤๅ␣ฦๅ</figure>
+
+
+<p>&nbsp;</p>
+<p>Which combinations contain a given character:</p>
+<table class="graphemeTable">
+<tbody>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E30;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">เ-ะ␣โ-ะ␣แ-ะ␣เ-าะ␣เ-อะ␣ ␣เ-ียะ␣เ-ือะ␣-ัวะ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E31;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">-ัย␣ ␣-ัวะ␣-ัว</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E32;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">เ-าะ␣ ␣-าย␣ ␣-าว␣เ-า</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E34;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">เ-ิ␣ ␣-ิว</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E35;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">เ-ีย␣เ-ียะ␣ ␣เ-ียว</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E37;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">-ือ␣ ␣เ-ือ␣เ-ือะ␣ ␣เ-ือย</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E38;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">-ุย</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E39;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">-ูย</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E40;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">เ-ะ␣เ-็␣เ-อ␣เ-ิ␣เ-าะ␣เ-อะ␣ ␣เ-ือ␣เ-ีย␣เ-ียะ␣เ-ือะ␣ ␣เ-ย␣เ-ือย␣ ␣เ-ว␣เ-า␣เ-็ว␣เ-ียว</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E41;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">แ-ะ␣แ-็␣ ␣แ-ว</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E42;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">โ-ะ␣ ␣โ-ย</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E44;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ไ-ย</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E47;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">-็อ␣เ-็␣แ-็␣ ␣-็อย␣ ␣เ-็ว</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E2D;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">-ือ␣-็อ␣เ-อ␣เ-อะ␣ ␣เ-ือ␣เ-ือะ␣ ␣-อย␣-็อย␣เ-ือย</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E22;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">เ-ีย␣เ-ียะ␣ ␣-ัย␣-าย␣-อย␣-ุย␣-ูย␣-วย␣เ-ย␣โ-ย␣ไ-ย␣-็อย␣เ-ือย␣ ␣เ-ียว</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E27;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">-ัว␣-ัวะ␣ ␣-วย␣ ␣-ิว␣-าว␣เ-ว␣แ-ว␣เ-็ว␣เ-ียว</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x0E23;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">-รร-␣-รร</figure></td>
+</tr>
+</tbody>
+</table>
+
+<p>&nbsp;</p>
+<p>Characters that don't appear in the combinations:</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ຸ␣ູ␣ໃ␣ໄ␣ໍ␣ຳ</figure>
+</section>
+
+
+
+
+<!--section id="complex_vowels">
+<h3>Vowel-sign combinations</h3>
+
+<p>The various vowel-signs described just above, along with <span class="codepoint" translate="no"><span lang="th">&#x0E2D;</span> [<a href="/scripts/thai/block#char0E2D"><span class="uname">U+0E2D THAI CHARACTER O ANG</span></a>]</span>, <span class="codepoint" translate="no"><span lang="th">&#x0E22;</span> [<a href="/scripts/thai/block#char0E22"><span class="uname">U+0E22 THAI CHARACTER YO YAK</span></a>]</span>, <span class="codepoint" translate="no"><span lang="th">&#x0E27;</span> [<a href="/scripts/thai/block#char0E27"><span class="uname">U+0E27 THAI CHARACTER WO WAEN</span></a>]</span>, and <span class="codepoint" translate="no"><span lang="th">&#xA0;&#x0E47;</span> [<a href="/scripts/thai/block#char0E47"><span class="uname">U+0E47 THAI CHARACTER MAITAIKHU​</span></a>]</span> can be mixed together to produce additional sounds, as shown in the vowel mapping tables above. The following list shows the various combinations ordered by shape.</p>
+
+<figure class="auto vowelcluster"  data-cols="ipa,trans,transc">-ือ␣-็อ␣-ัว␣-ัย␣-ิว␣-าว␣-าย␣-อย␣-ุย␣-ูย␣-วย␣เ-ะ␣เ-็␣เ-อ␣เ-ิ␣เ-ว␣เ-า␣เ-ย␣แ-ว␣แ-ะ␣แ-็␣โ-ะ␣โ-ย␣ไ-ย␣-็อย␣-ัวะ␣เ-าะ␣เ-อะ␣เ-ือ␣เ-็ว␣เ-ีย␣เ-ียะ␣เ-ือะ␣เ-ียว␣เ-ือย␣ฤๅ␣ฦๅ</figure>
+
+<!- -figure class="auto vowelcluster"  data-cols="ipa,trans,transc">-ิว␣เ-ีย␣เ-ียะ␣เ-ียว␣-ือ␣เ-ือ␣เ-ือะ␣เ-ือย␣-ัว␣-ุย␣-ูย␣-วย␣-ัวะ␣เ-ะ␣เ-็␣เ-ว␣แ-ว␣เ-็ว␣เ-อะ␣เ-อ␣เ-ิ␣เ-ย␣-็อ␣โ-ะ␣แ-ะ␣แ-็␣เ-าะ␣-อย␣โ-ย␣-็อย ␣-ัย␣-าว␣-าย␣เ-า␣ไ-ย</figure- ->
+<!- -figure class="auto vowelcluster"  data-cols="ipa,trans,transc">เ-ียะ␣เ-ีย␣-ิว␣เ-ียว␣ ␣-ือ␣เ-ือะ␣เ-ือ␣เ-ือย␣ ␣-ัวะ␣-ัว␣-ุย␣-ูย␣-วย</figure>
+<figure class="auto vowelcluster"  data-cols="ipa,trans,transc">เ-ะ␣เ-็␣เ-็ว␣เ-ว␣แ-ว␣ ␣เ-อะ␣เ-อ␣เ-ิ␣เ-ย␣ ␣-็อ␣โ-ะ</figure>
+<figure class="auto vowelcluster"  data-cols="ipa,trans,transc">แ-ะ␣แ-็␣ ␣เ-าะ␣-็อย␣-อย␣โ-ย</figure>
+<figure class="auto vowelcluster"  data-cols="ipa,trans,transc">-ัย␣ไ-ย␣-าย␣เ-า␣-าว</figure- ->
+</section-->
 
 
 
@@ -522,6 +618,8 @@ uəj</span></td>
 <section id="placement">
 <h3>Vowel-sign placement</h3>
 
+<details>
+<summary class="instructions">Show details about vowel glyph positioning.</summary>
 <p>The following list shows where vowel-signs are positioned around a base consonant to produce vowels, and how many instances of that pattern there are. The figure after the + sign represents combinations of Unicode characters,</p>
 <ul>
 <li>5 prescript, eg. <span class="charExample" translate="no"><span class="ex" lang="th">โก</span> <span class="trans">ok̯ (ko)</span></span></li>
@@ -554,6 +652,7 @@ uəj</span></td>
 <td>&nbsp;</td>
 </tr>
 </table>
+</details>
 </section>
 
 
@@ -584,7 +683,7 @@ uəj</span></td>
 
 
 <section id="vowel_mappings">
-<h3>Vowel to script mapping</h3>
+<h3>Vowel sounds mapped to characters</h3>
 
 <p>The following tables show how   vowel sounds commonly map to characters or sequences of characters. The dotted circle indicates the location of the consonant relative to the vowel-sign; if there are 2 circles, the vowel is used only in closed syllables.</p>
 
@@ -1517,7 +1616,7 @@ alveolar</th>
 
 
 <section id="map_consonants">
-<h3>Consonant sounds to characters</h3>
+<h3>Consonant sounds mapped to characters</h3>
 <p>The following tables show how Thai consonant sounds commonly map to  characters or sequences of characters. High class (<b>h</b>), mid class (<b>m</b>), low class (<b>l</b>) and syllable-final (<b>f</b>) are indicated.</p>
 
 
