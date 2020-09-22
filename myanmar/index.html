@@ -54,7 +54,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->9 September, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->21 September, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -272,7 +272,10 @@
   <section id="vowels">
 <h2>Vowels</h2>
 
-<p>Myanmar consonant letters are associated with an inherent vowel. Other vowel sounds that follow a consonant sound are represented using vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ကိ</span> <span class="ipa">ki</span></span>. This includes several diphthongs, 1 prescript sign, and 6 circumgraphs.</p>
+<p>Burmese consonant letters have an inherent vowel, and use vowel-signs, which may be combined to surround the base consonant. All vowel-signs are combining marks, and are stored after the base character. There are only a few independent vowels, mostly used for Pali or Sanskrit words, and standalone vowel sounds are normally written using  vowel-signs applied to <span class="codepoint" translate="no"><span lang="my">&#x1021;</span> [<a href="/scripts/myanmar/block#char1021"><span class="uname">U+1021 MYANMAR LETTER A</span></a>]</span>.</p>
+<p>In a couple of instances an asat is used to indicate tone information, rather than attaching a tone mark.</p>
+<p>Vowel-signs may be combined with other vowel-signs or characters to represent a particular vowel sound. Such 'composite' vowels can involve up to 3 glyphs, and glyphs can surround the base consonant(s) on up to 2 sides, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ကော်</span> <span class="transc">keaˣ</span></span>.</p>
+<p class="instructions">Dashes are used to  indicate whether the character represents a vowel sound in a closed   or an open syllable.</p>
 <section id="vowelPhonemes">
 <h3>Vowel sounds</h3>
 <p class="instructions">Click on the sound groups to see where else in the document each of the sounds are referred to.</p>
@@ -513,29 +516,56 @@
 <h3>Vowel-signs</h3>
 <p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
 
-<p>The following can each be represented by a single code point.</p>
+<p>Non-inherent  vowel sounds that follow a consonant  are represented using <span class="name">vowel-signs</span>, eg. <span class="codepoint" translate="no"><span lang="my">&#x1000;&#x102D;</span> [<a href="/scripts/myanmar/block#char1000"><span class="uname">U+1000 MYANMAR LETTER KA</span></a> + <a href="/scripts/myanmar/block#char102D"><span class="uname">U+102D MYANMAR VOWEL SIGN I</span></a>]</span> is pronounced <span class="ipa">ki</span>.</p>
+<p>Burmese vowel-signs are all combining characters.  All vowel-signs are  stored after the base consonant, and the font puts them in the correct place for display. Some input systems may allow the user to type the prescript vowel before the base consonant, but it is still stored after.</p>
+<p>Three vowel-signs are <em>spacing</em> marks, meaning that they consume horizontal space when added to a base consonant.</p>
+
+
+
+<section id="prescript_vowels">
+<h4>Prescript vowel-sign</h4>
+
+<p>Burmese has only one vowel-sign that appears to the left of the base consonant letter or cluster, eg. <span class="eg" lang="my">မြေပုံ</span>.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ေ</figure>
+
+<p>This is a combining mark that is always stored after the base consonant. The font places the glyph before the base consonant. </p>
+<p>A consonant cluster is treated as a unit when it comes to vowel-signs, for example in <span class="charExample" translate="no"><span class="ex" lang="my">အငွေ</span> <span class="trans">ʔŋw̆e</span> (<span class="transc">a.ngwe</span>)</span>,  the <span class="uname">E</span> is displayed to the left of the <span class="uname">NGA</span> although the
+character appears after the <span class="uname">WA</span> in memory. </p>
+<p class="info">Some input methods may allow the user to type this vowel before the consonant, whereas others will expect it to be typed after, per the stored order.</p>
+</section>
+
+
+
+
+
+
+<section id="other_vowels">
+<h4>Other vowel-signs</h4>
+
+<p>The following combining marks are also used to indicate vowel sounds, sometimes on their own, and sometimes in combination with others.</p>
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ိ␣ီ␣ု␣ူ␣ေ␣ဲ␣ာ␣ါ</figure>
 
-<p>Other vowels can be represented by combining more than one vowel-sign with the base consonant.</p>
-
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ို␣ယ်␣ော␣ေါ␣ော်␣ေါ်</figure>
-
-<p>In  the lists  above, the  items containing <span class="codepoint" translate="no"><span lang="my">&#x102B;</span> [<a href="/scripts/myanmar/block#char102B"><span class="uname">U+102B MYANMAR VOWEL SIGN TALL AA</span></a>]</span> are actually just shaping variants of the immediately preceding vowel. See <a class="secref">shapechanges</a>.</p>
+<p><span class="codepoint" translate="no"><span lang="my">&#x102B;</span> [<a href="/scripts/myanmar/block#char102B"><span class="uname">U+102B MYANMAR VOWEL SIGN TALL AA</span></a>]</span> is just an alternative shape for <span class="codepoint" translate="no"><span lang="my">&#x102C;</span> [<a href="/scripts/myanmar/block#char102C"><span class="uname">U+102C MYANMAR VOWEL SIGN AA</span></a>]</span>. See <a class="secref">shapechanges</a>.</p>
 <p>The pronunciation of the vowel-sign often depends on whether it appears in an open or closed syllable, eg. compare <span class="eg" lang="my">ဆိုး</span> (open) and <span class="eg" lang="my">ဆိုင်</span> (closed). Open syllables typically contain plain vowels, while closed ones contain diphthongs.</p>
 <p> The 'primary' vowels have 'short' and 'long' written forms that hark back to the earlier Indic script origins, but the distinction is
 used nowadays for indicating different tones only. For example, compare the tones in the open syllables at the beginning of <span class="eg" lang="my">မိနစ်</span> and <span class="eg" lang="my">မီ</span>.</p>
-<p>The sequence <span class="charExample" translate="no"><span class="ex" lang="my">ော်</span></span> adds <span class="codepoint" translate="no"><span lang="my">&#x103A;</span> [<a href="/scripts/myanmar/block#char103A"><span class="uname">U+103A MYANMAR SIGN ASAT</span></a>]</span> to <span class="charExample" translate="no"><span class="ex" lang="my">ော</span></span> to indicate the low tone. Otherwise, it is the same vowel.</p>
-<p>In addition to the above, <span class="codepoint" translate="no"><span lang="my">&#x103D;</span> [<a href="/scripts/myanmar/block#char103D"><span class="uname">U+103D MYANMAR CONSONANT SIGN MEDIAL WA</span></a>]</span> can be pronounced as the vowel <span class="ipa">ʊ</span>, rather than the glide <span class="ipa">w</span>, eg. <span class="eg" lang="my">နွမ်း</span>.</p>
-<p>Burmese vowel-signs are all combining characters.  All vowel-signs are typed and stored after the base consonant, and the font puts them in the correct place for display.</p>
-<p>Several are <em>spacing</em> marks, meaning that they consume horizontal space when added to a base consonant. </p>
-<p> For more details about Burmese pronunciation, see <a class="secref">burmese_phonetics</a>.</p>
+</section>
 
 <details>
 <summary class="instructions">Show other, non-Burmese, vowel-signs in the main Myanmar block.</summary>
 <figure style="margin-left:0" class="otherBox auto" data-cols="">ၱ␣ၢ␣ၲ␣ဳ␣ၳ␣ႃ␣ဴ␣ၴ␣ႄ␣ဵ␣ႅ␣ၖ␣ႆ␣ၗ␣ၧ␣ၘ␣ၨ␣ၙ␣ႜ␣ႝ</figure>
 </details>
+</section>
 
+
+
+<section id="consonant_vowels">
+<h3>Consonants pronounced as vowels</h3>
+
+<p>In closed syllables when followed by the inherent vowel, <span class="codepoint" translate="no"><span lang="my">&#x103D;</span> [<a href="/scripts/myanmar/block#char103D"><span class="uname">U+103D MYANMAR CONSONANT SIGN MEDIAL WA</span></a>]</span> may be pronounced as the vowel <span class="ipa">ʊ</span>, rather than the glide <span class="ipa">w</span>, eg. <span class="eg" lang="my">နွမ်း</span>.</p>
+</section>
 </section>
 
 
@@ -555,21 +585,83 @@ used nowadays for indicating different tones only. For example, compare the tone
     
   <section id="shapechanges">
 <h3>Shape variants</h3>
-   <p> There are two forms of the long -aa vowel sign in Burmese. The combination <span class="codepoint" translate="no"><span lang="my">&#x101D;</span> + <span lang="my">&#x102C;</span> [<a href="/scripts/myanmar/block#char101D"><span class="uname">U+101D MYANMAR LETTER WA</span></a> + <a href="/scripts/myanmar/block#char102C"><span class="uname">U+102C MYANMAR VOWEL SIGN AA</span></a>]</span> (<span class="trans">wa)</span> would be hard to distinguish from <span class="ex" lang="my">တ</span> <span class="trans">ta</span>, so a taller glyph  is used for the vowel to avoid confusion, <span class="codepoint"><span lang="my">&#xA0;&#x102B;</span> <a href="/scripts/myanmar/block#char102B">[<span class="uname">U+102B MYANMAR VOWEL SIGN TALL AA​</span>]</a></span>. This form, whether alone or as part of a complex vowel, is  used after the following consonants:</p>
+   <p> <span class="leadin">Tall AA.</span> There are two forms of the <span class="trans">-a</span> vowel sign in Burmese. The combination <span class="codepoint" translate="no"><span lang="my">&#x101D;&#x102C;</span> [<a href="/scripts/myanmar/block#char101D"><span class="uname">U+101D MYANMAR LETTER WA</span></a> + <a href="/scripts/myanmar/block#char102C"><span class="uname">U+102C MYANMAR VOWEL SIGN AA</span></a>]</span> (<span class="trans">wa)</span> can be hard to distinguish from <span class="codepoint" translate="no"><span lang="my">&#x1010;</span> [<a href="/scripts/myanmar/block#char1010"><span class="uname">U+1010 MYANMAR LETTER TA</span></a>]</span>, so a taller glyph  is used for the vowel to avoid confusion, ie. <span class="codepoint" translate="no"><span lang="my">&#x101D;&#x102B;</span> [<a href="/scripts/myanmar/block#char101D"><span class="uname">U+101D MYANMAR LETTER WA</span></a> + <a href="/scripts/myanmar/block#char102B"><span class="uname">U+102B MYANMAR VOWEL SIGN TALL AA</span></a>]</span>. This glyph, whether alone or as part of a complex vowel, is  used after the following consonants:</p>
  <figure class="auto" data-cols="trans,transc">ပ␣ဒ␣ခ␣ဂ␣င␣ဝ</figure>
   
 <p>For example, <span class="eg" lang="my">ပေါင်</span>. Where there is no ambiguity, however, the normal shape is used, eg. <span class="eg" lang="my">ပြောင်းဖူး</span>. </p>
-    <p>Whereas in Unicode 5.0 the choice of appropriate form was left to the font or implementation during rendering, such contextual decisions are not appropriate for Sgaw Karen and other minority scripts, which only use the tall form, so <span class="codepoint"><span lang="my">&#xA0;&#x102B;</span> <a href="/scripts/myanmar/block#char102B">[<span class="uname">U+102B MYANMAR VOWEL SIGN TALL AA​</span>]</a></span> was added to Unicode 5.1 as a separate character.<a class="fnref" href="http://www.unicode.org/versions/Unicode7.0.0/ch16.pdf"> u597</a></p>
-    <p class="info">As mentioned <a href="#vsplacement">later</a>, there are also special long forms of <span class="codepoint"><span lang="my">&#xA0;&#x102F;</span> <a href="/scripts/myanmar/block#char102F">[<span class="uname">U+102F MYANMAR VOWEL SIGN U​</span>]</a></span> and <span class="codepoint"><span lang="my">&#xA0;&#x1030;</span> <a href="/scripts/myanmar/block#char1030">[<span class="uname">U+1030 MYANMAR VOWEL SIGN UU​</span>]</a></span> when there is not enough room for them below a cluster. These forms need to be produced by the font, since there are no special characters for them. </p>
-  </section>
+<p class="info">Whereas in Unicode 5.0 the choice of appropriate form was left to the font or implementation during rendering, such contextual decisions are not appropriate for Sgaw Karen and other minority scripts, which only use the tall form, so <span class="codepoint"><span lang="my">&#xA0;&#x102B;</span> <a href="/scripts/myanmar/block#char102B">[<span class="uname">U+102B MYANMAR VOWEL SIGN TALL AA​</span>]</a></span> was added to Unicode 5.1 as a separate character, and needs to be typed explicitly.<a class="fnref" href="http://www.unicode.org/versions/Unicode7.0.0/ch16.pdf"> u597</a></p>
+<p><span class="leadin">Displaced U vowel-signs.</span> The  vowel signs <span class="codepoint"><span lang="my">&#xA0;&#x102F;</span> <a href="/scripts/myanmar/block#char102F">[<span class="uname">U+102F MYANMAR VOWEL SIGN U​</span>]</a></span> and <span class="codepoint"><span lang="my">&#xA0;&#x1030;</span> <a href="/scripts/myanmar/block#char1030">[<span class="uname">U+1030 MYANMAR VOWEL SIGN UU​</span>]</a></span>, which normally appear below a consonant, are  displayed to the right if something else intrudes on that space. Examples include </p>
+<ul>
+<li>a stacked consonant eg. <span class="eg" lang="my">စက္ကူ</span>,</li>
+<li>a medial consonant eg. <span class="eg" lang="my">အဖြူ</span>, or </li>
+<li>a consonant with a 'descender' eg. <span class="eg" lang="my">အညို</span>.</li>
+</ul>
+<p class="info">There are no special characters for these forms. The shape is produced automatically by the font.</p>
+</section>
+
+
+
+
+
+<section id="vowelgraphemes">
+<h3>Composite vowels</h3>
+
+<p>All vowels represented by combinations of the above characters:</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ို␣ယ်␣ော␣ေါ␣ော်␣ေါ်</figure>
+<p>In the sequence <span class="codepoint" translate="no"><span lang="my">&#x1031;&#x102C;&#x103A;</span> [<a href="/scripts/myanmar/block#char1031"><span class="uname">U+1031 MYANMAR VOWEL SIGN E</span></a> + <a href="/scripts/myanmar/block#char102C"><span class="uname">U+102C MYANMAR VOWEL SIGN AA</span></a> + <a href="/scripts/myanmar/block#char103A"><span class="uname">U+103A MYANMAR SIGN ASAT</span></a>]</span>, the <span class="name">asat</span> is added to indicate the low tone. Otherwise, it is the same vowel.</p>
+<p>&nbsp;</p>
+<p>Which combinations contain a given character:</p>
+<table class="graphemeTable">
+<tbody>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ိ</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ို</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ု</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ို</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ေ</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ော␣ေါ␣ော်</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ာ</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ော␣ော်</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ါ</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ေါ␣ေါ်</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ယ</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ယ်</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">်</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ယ်␣ော်␣ေါ်</figure></td>
+</tr>
+</tbody>
+</table>
+
+<p>&nbsp;</p>
+<p>Characters that don't appear in the combinations:</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ီ␣ူ␣ဲ␣ွ</figure>
+</section>
+
 
     
     
     
-      <section id="vsplacement">
+ <section id="vsplacement">
 <h3>Vowel sign placement</h3>
-<p>A consonant cluster is treated as a unit when it comes to vowel-signs, for example <span class="charExample" translate="no"><span class="ex" lang="my">အငွေ</span> <span class="trans">ʔŋw̆e</span> (<span class="transc">a.ngwe</span>)</span>, where the <span class="uname">E</span> is displayed to the left of the <span class="uname">NGA</span> although the
-      character appears after the <span class="uname">WA</span> in memory. </p>
+
+
+<details>
+<summary class="instructions">Show details about vowel glyph positioning.</summary>
+
 <p>The following list shows where vowel-signs are positioned (by default) around a base consonant to produce vowels, and how many instances of that pattern there are. Numbers after the + sign represent combinations of vowel-signs.</p>
 <ul>
 <li>1 prescript, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ကေ</span> <span class="trans">ke</span> <span class="ipa">kè</span></span></li>
@@ -581,8 +673,9 @@ used nowadays for indicating different tones only. For example, compare the tone
 <li>+1 post+postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ကယ်</span> <span class="trans">kyˣ</span> <span class="ipa">kɛ̀</span></span></li>
 <li>+2 pre+post+superscript, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ကော်</span> <span class="trans">keaˣ</span> <span class="ipa">kɔ̀</span></span></li>
 </ul>
-<p>Some vowel signs that would normally appear below a consonant are normally displayed to the right if something else intrudes on that space, such as a stacked consonant eg. <span class="eg" lang="my">စက္ကူ</span>, or a medial consonant eg. <span class="eg" lang="my">အဖြူ</span>, or a consonant with a 'descender' eg. <span class="eg" lang="my">အညို</span>.</p>
-   </section>
+<p><span class="info">The special long forms of <span class="codepoint"><span lang="my">&#xA0;&#x102F;</span> <a href="/scripts/myanmar/block#char102F">[<span class="uname">U+102F MYANMAR VOWEL SIGN U​</span>]</a></span> and <span class="codepoint"><span lang="my">&#xA0;&#x1030;</span> <a href="/scripts/myanmar/block#char1030">[<span class="uname">U+1030 MYANMAR VOWEL SIGN UU​</span>]</a></span>, used when there is not enough room for them below a cluster are produced by the font.</span></p>
+</details>
+</section>
      
     
     
@@ -606,8 +699,8 @@ used nowadays for indicating different tones only. For example, compare the tone
 
 
 <section id="vowel_mappings">
-<h3>Vowel to script mapping</h3>
-<p>The following tables show how the above  vowel sounds commonly map to  characters or sequences of characters. Graphemes are grouped according to whether they occur in open (o), closed (c), or standalone (s) syllables.</p>
+<h3>Vowel sounds mapped to characters</h3>
+<p>The following tables show how the above  vowel sounds commonly map to  characters or sequences of characters. Graphemes are grouped according to whether they occur in open (<b>o</b>), closed (<b>c</b>), or standalone (<b>s</b>) syllables.</p>
 <section id="plain_vowel_map">
 <h4>Plain vowels</h4>
 
@@ -872,36 +965,11 @@ used nowadays for indicating different tones only. For example, compare the tone
 
 </section>
 </section>
-</section>
  
     
     
     
-<section id="tones">
-<h2>Tones</h2>
-    <p> There are four tones in Burmese, creaky, low, high and stopped. The tone of a syllable can be 
-      indicated  by the vowel used, or by combining a vowel and one of the following combining marks.</p>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">့␣း</figure>
 
-<p>The stopped tone only, but always, occurs where a syllable ends in a stop consonant. Syllables that end with a vowel sound and syllables that end with the nasal sound <span class="ipa">ɴ </span>can have one or more of the other three tones.</p>
-      <figure>
-    <p><img src="tones.png" alt="Diagram of tones." /></p>
-    <figcaption>Myanmar tones. <a class="fnref" href="#refs">m7</a></figcaption>
-  </figure>
-    <p>The phonemic transcriptions here use the following conventions for marking tones, using <span class="ipa">a</span> as the base for the examples.</p>
-<ul>
-      <li>stopped tone <span style="font-size: 120%;" class="ipa">a</span></li>
-      <li>creaky tone <span style="font-size: 120%;" class="ipa">a̰</span></li>
-      <li>high tone <span style="font-size: 120%;" class="ipa">á</span></li>
-      <li>low tone <span style="font-size: 120%;" class="ipa">à</span></li>
-</ul>
-  <p>For more details about tones in Burmese, see <a class="secref">burmese_phonetics</a>.</p>
-
-<details>
-<summary class="instructions">Show other, non-Burmese tone marks in the main Myanmar block.</summary>
-<figure style="margin-left:0" class="otherBox auto" data-cols="">ၣ␣ၤ␣ႇ␣ႈ␣ၩ␣ႉ␣ၪ␣ႊ␣ႚ␣ၫ␣ႋ␣ႛ␣ၬ␣ႌ␣ၭ␣ႍ␣ႏ</figure>
-</details>
-</section>
   
   
   
@@ -1689,7 +1757,40 @@ alveolar</th>
     <p>One or two other characters were introduced, such as the <span class="uname">TALL AA</span>. </p>
     </section>
 </section-->
-  
+
+
+
+
+
+
+
+
+<section id="tones">
+<h2>Tones</h2>
+    <p> There are four tones in Burmese, creaky, low, high and stopped. The tone of a syllable can be 
+      indicated  by the vowel used, or by combining a vowel and one of the following combining marks.</p>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">့␣း</figure>
+
+<p>The stopped tone only, but always, occurs where a syllable ends in a stop consonant. Syllables that end with a vowel sound and syllables that end with the nasal sound <span class="ipa">ɴ </span>can have one or more of the other three tones.</p>
+      <figure>
+    <p><img src="tones.png" alt="Diagram of tones." /></p>
+    <figcaption>Myanmar tones. <a class="fnref" href="#refs">m7</a></figcaption>
+  </figure>
+    <p>The phonemic transcriptions here use the following conventions for marking tones, using <span class="ipa">a</span> as the base for the examples.</p>
+<ul>
+      <li>stopped tone <span style="font-size: 120%;" class="ipa">a</span></li>
+      <li>creaky tone <span style="font-size: 120%;" class="ipa">a̰</span></li>
+      <li>high tone <span style="font-size: 120%;" class="ipa">á</span></li>
+      <li>low tone <span style="font-size: 120%;" class="ipa">à</span></li>
+</ul>
+  <p>For more details about tones in Burmese, see <a class="secref">burmese_phonetics</a>.</p>
+
+<details>
+<summary class="instructions">Show other, non-Burmese tone marks in the main Myanmar block.</summary>
+<figure style="margin-left:0" class="otherBox auto" data-cols="">ၣ␣ၤ␣ႇ␣ႈ␣ၩ␣ႉ␣ၪ␣ႊ␣ႚ␣ၫ␣ႋ␣ႛ␣ၬ␣ႌ␣ၭ␣ႍ␣ႏ</figure>
+</details>
+</section>
+
   
   
   
