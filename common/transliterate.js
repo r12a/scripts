@@ -46,7 +46,7 @@ return str.trim()
 
 function autoTransliterate (language) {
 	// finds all the transliterations in examples and retransliterates them using autoTranslitArray
-	
+
 	var trans = document.querySelectorAll('.charExample')
 	
 	for (let i=0;i<trans.length;i++) {

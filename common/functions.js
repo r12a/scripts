@@ -262,7 +262,7 @@ function makeTables (lang) {
         window.spreadsheetRows[items[0]] = ['0']
         for (let i=1;i<items.length;i++) window.spreadsheetRows[items[0]].push(items[i])
         }
-    console.log(spreadsheetRows)
+    //console.log(spreadsheetRows)
 
 
     var tables, node, chars, info, bicameral, out, char
@@ -331,7 +331,7 @@ function makeTables (lang) {
             	if (bicameral) char = charList[1]
             	else char = charList[0]
 				}
-            else char = chars[i]
+            else char = chars[i].replace(/-|–/g,'')
 		            
             //out += '<div class="listPair"><span class="listItem" lang="'+lang+'">'+chars[i]+'</span>'
 			if (node.dataset.lang) out += '<div class="listPair"><span class="listItem" lang="'+node.dataset.lang+'">'+chars[i]+'</span>'
