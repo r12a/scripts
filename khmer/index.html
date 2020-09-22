@@ -13,7 +13,7 @@
 <script src="../../shared/fontdb/db.js"> </script>
 <script src="../../shared/fontdb/managefonts.js"></script>
 
-<script src="../../shared/scriptdb/khmer.js"> </script>
+<script src="../../shared/scriptdb/khmr.js"> </script>
 <script src="/shared/code/boilerplate.js"></script>
 <script src="/shared/code/toc_2020.js"></script>
 <script src="/shared/code/all-names.js"></script>
@@ -52,7 +52,7 @@
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->13 September, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->21 September, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
   
@@ -200,14 +200,10 @@
 <section id="vowels">
 <h2>Vowels</h2>
 
-
-<p>The Khmer Unicode block has 16 vowel signs, and 15 independent vowels (not counting 2 that are deprecated).</p>
-<p>Other diacritics also produce vowel sounds after or before the consonants they are attached to.</p>
-<p>As mentioned above, an initial indicator of pronunciation is the class of the syllable-initial consonant. Additional factors include whether this is an unstressed vowel, vowel harmony, and whether any of the special diacritics have been used to change the sound. For an in-depth treatment of pronunciation see Huffman in the sources section. </p>
-            
-            
-            
-
+<p>The Khmer orthography has two different inherent vowels, and uses vowel-signs, which may be combined to surround the base consonant. All vowel-signs are combining marks, and are stored after the base character. There is an incomplete set of independent vowels, and standalone vowel sounds are typically written using  vowel-signs applied to <span class="codepoint" translate="no"><span lang="km">&#x17A2;</span> [<a href="/scripts/khmer/block#char17A2"><span class="uname">U+17A2 KHMER LETTER QA</span></a>]</span>.</p>
+<p>Khmer has more vowel sounds than ways to write them. Therefore, a written vowel can have different pronunciations, depending on the class of the base consonant. (There is no tone in Khmer, so classes are specially designed for vowel selection.)  Additional factors include whether this is an unstressed vowel, vowel harmony, and whether any of the special diacritics have been used to change the sound. For an in-depth treatment of pronunciation see <a href="#refs">Huffman</a> in the sources section.</p>
+<p>Vowel-signs may be combined with other vowel-signs or characters to represent a particular vowel sound. Such 'composite' vowels can involve up to 3 glyphs, and glyphs can surround the base consonant(s) on up to 2 sides, eg. <span class="charExample" translate="no"><span class="ex" lang="km">កោះ</span> <span class="transc">koh̽</span></span>.</p>
+<p class="instructions">Dashes are used to  indicate whether the character represents a vowel sound in a closed   or an open syllable.</p>
 <section id="vowelPhonemes">
 <h3>Vowel sounds</h3>
 
@@ -475,7 +471,7 @@
 <h3>Inherent vowels</h3>
 <p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
 
-<p>Consonants carry an inherent vowel usually transcribed as <span class="trans">a</span> but pronounced as either <span class="ipa">ɑː</span> or <span class="ipa">ɔː</span>. The class of the consonant will initially dictate which sound is appropriate, eg. <span class="ex" lang="km">ក</span> <span class="ipa">kɑː</span> vs. <span class="ex" lang="km">គ</span> <span class="ipa">kɔː</span>.</p>
+<p>Consonants carry an inherent vowel usually transcribed as <span class="trans">a</span> but pronounced as either <span class="ipa">ɑː</span> or <span class="ipa">ɔː</span>. The class of the consonant will initially dictate which sound is appropriate, eg. <span class="codepoint" translate="no"><span lang="km">&#x1780;</span> [<a href="/scripts/khmer/block#char1780"><span class="uname">U+1780 KHMER LETTER KA</span></a>]</span> is pronounced <span class="ipa">kɑː</span> whereas <span class="codepoint" translate="no"><span lang="km">&#x1782;</span> [<a href="/scripts/khmer/block#char1782"><span class="uname">U+1782 KHMER LETTER KO</span></a>]</span> is pronounced <span class="ipa">kɔː</span>.</p>
 <p>The Unicode Khmer block has two characters that appear to be associated with the inherent vowel, but their use is not clear. They are <span class="codepoint" translate="no"><a href="/scripts/khmer/block#char17B4"><span class="uname">U+17B4 KHMER VOWEL INHERENT AQ</span></a></span> and <span class="codepoint" translate="no"><a href="/scripts/khmer/block#char17B5"><span class="uname">U+17B5 KHMER VOWEL INHERENT AA</span></a></span>.</p>
 </section>
             
@@ -486,15 +482,69 @@
 <h3>Vowel signs</h3>           
 <p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
 
-<p>Other than the inherent vowel, vowel sounds that follow a consonant sound are represented using vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="km">គិ</span> <span class="trans">ki</span> <span class="ipa">ki</span></span>. This includes several diphthongs (each represented by a single code point), 3 prescript signs, and 5 circumgraphs.</p>
-<p> In most cases, vowel signs attached to a consonant are pronounced differently, depending on the register of the consonant letter, eg. <span class="ex" lang="km">កា</span> <span class="ipa">kaː</span> vs. <span class="ex" lang="km">គា</span> <span class="ipa">kiə</span>.</p>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ា␣ៈ␣ិ␣ី␣ឹ␣ឺ␣ុ␣ូ␣ួ␣េ␣ែ␣ៃ␣ោ␣ៅ␣ើ␣ឿ␣ៀ</figure>
+<p>Non-inherent  vowel sounds that follow a consonant  are represented using <span class="name">vowel-signs</span>, eg. <span class="codepoint" translate="no"><span lang="km">&#x1780;&#x17B7;</span> [<a href="/scripts/khmer/block#char1780"><span class="uname">U+1780 KHMER LETTER KA</span></a> + <a href="/scripts/khmer/block#char17B7"><span class="uname">U+17B7 KHMER VOWEL SIGN I</span></a>]</span> is pronounced <span class="ipa">ki</span>.</p>
+<p> In most cases, vowel signs attached to a consonant are pronounced differently, depending on the register of the consonant letter, eg. <span class="codepoint" translate="no"><span lang="km">&#x1780;&#x17B6;</span> [<a href="/scripts/khmer/block#char1780"><span class="uname">U+1780 KHMER LETTER KA</span></a> + <a href="/scripts/khmer/block#char17B6"><span class="uname">U+17B6 KHMER VOWEL SIGN AA</span></a>]</span> is pronounced <span class="ipa">kaː</span>, whereas <span class="codepoint" translate="no"><span lang="km">&#x1782;&#x17B6;</span> [<a href="/scripts/khmer/block#char1782"><span class="uname">U+1782 KHMER LETTER KO</span></a> + <a href="/scripts/khmer/block#char17B6"><span class="uname">U+17B6 KHMER VOWEL SIGN AA</span></a>]</span> is pronounced <span class="ipa">kiə</span>.</p>
+<p>Khmer vowel-signs are all combining characters.  All vowel-signs are  stored after the base consonant, and the font puts them in the correct place for display. This also applies for the 5 circumgraphs, where a single code point produces glyphs on more than one side of the consonant base.</p>
+<p>Around half  the vowel-signs are <em>spacing</em> marks, meaning that they consume horizontal space when added to a base consonant. </p>
+<p>A  few vowel signs are combined with <span class="name">niʔkəhət</span> or <span class="name">reə̆hmuk</span> diacritics to produce additional sounds (see <a class="secref">anusvara_visarga</a>).</p>
+
+
+
+
+
+<section id="prescript_vowels">
+<h4>Prescript vowel-signs</h4>  
+
+<p>Three vowel-signs appear to the left of the onset consonant, eg. <span class="eg" lang="km">សេះ</span>.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">េ␣ែ␣ៃ</figure>
+
+<p>These are combining marks that are always stored after the base consonant. The font places the glyph before the base consonant.</p>
+</section>
+
+
+
+
+
+
+<section id="circumgraphs">
+<h4>Circumgraphs</h4>
+
+<p>Five vowels  are produced by a single combining character with visually separate parts, that appear on different (mostly opposite) sides of the consonant onset.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ៀ␣ឿ␣ើ␣ោ␣ៅ</figure>
+
+<p>These are also combining marks that are always stored after the base consonant. The font places the glyphs in the right place relative to the base consonant.</p>
+<p><span class="leadin">Encoding.</span> Two of these circumgraphs  can be written as a single character, or as two, eg. </p>
+<ol>
+<li><span class="codepoint" translate="no"><span lang="km">&#x17BE;</span> [<a href="/scripts/khmer/block#char17BE"><span class="uname">U+17BE KHMER VOWEL SIGN OE</span></a></span> could be written as:<br>
+<span class="codepoint" translate="no"><span lang="km">&#x17C1;&#x17B8;</span> [<a href="/scripts/khmer/block#char17C1"><span class="uname">U+17C1 KHMER VOWEL SIGN E</span></a> + <a href="/scripts/khmer/block#char17B8"><span class="uname">U+17B8 KHMER VOWEL SIGN II</span></a>]</span>
+</li>
+<li><span class="codepoint" translate="no"><span lang="km">&#x17C4;</span> [<a href="/scripts/khmer/block#char17C4"><span class="uname">U+17C4 KHMER VOWEL SIGN OO</span></a>]</span> could be written as:<br><span class="codepoint" translate="no"><span lang="km">&#x17C1;&#x17B6;</span> [<a href="/scripts/khmer/block#char17C1"><span class="uname">U+17C1 KHMER VOWEL SIGN E</span></a> + <a href="/scripts/khmer/block#char17B6"><span class="uname">U+17B6 KHMER VOWEL SIGN AA</span></a>]</span>
+</li>
+</ol>
+<p class="info">For Khmer, single and multiple code point realisations do not normalise to be the same in NFC or NFD, so you are creating different content by using one approach or the other. This may affect various operations on the text. It is therefore better to stick with one representation</p>
+<p>The Unicode Standard surprisingly makes no comment on this, although it does for other scripts, where it encourages use of the  precomposed, single code point.</p>
+<p>Whichever approach is used, the vowel-signs must be typed and stored after the consonant characters they surround, and in  left to right order.</p>
+</section>
+
+
+
+
+<section id="othervowels">
+<h4>Other vowel signs</h4>
+
+<p>The following combining marks are also used to indicate vowel sounds, sometimes on their own, and sometimes in combination with others.</p>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ា␣ៈ␣ិ␣ី␣ឹ␣ឺ␣ុ␣ូ␣ួ</figure>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ួ␣ុ␣ូ␣ិ␣ី␣ឹ␣ឺ␣ៈ␣ា</figure>
 
 <p><span class="codepoint" translate="no"><span lang="km">&#x17C8;</span> [<a href="/scripts/khmer/block#char17C8"><span class="uname">U+17C8 KHMER SIGN YUUKALEAPINTU​</span></a>]</span> is a 20th century addition to the Khmer repertoire. It is used as a vowel after consonants that are pronounced as stressed syllables at the end of a word, or preceding an internal juncture in compounds.</p>
-<p>Khmer vowel signs are all represented by combining characters. Around half  are <em>spacing</em> marks, meaning that they consume horizontal space when added to a base consonant. A single combining character is used per base consonant, even where vowel signs appear on two sides of the consonant, but a few vowel signs are combined with <span class="name">niʔkəhət</span> or <span class="name">reə̆hmuk</span> diacritics to produce additional sounds (see <a class="secref">anusvara_visarga</a>).</p>
-<p>All vowel-signs are typed and stored <em>after</em> the base consonant, whether or not they precede it when displayed. The font takes care of the glyph positioning.</p>
 </section>
- 
+</section>
+
+
+
 
   
 <section id="anusvara_visarga">
@@ -508,18 +558,113 @@
 
 <figure class="characterBox auto" data-cols="ipa,trans">ាំ␣ុំ␣ុះ␣េះ␣ោះ</figure>
 
-			<p>The first two of these combinations are regarded as  vowels in the Khmer alphabet but they are not encoded separately in Unicode (though they are named sequences), ie. <span class="ex" lang="km">អាំ</span> <span class="ipa">am, oə̆m</span> and <span class="ex" lang="km">អុំ</span> <span class="ipa">om, um.</span></p>
+<p>The first two of these combinations are regarded as  vowels in the Khmer alphabet but they are not encoded separately in Unicode (though they are named sequences), ie. <span class="ex" lang="km">អាំ</span> <span class="ipa">am, oə̆m</span> and <span class="ex" lang="km">អុំ</span> <span class="ipa">om, um.</span></p>
 </section>
-            
-            
-            
-            
- <section id="circumgraphs">
-<h3>Using circumgraphs</h3>           
-<p>Several vowels  are produced by a single combining character with visually separate parts, eg.   <span class="charExample" translate="no"><span class="ex" lang="km">កើ</span> <span class="trans">kaᵊ</span> <span class="ipa">kaw</span></span>, which uses <span class="codepoint" translate="no"><span lang="km">&#x17BE;</span> [<a href="/scripts/khmer/block#char17BE"><span class="uname">U+17BE KHMER VOWEL SIGN OE</span></a></span>). It is, however, possible to create something that looks the same using 2  code points eg. <span class="charExample" translate="no"><span class="ex" lang="km">កេី</span> <span class="trans">keī</span></span> using <span class="codepoint" translate="no"><span lang="km">&#x17C1;</span> + <span lang="km">&#x17B8;</span> [<a href="/scripts/khmer/block#char17C1"><span class="uname">U+17C1 KHMER VOWEL SIGN E</span></a> + <a href="/scripts/khmer/block#char17B8"><span class="uname">U+17B8 KHMER VOWEL SIGN II</span></a>]</span>.</p>
-<p>The Unicode Standard surprisingly makes no comment on this, although it does for other scripts, where it encourages use of the single code point.</p>
-<p>For Khmer, single and multiple code point realisations do not normalise to be the same in NFC or NFD, so you are creating different content by using one approach or the other. This may affect various operations on the text.</p>
+
+
+
+
+
+<section id="consonant_vowels">
+<h3>Consonants &amp; other symbols used for vowels</h3>
+<p>Vowel-signs may sometimes be combined with other  characters to represent a particular vowel sound. In addition to <span class="name">niʔkəhət</span> and <span class="name">reə̆hmuk</span>, these include the following:</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans">ង␣វ␣័␣រ␣យ</figure>
+
+<p>See <a class="secref">vowelgraphemes</a> for the few instances where these are used.</p>
 </section>
+
+
+
+
+
+
+<section id="vowelgraphemes">
+<h3>Composite vowels</h3>
+
+<p>All vowels represented by combinations of the above characters:</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans">ាំ␣ុំ␣ុះ␣េះ␣ោះ␣ា␣ាំង␣ិះ␣ឹះ␣ូវ␣ើះ␣ែះ␣័រ␣ិយ␣័យ</figure>
+
+<p>Which combinations contain a given character:</p>
+<table class="graphemeTable">
+<tbody>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17B6;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ា់␣ាំង␣ាំ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17B7;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ិយ␣ិះ</figure></td></tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17B9;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ឹះ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17BB;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ុះ␣ុំ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17BC;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ូវ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17BE;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ើះ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17C1;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">េះ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17C2;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ែះ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17C4;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ោះ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17C6;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ុំ␣ាំង␣ាំ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17C7;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ោះ␣ិះ␣េះ␣ុះ␣ែះ␣ឹះ␣ើះ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17CB;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ា់</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x17D0;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">័យ␣័រ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x1799;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ិយ␣័យ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x1784;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ាំង</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x179A;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">័រ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x179C;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ូវ</figure></td>
+</tr>
+</tbody>
+</table>
+
+<p>&nbsp;</p>
+<p>Characters that don't appear in the combinations:</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ី␣ឺ␣ួ␣ឿ␣ៀ␣ៃ␣ៈ␣ៅ</figure>
+</section>
+
 
 
 
@@ -527,6 +672,11 @@
  
 <section id="placement">
 <h3>Vowel-sign placement</h3>
+
+
+<details>
+<summary class="instructions">Show details about vowel glyph positioning.</summary>
+
 <p>The following list shows where vowel-signs are positioned around a base consonant to produce vowels, and how many instances of that pattern there are. The figure after the + sign represents combinations of vowel-sign and    <span class="name">niʔkəhət</span>/<span class="name">reə̆hmuk</span>,</p>
 <ul>
 <li>3 prescript, eg. <span class="charExample" translate="no"><span class="ex" lang="km">កេ</span> <span class="trans">ke</span></span></li>
@@ -540,6 +690,7 @@
 <li>0+1 pre+post+postscript, ie. <span class="charExample" translate="no"><span class="ex" lang="km">កោះ</span> <span class="trans">koh̽</span></span></li>
 </ul>
 <p>At maximum, vowel components can occur concurrently on 2 sides of the base.</p>
+</details>
 </section>
 
 
@@ -548,6 +699,7 @@
 <section id="vowel_absence">
 <h3>Vowel absence</h3>
 <p>Inherent vowels are not pronounced after syllable final consonants, nor after initial consonants in a stack (see <a class="secref">clusters</a>). </p>
+<p>Khmer also has some diacritics that silence vowels or parts of the text.</p>
 </section>
            
             
@@ -569,7 +721,7 @@
 
 <figure class="archaicBox auto" data-cols="ipa">ឨ</figure>
 
-<p>The Unicode Standard regards the following 2 characters as errors in the encoding.</p>
+<p class="info">The Unicode Standard regards the following 2 characters as errors in the encoding.</p>
 
 <figure class="deprecatedBox auto" data-cols="">ឣ␣ឤ</figure>
 
@@ -581,7 +733,7 @@
 
 
 <section id="vowel_mappings">
-<h3>Vowel to script mapping</h3>
+<h3>Vowel sounds mapped to characters</h3>
 
 <p>The following tables show how the above  vowel sounds map to characters or sequences of characters. The dotted circle indicates the location of the consonant relative to the vowel-sign; if there are 2 circles, the vowel is used only in closed syllables.</p>
 
@@ -1155,7 +1307,7 @@
 <h3>Consonant sounds</h3>
 
 <p class="instructions">Click on the sounds to see where else in the document they are referred to.</p>
-<p class="instructions">Phones in a lighter colour are non-native or allophones. Source<a class="fnref" href="http://en.wikipedia.org/wiki/Khmer_phonology">w</a>.</p>
+<p class="instructions">Phones in a lighter colour are non-native or allophones. Source <a href="http://en.wikipedia.org/wiki/Khmer_phonology">Wikipedia</a>.</p>
 
 <table class="ipaTable">
 <thead>
