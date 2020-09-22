@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+<meta charset="utf-8"/>
+<title>Make list for summary</title>
+<meta name="description" content="Make list items tool."/>
+<style>em { font-size: 80%; }</style>
+</head>
+
+<body>
+<header>
+<h1>List transform</h1>
+</header>
+<p><textarea id="in" placeholder="Add input list here" style="height:800px;float:left; width:45%; font-size: 150%;"></textarea>
+</p>
+
+<textarea id="out" style="height:800px;width:45%;float:right;"></textarea>
+
+<br style="clear: both;"/>
+
+
+
+<p><button onClick="sortVocab()">Sort &amp; merge vocab</button><br><em>Input: List of vocab data. Output: List with no repeats, ordered by native text.</em></p>
+<script>
+function sortVocab() {
+	items = document.getElementById('in').value.split('\n')
+	const uniqueSet = new Set(items)
+	charlist = [...uniqueSet]
+	charlist.sort()
+	document.getElementById('out').value = charlist.join('\n')
+	document.getElementById('out').select()
+	}
+</script>
+
+
+
+<p><button onClick="extractPhonemes()">Extract phonemes</button> IPA col: <input id="ipaCol" type="text" style="width:2em;"><br><em>Input: selection from spreadsheet, starting with native character and including IPA column. Output: list of items ordered by phoneme.</em></p>
+<script>
+function extractPhonemes() {
+	if (document.getElementById('ipaCol').value == '') alert('Add an IPA col value!')
+	ipaCol = parseInt(document.getElementById('ipaCol').value)
+	console.log(ipaCol)
+	items = document.getElementById('in').value.replace(/\t/g,'|').split('\n')
+	const uniqueSet = new Set(items)
+	charlist = [...uniqueSet]
+	
+	charPhon = []
+	for (i=0;i<charlist.length;i++) {
+		if (charlist[0] === '|') continue
+		row = charlist[i].split('|')
+		if (typeof row[ipaCol] === 'undefined') continue
+		phones = row[ipaCol].split(' ')
+		for (j=0;j<phones.length;j++) charPhon.push( phones[j]+'\t'+row[0] )
+		}
+
+	
+	charPhon.sort()
+	document.getElementById('out').value = charPhon.join('\n')
+	document.getElementById('out').select()
+	}
+</script>
+
+
+
+<p><button onClick="makeList()">Make ␣ list</button><br><em>Input: list where each row is PHONEME\tCHAR. Output: list of items for summary pages.</em></p>
+<script>
+function makeList() {
+	charlist = document.getElementById('in').value.split('\n')
+	
+	out = ''
+	for (i=0;i<charlist.length;i++) {
+		if (charlist[i] == '') continue
+		row = charlist[i].split('\t')
+		if (out != '') out += '␣'
+		out += row[1]
+		}
+	
+	
+
+	document.getElementById('out').value = out
+	document.getElementById('out').select()
+	}
+</script>
+
+
+
+
+<div class="smallprint" style="margin-top: 3em; font-size: 70%; font-style: italic;"><span id="version">This version <span id="version-info"> 
+<!-- #BeginDate format:IS1m -->2020-09-18  19:12<!-- #EndDate --> 
+</span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
+
+<script>
+
+
+function makeListFromChars (lang, chars, bicameral) {
+    var charList = chars.split('\n')
+    var ccbase = ''
+    if (document.getElementById('ccbase').value !== '') ccbase = document.getElementById('ccbase').value
+    var count = 0
+    for (let i=0;i<charList.length;i++) {
+        charList[i] = charList[i].trim()
+        if (charList[i] !== '') count++
+        }
+	var out = '<figure'
+    if (document.getElementById('characterBox').checked) out += ' class="characterBox"'
+    out += '>\n<div class="listAll" onClick="listAll(this, '
+    out += "'"+lang+"'"
+    out += ')">list all '+count+'</div>\n<div class="listArray">\n'
+	
+	for (let x=0; x<charList.length; x++) {
+        charList[x] = charList[x].trim()
+		if (charList[x] === '') continue
+        var items = charList[x].split('\t')
+        
+        items[0] = items[0].replace(/\\u([a-fA-F0-9]+)/,'&#x$1;')
+        
+        if (bicameral) items[0] = items[0].toUpperCase() + items[0].toLowerCase()
+        out += '<div class="listPair"><span class="listItem" lang="'+lang+'">'+ccbase+items[0]+'</span>'
+        
+        if (document.getElementById('trans').value > 0) out += '<span class="listTrans">'+items[document.getElementById('trans').value]+'</span>'
+        
+        if (document.getElementById('ipa').value > 0) {
+            ipa = items[document.getElementById('ipa').value]
+            if (ipa) ipa = ipa.replace(/ /,', ')
+            out += '<span class="listIPA">'+ipa+'</span>'
+            }
+        
+        if (document.getElementById('meaning').value > 0) out += '<span class="listMeaning">'+items[document.getElementById('meaning').value]+'</span>'
+        out += '</div>\n'
+		}
+	return out+'</div>\n</figure>\n'
+	}
+
+</script>
+
+</body>
+</html>
