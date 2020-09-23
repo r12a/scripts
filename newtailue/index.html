@@ -52,7 +52,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->22 September, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->23 September, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -131,11 +131,13 @@
 <section id="distinguishing">
 <h2>Basic features</h2>
     <p>The New Tai Lü script is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>, ie. consonants carry an inherent vowel sound that is overridden using vowel signs. In New Tai Lü, consonants carry an inherent vowel  <span class="ipa">a</span>. See the table to the right for a brief overview of features for the modern Tai Lü orthography.  (See the <a href="../../scripts/featurelist/#key">key</a>. Character counts exclude ASCII characters.)</p>
-<p>One distinguishing feature of New Tai Lü is its regularity, and simplicity compared to Tai Tham.</p>
-<p>The repertoire maps each consonant onset to either a high and low register letter, and all consonants are part of such a pairing. </p>
-<p>Consonant clusters are simplified by a  set of dedicated syllable-final consonants.</p>
+<p>The orthography is syllable-based, and the language tonal.</p>
+<p>The repertoire maps each consonant onset to either a high and low register letter, and all consonants are part of such a pairing. The choice of consonant from these pairings affects the tone of the syllable, reducing the number of tone marks needed.</p>
+<p>Onset clusters only occur as labialisation, and there are dedicated code points for  combinations, eg. <span class="charExample" translate="no"><span class="ex" lang="khb">ᦦ</span> <span class="transc">kʷ</span></span>.</p>
 <p>New Tai Lü uses only spacing vowel signs,  stored in visual order. There are no combining characters, and no independent vowel letters.</p>
-<p>New Tai Lü combines into a single letter what would be multiple characters in Tai Tham. For example, <span class="ex" lang="khb">ᦦ</span>, <span class="ex" lang="khb">ᦜ</span>, and <span class="ex" lang="khb">ᦗ</span>.</p>
+<p>Syllable-final consonants are all rendered using dedicated code points. There is no subjoining or merging of consonants.</p>
+<p>Tone is also marked by spacing characters, and only after unchecked syllables. There are 6 tones, which are marked  by the onset class, the type of syllable, and where needed one of 2 tone marks.</p>
+<p>One distinguishing feature of New Tai Lü is the regularity, and simplicity described above compared to Tai Tham, which can also be used for the Tai Lü language. Many of the glyphs resemble Tai Tham, but they are also simplified, commonly combining into a single code point what would be multiple characters in Tai Tham. For example, <span class="ex" lang="khb">ᦦ</span>, <span class="ex" lang="khb">ᦜ</span>, and <span class="ex" lang="khb">ᦗ</span>.</p>
 </section>
   
   
@@ -477,8 +479,7 @@ where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem"
 
 <section id="vowel_mappings">
 <h3>Vowel sounds mapped to characters</h3>
-<p>The following tables show how the above  vowel sounds commonly map to  characters or sequences of characters. Sounds are grouped according to whether they appear in open (<b>o</b>) or closed (<b>c</b>) syllables, or as a standalone vowel (<b>s</b>).</p>
-<p>For some diphthongs ending in <span class="ipa">-j</span> or <span class="ipa">-w</span>, Owen indicates that phonetic sequences exist. but offers no examples. Based on other examples, it is assumed here that <span class="ipa">-j</span> is formed using sakot+ya, and <span class="ipa">-w</span> using sakot+wa, except where the preceding vowel-sign extends below the baseline (such as for <span class="ipa">uj</span>).</p>
+<p>The following tables show how the above  vowel sounds commonly map to  characters or sequences of characters. The sounds are split to show whether they appear in open (<b>o</b>) or closed (<b>c</b>) syllables.</p>
 <section id="plain_vowel_map">
 <h4>Plain vowels</h4>
 
@@ -1038,7 +1039,8 @@ alveolar</th>
 <section id="clusters">
 <h3>Consonant clusters</h3>
 <p>Clusters of consonants do not occur regularly<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a>, so there is no virama.</p>
-<p>Where clusters do occur they  involve the designated final consonant characters.</p>
+<p>Onset consonants can be labialised, but there are distinct code points for that, eg. <span class="charExample" translate="no"><span class="ex" lang="khb">ᦦ</span> <span class="transc">kʷ</span></span>.</p>
+<p>Clusters at syllable boundaries (final consonant followed by onset) don't interact and dedicated code points are available for syllable-final code points, so there is no confusion about syllable boundaries.</p>
 </section>
 
 
@@ -1444,11 +1446,13 @@ alveolar</th>
   <section id="tones">
 <h2>Tones</h2>
 
-<figure class="characterBox auto" data-cols="trans">ᧈ␣ᧉ</figure>
-
+<p id="def-checked" class="explanatoryintro definitionStub"></p>
 
 <p>New Tai Lü has two tone marks, which are written at the end of an unchecked syllable. Because consonants come in pairs to denote two tonal registers, the two tone marks allow for representation of six specific tones.<a class="fnref" href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></p>
-<p id="def-checked" class="explanatoryintro definitionStub"></p>
+<p>The tone marks are ordinary spacing characters.</p>
+
+<figure class="characterBox auto" data-cols="trans">ᧈ␣ᧉ</figure>
+
 
 <p>Tai Lü has 2 tones in checked syllables, and 6 tones in unchecked syllables.<a class="fnref" href="https://en.wikipedia.org/wiki/Tai_Lue_language">wl</a></p>
 <table>
@@ -1469,7 +1473,7 @@ alveolar</th>
 <p><span class="eg" lang="khb">ᦜᦱᧅ</span></p></td>
 </tr>
 <tr>
-<td rowspan="3">open</td>
+<td rowspan="3">unchecked</td>
 <td>-</td>
 <td><span class="ipa">˥</span> <em>high</em></td>
 <td><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><span class="eg" lang="khb">ᦂᦱ</span></span></td>
@@ -1493,7 +1497,7 @@ alveolar</th>
 <p><span class="eg" lang="khb">ᦟᦱᧅ</span></p></td>
 </tr>
 <tr>
-<td rowspan="3">open</td>
+<td rowspan="3">unchecked</td>
 <td>-</td>
 <td><span class="ipa">˥˩</span> <em>falling</em></td>
 <td><span title="Representation in the International Phonetic Alphabet (IPA)" class="IPA"><span class="eg" lang="khb">ᦅᦱ</span></span></td>
@@ -1672,6 +1676,8 @@ alveolar</th>
 <p id="def-grapheme" class="explanatoryintro definitionStub"></p>
 
 <p class="prompts">tbd</p>
+
+<p>Since all New Tai Lü characters are spacing characters, they are all separate Unicode grapheme clusters. This means that, by default, operations such as  forwards/backwards deletion, cursor movement &amp; selection, and character counts all apply to individual characters, regardless of type or of syllabic context.</p>
 </section>
 
 
@@ -1691,9 +1697,9 @@ alveolar</th>
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
 
-  <p class="observation"><span class="leadin">Observation:</span> New Tai Lü  appears to use fullwidth Chinese punctuation. May include the following (needs to be checked). Not sure whether it also uses western punctuation.</p>
+<p class="observation"><span class="leadin">Observation:</span> New Tai Lü  appears to use fullwidth Chinese punctuation. May include the following (needs to be checked). Not sure whether it also uses western punctuation.</p>
 
-<figure class="characterBox auto" data-cols="trans">〈␣〉␣《␣》␣（␣）␣！␣？␣：␣；␣。␣、␣，␣．</figure>
+<figure class="characterBox auto" data-cols="trans">！␣？␣：␣；␣。␣、␣，␣．</figure>
 
 </section>
 
@@ -1703,7 +1709,10 @@ alveolar</th>
 
 <section id="bracketing">
 <h3>Parentheses &amp; brackets</h3>
-<p class="prompts">tbd</p>
+
+<p class="observation"><span class="leadin">Observation:</span> New Tai Lü  appears to use fullwidth Chinese punctuation, and therefore may include the following (needs to be checked). Not sure whether it also uses western parentheses &amp; brackets.</p>
+
+<figure class="characterBox auto" data-cols="trans">〈␣〉␣《␣》␣（␣）</figure>
 </section>
 
 
