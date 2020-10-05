@@ -1,3 +1,11 @@
+/*
+@ Source: 
+§ 'Yogyakarta'
+# 200
+~ ltr
+! jv
+*/
+
 autoExpandExamples.jv = `
 :꧑꧕:ꦎꦏ꧀ꦠꦺꦴꦧꦼꦂ:꧒꧐꧑꧒:|15 october 2012
 ꦄꦪꦸ|Ayu (personal name)
@@ -23,6 +31,33 @@ autoExpandExamples.jv = `
 ꦲꦪꦸ|graceful|(ayu)
 ꦲꦸꦧꦶꦉꦧꦸꦱ꧀|boiled tubers|(ubi rebus)
 ꧈ꦢꦺ꧈ꦲ꧈ꦌꦭ꧀꧈|DHL
+ꦏꦿꦺꦴꦠꦺꦴ|ant egg|ˈkro.to
+ꦧꦛꦶꦏ꧀|clothing pattern|ˈba.ʈɪʔ
+ꦏꦔꦼꦤ꧀|desirous|ˈka.ŋən
+ꦏ꧀ꦫꦩ|politeness|krɔmɔ
+ꦕꦼꦩꦼꦔꦚ꧀|dry rice paddy|ˈtʃə.mə.ŋan
+ꦗꦩ꧀ꦧꦸ|rose apple|ˈjam.bu/ˈjɔm.bu
+ꦠꦔꦤ꧀|hand|ˈta.ŋan/ˈtɔ.ŋɔn
+ꦠꦶꦂꦠ|holy water|tirtɔ
+ꦥꦸꦭꦺꦴ|island|pulo
+ꦧꦤ꧀ꦣ|wealth|bɔnɖ̥ɔ
+ꦧꦸꦠ|giant|butɔ
+ꦧ꧀ꦊꦢꦸꦒ꧀|dust|bləd̪ɔɡ
+ꦧ꧀ꦊꦣꦸꦒ꧀|mud|bləɖɔɡ
+ꦫꦠ|flat|ˈra.ta/ˈrɔ.tɔ
+ꦫꦠꦔ꧀ꦒ|cart|ˈrɔ.tɔŋ.ɡɔ
+ꦭꦫ|sick|lɔrɔ
+ꦲꦔꦺꦭ꧀|difficult|ˈaŋɛl
+ꦲꦧꦁ|red|ˈa.baŋ/ˈɔ.bɔŋ
+ꦲꦩ꧀ꦧꦿꦤꦁ|turn fiery red|(ambranaŋ)
+ꦱꦩ꧀ꦥꦸꦤ꧀|already|(sampun)
+ꦏꦤ꧀ꦛꦶ|by|kanʈi
+ꦦꦑꦸꦨꦸꦮꦟ/Pakubuwana (name)
+ꦨꦶꦩ/Bima (name)
+
+
+
+
 
 `
 
