@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+<meta charset="utf-8"/>
+<title>getImage</title>
+<link rel="stylesheet" href="../../shared/style/docs.css" />
+	
+
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/fontdb/db.js"></script>
+</head>
+
+<body>
+<!--header>
+    <div id="header-boilerplate"></div>
+	<script>document.getElementById('header-boilerplate').innerHTML = bp_header('/images/world.gif','docs');</script>
+</header-->
+
+<h1>Highlight characters</h1>
+
+<p>Highlights the location of one or more characters within text.</p>
+
+<script>
+function initialise () {
+	window.textColour = document.getElementById('textColour').value
+	window.highlightColour = document.getElementById('highlightColour').value
+	document.getElementById('out').style.color = window.textColour
+	document.getElementById('out').style.fontSize = fontsize
+	document.getElementById('out').style.fontFamily = document.getElementById('fontName').value
+	}
+
+
+function showText () {
+	// check whether you want to highlight all
+	if (document.getElementById('searchItems').value === 'all') {
+		document.getElementById('out').innerHTML = document.getElementById('in').value
+		document.getElementById('out').style.color = window.highlightColour
+		}
+	// or highlight none
+	else if (document.getElementById('searchItems').value === '') {
+		document.getElementById('out').innerHTML = document.getElementById('in').value
+		document.getElementById('out').style.color = window.textColour
+		}
+	else {
+		document.getElementById('out').style.color = window.textColour
+		var theText = document.getElementById('in').value
+		var searchItems = document.getElementById('searchItems').value.split(',')
+		const searchSet = new Set(document.getElementById('searchItems').value.split(','))
+
+		textArray = [...theText]
+
+		var out = ''
+		for (let i=0;i<textArray.length;i++) {
+			if (searchSet.has(textArray[i])) out += '<span style="color:'+window.highlightColour+';">'+textArray[i]+'</span>'
+			else out += textArray[i]
+			}
+
+		document.getElementById('out').innerHTML = out
+		}
+	}
+</script>
+
+<p><textarea id="in" placeholder="Text to highlight..." style="width: 80%;height: 8em;"></textarea></p>
+<p style="text-align: start;">Font name: <input type="text" id="fontname" 
+		onchange="document.getElementById('out').style.fontFamily = this.value;"><br>
+Text colour: <input type="text" id="textColour" value="black" style="width:6em;"
+		onchange="document.getElementById('out').style.color = this.value; window.textColor = this.value;">
+Highlight colour: <input type="text" id="highlightColour" value="chocolate" style="width:6em;"
+		onchange="spans = document.getElementById('out').querySelectorAll('span');
+		for (i=0;i<spans.length;i++) spans[i].style.color = this.value; window.highlightColour = this.value;">
+</p>
+<p>Font size: <span id="sizeIndicator" style="font-size:80%;">40</span>px 
+<input id="fontSizeSlider" type="range" min="20" max="150" step="1" value="40" oninput="document.getElementById('out').style.fontSize = this.value+'px'; document.getElementById('sizeIndicator').textContent = this.value;" style="width:15em;">
+  <br>
+  Line height: <span id="lineheightIndicator" style="font-size:80%;">1.4</span> 
+    <input id="lineheightSlider" type="range" min=".5" max="4" step=".1" value="1.4" oninput="document.getElementById('out').style.lineHeight = this.value; document.getElementById('lineheightIndicator').textContent = this.value;" style="width:10em;">
+  </p>
+<p>Character(s) to highlight: <input type="text" placeholder="Comma-separated list." id="searchItems" onchange="showText()"></p>
+<p><button onClick="showText()">GO</button></p>
+
+
+<p dir="auto" id="out" style="text-align: start; font-size:40px; color: black;"></p>
+
+<script>initialise()</script>
+</body>
+</html>
