@@ -35,6 +35,9 @@ autoExpandExamples.ban = `
 ᬫᬁ|holy letter|(mang)
 ᬫᬗᬄ|logic|(mangah)
 ᬱᬫ᭄ᬧᬶᬂ|side|(samping)
+ᬦᬗ᭄ᬓ|jackfruit|naŋka
+ᬤᬾᬯ|god|dewa
+
 
 `
 
