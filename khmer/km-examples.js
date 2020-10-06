@@ -300,6 +300,8 @@ autoExpandExamples.km = `
 ឲ្យ|to give|ʔaoj
 ឳទក|water-plant|ʔawtuə̆k
 ៣០០០ ៛|3000 riel|ɓej poan riəl
+អក្សរខ្មែរ|Khmer script|ʔaʔsɑːkmae
+
 
 `
 
