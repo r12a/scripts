@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../../shared/style/docs.css"/>
 <link rel="stylesheet" href="../common/local.css"/>
 <link rel="stylesheet" href="nod.css"/>
-
+<style>.largeList .listItem { font-size: 280%; }</style>
 <script src="../../shared/fontdb/db.js"> </script>
 <script src="../../shared/fontdb/managefonts.js"></script>
 
@@ -54,14 +54,14 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->12 September, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->8 October, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
 
 
 <div class="section">
-<p>This page gathers together basic information about the Tai Tham script and its use for the Northern Thai language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Northern Thai using Unicode.</p>
+<p>This page gathers  basic information about the Tai Tham script and its use for the Northern Thai language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Northern Thai using Unicode.</p>
 <p>See also the companion document, <a href="block" class="linkHighlight">Tai Tham character notes</a>, for detailed information about specific Unicode characters.</p>
 <p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
@@ -179,11 +179,19 @@
 <section id="vowels">
 <h2>Vowels</h2>
 
+<p>Tai Tham text has an <b class="newterm">inherent vowel</b>, and uses vowel-signs. However, unlike Thai and Lao, all <b class="newterm">vowel-signs are combining marks</b>, and are stored after the base character. There is an <b class="newterm">incomplete set of independent vowels</b>, and standalone vowel sounds are typically written using  vowel-signs applied to <span class="codepoint" translate="no"><span lang="nod">&#x1A4B;</span> [<a href="/scripts/taitham/block#char1A4B"><span class="uname">U+1A4B TAI THAM LETTER A</span></a>]</span>.</p>
+<p>Vowels are often written differently when they appear in a closed vs. open syllable.</p>
+<p>Vowel-signs may be <b class="newterm">combined with other vowel-signs</b> or characters to represent a particular vowel sound. Such 'composite' vowels can involve up to 5 glyphs, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩮᩬᩨᩋᩡ</span> <span class="transc">kēɔ̄ɯ̄ʔ̯a</span></span>, which can surround the base consonant(s) on up to 4 sides. </p>
+<p class="instructions">Dashes are used to indicate the location of a consonant or consonant cluster. Prescript vowel-signs have been stored before the hyphen because of the limitations of the font, but in reality all vowel-signs should occur after the consonant they modify.</p>
+
+
+
+
 
 <section id="vowelPhonemes">
 <h3>Vowel sounds</h3>
 
-<p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+<p class="instructions">Click on the sound groups to see where else in the document each of the sounds are referred to.</p>
 
 
 <section id="plain_vowels">
@@ -316,7 +324,7 @@
 
 
 
-<section id="vowelMappings">
+<!--section id="vowelMappings">
 <h3>Mappings to vowel characters</h3>
 <table class="ipaTable">
 <thead>
@@ -454,12 +462,18 @@
 <p><span class="ipa">-ɯa-</span> <span class="ex" lang="nod">ᩮᩬᩨ-</span></p>
 <p><span class="ipa">-ɯa:</span> <span class="ex" lang="nod"> ᩮᩨᩬᩋ</span></p>
 <p><span class="ipa">-ɯa</span> <span class="ex" lang="nod"> ᩮᩨᩬᩋᩡ</span></p>
-</section>
+</section-->
+
+
+
+
+
+
 <section id="inherent">
 <h3>Inherent vowel</h3>
 <p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
 
-<p>Consonants carry the inherent vowel  <span class="trans">a</span>.</p>
+<p>The Northern Thai inherent vowel is usually transcribed and pronounced <span class="trans">a</span>.  So <span class="codepoint" translate="no"><span lang="nod">&#x1A20;</span> [<a href="/scripts/taitham/block#char1A20"><span class="uname">U+1A20 TAI THAM LETTER HIGH KA</span></a>]</span> is pronounced <span class="ipa">ka</span>.</p>
 </section>
 
 
@@ -470,12 +484,34 @@
 <h3>Vowel-signs</h3>
 <p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
 
-<p> Northern Thai uses the following vowel-signs.</p>
+<p>Non-inherent  vowel sounds that follow a consonant  are represented using <span class="name">vowel-signs</span>, eg. <span class="codepoint" translate="no"><span lang="nod">&#x1A20;&#x1A65;</span> [<a href="/scripts/taitham/block#char1A20"><span class="uname">U+1A20 TAI THAM LETTER HIGH KA</span></a> + <a href="/scripts/taitham/block#char1A65"><span class="uname">U+1A65 TAI THAM VOWEL SIGN I</span></a>]</span> is pronounced <span class="ipa">ki</span>.</p>
+<p>Characters that produce vowel signs are all combining characters.</p>
+<p class="info">In principle, all vowel-signs are typed and stored <em>after</em> the base consonant, whether or not they precede it when displayed. The font takes care of the glyph positioning. However, the Unicode Consortium is currently examining the coding model for Tai Tham. There is a possibility that prescript vowel-signs may be stored before the consonant in future.</p>
+<p>Eight vowel-signs are <em>spacing</em> marks, meaning that they consume horizontal space when added to a base consonant.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᩥ␣ᩦ␣ᩧ␣ᩨ␣ᩩ␣ᩪ␣ᩮ␣ᩫ␣ᩰ␣ᩯ␣ᩬ␣ᩣ␣ᩤ␣ᩡ␣ᩢ␣ ␣ᩱ␣ᩲ␣ᩳ</figure>
 
-<p>Northern Thai, uses <span class="codepoint" translate="no"><span lang="nod">&#x1A72;</span> [<a href="/scripts/taikhuen/block#char1A72"><span class="uname">U+1A72 TAI THAM VOWEL SIGN THAM AI</span></a>], <span class="trans">ɔ</span> <span class="ipa">-ɔ-</span></span>, but not <span class="codepoint" translate="no"><span lang="kkh">&#x1A6D;</span> [<a href="/scripts/taitham/block#char1A6D"><span class="uname">U+1A6D TAI THAM VOWEL SIGN OY​</span></a>]</span>. <a class="fnref" href="http://www.unicode.org/versions/latest/ch16.pdf">u655</a></p>
-<p><span class="codepoint" translate="no"><span lang="nod">&nbsp;&#x1A64;</span> [<a href="/scripts/taitham/block#char1A64"><span class="uname">U+1A64 TAI THAM VOWEL SIGN TALL AA​</span></a>]</span> and <span class="codepoint" translate="no"><span lang="nod">&nbsp;ᩣ</span> [<a href="/scripts/taitham/block#char1A63"><span class="uname">U+1A63 TAI THAM VOWEL SIGN AA​</span></a>]</span> are both used to represent the same phoneme. The choice of which is used is a matter of spelling. The taller version is typically used after <span class="charExample" translate="no"><span class="exlist" lang="kkh">ᨷ ᩅ ᨴ ᨵ ᨣ</span></span>, and avoids confusion with otherwise similar shapes, eg. <span class="charExample" translate="no"><span class="ex" lang="kkh">ᩅᩣ</span></span> looks like <span class="charExample" translate="no"><span class="ex" lang="kkh">ᨲ</span></span>. Some textbooks also recommend it's use after <span class="charExample" translate="no"><span class="exlist" lang="kkh">ᨧ ᨻ ᩁ ᨽ</span></span>.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a></p>
+
+
+
+<section id="prescript_vowels">
+<h4>Prescript vowel-signs</h4>
+<p>Four vowel-signs appear to the left of the base consonant letter or cluster, eg. <span class="eg" lang="nod">ᨯᩱ᩶</span>.</p>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᩮ␣ᩰ␣ᩯ␣ ␣ᩱ␣ᩲ</figure>
+<p class="info">These   combining marks  are in principle stored after the base consonant: the font places the glyph before the base consonant. However, the Unicode Consortium is currently examining the coding model for Tai Tham. There is a possibility that prescript vowel-signs may be stored before the consonant in future. Also, some fonts already require this kind of handling, especially for dealing with complex combinations of characters.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A72;</span> [<a href="/scripts/taikhuen/block#char1A72"><span class="uname">U+1A72 TAI THAM VOWEL SIGN THAM AI</span></a>] is not used by Tai Khün.</span></p>
+</section>
+
+
+
+
+<section id="other_vowels">
+<h4>Other vowel-signs</h4>
+<p>The following combining marks are also used to indicate vowel sounds, sometimes on their own, and sometimes in combination with others.</p>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᩥ␣ᩦ␣ᩧ␣ᩨ␣ᩩ␣ᩪ␣ᩫ␣ᩬ␣ᩡ␣ᩣ␣ᩤ␣ᩢ␣ ␣ᩳ</figure>
+<p><span class="codepoint" translate="no"><span lang="nod">&nbsp;&#x1A64;</span> [<a href="/scripts/taitham/block#char1A64"><span class="uname">U+1A64 TAI THAM VOWEL SIGN TALL AA​</span></a>]</span> and <span class="codepoint" translate="no"><span lang="nod">&nbsp;ᩣ</span> [<a href="/scripts/taitham/block#char1A63"><span class="uname">U+1A63 TAI THAM VOWEL SIGN AA​</span></a>]</span> are both used to represent the same phoneme. The choice of which is used is a matter of spelling. The taller version is typically used after <span class="charExample" translate="no"><span class="exlist" lang="nod">ᨷ ᩅ ᨴ ᨵ ᨣ</span></span>, and avoids confusion with otherwise similar shapes, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᩅᩣ</span></span> looks like <span class="charExample" translate="no"><span class="ex" lang="nod">ᨲ</span></span>. Some textbooks also recommend it's use after <span class="charExample" translate="no"><span class="exlist" lang="nod">ᨧ ᨻ ᩁ ᨽ</span></span>.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a></p>
+<p>Northern Thai doesn't use the letter <span class="codepoint" translate="no"><span lang="kkh">&#x1A6D;</span> [<a href="/scripts/taitham/block#char1A6D"><span class="uname">U+1A6D TAI THAM VOWEL SIGN OY​</span></a>]</span> which is found in Tai Kühn.<a class="fnref" href="http://www.unicode.org/versions/latest/ch16.pdf">u655</a></p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A62;</span> [<a href="/scripts/taitham/block#char1A62"><span class="uname">U+1A62 TAI THAM VOWEL SIGN MAI SAT</span></a>]</span> is commonly used as a vowel, but it also sometimes functions to indicate a final <span class="ipa">-k</span> sound, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨯᩬᩢ</span> <span class="trans">d̯ɔ̄á</span> <span class="ipa">dɔːk</span> <span class="meaning">flower</span></span>.&nbsp;</p>
+</section>
 </section>
 
 
@@ -483,24 +519,116 @@
 <section id="consonant_vowels">
 <h3>Consonants pronounced as vowels</h3>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">᩠ᨿ␣᩠ᩅ</figure>
+<p>The following letters can be used with other vowel-signs or in subjoined form to represent a vowel sound.
+</p>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">᩠ᨿ␣᩠ᩅ␣ᩋ</figure>
 
-<p>The sequence <span class="codepoint" translate="no"><span lang="kkh">&nbsp;&#x1A60;</span> + <span lang="kkh">&#x1A3F;</span> [<a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT​</span></a> + <a href="/scripts/taitham/block#char1A3F"><span class="uname">U+1A3F TAI THAM LETTER LOW YA</span></a>]</span> is   pronounced as the diphthong <span class="ipa">ia</span>  when it appears alone after a consonant.</p>
-<p>The sequence <span class="codepoint" translate="no"><span lang="kkh">&nbsp;&#x1A60;</span> + <span lang="kkh">&#x1A45;</span> [<a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT​</span></a> + <a href="/scripts/taitham/block#char1A45"><span class="uname">U+1A45 TAI THAM LETTER WA</span></a>]</span> is   pronounced as the diphthong <span class="ipa">ua</span> when it appears alone.</p>
+<p>The sequence <span class="codepoint" translate="no"><span lang="nod">&nbsp;&#x1A60;&#x1A3F;</span> [<a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT</span></a> + <a href="/scripts/taitham/block#char1A3F"><span class="uname">U+1A3F TAI THAM LETTER LOW YA</span></a>]</span> is   pronounced as the diphthong <span class="ipa">ia</span>  when it appears alone after a consonant.</p>
+<p>The sequence <span class="codepoint" translate="no"><span lang="nod">&nbsp;&#x1A60;&#x1A45;</span> [<a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT</span></a> + <a href="/scripts/taitham/block#char1A45"><span class="uname">U+1A45 TAI THAM LETTER WA</span></a>]</span> is   pronounced as the diphthong <span class="ipa">ua</span> when it appears alone.</p>
 <p>Both of these characters also appear as a part of the  vowel-sign combinations described below.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A4B;</span> [<a href="/scripts/taitham/block#char1A4B"><span class="uname">U+1A4B TAI THAM LETTER A</span></a>]</span> on its own represents the standalone version of the inherent vowel, <span class="ipa">ʔa</span>. &nbsp; It is used as a base for other <a class="secref">independentVowels</a>.</p>
 </section>
 
 
 
 
-<section id="complex_vowels">
-<h3>Vowel-sign combinations</h3>
 
-<p>The various letters used for vowels can be mixed together to produce additional sounds, as shown in the examples below.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᩮᩢ␣ᩮᩡ␣ᩰᩡ␣ᩰᩫ␣ᩯᩢ␣ᩯᩡ␣ᩮᩥᩢ␣ᩮᩬᩥᩡ␣ᩮᩥ␣ᩮᩬᩥ␣ᩬᩢ␣ᩰᩬᩡ␣ᩬᩴ␣ᩮᩢᩣ␣᩠ᨿᩮ␣᩠ᨿᩮᩡ␣ᩢ᩠ᨿ␣ᩮᩬᩥᩢ␣ᩮᩬᩨᩢ␣ᩮᩬᩨᩋᩡ␣ᩮᩬᩨᩋ␣ᩮᩬᩨ␣᩠ᩅᩫᩡ␣᩠ᩅᩫ␣᩠ᩅᩢ␣᩠ᩅ᩠ᨿ</figure>
 
+<section id="vowelgraphemes">
+<h3>Composite vowels</h3>
+
+<p>Vowels represented by combinations of the above characters (this list is probably incomplete):</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᩮᩢ␣ᩮᩡ␣ᩰᩡ␣ᩰᩫ␣ᩯᩢ␣ᩯᩡ␣ᩮᩥᩢ␣ᩮᩬᩥᩡ␣ᩮᩥ␣ᩮᩬᩥ␣ᩬᩢ␣ᩰᩬᩡ␣ᩬᩴ␣ ␣᩠ᨿᩮ␣᩠ᨿᩮᩡ␣ᩢ᩠ᨿ␣ᩮᩬᩥᩢ␣ᩮᩬᩨᩢ␣ᩮᩬᩨᩋᩡ␣ᩮᩬᩨᩋ␣ᩮᩬᩨ␣᩠ᩅᩫᩡ␣᩠ᩅᩫ␣᩠ᩅᩢ␣᩠ᩅ᩠ᨿ␣ᩱ᩠ᨿ␣ᩣ᩠ᨿ␣ᩮᩢᩣ␣ᩮᩢᩤ</figure>
+
+
+
+<details>
+<summary class="instructions" style="margin-block-start: 2em;margin-block-end: 2em;">Show which combinations contain a given character:</summary>
+
+
+<table class="graphemeTable">
+<tbody>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x1A3F;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">᩠ᨿᩮ␣᩠ᨿᩮᩡ␣ᩢ᩠ᨿ␣᩠ᩅ᩠ᨿ␣ᩱ᩠ᨿ␣ᩣ᩠ᨿ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x1A45;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">᩠ᩅᩫᩡ␣᩠ᩅᩫ␣᩠ᩅᩢ␣᩠ᩅ᩠ᨿ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x1A4B;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ᩮᩬᩨᩋᩡ␣ᩮᩬᩨᩋ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x1A61;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ᩮᩡ␣ᩰᩡ␣ᩯᩡ␣ᩮᩬᩥᩡ␣ᩰᩬᩡ␣ ␣᩠ᨿᩮᩡ␣ᩮᩬᩨᩋᩡ␣᩠ᩅᩫᩡ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x1A62;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ᩮᩢ␣ᩯᩢ␣ᩮᩥᩢ␣ᩬᩢ␣ ␣ᩢ᩠ᨿ␣ᩮᩬᩥᩢ␣ᩮᩬᩨᩢ␣᩠ᩅᩢ␣ᩮᩢᩣ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x1A63;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ᩮᩢᩣ␣ᩣ᩠ᨿ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x1A64;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ᩮᩢᩤ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x1A65;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ᩮᩥᩢ␣ᩮᩬᩥᩡ␣ᩮᩥ␣ᩮᩬᩥ␣ ␣ᩮᩬᩥᩢ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x1A68;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ᩮᩬᩨᩢ␣ᩮᩬᩨᩋᩡ␣ᩮᩬᩨᩋ␣ᩮᩬᩨ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x1A6B;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ᩰᩫ␣᩠ᩅᩫᩡ␣᩠ᩅᩫ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x1A6C;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ᩮᩬᩥᩡ␣ᩮᩬᩥ␣ᩬᩢ␣ᩰᩬᩡ␣ᩬᩴ␣ ␣ᩮᩬᩥᩢ␣ᩮᩬᩨᩢ␣ᩮᩬᩨᩋᩡ␣ᩮᩬᩨᩋ␣ᩮᩬᩨ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x1A6E;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ᩮᩢ␣ᩮᩡ␣ᩮᩥᩢ␣ᩮᩬᩥᩡ␣ᩮᩥ␣ᩮᩬᩥ␣ ␣᩠ᨿᩮ␣᩠ᨿᩮᩡ␣ᩮᩬᩥᩢ␣ᩮᩬᩨᩢ␣ᩮᩬᩨᩋᩡ␣ᩮᩬᩨᩋ␣ᩮᩬᩨ␣ᩮᩢᩣ␣ᩮᩢᩤ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x1A6F;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ᩯᩢ␣ᩯᩡ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x1A70;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ᩰᩡ␣ᩰᩫ␣ᩰᩬᩡ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x1A71;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ᩱ᩠ᨿ</figure></td>
+</tr>
+<tr>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">&#x1A74;</figure></td>
+<td><figure style="margin: 0" class="otherBox auto" data-cols="ipa,trans,transc">ᩬᩴ</figure></td>
+</tr>
+</tbody>
+</table>
+</details>
+
+
+
+
+<p>Characters that don't appear in the combinations:</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᩦ␣ᩧ␣ᩩ␣ᩪ␣ᩲ␣ᩳ</figure>
 </section>
+
+
+
+
 
 
 
@@ -509,6 +637,8 @@
 <section id="placement">
 <h3>Vowel-sign placement</h3>
 
+<details>
+<summary class="instructions">Show details about vowel glyph positioning.</summary>
 <p>The following list shows where vowel-signs are positioned around a base consonant to produce vowels, and how many instances of that pattern there are. The figure after the + sign represents combinations of Unicode characters, The list includes subjoined <span class="uname">WA</span> and <span class="uname">YA</span>and the postfixed <span lang="nod">ᩋ</span>. </p>
 <ul>
 <li>5 prescript, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᩮ</span> <span class="trans">keː</span></span></li>
@@ -556,6 +686,7 @@
 <figcaption>Locations where vowel elements can appear, including in complex vowels.</figcaption>
 </figure>
 <p>Vowel components can occur concurrently on 4 sides of the base, eg. <span class="ex" lang="nod">ᩮᩬᩥᩡ</span>.</p>
+</details>
 </section>
 
 
@@ -566,14 +697,414 @@
 <h3>Standalone vowels</h3>
 <p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
 
-<p>Northern Thai represents standalone vowels using independent vowel letters. The set includes a character to represent the inherent vowel sound.</p>
+<p>In Northern Thai some vowels that are not preceded by a consonant can be represented using a set of independent vowel letters. The set includes a character to represent the inherent vowel sound, but doesn't cover all such possible vowels.</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᩍ␣ᩎ␣ᩏ␣ᩐ␣ᩑ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᩍ␣ᩎ␣ᩏ␣ᩐ␣ᩑ␣ᩋ</figure>
 
 
 <p>The 5 vowel letters are used in syllable-initial position where there is no consonant onset, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᩑᨠ</span> <span class="trans">ẹk</span> <span class="ipa">eːk³</span> <span class="meaning">one</span></span>. </p>
-<p>The independent vowels don't cover all possible vowels in this position: for others it is possible to use <span class="codepoint" translate="no"><span lang="nod">&#x1A4B;</span> [<a href="/scripts/taitham/block#char1A4B"><span class="uname">U+1A4B TAI THAM LETTER A</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᩋᩧ᩠ᨷ</span> <span class="trans">ʔ̯ɯ˖b̯</span> <span class="ipa">ɯp²</span> <span class="meaning">starve</span></span>.</p>
+<p>For vowels not preceded by a consonant Northern Thai uses <span class="codepoint" translate="no"><span lang="nod">&#x1A4B;</span> [<a href="/scripts/taitham/block#char1A4B"><span class="uname">U+1A4B TAI THAM LETTER A</span></a>]</span> with a vowel-sign, eg. <span class="eg" lang="nod">ᩋᩧ᩠ᨷ</span>.</p>
 <p><span class="codepoint" translate="no"><span lang="nod">&#x1A52;</span> [<a href="/scripts/taitham/block#char1A52"><span class="uname">U+1A52 TAI THAM LETTER OO</span></a>]</span> is not used in Northern Thai. <a class="fnref" href="http://www.unicode.org/versions/latest/ch16.pdf">u654</a></p>
+</section>
+
+
+
+
+
+
+<section id="vowel_mappings">
+<h3>Vowel sounds mapped to characters</h3>
+<p>The following tables show how the above  vowel sounds commonly map to  characters or sequences of characters. Sounds are grouped according to whether they appear in open (<b>o</b>) or closed (<b>c</b>) syllables, or as a standalone vowel (<b>s</b>).</p>
+<p>For some diphthongs ending in <span class="ipa">-j</span> or <span class="ipa">-w</span>, Owen indicates that phonetic sequences exist. but offers no examples. Based on other examples, it is assumed here that <span class="ipa">-j</span> is formed using sakot+ya, and <span class="ipa">-w</span> using sakot+wa, except where the preceding vowel-sign extends below the baseline (such as for <span class="ipa">uj</span>).</p>
+<section id="plain_vowel_map">
+<h4>Plain vowels</h4>
+
+<div id="mapv_high" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">i</span></div>
+<div class="posn">o/c</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">–&#x1A65;</span> [<a href="/scripts/taitham/block#char1A65"><span class="uname">U+1A65 TAI THAM VOWEL SIGN I</span></a>]</span>, eg. <span class="eg" lang="nod">ᨠᩥ᩠ᨶ</span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">s</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A4D;</span> [<a href="/scripts/taitham/block#char1A4D"><span class="uname">U+1A4D TAI THAM LETTER I</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">iː</span></div>
+<div class="posn">&nbsp;o/c</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">–&#x1A66;</span> [<a href="/scripts/taitham/block#char1A66"><span class="uname">U+1A66 TAI THAM VOWEL SIGN II</span></a>]</span>, eg. <span class="eg" lang="nod">ᨾᩦ᩠ᨯ</span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">s</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A4E;</span> [<a href="/scripts/taitham/block#char1A4E"><span class="uname">U+1A4E TAI THAM LETTER II</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɯ</span></div>
+<div class="posn">o/c</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">–&#x1A67;</span> [<a href="/scripts/taitham/block#char1A67"><span class="uname">U+1A67 TAI THAM VOWEL SIGN UE</span></a>]</span>, eg. <span class="eg" lang="nod">ᨾᩧ᩠ᨦ</span>
+.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɯː</span></div>
+<div class="posn">o/c</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">–&#x1A68;</span> [<a href="/scripts/taitham/block#char1A68"><span class="uname">U+1A68 TAI THAM VOWEL SIGN UUE</span></a>]</span>, eg. <span class="eg" lang="nod">ᩉᩨ᩶</span>
+</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">u</span></div>
+<div class="posn">o/c</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">–&#x1A69;</span> [<a href="/scripts/taitham/block#char1A69"><span class="uname">U+1A69 TAI THAM VOWEL SIGN U</span></a>]</span>, eg. <span class="eg" lang="nod">ᨿᩩᨦ</span>
+.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">s</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A4F;</span> [<a href="/scripts/taitham/block#char1A4F"><span class="uname">U+1A4F TAI THAM LETTER U</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">uː</span></div>
+<div class="posn">o/c</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">–&#x1A6A;</span> [<a href="/scripts/taitham/block#char1A6A"><span class="uname">U+1A6A TAI THAM VOWEL SIGN UU</span></a>]</span>, eg. <span class="eg" lang="nod">ᩁᩪ᩶</span>
+.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">s</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A50;</span> [<a href="/scripts/taitham/block#char1A50"><span class="uname">U+1A50 TAI THAM LETTER UU</span></a>]</span></p>
+</div>
+</div>
+</div>
+
+
+<div id="mapv_hmid" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">e</span></div>
+<div class="posn">o</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A6E;–&#x1A61;</span> [<a href="/scripts/taitham/block#char1A6E"><span class="uname">U+1A6E TAI THAM VOWEL SIGN E</span></a> + <a href="/scripts/taitham/block#char1A61"><span class="uname">U+1A61 TAI THAM VOWEL SIGN A</span></a>]</span>&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">c</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A6E;&#x1A62;</span> [<a href="/scripts/taitham/block#char1A6E"><span class="uname">U+1A6E TAI THAM VOWEL SIGN E</span></a> + <a href="/scripts/taitham/block#char1A62"><span class="uname">U+1A62 TAI THAM VOWEL SIGN MAI SAT</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">eː</span></div>
+<div class="posn">o/c</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A6E;–</span> [<a href="/scripts/taitham/block#char1A6E"><span class="uname">U+1A6E TAI THAM VOWEL SIGN E</span></a>]</span>, eg. <span class="eg" lang="nod">ᨸᩮ᩠ᨶ</span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">s</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A51;</span> [<a href="/scripts/taitham/block#char1A51"><span class="uname">U+1A51 TAI THAM LETTER EE</span></a>]</span>, eg. <span class="eg" lang="nod">ᩑᨠ</span>
+.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">o</span></div>
+<div class="posn">o</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A70;–&#x1A61;</span> [<a href="/scripts/taitham/block#char1A70"><span class="uname">U+1A70 TAI THAM VOWEL SIGN OO</span></a> + <a href="/scripts/taitham/block#char1A61"><span class="uname">U+1A61 TAI THAM VOWEL SIGN A</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">c</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A6B;</span> [<a href="/scripts/taitham/block#char1A6B"><span class="uname">U+1A6B TAI THAM VOWEL SIGN O</span></a>]</span>, eg. <span class="eg" lang="nod">ᩃᩫ᩠᩵ᨶ</span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">oː</span></div>
+<div class="posn">o</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A70;–</span> [<a href="/scripts/taitham/block#char1A70"><span class="uname">U+1A70 TAI THAM VOWEL SIGN OO</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">c</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A70;&#x1A6B;</span> [<a href="/scripts/taitham/block#char1A70"><span class="uname">U+1A70 TAI THAM VOWEL SIGN OO</span></a> + <a href="/scripts/taitham/block#char1A6B"><span class="uname">U+1A6B TAI THAM VOWEL SIGN O</span></a>]</span></p>
+</div>
+</div>
+</div>
+
+<div id="mapv_lmid" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɛ</span></div>
+<div class="posn">o</div>
+<div><span class="codepoint" translate="no"><span lang="nod">&#x1A6F;–&#x1A61;</span> [<a href="/scripts/taitham/block#char1A6F"><span class="uname">U+1A6F TAI THAM VOWEL SIGN AE</span></a> + <a href="/scripts/taitham/block#char1A61"><span class="uname">U+1A61 TAI THAM VOWEL SIGN A</span></a>]</span></div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">c</div>
+<div><span class="codepoint" translate="no"><span lang="nod">&#x1A6F;&#x1A62;</span> [<a href="/scripts/taitham/block#char1A6F"><span class="uname">U+1A6F TAI THAM VOWEL SIGN AE</span></a> + <a href="/scripts/taitham/block#char1A62"><span class="uname">U+1A62 TAI THAM VOWEL SIGN MAI SAT</span></a>]</span></div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɛː</span></div>
+<div class="posn">o/c</div>
+<div><span class="codepoint" translate="no"><span lang="nod">&#x1A6F;–</span> [<a href="/scripts/taitham/block#char1A6F"><span class="uname">U+1A6F TAI THAM VOWEL SIGN AE</span></a>]</span>, eg. <span class="eg" lang="nod">ᨾᩯ᩵</span>.</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɜ</span></div>
+<div class="posn">o</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x002D;&#x1A6E;&#x1A6C;&#x1A65;&#x1A61;</span> [<a href="/scripts/taitham/block#char002D"><span class="uname">U+002D HYPHEN-MINUS</span></a> + <a href="/scripts/taitham/block#char1A6E"><span class="uname">U+1A6E TAI THAM VOWEL SIGN E</span></a> + <a href="/scripts/taitham/block#char1A6C"><span class="uname">U+1A6C TAI THAM VOWEL SIGN OA BELOW</span></a> + <a href="/scripts/taitham/block#char1A65"><span class="uname">U+1A65 TAI THAM VOWEL SIGN I</span></a> + <a href="/scripts/taitham/block#char1A61"><span class="uname">U+1A61 TAI THAM VOWEL SIGN A</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">c</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A6E;&#x1A65;&#x1A62;</span> [<a href="/scripts/taitham/block#char1A6E"><span class="uname">U+1A6E TAI THAM VOWEL SIGN E</span></a> + <a href="/scripts/taitham/block#char1A65"><span class="uname">U+1A65 TAI THAM VOWEL SIGN I</span></a> + <a href="/scripts/taitham/block#char1A62"><span class="uname">U+1A62 TAI THAM VOWEL SIGN MAI SAT</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɜː</span></div>
+<div class="posn">o</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x002D;&#x1A6E;&#x1A6C;&#x1A65;</span> [<a href="/scripts/taitham/block#char002D"><span class="uname">U+002D HYPHEN-MINUS</span></a> + <a href="/scripts/taitham/block#char1A6E"><span class="uname">U+1A6E TAI THAM VOWEL SIGN E</span></a> + <a href="/scripts/taitham/block#char1A6C"><span class="uname">U+1A6C TAI THAM VOWEL SIGN OA BELOW</span></a> + <a href="/scripts/taitham/block#char1A65"><span class="uname">U+1A65 TAI THAM VOWEL SIGN I</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">c</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x002D;&#x1A6E;&#x1A65;&#x002D;</span> [<a href="/scripts/taitham/block#char002D"><span class="uname">U+002D HYPHEN-MINUS</span></a> + <a href="/scripts/taitham/block#char1A6E"><span class="uname">U+1A6E TAI THAM VOWEL SIGN E</span></a> + <a href="/scripts/taitham/block#char1A65"><span class="uname">U+1A65 TAI THAM VOWEL SIGN I</span></a> + <a href="/scripts/taitham/block#char002D"><span class="uname">U+002D HYPHEN-MINUS</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɔ</span></div>
+<div class="posn">&nbsp;o</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A70;–&#x1A6C;&#x1A61;</span> [<a href="/scripts/taitham/block#char1A70"><span class="uname">U+1A70 TAI THAM VOWEL SIGN OO</span></a> + <a href="/scripts/taitham/block#char1A6C"><span class="uname">U+1A6C TAI THAM VOWEL SIGN OA BELOW</span></a> + <a href="/scripts/taitham/block#char1A61"><span class="uname">U+1A61 TAI THAM VOWEL SIGN A</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A6B;</span> [<a href="/scripts/taitham/block#char1A6B"><span class="uname">U+1A6B TAI THAM VOWEL SIGN O</span></a>]</span>&nbsp;, eg. <span class="eg" lang="nod">ᩃᩫ᩠᩵ᨶ</span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">&nbsp;c</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A6C;&#x1A62;</span> [<a href="/scripts/taitham/block#char1A6C"><span class="uname">U+1A6C TAI THAM VOWEL SIGN OA BELOW</span></a> + <a href="/scripts/taitham/block#char1A62"><span class="uname">U+1A62 TAI THAM VOWEL SIGN MAI SAT</span></a>]</span>, eg. <span class="eg" lang="nod">ᨠᩢᩬᩃ᩠ᨼ᩺</span>
+
+.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɔː</span></div>
+<div class="posn">&nbsp;o</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">–&#x1A6C;</span> [<a href="/scripts/taitham/block#char1A6C"><span class="uname">U+1A6C TAI THAM VOWEL SIGN OA BELOW</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A6C;&#x1A74;</span> [<a href="/scripts/taitham/block#char1A6C"><span class="uname">U+1A6C TAI THAM VOWEL SIGN OA BELOW</span></a> + <a href="/scripts/taitham/block#char1A74"><span class="uname">U+1A74 TAI THAM SIGN MAI KANG</span></a>]</span>, eg. <span class="eg" lang="nod">ᨻᩬ᩵ᩴ</span>
+.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">&nbsp;c</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">–&#x1A6C;–</span> [<a href="/scripts/taitham/block#char1A6C"><span class="uname">U+1A6C TAI THAM VOWEL SIGN OA BELOW</span></a>]</span>, eg. <span class="eg" lang="nod">ᩁᩬ᩶ᩁ</span>
+
+.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A6C;&#x1A61;</span> [<a href="/scripts/taitham/block#char1A6C"><span class="uname">U+1A6C TAI THAM VOWEL SIGN OA BELOW</span></a> + <a href="/scripts/taitham/block#char1A61"><span class="uname">U+1A61 TAI THAM VOWEL SIGN A</span></a>]</span>, eg. <span class="eg" lang="nod">ᨯᩬᩢᩡ</span>.&nbsp;</p>
+</div>
+</div>
+</div>
+
+
+
+
+<div id="mapv_low" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">a</span></div>
+<div class="posn">o</div>
+<div>
+<p>Inherent vowel</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">c</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">–&#x1A62;–</span> [<a href="/scripts/taitham/block#char1A62"><span class="uname">U+1A62 TAI THAM VOWEL SIGN MAI SAT</span></a>]</span>, eg. <span class="eg" lang="nod">ᩉᩖᩢᨠ</span>
+
+.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">s</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A4B;</span> [<a href="/scripts/taitham/block#char1A4B"><span class="uname">U+1A4B TAI THAM LETTER A</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɑː</span></div>
+<div class="posn">o/c</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">–&#x1A63;</span> [<a href="/scripts/taitham/block#char1A63"><span class="uname">U+1A63 TAI THAM VOWEL SIGN AA</span></a>]</span>, eg. <span class="eg" lang="nod">ᩈᩣ᩠ᨾ</span>
+.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">–&#x1A64;</span> [<a href="/scripts/taitham/block#char1A64"><span class="uname">U+1A64 TAI THAM VOWEL SIGN TALL AA</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">s</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A4B;&#x1A63;</span> [<a href="/scripts/taitham/block#char1A4B"><span class="uname">U+1A4B TAI THAM LETTER A</span></a> + <a href="/scripts/taitham/block#char1A63"><span class="uname">U+1A63 TAI THAM VOWEL SIGN AA</span></a>]</span></p>
+</div>
+</div>
+</div>
+<!--p style="font-size: 60%;text-align: end; line-height: 1;">Sources: <a href="https://en.wikipedia.org/wiki/Help:IPA/Hindi_and_Urdu">Wikipedia</a>, and Google Translate.</p-->
+</section>
+
+
+
+
+
+
+
+<section id="diphthong_map">
+<h4>Diphthongs and other combinations</h4>
+
+<div id="map_highdiphthongs" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">ia</span></div>
+<div class="posn">o</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A60;&#x1A3F;</span> [<a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT</span></a> + <a href="/scripts/taitham/block#char1A3F"><span class="uname">U+1A3F TAI THAM LETTER LOW YA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A6E;&#x1A60;&#x1A3F;</span> [<a href="/scripts/taitham/block#char1A6E"><span class="uname">U+1A6E TAI THAM VOWEL SIGN E</span></a> + <a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT</span></a> + <a href="/scripts/taitham/block#char1A3F"><span class="uname">U+1A3F TAI THAM LETTER LOW YA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A6E;&#x1A60;&#x1A3F;&#x1A61;</span> [<a href="/scripts/taitham/block#char1A6E"><span class="uname">U+1A6E TAI THAM VOWEL SIGN E</span></a> + <a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT</span></a> + <a href="/scripts/taitham/block#char1A3F"><span class="uname">U+1A3F TAI THAM LETTER LOW YA</span></a> + <a href="/scripts/taitham/block#char1A61"><span class="uname">U+1A61 TAI THAM VOWEL SIGN A</span></a>]</span>&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">c</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A60;&#x1A3F;&#x1A62;</span> [<a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT</span></a> + <a href="/scripts/taitham/block#char1A3F"><span class="uname">U+1A3F TAI THAM LETTER LOW YA</span></a> + <a href="/scripts/taitham/block#char1A62"><span class="uname">U+1A62 TAI THAM VOWEL SIGN MAI SAT</span></a>]</span> (rare)</p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A6E;&#x1A6C;&#x1A65;&#x1A62;</span> [<a href="/scripts/taitham/block#char1A6E"><span class="uname">U+1A6E TAI THAM VOWEL SIGN E</span></a> + <a href="/scripts/taitham/block#char1A6C"><span class="uname">U+1A6C TAI THAM VOWEL SIGN OA BELOW</span></a> + <a href="/scripts/taitham/block#char1A65"><span class="uname">U+1A65 TAI THAM VOWEL SIGN I</span></a> + <a href="/scripts/taitham/block#char1A62"><span class="uname">U+1A62 TAI THAM VOWEL SIGN MAI SAT</span></a>]</span> (rare)&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A6E;&#x1A6C;&#x1A68;&#x1A62;</span> [<a href="/scripts/taitham/block#char1A6E"><span class="uname">U+1A6E TAI THAM VOWEL SIGN E</span></a> + <a href="/scripts/taitham/block#char1A6C"><span class="uname">U+1A6C TAI THAM VOWEL SIGN OA BELOW</span></a> + <a href="/scripts/taitham/block#char1A68"><span class="uname">U+1A68 TAI THAM VOWEL SIGN UUE</span></a> + <a href="/scripts/taitham/block#char1A62"><span class="uname">U+1A62 TAI THAM VOWEL SIGN MAI SAT</span></a>]</span>&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɯa</span></div>
+<div class="posn">o</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A6E;&#x1A68;&#x1A6C;&#x1A4B;&#x1A61;</span> [<a href="/scripts/taitham/block#char1A6E"><span class="uname">U+1A6E TAI THAM VOWEL SIGN E</span></a> + <a href="/scripts/taitham/block#char1A68"><span class="uname">U+1A68 TAI THAM VOWEL SIGN UUE</span></a> + <a href="/scripts/taitham/block#char1A6C"><span class="uname">U+1A6C TAI THAM VOWEL SIGN OA BELOW</span></a> + <a href="/scripts/taitham/block#char1A4B"><span class="uname">U+1A4B TAI THAM LETTER A</span></a> + <a href="/scripts/taitham/block#char1A61"><span class="uname">U+1A61 TAI THAM VOWEL SIGN A</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">c</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A6E;&#x1A6C;&#x1A68;</span> [<a href="/scripts/taitham/block#char1A6E"><span class="uname">U+1A6E TAI THAM VOWEL SIGN E</span></a> + <a href="/scripts/taitham/block#char1A6C"><span class="uname">U+1A6C TAI THAM VOWEL SIGN OA BELOW</span></a> + <a href="/scripts/taitham/block#char1A68"><span class="uname">U+1A68 TAI THAM VOWEL SIGN UUE</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɯaː</span></div>
+<div class="posn">o</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A6E;&#x1A68;&#x1A6C;&#x1A4B;</span> [<a href="/scripts/taitham/block#char1A6E"><span class="uname">U+1A6E TAI THAM VOWEL SIGN E</span></a> + <a href="/scripts/taitham/block#char1A68"><span class="uname">U+1A68 TAI THAM VOWEL SIGN UUE</span></a> + <a href="/scripts/taitham/block#char1A6C"><span class="uname">U+1A6C TAI THAM VOWEL SIGN OA BELOW</span></a> + <a href="/scripts/taitham/block#char1A4B"><span class="uname">U+1A4B TAI THAM LETTER A</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ua</span></div>
+<div class="posn">o</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A60;&#x1A45;</span> [<a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT</span></a> + <a href="/scripts/taitham/block#char1A45"><span class="uname">U+1A45 TAI THAM LETTER WA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A60;&#x1A45;&#x1A6B;&#x1A61;</span> [<a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT</span></a> + <a href="/scripts/taitham/block#char1A45"><span class="uname">U+1A45 TAI THAM LETTER WA</span></a> + <a href="/scripts/taitham/block#char1A6B"><span class="uname">U+1A6B TAI THAM VOWEL SIGN O</span></a> + <a href="/scripts/taitham/block#char1A61"><span class="uname">U+1A61 TAI THAM VOWEL SIGN A</span></a>]</span>&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">c</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A60;&#x1A45;&#x1A62;</span> [<a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT</span></a> + <a href="/scripts/taitham/block#char1A45"><span class="uname">U+1A45 TAI THAM LETTER WA</span></a> + <a href="/scripts/taitham/block#char1A62"><span class="uname">U+1A62 TAI THAM VOWEL SIGN MAI SAT</span></a>]</span> (rare)</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">uaː</span></div>
+<div class="posn">o</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A60;&#x1A45;&#x1A6B;</span> [<a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT</span></a> + <a href="/scripts/taitham/block#char1A45"><span class="uname">U+1A45 TAI THAM LETTER WA</span></a> + <a href="/scripts/taitham/block#char1A6B"><span class="uname">U+1A6B TAI THAM VOWEL SIGN O</span></a>]</span>&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">uai</span></div>
+<div class="posn">o</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A60;&#x1A45;&#x1A60;&#x1A3F;</span> [<a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT</span></a> + <a href="/scripts/taitham/block#char1A45"><span class="uname">U+1A45 TAI THAM LETTER WA</span></a> + <a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT</span></a> + <a href="/scripts/taitham/block#char1A3F"><span class="uname">U+1A3F TAI THAM LETTER LOW YA</span></a>]</span>&nbsp;, eg. <span class="eg" lang="nod">ᩈ᩠ᩅ᩠ᨿ</span></p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+<div id="map_lowdiphthongs" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">aj</span></div>
+<div class="posn">o</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A71;-</span> [<a href="/scripts/taitham/block#char1A71"><span class="uname">U+1A71 TAI THAM VOWEL SIGN AI</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A71;-&#x1A60;&#x1A3F;</span> [<a href="/scripts/taitham/block#char1A71"><span class="uname">U+1A71 TAI THAM VOWEL SIGN AI</span></a> + <a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT</span></a> + <a href="/scripts/taitham/block#char1A3F"><span class="uname">U+1A3F TAI THAM LETTER LOW YA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨴᩱ᩠ᨿ</span>
+.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A72;-</span> [<a href="/scripts/taitham/block#char1A72"><span class="uname">U+1A72 TAI THAM VOWEL SIGN THAM AI</span></a>]</span>&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">aːj</span></div>
+<div class="posn">o</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A63;&#x1A60;&#x1A3F;</span> [<a href="/scripts/taitham/block#char1A63"><span class="uname">U+1A63 TAI THAM VOWEL SIGN AA</span></a> + <a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT</span></a> + <a href="/scripts/taitham/block#char1A3F"><span class="uname">U+1A3F TAI THAM LETTER LOW YA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨣ᩠ᩅᩣ᩠ᨿ</span> .</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">aw</span></div>
+<div class="posn">o</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A6E;&#x1A62;&#x1A63;</span> [<a href="/scripts/taitham/block#char1A6E"><span class="uname">U+1A6E TAI THAM VOWEL SIGN E</span></a> + <a href="/scripts/taitham/block#char1A62"><span class="uname">U+1A62 TAI THAM VOWEL SIGN MAI SAT</span></a> + <a href="/scripts/taitham/block#char1A63"><span class="uname">U+1A63 TAI THAM VOWEL SIGN AA</span></a>]</span>, eg. <span class="eg" lang="nod">ᩃᩮᩢᩣ</span>
+.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A6E;&#x1A62;&#x1A64;</span> [<a href="/scripts/taitham/block#char1A6E"><span class="uname">U+1A6E TAI THAM VOWEL SIGN E</span></a> + <a href="/scripts/taitham/block#char1A62"><span class="uname">U+1A62 TAI THAM VOWEL SIGN MAI SAT</span></a> + <a href="/scripts/taitham/block#char1A64"><span class="uname">U+1A64 TAI THAM VOWEL SIGN TALL AA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨣᩮᩢᩤ</span>
+.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A61;</span> [<a href="/scripts/taitham/block#char1A61"><span class="uname">U+1A61 TAI THAM VOWEL SIGN A</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A73;</span> [<a href="/scripts/taitham/block#char1A73"><span class="uname">U+1A73 TAI THAM VOWEL SIGN OA ABOVE</span></a>]</span>&nbsp;, eg. <span class="eg" lang="nod">ᨾᩳ</span>
+.</p>
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
   
@@ -593,6 +1124,9 @@
 <h3>Consonant sounds</h3>
 
 <p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+<p class="instructions">Phones in a lighter colour are non-native or allophones.
+<!-- Source <a href="https://en.wikipedia.org/wiki/Shan_language#Consonants">Wikipedia</a>.-->
+</p>
 
 <table class="ipaTable">
 <thead>
@@ -683,6 +1217,7 @@ alveolar</th>
 </tr>
 </tbody>
 </table>
+<p>The glottal stop is pronounced after short open vowels. An initial glottal stop is also pronounced before independent vowels (see <a class="secref">independentVowels</a>).</p>
 
 
 
@@ -767,8 +1302,6 @@ alveolar</th>
 </tr>
 </tbody>
 </table>
-
-<p style="font-size: 60%;text-align: end; line-height: 1;"><!--Source<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">wp</a>. -->Phones in a lighter colour are non-native or allophones.</p>
 </section>
 </section>
 
@@ -777,7 +1310,7 @@ alveolar</th>
 
 
 
-<section id="consonantMappings">
+<!--section id="consonantMappings">
 <h3>Mappings to characters</h3>
 
 
@@ -799,64 +1332,64 @@ alveolar</th>
 <tr>
 <th>Stop</th>
 <td>
-<span class="ipa">p</span> <span class="ex" lang="kkh">ᨸ ᨻ</span><br>
-<span class="ipa">pʰ</span> <span class="ex" lang="kkh">ᨹ ᨽ ᨷᩕ</span><br>
-<span class="ipa">b</span> <span class="ex" lang="kkh">ᨷ</span>
+<span class="ipa">p</span> <span class="ex" lang="nod">ᨸ ᨻ</span><br>
+<span class="ipa">pʰ</span> <span class="ex" lang="nod">ᨹ ᨽ ᨷᩕ</span><br>
+<span class="ipa">b</span> <span class="ex" lang="nod">ᨷ</span>
 </td>
 <td>
-<span class="ipa">t</span> <span class="ex" lang="kkh">ᨲ ᨴ ᨭ</span><br>
-<span class="ipa">tʰ</span> <span class="ex" lang="kkh">ᨳ ᨮ ᨵ ᨰ ᨲᩕ ᨴᩕ</span><br>
-<span class="ipa">d</span> <span class="ex" lang="kkh">ᨯ</span>
+<span class="ipa">t</span> <span class="ex" lang="nod">ᨲ ᨴ ᨭ</span><br>
+<span class="ipa">tʰ</span> <span class="ex" lang="nod">ᨳ ᨮ ᨵ ᨰ ᨲᩕ ᨴᩕ</span><br>
+<span class="ipa">d</span> <span class="ex" lang="nod">ᨯ</span>
 </td>
 <td>
-<span class="ipa"> ʨ</span> <span class="ex" lang="kkh">ᨧ ᨩ</span></td>
+<span class="ipa"> ʨ</span> <span class="ex" lang="nod">ᨧ ᨩ</span></td>
 <td>&nbsp;</td>
 <td>
-<span class="ipa">k</span> <span class="ex" lang="kkh">ᨠ ᨣ</span><br></td>
-<td><span class="ipa">ʔ</span> <span class="ex" lang="kkh">ᩋ</span></td>
+<span class="ipa">k</span> <span class="ex" lang="nod">ᨠ ᨣ</span><br></td>
+<td><span class="ipa">ʔ</span> <span class="ex" lang="nod">ᩋ</span></td>
 </tr>
 <tr>
 <th>Fricative </th>
 <td>
-<span class="ipa">f</span> <span class="ex" lang="kkh">ᨺ ᨼ</span>
+<span class="ipa">f</span> <span class="ex" lang="nod">ᨺ ᨼ</span>
 </td>
 <td></td>
 <td>
-<span class="ipa">s</span> <span class="ex" lang="kkh">ᩈ ᩇ ᩆ ᨨ ᨪ ᨫ</span>
+<span class="ipa">s</span> <span class="ex" lang="nod">ᩈ ᩇ ᩆ ᨨ ᨪ ᨫ</span>
 </td>
 <td>
 </td>
-<td><span class="ipa">x</span> <span class="ex" lang="kkh">ᨡ ᨤ ᨥ ᨠᩕ ᨣᩕ</span></td>
+<td><span class="ipa">x</span> <span class="ex" lang="nod">ᨡ ᨤ ᨥ ᨠᩕ ᨣᩕ</span></td>
 <td>
-<span class="ipa">h</span> <span class="ex" lang="kkh">ᩉ ᩌ</span>
+<span class="ipa">h</span> <span class="ex" lang="nod">ᩉ ᩌ</span>
 </td>
 </tr>
 <tr>
 <th>Nasal </th>
 <td>
-<span class="ipa">m</span> <span class="ex" lang="kkh">ᨾ ᩉ᩠ᨾ</span>
+<span class="ipa">m</span> <span class="ex" lang="nod">ᨾ ᩉ᩠ᨾ</span>
 </td>
 <td>
-<span class="ipa">n</span> <span class="ex" lang="kkh">ᨶ ᨱ ᩉ᩠ᨶ</span>
+<span class="ipa">n</span> <span class="ex" lang="nod">ᨶ ᨱ ᩉ᩠ᨶ</span>
 </td>
-<td><span class="ipa">ɲ</span> <span class="ex" lang="kkh">ᨿ ᨬ ᩉ᩠ᨿ</span></td>
+<td><span class="ipa">ɲ</span> <span class="ex" lang="nod">ᨿ ᨬ ᩉ᩠ᨿ</span></td>
 <td>&nbsp;</td>
 <td>
-<span class="ipa">ŋ</span> <span class="ex" lang="kkh">ᨦ ᩉ᩠ᨦ</span>
+<span class="ipa">ŋ</span> <span class="ex" lang="nod">ᨦ ᩉ᩠ᨦ</span>
 </td>
 <td></td>
 </tr>
 <tr>
 <th>Approximant </th>
 <td>
-<span class="ipa">w</span> <span class="ex" lang="kkh">ᩅ ᩉ᩠ᩅ</span>
+<span class="ipa">w</span> <span class="ex" lang="nod">ᩅ ᩉ᩠ᩅ</span>
 </td>
 <td>&nbsp;</td>
 <td>
-<span class="ipa">l</span> <span class="ex" lang="kkh">ᩃ ᩁ ᩉᩖ ᩉ᩠ᩃ ᩊ</span>
+<span class="ipa">l</span> <span class="ex" lang="nod">ᩃ ᩁ ᩉᩖ ᩉ᩠ᩃ ᩊ</span>
 </td>
 <td>
-<span class="ipa">j</span> <span class="ex" lang="kkh">ᩀ</span>
+<span class="ipa">j</span> <span class="ex" lang="nod">ᩀ</span>
 </td>
 <td>&nbsp;</td>
 <td></td>
@@ -888,16 +1421,16 @@ alveolar</th>
 <tr>
 <th>Stop</th>
 <td>
-<span class="ipa">p̚</span> <span class="ex" lang="kkh">ᨸ ᨻ</span><br>
+<span class="ipa">p̚</span> <span class="ex" lang="nod">ᨸ ᨻ</span><br>
 </td>
 <td>
-<span class="ipa">t̚</span> <span class="ex" lang="kkh">ᨭ ᨴ</span>
+<span class="ipa">t̚</span> <span class="ex" lang="nod">ᨭ ᨴ</span>
 </td>
 <td>
 </td>
 <td>&nbsp;</td>
 <td>
-<span class="ipa">k̚</span> <span class="ex" lang="kkh">ᨠ ᨣ</span>
+<span class="ipa">k̚</span> <span class="ex" lang="nod">ᨠ ᨣ</span>
 </td>
 <td><span class="ipa">ʔ</span></td>
 </tr>
@@ -914,27 +1447,27 @@ alveolar</th>
 <tr>
 <th>Nasal </th>
 <td>
-<span class="ipa">m</span> <span class="ex" lang="kkh">ᨾ</span>
+<span class="ipa">m</span> <span class="ex" lang="nod">ᨾ</span>
 </td>
 <td>
-<span class="ipa">n</span> <span class="ex" lang="kkh">ᨶ ᨱ</span>
+<span class="ipa">n</span> <span class="ex" lang="nod">ᨶ ᨱ</span>
 </td>
 <td></td>
 <td>&nbsp;</td>
 <td>
-<span class="ipa">ŋ</span> <span class="ex" lang="kkh">ᨦ</span>
+<span class="ipa">ŋ</span> <span class="ex" lang="nod">ᨦ</span>
 </td>
 <td></td>
 </tr>
 <tr>
 <th>Approximant </th>
 <td>
-<span class="ipa">w</span> <span class="ex" lang="kkh">ᩅ</span>
+<span class="ipa">w</span> <span class="ex" lang="nod">ᩅ</span>
 </td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>
-<span class="ipa">j</span> <span class="ex" lang="kkh">ᩀ ᨿ</span>
+<span class="ipa">j</span> <span class="ex" lang="nod">ᩀ ᨿ</span>
 </td>
 <td>&nbsp;</td>
 <td></td>
@@ -952,6 +1485,71 @@ alveolar</th>
 </table>
 <p>The glottal stop is unwritten and non-phonemic, but is pronounced after a short, open vowel.</p>
 </section>
+</section-->
+
+
+
+
+
+<section id="basicconsonants">
+<h3>Basic consonants</h3>
+
+<section id="stops">
+<h4>Stops</h4>
+<div class="characterBoxTitle">high class</div>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨸ␣ᨹ␣ᨲ␣ᨭ␣ᨳ␣ᨮ␣ᨠ</figure>
+
+<div class="characterBoxTitle">mid class</div>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨷ␣ᨯ␣ᩋ</figure>
+
+<div class="characterBoxTitle">low class</div>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨻ␣ᨽ␣ᨴ␣ᨵ␣ᨰ␣ᨣ</figure>
+</section>
+
+
+
+<section id="affricates">
+<h4>Affricates</h4>
+<div class="characterBoxTitle">high class</div>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨧ</figure>
+
+<div class="characterBoxTitle">low class</div>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨩ</figure>
+</section>
+
+
+
+<section id="fricatives">
+<h4>Fricatives</h4>
+<div class="characterBoxTitle">high class</div>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨺ␣ᩈ␣ᩆ␣ᩇ␣ᨨ␣ᨡ␣ᨢ␣ᩉ</figure>
+
+<div class="characterBoxTitle">low class</div>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨼ␣ᨪ␣ᨫ␣ᨥ␣ᨤ␣ᩌ</figure>
+</section>
+
+
+<section id="nasals">
+<h4>Nasals</h4>
+<div class="characterBoxTitle">high class</div>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᩉ᩠ᨾ␣ᩉ᩠ᨶ</figure>
+
+<div class="characterBoxTitle">low class</div>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨾ␣ᨶ␣ᨱ␣ᨬ␣ᨿ␣ᨦ</figure>
+</section>
+
+
+<section id="liquids">
+<h4>Liquids</h4>
+<div class="characterBoxTitle">high class</div>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᩀ␣ᩉᩖ</figure>
+
+
+<div class="characterBoxTitle">low class</div>
+<p>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᩅ␣ᩁ␣ᩃ␣ᩊ</figure>
+</p>
+<p><span class="ipa">ʨʰ</span> is not a native Northern Thai sound, but rather associated with reading the alphabet out loud and in learned pronunciation of Pali loanwords.<a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o142</a> </p>
 </section>
 
 
@@ -960,38 +1558,24 @@ alveolar</th>
 
 
 <section id="highclass">
-<h3>High class  consonants</h3>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨸ␣ᨲ␣ᨭ␣ᨧ␣ᨠ␣ᨹ␣ᨳ␣ᨮ␣ᨺ␣ᩈ␣ᩆ␣ᩇ␣ᨨ␣ᨡ␣ᨢ␣ᩉ␣ᩀ</figure>
+<h4>High class nasals &amp; liquids with HA</h4>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨸ␣ᨹ␣ᨲ␣ᨭ␣ᨳ␣ᨮ␣ᨠ</figure>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨧ</figure>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨺ␣ᩈ␣ᩆ␣ᩇ␣ᨨ␣ᨡ␣ᨢ␣ᩉ</figure>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᩀ</figure>
-
-<p> High and low consonants usually come in pairs, but where they don't the high variant is normally given by subjoining the low consonant below <span class="codepoint" translate="no"><span lang="kkh">&#x1A49;</span> [<a href="/scripts/taitham/block#char1A49"><span class="uname">U+1A49 TAI THAM LETTER HIGH HA</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᩉ᩠ᨶᩧ᩵ᨦ</span> <span class="trans">h˖ṉɯ¹ṉ̇</span> <span class="ipa">nɯɲ³</span> <span class="meaning">one</span></span>.</p>
+<p> High and low consonants usually come in pairs, but where they don't the high variant is normally given by subjoining the low consonant below <span class="codepoint" translate="no"><span lang="nod">&#x1A49;</span> [<a href="/scripts/taitham/block#char1A49"><span class="uname">U+1A49 TAI THAM LETTER HIGH HA</span></a>]</span>, eg. <span class="eg" lang="nod">ᩉ᩠ᨶᩧ᩵ᨦ</span>.</p>
+<p>A few consonants have different phonetic realisations in Northern Thai, and <span class="codepoint" translate="no"><span lang="nod">&#x1A22;</span> [<a href="/scripts/taitham/block#char1A22"><span class="uname">U+1A22 TAI THAM LETTER HIGH KXA</span></a>]</span> is used in Northern Thai but not by Tai Khün.</p>
 </section>
 
 
 
 
-<section id="midclass">
-<h3>Mid class  consonants</h3>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨷ␣ᨯ␣ᩋ</figure>
-<p><span class="codepoint" translate="no"><span lang="nod">&#x1A4B;</span> [<a href="/scripts/taitham/block#char1A4B"><span class="uname">U+1A4B TAI THAM LETTER A</span></a>]</span> represents a glottal stop. It can be used with vowels at the beginning of a syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᩋᩧ᩠ᨷ</span> <span class="trans">ʔ̯ɯ˖b̯</span> <span class="ipa">ɯp²</span> <span class="meaning">starve</span></span>. Note that this can have very different shapes, as shown by the Northern Thai font (<span class="charExample"><span class="ex" lang="nod">ᩋ</span></span>) and the Khün font (<span class="charExample"><span class="ex" lang="kkh">ᩋ</span></span>).</p>
+
+
+<section id="oang">
+<h4>The letter A</h4>
+
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A4B;</span> [<a href="/scripts/taitham/block#char1A4B"><span class="uname">U+1A4B TAI THAM LETTER A</span></a>]</span> represents a glottal stop. It can be used with vowels at the beginning of a syllable, eg. <span class="eg" lang="nod">ᩋᩧ᩠ᨷ</span>. It can have very different shapes, as shown by the Northern Thai font (<span class="charExample"><span class="ex" lang="nod">ᩋ</span></span>) and the Khün font (<span class="charExample"><span class="ex" lang="kkh">ᩋ</span></span>).</p>
+</section>
 </section>
 
-
-
-
-<section id="lowclass">
-<h3>Low class  consonants</h3>
-
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨻ␣ᨽ␣ᨴ␣ᨵ␣ᨰ␣ᨣ</figure>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨩ</figure>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨼ␣ᨪ␣ᨫ␣ᨥ␣ᨤ␣ᩌ</figure>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨾ␣ᨶ␣ᨱ␣ᨬ␣ᨿ␣ᨦ</figure>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᩅ␣ᩁ␣ᩃ␣ᩊ</figure>
-</section>
 
 
 
@@ -1003,8 +1587,8 @@ alveolar</th>
 
 <figure class="characterBox auto" data-cols="ipa,trans">ᩕ␣ᩖ</figure>
 
-<p>In addition, a subjoined <span class="ipa">w̱</span> is often found in a syllable-initial cluster, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨣ᩠ᩅᩣ᩠ᨿ</span> <span class="trans">ḵ˖w̱ā˖ȳ</span> <span class="ipa">kwaːj²</span> <span class="meaning">buffalo</span></span>.</p>
-<p>Other syllable-initial clusters include the combination of <span class="codepoint" translate="no"><span lang="nod">&#x1A49;</span> [<a href="/scripts/taitham/block#char1A49"><span class="uname">U+1A49 TAI THAM LETTER HIGH HA</span></a>]</span> plus a subjoined low class consonant to give a high class version.</p>
+<p>In addition, a subjoined <span class="ipa">w̱</span> is often found in a syllable-initial cluster, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨣ᩠ᩅᩣ᩠ᨿ</span> <span class="trans">ḵ˖w̱ā˖ȳ</span> <span class="ipa">kwaːj²</span> <span class="meaning">buffalo</span></span>. These initial consonant clusters are limited to <span class="ipa">kw</span> and <span class="ipa">xw</span>, although some others are occasionally found and appear to be tending to obsoletion.<a class="fnref" href="https://en.wikipedia.org/wiki/Northern_Thai_language#Consonants">→w</a></p>
+<p>Other syllable-initial clusters include the combination of <span class="codepoint" translate="no"><span lang="nod">&#x1A49;</span> [<a href="/scripts/taitham/block#char1A49"><span class="uname">U+1A49 TAI THAM LETTER HIGH HA</span></a>]</span> plus a subjoined low class consonant to give a high class version, though they are not pronounced as multiple consonants.</p>
 </section>
 
 
@@ -1038,16 +1622,20 @@ alveolar</th>
 
 <p>The first two of these are special-use consonant diacritics. The second two are ligatures.</p>
 <p><span class="codepoint" translate="no"><span lang="nod">&#x1A5B;</span> [<a href="/scripts/taitham/block#char1A5B"><span class="uname">U+1A5B TAI THAM CONSONANT SIGN HIGH RATHA OR LOW PA​</span></a>]</span> represents two different functions with the same appearance. It represents <span class="codepoint" translate="no"><span lang="nod">ᨮ</span> [<a href="/scripts/taitham/block#char1A2E"><span class="uname">U+1A2E TAI THAM LETTER HIGH RATHA</span></a>]</span> in <span class="charExample" translate="no"><span class="ex" lang="nod">ᩈᨱᩛᩣ᩠ᨶ</span> <span class="trans">sṇ̱ᵽā˖ṉ</span> <span class="meaning">shape</span></span>. <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e </a>And it represents <span class="codepoint" translate="no"><span lang="nod">ᨻ</span> [<a href="/scripts/taitham/block#char1A3B"><span class="uname">U+1A3B TAI THAM LETTER LOW PA</span></a>]</span> in <span class="charExample" translate="no"><span class="ex" lang="nod">ᩋᨾᩛ</span> <span class="trans">ʔ̯m̱ᵽ</span> <span class="meaning">mango</span></span>. (Compare with the somewhat rare subjoined form, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨷᩢᨱ᩠ᨻᨷᩩᩁᩩᩇ</span> <span class="trans">b̯áṇ̱˖p̄b̯uruṣ</span> <span class="meaning">disciple</span></span>.)<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a>&nbsp;</p>
-<p><span class="codepoint" translate="no"><span lang="nod">&#x1A53;</span> [<a href="/scripts/taitham/block#char1A53"><span class="uname">U+1A53 TAI THAM LETTER LAE</span></a>]</span> represents the combination <span class="codepoint" translate="no"><span lang="nod">ᩃ</span> + <span lang="nod">ᩯ</span> [<a href="/scripts/taitham/block#char1A43"><span class="uname">U+1A43 TAI THAM LETTER LA</span></a> + <a href="/scripts/taitham/block#char1A6F"><span class="uname">U+1A6F TAI THAM VOWEL SIGN AE</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᩈᩮᩓ᩠ᩅ᩶</span> <span class="trans">selₔ˖w̱²</span> <span class="ipa">seː¹lɛːw⁶</span> <span class="meaning">already</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A53;</span> [<a href="/scripts/taitham/block#char1A53"><span class="uname">U+1A53 TAI THAM LETTER LAE</span></a>]</span> represents the combination <span class="codepoint" translate="no"><span lang="nod">&#x1A43;&#x1A6F;</span> [<a href="/scripts/taitham/block#char1A43"><span class="uname">U+1A43 TAI THAM LETTER LA</span></a> + <a href="/scripts/taitham/block#char1A6F"><span class="uname">U+1A6F TAI THAM VOWEL SIGN AE</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᩈᩮᩓ᩠ᩅ᩶</span> <span class="trans">selₔ˖w̱²</span> <span class="ipa">seː¹lɛːw⁶</span> <span class="meaning">already</span></span>.</p>
 <p> <span class="codepoint" translate="no"><span lang="nod">&#x1A54;</span> [<a href="/scripts/taitham/block#char1A54"><span class="uname">U+1A54 TAI THAM LETTER GREAT SA</span></a>]</span> represents geminated <span class="codepoint" translate="no"><span lang="nod">ᩈ</span> [<a href="/scripts/taitham/block#char1A48"><span class="uname">U+1A48 TAI THAM LETTER HIGH SA</span></a>]</span>.</p>
 </section>
 
 
 
 
-  <section id="subjoined">
+<section id="subjoined">
 <h3>Subjoined consonants</h3>
-<p><span class="codepoint" translate="no"><span lang="nod">&nbsp;&#x1A60;</span> [<a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT​</span></a>]</span> is  used to produce the subjoined form of a consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᨠ</span></span> vs. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠ᩠ᨠ</span></span>.&nbsp;</p>
+<p id="def-consonantcluster" class="explanatoryintro definitionStub"></p>
+<p id="def-conjunct" class="explanatoryintro definitionStub"></p>
+
+<p>Tai Tham is unusual in that subjoined consonants do not only appear where there are consonant clusters. There is a natural tendency to attempt to stack consonants, usually 2 high, whenever possible.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">&nbsp;&#x1A60;</span> [<a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT​</span></a>]</span> is an invisible character used to produce the subjoined form of a consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠᨠ</span></span> vs. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨠ᩠ᨠ</span></span>.&nbsp;</p>
 <p><span class="name">Sakot</span> doesn't always kill the vowel between two consonants, nor does it create <a class="termref" href="../glossary/#conjunct">conjuncts</a>, in the sense of merged shapes.</p>
 <p><span class="name">Sakot</span> can follow a vowel-sign. For example, in <span class="charExample" translate="no"><span class="ex" lang="nod">ᩈᩣ᩠ᨾ</span> <span class="trans">sā˖m̱</span> <span class="ipa">saːm¹</span> <span class="meaning">three</span></span> the <span class="name">sakot</span> is used to position the final consonant in the syllable below the vowel-sign. This is quite common. A subjoined consonant can also follow a digit, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">᪓᩠ᨴ</span> <span class="trans">3̣˖ṯ</span> <span class="ipa">saːm tiː</span> <span class="meaning">three times</span></span>.</p>
 <figure>
@@ -1056,11 +1644,456 @@ alveolar</th>
 </figure>
 <p>Subjoined consonants are not only syllable-final consonants. The first consonant in a following syllable may also be subjoined, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨳ᩠ᨶ᩻ᩫᩁ</span> <span class="trans">tʰ˖ṉʻoṟ</span> <span class="ipa">tʰanon</span> <span class="meaning">path</span></span> (final <span class="trans">r</span> is pronounced as <span class="ipa">n</span>). <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> <a class="fnref" href="http://www.unicode.org/versions/latest/ch16.pdf">u654</a></p>
 <p>Not all consonants traditionally have subjoined forms, but modern innovations in borrowed terminology suggest that fonts should provide them for all consonants except the old vocalic letters. <a class="fnref" href="http://www.unicode.org/versions/latest/ch16.pdf">u654</a></p>
+
+
+<p>This list shows consonants in their normal and subjoined forms. Not all consonants traditionally have subjoined forms, but modern innovations in borrowed terminology suggest that fonts should provide them for all consonants except the old vocalic letters. <a class="fnref" href="http://www.unicode.org/versions/latest/ch16.pdf">u654</a> You may find that the font applied here doesn't handle all combinations well.</p>
+
+<div class="characterBoxTitle">high class letters</div>
+<figure class="characterBox auto largeList" data-ipa="p,pʰ,t,t,tʰ,tʰ,k,ʨ,f,s,s,s,s,x,x,h,j" data-cols="">ᨸ᩠ᨸ␣ᨹ᩠ᨹ␣ᨲ᩠ᨲ␣ᨭ᩠ᨭ␣ᨳ᩠ᨳ␣ᨮ᩠ᨮ␣ᨠ᩠ᨠ␣ᨧ᩠ᨧ␣ᨺ᩠ᨺ␣ᩈ᩠ᩈ␣ᩆ᩠ᩆ␣ᩇ᩠ᩇ␣ᨨ᩠ᨨ␣ᨡ᩠ᨡ␣ᨢ᩠ᨢ␣ᩉ᩠ᩉ␣ᩀ᩠ᩀ</figure>
+
+<div class="characterBoxTitle">mid class letters</div>
+<figure class="characterBox auto largeList" data-ipa="b,d,ʔ" data-cols="">ᨷ᩠ᨷ␣ᨯ᩠ᨯ␣ᩋ᩠ᩋ</figure>
+
+<div class="characterBoxTitle">low class letters</div>
+<figure class="characterBox auto largeList" data-ipa="p,pʰ,t,tʰ,tʰ,k,c,f,s,s,x,x,h,m,n,n,ŋ,ɲ,ɲ,w,k/l,l,l,j,j" data-cols="">ᨻ᩠ᨻ␣ᨽ᩠ᨽ␣ᨴ᩠ᨴ␣ᨵ᩠ᨵ␣ᨰ᩠ᨰ␣ᨣ᩠ᨣ␣ᨩ᩠ᨩ␣ᨼ᩠ᨼ␣ᨪ᩠ᨪ␣ᨫ᩠ᨫ␣ᨥ᩠ᨥ␣ᨤ᩠ᨤ␣ᩌ᩠ᩌ␣ᨾ᩠ᨾ␣ᨶ᩠ᨶ␣ᨱ᩠ᨱ␣ᨬ᩠ᨬ␣ᨿ᩠ᨿ␣ᨦ᩠ᨦ␣ᩅ᩠ᩅ␣ᩁ᩠ᩁ␣ᩃ᩠ᩃ␣ᩊ᩠ᩊ</figure>
 </section>
   
 
 
 
+<section id="consonant_mappings">
+<h3>Consonant to script mapping</h3>
+<p>The following tables show how Northern Thai consonant sounds commonly map to  characters or sequences of characters. Entries for a phoneme are split to show usage for high (<strong>h</strong>), mid (<strong>m</strong>), and low (<strong>l</strong>) classes, and also finals (<strong>f</strong>).</p>
+
+<div id="map_plosives" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">p</span></div>
+<div class="posn">h</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A38;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A38;</span> [<a href="/scripts/taitham/block#char1A38"><span class="uname">U+1A38 TAI THAM LETTER HIGH PA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨸᩮ᩠ᨶ</span>
+.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">l</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A3B;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A3B;</span> [<a href="/scripts/taitham/block#char1A3B"><span class="uname">U+1A3B TAI THAM LETTER LOW PA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨻᩬ᩵ᩴ</span>
+.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A5B;</span> [<a href="/scripts/taitham/block#char1A5B"><span class="uname">U+1A5B TAI THAM CONSONANT SIGN HIGH RATHA OR LOW PA</span></a>]</span>, eg. <span class="eg" lang="nod">ᩋᨾᩛ</span>.&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">f</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A38;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A38;</span> [<a href="/scripts/taitham/block#char1A38"><span class="uname">U+1A38 TAI THAM LETTER HIGH PA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A3B;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A3B;</span> [<a href="/scripts/taitham/block#char1A3B"><span class="uname">U+1A3B TAI THAM LETTER LOW PA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A37;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A37;</span> [<a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT</span></a> + <a href="/scripts/taitham/block#char1A37"><span class="uname">U+1A37 TAI THAM LETTER BA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨠᩕᩣ᩠ᨷ</span>
+.&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">b</span></div>
+<div class="posn">m</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A37;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A37;</span> [<a href="/scripts/taitham/block#char1A37"><span class="uname">U+1A37 TAI THAM LETTER BA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨷᩴ᩵</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A5D;</span> [<a href="/scripts/taitham/block#char1A5E"><span class="uname">U+1A5D TAI THAM CONSONANT SIGN BA</span></a>]</span> as an optional alternative to the normal subjoined form of &nbsp;<span class="codepoint" translate="no"><span lang="nod">&nbsp;&#x1A60;&#x1A37;</span> [<a href="/scripts/taitham/block#char1A48"><span class="uname">U+1A37 TAI THAM LETTER BA</span></a>]</span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">pʰ</span></div>
+<div class="posn">h</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A39;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A39;</span> [<a href="/scripts/taitham/block#char1A39"><span class="uname">U+1A39 TAI THAM LETTER HIGH PHA</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">l</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A3D;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A3D;</span> [<a href="/scripts/taitham/block#char1A3D"><span class="uname">U+1A3D TAI THAM LETTER LOW PHA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A37;&#x1A55;</span> [<a href="/scripts/taitham/block#char1A37"><span class="uname">U+1A37 TAI THAM LETTER BA</span></a> + <a href="/scripts/taitham/block#char1A55"><span class="uname">U+1A55 TAI THAM CONSONANT SIGN MEDIAL RA</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">t</span></div>
+<div class="posn">h</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A32;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A32;</span> [<a href="/scripts/taitham/block#char1A32"><span class="uname">U+1A32 TAI THAM LETTER HIGH TA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨲ᩵ᩣ᩠ᨦ</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A5B;</span> [<a href="/scripts/taitham/block#char1A5B"><span class="uname">U+1A5B TAI THAM CONSONANT SIGN HIGH RATHA OR LOW PA</span></a>]</span>, eg. <span class="eg" lang="nod">ᩈᨱᩛᩣ᩠ᨶ</span>.&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">l</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A2D;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A2D;</span> [<a href="/scripts/taitham/block#char1A2D"><span class="uname">U+1A2D TAI THAM LETTER RATA</span></a>]</span>, eg. <span class="eg" lang="nod">ᩁᨭᩛᨷᩣ᩠ᩃ</span>
+.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A34;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A34;</span> [<a href="/scripts/taitham/block#char1A34"><span class="uname">U+1A34 TAI THAM LETTER LOW TA</span></a>]</span>&nbsp;, eg. <span class="eg" lang="nod">ᨴᩢ᩠ᨦ</span>
+.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">f</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A27;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A27;</span> [<a href="/scripts/taitham/block#char1A27"><span class="uname">U+1A27 TAI THAM LETTER HIGH CA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A29;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A29;</span> [<a href="/scripts/taitham/block#char1A29"><span class="uname">U+1A29 TAI THAM LETTER LOW CA</span></a>]</span>&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A2D;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A2D;</span> [<a href="/scripts/taitham/block#char1A2D"><span class="uname">U+1A2D TAI THAM LETTER RATA</span></a>]</span>, eg.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A2F;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A2F;</span> [<a href="/scripts/taitham/block#char1A2F"><span class="uname">U+1A2F TAI THAM LETTER DA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨾᩦ᩠ᨯ</span>
+.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A30;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A30;</span> [<a href="/scripts/taitham/block#char1A30"><span class="uname">U+1A30 TAI THAM LETTER LOW RATHA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A32;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A32;</span> [<a href="/scripts/taitham/block#char1A32"><span class="uname">U+1A32 TAI THAM LETTER HIGH TA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A33;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A33;</span> [<a href="/scripts/taitham/block#char1A33"><span class="uname">U+1A33 TAI THAM LETTER HIGH THA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A34;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A34;</span> [<a href="/scripts/taitham/block#char1A34"><span class="uname">U+1A34 TAI THAM LETTER LOW TA</span></a>]</span>, eg. </p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A35;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A35;</span> [<a href="/scripts/taitham/block#char1A35"><span class="uname">U+1A35 TAI THAM LETTER LOW THA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A46;</span> &nbsp; <span lang="nod">&#x1A60;&#x1A46;</span> [<a href="/scripts/taitham/block#char1A46"><span class="uname">U+1A46 TAI THAM LETTER HIGH SHA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A47;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A47;</span> [<a href="/scripts/taitham/block#char1A47"><span class="uname">U+1A47 TAI THAM LETTER HIGH SSA</span></a>]</span>, eg. </p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A48;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A48;</span> [<a href="/scripts/taitham/block#char1A48"><span class="uname">U+1A48 TAI THAM LETTER HIGH SA</span></a>]</span>&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">d</span></div>
+<div class="posn">m</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A2F;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A2F;</span> [<a href="/scripts/taitham/block#char1A2F"><span class="uname">U+1A2F TAI THAM LETTER DA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨯᩱ᩶</span>
+.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">tʰ</span></div>
+<div class="posn">h</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A33;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A33;</span> [<a href="/scripts/taitham/block#char1A33"><span class="uname">U+1A33 TAI THAM LETTER HIGH THA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨳ᩶ᩣ</span>
+.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A2E;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A2E;</span> [<a href="/scripts/taitham/block#char1A2E"><span class="uname">U+1A2E TAI THAM LETTER HIGH RATHA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A32;&#x1A55;</span> [<a href="/scripts/taitham/block#char1A32"><span class="uname">U+1A32 TAI THAM LETTER HIGH TA</span></a> + <a href="/scripts/taitham/block#char1A55"><span class="uname">U+1A55 TAI THAM CONSONANT SIGN MEDIAL RA</span></a>]</span>&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">l</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A35;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A35;</span> [<a href="/scripts/taitham/block#char1A35"><span class="uname">U+1A35 TAI THAM LETTER LOW THA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A30;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A30;</span> [<a href="/scripts/taitham/block#char1A30"><span class="uname">U+1A30 TAI THAM LETTER LOW RATHA</span></a>]</span>&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A34;&#x1A55;</span> [<a href="/scripts/taitham/block#char1A34"><span class="uname">U+1A34 TAI THAM LETTER LOW TA</span></a> + <a href="/scripts/taitham/block#char1A55"><span class="uname">U+1A55 TAI THAM CONSONANT SIGN MEDIAL RA</span></a>]</span>&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">k</span></div>
+<div class="posn">h</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A20;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A20;</span>  [<a href="/scripts/taitham/block#char1A20"><span class="uname">U+1A20 TAI THAM LETTER HIGH KA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨠᩣ᩠ᩁ</span>
+.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">l</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A23;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A23;</span> [<a href="/scripts/taitham/block#char1A23"><span class="uname">U+1A23 TAI THAM LETTER LOW KA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨣᩴ</span>
+.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">f</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A20;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A20;</span> [<a href="/scripts/taitham/block#char1A20"><span class="uname">U+1A20 TAI THAM LETTER HIGH KA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨾᩢ᩠ᨠ</span>
+.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A23;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A23;</span> [<a href="/scripts/taitham/block#char1A23"><span class="uname">U+1A23 TAI THAM LETTER LOW KA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A62;</span> [<a href="/scripts/taitham/block#char1A62"><span class="uname">U+1A62 TAI THAM VOWEL SIGN MAI SAT</span></a>]</span>, eg. <span class="eg" lang="nod">ᨯᩬᩢᩡ</span>.&nbsp; Also used as a vowel.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʔ</span></div>
+<div class="posn">m</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A4B;</span> [<a href="/scripts/taitham/block#char1A4B"><span class="uname">U+1A4B TAI THAM LETTER A</span></a>]</span>, eg. <span class="eg" lang="nod">ᩋᩯ᩠᩵ᩅ</span>
+.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">f</div>
+<div>
+<p>Pronounced but not written after a short, open vowel.</p>
+</div>
+</div>
+</div>
+
+
+
+<div id="map_affricates" class="map">
+<div class="mapItem">
+<div class="uncommon"><span class="ipa">t͡ɕ</span></div>
+<div class="posn">h</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A27;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A27;</span> [<a href="/scripts/taitham/block#char1A27"><span class="uname">U+1A27 TAI THAM LETTER HIGH CA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨧ᩠ᨷᩪ</span>
+.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">l</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A29;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A29;</span> [<a href="/scripts/taitham/block#char1A29"><span class="uname">U+1A29 TAI THAM LETTER LOW CA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨩᩨ᩵</span>
+.</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div id="map_fricatives" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">f</span></div>
+<div class="posn">h</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A3A;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A3A;</span> [<a href="/scripts/taitham/block#char1A3A"><span class="uname">U+1A3A TAI THAM LETTER HIGH FA</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">l</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A3C;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A3C;</span> [<a href="/scripts/taitham/block#char1A3C"><span class="uname">U+1A3C TAI THAM LETTER LOW FA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨼᩥᩃ᩠ᨾ᩺</span>
+.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">s</span></div>
+<div class="posn">h</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A48;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A48;</span> [<a href="/scripts/taitham/block#char1A48"><span class="uname">U+1A48 TAI THAM LETTER HIGH SA</span></a>]</span>, eg. <span class="eg" lang="nod">ᩈᩣ᩠ᨾ</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A46;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A46;</span> [<a href="/scripts/taitham/block#char1A46"><span class="uname">U+1A46 TAI THAM LETTER HIGH SHA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A47;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A47;</span> [<a href="/scripts/taitham/block#char1A47"><span class="uname">U+1A47 TAI THAM LETTER HIGH SSA</span></a>]</span>&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A28;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A28;</span> [<a href="/scripts/taitham/block#char1A28"><span class="uname">U+1A28 TAI THAM LETTER HIGH CHA</span></a>]</span></p>
+<p><span class="codepoint" translate="no">&nbsp;<span lang="nod">-&#x1A5E;</span> [<a href="/scripts/taitham/block#char1A5E"><span class="uname">U+1A5E TAI THAM CONSONANT SIGN SA</span></a>]</span> as an optional alternative to the normal subjoined form of &nbsp;<span class="codepoint" translate="no"><span lang="nod">&nbsp;&#x1A60;&#x1A48;</span> [<a href="/scripts/taitham/block#char1A48"><span class="uname">U+1A48 TAI THAM LETTER HIGH SA</span></a>]</span>.</p>
+<p>In ligated double-s, <span class="codepoint" translate="no"><span lang="nod">&#x1A54;</span> [<a href="/scripts/taitham/block#char1A54"><span class="uname">U+1A54 TAI THAM LETTER GREAT SA</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">l</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A2A;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A2A;</span> [<a href="/scripts/taitham/block#char1A2A"><span class="uname">U+1A2A TAI THAM LETTER LOW SA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A2B;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A2B;</span> [<a href="/scripts/taitham/block#char1A2B"><span class="uname">U+1A2B TAI THAM LETTER LOW CHA</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">x</span></div>
+<div class="posn">h&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A21;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A21;</span> [<a href="/scripts/taitham/block#char1A21"><span class="uname">U+1A21 TAI THAM LETTER HIGH KHA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨡᩮᩢ᩶ᩣ</span>
+.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A24;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A24;</span> [<a href="/scripts/taitham/block#char1A24"><span class="uname">U+1A24 TAI THAM LETTER LOW KXA</span></a>]</span>, eg. &nbsp;<span class="eg" lang="nod">ᨤᩥ᩠ᨦ</span>
+.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A20;&#x1A55;</span> [<a href="/scripts/taitham/block#char1A20"><span class="uname">U+1A20 TAI THAM LETTER HIGH KA</span></a> + <a href="/scripts/taitham/block#char1A55"><span class="uname">U+1A55 TAI THAM CONSONANT SIGN MEDIAL RA</span></a>]</span>, eg. &nbsp;<span class="eg" lang="nod">ᨠᩕᩣ᩠ᨷ</span>
+.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">l</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A25;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A25;</span> [<a href="/scripts/taitham/block#char1A25"><span class="uname">U+1A25 TAI THAM LETTER LOW KHA</span></a>]</span>, eg. </p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A23;&#x1A55;</span> [<a href="/scripts/taitham/block#char1A23"><span class="uname">U+1A23 TAI THAM LETTER LOW KA</span></a> + <a href="/scripts/taitham/block#char1A55"><span class="uname">U+1A55 TAI THAM CONSONANT SIGN MEDIAL RA</span></a>]</span>, eg. &nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">h</span></div>
+<div class="posn">h&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A49;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A49;</span> [<a href="/scripts/taitham/block#char1A49"><span class="uname">U+1A49 TAI THAM LETTER HIGH HA</span></a>]</span>, eg. <span class="eg" lang="nod">ᩉᩱ᩵</span>
+.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">l</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A4C;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A4C;</span> [<a href="/scripts/taitham/block#char1A4C"><span class="uname">U+1A4C TAI THAM LETTER LOW HA</span></a>]</span>, eg. <span class="eg" lang="nod">ᩌᩣᩴ</span>
+.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A41;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A41;</span> [<a href="/scripts/taitham/block#char1A41"><span class="uname">U+1A41 TAI THAM LETTER RA</span></a>]</span>, eg. &nbsp;<span class="eg" lang="nod">ᩁᩪ᩶</span>.</p>
+</div>
+</div>
+</div>
+
+
+
+<div id="map_nasals" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">m</span></div>
+<div class="posn">h</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A49;&#x1A60;&#x1A3E;</span> [<a href="/scripts/taitham/block#char1A49"><span class="uname">U+1A49 TAI THAM LETTER HIGH HA</span></a> + <a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT</span></a> + <a href="/scripts/taitham/block#char1A3E"><span class="uname">U+1A3E TAI THAM LETTER MA</span></a>]</span>, eg. <span class="eg" lang="nod">ᩉ᩠ᨾ᩵ᩣᩴ</span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">l</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A3E;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A3E;</span> [<a href="/scripts/taitham/block#char1A3E"><span class="uname">U+1A3E TAI THAM LETTER MA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨾᩯ᩵</span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">f</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A3E;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A3E;</span> [<a href="/scripts/taitham/block#char1A3E"><span class="uname">U+1A3E TAI THAM LETTER MA</span></a>]</span>, eg. <span class="eg" lang="nod">ᩈᩣ᩠ᨾ</span>
+.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A74;</span> [<a href="/scripts/taitham/block#char1A74"><span class="uname">U+1A74 TAI THAM SIGN MAI KANG</span></a>]</span>, eg. <span class="eg" lang="nod">ᩌᩣᩴ</span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">n</span></div>
+<div class="posn">h</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A49;&#x1A60;&#x1A36;</span> [<a href="/scripts/taitham/block#char1A49"><span class="uname">U+1A49 TAI THAM LETTER HIGH HA</span></a> + <a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT</span></a> + <a href="/scripts/taitham/block#char1A36"><span class="uname">U+1A36 TAI THAM LETTER NA</span></a>]</span>, eg. <span class="eg" lang="nod">ᩉ᩠ᨶᩧ᩵ᨦ</span>
+.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">l</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A36;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A36;</span> [<a href="/scripts/taitham/block#char1A36"><span class="uname">U+1A36 TAI THAM LETTER NA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨶᩣᩴ</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A31;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A31;</span> [<a href="/scripts/taitham/block#char1A31"><span class="uname">U+1A31 TAI THAM LETTER RANA</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">f</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A31;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A31;</span> [<a href="/scripts/taitham/block#char1A31"><span class="uname">U+1A31 TAI THAM LETTER RANA</span></a>]</span>, eg. <span class="eg" lang="nod">ᩈᨱᩛᩣ᩠ᨶ</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A36;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A36;</span> [<a href="/scripts/taitham/block#char1A36"><span class="uname">U+1A36 TAI THAM LETTER NA</span></a>]</span>, eg. <span class="eg" lang="nod">ᩃᩫ᩠᩵ᨶ</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A41;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A41;</span> [<a href="/scripts/taitham/block#char1A41"><span class="uname">U+1A41 TAI THAM LETTER RA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨠᩣ᩠ᩁ</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A43;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A43;</span> [<a href="/scripts/taitham/block#char1A43"><span class="uname">U+1A43 TAI THAM LETTER LA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A4A;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A4A;</span> [<a href="/scripts/taitham/block#char1A4A"><span class="uname">U+1A4A TAI THAM LETTER LLA</span></a>]</span>&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɲ</span></div>
+<div class="posn">h</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A49;&#x1A60;&#x1A3F;</span> [<a href="/scripts/taitham/block#char1A49"><span class="uname">U+1A49 TAI THAM LETTER HIGH HA</span></a> + <a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT</span></a> + <a href="/scripts/taitham/block#char1A3F"><span class="uname">U+1A3F TAI THAM LETTER LOW YA</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">l</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A3F;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A3F;</span> [<a href="/scripts/taitham/block#char1A3F"><span class="uname">U+1A3F TAI THAM LETTER LOW YA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨿᩩᨦ</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A2C;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A2C;</span> [<a href="/scripts/taitham/block#char1A2C"><span class="uname">U+1A2C TAI THAM LETTER NYA</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ŋ</span></div>
+<div class="posn">h</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A49;&#x1A60;&#x1A26;</span> [<a href="/scripts/taitham/block#char1A49"><span class="uname">U+1A49 TAI THAM LETTER HIGH HA</span></a> + <a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT</span></a> + <a href="/scripts/taitham/block#char1A26"><span class="uname">U+1A26 TAI THAM LETTER NGA</span></a>]</span>, eg. </p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">l</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A26;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A26;</span> [<a href="/scripts/taitham/block#char1A26"><span class="uname">U+1A26 TAI THAM LETTER NGA</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">f</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A26;</span> <span lang="nod">-&#x1A60;&#x1A26;</span> [<a href="/scripts/taitham/block#char1A26"><span class="uname">U+1A26 TAI THAM LETTER NGA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨿᩩᨦ</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A74;</span> [<a href="/scripts/taitham/block#char1A74"><span class="uname">U+1A74 TAI THAM SIGN MAI KANG</span></a>]</span></p>
+<p><span class="codepoint" translate="no">&nbsp;<span lang="nod">-&#x1A58;</span> [<a href="/scripts/taitham/block#char1A58"><span class="uname">U+1A58 TAI THAM SIGN MAI KANG LAI</span></a>]</span>  esp. before  s, h and l.&nbsp;</p>
+</div>
+</div>
+</div>
+
+
+
+<div id="map_liquids" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">w</span></div>
+<div class="posn">h</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A49;&#x1A60;&#x1A45;</span> [<a href="/scripts/taitham/block#char1A49"><span class="uname">U+1A49 TAI THAM LETTER HIGH HA</span></a> + <a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT</span></a> + <a href="/scripts/taitham/block#char1A45"><span class="uname">U+1A45 TAI THAM LETTER WA</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">l</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A45;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A45;</span> [<a href="/scripts/taitham/block#char1A45"><span class="uname">U+1A45 TAI THAM LETTER WA</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">f</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A45;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A45;</span> [<a href="/scripts/taitham/block#char1A45"><span class="uname">U+1A45 TAI THAM LETTER WA</span></a>]</span>, eg. <span class="eg" lang="nod">ᩈᩮᩓ᩠ᩅ᩶</span>.</p>
+<p> As part of a diphthong, this is typically rendered using the subjoined form. See  <a class="secref">consonant_vowels</a>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">med</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A60;&#x1A45;</span> [<a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT</span></a> + <a href="/scripts/taitham/block#char1A45"><span class="uname">U+1A45 TAI THAM LETTER WA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨣ᩠ᩅᩣ᩠ᨿ</span> .</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">l</span></div>
+<div class="posn">h</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A49;&#x1A60;&#x1A43;</span> [<a href="/scripts/taitham/block#char1A49"><span class="uname">U+1A49 TAI THAM LETTER HIGH HA</span></a> + <a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT</span></a> + <a href="/scripts/taitham/block#char1A43"><span class="uname">U+1A43 TAI THAM LETTER LA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A49;&#x1A56;</span> [<a href="/scripts/taitham/block#char1A49"><span class="uname">U+1A49 TAI THAM LETTER HIGH HA</span></a> + <a href="/scripts/taitham/block#char1A56"><span class="uname">U+1A56 TAI THAM CONSONANT SIGN MEDIAL LA</span></a>]</span>, eg. <span class="eg" lang="nod">ᩉᩖᩢᨠ</span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">l</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A43;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A43;</span> [<a href="/scripts/taitham/block#char1A43"><span class="uname">U+1A43 TAI THAM LETTER LA</span></a>]</span>, eg. <span class="eg" lang="nod">ᩃᩪᨠ</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A4A;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A4A;</span> [<a href="/scripts/taitham/block#char1A4A"><span class="uname">U+1A4A TAI THAM LETTER LLA</span></a>]</span>&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A41;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A41;</span> [<a href="/scripts/taitham/block#char1A41"><span class="uname">U+1A41 TAI THAM LETTER RA</span></a>]</span></p>
+<p>In ligature for lɛː, <span class="codepoint" translate="no"><span lang="nod">&#x1A53;</span> [<a href="/scripts/taitham/block#char1A53"><span class="uname">U+1A53 TAI THAM LETTER LAE</span></a>]</span>,  eg. <span class="eg" lang="nod">ᩈᩮᩓ᩠ᩅ᩶</span>
+.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">med</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A55;&nbsp;</span> [<a href="/scripts/taitham/block#char1A55"><span class="uname">U+1A55 TAI THAM CONSONANT SIGN MEDIAL RA</span></a>]</span>, eg. <span class="eg" lang="nod">ᨻᩕᩥ᩠ᨠ</span>
+.</p>
+<p><span class="codepoint" translate="no"><span lang="nod">&nbsp;&#x1A56;</span> [<a href="/scripts/taitham/block#char1A56"><span class="uname">U+1A56 TAI THAM CONSONANT SIGN MEDIAL LA</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">j</span></div>
+<div class="posn">h</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A40;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A40;</span> [<a href="/scripts/taitham/block#char1A40"><span class="uname">U+1A40 TAI THAM LETTER HIGH YA</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">f</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A2C;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A2C;</span> [<a href="/scripts/taitham/block#char1A2C"><span class="uname">U+1A2C TAI THAM LETTER NYA</span></a>]</span>&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="nod">-&#x1A3F;</span> &nbsp; <span lang="nod">-&#x1A60;&#x1A3F;</span> [<a href="/scripts/taitham/block#char1A3F"><span class="uname">U+1A3F TAI THAM LETTER LOW YA</span></a>]</span>, eg. &nbsp;<span class="eg" lang="nod">ᨣ᩠ᩅᩣ᩠ᨿ</span>.</p>
+<p> As part of a diphthong, this is typically rendered using the subjoined form. See  <a class="secref">consonant_vowels</a>.</p>
+</div>
+</div>
+</div>
+</section>
 </section>
 
 
@@ -1069,15 +2102,15 @@ alveolar</th>
 
   
 
-  <section id="tones">
+<section id="tones">
 <h2>Tones</h2>
+<p id="def-checked" class="explanatoryintro definitionStub"></p>
 
 <p>With the high/low categorisation of consonants, Northern Thai writing generally needs only the  two combining tone marks below to indicate one of the  possible phonetic tones.</p>
 <figure class="characterBox auto" data-cols="trans">᩵␣᩶</figure>
 
 <p>Wikipedia lists the following 6 phonemic tones for unchecked syllables in the Changmai dialect of Northern Thai. (It also has sound recordings.)<a class="fnref" href="https://en.wikipedia.org/wiki/Northern_Thai_language#Consonants">w</a></p>
 
-<p id="def-checked" class="explanatoryintro definitionStub"></p>
 
 <table>
 <thead>
@@ -1273,13 +2306,13 @@ glottalised</td>
 
 <figure class="characterBox auto" data-cols="trans">᩠␣᩺␣᩻</figure>
 
-<p><span class="codepoint" translate="no"><span lang="kkh">&#x1A60;</span> [<a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT​</span></a>]</span> is used to create a subjoined consonant. See <a class="secref">subjoined</a>.&nbsp;</p>
-<p>&nbsp;<span class="codepoint" translate="no"><span lang="kkh">&#x1A7A;</span> [<a href="/scripts/taitham/block#char1A7A"><span class="uname">U+1A7A TAI THAM SIGN RA HAAM​</span></a>]</span> is used in  Northern Thai  to silence one or more characters in a word. (In Lü it is used as a final <span class="ipa">n</span>; in Khün it is used as a final <span class="ipa">r</span>.)</p>
-<p>&nbsp;<span class="codepoint" translate="no"><span lang="kkh">&#x1A7B;</span> [<a href="/scripts/taitham/block#char1A7B"><span class="uname">U+1A7B TAI THAM SIGN MAI SAM​</span></a>]</span> is used in Northern Thai either to indicate repetition of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨲ᩵ᩣ᩠ᨦ᩻</span> <span class="trans">t¹ā˖ŋ̱ʻ</span> <span class="ipa">taːŋ taːŋ</span> <span class="meaning">different in my view</span></span>, or to identify double-acting consonants, or to indicate that a subjoined consonant begins a new syllable, eg. compare <span class="charExample" translate="no"><span class="ex" lang="nod">ᨳᩫ᩠ᨶᩁ</span> <span class="trans">tʰɔ̈˖ṉr</span> <span class="ipa">tʰonra</span></span> with <span class="charExample" translate="no"><span class="ex" lang="nod">ᨳᩫ᩠ᨶ᩻ᩁ</span> <span class="trans">tʰɔ̈˖ṉʻr</span> <span class="ipa">tʰanon</span> <span class="meaning">path</span></span> (final <span class="trans">r</span> is pronounced as <span class="ipa">n</span>). <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a></p>
+<p><span class="codepoint" translate="no"><span lang="nod">&#x1A60;</span> [<a href="/scripts/taitham/block#char1A60"><span class="uname">U+1A60 TAI THAM SIGN SAKOT​</span></a>]</span> is used to create a subjoined consonant. See <a class="secref">subjoined</a>.&nbsp;</p>
+<p>&nbsp;<span class="codepoint" translate="no"><span lang="nod">&#x1A7A;</span> [<a href="/scripts/taitham/block#char1A7A"><span class="uname">U+1A7A TAI THAM SIGN RA HAAM​</span></a>]</span> is used in  Northern Thai  to silence one or more characters in a word. (In Lü it is used as a final <span class="ipa">n</span>; in Khün it is used as a final <span class="ipa">r</span>.)</p>
+<p>&nbsp;<span class="codepoint" translate="no"><span lang="nod">&#x1A7B;</span> [<a href="/scripts/taitham/block#char1A7B"><span class="uname">U+1A7B TAI THAM SIGN MAI SAM​</span></a>]</span> is used in Northern Thai either to indicate repetition of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="nod">ᨲ᩵ᩣ᩠ᨦ᩻</span> <span class="trans">t¹ā˖ŋ̱ʻ</span> <span class="ipa">taːŋ taːŋ</span> <span class="meaning">different in my view</span></span>, or to identify double-acting consonants, or to indicate that a subjoined consonant begins a new syllable, eg. compare <span class="charExample" translate="no"><span class="ex" lang="nod">ᨳᩫ᩠ᨶᩁ</span> <span class="trans">tʰɔ̈˖ṉr</span> <span class="ipa">tʰonra</span></span> with <span class="charExample" translate="no"><span class="ex" lang="nod">ᨳᩫ᩠ᨶ᩻ᩁ</span> <span class="trans">tʰɔ̈˖ṉʻr</span> <span class="ipa">tʰanon</span> <span class="meaning">path</span></span> (final <span class="trans">r</span> is pronounced as <span class="ipa">n</span>). <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a></p>
 
 <figure class="auxiliaryBox auto" data-cols="trans">᩿</figure>
 
-<p>&nbsp;<span class="codepoint" translate="no"><span lang="kkh">&#x1A7F;</span> [<a href="/scripts/taitham/block#char1A7F"><span class="uname">U+1A7F TAI THAM COMBINING CRYPTOGRAMMIC DOT​</span></a>]</span>   is  used  singly  or  multiply  beneath letters  to  give  each  letter  a  different  value  according  to  some  hidden  agreement  between reader and writer. <a class="fnref" href="http://www.unicode.org/versions/latest/ch16.pdf">u655</a></p>
+<p>&nbsp;<span class="codepoint" translate="no"><span lang="nod">&#x1A7F;</span> [<a href="/scripts/taitham/block#char1A7F"><span class="uname">U+1A7F TAI THAM COMBINING CRYPTOGRAMMIC DOT​</span></a>]</span>   is  used  singly  or  multiply  beneath letters  to  give  each  letter  a  different  value  according  to  some  hidden  agreement  between reader and writer. <a class="fnref" href="http://www.unicode.org/versions/latest/ch16.pdf">u655</a></p>
 </section>
   
 
@@ -1598,6 +2631,6 @@ glottalised</td>
 initialiseSummary('/scripts/taitham/block','nod','nod','taitham/northernthai')
 autoTransliterate('kkh')
 autoTransliterate('nod')
-makeFontChanger('nod,kkh', 'lana', ["Noto Serif Tai Tham WF", "Lamphun WF", "Lanna Alif WF", "A Tai Tham KH New WF"], '24px')
+makeFontChanger('nod,kkh', 'lana-nod', ["Noto Serif Tai Tham WF", "Lamphun WF", "Lanna Alif WF", "A Tai Tham KH New WF"], '24px')
 </script>
 </html>
