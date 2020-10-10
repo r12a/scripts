@@ -136,24 +136,17 @@
 <section id="key_features">
 <h2>Basic features</h2>
     <p> Javanese is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>, ie. consonants carry an inherent vowel sound that is overridden, where needed, using vowel signs.    In Javanese, consonants carry an inherent vowel, which can be <span class="trans">a</span> or <span class="trans">o</span>. See the table to the right for a brief overview of features of the modern Javanese orthography. (See the <a href="../../scripts/featurelist/#key">key</a>. Character counts exclude ASCII characters.)</p>
-	
-<p>The following list describes some distinctive characteristics of the Javanese script.</p>
-<ul>
-<li>
-<p>Words are not separated by spaces. Spaces may be used to separate phrases.</p>
-</li>
-<li>
-<p>Vowels represented by multiple vowel-signs are written using 2 Unicode characters (unlike many scripts where a single character produces glyphs on more than one side of the base).</p></li>
-<li>
-<p>Standalone vowels are produced either by adding vowel-signs to a consonant base, or by independent vowel letters, however the latter are used to distinguish proper nouns or foreign words from others.</p></li>
-<li>
-<p>In addition to a basic set of consonants there is a murda set, which is akin to capital letters, and a mahaprana set which is generally only used for Sanskrit and Kawi. Further repertoire extension is possible using a combining cecak telu character.</p></li>
-<li>
-<p>There are 3 dedicated medial consonants, and 4 dedicated final consonants. All are combining characters.</p></li>
-<li>
-<p>Consonant clusters involve subjoined and conjoined sequences, and those span word boundaries.</p>
-</li>
-</ul>
+<p>Text runs left-to-right, and words are not separated by spaces, however syllables may be separated by <abbr title="Zero width space">ZWSP</abbr>, as long as they don't fall inside a stack. Spaces may be used to separate phrases.</p>
+
+<p>The 20 consonant letters used for pure Javanese words are supplemented by 1o more which are used as honorifics, a little like capital letters, and 5 more used in Sanskrit words. Repertoire extensions for 8 non-native sounds are achieved by applying the <span class="name">cecak telu</span> diacritic to  characters.</p>
+<p>Consonant clusters are  represented by stacked consonants (many subjoined consonants have alternative shapes) or conjoined pairs. Occasionally, a visible <span class="name">pangkon</span> is used.</p>
+<p>Stacked consonants and conjoined pairs span word boundaries.</p>
+<p>Syllable-initial clusters use 3 dedicated combining marks for the second consonant.</p>
+<p>Word-final consonant sounds may be represented by 4 dedicated combining marks. Otherwise, if nothing follows, they  are ordinary consonants followed by  a visible <span class="codepoint" translate="no"><span lang="jv">&#xA9C0;</span> [<a href="/scripts/javanese/block#charA9C0"><span class="uname">U+A9C0 JAVANESE PANGKON</span></a>]</span>.</p>
+
+<p>The Javanese orthography has 2  inherent vowels, and represents vowels using 5 vowel-signs (including 1 prescript). All vowel-signs are combining marks, and are stored after the base character. It is mandatory for 2 of the consonant+vowel sequences  to be written using vocalics, rather than vowel-signs.</p>
+<p>Independent vowels are used  for standalone vowel sounds when there is a need to distinguish normal words from proper nouns or foreign words. The normal approach for standalone vowels is to apply vowel-signs to <span class="codepoint" translate="no"><span lang="jv">&#xA9B2;</span> [<a href="/scripts/javanese/block#charA9B2"><span class="uname">U+A9B2 JAVANESE LETTER HA</span></a>]</span>.</p>
+<p>Only one composite vowel is used in modern Javanese orthography, although more exist when writing Sanskrit or Kawi in this script. There are no circumgraphs. The composite vowel used in modern Javanese involves only 2 vowel-signs, and places glyphs on either side of the base consonant(s), eg. <span class="charExample" translate="no"><span class="ex" lang="jv">ꦏꦺꦴ</span> <span class="transc">ko</span></span>.</p>
 </section>
 
 
@@ -384,11 +377,12 @@
 
   <section id="two_part_vowels">
 <h3>Composite vowels</h3>
-    <p>Unlike many other scripts, including Balinese, when vowels are created by adding multiple glyphs to a base character Javanese requires the user to type the parts separately. For example, the sound <span class="ipa">ko</span> is represented by <span class="codepoint" translate="no"><span lang="jv">&#xA98F;&#xA9BA;&#xA9B4;</span> [<a href="/scripts/javanese/block#charA98F"><span class="uname">U+A98F JAVANESE LETTER KA</span></a> + <a href="/scripts/javanese/block#charA9BA"><span class="uname">U+A9BA JAVANESE VOWEL SIGN TALING</span></a> + <a href="/scripts/javanese/block#charA9B4"><span class="uname">U+A9B4 JAVANESE VOWEL SIGN TARUNG</span></a>]</span>.</p>
-    <figure>
-    <img lang="jv" src="images/vs_either_side.png" alt="ꦏ" data-notes="62px yogyakarta">
-    <figcaption>The sound <span class="ipa">ko</span> is written with three characters.</figcaption>
-    </figure>
+
+<p>Unlike many other scripts, including Balinese, when vowels are created by adding multiple glyphs to a base character Javanese requires the user to type the parts separately. For example, the sound <span class="ipa">ko</span> is represented by <span class="codepoint" translate="no"><span lang="jv">&#xA98F;&#xA9BA;&#xA9B4;</span> [<a href="/scripts/javanese/block#charA98F"><span class="uname">U+A98F JAVANESE LETTER KA</span></a> + <a href="/scripts/javanese/block#charA9BA"><span class="uname">U+A9BA JAVANESE VOWEL SIGN TALING</span></a> + <a href="/scripts/javanese/block#charA9B4"><span class="uname">U+A9B4 JAVANESE VOWEL SIGN TARUNG</span></a>]</span>.</p>
+<figure>
+<img lang="jv" src="images/vs_either_side.png" alt="ꦏ" data-notes="62px yogyakarta">
+<figcaption>The sound <span class="ipa">ko</span> is written with three characters.</figcaption>
+</figure>
 
 <p>Vowels represented by combinations of the above characters:</p>
 
@@ -659,7 +653,7 @@
   <section id="consonants">
 <h2>Consonants</h2>
 
-<p>The 20 consonant letters used for pure Javanese words are supplemented by 1o more which are used as <mark>honorifics</mark>, a little like capital letters, and 5 more used in Sanskrit words. <mark>Repertoire extensions</mark> for 8 non-native sounds are achieved by applying the <span class="name">rerekan</span> diacritic to  characters.</p>
+<p>The 20 consonant letters used for pure Javanese words are supplemented by 1o more which are used as <mark>honorifics</mark>, a little like capital letters, and 5 more used in Sanskrit words. <mark>Repertoire extensions</mark> for 8 non-native sounds are achieved by applying the <span class="name">cecak telu</span> diacritic to  characters.</p>
 <p>Consonant clusters are  represented by <mark>stacked consonants</mark> (many subjoined consonants have alternative shapes) or <mark>conjoined pairs</mark>. Occasionally, a visible <span class="name">pangkon</span> is used.</p>
 <p>Stacked consonants and conjoined pairs <mark>span word boundaries</mark>.</p>
 <p><mark>Syllable-initial</mark> clusters use <mark>3 dedicated combining marks</mark> for the second consonant.</p>
