@@ -3,7 +3,7 @@ defList={
 
 "circumgraph": 'When a single vowel-sign code point produces glyphs on more than one side of the consonant base, it is referred to as a circumgraph.',
 
-"conjunct": 'When the the shapes of constituent consonants in a cluster are changed or merged to indicate a lack of intervening vowels, this is referred to as a <a class="termref" target="_blank" href="../glossary/#conjunct">conjunct</a>. Not all consonant clusters are displayed as conjuncts.',
+"compositevowel": 'A <a class="termref" target="_blank" href="../glossary/#compositevowel">composite vowel</a> is a single vowel sound or diphthong that is represented by more than one code point from the set of vowel-signs, repurposed consonants, and diacritics available.',
 
 "conjunct": 'A <a class="termref" target="_blank" href="../glossary/#conjunct">conjunct</a> is a consonant cluster where the lack of intervening vowels is indicated by one or more of stacking, changing and merging the shapes of the constituent letter forms (usually in abugidas). Not all consonant clusters are displayed as conjuncts.',
 
