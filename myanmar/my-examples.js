@@ -192,7 +192,7 @@ autoExpandExamples.my = `
 လက်ဝှေ့|boxing|lɛʔw̥ḛ
 အုတ်|brick|ʔoʊʔ
 နွမ်း|exhausted|nʊ́ɴ
-
+၎င်း|afore|‌ləɡàuɴ
 
 
 
