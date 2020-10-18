@@ -262,7 +262,7 @@ function makeTables (lang) {
         window.spreadsheetRows[items[0]] = ['0']
         for (let i=1;i<items.length;i++) window.spreadsheetRows[items[0]].push(items[i])
         }
-    //console.log(spreadsheetRows)
+    //console.log(spreadsheetRows) 
 
 
     var tables, node, chars, info, bicameral, out, char
@@ -409,13 +409,9 @@ function makeTables (lang) {
                 out += '<span class="listMeaning">'+ch+'</span>'
                 }
 
-            if (links.length > 0) {
-                if (links[i]) out += '<a href="'+links[i]+'">link</a>'
-                else out += '<span>&nbsp;</span>'
-                }
 
-			
-            // print the code point values
+
+			// print the code point values
             out += '<span class="listUnum">'
 			charList = [... chars[i]]
             for (let z=0;z<charList.length;z++) {
@@ -432,6 +428,19 @@ function makeTables (lang) {
                 }
                 out += '</span>'
 
+
+			// add any links
+            if (links.length > 0) {
+                if (links[i]) {
+					var linkList = links[i].split(' ')
+					for (let l=0;l<linkList.length;l++) {
+						out += '<a href="'+linkList[l]+'">↕</a>'
+						}
+					}
+                else out += '<span>&nbsp;</span>'
+                }
+
+			
 
             out += '</div>'
             }
@@ -602,9 +611,14 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
                 else ch = '&nbsp;'
                 out += '<span class="listMeaning">'+ch+'</span>'
                 }
-
+/*
             if (links.length > 0) {
                 if (links[i]) out += '<a href="'+links[i]+'">link</a>'
+                else out += '<span>&nbsp;</span>'
+                }
+*/
+            if (links.length > 0) {
+                if (links[i]) out += '<a href="'+links[i]+'"><img src="../../shared/images/info.png" alt="More information."></a>'
                 else out += '<span>&nbsp;</span>'
                 }
 
