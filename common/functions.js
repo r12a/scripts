@@ -433,9 +433,11 @@ function makeTables (lang) {
             if (links.length > 0) {
                 if (links[i]) {
 					var linkList = links[i].split(' ')
+					out += '<span class="links">'
 					for (let l=0;l<linkList.length;l++) {
-						out += '<a href="'+linkList[l]+'">↕</a>'
+						out += '<a href="'+linkList[l]+'">↓</a>'
 						}
+					out += '</span>'
 					}
                 else out += '<span>&nbsp;</span>'
                 }
