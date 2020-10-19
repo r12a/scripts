@@ -18,7 +18,7 @@ var contentPrompts = {
 
 "phrase":"What characters are used to indicate the boundaries of phrases, sentences, and sections?",
 
-"bracketing":"What characters or methods (eg. text decoration) are used to convey information about a range of text?\n• If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself?\n• Is it important to skip characters when underlining, etc?\n• How do things change for vertically set text?\n• (See also the following sections which deal with specific purposes.)",
+"otherinline":"Any other form of highlighting or marking of text, such as underlining, numeric overbars, etc. What characters or methods (eg. text decoration) are used to convey information about a range of text?\n• If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself?\n• Is it important to skip characters when underlining, etc?\n• How do things change for vertically set text?\n• (See also the following sections which deal with specific purposes.)",
 
 "quotations":"What characters are used to indicate quotations?\n• Do quotations within quotations use different characters?\n• What characters are used to indicate dialogue?",
 
@@ -26,7 +26,7 @@ var contentPrompts = {
 
 "emphasis":"How are emphasis and highlighting achieved?\n• If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself?\n• Is it important to skip characters when underlining, etc?\n• How do things change for vertically set text?",
 
-"otherinline":"Any other form of highlighting or marking of text, such as underlining, numeric overbars, etc.",
+"bracketing":"What parentheses or brackets are used?",
 
 "otherpunctuation":"Punctuation not already mentioned, such as dashes, connectors, separators, etc.",
 
