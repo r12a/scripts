@@ -38,7 +38,7 @@
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Canadian Aboriginal Syllabics/Eastern Canadian Inuktitut (draft)</h1>
+<h1>Canadian Aboriginal Syllabics/Eastern Canadian Inuktitut</h1>
 
 <nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="Jump to top of page." title="Jump to top of page."/></a></nav>
 
@@ -141,12 +141,13 @@
 
 <section id="type">
 <h2>Basic features</h2>
-    <p>The Unified Canadian Aboriginal Syllabary is, as the name says, a <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#syllabary">syllabary</a></span>, ie. each symbol typically represents both a consonant and a vowel.  See the table to the right for a brief overview of features for the modern Eastern Canadian Inuktitut orthography. (See the <a href="../../scripts/featurelist/#key">key</a>. Character counts exclude ASCII characters.)</p>
+<p>The Unified Canadian Aboriginal Syllabary is a <span class="newterm"><a class="termref" href="https://en.wikipedia.org/wiki/Featural_writing_system">featural syllabary</a></span>, ie. each symbol typically represents both a consonant and a vowel, but vowel components are indicated by  standardised rotations of the glyph shape.  See the table to the right for a brief overview of features for the modern Eastern Canadian Inuktitut orthography. (See the <a href="../../scripts/featurelist/#key">key</a>. Character counts exclude ASCII characters.)</p>
 <p>The Inuit languages can be written using the syllabic script, or using a Latin transcription. The former is widely used in eastern dialects, whereas the latter is more common in the west.</p>
-<p>The UCAS script runs left to right in horizontal lines.</p>
-<p>The majority of symbols in the syllabary represesent a CV pairing, and the symbol is rotated to indicate whether the vowel is  <span class="ipa">i</span>, <span class="ipa">u</span>, or <span class="ipa">a</span>, or in some dialects <span class="ipa">ai</span>. There is also a set of superscript symbols representing syllable-final consonants.</p>
-<p>A small dot above a symbol indicates a lengthened vowel, but there are precomposed code points for all combinations of base plus diacritics. Inuktitut uses no combining marks.</p>
-<p>Numbers are written using ASCII digits.</p>
+<p>The UCAS script runs <mark>left to right</mark> in <mark>horizontal lines</mark>.</p>
+<p>The majority of symbols in the syllabary represesent a CV pairing, and the <mark>symbol is rotated</mark> to indicate whether the vowel is <span class="ipa">i</span>, <span class="ipa">u</span>, or <span class="ipa">a</span>, or in some dialects <span class="ipa">ai</span>. </p>
+<p><mark>Syllable-final</mark> consonants (ie. not followed by a vowel), are represented by a set of <mark>superscript symbols</mark>. </p>
+<p>A small dot above a symbol indicates a lengthened vowel, but there are precomposed code points for all combinations of base plus diacritics. Inuktitut uses <mark>no combining marks</mark>.</p>
+<p>Numbers are written using <mark>ASCII digits</mark>.</p>
 </section>
 
 
@@ -430,7 +431,37 @@ alveolar</th>
 <section id="syllables">
 <h2>Syllables</h2>
 
+<section id="composition">
+<h3>Syllable composition</h3>
+
 <p>The core of the script is a set of V or CV syllables, and the superscripts used for syllable-final consonants.</p>
+<p>Each consonant can be followed by one of 4 vowel sounds (though not all combinations exist). The vowel sound for a given syllable is indicated by the rotation of the basic glyph. The illustration below is based on the <span class="trans">p</span> consonant.</p>
+
+<figure class="auto" data-cols="ipa,trans,transc">ᐱ␣ᐳ␣ᐸ␣ᐯ</figure>
+
+
+
+<p>The basic set of  syllable glyphs used for Inuktitut includes the following.</p>
+
+<figure class="auto" data-cols="ipa,trans">ᐸ␣ᑕ␣ᑲ␣ᒐ␣ᒪ␣ᓇ␣ᓴ␣ᓚ␣ᔭ␣ᕙ␣ᕋ␣ᖃ␣ᖓ␣ᖤ</figure>
+
+
+<p>There is also a set of standalone vowel glyphs, which can be seen below, and some special glyphs for consonant clusters.</p>
+
+<p>Three of the vowels have both short and long forms, the latter indicated by a dot diacritic.<a class="fnref" href="https://en.wikipedia.org/wiki/Help:IPA/Amharic"></a> These are all single precomposed codepoints. They don't decompose.</p>
+<p>Here is the complete set of syllables beginning with the sound <span class="ipa">p</span>.</p>
+
+<figure class="auto" data-cols="ipa,trans">ᐱ␣ᐲ␣ᐳ␣ᐴ␣ᐸ␣ᐹ␣ᐯ␣ᑉ</figure>
+
+
+
+<p>The last symbol just above is a superscript, usually visually similar to the <span class="trans">-a</span> syllable, which indicates a consonant sound without a following vowel. These glyphs are used for the syllable-final consonants, which occur in (C)VC sequences.</p>
+
+
+
+
+
+<figure id="fig_matrix">
 <table>
 <thead>
 <tr>
@@ -565,7 +596,8 @@ alveolar</th>
 </tr>
 </tbody>
 </table>
-
+<figcaption>The core syllables for Inuktitut, arranged in matrix form.</figcaption>
+</figure>
 
 <!--table>
 <thead>
@@ -761,18 +793,45 @@ alveolar</th>
 </tbody>
 </table-->
 
-<p>Pronunciations of words and their suffixes can vary from dialect to dialect but, with the exception of the <span class="ipa">s~h</span> distinction, words are generally written as they are pronounced.</p>
-<p>In the series <span class="ex" lang="ike">ᓯᓱᓴ</span>, each syllable starts with the sound <span class="ipa">s</span> in eastern (Qikiqtaaluk) dialects. In western dialects, the pronunciation of the same symbols begins with <span class="ipa">h</span>.</p>
-<p>Long vowels are indicated visually by a dot diacritic, eg. <span class="charExample" translate="no"><span class="ex" lang="ike">ᐱ</span> <span class="trans">pⁱ</span> <span class="ipa">pi</span></span> vs <span class="charExample" translate="no"><span class="ex" lang="ike">ᐲ</span> <span class="trans">pⁱ̠</span> <span class="ipa">piː</span></span>, but Unicode encodes these glyph combinations as separate, precomposed code points. They don't decompose.</p>
+<p>Pronunciations of words and their suffixes can vary from dialect to dialect but, with the exception of the <span class="ipa">s~h</span> distinction, words are generally written as they are pronounced. In the series <span class="ex" lang="ike">ᓯᓱᓴ</span>, each syllable starts with the sound <span class="ipa">s</span> in eastern (Qikiqtaaluk) dialects, but in western dialects, the pronunciation of the same symbols begins with <span class="ipa">h</span>.</p>
 <p>The <span class="ipa">-ai</span> vowels were initially dropped due to typewriter-related constraints, but have recently been reintroduced in Nunavik. <span class="charExample" translate="no"><span class="ex" lang="ike">ᐯ</span> <span class="trans">pᵃⁱ</span> <span class="ipa">pai</span></span> would be spelled <span class="charExample" translate="no"><span class="ex" lang="ike">ᐸᐃ</span> <span class="trans">pᵃi</span> <span class="ipa">pai</span></span> in Nunavut.<a class="fnref" href="http://www.languagegeek.com/inu/inu_syllabarium.html">i</a></p>
+</section>
 
-<p>Some addition symbols are described below.</p>
+
+
+
+<section id="basic">
+<h3>Inuktitut syllables</h3>
+
+<section id="stops">
+<h4>Stops</h4>
+<figure class="characterBox auto" data-cols="ipa,trans">ᐱ␣ᐲ␣ᐳ␣ᐴ␣ᐸ␣ᐹ␣ᐯ␣ᑎ␣ᑏ␣ᑐ␣ᑑ␣ᑕ␣ᑖ␣ᑌ␣ᑭ␣ᑮ␣ᑯ␣ᑰ␣ᑲ␣ᑳ␣ᑫ␣ᕿ␣ᖀ␣ᖁ␣ᖂ␣ᖃ␣ᖄ␣ᙯ</figure>
+</section>
+
+
+
+<section id="fricatives">
+<h4>Fricatives</h4>
+<figure class="characterBox auto" data-cols="ipa,trans">ᕕ␣ᕖ␣ᕗ␣ᕘ␣ᕙ␣ᕚ␣ᕓ␣ᓯ␣ᓰ␣ᓱ␣ᓲ␣ᓴ␣ᓵ␣ᓭ␣ᖠ␣ᖡ␣ᖢ␣ᖣ␣ᖤ␣ᖥ␣ᒋ␣ᒌ␣ᒍ␣ᒎ␣ᒐ␣ᒑ␣ᒉ</figure>
+</section>
+
+
+<section id="nasals">
+<h4>Nasals</h4>
+<figure class="characterBox auto" data-cols="ipa,trans">ᒥ␣ᒦ␣ᒧ␣ᒨ␣ᒪ␣ᒫ␣ᒣ␣ᓂ␣ᓃ␣ᓄ␣ᓅ␣ᓇ␣ᓈ␣ᓀ␣ᖏ␣ᖐ␣ᖑ␣ᖒ␣ᖓ␣ᖔ␣ᙰ</figure>
+</section>
+
+
+<section id="liquids">
+<h4>Liquids</h4>
+<figure class="characterBox auto" data-cols="ipa,trans">ᕆ␣ᕇ␣ᕈ␣ᕉ␣ᕋ␣ᕌ␣ᕃ␣ᓕ␣ᓖ␣ᓗ␣ᓘ␣ᓚ␣ᓛ␣ᓓ␣ᔨ␣ᔩ␣ᔪ␣ᔫ␣ᔭ␣ᔮ␣ᔦ</figure>
+</section>
 
 
 
 
 <section id="vowels">
-<h3>Vowel-only syllables</h3>
+<h4>Standalone vowels</h4>
 
 <figure class="characterBox auto" data-cols="ipa,trans">ᐃ␣ᐄ␣ᐅ␣ᐆ␣ᐊ␣ᐋ␣ᐁ</figure>
 </section>
@@ -780,28 +839,11 @@ alveolar</th>
 
 
 
-<section id="basic">
-<h3>Basic CV syllables</h3>
-
-<figure class="characterBox auto" data-cols="ipa,trans">ᐱ␣ᐲ␣ᐳ␣ᐴ␣ᐸ␣ᐹ␣ᐯ␣ᑎ␣ᑏ␣ᑐ␣ᑑ␣ᑕ␣ᑖ␣ᑌ␣ᑭ␣ᑮ␣ᑯ␣ᑰ␣ᑲ␣ᑳ␣ᑫ␣ᒋ␣ᒌ␣ᒍ␣ᒎ␣ᒐ␣ᒑ␣ᒉ␣ᕿ␣ᖀ␣ᖁ␣ᖂ␣ᖃ␣ᖄ␣ᙯ</figure>
-
-<figure class="characterBox auto" data-cols="ipa,trans">ᕕ␣ᕖ␣ᕗ␣ᕘ␣ᕙ␣ᕚ␣ᕓ␣ᓯ␣ᓰ␣ᓱ␣ᓲ␣ᓴ␣ᓵ␣ᓭ␣ᖠ␣ᖡ␣ᖢ␣ᖣ␣ᖤ␣ᖥ</figure>
-
-<figure class="characterBox auto" data-cols="ipa,trans">ᒥ␣ᒦ␣ᒧ␣ᒨ␣ᒪ␣ᒫ␣ᒣ␣ᓂ␣ᓃ␣ᓄ␣ᓅ␣ᓇ␣ᓈ␣ᓀ␣ᖏ␣ᖐ␣ᖑ␣ᖒ␣ᖓ␣ᖔ␣ᙰ</figure>
-
-<figure class="characterBox auto" data-cols="ipa,trans">ᕆ␣ᕇ␣ᕈ␣ᕉ␣ᕋ␣ᕌ␣ᕃ␣ᓕ␣ᓖ␣ᓗ␣ᓘ␣ᓚ␣ᓛ␣ᓓ␣ᔨ␣ᔩ␣ᔪ␣ᔫ␣ᔭ␣ᔮ␣ᔦ</figure>
-</section>
-
-
-
-
-
 <section id="finals">
-<h3>Final consonants</h3>
+<h4>Final consonants</h4>
 
-<p>The following glyphs are used for the syllable-final consonants, which occur in CVC sequences.</p>
 
-<figure class="characterBox auto" data-cols="ipa, trans">ᑉ␣ᑦ␣ᒃ␣ᒡ␣ᖅ␣ᕝ␣ᔅ␣ᖦ␣ᒻ␣ᓐ␣ᖕ␣ᕐ␣ᓪ␣ᔾ</figure>
+<figure class="characterBox auto" data-cols="ipa, trans">ᑉ␣ᑦ␣ᒃ␣ᒡ␣ᖅ␣ᕝ␣ᔅ␣ᖦ␣ᒻ␣ᓐ␣ᖕ␣ᕐ␣ᓪ␣ᔾ</figure></section>
 </section>
 
 
@@ -817,6 +859,18 @@ alveolar</th>
 <p><span class="codepoint" translate="no"><span lang="ike">&#x15AF;</span> [<a href="/scripts/cans/block#char15AF"><span class="uname">U+15AF CANADIAN SYLLABICS AIVILIK B</span></a>]</span> is used to represent sounds from Inuvialuktun dialects or borrowed words from other languages. &nbsp;It represents a <span class="ipa">b</span> sound in <span class="ipa">bl</span> or <span class="ipa">bj.</span> This sound may also be written using <span class="codepoint" translate="no"><span lang="ike">&#x1449;</span> [<a href="/scripts/cans/block#char1449"><span class="uname">U+1449 CANADIAN SYLLABICS P</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ike">ᐅᑉᓛᖅ</span> <span class="trans">uplᵃ̱q</span> <span class="ipa">ublaːq</span> <span class="meaning">morning</span></span>.<a class="fnref" href="http://www.languagegeek.com/inu/inu_syllabarium.html">i</a></p>
 <p><span class="codepoint" translate="no"><span lang="ike">&#x157C;</span> [<a href="/scripts/cans/block#char157C"><span class="uname">U+157C CANADIAN SYLLABICS NUNAVUT H</span></a>]</span> is used to represent a borrowed <span class="ipa">h</span> in eastern dialects, eg. <span class="charExample" translate="no"><span class="ex" lang="ike">ᕼᐋᑭᕐᕕᒃ</span> <span class="trans">ʜākⁱrvⁱk</span> <span class="ipa">haːkiʁvik</span> <span class="meaning">hockey arena</span></span>. In western dialects, the <span class="trans">s-</span> series produces this sound, so <span class="codepoint" translate="no"><span lang="ike">&#x14F5;</span> [<a href="/scripts/cans/block#char14F5"><span class="uname">U+14F5 CANADIAN SYLLABICS SAA</span></a>]</span> can be used.<a class="fnref" href="http://www.languagegeek.com/inu/inu_syllabarium.html">i</a></p>
 <p><span class="leadin">Glottal stop.</span> As mentioned earlier, several dialects have a glottal stop, <span class="ipa">ʔ</span>, that replaces an original phoneme. Many writers simply use the original phoneme: others use the apostrophe in both Latin and syllabics, eg. <span class="charExample" translate="no"><span class="ex" lang="ike">ᑐᐱᕐᒥ</span> <span class="trans">tᵘpⁱrmⁱ</span> <span class="ipa">tupiʁmi</span></span> vs <span class="charExample" translate="no"><span class="ex" lang="ike">ᑐᐱˈᒥ</span> <span class="trans">tᵘpⁱˈmⁱ</span> <span class="ipa">tupiʔmi</span></span>, meaning <span class="meaning">in a tent</span>.<a class="fnref" href="http://www.inuktitutcomputing.ca/Technocrats/ILFT_1.html">m</a></p>
+</section>
+
+
+
+
+
+<section id="rare">
+<h3>Rare characters</h3>
+
+<p>Mills describes an <span class="trans">h-</span> series of syllables that is sometimes used in Nunavit.<a class="fnref" href="http://tiro.com/Ross/Canadian_Native_Languages_V1.2.pdf">r</a></p>
+
+<figure class="auxiliaryBox auto" data-cols="ipa,trans">ᕵ␣ᕶ␣ᕷ␣ᕸ␣ᕹ␣ᕺ␣ᕴ␣ᕻ</figure>
 </section>
 
 
@@ -848,19 +902,6 @@ alveolar</th>
 
 <p>The following may cause some confusion.</p>
 <p><span class="charExample" translate="no"><span class="ex" lang="ike">ᖕᒋ</span> <span class="trans">ŋgⁱ</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ike">ᑭᒍᑕᖕᒋᕐᓇᖅ</span> <span class="trans">kⁱgᵘtᵃŋgⁱrnᵃq</span> <span class="ipa">kigutanggiʁnaq</span> <span class="meaning">blueberry</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="ike">ᖏ</span> <span class="trans">ŋⁱ</span></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ike">ᑲᖏᖅᑐᒃ</span> <span class="trans">kᵃŋⁱqtᵘk</span> <span class="ipa">kaŋiqtuk</span> <span class="meaning">inlet, fjord</span></span>, look the same.</p>
-</section>
-
-
-
-
-
-<section id="rare">
-<h3>Rare characters</h3>
-
-<p>Mills describes an <span class="trans">h-</span> series of syllables that is sometimes used in Nunavit.<a class="fnref" href="http://tiro.com/Ross/Canadian_Native_Languages_V1.2.pdf">r</a></p>
-
-<figure class="auxiliaryBox auto" data-cols="ipa,trans">ᕵ␣ᕶ␣ᕷ␣ᕸ␣ᕹ␣ᕺ␣ᕴ␣ᕻ</figure>
-
 </section>
 </section>
 
