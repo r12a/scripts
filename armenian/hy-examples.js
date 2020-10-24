@@ -5,8 +5,8 @@ autoExpandExamples.hy = `
 և|and|jev
 նաև|also|najev
 ևվրոպական|european|jevropakan
-համաևվրոպական|all-european|hamevropakan
-հնդևվրոպական|Indo-European|hᵊndevropakan
+համաեվրոպական|all-european|hamaevropakan
+հնդեվրոպական|Indo-European|hᵊndevropakan
 արև|sun|arev
 
 
