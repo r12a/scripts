@@ -31,14 +31,14 @@ function initialise () {
 	}
 
 
-function showText () {
+function showText (all=false, none=false, find=false) {
 	// check whether you want to highlight all
-	if (document.getElementById('searchItems').value === 'all') {
+	if (all) {
 		document.getElementById('out').innerHTML = document.getElementById('in').value
 		document.getElementById('out').style.color = window.highlightColour
 		}
 	// or highlight none
-	else if (document.getElementById('searchItems').value === '') {
+	else if (none) {
 		document.getElementById('out').innerHTML = document.getElementById('in').value
 		document.getElementById('out').style.color = window.textColour
 		}
@@ -51,12 +51,23 @@ function showText () {
 		textArray = [...theText]
 
 		var out = ''
+		var counter = 0
+		var foundList = ''
 		for (let i=0;i<textArray.length;i++) {
-			if (searchSet.has(textArray[i])) out += '<span style="color:'+window.highlightColour+';">'+textArray[i]+'</span>'
+			// add special highlight for find, and increment counter
+			if (searchSet.has(textArray[i]) && find===true) {
+				out += '<span style="color:'+window.highlightColour+';"><span style="color:fuchsia;">→</span>'+textArray[i]+'<span style="color:fuchsia;">←</span></span>'
+				counter ++
+				foundList += textArray[i]+' '
+				}
+			// otherwise, just use indicated highlight colour
+			else if (searchSet.has(textArray[i])) out += '<span style="color:'+window.highlightColour+';">'+textArray[i]+'</span>'
 			else out += textArray[i]
 			}
 
 		document.getElementById('out').innerHTML = out
+		if (find) document.getElementById('find_report').textContent = 'Items found: '+counter+' \u00A0\u00A0 '+foundList
+		else document.getElementById('find_report').textContent = ''
 		}
 	}
 </script>
@@ -77,7 +88,13 @@ Highlight colour: <input type="text" id="highlightColour" value="chocolate" styl
     <input id="lineheightSlider" type="range" min=".5" max="4" step=".1" value="1.4" oninput="document.getElementById('out').style.lineHeight = this.value; document.getElementById('lineheightIndicator').textContent = this.value;" style="width:10em;">
   </p>
 <p>Character(s) to highlight: <input type="text" placeholder="Comma-separated list." id="searchItems" onchange="showText()"></p>
-<p><button onClick="showText()">GO</button></p>
+<p>
+<button onClick="showText()">Show highlights</button>
+<button onClick="showText(false,true,false)">Highlight none</button>
+<button onClick="showText(true,false,false)">Highlight all</button>
+<button onClick="showText(false,false,true)">Find characters</button>
+</p>
+<p id="find_report" style="font-size: 70%; font-style: italic; color: chocolate;"></p>
 
 
 <p dir="auto" id="out" style="text-align: start; font-size:40px; color: black;"></p>
