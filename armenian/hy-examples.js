@@ -1,9 +1,15 @@
 autoExpandExamples.hy = `
 
-ስም|name|sɨm
-አየሩ|the weather|əyyəru
-ኢትዮጵያ|Ethiopia|ʾītyōṗṗyā
-ማቴ4፥23|Matt 4:23
+Եվրոպա|Europe|jevropa||Eastern
+Եւրոպա|Europe|jevropa||Western
+և|and|jev
+նաև|also|najev
+ևվրոպական|european|jevropakan
+համաևվրոպական|all-european|hamevropakan
+հնդևվրոպական|Indo-European|hᵊndevropakan
+արև|sun|arev
+
+
 
 `
 
