@@ -18,6 +18,11 @@ autoExpandExamples.mn = `
 ᠵᠣᠷᠲᠠᠢ|lucky
 ᠸᠢᠺᠢᠫᠧᠳᠢᠶᠠ|Wikipedia
 ᠼᠠᠭᠠᠨ|white
+ᠨᠠᠢ᠍ᠮᠠ|eight|naima
+ᠺᠢᠨᠣ᠋|theatre (archaic form)|kino
+ᠪᠠᠷᠰ᠋|tigers|bars
+
+
 
 `
 
