@@ -5,7 +5,7 @@ function initialiseSummary (base, lang, tableName, dir) {
     makeTables(lang)
 	if (typeof addExamples !== 'undefined') addExamples(lang)
     initialiseShowNames(base, 'c')
-    document.getElementById('featureTableBody').innerHTML = makeSidePanel(tableName,"")
+    document.getElementById('features').innerHTML = makeSidePanel(tableName,"")
     createtoc(3)
 	removeEditorNotes()
 	addDefinitions()
@@ -146,7 +146,8 @@ function makeSidePanel (id, otherlinks) {
 	
 	total = letters + marks + punctuation + symbols + others + numbers 
 	
-	var out = ''
+	var out = '<table>'
+	out += '<tbody id="featureTableBody">'
 	out += '<tr><th>Script code</th><td>'+langs[id].script+'</td></tr>'
 	out += '<tr><th>Language code</th><td>'+id+'</td></tr>'
 	out += '<tr><th>Script type</th><td class="tableHighlight">'+langs[id].type+'</td></tr>'
@@ -236,11 +237,23 @@ function makeSidePanel (id, otherlinks) {
 	
 	out += '<tr><th>Region</th><td>'+langs[id].region+'</td></tr>'
 	
+	
+	
+	out += '</tbody>'
+	out += '</table>'
+
+	out += '<p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>'
+	out += '<p class="ctlink"><a href="../featurelist/#key">See the key</a></p>'
+	
 	langs = {}
 	
 	return out
 	}
 	
+
+
+
+
 
 
 function makeTables (lang) {
