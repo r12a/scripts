@@ -1,0 +1,795 @@
+/*
+<!DOCTYPE html>
+<meta charset="utf-8">
+*/
+
+var charDetails = {
+
+'\u{0900}': `
+<p class="insertTranscription">&#x0900;</p>
+`,
+
+'\u{0901}': `
+<p class="insertTranscription">&#x0901;</p>
+<p><span class="codepoint" translate="no"><span lang="hi">&#x0901;</span> [<a href="devanagari#char0901"><span class="uname">U+0901 DEVANAGARI SIGN CANDRABINDU</span></a>]</span> nasalises the vowel in a syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">मुँह</span> <span class="trans">muŋ̽h</span> <span class="meaning">mouth</span></span>. Any vowel in Hindi can be nasalised in this way, except for the vocalics. <a class="fnref" href="refs">s</a></p>
+<p>When a vowel-sign rises above the head line, the glyph for this character may be simplified to  just a dot (which resembles the anusvara).<a class="fnref" href="refs"> s</a> It appears that this is normally achieved by using an anusvara instead of candrabindu, eg. <span class="eg" lang="hi">हैं</span>.</p>
+`,
+
+'\u{0902}': `
+<p class="insertTranscription">&#x0902;</p>
+<p>Can represent a nasal that is homorganic with a following consonant that is the first letter in a conjunct. It is positioned over the previous consonant, eg. <span class="eg" lang="hi">हिंदी</span>.</p>
+<p>Most words that use the anusvara can also be written using the consonant itself, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">हिन्दी</span> <span class="trans">hin͓dī</span></span>, although in some cases the anusvara form is more common. For example, <span class="eg" lang="hi">पंजाब</span> is much more common than <span class="charExample" translate="no"><span class="ex" lang="hi">पञ्जाब</span> <span class="trans">pɲ͓jāb</span></span>.</p>
+`,
+
+'\u{0903}': `
+<p class="insertTranscription">&#x0903;</p>
+<p>Voiceless <span class="ipa">h</span> used after a vowel, usually at the end of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">छः</span> <span class="trans">cʰh̽ (cʰəh̽)</span> <span class="meaning">six</span></span>, <span class="charExample" translate="no"><span class="ex" lang="hi">दुःख</span> <span class="trans">duh̽kʰ</span> <span class="meaning">grief</span></span>. Mostly limited to Sanskrit loan words.</p>
+`,
+
+'\u{0904}': `
+<p class="insertTranscription">&#x0904;</p>
+`,
+
+'\u{0905}': `
+<p class="insertTranscription">&#x0905;</p>
+<p class="vowelPairing">There is no vowel sign for this letter, as it is the inherent vowel.</p>
+`,
+
+'\u{0906}': `
+<p class="insertTranscription">&#x0906;</p>
+`,
+
+'\u{0907}': `
+<p class="insertTranscription">&#x0907;</p>
+`,
+
+'\u{0908}': `
+<p class="insertTranscription">&#x0908;</p>
+`,
+
+'\u{0909}': `
+<p class="insertTranscription">&#x0909;</p>
+`,
+
+'\u{090A}': `
+<p class="insertTranscription">&#x090A;</p>
+`,
+
+'\u{090B}': `
+<p class="insertTranscription">&#x090B;</p>
+`,
+
+'\u{090C}': `
+<p class="insertTranscription">&#x090C;</p>
+`,
+
+'\u{090D}': `
+<p class="insertTranscription">&#x090D;</p>
+`,
+
+'\u{090E}': `
+<p class="insertTranscription">&#x090E;</p>
+`,
+
+'\u{090F}': `
+<p class="insertTranscription">&#x090F;</p>
+`,
+
+'\u{0910}': `
+<p class="insertTranscription">&#x0910;</p>
+`,
+
+'\u{0911}': `
+<p class="insertTranscription">&#x0911;</p>
+`,
+
+'\u{0912}': `
+<p class="insertTranscription">&#x0912;</p>
+`,
+
+'\u{0913}': `
+<p class="insertTranscription">&#x0913;</p>
+`,
+
+'\u{0914}': `
+<p class="insertTranscription">&#x0914;</p>
+`,
+
+'\u{0915}': `
+<p class="insertTranscription">&#x0915;</p>
+<p>eg. <span class="eg" lang="hi">कोड</span>.</p>
+<p><span class="ipa">q</span> when followed by <span class="codepoint"><span lang="hi">&#x093C;</span> <a href="#char093C">[<span class="uname">U+093C DEVANAGARI SIGN NUKTA</span>]</a></span>. See <span class="codepoint"><span lang="hi">&#x0958;</span> <a href="#char0958">[<span class="uname">U+0958 DEVANAGARI LETTER QA</span>]</a></span>, but note that  Unicode NFC normalization produces the decomposed sequence. </p>
+`,
+
+'\u{0916}': `
+<p class="insertTranscription">&#x0916;</p>
+<p><span class="ipa">x</span> when followed by <span class="codepoint"><span lang="hi">&#x093C;</span> <a href="#char093C">[<span class="uname">U+093C DEVANAGARI SIGN NUKTA</span>]</a></span>. See <span class="codepoint"><span lang="hi">ख़</span> <a href="#char0959">[<span class="uname">U+0959 DEVANAGARI LETTER KHHA</span>]</a></span>, but note that  Unicode NFC normalization produces the decomposed sequence.</p>
+`,
+
+'\u{0917}': `
+<p class="insertTranscription">&#x0917;</p>
+<p><span class="ipa">ɣ</span> when followed by <span class="codepoint"><span lang="hi">&#x093C;</span> <a href="#char093C">[<span class="uname">U+093C DEVANAGARI SIGN NUKTA</span>]</a></span>. See <span class="codepoint"><span lang="hi">&#x095A;</span> <a href="#char095A">[<span class="uname">U+095A DEVANAGARI LETTER GHHA</span>]</a></span>, but note that  Unicode NFC normalization produces the decomposed sequence.</p>
+`,
+
+'\u{0918}': `
+<p class="insertTranscription">&#x0918;</p>
+`,
+
+'\u{0919}': `
+<p class="insertTranscription">&#x0919;</p>
+<p>Used only with a velar consonant. Rarely seen in Hindi.<sup>2 p9</sup></p>
+`,
+
+'\u{091A}': `
+<p class="insertTranscription">&#x091A;</p>
+`,
+
+'\u{091B}': `
+<p class="insertTranscription">&#x091B;</p>
+`,
+
+'\u{091C}': `
+<p class="insertTranscription">&#x091C;</p>
+<p><span class="ipa">z</span> when followed by <span class="codepoint"><span lang="hi">&#x093C;</span> <a href="#char093C">[<span class="uname">U+093C DEVANAGARI SIGN NUKTA</span>]</a></span>. See <span class="codepoint"><span lang="hi">&#x095B;</span> <a href="#char095B">[<span class="uname">U+095B DEVANAGARI LETTER ZA</span>]</a></span>, but note that  Unicode NFC normalization produces the decomposed sequence.</p>
+`,
+
+'\u{091D}': `
+<p class="insertTranscription">&#x091D;</p>
+<p><span class="ipa">ʒ</span> when followed by <span class="codepoint"><span lang="hi">&#x093C;</span> <a href="#char093C">[<span class="uname">U+093C DEVANAGARI SIGN NUKTA</span>]</a></span>. (There is no precomposed version of this sequence.)</p>
+`,
+
+'\u{091E}': `
+<p class="insertTranscription">&#x091E;</p>
+`,
+
+'\u{091F}': `
+<p class="insertTranscription">&#x091F;</p>
+`,
+
+'\u{0920}': `
+<p class="insertTranscription">&#x0920;</p>
+`,
+
+'\u{0921}': `
+<p class="insertTranscription">&#x0921;</p>
+<p><span class="ipa">ɾ</span> when followed by <span class="codepoint"><span lang="hi">&#x093C;</span> <a href="#char093C">[<span class="uname">U+093C DEVANAGARI SIGN NUKTA</span>]</a></span>. See <span class="codepoint"><span lang="hi">&#x095C;</span> <a href="#char095C">[<span class="uname">U+095C DEVANAGARI LETTER DDDHA</span>]</a></span>, but note that  Unicode NFC normalization produces the decomposed sequence.</p>
+`,
+
+'\u{0922}': `
+<p class="insertTranscription">&#x0922;</p>
+<p><span class="ipa">ɾʰ</span> when followed by <span class="codepoint"><span lang="hi">&#x093C;</span> <a href="#char093C">[<span class="uname">U+093C DEVANAGARI SIGN NUKTA</span>]</a></span>. See <span class="codepoint"><span lang="hi">&#x095D;</span> <a href="#char095D">[<span class="uname">U+095D DEVANAGARI LETTER RHA</span>]</a></span>, but note that  Unicode NFC normalization produces the decomposed sequence.</p>
+`,
+
+'\u{0923}': `
+<p class="insertTranscription">&#x0923;</p>
+`,
+
+'\u{0924}': `
+<p class="insertTranscription">&#x0924;</p>
+`,
+
+'\u{0925}': `
+<p class="insertTranscription">&#x0925;</p>
+`,
+
+'\u{0926}': `
+<p class="insertTranscription">&#x0926;</p>
+`,
+
+'\u{0927}': `
+<p class="insertTranscription">&#x0927;</p>
+`,
+
+'\u{0928}': `
+<p class="insertTranscription">&#x0928;</p>
+<p class="titlepara">See also <span class="codepoint"><span lang="hi">&#x0929;</span> <a href="#char0929">[<span class="uname">U+0929 DEVANAGARI LETTER NNNA</span>]</a></span>.</p>
+`,
+
+'\u{0929}': `
+<p class="insertTranscription">&#x0929;</p>
+<p class="charDescription">Unlike most other Devanagari characters with nukta, although this decomposes to two characters, Unicode NFC produces this precomposed character.</p>
+`,
+
+'\u{092A}': `
+<p class="insertTranscription">&#x092A;</p>
+`,
+
+'\u{092B}': `
+<p class="insertTranscription">&#x092B;</p>
+<p><span class="ipa">f</span> when followed by <span class="codepoint"><span lang="hi">&#x093C;</span> <a href="#char093C">[<span class="uname">U+093C DEVANAGARI SIGN NUKTA</span>]</a></span>. See <span class="codepoint"><span lang="hi">&#x095E;</span> <a href="#char095E">[<span class="uname">U+095E DEVANAGARI LETTER FA</span>]</a></span>, but note that  Unicode NFC normalization produces the decomposed sequence.</p>
+`,
+
+'\u{092C}': `
+<p class="insertTranscription">&#x092C;</p>
+`,
+
+'\u{092D}': `
+<p class="insertTranscription">&#x092D;</p>
+`,
+
+'\u{092E}': `
+<p class="insertTranscription">&#x092E;</p>
+`,
+
+'\u{092F}': `
+<p class="insertTranscription">&#x092F;</p>
+<p><span class="ipa">? </span>when followed by <span class="codepoint"><span lang="hi">&#x093C;</span> <a href="#char093C">[<span class="uname">U+093C DEVANAGARI SIGN NUKTA</span>]</a></span>. See <span class="codepoint"><span lang="hi">&#x095F;</span> <a href="#char095F">[<span class="uname">U+095F DEVANAGARI LETTER YYA</span>]</a></span>, but note that  Unicode NFC normalization produces the decomposed sequence.</p>
+`,
+
+'\u{0930}': `
+<p class="insertTranscription">&#x0930;</p>
+`,
+
+'\u{0931}': `
+<p class="insertTranscription">&#x0931;</p>
+<p class="charDescription">Unlike most other Devanagari characters with nukta, although this decomposes to two characters, Unicode NFC produces this precomposed character.</p>
+`,
+
+'\u{0932}': `
+<p class="insertTranscription">&#x0932;</p>
+`,
+
+'\u{0933}': `
+<p class="insertTranscription">&#x0933;</p>
+`,
+
+'\u{0934}': `
+<p class="insertTranscription">&#x0934;</p>
+`,
+
+'\u{0935}': `
+<p class="insertTranscription">&#x0935;</p>
+<p><span class="ipa">v</span> and <span class="ipa">w</span>  allophones  are both represented by this letter in Hindi. Compare <span class="eg" lang="hi">व्रत</span> and <span class="eg" lang="hi">पकवान</span>. Native speakers tend to use the correct pronunciation without awareness of the difference. <a class="fnref" href="https://en.wikipedia.org/wiki/Devanagari#Allophony_of_'v'_and_'w'_in_Hindi">w</a></p>
+`,
+
+'\u{0936}': `
+<p class="insertTranscription">&#x0936;</p>
+`,
+
+'\u{0937}': `
+<p class="insertTranscription">&#x0937;</p>
+`,
+
+'\u{0938}': `
+<p class="insertTranscription">&#x0938;</p>
+`,
+
+'\u{0939}': `
+<p class="insertTranscription">&#x0939;</p>
+`,
+
+'\u{093A}': `
+<p class="insertTranscription">&#x093A;</p>
+`,
+
+'\u{093B}': `
+<p class="insertTranscription">&#x093B;</p>
+`,
+
+'\u{093C}': `
+<p class="insertTranscription">&#x093C;</p>
+<p>Adapts a consonant to represent a non-native sound. See the following Hindi consonants, but note that these are normally represented by the combination of nukta with the consonant. (There are more in the Devanagari block.)</p>
+<ul>
+<li><span class="codepoint" translate="no"><span lang="hi">&#x0958;</span> [<a href="devanagari#char0958"><span class="uname">U+0958 DEVANAGARI LETTER QA</span></a>]</span> <span class="trans">q</span></li>
+<li><span class="codepoint" translate="no"><span lang="hi">&#x0959;</span> [<a href="devanagari#char0959"><span class="uname">U+0959 DEVANAGARI LETTER KHHA</span></a>]</span> <span class="trans">x</span></li>
+<li><span class="codepoint" translate="no"><span lang="hi">&#x095A;</span> [<a href="devanagari#char095A"><span class="uname">U+095A DEVANAGARI LETTER GHHA</span></a>]</span> <span class="trans">ɣ</span></li>
+<li><span class="codepoint" translate="no"><span lang="hi">&#x095C;</span> [<a href="devanagari#char095C"><span class="uname">U+095C DEVANAGARI LETTER DDDHA</span></a>]</span> <span class="trans">ɾ</span></li>
+<li> &nbsp;<span class="codepoint" translate="no"><span lang="hi">&#x095D;</span> [<a href="devanagari#char095D"><span class="uname">U+095D DEVANAGARI LETTER RHA</span></a>]</span> <span class="trans">ɾʰ</span></li>
+<li><span class="codepoint" translate="no"><span lang="hi">&#x095E;</span> [<a href="devanagari#char095E"><span class="uname">U+095E DEVANAGARI LETTER FA</span></a>]</span> <span class="trans">f</span></li>
+<li><span class="codepoint" translate="no"><span lang="hi">&#x095B;</span> [<a href="devanagari#char095B"><span class="uname">U+095B DEVANAGARI LETTER ZA</span></a>]</span> <span class="trans">z</span>&nbsp;</li>
+</ul>
+<p>In the sequence of characters, this comes immediately after the consonant, and <em>before</em> any combining vowel-sign or diacritic associated with a character.</p>
+`,
+
+'\u{093D}': `
+<p class="insertTranscription">&#x093D;</p>
+<p>A Sanskrit punctuation mark for the elision of a vowel in sandhi: <span class="charExample" translate="no"><span class="ex" lang="hi">एकोऽयम्</span> <span class="trans">ẹ̄kō´ym͓</span> <span class="meaning">this one</span></span> from <span class="charExample"><span class="trans">ekas+ayam</span></span>. <a class="fnref" href="https://en.wikipedia.org/wiki/Devanagari">w</a></p>
+<p>An original long vowel lost to coalescence is sometimes marked with a double avagraha, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">सदाऽऽत्मा</span> <span class="trans">sdā´´t͓mā</span> <span class="meaning">always</span></span> from <span class="trans">sadā+ātmā</span>. <a class="fnref" href="https://en.wikipedia.org/wiki/Devanagari">w</a></p>
+<p>In Hindi, Snell states that its main function is to show that a vowel is sustained in a cry or a shout, eg.  <span class="charExample" translate="no"><span class="ex" lang="hi">आईऽऽऽ!</span> <span class="trans">ạ̄ị̄´´´!</span></span> <a class="fnref" href="https://en.wikipedia.org/wiki/Devanagari">w</a></p>
+<p>In Madhyadeshi languages like Bhojpuri, Awadhi, Maithili, etc. which have quite a number of verbal forms that end in that inherent vowel, the avagraha is used to mark the <em>non-elision</em> of word-final inherent <span class="trans">a</span>, which otherwise is a modern orthographic convention, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">बइठऽ</span> <span class="trans">bịʈʰ´</span> <span class="meaning">sit</span></span> versus <span class="charExample" translate="no"><span class="ex" lang="hi">बइठ</span> <span class="trans">bịʈʰ</span></span>. <a class="fnref" href="https://en.wikipedia.org/wiki/Devanagari">w</a></p>
+`,
+
+'\u{093E}': `
+<p class="insertTranscription">&#x093E;</p>
+`,
+
+'\u{093F}': `
+<p class="insertTranscription">&#x093F;</p>
+`,
+
+'\u{0940}': `
+<p class="insertTranscription">&#x0940;</p>
+`,
+
+'\u{0941}': `
+<p class="insertTranscription">&#x0941;</p>
+`,
+
+'\u{0942}': `
+<p class="insertTranscription">&#x0942;</p>
+`,
+
+'\u{0943}': `
+<p class="insertTranscription">&#x0943;</p>
+`,
+
+'\u{0944}': `
+<p class="insertTranscription">&#x0944;</p>
+`,
+
+'\u{0945}': `
+<p class="insertTranscription">&#x0945;</p>
+`,
+
+'\u{0946}': `
+<p class="insertTranscription">&#x0946;</p>
+`,
+
+'\u{0947}': `
+<p class="insertTranscription">&#x0947;</p>
+`,
+
+'\u{0948}': `
+<p class="insertTranscription">&#x0948;</p>
+`,
+
+'\u{0949}': `
+<p class="insertTranscription">&#x0949;</p>
+`,
+
+'\u{094A}': `
+<p class="insertTranscription">&#x094A;</p>
+`,
+
+'\u{094B}': `
+<p class="insertTranscription">&#x094B;</p>
+`,
+
+'\u{094C}': `
+<p class="insertTranscription">&#x094C;</p>
+`,
+
+'\u{094D}': `
+<p class="insertTranscription">&#x094D;</p>
+`,
+
+'\u{094E}': `
+<p class="insertTranscription">&#x094E;</p>
+`,
+
+'\u{094F}': `
+<p class="insertTranscription">&#x094F;</p>
+`,
+
+'\u{0950}': `
+<p class="insertTranscription">&#x0950;</p>
+`,
+
+'\u{0951}': `
+<p class="insertTranscription">&#x0951;</p>
+`,
+
+'\u{0952}': `
+<p class="insertTranscription">&#x0952;</p>
+`,
+
+'\u{0953}': `
+<p class="insertTranscription">&#x0953;</p>
+`,
+
+'\u{0954}': `
+<p class="insertTranscription">&#x0954;</p>
+`,
+
+'\u{0955}': `
+<p class="insertTranscription">&#x0955;</p>
+`,
+
+'\u{0956}': `
+<p class="insertTranscription">&#x0956;</p>
+`,
+
+'\u{0957}': `
+<p class="insertTranscription">&#x0957;</p>
+`,
+
+'\u{0915}': `
+<p class="insertTranscription">&#x0915;</p>
+`,
+
+'\u{0916}': `
+<p class="insertTranscription">&#x0916;</p>
+`,
+
+'\u{0917}': `
+<p class="insertTranscription">&#x0917;</p>
+`,
+
+'\u{091C}': `
+<p class="insertTranscription">&#x091C;</p>
+`,
+
+'\u{0921}': `
+<p class="insertTranscription">&#x0921;</p>
+`,
+
+'\u{0922}': `
+<p class="insertTranscription">&#x0922;</p>
+`,
+
+'\u{092B}': `
+<p class="insertTranscription">&#x092B;</p>
+`,
+
+'\u{092F}': `
+<p class="insertTranscription">&#x092F;</p>
+`,
+
+'\u{0960}': `
+<p class="insertTranscription">&#x0960;</p>
+`,
+
+'\u{0961}': `
+<p class="insertTranscription">&#x0961;</p>
+`,
+
+'\u{0962}': `
+<p class="insertTranscription">&#x0962;</p>
+`,
+
+'\u{0963}': `
+<p class="insertTranscription">&#x0963;</p>
+`,
+
+'\u{0964}': `
+<p class="insertTranscription">&#x0964;</p>
+<p>Sentence-final punctuation, common to several indic scripts.</p>
+`,
+
+'\u{0965}': `
+<p class="insertTranscription">&#x0965;</p>
+<p>Marks boundaries of text above the sentence level, common to several indic scripts.</p>
+`,
+
+'\u{0966}': `
+<p class="insertTranscription">&#x0966;</p>
+`,
+
+'\u{0967}': `
+<p class="insertTranscription">&#x0967;</p>
+`,
+
+'\u{0968}': `
+<p class="insertTranscription">&#x0968;</p>
+`,
+
+'\u{0969}': `
+<p class="insertTranscription">&#x0969;</p>
+`,
+
+'\u{096A}': `
+<p class="insertTranscription">&#x096A;</p>
+`,
+
+'\u{096B}': `
+<p class="insertTranscription">&#x096B;</p>
+`,
+
+'\u{096C}': `
+<p class="insertTranscription">&#x096C;</p>
+`,
+
+'\u{096D}': `
+<p class="insertTranscription">&#x096D;</p>
+`,
+
+'\u{096E}': `
+<p class="insertTranscription">&#x096E;</p>
+`,
+
+'\u{096F}': `
+<p class="insertTranscription">&#x096F;</p>
+`,
+
+'\u{0970}': `
+<p class="insertTranscription">&#x0970;</p>
+<p>Indicates abbreviations of words, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">रुपया</span> <span class="trans">rupyā</span> <span class="meaning">rupee</span></span> can be abbreviated as <span class="charExample" translate="no"><span class="ex" lang="hi">रु॰</span></span>.</p>
+`,
+
+'\u{0971}': `
+<p class="insertTranscription">&#x0971;</p>
+`,
+
+'\u{0972}': `
+<p class="insertTranscription">&#x0972;</p>
+`,
+
+'\u{0973}': `
+<p class="insertTranscription">&#x0973;</p>
+`,
+
+'\u{0974}': `
+<p class="insertTranscription">&#x0974;</p>
+`,
+
+'\u{0975}': `
+<p class="insertTranscription">&#x0975;</p>
+`,
+
+'\u{0976}': `
+<p class="insertTranscription">&#x0976;</p>
+`,
+
+'\u{0977}': `
+<p class="insertTranscription">&#x0977;</p>
+`,
+
+'\u{0978}': `
+<p class="insertTranscription">&#x0978;</p>
+`,
+
+'\u{0979}': `
+<p class="insertTranscription">&#x0979;</p>
+`,
+
+'\u{097A}': `
+<p class="insertTranscription">&#x097A;</p>
+`,
+
+'\u{097B}': `
+<p class="insertTranscription">&#x097B;</p>
+`,
+
+'\u{097C}': `
+<p class="insertTranscription">&#x097C;</p>
+`,
+
+'\u{097D}': `
+<p class="insertTranscription">&#x097D;</p>
+`,
+
+'\u{097E}': `
+<p class="insertTranscription">&#x097E;</p>
+`,
+
+'\u{097F}': `
+<p class="insertTranscription">&#x097F;</p>
+`,
+
+
+
+// Devanagari extended
+
+'\u{A8E0}': `
+<p class="insertTranscription">&#xA8E0;</p>
+`,
+
+'\u{A8E1}': `
+<p class="insertTranscription">&#xA8E1;</p>
+`,
+
+'\u{A8E2}': `
+<p class="insertTranscription">&#xA8E2;</p>
+`,
+
+'\u{A8E3}': `
+<p class="insertTranscription">&#xA8E3;</p>
+`,
+
+'\u{A8E4}': `
+<p class="insertTranscription">&#xA8E4;</p>
+`,
+
+'\u{A8E5}': `
+<p class="insertTranscription">&#xA8E5;</p>
+`,
+
+'\u{A8E6}': `
+<p class="insertTranscription">&#xA8E6;</p>
+`,
+
+'\u{A8E7}': `
+<p class="insertTranscription">&#xA8E7;</p>
+`,
+
+'\u{A8E8}': `
+<p class="insertTranscription">&#xA8E8;</p>
+`,
+
+'\u{A8E9}': `
+<p class="insertTranscription">&#xA8E9;</p>
+`,
+
+'\u{A8EA}': `
+<p class="insertTranscription">&#xA8EA;</p>
+`,
+
+'\u{A8EB}': `
+<p class="insertTranscription">&#xA8EB;</p>
+`,
+
+'\u{A8EC}': `
+<p class="insertTranscription">&#xA8EC;</p>
+`,
+
+'\u{A8ED}': `
+<p class="insertTranscription">&#xA8ED;</p>
+`,
+
+'\u{A8EE}': `
+<p class="insertTranscription">&#xA8EE;</p>
+`,
+
+'\u{A8EF}': `
+<p class="insertTranscription">&#xA8EF;</p>
+`,
+
+'\u{A8F0}': `
+<p class="insertTranscription">&#xA8F0;</p>
+`,
+
+'\u{A8F1}': `
+<p class="insertTranscription">&#xA8F1;</p>
+`,
+
+'\u{A8F2}': `
+<p class="insertTranscription">&#xA8F2;</p>
+`,
+
+'\u{A8F3}': `
+<p class="insertTranscription">&#xA8F3;</p>
+`,
+
+'\u{A8F4}': `
+<p class="insertTranscription">&#xA8F4;</p>
+`,
+
+'\u{A8F5}': `
+<p class="insertTranscription">&#xA8F5;</p>
+`,
+
+'\u{A8F6}': `
+<p class="insertTranscription">&#xA8F6;</p>
+`,
+
+'\u{A8F7}': `
+<p class="insertTranscription">&#xA8F7;</p>
+`,
+
+'\u{A8F8}': `
+<p class="insertTranscription">&#xA8F8;</p>
+`,
+
+'\u{A8F9}': `
+<p class="insertTranscription">&#xA8F9;</p>
+`,
+
+'\u{A8FA}': `
+<p class="insertTranscription">&#xA8FA;</p>
+`,
+
+'\u{A8FB}': `
+<p class="insertTranscription">&#xA8FB;</p>
+`,
+
+'\u{A8FC}': `
+<p class="insertTranscription">&#xA8FC;</p>
+`,
+
+'\u{A8FD}': `
+<p class="insertTranscription">&#xA8FD;</p>
+`,
+
+'\u{A8FE}': `
+<p class="insertTranscription">&#xA8FE;</p>
+`,
+
+'\u{A8FF}': `
+<p class="insertTranscription">&#xA8FF;</p>
+`,
+
+
+// Currency symbols
+
+
+'\u{20A8}': `
+<p class="insertTranscription">&#x20A8;</p>
+<p>A symbol not formally  tied to any particular currency. (See also <span class="codepoint" translate="no"><span lang="en">&#x20B9;</span> [<a href="#char20B9"><span class="uname">U+20B9 INDIAN RUPEE SIGN</span></a>]</span>.)<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch22.pdf">u</a></p>
+<p>There are also a number of script-specific rupee symbols encoded for historic usage by various scripts of India such as the following:<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch22.pdf">u</a></p>
+<ul>
+<li><span class="codepoint" translate="no"><span lang="en">&#x09F2;</span> [<a href="/scripts/bengali/block#char09F2"><span class="uname">U+09F2 BENGALI RUPEE MARK</span></a>]</span></li>
+<li>
+<span class="codepoint" translate="no"><span lang="en">&#x09F3;</span> [<a href="/scripts/bengali/block#char09F3"><span class="uname">U+09F3 BENGALI RUPEE SIGN</span></a>]</span></li>
+<li>
+<span class="codepoint" translate="no"><span lang="en">&#x0AF1;</span> [<a href="/scripts/gujarati/block#char0AF1"><span class="uname">U+0AF1 GUJARATI RUPEE SIGN</span></a>]</span></li>
+<li>
+<span class="codepoint" translate="no"><span lang="en">&#x0BF9;</span> [<a href="/scripts/tamil/block#char0BF9"><span class="uname">U+0BF9 TAMIL RUPEE SIGN</span></a>]</span></li>
+<li>
+<span class="codepoint" translate="no"><span lang="en">&#xA838;</span> [<a href="/scripts/bengali/block#charA838"><span class="uname">U+A838 NORTH INDIC RUPEE MARK</span></a>]</span></li>
+</ul>
+<p>Rupee is also the common name for a number of currencies for other countries of South Asia and of Indonesia, as well as several historic  currencies.  It  is  often  abbreviated  using Latin letters, or may be spelled out or abbreviated in the Arabic script, depending on local conventions.<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch22.pdf">u</a></p>
+`,
+
+'\u{20B9}': `
+<p class="insertTranscription">&#x20B9;</p>
+<p>Introduced by the Government of India in 2010 as the official currency symbol for the Indian rupee (INR).<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch22.pdf">u</a></p>
+<p>It is distinguished from <span class="codepoint" translate="no"><span lang="hi">&#x20A8;</span> [<a href="#char20A8"><span class="uname">U+20A8 RUPEE SIGN</span></a>]</span>, which is an older symbol not formally  tied to any particular currency.<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch22.pdf">u</a> Follow that link for more information about the rupee.</p>
+`,
+
+
+
+
+// General punctuation
+
+
+// "..
+'\u{201C}': `
+`,
+
+// .."
+'\u{201D}': `
+`,
+
+// '..
+'\u{2018}': `
+`,
+
+// ..'
+'\u{2019}': `
+`,
+
+// ;
+'\u{003B}': `
+`,
+
+// :
+'\u{003A}': `
+`,
+
+// .
+'\u{002E}': `
+`,
+
+// ?
+'\u{003F}': `
+`,
+
+// !
+'\u{0021}': `
+`,
+
+// (
+'\u{0028}': `
+`,
+
+// )
+'\u{0029}': `
+`,
+
+// …
+'\u{2026}': `
+`,
+
+// –
+'\u{2013}': `
+`,
+
+// —
+'\u{2014}': `
+`,
+
+
+// zwj
+'\u{200D}': `
+<p>Creates glyph joining behaviour in the absence of normal joining contexts.</p>
+`,
+
+// zwnj
+'\u{200C}': `
+<p>Prevents glyph joining behaviour.</p>
+`,
+
+
+
+
+}
