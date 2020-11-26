@@ -15,31 +15,43 @@
 <body>
 <h1>Get new character blocks</h1>
 <p>For a given range of characters, produces stubs for codepoint descriptions in character notes pages.</p>
-<p>Add a space-separated list of characters. <button onclick="document.getElementById('listin').value = ''";document.getElementById('listin').focus()>Clear</button></p>
+<p>Add a list from the spreadsheet for the input.</p>
 
 <p><textarea id="listin" placeholder="Add a list of characters here, and don't forget to add references code below." style="height:400px;width:100%;"></textarea></p>
 
 <p>
+<label> Bicameral: <input type="checkbox" id="bicameral"/></label>
 <label> Language: <input type="text" id="lang" style="width: 3em;"/></label>
 <label> Direction: <input type="text" id="dir" style="width: 3em;"/></label>
 <label> Add letter: <input type="checkbox" id="letter" checked></label>
 
-<button style="font-size: 150%;" onClick=" 
+<button style="font-size: 150%;" onClick="bicameral=false; 
+if(document.getElementById('bicameral').checked) bicameral = true; 
 lang = document.getElementById('lang').value;
 dir = document.getElementById('dir').value;
-document.getElementById('out').value = makeListFromChars(document.getElementById('listin').value, lang, dir); 
+document.getElementById('out').value = makeListFromChars(document.getElementById('listin').value, bicameral, lang, dir); 
 document.getElementById('out').select()">Go</button>
 </p>
 
-<textarea id="out" style="height:600px;width:100%;"></textarea>
+<textarea id="out" style="height:400px;width:100%;"></textarea>
 
 
-
+<p>Template for refs:</p>
+<pre>
+&lt;p class="ref">&lt;a href="#refs">General sources&lt;/a>:
+   &lt;a href=&quot;block#refs&quot; target="_blank"&gt;Daniels&lt;/a&gt;, 
+   &lt;a href="http://www.unicode.org/versions/latest/ch07.pdf#Armenian" target="_blank">Unicode&lt;/a>, &nbsp;
+   &lt;a href="https://en.wikipedia.org/wiki/Armenian_alphabet" target="_blank">Wikipedia&lt;/a> &nbsp;
+&lt;/p></pre>
+   
+   
+   <p>Enter  code for general references here and they will be added.</p>
+<textarea id="refs" style="height:200px;width:100%;"></textarea>
 
 
 
 <div class="smallprint"><span id="version">First published  3 Feb 2008.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2020-11-21  16:36<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2020-11-20  7:11<!-- #EndDate --> 
 </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 <script>
@@ -94,8 +106,8 @@ function makeCharacterLink (cp, lang, direction) {
 	}
 
 
-function makeListFromChars (chars, lang, dir) {
-	var charList = chars.split(' ')
+function makeListFromChars (chars, bicameral, lang, dir) {
+	var charList = chars.split('\n')
         
     
 	var out = ''
@@ -119,28 +131,9 @@ function makeListFromChars (chars, lang, dir) {
 			var dbrecord = U[i].split(';')
 			var cpName = dbrecord[1]
 			
-			out += '<div class="character" id="char'+hex+'"></div>\n\n'
-			//out += '<div class="charimg">&#x'+hex+';</div>\n'
-			//out += '<p class="charname"><strong>U+'+hex+'</strong> <a href="#char'+hex+'">'+cpName+'</a></p>\n'
-			//out += '<p class="univiewLink"><a target="_blank" href="/uniview/?char='+hex+'">See in UniView</a></p>\n'
-            //out += '<div class="unicodenotes"></div>\n'           
-            //out += '<div class="notes">\n'           
-
-			//if (document.getElementById('letter').checked) {
-			//	out += '<div class="letter '+lang+'">'
-			//	out += '<p class="titlepara">'+lang+'Title</p>\n'
-			//out += '<p class="insertTranscription">&#x'+hex+';</p>\n'
-				//out += '<p>xxx</p>\n'
-			//	out += '</div>\n'
-			//	}
-
-
-
-            // add references
-            //if (document.getElementById('refs') !== '') out += '\n'+document.getElementById('refs').value+'\n'
-            
-			//out += '</div>\n' // end of notes div
-			//out += '</div>\n\n'
+			out += "'\\u{"+hex+"}': `\n"
+			out += '<p class="insertTranscription">&#x'+hex+';</p>\n'
+			out += '`,\n\n'
 			}
 		}
 	return out
