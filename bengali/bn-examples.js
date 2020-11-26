@@ -162,6 +162,8 @@ autoExpandExamples.bn = `
 হৃদয়|heart|hridɔj
 হোয়াটসঅ্যাপ|WhatsApp|hoyɑʈʃɔæp
 হ্যাঁ|yes|hæ̃
+কʼরে|after|(kôʼre)
+ʼপরে|above|(ʼpôre)
 
 `
 
