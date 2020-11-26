@@ -1,0 +1,609 @@
+/*
+<!DOCTYPE html>
+<meta charset="utf-8">
+*/
+
+var charDetails = {
+
+
+'\u{0E01}': `
+<p class="insertTranscription">&#x0E01;</p>
+<p><span class="ipa">k</span>, eg. <span class="eg" lang="th">ไก่</span>, <span class="eg" lang="th">หก</span>.</p>
+`,
+
+'\u{0E02}': `
+<p class="insertTranscription">&#x0E02;</p>
+<p><span class="ipa">kʰ</span> as initial, eg. <span class="eg" lang="th">ขวด</span>.</p>
+<p><span class="ipa">k</span> when syllable final, eg. <span class="eg" lang="th">บรมสุข</span>.</p>
+`,
+
+'\u{0E03}': `
+<p class="insertTranscription">&#x0E03;</p>
+<p><span class="ipa">kʰ</span>, eg. <span class="eg" lang="th">ฃวด</span>.</p>
+<p>Obsolete, now replaced by <span class="codepoint"><span lang="th">&#x0E02;</span> <a href="#char0E02">[<span class="uname">U+0E02 THAI CHARACTER KHO KHAI</span>]</a></span>, eg. <span class="eg" lang="th">ขวด</span>.</p>
+`,
+
+'\u{0E04}': `
+<p class="insertTranscription">&#x0E04;</p>
+<p><span class="ipa">kʰ</span> as initial, eg. <span class="eg" lang="th">ควาย</span>.</p>
+<p><span class="ipa">k</span> when syllable final, eg. <span class="eg" lang="th">พรรค</span>.</p>
+`,
+
+'\u{0E05}': `
+<p class="insertTranscription">&#x0E05;</p>
+<p><span class="ipa">kʰ</span>, <span class="ipa">k</span> when syllable final, eg. <span class="eg" lang="th">ฅน</span>.</p>
+<p>Obsolete, now replaced with <span class="codepoint"><span lang="th">&#x0E04;</span> <a href="#char0E04">[<span class="uname">U+0E04 THAI CHARACTER KHO KHWAI</span>]</a></span>, eg. <span class="eg" lang="th">คน</span>.</p>
+`,
+
+'\u{0E06}': `
+<p class="insertTranscription">&#x0E06;</p>
+<p><span class="ipa">kʰ</span>, eg. <span class="eg" lang="th">ระฆัง</span>.</p>
+<p><span class="ipa">k</span> when syllable final, eg. <span class="eg" lang="th">เมฆ</span>.</p>
+<p>Occurs mainly in old words.</p>
+`,
+
+'\u{0E07}': `
+<p class="insertTranscription">&#x0E07;</p>
+<p><span class="ipa">ŋ</span>, eg. <span class="eg" lang="th">งู</span>, <span class="eg" lang="th">ลิง</span>.</p>
+`,
+
+'\u{0E08}': `
+<p class="insertTranscription">&#x0E08;</p>
+<p><span class="ipa">ʨ</span>, eg. <span class="eg" lang="th">จาน</span></p>
+<p><span class="ipa">t</span> when syllable final, eg. <span class="eg" lang="th">ดุจ</span></p>
+`,
+
+'\u{0E09}': `
+<p class="insertTranscription">&#x0E09;</p>
+<p><span class="ipa">ʨʰ</span>, eg. <span class="eg" lang="th">ฉิ่ง</span>. Never occurs in final position.</p>
+`,
+
+'\u{0E0A}': `
+<p class="insertTranscription">&#x0E0A;</p>
+<p><span class="ipa">ʨʰ</span>, eg. <span class="eg" lang="th">ช้าง</span>.</p>
+<p><span class="ipa">t</span> when syllable final, eg. <span class="eg" lang="th">ประโยชน์</span>.</p>
+`,
+
+'\u{0E0B}': `
+<p class="insertTranscription">&#x0E0B;</p>
+<p><span class="ipa">s</span>, eg. <span class="eg" lang="th">โซ่</span>.</p>
+<p>Never occurs in syllable final position.</p>
+`,
+
+'\u{0E0C}': `
+<p class="insertTranscription">&#x0E0C;</p>
+<p><span class="ipa">ʨʰ</span>, eg. <span class="eg" lang="th">เฌอ</span>. Only occurs in a few words.</p>
+<p><span class="ipa">t</span> when syllable final.</p>
+`,
+
+'\u{0E0D}': `
+<p class="insertTranscription">&#x0E0D;</p>
+<p><span class="ipa">j</span>, eg. <span class="eg" lang="th">หญิง</span>. </p>
+<p><span class="ipa">n</span> when syllable final, eg. <span class="eg" lang="th">บังเอิญ</span>. Rarely occurs in final position.</p>
+`,
+
+'\u{0E0E}': `
+<p class="insertTranscription">&#x0E0E;</p>
+<p><span class="ipa">d</span>, eg. <span class="eg" lang="th">ชฎา</span>. </p>
+<p><span class="ipa">t</span> when syllable final, eg. <span class="eg" lang="th">กฎ</span>. Nearly obsolete in final position.</p>
+`,
+
+'\u{0E0F}': `
+<p class="insertTranscription">&#x0E0F;</p>
+<p><span class="ipa">t</span>, eg. <span class="eg" lang="th">ประฏัก</span>, <span class="eg" lang="th">ปรากฏ</span>. Rare in initial position.</p>
+`,
+
+'\u{0E10}': `
+<p class="insertTranscription">&#x0E10;</p>
+<p><span class="ipa">tʰ</span>, eg. <span class="eg" lang="th">ฐาน</span>. Rare in initial position.</p>
+<p><span class="ipa">t</span> when syllable final, eg. <span class="eg" lang="th">ประเสริฐ</span>.</p>
+`,
+
+'\u{0E11}': `
+<p class="insertTranscription">&#x0E11;</p>
+<p><span class="ipa">tʰ</span>, eg. <span class="eg" lang="th">มณโฑ</span>. Mainly syllable final.</p>
+<p><span class="ipa">t</span> when syllable final, eg. <span class="ex" lang="th">ครุฑ</span> <span class="eg" lang="th">ครุฑ</span>.</p>
+`,
+
+'\u{0E12}': `
+<p class="insertTranscription">&#x0E12;</p>
+<p><span class="ipa">tʰ</span>, eg. <span class="eg" lang="th">ผู้เฒ่า</span>.</p>
+<p><span class="ipa">t</span> when syllable final.</p>
+<p>Nearly obsolete.</p>
+`,
+
+'\u{0E13}': `
+<p class="insertTranscription">&#x0E13;</p>
+<p><span class="ipa">n</span> eg. <span class="eg" lang="th">เณร</span>, <span class="ex" lang="th">คุณ</span> <span class="eg" lang="th">คุณ</span>. Mainly syllable final.</p>
+`,
+
+'\u{0E14}': `
+<p class="insertTranscription">&#x0E14;</p>
+<p><span class="ipa">tʰ</span>, eg. <span class="eg" lang="th">เด็ก</span>.</p>
+<p><span class="ipa">t</span> when syllable final, eg. <span class="eg" lang="th">ตลาด</span>.</p>
+`,
+
+'\u{0E15}': `
+<p class="insertTranscription">&#x0E15;</p>
+<p><span class="ipa">t</span> eg. <span class="eg" lang="th">เต่า</span>, <span class="eg" lang="th">ชีวิต</span>.</p>
+`,
+
+'\u{0E16}': `
+<p class="insertTranscription">&#x0E16;</p>
+<p><span class="ipa">tʰ</span>, eg. <span class="eg" lang="th">ถุง</span>.</p>
+<p><span class="ipa">t</span> when syllable final, eg. <span class="eg" lang="th">รถ</span>.</p>
+`,
+
+'\u{0E17}': `
+<p class="insertTranscription">&#x0E17;</p>
+<p><span class="ipa">tʰ</span>, eg. <span class="eg" lang="th">ทหาร</span>.</p>
+<p><span class="ipa">t</span> when syllable final, eg. <span class="eg" lang="th">บาท</span>.</p>
+`,
+
+'\u{0E18}': `
+<p class="insertTranscription">&#x0E18;</p>
+<p><span class="ipa">tʰ</span>, eg. <span class="eg" lang="th">ธง</span>.</p>
+<p><span class="ipa">t</span> when syllable final, eg. <span class="eg" lang="th">โกรธ</span>.</p>
+`,
+
+'\u{0E19}': `
+<p class="insertTranscription">&#x0E19;</p>
+<p><span class="ipa">n</span> eg. <span class="eg" lang="th">หนู</span>, <span class="eg" lang="th">อ้วน</span>. Rare as initial.</p>
+`,
+
+'\u{0E1A}': `
+<p class="insertTranscription">&#x0E1A;</p>
+<p><span class="ipa">b</span>, eg. <span class="eg" lang="th">ใบไม้</span>.</p>
+<p><span class="ipa">p</span> when syllable final, eg. <span class="eg" lang="th">ดิบ</span>.</p>
+`,
+
+'\u{0E1B}': `
+<p class="insertTranscription">&#x0E1B;</p>
+<p><span class="ipa">p</span> eg. <span class="eg" lang="th">ปลา</span>, <span class="eg" lang="th">ทวีป</span>.</p>
+`,
+
+'\u{0E1C}': `
+<p class="insertTranscription">&#x0E1C;</p>
+<p><span class="ipa">pʰ</span> eg. <span class="eg" lang="th">ผึ้ง</span>.</p>
+<p>Never occurs in final position.</p>
+`,
+
+'\u{0E1D}': `
+<p class="insertTranscription">&#x0E1D;</p>
+<p><span class="ipa">f</span> eg. <span class="eg" lang="th">ฝา</span>.</p>
+<p>Never occurs in final position.</p>
+`,
+
+'\u{0E1E}': `
+<p class="insertTranscription">&#x0E1E;</p>
+<p><span class="ipa">pʰ</span>, eg. <span class="eg" lang="th">พาน</span>.</p>
+<p><span class="ipa">p</span> when syllable final, eg. <span class="eg" lang="th">กรุงเทพฯ</span>.</p>
+`,
+
+'\u{0E1F}': `
+<p class="insertTranscription">&#x0E1F;</p>
+<p><span class="ipa">f</span>, eg. <span class="eg" lang="th">ฟัน</span>.</p>
+<p><span class="ipa">p</span> when syllable final. Occurs in final position only in a few loanwords borrowed from English, eg. <span class="eg" lang="th">ออฟฟิต</span>.</p>
+`,
+
+'\u{0E20}': `
+<p class="insertTranscription">&#x0E20;</p>
+<p><span class="ipa">pʰ</span>, eg. <span class="eg" lang="th">สำเภา</span>.</p>
+<p><span class="ipa">p</span> when syllable final, eg. <span class="eg" lang="th">ลาภ</span>.</p>
+`,
+
+'\u{0E21}': `
+<p class="insertTranscription">&#x0E21;</p>
+<p><span class="ipa">m</span> eg. <span class="eg" lang="th">ม้า</span>, <span class="eg" lang="th">ยิ้ม</span>.</p>
+`,
+
+'\u{0E22}': `
+<p class="insertTranscription">&#x0E22;</p>
+<p><span class="ipa">j</span> eg. <span class="eg" lang="th">ยักษ์</span>.</p>
+<p>When non-initial, treated as part of one of the following vowels:</p>
+<p> <span class="ipa">aj</span> <span class="ex" lang="th">–ัย</span> (rare), eg. <span class="eg" lang="th">ภัย</span>, <span class="ex" lang="th">ไ–ย</span></p>
+<p><span class="ipa">aːj</span> <span class="ex" lang="th">–าย</span>, eg. <span class="eg" lang="th">ขาย</span>.</p>
+<p><span class="ipa">ɤːj</span> <span class="ex" lang="th">เ–ย</span>, eg. <span class="eg" lang="th">เลย</span></p>
+<p><span class="ipa">ia </span> <span class="ex" lang="th">เ–ียะ</span></p>
+<p><span class="ipa">iːa </span> <span class="ex" lang="th">เ–ีย</span>, eg. <span class="eg" lang="th">เมีย</span>.</p>
+<p><span class="ipa">iaw</span> <span class="ex" lang="th">เ–ียว</span>, eg. <span class="eg" lang="th">เขียว</span></p>
+<p><span class="ipa">ɔːj</span> <span class="ex" lang="th">–อย</span>, eg. <span class="eg" lang="th">ลอย</span>.</p>
+<p><span class="ipa">oːj</span> <span class="ex" lang="th">โ–ย</span> (rare), eg. <span class="eg" lang="th">โบย</span>.</p>
+<p><span class="ipa">ɯaj</span> <span class="ex" lang="th">เ–ือย</span>, eg. <span class="eg" lang="th">เรื่อย</span> (only found in about 20 common words).</p>
+<p><span class="ipa">uj</span> <span class="ex" lang="th">–ุย</span>, eg. <span class="eg" lang="th">คุย</span>.</p>
+<p><span class="ipa">uːj</span> <span class="ex" lang="th">–ูย</span></p>
+<p><span class="ipa">uaj</span> <span class="ex" lang="th">–วย</span>, eg. <span class="eg" lang="th">สวย</span>.</p>
+<p><span class="ipa">uaːj</span> <span class="ex" lang="th">–วาย</span>, eg. <span class="eg" lang="th">ควาย</span>.</p>
+`,
+
+'\u{0E23}': `
+<p class="insertTranscription">&#x0E23;</p>
+<p><span class="ipa">r</span> eg. <span class="eg" lang="th">เรือ</span>.</p>
+<p><span class="ipa">n</span> when it appears immediately after the initial consonant with no intervening vowel sign, eg. <span class="eg" lang="th">นคร</span>.</p>
+<p>In a few words, when it comes directly after the syllable initial, it is silent, eg. <span class="eg" lang="th">ทราบ</span>, <span class="eg" lang="th">เศร้า</span> or <span class="eg" lang="th">จริง</span>. Note that in these cases the vowel sign or tone mark falls over the ร.</p>
+<p><span class="ipa">a</span> when doubled medially, eg. <span class="eg" lang="th">ธรรม</span>.</p>
+<p><span class="ipa">an</span> when doubled at the end of a syllable, eg. <span class="eg" lang="th">กรรไกร</span>. Note, however, that this may also constitute the end and beginning of two syllables, eg. <span class="eg" lang="th">ภรรยา</span>.</p>
+`,
+
+'\u{0E24}': `
+<p class="insertTranscription">&#x0E24;</p>
+<p><span class="ipa">ri, rɯ, rɤː</span>,  pronunciation varies according to the word in which it is used. Not often used in Thai. Eg. <span class="eg" lang="th">อังกฤษ</span>, <span class="eg" lang="th">ฤตู</span>, <span class="charExample" translate="no"><span class="ex" lang="th">ฤกษ์</span> <span class="trans">r̥k̯ṣ˟</span> <span class="ipa">rɤ̂ːk auspicious time</span></span>.</p>
+<p><span class="ipa">rɯː</span> when lengthened with <span class="codepoint"><span lang="th">&#x0E45;</span> <a href="#char0E45">[<span class="uname">U+0E45 THAI CHARACTER LAKKHANGYAO</span>]</a></span>, eg. <span class="eg" lang="th">ฤๅษี</span>. This combination is very rare.</p>
+<p>Originates from Sanskrit.</p>
+`,
+
+'\u{0E25}': `
+<p class="insertTranscription">&#x0E25;</p>
+<p><span class="ipa">l</span>, eg. <span class="eg" lang="th">ลิง</span>.</p>
+<p><span class="ipa">n</span> when syllable final, eg. <span class="eg" lang="th">ตำบล</span>.</p>
+`,
+
+'\u{0E26}': `
+<p class="insertTranscription">&#x0E26;</p>
+<p>Practically obsolete in Thai. Independent vowel letter used to write Sanskrit vocalic <span class="ipa">la</span> (<span class="ex" lang="th">ฦๅ</span> indicates lengthening).</p>
+`,
+
+'\u{0E27}': `
+<p class="insertTranscription">&#x0E27;</p>
+<p><span class="ipa">w</span> eg. <span class="eg" lang="th">แหวน</span>.</p>
+<p>When non-initial, treated as part of one of the following vowels:</p>
+<p><span class="ipa">aːw</span> <span class="ex" lang="th">–าว</span> (Note that <span class="ipa">aw</span> <span class="ex" lang="th">เ–า</span> doesn't use this character.)</p>
+<p><span class="ipa">ew</span> <span class="ex" lang="th">เ–็ว</span></p>
+<p><span class="ipa">eːw </span> <span class="ex" lang="th">เ–ว</span></p>
+<p><span class="ipa">ɛːw</span> <span class="ex" lang="th">แ–ว</span></p>
+<p><span class="ipa">iw </span><span class="ex" lang="th">–ิว</span>, eg. <span class="eg" lang="th">คอมพิวเตอร์</span>.</p>
+<p><span class="ipa">iaw </span> <span class="ex" lang="th">เ–ียว</span></p>
+<p><span class="ipa">ua</span> <span class="ex" lang="th">–ัวะ</span></p>
+<p> <span class="ipa">uːa</span> <span class="ex" lang="th">–ว–</span>, <span class="ex" lang="th">–ัว</span>,  eg. <span class="eg" lang="th">จั่วโมง</span>. When followed by a consonant the vowel <span class="ex" lang="th">–ัว</span> drops the diacritic character, eg. <span class="charExample" translate="no"><span class="ex" lang="th">ตัว</span> <span class="trans">t̯äw̱</span> <span class="ipa">tuːa</span></span> but <span class="charExample" translate="no"><span class="ex" lang="th">สวน</span> <span class="trans">sw̱ṉ</span> <span class="ipa">sǔːan</span></span>.</p>
+<p><span class="ipa">uaj</span> <span class="ex" lang="th">–วย</span></p>
+<p><span class="ipa">uaːj</span> <span class="ex" lang="th">–วาย</span>, eg. <span class="eg" lang="th">ควาย</span>.</p>
+<p>(Do these exist? <span class="ex" lang="th">–วา</span> <span class="ipa">uaː</span>)</p>
+`,
+
+'\u{0E28}': `
+<p class="insertTranscription">&#x0E28;</p>
+<p><span class="ipa">s</span>, eg. <span class="eg" lang="th">ศาลา</span>.</p>
+<p><span class="ipa">t</span> when syllable final, eg. <span class="eg" lang="th">อากาศ</span>.</p>
+<p>There are 3 high class <span class="trans">s</span> characters. This is the most commonly used for Thai words – <span class="codepoint"><span lang="th">&#x0E29;</span> <a href="#char0E29">[<span class="uname">U+0E29 THAI CHARACTER SO RUSI</span>]</a></span> and <span class="codepoint"><span lang="th">&#x0E2A;</span> <a href="#char0E2A">[<span class="uname">U+0E2A THAI CHARACTER SO SUA</span>]</a></span> are more common in words of foreign origin.</p>
+`,
+
+'\u{0E29}': `
+<p class="insertTranscription">&#x0E29;</p>
+<p><span class="ipa">s</span>, eg. <span class="eg" lang="th">ฤษี</span>. Only occurs as initial in a few words.</p>
+<p><span class="ipa">t</span> when syllable final, eg. <span class="eg" lang="th">พิษ</span>.</p>
+<p>There are 3 high class <span class="trans">s</span> characters. <span class="codepoint"><span lang="th">&#x0E28;</span> <a href="#char0E28">[<span class="uname">U+0E28 THAI CHARACTER SO SALA</span>]</a></span> is the most commonly used for Thai words – this character and <span class="codepoint"><span lang="th">&#x0E2A;</span> <a href="#char0E2A">[<span class="uname">U+0E2A THAI CHARACTER SO SUA</span>]</a></span> are more common in words of foreign origin.</p>
+`,
+
+'\u{0E2A}': `
+<p class="insertTranscription">&#x0E2A;</p>
+<p><span class="ipa">s</span>, eg. <span class="eg" lang="th">เสือ</span>. Only occurs as initial in a few words.</p>
+<p><span class="ipa">t</span> when syllable final, eg. <span class="eg" lang="th">โอกาส</span>.</p>
+<p>There are 3 high class <span class="trans">s</span> characters. <span class="codepoint"><span lang="th">&#x0E28;</span> <a href="#char0E28">[<span class="uname">U+0E28 THAI CHARACTER SO SALA</span>]</a></span> is the most commonly used for Thai words – this character and <span class="codepoint"><span lang="th">&#x0E29;</span> <a href="#char0E29">[<span class="uname">U+0E29 THAI CHARACTER SO RUSI</span>]</a></span> are more common in words of foreign origin.</p>
+`,
+
+'\u{0E2B}': `
+<p class="insertTranscription">&#x0E2B;</p>
+<p><span class="ipa">h</span>, eg. <span class="eg" lang="th">หีบ</span>.</p>
+<p>Never appears in final position.</p>
+<p>Also used as a tone modifier, called <span class="ex" lang="th">ห นำ</span> <span class="ipa">hɔ̌ nam</span>. Before the following 8 consonants at the start of a syllable it is silent, but forces the following consonant to behave as if it were high class: <span class="ex" lang="th">หง, หญ, หน, หม, หย, หร, หล, หว</span>. Examples: <span class="eg" lang="th">หยุด</span>, <span class="eg" lang="th">หมา</span>, <span class="eg" lang="th">หนี้</span>.</p>
+<p>(An important exeption is <span class="charExample" translate="no"><span class="ex" lang="th">ไหม</span> <span class="trans">aʲhm̱</span> <span class="ipa">máj</span></span>, which in normal speech is pronounced with a high tone rather than the rising tone the text would indicate.)</p>
+`,
+
+'\u{0E2C}': `
+<p class="insertTranscription">&#x0E2C;</p>
+<p><span class="ipa">l</span>, eg. <span class="eg" lang="th">จุฬา</span>.</p>
+<p><span class="ipa">n</span> when syllable final, eg. <span class="eg" lang="th">ลคุฬ</span>.</p>
+<p>Now almost obsolete in Thai.</p>
+`,
+
+'\u{0E2D}': `
+<p class="insertTranscription">&#x0E2D;</p>
+<p>Silent support for vowels at the beginning of a syllable, eg. <span class="eg" lang="th">อ่าง</span>.</p>
+<p>When non-initial, treated as part of one of the following vowels:</p>
+<p> <span class="ipa">ɔː</span> <span class="ex" lang="th">–อ</span></p>
+<p> <span class="ipa">ɔːj</span> <span class="ex" lang="th">–อย</span>, eg. <span class="eg" lang="th">ลอย</span>.</p>
+<p> <span class="ipa">ɯː</span> <span class="ex" lang="th">–ือ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="th">คือ</span> <span class="trans">ḵʰɯ̄ʔ̯</span> <span class="ipa">kɯː</span></span> (used because <span class="codepoint"><span lang="th">&#x0E37;</span> <a href="#char0E37">[<span class="uname">U+0E37 THAI CHARACTER SARA UEE</span>]</a></span> cannot stand alone at the end of a syllable).</p>
+<p><span class="ipa">ɤ</span> <span class="ex" lang="th">เ–อะ</span> (rare), <span class="eg" lang="th">เกอะ</span>.</p>
+<p><span class="ipa">ɤː</span> <span class="ex" lang="th">เ–อ</span> (rare), eg. <span class="eg" lang="th">เฌอ</span>.</p>
+<p><span class="ipa">ɯa</span> <span class="ex" lang="th">เ–ือะ</span></p>
+<p><span class="ipa">ɯːa</span> <span class="ex" lang="th">เ–ือ</span>,  eg. <span class="eg" lang="th">เรือ</span>.</p>
+<p><span class="ipa">ɯaj</span> <span class="ex" lang="th">เ–ือย</span>, eg. <span class="eg" lang="th">เรื่อย</span>.</p>
+<p>(What about <span class="ex" lang="th">–อ–</span> <span class="ipa">ɔ</span> and <span class="ex" lang="th">–็อ–</span> <span class="ipa">ɔ</span> ?)</p>
+<p>Before 4 words it is used in syllable initial position as a modifier (not pronounced) to change the tone of <span class="codepoint"><span lang="th">&#x0E22;</span> <a href="#char0E22">[<span class="uname">U+0E22 THAI CHARACTER YO YAK</span>]</a></span> to low. The words are: <span class="eg" lang="th">อยู่</span>, <span class="eg" lang="th">อย่า</span>, <span class="eg" lang="th">อย่าง</span>, <span class="eg" lang="th">อยาก</span>.</p>
+`,
+
+'\u{0E2E}': `
+<p class="insertTranscription">&#x0E2E;</p>
+<p><span class="ipa">h</span>, eg. <span class="eg" lang="th">นกฮูก</span>. Only occurs in a few words in initial position.</p>
+<p>Never appears in final position.</p>
+`,
+
+'\u{0E2F}': `
+<p class="insertTranscription">&#x0E2F;</p>
+<p>Abbreviation symbol, used to indicate elision or abbreviation of letters from long words or phrases. </p>
+<p>This is very frequently used and is viewed as a letter. Examples, <span class="eg" lang="th">กรุงเทพฯ</span>, which is short for <span class="charExample" translate="no"><span class="ex" lang="th">กรุงเทพมหานคร</span> <span class="trans">k̯ṟuŋ̱eṯʰp̱ʰm̱hāṉḵʰṟ</span> <span class="ipa">kruŋtʰêːpmáhǎːnákʰᴐːn</span></span>; <span class="eg" lang="th">พณฯ ท่าน</span>, which is short for <span class="charExample" translate="no"><span class="ex" lang="th">พณหัวเจ้าท่าน</span> <span class="trans">p̱ʰṇ̱häw̱ec̯²āṯʰ¹āṉ</span> <span class="ipa">pʰonhuːatɕawtʰaːn</span></span>.</p>
+<p>The sequence <span class="ex" lang="th">ฯลฯ</span> (<span class="charExample" translate="no"><span class="ex" lang="th">ไปยาลใหญ่</span> <span class="trans">aʲp̯y̱āḻäʲhẏ̱¹</span> <span class="ipa">pajjaːnjài</span></span>) means 'etc.' and is used at the end of a list to indicate that it is not all-inclusive.</p>
+<p>Leave a space  after this character.</p>
+`,
+
+'\u{0E30}': `
+<p class="insertTranscription">&#x0E30;</p>
+<p>Used for the following vowels:</p>
+<p><span class="ipa">a</span> <span class="ex" lang="th">–ะ</span>, eg. <span class="eg" lang="th">จะ</span>.</p>
+<p><span class="ipa">ɤ</span> <span class="ex" lang="th">เ–อะ</span> (rare), eg. <span class="eg" lang="th">เถอะ</span>, <span class="eg" lang="th">เกอะ</span></p>
+<p> <span class="ipa">ɔ</span> <span class="ex" lang="th">เ–าะ</span> (rare), eg. <span class="eg" lang="th">เพราะ</span>, <span class="eg" lang="th">เกาะ</span>.</p>
+<p> <span class="ipa">e</span> <span class="ex" lang="th">เ–ะ</span>, eg. <span class="eg" lang="th">เตะ</span>, <span class="eg" lang="th">เกะกะ</span>.</p>
+<p><span class="ipa">o</span> <span class="ex" lang="th">โ–ะ</span> (rare), eg. <span class="eg" lang="th">โต๊ะ</span>.</p>
+<p><span class="ipa">ɛ</span> <span class="ex" lang="th">แ–ะ</span>, eg. <span class="eg" lang="th">แยกแยะ</span>.</p>
+<p><span class="ipa">ia</span> <span class="ex" lang="th">เ–ียะ</span></p>
+<p><span class="ipa">ua</span> <span class="ex" lang="th">–ัวะ</span></p>
+<p><span class="ipa">ɯa</span> <span class="ex" lang="th">เ–ือะ</span></p>
+<p>For most vowels, this symbol acts as a shortener.</p>
+<p>In writing Sanskrit, this is the visarga.</p>
+`,
+
+'\u{0E31}': `
+<p class="insertTranscription">&#x0E31;</p>
+<p>Used for the following vowels:</p>
+<p><span class="ipa">a</span> <span class="ex" lang="th">–ั–</span>, eg. <span class="eg" lang="th">ฟัน</span>.</p>
+<p><span class="ipa">ua</span> <span class="ex" lang="th">–ัวะ</span></p>
+<p><span class="ipa">uːa</span> <span class="ex" lang="th">–ัว</span>, eg. <span class="eg" lang="th">จั่วโมง</span>. (When followed by a consonant the vowel <span class="ex" lang="th">–ัว</span> drops this character, eg. <span class="charExample" translate="no"><span class="ex" lang="th">ตัว</span> <span class="trans">t̯äw̱</span> <span class="ipa">tuːa</span></span> but <span class="charExample" translate="no"><span class="ex" lang="th">สวน</span> <span class="trans">sw̱ṉ</span> <span class="ipa">sǔːan</span></span>.)</p>
+<p> <span class="ipa">aj</span> <span class="ex" lang="th">–ัย</span> (rare), eg. <span class="eg" lang="th">ภัย</span>.</p>
+<p> <span class="ipa">aw</span> <span class="ex" lang="th">เ–ัว</span></p>
+`,
+
+'\u{0E32}': `
+<p class="insertTranscription">&#x0E32;</p>
+<p>Used for the following vowels:</p>
+<p><span class="ipa">aː</span> <span class="ex" lang="th">–า</span>, eg. <span class="eg" lang="th">บาท</span>.</p>
+<p><span class="ipa">aw</span> <span class="ex" lang="th">เ–า</span>, eg. <span class="eg" lang="th">เต่า</span>.</p>
+<p><span class="ipa">aːw</span> <span class="ex" lang="th">–าว</span>, eg. <span class="eg" lang="th">ยาว</span>.</p>
+<p> <span class="ipa">aːj</span> <span class="ex" lang="th">–าย</span>, eg. <span class="eg" lang="th">ขาย</span>.</p>
+<p><span class="ipa">uaːj</span> <span class="ex" lang="th">–วาย</span>, eg. <span class="eg" lang="th">ควาย</span>.</p>
+<p><span class="ipa">ɔ</span> <span class="ex" lang="th">เ–าะ</span> (rare), eg. <span class="eg" lang="th">เกาะ</span>.</p>
+`,
+
+'\u{0E33}': `
+<p class="insertTranscription">&#x0E33;</p>
+<p><span class="ipa">am</span> is  considered to be a simple vowel, eg. <span class="eg" lang="th">ตำบล</span>.</p>
+<p>This character interacts typographically with the preceding consonant, but is not classed as a combining character. The character must be kerned so that the small circle appears over the top right shoulder of the preceding consonant, and although the order should be consonant+tonemark+am, the tone mark should still appear above the circle, eg. <span class="charExample" translate="no"><span class="ex" lang="th">น้ำส้มคั้น</span> <span class="trans">ṉ²aᵐs²m̱ḵʰä²ṉ</span> <span class="ipa">námsômkʰán</span></span>.</p>
+`,
+
+'\u{0E34}': `
+<p class="insertTranscription">&#x0E34;</p>
+<p>Used for the following vowels:</p>
+<p><span class="ipa">i</span> <span class="ex" lang="th">–ิ</span>, eg. <span class="eg" lang="th">ลิง</span>.</p>
+<p><span class="ipa">ɤː</span> <span class="ex" lang="th">เ–ิ–</span> (rare), eg. <span class="eg" lang="th">บังเอิญ</span>.</p>
+<p><span class="ipa">iw </span><span class="ex" lang="th">–ิว</span>, eg. <span class="eg" lang="th">คอมพิวเตอร์</span>.</p>
+`,
+
+'\u{0E35}': `
+<p class="insertTranscription">&#x0E35;</p>
+<p>Used for the following vowels:</p>
+<p><span class="ipa">i</span><span class="ipa">ː</span> <span class="ex" lang="th">–ี</span>,  eg. <span class="eg" lang="th">หีบ</span>.</p>
+<p><span class="ipa">ia </span><span class="ex" lang="th">เ–ียะ</span></p>
+<p><span class="ipa">iːa </span><span class="ex" lang="th">เ–ีย</span>, eg. <span class="eg" lang="th">เมีย</span>.</p>
+<p><span class="ipa">iaw</span> <span class="ex" lang="th">เ–ียว</span>, eg. <span class="eg" lang="th">เขียว</span>.</p>
+`,
+
+'\u{0E36}': `
+<p class="insertTranscription">&#x0E36;</p>
+<p><span class="ipa">ɯ</span>, eg. <span class="eg" lang="th">ผึ้ง</span>.</p>
+`,
+
+'\u{0E37}': `
+<p class="insertTranscription">&#x0E37;</p>
+<p>Used for the following vowels:</p>
+<p><span class="ipa">ɯː</span> <span class="ex" lang="th">–ื–</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="th">คืน</span> <span class="trans">ḵʰɯ̄ṉ</span> <span class="ipa">kɯːn</span></span></p>
+<p><span class="ipa">ɯː</span> <span class="ex" lang="th"> –ือ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="th">คือ</span> <span class="trans">ḵʰɯ̄ʔ̯</span> <span class="ipa">kɯː</span></span>.</p>
+<p><span class="ipa">ɯa </span> <span class="ex" lang="th">เ–ือะ</span></p>
+<p><span class="ipa">ɯːa</span> <span class="ex" lang="th">เ–ือ</span>, eg. <span class="eg" lang="th">เสือ</span>, <span class="eg" lang="th">เรือ</span>.</p>
+<p><span class="ipa">ɯaj</span> <span class="ex" lang="th">เ–ือย</span>, eg. <span class="eg" lang="th">เรื่อย</span> ( only found in about 20 common words).</p>
+`,
+
+'\u{0E38}': `
+<p class="insertTranscription">&#x0E38;</p>
+<p>Used for the following vowels:</p>
+<p><span class="ipa">u</span> <span class="ex" lang="th">–ุ</span>, eg. <span class="eg" lang="th">ถุง</span>.</p>
+<p><span class="ipa">uj</span> <span class="ex" lang="th">–ุย</span> (rare), eg. <span class="eg" lang="th">คุย</span>.</p>
+`,
+
+'\u{0E39}': `
+<p class="insertTranscription">&#x0E39;</p>
+<p>Used for the following vowels:</p>
+<p><span class="ipa">uː</span> <span class="ex" lang="th">–ู</span>, eg. <span class="eg" lang="th">งู</span>.</p>
+<p><span class="ipa">uːj</span> <span class="ex" lang="th">–ูย</span> (rare)</p>
+`,
+
+'\u{0E3A}': `
+<p class="insertTranscription">&#x0E3A;</p>
+<p>Pali or Sanskrit virama. Used to indicate that the inherent vowel is suppressed.</p>
+<p>Not used in Thai.</p>
+`,
+
+'\u{0E3F}': `
+<p class="insertTranscription">&#x0E3F;</p>
+`,
+
+'\u{0E40}': `
+<p class="insertTranscription">&#x0E40;</p>
+<p>Used for the following vowels:</p>
+<p><span class="ipa">e</span> <span class="ex" lang="th">เ–ะ</span>, <span class="ex" lang="th">เ–็–</span>, eg. <span class="ex" lang="th">เกะกะ</span> <span class="ipa">kèkà</span> <span class="meaning">disorderly</span>, <span class="eg" lang="th">เด็ก</span>.</p>
+<p><span class="ipa">eː</span> <span class="ex" lang="th">เ–</span>, eg. <span class="eg" lang="th">เมฆ</span>.</p>
+<p><span class="ipa">ew</span> <span class="ex" lang="th">เ–็ว</span>, eg. <span class="eg" lang="th">เร็ว</span>.</p>
+<p><span class="ipa">eːw</span> <span class="ex" lang="th">เ–ว</span>, eg. <span class="eg" lang="th">เลว</span>.</p>
+<p><span class="ipa">ɤ</span> <span class="ex" lang="th">เ–อะ</span> (rare), <span class="eg" lang="th">เกอะ</span>.</p>
+<p><span class="ipa">ɤː</span> <span class="ex" lang="th">เ–อ</span>, <span class="ex" lang="th">เ–ิ–</span> (rare), eg. <span class="eg" lang="th">เฌอ</span>.</p>
+<p><span class="ipa">ɤːj</span> <span class="ex" lang="th">เ–ย</span>, eg. <span class="eg" lang="th">เลย</span>.</p>
+<p><span class="ipa">aw</span> <span class="ex" lang="th">เ–า</span>,  eg. <span class="eg" lang="th">เต่า</span>.</p>
+<p><span class="ipa">ia</span> <span class="ex" lang="th">เ–ียะ</span></p>
+<p><span class="ipa">iːa</span> <span class="ex" lang="th">เ–ีย</span>, eg. <span class="eg" lang="th">เมีย</span>.</p>
+<p><span class="ipa">iaw</span> <span class="ex" lang="th">เ–ียว</span>, eg. <span class="eg" lang="th">เขียว</span>.</p>
+<p><span class="ipa">ɔ</span> <span class="ex" lang="th">เ–าะ</span> (rare), eg. <span class="eg" lang="th">เกาะ</span>.</p>
+<p><span class="ipa">ɯa</span> <span class="ex" lang="th">เ–ือะ</span></p>
+<p><span class="ipa">ɯːa</span> <span class="ex" lang="th">เ–ือ</span>,  eg. <span class="eg" lang="th">เรือ</span>.</p>
+<p><span class="ipa">ɯaj</span> <span class="ex" lang="th">เ–ือย</span>, eg. <span class="eg" lang="th">เรื่อย</span> (only found in about 20 common words in Thai)</p>
+`,
+
+'\u{0E41}': `
+<p class="insertTranscription">&#x0E41;</p>
+<p>Used for the following vowels:</p>
+<p><span class="ipa">ɛ</span> <span class="ex" lang="th">แ–ะ</span>, <span class="ex" lang="th">แ–็–</span> (not very common), eg. <span class="eg" lang="th">แยกแยะ</span>.</p>
+<p><span class="ipa">ɛː</span> <span class="ex" lang="th">แ–</span>, eg. <span class="eg" lang="th">แยกแยะ</span>.</p>
+<p><span class="ipa">ɛːw</span> <span class="ex" lang="th">แ–ว</span>, eg. <span class="eg" lang="th">แมว</span>.</p>
+`,
+
+'\u{0E42}': `
+<p class="insertTranscription">&#x0E42;</p>
+<p>Used for the following vowels:</p>
+<p><span class="ipa">o</span> <span class="ex" lang="th">โ–ะ</span>, eg. <span class="eg" lang="th">โต๊ะ</span>.</p>
+<p><span class="ipa">oː</span> <span class="ex" lang="th">โ–</span>, eg. <span class="eg" lang="th">โซ่</span>.</p>
+<p><span class="ipa">oːj</span> <span class="ex" lang="th">โ–ย</span>, eg. <span class="eg" lang="th">โบย</span>.</p>
+<p>Found only in 20 words and their compounds.</p>
+`,
+
+'\u{0E43}': `
+<p class="insertTranscription">&#x0E43;</p>
+<p><span class="ipa">aj</span> <span class="ex" lang="th">ใ–</span>, eg. <span class="eg" lang="th">ใบ</span>.</p>
+<p>Found only in 20 words and their compounds.</p>
+`,
+
+'\u{0E44}': `
+<p class="insertTranscription">&#x0E44;</p>
+<p>Used for the following vowels:</p>
+<p><span class="ipa">aj</span> <span class="ex" lang="th">ไ–</span>, <span class="ex" lang="th">ไ–ย</span>, eg. <span class="eg" lang="th">ไก่</span>.</p>
+`,
+
+'\u{0E45}': `
+<p class="insertTranscription">&#x0E45;</p>
+<p>Used in Sanskrit with <span class="codepoint"><span lang="th">&#xA0;&#x0E24;</span> <a href="#char0E24">[<span class="uname">U+0E24 THAI CHARACTER RU</span>]</a></span> and <span class="codepoint"><span lang="th">&#xA0;&#x0E26;</span> <a href="#char0E26">[<span class="uname">U+0E26 THAI CHARACTER LU</span>]</a></span> when writing vocalic ra and vocalic la to indicate their lengthening.</p>
+`,
+
+'\u{0E46}': `
+<p class="insertTranscription">&#x0E46;</p>
+<p>Shows that the previous word or group of words was repeated, eg. <span class="eg" lang="th">จริง ๆ</span>, <span class="eg" lang="th">ทุกวัน ๆ</span>.</p>
+<p>Leave a space before and after.</p>
+`,
+
+'\u{0E47}': `
+<p class="insertTranscription">&#x0E47;</p>
+<p>Converts vowels produced by the following three vowel signs to short vowels when they occur in medial position:</p>
+<p><span class="ipa">ɔ</span> <span class="ex" lang="th">–็อ–</span> (<span class="ipa">ɔː</span> > <span class="ipa">ɔ</span>)</p>
+<p><span class="ipa">e</span> <span class="ex" lang="th">เ–็–</span> (<span class="ipa">eː</span> > <span class="ipa">e</span>), eg. <span class="eg" lang="th">เด็ก</span>.</p>
+<p><span class="ipa">oːj</span> <span class="ex" lang="th">แ–็–</span> <span class="ipa">æː</span> > <span class="ipa">æ</span> (not very common)</p>
+<p>Also used for:</p>
+<p><span class="ipa">ew</span> <span class="ex" lang="th">เ–็ว</span> (<span class="ipa">eːw</span> > <span class="ipa">ew</span>), eg. <span class="eg" lang="th">เร็ว</span>.</p>
+<p>Also one word consists of consonant + short symbol: <span class="ex" lang="th">ก็</span> <span class="ipa">gɔ</span>.</p>
+`,
+
+'\u{0E48}': `
+<p class="insertTranscription">&#x0E48;</p>
+<p>Used to change the usual tone of a syllable. Due to historic linguistic changes this mark represents two tones. </p>
+<p>Where a syllable's tone would normally be set by a low class initial consonant (<span class="ex" lang="th">ค ฅ ฆ ง ช ซ ฌ ญ ฑ ฒ ณ ท ธ น ฝ พ ภ ม ย ร ล ว ฬ ฮ</span>) to mid or high, the mark changes the tone  to <strong>falling</strong>, eg. <span class="ex" lang="th">ง่าย</span> <span class="ipa">ŋâːj</span> <span class="meaning">easy.</span> It is never used on  syllables with a long vowel ending in -k, -p or -t, since the tone is already falling.</p>
+<p>Where a syllable's tone would normally be set by a mid (<span class="ex" lang="th">ก จ ฎ ฏ ด ต บ ป อ</span>) class consonant to a mid tone, or a high (<span class="ex" lang="th">ข ฃ ฉ ฐ ถ ผ ฝ ศ ษ ส ห</span>) class consonant to a rising tone, this mark changes the the tone to <strong>low</strong>, eg. <span class="eg" lang="th">ไก่</span>, <span class="eg" lang="th">ไข่</span>. It is never used with dead syllables (ie. syllables ending in a short vowel or with -p, -t, or -k) for these consonants, since the tone is already falling.</p>
+<p>Tone marks are positioned above the right side of the initial consonant of the syllable they mark, however when a syllable initial consists of two consonants the tone mark is placed over the second, even though the resulting tone is governed by the first. Tone marks are placed above all other marks.</p>
+<p>The following example shows a combination of tone changes, first to high using <span class="ex" lang="th">ห</span>, then to low using the tone mark, <span class="charExample" translate="no"><span class="ex" lang="th">หนึ่ง</span> <span class="trans">hṉɯ¹ŋ̱</span> <span class="ipa">nɯ̀ŋ</span></span>.</p>
+`,
+
+'\u{0E49}': `
+<p class="insertTranscription">&#x0E49;</p>
+<p>Used to change the usual tone of a syllable. Due to historic linguistic changes this mark represents two tones. </p>
+<p>Where a syllable's tone would normally be set by a low class initial consonant (<span class="ex" lang="th">ค ฅ ฆ ง ช ซ ฌ ญ ฑ ฒ ณ ท ธ น ฝ พ ภ ม ย ร ล ว ฬ ฮ</span>) to mid or falling, this mark changes the tone  to <strong>high</strong>, eg. <span class="eg" lang="th">จ้าง</span>. It is never used on  syllables ending with a short vowel, or ending with -k, -t or -p after a short vowel, since the tone is already high.</p>
+<p>Where a syllable's tone would normally be set by a mid (<span class="ex" lang="th">ก จ ฎ ฏ ด ต บ ป อ</span>) class consonant (to a mid or low tone), or a high (<span class="ex" lang="th">ข ฃ ฉ ฐ ถ ผ ฝ ศ ษ ส ห</span>) class consonant (to a rising or low tone), this mark changes the the tone to <strong>falling</strong>, eg. <span class="eg" lang="th">เต้น</span>, <span class="eg" lang="th">ผึ้ง</span>.</p>
+<p>Tone marks are positioned above the right side of the initial consonant of the syllable they mark, however when a syllable initial consists of two consonants the tone mark is placed over the second, even though the resulting tone is governed by the first. Tone marks are placed above all other marks.</p>
+`,
+
+'\u{0E4A}': `
+<p class="insertTranscription">&#x0E4A;</p>
+<p>Where a syllable's tone would normally be set by a mid (<span class="ex" lang="th">ก จ ฎ ฏ ด ต บ ป อ</span>) class consonant (to a mid or low tone), this mark changes the the tone to <strong>high</strong>, eg. <span class="eg" lang="th">ตุ๊กๆ</span>. This mark is only used to modify mid class consonants.</p>
+<p> Used much less frequently than <span class="codepoint"><span lang="th">&#xA0;&#x0E48;</span> <a href="#char0E48">[<span class="uname">U+0E48 THAI CHARACTER MAI EK</span>]</a></span> and <span class="codepoint"><span lang="th">&#xA0;&#x0E49;</span> <a href="#char0E49">[<span class="uname">U+0E49 THAI CHARACTER MAI THO</span>]</a></span>, and typically found in onomatopoeia, particles and recent loan words.</p>
+<p>Tone marks are positioned above the right side of the initial consonant of the syllable they mark, however when a syllable initial consists of two consonants the tone mark is placed over the second, even though the resulting tone is governed by the first. Tone marks are placed above all other marks.</p>
+<p>Resembles <span class="codepoint"><span lang="th">&#xA0;&#x0E57;</span> <a href="#char0E57">[<span class="uname">U+0E57 THAI DIGIT SEVEN</span>]</a></span>.</p>
+`,
+
+'\u{0E4B}': `
+<p class="insertTranscription">&#x0E4B;</p>
+<p>Where a syllable's tone would normally be set by a mid (<span class="ex" lang="th">ก จ ฎ ฏ ด ต บ ป อ</span>) class consonant (to a mid or low tone), this mark changes the the tone to <strong>rising</strong>, eg. <span class="eg" lang="th">ก๊วยเตี๋ยว</span>. This mark is only used to modify mid class consonants.</p>
+<p> Used much less frequently than <span class="codepoint"><span lang="th">&#xA0;&#x0E48;</span> <a href="#char0E48">[<span class="uname">U+0E48 THAI CHARACTER MAI EK</span>]</a></span> and <span class="codepoint"><span lang="th">&#xA0;&#x0E49;</span> <a href="#char0E49">[<span class="uname">U+0E49 THAI CHARACTER MAI THO</span>]</a></span>, and typically found in onomatopoeia, particles and recent loan words.</p>
+<p>Tone marks are positioned above the right side of the initial consonant of the syllable they mark, however when a syllable initial consists of two consonants the tone mark is placed over the second, even though the resulting tone is governed by the first. Tone marks are placed above all other marks.</p>
+`,
+
+'\u{0E4C}': `
+<p class="insertTranscription">&#x0E4C;</p>
+<p>Used above a syllable when it is not pronounced (usually at the end of a syllable), eg. <span class="eg" lang="th">รถเมล์</span>, <span class="eg" lang="th">ศักดิ์สิทธิ์</span>.</p>
+<p>It is often used for foreign loan words, eg. <span class="eg" lang="th">คอมพิวเตอร์</span>, <span class="eg" lang="th">โปสการ์ด</span>, <span class="eg" lang="th">สแตมป์</span>, <span class="eg" lang="th">แฮมเบอร์เกอร์</span>.</p>
+<p> Since the sign can silence a whole syllable, sometimes other characters immediately preceding the one with the sign are not pronounced either, eg. <span class="eg" lang="th">ศาสตร์</span>, <span class="eg" lang="th">กษัตริย์</span>, <span class="eg" lang="th">วันจันทร์</span>.</p>
+<p>Note that there are several other instances where consonants and/or vowels are not pronounced, but where this symbol is not used.</p>
+`,
+
+'\u{0E4D}': `
+<p class="insertTranscription">&#x0E4D;</p>
+<p>Final nasal. Used in Pali or Sanskrit as nigghahita or anusvara, respectively.</p>
+<p>Not commonly used in Thai, except that when letter spacing Thai text it is necessary to add the space between the circle and the remainder of <span class="codepoint"><span lang="th">&#xA0;&#x0E33;</span> <a href="#char0E33">[<span class="uname">U+0E33 THAI CHARACTER SARA AM</span>]</a></span>. To do this, the application may split U+0E33 into this character and <span class="codepoint"><span lang="th">&#xA0;&#x0E32;</span> <a href="#char0E32">[<span class="uname">U+0E32 THAI CHARACTER SARA AA</span>]</a></span>.</p>
+`,
+
+'\u{0E4E}': `
+<p class="insertTranscription">&#x0E4E;</p>
+<p>According to <sup>4</sup>, Yamakkan is an ancient punctuation mark used to mark clusters, such as in <span class="charExample" translate="no"><span class="ex" lang="th">พ๎ราห๎มณ</span> <span class="trans">p̱ʰ๎ṟāh๎m̱ṇ̱</span> <span class="ipa">pʰraːmǒn</span></span>. One of the functions of <span class="codepoint"><span lang="th">&#x0E3A;</span> <a href="#char0E3A">[<span class="uname">U+0E3A THAI CHARACTER PHINTHU</span>]</a></span> is the same.</p>
+`,
+
+'\u{0E4F}': `
+<p class="insertTranscription">&#x0E4F;</p>
+<p>Used as a bullet to introduce a list item, or to mark the beginnings of verses or paragraphs.</p>
+`,
+
+'\u{0E50}': `
+<p class="insertTranscription">&#x0E50;</p>
+`,
+
+'\u{0E51}': `
+<p class="insertTranscription">&#x0E51;</p>
+`,
+
+'\u{0E52}': `
+<p class="insertTranscription">&#x0E52;</p>
+`,
+
+'\u{0E53}': `
+<p class="insertTranscription">&#x0E53;</p>
+`,
+
+'\u{0E54}': `
+<p class="insertTranscription">&#x0E54;</p>
+`,
+
+'\u{0E55}': `
+<p class="insertTranscription">&#x0E55;</p>
+`,
+
+'\u{0E56}': `
+<p class="insertTranscription">&#x0E56;</p>
+`,
+
+'\u{0E57}': `
+<p class="insertTranscription">&#x0E57;</p>
+`,
+
+'\u{0E58}': `
+<p class="insertTranscription">&#x0E58;</p>
+`,
+
+'\u{0E59}': `
+<p class="insertTranscription">&#x0E59;</p>
+`,
+
+'\u{0E5A}': `
+<p class="insertTranscription">&#x0E5A;</p>
+<p>Used to mark the end of long sections, or with <span class="codepoint"><span lang="th">&#xA0;&#x0E30;</span> <a href="#char0E30">[<span class="uname">U+0E30 THAI CHARACTER SARA A</span>]</a></span>, ie. <span class="ex" lang="th">๚ะ</span>, to mark the end of a verse.</p>
+`,
+
+'\u{0E5B}': `
+<p class="insertTranscription">&#x0E5B;</p>
+<p>Used to mark end of a chapter or document. It is always used following <span class="codepoint"><span lang="th">&#xA0;&#x0E5A;</span> <a href="#char0E5A">[<span class="uname">U+0E5A THAI CHARACTER ANGKHANKHU</span>]</a></span> and <span class="codepoint"><span lang="th">&#xA0;&#x0E30;</span> <a href="#char0E30">[<span class="uname">U+0E30 THAI CHARACTER SARA A</span>]</a></span>, ie. <span class="ex" lang="th">๚ะ๛</span>.</p>
+`,
+
+
+
+
+
+}
