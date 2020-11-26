@@ -13,6 +13,8 @@
 <script src="../../shared/fontdb/managefonts.js"></script>
 
 <script src="../../shared/scriptdb/malayalam.js"> </script>
+<script src="ml-details.html"> </script>
+
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
@@ -53,7 +55,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->29 October, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->26 November, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -155,6 +157,23 @@
  
  
  
+<div id="showTranscriptions">
+<div>Character lists show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div>
+<label>Transliteration 
+<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
+<div>
+<label>ISO 15919 
+<input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+</div>
+   
+    
+      
+
+
+
 <section id="index">
 <h2>Character index</h2>
 
@@ -310,23 +329,6 @@
 
 
 
-
-
-
-<div id="showTranscriptions">
-<div>Character lists show:</div>
-<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
-<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div>
-<label>Transliteration 
-<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
-<div>
-<label>ISO 15919 
-<input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
-</div>
-   
-    
-      
 
 
 
@@ -929,14 +931,21 @@ http://localhost/pickers/malayalam/?text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3
 
 <section id="joiner">
 <h3>Using ZWJ &amp; ZWNJ</h3>
-<p>According to the Unicode Standard:<a class="fnref" href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u505</a></p>
+<p>Assuming that you have fonts that produce the expected behaviours,  the Unicode Standard describes the use of the joiner characters as follows:<a class="fnref" href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u505</a></p>
 <ul>
-<li><span class="codepoint" translate="no"><a href="devanagari#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a></span>placed <em>after</em> the <span class="name">chandrakkala</span>  can be used to force the production of a visible virama, rather than a conjunct form. For example, <span class="codepoint" translate="no"><span lang="ml">&#x0D15;</span> + <span lang="ml">&#x0D4D;</span> + <span class="uname">ZWNJ</span> + <span lang="ml">&#x0D15;</span> [<a href="/scripts/malayalam/block#char0D15"><span class="uname">U+0D15 MALAYALAM LETTER KA</span></a> + <a href="/scripts/malayalam/block#char0D4D"><span class="uname">U+0D4D MALAYALAM SIGN VIRAMA</span></a> + <a href="/scripts/malayalam/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a> + <a href="/scripts/malayalam/block#char0D15"><span class="uname">U+0D15 MALAYALAM LETTER KA</span></a>]</span> produces <span class="charExample" translate="no"><span class="ex" lang="ml">ക്‌ക</span></span>, rather than <span class="charExample" translate="no"><span class="ex" lang="ml">ക്ക</span></span>.</li>
-<li>Uniquely to Malayalam, placing the ZWSP <em>before</em> the <span class="name">chandrakkala</span> is supposed to produce the modern 'open' form of the conjunct in fonts that would otherwise produce a traditional conjunct, eg. <span class="codepoint" translate="no"><span lang="ml">&#x0D15;</span> + <span class="uname">ZWNJ</span> + <span lang="ml">&#x0D4D;</span> + <span lang="ml">&#x0D30;</span> [<a href="/scripts/malayalam/block#char0D15"><span class="uname">U+0D15 MALAYALAM LETTER KA</span></a> + <a href="/scripts/malayalam/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a> + <a href="/scripts/malayalam/block#char0D4D"><span class="uname">U+0D4D MALAYALAM SIGN VIRAMA</span></a> + <a href="/scripts/malayalam/block#char0D30"><span class="uname">U+0D30 MALAYALAM LETTER RA</span></a>]</span> should produce the form <span class="charExample" translate="no"><span class="ex" lang="ml">ക്ര</span></span>.</li>
-<li><span class="codepoint" translate="no"><a href="devanagari#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a></span> can  be used <em>before</em> the <span class="name">chandrakkala</span>  to produce a traditional conjunct form in fonts that produce the open form by default but have the glyphs for the traditional forms too.</li>
-<li><span class="codepoint" translate="no"><a href="devanagari#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a></span>  used <em>after</em> the <span class="name">chandrakkala</span> should produce a chillu form, but this approach is now deprecated in favour of using the chillu codepoints. See <a class="secref">finals</a>.</li>
+<li><span class="codepoint" translate="no"><span lang="ml">&#x200C;</span><a href="/scripts/malayalam/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a></span> (ZWNJ) placed <em>after</em> the <span class="name">chandrakkala</span>  can be used to force the production of a visible virama, rather than a conjunct form. For example, <span class="codepoint" translate="no"><span lang="ml">&#x0D15;&#x0D4D;&#x200C;&#x0D15;</span> [<a href="/scripts/malayalam/block#char0D15"><span class="uname">U+0D15 MALAYALAM LETTER KA</span></a> + <a href="/scripts/malayalam/block#char0D4D"><span class="uname">U+0D4D MALAYALAM SIGN VIRAMA</span></a> + <a href="/scripts/malayalam/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a> + <a href="/scripts/malayalam/block#char0D15"><span class="uname">U+0D15 MALAYALAM LETTER KA</span></a>]</span> produces <span class="charExample" translate="no"><span class="ex" lang="ml">ക്‌ക</span></span>, rather than <span class="charExample" translate="no"><span class="ex" lang="ml">ക്ക</span></span>.</li>
+<li>Uniquely to Malayalam, placing the ZWNJ <em>before</em> the <span class="name">chandrakkala</span> is supposed to produce the modern 'open' form of the conjunct in fonts that would otherwise produce a traditional conjunct, eg. <span class="codepoint" translate="no"><span lang="ml">&#x0D15;&#x200C;&#x0D4D;&#x0D30;</span> [<a href="/scripts/malayalam/block#char0D15"><span class="uname">U+0D15 MALAYALAM LETTER KA</span></a> + <a href="/scripts/malayalam/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a> + <a href="/scripts/malayalam/block#char0D4D"><span class="uname">U+0D4D MALAYALAM SIGN VIRAMA</span></a> + <a href="/scripts/malayalam/block#char0D30"><span class="uname">U+0D30 MALAYALAM LETTER RA</span></a>]</span> should produce the form <span class="charExample" translate="no"><span class="ex" lang="ml">ക്ര</span></span>.</li>
 </ul>
-<p>Unfortunately, the 2nd and 3rd approaches don't work with the Malayalam fonts on my system.</p>
+
+<figure id="fig_zwnj">
+<img src="images/zwnj.png" alt="" data-notes="Large characters are Noto Serif 72px. Left side is screen grab of text.">
+<figcaption>Uses of ZWNJ (zero-width non-joiner) in Malayalam.</figcaption>
+</figure>
+
+<ul>
+<li><span class="codepoint" translate="no"><span lang="ml">&#x200D;</span><a href="/scripts/malayalam/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a></span> (ZWJ) can  be used <em>before</em> the <span class="name">chandrakkala</span>  to produce a traditional conjunct form in fonts that produce the open form by default but have the glyphs for the traditional forms too.</li>
+<li>ZWJ  used <em>after</em> the <span class="name">chandrakkala</span> may produce a chillu form (eg. <span class="codepoint" translate="no"><span lang="ml">&#x0D15;&#x0D4D;&#x200D;</span> [<a href="/scripts/malayalam/block#char0D15"><span class="uname">U+0D15 MALAYALAM LETTER KA</span></a> + <a href="/scripts/malayalam/block#char0D4D"><span class="uname">U+0D4D MALAYALAM SIGN VIRAMA</span></a> + <a href="/scripts/malayalam/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span>), but this approach is now deprecated in favour of using the chillu codepoints. See <a class="secref">finals</a>.</li>
+</ul>
 </section>
 </section>
  
@@ -1115,17 +1124,21 @@ http://localhost/pickers/malayalam/?text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3
 <tbody>
 <tr>
 <th scope="row">phrase</th>
-<td><p><span class="codepoint" translate="no"><span lang="tmp">&#x002C;</span> [<span class="uname">U+002C COMMA</span>]</span></p>
-<p><span class="codepoint" translate="no"><span lang="tmp">&#x003B;</span> [<span class="uname">U+003B SEMICOLON</span>]</span></p>
-<p><span class="codepoint" translate="no"><span lang="tmp">&#x003A;</span> [<span class="uname">U+003A COLON</span>]</span></p>
-<span class="codepoint" translate="no"><span lang="ml">&#x0964;</span> [<a href="/scripts/malayalam/block#char0964"><span class="uname">U+0964 DEVANAGARI DANDA</span></a>]</span></td>
+<td>
+<p><span class="codepoint" translate="no"><span lang="ml">&#x002C;</span> [<a href="/scripts/devanagari/block#char002C"><span class="uname">U+002C COMMA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="ml">&#x003B;</span> [<a href="/scripts/devanagari/block#char003B"><span class="uname">U+003B SEMICOLON</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="ml">&#x003A;</span> [<a href="/scripts/devanagari/block#char003A"><span class="uname">U+003A COLON</span></a>]</span></p>
+<span class="codepoint" translate="no"><span lang="ml">&#x0964;</span> [<a href="/scripts/malayalam/block#char0964"><span class="uname">U+0964 DEVANAGARI DANDA</span></a>]</span>
+</td>
 </tr>
 <tr>
 <th scope="row">sentence</th>
-<td><p><span class="codepoint" translate="no"><span lang="tmp">&#x002E;</span> [<span class="uname">U+002E FULL STOP</span>]</span></p>
-<p><span class="codepoint" translate="no"><span lang="tmp">&#x003F;</span> [<span class="uname">U+003F QUESTION MARK</span>]</span></p>
-<p><span class="codepoint" translate="no"><span lang="tmp">&#x0021;</span> [<span class="uname">U+0021 EXCLAMATION MARK</span>]</span></p>
-<p><span class="codepoint" translate="no"><span lang="ml">&#x0965;</span> [<a href="/scripts/malayalam/block#char0965"><span class="uname">U+0965 DEVANAGARI DOUBLE DANDA</span></a>]</span></p></td>
+<td>
+<p><span class="codepoint" translate="no"><span lang="ml">&#x002E;</span> [<a href="/scripts/devanagari/block#char002E"><span class="uname">U+002E FULL STOP</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="ml">&#x003F;</span> [<a href="/scripts/devanagari/block#char003F"><span class="uname">U+003F QUESTION MARK</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="ml">&#x0021;</span> [<a href="/scripts/devanagari/block#char0021"><span class="uname">U+0021 EXCLAMATION MARK</span></a>]</span>&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="ml">&#x0965;</span> [<a href="/scripts/malayalam/block#char0965"><span class="uname">U+0965 DEVANAGARI DOUBLE DANDA</span></a>]</span></p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -1150,8 +1163,8 @@ http://localhost/pickers/malayalam/?text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3
 <tbody>
 <tr>
 <th>standard</th>
-<td><p><span class="codepoint" translate="no"><span lang="tmp">(</span> [<span class="uname">U+0028 LEFT PARENTHESIS</span>]</span></p></td>
-<td><p><span class="codepoint" translate="no"><span lang="tmp">)</span> [<span class="uname">U+0029 RIGHT PARENTHESIS</span>]</span></p></td>
+<td><p><span class="codepoint" translate="no"><span lang="ml">&#x0028;</span> [<a href="/scripts/devanagari/block#char0028"><span class="uname">U+0028 LEFT PARENTHESIS</span></a>]</span></p></td>
+<td><p><span class="codepoint" translate="no"><span lang="ml">&#x0029;</span> [<a href="/scripts/devanagari/block#char0029"><span class="uname">U+0029 RIGHT PARENTHESIS</span></a>]</span></p></td>
 </tr>
 </tbody>
 </table>
@@ -1174,8 +1187,8 @@ http://localhost/pickers/malayalam/?text=%E0%B4%95%E0%B5%8D%E0%B4%B6%20%E0%B4%A3
 <tbody>
 <tr>
 <th scope="row">initial</th>
-<td><p><span class="codepoint" translate="no"><span lang="tmp">&#x201C;</span> [<span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span>]</span></p></td>
-<td><p><span class="codepoint" translate="no"><span lang="tmp">&#x201D;</span> [<span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span>]</span></p></td>
+<td><p><span class="codepoint" translate="no"><span lang="ml">&#x201C;</span> [<a href="/scripts/devanagari/block#char201C"><span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span></a>]</span></p></td>
+<td><span class="codepoint" translate="no"><span lang="ml">&#x201D;</span> [<a href="/scripts/devanagari/block#char201D"><span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span></a>]</span></td>
 </tr>
 </tbody>
 </table>
