@@ -552,7 +552,7 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
     
             // SECOND LINE INFO
             prevSibling = titlepara
-
+/*
             // if has subjoined form
             if (cols.subj>0 && items[cols.subj]) {
                 p = document.createElement('p')
@@ -580,7 +580,23 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
                 p.innerHTML = 'Shape is <span class="ex" lang="'+lang+'">'+items[0]+'</span>'
                 prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
                 }
-            
+*/
+
+
+
+
+			// ADD THE DETAILS
+			if (charDetails) {
+				//console.log(charDetails[String.fromCodePoint(dec)])
+				if (charDetails[String.fromCodePoint(dec)]) {
+					console.log('ok')
+					detailDiv = document.createElement('div')
+					detailDiv.innerHTML = charDetails[String.fromCodePoint(dec)]
+					letter.appendChild(detailDiv)
+					}
+				}
+
+
 
    
     
@@ -603,6 +619,22 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
                 p.innerHTML = 'Lowercase is '+makeCharacterLink(items[cols.lc], lang, dir)
                 letter.appendChild(p)
                 //prevSibling = letter.insertBefore(p, prevSibling.nextSibling)
+                }
+
+            // show subjoined form
+            if (cols.subj && items[cols.subj] !== '') {
+                p = document.createElement('p')
+                p.className = 'subjPair'
+                p.innerHTML = 'Subjoined form is '+makeCharacterLink(items[cols.subj], lang, dir)
+                letter.appendChild(p)
+                }
+
+            // show unsubjoined form
+            if (cols.fform && items[cols.fform] !== '') {
+                p = document.createElement('p')
+                p.className = 'subjPair'
+                p.innerHTML = 'Non-subjoined form is '+makeCharacterLink(items[cols.fform], lang, dir)
+                letter.appendChild(p)
                 }
 
 
@@ -688,6 +720,192 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
 	}
 
 
+
+function addBasics (lang, dir) {
+	var charList = document.querySelectorAll('.character')
+	console.log('.character length',charList.length)
+	
+	for (i=0;i<charList.length;i++) {
+		// get the character
+		var hex = charList[i].id.replace(/char/,'')
+		while (hex.length < 4) hex = '0' + hex
+		//console.log(hex)
+		dec = parseInt(hex, 16)
+		var dbrecord = U[dec].split(';')
+		var cpName = dbrecord[1]
+
+		cchar = String.fromCodePoint(dec)
+		out = ''
+		
+		// add top stuff
+		out += '<div class="charimg">&#x'+hex+';</div>\n'
+		out += '<p class="charname"><strong>U+'+hex+'</strong> <a href="#char'+hex+'">'+cpName+'</a></p>\n'
+		out += '<p class="univiewLink"><a target="_blank" href="/uniview/?char='+hex+'">See in UniView</a></p>\n'
+		
+		// get data from descriptions.js
+		unicodenotes = ''
+		if (desc[dec]) {
+			var unicodenotes = desc[dec]
+			unicodenotes = unicodenotes.replace(/¶/,'')
+			unicodenotes = unicodenotes.replace(/¶/g,'<br>')
+			}
+		if (unicodenotes != '') out += '<div class="unicodenotes">'+unicodenotes+'</div>\n'
+		
+
+	   // check for decomposable characters
+		if (cchar.normalize('NFD') != cchar) {
+			out += '<p class="decomposition">'
+			out += 'Decomposes to '+makeCharacterLink(cchar.normalize('NFD'), lang, dir)
+			if (cchar.normalize('NFD') === cchar.normalize('NFC')) out += '<br><strong>The NFC normalised form of this character is the decomposed sequence!</strong>'
+			out += '</p>'
+			}
+
+
+		out += '<div class="notes">\n'           
+
+		//if (document.getElementById('letter').checked) {
+		//	out += '<div class="letter '+lang+'">'
+		//	out += '<p class="titlepara">'+lang+'Title</p>\n'
+		
+		out += '</div>\n'
+		out += '</div>\n'
+
+		charList[i].innerHTML = out
+		}
+	desc = '' // remove desc from memory
+	}
+
+
+
+
+
+function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
+
+	var missing = ''
+	var noteList = document.querySelectorAll('.notes')
+	console.log('noteList length',noteList.length)
+	parseSpreadsheet(spreadsheet)
+	
+    for (var x=0; x<noteList.length; x++) {
+		// get the character
+		hex = noteList[x].parentNode.id.replace(/char/,'')
+		dec = parseInt(hex, 16)
+		cchar = String.fromCodePoint(dec)
+		
+		if (spreadsheetRows[cchar]) {		
+			out = '<div class="letter '+langClass+'">'
+
+			// show shape from shape column (use for cursive or conjunct text)
+			if (cols.shape>0 && spreadsheetRows[cchar][cols.shape]) {
+				out += '<p class="charShape"><span class="ex" lang="'+lang+'">'+spreadsheetRows[cchar][cols.shape]+'</span></p>'
+				}
+
+			out += '<p class="titlepara"><span class="title">'+languageName+'</span>'
+
+			if (spreadsheetRows[cchar][cols['nnameLoc']] && spreadsheetRows[cchar][cols['nnameLoc']] != '0') out += '<span class="localname" lang="'+lang+'">'+spreadsheetRows[cchar][cols['nnameLoc']]+'</span>'
+			
+			if (spreadsheetRows[cchar][cols['nameLoc']] && spreadsheetRows[cchar][cols['nameLoc']] != '0') out += '<span class="transliteratedname trans">'+spreadsheetRows[cchar][cols['nameLoc']]+'</span>'
+			
+			if (spreadsheetRows[cchar][cols['meaning']] && spreadsheetRows[cchar][cols['meaning']] != '0') out += '<span class="charMeaning meaning">'+spreadsheetRows[cchar][cols['meaning']]+'</span>'
+			
+			out += '<br>'
+
+			if (spreadsheetRows[cchar][cols['typeLoc']]) out += '<span class="charType">'+spreadsheetRows[cchar][cols['typeLoc']]+'</span>'
+			
+			if (spreadsheetRows[cchar][cols['statusLoc']]) out += '<span class="charStatus">'+spreadsheetRows[cchar][cols['statusLoc']]+'</span>'
+			
+			if (spreadsheetRows[cchar][cols['ipaLoc']]) out += '<span class="charIPA ipa">'+spreadsheetRows[cchar][cols['ipaLoc']]+'</span>'
+			
+			if (spreadsheetRows[cchar][cols['transLoc']]) out += '<span class="localtrans trans">'+spreadsheetRows[cchar][cols['transLoc']]+'</span>'
+
+			out += '</p>'
+		
+			if (typeof charDetails[cchar] === 'undefined') console.log('ERROR: charDetails[cchar] is undefined.','cchar:',cchar)
+			if (charDetails[cchar].trim() !== '') out += charDetails[cchar]
+
+			// vowel correspondences
+			if (cols.ivowel>0 && spreadsheetRows[cchar][cols.ivowel]) {
+				out += '<p class="vowelPairing">The corresponding independent vowel is '+makeCharacterLink(spreadsheetRows[cchar][cols.ivowel], lang, dir)+'</p>'
+				}
+			if (cols.dvowel>0 && spreadsheetRows[cchar][cols.dvowel]) {
+				out += '<p class="vowelPairing">The corresponding dependent vowel is '+makeCharacterLink(spreadsheetRows[cchar][cols.dvowel], lang, dir)+'</p>'
+				}
+
+			// upper/lowercase
+			if (cols.uc>0 && spreadsheetRows[cchar][cols.uc]) {
+				out += '<p class="charUppercase">Uppercase is '+makeCharacterLink(spreadsheetRows[cchar][cols.uc], lang, dir)+'</p>'
+				}
+			if (cols.lc>0 && spreadsheetRows[cchar][cols.lc]) {
+				out += '<p class="charLowercase">Lowercase is '+makeCharacterLink(spreadsheetRows[cchar][cols.lc], lang, dir)+'</p>'
+				}
+
+			// subjoined forms
+			if (cols.subj>0 && spreadsheetRows[cchar][cols.subj]) {
+				out += '<p class="subjPair">Subjoined form is '+makeCharacterLink(spreadsheetRows[cchar][cols.subj], lang, dir)+'</p>'
+				}
+			if (cols.fform>0 && spreadsheetRows[cchar][cols.fform]) {
+				out += '<p class="subjPair">Non-subjoined form is '+makeCharacterLink(spreadsheetRows[cchar][cols.fform], lang, dir)+'</p>'
+				}
+
+			// tone correspondences
+			if (cols.htone>0 && spreadsheetRows[cchar][cols.htone]) {
+				out += '<p class="tonePairing">High class equivalent is  '+makeCharacterLink(spreadsheetRows[cchar][cols.htone], lang, dir)+'</p>'
+				}
+			if (cols.ltone>0 && spreadsheetRows[cchar][cols.ltone]) {
+				out += '<p class="tonePairing">Low class equivalent is '+makeCharacterLink(spreadsheetRows[cchar][cols.ltone], lang, dir)+'</p>'
+				}
+
+			out += '</div>' // end of letter div
+			
+			noteList[x].innerHTML = noteList[x].innerHTML + '\n\n' + out
+			}
+
+		else missing += ' '+cchar
+		}
+	console.log('Characters not in spreadsheet for '+lang+': ',missing)
+	}
+
+
+function convertTranscriptionData (node) {
+	 // other transcriptions
+	var insertTranscriptions = document.querySelectorAll('.insertTranscription')
+
+	// do the inserted transcription locations
+	if (insertTranscriptions.length > 0 && cols.othertranscriptions && cols.othertranscriptions.length > 0) {
+		for (var it=0;it<insertTranscriptions.length;it++) {
+			para = ''
+			for (let i=0;i<cols.othertranscriptions.length;i++) {
+				if (spreadsheetRows[insertTranscriptions[it].textContent] && spreadsheetRows[insertTranscriptions[it].textContent][cols.othertranscriptions[i][0]]) {
+					para += cols.othertranscriptions[i][1]+': <span class="trans">'+spreadsheetRows[insertTranscriptions[it].textContent][cols.othertranscriptions[i][0]]+'</span>'
+					if (i<cols.othertranscriptions.length-1) para += '<br>'
+					}
+				}
+			insertTranscriptions[it].innerHTML = para
+			}
+		}
+	}
+
+
+function convertTranscriptionData (lang) {
+	 // other transcriptions
+	var insertTranscriptions = document.querySelectorAll('.letter.'+lang+' .insertTranscription')
+	console.log('Transcriptions to check: ',insertTranscriptions.length)
+	
+	// do the inserted transcription locations
+	for (var t=0;t<insertTranscriptions.length;t++) {
+		if (insertTranscriptions.length > 0 && cols.othertranscriptions && cols.othertranscriptions.length > 0) {
+			para = ''
+			for (let i=0;i<cols.othertranscriptions.length;i++) {
+				if (spreadsheetRows[insertTranscriptions[t].textContent] && spreadsheetRows[insertTranscriptions[t].textContent][cols.othertranscriptions[i][0]]) {
+					para += cols.othertranscriptions[i][1]+': <span class="trans">'+spreadsheetRows[insertTranscriptions[t].textContent][cols.othertranscriptions[i][0]]+'</span>'
+					if (i<cols.othertranscriptions.length-1) para += '<br>'
+					}
+				}
+			insertTranscriptions[t].innerHTML = para
+			}
+		else { insertTranscriptions[t].outerHTML = '' }
+		}
+	}
 
 
 

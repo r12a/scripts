@@ -1,7 +1,6 @@
 
 var autoExpandExamples = {}
-// this is the string containing vocab information stored in xxx-examples.js
-// not sure why it's declared here, and as an object
+// this will contain the vocab information stored in xxx-examples.js
 
 
 function addExamples (langFilter) { //console.log('langFilter:', langFilter, autoExpandExamples[langFilter])
@@ -22,7 +21,7 @@ function addExamples (langFilter) { //console.log('langFilter:', langFilter, aut
 	// find the nodes that correspond to the language in langFilter
 	var selector = '.eg[lang='+langFilter+']'
 	var nodes = document.querySelectorAll(selector)
-	console.log(nodes.length,' example nodes to expand')
+	//console.log(nodes.length,' example nodes to expand')
 	
 	for (let n=0;n<nodes.length;n++) {
 		//console.log('Looking for ',nodes[n].textContent)

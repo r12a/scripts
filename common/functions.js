@@ -13,8 +13,15 @@ function initialiseSummary (base, lang, tableName, dir) {
 	setFindIPA()
 	setupBlockLinks()
 	setTranslitToggle()
+	setCharOnclicks()
     }
 
+
+function setCharOnclicks () {
+	// all links with target=c should open descriptions in the panel
+	var links = document.querySelectorAll('.codepoint a')
+	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
+	}
 
 function setupBlockLinks () {
 	// set target attribute for links that point to characters in the block page
@@ -423,7 +430,6 @@ function makeTables (lang) {
                 }
 
 
-
 			// print the code point values
             out += '<span class="listUnum">'
 			charList = [... chars[i]]
@@ -434,9 +440,12 @@ function makeTables (lang) {
                 hex = hex.toString(16).toUpperCase()
                 while (hex.length < 4) hex = '0'+hex
 				
+				out += '<span class="listUnumCP" onclick="showCharDetailsInPanel(event)">'+hex+'</span>'
+/* remove in favour of displaying data in panel
 				if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.block]) out += '<a href="/scripts/'+window.spreadsheetRows[char][cols.block]+'/block#char'+hex+'" target="c">'
                 out += hex
 				if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.block]) out += '</a>'
+				*/
                 if (charList.length>1 && z<charList.length-1) out += '<br/>'
                 }
                 out += '</span>'
@@ -743,17 +752,44 @@ function initialiseShowNames (base, target) {
 	
     // this is the new stuff
 	var listItems = document.querySelectorAll(".listItem")
-	for (let i=0;i<listItems.length;i++) listItems[i].addEventListener('click', showNameDetailsEvent)
+	for (let i=0;i<listItems.length;i++) {
+		listItems[i].addEventListener('click', showCharDetailsEvent)
+		//listItems[i].addEventListener('click', showCharDetailsInPanel)
+		//listItems[i].addEventListener('mouseover', showCharDetailsInPanel)
+		listItems[i].addEventListener('mouseover', showCharDetailsEvent)
+		}
 	
 	var lists = document.querySelectorAll(".exlist")
-	for (let i=0;i<lists.length;i++) lists[i].addEventListener('click', showNameDetailsEvent)
+	for (let i=0;i<lists.length;i++) lists[i].addEventListener('click', showCharDetailsEvent)
 	}
 
 
-function showNameDetailsEvent (evt) { 
+function showNameDetailsEventOLD (evt) { 
 	// base is set at the bottom of the source page
 	showNameDetails(evt.target.textContent, evt.target.lang, window.base, 'c', document.getElementById('panel'), 'list', '' )
 	}
+
+
+function showCharDetailsEvent (evt) {
+	if (typeof charDetails === 'undefined') return
+console.log(evt.type, document.getElementById('showDetailOnMouseover').checked)
+	if (evt.type === 'mouseover' && document.getElementById('showDetailOnMouseover').checked != true) return
+	// clear any existing table
+	table = evt.target.parentNode.parentNode.parentNode.querySelector('table')
+	if (table !== null) table.parentNode.removeChild(table)
+	
+	var table = document.createElement('table')
+	table.className = 'charDetails'
+	table.innerHTML = makeDetails(evt.target.textContent, evt.target.lang)
+	evt.target.parentNode.parentNode.parentNode.appendChild(table)
+	
+	
+	addExamples(evt.target.lang)
+	autoTransliterate(evt.target.lang)
+	convertTranscriptionData(evt.target)
+	}
+
+
 
 /*
 function shownames_setImgOnclick ( node, base, target ) {
@@ -986,6 +1022,7 @@ function setTranslitToggle () {
 		console.log("Couldn't find sliding checkbox!")
 		return
 		}
+	// add translit toggle
 	var div = document.createElement('div')
 	div.id = 'translitToggle'
 	var label = document.createElement('label')
@@ -996,11 +1033,28 @@ function setTranslitToggle () {
 	label.onclick = showTransliterationsEvt
 	div.appendChild(label)
 	checkboxList.appendChild(div)
+
+	// add detail mouseover toggle
+	var div = document.createElement('div')
+	div.id = 'showDetailType'
+	var label = document.createElement('label')
+	var input = document.createElement('input')
+	input.type = 'checkbox'
+	input.checked = true
+	input.id = 'showDetailOnMouseover'
+	label.appendChild(document.createTextNode('Detail on mouseover '))
+	label.appendChild(input)
+	//label.onclick = showTransliterationsEvt
+	div.appendChild(label)
+	checkboxList.appendChild(div)
 	}
 
 function showTransliterationsEvt (evt) { 
 	showTransliterations(evt.target.checked )
 	}
+
+
+
 
 
 
