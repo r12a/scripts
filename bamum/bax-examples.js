@@ -2,6 +2,6 @@
 
 autoExpandExamples.bax = `
 
-
+tjos|os|exa,[e]
 `
 
