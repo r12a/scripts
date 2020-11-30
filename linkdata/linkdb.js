@@ -99,6 +99,7 @@ var scriptNotes= {
 			], 
     'armn':[['Armenian','armenian/']],
     'bali':[['Balinese', 'balinese/']], 
+    'bamu':[['Bamum', 'bamum/']], 
     'bass':[['Bassa Vah', 'bassavah/']], 
     'beng':[['Bengali/Bangla', 'bengali/']],
     'bugi':[['Buginese', 'buginese/']],
@@ -156,6 +157,7 @@ var scriptNotes= {
 var scriptNotesByRegion = {  
 	'Africa':[['Adlam', 'adlam/'],
 			  ['Amharic', 'ethiopic/'],
+			  ['Bamum', 'bamum/'],
 			  ['Bassa Vah', 'bassavah/'],
 			  ['Ethiopic', 'ethiopic/'],
 			  ['Hausa (boko)', 'latin/hausa'],
@@ -306,6 +308,7 @@ var orthoChart = {
 'arab':'MS Arabic, Hausa, Kashmiri, Urdu, Uighur',
 'armn':'Armenian',
 'bali':'Balinese',
+'bamu':'Bamum',
 'bass':'Bassa Vah',
 'beng':'Bengali',
 'bugi':'Buginese',
@@ -737,18 +740,16 @@ shaw:{ script:"Shavian", code:"Shaw", dates:"1960s – today", start:"1960", end
 				]
 	},
 
-bamu:{ script:"Bamum", code:"Bamu", dates:"1896 – today", start:"1896", end:"", origin:"Africa", current_usage:"endangered",
-	info:{ 		wikipedia:"Bamum_script", omniglot:"bamum" }, 
-	local: [	],
-	unicode:{ 	}, 
-	charts:[	"Bamum", "Bamum Supplement" ],
-	pickers:[	
-				],
-	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-african.html#bamum" }
-				],
-	layout:[	
-				]
-	},
+
+bamu:{ script:"Bamum", code:"Bamu",
+dates:"1896 – today", start:"1896", end:"", 
+origin:"Africa", current_usage:"endangered",
+info:{ 		wikipedia:"Bamum_script", omniglot:"bamum" }, 
+local: [],
+charts:[ "Bamum", "Bamum Supplement" ],
+layout:[]
+},
+
 
 bass:{ script:"Bassa Vah", code:"Bass", dates:"1907 – today", start:"1907", end:"", origin:"Africa", current_usage:"endangered",
 	info:{ 		wikipedia:"Bassa_Vah", omniglot:"bassa" }, 
