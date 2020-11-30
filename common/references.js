@@ -35,7 +35,6 @@ function setFootnoteRefs () {
 	// creates markup for the footnote references
 		
 	fnrefs = document.querySelectorAll('tt')
-	console.log(fnrefs)
 	for (let i=0;i<fnrefs.length;i++) {
 		var itemArray = fnrefs[i].textContent.split(',')
 		var locn = ''
