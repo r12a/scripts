@@ -14,7 +14,11 @@ function initialiseSummary (base, lang, tableName, dir) {
 	setupBlockLinks()
 	setTranslitToggle()
 	setCharOnclicks()
+	createReferences()
     }
+
+
+
 
 
 function setCharOnclicks () {
@@ -772,8 +776,9 @@ function showNameDetailsEventOLD (evt) {
 
 function showCharDetailsEvent (evt) {
 	if (typeof charDetails === 'undefined') return
-console.log(evt.type, document.getElementById('showDetailOnMouseover').checked)
+
 	if (evt.type === 'mouseover' && document.getElementById('showDetailOnMouseover').checked != true) return
+	
 	// clear any existing table
 	table = evt.target.parentNode.parentNode.parentNode.querySelector('table')
 	if (table !== null) table.parentNode.removeChild(table)
@@ -787,6 +792,7 @@ console.log(evt.type, document.getElementById('showDetailOnMouseover').checked)
 	addExamples(evt.target.lang)
 	autoTransliterate(evt.target.lang)
 	convertTranscriptionData(evt.target)
+	setFootnoteRefs()
 	}
 
 
