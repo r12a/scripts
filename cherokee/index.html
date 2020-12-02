@@ -29,6 +29,8 @@
 <script src="../linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../common/egcode.js"></script>
+<script src="../common/references.js"></script>
+<script src="refs.js"></script>
 
 <script src="chr-examples.js"></script>
 <script src="chr-translit.js">  </script>
@@ -54,34 +56,32 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->24 November, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->2 December, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
 
 <div class="section">
   <p>This page gathers  basic information about the Cherokee script and its use for the Cherokee language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Cherokee using Unicode.</p>
-<p>See also the companion document, <a href="block" class="linkHighlight">Cherokee character notes</a>, for detailed information about specific Unicode characters.</p>
 <p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
 
 
 
-<details>
+<p id="usage"></p>
+<script>addUsageAdvice('Cherokee')</script>
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Cherokee','Cherokee'); return false;">More about using this page</a></summary>
+<div id="about"></div>
+</details>
+
+<details class="supportdocs noprint">
 <summary class="instructions"><a href="../links?iso=Cher">Related pages</a>.</summary>
 </details>
 
-
-
-<details>
-<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
-</details>
-
-
-
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Cherokee','Cherokee'); return false;">About this page</a></summary>
-<div id="about"></div>
+<summary class="instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
 </details>
 </div>
 
@@ -125,7 +125,7 @@
 
 <section id="history">
 <h2>Usage &amp; history</h2>
-<p>It is estimated that only around 2,000 Cherokee people speak the language. However, those who do speak the language use the script widely for &quot;writing letters, recipes, folktales, diaries, and for personal record-keeping. It is also used in some legal, governmental and religious documents and, in some areas, public signage. Efforts are being made to revive both the language and the script; to that end it is used in a limited capacity in education. Knowledge of the script is considered a prerequisite for full Cherokee citizenship.&quot;<a class="fnref" href="http://scriptsource.org/scr/Cher">s</a></p>
+<p>It is estimated that only around 2,000 Cherokee people speak the language. However, those who do speak the language use the script widely for <q>writing letters, recipes, folktales, diaries, and for personal record-keeping. It is also used in some legal, governmental and religious documents and, in some areas, public signage. Efforts are being made to revive both the language and the script; to that end it is used in a limited capacity in education. Knowledge of the script is considered a prerequisite for full Cherokee citizenship</q>.<tt>s</tt></p>
 <p>Names:</p>
 <ul>
 <li><span class="charExample" translate="no"><span class="ex" lang="chr">ᏣᎳᎩ</span> <span class="trans">TˢᵃLᵃGⁱ</span>(<span class="transc">tsalagi</span>)</span> Cherokee&nbsp;</li>
@@ -157,13 +157,29 @@
 <p>Cherokee text runs <mark>left to right in horizontal lines</mark>.</p>
 <p>Words are <mark>separated by spaces</mark>.</p>
 
-<p>The syllabary has <mark>85 characters</mark>, of which 6 represent syllables that start with either no consonant or with <span class="ipa">ʔ</span> (<span class="ex" lang="chr">Ꭰ Ꭱ Ꭲ Ꭳ Ꭴ Ꭵ</span>), and one character represents the non-syllabic consonant sound <span class="ipa">s</span> (<span class="ex" lang="chr">Ꮝ</span>). The rest nominally represent a combination of consonant plus vowel, though the actual practise is a little more nuanced, and there is a degree of vagueness in the script when it comes to phonetically transcribing spoken sounds.<a class="fnref" href="#refs">d</a></p>
+<p>The syllabary has <mark>85 characters</mark>, of which 6 represent syllables that start with either no consonant or with <span class="ipa">ʔ</span> (<span class="ex" lang="chr">Ꭰ Ꭱ Ꭲ Ꭳ Ꭴ Ꭵ</span>), and one character represents the non-syllabic consonant sound <span class="ipa">s</span> (<span class="ex" lang="chr">Ꮝ</span>). The rest nominally represent a combination of consonant plus vowel, though the actual practise is a little more nuanced, and there is a degree of vagueness in the script when it comes to phonetically transcribing spoken sounds.<tt>d</tt></p>
 <p>The script doesn't fully represent the sounds of the spoken language. Vowel length is not distinguished, with some exceptions syllable-final consonants and syllable-initial aspiration are not reflected in the orthography, and the user has to figure out when to drop the vowel of a CV letter to make consonant clusters. Some readers are beginning to use diacritics to indicate pronunciation more accurately.</p>
 <p>The spoken language is tonal, but <mark>tones are not written</mark>.</p>
 <p>The script is <mark>becoming bicameral</mark>, after a long period when syllabic characters ressembled uppercase letters.</p>
     <p>There is no standard spelling. The way a word is written may vary, according to the pronunciation of the writer, or choices they make for dealing with consonant clusters.</p>
     <p>The visual forms of letters don't  interact. There are no combining characters or diacritics, and ASCII digits are used.</p>
 </section>
+
+
+
+
+
+
+
+<div id="showTranscriptions">
+<div>Character lists show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div>
+<label>Transliteration 
+<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
+<!--div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div-->
+</div>
 
 
 
@@ -213,20 +229,6 @@
 
   
   
-<div id="showTranscriptions">
-<div>Character lists show:</div>
-<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
-<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div>
-<label>Transliteration 
-<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
-<!--div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div-->
-</div>
-
-
-
-
-
 <section id="vowelPhonemes">
 <h2>Vowel sounds</h2>
 
@@ -472,8 +474,8 @@ alveolar</th>
 <section id="cs">
 <h3>Case</h3>
     <p>Lowercase characters were introduced in Unicode 8.0, to cover growing use of bicameral content in modern typesetting, as well as some older texts such as the Cherokee New Testament. The lowercase text above is likely to be displayed as tofu (boxes), since it is currently difficult to find a font that includes lowercase forms.</p>
-    <p>It is unusual for the majority of content to be in uppercase, and for lowercase to come in later, and implementers may need to take care in introducing the new characters. For example, Cherokee case-folds to uppercase, rather than lower. For more details see the <a href="http://www.unicode.org/versions/latest/ch20.pdf" target="_blank">Unicode Standard</a>.<a class="fnref" href="http://www.unicode.org/versions/latest/ch20.pdf">u</a></p>
-    <p> The shapes of the upper- vs. lower-cased letters don't change radically (as they do in Latin or Cyrillic). The lowercase letters are often simply smaller, however they may have ascenders and descenders in some fonts<a class="fnref" href="http://www.unicode.org/L2/L2014/14064r-n4537r-cherokee.pdf">e5</a>.</p>
+    <p>It is unusual for the majority of content to be in uppercase, and for lowercase to come in later, and implementers may need to take care in introducing the new characters. For example, Cherokee case-folds to uppercase, rather than lower. For more details see the <a href="http://www.unicode.org/versions/latest/ch20.pdf" target="_blank">Unicode Standard</a>.<tt>u</tt></p>
+    <p> The shapes of the upper- vs. lower-cased letters don't change radically (as they do in Latin or Cyrillic). The lowercase letters are often simply smaller, however they may have ascenders and descenders in some fonts<tt>e,5</tt>.</p>
     <figure>
     <p class="large"><span lang="chr" class="ex">ᎤᎾᏕᏅᎢ</span>&nbsp;vs.&nbsp;<span lang="chr" class="ex">Ꭴꮎꮥꮕꭲ</span></p>
     <figcaption>Traditional uppercase text (left) and the newer mixed case text (right).</figcaption>
@@ -488,7 +490,7 @@ alveolar</th>
 <section id="vowel_chars">
 <h3>'Vowel' characters</h3>
 <p>The six vowel characters, when they appear at the start of a word represent plain vowel sounds, eg. <span class="eg" lang="chr">ᎠᎹ</span>.</p>
-<p>Elsewhere they represent a syllable starting with <span class="ipa">ʔ</span>, eg. <span class="eg" lang="chr">ᎯᎠ</span>.<a class="fnref" href="#refs">d</a></p>
+<p>Elsewhere they represent a syllable starting with <span class="ipa">ʔ</span>, eg. <span class="eg" lang="chr">ᎯᎠ</span>.<tt>d</tt></p>
 
 <figure class="auto bicameral" data-cols="ipa,trans">Ꭰꭰ␣Ꭱꭱ␣Ꭲꭲ␣Ꭳꭳ␣Ꭴꭴ␣Ꭵꭵ</figure>
 
@@ -498,7 +500,7 @@ alveolar</th>
 
 <section id="vowel_length">
 <h4>Vowel length and tone</h4>
-<p>The vowel in a CV syllable doesn't distinguish between short and long vowel sounds, nor does it indicate tonal values, eg.  <span class="eg" lang="chr">ᎠᎹ</span>  and  <span class="eg" lang="chr">ᎠᎹ</span> are written the same, although the vowels are of different lengths and the tones (low vs high, respectively) are different.<a class="fnref" href="#refs">d</a></p>
+<p>The vowel in a CV syllable doesn't distinguish between short and long vowel sounds, nor does it indicate tonal values, eg.  <span class="eg" lang="chr">ᎠᎹ</span>  and  <span class="eg" lang="chr">ᎠᎹ</span> are written the same, although the vowels are of different lengths and the tones (low vs high, respectively) are different.<tt>d</tt></p>
 </section>
 </section>
 
@@ -509,7 +511,7 @@ alveolar</th>
 <section id="clusters">
 <h3>Consonant clusters</h3>
 <p>With one exception, consonant clusters are managed by using a normal syllabic character but ignoring the ('dummy') vowel, eg. <span class="eg" lang="chr">ᎦᎵᏉᎩ</span> or <span class="eg" lang="chr">ᎬᏙᎠ</span>. The character chosen is largely up to the writer, but some words bring in etymological connections.</p>
-<p>The exception is <span class="codepoint"><span lang="chr">&#x13CD;</span> <a href="/scripts/cherokee/block#char13CD">[<span class="uname">U+13CD CHEROKEE LETTER S</span>]</a></span>, which is not followed by a vowel, eg. <span class="eg" lang="chr">ᏍᎪᎯ</span>.<a class="fnref" href="#refs">d</a></p>
+<p>The exception is <span class="codepoint"><span lang="chr">&#x13CD;</span> <a href="/scripts/cherokee/block#char13CD">[<span class="uname">U+13CD CHEROKEE LETTER S</span>]</a></span>, which is not followed by a vowel, eg. <span class="eg" lang="chr">ᏍᎪᎯ</span>.<tt>d</tt></p>
 </section>
     
     
@@ -519,7 +521,7 @@ alveolar</th>
 <h3>Syllable initial aspiration</h3>
     <p>Only 6 syllable pairs distinguish between aspirated and non-aspirated sounds at the start of a syllable.</p>
     <p>Only one nasal syllable makes this distinction, ie. <span class="eg" lang="chr">ᎬᎾ</span> versus <span class="eg" lang="chr">ᎬᎿ</span>. However, <span class="charExample" translate="no"><span class="ex" lang="chr">ᎬᏂᎭ</span> <span class="trans">gv-ni-ha</span></span>  could be either <span class="ipa">kə̃ːniha</span> <span class="meaning">I'm striking it</span> or <span class="ipa">kə̃ːhniha</span> <span class="trans">gv-ni-ha</span> <span class="meaning">she's striking it</span>.</p>
-    <p>There are five pairs of characters that make this distinction for stops or affricates: <span class="ex" lang="chr">Ꭶ+Ꭷ, Ꮣ+Ꮤ, Ꮥ+Ꮦ, Ꮧ+Ꮨ, Ꮬ+Ꮭ</span>. For example, it is possible to distinguish between the first two syllables of <span class="eg" lang="chr">ᎧᎦᎵ</span>, but not between the two meanings of <span class="charExample" translate="no"><span class="ex" lang="chr">ᎪᎳ</span> <span class="trans">go-la</span></span>, ie. <span class="ipa">koːla</span> <span class="meaning">winter</span> and <span class="ipa">kʰoːla</span> <span class="meaning">bone</span>.<a class="fnref" href="#refs">d</a></p>
+    <p>There are five pairs of characters that make this distinction for stops or affricates: <span class="ex" lang="chr">Ꭶ+Ꭷ, Ꮣ+Ꮤ, Ꮥ+Ꮦ, Ꮧ+Ꮨ, Ꮬ+Ꮭ</span>. For example, it is possible to distinguish between the first two syllables of <span class="eg" lang="chr">ᎧᎦᎵ</span>, but not between the two meanings of <span class="charExample" translate="no"><span class="ex" lang="chr">ᎪᎳ</span> <span class="trans">go-la</span></span>, ie. <span class="ipa">koːla</span> <span class="meaning">winter</span> and <span class="ipa">kʰoːla</span> <span class="meaning">bone</span>.<tt>d</tt></p>
     </section>
     
     
@@ -544,8 +546,8 @@ alveolar</th>
 
 <section id="tones">
 <h3>Tones</h3>
-<p>Spoken Cherokee has tones, but they are not shown in the text.<a class="fnref" href="http://www.unicode.org/versions/latest/ch20.pdf">u</a></p>
-<p>Linguists who want to show tones do so using standard allocations of combining characters.<a class="ref" href="http://www.omniglot.com/writing/cherokee.htm"></a> The following list shows diacritics used to express tones. (Mid is the default, and doesn't need marking.)<a class="fnref" href="http://www.unicode.org/L2/L2014/14064r-n4537r-cherokee.pdf">e5</a></p>
+<p>Spoken Cherokee has tones, but they are not shown in the text.<tt>u</tt></p>
+<p>Linguists who want to show tones do so using standard allocations of combining characters.<a class="ref" href="http://www.omniglot.com/writing/cherokee.htm"></a> The following list shows diacritics used to express tones. (Mid is the default, and doesn't need marking.)<tt>e,5</tt></p>
 
 <figure class="auto" data-cols="" data-notes="mid,falling,rising,low,high,sup.hi">Ꭰ̄␣Ꭰ̂␣Ꭰ̌␣Ꭰ̀␣Ꭰ́␣Ꭰ̋</figure>
 </section>
@@ -557,7 +559,7 @@ alveolar</th>
   
 <section id="diacritics">
 <h2>Diacritics</h2>
-<p>Everson reports that  some combining diacritical marks are now used in Cherokee text by ordinary readers and especially children.<a class="fnref" href="http://www.unicode.org/L2/L2014/14064r-n4537r-cherokee.pdf">e5</a> </p>
+<p>Everson reports that  some combining diacritical marks are now used in Cherokee text by ordinary readers and especially children.<tt>e,5</tt> </p>
 <p>These diacritics are  in the Unicode Combining Diacritical Marks block. The Cherokee block has no combining characters.</p>
 
 <figure class="auxiliaryBox auto" data-cols="">̣␣̱␣̤␣̰</figure>
@@ -572,7 +574,7 @@ alveolar</th>
   
 <section id="digits">
 <h2>Numbers</h2>
-    <p>Sequoyah, the inventor of the script, created a set of Cherokee numbers, but they were not adopted and are not encoded in Unicode.<a class="fnref" href="http://www.unicode.org/versions/latest/ch20.pdf">u</a> The shapes of the numbers can be seen on the Omniglot page.<a class="fnref" href="http://www.omniglot.com/writing/cherokee.htm">o</a></p>
+    <p>Sequoyah, the inventor of the script, created a set of Cherokee numbers, but they were not adopted and are not encoded in Unicode.<tt>u</tt> The shapes of the numbers can be seen on the <a href="http://www.omniglot.com/writing/cherokee.htm">Omniglot page</a>.</p>
   </section>
 
 
@@ -610,7 +612,7 @@ alveolar</th>
 <p>Cherokee has no special requirements for baseline alignment between mixed scripts or in general.</p>
 <section id="fontstyle">
 <h3>Font styles</h3>
-<p>Cherokee users would like their fonts to have italic and bold styles, although this is not currently common. These alternate styles would be used in the same way as for the Latin script.<a class="fnref" href="http://www.unicode.org/L2/L2014/14064r-n4537r-cherokee.pdf">e5</a></p>
+<p>Cherokee users would like their fonts to have italic and bold styles, although this is not currently common. These alternate styles would be used in the same way as for the Latin script.<tt>e,5</tt></p>
   </section>
 
 
@@ -657,20 +659,20 @@ alveolar</th>
 <tbody>
 <tr>
 <th scope="row">phrase</th>
-<td><p><span class="codepoint" translate="no"><span lang="tmp">&#x002C;</span> [<span class="uname">U+002C COMMA</span>]</span></p>
-<p><span class="codepoint" translate="no"><span lang="tmp">&#x003B;</span> [<span class="uname">U+003B SEMICOLON</span>]</span></p>
-<p><span class="codepoint" translate="no"><span lang="tmp">&#x003A;</span> [<span class="uname">U+003A COLON</span>]</span></p></td>
+<td><p><span class="codepoint" translate="no"><span lang="chr">&#x002C;</span> [<span class="uname">U+002C COMMA</span>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="chr">&#x003B;</span> [<span class="uname">U+003B SEMICOLON</span>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="chr">&#x003A;</span> [<span class="uname">U+003A COLON</span>]</span></p></td>
 </tr>
 <tr>
 <th scope="row">sentence</th>
-<td><p><span class="codepoint" translate="no"><span lang="tmp">&#x002E;</span> [<span class="uname">U+002E FULL STOP</span>]</span></p>
-<p><span class="codepoint" translate="no"><span lang="tmp">&#x003F;</span> [<span class="uname">U+003F QUESTION MARK</span>]</span></p>
-<p><span class="codepoint" translate="no"><span lang="tmp">&#x0021;</span> [<span class="uname">U+0021 EXCLAMATION MARK</span>]</span></p></td>
+<td><p><span class="codepoint" translate="no"><span lang="chr">&#x002E;</span> [<span class="uname">U+002E FULL STOP</span>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="chr">&#x003F;</span> [<span class="uname">U+003F QUESTION MARK</span>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="chr">&#x0021;</span> [<span class="uname">U+0021 EXCLAMATION MARK</span>]</span></p></td>
 </tr>
 </tbody>
 </table>
-<p>Cherokee uses standard Latin punctuation.<a class="fnref" href="http://www.unicode.org/versions/latest/ch20.pdf">u</a></p>
-    <p>In some cases, it has been known for full stops to be raised above the baseline.<a class="fnref" href="#refs">d</a></p>
+<p>Cherokee uses standard Latin punctuation.<tt>u</tt></p>
+    <p>In some cases, it has been known for full stops to be raised above the baseline.<tt>d</tt></p>
   </section>
 
 
@@ -690,8 +692,8 @@ alveolar</th>
 <tbody>
 <tr>
 <th>standard</th>
-<td><p><span class="codepoint" translate="no"><span lang="tmp">(</span> [<span class="uname">U+0028 LEFT PARENTHESIS</span>]</span></p></td>
-<td><p><span class="codepoint" translate="no"><span lang="tmp">)</span> [<span class="uname">U+0029 RIGHT PARENTHESIS</span>]</span></p></td>
+<td><p><span class="codepoint" translate="no"><span lang="chr">(</span> [<span class="uname">U+0028 LEFT PARENTHESIS</span>]</span></p></td>
+<td><p><span class="codepoint" translate="no"><span lang="chr">)</span> [<span class="uname">U+0029 RIGHT PARENTHESIS</span>]</span></p></td>
 </tr>
 </tbody>
 </table>
@@ -714,13 +716,13 @@ alveolar</th>
 <tbody>
 <tr>
 <th scope="row">initial</th>
-<td><p><span class="codepoint" translate="no"><span lang="tmp">&#x201C;</span> [<span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span>]</span></p></td>
-<td><p><span class="codepoint" translate="no"><span lang="tmp">&#x201D;</span> [<span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span>]</span></p></td>
+<td><p><span class="codepoint" translate="no"><span lang="chr">&#x201C;</span> [<span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span>]</span></p></td>
+<td><p><span class="codepoint" translate="no"><span lang="chr">&#x201D;</span> [<span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span>]</span></p></td>
 </tr>
 <tr>
 <th scope="row">alternative</th>
-<td><p><span class="codepoint" translate="no"><span lang="tmp">&#x2018;</span> [<span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span>]</span></p></td>
-<td><p><span class="codepoint" translate="no"><span lang="tmp">&#x2019;</span> [<span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span>]</span></p></td>
+<td><p><span class="codepoint" translate="no"><span lang="chr">&#x2018;</span> [<span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span>]</span></p></td>
+<td><p><span class="codepoint" translate="no"><span lang="chr">&#x2019;</span> [<span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span>]</span></p></td>
 </tr>
 </tbody>
 </table>
@@ -799,7 +801,7 @@ alveolar</th>
 
 
 <details id="linebreak_details">
-<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<summary>Show legend <tt>ul</tt></summary>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
 </details>
@@ -985,13 +987,6 @@ alveolar</th>
  
 <section id="refs">
 <h2>References</h2>
-  <ol>
-    <!--li>[Daniels] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN 0-19-507993-0</li-->
-<li>[ <a class="fnref" href="#refs">d</a> ] Daniels, Peter T, Bright William, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN 0-19-507993-0</li>
-<li>[ <a class="fnref" href="http://www.unicode.org/L2/L2014/14064r-n4537r-cherokee.pdf">e</a> ] Michael Everson &amp; Durbin Feeling, <a href="http://www.unicode.org/L2/L2014/14064r-n4537r-cherokee.pdf">Revised proposal for the addition of Cherokee characters to the UCS</a></li>
-    <li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch20.pdf">u</a> ] The Unicode Standard v9.0, <a href="http://www.unicode.org/versions/latest/ch20.pdf">Cherokee</a>. </li>
-<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Cherokee_syllabary">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Cherokee_syllabary">Cherokee Syllabary</a></li>
-</ol>
 </section>
 
 
