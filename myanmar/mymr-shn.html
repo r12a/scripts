@@ -30,6 +30,8 @@
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../glossary/glossary.js"> </script>
 <script src="../common/egcode.js"></script>
+<script src="../common/references.js"></script>
+<script src="refs.js"></script>
 
 <script src="shn-examples.js"></script>
 <script src="shn-translit.js">  </script>
@@ -54,35 +56,33 @@
 </aside>
 
 	<p id="status">Updated 
-	  <!-- #BeginDate format:Sw1 -->24 November, 2020<!-- #EndDate -->
+	  <!-- #BeginDate format:Sw1 -->1 December, 2020<!-- #EndDate -->
 	  <span id="versionTop"></span>
 	  </p>
 
 
 <section>
 <p>This page gathers  basic information about current use of the Myanmar script for the Shan language. It <em>doesn't</em> address use of the orthography for writing Pali. It aims (generally) to provide an introduction to the orthography and typographic features, and (specifically) to advise how to write Shan using Unicode.</p>
-<p>See also the companion document, <a href="block" class="linkHighlight">Myanmar character notes</a>, for detailed information about specific Unicode characters.</p>
 <p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription. There are several dialects of Shan, with varying pronunciations. For more details see <a	 href="https://en.wikipedia.org/wiki/Shan_language#Dialects">Wikipedia</a>.</p>
 <p class="instructions">This page is set up to use the GreatHorKham Yangon font, if you have it on your system. Otherwise, it falls back to the Noto Serif Myanmar webfont.</p>
 
 
 
 
-<details>
+<p id="usage"></p>
+<script>addUsageAdvice('Shan')</script>
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Myanmar','Shan'); return false;">More about using this page</a></summary>
+<div id="about"></div>
+</details>
+
+<details class="supportdocs noprint">
 <summary class="instructions"><a href="../links?iso=Mymr">Related pages</a>.</summary>
 </details>
 
-
-
-<details>
-<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
-</details>
-
-
-
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Myanmar','Shan'); return false;">About this page</a></summary>
-<div id="about"></div>
+<summary class="instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
 </details>
 </section>
 
@@ -107,7 +107,7 @@
 <section id="history">
 <h2>Usage &amp; history</h2>
 
-<p>Shan  is the native language of the Shan people and is mostly spoken in Shan State, Burma, but also  in pockets of the Burmese Kachin State, and in Northern Thailand. Due to the civil war in Burma, few Shan today can read or write in Shan script.<a href="https://en.wikipedia.org/wiki/Shan_language#Dialects" class="fnref">w</a></p>
+<p>Shan  is the native language of the Shan people and is mostly spoken in Shan State, Burma, but also  in pockets of the Burmese Kachin State, and in Northern Thailand. Due to the civil war in Burma, few Shan today can read or write in Shan script.<tt>wsl,#Dialects</tt></p>
 <p>Names:</p>
 <ul style="text-align: start;">
 <li><span class="charExample" translate="no"><span class="ex" lang="shn">ၵႂၢမ်းတႆး</span> <span class="ipa">kwáːm.táj</span></span> Shan language.</li>
@@ -155,6 +155,21 @@ for the medial or for palatalisation.</p>
 
 
 
+
+
+
+<div id="showTranscriptions">
+<div>Character lists show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
+<div>
+<label>Latin 
+<input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+</div>
+   
+    
+      
 
 
 
@@ -337,30 +352,15 @@ for the medial or for palatalisation.</p>
 
 <section id="structure">
 <h2>Structure</h2>
-    <p>Typical Shan words are monosyllabic. Multisyllabic words are mostly Pali loanwords, or Burmese words with the initial weak syllable /ə/.<a class="fnref" href="https://en.wikipedia.org/wiki/Shan_language#Syllable_structure">w</a></p>
-<p>The basic syllable structure is:<a class="fnref" href="https://en.wikipedia.org/wiki/Shan_language#Syllable_structure">w</a></p>
+    <p>Typical Shan words are monosyllabic. Multisyllabic words are mostly Pali loanwords, or Burmese words with the initial weak syllable /ə/.<tt>wsl,#Syllable_structure</tt></p>
+<p>The basic syllable structure is:<tt>wsl,#Syllable_structure</tt></p>
 <p style="text-align: center;"><code>C(m)v(C)</code></p>
-<p>The initial consonant may be followed by one of <span class="ipa">-w-</span>, <span class="ipa">-y-</span> and <span class="ipa">-r-</span>, for which special characters are available.<a class="fnref" href="https://en.wikipedia.org/wiki/Shan_language#Syllable_structure">w</a></p>
-<p>In closed syllables (ie. those ending with a consonant)  the vowel is a monophthong. In open syllables, it can be either a monophthong or a diphthong.<a class="fnref" href="https://en.wikipedia.org/wiki/Shan_language#Syllable_structure">w</a></p>
-<p>Syllable-final consonants are <span class="ipa">p t k ʔ m n ŋ</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Shan_language#Syllable_structure">w</a></p>
+<p>The initial consonant may be followed by one of <span class="ipa">-w-</span>, <span class="ipa">-y-</span> and <span class="ipa">-r-</span>, for which special characters are available.<tt>wsl,#Syllable_structure</tt></p>
+<p>In closed syllables (ie. those ending with a consonant)  the vowel is a monophthong. In open syllables, it can be either a monophthong or a diphthong.<tt>wsl,#Syllable_structure</tt></p>
+<p>Syllable-final consonants are <span class="ipa">p t k ʔ m n ŋ</span>.<tt>wsl,#Syllable_structure</tt></p>
 </section>
   
   
-
-
-
-<div id="showTranscriptions">
-<div>Character lists show:</div>
-<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
-<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
-<div>
-<label>Latin 
-<input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
-</div>
-   
-    
-      
 
 
 
@@ -1123,9 +1123,9 @@ alveolar</th>
 </tr>
 </tbody>
 </table>
-<p><span class="ipa">f</span> is only found initially in eastern dialects, and is pronounced <span class="ipa">pʰ</span> elsewhere.<span class="instructions"><a class="fnref" href="https://en.wikipedia.org/wiki/Shan_language#Consonants">w</a></span></p>
-<p><span class="ipa">ʔ</span> appears before standalone vowels, and after open syllables.<a class="fnref" href="https://en.wikipedia.org/wiki/Shan_language#Consonants">w</a></p>
-<p><span class="ipa">r</span> is very rare and mainly used in Pali and some English loan words, sometimes as a glide in initial consonant clusters. Many Shan speakers pronounce it as <span class="ipa">l</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Shan_language#Consonants">w</a></p>
+<p><span class="ipa">f</span> is only found initially in eastern dialects, and is pronounced <span class="ipa">pʰ</span> elsewhere.<tt>wsl,#Consonants</tt></p>
+<p><span class="ipa">ʔ</span> appears before standalone vowels, and after open syllables.<tt>wsl,#Consonants</tt></p>
+<p><span class="ipa">r</span> is very rare and mainly used in Pali and some English loan words, sometimes as a glide in initial consonant clusters. Many Shan speakers pronounce it as <span class="ipa">l</span>.<tt>wsl,#Consonants</tt></p>
 <p>Shan doesn't natively have voiced stops or fricatives, however the following sounds may appear in loan or foreign words, and have dedicated consonant letters: <span class="ipa">b d g f θ z</span>.</p>
 <p>See also the dialectal differences described in <a	 href="https://en.wikipedia.org/wiki/Shan_language#Dialects">Wikipedia</a>.</p>
 
@@ -1301,7 +1301,7 @@ alveolar</th>
 <section id="finals">
 <h3>Syllable-final consonants</h3>
 	<p>Syllable-final consonant sounds  are indicated by ordinary consonant characters with a visible <span class="codepoint" translate="no"><span lang="shn">&#x103A;</span> [<a href="/scripts/myanmar/block#char103A"><span class="uname">U+103A MYANMAR SIGN ASAT</span></a>]</span> character, eg. <span class="eg" lang="shn">တွင်</span>.</p>
-<p>Syllable-final consonant sounds are <span class="ipa">p t k ʔ m n ŋ</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Shan_language#Syllable_structure">w</a></p>
+<p>Syllable-final consonant sounds are <span class="ipa">p t k ʔ m n ŋ</span>.<tt>wsl,#Syllable_structure</tt></p>
 </section>
 
 
@@ -1523,7 +1523,7 @@ alveolar</th>
 
 
 
-<p>Unchecked syllables can have 5 or 6 tones. The sixth tone, <span class="codepoint" translate="no"><span lang="shn">&#x108A;</span> [<a href="/scripts/myanmar/block#char108A"><span class="uname">U+108A MYANMAR SIGN SHAN TONE-6</span></a>]</span>, is  treated as a standard tone in the north; elsewhere it is only used for emphasis.<a class="fnref" href="https://en.wikipedia.org/wiki/Shan_language#Tones">w</a> The following examples illustrate usage.</p>
+<p>Unchecked syllables can have 5 or 6 tones. The sixth tone, <span class="codepoint" translate="no"><span lang="shn">&#x108A;</span> [<a href="/scripts/myanmar/block#char108A"><span class="uname">U+108A MYANMAR SIGN SHAN TONE-6</span></a>]</span>, is  treated as a standard tone in the north; elsewhere it is only used for emphasis.<tt>wsl,#Tones</tt> The following examples illustrate usage.</p>
 <ul>
 <li>rising 	<span class="eg" lang="shn">ၼႃ</span></li>
 <li>low 	<span class="eg" lang="shn">ၼႃႇ</span></li>
@@ -1590,7 +1590,7 @@ alveolar</th>
 <p lang="shn" style="line-height: 2;">ႁူမ်တင်းႁႆႇၵွင်မွင်း ၼူၵ်ႉတူဝ်းသေ မႃးၶဝ်ႈႁူမ်ႈႁပ်ႉတွၼ်ႈၵိုၼ်းၶွၼ်ႈ ဢမ်ႇယွမ်းမွၵ်ႈ <span class="eg-highlight">400-500</span></p>
 <figcaption>Example of a date range. <span class="instructions">(<a href="https://shn.wikipedia.org/wiki/%E1%80%90%E1%80%B0%E1%81%BC%E1%80%BA%E1%82%88%E1%80%90%E1%80%AE%E1%80%B8">source</a>)</span></figcaption>
 </figure>
-<p>The CLDR standard-decimal pattern is <code>#,##,##0.###</code>. The standard-percent pattern is <code>#,##,##0%</code>.<span class="refcode"><a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/lo.html">c</a></span></p>
+<p>The CLDR standard-decimal pattern is <code>#,##,##0.###</code>. The standard-percent pattern is <code>#,##,##0%</code>.</p>
 </section>
 
 
@@ -1895,7 +1895,7 @@ alveolar</th>
 
 
 <details id="linebreak_details">
-<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<summary>Show legend <tt>ul,#Properties</tt></summary>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BA (break after)</a> indicates that it is normal to break after that character.&nbsp;</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">NU (number)</a> behaves like ordinary characters (AL) in the context of most characters but activate the prefix and postfix behavior of prefix and postfix characters.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#PR">PR (numeric prefix)</a>  may not be separated from following numeric characters or following opening characters, even if a space character intervenes. For example, there is no break opportunity in “฿ (100.00)”.</p>
@@ -2056,30 +2056,6 @@ alveolar</th>
 
 <section id="refs">
 <h2>References</h2>
-<ol>
-<!--li>[ <a class="fnref" href="#refs">d</a> ]
-Peter T. Daniels and William Bright, <span class="doctitle"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
-0-19-507993-0</li>
-
-<li>[ <a class="fnref" href="http://std.dkuug.dk/JTC1/sc2/WG2/docs/n2908.pdf">e</a> ]
-Everson et al., <a href="http://std.dkuug.dk/JTC1/sc2/WG2/docs/n2908.pdf">Proposal for encoding the thisScript script in the UCS</a></li-->
-
-<li>[ <a class="fnref" href="https://www.unicode.org/notes/tn11/UTN11_4.pdf">h</a> ]
-Martin Hosken, Unicode Technical Note #11, <a href="https://www.unicode.org/notes/tn11/UTN11_4.pdf">Representing Myanmar in Unicode</a>, Version 4</li>
-<li>[ <a class="fnref" href="https://github.com/googlefonts/noto-fonts/issues/1811">g</a> ] Github, Noto Fonts, <a href="https://github.com/googlefonts/noto-fonts/issues/1811">Issues in Noto Sans Myanmar for &quot;Shan Language&quot;</a></li>
-
-<li>[ <a class="fnref" href="https://www.omniglot.com/writing/shan.htm">o</a> ]
-Omniglot, <a href="https://www.omniglot.com/writing/shan.htm">Shan</a></li>
-
-<li>[ <a class="fnref" href="http://sealang.net/shan/dictionary.htm">s</a> ]
- <a href="http://sealang.net/shan/dictionary.htm">SEAlang Library Shan Dictionary Resources</a></li>
-
-<li>[ <a class="fnref" href="https://www.unicode.org/versions/latest/ch13.pdf">u</a> ]
-<a href="https://www.unicode.org/versions/latest/ch13.pdf">The Unicode Standard v13.0</a></li>
-
-<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Shan_language">w</a> ]
-Wikipedia, <a href="https://en.wikipedia.org/wiki/Shan_language">Shan language</a>, <a href="https://en.wiktionary.org/wiki/Appendix:Kra-Dai_Swadesh_lists">Appendix:Kra-Dai Swadesh lists</a></li>
-</ol>
 </section>
 
 

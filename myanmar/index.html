@@ -29,6 +29,8 @@
 <script src="../linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../common/egcode.js"></script>
+<script src="../common/references.js"></script>
+<script src="refs.js"></script>
 
 <script src="my-examples.js"></script>
 <script src="my-translit.js">  </script>
@@ -56,7 +58,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->26 November, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->2 December, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -65,30 +67,25 @@
 
 <section>
 <p>This page gathers  basic information about the Myanmar script and its use for the Burmese language. It doesn't cover use of the Burmese orthography for writing Pali. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Burmese using Unicode.</p>
-
-
-
-<p>See also the companion document, <a href="block" class="linkHighlight">Myanmar character notes</a>, for detailed information about specific Unicode characters.</p>
 <p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
 
 
 
-<details>
+<p id="usage"></p>
+<script>addUsageAdvice('Myanmar')</script>
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Myanmar','Burmese'); return false;">More about using this page</a></summary>
+<div id="about"></div>
+</details>
+
+<details class="supportdocs noprint">
 <summary class="instructions"><a href="../links?iso=Mymr">Related pages</a>.</summary>
 </details>
 
-
-
-<details>
-<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
-</details>
-
-
-
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Myanmar','Burmese'); return false;">About this page</a></summary>
-<div id="about"></div>
+<summary class="instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
 </details>
 </section>
 
@@ -373,7 +370,7 @@ for the medial. Aspirated onset consonants are common: some have dedicated lette
 
 <section id="cporder">
 <h3>Codepoint order</h3>
-    <p>The following table shows the order in which characters should be typed and stored in memory for a given syllable, per the description in the Unicode Standard. (It is Burmese-specific and doesn't reflect the order or characters needed for languages such as Karen, Mon, Shan, etc.) <a class="fnref" href="http://www.unicode.org/versions/Unicode7.0.0/ch16.pdf">Unicode,</a> 598-9</sup></p>
+    <p>The following table shows the order in which characters should be typed and stored in memory for a given syllable, per the description in the Unicode Standard. (It is Burmese-specific and doesn't reflect the order or characters needed for languages such as Karen, Mon, Shan, etc.) <tt>u,648-9</tt></p>
     <table style="margin-right: 30%;">
       <tr>
         <th>kinzi</th>
@@ -773,7 +770,7 @@ used nowadays for indicating different tones only. For example, compare the tone
  <figure class="auto" data-cols="trans,transc">ပ␣ဒ␣ခ␣ဂ␣င␣ဝ</figure>
   
 <p>For example, <span class="eg" lang="my">ပေါင်</span>. Where there is no ambiguity, however, the normal shape is used, eg. <span class="eg" lang="my">ပြောင်းဖူး</span>. </p>
-<p class="info">Whereas in Unicode 5.0 the choice of appropriate form was left to the font or implementation during rendering, such contextual decisions are not appropriate for Sgaw Karen and other minority scripts, which only use the tall form, so <span class="codepoint"><span lang="my">&#xA0;&#x102B;</span> <a href="/scripts/myanmar/block#char102B">[<span class="uname">U+102B MYANMAR VOWEL SIGN TALL AA​</span>]</a></span> was added to Unicode 5.1 as a separate character, and needs to be typed explicitly.<a class="fnref" href="http://www.unicode.org/versions/Unicode7.0.0/ch16.pdf"> u597</a></p>
+<p class="info">Whereas in Unicode 5.0 the choice of appropriate form was left to the font or implementation during rendering, such contextual decisions are not appropriate for Sgaw Karen and other minority scripts, which only use the tall form, so <span class="codepoint"><span lang="my">&#xA0;&#x102B;</span> <a href="/scripts/myanmar/block#char102B">[<span class="uname">U+102B MYANMAR VOWEL SIGN TALL AA​</span>]</a></span> was added to Unicode 5.1 as a separate character, and needs to be typed explicitly.<tt>u,648</tt></p>
 <p><span class="leadin">Displaced U vowel-signs.</span> The  vowel signs <span class="codepoint"><span lang="my">&#xA0;&#x102F;</span> <a href="/scripts/myanmar/block#char102F">[<span class="uname">U+102F MYANMAR VOWEL SIGN U​</span>]</a></span> and <span class="codepoint"><span lang="my">&#xA0;&#x1030;</span> <a href="/scripts/myanmar/block#char1030">[<span class="uname">U+1030 MYANMAR VOWEL SIGN UU​</span>]</a></span>, which normally appear below a consonant, are  displayed to the right if something else intrudes on that space. Examples include </p>
 <ul>
 <li>a stacked consonant eg. <span class="eg" lang="my">စက္ကူ</span>,</li>
@@ -1451,8 +1448,8 @@ alveolar</th>
 <section id="voicing">
 <h3>Voicing</h3>
     <p> Unvoiced syllable initial consonants are typically pronounced with voicing when they appear in non-initial syllables of a word or in particle suffixes, unless they follow a syllable with stopped tone or follow the <span class="codepoint"><span lang="my">&#x1021;</span> <a href="/scripts/myanmar/block#char1021">[<span class="uname">U+1021 MYANMAR LETTER A</span>]</a></span> prefix. Aspirated consonants lose their aspiration at the same time. For example, <span class="ex" lang="my">သတင်းစာ</span> farmer is pronounced <span class="ipa">θədɪ́ɴzà</span> not <span class="ipa">θətɪ́ɴsà</span>. However, because of the rule about the stopped tone (ie. a syllable ending in a plosive consonant), <span class="ex" lang="my">တစ်ဆယ်</span> ten is pronounced <span class="ipa">təʔsʰɛ̀</span> not <span class="ipa">təʔzɛ̀</span>. </p>
-    <p>Note that care needs to be taken with compound words, since they contain more than one word-initial syllable, eg. <span class="ex" lang="my" >နားထောင်</span> listen is pronounced <span class="ipa">nátʰàʊɴ </span> not <span class="ipa">nádàʊɴ </span>.<a class="fnref" href="#refs">m175-176</a></p>
-    <p>There is also an irregular pattern of voicing initial consonants, particularly with place names. Mesher provides examples of words beginning with <span class="codepoint"><span lang="my">&#x1005;</span> <a href="/scripts/myanmar/block#char1005">[<span class="uname">U+1005 MYANMAR LETTER CA</span>]</a></span> <span class="codepoint"><span lang="my">&#x1015;</span> <a href="/scripts/myanmar/block#char1015">[<span class="uname">U+1015 MYANMAR LETTER PA</span>]</a></span> <span class="codepoint"><span lang="my">&#x1010;</span> <a href="/scripts/myanmar/block#char1010">[<span class="uname">U+1010 MYANMAR LETTER TA</span>]</a></span> and <span class="codepoint"><span lang="my">&#x1011;</span> <a href="/scripts/myanmar/block#char1011">[<span class="uname">U+1011 MYANMAR LETTER THA</span>]</a></span>, eg. <span class="ex" lang="my">စေတီ</span> table is pronounced <span class="ipa">zèdì </span> not <span class="ipa">sèdì </span>; <span class="ex" lang="my">ပုဂံ</span> Pagan/Bagan is pronounced <span class="ipa">bəgàɴ</span> not <span class="ipa">pəgàɴ</span>; <span class="ex" lang="my">ထားဝယ်</span> Tavoy/Dawei is pronounced <span class="ipa">dəwɛ̀</span> not <span class="ipa">tʰəwɛ̀</span>.<a class="fnref" href="#refs">m251</a></p>
+    <p>Note that care needs to be taken with compound words, since they contain more than one word-initial syllable, eg. <span class="ex" lang="my" >နားထောင်</span> listen is pronounced <span class="ipa">nátʰàʊɴ </span> not <span class="ipa">nádàʊɴ </span>.<tt>m,175-6</tt></p>
+    <p>There is also an irregular pattern of voicing initial consonants, particularly with place names. Mesher provides examples of words beginning with <span class="codepoint"><span lang="my">&#x1005;</span> <a href="/scripts/myanmar/block#char1005">[<span class="uname">U+1005 MYANMAR LETTER CA</span>]</a></span> <span class="codepoint"><span lang="my">&#x1015;</span> <a href="/scripts/myanmar/block#char1015">[<span class="uname">U+1015 MYANMAR LETTER PA</span>]</a></span> <span class="codepoint"><span lang="my">&#x1010;</span> <a href="/scripts/myanmar/block#char1010">[<span class="uname">U+1010 MYANMAR LETTER TA</span>]</a></span> and <span class="codepoint"><span lang="my">&#x1011;</span> <a href="/scripts/myanmar/block#char1011">[<span class="uname">U+1011 MYANMAR LETTER THA</span>]</a></span>, eg. <span class="ex" lang="my">စေတီ</span> table is pronounced <span class="ipa">zèdì </span> not <span class="ipa">sèdì </span>; <span class="ex" lang="my">ပုဂံ</span> Pagan/Bagan is pronounced <span class="ipa">bəgàɴ</span> not <span class="ipa">pəgàɴ</span>; <span class="ex" lang="my">ထားဝယ်</span> Tavoy/Dawei is pronounced <span class="ipa">dəwɛ̀</span> not <span class="ipa">tʰəwɛ̀</span>.<tt>m,251</tt></p>
  </section>
     
     
@@ -1467,11 +1464,11 @@ alveolar</th>
 <section id="stacking">
 <h4>Consonant stacking</h4>
 <p>In many multi-syllabic words (mostly derived from Pali), consonants that have no intervening inherent vowel are 
-arranged such that the consonant cluster is stacked. Stacked consonants of this kind are always doubled consonants or homorganic.<a class="fnref" href="http://en.wikipedia.org/wiki/Burmese_alphabet#Stacked_consonants">w</a></p>
+arranged such that the consonant cluster is stacked. Stacked consonants of this kind are always doubled consonants or homorganic.<tt>wbs,#Stacked_consonants</tt></p>
 <p>The second consonant appears below the first, eg. <span class="eg" lang="my">မန္တလေး</span>, and <span class="eg" lang="my">ဗုဒ္ဓ</span>. In some cases the lower character is abbreviated or reoriented, eg. <span class="ex" lang="my">က္ဌ</span> to represent <span class="ex" lang="my">က်ဌ</span>. </p>
 <p class="info">This effect is achieved  by using the character <span class="codepoint"><a href="/scripts/myanmar/block#char1039"><span class="uname">U+1039 MYANMAR SIGN VIRAMA</span></a></span> between the consonants forming the cluster. </p>
 <p>The virama is never visible. </p>
-<p>Consonants may also be stacked in abbreviations of native Burmese words, in which case they may not be homorganic and vowels may be pronounced between the consonants. For example, <span class="eg" lang="my">လက်ဖက်</span> is sometimes abbreviated to <span class="charExample" translate="no"><span class="ex" lang="my">လ္ဘက်</span> <span class="transc">l͓ḃkˣ</span></span>.<a class="fnref" href="http://en.wikipedia.org/wiki/Burmese_alphabet#Stacked_consonants">w</a></p>
+<p>Consonants may also be stacked in abbreviations of native Burmese words, in which case they may not be homorganic and vowels may be pronounced between the consonants. For example, <span class="eg" lang="my">လက်ဖက်</span> is sometimes abbreviated to <span class="charExample" translate="no"><span class="ex" lang="my">လ္ဘက်</span> <span class="transc">l͓ḃkˣ</span></span>.<tt>wbs,#Stacked_consonants</tt></p>
 </section>
 
 
@@ -1481,8 +1478,8 @@ arranged such that the consonant cluster is stacked. Stacked consonants of this 
 <section id="repetition">
 <h4>Consonant repetition</h4>
 <p> Where the same consonant appears at the end of a syllable and the beginning of a new syllable in the same word they are commonly represented in the usual cluster form, eg. <span class="eg" lang="my">ပိန္နဲသီး</span>.</p>
-<p>In a few Burmese words, however, a doubled consonant is represented by a single consonant plus asat, eg. <span class="eg" lang="my">ယောက်ျား</span> and <span class="eg" lang="my">ကျွန်ုပ်</span>. Note how this produces a situation where an asat is used between a consonant and a medial or vowel sign.<a class="fnref" href="http://www.unicode.org/notes/tn11/"> h</a></p>
-<p>A repeated <span class="codepoint"><span lang="my">&#x101E;</span> <a href="/scripts/myanmar/block#char101E">[<span class="uname">U+101E MYANMAR LETTER SA</span>]</a></span> can be represented using <span class="codepoint"><span lang="my">&#x103F;</span> <a href="/scripts/myanmar/block#char103F">[<span class="uname">U+103F MYANMAR LETTER GREAT SA</span>]</a></span>. In modern Burmese, <span class="ex" lang="my" >ဿ</span> appears within words, whereas <span class="ex" lang="my" >သ်သ</span> is used across word boundaries.<a class="fnref" href="http://www.unicode.org/L2/L2006/06077-n3043r-myanmar.pdf">l3</a></p>
+<p>In a few Burmese words, however, a doubled consonant is represented by a single consonant plus asat, eg. <span class="eg" lang="my">ယောက်ျား</span> and <span class="eg" lang="my">ကျွန်ုပ်</span>. Note how this produces a situation where an asat is used between a consonant and a medial or vowel sign.<tt>h</tt></p>
+<p>A repeated <span class="codepoint"><span lang="my">&#x101E;</span> <a href="/scripts/myanmar/block#char101E">[<span class="uname">U+101E MYANMAR LETTER SA</span>]</a></span> can be represented using <span class="codepoint"><span lang="my">&#x103F;</span> <a href="/scripts/myanmar/block#char103F">[<span class="uname">U+103F MYANMAR LETTER GREAT SA</span>]</a></span>. In modern Burmese, <span class="ex" lang="my" >ဿ</span> appears within words, whereas <span class="ex" lang="my" >သ်သ</span> is used across word boundaries.<tt>l,3</tt></p>
 </section>
 
 
@@ -1522,7 +1519,7 @@ arranged such that the consonant cluster is stacked. Stacked consonants of this 
     
 <section id="aspiration">
 <h4>Aspirated consonants</h4>
-<p> Burmese aspirates many consonants. In some cases these are separate characters, in other cases the aspiration is indicated using <span class="codepoint"><span lang="my">&#xA0;&#x103E;</span> <a href="/scripts/myanmar/block#char103E">[<span class="uname">U+103E MYANMAR CONSONANT SIGN MEDIAL HA​</span>]</a></span>. Aspirated sounds include the following<a class="fnref" href="#refs">m12</a>, where the last six use MEDIAL HA.</p>
+<p> Burmese aspirates many consonants. In some cases these are separate characters, in other cases the aspiration is indicated using <span class="codepoint"><span lang="my">&#xA0;&#x103E;</span> <a href="/scripts/myanmar/block#char103E">[<span class="uname">U+103E MYANMAR CONSONANT SIGN MEDIAL HA​</span>]</a></span>. Aspirated sounds include the following<tt>m,12</tt>, where the last six use MEDIAL HA.</p>
 
 
 <figure class="characterBox auto" data-ipa="pʰ,tʰ,kʰ,t͡ɕʰ,t͡ɕʰ,sʰ,m̥,n̥,ɲ̥,ŋ̥,w̥,l̥" data-cols="">ဖ␣ထ␣ခ␣ချ␣ခြ␣ဆ␣မှ␣နှ␣ညှ␣ငှ␣ဝှ␣လှ</figure>
@@ -1537,7 +1534,7 @@ arranged such that the consonant cluster is stacked. Stacked consonants of this 
 
 <section id="pali_sanskrit_etc">
 <h4>Pali, Sanskrit, and other medials</h4>
-<p class="info">Pali and Sanskrit texts written in the Myanmar script, as well as in older orthographies of Burmese, sometimes render the consonants YA, RA, WA and HA in subjoined form. In those cases, <a href="/scripts/block/myanmar#char1039"><span class="uname">U+1039 MYANMAR SIGN VIRAMA</span></a> and the regular form of the consonant are used.<a class="fnref" href="http://www.unicode.org/versions/Unicode7.0.0/ch16.pdf">u597</a></p>
+<p class="info">Pali and Sanskrit texts written in the Myanmar script, as well as in older orthographies of Burmese, sometimes render the consonants YA, RA, WA and HA in subjoined form. In those cases, <a href="/scripts/block/myanmar#char1039"><span class="uname">U+1039 MYANMAR SIGN VIRAMA</span></a> and the regular form of the consonant are used.<tt>u,647</tt></p>
 <p class="info">The old spelling of many words uses a fifth medial consonant, <span class="name">la swe</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ခ္လိုဝ်း</span> <span class="trans">kʰ͓liuwˣ²</span> <span class="meaning">wash</span></span>, which is produced using just a subjoined <span class="trans">l</span>, ie. <span class="codepoint" translate="no"><span lang="en-fonipa">&#x1039;&#x101C;</span> [<a href="/scripts/latin/block#char1039"><span class="uname">U+1039 MYANMAR SIGN VIRAMA</span></a> + <a href="/scripts/latin/block#char101C"><span class="uname">U+101C MYANMAR LETTER LA</span></a>]</span>.</p>
 <details>
 <summary class="instructions">Show other non-Burmese medials in the main Myanmar block.</summary>
@@ -1955,7 +1952,7 @@ arranged such that the consonant cluster is stacked. Stacked consonants of this 
 <p><span class="codepoint" translate="no"><span lang="my">&#x103E;</span> [<a href="/scripts/myanmar/block#char103E"><span class="uname">U+103E MYANMAR CONSONANT SIGN MEDIAL HA</span></a>]</span> is used to create aspirated versions of consonants, eg. <span class="eg" lang="my">မှာ</span>. It  also creates the sound <span class="ipa">ʃ</span> in the combinations <span class="charExample" translate="no"><span class="ex" lang="my">ရှ</span> <span class="transc">ṙh̆</span></span> or <span class="charExample" translate="no"><span class="ex" lang="my">လျှ</span> <span class="transc">ly̆h̆</span></span>, eg. <span class="eg" lang="my">ရှိတယ်</span>.</p>
 <p>Use of <span class="codepoint" translate="no"><span lang="my">&#x103D;</span> [<a href="/scripts/myanmar/block#char103D"><span class="uname">U+103D MYANMAR CONSONANT SIGN MEDIAL WA</span></a>]</span> is straighforward, eg. <span class="eg" lang="my">နွား</span>.</p>
 <p>It is  possible to find two medials in an onset cluster, eg. <span class="charExample" translate="no"><span class="ex" lang="my">လျှ</span> <span class="trans">ly̆h̆</span></span> <span	class="ipa">lʰjá</span> or <span class="ipa">ʃá</span> and <span class="eg" lang="my">မြွေ</span>.</p>
-<p class="info">Pali and Sanskrit texts written in the Myanmar script, as well as in older orthographies of Burmese, sometimes render the consonants YA, RA, WA and HA in subjoined form. In those cases, <a href="/scripts/block/myanmar#char1039"><span class="uname">U+1039 MYANMAR SIGN VIRAMA</span></a> and the regular form of the consonant are used.<a class="fnref" href="http://www.unicode.org/versions/Unicode7.0.0/ch16.pdf">u597</a></p>
+<p class="info">Pali and Sanskrit texts written in the Myanmar script, as well as in older orthographies of Burmese, sometimes render the consonants YA, RA, WA and HA in subjoined form. In those cases, <a href="/scripts/block/myanmar#char1039"><span class="uname">U+1039 MYANMAR SIGN VIRAMA</span></a> and the regular form of the consonant are used.<tt>u,647</tt></p>
 <p class="info">The old spelling of many words uses a fifth medial consonant, la swe, eg. <span class="charExample" translate="no"><span class="ex" lang="my">ခ္လိုဝ်း</span> <span class="trans">kʰ͓liuwˣ²</span> <span class="meaning">wash</span></span>, which is produced using just a subjoined <span class="codepoint"><span lang="my">&#x101C;</span> <a href="/scripts/myanmar/block#char101C">[<span class="uname">U+101C MYANMAR LETTER LA</span>]</a></span>.</p>
 
 <details>
@@ -1972,11 +1969,11 @@ arranged such that the consonant cluster is stacked. Stacked consonants of this 
  <section id="stacking">
 <h3>Consonant stacking</h3>
   <p>In many multi-syllabic words (mostly derived from Pali), consonants that have no intervening inherent vowel are 
-      arranged such that the consonant cluster is stacked. Stacked consonants of this kind are always doubled consonants or homorganic.<a class="fnref" href="http://en.wikipedia.org/wiki/Burmese_alphabet#Stacked_consonants">w</a></p>
+      arranged such that the consonant cluster is stacked. Stacked consonants of this kind are always doubled consonants or homorganic.<tt>wbs,#Stacked_consonants</tt></p>
 <p>The second consonant appears below the first, eg. <span class="eg" lang="my">မန္တလေး</span>, and <span class="eg" lang="my">ဗုဒ္ဓ</span>. In some cases the lower character is abbreviated or reoriented, eg. <span class="ex" lang="my">က္ဌ</span> to represent <span class="ex" lang="my">က်ဌ</span>. </p>
 <p class="info">This effect is achieved  by using the character <span class="codepoint"><a href="/scripts/myanmar/block#char1039"><span class="uname">U+1039 MYANMAR SIGN VIRAMA</span></a></span> between the consonants forming the cluster. </p>
 <p>The virama is never visible. </p>
-<p>Consonants may also be stacked in abbreviations of native Burmese words, in which case they may not be homorganic and vowels may be pronounced between the consonants. For example, <span class="eg" lang="my">လက်ဖက်</span> is sometimes abbreviated to <span class="charExample" translate="no"><span class="ex" lang="my">လ္ဘက်</span> <span class="transc">l͓ḃkˣ</span></span>.<a class="fnref" href="http://en.wikipedia.org/wiki/Burmese_alphabet#Stacked_consonants">w</a></p>
+<p>Consonants may also be stacked in abbreviations of native Burmese words, in which case they may not be homorganic and vowels may be pronounced between the consonants. For example, <span class="eg" lang="my">လက်ဖက်</span> is sometimes abbreviated to <span class="charExample" translate="no"><span class="ex" lang="my">လ္ဘက်</span> <span class="transc">l͓ḃkˣ</span></span>.<tt>wbs,#Stacked_consonants</tt></p>
 </section>
     
     
@@ -1986,8 +1983,8 @@ arranged such that the consonant cluster is stacked. Stacked consonants of this 
   <section id="repetition">
 <h3>Consonant repetition</h3>
    <p> Where the same consonant appears at the end of a syllable and the beginning of a new syllable in the same word they are commonly represented in the usual cluster form, eg. <span class="eg" lang="my">ပိန္နဲသီး</span>.</p>
-    <p>In a few Burmese words, however, a doubled consonant is represented by a single consonant plus asat, eg. <span class="eg" lang="my">ယောက်ျား</span> and <span class="eg" lang="my">ကျွန်ုပ်</span>. Note how this produces a situation where an asat is used between a consonant and a medial or vowel sign.<a class="fnref" href="http://www.unicode.org/notes/tn11/"> h</a></p>
-    <p>A repeated <span class="codepoint"><span lang="my">&#x101E;</span> <a href="/scripts/myanmar/block#char101E">[<span class="uname">U+101E MYANMAR LETTER SA</span>]</a></span> can be represented using <span class="codepoint"><span lang="my">&#x103F;</span> <a href="/scripts/myanmar/block#char103F">[<span class="uname">U+103F MYANMAR LETTER GREAT SA</span>]</a></span>. In modern Burmese, <span class="ex" lang="my" >ဿ</span> appears within words, whereas <span class="ex" lang="my" >သ်သ</span> is used across word boundaries.<a class="fnref" href="http://www.unicode.org/L2/L2006/06077-n3043r-myanmar.pdf">l3</a></p>
+    <p>In a few Burmese words, however, a doubled consonant is represented by a single consonant plus asat, eg. <span class="eg" lang="my">ယောက်ျား</span> and <span class="eg" lang="my">ကျွန်ုပ်</span>. Note how this produces a situation where an asat is used between a consonant and a medial or vowel sign.<tt>h</tt></p>
+    <p>A repeated <span class="codepoint"><span lang="my">&#x101E;</span> <a href="/scripts/myanmar/block#char101E">[<span class="uname">U+101E MYANMAR LETTER SA</span>]</a></span> can be represented using <span class="codepoint"><span lang="my">&#x103F;</span> <a href="/scripts/myanmar/block#char103F">[<span class="uname">U+103F MYANMAR LETTER GREAT SA</span>]</a></span>. In modern Burmese, <span class="ex" lang="my" >ဿ</span> appears within words, whereas <span class="ex" lang="my" >သ်သ</span> is used across word boundaries.<tt>l,3</tt></p>
 </section>
   
   
@@ -2031,7 +2028,7 @@ arranged such that the consonant cluster is stacked. Stacked consonants of this 
 <p>The stopped tone only, but always, occurs where a syllable ends in a stop consonant. Syllables that end with a vowel sound and syllables that end with the nasal sound <span class="ipa">ɴ </span>can have one or more of the other three tones.</p>
       <figure>
     <p><img src="tones.png" alt="Diagram of tones." /></p>
-    <figcaption>Myanmar tones. <a class="fnref" href="#refs">m7</a></figcaption>
+    <figcaption>Myanmar tones.<tt>m,7</tt></figcaption>
   </figure>
     <p>The phonemic transcriptions here use the following conventions for marking tones, using <span class="ipa">a</span> as the base for the examples.</p>
 <ul>
@@ -3227,9 +3224,9 @@ arranged such that the consonant cluster is stacked. Stacked consonants of this 
 <h3>Line breaking &amp; hyphenation</h3>
 <p>If it is necessary to break text within a phrase, breaks can occur at syllable boundaries, but not within a word. The difficulty is that there is no visual information about which sequences of syllables consitute a word.</p>
 <p>One way of detecting line-break opportunities  is to use a dictionary to search for polysyllabic words, and then break at syllable boundaries outside the word. This approach may, however, run into problems when uncommon words or new words are used, especially those borrowed foreign terms.</p>
-<p>A common approach is to break lines at phrase boundaries and then use justification is to adjust inter-phrase spacing.<a class="fnref" href="http://www.unicode.org/notes/tn11/">h12</a></p>
+<p>A common approach is to break lines at phrase boundaries and then use justification is to adjust inter-phrase spacing.<tt>h,12</tt></p>
   <p>An alternative is  to indicate break points by inserting <a href="#char200B"><span class="uname">U+200B ZERO WIDTH SPACE</span></a> (ZWSP) between words when the content is developed. </p>
-  <p>Otherwise, you could tie the syllables in a polysyllabic word together using <a href="#char2060"><span class="uname">U+2060 WORD JOINER</span></a> while authoring the content. This requires less intervention than adding ZWSP, since the number of polysyllabic words is smaller than the whole. Problems with that approach, currently, are that applications must be able to ignore the word joiner for searching, sorting, and the like. For this reason Hosken recommends against using it,	and	recommends instead the use of a dictionary with ZWSP backup for words that the dictionary doesn't handle well. However, it's not clear which words a dictionary will fail to recognise when the text is used across different platforms and applications, so this is not an ideal solution either – not to mention that it is difficult for an author to know in advance which words will cause problems and which won't .<a class="fnref" href="http://www.unicode.org/notes/tn11/">h12</a></p>
+  <p>Otherwise, you could tie the syllables in a polysyllabic word together using <a href="#char2060"><span class="uname">U+2060 WORD JOINER</span></a> while authoring the content. This requires less intervention than adding ZWSP, since the number of polysyllabic words is smaller than the whole. Problems with that approach, currently, are that applications must be able to ignore the word joiner for searching, sorting, and the like. For this reason Hosken recommends against using it,	and	recommends instead the use of a dictionary with ZWSP backup for words that the dictionary doesn't handle well. However, it's not clear which words a dictionary will fail to recognise when the text is used across different platforms and applications, so this is not an ideal solution either – not to mention that it is difficult for an author to know in advance which words will cause problems and which won't .<tt>h,12</tt></p>
 
 
 
@@ -3253,7 +3250,7 @@ arranged such that the consonant cluster is stacked. Stacked consonants of this 
 </tbody></table>
 
 <details id="linebreak_details">
-<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">ul</a></summary>
+<summary>Show legend <tt>ul</tt></summary>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BA (break after)</a> indicates that it is normal to break after that character.&nbsp;</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">NU (number)</a> behaves like ordinary characters (AL) in the context of most characters but activate the prefix and postfix behavior of prefix and postfix characters.</p>
@@ -3268,7 +3265,7 @@ arranged such that the consonant cluster is stacked. Stacked consonants of this 
 
 <section id="alignment">
 <h3>Text alignment &amp; justification</h3>
-<p>Justification may begin by adjusting inter-phrase spacing.<a class="fnref" href="http://www.unicode.org/notes/tn11/">h12</a></p>
+<p>Justification may begin by adjusting inter-phrase spacing.<tt>h,12</tt></p>
 </section>
 
 
@@ -3528,20 +3525,8 @@ arranged such that the consonant cluster is stacked. Stacked consonants of this 
 
 
 
-<section id="#refs">
+<section id="refs">
 <h2>References</h2>
-<ol>
-<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN 0-19-507993-0</li>
-<li>[ <a class="fnref" href="http://www.unicode.org/notes/tn11/">h</a> ] Martin Hosken &amp; Maung Tuntunlwin, <a href="http://www.unicode.org/notes/tn11/">Unicode Technical Note #11, Representing Myanmar in Unicode: Details and Examples</a></li>
-<li>[ <a class="fnref" href="http://www.unicode.org/L2/L2006/06077-n3043r-myanmar.pdf">l</a> ] Ireland (NSAI), United Kingdom (BSI), Myanmar Language Commission, Myanmar Unicode and Natural Language Processing Research Center, Myanmar Computer Federation, <a href="http://www.unicode.org/L2/L2006/06077-n3043r-myanmar.pdf">Proposal to encode seven additional Myanmar characters in the UCS</a></li>
-<li>[ <a class="fnref" href="#refs">m</a> ] Gene Mesher, <span class="doctitle">Burmese for Beginners </span>, ISBN 1-887521-51-8 </li>
-<li>[ <a class="fnref" href="http://www.microsoft.com/typography/OpenTypeDev/myanmar/intro.htm">ms</a> ] Microsoft Typography, <a href="http://www.microsoft.com/typography/OpenTypeDev/myanmar/intro.htm">Creating and Supporting OpenType Fonts for Myanmar Script</a>, Dec 2013</li>
-<li>[ <a class="fnref" href="http://sealang.net/burmese/">s</a> ] <a href="http://sealang.net/burmese/">Sealang Library Burmese</a></li>
-<li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch16.pdf">u</a> ] The Unicode Standard v7.0, <a href="http://www.unicode.org/versions/latest/ch16.pdf">Myanmar</a>. </li>
-<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Burmese_alphabet">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Burmese_alphabet">Burmese Alphabet</a></li>
-<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/MLC_Transcription_System">wm</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/MLC_Transcription_System">MLC Transcription System</a></li>
-<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Burmese_language">wl</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Burmese_language">Burmese language</a></li>
-</ol>
 </section>
 
 
