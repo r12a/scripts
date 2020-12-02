@@ -14,7 +14,7 @@ function initialiseSummary (base, lang, tableName, dir) {
 	setupBlockLinks()
 	setTranslitToggle()
 	setCharOnclicks()
-	createReferences()
+	if (typeof reflist !== 'undefined') createReferences()
     }
 
 
