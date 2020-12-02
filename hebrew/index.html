@@ -29,6 +29,8 @@
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../common/egcode.js"></script>
+<script src="../common/references.js"></script>
+<script src="refs.js"></script>
 
 <script src="he-examples.js"></script>
 <script src="he-translit.js">  </script>
@@ -53,37 +55,32 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->22 November, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->2 December, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
 
 <div class="section">
   <p>This page gathers together basic information about the Hebrew script and its use for the modern Hebrew language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Hebrew using Unicode.</p>
-
-
-
-<p>See also the companion document, <a href="block" class="linkHighlight">Hebrew character notes</a>, for detailed information about specific Unicode characters.</p>
 <p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription. See also <a class="secref">phonology</a>.</p>
 
 
 
 
-<details>
+<p id="usage"></p>
+<script>addUsageAdvice('Hebrew')</script>
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Hebrew','Hebrew'); return false;">More about using this page</a></summary>
+<div id="about"></div>
+</details>
+
+<details class="supportdocs noprint">
 <summary class="instructions"><a href="../links?iso=Hebr">Related pages</a>.</summary>
 </details>
 
-
-
-<details>
-<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
-</details>
-
-
-
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Hebrew','Hebrew'); return false;">About this page</a></summary>
-<div id="about"></div>
+<summary class="instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
 </details>
 </div>
 
@@ -134,7 +131,7 @@
 
 <section id="type">
 <h2>Basic features</h2>
-    <p>Hebrew is an <span class="newterm"> abjad</span>. This means that in normal use the script represents only consonants. This approach is helped by the strong emphasis on consonant patterns in Semitic languages.   See the table to the right for a brief overview of features for the modern Hebrew orthography. (See the <a href="../../scripts/featurelist/#key">key</a>. Character counts exclude ASCII characters.)</p>
+    <p>Hebrew is an <span class="newterm"> abjad</span>. This means that in normal use the script represents only consonants. This approach is helped by the strong emphasis on consonant patterns in Semitic languages.   See the table to the right for a brief overview of features for the modern Hebrew orthography.</p>
 <p>Where needed for clarifying ambiguity or educational purposes, it is possible to indicate the vowel sounds using 'points', ie. combining marks that attach to the consonant letters. Some consoant letters are also used as matres lectionis, ie. they indicate the location of a vowel.</p>
 <p>Hebrew text is written from right to left, but becomes bidirectional when numbers or text from other writing systems (such as Latin acronyms) are embedded in the text. Numbers and expressions flow from left to right.</p>
 </section>
@@ -144,7 +141,7 @@
 
 <section id="phonology">
 <h2>Notes on phonology</h2>
-<p>Modern Israeli Hebrew was born from speakers who brought their own accents and pronunciations from different parts of the world.  There are still variations in pronunciation, but two main types predominate today: Oriental and Occidental. Oriental Hebrew was chosen as the preferred accent for Israel by the Academy of the Hebrew Language, but has since declined in popularity. Age is often a factor in individual pronunciation.<a class="fnref more" href="https://en.wikipedia.org/wiki/Modern_Hebrew_phonology">w</a></p>
+<p>Modern Israeli Hebrew was born from speakers who brought their own accents and pronunciations from different parts of the world.  There are still variations in pronunciation, but two main types predominate today: Oriental and Occidental. Oriental Hebrew was chosen as the preferred accent for Israel by the Academy of the Hebrew Language, but has since declined in popularity. Age is often a factor in individual pronunciation.<tt class="more">wp</tt></p>
 <p>In particular, there are alternative pronunciations for <span class="ipa">x</span>~<span class="ipa">ħ</span>, <span class="ipa">ʁ</span>~<span class="ipa">r</span>, <span class="ipa">ʔ</span>~<span class="ipa">ʕ</span>. In this document we use the left-hand side of each of these pairings.</p>
 <p>Younger speakers also tend to make all consonants in a cluster voiced or unvoiced, depending of the last consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">לִסְגֹּר</span> <span class="trans">lisᵊgoˑʁ</span> <span class="ipa">lis'ɡoʁ</span> <span class="meaning">to close</span></span> becomes <span class="ipa">liz'ɡoʁ</span>, and <span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">אַבְטָחָה</span> <span class="trans">ʔavᵊtāxāh</span> <span class="ipa">avta'xa</span> <span class="meaning">security</span></span> becomes <span class="ipa">afta'xa</span>.</p>
 <p class="instructions">For more details, see: <a href="https://en.wikipedia.org/wiki/Modern_Hebrew_phonology#Oriental_and_non-Oriental_accents">Wikipedia</a>.</p>
@@ -153,86 +150,7 @@
 
 
 
-<section id="dir">
-<h2>Text direction</h2>
-<p>Hebrew script is written right-to-left in the main, but as with all RTL scripts, numbers and embedded LTR script text are written left-to-right (bidirectional text). In the following example, the Hebrew words are read right-to-left, starting with the one on the right, and the numeric expression (&quot;10-12&quot;) is read left-to-right, ie. it starts with 10 and ends with 12. (Note that this is unlike Arabic, where the 10 and 12 would be in opposite positions.)</p>
 
-<figure id="fig_bidi">
-<p dir="rtl" lang="he" class="large"><span  class="ex">התאריכים 10-12 במרץ</span></p>
-<figcaption>Bidirectional Hebrew text.</figcaption>
-</figure>
-
-<p>The Unicode Bidirectional Algorithm automatically takes care of the ordering for all the text in <a class="figref">fig_bidi</a>, as long as the 'base direction' is set to RTL. In HTML this can be set using the <code>dir</code> attribute, or in plain text using <a href="#directioncontrols">formatting controls</a>.</p>
-<p>If the base direction is not set appropriately, the directional runs will be ordered incorrectly as shown in <a class="figref">fig_bidi_no_base_direction</a>, and can become unreadable.</p>
-
-<figure id="fig_bidi_no_base_direction">
-<p dir="rtl" class="small" lang="he" style="white-space: nowrap;">ב־HMTL5 זה מתבצע על ידי הוספת אלמנט ה־inline bdo.</p>
-<p class="small" lang="he" style="white-space: nowrap;">ב־HMTL5 זה מתבצע על ידי הוספת אלמנט ה־inline bdo.</p>
-<figcaption class="instructions">The exact same sequence of characters with the base direction set to RTL (top), and with no  base direction set on this LTR page (bottom).</figcaption>
-</figure>
-
-<p>For more information about how directionality and base direction work, see <a href="https://www.w3.org/International/articles/inline-bidi-markup/uba-basics.en">Unicode Bidirectional Algorithm basics</a>. For information about plain text formatting characters see <a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls.en">How to use Unicode controls for bidi text</a>. And for working with markup in HTML, see <a href="https://www.w3.org/International/tutorials/bidi-xhtml/">Creating HTML Pages in Arabic, Hebrew and Other Right-to-left Scripts</a>.</p>
-<p>On this page, see also <a class="secref">expressions</a> and <a class="secref">linebreak</a> for additional features related to direction.</p>
-
-
-
-
-
-
-<section id="directioncontrols">
-<h3>Managing text direction</h3>
-
-<p>Unicode provides a set of 10 formatting characters that can be used to control the direction of text when displayed. These characters have no visual form in the rendered text, however text editing applications may have a way to show their location.</p>
-<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">RLE</span> [<a target="c" href="/scripts/arabic/block#char202B"><span class="uname">U+202B RIGHT-TO-LEFT EMBEDDING</span></a>]</span>, <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRE</span> [<a target="c" href="/scripts/arabic/block#char202A"><span class="uname">U+202A LEFT-TO-RIGHT EMBEDDING</span></a>]</span>, and <span class="codepoint" translate="no"><span class="uname" dir="ltr">PDF</span> [<a target="c" href="/scripts/arabic/block#char202C"><span class="uname">U+202C POP DIRECTIONAL FORMATTING</span></a>]</span> are in widespread use to set the base direction of a range of characters.  <span class="uname">RLE/LRE</span> come at the start, and  <span class="uname">PDF</span> at the end of a range of characters for which the base direction is to be set.</p>
-<div class="infoIcon"><img src="../../shared/images/info.png" alt="ℹ"></div>
-<p>More recently, the Unicode Standard added a set of characters which do the same thing but also isolate the content from surrounding characters, in order to avoid spillover effects. They are <span class="codepoint" translate="no"><span class="uname" dir="ltr">RLI</span> [<a target="c" href="/scripts/arabic/block#char2067"><span class="uname">U+2067 RIGHT-TO-LEFT ISOLATE</span></a>]</span>, <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRI</span> [<a target="c" href="/scripts/arabic/block#char2066"><span class="uname">U+2066 LEFT-TO-RIGHT ISOLATE</span></a>]</span>, and <span class="codepoint" translate="no"><span class="uname" dir="ltr">PDI</span> [<a target="c" href="/scripts/arabic/block#char2069"><span class="uname">U+2069 POP DIRECTIONAL ISOLATE</span></a>]</span>.  The Unicode Standard recommends that these be used instead, however some applications  don't yet recognise them. </p>
-<p>There is also <span class="codepoint" translate="no"><span class="uname" dir="ltr">FSI</span> [<a target="c" href="/scripts/arabic/block#char2068"><span class="uname">U+2068 FIRST STRONG ISOLATE</span></a>]</span>, used initially to set the base direction according to the first recognised strongly-directional character.</p>
-<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">ALM</span> [<a target="c" href="/scripts/arabic/block#char061C"><span class="uname">U+061C ARABIC LETTER MARK</span></a>]</span> is used to produce correct sequencing of numeric data. Follow the link and see <a class="secref">expressions</a> for details.&nbsp;</p>
-<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">RLM</span> [<a target="c" href="/scripts/arabic/block#char200F"><span class="uname">U+200F RIGHT-TO-LEFT MARK</span></a>]</span> and <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRM</span> [<a target="c" href="/scripts/arabic/block#char200E"><span class="uname">U+200E LEFT-TO-RIGHT MARK</span></a>]</span> are invisible characters with strong directional properties that are also sometimes used to produce the correct ordering of text.</p>
-<p>For more information about how to use these formatting characters see <a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls.en"><cite>How to use Unicode controls for bidi text</cite></a>. Note, however, that when writing HTML you should generally use markup rather than these control codes. For information about that, see <a href="https://www.w3.org/International/tutorials/bidi-xhtml/"><cite>Creating HTML Pages in Arabic, Hebrew and Other Right-to-left Scripts</cite></a>.</p>
-</section>
-
-
-
-
-  
-<section id="expressions">
-<h3>Expressions &amp; sequences</h3>
-<p>A sequence of numbers, for example a range separated by hyphens,  generally runs left to right in Hebrew (unlike Arabic).</p>
-<!--p><a class="figref">fig_range_ar</a> shows Arabic text  which is right-to-left overall, containing an ASCII-digit numeric range that is also ordered RTL, ie. it starts with 10 and ends with 12:</p>
-
-<figure id="fig_range_ar">
-<p dir="rtl" lang="ar" class="large"><span class="ex">في 10–12 آدار</span></p>
-<figcaption>A numeric range in Arabic language text.</figcaption>
-</figure>
-
-<p>In Persian, however, the expression would run LTR, so this would be:</p>
-
-<figure id="persianExpressions">
-<p dir="rtl" lang="ar" class="large"><span class="ex">في &lrm;10–12 آدار</span></p>
-<figcaption>A numeric range in Persian language text.</figcaption>
-</figure>
-
-<p>When a list uses the ASCII hyphen as a separator, the Unicode Bidirectional Algorithm automatically produces the expected ordering <em> only when a sequence or expression follows Arabic characters</em>. However, a sequence that appears alone on a line will be ordered left-to-right (because there is no preceding Arabic character). To make the sequence read right-to-left you need to add the  formatting character <span class="codepoint"><a target="c" href="/scripts/arabic/block#char061C"><span class="uname">U+061C ARABIC LETTER MARK</span></a></span> (ALM) at the start of the line (see <a class="figref">fig_alm</a>). This is effectively an invisible Arabic script character.</p>
-<figure id="fig_alm">
-<p dir="rtl" lang="ar" class="large"><span class="ex">&#x061C;10-01-2018</span></p>
-<figcaption>A numeric date in Arabic language text without a preceding Arabic letter needs ALM before it. (Click on the number to see the underlying characters.).</figcaption>
-</figure>
-
-<p>The required order cannot be achieved  by simply setting the base direction, nor by using <span class="codepoint" translate="no"><a href="/scripts/punctuation/block#char200F" target="c"><span class="uname">U+200F RIGHT-TO-LEFT MARK</span></a></span>. It has to be ALM.</p>
-<p>Alternatively, you could use a different separator, such as <span class="codepoint" translate="no"><span dir="rtl" lang="ur">–</span> [<a href="/scripts/arabic/block#char2013" target="c"><span class="uname">U+2013 EN DASH</span></a>]</span> (as in <a class="figref">fig_range_ar</a>) or <span class="codepoint" translate="no"><span dir="rtl" lang="ur">‐</span> [<a href="/scripts/arabic/block#char2010" target="c"><span class="uname">U+2010 HYPHEN</span></a>]</span>. No special arrangements are then necessary.</p>
-<p>If you are writing in Persian, however, you don't need to add anything in this case.</p>
-
-<figure id="fig_alm_persian">
-<p dir="rtl" lang="ar" class="large"><span class="ex">10-01-2018</span></p>
-<figcaption>The same date in Persian language text.</figcaption>
-</figure>
-
-<p>On the other hand, if  the sequence or expression follows text you need to either isolate the sequence directionally or precede it with <span class="codepoint"><a target="c" href="/scripts/punctuation/block#char200E"><span class="uname">U+200E LEFT-TO-RIGHT MARK</span></a></span> (LRM) to make it look correct (click on <a class="figref">persianExpressions</a>  to see that in action).</p>
-<p>Similar special ordering is applied to numbers in equations, such as <span class="ex" dir="rtl" style="white-space: nowrap" lang="ur">1 + 2 = 3</span>, for Arabic language text.</p>
-<p>See also <a class="secref">percent_sign</a>.</p-->
-</section>
-</section>
  
    
   
@@ -268,7 +186,7 @@
 <h3>Vowel sounds</h3>
 
 <p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
-<p class="instructions">Phones in a lighter colour are non-native or allophones. Source<a class="fnref" href="https://en.wikipedia.org/wiki/Modern_Hebrew_phonology">wp</a>.</p>
+<p class="instructions">Phones in a lighter colour are non-native or allophones. Source <a  href="https://en.wikipedia.org/wiki/Modern_Hebrew_phonology">Wikipedia</a>.</p>
 
 <div style="display: flex; flex-wrap: wrap; margin-left: 7.5%;">
 <section id="plain_vowels">
@@ -430,7 +348,7 @@
 <figure class="auto" data-cols="trans,transc" data-ipa="∅,∅,u,i">א␣ע␣ו␣י</figure>
 
 <p>The first two are silent vowel supports, whereas the second two are considered to be part of the vowel.</p>
-<p>There is a trend in Modern Hebrew towards the use of matres lectionis to indicate vowels that have traditionally gone unwritten, a practice known as <q>full spelling</q>.<a class="fnref" href="https://en.wikipedia.org/wiki/Hebrew_alphabet">w</a></p>
+<p>There is a trend in Modern Hebrew towards the use of matres lectionis to indicate vowels that have traditionally gone unwritten, a practice known as <q>full spelling</q>.<tt>ws</tt></p>
 
 </section>
  
@@ -513,7 +431,7 @@
 <div class="phone"><span class="ipa">ə</span></div>
 <div class="posn">&nbsp;</div>
 <div>
-<p>Any of the five short vowels may be realized as a schwa when far from lexical stress.<a class="fnref" href="https://en.wikipedia.org/wiki/Modern_Hebrew_phonology#Vowels">w</a></p>
+<p>Any of the five short vowels may be realized as a schwa when far from lexical stress.<tt>wp,#Vowels</tt></p>
 </div>
 </div>
 </div>
@@ -576,7 +494,7 @@
 
 <p>This table reflects phonemes of Israeli Hebrew.</p>
 <p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
-<p class="instructions">Phones in a lighter colour are non-native or allophones. Source<a class="fnref" href="https://en.wikipedia.org/wiki/Modern_Hebrew_phonology">w</a>.</p>
+<p class="instructions">Phones in a lighter colour are non-native or allophones. Source <a  href="https://en.wikipedia.org/wiki/Modern_Hebrew_phonology">Wikipedia</a>.</p>
 
 <table class="ipaTable">
 <thead>
@@ -677,7 +595,7 @@ alveolar</th>
 <p><span class="ipa">x</span> is sometimes described as <span class="ipa">χ</span>, and <span class="ipa"><span class="ipa">ʁ</span></span> as <span class="ipa">r</span>. For more variants see the <a class="secref">phonology</a>.</p>
 
 
-<p>Final <span class="ipa">-h</span> is rarely pronounced in modern Hebrew.<a class="fnref" href="https://en.wikipedia.org/wiki/Modern_Hebrew_phonology#Loss_of_final_H_consonant">w</a></p>
+<p>Final <span class="ipa">-h</span> is rarely pronounced in modern Hebrew.<tt>wp,#Loss_of_final_H_consonant</tt></p>
 </section>
 
 
@@ -732,12 +650,12 @@ alveolar</th>
 
 
 <p><span class="leadin">Geresh.</span> Other consonants are extended to non-native sounds by use of a following <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05F3;</span> [<a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]</span>.</p>
-<p>This first set is used in loanwords and slang that are part of the everyday Hebrew colloqial vocabulary.<a class="fnref" href="https://en.wikipedia.org/wiki/Hebrew_alphabet#Sounds_represented_with_diacritic_geresh">w</a></p>
+<p>This first set is used in loanwords and slang that are part of the everyday Hebrew colloqial vocabulary.<tt>ws,#Sounds_represented_with_diacritic_geresh</tt></p>
 
 <figure class="auto" data-cols="ipa,trans,transc">ג׳␣ז׳␣צ׳␣ו׳␣וו</figure>
 
 <p>The graphemes <span class="ex" lang="he">ו׳</span> and <span class="ex" lang="he">וו</span> are alternative ways of writing the same thing.</p>
-<p>A second set is only used to transliterate foreign sounds, especially Arabic.<a class="fnref" href="https://en.wikipedia.org/wiki/Hebrew_alphabet#Sounds_represented_with_diacritic_geresh">w</a></p>
+<p>A second set is only used to transliterate foreign sounds, especially Arabic.<tt>ws,#Sounds_represented_with_diacritic_geresh</tt></p>
 
 <figure class="auto" data-cols="ipa,trans,transc">ד׳␣ת׳␣ח׳␣ר׳␣ע׳</figure>
 
@@ -1058,14 +976,100 @@ alveolar</th>
 <section id="currency">
 <h3>Currency</h3>
 
-<p>The denomination is generally expressed by the abbreviation <span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">ש״ח</span></span>, meaning <span class="meaning">new sheqel</span>, and standing for <span class="trans">sheqel ẖadash</span>.</a><a class="fnref" href="http://en.wikipedia.org/wiki/Hebrew_punctuation">w</a></p>
+<p>The denomination is generally expressed by the abbreviation <span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">ש״ח</span></span>, meaning <span class="meaning">new sheqel</span>, and standing for <span class="trans">sheqel ẖadash</span>.</a><tt>whp</tt></p>
 
 <figure class="characterBox auto" data-cols="trans">₪</figure>
 
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x20AA;</span> [<a href="/scripts/hebrew/block#char20AA"><span class="uname">U+20AA NEW SHEQEL SIGN</span></a>]</span> may also be used. It is displayed to the left of the amount, with no separation or with a thin space, eg. <span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">₪12,000</span></span>. (Wikipedia says that this requires the sheqel sign to be typed after the amount, however, the opposite is the case for all major browsers.)<a class="fnref" href="http://en.wikipedia.org/wiki/Hebrew_punctuation">w</a></p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x20AA;</span> [<a href="/scripts/hebrew/block#char20AA"><span class="uname">U+20AA NEW SHEQEL SIGN</span></a>]</span> may also be used. It is displayed to the left of the amount, with no separation or with a thin space, eg. <span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">₪12,000</span></span>. (Wikipedia says that this requires the sheqel sign to be typed after the amount, however, the opposite is the case for all major browsers.)<tt>whp</tt></p>
 </section>
 </section>  
+
+
+
+
+
+
+
+<section id="dir">
+<h2>Text direction</h2>
+<p>Hebrew script is written right-to-left in the main, but as with all RTL scripts, numbers and embedded LTR script text are written left-to-right (bidirectional text). In the following example, the Hebrew words are read right-to-left, starting with the one on the right, and the numeric expression (&quot;10-12&quot;) is read left-to-right, ie. it starts with 10 and ends with 12. (Note that this is unlike Arabic, where the 10 and 12 would be in opposite positions.)</p>
+
+<figure id="fig_bidi">
+<p dir="rtl" lang="he" class="large"><span  class="ex">התאריכים 10-12 במרץ</span></p>
+<figcaption>Bidirectional Hebrew text.</figcaption>
+</figure>
+
+<p>The Unicode Bidirectional Algorithm automatically takes care of the ordering for all the text in <a class="figref">fig_bidi</a>, as long as the 'base direction' is set to RTL. In HTML this can be set using the <code>dir</code> attribute, or in plain text using <a href="#directioncontrols">formatting controls</a>.</p>
+<p>If the base direction is not set appropriately, the directional runs will be ordered incorrectly as shown in <a class="figref">fig_bidi_no_base_direction</a>, and can become unreadable.</p>
+
+<figure id="fig_bidi_no_base_direction">
+<p dir="rtl" class="small" lang="he" style="white-space: nowrap;">ב־HMTL5 זה מתבצע על ידי הוספת אלמנט ה־inline bdo.</p>
+<p class="small" lang="he" style="white-space: nowrap;">ב־HMTL5 זה מתבצע על ידי הוספת אלמנט ה־inline bdo.</p>
+<figcaption class="instructions">The exact same sequence of characters with the base direction set to RTL (top), and with no  base direction set on this LTR page (bottom).</figcaption>
+</figure>
+
+<p>For more information about how directionality and base direction work, see <a href="https://www.w3.org/International/articles/inline-bidi-markup/uba-basics.en">Unicode Bidirectional Algorithm basics</a>. For information about plain text formatting characters see <a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls.en">How to use Unicode controls for bidi text</a>. And for working with markup in HTML, see <a href="https://www.w3.org/International/tutorials/bidi-xhtml/">Creating HTML Pages in Arabic, Hebrew and Other Right-to-left Scripts</a>.</p>
+<p>On this page, see also <a class="secref">expressions</a> and <a class="secref">linebreak</a> for additional features related to direction.</p>
+
+
+
+
+
+
+<section id="directioncontrols">
+<h3>Managing text direction</h3>
+
+<p>Unicode provides a set of 10 formatting characters that can be used to control the direction of text when displayed. These characters have no visual form in the rendered text, however text editing applications may have a way to show their location.</p>
+<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">RLE</span> [<a target="c" href="/scripts/arabic/block#char202B"><span class="uname">U+202B RIGHT-TO-LEFT EMBEDDING</span></a>]</span>, <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRE</span> [<a target="c" href="/scripts/arabic/block#char202A"><span class="uname">U+202A LEFT-TO-RIGHT EMBEDDING</span></a>]</span>, and <span class="codepoint" translate="no"><span class="uname" dir="ltr">PDF</span> [<a target="c" href="/scripts/arabic/block#char202C"><span class="uname">U+202C POP DIRECTIONAL FORMATTING</span></a>]</span> are in widespread use to set the base direction of a range of characters.  <span class="uname">RLE/LRE</span> come at the start, and  <span class="uname">PDF</span> at the end of a range of characters for which the base direction is to be set.</p>
+<div class="infoIcon"><img src="../../shared/images/info.png" alt="ℹ"></div>
+<p>More recently, the Unicode Standard added a set of characters which do the same thing but also isolate the content from surrounding characters, in order to avoid spillover effects. They are <span class="codepoint" translate="no"><span class="uname" dir="ltr">RLI</span> [<a target="c" href="/scripts/arabic/block#char2067"><span class="uname">U+2067 RIGHT-TO-LEFT ISOLATE</span></a>]</span>, <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRI</span> [<a target="c" href="/scripts/arabic/block#char2066"><span class="uname">U+2066 LEFT-TO-RIGHT ISOLATE</span></a>]</span>, and <span class="codepoint" translate="no"><span class="uname" dir="ltr">PDI</span> [<a target="c" href="/scripts/arabic/block#char2069"><span class="uname">U+2069 POP DIRECTIONAL ISOLATE</span></a>]</span>.  The Unicode Standard recommends that these be used instead, however some applications  don't yet recognise them. </p>
+<p>There is also <span class="codepoint" translate="no"><span class="uname" dir="ltr">FSI</span> [<a target="c" href="/scripts/arabic/block#char2068"><span class="uname">U+2068 FIRST STRONG ISOLATE</span></a>]</span>, used initially to set the base direction according to the first recognised strongly-directional character.</p>
+<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">ALM</span> [<a target="c" href="/scripts/arabic/block#char061C"><span class="uname">U+061C ARABIC LETTER MARK</span></a>]</span> is used to produce correct sequencing of numeric data. Follow the link and see <a class="secref">expressions</a> for details.&nbsp;</p>
+<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">RLM</span> [<a target="c" href="/scripts/arabic/block#char200F"><span class="uname">U+200F RIGHT-TO-LEFT MARK</span></a>]</span> and <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRM</span> [<a target="c" href="/scripts/arabic/block#char200E"><span class="uname">U+200E LEFT-TO-RIGHT MARK</span></a>]</span> are invisible characters with strong directional properties that are also sometimes used to produce the correct ordering of text.</p>
+<p>For more information about how to use these formatting characters see <a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls.en"><cite>How to use Unicode controls for bidi text</cite></a>. Note, however, that when writing HTML you should generally use markup rather than these control codes. For information about that, see <a href="https://www.w3.org/International/tutorials/bidi-xhtml/"><cite>Creating HTML Pages in Arabic, Hebrew and Other Right-to-left Scripts</cite></a>.</p>
+</section>
+
+
+
+
   
+<section id="expressions">
+<h3>Expressions &amp; sequences</h3>
+<p>A sequence of numbers, for example a range separated by hyphens,  generally runs left to right in Hebrew (unlike Arabic).</p>
+<!--p><a class="figref">fig_range_ar</a> shows Arabic text  which is right-to-left overall, containing an ASCII-digit numeric range that is also ordered RTL, ie. it starts with 10 and ends with 12:</p>
+
+<figure id="fig_range_ar">
+<p dir="rtl" lang="ar" class="large"><span class="ex">في 10–12 آدار</span></p>
+<figcaption>A numeric range in Arabic language text.</figcaption>
+</figure>
+
+<p>In Persian, however, the expression would run LTR, so this would be:</p>
+
+<figure id="persianExpressions">
+<p dir="rtl" lang="ar" class="large"><span class="ex">في &lrm;10–12 آدار</span></p>
+<figcaption>A numeric range in Persian language text.</figcaption>
+</figure>
+
+<p>When a list uses the ASCII hyphen as a separator, the Unicode Bidirectional Algorithm automatically produces the expected ordering <em> only when a sequence or expression follows Arabic characters</em>. However, a sequence that appears alone on a line will be ordered left-to-right (because there is no preceding Arabic character). To make the sequence read right-to-left you need to add the  formatting character <span class="codepoint"><a target="c" href="/scripts/arabic/block#char061C"><span class="uname">U+061C ARABIC LETTER MARK</span></a></span> (ALM) at the start of the line (see <a class="figref">fig_alm</a>). This is effectively an invisible Arabic script character.</p>
+<figure id="fig_alm">
+<p dir="rtl" lang="ar" class="large"><span class="ex">&#x061C;10-01-2018</span></p>
+<figcaption>A numeric date in Arabic language text without a preceding Arabic letter needs ALM before it. (Click on the number to see the underlying characters.).</figcaption>
+</figure>
+
+<p>The required order cannot be achieved  by simply setting the base direction, nor by using <span class="codepoint" translate="no"><a href="/scripts/punctuation/block#char200F" target="c"><span class="uname">U+200F RIGHT-TO-LEFT MARK</span></a></span>. It has to be ALM.</p>
+<p>Alternatively, you could use a different separator, such as <span class="codepoint" translate="no"><span dir="rtl" lang="ur">–</span> [<a href="/scripts/arabic/block#char2013" target="c"><span class="uname">U+2013 EN DASH</span></a>]</span> (as in <a class="figref">fig_range_ar</a>) or <span class="codepoint" translate="no"><span dir="rtl" lang="ur">‐</span> [<a href="/scripts/arabic/block#char2010" target="c"><span class="uname">U+2010 HYPHEN</span></a>]</span>. No special arrangements are then necessary.</p>
+<p>If you are writing in Persian, however, you don't need to add anything in this case.</p>
+
+<figure id="fig_alm_persian">
+<p dir="rtl" lang="ar" class="large"><span class="ex">10-01-2018</span></p>
+<figcaption>The same date in Persian language text.</figcaption>
+</figure>
+
+<p>On the other hand, if  the sequence or expression follows text you need to either isolate the sequence directionally or precede it with <span class="codepoint"><a target="c" href="/scripts/punctuation/block#char200E"><span class="uname">U+200E LEFT-TO-RIGHT MARK</span></a></span> (LRM) to make it look correct (click on <a class="figref">persianExpressions</a>  to see that in action).</p>
+<p>Similar special ordering is applied to numbers in equations, such as <span class="ex" dir="rtl" style="white-space: nowrap" lang="ur">1 + 2 = 3</span>, for Arabic language text.</p>
+<p>See also <a class="secref">percent_sign</a>.</p-->
+</section>
+</section>
   
   
   
@@ -1107,14 +1111,14 @@ alveolar</th>
 <figcaption>Serif (top) and sans (bottom) examples of the standard writing style.</figcaption>
 </figure>
 
-<p>The STAM style is used for sacred texts such as the Torah. Certain letters have decorative tags above.<a class="fnref" href="https://scriptsource.org/scr/Hebr">s</a></p>
+<p>The STAM style is used for sacred texts such as the Torah. Certain letters have decorative tags above.<tt>s</tt></p>
 
 <figure id="fig_ws_stam">
 <img src="images/ws_stam.jpg" alt="">
 <figcaption>Text written in the STAM writing style.</figcaption>
 </figure>
 
-<p>The rashi style is used for commentaries on sacred texts. Letters have a more rounded, almost cursive style.<a class="fnref" href="https://scriptsource.org/scr/Hebr">s</a></p>
+<p>The rashi style is used for commentaries on sacred texts. Letters have a more rounded, almost cursive style.<tt>s</tt></p>
 
 <figure id="fig_ws_rashi">
 <img src="images/ws_rashi.png" alt="">
@@ -1177,9 +1181,9 @@ alveolar</th>
 
 <section id="fontstyle">
 <h3>Font styles</h3>
-<p>Bold text is used as one way to highlight or emphasise text. The degree of bolding is often quite light. Bold-italic is typically only used for large display text.<a class="fnref" href="https://www.typotalks.com/videos/go-bolder-just-slant-it/">l</a></p>
-<p>Italics may also be used, however its use is not abundant, and many of the italic faces in fonts are designed for display use, rather than to accompany a regular font.<a class="fnref" href="https://www.typotalks.com/videos/go-bolder-just-slant-it/">l</a></p>
-<p>There are different preferences for the direction of the slant for italicised Hebrew text. The choice as to which is preferred appears to be down to the individual, and is a question of whether the slant matches the direction of the Hebrew text, or embedded Latin text.<a class="fnref" href="https://www.typotalks.com/videos/go-bolder-just-slant-it/">l</a></p>
+<p>Bold text is used as one way to highlight or emphasise text. The degree of bolding is often quite light. Bold-italic is typically only used for large display text.<tt>l</tt></p>
+<p>Italics may also be used, however its use is not abundant, and many of the italic faces in fonts are designed for display use, rather than to accompany a regular font.<tt>l</tt></p>
+<p>There are different preferences for the direction of the slant for italicised Hebrew text. The choice as to which is preferred appears to be down to the individual, and is a question of whether the slant matches the direction of the Hebrew text, or embedded Latin text.<tt>l</tt></p>
 
 <figure>
 <img src="images/forward_italics.png" alt="עברית" style="border-radius: .5em;">
@@ -1210,8 +1214,8 @@ alveolar</th>
 <p>Words are separated by spaces.</p>
 
 
-<p><span class="leadin">Hyphens.</span><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05BE;</span> [<a href="/scripts/hebrew/block#char05BE"><span class="uname">U+05BE HEBREW PUNCTUATION MAQAF</span></a>]</span> is the proper punctuation for representing hyphens between compounds, eg. <span class="eg" lang="he">תל־אביב</span>.<a class="fnref" href="http://en.wikipedia.org/wiki/Cantillation">w</a></p>
-<p>However, it is less common online because it is not always easily available on keyboards. Therefore, <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x002D;</span> [<span class="uname">U+002D HYPHEN-MINUS</span>]</span> is often substituted, even though the position of that character is too low when displayed.<a class="fnref" href="http://en.wikipedia.org/wiki/Cantillation">w</a></p>
+<p><span class="leadin">Hyphens.</span><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05BE;</span> [<a href="/scripts/hebrew/block#char05BE"><span class="uname">U+05BE HEBREW PUNCTUATION MAQAF</span></a>]</span> is the proper punctuation for representing hyphens between compounds, eg. <span class="eg" lang="he">תל־אביב</span>.<tt>wc</tt></p>
+<p>However, it is less common online because it is not always easily available on keyboards. Therefore, <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x002D;</span> [<span class="uname">U+002D HYPHEN-MINUS</span>]</span> is often substituted, even though the position of that character is too low when displayed.<tt>wc</tt></p>
 <p>The Unicode Standard indicates that lines should not break on either side of the maqaf.<a class="fnref" href="https://github.com/w3c/hlreq/issues/8#issuecomment-375023043">g</a></p>
 <p>In the Bible, maqaf is primarily associated with cantillation marks and indicates a combination of 2 or more words that are pronounced in one breath.<a class="fnref" href="https://github.com/w3c/hlreq/issues/8#issuecomment-287752935">g</a></p>
 </section>
@@ -1222,8 +1226,8 @@ alveolar</th>
 <h3>Phrase &amp; section boundaries</h3>
 <p>Hebrew uses ASCII punctuation for the most part. Full stops, question marks, exclamation marks, and commas are used as in English. There are 6 additional punctuation characters in the Hebrew Unicode block.</p>
 <p>Note that the direction of the question mark (?) is the same as in English, and unlike Arabic. The same is true for the comma ( , ).</p>
-<p><span class="leadin">Biblical &amp; liturgical usage.</span> <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05C0;</span> [<a href="/scripts/hebrew/block#char05C0"><span class="uname">U+05C0 HEBREW PUNCTUATION PASEQ</span></a>]</span> is used as a word separator.&nbsp;<a class="fnref" href="http://en.wikipedia.org/wiki/Cantillation">wc</a></p>
-<p>Prayer books and similar use  <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05C3;</span> [<a href="/scripts/hebrew/block#char05C3"><span class="uname">U+05C3 HEBREW PUNCTUATION SOF PASUQ</span></a>]</span> as a full stop.<a class="fnref" href="http://en.wikipedia.org/wiki/Cantillation">wc</a></p>
+<p><span class="leadin">Biblical &amp; liturgical usage.</span> <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05C0;</span> [<a href="/scripts/hebrew/block#char05C0"><span class="uname">U+05C0 HEBREW PUNCTUATION PASEQ</span></a>]</span> is used as a word separator.<tt>wc</tt></p>
+<p>Prayer books and similar use  <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05C3;</span> [<a href="/scripts/hebrew/block#char05C3"><span class="uname">U+05C3 HEBREW PUNCTUATION SOF PASUQ</span></a>]</span> as a full stop.<tt>wc</tt></p>
 </section>
     
   
@@ -1231,7 +1235,7 @@ alveolar</th>
 <section id="bracketing">
 <h3>Parentheses &amp; brackets</h3>
 
-<p>Hebrew uses the same parentheses as English, and uses <span class="codepoint" translate="no"><span lang="he">&#x0028;</span> [<span class="uname">U+0028 LEFT PARENTHESIS</span>]</span> at the start (right) and <span class="codepoint" translate="no"><span lang="he">&#x0029;</span> [<span class="uname">U+0029 RIGHT PARENTHESIS</span>]</span> at the end (left).<a class="fnref" href="http://en.wikipedia.org/wiki/Cantillation">wc</a> These are mirrored characters in Unicode, so the glyph for each character is automatically reversed in RTL text.</p>
+<p>Hebrew uses the same parentheses as English, and uses <span class="codepoint" translate="no"><span lang="he">&#x0028;</span> [<span class="uname">U+0028 LEFT PARENTHESIS</span>]</span> at the start (right) and <span class="codepoint" translate="no"><span lang="he">&#x0029;</span> [<span class="uname">U+0029 RIGHT PARENTHESIS</span>]</span> at the end (left).<tt>wc</tt> These are mirrored characters in Unicode, so the glyph for each character is automatically reversed in RTL text.</p>
 <p>For example, click on the following to see the component characters, <span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">(חדשה)</span></span> (the first character is the paren on the right). The consequence of this is that, when writing Hebrew, the parentheses should be used as if they were named <span class="codepoint"><span class="uname">U+0028 START PARENTHESIS</span></span> and <span class="codepoint"><span class="uname">U+0028 END PARENTHESIS</span></span>, respectively.</p>
 </section>
 
@@ -1239,9 +1243,9 @@ alveolar</th>
   
 <section id="quotations">
 <h3>Quotations</h3>
-    <p>In principle, for modern quotations,  <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x201D;</span> [<a href="/scripts/hebrew/block#char201D"><span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span></a>]</span> is used at the start and at the end, eg.<span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">”ישראל”</span> <span class="meaning">Israel</span></span>. Nested quotations use different quote marks, which would typically be <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x2019;</span> [<a href="/scripts/hebrew/block#char2019"><span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span></a>]</span>.<a class="fnref" href="https://hebrew-academy.org.il/topic/hahlatot/punctuation/#target-4931">a</a></p>
+    <p>In principle, for modern quotations,  <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x201D;</span> [<a href="/scripts/hebrew/block#char201D"><span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span></a>]</span> is used at the start and at the end, eg.<span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">”ישראל”</span> <span class="meaning">Israel</span></span>. Nested quotations use different quote marks, which would typically be <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x2019;</span> [<a href="/scripts/hebrew/block#char2019"><span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span></a>]</span>.<tt>a,#target-4931</tt></p>
 <p>However, in practice, Hebrew texts often use <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x0022;</span> [<a href="/scripts/hebrew/block#char0022"><span class="uname">U+0022 QUOTATION MARK</span></a>]</span> and <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x0027;</span> [<a href="/scripts/hebrew/block#char0027"><span class="uname">U+0027 APOSTROPHE</span></a>]</span>.</p>
-<p>Up to around 1970 Hebrew used <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x201E;</span> [<a href="/scripts/hebrew/block#char201E"><span class="uname">U+201E DOUBLE LOW-9 QUOTATION MARK</span></a>]</span> instead for the initial quotation mark, ie. <span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">„ישראל”</span></span>, but this changed, partly due to inadequate keyboard designs.<a class="fnref" href="https://en.wikipedia.org/wiki/Hebrew_punctuation#Quotation_marks">w</a></p>
+<p>Up to around 1970 Hebrew used <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x201E;</span> [<a href="/scripts/hebrew/block#char201E"><span class="uname">U+201E DOUBLE LOW-9 QUOTATION MARK</span></a>]</span> instead for the initial quotation mark, ie. <span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">„ישראל”</span></span>, but this changed, partly due to inadequate keyboard designs.<tt>whp,#Quotation_marks</tt></p>
   </section>
  
 
@@ -1257,7 +1261,7 @@ alveolar</th>
 <figcaption>The last part of this text is stretched to show emphasis.</figcaption>
 </figure>
 
-<p>Aternatives include the use of a different typeface, and/or underlining.<a class="fnref" href="https://www.typotalks.com/videos/go-bolder-just-slant-it/">l</a></p>
+<p>Aternatives include the use of a different typeface, and/or underlining.<tt>l</tt></p>
 </section>
 
 
@@ -1267,7 +1271,7 @@ alveolar</th>
   <section id="abbrev">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
     <p>Acronyms are indicated by placing <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05F4;</span> [<a href="/scripts/hebrew/block#char05F4"><span class="uname">U+05F4 HEBREW PUNCTUATION GERSHAYIM</span></a>]</span> before the last character, eg. <span class="ex" lang="he">ר״ת‬</span>.</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05F3;</span> [<a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]</span> is  used to indicate an abbreviation, eg. <span class="eg" lang="he">גְּבֶרֶת</span> is abbreviated as <span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">גב׳</span> <span class="trans">gv´</span></span>.<a class="fnref" href="http://en.wikipedia.org/wiki/Geresh">wg</a></p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05F3;</span> [<a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]</span> is  used to indicate an abbreviation, eg. <span class="eg" lang="he">גְּבֶרֶת</span> is abbreviated as <span class="charExample" translate="no"><span class="ex" lang="he" dir="rtl">גב׳</span> <span class="trans">gv´</span></span>.<tt>wg</tt></p>
 <p>Due to keyboard inadequacies, these are often replaced by ASCII single and double quote characters, even though in general they are visually too high.&nbsp;</p>
 </section>
 
@@ -1339,7 +1343,7 @@ alveolar</th>
 
 
 <details id="linebreak_details">
-<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<summary>Show legend <tt>ul,#Properties</tt></summary>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BA (break after)</a> indicates that it is normal to break after that character.&nbsp;</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
@@ -1663,19 +1667,6 @@ Here, the initial letter is centred horizontally and vertically inside the space
 
 <section id="refs">
 <h2>References</h2>
-  <ol>
-<li>[ <a class="fnref" href="https://hebrew-academy.org.il/topic/hahlatot/punctuation/">a</a> ] Hebrew Academy, <a href="https://hebrew-academy.org.il/topic/hahlatot/punctuation/">האקרמיה ללשון העברת</a></li>
-<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN 0-19-507993-0, pp487-497</li>
-<li>[ <a class="fnref" href="https://www.typotalks.com/videos/go-bolder-just-slant-it/">l</a> ] Liron Lavi Turkenich, <a href="https://www.typotalks.com/videos/go-bolder-just-slant-it/"> Go bolder, just slant it—secondary styles in Hebrew</a> (video), in TYPO  International Design Talks  </li>
-<li>[ <a class="fnref" href="https://scriptsource.org/scr/Hebr">s</a> ] ScriptSource, <a href="https://scriptsource.org/scr/Hebr">Hebrew</a></li>
-<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Hebrew_alphabet">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Hebrew_alphabet">Hebrew alphabet</a>,
-<a href="https://en.wikipedia.org/wiki/Modern_Hebrew_phonology">Modern Hebrew Phonology</a>,
-<a href="http://en.wikipedia.org/wiki/Cantillation">Cantillation</a>, 
-<a href="http://en.wikipedia.org/wiki/Geresh">Geresh</a>, 
-<a href="http://en.wikipedia.org/wiki/Hebrew_punctuation">Hebrew punctuation</a>,
-<a href="https://en.wikipedia.org/wiki/Help:IPA/Hebrew">Help:IPA/Hebrew</a></li>
-<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch09.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch09.pdf">The Unicode Standard v11.0</a></li>
-</ol>
 </section>
 
 
