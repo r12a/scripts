@@ -97,7 +97,6 @@ if (node.innerHTML == '') {
 	node.innerHTML = `
 	<p class="instructions"><span class="leadin">Transcriptions.</span> Unless in parentheses, the transcriptions in italics that follow ${script} text are a <a href="../glossary/#transliteration" class="termref">transliteration</a> developed for these pages. Those in parentheses follow one or more commonly used <a href="../glossary/#transcription" class="termref">transcription</a> methods. Transcriptions in <span style="white-space:nowrap;">⌈ corner brackets ⌋</span> are either phonemic or phonetic.</p>
 	<p class="instructions noprint"><span class="leadin">Character lists.</span> Colours and annotations on panels listing characters are relevant to their use for the ${language} language. Panels with a yellow background contain commonly used characters for that language.</p>
-	<p class="instructions noprint"><span class="leadin">Links to detailed character information.</span> Links on Unicode character names and links on code point values in character lists lead to character notes documents that list information character-by-character. This information is typically more detailed than that on this page. </p>
 	<p class="instructions noprint"><span class="leadin">Detailed topic information.</span> Footnote  links with an arrow alongside take you to more detailed information on the current topic.</p>
 	<p class="instructions noprint"><span class="leadin">Showing code points for examples.</span>Clicking on ${language}  examples shows a list of the characters in that example. </p>
 	<p class="instructions noprint"><span class="leadin">Changing fonts.</span>Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
@@ -109,3 +108,10 @@ else {
 	node.innerHTML = ''
 	}
 }
+
+
+function addUsageAdvice (script) {
+	// Add a para to the intro 
+	
+	document.getElementById('usage').outerHTML = '<p class="instructions">Click on characters or character names to reveal detailed information. (By default, this happens as the cursor moves over some items, but the floating menu to the right provides a toggle for that.) The same information also appears in the companion document, <a href="block" class="linkHighlight">'+script+' character notes</a>. Click on <span class="ex">highlighted</span> examples to see a list of the characters they contain.</p>'
+	}
