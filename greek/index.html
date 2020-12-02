@@ -30,6 +30,8 @@
 <script src="../linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../common/egcode.js"></script>
+<script src="../common/references.js"></script>
+<script src="refs.js"></script>
 
 <script src="el-examples.js"></script>
 <script src="el-translit.js">  </script>
@@ -54,38 +56,33 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->22 November, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->2 December, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
 
 
 <div class="section">
-	  <p>This page gathers  basic information about the  Greek script and its use for the modern Greek language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write modern Greek using Unicode.</p>
-
-
-
-<p>See also the companion document, <a href="block" class="linkHighlight">Greek character notes</a>, for detailed information about specific Unicode characters.</p>
+<p>This page gathers  basic information about the  Greek script and its use for the modern Greek language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write modern Greek using Unicode.</p>
 <p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
 
 
 
-<details>
+<p id="usage"></p>
+<script>addUsageAdvice('Greek')</script>
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Greek','Greek'); return false;">More about using this page</a></summary>
+<div id="about"></div>
+</details>
+
+<details class="supportdocs noprint">
 <summary class="instructions"><a href="../links?iso=Grek">Related pages</a>.</summary>
 </details>
 
-
-
-<details>
-<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
-</details>
-
-
-
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Greek','Greek'); return false;">About this page</a></summary>
-<div id="about"></div>
+<summary class="instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
 </details>
 </div>
 
@@ -151,6 +148,22 @@
 
 
 
+
+
+
+
+<div id="showTranscriptions">
+<div>Character lists show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div>
+<label>Transliteration 
+<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
+<!--div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div-->
+</div>
+   
+    
+      
 
 
 
@@ -238,22 +251,6 @@
 
 
 
-<div id="showTranscriptions">
-<div>Character lists show:</div>
-<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
-<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div>
-<label>Transliteration 
-<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
-<!--div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div-->
-</div>
-   
-    
-      
-
-
-
-
 <section id="vowels">
 <h2>Vowels</h2>
 
@@ -262,6 +259,8 @@
 <h3>Vowel sounds</h3>
 
 <p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+<p class="instructions">Phones in a lighter colour are non-native or allophones. Source <a href="https://en.wikipedia.org/wiki/Modern_Greek_phonology">Wikipedia</a>.</p>
+
 <div style="margin-left: 7.5%;">
 <svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
 
@@ -317,7 +316,6 @@
   <text x="106" y="195" class="ipa" text-anchor="end">a</text> 
 </svg>
 </div>
-<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">wp</a>. </p>
 </section>
 
 
@@ -356,7 +354,7 @@
 <figure class="characterBox auto" data-cols="ipa,trans" data-select="last">Ϊϊ␣Ϋϋ␣ΰ␣ΐ</figure>
 
 <p><span class="name">Tonos</span> and <span class="name">dialytika</span> may  appear together above a vowel. Unlike <span class="name">tonos</span>, <span class="name">dialytika</span> is not dropped for capital letters, but may be produced from a <span class="name">tonos</span> in some circumstances (see <a class="secref">transforms</a>).</p>
-<p>The  code point &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="en">&#x0344;</span> [<a href="/scripts/diacritics/block#char0344"><span class="uname">U+0344 COMBINING GREEK DIALYTIKA TONOS</span></a>]</span> exists, but its use is discouraged by the Unicode Standard in favour of &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="en">&#x0308;</span> + <span lang="en">&#x0301;</span> [<a href="/scripts/diacritics/block#char0308"><span class="uname">U+0308 COMBINING DIAERESIS</span></a> + <a href="/scripts/diacritics/block#char0301"><span class="uname">U+0301 COMBINING ACUTE ACCENT</span></a>]</span>.<a class="fnref" href="http://www.unicode.org/versions/latest/ch07.pdf#Greek">u</a></p>
+<p>The  code point &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="en">&#x0344;</span> [<a href="/scripts/diacritics/block#char0344"><span class="uname">U+0344 COMBINING GREEK DIALYTIKA TONOS</span></a>]</span> exists, but its use is discouraged by the Unicode Standard in favour of &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="en">&#x0308;</span> + <span lang="en">&#x0301;</span> [<a href="/scripts/diacritics/block#char0308"><span class="uname">U+0308 COMBINING DIAERESIS</span></a> + <a href="/scripts/diacritics/block#char0301"><span class="uname">U+0301 COMBINING ACUTE ACCENT</span></a>]</span>.<tt>u,#Greek</tt></p>
 </section>
 
 
@@ -364,7 +362,7 @@
 <section id="polytonic_vowels">
 <h3>Polytonic vowel diacritics</h3>
 <p>In polytonic Greek, stressed syllables are identified using one of 3 diacritics: <span class="name">oxia</span> (called <span class="name">tonos</span> in monotonic Greek), <span class="name">varia</span>, or <span class="name">perispomeni</span>. The original distinctions represented by these 3 marks are no longer relevant to modern Greek, and they simply reflect much older spellings. There are precomposed characters for most combinations, but decomposed sequences use &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0301;</span> [<a href="/scripts/diacritics/block#char0301"><span class="uname">U+0301 COMBINING ACUTE ACCENT</span></a>] for <span class="name">oxia</span> and &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="en">&#x0300;</span> [<a href="/scripts/diacritics/block#char0300"><span class="uname">U+0300 COMBINING GRAVE ACCENT</span></a>]</span> for <span class="name">varia</span></span>. Perispomeni can be rendered as a circumflex, a tilde, or occasionally a macron, so a special code point is available for it: &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="en">&#x0342;</span> [<a href="/scripts/diacritics/block#char0342"><span class="uname">U+0342 COMBINING GREEK PERISPOMENI</span></a>]</span>.</p>
-<p>A vowel that begins a word carries one of two breathing marks, where the rough breathing mark (<span class="name">dasia</span>) indicates the presence of  <span class="ipa">h</span>, and the smooth (<span class="name">psili</span>) its absence. (<span class="ipa">h</span> is no longer used in modern Greek.) &nbsp;&nbsp;&#x0314; [<a href="/scripts/diacritics/block#char0314"><span class="uname">U+0314 COMBINING REVERSED COMMA ABOVE</span></a>] represents the rough breathing mark, and <span class="codepoint" translate="no"><span lang="el">&nbsp;&#x0313;</span> [<a href="/scripts/diacritics/block#char0313"><span class="uname">U+0313 COMBINING COMMA ABOVE</span></a>]</span>  the smooth breathing mark. The code point <span class="codepoint" translate="no"><span lang="el">&nbsp;&#x0343;</span> [<a href="/scripts/diacritics/block#char0343"><span class="uname">U+0343 COMBINING GREEK KORONIS</span></a>]</span> also represents the smooth breathing mark, but exists for compatibility with other encodings and should not be used.<a class="fnref" href="http://www.unicode.org/versions/latest/ch07.pdf#Greek">u</a></p>
+<p>A vowel that begins a word carries one of two breathing marks, where the rough breathing mark (<span class="name">dasia</span>) indicates the presence of  <span class="ipa">h</span>, and the smooth (<span class="name">psili</span>) its absence. (<span class="ipa">h</span> is no longer used in modern Greek.) &nbsp;&nbsp;&#x0314; [<a href="/scripts/diacritics/block#char0314"><span class="uname">U+0314 COMBINING REVERSED COMMA ABOVE</span></a>] represents the rough breathing mark, and <span class="codepoint" translate="no"><span lang="el">&nbsp;&#x0313;</span> [<a href="/scripts/diacritics/block#char0313"><span class="uname">U+0313 COMBINING COMMA ABOVE</span></a>]</span>  the smooth breathing mark. The code point <span class="codepoint" translate="no"><span lang="el">&nbsp;&#x0343;</span> [<a href="/scripts/diacritics/block#char0343"><span class="uname">U+0343 COMBINING GREEK KORONIS</span></a>]</span> also represents the smooth breathing mark, but exists for compatibility with other encodings and should not be used.<tt>u,#Greek</tt></p>
 <p>The <span class="name">ypogegrammeni</span> (or <span class="name">iota</span> subscript) represents the former offglide for what were long diphthongs in ancient Greek, and in decomposed text can be written using <span class="codepoint" translate="no"><span lang="el">&nbsp;&#x0345;</span> [<a href="/scripts/diacritics/block#char0345"><span class="uname">U+0345 COMBINING GREEK YPOGEGRAMMENI</span></a>]</span>. It is used with 3 vowel letters, <span class="charExample" translate="no"><span class="ex" lang="el">α</span></span>, <span class="charExample" translate="no"><span class="ex" lang="el">η</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="el">ω</span></span>, ie. <span class="charExample" translate="no"><span class="ex" lang="el">ᾳῃῳ</span></span>.</p>
 <p>Polytonic Greek also uses  <span class="codepoint" translate="no"><span lang="en">&nbsp;&#x0308;</span> [<a href="/scripts/diacritics/block#char0308"><span class="uname">U+0308 COMBINING DIAERESIS</span></a>]</span> to indicate that two adjacent vowels receive equal weight.</p>
 <p>The Greek Extended Unicode block provides precomposed characters for most of the combinations of Greek letters and diacritics. The precomposed code points are produced by normalisation.</p>
@@ -389,6 +387,7 @@
 <h3>Consonant sounds</h3>
 
 <p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+<p class="instructions">Phones in a lighter colour are non-native or allophones. Source <a href="https://en.wikipedia.org/wiki/Modern_Greek_phonology">Wikipedia</a>.</p>
 
 <table class="ipaTable">
 <thead>
@@ -477,8 +476,6 @@ alveolar</th>
 </tr>
 </tbody>
 </table>
-
-<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">wp</a>. Phones in a lighter colour are non-native or allophones.</p>
 </section>
 
 
@@ -524,7 +521,7 @@ alveolar</th>
 
 <section id="accented_rho">
 <h3>Accented rho</h3>
-<p>Although not a vowel, an initial letter <span class="codepoint" translate="no"><span lang="el">&#x03C1;</span> [<a href="/scripts/greek/block#char03C1"><span class="uname">U+03C1 GREEK SMALL LETTER RHO</span></a>]</span> can also carry a rough breathing mark. When geminated, the first always has a smooth breathing mark, and the second rough, ie. <span class="charExample" translate="no"><span class="ex" lang="el">ῤῥ</span></span>. <a class="fnref" href="http://en.wikipedia.org/wiki/Greek_alphabet">w</a></p>
+<p>Although not a vowel, an initial letter <span class="codepoint" translate="no"><span lang="el">&#x03C1;</span> [<a href="/scripts/greek/block#char03C1"><span class="uname">U+03C1 GREEK SMALL LETTER RHO</span></a>]</span> can also carry a rough breathing mark. When geminated, the first always has a smooth breathing mark, and the second rough, ie. <span class="charExample" translate="no"><span class="ex" lang="el">ῤῥ</span></span>.<tt>ws</tt></p>
 <p>Precomposed characters are available in the Extended Greek block.</p>
 
 <figure class="auxiliaryBox auto" data-cols="" data-select="last">ῤ␣Ῥῥ</figure>
@@ -771,7 +768,7 @@ alveolar</th>
 <figcaption>Multi-paragraph quotation marks.</figcaption>
 </figure>
 
-<p>For dialogue, the quotation dash is commonly used to introduce the spoken text. <a class="figref">fig_quote_dashes</a> uses <span class="codepoint" translate="no"><span lang="ru">&#x2014;</span> [<a href="/scripts/cyrillic/block#char2014"><span class="uname">U+2014 EM DASH</span></a>]</span> with spaces around it for this.<a class="fnref" href="https://en.wikipedia.org/wiki/Quotation_mark#Greek">w</a></p>
+<p>For dialogue, the quotation dash is commonly used to introduce the spoken text. <a class="figref">fig_quote_dashes</a> uses <span class="codepoint" translate="no"><span lang="ru">&#x2014;</span> [<a href="/scripts/cyrillic/block#char2014"><span class="uname">U+2014 EM DASH</span></a>]</span> with spaces around it for this.<tt>wq,#Greek</tt></p>
 
 <figure id="fig_quote_dashes">
 <img src="images/quote_dash.png" alt="— Μιλάει σοβαρά; ρώτησε την Μαρία.— Ναι, σίγουρα, αποκρίθηκε." class="ex" data-notes="200% Brill">
@@ -860,7 +857,7 @@ alveolar</th>
 
 
 <details id="linebreak_details">
-<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<summary>Show legend <tt>ul,#Properties </tt></summary>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AI (ambiguous, alphabetic or Ideograph)</a>  line breaking behavior  depends on the context, and may reflect  different rules in East Asian and other contexts.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
@@ -1201,14 +1198,8 @@ data-cols="">α␣β␣γ␣δ␣ε␣ζ␣η␣θ␣ι␣κ␣λ␣μ␣ν␣ξ
 
 
 
-<section id="references">
+<section id="refs">
 <h2>References</h2>
-<ol>
-<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN 0-19-507993-0, pp559-563.</li>
-<li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch07.pdf#Greek">u</a> ] <cite>The Unicode Standard v11.0</cite>, <a href="http://www.unicode.org/versions/latest/ch07.pdf#Greek">Greek</a>, esp. pp303-309.</li>
-<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Greek_alphabet">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Greek_alphabet"><cite>Greek alphabet</cite></a>.</li>
-<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Modern_Greek_phonology">wp</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Modern_Greek_phonology"><cite>Modern Greek phonology</cite></a>.</li>
-</ol>
 </section>
 
 
