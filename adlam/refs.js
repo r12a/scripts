@@ -1,4 +1,4 @@
-refs = {
+reflist = {
 
 "b": {
 "url":"https://www.unicode.org/L2/L2018/18282r-adlam.pdf",
