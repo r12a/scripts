@@ -7,6 +7,12 @@ reflist = {
 "title":"Text Layout Requirements for the Arabic Script (alreq)",
 },
 
+"ala": {
+"url":"https://www.loc.gov/catdir/cpso/romanization/urdu.pdf",
+"authors": "ALA-LC Romanization Tables",
+"title":"Urdu (in Arabic script)",
+},
+
 "c": {
 "url":"https://www.unicode.org/cldr/charts/latest/summary/ar.html",
 "authors": "CLDR",
@@ -21,12 +27,32 @@ reflist = {
 "isbn":"0-19-507993-0",
 },
 
+"dmt": {
+"url":"#refs",
+"authors": "David Matthews & Mohamed Kasim Dalvi",
+"title":"Teach Yourself Urdu",
+"publisher":"Hodder & Shoughton",
+"isbn":"0-340-67027-4",
+},
+
+"gop": {
+"url":"http://wwwold.dkuug.dk/jtc1/sc2/wg2/docs/n2413-4.pdf",
+"authors": "Urdu and Regional Language Software Development Forum, Ministry of Science and Technology, Government of Pakistan",
+"title":" Proposal to add Marks and Digits in Arabic Code Block (for Urdu)",
+},
+
 "jm": {
 "url":"#refs",
 "authors": "John Mace",
 "title":"Beginner's Arabic Script",
 "publisher":"Hodder & Stoughton Ltd",
 "isbn":"0-340-86016-2",
+},
+
+"kau": {
+"url":"http://geomete.com/urdumac.html#Hamza",
+"authors": "Kamal Abdali",
+"title":"Urdu on the Mac",
 },
 
 "ub": {
@@ -51,6 +77,30 @@ reflist = {
 "title":"Shortcomings of Characters Table",
 },
 
+"hua": {
+"url":"http://users.skynet.be/hugocoolens/newurdu/newurdu.html",
+"authors": "Hugo Coolens",
+"title":"Hugo's Urdu Alphabet Pages",
+},
+
+"huv": {
+"url":"http://users.skynet.be/hugocoolens/newurdu/vowels.html",
+"authors": "Hugo Coolens",
+"title":"Urdu Vowels",
+},
+
+"jkp": {
+"url":"http://www.unicode.org/L2/L2001/01425-arabic_marks.pdf",
+"authors": "Jonathan Kew",
+"title":"Proposal to add Arabic-script honorifics and other marks",
+},
+
+"mki": {
+"url":"http://www.columbia.edu/~mk2580/urdu_section/handouts/izafat.pdf",
+"authors": "Mohamad Khan",
+"title":"Izāfat",
+},
+
 "pm": {
 "url":"#refs",
 "authors": "Narguess Farzad",
@@ -59,7 +109,7 @@ reflist = {
 "isbn":"0-340-80265-0",
 },
 
-"pp": {
+"rpp": {
 "url":"http://www.unicode.org/L2/L2012/12381-dotless-noon.pdf",
 "authors": "Roozbeh Pournader",
 "title":"Initial and medial forms of Arabic Letter Noon Ghunna",
@@ -88,6 +138,13 @@ reflist = {
 "reviewed":true
 },
 
+"rdb": {
+"url":"#refs",
+"authors": "Richard Delacy",
+"title":"Beginner's Urdu Script",
+"isbn":"0-340-86028-6",
+},
+
 "s": {
 "url":"http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Arab",
 "authors": "ScriptSource",
@@ -95,7 +152,7 @@ reflist = {
 "reviewed":true
 },
 
-"us": {
+"shp": {
 "url":"http://www.unicode.org/L2/L2002/02163-n2413-4-urdu.pdf",
 "authors": "Sarmad Hussain",
 "title":"Proposal to add Marks and Digits in Arabic Code Block (for Urdu)",
@@ -123,6 +180,18 @@ reflist = {
 "url":"https://en.wikipedia.org/wiki/Arabic_phonology",
 "authors": "Wikipedia",
 "title":"Arabic phonology",
+},
+
+"wb": {
+"url":"http://en.wikipedia.org/wiki/Basmala",
+"authors": "Wikipedia",
+"title":"Basmala",
+},
+
+"whp": {
+"url":"https://en.wikipedia.org/wiki/Hindustani_phonology",
+"authors": "Wikipedia",
+"title":"Hindustani phonology",
 },
 
 "wa": {
