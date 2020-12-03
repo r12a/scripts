@@ -15,6 +15,7 @@ function initialiseSummary (base, lang, tableName, dir) {
 	setTranslitToggle()
 	setCharOnclicks()
 	if (typeof reflist !== 'undefined') createReferences()
+	//if (typeof reflist !== 'undefined') chooseRelevantRefs()
     }
 
 
