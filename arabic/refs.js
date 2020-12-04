@@ -13,6 +13,19 @@ reflist = {
 "title":"Urdu (in Arabic script)",
 },
 
+"aww": {
+"url":"https://www.academia.edu/13819335/West_African_Scripts_and_Arabic-Script_Orthographies_in_Socio-Political_Context",
+"authors": "Andy Warren-Rothlin",
+"title":"West African Scripts and Arabic-Script Orthographies in Socio-Political Context",
+},
+
+"bc": {
+"url":"#refs",
+"authors": "Bernard Comrie",
+"title":"The World's Major Languages",
+"isbn":"978-1138184824",
+},
+
 "c": {
 "url":"https://www.unicode.org/cldr/charts/latest/summary/ar.html",
 "authors": "CLDR",
@@ -25,6 +38,12 @@ reflist = {
 "title":"The World's Writing Systems",
 "publisher":"Oxford University Press",
 "isbn":"0-19-507993-0",
+},
+
+"dbs": {
+"url":"https://www.academia.edu/38873722/Standardisation_Tendencies_in_Kanuri_and_Hausa_Ajami_Writings",
+"authors": "Dmitry Bondarev",
+"title":"Standardisation Tendencies in Kanuri and Hausa Ajami Writings",
 },
 
 "dmt": {
@@ -95,6 +114,12 @@ reflist = {
 "title":"Proposal to add Arabic-script honorifics and other marks",
 },
 
+"lck": {
+"url":"https://www.loc.gov/catdir/cpso/romanization/kashmiri.pdf",
+"authors": "Library of Congress",
+"title":"Kashmiri (in Perso-Arabic Script) ",
+},
+
 "mki": {
 "url":"http://www.columbia.edu/~mk2580/urdu_section/handouts/izafat.pdf",
 "authors": "Mohamad Khan",
@@ -138,6 +163,34 @@ reflist = {
 "reviewed":true
 },
 
+"lpp": {
+"url":"https://www.unicode.org/L2/L2018/18094-arabic-hausa.pdf",
+"authors": "Lorna Priest Evans, Andy Warren-Rothlin",
+"title":"Proposal to encode additional Arabic script characters for Hausa to the UCS",
+"reviewed":true
+},
+
+"oh": {
+"url":"http://www.omniglot.com/writing/hausa.htm",
+"authors": " Omniglot",
+"title":"Hausa (Harshen Hausa / هَرْشَن هَوْسَ)",
+"reviewed":true
+},
+
+"npp": {
+"url":"#refs",
+"authors": "Neil Patel",
+"title":"Private correspondence",
+"reviewed":true
+},
+
+"pah": {
+"url":"http://www.bisharat.net/wikidoc/pmwiki.php/PanAfrLoc/Hausa",
+"authors": "Pan AfriLoc",
+"title":"Hausa - Haoussa - هوس",
+"reviewed":true
+},
+
 "rdb": {
 "url":"#refs",
 "authors": "Richard Delacy",
@@ -160,6 +213,12 @@ reflist = {
 "reviewed":true
 },
 
+"sle": {
+"url":"https://www.unicode.org/L2/L2009/09311-kashmiri-ltr-from-swaran-lata.pdf",
+"authors": "Swaran Lata",
+"title":"Encoding of additional characters in Unicode for representation of Kashmiri",
+},
+
 "u": {
 "url":"https://www.unicode.org/versions/Unicode13.0.0/ch09.pdf",
 "authors": "Unicode Consortium",
@@ -176,6 +235,13 @@ reflist = {
 "reviewed":true
 },
 
+"uwa": {
+"url":"https://www.univie.ac.at/Hausa/Ajami/Ajami_Hausa.html",
+"authors": " Universität Wien, adap. from Neil Skinner",
+"title":"Ajami Zeichensatz",
+"reviewed":true
+},
+
 "wp": {
 "url":"https://en.wikipedia.org/wiki/Arabic_phonology",
 "authors": "Wikipedia",
@@ -186,6 +252,24 @@ reflist = {
 "url":"http://en.wikipedia.org/wiki/Basmala",
 "authors": "Wikipedia",
 "title":"Basmala",
+},
+
+"whl": {
+"url":"https://en.wikipedia.org/wiki/Hausa_language",
+"authors": "Wikipedia",
+"title":"Hausa language",
+},
+
+"wkl": {
+"url":"https://en.wikipedia.org/wiki/Kashmiri_language",
+"authors": "Wikipedia",
+"title":"Kashmiri language",
+},
+
+"wul": {
+"url":"https://en.wikipedia.org/wiki/Uyghur_language",
+"authors": "Wikipedia",
+"title":"Uyghur language",
 },
 
 "whp": {

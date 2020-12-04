@@ -30,6 +30,8 @@
 <!--script src="../featurelist/scriptdata.js"> </script-->
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../common/egcode.js"></script>
+<script src="../common/references.js"></script>
+<script src="refs.js"></script>
 
 <script src="ha-examples.js"></script>
 <script src="ha-translit.js">  </script>
@@ -52,7 +54,7 @@
 </div>
 </aside>
 
-<p id="status">Updat<!-- #BeginDate format:Sw1 -->22 November, 2020<!-- #EndDate -->te -->
+<p id="status">Updat<!-- #BeginDate format:Sw1 -->3 December, 2020<!-- #EndDate -->te -->
 <span id="versionTop"></span>
 </p>
 
@@ -61,29 +63,25 @@
 <section>
 <p>This page gathers together basic information about the Arabic script and its use for the Hausa language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Hausa using Unicode.</p>
 <p>See the <a class="linkHighlight" href="index">Arabic script summary</a> for most of the information about how the Arabic script works, and the orthography used for the Arabic language. This page aims to provide Hausa-specific information. </p>
-
-
-<p>See also the companion document, <a href="block" class="linkHighlight">Arabic character notes</a>, for detailed information about specific Unicode characters.</p>
 <p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
 
 
 
-<details>
+<p id="usage"></p>
+<script>addUsageAdvice('Arabic')</script>
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Arabic','Hausa'); return false;">More about using this page</a></summary>
+<div id="about"></div>
+</details>
+
+<details class="supportdocs noprint">
 <summary class="instructions"><a href="../links?iso=Arab">Related pages</a>.</summary>
 </details>
 
-
-
-<details>
-<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
-</details>
-
-
-
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Arabic','Hausa'); return false;">About this page</a></summary>
-<div id="about"></div>
+<summary class="instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
 </details>
 </section>
 
@@ -108,7 +106,7 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 
  <section id="history">
 <h2>Usage &amp; history</h2>
-    <p>For information about the script in general, see the <a href="index/#history">Arabic overview</a>.<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf"></a></p>
+    <p>For information about the script in general, see the <a href="index/#history">Arabic overview</a>.<tt>u</tt></p>
 <p>Hausa can be written in the Latin script, but also (less commonly) using the Arabic ajami script. Use of ajami tends to be restricted to Muslim contexts.</p>
 <p>There is a good deal of variation in the orthography for Hausa ajami, and no official standardisation. It should be borne in mind that while this page adopts a particular set of characters based on the Warsh variants as most representative of the orthography, and describes alternative characters under the label of 'infrequent', this is not necessarily representative of the orthography used in certain regions or contexts, especially outside the area around northern Nigeria.</p>
 
@@ -118,12 +116,12 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 
 <section id="variants">
 <h3>Orthographic development &amp; variants</h3>
-<p>Hausa has also been written in ajami since at least the early 17th century.<a class="fnref" href="https://en.wikipedia.org/wiki/Hausa_language">w</a></p>
-<p>There is no standard system of using ajami for Hausa, and different writers may use letters with different values.<a class="fnref" href="https://en.wikipedia.org/wiki/Hausa_language">w</a></p>
+<p>Hausa has also been written in ajami since at least the early 17th century.<tt>whl</tt></p>
+<p>There is no standard system of using ajami for Hausa, and different writers may use letters with different values.<tt>whl</tt></p>
 <p>There are or have been a number of variant practices for writing Hausa ajami. There are also some confusable characters. They include the following:</p>
 <ul>
 <li>There is some variation in sources about the use of <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x06CC;</span> [<a href="/scripts/arabic/block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span> versus <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x064A;</span> [<a href="/scripts/arabic/block#char064A"><span class="uname">U+064A ARABIC LETTER YEH</span></a>]</span>. Most sources seem to agree, however, that the <span class="ipa">iː</span> uses <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0649;</span> [<a href="/scripts/arabic/block#char0649"><span class="uname">U+0649 ARABIC LETTER ALEF MAKSURA</span></a>] </span>,  whereas the end of a diphthong or the consonant <span class="ipa">j</span> uses one of the former. However, some sources show <span class="uname">YEH</span> instead of <span class="uname">FARSI YEH</span> for medial forms. They only differ in that the isolate and final forms of <span class="uname">FARSI YEH</span> have no dots, ie. <span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ییی</span></span> vs. <span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ييي</span></span>.</li>
-<li>Unicode policy for the Arabic script is to encode fully precomposed characters rather than to use combining characters for ijam. Therefore, it is inappropriate to use <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x06DB;</span> [<a href="/scripts/arabic/block#char06DB"><span class="uname">U+06DB ARABIC SMALL HIGH THREE DOTS</span></a>] (<span class="name">wagaf</span>)</span> to create characters such as <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x069F;</span> [<a href="/scripts/arabic/block#char069F"><span class="uname">U+069F ARABIC LETTER TAH WITH THREE DOTS ABOVE</span></a>]</span>, even though the Hausa consider the wagaf to be a modifier letter rather than part of the base character.<a class="fnref" href="https://www.unicode.org/L2/L2018/18094-arabic-hausa.pdf">e</a></li>
+<li>Unicode policy for the Arabic script is to encode fully precomposed characters rather than to use combining characters for ijam. Therefore, it is inappropriate to use <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x06DB;</span> [<a href="/scripts/arabic/block#char06DB"><span class="uname">U+06DB ARABIC SMALL HIGH THREE DOTS</span></a>] (<span class="name">wagaf</span>)</span> to create characters such as <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x069F;</span> [<a href="/scripts/arabic/block#char069F"><span class="uname">U+069F ARABIC LETTER TAH WITH THREE DOTS ABOVE</span></a>]</span>, even though the Hausa consider the wagaf to be a modifier letter rather than part of the base character.<tt>lpp</tt></li>
 <li>The <span class="codepoint"><span class="name">wagaf</span></span> may appear above or below the base, but Unicode standardises on above.</li>
 <li>The soon to be encoded characters with <span class="codepoint"><span class="name">wagaf</span></span> that are based on characters with a dot above the base retain that dot as well as the three dots of the <span class="codepoint"><span class="name">wagaf</span></span>. For example, <span class="uname">ARABIC LETTER GHAIN WITH THREE DOTS ABOVE </span> is completely different from the existing character <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A0;</span> [<a href="/scripts/arabic/block#char06A0"><span class="uname">U+06A0 ARABIC LETTER AIN WITH THREE DOTS ABOVE</span></a>]</span>, even though the difference is visually subtle.</li>
 <li>The difference between <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0646;</span> [<a href="/scripts/arabic/block#char0646"><span class="uname">U+0646 ARABIC LETTER NOON</span></a>]</span> and<span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x08BD;</span> [<a href="/scripts/arabic/block#char08BD"><span class="uname">U+08BD ARABIC LETTER AFRICAN NOON</span></a>]</span> comes down to the absence of dots associated with a character in final position,  ie. <span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ن ننن</span></span> vs. <span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ࢽ ࢽࢽࢽ</span></span>. In medial position, the two contrasting characters  look identical.</li>
@@ -176,8 +174,8 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 
 <section id="structure">
 <h2>Structure</h2>
-    <p>Hausa has 3 syllable types: CV, CVV, and CVC, where VV can be a long vowel or a diphthong.<a class="fnref" href="#refs">c</a> The long vs. short vowel distinction is phonemically important, however when a syllable with a long vowel acquires and final consonant, the vowel is shortened.</p>
-<p>Consonant clusters may occur where syllables are side by side, but not within a syllable. Gemination is, however, a distinctive feature.<a class="fnref" href="#refs">c</a></p>
+    <p>Hausa has 3 syllable types: CV, CVV, and CVC, where VV can be a long vowel or a diphthong.<tt>bc</tt> The long vs. short vowel distinction is phonemically important, however when a syllable with a long vowel acquires and final consonant, the vowel is shortened.</p>
+<p>Consonant clusters may occur where syllables are side by side, but not within a syllable. Gemination is, however, a distinctive feature.<tt>bc</tt></p>
 <p>Semivowels <span class="ipa">ʷ</span> and <span class="ipa">ʲ</span> may occur after an initial consonant.</p>
 </section>
 
@@ -267,7 +265,6 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
   <text x="106" y="195" class="ipa" text-anchor="end">a aː</text> 
 </svg>
 </div>
-<!--p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">wp</a>.</p-->
 </section>
 
 
@@ -503,7 +500,7 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 <div class="phone"><span class="ipa">iː</span></div>
 <div class="posn">i</div>
 <div>
-<p><span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0649;&#x0650;&#x0655;ـ</span> [<a href="/scripts/arabic/block#char0649"><span class="uname">U+0649 ARABIC LETTER ALEF MAKSURA</span></a> + <a href="/scripts/arabic/block#char0650"><span class="uname">U+0650 ARABIC KASRA</span></a> + <a href="/scripts/arabic/block#char0655"><span class="uname">U+0655 ARABIC HAMZA BELOW</span></a>]</span><a class="fnref" href="#refs">q</a></p>
+<p><span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0649;&#x0650;&#x0655;ـ</span> [<a href="/scripts/arabic/block#char0649"><span class="uname">U+0649 ARABIC LETTER ALEF MAKSURA</span></a> + <a href="/scripts/arabic/block#char0650"><span class="uname">U+0650 ARABIC KASRA</span></a> + <a href="/scripts/arabic/block#char0655"><span class="uname">U+0655 ARABIC HAMZA BELOW</span></a>]</span><tt>npp</tt></p>
 </div>
 </div>
 <div class="mapItem">
@@ -649,7 +646,7 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 <div class="phone">&nbsp;</div>
 <div class="posn">f</div>
 <div>
-<p><span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x25CC;&#x200D;&#x064F;&#x0648;&#x0627;&#x0652;</span> [<a href="/scripts/arabic/block#char064F"><span class="uname">U+064F ARABIC DAMMA</span></a> + <a href="/scripts/arabic/block#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a> + <a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="/scripts/arabic/block#char0652"><span class="uname">U+0652 ARABIC SUKUN</span></a>]</span>. <a class="fnref" href="https://www.unicode.org/L2/L2018/18094-arabic-hausa.pdf">e</a><a class="fnref" href="https://www.univie.ac.at/Hausa/Ajami/Ajami_Hausa.html">s</a></p>
+<p><span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x25CC;&#x200D;&#x064F;&#x0648;&#x0627;&#x0652;</span> [<a href="/scripts/arabic/block#char064F"><span class="uname">U+064F ARABIC DAMMA</span></a> + <a href="/scripts/arabic/block#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a> + <a href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a> + <a href="/scripts/arabic/block#char0652"><span class="uname">U+0652 ARABIC SUKUN</span></a>]</span>. <tt>lpp</tt><tt>uwa</tt></p>
 </div>
 </div>
 </div>
@@ -900,10 +897,10 @@ alveolar</th>
 <p>Three consonant sounds in syllable initial position can be followed by <span class="ipa">ʷ</span> or <span class="ipa">ʲ</span>. They depend on an initial base consonant with a 3-dot diacritic, which may or may not be followed by <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0648;</span> [<a href="/scripts/arabic/block#char0648"><span class="uname">U+0648 ARABIC LETTER WAW</span></a>]</span> or <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x06CC;</span> [<a href="/scripts/arabic/block#char06CC"><span class="uname">U+06CC ARABIC LETTER FARSI YEH</span></a>]</span>.</p>
 <p> One  base character was encoded in Unicode 4.1: <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0763;</span> [<a href="/scripts/arabic/block#char0763"><span class="uname">U+0763 ARABIC LETTER KEHEH WITH THREE DOTS ABOVE</span></a>]</span>, used for combinations with the sound <span class="ipa">k</span>. Unicode code points for the other two were encoded in Unicode v13. They are <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x08C3;</span> [<a href="/scripts/arabic/block#char08C3"><span class="uname">U+08C3 ARABIC LETTER GHAIN WITH THREE DOTS ABOVE</span></a>]</span> for <span class="ipa">ɡʷ/ɡʲ</span> and <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x08C4;</span> [<a href="/scripts/arabic/block#char08C4"><span class="uname">U+08C4 ARABIC LETTER AFRICAN QAF WITH THREE DOTS ABOVE</span></a>]</span>for <span class="ipa">ƙʷ/ƙʲ</span>. (Take care not to confuse these with <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x06A0;</span> [<a href="/scripts/arabic/block#char06A0"><span class="uname">U+06A0 ARABIC LETTER AIN WITH THREE DOTS ABOVE</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x06A8;</span> [<a href="/scripts/arabic/block#char06A8"><span class="uname">U+06A8 ARABIC LETTER QAF WITH THREE DOTS ABOVE</span></a>]</span>, neither of which are used for Hausa.)</p>
 <p>There is little information available about how these characters are used, and some ambiguity in what there is.</p>
-<p> Warren-Rothlin<a class="fnref" href="https://www.academia.edu/13819335/West_African_Scripts_and_Arabic-Script_Orthographies_in_Socio-Political_Context">r</a> says the following about these characters.</p>
+<p> Warren-Rothlin<tt>aww</tt> says the following about these characters.</p>
 <blockquote>The labialized and palatalized velars /ɡʷ/ and /ɡʲ/, /kʷ/ and /kʲ/, and  /ƙʷ/ and /ƙʲ/ are usually not written, e.g. <span class="charExample" translate="no"><span class="ex" lang="ha-x-hafs" dir="rtl">کْي</span></span> 	⟨k⁰y⟩ and <span class="charExample" translate="no"><span class="ex" lang="ha-x-hafs" dir="rtl">کْو</span></span>⟨k⁰w⟩, as one might expect, but <span class="charExample" translate="no"><span class="ex" lang="ha-x-hafs" dir="rtl">کِي</span></span> ⟨kiy⟩ or <span class="charExample" translate="no"><span class="ex" lang="ha-x-hafs" dir="rtl">کُو</span></span> ⟨kuw⟩, and even with the following vowel sound intervening (e.g. <span class="charExample" translate="no"><span class="ex" lang="ha-x-hafs" dir="rtl">کَو</span></span>⟨kaw⟩ for /kwa/). As noted above for other distinctive Hausa sounds, three dots usually smaller than standard <span style="font-style:italic;">nuqaṭ</span> may be added above for labialization and below for palatalization (e.g. ⟨k₃aw⁰taʾ⟩ <span style="font-style:italic;">kyauta</span>).</blockquote> 
 <p>Rather than provide characters with triple dots above and others with triple dots below, Unicode is standardising on above.</p>
-<p>Looking at the samples in the Unicode proposal<a class="fnref" href="https://www.unicode.org/L2/L2018/18094-arabic-hausa.pdf">e</a>, there seem to be two different forms for each. It isn't clearly indicated (especially since the boko transcription doesn't indicate vowel length), but I find myself wondering whether they reflect the difference between long and short vowels. Here are some examples.</p>
+<p>Looking at the samples in the Unicode proposal<tt>lpp</tt>, there seem to be two different forms for each. It isn't clearly indicated (especially since the boko transcription doesn't indicate vowel length), but I find myself wondering whether they reflect the difference between long and short vowels. Here are some examples.</p>
 <ul>
 <li><span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ࣃُودَ</span> <span class="trans">ĝuwda</span> (<span class="trans">gwada</span>)</span> vs. <span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ࣃُمْࢽَ</span> <span class="trans">ĝum͓na</span> (<span class="trans">gwamna</span>)</span></li>
 <li><span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ࣄُورَیْ</span> <span class="trans">ƙ̂uwray͓</span> (<span class="trans">ƙwarai</span>)</span> vs. <span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">ࣄُثٜىٰ</span> <span class="trans">ƙ̂uʧeıˈ</span> (<span class="trans">ƙwace</span>)</span>&nbsp;</li>
@@ -963,9 +960,9 @@ alveolar</th>
 <section id="map_consonants">
 <h3>Consonant sounds to characters</h3>
 <p>The following maps the above sounds to graphemes.</p>
-<p>There is no official standard for how to write African languages in ajami, and there has been a good deal of variation over the history of the writing.<a class="fnref" href="https://www.academia.edu/38873722/Standardisation_Tendencies_in_Kanuri_and_Hausa_Ajami_Writings">→b</a> In addition, dialects of Hausa have different phonemic repertoires, which are reflected in their writing. So there is some variation as to which characters are mapped to which sounds, and the sets described here  are a synthesis of sources describing modern usage.</p>
+<p>There is no official standard for how to write African languages in ajami, and there has been a good deal of variation over the history of the writing.<tt class="more">dbs</tt> In addition, dialects of Hausa have different phonemic repertoires, which are reflected in their writing. So there is some variation as to which characters are mapped to which sounds, and the sets described here  are a synthesis of sources describing modern usage.</p>
 <p>The typical orthography is based on Warsh (Warš)  forms, which incorporate Maghribi characteristics, and are often written with Kano style glyphs (as here). Some sources describe an alternative  Hafs (Ḥafṣ) orthography, used with hand-written adaptations for the newspaper <cite>Al-Fijir</cite>.</p>
-<p>Additional alternative shapes also occur, typically  used for  borrowed words, or because sounds are not differentiated in some regions. These are preceded by  an asterisk in the table. (Warren-Rothlin<a class="fnref" href="https://www.academia.edu/13819335/West_African_Scripts_and_Arabic-Script_Orthographies_in_Socio-Political_Context">→r</a> lists a handful of other, less commonly attested shapes, but they are not listed here.)</p>
+<p>Additional alternative shapes also occur, typically  used for  borrowed words, or because sounds are not differentiated in some regions. These are preceded by  an asterisk in the table. (Warren-Rothlin<tt class="more">aww</tt> lists a handful of other, less commonly attested shapes, but they are not listed here.)</p>
 
 
 
@@ -981,7 +978,7 @@ alveolar</th>
 <div class="mapItem">
 <div class="phone"><span class="ipa">ɓ</span></div>
 <div>
-<p>Most sources associate  this sound with <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x067B;</span> [<a href="/scripts/arabic/block#char067B"><span class="uname">U+067B ARABIC LETTER BEEH</span></a>]</span> for the Warsh orthography, but Evans&#x202f;&amp;&#x202f;Warren-Rothlin<a class="fnref" href="https://www.unicode.org/L2/L2018/18094-arabic-hausa.pdf">e</a> list that character as Hafs, and show <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0751;</span> [<a href="/scripts/arabic/block#char0751"><span class="uname">U+0751 ARABIC LETTER BEH WITH DOT BELOW AND THREE DOTS ABOVE</span></a>]</span> as the Warsh variant. Bondarev<a class="fnref" href="https://www.academia.edu/38873722/Standardisation_Tendencies_in_Kanuri_and_Hausa_Ajami_Writings">b</a> says that it is written as <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x067E;</span> [<a href="/scripts/arabic/block#char067E"><span class="uname">U+067E ARABIC LETTER PEH</span></a>]</span> in modern text. One of the 'alternate' shapes used for this sound is <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0628;</span> [<a href="/scripts/arabic/block#char0628"><span class="uname">U+0628 ARABIC LETTER BEH</span></a>]</span>.</p>
+<p>Most sources associate  this sound with <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x067B;</span> [<a href="/scripts/arabic/block#char067B"><span class="uname">U+067B ARABIC LETTER BEEH</span></a>]</span> for the Warsh orthography, but Evans&#x202f;&amp;&#x202f;Warren-Rothlin<tt>lpp</tt> list that character as Hafs, and show <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0751;</span> [<a href="/scripts/arabic/block#char0751"><span class="uname">U+0751 ARABIC LETTER BEH WITH DOT BELOW AND THREE DOTS ABOVE</span></a>]</span> as the Warsh variant. Bondarev<tt>dbs</tt> says that it is written as <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x067E;</span> [<a href="/scripts/arabic/block#char067E"><span class="uname">U+067E ARABIC LETTER PEH</span></a>]</span> in modern text. One of the 'alternate' shapes used for this sound is <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0628;</span> [<a href="/scripts/arabic/block#char0628"><span class="uname">U+0628 ARABIC LETTER BEH</span></a>]</span>.</p>
 </div>
 </div>
 <div class="mapItem">
@@ -1017,7 +1014,7 @@ alveolar</th>
 <div class="mapItem">
 <div class="phone"><span class="ipa">kʼ</span></div>
 <div>
-<p>Evans&#x202f;&amp;&#x202f;Warren-Rothlin<a class="fnref" href="https://www.unicode.org/L2/L2018/18094-arabic-hausa.pdf">e</a> associate this sound with <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x08BC;</span> [<a href="/scripts/arabic/block#char08BC"><span class="uname">U+08BC ARABIC LETTER AFRICAN QAF</span></a>]</span> for the Warsh variant, as do others, but Warren-Rothlin<a class="fnref" href="https://www.academia.edu/13819335/West_African_Scripts_and_Arabic-Script_Orthographies_in_Socio-Political_Context">r</a> lists what appears to be <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A7;</span> [<a href="/scripts/arabic/block#char06A7"><span class="uname">U+06A7 ARABIC LETTER QAF WITH DOT ABOVE</span></a>]</span> for this sound (although it could be an incorrect attribution, given that the former has a dot over initial/medial forms).</p>
+<p>Evans&#x202f;&amp;&#x202f;Warren-Rothlin<tt>lpp</tt> associate this sound with <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x08BC;</span> [<a href="/scripts/arabic/block#char08BC"><span class="uname">U+08BC ARABIC LETTER AFRICAN QAF</span></a>]</span> for the Warsh variant, as do others, but Warren-Rothlin<tt>aww</tt> lists what appears to be <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A7;</span> [<a href="/scripts/arabic/block#char06A7"><span class="uname">U+06A7 ARABIC LETTER QAF WITH DOT ABOVE</span></a>]</span> for this sound (although it could be an incorrect attribution, given that the former has a dot over initial/medial forms).</p>
 </div>
 </div>
 <div class="mapItem">
@@ -1078,13 +1075,13 @@ alveolar</th>
 <div class="mapItem">
 <div class="phone"><span class="ipa">f</span> <span class="ipa">ɸ</span></div>
 <div>
-<p>The Warsh orthography uses <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x08BB;</span> [<a href="/scripts/arabic/block#char08BB"><span class="uname">U+08BB ARABIC LETTER AFRICAN FEH</span></a>]</span> for this sound, and the Hafs uses <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0641;</span> [<a href="/scripts/arabic/block#char0641"><span class="uname">U+0641 ARABIC LETTER FEH</span></a>]</span> . Sometimes, <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x067E;</span> [<a href="/scripts/arabic/block#char067E"><span class="uname">U+067E ARABIC LETTER PEH</span></a>]</span> is used as one of the 'alternative' shapes. Warren-Rothlin<a class="fnref" href="https://www.academia.edu/13819335/West_African_Scripts_and_Arabic-Script_Orthographies_in_Socio-Political_Context">r</a> also lists what appears to be <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A2;</span> [<a href="/scripts/arabic/block#char06A2"><span class="uname">U+06A2 ARABIC LETTER FEH WITH DOT MOVED BELOW</span></a>]</span> for this sound, although it could again be an incorrect attribution, given that <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x08BB;</span> [<a href="/scripts/arabic/block#char08BB"><span class="uname">U+08BB ARABIC LETTER AFRICAN FEH</span></a>]</span> has a dot below initial/medial forms.</p>
+<p>The Warsh orthography uses <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x08BB;</span> [<a href="/scripts/arabic/block#char08BB"><span class="uname">U+08BB ARABIC LETTER AFRICAN FEH</span></a>]</span> for this sound, and the Hafs uses <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0641;</span> [<a href="/scripts/arabic/block#char0641"><span class="uname">U+0641 ARABIC LETTER FEH</span></a>]</span> . Sometimes, <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x067E;</span> [<a href="/scripts/arabic/block#char067E"><span class="uname">U+067E ARABIC LETTER PEH</span></a>]</span> is used as one of the 'alternative' shapes. Warren-Rothlin<tt>aww</tt> also lists what appears to be <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A2;</span> [<a href="/scripts/arabic/block#char06A2"><span class="uname">U+06A2 ARABIC LETTER FEH WITH DOT MOVED BELOW</span></a>]</span> for this sound, although it could again be an incorrect attribution, given that <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x08BB;</span> [<a href="/scripts/arabic/block#char08BB"><span class="uname">U+08BB ARABIC LETTER AFRICAN FEH</span></a>]</span> has a dot below initial/medial forms.</p>
 </div>
 </div>
 <div class="mapItem">
 <div class="phone"><span class="ipa">s</span></div>
 <div>
-<p>Normally, this would be written using <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0633;</span> [<a href="/scripts/arabic/block#char0633"><span class="uname">U+0633 ARABIC LETTER SEEN</span></a>], but </span><span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0635;</span> [<a href="/scripts/arabic/block#char0635"><span class="uname">U+0635 ARABIC LETTER SAD</span></a>]</span> is also used, mainly in Arabic loan words.<a class="fnref" href="https://www.academia.edu/13819335/West_African_Scripts_and_Arabic-Script_Orthographies_in_Socio-Political_Context">r</a></p>
+<p>Normally, this would be written using <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0633;</span> [<a href="/scripts/arabic/block#char0633"><span class="uname">U+0633 ARABIC LETTER SEEN</span></a>], but </span><span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0635;</span> [<a href="/scripts/arabic/block#char0635"><span class="uname">U+0635 ARABIC LETTER SAD</span></a>]</span> is also used, mainly in Arabic loan words.<tt>aww</tt></p>
 </div>
 </div>
 <div class="mapItem">
@@ -1114,7 +1111,7 @@ alveolar</th>
 <div class="mapItem">
 <div class="phone"><span class="ipa">h</span></div>
 <div>
-<p>The usual form is <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x062D;</span> [<a href="/scripts/arabic/block#char062D"><span class="uname">U+062D ARABIC LETTER HAH</span></a>]</span>. For Quranic names, <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0647;</span> [<a href="/scripts/arabic/block#char0647"><span class="uname">U+0647 ARABIC LETTER HEH</span></a>]</span> is generally used, but both can sometimes also be used interchangeably, eg. <span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">حَوْسَا</span></span> or <span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">هَوْسَا</span></span>.<a class="fnref" href="https://www.academia.edu/13819335/West_African_Scripts_and_Arabic-Script_Orthographies_in_Socio-Political_Context">r</a></p>
+<p>The usual form is <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x062D;</span> [<a href="/scripts/arabic/block#char062D"><span class="uname">U+062D ARABIC LETTER HAH</span></a>]</span>. For Quranic names, <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0647;</span> [<a href="/scripts/arabic/block#char0647"><span class="uname">U+0647 ARABIC LETTER HEH</span></a>]</span> is generally used, but both can sometimes also be used interchangeably, eg. <span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">حَوْسَا</span></span> or <span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">هَوْسَا</span></span>.<tt>aww</tt></p>
 </div>
 </div>
 
@@ -1134,7 +1131,7 @@ alveolar</th>
 <div class="mapItem">
 <div class="phone"><span class="ipa">n</span></div>
 <div>
-<p>The Warsh form is <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x08BD;</span> [<a href="/scripts/arabic/block#char08BD"><span class="uname">U+08BD ARABIC LETTER AFRICAN NOON</span></a>]</span> and Hafs is <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0646;</span> [<a href="/scripts/arabic/block#char0646"><span class="uname">U+0646 ARABIC LETTER NOON</span></a>]</span>. Warren-Rothlin<a class="fnref" href="https://www.academia.edu/13819335/West_African_Scripts_and_Arabic-Script_Orthographies_in_Socio-Political_Context">r</a> however indicates what appears to be <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0646;</span> [<a href="/scripts/arabic/block#char0646"><span class="uname">U+0646 ARABIC LETTER NOON</span></a>]</span> rather than <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x08BD;</span> [<a href="/scripts/arabic/block#char08BD"><span class="uname">U+08BD ARABIC LETTER AFRICAN NOON</span></a>]</span> in Evans&#x202f;&amp;&#x202f;Warren-Rothlin<a class="fnref" href="https://www.unicode.org/L2/L2018/18094-arabic-hausa.pdf">e</a>.</p>
+<p>The Warsh form is <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x08BD;</span> [<a href="/scripts/arabic/block#char08BD"><span class="uname">U+08BD ARABIC LETTER AFRICAN NOON</span></a>]</span> and Hafs is <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0646;</span> [<a href="/scripts/arabic/block#char0646"><span class="uname">U+0646 ARABIC LETTER NOON</span></a>]</span>. Warren-Rothlin<tt>aww</tt> however indicates what appears to be <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x0646;</span> [<a href="/scripts/arabic/block#char0646"><span class="uname">U+0646 ARABIC LETTER NOON</span></a>]</span> rather than <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x08BD;</span> [<a href="/scripts/arabic/block#char08BD"><span class="uname">U+08BD ARABIC LETTER AFRICAN NOON</span></a>]</span> in Evans&#x202f;&amp;&#x202f;Warren-Rothlin<tt>lpp</tt>.</p>
 </div>
 </div>
 </div>
@@ -1177,7 +1174,7 @@ alveolar</th>
 <div class="mapItem">
 <div class="phone"><span class="ipa">j̰</span></div>
 <div>
-<p>Warren-Rothlin<a class="fnref" href="https://www.academia.edu/13819335/West_African_Scripts_and_Arabic-Script_Orthographies_in_Socio-Political_Context">r</a> indicates that this uses <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x06D1;</span> [<a href="/scripts/arabic/block#char06D1"><span class="uname">U+06D1 ARABIC LETTER YEH WITH THREE DOTS BELOW</span></a>]</span> for the Warsh orthography, rather than the <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x063F;</span> [<a href="/scripts/arabic/block#char063F"><span class="uname">U+063F ARABIC LETTER FARSI YEH WITH THREE DOTS ABOVE</span></a>]</span> indicated by Evans&#x202f;&amp;&#x202f;Warren-Rothlin<a class="fnref" href="https://www.unicode.org/L2/L2018/18094-arabic-hausa.pdf">e</a>. The IPA notation for this sound is somewhat ambiguous, including <span class="ipa">ƒ</span>, <span class="ipa">ʔʲ</span>, and <span class="ipa">j̰ </span>. <span class="ednote">I settled for the last of these, though not for any convincing reason.</span></p>
+<p>Warren-Rothlin<tt>aww</tt> indicates that this uses <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x06D1;</span> [<a href="/scripts/arabic/block#char06D1"><span class="uname">U+06D1 ARABIC LETTER YEH WITH THREE DOTS BELOW</span></a>]</span> for the Warsh orthography, rather than the <span class="codepoint" translate="no"><span lang="ha" dir="rtl">&#x063F;</span> [<a href="/scripts/arabic/block#char063F"><span class="uname">U+063F ARABIC LETTER FARSI YEH WITH THREE DOTS ABOVE</span></a>]</span> indicated by Evans&#x202f;&amp;&#x202f;Warren-Rothlin<tt>lpp</tt>. The IPA notation for this sound is somewhat ambiguous, including <span class="ipa">ƒ</span>, <span class="ipa">ʔʲ</span>, and <span class="ipa">j̰ </span>. <span class="ednote">I settled for the last of these, though not for any convincing reason.</span></p>
 </div>
 </div>
 </div>
@@ -1185,19 +1182,6 @@ alveolar</th>
 </section></section>
 
 
-
-
-<!--section>
-<h2 id="otherletters">Other letters</h2>
-
-<p>@CLDR lists the following additional characters with the general property of letter.</p>
-
-<figure class="auxiliaryBox auto"  data-cols="">ऽ␣ॐ</figure>
-
-
-<p>@Used for vowel elision in Sanskrit, the main function of <span class="codepoint" translate="no"><span lang="ha">&#x093D;</span> [<a href="arab-ha#char093D"><span class="uname">U+093D arab-ha SIGN AVAGRAHA</span></a>]</span> in Hindi is to show that a vowel is sustained in a cry or a shout, eg.  <span class="charExample" translate="no"><span class="ex" lang="ha" dir="rtl">आईऽऽऽ!</span> <span class="trans">ạ̄ị̄´´´!</span></span> <a class="fnref" href="https://en.wikipedia.org/wiki/arab-ha">w</a></sup>.</p>
-<p>@<span class="codepoint" translate="no"><span lang="ha">&#x0950;</span> [<a href="arab-ha#char0950"><span class="uname">U+0950 arab-ha OM</span></a>]</span> is a religious symbol.&nbsp;</p>
-</section-->
 
 
 
@@ -1489,7 +1473,7 @@ alveolar</th>
 
 
 <details id="linebreak_details">
-<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<summary>Show legend <tt>ul</tt></summary>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CP">CP (closing parenthesis)</a> will not cause a break opportunity when appearing in contexts like “(s)he.” In all other respects the breaking behavior of CP and CL are the same.</p>
@@ -1674,19 +1658,6 @@ alveolar</th>
 
 <section id="refs">
 <h2>References</h2>
-<ol>
-<!--li>[ <a class="fnref" href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
-				0-19-507993-0, pp487-497</li-->
-<li>[ <a class="fnref" href="https://www.academia.edu/38873722/Standardisation_Tendencies_in_Kanuri_and_Hausa_Ajami_Writings">b</a> ] Bondarev, Dmitry, <a href="https://www.academia.edu/38873722/Standardisation_Tendencies_in_Kanuri_and_Hausa_Ajami_Writings">Standardisation Tendencies in Kanuri and Hausa Ajami Writings</a></li>
-<li>[ <a class="fnref" href="#refs">c</a> ]  Bernard Comrie, <cite>The World's Major Languages</cite>, ISBN 978-1138184824</li>
-<li>[ <a class="fnref" href="https://www.unicode.org/L2/L2018/18094-arabic-hausa.pdf">e</a> ] Lorna Priest Evans, Andy Warren-Rothlin, <a href="https://www.unicode.org/L2/L2018/18094-arabic-hausa.pdf">Proposal to encode additional Arabic script characters for Hausa to the UCS</a></li>
-<li>[ <a class="fnref" href="http://www.omniglot.com/writing/hausa.htm">o</a> ]  Omniglot, <a href="http://www.omniglot.com/writing/hausa.htm">Hausa (Harshen Hausa / هَرْشَن هَوْسَ)</a></li>
-<li>[ <a class="fnref" href="http://www.bisharat.net/wikidoc/pmwiki.php/PanAfrLoc/Hausa">p</a> ]  Pan AfriLoc, <a href="http://www.bisharat.net/wikidoc/pmwiki.php/PanAfrLoc/Hausa">Hausa - Haoussa - هوس</a></li>
-<li>[ <a class="fnref" href="#refs">q</a> ] Private correspondence with Neil Patel.</li>
-<li>[ <a class="fnref" href="https://www.academia.edu/13819335/West_African_Scripts_and_Arabic-Script_Orthographies_in_Socio-Political_Context">r</a> ]  Andy Warren-Rothlin, <a href="https://www.academia.edu/13819335/West_African_Scripts_and_Arabic-Script_Orthographies_in_Socio-Political_Context">West African Scripts and Arabic-Script Orthographies in Socio-Political Context</a></li>
-<li>[ <a class="fnref" href="https://www.univie.ac.at/Hausa/Ajami/Ajami_Hausa.html">s</a> ]  Universität Wien, adap. from Neil Skinner, <a href="https://www.univie.ac.at/Hausa/Ajami/Ajami_Hausa.html">Ajami Zeichensatz</a></li>
-<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Hausa_language">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Hausa_language">Hausa language</a></li>
-</ol>
 </section>
 
 
