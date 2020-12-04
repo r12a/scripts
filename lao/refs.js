@@ -56,7 +56,7 @@ reflist = {
 "url":"https://www.unicode.org/versions/Unicode13.0.0/ch16.pdf",
 "authors": "Unicode Consortium",
 "title":"The Unicode Standard, Version 13.0",
-"sub":"Chapter 6.2: Southeast Asia, Lao",
+"sub":"Chapter 16.2: Southeast Asia, Lao",
 "pages":"643-645",
 "isbn":"978-1-936213-16-0.",
 },
