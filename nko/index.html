@@ -29,6 +29,8 @@
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../common/egcode.js"></script>
+<script src="../common/references.js"></script>
+<script src="refs.js"></script>
 
 <script src="nqo-examples.js"></script>
 <script src="nqo-translit.js">  </script>
@@ -54,34 +56,32 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->20 November, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->4 December, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
 
 <div class="section">
   <p>This page gathers together basic information about the N’Ko script and its use for the Kangbe koiné. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write N’Ko using Unicode.</p>
-
-<p>See also the companion document, <a href="block" class="linkHighlight">N’Ko character notes</a>, for detailed information about specific Unicode characters.</p>
 <p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
 
 
-<details>
+
+<p id="usage"></p>
+<script>addUsageAdvice('N’Ko')</script>
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'N’Ko','N’Ko'); return false;">More about using this page</a></summary>
+<div id="about"></div>
+</details>
+
+<details class="supportdocs noprint">
 <summary class="instructions"><a href="../links?iso=Nkoo">Related pages</a>.</summary>
 </details>
 
-
-
-<details>
-<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
-</details>
-
-
-
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'N’Ko','N’Ko'); return false;">About this page</a></summary>
-<div id="about"></div>
+<summary class="instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
 </details>
 </div>
 
@@ -150,6 +150,22 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 
 
 
+<div id="showTranscriptions">
+<div>Character lists show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div>
+<label>Transliteration 
+<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
+<div>
+<label>Latin 
+<input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+</div>
+
+
+
+
+
 <section id="index">
 <h2>Character index</h2>
 
@@ -194,7 +210,7 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 <section id="index_cchars">
 <h3>Combining marks</h3>
 
-<p>Although some of the N'Ko diacritics look like those in general use, you should use the ones provided in this block. This is because they are typically drawn higher and bolder than the generic marks, and have a wider range of glyph variation. <a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></p>
+<p>Although some of the N'Ko diacritics look like those in general use, you should use the ones provided in this block. This is because they are typically drawn higher and bolder than the generic marks, and have a wider range of glyph variation.<tt>u</tt></p>
 
 <section id="index_cchars_tone">
 <h4>Tones</h4>
@@ -241,54 +257,6 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 
 
 
-
-<!--section id="diacritics">
-<h2>Combining marks</h2>
- 
-<figure class="characterBox auto"  data-cols="trans">߫␣߬␣߭␣߮␣߯␣߰␣߱␣߲␣߳</figure>
-
-<p>The first 7 items in the above list are tone marks, described at <a class="secref">tone_marks</a>.</p>
-<p><span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07EB;</span> [<a href="/scripts/nko/block#char07EB"><span class="uname">U+07EB NKO COMBINING SHORT HIGH TONE</span></a>]</span> and <span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07ED;</span> [<a href="/scripts/nko/block#char07ED"><span class="uname">U+07ED NKO COMBINING SHORT RISING TONE</span></a>]</span> are also used to extend the consonant repertoire for foreign sounds, as is <span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07F3;</span> [<a href="/scripts/nko/block#char07F3"><span class="uname">U+07F3 NKO COMBINING DOUBLE DOT ABOVE</span></a>]</span>, see <a class="secref">transliteration</a> and <a class="secref">vowelextensions</a>.</p>
-<p><span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07F2;</span> [<a href="/scripts/nko/block#char07F2"><span class="uname">U+07F2 NKO COMBINING NASALIZATION MARK</span></a>]</span> is used to produce vowel nasalisation (see <a class="secref">nasalisation</a>).</p>
-<p><span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07ED;</span> [<a href="/scripts/nko/block#char07ED"><span class="uname">U+07ED NKO COMBINING SHORT RISING TONE</span></a>]</span> and  <span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07F2;</span> [<a href="/scripts/nko/block#char07F2"><span class="uname">U+07F2 NKO COMBINING NASALIZATION MARK</span></a>]</span> are  also used &nbsp;to create ordinal numbers (see <a class="secref">ordinals</a>).</p>
-<p>Although some of the N'Ko diacritics look like those in general use, you should use the ones provided in this block. This is because they are typically drawn higher and bolder than the generic marks, and have a wider range of glyph variation. <a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></p>
-<p> The <span class="name">dantalayan</span> was introduced in Unicode 11. See <a class="secref">abbreviation</a>.</p>
-
-<figure class="characterBox auto"  data-cols="">߽</figure>
-</section>
-  
-  
-  
-  
-
-<section id="symbolsx">
-<h2>Punctuation &amp; symbols</h2>
- 
-<figure class="characterBox auto"  data-cols="trans">߸␣߹␣߷␣߶␣⸜␣⸝</figure>
-<p><span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07F8;</span> [<a href="/scripts/nko/block#char07F8"><span class="uname">U+07F8 NKO COMMA</span></a>]</span>, <span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07F9;</span> [<a href="/scripts/nko/block#char07F9"><span class="uname">U+07F9 NKO EXCLAMATION MARK</span></a>]</span>, and <span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07F7;</span> [<a href="/scripts/nko/block#char07F7"><span class="uname">U+07F7 NKO SYMBOL GBAKURUNEN</span></a>]</span> are phrase punctuation, described in <a class="secref">phrase</a>.</p>
-<p><span class="codepoint"><span lang="nqo" dir="rtl">&#x07F6;</span> <a href="/scripts/nko/block#char07F6">[<span class="uname">U+07F6 NKO SYMBOL OO DENNEN</span>]</a></span> is added to phrases to indicate remote future placement of the topic under discussion. <a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></p>
-<p><span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x2E1C;</span> [<a href="/scripts/nko/block#char2E1C"><span class="uname">U+2E1C LEFT LOW PARAPHRASE BRACKET</span></a>]</span> and <span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x2E1D;</span> [<a href="/scripts/nko/block#char2E1D"><span class="uname">U+2E1D RIGHT LOW PARAPHRASE BRACKET</span></a>]</span> are used as a pair to indicate indirect quotations, eg. &nbsp;<span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">⸜ߒߞߏ⸝</span></span>.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2765.pdf">p</a></p>
-<p>N'Ko may also use Arabic punctuation marks such as the following (see <a class="secref">phrase</a>).</p>
- 
-<figure class="characterBox auto"  data-cols="trans">،␣؛␣؟␣﴾␣﴿</figure>
-
-</section-->
-
-
-
-
-
-<div id="showTranscriptions">
-<div>Character lists show:</div>
-<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
-<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div>
-<label>Transliteration 
-<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
-<div>
-<label>Latin 
-<input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
-</div>
 
 
 
@@ -402,7 +370,7 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 <p dir="rtl" lang="nqo" class="large"><span class="ex">ߣߌ߲߬</span></p>
 <figcaption>A nasalisation mark attached to a letter that already has a combining character.</figcaption>
 </figure>
-<p>This mark should be typed and stored before any tone mark to preserve the canonical order. <a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></p>
+<p>This mark should be typed and stored before any tone mark to preserve the canonical order.<tt>u</tt></p>
 </section>
 
 
@@ -414,8 +382,8 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 <figure class="characterBox auto"  data-cols="trans">ߑ</figure>
 
 
-<p>If there is no vowel between two consonants, this is indicated  using <span class="codepoint"><span lang="nqo" dir="rtl">&#x07D1;</span> <a href="/scripts/nko/block#char07D1">[<span class="uname">U+07D1 NKO LETTER DAGBASINNA</span>]</a></span>. <a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></p>
-<p>If two adjacent consonants are followed by the same vowel, the vowel is omitted after the first consonant. (There is no ambiguity here with consonant clusters, since in the latter case the <span class="name">dagbasinna</span> would appear.) <a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></p>
+<p>If there is no vowel between two consonants, this is indicated  using <span class="codepoint"><span lang="nqo" dir="rtl">&#x07D1;</span> <a href="/scripts/nko/block#char07D1">[<span class="uname">U+07D1 NKO LETTER DAGBASINNA</span>]</a></span>.<tt>u</tt></p>
+<p>If two adjacent consonants are followed by the same vowel, the vowel is omitted after the first consonant. (There is no ambiguity here with consonant clusters, since in the latter case the <span class="name">dagbasinna</span> would appear.)<tt>u</tt></p>
 </section>
 </section> 
   
@@ -542,7 +510,7 @@ alveolar</th>
  
 <figure class="characterBox auto"  data-cols="ipa,trans,transc">ߒ</figure>
 
-  <p><span class="codepoint"><span lang="nqo" dir="rtl">&#x07D2;</span> <a href="/scripts/nko/block#char07D2">[<span class="uname">U+07D2 NKO LETTER N</span>]</a></span> is considered to be neither a consonant nor a vowel. It represents an alveolar or velar syllabic nasal sound. <a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></p>
+  <p><span class="codepoint"><span lang="nqo" dir="rtl">&#x07D2;</span> <a href="/scripts/nko/block#char07D2">[<span class="uname">U+07D2 NKO LETTER N</span>]</a></span> is considered to be neither a consonant nor a vowel. It represents an alveolar or velar syllabic nasal sound.<tt>u</tt></p>
   <p>This character may carry a tone diacritic, eg. <span class="ex" lang="nqo">ߒ߬</span>.</p>
 </section>
 
@@ -554,7 +522,7 @@ alveolar</th>
  
 <figure class="characterBox auto"  data-cols="ipa,trans,transc">ߠ␣ߧ</figure>
 
-<p>Abstract consonants indicate a <span class="uname">NA</span> or <span class="uname">NYA</span> mutated by a preceding nasal, either word-internally or across word boundaries. <a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></p>
+<p>Abstract consonants indicate a <span class="uname">NA</span> or <span class="uname">NYA</span> mutated by a preceding nasal, either word-internally or across word boundaries.<tt>u</tt></p>
     <p>The abstract consonants are <span class="codepoint"><span lang="nqo" dir="rtl">&#x07E0;</span> <a href="/scripts/nko/block#char07E0">[<span class="uname">U+07E0 NKO LETTER NA WOLOSO</span>]</a></span>  and <span class="codepoint"><span lang="nqo" dir="rtl">&#x07E7;</span> <a href="/scripts/nko/block#char07E7">[<span class="uname">U+07E7 NKO LETTER NYA WOLOSO</span>]</a></span>.</p>
 </section>
   
@@ -566,7 +534,7 @@ alveolar</th>
 <section id="transliteration">
 <h3>Consonant repertoire extension</h3>
 
-<p>Three diacritics, two of them tone markers, are used to represent foreign sounds (particularly Arabic and French) in conjunction with existing N'Ko letters, eg. <span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">ߛ߳</span> <span class="trans">sx̣</span></span> represents the arabic sound <span class="ipa">θ</span> (<span lang="ar" dir="rtl"><span lang="ar">ث</span></span>). <a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></p>
+<p>Three diacritics, two of them tone markers, are used to represent foreign sounds (particularly Arabic and French) in conjunction with existing N'Ko letters, eg. <span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">ߛ߳</span> <span class="trans">sx̣</span></span> represents the arabic sound <span class="ipa">θ</span> (<span lang="ar" dir="rtl"><span lang="ar">ث</span></span>).<tt>u</tt></p>
 
 <figure class="otherBox auto"  data-cols="ipa,trans,transc">ߓ߭␣ߕ߭␣ߙ߳␣ߘ߭␣ߜ߳␣ߜ߭␣ߞ߫</figure>
 <figure class="otherBox auto"  data-cols="ipa,trans,transc">ߝ߭␣ߛ߳␣ߗ߭␣ߛ߫␣ߖ߭␣ߖ߳␣ߛ߭␣ߜ߫␣ߞ߭␣ߤ߭</figure>
@@ -586,7 +554,7 @@ alveolar</th>
 <section id="consonant_clusters">
 <h3>Consonant clusters</h3>
 
-<p>Adjacent consonants with no intervening vowel sound are indicated using <span class="codepoint"><span lang="nqo" dir="rtl">&#x07D1;</span> <a href="/scripts/nko/block#char07D1">[<span class="uname">U+07D1 NKO LETTER DAGBASINNA</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">ߓߟߏ</span> <span class="trans">blo</span> <span class="ipa">bolo</span></span> is pronounced with the vowel after the first letter, even though none is present, because of the rule explained above. To show that this should be pronounced without the vowel you need <span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">ߓߑߟߏ</span> <span class="trans">bˣlo</span> <span class="ipa">blo</span></span>. <a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></p>
+<p>Adjacent consonants with no intervening vowel sound are indicated using <span class="codepoint"><span lang="nqo" dir="rtl">&#x07D1;</span> <a href="/scripts/nko/block#char07D1">[<span class="uname">U+07D1 NKO LETTER DAGBASINNA</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">ߓߟߏ</span> <span class="trans">blo</span> <span class="ipa">bolo</span></span> is pronounced with the vowel after the first letter, even though none is present, because of the rule explained above. To show that this should be pronounced without the vowel you need <span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">ߓߑߟߏ</span> <span class="trans">bˣlo</span> <span class="ipa">blo</span></span>.<tt>u</tt></p>
 </section>
  
   
@@ -599,7 +567,7 @@ alveolar</th>
 
 <figure class="archaicBox auto"  data-cols="">ߨ␣ߩ␣ߪ</figure>
 
-<p>The Unicode Standard lists 3 consonants that are archaic forms of other characters in the N'Ko block. The new shapes were only introduced in the latter writings of the inventor of the script, Solomana Kante. (Their inclusion in the block generated some controversy.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2949.pdf">y </a><a href="https://www.unicode.org/L2/L2005/05237-n2977-nko-jona.pdf">m</a>)</p>
+<p>The Unicode Standard lists 3 consonants that are archaic forms of other characters in the N'Ko block. The new shapes were only introduced in the latter writings of the inventor of the script, Solomana Kante. (Their inclusion in the block generated some controversy.<tt>ya</tt><tt>ec</tt>)</p>
 <table>
 <tr><th>Archaic form</th><th>Modern form</th></tr>
 <tr><td><span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07E8;</span> [<a href="/scripts/nko/block#char07E8"><span class="uname">U+07E8 NKO LETTER JONA JA</span></a>]</span></td><td><span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07D6;</span> [<a href="/scripts/nko/block#char07D6"><span class="uname">U+07D6 NKO LETTER JA</span></a>]</span></td></tr>
@@ -627,7 +595,7 @@ alveolar</th>
 <figure class="characterBox auto"  data-cols="trans,transc">߫␣߬␣߭␣߯␣߰␣߱␣߮␣ߴ␣ߵ</figure>
 
 
-<p>Diacritics are used to indicate tones, and which is used depends on the length of the vowel, per the following table. <a class="fnref" href="httphttps://en.wikipedia.org/wiki/N%27Ko_alphabet">w</a></p>
+<p>Diacritics are used to indicate tones, and which is used depends on the length of the vowel, per the following table.<tt>ws</tt></p>
 
 
 
@@ -667,7 +635,7 @@ alveolar</th>
 <section id="otherletters">
 <h2>Other letters</h2>
     
-    <p>There is one other character in the N'Ko block with the general category of <span class="uname">letter</span>.<a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf"></a></p>
+    <p>There is one other character in the N'Ko block with the general category of <span class="uname">letter</span>.</p>
 <figure class="characterBox auto"  data-cols="trans">ߺ</figure>
 <p><span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07FA;</span> [<a href="/scripts/nko/block#char07FA"><span class="uname">U+07FA NKO LAJANYALAN</span></a>]</span> is sometimes used like  <span class="codepoint"><span dir="rtl" lang="ar">ـ</span> <a href="/scripts/arabic/block#char0640">[<span class="uname">U+0640 ARABIC TATWEEL</span>]</a></span> to  stretch the intra-word baseline, either for justification, or headings, etc. See <a class="secref">justify</a> and <a class="secref">letterspace</a>.</p>
 </section>
@@ -682,7 +650,7 @@ alveolar</th>
 <h2>Symbols</h2>
  
 <figure class="characterBox auto"  data-cols="trans">߶</figure>
-<p><span class="codepoint"><span lang="nqo" dir="rtl">&#x07F6;</span> <a href="/scripts/nko/block#char07F6">[<span class="uname">U+07F6 NKO SYMBOL OO DENNEN</span>]</a></span> is added to phrases to indicate remote future placement of the topic under discussion. <a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></p>
+<p><span class="codepoint"><span lang="nqo" dir="rtl">&#x07F6;</span> <a href="/scripts/nko/block#char07F6">[<span class="uname">U+07F6 NKO SYMBOL OO DENNEN</span>]</a></span> is added to phrases to indicate remote future placement of the topic under discussion.<tt>u</tt></p>
 
 </section>
 
@@ -703,7 +671,7 @@ alveolar</th>
  
 <figure class="characterBox auto"  data-cols="trans,transc">߀␣߁␣߂␣߃␣߄␣߅␣߆␣߇␣߈␣߉</figure>
 
-<p>However, unlike other right-to-left scripts such as Arabic, Hebrew, Thaana, the numbers are displayed <em>right-to-left</em>, with the most significant digit first.<a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a> This means that numbers don't produce bidirectional text in N'Ko.</p>
+<p>However, unlike other right-to-left scripts such as Arabic, Hebrew, Thaana, the numbers are displayed <em>right-to-left</em>, with the most significant digit first.<tt>u</tt> This means that numbers don't produce bidirectional text in N'Ko.</p>
     <figure>
     <p dir="rtl" lang="nqo" class="large">ߝߌߟߊߣߊ߲ ߕߋ߬ߟߋ߫ <span class="ex">߂߇-߂߈/߂߀߁߀</span> ߕߊ߬ߡߌ߲߬ߣߍ߲ ߠߊ߫߸</p>
     <figcaption>A date in N'Ko. All characters are read right to left, including numbers.</figcaption>
@@ -718,8 +686,8 @@ alveolar</th>
 <h3>Ordinal numbers</h3>
 
     <p>Ordinal numbers are produced using  diacritics. </p>
-    <p>The first ordinal is produced using <span class="codepoint"><span lang="nqo" dir="rtl">&nbsp;&#x07ED;</span> <a href="/scripts/nko/block#char07ED">[<span class="uname">U+07ED NKO COMBINING SHORT RISING TONE​</span>]</a></span>, eg. <span class="ex" lang="nqo" dir="rtl">߁߭</span> <span class="meaning">first</span>. <a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></p>
-    <p>Others use <span class="codepoint"><span lang="nqo" dir="rtl">&nbsp;&#x07F2;</span> <a href="/scripts/nko/block#char07F2">[<span class="uname">U+07F2 NKO COMBINING NASALIZATION MARK​</span>]</a></span>, eg. <span class="ex" lang="nqo" dir="rtl">߂߲</span> <span class="meaning">second</span>. When there are multiple digits in a number, the diacritic appears only under the last in sequence, eg. <span class="ex" lang="nqo" dir="rtl">߁߂߃߲</span> <span class="meaning">123rd</span>. <a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></p>
+    <p>The first ordinal is produced using <span class="codepoint"><span lang="nqo" dir="rtl">&nbsp;&#x07ED;</span> <a href="/scripts/nko/block#char07ED">[<span class="uname">U+07ED NKO COMBINING SHORT RISING TONE​</span>]</a></span>, eg. <span class="ex" lang="nqo" dir="rtl">߁߭</span> <span class="meaning">first</span>.<tt>u</tt></p>
+    <p>Others use <span class="codepoint"><span lang="nqo" dir="rtl">&nbsp;&#x07F2;</span> <a href="/scripts/nko/block#char07F2">[<span class="uname">U+07F2 NKO COMBINING NASALIZATION MARK​</span>]</a></span>, eg. <span class="ex" lang="nqo" dir="rtl">߂߲</span> <span class="meaning">second</span>. When there are multiple digits in a number, the diacritic appears only under the last in sequence, eg. <span class="ex" lang="nqo" dir="rtl">߁߂߃߲</span> <span class="meaning">123rd</span>.<tt>u</tt></p>
   </section>
 
 
@@ -728,7 +696,7 @@ alveolar</th>
   <section id="currency">
 <h3>Currency</h3>
 
-<p> Unicode 11 introduced 2 currency symbols to represent the dorome and taman.<a class="fnref" href="https://www.unicode.org/L2/L2015/15338-n4706-nko-additions.pdf">e</a> The symbols precede the numeric amounts.</p>
+<p> Unicode 11 introduced 2 currency symbols to represent the dorome and taman.<tt>e4</tt> The symbols precede the numeric amounts.</p>
 
 <figure class="characterBox auto"  data-cols="">߾␣߿</figure>
 
@@ -779,7 +747,7 @@ alveolar</th>
 <h3>Writing styles</h3>
 
 <p>N'Ko is usually cursive, ie. letters in a word are joined up. </p>
-<p>Non-cursive fonts are sometimes used, mainly as display fonts for book and article titles.<a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></p>
+<p>Non-cursive fonts are sometimes used, mainly as display fonts for book and article titles.<tt>u</tt></p>
 </section>
   
 
@@ -840,7 +808,7 @@ alveolar</th>
 <p>Italics may need to lean to the left, rather than to the right. Neil Patel writes:</p>
 <blockquote>
 <p>Formalized typographic practices for  both Adlam and N'ko are still being developed. When [JamraPatel] reached out to both communities to see if an Italic typeface would be beneficial, both communities expressed a desire to have one. Over the past few years, as the ability to use both of these scripts more readily in computing has increased, the need to be able to set more complex copy has increased as well. Both communities see the benefit of having italic typefaces to add some semantic value to their copy. On-line N'ko has historically used synthetic obliques for things like by-lines on articles. ...</p>
-<p> Since neither script had any precedent for a drawn italic typeface, we asked each community on how they would like to see it drawn. This is how N'ko ended up with the leftward lean and Adlam with a rightward lean in our typeface. ... To my knowledge our typeface has the first drawn italicized N'ko and Adlam, so this is all still a bit new.<a class="fnref" href="https://github.com/w3c/afrlreq/issues/3#issuecomment-512911833">g</a></p>
+<p> Since neither script had any precedent for a drawn italic typeface, we asked each community on how they would like to see it drawn. This is how N'ko ended up with the leftward lean and Adlam with a rightward lean in our typeface. ... To my knowledge our typeface has the first drawn italicized N'ko and Adlam, so this is all still a bit new.<tt>g3,#issuecomment-512911833</tt></p>
 </blockquote>
 </section>
 </section>
@@ -870,8 +838,8 @@ alveolar</th>
 <h3>Word boundaries</h3>
 <p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 <p>Words are separated by spaces.</p>
-<p class="observation"><span class="leadin">Observation:</span> The te-kerende is a common way of linking compounds together. It sits on the baseline, and breaks cursive joining. It was proposed for inclusion into Unicode, but not adopted. However, I'm unable to find any rationale for the lack of adoption. In these examples, I am using <span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07FA;</span> [<a href="/scripts/nko/block#char07FA"><span class="uname">U+07FA NKO LAJANYALAN</span></a>]</span> surrounded by spaces to create an idea of how te-kerende should look: <span class="eg" lang="nqo" dir="rtl">ߡߐ߰ ߺ ߐ ߺ ߡߐ߰</span>, <span class="eg" lang="nqo" dir="rtl">ߛߌ ߺ ߌ ߺ ߛߌ</span>.<a class="fnref" href="https://www.unicode.org/L2/L2015/15338-n4706-nko-additions.pdf">e</a></p>
-<p>Line-breaks only occur after te-kerende, and not before.<a class="fnref" href="https://www.unicode.org/L2/L2015/15338-n4706-nko-additions.pdf">e</a></p>
+<p class="observation"><span class="leadin">Observation:</span> The te-kerende is a common way of linking compounds together. It sits on the baseline, and breaks cursive joining. It was proposed for inclusion into Unicode, but not adopted. However, I'm unable to find any rationale for the lack of adoption. In these examples, I am using <span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07FA;</span> [<a href="/scripts/nko/block#char07FA"><span class="uname">U+07FA NKO LAJANYALAN</span></a>]</span> surrounded by spaces to create an idea of how te-kerende should look: <span class="eg" lang="nqo" dir="rtl">ߡߐ߰ ߺ ߐ ߺ ߡߐ߰</span>, <span class="eg" lang="nqo" dir="rtl">ߛߌ ߺ ߌ ߺ ߛߌ</span>.<tt>e4</tt></p>
+<p>Line-breaks only occur after te-kerende, and not before.<tt>e4</tt></p>
 </section>
  
  
@@ -900,10 +868,10 @@ alveolar</th>
 </tr>
 </tbody>
 </table>
-<p>N'Ko uses Western punctuation (the sample text at the top of the page  shows the use of ASCII colon and full stop), native punctuation, and also punctuation borrowed from Arabic, including <span class="codepoint"><span lang="ar" dir="rtl">&#x060C;</span> <a href="/scripts/arabic/block#char060C">[<span class="uname">U+060C ARABIC COMMA</span>]</a></span>, <span class="codepoint"><span lang="ar" dir="rtl">&#x061B;</span> <a href="/scripts/arabic/block#char061B">[<span class="uname">U+061B ARABIC SEMICOLON</span>]</a></span>, and  <span class="codepoint"><span lang="ar" dir="rtl">&#x061F;</span> <a href="/scripts/arabic/block#char061F">[<span class="uname">U+061F ARABIC QUESTION MARK</span>]</a></span>.<a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></p>
-<p>The 2 punctuation characters in the N'Ko Unicode block are <span class="codepoint"><span lang="nqo" dir="rtl">&#x07F8;</span> <a href="/scripts/nko/block#char07F8">[<span class="uname">U+07F8 NKO COMMA</span>]</a></span>, and  <span class="codepoint"><span lang="nqo" dir="rtl">&#x07F9;</span> <a href="/scripts/nko/block#char07F9">[<span class="uname">U+07F9 NKO EXCLAMATION MARK</span>]</a></span>. The N'Ko comma is sometimes used distinctively with the arabic comma in the same text,<a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a> as in this example:</p>
+<p>N'Ko uses Western punctuation (the sample text at the top of the page  shows the use of ASCII colon and full stop), native punctuation, and also punctuation borrowed from Arabic, including <span class="codepoint"><span lang="ar" dir="rtl">&#x060C;</span> <a href="/scripts/arabic/block#char060C">[<span class="uname">U+060C ARABIC COMMA</span>]</a></span>, <span class="codepoint"><span lang="ar" dir="rtl">&#x061B;</span> <a href="/scripts/arabic/block#char061B">[<span class="uname">U+061B ARABIC SEMICOLON</span>]</a></span>, and  <span class="codepoint"><span lang="ar" dir="rtl">&#x061F;</span> <a href="/scripts/arabic/block#char061F">[<span class="uname">U+061F ARABIC QUESTION MARK</span>]</a></span>.<tt>u</tt></p>
+<p>The 2 punctuation characters in the N'Ko Unicode block are <span class="codepoint"><span lang="nqo" dir="rtl">&#x07F8;</span> <a href="/scripts/nko/block#char07F8">[<span class="uname">U+07F8 NKO COMMA</span>]</a></span>, and  <span class="codepoint"><span lang="nqo" dir="rtl">&#x07F9;</span> <a href="/scripts/nko/block#char07F9">[<span class="uname">U+07F9 NKO EXCLAMATION MARK</span>]</a></span>. The N'Ko comma is sometimes used distinctively with the arabic comma in the same text,<tt>u</tt> as in this example:</p>
   <p dir="rtl" lang="nqo" style="text-align:start;"> ߕߏ߲ߘߋ ߟߊ߫ ߊߙߊߓߎ ߞߐ߲ߛߐߣ ߊ ߛߌ߰ߙߊ߬ߕߊ ߊ ߘߏ߫ ߟߎ߫ ߞߊ߲߬ ߸ ߛߊ߫ (  ߜ ، ߔ ، ߗ ) ߟߎ߬ ߘߌ߫ ߛߋ߫  ߛߓߍ߫ ߟߊ߫ ߸ ߏ߬ ߟߎ߬ ߡߍ߲ ߠߎ߬ ߕߍ߫ ߊߙߊߓߎ߫ ߞߊ߲ ߘߐ߫ ߡߎ߰ߡߍ߫ .</p>
-<p><span class="codepoint"><span lang="nqo" dir="rtl">&#x07F7;</span> <a href="/scripts/nko/block#char07F7">[<span class="uname">U+07F7 NKO SYMBOL GBAKURUNEN</span>]</a></span> is used to end major sections of the text.<a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></p>
+<p><span class="codepoint"><span lang="nqo" dir="rtl">&#x07F7;</span> <a href="/scripts/nko/block#char07F7">[<span class="uname">U+07F7 NKO SYMBOL GBAKURUNEN</span>]</a></span> is used to end major sections of the text.<tt>u</tt></p>
 </section>
 
 
@@ -930,7 +898,7 @@ alveolar</th>
 </tr>
 </tbody>
 </table>
-<p>Other borrowings from Arabic include <span class="codepoint"><span lang="nqo" dir="rtl">&#xFD3E;</span> <a href="/scripts/nko/block#charFD3E">[<span class="uname">U+FD3E ORNATE LEFT PARENTHESIS</span>]</a></span>, and <span class="codepoint"><span lang="nqo" dir="rtl">&#xFD3F;</span> <a href="/scripts/nko/block#charFD3F">[<span class="uname">U+FD3F ORNATE RIGHT PARENTHESIS</span>]</a></span>, although the shape used for N'Ko is often different.<a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></p>
+<p>Other borrowings from Arabic include <span class="codepoint"><span lang="nqo" dir="rtl">&#xFD3E;</span> <a href="/scripts/nko/block#charFD3E">[<span class="uname">U+FD3E ORNATE LEFT PARENTHESIS</span>]</a></span>, and <span class="codepoint"><span lang="nqo" dir="rtl">&#xFD3F;</span> <a href="/scripts/nko/block#charFD3F">[<span class="uname">U+FD3F ORNATE RIGHT PARENTHESIS</span>]</a></span>, although the shape used for N'Ko is often different.<tt>u</tt></p>
 </section>
 
 
@@ -956,7 +924,7 @@ alveolar</th>
 </tr>
 </tbody>
 </table>
-<p><span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x2E1C;</span> [<a href="/scripts/nko/block#char2E1C"><span class="uname">U+2E1C LEFT LOW PARAPHRASE BRACKET</span></a>]</span> and <span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x2E1D;</span> [<a href="/scripts/nko/block#char2E1D"><span class="uname">U+2E1D RIGHT LOW PARAPHRASE BRACKET</span></a>]</span> are used as a pair to indicate indirect quotations, eg. &nbsp;<span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">⸜ߒߞߏ⸝</span></span>.<a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2765.pdf">p</a></p>
+<p><span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x2E1C;</span> [<a href="/scripts/nko/block#char2E1C"><span class="uname">U+2E1C LEFT LOW PARAPHRASE BRACKET</span></a>]</span> and <span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x2E1D;</span> [<a href="/scripts/nko/block#char2E1D"><span class="uname">U+2E1D RIGHT LOW PARAPHRASE BRACKET</span></a>]</span> are used as a pair to indicate indirect quotations, eg. &nbsp;<span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">⸜ߒߞߏ⸝</span></span>.<tt>ep</tt></p>
 </section>
 
 
@@ -974,7 +942,7 @@ alveolar</th>
   
 <section id="abbreviation">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
-<p><span class="codepoint" translate="no">&nbsp;<span lang="nqo" dir="rtl">&#x07FD;</span> &nbsp; [<a href="/scripts/nko/block#char07FD"><span class="uname">U+07FD NKO DANTAYALAN</span></a>]</span> is used to abbreviation units of measure.<a class="fnref" href="https://www.unicode.org/L2/L2015/15338-n4706-nko-additions.pdf">e</a> The table shows some examples from a long list at <a class="fnref" href="https://www.unicode.org/L2/L2015/15338-n4706-nko-additions.pdf">→e</a>:</p>
+<p><span class="codepoint" translate="no">&nbsp;<span lang="nqo" dir="rtl">&#x07FD;</span> &nbsp; [<a href="/scripts/nko/block#char07FD"><span class="uname">U+07FD NKO DANTAYALAN</span></a>]</span> is used to abbreviation units of measure.<tt>e4</tt> The table shows some examples from a long list at <tt class="more">e4</tt>:</p>
 <table>
 <tr><th>Full word</th><th>Abbreviation</th></tr>
 <tr><td><span class="eg" lang="nqo" dir="rtl">ߞߎߘߍ</span></td><td><img src="images/abbr_kilometer.png"/></td></tr>
@@ -1030,7 +998,7 @@ alveolar</th>
 
 <section id="hyphenation">
 <h4>Hyphenation/word-breaking</h4>
-<p>Hyphenation occurs in N'Ko. It uses <span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x002D;</span> [<a href="/scripts/nko/block#char002D"><span class="uname">U+002D HYPHEN-MINUS</span></a>]</span>.<a class="fnref" href="https://www.unicode.org/L2/L2015/15338-n4706-nko-additions.pdf">e</a></p>
+<p>Hyphenation occurs in N'Ko. It uses <span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x002D;</span> [<a href="/scripts/nko/block#char002D"><span class="uname">U+002D HYPHEN-MINUS</span></a>]</span>.<tt>e4</tt></p>
 </section>
 
 
@@ -1050,7 +1018,7 @@ alveolar</th>
 </tbody></table>
 
 <details id="linebreak_details">
-<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">ul</a></summary>
+<summary>Show legend<tt>ul,#Properties</tt></summary>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CL">CL (close punctuation)</a>  should be kept with the preceding character.&nbsp;The class CL is closely related to the class CP (Close Parenthesis). They differ only in that CP will not introduce a break when followed by a letter or number, which prevents breaks within constructs like “(s)he”.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
@@ -1070,8 +1038,8 @@ alveolar</th>
 
 <section id="justify">
 <h3>Text alignment &amp; justification</h3>
-<p>The most common approach to justification relies on adjustment of spaces. <a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></p>
-    <p> Sometimes, however, <span class="codepoint"><span lang="nqo" dir="rtl">&#x07FA;</span> <a href="/scripts/nko/block#char07FA">[<span class="uname">U+07FA NKO LAJANYALAN</span>]</a></span> is used like  arabic <span class="name">tatweel</span> to  stretch the intra-word baseline. <a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></p>
+<p>The most common approach to justification relies on adjustment of spaces.<tt>u</tt></p>
+    <p> Sometimes, however, <span class="codepoint"><span lang="nqo" dir="rtl">&#x07FA;</span> <a href="/scripts/nko/block#char07FA">[<span class="uname">U+07FA NKO LAJANYALAN</span>]</a></span> is used like  arabic <span class="name">tatweel</span> to  stretch the intra-word baseline.<tt>u</tt></p>
     <p class="instructions noprint">Use the control below to see how your browser justifies the text sample here.</p>
     <p dir="rtl" class="noprint" lang="nqo" id="justificationExample" style="text-align:start;">ߡߊ߲߬ߘߋ߲߬ ߛߊ߲ߘߊ ߘߏ߫ ߟߋ߬ ߞߊ߲߫ ߞߏ߫: ߌ ߓߊ߯ ߌ ߢߊ ߟߐ߬ ߕߋ߬ߟߋ ߘߐ߫ ߞߵߌ ߕߊ߯ ߦߙߐ ߡߊߝߟߍ߫߸ ߛߎ߫ ߕߍ߫ ߞߏ߬ ߌ ߡߊ߬. ߒ߬ߓߊ߬ ߊ߲ ߧߋ߫ ߒ߬ ߠߞߊߟߌߦߊ߫ ߛߊ߫ ߒ߬ ߘߌ߫ ߞߍ߫ ߒ߬ ߘߎߢߊߘߐߕߍ߯ ߢߐ߲߮ ߠߎ߬ ߘߐ߫ ߞߊ߬ ߞߍ߫ ߞߎߟߎ߲߫ ߞߋߟߋ߲߫ ߞߣߐ߫ ߏ߬ ߘߐ߫.</p>
     <p class="english noprint" dir="ltr">
@@ -1252,15 +1220,6 @@ alveolar</th>
 
 <section id="refs">
 <h2>References</h2>
-  <ol>
-    <!--li>[Daniels] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN 0-19-507993-0</li-->
-    <li>[ <a class="fnref" href="https://www.unicode.org/L2/L2015/15338-n4706-nko-additions.pdf">e</a> ] Michael   Everson, <a href="https://www.unicode.org/L2/L2015/15338-n4706-nko-additions.pdf">Proposal to encode four N’Ko characters in the BMP of the UCS</a></li>
-<li>[ <a class="fnref" href="https://www.unicode.org/L2/L2005/05237-n2977-nko-jona.pdf">m</a> ] Michael Everson, Mamady Doumbouya, Baba Mamadi Diané, Karamo Kaba Jammeh, <a href="https://www.unicode.org/L2/L2005/05237-n2977-nko-jona.pdf">Clarification on the identity and use of three N’Ko letters</a></li>
-<li>[ <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2765.pdf">p</a> ] Michael Everson, Mamady Doumbouya, Baba Mamadi Diané, Karamo Kaba Jammeh, <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2765.pdf">Proposal to add the N’Ko script to the BMP of the UCS</a></li>
-<li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a> ] The Unicode Standard v9.0, <a href="http://www.unicode.org/versions/latest/ch19.pdf">N'Ko</a>. </li>
-    <li>[ <a class="fnref" href="httphttps://en.wikipedia.org/wiki/N%27Ko_alphabet">w</a> ] Wikipedia, <a href="httphttps://en.wikipedia.org/wiki/N%27Ko_alphabet">N'Ko alphabet</a></li>
-<li>[ <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2949.pdf">y</a> ] François Yergeau, Patrick Andries, <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2949.pdf">For a Correct Encoding of N’Ko</a></li>
-</ol>
 </section>
 
 
