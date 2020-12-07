@@ -29,6 +29,8 @@
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../common/egcode.js"></script>
+<script src="../common/references.js"></script>
+<script src="refs.js"></script>
 
 <script src="ru-examples.js"></script>
 <script src="ru-translit.js">  </script></head>
@@ -52,7 +54,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->28 October, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->5 December, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -60,30 +62,25 @@
 
 <div class="section">
 <p>This page gathers  basic information about the Cyrillic script and its use for the Russian language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Russian using Unicode.</p>
-
-
-
-<p>See also the companion document, <a href="block" class="linkHighlight">Cyrillic character notes</a>, for detailed information about specific Unicode characters.</p>
 <p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
 
 
 
-<details>
+<p id="usage"></p>
+<script>addUsageAdvice('Cyrillic')</script>
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Cyrillic','Russian'); return false;">More about using this page</a></summary>
+<div id="about"></div>
+</details>
+
+<details class="supportdocs noprint">
 <summary class="instructions"><a href="../links?iso=Cyrl">Related pages</a>.</summary>
 </details>
 
-
-
-<details>
-<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
-</details>
-
-
-
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Cyrillic','Russian'); return false;">About this page</a></summary>
-<div id="about"></div>
+<summary class="instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
 </details>
 </div>
 
@@ -143,6 +140,21 @@
 </section>
 
 
+
+
+
+
+
+<div id="showTranscriptions">
+<div>Character lists show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div>
+<label>Transliteration 
+<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
+<div><label>ISO 9:1995 
+<input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+</div>
 
 
 
@@ -237,21 +249,6 @@
 
   
   
-<div id="showTranscriptions">
-<div>Character lists show:</div>
-<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
-<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div>
-<label>Transliteration 
-<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
-<div><label>ISO 9:1995 
-<input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
-</div>
-
-
-
-
-
 <section id="vowels">
 <h2>Vowels</h2>
 
@@ -357,7 +354,7 @@
 
 <section id="diphthongs">
 <h4>Diphthongs</h4>
-<p>Russian diphthongs all end in the sound <span class="ipa">i̯</span>, however they can be analysed either as diphthongs or as vowels followed by <span class="ipa">j</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Russian_phonology">w</a> Here, for simplicity, we will take the latter line.</p>
+<p>Russian diphthongs all end in the sound <span class="ipa">i̯</span>, however they can be analysed either as diphthongs or as vowels followed by <span class="ipa">j</span>.<tt>wp</tt> Here, for simplicity, we will take the latter line.</p>
 </section>
 </section>
 
@@ -385,7 +382,7 @@
 <section id="vowelMappings">
 <h3>Vowel to letter mappings</h3>
 
-<p>Given the tendency to alter vowel quality for all vowels in a word other than the one that is stressed, plus the effects of palatalisation, the mapping of letters to actual sounds is somewhat complicated (and in some cases controversial). The following table comes from Wikipedia.<a class="fnref" href="https://en.wikipedia.org/wiki/Russian_phonology">w</a></p>
+<p>Given the tendency to alter vowel quality for all vowels in a word other than the one that is stressed, plus the effects of palatalisation, the mapping of letters to actual sounds is somewhat complicated (and in some cases controversial). The following table comes from Wikipedia.<tt>wp</tt></p>
 <table>
 <thead style="line-height: 1; vertical-align: bottom;">
 <tr>
@@ -676,7 +673,7 @@ alveolar</th>
 <li>In most positions it indicates that the preceding consonant is palatalized and any following vowel is iotated, eg. <span class="eg" lang="ru">брать</span> vs. <span class="eg" lang="ru">брат</span>.</li>
 <li>After root-final consonants <span class="exlist" lang="ru">ч щ</span> (always soft) or <span class="exlist" lang="ru">ж ш ц</span> (always hard), the soft sign doesn't alter pronunciation but has a grammatical meaning, eg. <span class="eg" lang="ru">тушь</span> vs. <span class="eg" lang="ru">туш</span>.<a class="fnref more" href="https://en.wikipedia.org/wiki/Russian_alphabet#Non-vocalized_letters">w</a></li>
 </ul>
-<p>Prior to the 1918 reforms, every word ending in a consonant had to be followed by a hard or soft sign. That is no longer the case, and the hard sign is now the least common letter in the Russian alphabet.<a class="fnref" href="https://en.wikipedia.org/wiki/Russian_alphabet#Frequency">w</a></p>
+<p>Prior to the 1918 reforms, every word ending in a consonant had to be followed by a hard or soft sign. That is no longer the case, and the hard sign is now the least common letter in the Russian alphabet.<tt>wa,#Frequency</tt></p>
 </section>
 
       
@@ -711,7 +708,7 @@ alveolar</th>
 
 <figure class="auxiliaryBox auto" data-cols="">́</figure>
 
-<p>One diacritic that <em>is</em> sometimes used as a combining character is <span class="codepoint" translate="no"><span lang="ru">&#x25CC;&#x0301;</span> [<a href="/scripts/latin/block#char0301"><span class="uname">U+0301 COMBINING ACUTE ACCENT​</span></a>]</span>, used to indicate stressed vowels for educational materials, dictionaries, and such, eg. <span class="eg" lang="ru">за́мок</span> vs. <span class="eg" lang="ru">замо́к</span>. Rarely, it may be used to specify the stress in uncommon foreign words and in poems with unusual stress used to fit the meter.<a class="fnref" href="https://en.wikipedia.org/wiki/Russian_alphabet#Diacritics">w</a></p>
+<p>One diacritic that <em>is</em> sometimes used as a combining character is <span class="codepoint" translate="no"><span lang="ru">&#x25CC;&#x0301;</span> [<a href="/scripts/latin/block#char0301"><span class="uname">U+0301 COMBINING ACUTE ACCENT​</span></a>]</span>, used to indicate stressed vowels for educational materials, dictionaries, and such, eg. <span class="eg" lang="ru">за́мок</span> vs. <span class="eg" lang="ru">замо́к</span>. Rarely, it may be used to specify the stress in uncommon foreign words and in poems with unusual stress used to fit the meter.<tt>wa,#Diacritics</tt></p>
 <p>All 55 of the combining characters in the Unicode Cyrillic block fall under the historical category.</p>
 </section>
 
@@ -768,7 +765,7 @@ alveolar</th>
 
 <p>Note in particular the italic form of <span class="ex" lang="ru">т</span> in the figure just above, which looks similar to the italic form of <span class="ex" lang="ru">м</span> shown in the previous figure.</p>
 <p>The shapes of the italic forms can also vary by language.<a class="fnref more" href="http://en.wikipedia.org/wiki/Cyrillic_script#Letterforms_and_typography">w</a></p>
-<p>The shape of the breve sign in Cyrillic is different from that used for Latin text.<a class="fnref" href="http://scriptsource.org/cms/scripts/page.php?item_id=entry_detail&uid=k9ew9c6yam">s</a> A font such as Brill can detect the appropriate shape from the adjacent characters.</p>
+<p>The shape of the breve sign in Cyrillic is different from that used for Latin text.<tt>s</tt> A font such as Brill can detect the appropriate shape from the adjacent characters.</p>
 
 <figure id="fig_breve">
 <p><img src="images/breve.png" alt="й   ̆ й i   ̆ i" class="ex" data-notes="62px Brill"></p>
@@ -890,14 +887,14 @@ alveolar</th>
 </tbody>
 </table>
 <p>Russian uses angle quotation marks without space.</p>
-<p>Although most sources recommend the use of different quote marks for embedded quotes,  Russian rules also allow use of the same quotation marks, and if inner and outer quotation marks fall together, then one of them should be omitted.<a class="fnref" href="https://en.wikipedia.org/wiki/Quotation_mark#Belarusian,_Russian,_and_Ukrainian">w</a></p>
+<p>Although most sources recommend the use of different quote marks for embedded quotes,  Russian rules also allow use of the same quotation marks, and if inner and outer quotation marks fall together, then one of them should be omitted.<tt>wq,#Belarusian,_Russian,_and_Ukrainian</tt></p>
 
 <figure id="fig_quote_marks">
 <p class="large"><span class="ex">Пушкин писал Дельвигу: <span class="fig_highlight">«</span>Жду <span class="fig_highlight">„</span>Цыганов<span class="fig_highlight">“</span> и тотчас тисну<span class="fig_highlight">»</span>.</span></p>
 <figcaption>Russian quotation marks.</figcaption>
 </figure>
 
-<p>For dialogue, the quotation dash is commonly used to introduce the spoken text, but also to terminate it before identifying the speaker. <a class="figref">fig_quote_dashes</a> uses <span class="codepoint" translate="no"><span lang="ru">&#x2014;</span> [<a href="/scripts/cyrillic/block#char2014"><span class="uname">U+2014 EM DASH</span></a>]</span> with spaces around it for this.<a class="fnref" href="https://en.wikipedia.org/wiki/Quotation_mark#Belarusian,_Russian,_and_Ukrainian">w</a></p>
+<p>For dialogue, the quotation dash is commonly used to introduce the spoken text, but also to terminate it before identifying the speaker. <a class="figref">fig_quote_dashes</a> uses <span class="codepoint" translate="no"><span lang="ru">&#x2014;</span> [<a href="/scripts/cyrillic/block#char2014"><span class="uname">U+2014 EM DASH</span></a>]</span> with spaces around it for this.<tt>wq,#Belarusian,_Russian,_and_Ukrainian</tt></p>
 
 <figure id="fig_quote_dashes">
 <p class="large" style="text-align: start;"><span class="ex"><span class="fig_highlight">—</span> Кто там?</span></p>
@@ -968,7 +965,7 @@ alveolar</th>
       
 <section id="linebreak">
 <h3>Line breaking &amp; hyphenation</h3>
-<p>Spaces between words provide the primary line break opportunities.<a class="fnref" href="http://www.unicode.org/versions/latest/ch07.pdf">u</a></p>
+<p>Spaces between words provide the primary line break opportunities.<tt>u</tt></p>
 
 
 
@@ -983,7 +980,7 @@ alveolar</th>
 
 
 <details id="linebreak_details">
-<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<summary>Show legend <tt>ul,#Properties</tt></summary>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
 </details>
@@ -1494,13 +1491,6 @@ data-cols="">А␣Б␣В␣Г␣Д␣Е␣Ё␣Ж␣З␣И␣Й␣К␣Л␣М
 
 <section id="refs">
 <h2>References</h2>
-  <ol>
-<li>[ <a class="fnref" href="#https://unicode-org.github.io/cldr-staging/charts/37/summary/ru.html">c</a> ] CLDR</li>
-<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN 0-19-507993-0, pp408-412</li>
-<li>[ <a class="fnref" href="http://scriptsource.org/">s</a> ] <a href="http://scriptsource.org/">Scriptsource</a></li>
-<li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch07.pdf">u</a> ] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch07.pdf">Cyrillic</a>, pp316-320.</li>
-<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Cyrillic_script">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Cyrillic_script">Cyrillic script</a>.</li>
-</ol>
 </section>
 
 
