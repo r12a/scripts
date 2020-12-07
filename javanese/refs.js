@@ -1,0 +1,71 @@
+reflist = {
+
+
+"c": {
+"url":"#refs",
+"authors": "Bernard Comrie",
+"title":"The World's Major Languages",
+},
+
+"d": {
+"url":"#refs",
+"authors": "Peter T. Daniels and William Bright",
+"title":"The World's Writing Systems",
+"publisher":"Oxford University Press",
+"isbn":"0-19-507993-0",
+"reviewed":true
+},
+
+"e": {
+"url":"http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3319.pdf",
+"authors": "Michael Everson",
+"title":"Proposal for encoding the Javanese script in the UCS",
+},
+
+"o": {
+"url":"https://www.omniglot.com/writing/bamum.htm",
+"authors": "Omniglot",
+"title":"Bamum syllabary",
+"reviewed":true
+},
+
+"t": {
+"url":"https://www.unicode.org/L2/L2006/06080-javanese-doc.pdf",
+"authors": "Teguh Budi Sayoga",
+"title":"Proposal for encoding the Javanese Script in the UCS (A900-A97F)",
+},
+
+"u": {
+"url":"https://www.unicode.org/versions/Unicode13.0.0/ch17.pdf",
+"authors": "Unicode Consortium",
+"title":"The Unicode Standard, Version 13.0",
+"sub":"Chapter 17.4: Indonesia and Oceania, Javanese",
+"pages":"697-700",
+"isbn":"978-1-936213-16-0.",
+},
+
+"ul": {
+"url":"https://www.unicode.org/reports/tr14/",
+"authors": "Unicode Consortium",
+"title":"Unicode Line Breaking Algorithm (UAX#14)",
+"reviewed":true
+},
+
+"wl": {
+"url":"https://en.wikipedia.org/wiki/Javanese_language",
+"authors": "Wikipedia",
+"title":"Javanese language",
+},
+
+"ws": {
+"url":"https://en.wikipedia.org/wiki/Javanese_script",
+"authors": "Wikipedia",
+"title":"Javanese script",
+},
+
+
+}
+
+
+
+// <a class="fn">ws,#tones</a>
