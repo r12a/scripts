@@ -1,5 +1,11 @@
+// in the main source file scriptData array is created
+// then populated from the langs.js data for the languages (items) listed just below
+// then additional fields are added to each record after analysing the info, using getCharacterStats
+// resort is then called to draw the table
+// to add a new column, search for "NEWCOL" to find code that needs changing
 
-var items = ['am', 'arb', 'hy', 'aii', 'ban-bali', 'bsq-bass', 'bn', 'bug-bugi', 'my', 'chr', 'dv', 'ka', 'gu', 'khk-mong', 'ha', 'ha-arab', 'he', 'hi', 'ike', 'ja', 'jv-java', 'kn', 'ks', 'ks-deva', 'km', 'kkh', 'ko', 'lo', 'lis', 'ml', 'cmn', 'el', 'mid', 'nod', 'nqo', 'ory', 'fuf-adlm', 'pa', 'ru', 'si', 'zgh', 'su-sund', 'syc', 'khb', 'tdd', 'blt', 'ta', 'te', 'th', 'bo', 'tru', 'ug', 'ur', 'vai', 'osa']
+
+var items = ['am', 'arb', 'hy', 'aii', 'ban-bali', 'bax-bamu', 'bsq-bass', 'bn', 'bug-bugi', 'my', 'chr', 'dv', 'ka', 'gu', 'khk-mong', 'ha', 'ha-arab', 'he', 'hi', 'ike', 'ja', 'jv-java', 'kn', 'ks', 'ks-deva', 'km', 'kkh', 'ko', 'lo', 'lis', 'ml', 'cmn', 'el', 'mid', 'nod', 'nqo', 'ory', 'fuf-adlm', 'pa', 'ru', 'si', 'zgh', 'su-sund', 'syc', 'khb', 'tdd', 'blt', 'ta', 'te', 'th', 'bo', 'tru', 'ug', 'ur', 'vai', 'osa']
 
 var csubset = false
 var vsubset = false
@@ -46,7 +52,7 @@ function resort (column, reverse) {
 	// sets of subcolumns, for toggles
 	var charsubset = new Set(['Letters','Marks', 'Punct\u00ADuation', 'Native digits', 'Format chars'])
 
-
+	// NEWCOL add to this list
 	var tablecolumns = {
 		name:"Language",
 		script:"Script",
@@ -59,12 +65,19 @@ function resort (column, reverse) {
 		digits:"Native digits",
 		other:"Format chars",
 		type:"Type",
-		vletter:"Vowel letters",
-		//vindep:"Independent vowels",
+		vinherent:"Inherent vowel",
 		vmark:"Vowel marks",
+		vletter:"Vowel letters",
+		vbase:"Vowel base",
+		vvisual:"Pre-base vletters",
+		vprescript:"Pre-base vmarks",
 		vcircum:"Circum\u00ADgraphs",
-		vprescript:"Prescript vowels",
-		//vhidden:"Hides vowels",
+		vcomposite:"Composite vowels",
+		vvocalics:"Vocalics",
+		conjunct:"Conjuncts",
+		cvirama:"V-based conjuncts",
+		cmedials:"Medial marks",
+		cfinals:"Final marks",
 		gpos:"Contextual placement", 
 		//mcchars:"Multiple combining marks",
 		//matras:"Vowel signs",
@@ -85,11 +98,12 @@ function resort (column, reverse) {
 	//	table += '<th class="top" title="'+tablecolumns[col]+'"><a href="#theTable" onclick="resort(\''+col+'\'); return false;">'+tablecolumns[col]+'</a></th>'+"\n";
 	//	}
 	
+	// NEWCOL add a line of code to display headings
 	table += '<th class="top" title="Language" style="text-align:right;"><a href="#theTable" onclick="resort(\'name\'); window.resortCol=\'name\';return false;">Language</a></th>\n'
 	table += '<th class="top" title="Script"><a href="#theTable" onclick="resort(\'script\'); window.resortCol=\'script\'; return false;">Script</a></th>\n'
 	table += '<th class="top" title="Link to details"><a href="#theTable"; return false;"> </a></th>\n'
-	table += '<th class="top" title="Total chars"><a href="#theTable" onclick="resort(\'chars\'); window.resortCol=\'chars\'; return false;">Total chars</a></th>\n'
-	table += '<th class="top" title="+"><a href="#theTable" onclick="resort(\'aux\'); window.resortCol=\'aux\'; return false;">+</a></th>\n'
+	table += '<th class="top" title="Total number of characters in regular use."><a href="#theTable" onclick="resort(\'chars\'); window.resortCol=\'chars\'; return false;">Total chars</a></th>\n'
+	table += '<th class="top" title="Number of additional, infrequently-used characters."><a href="#theTable" onclick="resort(\'aux\'); window.resortCol=\'aux\'; return false;">+</a></th>\n'
 
 	if (window.csubset) {
 		table += '<th class="top charsubset" title="Letters"><a href="#theTable" onclick="resort(\'letters\', REVERSE); window.resortCol=\'letters\'; return false;">Letters</a></th>\n'
@@ -99,32 +113,41 @@ function resort (column, reverse) {
 		table += '<th class="top charsubset" title="Format chars"><a href="#theTable" onclick="resort(\'other\', REVERSE); window.resortCol=\'other\'; return false;">Format chars</a></th>\n'
 		}
 
-	table += '<th class="top" title="Type"><a href="#theTable" onclick="resort(\'type\'); window.resortCol=\'type\'; return false;">Type</a></th>\n'
+	table += '<th class="top" title="Script type."><a href="#theTable" onclick="resort(\'type\'); window.resortCol=\'type\'; return false;">Type</a></th>\n'
 
 	if (window.vsubset) {
-		table += '<th class="top vsubset" title="Vowel letters"><a href="#theTable" onclick="resort(\'vletter\'); window.resortCol=\'vletter\'; return false;">Vowel letters</a></th>\n'
-		table += '<th class="top vsubset" title="Vowel marks"><a href="#theTable" onclick="resort(\'vmark\'); window.resortCol=\'vmark\'; return false;">Vowel marks</a></th>\n'
-		table += '<th class="top vsubset" title="Circum\u00ADgraphs"><a href="#theTable" onclick="resort(\'vcircum\', REVERSE); window.resortCol=\'vcircum\'; return false;">Circum\u00ADgraphs</a></th>\n'
-		table += '<th class="top vsubset" title="Prescript vowels"><a href="#theTable" onclick="resort(\'vprescript\', REVERSE); window.resortCol=\'vprescript\'; return false;">Prescript vowels</a></th>\n'
+		table += '<th class="top vsubset" title="Inherent vowel"><a href="#theTable" onclick="resort(\'vinherent\'); window.resortCol=\'vinherent\'; return false;">Inherent vowel</a></th>\n'
+		table += '<th class="top vsubset" title="Combining marks used to spell vowels."><a href="#theTable" onclick="resort(\'vmark\'); window.resortCol=\'vmark\'; return false;">Vowel marks</a></th>\n'
+		table += '<th class="top vsubset" title="Spacing letters used to spell vowels."><a href="#theTable" onclick="resort(\'vletter\'); window.resortCol=\'vletter\'; return false;">Vowel letters</a></th>\n'
+		table += '<th class="top vsubset" title="Character used as a base for standalone vowels."><a href="#theTable" onclick="resort(\'vbase\', REVERSE); window.resortCol=\'vbase\'; return false;">Vowel base</a></th>\n'
+		table += '<th class="top vsubset" title="Standalone letters that appear before the base consonant. (Indicates visual ordering.)"><a href="#theTable" onclick="resort(\'vvisual\', REVERSE); window.resortCol=\'vvisual\'; return false;">Pre&#x2011;base vletters</a></th>\n'
+		table += '<th class="top vsubset" title="Combining marks that appear before the base consonant when rendered."><a href="#theTable" onclick="resort(\'vprescript\', REVERSE); window.resortCol=\'vprescript\'; return false;">Pre&#x2011;base vmarks</a></th>\n'
+		table += '<th class="top vsubset" title="(Single) combining marks that place glyphs on more than one side of the base character."><a href="#theTable" onclick="resort(\'vcircum\', REVERSE); window.resortCol=\'vcircum\'; return false;">Circum\u00ADgraphs</a></th>\n'
+		table += '<th class="top vsubset" title="Vowel sounds that are represented by more than one character."><a href="#theTable" onclick="resort(\'vcomposite\', REVERSE); window.resortCol=\'vcomposite\'; return false;">Composite vowels</a></th>\n'
+		table += '<th class="top vsubset" title="Vocalic letters."><a href="#theTable" onclick="resort(\'vvocalics\', REVERSE); window.resortCol=\'vvocalics\'; return false;">Vocalics</a></th>\n'
+		table += '<th class="top vsubset" title="Ways to represent consonant clusters: Visible virama, Stacking, Conjoining, Ligation, Touching, and whether Ra has special behaviour."><a href="#theTable" onclick="resort(\'conjunct\', REVERSE); window.resortCol=\'conjunct\'; return false;">Clusters</a></th>\n'
+		table += '<th class="top vsubset" title="Conjuncts are created using an invisible virama or equivalent."><a href="#theTable" onclick="resort(\'cvirama\', REVERSE); window.resortCol=\'cvirama\'; return false;">V-based conjuncts</a></th>\n'
+		table += '<th class="top vsubset" title="Dedicated combining marks used for syllable-initial clusters."><a href="#theTable" onclick="resort(\'cmedials\', REVERSE); window.resortCol=\'cmedials\'; return false;">Medial marks</a></th>\n'
+		table += '<th class="top vsubset" title="Dedicated combining marks used for syllable- or word-final consonants."><a href="#theTable" onclick="resort(\'cfinals\', REVERSE); window.resortCol=\'cfinals\'; return false;">Final marks</a></th>\n'
 		}
 
-	table += '<th class="top" title="Contextual placement"><a href="#theTable" onclick="resort(\'gpos\', REVERSE); window.resortCol=\'gpos\'; return false;">Contextual placement</a></th>\n'
-	table += '<th class="top" title="Contextual shaping"><a href="#theTable" onclick="resort(\'gsub\', REVERSE); window.resortCol=\'gsub\'; return false;">Contextual shaping</a></th>\n'
-	table += '<th class="top" title="Case sensitive"><a href="#theTable" onclick="resort(\'cs\', REVERSE); window.resortCol=\'cs\'; return false;">Case sensitive</a></th>\n'
-	table += '<th class="top" title="Cursive script"><a href="#theTable" onclick="resort(\'cursive\', REVERSE); window.resortCol=\'cursive\'; return false;">Cursive script</a></th>\n'
-	table += '<th class="top" title="Text direction"><a href="#theTable" onclick="resort(\'dir\', REVERSE); window.resortCol=\'dir\'; return false;">Text direction</a></th>\n'
-	table += '<th class="top" title="Baseline"><a href="#theTable" onclick="resort(\'baseline\'); window.resortCol=\'baseline\'; return false;">Baseline</a></th>\n'
-	table += '<th class="top" title="Word separator"><a href="#theTable" onclick="resort(\'wordsep\'); window.resortCol=\'wordsep\'; return false;">Word separator</a></th>\n'
-	table += '<th class="top" title="Text wrap"><a href="#theTable" onclick="resort(\'wrap\'); window.resortCol=\'wrap\'; return false;">Text wrap</a></th>\n'
-	table += '<th class="top" title="Hyphenation"><a href="#theTable" onclick="resort(\'hyphenation\', REVERSE); window.resortCol=\'hyphenation\'; return false;">Hyphen\u00ADation</a></th>\n'
-	table += '<th class="top" title="Justification"><a href="#theTable" onclick="resort(\'justify\'); window.resortCol=\'justify\'; return false;">Justification</a></th>\n'
+	table += '<th class="top" title="Context affects placement of glyphs."><a href="#theTable" onclick="resort(\'gpos\', REVERSE); window.resortCol=\'gpos\'; return false;">Contextual placement</a></th>\n'
+	table += '<th class="top" title="Context affects shaping of glyphs."><a href="#theTable" onclick="resort(\'gsub\', REVERSE); window.resortCol=\'gsub\'; return false;">Contextual shaping</a></th>\n'
+	table += '<th class="top" title="Case sensitive."><a href="#theTable" onclick="resort(\'cs\', REVERSE); window.resortCol=\'cs\'; return false;">Case sensitive</a></th>\n'
+	table += '<th class="top" title="Letters are joined (cursive)."><a href="#theTable" onclick="resort(\'cursive\', REVERSE); window.resortCol=\'cursive\'; return false;">Cursive script</a></th>\n'
+	table += '<th class="top" title="Text direction."><a href="#theTable" onclick="resort(\'dir\', REVERSE); window.resortCol=\'dir\'; return false;">Text direction</a></th>\n'
+	table += '<th class="top" title="Location of the baseline: mid, low, high."><a href="#theTable" onclick="resort(\'baseline\'); window.resortCol=\'baseline\'; return false;">Baseline</a></th>\n'
+	table += '<th class="top" title="What separates words."><a href="#theTable" onclick="resort(\'wordsep\'); window.resortCol=\'wordsep\'; return false;">Word separator</a></th>\n'
+	table += '<th class="top" title="Basic approach to wrapping text at line ends."><a href="#theTable" onclick="resort(\'wrap\'); window.resortCol=\'wrap\'; return false;">Text wrap</a></th>\n'
+	table += '<th class="top" title="Hyphenation."><a href="#theTable" onclick="resort(\'hyphenation\', REVERSE); window.resortCol=\'hyphenation\'; return false;">Hyphen\u00ADation</a></th>\n'
+	table += '<th class="top" title="Justification methods."><a href="#theTable" onclick="resort(\'justify\'); window.resortCol=\'justify\'; return false;">Justification</a></th>\n'
 	table += '<th class="top" title="Region of origin"><a href="#theTable" onclick="resort(\'region\'); window.resortCol=\'region\'; return false;">Region of origin</a></th>\n'
 	table += '<th class="top" title="More info"><a href="#theTable">More info</a></th>\n'
 	
 	table += '</tr></thead><tbody>'
 	
 
-
+		// NEWCOL add a value
 		for (var i=0;i<items.length;i++) {
 			var linked = ''
 			table += '<tr>'
@@ -170,21 +193,58 @@ function resort (column, reverse) {
 			table += '>'+scriptData[i].type+'</td>'
 			
 			if (window.vsubset) {
-				table += '<td title="Vowel letters" class="vsubset'
-				if (scriptData[i].vletter!=='-') table += ' yy'
-				table += '">'+scriptData[i].vletter+'</td>'
+				table += '<td title="Inherent vowel" class="vinherent'
+				if (scriptData[i].vinherent!=='0') table += ' yy'
+				table += '">'+scriptData[i].vinherent+'</td>'
 
-				table += '<td title="Vowel marks" class="vsubset'
+				table += '<td title="Vowel marks: '+scriptData[i].vowels+'" class="vsubset'
 				if (scriptData[i].vmark!=='-') table += ' yy'
 				table += '">'+scriptData[i].vmark+'</td>'
 
-				table += '<td title="Circumgraphs" class="vsubset'
+				table += '<td title="Vowel letters: '+scriptData[i].vowels+'" class="vsubset'
+				if (scriptData[i].vletter!=='-') table += ' yy'
+				table += '">'+scriptData[i].vletter+'</td>'
+
+				table += '<td title="Vowel base: '+scriptData[i].vowels+'" class="vsubset'
+				if (scriptData[i].vbase!=='-') table += ' yy'
+				table += '">'+scriptData[i].vbase+'</td>'
+
+				table += '<td title="Prescript letters: '+scriptData[i].vowels+'" class="vsubset'
+				if (scriptData[i].vvisual!=='0') table += ' yy'
+				table += '">'+scriptData[i].vvisual+'</td>'
+
+				table += '<td title="Prescript marks: '+scriptData[i].vowels+'" class="vsubset'
+				if (scriptData[i].vprescript!==0) table += ' yy'
+				table += '">'+scriptData[i].vprescript+'</td>'
+
+				table += '<td title="Circumgraphs: '+scriptData[i].vowels+'" class="vsubset'
 				if (scriptData[i].vcircum!==0) table += ' yy'
 				table += '">'+scriptData[i].vcircum+'</td>'
 
-				table += '<td title="Prescript vowels" class="vsubset'
-				if (scriptData[i].vprescript!==0) table += ' yy'
-				table += '">'+scriptData[i].vprescript+'</td>'
+				table += '<td title="Composite vowels: '+scriptData[i].vowels+'" class="vsubset'
+				if (scriptData[i].vcomposite!==0) table += ' yy'
+				table += '">'+scriptData[i].vcomposite+'</td>'
+
+				table += '<td title="Vocalics: '+scriptData[i].vowels+'" class="vsubset'
+				if (scriptData[i].vvocalics!=='0') table += ' yy'
+				table += '">'+scriptData[i].vvocalics+'</td>'
+
+				if (scriptData[i].conjunct === '') scriptData[i].conjunct = '-'
+				table += '<td title="Conjuncts: '+scriptData[i].clusters+'" class="vsubset'
+				if (scriptData[i].conjunct!=='-') table += ' yy'
+				table += '">'+scriptData[i].conjunct+'</td>'
+
+				table += '<td title="Virama" class="vsubset'
+				if (scriptData[i].cvirama!=='-') table += ' yy'
+				table += '">'+scriptData[i].cvirama+'</td>'
+
+				table += '<td title="Medials: '+scriptData[i].medials+'" class="vsubset'
+				if (scriptData[i].cmedials!=='-') table += ' yy'
+				table += '">'+scriptData[i].cmedials+'</td>'
+
+				table += '<td title="Finals: '+scriptData[i].finals+'" class="vsubset'
+				if (scriptData[i].cfinals!=='-') table += ' yy'
+				table += '">'+scriptData[i].cfinals+'</td>'
 				}
 
 
@@ -318,14 +378,31 @@ function getCharacterStats () {
 			if (charuseData.type.includes('ideo')) scriptData[i].type = 'syll'
 
 
+			// NEWCOL set a default, then derive a value
 
 			// deal with vowel characteristics
+			scriptData[i].vinherent = '0'
 			scriptData[i].vletter = '-'
 			scriptData[i].vmark = '-'
+			scriptData[i].vbase = '-'
+			scriptData[i].vvisual = '0'
 			scriptData[i].vprescript = 0
 			scriptData[i].vcircum = 0
+			scriptData[i].vcomposite = 0
+			scriptData[i].vvocalics = '0'
+			scriptData[i].conjunct = ''
+			scriptData[i].cvirama = '-'
+			scriptData[i].cmedials = '-'
+			scriptData[i].cfinals = '-'
 
 			if (charuseData.vowels) {
+				if (charuseData.vowels.includes('inherent')) {
+					// get the number
+					temp1 = charuseData.vowels.split('inherent')
+					temp2 = temp1[0].split(' ')
+					temp3 = temp2[temp2.length-2]
+					scriptData[i].vinherent = parseInt(temp3)
+					}
 				if (charuseData.vowels.includes('letters')) scriptData[i].vletter = 'l'
 				if (charuseData.vowels.includes('matres')) scriptData[i].vletter = 'ml'
 				if (charuseData.vowels.includes('independent') && charuseData.vowels.includes('some')) scriptData[i].vletter = '(iv)'
@@ -340,6 +417,22 @@ function getCharacterStats () {
 					temp3 = temp2[temp2.length-2]
 					scriptData[i].vcircum = parseInt(temp3)
 					}
+				//if (charuseData.vowels.includes('vowel-base')) scriptData[i].vbase = 'yes'
+				if (charuseData.vowels.includes('vowel-base')) {
+					// get the base
+					temp1 = charuseData.vowels.split('vowel-base')
+					temp2 = temp1[0].split(' ')
+					temp3 = temp2[temp2.length-2]
+					scriptData[i].vbase = temp3
+					}
+				//if (charuseData.vowels.includes('visual')) scriptData[i].vvisual = 'yes'
+				if (charuseData.vowels.includes('visual')) {
+					// get the number
+					temp1 = charuseData.vowels.split('visual')
+					temp2 = temp1[0].split(' ')
+					temp3 = temp2[temp2.length-2]
+					scriptData[i].vvisual = parseInt(temp3)
+					}
 				if (charuseData.vowels.includes('prescript')) {
 					// get the number
 					temp1 = charuseData.vowels.split('prescript')
@@ -347,7 +440,36 @@ function getCharacterStats () {
 					temp3 = temp2[temp2.length-2]
 					scriptData[i].vprescript = parseInt(temp3)
 					}
+				if (charuseData.vowels.includes('composite')) {
+					// get the number
+					temp1 = charuseData.vowels.split('composite')
+					temp2 = temp1[0].split(' ')
+					temp3 = temp2[temp2.length-2]
+					scriptData[i].vcomposite = parseInt(temp3)
+					}
+				if (charuseData.vowels.includes('vocalic')) {
+					// get the number
+					temp1 = charuseData.vowels.split('vocalic')
+					temp2 = temp1[0].split(' ')
+					temp3 = temp2[temp2.length-2]
+					scriptData[i].vvocalics = parseInt(temp3)
+					}
 				}
+			if (charuseData.clusters) {
+				if (charuseData.clusters.includes('conjunct')) scriptData[i].cvirama = 'yes'
+
+				if (charuseData.clusters.includes('stacking')) scriptData[i].conjunct += 's'
+				if (charuseData.clusters.includes('conjoining')) scriptData[i].conjunct += 'c'
+				if (charuseData.clusters.includes('ligatures')) scriptData[i].conjunct += 'l'
+				if (charuseData.clusters.includes('touching')) scriptData[i].conjunct += 't'
+				if (charuseData.clusters.includes('visible')) scriptData[i].conjunct += 'v'
+				if (charuseData.clusters.includes('diacritic')) scriptData[i].conjunct += 'd'
+				if (charuseData.clusters.includes('ra special')) scriptData[i].conjunct += 'r'
+				}
+
+			if (charuseData.medials && charuseData.medials.includes('mark')) scriptData[i].cmedials = 'yes'
+			if (charuseData.finals && charuseData.finals.includes('mark')) scriptData[i].cfinals = 'yes'
+			
 			if (scriptData[i].type.includes('syll')) scriptData[i].vletter = 's'
 			}
 		}
