@@ -60,7 +60,7 @@ reflist = {
 "title":" Proposal to add Marks and Digits in Arabic Code Block (for Urdu)",
 },
 
-"jm": {
+"ab": {
 "url":"#refs",
 "authors": "John Mace",
 "title":"Beginner's Arabic Script",
