@@ -29,6 +29,8 @@
 <script src="../linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../common/egcode.js"></script>
+<script src="../common/references.js"></script>
+<script src="refs.js"></script>
 
 <script src="mn-examples.js"></script>
 <script src="mn-translit.js">  </script>
@@ -56,7 +58,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->26 November, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->4 December, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -64,30 +66,25 @@
 
 <div class="section">
 <p>This page gathers together basic information about the Mongolian script and its use for the Mongolian language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Mongolian using Unicode.</p>
-
-
-
-<p>See also the companion document, <a href="block" class="linkHighlight">Mongolian character notes</a>, for detailed information about specific Unicode characters.</p>
 <p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
 
 
 
-<details>
+<p id="usage"></p>
+<script>addUsageAdvice('Mongolian')</script>
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Mongolian','Mongolian'); return false;">More about using this page</a></summary>
+<div id="about"></div>
+</details>
+
+<details class="supportdocs noprint">
 <summary class="instructions"><a href="../links?iso=Mong">Related pages</a>.</summary>
 </details>
 
-
-
-<details>
-<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
-</details>
-
-
-
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Mongolian','Mongolian'); return false;">About this page</a></summary>
-<div id="about"></div>
+<summary class="instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
 </details>
 </div>
 
@@ -328,7 +325,7 @@
 <figcaption>Initial, medial and final forms for characters representing <span class="ipa">a</span>, and <span class="ipa">n</span>, respectively.</figcaption>
 </figure>
 
-<p>The Unicode Standard provides the following examples of word pairs that cannot be distinguished visually.<a class="fnref" href="https://www.unicode.org/versions/latest/ch13.pdf">u530</a> (Click on the words to see their actual composition.)</p>
+<p>The Unicode Standard provides the following examples of word pairs that cannot be distinguished visually.<tt>u,530</tt> (Click on the words to see their actual composition.)</p>
 
 <figure id="fig_indistinguishable_words">
 <img src="images/indistinguishable_words.png" alt="ᠤᠷᠲᠤ ᠣᠷᠳᠤ ᠡᠨᠳᠡ ᠠᠳᠠ" class="ex">
@@ -787,7 +784,7 @@ nʲ</span></td>
 </figure>
 
 <p>The font is expected to automatically select the appropriate glyph form for these velar consonants.  This becomes more complicated, however, where these consonants occur without a following vowel (ie. before another consonant, or in final position).  </p>
-<p>In Sibe and Manchu, the form is selected based on the previous vowel. In Mongolian and Todo, however, the shape depends on the gender of the word, as described in <a class="secref">harmony</a>, and this may not be detectable from the previous vowel. The Unicode Standard gives examples of 2 words where it is necessary to look at the beginning of the word to determine the shape at the end of the word.<a class="fnref" href="https://www.unicode.org/versions/latest/ch13.pdf">u534</a></p>
+<p>In Sibe and Manchu, the form is selected based on the previous vowel. In Mongolian and Todo, however, the shape depends on the gender of the word, as described in <a class="secref">harmony</a>, and this may not be detectable from the previous vowel. The Unicode Standard gives examples of 2 words where it is necessary to look at the beginning of the word to determine the shape at the end of the word.<tt>u,534</tt></p>
 
 <figure id="jarlig_cherig">
 <img src="images/order.png" alt="ᠵᠠᠷᠯᠢᠭ" class="ex" data-notes="72px Mongolian Baiti">
@@ -895,20 +892,20 @@ nʲ</span></td>
 <section id="dir">
 <h2>Text direction</h2>
     <p>Mongolian script is written vertically, top to bottom, in columns that flow left to right. This is an unusual configuration. (Chinese, Japanese and Korean vertical text columns are read right to left). It derives from the fact that this script descended from a script (Old Uyghur) that was written right to left.</p>
-<p>Fullwidth Latin alphabetic and digit characters are seen in traditional Mongolian text, as are fullwidth Chinese characters and punctuation (see <a class="figref">mixed_text</a>). When used, the latter are displayed upright. The fullwidth series of Unicode characters may be used as an easy way to achieve this. <a class="fnref" href="https://github.com/w3c/mlreq/issues/5">g</a></p>
+<p>Fullwidth Latin alphabetic and digit characters are seen in traditional Mongolian text, as are fullwidth Chinese characters and punctuation (see <a class="figref">mixed_text</a>). When used, the latter are displayed upright. The fullwidth series of Unicode characters may be used as an easy way to achieve this.<tt>g5</tt></p>
 <figure id="mixed_text">
 <p><a href="images/mixed_text.jpg" target="_blank"><img src="images/mixed_text.jpg" alt="" style="width:100%;"/></a></p>
 <figcaption>Mixed Mongolian and Chinese text. (Click on the image to see larger.)</figcaption>
 </figure>
-<p>Cyrillic characters may also be seen, used in a way that resembles fullwidth characters, but this is actually a property of the font used to display the characters, since there are no fullwidth cyrillic code points in Unicode.  Emoji are also expected to be displayed upright.<a class="fnref" href="https://github.com/w3c/mlreq/issues/5">g</a></p>
-<p>Non-fullwidth letters and numbers tend to be written sideways.<a class="fnref" href="https://github.com/w3c/mlreq/issues/5">g</a> See <a class="figref">mixed_text_sideways</a>.</p>
+<p>Cyrillic characters may also be seen, used in a way that resembles fullwidth characters, but this is actually a property of the font used to display the characters, since there are no fullwidth cyrillic code points in Unicode.  Emoji are also expected to be displayed upright.<tt>g5</tt></p>
+<p>Non-fullwidth letters and numbers tend to be written sideways.<tt>g5</tt> See <a class="figref">mixed_text_sideways</a>.</p>
 <figure id="mixed_text_sideways">
 <p><img src="images/mixed_text_sideways.png" alt=""/></p>
 <figcaption>Sideways Latin text and numbers in vertical Mongolian.</figcaption>
 </figure>
-<p>Upright digits may be used for list counters. And Mongolian also has the feature referred to in Japanese as <em>tate chu yoko</em>, whereby small sequences of non-fullwidth numbers or punctuation may run horizontally within the vertical flow.<a class="fnref" href="https://github.com/w3c/mlreq/issues/5">g</a> See <a class="figref">fig_digits_tate_chu_yoko</a>.</p>
-<p>Certain punctuation marks are upright, and others are rotated.<a class="fnref" href="https://github.com/w3c/mlreq/issues/5">g</a> (See  <a class="secref">boundaries</a>.)</p>
-<p>Many of the conventions seen in actual digital text may be determined more by the available technology than by what the content author wants to achieve.<a class="fnref" href="https://github.com/w3c/mlreq/issues/5">g</a></p>
+<p>Upright digits may be used for list counters. And Mongolian also has the feature referred to in Japanese as <em>tate chu yoko</em>, whereby small sequences of non-fullwidth numbers or punctuation may run horizontally within the vertical flow.<tt>g5</tt> See <a class="figref">fig_digits_tate_chu_yoko</a>.</p>
+<p>Certain punctuation marks are upright, and others are rotated.<tt>g5</tt> (See  <a class="secref">boundaries</a>.)</p>
+<p>Many of the conventions seen in actual digital text may be determined more by the available technology than by what the content author wants to achieve.<tt>g5</tt></p>
 
 
 
@@ -1028,7 +1025,7 @@ nʲ</span></td>
 </tbody>
 </table>
 <p>Mongolian uses a mixture of local punctuation and punctuation from Chinese.</p>
-<p>Question marks and exclamation marks are fullwidth, upright characters (ee an  <a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="209770490" data-permission-text="Issue title is private" data-url="https://github.com/w3c/type-samples/issues/27" href="https://github.com/w3c/type-samples/issues/27">example</a>). Mongolian punctuation is horizontally centred in each vertical line.<a class="fnref" href="https://w3c.github.io/mlreq/#punctuation_rules">n</a></p>
+<p>Question marks and exclamation marks are fullwidth, upright characters (ee an  <a class="issue-link js-issue-link" data-error-text="Failed to load issue title" data-id="209770490" data-permission-text="Issue title is private" data-url="https://github.com/w3c/type-samples/issues/27" href="https://github.com/w3c/type-samples/issues/27">example</a>). Mongolian punctuation is horizontally centred in each vertical line.<tt>n,#punctuation_rules</tt></p>
 </section>
 
 
@@ -1063,7 +1060,7 @@ nʲ</span></td>
 </tr>
 </tbody>
 </table>
-<p>Parentheses and brackets may be fullwidth or may not be. They are rotated.<a class="fnref" href="https://github.com/w3c/mlreq/issues/5">g</a></p>
+<p>Parentheses and brackets may be fullwidth or may not be. They are rotated.<tt>g5</tt></p>
 </section>
 
 
@@ -1098,7 +1095,7 @@ nʲ</span></td>
 </tr>
 </tbody>
 </table>
-<p>Quotation marks are often  fullwidth but may not be. Quotation marks are rotated, as in Chinese.<a class="fnref" href="https://github.com/w3c/mlreq/issues/5">g</a></p>
+<p>Quotation marks are often  fullwidth but may not be. Quotation marks are rotated, as in Chinese.<tt>g5</tt></p>
 </section>
 
 
@@ -1126,7 +1123,7 @@ nʲ</span></td>
 <section id="inlinenotes">
 <h3>Inline notes &amp; annotations</h3>
 <p>Like Chinese and Japanese, Mongolian text uses ruby annotations to express the pronunciation of words for beginners or in ambiguous situations. This is useful in Mongolian because many characters look identical in cursive text.</p>
-  <p>Annotations are typically written in the Latin script, and run down the right side of the line.<a class="fnref" href="https://github.com/w3c/mlreq/issues/1">g</a></p>
+  <p>Annotations are typically written in the Latin script, and run down the right side of the line.<tt>g1</tt></p>
 <figure id="fig_ruby">
 <p><img src="images/ruby.png" alt=""/></p>
 <figcaption>Ruby in Mongolian text.</figcaption>
@@ -1140,18 +1137,18 @@ nʲ</span></td>
 <section id="otherinline">
 <h3>Other inline ranges</h3>
 
-<p>Underlines run down the right side of vertical lines of Mongolian text. Lines down the left side are equivalent to overline in English text.<a class="fnref" href="https://w3c.github.io/mlreq/#h_text_decoration">n</a></p>
-<p>The side of the vertical line for underlines doesn't change for embedded Latin text. Since Latin text runs down the page, this makes the underline run across the top of the Latin letters. See the red line in <a class="figref">text_decoration_mixed</a>.<a class="fnref" href="https://w3c.github.io/mlreq/#h_text_decoration">n</a></p>
+<p>Underlines run down the right side of vertical lines of Mongolian text. Lines down the left side are equivalent to overline in English text.<tt>n,#h_text_decoration</tt></p>
+<p>The side of the vertical line for underlines doesn't change for embedded Latin text. Since Latin text runs down the page, this makes the underline run across the top of the Latin letters. See the red line in <a class="figref">text_decoration_mixed</a>.<tt>n,#h_text_decoration</tt></p>
 <figure id="text_decoration_mixed">
 <p><a href="images/text_decoration_mixed.png" target="_blank"><img src="images/text_decoration_mixed.png" alt=""/></a></p>
 <figcaption>Underline in Mongolian text with embedded Latin content.</figcaption>
 </figure>
-   <p>There are a number of different styles of underlining in use, as shown in <a class="figref">underline_styles</a>.<a class="fnref" href="https://github.com/w3c/mlreq/issues/10">g</a></p>
+   <p>There are a number of different styles of underlining in use, as shown in <a class="figref">underline_styles</a>.<tt>g10</tt></p>
 <figure id="underline_styles">
 <p><a href="images/underline_styles.jpg" target="_blank"><img src="images/underline_styles.jpg" alt="" style="width: 100%;"/></a></p>
 <figcaption>Various underline styles in Mongolian text. (Click on the picture to see larger.)</figcaption>
 </figure>
-<p>If an underline is styled so that it leaves a gap below spaces that separate words, the underline should not also leave gaps below the narrow spaces used to separate some suffixes from the word root. The desired outcome is that shown here, however implementations may vary.<a class="fnref" href="https://github.com/w3c/mlreq/issues/9">g</a></p>
+<p>If an underline is styled so that it leaves a gap below spaces that separate words, the underline should not also leave gaps below the narrow spaces used to separate some suffixes from the word root. The desired outcome is that shown here, however implementations may vary.<tt>g9</tt></p>
 <div class="figwrap">
 <figure id="nnbsp_underline">
 <p><img src="images/nnbsp_underline.png" alt=""/></p>
@@ -1184,8 +1181,8 @@ nʲ</span></td>
   <section id="linebreak">
 <h3>Line breaking &amp; hyphenation</h3>
 <p>Line-breaking normally occurs at word boundaries (indicated by spaces).</p>
-<p>Lines should <em>not</em> break, however, on gaps between words and their suffixes when separated by <span class="uname">U+202F NARROW NO-BREAK SPACE</span>), or where  <span class="uname">U+180E MONGOLIAN VOWEL SEPARATOR</span> is used.<a href="https://w3c.github.io/mlreq/#mongolian_space" class="fnref">n</a></p>
-<p>As for most writing systems, there are restrictions around which characters are allowed to start or end a line (eg. question marks and colons should not be used at the beginning of a line, and opening brackets should not be used at the end of a line).<a class="fnref" href="https://w3c.github.io/mlreq/#punctuation_rules">n</a></p>
+<p>Lines should <em>not</em> break, however, on gaps between words and their suffixes when separated by <span class="uname">U+202F NARROW NO-BREAK SPACE</span>), or where  <span class="uname">U+180E MONGOLIAN VOWEL SEPARATOR</span> is used.<tt>n,#mongolian_space</tt></p>
+<p>As for most writing systems, there are restrictions around which characters are allowed to start or end a line (eg. question marks and colons should not be used at the beginning of a line, and opening brackets should not be used at the end of a line).<tt>n,#punctuation_rules</tt></p>
 
 
 
@@ -1221,7 +1218,7 @@ nʲ</span></td>
 </tbody></table>
 
 <details id="linebreak_details">
-<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<summary>Show legend <tt>ul</tt></summary>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BA (break after)</a> indicates that it is normal to break after that character.&nbsp;</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CL">CL (close punctuation)</a>  should be kept with the preceding character.&nbsp;The class CL is closely related to the class CP (Close Parenthesis). They differ only in that CP will not introduce a break when followed by a letter or number, which prevents breaks within constructs like “(s)he”.</p>
@@ -1241,7 +1238,7 @@ nʲ</span></td>
  <section id="justification">
 <h3>Text alignment &amp; justification</h3>
 <p>To justify the text on a line, the spaces between words are adjusted.</p>
-<p>When Chinese characters are embedded in Mongolian text and justification applied, space is not added between the Chinese characters (as it would be in a Chinese document).<a class="fnref" href="https://w3c.github.io/mlreq/#mixed_arrangement_cjk">n</a></p>
+<p>When Chinese characters are embedded in Mongolian text and justification applied, space is not added between the Chinese characters (as it would be in a Chinese document).<tt>n,#mixed_arrangement_cjk</tt></p>
 <figure id="justification_mixed_cjk">
 <p><img src="images/justification_mixed_cjk.png" alt=""/></p>
 <figcaption>Space is added around embedded Chinese text during justification, not between.</figcaption>
@@ -1261,12 +1258,12 @@ nʲ</span></td>
 
 <section id="lists">
 <h3>Counters, lists, etc.</h3>
-<p>Upright digits are used for list counters. A common approach involves the use of circled digits being used for list counters as shown in <a href="#circled_counters" class="figref">the figure below</a>. <a class="fnref" href="https://github.com/w3c/mlreq/issues/5">g</a></p>
+<p>Upright digits are used for list counters. A common approach involves the use of circled digits being used for list counters as shown in <a href="#circled_counters" class="figref">the figure below</a>. <tt>g5</tt></p>
 <figure id="circled_counters">
 <p><img src="images/circled_counters.png" alt=""/></p>
 <figcaption>Upright, circled numbers as list counters.</figcaption>
 </figure>
-<p>However, counters may also run down the page (see <a class="figref">rotated_counters</a>).<a class="fnref" href="https://github.com/w3c/mlreq/issues/5">g</a></p>
+<p>However, counters may also run down the page (see <a class="figref">rotated_counters</a>).<tt>g5</tt></p>
 <figure id="rotated_counters">
 <p><a href="images/rotated_counters.jpg" target="_blank"><img src="images/rotated_counters.jpg" alt="" style="width:100%;"/></a></p>
 <figcaption>List counters rotated. (Click on the image to see larger.)</figcaption>
@@ -1308,12 +1305,12 @@ nʲ</span></td>
   
 <section id="baselines">
 <h3>Baselines &amp; inline alignment</h3>
-<p>The default baseline for Mongolian-script text runs down the centre of the vertical line spacing, as shown in <a class="figref">centre_baseline</a>.<a class="fnref" href="https://w3c.github.io/mlreq/#h_text_decoration">n</a></p>
+<p>The default baseline for Mongolian-script text runs down the centre of the vertical line spacing, as shown in <a class="figref">centre_baseline</a>.<tt>n,#h_text_decoration</tt></p>
 <figure id="centre_baseline">
 <p><a href="images/centre_baseline.png" target="_blank"><img src="images/centre_baseline.png" alt=""/></a></p>
 <figcaption>The Mongolian baseline runs down the centre of the vertical line.</figcaption>
 </figure>
-<p>When mixed with other languages, the text in those languages should also be centre-aligned along the Mongolian baseline.<a class="fnref" href="https://w3c.github.io/mlreq/#mixed_arrangement_alphanum">n</a></p>
+<p>When mixed with other languages, the text in those languages should also be centre-aligned along the Mongolian baseline.<tt>n,#mixed_arrangement_alphanum</tt></p>
 </section>
 </section>
 
@@ -1335,19 +1332,19 @@ nʲ</span></td>
 
 <section id="generallayout">
 <h3>General page layout &amp; progression</h3>
-<p>Generally, book binding is on the left, and pages are turned towards the left, unlike books set vertically in Chinese or Japanese.<a class="fnref" href="https://w3c.github.io/mlreq/#https://w3c.github.io/mlreq/#h_binding">n</a></p>
+<p>Generally, book binding is on the left, and pages are turned towards the left, unlike books set vertically in Chinese or Japanese.<tt>n,#h_binding</tt></p>
 <figure id="page_turning">
 <p><a href="images/page_turning.png" target="_blank"><img src="images/page_turning.png" alt=""/></a></p>
 <figcaption> Mongolian books are bound on the left, and pages turn to the left.</figcaption>
 </figure>
 
-<p>Columns run horizontally, rather than vertically as in Western typography.<a class="fnref" href="https://w3c.github.io/mlreq/#h_columns">n</a></p>
+<p>Columns run horizontally, rather than vertically as in Western typography.<tt>n,#h_columns</tt></p>
 <figure id="columns_horizontal">
 <p><a href="images/columns_horizontal.png" target="_blank"><img src="images/columns_horizontal.png" alt="" style="width:100%;"/></a></p>
 <figcaption>Columns run horizontally. (Click on the image to see larger.)</figcaption>
 </figure>
 
-<p>It is common for the default orientation of pages to be landscape, rather than portrait.<a class="fnref" href="https://w3c.github.io/mlreq/#h_paper_direction">n</a></p>
+<p>It is common for the default orientation of pages to be landscape, rather than portrait.<tt>n,#h_paper_direction</tt></p>
 </section>
 
 
@@ -1374,7 +1371,7 @@ nʲ</span></td>
   
 <section id="interaction">
 <h3>Forms &amp; user interaction</h3>
-<p>Form controls on Web pages should be rotated 90 degrees clockwise, compared to the form controls for Western languages.<a class="fnref" href="https://w3c.github.io/mlreq/#h_input">→n</a></p>
+<p>Form controls on Web pages should be rotated 90 degrees clockwise, compared to the form controls for Western languages.<tt class="more">n,#h_input</tt></p>
 </section>
 
 
@@ -1383,7 +1380,7 @@ nʲ</span></td>
   
 <section id="headers">
 <h3>Page numbering, running headers, etc</h3>
-<p>Page numbers should be displayed on the upper or lower side of the page.<a class="fnref" href="https://w3c.github.io/mlreq/#h_page_numbering">n</a></p>
+<p>Page numbers should be displayed on the upper or lower side of the page.<tt>n,#h_page_numbering</tt></p>
 </section>
 </section>
 
@@ -1479,16 +1476,6 @@ nʲ</span></td>
 
 <section id="refs">
 <h2>References</h2>
-<ol>
-<li>[ <a class="fnref" href="#refs">d</a> ]
-Peter T. Daniels and William Bright, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN 0-19-507993-0.</li>
-
-<li>[ <a class="fnref" href="https://github.com/w3c/mlreq/issues">g</a> ] <a href="https://github.com/w3c/mlreq/issues">Issue list</a> for W3C Mongolian layout requirements.</li>
-<li>[ <a class="fnref" href="https://w3c.github.io/mlreq/">n</a> ]
-Nasun-urt, Hu Qitu, <cite><a href="https://w3c.github.io/mlreq/">Mongolian Layout Requirements</a></cite></li>
-<li>[ <a class="fnref" href="https://www.unicode.org/versions/latest/ch13.pdf">u</a> ] <cite>The Unicode Standard v12.0</cite>, <a href="https://www.unicode.org/versions/latest/ch13.pdf">Mongolian</a>, pp532-541.</li>
-<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Mongolian_language">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Mongolian_language">Mongolian language</a>.</li>
-</ol>
 </section>
 
 
