@@ -29,6 +29,8 @@
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../common/egcode.js"></script>
+<script src="../common/references.js"></script>
+<script src="refs.js"></script>
 
 <script src="zgh-examples.js"></script>
 <script src="zgh-translit.js">  </script>
@@ -56,7 +58,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->20 November, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->5 December, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -64,28 +66,25 @@
 
 <div class="section">
   <p>This page gathers  basic information about the Tifinagh script, in particular the so-called Neo-Tifinagh writing system, and its use for the Standard Moroccan Tamazight and other Northern Berber languages. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Neo-Tifinagh using Unicode.</p>
-
-<p>See also the companion document, <a href="block" class="linkHighlight">Tifinagh character notes</a>, for detailed information about specific Unicode characters.</p>
 <p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
 
 
 
-<details>
+<p id="usage"></p>
+<script>addUsageAdvice('Tifinagh')</script>
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Tifinagh','Standard Moroccan Tamazight'); return false;">More about using this page</a></summary>
+<div id="about"></div>
+</details>
+
+<details class="supportdocs noprint">
 <summary class="instructions"><a href="../links?iso=Tfng">Related pages</a>.</summary>
 </details>
 
-
-
-<details>
-<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
-</details>
-
-
-
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Tifinagh','Standard Moroccan Tamazight'); return false;">About this page</a></summary>
-<div id="about"></div>
+<summary class="instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
 </details>
 </div>
 
@@ -147,6 +146,23 @@
 <p>Numbers use <mark>ASCII digits</mark>.</p>
 </section>
 
+
+
+
+
+
+
+
+<div id="showTranscriptions">
+<div>Character lists show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div>
+<label>Transliterate 
+<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
+<div><label>N. Berber <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+<div><label>Arabic <input type="checkbox" onChange="toggleTranscription('listTrans2', this.checked)"/></label></div>
+</div>
 
 
 
@@ -228,23 +244,6 @@
 
 
 
-<div id="showTranscriptions">
-<div>Character lists show:</div>
-<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
-<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div>
-<label>Transliterate 
-<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
-<div><label>N. Berber <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
-<div><label>Arabic <input type="checkbox" onChange="toggleTranscription('listTrans2', this.checked)"/></label></div>
-</div>
-
-
-
-
-
-
-
 
   
 <section id="vowels">
@@ -253,6 +252,11 @@
 
 <section id="vowelPhonemes">
 <h3>Vowel sounds</h3>
+
+<p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+<!--p class="instructions">Phones in a lighter colour are non-native or allophones. Source <a href="https://en.wikipedia.org/wiki/Tai_Nuea_language#Phonology">Wikipedia</a>.</p-->
+
+
 <div style="margin-left: 7.5%;">
 <svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
 
@@ -316,7 +320,6 @@
   <text x="94" y="165" class="ipa" text-anchor="end">æ</text> 
 </svg>
 </div>
-<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">w</a>..</p>
 </section>
 
 
@@ -331,8 +334,8 @@
 
 
     <p>Neo-Tifinagh is designed to be fully vowelled (and therefore, alphabetic), however, other writing sytems such as Touareg and older variants are not.</p>
-<p>The ancient Berber script used a single vowel symbol, read normally as <span class="ipa">a</span>, but <span class="ipa">i</span> after <span class="ipa">y</span>, and <span class="ipa">u</span> after <span class="ipa">w</span>.<a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a> Some Tuareg orthographies display a single vowel letter at the end of a word. </p>
-<p>The vowel letters of Neo-Tifinagh are:<a class="fnref" href="http://en.wikipedia.org/wiki/Tifinagh">w</a></p>
+<p>The ancient Berber script used a single vowel symbol, read normally as <span class="ipa">a</span>, but <span class="ipa">i</span> after <span class="ipa">y</span>, and <span class="ipa">u</span> after <span class="ipa">w</span>.<tt>u</tt> Some Tuareg orthographies display a single vowel letter at the end of a word. </p>
+<p>The vowel letters of Neo-Tifinagh are:<tt>ws</tt></p>
 
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc,trans2">ⵉ␣ⵓ␣ⴻ␣ⴰ</figure>
@@ -343,7 +346,7 @@
 <section id="altvowels">
 <h3>Vowels in other orthographies</h3>
 
-<p>The Unicode block has two further vowel letters, used for Tuareg. <a class="fnref" href="https://www.unicode.org/L2/L2010/10096-tifinagh-vowels.pdf">aa</a></p>
+<p>The Unicode block has two further vowel letters, used for Tuareg. <tt>ap</tt></p>
 
 
 <figure class="otherBox auto" data-cols="ipa,trans,transc">ⵦ␣ⵧ</figure>
@@ -361,6 +364,10 @@
 
 <section id="consonantPhonemes">
 <h3>Consonant sounds</h3>
+
+<p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+<!--p class="instructions">Phones in a lighter colour are non-native or allophones. Source <a href="https://en.wikipedia.org/wiki/Tai_Nuea_language#Phonology">Wikipedia</a>.</p-->
+
 <table class="ipaTable">
 <thead>
 <tr>
@@ -469,8 +476,6 @@ alveolar</th>
 </tr>
 </tbody>
 </table>
-
-<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">wp</a>. Sounds in parentheses are non-native or allophones.</p>
 </section>
 
 
@@ -480,7 +485,7 @@ alveolar</th>
 <section id="basicconsonants">
 <h3>IRCAM consonants</h3>
 
-<p>IRCAM  defines the following set of characters for Neo-Tifinagh, which is a subset of the Unicode Tifinagh block designed to cater for Tarifit, Tamazight, and Tachelhit languages.<a class="fnref" href="http://en.wikipedia.org/wiki/Tifinagh">w</a></p>
+<p>IRCAM  defines the following set of characters for Neo-Tifinagh, which is a subset of the Unicode Tifinagh block designed to cater for Tarifit, Tamazight, and Tachelhit languages.<tt>ws</tt></p>
 
 
 <section id="stops">
@@ -531,7 +536,7 @@ alveolar</th>
 
 
 <p>There is a significant amount of variation in the use of Tifinagh symbols between different regions.</p>
-<p class="instructions">A useful exploration of the differences →<a class="fnref" href="https://www.unicode.org/L2/L2010/10278-tifinagh-evolution.pdf">a</a>.</p>
+<p class="instructions">A useful exploration of the differences <tt class="more">ae</tt>.</p>
 </section>
 
 
@@ -572,7 +577,7 @@ alveolar</th>
 <section id="tuareg_clusters">
 <h4>Clusters in Tuareg</h4>
 
-<p>Consonant clusters may, however, be displayed as ligated forms in Tuareg.<a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a> This is particularly useful in text that is not fully vowelled. There are two ways to achieve this in Unicode-encoded text.</p>
+<p>Consonant clusters may, however, be displayed as ligated forms in Tuareg.<tt>u</tt> This is particularly useful in text that is not fully vowelled. There are two ways to achieve this in Unicode-encoded text.</p>
 
 <figure class="otherBox auto" data-cols="trans">&#x2D7F;</figure>
 
@@ -614,7 +619,7 @@ alveolar</th>
 
 
 <p>Diacritic marks from other blocks have been used in some notations, to represent vowels and foreign consonants, eg. <span class="charExample"><span class="ex" lang="ber">ⴵ̇</span> <span class="ipa">a</span></span>, <span class="charExample"><span class="ex" lang="ber">ⵉ̉</span> <span class="ipa">iː</span></span>, and <span class="charExample"><span class="ex" lang="ber">ⴱ̂</span> <span class="ipa">p</span></span>. </p>
-<p>Sometimes, when two diacritics are shown above the base, they are dispayed side by side rather than stacked,eg. <span class="charExample"><span class="ex" lang="ber">ⵉ̇̄</span> <span class="ipa">eː</span></span>.<a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></p>
+<p>Sometimes, when two diacritics are shown above the base, they are dispayed side by side rather than stacked,eg. <span class="charExample"><span class="ex" lang="ber">ⵉ̇̄</span> <span class="ipa">eː</span></span>.<tt>u</tt></p>
 </section>
 
 
@@ -637,7 +642,7 @@ alveolar</th>
 <section id="dir">
 <h2>Text direction</h2>
 <p>The  Neo-Tifinagh writing system is written horizontally, and left-to-right.</p>
-<p>Modern Tuareg is written horizontally also, but right-to-left,<a class="fnref" href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Tfng">s</a> and reverses the glyphs of the characters, eg. <span class="eg" lang="ber">ⴰⵙⵉⴹⵢⴰⵙ⵰</span> would be written <span class="charExample" translate="no"><span class="ex" lang="ber" style="transform: rotateY(180deg); display: inline-block;">ⴰⵙⵉⴹⵢⴰⵙ⵰</span></span>. This is not possible in plain text, and is achieved here by applying a CSS transform.</p>
+<p>Modern Tuareg is written horizontally also, but right-to-left,<tt>s</tt> and reverses the glyphs of the characters, eg. <span class="eg" lang="ber">ⴰⵙⵉⴹⵢⴰⵙ⵰</span> would be written <span class="charExample" translate="no"><span class="ex" lang="ber" style="transform: rotateY(180deg); display: inline-block;">ⴰⵙⵉⴹⵢⴰⵙ⵰</span></span>. This is not possible in plain text, and is achieved here by applying a CSS transform.</p>
 <p>Early inscriptions of Tifinagh were written vertically, bottom-to-top, as well as horizontally left-to-right and right-to-left. Sometimes boustrophedon was used.</p>
 </section>
 
@@ -749,8 +754,8 @@ alveolar</th>
 </tr>
 </tbody>
 </table>
-<p>Tifinagh  uses western  punctuation.<a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a></p>
-<p>In some areas (such as Niger, Mali, Algeria <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3482.pdf">pa</a>) <span class="codepoint"><span lang="ber">&#x2D70;</span> [<a href="/scripts/tifinagh/block#char2D70"><span class="uname">U+2D70 TIFINAGH SEPARATOR MARK</span></a>]</span> (<span class="name">tazarast</span>) is used for phrase and sentence breaks.<a class="fnref" href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Tfng"><cite>s</cite></a> In right to left text, this character should be mirrored, however this isn't currently possible in Unicode.</p>
+<p>Tifinagh  uses western  punctuation.<tt>u</tt></p>
+<p>In some areas (such as Niger, Mali, Algeria <tt>pcs</tt>) <span class="codepoint"><span lang="ber">&#x2D70;</span> [<a href="/scripts/tifinagh/block#char2D70"><span class="uname">U+2D70 TIFINAGH SEPARATOR MARK</span></a>]</span> (<span class="name">tazarast</span>) is used for phrase and sentence breaks.<tt>s</tt> In right to left text, this character should be mirrored, however this isn't currently possible in Unicode.</p>
 </section>
 
 
@@ -880,7 +885,7 @@ alveolar</th>
 
 
 <details id="linebreak_details">
-<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<summary>Show legend <tt>ul,#Properties</tt></summary>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
 </details>
 </section>
@@ -1085,18 +1090,6 @@ alveolar</th>
 
 <section id="refs">
 <h2>References</h2>
-  <ol>
-<li>[ <a class="fnref" href="https://www.unicode.org/L2/L2010/10278-tifinagh-evolution.pdf">a</a> ] Paul Anderson, <a href="https://www.unicode.org/L2/L2010/10278-tifinagh-evolution.pdf">Evolution of the Tifinagh script in Unicode</a></li>
-<li>[ <a class="fnref" href="https://www.unicode.org/L2/L2010/10096-tifinagh-vowels.pdf">aa</a> ] Paul Anderson, <a href="https://www.unicode.org/L2/L2010/10096-tifinagh-vowels.pdf">Proposal to add two Tifinagh characters for vowels in Tuareg language variants</a></li>
-<li>[ <a class="fnref" href="https://www.academia.edu/16657385/Tifinagh_and_the_IRCAM_Explorations_in_Cursiveness_and_Bicamelarism_in_the_Tifinagh_script">b</a> ] Juan Luis Blanco, <a href="https://www.academia.edu/16657385/Tifinagh_and_the_IRCAM_Explorations_in_Cursiveness_and_Bicamelarism_in_the_Tifinagh_script">Tifinagh &amp; the IRCAM</a></li>
-    <li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN 0-19-507993-0, p115.</li>
-<li>[ <a class="fnref" href="http://std.dkuug.dk/JTC1/SC2/WG2/docs/n4069.pdf">p</a> ] Lorna A. Priest, Jon Coblentz, <a href="http://std.dkuug.dk/JTC1/SC2/WG2/docs/n4069.pdf">Documenting a fallback glyph for Tifinagh Consonant Joiner</a></li>
-<li>[ <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3482.pdf">pa</a> ] Lorna A. Priest, Jon Coblentz, Andrew Savage, <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3482.pdf">Proposal to encode additional Tifinagh characters</a></li>
-<li>[ <a class="fnref" href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Tfng">s</a> ] Scriptsource, <a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Tfng"><cite>Tifinagh (Berber)</cite></a></li>
-    <li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a> ] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch19.pdf">Tifinagh</a>, pp735-737.</li>
-<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Tifinagh">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Tifinagh"><cite>Tifinagh</cite></a>.</li>
-<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Berber_Latin_alphabet">wb</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Berber_Latin_alphabet"><cite>Berber Latin alphabet</cite></a>.</li>
-</ol>
 </section>
 
 
