@@ -103,7 +103,9 @@ var scriptNotes= {
     'bass':[['Bassa Vah', 'bassavah/']], 
     'beng':[['Bengali/Bangla', 'bengali/']],
     'bugi':[['Buginese', 'buginese/']],
-    'cans':[['UCAS/Eastern Canadian Inuktitut', 'cans/']],
+    'cans':[['UCAS/Eastern Canadian Inuktitut', 'cans/'],
+    		['Plains Cree', 'cans/cans-crk']
+    		],
     'cher':[['Cherokee', 'cherokee/']],
     'cyrl':[['Cyrillic/Russian', 'cyrillic/']],
     'deva':[['Devanagari/Hindi', 'devanagari/'], 
@@ -238,6 +240,7 @@ var scriptNotesByRegion = {
 	'Americas':[['Cherokee', 'cherokee/'],
 				['Eastern Canadian Inuktitut', 'cans/'],
 				['Osage', 'osage/'],
+				['Plains Cree', 'cans/cans-crk'],
 				['UCAS', 'cans/']
 			    ]
 	}
@@ -312,7 +315,7 @@ var orthoChart = {
 'bass':'Bassa Vah',
 'beng':'Bengali',
 'bugi':'Buginese',
-'cans':'Eastern Canadian Inuktitut', 
+'cans':'Eastern Canadian Inuktitut, Plains Cree', 
 'cher':'Cherokee',
 'cyrl':'Russian',
 'deva':'Hindi, Kashmiri',
