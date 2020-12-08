@@ -86,9 +86,15 @@ autoExpandExamples.crk = `
 ᓂᑲᒧ!|sing! (now)|(nikamo!)
 ᓂᑲᒨᐦᑲᐣ!|sing! (later)|(nikamōhkan!)
 ᓰᐱᕀ|river|(sīpiy)
-ᓰᐱᣞ|river|(sīpiy)
-ᐊᓇᐱᣞ|net|(anapiy)
+ᓰᐱᣟ|river|(sīpiy)
+ᐊᓇᐱᣟ|net|(anapiy)
 ᑮ ᐚᐸᒣᐤ|he saw him|(kī-wāpamēw)
+ᐊᓄᐦᐨ|today|anʊhʧ|(anohc)
+ᑭᑿᣟ|what|kikwaj
+ᓂᐢᑯᑕᑲᣟ|my coat|niskotakaj
+ᓇᒪᑭᑿᣟ|nothing|namakikwaj
+ᕒᐁᑎᔪ|radio|reːtijo|rētiyo
+
 
 
 `

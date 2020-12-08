@@ -1,6 +1,13 @@
 reflist = {
 
 
+"c": {
+"url":"http://www.languagegeek.com/algon/cree/cre_syllabarium.html",
+"authors": "Chris Harvey",
+"title":"LanguageGeek, ᐃᓄᒃᑎᑐᑦ – Cree Syllabarium",
+"reviewed":true,
+},
+
 "d": {
 "url":"#refs",
 "authors": "Peter T. Daniels and William Bright",
@@ -25,20 +32,21 @@ reflist = {
 "url":"http://tiro.com/Ross/Canadian_Native_Languages_V1.2.pdf",
 "authors": "Ross Mills",
 "title":"Canadian Native Languages",
-"reviewed":true
+"reviewed":true,
 },
 
 "p": {
 "url":"http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3427.pdf",
 "authors": "Michael Everson and Chris Harvey",
 "title":"Proposal to encode 39 Unified Canadian Aboriginal Syllabics in the UCS",
+"reviewed":true,
 },
 
 "t": {
 "url":"https://tusaalanga.ca/",
 "authors": "-",
 "title":"Inuktut Tusaalanga",
-"reviewed":true
+"reviewed":true,
 },
 
 "u": {
@@ -61,6 +69,7 @@ reflist = {
 "url":"https://en.wikipedia.org/wiki/Plains_Cree",
 "authors": "Wikipedia",
 "title":"Plains Cree",
+"reviewed":true,
 },
 
 "wp": {
@@ -73,7 +82,7 @@ reflist = {
 "url":"https://en.wikipedia.org/wiki/Inuktitut_syllabics",
 "authors": "Wikipedia",
 "title":"Inuktitut syllabics",
-"reviewed":true
+"reviewed":true,
 },
 
 
