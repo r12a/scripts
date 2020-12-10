@@ -29,6 +29,8 @@
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../common/egcode.js"></script>
+<script src="../common/references.js"></script>
+<script src="refs.js"></script>
 
 <script src="pa-examples.js"></script>
 <script src="pa-translit.js">  </script>
@@ -56,35 +58,33 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->23 November, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->10 December, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
 
 
 <div class="section">
-<p>This page gathers together basic information about the Gurmukhi script and its use for the Punjabi language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Punjabi using Unicode.</p>
-
-<p>See also the companion document, <a href="block" class="linkHighlight">Gurmukhi character notes</a>, for detailed information about specific Unicode characters.</p>
+<p>This page gathers  basic information about the Gurmukhi script and its use for the Punjabi language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Punjabi using Unicode.</p>
 <p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
 
 
-<details>
+
+<p id="usage"></p>
+<script>addUsageAdvice('Gurmukhi')</script>
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Gurmukhi','Panjabi'); return false;">More about using this page</a></summary>
+<div id="about"></div>
+</details>
+
+<details class="supportdocs noprint">
 <summary class="instructions"><a href="../links?iso=Guru">Related pages</a>.</summary>
 </details>
 
-
-
-<details>
-<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
-</details>
-
-
-
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Gurmukhi','Panjabi'); return false;">About this page</a></summary>
-<div id="about"></div>
+<summary class="instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
 </details>
 </div>
 
@@ -109,72 +109,56 @@
 
 <section id="history">
 <h2>Usage &amp; history</h2>
-    <p>From <a href="http://scriptsource.org/scr/Arab">Scriptsource</a>: </p>
-    <blockquote>
-<p>The Gurmukhi script is used primarily by followers of the Sikh religion in India to write the Punjabi language. Gurmukhi writing is historically derived from Brahmi, but its present form was developed in the 16th century by Guru Angad, successor to the founder of the Sikh religion, Guru Nanak. The word Gurmukhi means 'from the mouth of the guru'. Muslims in the Pakistani Punjab write Punjabi in the Persian script; use of the Persian script for writing Punjabi is called Shahmukhi.</p>
-<p>&nbsp;</p>
-</blockquote>
-    <p>From <a href="http://en.wikipedia.org/wiki/Gurmukhi_script">Wikipedia</a>:</p>
-<blockquote>
-<p>Gurmukhi (IPA: [ɡʊɾmʊkʰi]; Gurmukhi(literary means &quot;from Guru's mouth&quot;): ਗੁਰਮੁਖੀ) is a Sikh script modified, standardized and used by the second Sikh Guru, Guru Angad (1563–1606). It is used by Sikhs as one of two scripts to write the Punjabi language, the other being the Perso-Arabic Shahmukhi script used by Punjabi Muslims.</p>
-<p>The primary scripture of Sikhism, Guru Granth Sahib is written in Gurmukhī, in various dialects often coalesced under the generic title of Sant Bhasha.</p>
-</blockquote>
+<p>The Gurmukhi script is used primarily by followers of the Sikh religion in India, where it is the official script of the Punjabi language. The original Sikh scriptures and most of the historic Sikh literature have also been written in the Gurmukhi script.</p>
+<p>Muslim speakers of Punjabi in Pakistan use a Persian version of the Arabic script (called <span class="name">shahmukhi</span>).</p>
+<p>Names:</p>
+<ul>
+<li><span class="ex" lang="pa">ਗੁਰਮੁਖੀ</span> <span class="ipa">ɡʊɾmʊkʰi</span> Gurmukhi</li>
+</ul>
+<p>The current form of Gurmukhi was developed in the 16th century by Guru Angad, successor to the founder of the Sikh religion, Guru Nanak. It's roots lie in the historical Brahmi script.</p>
+<p class="instructions">Sources: <a href="http://scriptsource.org/scr/Arab">Scriptsource</a> and <a href="http://en.wikipedia.org/wiki/Gurmukhi_script">Wikipedia</a>.</p>
 </section>
-  
 
 
 
 
-  <div id="features">
-  <table>
-      <tbody id="featureTableBody">
-     </tbody>
-  </table>
-    <p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
+
+<div id="features">
+<table>
+<tbody id="featureTableBody">
+</tbody>
+</table>
+<p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>
 </div>
 
 
 
 
 
-  <section id="type">
+<section id="type">
 <h2>Basic features</h2>
-    <p>The Gurmukhi script is an <span class="newterm"><a class="termref" href="../glossary/#abugida">abugida</a></span>, ie. consonants carry an inherent vowel sound that is overridden using vowel signs. See the table to the right for a brief overview of features for the modern Panjabi orthography. (See the <a href="../../scripts/featurelist/#key">key</a>. Character counts exclude ASCII characters.)</p>
-<p>The following list describes some distinctive characteristics of Gurmuki script.</p>
-<ul>
-<li>The inherent vowel is pronounced <span class="ipa">ə</span> and normally transcribed <span class="trans">a</span>. It is usually not pronounced at the end of a word.</li>
-<li>There are no unique shapes for independent vowels. Instead vowel-signs are added to one of three consonants that are used only as vowel carriers, however Unicode provides separate code points for all the combinations.</li>
-<li>Punjabi is a tonal language. Tones are normally indicated by the use of certain consonants, rather than diacritics.</li>
-<li>Although consonant clusters are frequent, there are very few conjuncts, mostly just <span class="trans">r</span> and <span class="trans">h</span>, which are subjoined. This leads to difficulties for automatic transcription.</li>
-<li>Consonant gemination is indicated, unusually for an Indian script, by a special diacritic that appears before the letter being lengthened.</li>
-<li>There are two diacritics for nasalisation, <span class="trans">tippi</span> and <span class="trans">bindi</span>, each used in different phonetic contexts.</li>
-</ul>
+<p>The Gurmukhi script is an <span class="newterm"><a class="termref" href="../glossary/#abugida">abugida</a></span>, ie. consonants carry an inherent vowel sound that is overridden using vowel signs. See the table to the right for a brief overview of features for the modern Panjabi orthography.</p>
+
+<p>Gurmukhi text runs <mark>left to right in horizontal lines</mark>.</p>
+<p>Words are <mark>separated by spaces</mark>.</p>
+<p>Gujarati uses <mark>32 consonant letters</mark>. The repertoire can be extended by applying the nukta diacritic to 5 characters, to represent foreign sounds, particularly for Urdu or Persian.</p>
+<p>The Punjabi orthography has an <mark>inherent vowel</mark>, and represents other vowels using <mark>9 vowel-signs</mark>, including <mark>1 prescript</mark> and no circumgraphs.  All vowel-signs are <mark>combining marks</mark>, and are stored after the base character. The inherent vowel is usually not pronounced at the end of a word.</p>
+<p>There are <mark>10 independent vowels</mark>, one for each vowel sound, including the inherent vowel, and these are used to write all standalone vowel sounds. There are no unique shapes for independent vowels. Instead vowel-signs are added to one of three consonants that are used only as vowel carriers, however Unicode provides separate code points for all the combinations and deprecates the use of 2 of the carriers.</p>
+<p>There are two diacritics for <mark>nasalisation</mark>, <span class="trans">tippi</span> and <span class="trans">bindi</span>, each used in different phonetic contexts.</p>
+<p>Punjabi is a <mark>tonal language</mark>. Tones are normally indicated by the use of certain consonants, rather than diacritics.</p>
+<p>Although <mark>consonant clusters</mark> are frequent, there are <mark>very few conjuncts</mark>, mostly just <span class="trans">r</span> and <span class="trans">h</span>, which are <mark>subjoined</mark>. This leads to difficulties for automatic transcription.</p>
+<p><mark>Consonant gemination</mark> is indicated, unusually for an Indian script, by a special diacritic that appears before the letter being lengthened.</p>
+<p>A final <span class="trans">h</span> can be indicated using the <span class="name">visarga</span>, but otherwise <mark>final consonants</mark> are written using ordinary characters.</p>
+<p>other combining marks of note</p>
+<p>Gurmukhi has its own set of <mark>native digits</mark>, however modern text tends to use European digits.</p>
+<p>Punctuation is mostly western.</p>
 </section>
 
 
 
 
 
- <section id="dir">
-<h2>Text direction</h2>
-    <p>Gurmukhi script is written horizontally and left to right.</p>
-</section>
 
-  
-  
-  
-  
-<section id="structure">
-<h2>Structure</h2>
-     <p>As an abugida, the basic unit of text is the orthographic syllable. Consonant clusters occur at the beginning of orthographic syllables, however they are generally not marked specially.</p>
-<p>Gurmukhi uses spaces to separate text into words.</p>
-<p>Punjabi is unusual among major Indian scripts in that it is a tonal language with three tones: high rising falling (transcribed as <span class="trans">á</span>), low rising (transcribed as <span class="trans">à</span>), and level (not transcribed). The tones cover one or two syllables.<a class="fnref" href="#refs">d</a> However, there appears to be a lack of clarity about the fine detail of how the tonal system works.<a class="fnref" href="https://scholarsarchive.byu.edu/cgi/viewcontent.cgi?article=3982&context=etd">b</a></p>
-</section>
-
-
-
-  
-  
 <div id="showTranscriptions">
 <div>Character lists show:</div>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
@@ -190,6 +174,129 @@
 
 
 
+<section id="index">
+<h2>Character index</h2>
+
+<p class="instructions">This section  lists non-ASCII characters used for Punjabi, and  other characters in the Gurmukhi script block not used by modern Punjabi. For descriptions of usage, click on ↓.</p>
+
+
+
+
+<section id="index_letters">
+<h3>Letters</h3>
+
+
+<section id="index_letters_consonants">
+<h4>Basic consonants</h4>
+<figure class="characterBox auto" data-cols="trans" data-links="#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants">ਪ␣ਭ␣ਬ␣ਫ␣ਤ␣ਧ␣ਦ␣ਥ␣ਚ␣ਝ␣ਜ␣ਛ␣ਟ␣ਢ␣ਡ␣ਠ␣ਕ␣ਘ␣ਗ␣ਖ␣ਵ␣ਸ␣ਹ␣ਮ␣ਨ␣ਞ␣ਣ␣ਙ␣ਯ␣ਰ␣ੜ␣ਲ</figure>
+</section>
+
+<section id="index_letters_extended">
+<h4>Extended consonants</h4>
+<figure class="characterBox auto" data-cols="trans" data-links="#nukta,#nukta,#nukta">&#x0A5E;␣&#x0A5B;␣&#x0A36;␣&#x0A59;␣&#x0A5A;␣&#x0A33;</figure>
+</section>
+
+<section id="index_letters_vowels">
+<h4>Vowels</h4>
+<figure class="characterBox auto" data-cols="trans" data-links="#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns">ਈ␣ਊ␣ਇ␣ਉ␣ਏ␣ਓ␣ਅ␣ਐ␣ਔ␣ਆ</figure>
+</section>
+
+<section id="index_letters_other">
+<h4>Other</h4>
+<figure class="characterBox auto"  data-cols="" data-links="#otherletters,#otherletters">ੴ</figure>
+</section>
+
+<section id="index_letters_unused">
+<h4>Not used for modern Punjabi</h4>
+<figure class="deprecatedBox auto" data-cols="">ੲ␣ੳ</figure>
+</section>
+</section>
+
+
+
+<section id="index_cchars">
+<h3>Combining marks</h3>
+
+
+<section id="index_cchars_vowels">
+<h4>Vowels</h4>
+<figure class="characterBox auto" data-cols="trans" data-links="#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns">ੀ␣ੂ␣ਿ␣ੁ␣ੇ␣ੋ␣ੈ␣ੌ␣ਾ</figure>
+</section>
+
+
+<section id="index_cchars_other">
+<h4>Other</h4>
+<figure class="characterBox auto"  data-cols="" data-links="#nukta,#suppression,#nasalisation,#finals,#finals">੍␣਼␣ੱ␣ੰ␣ਂ</figure>
+<figure class="auxiliaryBox auto"  data-cols="" data-links="#nukta,#suppression,#nasalisation,#finals,#finals">ਃ␣ੵ␣ਁ</figure>
+</section>
+
+<section id="index_cchars_unused">
+<h4>Not used for modern Punjabi</h4>
+<figure class="archaicBox auto"  data-cols="">ੑ</figure>
+</section>
+</section>
+
+
+
+
+  
+<section id="index_numbers">
+<h3>Numbers</h3>
+
+<figure class="characterBox auto" data-links="#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits" data-cols="">੦␣੧␣੨␣੩␣੪␣੫␣੬␣੭␣੮␣੯</figure>
+</section>
+
+
+
+
+  
+<section id="index_punctuation">
+<h3>Punctuation</h3>
+
+<figure class="characterBox auto" data-links="#phrase,#phrase,#abbrev,#quotations,#quotations,#quotations,#quotations,#abbrev" data-cols="">‘␣’␣“␣”</figure>
+<figure class="auxiliaryBox auto" data-links="#phrase,#phrase,#abbrev,#quotations,#quotations,#quotations,#quotations,#abbrev" data-cols="">।</figure>
+
+<section id="index_punctuation_cldr">
+<h4>CLDR additions</h4>
+<figure class="auxiliaryBox auto" data-cols="">‐␣–␣—␣′␣″</figure>
+</section>
+
+<section id="index_punctuation_unused">
+<h4>Not used for modern Punjabi</h4>
+<figure class="otherBox auto" data-cols="">੶</figure>
+</section>
+</section>
+
+
+
+
+  
+<section id="index_symbols">
+<h3>Symbols</h3>
+
+<figure class="characterBox auto" data-links="#currency,#symbols" data-cols="">☬</figure>
+</section>
+</section>
+
+
+
+  
+  
+  
+  
+<section id="structure">
+<h2>Structure</h2>
+     <p>As an abugida, the basic unit of text is the orthographic syllable. Consonant clusters occur at the beginning of orthographic syllables, however they are generally not marked specially.</p>
+<p>Gurmukhi uses spaces to separate text into words.</p>
+<p>Punjabi is unusual among major Indian scripts in that it is a tonal language with three tones: high rising falling (transcribed as <span class="trans">á</span>), low rising (transcribed as <span class="trans">à</span>), and level (not transcribed). The tones cover one or two syllables.<tt>d</tt> However, there appears to be a lack of clarity about the fine detail of how the tonal system works.<tt>b</tt></p>
+</section>
+
+
+
+  
+  
+
+
 <section id="vowels">
 <h2>Vowels</h2>
 
@@ -197,7 +304,8 @@
 <section id="vowelPhonemes">
 <h3>Vowel sounds</h3>
 
-<p class="instructions">Click on the sound groups to see where else in the document each of the sounds are referred to.</p>
+<p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+<p class="instructions">Phones in a lighter colour are non-native or allophones. Source <a href="https://en.wikipedia.org/wiki/Gujarati_phonology">Wikipedia</a>.</p>
 
 
 <section id="plain_vowels">
@@ -313,7 +421,6 @@
 </tr>
 </tbody>
 </table-->
-<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Gujarati_phonology">wp</a>. Sounds in parentheses are non-native or allophones.</p>
 </section>
 
 
@@ -415,12 +522,11 @@
 
 
 
-
- <section id="inherent">
+<section id="inherent">
 <h3>Inherent vowel</h3>
 <p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
 
-<p>The inherent vowel is usually transcribed as <span class="trans">a</span> and pronounced <span class="ipa">ə</span>.  So <span class="charExample" translate="no"><span class="ex" lang="pa">ਕ</span></span> is pronounced <span class="ipa">kə</span>.</p>
+<p>The Punjabi inherent vowel is usually transcribed as <span class="trans">a</span> and pronounced <span class="ipa">ə</span>.  So <span class="codepoint" translate="no"><span lang="pa">&#x0A15;</span> [<a href="/scripts/gurmukhi/block#char0A15"><span class="uname">U+0A15 GURMUKHI LETTER KA</span></a>]</span> is pronounced <span class="ipa">kə</span>.</p>
 </section>
 
 
@@ -431,18 +537,37 @@
 
 
 
+
 <section id="vowelsigns">
 <h3>Vowel-signs</h3>
 <p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
 
-<p>Other than the inherent vowel, vowel sounds that follow a consonant sound are represented using vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="tmp">ਕੀ</span> <span class="ipa">ki</span></span>. This includes no diphthongs, 1 prescript sign, and no circumgraphs.</p>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ੀ␣ੂ␣ਿ␣ੁ␣ੇ␣ੋ␣ੈ␣ੌ␣ਾ</figure>
-<p>Vowels <span class="trans">i</span> and <span class="trans">u</span> may be pronounced differently in certain contexts. With a high tone they represent <span class="trans">é</span> and <span class="trans">ó</span>, eg. <span class="eg" lang="pa">ਕਿਹੜਾ</span>, and <span class="eg" lang="pa">ਕੁਹੜਾ</span>. <a class="fnref" href="#refs">d</a></p>
-<p>Combined with a preceding <span class="trans">ah</span> they produce <span class="trans">ǽ</span> and <span class="trans">ɔ́</span>, respectively, eg. <span class="eg" lang="pa">ਕਹਿਣਾ</span>, and <span class="eg" lang="pa">ਵਹੁਟੀ</span>.<a class="fnref" href="#refs"> d</a></p>
-<p>Gujarati vowel-signs are all combining characters. A single Unicode character is used per base consonant, and there are no vowel-signs with multiple parts. All vowel-signs are typed and stored after the base consonant, whether or not they precede it when displayed, and the font puts them in the correct place for display.</p>
-<p>Three  of the vowel-signs are <a class="termref" href="../glossary/#spacingmark">spacing marks</a>, meaning that they consume horizontal space when added to a base consonant.</p>
+<p>Non-inherent  vowel sounds that follow a consonant  are represented using <span class="name">vowel-signs</span>, eg. <span class="codepoint" translate="no"><span lang="pa">&#x0A15;&#x0A40;</span> [<a href="/scripts/gurmukhi/block#char0A15"><span class="uname">U+0A15 GURMUKHI LETTER KA</span></a> + <a href="/scripts/gurmukhi/block#char0A40"><span class="uname">U+0A40 GURMUKHI VOWEL SIGN II</span></a>]</span> is pronounced <span class="ipa">ki</span>.</p>
+<p>Gujarati vowel-signs are all combining characters. A single Unicode character is used per base consonant, and there are no circumgraphs. All vowel-signs are typed and stored after the base consonant, whether or not they precede it when displayed, and the font puts them in the correct place for display.
+</p><p>Three  of the vowel-signs are <a class="termref" href="../glossary/#spacingmark">spacing marks</a>, meaning that they consume horizontal space when added to a base consonant.</p>
+
+
+
+
+<section id="prescript_vowels">
+<h4>Prescript vowel-sign</h4>
+<p>One vowel-sign appears to the left of the base consonant letter or cluster, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਕਿ</span></span>.</p>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ਿ</figure>
+<p>This is a  combining mark that is always stored after the base consonant. The font places the glyph before the base consonant.</p>
 </section>
 
+
+
+
+
+<section id="other_vowels">
+<h4>Other vowel-signs</h4>
+<p>The following combining marks are also used to indicate vowel sounds.</p>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ੀ␣ੂ␣ੁ␣ੇ␣ੋ␣ੈ␣ੌ␣ਾ</figure>
+<p>Vowels <span class="trans">i</span> and <span class="trans">u</span> may be pronounced differently in certain contexts. With a high tone they represent <span class="trans">é</span> and <span class="trans">ó</span>, eg. <span class="eg" lang="pa">ਕਿਹੜਾ</span>, and <span class="eg" lang="pa">ਕੁਹੜਾ</span>. <tt>d</tt></p>
+<p>Combined with a preceding <span class="trans">ah</span> they produce <span class="trans">ǽ</span> and <span class="trans">ɔ́</span>, respectively, eg. <span class="eg" lang="pa">ਕਹਿਣਾ</span>, and <span class="eg" lang="pa">ਵਹੁਟੀ</span>.<tt>d</tt></p>
+</section>
+</section>
 
 
 
@@ -532,7 +657,8 @@
 <section id="consonantPhones">
 <h3>Consonant sounds</h3>
 
-<p class="instructions">Click on the sounds to see where else in the document they are referred to.</p>
+<p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+<p class="instructions">Phones in a lighter colour are non-native or allophones. Source <a href="https://en.wikipedia.org/wiki/Gujarati_phonology">Wikipedia</a>.</p>
 
 <table class="ipaTable">
 <thead>
@@ -645,10 +771,32 @@ alveolar</th>
 
 <p>Gurmukhi has a set of consonants that mostly map onto the traditional <a href="../glossary/#brahmiphoneticmatrix" class="termref">Brahmi phonetic matrix</a>, though not all are used for articulatory distinctions.</p>
 
+<section id="stops">
+<h4>Stops</h4>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ਪ␣ਭ␣ਬ␣ਫ␣ਤ␣ਧ␣ਦ␣ਥ␣ਚ␣ਝ␣ਜ␣ਛ␣ਟ␣ਢ␣ਡ␣ਠ␣ਕ␣ਘ␣ਗ␣ਖ</figure>
+</section>
+
+
+
+<section id="fricatives">
+<h4>Fricatives</h4>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ਵ␣ਸ␣ਹ</figure>
+</section>
+
+
+<section id="nasals">
+<h4>Nasals</h4>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ਮ␣ਨ␣ਞ␣ਣ␣ਙ</figure>
+</section>
+
+
+<section id="liquids">
+<h4>Liquids</h4>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ਯ␣ਰ␣ੜ␣ਲ</figure>
+</section>
+
+
+
 
 <p><span class="codepoint" translate="no"><span lang="pa">&#x0A05;</span> [<a href="/scripts/gurmukhi/block#char0A05"><span class="uname">U+0A05 GURMUKHI LETTER A</span></a>]</span> is also  classified as a null consonant and is described in <a class="secref">independentvowels</a>.</p>
 
@@ -660,7 +808,7 @@ alveolar</th>
 <section id="nukta">
 <h3>Repertoire extension (nukta)</h3>
         
-  <p><span class="codepoint" translate="no"><span lang="pa">&#x0A3C;</span> [<a href="/scripts/gurmukhi/block#char0A3C"><span class="uname">U+0A3C GURMUKHI SIGN NUKTA</span></a>]</span> is used to represent foreign sounds, particularly for Urdu or Persian, eg. in <span class="charExample" translate="no"><span class="ex" lang="hi">ਜ਼ਖ਼ਮੀ</span> <span class="trans">zˑxˑmī</span> <span class="meaning">injured</span></span>, the dot changes <span class="charExample" translate="no"><span class="ex" lang="hi">ਜ</span> <span class="ipa">ʤ</span></span> to <span class="charExample" translate="no"><span class="ex" lang="hi">ਜ਼</span> <span class="ipa">z</span>, and  <span class="charExample" translate="no"><span class="ex" lang="hi">ਖ</span> <span class="ipa">kʰ</span></span> to <span class="charExample" translate="no"><span class="ex" lang="hi">ਖ਼</span> <span class="ipa">x</span></span></span>. The following graphemes  combine nukta with an existing consonant.</p>
+  <p><span class="codepoint" translate="no"><span lang="pa">&#x0A3C;</span> [<a href="/scripts/gurmukhi/block#char0A3C"><span class="uname">U+0A3C GURMUKHI SIGN NUKTA</span></a>]</span> is used to represent foreign sounds, particularly for Urdu or Persian, eg. in <span class="charExample" translate="no"><span class="ex" lang="pa">ਜ਼ਖ਼ਮੀ</span> <span class="trans">zˑxˑmī</span> <span class="meaning">injured</span></span>, the dot changes <span class="charExample" translate="no"><span class="ex" lang="pa">ਜ</span> <span class="ipa">ʤ</span></span> to <span class="charExample" translate="no"><span class="ex" lang="pa">ਜ਼</span> <span class="ipa">z</span>, and  <span class="charExample" translate="no"><span class="ex" lang="pa">ਖ</span> <span class="ipa">kʰ</span></span> to <span class="charExample" translate="no"><span class="ex" lang="pa">ਖ਼</span> <span class="ipa">x</span></span></span>. The following graphemes  combine nukta with an existing consonant.</p>
 
 <figure class="auto"  data-cols="ipa,trans,transc">ਖ਼␣ਗ਼␣ਲ਼␣ਸ਼␣ਜ਼␣ਫ਼</figure>
 
@@ -682,10 +830,10 @@ alveolar</th>
 <figure class="auto" data-cols="ipa,trans,transc">ਘ␣ਝ␣ਢ␣ਧ␣ਭ</figure>
 
 
-<p>The letters above<span class="charExample" translate="no"><span class="trans"></span></span> indicate a low tone when at the beginning of a word or syllable, eg. <span class="eg" lang="pa">ਘੋੜਾ</span>, or medially between a short and long vowel, eg. <span class="eg" lang="pa">ਪਘਾਰਨਾ</span>.  They indicate a high  tone when elsewhere, eg. <!--span class="charExample" translate="no"><span class="ex" lang="pa">ਘੜ</span> <span class="trans">gʰᵃṛ</span> <span class="ipa">kə̀ɽ</span> <span class="meaning">house</span></span>, and--> <span class="eg" lang="pa">ਕੁਝ</span>.<a class="fnref" href="http://www.omniglot.com/writing/punjabi.htm"> o</a></p>
-<p>In addition, the consonant <span class="codepoint" translate="no"><span lang="pa">&#x0A39;</span> [<a href="/scripts/gurmukhi/block#char0A39"><span class="uname">U+0A39 GURMUKHI LETTER HA</span></a>]</span> is only pronounced <span class="ipa">h</span> when it occurs word initially, eg. <span class="eg" lang="pa">ਹਰੀ</span>. In other locations it is unpronounced and  indicates that the preceding vowel has a high tone, eg. <span class="eg" lang="pa">ਮੀਹ</span>, and <span class="eg" lang="pa">ਚੜ੍ਹ</span>. When used after a consonant, it appears subjoined below that consonant.<a class="fnref" href="#refs">d</a></p>
+<p>The letters above<span class="charExample" translate="no"><span class="trans"></span></span> indicate a low tone when at the beginning of a word or syllable, eg. <span class="eg" lang="pa">ਘੋੜਾ</span>, or medially between a short and long vowel, eg. <span class="eg" lang="pa">ਪਘਾਰਨਾ</span>.  They indicate a high  tone when elsewhere, eg. <!--span class="charExample" translate="no"><span class="ex" lang="pa">ਘੜ</span> <span class="trans">gʰᵃṛ</span> <span class="ipa">kə̀ɽ</span> <span class="meaning">house</span></span>, and--> <span class="eg" lang="pa">ਕੁਝ</span>.<tt>o</tt></p>
+<p>In addition, the consonant <span class="codepoint" translate="no"><span lang="pa">&#x0A39;</span> [<a href="/scripts/gurmukhi/block#char0A39"><span class="uname">U+0A39 GURMUKHI LETTER HA</span></a>]</span> is only pronounced <span class="ipa">h</span> when it occurs word initially, eg. <span class="eg" lang="pa">ਹਰੀ</span>. In other locations it is unpronounced and  indicates that the preceding vowel has a high tone, eg. <span class="eg" lang="pa">ਮੀਹ</span>, and <span class="eg" lang="pa">ਚੜ੍ਹ</span>. When used after a consonant, it appears subjoined below that consonant.<tt>d</tt></p>
 <p>When the letter ha follows a short <span class="trans">i</span> or <span class="trans">u</span>, it changes the vowel's phonetic value from [ɪ] and [ʊ] to [é] and [ó], respectively, and indicates a high tone.</p>
-<p>According to Omniglot, the conjuncts <span class="charExample" translate="no"><span class="ex" lang="pa">ਗ੍ਹ</span> <span class="trans">g͓h</span></span>, <span class="charExample" translate="no"><span class="ex" lang="pa">ਜ੍ਹ</span> <span class="trans">ʤ͓h</span></span>, <span class="charExample" translate="no"><span class="ex" lang="pa">ਢ੍ਹ</span> <span class="trans">ɖʰ͓h</span></span>, <span class="charExample" translate="no"><span class="ex" lang="pa">ਦ੍ਹ</span> <span class="trans">d͓h</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="pa">ਬ੍ਹ</span> <span class="trans">b͓h</span></span> indicate a level tone when at the beginning of a word or syllable, and a low rising tone when elsewhere.<a class="fnref" href="http://www.omniglot.com/writing/punjabi.htm">o</a></p>
+<p>According to Omniglot, the conjuncts <span class="charExample" translate="no"><span class="ex" lang="pa">ਗ੍ਹ</span> <span class="trans">g͓h</span></span>, <span class="charExample" translate="no"><span class="ex" lang="pa">ਜ੍ਹ</span> <span class="trans">ʤ͓h</span></span>, <span class="charExample" translate="no"><span class="ex" lang="pa">ਢ੍ਹ</span> <span class="trans">ɖʰ͓h</span></span>, <span class="charExample" translate="no"><span class="ex" lang="pa">ਦ੍ਹ</span> <span class="trans">d͓h</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="pa">ਬ੍ਹ</span> <span class="trans">b͓h</span></span> indicate a level tone when at the beginning of a word or syllable, and a low rising tone when elsewhere.<tt>o</tt></p>
 <p>The diacritic <span class="codepoint" translate="no"><span lang="pa">&#x0A51;</span> [<a href="/scripts/gurmukhi/block#char0A51"><span class="uname">U+0A51 GURMUKHI SIGN UDAAT​</span></a>]</span> can also be used in older texts to indicate a high tone.</p>
 <p>(The sound <span class="ipa">h</span> after a vowel can be produced using <span class="codepoint" translate="no"><span lang="pa">&#x0A03;</span> [<a href="/scripts/gurmukhi/block#char0A03"><span class="uname">U+0A03 GURMUKHI SIGN VISARGA​</span></a>]</span>, but it is only rarely used.)</p>
 </section>
@@ -698,23 +846,22 @@ alveolar</th>
 
 <p>Syllable-final consonant sounds are generally represented by ordinary consonant characters (or perhaps a conjunct with <span class="trans">h</span> for tonal indications). However, a final h can sometimes be represented by the <span class="name">visarga</span> (<span class="codepoint" translate="no"><span lang="pa">&#x0A03;</span> [<a href="/scripts/gurmukhi/block#char0A03"><span class="uname">U+0A03 GURMUKHI SIGN VISARGA</span></a>]</span>).</p>
 </section>
-</section>
 
 
 
 
 <section id="clusters">
-<h2>Consonant clusters</h2>
+<h3>Consonant clusters</h3>
 
 
 <section id="conjuncts">
-<h3>Conjunct clusters</h3>
+<h4>Conjunct clusters</h4>
 <p class="explanatoryintro">When the shapes of constituent consonants in a cluster are changed or merged to indicate the lack of intervening vowels, this is referred to as a conjunct.</p>
 <p>Clusters of consonants without intervening vowel sounds are generally not marked in Gurmukhi. There are just a few exceptions to that rule, and in each case the cluster is marked by a subjoined version of the second consonant.</p>
 <p>The character <span class="trans">h</span> in non-initial position is used to indicate tones (see <a class="secref">consonant_tones</a>). When  the <span class="trans">h</span> follows a consonant, it is subjoined to it, eg. ਚੜ੍ਹ ʧɽ͓h ʧə́ɽ climb.</p>
 <p>Syllable-initial clusters also occur with <span class="trans">r</span> and <span class="trans">v</span>, and are also indicated using subjoined forms, eg. <span class="eg" lang="pa">ਪ੍ਰਬੰਧ</span>, and <span class="eg" lang="pa">ਸ੍ਵਰਗ</span>. Subjoined <span class="trans">v</span> is much less common in modern text.</p>
 <p>The way to indicate the above conjunct clusters is to add <span class="codepoint" translate="no"><span lang="pa">&#x0A4D;</span> [<a href="/scripts/gurmukhi/block#char0A4D"><span class="uname">U+0A4D GURMUKHI SIGN VIRAMA​</span></a>]</span> before the subjoined character, eg. <span class="ex">ਪ੍ਰ</span> is produced by the sequence <span class="codepoint" translate="no"><span lang="pa">&#x0A2A;</span> + <span lang="pa">&#x0A4D;</span> + <span lang="pa">&#x0A30;</span> [<a href="/scripts/gurmukhi/block#char0A2A"><span class="uname">U+0A2A GURMUKHI LETTER PA</span></a> + <a href="/scripts/gurmukhi/block#char0A4D"><span class="uname">U+0A4D GURMUKHI SIGN VIRAMA</span></a> + <a href="/scripts/gurmukhi/block#char0A30"><span class="uname">U+0A30 GURMUKHI LETTER RA</span></a>]</span>.</p>
-<p>The virama may also be used occasionally to suppress the vowel  in Sanskritised text, or in dictionaries for extra phonetic information.<a class="fnref" href="http://en.wikipedia.org/wiki/Gurmukhi_script">w</a></p>
+<p>The virama may also be used occasionally to suppress the vowel  in Sanskritised text, or in dictionaries for extra phonetic information.<tt>ws</tt></p>
 <p>Occasionally, a cluster ending with <span class="trans">y</span>  is rendered using <span class="codepoint" translate="no"><span lang="pa">&#x0A75;</span> [<a href="/scripts/gurmukhi/block#char0A75"><span class="uname">U+0A75 GURMUKHI SIGN YAKASH​</span></a>]</span>, eg. .<span class="charExample" translate="no"><span class="ex" lang="pa">ਕਲੵਚਰੈ</span> <span class="trans">kly̆ʧrɛ</span></span>, though this appears to be quite rare.</p>
 <p>&nbsp;</p>
 </section>
@@ -723,7 +870,7 @@ alveolar</th>
 
 
 <section id="gemination">
-<h3>Geminated consonants</h3>
+<h4>Geminated consonants</h4>
 
 <p>Doubling or reinforcement of a consonant sound is indicated, unusually for an indic script, using a diacritic, <span class="codepoint" translate="no"><span lang="pa">&#x0A71;</span> [<a href="/scripts/gurmukhi/block#char0A71"><span class="uname">U+0A71 GURMUKHI ADDAK​</span></a>]</span>. It is typed before the consonant (In this way it resembles the small <span class="trans">tsu</span> in Japanese), and is placed to the left of the consonant it affects (not over it), eg. <span class="eg" lang="pa">ਪੱਕੀ</span>.</p>
 <p>The diacritic may appear over the right side of the preceding consonant, but if that consonant has a vowel sign or extension above the horizontal topline, it may be displayed on a short extension of the joining line. See the example below for the Gurmukhi MT font when displaying <span class="charExample" translate="no"><span class="ex" lang="pa">ਭੁੱਲ ਭੇੱਲ ਉੱਛਲ</span></span>.</p>
@@ -731,62 +878,16 @@ alveolar</th>
 <p lang="pa"><img src="images/addak.png" alt="ਭੁੱਲ ਭੇੱਲ ਉੱਛਲ"></p>
 <figcaption>Placement of the addak diacritic.</figcaption>
 </figure>
-<p>Geminated <span class="trans">mm</span> and <span class="trans">nn</span> may be written using a <a href="#nasalisation">nasalisation diacritic</a><span class="codepoint" translate="no"></span> associated with the preceding vowel, eg. <span class="eg" lang="pa">ਲੰਮੀ</span>.<a class="fnref" href="#refs"> d</a></p>
+<p>Geminated <span class="trans">mm</span> and <span class="trans">nn</span> may be written using a <a href="#nasalisation">nasalisation diacritic</a><span class="codepoint" translate="no"></span> associated with the preceding vowel, eg. <span class="eg" lang="pa">ਲੰਮੀ</span>.<tt>d</tt></p>
 <p>&nbsp;</p>
 </section>
-
+</section>
 </section>
 
 
 
 
 
-  
-
-  
-
-
-
-
-<section id="diacritics">
-<h2>Combining marks</h2>
-  <p>The Gurmukhi block includes the following combining characters, over and above the vowel signs described earlier. Follow the links for more information.</p>
-<p>5 combining marks are used commonly for conjuncts, repertoire extension, gemination, and nasalisation (x2), respectively.</p>
-
-<figure class="characterBox auto" data-cols="trans,transc" data-links="#conjuncts,#nukta,#gemination,#nasalisation,#nasalisation">੍␣਼␣ੱ␣ੰ␣ਂ</figure>
-
-<p>3 more are used infrequently for abbreviation, conjuncts, and nasalisation, respectively.</p>
-
-<figure class="auxiliaryBox auto" data-cols="trans,transc" data-links="#abbreviation,#conjuncts,#nasalisation">ਃ␣ੵ␣ਁ</figure>
-
-<p><span class="codepoint" translate="no"><span lang="pa">&#x0A03;</span> [<a href="/scripts/gurmukhi/block#char0A03"><span class="uname">U+0A03 GURMUKHI SIGN VISARGA</span></a>]</span> is used to represent a final consonant&nbsp; (see <a class="secref">finals</a>), as well as for abbreviations (see <a class="secref">abbreviation</a>).</p>
-<p>1  was used historically to mark tones.</p>
-
-<figure class="archaicBox auto" data-cols="trans" data-links="#consonant_tones">ੑ</figure>
-
-</section>
-  
-
-
-
-
-  <section id="punctuation">
-<h2>Punctuation</h2>
- <p>Punjabi uses western punctuation, including the following non-ASCII characters.</p>
-
-<figure class="characterBox auto"  data-cols="trans,transc">‘␣’␣“␣”</figure>
-
-<p>CLDR also lists the following non-ASCII characters.</p>
-
-<figure class="auxiliaryBox auto"  data-cols="trans,transc">‐␣–␣—␣′␣″</figure>
- <p> The Unicode Gurmukhi block has a single punctuation character, <span class="codepoint" translate="no"><span lang="pa">&#x0A76;</span> [<a href="/scripts/gurmukhi/block#char0A76"><span class="uname">U+0A76 GURMUKHI ABBREVIATION SIGN</span></a>]</span>, but it doesn't appear to be much used.</p>
-
-<figure class="otherBox auto" data-cols="">੶</figure>
-  <p>  Gurmukhi occasionally uses  sentence-final punctuation from the Devanagari block.</p>
-
-<figure class="auxiliaryBox auto" data-cols="">।</figure>
-</section>
-  
 
 
 
@@ -812,12 +913,24 @@ alveolar</th>
 
 <section id="numbers">
 <h2>Numbers</h2>
-    <p>Gurmukhi has its own set of decimal digits, however modern text tends to use European digits.<a class="fnref" href="http://en.wikipedia.org/wiki/Gurmukhi_script">w</a></p>
+    <p>Gurmukhi has its own set of decimal digits, however modern text tends to use European digits.<tt>ws</tt></p>
 
 <figure class="characterBox auto" data-cols="trans,transc">੦␣੧␣੨␣੩␣੪␣੫␣੬␣੭␣੮␣੯</figure>
 
 </section>
-  
+
+
+
+
+
+<section id="dir">
+<h2>Text direction</h2>
+
+<p>Gurmukhi script runs left to right in horizontal lines.</p>
+</section>
+
+
+
   
   
 
@@ -906,7 +1019,25 @@ alveolar</th>
   
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
+<table class="character_list">
+<tbody>
+<tr>
+<th scope="row">phrase</th>
+<td><p><span class="codepoint" translate="no"><span lang="pa">&#x002C;</span> [<a href="/scripts/devanagari/block#char002C"><span class="uname">U+002C COMMA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="pa">&#x003B;</span> [<a href="/scripts/devanagari/block#char003B"><span class="uname">U+003B SEMICOLON</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="pa">&#x003A;</span> [<a href="/scripts/devanagari/block#char003A"><span class="uname">U+003A COLON</span></a>]</span></p></td>
+</tr>
+<tr>
+<th scope="row">sentence</th>
+<td><p><span class="codepoint" translate="no"><span lang="pa">&#x002E;</span> [<a href="/scripts/devanagari/block#char002E"><span class="uname">U+002E FULL STOP</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="pa">&#x003F;</span> [<a href="/scripts/devanagari/block#char003F"><span class="uname">U+003F QUESTION MARK</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="pa">&#x0021;</span> [<a href="/scripts/devanagari/block#char0021"><span class="uname">U+0021 EXCLAMATION MARK</span></a>]</span></p>
+<span class="codepoint"><span lang="pa">&#x0964;</span> <a href="/scripts/devanagari/block#char0964">[<span class="uname">U+0964 DEVANAGARI DANDA</span>]</a></span> (infrequently)</td>
+</tr>
+</tbody>
+</table>
 <p>Gurmukhi  generally uses western  punctuation. </p>
+<p><span class="codepoint"><span lang="pa">&#x0964;</span> <a href="/scripts/devanagari/block#char0964">[<span class="uname">U+0964 DEVANAGARI DANDA</span>]</a></span> is only used occasionally.</p>
 </section>
 
 
@@ -915,7 +1046,22 @@ alveolar</th>
 
 <section id="bracketing">
 <h3>Parentheses &amp; brackets</h3>
-<p class="prompts">tbd</p>
+<table class="character_list">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>start</th>
+<th>end</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>standard</th>
+<td><p><span class="codepoint" translate="no"><span lang="pa">&#x0028;</span> [<a href="/scripts/devanagari/block#char0028"><span class="uname">U+0028 LEFT PARENTHESIS</span></a>]</span></p></td>
+<td><p><span class="codepoint" translate="no"><span lang="pa">&#x0029;</span> [<a href="/scripts/devanagari/block#char0029"><span class="uname">U+0029 RIGHT PARENTHESIS</span></a>]</span></p></td>
+</tr>
+</tbody>
+</table>
 </section>
 
 
@@ -924,7 +1070,31 @@ alveolar</th>
   
 <section id="quotations">
 <h3>Quotations</h3>
-<p class="prompts">tbd</p>
+
+<table class="character_list">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>start</th>
+<th>end</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">initial</th>
+<td><p><span class="codepoint" translate="no"><span lang="pa">&#x201C;</span> [<a href="/scripts/devanagari/block#char201C"><span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span></a>]</span></p></td>
+<td><span class="codepoint" translate="no"><span lang="pa">&#x201D;</span> [<a href="/scripts/devanagari/block#char201D"><span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span></a>]</span></td>
+</tr>
+<tr>
+<th scope="row">nested</th>
+<td><p><span class="codepoint" translate="no"><span lang="pa">&#x2018;</span> [<a href="/scripts/devanagari/block#char2018"><span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span></a>]</span></p></td>
+<td><span class="codepoint" translate="no"><span lang="pa">&#x2019;</span> [<a href="/scripts/devanagari/block#char2019"><span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span></a>]</span></td>
+</tr>
+</tbody>
+</table>
+
+<p>The default quote marks for Gurmukhi are <span class="codepoint" translate="no"><span lang="pa">&#x201C;</span> [<a href="/scripts/devanagari/block#char201C"><span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span></a>]</span> at the start, and <span class="codepoint" translate="no"><span lang="pa">&#x201D;</span> [<a href="/scripts/devanagari/block#char201D"><span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span></a>]</span> at the end.</p>
+<p>When an additional quote is embedded within the first, the quote marks are <span class="codepoint" translate="no"><span lang="pa">&#x2018;</span> [<a href="/scripts/devanagari/block#char2018"><span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span></a>]</span> and <span class="codepoint" translate="no"><span lang="pa">&#x2019;</span> [<a href="/scripts/devanagari/block#char2019"><span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span></a>]</span>.</p>
 </section>
 
 
@@ -942,7 +1112,7 @@ alveolar</th>
   
 <section id="abbrev">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
-<p><span class="codepoint" translate="no"><span lang="pa">&#x0A03;</span> [<a href="/scripts/gurmukhi/block#char0A03"><span class="uname">U+0A03 GURMUKHI SIGN VISARGA​</span></a>]</span> is used very occasionally in Gurmukhi. In some cases it acts like a Sanskrit visarga, producing a voiceless <span class="ipa">h</span> sound, but in others it represents an abbreviation, in the same way the period is used in English.<a class="fnref" href="http://en.wikipedia.org/wiki/Gurmukhi_script">w</a></p>
+<p><span class="codepoint" translate="no"><span lang="pa">&#x0A03;</span> [<a href="/scripts/gurmukhi/block#char0A03"><span class="uname">U+0A03 GURMUKHI SIGN VISARGA​</span></a>]</span> is used very occasionally in Gurmukhi. In some cases it acts like a Sanskrit visarga, producing a voiceless <span class="ipa">h</span> sound, but in others it represents an abbreviation, in the same way the period is used in English.<tt>ws</tt></p>
 </section>
 
 
@@ -971,7 +1141,9 @@ alveolar</th>
 <section id="otherpunctuation">
 <h3>Other punctuation</h3>
 
-<p class="prompts">tbd</p>
+<p>CLDR also lists the following non-ASCII characters.</p>
+
+<figure class="auxiliaryBox auto"  data-cols="trans,transc">‐␣–␣—␣′␣″</figure>
 </section>
 </section>
 
@@ -1008,7 +1180,7 @@ alveolar</th>
 
 
 <details id="linebreak_details">
-<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<summary>Show legend <tt>ul,#Properties</tt></summary>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">B2 (break opportunity before and after)</a> the EM DASH  used to set off parenthetical text may allow line breaks before or after, but may also be affected by local orthographic rules.&nbsp;</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BA (break after)</a> indicates that it is normal to break after that character.&nbsp;</p>
@@ -1280,14 +1452,6 @@ alveolar</th>
 
 <section id="refs">
 <h2>References</h2>
-<ol>
-<li>[ <a class="fnref" href="https://scholarsarchive.byu.edu/cgi/viewcontent.cgi?article=3982&context=etd">b</a> ] Andrea Lynn Bowden, <a href="https://scholarsarchive.byu.edu/cgi/viewcontent.cgi?article=3982&context=etd"><cite>Punjabi Tonemics and the Gurmukhi Script: A Preliminary Study</cite></a></li>
-<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN 0-19-507993-0, pp395-398</li>
-<li>[ <a class="fnref" href="http://www.omniglot.com/writing/punjabi.htm">o</a> ] Omniglot, <a href="http://www.omniglot.com/writing/punjabi.htm"><cite>Punjabi</cite></a></li>
-<li>[ <a class="fnref" href="http://unicode.org/L2/L2006/06037-yakash.pdf">s</a> ] Sukhjinder Sidhu, <a href="http://unicode.org/L2/L2006/06037-yakash.pdf"><cite>Proposal to encode Gurmukhi Sign Yakash</cite></a></li>
-<li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch12.pdf">u</a> ] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch12.pdf">Gurmukhi</a>, pp475-479.</li>
-<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Gurmukhi_script">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Gurmukhi_script"><cite>Gurmukhi script</cite></a></li>
-</ol>
 </section>
 
 
