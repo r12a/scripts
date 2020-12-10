@@ -29,6 +29,9 @@
 <script src="../linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../common/egcode.js"></script>
+<script src="../common/references.js"></script>
+<script src="refs.js"></script>
+
 <script src="khb-examples.js"></script>
 <script src="khb-translit.js">  </script>
 </head>
@@ -54,7 +57,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->26 November, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->10 December, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -62,30 +65,30 @@
 
 <div class="section">
   <p>This page gathers  basic information about the New Tai Lü script and its use for the Tai Lü language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Tai Lü using Unicode.</p>
-<p>See also the companion document, <a href="block" class="linkHighlight">New Tai Lü character notes</a>, for detailed information about specific Unicode characters.</p>
 <p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 <p><em>Font issues:</em> New Tai Lü vowels are all ordinary spacing letters, including prescript vowels, which need to be inserted before the consonant in the text stream. However, some fonts incorrectly attempt to reorder those vowels for display. This includes Noto Sans New Tai Lue, and Dai Banna SIL Book/Light. Another SIL font, Nokyung, appears to render the text correctly.</p>
 
 
 
 
-<details>
+<p id="usage"></p>
+<script>addUsageAdvice('New Tai Lue')</script>
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'New Tai Lü','Tai Lü'); return false;">More about using this page</a></summary>
+<div id="about"></div>
+</details>
+
+<details class="supportdocs noprint">
 <summary class="instructions"><a href="../links?iso=Talu">Related pages</a>.</summary>
 </details>
 
-
-
-<details>
-<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
-</details>
-
-
-
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'New Tai Lü','Tai Lü'); return false;">About this page</a></summary>
-<div id="about"></div>
+<summary class="instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
 </details>
 </div>
+
+
 
 
 
@@ -138,7 +141,7 @@
 <p>Words are separated by spaces.</p>
 
 <p>Each basic consonant is one of a pair, denoting either a <mark>high or low tonal register</mark> 
-for the same phonetic sound.  This is very regular – each sound is represented by 2 consonant letters. Tone is indicated by a combination of the consonant class and tone marks.<a class="fnref" href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></p>
+for the same phonetic sound.  This is very regular – each sound is represented by 2 consonant letters. Tone is indicated by a combination of the consonant class and tone marks.<tt>ws</tt></p>
 <p><mark>No conjuncts</mark> are used for consonant clusters. Although, some clusters in Tai Tham are represented as single characters in New Tai Lü, in particular high tone variants such as <span class="charExample" translate="no"><span class="ex" lang="khb">ᦜ</span></span> and <span class="charExample" translate="no"><span class="ex" lang="khb">ᦖ</span></span> (<span class="charExample" translate="no"><span class="ex" lang="nod">ᩉᩖ</span></span> and <span class="charExample" translate="no"><span class="ex" lang="nod">ᩉ᩠ᨾ</span></span> in Tai Tham).</p>
 <p><mark>Syllable-initial</mark> clusters use <mark>6 dedicated letters</mark> (for 3  pairs of consonants:<span class="charExample" translate="no"><span class="ex" lang="khb">ᦦᦨ ᦧᦩ ᦪᦫ</span></span>. There are no medial consonant letters. </p>
 <p><mark>Syllable-final</mark> consonant sounds use <mark>7 dedicated letters</mark>, which cover all needs.</p>
@@ -246,7 +249,7 @@ for the same phonetic sound.  This is very regular – each sound is represented
      <p>The script is syllable-based. </p>
 <p>A syllable's phonetic structure is C(ʷ)(V)(C) (unchecked) or C(ʷ)(V)C (checked). Unchecked syllables end with a vowel or one of the sonorants <span class="ipa">m, n, ŋ, w, j.</span> Checked syllables end with one of <span class="ipa">ʔ, p, t, k</span>.</p>
 <p>The onset consonant sequence may be one of <span class="listIPA">kʷ, xʷ, sʷ</span>.</p>
-<p>Tai Lü has 6 tones in unchecked syllables. In checked syllables there are two tones.<a class="fnref" href="https://en.wikipedia.org/wiki/Tai_Lue_language">wl</a></p>
+<p>Tai Lü has 6 tones in unchecked syllables. In checked syllables there are two tones.<tt>w</tt></p>
 <p>The characters used to represent the phonetics follow the model<br>
 (pV) C (V) (VS) (Fs|Fp) (T)<br>
 where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem" lang="khb">ᦰ</span>, Fs is one of the set of final sonorants, Fp is one of the set of final plosives, and T is a tone marker.</p>
@@ -444,8 +447,8 @@ where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem"
 
 <figure class="characterBox auto" data-cols="ipa,trans">ᦵ␣ᦷ␣ᦶ␣ ␣ᦺ</figure>
 
-<p>Because New Tai Lü uses a fully visual encoding model (since Unicode 8.0)<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a>, the 4 vowel signs that appear to the left of the consonant are therefore typed and stored before the consonant, even though they are pronounced after.</p>
-<p>Note that <span class="codepoint" translate="no"><span lang="khb">&#x19B6;</span> [<a href="/scripts/newtailue/block#char19B6"><span class="uname">U+19B6 NEW TAI LUE VOWEL SIGN AE</span></a>]</span> should not be typed as two successive <span class="codepoint" translate="no"><span lang="khb">&#x19B5;</span> [<a href="/scripts/newtailue/block#char19B5"><span class="uname">U+19B5 NEW TAI LUE VOWEL SIGN E</span></a>]</span> characters.<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></p>
+<p>Because New Tai Lü uses a fully visual encoding model (since Unicode 8.0)<tt>u</tt>, the 4 vowel signs that appear to the left of the consonant are therefore typed and stored before the consonant, even though they are pronounced after.</p>
+<p>Note that <span class="codepoint" translate="no"><span lang="khb">&#x19B6;</span> [<a href="/scripts/newtailue/block#char19B6"><span class="uname">U+19B6 NEW TAI LUE VOWEL SIGN AE</span></a>]</span> should not be typed as two successive <span class="codepoint" translate="no"><span lang="khb">&#x19B5;</span> [<a href="/scripts/newtailue/block#char19B5"><span class="uname">U+19B5 NEW TAI LUE VOWEL SIGN E</span></a>]</span> characters.<tt>u</tt></p>
 </section>
 
 
@@ -457,8 +460,8 @@ where: pV is a prescript vowel, VS is the vowel shortener <span class="listItem"
 
 <p>The following combining marks are also used to indicate vowel sounds, sometimes on their own, and sometimes in combination with others.</p>
 <figure class="characterBox auto" data-cols="ipa,trans">ᦲ␣ᦹ␣ᦳ␣ᦴ␣ᦸ␣ᦰ␣ᦱ␣ ␣ᦻ␣ᦿ␣ᦼ␣ᦽ␣ᦾ␣ᧀ</figure>
-<p>In closed syllables, long vowels are usually pronounced short except for <span class="codepoint" translate="no"><span lang="khb">&#x19B1;</span> [<a href="/scripts/newtailue/block#char19B1"><span class="uname">U+19B1 NEW TAI LUE VOWEL SIGN AA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="khb">&#x19B4;</span> [<a href="/scripts/newtailue/block#char19B4"><span class="uname">U+19B4 NEW TAI LUE VOWEL SIGN UU</span></a>]</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></p>
-<p>The typical use of <span class="codepoint" translate="no"><span lang="khb">&#x19B0;</span> [<a href="/scripts/newtailue/block#char19B0"><span class="uname">U+19B0 NEW TAI LUE VOWEL SIGN VOWEL SHORTENER</span></a>]</span> is to produce a short open <span class="ipa">a</span> vowel, however it is also used to indicate shortness for the vowel-sign combinations described in the next section, in which case it represents just the glottal stop. It is also sometimes used to distinguish homonyms or for onomatopoeia.<a class="fnref" href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></p>
+<p>In closed syllables, long vowels are usually pronounced short except for <span class="codepoint" translate="no"><span lang="khb">&#x19B1;</span> [<a href="/scripts/newtailue/block#char19B1"><span class="uname">U+19B1 NEW TAI LUE VOWEL SIGN AA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="khb">&#x19B4;</span> [<a href="/scripts/newtailue/block#char19B4"><span class="uname">U+19B4 NEW TAI LUE VOWEL SIGN UU</span></a>]</span>.<tt>ws</tt></p>
+<p>The typical use of <span class="codepoint" translate="no"><span lang="khb">&#x19B0;</span> [<a href="/scripts/newtailue/block#char19B0"><span class="uname">U+19B0 NEW TAI LUE VOWEL SIGN VOWEL SHORTENER</span></a>]</span> is to produce a short open <span class="ipa">a</span> vowel, however it is also used to indicate shortness for the vowel-sign combinations described in the next section, in which case it represents just the glottal stop. It is also sometimes used to distinguish homonyms or for onomatopoeia.<tt>ws</tt></p>
 <p>Six of these single character vowel-signs represent diphthongs that combine the basic vowel sound with <span class="ipa">i̯</span>. (There is another in the list of prescript vowel-signs. and one more in the list of composite vowels.)</p>
 </section>
 </section>
@@ -1130,7 +1133,7 @@ alveolar</th>
 <section id="finals">
 <h3>Final consonants</h3>
 
-<p>New Tai Lü has a set of dedicated syllable-final consonants. A small hook-like modification indicates that they have no inherent vowel.<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></p>
+<p>New Tai Lü has a set of dedicated syllable-final consonants. A small hook-like modification indicates that they have no inherent vowel.<tt>u</tt></p>
 
 <figure class="characterBox auto" data-cols="ipa,trans">ᧇ␣ᧆ␣ᧅ␣ᧄ␣ᧃ␣ᧂ␣ᧁ</figure>
 
@@ -1146,8 +1149,8 @@ alveolar</th>
 
 
 <p>New Tai Lü has two ligatures, used for abbreviations.</p>
-<p><span class="codepoint" translate="no"><span lang="khb">&#x19DE;</span> [<a href="/scripts/newtailue/block#char19DE"><span class="uname">U+19DE NEW TAI LUE SIGN LAE</span></a>]</span> represents the syllable <span class="charExample" translate="no"><span class="ex" lang="khb">ᦶᦟᦰ</span> <span class="trans">ɛ͕ḻʔ</span> <span class="ipa">lɛʔ</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></p>
-<p><span class="codepoint" translate="no"><span lang="khb">&#x19DF;</span> [<a href="/scripts/newtailue/block#char19DF"><span class="uname">U+19DF NEW TAI LUE SIGN LAEV</span></a>]</span> represents the syllable <span class="charExample" translate="no"><span class="ex" lang="khb">ᦶᦟᧁᧉ</span> <span class="trans">ɛ͕ḻw̽²</span> <span class="ipa">lɛu˩</span></span>.<a class="fnref" href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></p>
+<p><span class="codepoint" translate="no"><span lang="khb">&#x19DE;</span> [<a href="/scripts/newtailue/block#char19DE"><span class="uname">U+19DE NEW TAI LUE SIGN LAE</span></a>]</span> represents the syllable <span class="charExample" translate="no"><span class="ex" lang="khb">ᦶᦟᦰ</span> <span class="trans">ɛ͕ḻʔ</span> <span class="ipa">lɛʔ</span></span>.<tt>ws</tt></p>
+<p><span class="codepoint" translate="no"><span lang="khb">&#x19DF;</span> [<a href="/scripts/newtailue/block#char19DF"><span class="uname">U+19DF NEW TAI LUE SIGN LAEV</span></a>]</span> represents the syllable <span class="charExample" translate="no"><span class="ex" lang="khb">ᦶᦟᧁᧉ</span> <span class="trans">ɛ͕ḻw̽²</span> <span class="ipa">lɛu˩</span></span>.<tt>ws</tt></p>
 </section>
   
 
@@ -1156,7 +1159,7 @@ alveolar</th>
 
 <section id="clusters">
 <h3>Consonant clusters</h3>
-<p>Clusters of consonants do not occur regularly<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a>, so there is no virama.</p>
+<p>Clusters of consonants do not occur regularly<tt>u</tt>, so there is no virama.</p>
 <p>Onset consonants can be labialised, but there are distinct code points for that, eg. <span class="charExample" translate="no"><span class="ex" lang="khb">ᦦ</span> <span class="transc">kʷ</span></span>.</p>
 <p>Clusters at syllable boundaries (final consonant followed by onset) don't interact and dedicated code points are available for syllable-final code points, so there is no confusion about syllable boundaries.</p>
 </section>
@@ -1566,13 +1569,13 @@ alveolar</th>
 
 <p id="def-checked" class="explanatoryintro definitionStub"></p>
 
-<p>New Tai Lü has two tone marks, which are written at the end of an unchecked syllable. Because consonants come in pairs to denote two tonal registers, the two tone marks allow for representation of six specific tones.<a class="fnref" href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a></p>
+<p>New Tai Lü has two tone marks, which are written at the end of an unchecked syllable. Because consonants come in pairs to denote two tonal registers, the two tone marks allow for representation of six specific tones.<tt>ws</tt></p>
 <p>The tone marks are ordinary spacing characters.</p>
 
 <figure class="characterBox auto" data-cols="trans">ᧈ␣ᧉ</figure>
 
 
-<p>Tai Lü has 2 tones in checked syllables, and 6 tones in unchecked syllables.<a class="fnref" href="https://en.wikipedia.org/wiki/Tai_Lue_language">wl</a></p>
+<p>Tai Lü has 2 tones in checked syllables, and 6 tones in unchecked syllables.<tt>w</tt></p>
 <table>
 <tbody>
 <tr>
@@ -1640,12 +1643,12 @@ alveolar</th>
 
 <section id="digits">
 <h2>Numbers</h2>
-    <p>New Tai Lü has its own set of digits, derived from the Tai Tham <span class="name">hora</span> set.<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></p>
+    <p>New Tai Lü has its own set of digits, derived from the Tai Tham <span class="name">hora</span> set.<tt>u</tt></p>
 
 <figure class="characterBox auto" data-cols="trans">᧐␣᧑␣᧒␣᧓␣᧔␣᧕␣᧖␣᧗␣᧘␣᧙␣᧚</figure>
 
 
-<p><span class="codepoint" translate="no"><span lang="khb">&#x19DA;</span> [<a href="/scripts/newtailue/block#char19DA"><span class="uname">U+19DA NEW TAI LUE THAM DIGIT ONE</span></a>]</span> is an alternative glyph for <span class="codepoint" translate="no"><span lang="khb">&#x19D1;</span> [<a href="/scripts/newtailue/block#char19D1"><span class="uname">U+19D1 NEW TAI LUE DIGIT ONE</span></a>]</span> when it might otherwise be confused with the vowel <span class="codepoint" translate="no"><span lang="khb">&#x19B1;</span> [<a href="/scripts/newtailue/block#char19B1"><span class="uname">U+19B1 NEW TAI LUE VOWEL SIGN AA</span></a>]</span>.<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a></p>
+<p><span class="codepoint" translate="no"><span lang="khb">&#x19DA;</span> [<a href="/scripts/newtailue/block#char19DA"><span class="uname">U+19DA NEW TAI LUE THAM DIGIT ONE</span></a>]</span> is an alternative glyph for <span class="codepoint" translate="no"><span lang="khb">&#x19D1;</span> [<a href="/scripts/newtailue/block#char19D1"><span class="uname">U+19D1 NEW TAI LUE DIGIT ONE</span></a>]</span> when it might otherwise be confused with the vowel <span class="codepoint" translate="no"><span lang="khb">&#x19B1;</span> [<a href="/scripts/newtailue/block#char19B1"><span class="uname">U+19B1 NEW TAI LUE VOWEL SIGN AA</span></a>]</span>.<tt>u</tt></p>
 </section>
 
 
@@ -1941,7 +1944,7 @@ alveolar</th>
 
 
 <details id="linebreak_details">
-<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<summary>Show legend <tt>ul,#Properties</tt></summary>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CL">CL (close punctuation)</a>  should be kept with the preceding character.&nbsp;The class CL is closely related to the class CP (Close Parenthesis). They differ only in that CP will not introduce a break when followed by a letter or number, which prevents breaks within constructs like “(s)he”.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#EX">EX (exclamation mark/interrogation)</a> behave like closing characters, except in relation to postfix (PO) and non-starter characters (NS).</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">NS (nonstarters)</a> cannot start a line, but unlike CL they may allow a break in some contexts when they follow one or more space characters.</p>
@@ -2135,11 +2138,6 @@ alveolar</th>
 
 <section id="refs">
 <h2>References</h2>
-<ol>
-<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch16.pdf">The Unicode Standard v11.0</a></li>
-<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/New_Tai_Lue_alphabet" target="_blank">New Tai Lue alphabet</a></li>
-<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Tai_Lue_language">wl</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Tai_Lue_language" target="_blank">Tai Lue language</a></li>
-</ol>
 </section>
 
 
