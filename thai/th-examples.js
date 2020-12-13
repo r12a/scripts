@@ -1,5 +1,5 @@
 /*
-@ Source: 
+@ Source: https://en.wiktionary.org/wiki/Appendix:Thai_Swadesh_list
 § 'Noto Serif Thai'
 # 200
 ~ ltr
@@ -199,6 +199,295 @@ autoExpandExamples.th = `
 ไข่|egg|kʰàj
 ไม่|no, not|mâj
 ไหม|question particle|máj
+
+
+
+ฉัน|I||chǎn
+ผม|I||phǒm
+กู|I||kuu
+คุณ|you (singular)||khun
+เธอ|you (singular)||thəə
+มึง|you (singular)||mʉŋ
+เขา|he||khǎo
+เรา|we||rao
+พวกเรา|we||phûak.rao
+พวกคุณ|you (plural)||phûak.khun
+พวกเขา|they||phûak.kháo
+นี้|this||níi
+นี่|this||demonstrative pronoun
+นั้น|that||nán
+นั่น|that||demonstrative pronoun
+ที่นี่|here||thîi.nîi
+ที่นั่น|there||thîi.nân
+ใคร|who||khrǎi
+ผู้ใด|who||phûu.day
+อะไร|what||a.ray
+ที่ไหน|where||thîi.nǎy
+ที่ใด|where||thîi.day
+เมื่อไร|when||mʉ̂a.ray
+อย่างไร|how||yàaŋ.ray
+ยังไง|how||yaŋ.ŋay
+ไม่|not||mây (verbal negation
+ไม่ใช่|not||mây.chây (nominal negation
+ทั้งหมด|all||tháŋ.mòt
+หมด|all||mòt
+หลาย|many||lǎay
+บ้าง|some||bâaŋ
+บาง|some||baaŋ
+สองสาม|few||sɔ̌ɔŋ.sǎam (a few; two or three
+น้อย|few||nɔ́ɔy (not many
+อื่น|other||ʉ̀ʉn
+หนึ่ง|one||nʉ̀ŋ
+สอง|two||sɔ̌ɔŋ
+สาม|three||sǎam
+สี่|four||sìi
+ห้า|five||hâa
+ใหญ่|big||yày
+โต|big||too
+ยาว|long||yaaw
+นาน|long||naan
+กว้าง|wide||kwâaŋ
+หนา|thick||nǎa
+หนัก|heavy||nàk
+เล็ก|small||lék
+น้อย|small||nɔ́ɔy
+สั้น|short||sân
+เตี้ย|short||tîa
+แคบ|narrow||khâeaep
+บาง|thin||baaŋ
+ผอม|thin||phɔ̌ɔm
+|woman||(phûu yǐŋ
+|man (adult male)||(phûu chaay
+ผู้|man (human being)||phûu
+คน|man (human being)||khon
+เด็ก|child||dèk
+ลูก|child||lûuk
+เมีย|wife||mia
+ภรรยา|wife||phanrayaa
+ผัว|husband||phǔa
+สามี|husband||sǎamii
+แม่|mother||mâeae
+พ่อ|father||phɔ̂ɔ
+สัตว์|animal||sàt
+ปลา|fish||plaa
+นก|bird||nók
+หมา|dog||mǎa
+เหา|louse||hǎo
+งู|snake||ŋuu
+หนอน|worm||nɔ̌ɔn
+ต้นไม้|tree||tôn máay
+ดง|forest||doŋ
+ป่า|forest||pàa
+กิ่งไม้|stick||kìŋ máay
+ผลไม้|fruit||phǒnlamáay
+หมาก|fruit||màak
+เม็ด|seed||mét
+เมล็ด|seed||malét
+ใบไม้|leaf||bay.máay
+รากไม้|root||râak.máay
+เปลือกไม้|bark (of a tree)||plʉ̀ak.máay
+ดอกไม้|flower||dɔ̀ɔk.máay
+หญ้า|grass||yâa
+เชือก|rope||chʉ̂ak
+หนัง|skin||nǎŋ
+ผิว|skin||phǐw
+เนื้อ|meat||nʉ́a
+เลือด|blood||lʉ̂at
+โลหิต|blood||loohìt
+กระดูก|bone||kradùuk
+ก้าง|bone||kâaŋ
+มัน|fat (noun)||man
+ไขมัน|fat (noun)||khǎy.man
+ไข่|egg||khày
+เขา|horn||khǎo
+หาง|tail||hǎaŋ
+ขนนก|feather||khǒn.nók
+ผม|hair||phǒm
+ขน|hair||khǒn
+หัว|head||hǔa
+หู|ear||hǔu
+ตา|eye||taa
+จมูก|nose||camùuk
+ปาก|mouth||pàak
+ฟัน|tooth||fan
+ลิ้น|tongue (organ)||lín
+เล็บ|fingernail||lép
+เท้า|foot||tháaw
+ตีน|foot||tiin
+ขา|leg||khǎa
+เข่า|knee||khào
+มือ|hand||mʉʉ
+ปีก|wing||pìik
+ท้อง|belly||thɔ́ɔŋ
+พุง|belly||phuŋ
+ไส้|guts||sây
+คอ|neck||khɔɔ
+หลัง|back||lǎŋ
+นม|breast||nom
+เต้า|breast||tâw
+หัวใจ|heart||hǔa.cay
+ตับ|liver||tàp
+ดื่ม|to drink||dʉ̀ʉm
+กิน|to eat||kin
+กัด|to bite||kàt
+ดูด|to suck||dùut
+ถุย|to spit||thǔy
+ถ่ม|to spit||thòm
+คาย|to spit||khaay
+อ้วก|to vomit||ûak
+อาเจียน|to vomit||aacian
+พัด|to blow||phát
+หายใจ|to breathe||hǎay.cay
+หัวเราะ|to laugh||hǔa.rɔ́?
+เห็น|to see||hěn
+ได้ยิน|to hear||dây.yin
+ฟัง|to hear||faŋ
+รู้|to know||rúu
+คิด|to think||khít
+มีกลิ่น|to smell||mii.klìn
+ได้กลิ่น|to smell||dây.klìn
+ดม|to smell||dom
+กลัว|to fear||klua
+นอน|to sleep||nɔɔn
+อยู่|to live||yùu
+อาศัย|to live||aasǎy
+มีชีวิต|to live||mii.chiiwít
+ตาย|to die||taay
+วาย|to die||waay
+ฆ่า|to kill||khâa
+สู้|to fight||sûu
+รบ|to fight||róp
+ล่า|to hunt||lâa
+ตี|to hit||tii
+ชน|to hit||chon
+ตัด|to cut||tàt
+บาด|to cut||bàat
+หั่น|to cut||hàn
+ผ่า|to split||phàa
+แทง|to stab||thaeaeŋ
+เสียบ|to stab||sìap
+เกา|to scratch||kao
+ขุด|to dig||khùt
+ว่ายน้ำ|to swim||wâay.náam
+บิน|to fly||bin
+เดิน|to walk||dəən
+มา|to come||maa
+นอน|to lie (as in a bed)||nɔɔn
+นั่ง|to sit||nâŋ
+ยืน|to stand||yʉʉn
+หัน|to turn||hǎn
+พลิก|to turn||phlík
+ตก|to fall||tòk
+หล่น|to fall||lòn
+ให้|to give||hây
+อุ้ม|to hold||ûm
+บีบ|to squeeze||bìip
+คั้น|to squeeze||khán
+ถู|to rub||thǔu
+นวด|to rub||nûat
+ล้าง|to wash||láaŋ
+ซัก|to wash||sák
+เช็ด|to wipe||chét
+ดึง|to pull||dʉŋ
+ลาก|to pull||lâak
+ผลัก|to push||phlàk
+ดัน|to push||dan
+กด|to push||kòt
+ขว้าง|to throw||khwâaŋ
+ปา|to throw||paa
+ผูก|to tie||phùuk
+มัด|to tie||mát
+ล่าม|to tie||lâam
+เย็บ|to sew||yép
+นับ|to count||náp
+พูด|to say||phûut
+บอก|to say||bɔ̀ɔk
+ร้อง|to sing||rɔ́ɔŋ (phleeŋ
+เล่น|to play||lên
+ลอย|to float||lɔɔy
+ไหล|to flow||lǎy
+แช่แข็ง|to freeze||châeae.khǎeŋ
+พอง|to swell||phɔɔŋ
+ตะวัน;|sun||tawan
+(ดวง)เดือน|moon||(duaŋdʉan
+(ดวง)ดาว|star||(duaŋdaaw
+น้ำ|water||náam
+ฝน|rain||fǒn
+แม่น้ำ|river||mâenáam
+ทะเลสาบ|lake||thalee.sàap
+ทะเล; มหาสมุทร|sea||thalee
+เกลือ|salt||klʉa
+หิน|stone||hǐn
+ทราย|sand||saay
+ฝุ่น|dust||fùn
+ดิน|earth||din
+เมฆ|cloud||mêek
+หมอก|fog||mɔ̀ɔk
+ฟ้า|sky||fáa
+ลม|wind||lom
+หิมะ|snow||himá
+น้ำแข็ง|ice||nám.khǎeŋ
+ควัน|smoke||khwan
+ไฟ|fire||fay
+เถ้า|ash||thâo
+ขี้เถ้า|ash||khîi.thâo
+เผา|to burn||phǎo
+ไหม้|to burn||mây
+ทาง|road||thaaŋ
+หน|road||hǒn
+ถนน|road||thànǒn
+เขา|mountain||khǎo
+ภูเขา|mountain||phuu.khǎo
+ดอย|mountain||dɔɔy
+ดอน|mountain||dɔɔn
+แดง|red||daeaeŋ
+เขียว|green||khǐaw
+เหลือง|yellow||lʉ̌aŋ
+ขาว|white||khǎaw
+ดำ|black||dam
+กลางคืน|night||klaaŋ.khʉʉn
+คืน|night||khʉʉn
+กลางวัน|day||klaaŋ.wan
+วัน|day||wan
+ปี|year||pii
+ขวบ|year||khùap
+ร้อน|warm||rɔ́ɔn
+อุ่น|warm||ùn
+หนาว|cold||nǎaw
+เย็น|cold||yen
+เต็ม|full||tem
+ใหม่|new||mày
+แก่|old||kàeae
+เก่า|old||kàw
+ดี|good||dii
+ไม่ดี|bad||mâi.dii
+เลว|bad||vile
+เน่า|rotten||nâo
+สกปรก|dirty||sòkkapròk
+ตรง|straight||troŋ
+กลม|round||klom
+คม|sharp (as a knife)||khom
+ทื่อ|dull (as a knife)||thʉ̂ʉ
+เรียบ|smooth||rîap
+เปียก|wet||pìak
+แห้ง|dry||hâeaeŋ
+ถูก|correct||thùuk
+ถูกต้อง|correct||thùuk.tɔ̂ɔŋ
+ใกล้|near||klây
+ไกล|far||klay
+ขวา|right||khwǎa
+ซ้าย|left||sáay
+ที่|at||thîi
+อยู่|at||yùu
+ใน|in||nay
+กับ|with||kàp
+ด้วย|with||dûay
+และ|and||láe
+กับ|and||kàp
+ถ้า|if||thâa
+หาก|if||hàak
+เพราะ|because||phrɔ́?
+ชื่อ|name||chʉ̂ʉ
 
 `
 

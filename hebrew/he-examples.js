@@ -125,5 +125,226 @@ autoExpandExamples.he = `
 זמן‎|time|zman|זְמַן‎
 
 
+
+אני‎|I|aˈni
+אתה‎|you (singular)|aˈta m
+את‎|you (singular)|ˈat f
+הוא‎|he|ˈhu
+אנחנו‎|we|aˈnaχnu
+אתם‎|you (plural)|aˈtɛm
+הם‎|they|ˈhɛm
+זה‎|this|ˈzɛ m
+זאת‎|this|ˈzɔt f
+אלה‎|this|ˈɛlɛ pl
+הוא‎|that|ˈhu m
+היא‎|that|ˈhi f
+הם‎|that|ˈhɛm pl
+פה‎|here|ˈpɔ
+כאן‎|here|ˈkan
+שם‎|there|ˈʃam
+מי‎|who|ˈmi
+מה‎|what|ˈma
+איפה‎|where|ˈɛfɔ
+מתי‎|when|maˈtaj
+איך‎|how|ˈɛχ
+לא‎|not|ˈlɔ
+אין‎|not|ˈɛjn
+כל‎|all|ˈkɔl
+הרבה‎|many|haʁˈbɛ
+כמה‎|some|ˈkama
+קצת‎|some|ˈkt͡sat
+מעט‎|few|mɛˈʔat
+אחר‎|other|aχˈaʁ
+אחת‎|one|aχˈat
+שתיים‎|two|ˈʃtajm
+שלוש‎|three|ʃaˈlɔʃ
+ארבע‎|four|aʁˈba
+חמש‎|five|χaˈmɛʃ
+גדול‎|big|ɡaˈdɔl
+ארוך‎|long|aʁˈɔχ
+רחב‎|wide|ʁaˈχav
+עבה‎|thick|avˈɛ
+כבד‎|heavy|kaˈvɛd
+קטן‎|small|kaˈtan
+קצר‎|short|kaˈt͡saʁ
+צר‎|narrow|ˈt͡saʁ
+דק‎|thin|ˈdak
+אישה‎|woman|iʃˈa
+גבר‎|man (male)|ˈɡɛvɛʁ
+איש‎|man (male)|ˈiʃ
+אדם‎|man (human)|aˈdam
+בן אדם‎|man (human)|ˈbɛn aˈdam
+ילד‎|child|ˈjɛlɛd
+אישה‎|wife|iʃˈa
+בעל‎|husband|ˈbaʔal
+אם‎|mother|ˈɛm
+אב‎|father|ˈav
+חיה‎|animal|χaˈja
+דג‎|fish|ˈdaɡ
+ציפור‎|bird|t͡siˈpɔʁ
+כלב‎|dog|ˈkɛlɛv
+כינה‎|louse|kiˈna
+נחש‎|snake|ˈnaχaʃ
+תולעת‎|worm|tɔˈlaʔat
+עץ‎|tree|ˈɛt͡s
+יער‎|forest|ˈjaʔaʁ
+מקל‎|stick|maˈkɛl
+פרי‎|fruit|ˈpʁi
+זרע‎|seed|ˈzɛʁa
+עלה‎|leaf|aˈlɛ
+שורש‎|root|ˈʃoʁɛʃ
+קליפה‎|bark (of a tree)|kliˈpa
+פרח‎|flower|ˈpɛʁaχ
+דשא‎|grass|ˈdɛʃɛ
+עשב‎|grass|ˈɛsɛv
+חבל‎|rope|ˈχɛvɛl
+עור‎|skin|ˈɔʁ
+בשר‎|meat|baˈsaʁ
+דם‎|blood|ˈdam
+עצם‎|bone|ˈɛt͡sɛm
+שומן‎|fat (noun)|ʃuˈman
+ביצה‎|egg|bɛˈt͡sa
+קרן‎|horn|ˈkɛʁɛn
+זנב‎|tail|zaˈnav
+נוצה‎|feather|nɔˈt͡sa
+שערה‎|hair|sɛʔaˈʁa
+ראש‎|head|ˈʁɔʃ
+אוזן‎|ear|ˈɔzɛn
+עין‎|eye|ˈajn
+אף‎|nose|ˈaf
+פה‎|mouth|ˈpɛ
+שן‎|tooth|ˈʃɛn
+לשון‎|tongue|laˈʃɔn
+ציפורן‎|fingernail|t͡siˈpɔʁɛn
+רגל‎|foot|ˈʁɛɡɛl
+רגל‎|leg|ˈʁɛɡɛl
+ברך‎|knee|ˈbɛʁɛχ
+יד‎|hand|ˈjad
+כנף‎|wing|kaˈnaf
+בטן‎|belly|ˈbɛtɛn
+מעיים‎|guts|ˈmɛʔajm
+צוואר‎|neck|t͡saˈvaʁ
+גב‎|back|ˈɡav
+שד‎|breast|ˈʃad
+לב‎|heart|ˈlɛv
+כבד‎|liver|kaˈvɛd
+שתה‎|to drink|ʃaˈta
+אכל‎|to eat|aˈχal
+נשך‎|to bite|naˈʃaχ
+מצץ‎|to suck|maˈt͡sat͡s
+ירק‎|to spit|jaˈʁak
+הקיא‎|to vomit|ˈhɛˈki
+נפח‎|to blow|naˈpaχ
+נשם‎|to breathe|naˈʃam
+צחק‎|to laugh|t͡saˈχak
+ראה‎|to see|ʁaˈʔa
+שמע‎|to hear|ʃaˈma
+ידע‎|to know|jaˈda
+חשב‎|to think|χaˈʃav
+הריח‎|to smell|hɛʁˈiaχ
+פחד‎|to fear|paˈχad
+ישן‎|to sleep|jaˈʃan
+חי‎|to live|ˈχaj
+מת‎|to die|ˈmɛt
+הרג‎|to kill|haˈʁaɡ
+נאבק‎|to fight|nɛʔɛˈvak
+צד‎|to hunt|ˈt͡sad
+הכה‎|to hit|hiˈka
+חתך‎|to cut|χaˈtaχ
+פיצל‎|to split|piˈt͡sel
+דקר‎|to stab|daˈkaʁ
+שרט‎|to scratch|saˈʁat
+חפר‎|to dig|χaˈfaʁ
+שחה‎|to swim|saˈχa
+עף‎|to fly|ˈaf
+הלך‎|to walk|haˈlaχ
+בא‎|to come|ˈba
+שכב‎|to lie (as in a bed)|ʃaˈχav
+ישב‎|to sit|jaˈʃav
+עמד‎|to stand|aˈmad
+הסתובב‎|to turn (intransitive)|ˌhis.toˈvev
+נפל‎|to fall|naˈfal
+נתן‎|to give|naˈtan
+החזיק‎|to hold|hɛχˈzik
+לחץ‎|to squeeze|laχˈat͡s
+שפשף‎|to rub|ˈʃifˈʃɛf
+שטף‎|to wash|ʃaˈtaf
+ניגב‎|to wipe|niˈɡɛv
+משך‎|to pull|maˈʃaχ
+דחף‎|to push|daˈχaf
+זרק‎|to throw|zaˈʁak
+קשר‎|to tie|kaˈʃaʁ
+תפר‎|to sew|taˈfaʁ
+ספר‎|to count|saˈfaʁ
+אמר‎|to say|aˈmaʁ
+שר‎|to sing|ˈʃaʁ
+שחק‎|to play|ʃaˈχak
+צף‎|to float|ˈt͡saf
+זרם‎|to flow|zaˈram
+קפא‎|to freeze|kaˈfa
+התנפח‎|to swell|ˌhit.na.ˈfaχ
+שמש‎|sun|ˈʃɛmɛʃ
+ירח‎|moon|ˈjaˈʁɛaχ
+כוכב‎|star|kɔˈχav
+מים‎|water|ˈmajm
+גשם‎|rain|ˈɡɛʃɛm
+נהר‎|river|naˈhaʁ
+אגם‎|lake|aˈɡam
+ים‎|sea|ˈjam
+מלח‎|salt|ˈmɛlaχ
+אבן‎|stone|ˈɛvɛn
+חול‎|sand|ˈχɔl
+אבק‎|dust|aˈvak
+ארץ‎|earth|ˈɛʁɛt͡s
+ענן‎|cloud|aˈnan
+ערפל‎|fog|aʁaˈfɛl
+שמים‎|sky|ʃaˈmajm
+רוח‎|wind|ˈʁuaχ
+שלג‎|snow|ˈʃɛlɛɡ
+קרח‎|ice|ˈkɛʁaχ
+עשן‎|smoke|aˈʃan
+אש‎|fire|ˈɛʃ
+אפר‎|ash|ˈɛfɛʁ
+שרף‎|to burn|saˈʁaf
+דרך‎|road|ˈdɛʁɛχ
+הר‎|mountain|haʁ
+אדום‎|red|aˈdɔm
+ירוק‎|green|ˈjaˈʁɔk
+צהוב‎|yellow|t͡saˈhɔv
+לבן‎|white|laˈvan
+שחור‎|black|ʃaˈχɔʁ
+לילה‎|night|ˈlajla
+יום‎|day|ˈjɔm
+שנה‎|year|ʃaˈna
+חם‎|warm|ˈχam
+קר‎|cold|ˈkaʁ
+מלא‎|full|maˈlɛ
+חדש‎|new|χaˈdaʃ
+ישן‎|old|jaˈʃan
+טוב‎|good|ˈtɔv
+רע‎|bad|ˈʁa
+רקוב‎|rotten|ʁaˈkuv
+מלוכלך‎|dirty|mluχˈlaχ
+ישר‎|straight|jaˈʃaʁ
+עגול‎|round|aˈɡɔl
+חד‎|sharp (as a knife)|ˈχad
+קהה‎|dull (as a knife)|kɛˈhɛ
+חלק‎|smooth|χaˈlak
+רטוב‎|wet|ʁaˈtɔv
+יבש‎|dry|jaˈvɛʃ
+נכון‎|correct|naˈχɔn
+קרוב‎|near|kaˈʁɔv
+רחוק‎|far|ʁaˈχɔk
+ימין‎|right|ˈjamin
+שמאל‎|left|ˈsmɔl
+ב־‎|at|ˈbə-
+ב־‎|in|ˈbə-
+עם‎|with|ˈim
+ו־‎|and|və-
+אם‎|if|ˈim
+כי‎|because|ˈki
+בגלל‎|because|biˈɡlal
+שם‎|name|ˈʃɛm
+
 `
 

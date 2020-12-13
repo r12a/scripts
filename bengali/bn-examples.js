@@ -165,5 +165,231 @@ autoExpandExamples.bn = `
 কʼরে|after|(kôʼre)
 ʼপরে|above|(ʼpôre)
 
+
+আমি|I (1sg)||ami
+তুমি|you (2sg)||tumi
+আপনি|you (2sg)||apni
+সে|he, she, it (3sg)||śe
+আমরা|we (1pl)||amra
+তোমরা|you (2pl)||tomra
+আপনারা|you (2pl)||apnara
+তারা|they (3pl)||tara
+এ|this||e
+ও|that||o
+এখানে|here||ekhane
+ওখানে|there||okhane
+কে|who||ke
+কি|what||ki
+কোথায়|where||kothaẏ
+কখন|when||kôkhôn
+কেমন|how||kemôn
+না|not||na
+সব|all||śôb
+অনেক|many||ônek
+কিছু|some||kichu
+কম|few||kôm
+অন্য|other||ônjô
+এক|one||ek
+দুই|two||dui
+তিন|three||tin
+চার|four||car
+পাঁচ|five||pãcô
+বড়|big||bôṛ
+লম্বা|long||lômba
+চওড়া|wide||côoṛa
+মোটা|thick||moṭa
+ভারী|heavy||bhari
+ছোট|small||choṭ
+বেঁটে|short||bẽṭe
+চিপা|narrow||cipa
+পাতলা|thin||patla
+মহিলা|woman||môhila
+পুরুষ|man (adult male)||puruś
+মানুষ|man (human being)||manuś
+বাচ্চা|child||bacca
+বউ|wife||bôu
+জামাই|husband||jamai
+মা|mother||ma
+আম্মা|mother||amma
+বাবা|father||baba
+আব্বা|father||abba
+জন্তু|animal||jôntu
+মাছ|fish||mach
+পাখি|bird||pakhi
+কুকুর|dog||kukur
+উকুন|louse||ukun
+সাপ|snake||śap
+কৃমি|worm||krimi
+গাছ|tree||gach
+বন|forest||bôn
+লাঠি|stick||laṭhi
+ফল|fruit||phôl
+বিচি|seed||bici
+পাতা|leaf||pata
+শিকড়|root||śikôṛ
+ছাল|bark (of a tree)||chal
+ফুল|flower||phul
+গাস|grass||gaś
+দড়ী|rope||dôṛi
+চামড়া|skin||camṛa
+মাংস|meat||maṅś
+গোশ্ত|meat||gośt
+রক্ত|blood||rôkt
+হাড়|bone||haṛ
+চর্বি|fat (noun)||côrbi
+ডিম|egg||ḍim
+শিং|horn||śiṅ
+লেজ|tail||lej
+পর|feather||pôr
+চুল|hair||cul
+মাথা|head||matha
+কান|ear||kan
+চোখ|eye||cokh
+নাক|nose||nak
+মুখ|mouth||mukh
+দাঁত|tooth||dãtô
+জীভ|tongue (organ)||jibh
+জিহবা|tongue (organ)||jihba
+নখ|fingernail||nôkh
+পা|foot||pa
+পা|leg||pa
+হাঁটু|knee||hãṭu
+হাত|hand||hat
+পাখা|wing||pakha
+পেট|belly||peṭ
+ভুড়ী|guts||bhuṛi
+গলা|neck||gôla
+পিঠ|back||piṭh
+বুক|breast||buk
+হৃদয়|heart||hridôẏ
+কলজে|liver||kôlje
+পান|to drink||pan
+খাওয়া|to eat||khaoẏa
+কামড়ানো|to bite||kamṛano
+চোষা|to suck||cośa
+ছ্যাপ|to spit||cchap
+থুতু|to spit||thutu
+বমি|to vomit||bômi
+ফুঁ দেত্তয়া|to blow||phũ dettẏa
+শ্বাস নেওয়া|to breathe||śaś neoẏa
+হাসা|to laugh||haśa
+দেখা|to see||dekha
+শোনা|to hear||śona
+জানা|to know||jana
+ভাবা|to think||bhaba
+শোঁকা|to smell||śõka
+ভয় করা|to fear||bhôẏ kôra
+ডরা|to fear||ḍôra
+ঘুমানো|to sleep||ghumano
+বাঁচা|to live||bãca
+মরা|to die||môra
+মারা|to kill||mara
+মেরে ফেলা|to kill||mere phela
+লড়া|to fight||lôṛa
+স্বীকার করা|to hunt||śikar kôra
+মারা|to hit||mara
+কাটা|to cut||kaṭa
+বিভক্ত করা|to split||bibhôkt kôra
+ছোরা মারা|to stab||chora mara
+খামচানো|to scratch||khamcano
+খোঁড়ানো|to dig||khõṛano
+সাঁতরানো|to swim||śãtôrano
+ওড়া|to fly||oṛa
+হাঁটা|to walk||hãṭa
+আসা|to come||aśa
+শোয়া|to lie (as in a bed)||śoẏa
+বসা|to sit||bôśa
+দাঁড়ানো|to stand||dãṛano
+ঘোরা|to turn (intransitive)||ghora
+পড়া|to fall||pôṛa
+দেত্তয়া|to give||dettẏa
+ধরা|to hold||dhôra
+চেপ-|to squeeze||cepô-
+ঘষা|to rub||ghôśa
+ধোয়া|to wash||dhoẏa
+মোছা|to wipe||mocha
+টানা|to pull||ṭana
+ঠেলা|to push||ṭhela
+ফেলা|to throw||phela
+বাঁধা|to tie||bãdha
+টাঁকা|to sew||ṭãka
+গোনা|to count||gona
+বলা|to say||bôla
+গাওয়া|to sing||gaoẏa
+খেলা|to play||khela
+ভাসা|to float||bhaśa
+বহা|to flow||bôha
+জমা|to freeze||jôma
+ফাঁপা|to swell||phãpa
+সূর্য|sun||śurjô
+চাঁদ|moon||cãdô
+তারা|star||tara
+পানি|water||pani
+জল|water||jôl
+বৃষ্টি|rain||briśṭi
+নদী|river||nôdi
+পুকুর|lake||pukur
+সমুদ্র|sea||śômudr
+নুন|salt||nun
+লবন|salt||lôbôn
+পাথর|stone||pathôr
+বালি|sand||bali
+ধুলো|dust||dhulo
+মাটি|earth||maṭi
+মেঘ|cloud||megh
+কুয়াশা|fog||kuẏaśa
+আকাশ|sky||akaś
+বাতাস|wind||bataś
+বরফ|snow||bôrôph
+বরফ|ice||bôrôph
+ধুঁয়ো|smoke||dhũẏo
+আগুন|fire||agun
+ছাই|ash||chai
+পোরা|to burn||pora
+জলা|to burn||jôla
+রাস্তা|road||raśta
+পথ|road||pôth
+পাহাড়|mountain||pahaṛ
+লাল|red||lal
+সবুজ|green||śôbuj
+হলুদ|yellow||hôlud
+সাদা|white||śada
+কালো|black||kalo
+রাত্রি|night||ratri
+রাত|night||rat
+দিন|day||din
+বছর|year||bôchôr
+গরম|warm||gôrôm
+ঠাণ্ডা|cold||ṭhanḍa
+ভরা|full||bhôra
+নতুন|new||nôtun
+পুরানো|old||purano
+ভালো|good||bhalo
+খারাপ|bad||kharap
+পচা|rotten||pôca
+ময়লা|dirty||môẏla
+সোজা|straight||śoja
+গোল|round||gol
+চোক্ষা|sharp (as a knife)||cokkha
+ভোঁতা|dull (as a knife)||bhõta
+মসৃণ|smooth||môśrin
+ভেজা|wet||bheja
+শুকনা|dry||śukna
+ঠিক|correct||ṭhik
+কাছে|near||kache
+দূর|far||dur
+ডান|right||ḍan
+বাঁ|left||bã
+-এ|at||-e
+-এ|in||-e
+-র সাথে|with||-rô śathe
+-র সঙ্গে|with||-rô śôṅge
+আর|and||ar
+ও|and||o
+এবং|and||ebôṅ
+যদি|if||jôdi
+কারণ|because||karôn
+নাম|name||nam
+
 `
 

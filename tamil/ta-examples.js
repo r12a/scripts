@@ -1,5 +1,5 @@
 /*
-@ Source: 
+@ Source: https://en.wiktionary.org/wiki/Appendix:Dravidian_Swadesh_lists
 § 'Noto Sans Tamil'
 # 200
 ~ ltr
@@ -83,6 +83,310 @@ autoExpandExamples.ta = `
 உய்ய|critical|ʷʊjjə (uyya)
 வள்ளி|Valli|ʋəɭɭɪˑ (vaḷḷi)
 ஃபோரியர்|Fourier|foːɾɪjər (fōriyar)
+
+
+நான்|I|nāṉ
+நீ|you (singular)|/niː/
+நீர்|you (singular)|/niːr/
+தாங்கள்|you (singular)|/t̪aːŋkaɭ/
+அவன்|he|avaṉ
+இவன்|he|/iʋan/
+அந்த ஆள்|he|/antha aːɭ/
+இந்த ஆள்|he|/intha aːɭ/
+நாம்|we|nām
+நாங்கள்|we|nāṅkaḷ
+நீங்கள்|you (plural)|nīṅkaḷ
+அவர்கள்|they|avarkaḷ
+இது|this|itu
+அது|that|/at̪ɨ̆/
+இங்கே|here|iṅkē
+இவ்விடம்|here|/Ivvidam/
+அங்கே|there|/aṅkē/
+அவ்விடம்|there|/aʋiʈam/
+யார்|who|yār
+எவர்|who|/eʋar/
+என்ன|what|eṉṉa
+எங்கே|where|/eṅkē/
+எப்பொழுது|when|eppoḻutu
+எப்படி|how|eppaṭi
+அல்ல|not|/alla/
+இல்லை|not|/illai/
+எல்லாம்|all|ellām
+முழு|all|/muɻu/
+அனைவரும்|all|anaivarum
+எல்லோரும்|all|ellorum
+பல|many|pala
+சில|some|cila
+கொஞ்சம்|few|koñcam
+மற்ற|other|maṟṟa
+ஒன்று|one|oṉṟu
+ஒரு|one|/oɾu/
+முதல்|one|/Mudhal/
+இரண்டு|two|iraṇṭu
+இரு|two|/iɾu-/
+மூன்று|three|mūṉṟu
+மு|three|/mu-/
+நான்கு|four|nāṉku
+நால்|four|/n̪aːl-/
+ஐந்து|five|aintu
+ஐ|five|/ai/
+பெரிய|big|periya
+நீண்ட|long|/n̪iːɳʈa/
+அகலமான|wide|akalamāṉa
+தடித்த|thick|thaditha
+கனம்|heavy|kaNam
+சிறு|small|/ciru/
+சின்ன|small|ciṉṉa
+குட்டி|small|/Kutti/
+குறு|short|/kuru/
+குட்டை|short|kuttai
+குள்ள|short|/kuɭɭa/
+குறுகிய|narrow|kurugiya
+மெல்லிய|thin|Melliya
+பெண்|woman|peṇ
+ஆண்|man (adult male)|āṇ
+மனிதன்|man (human being)|maṉitaṉ
+ஆள்|man (human being)|/-aːɭ/
+குழந்தை|child (a youth)|kuḻantai
+பிள்ளை|child (a youth)|pillai
+மனைவி|wife|maṉaivi
+கணவன்|husband|kaNavan
+தாய்|mother|/Thaai/
+அன்னை|mother|/annai/
+அம்மா|mother|ammā
+தந்தை|father|/thandhai/
+அப்பா|father|/appā/
+விலங்கு|animal|vilaṅku
+மீன்|fish|mīṉ
+பறவை|bird|paṟavai
+நாய்|dog|/nāy/
+குக்கல்|dog|/Kukkal/
+பேன்|louse|pēn
+பாம்பு|snake|pāmpu
+புழு|worm|puzhu
+மரம்|tree|maram
+காடு|forest|kāṭu
+குச்சி|stick (of wood)|kucci
+தடி|stick (of wood)|/thaʈi/
+கம்பு|stick (of wood)|/kampɨ̆/
+கோல்|stick (of wood)|/koːl/
+பழம்|fruit|/paɻam/
+கனி|fruit|/kani/
+விதை|seed|/vithai/
+வித்து|seed|/ʋit̪t̪ɨ̆/
+இலை|leaf|ilai
+வேர்|root|vēr
+பட்டை|bark (of tree)|pattai
+பூ|flower|pū
+மலர்|flower|malar
+புல்|grass|pul
+கயிறு|rope|kayiṟu
+ஞாண்|rope|/njaN/
+தோல்|skin (of a person)|tōl
+இறைச்சி|meat (as in flesh)|/irat͡ʃt͡ʃi/
+கறி|meat (as in flesh)|kaRi
+குருதி|blood|kuruthi
+எலும்பு|bone|elumpu
+கொழுப்பு|fat (noun)|koluppu
+முட்டை|egg|muṭṭai
+கொம்பு|horn|kompu
+வால்|tail|vāl
+இறகு|feather  (rather not down)|iraku
+முடி|hair|muṭi
+தலை|head|talai
+காது|ear|kātu
+செவி|ear|/Chevi/
+கண்|eye|kaṇ
+மூக்கு|nose|mūkku
+வாய்|mouth|vāy
+பல்|tooth (rather not molar)|pal
+நாக்கு|tongue|nākku
+நகம்|fingernail|nagam
+உகிர்|fingernail|/ukir/
+அடி|foot|adi
+பாதம் asa|foot
+கால்|leg|kāl
+மூட்டு|knee|mooṭṭu
+கை|hand|kai
+இறக்கை|wing|irakkai
+வயிறு|belly|/vayiru/
+தொந்தி|belly|tonthi
+குடல்|guts|kudal
+கழுத்து|neck|kazhuthu
+முதுகு|back|muthugu
+புறம்|back|/puram/
+மார்பு|breast|mārbu
+முலை|breast|/mulai/
+உள்ளம்|heart|uḷḷam
+அகம்|heart|/agam/
+ஈரல்|liver|īral
+குடி|to drink|kudi
+உண்|to eat|uN
+தின்|to eat|/thin/
+கடி|to bite|kadi
+உறிஞ்சு|to suck|urinju
+துப்பு|to spit|thuppu
+கக்கு|to vomit|kakku
+ஊது|to blow (as wind)|ūthu
+மூச்சுவிடு|to breathe|moochuvidu
+சிரி|to laugh|ciri
+நகை|to laugh|/nagai/
+பார்|to see|/Paar/
+காண்|to see|/kaaṇ
+நோக்கு|to see|/Nookku/
+கேள்|to hear|kēḷ
+அறி|to know (a fact)|aṟi
+தெரி|to know (a fact)|/theri/
+நினை|to think|niṉai
+மோ|to smell (sense odor)|/Mo/
+நுகர்|to smell (sense odor)|nugar
+அஞ்சு|to fear|añju
+பேடி|to fear|/Pedi/
+தூங்கு|to sleep|tūṅgu
+உறங்கு|to sleep|/Uranku/
+வாழ்|to live|vāḻ
+சாவு|to die|cā
+இற|to die|/ira/
+கொல்|to kill|kol
+போராடு|to fight|/poradu/
+சண்டையிடு|to fight|saṇdaiyidu
+பொருது|to fight|/poɾut̪ɨ̆/
+மோது|to fight|/modhu/
+வேட்டையாடு|to hunt (transitive)|veettaiyaadu
+அடி|to hit|adi
+தாக்கு|to hit|thaaku
+வெட்டு|to cut|veṭṭu
+அரி|to cut|/aɾi/
+முறி|to cut|/muri/
+கொய்|to cut|/koi//
+பிள|to split|pila
+குத்து|to stab (or stick)|kuthu
+சொரி|to scratch (an itch)|sori
+தோண்டு|to dig|thondu
+நீந்து|to swim|neenthu
+பற|to fly|paṟa
+நட|to walk|nada
+வா|to come|vā
+கிட|to lie (as on one's side)|kida
+படு|to lie (as on one's side)|/padu/
+உட்கார்|to sit|uṭkār
+இரு|to sit|/iru/
+நில்|to stand|nil
+திரும்பு|to turn (change direction)|thirumbu
+மடங்கு|to turn (change direction)|/madangu/
+விழு|to fall (as in drop)|vizhu
+தா|to give|thā
+கொடு|to give|/kodu/
+நல்கு|to give|/nalku/
+ஈ|to give|/e/
+கொள்|to hold (in one's hand)|koḷ
+பிடி|to hold (in one's hand)|pidi
+கசக்கு|to squeeze|kasakku
+பிழி|to squeeze|/piɻi/
+தேய்|to rub|thei
+உரை|to rub|/urai/
+கழுவு|to wash|kaḻuvu
+துடை|to wipe|thudai
+இழு|to pull|izhu
+தள்ளு|to push|thallu
+வீசு|to throw|visu
+எறி|to throw|/eri
+கட்டு|to tie|kaṭṭu
+தை|to sew|tai
+எண்|to count|eṇ
+சொல்|to say|sol
+மொழி|to say|/moli/
+பாடு|to sing|pādu
+விளையாடு|to play|vilaiyādu
+மித|to float|mitha
+ஒழுகு|to flow|ozhugu
+பாய்|to flow|/paai/
+உறை|to freeze|uRai
+வீங்கு|to swell|veengu
+ஞாயிறு|sun|ñāyiṟu
+நிலா|moon|/nilā/
+திங்கள்|moon|/thingal/மதி
+விண்மீன்|star|viṇmīṉ
+|star|natchatram
+நீர்|water|nīr
+மழை பொழி|to rain|/mazhaipozhi/
+மாரி|to rain|/Maari/
+ஆறு|river|āṟu
+ஏரி|lake|eri
+கடல்|sea (as in ocean)|kadal
+உப்பு|salt|uppu
+கல்|stone|kal
+மணல்|sand|manal
+புழுதி|dust|puzhudhi
+தூசு|dust|thoosu
+மண்|earth (as in soil)|maṇ=sand
+நிலம்|earth (as in soil)|/nilam/
+முகில்|cloud|/Mugil/
+மேகம்|cloud|mēgam
+பனி|fog|pani
+வானம்|sky|vaanam
+விண்|sky|/vin/
+காற்று|wind (as in breeze)|kāṟṟu
+பனி|snow|pani
+பனிக்கட்டி|ice|panikkatti
+புகை|smoke|pukai
+தீ|fire|thee
+நெருப்பு|fire|/neruppu/
+சாம்பல்|ash|saambal
+எரி|to burn (intransitive)|eri
+சாலை|road|chaalai/saalai வழி
+தடம்|road|/thadam/
+மலை|mountain|malai
+குன்று|mountain|/kundru/
+சிவப்பு|red|civappu சென்
+பச்சை|green|pachai
+பசு|green|/pasu/
+மஞ்சள்|yellow|manjal
+வெள்ளை|white|vellai
+வெண்|white|/ʋeɳ/
+கருப்பு|black|karuppu
+கார்|black|/kaar-/
+கரு|black|/karu/
+இரவு|night|iravu
+அல்|night|/al/
+பகல்|day (daytime)|pagal
+ஆண்டு|year|āndu
+வெக்கை|warm (as in weather)|vekkai
+குளிர்ச்சி|cold (as in weather)|kuLirchi
+தண்|cold (as in weather)|/than/
+முழு|full|xxx
+நிறை|full|/nirai/
+புது|new|puthu
+பழைய|old|pazhaiya
+பண்டை|old|/pandai/
+நல்ல|good|nalla
+கெட்ட|bad|ketta
+அழுகிய|rotten (as, a log)|azhugiya
+அழுக்கான|dirty|azhukkāna
+நேர்|straight|nēr
+வட்டம்|round|/vattam/
+உருண்ட|round|/Urundai/
+கூர்மை|sharp (as a knife)|koormai
+மழுங்கிய|dull (as a knife)|mazhungiya
+வழுவழுப்பு|smooth|vazhuvazhuppu
+ஈரமான|wet|eeramāna
+நனைந்த|wet|/nanaintha/
+உலர்ந்த|dry (adjective)|ularntha
+சரி|right (correct)|sari
+அருகில்|near|Arugil
+கிட்ட|near|kiTTa
+தொலைவு|far|tholaivu
+வலது|right (side)|valathu
+இடது|left (side)|idathu
+-இல்|at|-il
+-இல்|in|-il
+-உடன்|with  (accompanying)|-udan
+-ஓடு|with  (accompanying)|-ODu
+-உம்|and|-um
+மற்றும்|and|matrum
+மேலும்|and|melum
+ஏனென்றால்|because|Enendrāl
+பெயர்|name|peyar
 
 `
 
