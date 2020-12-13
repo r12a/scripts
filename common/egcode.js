@@ -53,9 +53,7 @@ function addExamples (langFilter) { //console.log('langFilter:', langFilter, aut
 			
 			// alt
 			if (temp[3]) {
-				out += ' (<bdi lang="'
-				out += nodes[n].lang
-				out += '"'
+				out += ' (<bdi class="transc"'
 				if (nodes[n].dir === 'rtl') out += ' dir="rtl"'
 				out += '>'+temp[3]+'</bdi>)'
 				}

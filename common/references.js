@@ -100,7 +100,7 @@ function setFootnoteRefs () {
 		
 		if (itemArray.length > 1) {
 			if (itemArray[1][0] === '#') locn = itemArray[1]
-			else pages = ':'+itemArray[1]
+			else pages = '^'+itemArray[1]
 			}
 		url = reflist[id].url
 		
