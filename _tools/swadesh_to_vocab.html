@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+<meta charset="utf-8"/>
+<title>Make list for summary</title>
+<meta name="description" content="Make list items tool."/>
+</head>
+
+<body>
+<header>
+<h1>Make list for summary</h1>
+</header>
+
+<p>Converts a Wikipedia Swadesh list to a list of vocab items</p>
+<details>
+<summary>How to ...</summary>
+<p>Highlight the list in the Wikipedia page.</p>
+<p>Drop the highlighted text on the left. </p>
+<p>Run the first pass.</p>
+<p>Move things like '(formal)' to column 1, and check for misalignments due to extra commas.</p>
+<p>Copy the result to the left pane.</p>
+<p>Run second pass.</p>
+</details>
+<p>
+<!--label>Language: <input type="text" style="width:4em" id="lang" placeholder="bcp47"/></label>
+<label>Cc base: <input type="text" style="width:2em" id="ccbase" placeholder="-"/></label-->
+<button onClick="
+document.getElementById('out').value = firstPass(document.getElementById('in').value); document.getElementById('out').select()">First pass</button>
+</p>
+
+<p>
+<label>Meaning: <input type="text" style="width:1em" id="meaning" value="1"></label>
+<label>Target: <input type="text" style="width:1em" id="target" value="2"></label>
+<label>IPA: <input type="text" style="width:1em" id="ipa"></label>
+<label>Trans: <input type="text" style="width:1em" id="trans"></label>
+<button onClick="
+document.getElementById('out').value = secondPass(document.getElementById('in').value); document.getElementById('out').select()">Second pass</button>
+</p>
+
+<p><textarea id="in" placeholder="Add input list here" style="height:400px;float:left; width:45%; font-size: 150%;"></textarea>
+</p>
+
+<textarea id="out" style="height:400px;width:45%;float:right;"></textarea>
+
+<br style="clear: both;"/>
+
+<div class="smallprint" style="margin-top: 3em; font-size: 70%; font-style: italic;"><span id="version">This version <span id="version-info"> 
+  <!-- #BeginDate format:IS1m -->2020-12-12  7:57<!-- #EndDate --> 
+</span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
+
+<script>
+
+
+function firstPass (blobIn) {
+	var lines, out, fields, col2, col3, col4, lineCol1, lineCol2, lineCol3, lineCol4
+    lines = blobIn.split('\n')
+	
+	out = ''
+    for (let i=0;i<lines.length;i++) {
+        lines[i] = lines[i].trim()
+		if (lines[i] == '') continue
+		
+		fields = lines[i].split('\t')
+		console.log('field',fields)
+		
+		col1 = fields[1]
+		col2 = fields[2].split(',')
+		if (typeof col2 === 'undefined') console.log('ERROR: Col 2 undefined. Col 1 is ', col1)
+		if (fields[3]) col3 = fields[3].split(',')
+		else col3 = ['','','','','']
+		if (fields[4]) col4 = fields[4].split(',')
+		else col4 = ['','','','','']
+		
+		for (a=0;a<col2.length;a++) {
+			lineCol1 = col1
+			lineCol2 = col2[a]
+			if (col3[a]) lineCol3 = col3[a].replace(/\)/,'').replace(/\[/,'').replace(/\]/,'').trim()
+			else lineCol3 = ''
+			if (col4[a]) lineCol4 = col4[a].replace(/\)/,'').replace(/\[/,'').replace(/\]/,'').trim()
+			else lineCol4 = ''
+			
+			//console.log(lineCol1, lineCol2, lineCol3, lineCol4)
+			// split out trans from col2
+			temp = lineCol2.split('(')
+			if (temp.length > 1) {
+				lineCol2 = temp[0].replace(/\)/,'').replace(/\[/,'').replace(/\]/,'').trim()
+				lineCol4 = temp[1].replace(/\)/,'').replace(/\[/,'').replace(/\]/,'').trim()
+				}
+			
+			out += lineCol1+'\t'+lineCol2
+			if (lineCol3) out += '\t'+lineCol3
+			if (lineCol4) out += '\t'+lineCol4
+			out = out.trim()
+			out += '\n'
+			}
+        }
+
+	return out
+	}
+
+function secondPass (blobIn) {
+    var lines = blobIn.split('\n')
+	
+	var out = ''
+    for (let i=0;i<lines.length;i++) {
+        lines[i] = lines[i].trim()
+		if (lines[i] == '') continue
+		
+		var fields = lines[i].split('\t')
+		
+		var meaning = trans = ipa = ''
+		
+		meaning = fields[0].trim()
+		var termAndTrans = fields[1].trim()
+		var temp = termAndTrans.split('(')
+		var term = temp[0].trim()
+		if (temp.length > 1) var trans = temp[1].replace(/\)/,'')
+		if (fields[2]) ipa = fields[2]
+		
+		out += term + '|' + meaning
+		if (ipa) {
+			out += '|'+ipa.replace(/\//g,'')
+			if (trans) out += '|'+trans
+			}
+		else if (trans) out += '|'+trans
+		out += '\n'
+        }
+
+	return out
+	}
+
+function secondPass (blobIn) {
+	var fields = []
+	var out = ''
+    var lines = blobIn.split('\n')
+	
+	const meaning = document.getElementById('meaning').value-1
+	const target = document.getElementById('target').value-1
+	const ipa = document.getElementById('ipa').value-1
+	const trans = document.getElementById('trans').value-1
+	
+	var out = ''
+    for (let i=0;i<lines.length;i++) {
+        lines[i] = lines[i].trim()
+		if (lines[i] == '') continue
+		
+		var fields = lines[i].split('\t')
+		
+		out += fields[target].trim()+'|'+fields[meaning].trim()
+		if (fields[ipa]) out += '|'+fields[ipa]
+		else if (fields[trans]) out += '|'
+		if (fields[trans]) out += '|'+fields[trans]
+		out += '\n'
+        }
+
+	return out
+	}
+
+</script>
+
+</body>
+</html>
