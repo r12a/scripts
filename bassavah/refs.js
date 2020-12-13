@@ -1,5 +1,13 @@
 reflist = {
 
+"b": {
+"url":"https://cefliberia.org/wp-content/uploads/2020/03/Bertkau-Phonology-of-Bassa.pdf",
+"authors": "Jana Bertkau",
+"title":"A Phonology of Bassa",
+"publisher":"U.S. Peace Corps",
+"pages":"esp. 43ff",
+"date":"1975",
+},
 
 "fc": {
 "url":"#refs",
