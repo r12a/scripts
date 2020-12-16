@@ -1,7 +1,7 @@
 /*
 @ Source: https://en.wiktionary.org/wiki/Appendix:Indo-Aryan_Swadesh_lists
 @ Source: http://www.koshur.org/pdf/BasicReader.pdf
-§ 'Noto Sans Devanagari'
+§ 'Annapurna SIL'
 # 200
 ~ ltr
 ! ks-deva
@@ -9,10 +9,10 @@
 
 
 autoExpandExamples.ks = `
-ज़ॊंग|fire
-त्यम्बर|cataract
+ज़ॊंग|fire|zong
+त्यम्बर|cataract|tʲəmbər
 थऺन्य्|butter|tʰənʲ
-पॖंच़ॗह|twenty-five
+पॖंच़ॗह|twenty-five|pɨnt͡sɨːh
 मुँह|mouth|mũh
 
 बॖ|I|bɨ
