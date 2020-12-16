@@ -29,11 +29,14 @@
 <script src="../../scripts/linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../common/egcode.js"></script>
+<script src="../common/references.js"></script>
+<script src="refs.js"></script>
+
 <script src="ks-examples.js"></script>
 <script src="ks-translit.js">  </script>
 </head>
 
-<body>
+<body class="useBlockExamples">
 <header>
 <div id="header-boilerplate"></div>
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
@@ -53,38 +56,33 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->23 November, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->16 December, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
 
 
 <section>
-	  <p>This page gathers together basic information about the Devanagari script and its use for the Kashmiri language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Kashmiri using Unicode.</p>
-
-
-
-<p>See also the companion document, <a href="block" class="linkHighlight">Devanagari character notes</a>, for detailed information about specific Unicode characters.</p>
+<p>This page gathers  basic information about the Devanagari script and its use for the Kashmiri language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Kashmiri using Unicode.</p>
 <p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
 
 
 
-<details>
+<p id="usage"></p>
+<script>addUsageAdvice('Devanagari')</script>
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Devanagari','Kashmiri'); return false;">More about using this page</a></summary>
+<div id="about"></div>
+</details>
+
+<details class="supportdocs noprint">
 <summary class="instructions"><a href="../links?iso=Deva">Related pages</a>.</summary>
 </details>
 
-
-
-<details>
-<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
-</details>
-
-
-
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Devanagari','Kashmiri'); return false;">About this page</a></summary>
-<div id="about"></div>
+<summary class="instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
 </details>
 </section>
 
@@ -94,10 +92,10 @@
 <h2 href="#sample">Sample (Kashmiri)</h2>
   
   
-<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
+<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.<tt>rt,84</tt><br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
 
 <div id="freeText" dir="ltr" lang="ks" contenteditable="true">
-<p  title="Kashmiri is our mother tongue. We must converse with our children in the same language." onMouseUp="showtext('freeText')" data-source="http://www.koshur.org/Reader/2.9.html">कऻशुर छि सऻन्य् माजि ज़्यव। असि पज़ि पनॖन्यन शुर्यन सॗत्य् ॳथ्य् ज़बऻन्य् मंज़ कथ करॖनय्।</p>
+<p  title="Srinagar is a beautiful city. It is situated on the two banks of River Jhelum. The city has two famous hills Shankaracharya and Hari Parbat. Nishat Bagh, Shalimar Bagh, Chashma Shahi, Pari Mahal and Harwan Reservoir are all situated in the city of Srinagar. Amar Nath and Tullamulla are the two most famous places of pilgrimage sacred to Hindus. Hazratbal and Khankah shrines are sacred to Muslims. Kalhan was a great Historian of Kashmir and Lalla-Ded and Nunda Reshi were great Saint-poets. Kashmiri is the mothertongue of Kashmiris." onMouseUp="showtext('freeText')" data-source="http://www.koshur.org/pdf/BasicReader.pdf">सिरीनगर छु अख सॏंदर शहर। यि छु जॆहलम दऺरियावॖक्यन दॖन बठ्यन प्यठ बऺसिथ। शहरा मंज़ छि ज़ॖ बाल, शेंकराचार तॖ हारि परबथ। निशात बाग, सालॖमऺर बाग, चॆशमॖ सऻही, पऺरी महल तॖ हऻरवन सरबंद छि सऻरिय सिरीनगर शहरस मंज़। अमर नाथ तॖ तुलमुल छि हॆंद्यन हॖंद्य जॖ पवित्र तीर्थस्थान। हज़रतबल तॖ खानकाह छि मॖसलमानन हॖमंजॖ मुक्कदस ज़ियारचॖ।  कल्हन पँडिथ ओस कऺशीरि हुंद अख बॊड बारॖ तऻरीखदान तॖ लल द्यद तॖ नुंदॖ र्‌यॊश ॴस्य् जॖ थदि पायिक्य् सूफी शऻयिर।  कऻशिर्‌यन हॖंज़ ज़बान छि कऻशुर।</p>
 </div>
 </section>
 
@@ -107,9 +105,11 @@
 
  <section id="history">
 <h2>Usage &amp; history</h2>
-    <p>For information about the script in general, see the <a href="index#history">Devanagari overview</a>.<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf"></a></p>
-<p>Kashmiri is written in the devanagari script by Hindus. Muslims use the arabic script.</p>
-<p>In 1995, 2002, and 2009 there were orthographic reforms, centred around the representation of vowel sounds.  The result is that texts on the internet can be found using various different approaches, and the largest number of pages found were written just after the introduction of the 2002 reform, and so use slightly different vowel graphemes. This page presents the orthography based on the 2009 revision. For more information see <a class="secref">previousOrthographies</a>.</p>
+<p>Kashmiri is written in the devanagari script by Hindus. Muslims use the arabic script. Due to population migrations, the use of the Devanagari script to write Kashmiri has significantly dwindled, although there are efforts to revive its use, and a number of recent reforms attempted to standardise the orthography.</p>
+<p>Names:</p>
+<p><span class="charExample" translate="no"><span class="ex" lang="ks">कऻशुर</span> <span class="ipa">kəːʃur</span> <span class="meaning">Kashmiri</span></span></p>
+<p>In 1995, 2002, and 2009 the orthographic reforms centred around the representation of vowel sounds.  The result is that texts on the internet can be found using various different approaches, and the largest number of pages found were written just after the introduction of the 2002 reform, and so use slightly different vowel graphemes. This page presents the orthography based on the 2009 revision. For more information see <a class="secref">previousOrthographies</a>.</p>
+<p>For information about the script in general, see the <a href="index#history">Devanagari overview</a>.<tt>u</tt></p>
 </section>
 
 
@@ -127,30 +127,26 @@
 
 <section id="type">
 <h2>Basic features</h2>
-    <p>Devanagari is an <span class="newterm">abugida</span>. Consonant letters have an inherent vowel sound. Combining vowel-signs are attached to the consonant to indicate that a different vowel follows the consonant.   See the table in the right-hand column for a brief overview of features for the modern Kashmiri orthography using the Devanagari script. (See the <a href="../../scripts/featurelist/#key">key</a>. Character counts exclude ASCII characters.)</p>
-    <p>Kashmiri uses fewer consonants than Hindi, but has more vowels. The orthography includes some Kashmiri-specific characters.</p>
-</section>
+
+<p>Devanagari is an <span class="newterm">abugida</span>. Consonant letters have an inherent vowel sound. Combining vowel-signs are attached to the consonant to indicate that a different vowel follows the consonant.   See the table in the right-hand column for a brief overview of features for the modern Kashmiri orthography using the Devanagari script.</p>
+<p>Kashmiri uses fewer consonants than Hindi, but has more vowels. The orthography includes some Kashmiri-specific characters.</p>
+<p>Devanagari text runs <mark>left-to-right in horizontal lines</mark>.</p>
+<p>Orthographic syllables (as opposed to phonetic syllables) play a significant role in Devanagari text. An orthographic syllable starts at the beginning of any cluster of consonants and incorporates the whole cluster plus any following vowels and diacritics.</p>
+<p>Phonetically, Kashmiri has only three forms of plosives, illustrated here with the bilabial stop: unvoiced  <span class="ipa">p</span>, voiced <span class="ipa">b</span>, aspirated <span class="ipa">pʰ</span>. The murmured <span class="ipa">bʱ</span> is not used, although these letters may crop up in Sanskrit or Hindi loan words. It also has a set of retroflex consonants. Kashmiri also commonly palatalises consonants.</p>
+<p>The 25 basic consonant letters are supplemented by <mark>repertoire extensions</mark> for 3 more  sounds  by applying the <span class="name">nukta</span> diacritic to  characters.</p> 
+<p><mark>Consonant clusters</mark>  are normally indicated using the <span class="name">virama</span> between consonants, though often there is no marker for unpronounced inherent vowels. It is also common to see a visible <span class="name">virama</span>, especially for palatalisation. Conjunct forms are otherwise expressed using the common Devanagari <mark>half-forms</mark>, <mark>stacked consonants</mark>, and <mark>ligated glyphs</mark>.</p>
+<p>As part of a cluster, <mark>RA has  special forms</mark>, but a palatalised RA at the beginning of a word needs special treatment to avoid a repa formation.</p>
+<p><mark>Syllable-final</mark> consonant nasal sounds are most commonly represented by <mark>a dedicated combining mark</mark> (anusvara).Kashmiri normally uses only one letter for <span class="name">m</span> and one for <span class="name">n</span>, although other nasals may occur in words borrowed from Sanskrit.</p>
+<p>The Hindi orthography has an <mark>inherent vowel</mark>, and represents vowels using <mark>16 vowel-signs</mark>, including <mark>1 prescript</mark> and no circumgraphs.  All vowel-signs are <mark>combining marks</mark>, and are stored after the base character.</p>
+<p>There are <mark class="newterm">17 independent vowels</mark>, one for each vowel sound, including the inherent vowel, and these are used to write all standalone vowel sounds. One vocalic letter is also used.</p>
+<p>There are no composite vowels.</p>
+<p>Vowels may be nasalised, using the <span class="name">candrabindu</span> diacritic.</p></section>
 
 
 
 
- <section id="direction">
-<h2>Text direction</h2>
-    <p>Text is normally written horizontally, left to right.</p>
-  </section>
 
-
-
-
-<section id="structure">
-<h2>Structure</h2>
-    <p>See the <a href="index#structure">Devanagari overview</a>.<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf"></a></p>
-</section>
-
-
-
-
- <div id="showTranscriptions">
+<div id="showTranscriptions">
 <div>In character lists, show:</div>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
@@ -164,6 +160,107 @@
       
 
 
+<section id="index">
+<h2>Character index</h2>
+
+<p class="instructions">This section  lists non-ASCII characters used for Kashmiri, and  other characters in the Devanagari script block not used by Kashmiri. For descriptions of usage, click on ↓.</p>
+
+
+
+
+<section id="index_letters">
+<h3>Letters</h3>
+
+
+<section id="index_letters_consonants">
+<h4>Basic consonants</h4>
+<figure class="characterBox auto" data-cols="trans" data-links="#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants #palatalisation,#basicconsonants">प␣फ␣ब␣त␣थ␣द␣ट␣ठ␣ड␣क␣ख␣ग␣च␣छ␣ज␣व␣स␣श␣ह␣म␣न␣र␣ल␣य</figure>
+<figure class="auxiliaryBox auto" data-cols="trans" data-links="#basicconsonants">&#x095B;</figure>
+</section>
+
+<section id="index_letters_extended">
+<h4>Sanskrit/Hindi consonants</h4>
+<figure class="auxiliaryBox auto" data-cols="trans" data-links="#sanskrit,#sanskrit,#sanskrit,#sanskrit,#sanskrit,#sanskrit,#sanskrit,#sanskrit,#sanskrit">ण␣ञ␣ङ␣भ␣ध␣ढ␣झ␣घ␣ष</figure>
+</section>
+
+<section id="index_letters_vowels">
+<h4>Vowels</h4>
+<figure class="characterBox auto" data-cols="trans" data-links="#independentvowel,#independentvowel,#independentvowel,#independentvowel,#independentvowel,#independentvowel,#independentvowel,#independentvowel,#independentvowel,#independentvowel,#independentvowel,#independentvowel,#independentvowel,#independentvowel,#independentvowel,#independentvowel,#independentvowel">इ␣ई␣ॶ␣ॷ␣उ␣ऊ␣ऎ␣ए␣ॳ␣ॴ␣ऒ␣ओ␣ॵ␣अ␣आ␣ऐ␣औ</figure>
+</section>
+
+<section id="index_letters_vocalics">
+<h4>Vocalic</h4>
+<figure class="characterBox auto" data-cols="trans" data-links="#vocalics">ऋ</figure>
+</section>
+
+<section id="index_letters_unused">
+<h4>Not used for modern Kashmiri</h4>
+<figure class="archaicBox auto" data-cols="" data-links="#previousOrthographies,#previousOrthographies">ॲ␣ऑ</figure>
+</section>
+</section>
+
+
+
+<section id="index_cchars">
+<h3>Combining marks</h3>
+
+
+<section id="index_cchars_vowels">
+<h4>Vowels</h4>
+<figure class="characterBox auto" data-cols="trans" data-links="#prescript_vowels,#other_vowels,#other_vowels,#other_vowels,#other_vowels,#other_vowels,#other_vowels,#other_vowels,#other_vowels,#other_vowels,#other_vowels,#other_vowels,#other_vowels,#other_vowels,#other_vowels,#other_vowels">ि␣ी␣ॖ␣ॗ␣ु␣ू␣ॆ␣े␣ऺ␣ऻ␣ॊ␣ो␣ॏ␣ा␣ै␣ौ</figure>
+</section>
+
+<section id="index_cchars_vocalics">
+<h4>Vocalic</h4>
+<figure class="characterBox auto" data-cols="trans" data-links="#vocalics">ृ</figure>
+</section>
+
+<section id="index_cchars_finals">
+<h4>Finals</h4>
+<figure class="characterBox auto" data-cols="trans" data-links="#finals">ं</figure>
+</section>
+
+<section id="index_cchars_other">
+<h4>Other</h4>
+<figure class="characterBox auto"  data-cols="" data-links="#basicconsonants,#suppression,#nasalisation">़␣्␣ँ</figure>
+</section>
+</section>
+
+
+
+
+  
+<section id="index_numbers">
+<h3>Numbers</h3>
+
+<figure class="characterBox auto" data-links="#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits" data-cols="">०␣१␣२␣३␣४␣५␣६␣७␣८␣९</figure>
+</section>
+
+
+
+
+  
+<section id="index_punctuation">
+<h3>Punctuation</h3>
+
+<figure class="characterBox auto" data-links="#phrase,#phrase,#abbrev,#quotations,#quotations,#quotations,#quotations,#abbrev" data-cols="">।</figure>
+</section>
+</section>
+
+
+
+
+
+<section id="structure">
+<h2>Structure</h2>
+    <p>See the <a href="index#structure">Devanagari overview</a>.<tt>u</tt></p>
+</section>
+
+
+
+
+
+
 <section id="vowels">
 <h2>Vowels</h2>
 
@@ -171,7 +268,8 @@
 <section id="vowelPhonemes">
 <h3>Vowel sounds</h3>
 
-<p class="instructions">Click on the sound groups to see where else in the document each of the sounds are referred to.</p>
+<p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+<!--p class="instructions">Phones in a lighter colour are non-native or allophones. Source <a href="https://en.wikipedia.org/wiki/Modern_Hebrew_phonology">Wikipedia</a>.</p-->
 
 
 <section id="plain_vowels">
@@ -360,8 +458,8 @@
   
   
   <!-- mid -->
-  <text x="158" y="105" class="ipa" text-anchor="middle" filter="url(#solid)">əi əu</text>
-  <text x="158" y="105" class="ipa" text-anchor="middle">əi əu</text> 
+  <text x="158" y="105" class="ipa" text-anchor="middle" filter="url(#solid)">əĭ əŭ</text>
+  <text x="158" y="105" class="ipa" text-anchor="middle">əĭ əŭ</text> 
 </svg>
 </div>
 
@@ -415,26 +513,42 @@
 <section id="inherentvowel">
 <h3>Inherent vowel</h3>
 <p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
-
-<p>Each consonant symbol has an inherent following vowel sound, typically transcribed as <span class="trans">a</span>, and pronounced <span class="ipa">a</span>.</p>
+<p>The Kashmiri inherent vowel is usually transcribed and pronounced <span class="trans">a</span>.  So <span class="codepoint" translate="no"><span lang="ks">&#x0915;</span> [<a href="/scripts/devanagari/block#char0915"><span class="uname">U+0915 DEVANAGARI LETTER KA</span></a>]</span> is pronounced <span class="ipa">ka</span>.</p>
 </section>
 
 
 
 
-<section id="dependentvowel">
+
+<section id="vowelsigns">
 <h3>Vowel-signs</h3>
 <p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
 
-<p>Other than the inherent vowel, vowel sounds that follow a consonant sound are represented using vowel-signs. This includes the two diphthongs, which can each be represented by a single code point, 1 prescript signs, and no circumgraphs. They also include several that are specific to Kashmiri.</p>
+<p>Non-inherent  vowel sounds that follow a consonant  are represented using <span class="name">vowel-signs</span>, eg. <span class="codepoint" translate="no"><span lang="ks">&#x0915;&#x0940;</span> [<a href="/scripts/devanagari/block#char0915"><span class="uname">U+0915 DEVANAGARI LETTER KA</span></a> + <a href="/scripts/devanagari/block#char0940"><span class="uname">U+0940 DEVANAGARI VOWEL SIGN II</span></a>]</span> is pronounced <span class="ipa">kiː</span>.</p>
+<p>Kashmiri vowel-signs are all combining characters.  All vowel-signs are  stored after the base consonant, and the font puts them in the correct place for display. There are no circumgraphs.</p>
+<p>Eight vowel-signs are <em>spacing</em> marks, meaning that they consume horizontal space when added to a base consonant.</p>
 
-<p>
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">ि␣ी␣ॖ␣ॗ␣ु␣ू␣ॆ␣े␣ऺ␣ऻ␣ॊ␣ो␣ॏ␣ा␣ै␣ौ</figure>
-</p>
-<p>The vowel-signs are all combining characters, and only one is used per base consonant. All vowel-signs are typed and stored after the base consonant, and the font puts them in the correct place for display. </p>
-<p>Half the vowel-signs are <em>spacing</em> combining characters, ie. they expand the text width when applied to a consonant.</p>
+
+
+
+<section id="prescript_vowels">
+<h4>Prescript vowel-sign</h4>
+<p>One vowel-sign appears to the left of the base consonant letter or cluster, eg. <span class="charExampleInline" translate="no"><span class="ex" lang="ks">कि</span> <span class="trans">ki</span></span></p>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ि</figure>
+<p>This is a combining mark that is always stored after the base consonant. The font places the glyph before the base consonant.</p>
+<p>It is actually placed before the start of the <em>syllable</em>. This means that a word with a consonant cluster at the start separates the prescript vowel from any postscript vowels by more than one consonant character.</p>
 </section>
 
+
+
+
+
+<section id="other_vowels">
+<h4>Other vowel-signs</h4>
+<p>The following combining marks are also used to indicate vowel sounds.</p>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ी␣ॖ␣ॗ␣ु␣ू␣ॆ␣े␣ऺ␣ऻ␣ॊ␣ो␣ॏ␣ा␣ै␣ौ</figure>
+</section>
+</section>
 
 
 
@@ -442,7 +556,7 @@
 <section id="nasalisation">
 <h3>Nasalisation</h3>
 
-<p><span class="codepoint" translate="no"><span lang="ks">&#x0901;</span> [<a href="/scripts/devanagari/block#char0901"><span class="uname">U+0901 DEVANAGARI SIGN CANDRABINDU</span></a>]</span> nasalises the vowel in a syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="ks">मुँह</span> <span class="trans">muŋ̽h</span> <span class="meaning">mouth</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ks">&#x0901;</span> [<a href="/scripts/devanagari/block#char0901"><span class="uname">U+0901 DEVANAGARI SIGN CANDRABINDU</span></a>]</span> nasalises the vowel in a syllable, eg. <span class="eg" lang="ks">मुँह</span></p>
 </section>
 
 
@@ -469,6 +583,7 @@
 <h3>Vowel absence</h3>
 <p>Kashmiri uses <span class="codepoint" translate="no"><span lang="ks">&#x094D;</span> [<a href="/scripts/devanagari/block#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA</span></a>]</span> to kill the inherent vowel after a consonant.</p>
 <p>In conjuncts, the virama is usually not seen, but it is often seen in Kashmiri words that end with palatalisation (see <a class="secref">palatalisation</a>).</p>
+<p>Kashmiri commonly suppresses the inherent vowel without a conjunct or visible virama appearing in the orthography, eg. <span class="eg" lang="ks" dir="ltr">अतलास</span> <span class="eg" lang="ks" dir="ltr">रफतार</span></p>
 </section>
 
 
@@ -491,12 +606,74 @@
 <section id="previousOrthographies">
 <h3>Previous orthographies</h3>
 
-<p>There was an orthographic standardisation reform in 1995, followed by another in 2002. (In this section, where we refer to independent vowels, the same goes for the corresponding vowel-signs.)</p>
-<p>Prior to the orthographic reform in 2002, the phonemes <span class="ipa">ɨ</span> and <span class="ipa">ɨː</span> were written using <span class="codepoint" translate="no"><span lang="ks">&#x0945;</span> + <span lang="ks">&#x0941;</span> [<a href="devanagari#char0945"><span class="uname">U+0945 DEVANAGARI VOWEL SIGN CANDRA E</span></a> + <a href="devanagari#char0941"><span class="uname">U+0941 DEVANAGARI VOWEL SIGN U</span></a>]</span> (eg. <span class="charExample" translate="no"><span class="ex" lang="ks">कॅु</span></span>), and <span class="codepoint" translate="no"><span lang="ks">&#x0945;</span> + <span lang="ks">&#x0942;</span> [<a href="devanagari#char0945"><span class="uname">U+0945 DEVANAGARI VOWEL SIGN CANDRA E</span></a> + <a href="devanagari#char0942"><span class="uname">U+0942 DEVANAGARI VOWEL SIGN UU</span></a>]</span> (eg. <span class="charExample" translate="no"><span class="ex" lang="ks">कॅू</span></span>), respectively.<a class="fnref" href="https://www.unicode.org/L2/L2008/08250-n3480-kashmiri.pdf">e</a></p>
-<p>The 2002 reform introduced the following glyph and  phoneme pairings.<a class="fnref" href="http://koshur.org/pdf/Let%20Us%20Learn%20Kashmiri.pdf">m</a></p>
-<figure class="archaicBox auto"  data-cols="" data-ipa="ə,əː,ɨ,ɨː,e,ɔ">ॲ␣ऑ␣ॶ␣ॷ␣ऎ␣व</figure>
-<p>Another revision occurred in 2009, resulting in the most recent set of characters as described in this page.<a class="fnref" href="https://www.unicode.org/L2/L2009/09311-kashmiri-ltr-from-swaran-lata.pdf">l</a> Principle changes included the substitution of <span class="charExample" translate="no"><span class="ex" lang="ks">ॳ</span></span> and <span class="charExample" translate="no"><span class="ex" lang="ks">ॴ</span></span> for <span class="charExample" translate="no"><span class="ex" lang="ks">ॲ</span></span> and <span class="charExample" translate="no"><span class="ex" lang="ks">ऑ</span></span>, respectively. </p>
-<p>The reform also introduced a new character, <span class="charExample" translate="no"><span class="ex" lang="ks">ॵ</span></span>, to replace the use of <span class="charExample" translate="no"><span class="ex" lang="ks">व</span></span> for the vowel <span class="ipa">ɔ</span>. This now allowed the orthography to represent this sound as a vowel-sign (<span class="charExample" translate="no"><span class="ex" lang="ks">ॏ</span></span>), which had not been possible previously. For example, the word <span class="charExample" translate="no"><span class="ipa">sɔkʰ</span><span class="meaning">moth</span></span> was previously written <span class="charExample" translate="no"><span class="ex" lang="ks">स्वख</span></span>, but is now written <span class="charExample" translate="no"><span class="ex" lang="ks">सॏख</span></span>.</p>
+<p>Prior to 1995 there was no standard way to write Kashmiri, and people spelled words in different ways.<tt class="more">rt,7</tt> There was an orthographic standardisation reform in 1995, followed by another in 2002, and a further revision in 2009. </p>
+<p>Prior to the orthographic reform in 2002, the phonemes <span class="ipa">ɨ</span> and <span class="ipa">ɨː</span> were respectively written  <span class="codepoint" translate="no"><span lang="ks">&#x0945;&#x0941;</span> [<a href="devanagari#char0945"><span class="uname">U+0945 DEVANAGARI VOWEL SIGN CANDRA E</span></a> + <a href="/scripts/devanagari/block#char0941"><span class="uname">U+0941 DEVANAGARI VOWEL SIGN U</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ks">&#x0945;&#x0942;</span> [<a href="devanagari#char0945"><span class="uname">U+0945 DEVANAGARI VOWEL SIGN CANDRA E</span></a> + <a href="/scripts/devanagari/block#char0942"><span class="uname">U+0942 DEVANAGARI VOWEL SIGN UU</span></a>]</span>.<tt>ep</tt> The 2002 reform replaced those with <span class="codepoint" translate="no"><span lang="ks">&#x0956;</span> [<a href="/scripts/devanagari/block#char0956"><span class="uname">U+0956 DEVANAGARI VOWEL SIGN UE</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ks">&#x0957;</span> [<a href="/scripts/devanagari/block#char0957"><span class="uname">U+0957 DEVANAGARI VOWEL SIGN UUE</span></a>]</span>, and a pair of equivalent independent vowels.<tt>mkr</tt></p>
+<p>It also brought in a number of other characters shown in <a class="figref">fig_orthographic_changes</a>.</p>
+
+<figure id="fig_orthographic_changes">
+<table>
+<thead>
+<tr><th>phoneme</th>
+<th>1995</th><th>2002</th><th>2009</th><th>Current usage</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="ipa">ɨ</span></td>
+<td><span class="ex" lang="ks">ॅु</span></td>
+<td><span class="ex" lang="ks">ॖ</span> <span class="ex" lang="ks">ॶ</span></td>
+<td>&nbsp;</td>
+<td><span class="codepoint" translate="no"><span lang="ks">&#x0956;</span> [<a href="/scripts/devanagari/block#char0956"><span class="uname">U+0956 DEVANAGARI VOWEL SIGN UE</span></a>]</span><br><span class="codepoint" translate="no"><span lang="ks">&#x0976;</span> [<a href="/scripts/devanagari/block#char0976"><span class="uname">U+0976 DEVANAGARI LETTER UE</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="ipa">ɨː</span></td>
+<td><span class="ex" lang="ks">ॅू</span></td>
+<td><span class="ex" lang="ks">ॗ</span> <span class="ex" lang="ks">ॷ</span></td>
+<td>&nbsp;</td>
+<td><span class="codepoint" translate="no"><span lang="ks">&#x0957;</span> [<a href="/scripts/devanagari/block#char0957"><span class="uname">U+0957 DEVANAGARI VOWEL SIGN UUE</span></a>]</span><br><span class="codepoint" translate="no"><span lang="ks">&#x0977;</span> [<a href="/scripts/devanagari/block#char0977"><span class="uname">U+0977 DEVANAGARI LETTER UUE</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="ipa">ə</span></td>
+<td><span class="ex" lang="ks">ऽ</span></td>
+<td><span class="ex" lang="ks">ॅ</span> <span class="ex" lang="ks">ॲ</span></td>
+<td><span class="ex" lang="ks">ऺ</span> <span class="ex" lang="ks">ॳ</span></td>
+<td><span class="codepoint" translate="no"><span lang="ks">&#x093A;</span> [<a href="/scripts/devanagari/block#char093A"><span class="uname">U+093A DEVANAGARI VOWEL SIGN OE</span></a>]</span><br><span class="codepoint" translate="no"><span lang="ks">&#x0973;</span> [<a href="/scripts/devanagari/block#char0973"><span class="uname">U+0973 DEVANAGARI LETTER OE</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="ipa">əː</span></td>
+<td>&nbsp;</td>
+<td><span class="ex" lang="ks">ॉ</span> <span class="ex" lang="ks">ऑ</span></td>
+<td><span class="ex" lang="ks">ऻ</span> <span class="ex" lang="ks">ॴ</span></td>
+<td><span class="codepoint" translate="no"><span lang="ks">&#x093B;</span> [<a href="/scripts/devanagari/block#char093B"><span class="uname">U+093B DEVANAGARI VOWEL SIGN OOE</span></a>]</span><br><span class="codepoint" translate="no"><span lang="ks">&#x0973;</span> [<a href="/scripts/devanagari/block#char0973"><span class="uname">U+0973 DEVANAGARI LETTER OE</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="ipa">e</span></td>
+<td><span class="ex" lang="ks">े'</span></td>
+<td><span class="ex" lang="ks">ॆ</span> <span class="ex" lang="ks">ऎ</span></td>
+<td>&nbsp;</td>
+<td><span class="codepoint" translate="no"><span lang="ks">&#x0946;</span> [<a href="/scripts/devanagari/block#char0946"><span class="uname">U+0946 DEVANAGARI VOWEL SIGN SHORT E</span></a>]</span><br><span class="codepoint" translate="no"><span lang="ks">&#x090E;</span> [<a href="/scripts/devanagari/block#char090E"><span class="uname">U+090E DEVANAGARI LETTER SHORT E</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="ipa">o</span></td>
+<td><span class="ex" lang="ks">ो'</span></span></td>
+<td><span class="ex" lang="ks">ो</span> <span class="ex" lang="ks">ओ</span></td>
+<td>&nbsp;</td>
+<td><span class="codepoint" translate="no"><span lang="ks">&#x094B;</span> [<a href="/scripts/devanagari/block#char094B"><span class="uname">U+094B DEVANAGARI VOWEL SIGN O</span></a>]</span><br><span class="codepoint" translate="no"><span lang="ks">&#x0913;</span> [<a href="/scripts/devanagari/block#char0913"><span class="uname">U+0913 DEVANAGARI LETTER O</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="ipa">ɔ</span></td>
+<td><span class="ex" lang="ks">व</span></td>
+<td>&nbsp;</td>
+<td><span class="ex" lang="ks">ॏ</span> <span class="ex" lang="ks">ॵ</span></td>
+<td><span class="codepoint" translate="no"><span lang="ks">&#x094F;</span> [<a href="/scripts/devanagari/block#char094F"><span class="uname">U+094F DEVANAGARI VOWEL SIGN AW</span></a>]</span><br><span class="codepoint" translate="no"><span lang="ks">&#x0975;</span> [<a href="/scripts/devanagari/block#char0975"><span class="uname">U+0975 DEVANAGARI LETTER AW</span></a>]</span></td>
+</tr>
+</tbody>
+</table>
+<figcaption>Glyphs changed during the 2002 and 2009 reforms, showing vowel-signs.</figcaption>
+</figure>
+
+<p>Another revision occurred in 2009, resulting in the  set of characters used in this page.<tt>l</tt> Principle changes included the substitution of <span class="charExampleInline" translate="no"><span class="ex" lang="ks">ॳ</span></span> and <span class="charExampleInline" translate="no"><span class="ex" lang="ks">ॴ</span></span> for <span class="charExampleInline" translate="no"><span class="ex" lang="ks">ॲ</span></span> and <span class="charExampleInline" translate="no"><span class="ex" lang="ks">ऑ</span></span>, respectively. </p>
+<p>The reform also introduced a new character (<span class="charExampleInline" translate="no"><span class="ex" lang="ks">ॵ</span></span>) and its equivalent vowel-sign (<span class="charExampleInline" translate="no"><span class="ex" lang="ks">ॏ</span></span>) to replace the use of <span class="charExampleInline" translate="no"><span class="ex" lang="ks">-्व</span></span> for the vowel <span class="ipa">ɔ</span>. For example, the following show the spelling changes for the word <span class="charExampleInline" translate="no"><span class="ipa">sɔkʰ</span><span class="meaning">moth</span></span>.</p>
+<p><span class="charExample" translate="no">Old: <span class="ex" lang="ks">*स्वख</span></span><span class="charExample" translate="no">New: <span class="ex" lang="ks">सॏख</span></span></p>
 <p>The new characters were added in Unicode v6. In the gap, there was some experimentation with Gurmukhi characters for the phonemes <span class="ipa">ɨ</span> and <span class="ipa">ɨː</span>.</p>
 </section>
 </section>
@@ -509,7 +686,10 @@
 <h2>Vocalics</h2>
 <p id="def-vocalic" class="explanatoryintro definitionStub"></p>
 
-<p class="observation"><span class="leadin">Observation:</span> No evidence of vocalics found for Kashmiri.</p>
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ऋ␣ृ</figure>
+
+<p class="observation"><span class="leadin">Observation:</span> Raina &amp; Trakru describe the use of a single vocalic. It appears to be used for Sanskrit-derived words, and 2 of the four example words given also include the letter <span class="codepoint" translate="no"><span lang="ks">&#x0937;</span> [<a href="/scripts/devanagari/block#char0937"><span class="uname">U+0937 DEVANAGARI LETTER SSA</span></a>]</span>, which is not usually used for Kashmiri.</p>
+<p class="observation">One of the examples also uses a vowel-sign to modify the inherent sound of the standalone vocalic, which is somewhat unusual.  The example is <span class="eg" lang="ks" dir="ltr">ऋॆष्य्</span>.</p>
 </section>
 
 
@@ -523,7 +703,9 @@
 
 <section id="consonantPhonemes">
 <h3>Consonant sounds</h3>
-<p class="instructions">Click on the sounds to see where else in the document they are referred to.</p>
+
+<p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+<!--p class="instructions">Phones in a lighter colour are non-native or allophones. Source <a href="https://en.wikipedia.org/wiki/Modern_Hebrew_phonology">Wikipedia</a>.</p-->
 
 <table class="ipaTable">
 <thead>
@@ -629,6 +811,7 @@ alveolar</th>
 
 
 
+<p>Kashmiri has no voiced aspirated sounds.</p>
 <table class="ipaTable" style="display: none">
 <thead>
 <tr>
@@ -807,11 +990,37 @@ Affricate </th>
     
 <p>Basic set of consonants used for Kashmiri.</p>
 
+<section id="stops">
+<h4>Stops</h4>
 <figure class="characterBox auto"  data-cols="ipa,trans,transc">प␣फ␣ब␣त␣थ␣द␣ट␣ठ␣ड␣क␣ख␣ग</figure>
+</section>
+
+
+
+<section id="affricates">
+<h4>Affricates</h4>
 <figure class="characterBox auto"  data-cols="ipa,trans,transc">च़␣छ़␣च␣छ␣ज</figure>
+</section>
+
+
+
+<section id="fricatives">
+<h4>Fricatives</h4>
 <figure class="characterBox auto"  data-cols="ipa,trans,transc">व␣स␣ज़␣श␣ह</figure>
+</section>
+
+
+<section id="nasals">
+<h4>Nasals</h4>
 <figure class="characterBox auto"  data-cols="ipa,trans,transc">म␣न</figure>
+</section>
+
+
+<section id="liquids">
+<h4>Liquids</h4>
 <figure class="characterBox auto"  data-cols="ipa,trans,transc">र␣ल␣य</figure>
+</section>
+
 
 <p>Three items in the list are combinations of <span class="codepoint" translate="no"><span lang="ks">&#x093C;</span> [<a href="/scripts/devanagari/block#char093C"><span class="uname">U+093C DEVANAGARI SIGN NUKTA</span></a>]</span> and another character to produce additional sounds.</p>
 <p>Only one of those combinations exists in precomposed form.</p>
@@ -826,22 +1035,43 @@ Affricate </th>
 <h3>Palatalisation</h3>
     
     
-<p>Palatalisation is a frequent feature of  Kashmiri words. It is represented using <span class="codepoint" translate="no"><span lang="ks">&#x092F;</span> [<a href="devanagari#char092F"><span class="uname">U+092F DEVANAGARI LETTER YA</span></a>]</span>. Inside a word the <span class="uname">YA</span> forms a conjunct with the preceding consonant, eg. <span class="eg" lang="ks">त्यम्बर</span>.</p>
-<p>At the end of a word, the <span class="uname">YA</span> is followed by a visible virama, eg. <span class="eg" lang="ks">थऺन्य्</span>.</p>
-<p>Use preceding the inherent vowel seems to typically be transcribed using <span class="trans">ê</span>, eg. <span class="trans">têmbar</span>. At the end of a word, it is often transcribed using a superscript i, eg. <span class="trans">tånⁱ</span>.</p>
+<p>Palatalisation is a frequent feature of  Kashmiri words. It is represented using <span class="codepoint" translate="no"><span lang="ks">&#x092F;</span> [<a href="devanagari#char092F"><span class="uname">U+092F DEVANAGARI LETTER YA</span></a>]</span> as the final element of a cluster.</p>
+<p>Inside a word the <span class="uname">YA</span> forms a conjunct or a cluster with the preceding consonant, eg. <span class="eg" lang="ks" dir="ltr">त्यम्बॖर</span></p>
+<p>At the end of a word, the <span class="uname">YA</span> is followed by a visible virama, eg. <span class="eg" lang="ks">थऺन्य्</span></p>
+<p>Use preceding the inherent vowel is typically transcribed using <span class="trans">ê</span>, eg. <span class="trans">têmbar</span>. At the end of a word, it is often transcribed using a superscript <span class="trans">i</span>, eg. <span class="trans">tånⁱ</span></p>
+<p class="info">Some care needs to be taken when the palatalisation follows <span class="ipa">r</span> at the beginning of a word, so as to prevent the sequence forming a repha, ie. <span class="codepoint" translate="no"><span lang="ks">&#x0930;&#x094D;&#x092F;</span> [<a href="/scripts/devanagari/block#char0930"><span class="uname">U+0930 DEVANAGARI LETTER RA</span></a> + <a href="/scripts/devanagari/block#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA</span></a> + <a href="/scripts/devanagari/block#char092F"><span class="uname">U+092F DEVANAGARI LETTER YA</span></a>]</span>. The required rendering can be achieved using <span class="codepoint" translate="no"><span lang="ks">&#x0930;&#x094D;&#x200C;&#x092F;</span> [<a href="/scripts/devanagari/block#char0930"><span class="uname">U+0930 DEVANAGARI LETTER RA</span></a> + <a href="/scripts/devanagari/block#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA</span></a> + <a href="/scripts/punctuation/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a> + <a href="/scripts/devanagari/block#char092F"><span class="uname">U+092F DEVANAGARI LETTER YA</span></a>]</span>, eg. <span class="eg" lang="ks" dir="ltr">र्‌यथ</span> Word-internal use of the repha with palatalisation can, however, be seen, eg. <span class="eg" lang="ks" dir="ltr">पऻर्यज़ान</span></p>
+<p>Since they are palatal sounds, the <span class="uname">YA</span> is not needed after the following consonants.</p>
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">च␣ज␣छ␣श</figure>
 </section>
 
 
 
 
-<section id="nukta">
-<h3>Repertoire extension</h3>
+<section id="sanskrit">
+<h3>Sanskrit letters</h3>
         
-  <p>Words directly borrowed from Sanskrit and Hindi may use additional characters that are not normally used in Kashmiri.<a class="fnref" href="http://koshur.org/pdf/Let%20Us%20Learn%20Kashmiri.pdf">r</a> For example:</p>
+  <p>Words directly borrowed from Sanskrit and Hindi may use additional characters that are not normally used in Kashmiri.<tt>mkr</tt></p>
 
-<figure class="otherBox auto"  data-cols="">ष␣क्ष␣झ</figure>
 
-  <p><span class="codepoint" translate="no"><span lang="ks">&#x0919;</span> [<a href="devanagari#char0919"><span class="uname">U+0919 DEVANAGARI LETTER NGA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ks">&#x0923;</span> [<a href="devanagari#char0923"><span class="uname">U+0923 DEVANAGARI LETTER NNA</span></a>]</span> in Sanskrit/Hindi words are normally rendered using <span class="codepoint" translate="no"><span lang="ks">&#x0902;</span> [<a href="devanagari#char0902"><span class="uname">U+0902 DEVANAGARI SIGN ANUSVARA</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ks">ब्रमाणड</span></span> is written as <span class="charExample" translate="no"><span class="ex" lang="ks">ब्रमांड</span></span>.<a class="fnref" href="http://koshur.org/pdf/Let%20Us%20Learn%20Kashmiri.pdf">r</a></p>
+<section id="sanskrit_nasals">
+<h4>Nasals</h4>
+<figure class="auxiliaryBox auto"  data-cols="">ण␣ञ␣ङ</figure>
+<p>Kashmiri normally uses only 2 of the 5 standard nasal letters in Sanskrit. The missing letters shown just above are normally rendered in Kashmiri using <span class="codepoint" translate="no"><span lang="ks">&#x0902;</span> [<a href="devanagari#char0902"><span class="uname">U+0902 DEVANAGARI SIGN ANUSVARA</span></a>]</span>,<tt>mkr</tt> eg. compare<span class="charExample" translate="no"><span class="ex" lang="ks">*ब्रह्मण्ड</span> <span class="trans">b͓rh͓mɳ͓ɖ</span></span><span class="eg" lang="ks">ब्रह्मांड</span></p>
+<p>They may, however, be found occasionally in conjuncts,<tt>rt,9</tt> eg. <span class="ipa">ang</span> in the Kashmiri orthography is written <span class="charExample" translate="no"><span class="ex" lang="ks">अंग</span></span>but may be written <span class="charExample" translate="no"><span class="ex" lang="ks">अङ्ग</span></span></p>
+<p>On the other hand, they normally never appear outside of a conjunct, ie. <span class="ipa">ganapatʰ</span> is more properly written in Kashmiri as<span class="charExample" translate="no"><span class="ex" lang="ks">गनपथ</span> <span class="trans">gnptʰ</span></span>  rather than the Sanskrit <span class="charExample" translate="no"><span class="ex" lang="ks">गणपथ</span> <span class="trans">gɳptʰ</span></span>That said, some writers will nonetheless use the Sanskrit forms.<tt>rt,9</tt></p>
+</section>
+
+<section id="voiced_aspirates">
+<h4>Voiced aspirated plosives</h4>
+<figure class="auxiliaryBox auto"  data-cols="">भ␣ध␣ढ␣झ␣घ</figure>
+<p>The voiced aspirated plosive letters of Devanagari shown just above may be used to write Sanskrit words, or those words may be written without, eg. <span class="name">dharma</span> may be written <span class="ex" lang="ks">धर्म</span> using Sanskrit letters, or <span class="ex" lang="ks">दर्म</span> in the Kashmiri style.<tt>rt,9</tt></p>
+</section>
+
+<section id="other_sanskrit">
+<h4>Others</h4>
+<figure class="auxiliaryBox auto"  data-cols="">ष␣क्ष␣ज्ञ</figure>
+<p>The letter and the two special conjuncts listed just above are also not used in Kashmiri, although they may pop up sometimes in words borrowed directly from Sanskrit.</p>
+</section>
 </section>
 
 
@@ -851,11 +1081,11 @@ Affricate </th>
 <h3>syllable-Final consonants</h3>
 <figure class="characterBox auto"  data-cols="ipa,trans,transc">ं</figure>
 
-<p><span class="codepoint" translate="no"><span lang="ks">&#x0902;</span> [<a href="/scripts/devanagari/block#char0902"><span class="uname">U+0902 DEVANAGARI SIGN ANUSVARA</span></a>]</span> represents  a nasal that is homorganic with a following consonant. It is positioned over the previous consonant, eg. <span class="eg" lang="ks">पॖंच़ॗह</span>, or vowel-sign, eg. <span class="eg" lang="ks">ज़ॊंग</span>.<a class="fnref" href="http://koshur.org/pdf/Let%20Us%20Learn%20Kashmiri.pdf">r</a></p>
+<p><span class="codepoint" translate="no"><span lang="ks">&#x0902;</span> [<a href="/scripts/devanagari/block#char0902"><span class="uname">U+0902 DEVANAGARI SIGN ANUSVARA</span></a>]</span> represents  a nasal that is homorganic with a following consonant. It is positioned over the previous consonant or vowel-sign,<tt>mkr</tt> eg. <span class="eg" lang="ks">पॖंच़ॗह</span><span class="eg" lang="ks">ज़ॊंग</span></p>
 <p>See also the <a href="#nasalisation">candrabindu</a> diacritic, which nasalises a vowel.</p>
+<p>The visarga is not used in Kashmiri.<tt>rt,8</tt></p>
 </section>
 
-</section>
 
 
   
@@ -865,58 +1095,24 @@ Affricate </th>
 
   
 <section id="clusters">
-<h2>Consonant clusters</h2>
+<h3>Consonant clusters</h3>
 <p id="def-consonantcluster" class="explanatoryintro definitionStub"></p>
 <p id="def-conjunct" class="explanatoryintro definitionStub"></p>
 
-<p>See the <a href="index#clusters">Devanagari overview</a>.<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf"></a></p>
+<p>See the <a href="index#clusters">Devanagari overview</a>.</p>
+</section>
 </section>
 
 
 
   
-<!--section>
-<h2 id="otherletters">Other letters</h2>
-
-<p>CLDR lists the following additional characters with the general property of letter.</p>
-
-<figure class="auxiliaryBox auto"  data-cols="">ऽ␣ॐ</figure>
-
-
-<p>Used for vowel elision in Sanskrit, the main function of <span class="codepoint" translate="no"><span lang="ks">&#x093D;</span> [<a href="devanagari#char093D"><span class="uname">U+093D DEVANAGARI SIGN AVAGRAHA</span></a>]</span> in Hindi is to show that a vowel is sustained in a cry or a shout, eg.  <span class="charExample" translate="no"><span class="ex" lang="ks">आईऽऽऽ!</span> <span class="trans">ạ̄ị̄´´´!</span></span> <a class="fnref" href="https://en.wikipedia.org/wiki/Devanagari">w</a>.</p>
-<p><span class="codepoint" translate="no"><span lang="ks">&#x0950;</span> [<a href="devanagari#char0950"><span class="uname">U+0950 DEVANAGARI OM</span></a>]</span> is a religious symbol.&nbsp;</p>
-</section-->
 
 
 
-  
-<section id="cchar">
-<h2>Combining marks</h2>
-    <p>Apart from the vowel-signs, the commonly-used combining marks in Kashmiri include the following.  Follow the links for more information.</p>
-
-<figure class="characterBox auto"  data-cols="" data-links="#basicconsonants,#suppression,#nasalisation,#finals">़␣्␣ँ␣ं</figure>
-
-
-<p>The Devanagari block also contains the following diacritics.</p>
-</section>
-
-
-
-  
-<section id="punctuation">
-<h2>Punctuation</h2>
-    <p class="observation"><span class="leadin">Observation:</span> Only one non-western punctuation mark so far found.<a class="fnref" href="http://koshur.org/pdf/Let%20Us%20Learn%20Kashmiri.pdf">r</a></p>
-
-<figure class="characterBox auto"  data-cols="">।</figure>
-
-<!--p>See <a class="secref">phrase</a>  for more information.</p-->
-</section>
-  
-  
 <section id="digits">
 <h2>Numbers, dates, currency, etc</h2>
-    <p>Need to clarify whether or not Kashmiri uses indic digits, and the rupee sign.</p>
 
+<p class="observation"><span class="leadin">Observation:</span> Clarification needed on whether or not Kashmiri uses indic digits, and the rupee sign. Sources used so far keep to ASCII digits, but the Devanagari block has a set of digits that are used in Hindi.</p>
 <!--figure class="characterBox auto"  data-cols="trans,transc">०␣१␣२␣३␣४␣५␣६␣७␣८␣९</figure>
 
 <p>An interesting feature of large numbers written in India is that they apply groupings of two, rather than three, digits between commas (even when using european digits).</p>
@@ -933,6 +1129,15 @@ Affricate </th>
 </section-->
 </section>
 
+
+
+
+
+
+<section id="direction">
+<h2>Text direction</h2>
+<p>Kashmiri in the Devanagari script runs left to right in horizontal lines.</p>
+</section>
 
 
 
@@ -955,7 +1160,7 @@ Affricate </th>
 
 <p>Kashmiri text written with the devanagari script is not cursive (ie. joined up like Arabic), however there is a significant amount of interaction between glyphs, and some joining, around consonant clusters.</p>
 <p>The orthography has no case distinction, and no special transforms are needed to convert between characters.</p>
-<p>See the <a href="index#context">Devanagari overview</a>.<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf"></a></p>
+<p>See the <a href="index#context">Devanagari overview</a>.</p>
 
 <!--section id="writing_styles">
 <h3>Writing styles</h3>
@@ -1083,7 +1288,8 @@ Affricate </th>
 <h3>Word boundaries</h3>
 <p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 
-<p class="prompts">tbd</p>
+<p>Word boundaries are indicated by spaces.</p>
+<p>Kashmiri sometimes uses a hyphen to separate parts of a compound noun, eg. <span class="eg" lang="ks" dir="ltr">ॶंह-रारय</span></p>
 </section>
 
 
@@ -1091,9 +1297,28 @@ Affricate </th>
 
   
 <section id="phrase">
-<h3>Phrase &amp; section boundaries</h3>
+<h3>Phrase &amp; section boundaries</h3><tt>rt</tt>
+<table class="character_list">
+<tbody>
+<tr>
+<th scope="row">phrase</th>
+<td><p><span class="codepoint" translate="no"><span lang="ks">&#x002C;</span> [<a href="/scripts/devanagari/block#char002C"><span class="uname">U+002C COMMA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="ks">&#x003B;</span> [<a href="/scripts/devanagari/block#char003B"><span class="uname">U+003B SEMICOLON</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="ks">&#x003A;</span> [<a href="/scripts/devanagari/block#char003A"><span class="uname">U+003A COLON</span></a>]</span></p></td>
+</tr>
+<tr>
+<th scope="row">sentence</th>
+<td><p> <span class="codepoint"><span lang="ks">&#x0964;</span> <a href="/scripts/devanagari/block#char0964">[<span class="uname">U+0964 DEVANAGARI DANDA</span>]</a></span></p>
+<p><span class="codepoint" translate="no"><span lang="ks">&#x003F;</span> [<a href="/scripts/devanagari/block#char003F"><span class="uname">U+003F QUESTION MARK</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="ks">&#x0021;</span> [<a href="/scripts/devanagari/block#char0021"><span class="uname">U+0021 EXCLAMATION MARK</span></a>]</span></p></td>
+</tr>
+<tr>
+<th scope="row">paragraph</th>
+<td><span class="codepoint" translate="no"><span lang="ks">&#x0965;</span> [<a href="/scripts/devanagari/block#char0965"><span class="uname">U+0965 DEVANAGARI DOUBLE DANDA</span></a>]</span></td>
+</tr>
+</tbody>
+</table>
 
-<p class="prompts">tbd</p>
 </section>
 
 
@@ -1102,9 +1327,23 @@ Affricate </th>
 
 <section id="bracketing">
 <h3>Parentheses &amp; brackets</h3>
-<p class="prompts">tbd</p>
 
-<p><span class="codepoint" translate="no"><span lang="ta">(</span> [<a href="/scripts/tamil/block#char0028"><span class="uname">U+0028 LEFT PARENTHESIS</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ta">)</span> [<a href="/scripts/tamil/block#char0029"><span class="uname">U+0029 RIGHT PARENTHESIS</span></a>]</span> are used for parentheses.&nbsp;</p>
+<table class="character_list">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>start</th>
+<th>end</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>standard</th>
+<td><p><span class="codepoint" translate="no"><span lang="ks">&#x0028;</span> [<a href="/scripts/devanagari/block#char0028"><span class="uname">U+0028 LEFT PARENTHESIS</span></a>]</span></p></td>
+<td><p><span class="codepoint" translate="no"><span lang="ks">&#x0029;</span> [<a href="/scripts/devanagari/block#char0029"><span class="uname">U+0029 RIGHT PARENTHESIS</span></a>]</span></p></td>
+</tr>
+</tbody>
+</table>
 </section>
 
 
@@ -1114,8 +1353,6 @@ Affricate </th>
 <section id="quotations">
 <h3>Quotations</h3>
 <p class="prompts">tbd</p>
-<p>The default quote marks for Kashmiri are <span class="codepoint" translate="no"><span lang="ta">“</span> [<span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span>]</span> at the start, and <span class="codepoint" translate="no"><span lang="ta">”</span> [<span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span>]</span> at the end.<a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/ta.html">c</a></p>
-<p>When an additional quote is embedded within the first, the quote marks are <span class="codepoint" translate="no"><span lang="ta">‘</span> [<span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span>]</span> and <span class="codepoint" translate="no"><span lang="ta">’</span> [<span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span>]</span>.<a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/ta.html">c</a></p>
 </section>
 
 
@@ -1180,46 +1417,22 @@ Affricate </th>
 <p class="prompts">tbd</p>
 <section id="linebreak_props">
 <h4>Character properties</h4>
-<p>Characters used for the Kashmiri  language have the following <em>default</em> assignments related to line-break properties, according to the Unicode Standard. Some tailoring may be needed for thisLanguage language text.</p>
+<p>Characters used for the Kashmiri  language have the following <em>default</em> assignments related to line-break properties, according to the Unicode Standard. Some tailoring may be needed for Kashmiri language text.</p>
 <table><tbody>
-<tr><th class="sg">AL</th><td class="count">1</td><td class="chars"><span class="exlist" lang="xx">๏</span></td></tr>
-<tr><th class="sg">B2</th><td class="count">1</td><td class="chars"><span class="exlist" lang="xx">—</span></td></tr>
-<tr><th class="sg">BA</th><td class="count">4</td><td class="chars"><span class="exlist" lang="xx">๚๛‐–</span></td></tr>
-<tr><th class="sg">IN</th><td class="count">1</td><td class="chars"><span class="exlist" lang="xx">…</span></td></tr>
-<tr><th class="sg">NU</th><td class="count">10</td><td class="chars"><span class="exlist" lang="xx">๐๑๒๓๔๕๖๗๘๙</span></td></tr>
-<tr><th class="sg">PO</th><td class="count">2</td><td class="chars"><span class="exlist" lang="xx">′″</span></td></tr>
-<tr><th class="sg">PR</th><td class="count">1</td><td class="chars"><span class="exlist" lang="xx">฿</span></td></tr>
-<tr><th class="sg">QU</th><td class="count">4</td><td class="chars"><span class="exlist" lang="xx">‘’“”</span></td></tr>
-<tr><th class="sg">SA</th><td class="count">70</td><td class="chars"><span class="exlist" lang="xx">กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรฤลฦวศษสหฬอฮฯะาำเแโใไๅๆัิีึืุู็่้๊๋์</span></td></tr>
+<tr><th class="sg">AL</th><td class="count">51</td><td class="chars"><span class="exlist" lang="xx">प फ ब त थ द ट ठ ड क ख ग च छ ज व स श ह म न र ल य इ ई ॶ ॷ उ ऊ ऎ ए ॳ ॴ ऒ ओ ॵ अ आ ऐ औ ऋ ण ञ ङ भ ध ढ झ घ ष</span></td></tr>
+<tr><th class="sg">BA</th><td class="count">1</td><td class="chars"><span class="exlist" lang="xx">।</span></td></tr>
+<tr><th class="sg">CM</th><td class="count">21</td><td class="chars"><span class="exlist" lang="xx">ि ी ॖ ॗ ु ू ॆ े ऺ ऻ ॊ ो ॏ ा ै ौ ं ़ ् ँ ृ</span></td></tr>
+<tr><th class="sg">NU</th><td class="count">10</td><td class="chars"><span class="exlist" lang="xx">० १ २ ३ ४ ५ ६ ७ ८ ९</span></td></tr>
 </tbody></table>
 
 
 
-<detailsx id="linebreak_details">
-<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AI">AI (ambiguous, alphabetic or Ideograph)</a> line breaking behavior  depends on the context, and may reflect  different rules in East Asian and other contexts.</p>
+<details id="linebreak_details">
+<summary>Show legend <tt>ul,#Properties</tt></summary>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">B2 (break opportunity before and after)</a> the EM DASH  used to set off parenthetical text may allow line breaks before or after, but may also be affected by local orthographic rules.&nbsp;</p>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BB (break before)</a> indicates that characters  move to the next line at a line break and thus provide a line break opportunity before.&nbsp;</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BA (break after)</a> indicates that it is normal to break after that character.&nbsp;</p>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CL">CL (close punctuation)</a>  should be kept with the preceding character.&nbsp;The class CL is closely related to the class CP (Close Parenthesis). They differ only in that CP will not introduce a break when followed by a letter or number, which prevents breaks within constructs like “(s)he”.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CP">CP (closing parenthesis)</a> will not cause a break opportunity when appearing in contexts like “(s)he.” In all other respects the breaking behavior of CP and CL are the same.</p>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#EX">EX (exclamation mark/interrogation)</a> behave like closing characters, except in relation to postfix (PO) and non-starter characters (NS).</p>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#GL">GL (non-breaking “glue&quot;)</a> non-tailorable, non-breaking characters prohibit breaks on either side, but that prohibition can be overridden by SP or ZW.</p>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#H2">HY (hyphen)</a> additional context analysis is required to distinguish usage of this character as a hyphen from its usage as a minus sign (or indicator of numerical range). If used as hyphen, it acts like U+2010 HYPHEN, which has line break class BA.</p>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">IN (inseparable characters)</a> is intended to be used consecutively. There is never a line break between two characters of this class.</p>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">ID (ideographic)</a> do not require other characters to provide break opportunities; lines can ordinarily break before and after and between pairs of ideographic characters. Note that this class also includes characters other than Han ideographs..</p>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">IS (infix numeric separators)</a> usually occurs inside a numerical expression and may not be separated from the numeric characters that follow, unless a space character intervenes. For example, there is no break in “100.00” or “10,000”, nor in “12:59”..</p>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">NS (nonstarters)</a> cannot start a line, but unlike CL they may allow a break in some contexts when they follow one or more space characters.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">NU (number)</a> behaves like ordinary characters (AL) in the context of most characters but activate the prefix and postfix behavior of prefix and postfix characters.</p>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#OP">OP (open punctuation)</a> 	should be kept with the character that follows. This is desirable, even if there are intervening space characters, as it prevents the appearance of a bare opening punctuation mark at the end of a line.</p>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#OP">PO (postfix numeric)</a> usually follows a numerical expression and may not be separated from preceding numeric characters or preceding closing characters, even if one or more space characters intervene. For example, there is no break opportunity in “(12.00) %”.</p>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#PR">PR (numeric prefix)</a>  may not be separated from following numeric characters or following opening characters, even if a space character intervenes. For example, there is no break opportunity in “฿ (100.00)”.</p>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#SA">QU (quotation)</a> characters can be opening or closing, or even both, depending on usage. The default is to treat them as both opening and closing.</p>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#SA">SA (Southeast Asian)</a> require morphological analysis to determine break opportunities, in a way similar to a hyphenation algorithm. No break opportunities will be found otherwise. Complex context analysis, often involving dictionary lookup of some form, is required to determine non-emergency line breaks. If such analysis is not available, it is recommended to treat them as AL.</p>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#SA">SY (symbols allowing break after)</a> provides a break opportunity after, except in front of digits, so as to not break “1/2” or “06/07/99”.</p>
-<p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#SA">ZW (ZERO WIDTH SPACE, ZWSP)</a> enables  invisible break opportunities wherever <span class="uname">SPACE</span> cannot be used. It  has no width, and is treated as if it wasn't there during justification.</p>
 </details>
 </section>
 </section>
@@ -1334,12 +1547,6 @@ Affricate </th>
 
 <section>
 <h2>Character lists</h2>
-    <p>Version 12.0 of the Unicode Standard has the following blocks dedicated to the Devanagari script (numbers in lists are non-ASCII only):</p>
-<ul>
-<li><a href="/uniview/?block=Devanagari">Devanagari</a> <span class="charCount">81 letters, 34 marks, 10 numbers, 3 punctuation : total 128</span></li>
-<li><a href="/uniview/?block=Devanagari_Extended">Devanagari Extended</a> <span class="charCount">9 letters, 19 marks, 4 punctuation : total 32</span></li>
-</ul>
-
 
 <p>The Kashmiri orthography described here uses characters from the following Unicode blocks.</p>
 
@@ -1347,7 +1554,7 @@ Affricate </th>
 <tbody>
 <tr>
 <th class="sg">Devanagari</th>
-<td class="count">62</td><td class="chars">ि ी ॖ ॗ ु ू ॆ े ऺ ऻ ॊ ो ॏ ा ै ौ इ ई ॶ ॷ उ ऊ ऎ ए ॳ ॴ ऒ ओ ॵ अ आ ऐ औ प फ ब त थ द ट ठ ड क ख ग च ़ छ ज व स श ह म न र ल य ं ् ँ ।</td><td class="select" title="Copy to clipboard" onclick="copyToClipboard(this.previousSibling)"><img src="../../shared/images/copy.png" alt="Copy to clipboard" title="Copy to clipboard"></td></tr>
+<td class="count">74</td><td class="chars">ँ​ं​अ​आ​इ​ई​उ​ऊ​ऋ​ऎ​ए​ऐ​ऒ​ओ​औ​क​ख​ग​च​छ​ज​ट​ठ​ड​त​थ​द​न​प​फ​ब​म​य​र​ल​व​श​स​ह​ऺ​ऻ​़​ा​ि​ी​ु​ू​ृ​ॆ​े​ै​ॊ​ो​ौ​्​ॏ​ॖ​ॗ​।​०​१​२​३​४​५​६​७​८​९​ॳ​ॴ​ॵ​ॶ​ॷ</td><td class="select" title="Copy to clipboard" onclick="copyToClipboard(this.previousSibling)"><img src="../../shared/images/copy.png" alt="Copy to clipboard" title="Copy to clipboard"></td></tr>
 </tbody>
 </table>
 
@@ -1359,7 +1566,8 @@ Affricate </th>
 <tbody>
 <tr>
 <th class="sg">Devanagari</th>
-<td class="count">1</td><td class="chars">ज़</td><td class="select" title="Copy to clipboard" onclick="copyToClipboard(this.previousSibling)"><img src="../../shared/images/copy.png" alt="Copy to clipboard" title="Copy to clipboard"></td></tr>
+<td class="count">12</td>
+<td class="chars">क घ ङ ज झ ञ ढ ण ध भ ष ज़</td><td class="select" title="Copy to clipboard" onclick="copyToClipboard(this.previousSibling)"><img src="../../shared/images/copy.png" alt="Copy to clipboard" title="Copy to clipboard"></td></tr>
 </tbody>
 </table>
 
@@ -1381,14 +1589,14 @@ Affricate </th>
 <section id="hindiDiff">
 <h3>Differences from Hindi</h3>
 
-<p>Kashmiri doesn't use the following consonants (they include, notably, all the aspirated sonorants), however they may occasionally appear in words directly borrowed from Sanskrit and Hindi.<a class="fnref" href="http://koshur.org/pdf/Let%20Us%20Learn%20Kashmiri.pdf">r</a></p>
+<p>Kashmiri doesn't use the following consonants (they include, notably, all the aspirated sonorants), however they may occasionally appear in words directly borrowed from Sanskrit and Hindi.<tt>mkr</tt></p>
 <figure class="auto"  data-cols="">घ␣ङ␣झ␣ञ␣ढ␣ण␣ध␣भ␣ळ␣ष</figure>
 <p>The following are additional consonants, all formed by adding a nukta.</p>
 <figure class="auto"  data-cols="">च़␣छ़␣ज़</figure>
 <p>Kashmiri adds the following vowels (and their vowel-signs).</p>
 <figure class="auto"  data-cols="">ॶ␣ॷ␣ऎ␣ॲ␣ऑ␣ऒ␣ॵ</figure>
 <figure class="auto"  data-cols="">ॖ␣ॗ␣ॆ␣ऺ␣ऻ␣ॊ␣ॏ</figure>
-<p>Kashmiri doesn't use the visarga.<a class="fnref" href="http://koshur.org/pdf/Let%20Us%20Learn%20Kashmiri.pdf">r</a></p>
+<p>Kashmiri doesn't use the visarga.<tt>mkr</tt></p>
 </section>
 </section>
 
@@ -1397,14 +1605,14 @@ Affricate </th>
 	
 
 
-<!--section id="online_samples">
+<section id="online_samples">
 <h2>Online resources</h2>
 
-  <ol>
-    <li><a href="https://unicode.org/udhr/d/udhr_aii.html">Universal Declaration of Human Rights - Assyrian Neo-Aramaic</a></li>
-<li><a href="http://worldbibles.org/language_detail.php/eng/aii/Assyrian+Neo-Aramaic?translation=eng&&language=aii&&name=Assyrian+Neo-Aramaic">The Bible in Assyrian Neo-Aramaic</a></li>
+<ol>
+<li><a href="http://www.koshur.org/contents.html">Koshur, An introduction to spoken Kashmiri</a></li>
+<li><a href="http://www.koshur.org/pdf/reader.pdf">Let us learn Kashmiri</a></li>
 </ol>
-</section-->
+</section>
 
 
 
@@ -1413,15 +1621,6 @@ Affricate </th>
 
 <section id="refs">
 <h2>References</h2>
-  <ol>
-    <!--li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
-				0-19-507993-0, pp487-497</li-->
-<li>[ <a class="fnref" href="https://www.unicode.org/L2/L2008/08250-n3480-kashmiri.pdf">e</a> ]     Michael Everson and Pravin Satpute, <a href="https://www.unicode.org/L2/L2008/08250-n3480-kashmiri.pdf">Proposal to add four characters for Kashmiri to the BMP of the UCS</a></li>
-<li>[ <a class="fnref" href="https://www.unicode.org/L2/L2009/09311-kashmiri-ltr-from-swaran-lata.pdf">l</a> ]  Swaran Lata, <a href="https://www.unicode.org/L2/L2009/09311-kashmiri-ltr-from-swaran-lata.pdf">Encoding of additional characters in Unicode for representation of Kashmiri</a></li>
-<li>[ <a class="fnref" href="http://koshur.org/pdf/Let%20Us%20Learn%20Kashmiri.pdf">r</a> ]  M.K.Raina, <a href="http://koshur.org/pdf/Let%20Us%20Learn%20Kashmiri.pdf">How to read and write Kashmiri in Devanagari?</a></li>
-<li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch12.pdf">u</a> ] The Unicode Standard v11.0, <a href="http://www.unicode.org/versions/latest/ch12.pdf">Devanagari</a></li>
-<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Kashmiri_language">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Kashmiri_language">Kashmiri language</a></li>
-</ol>
 </section>
 
 

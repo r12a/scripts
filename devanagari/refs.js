@@ -16,17 +16,36 @@ reflist = {
 "pages":"487-497",
 },
 
+"ep": {
+"url":"https://www.unicode.org/L2/L2008/08250-n3480-kashmiri.pdf",
+"authors": "Michael Everson and Pravin Satpute",
+"title":"Proposal to add four characters for Kashmiri to the BMP of the UCS",
+},
+
 "i": {
 "url":"https://www.w3.org/TR/ilreq/",
-"authors": " Swaran Lata, Somnath Chandra, Prashant Verma",
+"authors": "Swaran Lata, Somnath Chandra, Prashant Verma",
 "title":"Indic Layout Requirements",
 },
 
-"r": {
-"url":"https://www.unicode.org/L2/L2007/07023-bamum-report.pdf",
-"authors": "Riley, Charles",
-"title":"L2/07-023: Towards the Encoding of the Bamum Script in the UCS",
+"l": {
+"url":"https://www.unicode.org/L2/L2009/09311-kashmiri-ltr-from-swaran-lata.pdf",
+"authors": "Swaran Lata",
+"title":"Encoding of additional characters in Unicode for representation of Kashmiri",
+},
+
+"mkr": {
+"url":"http://koshur.org/pdf/Let%20Us%20Learn%20Kashmiri.pdf",
+"authors": "M. K. Raina",
+"title":"How to read and write Kashmiri in Devanagari?",
 "reviewed":true
+},
+
+"rt": {
+"url":"http://www.koshur.org/pdf/BasicReader.pdf",
+"authors": "M. K. Raina & Neelam Trakru",
+"title":"Basic Reader for Kashmiri Language",
+"publisher": "Project Zaan",
 },
 
 "s": {
@@ -35,6 +54,12 @@ reflist = {
 "title":"Teach Yourself Hindi",
 "publisher":"Hodder & Stoughton",
 "isbn":"978-0-340-86687-0",
+},
+
+"sg": {
+"url":"https://www.sundayguardianlive.com/news/7044-pandits-want-official-status-kashmiri-written-devanagari-script",
+"authors": "Akshay Sharma, The Sunday Guardian",
+"title":"Pandits want official status for Kashmiri written in Devanagari script",
 },
 
 "u": {
@@ -51,6 +76,12 @@ reflist = {
 "authors": "Unicode Consortium",
 "title":"Unicode Line Breaking Algorithm (UAX#14)",
 "reviewed":true
+},
+
+"wlk": {
+"url":"https://en.wikipedia.org/wiki/Kashmiri_language",
+"authors": "Wikipedia",
+"title":"Kashmiri language",
 },
 
 "wp": {
