@@ -157,92 +157,115 @@ var scriptNotes= {
 
 // Script summary selector, used by script summary link page
 var scriptNotesByRegion = {  
-	'Africa':[['Adlam', 'adlam/'],
-			  ['Amharic', 'ethiopic/'],
-			  ['Bamum', 'bamum/'],
-			  ['Bassa Vah', 'bassavah/'],
-			  ['Ethiopic', 'ethiopic/'],
-			  ['Hausa (boko)', 'latin/hausa'],
-			  ['Hausa (ajami)', 'arabic/hausa'],
-			  ["N’Ko", 'nko'],
-			  ['Pular', 'adlam/'],
-			  ['Tamazight', 'tifinagh/'],
-			  ['(Neo-)Tifinagh', 'tifinagh/'],
-			  ['Vai', 'vai/']
-			  ],
-	'Europe':[['Armenian','armenian/'],
-			  ['Cyrillic', 'cyrillic/'],
-			  ['Georgian', 'georgian/'],
-			  ['Greek', 'greek/'],
-			  ['Russian', 'cyrillic/'],
-			  ],
-	'West&nbsp;Asia':[['Arabic','arabic/'],
-			  ['Assyrian Neo-Aramaic', 'syriac/syrc-aii'],
-			  ['Hebrew', 'hebrew/'],
-			  ['Mandaic', 'mandaic/'],
-			  ['Syriac', 'syriac/'],
-			  ['Turoyo', 'syriac/syrc-tru']
-			  ],
-	'Central&nbsp;Asia':[
-				['Mongolian', 'mongolian/'],
-				['Tibetan', 'tibetan/'],
-				['Uighur', 'arabic/uighur']
-			  	],
-	'East&nbsp;Asia':[
-				['Chinese', 'han/'],
-				['Han', 'han/'],
-			    ['Hangul', 'hangul/'],
-			    ['Japanese', 'jpan/'],
-			    ['Korean', 'hangul/'],
-			    ['Lisu', 'lisu/'],
-			    ['Mongolian', 'mongolian/']
-			    ],
-	'South&nbsp;Asia':[
-				['Bangla', 'bengali/'],
-				['Bengali', 'bengali/'],
-				['Devanagari', 'devanagari/'],
-				['Dhivehi', 'thaana/'],
-				['Gujarati', 'gujarati/'],
-				['Gurmukhi', 'gurmukhi/'],
-				['Hindi', 'devanagari/'],
-				['Kashmiri (arab)', 'arabic/kashmiri'],
-				['Kashmiri (deva)', 'devanagari/kashmiri'],
-				['Malayalam', 'malayalam'],
-				['Punjabi', 'gurmukhi/'],
-				['Sinhala', 'sinhala/'],
-				['Tamil', 'tamil/'],
-				['Telugu', 'telugu/'],
-				['Thaana', 'thaana/'],
-				['Urdu', 'arabic/urdu']
-			  ],
-	'SE&nbsp;Asia':[
-				['Burmese', 'myanmar'],
-				['Khmer', 'khmer/'],
-				['Lao', 'lao/'],
-				['Myanmar', 'myanmar'],
-				['New Tai Lü', 'newtailue/'],
-				['Northern Thai', 'taitham/northernthai'],
-				['Shan', 'myanmar/mymr-shn'],
-				['Tai Dam', 'taiviet/'],
-				['Tai Khün', 'taitham/'],
-				['Tai Le', 'taile/'],
-				['Tai Nüa', 'taile/'],
-				['Tai Tham', 'taitham/'],
-				['Tai Viet', 'taiviet/'],
-				['Thai', 'thai/']
-			   ],
-	'MSE Asia':[
-				['Balinese', 'balinese/'],
-				['Buginese', 'buginese/'],
-				['Javanese', 'javanese/'],
-				['Sundanese', 'sundanese/']
-			   ],
-	'Americas':[['Cherokee', 'cherokee/'],
-				['Eastern Canadian Inuktitut', 'cans/'],
-				['Osage', 'osage/'],
-				['Plains Cree', 'cans/cans-crk'],
-				['UCAS', 'cans/']
-			    ]
+	'A':[
+		['Adlam', 'adlam/'],
+		['Amharic', 'ethiopic/'],
+		['Arabic','arabic/'],
+		['Armenian','armenian/'],
+		['Assyrian Neo-Aramaic', 'syriac/syrc-aii'],
+		],
+	'B':[
+		['Balinese', 'balinese/'],
+		['Bamum', 'bamum/'],
+		['Bangla', 'bengali/'],
+		['Bassa Vah', 'bassavah/'],
+		['Bengali', 'bengali/'],
+		['Buginese', 'buginese/'],
+		['Burmese', 'myanmar'],
+		],
+	'C':[
+		['Cherokee', 'cherokee/'],
+		['Chinese', 'han/'],
+		['Cyrillic', 'cyrillic/'],
+		],
+	'D':[
+		['Devanagari', 'devanagari/'],
+		['Dhivehi', 'thaana/'],
+		],
+	'E':[
+		['Eastern Canadian Inuktitut', 'cans/'],
+		['Ethiopic', 'ethiopic/'],
+		],
+	'G':[
+		['Georgian', 'georgian/'],
+		['Greek', 'greek/'],
+		['Gujarati', 'gujarati/'],
+		['Gurmukhi', 'gurmukhi/'],
+		],
+	'H':[
+		['Han', 'han/'],
+		['Hangul', 'hangul/'],
+		['Hausa (boko)', 'latin/hausa'],
+		['Hausa (ajami)', 'arabic/hausa'],
+		['Hebrew', 'hebrew/'],
+		['Hindi', 'devanagari/'],
+		],
+	'J':[
+		['Japanese', 'jpan/'],
+		['Javanese', 'javanese/'],
+		],
+	'K':[
+		['Kashmiri (arab)', 'arabic/kashmiri'],
+		['Kashmiri (deva)', 'devanagari/kashmiri'],
+		['Khmer', 'khmer/'],
+		['Korean', 'hangul/'],
+		],
+	'L':[
+		['Lao', 'lao/'],
+		['Lisu', 'lisu/'],
+		],
+	'M':[
+		['Malayalam', 'malayalam'],
+		['Mandaic', 'mandaic/'],
+		['Mongolian', 'mongolian/'],
+		['Myanmar', 'myanmar'],
+		],
+	'N':[
+		["N’Ko", 'nko'],
+		['New Tai Lü', 'newtailue/'],
+		['Northern Thai', 'taitham/northernthai'],
+		],
+	'O':[
+		['Osage', 'osage/'],
+		],
+	'P':[
+		['Plains Cree', 'cans/cans-crk'],
+		['Pular', 'adlam/'],
+		['Punjabi', 'gurmukhi/'],
+		],
+	'R':[
+		['Russian', 'cyrillic/'],
+		],
+	'S':[
+		['Shan', 'myanmar/mymr-shn'],
+		['Sinhala', 'sinhala/'],
+		['Sundanese', 'sundanese/'],
+		['Syriac', 'syriac/'],
+		],
+	'T':[
+		['Tai Dam', 'taiviet/'],
+		['Tai Khün', 'taitham/'],
+		['Tai Le', 'taile/'],
+		['Tai Nüa', 'taile/'],
+		['Tai Tham', 'taitham/'],
+		['Tai Viet', 'taiviet/'],
+		['Tamazight', 'tifinagh/'],
+		['Tamil', 'tamil/'],
+		['Telugu', 'telugu/'],
+		['Thaana', 'thaana/'],
+		['Thai', 'thai/'],
+		['Tibetan', 'tibetan/'],
+		['(Neo-)Tifinagh', 'tifinagh/'],
+		['Turoyo', 'syriac/syrc-tru'],
+		],
+	'U':[
+		['UCAS', 'cans/'],
+		['Uighur', 'arabic/uighur'],
+		['Urdu', 'arabic/urdu'],
+		],
+	'V':[
+		['Vai', 'vai/'],
+		],
 	}
 
 
