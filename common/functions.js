@@ -908,7 +908,7 @@ function setGeneralFont (fontname, size, language) {
 
 function runCharCount (type, location) { 
 	//if (document.getElementById(location) == null) return
-	var charlists = document.querySelectorAll(type)
+	var charlists = document.getElementById('index').querySelectorAll(type)
 	var out = ''
 	charlistArray = []
 	for (let i=0;i<charlists.length;i++) {
@@ -1047,7 +1047,7 @@ function setTranslitToggle () {
 	var label = document.createElement('label')
 	var input = document.createElement('input')
 	input.type = 'checkbox'
-	input.checked = true
+	input.checked = false
 	input.id = 'showDetailOnMouseover'
 	label.appendChild(document.createTextNode('Detail on mouseover '))
 	label.appendChild(input)
