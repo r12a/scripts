@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <title>Telugu script notes</title>
+
 <meta name="description" content="Summary of the Telugu script."/>
 <link rel="stylesheet" href="../../shared/style/docs.css" />
 <link rel="stylesheet" href="../common/local.css" />
@@ -29,18 +30,20 @@
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../glossary/glossary.js"> </script>
 <script src="../common/egcode.js"></script>
+<script src="../common/references.js"></script>
+<script src="refs.js"></script>
 
 <script src="te-examples.js"></script>
 <script src="te-translit.js">  </script>
 </head>
 
-<body>
+<body class="useBlockExamples">
 <header>
 <div id="header-boilerplate"></div>
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Telugu (draft)</h1>
+<h1>Telugu</h1>
 
 <nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top"/></a></nav>
 
@@ -49,79 +52,39 @@
 		<div id="toc"><!-- placeholder --></div>
 
  <div id="fontsetting" class="closed">
-  <h2 class="notoc"><a id="fonts">Fonts</a></h2>
-  <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-   <p>Set font for examples<br/>
-      <select id="exfontswitchfont" 
-onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'tmp');">
-      </select>
-      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
-      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
-onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', 'tmp');" />
-    </p>
-
-      <p>Set font for sample<br/>
-      <select  id="slfontswitchfont" 
-onchange="document.getElementById('freeText').style.fontFamily = document.getElementById('slfontswitchfont').value; return false;">
-      </select>
-      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
-    </p>
-
-    <form oninput="document.getElementById('freeText').style.fontSize = (this.slider.value*this.multiplier.value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (this.slider.value*this.multiplier.value)+'px';
-	return false;">
-      <p>Change size:<br />
-        <input id="slider" type="range" min="12" max="100" step="1" value="32">
-        &#xA0; <span id="sizeIndicator">32px</span><br />
-        <input id="multiplier" type="hidden" value="1" />
-        Multiplier:
-        <input type="radio" name="step" id="x1" value="1" checked="checked" onclick="document.getElementById('multiplier').value=1; document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
-        <label for="x1">1</label>
-        <input type="radio" name="step" id="x5" value="2"  onclick="document.getElementById('multiplier').value = 2;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
-        <label for="x5">2</label>
-        <input type="radio" name="step" id="x10" value="10"  onclick="document.getElementById('multiplier').value = 10;  document.getElementById('freeText').style.fontSize = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px'; 
-	document.getElementById('sizeIndicator').innerHTML = (document.getElementById('slider').value*document.getElementById('multiplier').value)+'px';" />
-        <label for="x10">10</label>
-      </p>
-    </form>
 </div>
 </aside>
 
+
+
+
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->24 November, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->17 December, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
 
 	<div class="section">
-	  <p>This page gathers together basic information about the  Telugu script and its use for the Telugu language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Telugu using Unicode.</p>
-
-
-
-
-<p>See also the companion document, <a href="block" class="linkHighlight">Telugu character notes</a>, for detailed information about specific Unicode characters.</p>
+	  <p>This page gathers  basic information about the  Telugu script and its use for the Telugu language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Telugu using Unicode.</p>
 <p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
 
 
 
-<details>
+<p id="usage"></p>
+<script>addUsageAdvice('Telugu')</script>
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Telugu','Telugu'); return false;">More about using this page</a></summary>
+<div id="about"></div>
+</details>
+
+<details class="supportdocs noprint">
 <summary class="instructions"><a href="../links?iso=Telu">Related pages</a>.</summary>
 </details>
 
-
-
-<details>
-<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
-</details>
-
-
-
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Telugu','Telugu'); return false;">About this page</a></summary>
-<div id="about"></div>
+<summary class="instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
 </details>
 </div>
 
@@ -146,21 +109,17 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <section id="history">
 <h2>Usage &amp; history</h2>
-    <p>From <a href="http://scriptsource.org/scr/Bali">Scriptsource</a>: </p>
-    <blockquote>
-<p>The Telugu script is used for writing the Telugu language, a Dravidian language spoken by almost 70,000,000 people in South India. Telugu is the official language of the Indian state of Andhra Pradesh. The Telugu script is also used for writing a number of minority languages in Southern India, including Chenchu, Savara and Manna-Dora to which the Telugu language is related. The script is closely related to the Kannada script; a person familiar with one script can normally read the other. The two scripts developed from a common Brahmic source but diverged around the 13th century AD. From this time until the early 20th century, Telugu was a literary language - the written form reflected an archaic spoken form. Modern standard Telugu only began to be written during the second half of the 20th century.</p>
-</blockquote>
-    <p>From <a href="http://en.wikipedia.org/wiki/Telugu_script">Wikipedia</a>:</p>
-<blockquote>
-<p>Telugu script (Telugu: తెలుగు లిపి, romanized: Telugu lipi), an abugida from the Brahmic family of scripts, is used to write the Telugu language, a Dravidian language spoken in the Indian states of Andhra Pradesh and Telangana as well as several other neighbouring states. The Telugu script is also widely used for writing Sanskrit texts and to some extent the Gondi language. It gained prominence during the Eastern Chalukyas also known as Vengi Chalukya era. It shares extensive similarities with the Kannada script, as it has evolved from Kadamba and Bhattiprolu scripts of the Brahmi family. Both Adikavi Pampa of Kannada and Adikavi Nannayya of Telugu hail from families native to the Vengi region. In 2008, Telugu language is given the status of Classical Languages of India, this status owes to its rich history and heritage.</p>
-</blockquote>
+    <p>The Telugu script is used for writing the Telugu language, a Dravidian language spoken by almost 70,000,000 people in South India, and the official language of the Indian state of Andhra Pradesh. It is also used for a number of minority languages, and other neighbouring Indian states.</p>
+<p><span class="charExample" lang="te"><span class="ex" lang="te">తెలుగు లిపి</span> (<span class="transc">telugu lipi</span>) <span class="meaning">Telugu script</span></span></p>
+<p>This script and Kannada (which is similar enough for people who can read one to be able to read the other) both developed together from the Brahmi script, but diverged around the 13th century. From then until recently, Telugu was a literary language, reflecting an archaic spoken form, but it was altered to support modern communication in the second half of the 20th century.</p>
+<p class="instructions">Sources <a href="http://scriptsource.org/scr/Bali">Scriptsource</a>, <a href="http://en.wikipedia.org/wiki/Telugu_script">Wikipedia</a>.</p>
    
   
   
   
 <section id="variants">
 <h3>Orthographic development &amp; variants</h3>
-<p>See <a class="secref">alternate_vowel_encodings</a> for possible variant encoding approaches to vowel-signs and independent vowels.<a class="fnref" href="https://en.wikipedia.org/wiki/Hausa_language"></a></p>
+<p>See <a class="secref">alternate_vowel_encodings</a> for possible variant encoding approaches to vowel-signs and independent vowels.</p>
 </section>
 </section>
 
@@ -181,41 +140,28 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 <section id="type">
 <h2>Basic features</h2>
-<p>The Telugu script  is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>. Consonants carry an inherent vowel which can be modified by appending vowel-signs to the consonant.  See the table to the right for a brief overview of features for the modern Telugu orthography.  (See the <a href="../../scripts/featurelist/#key">key</a>. Character counts exclude ASCII characters.)</p>
-<p>The following list describes some distinctive characteristics of the Telugu script.</p>
-<ul>
-<li> The script is visually different from scripts like Devanagari and Bengali due to the rounded bases of the letters, which sit on rather hanging from a baseline. It also differs in the replacement of the flat, joining headstroke with a hook above the top of many characters. The hook is removed to accommodate superscript vowel-signs and the virama. </li>
-<li>Conjuncts are fairly regular and nearly always consist of a full-form initial consonant followed by a subjoined version of the second. The subjoined version loses the hook, and in about 50% of cases is transformed. Many subjoined forms rise above the baseline to the right of the initial consonant, but any vowel-signs attached to the cluster appear above or to the right of the initial consonant (which may be between the two consonant glyphs in the latter case).</li>
-<li>Gemination is quite common.</li>
-<li>Until the adoption of the metric system, Telugu used a complicated system for writing fractions, with dedicated symbols that were combined in various ways.</li>
-</ul>
+<p>The Telugu script  is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>. Consonants carry an inherent vowel which can be modified by appending vowel-signs to the consonant.  See the table to the right for a brief overview of features for the modern Telugu orthography.</p>
+<p> The script is visually different from scripts like Devanagari and Bengali due to the rounded bases of the letters, which sit on rather hanging from a baseline. It also differs in the replacement of the flat, joining headstroke with a hook above the top of many characters. The hook is removed to accommodate superscript vowel-signs and the virama. </p>
+
+
+
+<p>Telugu text runs <mark>left-to-right in horizontal lines</mark>.</p>
+<p>Words are <mark>separated by spaces</mark>.</p>
+<p> <mark>35 consonant letters </mark>are used for Telugu and one vocalic letter.</p> 
+<p><mark>Consonant clusters</mark> at any location are normally indicated using the <span class="name">virama</span> between consonants. This results in a large number of conjunct forms expressed using <mark>half-forms</mark>, <mark>stacked consonants</mark>, and <mark>ligated glyphs</mark>. Occasionally, a visible <span class="name">virama</span> is used.</p>
+<p><mark>Conjuncts</mark> are fairly regular and nearly always consist of a full-form initial consonant followed by a <mark>subjoined</mark> version of the second. The subjoined version loses the hook, and in about 50% of cases is transformed. Many subjoined forms rise above the baseline to the right of the initial consonant, but any vowel-signs attached to the cluster appear above or to the right of the initial consonant (which may be between the two consonant glyphs in the latter case). Some conjuncts are formed from <mark>conjoined pairs</mark> where the second letter is reduced and extends below the baseline. <mark>Gemination</mark> is quite common.</p>
+<p>As part of a cluster, RA is formed in the same way as other conjuct members in the modern orthography, however historically there was a special behaviour. </p>
+<p>The Hindi orthography has an <mark>inherent vowel</mark>, and represents vowels using <mark>11 vowel-signs</mark>, including no prescripts and <mark>1 circumgraph.</mark> All vowel-signs are <mark>combining marks</mark>, and are stored after the base character.</p>
+<p>There are <mark class="newterm">12 independent vowels</mark>, one for each vowel sound, including the inherent vowel, and these are used to write all standalone vowel sounds.</p>
+<p>There are <mark>no composite vowels</mark>, in principle. However, the circumgraph decomposes in NFD.</p>
+<p><mark>Vowels may be nasalised</mark>, using the <span class="name">candrabindu</span> diacritic.</p>
+<p><mark>Syllable-final</mark> consonant sounds may be represented by <mark>2 dedicated combining marks</mark> (anusvara &amp; visarga), but are generally <mark>ordinary consonants</mark> that are not marked by a virama.</p>
+<p>Telugu has <mark>native number digits</mark> but doesn't often use them in modern texts. Until the adoption of the metric system, Telugu used a complicated system for writing fractions, with dedicated symbols that were combined in various ways.</p>
 </section>
 
 
 
 
-
-
-  <section id="direction">
-<h2>Text direction</h2>
-    <p>Telugu text is written horizontally, left to right.</p>
-  </section>
-
-
-
-
-<section id="structure">
-<h2>Structure</h2>
-    <p>The typical unit of the orthography is the orthographic syllable, consisting of a consonant and vowel (CV) core and, optionally, one or more preceding consonants. Consonant letters by themselves constitute a CV unit, where the V is an <i class="term">inherent vowel</i>.  A dependent <i class="term">vowel-sign</i> is used to represent the V in CV units where  V is not the inherent vowel.</p>
-<p>In some cases, diacritics can be used to represent a syllable-final nasal.</p>
-<p>Telugu words almost always end in short vowels, although modern Telugu allows <span class="ipa">m</span>, <span class="ipa">n</span>, <span class="ipa">y</span>, and <span class="ipa">w</span> to end a word, and loan words sometimes end with long vowels.<a class="fnref" href="https://en.wikipedia.org/wiki/Telugu_language#Phonology">wl</a></p>
-<p>Geminate consonants are also a common feature of Telugu, mostly in word-medial positions, and are distinctive, eg. <span class="eg" lang="te">గది</span> vs. <span class="eg" lang="te">గద్ది</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Telugu_language#Phonology">wl</a></p>
-<p>Unlike some other Dravidian languages, voiced sounds were always part of the Telugu language.<a class="fnref" href="https://en.wikipedia.org/wiki/Telugu_language#Phonology">wl</a></p>
-<p>Retroflex consonants appear initially (apart from <span class="ipa">ɳ</span> and <span class="ipa">ɭ</span>), and medially, where they may be part of a retroflex cluster.<a class="fnref" href="https://en.wikipedia.org/wiki/Telugu_language#Phonology">wl</a></p>
-<p><span class="ipa">j</span> occurs in word-initial position only in borrowed words, such as <span class="ipa">jɐnɡu</span> <span class="meaning">young</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Telugu_language#Phonology">wl</a></p>
-</section>
-  
-  
 
 
 
@@ -234,6 +180,145 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
+<section id="index">
+<h2>Character index</h2>
+
+<p class="instructions">This section  lists non-ASCII characters used for modern Telugu, and  other characters in the Telugu script block not used by the modern language. For descriptions of usage, click on ↓.</p>
+
+
+
+
+<section id="index_letters">
+<h3>Letters</h3>
+
+
+<section id="index_letters_consonants">
+<h4>Basic consonants</h4>
+<figure class="characterBox auto" data-cols="trans" data-links="#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics,#basics">ప␣బ␣ఫ␣భ␣త␣ద␣థ␣ధ␣ట␣డ␣ఠ␣ఢ␣క␣గ␣ఖ␣ఘ␣చ␣జ␣ఛ␣ఝ␣స␣శ␣ష␣హ␣మ␣న␣ఞ␣ణ␣ఙ␣వ␣ర␣ఱ␣ల␣ళ␣య</figure>
+</section>
+
+
+<section id="index_letters_vowels">
+<h4>Vowels</h4>
+<figure class="characterBox auto" data-cols="trans" data-links="#standalone,#standalone,#standalone,#standalone,#standalone,#standalone,#standalone,#standalone,#standalone,#standalone,#standalone,#standalone">ఇ␣ఈ␣ఉ␣ఊ␣ఎ␣ఏ␣ఒ␣ఓ␣అ␣ఆ␣ఐ␣ఔ</figure>
+</section>
+
+<section id="index_letters_vocalics">
+<h4>Vocalics</h4>
+<figure class="characterBox auto" data-cols="trans" data-links="#vocalics">ఋ</figure>
+<figure class="auxiliaryBox auto" data-cols="trans" data-links="#vocalics,#vocalics,#vocalics">ౠ␣ఌ␣ౡ</figure>
+</section>
+
+
+<section id="index_letters_unused">
+<h4>Not used for modern Telugu</h4>
+<figure class="archaicBox auto" data-cols="">ఽ␣ౘ␣ౙ␣ౚ␣ఴ</figure>
+</section>
+</section>
+
+
+
+<section id="index_cchars">
+<h3>Combining marks</h3>
+
+
+<section id="index_cchars_vowels">
+<h4>Vowels</h4>
+<figure class="characterBox auto" data-cols="trans" data-links="#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns">ి␣ీ␣ు␣ూ␣ె␣ే␣ొ␣ో␣ా␣ై␣ౌ</figure>
+</section>
+
+<section id="index_cchars_vocalics">
+<h4>Vocalics</h4>
+<figure class="characterBox auto" data-cols="trans" data-links="#vocalics">ృ</figure>
+<figure class="auxiliaryBox auto" data-cols="trans" data-links="#vocalics">ౢ␣ౄ␣ౣ</figure>
+</section>
+
+<section id="index_cchars_finals">
+<h4>Finals</h4>
+<figure class="characterBox auto" data-cols="trans" data-links="#finals,#finals,#finals">ం␣ః</figure>
+</section>
+
+<section id="index_cchars_other">
+<h4>Other</h4>
+<figure class="characterBox auto"  data-cols="" data-links="#absence #clusters,#alternate_vowel_encodings">్␣ౖ</figure>
+</section>
+
+<section id="index_cchars_unused">
+<h4>Not used for modern Telugu</h4>
+<figure class="otherBox auto"  data-cols="">ఀ␣ఁ␣ఄ␣ౕ</figure>
+</section>
+</section>
+
+
+
+
+  
+<section id="index_numbers">
+<h3>Numbers</h3>
+
+<figure class="auxiliaryBox auto" data-links="#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits" data-cols="">౦␣౧␣౨␣౩␣౪␣౫␣౬␣౭␣౮␣౯</figure>
+
+<section id="index_numbers_unused">
+<h4>Not used for modern Telugu</h4>
+<figure class="archaicBox auto" data-cols="" data-links="#fractions,#fractions,#fractions,#fractions,#fractions,#fractions,#fractions">౸␣౹␣౺␣౻␣౼␣౽␣౾</figure>
+</section>
+</section>
+
+
+
+
+  
+<section id="index_punctuation">
+<h3>Punctuation</h3>
+
+<figure class="characterBox auto" data-links="#quotations,#quotations,#quotations,#quotations" data-cols="">‘␣’␣“␣”</figure>
+<figure class="auxiliaryBox auto" data-cols="" data-links="#phrase,#phrase">।␣॥</figure>
+
+<section id="index_punctuation_unused">
+<h4>Not used for modern Telugu</h4>
+<figure class="otherBox auto" data-cols="">౷</figure>
+</section>
+</section>
+
+
+
+
+  
+<section id="index_symbols">
+<h3>Symbols</h3>
+
+<figure class="characterBox auto" data-links="#currency,#symbols" data-cols="">₹</figure>
+
+<section id="index_symbols_unused">
+<h4>Not used for modern Telugu</h4>
+<figure class="archaicBox auto"  data-cols="" data-links="#symbols">౿</figure>
+</section>
+</section>
+</section>
+
+
+
+
+
+
+
+<section id="structure">
+<h2>Structure</h2>
+    <p>The typical unit of the orthography is the orthographic syllable, consisting of a consonant and vowel (CV) core and, optionally, one or more preceding consonants. Consonant letters by themselves constitute a CV unit, where the V is an <i class="term">inherent vowel</i>.  A dependent <i class="term">vowel-sign</i> is used to represent the V in CV units where  V is not the inherent vowel.</p>
+<p>In some cases, diacritics can be used to represent a syllable-final nasal.</p>
+<p>Telugu words almost always end in short vowels, although modern Telugu allows <span class="ipa">m</span>, <span class="ipa">n</span>, <span class="ipa">y</span>, and <span class="ipa">w</span> to end a word, and loan words sometimes end with long vowels.<tt>wl,#Phonology</tt></p>
+<p>Geminate consonants are also a common feature of Telugu, mostly in word-medial positions, and are distinctive,<tt>wl,#Phonology</tt> eg. compare <span class="eg" lang="te">గది</span> <span class="eg" lang="te">గద్ది</span></p>
+<p>Unlike some other Dravidian languages, voiced sounds were always part of the Telugu language.<tt>wl,#Phonology</tt></p>
+<p>Retroflex consonants appear initially (apart from <span class="ipa">ɳ</span> and <span class="ipa">ɭ</span>), and medially, where they may be part of a retroflex cluster.<tt>wl,#Phonology</tt></p>
+<p><span class="ipa">j</span> occurs in word-initial position only in borrowed words, such as <span class="ipa">jɐnɡu</span> <span class="meaning">young</span>.<tt>wl,#Phonology</tt></p>
+</section>
+  
+  
+
+
+
+
+
 <section id="vowelsummary">
 <h2>Vowels</h2>
 
@@ -241,6 +326,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <h3>Vowel sounds</h3>
 
 <p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+<p class="instructions">Phones in a lighter colour are non-native or allophones. Source <a href="https://en.wikipedia.org/wiki/Telugu_language">Wikipedia</a>.</p>
 
 
 <section id="plain_vowels">
@@ -303,10 +389,8 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 </svg>
 </div>
-<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Telugu_language">wl</a>. Phones in a lighter colour are non-native or allophones.</p>
-
-<p><span class="ipa">o</span> cannot appear at the end of a word.<a class="fnref" href="https://en.wikipedia.org/wiki/Telugu_language#Phonology">wl</a></p>
-<p><span class="ipa">æː</span> occurs  in loan words<a class="fnref" href="https://en.wikipedia.org/wiki/Telugu_language#Phonology">wl</a>, but may also occur before a syllable with the sounds <span class="trans">a</span>, <span class="trans">o</span>, or <span class="trans">u</span>, and in some verbal forms<a class="fnref" href="#refs">d417</a>.</p>
+<p><span class="ipa">o</span> cannot appear at the end of a word.<tt>wl,#Phonology</tt></p>
+<p><span class="ipa">æː</span> occurs  in loan words<tt>wl,#Phonology</tt>, but may also occur before a syllable with the sounds <span class="trans">a</span>, <span class="trans">o</span>, or <span class="trans">u</span>, and in some verbal forms.<tt>d,417</tt></p>
 </section>
 
 
@@ -355,8 +439,6 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 </svg>
 </div>
-
-<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Telugu_language">wl</a>.</p>
 </section>
 </section>
 
@@ -365,7 +447,6 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
 
-</section>
 <section id="inherent">
 <h3>Inherent vowel</h3>
 <p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
@@ -377,24 +458,57 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 
 
  
+
 <section id="vowelsigns">
 <h3>Vowel-signs</h3>
 <p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
 
-<p>Other than the inherent vowel, vowel sounds that follow a consonant sound are represented using vowel-signs, eg. <span class="charExample" translate="no"><span class="ex" lang="xx">கீ</span> <span class="trans">kī</span> <span class="ipa">kiː</span></span>. This includes the two diphthongs (which can each be represented by a single code point), no prescript signs, and 1 circumgraph.</p>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ి␣ీ␣ు␣ూ␣ె␣ే␣ొ␣ో␣ా␣ ␣ై␣ౌ</figure>
-<p>Telugu vowel-signs are all combining characters. In principle a single Unicode character is used per base consonant, even if the vowel-signs appear on both sides of the base consonant, however, see also <a class="secref">alternate_vowel_encodings</a>. All vowel-signs are typed and stored after the base consonant, and the font puts them in the correct place for display.</p>
+<p>Non-inherent  vowel sounds that follow a consonant  are represented using <span class="name">vowel-signs</span>, eg. <span class="codepoint" translate="no"><span lang="te">&#x0C15;&#x0C3F;</span> [<a href="/scripts/telugu/block#char0C15"><span class="uname">U+0C15 TELUGU LETTER KA</span></a> + <a href="/scripts/telugu/block#char0C3F"><span class="uname">U+0C3F TELUGU VOWEL SIGN I</span></a>]</span> is pronounced <span class="ipa">ki</span>.</p>
+<p>Telugu vowel-signs are all combining characters, and in principle a single code point is used per vowel-sign (however, see <a class="secref">alternate_vowel_encodings</a>).  All vowel-signs are  stored after the base consonant, and the font puts them in the correct place for display. This also applies for the circumgraph, where a single code point produces glyphs on more than one side of the consonant base. There is no prescript vowel.</p>
 <p>Most vowel-signs interact typographically with their base consonant, replacing the check mark above the base. A few also produce slightly different joined shapes. See <a class="secref">gsub</a>.</p>
-<p>Only 2 vowel-signs are <em>spacing</em> marks, meaning that they consume horizontal space when added to a base consonant.</p>
-<p>When a vowel-sign follows a subjoined consonant it appears above the stack. Even when the second consonant in a cluster produces spacing, the vowel-sign still remains with the first consonant.</p>
-    <figure>
-    <p lang="te" class="large"><span class="ex">స్పి</span> &nbsp; <span class="ex">స్పూ</span></p>
-    <figcaption>In the sequence <span class="charExample" translate="no"><span class="ex" lang="te">స్పి</span> <span class="trans">s͓pi</span></span> the <span class="trans">i</span> appears above the <span class="trans">s</span>, and in <span class="charExample" translate="no"><span class="ex" lang="te">స్పూ</span> <span class="trans">s͓pū</span></span> the <span class="trans">u</span> appears to the right of the <span class="trans">s</span>.</figcaption>
-    </figure>
-    <p>The exception occurs in older texts when a cluster-initial <span class="trans">r</span> is rendered as reph (see <a class="secref">reph</a>).</p>
+<p>Two vowel-signs are <em>spacing</em> marks, meaning that they consume horizontal space when added to a base consonant.</p>
+<p>When a vowel is pronounced after a conjunct, the vowel-sign is attached to the first consonant in the cluster, even where the vowel-sign pushes the two consonant glyphs apart (see <a class="figref">fig_vowel_position</a>).</p>
+
+<figure id="fig_vowel_position">
+<img class="ex" lang="te" src="images/vowel_position.png" data-info="55px Kohinoor Telugu" alt="స్పి  స్పూ">
+<figcaption>In the sequence <span class="charExample inline" translate="no"><span class="ex" lang="te">స్పి</span> <span class="transc">s͓pi</span></span> the <span class="trans">i</span>  (coloured) appears above the <span class="trans">s</span>, and in <span class="charExample inline" translate="no"><span class="ex" lang="te">స్పూ</span> <span class="transc">s͓pū</span></span> the <span class="trans">u</span> (coloured) appears to the right of the <span class="trans">s</span> (not the <span class="trans">p</span>!).</figcaption>
+</figure>
+
+<p class="info">The text is still entered following the spoken order: it is incorrect to type the vowel-sign after the first consonant. (Click on the image in <a class="figref">fig_vowel_position</a> to see the composite code points, arranged in order of storage.)</p>
 <p>See also <a class="sectionref">vocalics</a>.</p>
+
+
+
+
+
+
+<section id="circumgraphs">
+<h4>Circumgraph</h4>
+<p id="def-circumgraph" class="explanatoryintro definitionStub"></p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ై</figure>
+
+<p>One vowel is produced by a single combining character with visually separate parts, that appears on  opposite sides of the consonant onset eg.   <span class="charExample inline" translate="no"><span class="ex" lang="te">కై</span></span>.</p>
+<p><span class="leadin">Encoding.</span> The circumgraph  can be written as a single character, or as two.</p>
+
+<ul class="alternatives">
+<li><span class="codepoint" translate="no"><span lang="te">&#x0C48;</span> [<a href="/scripts/telugu/block#char0C48"><span class="uname">U+0C48 TELUGU VOWEL SIGN AI</span></a>]</span><br>
+<span class="codepoint" translate="no"><span lang="te">&#x0C46;&#x0C56;</span> [<a href="/scripts/telugu/block#char0C46"><span class="uname">U+0C46 TELUGU VOWEL SIGN E</span></a> + <a href="/scripts/telugu/block#char0C56"><span class="uname">U+0C56 TELUGU AI LENGTH MARK</span></a>]</span>
+</li>
+</ul>
+<p class="info"><span class="info">The single code point per vowel-sign is the  form preferred by the Unicode Standard and the form in common use for Telugu. The parts are separated, however, in Unicode when <a href="../glossary#normalisation" target="_blank">normalised</a> using Normalisation Form D (<a href="../glossary#nfd" target="_blank">NFD</a>).</span></p>
+<p>Whichever approach is used, the vowel-signs must be typed and stored after the consonant characters they surround.  In the case of decomposed vowel-signs, the order is also important and must be as shown above.</p>
 </section>
 
+
+
+<section id="other_vowels">
+<h4>Other vowel-signs</h4>
+<p>The following combining marks are also used to indicate vowel sounds.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ి␣ీ␣ు␣ూ␣ె␣ే␣ొ␣ో␣ా␣ ␣ౌ</figure>
+</section>
+</section>
 
 
 
@@ -417,15 +531,16 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
  
 <section id="absence">
 <h3>Vowel absence</h3>
-<p>In traditional Telugu there is always a vowel sound at the end of a word, however in the modern language it is possible for <span class="ipa">m</span>, <span class="ipa">n</span>, <span class="ipa">y</span>, and <span class="ipa">w</span> to end a word.<a class="fnref" href="https://en.wikipedia.org/wiki/Telugu_language#Phonology">wl</a> </p>
-<p>Telugu uses <span class="codepoint" translate="no"><span lang="te">&#x0C4D;</span> [<a href="/scripts/telugu/block#char0C4D"><span class="uname">U+0C4D TELUGU SIGN VIRAMA</span></a>]</span> (called <span class="name">virāmamu</span> in Telugu) to show that the inherent vowel after a consonant is not pronounced, eg. <span class="charExample" translate="no"><span class="ex" lang="te">క్</span> <span class="trans">k͓</span></span> explicitly represents just the sound k. It is also usually hidden when the consonant is part of a consonant cluster.</p>
+<p>In traditional Telugu there is always a vowel sound at the end of a word, however in the modern language it is possible for <span class="ipa">m</span>, <span class="ipa">n</span>, <span class="ipa">y</span>, and <span class="ipa">w</span> to end a word.<tt>wl,#Phonology</tt> </p>
+<p>Telugu uses <span class="codepoint" translate="no"><span lang="te">&#x0C4D;</span> [<a href="/scripts/telugu/block#char0C4D"><span class="uname">U+0C4D TELUGU SIGN VIRAMA</span></a>]</span> (called <span class="name">virāmamu</span> in Telugu) to show that the inherent vowel after a consonant is not pronounced, eg. <span class="codepoint" translate="no"><span lang="te">&#x0C15;&#x0C4D;</span> [<a href="/scripts/telugu/block#char0C15"><span class="uname">U+0C15 TELUGU LETTER KA</span></a> + <a href="/scripts/telugu/block#char0C4D"><span class="uname">U+0C4D TELUGU SIGN VIRAMA</span></a>]</span> explicitly represents just the sound <span class="ipa">k</span>.  </p>
+<p>The virama is usually hidden when the consonant is part of a consonant cluster.</p>
 </section>
 
 
 
 
  
-<section id="independentvowels">
+<section id="standalone">
 <h3>Standalone vowels</h3>
 <p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
 
@@ -441,7 +556,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
  
 <section id="alternate_vowel_encodings">
 <h3>Alternative encodings</h3>
-<p><span class="leadin">The vowel-signs</span> for <span class="ipa">iː</span>, <span class="ipa">eː</span>, and <span class="ipa">oː</span> should each be written with one of the single code points listed  above. Those code points do not decompose in NFD. The Unicode Standard warns not to make up the shapes using the following combinations of characters.</p>
+<p><span class="leadin">The vowel-signs</span> for <span class="ipa">iː</span>, <span class="ipa">eː</span>, and <span class="ipa">oː</span> should each be written with one of the single code points listed  above. Those code points do not decompose in NFD. The Unicode Standard warns not to make up the shapes using  combinations of characters.</p>
 <blockquote>
 <p>✓ <span class="codepoint" translate="no"><span lang="te">&#x0C40;</span> [<a href="/scripts/telugu/block#char0C40"><span class="uname">U+0C40 TELUGU VOWEL SIGN II</span></a>]</span><br>
  ✘ <span class="codepoint" translate="no"><span lang="te">&#x0C3F;</span> + <span lang="te">&#x0C55;</span> [<a href="/scripts/telugu/block#char0C3F"><span class="uname">U+0C3F TELUGU VOWEL SIGN I</span></a> + <a href="/scripts/telugu/block#char0C55"><span class="uname">U+0C55 TELUGU LENGTH MARK</span></a>]</span>
@@ -454,6 +569,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 </blockquote>
 
 <p>The vowel-sign for <span class="ipa">ai</span> decomposes and recomposes during normalisation. It is therefore possible to find it encoded as either <span class="codepoint" translate="no"><span lang="te">&#x0C48;</span> [<a href="/scripts/telugu/block#char0C48"><span class="uname">U+0C48 TELUGU VOWEL SIGN AI</span></a>]</span> or <span class="codepoint" translate="no"><span lang="te">&#x0C46;</span> + <span lang="te">&#x0C56;</span> [<a href="/scripts/telugu/block#char0C46"><span class="uname">U+0C46 TELUGU VOWEL SIGN E</span></a> + <a href="/scripts/telugu/block#char0C56"><span class="uname">U+0C56 TELUGU AI LENGTH MARK</span></a>]</span>. It is normal to use the precomposed version.</p>
+<p><span class="codepoint" translate="no"><span lang="te">&#x0C56;</span> [<a href="/scripts/telugu/block#char0C56"><span class="uname">U+0C56 TELUGU AI LENGTH MARK</span></a>]</span> is <em>only</em> used in decomposed versions of <span class="codepoint" translate="no"><span lang="te">&#x0C48;</span> [<a href="/scripts/telugu/block#char0C48"><span class="uname">U+0C48 TELUGU VOWEL SIGN AI</span></a>]</span>.&nbsp;</p>
 
 <p><span class="leadin">The independent letters</span> also should each be written with one of the single code points listed just above. The Unicode Standard warns not to make up the shapes using a combination of characters for <span class="ipa">aw</span> and <span class="ipa">oː</span>.</p>
 <blockquote><p>✓<span class="codepoint" translate="no"><span lang="te">&#x0C13;</span> [<a href="/scripts/telugu/block#char0C13"><span class="uname">U+0C13 TELUGU LETTER OO</span></a>]<br>
@@ -491,6 +607,7 @@ onchange="document.getElementById('freeText').style.fontFamily = document.getEle
 <h3>Consonant sounds</h3>
 
 <p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+<p class="instructions">Phones in a lighter colour are non-native or allophones. Source <a href="https://en.wikipedia.org/wiki/Telugu_language#Phonology">Wikipedia</a>.</p>
 
 <table class="ipaTable">
 <thead>
@@ -593,23 +710,48 @@ alveolar</th>
 </tr>
 </tbody>
 </table>
-
-<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">wp</a>. Phones in a lighter colour are non-native or allophones.</p>
-<p>Aspirated or breathy consonants were introduced by and are mostly used by loan words, particularly from Sanskrit. The same goes for fricatives other than <span class="ipa">s</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Telugu_language#Phonology">wl</a></p>
-<p><span class="ipa">ɲ</span> and <span class="ipa">ŋ</span> are associated with Sanskrit, and are relatively rare in Telugu.<a class="fnref" href="https://en.wikipedia.org/wiki/Telugu_language#Phonology">d416</a></p>
+<p>Aspirated or breathy consonants were introduced by and are mostly used by loan words, particularly from Sanskrit. The same goes for fricatives other than <span class="ipa">s</span>.<tt>wl,#Phonology</tt></p>
+<p><span class="ipa">ɲ</span> and <span class="ipa">ŋ</span> are associated with Sanskrit, and are relatively rare in Telugu.<tt>d,416</tt></p>
 </section>
 
 
 
 
 
-<section id="consonantpronunciation">
+<section id="basics">
 <h3>Basic  consonants</h3>
+
+<section id="stops">
+<h4>Stops</h4>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ప␣బ␣ఫ␣భ␣త␣ద␣థ␣ధ␣ట␣డ␣ఠ␣ఢ␣క␣గ␣ఖ␣ఘ</figure>
+</section>
+
+
+
+<section id="affricates">
+<h4>Affricates</h4>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">చ␣జ␣ఛ␣ఝ</figure>
+</section>
+
+
+
+<section id="fricatives">
+<h4>Fricatives</h4>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">స␣శ␣ష␣హ</figure>
+</section>
+
+
+<section id="nasals">
+<h4>Nasals</h4>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">మ␣న␣ఞ␣ణ␣ఙ</figure>
+</section>
+
+
+<section id="liquids">
+<h4>Liquids</h4>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">వ␣ర␣ఱ␣ల␣ళ␣య</figure>
+</section>
+
 
 <p>There doesn't appear to be a method of extending the repertoire to cover non-native sounds (other than those used for Sanskrit), such as using a nukta or similar approach.</p>
 </section>
@@ -622,10 +764,9 @@ alveolar</th>
 <section id="finals">
 <h3>Syllable-final consonants</h3>
 	<p>There are several ways of representing syllable-final nasals.</p>
-<p>Nasals can be written using <span class="codepoint" translate="no"><span lang="te">&#x0C02;</span> [<a href="/scripts/telugu/block#char0C02"><span class="uname">U+0C02 TELUGU SIGN ANUSVARA</span></a>]</span>. Before a plosive this is pronounced as a homorganic nasal, eg. <span class="eg" lang="te">అంగము</span>. It is pronounced <span class="ipa">m</span> when followed by a non-plosive consonant, or at the end of a word, eg. <span class="eg" lang="te">సింహ</span>, and <span class="eg" lang="te">లగాం</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Telugu_language#Phonology">d415</a></p>
-<p>Syllable final h (usually pronounced ha) can be written with <span class="codepoint" translate="no"><span lang="te">&#x0C03;</span> [<a href="/scripts/telugu/block#char0C03"><span class="uname">U+0C03 TELUGU SIGN VISARGA</span></a>]</span>, which is principally used for Sanskrit words, eg. <span class="eg" lang="te">పునః</span>.</p>
-<p>The Unicode Standard describes a final <span class="ipa">n</span> sound that is represented by <span class="codepoint" translate="no"><span lang="te">&#x0C28;</span> + <span lang="te">&#x0C4D;</span> [<a href="/scripts/telugu/block#char0C28"><span class="uname">U+0C28 TELUGU LETTER NA</span></a> + <a href="/scripts/telugu/block#char0C4D"><span class="uname">U+0C4D TELUGU SIGN VIRAMA</span></a>]</span>. The modern shape of that would be <span class="charExample" translate="no"><span class="ex" lang="te">న్</span> <span class="trans">n͓</span></span>, but there is an older shape called <span class="name">nakāra pollu</span> which can be produced, if the fonts supports it. The difference is only font based. To prevent the virama joining the final n with an immediately following consonant, use ZWNJ after the virama.<a class="fnref" href="https://www.unicode.org/versions/latest/ch12.pdf">u500</a></p>
-</section>
+<p>Nasals can be written using <span class="codepoint" translate="no"><span lang="te">&#x0C02;</span> [<a href="/scripts/telugu/block#char0C02"><span class="uname">U+0C02 TELUGU SIGN ANUSVARA</span></a>]</span>. Before a plosive this is pronounced as a homorganic nasal, eg. <span class="eg" lang="te">అంగము</span> It is pronounced <span class="ipa">m</span> when followed by a non-plosive consonant, or at the end of a word,<tt>d,415</tt> eg. <span class="eg" lang="te">సింహ</span> <span class="eg" lang="te">లగాం</span></p>
+<p>Syllable final h (usually pronounced ha) can be written with <span class="codepoint" translate="no"><span lang="te">&#x0C03;</span> [<a href="/scripts/telugu/block#char0C03"><span class="uname">U+0C03 TELUGU SIGN VISARGA</span></a>]</span>, which is principally used for Sanskrit words, eg. <span class="eg" lang="te">పునః</span></p>
+<p>The Unicode Standard describes a final <span class="ipa">n</span> sound that is represented by <span class="codepoint" translate="no"><span lang="te">&#x0C28;&#x0C4D;</span> [<a href="/scripts/telugu/block#char0C28"><span class="uname">U+0C28 TELUGU LETTER NA</span></a> + <a href="/scripts/telugu/block#char0C4D"><span class="uname">U+0C4D TELUGU SIGN VIRAMA</span></a>]</span>, but there is an older shape called <span class="name">nakāra pollu</span> which can be produced, if the font supports it. The difference is only font based. To prevent the virama joining the final n with an immediately following consonant, use ZWNJ after the virama.<tt>u,500</tt></p>
 </section>
  
  
@@ -633,7 +774,7 @@ alveolar</th>
   
   
 <section id="clusters">
-<h2>Consonant clusters</h2>
+<h3>Consonant clusters</h3>
 <p id="def-consonantcluster" class="explanatoryintro definitionStub"></p>
 <p id="def-conjunct" class="explanatoryintro definitionStub"></p>
 
@@ -650,19 +791,19 @@ alveolar</th>
 
 
 <section id="stacking">
-<h3>Simple stacking</h3>
-<p>The following table shows 18 consonants subjoined below themselves that are simply reduced in size, stripped of any headstroke, and positioned directly below the initial consonant.</p>
+<h4>Simple stacking</h4>
+<p>The following table shows  consonants subjoined below themselves that are simply reduced in size, stripped of any headstroke, and positioned directly below the initial consonant.</p>
 
 <figure class="auto" data-cols="trans,transc">ద్ద␣థ్థ␣ధ్ధ␣ట్ట␣డ్డ␣ఠ్ఠ␣ఢ్ఢ␣గ్గ␣ఖ్ఖ␣ఘ్ఘ␣ష్ష␣హ్హ␣ఞ్ఞ␣ణ్ణ␣ఙ్ఙ␣ఱ్ఱ␣ఴ్ఴ</figure>
 
-<p><span class="codepoint" translate="no"><span lang="te">&#x0C37;</span> [<a href="/scripts/telugu/block#char0C37"><span class="uname">U+0C37 TELUGU LETTER SSA</span></a>]</span> is irregular when it follows <span class="codepoint" translate="no"><span lang="te">&#x0C15;</span> [<a href="/scripts/telugu/block#char0C15"><span class="uname">U+0C15 TELUGU LETTER KA</span></a>]</span>. Unlike other combinations, that produces a transformed subjoined glyph, ie. <span class="charExample" translate="no"><span class="ex" lang="te">క్ష</span> <span class="trans">k͓ʂ</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="te">&#x0C37;</span> [<a href="/scripts/telugu/block#char0C37"><span class="uname">U+0C37 TELUGU LETTER SSA</span></a>]</span> is irregular when it follows <span class="codepoint" translate="no"><span lang="te">&#x0C15;</span> [<a href="/scripts/telugu/block#char0C15"><span class="uname">U+0C15 TELUGU LETTER KA</span></a>]</span>. Unlike other combinations, that produces a transformed subjoined glyph, ie. <span class="charExample" translate="no"><span class="ex" lang="te">క్ష</span> <span class="trans">k͓ʂ</span></span></p>
 </section>
 
 
 
 
 <section id="transformed">
-<h3>Stacking with transformations</h3>
+<h4>Stacking with transformations</h4>
 <p>The following consonants are also subjoined below the first, but are rendered with a very different shape.</p>
 
 <figure class="auto" data-cols="trans,transc">త్త␣ర్ర␣ల్ల</figure>
@@ -673,13 +814,13 @@ alveolar</th>
 
 
 <section id="conjoined">
-<h3>Conjoined with reduced, spacing form<span class="name"></span></h3>
+<h4>Conjoined with reduced, spacing form<span class="name"></span></h4>
 
 <p>The second consonant in these clusters is transformed into a spacing glyph that extends above and below the baseline.</p>
 
 <figure class="auto" data-cols="trans,transc">ప్ప␣బ్బ␣ఫ్ఫ␣భ్భ␣క్క␣స్స␣శ్శ␣మ్మ␣న్న␣వ్వ␣ళ్ళ␣య్య</figure>
 
-<p>In a cluster of this kind, any vowel-sign is attached to the initial consonant letter, eg. <span class="eg" lang="te">అన్నీ</span>.</p>
+<p>In a cluster of this kind, any vowel-sign is attached to the initial consonant letter, eg. <span class="eg" lang="te">అన్నీ</span></p>
 </section>
 
 
@@ -687,13 +828,13 @@ alveolar</th>
 
 
 <section id="reph">
-<h3>Reph form of <span class="uname" style="text-transform: none;">RA</span></h3>
-<p>In modern Telugu clusters that begin with <span class="trans">r</span> are formed in the normal way, eg. <span class="eg" lang="te">గూర్చి</span>. </p>
+<h4>Reph form of <span class="uname" style="text-transform: none;">RA</span></h4>
+<p>In modern Telugu, clusters that begin with <span class="trans">r</span> are formed in the normal way, eg. <span class="eg" lang="te">గూర్చి</span></p>
 <p>In older texts, however, the <span class="trans">r</span> is represented as a special form to the right of the second consonant, and the second consonant is left intact and carries any vowel-signs. See <a class="figref">fig_gurci</a> for an example. This effect can be produced in Unicode using ZWJ immediately after the virama, eg. in this case, <span class="codepoint" translate="no"><span lang="te">&#x0C30;</span> + <span lang="te">&#x0C4D;</span> + <span lang="te">ZWJ</span> + <span lang="te">&#x0C1A;</span> [<a href="/scripts/telugu/block#char0C30"><span class="uname">U+0C30 TELUGU LETTER RA</span></a> + <a href="/scripts/telugu/block#char0C4D"><span class="uname">U+0C4D TELUGU SIGN VIRAMA</span></a> + <a href="/scripts/telugu/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a> + <a href="/scripts/telugu/block#char0C1A"><span class="uname">U+0C1A TELUGU LETTER CA</span></a>]</span>, although not all fonts support it.</p>
 
 <figure id="fig_gurci">
-<img src="images/gurci.png" alt="గూర్చి" />
-<figcaption>The word <span class="ipa">guːrt͡ʃi</span> spelled in the modern way (left), and with a reph (right).</figcaption>
+<img src="images/gurci.png" class="ex" lang="te" alt="గూర్చి" />
+<figcaption>The word <span class="ipa">guːrt͡ʃi</span> spelled in the modern way (left), and with a reph (right). Colour is used to indicate the visual location of the r sound.</figcaption>
 </figure>
 
 <p>In a font that shows the reph form by default, it should be possible to disable it using the ZWJ <em>before</em> the virama instead of after it, as long as the font supports it.</p>
@@ -704,8 +845,9 @@ alveolar</th>
 
 
 <section id="wordclusters">
-<h3>Syllable-final diacritics</h3>
+<h4>Syllable-final diacritics</h4>
 	<p>As mentioned in <a class="secref">finals</a>, Telugu represents some final consonants using diacritics. Such syllable-final diacritics are followed by ordinary consonant shapes in consonant clusters.</p>
+</section>
 </section>
 </section>
 
@@ -732,49 +874,13 @@ alveolar</th>
 
 
 
-
-
-
-
-<section id="cchar">
-<h2>Combining marks</h2>
-    <p>In addition to the <a href="#vowelsigns">vowel-signs</a> and <a href="#vocalics">vocalics</a> already mentioned,  Telugu uses the following diacritics.</p>
-
-<figure class="characterBox auto"  data-cols="">ం␣ః␣్␣ౖ</figure>
-
-<p><span class="codepoint" translate="no"><span lang="te">&#x0C02;</span> [<a href="/scripts/telugu/block#char0C02"><span class="uname">U+0C02 TELUGU SIGN ANUSVARA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="te">&#x0C03;</span> [<a href="/scripts/telugu/block#char0C03"><span class="uname">U+0C03 TELUGU SIGN VISARGA</span></a>]</span> are described in <a class="secref">finals</a>.</p>
-<p><span class="codepoint" translate="no"><span lang="te">&#x0C4D;</span> [<a href="/scripts/telugu/block#char0C4D"><span class="uname">U+0C4D TELUGU SIGN VIRAMA</span></a>]</span> is described in <a class="secref">absence</a>.</p>
-<p><span class="codepoint" translate="no"><span lang="te">&#x0C56;</span> [<a href="/scripts/telugu/block#char0C56"><span class="uname">U+0C56 TELUGU AI LENGTH MARK</span></a>]</span> is only used in decomposed versions of <span class="codepoint" translate="no"><span lang="te">&#x0C48;</span> [<a href="/scripts/telugu/block#char0C48"><span class="uname">U+0C48 TELUGU VOWEL SIGN AI</span></a>]</span>.&nbsp;</p>
-<p>Other combining marks in the Telugu block include the following.</p>
-
-<figure class="otherBox auto"  data-cols="">ఀ␣ఁ␣ఄ</figure>
-</section>
-    
-    
-    
-    
-    
-<section id="punctuation">
-<h2>Punctuation</h2>
-
-<p>Telugu uses western punctuation, including the following non-ASCII characters.</p>
-
-<figure class="characterBox auto"  data-cols="trans,transc">‘␣’␣“␣”</figure>
-
-<p>CLDR also lists a number of ASCII characters.</p>
-<p>Danda and double danda are used primarily in the domain of religious texts to  indicate  the  equivalent  of  a  comma  and  full  stop,  respectively.<a class="fnref" href="https://www.unicode.org/versions/latest/ch12.pdf">u501</a></p>
-<figure class="auxiliaryBox auto"  data-cols="trans,transc">।␣॥</figure>
-</section>
-    
-    
-    
-    
-    
 <section id="symbols">
 <h2>Symbols</h2>
-		<p>The Telugu block contains a single character with the <span class="uname">symbol</span> property.</p>
+		<p>The Telugu block contains a single character with the <span class="uname">symbol</span> property, but it isn't used for modern Telugu.</p>
 
-<figure class="otherBox auto"  data-cols="">౿</figure>
+<figure class="archaicBox auto"  data-cols="">౿</figure>
+
+<p>See also the <a href="#currency">currency symbol</a> below.</p>
 </section>
 
 
@@ -802,7 +908,7 @@ alveolar</th>
  
 <figure class="auxiliaryBox auto"  data-cols="trans,transc">౦␣౧␣౨␣౩␣౪␣౫␣౬␣౭␣౮␣౯</figure>
 
-<p>The CLDR standard-decimal pattern is <code> #,##,##0.###</code>. The standard-percent pattern is <code>#,##0%</code>.<span class="refcode"><a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/lo.html">c</a></span></p>
+<p>The CLDR standard-decimal pattern is <code> #,##,##0.###</code>. The standard-percent pattern is <code>#,##0%</code>.</p>
 
 
 
@@ -811,7 +917,7 @@ alveolar</th>
 <h4>Fractions</h4>
 <p>The Unicode Standard describes the use of fraction characters as follows.</p>
 <blockquote>
-<p>Prior to the adoption of the metric system, Telugu fractions were used as part of the system of measurement. Telugu fractions are quaternary (base-4), and use eight marks, which are conceptually divided into two sets. The first set represents odd-numbered negative powers of four in fractions. The second set represents even-numbered negative powers of  four  in  fractions.  Different  zeros  are  used  with  each  set.  The  zero  from  the  first  set  is known  as  <span class="name">hakki</span>,  <span class="codepoint" translate="no"><span lang="te">&#x0C78;</span> [<a href="/scripts/telugu/block#char0C78"><span class="uname">U+0C78 TELUGU FRACTION DIGIT ZERO FOR ODD POWERS OF FOUR</span></a>]</span>.  The zero for the second set is <span class="codepoint" translate="no"><span lang="te">&#x0C66;</span> [<a href="/scripts/telugu/block#char0C66"><span class="uname">U+0C66 TELUGU DIGIT ZERO</span></a>]</span>.<a class="fnref" href="https://www.unicode.org/versions/latest/ch12.pdf">u501</a></p>
+<p>Prior to the adoption of the metric system, Telugu fractions were used as part of the system of measurement. Telugu fractions are quaternary (base-4), and use eight marks, which are conceptually divided into two sets. The first set represents odd-numbered negative powers of four in fractions. The second set represents even-numbered negative powers of  four  in  fractions.  Different  zeros  are  used  with  each  set.  The  zero  from  the  first  set  is known  as  <span class="name">hakki</span>,  <span class="codepoint" translate="no"><span lang="te">&#x0C78;</span> [<a href="/scripts/telugu/block#char0C78"><span class="uname">U+0C78 TELUGU FRACTION DIGIT ZERO FOR ODD POWERS OF FOUR</span></a>]</span>.  The zero for the second set is <span class="codepoint" translate="no"><span lang="te">&#x0C66;</span> [<a href="/scripts/telugu/block#char0C66"><span class="uname">U+0C66 TELUGU DIGIT ZERO</span></a>]</span>.<tt>u,501</tt></p>
 </blockquote>
 <figure class="archaicBox auto"  data-cols="trans,transc">౸␣౹␣౺␣౻␣౼␣౽␣౾␣౿</figure>
 </section>
@@ -823,11 +929,21 @@ alveolar</th>
   <section id="currency">
 <h3>Currency</h3>
 
-<p>The CLDR standard format for currency is <code></code> ¤#,##,##0.00, and the symbol for the Indian rupee is <span class="codepoint" translate="no"><span lang="te">&#x20B9;</span> [<a href="/scripts/telugu/block#char20B9"><span class="uname">U+20B9 INDIAN RUPEE SIGN</span></a>]</span><span class="refcode">.<a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/lo.html">c</a></span></p>
+<p>The CLDR standard format for currency is <code></code> ¤#,##,##0.00, and the symbol for the Indian rupee is <span class="codepoint" translate="no"><span lang="te">&#x20B9;</span> [<a href="/scripts/telugu/block#char20B9"><span class="uname">U+20B9 INDIAN RUPEE SIGN</span></a>]</span></p>
 
 <figure class="characterBox auto" data-cols="trans">₹</figure>
 
 </section>
+</section>
+
+
+
+
+
+
+<section id="direction">
+<h2>Text direction</h2>
+<p>Telugu runs left to right in horizontal lines.</p>
 </section>
 
 
@@ -856,8 +972,9 @@ alveolar</th>
 
 <section id="headstrokes">
 <h4>Consonant headstrokes</h4>
-<p>A majority of the Telugu consonants have a v-shaped headstroke, which is equivalent to the horizontal line in Devanagari. This headstroke is replaced when marks appear above the consonant, eg. <span class="codepoint" translate="no"><span lang="te">&#x0C15;</span> [<a href="/scripts/telugu/block#char0C15"><span class="uname">U+0C15 TELUGU LETTER KA</span></a>]</span> becomes <span class="charExample" translate="no"><span class="ex" lang="te">క్</span></span> when followed by an explicit virama and <span class="charExample" translate="no"><span class="ex" lang="te">కి</span></span> when followed by the <span class="trans">i</span> vowel-sign.<a class="fnref" href="https://www.unicode.org/versions/latest/ch12.pdf">u499</a></p>
-<p>Out of 36 consonants, the  following is the list of the 9 that don't have a headstroke: <span class="charExample" translate="no"><span class="ex" lang="te">ఖఙజఞటణబలఱ</span></span>.</p>
+<p>A majority of the Telugu consonants have a v-shaped headstroke, which is equivalent to the horizontal line in Devanagari. This headstroke is replaced when marks appear above the consonant, eg. <span class="codepoint" translate="no"><span lang="te">&#x0C15;</span> [<a href="/scripts/telugu/block#char0C15"><span class="uname">U+0C15 TELUGU LETTER KA</span></a>]</span> becomes <span class="charExample" translate="no"><span class="ex" lang="te">క్</span></span> when followed by an explicit virama and <span class="charExample" translate="no"><span class="ex" lang="te">కి</span></span> when followed by the <span class="trans">i</span> vowel-sign.<tt>u,499</tt></p>
+<p>Out of 36 consonants, the  following are the 9 that don't have a headstroke:</p>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ఖ␣ఙ␣జ␣ఞ␣ట␣ణ␣బ␣ల␣ఱ</figure>
 </section>
 
 
@@ -865,7 +982,7 @@ alveolar</th>
 <section id="vowel_shaping">
 <h4>Vowel-signs</h4>
 <p>Most vowel-signs interact typographically with their base consonant, replacing the check mark above the base. </p>
-<p>A few also produce slightly different joined shapes. For example, in addition to the standard <span class="charExample" translate="no"><span class="ex" lang="te">కి</span> <span class="trans">ki</span></span>, <span class="codepoint" translate="no"><span lang="te">&#x0C3F;</span> [<a href="/scripts/telugu/block#char0C3F"><span class="uname">U+0C3F TELUGU VOWEL SIGN I</span></a>]</span> produces shapes such as the following: <span class="charExample" translate="no"><span class="ex" lang="te">గి</span> <span class="trans">gi</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="te">చి</span> <span class="trans">ci</span></span>. Also, <span class="codepoint" translate="no"><span lang="te">&#x0C4A;</span> [<a href="/scripts/telugu/block#char0C4A"><span class="uname">U+0C4A TELUGU VOWEL SIGN O</span></a>]</span> and <span class="codepoint" translate="no"><span lang="te">&#x0C4B;</span> [<a href="/scripts/telugu/block#char0C4B"><span class="uname">U+0C4B TELUGU VOWEL SIGN OO</span></a>]</span> adopt very different shapes when they follow <span class="ipa">m</span> or <span class="ipa">y</span>, ie. <span class="charExample" translate="no"><span class="ex" lang="te">మొ</span> <span class="trans">mo</span></span>, <span class="charExample" translate="no"><span class="ex" lang="te">మో</span> <span class="trans">mō</span></span>, <span class="charExample" translate="no"><span class="ex" lang="te">యొ</span> <span class="trans">yo</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="te">యో</span> <span class="trans">yō</span></span>.</p>
+<p>A few also produce slightly different joined shapes. For example, in addition to the standard <span class="charExample" translate="no"><span class="ex" lang="te">కి</span> <span class="transc">ki</span></span><span class="codepoint" translate="no"><span lang="te">&#x0C3F;</span> [<a href="/scripts/telugu/block#char0C3F"><span class="uname">U+0C3F TELUGU VOWEL SIGN I</span></a>]</span> produces shapes such as the following: <span class="charExample" translate="no"><span class="ex" lang="te">గి</span> <span class="transc">gi</span></span><span class="charExample" translate="no"><span class="ex" lang="te">చి</span> <span class="transc">ci</span></span>Also, <span class="codepoint" translate="no"><span lang="te">&#x0C4A;</span> [<a href="/scripts/telugu/block#char0C4A"><span class="uname">U+0C4A TELUGU VOWEL SIGN O</span></a>]</span> and <span class="codepoint" translate="no"><span lang="te">&#x0C4B;</span> [<a href="/scripts/telugu/block#char0C4B"><span class="uname">U+0C4B TELUGU VOWEL SIGN OO</span></a>]</span> adopt very different shapes when they follow <span class="ipa">m</span> or <span class="ipa">y</span>, ie. <span class="charExample" translate="no"><span class="ex" lang="te">మొ</span> <span class="transc">mo</span></span><span class="charExample" translate="no"><span class="ex" lang="te">మో</span> <span class="transc">mō</span></span><span class="charExample" translate="no"><span class="ex" lang="te">యొ</span> <span class="transc">yo</span></span><span class="charExample" translate="no"><span class="ex" lang="te">యో</span> <span class="transc">yō</span></span></p>
 </section>
 </section>
 
@@ -921,11 +1038,26 @@ alveolar</th>
   
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
-<p>Telugu uses the following punctuation marks for phrase and sentence boundaries.</p>
-
-<figure class="auto" data-cols="trans">,␣;␣:␣!␣?␣.</figure>
-
-<p>As mentioned earlier, <span class="codepoint" translate="no"><span lang="te">&#x0964;</span> [<a href="/scripts/telugu/block#char0964"><span class="uname">U+0964 DEVANAGARI DANDA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="te">&#x0965;</span> [<a href="/scripts/telugu/block#char0965"><span class="uname">U+0965 DEVANAGARI DOUBLE DANDA</span></a>]</span> are used primarily in the domain of religious texts to  indicate  the  equivalent  of  a  comma  and  full  stop,  respectively.<a class="fnref" href="https://www.unicode.org/versions/latest/ch12.pdf">u501</a></p>
+<table class="character_list">
+<tbody>
+<tr>
+<th scope="row">phrase</th>
+<td><p><span class="codepoint" translate="no"><span lang="te">&#x002C;</span> [<a href="/scripts/devanagari/block#char002C"><span class="uname">U+002C COMMA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="te">&#x003B;</span> [<a href="/scripts/devanagari/block#char003B"><span class="uname">U+003B SEMICOLON</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="te">&#x003A;</span> [<a href="/scripts/devanagari/block#char003A"><span class="uname">U+003A COLON</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="te">&#x0964;</span> [<a href="/scripts/telugu/block#char0964"><span class="uname">U+0964 DEVANAGARI DANDA</span></a>]</span> (infrequent)</p></td>
+</tr>
+<tr>
+<th scope="row">sentence</th>
+<td><p><span class="codepoint" translate="no"><span lang="te">&#x002E;</span> [<a href="/scripts/devanagari/block#char002E"><span class="uname">U+002E FULL STOP</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="te">&#x003F;</span> [<a href="/scripts/devanagari/block#char003F"><span class="uname">U+003F QUESTION MARK</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="te">&#x0021;</span> [<a href="/scripts/devanagari/block#char0021"><span class="uname">U+0021 EXCLAMATION MARK</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="te">&#x0965;</span> [<a href="/scripts/telugu/block#char0965"><span class="uname">U+0965 DEVANAGARI DOUBLE DANDA</span></a>]</span> (infrequent)</p></td>
+</tr>
+</tbody>
+</table>
+<p>Telugu uses western punctuation.</p>
+<p><span class="codepoint" translate="no"><span lang="te">&#x0964;</span> [<a href="/scripts/telugu/block#char0964"><span class="uname">U+0964 DEVANAGARI DANDA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="te">&#x0965;</span> [<a href="/scripts/telugu/block#char0965"><span class="uname">U+0965 DEVANAGARI DOUBLE DANDA</span></a>]</span> are used primarily in the domain of religious texts to  indicate  the  equivalent  of  a  comma  and  full  stop,  respectively.<tt>u,501</tt></p>
 </section>
 
 
@@ -934,7 +1066,22 @@ alveolar</th>
 
 <section id="bracketing">
 <h3>Parentheses &amp; brackets</h3>
-<p><span class="codepoint" translate="no"><span lang="ta">(</span> [<a href="/scripts/tamil/block#char0028"><span class="uname">U+0028 LEFT PARENTHESIS</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ta">)</span> [<a href="/scripts/tamil/block#char0029"><span class="uname">U+0029 RIGHT PARENTHESIS</span></a>]</span> are used for parentheses.&nbsp;</p>
+<table class="character_list">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>start</th>
+<th>end</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>standard</th>
+<td><p><span class="codepoint" translate="no"><span lang="te">&#x0028;</span> [<a href="/scripts/devanagari/block#char0028"><span class="uname">U+0028 LEFT PARENTHESIS</span></a>]</span></p></td>
+<td><p><span class="codepoint" translate="no"><span lang="te">&#x0029;</span> [<a href="/scripts/devanagari/block#char0029"><span class="uname">U+0029 RIGHT PARENTHESIS</span></a>]</span></p></td>
+</tr>
+</tbody>
+</table>
 </section>
 
 
@@ -943,8 +1090,29 @@ alveolar</th>
   
 <section id="quotations">
 <h3>Quotations</h3>
-<p>The default quote marks for Telugu are <span class="codepoint" translate="no"><span lang="ta">“</span> [<span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span>]</span> at the start, and <span class="codepoint" translate="no"><span lang="ta">”</span> [<span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span>]</span> at the end.<a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/te.html">c</a></p>
-<p>When an additional quote is embedded within the first, the quote marks are <span class="codepoint" translate="no"><span lang="ta">‘</span> [<span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span>]</span> and <span class="codepoint" translate="no"><span lang="ta">’</span> [<span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span>]</span>.<a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/te.html">c</a></p>
+<table class="character_list">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>start</th>
+<th>end</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">initial</th>
+<td><p><span class="codepoint" translate="no"><span lang="te">&#x201C;</span> [<a href="/scripts/devanagari/block#char201C"><span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span></a>]</span></p></td>
+<td><span class="codepoint" translate="no"><span lang="te">&#x201D;</span> [<a href="/scripts/devanagari/block#char201D"><span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span></a>]</span></td>
+</tr>
+<tr>
+<th scope="row">nested</th>
+<td><p><span class="codepoint" translate="no"><span lang="te">&#x2018;</span> [<a href="/scripts/devanagari/block#char2018"><span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span></a>]</span></p></td>
+<td><span class="codepoint" translate="no"><span lang="te">&#x2019;</span> [<a href="/scripts/devanagari/block#char2019"><span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span></a>]</span></td>
+</tr>
+</tbody>
+</table>
+<p>The default quote marks for Telugu are <span class="codepoint" translate="no"><span lang="ta">“</span> [<span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span>]</span> at the start, and <span class="codepoint" translate="no"><span lang="ta">”</span> [<span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span>]</span> at the end.<tt>cldr</tt></p>
+<p>When an additional quote is embedded within the first, the quote marks are <span class="codepoint" translate="no"><span lang="ta">‘</span> [<span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span>]</span> and <span class="codepoint" translate="no"><span lang="ta">’</span> [<span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span>]</span>.<tt>cldr</tt></p>
 </section>
 
 
@@ -1027,7 +1195,7 @@ alveolar</th>
 
 
 <details id="linebreak_details">
-<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<summary>Show legend <tt>ul,#Properties</tt></summary>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BA (break after)</a> indicates that it is normal to break after that character.&nbsp;</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
@@ -1318,19 +1486,6 @@ alveolar</th>
 
 <section id="refs">
 <h2>References</h2>
-		<ol>
-			<!--li>[Daniels] Peter T. Daniels and William Bright, <span class="title">The World's Writing Systems</span>, Oxford University Press, ISBN
-				0-19-507993-0</li-->
-			<li>[ <a class="fnref" href="#refs">d</a> ]
-			Peter T. Daniels and William Bright, <span class="doctitle"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
-		    0-19-507993-0</li>
-<li>[ <a class="fnref" href="https://www.unicode.org/versions/latest/ch12.pdf">u</a> ] <a href="https://www.unicode.org/versions/latest/ch12.pdf">The Unicode Standard v12.0</a></li>
-<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Telugu_script">w</a> ]
-		Wikipedia, <a href="http://en.wikipedia.org/wiki/Telugu_script">Telugu script</a></li>
-			
-		<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Telugu_language">wl</a> ]
-		Wikipedia, <a href="http://en.wikipedia.org/wiki/Telugu_language">Telugu language</a></li>
-</ol>
 </section>
 
 
