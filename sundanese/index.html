@@ -29,12 +29,14 @@
 <script src="../../scripts/linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../common/egcode.js"></script>
+<script src="../common/references.js"></script>
+<script src="refs.js"></script>
 
 <script src="su-examples.js"></script>
 <script src="su-translit.js">  </script>
 </head>
 
-<body>
+<body class="useBlockExamples">
 <header>
 <div id="header-boilerplate"></div>
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
@@ -56,34 +58,32 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->24 November, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->17 December, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
 
 <section>
-  <p>This page gathers together basic information about the Sundanese script and its use for the Sundanese language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Sundanese using Unicode.</p>
-<p>See also the companion document, <a href="block" class="linkHighlight">Sundanese character notes</a>, for detailed information about specific Unicode characters.</p>
+  <p>This page gathers  basic information about the Sundanese script and its use for the Sundanese language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Sundanese using Unicode.</p>
 <p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
 
 
 
-<details>
+<p id="usage"></p>
+<script>addUsageAdvice('Sundanese')</script>
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Sundanese','Sundanese'); return false;">More about using this page</a></summary>
+<div id="about"></div>
+</details>
+
+<details class="supportdocs noprint">
 <summary class="instructions"><a href="../links?iso=Sund">Related pages</a>.</summary>
 </details>
 
-
-
-<details>
-<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
-</details>
-
-
-
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Sundanese','Sundanese'); return false;">About this page</a></summary>
-<div id="about"></div>
+<summary class="instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
 </details>
 </section>
 
@@ -106,10 +106,7 @@
 <section id="history">
 <h2>Usage &amp; history</h2>
     <p>Since 1996 the Sundanese script has been the official orthography for the 27 million Sundanese speakers on the island of Java, although the Latin script is also used. It is currently taught in schools and used for public signage.</p>
-<p>Names:</p>
-<ul>
-<li><span class="charExample" translate="no"><span class="ex" lang="su">ᮃᮊ᮪ᮞᮛ ᮞᮥᮔ᮪ᮓ</span> <span class="trans">ạkˣsr sunˣd</span> <span class="ipa">aksara sunda</span></span> Sundanese alphabet</li>
-</ul>
+<p><span class="charExample" translate="no"><span class="ex" lang="su">ᮃᮊ᮪ᮞᮛ ᮞᮥᮔ᮪ᮓ</span> <span class="trans">ạkˣsr sunˣd</span> <span class="ipa">aksara sunda</span> <span class="meaning">Sundanese alphabet</span></span></p>
 <p>The modern orthography is derived from  the Old Sundanese orthography (Aksara Sunda Kuno) which was used by the  Sundanese between the 14th and 18th centuries. It, in turn, derived from the Pallava script.</p>
 <p class="instructions">Source: <a href="http://scriptsource.org/scr/Sund">Scriptsource</a>, <a href="https://en.wikipedia.org/wiki/Sundanese_script">Wikipedia</a>.</p>
 </section>
@@ -142,6 +139,23 @@
 <p>Sundanese has a set of <mark>native digits</mark>, but uses ASCII punctutation.</p>
 </section>
 
+
+
+
+
+
+
+ <div id="showTranscriptions">
+<div>Character lists show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div>
+<label>Transliteration 
+<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
+<div>
+<label>Latin 
+<input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+</div>
 
 
 
@@ -252,23 +266,6 @@
   V {ng,r,h}</code></p>
 <p>  where <code>C</code> is a consonant and <code>V</code> is an independent vowel, <code>y,r,l</code> represents a medial combining character, <code>vs</code> a vowel-sign, <code>ng,r,h</code> a syllable-final combining character, and <code>p</code> a vowel-killer.</p>
 </section>
-
-
-
-
-
- <div id="showTranscriptions">
-<div>Character lists show:</div>
-<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
-<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div>
-<label>Transliteration 
-<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
-<div>
-<label>Latin 
-<input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
-</div>
-
 
 
 
@@ -412,14 +409,14 @@
 <li>using a medial consonant diacritic, or</li>
 <li>using a word-final consonant diacritic.<span class="codepoint"><a href="/scripts/sundanese/block#charA9B4"></a></span> </li>
 </ul>
-<p>For example, <span class="eg" lang="su">ᮃᮌᮢᮤᮊᮥᮜ᮪ᮒᮥᮁ</span> contains all three (see <a class="figref">fig_vowel_absence</a>).</p>
+<p>For example, <span class="eg inline" lang="su">ᮃᮌᮢᮤᮊᮥᮜ᮪ᮒᮥᮁ</span> contains all three (see <a class="figref">fig_vowel_absence</a>).</p>
 
 <figure id="fig_vowel_absence">
 <img src="images/vowel_absence.png" alt="ᮃᮌᮢᮤᮊᮥᮜ᮪ᮒᮥᮁ" class="ex" data-notes="62px Sundanese Unicode">
 <figcaption>Left to right, the highlights show a medial diacritic, a <span class="name">pamaaeh</span>, and a final consonant diacritic.</figcaption>
 </figure>
 
-<p>At the end of a word, <span class="codepoint"><span lang="su">&#xA0;&#x1BAA;</span> <a href="/scripts/sundanese/block#char1BAA">[<span class="uname">U+1BAA SUNDANESE SIGN PAMAAEH</span>]</a></span> is used, eg. <span class="eg" lang="su">ᮄᮊᮣᮤᮙ᮪</span>.</p>	
+<p>At the end of a word, <span class="codepoint"><span lang="su">&#xA0;&#x1BAA;</span> <a href="/scripts/sundanese/block#char1BAA">[<span class="uname">U+1BAA SUNDANESE SIGN PAMAAEH</span>]</a></span> is used, eg. see <span class="eg inline" lang="su">ᮄᮊᮣᮤᮙ᮪</span> in <a class="figref">fig_final_pamaaeh</a>.</p>	
 
 <figure id="fig_final_pamaaeh">
 <img src="images/final_pamaaeh.png" alt="ᮄᮊᮣᮤᮙ᮪" class="ex" data-notes="62px Sundanese Unicode">
@@ -438,7 +435,7 @@
 <h3>Standalone vowels</h3>
 <p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
 
-<p>Sundanese represents standalone vowels using a set of independent vowel letters, eg. <span class="eg" lang="su">ᮅᮃᮕ᮪</span>. The set includes a character to represent the inherent vowel sound.</p>
+<p>Sundanese represents standalone vowels using a set of independent vowel letters, eg. <span class="eg" lang="su">ᮅᮃᮕ᮪</span> The set includes a character to represent the inherent vowel sound.</p>
   
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ᮄ␣ᮅ␣ᮆ␣ᮇ␣ᮈ␣ᮉ␣ᮃ</figure>
 
@@ -644,7 +641,7 @@ alveolar</th>
 
 <section id="old_clusters">
 <h4>Old Sundanese</h4>
-<p>Historical Sundanese does have conjunct forms. They can be produced using the invisible <span class="codepoint"><a href="/scripts/sundanese/block#char1BAB"><span class="uname">U+1BAB SUNDANESE SIGN VIRAMA​</span></a></span>. The following shows known conjuncts: <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3666.pdf">os</a></p>
+<p>Historical Sundanese does have conjunct forms. They can be produced using the invisible <span class="codepoint"><a href="/scripts/sundanese/block#char1BAB"><span class="uname">U+1BAB SUNDANESE SIGN VIRAMA​</span></a></span>. The following shows known conjuncts:<tt>os</tt></p>
     <p><img src="images/conjuncts.png" alt=""/></p>
     <p>Historically, Sundanese also had special forms for subjoined -m and -w. These can be represented using &nbsp; <span class="codepoint"><span lang="su">&#xA0;&#x1BAD;</span> <a href="/scripts/sundanese/block#char1BAD">[<span class="uname">U+1BAD SUNDANESE CONSONANT SIGN PASANGAN WA​</span>]</a></span> and &nbsp; <span class="codepoint"><span lang="su">&#xA0;&#x1BAC;</span> <a href="/scripts/sundanese/block#char1BAC">[<span class="uname">U+1BAC SUNDANESE CONSONANT SIGN PASANGAN MA​</span>]</a></span>.</p>
  
@@ -665,7 +662,7 @@ alveolar</th>
  
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ᮢ␣ᮣ␣ᮡ</figure>
 
- <p>The three trailing consonants that can appear in syllable-initial pairs are written using dedicated combining marks,  eg. <span class="eg" lang="su">ᮄᮊᮣᮤᮙ᮪</span> and <span class="eg" lang="su">ᮃᮌᮢᮤᮊᮥᮜ᮪ᮒᮥᮁ</span>.</p>
+ <p>The three trailing consonants that can appear in syllable-initial pairs are written using dedicated combining marks,  eg. <span class="eg" lang="su">ᮄᮊᮣᮤᮙ᮪</span>  <span class="eg" lang="su">ᮃᮌᮢᮤᮊᮥᮜ᮪ᮒᮥᮁ</span></p>
 </section>
 
 
@@ -675,7 +672,7 @@ alveolar</th>
 <h3>Word-final consonants</h3>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ᮀ␣ᮁ␣ᮂ</figure>
 
-<p>The three syllable-final consonant sounds  are also represented using  dedicated combining marks, eg. <span class="eg" lang="su">ᮙᮀᮌᮥ</span>, <span class="eg" lang="su">ᮕᮞᮤᮁ</span>, <span class="eg" lang="su">ᮃᮘᮂ-ᮃᮘᮂ</span>.</p>
+<p>The three syllable-final consonant sounds  are also represented using  dedicated combining marks, eg. <span class="eg" lang="su">ᮙᮀᮌᮥ</span> <span class="eg" lang="su">ᮕᮞᮤᮁ</span> <span class="eg" lang="su">ᮃᮘᮂ-ᮃᮘᮂ</span></p>
   </section>
 </section>
 
@@ -721,7 +718,7 @@ alveolar</th>
 <figcaption>Vertical bars are used to distinguish numbers.</figcaption>
 </figure>
 
-<p>Unlike other punctuation, the vertical lines don't appear to be slanted to the right, and in the Noto Sans font this produces an effect that looks like the vertical line is ligated with some of the digits, eg. <span class="charExample"><span class="ex" style="font-family: 'Noto Sans Sundanese WF';" lang="su">|᮷|</span></span>.</p></section>
+<p class="observation"><span class="leadin">Observation:</span> Unlike other punctuation, the vertical lines don't appear to be slanted to the right, and in the Noto Sans font this produces an effect that looks like the vertical line is ligated with some of the digits, eg. <span class="charExample"><span class="ex" style="font-family: 'Noto Sans Sundanese WF';" lang="su">|᮷|</span></span>.</p></section>
 </section>
 
 
@@ -774,7 +771,7 @@ alveolar</th>
 </figure>
 
 
-<p class="observation"><span class="leadin">Observation:</span> Everson says that the same applies for <span class="charExample"><span class="ex" lang="su">ᮊᮢᮥ</span></span>, but the fonts I've tried all render that combination vertically.</p>
+<p class="observation"><span class="leadin">Observation:</span> Everson says that the same applies for <span class="charExample inline"><span class="ex" lang="su">ᮊᮢᮥ</span></span>, but the fonts I've tried all render that combination vertically.</p>
 <p>For Old Sundanese orthography, positioning rules are also needed to produce conjunct forms.</p>
 </section>
 
@@ -861,8 +858,8 @@ is used as a full stop, <span class="codepoint"><span lang="su">&#x1CC2;</span> 
 </tr>
 </tbody>
   </table>
-  <p><span class="leadin">Religious texts</span> in Old Sundanese contain <span class="charExample"><span class="ex" lang="su">᳆᳀᳆</span></span> and <span class="charExample"><span class="ex" lang="su">᳆᳁</span></span> markers.</p>
-  <p><span class="leadin">Historical texts</span> in Old Sundanese contain <span class="charExample"><span class="ex" lang="su">᳅᳂᳅</span></span> markers. </p>
+  <p><span class="leadin">Religious texts</span> in Old Sundanese contain <span class="charExample inline"><span class="ex" lang="su">᳆᳀᳆</span></span> and <span class="charExample inline"><span class="ex" lang="su">᳆᳁</span></span> markers.</p>
+  <p><span class="leadin">Historical texts</span> in Old Sundanese contain <span class="charExample inline"><span class="ex" lang="su">᳅᳂᳅</span></span> markers. </p>
 </section>
 </section>
 
@@ -980,7 +977,7 @@ is used as a full stop, <span class="codepoint"><span lang="su">&#x1CC2;</span> 
 
 
 <details id="linebreak_details">
-<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<summary>Show legend <tt>ul,#Properties</tt></summary>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">NU (number)</a> behaves like ordinary characters (AL) in the context of most characters but activate the prefix and postfix behavior of prefix and postfix characters.</p>
@@ -1172,13 +1169,6 @@ is used as a full stop, <span class="codepoint"><span lang="su">&#x1CC2;</span> 
 
 <section id="refs">
 <h2>References</h2>
-  <ol>
-    <li>[ <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3319.pdf">e</a> ] Michael Everson, <cite><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3319.pdf">Proposal for encoding the Sundanese script in the UCS</a></cite>.</li>
-    <li>[ <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3666.pdf">os</a> ] Michael Everson, <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3666.pdf"><cite>Proposal for encoding additional Sundanese characters for Old Sundanese in the UCS</cite></a></li>
-    <li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch19.pdf">u</a> ] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch19.pdf">Sundanese</a>, pp661-664.</li>
-    <li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Sundanese_alphabet">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Sundanese_alphabet">Sundanese alphabet</a>.</li>
-<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Sundanese_language">wl</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Sundanese_language">Sundanese language</a>.</li>
-  </ol>
 </section>
 
 
