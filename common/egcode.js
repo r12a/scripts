@@ -28,7 +28,9 @@ function addExamples (langFilter) { //console.log('langFilter:', langFilter, aut
 		//console.log('Language is ',nodes[n].lang)
 		if (nodes[n].lang === langFilter && egList[nodes[n].textContent]) {
 			var temp = egList[nodes[n].textContent].split('|')
-			var out = '<span class="charExample" translate="no">'
+			var out = ''
+			if (nodes[n].classList.contains('inline')) out += '<span class="charExample inline" translate="no">'
+			else out += '<span class="charExample" translate="no">'
 			
 			// term
 			out += '<span class="ex" lang="'
