@@ -42,7 +42,7 @@ autoExpandExamples.my = `
 စောင့်တယ်|to wait|sa̰ʊɴdɛ̀
 စျေး|market|zé
 ဆရာ|teacher|sʰəjà
-ဆိုင်|store|sʰàɪɴ
+ဆိုင်|store|sʰàɪɴ|hcuing
 ဆိုး|bad|sʰó
 ဆေး|medecine|sʰé
 ဆေးရုံ|hospital|sʰéjòʊɴ
@@ -195,288 +195,288 @@ autoExpandExamples.my = `
 ၎င်း|afore|‌ləɡàuɴ
 
 
-ငါ|I|/ŋà/|nga
-ကျုပ်|I|/tɕouʔ/|kyup
-နင်|you sg|/nìɴ/|nang
-မင်း|you sg|/míɴ/|mang:
-သူ|he|/θù/|su
-တို့|we|/do̰/|tui.
-ကျုပ်တို့|we|/tɕouʔto̰/|kyuptui.
-နင်တို့|you pl|/nìɴdo̰/|nangtui.
-သူတို့|they|/θùdo̰/|sutui.
-သူများ|they|/θùmjá/|su-mya:
-ဒါ|this|/dà/|da
-ဒီ|this|/dì/|di3
-ဟို|that|/hò/|hui
-ထို|that|/tʰò/|htui
-ဒီမှာ|here|/dìm̥à/|dihma4
-ဟိုမှာ|there|/hòm̥à/|huihma
-ထိုမှာ|there|/tʰòm̥à/|htuihma
-ဘယ်သူ|who|/bəθù/|bhaisu5
-ဘာ|what|/bà/|bha6
-ဘယ်|where|/bɛ̀/|bhai7
-ဘယ်တော့|when|/bɛ̀dɔ̰/|bhaitau.
-ဘယ်တုန်းက|when|/bɛ̀dóuɴɡa̰/|bhaitun:ka.
-ဘယ်|how|/bɛ̀/|bhai8
-မ … ဘူး|not|/mə/ … /bú/|ma. … bhu:
-အားလုံး|all|/ʔálóuɴ/|a:lum:
-များ|many|/mjá/|mya:
-များကြီး|many|/mjádʑí/|mya:kri:
-အချို့|some|/ʔətɕʰo̰/|a.hkyui.
-နည်း|few|/nɛ́/|nany:
-အခြား|other|/ʔətɕʰá/|a.hkra:
-တစ်|one|/tiʔ/|tac
-နှစ်|two|/n̥iʔ/|hnac
-သုံး|three|/θóuɴ/|sum:
-လေး|four|/lé/|le:
-ငါး|five|/ŋá/|nga:
-ကြီး|big|/tɕí/|kri:
-ကြီးမား|big|/tɕímá/|kri:ma:
-ရှည်|long|/ʃè/|hrany
-ရှည်မျော|long|/ʃèmjɔ̀/|hranymyau:
-ကျယ်|wide|/tɕɛ̀/|kyai
-ကျယ်ဝန်း|wide|/tɕɛ̀wúɴ/|kyaiwan:
-ထူထဲ|thick|/tʰùdɛ́/|htuhtai:
-လေး|heavy|/lé/|le:
-လေးလံ|heavy|/lélàɴ/|le:lam
-သေး|small|/θé/|se:
-နုပ်|small|/nouʔ/|nup
-ပု|short|/pṵ/|pu.
-တို|short|/tò/|tui
-ကျဉ်း|narrow|/tɕíɴ/|kyany:
-ကျဉ်းကျပ်|narrow|/tɕíɴtɕaʔ/|kyany:kyap
-ပါး|thin|/pá/|pa:
-ကျဲ|thin|/tɕɛ́/|kyai:
-မိန်းမ|woman|/méiɴma̰/|min:ma.9
-ယောက်ျား[10]|man (adult male)|/jauʔtɕá/
-လူ|man (human being)|/lù/|lu
-ကလေး|child|/kʰəlé/|ka.le:
-မယား|wife|/məjá/|ma.ya:11
-လင်|husband|/lìɴ/|lang12
-အမေ|mother|/ʔəmè/|a.me
-အမိ|mother|/ʔəmḭ/|a.mi.13
-အဖေ|father|/ʔəpʰè/|a.hpe
-အဖ|father|/ʔəpʰa̰/|a.hpa.14
-တိရစ္ဆာန်|animal|/təɹeiʔsʰàɴ/|ti.rachcan
-ငါး|fish|/ŋá/|nga:
-ငှက်|bird|/ŋ̊ɛʔ/|hngak
-ခွေး|dog|/kʰwé/|hkwe:
-သန်း|louse|/θáɴ/|san:
-မြွေ|snake|/mwè/|mrwe
-တီကောင်|worm|/tìɡàuɴ/|tikaung
-သန်ကောင်|worm|/θàɴɡàuɴ/|sankaung
-သစ်ပင်|tree|/θiʔpìɴ/|sacpang
-တော|forest|/tɔ́/|tau:
-သစ်တော|forest|/θiʔtɔ́/|sactau:
-တုတ်|stick|/douʔ/|tut
-သစ်သီး|fruit|/θiʔθí/|sacsi:
-အသီး|fruit|/ʔəθí/|a.si:
-အစေ့|seed|/ʔəsḭ/|a.ce.
-အရွက်|leaf|/ʔəjwɛʔ/|a.rwak
-မြစ်|root|/mjiʔ/|mrac
-အမြစ်|root|/ʔəmjiʔ/|a.mrac
-အခေါက်|bark (of a tree)|/ʔəkʰauʔ/|a.hkauk
-ပန်း|flower|/páɴ/|pan:
-အပွင့်|flower|/ʔəpwḭɴ/|a.pwang.
-မြက်|grass|/mjɛʔ/|mrak
-ကြိုး|rope|/tɕó/|krui:
-လွန်|rope|/lùɴ/|lwan
-အရေပြား|skin|/ʔəjèbjá/|a.re-pra:
-အရေ|skin|/ʔəjè/|a.re
-အသား|meat|/ʔəθá/|a.sa:
-သွေး|blood|/θwé/|swe:
-အရိုး|bone|/ʔəjó/|a.rui:
-အဆီ|fat (noun)|/ʔəsʰì/|a.hci
-ဥ|egg|/ʔṵ/|u.
-ချို|horn|/dʑò/|hkyui
-ဦးချို|horn|/ʔúdʑò/|u:hkyui
-အမြီး|tail|/ʔəmí/|a.mri:
-အတောင်|feather|/ʔətàuɴ/|a.taung
-ဆံ|hair|/sʰàɴ/|hcam or ဆံပင်
-အမွေး|hair|/sʰəbìɴ/|a.mwe:
-ခေါင်း|head|/ɡáuɴ/|hkaung:
-နား|ear|/ná/|na:
-နားရွက်|ear|/nəjwɛʔ/|na:rwak
-မျက်စိ|eye|/mjɛʔsḭ/|myakci.
-နှာ|nose|/n̥à/|hna
-နှာခေါင်း|nose|/n̥əkʰáuɴ/|hnahkaung:
-ပါးစပ်|mouth|/pəzaʔ/|pa:cap
-နှုတ်|mouth|/n̥ouʔ/|hnut
-သွား|tooth|/θwá/|swa:
-လျှာ|tongue (organ)|/ʃà/|hlya
-လက်သည်း|fingernail|/lɛʔθɛ́/|laksany:
-ခြေ|foot|/tɕʰè/|hkre
-ခြေထောက်|leg|/tɕʰèdauʔ/|hkrehtauk
-အပေါင်|leg|/ʔəpàuɴ/|a.paung
-ဒူး|knee|/dú/|du:
-ဒူးခေါင်း|knee|/dúɡáuɴ/|du:hkaung:
-လက်|hand|/lɛʔ/|lak
-တောင်ပံ|wing|/tàuɴbàɴ/|taungpam
-ဗိုက်|belly|/baiʔ/|buik
-အူ|guts|/ʔù/|u
-လည်ပင်း|neck|/lɛ̀bíɴ/|lanypang:
-ကျော|back|/tɕɔ́/|kyau:
-ရင်|breast|/jìɴ/|rang
-ရင်ဘတ်|breast|/jìɴbaʔ/|rangbhat
-နှလုံး|heart|/n̥əlóuɴ/|hna.lum:
-အသည်းနှလုံး|heart|/ʔəθɛ́n̥əlóuɴ/|a.sany:hna.lum:
-အသည်း|liver|/ʔəθɛ́/|a.sany:
-အူမကြီး|liver|/ʔùma̰dʑí/|uma.kri:
-သောက်|to drink|/θauʔ/|sauk
-စား|to eat|/sá/|ca:
-ကိုက်|to bite|/kaiʔ/|kuik
-စုပ်|to suck|/souʔ/|cup
-ထွေး|to spit|/tʰwé/|htwe:
-အန်|to vomit|/ʔàɴ/|an
-အော့|to vomit|/ʔɔ̰/|au.
-မှုတ်|to blow|/m̥ouʔ/|hmut
-ရှူ|to breathe|/ʃù/|hru
-ရှူရှိုက်|to breathe|/ʃùʃaiʔ/|hruhruik
-ရယ်|to laugh|/jì/|rai
-တွေ့|to see|/twḛ/|twe.
-မြင်|to see|/mjìɴ/|mrang
-ကြား|to hear|/tɕá/|kra:
-သိ|to know|/θḭ/|si.
-တတ်|to know|/taʔ/|tat
-သိရှိ|to know|/θḭʃḭ/|si.hri.
-ထင်|to think|/tʰìɴ/|htang
-တွေး|to think|/twé/|twe:
-စဉ်းစား|to think|/síɴzá/|cany:ca:
-နမ်း|to smell|/náɴ/|nam:
-ကြောက်|to fear|/tɕauʔ/|krauk
-အိပ်|to sleep|/ʔeiʔ/|ip
-ရှင်|to live|/ʃìɴ/|hrang
-နေ|to live|/nè/|ne
-သေ|to die|/θè/|se
-ဆုံး|to die|/sʰóuɴ/|hcum:
-ကွယ်လွန်|to die|/kwɛ̀lùɴ/|kwailwan
-သတ်|to kill|/θaʔ/|sat
-သတ်ဖြတ်|to kill|/θaʔpʰjaʔ/|sathprat
-တိုက်|to fight|/taiʔ/|tuik
-ရန်ဖြစ်|to fight|/jàɴpʰjiʔ/|ranhprac
-အမဲလိုက်|to hunt|/ʔəmɛ́laiʔ/|a.mai:luik
-ရိုက်|to hit|/jaiʔ/|ruik
-ညှပ်|to cut|/ɲ̥aʔ/|hnyap
-ခွဲ|to split|/kʰwɛ́/|hkwai:
-ထိုး|to stab|/tʰó/|htui:
-ကုတ်|to scratch|/kouʔ/|kut
-တူး|to dig|/tú/|tu:
-ရေကူး|to swim|/jèkú/|reku:
-ပျံ|to fly|/pjàɴ/|pyam
-လျှောက်|to walk|/ʃauʔ/|hlyauk
-လာ|to come|/là/|la
-လှဲ|to lie (as in a bed)|/ɬɛ́/|hlai:
-လျောင်း|to lie (as in a bed)|/ljáuɴ/|lyaung:
-ထိုင်|to sit|/tʰàiɴ/|htuing
-ရပ်|to stand|/jaʔ/|rap
-လှည့်|to turn (intransitive)|/ɬɛ̰/|hlany.
-ချိုး|to turn (intransitive)|/tɕʰó/|hkyui:
-ကျ|to fall|/tɕa̰/|kya.
-ပေး|to give|/pé/|pe:
-ကိုင်|to hold|/kàiɴ/|kuing
-ညှစ်|to squeeze|/ɲ̥iʔ/|hnyac
-ပွတ်|to rub|/puʔ/|pwat
-ဆေး|to wash|/sʰé/|hce:
-သုတ်|to wipe|/θouʔ/|sut
-ဆွဲ|to pull|/sʰwɛ́/|hcwai:
-တွန်း|to push|/túɴ/|twan:
-ပစ်|to throw|/pjiʔ/|pac
-ချည်|to tie|/tɕʰì/|hkyany
-ချုပ်|to sew|/tɕʰouʔ/|hkyup
-ရေတွက်|to count|/jètwɛʔ/|re-twak
-ပြော|to say|/pjɔ́/|prau:
-ဆို|to say|/sʰò/|hcui
-ဟူ|to say|/hù/|hu
-ဆို|to sing|/sʰò/|hcui
-ဆော့|to play|/sʰɔ̰/|hcau.
-ကစား|to play|/ɡəzá/|ka.ca:
-မျော|to float|/mjɔ́/|myau:
-ပေါ်|to float|/pɔ̀/|pau
-စီး|to flow|/sí/|ci:
-ခဲ|to freeze|/kʰɛ́/|hkai:
-ဖူး|to swell|/pʰú/|hpu:
-ရောင်|to swell|/jàuɴ/|raung
-နေ|sun|/nè/|ne
-လ|moon|/la̰/|la.
-ကြယ်|star|/tɕɛ̀/|krai
-ရေ|water|/jè/|re
-မိုး|rain|/mó/|mui:
-မြစ်|river|/mjiʔ/|mrac
-ကန်|lake|/kàɴ/|kan
-အင်း|lake|/ʔíɴ/|ang:
-ပင်လယ်|sea|/pìɴlɛ̀/|panglai
-အဏ္ဏဝါ|sea|/ʔàɴnəwà/|anna.wa
-ဆား|salt|/sʰá/|hca:
-ကျောက်|stone|/tɕauʔ/|kyauk
-သဲ|sand|/θɛ́/|sai:
-ဖုန်|dust|/pʰòuɴ/|hpun
-မြေ|earth|/mjè/|mre
-တိမ်|cloud|/tèiɴ/|tim
-မြူ|fog|/mjù/|mru
-မိုး|sky|/mó/|mui:
-လေ|wind|/lè/|le
-နှင်း|snow|/n̥íɴ/|hnang:
-နှင်းခဲ|snow|/n̥íɴɡɛ́/|hnang:hkai:
-ရေခဲ|ice|/jeɡɛ́/|rehkai:
-အခိုး|smoke|/ʔəkʰó/|a.hkui:
-မီး|fire|/mí/|mi:
-ပြာ|ash|/pjà/|pra
-ရှို့|to burn|/ʃo̰/|hrui.
-လောင်|to burn|/làuɴ/|laung
-လမ်း|road|/láɴ/|lam:
-တောင်|mountain|/tàuɴ/|taung
-နီ|red|/nì/|ni
-စိမ်း|green|/séiɴ/|cim:
-ဝါ|yellow|/wà/|wa
-ဖြူ|white|/pʰjù/|hpru
-မည်း|black|/mɛ́/|many:
-နက်|black|/nɛʔ/|nak
-ည|night|/ɲa̰/|nya.
-နေ့|day|/nḛ/|ne.
-နှစ်|year|/n̥iʔ/|hnac
-ပူ|warm|/pù/|pu
-နွေး|warm|/nwé/|nwe:
-အေး|cold|/ʔé/|e:
-ချမ်း|cold|/tɕʰáɴ/|hkyam:
-ပြည့်|full|/pjḛ/|prany.
-သစ်|new|/θiʔ/|sac
-ဟောင်း|old|/háuɴ/|haung:
-အို|old|/ʔò/|ui
-ကောင်း|good|/káuɴ/|kaung:
-ဆိုး|bad|/sʰó/|hcui:
-ပုပ်|rotten|/pouʔ/|pup
-ညစ်ထည်း|dirty|/ɲiʔtʰí/|nyachtany:
-ဖြောင့်|straight|/pʰja̰uɴ/|hpraung.
-စင်း|straight|/síɴ/|cang:
-ဝိုင်း|round|/wáiɴ/|wuing:
-လုံး|round|/lóuɴ/|lum:
-ချွန်|sharp (as a knife)|/tɕʰùɴ/|hkywan
-ချွန်ထက်|sharp (as a knife)|/tɕʰùɴtʰɛʔ/|hkywanhtak
-တုံး|dull (as a knife)|/tóuɴ/|tum:
-ချော|smooth|/tɕɔ́/|hkyau:
-မွတ်|smooth|/muʔ/|mwat
-စို|wet|/sò/|cui
-ရွှဲ|wet|/ʃwɛ́/|hrwai:
-ခြောက်|dry|/tɕauʔ/|hkrauk
-မှန်|correct|/m̥àɴ/|hman
-နီး|near|/ní/|ni:
-ဝေးကွာ|far|/wékwà/|we:kwa
-ညာ|right|/ɲà/|nya
-ဘယ်|left|/bɛ̀/|bhai
-မှာ|at|/m̥à/|hma
-၌|at|/n̥aiʔ/|hnai.
-ထဲ|in|/tʰɛ́/|htai:
-တွင်း|in|/twíɴ/|twang:
-တွင်|in|/twìɴ/|twang
-နှင့်တကွ|with|/n̥ḭɴdəɡwa̰/|hnang.ta.kwa.
-နဲ့|and|/nɛ̰/|nai.
-နှင့်|and|/n̥ḭɴ/|hnang.
-ရင်|if|/jìɴ/|rang15
-အကယ်၍|if|/ʔəkɛ̀jwḛ/|a.kairwe
-လို့|because|/lo̰/|lui.
-ကြောင့်|because|/dʑa̰uɴ/|kraung.
-အမည်|name|/ʔəmjì/|a.many
-နာမည်|name|/nàmjì/|namany
+ငါ|I|ŋà|nga
+ကျုပ်|I|tɕouʔ|kyup
+နင်|you sg|nìɴ|nang
+မင်း|you sg|míɴ|mang:
+သူ|he|θù|su
+တို့|we|do̰|tui.
+ကျုပ်တို့|we|tɕouʔto̰|kyuptui.
+နင်တို့|you pl|nìɴdo̰|nangtui.
+သူတို့|they|θùdo̰|sutui.
+သူများ|they|θùmjá|su-mya:
+ဒါ|this|dà|da
+ဒီ|this|dì|di3
+ဟို|that|hò|hui
+ထို|that|tʰò|htui
+ဒီမှာ|here|dìm̥à|dihma4
+ဟိုမှာ|there|hòm̥à|huihma
+ထိုမှာ|there|tʰòm̥à|htuihma
+ဘယ်သူ|who|bəθù|bhaisu5
+ဘာ|what|bà|bha6
+ဘယ်|where|bɛ̀|bhai7
+ဘယ်တော့|when|bɛ̀dɔ̰|bhaitau.
+ဘယ်တုန်းက|when|bɛ̀dóuɴɡa̰|bhaitun:ka.
+ဘယ်|how|bɛ̀|bhai8
+မ … ဘူး|not|mə … bú|ma. … bhu:
+အားလုံး|all|ʔálóuɴ|a:lum:
+များ|many|mjá|mya:
+များကြီး|many|mjádʑí|mya:kri:
+အချို့|some|ʔətɕʰo̰|a.hkyui.
+နည်း|few|nɛ́|nany:
+အခြား|other|ʔətɕʰá|a.hkra:
+တစ်|one|tiʔ|tac
+နှစ်|two|n̥iʔ|hnac
+သုံး|three|θóuɴ|sum:
+လေး|four|lé|le:
+ငါး|five|ŋá|nga:
+ကြီး|big|tɕí|kri:
+ကြီးမား|big|tɕímá|kri:ma:
+ရှည်|long|ʃè|hrany
+ရှည်မျော|long|ʃèmjɔ̀|hranymyau:
+ကျယ်|wide|tɕɛ̀|kyai
+ကျယ်ဝန်း|wide|tɕɛ̀wúɴ|kyaiwan:
+ထူထဲ|thick|tʰùdɛ́|htuhtai:
+လေး|heavy|lé|le:
+လေးလံ|heavy|lélàɴ|le:lam
+သေး|small|θé|se:
+နုပ်|small|nouʔ|nup
+ပု|short|pṵ|pu.
+တို|short|tò|tui
+ကျဉ်း|narrow|tɕíɴ|kyany:
+ကျဉ်းကျပ်|narrow|tɕíɴtɕaʔ|kyany:kyap
+ပါး|thin|pá|pa:
+ကျဲ|thin|tɕɛ́|kyai:
+မိန်းမ|woman|méiɴma̰|min:ma.9
+ယောက်ျား[10]|man (adult male)|jauʔtɕá
+လူ|man (human being)|lù|lu
+ကလေး|child|kʰəlé|ka.le:
+မယား|wife|məjá|ma.ya:11
+လင်|husband|lìɴ|lang12
+အမေ|mother|ʔəmè|a.me
+အမိ|mother|ʔəmḭ|a.mi.13
+အဖေ|father|ʔəpʰè|a.hpe
+အဖ|father|ʔəpʰa̰|a.hpa.14
+တိရစ္ဆာန်|animal|təɹeiʔsʰàɴ|ti.rachcan
+ငါး|fish|ŋá|nga:
+ငှက်|bird|ŋ̊ɛʔ|hngak
+ခွေး|dog|kʰwé|hkwe:
+သန်း|louse|θáɴ|san:
+မြွေ|snake|mwè|mrwe
+တီကောင်|worm|tìɡàuɴ|tikaung
+သန်ကောင်|worm|θàɴɡàuɴ|sankaung
+သစ်ပင်|tree|θiʔpìɴ|sacpang
+တော|forest|tɔ́|tau:
+သစ်တော|forest|θiʔtɔ́|sactau:
+တုတ်|stick|douʔ|tut
+သစ်သီး|fruit|θiʔθí|sacsi:
+အသီး|fruit|ʔəθí|a.si:
+အစေ့|seed|ʔəsḭ|a.ce.
+အရွက်|leaf|ʔəjwɛʔ|a.rwak
+မြစ်|root|mjiʔ|mrac
+အမြစ်|root|ʔəmjiʔ|a.mrac
+အခေါက်|bark (of a tree)|ʔəkʰauʔ|a.hkauk
+ပန်း|flower|páɴ|pan:
+အပွင့်|flower|ʔəpwḭɴ|a.pwang.
+မြက်|grass|mjɛʔ|mrak
+ကြိုး|rope|tɕó|krui:
+လွန်|rope|lùɴ|lwan
+အရေပြား|skin|ʔəjèbjá|a.re-pra:
+အရေ|skin|ʔəjè|a.re
+အသား|meat|ʔəθá|a.sa:
+သွေး|blood|θwé|swe:
+အရိုး|bone|ʔəjó|a.rui:
+အဆီ|fat (noun)|ʔəsʰì|a.hci
+ဥ|egg|ʔṵ|u.
+ချို|horn|dʑò|hkyui
+ဦးချို|horn|ʔúdʑò|u:hkyui
+အမြီး|tail|ʔəmí|a.mri:
+အတောင်|feather|ʔətàuɴ|a.taung
+ဆံ|hair|sʰàɴ|hcam or ဆံပင်
+အမွေး|hair|sʰəbìɴ|a.mwe:
+ခေါင်း|head|ɡáuɴ|hkaung:
+နား|ear|ná|na:
+နားရွက်|ear|nəjwɛʔ|na:rwak
+မျက်စိ|eye|mjɛʔsḭ|myakci.
+နှာ|nose|n̥à|hna
+နှာခေါင်း|nose|n̥əkʰáuɴ|hnahkaung:
+ပါးစပ်|mouth|pəzaʔ|pa:cap
+နှုတ်|mouth|n̥ouʔ|hnut
+သွား|tooth|θwá|swa:
+လျှာ|tongue (organ)|ʃà|hlya
+လက်သည်း|fingernail|lɛʔθɛ́|laksany:
+ခြေ|foot|tɕʰè|hkre
+ခြေထောက်|leg|tɕʰèdauʔ|hkrehtauk
+အပေါင်|leg|ʔəpàuɴ|a.paung
+ဒူး|knee|dú|du:
+ဒူးခေါင်း|knee|dúɡáuɴ|du:hkaung:
+လက်|hand|lɛʔ|lak
+တောင်ပံ|wing|tàuɴbàɴ|taungpam
+ဗိုက်|belly|baiʔ|buik
+အူ|guts|ʔù|u
+လည်ပင်း|neck|lɛ̀bíɴ|lanypang:
+ကျော|back|tɕɔ́|kyau:
+ရင်|breast|jìɴ|rang
+ရင်ဘတ်|breast|jìɴbaʔ|rangbhat
+နှလုံး|heart|n̥əlóuɴ|hna.lum:
+အသည်းနှလုံး|heart|ʔəθɛ́n̥əlóuɴ|a.sany:hna.lum:
+အသည်း|liver|ʔəθɛ́|a.sany:
+အူမကြီး|liver|ʔùma̰dʑí|uma.kri:
+သောက်|to drink|θauʔ|sauk
+စား|to eat|sá|ca:
+ကိုက်|to bite|kaiʔ|kuik
+စုပ်|to suck|souʔ|cup
+ထွေး|to spit|tʰwé|htwe:
+အန်|to vomit|ʔàɴ|an
+အော့|to vomit|ʔɔ̰|au.
+မှုတ်|to blow|m̥ouʔ|hmut
+ရှူ|to breathe|ʃù|hru
+ရှူရှိုက်|to breathe|ʃùʃaiʔ|hruhruik
+ရယ်|to laugh|jì|rai
+တွေ့|to see|twḛ|twe.
+မြင်|to see|mjìɴ|mrang
+ကြား|to hear|tɕá|kra:
+သိ|to know|θḭ|si.
+တတ်|to know|taʔ|tat
+သိရှိ|to know|θḭʃḭ|si.hri.
+ထင်|to think|tʰìɴ|htang
+တွေး|to think|twé|twe:
+စဉ်းစား|to think|síɴzá|cany:ca:
+နမ်း|to smell|náɴ|nam:
+ကြောက်|to fear|tɕauʔ|krauk
+အိပ်|to sleep|ʔeiʔ|ip
+ရှင်|to live|ʃìɴ|hrang
+နေ|to live|nè|ne
+သေ|to die|θè|se
+ဆုံး|to die|sʰóuɴ|hcum:
+ကွယ်လွန်|to die|kwɛ̀lùɴ|kwailwan
+သတ်|to kill|θaʔ|sat
+သတ်ဖြတ်|to kill|θaʔpʰjaʔ|sathprat
+တိုက်|to fight|taiʔ|tuik
+ရန်ဖြစ်|to fight|jàɴpʰjiʔ|ranhprac
+အမဲလိုက်|to hunt|ʔəmɛ́laiʔ|a.mai:luik
+ရိုက်|to hit|jaiʔ|ruik
+ညှပ်|to cut|ɲ̥aʔ|hnyap
+ခွဲ|to split|kʰwɛ́|hkwai:
+ထိုး|to stab|tʰó|htui:
+ကုတ်|to scratch|kouʔ|kut
+တူး|to dig|tú|tu:
+ရေကူး|to swim|jèkú|reku:
+ပျံ|to fly|pjàɴ|pyam
+လျှောက်|to walk|ʃauʔ|hlyauk
+လာ|to come|là|la
+လှဲ|to lie (as in a bed)|ɬɛ́|hlai:
+လျောင်း|to lie (as in a bed)|ljáuɴ|lyaung:
+ထိုင်|to sit|tʰàiɴ|htuing
+ရပ်|to stand|jaʔ|rap
+လှည့်|to turn (intransitive)|ɬɛ̰|hlany.
+ချိုး|to turn (intransitive)|tɕʰó|hkyui:
+ကျ|to fall|tɕa̰|kya.
+ပေး|to give|pé|pe:
+ကိုင်|to hold|kàiɴ|kuing
+ညှစ်|to squeeze|ɲ̥iʔ|hnyac
+ပွတ်|to rub|puʔ|pwat
+ဆေး|to wash|sʰé|hce:
+သုတ်|to wipe|θouʔ|sut
+ဆွဲ|to pull|sʰwɛ́|hcwai:
+တွန်း|to push|túɴ|twan:
+ပစ်|to throw|pjiʔ|pac
+ချည်|to tie|tɕʰì|hkyany
+ချုပ်|to sew|tɕʰouʔ|hkyup
+ရေတွက်|to count|jètwɛʔ|re-twak
+ပြော|to say|pjɔ́|prau:
+ဆို|to say|sʰò|hcui
+ဟူ|to say|hù|hu
+ဆို|to sing|sʰò|hcui
+ဆော့|to play|sʰɔ̰|hcau.
+ကစား|to play|ɡəzá|ka.ca:
+မျော|to float|mjɔ́|myau:
+ပေါ်|to float|pɔ̀|pau
+စီး|to flow|sí|ci:
+ခဲ|to freeze|kʰɛ́|hkai:
+ဖူး|to swell|pʰú|hpu:
+ရောင်|to swell|jàuɴ|raung
+နေ|sun|nè|ne
+လ|moon|la̰|la.
+ကြယ်|star|tɕɛ̀|krai
+ရေ|water|jè|re
+မိုး|rain|mó|mui:
+မြစ်|river|mjiʔ|mrac
+ကန်|lake|kàɴ|kan
+အင်း|lake|ʔíɴ|ang:
+ပင်လယ်|sea|pìɴlɛ̀|panglai
+အဏ္ဏဝါ|sea|ʔàɴnəwà|anna.wa
+ဆား|salt|sʰá|hca:
+ကျောက်|stone|tɕauʔ|kyauk
+သဲ|sand|θɛ́|sai:
+ဖုန်|dust|pʰòuɴ|hpun
+မြေ|earth|mjè|mre
+တိမ်|cloud|tèiɴ|tim
+မြူ|fog|mjù|mru
+မိုး|sky|mó|mui:
+လေ|wind|lè|le
+နှင်း|snow|n̥íɴ|hnang:
+နှင်းခဲ|snow|n̥íɴɡɛ́|hnang:hkai:
+ရေခဲ|ice|jeɡɛ́|rehkai:
+အခိုး|smoke|ʔəkʰó|a.hkui:
+မီး|fire|mí|mi:
+ပြာ|ash|pjà|pra
+ရှို့|to burn|ʃo̰|hrui.
+လောင်|to burn|làuɴ|laung
+လမ်း|road|láɴ|lam:
+တောင်|mountain|tàuɴ|taung
+နီ|red|nì|ni
+စိမ်း|green|séiɴ|cim:
+ဝါ|yellow|wà|wa
+ဖြူ|white|pʰjù|hpru
+မည်း|black|mɛ́|many:
+နက်|black|nɛʔ|nak
+ည|night|ɲa̰|nya.
+နေ့|day|nḛ|ne.
+နှစ်|year|n̥iʔ|hnac
+ပူ|warm|pù|pu
+နွေး|warm|nwé|nwe:
+အေး|cold|ʔé|e:
+ချမ်း|cold|tɕʰáɴ|hkyam:
+ပြည့်|full|pjḛ|prany.
+သစ်|new|θiʔ|sac
+ဟောင်း|old|háuɴ|haung:
+အို|old|ʔò|ui
+ကောင်း|good|káuɴ|kaung:
+ဆိုး|bad|sʰó|hcui:
+ပုပ်|rotten|pouʔ|pup
+ညစ်ထည်း|dirty|ɲiʔtʰí|nyachtany:
+ဖြောင့်|straight|pʰja̰uɴ|hpraung.
+စင်း|straight|síɴ|cang:
+ဝိုင်း|round|wáiɴ|wuing:
+လုံး|round|lóuɴ|lum:
+ချွန်|sharp (as a knife)|tɕʰùɴ|hkywan
+ချွန်ထက်|sharp (as a knife)|tɕʰùɴtʰɛʔ|hkywanhtak
+တုံး|dull (as a knife)|tóuɴ|tum:
+ချော|smooth|tɕɔ́|hkyau:
+မွတ်|smooth|muʔ|mwat
+စို|wet|sò|cui
+ရွှဲ|wet|ʃwɛ́|hrwai:
+ခြောက်|dry|tɕauʔ|hkrauk
+မှန်|correct|m̥àɴ|hman
+နီး|near|ní|ni:
+ဝေးကွာ|far|wékwà|we:kwa
+ညာ|right|ɲà|nya
+ဘယ်|left|bɛ̀|bhai
+မှာ|at|m̥à|hma
+၌|at|n̥aiʔ|hnai.
+ထဲ|in|tʰɛ́|htai:
+တွင်း|in|twíɴ|twang:
+တွင်|in|twìɴ|twang
+နှင့်တကွ|with|n̥ḭɴdəɡwa̰|hnang.ta.kwa.
+နဲ့|and|nɛ̰|nai.
+နှင့်|and|n̥ḭɴ|hnang.
+ရင်|if|jìɴ|rang15
+အကယ်၍|if|ʔəkɛ̀jwḛ|a.kairwe
+လို့|because|lo̰|lui.
+ကြောင့်|because|dʑa̰uɴ|kraung.
+အမည်|name|ʔəmjì|a.many
+နာမည်|name|nàmjì|namany
 
 
 `
