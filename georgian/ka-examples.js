@@ -7,14 +7,12 @@
 */
 
 autoExpandExamples.ka = `
-ბგერა|sound
-მთვრალი|drunk
-მწვანე|green
-მწვრთნელი|trainer
+ბგერა|sound||bgɛra
+მთვრალი|drunk||mtvrali
+მწვრთნელი|trainer||mʦ̇vrtnɛli
 სხჳსი → სხვისი|others
 ქრისტჱ ~ ქრისტეჲ|Christ
 ცხოვრება|life
-წყალი|water
 ხელმწიფე|sovereign
 
 
