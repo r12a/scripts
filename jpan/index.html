@@ -23,6 +23,8 @@
 <script src="../common/transliterate.js"></script>
 <script src="../common/prompts.js"> </script>
 <script src="../glossary/glossary.js"> </script>
+<script src="../common/references.js"></script>
+<script src="refs.js"></script>
 
 <script src="/shared/code/getLinks.js"></script>
 <script src="/scripts/linkdata/linkdb.js"></script>
@@ -30,7 +32,7 @@
 <script>langs=langscjk; langscjk={}</script>
 </head>
 
-<body>
+<body class="useBlockExamples">
 <header>
 <div id="header-boilerplate"></div>
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
@@ -49,33 +51,32 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->2 September, 2020<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->18 December, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
 
 
 <div class="section">
-  <p>This page gathers together basic information about the Japanese writing system, which includes the use of Kanji, Hiragana, Katakana and Latin scripts. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Japanese using Unicode.</p>
+  <p>This page gathers  basic information about the Japanese writing system, which includes the use of Kanji, Hiragana, Katakana and Latin scripts. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Japanese using Unicode.</p>
 
 
 
 
-<details>
+<p id="usage"></p>
+<script>addUsageAdvice('Japanese')</script>
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Japanese','Japanese'); return false;">More about using this page</a></summary>
+<div id="about"></div>
+</details>
+
+<details class="supportdocs noprint">
 <summary class="instructions"><a href="../links?iso=Jpan">Related pages</a>.</summary>
 </details>
 
-
-
-<details>
-<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
-</details>
-
-
-
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Japanese','Japanese'); return false;">About this page</a></summary>
-<div id="about"></div>
+<summary class="instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
 </details>
 </div>
 
@@ -98,9 +99,9 @@
 
 <section id="history">
 <h2>Usage &amp; history</h2>
-<p>The four orthographies described here are used together to write the Japanese language.</p>
-<p>Name: <span class="charExample" translate="no"><span class="ex" lang="ja">日本語</span> <span class="ipa">nihoŋgo</span></span></p>
-<p>&quot;Kanji characters were introduced to Japan around the 3rd century, it is thought from Korea. Until the 7th or 8th century, the Japanese language was written exclusively in these Chinese characters. Initially these were used phonetically to represent similar-sounding Japanese syllables, regardless of their meaning in written Chinese. However, the process of writing Japanese solely in kanji was laborious; each symbol consisted of a number of strokes and only represented one syllable. Two simplified forms of writing began to emerge around the 7th century. The modern hiragana script developed from a simplified cursive style originally developed by women, who were discouraged from learning kanji, and katakana was developed by Buddhist scholars who wrote only one element of each kanji symbol as a form of shorthand.&quot;<a class="fnref" href="http://scriptsource.org/scr/Jpan">s</a></p>
+<p>The 'Japanese orthography' described here is a mixture of 4 scripts which are all used together for any Japanese text: Han (kanji), Hiragana, Katakana, and Latin. Together they are what is used to write the Japanese language.</p>
+<p><span class="charExample" translate="no"><span class="ex" lang="ja">日本語</span> <span class="ipa">nihoŋgo</span> <span class="meaning">Japanese</span></span></p>
+<p>&quot;Kanji characters were introduced to Japan around the 3rd century, it is thought from Korea. Until the 7th or 8th century, the Japanese language was written exclusively in these Chinese characters. Initially these were used phonetically to represent similar-sounding Japanese syllables, regardless of their meaning in written Chinese. However, the process of writing Japanese solely in kanji was laborious; each symbol consisted of a number of strokes and only represented one syllable. Two simplified forms of writing began to emerge around the 7th century. The modern hiragana script developed from a simplified cursive style originally developed by women, who were discouraged from learning kanji, and katakana was developed by Buddhist scholars who wrote only one element of each kanji symbol as a form of shorthand.&quot;<tt>s</tt></p>
 <p class="instructions">Sources: <a href="http://scriptsource.org/scr/Jpan">Scriptsource</a>, <a href="https://en.wikipedia.org/wiki/Japanese_writing_system#History_of_the_Japanese_script" class="more">Wikipedia</a></p>
 </section>
 
@@ -133,44 +134,7 @@
 
 
  
-  <section id="dir">
-<h2>Text direction</h2>
-    <p>Text can be written horizontally, left to right, or vertically with lines progressing from right to left. Vertically set text is still common in Japan; most novels, newspapers and magazines are set vertically.<a class="fnref" href="https://w3c.github.io/jlreq/#h-note-15">j</a></p>
-<p>Sometimes, vertically set text may contain sections or items that are set horizontally. For example, in newspapers, headings are normally set horizontally above body of an article which is set vertically, and captions are usually horizontal.</p>
-<p><a class="figref">fig_mixed_direction</a> shows pages from a magazine that mix directions on the page.</p>
-
-<figure id="fig_mixed_direction">
-<a href="images/mixed_direction_small.jpg"><img src="images/mixed_direction_small.jpg" alt="" data-source="Skyward in-flight magazine, Oct 2019, p62." style="width: 250px; height:370px;"></a>
-<a href="images/mixed_direction_2_small.jpg"><img src="images/mixed_direction_2_small.jpg" alt="" data-source="Skyward in-flight magazine, Oct 2019, p84." style="width: 250px; height:370px;"></a>
-<figcaption>Vertically set pages with mixed direction text. (Click on image for larger size.)</figcaption>
-</figure>
-
-    <p>Older horizontally set texts in Japanese also ran right to left. </p>
-    <p class="instructions">If your browser supports vertical text, you can change the direction of the text sample here.</p>
-     <p class="english" dir="ltr">
-      <button type="button" id="verticalButton" onclick="toggleDirection(document.getElementById('verticalTextExample'), this)"> Set vertically </button>
-    </p>
-   <div style="display:flex; max-height:20em;">
-     <p class="set_horizontal" lang="zh-hans" id="verticalTextExample" style="text-align:start;">第７条 すべての人は、法の下において平等であり、また、いかなる差別もなしに法の平等な保護を受ける権利を有する。すべての人は、この宣言に違反するいかなる差別に対しても、また、そのような差別をそそのかすいかなる行為に対しても、平等な保護を受ける権利を有する。</p>
-   </div>
-<p>It should be noted, however, that different conventions are applied for horizontal and vertical text, for example in terms of characters used and treatment of embedded romaji and numerals. Apart from the question of what gets rotated and what does not, the two writing modes may show different preferences for emphasis marks, brackets, numbers, and so forth. This means that it is not usually appropriate to simply switch the direction of the text without making additional changes.</p>
-<p>In vertical text (only) decisions have to be made about how to present embedded romaji text and numbers. Romaji typically runs down the page, with proportionally-spaced characters rotated 90º to the right. However, acronyms are often written using upright, fullwidth characters.</p>
-
-<figure id="fig_vertical_romaji">
-<img src="images/romaji_sidewayss.png" alt="" style="margin:0 2em;">
-<img src="images/romaji_upright.png" alt="" style="margin:0 2em;">
-<figcaption>Romaji text with characters rotated (left), and an acronym with upright letters (right).</figcaption>
-</figure>
-
-<p>Numbers, and sometimes text, may also run horizontally within a vertical line. This is most common with double-digit numbers, such as in dates. The width of the horizontal text should not normally exceed the width of the surrounding vertical text (ie. it should fit in the width of a character space). This is referred to as <span class="name">tate chu yoko</span>.</p>
-
-<figure id="fig_tate_chu_yoko">
-<img src="images/tate_chu_yoko.png" alt="">
-<figcaption>Numbers arranged horizontally within a vertical line.</figcaption>
-</figure>
-
-
-</section>
+  
 
 
 
@@ -181,7 +145,7 @@
 <section>
     <h2 id"structure">Structure</h2>
     <p>The Japanese language, unlike many neighouring languages, uses polysyllabic words, and has no tones. It is an agglutinative language, and doesn't use spaces or other characters to separate  words.</p>
-<p>Wikipedia<a class="fnref" href="https://en.wikipedia.org/wiki/Japanese_grammar#Sentences,_phrases_and_words">g</a> has a nicely written summary of the structural characteristics:</p>
+<p>Wikipedia<tt>w,#Sentences,_phrases_and_words</tt> has a nicely written summary of the structural characteristics:</p>
     <blockquote>
     <p><i>Text</i> (<span lang="ja">文章</span> <i class="trans">bunshō</i>) is composed of <i>sentences</i> (<span lang="ja">文</span> <i class="trans">bun</i>), which are in turn composed of <i>phrases</i> (<span lang="ja">文節</span> <i class="trans">bunsetsu</i>), which are its smallest coherent components. Like Chinese and classical Korean, written Japanese does not typically demarcate words with spaces; its agglutinative nature further makes the concept of a <i>word</i> rather different from words in English. The reader identifies word divisions by semantic cues and a knowledge of phrase structure. Phrases have a <em>single</em> meaning-bearing word, followed by a string of suffixes, auxiliary verbs and particles to modify its meaning and designate its grammatical role. In the following example, phrases are indicated by vertical bars:</p>
 <dl>
@@ -203,7 +167,7 @@
 <h2>Vowel sounds</h2>
 
 <p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
-<p class="instructions">Phones in a lighter colour are non-native or allophones. Source<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">w</a>.</p>
+<p class="instructions">Phones in a lighter colour are non-native or allophones..</p>
 
 
 
@@ -275,7 +239,7 @@
 <h2>Consonant sounds</h2>
 
 <p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
-<p class="instructions">Phones in a lighter colour are non-native or allophones. Source<a class="fnref" href="http://en.wikipedia.org/wiki/Bengali_phonology">w</a>.</p>
+<p class="instructions">Phones in a lighter colour are non-native or allophones.</p>
 
 <table class="ipaTable">
 <thead>
@@ -393,8 +357,8 @@ alveolar</th>
 </figure>
 <p>Kanji characters are primarily constructed from characters that each represent a phonetic symbol. Some have pictographic origins that are still evident, whereas others have a more complicated structure.</p>
 <p>In reforms in the mid 20th century, the Japanese repertoire was standardised on around 2,000 characters, however standardised computer character sets support a few thousand more.</p>
-<p>The  Jōyō kanji character set (<span lang="ja">常用漢字</span>) is intended as a literacy baseline for those who have completed compulsory education, as well as a list of permitted characters and readings for use in official government documents<a href="https://en.wikipedia.org/wiki/J%C5%8Dy%C5%8D_kanji" class="fnref">w</a>.</p>
-<p>A second list, called Jinmeiyō kanji (<span lang="ja">人名用漢字</span>), is a supplementary list of 863 characters that can legally be used in registered personal names in Japan.<a class="fnref" href="https://en.wikipedia.org/wiki/Jinmeiy%C5%8D_kanji">w</a></p>
+<p>The  Jōyō kanji character set (<span lang="ja">常用漢字</span>) is intended as a literacy baseline for those who have completed compulsory education, as well as a list of permitted characters and readings for use in official government documents<tt>wjy</tt>.</p>
+<p>A second list, called Jinmeiyō kanji (<span lang="ja">人名用漢字</span>), is a supplementary list of 863 characters that can legally be used in registered personal names in Japan.<tt>wj</tt></p>
 <p>The number of characters in these lists changes from time to time. The Wikipedia articles for <a href="https://en.wikipedia.org/wiki/J%C5%8Dy%C5%8D_kanji">Jōyō</a> and <a href="https://en.wikipedia.org/wiki/Jinmeiy%C5%8D_kanji">Jinmeiyō</a> kanji provide useful timelines indicating changes over the years.</p>
 <p>In addition to the basic lists, there are a number of variants and traditional forms that need to be considered. Note also that the jōyō character set only provides a baseline for the educational process.</p>
 <details>
@@ -493,10 +457,10 @@ alveolar</th>
 
 <figure class="characterBox auto bicameral" data-cols="ipa">ぁァ␣ぃィ␣ぅゥ␣ぇェ␣ぉォ␣ゃャ␣ゅュ␣ょョ␣ゎヮ␣っッ␣ー</figure>
 
-<p>Small versions of や, ゆ, and よ are used to form syllables such as <span class="charExample" translate="no"><span class="ex" lang="en">きゃ</span> <span class="trans">kya</span> <span class="ipa">kja</span></span>, <span class="charExample" translate="no"><span class="ex" lang="en">きゅ</span> <span class="trans">kya</span> <span class="ipa">kja</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="en">きょ</span> <span class="trans">kyo</span> <span class="ipa">kjo</span></span>.</p>
+<p>Small versions of や, ゆ, and よ are used to form syllables such as <span class="charExample" translate="no"><span class="ex" lang="en">きゃ</span> <span class="trans">kya</span> <span class="ipa">kja</span></span> <span class="charExample" translate="no"><span class="ex" lang="en">きゅ</span> <span class="trans">kya</span> <span class="ipa">kja</span></span>  <span class="charExample" translate="no"><span class="ex" lang="en">きょ</span> <span class="trans">kyo</span> <span class="ipa">kjo</span></span></p>
 <p><span class="codepoint" translate="no"><span lang="ja">&#x30C3;</span> [<a href="/scripts/kana/block#char30C3"><span class="uname">U+30C3 KATAKANA LETTER SMALL TU</span></a>]</span> is  used to lengthen a consonant sound.</p>
 
-<p><span class="codepoint" translate="no"><span lang="ja">&#x30FC;</span> [<a href="/scripts/kana/block#char30FC"><span class="uname">U+30FC KATAKANA-HIRAGANA PROLONGED SOUND MARK</span></a>]</span> is used to elongate vowel sounds. This elongation is phonemically significant. It is used predominantly with katakana, but occasionally also with hiragana. . <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">u720</a></p>
+<p><span class="codepoint" translate="no"><span lang="ja">&#x30FC;</span> [<a href="/scripts/kana/block#char30FC"><span class="uname">U+30FC KATAKANA-HIRAGANA PROLONGED SOUND MARK</span></a>]</span> is used to elongate vowel sounds. This elongation is phonemically significant. It is used predominantly with katakana, but occasionally also with hiragana.<tt>uk,720</tt></p>
 </section>
 
 
@@ -527,13 +491,13 @@ alveolar</th>
 <tr><th>Okinawa</th><td colspan="4"><span class="ipa">d͡ʑi</span></td></tr>
 </tbody>
 </table>
-<figcaption>Yotsugana pronunciation around Japan. (source <a class="fnref" href="https://en.wikipedia.org/wiki/Yotsugana">w</a>.)</figcaption>
+<figcaption>Yotsugana pronunciation around Japan. (source <tt>wy</tt>.)</figcaption>
 </figure>
 
-<p>The orthographic reform shortly after World War 2 recommended the use of only <span class="codepoint" translate="no"><span lang="zh">&#x3058;</span> [<a href="/scripts/punctuation/block#char3058"><span class="uname">U+3058 HIRAGANA LETTER ZI</span></a>]</span> and <span class="codepoint" translate="no"><span lang="zh">&#x305A;</span> [<a href="/scripts/punctuation/block#char305A"><span class="uname">U+305A HIRAGANA LETTER ZU</span></a>]</span>, except in circumstances where an unvoiced sound has become voiced because of:<a class="fnref" href="https://en.wikipedia.org/wiki/Yotsugana">w</a></p>
+<p>The orthographic reform shortly after World War 2 recommended the use of only <span class="codepoint" translate="no"><span lang="zh">&#x3058;</span> [<a href="/scripts/punctuation/block#char3058"><span class="uname">U+3058 HIRAGANA LETTER ZI</span></a>]</span> and <span class="codepoint" translate="no"><span lang="zh">&#x305A;</span> [<a href="/scripts/punctuation/block#char305A"><span class="uname">U+305A HIRAGANA LETTER ZU</span></a>]</span>, except in circumstances where an unvoiced sound has become voiced because of:<tt>wy</tt></p>
 <ol>
-<li> compounding (rendaku), eg. <span class="charExample" translate="no"><span class="ex" lang="zh">神無月</span> <span class="ipa">kannad͡zuki</span> <span class="meaning">October (lunar month)</span></span>, which combines <span class="charExample" translate="no"><span class="ex" lang="zh">かん</span></span>, <span class="charExample" translate="no"><span class="ex" lang="zh">な</span></span>, and <span class="charExample" translate="no"><span class="ex" lang="zh">つき</span></span>, would be written in hiragana as <span class="charExample" translate="no"><span class="ex" lang="zh">かんなづき</span></span>.</li>
-<li>repetition, eg. <span class="charExample" translate="no"><span class="ex" lang="zh">続</span> <span class="ipa">t͡sud͡zuki</span> <span class="meaning">continuation</span></span>is written <span class="charExample" translate="no"><span class="ex" lang="zh">つづく</span></span> in hiragana.</li>
+<li> compounding (rendaku), eg. <span class="charExample" translate="no"><span class="ex" lang="zh">神無月</span> <span class="ipa">kannad͡zuki</span> <span class="meaning">October (lunar month)</span></span>which combines <span class="charExample inline" translate="no"><span class="ex" lang="zh">かん</span></span>, <span class="charExample inline" translate="no"><span class="ex" lang="zh">な</span></span>, and <span class="charExample inline" translate="no"><span class="ex" lang="zh">つき</span></span>, would be written in hiragana as <span class="charExample" translate="no"><span class="ex" lang="zh">かんなづき</span></span></li>
+<li>repetition, eg. <span class="charExample" translate="no"><span class="ex" lang="zh">続</span> <span class="ipa">t͡sud͡zuki</span> <span class="meaning">continuation</span></span>is written in hiragana as<span class="charExample" translate="no"><span class="ex" lang="zh">つづく</span></span></li>
 </ol>
 </section>
 
@@ -585,7 +549,7 @@ alveolar</th>
 <p>The katakana block contains two additional punctuation marks.</p>
 <figure class="characterBox auto" data-cols="">・␣゠</figure>
 
-<p><span class="codepoint" translate="no"><span lang="ja">&#x30FB;</span> [<a href="/scripts/kana/block#char30FB"><span class="uname">U+30FB KATAKANA MIDDLE DOT</span></a>]</span> is used to separate words when writing non-Japanese phrases. . <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">u720</a></p>
+<p><span class="codepoint" translate="no"><span lang="ja">&#x30FB;</span> [<a href="/scripts/kana/block#char30FB"><span class="uname">U+30FB KATAKANA MIDDLE DOT</span></a>]</span> is used to separate words when writing non-Japanese phrases.<tt>uk,720</tt></p>
 <p><span class="codepoint" translate="no"><span lang="ja">&#x30A0;</span> [<a href="/scripts/kana/block#char30A0"><span class="uname">U+30A0 KATAKANA-HIRAGANA DOUBLE HYPHEN</span></a>]</span> is a delimiter occasionally used in analyzed Katakana or Hiragana textual material.&nbsp;</p>
 <p>The hiragana block contains some combining and modifier characters used to represent <span class="name">dakuten</span> and <span class="name">han-dakuten</span> for compatibility with older systems.</p>
 <figure class="auxiliaryBox auto" data-cols="">゙␣゚␣゛␣゜</figure>
@@ -599,6 +563,52 @@ alveolar</th>
  
  
  
+
+
+<section id="dir">
+<h2>Text direction</h2>
+    <p>Text can be written horizontally, left to right, or vertically with lines progressing from right to left. Vertically set text is still common in Japan; most novels, newspapers and magazines are set vertically.<tt>j,#h-note-15</tt></p>
+<p>Sometimes, vertically set text may contain sections or items that are set horizontally. For example, in newspapers, headings are normally set horizontally above body of an article which is set vertically, and captions are usually horizontal.</p>
+<p><a class="figref">fig_mixed_direction</a> shows pages from a magazine that mix directions on the page.</p>
+
+<figure id="fig_mixed_direction">
+<a href="images/mixed_direction_small.jpg"><img src="images/mixed_direction_small.jpg" alt="" data-source="Skyward in-flight magazine, Oct 2019, p62." style="width: 250px; height:370px;"></a>
+<a href="images/mixed_direction_2_small.jpg"><img src="images/mixed_direction_2_small.jpg" alt="" data-source="Skyward in-flight magazine, Oct 2019, p84." style="width: 250px; height:370px;"></a>
+<figcaption>Vertically set pages with mixed direction text. (Click on image for larger size.)</figcaption>
+</figure>
+
+    <p>Older horizontally set texts in Japanese also ran right to left. </p>
+    <p class="instructions">If your browser supports vertical text, you can change the direction of the text sample here.</p>
+     <p class="english" dir="ltr">
+      <button type="button" id="verticalButton" onclick="toggleDirection(document.getElementById('verticalTextExample'), this)"> Set vertically </button>
+    </p>
+   <div style="display:flex; max-height:20em;">
+     <p class="set_horizontal" lang="zh-hans" id="verticalTextExample" style="text-align:start;">第７条 すべての人は、法の下において平等であり、また、いかなる差別もなしに法の平等な保護を受ける権利を有する。すべての人は、この宣言に違反するいかなる差別に対しても、また、そのような差別をそそのかすいかなる行為に対しても、平等な保護を受ける権利を有する。</p>
+   </div>
+<p>It should be noted, however, that different conventions are applied for horizontal and vertical text, for example in terms of characters used and treatment of embedded romaji and numerals. Apart from the question of what gets rotated and what does not, the two writing modes may show different preferences for emphasis marks, brackets, numbers, and so forth. This means that it is not usually appropriate to simply switch the direction of the text without making additional changes.</p>
+<p>In vertical text (only) decisions have to be made about how to present embedded romaji text and numbers. Romaji typically runs down the page, with proportionally-spaced characters rotated 90º to the right. However, acronyms are often written using upright, fullwidth characters.</p>
+
+<figure id="fig_vertical_romaji">
+<img src="images/romaji_sidewayss.png" alt="" style="margin:0 2em;">
+<img src="images/romaji_upright.png" alt="" style="margin:0 2em;">
+<figcaption>Romaji text with characters rotated (left), and an acronym with upright letters (right).</figcaption>
+</figure>
+
+<p>Numbers, and sometimes text, may also run horizontally within a vertical line. This is most common with double-digit numbers, such as in dates. The width of the horizontal text should not normally exceed the width of the surrounding vertical text (ie. it should fit in the width of a character space). This is referred to as <span class="name">tate chu yoko</span>.</p>
+
+<figure id="fig_tate_chu_yoko">
+<img src="images/tate_chu_yoko.png" alt="">
+<figcaption>Numbers arranged horizontally within a vertical line.</figcaption>
+</figure>
+
+
+</section>
+
+
+
+
+
+
 
 <section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
@@ -768,7 +778,7 @@ alveolar</th>
   
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
-<p> Japanese uses the following separators at the sentence level and below.<a class="fnref" href="https://w3c.github.io/jlreq/#differences_in_vertical_and_horizontal_composition_in_use_of_punctuation_marks">j</a>  Some of the punctuation looks like that for Latin (eg. parentheses, commas, and full stops), but the width of the punctuation is likely to include significant amounts of white space, so that punctuation characters occupy the same space as han characters.</p>
+<p> Japanese uses the following separators at the sentence level and below.<tt>j,#differences_in_vertical_and_horizontal_composition_in_use_of_punctuation_marks</tt>  Some of the punctuation looks like that for Latin (eg. parentheses, commas, and full stops), but the width of the punctuation is likely to include significant amounts of white space, so that punctuation characters occupy the same space as han characters.</p>
 <table class="punctuationTable">
 <thead>
 <tr>
@@ -826,7 +836,7 @@ alveolar</th>
 </tbody>
 </table>
 
-<p><span class="codepoint" translate="no"><span lang="zh">&#x3001;</span> [<a href="/scripts/punctuation/block#char3001"><span class="uname">U+3001 IDEOGRAPHIC COMMA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="zh">&#x3002;</span> [<a href="/scripts/punctuation/block#char3002"><span class="uname">U+3002 IDEOGRAPHIC FULL STOP</span></a>]</span> are the norm for vertical text, however two alternative conventions as applied to horizontal text: especially in books that mix Japanese and western text, such as books on science and technology, the former may be replaced by <span class="codepoint" translate="no"><span lang="zh">&#xFF0C;</span> [<a href="/scripts/punctuation/block#charFF0C"><span class="uname">U+FF0C FULLWIDTH COMMA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="zh">&#xFF0E;</span> [<a href="/scripts/punctuation/block#charFF0E"><span class="uname">U+FF0E FULLWIDTH FULL STOP</span></a>]</span>. Often, however, the ideographic full stop is retained, since it is more visible and looks better (this convention has been adopted for Japanese official publications).<a class="fnref" href="https://w3c.github.io/jlreq/#differences_in_vertical_and_horizontal_composition_in_use_of_punctuation_marks">j</a></p>
+<p><span class="codepoint" translate="no"><span lang="zh">&#x3001;</span> [<a href="/scripts/punctuation/block#char3001"><span class="uname">U+3001 IDEOGRAPHIC COMMA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="zh">&#x3002;</span> [<a href="/scripts/punctuation/block#char3002"><span class="uname">U+3002 IDEOGRAPHIC FULL STOP</span></a>]</span> are the norm for vertical text, however two alternative conventions as applied to horizontal text: especially in books that mix Japanese and western text, such as books on science and technology, the former may be replaced by <span class="codepoint" translate="no"><span lang="zh">&#xFF0C;</span> [<a href="/scripts/punctuation/block#charFF0C"><span class="uname">U+FF0C FULLWIDTH COMMA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="zh">&#xFF0E;</span> [<a href="/scripts/punctuation/block#charFF0E"><span class="uname">U+FF0E FULLWIDTH FULL STOP</span></a>]</span>. Often, however, the ideographic full stop is retained, since it is more visible and looks better (this convention has been adopted for Japanese official publications).<tt>j,#differences_in_vertical_and_horizontal_composition_in_use_of_punctuation_marks</tt></p>
 <p>As the table shows, these punctuation marks require dedicated glyphs in the font, and cannot be achieved by simply rotating the glyph.</p>
 <p>Japanese also uses the following doubled exclamation/question marks. They remain upright in vertical text.</p>
 <table class="punctuationTable">
@@ -926,7 +936,7 @@ alveolar</th>
 <section id="quotations">
 <h3>Quotations</h3>
 
-<p> Japanese uses different quote marks for horizontal and vertical writing. The default quote marks  are:<a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/ta.html">c</a></p>
+<p> Japanese uses different quote marks for horizontal and vertical writing. The default quote marks  are:</p>
 <table class="punctuationTable">
 <thead>
 <tr>
@@ -951,7 +961,7 @@ alveolar</th>
 <td class="vt"><img src="images/locations/TR.png" alt="Top=right aligned"> <img src="images/locations/TL.png" alt="Top-left aligned"></td>
 </tr>
 </table>
-<p>When an additional quote is embedded within the first, the quote marks are:<a class="fnref" href="https://www.unicode.org/cldr/charts/latest/summary/ta.html">c</a></p>
+<p>When an additional quote is embedded within the first, the quote marks are:</p>
 <table class="punctuationTable">
 <thead>
 <tr>
@@ -982,7 +992,7 @@ alveolar</th>
 <section id="emphasis">
 <h3>Emphasis</h3>
 
-<p>Japanese sometimes uses katakana characters to create visual emphasis. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">u720</a></p>
+<p>Japanese sometimes uses katakana characters to create visual emphasis. <tt>uk,720</tt></p>
 <p><a href="https://w3c.github.io/jlreq/#composition_of_emphasis_dots">Japanese Layout Requirements </a>lists the following ways of showing emphasis in Japanese.</p>
 <ol>
 <li>Select a different typeface (eg. a Gothic font in Mincho text).</li>
@@ -992,8 +1002,8 @@ alveolar</th>
 <li>Boten marks (also known as emphasis marks).</li>
 </ol>
 <p>(1) and (2) are popular approaches. (5) is not as common, but is a traditional approach with some value attached.</p>
-<p>Different boten marks are used in horizontal and vertical text. Typically, bullets are used above characters in horizontal text, and sesame dots are used to the right of characters in vertical text.<a class="fnref" href="https://w3c.github.io/jlreq/#composition_of_emphasis_dots">j</a></p>
-<p>The boten mark is centre-aligned with the base characters, and doesn't normally appear alongside full stops, commas, or brackets.<a class="fnref" href="https://w3c.github.io/jlreq/#composition_of_emphasis_dots">j</a></p>
+<p>Different boten marks are used in horizontal and vertical text. Typically, bullets are used above characters in horizontal text, and sesame dots are used to the right of characters in vertical text.<tt>j,#composition_of_emphasis_dots</tt></p>
+<p>The boten mark is centre-aligned with the base characters, and doesn't normally appear alongside full stops, commas, or brackets.<tt>j,#composition_of_emphasis_dots</tt></p>
 
 <figure id="fig_boten">
 <img src="images/boten_horizontal.png" alt="Horizontal text and boten marks." style="margin-right: 2em;">
@@ -1024,37 +1034,37 @@ alveolar</th>
 <section id="annotation_ruby">
 <h4>Ruby</h4>
 <p>Various ways of arranging inter-linear annotations alongside text fall under the rubrique of <span class="name">ruby</span> (named from the British print size originally used for the annotations). These include mono-ruby, jukugo-ruby, and group-ruby, and they are described in detail below.</p>
-<p>Ruby is commonly used to indicate the pronunciation of ideographic characters used in Japanese, as it cannot usually be guessed and so can pose difficulties for those learning the language. For these cases, mono-ruby is most commonly used, however a variant, jukugo-ruby, is sometimes applied to compound nouns (which are called <span class="name">jukugo</span> in Japanese). Where sequences of kanji characters do not have the same pronunciation as the sum of their parts (called <span class="name">jukuji</span>), group ruby is used to represent the sound, eg. <span class="charExample" translate="no"><span class="ex" lang="ja">いなか</span> <span class="ipa">inaka</span></span> for <span class="charExample" translate="no"><span class="ex" lang="ja">田舎</span> <span class="meaning">countryside</span></span>, or <span class="charExample" translate="no"><span class="ex" lang="ja">きょう</span> <span class="ipa">kyō</span></span> for <span class="charExample" translate="no"><span class="ex" lang="ja">今日</span> <span class="meaning">today</span></span>.<a class="fnref" href="https://w3c.github.io/jlreq/#h-note-109">j</a></p>
-<p>Ruby annotations are also used to provide brief indications of the meaning of words or characters. These annotations typically use the group-ruby approach. The most typical example of this is attaching ruby text to a kanji compound word to indicate a corresponding loan word in katakana (see <a class="figref">fig_group_ruby</a>).<a class="fnref" href="https://w3c.github.io/jlreq/#id221">j</a> Group ruby is also used to indicate the reading or the meaning of a Western word used in base text, or where a synonymous Western word in Latin characters is attached as a ruby annotation to a Japanese word (see Figure 112).</p>
+<p>Ruby is commonly used to indicate the pronunciation of ideographic characters used in Japanese, as it cannot usually be guessed and so can pose difficulties for those learning the language. For these cases, mono-ruby is most commonly used, however a variant, jukugo-ruby, is sometimes applied to compound nouns (which are called <span class="name">jukugo</span> in Japanese). Where sequences of kanji characters do not have the same pronunciation as the sum of their parts (called <span class="name">jukuji</span>), group ruby is used to represent the sound,<tt>j,#h-note-109</tt> eg. <span class="charExample" translate="no"><span class="ex" lang="ja">いなか</span> <span class="ipa">inaka</span></span><span class="charExample" translate="no"><span class="ex" lang="ja">田舎</span> <span class="meaning">countryside</span></span>or <span class="charExample" translate="no"><span class="ex" lang="ja">きょう</span> <span class="ipa">kyō</span></span><span class="charExample" translate="no"><span class="ex" lang="ja">今日</span> <span class="meaning">today</span></span></p>
+<p>Ruby annotations are also used to provide brief indications of the meaning of words or characters. These annotations typically use the group-ruby approach. The most typical example of this is attaching ruby text to a kanji compound word to indicate a corresponding loan word in katakana (see <a class="figref">fig_group_ruby</a>).<tt>j,#id221</tt> Group ruby is also used to indicate the reading or the meaning of a Western word used in base text, or where a synonymous Western word in Latin characters is attached as a ruby annotation to a Japanese word (see Figure 112).</p>
 <p>The rest of this section describes features that are generally common to all forms of ruby, before we move on to examine the differences in following subsections.</p>
 <p>All annotations appear within the standard inter-line space for the page, and don't create extra line height if they only appear on a single line. The inter-line space is usually set at an appropriate size to accommodate annotations.</p>
 <p>Unlike Chinese, it is common to find annotations applied just to specific words, rather than annotating the whole text.</p>
-<p>Ruby annotations normally appear above horizontal lines of text, and to the right of vertical lines. Occasionally, both phonetic and semantic annotations are applied to the same base text, in which case the annotations appear on both sides of the base. A typical scenario in these cases would be to have mono-ruby above/right of the base, and group-ruby below/left.<a class="fnref" href="https://w3c.github.io/jlreq/#choice_of_sides_for_ruby_with_respect_to_base_characters">j</a></p>
+<p>Ruby annotations normally appear above horizontal lines of text, and to the right of vertical lines. Occasionally, both phonetic and semantic annotations are applied to the same base text, in which case the annotations appear on both sides of the base. A typical scenario in these cases would be to have mono-ruby above/right of the base, and group-ruby below/left.<tt>j,#choice_of_sides_for_ruby_with_respect_to_base_characters</tt></p>
 
 <figure id="fig_double">
 <img src="images/double_sided.png" alt="東南(とうなん)(たつみ)の方角">
 <figcaption>Double-sided ruby.</figcaption>
 </figure>
 
-<p>The character frame of kana annotations is usually half that of the base character. Occasionally, annotations are compressed in one direction (depending of direction of writing) so that 3 fit over a single base character.<a class="fnref" href="https://w3c.github.io/jlreq/#fig2_3_10">j</a> In large text (12pt or more), such as headings, the size of the annotation may be less that half that of the base.<a class="fnref" href="https://w3c.github.io/jlreq/#fig2_3_11">j</a></p>
+<p>The character frame of kana annotations is usually half that of the base character. Occasionally, annotations are compressed in one direction (depending of direction of writing) so that 3 fit over a single base character.<tt>j,#fig2_3_10</tt> In large text (12pt or more), such as headings, the size of the annotation may be less that half that of the base.<tt>j,#fig2_3_11</tt></p>
 </section>
 
 
 <section id="annotation_ruby_mono">
 <h4>Mono-ruby</h4>
 <p>Usually applied to kanji base characters, each base character is associated individually with an annotation. </p>
-<p>Annotations are normally centred over the base character in horizontal text, and with the middle of the base character in vertical text. (called <span class="name">nakatsuki</span>). An alternative, used only in vertical text, is to align the annotation with the top of the character frame of the base character (<span class="name">katatsuki</span>)<a class="fnref" href="https://w3c.github.io/jlreq/#id227">j</a>, as in the righthand example in <a class="figref">fig_jukugo</a>.</p>
+<p>Annotations are normally centred over the base character in horizontal text, and with the middle of the base character in vertical text. (called <span class="name">nakatsuki</span>). An alternative, used only in vertical text, is to align the annotation with the top of the character frame of the base character (<span class="name">katatsuki</span>)<tt>j,#id227</tt>, as in the righthand example in <a class="figref">fig_jukugo</a>.</p>
 
 <!--p class="large" style="writing-mode:horizontal-tb;"><span class="ex" lang="ja"><ruby><rb>推</rb><rt>すい</rt><rb>理</rb><rt style="color:chocolate">り</rt><rb>小</rb><rt>しょう</rt><rb>説</rb><rt style="color:chocolate">せつ</rt></ruby></span></p-->
 
 <figure id="fig_mono_ruby">
 <img src="images/suirishousetsu.png" alt="推/すい/理/り/小/しょう/説/せつ (detective novel)" style="margin-right:3em; vertical-align: top;">
 <img src="images/suirishousetsu_v.png" alt="推/すい/理/り/小/しょう/説/せつ (detective novel) vertical">
-<figcaption>Mono-ruby for <span class="charExample" translate="no"><span class="ex" lang="ja">推理小説</span> <span class="meaning">detective novel</span></span>, in horizontal and vertical text (colouring added for illustrative purposes). </figcaption>
+<figcaption>Mono-ruby for <span class="charExample inline" translate="no"><span class="ex" lang="ja">推理小説</span> <span class="meaning">detective novel</span></span>, in horizontal and vertical text (colouring added for illustrative purposes). </figcaption>
 </figure>
 
 <p>Since the annotation characters are usually 1/2 the size of the base characters, 3-character annotations require more space that the underlying kanji. Internally to the sequence, this will produce a gap between the base characters, since annotations cannot overlap (see <a class="figref">fig_mono_ruby</a>).</p>
-<p>At either end of the sequence, either a gap is opened up between the base character with the long annotation and its neighbour (see <a class="figref">fig_overhang</a>), or the annotation may overhang the neighbouring base characters. Simpler implementations produce gaps, but allow annotations to overhang any blank parts of adjacent fullwidth punctuation characters. More sophisticated applications may allow overlap of kana or other characters, though never kanji<a class="fnref" href="https://w3c.github.io/jlreq/#232">j</a>, but may also have to deal more complicated algorithms, such as balancing space on either side of the ruby sequence, or deciding what can and cannot be overlapped, and to what extent.<a class="fnref" href="https://w3c.github.io/jlreq/#id229">j</a> <a class="fnref" href="https://w3c.github.io/jlreq/#adjustments_of_ruby_with_length_longer_than_that_of_the_base_characters">j</a></p>
+<p>At either end of the sequence, either a gap is opened up between the base character with the long annotation and its neighbour (see <a class="figref">fig_overhang</a>), or the annotation may overhang the neighbouring base characters. Simpler implementations produce gaps, but allow annotations to overhang any blank parts of adjacent fullwidth punctuation characters. More sophisticated applications may allow overlap of kana or other characters, though never kanji<tt>j,#232</tt>, but may also have to deal more complicated algorithms, such as balancing space on either side of the ruby sequence, or deciding what can and cannot be overlapped, and to what extent.<tt>j,#id229</tt> <tt>j,#adjustments_of_ruby_with_length_longer_than_that_of_the_base_characters</tt></p>
 
 <!--p class="large" lang="ja">彼が<ruby><rb>町</rb><rt>ちょう</rt><rb>長</rb><rt>ちょう</rt></ruby>です</p-->
 
@@ -1077,7 +1087,7 @@ alveolar</th>
 <section id="annotation_group_ruby">
 <h4>Group ruby</h4>
 <p>Applies when the base is a sequence of characters, mapped to a single annotation. The base can be a sequence of either kanji  or other characters, as can be the annotation.</p>
-<p>When the annotation is shorter than the base, and the annotation is composed of kana or kanji characters, they are typically spread out with two units of equal spacing between each character and one at either end. The end space should never exceed half the width of a base character.<a class="fnref" href="https://w3c.github.io/jlreq/#positioning_of_groupruby_with_respect_to_base_characters">j</a></p>
+<p>When the annotation is shorter than the base, and the annotation is composed of kana or kanji characters, they are typically spread out with two units of equal spacing between each character and one at either end. The end space should never exceed half the width of a base character.<tt>j,#positioning_of_groupruby_with_respect_to_base_characters</tt></p>
 <p>When the base is shorter than the annotation, the inverse applies.</p>
 <!--p class="large" style="writing-mode:horizontal-tb;"><span class="ex" lang="ja"><ruby><rb>編集者</rb><rt>editor</rt></ruby></span></p>
 <p class="large" style="writing-mode:vertical-rl;">&nbsp;</p>
@@ -1087,7 +1097,7 @@ alveolar</th>
 <figure id="fig_group_ruby">
 <img src="images/gr_client.png" alt="顧客/クライアント" style="margin-right:2em; vertical-align: top;">
 <img src="images/gr_model.png" alt="模型/モデル" style="vertical-align: top;">
-<figcaption><span class="charExample" translate="no"><span class="ex" lang="ja">模型</span> <span class="ipa">mokei</span> <span class="meaning">model</span></span> and <span class="charExample" translate="no"><span class="ex" lang="ja">顧客</span> <span class="ipa">kokjaku</span> <span class="meaning">client</span></span> with katakana group-ruby annotations indicating loan word alternatives.</figcaption>
+<figcaption><span class="charExample inline" translate="no"><span class="ex" lang="ja">模型</span> <span class="ipa">mokei</span> <span class="meaning">model</span></span> and <span class="charExample inline" translate="no"><span class="ex" lang="ja">顧客</span> <span class="ipa">kokjaku</span> <span class="meaning">client</span></span> with katakana group-ruby annotations indicating loan word alternatives.</figcaption>
 </figure>
 
 
@@ -1096,7 +1106,7 @@ alveolar</th>
 <figure id="fig_latin_ruby">
 <img src="images/gr_henshusha.png" alt="編集者/editor" style="margin-right:2em;">
 <img src="images/gr_editor.png" alt="editor/エデイター">
-<figcaption>Group-ruby involving non-Japanese text (the right-hand example is <span class="charExample" translate="no"><span class="ex" lang="ja">編集者</span> <span class="ipa">henʃuːʃa</span> <span class="meaning">editor </span></span>).</figcaption>
+<figcaption>Group-ruby involving non-Japanese text (the right-hand example is <span class="charExample inline" translate="no"><span class="ex" lang="ja">編集者</span> <span class="ipa">henʃuːʃa</span> <span class="meaning">editor </span></span>).</figcaption>
 </figure>
 
 <p>Overhang behaviour is the same as described for mono-ruby, as is the handling at line ends when the annotation is longer than the base.</p>
@@ -1128,7 +1138,7 @@ alveolar</th>
 <section id="annotation_inline">
 <h4>Inline ruby</h4>
 <p>Where text sizes are too small for ruby characters to be easily read, the ruby annotation is typically rendered after the base text, in parentheses. </p>
-<p>Inline annotations should normally correspond to full words, even if the sequence of base characters would otherwise be represented using mono-ruby. For example, the inline representation of the word <span class="charExample" translate="no"><span class="ex" lang="ja">東京</span> <span class="meaning">Tokyo</span></span>  should be displayed inline as <span class="charExample" translate="no"><span class="ex" lang="ja">東京（とうきょう）</span></span>, not <span class="charExample" translate="no"><span class="ex" lang="ja">東（とう）京（きょう）</span></span>.</p>
+<p>Inline annotations should normally correspond to full words, even if the sequence of base characters would otherwise be represented using mono-ruby. For example, the inline representation of the word <span class="charExample" translate="no"><span class="ex" lang="ja">東京</span> <span class="meaning">Tokyo</span></span>  should be displayed inline as <span class="charExample" translate="no"><span class="ex" lang="ja">東京（とうきょう）</span></span>and not <span class="charExample" translate="no"><span class="ex" lang="ja">東（とう）京（きょう）</span></span></p>
 </section>
 
 
@@ -1224,7 +1234,7 @@ alveolar</th>
 
 
 <details id="linebreak_details">
-<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<summary>Show legend <tt>ul,#Properties</tt></summary>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AI">AI (ambiguous, alphabetic or Ideograph)</a> line breaking behavior  depends on the context, and may reflect  different rules in East Asian and other contexts.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">B2 (break opportunity before and after)</a> the EM DASH  used to set off parenthetical text may allow line breaks before or after, but may also be affected by local orthographic rules.&nbsp;</p>
@@ -1261,7 +1271,7 @@ alveolar</th>
 
 <figure id="fig_distributed_spacing">
 <img src="images/distributed_spacing.png" alt="Distributed spacing example."/>
-<figcaption>Evenly distributed spaces across a line in a table. Source <a class="fnref" href="https://w3c.github.io/jlreq/#id25">j</a></figcaption>
+<figcaption>Evenly distributed spaces across a line in a table. Source <tt>j,#id25</tt></figcaption>
 </figure>
 
  <p class="instructions noprint">Use the control below to see how your browser justifies the text sample here.</p>
@@ -1673,7 +1683,7 @@ data-cols="">九阡␣八阡␣七阡␣六阡␣伍阡␣四阡␣参阡␣弐�
 
 <figure id="fig_headers_footers">
 <img src="images/headers_footers.png" alt=""/>
-<figcaption>Example of a page format in vertical writing mode. Source <a class="fnref" href="https://w3c.github.io/jlreq/#elements_of_page_formats">j</a>.</figcaption>
+<figcaption>Example of a page format in vertical writing mode. Source <tt>j,#id25</tt>href="https://w3c.github.io/jlreq/#elements_of_page_formats">j</a>.</figcaption>
 </figure>
 
 
@@ -1745,16 +1755,6 @@ data-cols="">九阡␣八阡␣七阡␣六阡␣伍阡␣四阡␣参阡␣弐�
 
 <section id="refs">
 <h2>References</h2>
-<ol>
-<li>[ <a class="fnref" href="https://w3c.github.io/jlreq/">j</a> ] <a href="https://w3c.github.io/jlreq/">Requirements for Japanese Text Layout 日本語組版処理の要件（日本語版）</a></li>
-<li>[ <a class="fnref" href="https://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">u</a> ] <a href="https://www.unicode.org/versions/Unicode11.0.0/ch18.pdf">The Unicode Standard</a>, pp 720-723</li>
-<li>[ <a class="fnref" href="http://scriptsource.org/scr/Jpan">s</a> ] Scriptsource, <a href="http://scriptsource.org/scr/Jpan">Japanese</a></li>
-<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Japanese_grammar">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Japanese_grammar"><cite>Japanese Grammar</cite></a>.</li>
-<!--li>[U] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch13.pdf">Tifinagh</a>, pp735-737.</li>
-<li>[D] Peter T. Daniels and William Bright, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN 0-19-507993-0, p115.</li>
-<li>[B] Wikipedia, <a href="https://en.wikipedia.org/wiki/Berber_Latin_alphabet"><cite>Berber Latin alphabet</cite></a>.</li>
-<li>[S] Scriptsource, <a href="http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Tfng"><cite>Tifinagh (Berber)</cite></a></li-->
-</ol>
 </section>
 
 
