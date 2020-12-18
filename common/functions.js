@@ -908,7 +908,9 @@ function setGeneralFont (fontname, size, language) {
 
 function runCharCount (type, location) { 
 	//if (document.getElementById(location) == null) return
-	var charlists = document.getElementById('index').querySelectorAll(type)
+	var charlists
+	if (document.getElementById('index')) charlists = document.getElementById('index').querySelectorAll(type)
+	else charlists = document.querySelectorAll(type)
 	var out = ''
 	charlistArray = []
 	for (let i=0;i<charlists.length;i++) {
