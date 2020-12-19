@@ -29,12 +29,14 @@
 <script src="/scripts/linkdata/linkdb.js"></script>
 <script src="../../app-charuse/langs.js"> </script>
 <script src="../common/egcode.js"></script>
+<script src="../common/references.js"></script>
+<script src="refs.js"></script>
 
 <script src="dv-examples.js"></script>
 <script src="dv-translit.js">  </script>
 </head>
 
-<body>
+<body class="useBlockExamples">
 <header>
 <div id="header-boilerplate"></div>
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
@@ -55,7 +57,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->23 November, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->19 December, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -63,31 +65,25 @@
 
 <div class="section">
   <p>This page gathers together basic information about the Thaana script and its use for the Maldivian language, Dhivehi. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Dhivehi using Unicode.</p>
-
-
-
-
-<p>See also the companion document, <a href="block" class="linkHighlight">Thaana character notes</a>, for detailed information about specific Unicode characters.</p>
 <p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
 
 
 
-<details>
+<p id="usage"></p>
+<script>addUsageAdvice('Thaana')</script>
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Thaana','Dhivehi'); return false;">More about using this page</a></summary>
+<div id="about"></div>
+</details>
+
+<details class="supportdocs noprint">
 <summary class="instructions"><a href="../links?iso=Thaa">Related pages</a>.</summary>
 </details>
 
-
-
-<details>
-<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
-</details>
-
-
-
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Thaana','Dhivehi'); return false;">About this page</a></summary>
-<div id="about"></div>
+<summary class="instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
 </details>
 </div>
 
@@ -116,13 +112,10 @@
 
 <section id="history">
 <h2>Usage &amp; history</h2>
-    <p>From <a href="http://scriptsource.org/scr/Thaa">Scriptsource</a>: </p>
-    <blockquote>The Thaana script is used for writing the Maldivian language, also known as Dhivehi, spoken by about 370,000 people in the Maldives and in Maldivian communities in India. The script is unique to this language. The language is also called Mahl, particularly on the island of Minicoy in the Indian territory of Lakshadweep. The Maldivian language has been written in its own script, it is thought, for over two millennia, when it was developed by Maldivian Buddhist monks translating the Buddhist scriptures.</blockquote>
-    <p>From <a href="http://en.wikipedia.org/wiki/Thaana">Wikipedia</a>:</p>
-<blockquote>
-<p>Thaana, Taana or Tāna ( ތާނަ‎ in Tāna script) is the present writing system of the Maldivian language spoken in the Maldives. ...</p>
-<p>The Thaana script first appeared in a Maldivian document towards the beginning of the 18th century in a crude initial form known as Gabulhi Thaana which was written scripta continua. This early script slowly developed, its characters slanting 45 degrees, becoming more graceful and spaces were added between words. As time went by it gradually replaced the older Dhives Akuru alphabet. The oldest written sample of the Thaana script is found in the island of Kanditheemu in Northern Miladhunmadulu Atoll. It is inscribed on the door posts of the main Hukuru Miskiy (Friday mosque) of the island and dates back to 1008 AH (AD 1599) and 1020 AH (AD 1611) when the roof of the building were built and the renewed during the reigns of Ibrahim Kalaafaan (Sultan Ibrahim III) and Hussain Faamuladeyri Kilege (Sultan Hussain II) respectively.</p>
-</blockquote>
+    <p>The Thaana script is used for writing the Maldivian language, also known as Dhivehi, spoken by about 370,000 people in the Maldives and in Maldivian communities in India.</p>
+<p><span class="charExample" translate="no"><span class="ex" lang="dv" dir="rtl">ތާނަ</span> <span class="trans">tə̄nə</span> <span class="ipa">təːnə</span> <span class="meaning">Thaana</span></span>It is thought that speakers of Dhivehi have written their language for over two thousand years, and that writing was developed by &nbsp;Maldivian Buddhist monks translating the Buddhist scriptures.</p>
+<p>Over time, the script evolved, slanting the letters by 45 degrees and adding spaces between words. The earliest known sample of the Thaana script (rather than the Dhives Akuru alphabet) is inscribed on the main Friday mosque of the island and dates back to AD 1599.</p>
+<p class="instructions">Sources: <a href="http://scriptsource.org/scr/Thaa">Scriptsource</a>, <a href="http://en.wikipedia.org/wiki/Thaana">Wikipedia</a>.</p>
 </section>
 
 
@@ -141,10 +134,14 @@
 
 <section id="type">
 <h2>Basic features</h2>
-    <p>Dhivehi is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#alphabet">alphabetic</a> <a class="termref" href="https://www.unicode.org/glossary/#abjad">abjad</a></span>. All vowels are written, but as diacritics above the consonants.   See the table to the right for a brief overview of features for the modern Dhivehi orthography using the Thaana script (See the <a href="../../scripts/featurelist/#key">key</a>. Character counts exclude ASCII characters.)</p>
-<p>Thaana text is written horizontally, right to left, but unlike Arabic or N'Ko, the text is not cursive. Multi-digit numbers are displayed left-to-right.</p>
-<p>A number of characters in the Thaana block are for writing sounds of Arabic or other languages, rather than to represent sounds native to Maldivian languages. Western numeric digits are used, and a mixture of Western and Arabic punctuation.</p>
-<p>Words are separated by spaces. </p>
+    <p>Dhivehi is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#alphabet">alphabetic</a> <a class="termref" href="https://www.unicode.org/glossary/#abjad">abjad</a></span>. All vowels are written, but as diacritics above the consonants.   See the table to the right for a brief overview of features for the modern Dhivehi orthography using the Thaana script.</p>
+<p>Thaana text is <mark>written horizontally, right to left</mark>, but unlike Arabic or N'Ko, the text is <mark>not cursive</mark>. Multi-digit numbers are displayed left-to-right.</p>
+<p>Words are <mark>separated by spaces</mark>.</p>
+<p>The script is <mark>monocameral</mark>.</p>
+<p>Dhivehi has <mark>24 basic consonant letters</mark>, but the repertoire also contains <mark>14 extra consonants</mark> to represent the sounds of Arabic and English.</p>
+<p>There are <mark>10 vowel letters</mark>, all of which are combining marks and which must be used. An additional mark is used to indicate consonant clusters, or absence of a vowel after a consonant base.</p>
+<p>Numbers use <mark>ASCII digits</mark>.</p>
+<p>The visual forms of letters don't usually interact. Punctuation mixes ASCII and Arabic characters.</p>
 </section>
 
 
@@ -152,28 +149,7 @@
 
 
 
-<section id="dir">
-<h2>Text direction</h2>
-    <p>Thaana script is written horizontally and right-to-left in the main, but as with most RTL scripts, numbers and embedded LTR script text are written left-to-right (producing 'bidirectional' text). </p>
-    <figure>
-    <p dir="rtl" lang="dv" class="large"><span  class="ex">7.2.2 ބައްތެލި</span></p>
-    <figcaption>The section number in this example is read LTR, ie 7.2.2, but the Thaana word following is RTL.</figcaption>
-    </figure>
-  </section>
-
-
-
-
-
-<section id="structure">
-<h2>Structure</h2>
-    <p>Native Maldivian words do not allow initial consonant clusters. The syllable structure is (C)V(C), ie. one vowel with the option of a consonant in the onset and/or coda. This affects the introduction of loanwords, such as <span class="ipa">is.kuːl</span> from English <span class="meaning">school</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Maldivian_phonology">wp</a></p>
-</section>
-
-
-
-
-  <div id="showTranscriptions">
+<div id="showTranscriptions">
 <div>Character lists show:</div>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
@@ -184,6 +160,81 @@
 <label>Maldivian 
 <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
 </div>
+
+
+
+
+<section id="index">
+<h2>Character index</h2>
+
+<p class="instructions">This section  lists non-ASCII characters used for Dhivehi, and  other characters in the Thaana script block not used to write Dhivehi. For descriptions of usage, click on ↓.</p>
+
+
+
+
+<section id="index_letters">
+<h3>Letters</h3>
+
+
+<section id="index_letters_consonants">
+<h4>Basic consonants</h4>
+<figure class="characterBox auto" data-cols="trans" data-links="#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants,#basicconsonants">ޕ␣ބ␣ތ␣ދ␣ޗ␣ޖ␣ޓ␣ޑ␣ކ␣ގ␣ފ␣ވ␣ސ␣ޒ␣ށ␣ހ␣މ␣ނ␣ޏ␣ރ␣ލ␣ޅ␣ޔ␣އ</figure>
+</section>
+
+<section id="index_letters_extended">
+<h4>Extended consonants</h4>
+<figure class="characterBox auto" data-cols="trans" data-links="#nukta,#nukta,#nukta">ޠ␣ޟ␣ޤ␣ޘ␣ޛ␣ޞ␣ޡ␣ޝ␣ޜ␣ޚ␣ޣ␣ޙ␣ޢ␣ޥ</figure>
+</section>
+
+<section id="index_letters_other">
+<h4>Other</h4>
+<figure class="characterBox auto"  data-cols="" data-links="#otherletters,#otherletters">ޕ</figure>
+</section>
+
+<section id="index_letters_unused">
+<h4>Not used for modern Dhivehi</h4>
+<figure class="archaicBox auto" data-cols="">ޱ</figure>
+</section>
+</section>
+
+
+
+<section id="index_cchars">
+<h3>Combining marks</h3>
+
+
+<section id="index_cchars_vowels">
+<h4>Vowels</h4>
+<figure class="characterBox auto" data-cols="trans" data-links="#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns">ި␣ީ␣ު␣ޫ␣ެ␣ޭ␣ަ␣ާ␣ޮ␣ޯ</figure>
+</section>
+
+<section id="index_cchars_other">
+<h4>Other</h4>
+<figure class="characterBox auto"  data-cols="" data-links="#nukta,#suppression,#nasalisation,#finals,#finals">ް</figure>
+</section>
+</section>
+
+
+
+
+  
+<section id="index_punctuation">
+<h3>Punctuation</h3>
+
+<figure class="characterBox auto" data-links="#phrase,#phrase,#abbrev,#quotations,#quotations,#quotations,#quotations,#abbrev" data-cols="">،␣؛</figure>
+</section>
+</section>
+
+
+
+
+
+
+
+<section id="structure">
+<h2>Structure</h2>
+    <p>Native Maldivian words do not allow initial consonant clusters. The syllable structure is (C)V(C), ie. one vowel with the option of a consonant in the onset and/or coda. This affects the introduction of loanwords, such as <span class="ipa">is.kuːl</span> from English <span class="meaning">school</span>.<tt>wp</tt></p>
+</section>
 
 
 
@@ -254,7 +305,7 @@
 
 </svg>
 </div>
-<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Maldivian_phonology">wp</a>. </p>
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<tt>wp</tt>. </p>
 </section>
 
 
@@ -275,7 +326,7 @@
 <section id="novowel">
 <h3>Vowel absence</h3>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ް</figure>
-    <p>The  diacritic <span class="codepoint"><span lang="dv" dir="rtl">&#x25CC;&#x07B0;</span> <a href="/scripts/thaana/block#char07B0">[<span class="uname">U+07B0 THAANA SUKUN​</span>]</a></span> indicates that there is no vowel following the consonant it sits on. This is always used, with one exception: when <span class="codepoint"><span lang="dv" dir="rtl">&#x0781;</span> <a href="/scripts/thaana/block#char0781">[<span class="uname">U+0781 THAANA LETTER SHAVIYANI</span>]</a></span> is written with no diacritic, this indicates prenasalization of a following stop, eg. <span class="eg" lang="dv" dir="ltr">ކަނޑު</span>. It is the only case where a letter can appear without a diacritic. </p>
+    <p>The  diacritic <span class="codepoint"><span lang="dv" dir="rtl">&#x25CC;&#x07B0;</span> <a href="/scripts/thaana/block#char07B0">[<span class="uname">U+07B0 THAANA SUKUN​</span>]</a></span> indicates that there is no vowel following the consonant it sits on. This is always used, with one exception: when <span class="codepoint"><span lang="dv" dir="rtl">&#x0781;</span> <a href="/scripts/thaana/block#char0781">[<span class="uname">U+0781 THAANA LETTER SHAVIYANI</span>]</a></span> is written with no diacritic, this indicates prenasalization of a following stop, eg. <span class="eg" lang="dv" dir="ltr">ކަނޑު</span> It is the only case where a letter can appear without a diacritic. </p>
 </section>
 
 
@@ -419,7 +470,7 @@ alveolar</th>
 </tbody>
 </table>
 
-<p style="font-size: 60%;text-align: end; line-height: 1;">Source<a class="fnref" href="https://en.wikipedia.org/wiki/Maldivian_phonology">wp</a>. Phones in a lighter colour are non-native or allophones.</p>
+<p style="font-size: 60%;text-align: end; line-height: 1;">Source<tt>wp</tt>. Phones in a lighter colour are non-native or allophones.</p>
 </section>
 
 
@@ -427,16 +478,34 @@ alveolar</th>
 
 
 
-  <section id="basic_consonants">
+<section id="basic_consonants">
 <h3>Basic consonants</h3>
 
-    <p>For writing the languages of the Maldives there are 24 consonants in this block.</p>
+<p>For writing the languages of the Maldives there are 24 consonants in this block.</p>
 
+<section id="stops">
+<h4>Stops</h4>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ޕ␣ބ␣ތ␣ދ␣ޗ␣ޖ␣ޓ␣ޑ␣ކ␣ގ</figure>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ފ␣ވ␣ސ␣ޒ␣ށ␣ހ</figure>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">މ␣ނ␣ޏ</figure>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ރ␣ލ␣ޅ␣ޔ␣އ</figure>
+</section>
 
+
+
+<section id="fricatives">
+<h4>Fricatives</h4>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ފ␣ވ␣ސ␣ޒ␣ށ␣ހ</figure>
+</section>
+
+
+<section id="nasals">
+<h4>Nasals</h4>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">މ␣ނ␣ޏ</figure>
+</section>
+
+
+<section id="liquids">
+<h4>Liquids</h4>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ރ␣ލ␣ޅ␣ޔ␣އ</figure>
+</section>
 </section>
     
     
@@ -457,38 +526,21 @@ alveolar</th>
 <figure class="otherBox auto" data-cols="ipa,trans,transc">ޱ</figure>
 
 </section>
-</section>
   
   
   
     
     
     
-  <section id="gemination">
-<h2>Consonant clusters</h2>
+<section id="gemination">
+<h3>Consonant clusters</h3>
 <p>The  diacritic <span class="codepoint"><span lang="dv" dir="rtl">&#x25CC;&#x07B0;</span> <a href="/scripts/thaana/block#char07B0">[<span class="uname">U+07B0 THAANA SUKUN</span>]</a></span> attached to a consonant signifies that it is not followed by a vowel.</p>
-    <p>The <span class="name">sukun</span> is also used over a few other characters to indicate gemination of the following consonant,  eg. <span class="eg" lang="dv" dir="rtl">ބައްޓެއް</span>, and <span class="eg" lang="dv" dir="rtl">އެންމެ</span>.</p>
-  </section>
-
-
-
-
-<section id="cchars">
-<h2>Combining characters</h2>
-<p>All the combining characters in the Unicode Thaana block are listed in the section <a class="secref">vowels</a>.</p>
+<p>The <span class="name">sukun</span> is also used over a few other characters to indicate gemination of the following consonant,  eg. <span class="eg" lang="dv" dir="rtl">ބައްޓެއް</span> <span class="eg" lang="dv" dir="rtl">އެންމެ</span>.</p>
+</section>
 </section>
 
 
 
-
-<section id="punctuation">
-<h2>Punctuation</h2>
-<p>Dhivehi punctuation uses a mixture of western and Arabic punctuation, the latter including these two in particular.</p>
-
-<figure class="characterBox auto" data-cols="trans">،␣؛</figure>
-
-<p>There are no punctuation characters (nor symbols) in the Unicode Thaana block.</p>
-</section>
 
 
 
@@ -498,6 +550,19 @@ alveolar</th>
     <p>Either european digits or arabic-indic digits are used.</p>
   </section>
 
+
+
+
+
+
+<section id="dir">
+<h2>Text direction</h2>
+<p>Thaana script is written horizontally and right-to-left in the main, but as with most RTL scripts, numbers and embedded LTR script text are written left-to-right (producing 'bidirectional' text). </p>
+<figure>
+<p dir="rtl" lang="dv" class="large"><span  class="ex">7.2.2 ބައްތެލި</span></p>
+<figcaption>The section number in this example is read LTR, ie 7.2.2, but the Thaana word following is RTL.</figcaption>
+</figure>
+</section>
 
 
 
@@ -567,6 +632,22 @@ alveolar</th>
   
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
+<table class="character_list">
+<tbody>
+<tr>
+<th scope="row">phrase</th>
+<td><p><span class="codepoint" translate="no"><span lang="dv" dir="rtl">&#x060C;</span> [<a href="/scripts/thaana/block#char060C"><span class="uname">U+060C ARABIC COMMA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="dv" dir="rtl">&#x061B;</span> [<a href="/scripts/thaana/block#char061B"><span class="uname">U+061B ARABIC SEMICOLON</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="dv">&#x003A;</span> [<a href="/scripts/devanagari/block#char003A"><span class="uname">U+003A COLON</span></a>]</span></p></td>
+</tr>
+<tr>
+<th scope="row">sentence</th>
+<td><p><span class="codepoint" translate="no"><span lang="dv">&#x002E;</span> [<a href="/scripts/devanagari/block#char002E"><span class="uname">U+002E FULL STOP</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="dv">&#x003F;</span> [<a href="/scripts/devanagari/block#char003F"><span class="uname">U+003F QUESTION MARK</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="dv">&#x0021;</span> [<a href="/scripts/devanagari/block#char0021"><span class="uname">U+0021 EXCLAMATION MARK</span></a>]</span></p></td>
+</tr>
+</tbody>
+</table>
 <p>Dhivehi punctuation uses a mixture of western and Arabic punctuation. The latter includes, in particular, <span class="codepoint" translate="no"><span lang="dv" dir="rtl">&#x060C;</span> [<a href="/scripts/thaana/block#char060C"><span class="uname">U+060C ARABIC COMMA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="dv" dir="rtl">&#x061B;</span> [<a href="/scripts/thaana/block#char061B"><span class="uname">U+061B ARABIC SEMICOLON</span></a>]</span>.</p>
 <p>In the  sample text at the top of the page Arabic commas and ASCII full stops are mixed together.</p>
 <figure>
@@ -581,7 +662,22 @@ alveolar</th>
 
 <section id="bracketing">
 <h3>Parentheses &amp; brackets</h3>
-<p class="prompts">tbd</p>
+<table class="character_list">
+<thead>
+<tr>
+<th>&nbsp;</th>
+<th>start</th>
+<th>end</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>standard</th>
+<td><p><span class="codepoint" translate="no"><span lang="dv">&#x0028;</span> [<a href="/scripts/devanagari/block#char0028"><span class="uname">U+0028 LEFT PARENTHESIS</span></a>]</span></p></td>
+<td><p><span class="codepoint" translate="no"><span lang="dv">&#x0029;</span> [<a href="/scripts/devanagari/block#char0029"><span class="uname">U+0029 RIGHT PARENTHESIS</span></a>]</span></p></td>
+</tr>
+</tbody>
+</table>
 </section>
 
 
@@ -672,7 +768,7 @@ alveolar</th>
 
 
 <details id="linebreak_details">
-<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<summary>Show legend <tt>ul,#Properties</tt></summary>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#EX">EX (exclamation mark/interrogation)</a> behave like closing characters, except in relation to postfix (PO) and non-starter characters (NS).</p>
@@ -687,15 +783,9 @@ alveolar</th>
 
 
 
- <section id="justification">
+<section id="justification">
 <h3>Text alignment &amp; justification</h3>
-    <p class="prompts">tbd</p>
-    <p><span class="ednote">I'm not sure how justification works, but assume it is like in English.</span></p>
-    <p class="instructions">Use the control below to see how your browser justifies the text sample here.</p>
-    <p dir="rtl" lang="dv" id="justificationExample" style="text-align:start;">ހުރިހާ އިންސާނުންވެސް ދުނިޔެއަށް އުފަންވަނީ، މިނިވަންކަމުގައި، ހަމަހަމަ ޙައްޤުތަކަކާއެކު، ހަމަހަމަ ދަރަޖައެއްގައި ކަމޭހިތެވިގެންވާ ބައެއްގެ ގޮތުގައެވެ.  ހެޔޮ ވިސްނުމާއި، ހެޔޮބުއްދީގެ ބާރު އެމީހުންނަށް ލިބިގެންވެއެވެ.</p>
-    <p class="english" dir="ltr">
-      <button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Justify   </button>
-    </p>
+<p class="prompts">tbd</p>
 </section>
 
 
@@ -872,13 +962,6 @@ alveolar</th>
 
 <section id="refs">
 <h2>References</h2>
-<ol>
-<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN
-				0-19-507993-0</li>
-<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode6.0.0/ch11.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode6.0.0/ch11.pdf">The Unicode Standard v10.0</a>, pp511-512</li>
-<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Thaana">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Thaana">Thaana</a></li>
-<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Maldivian_phonology">wp</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Maldivian_phonology">Thaana phonology</a></li>
-</ol>
 </section>
 
 
