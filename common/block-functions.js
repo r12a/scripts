@@ -783,6 +783,7 @@ function addBasics (lang, dir) {
 function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
 
 	var missing = ''
+	var missingDetails = ''
 	var noteList = document.querySelectorAll('.notes')
 	console.log('noteList length',noteList.length)
 	parseSpreadsheet(spreadsheet)
@@ -821,8 +822,9 @@ function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
 
 			out += '</p>'
 		
-			if (typeof charDetails[cchar] === 'undefined') console.log('ERROR: charDetails[cchar] is undefined.','cchar:',cchar)
-			if (charDetails[cchar].trim() !== '') out += charDetails[cchar]
+			// if a character is in the spreadsheet, but not in the xx-details file, add it to the missingDetails list
+			if (typeof charDetails[cchar] === 'undefined') missingDetails += ' '+cchar
+			else if (charDetails[cchar].trim() !== '') out += charDetails[cchar]
 
 			// vowel correspondences
 			if (cols.ivowel>0 && spreadsheetRows[cchar][cols.ivowel]) {
@@ -863,7 +865,8 @@ function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
 
 		else missing += ' '+cchar
 		}
-	console.log('Characters not in spreadsheet for '+lang+': ',missing)
+	console.log('Characters in block file but not in spreadsheet for '+lang+': ',missing)
+	console.log('Spreadsheet characters not in xx-details for '+lang+': ',missingDetails)
 	}
 
 
