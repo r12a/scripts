@@ -29,10 +29,13 @@
 <script src="../../app-charuse/langscjk.js"> </script>
 <script>langs=langscjk; langscjk={}</script>
 <script src="../common/egcode.js"></script>
+<script src="../common/references.js"></script>
+<script src="refs.js"></script>
+
 <script src="ko-examples.js"></script>
 </head>
 
-<body>
+<body class="useBlockExamples">
 <header>
 <div id="header-boilerplate"></div>
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
@@ -53,34 +56,33 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->29 September, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->18 December, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
 
 
 <section>
-<p>This page gathers together basic information about the Hangul script and its use for the Korean language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Korean using Unicode.</p>
+<p>This page gathers  basic information about the Hangul script and its use for the Korean language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Korean using Unicode.</p>
 <p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
 
 
 
-<details>
+<p id="usage"></p>
+<!--script>addUsageAdvice('Korean')</script-->
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Korean','Korean'); return false;">More about using this page</a></summary>
+<div id="about"></div>
+</details>
+
+<details class="supportdocs noprint">
 <summary class="instructions"><a href="../links?iso=Hang">Related pages</a>.</summary>
 </details>
 
-
-
-<details>
-<summary class="supportdocs instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
-</details>
-
-
-
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Korean','Korean'); return false;">About this page</a></summary>
-<div id="about"></div>
+<summary class="instructions"><a href="../#scriptnotes">Other script summaries</a>.</summary>
 </details>
 </section>
 
@@ -131,39 +133,12 @@ It is the official writing system of South Korea and North Korea. It is a co-off
 
 <section id="type">
 <h2>Basic features</h2>
-<p>Hangul is a <span class="newterm">featural syllabary</span> used  to write Korean.  See the table to the right for a brief overview of features for the modern Hangul orthography.
-(See the <a href="../../scripts/featurelist/#key">key</a>. Character counts exclude ASCII characters.)</p>
+<p>Hangul is a <span class="newterm">featural syllabary</span> used  to write Korean.  See the table to the right for a brief overview of features for the modern Hangul orthography.</p>
 <p>The term Hangul  is used more frequently in South Korea, whereas a basically synonymous term  Choseongul  is preferred in North Korea. A politically neutral term,  Jeongum, may also be used.<sup>2</sup></p>
 <p>Each Hangul syllabic glyph is composed of easily distinguishable phonetic components (called jamos), grouped into a square. </p>
 <p>It is also possible to find <a href="han">Han</a> characters (referred to as hanja) in South Korean text, but if used they are very infrequent. They are not considered here.</p>
     <p>Text can be written horizontally or vertically. The visual forms of characters don't interact. Spaces are used to separate words, but lines tend to be broken in the middle of a word, with no hyphenation.</p>
 </section>
-
-
-
-
-
-
-<section id="dir">
-<h2>Text direction</h2>
-    <p>Korean can be set both horizontally and vertically, although vertical Korean is much less common than vertical Japanese, and is increasingly uncommon in modern Korean text. </p>
-<p>Horizontal lines are read left-to-right. Vertical lines are read top-to-bottom, and progress from right to left across the page.</p>
-<p>Sometimes, short runs of numbers or Latin letters run horizontally within a vertical line. This is called 'tate chu yoko' in Japanese, and the horizontal text can typically be two to four characters in length, but is expected to fit within the line width.</p>
-<figure> <img src="images/tate-chu-yoko.png" alt=""/>
-<figcaption>Horizontal runs of number pairs within a vertical line.</figcaption>
-</figure>
-<p>Text columns in vertically set text run from right to left, rather than top to bottom. The first column is nearest the top of the page.</p>
- <figure> <img src="images/columns.png" alt=""/>
-<figcaption>Horizontal columns in vertically set text.</figcaption>
-</figure>
-   <p class="instructions noprint">If your browser supports vertical text, you can change the direction of the text sample here. Note, however, that it doesn't automatically convert the ASCII punctuation to fullwidth punctuation, as you would expect.</p>
-     <p class="english noprint" dir="ltr">
-      <button type="button" id="verticalButton" onclick="toggleDirection(document.getElementById('verticalTextExample'), this)"> Set vertically </button>
-    </p>
-   <div class="noprint" style="display:flex; max-height:20em;">
-     <p class="set_horizontal" lang="ko" id="verticalTextExample" style="text-align:start;">모든 사람은 법 앞에 평등하며 어떠한 차별도 없이 법의 동등한 보호를 받을 권리를 가진다. 모든 사람은 이 선언에 위반되는 어떠한 차별과 그러한 차별의 선동으로부터 동등한 보호를 받을 권리를 가진다.</p>
-   </div>
-  </section>
   
   
   
@@ -267,7 +242,7 @@ It is the official writing system of South Korea and North Korea. It is a co-off
 
 <section id="diphthongs">
 <h4>Diphthongs</h4>
-<p>There are numerous glides that start with <span class="ipa">j</span> or <span class="ipa">w</span>.<a class="fnref" href="https://en.wikipedia.org/wiki/Korean_phonology">wp</a></p>
+<p>There are numerous glides that start with <span class="ipa">j</span> or <span class="ipa">w</span>.<tt>wp</tt></p>
 
 
 <div style="margin-left: 7.5%;">
@@ -576,7 +551,7 @@ Johab
 
 <section id="symbols">
 <h2>Symbols</h2>
-    <p>Korean Spelling<sup>6</sup> recommends the use of <span class="codepoint"><span lang="ko">&#x25CB;</span> [<span class="uname">U+25CB WHITE CIRCLE</span>]</span> and <span class="codepoint"><span lang="ko">&#x00D7;</span> [<span class="uname">U+00D7 MULTIPLICATION SIGN</span>]</span> to replace characters in text that should be hidden, eg. <span class="charExample"><span class="ex" lang="ko">양구에 있는 ○○ 사단 병력 ○○○ 명을 파견했다.</span> <span class="meaning">We dispatched &hellip; troops of the &hellip; division in Yanggu.</span></span> or <span class="charExample"><span class="ex" lang="ko">담당 판사는 최×× 군에게 집행 유예를 선고하였다.</span> <span class="meaning">The judge gave Choi &hellip; probation.</span></span></p>
+    <p>Korean Spelling<tt>h</tt> recommends the use of <span class="codepoint"><span lang="ko">&#x25CB;</span> [<span class="uname">U+25CB WHITE CIRCLE</span>]</span> and <span class="codepoint"><span lang="ko">&#x00D7;</span> [<span class="uname">U+00D7 MULTIPLICATION SIGN</span>]</span> to replace characters in text that should be hidden, eg. <span class="charExample"><span class="ex" lang="ko">양구에 있는 ○○ 사단 병력 ○○○ 명을 파견했다.</span> <span class="meaning">We dispatched &hellip; troops of the &hellip; division in Yanggu.</span></span> or <span class="charExample"><span class="ex" lang="ko">담당 판사는 최×× 군에게 집행 유예를 선고하였다.</span> <span class="meaning">The judge gave Choi &hellip; probation.</span></span></p>
 <p>When characters being transcribed cannot be read, it recommends representing them using <span class="charExample"><span class="ex" lang="ko">훈민정음의 초성 중에서 아음(牙音)은 □□□의 석 자다.</span> <span class="meaning">Among the primitive characters of Hunminjeongeum is the stone of &hellip;.</span></span></p>
 </section>
 
@@ -592,7 +567,7 @@ Johab
 <figure class="characterBox auto" data-cols="">０␣１␣２␣３␣４␣５␣６␣７␣８␣９</figure>
 
 <p>It also uses <span class="codepoint"><span lang="ko">&#x0025;</span> [<span class="uname">U+0025 PERCENT SIGN</span>]</span> and <span class="codepoint"><span lang="ko">&#x2103;</span> [<span class="uname">U+2103 DEGREE CELSIUS</span>]</span>.</p>
-<p>It is common to use <span class="codepoint"><span lang="ko">&#x007E;</span> [<span class="uname">U+007E TILDE</span>]</span> to indicate a range, distance or period, although a hyphen can also be used, eg. <span class="charExample"><span class="ex" lang="ko">김정희(1786~1856)</span> <span class="meaning">Kim Jung Hee (1786-1856)</span></span>.</p>
+<p>It is common to use <span class="codepoint"><span lang="ko">&#x007E;</span> [<span class="uname">U+007E TILDE</span>]</span> to indicate a range, distance or period, although a hyphen can also be used, eg. <span class="charExample"><span class="ex" lang="ko">김정희(1786~1856)</span> <span class="meaning">Kim Jung Hee (1786-1856)</span></span></p>
 
 
 
@@ -602,6 +577,32 @@ Johab
     <p>The date 22 July 2018 can be written <span class="ex" lang="ko">2018년 7월 22일</span>. It can also be written as a numeric date, <span class="ex" lang="ko">2018. 7. 22.</span> – note the spaces following the periods in the latter example.</p>
 </section>
 </section>
+
+
+
+
+
+
+<section id="dir">
+<h2>Text direction</h2>
+    <p>Korean can be set both horizontally and vertically, although vertical Korean is much less common than vertical Japanese, and is increasingly uncommon in modern Korean text. </p>
+<p>Horizontal lines are read left-to-right. Vertical lines are read top-to-bottom, and progress from right to left across the page.</p>
+<p>Sometimes, short runs of numbers or Latin letters run horizontally within a vertical line. This is called 'tate chu yoko' in Japanese, and the horizontal text can typically be two to four characters in length, but is expected to fit within the line width.</p>
+<figure> <img src="images/tate-chu-yoko.png" alt=""/>
+<figcaption>Horizontal runs of number pairs within a vertical line.</figcaption>
+</figure>
+<p>Text columns in vertically set text run from right to left, rather than top to bottom. The first column is nearest the top of the page.</p>
+ <figure> <img src="images/columns.png" alt=""/>
+<figcaption>Horizontal columns in vertically set text.</figcaption>
+</figure>
+   <p class="instructions noprint">If your browser supports vertical text, you can change the direction of the text sample here. Note, however, that it doesn't automatically convert the ASCII punctuation to fullwidth punctuation, as you would expect.</p>
+     <p class="english noprint" dir="ltr">
+      <button type="button" id="verticalButton" onclick="toggleDirection(document.getElementById('verticalTextExample'), this)"> Set vertically </button>
+    </p>
+   <div class="noprint" style="display:flex; max-height:20em;">
+     <p class="set_horizontal" lang="ko" id="verticalTextExample" style="text-align:start;">모든 사람은 법 앞에 평등하며 어떠한 차별도 없이 법의 동등한 보호를 받을 권리를 가진다. 모든 사람은 이 선언에 위반되는 어떠한 차별과 그러한 차별의 선동으로부터 동등한 보호를 받을 권리를 가진다.</p>
+   </div>
+  </section>
 
 
 
@@ -781,20 +782,14 @@ Johab
 </tbody>
 </table>
 
-<p><span class="codepoint"><span lang="ko">&#x318D;</span> [<span class="uname">U+318D HANGUL LETTER ARAEA</span>]</span> is apparently used to link items in a list or in contraposition, eg. <span class="charExample"><span class="ex" lang="ko">빨강ㆍ초록ㆍ파랑이 빛의 삼원색이다.</span> <span class="meaning">Red, green, and blue are the three primary colours of light, or <span class="charExample"><span class="ex" lang="ko">한(韓)ㆍ이(伊) 양국 간의 무역량이 늘고 있다.</span> <span class="meaning">The trade volume between Korea and the United States is increasing.</span></span><sup>6</sup> This is a fullwidth glyph.</span></span> It can, however, also be replace with a space.</p>
+<p><span class="codepoint"><span lang="ko">&#x318D;</span> [<span class="uname">U+318D HANGUL LETTER ARAEA</span>]</span> is a fullwidth glyph used to link items in a list or in contraposition,<tt>h</tt> eg. <span class="charExample"><span class="ex" lang="ko">한(韓)ㆍ이(伊) 양국 간의 무역량이 늘고 있다.</span> <span class="meaning">The trade volume between Korea and the United States is increasing.</span></span> or <span class="charExample"><span class="ex" lang="ko">빨강ㆍ초록ㆍ파랑이 빛의 삼원색이다.</span> <span class="meaning">Red, green, and blue are the three primary colours of light.</span></span>It can, however, also be replaced with a space.</p>
 
 
 
 
 <p id="hyphens"><span class="leadin">Hyphens.</span>In addition to <span class="codepoint"><span lang="ko">&#x002D;</span> [<span class="uname">U+002D HYPHEN-MINUS</span>]</span>, the following characters are used as hyphens.</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'ko')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="ko">‐</span></div>
-<div class="listPair"><span class="listItem" lang="ko">—</span></div>
-<div class="listPair"><span class="listItem" lang="ko">〜</span></div>
-</div>
-</figure>
+
+<figure class="characterBox auto" data-cols="">‐␣—␣〜</figure>
 </section>
 
 
@@ -805,7 +800,7 @@ Johab
 <p>The same brackets and parentheses are used in horizontal and vertical text, although they are rotated 90 degrees to the right in vertical text.</p>
 <figure class="characterBox auto" data-cols="">(␣{␣[␣〔␣〕␣]␣}␣)</figure>
 
-<p><span class="codepoint"><span lang="ko">&#x3014;</span> [<span class="uname">U+3014 LEFT TORTOISE SHELL BRACKET</span>]</span> and &nbsp;<span class="codepoint"><span lang="ko">&#x005B;</span> [<span class="uname">U+005B LEFT SQUARE BRACKET</span>]</span> are described in Hangul Spelling<sup>6</sup> as equivalent, but both are rendered as different-looking and non-fullwidth glyphs. The font used on my system (Mac OS X) makes one fullwidth and one not, but uses the same glyph shape for both.</p>
+<p><span class="codepoint"><span lang="ko">&#x3014;</span> [<span class="uname">U+3014 LEFT TORTOISE SHELL BRACKET</span>]</span> and &nbsp;<span class="codepoint"><span lang="ko">&#x005B;</span> [<span class="uname">U+005B LEFT SQUARE BRACKET</span>]</span> are described in Hangul Spelling<tt>h</tt> as equivalent, but both are rendered as different-looking and non-fullwidth glyphs. The font used on my system (Mac OS X) makes one fullwidth and one not, but uses the same glyph shape for both.</p>
 </section>
 
 
@@ -815,27 +810,15 @@ Johab
 <section id="quotations">
 <h3>Quotations</h3>
 <p>The characters used to delimit quotations also depend on the orientation of the text. Horizontal text normally uses:</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'ko')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="ko">‘</span></div>
-<div class="listPair"><span class="listItem" lang="ko">’</span></div>
-<div class="listPair"><span class="listItem" lang="ko">“</span></div>
-<div class="listPair"><span class="listItem" lang="ko">”</span></div>
-</div>
-</figure>
+
+<figure class="characterBox auto" data-cols="">‘␣’␣“␣”</figure>
+
 <p>Vertical text generally uses:</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'ko')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="ko">「</span></div>
-<div class="listPair"><span class="listItem" lang="ko">」</span></div>
-<div class="listPair"><span class="listItem" lang="ko">『</span></div>
-<div class="listPair"><span class="listItem" lang="ko">』</span></div>
-</div>
-</figure>
+
+<figure class="characterBox auto" data-cols="">「␣」␣『␣』</figure>
+
 <p>In the following example it appears to be significant that there is no space following the closing quote mark: <span class="charExample"><span class="ex" lang="ko">사회자가 “이쪽부터 차례로 자기소개를 합시다.”라고 말했다.</span> <span class="meaning">The moderator said, "Let's take turns to introduce ourselves".</span></span></p>
-<p>Quoted text within quoted text appears to start with double quotes first, then single, eg. <span class="charExample"><span class="ex" lang="ko">그때 누군가가 큰 소리로 말했다. “침착해야 합니다! ‘하늘이 무너져도 솟아날 구멍이 있다.’라고 하지 않습니까?”</span></span>.<sup>6</sup></p>
+<p>Quoted text within quoted text appears to start with double quotes first, then single,<tt>h</tt> eg. <span class="charExample"><span class="ex" lang="ko">그때 누군가가 큰 소리로 말했다. “침착해야 합니다! ‘하늘이 무너져도 솟아날 구멍이 있다.’라고 하지 않습니까?”</span></span>.</p>
 </section>
 
 
@@ -844,7 +827,7 @@ Johab
 
 <section>
 <h3>Emphasis</h3>
-<p> Emphasis can be expressed using special marks alongside a character. Modern text typically places a dot above each syllable in horizontal text, or to the right of the syllable in vertical text. An infrequently used alternative is a small open circle.<a class="fnref" href="https://www.korean.go.kr/front/page/pageView.do?page_id=P000209&mn_id=30">6</a></p>
+<p> Emphasis can be expressed using special marks alongside a character. Modern text typically places a dot above each syllable in horizontal text, or to the right of the syllable in vertical text. An infrequently used alternative is a small open circle.<tt>h</tt></p>
    <figure>
   <img src="images/korean-emphasis-modern.png" alt="Picture of various emphasis symbols."/>
   <figcaption>Typical emphasis marks in modern Korean text.</figcaption>
@@ -865,15 +848,10 @@ Johab
 <section id="abbrev">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
 <p><span class="leadin">Ellipsis.</span> The following characters are used to indicate continuation.</p>
-<figure>
-<div class="listAll" onClick="listAll(this, 'ko')">list all</div>
-<div class="listArray">
-<div class="listPair"><span class="listItem" lang="ko">—</span></div>
-<div class="listPair"><span class="listItem" lang="ko">…</span></div>
-<div class="listPair"><span class="listItem" lang="ko">‥</span></div>
-</div>
-</figure>
-<p>Ellipsis in Korean usually uses 6 dots. This is typically achieved using a pair of <span class="codepoint"><span lang="ko">&#x2026;</span> [<span class="uname">U+2026 HORIZONTAL ELLIPSIS</span>]</span> characters together, which may put the dots at the vertical centre of the character space, eg. <span class="charExample"><span class="ex" lang="ko">그는 최선을 다했다. 그러나 성공할지는…… .</span> <span class="meaning">He did his best. But if he succeeds...</span></span>. Note that the Korean text also has a sentence-final period, preceded by a space. (It is also possible to use 6 full stops, in which case the dots will be near the bottom of the character space.)<sup>6</sup></p>
+
+<figure class="characterBox auto" data-cols="">—␣…␣‥</figure>
+
+<p>Ellipsis in Korean usually uses 6 dots. This is typically achieved using a pair of <span class="codepoint"><span lang="ko">&#x2026;</span> [<span class="uname">U+2026 HORIZONTAL ELLIPSIS</span>]</span> characters together, which may put the dots at the vertical centre of the character space, eg. <span class="charExample"><span class="ex" lang="ko">그는 최선을 다했다. 그러나 성공할지는…… .</span> <span class="meaning">He did his best. But if he succeeds...</span></span>Note that the Korean text also has a sentence-final period, preceded by a space. (It is also possible to use 6 full stops, in which case the dots will be near the bottom of the character space.)<tt>h</tt></p>
 <p>There is also a double dot character, but it isn't as widely used as the triple dot.</p>
 
 
@@ -913,8 +891,8 @@ Johab
 <figure class="characterBox auto" data-cols="">「␣」␣〈␣〉␣'␣</figure>
 
 <p>The fullwidth characters used for titles in horizontal text are often not available from keyboards.</p>
-<p>Hangul Spelling<sup>6</sup> also describes the use of <span class="codepoint"><span lang="ko">&#x2015;</span> [<span class="uname">U+2015 HORIZONTAL BAR</span>]</span> as a means to separate two-part titles. It can either precede or surround the second part of the title, eg. <span class="charExample"><span class="ex" lang="ko">올해의 권장 도서는 톨스토이의 『인생이란 무엇인가 ― 삶의 길 ―』이다.</span></span> or <span class="charExample"><span class="ex" lang="ko">올해의 권장 도서는 톨스토이의 『인생이란 무엇인가 ― 삶의 길』이다.</span></span> Note that it is surrounded by spaces.</p>
-<p id="textdecor"><span class="leadin">Text decoration.</span>Underlines appear below horizontally set text, and to the right of vertically set text.<a class="fnref" href="https://www.korean.go.kr/front/page/pageView.do?page_id=P000209&mn_id=30">6</a> </p>
+<p>Hangul Spelling<tt>h</tt> also describes the use of <span class="codepoint"><span lang="ko">&#x2015;</span> [<span class="uname">U+2015 HORIZONTAL BAR</span>]</span> as a means to separate two-part titles. It can either precede or surround the second part of the title, eg. <span class="charExample"><span class="ex" lang="ko">올해의 권장 도서는 톨스토이의 『인생이란 무엇인가 ― 삶의 길 ―』이다.</span></span> or <span class="charExample"><span class="ex" lang="ko">올해의 권장 도서는 톨스토이의 『인생이란 무엇인가 ― 삶의 길』이다.</span></span> Note that it is surrounded by spaces.</p>
+<p id="textdecor"><span class="leadin">Text decoration.</span>Underlines appear below horizontally set text, and to the right of vertically set text.<tt>h</tt> </p>
 <figure> 
 <p class="large" lang="ko">지금 필요한 것은 <span class="ex" style="text-decoration:underline;">지식</span>이 아니라 <span class="ex" style="text-decoration:underline;">실천</span>입니다.</p>
 <figcaption>Underline in horizontal Korean text. (The underline should appear slightly further away from the syllable than shown.)</figcaption>
@@ -950,7 +928,7 @@ Johab
  <section id="wrap">
 <h3>Line breaking &amp; hyphenation</h3>
 <p>Korean can be wrapped on a word-by-word basis, but it is more common in modern Korean to simply wrap at syllable boundaries. It's a question of preference. This includes embedded Latin script text.</p>
-<p>Line breaking has to also take into account line-breaking rules (<span class="trans">geumchik</span>) which dictate what characters cannot appear at the end or start of a line. Although lines are typically broken after the character that reaches the end of the line, certain characters, such as <span class="charExample"><span class="ex" lang="ko">」</span></span>, should not appear at the start of a line, and others, such as <span class="charExample"><span class="ex" lang="ko">「</span></span>, should not appear at the end. Some character pairs, such as <span class="charExample"><span class="ex" lang="ko">……</span></span> or numbers, should not be broken either. For more information, see [<a href="http://w3c.github.io/klreq/#line-head-rest">klreq</a>].</p>
+<p>Line breaking has to also take into account line-breaking rules (<span class="trans">geumchik</span>) which dictate what characters cannot appear at the end or start of a line. Although lines are typically broken after the character that reaches the end of the line, certain characters, such as <span class="charExample inline"><span class="ex" lang="ko">」</span></span>, should not appear at the start of a line, and others, such as <span class="charExample inline"><span class="ex" lang="ko">「</span></span>, should not appear at the end. Some character pairs, such as <span class="charExample inline"><span class="ex" lang="ko">……</span></span> or numbers, should not be broken either. For more information, see [<a href="http://w3c.github.io/klreq/#line-head-rest">klreq</a>].</p>
     <p class="instructions noprint">To test how your browser wraps Korean text, change the width of the browser window and watch how the  sample text behaves.</p>
 <p dir="ltr" lang="ko" id="justificationExample2" class="noprint" style="text-align:start;">모든 사람은 법 앞에 평등하며 어떠한 차별도 없이 법의 동등한 보호를 받을 권리를 가진다. 모든 사람은 이 선언에 위반되는 어떠한 차별과 그러한 차별의 선동으로부터 동등한 보호를 받을 권리를 가진다.</p>
 
@@ -993,7 +971,7 @@ Johab
 
 
 <details id="linebreak_details">
-<summary>Show legend <a class="fnref" href="https://www.unicode.org/reports/tr14/tr14-39.html#Properties">u</a></summary>
+<summary>Show legend <tt>ul,#Properties</tt></summary>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AI">AI (ambiguous, alphabetic or Ideograph)</a> line breaking behavior  depends on the context, and may reflect  different rules in East Asian and other contexts.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
 <p><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">B2 (break opportunity before and after)</a> the EM DASH  used to set off parenthetical text may allow line breaks before or after, but may also be affected by local orthographic rules.&nbsp;</p>
@@ -1548,14 +1526,6 @@ data-cols="">九仟␣八仟␣七仟␣六仟␣五仟␣四仟␣參仟␣貳�
 
 <section id="refs">
 <h2>References</h2>
-  <ol>
-    <li>[ <a class="fnref" href="https://github.com/w3c/klreq/issues/20#issuecomment-337832245">g20</a> ] <a href="https://github.com/w3c/klreq/issues/20#issuecomment-337832245">Github issue comments</a> by Jihye Hong</li>
-<li>[ <a class="fnref" href="https://github.com/w3c/klreq/issues/21">g21</a> ] <a href="https://github.com/w3c/klreq/issues/21">Github issue comments</a> by Shinjo Park</li>
-<li>[ <a class="fnref" href="https://www.korean.go.kr/front/page/pageView.do?page_id=P000209&mn_id=30">h</a> ] 한글 맞춤법, <a href="https://www.korean.go.kr/front/page/pageView.do?page_id=P000209&mn_id=30">한글 맞춤법[문화체육관광부고시 제2017-12호(2017. 3. 28.)] 바로 가기</a> (Hangul Spelling [Ministry of Culture, Sports and Tourism Notice No. 2017-12 (March 28, 2017)])</li>
-    <li>[ <a class="fnref" href="http://w3c.github.io/klreq/">k</a> ] 임순범 (Soon-Bum Lim) et al., <cite><a href="http://w3c.github.io/klreq/">Requirements for Hangul Text Layout and Typography : 한국어 텍스트 레이아웃 및 타이포그래피를 위한 요구사항</a></cite><!--[Daniels] Peter T. Daniels and William Bright, <span class="title"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN 0-19-507993-0, pp477-480--></li>
-    <li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch18.pdf">u</a> ] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch18.pdf">Hangul</a>, pp713-716.</li>
-    <li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Hangul">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Hangul">Hangul</a>.</li>
-</ol>
 </section>
 
 
