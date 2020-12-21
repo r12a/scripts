@@ -47,7 +47,7 @@ function createReferences () {
 	
 	// find out what references are pointed to from the document
 	tts = document.querySelectorAll('tt')
-	console.log('tts length',tts.length)
+	//console.log('tts length',tts.length)
 	ttsUsed = []
 	for (i=0;i<tts.length;i++) {
 		temp = tts[i].textContent.split(',')
