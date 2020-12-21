@@ -52,8 +52,8 @@ autoExpandExamples.jv = `
 ꦲꦩ꧀ꦧꦿꦤꦁ|turn fiery red|(ambranaŋ)
 ꦱꦩ꧀ꦥꦸꦤ꧀|already|(sampun)
 ꦏꦤ꧀ꦛꦶ|by|kanʈi
-ꦦꦑꦸꦨꦸꦮꦟ/Pakubuwana (name)
-ꦨꦶꦩ/Bima (name)
+ꦦꦑꦸꦨꦸꦮꦟ|Pakubuwana (name)
+ꦨꦶꦩ|Bima (name)
 
 
 
