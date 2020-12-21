@@ -555,12 +555,14 @@ however, this rule does not always hold.)</p>
 
 
 
-
 <section id="vowel_encoding">
 <h3>Encoding choices</h3>
-<p>Devanagari is a script where different sequences of Unicode characters may produce the same visual result. Here we look at those  related to vowels.</p>
+<p class="instructions">This section looks at  alternative  strategies  for  typing and storing vowel-signs and independent vowels used by Hindi, taking into consideration the effects of normalising the text using <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD), and <span class="termref" href="../glossary/#nfc"> Normalisation Form C</span> (NFC).</p>
 
-<p class="info">The single code points on the left should be used, rather than the sequences on the right, because they are not made the same by normalisation. Therefore the content will be regarded as different, which will affect searching and other operations on the text.</p>
+
+<section id="vowelsign_encoding">
+<h4>Vowel-signs</h4>
+<p class="info">The single code points on the left should be used, and not the sequences on the right, because they are not made the same by normalisation. Therefore the content will be regarded as different, which will affect searching and other operations on the text.</p>
 
 <table class="comparison">
 <thead>
@@ -572,17 +574,47 @@ however, this rule does not always hold.)</p>
 <tbody>
 <tr>
 <td><span class="codepoint" translate="no"><span lang="hi">&#x094B;</span> [<a href="/scripts/devanagari/block#char094B"><span class="uname">U+094B DEVANAGARI VOWEL SIGN O</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="hi">&#x093E;&#x0947;</span> [<a href="/scripts/devanagari/block#char093E"><span class="uname">U+093E DEVANAGARI VOWEL SIGN AA</span></a> + <a href="/scripts/devanagari/block#char0947"><span class="uname">U+0947 DEVANAGARI VOWEL SIGN E</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="hi">&#x093E;</span> + <span lang="hi">&#x0947;</span> [<a href="/scripts/devanagari/block#char093E"><span class="uname">U+093E DEVANAGARI VOWEL SIGN AA</span></a> + <a href="/scripts/devanagari/block#char0947"><span class="uname">U+0947 DEVANAGARI VOWEL SIGN E</span></a>]</span></td>
 </tr>
 <tr>
 <td><span class="codepoint" translate="no"><span lang="hi">&#x094C;</span> [<a href="/scripts/devanagari/block#char094C"><span class="uname">U+094C DEVANAGARI VOWEL SIGN AU</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="hi">&#x093E;&#x0948;</span> [<a href="/scripts/devanagari/block#char093E"><span class="uname">U+093E DEVANAGARI VOWEL SIGN AA</span></a> + <a href="/scripts/devanagari/block#char0948"><span class="uname">U+0948 DEVANAGARI VOWEL SIGN AI</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="hi">&#x093E;</span> + <span lang="hi">&#x0948;</span> [<a href="/scripts/devanagari/block#char093E"><span class="uname">U+093E DEVANAGARI VOWEL SIGN AA</span></a> + <a href="/scripts/devanagari/block#char0948"><span class="uname">U+0948 DEVANAGARI VOWEL SIGN AI</span></a>]</span></td>
 </tr>
 </tbody>
 </table>
-<p>A number of glyphs for independent vowels look as if they could also be composed using multiple code points, however, most fonts don't provide the necessary positioning rules to make the outcome look right.</p>
-<p class="info">The bottom line is that a single, precomposed code point should always be used for vowel-signs and independent vowels.</p>
 </section>
+</section>
+<section id="vowelsign_encoding2">
+<h4>Independent vowels</h4>
+<p class="info">Again, the single code points on the left should be used, and not the sequences on the right, because they are not made the same by normalisation.</p>
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Use</th>
+<th scope="col">Do not use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="hi">&#x0906;</span> [<a href="/scripts/devanagari/block#char0906"><span class="uname">U+0906 DEVANAGARI LETTER AA</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="hi">&#x0905;</span> + <span lang="hi">&#x093E;</span> [<a href="/scripts/devanagari/block#char0905"><span class="uname">U+0905 DEVANAGARI LETTER A</span></a> + <a href="/scripts/devanagari/block#char093E"><span class="uname">U+093E DEVANAGARI VOWEL SIGN AA</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="hi">&#x0913;</span> [<a href="/scripts/devanagari/block#char0913"><span class="uname">U+0913 DEVANAGARI LETTER O</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="hi">&#x0905;</span> + <span lang="hi">&#x094B;</span> [<a href="/scripts/devanagari/block#char0905"><span class="uname">U+0905 DEVANAGARI LETTER A</span></a> + <a href="/scripts/devanagari/block#char094B"><span class="uname">U+094B DEVANAGARI VOWEL SIGN O</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="hi">&#x0914;</span> [<a href="/scripts/devanagari/block#char0914"><span class="uname">U+0914 DEVANAGARI LETTER AU</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="hi">&#x0905;</span> + <span lang="hi">&#x094C;</span> [<a href="/scripts/devanagari/block#char0905"><span class="uname">U+0905 DEVANAGARI LETTER A</span></a> + <a href="/scripts/devanagari/block#char094C"><span class="uname">U+094C DEVANAGARI VOWEL SIGN AU</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="hi">&#x0910;</span> [<a href="/scripts/devanagari/block#char0910"><span class="uname">U+0910 DEVANAGARI LETTER AI</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="hi">&#x090F;</span> + <span lang="hi">&#x0947;</span> [<a href="/scripts/devanagari/block#char090F"><span class="uname">U+090F DEVANAGARI LETTER E</span></a> + <a href="/scripts/devanagari/block#char0947"><span class="uname">U+0947 DEVANAGARI VOWEL SIGN E</span></a>]</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+
 
 
 
