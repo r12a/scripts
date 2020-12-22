@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Vocab lister</title>
+<meta name="description" content="List examples." />
+<link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../../app-vocab/localstyle.css" />
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../app-vocab/drawVocab.js"></script>
+<script>var autoExpandExamples = {}</script>
+
+
+
+
+
+<!-- CHANGE THIS STUFF -->
+<script src="bo-examples.js"></script> 
+<script>
+var contents = autoExpandExamples.bo
+var _fontFamily = 'Noto Serif Tibetan'
+var _fontSize = '150%'
+var _direction = 'ltr'
+var _language = 'bo'
+</script>
+<!-- END -->
+
+
+
+
+<script src="../common/vocab_list.js"></script> 
+</head>
+
+<body class="app">
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_appHeader('../shared/images/world.gif','Vocab lister','v11');</script>
+</header>
+
+
+<div id="tabs">
+<h2 id="list_tab" onClick="switchTabTo(this.id)">List</h2>
+<h2 id="find_tab" onClick="switchTabTo(this.id)">Find</h2>
+</div> 
+
+
+<div id="list_tab_area">
+<table id="printout"></table>
+</div>
+ 
+
+<div id="find_tab_area">
+<p><label>Find words containing the following: <input id="needle" type="text" placeholder="Regular expressions can be used."  onInput="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')"></label> &nbsp;&nbsp;
+<button onClick="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')">Go</button>
+</p>
+<p><label>Items found: <span id="found"></span></label><br/><table id="foundItems"></table></p>
+</div>
+
+
+<div class="smallprint"><span id="version">
+Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a> 
+</span>
+</div>
+
+<script>initialise()</script>
+</body>
+</html>
