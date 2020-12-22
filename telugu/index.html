@@ -59,7 +59,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->17 December, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->22 December, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -119,7 +119,7 @@
   
 <section id="variants">
 <h3>Orthographic development &amp; variants</h3>
-<p>See <a class="secref">alternate_vowel_encodings</a> for possible variant encoding approaches to vowel-signs and independent vowels.</p>
+<p>See <a class="secref">vowel_encoding</a> for possible variant encoding approaches to vowel-signs and independent vowels.</p>
 </section>
 </section>
 
@@ -240,7 +240,7 @@
 
 <section id="index_cchars_other">
 <h4>Other</h4>
-<figure class="characterBox auto"  data-cols="" data-links="#absence #clusters,#alternate_vowel_encodings">్␣ౖ</figure>
+<figure class="characterBox auto"  data-cols="" data-links="#absence #clusters,#vowel_encoding">్␣ౖ</figure>
 </section>
 
 <section id="index_cchars_unused">
@@ -463,8 +463,11 @@
 <h3>Vowel-signs</h3>
 <p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
 
-<p>Non-inherent  vowel sounds that follow a consonant  are represented using <span class="name">vowel-signs</span>, eg. <span class="codepoint" translate="no"><span lang="te">&#x0C15;&#x0C3F;</span> [<a href="/scripts/telugu/block#char0C15"><span class="uname">U+0C15 TELUGU LETTER KA</span></a> + <a href="/scripts/telugu/block#char0C3F"><span class="uname">U+0C3F TELUGU VOWEL SIGN I</span></a>]</span> is pronounced <span class="ipa">ki</span>.</p>
-<p>Telugu vowel-signs are all combining characters, and in principle a single code point is used per vowel-sign (however, see <a class="secref">alternate_vowel_encodings</a>).  All vowel-signs are  stored after the base consonant, and the font puts them in the correct place for display. This also applies for the circumgraph, where a single code point produces glyphs on more than one side of the consonant base. There is no prescript vowel.</p>
+<p>Non-inherent  vowel sounds that follow a consonant  are represented using <span class="name">vowel-signs</span>, eg. <span class="codepoint" translate="no"><span lang="te">&#x0C15;&#x0C3F;</span> [<a href="/scripts/telugu/block#char0C15"><span class="uname">U+0C15 TELUGU LETTER KA</span></a> + <a href="/scripts/telugu/block#char0C3F"><span class="uname">U+0C3F TELUGU VOWEL SIGN I</span></a>]</span> is pronounced <span class="ipa">ki</span>. Telugu uses the following vowel-signs.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ి␣ీ␣ు␣ూ␣ె␣ే␣ొ␣ో␣ా␣ ␣ై␣ౌ</figure>
+
+<p>Telugu vowel-signs are all combining characters, and in principle a single code point is used per vowel-sign (however, see <a class="secref">vowel_encoding</a>).  All vowel-signs are  stored after the base consonant, and the font puts them in the correct place for display. This also applies for the circumgraph, where a single code point produces glyphs on more than one side of the consonant base. There is no prescript vowel.</p>
 <p>Most vowel-signs interact typographically with their base consonant, replacing the check mark above the base. A few also produce slightly different joined shapes. See <a class="secref">gsub</a>.</p>
 <p>Two vowel-signs are <em>spacing</em> marks, meaning that they consume horizontal space when added to a base consonant.</p>
 <p>When a vowel is pronounced after a conjunct, the vowel-sign is attached to the first consonant in the cluster, even where the vowel-sign pushes the two consonant glyphs apart (see <a class="figref">fig_vowel_position</a>).</p>
@@ -476,14 +479,14 @@
 
 <p class="info">The text is still entered following the spoken order: it is incorrect to type the vowel-sign after the first consonant. (Click on the image in <a class="figref">fig_vowel_position</a> to see the composite code points, arranged in order of storage.)</p>
 <p>See also <a class="sectionref">vocalics</a>.</p>
-
+</section>
 
 
 
 
 
 <section id="circumgraphs">
-<h4>Circumgraph</h4>
+<h3>Circumgraph</h3>
 <p id="def-circumgraph" class="explanatoryintro definitionStub"></p>
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ై</figure>
@@ -502,13 +505,6 @@
 
 
 
-<section id="other_vowels">
-<h4>Other vowel-signs</h4>
-<p>The following combining marks are also used to indicate vowel sounds.</p>
-
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ి␣ీ␣ు␣ూ␣ె␣ే␣ొ␣ో␣ా␣ ␣ౌ</figure>
-</section>
-</section>
 
 
 
@@ -554,29 +550,82 @@
 
 
  
-<section id="alternate_vowel_encodings">
-<h3>Alternative encodings</h3>
-<p><span class="leadin">The vowel-signs</span> for <span class="ipa">iː</span>, <span class="ipa">eː</span>, and <span class="ipa">oː</span> should each be written with one of the single code points listed  above. Those code points do not decompose in NFD. The Unicode Standard warns not to make up the shapes using  combinations of characters.</p>
-<blockquote>
-<p>✓ <span class="codepoint" translate="no"><span lang="te">&#x0C40;</span> [<a href="/scripts/telugu/block#char0C40"><span class="uname">U+0C40 TELUGU VOWEL SIGN II</span></a>]</span><br>
- ✘ <span class="codepoint" translate="no"><span lang="te">&#x0C3F;</span> + <span lang="te">&#x0C55;</span> [<a href="/scripts/telugu/block#char0C3F"><span class="uname">U+0C3F TELUGU VOWEL SIGN I</span></a> + <a href="/scripts/telugu/block#char0C55"><span class="uname">U+0C55 TELUGU LENGTH MARK</span></a>]</span>
-</p>
-<p>✓ <span class="codepoint" translate="no"><span lang="te">&#x0C47;</span> [<a href="/scripts/telugu/block#char0C47"><span class="uname">U+0C47 TELUGU VOWEL SIGN EE</span></a>]</span><br>
- ✘ <span class="codepoint" translate="no"><span lang="te">&#x0C46;</span> + <span lang="te">&#x0C55;</span> [<a href="/scripts/telugu/block#char0C46"><span class="uname">U+0C46 TELUGU VOWEL SIGN E</span></a> + <a href="/scripts/telugu/block#char0C55"><span class="uname">U+0C55 TELUGU LENGTH MARK</span></a>]</span></p>
-<p>✓ <span class="codepoint" translate="no"><span lang="te">&#x0C4B;</span> [<a href="/scripts/telugu/block#char0C4B"><span class="uname">U+0C4B TELUGU VOWEL SIGN OO</span></a>]</span><br>
- ✘ <span class="codepoint" translate="no"><span lang="te">&#x0C4A;</span> + <span lang="te">&#x0C55;</span> [<a href="/scripts/telugu/block#char0C4A"><span class="uname">U+0C4A TELUGU VOWEL SIGN O</span></a> + <a href="/scripts/telugu/block#char0C55"><span class="uname">U+0C55 TELUGU LENGTH MARK</span></a>]</span>
-</p>
-</blockquote>
 
-<p>The vowel-sign for <span class="ipa">ai</span> decomposes and recomposes during normalisation. It is therefore possible to find it encoded as either <span class="codepoint" translate="no"><span lang="te">&#x0C48;</span> [<a href="/scripts/telugu/block#char0C48"><span class="uname">U+0C48 TELUGU VOWEL SIGN AI</span></a>]</span> or <span class="codepoint" translate="no"><span lang="te">&#x0C46;</span> + <span lang="te">&#x0C56;</span> [<a href="/scripts/telugu/block#char0C46"><span class="uname">U+0C46 TELUGU VOWEL SIGN E</span></a> + <a href="/scripts/telugu/block#char0C56"><span class="uname">U+0C56 TELUGU AI LENGTH MARK</span></a>]</span>. It is normal to use the precomposed version.</p>
+
+
+<section id="vowel_encoding">
+<h3>Encoding choices</h3>
+<p class="instructions">Visually, several of the standalone vowels and some vowel-signs look as it they could be composed of smaller parts. This section compares approaches and considers the relevance of <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD) and  <span class="termref" href="../glossary/#nfc">Unicode Normalisation Form C</span> (NFC) to give guidance on which approach is best.</p>
+
+<section id="vs_encoding">
+<h4>Vowel-signs</h4>
+<p class="info">The vowel-signs for <span class="ipa">iː</span>, <span class="ipa">eː</span>, and <span class="ipa">oː</span> should each be written with one of the single code points listed  above. Those code points do not decompose in NFD. The Unicode Standard warns not to make up the shapes using  combinations of characters.</p>
+
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Use</th>
+<th scope="col">Do not use!</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="te">&#x0C40;</span> [<a href="/scripts/telugu/block#char0C40"><span class="uname">U+0C40 TELUGU VOWEL SIGN II</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="te">&#x0C3F;</span> + <span lang="te">&#x0C55;</span> [<a href="/scripts/telugu/block#char0C3F"><span class="uname">U+0C3F TELUGU VOWEL SIGN I</span></a> + <a href="/scripts/telugu/block#char0C55"><span class="uname">U+0C55 TELUGU LENGTH MARK</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="te">&#x0C47;</span> [<a href="/scripts/telugu/block#char0C47"><span class="uname">U+0C47 TELUGU VOWEL SIGN EE</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="te">&#x0C46;</span> + <span lang="te">&#x0C55;</span> [<a href="/scripts/telugu/block#char0C46"><span class="uname">U+0C46 TELUGU VOWEL SIGN E</span></a> + <a href="/scripts/telugu/block#char0C55"><span class="uname">U+0C55 TELUGU LENGTH MARK</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="te">&#x0C4B;</span> [<a href="/scripts/telugu/block#char0C4B"><span class="uname">U+0C4B TELUGU VOWEL SIGN OO</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="te">&#x0C4A;</span> + <span lang="te">&#x0C55;</span> [<a href="/scripts/telugu/block#char0C4A"><span class="uname">U+0C4A TELUGU VOWEL SIGN O</span></a> + <a href="/scripts/telugu/block#char0C55"><span class="uname">U+0C55 TELUGU LENGTH MARK</span></a>]</span></td>
+</tr>
+</tbody>
+</table>
+<p class="info">The vowel-sign for <span class="ipa">ai</span> decomposes and recomposes during normalisation. It is therefore possible to find it encoded as either <span class="codepoint" translate="no"><span lang="te">&#x0C48;</span> [<a href="/scripts/telugu/block#char0C48"><span class="uname">U+0C48 TELUGU VOWEL SIGN AI</span></a>]</span> or <span class="codepoint" translate="no"><span lang="te">&#x0C46;</span> + <span lang="te">&#x0C56;</span> [<a href="/scripts/telugu/block#char0C46"><span class="uname">U+0C46 TELUGU VOWEL SIGN E</span></a> + <a href="/scripts/telugu/block#char0C56"><span class="uname">U+0C56 TELUGU AI LENGTH MARK</span></a>]</span>. It is normal to use the precomposed version.</p>
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Precomposed (recommended)</th>
+<th scope="col">Decomposed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="te">&#x0C48;</span> [<a href="/scripts/telugu/block#char0C48"><span class="uname">U+0C48 TELUGU VOWEL SIGN AI</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="te">&#x0C46;</span> + <span lang="te">&#x0C56;</span> [<a href="/scripts/telugu/block#char0C46"><span class="uname">U+0C46 TELUGU VOWEL SIGN E</span></a> + <a href="/scripts/telugu/block#char0C56"><span class="uname">U+0C56 TELUGU AI LENGTH MARK</span></a>]</span></td>
+</tr>
+</tbody>
+</table>
 <p><span class="codepoint" translate="no"><span lang="te">&#x0C56;</span> [<a href="/scripts/telugu/block#char0C56"><span class="uname">U+0C56 TELUGU AI LENGTH MARK</span></a>]</span> is <em>only</em> used in decomposed versions of <span class="codepoint" translate="no"><span lang="te">&#x0C48;</span> [<a href="/scripts/telugu/block#char0C48"><span class="uname">U+0C48 TELUGU VOWEL SIGN AI</span></a>]</span>.&nbsp;</p>
+</section>
 
-<p><span class="leadin">The independent letters</span> also should each be written with one of the single code points listed just above. The Unicode Standard warns not to make up the shapes using a combination of characters for <span class="ipa">aw</span> and <span class="ipa">oː</span>.</p>
-<blockquote><p>✓<span class="codepoint" translate="no"><span lang="te">&#x0C13;</span> [<a href="/scripts/telugu/block#char0C13"><span class="uname">U+0C13 TELUGU LETTER OO</span></a>]<br>
- ✘ <span class="codepoint" translate="no"><span lang="te">&#x0C12;</span> + <span lang="te">&#x0C55;</span> [<a href="/scripts/telugu/block#char0C12"><span class="uname">U+0C12 TELUGU LETTER O</span></a> + <a href="/scripts/telugu/block#char0C55"><span class="uname">U+0C55 TELUGU LENGTH MARK</span></a>]</span></span></p>
-<p>✓<span class="codepoint" translate="no"><span lang="te">&#x0C14;</span> [<a href="/scripts/telugu/block#char0C14"><span class="uname">U+0C14 TELUGU LETTER AU</span></a>]</span><br>
- ✘ <span class="codepoint" translate="no"><span lang="te">&#x0C12;</span> + <span lang="te">&#x0C4C;</span> [<a href="/scripts/telugu/block#char0C12"><span class="uname">U+0C12 TELUGU LETTER O</span></a> + <a href="/scripts/telugu/block#char0C4C"><span class="uname">U+0C4C TELUGU VOWEL SIGN AU</span></a>]</span></p>
-</blockquote>
+
+
+
+<section id="standalone_encoding">
+<h4>Independent vowels</h4>
+<p class="info">The independent letters also should each be written with one of the single code points listed just above. The Unicode Standard warns not to make up the shapes using a combination of characters for <span class="ipa">aw</span> and <span class="ipa">oː</span>.</p>
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Use</th>
+<th scope="col">Do not use!</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="te">&#x0C13;</span> [<a href="/scripts/telugu/block#char0C13"><span class="uname">U+0C13 TELUGU LETTER OO</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="te">&#x0C12;</span> + <span lang="te">&#x0C55;</span> [<a href="/scripts/telugu/block#char0C12"><span class="uname">U+0C12 TELUGU LETTER O</span></a> + <a href="/scripts/telugu/block#char0C55"><span class="uname">U+0C55 TELUGU LENGTH MARK</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="te">&#x0C14;</span> [<a href="/scripts/telugu/block#char0C14"><span class="uname">U+0C14 TELUGU LETTER AU</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="te">&#x0C12;</span> + <span lang="te">&#x0C4C;</span> [<a href="/scripts/telugu/block#char0C12"><span class="uname">U+0C12 TELUGU LETTER O</span></a> + <a href="/scripts/telugu/block#char0C4C"><span class="uname">U+0C4C TELUGU VOWEL SIGN AU</span></a>]</span></td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 </section>
 
