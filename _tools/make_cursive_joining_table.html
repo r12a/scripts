@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+<meta charset="utf-8"/>
+<title>Make cursive joining table</title>
+<meta name="description" content="Create a table that shows joining forms for a given list of characters."/>
+
+<link rel="stylesheet" href="local.css" type="text/css" />
+
+<script src="../../uniview/descriptions.js"></script> 
+<script src="../../uniview/u.js"></script> 
+</head>
+
+<body>
+<h1>Make cursive joining table</h1>
+<p>Create a table that shows joining forms for a given list of characters. Use for right-joining characters too, then delete cols that are not needed. The joiner value can be zwj or ـ.</p>
+<p>Add a space-separated list of skeleton shapes to the input.</p>
+
+<p><textarea id="listin" dir="auto" placeholder="Add a space-separated list of characters here." style="height:50px;width:100%;"></textarea></p>
+
+<p>
+<label> Joiner: <input type="text" id="joiner" style="width: 3em;" value="zwj"/></label>
+<label> Language: <input type="text" id="lang" style="width: 3em;"/></label>
+<label> Direction: <input type="text" id="dir" style="width: 3em;" value="rtl"/></label>
+
+<button style="font-size: 150%;" onClick="
+lang = document.getElementById('lang').value;
+dir = document.getElementById('dir').value;
+zwj = document.getElementById('joiner').value;
+document.getElementById('out').value = makeListFromChars(zwj, document.getElementById('listin').value, lang, dir); 
+document.getElementById('out').select()">Go</button>
+</p>
+
+<textarea id="out" style="height:400px;width:100%;"></textarea>
+
+
+
+
+
+<div class="smallprint"><span id="version">First published  3 Feb 2008.  This version <span id="version-info"> 
+  <!-- #BeginDate format:IS1m -->2020-12-23  10:41<!-- #EndDate --> 
+</span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
+
+<script>
+
+
+
+function makeListFromChars (zwj, chars, lang, dir) {
+	
+	if (zwj === 'zwj') zwj = '&#x200D;'
+	//const zwj = 'ـ'
+	chars = chars.trim()
+	var charList = chars.split(' ')
+	var out = '<table class="cursive_table">\n<thead>\n<tr><th>Joining side:</th><th>none</th><th>right</th><th>both</th><th>left</th>\n</tr>\n</thead>\n'
+	out += '<tbody>\n'
+	
+    for (var x=0; x<charList.length; x++) {
+        i = charList[x].codePointAt(0)
+		var hex = i.toString(16).toUpperCase()
+		while (hex.length < 4) hex = '0' + hex
+		console.log(charList[x], 'i',i,'hex',hex)
+		
+		out += '<tr>\n'
+		
+		out += '<th>'
+		if (U[i]) {                 
+			var dbrecord = U[i].split(';')
+			var cpName = dbrecord[1]
+			
+			out += '<span class="codepoint" translate="no"><span lang="'+lang+'" dir="'+dir+'">&#x'+hex+';</span> [<a href="/scripts/syriac/block#char'+hex+'"><span class="uname">U+'+hex+' '+cpName+'</span></a>]</span>'
+			}
+		out += '</th>\n'
+		
+		out += '<td><span lang="'+lang+'">'+charList[x]+'</span></td>\n'
+		out += '<td><span lang="'+lang+'">'+zwj+charList[x]+'</span></td>\n'
+		out += '<td><span lang="'+lang+'">'+zwj+charList[x]+zwj+'</span></td>\n'
+		out += '<td><span lang="'+lang+'">'+charList[x]+zwj+'</span></td>\n'
+		
+		out += '</tr>\n'
+		}
+	
+	out += '</tbody>\n</table>\n'
+	return out
+	}
+
+</script>
+
+</body>
+</html>
