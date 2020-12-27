@@ -55,7 +55,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->17 December, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->26 December, 2020<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -85,7 +85,7 @@
 <section>
   <h2 href="#sample">Sample (Arabic)</h2>
  
-<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="38" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">38px</span></p>
+<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="36" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">36px</span></p>
 
  
   <div id="freeText" dir="rtl" lang="ar" data-target="c" data-base="/scripts/arabic/block" data-source="http://unicode.org/udhr/translations.html">
@@ -553,7 +553,7 @@
 
 <figure class="characterBox auto" data-ipa="aː,uː,iː" data-cols="trans,transc">ا␣و␣ي</figure>
 
-<p>In Arabic, the  consonants listed just above may  indicate the location of a  long vowel, eg. <span class="eg" lang="ar" dir="rtl">قلوب</span>, <span class="eg" lang="ar" dir="rtl">تاريخ</span> They are always visible, whether or not the text shows vowel diacritics.</p>
+<p>In Arabic, the  consonants listed just above may  indicate the location of a  long vowel, eg. <span class="eg" lang="ar" dir="rtl">قلوب</span> <span class="eg" lang="ar" dir="rtl">تاريخ</span> They are always visible, whether or not the text shows vowel diacritics.</p>
 
 <p>These characters, especially <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0627;</span> [<a target="c" href="/scripts/arabic/block#char0627"><span class="uname">U+0627 ARABIC LETTER ALEF</span></a>]</span>, may also be used with a number of other small marks, such as <span class="name">hamza</span>, for particular effects. (see <a class="secref">hamza</a>).</p>
 <p>The letter  <span class="name">alef</span> cannot actually represent a consonant sound on it's own (unlike the other two). In most cases it is really only a support for a vowel and/or diacritic, or an indicator of vowel length, but in word final position  commonly either represents a short <span class="ipa">a</span>, eg. <span class="eg" lang="ar" dir="rtl">أنا</span> or is silent, eg. <span class="eg" lang="ar" dir="rtl">رسميًا</span>   <span class="charExample" translate="no"><span class="ex" dir="rtl" lang="ar">كتبوا</span> <span class="trans">ktbwɑ</span> <span class="ipa">kætæbuː</span></span></p>
@@ -1603,8 +1603,8 @@ and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A7;</s
 <section id="cursive">
 <h3>Cursive script</h3>
 
-<p>Arabic script joins letters together. This results in four different shapes for most letters (including an isolated shape). The highlights in the example below show the same letter,
-  <span class="codepoint"><span lang="ar" dir="rtl">&#x0639;</span> <a target="c" href="/scripts/arabic/block#char0639">[<span class="uname">U+0639 ARABIC LETTER AIN</span>]</a></span>, with three different joining forms.</p>
+<p>Arabic script is always cursive, ie. letters in a word are joined up. Fonts need to produce the appropriate joining form for a letter, according to its visual context, but the code point used doesn't change.  This results in four different shapes for most letters (including an isolated shape). Ligated forms also join with characters alongside them.</p>
+<p>The highlights in the example below show the same letter, <span class="codepoint"><span lang="ar" dir="rtl">&#x0639;</span> <a target="c" href="/scripts/arabic/block#char0639">[<span class="uname">U+0639 ARABIC LETTER AIN</span>]</a></span>, with three different joining forms.</p>
       <figure>
     <!--p dir="rtl" lang="ar" class="large"><span class="ex">ع<span style="color:black">لى</span></span> &nbsp;•&nbsp; 
       <span class="ex"><span style="color:black">مت</span>ع<span style="color:black">ددة</span></span> &nbsp;•&nbsp; 
@@ -1612,8 +1612,168 @@ and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A7;</s
 	 <p><img src="images/cursive_shapes.png" alt="على  •  متعددة  •  وسيجمع" class="ex" notes=""></p>
      <figcaption>The letter <span class="ex">ع</span> (<span class="trans">ain</span>) in 3 different joining contexts.</figcaption>
      </figure>
-    <p>A few Arabic script letters only join on the right-hand side. These are the 10 most commonly used for the Arabic language.</p>
-<figure class="otherBox auto" data-cols="">ا␣آ␣أ␣إ␣د␣ذ␣ر␣ز␣و␣ؤ</figure>
+    <p>Most Arabic script letters join on both sides. A few  only join on the right-hand side: this involves 4 basic shapes for Modern Standard Arabic.</p>
+<p><span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0621;</span> [<a href="/scripts/arabic/block#char0621"><span class="uname">U+0621 ARABIC LETTER HAMZA</span></a>]</span> doesn't join on either side.
+
+
+
+
+
+<section id="cursive_shaping"> </section>
+</p>
+<section id="cursive_shaping">
+<h4>Cursive joining forms</h4>
+
+<p>Most dual-joining characters add or become a swash when they don't join to the left. A number of characters, however, undergo additional shape changes across the joining forms. <a class="figref">fig_joining_forms</a> and <a class="figref">fig_right_joining_forms</a> show  the basic shapes in Modern Standard Arabic and what their joining forms look like. Significant variations are highlighted.</p>
+<figure id="fig_joining_forms">
+<table class="cursive_table">
+<thead>
+<tr><th>isolated</th><th>right-joined</th><th>dual-join</th><th>left-joined</th>
+<th>MSA letters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span lang="ar">ب</span></td>
+<td><span lang="ar">ـب</span></td>
+<td><span lang="ar">ـبـ</span></td>
+<td><span lang="ar">بـ</span></td>
+<th><figure class="otherBox auto" data-cols="">ب␣ت␣ث␣پ</figure></th>
+</tr>
+<tr>
+<td><span lang="ar">ن</span></td>
+<td><span lang="ar">ـن</span></td>
+<td><span lang="ar">ـنـ</span></td>
+<td><span lang="ar">نـ</span></td>
+<th><figure class="otherBox auto" data-cols="">ن</figure></th>
+</tr>
+<tr>
+<td><span lang="ar">ق</span></td>
+<td><span lang="ar">ـق</span></td>
+<td><span lang="ar">ـقـ</span></td>
+<td><span lang="ar">قـ</span></td>
+<th><figure class="otherBox auto" data-cols="">ق</figure></th>
+</tr>
+<tr>
+<td><span lang="ar">ف</span></td>
+<td><span lang="ar">ـف</span></td>
+<td><span lang="ar">ـفـ</span></td>
+<td><span lang="ar">فـ</span></td>
+<th><figure class="otherBox auto" data-cols="">ف␣ڤ</figure></th>
+</tr>
+<tr>
+<td><span lang="ar">س</span></td>
+<td><span lang="ar">ـس</span></td>
+<td><span lang="ar">ـسـ</span></td>
+<td><span lang="ar">سـ</span></td>
+<th><figure class="otherBox auto" data-cols="">س␣ش</figure></th>
+</tr>
+<tr>
+<td><span lang="ar">ص</span></td>
+<td><span lang="ar">ـص</span></td>
+<td><span lang="ar">ـصـ</span></td>
+<td><span lang="ar">صـ</span></td>
+<th><figure class="otherBox auto" data-cols="">ص␣ض</figure></th>
+</tr>
+<tr>
+<td><span lang="ar">ط</span></td>
+<td><span lang="ar">ـط</span></td>
+<td><span lang="ar">ـطـ</span></td>
+<td><span lang="ar">طـ</span></td>
+<th><figure class="otherBox auto" data-cols="">ط␣ظ</figure></th>
+</tr>
+<tr>
+<td><span lang="ar">ك</span></td>
+<td><span lang="ar">ـك</span></td>
+<td><span lang="ar">ـكـ</span></td>
+<td><span lang="ar">كـ</span></td>
+<th><figure class="otherBox auto" data-cols="">ك</figure></th>
+</tr>
+<tr>
+<td><span lang="ar">ل</span></td>
+<td><span lang="ar">ـل</span></td>
+<td><span lang="ar">ـلـ</span></td>
+<td><span lang="ar">لـ</span></td>
+<th><figure class="otherBox auto" data-cols="">ل</figure></th>
+</tr>
+<tr>
+<td><span lang="ar">ه</span></td>
+<td><span lang="ar">ـه</span></td>
+<td><span lang="ar">ـهـ</span></td>
+<td><span lang="ar">هـ</span></td>
+<th><figure class="otherBox auto" data-cols="">ه␣ة</figure></th>
+</tr>
+<tr>
+<td><span lang="ar">م</span></td>
+<td><span lang="ar">ـم</span></td>
+<td><span lang="ar">ـمـ</span></td>
+<td><span lang="ar">مـ</span></td>
+<th><figure class="otherBox auto" data-cols="">م</figure></th>
+</tr>
+<tr>
+<td><span lang="ar">ع</span></td>
+<td><span lang="ar">ـع</span></td>
+<td><span lang="ar">ـعـ</span></td>
+<td><span lang="ar">عـ</span></td>
+<th><figure class="otherBox auto" data-cols="">ع␣غ</figure></th>
+</tr>
+<tr>
+<td><span lang="ar">ح</span></td>
+<td><span lang="ar">ـح</span></td>
+<td><span lang="ar">ـحـ</span></td>
+<td><span lang="ar">حـ</span></td>
+<th><figure class="otherBox auto" data-cols="">ح␣خ␣ج␣چ</figure></th>
+</tr>
+<tr>
+<td><span lang="ar">ي</span></td>
+<td><span lang="ar">ـي</span></td>
+<td><span lang="ar">ـيـ</span></td>
+<td><span lang="ar">يـ</span></td>
+<th><figure class="otherBox auto" data-cols="">ي␣ئ␣ى</figure></th>
+</tr>
+</tbody>
+</table>
+
+<figcaption>Joining forms for  shapes that join on both sides..</figcaption>
+</figure>
+
+
+
+
+
+<figure id="fig_right_joining_forms">
+<table class="cursive_table">
+<thead>
+<tr><th>isolated</th><th>right-joined</th>
+<th>MSA letters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span lang="ar">ا</span></td>
+<td><span lang="ar">ـا</span></td>
+<th><figure class="otherBox auto" data-cols="">ا␣أ␣إ␣آ␣ٱ</figure></th>
+</tr>
+<tr>
+<td><span lang="ar">ر</span></td>
+<td><span lang="ar">ـر</span></td>
+<th><figure class="otherBox auto" data-cols="">ر␣ز</figure></th>
+</tr>
+<tr>
+<td><span lang="ar">د</span></td>
+<td><span lang="ar">ـد</span></td>
+<th><figure class="otherBox auto" data-cols="">د␣ذ</figure></th>
+</tr>
+<tr>
+<td><span lang="ar">و</span></td>
+<td><span lang="ar">ـو</span></td>
+<th><figure class="otherBox auto" data-cols="">و␣ؤ</figure></th>
+</tr>
+</tbody>
+</table>
+<figcaption>Joining forms for  shapes that join on the right only. </figcaption>
+</figure>
+</section>
 </section>
   
   
@@ -1622,6 +1782,7 @@ and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A7;</s
 <h3>Context-based shaping</h3>
 
 
+<p>See just above for shaping related to cursive joining.</p>
 <p>In all but the most basic fonts, glyph shapes are highly variable  for Arabic letters. For example, <a class="figref">fig_mishafi_ka</a> shows a wide variety of shapes produced by default in the Mishafi font for <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0643;</span> [<a href="/scripts/arabic/block#char0643"><span class="uname">U+0643 ARABIC LETTER KAF</span></a>]</span> when followed by various letters.</p>
 
 <figure id="fig_mishafi_ka">
