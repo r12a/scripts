@@ -14,16 +14,13 @@
 
 <body>
 <h1>Make cursive joining table</h1>
-<p>Create a table that shows joining forms for a given list of characters. Use for right-joining characters too, then delete cols that are not needed. The joiner value can be zwj or ـ.</p>
-<p>Add a space-separated list of skeleton shapes to the input.</p>
+<p>Create a table that shows joining forms for a given list of characters. Use for right-joining characters too, then delete cols that are not needed. The joiner value can be zwj or a character such as ـ.</p>
+<p>Add a list of joining-forms line by line. On each line add a space-separated list of characters relevant to that joining form. It's ok to have a single code point per line.</p>
 
-<p><textarea id="listin" dir="auto" placeholder="Add a space-separated list of characters here." style="height:50px;width:100%;"></textarea></p>
-
-<p>
+<p style="clear:both;">
 <label> Joiner: <input type="text" id="joiner" style="width: 3em;" value="zwj"/></label>
 <label> Language: <input type="text" id="lang" style="width: 3em;"/></label>
 <label> Direction: <input type="text" id="dir" style="width: 3em;" value="rtl"/></label>
-
 <button style="font-size: 150%;" onClick="
 lang = document.getElementById('lang').value;
 dir = document.getElementById('dir').value;
@@ -32,14 +29,16 @@ document.getElementById('out').value = makeListFromChars(zwj, document.getElemen
 document.getElementById('out').select()">Go</button>
 </p>
 
-<textarea id="out" style="height:400px;width:100%;"></textarea>
+<p><textarea id="listin" dir="auto" placeholder="Add a space-separated list of characters here." style="height:500px;width:48%; float:left;"></textarea></p>
+
+<textarea id="out" style="height:500px;width:48%;float: left;"></textarea>
 
 
 
 
 
-<div class="smallprint"><span id="version">First published  3 Feb 2008.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2020-12-23  10:41<!-- #EndDate --> 
+<div style="clear:both;" class="smallprint"><span id="version">First published  3 Feb 2008.  This version <span id="version-info"> 
+  <!-- #BeginDate format:IS1m -->2020-12-26  7:34<!-- #EndDate --> 
 </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 <script>
@@ -49,37 +48,53 @@ document.getElementById('out').select()">Go</button>
 function makeListFromChars (zwj, chars, lang, dir) {
 	
 	if (zwj === 'zwj') zwj = '&#x200D;'
-	//const zwj = 'ـ'
-	chars = chars.trim()
-	var charList = chars.split(' ')
-	var out = '<table class="cursive_table">\n<thead>\n<tr><th>Joining side:</th><th>none</th><th>right</th><th>both</th><th>left</th>\n</tr>\n</thead>\n'
+	var lines = chars.split('\n')
+	
+	
+	var out = '<table class="cursive_table">\n<thead>\n<tr><th>isolated</th><th>right-joined</th><th>dual-join</th><th>left-joined</th><th>XXX letters</th>\n</tr>\n</thead>\n'
 	out += '<tbody>\n'
 	
-    for (var x=0; x<charList.length; x++) {
-        i = charList[x].codePointAt(0)
-		var hex = i.toString(16).toUpperCase()
-		while (hex.length < 4) hex = '0' + hex
-		console.log(charList[x], 'i',i,'hex',hex)
+	for (l=0;l<lines.length;l++) {
+		lines[l] = lines[l].trim()
+		if (lines[l] == '') continue
 		
 		out += '<tr>\n'
-		
+		var chars = lines[l].split(' ')
+		console.log('line',lines[l])
+
+
+		out += '<td><span lang="'+lang+'">'+chars[0]+'</span></td>\n'
+		out += '<td><span lang="'+lang+'">'+zwj+chars[0]+'</span></td>\n'
+		out += '<td><span lang="'+lang+'">'+zwj+chars[0]+zwj+'</span></td>\n'
+		out += '<td><span lang="'+lang+'">'+chars[0]+zwj+'</span></td>\n'
+
 		out += '<th>'
-		if (U[i]) {                 
-			var dbrecord = U[i].split(';')
-			var cpName = dbrecord[1]
+		
+		out += '<figure class="otherBox auto" data-cols="">'
+		for (var x=0; x<chars.length; x++) {
+			if (x>0) out += '␣'
+			console.log(chars)
+					/*
+					i = chars[x].codePointAt(0)
+					var hex = i.toString(16).toUpperCase()
+					while (hex.length < 4) hex = '0' + hex
+					console.log(chars[x], 'i',i,'hex',hex)
+
+					if (U[i]) {                 
+						var dbrecord = U[i].split(';')
+						var cpName = dbrecord[1]
+
+						out += '<span class="codepoint" translate="no"><span lang="'+lang+'" dir="'+dir+'" class="ex" title="'+cpName+'">&#x'+hex+';</span>'
+						}
+						*/
+			//out += '<span class="codepoint" translate="no"><span lang="'+lang+'" dir="'+dir+'" class="ex">'+chars[x]+'</span></span>'
 			
-			out += '<span class="codepoint" translate="no"><span lang="'+lang+'" dir="'+dir+'">&#x'+hex+';</span> [<a href="/scripts/syriac/block#char'+hex+'"><span class="uname">U+'+hex+' '+cpName+'</span></a>]</span>'
+			out += chars[x]
 			}
-		out += '</th>\n'
-		
-		out += '<td><span lang="'+lang+'">'+charList[x]+'</span></td>\n'
-		out += '<td><span lang="'+lang+'">'+zwj+charList[x]+'</span></td>\n'
-		out += '<td><span lang="'+lang+'">'+zwj+charList[x]+zwj+'</span></td>\n'
-		out += '<td><span lang="'+lang+'">'+charList[x]+zwj+'</span></td>\n'
-		
+		out += '</figure></th>\n'
 		out += '</tr>\n'
 		}
-	
+
 	out += '</tbody>\n</table>\n'
 	return out
 	}
