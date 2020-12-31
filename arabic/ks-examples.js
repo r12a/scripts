@@ -6,6 +6,35 @@ autoExpandExamples.ks = `
 باشلئانگۇچ|beginning|bɑʃlɑnʁutʃ
 خوتەن|Khotan
 يېڭىسار|Yangi Hissary
+کٲشُر|Kashmiri|kəːʃur
+مٔچھ|fly|mət͡ʃʰ
+کاو |crow|kaːw
+مَرٕد|man|marɨd
+زَنان|woman|zanaːn
+تۆت|hot m.|tot
+تٔژ|hot f.|tət͡s
+ہۆکھ|dry m.|hokʰ
+ہۆچھ|dry f.|hot͡ʃʰ
+گَگُر|rat m.|gagur
+گَگٕر|rat f.|gagɨr
+شُر|child m.|ʃur
+شُرؠ|child f.|ʃurʲ
+وۄزُل|red|wɔzul
+صِفَر|zero|sifar
+نۆتھ|zero|notʰ
+اَکھ|one|akʰ
+زٕ|two|zɨ
+تْرٚے|three|tre
+ژور|four|t͡soːr
+پانٛژھ|five|pãːt͡sʰ
+پٲنٛژھ|five|pə̃ːt͡sʰ
+شےٚ|six|ʃe
+سَتھ|seven|satʰ
+ٲٹھ|eight|əːʈʰ
+نَو|nine|naw
+دٔہ|ten|dəh
+داہ|ten|daːh
+ہَتھ|one hundred|hatʰ
 
 
 `
