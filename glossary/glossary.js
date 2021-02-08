@@ -9,6 +9,8 @@ defList={
 
 "consonantcluster": 'A consonant cluster is a sequence of consonants with no intervening vowels.',
 
+"hyphenation": '\'Hyphenation\' here refers to an extra set of rules applied after the basic line-break algorithm to split words at syllable or morphological boundaries in order to improve the layout of a paragraph. Hyphenation may or may not be indicated using a visual marker at the end or start of a line, however it is commonly marked by a hyphen or other glyph.',
+
 "independentvowel": 'An <a class="termref" target="_blank" href="../glossary/#inherentvowel">inherent vowel</a> is a vowel sound that is automatically pronounced after a consonant letter, unless specifically suppressed.',
 
 "inherentvowel": 'An <a class="termref" target="_blank" href="../glossary/#inherentvowel">inherent vowel</a> is a vowel sound that is automatically pronounced after a consonant letter, unless specifically suppressed.',
