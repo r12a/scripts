@@ -63,12 +63,6 @@ reflist = {
 "isbn":"9788187782049",
 },
 
-"i": {
-"url":"https://w3c.github.io/ilreq/",
-"authors": "Swaran Lata, Somnath Chandra, Prashant Verma",
-"title":"Indic Layout Requirements",
-},
-
 "m": {
 "url":"#refs",
 "authors": "முத்து நெடுமாறன் (Muthu Neduraman)",
@@ -103,6 +97,12 @@ reflist = {
 "url":"http://unicode.org/L2/L2012/12231-tamil-fractions-symbols-proposal.pdf",
 "authors": "Shriramana Sharma",
 "title":"Proposal to encode Tamil fractions and symbols",
+},
+
+"st": {
+"url":"#refs",
+"authors": "Santhosh Thottingal",
+"title":"Personal correspondence",
 },
 
 "t": {

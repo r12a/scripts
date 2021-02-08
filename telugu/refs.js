@@ -22,6 +22,12 @@ reflist = {
 "title":"Request to encode South Indian CANDRABINDU-s",
 },
 
+"st": {
+"url":"#refs",
+"authors": "Santhosh Thottingal",
+"title":"Personal correspondence",
+},
+
 "u": {
 "url":"https://www.unicode.org/versions/Unicode13.0.0/ch12.pdf",
 "authors": "Unicode Consortium",

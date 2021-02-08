@@ -38,6 +38,12 @@ reflist = {
 "isbn":"0-340-86029-4",
 },
 
+"st": {
+"url":"#refs",
+"authors": "Santhosh Thottingal",
+"title":"Personal correspondence",
+},
+
 "u": {
 "url":"https://www.unicode.org/versions/Unicode13.0.0/ch12.pdf",
 "authors": "Unicode Consortium",
