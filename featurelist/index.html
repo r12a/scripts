@@ -133,7 +133,7 @@ resort('name')
 <section id="key">
   <h2>Key</h2>
   <p>The table is intended to provide a general indication only. There are things that could be disputed.</p>
-  <p><b class="leadin">Total characters, etc.</b> This figure is based on the data in the <a href="../../app-charuse/">Character Usage Lookup</a> app. When there are 2 figures separated by a + sign, the first number indicates how many characters are in standard use, the second relates to additional infrequently used characters for that language.</p>
+  <p id="characters"><b class="leadin">Total characters, etc.</b> This figure is based on the data in the <a href="../../app-charuse/">Character Usage Lookup</a> app. When there are 2 figures separated by a + sign, the first number indicates how many characters are in standard use, the second relates to additional infrequently used characters for that language.</p>
 <p>Character counts do not include ASCII characters. It is assumed that those are available.</p>
 <p>Note also that the character counts reflect the characters needed to represent both precomposed and decomposed versions of content. For example, use of a character such as â would add 3 characters to the total count: â, a, and the combining circumflex. Use of ô would then add a further 2 (because the circumflex is already counted).</p>
 <p>The 5 columns to the right give character counts for specific types of character, per the Unicode general property assignment. These include:</p>
@@ -145,7 +145,7 @@ resort('name')
 <li><em>format chars</em>: Characters with the general property 'other'. These are almost always formatting characters, such as those used for bidi control, or joining/non-joining. (These figures currently need to be updated.)</li>
 </ul>
 <p>As for the other character counts, these figures exclude ASCII characters, and include characters for any compositions and decompositions that may be applied (unless they are deprecated by the Unicode Standard).</p>
-<p><b class="leadin">Type, etc.</b> The type column indicates whether the orthography is one of the following.</p>
+<p id="type"><b class="leadin">Type, etc.</b> The type column indicates whether the orthography is one of the following.</p>
 <ul>
 <li><em>alpha</em>: An alphabet, ie. vowels are written as letters.</li>
 <li><em>abjad</em>: An abjad, ie. vowels are normally not written.</li>
@@ -196,15 +196,15 @@ resort('name')
 <li><em>m(edials)</em>: There are special code points for consonants in 2nd or 3rd position in a syllable.</li>
 <li><em>f(inals)</em>: There are dedicated code points for syllable-final consonants.</li>
 </ul-->
-<p><b class="leadin">Contextual placement.</b> This is typically related to combining characters, and indicates that a typical font uses OpenType rules to position of a glyph according to the glyphs that surround it, eg. tone marks in Thai, or vowel signs in Arabic (if used). Nearly all scripts with combining characters will need some positioning rules to take account of where the combining character should be placed. This indicator is more concerned with whether that location varies significantly, depending on the surrounding context.</p>
+<p id="placement"><b class="leadin">Contextual placement.</b> This is typically related to combining characters, and indicates that a typical font uses OpenType rules to position of a glyph according to the glyphs that surround it, eg. tone marks in Thai, or vowel signs in Arabic (if used). Nearly all scripts with combining characters will need some positioning rules to take account of where the combining character should be placed. This indicator is more concerned with whether that location varies significantly, depending on the surrounding context.</p>
   <!--p><b class="leadin">Multiple combining marks.</b> Whether more than one combining character can be associated with a give base character.</p-->
-<p><b class="leadin">Contextual shaping.</b> Whether different glyph shapes have to be used for a character depending on the visual context, eg. the RA in Myanmar that grows and shrinks to fit around the character is surrounds. Note that this does not include shaping for cursive scripts.</p>
-<p><b class="leadin">Case sensitive</b> Whether or not the script makes case distinctions.</p>
-<p><b class="leadin">Cursive script.</b> Do the letters in this script join up, eg. as in Arabic, N'Ko, or Mongolian?</p>
-<p><b class="leadin">Text direction.</b> Is this a right-to-left script (which actually usually means that bidirectional behaviour needs to be supported, for numbers and embedded foreign text.) Is it used in a vertical orientation?</p>
+<p id="shaping"><b class="leadin">Contextual shaping.</b> Whether different glyph shapes have to be used for a character depending on the visual context, eg. the RA in Myanmar that grows and shrinks to fit around the character is surrounds. Note that this does not include shaping for cursive scripts.</p>
+<p id="case_sensitive"><b class="leadin">Case sensitive</b> Whether or not the script makes case distinctions.</p>
+<p id="cursive"><b class="leadin">Cursive script.</b> Do the letters in this script join up, eg. as in Arabic, N'Ko, or Mongolian?</p>
+<p id="direction"><b class="leadin">Text direction.</b> Is this a right-to-left script (which actually usually means that bidirectional behaviour needs to be supported, for numbers and embedded foreign text.) Is it used in a vertical orientation?</p>
 <p>A value of rtl* indicates that numbers run RTL.</p>
-<p><b class="leadin">Baseline.</b> The baseline for Latin text is labelled 'mid'. Scripts designed like Indic scripts that hang from a high baseline, are labelled 'high'. Scripts like Chinese are labelled 'low'.</p>
-<p><b class="leadin">Word separator.</b> A word is a unit of segmentation between the grapheme and the phrase. This column asks whether, as a general rule, there are explicit delimiters for word boundaries. The alternatives are:</p>
+<p id="baseline"><b class="leadin">Baseline.</b> The baseline for Latin text is labelled 'mid'. Scripts designed like Indic scripts that hang from a high baseline, are labelled 'high'. Scripts like Chinese are labelled 'low'.</p>
+<p id="word_separator"><b class="leadin">Word separator.</b> A word is a unit of segmentation between the grapheme and the phrase. This column asks whether, as a general rule, there are explicit delimiters for word boundaries. The alternatives are:</p>
 <ul>
 <li><em>space</em>: Words are separated by spaces, eg. Hebrew.</li>
 <li><em>wb&lt;char&gt;</em>: Words are visually separated, but by a non-space character, eg. Amharic.</li>
@@ -213,13 +213,13 @@ resort('name')
 <li><em>syllable</em>: Spaces are used, but they separate syllables, not words, eg. Vietnamese or Lisu.</li>
 <li><em>sb&lt;char&gt;</em>: Again, syllables are separated rather than words, but using a non-space character, eg. Tibetan.</li>
 </ul>
-<p><b class="leadin">Text wrap.</b> Indicates the primary break point for wrapping lines.  It is useful to compare this column with the 'Word separator' column just described. Note that nearly all scripts have rules about which punctuation characters can appear at the end or start of a line. The alternatives are:</p>
+<p id="wrap"><b class="leadin">Text wrap.</b> Indicates the primary break point for wrapping lines.  It is useful to compare this column with the 'Word separator' column just described. Note that nearly all scripts have rules about which punctuation characters can appear at the end or start of a line. The alternatives are:</p>
 <ul>
 <li><em>word</em>: Text wraps at word boundaries.</li>
 <li><em>syllable</em>: Text wraps at syllable boundaries, regardless of whether word boundaries are delimited.</li>
 <li><em>char</em>: Text wraps immediately after the last character that fits on a line, regardless of word or syllable boundaries.</li>
 </ul>
-<p><b class="leadin">Hyphenation.</b> Whether or not hyphenation is used with the script. Hyphenation here means, having initially broken lines at word boundaries, then splitting words at the end of a line as a <em>secondary</em> mechanism for line-breaking, in order to make justified paragraphs look better. Scripts may use other visual cues than a hyphen, and may sometimes use no visual indicator that the word was broken.  Values include:</p>
+<p id="hyphenation"><b class="leadin">Hyphenation.</b> Whether or not hyphenation is used with the script. Hyphenation here means, having initially broken lines at word boundaries, then splitting words at the end of a line as a <em>secondary</em> mechanism for line-breaking, in order to make justified paragraphs look better. Scripts may use other visual cues than a hyphen, and may sometimes use no visual indicator that the word was broken.  Values include:</p>
 <ul>
 <li><em>yes &lt;char&gt;</em>: Hyphenation occurs, using the character indicated as a visual marker of the work break.</li>
 <li><em>(yes) &lt;char&gt;</em>: Hyphenation occurs but is rare.</li>
@@ -229,7 +229,7 @@ resort('name')
 </ul>
 <p> ↵ indicates the line-break. For example, the cell for Mongolian shows &quot;↵᠆&quot;, which indicates that the Todo soft hyphen appears at the start of the second line, rather than at the end of the first. If Polish were in the list, you would see -↵-, which indicates that the hyphen appears both at the end and beginning of the line.</p>
 <p>* indicates that although the visual marker looks like a hyphen, it is actually a different character.</p>
-<p><b class="leadin">Justification.</b> Indicates the principal method(s) for full justification of text. Higher-end typographic systems will typically apply more than one method, and across whole paragraphs rather than just a single line. Here we simply aim to give an idea of the most common approach, or approaches, where there is a mixture.  Alternatives include:</p>
+<p id="justification"><b class="leadin">Justification.</b> Indicates the principal method(s) for full justification of text. Higher-end typographic systems will typically apply more than one method, and across whole paragraphs rather than just a single line. Here we simply aim to give an idea of the most common approach, or approaches, where there is a mixture.  Alternatives include:</p>
 <ul>
 <li><em>spaces</em>: Spaces between words or syllables are stretched, eg. Russian. In some orthographies, eg. Thai, the stretched spaces are phrase delimiters, rather than around words.</li>
 <li><em>characters</em>: Characters are separated by equal amounts of space across a line, eg. Chinese. (In practice, some characters tend to attract this spacing before others.)</li>
@@ -238,7 +238,7 @@ resort('name')
 <li><em>other</em>: Some other mechanism is used, eg. multiple tseks at the line end in Tibetan.</li>
 <li><em>none</em>: Full justification is not a feature of the language, eg. Balinese.</li>
 </ul>
-<p><b class="leadin">Region.</b> This rough grouping places the script in the region where it originated, so English is in Europe, and Arabic is in the West Asia. It serves to get a very rough idea of how things stack up on a regional basis. Regions are one of the following:</p>
+<p id="region"><b class="leadin">Region.</b> This rough grouping places the script in the region where it originated, so English is in Europe, and Arabic is in the West Asia. It serves to get a very rough idea of how things stack up on a regional basis. Regions are one of the following:</p>
 <ul>
 <li>nam (Northern America), </li>
 <li>sam (South America), </li>
@@ -256,6 +256,6 @@ resort('name')
 <!--p><b class="leadin">Feature count.</b> This is a very crude indicator that simply awards one point for each column after the first three columns that doesn't read 'no', 'mid' or '0'.</p-->
 </section>
 
-<div class="smallprint"><span id="version">Changed <a href="https://github.com/r12a/scripts/commits/gh-pages/featurelist"><span id="version-info"><!-- #BeginDate format:IS1m -->2021-02-11  8:24<!-- #EndDate --></span></a> GMT. &nbsp;•&nbsp; Send <a href="https://github.com/r12a/scripts/issues/new?title=%5Bfeature%20list%5D%20TITLE_GOES_HERE&amp;body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ffeaturelist%2F%0A%0A" target="_blank">feedback</a>. &nbsp;•&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">Changed <a href="https://github.com/r12a/scripts/commits/gh-pages/featurelist"><span id="version-info"><!-- #BeginDate format:IS1m -->2021-02-11  10:00<!-- #EndDate --></span></a> GMT. &nbsp;•&nbsp; Send <a href="https://github.com/r12a/scripts/issues/new?title=%5Bfeature%20list%5D%20TITLE_GOES_HERE&amp;body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ffeaturelist%2F%0A%0A" target="_blank">feedback</a>. &nbsp;•&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 </body>
 </html>
