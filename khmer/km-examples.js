@@ -537,7 +537,7 @@ autoExpandExamples.km = `
 វិទូ|expert|ʋiʔ tuː
 យ៉ាង|absolutely|jaːŋ
 ប‌៊ិយែរ|beer|ɓijɛː
-
+ប្រតឺងអ‌៊ឹះ|urgent, too busy|prɑːtəɨŋʔɨh
 
 
 `
