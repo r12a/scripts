@@ -534,6 +534,11 @@ autoExpandExamples.km = `
 បើ|if|baə
 ពីព្រោះ|because|pii prʊəh
 ឈ្មោះ|name|cmʊəh
+វិទូ|expert|ʋiʔ tuː
+យ៉ាង|absolutely|jaːŋ
+ប‌៊ិយែរ|beer|ɓijɛː
+
+
 
 `
 
