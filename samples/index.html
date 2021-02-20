@@ -10,6 +10,7 @@
 
 <link rel="stylesheet" href="../../shared/style/docs.css" />
 <style>
+body { font-size: 15.5px; }
 .phrase { text-align: start; }
 
 .trigger { color: teal; cursor: pointer; }
@@ -36,6 +37,15 @@ b {
 #picture {
 	margin-top: 1em;
 	margin-bottom: 0;
+	}
+
+.notes {
+	float: right;
+	width: 25%;
+	font-size: 80%;
+	text-align: start;
+	margin: 1em 2em;
+	display: none;
 	}
 </style>
 <style id="fontFamilyStyling">.phrase { font-family: ; }</style> <!-- this sets the default, but is changed by scripting -->
@@ -71,9 +81,21 @@ function getSection (script) {
 		
 		out += '<section>'
 		out += '<h3 id="'+sampleScriptsIndex[script].langs[l]+'">'+sample.name+'</h3>'
-		out += '<p lang="'+sampleScriptsIndex[script].langs[l]+'" title="UDHR §1" class="phrase" dir="auto">'
+		
+		var title = ''
+		if (phraseDB[sampleScriptsIndex[script].langs[l]].transcription) title += '<b>Transcription:</b> ' + phraseDB[sampleScriptsIndex[script].langs[l]].transcription + '<br>'
+		if (phraseDB[sampleScriptsIndex[script].langs[l]].translation) title += '<b>Translation:</b> ' + phraseDB[sampleScriptsIndex[script].langs[l]].translation + '<br>'
+		if (phraseDB[sampleScriptsIndex[script].langs[l]].source) title += '<b>Source:</b> ' + phraseDB[sampleScriptsIndex[script].langs[l]].source + '<br>'
+		if (phraseDB[sampleScriptsIndex[script].langs[l]].sourceURL) title += '<b>URL:</b> <a target="_blank" href="' + phraseDB[sampleScriptsIndex[script].langs[l]].sourceURL + '">' + phraseDB[sampleScriptsIndex[script].langs[l]].sourceURL + '</a><br>'
+		if (phraseDB[sampleScriptsIndex[script].langs[l]].contributor) title += '<b>Contributor:</b> ' + phraseDB[sampleScriptsIndex[script].langs[l]].contributor + '<br>'
+		
+		out += '<div onmouseover="firstChild.style.display=\'block\'" onmouseout="firstChild.style.display=\'none\'">'
+		out += '<p class="notes">'+title+'</p>'
+		
+		out += '<p lang="'+sampleScriptsIndex[script].langs[l]+'" class="phrase" dir="auto">'
 		out += phraseDB[sampleScriptsIndex[script].langs[l]].text
 		out += '</p>'
+		out += '</div>'
 		out += '</section>'
 		}
 	out += '</section>'
@@ -120,6 +142,7 @@ function changeFontFamily ( newFont ) {
         <h2 class="notoc flush"><a id="links">Related</a></h2>
         <p style="line-height: 1.3em"><a href="/scripts/featurelist/" target="_blank">Script features by language</a></p>
         <p style="line-height: 1.3em"><a href="/app-charuse/" target="_blank">Character usage by language</a></p>
+        <p style="line-height: 1.3em"><a href="../fontlist/" target="_blank">Font lister</a></p>
       </div>
     </aside>
 
@@ -285,7 +308,7 @@ function changeFontFamily ( newFont ) {
 </p>
 
 
-<details>
+<details open>
 <summary style="font-style: italic; margin-left: 7.5%; font-size:80%;">Archaic scripts</summary>
 
 <p>
