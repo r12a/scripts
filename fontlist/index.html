@@ -11,6 +11,7 @@
 	
 
 <style>
+body { font-size: 15.5px; }
 #fontlist p { margin-top: 10px; margin-bottom: 0; margin-right: 7.5%; clear: both; }
 #fontlist .fontname {  font-size: 140%; margin-left: 20px; width: 80%; }
 #fontlist .altfontname {  font-size: 140%;  }
@@ -53,7 +54,19 @@ b {
 	margin-bottom: 0;
 	}
 h2 { margin-top: 0; }
+
+.nowrap { white-space: nowrap; }
+.suboptions { font-size: 90%; color: chocolate; margin-inline-start: 2em; }
+
+@media (max-width: 700px) { 
+.sidebar { margin-inline-start: 2em; }
+.noprint h2 { font-size: inherit; }
+}
 </style>
+
+
+
+
 <style id="fontSizeStyling">.text { font-size: 60px; }</style> <!-- this sets the default, but is changed by scripting -->
 <style id="fontWhiteSpace">.text { white-space: nowrap; }</style> <!-- this sets the default, but is changed by scripting -->
 
@@ -192,25 +205,50 @@ function setFontFeatures ( features ) {
 
 <h1>Font lister</h1>
 
-    <aside class="sidebar">
-      <div class="noprint">
-        <h2 class="notoc flush"><a id="links">Related</a></h2>
-        <p style="line-height: 1.3em"><a href="/scripts/featurelist/" target="_blank">Script features by language</a></p>
-        <p style="line-height: 1.3em"><a href="/app-charuse/" target="_blank">Character usage by language</a></p>
-      </div>
-    </aside>
+<aside class="sidebar">
+
+<div style="font-size: 90%; margin-bottom: 2em;">
+<span style="font-weight: bold;">Show fonts for:</span><br>
+<label class="nowrap"><input type="checkbox" checked id="showMac" onChange="refresh()"> Mac</label> &nbsp;
+<label class="nowrap"><input type="checkbox" checked id="showWin" onChange="refresh()"> Windows</label> &nbsp;
+<label class="nowrap"><input type="checkbox" checked id="showNoto" onChange="refresh()"> Noto</label> &nbsp;
+<label class="nowrap"><input type="checkbox" checked id="showSIL" onChange="refresh()"> SIL</label>
+</div>
+
+
+<div style="font-size: 90%;">
+<div style="font-weight: bold;"><label><input id="showGraphics" type="checkbox" checked onChange="refresh()"> Show font samples as images</label></div>
+<div style="font-weight: bold;"><label><input type="checkbox" id="showFonts" onChange="refresh()"> Show using fonts available on this computer</label>
+:</div>
+<div class="suboptions">Use this alternative text: <input placeholder="Leave blank for the default sample text" type="text" id="inputText" style="width: 90%;" onChange="refresh()"></div>
+<div class="suboptions">Change font display size: <input id="fontSizeSlider" type="range" min="20" max="150" step="1" value="60" oninput="changeFontSize(this.value)" style="width:80%;"> <span id="sizeIndicator" style="font-size:80%;">60px</span></div>
+<div class="suboptions">Lines: <label class="nowrap"><input name="whitespaceSetting" type="radio" checked onclick="document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: nowrap; }'"> no wrap</label> <label class="nowrap"><input id="wrapLines" name="whitespaceSetting" type="radio"  onclick="document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: normal; }'" style="margin-left: 2em;"> wrap</label></div>
+<div class="suboptions">Set language: 
+<input id="language" type="text" onchange="setLanguage(this.value)" style="width:5em;"> 
+</div>
+<div class="suboptions">Apply font-feature-settings:<br>
+<input id="fontFeatures" type="text" onchange="setFontFeatures(this.value)" style="width:10em;"></div>
+</div>
+
+
+<div class="noprint">
+<h2 class="notoc" style="font-size: 150%;"><a id="links">Related</a></h2>
+<p style="line-height: 1.3em"><a href="/scripts/featurelist/" target="_blank">Script features by language</a></p>
+<p style="line-height: 1.3em"><a href="/app-charuse/" target="_blank">Character usage by language</a></p>
+</div>
+</aside>
 
 
 
 <p id="status">Updated 
 <!-- #BeginDate format:Sw1 -->20 February, 2021<!-- #EndDate -->
-  <span id="versionTop">• recent changes 
+<span id="versionTop">• recent changes 
   <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages" title="Show commits for the whole scripts repository.">scripts</a>/<a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/fontlist" title="Show commits for scripts/fontlist.">fontlist</a> • leave a <a target="_blank" href="https://github.com/r12a/scripts/issues/new?title=[fontlist]%20%20BRIEF_TITLE_GOES_HERE&amp;body=%5Bsource%5D%20https%3A%2F%2Fr12a.github.io%2Fscripts%2Ffontlist%0A%0A" title="Leave a comment.">comment</a></span>
   </p>
   
 
-<p>This page provides a (not exhaustive) list of fonts, grouped by script, that are available via the Windows 10 and Mac OS X operating systems, as well as Google's Noto fonts and SIL fonts. Note that some  of the Windows and Mac fonts have to be downloaded by the user before they can be applied to text.</p>
-<div style="margin-left: 7.5%; padding: 1em;border: 1px solid #ccc;border-radius: 1em;margin-right: 32%;">
+<p>This page provides a (not exhaustive) list of fonts, grouped by script, that are available via the Windows 10 and Mac OS X operating systems, as well as Google's Noto fonts and SIL fonts. Note that some  of the Windows and Mac fonts have to be downloaded by the user before they can be applied to text. Install <a href="https://github.com/adobe-fonts/adobe-notdef">Adobe NotDef</a> font for best results.</p>
+<!--div style="margin-left: 7.5%; padding: 1em;border: 1px solid #ccc;border-radius: 1em;margin-right: 32%;">
 <div><label><input id="showGraphics" type="checkbox" checked onChange="refresh()"> Show font samples as images</label></div>
 <div><label><input type="checkbox" id="showFonts" onChange="refresh()"> Show using fonts available on this computer</label></div>
 <div style="margin-left: 2em; font-size: 90%; color: tan;">Use this alternative text: <input placeholder="Leave blank for the default sample text" type="text" id="inputText" style="width: 40%;" onChange="refresh()"></div>
@@ -226,7 +264,7 @@ function setFontFeatures ( features ) {
 <label><input type="checkbox" checked id="showMac" onChange="refresh()"> Mac</label> &nbsp;
 <label><input type="checkbox" checked id="showWin" onChange="refresh()"> Windows</label> &nbsp;
 <label><input type="checkbox" checked id="showNoto" onChange="refresh()"> Noto</label> &nbsp;
-<label><input type="checkbox" checked id="showSIL" onChange="refresh()"> SIL</label></p>
+<label><input type="checkbox" checked id="showSIL" onChange="refresh()"> SIL</label></p-->
 
 
 
@@ -379,10 +417,9 @@ function setFontFeatures ( features ) {
 </p>
 
 
-<details>
-<summary style="font-style: italic; margin-left: 7.5%; font-size:80%;">Archaic scripts</summary>
+<p style="font-style: italic; margin-left: 7.5%; margin-bottom: 0; font-size:80%;">Archaic scripts</p>
 
-<p>
+<p style="margin-top: 0;">
 <span class="trigger" onclick="getResult('Imperial Aramaic','armi', phraseDB.arc.text)">aramaic</span> • 
 
 <span class="trigger" onclick="getResult('Avestan','avst', phraseDB.ae.text)">avestan</span> • 
@@ -434,8 +471,6 @@ function setFontFeatures ( features ) {
 <span class="trigger" dir="rtl" onclick="getResult('Ugaritic','ugar', phraseDB.uga.text)">ugaritic</span>
 
 </p>
-
-</details>
 
 
 
