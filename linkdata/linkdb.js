@@ -1,92 +1,5 @@
 
 
-// Selections available when using the Font Lister app, used by /scripts/links
-var fontLister = {  
-    'adlm':[['Adlam','adlm']],
-    'arab':[['Arabic','arab'], 
-			['African', 'arab-afr'],
-			['Nastaliq', 'arab-aran'],
-			], 
-    'armi':[['Imperial Aramaic','armi']],
-    'armn':[['Armenian','armn']],
-    'bali':[['Balinese', 'bali']], 
-    'bamu':[['Bamum', 'bamu']], 
-    'batk':[['Batak', 'batk']], 
-    'bass':[['Bassa Vah', 'bass']], 
-    'beng':[['Bengali', 'beng']],
-    'bugi':[['Buginese', 'bugi']],
-    'buhd':[['Buhid', 'buhd']],
-    'cans':[['UCAS', 'cans']],
-    'cakm':[['Chakma', 'cakm']],
-    'cher':[['Cherokee', 'cher']],
-    'copt':[['Coptic', 'copt']],
-    'cyrl':[['Cyrillic', 'cyrl']],
-    'deva':[['Devanagari', 'deva']],
-    'egyp':[['Egyptian Hieroglyphs', 'egyp']],
-    'elym':[['Elymaic', 'elym']],
-    'ethi':[['Ethiopic', 'ethi']],
-    'geor':[['Georgian', 'geor']],
-    'grek':[['Greek', 'grek']],
-    'gujr':[['Gujarati', 'gujr']],
-    'gong':[['Gunjala Gondi', 'gong']],
-    'guru':[['Gurmukhi', 'guru']],
-    'hano':[['Hanunoo', 'hano']],
-    'hani':[['Simplified Chinese', 'hans'],
-    		['Traditional Chinese', 'hant']],
-    'hang':[['Hangul', 'hang']],
-    'hatr':[['Hatran', 'hatr']],
-    'hebr':[['Hebrew', 'hebr']],
-    'hung':[['Old Hungarian', 'hung']],
-    'jpan':[['Japanese', 'jpan']],
-    'java':[['Javanese', 'java']],
-    'khmr':[['Khmer', 'khmer']],
-    'knda':[['Kannada', 'knda']],
-    'laoo':[['Lao', 'laoo']],
-    'lana':[['Tai Tham', 'lana']],
-    'latn':[['Latin', 'latn']],
-    'lepc':[['Lepcha', 'lepc']],
-    'limb':[['Limbu', 'limb']],
-    'lisu':[['Lisu', 'lisu']],
-    'mand':[['Mandaic', 'mand']],
-    'mend':[['Mende Kikakui', 'mend']],
-    'mong':[['Mongolian', 'mong']],
-    'mlym':[['Malayalam', 'mlym']],
-    'mtei':[['Meetei Mayek', 'mtei']],
-    'mymr':[['Myanmar', 'mymr']],
-    'nbat':[["Nabataean", 'nbat']],
-    'newa':[["Newa", 'newa']],
-    'nkoo':[["N’Ko", 'nkoo']],
-    'osge':[["Osage", 'osge']],
-    'olck':[["Ol Chiki", 'olck']],
-    'orya':[["Oriya", 'orya']],
-    'osma':[["Osmanya", 'osma']],
-    'palm':[["Palmyrene", 'palm']],
-    'phag':[["PhagsPa", 'phag']],
-    'phnx':[["Phoenician", 'phnx']],
-    'phli':[["Pahlavi", 'phli']],
-    'prti':[["Parthian", 'prti']],
-    'rohg':[["Hanifi Rohingya", 'rohg']],
-    'runr':[["Runic", 'runr']],
-    'saur':[['Saurashtra', 'saur']],
-    'shaw':[['Shavian', 'shaw']],
-    'sinh':[['Sinhala', 'sinh']],
-    'sund':[['Sundanese', 'sund']],
-    'syrc':[['Syriac', 'syrc']],
-    'tale':[['Tai Le', 'tale']],
-    'tagb':[['Tagbanwa', 'tagb']],
-    'talu':[['New Tai Lü', 'talu']],
-    'taml':[['Tamil', 'taml']],
-    'telu':[['Telugu', 'telu']],
-    'tavt':[['Tai Viet', 'tavt']],
-    'thaa':[['Thaana', 'thaa']],
-    'thai':[['Thai', 'thai']],
-    'tibt':[['Tibetan', 'tibt']],
-    'tfng':[['Tifinagh', 'tfng']],
-    'ugar':[['Ugaritic', 'ugar']],
-    'vaii':[['Vai', 'vaii']],
-    'yiii':[['Yi', 'yiii']],
-    }
-
 
 
 // Script summary pages, used by /scripts/links
@@ -2559,13 +2472,16 @@ layout:[	]
 ahom:{ script:"Ahom", code:"Ahom", name:"Ahom (other names)"
 SCRIPT: for main title & menu & some links, it is the plain script name
 CODE: initial cap, used for scriptsource link
-NAME: use name also if there are alternative names
+NAME: use this also if there are alternative names
 
 dates:"15thC – today", start:"1400", end:"", current_usage:""
 DATES: mostly from http://www.worldswritingsystems.org/
-CURRENT_USAGE: should be empty if the script is in active use by a large number of people, or if the script isn't in use today
-	if not, use one of the following labels: limited, endangered, liturgical, notation
-END: should be empty for scripts that are not historic
+CURRENT_USAGE: 
+	empty if the script is in active use by a large number of people
+	empty if the script isn't in use today
+	otherwise, use one of: limited, endangered, liturgical, notation
+END: empty for scripts that are not historic
+	12thC would be 1100
 
 status:""
 STATUS: allows for more information about the script's use, for modern scripts
@@ -2577,7 +2493,7 @@ info:{ wikipedia:"Ahom_alphabet", omniglot:"ahom" },
 NOTE link end text, unicode & scriptsource info is obtained elsewhere, this is just for wikipedia & omniglot
 NOTE occasionally, if it doesn't use a standard url, omniglot may contain a full url
 
-local: 	[{ name:"Introduction to Indic Scripts", url:"indic-overview" }
+local: 	[ { name:"Introduction to Indic Scripts", url:"indic-overview" }
 		],
 LOCAL: other useful descriptions on r12a site
 
