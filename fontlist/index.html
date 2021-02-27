@@ -99,6 +99,7 @@ function getSection (script, scriptName, sample, style='', lang='', fontfeatures
 		if ((fontDB[r].locales.has(script) && style === '') || 
 			(fontDB[r].style && fontDB[r].locales.has(script) && fontDB[r].style === style)) {
 			
+ 			if (fontDB[r].style === style) console.log('For',style,' found ',fontDB[r].name)
 			// skip fonts that are not from one of the main sources
 			if (fontDB[r].locales.has('other')) continue
 			
@@ -242,7 +243,7 @@ function setFontFeatures ( features ) {
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->26 February, 2021<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->27 February, 2021<!-- #EndDate -->
 <span id="versionTop">• recent changes 
   <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages" title="Show commits for the whole scripts repository.">scripts</a>/<a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/fontlist" title="Show commits for scripts/fontlist.">fontlist</a> • leave a <a target="_blank" href="https://github.com/r12a/scripts/issues/new?title=[fontlist]%20%20BRIEF_TITLE_GOES_HERE&amp;body=%5Bsource%5D%20https%3A%2F%2Fr12a.github.io%2Fscripts%2Ffontlist%0A%0A" title="Leave a comment.">comment</a></span>
   </p>
@@ -553,7 +554,7 @@ function setFontFeatures ( features ) {
 
 <h2>General usage</h2>
 <p>A downwards pointing arrow next to a Mac or Windows icon indicates that the font needs to be downloaded by the user before it is available. (If you are choosing fonts for use in a CSS font-family property, you should be cautious about adding these fonts, since the reader may not have downloaded them.)</p>
-<p>The default text used is  article 1 of the <a href="http://www.ohchr.org/EN/UDHR/Pages/SearchByLang.aspx">Universal Declaration of Human Rights</a>, taken from <a href="https://unicode.org/udhr/translations.html">this Unicode page</a>, wherever I could find it. I created a few instances myself, where it was missing, and occasionally I resorted to other texts or even arbitrary lists of characters.</p>
+<p>The default text used is  article 1 of the <a href="http://www.ohchr.org/EN/UDHR/Pages/SearchByLang.aspx">Universal Declaration of Human Rights</a>, taken from <a href="https://unicode.org/udhr/translations.html">this Unicode page</a>, wherever I could find it. I created a few instances myself, where it was missing, and otherwise I resorted to other texts.</p>
 <p>In some cases, a square box with a cross in it is displayed (this only occurs in the text view if you have the Adobe NotDef font installed). This indicates that the font doesn't cover all the glyphs needed to represent the sample text. Most often this applies to punctuation or other common characters. In Latin text, in particular, it indicates which fonts support extended characters and which don't. In normal use in a Web browser, glyphs for such characters will be backfilled by using a glyph from some other font.</p>
 <p>All images are set to 28px in size. </p>
 
@@ -592,6 +593,14 @@ function setFontFeatures ( features ) {
 
 <h2>Font sources</h2>
 <p>The Mac and Windows fonts used in the images are provided by the Operating System (although, as mentioned earlier, some fonts need to be downloaded using the OS font management tools). The SIL fonts are provided on <a href="https://software.sil.org/fonts/">their download page</a>. The Noto fonts used in images are typically taken from the <a href="https://github.com/googlefonts/noto-fonts/tree/master/phaseIII_only/hinted/ttf">Phase III list on GitHub</a>, although some may be older and sourced from <a href="https://www.google.com/get/noto/">the public site</a>.</p>
+
+<h2>Customising via the URL</h2>
+<p>You can specify what you want to see in the URL. The parameters are:</p>
+<ol>
+<li><code>script</code>: (required) This is a script code, or a script code plus language/region code that is used in the database. For example, <a href="index?script=arab">script=arab</a>, or <a href="index?script=arab-afr">script=arab-afr</a>.</li>
+<li><code>style</code>: (optional) A writing style. This should be one of the font grouping names listed above. For example, <a href="index?script=arab&style=nastaliq">script=arab&amp;style=nastaliq</a>, or <a href="index?script=thai&style=loopless">script=thai&amp;style=loopless</a>, or <a href="index?script=hans&style=kai">script=hans&amp;style=kai</a>.</li>
+<li><code>text</code>: (optional) If you use this, the standard phrase will be replaced by the text you supply, and the results will be shown as text, rather than images (so you'll need to have the font on your system to see the result). For example, <a href="index?script=grek&text=άνθρωποι">script=grek&amp;text=άνθρωποι</a>.</li>
+</ol>
 </details>
 
 
@@ -605,12 +614,16 @@ function setFontFeatures ( features ) {
 <script>
 // check for parameters and take appropriate action
 var scriptParameter, textParameter
+var styleParameter = ''
 parameters = location.search.split('&');
 parameters[0] = parameters[0].substring(1);
 for (var p=0;p<parameters.length;p++) {  
 	pairs = parameters[p].split('=');
 	if (pairs[0] == 'script') { if (pairs[1]) { scriptParameter = pairs[1] } }
 	if (pairs[0] === 'text') { if (pairs[1]) { textParameter = pairs[1] } }
+	if (pairs[0] === 'style') { if (pairs[1]) { styleParameter = pairs[1] } }
+	if (styleParameter === 'monoline' || styleParameter === 'mono') styleParameter = 'sans'
+	if (styleParameter === 'modulated' || styleParameter === 'mod') styleParameter = 'serif'
 	}
 if (scriptParameter && textParameter) {
 	document.getElementById('showGraphics').checked = false
@@ -618,16 +631,16 @@ if (scriptParameter && textParameter) {
 	document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: normal; }'
 	document.getElementById('showFonts').checked = true
 	document.getElementById('inputText').value = decodeURI(textParameter)
-	getResult(scriptParameter,scriptParameter, decodeURI(textParameter))
+	getResult(scriptParameter,scriptParameter, decodeURI(textParameter), styleParameter)
 	window.location = '#result'
 	}
-else if (scriptParameter) {
+else if (scriptParameter !== '') {
 	document.getElementById('showGraphics').checked = true
 	document.getElementById('wrapLines').checked = false
 	document.getElementById('fontWhiteSpace').innerHTML = '.text { white-space: nowrap; }'
 	document.getElementById('showFonts').checked = false
 	document.getElementById('inputText').value = ''
-	getResult(scriptParameter,scriptParameter, '')
+	getResult(scriptParameter,scriptParameter, '', styleParameter)
 	window.location = '#result'
 	}
 </script>
