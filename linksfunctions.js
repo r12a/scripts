@@ -63,9 +63,8 @@ function getData (script) {
 		if (temp !== '<tr><th>This site:</th><td></td></tr>') out += temp
 		}
 
-
 	// character detail
-	if (charNotesList[lc] && ssHistory[lc]) {
+	if (charNotesList[lc] || ssHistory[lc]) {
 		out += '<tr><td>Character detail:</td><td>'
 		if (charNotesList[lc]) out += '<p><a href="/scripts/'+charNotesList[lc][1]+'">Character notes</a></p>'
 		out += '<p><a href="http://scriptsource.org/entry/'+ssHistory[lc]+'" >Unicode historical documents</a></p>'
@@ -74,6 +73,23 @@ function getData (script) {
 
 
 	// character usage
+	temp = ''
+	beginning = true
+	for (lang in langs) {
+		if (langs[lang].script === script) {
+			if (! beginning) temp += ' • '
+			beginning = false
+			temp += '<a href="../app-charuse/?language='+lang+'">'+langs[lang].name+'</a> '
+			}
+		}
+	if (temp !== '') {
+		out += '<tr><td>Character usage:</td><td>'
+		out += temp
+		out += '</td></tr>'
+		}
+		
+		
+/*	var usageFound = false
 	out += '<tr><td>Character usage:</td><td>'
 		beginning = true
 		for (lang in langs) {
@@ -84,7 +100,7 @@ function getData (script) {
 				}
 			}
 		out += '</td></tr>'
-		
+		*/
 		
 	// charts
 	if (record.charts) {
@@ -104,7 +120,7 @@ function getData (script) {
 	if (temp !== '<tr><td>Character apps:</td><td></td></tr>') out += temp
 
 
-	// fonts
+	/* old fonts
 	temp = ''
 	if (fontLister[lc]) {
 		temp = '<tr><td>Fonts:</td><td>'
@@ -112,7 +128,17 @@ function getData (script) {
 		}
 	temp += '</td></tr>'
 	if (temp !== '<tr><td>Character apps:</td><td></td></tr>') out += temp
+	*/
 
+	//  fonts
+	temp = ''
+	if (sampleScriptsIndex[lc].font) {
+		temp = '<tr><td>Fonts:</td><td>'
+		for (let i=0;i<sampleScriptsIndex[lc].font.length;i++) temp += '<p><a href="fontlist?script='+sampleScriptsIndex[lc].font[i]+'">'+sampleScriptsIndex[lc].font[i]+'</a></p>'
+		}
+	temp += '</td></tr>'
+	if (temp !== '<tr><td>Character apps:</td><td></td></tr>') out += temp
+	
 	// phrases
 	temp = ''
 	if ((phrasesList[lc] || sampleScriptsIndex[lc])) {
