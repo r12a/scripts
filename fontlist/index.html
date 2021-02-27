@@ -99,7 +99,7 @@ function getSection (script, scriptName, sample, style='', lang='', fontfeatures
 		if ((fontDB[r].locales.has(script) && style === '') || 
 			(fontDB[r].style && fontDB[r].locales.has(script) && fontDB[r].style === style)) {
 			
- 			if (fontDB[r].style === style) console.log('For',style,' found ',fontDB[r].name)
+			 if (fontDB[r].style === style) console.log('For',style,' found ',fontDB[r].name)
 			// skip fonts that are not from one of the main sources
 			if (fontDB[r].locales.has('other')) continue
 			
@@ -152,7 +152,7 @@ function getSection (script, scriptName, sample, style='', lang='', fontfeatures
 			
 			if (document.getElementById('showGraphics').checked) {
 				out += '<div class="sample"'
-				out += 'dir="auto" style="font-family:\''+fontDB[r].name+'\', \'Adobe NotDef\'"><img src="img/'+script+'/'+fontDB[r].name.toLowerCase().replace(/ /g,'')+'.png" alt="'+'NOT FOUND'+'"></div>'
+				out += 'dir="auto" style="font-family:\''+fontDB[r].name+'\', \'Adobe NotDef\'"><img src="img/'+script.substring(0,4)+'/'+fontDB[r].name.toLowerCase().replace(/ /g,'')+'.png" alt="'+'NOT FOUND'+'"></div>'
 				}
 
 			out += '</div>'
