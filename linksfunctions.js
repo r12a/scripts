@@ -132,7 +132,7 @@ function getData (script) {
 
 	//  fonts
 	temp = ''
-	if (sampleScriptsIndex[lc].font) {
+	if (sampleScriptsIndex[lc] && sampleScriptsIndex[lc].font) {
 		temp = '<tr><td>Fonts:</td><td>'
 		for (let i=0;i<sampleScriptsIndex[lc].font.length;i++) temp += '<p><a href="fontlist?script='+sampleScriptsIndex[lc].font[i]+'">'+sampleScriptsIndex[lc].font[i]+'</a></p>'
 		}
