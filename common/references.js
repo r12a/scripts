@@ -100,12 +100,12 @@ function setFootnoteRefs () {
 		
 		if (itemArray.length > 1) {
 			if (itemArray[1][0] === '#') locn = itemArray[1]
-			else pages = '^'+itemArray[1]
+			else pages = '<sub>'+itemArray[1]+'</sub>'
 			}
 		url = reflist[id].url
 		
 		out = '<a class="fn" target="_blank" title="'+authors+', '+title
-		if (pages) out += ', p.'+pages.replace(/:/,'')
+		if (pages) out += ', p.'+pages.replace(/<sub>/,'').replace(/<\/sub>/,'')
 		if (locn) out += ', §'+locn.replace(/#/,'')
 		out += '" href="'+url+locn+'">'+counter+pages+more+'</a>'
 		fnrefs[i].outerHTML = out
