@@ -1,13 +1,21 @@
 reflist = {
 
 
+"c": {
+"url":"https://unicode-org.github.io/cldr-staging/charts/latest/summary/or.html",
+"authors": "Unicode Consortium",
+"title":"CLDR, Locale Data Summary for Odia",
+"reviewed":false
+},
+
 "d": {
 "url":"#refs",
 "authors": "Peter T. Daniels and William Bright",
 "title":"The World's Writing Systems",
 "publisher":"Oxford University Press",
+"pages":"404-407",
 "isbn":"0-19-507993-0",
-"reviewed":true
+"reviewed":false
 },
 
 "e02": {
@@ -16,11 +24,18 @@ reflist = {
 "title":"On Oriya VA and WA, and a proposal to encode one Oriya letter in the UCS",
 },
 
-"o": {
-"url":"https://www.omniglot.com/writing/bamum.htm",
-"authors": "Omniglot",
-"title":"Bamum syllabary",
+"rmcs": {
+"url":"https://www.w3.org/TR/predefined-counter-styles/#oriya-styles",
+"authors": "Richard Ishida",
+"title":"Ready-made Counter Styles",
 "reviewed":true
+},
+
+"msg": {
+"url":"https://download.microsoft.com/download/a/e/f/aef09212-6102-484c-8f7d-39fffcaacc97/ori-ind-styleguide.pdf",
+"authors": "Microsoft",
+"title":"Odia style guide",
+"reviewed":false
 },
 
 "r": {
@@ -44,6 +59,7 @@ reflist = {
 "sub":"Chapter 12.5: South and Central Asia I, Oriya (Odia)",
 "pages":"487-490",
 "isbn":"978-1-936213-16-0.",
+"reviewed": true
 },
 
 "ul": {
