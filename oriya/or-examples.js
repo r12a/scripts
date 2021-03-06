@@ -314,6 +314,14 @@ autoExpandExamples.or = `
 ଜୋଗୁ|because||jogu
 ନାମ|name||namô
 
+ଦୁଃଖ|sorry|dukkʰɔ
+ଡ୍ରପ୍-ଡାଉନ୍|drop-down|ɖrɔp-ɖaun
+ଇ-ମେଲ୍|e-mail|i-mel
+ଦ୍ୱିତୀୟୋଽଧ୍ୟାୟଃ||| dwitīyo'dhyāyaḥ
+ପଦ୍ମ|lotus|pɔdmɔ
+ପ୍ରଶ୍ନ|question|prɔsnɔ
+
+
 
 `
 

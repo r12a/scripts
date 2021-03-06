@@ -15,7 +15,7 @@ reflist = {
 "publisher":"Oxford University Press",
 "pages":"404-407",
 "isbn":"0-19-507993-0",
-"reviewed":false
+"reviewed":true
 },
 
 "e02": {
@@ -38,14 +38,7 @@ reflist = {
 "reviewed":false
 },
 
-"r": {
-"url":"https://www.unicode.org/L2/L2007/07023-bamum-report.pdf",
-"authors": "Riley, Charles",
-"title":"L2/07-023: Towards the Encoding of the Bamum Script in the UCS",
-"reviewed":true
-},
-
-"sl2011": {
+"sl11": {
 "url":"https://www.unicode.org/L2/L2012/12380-odia-naming.pdf",
 "authors": "Swaran Lata",
 "title":"L2/12-380: Letter requesting change of name in Unicode",
@@ -70,16 +63,16 @@ reflist = {
 },
 
 "wl": {
-"url":"https://en.wikipedia.org/wiki/Bamum_language",
+"url":"https://en.wikipedia.org/wiki/Odia_language",
 "authors": "Wikipedia",
-"title":"Bamum language",
-"reviewed":true
+"title":"Odia language",
+"reviewed":false
 },
 
 "ws": {
-"url":"https://en.wikipedia.org/wiki/Bamum_script",
+"url":"https://en.wikipedia.org/wiki/Odia_script",
 "authors": "Wikipedia",
-"title":"Bamum script",
+"title":"Odia script",
 "reviewed":true
 },
 
