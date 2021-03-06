@@ -47,6 +47,7 @@ var scriptNotes= {
     'mymr':[['Myanmar/Burmese', 'myanmar'],
 			['Shan', 'myanmar/mymr-shn']],
     'nkoo':[["N’Ko", 'nko']],
+    'orya':[["Odia (Oriya)", 'oriya']],
     'osge':[["Osage", 'osage']],
     'sinh':[['Sinhala', 'sinhala/']],
     'sund':[['Sundanese', 'sundanese/']],
@@ -140,6 +141,7 @@ var scriptNotesByRegion = {
 		['Northern Thai', 'taitham/northernthai'],
 		],
 	'O':[
+		['Odia (Oriya)', 'oriya/'],
 		['Osage', 'osage/'],
 		],
 	'P':[
