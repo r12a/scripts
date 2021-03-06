@@ -59,7 +59,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->23 December, 2020<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->3 March, 2021<!-- #EndDate -->
 <span id="versionTop"></span>
 </p>
 
@@ -826,11 +826,13 @@ used nowadays for indicating different tones only. For example, compare the tone
 
 <section id="prescript_vowels">
 <h3>Prescript vowel-signs</h3>
-<p>Two vowel-signs appear to the left of the base consonant letter or cluster, eg. <span class="ex" lang="shn">မေး</span>.</p>
+
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ေ␣ႄ</figure>
-<p>These are combining marks that are always stored after the base consonant. The font places the glyph before the base consonant.</p>
+
+<p>Two vowel-signs appear to the left of the base consonant letter or cluster, eg. <span class="ex" lang="shn">မေး</span>.</p>
+<p class="info">These are combining marks that are always stored after the base consonant. The font places the glyph before the base consonant.</p>
 <p>OR</p>
-<p>Like Thai, Lao uses a visual encoding model, so these characters are not combining characters, and are typed and stored before the base.</p>
+<p class="info">Like Thai, Lao uses a visual encoding model, so these characters are not combining characters, and are typed and stored before the base.</p>
 <p class="info">Some input methods may allow the user to type this vowel before the consonant, whereas others will expect it to be typed after, per the stored order.</p>
 <p class="info">These vowel-signs are placed before the start of the <em>syllable</em>. This means that a word with a consonant cluster at the start separates the prescript vowel from any postscript vowels by more than one consonant character, eg. <span class="eg" lang="th">เปล่า</span>.</p>
 </section>
@@ -844,8 +846,9 @@ used nowadays for indicating different tones only. For example, compare the tone
 <h3>Circumgraphs</h3>
 <p id="def-circumgraph" class="explanatoryintro definitionStub"></p>
 
-<p>Three vowels  are produced by a single combining character with visually separate parts, that appear on different (mostly opposite) sides of the consonant onset eg.   <span class="charExample" translate="no"><span class="ex" lang="km">កើ</span> <span class="trans">kaᵊ</span> <span class="ipa">kaw</span></span>.</p>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ᭀ␣ᭃ␣ᭁ</figure>
+
+<p>Three vowels  are produced by a single combining character with visually separate parts, that appear on different (mostly opposite) sides of the consonant onset eg.   <span class="charExample" translate="no"><span class="ex" lang="km">កើ</span> <span class="trans">kaᵊ</span> <span class="ipa">kaw</span></span>.</p>
 <p><span class="leadin">Encoding.</span> Two of these circumgraphs  can be written as a single character, or as two.</p>
 
 <ol class="alternatives">
@@ -894,6 +897,9 @@ used nowadays for indicating different tones only. For example, compare the tone
 <section id="compositeVowels">
 <h3>Composite vowels</h3>
 
+<p id="def-compositevowel" class="explanatoryintro definitionStub"></p>
+
+<p>The only composite vowels occur when the circumgraphs are encoded as pairs of characters (see <a class="secref">vowel_encoding</a>).</p>
 <p>Vowels represented by combinations of the above characters:</p>
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ᩮ–ᩡ␣ᩰ–ᩡ␣–᩠ᩅᩫᩡ␣–᩠ᩅᩫ␣ᩯ–ᩡ␣ᩮ–ᩬᩨᩡ␣ᩮ–ᩨ–␣ᩮ–ᩬᩨ␣ᩰ–ᩬᩡ␣ᩋᩣ␣ ␣ᩮ–᩠ᨿ␣–ᩧ᩠ᨿ␣–ᩨ᩠ᨿ␣–ᩩᨿ␣–ᩴ᩠ᨿ␣ᩮ–ᩅ␣ᩮ–ᩬᩨ᩠ᨿ␣ᩮ–ᩬᩨᩡ᩠ᨿ␣ᩯ–ᩅ␣ᩓ᩠ᩅ␣–᩠ᩅ᩠ᨿ␣ᩱ–᩠ᨿ␣–ᩣ᩠ᨿ␣ᩮ–ᩢᩣ␣ᩮ–ᩢᩤ</figure>
@@ -1056,6 +1062,50 @@ used nowadays for indicating different tones only. For example, compare the tone
 <section id="vowel_encoding">
 <h3>Encoding choices</h3>
 <p class="instructions">Visually, several of the standalone vowels and some vowel-signs look as it they could be composed of smaller parts. This section compares approaches and considers the relevance of <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD) and  <span class="termref" href="../glossary/#nfc">Unicode Normalisation Form C</span> (NFC) to give guidance on which approach is best.</p>
+
+
+
+<section id="vs_encoding">
+<h4>Vowel-signs<a class="selflink" href="#vs_encoding"></a></h4>
+<p>Five of the circumgraphs  can be written as a single character, or as two characters, the second being <span class="codepoint" translate="no"><span lang="ban">ᬵ</span> [<a href="/scripts/balinese/block#char1B35" target="c"><span class="uname">U+1B35 BALINESE VOWEL SIGN TEDUNG</span></a>]</span>  in all  cases.</p>
+
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Precomposed</th>
+<th scope="col">Decomposed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="ban">ᭁ</span> [<a href="balinese#char1B41" target="c"><span class="uname">U+1B41 BALINESE VOWEL SIGN TALING REPA TEDUNG</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="ban">ᭁ</span> [<a href="/scripts/balinese/block#char1B3F" target="c"><span class="uname">U+1B3F BALINESE VOWEL SIGN TALING REPA</span></a> + <a href="/scripts/balinese/block#char1B35" target="c"><span class="uname">U+1B35 BALINESE VOWEL SIGN TEDUNG</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="ban">ᭃ</span> [<a href="/scripts/balinese/block#char1B43" target="c"><span class="uname">U+1B43 BALINESE VOWEL SIGN PEPET TEDUNG</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="ban">ᭃ</span> [<a href="/scripts/balinese/block#char1B42" target="c"><span class="uname">U+1B42 BALINESE VOWEL SIGN PEPET</span></a> + <a href="/scripts/balinese/block#char1B35" target="c"><span class="uname">U+1B35 BALINESE VOWEL SIGN TEDUNG</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="ban">ᭁ</span> [<a href="/scripts/balinese/block#char1B41" target="c"><span class="uname">U+1B41 BALINESE VOWEL SIGN TALING REPA TEDUNG</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="ban">ᭁ</span> [<a href="/scripts/balinese/block#char1B3F" target="c"><span class="uname">U+1B3F BALINESE VOWEL SIGN TALING REPA</span></a> + <a href="/scripts/balinese/block#char1B35" target="c"><span class="uname">U+1B35 BALINESE VOWEL SIGN TEDUNG</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="ban">ᬻ</span> [<a href="/scripts/balinese/block#char1B3B" target="c"><span class="uname">U+1B3B BALINESE VOWEL SIGN RA REPA TEDUNG</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="ban">ᬻ</span> [<a href="/scripts/balinese/block#char1B3A" target="c"><span class="uname">U+1B3A BALINESE VOWEL SIGN RA REPA</span></a> + <a href="/scripts/balinese/block#char1B35" target="c"><span class="uname">U+1B35 BALINESE VOWEL SIGN TEDUNG</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="ban">ᬽ</span> [<a href="/scripts/balinese/block#char1B3D" target="c"><span class="uname">U+1B3D BALINESE VOWEL SIGN LA LENGA TEDUNG</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="ban">ᬽ</span> [<a href="/scripts/balinese/block#char1B3C" target="c"><span class="uname">U+1B3C BALINESE VOWEL SIGN LA LENGA</span></a> + <a href="/scripts/balinese/block#char1B35" target="c"><span class="uname">U+1B35 BALINESE VOWEL SIGN TEDUNG</span></a>]</span></td>
+</tr>
+</tbody>
+</table>
+<p class="info">The single code point per vowel-sign is preferred, however the parts are separated in <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD), and recomposed in <span class="termref" href="../glossary/#nfc">Unicode Normalisation Form C</span> (NFC), so both approaches are canonically equivalent.</p>
+<p class="info">Whichever approach is used, the vowel-signs must be typed and stored after the consonant characters they surround, and in  left to right order.</p>
+</section>
+
+
+
+
 
 <section id="vs_encoding">
 <h4>Vowel-signs</h4>
