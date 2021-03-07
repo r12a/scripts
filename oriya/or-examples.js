@@ -64,7 +64,7 @@ autoExpandExamples.or = `
 ଅଣଓସାରିଆ|narrow||ôṇôosaria
 ସରୁଆ|thin||sôrua
 ପତଳା|thin||pôtôḷa
-ନାରୀ|woman||narī
+ନାରୀ|woman|nari|narī
 ମହିଳା|woman||môhiḷa
 ପୁରୁଷ|man (adult male)||puruṣô
 ମାନବ|man (human being)||manôbô
@@ -107,7 +107,7 @@ autoExpandExamples.or = `
 ମଞ୍ଜି|seed||môñji
 ପତ୍ର|leaf||pôtrô
 ଚେର|root||cerô
-ମୂଳ|root||mūḷô
+ମୂଳ|root|muɭɔ|mūḷô
 ବକଳ|bark (of a tree)||bôkôḷô
 ଛେଲି|bark (of a tree)||cheli
 ଫୁଲ|flower||phulô
@@ -316,7 +316,7 @@ autoExpandExamples.or = `
 
 ଦୁଃଖ|sorry|dukkʰɔ
 ଡ୍ରପ୍-ଡାଉନ୍|drop-down|ɖrɔp-ɖaun
-ଇ-ମେଲ୍|e-mail|i-mel
+ଇ-ମେଲ୍|e-mail|i-mel|i-mel
 ଦ୍ୱିତୀୟୋଽଧ୍ୟାୟଃ||| dwitīyo'dhyāyaḥ
 ପଦ୍ମ|lotus|pɔdmɔ
 ପ୍ରଶ୍ନ|question|prɔsnɔ
