@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <title>Conjunct generator</title>
 <style>
-table { font-size: 28px; }
+body { margin: 1em; }
+table { font-size: 28px; clear: both; }
 th { color: crimson; }
 th.second { color: tan; }
 td { text-align: center; cursor: pointer; }
@@ -19,6 +20,10 @@ border-radius: 10px;
 line-height: 1.5em;
 padding: 5px;
 border: 1px solid #ddd; vertical-align: top; }
+#exclusions { width: 60%; }
+.tips { text-align: start; font-size: 14px; }
+.tipBody td, .tipBody th { vertical-align: top; }
+.tipHead th { vertical-align: top; text-align: start; }
 </style>
 </head>
 
@@ -28,10 +33,11 @@ border: 1px solid #ddd; vertical-align: top; }
 <div id="inputPanel">
 <p><label>Set font to <input type="text" onChange="changeFontFamily(this.value)"/></label>  Font size: <input id="fontSizeSlider" type="range" min="10" max="200" step="1" value="28" oninput="changeFontSize(this.value)" style="width:12em;"></p>
 <p>Consonants: <input type="text" id="consonants" placeholder="List here, no separators."> Virama (hex code): <input type="text" id="virama"></p>
+<p>Exclusions: <input type="text" id="exclusions" placeholder="Comma-separated list of pairs to exclude."></p>
 </div>
 
 <div id="parkingdiv">
-Parking lot:<br>
+Parking lot: &nbsp; &nbsp; <button onclick="showInUniView(document.getElementById('parkingLot').value); return false;">Show in UniView</button><br>
 <textarea id="parkingLot" placeholder="Click on a cluster to save it here."></textarea>
 </div>
 
@@ -39,16 +45,42 @@ Parking lot:<br>
 
 
 <table id="theTable">
-
+<thead>
+<tr><th class="second tipHead" colspan="2">Usage tips:</th></tr>
+</thead>
+<tbody class="tipBody">
+<tr>
+<th class="second tips"><p>General operation</p></th>
+<td><p class="tips">Add a list of consonants to the 'Consonants' field (with no spaces between them), and add the hex code point value for the virama to be used to the 'Virama' field. You'll want to see results for a particular font, so type the name of the font in the field just above.</p>
+<p class="tips">As you mouse over a table cell, the components of that cell will be shown in the top right corner of the page. This is particularly useful if your table is so large that you can no longer see the column or row headings.</p></td>
+</tr>
+<tr>
+<th class="second tips"><p>Parking lot</p></th>
+<td><p class="tips">If you click on a cell in the rendered list, it will be added to the parking lot area. You may want to do this for items you want to pick out for discussion or illustration. The items will all be space-separated.</p>
+<p class="tips">You can view the contents of the parking lot character by character by clicking on the Show in UniView button.</p></td>
+</tr>
+<tr><th class="second tips"><p>Using exclusions</p></th><td>
+<p class="tips">You can use the exclusion list to prevent results being displayed for certain cells.  It's a low tech approach to removing phonetic sequences that don't actually create conjuncts for the orthography being tested.</p>
+<p class="tips">You need to add a space-separated list of (incorrect) conjunct forms to the input field labelled 'Exclusions'. You could create this list in a number of ways. One way might be to display the full set of conjuncts, and click on all the unwanted combinations. This will add those combinations to the parking lot. If you then save the contents of the parking lot, when you are done, you can copy that set back to the 'Exclusions' field whenever needed. It may be a bit laborious to create the list, but you only need to do it once.</p>
+<p class="tips">You should, of course, also avoid putting consonants into the 'Consonants' field if they never create conjuncts.</p>
+</td></tr>
+</tbody>
 </table>
 
 <script>
 
 function generate (clist, virama) {
+	// get exclusion list
+	exclusions = document.getElementById('exclusions').value.trim()
+	exclusions = exclusions.replace(/\s+/g,' ')
+	exclArray = exclusions.split(' ')
+	const exclSet = new Set(exclArray)
+
+	
 	table = ''
 	virama = String.fromCodePoint('0x'+virama)
+	clist = clist.replace(' ','')
 	consonants = [...clist]
-	//consonants = ["ക", "ഖ", "ഗ", "ഘ", "ങ", "ച", "ഛ", "ജ", "ഝ", "ഞ", "ട", "ഠ", "ഡ", "ഢ", "ണ", "ത", "ഥ", "ദ", "ധ", "ന", "ഩ", "പ", "ഫ", "ബ", "ഭ", "മ", "യ", "ര", "റ", "ല", "ള", "ഴ", "വ", "ശ", "ഷ", "സ", "ഹ", "ഺ"]
 	table += '<tr><th>&nbsp;</th>'
 	for (k=0;k<consonants.length;k++) {
 		table += '<th class="second">'+consonants[k]+'</th>'
@@ -57,7 +89,9 @@ function generate (clist, virama) {
 	for (let i=0;i<consonants.length;i++) {
 		table += '<tr><th>'+consonants[i]+'</th>'
 		for (j=0;j<consonants.length;j++) {
-			table += '<td onMouseOver="document.getElementById(\'preview\').textContent=\''+consonants[i]+virama+consonants[j]+':'+consonants[i]+'+'+consonants[j]+'\'">'+consonants[i]+virama+consonants[j]+'</td>'
+			table += '<td onmouseover="document.getElementById(\'preview\').textContent=\''+consonants[i]+virama+consonants[j]+':'+consonants[i]+'+'+consonants[j]+'\'">'
+			if (! exclSet.has(consonants[i]+virama+consonants[j])) table += consonants[i]+virama+consonants[j]
+			table += '</td>'
 			}
 		table += '</tr>'
 		}
@@ -74,14 +108,17 @@ function changeFontFamily ( newFont ) {
 
 function changeFontSize ( newSize ) {
 	document.getElementById( 'theTable' ).style.fontSize = newSize + 'px'
-	document.getElementById( 'preview' ).style.fontSize = newSize + 'px'
+	//document.getElementById( 'preview' ).style.fontSize = newSize + 'px'
 	}
 
 function saveForReview ( evt ) {
 	parkingLot = document.getElementById('parkingLot')
-	parkingLot.value += evt.originalTarget.textContent + ' '
+	parkingLot.value += evt.target.textContent + ' '
 	}
 
+function showInUniView (chars) {
+	var uniview = window.open('/uniview/?charlist='+ encodeURIComponent(chars.trim()), 'uniview') 
+	}
 </script>
 </body>
 </html>
