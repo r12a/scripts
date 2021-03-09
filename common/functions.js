@@ -53,6 +53,7 @@ function runCharCounts () {
 	out += runCharCount('.auxiliaryBox', 'Auxiliary')
 	out += runCharCount('.formattingBox', 'Formatting')
 	out += runCharCount('.archaicBox', 'Archaic')
+	out += runCharCount('.foreignBox', 'Other')
 	out += runCharCount('.otherBox', 'Other')
 	out += runCharCount('.deprecatedBox', 'Deprecated')
 	
