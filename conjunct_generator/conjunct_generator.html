@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Conjunct generator</title>
+<style>
+table { font-size: 28px; }
+th { color: crimson; }
+th.second { color: tan; }
+td { text-align: center; cursor: pointer; }
+#parkingdiv { margin-inline-start: 2em; }
+#parkingLot { font-size: 28px; border: 0; width: 50%; height: 3em; }
+#inputPanel { float: left; margin-inline-end: 2em; }
+#preview  { font-size: 48px; padding: 0 1em; position: fixed; top: 0; right: 0; background-color: white; }
+#virama { width: 4em; }
+#submit { color: #0C3;
+font-size: 100%;
+border-radius: 10px;
+line-height: 1.5em;
+padding: 5px;
+border: 1px solid #ddd; vertical-align: top; }
+</style>
+</head>
+
+<body>
+<h1>Conjunct generator &nbsp; &nbsp; <button id="submit" onClick="generate(document.getElementById('consonants').value, document.getElementById('virama').value)">GO</button></h1>
+
+<div id="inputPanel">
+<p><label>Set font to <input type="text" onChange="changeFontFamily(this.value)"/></label>  Font size: <input id="fontSizeSlider" type="range" min="10" max="200" step="1" value="28" oninput="changeFontSize(this.value)" style="width:12em;"></p>
+<p>Consonants: <input type="text" id="consonants" placeholder="List here, no separators."> Virama (hex code): <input type="text" id="virama"></p>
+</div>
+
+<div id="parkingdiv">
+Parking lot:<br>
+<textarea id="parkingLot" placeholder="Click on a cluster to save it here."></textarea>
+</div>
+
+<div id="preview"></div>
+
+
+<table id="theTable">
+
+</table>
+
+<script>
+
+function generate (clist, virama) {
+	table = ''
+	virama = String.fromCodePoint('0x'+virama)
+	consonants = [...clist]
+	//consonants = ["ക", "ഖ", "ഗ", "ഘ", "ങ", "ച", "ഛ", "ജ", "ഝ", "ഞ", "ട", "ഠ", "ഡ", "ഢ", "ണ", "ത", "ഥ", "ദ", "ധ", "ന", "ഩ", "പ", "ഫ", "ബ", "ഭ", "മ", "യ", "ര", "റ", "ല", "ള", "ഴ", "വ", "ശ", "ഷ", "സ", "ഹ", "ഺ"]
+	table += '<tr><th>&nbsp;</th>'
+	for (k=0;k<consonants.length;k++) {
+		table += '<th class="second">'+consonants[k]+'</th>'
+		}
+	table += '</tr>'
+	for (let i=0;i<consonants.length;i++) {
+		table += '<tr><th>'+consonants[i]+'</th>'
+		for (j=0;j<consonants.length;j++) {
+			table += '<td onMouseOver="document.getElementById(\'preview\').textContent=\''+consonants[i]+virama+consonants[j]+':'+consonants[i]+'+'+consonants[j]+'\'">'+consonants[i]+virama+consonants[j]+'</td>'
+			}
+		table += '</tr>'
+		}
+	document.getElementById('theTable').innerHTML = table
+	var cells = document.querySelectorAll('td')
+	for (var i=0;i<cells.length; i++) cells[i].addEventListener('click', saveForReview)
+	}
+
+
+function changeFontFamily ( newFont ) {
+	document.getElementById( 'theTable' ).style.fontFamily = newFont
+	document.getElementById( 'preview' ).style.fontFamily = newFont
+	}
+
+function changeFontSize ( newSize ) {
+	document.getElementById( 'theTable' ).style.fontSize = newSize + 'px'
+	document.getElementById( 'preview' ).style.fontSize = newSize + 'px'
+	}
+
+function saveForReview ( evt ) {
+	parkingLot = document.getElementById('parkingLot')
+	parkingLot.value += evt.originalTarget.textContent + ' '
+	}
+
+</script>
+</body>
+</html>
