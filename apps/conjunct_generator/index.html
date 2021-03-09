@@ -31,7 +31,7 @@ border: 1px solid #ddd; vertical-align: top; }
 <h1>Conjunct generator &nbsp; &nbsp; <button id="submit" onClick="generate(document.getElementById('consonants').value, document.getElementById('virama').value)">GO</button></h1>
 
 <div id="inputPanel">
-<p><label>Set font to <input type="text" onChange="changeFontFamily(this.value)"/></label>  Font size: <input id="fontSizeSlider" type="range" min="10" max="200" step="1" value="28" oninput="changeFontSize(this.value)" style="width:12em;"></p>
+<p><label>Set font to <input id="font" type="text" onChange="changeFontFamily(this.value)"/></label>  Font size: <input id="fontSizeSlider" type="range" min="10" max="200" step="1" value="28" oninput="changeFontSize(this.value)" style="width:12em;"></p>
 <p>Consonants: <input type="text" id="consonants" placeholder="List here, no separators."> Virama (hex code): <input type="text" id="virama"></p>
 <p>Exclusions: <input type="text" id="exclusions" placeholder="Comma-separated list of pairs to exclude."></p>
 </div>
@@ -63,7 +63,12 @@ Parking lot: &nbsp; &nbsp; <button onclick="showInUniView(document.getElementByI
 <p class="tips">You can use the exclusion list to prevent results being displayed for certain cells.  It's a low tech approach to removing phonetic sequences that don't actually create conjuncts for the orthography being tested.</p>
 <p class="tips">You need to add a space-separated list of (incorrect) conjunct forms to the input field labelled 'Exclusions'. You could create this list in a number of ways. One way might be to display the full set of conjuncts, and click on all the unwanted combinations. This will add those combinations to the parking lot. If you then save the contents of the parking lot, when you are done, you can copy that set back to the 'Exclusions' field whenever needed. It may be a bit laborious to create the list, but you only need to do it once.</p>
 <p class="tips">You should, of course, also avoid putting consonants into the 'Consonants' field if they never create conjuncts.</p>
+<p class="tips">Another use for the exclusions is to show someone else a particular set of conjuncts. For example, this could be the set of conjuncts that fuses components together, rather than subjoining or conjoing them. You can reproduce this set again by keeping the exclusion list stored somewhere, or you could add the exclusion list to the parameters of the URL if you want to show someone else what you see.</p>
 </td></tr>
+<tr>
+<th class="second tips"><p>Parameters in the URL</p></th>
+<td><p class="tips">The following parameters can be passed to the page via the URL: virama, consonants, exclusions, fonts. This allows you to show someone else a set of conjuncts you are interested in.</p></td>
+</tr>
 </tbody>
 </table>
 
@@ -119,6 +124,22 @@ function saveForReview ( evt ) {
 function showInUniView (chars) {
 	var uniview = window.open('/uniview/?charlist='+ encodeURIComponent(chars.trim()), 'uniview') 
 	}
+
+
+
+
+// check for parameters and take appropriate action
+parameters = location.search.split('&')
+parameters[0] = parameters[0].substring(1)
+parametersFound = false
+for (var p=0;p<parameters.length;p++) {
+	pairs = parameters[p].split('=');
+	if (pairs[0] == 'consonants') { if (pairs[1]) { document.getElementById('consonants').value = decodeURIComponent(pairs[1]); parametersFound = true } }
+	if (pairs[0] == 'virama') { if (pairs[1]) { document.getElementById("virama").value = decodeURIComponent(pairs[1]); parametersFound = true } }
+	if (pairs[0] == 'exclusions') { if (pairs[1]) { document.getElementById("exclusions").value = decodeURIComponent(pairs[1]); parametersFound = true } }
+	if (pairs[0] == 'font') { if (pairs[1]) { document.getElementById("font").value = decodeURIComponent(pairs[1]) } }
+	}
+if (parametersFound) generate(document.getElementById('consonants').value, document.getElementById('virama').value)
 </script>
 </body>
 </html>
