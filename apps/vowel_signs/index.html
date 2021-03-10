@@ -1,28 +1,27 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-GB">
+
 <head>
-<meta charset="UTF-8">
-<title>Consonant-vowel generator</title>
+<meta charset="utf-8"/>
+<title>Font lister</title>
+<meta name="description" content="Shows fonts supplied with Windows10 and Mac OS X, Google Noto, & SIL, by script."/>
+<script src="../../../shared/phrasedb/db.js"> </script>
+
+<link rel="stylesheet" href="../../../shared/style/docs.css" />
+	
+
 <style>
-@font-face {
-    font-family: 'gentiumpluswf';
-    src: url('../../../shared/webfonts/raleway-regular-webfont.woff2') format('woff2'),
-         url('../../../shared/webfonts/raleway-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-	}
-body { margin: 1em; font-family: gentiumpluswf; font-size: 14px;  }
-table { font-size: 28px; clear: both; }
+table { font-size: 24px; clear: both; }
 th { color: tan; padding-inline-end: .5em; }
 th.second { color: tan; }
 td { text-align: center; cursor: pointer; border: 1px dotted #aaa; border-radius: .1em; }
 #parkingdiv { /*margin-inline-start: 2em;*/ }
 #parkingLot { font-size: 28px; border: 0; width: 50%; height: 3em; }
 #inputPanel { margin-inline-end: 2em; }
-#preview  { font-size: 48px; padding: 0 1em; position: fixed; top: 0; right: 0; background-color: white; }
+#preview  { font-size: 48px; padding: 0; float: right; position: sticky; top: 0; right: 0; background-color: white; clear: both; z-index: 1000; }
 #vowels { /*width: 4em;*/ }
 #submit { color: #0C3;
-font-size: 100%;
+font-size: 250%;
 border-radius: 10px;
 line-height: 1.5em;
 padding: 5px;
@@ -33,15 +32,39 @@ border: 1px solid #ddd; vertical-align: top; }
 .tipHead th { vertical-align: top; text-align: start; }
 .highlighted { color: white; background-color: tan; }
 </style>
+
+
+
+
+<style id="fontSizeStyling">.text { font-size: 60px; }</style> <!-- this sets the default, but is changed by scripting -->
+<style id="fontWhiteSpace">.text { white-space: nowrap; }</style> <!-- this sets the default, but is changed by scripting -->
+
+<script src="../../../shared/code/boilerplate.js"></script>
+
+<script>
+</script>
+
 </head>
 
-<body>
-<h1>Consonant-vowel generator &nbsp; &nbsp; 
-<button id="submit" onClick="generate(document.getElementById('consonants').value, document.getElementById('vowels').value)">GO</button></h1>
+<body class="app">
+<header>
+    <div id="header-boilerplate"></div>
+	<script>document.getElementById('header-boilerplate').innerHTML = bp_appHeader('../../../shared/images/world.gif','Consonant-vowel generator', '');</script>
+</header>
 
-<div id="inputPanel">
-<p><label>Set font to <input id="font" type="text" onChange="changeFontFamily(this.value)" style="background-color: tan; opacity: 50%;  border: 1px solid #aaa; padding: 3px;"/></label>  Font size: <input id="fontSizeSlider" type="range" min="10" max="200" step="1" value="28"  oninput="changeFontSize(this.value)" style="width:12em;"></p>
-<p>Consonants: <input type="text" id="consonants" placeholder="List here, no separators."> Vowels: <input type="text" id="vowels" placeholder="Space-separated list."></p>
+<!--h1>Font lister</h1-->
+
+<aside class="sidebar">
+
+<div style="font-size: 90%; margin-bottom: 2em; font-weight: bold;">
+<span>Set font to:</span><br>
+<label><input id="font" type="text" onChange="changeFontFamily(this.value)" style="background-color: #e8d9c5; border: 1px solid #aaa; padding: 3px; font-size: 120%;"/></label><br>
+<span>Font size:</span><br>
+<input id="fontSizeSlider" type="range" min="10" max="200" step="1" value="24"  oninput="changeFontSize(this.value)" style="width:100%;">
+</div>
+
+
+<div style="font-size: 90%; margin-bottom: 2em; font-weight: bold;">
 <p>Choose a preset: <select id="preset" onChange="applyPreset(this.value)">
 <option value=":">None</option>
 <option value="bali">Balinese</option>
@@ -61,23 +84,38 @@ border: 1px solid #ddd; vertical-align: top; }
 <option value="sund">Sundanese</option>
 <option value="tavt">Tai Viet</option>
 </select>
-</p>
-<p>Exclude: 
-<input type="text" id="exclusions" placeholder="Comma-separated list of pairs to exclude."></p>
-<p>Highlight: 
-<input type="text" id="highlights" placeholder="Comma-separated list of pairs to exclude."></p>
+</p></div>
+
+
+</aside>
+
+ 
+
+<div style="display: flex; flex-direction: row; flex-wrap: wrap; margin-inline-start: 7.5%; justify-content: space-between; width:60%;">
+<div style="font-weight: bold; width: 48%;">Consonants:<br><input type="text" id="consonants" placeholder="Space-separated list." style="width: 100%;"></div>
+<div style="font-weight: bold; width: 48%;">Vowels:<br><input type="text" id="vowels" placeholder="Space-separated list." style="width: 100%;"></div>
 </div>
 
-<div id="parkingdiv">
-Parking lot: &nbsp; &nbsp; <button onclick="showInUniView(document.getElementById('parkingLot').value); return false;">Show in UniView</button><br>
-<textarea id="parkingLot" placeholder="Click on a cluster to save it here."></textarea>
-</div>
+<p style="font-weight: bold;">Exclude: 
+<input type="text" id="exclusions" placeholder="Space-separated list of pairs to exclude."></p>
+<p style="font-weight: bold;">Highlight: 
+<input type="text" id="highlights" placeholder="Space-separated list of pairs to exclude."></p>
 
 <div id="preview"></div>
 
+<div style="display: flex; flex-direction: row; flex-wrap: nowrap; margin-inline-start: 7.5%; margin-inline-end: 30%; width: 60%;">
+<div style="font-weight: bold; flex:4;" id="parkingdiv">
+Parking lot: &nbsp; &nbsp; <button onclick="showInUniView(document.getElementById('parkingLot').value); return false;">Show in UniView</button><br>
+<textarea id="parkingLot" placeholder="Click on a cluster to save it here." style="font-weight: normal;font-family: raleway, sans; width: 100%;"></textarea>
+</div>
+<div style="flex:1; text-align: end;"><button id="submit" onClick="generate(document.getElementById('consonants').value, document.getElementById('vowels').value)">GO</button></div>
+</div>
+
+
+
 <table id="theTable">
 <thead>
-<tr><th class="second tipHead" colspan="2">Usage tips:</th></tr>
+<tr><th class="second tipHead" colspan="2" style="text-align: start;">Usage tips:</th></tr>
 </thead>
 <tbody class="tipBody">
 <tr>
@@ -106,6 +144,9 @@ Parking lot: &nbsp; &nbsp; <button onclick="showInUniView(document.getElementByI
 </tr>
 </tbody>
 </table>
+<div class="smallprint"><span id="version">See <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/fontlist/index.html">recent changes</a>. &nbsp;•&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bfontlist%5D%20TITLE_GOES_HERE&amp;body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ffontlist%2F%0A%0A" target="_blank">comment</a>. &nbsp;•&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
 
 <script>
 
@@ -170,12 +211,12 @@ function generate (clist, vlist) {
 		for (j=0;j<vowels.length;j++) {
 			if (includes) {
 				if (inclSet.has(consonants[i]+vowels[j])) {
-					table += '<td class="highlighted" onmouseover="document.getElementById(\'preview\').textContent=\''+consonants[i]+vowels[j]+':'+consonants[i]+'+'+vowels[j]+'\'">'
+					table += '<td class="highlighted" onmouseover="document.getElementById(\'preview\').textContent=\''+consonants[i]+'+'+vowels[j]+' = '+consonants[i]+vowels[j]+'\'">'
 					if (! exclSet.has(consonants[i]+vowels[j])) table += consonants[i]+vowels[j]
 					table += '</td>'
 					}
 				else {
-					table += '<td onmouseover="document.getElementById(\'preview\').textContent=\''+consonants[i]+vowels[j]+':'+consonants[i]+'+'+vowels[j]+'\'">'
+					table += '<td onmouseover="document.getElementById(\'preview\').textContent=\''+consonants[i]+'+'+vowels[j]+' = '+consonants[i]+vowels[j]+'\'">'
 					if (! exclSet.has(consonants[i]+vowels[j])) table += consonants[i]+vowels[j]
 					table += '</td>'
 
@@ -198,6 +239,8 @@ function generate (clist, vlist) {
 
 function changeFontFamily ( newFont ) {
 	document.getElementById( 'theTable' ).style.fontFamily = newFont
+	var tds = document.getElementById( 'theTable' ).querySelectorAll('td')
+	for (var i=0;i<tds.length;i++) tds[i].style.fontFamily = newFont
 	document.getElementById( 'preview' ).style.fontFamily = newFont
 	}
 
@@ -235,8 +278,3 @@ if (parametersFound) generate(document.getElementById('consonants').value, docum
 </script>
 </body>
 </html>
-<!--
-𑐐𑐸 𑐟𑐸 𑐨𑐸 𑐱𑐸 𑐖𑐸 𑐬𑐸 𑐐𑐾 𑐐𑐿 𑐐𑑀 𑐐𑑁 𑐘𑐾 𑐘𑐿 𑐘𑑀 𑐘𑑁 𑐞𑐾 𑐞𑐿 𑐞𑑀 𑐞𑑁 𑐠𑐾 𑐠𑐿 𑐠𑑀 𑐠𑑁 𑐢𑐾 𑐢𑐿 𑐢𑑀 𑐢𑑁 𑐱𑐾 𑐱𑐿 𑐱𑑀 𑐱𑑁 𑐬𑐹 𑐖𑐹 
-
-𑐐𑐸 𑐟𑐸 𑐨𑐸 𑐱𑐸 𑐖𑐸 𑐬𑐸 𑐐𑐾 𑐐𑐿 𑐐𑑀 𑐐𑑁 𑐘𑐾 𑐘𑐿 𑐘𑑀 𑐘𑑁 𑐞𑐾 𑐞𑐿 𑐞𑑀 𑐞𑑁 𑐠𑐾 𑐠𑐿 𑐠𑑀 𑐠𑑁 𑐢𑐾 𑐢𑐿 𑐢𑑀 𑐢𑑁 𑐱𑐾 𑐱𑐿 𑐱𑑀 𑐱𑑁 𑐬𑐹 𑐖𑐹 𑐨𑐹 𑐨𑐺 𑐨𑐻 𑐨𑐼 𑐨𑐽 𑐟𑐹 𑐟𑐺 𑐟𑐻 𑐟𑐼 𑐟𑐽 𑐛𑐾 𑐛𑐿 𑐛𑑀 𑐛𑑁 𑐐𑐹 𑐐𑐺 𑐐𑐻 𑐐𑐼 𑐐𑐽 
-->
