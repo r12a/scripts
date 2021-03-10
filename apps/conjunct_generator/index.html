@@ -1,58 +1,129 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-GB">
+
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8"/>
 <title>Conjunct generator</title>
+<meta name="description" content="Generates a matrix of conjunct cluster forms."/>
+<script src="../../../shared/phrasedb/db.js"> </script>
+
+<link rel="stylesheet" href="../../../shared/style/docs.css" />
+	
+
 <style>
-body { margin: 1em; }
-table { font-size: 28px; clear: both; }
-th { color: crimson; }
+table { font-size: 24px; clear: both; }
+th { color: tan; padding-inline-end: .5em; }
 th.second { color: tan; }
-td { text-align: center; cursor: pointer; }
-#parkingdiv { margin-inline-start: 2em; }
+td { text-align: center; cursor: pointer; border: 1px dotted #aaa; border-radius: .1em; }
+#parkingdiv { /*margin-inline-start: 2em;*/ }
 #parkingLot { font-size: 28px; border: 0; width: 50%; height: 3em; }
-#inputPanel { float: left; margin-inline-end: 2em; }
-#preview  { font-size: 48px; padding: 0 1em; position: fixed; top: 0; right: 0; background-color: white; }
-#virama { width: 4em; }
+#inputPanel { margin-inline-end: 2em; }
+#preview  { font-size: 48px; padding: 0; float: right; position: sticky; top: 0; right: 0; background-color: white; clear: both; z-index: 1000; }
+#vowels { /*width: 4em;*/ }
 #submit { color: #0C3;
-font-size: 100%;
+font-size: 250%;
 border-radius: 10px;
 line-height: 1.5em;
 padding: 5px;
 border: 1px solid #ddd; vertical-align: top; }
-#exclusions { width: 60%; }
+#exclusions, #highlights { width: 50%; }
 .tips { text-align: start; font-size: 14px; }
 .tipBody td, .tipBody th { vertical-align: top; }
 .tipHead th { vertical-align: top; text-align: start; }
+.highlighted { color: white; background-color: tan; }
 </style>
+
+
+
+
+<style id="fontSizeStyling">.text { font-size: 60px; }</style> <!-- this sets the default, but is changed by scripting -->
+<style id="fontWhiteSpace">.text { white-space: nowrap; }</style> <!-- this sets the default, but is changed by scripting -->
+
+<script src="../../../shared/code/boilerplate.js"></script>
+
+<script>
+</script>
+
 </head>
 
-<body>
-<h1>Conjunct generator &nbsp; &nbsp; <button id="submit" onClick="generate(document.getElementById('consonants').value, document.getElementById('virama').value)">GO</button></h1>
+<body class="app">
+<header>
+    <div id="header-boilerplate"></div>
+	<script>document.getElementById('header-boilerplate').innerHTML = bp_appHeader('../../../shared/images/world.gif','Conjunct generator', '');</script>
+</header>
 
-<div id="inputPanel">
-<p><label>Set font to <input id="font" type="text" onChange="changeFontFamily(this.value)"/></label>  Font size: <input id="fontSizeSlider" type="range" min="10" max="200" step="1" value="28" oninput="changeFontSize(this.value)" style="width:12em;"></p>
-<p>Consonants: <input type="text" id="consonants" placeholder="List here, no separators."> Virama (hex code): <input type="text" id="virama"></p>
-<p>Exclusions: <input type="text" id="exclusions" placeholder="Comma-separated list of pairs to exclude."></p>
+<!--h1>Font lister</h1-->
+
+<aside class="sidebar">
+
+<div style="font-size: 90%; margin-bottom: 2em; font-weight: bold;">
+<span>Set font to:</span><br>
+<label><input id="font" type="text" onChange="changeFontFamily(this.value)" style="background-color: #e8d9c5; border: 1px solid #aaa; padding: 3px; font-size: 120%;"/></label><br>
+<span>Font size:</span><br>
+<input id="fontSizeSlider" type="range" min="10" max="200" step="1" value="24"  oninput="changeFontSize(this.value)" style="width:100%;">
 </div>
 
-<div id="parkingdiv">
-Parking lot: &nbsp; &nbsp; <button onclick="showInUniView(document.getElementById('parkingLot').value); return false;">Show in UniView</button><br>
-<textarea id="parkingLot" placeholder="Click on a cluster to save it here."></textarea>
+
+<div style="font-size: 90%; margin-bottom: 2em; font-weight: bold;">
+<p>Choose a preset: <select id="preset" onChange="applyPreset(this.value)">
+<option value=":">None</option>
+<option value="bali">Balinese</option>
+<option value="batk">Batak</option>
+<option value="beng">Bengali</option>
+<option value="deva">Devanagari</option>
+<option value="gujr">Gujarati</option>
+<option value="guru">Gurmukhi</option>
+<option value="java">Javanese</option>
+<option value="mlym">Malayalam</option>
+<option value="mymr">Myanmar</option>
+<option value="newa">Newa</option>
+<option value="orya">Odia</option>
+<option value="rjng">Rejang</option>
+<option value="sinh">Sinhala</option>
+<option value="sund">Sundanese</option>
+</select>
+</p></div>
+
+
+</aside>
+
+ 
+
+<div style="display: flex; flex-direction: row; flex-wrap: wrap; margin-inline-start: 7.5%; justify-content: space-between; width:60%;">
+<div style="font-weight: bold; width: 48%; flex:4;">Consonants:<br><input type="text" id="consonants" placeholder="Space-separated list." style="width: 100%;"></div>
+<div style="font-weight: bold; width: 48%; flex:1;">Virama (hex):<br><input type="text" id="vowels"  style="width: 100%;"></div>
 </div>
+
+<p style="font-weight: bold;">Exclude: 
+<input type="text" id="exclusions" placeholder="Space-separated list of pairs to exclude."></p>
+<p style="font-weight: bold;">Highlight: 
+<input type="text" id="highlights" placeholder="Space-separated list of pairs to exclude."></p>
 
 <div id="preview"></div>
+
+<div style="display: flex; flex-direction: row; flex-wrap: nowrap; margin-inline-start: 7.5%; margin-inline-end: 30%; width: 60%;">
+<div style="font-weight: bold; flex:4;" id="parkingdiv">
+Parking lot: &nbsp; &nbsp; <button onclick="showInUniView(document.getElementById('parkingLot').value); return false;">Show in UniView</button><br>
+<textarea id="parkingLot" placeholder="Click on a cluster to save it here." style="font-weight: normal;font-family: raleway, sans; width: 100%;"></textarea>
+</div>
+<div style="flex:1; text-align: end;"><button id="submit" onClick="generate(document.getElementById('consonants').value, document.getElementById('vowels').value)">GO</button></div>
+</div>
+
 
 
 <table id="theTable">
 <thead>
-<tr><th class="second tipHead" colspan="2">Usage tips:</th></tr>
+<tr><th class="second tipHead" colspan="2" style="text-align: start;">Usage tips:</th></tr>
 </thead>
 <tbody class="tipBody">
 <tr>
 <th class="second tips"><p>General operation</p></th>
-<td><p class="tips">Add a list of consonants to the 'Consonants' field (with no spaces between them), and add the hex code point value for the virama to be used to the 'Virama' field. You'll want to see results for a particular font, so type the name of the font in the field just above.</p>
+<td><p class="tips">Add a space-separated list of consonants to the 'Consonants' field, and add the hex code point value for the virama to be used to the 'Virama' field. You'll want to see results for a particular font, so type the name of the font in the field to the right.</p>
 <p class="tips">As you mouse over a table cell, the components of that cell will be shown in the top right corner of the page. This is particularly useful if your table is so large that you can no longer see the column or row headings.</p></td>
+</tr>
+<tr>
+<th class="second tips"><p>Presets</p></th>
+<td><p class="tips">Alternatively, select a script to show a basic set of combinations for that script. (The list will be added to in due course.)</p></td>
 </tr>
 <tr>
 <th class="second tips"><p>Parking lot</p></th>
@@ -60,32 +131,67 @@ Parking lot: &nbsp; &nbsp; <button onclick="showInUniView(document.getElementByI
 <p class="tips">You can view the contents of the parking lot character by character by clicking on the Show in UniView button.</p></td>
 </tr>
 <tr><th class="second tips"><p>Using exclusions</p></th><td>
-<p class="tips">You can use the exclusion list to prevent results being displayed for certain cells.  It's a low tech approach to removing phonetic sequences that don't actually create conjuncts for the orthography being tested.</p>
-<p class="tips">You need to add a space-separated list of (incorrect) conjunct forms to the input field labelled 'Exclusions'. You could create this list in a number of ways. One way might be to display the full set of conjuncts, and click on all the unwanted combinations. This will add those combinations to the parking lot. If you then save the contents of the parking lot, when you are done, you can copy that set back to the 'Exclusions' field whenever needed. It may be a bit laborious to create the list, but you only need to do it once.</p>
-<p class="tips">You should, of course, also avoid putting consonants into the 'Consonants' field if they never create conjuncts.</p>
-<p class="tips">Another use for the exclusions is to show someone else a particular set of conjuncts. For example, this could be the set of conjuncts that fuses components together, rather than subjoining or conjoing them. You can reproduce this set again by keeping the exclusion list stored somewhere, or you could add the exclusion list to the parameters of the URL if you want to show someone else what you see.</p>
-</td></tr>
+<p class="tips">You can use the exclusion list to prevent results being displayed for certain cells. Items need to be separated by spaces. Hint: if you click on items, then copy them from the parking lot to the exclusions field, then press GO again, the matrix will be updated without the items you selected.</p></td></tr>
+<tr><th class="second tips"><p>Highlights</p></th><td>
+<p class="tips">Add a space-separated list of consonant-vowel combinations here, and they will be highlighted in the matrix below.</p>
+<p class="tips">If you have collected items in the parking lot, you could copy them here and press GO and you'll see what you've so far picked.</p></td></tr>
 <tr>
 <th class="second tips"><p>Parameters in the URL</p></th>
-<td><p class="tips">The following parameters can be passed to the page via the URL: virama, consonants, exclusions, fonts. This allows you to show someone else a set of conjuncts you are interested in.</p></td>
+<td><p class="tips">The following parameters can be passed to the page via the URL: virama, consonants, exclusions, highlights, fonts. This allows you to show someone else a set of conjuncts you are interested in.</p></td>
 </tr>
 </tbody>
 </table>
+<div class="smallprint"><span id="version">See <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/fontlist/index.html">recent changes</a>. &nbsp;•&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bfontlist%5D%20TITLE_GOES_HERE&amp;body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ffontlist%2F%0A%0A" target="_blank">comment</a>. &nbsp;•&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+
+
 
 <script>
 
+var presets = {
+"bali":"ᬧ ᬩ ᬞ ᬢ ᬤ ᬟ ᬠ ᬘ ᬚ ᬛ ᬓ ᬕ ᬔ ᬧ᬴ ᬯ᬴ ᬱ ᬚ᬴ ᬓ᬴ ᬕ᬴ ᬳ᬴ ᬗ᬴ ᬳ ᬫ ᬦ ᬗ ᬜ ᬯ ᬭ ᬮ ᬬ:1B44",
+"batk":"ᯇ ᯈ ᯅ ᯆ ᯖ ᯗ ᯑ ᯂ ᯃ ᯄ᯦ ᯎ ᯏ ᯡ ᯚ᯦ ᯐ ᯘ ᯙ ᯚ ᯄ ᯀ ᯌ ᯂ ᯔ ᯕ ᯉ ᯊ ᯠ ᯝ ᯋ ᯌ ᯍ ᯒ ᯓ ᯞ ᯟ ᯛ ᯜ:1BF2",
+"beng":"প ব ফ ভ ত দ থ ধ ট ড ঠ ঢ চ জ ছ ঝ ক গ খ ঘ শ ষ স হ ম ন ণ ঞ ঙ র ড় ঢ় ল য য়:09CD",
+"deva":"क ख ग घ ङ च छ ज झ ञ ट ठ ड ढ ण त थ द ध न प फ ब भ म य र ल व श ष स ह क़ ख़ ग़ ऩ ड़ ढ़ ऱ य़ ळ ऴ फ़ ज़ ॹ ॺ:094D",
+"gujr":"પ બ ભ ત થ દ ધ ચ છ જ ઝ ટ ઠ ડ ઢ ક ખ ગ ઘ ફ સ શ ષ હ મ ન ઞ ણ ઙ વ ર લ ળ ય ક્ષ જ્ઞ:0ACD",
+"guru":"ਪ ਬ ਭ ਫ ਤ ਦ ਧ ਥ ਚ ਜ ਝ ਛ ਟ ਡ ਢ ਠ ਕ ਗ ਘ ਖ ਫ਼ ਸ ਸ਼ ਖ਼ ਹ ਵ ਜ਼ ਗ਼ ਮ ਨ ਞ ਣ ਙ ਯ ਰ ੜ ਲ ਲ਼:0A4D",
+"java":"ꦥ ꦧ ꦦ ꦨ ꦠ ꦢ ꦡ ꦕ ꦗ ꦖ ꦛ ꦝ ꦏ ꦒ ꦑ ꦓ ꦱ ꦯ ꦲ ꦩ ꦤ ꦚ ꦔ ꦟ ꦘ ꦮ ꦫ ꦉ ꦭ ꦊ ꦪ:A9C0",
+"mlym":"പ ബ ഫ ഭ ത ദ ഥ ധ ച ജ ഛ ഝ ട ഡ ഢ ഠ ക ഗ ഖ ഘവ സ ഷ ശ ഹ മ ന ഞ ണ ങ ര റ ഴ ല ള യ:0D4D",
+"mymr":"ပ ဗ ဖ ဘ တ ဒ ထ ဓ ဋ ဍ ဌ ဎ က ဂ ခ ဃ စ ဆ ဇ ဈ သ ဿ ဟ မ န ဏ ည ဉ င ဝ ရ လ ယ ကျ ကြ ကွ ကှ က္လ:1039",
+"newa":"𑐥 𑐧 𑐦 𑐨 𑐟 𑐡 𑐠 𑐢 𑐚 𑐜 𑐛 𑐝 𑐔 𑐖 𑐕 𑐗 𑐎 𑐐 𑐏 𑐑 𑐳 𑐱 𑐲 𑐴 𑐩 𑐣 𑐞 𑐘 𑐒 𑐪 𑐤 𑐙 𑐓 𑐰 𑐴𑑂𑐰 𑐬 𑐭 𑐮 𑐯 𑐫 𑐴𑑂𑐫 𑐎𑑂𑐲 𑐖𑑂𑐘:0B4D",
+"orya":"କ ଖ ଗ ଘ ଙ ଚ ଛ ଜ ଝ ଞ ଟ ଠ ଡ ଢ ଣ ତ ଥ ଦ ଧ ନ ପ ଫ ବ ଭ ମ ଯ ର ଲ ଳ ଵ ଶ ଷ ସ ହ ଡ଼ ଢ଼ ୟ ୱ:11442",
+"rjng":"ꤶ ꤷ ꤳ ꤴ ꤰ ꤱ ꤹ ꤺ ꥂ ꥄ ꥃ ꥅ ꤼ ꥁ ꤸ ꤵ ꤻ ꤲ ꥀ ꤽ ꤾ ꤿ:A953",
+"sinh":"ක ඛ ග ඝ ඞ ඟ ච ඡ ජ ඣ ඤ ට ඨ ඩ ඪ ණ ඬ ත ථ ද ධ න ප ඵ බ භ ම ඹ ය ර ල ළ ව ෆ ශ ෂ ස හ:0DCA",
+"sund":"ᮕ ᮘ ᮒ ᮓ ᮎ ᮏ ᮊ ᮌ ᮞ ᮠ ᮙ ᮔ ᮑ ᮍ ᮝ ᮛ ᮜ ᮚ:1BAB",
+}
+
+function applyPreset (code) {
+	var choice = presets[code].split(':')
+	document.getElementById('consonants').value = choice[0]
+	document.getElementById('vowels').value = choice[1]
+	}
+
+
 function generate (clist, virama) {
 	// get exclusion list
+
 	exclusions = document.getElementById('exclusions').value.trim()
 	exclusions = exclusions.replace(/\s+/g,' ')
 	exclArray = exclusions.split(' ')
 	const exclSet = new Set(exclArray)
 
+	// get inclusion list
+	var includes = false
+	highlights = document.getElementById('highlights').value.trim()
+	highlights = highlights.replace(/\s+/g,' ')
+	inclArray = highlights.split(' ')
+	if (inclArray.length > 0) includes = true
+	const inclSet = new Set(inclArray)
 	
 	table = ''
 	virama = String.fromCodePoint('0x'+virama)
-	clist = clist.replace(' ','')
-	consonants = [...clist]
+	
+	clist = clist.replace(/\s+/g,' ')
+	consonants = clist.split(' ')
 	table += '<tr><th>&nbsp;</th>'
 	for (k=0;k<consonants.length;k++) {
 		table += '<th class="second">'+consonants[k]+'</th>'
@@ -94,12 +200,29 @@ function generate (clist, virama) {
 	for (let i=0;i<consonants.length;i++) {
 		table += '<tr><th>'+consonants[i]+'</th>'
 		for (j=0;j<consonants.length;j++) {
-			table += '<td onmouseover="document.getElementById(\'preview\').textContent=\''+consonants[i]+virama+consonants[j]+':'+consonants[i]+'+'+consonants[j]+'\'">'
-			if (! exclSet.has(consonants[i]+virama+consonants[j])) table += consonants[i]+virama+consonants[j]
-			table += '</td>'
+			if (includes) {
+				if (inclSet.has(consonants[i]+virama+consonants[j])) {
+					table += '<td class="highlighted" onmouseover="document.getElementById(\'preview\').textContent=\''+consonants[i]+'+'+consonants[j]+' = '+consonants[i]+virama+consonants[j]+'\'">'
+					if (! exclSet.has(consonants[i]+virama+consonants[j])) table += consonants[i]+virama+consonants[j]
+					table += '</td>'
+					}
+				else {
+					table += '<td onmouseover="document.getElementById(\'preview\').textContent=\''+consonants[i]+'+'+consonants[j]+' = '+consonants[i]+virama+consonants[j]+'\'">'
+					if (! exclSet.has(consonants[i]+virama+consonants[j])) table += consonants[i]+virama+consonants[j]
+					table += '</td>'
+
+					}
+				}
+
+			else {
+				table += '<td onmouseover="document.getElementById(\'preview\').textContent=\''+consonants[i]+virama+consonants[j]+' = '+consonants[i]+'+'+consonants[j]+'\'">'
+				if (! exclSet.has(consonants[i]+virama+consonants[j])) table += consonants[i]+virama+consonants[j]
+				table += '</td>'
+				}
 			}
 		table += '</tr>'
 		}
+
 	document.getElementById('theTable').innerHTML = table
 	var cells = document.querySelectorAll('td')
 	for (var i=0;i<cells.length; i++) cells[i].addEventListener('click', saveForReview)
@@ -108,6 +231,8 @@ function generate (clist, virama) {
 
 function changeFontFamily ( newFont ) {
 	document.getElementById( 'theTable' ).style.fontFamily = newFont
+	var tds = document.getElementById( 'theTable' ).querySelectorAll('td')
+	for (var i=0;i<tds.length;i++) tds[i].style.fontFamily = newFont
 	document.getElementById( 'preview' ).style.fontFamily = newFont
 	}
 
@@ -137,9 +262,11 @@ for (var p=0;p<parameters.length;p++) {
 	if (pairs[0] == 'consonants') { if (pairs[1]) { document.getElementById('consonants').value = decodeURIComponent(pairs[1]); parametersFound = true } }
 	if (pairs[0] == 'virama') { if (pairs[1]) { document.getElementById("virama").value = decodeURIComponent(pairs[1]); parametersFound = true } }
 	if (pairs[0] == 'exclusions') { if (pairs[1]) { document.getElementById("exclusions").value = decodeURIComponent(pairs[1]); parametersFound = true } }
+	if (pairs[0] == 'highlights') { if (pairs[1]) { document.getElementById("highlights").value = decodeURIComponent(pairs[1]); parametersFound = true } }
+	if (pairs[0] == 'preset') { if (pairs[1]) { document.getElementById("preset").value = decodeURIComponent(pairs[1]); applyPreset(pairs[1]); parametersFound = true } }
 	if (pairs[0] == 'font') { if (pairs[1]) { document.getElementById("font").value = decodeURIComponent(pairs[1]) } }
 	}
-if (parametersFound) generate(document.getElementById('consonants').value, document.getElementById('virama').value)
+if (parametersFound) generate(document.getElementById('consonants').value, document.getElementById('vowels').value)
 </script>
 </body>
 </html>
