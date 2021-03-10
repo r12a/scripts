@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Consonant-vowel generator</title>
+<style>
+@font-face {
+    font-family: 'gentiumpluswf';
+    src: url('../../../shared/webfonts/raleway-regular-webfont.woff2') format('woff2'),
+         url('../../../shared/webfonts/raleway-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+	}
+body { margin: 1em; font-family: gentiumpluswf; font-size: 14px;  }
+table { font-size: 28px; clear: both; }
+th { color: tan; padding-inline-end: .5em; }
+th.second { color: tan; }
+td { text-align: center; cursor: pointer; border: 1px dotted #aaa; border-radius: .1em; }
+#parkingdiv { /*margin-inline-start: 2em;*/ }
+#parkingLot { font-size: 28px; border: 0; width: 50%; height: 3em; }
+#inputPanel { margin-inline-end: 2em; }
+#preview  { font-size: 48px; padding: 0 1em; position: fixed; top: 0; right: 0; background-color: white; }
+#vowels { /*width: 4em;*/ }
+#submit { color: #0C3;
+font-size: 100%;
+border-radius: 10px;
+line-height: 1.5em;
+padding: 5px;
+border: 1px solid #ddd; vertical-align: top; }
+#exclusions, #highlights { width: 50%; }
+.tips { text-align: start; font-size: 14px; }
+.tipBody td, .tipBody th { vertical-align: top; }
+.tipHead th { vertical-align: top; text-align: start; }
+.highlighted { color: white; background-color: tan; }
+</style>
+</head>
+
+<body>
+<h1>Consonant-vowel generator &nbsp; &nbsp; 
+<button id="submit" onClick="generate(document.getElementById('consonants').value, document.getElementById('vowels').value)">GO</button></h1>
+
+<div id="inputPanel">
+<p><label>Set font to <input id="font" type="text" onChange="changeFontFamily(this.value)" style="background-color: tan; opacity: 50%;  border: 1px solid #aaa; padding: 3px;"/></label>  Font size: <input id="fontSizeSlider" type="range" min="10" max="200" step="1" value="28"  oninput="changeFontSize(this.value)" style="width:12em;"></p>
+<p>Consonants: <input type="text" id="consonants" placeholder="List here, no separators."> Vowels: <input type="text" id="vowels" placeholder="Space-separated list."></p>
+<p>Choose a preset: <select id="preset" onChange="applyPreset(this.value)">
+<option value=":">None</option>
+<option value="bali">Balinese</option>
+<option value="batk">Batak</option>
+<option value="beng">Bengali</option>
+<option value="deva">Devanagari</option>
+<option value="gujr">Gujarati</option>
+<option value="guru">Gurmukhi</option>
+<option value="java">Javanese</option>
+<option value="miao">Miao</option>
+<option value="mlym">Malayalam</option>
+<option value="mymr">Myanmar</option>
+<option value="newa">Newa</option>
+<option value="orya">Odia</option>
+<option value="rjng">Rejang</option>
+<option value="sinh">Sinhala</option>
+<option value="sund">Sundanese</option>
+<option value="tavt">Tai Viet</option>
+</select>
+</p>
+<p>Exclude: 
+<input type="text" id="exclusions" placeholder="Comma-separated list of pairs to exclude."></p>
+<p>Highlight: 
+<input type="text" id="highlights" placeholder="Comma-separated list of pairs to exclude."></p>
+</div>
+
+<div id="parkingdiv">
+Parking lot: &nbsp; &nbsp; <button onclick="showInUniView(document.getElementById('parkingLot').value); return false;">Show in UniView</button><br>
+<textarea id="parkingLot" placeholder="Click on a cluster to save it here."></textarea>
+</div>
+
+<div id="preview"></div>
+
+<table id="theTable">
+<thead>
+<tr><th class="second tipHead" colspan="2">Usage tips:</th></tr>
+</thead>
+<tbody class="tipBody">
+<tr>
+<th class="second tips"><p>General operation</p></th>
+<td><p class="tips">Add a space-separated list of consonants to the 'Consonants' field, and a space-separated list of vowels  to the 'vowels' field. You'll want to see results for a particular font, so type the name of the font in the field just above.</p>
+<p class="tips">As you mouse over a table cell, the components of that cell will be shown in the top right corner of the page. This is particularly useful if your table is so large that you can no longer see the column or row headings.</p></td>
+</tr>
+<tr>
+<th class="second tips"><p>Presets</p></th>
+<td><p class="tips">Alternatively, select a script to show a basic set of combinations for that script. (The list will be added to in due course.)</p></td>
+</tr>
+<tr>
+<th class="second tips"><p>Parking lot</p></th>
+<td><p class="tips">If you click on a cell in the rendered list, it will be added to the parking lot area. You may want to do this for items you want to pick out for discussion or illustration. The items will all be space-separated.</p>
+<p class="tips">You can view the contents of the parking lot character by character by clicking on the Show in UniView button.</p></td>
+</tr>
+<tr><th class="second tips"><p>Using exclusions</p></th><td>
+<p class="tips">You can use the exclusion list to prevent results being displayed for certain cells.  It's a low tech approach to removing phonetic sequences that don't actually create conjuncts for the orthography being tested.</p>
+<p class="tips">You need to add a space-separated list of (unwanted) conjunct forms to the input field labelled 'Exclusions'. You could create this list in a number of ways. One way might be to display the full set of conjuncts, and click on all the unwanted combinations. This will add those combinations to the parking lot. If you then save the contents of the parking lot, when you are done, you can copy that set back to the 'Exclusions' field whenever needed. It may be a bit laborious to create the list, but you only need to do it once.</p></td></tr>
+<tr><th class="second tips"><p>Highlights</p></th><td>
+<p class="tips">Add a space-separated list of consonant-vowel combinations here, and they will be highlighted in the matrix below.</p>
+<p class="tips">If you have collected items in the parking lot, you could copy them here and press GO and you'll see what you've so far picked.</p></td></tr>
+<tr>
+<th class="second tips"><p>Parameters in the URL</p></th>
+<td><p class="tips">The following parameters can be passed to the page via the URL: vowels, consonants, exclusions, fonts. This allows you to show someone else a set of conjuncts you are interested in.</p></td>
+</tr>
+</tbody>
+</table>
+
+<script>
+
+var presets = {
+"bali":"ᬧ ᬩ ᬞ ᬢ ᬤ ᬟ ᬠ ᬘ ᬚ ᬛ ᬓ ᬕ ᬔ ᬧ᬴ ᬯ᬴ ᬱ ᬚ᬴ ᬓ᬴ ᬕ᬴ ᬳ᬴ ᬗ᬴ ᬳ ᬫ ᬦ ᬗ ᬜ ᬯ ᬭ ᬮ ᬬ:ᬶ ᬷ ᬸ ᬹ ᬾ ᭀ ᭂ ᭃ ᬵ ᬿ ᭁ ᬺ ᬻ",
+"batk":"ᯇ ᯈ ᯅ ᯆ ᯖ ᯗ ᯑ ᯂ ᯃ ᯄ᯦ ᯎ ᯏ ᯡ ᯚ᯦ ᯐ ᯘ ᯙ ᯚ ᯄ ᯀ ᯌ ᯂ ᯔ ᯕ ᯉ ᯊ ᯠ ᯝ ᯋ ᯌ ᯍ ᯒ ᯓ ᯞ ᯟ ᯛ ᯜ:ᯪ ᯫ ᯮ ᯯ ᯬ ᯩ ᯧ ᯨ ᯭ ᯨ ᯬ ᯩᯨ",
+"beng":"প ব ফ ভ ত দ থ ধ ট ড ঠ ঢ চ জ ছ ঝ ক গ খ ঘ শ ষ স হ ম ন ণ ঞ ঙ র ড় ঢ় ল য য়:ি ী ু ূ ে ো া ৌ ৈ ৃ ৄ ৢ ৣ",
+"deva":"क ख ग घ ङ च छ ज झ ञ ट ठ ड ढ ण त थ द ध न प फ ब भ म य र ल व श ष स ह क़ ख़ ग़ ऩ ड़ ढ़ ऱ य़ ळ ऴ फ़ ज़ ॹ ॺ:ॕ ा ि ी ु ू ॖ ॗ ृ ॄ ॢ ॣ ॅ ॆ े ै ॉ ॊ ो ौ ॏ ऺ ऻ ॎ",
+"gujr":"પ બ ભ ત થ દ ધ ચ છ જ ઝ ટ ઠ ડ ઢ ક ખ ગ ઘ ફ સ શ ષ હ મ ન ઞ ણ ઙ વ ર લ ળ ય ક્ષ જ્ઞ:િ ી ુ ૂ ે ો ૉ ૅ ા ૈ ૌ",
+"guru":"ਪ ਬ ਭ ਫ ਤ ਦ ਧ ਥ ਚ ਜ ਝ ਛ ਟ ਡ ਢ ਠ ਕ ਗ ਘ ਖ ਫ਼ ਸ ਸ਼ ਖ਼ ਹ ਵ ਜ਼ ਗ਼ ਮ ਨ ਞ ਣ ਙ ਯ ਰ ੜ ਲ ਲ਼:ੀ ਿ ੂ ੁ ੇ ੋ ੈ ੌ ਾ",
+"java":"ꦥ ꦧ ꦦ ꦨ ꦠ ꦢ ꦡ ꦕ ꦗ ꦖ ꦛ ꦝ ꦏ ꦒ ꦑ ꦓ ꦱ ꦯ ꦲ ꦩ ꦤ ꦚ ꦔ ꦟ ꦘ ꦮ ꦫ ꦉ ꦭ ꦊ ꦪ:ꦶ ꦸ ꦺ ꦺꦴ ꦼ ꦴ ꦺꦴ",
+"miao":"𖼀 𖼊 𖼎 𖼞 𖼡 𖼷 𖼮 𖼚 𖼇 𖼈 𖼺 𖼻 𖼽 𖼳 𖼵 𖼨 𖼦 𖼄 𖼐 𖼣 𖽂 𖼖 𖼘 𖽃:𖽡 𖽷 𖽪 𖽱 𖽵 𖽜 𖽝 𖽙 𖽳 𖽔 𖽨 𖽢 𖽤 𖽦 𖽬 𖽟 𖽠 𖽺 𖽹 𖽗 𖽘 𖽻",
+"mlym":"പ ബ ഫ ഭ ത ദ ഥ ധ ച ജ ഛ ഝ ട ഡ ഢ ഠ ക ഗ ഖ ഘവ സ ഷ ശ ഹ മ ന ഞ ണ ങ ര റ ഴ ല ള യ:ി ീ ു ൂ െ േ ൊ ോ ാ ൈ ൗ ൌ ൃ",
+"mymr":"ပ ဗ ဖ ဘ တ ဒ ထ ဓ ဋ ဍ ဌ ဎ က ဂ ခ ဃ စ ဆ ဇ ဈ သ ဿ ဟ မ န ဏ ည ဉ င ဝ ရ လ ယ ကျ ကြ ကွ ကှ က္လ:ိ ီ ု ူ ေ ို ဲ ယ် ော ေါ ော် ေါ် ာ ါ",
+"newa":"𑐥 𑐧 𑐦 𑐨 𑐟 𑐡 𑐠 𑐢 𑐚 𑐜 𑐛 𑐝 𑐔 𑐖 𑐕 𑐗 𑐎 𑐐 𑐏 𑐑 𑐳 𑐱 𑐲 𑐴 𑐩 𑐣 𑐞 𑐘 𑐒 𑐪 𑐤 𑐙 𑐓 𑐰 𑐴𑑂𑐰 𑐬 𑐭 𑐮 𑐯 𑐫 𑐴𑑂𑐫 𑐎𑑂𑐲 𑐖𑑂𑐘:𑐶 𑐷 𑐸 𑐹 𑐾 𑑀 𑐵 𑐿 𑑁 𑐺 𑐻 𑐼 𑐽",
+"orya":"କ ଖ ଗ ଘ ଙ ଚ ଛ ଜ ଝ ଞ ଟ ଠ ଡ ଢ ଣ ତ ଥ ଦ ଧ ନ ପ ଫ ବ ଭ ମ ଯ ର ଲ ଳ ଵ ଶ ଷ ସ ହ ଡ଼ ଢ଼ ୟ ୱ:ା ି ୀ ୁ ୂ ୃ ୄ େ ୈ ୋ ୌ",
+"rjng":"ꤶ ꤷ ꤳ ꤴ ꤰ ꤱ ꤹ ꤺ ꥂ ꥄ ꥃ ꥅ ꤼ ꥁ ꤸ ꤵ ꤻ ꤲ ꥀ ꤽ ꤾ ꤿ:ꥇ ꥈ ꥉ ꥋ ꥆ ꥎ ꥊ ꥍ ꥌ",
+"sinh":"ක ඛ ග ඝ ඞ ඟ ච ඡ ජ ඣ ඤ ට ඨ ඩ ඪ ණ ඬ ත ථ ද ධ න ප ඵ බ භ ම ඹ ය ර ල ළ ව ෆ ශ ෂ ස හ:ා ැ ෑ ි ී ු ූ ෙ ේ ෛ ෞ ො ෝ",
+"sund":"ᮕ ᮘ ᮒ ᮓ ᮎ ᮏ ᮊ ᮌ ᮞ ᮠ ᮙ ᮔ ᮑ ᮍ ᮝ ᮛ ᮜ ᮚ:ᮤ ᮥ ᮦ ᮧ ᮩ ᮨ",
+"tavt":"ꪝ ꪛ ꪜ ꪚ ꪟ ꪞ ꪕ ꪓ ꪔ ꪒ ꪗ ꪖ ꪋ ꪊ ꪍ ꪌꪁ ꪆ ꪀ ꪇ ꪃ ꪂ ꪡ ꪠ ꪏ ꪎ ꪅ ꪄ ꪭ ꪬ ꪣ ꪢ ꪙ ꪘ ꪑ ꪐ ꪉ ꪈ ꪩ ꪨ ꪧ ꪦ ꪥ ꪤ ꪫ ꪪ ꪯ ꪮ:ꪲ ꪳ ꪴꪹ ꪸꪹ ꪷ ꪷ ꪰ ꪱ ꪸ ꪺ ꪾ ꪽꪹ ꪱꪵ ꪫ",
+}
+
+function applyPreset (code) {
+	var choice = presets[code].split(':')
+	document.getElementById('consonants').value = choice[0]
+	document.getElementById('vowels').value = choice[1]
+	}
+
+
+function generate (clist, vlist) {
+	// get exclusion list
+
+	exclusions = document.getElementById('exclusions').value.trim()
+	exclusions = exclusions.replace(/\s+/g,' ')
+	exclArray = exclusions.split(' ')
+	const exclSet = new Set(exclArray)
+
+	// get inclusion list
+	var includes = false
+	highlights = document.getElementById('highlights').value.trim()
+	highlights = highlights.replace(/\s+/g,' ')
+	inclArray = highlights.split(' ')
+	if (inclArray.length > 0) includes = true
+	const inclSet = new Set(inclArray)
+	
+	table = ''
+	//virama = String.fromCodePoint('0x'+virama)
+	
+	//clist = clist.replace(' ','')
+	//consonants = [...clist]
+	clist = clist.replace(/\s+/g,' ')
+	consonants = clist.split(' ')
+	vlist = vlist.replace(/\s+/g,' ')
+	vowels = vlist.split(' ')
+	table += '<tr><th>&nbsp;</th>'
+	for (v=0;v<vowels.length;v++) {
+		table += '<th class="second">'+vowels[v]+'</th>'
+		}
+	table += '</tr>'
+	for (let i=0;i<consonants.length;i++) {
+		table += '<tr><th>'+consonants[i]+'</th>'
+		for (j=0;j<vowels.length;j++) {
+			if (includes) {
+				if (inclSet.has(consonants[i]+vowels[j])) {
+					table += '<td class="highlighted" onmouseover="document.getElementById(\'preview\').textContent=\''+consonants[i]+vowels[j]+':'+consonants[i]+'+'+vowels[j]+'\'">'
+					if (! exclSet.has(consonants[i]+vowels[j])) table += consonants[i]+vowels[j]
+					table += '</td>'
+					}
+				else {
+					table += '<td onmouseover="document.getElementById(\'preview\').textContent=\''+consonants[i]+vowels[j]+':'+consonants[i]+'+'+vowels[j]+'\'">'
+					if (! exclSet.has(consonants[i]+vowels[j])) table += consonants[i]+vowels[j]
+					table += '</td>'
+
+					}
+				}
+
+			else {
+				table += '<td onmouseover="document.getElementById(\'preview\').textContent=\''+consonants[i]+vowels[j]+':'+consonants[i]+'+'+vowels[j]+'\'">'
+				if (! exclSet.has(consonants[i]+vowels[j])) table += consonants[i]+vowels[j]
+				table += '</td>'
+				}
+			}
+		table += '</tr>'
+		}
+	document.getElementById('theTable').innerHTML = table
+	var cells = document.querySelectorAll('td')
+	for (var i=0;i<cells.length; i++) cells[i].addEventListener('click', saveForReview)
+	}
+
+
+function changeFontFamily ( newFont ) {
+	document.getElementById( 'theTable' ).style.fontFamily = newFont
+	document.getElementById( 'preview' ).style.fontFamily = newFont
+	}
+
+function changeFontSize ( newSize ) {
+	document.getElementById( 'theTable' ).style.fontSize = newSize + 'px'
+	//document.getElementById( 'preview' ).style.fontSize = newSize + 'px'
+	}
+
+function saveForReview ( evt ) {
+	parkingLot = document.getElementById('parkingLot')
+	parkingLot.value += evt.target.textContent + ' '
+	}
+
+function showInUniView (chars) {
+	var uniview = window.open('/uniview/?charlist='+ encodeURIComponent(chars.trim()), 'uniview') 
+	}
+
+
+
+
+// check for parameters and take appropriate action
+parameters = location.search.split('&')
+parameters[0] = parameters[0].substring(1)
+parametersFound = false
+for (var p=0;p<parameters.length;p++) {
+	pairs = parameters[p].split('=');
+	if (pairs[0] == 'consonants') { if (pairs[1]) { document.getElementById('consonants').value = decodeURIComponent(pairs[1]); parametersFound = true } }
+	if (pairs[0] == 'virama') { if (pairs[1]) { document.getElementById("virama").value = decodeURIComponent(pairs[1]); parametersFound = true } }
+	if (pairs[0] == 'exclusions') { if (pairs[1]) { document.getElementById("exclusions").value = decodeURIComponent(pairs[1]); parametersFound = true } }
+	if (pairs[0] == 'highlights') { if (pairs[1]) { document.getElementById("highlights").value = decodeURIComponent(pairs[1]); parametersFound = true } }
+	if (pairs[0] == 'preset') { if (pairs[1]) { document.getElementById("preset").value = decodeURIComponent(pairs[1]); applyPreset(pairs[1]); parametersFound = true } }
+	if (pairs[0] == 'font') { if (pairs[1]) { document.getElementById("font").value = decodeURIComponent(pairs[1]) } }
+	}
+if (parametersFound) generate(document.getElementById('consonants').value, document.getElementById('vowels').value)
+</script>
+</body>
+</html>
+<!--
+𑐐𑐸 𑐟𑐸 𑐨𑐸 𑐱𑐸 𑐖𑐸 𑐬𑐸 𑐐𑐾 𑐐𑐿 𑐐𑑀 𑐐𑑁 𑐘𑐾 𑐘𑐿 𑐘𑑀 𑐘𑑁 𑐞𑐾 𑐞𑐿 𑐞𑑀 𑐞𑑁 𑐠𑐾 𑐠𑐿 𑐠𑑀 𑐠𑑁 𑐢𑐾 𑐢𑐿 𑐢𑑀 𑐢𑑁 𑐱𑐾 𑐱𑐿 𑐱𑑀 𑐱𑑁 𑐬𑐹 𑐖𑐹 
+
+𑐐𑐸 𑐟𑐸 𑐨𑐸 𑐱𑐸 𑐖𑐸 𑐬𑐸 𑐐𑐾 𑐐𑐿 𑐐𑑀 𑐐𑑁 𑐘𑐾 𑐘𑐿 𑐘𑑀 𑐘𑑁 𑐞𑐾 𑐞𑐿 𑐞𑑀 𑐞𑑁 𑐠𑐾 𑐠𑐿 𑐠𑑀 𑐠𑑁 𑐢𑐾 𑐢𑐿 𑐢𑑀 𑐢𑑁 𑐱𑐾 𑐱𑐿 𑐱𑑀 𑐱𑑁 𑐬𑐹 𑐖𑐹 𑐨𑐹 𑐨𑐺 𑐨𑐻 𑐨𑐼 𑐨𑐽 𑐟𑐹 𑐟𑐺 𑐟𑐻 𑐟𑐼 𑐟𑐽 𑐛𑐾 𑐛𑐿 𑐛𑑀 𑐛𑑁 𑐐𑐹 𑐐𑐺 𑐐𑐻 𑐐𑐼 𑐐𑐽 
+->
