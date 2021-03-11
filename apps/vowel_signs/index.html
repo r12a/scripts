@@ -58,14 +58,14 @@ border: 1px solid #ddd; vertical-align: top; }
 
 <div style="font-size: 90%; margin-bottom: 2em; font-weight: bold;">
 <span>Set font to:</span><br>
-<label><input id="font" type="text" onChange="changeFontFamily(this.value)" style="background-color: #e8d9c5; border: 1px solid #aaa; padding: 3px; font-size: 120%;"/></label><br>
+<label><input id="font" type="text" onChange="changeFontFamily(this.value)" style="background-color: #e8d9c5; border: 1px solid #aaa; padding: 3px; font-size: 120%;"/></label> <button onClick="changeFontFamily(document.getElementById('font').value)">Apply</button><br>
 <span>Font size:</span><br>
 <input id="fontSizeSlider" type="range" min="10" max="200" step="1" value="24"  oninput="changeFontSize(this.value)" style="width:100%;">
 </div>
 
 
 <div style="font-size: 90%; margin-bottom: 2em; font-weight: bold;">
-<p>Choose a preset: <select id="preset" onChange="applyPreset(this.value)">
+<p>Choose a preset: <select id="preset" onChange="applyPreset(this.value); generate(document.getElementById('consonants').value, document.getElementById('vowels').value)">
 <option value=":">None</option>
 <option value="bali">Balinese</option>
 <option value="batk">Batak</option>
@@ -84,6 +84,7 @@ border: 1px solid #ddd; vertical-align: top; }
 <option value="sinh">Sinhala</option>
 <option value="sund">Sundanese</option>
 <option value="tavt">Tai Viet</option>
+<option value="telu">Telugu</option>
 </select>
 </p></div>
 
@@ -168,6 +169,7 @@ var presets = {
 "sinh":"ක ඛ ග ඝ ඞ ඟ ච ඡ ජ ඣ ඤ ට ඨ ඩ ඪ ණ ඬ ත ථ ද ධ න ප ඵ බ භ ම ඹ ය ර ල ළ ව ෆ ශ ෂ ස හ:ා ැ ෑ ි ී ු ූ ෙ ේ ෛ ෞ ො ෝ",
 "sund":"ᮕ ᮘ ᮒ ᮓ ᮎ ᮏ ᮊ ᮌ ᮞ ᮠ ᮙ ᮔ ᮑ ᮍ ᮝ ᮛ ᮜ ᮚ:ᮤ ᮥ ᮦ ᮧ ᮩ ᮨ",
 "tavt":"ꪝ ꪛ ꪜ ꪚ ꪟ ꪞ ꪕ ꪓ ꪔ ꪒ ꪗ ꪖ ꪋ ꪊ ꪍ ꪌꪁ ꪆ ꪀ ꪇ ꪃ ꪂ ꪡ ꪠ ꪏ ꪎ ꪅ ꪄ ꪭ ꪬ ꪣ ꪢ ꪙ ꪘ ꪑ ꪐ ꪉ ꪈ ꪩ ꪨ ꪧ ꪦ ꪥ ꪤ ꪫ ꪪ ꪯ ꪮ:ꪲ ꪳ ꪴꪹ ꪸꪹ ꪷ ꪷ ꪰ ꪱ ꪸ ꪺ ꪾ ꪽꪹ ꪱꪵ ꪫ",
+"telu":"క ఖ గ ఘ ఙ చ ఛ జ ఝ ఞ ట ఠ డ ఢ ణ త థ ద ధ న ప ఫ బ భ మ య ర ఱ ల ళ ఴ వ శ ష స హ:ా ి ీ ు ూ ృ ౄ ె ే ై ొ ో ౌ",
 }
 
 function applyPreset (code) {
@@ -243,6 +245,11 @@ function changeFontFamily ( newFont ) {
 	var tds = document.getElementById( 'theTable' ).querySelectorAll('td')
 	for (var i=0;i<tds.length;i++) tds[i].style.fontFamily = newFont
 	document.getElementById( 'preview' ).style.fontFamily = newFont
+	document.getElementById( 'highlights' ).style.fontFamily = newFont
+	document.getElementById( 'exclusions' ).style.fontFamily = newFont
+	document.getElementById( 'consonants' ).style.fontFamily = newFont
+	document.getElementById( 'vowels' ).style.fontFamily = newFont
+	document.getElementById( 'parkingLot' ).style.fontFamily = newFont
 	}
 
 function changeFontSize ( newSize ) {
