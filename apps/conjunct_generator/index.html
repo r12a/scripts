@@ -65,7 +65,7 @@ border: 1px solid #ddd; vertical-align: top; }
 
 
 <div style="font-size: 90%; margin-bottom: 2em; font-weight: bold;">
-<p>Choose a preset: <select id="preset" onChange="applyPreset(this.value)">
+<p>Choose a preset: <select id="preset" onChange="applyPreset(this.value); generate(document.getElementById('consonants').value, document.getElementById('vowels').value)">
 <option value=":">None</option>
 <option value="bali">Balinese</option>
 <option value="batk">Batak</option>
@@ -82,6 +82,7 @@ border: 1px solid #ddd; vertical-align: top; }
 <option value="rjng">Rejang</option>
 <option value="sinh">Sinhala</option>
 <option value="sund">Sundanese</option>
+<option value="telu">Telugu</option>
 </select>
 </p></div>
 
@@ -142,7 +143,7 @@ Parking lot: &nbsp; &nbsp; <button onclick="showInUniView(document.getElementByI
 </tr>
 </tbody>
 </table>
-<div class="smallprint"><span id="version">See <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/fontlist/index.html">recent changes</a>. &nbsp;•&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bfontlist%5D%20TITLE_GOES_HERE&amp;body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Ffontlist%2F%0A%0A" target="_blank">comment</a>. &nbsp;•&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
+<div class="smallprint"><span id="version">See <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/apps/conjunct_generator">recent changes</a>. &nbsp;•&nbsp; Make a <a href="https://github.com/r12a/scripts/issues/new?title=%5Bconjunct_generator%5D%20TITLE_GOES_HERE&amp;body=Comment%20on%20http%3A%2F%2Fr12a.github.io%2Fscripts%2Fapps%2Fconjunct_generator%2F%0A%0A" target="_blank">comment</a>. &nbsp;•&nbsp; Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a>.</span></div>
 
 
 
@@ -164,6 +165,7 @@ var presets = {
 "rjng":"ꤶ ꤷ ꤳ ꤴ ꤰ ꤱ ꤹ ꤺ ꥂ ꥄ ꥃ ꥅ ꤼ ꥁ ꤸ ꤵ ꤻ ꤲ ꥀ ꤽ ꤾ ꤿ:A953",
 "sinh":"ක ඛ ග ඝ ඞ ඟ ච ඡ ජ ඣ ඤ ට ඨ ඩ ඪ ණ ඬ ත ථ ද ධ න ප ඵ බ භ ම ඹ ය ර ල ළ ව ෆ ශ ෂ ස හ:0DCA",
 "sund":"ᮕ ᮘ ᮒ ᮓ ᮎ ᮏ ᮊ ᮌ ᮞ ᮠ ᮙ ᮔ ᮑ ᮍ ᮝ ᮛ ᮜ ᮚ:1BAB",
+"telu":"క ఖ గ ఘ ఙ చ ఛ జ ఝ ఞ ట ఠ డ ఢ ణ త థ ద ధ న ప ఫ బ భ మ య ర ఱ ల ళ ఴ వ శ ష స హ:0C4D",
 }
 
 function applyPreset (code) {
@@ -236,6 +238,11 @@ function changeFontFamily ( newFont ) {
 	var tds = document.getElementById( 'theTable' ).querySelectorAll('td')
 	for (var i=0;i<tds.length;i++) tds[i].style.fontFamily = newFont
 	document.getElementById( 'preview' ).style.fontFamily = newFont
+	document.getElementById( 'highlights' ).style.fontFamily = newFont
+	document.getElementById( 'exclusions' ).style.fontFamily = newFont
+	document.getElementById( 'consonants' ).style.fontFamily = newFont
+	document.getElementById( 'vowels' ).style.fontFamily = newFont
+	document.getElementById( 'parkingLot' ).style.fontFamily = newFont
 	}
 
 function changeFontSize ( newSize ) {
