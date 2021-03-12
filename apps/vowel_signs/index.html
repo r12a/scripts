@@ -18,7 +18,8 @@ td { text-align: center; cursor: pointer; border: 1px dotted #aaa; border-radius
 #parkingdiv { /*margin-inline-start: 2em;*/ }
 #parkingLot { font-size: 28px; border: 0; width: 50%; height: 3em; }
 #inputPanel { margin-inline-end: 2em; }
-#preview  { font-size: 48px; padding: 0 .2em 0 0; float: right; position: sticky; top: 0; right: 0; background-color: white; clear: both; z-index: 1000; }
+/*#preview  { font-size: 48px; padding: 0 .2em 0 0; float: right; position: sticky; top: 0; right: 0; background-color: white; clear: both; z-index: 1000; }*/
+#preview  { font-size: 48px; padding: 0 .5em 0 .5em; position: fixed; bottom: 0; left: 0; background-color: #ffebcd; clear: both; z-index: 1000; }
 #vowels { /*width: 4em;*/ }
 #submit { color: #0C3;
 font-size: 250%;
@@ -26,11 +27,12 @@ border-radius: 10px;
 line-height: 1.5em;
 padding: 5px;
 border: 1px solid #ddd; vertical-align: top; }
-#exclusions, #highlights { width: 50%; }
+#exclusions, #highlights, #consonants, #vowels { width: 50%; }
 .tips { text-align: start; font-size: 14px; }
 .tipBody td, .tipBody th { vertical-align: top; }
 .tipHead th { vertical-align: top; text-align: start; }
 .highlighted { color: white; background-color: tan; }
+ins { background-color: antiquewhite; }
 </style>
 
 
@@ -56,16 +58,19 @@ border: 1px solid #ddd; vertical-align: top; }
 
 <aside class="sidebar">
 
-<div style="font-size: 90%; margin-bottom: 2em; font-weight: bold;">
+<div style="font-size: 90%; margin-block-end: .75em;; font-weight: bold;">
 <span>Set font to:</span><br>
-<label><input id="font" type="text" onChange="changeFontFamily(this.value)" style="background-color: #e8d9c5; border: 1px solid #aaa; padding: 3px; font-size: 120%;"/></label> <button onClick="changeFontFamily(document.getElementById('font').value)">Apply</button><br>
+<label><input id="font" type="text" onChange="changeFontFamily(this.value)" style="background-color: #e8d9c5; border: 1px solid #aaa; padding: 3px; font-size: 120%; width: 70%; "/></label> <button style="padding: 0;" onClick="changeFontFamily(document.getElementById('font').value)">Set</button><br>
+</div>
+
+<div style="font-size: 90%; margin-block-end: .75em;; font-weight: bold;">
 <span>Font size:</span><br>
-<input id="fontSizeSlider" type="range" min="10" max="200" step="1" value="24"  oninput="changeFontSize(this.value)" style="width:100%;">
+<input id="fontSizeSlider" type="range" min="10" max="200" step="1" value="24"  oninput="changeFontSize(this.value)" style="width:80%;">
 </div>
 
 
-<div style="font-size: 90%; margin-bottom: 2em; font-weight: bold;">
-<p>Choose a preset: <select id="preset" onChange="applyPreset(this.value); generate(document.getElementById('consonants').value, document.getElementById('vowels').value)">
+<div style="font-size: 90%; margin-bottom: 1em; font-weight: bold;">
+Choose a preset: <select id="preset" onChange="applyPreset(this.value); generate(document.getElementById('consonants').value, document.getElementById('vowels').value)">
 <option value=":">None</option>
 <option value="bali">Balinese</option>
 <option value="batk">Batak</option>
@@ -86,32 +91,49 @@ border: 1px solid #ddd; vertical-align: top; }
 <option value="tavt">Tai Viet</option>
 <option value="telu">Telugu</option>
 </select>
-</p></div>
+</div>
 
-
+<div style="flex:1; text-align: start;"><button id="submit" onClick="generate(document.getElementById('consonants').value, document.getElementById('vowels').value)">GO</button></div>
 </aside>
 
  
 
-<div style="display: flex; flex-direction: row; flex-wrap: wrap; margin-inline-start: 7.5%; justify-content: space-between; width:60%;">
-<div style="font-weight: bold; width: 48%;">Consonants:<br><input type="text" id="consonants" placeholder="Space-separated list." style="width: 100%;"></div>
-<div style="font-weight: bold; width: 48%;">Vowels:<br><input type="text" id="vowels" placeholder="Space-separated list." style="width: 100%;"></div>
+<div style="display: flex; flex-direction: column; flex-wrap: wrap; margin-inline-start: 7.5%; justify-content: space-between; width:60%;">
+
+<div style="font-weight: bold;">Consonants: <input type="text" id="consonants" placeholder="Space-separated list." style=""></div>
+
+<div style="font-weight: bold;">Vowels: <input type="text" id="vowels" placeholder="Space-separated list." style=""></div>
+
+<div style="font-weight: bold;">Exclude: 
+<input type="text" id="exclusions" placeholder="Space-separated list of pairs to exclude."></div>
+
+<div style="font-weight: bold;">Highlight: 
+<input type="text" id="highlights" placeholder="Space-separated list of pairs to highlight."></div>
+
+<div style="font-weight: bold;">Manage selections: 
+<select onChange="manageHighlights(this.value);this.value='0';">
+<option value="0">Select an action</option>
+<option value="toParkingLot">Copy highights to Parking Lot</option>
+<option value="toHighlights">Copy highights to Highlight field</option>
+<option value="toExclusions">Copy highights to Exclusions field</option>
+<option value="plToHighlights">Copy Parking Lot to Highlights</option>
+<option value="plToExclusions">Copy Parking Lot to Exclusions</option>
+<option value="invert">Invert highighted selection</option>
+<option value="remove">Remove all highlights</option>
+</select>
+</div>
 </div>
 
-<p style="font-weight: bold;">Exclude: 
-<input type="text" id="exclusions" placeholder="Space-separated list of pairs to exclude."></p>
-<p style="font-weight: bold;">Highlight: 
-<input type="text" id="highlights" placeholder="Space-separated list of pairs to exclude."></p>
 
 <div id="preview"></div>
 
 <div style="display: flex; flex-direction: row; flex-wrap: nowrap; margin-inline-start: 7.5%; margin-inline-end: 30%; width: 60%;">
 <div style="font-weight: bold; flex:4;" id="parkingdiv">
 Parking lot: &nbsp; &nbsp; <button onclick="showInUniView(document.getElementById('parkingLot').value); return false;">Show in UniView</button><br>
-<textarea id="parkingLot" placeholder="Click on a cluster to save it here." style="font-weight: normal;font-family: raleway, sans; width: 100%;"></textarea>
+<textarea id="parkingLot" placeholder="Double-click on an item to save it here." style="font-weight: normal;font-family: raleway, sans; width: 100%; border: 1px dotted tan;"></textarea>
 </div>
-<div style="flex:1; text-align: end;"><button id="submit" onClick="generate(document.getElementById('consonants').value, document.getElementById('vowels').value)">GO</button></div>
 </div>
+
 
 
 
@@ -122,8 +144,10 @@ Parking lot: &nbsp; &nbsp; <button onclick="showInUniView(document.getElementByI
 <tbody class="tipBody">
 <tr>
 <th class="second tips"><p>General operation</p></th>
-<td><p class="tips">Add a space-separated list of consonants to the <samp>Consonants</samp> field, and a space-separated list of vowels  to the <samp>Vowels</samp> field. You'll want to see results for a particular font, so type the name of the font in the field just above.</p>
-<p class="tips">As you mouse over a table cell, the components of that cell will be shown in the top right corner of the page. This is particularly useful if your table is so large that you can no longer see the column or row headings.</p></td>
+<td><p class="tips"><ins>Some of the original functionality has been changed. See the items below with this background colour.</ins></p>
+<p class="tips">Add a space-separated list of consonants to the <samp>Consonants</samp> field, and a space-separated list of vowels  to the <samp>Vowels</samp> field. You'll want to see results for a particular font, so type the name of the font in the field just above.</p>
+<p class="tips">As you mouse over a table cell, the components of that cell will be shown in the bottom left corner of the page. This is particularly useful if your table is so large that you can no longer see the column or row headings.</p>
+<p class="tips"><ins>By clicking on a table cell you can highlight it or unhighlight it.</ins></p></td>
 </tr>
 <tr>
 <th class="second tips"><p>Presets</p></th>
@@ -131,13 +155,14 @@ Parking lot: &nbsp; &nbsp; <button onclick="showInUniView(document.getElementByI
 </tr>
 <tr>
 <th class="second tips"><p>Parking lot</p></th>
-<td><p class="tips">If you click on a cell in the rendered list, it will be added to the parking lot area. You may want to do this for items you want to pick out for discussion or illustration. The items will all be space-separated, so you should also be able to directly copy the contents of the parking lot to the <samp>Exclude</samp> or <samp>Highlight</samp> fields (and press <samp>GO</samp> again to immediately see the results).</p>
+<td><p class="tips">If you <ins>double-</ins>click on a cell in the rendered list, it will be added to the parking lot area. You may want to do this for items you want to pick out for discussion or illustration. The items will all be space-separated, so you should also be able to directly copy the contents of the parking lot to the <samp>Exclude</samp> or <samp>Highlight</samp> fields (and press <samp>GO</samp> again to immediately see the results).</p>
+<p class="tips"><ins>Alternatively, you can use the actions in the <samp>Manage selections</samp> pull-down to move highlighted items to the parking lot.</ins></p>
 <p class="tips">You can view the contents of the parking lot character by character by clicking on the Show in UniView button.</p></td>
 </tr>
 <tr><th class="second tips"><p>Using exclusions</p></th><td>
-<p class="tips">You can use the exclusion list to prevent results being displayed for certain cells. Add a space-separated list of consonant-vowel combinations here. Hint: if you click on items, then copy them from the parking lot to the exclusions field, then press <samp>GO</samp> again, the matrix will be updated without the items you selected.</p></td></tr>
+<p class="tips">You can use the exclusion list to prevent results being displayed for certain cells. Add a space-separated list of consonant-vowel combinations here and press <samp>GO</samp>. Hint: if you transfer a list of items from the parking lot to the exclusions box, then press <samp>GO</samp> again, the matrix will be updated without the items you selected.</p></td></tr>
 <tr><th class="second tips"><p>Highlights</p></th><td>
-<p class="tips">Add a space-separated list of consonant-vowel combinations here, and they will be highlighted in the matrix below.</p>
+<p class="tips">Add a space-separated list of consonant-vowel combinations here, and they will be highlighted in the matrix below when you press <samp>GO</samp>.</p>
 <p class="tips">If you have collected items in the parking lot, you could copy them here and press GO and you'll see what you've so far picked.</p></td></tr>
 <tr>
 <th class="second tips"><p>Parameters in the URL</p></th>
@@ -236,7 +261,8 @@ function generate (clist, vlist) {
 		}
 	document.getElementById('theTable').innerHTML = table
 	var cells = document.querySelectorAll('td')
-	for (var i=0;i<cells.length; i++) cells[i].addEventListener('click', saveForReview)
+	for (var i=0;i<cells.length; i++) cells[i].addEventListener('dblclick', saveForReview)
+	for (var i=0;i<cells.length; i++) cells[i].addEventListener('click', toggleHighlight)
 	}
 
 
@@ -261,9 +287,61 @@ function saveForReview ( evt ) {
 	parkingLot = document.getElementById('parkingLot')
 	parkingLot.value += evt.target.textContent + ' '
 	}
+function toggleHighlight ( evt ) {
+	if (evt.target.classList.contains('highlighted')) evt.target.classList.remove('highlighted')
+	else evt.target.classList.add('highlighted')
+	}
 
 function showInUniView (chars) {
 	var uniview = window.open('/uniview/?charlist='+ encodeURIComponent(chars.trim()), 'uniview') 
+	}
+
+function manageHighlights (task) { console.log(task)
+	if (task === '0') return
+	var hls = document.querySelectorAll('.highlighted')
+	var str
+	
+	if (task === 'toHighlights') {
+		str = ''
+		for (var i=0;i<hls.length;i++) str += hls[i].textContent + ' '
+		document.getElementById('highlights').value += str
+		}
+	
+	else if (task === 'toExclusions') {
+		str = ''
+		for (var i=0;i<hls.length;i++) str += hls[i].textContent + ' '
+		document.getElementById('exclusions').value += str
+		}
+	
+	else if (task === 'toParkingLot') {
+		str = ''
+		for (var i=0;i<hls.length;i++) str += hls[i].textContent + ' '
+		document.getElementById('parkingLot').value += str
+		}
+	
+	else if (task === 'plToHighlights') {
+		console.log('here')
+		str = document.getElementById('parkingLot').value
+		console.log(str)
+		document.getElementById('highlights').value += str
+		}
+	
+	else if (task === 'plToExclusions') {
+		str = document.getElementById('parkingLot').value
+		document.getElementById('exclusions').value += str
+		}
+	
+	else if (task === 'invert') {
+		hls = document.querySelectorAll('td')
+		for (var i=0;i<hls.length;i++) {
+			if (hls[i].classList.contains('highlighted')) hls[i].classList.remove('highlighted')
+			else hls[i].classList.add('highlighted')
+			}
+		}
+	else if (task === 'remove') {
+		hls = document.querySelectorAll('.highlighted')
+		for (var i=0;i<hls.length;i++) hls[i].classList.remove('highlighted')
+		}
 	}
 
 
