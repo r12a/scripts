@@ -166,7 +166,7 @@ Parking lot: &nbsp; &nbsp; <button onclick="showInUniView(document.getElementByI
 <p class="tips">If you have collected items in the parking lot, you could copy them here and press <samp>GO</samp> and you'll see what you've so far picked.</p></td></tr>
 <tr>
 <th class="second tips"><p>Parameters in the URL</p></th>
-<td><p class="tips">The following parameters can be passed to the page via the URL: <samp>vowels=</samp>, <samp>consonants=</samp>, <samp>preset=</samp>, <samp>exclusions=</samp>, <samp>highlights=</samp>, <samp>font=</samp>. This allows you to show someone else a set of combinations you are interested in.</p></td>
+<td><p class="tips">The following parameters can be passed to the page via the URL: <samp>virama=</samp>, <samp>consonants=</samp>, <samp>preset=</samp>, <samp>exclusions=</samp>, <samp>highlights=</samp>, <samp>font=</samp>. This allows you to show someone else a set of combinations you are interested in.</p></td>
 </tr>
 </tbody>
 </table>
@@ -349,7 +349,7 @@ parametersFound = false
 for (var p=0;p<parameters.length;p++) {
 	pairs = parameters[p].split('=');
 	if (pairs[0] == 'consonants') { if (pairs[1]) { document.getElementById('consonants').value = decodeURIComponent(pairs[1]); parametersFound = true } }
-	if (pairs[0] == 'virama') { if (pairs[1]) { document.getElementById("virama").value = decodeURIComponent(pairs[1]); parametersFound = true } }
+	if (pairs[0] == 'virama') { if (pairs[1]) { document.getElementById("vowels").value = decodeURIComponent(pairs[1]); parametersFound = true } }
 	if (pairs[0] == 'exclusions') { if (pairs[1]) { document.getElementById("exclusions").value = decodeURIComponent(pairs[1]); parametersFound = true } }
 	if (pairs[0] == 'highlights') { if (pairs[1]) { document.getElementById("highlights").value = decodeURIComponent(pairs[1]); parametersFound = true } }
 	if (pairs[0] == 'preset') { if (pairs[1]) { document.getElementById("preset").value = decodeURIComponent(pairs[1]); applyPreset(pairs[1]); parametersFound = true } }
