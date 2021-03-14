@@ -314,12 +314,15 @@ autoExpandExamples.or = `
 ଜୋଗୁ|because||jogu
 ନାମ|name||namô
 
-ଦୁଃଖ|sorry|dukkʰɔ
+ଦୁଃଖ|sorrow|dukkʰɔ
 ଡ୍ରପ୍-ଡାଉନ୍|drop-down|ɖrɔp-ɖaun
 ଇ-ମେଲ୍|e-mail|i-mel|i-mel
-ଦ୍ୱିତୀୟୋଽଧ୍ୟାୟଃ||| dwitīyo'dhyāyaḥ
+ଦ୍ୱିତୀୟୋଽଧ୍ୟାୟଃ|chapter 2||dwitīyo'dhyāyaḥ
 ପଦ୍ମ|lotus|pɔdmɔ
 ପ୍ରଶ୍ନ|question|prɔsnɔ
+ପୁନଃପୁନଃ|over and over again|punɔppunɔ
+ଅଙ୍କ|ink|ɔŋkɔ
+ଅଂକ|ink|ɔŋkɔ
 
 
 

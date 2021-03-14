@@ -24,11 +24,14 @@ reflist = {
 "title":"On Oriya VA and WA, and a proposal to encode one Oriya letter in the UCS",
 },
 
-"rmcs": {
-"url":"https://www.w3.org/TR/predefined-counter-styles/#oriya-styles",
-"authors": "Richard Ishida",
-"title":"Ready-made Counter Styles",
-"reviewed":true
+
+"is": {
+"url":"#refs",
+"authors": "Tapas S Ray, Peri Bhaskararao (ed)",
+"title":"International Symposium on Indic Scripts, Past & Future",
+"pages":"143-153",
+"publisher":"Research Institute for the Languages and Cultures of Asia and Africa, Tokyo University of Foreign Studies",
+"reviewed":false
 },
 
 "msg": {
@@ -36,6 +39,23 @@ reflist = {
 "authors": "Microsoft",
 "title":"Odia style guide",
 "reviewed":false
+},
+
+"n": {
+"url":"#refs",
+"authors": "Akira Nakanishi",
+"title":"Writing Systems of the World",
+"pages":"54-55",
+"isbn":"0-8048-1654-9",
+"publisher":"Tuttle",
+"reviewed":false
+},
+
+"rmcs": {
+"url":"https://www.w3.org/TR/predefined-counter-styles/#oriya-styles",
+"authors": "Richard Ishida",
+"title":"Ready-made Counter Styles",
+"reviewed":true
 },
 
 "sl11": {
