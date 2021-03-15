@@ -47,6 +47,13 @@ reflist = {
 "title":"Shan",
 },
 
+"rmcs": {
+"url":"https://www.w3.org/TR/predefined-counter-styles/#oriya-styles",
+"authors": "Richard Ishida",
+"title":"Ready-made Counter Styles",
+"reviewed":true
+},
+
 "sb": {
 "url":"http://sealang.net/burmese/",
 "authors": "Sealang Library",
