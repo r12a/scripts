@@ -1155,8 +1155,15 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 
 
 
-<p>In Unicode, the conjunct formation is achieved by adding <span class="codepoint" translate="no"><span lang="or">&#x0B4D;</span> [<a href="/scripts/oriya/block#char0B4D"><span class="uname">U+0B4D ORIYA SIGN VIRAMA</span></a>]</span>  between the consonants. The font hides the virama glyph automatically.</p>
+<p>In Unicode, the conjunct formation is achieved by adding <span class="codepoint" translate="no"><span lang="or">&#x0B4D;</span> [<a href="/scripts/oriya/block#char0B4D"><span class="uname">U+0B4D ORIYA SIGN VIRAMA</span></a>]</span>  between the consonants. The font hides the virama glyph automatically when a conjunct is formed.</p>
 <p>See also <a class="secref">finals</a> and <a class="secref">gemination</a>.</p>
+
+
+
+
+
+
+
 <section id="stacking">
 <h4>Stacking</h4>
 <p>The overwhelming majority of conjuncts in Odia are achieved by subjoining a reduced form of the non-initial consonant below the initial.</p>
@@ -1743,6 +1750,19 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 <p>Odia text is not cursive (ie. joined up like Arabic).</p>
 <p>The orthography has no case distinction, and no special transforms are needed to convert between characters.</p>
 
+
+
+<section id="glyph_variants">
+<h3>Glyph variants</h3>
+
+<p><a href="#refs">Nakanishi</a> lists a number of alternative shapes for glyphs.</p>
+
+<figure id="fig_glyph_variants">
+<img src="img/glyph_variants.png" alt="">
+<figcaption>Description of glyph variants from Nakanishi, p54.</figcaption>
+</figure>
+</section>
+
 <!--section id="writing_styles">
 <h3>Writing styles</h3>
 
@@ -1859,12 +1879,12 @@ has its own idiosyncratic way of combining with other consonants, whether it pre
 <h3>Grapheme boundaries</h3>
 <p id="def-grapheme" class="explanatoryintro definitionStub"></p>
 
-<p>Usually a typographic character unit correlates with the Unicode concept of grapheme clusters, but not always.</p>
+<p>Usually a typographic character unit correlates with the Unicode concept of grapheme clusters, but not in the case of conjuncts (in common with several  other Indic scripts).</p>
 
 <section id="conjunct_graphemes">
 <h4>Conjuncts<a class="selflink" href="#conjunct_graphemes"></a></h4>
 <p>Conjuncts and any dependent combining characters should never be split.</p>
-<p>This creates a problem when dealing with Unicode grapheme clusters, because they stop after  reaching a virama. So conjuncts usually contain multiple grapheme clusters. This produces incorrect segmentation as seen on the left in <a class="figref">fig_grapheme_conjunct</a>. Applications need to tailor the grapheme cluster rules to avoid splitting conjuncts.</p>
+<p>This creates a problem when dealing with Unicode grapheme clusters, because they stop after  reaching a virama. So conjuncts usually contain multiple grapheme clusters. This produces incorrect segmentation as seen on the right in <a class="figref">fig_grapheme_conjunct</a>. Applications need to tailor the grapheme cluster rules to avoid splitting conjuncts.</p>
 
     
 <figure id="fig_grapheme_conjunct" data-notes="62px Devanagari MT">

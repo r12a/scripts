@@ -48,7 +48,7 @@ reflist = {
 "pages":"54-55",
 "isbn":"0-8048-1654-9",
 "publisher":"Tuttle",
-"reviewed":false
+"reviewed":true
 },
 
 "rmcs": {
