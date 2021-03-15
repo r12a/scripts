@@ -10,6 +10,13 @@ reflist = {
 "reviewed":true
 },
 
+"g1203": {
+"url":"https://github.com/googlefonts/noto-fonts/issues/1203#issuecomment-396224121",
+"authors": "@anandakm",
+"title":"Newa script issues - letter shapes, conjunctions problems",
+"reviewed":false
+},
+
 "m": {
 "url":"https://www.unicode.org/L2/L2012/12349-nepaal-lipi.pdf",
 "authors": "Dev Dass Manandhar, Samir Karmacharya and Bishnu Chitrakar",
