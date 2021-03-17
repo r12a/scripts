@@ -48,6 +48,7 @@ var scriptNotes= {
 			['Shan', 'myanmar/mymr-shn']],
     'newa':[["Newa", 'newa']],
     'nkoo':[["N’Ko", 'nko']],
+    'olck':[["Ol Chiki", 'santali']],
     'orya':[["Odia (Oriya)", 'oriya']],
     'osge':[["Osage", 'osage']],
     'sinh':[['Sinhala', 'sinhala/']],
@@ -144,6 +145,7 @@ var scriptNotesByRegion = {
 		],
 	'O':[
 		['Odia (Oriya)', 'oriya/'],
+		['Ol Chiki', 'santali/'],
 		['Osage', 'osage/'],
 		],
 	'P':[
@@ -222,8 +224,10 @@ var charNotesList = {
     'mong':['Mongolian', 'mongolian/block'],
     'mymr':['Myanmar', 'myanmar/block'],
     'talu':['New&nbsp;Tai&nbsp;Lue', 'newtailue/block'],
-    'newa':['Newar', 'newa/block'],
+    'newa':['Newa', 'newa/block'],
     'nkoo':['NKo', 'nko/block'],
+    'olck':['Ol Chiki', 'santali/block'],
+    'orya':['Oriya', 'oriya/block'],
     'osge':['Osage', 'osage/block'],
 	'punctuation':['Punctuation', 'punctuation/block'],
     'rohg':['Hanifi Rohingya', 'rohg/block'],
@@ -1327,20 +1331,16 @@ mult:{ script:"Multani", code:"Mult", name:"", dates:"16thC – 20thC", start:"1
 	layout:[	
 				]
 	},
-  
-olck:{ script:"Ol Chiki", code:"Olck", name:"Ol Chiki (Ol Cemet', Ol, Santali)", dates:"1920s – today", start:"1920", end:"", origin:"South Asia", current_usage:"",
-	info:{ 		wikipedia:"Ol_Chiki_alphabet", omniglot:"santali" }, 
-	local: [	
-				],
-	unicode:{ 	}, 
-	charts:[	"Ol Chiki" ],
-	pickers:[	
-				],
-	fontkey:[	{ name:"Alan Wood", url:"http://www.alanwood.net/unicode/fonts-south-asian.html#olchiki" }
-				],
-	layout:[	
-				]
-	},
+
+olck:{ script:"Ol Chiki", code:"Olck", name:"Ol Chiki (Ol Cemet', Ol, Santali)", 
+dates:"1920s – today", start:"1920", end:"", current_usage:"", 
+status: "",
+origin:"South Asia",
+info:{ wikipedia:"Ol_Chiki_alphabet", omniglot:"olchiki" }, 
+local: [	],
+charts:[ "Ol Chiki" ],
+layout:[	]
+},
 
 orya:{ script:"Oriya", code:"Orya", name:"Oriya (Odia)", dates:"1051 – today", start:"1051", end:"", origin:"South Asia", current_usage:"",
 	info:{ 		wikipedia:"Odia_alphabet", omniglot:"oriya" }, 
