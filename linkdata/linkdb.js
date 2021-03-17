@@ -150,6 +150,7 @@ var scriptNotesByRegion = {
 		],
 	'P':[
 		['Plains Cree', 'cans/cans-crk'],
+		['Pracalit', 'newa/'],
 		['Pular', 'adlam/'],
 		['Punjabi', 'gurmukhi/'],
 		],
@@ -157,6 +158,7 @@ var scriptNotesByRegion = {
 		['Russian', 'cyrillic/'],
 		],
 	'S':[
+		['Santali', 'santali/'],
 		['Shan', 'myanmar/mymr-shn'],
 		['Sinhala', 'sinhala/'],
 		['Sundanese', 'sundanese/'],
