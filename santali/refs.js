@@ -15,14 +15,14 @@ reflist = {
 "url":"https://www.unicode.org/L2/L2005/05243r-n2984-ol-chiki.pdf",
 "authors": "Everson, Michael",
 "title":"Final proposal to encode the Ol Chiki script in the UCS",
-"reviewed":false
+"reviewed":true
 },
 
 "rp": {
 "url":"https://www.unicode.org/L2/L2002/02422-n2505-olchiki.pdf",
 "authors": "Michael Everson, R.C. Hansdah & N. C. Murmu",
 "title":"Revised proposal for encoding the Ol Chiki script in the UCS",
-"reviewed":false
+"reviewed":true
 },
 
 "u": {
@@ -32,7 +32,7 @@ reflist = {
 "sub":"Chapter 13.10: South and Central Asia II, Ol Chiki",
 "pages":"555-556",
 "isbn":"978-1-936213-16-0.",
-"reviewed":false
+"reviewed":true
 },
 
 "ul": {
@@ -53,7 +53,7 @@ reflist = {
 "url":"https://en.wikipedia.org/wiki/Ol_Chiki_script",
 "authors": "Wikipedia",
 "title":"Ol Chiki script",
-"reviewed":false
+"reviewed":true
 },
 
 
