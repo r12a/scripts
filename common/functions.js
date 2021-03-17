@@ -146,6 +146,7 @@ function removeEditorNotes () {
 
 function makeSidePanel (id, otherlinks) {
 	if (typeof langs === 'undefined') return
+	if (typeof langs[id] === 'undefined') { console.log('Charuse data not found. Id sent to makeSidePanel was ',id); return }
 		
 	// get character counts in a way that works around surrogates
 	var letters = marks = punctuation = symbols = others = numbers = aux = 0
@@ -479,6 +480,8 @@ function makeTables (lang) {
         node.innerHTML = out
         }
     }
+
+
 
 
 
