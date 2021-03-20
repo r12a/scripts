@@ -28,22 +28,31 @@ function getData (script) {
 		else temp += record.dates
 		temp += '</p>'
 		if (record.status) {
-			temp += '<p style="font-size:80%;">'+record.status+'</p>'
+			temp += '<p class="status">'+record.status+'</p>'
 			}
 		temp += '</td></tr>'
 		out += temp
 		}
 
+
+	// type
+	if (record.type) {
+		out += '<tr><td>Type:</td><td>'
+		out += '<p class="scripttype">'+record.type+'</p>'
+		}
+
+
 	// general info
 	if (record.info) {
 		out += '<tr><td>General info:</td><td>'
-		out += '<p><a href="http://www.unicode.org/versions/latest/ch'+chapters[lc]+'.pdf">Unicode</a></p>'
-		out += '<p><a href="http://scriptsource.org/scr/'+record.code+'" >Scriptsource</a></p>'
-		if (record.info.wikipedia) out += '<p><a href="http://en.wikipedia.org/wiki/'+record.info.wikipedia+'">Wikipedia</a></p>'
+		out += '<p><a target="_blank" href="http://www.unicode.org/versions/latest/ch'+chapters[lc]+'.pdf">Unicode</a></p>'
+		out += '<p><a target="_blank" href="http://scriptsource.org/scr/'+record.code+'" >Scriptsource</a></p>'
+		if (record.info.wikipedia) out += '<p><a target="_blank" href="http://en.wikipedia.org/wiki/'+record.info.wikipedia+'">Wikipedia</a></p>'
 		if (record.info.omniglot) {
-			if ( record.info.omniglot.match('http') ) out += '<p><a href="'+record.info.omniglot+'">Omniglot</a></p>'
-			else out += '<p><a href="http://www.omniglot.com/writing/'+record.info.omniglot+'.htm">Omniglot</a></p>'
+			if ( record.info.omniglot.match('http') ) out += '<p><a target="_blank" href="'+record.info.omniglot+'">Omniglot</a></p>'
+			else out += '<p><a target="_blank" href="http://www.omniglot.com/writing/'+record.info.omniglot+'.htm">Omniglot</a></p>'
 			}
+		if (endangered[lc]) out += '<p><a target="_blank" href="https://www.endangeredalphabets.net/alphabets/'+endangered[lc]+'">Endangered alphabets</a></p>'
 		// ?
 		for (let r=2;r<record.local.length;r++) temp += '<p><a href="'+record.info[r].url+'" >'+record.info[r].name+'</a></p>'
 		out += '</td></tr>'
@@ -155,6 +164,16 @@ function getData (script) {
 		}
 	temp += '</td></tr>'
 	if (temp !== '<tr><td>Character apps:</td><td></td></tr>') out += temp
+    
+    
+    // used for
+	if (record.usedfor) {
+		var temp = ''
+		temp += '<tr><td>Used for:</td><td>'
+		temp += '<p class="usedfor">'+record.usedfor.replace(/],/g,'],&nbsp;&nbsp;&nbsp;')+'</p>'
+		temp += '</td></tr>'
+		if (temp !== '<tr><td>Used for:</td><td></td></tr>') out += temp
+		}
 
 /*
 		if (record.fontkey) {
@@ -214,6 +233,30 @@ function highlight (classNm, checkboxNode) {
 	if (classNm === 'limited') {
 		for (let s=0; s<scripts.length; s++) {
 			if (linkDB[scripts[s].id.toLowerCase()].end === '' && linkDB[scripts[s].id.toLowerCase()].current_usage !== '') scripts[s].style.color = 'brown'
+			}
+		}
+	
+	if (classNm === 'uptake') {
+		for (let s=0; s<scripts.length; s++) {
+			if (linkDB[scripts[s].id.toLowerCase()].current_usage.includes('uptake')) scripts[s].style.color = 'brown'
+			}
+		}
+	
+	if (classNm === 'endangered') {
+		for (let s=0; s<scripts.length; s++) {
+			if (linkDB[scripts[s].id.toLowerCase()].current_usage.includes('endangered')) scripts[s].style.color = 'brown'
+			}
+		}
+	
+	if (classNm === 'liturgical') {
+		for (let s=0; s<scripts.length; s++) {
+			if (linkDB[scripts[s].id.toLowerCase()].current_usage.includes('liturgical')) scripts[s].style.color = 'brown'
+			}
+		}
+	
+	if (classNm === 'community') {
+		for (let s=0; s<scripts.length; s++) {
+			if (linkDB[scripts[s].id.toLowerCase()].current_usage.includes('community')) scripts[s].style.color = 'brown'
 			}
 		}
 	
