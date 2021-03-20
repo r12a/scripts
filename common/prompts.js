@@ -115,3 +115,45 @@ function addUsageAdvice (script) {
 	
 	document.getElementById('usage').outerHTML = '<p class="instructions">Click on characters or character names to reveal detailed information. (By default, this happens as the cursor moves over some items, but the floating menu to the right provides a toggle for that.) The same information also appears in the companion document, <a href="block" class="linkHighlight">'+script+' character notes</a>. Click on <span class="ex">highlighted</span> examples to see a list of the characters they contain.</p>'
 	}
+
+
+function addAnalytics () {
+    // add the stuff at the bottom to generate lists and the index
+    
+    document.getElementById('analytics').outerHTML = `
+    <details>
+    <summary class="prompts">Show stats</summary>
+
+    <table id="charCountList">
+    <tr><th>Main</th><td id="mainCharList"></td><td id="mainCharListTotal"></td></tr>
+    <tr><th>Auxiliary</th><td id="auxCharList"></td><td id="auxCharListTotal"></td></tr>
+    <tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
+    <tr><th>Other</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
+    <tr><th>Deprecated</th><td id="deprecatedCharList"></td><td id="deprecatedCharListTotal"></td></tr>
+    </table>
+    </details>
+    `
+    +
+    `<details style="font-size: 80%;">
+    <summary class="prompts">Make index</summary>
+    <hr>
+    <h1>Make the index here</h1>
+
+    <p>Click here to start (and every time you reload the page)</p>
+    <p><button onClick="makeIndexObject()">Make Index Object</button></p>
+
+    <p><input id="allchars" type="text" placeholder="List of all chars appears here"></p>
+
+    <p>Copy the list of all characters to Uniview and filter for General Category</p>
+    <p>Copy each General Category to the picker and sort into lines, one for each of the different subsections in the index for that category.</p>
+    <p>Copy each line, one at a time to the input box below, and press Make Markup.</p>
+
+    <p><input id="in" type="text" placeholder="Index line here"> <button onClick="makeMarkup()">Make markup</button></p>
+
+    <p><textarea id="out" style="width: 80%;height:300px;"></textarea>
+    </p>
+    <p>Take the output and copy it to the document in the correct place in the index.</p>
+    `
+    }
+
+

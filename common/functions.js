@@ -1071,3 +1071,60 @@ function showTransliterationsEvt (evt) {
 
 
 
+// MAKE INDEX DATA
+index = {}
+
+function makeIndexObject () {
+    var charArray = []
+	chars = document.querySelectorAll('.codepoint, .listItem')
+	for (i=0;i<chars.length;i++) {
+		charArray.push(new Object)
+		charArray[charArray.length-1].codepoint = chars[i].firstChild.textContent
+		//console.log(charArray)
+		ptr = chars[i]
+		//console.log(ptr.nodeName)
+		while (ptr.nodeName != 'SECTION' && ptr.nodeName != 'HTML') {
+			ptr = ptr.parentNode
+			//console.log(ptr.nodeName)
+			}
+		charArray[charArray.length-1].section = ptr.id
+		}
+	console.log(charArray)
+
+	allchars = '' // makes a list of all characters for sorting later
+	for (j=0;j<charArray.length;j++) {
+	if ([... charArray[j].codepoint].length > 1) continue
+	if (charArray[j].section.includes('index_')) continue
+	if (charArray[j].section.includes('_map')) continue
+	if (charArray[j].section.includes('map_')) continue
+	// stop duplicates
+	if (index[charArray[j].codepoint] && index[charArray[j].codepoint].includes(charArray[j].section)) continue
+	//if (index[charArray[j].codepoint]) console.log('Found ',index[charArray[j].codepoint])
+		if (index[charArray[j].codepoint]) index[charArray[j].codepoint] += ' #'+charArray[j].section
+		else {
+			index[charArray[j].codepoint] = '#'+charArray[j].section
+			allchars += charArray[j].codepoint
+			}
+		}
+	console.log(index)
+	document.getElementById('allchars').value = allchars
+	}
+
+
+function makeMarkup () {
+	charList = document.getElementById('in').value
+	charList = charList.replace(/ /g,'')
+	chars = [...charList]
+	out = '<figure class="characterBox auto"  data-cols="" data-links="'
+	for (i=0;i<chars.length;i++) {
+		out += index[chars[i]]+','
+		}
+	out +='">'+chars.join('␣')+'</figure>'
+	document.getElementById('out').value = out
+	document.getElementById('out').select()
+	}
+
+
+
+
+
