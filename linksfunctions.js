@@ -285,6 +285,32 @@ function highlight (classNm, checkboxNode) {
 			if (start >= 1900) scripts[s].style.color = 'brown'
 			}
 		}
+	
+	if (classNm === 'rtl') {
+		for (let s=0; s<scripts.length; s++) {
+			if (linkDB[scripts[s].id.toLowerCase()].type && linkDB[scripts[s].id.toLowerCase()].type.includes('RTL')) scripts[s].style.color = 'brown'
+			}
+		}
+	if (classNm === 'alphabet') {
+		for (let s=0; s<scripts.length; s++) {
+			if (linkDB[scripts[s].id.toLowerCase()].type && linkDB[scripts[s].id.toLowerCase()].type.includes('alphabet')) scripts[s].style.color = 'brown'
+			}
+		}
+	if (classNm === 'abugida') {
+		for (let s=0; s<scripts.length; s++) {
+			if (linkDB[scripts[s].id.toLowerCase()].type && linkDB[scripts[s].id.toLowerCase()].type.includes('abugida')) scripts[s].style.color = 'brown'
+			}
+		}
+	if (classNm === 'abjad') {
+		for (let s=0; s<scripts.length; s++) {
+			if (linkDB[scripts[s].id.toLowerCase()].type && linkDB[scripts[s].id.toLowerCase()].type.includes('abjad')) scripts[s].style.color = 'brown'
+			}
+		}
+	if (classNm === 'syllabary') {
+		for (let s=0; s<scripts.length; s++) {
+			if (linkDB[scripts[s].id.toLowerCase()].type && linkDB[scripts[s].id.toLowerCase()].type.includes('syllabary')) scripts[s].style.color = 'brown'
+			}
+		}
 	}
 
 
