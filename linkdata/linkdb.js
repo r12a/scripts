@@ -1456,8 +1456,8 @@ usedfor:"Maithili [mai]",
 
 
 wara:{ script:"Warang Citi", code: "Wara", name:"Warang Citi (Varang Kshiti)", type:"abugida",
-dates:"1950s – today", start:"1950", end:"", current_usage:"community",
-status:"Used alongside Devanagari and Odia to write the Ho language in Odisha and Jharkhand. The Unicode Standard mentiones a yearly magazine and a biweekly publication.",
+dates:"1950s – today", start:"1950", end:"", current_usage:"uptake",
+status:"Used alongside Devanagari and Odia to write the Ho language, which has around 1,420,000 speakers in Odisha and Jharkhand. The Unicode Standard mentiones a yearly magazine and a biweekly publication.",
 origin:"South Asia",
 info:{ wikipedia:"Varang_Kshiti", omniglot:"varangkshiti" },
 local: [ ],
@@ -1742,7 +1742,7 @@ usedfor:"Bugis [bug], Makasar [mak], Mamuju [mqx], Mandar [mdr], Wotu [wtw]",
 
 
 buhd:{ script:"Buhid", code: "Buhd", name:"", type:"abugida",
-dates:"18thC – today", start:"1700", end:"", current_usage:"uptake",
+dates:"18thC – today", start:"1700", end:"", current_usage:"uptake, community",
 status:"Used to write the Buhid language, which has about 8,000 speakers, in the Mindoro region of the Philippines. The primary script for the language is Latin.",
 origin:"Indonesia & Oceania",
 info:{ wikipedia:"Buhid_alphabet", omniglot:"buhid" },
@@ -1815,7 +1815,7 @@ layout: [ ],
 
 
 tagb:{ script:"Tagbanwa", code: "Tagb", name:"", type:"abugida, defective",
-dates:"18thC – today", start:"1700", end:"", current_usage:"uptake",
+dates:"18thC – today", start:"1700", end:"", current_usage:"uptake, community",
 status:"Used for the Tagbanwa language, which has around 8,000 speakers, in the Palawan region of the Philippines. Younger generations prefer to use Tagalog, so the script is in decline.",
 origin:"Indonesia & Oceania",
 info:{ wikipedia:"Tagbanwa_script", omniglot:"tagbanwa" },
@@ -1963,8 +1963,8 @@ usedfor:"Beaver [bea], Blackfoot [bla], Carrier [crx], Carrier, Southern [caf], 
 
 
 osge:{ script:"Osage", code: "Osge", name:"", type:"alphabet",
-dates:"2006 – today", start:"2006", end:"", current_usage:"uptake",
-status:"A new orthography promoted by the Osage Nation since 2006. Work is under way to educate people in the script, but the number of users is still low.",
+dates:"2006 – today", start:"2006", end:"", current_usage:"community",
+status:"A new orthography promoted by the Osage Nation since 2006. Work is under way to educate people in the script, but the number of users is still low, in an ethnic population of 11,000.",
 origin:"Americas",
 info:{ wikipedia:"Osage_alphabet", omniglot:"http://www.omniglot.com/writing/osage.php" },
 local: [ ],
