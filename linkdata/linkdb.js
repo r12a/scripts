@@ -2064,7 +2064,7 @@ layout: [ ],
 },
 
 
-rohg:{ script:"Hanifi Rohingya", code: "Rohg", name:"", type:"alphabet, RTL",
+rohg:{ script:"Hanifi Rohingya", code: "Rohg", name:"", type:"abugida, RTL",
 dates:"1980s – today", start:"1900", end:"", current_usage:"uptake",
 status:"Used for the publication of books and newspapers, both hand-written and printed.",
 origin:"Southeast Asia",
