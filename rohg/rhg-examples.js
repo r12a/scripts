@@ -2,21 +2,29 @@
 
 autoExpandExamples.rhg = `
 
-ᨀᨆᨗᨔᨗ|Thursday|kɑmɪːsɪ (kamisi)
-ᨄᨉᨚᨕᨂᨛ|prayers|(paddoangeng)
-ᨅᨔ ᨕᨘᨁᨗ|Buginese language|(basa ugi)
-ᨅᨗᨌᨑ|language|(bicara)
-ᨆᨌ|clever|(maca)
-ᨍᨘᨆ|Friday|(juma)
-ᨒᨄ|lava|(lapa)
-ᨓᨕᨙ|water|(wae)
-ᨔᨈᨘ|Saturday|(satung)
-ᨔᨒᨔ|Tuesday|sɑlɑːsɑ
-ᨕᨆᨑᨙᨉᨀᨂᨛ|democracy|(amaradekangəng)
-ᨕᨑᨅ|Wednesday|(araba)
-ᨕᨔᨘ|dog|(asu)
-ᨕᨙᨔᨙᨊᨙ|Monday|eseneŋ (eseneng)
-ᨕᨛᨔᨚ ᨕᨖᨕᨗ|Sunday|(əso ahai)
+𐴁𐴝𐴉𐴢|father|bap
+𐴔𐴦𐴝𐴣|mother|mã
+𐴉𐴗𐴝|son|fwa
+𐴎𐴠𐴌𐴉𐴗𐴝|daughter|zerfwa
+𐴁𐴝𐴘|brother|baj
+𐴑𐴡𐴔𐴂𐴘𐴟𐴄𐴝𐴌|computer|kompjutar
+𐴇𐴥𐴝𐴙𐴓𐴢|green|hajl
+𐴐𐴥𐴝𐴓𐴒𐴡𐴔𐴢|turnip|ʃalgom
+𐴁𐴡𐴌𐴈𐴡𐴘𐴞𐴏𐴥𐴡𐴛|long bean|boɾxojisoɲ
+𐴄𐴝𐴘𐴧𐴡𐴕|tomato|ʈajjon
+𐴋𐴥𐴠𐴙𐴇𐴝𐴑|edible fern|ɖejhak
+𐴀𐴝𐴣𐴍𐴥𐴝𐴓𐴞|tick|ãɽali
+𐴀𐴦𐴟𐴘|termite|uj
+𐴈𐴝𐴣𐴓𐴞|sister-in-law|xãli
+𐴃𐴞𐴕𐴑𐴟𐴙𐴕𐴧𐴝 𐴐𐴡𐴑𐴥𐴡𐴓𐴢|triangle|tinkuinna ʃokol
+𐴁𐴡𐴀𐴌 𐴉𐴝𐴃𐴝|coriander|boɔɾ fata
+𐴅𐴝𐴕𐴟𐴀𐴝𐴌𐴞|January|ɟanuaɾi
+𐴎𐴥𐴞𐴘𐴡𐴎𐴧𐴝𐴔𐴝𐴘|son-in-law|zijozzamaj
+𐴑𐴟𐴌𐴥𐴏𐴞|chair|kuɾsi
+𐴀𐴞𐴏𐴃𐴞𐴌𐴞|iron (clothes)|istiɾi
+𐴇𐴥𐴠𐴚𐴒𐴝𐴌|hanger (clothes)|heŋgaɾ
+
+
 
 `
 
