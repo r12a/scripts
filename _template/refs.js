@@ -7,7 +7,7 @@ reflist = {
 "title":"The World's Writing Systems",
 "publisher":"Oxford University Press",
 "isbn":"0-19-507993-0",
-"reviewed":true
+"reviewed":false
 },
 
 "e": {
@@ -20,14 +20,14 @@ reflist = {
 "url":"https://www.omniglot.com/writing/bamum.htm",
 "authors": "Omniglot",
 "title":"Bamum syllabary",
-"reviewed":true
+"reviewed":false
 },
 
 "r": {
 "url":"https://www.unicode.org/L2/L2007/07023-bamum-report.pdf",
 "authors": "Riley, Charles",
 "title":"L2/07-023: Towards the Encoding of the Bamum Script in the UCS",
-"reviewed":true
+"reviewed":false
 },
 
 "u": {
@@ -37,6 +37,7 @@ reflist = {
 "sub":"Chapter 19.6: Africa, Bamum",
 "pages":"779-780",
 "isbn":"978-1-936213-16-0.",
+"reviewed": false
 },
 
 "ul": {
@@ -47,17 +48,17 @@ reflist = {
 },
 
 "wl": {
-"url":"https://en.wikipedia.org/wiki/Bamum_language",
+"url":"https://en.wikipedia.org/wiki/Rohingya_language",
 "authors": "Wikipedia",
-"title":"Bamum language",
-"reviewed":true
+"title":"Rohingya language",
+"reviewed":false
 },
 
 "ws": {
 "url":"https://en.wikipedia.org/wiki/Bamum_script",
 "authors": "Wikipedia",
 "title":"Bamum script",
-"reviewed":true
+"reviewed":false
 },
 
 
