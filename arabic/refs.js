@@ -60,7 +60,7 @@ reflist = {
 "title":" Proposal to add Marks and Digits in Arabic Code Block (for Urdu)",
 },
 
-"ab": {
+"jm": {
 "url":"#refs",
 "authors": "John Mace",
 "title":"Beginner's Arabic Script",
@@ -132,6 +132,13 @@ reflist = {
 "title":"Modern Persian",
 "publisher":"Hodder & Stoughton Ltd",
 "isbn":"0-340-80265-0",
+},
+
+"rmcs": {
+"url":"https://www.w3.org/TR/predefined-counter-styles/#arabic-styles",
+"authors": "Richard Ishida",
+"title":"Ready-made Counter Styles",
+"reviewed":true
 },
 
 "rpp": {
