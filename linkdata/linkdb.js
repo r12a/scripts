@@ -51,6 +51,7 @@ var scriptNotes= {
     'olck':[["Ol Chiki", 'santali']],
     'orya':[["Odia (Oriya)", 'oriya']],
     'osge':[["Osage", 'osage']],
+    'rohg':[["Hanifi Rohingya", 'rohg']],
     'sinh':[['Sinhala', 'sinhala/']],
     'sund':[['Sundanese', 'sundanese/']],
     'syrc':[['Syriac', 'syriac/'],
@@ -112,6 +113,7 @@ var scriptNotesByRegion = {
 	'H':[
 		['Han', 'han/'],
 		['Hangul', 'hangul/'],
+		['Hanifi Rohingya', 'rohg/'],
 		['Hausa (boko)', 'latin/hausa'],
 		['Hausa (ajami)', 'arabic/hausa'],
 		['Hebrew', 'hebrew/'],
@@ -155,6 +157,7 @@ var scriptNotesByRegion = {
 		['Punjabi', 'gurmukhi/'],
 		],
 	'R':[
+		['Rohingya (Hanifi)', 'rohg/'],
 		['Russian', 'cyrillic/'],
 		],
 	'S':[
@@ -290,6 +293,7 @@ var orthoChart = {
 'nkoo':'N’Ko',
 'orya':'Odia',
 'osge':'Osage',
+'rohg':'Hanifi Rohingya',
 'sinh':'Sinhala',
 'sund':'Sundanese',
 'syrc':'Syriac, Turoyo, Assyrian Neo-Aramaic',
