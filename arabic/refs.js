@@ -177,6 +177,13 @@ reflist = {
 "reviewed":true
 },
 
+"lpz": {
+"url":"http://www.unicode.org/L2/L2012/12181r-zain-with-hat.pdf",
+"authors": "Lorna Priest",
+"title":"Proposal to add ARABIC LETTER ZAIN WITH INVERTED V ABOVE",
+"reviewed":true
+},
+
 "oh": {
 "url":"http://www.omniglot.com/writing/hausa.htm",
 "authors": " Omniglot",
