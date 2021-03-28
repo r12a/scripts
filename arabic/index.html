@@ -55,7 +55,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->26 March, 2021<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->28 March, 2021<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -1374,37 +1374,13 @@ and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A7;</s
 <figure class="otherBox auto" data-cols="">࣢␣؀␣؁␣؂␣؃␣؄␣؅␣۝</figure>
 </div>
 
-<p>Modern Arabic text makes use of a relatively large set of invisible formatting characters, especially in plain text, many of which are used to manage text direction. </p>
-
-
-
-
-
-<section id="textdirectioncontrols">
-<h3>Managing text direction</h3>
-
-<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">RLE</span> [<a target="c" href="/scripts/arabic/block#char202B"><span class="uname">U+202B RIGHT-TO-LEFT EMBEDDING</span></a>]</span>, <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRE</span> [<a target="c" href="/scripts/arabic/block#char202A"><span class="uname">U+202A LEFT-TO-RIGHT EMBEDDING</span></a>]</span>, and <span class="codepoint" translate="no"><span class="uname" dir="ltr">PDF</span> [<a target="c" href="/scripts/arabic/block#char202C"><span class="uname">U+202C POP DIRECTIONAL FORMATTING</span></a>]</span> are in widespread use to set the base direction of a range of characters.  <span class="uname">RLE/LRE</span> come at the start, and  <span class="uname">PDF</span> at the end of a range of characters for which the base direction is to be set.</p>
-<p>More recently, the Unicode Standard added a set of characters which do the same thing but also isolate the content from surrounding characters, in order to avoid spillover effects. They are <span class="codepoint" translate="no"><span class="uname" dir="ltr">RLI</span> [<a target="c" href="/scripts/arabic/block#char2067"><span class="uname">U+2067 RIGHT-TO-LEFT ISOLATE</span></a>]</span>, <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRI</span> [<a target="c" href="/scripts/arabic/block#char2066"><span class="uname">U+2066 LEFT-TO-RIGHT ISOLATE</span></a>]</span>, and <span class="codepoint" translate="no"><span class="uname" dir="ltr">PDI</span> [<a target="c" href="/scripts/arabic/block#char2069"><span class="uname">U+2069 POP DIRECTIONAL ISOLATE</span></a>]</span>.  The Unicode Standard recommends that these be used instead, however some applications  don't yet recognise them. </p>
-<p>There is also <span class="codepoint" translate="no"><span class="uname" dir="ltr">FSI</span> [<a target="c" href="/scripts/arabic/block#char2068"><span class="uname">U+2068 FIRST STRONG ISOLATE</span></a>]</span>, used initially to set the base direction according to the first recognised strongly-directional character.</p>
-<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">ALM</span> [<a target="c" href="/scripts/arabic/block#char061C"><span class="uname">U+061C ARABIC LETTER MARK</span></a>]</span> is used to produce correct sequencing of numeric data. Follow the link for details.&nbsp;</p>
-<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">RLM</span> [<a target="c" href="/scripts/arabic/block#char200F"><span class="uname">U+200F RIGHT-TO-LEFT MARK</span></a>]</span> and <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRM</span> [<a target="c" href="/scripts/arabic/block#char200E"><span class="uname">U+200E LEFT-TO-RIGHT MARK</span></a>]</span> are invisible characters with strong directional properties that are also sometimes used to produce the correct ordering of text.</p>
-<p>For more information about how to use these formatting characters see <a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls.en">How to use Unicode controls for bidi text</a>. Note, however, that when writing HTML you should generally use markup rather than these control codes. For information about that, see <a href="https://www.w3.org/International/tutorials/bidi-xhtml/">Creating HTML Pages in Arabic, Hebrew and Other Right-to-left Scripts</a>.</p>
+<p>Modern Arabic text makes use of a relatively large set of invisible formatting characters, especially in plain text, many of which are used to manage text direction. Descriptions of these characters can be found in the following sections:</p>
+<ul>
+<li><a class="secref">shapingcontrols</a></li>
+<li><a class="secref">directioncontrols</a></li>
+</ul>
 </section>
 
-
-
-
-
-<section id="shapingcontrols">
-<h3>Managing glyph shaping</h3>
-
-<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">ZWJ</span> [<a href="/scripts/punctuation/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span> and <span class="codepoint" translate="no"><span class="uname" dir="ltr">ZWNJ</span> [<a target="c" href="/scripts/arabic/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a>]</span> are used to control the joining behaviour of cursive glyphs. They are particularly useful in educational contexts, but also have real world applications.</p>
-<p><span class="codepoint"><span class="uname" dir="ltr">ZWJ</span></span>  permits a letter to form a cursive connection without a visible neighbour. For example, the marker for hijri dates is an initial form of <span class="name">heh</span>, even though it doesn't join to the left, ie. <span class="ex" dir="rtl" lang="ur">ه‍</span>. For this, use  <span class="codepoint"><span class="uname" dir="ltr">ZWJ</span></span> immediately after the <span class="name">heh</span>, eg. <span class="ex" dir="rtl" lang="ar">الاثنين 10 رجب 1415 ه‍.</span>.</p>
-<p><span class="codepoint"><span class="uname" dir="ltr">ZWNJ</span></span> prevents two adjacent letters forming a cursive connection with each other when rendered. For example, it is used in Persian for plural suffixes, some proper names, and Ottoman Turkish vowels. Ignoring or removing the <span class="codepoint"><span class="uname" dir="ltr">ZWNJ</span></span> will result in text with a different meaning or meaningless text, eg, <span class="ex" dir="rtl" lang="ar">تن‌ها</span> is the plural of <span class="meaning">body</span>, whereas <span class="ex" dir="rtl" lang="ar">تنها</span> is the adjective <span class="meaning">alone</span>.<sup>2</sup> The only difference is the presence or absence of <span class="codepoint"><span class="uname" dir="ltr">ZWNJ</span></span> after <span class="name">noon</span>.  </p>
-<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">CGJ</span> [<a target="c" href="/scripts/arabic/block#char034F"><span class="uname">U+034F COMBINING GRAPHEME JOINER</span></a>]</span> is used in Arabic to produce special ordering of diacritics. The name is a misnomer, as it is generally used to <em>break</em> the normal sequence of diacritics.&nbsp;</p>
-</section>
-</section>
-  
   
   
 <section id="numbers">
@@ -1415,6 +1391,7 @@ and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A7;</s
 
 <figure class="characterBox auto" data-cols="trans,transc">٠␣١␣٢␣٣␣٤␣٥␣٦␣٧␣٨␣٩</figure>
 <p>A set of  arabic-indic digits are typically used in Middle Eastern and Gulf countries, whereas North African countries tend to use European digits. In neither area, however, is one digit style used exclusively.</p>
+<p>The Unicode <code class="kw" translate="no">bidi_class</code> property for these native digits is <code class="kw" translate="no">Arabic_Number</code>, which makes them behave differently from ASCII digits, and differently from the set of extended digits used for Persian, Urdu, etc. For more information, see <a class="secref">expressions</a>.</p>
 <p>Arabic script has its own number separators, which are used in Arabic language text when the non-European digits are used. They are <span class="codepoint"><span lang="ar" dir="rtl">&#x066B;</span> <a target="c" href="/scripts/arabic/block#char066B">[<span class="uname">U+066B ARABIC DECIMAL SEPARATOR</span>]</a></span> and  <span class="codepoint"><span lang="ar" dir="rtl">&#x066C;</span> <a target="c" href="/scripts/arabic/block#char066C">[<span class="uname">U+066C ARABIC THOUSANDS SEPARATOR</span>]</a></span>.</p>
 <p>Arabic also has its own characters for <span class="codepoint"><span lang="ar" dir="rtl">&#x066A;</span> <a target="c" href="/scripts/arabic/block#char066A">[<span class="uname">U+066A ARABIC PERCENT SIGN</span>]</a> and </span> <span class="codepoint"><span lang="ar" dir="rtl">&#x0609;</span> <a target="c" href="/scripts/arabic/block#char0609">[<span class="uname">U+0609 ARABIC-INDIC PER MILLE SIGN</span>]</a></span>. The ASCII <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0025;</span> [<a href="/scripts/arabic/block#char0025"><span class="uname">U+0025 PERCENT SIGN</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x2030;</span> [<a href="/scripts/arabic/block#char2030"><span class="uname">U+2030 PER MILLE SIGN</span></a>]</span> are also used.</p>
 <p>The CLDR standard-decimal pattern is <code>#,##0.###</code>. The standard-percent pattern is <code> #,##0%</code> or <code> #,##0٪</code>.<tt>c</tt></p>
@@ -1423,9 +1400,9 @@ and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A7;</s
 
 
 <div class="btw">
-<p><span class="leadin">Extended-Arabic digits.</span> Still in the basic Unicode Arabic block, there is a second set of digits in Unicode for use in languages such as Persian and Urdu. </p>
+<p><span class="leadin">Extended-Arabic digits.</span> Still in the basic Unicode Arabic block, as mentioned, there is a second set of digits in Unicode for use in languages such as Persian and Urdu. </p>
 <figure class="otherBox auto" data-cols="">۰␣۱␣۲␣۳␣۴␣۵␣۶␣۷␣۸␣۹</figure>
-<p>The glyph shapes are typically different for 3 of the digits, although not always the same digits in Persian, Urdu and Sindhi.</p>
+<p>The glyph shapes are typically different for 3 of the digits (although not always the same 3 digits) in Persian, Urdu and Sindhi.</p>
 <!--figure>
 <p dir="rtl" lang="ar" class="ex large">٠١٢٣٤٥٦٧٨٩</p>
 <figcaption>Arabic-indic numerals, used in Arabic language text.</figcaption>
@@ -1434,13 +1411,13 @@ and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A7;</s
 <p dir="rtl" lang="fa" class="large"><span class="ex">۰۱۲۳۴۵۶۷۸۹</span></p>
  <figcaption>Extended-arabic numerals, used in Persian and Urdu language text.</figcaption>
 </figure-->
+
 <figure id="fig_number_shapes">
 <table>
-<tr><th>Arabic</th><td dir="rtl" lang="ar" class="large"><span class="ex large">٠١٢٣٤٥٦٧٨٩</span></td></tr>
-<tr><th>Persian</th><td dir="rtl" lang="ar" class="large"><span class="ex">۰۱۲۳<span style="color:red">۴۵۶</span>۷۸۹</span></td></tr>
-<tr><th>Urdu</th><td dir="rtl" lang="ar" class="large" style="font-feature-settings: 'cv82' 2"><span class="ex">۰۱۲۳<span style="color:red">۴۵</span>۶<span style="color:red">۷</span>۸۹</span></td></tr>
-<tr>
-<th>Sindhi</th><td dir="rtl" lang="ar" class="large" style="font-feature-settings: 'cv82' 1"><span class="ex">۰۱۲۳<span style="color:red">۴۵</span>۶<span style="color:red">۷</span>۸۹</span></td></tr>
+<tr><th>Arabic</th><td dir="rtl" lang="ar"><img src="images/digits_ar.png" class="ex" alt="٠١٢٣٤٥٦٧٨٩" data-notes="Scheherazade new 49px"></td></tr>
+<tr><th>Persian</th><td dir="rtl" lang="fa"><img src="images/digits_fa.png" class="ex" alt="۰۱۲۳۴۵۶۷۸۹" data-notes="Scheherazade new 49px"></td></tr>
+<tr><th>Urdu</th><td dir="rtl" lang="ur"><img src="images/digits_ur.png" class="ex" alt="۰۱۲۳۴۵۶۷۸۹" data-notes="Scheherazade new 49px"></td></tr>
+<tr><th>Sindi</th><td dir="rtl" lang="sd"><img src="images/digits_sd.png" class="ex" alt="۰۱۲۳۴۵۶۷۸۹" data-notes="Scheherazade new 49px"></td></tr>
 </table>
  <figcaption>Arabic-indic numerals, as used in Arabic, Persian, Urdu and Sindhi language text.</figcaption>
 </figure>
@@ -1458,28 +1435,38 @@ and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A7;</s
 <section id="dir">
 <h2>Text direction</h2>
 
-<p>Arabic script is written horizontally and right-to-left in the main but, as in most right-to-left scripts, numbers and embedded left-to-right script text are written left-to-right (producing 'bidirectional' text). </p>
+<p>Arabic text is written horizontally and right-to-left in the main but, as in most right-to-left scripts, numbers and embedded   text in other scripts are written left-to-right (producing 'bidirectional' text). </p>
 <!--figure>
 <p dir="rtl" lang="ar" class="large"><span class="ex" style="white-space: nowrap;">اليوم هو 23 يناير 2020</span></p>
 <figcaption>Arabic words are read RTL, starting  on the right, but numbers are  read left-to-right.</figcaption>
 </figure-->
 
 <figure id="fig_bidi">
-<p dir="rtl" lang="ar" class="medium"><span class="ex" style="white-space: nowrap;">العاشر ليونيكود (Unicode Conference)،<br>الذي سيعقد  في 10-12 آذار 1997 مبدينة</span></p>
-<figcaption>Arabic words are read right-to-left, starting from the right of this line, but numbers and Latin text are read left-to-right.</figcaption>
+<img src="images/bidirectional.png" alt="العاشر ليونيكود (Unicode Conference)،الذي سيعقد في 10-12 آذار 1997 مبدينة" class="ex" data-notes="Scheherazade 42px العاشر ليونيكود (Unicode Conference)،الذي سيعقد في 10-12 آذار 1997 مبدينة">
+<figcaption>Arabic words are read right-to-left, starting from the right of this line, but numbers and Latin text (highlighted) are read left-to-right.</figcaption>
 </figure>
+
 
 <p>The Unicode Bidirectional Algorithm automatically takes care of the ordering for all the text in <a class="figref">fig_bidi</a>, as long as the 'base direction' is set to RTL. In HTML this can be set using the <code>dir</code> attribute, or in plain text using <a href="#directioncontrols">formatting controls</a>.</p>
-<p>If the base direction is not set appropriately, the directional runs will be ordered incorrectly as shown in <a class="figref">fig_bidi_no_base_direction</a>.</p>
+<p>If the base direction is not set appropriately, the directional runs will be ordered incorrectly as shown in <a class="figref">fig_bidi_no_base_direction</a>, making it very difficult to get the meaning.</p>
 
 <figure id="fig_bidi_no_base_direction">
-<p dir="rtl" class="small" lang="ar" style="white-space: nowrap;">في XHMTL 1.0 يتم تحقيق ذلك بإضافة العنصر المضمن bdo.</p>
-<p class="small" lang="ar" style="white-space: nowrap;">في XHMTL 1.0 يتم تحقيق ذلك بإضافة العنصر المضمن bdo.</p>
-<figcaption class="instructions">The exact same sequence of characters with the base direction set to RTL (top), and with no  base direction set on this LTR page (bottom).</figcaption>
+<img src="images/base_direction_RTL.png" class="ex" alt="في XHMTL 1.0 يتم تحقيق ذلك بإضافة العنصر المضمن bdo." data-notes="Scheherazade 30px"><br>
+<img src="images/base_direction_LTR.png" class="ex" alt="في XHMTL 1.0 يتم تحقيق ذلك بإضافة العنصر المضمن bdo." data-notes="Scheherazade 30px">
+
+<figcaption class="instructions">The exact same sequence of characters with the base direction set to RTL (top), and with no  base direction set on this LTR page (bottom). Certain items are highlighted to help track their position.</figcaption>
 </figure>
 
+<p>For other aspects of dealing with right-to-left writing systems see the following sections:</p>
+<ul>
+<li><a class="secref">directioncontrols</a></li>
+<li><a class="secref">expressions</a></li>
+<li><a class="secref">breaking_latin</a></li>
+<li><a class="secref">mirrored_characters</a></li>
+<li><a class="secref">pagelayout</a></li>
+</ul>
 <p>For more information about how directionality and base direction work, see <a href="https://www.w3.org/International/articles/inline-bidi-markup/uba-basics.en">Unicode Bidirectional Algorithm basics</a>. For information about plain text formatting characters see <a href="https://www.w3.org/International/questions/qa-bidi-unicode-controls.en">How to use Unicode controls for bidi text</a>. And for working with markup in HTML, see <a href="https://www.w3.org/International/tutorials/bidi-xhtml/">Creating HTML Pages in Arabic, Hebrew and Other Right-to-left Scripts</a>.</p>
-<p>On this page, see also <a class="secref">expressions</a> and <a class="secref">breaking_latin</a> for additional features related to direction.</p>
+<p class="info instructions">For authoring HTML pages, one of the most important things to remember is to use <code>&lt;html dir=&quot;rtl&quot; … &gt;</code> at the top of the page. Also, use markup to manage direction, and do not use CSS styling.</p>
 
 
 
@@ -1491,7 +1478,7 @@ and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A7;</s
 
 <p>Unicode provides a set of 10 formatting characters that can be used to control the direction of text when displayed. These characters have no visual form in the rendered text, however text editing applications may have a way to show their location.</p>
 <p><span class="codepoint" translate="no"><span class="uname" dir="ltr">RLE</span> [<a target="c" href="/scripts/arabic/block#char202B"><span class="uname">U+202B RIGHT-TO-LEFT EMBEDDING</span></a>]</span>, <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRE</span> [<a target="c" href="/scripts/arabic/block#char202A"><span class="uname">U+202A LEFT-TO-RIGHT EMBEDDING</span></a>]</span>, and <span class="codepoint" translate="no"><span class="uname" dir="ltr">PDF</span> [<a target="c" href="/scripts/arabic/block#char202C"><span class="uname">U+202C POP DIRECTIONAL FORMATTING</span></a>]</span> are in widespread use to set the base direction of a range of characters.  <span class="uname">RLE/LRE</span> come at the start, and  <span class="uname">PDF</span> at the end of a range of characters for which the base direction is to be set.</p>
-<p>More recently, the Unicode Standard added a set of characters which do the same thing but also isolate the content from surrounding characters, in order to avoid spillover effects. They are <span class="codepoint" translate="no"><span class="uname" dir="ltr">RLI</span> [<a target="c" href="/scripts/arabic/block#char2067"><span class="uname">U+2067 RIGHT-TO-LEFT ISOLATE</span></a>]</span>, <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRI</span> [<a target="c" href="/scripts/arabic/block#char2066"><span class="uname">U+2066 LEFT-TO-RIGHT ISOLATE</span></a>]</span>, and <span class="codepoint" translate="no"><span class="uname" dir="ltr">PDI</span> [<a target="c" href="/scripts/arabic/block#char2069"><span class="uname">U+2069 POP DIRECTIONAL ISOLATE</span></a>]</span>.  The Unicode Standard recommends that these be used instead, however some applications  don't yet recognise them. </p>
+<p>More recently, the Unicode Standard added a set of characters which do the same thing but also isolate the content from surrounding characters, in order to avoid spillover effects. They are <span class="codepoint" translate="no"><span class="uname" dir="ltr">RLI</span> [<a target="c" href="/scripts/arabic/block#char2067"><span class="uname">U+2067 RIGHT-TO-LEFT ISOLATE</span></a>]</span>, <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRI</span> [<a target="c" href="/scripts/arabic/block#char2066"><span class="uname">U+2066 LEFT-TO-RIGHT ISOLATE</span></a>]</span>, and <span class="codepoint" translate="no"><span class="uname" dir="ltr">PDI</span> [<a target="c" href="/scripts/arabic/block#char2069"><span class="uname">U+2069 POP DIRECTIONAL ISOLATE</span></a>]</span>.  The Unicode Standard recommends that these be used instead of <span class="uname">RLE</span>, <span class="uname">LRE</span>, and <span class="uname">PDF</span>. </p>
 <p>There is also <span class="codepoint" translate="no"><span class="uname" dir="ltr">FSI</span> [<a target="c" href="/scripts/arabic/block#char2068"><span class="uname">U+2068 FIRST STRONG ISOLATE</span></a>]</span>, used initially to set the base direction according to the first recognised strongly-directional character.</p>
 <p><span class="codepoint" translate="no"><span class="uname" dir="ltr">ALM</span> [<a target="c" href="/scripts/arabic/block#char061C"><span class="uname">U+061C ARABIC LETTER MARK</span></a>]</span> is used to produce correct sequencing of numeric data. Follow the link and see <a class="secref">expressions</a> for details.&nbsp;</p>
 <p><span class="codepoint" translate="no"><span class="uname" dir="ltr">RLM</span> [<a target="c" href="/scripts/arabic/block#char200F"><span class="uname">U+200F RIGHT-TO-LEFT MARK</span></a>]</span> and <span class="codepoint" translate="no"><span class="uname" dir="ltr">LRM</span> [<a target="c" href="/scripts/arabic/block#char200E"><span class="uname">U+200E LEFT-TO-RIGHT MARK</span></a>]</span> are invisible characters with strong directional properties that are also sometimes used to produce the correct ordering of text.</p>
@@ -1505,39 +1492,113 @@ and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A7;</s
 <section id="expressions">
 <h3>Expressions &amp; sequences</h3>
 <p>A sequence of numbers, for example a range separated by hyphens,  runs right to left in the Arabic language (and Thaana or Syriac scripts), whereas for Persian language text (and in   Hebrew, N’Ko or Adlam scripts) it runs left to right.</p>
-<p><a class="figref">fig_range_ar</a> shows Arabic text  which is right-to-left overall, containing an ASCII-digit numeric range that is also ordered RTL, ie. it starts with 10 and ends with 12:</p>
+
+
+<p><a class="figref">fig_range_ar</a> shows Arabic text  which is right-to-left overall, containing an ASCII-digit numeric range that is also ordered RTL, ie. it starts with 10 on the right and ends with 12 on the left:</p>
 
 <figure id="fig_range_ar">
-<p dir="rtl" lang="ar" class="large"><span class="ex">في 10–12 آدار</span></p>
+<img src="images/range_ar.png" class="ex" alt="في 10–12 آدار" data-notes="Scheherazade New 48px">
 <figcaption>A numeric range in Arabic language text.</figcaption>
 </figure>
 
-<p>In Persian, however, the expression would run LTR, so this would be:</p>
+<p>In Persian, however, the expression would run LTR, so 10 would be on the left, and 12 on the right:</p>
 
-<figure id="persianExpressions">
-<p dir="rtl" lang="ar" class="large"><span class="ex">في &lrm;10–12 آدار</span></p>
+<figure id="fig_range_fa">
+<img src="images/range_fa.png" class="ex" alt="في &lrm;10–12 آدار" data-notes="Scheherazade New 48px">
 <figcaption>A numeric range in Persian language text.</figcaption>
 </figure>
 
-<p>When a list uses the ASCII hyphen as a separator, the Unicode Bidirectional Algorithm automatically produces the expected ordering <em> only when a sequence or expression follows Arabic characters</em>. However, a sequence that appears alone on a line will be ordered left-to-right (because there is no preceding Arabic character). To make the sequence read right-to-left you need to add the  formatting character <span class="codepoint"><a target="c" href="/scripts/arabic/block#char061C"><span class="uname">U+061C ARABIC LETTER MARK</span></a></span> (ALM) at the start of the line (see <a class="figref">fig_alm</a>). This is effectively an invisible Arabic script character.</p>
-<figure id="fig_alm">
-<p dir="rtl" lang="ar" class="large"><span class="ex">&#x061C;10-01-2018</span></p>
-<figcaption>A numeric date in Arabic language text without a preceding Arabic letter needs ALM before it. (Click on the number to see the underlying characters.).</figcaption>
-</figure>
+<p>However, the desired order may also depend on the context. The Arabic order may be the preferred for ranges, or for expressions such as <span class="ex" dir="rtl" style="white-space: nowrap" lang="ur">1 + 2 = 3</span>, but for ISBN numbers, telephone numbers, and so forth, a left-to-right sequencing is likely to be preferred.</p>
 
-<p>The required order cannot be achieved  by simply setting the base direction, nor by using <span class="codepoint" translate="no"><a href="/scripts/punctuation/block#char200F" target="c"><span class="uname">U+200F RIGHT-TO-LEFT MARK</span></a></span>. It has to be ALM.</p>
-<p>Alternatively, you could use a different separator, such as <span class="codepoint" translate="no"><span dir="rtl" lang="ur">–</span> [<a href="/scripts/arabic/block#char2013" target="c"><span class="uname">U+2013 EN DASH</span></a>]</span> (as in <a class="figref">fig_range_ar</a>) or <span class="codepoint" translate="no"><span dir="rtl" lang="ur">‐</span> [<a href="/scripts/arabic/block#char2010" target="c"><span class="uname">U+2010 HYPHEN</span></a>]</span>. No special arrangements are then necessary.</p>
-<p>If you are writing in Persian, however, you don't need to add anything in this case.</p>
 
-<figure id="fig_alm_persian">
-<p dir="rtl" lang="ar" class="large"><span class="ex">10-01-2018</span></p>
-<figcaption>The same date in Persian language text.</figcaption>
-</figure>
 
-<p>On the other hand, if  the sequence or expression follows text you need to either isolate the sequence directionally or precede it with <span class="codepoint"><a target="c" href="/scripts/punctuation/block#char200E"><span class="uname">U+200E LEFT-TO-RIGHT MARK</span></a></span> (LRM) to make it look correct (click on <a class="figref">persianExpressions</a>  to see that in action).</p>
-<p>Similar special ordering is applied to numbers in equations, such as <span class="ex" dir="rtl" style="white-space: nowrap" lang="ur">1 + 2 = 3</span>, for Arabic language text.</p>
-<p>See also <a class="secref">percent_sign</a>.</p>
+<!--section id="sequences">
+<h4>Making it work for Arabic</h4>
+
+<p>The order of the items in a sequence of numbers depends on the separator used. The table below shows results for Arabic for separators with 4 different Unicode <code class="kw" translate="no">bidi_class</code> properties. The <code class="kw" translate="no">bidi_class</code> of the native Arabic digits is <code class="kw" translate="no">Arabic_number</code>, which affects the display of those digits with no preceding Arabic letter. The coloured items are problematic for ranges such as those shown above. For telephone numbers, the black ones are problematic.</p>
+<table style="font-size: 80%;">
+<thead>
+<tr>
+<th>bidi_class</th>
+<td lang="en"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:Bidi_Class=White_Space:]">White_Space</a></td>
+<td lang="en"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:Bidi_Class=European_Separator:]">European_Separator</a></td>
+<td lang="en"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:Bidi_Class=Other_Neutral:]">Other_Neutral</a></td>
+<td lang="en"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:Bidi_Class=Common_Separator:]">Common_Separator</a></td>
+</tr>
+<tr>
+<th>Includes:</th>
+<td lang="en">ASCII space, and 15 others</td>
+<td lang="en">Hyphen-minus, plus sign, +10 more</td>
+<td lang="en">Hyphen, en-dash, and 5,500+ other code points</td>
+<td lang="en">Solidus, Arabic comma, comma, full stop, colon, nbsp, +9 more</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th style="white-space: nowrap;">Bare ASCII</th>
+<td lang="ar" dir="rtl" class="ex" style="color:black; white-space: nowrap;">12 34 56</td>
+<td lang="ar" dir="rtl" class="ex" style="color:black; white-space: nowrap;">12‐34‐56</td>
+<td lang="ar" dir="rtl" class="ex" style="color:chocolate; white-space: nowrap;">12-34-56</td>
+<td lang="ar" dir="rtl" class="ex" style="color:chocolate; white-space: nowrap;">12/34/56</td>
+</tr>
+<tr>
+<th>ASCII after Arabic</th>
+<td lang="ar" dir="rtl" class="ex" style="color:black; white-space: nowrap;">ن 12 34 56</td>
+<td lang="ar" dir="rtl" class="ex" style="color:black; white-space: nowrap;">ن 12‐34‐56</td>
+<td lang="ar" dir="rtl" class="ex" style="color:black; white-space: nowrap;">ن 12-34-56</td>
+<td lang="ar" dir="rtl" class="ex" style="color:chocolate; white-space: nowrap;">ن 12/34/56</td>
+</tr>
+<tr>
+<th>Bare native</th>
+<td lang="ar" dir="rtl" class="ex" style="color:black; white-space: nowrap;">١٢ ٣٤ ٥٦</td>
+<td lang="ar" dir="rtl" class="ex" style="color:black; white-space: nowrap;">١٢‐٣٤‐٥٦</td>
+<td lang="ar" dir="rtl" class="ex" style="color:black; white-space: nowrap;">١٢-٣٤-٥٦</td>
+<td lang="ar" dir="rtl" class="ex" style="color:chocolate; white-space: nowrap;">١٢/٣٤/٥٦</td>
+</tr>
+<tr>
+<th>Native after Arabic</th>
+<td lang="ar" dir="rtl" class="ex" style="color:black; white-space: nowrap;">ن ١٢ ٣٤ ٥٦</td>
+<td lang="ar" dir="rtl" class="ex" style="color:black; white-space: nowrap;">ن ١٢‐٣٤‐٥٦</td>
+<td lang="ar" dir="rtl" class="ex" style="color:black; white-space: nowrap;">ن ١٢-٣٤-٥٦</td>
+<td lang="ar" dir="rtl" class="ex" style="color:chocolate; white-space: nowrap;">ن ١٢/٣٤/٥٦</td>
+</tr>
+</tbody>
+</table>
+<p>For the case where ASCII digits are used and the separator is <code class="kw" translate="no">other_neutral</code>, without a preceding Arabic letter, and you want the order to be right-to-left,  you need to add the  formatting character <span class="codepoint"><a target="c" href="/scripts/arabic/block#char061C"><span class="uname">U+061C ARABIC LETTER MARK</span></a></span> (ALM) at the start of the line (see <a class="figref">fig_alm</a>). This is effectively an invisible Arabic script character. The required order cannot be achieved  by simply setting the base direction, nor by using <span class="codepoint" translate="no"><a href="/scripts/punctuation/block#char200F" target="c"><span class="uname">U+200F RIGHT-TO-LEFT MARK</span></a></span>. It has to be ALM.</p>
+<p>Another alternative would be to use a hyphen-minus (<span class="uname">U+2010</span>) instead, since it has a different bidi class.</p>
 </section>
+
+
+
+
+
+<section id="fa_sequences">
+<h4>Making it work for Persian</h4>
+
+
+<p>The situation for Persian is slightly different, not only because the preference tends to be for listing items from left-to-right, but also because the native digits are taken from the Extended Arabic-indic range, and have a <code class="kw" translate="no">bidi_class</code> property of <code class="kw" translate="no">European_number</code>. </p>
+<p>The required order happens by default when numbers are not preceded by Arabic letters. This works differently to Arabic for the native digits because Persian uses extended Arabic digits, which have a <code class="kw" translate="no">bidi_class</code> property of <code class="kw" translate="no">European_number</code>. To fix the other cases you can either isolate the sequence directionally, using markup or <a href="#directioncontrols">formatting characters</a>, or precede it with <span class="codepoint"><a target="c" href="/scripts/punctuation/block#char200E"><span class="uname">U+200E LEFT-TO-RIGHT MARK</span></a></span> (LRM).</p>
+<p>Alternatively, you could use a different separator, such as <span class="codepoint" translate="no"><span dir="rtl" lang="ur">–</span> [<a href="/scripts/arabic/block#char2013" target="c"><span class="uname">U+2013 EN DASH</span></a>]</span> (as in <a class="figref">fig_range_ar</a>) or <span class="codepoint" translate="no"><span dir="rtl" lang="ur">‐</span> [<a href="/scripts/arabic/block#char2010" target="c"><span class="uname">U+2010 HYPHEN</span></a>]</span>. No special arrangements are then necessary.</p>
+<p>This version of the table applies ALM or LRM to produce the desired result.</p>
+
+<table><tbody>
+<tr><th>Arabic</th>
+<td lang="ar" dir="rtl" class="ex">&#x061C;12-34-56</td>
+<td lang="ar" dir="rtl" class="ex" style="color:black;">ن 12-34-56</td>
+<td lang="ar" dir="rtl" class="ex" style="color:black;">١٢-٣٤-٥٦</td>
+<td lang="ar" dir="rtl" class="ex" style="color:black;">ن ١٢-٣٤-٥٦</td>
+</tr>
+<tr><th>Persian</th>
+<td lang="fa" dir="rtl" class="ex" style="color:black;">12-34-56</td>
+<td lang="fa" dir="rtl" class="ex">ن &lrm;12-34-56</td>
+<td lang="fa" dir="rtl" class="ex" style="color:black;">۱۲-۳۴-۵۶</td>
+<td lang="fa" dir="rtl" class="ex">ن &lrm;۱۲-۳۴-۵۶</td></tr>
+</tbody></table>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<!--p>See also <a class="secref">percent_sign</a>.</p-->
+</section-->
 </section>
 
 
@@ -1635,14 +1696,12 @@ and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A7;</s
      <figcaption>The letter <span class="ex">ع</span> (<span class="trans">ain</span>) in 3 different joining contexts.</figcaption>
      </figure>
     <p>Most Arabic script letters join on both sides. A few  only join on the right-hand side: this involves 4 basic shapes for Modern Standard Arabic.</p>
-<p><span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0621;</span> [<a href="/scripts/arabic/block#char0621"><span class="uname">U+0621 ARABIC LETTER HAMZA</span></a>]</span> doesn't join on either side.
+<p><span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x0621;</span> [<a href="/scripts/arabic/block#char0621"><span class="uname">U+0621 ARABIC LETTER HAMZA</span></a>]</span> doesn't join on either side.</p>
 
 
 
 
 
-<section id="cursive_shaping"> </section>
-</p>
 <section id="cursive_shaping">
 <h4>Cursive joining forms</h4>
 
@@ -1873,7 +1932,7 @@ and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A7;</s
   
   
   
-  <section id="gpos">
+<section id="gpos">
 <h3>Context-based positioning</h3>
 <p>When vowel or <span class="name">shadda</span> diacritics are used they can be placed in different positions, according to the context.
 <figure>
@@ -1881,15 +1940,29 @@ and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A7;</s
 </p>
 <figure>
 <p dir="rtl" lang="ar" class="large"><span class="ex">يتكلّم</span> &nbsp;•&nbsp; <span class="ex">تسجّل</span></p>
-   <figcaption>The position of the <span class="name">shadda</span> diacritic depends on the height of the base character in many fonts.</figcaption>
+<figcaption>The position of the <span class="name">shadda</span> diacritic depends on the height of the base character in many fonts.</figcaption>
 </figure>
-    <p>When both <span class="name">shadda</span> and vowel signs are combined with a base character, a more complicated set of rules may be applied. Depending on the font used, some vowel diacritics may be placed relative the <strong><span class="name">shadda</span></strong> diacritic, rather than relative to the base character.</p>
-    <figure>
-    <p><img src="images/kasra_placement.png" alt="مَمِمّمَّمِّ" data-notes="72px scheherazade font-feature-settings: 'cv62' 1;"></p>
-       <figcaption>When <span class="name">kasra</span> and <span class="name">shadda</span> diacritics appear together, the <span class="name">kasra</span> may be below the base character (right), or below the <span class="name">shadda</span> (left), depending on the font.</figcaption>
- </figure>
-  </section>
+<p>When both <span class="name">shadda</span> and vowel signs are combined with a base character, a more complicated set of rules may be applied. Depending on the font used, some vowel diacritics may be placed relative the <strong><span class="name">shadda</span></strong> diacritic, rather than relative to the base character.</p>
+<figure>
+<p><img src="images/kasra_placement.png" alt="مَمِمّمَّمِّ" data-notes="72px scheherazade font-feature-settings: 'cv62' 1;"></p>
+<figcaption>When <span class="name">kasra</span> and <span class="name">shadda</span> diacritics appear together, the <span class="name">kasra</span> may be below the base character (right), or below the <span class="name">shadda</span> (left), depending on the font.</figcaption>
+</figure>
+</section>
 
+
+
+
+
+
+
+<section id="shapingcontrols">
+<h3>Managing glyph shaping</h3>
+
+<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">ZWJ</span> [<a href="/scripts/punctuation/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span> and <span class="codepoint" translate="no"><span class="uname" dir="ltr">ZWNJ</span> [<a target="c" href="/scripts/arabic/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a>]</span> are used to control the joining behaviour of cursive glyphs. They are particularly useful in educational contexts, but also have real world applications.</p>
+<p><span class="codepoint"><span class="uname" dir="ltr">ZWJ</span></span>  permits a letter to form a cursive connection without a visible neighbour. For example, the marker for hijri dates is an initial form of <span class="name">heh</span>, even though it doesn't join to the left, ie. <span class="ex" dir="rtl" lang="ur">ه‍</span>. For this, use  <span class="codepoint"><span class="uname" dir="ltr">ZWJ</span></span> immediately after the <span class="name">heh</span>, eg. <span class="ex" dir="rtl" lang="ar">الاثنين 10 رجب 1415 ه‍.</span>.</p>
+<p><span class="codepoint"><span class="uname" dir="ltr">ZWNJ</span></span> prevents two adjacent letters forming a cursive connection with each other when rendered. For example, it is used in Persian for plural suffixes, some proper names, and Ottoman Turkish vowels. Ignoring or removing the <span class="codepoint"><span class="uname" dir="ltr">ZWNJ</span></span> will result in text with a different meaning or meaningless text, eg, <span class="ex" dir="rtl" lang="ar">تن‌ها</span> is the plural of <span class="meaning">body</span>, whereas <span class="ex" dir="rtl" lang="ar">تنها</span> is the adjective <span class="meaning">alone</span>.<sup>2</sup> The only difference is the presence or absence of <span class="codepoint"><span class="uname" dir="ltr">ZWNJ</span></span> after <span class="name">noon</span>.  </p>
+<p><span class="codepoint" translate="no"><span class="uname" dir="ltr">CGJ</span> [<a target="c" href="/scripts/arabic/block#char034F"><span class="uname">U+034F COMBINING GRAPHEME JOINER</span></a>]</span> is used in Arabic to produce special ordering of diacritics. The name is a misnomer, as it is generally used to <em>break</em> the normal sequence of diacritics.&nbsp;</p>
+</section>
 
 
 
@@ -2040,6 +2113,27 @@ and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A7;</s
 </tr>
 </tbody>
 </table>
+
+
+
+
+
+<section id="mirrored_characters">
+<h4>Mirrored characters</h4>
+
+<p class="info">It is important to note that the Unicode names for parentheses, brackets, and other paired characters should be ignored. <span class="uname">LEFT</span> should be read as if it said <span class="uname">START</span>, and <span class="uname">RIGHT</span> as <span class="uname">END</span>. The direction in which the glyphs point will be automatically determined according to the base direction of the text.</p>
+
+<figure id="fig_mirrored">
+<img src="images/mirrored_latin.png" class="ex" alt="a > b > c" data-notes="Scheherazade New 48px"><br>
+<img src="images/mirrored_arab.png" class="ex" alt="ا > ب > ج" data-notes="Scheherazade New 48px">
+<figcaption>Both of these lines use <span class="codepoint" translate="no"><span lang="en">&#x003E;</span> [<a href="/scripts/latin/block#char003E"><span class="uname">U+003E GREATER-THAN SIGN</span></a>]</span>, but the direction it faces depends on the base direction at the point of display.</figcaption>
+</figure>
+
+<p>The number of characters that are mirrored in this way is <a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:Bidi_Mirrored=Yes:]">around 550</a>, most of which are mathematical symbols. Some are single characters, rather than pairs. The following are some of the more common ones for Arabic.</p>
+
+<figure class="characterBox auto" data-cols="">(␣)␣<␣>␣[␣]␣{␣}␣«␣»␣‹␣›</figure>
+
+</section>
 </section>
 
 
@@ -2086,11 +2180,11 @@ and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A7;</s
 </figure>
 <p>When using bracketing quotation marks, <span class="codepoint"><span lang="ar" dir="ltr">&#x00AB;</span> <a href="/scripts/latin/block#char00AB">[<span class="uname">U+00AB LEFT-POINTING DOUBLE ANGLE QUOTATION MARK</span>]</a></span> is used at the start,  and <span class="codepoint"><span lang="ar" dir="ltr">&#x00BB;</span> <a href="/scripts/latin/block#char00BB">[<span class="uname">U+00BB RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK</span>]</a></span> is used at the end. The shapes are typically  rounded, a shown in <a class="figref">fig_quotation_marks</a>.</p>
 <p>When an additional quote is embedded within the first, the quote marks are <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x2039;</span> [<a target="c" href="/scripts/arabic/block#char2039"><span class="uname">U+2039 SINGLE LEFT-POINTING ANGLE QUOTATION MARK</span></a>]</span> and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x203A;</span> [<a target="c" href="/scripts/arabic/block#char203A"><span class="uname">U+203A SINGLE RIGHT-POINTING ANGLE QUOTATION MARK</span></a>]</span>.</p>
-<p><span class="codepoint">It is important to note that the Unicode names for these marks should be ignored. 'Left-pointing' should be read 'Start', and 'Right-pointing' as 'End'. The direction in which the glyphs point will be automatically determined according to the base direction of the text.</span></p>
 <p>The other quote marks  are <span class="codepoint" translate="no"><span lang="ar">”</span> [<span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span>]</span> at the start, and <span class="codepoint" translate="no"><span lang="ar">“</span> [<span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span>]</span> at the end.</p>
 <p>When an additional quote is embedded within the first, the quote marks are <span class="codepoint" translate="no"><span lang="ar">’</span> [<span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span>]</span> and <span class="codepoint" translate="no"><span lang="ar">‘</span> [<span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span>]</span>.</p>
-<p>Unlike the bracketing quotation marks, these characters are <em>not</em> mirrored during display. This means that left means use on the left, and right means use on the right.</p>
+<p>Unlike the bracketing quotation marks, these characters are <em>not</em> mirrored during display. This means that <span class="uname">LEFT</span> means use on the left, and <span class="uname">RIGHT</span> means use on the right.</p>
 </section>
+
 
 
 
@@ -2161,7 +2255,14 @@ and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A7;</s
 <p>Lines are normally broken at  word boundaries.</p>
 <p>They are not broken at the small gaps that appear where a character doesn't join on the left.</p>
 <p>Like most writing systems, certain characters are expected not to start or end a line. For example, periods and commas shouldn't start a line, and opening parentheses shouldn't end a line.</p>
-<p><span class="leadin">Breaking between Latin words.</span> When a line break occurs in the middle of an embedded left-to-right sequence, the items in that sequence need to be rearranged visually so that it isn't necessary to read lines from top to bottom. </p>
+
+
+
+
+<section id="breaking_latin">
+<h4>Breaking between Latin words</h4>
+
+<p>When a line break occurs in the middle of an embedded left-to-right sequence, the items in that sequence need to be rearranged visually so that it isn't necessary to read lines from top to bottom. </p>
 <p><a class="figref" href="#latin-line-breaks">latin-line-breaks</a> shows how two Latin words are apparently reordered in the flow of text to accommodate this rule. Of course, the rearragement is only that of the visual glyphs: nothing affects the order of the characters in memory.</p>
 
 <figure id="latin-line-breaks">
@@ -2169,6 +2270,7 @@ and <span class="codepoint" translate="no"><span lang="ar" dir="rtl">&#x06A7;</s
 <p><img src="images/latin-line-breaks-2.png" alt="Text with line break in Latin text."/></p>
     <figcaption>The lower of these two images shows the result of decreasing the line width, so that text wraps between a sequence of Latin words.</figcaption>
 </figure>
+</section>
 
 
 
