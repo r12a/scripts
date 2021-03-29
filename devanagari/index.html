@@ -55,7 +55,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->8 February, 2021<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->29 March, 2021<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -1154,22 +1154,24 @@ alveolar</th>
 <p>The absence of a vowel sound between two or more consonants can be visually indicated in one of the following ways.</p>
     <ol>
     <li>Create a conjunct. There are a number of possibilities here:<ol style="margin: 0;">
-<li>Reduce the shape of all consonants in the cluster except the last to a 'half-form'.</li>
-<li>Reduce a non-initial consonant in size and shape and position it below the first.</li>
-<li>Create a ligature combining the two shapes (where neither may be readily identified).</li>
-<li>The letter <span class="trans">ra</span> has its own idiosyncratic way of combining with other consonants, whether it precedes or follows them.</li>
+<li><mark>Half-forms</mark> : Reduce the shape of all consonants in the cluster except the last to a 'half-form' by removing the vertical stroke.</li>
+<li><mark>Stacking</mark> : Reduce a non-initial consonant in size and shape and position it below the first.</li>
+<li><mark>Special ligation</mark> : Create a fusion of the two shapes, where one or other of the components may not be easily recognisable.</li>
+<li>The <mark>letter <span class="trans">ra</span></mark> has its own idiosyncratic way of combining with other consonants, whether it precedes or follows them.</li>
 </ol></li>
-<li>Show a visible virama below the non-final consonants in the cluster.</li>
-<li>No indication, although there are usually generalised pronunciation rules that allow readers to spot these locations. Examples of these rules are given in the section about <a href="#inherentvowel">the inherent vowel</a>.</li>
+<li>Show a <mark>visible virama</mark> below the non-final consonants in the cluster.</li>
+<li><mark>No indication</mark>, although there are usually generalised pronunciation rules that allow readers to spot these locations. Examples of these rules are given in the section about <a href="#inherentvowel">the inherent vowel</a>.</li>
 </ol>
+<p>See a <a target="_blank" href="https://r12a.github.io/scripts/apps/conjunct_generator/?preset=deva">table of combinations</a>.</p>
 <p>In all cases except the last, the underlying mechanism in terms of codepoints involves adding <span class="codepoint" translate="no"><span lang="hi">&#x094D;</span> [<a href="/scripts/devanagari/block#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA</span></a>]</span> between the consonants in the cluster, eg. <span class="charExample inline" translate="no"><span class="ex" lang="hi">क्ष</span></span> is produced by the sequence <span class="codepoint" translate="no"><span lang="hi">&#x0915;</span> + <span lang="hi">&#x094D;</span> + <span lang="hi">&#x0937;</span> [<a href="/scripts/devanagari/block#char0915"><span class="uname">U+0915 DEVANAGARI LETTER KA</span></a> + <a href="/scripts/devanagari/block#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA</span></a> + <a href="/scripts/devanagari/block#char0937"><span class="uname">U+0937 DEVANAGARI LETTER SSA</span></a>]</span>.</p>
 <p>The font usually determines which visual method is used, although it is possible to influence this (see below).</p>
+<p class="instructions">Click on the figures below to see which characters are being shown.</p>
     
     
     
 <section id="halfforms">
-<h4>Half-forms</h4>
-<p>A half-form is typically created by removing the vertical line in the consonant shape, where there is one. (The vertical line is associated with the inherent vowel, and around two-thirds of Devanagari consonant shapes contain one.) There is often some additional tweaking of glyphs in order to join the components neatly.</p>
+<h4>Conjoined half-forms</h4>
+<p>A half-form is typically created by removing the vertical line in the consonant shape, where there is one. (The vertical line is associated with the inherent vowel, and around two-thirds of Devanagari consonant shapes contain one.) There is often some additional tweaking of glyphs in order to join the components neatly. The last consonant in the cluster retains its full shape.</p>
 
 <figure id="fig_half_form" data-notes="62px Noto Serif Devanagari">
 <div class="multiItemFigure">
@@ -1179,6 +1181,17 @@ alveolar</th>
 </div>
 <figcaption>Examples of conjuncts formed by using half-forms.</figcaption>
 </figure>
+
+<p>A small number of  half-forms are only minimally different from side-by-side characters.</p>
+
+<figure id="fig_subtle_half_forms" data-notes="62px Noto Serif Devanagari">
+<div class="multiItemFigure">
+<img class="ex" src="images/subtle_half_forms_sep.png" alt="छग">
+<img class="ex" src="images/subtle_half_forms_cluster.png" alt="छ्ग">
+</div>
+<figcaption>An example of a conjunct with a subtle difference between separate consonants with intervening vowel (left), and a conjunct cluster (right). The difference is highlighted on the left.</figcaption>
+</figure>
+
 </section>
     
     
@@ -1248,8 +1261,26 @@ alveolar</th>
     
 <section id="visiblevirama">
 <h4>Visible virama</h4>
-<p>The ability to form conjuncts depends on the richness of the font. Where a font is not able to produce a half-form or ligature, etc., it will leave a visible virama glyph below the initial consonant(s) to indicate the missing vowel sound, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">क्‌क</span> <span class="trans">k͓‌k</span></span></p>
-<p>An important consequence of representing clusters in this way is that the syllable boundaries are different. For example, if we follow the cluster with a left-positioned vowel-sign, it will now appear after the virama, rather than before the cluster, eg. compare <span class="charExample" translate="no"><span class="ex" lang="hi">क्कि</span></span>  <span class="charExample" translate="no"><span class="ex" lang="hi">क्‌कि</span></span>This change is also reflected in segmentation of the text for line-breaking, inter-character spacing, etc.</p>
+<p>The ability to form conjuncts depends on the richness of the font. Where a font is not able to produce a half-form or ligature, etc., it will leave a visible virama glyph below the initial consonant(s) to indicate the missing vowel sound, as illustrated in <a class="figref">fig_virama_visible</a>.</p>
+
+<figure id="fig_virama_visible">
+<div class="multiItemFigure">
+<img class="ex" src="images/virama_visible_tiro.png" alt="ङ्ख" data-notes="62px Tiro Hindi" style="margin-inline-end:5em;">
+<img class="ex" src="images/virama_visible_noto.png" alt="ङ्ख" data-notes="62px Noto Serif Devanagari" style="margin-inline-start:5em;">
+</div>
+<figcaption>A consonant cluster for which there exists a conjunct form in the Tiro Hindi font (left), but not in the Noto Serif Devanagari font (right). The latter indicates that this is a cluster by showing a visible virama<em></em>.</figcaption>
+</figure>
+
+<p>An important consequence of representing clusters in this way is that the syllable boundaries are different. For example, if we follow the cluster with a left-positioned vowel-sign, it will now appear after the virama, rather than before the cluster, eg. compare the position of the pre-base vowel-sign in <a class="figref">fig_virama_vowel</a>. This change is also reflected in segmentation of the text for line-breaking, inter-character spacing, etc.</p>
+
+<figure id="fig_virama_vowel">
+<div class="multiItemFigure">
+<img class="ex" src="images/virama_vowel_tiro.png" alt="ङ्खि" data-notes="62px Tiro Hindi" style="margin-inline-end:5em;">
+<img class="ex" src="images/virama_vowel_noto.png" alt="ङ्खि" data-notes="62px Noto Serif Devanagari" style="margin-inline-start:5em;">
+</div>
+<figcaption>Positioning of the pre-base vowel-sign in relation to the same consonant cluster where a conjunct forms (left) vs. where a visible virama appears (right).</figcaption>
+</figure>
+
 <p>A visible virama may also be used with a single consonant, to indicate that it is to be pronounced without the inherent vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">क्</span> <span class="ipa">k</span></span></p>
 </section>
 </section>
