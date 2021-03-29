@@ -16,7 +16,7 @@ th { color: tan; padding-inline-end: .5em; }
 th.second { color: tan; }
 td { text-align: center; cursor: pointer; border: 1px dotted #aaa; border-radius: .1em; }
 #parkingdiv { /*margin-inline-start: 2em;*/ }
-#parkingLot { font-size: 28px; border: 0; width: 50%; height: 3em; }
+#parkingLot { font-size: 28px; border: 0; width: 50%; height: 4em; }
 #inputPanel { margin-inline-end: 2em; }
 /*#preview  { font-size: 48px; padding: 0 .2em 0 0; float: right; position: sticky; top: 0; right: 0; background-color: white; clear: both; z-index: 1000; }*/
 #preview  { font-size: 48px; padding: 0 .5em 0 .5em; position: fixed; bottom: 0; left: 0; background-color: #ffebcd; clear: both; z-index: 1000; }
@@ -34,9 +34,12 @@ border: 1px solid #ddd; vertical-align: top; }
 .highlighted { color: white; background-color: tan; }
 ins { background-color: antiquewhite; }
 input { border: 1px dotted tan; }
+
+
+.firstLetterTest { color: red; }
+.firstLetterTest::first-letter { color: black; font-size: 120%; }
+.letterSpaceTest { letter-spacing: 1em; }
 </style>
-
-
 
 
 <style id="fontSizeStyling">.text { font-size: 60px; }</style> <!-- this sets the default, but is changed by scripting -->
@@ -89,6 +92,27 @@ Choose a preset: <select id="preset" onChange="applyPreset(this.value); generate
 <option value="sinh">Sinhala</option>
 <option value="sund">Sundanese</option>
 <option value="telu">Telugu</option>
+</select>
+</div>
+
+
+
+<script>
+function applyTest( type ) { console.log('type', type)
+    cells = document.querySelectorAll('#theTable td')
+    for (i=0;i<cells.length;i++) {
+        if (cells[i].classList.contains('firstLetterTest')) cells[i].classList.remove('firstLetterTest')
+        if (cells[i].classList.contains('letterSpaceTest')) cells[i].classList.remove('letterSpaceTest')
+        cells[i].classList.add(type)
+        }
+    }
+</script>
+
+<div style="font-size: 90%; margin-bottom: 1em; font-weight: bold;">
+Run a test: <select id="tests" onChange="applyTest(this.value)">
+<option value=":">None</option>
+<option value="firstLetterTest">First-letter</option>
+<option value="letterSpaceTest">Letter-spacing</option>
 </select>
 </div>
 
