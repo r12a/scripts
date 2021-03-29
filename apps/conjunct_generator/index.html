@@ -5,7 +5,6 @@
 <meta charset="utf-8"/>
 <title>Conjunct generator</title>
 <meta name="description" content="Generate a matrix of conjunct cluster forms."/>
-<script src="../../../shared/phrasedb/db.js"> </script>
 
 <link rel="stylesheet" href="../../../shared/style/docs.css" />
 	
@@ -27,7 +26,7 @@ border-radius: 10px;
 line-height: 1.5em;
 padding: 5px;
 border: 1px solid #ddd; vertical-align: top; }
-#exclusions, #highlights, #consonants, #vowels { width: 50%; }
+#exclusions, #highlights, #consonants, #consonantsSide, #vowels { width: 50%; }
 .tips { text-align: start; font-size: 14px; }
 .tipBody td, .tipBody th { vertical-align: top; }
 .tipHead th { vertical-align: top; text-align: start; }
@@ -74,7 +73,7 @@ input { border: 1px dotted tan; }
 
 
 <div style="font-size: 90%; margin-bottom: 1em; font-weight: bold;">
-Choose a preset: <select id="preset" onChange="applyPreset(this.value); generate(document.getElementById('consonants').value, document.getElementById('vowels').value)">
+Choose a preset: <select id="preset" onChange="applyPreset(this.value); generate(document.getElementById('consonants').value, document.getElementById('consonantsSide').value, document.getElementById('vowels').value)">
 <option value=":">None</option>
 <option value="bali">Balinese</option>
 <option value="batk">Batak</option>
@@ -116,14 +115,18 @@ Run a test: <select id="tests" onChange="applyTest(this.value)">
 </select>
 </div>
 
-<div style="flex:1; text-align: start;"><button id="submit" onClick="generate(document.getElementById('consonants').value, document.getElementById('vowels').value)">GO</button></div>
+<div style="flex:1; text-align: start;"><button id="submit" onClick="generate(document.getElementById('consonants').value, document.getElementById('consonantsSide').value, document.getElementById('vowels').value)">GO</button></div>
 </aside>
 
  
 
-<div style="display: flex; flex-direction: column; flex-wrap: wrap; margin-inline-start: 7.5%; justify-content: space-between; width:60%;">
+<!--div style="display: flex; flex-direction: column; flex-wrap: wrap; margin-inline-start: 7.5%; justify-content: space-between; width:60%;"-->
+<div style="margin-inline-start: 7.5%; width:60%;">
 
-<div style="font-weight: bold;">Consonants: <input type="text" id="consonants" placeholder="Space-separated list." style=""></div>
+<div style="font-weight: bold;">Consonants (side): 
+<input type="text" id="consonants" placeholder="Space-separated list." style=""></div>
+<div style="font-weight: bold;">Consonants (top): 
+<input type="text" id="consonantsSide" placeholder="Space-separated list." style=""></div>
 
 <div style="font-weight: bold;">Virama (hex): 
 <input type="text" id="vowels" placeholder="Space-separated list." style="width: 5em;"></div>
@@ -201,34 +204,34 @@ Parking lot: &nbsp; &nbsp; <button onclick="showInUniView(document.getElementByI
 <script>
 
 var presets = {
-"bali":"ᬧ ᬩ ᬞ ᬢ ᬤ ᬟ ᬠ ᬘ ᬚ ᬛ ᬓ ᬕ ᬔ ᬧ᬴ ᬯ᬴ ᬱ ᬚ᬴ ᬓ᬴ ᬕ᬴ ᬳ᬴ ᬗ᬴ ᬳ ᬫ ᬦ ᬗ ᬜ ᬯ ᬭ ᬮ ᬬ:1B44",
-"batk":"ᯇ ᯈ ᯅ ᯆ ᯖ ᯗ ᯑ ᯂ ᯃ ᯄ᯦ ᯎ ᯏ ᯡ ᯚ᯦ ᯐ ᯘ ᯙ ᯚ ᯄ ᯀ ᯌ ᯂ ᯔ ᯕ ᯉ ᯊ ᯠ ᯝ ᯋ ᯌ ᯍ ᯒ ᯓ ᯞ ᯟ ᯛ ᯜ:1BF2",
-"beng":"প ব ফ ভ ত দ থ ধ ট ড ঠ ঢ চ জ ছ ঝ ক গ খ ঘ শ ষ স হ ম ন ণ ঞ ঙ র ড় ঢ় ল য য়:09CD",
-"deva":"क ख ग घ ङ च छ ज झ ञ ट ठ ड ढ ण त थ द ध न प फ ब भ म य र ल व श ष स ह क़ ख़ ग़ ऩ ड़ ढ़ ऱ य़ ळ ऴ फ़ ज़ ॹ ॺ:094D",
-"gujr":"પ બ ભ ત થ દ ધ ચ છ જ ઝ ટ ઠ ડ ઢ ક ખ ગ ઘ ફ સ શ ષ હ મ ન ઞ ણ ઙ વ ર લ ળ ય ક્ષ જ્ઞ:0ACD",
-"guru":"ਪ ਬ ਭ ਫ ਤ ਦ ਧ ਥ ਚ ਜ ਝ ਛ ਟ ਡ ਢ ਠ ਕ ਗ ਘ ਖ ਫ਼ ਸ ਸ਼ ਖ਼ ਹ ਵ ਜ਼ ਗ਼ ਮ ਨ ਞ ਣ ਙ ਯ ਰ ੜ ਲ ਲ਼:0A4D",
-"java":"ꦥ ꦧ ꦦ ꦨ ꦠ ꦢ ꦡ ꦕ ꦗ ꦖ ꦛ ꦝ ꦏ ꦒ ꦑ ꦓ ꦱ ꦯ ꦲ ꦩ ꦤ ꦚ ꦔ ꦟ ꦘ ꦮ ꦫ ꦉ ꦭ ꦊ ꦪ:A9C0",
-"knda":"ಕ ಖ ಗ ಘ ಙ ಚ ಛ ಜ ಝ ಞ ಟ ಠ ಡ ಢ ಣ ತ ಥ ದ ಧ ನ ಪ ಫ ಬ ಭ ಮ ಯ ರ ಱ ಲ ಳ ವ ಶ ಷ ಸ ಹ ೞ:0CCD",
-"mlym":"പ ബ ഫ ഭ ത ദ ഥ ധ ച ജ ഛ ഝ ട ഡ ഢ ഠ ക ഗ ഖ ഘവ സ ഷ ശ ഹ മ ന ഞ ണ ങ ര റ ഴ ല ള യ:0D4D",
-"mymr":"ပ ဗ ဖ ဘ တ ဒ ထ ဓ ဋ ဍ ဌ ဎ က ဂ ခ ဃ စ ဆ ဇ ဈ သ ဿ ဟ မ န ဏ ည ဉ င ဝ ရ လ ယ ကျ ကြ ကွ ကှ က္လ:1039",
-"newa":"𑐥 𑐧 𑐦 𑐨 𑐟 𑐡 𑐠 𑐢 𑐚 𑐜 𑐛 𑐝 𑐔 𑐖 𑐕 𑐗 𑐎 𑐐 𑐏 𑐑 𑐳 𑐱 𑐲 𑐴 𑐩 𑐣 𑐞 𑐘 𑐒 𑐪 𑐤 𑐙 𑐓 𑐰 𑐴𑑂𑐰 𑐬 𑐭 𑐮 𑐯 𑐫 𑐴𑑂𑐫 𑐎𑑂𑐲 𑐖𑑂𑐘:11442",
-"orya":"କ ଖ ଗ ଘ ଙ ଚ ଛ ଜ ଝ ଞ ଟ ଠ ଡ ଢ ଣ ତ ଥ ଦ ଧ ନ ପ ଫ ବ ଭ ମ ଯ ର ଲ ଳ ଵ ଶ ଷ ସ ହ ଡ଼ ଢ଼ ୟ ୱ:0B4D",
-"rjng":"ꤶ ꤷ ꤳ ꤴ ꤰ ꤱ ꤹ ꤺ ꥂ ꥄ ꥃ ꥅ ꤼ ꥁ ꤸ ꤵ ꤻ ꤲ ꥀ ꤽ ꤾ ꤿ:A953",
-"sinh":"ක ඛ ග ඝ ඞ ඟ ච ඡ ජ ඣ ඤ ට ඨ ඩ ඪ ණ ඬ ත ථ ද ධ න ප ඵ බ භ ම ඹ ය ර ල ළ ව ෆ ශ ෂ ස හ:0DCA",
-"sund":"ᮕ ᮘ ᮒ ᮓ ᮎ ᮏ ᮊ ᮌ ᮞ ᮠ ᮙ ᮔ ᮑ ᮍ ᮝ ᮛ ᮜ ᮚ:1BAB",
-"telu":"క ఖ గ ఘ ఙ చ ఛ జ ఝ ఞ ట ఠ డ ఢ ణ త థ ద ధ న ప ఫ బ భ మ య ర ఱ ల ళ ఴ వ శ ష స హ:0C4D",
+"bali":"ᬧ ᬩ ᬞ ᬢ ᬤ ᬟ ᬠ ᬘ ᬚ ᬛ ᬓ ᬕ ᬔ ᬧ᬴ ᬯ᬴ ᬱ ᬚ᬴ ᬓ᬴ ᬕ᬴ ᬳ᬴ ᬗ᬴ ᬳ ᬫ ᬦ ᬗ ᬜ ᬯ ᬭ ᬮ ᬬ:ᬧ ᬩ ᬞ ᬢ ᬤ ᬟ ᬠ ᬘ ᬚ ᬛ ᬓ ᬕ ᬔ ᬧ᬴ ᬯ᬴ ᬱ ᬚ᬴ ᬓ᬴ ᬕ᬴ ᬳ᬴ ᬗ᬴ ᬳ ᬫ ᬦ ᬗ ᬜ ᬯ ᬭ ᬮ ᬬ:1B44",
+"batk":"ᯇ ᯈ ᯅ ᯆ ᯖ ᯗ ᯑ ᯂ ᯃ ᯄ᯦ ᯎ ᯏ ᯡ ᯚ᯦ ᯐ ᯘ ᯙ ᯚ ᯄ ᯀ ᯌ ᯂ ᯔ ᯕ ᯉ ᯊ ᯠ ᯝ ᯋ ᯌ ᯍ ᯒ ᯓ ᯞ ᯟ ᯛ ᯜ:ᯇ ᯈ ᯅ ᯆ ᯖ ᯗ ᯑ ᯂ ᯃ ᯄ᯦ ᯎ ᯏ ᯡ ᯚ᯦ ᯐ ᯘ ᯙ ᯚ ᯄ ᯀ ᯌ ᯂ ᯔ ᯕ ᯉ ᯊ ᯠ ᯝ ᯋ ᯌ ᯍ ᯒ ᯓ ᯞ ᯟ ᯛ ᯜ:1BF2",
+"beng":"প ব ফ ভ ত দ থ ধ ট ড ঠ ঢ চ জ ছ ঝ ক গ খ ঘ শ ষ স হ ম ন ণ ঞ ঙ র ড় ঢ় ল য য়:প ব ফ ভ ত দ থ ধ ট ড ঠ ঢ চ জ ছ ঝ ক গ খ ঘ শ ষ স হ ম ন ণ ঞ ঙ র ড় ঢ় ল য য়:09CD",
+"deva":"क ख ग घ ङ च छ ज झ ञ ट ठ ड ढ ण त थ द ध न प फ ब भ म य र ल व श ष स ह क़ ख़ ग़ ऩ ड़ ढ़ ऱ य़ ळ ऴ फ़ ज़ ॹ ॺ:क ख ग घ ङ च छ ज झ ञ ट ठ ड ढ ण त थ द ध न प फ ब भ म य र ल व श ष स ह क़ ख़ ग़ ऩ ड़ ढ़ ऱ य़ ळ ऴ फ़ ज़ ॹ ॺ:094D",
+"gujr":"પ બ ભ ત થ દ ધ ચ છ જ ઝ ટ ઠ ડ ઢ ક ખ ગ ઘ ફ સ શ ષ હ મ ન ઞ ણ ઙ વ ર લ ળ ય ક્ષ જ્ઞ:પ બ ભ ત થ દ ધ ચ છ જ ઝ ટ ઠ ડ ઢ ક ખ ગ ઘ ફ સ શ ષ હ મ ન ઞ ણ ઙ વ ર લ ળ ય ક્ષ જ્ઞ:0ACD",
+"guru":"ਪ ਬ ਭ ਫ ਤ ਦ ਧ ਥ ਚ ਜ ਝ ਛ ਟ ਡ ਢ ਠ ਕ ਗ ਘ ਖ ਫ਼ ਸ ਸ਼ ਖ਼ ਹ ਵ ਜ਼ ਗ਼ ਮ ਨ ਞ ਣ ਙ ਯ ਰ ੜ ਲ ਲ਼:ਪ ਬ ਭ ਫ ਤ ਦ ਧ ਥ ਚ ਜ ਝ ਛ ਟ ਡ ਢ ਠ ਕ ਗ ਘ ਖ ਫ਼ ਸ ਸ਼ ਖ਼ ਹ ਵ ਜ਼ ਗ਼ ਮ ਨ ਞ ਣ ਙ ਯ ਰ ੜ ਲ ਲ਼:0A4D",
+"java":"ꦥ ꦧ ꦦ ꦨ ꦠ ꦢ ꦡ ꦕ ꦗ ꦖ ꦛ ꦝ ꦏ ꦒ ꦑ ꦓ ꦱ ꦯ ꦲ ꦩ ꦤ ꦚ ꦔ ꦟ ꦘ ꦮ ꦫ ꦉ ꦭ ꦊ ꦪ:ꦥ ꦧ ꦦ ꦨ ꦠ ꦢ ꦡ ꦕ ꦗ ꦖ ꦛ ꦝ ꦏ ꦒ ꦑ ꦓ ꦱ ꦯ ꦲ ꦩ ꦤ ꦚ ꦔ ꦟ ꦘ ꦮ ꦫ ꦉ ꦭ ꦊ ꦪ:A9C0",
+"knda":"ಕ ಖ ಗ ಘ ಙ ಚ ಛ ಜ ಝ ಞ ಟ ಠ ಡ ಢ ಣ ತ ಥ ದ ಧ ನ ಪ ಫ ಬ ಭ ಮ ಯ ರ ಱ ಲ ಳ ವ ಶ ಷ ಸ ಹ ೞ:ಕ ಖ ಗ ಘ ಙ ಚ ಛ ಜ ಝ ಞ ಟ ಠ ಡ ಢ ಣ ತ ಥ ದ ಧ ನ ಪ ಫ ಬ ಭ ಮ ಯ ರ ಱ ಲ ಳ ವ ಶ ಷ ಸ ಹ ೞ:0CCD",
+"mlym":"പ ബ ഫ ഭ ത ദ ഥ ധ ച ജ ഛ ഝ ട ഡ ഢ ഠ ക ഗ ഖ ഘവ സ ഷ ശ ഹ മ ന ഞ ണ ങ ര റ ഴ ല ള യ:പ ബ ഫ ഭ ത ദ ഥ ധ ച ജ ഛ ഝ ട ഡ ഢ ഠ ക ഗ ഖ ഘവ സ ഷ ശ ഹ മ ന ഞ ണ ങ ര റ ഴ ല ള യ:0D4D",
+"mymr":"ပ ဗ ဖ ဘ တ ဒ ထ ဓ ဋ ဍ ဌ ဎ က ဂ ခ ဃ စ ဆ ဇ ဈ သ ဿ ဟ မ န ဏ ည ဉ င ဝ ရ လ ယ ကျ ကြ ကွ ကှ က္လ:ပ ဗ ဖ ဘ တ ဒ ထ ဓ ဋ ဍ ဌ ဎ က ဂ ခ ဃ စ ဆ ဇ ဈ သ ဿ ဟ မ န ဏ ည ဉ င ဝ ရ လ ယ ကျ ကြ ကွ ကှ က္လ:1039",
+"newa":"𑐥 𑐧 𑐦 𑐨 𑐟 𑐡 𑐠 𑐢 𑐚 𑐜 𑐛 𑐝 𑐔 𑐖 𑐕 𑐗 𑐎 𑐐 𑐏 𑐑 𑐳 𑐱 𑐲 𑐴 𑐩 𑐣 𑐞 𑐘 𑐒 𑐪 𑐤 𑐙 𑐓 𑐰 𑐴𑑂𑐰 𑐬 𑐭 𑐮 𑐯 𑐫 𑐴𑑂𑐫 𑐎𑑂𑐲 𑐖𑑂𑐘:𑐥 𑐧 𑐦 𑐨 𑐟 𑐡 𑐠 𑐢 𑐚 𑐜 𑐛 𑐝 𑐔 𑐖 𑐕 𑐗 𑐎 𑐐 𑐏 𑐑 𑐳 𑐱 𑐲 𑐴 𑐩 𑐣 𑐞 𑐘 𑐒 𑐪 𑐤 𑐙 𑐓 𑐰 𑐴𑑂𑐰 𑐬 𑐭 𑐮 𑐯 𑐫 𑐴𑑂𑐫 𑐎𑑂𑐲 𑐖𑑂𑐘:11442",
+"orya":"କ ଖ ଗ ଘ ଙ ଚ ଛ ଜ ଝ ଞ ଟ ଠ ଡ ଢ ଣ ତ ଥ ଦ ଧ ନ ପ ଫ ବ ଭ ମ ଯ ର ଲ ଳ ଵ ଶ ଷ ସ ହ ଡ଼ ଢ଼ ୟ ୱ:କ ଖ ଗ ଘ ଙ ଚ ଛ ଜ ଝ ଞ ଟ ଠ ଡ ଢ ଣ ତ ଥ ଦ ଧ ନ ପ ଫ ବ ଭ ମ ଯ ର ଲ ଳ ଵ ଶ ଷ ସ ହ ଡ଼ ଢ଼ ୟ ୱ:0B4D",
+"rjng":"ꤶ ꤷ ꤳ ꤴ ꤰ ꤱ ꤹ ꤺ ꥂ ꥄ ꥃ ꥅ ꤼ ꥁ ꤸ ꤵ ꤻ ꤲ ꥀ ꤽ ꤾ ꤿ:ꤶ ꤷ ꤳ ꤴ ꤰ ꤱ ꤹ ꤺ ꥂ ꥄ ꥃ ꥅ ꤼ ꥁ ꤸ ꤵ ꤻ ꤲ ꥀ ꤽ ꤾ ꤿ:A953",
+"sinh":"ක ඛ ග ඝ ඞ ඟ ච ඡ ජ ඣ ඤ ට ඨ ඩ ඪ ණ ඬ ත ථ ද ධ න ප ඵ බ භ ම ඹ ය ර ල ළ ව ෆ ශ ෂ ස හ:ක ඛ ග ඝ ඞ ඟ ච ඡ ජ ඣ ඤ ට ඨ ඩ ඪ ණ ඬ ත ථ ද ධ න ප ඵ බ භ ම ඹ ය ර ල ළ ව ෆ ශ ෂ ස හ:0DCA",
+"sund":"ᮕ ᮘ ᮒ ᮓ ᮎ ᮏ ᮊ ᮌ ᮞ ᮠ ᮙ ᮔ ᮑ ᮍ ᮝ ᮛ ᮜ ᮚ:ᮕ ᮘ ᮒ ᮓ ᮎ ᮏ ᮊ ᮌ ᮞ ᮠ ᮙ ᮔ ᮑ ᮍ ᮝ ᮛ ᮜ ᮚ:1BAB",
+"telu":"క ఖ గ ఘ ఙ చ ఛ జ ఝ ఞ ట ఠ డ ఢ ణ త థ ద ధ న ప ఫ బ భ మ య ర ఱ ల ళ ఴ వ శ ష స హ:క ఖ గ ఘ ఙ చ ఛ జ ఝ ఞ ట ఠ డ ఢ ణ త థ ద ధ న ప ఫ బ భ మ య ర ఱ ల ళ ఴ వ శ ష స హ:0C4D",
 }
 
 function applyPreset (code) {
 	var choice = presets[code].split(':')
 	document.getElementById('consonants').value = choice[0]
-	document.getElementById('vowels').value = choice[1]
+	document.getElementById('consonantsSide').value = choice[1]
+	document.getElementById('vowels').value = choice[2]
 	}
 
 
-function generate (clist, virama) {
+function generate (clist, clistSide, virama) {
 	// get exclusion list
-
 	exclusions = document.getElementById('exclusions').value.trim()
 	exclusions = exclusions.replace(/\s+/g,' ')
 	exclArray = exclusions.split(' ')
@@ -245,33 +248,37 @@ function generate (clist, virama) {
 	table = ''
 	virama = String.fromCodePoint('0x'+virama)
 	
-	clist = clist.replace(/\s+/g,' ')
+	clist = clist.replace(/\s+/g,' ').trim()
 	consonants = clist.split(' ')
+	clistSide = clistSide.replace(/\s+/g,' ').trim()
+	consonantsSide = clistSide.split(' ')
+    
+    
 	table += '<tr><th>&nbsp;</th>'
-	for (k=0;k<consonants.length;k++) {
-		table += '<th class="second">'+consonants[k]+'</th>'
+	for (k=0;k<consonantsSide.length;k++) {
+		table += '<th class="second">'+consonantsSide[k]+'</th>'
 		}
 	table += '</tr>'
 	for (let i=0;i<consonants.length;i++) {
 		table += '<tr><th>'+consonants[i]+'</th>'
-		for (j=0;j<consonants.length;j++) {
+		for (j=0;j<consonantsSide.length;j++) {
 			if (includes) {
-				if (inclSet.has(consonants[i]+virama+consonants[j])) {
-					table += '<td class="highlighted" onmouseover="document.getElementById(\'preview\').textContent=\''+consonants[i]+'+'+consonants[j]+' = '+consonants[i]+virama+consonants[j]+'\'">'
-					if (! exclSet.has(consonants[i]+virama+consonants[j])) table += consonants[i]+virama+consonants[j]
+				if (inclSet.has(consonants[i]+virama+consonantsSide[j])) {
+					table += '<td class="highlighted" onmouseover="document.getElementById(\'preview\').textContent=\''+consonants[i]+'+'+consonantsSide[j]+' = '+consonants[i]+virama+consonantsSide[j]+'\'">'
+					if (! exclSet.has(consonants[i]+virama+consonantsSide[j])) table += consonants[i]+virama+consonantsSide[j]
 					table += '</td>'
 					}
 				else {
-					table += '<td onmouseover="document.getElementById(\'preview\').textContent=\''+consonants[i]+'+'+consonants[j]+' = '+consonants[i]+virama+consonants[j]+'\'">'
-					if (! exclSet.has(consonants[i]+virama+consonants[j])) table += consonants[i]+virama+consonants[j]
+					table += '<td onmouseover="document.getElementById(\'preview\').textContent=\''+consonants[i]+'+'+consonantsSide[j]+' = '+consonants[i]+virama+consonantsSide[j]+'\'">'
+					if (! exclSet.has(consonants[i]+virama+consonantsSide[j])) table += consonants[i]+virama+consonantsSide[j]
 					table += '</td>'
 
 					}
 				}
 
 			else {
-				table += '<td onmouseover="document.getElementById(\'preview\').textContent=\''+consonants[i]+virama+consonants[j]+' = '+consonants[i]+'+'+consonants[j]+'\'">'
-				if (! exclSet.has(consonants[i]+virama+consonants[j])) table += consonants[i]+virama+consonants[j]
+				table += '<td onmouseover="document.getElementById(\'preview\').textContent=\''+consonants[i]+virama+consonants[j]+' = '+consonants[i]+'+'+consonantsSide[j]+'\'">'
+				if (! exclSet.has(consonants[i]+virama+consonantsSide[j])) table += consonants[i]+virama+consonantsSide[j]
 				table += '</td>'
 				}
 			}
@@ -380,7 +387,7 @@ for (var p=0;p<parameters.length;p++) {
 	if (pairs[0] == 'preset') { if (pairs[1]) { document.getElementById("preset").value = decodeURIComponent(pairs[1]); applyPreset(pairs[1]); parametersFound = true } }
 	if (pairs[0] == 'font') { if (pairs[1]) { document.getElementById("font").value = decodeURIComponent(pairs[1]); changeFontFamily(decodeURIComponent(pairs[1])) } }
 	}
-if (parametersFound) generate(document.getElementById('consonants').value, document.getElementById('vowels').value)
+if (parametersFound) generate(document.getElementById('consonants').value,document.getElementById('consonantsSide').value, document.getElementById('vowels').value)
 </script>
 </body>
 </html>
