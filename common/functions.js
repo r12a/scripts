@@ -389,7 +389,7 @@ function makeTables (lang) {
 
             if (info.includes('ipa')) { 
 			//if (window.spreadsheetRows[char]) console.log('ipa',char,window.spreadsheetRows[char][cols.ipaLoc])
-                if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.ipaLoc]) ch = window.spreadsheetRows[char][cols.ipaLoc]
+                if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.ipaLoc]) ch = window.spreadsheetRows[char][cols.ipaLoc].toLowerCase()
                 else ch = '&nbsp;'
                 if (ch === '&nbsp;') out += '<span>&nbsp;</span>'
                 else out += '<span class="listIPA">'+ch.replace(/ /g,' ')+'</span>'
