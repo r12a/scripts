@@ -35,6 +35,7 @@ var scriptNotes= {
     'hebr':[['Hebrew', 'hebrew/']],
     'java':[['Javanese', 'javanese/']],
     'jpan':[['Japanese', 'jpan/']],
+    'kali':[['Kayah Li', 'kali/']],
     'khmr':[['Khmer', 'khmer/']],
     'laoo':[['Lao', 'lao/']],
     'lana':[['Tai Tham/Tai Khün', 'taitham/'], 
@@ -126,6 +127,7 @@ var scriptNotesByRegion = {
 	'K':[
 		['Kashmiri (arab)', 'arabic/kashmiri'],
 		['Kashmiri (deva)', 'devanagari/kashmiri'],
+		['Kayah LI', 'kali/'],
 		['Khmer', 'khmer/'],
 		['Korean', 'hangul/'],
 		],
@@ -219,6 +221,7 @@ var charNotesList = {
     'hebr':['Hebrew', 'hebrew/block'],
     'jpan':['Punctuation', 'punctuation/block'],
     'java':['Javanese', 'javanese/block'],
+    'kali':['Kayah Li', 'kali/block'],
     'khmr':['Khmer', 'khmer/block'],
     'laoo':['Lao', 'lao/block'],
     'lisu':['Lisu', 'lisu/block'],
