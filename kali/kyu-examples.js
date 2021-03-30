@@ -28,7 +28,7 @@ autoExpandExamples.kyu = `
 ꤏꤛꤢꤩ꤬ꤊꤜꤥ꤭|weather|sʰje¹klo³
 ꤜꤟꤢꤪ|all|lɔ̤
 ꤊꤜꤛꤢꤩ꤬ꤕꤜꤟꤢꤧ|arrow|klje¹plɛ̤
-ꤡꤟꤛꤢ|to be able to|d͡ʒja
+ꤡꤟꤛꤢ|to be able to|d͡ʒja̤
 ꤢꤧ꤬ꤞꤤ꤭|they|ɛ¹θi³
 ꤞꤛꤥꤜꤤ꤬ꤟꤥ꤭ ꤞꤢꤚꤢ|teacher|θjoli¹ho³ θara
 ꤒꤢꤧ꤬ꤋꤢꤨ꤬ ꤞꤢꤚꤢꤘꤢꤨ꤬|doctor|tɛ¹kʰu¹ θaradu¹
@@ -63,6 +63,11 @@ autoExpandExamples.kyu = `
 ꤏꤛꤢꤩ|ten|ʃje˦
 ꤊꤟꤛꤢꤏꤛꤢꤩ꤬ꤞꤢꤧ꤬|tomato|kja̤˦ʃje˨ʂɛ˨
 ꤓꤛꤢꤩ꤭ꤏꤤ꤭ꤕꤚꤟꤢꤩ|alcohol|tʰje˧ʃi˧pre̤˦
+ꤢ꤬ꤠꤖꤚꤤꤊꤢ|Africa|a˨fri˦ka˦
+ꤊꤝꤤ꤭|ask|kwi˧
+ꤤ꤬ꤕꤟꤢ|leap|i˨pa̤˦
+ꤟꤢꤪ|already|hɔ˦
+ꤏꤢꤦ꤭ꤏꤢꤧ꤭|to spear|sʰɯ˧sʰɛ˧
 
 
 
