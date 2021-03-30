@@ -27,7 +27,7 @@ autoExpandExamples.kyu = `
 ꤏꤤ꤬ꤜꤤ꤬ꤕꤜꤝꤥ꤭|radio|sʰi¹li¹plwo³
 ꤏꤛꤢꤩ꤬ꤊꤜꤥ꤭|weather|sʰje¹klo³
 ꤜꤟꤢꤪ|all|lɔ̤
-ꤊꤜꤛꤢꤩ꤬ꤕꤜꤟꤢꤧ|arrow|klje¹plɛ
+ꤊꤜꤛꤢꤩ꤬ꤕꤜꤟꤢꤧ|arrow|klje¹plɛ̤
 ꤡꤟꤛꤢ|to be able to|d͡ʒja
 ꤢꤧ꤬ꤞꤤ꤭|they|ɛ¹θi³
 ꤞꤛꤥꤜꤤ꤬ꤟꤥ꤭ ꤞꤢꤚꤢ|teacher|θjoli¹ho³ θara
@@ -46,7 +46,23 @@ autoExpandExamples.kyu = `
 ꤋꤢ꤭ꤢꤨ꤬|mouth|kʰa³u¹
 ꤢꤪ|brown|ɔ
 ꤞꤢ꤬ꤒꤢ꤬ꤕꤚꤢꤩ꤭|fishnet|ʂa¹ta¹pre³
-
+ꤠꤢꤧ꤬|husband|vɛ^
+ꤠꤟꤢꤧ꤬|bamboo|vɛ̤¹
+ꤜꤤ꤬|letter|li¹
+ꤜꤟꤤ꤬|red|li̤¹
+ꤕꤢꤎꤕꤥ|passport|paspo
+ꤋꤢꤧ꤬ꤎꤣ꤬|cancer|kʰɛ¹sə¹
+ꤊꤢ꤬ꤔꤟꤥ꤮|very|ka¹no̤ˈ
+ꤟꤌꤣ꤭|uncooked rice|hɯ̤ə/xə³
+ꤔꤟꤤꤟꤌꤣ꤭|to hear|ni̤hɯ̤ə³/ni̤xə³
+ꤒꤢ꤬ꤚꤟꤢꤪ꤬ꤞꤢꤧ ꤞꤢꤧꤤ꤬ꤏꤢꤩ꤭|danger|ta˨rɔ̤˨ʂɛ˦ θɛ˦i˨ʃe˧
+ꤊꤢ꤬ꤔꤟꤥ꤮ ꤒꤥ꤬|really|ka˨no̤˦ to˨
+ꤞꤢꤨ꤬|lungs|ʂu˨
+ꤞꤢꤨ꤭|send|ʂu˧
+ꤞꤢꤨ|fat, oil|ʂu˦
+ꤏꤛꤢꤩ|ten|ʃje˦
+ꤊꤟꤛꤢꤏꤛꤢꤩ꤬ꤞꤢꤧ꤬|tomato|kja̤˦ʃje˨ʂɛ˨
+ꤓꤛꤢꤩ꤭ꤏꤤ꤭ꤕꤚꤟꤢꤩ|alcohol|tʰje˧ʃi˧pre̤˦
 
 
 

@@ -15,6 +15,13 @@ reflist = {
 "reviewed":false
 },
 
+"r": {
+"url":"https://www.rcsdk12.org/cms/lib/NY01001156/Centricity/Domain/4194/english-kayah__dictionary-with_Helps-154p.pdf",
+"authors": "Khu Hte Reh",
+"title":"English-Kayah LiDictionary with Helps",
+"reviewed":false
+},
+
 "u": {
 "url":"https://www.unicode.org/versions/Unicode13.0.0/ch16.pdf",
 "authors": "Unicode Consortium",
@@ -22,7 +29,7 @@ reflist = {
 "sub":"Chapter 16.9: Southeast Asia, Kayah Li",
 "pages":"676",
 "isbn":"978-1-936213-16-0.",
-"reviewed": false
+"reviewed": true
 },
 
 "ul": {
