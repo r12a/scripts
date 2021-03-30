@@ -816,7 +816,7 @@ function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
 			
 			if (spreadsheetRows[cchar][cols['statusLoc']]) out += '<span class="charStatus">'+spreadsheetRows[cchar][cols['statusLoc']]+'</span>'
 			
-			if (spreadsheetRows[cchar][cols['ipaLoc']]) out += '<span class="charIPA ipa">'+spreadsheetRows[cchar][cols['ipaLoc']]+'</span>'
+			if (spreadsheetRows[cchar][cols['ipaLoc']]) out += '<span class="charIPA ipa">'+spreadsheetRows[cchar][cols['ipaLoc']].toLowerCase()+'</span>'
 			
 			if (spreadsheetRows[cchar][cols['transLoc']]) out += '<span class="localtrans trans">'+spreadsheetRows[cchar][cols['transLoc']]+'</span>'
 
