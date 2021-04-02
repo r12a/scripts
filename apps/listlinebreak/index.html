@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Triage for linebreaking tool</title>
+<meta name="description" content="Tool to triage a set of characters into Unicode categories." />
+
+<link rel="stylesheet" href="../../../shared/style/docs.css" />
+<link rel="stylesheet"  href="style.css" />
+
+<script src="../../../shared/code/boilerplate.js"></script>
+<script src="../../../uniview/functions.js"></script>
+<script src="../../../shared/code/scriptGroups.js"></script>
+<script src="propertylist.js"></script>
+<script src="script.js"></script>
+</head>
+
+<body class="app">
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_appHeader('../../../shared/images/world.gif','Triage for linebreaking','');</script>
+</header>
+
+
+<div id="start">
+<p id="clearInput" onClick="document.getElementById('in').value = '';">Clear all</p>
+
+<textarea id="in" placeholder="Drop text to be analysed here."></textarea>
+
+<div><button id="analyseButton" onclick="makeList(document.getElementById('in').value)">Analyse</button></div>
+</div>
+
+
+<p id="out"></p>
+
+
+<div id="legend">
+<h2>Legend</h2>
+
+<p id="AI"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AI">AI (ambiguous, alphabetic or Ideograph)</a> line breaking behavior  depends on the context, and may reflect  different rules in East Asian and other contexts.</p>
+<p id="AL"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#AL">AL (ordinary alphabetic and symbol characters)</a> requires other characters to provide break opportunities; otherwise, unless tailored rules are applied, no line breaks are allowed between pairs of them.</p>
+<p id="B2"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">B2 (break opportunity before and after)</a> the EM DASH  used to set off parenthetical text may allow line breaks before or after, but may also be affected by local orthographic rules.&nbsp;</p>
+<p id="BB"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BB (break before)</a> indicates that characters  move to the next line at a line break and thus provide a line break opportunity before.&nbsp;</p>
+<p id="BA"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#BA">BA (break after)</a> indicates that it is normal to break after that character.&nbsp;</p>
+<p id="CL"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CL">CL (close punctuation)</a>  should be kept with the preceding character.&nbsp;The class CL is closely related to the class CP (Close Parenthesis). They differ only in that CP will not introduce a break when followed by a letter or number, which prevents breaks within constructs like “(s)he”.</p>
+<p id="CM"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CM">CM (combining mark)</a> takes on the behaviour of its base character.</p>
+<p id="CP"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#CP">CP (closing parenthesis)</a> will not cause a break opportunity when appearing in contexts like “(s)he.” In all other respects the breaking behavior of CP and CL are the same.</p>
+<p id="EX"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#EX">EX (exclamation mark/interrogation)</a> behave like closing characters, except in relation to postfix (PO) and non-starter characters (NS).</p>
+<p id="GL"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#GL">GL (non-breaking “glue&quot;)</a> non-tailorable, non-breaking characters prohibit breaks on either side, but that prohibition can be overridden by SP or ZW.</p>
+<p id="HY"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#H2">HY (hyphen)</a> additional context analysis is required to distinguish usage of this character as a hyphen from its usage as a minus sign (or indicator of numerical range). If used as hyphen, it acts like U+2010 HYPHEN, which has line break class BA.</p>
+<p id="IN"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">IN (inseparable characters)</a> is intended to be used consecutively. There is never a line break between two characters of this class.</p>
+<p id="ID"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">ID (ideographic)</a> do not require other characters to provide break opportunities; lines can ordinarily break before and after and between pairs of ideographic characters. Note that this class also includes characters other than Han ideographs..</p>
+<p id="IS"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">IS (infix numeric separators)</a> usually occurs inside a numerical expression and may not be separated from the numeric characters that follow, unless a space character intervenes. For example, there is no break in “100.00” or “10,000”, nor in “12:59”..</p>
+<p id="NS"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">NS (nonstarters)</a> cannot start a line, but unlike CL they may allow a break in some contexts when they follow one or more space characters.</p>
+<p id="NU"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#NU">NU (number)</a> behaves like ordinary characters (AL) in the context of most characters but activate the prefix and postfix behavior of prefix and postfix characters.</p>
+<p id="OP"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#OP">OP (open punctuation)</a> 	should be kept with the character that follows. This is desirable, even if there are intervening space characters, as it prevents the appearance of a bare opening punctuation mark at the end of a line.</p>
+<p id="PO"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#OP">PO (postfix numeric)</a> usually follows a numerical expression and may not be separated from preceding numeric characters or preceding closing characters, even if one or more space characters intervene. For example, there is no break opportunity in “(12.00) %”.</p>
+<p id="PR"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#PR">PR (numeric prefix)</a>  may not be separated from following numeric characters or following opening characters, even if a space character intervenes. For example, there is no break opportunity in “฿ (100.00)”.</p>
+<p id="QU"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#SA">QU (quotation)</a> characters can be opening or closing, or even both, depending on usage. The default is to treat them as both opening and closing.</p>
+<p id="SA"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#SA">SA (Southeast Asian)</a> require morphological analysis to determine break opportunities, in a way similar to a hyphenation algorithm. No break opportunities will be found otherwise. Complex context analysis, often involving dictionary lookup of some form, is required to determine non-emergency line breaks. If such analysis is not available, it is recommended to treat them as AL.</p>
+<p id="SY"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#SA">SY (symbols allowing break after)</a> provides a break opportunity after, except in front of digits, so as to not break “1/2” or “06/07/99”.</p>
+<p id="ZWJ"><a href="https://www.unicode.org/reports/tr14/tr14-39.html#SA">ZW (ZERO WIDTH SPACE, ZWSP)</a> enables  invisible break opportunities wherever <span class="uname">SPACE</span> cannot be used. It  has no width, and is treated as if it wasn't there during justification.</p>
+</div>
+
+
+
+<!--section id="comparison">
+<h2>Compare lists</h2>
+
+<div id="comparisonInput">
+<div><textarea name="left" id="leftList" cols="30" rows="10"></textarea><p id="leftResult">Characters unique to this side:<br/><span id="leftOut"></span> <a id="leftOutLink" href="../../../app-analysestring/?chars=" target="_blank" onclick="this.href=this.href+encodeURI(document.getElementById('leftOut').textContent)"><img src="share.png" alt="Show details"></a></p></div>
+<div><textarea name="right" id="rightList" cols="30" rows="10"></textarea><p id="rightResult">Characters unique to this side:<br/><span id="rightOut"></span> <a id="rightOutLink" href="../../../app-analysestring/?chars=" target="_blank" onclick="this.href=this.href+encodeURI(document.getElementById('rightOut').textContent)"><img src="share.png" alt="Show details"></a></p></div>
+<div><p id="bothResult" style="margin-right:0;">Characters on both sides:<br/><span id="bothOut"></span> <a id="bothOutLink" href="../../../app-analysestring/?chars=" target="_blank" onclick="this.href=this.href+encodeURI(document.getElementById('bothOut').textContent)"><img src="share.png" alt="Show details"></a></p></div>
+</div>
+
+<div><button onClick="compareLists()">Compare</button></div>
+
+</section-->
+
+
+
+
+
+
+
+
+
+
+
+<div id="notes" style=" background-color: bisque; margin-top:4em; padding: 1em; ">
+
+<p>This tool analyses  text, finds all the characters used, and shows one instance of each character, grouped by Unicode line-breaking properties.</p>
+
+<details>
+<summary>show more</summary>
+
+<aside class="sidebar">
+  <div class="section">
+    <h2 class="flush">Related links</h2>
+    <p><a target="_blank" href="../../../app-listcharacters/">List characters</a></p>
+    <p><a target="_blank" href="../../../uniview/">UniView</a></p>
+    <p><a target="_blank" href="../../../app-conversion/">Unicode code converter</a></p>
+  </div>
+</aside>
+
+
+<section>
+<p>The <img src="copy.png" alt="Copy"> icon copies the characters on that row to your clipboard, ready for you to paste elsewhere.  This will not work, however, on Safari or other browsers using the webkit engine.</p>
+  <p>The <img src="share.png" alt="Show details"> icon opens a separate window with an app that displays basic information about the characters for that row.</p>
+</section>
+<p id="status">Updated 
+<!-- #BeginDate format:Sw1 -->2 April, 2021<!-- #EndDate -->
+</p>
+</details>
+</div>
+
+<div class="smallprint"><span id="version">
+See <a href="https://github.com/r12a/scripts/apps/listlinebreak/commits/gh-pages">recent changes</a>.
+Make a <a href="https://github.com/r12a/scripts/issues/new">comment</a>. 
+Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a> 
+</span>
+</div>
+  
+ <script>
+// check for parameters and take appropriate action
+parameters = location.search.split('&');
+parameters[0] = parameters[0].substring(1);
+for (var p=0;p<parameters.length;p++) {  
+	pairs = parameters[p].split('=');
+	if (pairs[0] == 'chars') { if (pairs[1]) { document.getElementById('in').value = decodeURIComponent(pairs[1]); makeList(decodeURIComponent(pairs[1])) } }
+//	if (pairs[0] == 'charlist') { if (pairs[1]) { document.getElementById("picker").value = decodeURIComponent(pairs[1]);showCharacterList(decodeURIComponent(pairs[1])); } }
+	}
+</script>
+</body>
+</html>
