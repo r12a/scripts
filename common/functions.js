@@ -58,6 +58,15 @@ function runCharCounts () {
 	out += runCharCount('.deprecatedBox', 'Deprecated')
 	
 	document.getElementById('charCountList').innerHTML = out
+    
+    if (document.getElementById('showLinebreaks')) document.getElementById('showLinebreaks').href = '../apps/listlinebreak?chars='+encodeURI(runCharCount('.characterBox', 'index', true) + runCharCount('.auxiliaryBox', 'index', true) + runCharCount('.formattingBox', 'index', true))
+
+    if (document.getElementById('showCategories')) document.getElementById('showCategories').href = '../apps/listcategories?chars='+encodeURI(runCharCount('.characterBox', 'index', true) + runCharCount('.auxiliaryBox', 'index', true) + runCharCount('.formattingBox', 'index', true))
+
+    if (document.getElementById('showBlocks')) document.getElementById('showBlocks').href = '../../app-listcharacters?chars='+encodeURI(runCharCount('.characterBox', 'index', true) + runCharCount('.auxiliaryBox', 'index', true) + runCharCount('.formattingBox', 'index', true))
+
+    if (document.getElementById('showBidiClass')) document.getElementById('showBidiClass').href = '../apps/listbidi?chars='+encodeURI(runCharCount('.characterBox', 'index', true) + runCharCount('.auxiliaryBox', 'index', true) + runCharCount('.formattingBox', 'index', true))
+
 	}
 
 
@@ -910,7 +919,7 @@ function setGeneralFont (fontname, size, language) {
 
 
 
-function runCharCount (type, location) { 
+function runCharCount (type, location, raw=false) { 
 	//if (document.getElementById(location) == null) return
 	var charlists
 	if (document.getElementById('index')) charlists = document.getElementById('index').querySelectorAll(type)
@@ -926,11 +935,14 @@ function runCharCount (type, location) {
 	const uniqueSet = new Set(charlistArray)
 	var uniqueArray = [...uniqueSet]
 	
-	out += '<tr><th>'+location+'</th>'
-	+'<td id="'+location+'CharList">'
-	+uniqueArray.toString().replace(/,/g,' ')
-	+'</td>'
-	+'<td id="'+location+'CharListTotal">'+uniqueArray.length+'</td></tr>'
+	if (raw) out += uniqueArray.toString().replace(/,/g,' ')
+    else {
+        out += '<tr><th>'+location+'</th>'
+        +'<td id="'+location+'CharList">'
+        +uniqueArray.toString().replace(/,/g,' ')
+        +'</td>'
+        +'<td id="'+location+'CharListTotal">'+uniqueArray.length+'</td></tr>'
+        }
 
 	return out
 	}
@@ -1078,6 +1090,51 @@ function makeIndexObject () {
     var charArray = []
 	chars = document.querySelectorAll('.codepoint, .listItem')
 	for (i=0;i<chars.length;i++) {
+        cell = chars[i].firstChild.textContent
+        
+        // get the heading
+		ptr = chars[i]
+		while (ptr.nodeName != 'SECTION' && ptr.nodeName != 'HTML') {
+			ptr = ptr.parentNode
+			}
+		section = ptr.id
+        
+        for (j=0;j<cell.length;j++) {
+            charArray.push(new Object)
+            charArray[charArray.length-1].codepoint = cell[j]
+            charArray[charArray.length-1].section = section
+            }
+		}
+	console.log('charArray',charArray)
+
+	allchars = '' // makes a list of all characters for sorting later
+    for (j=0;j<charArray.length;j++) {
+        if ([... charArray[j].codepoint].length > 1) continue
+        if (charArray[j].section.includes('index_')) continue
+        if (charArray[j].section.includes('_map')) continue
+        if (charArray[j].section.includes('map_')) continue
+        // stop duplicates
+        if (index[charArray[j].codepoint] && index[charArray[j].codepoint].includes(charArray[j].section)) continue
+        //if (index[charArray[j].codepoint]) console.log('Found ',index[charArray[j].codepoint])
+		if (index[charArray[j].codepoint]) index[charArray[j].codepoint] += ' #'+charArray[j].section
+		else {
+			index[charArray[j].codepoint] = '#'+charArray[j].section
+			allchars += charArray[j].codepoint
+			}
+		}
+	console.log('index',index)
+    
+    // sort the allchars string
+    sortedAllChars = [...allchars].sort()
+    allchars = sortedAllChars.join('')
+	document.getElementById('allchars').value = allchars
+	}
+
+
+function makeIndexObjectOLD () {
+    var charArray = []
+	chars = document.querySelectorAll('.codepoint, .listItem')
+	for (i=0;i<chars.length;i++) {
 		charArray.push(new Object)
 		charArray[charArray.length-1].codepoint = chars[i].firstChild.textContent
 		//console.log(charArray)
@@ -1089,17 +1146,17 @@ function makeIndexObject () {
 			}
 		charArray[charArray.length-1].section = ptr.id
 		}
-	console.log(charArray)
+	console.log('charArray',charArray)
 
 	allchars = '' // makes a list of all characters for sorting later
-	for (j=0;j<charArray.length;j++) {
-	if ([... charArray[j].codepoint].length > 1) continue
-	if (charArray[j].section.includes('index_')) continue
-	if (charArray[j].section.includes('_map')) continue
-	if (charArray[j].section.includes('map_')) continue
-	// stop duplicates
-	if (index[charArray[j].codepoint] && index[charArray[j].codepoint].includes(charArray[j].section)) continue
-	//if (index[charArray[j].codepoint]) console.log('Found ',index[charArray[j].codepoint])
+    for (j=0;j<charArray.length;j++) {
+        if ([... charArray[j].codepoint].length > 1) continue
+        if (charArray[j].section.includes('index_')) continue
+        if (charArray[j].section.includes('_map')) continue
+        if (charArray[j].section.includes('map_')) continue
+        // stop duplicates
+        if (index[charArray[j].codepoint] && index[charArray[j].codepoint].includes(charArray[j].section)) continue
+        //if (index[charArray[j].codepoint]) console.log('Found ',index[charArray[j].codepoint])
 		if (index[charArray[j].codepoint]) index[charArray[j].codepoint] += ' #'+charArray[j].section
 		else {
 			index[charArray[j].codepoint] = '#'+charArray[j].section
