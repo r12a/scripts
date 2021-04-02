@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Triage categories tool</title>
+<meta name="description" content="Tool to triage a set of characters into Unicode categories." />
+
+<link rel="stylesheet" href="../../../shared/style/docs.css" />
+<link rel="stylesheet"  href="style.css" />
+
+<script src="../../../shared/code/boilerplate.js"></script>
+<script src="../../../uniview/functions.js"></script>
+<script src="../../../shared/code/scriptGroups.js"></script>
+<script src="u.js"></script>
+<script src="script.js"></script>
+</head>
+
+<body class="app">
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_appHeader('../../../shared/images/world.gif','Triage by category','');</script>
+</header>
+
+
+<div id="start">
+<p id="clearInput" onClick="document.getElementById('in').value = '';">Clear all</p>
+
+<textarea id="in" placeholder="Drop text to be analysed here."></textarea>
+
+<div><button id="analyseButton" onclick="makeList(document.getElementById('in').value)">Analyse</button></div>
+</div>
+
+
+<p id="out"></p>
+
+
+<div id="legend">
+<h2>Legend</h2>
+
+<p><strong>L (Letter)</strong> <b>Lu</b> (Letter, uppercase), <b>Ll</b> (Letter, lowercase), <b>Lt</b> (Letter, titlecase), <b>Lm</b> (Letter, modifier), <b>Lo</b> (Letter, other)</p>
+<p><strong>M (Mark)</strong> <b>Mn</b> (Mark, non-spacing), <b>Mc</b> (Mark, spacing combining), <b>Me</b> (Mark, enclosing), 0 (Mark, combining class 0)</p>
+<p><strong>N (Number)</strong> <b>Nd</b> (Number, decimal digit) ,Nl (Number, letter), <b>No</b> (Number, other)</p>
+<p><strong>P (Punctuation)</strong> <b>Pc</b> (Punctuation, connector), <b>Pd</b> (Punctuation, dash), <b>Ps</b> (Punctuation, open), <b>Pe</b> (Punctuation, close), <b>Pi</b> (Punctuation, initial quote), <b>Pf</b> (Punctuation, final quote), <b>Po</b> (Punctuation, other)</p>
+<p><strong>Z (Separator)</strong> <b>Zs</b> (Separator, space), <b>Zl</b> (Separator, line), <b>Zp</b> (Separator, paragraph)</p>
+<p><strong>S (Symbol)</strong> <b>Sm</b> (Symbol, math), <b>Sc</b> (Symbol, currency), <b>Sk</b> (Symbol, modifier), <b>So</b> (Symbol, other)</p>
+<p><strong>C (Other)</strong> <b>Cc</b> (Other, control), <b>Cf</b> (Other, format), <b>Co</b> (Other, private use), <b>Cn</b> (Other, not assigned)</p>
+</div>
+
+
+
+<!--section id="comparison">
+<h2>Compare lists</h2>
+
+<div id="comparisonInput">
+<div><textarea name="left" id="leftList" cols="30" rows="10"></textarea><p id="leftResult">Characters unique to this side:<br/><span id="leftOut"></span> <a id="leftOutLink" href="../../../app-analysestring/?chars=" target="_blank" onclick="this.href=this.href+encodeURI(document.getElementById('leftOut').textContent)"><img src="share.png" alt="Show details"></a></p></div>
+<div><textarea name="right" id="rightList" cols="30" rows="10"></textarea><p id="rightResult">Characters unique to this side:<br/><span id="rightOut"></span> <a id="rightOutLink" href="../../../app-analysestring/?chars=" target="_blank" onclick="this.href=this.href+encodeURI(document.getElementById('rightOut').textContent)"><img src="share.png" alt="Show details"></a></p></div>
+<div><p id="bothResult" style="margin-right:0;">Characters on both sides:<br/><span id="bothOut"></span> <a id="bothOutLink" href="../../../app-analysestring/?chars=" target="_blank" onclick="this.href=this.href+encodeURI(document.getElementById('bothOut').textContent)"><img src="share.png" alt="Show details"></a></p></div>
+</div>
+
+<div><button onClick="compareLists()">Compare</button></div>
+
+</section-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="notes" style=" background-color: bisque; margin-top:4em; padding: 1em; ">
+
+<p>This tool analyses  text, finds all the characters used, and shows one instance of each character, grouped by Unicode general category properties.</p>
+
+<details>
+<summary>show more</summary>
+
+<aside class="sidebar">
+  <div class="section">
+    <h2 class="flush">Related links</h2>
+    <p><a target="_blank" href="../../../app-listcharacters/">List characters</a></p>
+    <p><a target="_blank" href="../../../uniview/">UniView</a></p>
+    <p><a target="_blank" href="../../../app-conversion/">Unicode code converter</a></p>
+  </div>
+</aside>
+
+
+<section>
+<p>The <img src="copy.png" alt="Copy"> icon copies the characters on that row to your clipboard, ready for you to paste elsewhere.  This will not work, however, on Safari or other browsers using the webkit engine.</p>
+  <p>The <img src="share.png" alt="Show details"> icon opens a separate window with an app that displays basic information about the characters for that row.</p>
+</section>
+<p id="status">Updated 
+<!-- #BeginDate format:Sw1 -->2 April, 2021<!-- #EndDate -->
+</p>
+</details>
+</div>
+
+
+
+
+
+<div class="smallprint"><span id="version">
+See <a href="https://github.com/r12a/app-listcharacters/commits/gh-pages">recent changes</a>.
+Make a <a href="https://github.com/r12a/app-listcharacters/issues/new">comment</a>. 
+Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a> 
+</span>
+</div>
+  
+ <script>
+// check for parameters and take appropriate action
+parameters = location.search.split('&');
+parameters[0] = parameters[0].substring(1);
+for (var p=0;p<parameters.length;p++) {  
+	pairs = parameters[p].split('=');
+	if (pairs[0] == 'chars') { if (pairs[1]) { document.getElementById('in').value = decodeURIComponent(pairs[1]); makeList(decodeURIComponent(pairs[1])) } }
+//	if (pairs[0] == 'charlist') { if (pairs[1]) { document.getElementById("picker").value = decodeURIComponent(pairs[1]);showCharacterList(decodeURIComponent(pairs[1])); } }
+	}
+</script>
+</body>
+</html>
