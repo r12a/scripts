@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Triage categories tool</title>
+<meta name="description" content="Tool to triage a set of characters into bidi_class categories." />
+
+<link rel="stylesheet" href="../../../shared/style/docs.css" />
+<link rel="stylesheet"  href="style.css" />
+
+<script src="../../../shared/code/boilerplate.js"></script>
+<script src="../../../uniview/functions.js"></script>
+<script src="../../../shared/code/scriptGroups.js"></script>
+<script src="u.js"></script>
+<script src="script.js"></script>
+</head>
+
+<body class="app">
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_appHeader('../../../shared/images/world.gif','Triage by bidi_class','');</script>
+</header>
+
+
+<div id="start">
+<p id="clearInput" onClick="document.getElementById('in').value = '';">Clear all</p>
+
+<textarea id="in" placeholder="Drop text to be analysed here."></textarea>
+
+<div><button id="analyseButton" onclick="makeList(document.getElementById('in').value)">Analyse</button></div>
+</div>
+
+
+<p id="out"></p>
+
+
+
+
+
+
+
+
+
+<div id="legend">
+<h2>Legend</h2>
+
+<h3>Strong types</h3>
+<p id="L"><strong>L</strong> (Left_To_Right) Any strong left-to-right character.</p>
+<p id="R"><strong>R</strong> (Right_To_Left) Any strong right-to-left (non-Arabic-type) character.</p>
+<p id="AL"><strong>AL</strong> (Arabic_Letter) Any strong right-to-left (Arabic-type) character.</p>
+
+<h3>Weak types</h3>
+<p id="EN"><strong>EN</strong> (European_Number) Any ASCII digit or Eastern Arabic-Indic digit.</p>
+<p id="ES"><strong>ES</strong> (European_Separator) Plus and minus signs.</p>
+<p id="ET"><strong>ET</strong> (European_Terminator) A terminator in a numeric format context, includes currency signs.</p>
+<p id="AN"><strong>AN</strong> (Arabic_Number) Any Arabic-Indic digit.</p>
+<p id="CS"><strong>CS</strong> (Common_Separator) Commas, colons, and slashes.</p>
+<p id="NSM"><strong>NSM</strong> (Nonspacing_Mark) Any nonspacing mark.</p>
+<p id="BN"><strong>BN</strong> (Boundary_Neutral) Most format characters, control codes, or noncharacters.</p>
+
+<h3>Neutral types</h3>
+<p id="B"><strong>B</strong> (Paragraph_Separator) Various newline characters.</p>
+<p id="S"><strong>S</strong> (Segment_Separator) Various segment-related control codes.</p>
+<p id="WS"><strong>WS</strong> (White_Space) Spaces.</p>
+<p id="ON"><strong>ON</strong> (Other_Neutral) Most other symbols and punctuation marks.</p>
+
+<h3>EXplicit Formatting Types</h3>
+<p id="EFT"><strong>RLE LRE PDF RLO LRO RLI LRI PDI FSI</strong></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div id="notes" style=" background-color: bisque; margin-top:4em; padding: 1em; ">
+
+<p>This tool analyses  text, finds all the characters used, and shows one instance of each character, grouped by Unicode <code class="kw" translate="no">bidi_class</code> properties.</p>
+
+<details>
+<summary>show more</summary>
+
+<aside class="sidebar">
+  <div class="section">
+    <h2 class="flush">Related links</h2>
+    <p><a target="_blank" href="../../../app-listcharacters/">List characters</a></p>
+    <p><a target="_blank" href="../../../uniview/">UniView</a></p>
+    <p><a target="_blank" href="../../../app-conversion/">Unicode code converter</a></p>
+  </div>
+</aside>
+
+
+<section>
+<p>The <img src="copy.png" alt="Copy"> icon copies the characters on that row to your clipboard, ready for you to paste elsewhere.  This will not work, however, on Safari or other browsers using the webkit engine.</p>
+  <p>The <img src="share.png" alt="Show details"> icon opens a separate window with an app that displays basic information about the characters for that row.</p>
+</section>
+<p id="status">Updated 
+<!-- #BeginDate format:Sw1 -->2 April, 2021<!-- #EndDate -->
+</p>
+</details>
+</div>
+
+
+
+
+
+<div class="smallprint"><span id="version">
+See <a href="https://github.com/r12a/app-listcharacters/commits/gh-pages">recent changes</a>.
+Make a <a href="https://github.com/r12a/app-listcharacters/issues/new">comment</a>. 
+Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a> 
+</span>
+</div>
+  
+ <script>
+// check for parameters and take appropriate action
+parameters = location.search.split('&');
+parameters[0] = parameters[0].substring(1);
+for (var p=0;p<parameters.length;p++) {  
+	pairs = parameters[p].split('=');
+	if (pairs[0] == 'chars') { if (pairs[1]) { document.getElementById('in').value = decodeURIComponent(pairs[1]); makeList(decodeURIComponent(pairs[1])) } }
+//	if (pairs[0] == 'charlist') { if (pairs[1]) { document.getElementById("picker").value = decodeURIComponent(pairs[1]);showCharacterList(decodeURIComponent(pairs[1])); } }
+	}
+</script>
+</body>
+</html>
