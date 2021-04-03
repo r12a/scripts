@@ -57,6 +57,10 @@ function escapeRegExp(string){
 
 
 function makeList (stream) {
+    // clear the legend
+    var spans = document.querySelectorAll('#legend span')
+    for (i=0;i<spans.length;i++) spans[i].style.display = 'none'
+
 	stream = stream.replace(/ /g,'')
 	stream = stream.replace(/\u000A/g,'')
 	var streamArray = [...stream]
@@ -92,6 +96,7 @@ function makeList (stream) {
 		var count = [...categories[keys[x]]].length
 		out += '<td class="count">'+count+'</td>'
         charlist = [...categories[keys[x]]]
+        if (document.getElementById(keys[x]) !== null) document.getElementById(keys[x]).style.display = 'inline'
         out += '<td class="chars" dir="ltr">'
         for (i=0;i<charlist.length;i++) out += '<bdi>'+charlist[i]+'</bdi>'
         out += '</td>'
