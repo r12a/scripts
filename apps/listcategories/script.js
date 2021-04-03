@@ -87,7 +87,7 @@ function makeList (stream) {
 	keys.sort()
 
 	// construct a table
-	for (x=0;x<keys.length;x++) { console.log(keys[x],keys[x].length)
+	for (x=0;x<keys.length;x++) { //console.log(keys[x],keys[x].length)
 		out += '<tr'
 		if (keys[x].length === 1) out += ' class="main"'
 		else out += ' class="sub"'
@@ -105,7 +105,7 @@ function makeList (stream) {
         out += ' <a title="Show a list with details." href="../../../app-analysestring/?chars='+encodeURI(categories[keys[x]])+'" target="_blank"><img src="share.png"></a>'
         out += '</td>'
 		out += '</tr>\n'
-        console.log('cats',categories[keys[x]])
+        //console.log('cats',categories[keys[x]])
 		}
 	out += '</tbody></table>'
 	
@@ -113,8 +113,19 @@ function makeList (stream) {
 	//out += '<p class="total">Total blocks: '+keys.length+"</p>"
 	
 	document.getElementById('out').innerHTML = out
-	
-}
+    
+    // make summary
+    var summary = []
+    var total = 0
+    if (categories.L && categories.L.length > 0) { temp = [...categories.L]; summary.push(temp.length+' letters'); total += temp.length }
+    if (categories.M && categories.M.length > 0) { temp = [...categories.M]; summary.push(temp.length+' marks'); total += temp.length }
+    if (categories.N && categories.N.length > 0) { temp = [...categories.N]; summary.push(temp.length+' numbers'); total += temp.length }
+    if (categories.P && categories.P.length > 0) { temp = [...categories.P]; summary.push(temp.length+' punctuation'); total += temp.length }
+    if (categories.S && categories.S.length > 0) { temp = [...categories.S]; summary.push(temp.length+' symbols'); total += temp.length }
+    if (categories.Z && categories.Z.length > 0) { temp = [...categories.Z]; summary.push(temp.length+' separators'); total += temp.length }
+    if (categories.C && categories.C.length > 0) { temp = [...categories.C]; summary.push(temp.length+' other'); total += temp.length }
+    document.getElementById('summary').innerHTML = summary.join(', ')+' : total '+total
+    }
 
 
 
