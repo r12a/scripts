@@ -53,9 +53,16 @@ function runCharCounts () {
 	out += runCharCount('.auxiliaryBox', 'Auxiliary')
 	out += runCharCount('.formattingBox', 'Formatting')
 	out += runCharCount('.archaicBox', 'Archaic')
-	out += runCharCount('.foreignBox', 'Other')
+	out += runCharCount('.foreignBox', 'Foreign')
 	out += runCharCount('.otherBox', 'Other')
 	out += runCharCount('.deprecatedBox', 'Deprecated')
+	
+	out += runCategoryCharCount('index_letters', 'Letter')
+	out += runCategoryCharCount('index_cchars', 'Marks')
+	out += runCategoryCharCount('index_numbers', 'Numbers')
+	out += runCategoryCharCount('index_punctuation', 'Punctuation')
+	out += runCategoryCharCount('index_symbols', 'Symbols')
+	//out += runCategoryCharCount('index_separators', 'Separators')
 	
 	document.getElementById('charCountList').innerHTML = out
     
@@ -68,6 +75,46 @@ function runCharCounts () {
     if (document.getElementById('showBidiClass')) document.getElementById('showBidiClass').href = '../apps/listbidi?chars='+encodeURI(runCharCount('.characterBox', 'index', true) + runCharCount('.auxiliaryBox', 'index', true) + runCharCount('.formattingBox', 'index', true))
 
 	}
+
+
+
+
+
+
+function runCategoryCharCount (location, row, raw=false) { 
+	if (document.getElementById(location) == null) return
+	var charlists
+	if (document.getElementById(location)) charlists = document.getElementById(location).querySelectorAll('.characterBox, .auxiliaryBox, .deprecated, .foreign, .archaic')
+    //console.log(document.getElementById(location).textContent)
+    //console.log('charlists',charlists[0].textContent)
+    
+
+    var out = ''
+	charlistArray = []
+	for (let i=0;i<charlists.length;i++) {
+		var charStr = charlists[i].textContent
+		charStr = charStr.replace(/␣/g,'')
+		var chars = [...charStr]
+		for (let c=0;c<chars.length;c++) charlistArray.push(chars[c])
+		}
+	const uniqueSet = new Set(charlistArray)
+	var uniqueArray = [...uniqueSet]
+	
+	if (raw) out += uniqueArray.toString().replace(/,/g,' ')
+    else {
+        out += '<tr><th>'+row+'</th>'
+        +'<td id="'+row+'CharList">'
+        +uniqueArray.toString().replace(/,/g,' ')
+        +'</td>'
+        +'<td id="'+row+'CharListTotal">'+uniqueArray.length+'</td></tr>'
+        }
+
+	return out
+	}
+
+ //   <tr><th>Letter</th><td id="letterCharList"></td><td id="letterCharListTotal"></td></tr>
+
+
 
 
 
@@ -1090,6 +1137,8 @@ function makeIndexObject () {
     var charArray = []
 	chars = document.querySelectorAll('.codepoint, .listItem')
 	for (i=0;i<chars.length;i++) {
+        if (chars[i].classList.contains('noindex')) continue
+        
         cell = chars[i].firstChild.textContent
         
         // get the heading
@@ -1098,10 +1147,101 @@ function makeIndexObject () {
 			ptr = ptr.parentNode
 			}
 		section = ptr.id
+        //console.log(cell, section)
+        if (section.includes('index_')) continue
+        if (section.includes('_map')) continue
+        if (section.includes('map_')) continue
+      
         
-        for (j=0;j<cell.length;j++) {
+        // get the status
+        var status = ''
+        if (chars[i].classList.contains('listItem')) {
+            listHead = chars[i].parentNode.parentNode.parentNode
+            if (listHead.classList.contains('otherBox')) status = 'other'
+            else if (listHead.classList.contains('characterBox') || listHead.classList.contains('mainBox')) status = 'main'
+            else if (listHead.classList.contains('auxiliaryBox') || listHead.classList.contains('auxBox')) status = 'aux'
+            else if (listHead.classList.contains('deprecatedBox')) status = 'deprecated'
+            else if (listHead.classList.contains('archaicBox')) status = 'archaic'
+            //console.log(cell, status)
+            }
+        
+        // create an object for each item in the cell
+        cellList = [...cell]
+        for (j=0;j<cellList.length;j++) {
             charArray.push(new Object)
-            charArray[charArray.length-1].codepoint = cell[j]
+            charArray[charArray.length-1].codepoint = cellList[j]
+            charArray[charArray.length-1].section = section
+            if (status !== '') charArray[charArray.length-1].status = status
+            }
+		}
+	console.log('charArray',charArray)
+
+	allchars = '' // makes a list of all characters for sorting later
+    
+    // create entries in the index array, avoiding duplicate entries per section
+    for (j=0;j<charArray.length;j++) {
+        indexChar = charArray[j].codepoint
+        // stop duplicates within the same section
+        if (index[indexChar] && index[indexChar].section.includes(charArray[j].section)) {
+            if (charArray[j].status) index[indexChar].status = charArray[j].status
+            continue
+            }
+		if (index[indexChar]) {
+            index[indexChar].section += ' #'+charArray[j].section
+            if (charArray[j].status) index[indexChar].status = charArray[j].status
+            }
+		else {
+            index[indexChar] = new Object
+			index[indexChar].section = '#'+charArray[j].section
+            if (charArray[j].status) index[indexChar].status = charArray[j].status
+			allchars += indexChar
+			}
+		}
+	console.log('index',index)
+    
+    // sort the allchars string
+    sortedAllChars = [...allchars].sort()
+    allchars = sortedAllChars.join('')
+	document.getElementById('allchars').value = allchars
+    
+    // drop lists of characters into the right form fields
+    for (entry in index) {
+        if (index[entry].status) {
+            if (index[entry].status.includes('main')) document.getElementById('mainIndexList').value += entry
+            if (index[entry].status.includes('aux')) document.getElementById('auxIndexList').value += entry
+            if (index[entry].status.includes('archaic')) document.getElementById('archaicIndexList').value += entry
+            if (index[entry].status.includes('deprecated')) document.getElementById('deprecatedIndexList').value += entry
+            if (index[entry].status.includes('other')) document.getElementById('otherIndexList').value += entry
+            }
+        else document.getElementById('unknownIndexList').value += entry
+        }
+    
+    
+    
+    
+	}
+
+
+function makeIndexObjectLESSOLD () {
+    var charArray = []
+	chars = document.querySelectorAll('.codepoint, .listItem')
+	for (i=0;i<chars.length;i++) {
+        if (chars[i].classList.contains('noindex')) continue
+        
+        cell = chars[i].firstChild.textContent
+        
+        // get the heading
+		ptr = chars[i]
+		while (ptr.nodeName != 'SECTION' && ptr.nodeName != 'HTML') {
+			ptr = ptr.parentNode
+			}
+		section = ptr.id
+                
+        // create an object for each item in the cell
+        cellList = [...cell]
+        for (j=0;j<cellList.length;j++) {
+            charArray.push(new Object)
+            charArray[charArray.length-1].codepoint = cellList[j]
             charArray[charArray.length-1].section = section
             }
 		}
@@ -1169,6 +1309,24 @@ function makeIndexObjectOLD () {
 
 
 function makeMarkup () {
+	charList = document.getElementById('in').value
+	charList = charList.replace(/ /g,'')
+	chars = [...charList]
+    type = index[chars[0]].status
+	out = '<figure class="'+type+'Box auto"  data-cols="" data-links="'
+	for (i=0;i<chars.length;i++) {
+		out += index[chars[i]].section+','
+		}
+	out +='">'+chars.join('␣')+'</figure>'
+	document.getElementById('out').value = out
+	document.getElementById('out').select()
+	}
+
+
+
+
+
+function makeMarkupOLD () {
 	charList = document.getElementById('in').value
 	charList = charList.replace(/ /g,'')
 	chars = [...charList]

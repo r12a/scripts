@@ -130,11 +130,18 @@ function addAnalytics () {
     <tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
     <tr><th>Other</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
     <tr><th>Deprecated</th><td id="deprecatedCharList"></td><td id="deprecatedCharListTotal"></td></tr>
+
+    <tr><th>Letter</th><td id="letterCharList"></td><td id="letterCharListTotal"></td></tr>
+    <tr><th>Mark</th><td id="markCharList"></td><td id="markCharListTotal"></td></tr>
+    <tr><th>Number</th><td id="numberCharList"></td><td id="numberCharListTotal"></td></tr>
+    <tr><th>Punctuation</th><td id="punctuationCharList"></td><td id="punctuationCharListTotal"></td></tr>
+    <tr><th>Symbols</th><td id="symbolCharList"></td><td id="symbolCharListTotal"></td></tr>
+    <tr><th>Separators etc</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
     </table>
     </details>
     `
     +
-    `<details style="font-size: 80%;">
+    `<details>
     <summary class="prompts">Make index</summary>
     <hr>
     <h1>Make the index here</h1>
@@ -143,8 +150,14 @@ function addAnalytics () {
     <p><button onClick="makeIndexObject()">Make Index Object</button></p>
 
     <p><input id="allchars" type="text" placeholder="List of all chars appears here"></p>
+    <p>Main <input id="mainIndexList" type="text" placeholder="List of all common chars appears here"></p>
+    <p>Aux <input id="auxIndexList" type="text" placeholder="List of all infrequent chars appears here"></p>
+    <p>Archaic <input id="archaicIndexList" type="text" placeholder="List of all archaic chars appears here"></p>
+    <p>Deprecated <input id="deprecatedIndexList" type="text" placeholder="List of all infrequent chars appears here"></p>
+    <p>Other <input id="otherIndexList" type="text" placeholder="List of all other chars appears here"></p>
+    <p>Unknown <input id="unknownIndexList" type="text" placeholder="List of unknown status chars appears here"></p>
 
-    <p>Copy the list of all characters to Uniview and filter for General Category</p>
+    <p>For each list, <a href="/scripts/apps/listcategories/" target="_blank">Triage by category</a>.</p>
     <p>Copy each General Category to the picker and sort into lines, one for each of the different subsections in the index for that category.</p>
     <p>Copy each line, one at a time to the input box below, and press Make Markup.</p>
 
