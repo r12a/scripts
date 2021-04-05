@@ -150,18 +150,30 @@ function addAnalytics () {
     <p><button onClick="makeIndexObject()">Make Index Object</button></p>
 
     <p><input id="allchars" type="text" placeholder="List of all chars appears here"></p>
+    
+    <details>
+    <summary>Hints for first build of index</summary>
     <p>Main <input id="mainIndexList" type="text" placeholder="List of all common chars appears here"></p>
     <p>Aux <input id="auxIndexList" type="text" placeholder="List of all infrequent chars appears here"></p>
     <p>Archaic <input id="archaicIndexList" type="text" placeholder="List of all archaic chars appears here"></p>
     <p>Deprecated <input id="deprecatedIndexList" type="text" placeholder="List of all infrequent chars appears here"></p>
     <p>Other <input id="otherIndexList" type="text" placeholder="List of all other chars appears here"></p>
     <p>Unknown <input id="unknownIndexList" type="text" placeholder="List of unknown status chars appears here"></p>
-
-    <p>For each list, <a href="/scripts/apps/listcategories/" target="_blank">Triage by category</a>.</p>
+    
+    <p><a href="/scripts/apps/listcategories/" target="_blank">Triage by category</a>.</p>
     <p>Copy each General Category to the picker and sort into lines, one for each of the different subsections in the index for that category.</p>
     <p>Copy each line, one at a time to the input box below, and press Make Markup.</p>
 
     <p><input id="in" type="text" placeholder="Index line here"> <button onClick="makeMarkup()">Make markup</button></p>
+    </details>
+
+    <p>Update section: <button onclick="makeMarkupForSection('index_letters')">Letter</button>
+        <button onclick="makeMarkupForSection('index_cchars')">Marks</button>
+        <button onclick="makeMarkupForSection('index_numbers')">Number</button>
+        <button onclick="makeMarkupForSection('index_punctuation')">Punctuation</button>
+        <button onclick="makeMarkupForSection('index_symbols')">Symbols</button>
+        <button onclick="makeMarkupForSection('index_other')">Other</button>
+        </p>
 
     <p><textarea id="out" style="width: 80%;height:300px;"></textarea>
     </p>

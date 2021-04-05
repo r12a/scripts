@@ -1137,8 +1137,9 @@ function makeIndexObject () {
     var charArray = []
 	chars = document.querySelectorAll('.codepoint, .listItem')
 	for (i=0;i<chars.length;i++) {
-        if (chars[i].classList.contains('noindex')) continue
+        if (chars[i].classList.contains('noindex') || chars[i].parentNode.parentNode.parentNode.classList.contains('noindex')) continue
         
+        console.log('Processing:',chars[i].textContent)
         cell = chars[i].firstChild.textContent
         
         // get the heading
@@ -1309,6 +1310,60 @@ function makeIndexObjectOLD () {
 
 
 function makeMarkup () {
+
+	charList = document.getElementById('in').value
+	charList = charList.replace(/ /g,'')
+	chars = [...charList]
+    type = index[chars[0]].status
+	out = '<figure class="'+type+'Box auto"  data-cols="" data-links="'
+	for (i=0;i<chars.length;i++) {
+		out += index[chars[i]].section+','
+		}
+	out +='">'+chars.join('␣')+'</figure>'
+	document.getElementById('out').value = out
+	document.getElementById('out').select()
+	}
+
+
+
+
+
+function makeMarkupForSection (sectionName) {
+
+    var out = ''
+    var indexList = document.getElementById(sectionName)
+    //var indexSections = indexList.querySelectorAll('section')
+    var indexFigures = indexList.querySelectorAll('figure')
+    for (i=0;i<indexFigures.length;i++) {
+        var listItems = indexFigures[i].querySelectorAll('.listItem')
+        var allChars = ''
+        for (j=0;j<listItems.length;j++) allChars += listItems[j].textContent
+        console.log('heading',indexFigures[i].parentNode.id, 'type', indexFigures[i].className.replace(/ auto/,''), 'content', allChars)
+        
+        allCharsArray = [...allChars]
+        out += '<figure class="'+indexFigures[i].className+'" data-cols="" data-links="'
+        for (k=0;k<allCharsArray.length;k++) console.log(allCharsArray[k])
+        for (k=0;k<allCharsArray.length;k++) {
+            if (typeof index[allCharsArray[k]] === 'undefined') console.log('NOT FOUND:',allCharsArray[k])
+            else out += index[allCharsArray[k]].section + ','
+            }
+        out += '">'
+        for (k=0;k<allCharsArray.length;k++) {
+            out += allCharsArray[k]
+            if (k<allCharsArray.length-1) out += '␣'
+            }
+        out += '</figure>\n'
+        }
+    
+	document.getElementById('out').value = out
+	document.getElementById('out').select()
+	}
+
+
+
+
+
+function makeMarkupLESSOLD () {
 	charList = document.getElementById('in').value
 	charList = charList.replace(/ /g,'')
 	chars = [...charList]
