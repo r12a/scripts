@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Triage indic syllabic category tool</title>
+<meta name="description" content="Tool to triage a set of characters into Unicode indic syllabic property categories." />
+
+<link rel="stylesheet" href="../../../shared/style/docs.css" />
+<link rel="stylesheet"  href="style.css" />
+
+<script src="../../../shared/code/boilerplate.js"></script>
+<script src="../../../uniview/functions.js"></script>
+<script src="../../../shared/code/scriptGroups.js"></script>
+<script src="propertylist.js"></script>
+<script src="script.js"></script>
+</head>
+
+<body class="app">
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_appHeader('../../../shared/images/world.gif','Triage for Indic_Syllabic_Category','');</script>
+</header>
+
+
+<div id="start">
+<p id="clearInput" onClick="document.getElementById('in').value = '';">Clear all</p>
+
+<textarea id="in" placeholder="Drop text to be analysed here."></textarea>
+
+<div><button id="analyseButton" onclick="makeList(document.getElementById('in').value)">Analyse</button></div>
+</div>
+
+
+<p id="out"></p>
+
+
+<div id="legend">
+<h2>Legend</h2>
+
+
+<p id="Avagraha"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:Indic_Syllabic_Category=Avagraha:]">Avagraha</a> Elision of initial a- in sandhi.</p>
+<p id="Bindu"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Bindu:]">Bindu/Anusvara</a> Nasalization or -n.</p>
+<p id="Brahmi_Joining_Number"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:Indic_Syllabic_Category=Brahmi_Joining_Number:]">Brahmi Joining Number</a> Similar to Number in that in can be used as vowel-holders like Consonant_Placeholder, but may also be joined by a Number_Joiner of the same script, e.g. in Brahmi.</p>
+<p id="Cantillation_Mark"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Cantillation_Mark:]">Cantillation Mark</a> Recitation marks, such as svara markers for the Samaveda.</p>
+<p id="Consonant"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Consonant:]">Consonant</a> Ordinary abugida consonants, with inherent vowels</p>
+<p id="Consonant_Dead"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Consonant_Dead:]">Dead Consonant</a>  Special consonant with killed vowel.</p>
+<p id="Consonant_Final"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Consonant_Final:]">Final Consonant</a> Special final forms which do not take vowels.</p>
+<p id="Consonant_Head_Letter"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Consonant_Head_Letter:]">Head Letter Consonant</a> Tibetan.</p>
+<p id="Consonant_Initial_Postfixed"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Consonant_Initial_Postfixed:]">Initial Postfixed Consonant</a> Consonants that succeed the main consonant in character sequences, but are pronounced before it.</p>
+<p id="Consonant_Killer"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Consonant_Killer:]">Consonant Killer</a> Signifies that the previous consonant or consonants are not pronounced.</p>
+<p id="Consonant_Medial"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Consonant_Medial:]">Medial Consonant</a> Medial liquid, occurring in clusters.</p>
+<p id="Consonant_Placeholder"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Consonant_Placeholder:]">Placeholder Consonant</a> This includes generic placeholders used for Indic script layout (NBSP and dotted circle), as well as a few script-specific vowel-holder characters which are not technically consonants, but serve instead as bases for placement of vowel marks.</p>
+<p id="Consonant_Preceding_Repha"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Consonant_Preceding_Repha:]">Preceding Repha Consonant</a> Repha Form of RA (reanalyzed in some scripts), when preceding the main consonant.</p>
+<p id="Consonant_Prefixed"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Consonant_Prefixed:]">Prefixed Consonant</a> Cluster-initial consonants.</p>
+<p id="Consonant_Subjoined"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Consonant_Subjoined:]">Subjoined Consonant</a> C2 form subtending a base consonant in Tibetan, etc.</p>
+<p id="Consonant_Succeeding_Repha"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Consonant_Succeeding_Repha:]">Consonant Succeeding Repha</a> Repha Form of RA (reanalyzed in some scripts), when succeeding the main consonant.</p>
+<p id="Consonant_With_Stacker"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Consonant_With_Stacker:]">Consonant With Stacker</a> 	Consonants that may make stacked ligatures with the next consonant without the use of a virama.</p>
+<p id="Gemination_Mark"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Gemination_Mark:]">Gemination Mark</a> Doubling of the preceding or following consonant.</p>
+<p id="Invisible_Stacker"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Invisible_Stacker:]">Invisible Stacker</a>  Invisible consonant stacker virama). Note that in some scripts, such as Kharoshthi and Masaram Gondi, an invisible stacker may have a second function, changing the shape and/or location of the consonant preceding it, even when there is no consonant following the invisible stacker.</p>
+<p id="Joiner"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Joiner:]">Joiner</a> Zero Width Joiner.</p>
+<p id="Modifying_Letter"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Modifying_Letter:]">Modifying Letter</a> Reanalyzed letters not participating in the abugida structure, but serving to modify the sound of an adjacent vowel or consonant. Note that this is not the same as General_Category=Modifier_Letter.</p>
+<p id="Non_Joiner"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Non_Joiner:]">Non Joiner</a> Zero Width Non-Joiner.</p>
+<p id="Nukta"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Nukta:]">Nukta</a> Diacritic for borrowed consonants or other consonant modifications). Note that while the resulting sound is typically a consonant, the base letter a nukta follows may be an independent vowel. For example, U+0A85+U+0AFD GUJARATI LETTER A, GUJARATI SIGN THREE-DOT NUKTA ABOVE is used to transcribe ARABIC LETTER AIN.</p>
+<p id="Number"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Number:]">Number</a> Can be used as vowel-holders like consonant placeholders. Note: A number may even hold subjoined consonants which may in turn have been formed using a virama or a stacker, e.g. the sequence U+1A93+U+1A60+U+1A34 where THAI THAM LETTER LOW TA is subjoined to TAI THAM THAM DIGIT THREE using an invisible stacker.</p>
+<p id="Number_Joiner"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Number_Joiner:]">Number Joiner</a> Forms ligatures between numbers for multiplication.</p>
+<p id="Pure_Killer"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Pure_Killer:]">Pure Killer</a> Killing of inherent vowel in consonant sequence, with no consonant stacking behavior.</p>
+<p id="Register_Shifter"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Register_Shifter:]">Register Shifter</a> Shifts register for consonants, akin to a tone mark.</p>
+<p id="Syllable_Modifier"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Syllable_Modifier:]">Syllable Modifier</a> Miscellaneous combining characters that modify something in the orthographic syllable they succeed.</p>
+<p id="Tone_Letter"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Tone_Letter:]">Tone Letter</a> Spacing lexical tone mark with status as a letter.</p>
+<p id="Tone_Mark"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Tone_Mark:]">Tone Mark</a> Nonspacing or spacing lexical tone mark.</p>
+<p id="Virama"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Virama:]">Virama</a> Killing of inherent vowel in consonant sequence or consonant stacker). Only includes characters that can act both as visible killer viramas and consonant stackers. Separate property values exist for characters that can only act as pure killers or only as consonant stackers.</p>
+<p id="Visarga"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Visarga:]">Visarga</a> -h Excludes letters for jihvamuliya and upadhmaniya, which are related, but structured somewhat differently.</p>
+<p id="Vowel"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Vowel:]">Vowel</a> Vowels reanalyzed as ordinary alphabetic letters or marks.</p>
+<p id="Vowel_Dependent"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Vowel_Dependent:]">Dependent Vowel</a> Contrasted with independent vowels and/or with complex placement). Known as matras in Indic scripts. Also includes vowel modifiers that follow dependent (and sometimes independent) vowels.</p>
+<p id="Vowel_Independent"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Vowel_Independent:]">Independent Vowel</a> Contrasted with matras.</p>
+<p id="Other"><a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:InSC=Other:]">Other</a> All code points not explicitly listed for Indic_Syllabic_Category have the value Other.</p>
+</div>
+
+
+
+<!--section id="comparison">
+<h2>Compare lists</h2>
+
+<div id="comparisonInput">
+<div><textarea name="left" id="leftList" cols="30" rows="10"></textarea><p id="leftResult">Characters unique to this side:<br/><span id="leftOut"></span> <a id="leftOutLink" href="../../../app-analysestring/?chars=" target="_blank" onclick="this.href=this.href+encodeURI(document.getElementById('leftOut').textContent)"><img src="share.png" alt="Show details"></a></p></div>
+<div><textarea name="right" id="rightList" cols="30" rows="10"></textarea><p id="rightResult">Characters unique to this side:<br/><span id="rightOut"></span> <a id="rightOutLink" href="../../../app-analysestring/?chars=" target="_blank" onclick="this.href=this.href+encodeURI(document.getElementById('rightOut').textContent)"><img src="share.png" alt="Show details"></a></p></div>
+<div><p id="bothResult" style="margin-right:0;">Characters on both sides:<br/><span id="bothOut"></span> <a id="bothOutLink" href="../../../app-analysestring/?chars=" target="_blank" onclick="this.href=this.href+encodeURI(document.getElementById('bothOut').textContent)"><img src="share.png" alt="Show details"></a></p></div>
+</div>
+
+<div><button onClick="compareLists()">Compare</button></div>
+
+</section-->
+
+
+
+
+
+
+
+
+
+
+
+<div id="notes" style=" background-color: bisque; margin-top:4em; padding: 1em; ">
+
+<p>This tool analyses  text, finds all the characters used, and shows one instance of each character, grouped by  Unicode <code class="kw" translate="no">Indic_Syllabic_Category</code> properties.</p>
+
+<details>
+<summary>show more</summary>
+
+<aside class="sidebar">
+  <div class="section">
+    <h2 class="flush">Related links</h2>
+    <p><a target="_blank" href="../../../app-listcharacters/">List characters</a></p>
+    <p><a target="_blank" href="../../../uniview/">UniView</a></p>
+    <p><a target="_blank" href="../../../app-conversion/">Unicode code converter</a></p>
+    <p><a target="_blank" href="https://www.unicode.org/Public/13.0.0/ucd/IndicSyllabicCategory.txt">IndicSyllabicCategory.txt</a></p>
+  </div>
+</aside>
+
+
+<section>
+<p>The <img src="copy.png" alt="Copy"> icon copies the characters on that row to your clipboard, ready for you to paste elsewhere.  This will not work, however, on Safari or other browsers using the webkit engine.</p>
+  <p>The <img src="share.png" alt="Show details"> icon opens a separate window with an app that displays basic information about the characters for that row.</p>
+</section>
+<p id="status">Updated 
+<!-- #BeginDate format:Sw1 -->6 April, 2021<!-- #EndDate -->
+</p>
+</details>
+</div>
+
+<div class="smallprint"><span id="version">
+See <a href="https://github.com/r12a/scripts/apps/listlinebreak/commits/gh-pages">recent changes</a>.
+Make a <a href="https://github.com/r12a/scripts/issues/new">comment</a>. 
+Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a> 
+</span>
+</div>
+  
+ <script>
+// check for parameters and take appropriate action
+parameters = location.search.split('&');
+parameters[0] = parameters[0].substring(1);
+for (var p=0;p<parameters.length;p++) {  
+	pairs = parameters[p].split('=');
+	if (pairs[0] == 'chars') { if (pairs[1]) { document.getElementById('in').value = decodeURIComponent(pairs[1]); makeList(decodeURIComponent(pairs[1])) } }
+//	if (pairs[0] == 'charlist') { if (pairs[1]) { document.getElementById("picker").value = decodeURIComponent(pairs[1]);showCharacterList(decodeURIComponent(pairs[1])); } }
+	}
+</script>
+</body>
+</html>
