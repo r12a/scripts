@@ -74,6 +74,8 @@ function runCharCounts () {
 
     if (document.getElementById('showBidiClass')) document.getElementById('showBidiClass').href = '../apps/listbidi?chars='+encodeURI(runCharCount('.characterBox', 'index', true) + runCharCount('.auxiliaryBox', 'index', true) + runCharCount('.formattingBox', 'index', true))
 
+    if (document.getElementById('showIndicSyllables')) document.getElementById('showIndicSyllables').href = '../apps/listindic?chars='+encodeURI(runCharCount('.characterBox', 'index', true) + runCharCount('.auxiliaryBox', 'index', true) + runCharCount('.formattingBox', 'index', true))
+
 	}
 
 
@@ -362,7 +364,8 @@ function makeTables (lang) {
 		// populate the chars array with characters & gather additional info
         //chars = node.dataset.chars.split('␣')
         chars = node.textContent.split('␣')
-        info = node.dataset.cols
+        if (typeof node.dataset.cols === 'undefined') info = ''
+        else info = node.dataset.cols
         if (node.className.includes('bicameral')) bicameral = true // note: phase this out in favour of data-select=last
         else bicameral = false
         if (node.dataset.select && node.dataset.select == 'last') bicameral = true
@@ -494,24 +497,27 @@ function makeTables (lang) {
 
 
 			// print the code point values
-            out += '<span class="listUnum">'
-			charList = [... chars[i]]
-            for (let z=0;z<charList.length;z++) {
-                var hex = charList[z].codePointAt(0)
-                if (ignorableChar && ignorableChar === hex) continue // ignore specified character
-                if (vowelcluster && hex === 45) continue // ignore hyphens - this should be phased out
-                hex = hex.toString(16).toUpperCase()
-                while (hex.length < 4) hex = '0'+hex
-				
-				out += '<span class="listUnumCP" onclick="showCharDetailsInPanel(event)">'+hex+'</span>'
-/* remove in favour of displaying data in panel
-				if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.block]) out += '<a href="/scripts/'+window.spreadsheetRows[char][cols.block]+'/block#char'+hex+'" target="c">'
-                out += hex
-				if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.block]) out += '</a>'
-				*/
-                if (charList.length>1 && z<charList.length-1) out += '<br/>'
-                }
-                out += '</span>'
+            if (node.className.includes('noCodePoints')) {} // do nothing
+            else {
+                out += '<span class="listUnum">'
+                charList = [... chars[i]]
+                for (let z=0;z<charList.length;z++) {
+                    var hex = charList[z].codePointAt(0)
+                    if (ignorableChar && ignorableChar === hex) continue // ignore specified character
+                    if (vowelcluster && hex === 45) continue // ignore hyphens - this should be phased out
+                    hex = hex.toString(16).toUpperCase()
+                    while (hex.length < 4) hex = '0'+hex
+
+                    out += '<span class="listUnumCP" onclick="showCharDetailsInPanel(event)">'+hex+'</span>'
+    /* remove in favour of displaying data in panel
+                    if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.block]) out += '<a href="/scripts/'+window.spreadsheetRows[char][cols.block]+'/block#char'+hex+'" target="c">'
+                    out += hex
+                    if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.block]) out += '</a>'
+                    */
+                    if (charList.length>1 && z<charList.length-1) out += '<br/>'
+                    }
+                    out += '</span>'
+                    }
 
 
 			// add any links
