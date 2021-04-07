@@ -38,6 +38,13 @@ reflist = {
 "isbn":"0-340-86029-4",
 },
 
+"rmcs": {
+"url":"https://www.w3.org/TR/predefined-counter-styles/#arabic-styles",
+"authors": "Richard Ishida",
+"title":"Ready-made Counter Styles",
+"reviewed":true
+},
+
 "st": {
 "url":"#refs",
 "authors": "Santhosh Thottingal",

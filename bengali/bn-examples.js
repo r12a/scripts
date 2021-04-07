@@ -56,7 +56,7 @@ autoExpandExamples.bn = `
 খ্রিষ্টান|christian|kʰriʂʈan
 গতকাল|yesterday|gɔtokɑl
 গন্ধ|scent|gɔndʰo
-গ্রাম|village
+গ্রাম|village|gram
 ঘর|room, house|gʰɔr
 চক্র|wheel|t͡ʃɔkro
 চাঁদ|moon
@@ -390,6 +390,12 @@ autoExpandExamples.bn = `
 যদি|if||jôdi
 কারণ|because||karôn
 নাম|name||nam
+
+খাননা|not eat|kʰɑnnɑ
+করছ|doing|korcʰo
+আস্থা|trust|ɑʃtʰɑ
+
+
 
 `
 
