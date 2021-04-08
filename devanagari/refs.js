@@ -41,6 +41,13 @@ reflist = {
 "reviewed":true
 },
 
+"rmcs": {
+"url":"https://www.w3.org/TR/predefined-counter-styles/#arabic-styles",
+"authors": "Richard Ishida",
+"title":"Ready-made Counter Styles",
+"reviewed":true
+},
+
 "rt": {
 "url":"http://www.koshur.org/pdf/BasicReader.pdf",
 "authors": "M. K. Raina & Neelam Trakru",
