@@ -30,6 +30,14 @@ reflist = {
 "reviewed":false
 },
 
+"rmcs": {
+"url":"https://www.w3.org/TR/predefined-counter-styles/#arabic-styles",
+"authors": "Richard Ishida",
+"title":"Ready-made Counter Styles",
+"reviewed":true
+},
+
+
 "u": {
 "url":"https://www.unicode.org/versions/Unicode13.0.0/ch19.pdf",
 "authors": "Unicode Consortium",
