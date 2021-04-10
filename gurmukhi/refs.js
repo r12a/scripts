@@ -22,6 +22,13 @@ reflist = {
 "reviewed":true
 },
 
+"rmcs": {
+"url":"https://www.w3.org/TR/predefined-counter-styles/#arabic-styles",
+"authors": "Richard Ishida",
+"title":"Ready-made Counter Styles",
+"reviewed":true
+},
+
 "s": {
 "url":"http://unicode.org/L2/L2006/06037-yakash.pdf",
 "authors": "Sukhjinder Sidhu",
