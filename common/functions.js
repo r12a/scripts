@@ -1146,6 +1146,7 @@ function makeIndexObject () {
         if (chars[i].classList.contains('noindex') || chars[i].parentNode.parentNode.parentNode.classList.contains('noindex')) continue
         
         console.log('Processing:',chars[i].textContent)
+        if (chars[i].firstChild == null) console.log('No content found for',chars[i].parentNode.textContent)
         cell = chars[i].firstChild.textContent
         
         // get the heading
