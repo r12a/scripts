@@ -16,6 +16,13 @@ reflist = {
 "title":"Telugu",
 },
 
+"rmcs": {
+"url":"https://www.w3.org/TR/predefined-counter-styles/#arabic-styles",
+"authors": "Richard Ishida",
+"title":"Ready-made Counter Styles",
+"reviewed":true
+},
+
 "s": {
 "url":"https://unicode.org/L2/L2010/10392r2-chandrabindus.pdf",
 "authors": "Shriramana Sharma",
