@@ -1143,6 +1143,7 @@ function makeIndexObject () {
     var charArray = []
 	chars = document.querySelectorAll('.codepoint, .listItem')
 	for (i=0;i<chars.length;i++) {
+        if (chars[i].textContent.trim() === '') continue
         if (chars[i].classList.contains('noindex') || chars[i].parentNode.parentNode.parentNode.classList.contains('noindex')) continue
         
         console.log('Processing:',chars[i].textContent)
