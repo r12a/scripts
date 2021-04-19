@@ -28,6 +28,13 @@ reflist = {
 "reviewed":true
 },
 
+"rmcs": {
+"url":"https://www.w3.org/TR/predefined-counter-styles/#arabic-styles",
+"authors": "Richard Ishida",
+"title":"Ready-made Counter Styles",
+"reviewed":true
+},
+
 "tls": {
 "url":"http://www.learntibetan.net/",
 "authors": "Learn Tibetan",
