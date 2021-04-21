@@ -71,13 +71,17 @@ function makeList (stream) {
 
 	// sort the items
 	var categories = {}
+    var nodata = ''
 	for (let i=0;i<cps.length;i++) {
-		var group = U[cps[i]]
-        var supergroup = U[cps[i]][0]
-		if (categories[supergroup]) categories[supergroup] += cps[i]
-		else categories[supergroup] = cps[i]
-		if (categories[group]) categories[group] += cps[i]
-		else categories[group] = cps[i]
+        if (typeof U[cps[i]] === 'undefined') nodata += cps[i]
+        else {
+            var group = U[cps[i]]
+            var supergroup = U[cps[i]][0]
+            if (categories[supergroup]) categories[supergroup] += cps[i]
+            else categories[supergroup] = cps[i]
+            if (categories[group]) categories[group] += cps[i]
+            else categories[group] = cps[i]
+            }
 		}
 	
 	
@@ -107,7 +111,26 @@ function makeList (stream) {
 		out += '</tr>\n'
         //console.log('cats',categories[keys[x]])
 		}
-	out += '</tbody></table>'
+    
+    // collect items with no entry in the U db (likely CJKT)
+    if (nodata.length > 1) {
+        out += '<tr class="main">'
+ 		out += '<th class="sg">X</th>'
+		var count = [...nodata].length
+		out += '<td class="count">'+count+'</td>'
+        charlist = [...nodata]
+        if (document.getElementById('X') !== null) document.getElementById('X').style.display = 'inline'
+        out += '<td class="chars" dir="ltr">'
+        for (i=0;i<charlist.length;i++) out += '<bdi>'+charlist[i]+'</bdi>'
+        out += '</td>'
+		out += '<td class="select">'
+        out += '<span title="Copy to clipboard" onclick="console.log(this.parentNode); copyToClipboard(this.parentNode.previousSibling)"><img src="copy.png"></span>'
+        out += ' <a title="Show a list with details." href="../../../app-analysestring/?chars='+encodeURI(categories[keys[x]])+'" target="_blank"><img src="share.png"></a>'
+        out += '</td>'
+		out += '</tr>\n'
+       }
+        
+    out += '</tbody></table>'
 	
 	out += '<p class="total">Total characters: '+cps.length+"</p>"
 	//out += '<p class="total">Total blocks: '+keys.length+"</p>"
