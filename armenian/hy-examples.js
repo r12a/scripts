@@ -246,6 +246,16 @@ autoExpandExamples.hy = `
 եթե|if|jɛˈtʰɛ|etʿe 
 որովհետեւ|because|vɔɾɔfhɛˈtɛv|orovhetew 
 անուն|name|ɑˈnun|anun 
+համբույր|kiss|hampʰujr|hambuyr
+օդ|air|ɔtʰ|od
+ապստամբել|to revolt|ɑpʰstɑmbel
+անդադար|unceasing|ɑntʰɑtʰɑr|andadar
+անգամ|times|ɑŋkʰɑm|angam
+դարձյալ|again|dɑɾt͡sʰjɑl|darjyal
+վերջին|last|vɛɾt͡ʃʰin|verǰin
+ռուս|Russian|rus
+
+
 
 
 `

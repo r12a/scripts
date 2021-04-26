@@ -22,6 +22,14 @@ reflist = {
 "title":"Proposal to encode two symbols for Armenian in the UCS",
 },
 
+"j": {
+"url":"https://www.google.co.uk/books/edition/Armenian/SGyop5guXDkC?hl=en",
+"authors": "Jasmine Dum-Tragut",
+"title":"Armenian: Modern Eastern Armenian",
+"publisher": "John Benjamins Publishing Co",
+"series": "London Oriental and African Language Library"
+},
+
 "u": {
 "url":"https://www.unicode.org/versions/Unicode13.0.0/ch07.pdf",
 "authors": "Unicode Consortium",
@@ -38,7 +46,7 @@ reflist = {
 "reviewed":true
 },
 
-"wa": {
+"wd": {
 "url":"https://en.wikipedia.org/wiki/Armenian_dram_sign",
 "authors": "Wikipedia",
 "title":"Armenian dram sign",
