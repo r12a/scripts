@@ -860,6 +860,9 @@ function showCharDetailsEvent (evt) {
 	autoTransliterate(evt.target.lang)
 	convertTranscriptionData(evt.target)
 	setFootnoteRefs()
+    var links = table.querySelectorAll('.codepoint a')
+	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
+
 	}
 
 
@@ -1118,7 +1121,7 @@ function setTranslitToggle () {
 	var label = document.createElement('label')
 	var input = document.createElement('input')
 	input.type = 'checkbox'
-	input.checked = false
+	input.checked = true
 	input.id = 'showDetailOnMouseover'
 	label.appendChild(document.createTextNode('Detail on mouseover '))
 	label.appendChild(input)
