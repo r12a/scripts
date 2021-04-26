@@ -36,6 +36,13 @@ reflist = {
 "title":"Replacement of Adlam Reference Font in Codesheet to Updated Design",
 },
 
+"rmcs": {
+"url":"https://www.w3.org/TR/predefined-counter-styles/#arabic-styles",
+"authors": "Richard Ishida",
+"title":"Ready-made Counter Styles",
+"reviewed":true
+},
+
 "s": {
 "url":"http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&amp;uid=aggc6af8cc",
 "authors": "ScriptSource",
