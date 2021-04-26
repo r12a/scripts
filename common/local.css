@@ -53,7 +53,7 @@ th { vertical-align: top; }
 	}
 .listArray { display: flex; flex-direction: row; flex-wrap: wrap; }
 .listPair { display: flex; flex-direction: column; flex-wrap: nowrap; margin-right: .75em;  margin-top: .5em; }
-.listItem[lang] { cursor: pointer; min-width: 1em; color: chocolate; font-size: 200%; line-height: 1.4; }
+.listItem[lang] { cursor: pointer; min-width: 1em; color: chocolate; font-size: 180%; line-height: 1.4; }
 .listAll { float:right; font-size: 70%; white-space: nowrap; cursor: pointer; }
 
 .listTransc, .listTrans2 { 
@@ -78,7 +78,7 @@ section { clear: left; }
 	font-size: 120%; 
 	}
 .listIPA {
-	font-size: 150%;
+	font-size: 120%;
 	}
 .ipa:before { 
 	content: '⌈'; 
@@ -290,7 +290,11 @@ h4 + p {
 	overflow: auto;
 	}
 #panel img { vertical-align: middle; }
-#panel p { margin: 0; margin-top: 3px; }
+#panel p { 
+    margin: 0;
+    margin-block-start: 3px;
+    font-size: 120%;
+    }
 #panel #title { 
 	font-size: 200%; 
 	color: #F00;
@@ -626,10 +630,17 @@ a:visited {
 	display: block;
 	text-align: center;
 	}
+/* by commenting this out we make examples in character notes display on a separate line
 .useBlockExamples .map .charExample, 
 .useBlockExamples .charDetails .charExample, 
 .useBlockExamples .charExample.inline,
 .useBlockExamples #panel .charExample {
+	margin: 0;
+	font-size: 100%;
+	display: inline;
+	} */
+.useBlockExamples .map .charExample,
+.useBlockExamples .charExample.inline {
 	margin: 0;
 	font-size: 100%;
 	display: inline;
@@ -982,7 +993,7 @@ div.btw p, div.btw figure { margin-inline-start: 0; }
 .cursive_table tbody th .listPair { margin: 0; }
 .cursive_table tbody th .listUnum { display: none; }
 
-.character_list td { background-color: #fffdf5; }
+/* .character_list td { background-color: #fffdf5; } */
 
 
 #index {
@@ -1018,7 +1029,9 @@ div.btw p, div.btw figure { margin-inline-start: 0; }
     }
 #showLinebreaks, #showBidiClass, #showIndicSyllables {
     font-size: 90%;
-    padding-inline-start: 4em;
+    padding-inline-start: 3em;
+    display: inline-block;
+    line-height: 1.6;
     }
 
 
@@ -1073,7 +1086,7 @@ font-style: italic;
 .index_intro p { width: 45%; margin: 0; }
 
 
-
+.small .listPair { font-size: 80%; }
 
 
 
