@@ -9,6 +9,13 @@ reflist = {
 "date":"1975",
 },
 
+"b2": {
+"url":"https://cefliberia.org/wp-content/uploads/2020/03/Bertkau-Comparison-of-Three-Bassa-Orthographies.pdf",
+"authors": "Jana S. Bertkau",
+"title":"A Comparison of Three Bassa Orthographies",
+"date":"Feb 1976",
+},
+
 "fc": {
 "url":"#refs",
 "authors": "Florian Coulmas",
