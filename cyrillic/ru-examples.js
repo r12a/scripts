@@ -204,7 +204,7 @@ autoExpandExamples.ru = `
 дать|to give|
 держа́ть|to hold|dʲɪˈrʐatʲ
 сжима́ть|to squeeze|ʑʑɨˈmatʲ
-сжать|to squeeze|
+сжать|to squeeze|ʐʐatʲ
 тере́ть|to rub|tʲɪˈrʲetʲ
 потере́ть|to rub|
 мыть|to wash|mɨtʲ
@@ -364,6 +364,10 @@ autoExpandExamples.ru = `
 хи́мия|chemistry|ˈxʲimʲɪɪ̯ə
 объём|volume|ɐˈbjɵm
 подъе́зд|entrance|pɐˈdjest
+супру́г|husband|sʊˈpruk
+
+
+
 
 
 `
