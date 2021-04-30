@@ -45,13 +45,6 @@ reflist = {
 "title":"Russian alphabet",
 },
 
-"wl": {
-"url":"https://en.wikipedia.org/wiki/Bamum_language",
-"authors": "Wikipedia",
-"title":"Bamum language",
-"reviewed":true
-},
-
 "wp": {
 "url":"https://en.wikipedia.org/wiki/Russian_phonology",
 "authors": "Wikipedia",
