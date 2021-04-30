@@ -65,6 +65,23 @@ reflist = {
 },
 
 
+// WORD LOOKUP TOOLS
+
+"x1": {
+"url":"http://shtooka.net/overview.php?lang=rus&page=8",
+"authors": "?",
+"title":"Projet Shtooka",
+"notes": "Word lists in alphabetical order"
+},
+
+"x2": {
+"url":"https://ru.wiktionary.org/wiki/%D1%81%D1%83%D0%BF%D1%80%D1%83%D0%B3",
+"authors": "Wikipedia",
+"title":"Russian Wiktionary",
+"notes": "Change the word at the end of the URL to look up IPA.  Remove any accent."
+},
+
+
 }
 
 
