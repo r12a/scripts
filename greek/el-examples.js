@@ -7,9 +7,9 @@
 */
 
 autoExpandExamples.el = `
-Έλληνας|Greek
-ευφυΐα|intelligence
-νεράιδα|fairy
+Έλληνας|Greek|ˈelinas
+ευφυΐα|intelligence|efiˈia
+νεράιδα|fairy|neˈɾai̯.ða
 
 εγώ|I|eˈɣo|egó
 εσύ|you (singular)|eˈsi|esý
@@ -18,7 +18,7 @@ autoExpandExamples.el = `
 εμείς|we|eˈmis|emeís
 εσείς|you (plural)|eˈsis|eseís
 αυτοί|they|afˈti|aftoí
-αυτός|this|afˈto|aftós
+αυτός|this|aˈftos|aftós
 εκείνος|that|eˈcino|ekeínos
 εδώ|here|eˈðo|edó
 εκεί|there|eˈci|ekeí
@@ -240,6 +240,54 @@ autoExpandExamples.el = `
 επειδή|because|epiˈði|epeidí
 γιατί|because|ʝaˈti|giatí
 όνομα|name|ˈonoma|ónoma
+
+μια|a|mɲa
+βια|violence|ˈvʝa
+κοροϊδεύω|to mock|kɔɾɔiˈðɛvɔ
+μποϊκοτάρω|I boycott|bojkoˈtaro
+αυλός|flute|aˈvlos
+Ταΰγετος|Mount Taygetus
+μπορώ|can|boˈɾo
+δεν πάω|I am not going|ðen 
+μπύρα|beer|bira
+φάση|phase|ˈfasi
+βάση|base|ˈvasi
+μόνος|alone|ˈmonos
+νόμος|law|ˈnomos
+τείνω|I tend|ˈtino
+ντύνω|I dress|ˈdino
+θέμα|topic|ˈθema
+δέμα|parcel|ˈðema
+σώα|safe|ˈsoa
+ζώα|animals|ˈzoa
+ρήμα|verb|ˈrima
+λίμα|nail file|ˈlima
+κόμμα|comma|ˈkoma
+χώμα|soil|ˈxoma
+γόμα|eraser|ˈɣoma
+γκάμα|range|ˈɡama
+μπροστά|in the front|bɾoˈsta
+ντοκιμαντέρ|documentary
+νταντά|nanny|daˈda
+ντους|shower|ˈdus
+φαίνομαι|look|ˈfenome
+λατομείο|quarry|latoˈmio
+νεράιδα|fairy|neˈɾai̯ða
+εφηύρα|I invented|efˈivra
+καϊμάν|caiman|kaiˈman
+Ναΐτες|Templars|ˈnaites
+ή|or|ˈi
+πώς;|how?|ˈpos
+πού;|where?|ˈpu
+αδελφοί|brothers|aðelˈfi
+Φίλιππος Βʹ|Philip II (of Macedon)
+
+
+
+
+
+
+
 
 `
 

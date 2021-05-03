@@ -26,6 +26,18 @@ reflist = {
 "reviewed":true
 },
 
+"wn": {
+"url":"https://en.wikipedia.org/wiki/Greek_numerals",
+"authors": "Wikipedia",
+"title":"Greek numerals",
+},
+
+"wo": {
+"url":"https://en.wikipedia.org/wiki/Greek_orthography",
+"authors": "Wikipedia",
+"title":"Greek orthography",
+},
+
 "wp": {
 "url":"https://en.wikipedia.org/wiki/Modern_Greek_phonology",
 "authors": "Wikipedia",
@@ -47,5 +59,10 @@ reflist = {
 
 }
 
+// word lists
+// https://en.wiktionary.org/wiki/Appendix:Greek_word_lists/6
+
+// phonetic information
+// https://el.wiktionary.org/wiki/%CE%BD%CF%84%CE%BF%CF%85%CF%82
 
 
