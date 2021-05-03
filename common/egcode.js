@@ -26,6 +26,9 @@ function addExamples (langFilter) { //console.log('langFilter:', langFilter, aut
 	for (let n=0;n<nodes.length;n++) {
 		//console.log('Looking for ',nodes[n].textContent)
 		//console.log('Language is ',nodes[n].lang)
+        
+        // example of raw data: τέσσερα|four|ˈtesera|téssera
+
 		if (nodes[n].lang === langFilter && egList[nodes[n].textContent]) {
 			var temp = egList[nodes[n].textContent].split('|')
 			var out = ''
@@ -53,8 +56,8 @@ function addExamples (langFilter) { //console.log('langFilter:', langFilter, aut
 			else if (temp[2]) ipa = temp[2]
 			if (transcription) out += ' (<bdi class="transc">'+transcription+'</bdi>)'
 			
-			// alt
-			if (temp[3]) {
+			// alt/transcription
+			if (temp[3] && nodes[n].classList.contains('transc')) {
 				out += ' (<bdi class="transc"'
 				if (nodes[n].dir === 'rtl') out += ' dir="rtl"'
 				out += '>'+temp[3]+'</bdi>)'
