@@ -17,10 +17,9 @@ autoExpandExamples.sat = `
 ᱟᱯᱮ|you (plural)|ape
 ᱩᱱᱠᱤᱱ|they|unkin
 ᱩᱱᱠᱩ|they||unku
-ᱱᱚᱣᱟ|this||nôva
-ᱱᱚᱶᱟ|this||nôw̃a
+ᱱᱚᱣᱟ|this|nɔwa|nôva
 ᱚᱱᱟ|that||ôna
-ᱱᱚᱰᱮ|here||nôḍe
+ᱱᱚᱰᱮ|here|nɔɖe|nôḍe
 ᱦᱟᱸᱰᱮ|there||hãḍe
 ᱚᱠᱚᱭ|who||ôkôy
 ᱪᱮᱫ|what||cet’
@@ -29,54 +28,54 @@ autoExpandExamples.sat = `
 ᱛᱤᱥ|when||tis
 ᱪᱮᱫ ᱞᱮᱠᱟᱛᱮ|how||cet’ lekate
 ᱵᱟᱝ|not||baṅ
-ᱡᱚᱛᱚ|all||jôtô
+ᱡᱚᱛᱚ|all|ӡoto|jôtô
 ᱡᱷᱚᱛᱚ|all|ɟʰɔtɔ|jhôtô
 ᱟᱭᱢᱟ|many||ayma
 ᱟᱫᱚᱢ|some||adôm
 ᱛᱷᱚᱲᱟ|some, few|tʰɔɽa|thôṛa
-ᱮᱴᱟᱜ|other||eṭak’
+ᱮᱴᱟᱜ|other|eʈak̚|eṭak’
 ᱢᱤᱫ|one||mit’
 ᱵᱟᱨ|two||bar
 ᱯᱮ|three||pe
 ᱯᱩᱱ|four||pun
-ᱢᱚᱬᱮ|five||môṇe
-ᱛᱩᱨᱩᱭ|six||turuy
-ᱮᱭᱟᱭ|seven||eyay
-ᱤᱨᱟᱹᱞ|eight||irăl
+ᱢᱚᱬᱮ|five|mɔɳe|môṇe
+ᱛᱩᱨᱩᱭ|six|turuj|turuy
+ᱮᱭᱟᱭ|seven|ejaj|eyay
+ᱤᱨᱟᱹᱞ|eight|irəl|irăl
 ᱟᱨᱮ|nine||are
 ᱜᱮᱞ|ten||gel
-ᱢᱟᱨᱟᱝ|big||maraṅ
-ᱡᱤᱞᱤᱧ|long||jiliñ
+ᱢᱟᱨᱟᱝ|big|maraŋ|maraṅ
+ᱡᱤᱞᱤᱧ|long|ɟiliɲ|jiliñ
 ᱚᱥᱟᱨ|wide||ôsar
 ᱤᱵᱤᱞ|thick||ibil
 ᱦᱟᱢᱟᱞ|heavy||hamal
 ᱠᱟᱴᱤᱡ|small||kaṭic’
 ᱦᱩᱰᱤᱧ|small||huḍiñ
 ᱠᱟᱴᱤᱡ|short||kaṭic’
-ᱠᱩᱲᱤ|woman||kuṛi
-ᱠᱚᱲᱟ|man (adult male)||kôṛa
+ᱠᱩᱲᱤ|woman|kuɽi|kuṛi
+ᱠᱚᱲᱟ|man (adult male)|kɔɽa|kôṛa
 ᱦᱚᱲ|man (human being)||hôṛ
 ᱜᱤᱫᱨᱟ|child||gidra
 ᱦᱚᱯᱚᱱ|child||hôpôn
 ᱵᱟᱦᱩ|wife||bahu
 ᱮᱨᱚ|wife||erô
-ᱡᱟᱶᱟᱭ|husband||jaw̃ay
+ᱡᱟᱶᱟᱭ|husband|ɟaw̃aj|jaw̃ay
 ᱜᱚᱜᱚ|mother||gôgô
 ᱟᱭᱚ|mother||ayô
-ᱮᱝᱜᱚ|mother||eṅgô
+ᱮᱝᱜᱚ|mother|eŋɡɔ|eṅgô
 ᱵᱟᱵᱟ|father||baba
-ᱟᱯᱟ|father||apa
+ᱟᱯᱟ|father|apa|apa
 ᱡᱤᱣᱟᱹᱞᱤ|animal||jivăli
 ᱦᱟᱹᱠᱩ|fish||hăku
-ᱪᱮᱬᱮ|bird||ceṇe
-ᱥᱮᱛᱟ|dog||seta
+ᱪᱮᱬᱮ|bird|ceɳe|ceṇe
+ᱥᱮᱛᱟ|dog|seta|seta
 ᱥᱤ|louse||si
 ᱵᱤᱝ|snake||biṅ
 ᱛᱤᱡᱩ|worm||tiju
 
 ᱦᱮᱸᱫᱮ|black|hẽde
 ᱵᱮᱺᱫᱤ|paddy storage|bə̃di
-ᱡᱭᱼᱭᱤ|soul|jiːyi
+ᱡᱭᱻᱭᱤ|soul|jiːyi
 ᱢᱚᱹᱬᱮᱻ ᱢᱚᱸᱻᱦᱟ|five days|mɔɳeː mãːha
 ᱫᱟᱜᱽ|mark|daɡ
 ᱫᱟᱜᱤ|marked|daɡi
@@ -97,15 +96,6 @@ autoExpandExamples.sat = `
 ᱟᱠᱟᱫᱼᱟ|?|akat|akat’
 ᱦᱤᱡᱩᱜᱼᱟ|come|hijuka|hijuk’a
 ᱥᱩᱱᱭᱚ|zero|sunjɔ
-ᱢᱤᱫ|one|mit’
-ᱵᱟᱨ|two|bar
-ᱯᱮ|three|pe
-ᱯᱩᱱ|four|pun
-ᱢᱚᱬᱮ|five|mɔɳe
-ᱛᱩᱨᱩᱭ|six|turuy
-ᱮᱭᱟᱭ|seven|eyay
-ᱤᱨᱟᱹᱞ|eight|irəl
-ᱟᱨᱮ|nine|are
 
 
 `
