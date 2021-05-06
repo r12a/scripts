@@ -1004,6 +1004,28 @@ function runCharCount (type, location, raw=false) {
 	}
 
 
+function getOrthographyList (type, location, spaced=false) {
+    // this is a modified version of runCharCount, adapted to harvest characters after the 
+    // page has been rendered, and used by the links in the Basic Summary section on click
+    // it assumes the presence of #index_details
+	var charlists, out
+	if (document.getElementById('index_details') == null) {
+        alert('No #index_details element (in getOrthographyList)')
+        return
+        }
+    else charlists = document.querySelectorAll('#index_details '+type+' .listItem')
+    var chars = ''
+	for (let i=0;i<charlists.length;i++) chars += charlists[i].textContent
+    charlistArray = [...chars]
+	const uniqueSet = new Set(charlistArray)
+	var uniqueArray = [...uniqueSet]
+	
+    if (spaced) out = uniqueArray.toString().replace(/,/g,' ')
+	else out = uniqueArray.toString().replace(/,/g,'')
+    return out
+	}
+
+
 
 
 
