@@ -16,8 +16,10 @@ function createReferencesSTABLE () {
 		out += '<i class="fnDef">'+counter+'</i>'
 		reflist[ref].counter = counter
 		out += '<span class="refAuthor">'+reflist[ref].authors+'</span>'
-		out += ', <a target="_blank" href="'+reflist[ref].url+'"><cite class="refTitle">'+reflist[ref].title+'</cite></a>'
-		if (reflist[ref].sub) out += ', <span class="reflistub">'+reflist[ref].sub+'<span>'
+        console.log(reflist[ref].url)
+		if (reflist[ref].url) out += ', <a target="_blank" href="'+reflist[ref].url+'"><cite class="refTitle">'+reflist[ref].title+'</cite></a>'
+        else out += ', <cite class="refTitle">'+reflist[ref].title+'</cite>'
+		if (reflist[ref].sub) out += ', <span class="reflistsub">'+reflist[ref].sub+'<span>'
 		if (reflist[ref].publisher) out += ', <span class="refPublisher">'+reflist[ref].publisher+'<span>'
 		if (reflist[ref].pages) out += ', <span class="refPages">'+reflist[ref].pages+'<span>'
 		if (reflist[ref].isbn) out += ', ISBN <span class="refISBN">'+reflist[ref].isbn+'<span>'
@@ -34,15 +36,15 @@ function createReferencesSTABLE () {
 
 
 
-function createReferences () {
+function createReferences (lang) {
 	// creates the content of the references section from the refs.js file
-	
+	console.log('Language is ',lang)
 	// backwards compatibility release valve
 	if (typeof reflist === 'undefined') return
 	
 	
 	// draw the references section
-	var out = '<h2>References</h2>'
+	var out = '<h2>References &amp; sources</h2>'
 	var counter = 0
 	
 	// find out what references are pointed to from the document
@@ -57,18 +59,25 @@ function createReferences () {
 	
 	
 	for (ref in reflist) {
-		if (! usedRefs.has(ref)) continue
+		//if (! usedRefs.has(ref)) continue
+		if (window.langSet && ! reflist[ref].lang.has(lang)) continue
 		counter++
 		out += '<p>'
 		//out += '<i class="fn">'+ref+'</i>'
 		out += '<i class="fnDef">'+counter+'</i>'
 		reflist[ref].counter = counter
 		out += '<span class="refAuthor">'+reflist[ref].authors+'</span>'
-		out += ', <a target="_blank" href="'+reflist[ref].url+'"><cite class="refTitle">'+reflist[ref].title+'</cite></a>'
+		if (reflist[ref].date) out += ' (<span class="reflistdate">'+reflist[ref].date+')'
+		if (reflist[ref].url) out += ', <a target="_blank" href="'+reflist[ref].url+'"><cite class="refTitle">'+reflist[ref].title+'</cite></a>'
+        else {
+            reflist[ref].url = "#refs"
+            out += ', <a href="'+reflist[ref].url+'"><cite class="refTitle">'+reflist[ref].title+'</cite></a>'
+            }
 		if (reflist[ref].sub) out += ', <span class="reflistub">'+reflist[ref].sub+'<span>'
 		if (reflist[ref].publisher) out += ', <span class="refPublisher">'+reflist[ref].publisher+'<span>'
 		if (reflist[ref].pages) out += ', <span class="refPages">'+reflist[ref].pages+'<span>'
 		if (reflist[ref].isbn) out += ', ISBN <span class="refISBN">'+reflist[ref].isbn+'<span>'
+		if (reflist[ref].retr) out += ' <small>(retr. '+reflist[ref].retr+')</small>'
 		if (reflist[ref].reviewed) out += '<span class="reviewed" title="Review completed.">✓</span>'
 		out += '</p>\n'
 		}
