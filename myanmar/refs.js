@@ -1,110 +1,130 @@
+window.langSet = true
+
+
+
 reflist = {
 
-
 "d": {
-"url":"#refs",
 "authors": "Peter T. Daniels and William Bright",
 "title":"The World's Writing Systems",
 "publisher":"Oxford University Press",
 "isbn":"0-19-507993-0",
-},
-
-"h": {
-"url":"http://www.unicode.org/notes/tn11/",
-"authors": "Martin Hosken & Maung Tuntunlwin",
-"title":"Unicode Technical Note #11, Representing Myanmar in Unicode: Details and Examples",
+"lang": new Set(['my']),
 },
 
 "g": {
-"url":"https://github.com/googlefonts/noto-fonts/issues/1811",
 "authors": "GitHub, Noto fonts",
 "title":"Issues in Noto Sans Myanmar for Shan Language",
+"url":"https://github.com/googlefonts/noto-fonts/issues/1811",
+"lang": new Set(['my']),
+},
+
+"h": {
+"authors": "Martin Hosken & Maung Tuntunlwin",
+"title":"Unicode Technical Note #11, Representing Myanmar in Unicode: Details and Examples",
+"url":"http://www.unicode.org/notes/tn11/",
+"lang": new Set(['my']),
 },
 
 "l": {
-"url":"http://www.unicode.org/L2/L2006/06077-n3043r-myanmar.pdf",
 "authors": "Ireland (NSAI), United Kingdom (BSI), Myanmar Language Commission, Myanmar Unicode and Natural Language Processing Research Center, Myanmar Computer Federation",
 "title":"Proposal to encode seven additional Myanmar characters in the UCS",
-},
-
-"m": {
-"url":"#refs",
-"authors": "Gene Mesher",
-"title":"Burmese for Beginners",
-"isbn":"1-887521-51-8",
-},
-
-"ms": {
-"url":"http://www.microsoft.com/typography/OpenTypeDev/myanmar/intro.htm",
-"authors": "Microsoft Typography",
-"title":"Creating and Supporting OpenType Fonts for Myanmar Script",
-"version":"Dec 2013",
-},
-
-"o": {
-"url":"https://www.omniglot.com/writing/shan.htm",
-"authors": "Omniglot",
-"title":"Shan",
+"url":"http://www.unicode.org/L2/L2006/06077-n3043r-myanmar.pdf",
+"lang": new Set(['my']),
 },
 
 "rmcs": {
-"url":"https://www.w3.org/TR/predefined-counter-styles/#oriya-styles",
 "authors": "Richard Ishida",
 "title":"Ready-made Counter Styles",
+"lang": new Set(['my','shn']),
+"url":"https://www.w3.org/TR/predefined-counter-styles/#oriya-styles",
 "reviewed":true
+},
+
+"m": {
+"authors": "Gene Mesher",
+"title":"Burmese for Beginners",
+"isbn":"1-887521-51-8",
+"lang": new Set(['my']),
+},
+
+"ms": {
+"authors": "Microsoft Typography",
+"title":"Creating and Supporting OpenType Fonts for Myanmar Script",
+"version":"Dec 2013",
+"url":"http://www.microsoft.com/typography/OpenTypeDev/myanmar/intro.htm",
+"lang": new Set(['my']),
+},
+
+"o": {
+"authors": "Omniglot",
+"title":"Shan",
+"url":"https://www.omniglot.com/writing/shan.htm",
+"lang": new Set(['shn']),
 },
 
 "sb": {
-"url":"http://sealang.net/burmese/",
 "authors": "Sealang Library",
 "title":"Burmese",
+"url":"http://sealang.net/burmese/",
+"lang": new Set(['my']),
 },
 
 "ss": {
-"url":"http://sealang.net/shan/dictionary.htm",
 "authors": "Sealang Library",
 "title":"Shan Dictionary Resources",
+"url":"http://sealang.net/shan/dictionary.htm",
+"lang": new Set(['shn']),
 },
 
 "u": {
-"url":"https://www.unicode.org/versions/Unicode13.0.0/ch16.pdf",
 "authors": "Unicode Consortium",
 "title":"The Unicode Standard, Version 13.0",
+"date": "2020",
 "sub":"Chapter 16.3: Southeast Asia, Myanmar",
 "pages":"646-652",
 "isbn":"978-1-936213-16-0.",
-},
-
-"ul": {
-"url":"https://www.unicode.org/reports/tr14/",
-"authors": "Unicode Consortium",
-"title":"Unicode Line Breaking Algorithm (UAX#14)",
-"reviewed":true
-},
-
-"wbl": {
-"url":"http://en.wikipedia.org/wiki/Burmese_language",
-"authors": "Wikipedia",
-"title":"Burmese language",
+"url":"https://www.unicode.org/versions/Unicode13.0.0/ch16.pdf",
+"lang": new Set(['my']),
 },
 
 "wbs": {
-"url":"http://en.wikipedia.org/wiki/Burmese_alphabet",
 "authors": "Wikipedia",
 "title":"Burmese alphabet",
+"url":"http://en.wikipedia.org/wiki/Burmese_alphabet",
+"lang": new Set(['my']),
+},
+
+"wbl": {
+"authors": "Wikipedia",
+"title":"Burmese language",
+"url":"http://en.wikipedia.org/wiki/Burmese_language",
+"lang": new Set(['my']),
 },
 
 "wm": {
-"url":"http://en.wikipedia.org/wiki/MLC_Transcription_System",
 "authors": "Wikipedia",
 "title":"MLC Transcription System",
+"url":"http://en.wikipedia.org/wiki/MLC_Transcription_System",
+"lang": new Set(['my']),
 },
 
 "wsl": {
-"url":"https://en.wikipedia.org/wiki/Shan_language",
 "authors": "Wikipedia",
 "title":"Shan language",
+"url":"https://en.wikipedia.org/wiki/Shan_language",
+"lang": new Set(['shn']),
 },
+
+}
+
+
+
+
+
+
+
+terms = {
 
 "wsw": {
 "url":"https://en.wiktionary.org/wiki/Appendix:Kra-Dai_Swadesh_lists",
@@ -112,9 +132,12 @@ reflist = {
 "title":"Appendix:Kra-Dai Swadesh lists",
 },
 
+"a": {
+"url":"https://amawal.net/about",
+"authors": "?",
+"title":"ⴰⵎⴰⵡⴰⵍ The Berber dictionary",
+"notes":"Latin only",
+},
+
 
 }
-
-
-
-// <a class="fn">ws,#tones</a>
