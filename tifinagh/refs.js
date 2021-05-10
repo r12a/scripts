@@ -29,16 +29,6 @@ reflist = {
 "reviewed":false
 },
 
-"ul": {
-"authors": "Christopher Chapman",
-"title":"UAX #14 Unicode Line Breaking Algorithm",
-"date": "2020",
-"publisher": "Unicode Consortium",
-"url":"https://www.unicode.org/reports/tr14/",
-"lang": new Set(['zgh']),
-"reviewed":true
-},
-
 "d": {
 "authors": "Peter T. Daniels and William Bright",
 "title":"The World's Writing Systems",
