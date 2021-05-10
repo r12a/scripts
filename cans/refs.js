@@ -1,52 +1,61 @@
+window.langSet = true
+
+
+
 reflist = {
 
-
-"c": {
-"url":"http://www.languagegeek.com/algon/cree/cre_syllabarium.html",
-"authors": "Chris Harvey",
-"title":"LanguageGeek, ᐃᓄᒃᑎᑐᑦ – Cree Syllabarium",
-"reviewed":true,
-},
-
 "d": {
-"url":"#refs",
 "authors": "Peter T. Daniels and William Bright",
 "title":"The World's Writing Systems",
 "publisher":"Oxford University Press",
 "isbn":"0-19-507993-0",
-},
-
-"i": {
-"url":"http://www.languagegeek.com/inu/inu_syllabarium.html",
-"authors": "Chris Harvey",
-"title":"LanguageGeek, ᐃᓄᒃᑎᑐᑦ – Inuktitut Syllabarium",
-},
-
-"m": {
-"url":"http://www.inuktitutcomputing.ca/Technocrats/ILFT_1.html",
-"authors": "Mick Mallon",
-"title":"Inuktitut Linguistics for Technocrats",
-},
-
-"r": {
-"url":"http://tiro.com/Ross/Canadian_Native_Languages_V1.2.pdf",
-"authors": "Ross Mills",
-"title":"Canadian Native Languages",
-"reviewed":true,
+"lang": new Set(['ike']),
 },
 
 "p": {
-"url":"http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3427.pdf",
 "authors": "Michael Everson and Chris Harvey",
 "title":"Proposal to encode 39 Unified Canadian Aboriginal Syllabics in the UCS",
 "reviewed":true,
+"url":"http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3427.pdf",
+"lang": new Set(['crk']),
+},
+
+"c": {
+"authors": "Chris Harvey",
+"title":"LanguageGeek, ᐃᓄᒃᑎᑐᑦ – Cree Syllabarium",
+"reviewed":true,
+"url":"http://www.languagegeek.com/algon/cree/cre_syllabarium.html",
+"lang": new Set(['crk']),
+},
+
+"i": {
+"authors": "Chris Harvey",
+"title":"LanguageGeek, ᐃᓄᒃᑎᑐᑦ – Inuktitut Syllabarium",
+"url":"http://www.languagegeek.com/inu/inu_syllabarium.html",
+"lang": new Set(['ike']),
+},
+
+"m": {
+"authors": "Mick Mallon",
+"title":"Inuktitut Linguistics for Technocrats",
+"url":"http://www.inuktitutcomputing.ca/Technocrats/ILFT_1.html",
+"lang": new Set(['ike']),
+},
+
+"r": {
+"authors": "Ross Mills",
+"title":"Canadian Native Languages",
+"reviewed":true,
+"url":"http://tiro.com/Ross/Canadian_Native_Languages_V1.2.pdf",
+"lang": new Set(['ike']),
 },
 
 "t": {
-"url":"https://tusaalanga.ca/",
 "authors": "-",
 "title":"Inuktut Tusaalanga",
 "reviewed":true,
+"url":"https://tusaalanga.ca/",
+"lang": new Set(['ike']),
 },
 
 "u": {
@@ -56,34 +65,32 @@ reflist = {
 "sub":"Chapter 20.2: Americas, Canadian Aboriginal Syllabics",
 "pages":"790-791",
 "isbn":"978-1-936213-16-0.",
-},
-
-"ul": {
-"url":"https://www.unicode.org/reports/tr14/",
-"authors": "Unicode Consortium",
-"title":"Unicode Line Breaking Algorithm (UAX#14)",
-"reviewed":true
-},
-
-"wcl": {
-"url":"https://en.wikipedia.org/wiki/Plains_Cree",
-"authors": "Wikipedia",
-"title":"Plains Cree",
-"reviewed":true,
+"lang": new Set(['ike']),
 },
 
 "wp": {
-"url":"https://en.wikipedia.org/wiki/Inuit_phonology",
 "authors": "Wikipedia",
 "title":"Inuit phonology",
+"url":"https://en.wikipedia.org/wiki/Inuit_phonology",
+"lang": new Set(['ike']),
 },
 
 "ws": {
-"url":"https://en.wikipedia.org/wiki/Inuktitut_syllabics",
 "authors": "Wikipedia",
 "title":"Inuktitut syllabics",
 "reviewed":true,
+"url":"https://en.wikipedia.org/wiki/Inuktitut_syllabics",
+"lang": new Set(['ike']),
 },
+
+"wcl": {
+"authors": "Wikipedia",
+"title":"Plains Cree",
+"reviewed":true,
+"url":"https://en.wikipedia.org/wiki/Plains_Cree",
+"lang": new Set(['crk']),
+},
+
 
 
 }
