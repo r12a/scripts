@@ -12,7 +12,7 @@
 <script src="../../shared/fontdb/db.js"> </script>
 <script src="../../shared/fontdb/managefonts.js"></script>
 
-<script src="../../shared/scriptdb/tfng-all.js"> </script>
+<script src="../../shared/scriptdb/tfng-zgh.js"> </script>
 <script src="zgh-details.html"> </script>
 
 <script src="/shared/code/boilerplate.js"></script>
@@ -34,6 +34,14 @@
 
 <script src="zgh-examples.js"></script>
 <script src="zgh-translit.js">  </script>
+
+<style>
+.mapItem #plain_vowel_map .phone {
+    color: darkorange;
+    min-width: 5em;
+    text-align: start;
+    }
+</style>
 </head>
 
 <body class="useBlockExamples">
@@ -58,7 +66,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->17 April, 2021<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->9 May, 2021<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -112,7 +120,8 @@
 <p><span class="charExample" translate="no"><span class="ex" lang="ber">ⵜⵉⴼⵉⵏⴰⵖ</span> <span class="transc">tifinaʁ</span> <span class="meaning">Neo-tifinagh</span></span>
 <span class="charExample" translate="no"><span class="ex" lang="ber">ⵜⵊⵉⵏⵗ</span> <span class="transc">tʒinʁ̇</span> <span class="meaning">Tuareg Tifinagh</span></span>  <span class="charExample" translate="no"><span class="ex" lang="ber">ⵜⵊⵏⵗ</span> <span class="transc">tʒnʁ̇</span> ditto</span></p>
 <p>A modern alphabetical derivative of the traditional script, known as Neo-Tifinagh, was introduced in the 20th century by the Institut Royal de la Culture Amazighe (IRCAM) . </p>
-<p>There are many regional variations of the script and the standardised version proposed by IRCAM doesn't represent the full phonemic inventory of any particular language, but was proposed with a view to progressively unifiying regional phonological variations in the orthography. It has officially been the only writing system for transcribing the Tamazight language in Morocco since 2003.</p>
+<p>There are many regional variations of the script and the standardised version proposed by IRCAM doesn't represent the full phonemic inventory of any particular language, but was proposed with a view to progressively unifying regional phonological variations in the orthography. It has officially been the only writing system for transcribing the Tamazight language in Morocco since 2003.</p>
+<p>Standard Moroccan Tamazight is an ongoing project to create a standardized national Moroccan variety of Berber by combining the three major Moroccan Berber languages (Shilha/Tashelhiyt, Central Atlas Tamazight and Riffian/Tarifit). No-one speaks Standard Tamazight natively and it must be learned in school.</p>
 <p class="instructions">Sources: <a href="http://scriptsource.org/scr/Tfng">Scriptsource</a>, <a href="http://en.wikipedia.org/wiki/Tifinagh_script">Wikipedia</a>.</p>
 </section>
 
@@ -134,6 +143,15 @@
  <section id="type">
 <h2>Basic features</h2>
 <p>The Neo-tifinagh orthography is an <strong><span class="termref"><a href="https://www.unicode.org/glossary/#alphabet">alphabet</a></span></strong>, ie. both consonants and vowels are indicated in a straighforward way, and geminated consonants are simply indicated by repeating the consonant. (The Tuareg use Tifinagh also, but as an abjad.) See the table to the right for a brief overview of features for the modern Tamazight orthography.</p>
+
+
+
+<div id="orthoLinks"></div>
+<!-- showOrthoLinks (node, script, langName, lang, orthog, indic) --> 
+<script>showOrthoLinks(document.getElementById('orthoLinks'), 'tfng', 'Tamazight', 'zgh', 'Neo-Tifinagh', false)</script>
+
+
+
 <p>Text runs from <mark>left to right</mark> for Tamazight (but Tuareg text runs right-to-left, and ancient Tifinagh symbols were sometimes written vertically, running from bottom to top).</p>
 <p>Words are separated by spaces.</p>
 <p>The script is <mark>monocameral</mark>.</p>
@@ -208,7 +226,7 @@
 <section id="index_punctuation">
 <h3>Punctuation</h3>
 
-<figure class="characterBox auto noindex" data-cols="" data-links="#quotations,#quotations,#quotations,#quotations,#bracketing,#bracketing,#phrase,#phrase,#phrase,#phrase,#phrase,#phrase,">«␣»␣„␣”␣(␣)␣,␣.␣:␣;␣?␣!</figure>
+<figure class="characterBox auto noindex" data-cols="" data-links="#quotations,#quotations,#quotations,#quotations,#bracketing,#bracketing,#phrase,#phrase,#phrase,#phrase,#phrase,#phrase,#ellipsis">«␣»␣„␣”␣(␣)␣,␣.␣:␣;␣?␣!␣…</figure>
 
 <section id="index_punctuation_unused">
 <h4>Not used for Neo-Tifinagh</h4>
@@ -256,9 +274,13 @@
 
 
 
+
 <section id="vowelPhonemes">
 <h3>Vowel sounds</h3>
 
+
+<section id="plain_vowels">
+<h4>Plain vowels</h4>
 <div style="margin-left: 7.5%;">
 <svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
 
@@ -269,7 +291,6 @@
     </filter>
   </defs>
 
-  <!--image xlink:href="images/vowelgrid.gif" alt="Les caractères sont associés à des octets." x="0" y="0" width="400" height="200"></image--> 
   <use xlink:href="#arrowRight" x="155" y="25"></use> 
   
   <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
@@ -287,7 +308,8 @@
   <circle cx="240" cy="10" r="3" fill="#ccc"/>
   
   <!-- near close -->
-<circle cx="200" cy="40" r="3" fill="#ccc"/>
+  <circle cx="93" cy="40" r="3" fill="#ccc"/>
+  <circle cx="200" cy="40" r="3" fill="#ccc"/>
   
    <!-- mid close -->
   <circle cx="65" cy="70" r="3" fill="#ccc"/>
@@ -311,18 +333,98 @@
   <!-- close -->
   <text x="32" y="15" class="ipa" text-anchor="end">i</text> 
 
+  <text x="132" y="15" class="allophone" text-anchor="end" filter="url(#solid)">ɨ</text>
+<text x="132" y="15" class="allophone" text-anchor="end">ɨ</text> 
+
+  <text x="250" y="15" class="ipa">u</text> 
+
   <!-- near close -->
-  <text x="210" y="45" class="ipa">ʊ</text> 
+<text x="85" y="45" class="allophone" text-anchor="end">ɪ</text> 
+
+<text x="210" y="45" class="allophone">ʊ</text> 
+
+  <!-- close mid -->
+<text x="250" y="75" class="allophone">o</text> 
 
   <!-- mid -->
   <text x="158" y="105" class="ipa" text-anchor="middle" filter="url(#solid)">ə</text>
   <text x="158" y="105" class="ipa" text-anchor="middle">ə</text> 
 
   <!-- near open -->
-  <text x="94" y="165" class="ipa" text-anchor="end">æ</text> 
+  <text x="94" y="165" class="allophone" text-anchor="end">æ</text> 
+  <text x="170" y="165" class="allophone" text-anchor="middle" filter="url(#solid)">ɐ</text> 
+  <text x="170" y="165" class="allophone" text-anchor="middle">ɐ</text> 
+
+  <!-- open -->
+<text x="106" y="195" class="ipa" text-anchor="end">a</text> 
+
+<text x="232" y="195" class="allophone" text-anchor="end" filter="url(#solid)">ɑ</text>
+<text x="232" y="195" class="allophone" text-anchor="end">ɑ</text> 
 </svg>
 </div>
 </section>
+
+
+
+<section id="diphthongs">
+<h4>Diphthongs</h4>
+
+<div style="margin-left: 7.5%;">
+<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+
+  <defs>
+    <filter x="0" y="0" width="1" height="1" id="solid">
+      <feFlood flood-color="white"/>
+      <feComposite in="SourceGraphic" operator="xor"/>
+    </filter>
+  </defs>
+
+  <use xlink:href="#arrowRight" x="155" y="25"></use> 
+  
+  <line x1="40" y1="10" x2="240" y2="10" stroke="#ccc" />
+  <line x1="240" y1="10" x2="240" y2="190" stroke="#ccc" />
+  <line x1="115" y1="190" x2="240" y2="190" stroke="#ccc" />
+  <line x1="40" y1="10" x2="115" y2="190" stroke="#ccc" />
+  
+  <line x1="65" y1="70" x2="240" y2="70" stroke="#ccc" />
+  <line x1="90" y1="130" x2="240" y2="130" stroke="#ccc" />
+  <line x1="140" y1="10" x2="177" y2="190" stroke="#ccc" />
+  
+  <!-- close -->
+  <circle cx="40" cy="10" r="3" fill="#ccc"/>
+  <circle cx="140" cy="10" r="3" fill="#ccc"/>
+  <circle cx="240" cy="10" r="3" fill="#ccc"/>
+  
+   <!-- mid close -->
+  <circle cx="65" cy="70" r="3" fill="#ccc"/>
+  <circle cx="152.5" cy="70" r="3" fill="#ccc"/>
+  <circle cx="240" cy="70" r="3" fill="#ccc"/>
+  
+  <!-- mid open -->
+  <circle cx="90" cy="130" r="3" fill="#ccc"/>
+  <circle cx="165" cy="130" r="3" fill="#ccc"/>
+  <circle cx="240" cy="130" r="3" fill="#ccc"/>
+  
+  <!-- open -->
+  <circle cx="115" cy="190" r="3" fill="#ccc"/>
+  <circle cx="177" cy="190" r="3" fill="#ccc"/>
+  <circle cx="240" cy="190" r="3" fill="#ccc"/>
+  
+  
+  <!-- near close -->
+<text x="85" y="45" class="allophone" text-anchor="end">ɪj</text> 
+
+<text x="210" y="45" class="allophone">ʊw</text> 
+</svg>
+</div>
+</section>
+
+
+
+<p>An epenthetic schwa is found in certain consonant clusters. Wikipedia has a <a href="https://en.wikipedia.org/wiki/Central_Atlas_Tamazight#Vowels">table</a> indicating typical contexts for Central Atlas Tamazight.<tt>wcat,#Vowels</tt></p>
+<p>The same article also has a <a href="https://en.wikipedia.org/wiki/Central_Atlas_Tamazight#Vowels">table</a> showing typical phonetic renderings of the 3 phonemes, according to context.</p>
+</section>
+
 
 
 
@@ -466,9 +568,10 @@ alveolar</th>
 <section id="basicvowels">
 <h3>Basic vowels</h3>
 
+<p>Neo-Tifinagh is designed to show vowels (and therefore, alphabetic), however, other writing sytems such as Touareg and older variants are not.</p>
 
-    <p>Neo-Tifinagh is designed to be fully vowelled (and therefore, alphabetic), however, other writing sytems such as Touareg and older variants are not.</p>
-<p>The ancient Berber script used a single vowel symbol, read normally as <span class="ipa">a</span>, but <span class="ipa">i</span> after <span class="ipa">y</span>, and <span class="ipa">u</span> after <span class="ipa">w</span>.<tt>u</tt> Some Tuareg orthographies display a single vowel letter at the end of a word. </p>
+<p class="btw">The ancient Berber script used a single vowel symbol, read normally as <span class="ipa">a</span>, but <span class="ipa">i</span> after <span class="ipa">y</span>, and <span class="ipa">u</span> after <span class="ipa">w</span>.<tt>u</tt> Some Tuareg orthographies display a single vowel letter at the end of a word.</p>
+
 <p>The vowel letters of Neo-Tifinagh are:<tt>ws</tt></p>
 
 
@@ -485,6 +588,62 @@ alveolar</th>
 
 <figure class="otherBox auto noindex" data-cols="ipa,trans,transc">ⵦ␣ⵧ</figure>
 </div>
+</section>
+
+
+
+
+
+<section id="vowel_mappings">
+<h3>Vowel sounds mapped to characters</h3>
+<p>The following tables show how Tamazight  vowel sounds commonly map to  characters or sequences of characters in the Neo-Tifinagh orthography.</p>
+
+
+
+<section id="plain_vowel_map">
+<h4>Plain vowels</h4>
+
+<div id="mapv_high" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">i ɪ ɨ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D49;</span> [<a href="/scripts/tifinagh/block#char2D49"><span class="uname">U+2D49 TIFINAGH LETTER YI</span></a>]</span></p>
+</div>
+</div><div class="mapItem">
+<div class="phone"><span class="ipa">u ʊ o</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D53;</span> [<a href="/scripts/tifinagh/block#char2D53"><span class="uname">U+2D53 TIFINAGH LETTER YU</span></a>]</span></p>
+</div>
+</div>
+</div>
+
+
+
+<div id="mapv_lmid" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">ə</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D3B;</span> [<a href="/scripts/tifinagh/block#char2D3B"><span class="uname">U+2D3B TIFINAGH LETTER YEY</span></a>]</span></p>
+</div>
+</div>
+</div>
+
+
+
+
+<div id="mapv_low" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">a æ ɐ ɑ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D30;</span> [<a href="/scripts/tifinagh/block#char2D30"><span class="uname">U+2D30 TIFINAGH LETTER YA</span></a>]</span></p>
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -625,6 +784,303 @@ alveolar</th>
 </div>
 </section>
 </section>
+
+
+
+
+<section id="map_consonants">
+<h3>Consonant sounds to characters</h3>
+<p>The following maps  Tamazight consonant sounds to common graphemes.</p>
+
+
+
+
+<div id="map_plosives" class="map">
+<div class="mapItem">
+<div class="uncommon"><span class="ipa">p</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D52;</span> [<a href="/scripts/tifinagh/block#char2D52"><span class="uname">U+2D52 TIFINAGH LETTER YAP</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">b</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D31;</span> [<a href="/scripts/tifinagh/block#char2D31"><span class="uname">U+2D31 TIFINAGH LETTER YAB</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">t</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D5C;</span> [<a href="/scripts/tifinagh/block#char2D5C"><span class="uname">U+2D5C TIFINAGH LETTER YAT</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">d</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D37;</span> [<a href="/scripts/tifinagh/block#char2D37"><span class="uname">U+2D37 TIFINAGH LETTER YAD</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">tˁ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D5F;</span> [<a href="/scripts/tifinagh/block#char2D5F"><span class="uname">U+2D5F TIFINAGH LETTER YATT</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">dˁ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D39;</span> [<a href="/scripts/tifinagh/block#char2D39"><span class="uname">U+2D39 TIFINAGH LETTER YADD</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">k</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D3D;</span> [<a href="/scripts/tifinagh/block#char2D3D"><span class="uname">U+2D3D TIFINAGH LETTER YAK</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɡ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D33;</span> [<a href="/scripts/tifinagh/block#char2D33"><span class="uname">U+2D33 TIFINAGH LETTER YAG</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">q</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D47;</span> [<a href="/scripts/tifinagh/block#char2D47"><span class="uname">U+2D47 TIFINAGH LETTER YAQ</span></a>]</span></p>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div id="map_fricatives" class="map">
+<div class="mapItem">
+<div class="uncommon"><span class="ipa">β</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D32;</span> [<a href="/scripts/tifinagh/block#char2D32"><span class="uname">U+2D32 TIFINAGH LETTER YABH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">f</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D3C;</span> [<a href="/scripts/tifinagh/block#char2D3C"><span class="uname">U+2D3C TIFINAGH LETTER YAF</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="uncommon"><span class="ipa">v</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D60;</span> [<a href="/scripts/tifinagh/block#char2D60"><span class="uname">U+2D60 TIFINAGH LETTER YAV</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="uncommon"><span class="ipa">θ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D5D;</span> [<a href="/scripts/tifinagh/block#char2D5D"><span class="uname">U+2D5D TIFINAGH LETTER YATH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="uncommon"><span class="ipa">ð</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D38;</span> [<a href="/scripts/tifinagh/block#char2D38"><span class="uname">U+2D38 TIFINAGH LETTER YADH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="uncommon"><span class="ipa">ðˁ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D3A;</span> [<a href="/scripts/tifinagh/block#char2D3A"><span class="uname">U+2D3A TIFINAGH LETTER YADDH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">s</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D59;</span> [<a href="/scripts/tifinagh/block#char2D59"><span class="uname">U+2D59 TIFINAGH LETTER YAS</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">z</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D63;</span> [<a href="/scripts/tifinagh/block#char2D63"><span class="uname">U+2D63 TIFINAGH LETTER YAZ</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">sˁ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D5A;</span> [<a href="/scripts/tifinagh/block#char2D5A"><span class="uname">U+2D5A TIFINAGH LETTER YASS</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">zˁ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D65;</span> [<a href="/scripts/tifinagh/block#char2D65"><span class="uname">U+2D65 TIFINAGH LETTER YAZZ</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʃ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D5B;</span> [<a href="/scripts/tifinagh/block#char2D5B"><span class="uname">U+2D5B TIFINAGH LETTER YASH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʒ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D4A;</span> [<a href="/scripts/tifinagh/block#char2D4A"><span class="uname">U+2D4A TIFINAGH LETTER YAZH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="uncommon"><span class="ipa">ʝ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D34;</span> [<a href="/scripts/tifinagh/block#char2D34"><span class="uname">U+2D34 TIFINAGH LETTER YAGHH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="uncommon"><span class="ipa">x</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D3F;</span> [<a href="/scripts/tifinagh/block#char2D3F"><span class="uname">U+2D3F TIFINAGH LETTER YAKHH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="uncommon"><span class="ipa">ɣ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D56;</span> [<a href="/scripts/tifinagh/block#char2D56"><span class="uname">U+2D56 TIFINAGH LETTER YAGH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">χ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D45;</span> [<a href="/scripts/tifinagh/block#char2D45"><span class="uname">U+2D45 TIFINAGH LETTER YAKH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʁ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D56;</span> [<a href="/scripts/tifinagh/block#char2D56"><span class="uname">U+2D56 TIFINAGH LETTER YAGH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ħ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D43;</span> [<a href="/scripts/tifinagh/block#char2D43"><span class="uname">U+2D43 TIFINAGH LETTER YAHH</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʕ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D44;</span> [<a href="/scripts/tifinagh/block#char2D44"><span class="uname">U+2D44 TIFINAGH LETTER YAA</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">h</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D40;</span> [<a href="/scripts/tifinagh/block#char2D40"><span class="uname">U+2D40 TIFINAGH LETTER YAH</span></a>]</span></p>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div id="map_nasals" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">m</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D4E;</span> [<a href="/scripts/tifinagh/block#char2D4E"><span class="uname">U+2D4E TIFINAGH LETTER YAM</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">n</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D4F;</span> [<a href="/scripts/tifinagh/block#char2D4F"><span class="uname">U+2D4F TIFINAGH LETTER YAN</span></a>]</span></p>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div id="map_approximants" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">w</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D4F;</span> [<a href="/scripts/tifinagh/block#char2D4F"><span class="uname">U+2D4F TIFINAGH LETTER YAN</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʷ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D6F;</span> [<a href="/scripts/tifinagh/block#char2D6F"><span class="uname">U+2D6F TIFINAGH MODIFIER LETTER LABIALIZATION MARK</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">r</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D54;</span> [<a href="/scripts/tifinagh/block#char2D54"><span class="uname">U+2D54 TIFINAGH LETTER YAR</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">rˤ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D55;</span> [<a href="/scripts/tifinagh/block#char2D55"><span class="uname">U+2D55 TIFINAGH LETTER YARR</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">l ɫ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D4D;</span> [<a href="/scripts/tifinagh/block#char2D4D"><span class="uname">U+2D4D TIFINAGH LETTER YAL</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">j</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ber">&#x2D62;</span> [<a href="/scripts/tifinagh/block#char2D62"><span class="uname">U+2D62 TIFINAGH LETTER YAY</span></a>]</span></p>
+</div>
+</div>
+</div>
+</section>
 </section>
 
 
@@ -635,12 +1091,12 @@ alveolar</th>
 <section id="diacritics">
 <h2>Diacritics</h2>
 
-
+<div class="btw">
 <figure class="otherBox auto" data-cols="trans">̇␣̉␣̂␣̄</figure>
 
-
 <p>Diacritic marks from other blocks have been used in some notations, to represent vowels and foreign consonants, eg. <span class="charExample"><span class="ex" lang="ber">ⴵ̇</span> <span class="ipa">a</span></span><span class="charExample"><span class="ex" lang="ber">ⵉ̉</span> <span class="ipa">iː</span></span>  <span class="charExample"><span class="ex" lang="ber">ⴱ̂</span> <span class="ipa">p</span></span></p>
-<p>Sometimes, when two diacritics are shown above the base, they are dispayed side by side rather than stacked,<tt>u</tt> eg. <span class="charExample"><span class="ex" lang="ber">ⵉ̇̄</span> <span class="ipa">eː</span></span></p>
+<p>When two diacritics are shown above the base, they may be dispayed side by side rather than stacked,<tt>u</tt> eg. <span class="charExample"><span class="ex" lang="ber">ⵉ̇̄</span> <span class="ipa">eː</span></span></p>
+</div>
 </section>
 
 
@@ -705,12 +1161,15 @@ alveolar</th>
   
   <section id="gpos">
 <h3>Context-based positioning</h3>
+
+<div class="btw">
 <p>This doesn't occur in standard Tamazight, since there are no combining diacritics.</p>
 <p>When special notations combined multiple diacritics above consonants to represent vowels, however, the diacritics are presented side by side, rather than stacked.</p>
 <figure>
 <p lang="ber" class="large" style="font-size: 300%;"><span class="ex">ⵉ̇̄</span></p>
    <figcaption>Side by side rendering of diacritics to represent vowels in special notations<span class="trans"></span>.</figcaption>
 </figure>
+</div>
 </section>
 
 
@@ -760,6 +1219,9 @@ alveolar</th>
 
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
+
+<figure class="characterBox auto small" data-cols="">,␣;␣:␣.␣?␣!</figure>
+
 <table class="character_list">
 <tbody>
 <tr>
@@ -777,7 +1239,7 @@ alveolar</th>
 </tbody>
 </table>
 <p>Tifinagh  uses western  punctuation.<tt>u</tt></p>
-<p>In some areas (such as Niger, Mali, Algeria <tt>pcs</tt>) <span class="codepoint"><span lang="ber">&#x2D70;</span> [<a href="/scripts/tifinagh/block#char2D70"><span class="uname">U+2D70 TIFINAGH SEPARATOR MARK</span></a>]</span> (<span class="name">tazarast</span>) is used for phrase and sentence breaks.<tt>s</tt> In right to left text, this character should be mirrored, however this isn't currently possible in Unicode.</p>
+<p class="btw">In some areas (such as Niger, Mali, Algeria <tt>pcs</tt>) <span class="codepoint"><span lang="ber">&#x2D70;</span> [<a href="/scripts/tifinagh/block#char2D70"><span class="uname">U+2D70 TIFINAGH SEPARATOR MARK</span></a>]</span> (<span class="name">tazarast</span>) is used for phrase and sentence breaks.<tt>s</tt> In right to left text, this character should be mirrored, however this isn't currently possible in Unicode.</p>
 </section>
 
 
@@ -786,6 +1248,9 @@ alveolar</th>
 
 <section id="bracketing">
 <h3>Parentheses &amp; brackets</h3>
+
+<figure class="characterBox auto small" data-cols="">(␣)</figure>
+
 <table class="character_list">
 <thead>
 <tr>
@@ -810,6 +1275,9 @@ alveolar</th>
   
 <section id="quotations">
 <h3>Quotations</h3>
+
+<figure class="characterBox auto small" data-cols="">«␣»␣„␣”</figure>
+
 <table class="character_list">
 <thead>
 <tr>
@@ -849,7 +1317,13 @@ alveolar</th>
   
 <section id="hyphens">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
-<p class="prompts">tbd</p>
+
+<section id="ellipsis">
+<h4>Ellipsis</h4>
+
+
+<figure class="characterBox auto small" data-cols="">…</figure>
+</section>
 </section>
 
 
@@ -1061,14 +1535,13 @@ alveolar</th>
 	
 
 
-<!--section id="online_samples">
+<section id="online_samples">
 <h2>Online resources</h2>
 
-  <ol>
-    <li><a href="https://unicode.org/udhr/d/udhr_aii.html">Universal Declaration of Human Rights - Assyrian Neo-Aramaic</a></li>
-<li><a href="http://worldbibles.org/language_detail.php/eng/aii/Assyrian+Neo-Aramaic?translation=eng&&language=aii&&name=Assyrian+Neo-Aramaic">The Bible in Assyrian Neo-Aramaic</a></li>
+<ol>
+<li><a href="http://www.ircam.ma/?q=amz">IRCAM web site (Amazigh version)</a></li>
 </ol>
-</section-->
+</section>
 
 
 
@@ -1102,7 +1575,7 @@ alveolar</th>
 
 </body>
 <script>
-initialiseSummary('/scripts/tifinagh/block','ber','zgh','tifinagh')
+initialiseSummary('/scripts/tifinagh/block','zgh','zgh','tifinagh')
 autoTransliterate('ber')
 makeFontChanger('ber', 'tfng', ["Noto Sans Tifinagh WF"], '24px')
 </script>
