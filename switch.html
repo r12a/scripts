@@ -172,6 +172,14 @@ function showDoc (url) {
 <iframe id="out"></iframe>
 </div>
 
-
+<script>
+// check for parameters and take appropriate action
+parameters = location.search.split('&');
+parameters[0] = parameters[0].substring(1);
+for (var p=0;p<parameters.length;p++) {  
+	pairs = parameters[p].split('=');
+	if (pairs[0] == 'section') { if (pairs[1]) { document.getElementById('fragid').value = '#'+pairs[1] } }
+	}
+</script>
 </body>
 </html>
