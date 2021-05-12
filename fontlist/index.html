@@ -89,9 +89,18 @@ currentStyle = ''
 
 
 
+function addMyFont (fontName) {
+    var out = ''
+    out += '<p class="fontItem"><b>My Font</b>  <span class="fontname">'+fontName+'<span style="color:#ccc; font-size:80%; margin: 0 1em; cursor: pointer;" onclick="this.parentNode.parentNode.parentNode.style.display = \'none\'">X</span></span></p>'
+    out += '<div class="sample text" dir="auto" style="font-family:\''+fontName+'\', \'Adobe NotDef\';" lang="">'+window.currentSample+'</div>'
+    document.getElementById('myfontDisplay').innerHTML = out
+    }
+
+
 function getSection (script, scriptName, sample, style='', lang='', fontfeatures='') {
 	var out = '<section id="'+script+style+'">'
 	out += '<h2>'+scriptName+'</h2>'
+    out += '<div id="myfontDisplay"></div>'
 	var lastStyle = ''
 	
 	// find relevant records
@@ -227,8 +236,12 @@ function setFontFeatures ( features ) {
 <div class="suboptions">Set language: 
 <input id="language" type="text" onchange="setLanguage(this.value)" style="width:5em;"> 
 </div>
+
 <div class="suboptions">Apply font-feature-settings:<br>
 <input id="fontFeatures" type="text" onchange="setFontFeatures(this.value)" style="width:10em;"></div>
+
+<div class="suboptions">Add a font:<br>
+<input id="myFont" type="text" onchange="addMyFont(this.value)" style="width:10em;"> <button onClick="addMyFont(document.getElementById('myFont').value)">GO</button></div>
 </div>
 
 
@@ -243,7 +256,7 @@ function setFontFeatures ( features ) {
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->28 February, 2021<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->16 April, 2021<!-- #EndDate -->
 <span id="versionTop">• recent changes 
   <a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages" title="Show commits for the whole scripts repository.">scripts</a>/<a target="_blank" href="https://github.com/r12a/scripts/commits/gh-pages/fontlist" title="Show commits for scripts/fontlist.">fontlist</a> • leave a <a target="_blank" href="https://github.com/r12a/scripts/issues/new?title=[fontlist]%20%20BRIEF_TITLE_GOES_HERE&amp;body=%5Bsource%5D%20https%3A%2F%2Fr12a.github.io%2Fscripts%2Ffontlist%0A%0A" title="Leave a comment.">comment</a></span>
   </p>
