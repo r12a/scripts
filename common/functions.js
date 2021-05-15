@@ -4,7 +4,7 @@ function initialiseSummary (base, lang, tableName, dir) {
 	runCharCounts()
     makeTables(lang)
 	if (typeof addExamples !== 'undefined') addExamples(lang)
-    initialiseShowNames(base, 'c')
+    initialiseShowNames(document, base, 'c')
     document.getElementById('features').innerHTML = makeSidePanel(tableName,"")
     createtoc(3)
 	removeEditorNotes()
@@ -802,7 +802,7 @@ function showAllFeatureInfo () {
 
 
 
-function initialiseShowNames (base, target) {
+function initialiseShowNames (node, base, target) {
 // add function to all images with class ex
 // function will display character by character names for example in the panel
 // base (string), path for link to character detail
@@ -813,7 +813,7 @@ function initialiseShowNames (base, target) {
 	if(typeof base === 'undefined') { base = ''; }
 	if(typeof target === 'undefined') { target = ''; } 
 	
-	var examples = document.querySelectorAll('.ex')
+	var examples = node.querySelectorAll('.ex')
 	for (e=0;e<examples.length;e++) {
 		if (examples[e].nodeName.toLowerCase() == 'img') {
 			shownames_setImgOnclick(examples[e], base, target)
@@ -862,7 +862,7 @@ function showCharDetailsEvent (evt) {
 	setFootnoteRefs()
     var links = table.querySelectorAll('.codepoint a')
 	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
-
+    initialiseShowNames(table)
 	}
 
 
