@@ -417,11 +417,18 @@ function makeTables (lang) {
             	if (bicameral) char = charList[1]
             	else char = charList[0]
 				}
-            else char = chars[i].replace(/-|–/g,'')
-		            
-            //out += '<div class="listPair"><span class="listItem" lang="'+lang+'">'+chars[i]+'</span>'
-			if (node.dataset.lang) out += '<div class="listPair"><span class="listItem" lang="'+node.dataset.lang+'">'+chars[i]+'</span>'
-            else out += '<div class="listPair"><span class="listItem" lang="'+lang+'">'+chars[i]+'</span>'
+            //else char = chars[i].replace(/-|–/g,'')
+            else char = chars[i]
+
+            // create an id attribute for the listPairs in the index
+            if (node.parentNode.parentNode.parentNode.id === 'index' || node.parentNode.parentNode.parentNode.parentNode.id === 'index') var indexId = ' id="index'+chars[i]+'"'
+            else indexId = ''
+            
+			if (node.dataset.lang) out += '<div class="listPair"'+indexId+'><span class="listItem" lang="'+node.dataset.lang+'">'+chars[i]+'</span>'
+            else out += '<div class="listPair"'+indexId+'><span class="listItem" lang="'+lang+'">'+chars[i]+'</span>'
+
+			/*if (node.dataset.lang) out += '<div class="listPair"><span class="listItem" lang="'+node.dataset.lang+'">'+chars[i]+'</span>'
+            else out += '<div class="listPair"><span class="listItem" lang="'+lang+'">'+chars[i]+'</span>'*/
 
             // leave a blank where a space is used
             if (chars[i] === ' ') {
@@ -1508,5 +1515,23 @@ function makeMarkupOLD () {
 
 
 
+
+function checkParameters () {
+    // check for parameters and take appropriate action
+    parameters = location.search.split('&')
+    parameters[0] = parameters[0].substring(1)
+    for (var p=0;p<parameters.length;p++) {  
+        pairs = parameters[p].split('=')
+        
+        // open index and jump to character location
+        if (pairs[0] === 'index') { if (pairs[1]) { 
+            document.getElementById('index_details').open = true
+            document.location = document.location+'#index'+pairs[1]; 
+            } }
+        
+        // turn off mouseover reveal of list boxes
+        if (pairs[0] === 'nomouseover') document.getElementById('showDetailOnMouseover').checked = false
+        }
+    }
 
 
