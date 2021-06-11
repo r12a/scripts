@@ -421,7 +421,9 @@ function makeTables (lang) {
             else char = chars[i]
 
             // create an id attribute for the listPairs in the index
-            if (node.parentNode.parentNode.parentNode.id === 'index' || node.parentNode.parentNode.parentNode.parentNode.id === 'index') var indexId = ' id="index'+chars[i]+'"'
+            //if ((node.parentNode.parentNode.parentNode && node.parentNode.parentNode.parentNode.id === 'index') || (node.parentNode.parentNode.parentNode.parentNode && node.parentNode.parentNode.parentNode.parentNode.id === 'index')) var indexId = ' id="index'+chars[i]+'"'
+            //else indexId = ''
+            if (node.closest("#index")) var indexId = ' id="index'+chars[i]+'"'
             else indexId = ''
             
 			if (node.dataset.lang) out += '<div class="listPair"'+indexId+'><span class="listItem" lang="'+node.dataset.lang+'">'+chars[i]+'</span>'
@@ -1526,11 +1528,14 @@ function checkParameters () {
         // open index and jump to character location
         if (pairs[0] === 'index') { if (pairs[1]) { 
             document.getElementById('index_details').open = true
-            document.location = document.location+'#index'+pairs[1]; 
+            document.location = '#index'+pairs[1]
             } }
         
         // turn off mouseover reveal of list boxes
-        if (pairs[0] === 'nomouseover') document.getElementById('showDetailOnMouseover').checked = false
+        if (pairs[0] === 'nomouseover') {
+            document.getElementById('showDetailOnMouseover').checked = false
+            console.log('Detail on mouseover is off.')
+            }
         }
     }
 
