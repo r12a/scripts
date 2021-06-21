@@ -91,9 +91,9 @@ reflist = {
 },
 
 "ws": {
-"url":"https://en.wikipedia.org/wiki/Bamum_script",
+"url":"https://en.wikipedia.org/wiki/Thai_script",
 "authors": "Wikipedia",
-"title":"Bamum script",
+"title":"Thai script",
 "reviewed":true
 },
 
