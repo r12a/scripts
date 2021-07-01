@@ -1,5 +1,5 @@
 /*
-@ Source: 
+@ Source: https://en.wiktionary.org/wiki/
 § 'Noto Sans Bengali'
 # 200
 ~ ltr
@@ -10,390 +10,894 @@
 
 autoExpandExamples.bn = `
 
+
+-এ|at||-e
+-এ|in||-e
+-র সঙ্গে|with||-rô śôṅɡe
+-র সাথে|with||-rô śathe
+ʼপরে|above||ʼpôre
+অকাল|hard times|ɔkal
 অঙ্ক|mathematics|ɔŋko
+অঙ্গ|organ (anatomy)|ˈɔŋɡo
+অঙ্গার|carbon|ˈɔŋɡar
+অঞ্চল|region|ɔntʃɔl
+অতিমঙ্গল্য|very auspicious|otimoŋɡolːɔ
+অথচ|yet, still|ɔt̪ʰɔt͡ʃ
+অথবা|or|ɔt̪ʰɔbɑ
 অনলাইন|online|ɔn.lai̯n
-অভিধান|dictionary|obʰidʰɑn
+অনুবাদক|translator|ɔnubad̪ɔk
+অনেক|many|ɔnek|ônek
+অন্ন|cooked rice|ɔnːɔ
+অন্য|other||ônjô
+অপেক্ষা|anticipation|ɔˈpekːʰaˑ
+অপেক্ষাকৃত|comparatively|ˈɔpekːʰaˌkɾit̪ɔ̝ˑ
+অভিধান|dictionary|ɔbʱidʱan
+অভিযোগ|allegation|ɔbʱid͡ʒoɡ
+অরণ্য|forest|ɔɾonːo
+অরবিন্দ|water lily|ɔ.ɾɔ.bin.d̪ɔ
+অর্থাৎ|namely|ɔrt̪ʰat̪
+অশনি|lightning|ɔʃoni
+অসংক্রামক রোগ|non-communicable disease|ɔʃɔŋkɾamɔk ɾoɡ
+অসুস্থতা|illness|ɔʃustʰɔta
 অ্যাটর্নি|attorney|ɔæʈorni
-আকাশ|sky|ɑkɑʃ
+অ্যানথ্রাক্স|anthrax|ænt̪ʰɾɑks
+আংটি|ring|aŋʈi
+আংশিক|partial|aŋʃik
+আইন|law|ai̯n
+আওয়াজ|noise|awad͡ʒ
+আকাশ|sky|akaʃ|akaś
+আখ|sugar cane|akʰ
+আগুন|fire|aɡun
+আচরণ|behaviour|ˈatʃoˌɾɔn/ˈatʃoˌɽɔn
+আছে|there are|atʃʰe
+আজ|today|ad͡ʒ
+আজব|astonishing|ad͡ʒob
+আজান|call to prayer|a.d͡ʒan/a.zan
+আজি|today|ˈad͡zi
 আজিজ|Aziz|aziz
+আঞ্চলিক|regional|antʃɔlik
+আঞ্চলিকতা|regionalism|antʃɔlikt̪a
+আণ্ডা|egg|aɳɖa
+আতশ|fire|at̪oʃ
+আতশবাজি|fireworks|at̪oʃbazi
+আদমশুমার|census|ˈɑ.d̪ɔmˌʃu.mɑɾ
+আদা|ginger|ɑd̪ɑ
+আদালত|court (law)|ad̪alɔt̪
+আদেশ|command|ɑd̪eʃ
+আন্দাজ|guess|and̪az
+আপনারা|you (2pl)||apnara
+আপনি|you (2sg)||apni
+আপেল|apple|ˈä.peˑl
+আফসোস|regret|afsos
+আবহাওয়া|weather|abohawa
+আব্বা|dad|abba
+আব্বু|dad|abbu
+আম|mango|am
+আমড়া|hog plum|amɽa
+আমরা|we (1pl)||amra
+আমার|my book|ˈɑːˌmɑɹ
+আমি|I (1sg)|ˈä.miˑ|ami
+আম্মা|mother||amma
 আয়রন|iron|ae̯.rɔn
+আর|and|ar
+আলাপ|talk|alap
+আলো|light|alo
 আষাঢ়|June-July|ɑʃɑɽ
+আসা|to come||aśa
 আস্থা|trust|ɑʃtʰɑ
-ইংরেজ|English|iŋreʤ
+ইঁদুর|mouse, rat|ĩdur
+ইংরেজ|English|iŋred͡ʒ
+ইংরেজি|English|iŋɾed͡ʒi
+ইজ্জত|honour|izzot̪
+ইট|brick|iʈ
+ইতোমধ্যে|in the meantime|ˈit̪oˌmɔ̝d̪ːʱeˑ
+ইনকিলাব|revolution|in.ki.lab
+ইনকিলাবি|revolutionary|in.ki.la.bi
+ইনশাআল্লাহ্|God willing|inʃa.allaʱ
+ইস্পাত|steel|ˈiʃ.paˑt̪
+ঈগল|eagle|iɡɔl
 ঈদ|Eid|iːd
 উঁচু|height|ũt͡ʃu
-উচ্চারণ|pronunciation|ut͡ʃɑrɔn
+উকুন|louse||ukun
 উচ্চারন|pronunciation|ut͡ʃt͡ʃɑrɔn
+উট|camel|uʈ
+উন্দূর|mouse|und̪uɾ
 উন্মত্ত|insane|unmɔtto
+উপত্যকা|valley|upɔt̪ːɔka
+উল্কি|tattoo|ˈulki
+উষ্ণ|heat, warmth|ˈuʃno
+উৎপত্তি|origin, source|ut̪pɔt̪ːi
+উৎপল|water lily|ut̪ˈpɔˑl
 উৎসব|festival|utʃɔb
 ঋতু|season|ritu
+ঋতু|season|ɾit̪u
+এ|this||e
+এক|one|ɛːk/æːk
 একটু|a little|ekʈu
 একবার|once|ækbɑr
 একাউন্ট|account|æ.kau̯nʈ
+এখন|now|ækʰɔn
+এখানে|here||ekhane
 এছাড়াও|also|e.t͡ʃʰa.rao̯
+এবং|and|ebɔŋ|ebôṅ
+এভাবে|in this way|ebʱabe
+এলাকা|field, jurisdiction|elaka
 এ্যাডভোকেট|advocate|eæɖbʰokeʈ
+ঐতিহাসিক|historical|oit̪iɦɑsik
+ও|and||o
+ও|that||o
 ওই|demonstrative|oi̯
-ওড়া|to fly|oɽɑ
+ওখানে|there||okhane
+ওজন|weight|od͡ʒon
+ওঠা|to rise|ˈoʈʰa
+ওড়া|to fly|oɽɑ|oṛa
 ওদিকে|in that direction|odike
-ঔষুধ|medecine|owʃudʰ
-কড়া|strict|kɔɽa
+ওয়াদা|promise|wada
+ওলন্দাজ|Dutch|olɔnˈdad͡ʒ
+ওস্তাদ|teacher|ost̪ad̪
+ঔষুধ|medecine|ou̯ʃudʰ
+কʼরে|after|(kôʼre)
+কখন|when|kɒ.kʰɒn|kôkhôn
+কঠিন|hard, difficult|kɔʈʰin
+কড়া|strict|kɔɽa/kɔɾa
+কত|how much|ˈkɔt̪o
+কদাচিৎ|ever, seldom|kɔ.d̪ɑ.t͡ʃit̪
+কদু|gourd|kod̪u
+কবুতর|pigeon|kobut̪ɔr
+কবে|what day|koː.bɛ
+কম|few||kôm
+কমলা|orange|kɔmola/kɔmla
+কয়েদ|bondage|kɔe̯ed̪
+কয়েদখানা|jail, prison|kɔe̯ed̪kʰana
+করছ|doing|korcʰo
 করতাল|cymbal|kɔrtɑl
+করবী|oleander|kɔɾɔbi
 করা|do|kɔɾa
+করা|to do|kɔɾa/kɔɹa/kɔɽa
+কলকাতা|Kolkata|ˈkolˌkat̪a
+কলজে|liver||kôlje
 কলম|pen|kɔlom
-কাটা|to cut|kɑʈɑ
-কারসাজি|trickery|kɑrʃɑʤi
+কলা|banana|ˈkɔ.läˑ
+কাঁকই|comb|kãkoi̯
+কাঁচ|glass|kãːt͡ʃ
+কাঁঠাল|jackfruit|kaʈʰal
+কাক|crow|kak
+কাগজ|paper|kaɡoz
+কাছে|near||kache
+কাটা|to cut|kɑʈɑ|kaṭa
+কাঠিপোকা|stick insect|kɑ.ʈ̟ʰi.po.kɑ
+কান|ear||kan
+কাপড়|clothes|ˈkapɔɹ/ˈkapɔɽ
+কামড়ানো|to bite||kamṛano
+কারখানা|factory, workshop|karkʰana
+কারণ|because||karôn
+কারসাজি|trickery|kɑrʃɑd͡ʒi
+কারিগর|artisan|kariɡɔr
+কালি|yesterday, tomorrow|kali
+কালো|black|kalo
+কাল্পনিক|imaginary|kalponik
+কি|what||ki
+কিংবা|or|kiŋbɑ
+কিচ্ছা|story|kitʃtʃʰa
+কিছু|anything|kisu/kitʃʰu
+কিছু|some||kichu
+কিতাব|book|kitab
+কিনার|shore|kinar
 কিন্তু|but|kintu
+কিন্তু|but|kint̪u
+কিভাবে|how|kibʱabe/kivabe
+কিশমিশ|raisin|kiʃmiʃ
+কুকুর|dog|kukuɾ
+কুত্তা|dog|kut̪ːa
+কুয়াশা|fog||kuẏaśa
 কুর্তা|Indian shirt|kurtɑ
+কুশিয়ার|sugarcane|kuʃijaɾ
+কুসুম|flower|kuʃum
+কুস্তি|wrestling|kust̪i
+কৃমি|worm||krimi
+কে|who||ke
 কেউ|somebody|keu̯
-কেন|why|kæno
-কেমন|how|kæmɔn
+কেদারা|chair|ˈke.d̪ä.ɾäˑ
+কেন|why|kæ.noː
+কেন্দ্ৰ|centre|ken̪.d̪ɾɔ̝ˑ
+কেমন|how|kæmɔn|kemôn
 কোকিল|cuckoo|kukil
+কোটি|crore|ˈko.ʈ̟iˑ
+কোথায়|where||kothaẏ
+কোদাল|spade|ˈko.d̪äˑl
+কোমর|waist|kɔmɔɹ
 ক্যম্পাস|campus|kyæmpas
 ক্ষণ|moment|kʃon
+ক্ষমাহীন|unforgiving|kʰɔmaɦin
 ক্ষুদ্র|small|kʰudro
+খড়|straw|kʰɔɽ
 খবর|news|kʰɔbor
-খাওয়া|to eat, drink|kʰao̯wa
+খবিশ|fiend, ghost|ˈkʰɔ̝.biˑs̠
+খরগোশ|rabbit|ˈkʰɔrɡoʃ
+খরচ|expenditure|kʰɔɾotʃ
+খাওয়া|to eat|ˈkʰaʊ̯a/kʰao̯wa|khaoẏa
+খাতির|friendship|kʰat̪iɾ
+খাননা|not eat|kʰɑnnɑ
+খামচানো|to scratch||khamcano
+খারাপ|bad|kʰaɾap
+খালি|only|kʰali
+খীর|milk|kʰiːɾ
+খুব|very|kʰub
+খুশি|joyous|kʰuʃi
+খূব|very|kʰub
+খেজুর|date (fruit)|kʰed͡ʒur
+খেয়াল|thought, idea|kʰeal
+খেলা|to play|kʱæla|khela
+খোঁজা|to look for|kʰõd͡ʒa/kʰõdza/kʰõza
+খোঁড়ানো|to dig||khõṛano
+খোলা|to open|ˈkʰola
 খ্রিষ্টান|christian|kʰriʂʈan
-গতকাল|yesterday|gɔtokɑl
-গন্ধ|scent|gɔndʰo
-গ্রাম|village|gram
-ঘর|room, house|gʰɔr
+গতকাল|yesterday|ɡɔtokɑl
+গন্ডার|rhinoceros|ɡɔnɖɑɾ/ɡɔnɖɑɹ
+গন্ধ|scent|ɡɔndʰo
+গপ|gossip|ɡɔp
+গরম|warm, hot|ɡɔɾom/ɡɔɽom|ɡôrôm
+গরিলা|gorilla|ɡɔɾila/ɡɔɹila
+গর্দান|neck|ɡɔɾ.d̪an
+গলা|neck|ɡɔla|ɡôla
+গল্প|story|ɡɔlpo
+গাঁ|village|ɡã
+গাঁও|village|ɡão̯
+গাওয়া|to sing||ɡaoẏa
+গাছ|tree, plant|ɡɑs/ɡɑtʃʰ
+গাছ|tree||ɡach
+গাড়ি|car|ɡaɽi
+গাভিন|pregnant|ɡabʱin
+গাস|grass||ɡaś
+গু|dung|ɡuː
+গুঁড়া|powder|ɡũɽa
+গুজরাট|Gujarat|ɡud͡ʒɔɾaʈ
+গুম|lost, missing|ɡum
+গুরুত্বপূর্ণ|important|ɡurutːɔpurnɔ
+গুহা|cave, den|ˈɡu.ɦä
+গোনা|to count||ɡona
+গোল|round||ɡol
+গোশত|meat|ɡoʃt̪o
+গোশ্ত|meat||ɡośt
+গোসাঁই|lord, master|ˈɡo.s̠ä̃i̯ˑ
+গ্রন্থাগার|library|ɡɾontʰaɡaɾ
+গ্রাম|village|ɡram
+গ্রেপ্তার|arrest|ɡɾept̪aɾ
+গ্রেফতার|arrest|ɡɾeft̪aɾ
+গ্লাস|glass, tumbler|ɡlas/ɡlaʃ
+ঘর|house, building|ɡʱɔɾ
+ঘষা|to rub||ɡhôśa
+ঘাড়|neck|ɡʱaɽ
+ঘুড়ি|kite|ɡʱuɽi
+ঘুমানো|to sleep||ɡhumano
+ঘোঙ্গা|dumb, mute|ˈɡʱoŋ.ɡä
+ঘোড়া|horse|ɡʱoɽa
+ঘোরা|to turn (intransitive)||ɡhora
+ঘোষ|din, sound|ɡʱos̠
+চওড়া|wide||côoṛa
 চক্র|wheel|t͡ʃɔkro
-চাঁদ|moon
+চর্বি|fat|tʃorbi|côrbi
+চশমা|goggles, glasses|tʃɔʃma
+চা|tea|tʃa
+চাঁদ|moon|t͡ʃãːd̪|cãdô
+চাকা|wheel|tʃaka
+চাটা|to lick|ˈtʃaʈa
+চামড়া|skin||camṛa
+চার|four||car
+চিড়িয়াখানা|zoo|tʃiɽiakʰana
+চিত্র|picture|ˈt͡ʃit̪ː.ɾɔ̝ˑ/ˈt͡sit̪ː.ɾɔˑ
+চিনি|sugar|tʃini
+চিপা|narrow||cipa
+চিলমচি|hand basin|tʃilɔmtʃi
+চুম্বন|kiss|tʃumbɔn
+চুরি|theft|t͡ʃuri
+চুল|hair|tʃul/tsul|cul
+চেপ-|to squeeze||cepô-
+চেয়ার|chair|ˈt͡ʃe.äɾ
+চোক্ষা|sharp (as a knife)||cokkha
+চোখ|eye|tʃokʰ|cokh
+চোষা|to suck|tʃoʃɑ/tsoʃɑ|cośa
+ছবি|drawing, painting|tʃʰobi
+ছাই|ash||chai̯
 ছাতা|umbrella|t͡ʃʰɑtɑ
-জগৎ|world|ʤɔɡot
-জন্য|for|ʤɔnno
+ছাত্র|student|tʃʰat̪ɾo
+ছাল|bark (of a tree)||chal
+ছিটমহল|enclave|tʃʰiʈ.mɔɦɔl
+ছেলে|boy, son|tʃʰele/sele
+ছোট|small||choṭ
+ছোরা মারা|to stab||chora mara
+ছ্যাপ|to spit||cchap
+জংশন|junction|ˈd͡ʒɔŋ.ʃɔˑn/ˈd͡zɔŋ.ʃɔˑn
+জগৎ|world|d͡ʒɔɡot
+জজ|judge|d͡zɔːd͡z/d͡ʒɔːd͡ʒ
+জন্তু|animal||jôntu
+জন্মদিন|birthday|ˈd͡ʒɔnmoˌd̪in
+জন্য|for|d͡ʒɔnno
+জবাই|butcher|d͡ʒɔbai̯
+জমা|to freeze||jôma
+জমি|land, ground|d͡ʒomi
+জল|water|d͡ʒɔl/dzɔl/zɔl|jôl
+জলা|to burn||jôla
 জাকাত|Zakah charity|zakat
+জাদু|magic, witchcraft|d͡ʒad̪u
+জানা|to know||jana
+জাফরান|saffron|ˈd͡ʒapʰːɾaˑn/ˈd͡zafːɾaˑn
+জামাই|husband||jamai̯
+জায়গা|place|d͡ʒae̯ɡa
+জিনিস|thing|d͡ʒiniʃ
+জিহবা|tongue (organ)||jihba
+জিহ্বা|tongue|d͡ʒiu̯̯bʱa/d͡ʒiu̯̯βa
+জীবন|life|d͡ʒibɔn
+জীভ|tongue (organ)||jibh
+জেলা|district|ˈd͡ʒe.laˑ/ˈze.laˑ
+জোস|cool|d͡ʒos/d͡ʒoʃ
 জ্ঞান|knowledge|ɡæn
-জ্বর|fever|ʤɔr
-ঝড়|storm|ʤʰɔɽ
-ঝিল্লি|grasshopper|ʤʰilli
-টাকা|money|ʈɑkɑ
-ঠাণ্ডা|cold|ʈʰɑnɖɑ
-ডাক্তার|doctor|ɖɑktɑr
-ঢেউ|wave|ɖʰeu
+জ্বর|fever|d͡ʒɔr
+জ্যোৎস্না|moonlight|d͡ʒotˈsna
+ঝড়|storm|d͡ʒʰɔɽ
+ঝাল|hot, spicy|ɟʱal
+ঝিঙা|ridge gourd|ɟʱiŋa
+ঝিল্লি|grasshopper|d͡ʒʰilli
+টাঁকা|to sew||ṭãka
+টাং|foot|ʈ̟äːŋ
+টাকা|money, wealth|ʈɑkɑ
+টানা|to pull|ˈʈana|ṭana
+টালি|roofing tile|ˈʈ̟ä.liˑ
+টিকিট|ticket|ˈʈ̟i.kiʈ̟
+টিপাই|teapoy|ˈʈ̟i.pai̯ˑ
+টুপি|hat|ˈʈupi
+ট্যাক্সি|taxi|ʈæksi
+ট্রেডমার্ক|trademark|ˈʈ̟ɾeɖ̟.mäˑɾk
+ঠাঁই|space, place|ʈʰãi̯
+ঠাকুর|deity, master|ˈʈ̟ʰä.kuˑɾ
+ঠাণ্ডা|cold|ʈʰɑnɖɑ|ṭhanḍa
+ঠিক|correct||ṭhik
+ঠেং|leg|ʈ̟ʰæːŋ/ʈ̟ʰɛːŋ
+ঠেলা|to push||ṭhela
+ঠোঁট|lip|tʰot/tʰut
+ডরা|to fear||ḍôra
+ডাঁশ|gnat|ɖ̟ãːʃ
+ডাক্তার|doctor|ɖakt̪aɾ
+ডান|right||ḍan
+ডিম|egg|ɖim|ḍim
+ডেক|cauldron, cooking pot|ɖ̟eːk
+ঢাকা|Dhaka|ˈɖʱaka
+ঢেঁড়স|okra|ɖʱæ̃ɽoʃ
+ঢেউ|wave|ɖʰeu̯
 তওবার|repentance|tɔo̯.bar
+তটিনী|river|toʈini
+তড়িৎ|electricity, lightning|ˈt̪ɔɽit̪
+তবু|in spite of, still|t̪ɔbu
+তবুও|in spite of, still|t̪ɔbuo
+তবে|however|t̪ɔbe
+তল্লাশি|search, quest|t̪ɔllaʃi
+তাঁরা|they (3pl)|t̪ãra
+তাওয়া|frying pan|t̪awa
+তাকানো|to look at|t̪akan̪o
+তাজ|crown|t̪ad͡ʒ
+তাজা|fresh, new|t̪aza
 তাথৈ|there|ta.tʰoi̯ (terị)
+তামা|copper|tama
 তারা|star|tɑrɑ
+তিন|three||tin
+তিনি|he|t̪ɪ.n̪ɪ
+তিমি|whale|t̪imi
+তিসি|flax|tiʃi
+তীর|shore|t̪ɪːɾ
+তুই|you|ˈt̪ʊi
+তুফান|storm|t̪ufan
+তুমি|you (2sg)|ˈt̪uˌmi|tumi
+তুলনামূলক|comparative|tulnamulɔk
+তৃতীয়|third|t̪rit̪ijɔ
+তেঁতুল|tamarind|tẽtul
+তেপায়া|tripod|ˈt̪e.pa.jaˑ
 তেরই|thirteen|tæ.roi̯
+তেল|oil|t̪el
 তৈরি|to make|toi̯ri
-ত্যাগ|leave|tɛg
+তোমরা|you (2pl)||tomra
+তোশক|mattress|t̪oʃok
+ত্যাগ|leave|tɛɡ
+ত্রিপত্র|bael leaves|tɾipɔtːɾɔ
+থাকা|to live, reside|t̪ʰɑkɑ
+থানকুনি|pennywort|tʰankuni
 থামা|to stop|tʰɑmɑ
+থুতু|to spit||thutu
+দক্ষিণ|south|d̪okʰːin
+দখল|occupy, access|d̪ɔkʰol
+দড়ী|rope||dôṛi
+দপ্তর|office|d̪ɔpt̪oɾ
+দফতর|office|d̪ɔft̪oɾ
+দফা|occasion, time|d̪ɔfa
+দরজা|door|d̪ɔɾd͡ʒa
+দরিয়া|sea|d̪orija
+দাঁড়ানো|to stand|d̪aɽano/d̪ãɽano/d̪aɾano/d̪aɹano|dãṛano
+দাঁত|tooth|d̪ɑ̃t̪|dãtô
+দাওয়াত|invitation|d̪awat̪
+দাখিল|submit|d̪akʰil
+দাড়ি|beard|daɽi
 দাদী|grandmother|dɑdiː
-দুঃখ|sorrow|dukkʰo
+দাম|price, cost|d̪aːm
+দারচিনি|cinnamon|ˈd̪aɾ.t͡ʃi.niˑ/ˈd̪aɾ.t͡si.niˑ
+দারু|wine, liquor|ˈd̪a.ɾuˑ
+দিন|day||din
+দিল|heart|d̪il
+দুঃখ|sorrow, grief|dukˈkʰo
 দুঃখও|sadness|duk.kʰoo̯
+দুই|two||dui̯
+দুপুর|noon?|d̪upuɾ
+দুরিয়ান|durian|ˈd̪u.ɾi.äˑn
+দূর|far||dur
+দেখা|to see|ˈd̪ækʰa|dekha
+দেত্তয়া|to give||dettẏa
+দেশ|country, state|d̪eʃ
+দোলনা|swing|dolna
+দ্বিতীয়|second|t̪rit̪ijɔ
+দ্রব্য|thing|ˈd̪ɾɔbːɔ̝ˑ
+দ্রুত|fast|d̪ɾʊt̪o
+ধনিয়া|coriander|dʱonia
+ধনে|coriander|dʱone
 ধন্যবাদ|thank you|dʰonjobɑd
+ধরা|to hold||dhôra
+ধুঁয়ো|smoke||dhũẏo
+ধুতুরা|dutura (flower)|d̪ʱut̪uɾɑ/d̪ʱut̪uɽɑ
+ধুলো|dust||dhulo
+ধোয়া|to wash||dhoẏa
 ধৌত|wash|dʰou̯.to
-নদী|river|nodiː
+নকল|copy, imitation|nɔkol
+নখ|fingernail, claw|nɔːkʰ|nôkh
+নতুন|new|nɔt̪un|nôtun
+নদী|river|nod̪i|nôdi
+নমস্কার|hello, bye|nɔmɔʃkaɹ
 নম্বর|number|nɔmbor
-নামাজ|prayers
+নরম|soft|nɔɾom
+না|not||na
+নাক|nose||nak
+নাদান|foolish|nad̪an
+নাম|name|nam
+নামহীন|nameless|ˈnamɦin
+নামাজ|prayers|namaz
+নারাজ|displeased|naraz/narad͡ʒ
 নিঃশব্দ|silence|niʃʃɔbdo
-নোংরা|foul
+নিকড়িয়া|penniless|ˈni.kɔ.ɹi.äˑ/ˈni.kɔ̝.ɽ̟i.äˑ
+নিমন্ত্রণ|invitation|nimont̪ɾon
+নিষিদ্ধ|prohibited, forbidden|niʃid̪ːʱo
+নীহারিকা|nebula|niɦaɾika/niɦaɽika
+নুন|salt||nun
+নেমন্তন্ন|invitation|nemont̪onno
+নেশা|drunkenness|neʃa
+নোংরা|foul|nʊŋra/noŋra
 নৌকো|boat|nou̯ko
-পথ|path, road|pɔtʰ
+পক্ষে|on behalf of|pɔkːʰe
+পচা|rotten||pôca
+পছন্দ|liking, preference|pɔsond̪o/pɔtʃʰond̪o
+পড়া|to fall||pôṛa
+পড়া|to read, study|ˈpɔɽa/ˈpɔɹa
+পথ|path, road|pɔtʰ|pôth
+পদ্ম|lotus|pɔd̪ːɔ
+পয়গম্বর|prophet|ˈpɔjˌɡɔmbɔɾ
+পর|feather||pôr
+পরা|put on (clothes)|ˈpɔɾa/ˈpɔɹa
+পর্বত|mountain|pɔrbɔt
+পা|leg, foot|pa
+পাঁচ|five||pãcô
+পাকস্থলী|stomach|pakɔstʰoli
+পাখা|wing||pakha
+পাখি|bird|pakʰi|pakhi
 পাখিই|birds|pa.kʰii̯
+পাঠা|to send|ˈpaʈʰa
+পাঠানো|to send|pɑʈʰɑno
+পাতলা|thin||patla
+পাতা|leaf|pata
+পাত্তা|address, whereabouts|ˈpät̪.t̪äˑ
+পাথর|stone||pathôr
+পান|to drink||pan
+পানি|water|ˈpɑːniː
+পান্না|emerald|pan(ː)a
+পায়খানা|toilet|ˈpae̯.kʰa.naˑ
 পারফিউম|perfume|par.fiu̯m
+পারা|to be able to|paɾa/paɹa/paɽa
 পারেই|maybe|pa.rei̯
+পার্থক্য|difference|paɾt̪ʰɔkːo/paɹt̪ʰɔkːo
+পাহাড়|mountain||pahaṛ
+পিছনে|behind|pisɔne/pitʃʰɔne
+পিঠ|back||piṭh
+পিতা|father|pi.t̪aː
+পিয়ানো|piano|piano
+পিস্তল|pistol|ˈpis̠.t̪ɔˑl
+পুকুর|lake||pukur
+পুদিনা|mint|pud̪ina
+পুরানো|old||purano
+পুরুষ|man (adult male)||puruś
+পুষ্প|flower|puʃpɔ
+পুস্তক|book|pustɔk
+পেঁচা|owl|pɛ̃tʃa
+পেখম|peacock fan|pekʰɔm
+পেট|belly||peṭ
+পেরেশান|stressed, harassed|pereʃan
+পোরা|to burn||pora
+প্যাঁচা|owl|pɛ̃tʃa
+প্রজাপতি|butterfly|ˈpɾɔ̝.d͡ʒaˌpɔ̝.t̪i
+প্রশ্ন|question|pɾɔʃno/pɹɔʃno
+প্রসব|childbirth|pɾoʃɔb
+প্লিজ|please|pliz
+প্লীজ|please|pliz
 ফটো|photo|pfoʈo
+ফড়িং|dragonfly|pʰɔɽiŋ/fɔɹiŋ
+ফল|fruit|pʰɔl/fɔl|phôl
+ফাঁপা|to swell||phãpa
+ফাটাফাটি|awesome|ˈfaʈaˌfaʈi
+ফায়দা|benefit, advantage|fajd̪a
+ফারাক|difference, inequality|farak
+ফুঁ দেত্তয়া|to blow||phũ dettẏa
+ফুটি|melon|pʰuʈi
+ফুল|flower|pʰul/ful|phul
+ফেলা|to drop, throw|ˈpʰɛlɑ/ˈfɛlɑ|phela
+ফ্লপি|floppy|pʰlɔpi/flɔpi
 ফ্‌ল্যাট|flat|pʰlæʈ
+ফ্ল্যাট|flat|pʰlæʈ
 বই|book|boi̯
-বড়|big|bɔɽo
+বউ|wife||bôu
+বগল|armpit|boɡol
+বঙ্গ|Bengal|ˈbɔŋɡɔ
+বছর|year||bôchôr
+বজ্র|thunder, lightning|bɔɟɾɔ
+বড়|big, large|ˈbɔɽo/ˈbɔɹo|bôṛ
+বদলে|instead|bɔdole
+বন|forest|bɔn|bôn
+বন্ধুহীন|friendless|ˈbɔnd̪ʱuˌɦin
+বন্যা|flood|bɔn(ː)æ
+বমি|to vomit||bômi
+বরফ|ice, snow|bɔrɔf/bɔrɔpʰ|bôrôph
 বর্ণ|colour|bɔrno
-বাংলা|Bengali (language)|bɑŋlɑ
+বলা|to speak, say|ˈbɔla|bôla
+বসা|to sit||bôśa
+বসা|to sit|ˈbɔʃa
+বস্তু|thing, object|ˈbɔst̪u
+বহা|to flow||bôha
+বা|or|bɑ
+বাঁ|left||bã
+বাঁচা|to live||bãca
+বাঁচাও|rescue, escape|bãcao
+বাঁদর|monkey, macaque|bad̪ɔɾ/bad̪ɔɹ
+বাঁধা|to tie||bãdha
+বাঁশি|flute|bãʃi
+বাংলা ভাষা|Bengali language|ˈbaŋla ˈbʱaʃa
+বাংলা|Bengali, Bangla (language)|ˈbaŋla
+বাংলাদেশ|Bangladesh|ˈbaŋlaˌd̪eʃ
 বাঃ|left|bɑːɦ
-বাঙালী|Bengali|bɑŋɡɑliː
+বাঃ|wow, bravo|baʱ
+বাইট|byte|bai̯ʈ
+বাকি|left over|baki
+বাগ|garden, orchard|baɡ
+বাগান|garden, orchard|baɡan
+বাঘ|tiger|baɡ/baɡʱ
+বাঙালী|Bengali (person)|bɑŋɡɑliː
+বাচ্চা|child||bacca
+বাজ|thunder, lightning|bad͡ʒ
+বাজার|bazaar|bazaɾ/bad͡ʒaɾ
+বাতাস|wind||bataś
+বাদশাহ|badshah; Muslim king|bad̪ʃaɦ
+বাদুড়|bat (animal)|bad̪uɽ/bad̪uɹ
+বান|flood|ban
+বানর|monkey, macaque|banɔɾ/banɔɹ
+বাবা|dad|baba
 বাবুই|baby|ba.bui̯
+বাবুর্চি|cook, chef|baburtʃi
+বারি|water|baɾi
+বালতি|bucket|ˈbal.t̪iˑ
+বালি|sand||bali
+বালিশ|pillow|baliʃ
+বাসিন্দা|resident|baʃind̪a
+বিচি|seed||bici
 বিজ্ঞান|science|biɡɡæn
+বিজ্ঞাপন|advert|biɡjapɔn
 বিড়াল|cat|beɽɑl
 বিড়ি|cigarette|biɽi
+বিদেশ|foriegn land|bid̪eʃ
+বিদেশি|foreign|bid̪eʃi
+বিন্দু|dot, spot|bindu
+বিবাদ|quarrel, fight|bibad
+বিভক্ত করা|to split||bibhôkt kôra
+বিরুদ্ধে|against, opposing|birud̪ːʱe
 বিশ্ব|universe|biʃʃo
+বিশ্রী|ugly|bisɾi
 বিষ্ণু|Vishnu|biʃnu
+বীচি|seed|ˈbitʃi/ˈbitsi/ˈbisi
 বীর|hero|biːr
 বুক|breast, chest|buk
 বুড়ো|old man|buɽo
+বুভুক্ষা|hunger|buˈbʱuk.kʰɑ
+বৃক্ষ|tree|brikkʰo
+বৃষ্টি|rain||briśṭi
 বৃহৎ|huge|brihɔt
-বেগ|speed|beg
-বেগুন|eggplant|begun
+বেঁটে|short||bẽṭe
+বেকুব|idiot|bekub
+বেগ|speed|beɡ
+বেগুন|eggplant|beɡun
+বেপরোয়া|reckless|bepɔrwa
 বেলা|time of day|bælɑ
-বোকা|stupid|bɔkɑ
+বেশী|too|beʃi
+বেশুমার|countless|ˈbe.ʃu.mɑɾ
+বোকা|fool|bɔkɑ
+বোঝা|to understand|bod͡ʒʱɑ/bod͡ʒɑ/bozɑ
 বোন|sister|bon
-ব্যক্তি|person|bekti
+বোরকা|burqa|boɾkɑ/boɹkɑ
+ব্যক্তি|person|bækt̪i
 ব্যথা|pain|bætʰɑ
 ব্যাংক|bank|bæŋk
+ব্যাকরণ|grammar|bækɔɾon/bækɔɽon
 ব্যাখ্যা|explanation|bækkʰa
+ব্যাঘ্র|tiger|bæɡʱɾɔ
 ব্যাঙ্ক|bank|bæŋk
-ভয়|fear|bʰɔe̯
+ব্যাধি|disease|bædʱi
+ব্লগ|blog|bloɡ
+ব্ল্যাকহোল|black hole|ˈblæk.hol/ˈblɛk.hol
+ভয়|fear, dread|bʱɔe̯
+ভরা|full||bhôra
 ভস্ম|ashes|bʰɔ̃ʃʃo
-ভাই|brother|bʰɑi
+ভাই|brother|bʱai̯
+ভাঙা|broken|bʱaŋa/vaŋa
+ভাজা|to fry|bʱaja
+ভাত|(cooked) rice|bʱat
+ভাবা|to think||bhaba
+ভারত|India|ˈbʱa.ɾɔt̪
+ভারী|heavy||bhari
 ভাল|good|bʰɑlo
+ভাল|good|bʱɑlo/vɑlo
+ভালুক|bear|bʱaluk/valuk
+ভালো|good|bʱɑlo/vɑlo
+ভাল্লুক|bear|bʱalːuk/valːuk
+ভাষা|language|bʱaʂaː/vɑʃɑ
+ভাসা|to float||bhaśa
+ভিয়েতনাম|Vietnam|vijet̪nam
+ভুড়ী|guts||bhuṛi
 ভুরু|eyebrow|bʰuru
-মজার|funny|mɔʤɑr
+ভেজা|wet||bheja
+ভেড়া|sheep|bʱeɽɑ/veɽɑ
+ভেস্তা|upset, thwarted|ˈbʱes.t̪aˑ
+ভোঁতা|dull (as a knife)||bhõta
+মজার|funny|mɔd͡ʒɑr
+মধ্য|middle, interior|mɔ̝d̪ːʱo
+ময়লা|dirty||môẏla
+ময়ূর|peacock|mɔjuɽ/mɔjuɾ/mɔjuɹ
+মরণ|death|mɒ.ɹɒn
+মরা|to die|ˈmɔɾa/ˈmɔɹa|môra
+মরিচ|chili pepper|moɾitʃ
+মলম|ointment|mɔlom
+মসৃণ|smooth||môśrin
+মস্তিষ্ক|brain|mɔst̪iʃko
+মহিলা|woman|ˈmɔɦiˌla|môhila
+মা|mother||ma
+মাংস|meat||maṅś
+মাকড়শা|spider|makɔɾʃɑ/makɔɽʃɑ
+মাকড়সা|spider|makɔɾʃɑ/makɔɽʃɑ
+মাখন|butter|mɑkʰɔn
+মাছ|fish|mɑtʃʰ/mɑs|mach
+মাছি|fly|ˈmatʃʰi/ˈmasi
+মাটি|earth||maṭi
+মাতৃভাষা|mother tongue|maːt̪.rɪ.bʱaː.ʂaː
+মাথা|head|mat̪ʰa|matha
+মানুষ|person, man|manuʃ|manuś
+মানে|meaning|mane
+মারা|to kill, hit||mara
+মাস|month|maːs̠
+মুক্তা|pear|mukta
+মুখ|face, mouth|mukʰ|mukh
+মুদি|grocer|ˈmu.d̪iˑ
+মুরগি|hen|murɡi
+মুরগী|hen|murɡi
+মুহাজির|emigrant, refugee|muhajir
 মূল|root|muːl
-মেয়ে|girl, woman|mee
-যখন|when|ʤɔkʰon
-যাত্রা|journey|ʤɑtrɑ
-যুদ্ধ|war|ʤuddʰo
+মূল্য|price, cost|ˈmulːɔ̝
+মৃত্যু|death|mrit̪t̪u
+মেকুর|cat|ˈmɛ.kuɾ/ˈmɛ.kuˑɾ
+মেঘ|cloud||meɡh
+মেজাজ|temperament|med͡ʒad͡ʒ
+মেয়ে|girl, daughter|ˈme.e
+মেয়েমানুষ|woman|mɛə.mɜː.nʊʃ
+মেরে ফেলা|to kill||mere phela
+মোছা|to wipe||mocha
+মোটা|fat, thick|ˈmoʈa|moṭa
+মোরগ|rooster|morɔɡ
+মোলায়েম|soft, tender|ˈmo.lä.eˑm
+মৌচাক|beehive|mou̯tʃak
+মৌসুম|season|mou̯ʃum
+মৌসুমি|seasonal|mou̯ʃumi
+যখন|when|d͡ʒɔkʰon
+যদি|if||jôdi
+যাওয়া|to go|ˈd͡ʒau̯a
+যাত্রা|journey|d͡ʒɑtrɑ
+যুক্তরাজ্য|UK|ˈd͡ʒuk.t̪ɔ̝ˑ ˌräd͡ʒ.d͡ʒɔ̝ˑ/ˈd͡zuk.t̪ɔˑ ˌräd͡z.d͡zɔˑ
+যুদ্ধ|war|d͡ʒuddʰo
+যুবক|young (men)|d͡ʒubɔk
+যুবতী|young (women)|d͡ʒubɔt̪i
 যেকেউ|anyone|d͡ʒe.keu̯
 রং|colour|rɔŋ
+রঙ|colour|rɔŋ
 রওয়া|to remain|rowɑ
+রক্ত|blood||rôkt
+রাং|tin|ɾaŋ
 রাঢ়|Radha
-রিকশা|rickshaw|rikʃɑ
+রাত|night||rat
+রাত্রি|night||ratri
+রাষ্ট্র|state, country|ɾaʃ.ʈɾɔ
+রাস্তা|road, street|ɾast̪a
+রাস্তা|road||raśta
+রিকশা|rickshaw|rik.ʃɑ
+রীতি|method, habit|ɾit̪i/ɽit̪i
 রুগী|ill, sick|ruɡiː
 রূপ|figure, form|ruːp
-লওয়া|to take|lɔowɑ
+রোগ|disease, sickness|ɾoɡ
+রোজা|fast|ɾoza
+লওয়া|to take|lɔo̯wɑ
+লক্ষ্মীপেঁচা|barn owl|lokːʰipæ̃ca
+লড়া|to fight|lɔɹa/lɔɽa|lôṛa
+লবণ|salt|lɔbon|lôbôṇ
+লবন|salt|lɔbon|lôbôn
+লম্বা|long||lômba
+লাইব্রেরী|library|lai̯bɾeɾi
+লাউ|gourd|lau̯
+লাখ|100,000|lɑːkʰ
+লাঠি|stick||laṭhi
 লান্‌চ|lunch|lɑnt͡ʃ
+লাভ|benefit|labʱ
+লাল|red||lal
 লিফ্ট|lift, elevator
+লেজ|tail||lej
+লেবু|lemon, lime|ˈlebu
+শক্ত|stiff, solid|ʃɔkt̪ɔ
+শঙ্খচূড়|king cobra|ˈʃɔŋkʰoˌtʃuɽ
+শয়তান|devil, demon|ʃɔjt̪an
+শহর|city, town|ʃɔɦɔɾ/ʃɔɦɔɽ
+শাড়ি|sari|ˈʃa.ɽ̟iˑ/ˈʃa.ɹiˑ
 শাপ|curse|ʃɑp
+শাবাশ|good job!|ʃabaʃ
+শামিয়ানা|tent, canopy|ʃamijana
+শামুক|snail|ʃamuk
+শালগম|turnip|ʃalɡɔm
+শিং|horn||śiṅ
+শিকড়|root||śikôṛ
+শিকার|hunt|ʃikar
+শিকারি|hunter|ʃikari
+শিক্ষা|learning, education|ʃikːʰɑ
+শিক্ষামূলক|educational|ʃikːʰamulɔk
+শুকনা|dry||śukna
 শুধু|only|ʃudʰu
-ষড়যন্ত্র|conspiracy|ʃɔɽod͡ʒɔntro (ɔ)
+শুমার|counting, calculation|ˈʃu.mɑɾ
+শুরু|start, beginning|ʃuɾu
+শুলফা|dill|ʃulpʰa
+শৈবাল|algae|ʃoi̯bal
+শোঁকা|to smell||śõka
+শোনা|to hear, listen to|ʃonɑ
+শোনা|to hear||śona
+শোয়া|to lie (as in a bed)||śoẏa
+শ্বাস নেওয়া|to breathe||śaś neoẏa
+শ্বাস|breathing|s̠äːs̠
+শ্মশ্রু|beard|ʃwɔʃɾu/ʃõsʃɾu
+ষড়যন্ত্র|conspiracy|ʃɔɽod͡ʒɔntro
+সংক্রামক|infectious, contagious|ʃɔŋkɾamɔk
+সংবাদ|news|ʃɔŋbɑd̪
 সকাল|morning|ʃɔkɑl
+সদর|centre, front|ʃɔd̪oɾ
+সদরদপ্তর|headquarters|ʃɔd̪oɾd̪ɔftoɾ
+সদাই|deal, bargain|ʃɔd̪ai̯
+সনদ|document|ʃɔnod̪
+সনদপত্র|certificate|ʃɔnod̪pɔt̪ɾo
 সন্ধ্যা|evening|ʃonddʰa
-সম্বন্ধে|about
+সফর|travel|sɔfor/ʃɔpʰor
+সব|all||śôb
+সবজি|vegetable|ʃɔbd͡ʒi/ʃɔbzi
+সবুজ|green||śôbuj
+সময়কাল|duration|ʃɔmɔjkal
+সমীরণ|wind, air|ʃomiɾɔn
+সমুদ্র|sea||śômudr
+সম্বন্ধে|about|ʃɔmmɔndʰe
+সরকার|government|ʃɔɾkaɾ
+সরীসৃপ|reptile|ˈs̠ɔ̝.ɾiˌs̠ːɾiˑp
+সলিল|water|ʃolil
+সাঁওতাল|Santal|ˈs̠ä̃o̯.t̪äˑl
+সাঁওতালি|Santali|ˈs̠ä̃o̯.t̪ä.liˑ
+সাঁতরানো|to swim||śãtôrano
 সাংঘাতিক|terrible|ʃɑŋɡʰɑtik
+সাঙঘাতিক|terrible|ʃɑŋɡʰɑtik
+সাগর|sea|ʃaɡɔɾ
+সাদা|white|ʃad̪a|śada
+সাপ|snake|ʃɑp|śap
+সাফ|clean|sapʰ/saf
+সাবান|soap|ʃaban
+সালাম|peace|salam
+সিগারেট|cigarette|siɡɑreʈ
+সিন্দুক|box, chest|ʃind̪uk
+সিন্ধু|ocean, sea|ʃind̪ʱu/ʃind̪u
+সিন্ধুঘোটক|walrus|ʃind̪ʱuɡʱoʈɔk/ʃind̪uɡoʈɔk
+সুন্দরী|beautiful women|ʃund̪ɔɾi
+সুলতান|sultan|sult̪an
+সূর্য|sun|ʃurd͡ʒo|śurjô
+সে|he, she, it (3sg)||śe
+সে|he, she|ˈʃe
+সোজা|straight||śoja
 স্কুল|school
-স্বামী|husband|ʃɑmiː
-স্মৃতি|memories|sriti
+স্তালিন|Stalin|ˈs̠t̪ä.liˑn
+স্নেহ|affection|ˈsneɦo
+স্ফটিক|crystal|ʃpʰoʈik
+স্বপ্ন|dream|ʃɔpno
+স্বামী|husband|ˈs̠ä.miˑ
+স্বাস্থ্য|health|ʃastʰjɔ
+স্বীকার করা|to hunt||śikar kôra
 স্মৃতি|memory|sriti
+স্রেফ|only, just|sɾef
+সৎ|honest|ˈsɔt̪
 সৎমা|step-mother|ʃɔtmɑ
+হকি|hockey|ˈɦɔ.kiˑ
+হঠাত্|suddenly|ɦɔʈʰat̪
 হঠাৎ|suddenly|hɔʈʰɑt
+হতাশা|depression, disappointment|ɦɔt̪ɑʃɑ
+হত্যা|to murder|ɦottɑ
+হয়রান|confused, bored|ɦɔe̯ɾan
 হরিণ|deer|horin
 হল|(student) hall|hɔl
-হাঁপান|to pant|hɑ̃pɑn
-হৃদয়|heart|hridɔj
-হোয়াটসঅ্যাপ|WhatsApp|hoyɑʈʃɔæp
-হ্যাঁ|yes|hæ̃
-কʼরে|after|(kôʼre)
-ʼপরে|above|(ʼpôre)
-
-
-আমি|I (1sg)||ami
-তুমি|you (2sg)||tumi
-আপনি|you (2sg)||apni
-সে|he, she, it (3sg)||śe
-আমরা|we (1pl)||amra
-তোমরা|you (2pl)||tomra
-আপনারা|you (2pl)||apnara
-তারা|they (3pl)||tara
-এ|this||e
-ও|that||o
-এখানে|here||ekhane
-ওখানে|there||okhane
-কে|who||ke
-কি|what||ki
-কোথায়|where||kothaẏ
-কখন|when||kôkhôn
-কেমন|how||kemôn
-না|not||na
-সব|all||śôb
-অনেক|many||ônek
-কিছু|some||kichu
-কম|few||kôm
-অন্য|other||ônjô
-এক|one||ek
-দুই|two||dui
-তিন|three||tin
-চার|four||car
-পাঁচ|five||pãcô
-বড়|big||bôṛ
-লম্বা|long||lômba
-চওড়া|wide||côoṛa
-মোটা|thick||moṭa
-ভারী|heavy||bhari
-ছোট|small||choṭ
-বেঁটে|short||bẽṭe
-চিপা|narrow||cipa
-পাতলা|thin||patla
-মহিলা|woman||môhila
-পুরুষ|man (adult male)||puruś
-মানুষ|man (human being)||manuś
-বাচ্চা|child||bacca
-বউ|wife||bôu
-জামাই|husband||jamai
-মা|mother||ma
-আম্মা|mother||amma
-বাবা|father||baba
-আব্বা|father||abba
-জন্তু|animal||jôntu
-মাছ|fish||mach
-পাখি|bird||pakhi
-কুকুর|dog||kukur
-উকুন|louse||ukun
-সাপ|snake||śap
-কৃমি|worm||krimi
-গাছ|tree||gach
-বন|forest||bôn
-লাঠি|stick||laṭhi
-ফল|fruit||phôl
-বিচি|seed||bici
-পাতা|leaf||pata
-শিকড়|root||śikôṛ
-ছাল|bark (of a tree)||chal
-ফুল|flower||phul
-গাস|grass||gaś
-দড়ী|rope||dôṛi
-চামড়া|skin||camṛa
-মাংস|meat||maṅś
-গোশ্ত|meat||gośt
-রক্ত|blood||rôkt
-হাড়|bone||haṛ
-চর্বি|fat (noun)||côrbi
-ডিম|egg||ḍim
-শিং|horn||śiṅ
-লেজ|tail||lej
-পর|feather||pôr
-চুল|hair||cul
-মাথা|head||matha
-কান|ear||kan
-চোখ|eye||cokh
-নাক|nose||nak
-মুখ|mouth||mukh
-দাঁত|tooth||dãtô
-জীভ|tongue (organ)||jibh
-জিহবা|tongue (organ)||jihba
-নখ|fingernail||nôkh
-পা|foot||pa
-পা|leg||pa
-হাঁটু|knee||hãṭu
-হাত|hand||hat
-পাখা|wing||pakha
-পেট|belly||peṭ
-ভুড়ী|guts||bhuṛi
-গলা|neck||gôla
-পিঠ|back||piṭh
-বুক|breast||buk
-হৃদয়|heart||hridôẏ
-কলজে|liver||kôlje
-পান|to drink||pan
-খাওয়া|to eat||khaoẏa
-কামড়ানো|to bite||kamṛano
-চোষা|to suck||cośa
-ছ্যাপ|to spit||cchap
-থুতু|to spit||thutu
-বমি|to vomit||bômi
-ফুঁ দেত্তয়া|to blow||phũ dettẏa
-শ্বাস নেওয়া|to breathe||śaś neoẏa
-হাসা|to laugh||haśa
-দেখা|to see||dekha
-শোনা|to hear||śona
-জানা|to know||jana
-ভাবা|to think||bhaba
-শোঁকা|to smell||śõka
-ভয় করা|to fear||bhôẏ kôra
-ডরা|to fear||ḍôra
-ঘুমানো|to sleep||ghumano
-বাঁচা|to live||bãca
-মরা|to die||môra
-মারা|to kill||mara
-মেরে ফেলা|to kill||mere phela
-লড়া|to fight||lôṛa
-স্বীকার করা|to hunt||śikar kôra
-মারা|to hit||mara
-কাটা|to cut||kaṭa
-বিভক্ত করা|to split||bibhôkt kôra
-ছোরা মারা|to stab||chora mara
-খামচানো|to scratch||khamcano
-খোঁড়ানো|to dig||khõṛano
-সাঁতরানো|to swim||śãtôrano
-ওড়া|to fly||oṛa
-হাঁটা|to walk||hãṭa
-আসা|to come||aśa
-শোয়া|to lie (as in a bed)||śoẏa
-বসা|to sit||bôśa
-দাঁড়ানো|to stand||dãṛano
-ঘোরা|to turn (intransitive)||ghora
-পড়া|to fall||pôṛa
-দেত্তয়া|to give||dettẏa
-ধরা|to hold||dhôra
-চেপ-|to squeeze||cepô-
-ঘষা|to rub||ghôśa
-ধোয়া|to wash||dhoẏa
-মোছা|to wipe||mocha
-টানা|to pull||ṭana
-ঠেলা|to push||ṭhela
-ফেলা|to throw||phela
-বাঁধা|to tie||bãdha
-টাঁকা|to sew||ṭãka
-গোনা|to count||gona
-বলা|to say||bôla
-গাওয়া|to sing||gaoẏa
-খেলা|to play||khela
-ভাসা|to float||bhaśa
-বহা|to flow||bôha
-জমা|to freeze||jôma
-ফাঁপা|to swell||phãpa
-সূর্য|sun||śurjô
-চাঁদ|moon||cãdô
-তারা|star||tara
-পানি|water||pani
-জল|water||jôl
-বৃষ্টি|rain||briśṭi
-নদী|river||nôdi
-পুকুর|lake||pukur
-সমুদ্র|sea||śômudr
-নুন|salt||nun
-লবন|salt||lôbôn
-পাথর|stone||pathôr
-বালি|sand||bali
-ধুলো|dust||dhulo
-মাটি|earth||maṭi
-মেঘ|cloud||megh
-কুয়াশা|fog||kuẏaśa
-আকাশ|sky||akaś
-বাতাস|wind||bataś
-বরফ|snow||bôrôph
-বরফ|ice||bôrôph
-ধুঁয়ো|smoke||dhũẏo
-আগুন|fire||agun
-ছাই|ash||chai
-পোরা|to burn||pora
-জলা|to burn||jôla
-রাস্তা|road||raśta
-পথ|road||pôth
-পাহাড়|mountain||pahaṛ
-লাল|red||lal
-সবুজ|green||śôbuj
 হলুদ|yellow||hôlud
-সাদা|white||śada
-কালো|black||kalo
-রাত্রি|night||ratri
-রাত|night||rat
-দিন|day||din
-বছর|year||bôchôr
-গরম|warm||gôrôm
-ঠাণ্ডা|cold||ṭhanḍa
-ভরা|full||bhôra
-নতুন|new||nôtun
-পুরানো|old||purano
-ভালো|good||bhalo
-খারাপ|bad||kharap
-পচা|rotten||pôca
-ময়লা|dirty||môẏla
-সোজা|straight||śoja
-গোল|round||gol
-চোক্ষা|sharp (as a knife)||cokkha
-ভোঁতা|dull (as a knife)||bhõta
-মসৃণ|smooth||môśrin
-ভেজা|wet||bheja
-শুকনা|dry||śukna
-ঠিক|correct||ṭhik
-কাছে|near||kache
-দূর|far||dur
-ডান|right||ḍan
-বাঁ|left||bã
--এ|at||-e
--এ|in||-e
--র সাথে|with||-rô śathe
--র সঙ্গে|with||-rô śôṅge
-আর|and||ar
-ও|and||o
-এবং|and||ebôṅ
-যদি|if||jôdi
-কারণ|because||karôn
-নাম|name||nam
+হাঁটা|to walk|ˈɦaʈa|hãṭa
+হাঁটু|knee|ˈɦaʈu/ˈɦãʈu|hãṭu
+হাঁপান|to pant|hɑ̃pɑn
+হাট|market, bazaar|ɦaʈ̟
+হাড়|bone||haṛ
+হাত-পা|limbs|ɦat̪pa
+হাত|hand|ɦat̪
+হাতি|elephant|ɦɑt̪i
+হামলা|attack|ɦam.la
+হাসা|to smile|ɦɑʃɑ|haśa
+হিংসা|jealousy|ɦiŋʃa
+হিজড়া|hijra|ˈɦid͡ʒɽa/ˈɦid͡ʒɹa
+হিস্সা|part, portion|ɦiʃʃa
+হৃদয়|heart|hridɔj|hridôẏ
+হোয়াটসঅ্যাপ|WhatsApp|hoyɑʈʃɔæp
+হ্যাঁ|yes|hæ̃ː
 
-খাননা|not eat|kʰɑnnɑ
-করছ|doing|korcʰo
-আস্থা|trust|ɑʃtʰɑ
+উচ্চারণ|pronunciation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
