@@ -721,8 +721,7 @@ autoExpandExamples.bn = `
 রাত|night||rat
 রাত্রি|night||ratri
 রাষ্ট্র|state, country|ɾaʃ.ʈɾɔ
-রাস্তা|road, street|ɾast̪a
-রাস্তা|road||raśta
+রাস্তা|road, street|ɾast̪a|raśta
 রিকশা|rickshaw|rik.ʃɑ
 রীতি|method, habit|ɾit̪i/ɽit̪i
 রুগী|ill, sick|ruɡiː
@@ -855,7 +854,7 @@ autoExpandExamples.bn = `
 হ্যাঁ|yes|hæ̃ː
 
 উচ্চারণ|pronunciation
-
+সদাত্মা||ʃadɑttɑ
 
 
 
