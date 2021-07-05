@@ -184,6 +184,13 @@ function addUsageAdvice (script) {
 	}
 
 
+function addUsageAdvice (script) {
+	// Add a para to the intro 
+	
+	document.getElementById('usage').outerHTML = '<p class="instructionsx" style="line-height:1.4"><strong style="font-size:120%;">This is an interactive document:</strong> Click/tap on characters in lists with coloured backgrounds, and on <span style="color:teal;">link text</span> for character names and code point values to reveal detailed information for each character. (By default, this also happens as the cursor moves over characters in lists, but the floating menu to the right allows you to turn that off, if you prefer.) The same information also appears in the companion document, <a href="block" target="_blank" class="linkHighlightx">'+script+' character notes</a>. In addition, you can click/tap on <span class="ex">coloured</span> examples and on figures to see a list of the characters they contain.</p>'
+	}
+
+
 function addAnalytics () {
     // add the stuff at the bottom to generate lists and the index
     
