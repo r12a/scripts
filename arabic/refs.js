@@ -123,13 +123,6 @@ reflist = {
 "lang": new Set(['ur']),
 },
 
-"sle": {
-"authors": "Swaran Lata",
-"title":"Encoding of additional characters in Unicode for representation of Kashmiri",
-"url":"https://www.unicode.org/L2/L2009/09311-kashmiri-ltr-from-swaran-lata.pdf",
-"lang": new Set(['ks']),
-},
-
 "l": {
 "authors": "Library of Congress",
 "title":"Arabic romanization table",
@@ -215,6 +208,14 @@ reflist = {
 "url":"https://www.unicode.org/L2/L2018/18094-arabic-hausa.pdf",
 "lang": new Set(['ha']),
 "reviewed":true
+},
+
+"mkr": {
+"authors": "M K Raina",
+"title":"How To Read and Write Kashmiri in Nastaliq Script",
+"url":"https://mkraina.com/wp-content/uploads/2020/05/How-to-Read-Write-Kashmiri-in-Nastalique-Script.pdf",
+"lang": new Set(['ks']),
+"reviewed":false
 },
 
 "j": {
