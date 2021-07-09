@@ -137,7 +137,6 @@ autoExpandExamples.ks = `
 زَبان|language, tongue|zabaːn
 زَل|water|zal
 زَنان|woman, wife|zanaːn
-زَنان|woman|zanaːn
 زَنْگ|leg|zãɡ
 زُر|grandchild|zur
 زٔنؠ|woman|zənʲ
@@ -210,7 +209,6 @@ autoExpandExamples.ks = `
 مَہارازٕ|bridegroom|mahaːraːzɨ
 مَہاریٚنؠ|bride|mahaːrenʲ
 مٔچھ|fly (insect)|mət͡ʃʰ
-مٔچھ|fly|mət͡ʃʰ
 مٔہنیُْو|man|məhnjuw
 مٕتھٕر|urine|mɨtʰɨr
 مٲج|mother|məːd͡ʒ
@@ -238,7 +236,7 @@ autoExpandExamples.ks = `
 وانْگُن|aubergine|wãːɡun
 وورٕ بوے|step-brother|woːrɨ boːj
 وورٕ بیٚنہِ|step-sister|woːrɨ beni
-ووٗنْٹ|camel m.|wũːʈ
+ووٗنٛٹ|camel m.|wũːʈ
 ووٗںْٹ|camel m.|wũːʈ
 ووٗنْٹِنؠ|camel f.|wũːʈinʲ
 وَدُن|to cry, weep|ʋadun
@@ -348,7 +346,6 @@ autoExpandExamples.ks = `
 گَروول|husband|ɡarwoːl
 گَرُن|to sharpen|garun
 گَگُر|rat m.|gagur
-گَگُر|rat|gagur
 گَگٕر|rat f.|gagɨr
 گُر|horse|gur
 گُل|flower|gul
@@ -388,7 +385,7 @@ autoExpandExamples.ks = `
 
 
 تٟر|cold|tɨːr
-
+بھَرَت|India|barat
 
 
 
