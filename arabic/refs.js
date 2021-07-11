@@ -52,7 +52,7 @@ reflist = {
 "date": "1996",
 "publisher":"Oxford University Press",
 "isbn":"0-19-507993-0",
-"lang": new Set(['ar']),
+"lang": new Set(['ar','ks']),
 },
 
 "rdb": {
