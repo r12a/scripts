@@ -87,7 +87,7 @@ autoExpandExamples.ks = `
 بیْور|cat (m)|bjoːr
 بیْٲر|cat (f)|bjəːr
 ترْٕہ|thirty|trɨh
-ترْٕے|woman|trɨj
+ترْٕے|woman|trɨj
 ترْۆوُہ|twenty-three|trowuh
 تَرُن|to cross, visit|tarun
 تَگُن|to know (skill)|tagun
