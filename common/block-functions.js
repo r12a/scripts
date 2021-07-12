@@ -794,7 +794,7 @@ function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
 		dec = parseInt(hex, 16)
 		cchar = String.fromCodePoint(dec)
 		
-		if (spreadsheetRows[cchar]) {		
+		if (spreadsheetRows[cchar]) {
 			out = '<div class="letter '+langClass+'">'
 
 			// show shape from shape column (use for cursive or conjunct text)
@@ -821,8 +821,8 @@ function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
 			if (spreadsheetRows[cchar][cols['transLoc']]) out += '<span class="localtrans trans">'+spreadsheetRows[cchar][cols['transLoc']]+'</span>'
 
 			out += '</p>'
-		
-			// if a character is in the spreadsheet, but not in the xx-details file, add it to the missingDetails list
+
+            // if a character is in the spreadsheet, but not in the xx-details file, add it to the missingDetails list
 			if (typeof charDetails[cchar] === 'undefined') missingDetails += ' '+cchar
 			else if (charDetails[cchar].trim() !== '') out += charDetails[cchar]
 
@@ -893,7 +893,7 @@ function convertTranscriptionData (node) {
 function convertTranscriptionData (lang) {
 	 // other transcriptions
 	var insertTranscriptions = document.querySelectorAll('.letter.'+lang+' .insertTranscription')
-	console.log('Transcriptions to check: ',insertTranscriptions.length)
+	console.log("For language ",lang,'Transcriptions to check: ',insertTranscriptions.length)
 	
 	// do the inserted transcription locations
 	for (var t=0;t<insertTranscriptions.length;t++) {
