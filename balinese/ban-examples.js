@@ -1,5 +1,5 @@
 /*
-@ Source: 
+@ Source: https://en.wiktionary.org/wiki/Category:Balinese_terms_with_IPA_pronunciation
 § 'Noto Sans Balinese'
 # 200
 ~ ltr
@@ -11,32 +11,257 @@
 autoExpandExamples.ban = `
 
 
-ᬅᬓ᭄ᬱᬭ|alphabet|(akśara)
-ᬒᬁᬱᬦ᭄ᬢᬶ᭞ᬱᬦ᭄ᬢᬶ᭞ᬱᬦ᭄ᬢᬶ᭞ᬒᬁ|May peace be everywhere|(omsanti,santi,santi,om)
-ᬒᬁᬲ᭄ᬯᬲ᭄ᬢ᭄ᬬᬲ᭄ᬢᬸ|God bless you|(om swastiastu)
-ᬓᬃᬡ|ear|(karna)
-ᬓᬧᬮ᭄|ship|(kapal)
+ᬅᬓ᭄ᬱᬭ|alphabet||akśara
+ᬒᬁᬱᬦ᭄ᬢᬶ᭞ᬱᬦ᭄ᬢᬶ᭞ᬱᬦ᭄ᬢᬶ᭞ᬒᬁ|May peace be everywhere||omsanti,santi,santi,om
+ᬒᬁᬲ᭄ᬯᬲ᭄ᬢ᭄ᬬᬲ᭄ᬢᬸ|God bless you||om swastiastu
+ᬓᬃᬡ|ear||karna
+ᬓᬧᬮ᭄|ship||kapal
 ᬓᬵᬤᭂᬧ᭄|sold|kādĕp
-ᬓᬺᬰ᭄ᬡ|Krishna|(Krĕsna)
-ᬓᭂᬋᬂ|eat a lot|(kěrěng)
-ᬓ᭄ᬭᬫ|member|(krama)
-ᬘᬓ᭄ᬭ|disk (cakra)
-ᬘᬾᬂᬘᬾᬂ|musical instrument|(cengceng)
-ᬢᬍᬃ|therefore|(taler)
-ᬤᬳᬾᬭᬄ|development|(daerah)
-ᬦᬶᬃᬛᬭ|pond|(nirjhara)
-ᬧᬓ᭄ᬋᬋᬄ|Mr Rereh|(Pak Rěrěh)
-ᬧᬓ᭄ᬭᬫᬦ᭄|membership|(pakraman)
-ᬧᬓ᭄ᬲ|force|(paksa)
-ᬧᬓ᭄‌ᬭᬫᬦ᭄|Mr Raman|(Pak Raman)
-ᬩᬗ᭄ᬓᬸᬂ|pig|(bangkung)
+ᬓᬺᬰ᭄ᬡ|Krishna||Krĕsna
+ᬓᭂᬋᬂ|eat a lot||kěrěng
+ᬓ᭄ᬭᬫ|member||krama
+ᬘᬓ᭄ᬭ|disk||cakra
+ᬘᬾᬂᬘᬾᬂ|musical instrument||cengceng
+ᬢᬍᬃ|therefore||taler
+ᬤᬳᬾᬭᬄ|development||daerah
+ᬦᬶᬃᬛᬭ|pond||nirjhara
+ᬧᬓ᭄ᬋᬋᬄ|Mr Rereh||Pak Rěrěh
+ᬧᬓ᭄ᬭᬫᬦ᭄|membership||pakraman
+ᬧᬓ᭄ᬲ|force||paksa
+ᬧᬓ᭄‌ᬭᬫᬦ᭄|Mr Raman||Pak Raman
+ᬩᬗ᭄ᬓᬸᬂ|pig||bangkung
 ᬩᬮᬶ᭞᭓᭞ᬚᬸᬮᬶ᭞᭑᭙᭘᭒᭟|Bali, 3 July 1982
-ᬩ᭄ᬭ᭄ᬬᬕ᭄|laughter|(bryag)
-ᬫᬁ|holy letter|(mang)
-ᬫᬗᬄ|logic|(mangah)
-ᬱᬫ᭄ᬧᬶᬂ|side|(samping)
+ᬩ᭄ᬭ᭄ᬬᬕ᭄|laughter||bryag
+ᬫᬁ|holy letter||mang
+ᬫᬗᬄ|logic||mangah
+ᬱᬫ᭄ᬧᬶᬂ|side||samping
 ᬦᬗ᭄ᬓ|jackfruit|naŋka
 ᬤᬾᬯ|god|dewa
+
+ᬅᬃᬘᬵ|statue|ar.t͡ʃə
+ᬅᬃᬣ|wealth|artə
+ᬅᬓ᭄ᬲᬭ|letter, alphabet|aksarə
+ᬅᬗ᭄ᬕᬭ|Tuesday|aŋɡarə
+ᬅᬗ᭄ᬰ|inheritance|aŋsə
+ᬅᬡ᭄ᬥ|egg|andə
+ᬅᬥᬶ|main, principal|adi
+ᬅᬦ᭄ᬤ|sickness|andə
+ᬅᬦ᭄ᬥ|blind|andə
+ᬅᬭᬶ|ending, enemy|ari
+ᬅᬯᬢᬵᬭ|avatar|awatarə
+ᬅᬱ᭄ᬝ|eight|astə
+ᬅᬲ᭄ᬢ|to be|astə
+ᬅᬲ᭄ᬣ|bone|astə
+ᬆᬤᬶ|first|adi
+ᬉᬱᬥ|traditional medecine|usadə
+ᬓᬗᭂᬦ᭄|desirous, eager|ˈka.ŋən
+ᬓᬚ|towards the mountain|kaˈdʒə
+ᬓᬦ|bracelet|kanə
+ᬓᬦᬵ|girl|kanə
+ᬓᬭ|finger|karə
+ᬓᬮ|time|kalə
+ᬓᬮᬵ|snare|kalə
+ᬓᬵᬭ|act, action|karə
+ᬓᬹᬝ|fort|kutə
+ᬕᬕ|field|ɡaɡə
+ᬕᬡ|count, group|ɡanə
+ᬕᬢ|gone|ɡatə
+ᬕᬦ|sky|ɡanə
+ᬕᬵᬕᬵ|crow|ɡaɡə
+ᬕᬵᬦ|song|ɡanə
+ᬕᭀᬭ|gold|ɡorə
+ᬕᭂᬢᬶᬄ|blood|ɡətih
+ᬕᭂᬦᬶ|fire|ɡəni
+ᬖᬝ|pot|ɡatə
+ᬖᬦ|cloud|ɡanə
+ᬖᭀᬭ|giant|ɡorə
+ᬘᬾᬮᬾᬂ|pig|ˈcɛlɛŋ
+ᬘᭂᬦᬶᬓ᭄|small|tʃənik
+ᬚᭂᬍᬫ|people, human|d͡ʒələma
+ᬢᬭ|extra|tarə
+ᬢᬭᬵ|star|tarə
+ᬢᬷᬃᬢ|holy water|tirtə
+ᬢᬸᬃ|again|tur
+ᬢᬹᬃ|knee|tur
+ᬢᭀᬕᭀᬕ᭄|statue|toɡoɡ
+ᬢᭀᬬ|water|tojə
+ᬤᬍᬫ᭄|deep|daləm
+ᬤᬦ|sick|danə
+ᬤᬦ᭄ᬢ|tooth|dantə
+ᬤᬯᬸᬄ|west|dawuh
+ᬤᬰ|ten|dasə
+ᬤᬰᬶ|ten|dasi
+ᬤᬲᬶ|servant|dasi
+ᬤᬵᬦ|alms, giving|danə
+ᬤᬵᬦ᭄ᬢ|soft|dantə
+ᬤᬵᬰ|fisherman|dasə
+ᬤᬵᬲ|slave|dasə
+ᬤᬶᬦ|day|dinə
+ᬤᬶᬧ|king|dipə
+ᬤᬷᬦ|miserable|dinə
+ᬥᬃᬫ|dharma, religion|darmə
+ᬥᬦ|wealth|danə
+ᬥᬯᬸᬄ|time|dawuh
+ᬥᬷᬧ|lamp, torch|dipə
+ᬦᬦ|head|nana
+ᬦᬦᬵ|broken|nana
+ᬦᬭ|person|narə
+ᬦᬵᬝ|dance|natə
+ᬦᬵᬣ|lord, master|natə
+ᬦᬵᬭ|water|narə
+ᬧᬢᬶ|death|pati
+ᬧᬢ᭄ᬢᬶ|army|pati
+ᬧᬤ|earth|padə
+ᬧᬥ|same|padə
+ᬧᬮ|arm|palə
+ᬧᬵᬤ|foot|padə
+ᬧᬵᬮ|herdsman|palə
+ᬧᬸᬧᬸ|result|pupu
+ᬧᬸᬧᬹ|thigh|pupu
+ᬧᬸᬮᭀ|island|pulo
+ᬧᬾᬜ᭄ᬚᭀᬃ|decorated bamboo pole|peɲd͡ʒor
+ᬧᭂᬓᭂᬦ᭄|market|pəkən
+ᬨᬮ|result|palə
+ᬩᬜᬸ|water|baɲu
+ᬩᬧ|father|bapə
+ᬩᬸᬢ|blind|butə
+ᬩᭂᬦ᭄ᬤᬾᬰ|village chief|bəndesə
+ᬪᬓ᭄ᬢᬶ|respect, piety|bakti
+ᬪᬵᬱᬵ|language|basa
+ᬪᬹᬢ|wicked spirit|butə
+ᬫᬃᬕ|road|marɡə
+ᬫᬢ|eye|matə
+ᬫᬢ᭄ᬢ|furious|matə
+ᬫᬣ|love|matə
+ᬫᬦᬯ|if|manawə
+ᬫᬭ|new, recent|marə
+ᬫᬵᬦᬯ|human|manawə
+ᬫᬵᬬ|supernatural|majə
+ᬫᬵᬬᬵ|shadow|majə
+ᬫᬵᬭ|danger|marə
+ᬫᭀᬖ|soon|moɡə
+ᬫᭀᬖᬵ|in the end|moɡə
+ᬬᬸᬤ᭄ᬥ|war|yudə
+ᬬᬸᬥ|weapon|yudə
+ᬭᬕ|body|raɡə
+ᬭᬚ|king|rad͡ʒə
+ᬭᬢ|flat|ratə
+ᬭᬣ|carriage|ratə
+ᬭᬵᬕ|lust, love|raɡə
+ᬭᬵᬚ|rain|rad͡ʒə
+ᬭᬵᬣ|love|rasə
+ᬭᬵᬲ|taste|rasə
+ᬮᬭ|sick|larə
+ᬮᬶᬫ|five|limə
+ᬯᬢᬂ|trunk|wataŋ
+ᬯᬭ|superior|warə
+ᬯᬮᬸ|widow|walu
+ᬯᬮᬹ|pumpkin, gourd|walu
+ᬯᬰ|power, authority|wasə
+ᬯᬵᬢᬂ|cause|wataŋ
+ᬯᬵᬭ|day|warə
+ᬯᬵᬲ|staying|wasə
+ᬯᬸᬯᬸᬲ᭄|speak|ʋuʋus/wuwus
+ᬯ᭄ᬯᬭ|present, available|warə
+ᬰᬢ|hundred|satə
+ᬰᬦ᭄ᬢᬶ|peace, tranquility|santi
+ᬰᬧ|curse|sapə
+ᬰᬭ|arrow|sarə
+ᬰᬭᬢ᭄|Spring|sarat
+ᬰᬵᬓᬵ|branch|sakə
+ᬰᬵᬲ᭄ᬢ᭄ᬭ|writing|sastrə
+ᬰᬶᬓᬶ|peacock|siki
+ᬰᬶᬮ|conduct|silə
+ᬰᬶᬮᬵ|stone|silə
+ᬰᬸᬪ|good, auspicious|subə
+ᬰᬹᬭ|brave, hero|surə
+ᬰᬹᬮ|weapon|sulə
+ᬰᭀᬘ|clean|sot͡ʃə
+ᬰ᭄ᬯ|dog|swə/swa
+ᬰ᭄ᬯᬭ|prime, major|swarə
+ᬲᬓ|pillar|sakə
+ᬲᬗ᭄ᬕ|to support|saŋɡə
+ᬲᬗ᭄ᬖ|group|saŋɡə
+ᬲᬢ|bird|satə
+ᬲᬧ|who|sapə
+ᬲᬫᬭ|battle|samarə
+ᬲᬭ|water|sarə
+ᬲᬭᬢ᭄|weight|sarat
+ᬲᬭᬶ|milk|sari
+ᬲᬵᬭ|power|sarə
+ᬲᬵᬭᬶ|flower|sari
+ᬲᬵᬲ᭄ᬢ᭄ᬭ|arrow|sastrə
+ᬲᬶᬓᬶ|one|siki
+ᬲᬶᬤ|wound|sidə
+ᬲᬶᬤ᭄ᬥ|accomplished|sidə
+ᬲᬶᬮ|cross-legged|silə
+ᬲᬸᬢ|son|sutə
+ᬲᬸᬢᬵ|daughter|sutə
+ᬲᬸᬩ|already|subə
+ᬲᬸᬭ|deity|surə
+ᬲᬸᬭᬵ|liquor|surə
+ᬲᬸᬮ|sick|sulə
+ᬲᬹᬢ|driver|sutə
+ᬲᬾᬢ᭄ᬭ|graveyard, cemetery|se.tra
+ᬲᭀᬘ|gem|sot͡ʃə
+ᬲᭂᬦ᭄ᬢᬦ|descendant|səntanə
+ᬲ᭄ᬫᬭ|love|smarə/səmarə
+ᬲ᭄ᬯ|self|swə/swa
+ᬲ᭄ᬯᬭ|sound|swarə
+ᬳᬤᬶ|sibling|adi
+ᬳᬧᬶ|fire|api
+ᬳᬭᬶ|younger sibling|ari
+ᬳᬮᬲ᭄|forest|alas
+ᬳᬲ᭄ᬢ|hand|astə
+ᬳᬸᬓᬸ|salt|uku
+ᬳᬸᬯᬸᬲ᭄|already|uʋus/uwus
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 `
