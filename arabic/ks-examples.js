@@ -387,6 +387,13 @@ autoExpandExamples.ks = `
 تٟر|cold|tɨːr
 بھَرَت|India|barat
 
+رَنْگ|colour|rãɡ
+برَْگ|blue heron|brag
+بیْور|cat|bjoːr
+وانْگُن|aubergine|waː̃gun
+ٹَنْگ|pear|tãg
+کرْال|potter|kraːl
+پھررَْست|poplar tree|pʰrast
 
 
 
