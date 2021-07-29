@@ -249,7 +249,7 @@ reflist = {
 "pages":"365-389",
 "isbn":"978-1-936213-16-0.",
 "url":"https://www.unicode.org/versions/Unicode13.0.0/ch09.pdf",
-"lang": new Set(['ar','ha','ks']),
+"lang": new Set(['ar','ha','ks','ur']),
 },
 
 "uwa": {
