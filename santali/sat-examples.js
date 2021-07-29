@@ -1,5 +1,6 @@
 /*
 @ Source: 
+@ Source: https://en.wiktionary.org/wiki/Category:Santali_terms_with_IPA_pronunciation
 § 'Noto Sans Ol Chiki'
 # 200
 ~ ltr
@@ -37,7 +38,6 @@ autoExpandExamples.sat = `
 ᱢᱤᱫ|one||mit’
 ᱵᱟᱨ|two||bar
 ᱯᱮ|three||pe
-ᱯᱩᱱ|four||pun
 ᱢᱚᱬᱮ|five|mɔɳe|môṇe
 ᱛᱩᱨᱩᱭ|six|turuj|turuy
 ᱮᱭᱟᱭ|seven|ejaj|eyay
@@ -96,6 +96,45 @@ autoExpandExamples.sat = `
 ᱟᱠᱟᱫᱼᱟ|?|akat|akat’
 ᱦᱤᱡᱩᱜᱼᱟ|come|hijuka|hijuk’a
 ᱥᱩᱱᱭᱚ|zero|sunjɔ
+
+ᱚᱡᱚ|grandfather|ɔd͡ʒɔ
+ᱟᱛᱳ|village|ɔto
+ᱡᱟᱝ|bone|jaŋ/ɖʒaŋ/d͡ʒa(ː)ŋ/ɟaŋ
+ᱥᱮᱝᱜᱮᱞ|fire|seŋɡel/sɛŋɡɛl
+ᱯᱳᱱ|four|poːn
+ᱳᱞ ᱪᱮᱢᱮᱫ|Ol Cemet|ol cemetˈ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 `
