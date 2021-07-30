@@ -1286,7 +1286,7 @@ autoExpandExamples.ur = `
 یہ|he, she, it|jeːɦ
 ۲٬۵۲۴٫۲۳|2,524.23
 
-
+اُردُو‌ حُرُوفِ ‌تَہَجِّی|Urdu alphabet|urduː ɦuruːf ɛ təɦɛd͡ʒiː
 
 
 
