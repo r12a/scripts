@@ -55,13 +55,6 @@ reflist = {
 "lang": new Set(['ar','ks']),
 },
 
-"rdb": {
-"authors": "Richard Delacy",
-"title":"Beginner's Urdu Script",
-"isbn":"0-340-86028-6",
-"lang": new Set(['ur']),
-},
-
 "ub": {
 "authors": "Richard Delacy",
 "title":"Beginner's Urdu Script",
@@ -300,6 +293,13 @@ reflist = {
 "title":"Basmala",
 "url":"http://en.wikipedia.org/wiki/Basmala",
 "lang": new Set(['ar']),
+},
+
+"we": {
+"authors": "Wikipedia",
+"title":"Ezāfe",
+"url":"http://en.wikipedia.org/wiki/Ezāfe",
+"lang": new Set(['ur']),
 },
 
 "whl": {
