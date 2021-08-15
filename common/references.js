@@ -34,7 +34,15 @@ function createReferencesSTABLE () {
 
 
 
+/* NOTE
 
+window.langSet is set in the refs.js file
+
+if createReferences is being used for a *block file* where window.langSet is true,
+then add the following line just below the ref.js inclusion in the block source file:
+<script>window.langSet = false </script>
+
+*/
 
 function createReferences (lang) {
 	// creates the content of the references section from the refs.js file
@@ -60,7 +68,7 @@ function createReferences (lang) {
 	
 	for (ref in reflist) {
 		//if (! usedRefs.has(ref)) continue
-		if (window.langSet && ! reflist[ref].lang.has(lang)) continue
+		if (window.langSet && lang !== 'all' && ! reflist[ref].lang.has(lang)) continue
 		counter++
 		out += '<p>'
 		//out += '<i class="fn">'+ref+'</i>'

@@ -10,7 +10,7 @@ function initialise (base, dir) {
     addLangInfo()
     listCharsWithNotes()
     addUnicodeNotes()
-	if (typeof refs !== 'undefined') createReferences()
+	if (typeof refs !== 'undefined') createReferences('all')
     }
 
 
