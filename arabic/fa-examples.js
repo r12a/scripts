@@ -82,7 +82,7 @@ autoExpandExamples.fa = `
 تنه|bark (of a tree)|tæne|tane
 گل|flower|gol|gol
 چمن|grass|t͡ʃæmæn|čaman
-علف|grass|'ælæf|'alaf
+علف|grass, hay|ʔælæf
 نخ|rope|næx|nax
 پوست|skin|puːst|pust
 گوشت|meat|guːʃt|gušt
@@ -350,7 +350,7 @@ autoExpandExamples.fa = `
 امروزه||
 امسال||
 امشب||
-امضاء||
+امضاء|signature|emzɒː
 املای نانوشته غلط ندارد|an unwritten dictation has no errors|(ʔ)emlɒːje nɒːnəveʃte ɣælæt nædɒːɾæd
 امکان||
 امید|hope|omiːd
@@ -407,7 +407,7 @@ autoExpandExamples.fa = `
 انگنار||
 انگور||
 انگیختن||
-ان‌شاءالله||
+ان‌شاءالله|god willing|enʃɒːʔællɒːh
 اهریمن||
 اهل ایمان||
 اهل درد||
@@ -676,7 +676,7 @@ autoExpandExamples.fa = `
 به وجود آوردن||
 به وجود اومدن|to appear, come into existence|be voˌdʒuːd uːmæˈdæn
 به کار بردن||
-بهاءالله||
+بهاءالله|Bahá'u'lláh|bæhɒːʔollɒːh
 بهار||
 بهاری||
 بهبود||
@@ -958,7 +958,7 @@ autoExpandExamples.fa = `
 تودری||
 تور||
 توریستی||
-توزیع||
+توزیع|distribution|tʰoʊ̯ˈziː(ʔ)
 توسط||
 توسعه||
 توسکا||
@@ -968,7 +968,7 @@ autoExpandExamples.fa = `
 توصیه||
 توضیح||
 توضیح دادن||
-توقع||
+توقع|expectation|tævæɢɢoʔ
 تولد||
 تولید||
 تونس||
@@ -1073,7 +1073,7 @@ autoExpandExamples.fa = `
 جم||
 جمال||
 جمشید||
-جمع||
+جمع|crowd, plural (grammar)|d͡ʒæ(ː)m(ʔ)
 جمعاً|in full, in total|d͡ʒæmʔæn
 جمعه||
 جمعیت||
@@ -1495,8 +1495,8 @@ autoExpandExamples.fa = `
 دعا||
 دعوت||
 دغد||
-دفاع||
-دفاع کردن||
+دفاع|defense|defɒːʔ
+دفاع کردن|to defend|defɒːʔ kæɾdæn
 دفتر||
 دفعه||
 دقت||
@@ -1615,7 +1615,7 @@ autoExpandExamples.fa = `
 رابطه||
 راجستان||
 راجستانی||
-راجع به||
+راجع به|regarding, about|rɒːˈd͡ʒe(ʔ)be
 راحت||
 رازی||
 راس||
@@ -1633,7 +1633,7 @@ autoExpandExamples.fa = `
 رایانه||
 رایگان||
 رباعی||
-ربع||
+ربع|a quarter|ɾobʔ
 ربودن||
 رتیل||
 رحیم||
@@ -1659,7 +1659,7 @@ autoExpandExamples.fa = `
 رصدخانه||
 رضا||
 رعایا||
-    رعد||
+رعد|thunder|ɾæʔd
 رعنا||
 رعیت||
 رغبت||
@@ -1939,7 +1939,7 @@ autoExpandExamples.fa = `
 سمت||
 سمج||
 سمرقند||
-سمع||
+سمع|hearing, ear|sæmʔ
 سمفونی||
 سمند||
 سمور||
@@ -2113,8 +2113,8 @@ autoExpandExamples.fa = `
 شترغار||
 شترمرغ||
 شترگاوپلنگ||
-شجاع||
-شجاعت||
+شجاع|brave, courageous|ʃod͡ʒɒːʔ
+شجاعت|bravery, courage|ʃod͡ʒɒʔat/ʃad͡ʒɒʔat
 شجر||
 شخص||
 شخصی||
@@ -2126,9 +2126,9 @@ autoExpandExamples.fa = `
 شر و ور|nonsense|ʃeɾoveɾ
 شراب||
 شرط||
-شرع||
-شروع||
-شروع کردن||
+شرع|religious law|ʃæːɾ(ʔ)
+شروع|beginning, onset|ʃoˈruː(ʔ)
+شروع کردن|to begin, start|ʃoɾuːʔ kæɾdæn
 شرک||
 شرکت||
 شریفی||
@@ -2159,7 +2159,7 @@ autoExpandExamples.fa = `
 شمردن||
 شمسی||
 شمشیر||
-شمع||
+شمع|candle|ʃæmʔ
 شمعدان||
 شمیدن||
 شناختن||
@@ -2223,7 +2223,7 @@ autoExpandExamples.fa = `
 شکیفتن||
 شگرف||
 شگفت||
-شیء||
+شیء|object,thing|ʃejʔ
 شیدا||
 شیر||
 شیراز||
@@ -2235,7 +2235,7 @@ autoExpandExamples.fa = `
 شیطان||
 شیطانی||
 شیطان‌پرستی||
-شیعه||
+شیعه|Shia, Shi'ite|ʃiːˈʔe
 شیمی||
 شیوا||
 شیک|chic|ʃiːk
@@ -2256,7 +2256,7 @@ autoExpandExamples.fa = `
 صحیح||
 صدا||
 صدمه||
-صرع||
+صرع|epilepsy|sæɾʔ
 صرف||
 صعب||
 صفت||
@@ -2293,7 +2293,7 @@ autoExpandExamples.fa = `
 ضرورت||
 ضعف||
 ضعیف||
-ضلع||
+ضلع|side edge|zelʔ
 ضمیر||
 ضمیمه||
 طاس||
@@ -2325,78 +2325,76 @@ autoExpandExamples.fa = `
 عاج||
 عادت||
 عادل||
-عادی||
+عادی|ordinary, customary|ʔɒːdiː
 عاشق||
 عاصی||
-عالی||
-عباء||
+عالی|sublime, exalted|ɒːliː
+عباء|clergiman's cloak/gown|abɒː
 عبارت||
-عباسی||
-عبرت||
-عبید||
-عثمان||
-عجان||
-عجب||
-عجیب||
-عجیب‌تر||
-عجیب‌ترین||
-عدس||
-عراق||
-عراقچی||
-عربستان||
-عربی||
-عرض||
-عرفان||
-عروس||
-عروسک||
-عزر||
-عشق||
-عشق‌آباد||
-عصبانی||
-عصر||
+عباسی|Abbasid|ʔæbbɒːˈsiː
+عبرت|lesson|ʔebˈɾæt̪
+عثمان|Osman|osmɒːn
+عجان|perimeum|ʔeˈdʒɒːn
+عجب|wonder, marvel|ʔæd͡ʒæb
+عجیب|strange, wierd|æˈdʒiːb
+عجیب‌تر|stranger, wierder|ædʒiːbtæɾ
+عجیب‌ترین|strangest, wierdest|ædʒiːbtæɾiːn
+عدس|lentil|ʔædæs
+عراق|Iraq|ʔæˈɾɒːɣ/ʔeˈɾɒːɣ
+عربستان|Saudi Arabia|æɾæbestɒːn
+عربی|Arabic|ʔæɾæbiː
+عرض|request, petition|æɾz
+عرفان|knowledge, mysticism|ʔeɾfɒːn
+عروس|bride|ʔæɾuːs
+عروسک|doll, puppet|ʔæɾuːˈsækʲ
+عزر|censuring, forbidding|ˈʔæzr
+عشق|love, passion|eʃɢ
+عشق‌آباد|Ashgabat|eʃɢɒːbɒːd
+عصبانی|angry, nervous|æsæbɒːniː
+عصر|afternoon, evening|ʔæsɾ~ʔæːsɾ
 عضو|member|ozv
-عضوها||
-عطسه||
-عطسه‌ها||
-عظیم||
+عضوها|members|ozv(h)ɒ
+عطسه|sneeze|ʔætˈse
+عطسه‌ها|sneezes|ʔætseˈhɒː
+عظیم|magnificent, huge|ʔæˈziːm
 عظیمی||
 عظیم‌تر||
-عظیم‌ترین||
-عفت||
-عقاب||
-عقرب||
-عقل||
-عقیده||
-علاءالدین||
-علاقه||
-علامت تعجب||
-علاوه||
-علت||
-علم||
-علمی||
-علی||
+عظیم‌ترین|most magnificent, hugest|ʕæziːˈmiː
+عفت|abstinence, modesty|ʔeffæt
+عقاب|eagle|eˈɣɒːb
+عقرب|scorpion|ʔæɣˈɾæb
+عقل|mind, intellect; good sense|æɢl
+عقیده|belief, opinion|ʔæɣiːˈde
+علاءالدین|Aladdin|ælɒːʔoddīn
+علاقه|interest, affection|ælɒːɢe
+علامت تعجب|exclamation mark|ælɒːmæte tæʔædd͡ʒob
+علاوه|addition|elɒːve~ælɒːve
+علت|cause, reason|ellæt
+عِلَّت|cause, reason|ellæt
+علم|science; flag|elm; ælæm
+علمی|scientific|elmiː
+علی|Ali|ʔæˈliː
 علیرضا||
 علی‌نژاد||
-عمان||
-عمر||
-عمل||
+عمان|Oman|ʔoˈmmɒn
+عمر|life|omr
+عمل|action, deed|ʔæˈmæl
 عمو|paternal uncle|ʔæˈmuː
-عمیق||
-عمیق‌تر||
-عمیق‌ترین||
-عن||
-عنابی||
-عنایت||
-عنصر||
-عنوان||
-عنکبوت||
-عوامانه||
+عمیق|deep|æˈmiːɣ
+عمیق‌تر|deeper|æmiːxˈt̪ʰæɾ
+عمیق‌ترین|deepest|æmiːxt̪ʰæˈɾiːn
+عنابی|a reddish colour|ænɒːbiː
+عنایت|solicitude|ʔenɒːjæt
+عنصر|element (chem.)|onsoɾ
+عنوان|title|onvɒːn
+عنکبوت|spider|(ʔ)æŋkʲæˈbuːtʰ
+عوامانه|vulgar|ævɒːmːmɒːˈne
 عوض|recompense, substitute|ævæz
-عکس||
-عکس‌ها||
-عیب||
-عید||
-عیسی||
+عکس|photographs, reversed|æks
+عکس‌ها|photographs|æksˈhɒː
+عیب|fault, defect|ejb
+عید|Eid|ʔei̯d/ʔiːd
+عیسی|Jesus|ʔiːˈsɒː
 غار||
 غاز||
 غافت||
@@ -2461,7 +2459,7 @@ autoExpandExamples.fa = `
 فدات||
 فدایت بشوم||
 فر||
-فرآیند||
+فرآیند|process|fæɾɒːˈjænd
 فرادیس||
 فرازمینی||
 فراصوت||
@@ -2648,7 +2646,7 @@ autoExpandExamples.fa = `
 قطار||
 قطبی||
 قطر||
-قطع||
+قطع|cutting, severing|ɢætʔ
 قطور||
 قفس||
 قفسه||
@@ -2729,7 +2727,7 @@ autoExpandExamples.fa = `
 لسوتو|Lesotho|lesoːˈtoː
 لشکر||
 لطیف||
-لعل||
+لعل|garnet, red gemstone|læʔl
 لعنتی||
 لغت||
 لفاف||
@@ -2933,7 +2931,7 @@ autoExpandExamples.fa = `
 مزخرف||
 مزخرف‌تر||
 مزخرف‌ترین||
-مزرعه||
+مزرعه|farm|mæzɾæˈ(ʔ)e
 مزنه||
 مزه||
 مسئله|problem, issue|mæs[ʔ]æˈle
@@ -2985,7 +2983,7 @@ autoExpandExamples.fa = `
 مضحک||
 مطبوعات||
 مطلب|subject, topic|mætlæb
-مطلع||
+مطلع|1st line of qasida/ghazal|mæt̪ˈlæ(ʔ)
 مظهر||
 معادل||
 معادله||
@@ -2995,7 +2993,7 @@ autoExpandExamples.fa = `
 معتبر||
 معجزه||
 معدنی||
-معده||
+معده|stomach|meʔde
 معراج||
 معرفی کردن||
 معروف||
@@ -3029,7 +3027,7 @@ autoExpandExamples.fa = `
 مقدار||
 مقدماتی||
 مقصد||
-مقطع||
+مقطع|last line of qasida/ghazal|mæɢtæʔ
 مقعد||
 مقعدی||
 مقیم||
@@ -3044,7 +3042,7 @@ autoExpandExamples.fa = `
 ملیکا||
 ممد||
 مملکت||
-ممنوع||
+ممنوع|prohibited, forbidden|mæmnuːʔ
 ممنون||
 ممکن||
 من||
@@ -3053,7 +3051,7 @@ autoExpandExamples.fa = `
 منازل||
 مناسب||
 مناسبت||
-منبع||
+منبع|source, origin|mæmˈbæ(ʔ)
 منتظر||
 منتقد||
 منجر شدن||
@@ -3065,7 +3063,7 @@ autoExpandExamples.fa = `
 منطقه|zone, region|mæntæɣe
 منطقه‌ها||
 منظورت چیست||
-منع||
+منع|prohibited|mænʔ
 منفور||
 منوچهر||
 منیژه||
@@ -3101,12 +3099,12 @@ autoExpandExamples.fa = `
 موزه||
 موسم||
 موسیقی||
-موضوع||
+موضوع|subject, topic|mowzuː(ʔ)
 موفق|successful|muvaffak
 موفق باشی||
 موفق باشید||
 موفقیت||
-موقع||
+موقع|time|mowˈɢeʔ|Tehran moːˈɢeː
 موقعیت||
 مولانا||
 موم||
@@ -3238,9 +3236,12 @@ autoExpandExamples.fa = `
 نشان||
 نشان دادن||
 نشاندن||
-نشانه||
-نشانه سجاوندی||
-نشانگان آسپرگر||
+نشانه|sign, symbol, mark|neʃɒːˈne
+نشانهِ سجاوندی|punctuation mark|neʃɒːˌneje sæd͡ʒɒːvænd̪ˈiː
+نشانه سجاوندی|punctuation mark|neʃɒːˌneje sæd͡ʒɒːvænd̪ˈiː
+نشانهٔ سجاوندی|punctuation mark|neʃɒːˌneje sæd͡ʒɒːvænd̪ˈiː
+نشانه‌هایِ سجاوندی|punctuation marks|neʃɒːˌnehæːje sæd͡ʒɒːvænd̪ˈiː
+نشانگان آسپرگر|Asperger's syndrome|neʃɒːneˌɡɒːne ɒːspeɾˈɡʲeɾ
 نشلیدن||
 نشور||
 نصف||
@@ -3310,7 +3311,7 @@ autoExpandExamples.fa = `
 نوشیدن||
 نوشیدنی||
 نوشین||
-نوع||
+نوع|type, kind, sort|nowʔ
 نوم||
 نومد||
 نون||
@@ -3490,16 +3491,16 @@ autoExpandExamples.fa = `
 وزن||
 وزیدن||
 وسط|middle, centre|væsæt
-وسیع||
+وسیع|wide, vast|væsiːʔ
 وش||
-وضع||
+وضع|situation, state|væzʔ
 وضعیت||
 وضوح||
 وطن||
 وطن‌پرست||
 وظیفه||
 وظیفه‌ام بود||
-وعده||
+وعده|promise|væʔde
 وغا||
 وفا||
 وقت|time|væɢt
@@ -3579,7 +3580,7 @@ autoExpandExamples.fa = `
 پراکندگی||
 پرتغال||
 پرتقال||
-پرتوقع||
+پرتوقع|demanding, expectant|poɾ tævæɢɢoʔ
 پرتکاپو|active, hardworking|pʰoɾt̪ʰækʰɒːˈpʰuː
 پرتگاه||
 پرداختن||
@@ -3729,10 +3730,6 @@ autoExpandExamples.fa = `
 پیکار||
 پیکر||
 پیکربندی||
-||
-چ||
-||
-چ||
 چا||
 چابک||
 چاد||
@@ -3781,10 +3778,10 @@ autoExpandExamples.fa = `
 چل||
 چلنگر||
 چله||
-چلهٔ تابستان||
-چلهٔ زمستان||
-چله‌ی تابستان||
-چله‌ی زمستان||
+چلهٔ تابستان|midsummer|tʃʰelˈle ye tʰɒːbesˈtʰɒn
+چلهٔ زمستان|midwinter|tʃʰelˈle ye zemesˈtʰɒn
+چله‌ی تابستان|midsummer|tʃʰelˈle ye tʰɒːbesˈtʰɒn
+چله‌ی زمستان|midwinter|tʃʰelˈle ye zemesˈtʰɒn
 چلو|plain cooked rice|t͡ʃʰeloʊ̯|Tehran t͡ʃʰelo
 چلوکباب||
 چلچله||
@@ -3835,10 +3832,6 @@ autoExpandExamples.fa = `
 چین||
 چیندن||
 چینی||
-||
-ژ||
-||
-ژ||
 ژاله||
 ژامبون||
 ژاندرم||
@@ -4016,7 +4009,7 @@ autoExpandExamples.fa = `
 کنده||
 کنسرت||
 کنش||
-کنعان||
+کنعان|Canaan|kænʔɒːn
 کنفرانس||
 کنه||
 کنکور|university entrace exam|koŋˈkuːr
@@ -4088,7 +4081,8 @@ autoExpandExamples.fa = `
 گاراژ||
 گاری||
 گاز||
-گاز طبیعی||
+گاز طبیعی|natural gas|ˌɡɒːze tæbiːˈʔiː
+گازِ طبیعی|natural gas|ˌɡɒːze tæbiːˈʔiː
 گاش||
 گالری||
 گام||
@@ -4241,13 +4235,9 @@ autoExpandExamples.fa = `
 گینِه بیسائُو|Guinea Bissau|ɡiːˈne biːsɒːˈuː
 گیومه||
 گیک||
-||
-ی||
-||
-ـی||
-ی||
 یا||
 یائسگی|menopause|jɒːʔese ɡiː
+یائِسگی|menopause|jɒːʔese ɡiː
 یاب||
 یاد||
 یاد رفتن||
@@ -4256,12 +4246,12 @@ autoExpandExamples.fa = `
 یار غار||
 یازده|eleven|jɒːzdæh
 یاسا||
-یاساء||
+یاساء|Yassa|jɒːsɒː
 یاساق||
 یاسمن|jasmine|jɒːsæmæn
 یافتن||
 یاقوت||
-    یاور||
+یاور||
 یاکند||
 یتا||
 یتیم||
@@ -4289,7 +4279,49 @@ autoExpandExamples.fa = `
 یکتاپرستانه||
 یکدفعه||
 یگانه||
-یی	||
-||
+
+
+پایی|a foot|pɒːiː
+پایٔی|a foot|pɒːiː
+مویی|a hair|muiː
+مویٔی|a hair|muiː
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 `
 
