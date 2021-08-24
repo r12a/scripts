@@ -4,6 +4,7 @@
 <meta charset="utf-8"/>
 <title>Latin character notes</title>
 <meta name="description" content="Notes about characters in the Unicode Latin script blocks."/>
+
 <link rel="stylesheet" href="../../shared/style/docs.css" />
 <link rel="stylesheet" href="../common/block-style.css" />
 <link rel="stylesheet" href="local.css" />
@@ -18,13 +19,24 @@
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common/block-functions.js"></script>
+<script src="../common/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
+<script src="../common/egcode.js"></script>
+<script src="../common/references.js"></script>
+<script src="refs.js"></script>
+
+<script src="ha-examples.js"></script>
+<script src="ha-translit.js">  </script>
 
 <script src="../../uniview/descriptions.js"></script> 
 <script src="../../uniview/u.js"></script> 
 
 <style id="includeStyles"></style>
+<style>
+.character p { line-height: 35px; }
+.charStatus { font-weight: bold; }
+</style>
 </head>
 
 <body>
@@ -34,16 +46,17 @@
 </header>
 <h1>Latin character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a></nav>
+<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
 
 <aside class="sidebar">
+<nav>
   <h2 class="notoc flush"><a id="tochead">Contents</a></h2>
   <div id="toc"><!-- placeholder --></div>
   <div class="noprint">
     <h2 class="notoc"><a id="links">Related links</a></h2>
     <p><a href="../links?script=latin" target="_blank">Latin script links</a></p>
   </div>
- 
+ </nav>
  
 <div id="fontsetting" class="closed">
 </div>
@@ -52,39 +65,42 @@
 
 <div id="intro">
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->24 November, 2020<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->21 August, 2021<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
 
 <section>
-  <p>This page lists characters in the following Unicode  block and provides information about them.</p>
-  <ul>
-    <li><a href="../../uniview/?block=basic_latin" target="_blank">Basic Latin</a></li>
-    <li><a href="../../uniview/?block=latin-1_supplement" target="_blank">Latin-1 Supplement</a></li>
-  </ul>
-  <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places. </p>
-<p><span style="text-align: start;">We have usage data for  243 languages that use the Latin script</span>. Because of the size of the Latin repertoire, this page only shows characters for which notes exist.</p>
+  <p>This page lists characters in the Latin, punctuation, and combining character Unicode  blocks and provides information about them.</p>
 
-<p>Find <input type="text" id="findInput"
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
+<!--p>See also the companion document, <a href="." class="linkHighlight">Scriptname</a>, for a summary of the Scriptname script and its use for the Languagename language.</p-->
+
+<p> Phonetic transcriptions should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
 
-<p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example. Click on the <img src="../common/showImages.png" alt="Toggle images" style="vertical-align: middle;"/> icon to toggle the large characters between font glyphs and graphics.</p>
+
 <details>
-<summary class="instructions">Read more about how to use this page.</summary>
-    <p class="instructions">To <strong>find a character</strong> by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or the hex number in the <samp>Find</samp> control above.</p>
-    <p class="instructions">To view this page as intended, you  need a good font.  Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system.  I recommend the excellent and free <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;item_id=DoulosSILfont">Doulos SIL font</a>. The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. (If there is no glyph and you want to see what it looks like, click on <samp>See in UniView</samp>.)</p>
-    <p class="instructions"><strong>Information about languages</strong> that use these characters is taken from the list maintained for the Character Use app. The list is not exhaustive.</p>
-<p class="instructions"><strong>References</strong> are indicated by superscript characters. Wherever possible, those contain direct links to the source material. When such a pointer is alongside an arrow → it means that it's worth following the link for the additional information it provides. Digits refer to the main sources, which are listed at the bottom of a set of notes.</p>
-<p class="instructions">When you are using UniView and you turn on <samp>Show notes</samp>, UniView will pull in information about characters from this page.</p>
+<summary class="instructions"><a href="../links?iso=latn">Related pages</a>.</summary>
+</details>
+
+
+
+<details>
+<summary class="supportdocs instructions"><a href="../#charnotes">Other character notes</a>.</summary>
+</details>
+
+
+
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Latin','Latin'); return false;">About this page</a></summary>
+<div id="about"></div>
 <p id="charliststr" class="instructions"></p>
 </details>
 </section>
 </div>
 
 
-<section id="punctuation">
+<section id="mainBlock">
 <h2>Characters</h2>
   
 <div class="character" id="char00A1"></div>
