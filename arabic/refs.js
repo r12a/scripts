@@ -52,7 +52,7 @@ reflist = {
 "date": "1996",
 "publisher":"Oxford University Press",
 "isbn":"0-19-507993-0",
-"lang": new Set(['ar','ks']),
+"lang": new Set(['ar','ks','fa']),
 },
 
 "ub": {
@@ -321,6 +321,13 @@ reflist = {
 "title":"Kashmiri language",
 "url":"https://en.wikipedia.org/wiki/Kashmiri_language",
 "lang": new Set(['ks']),
+},
+
+"wpa": {
+"authors": "Wikipedia",
+"title":"Persian alphabet",
+"url":"https://en.wikipedia.org/wiki/Persian_alphabet",
+"lang": new Set(['fa']),
 },
 
 "wul": {
