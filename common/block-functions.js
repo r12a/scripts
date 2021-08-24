@@ -918,7 +918,7 @@ function showAbout (node, script, language) {
 // Displays/hides the 'About this document' details
 
 if (node.innerHTML == '') {
-	console.log(node.parentNode)
+	//console.log(node.parentNode)
 	node.innerHTML = `
     <p class="instructions"><span class="leadin">Showing codepoints for examples.</span>If you click on example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
 <p class="instructions"><span class="leadin">Finding characters.</span> To find a character by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or its hex number in the <samp>Find</samp> control, bottom left.</p>
@@ -927,6 +927,13 @@ if (node.innerHTML == '') {
     <p class="instructions"><span class="leadin">Language usage lists.</span> Information about languages that use these characters is taken from the list maintained for the <a href="../../app-charuse/">Character usage lookup</a> app. The list is not exhaustive.</p>
 <p class="instructions"><span class="leadin">References &amp; further information.</span> References are indicated by superscript letters, optionally followed by page numbers. Wherever possible, those contain direct links to the source material. When there is also an arrow → it is worth following the link for  additional information. The references are listed at the bottom of the page, but the links should take you to the exact location of the source, wherever possible.</p>
     <p class="instructions"><span class="leadin">UniView.</span><a href="../../uniview/">UniView</a>'s notes feature pulls in information about characters from this page.</p>
+    <details class="instructions"><summary>Make a list of characters with notes for a spreadsheet:</summary>
+    <p>Add list of characters here: <input id="notesListIn" placeholder=">"> <button 
+        onclick="document.getElementById('notesListOut').value = getNotesList(document.getElementById('notesListIn').value); document.getElementById('notesListOut').select()"
+        >GO</button></p>
+    <p>Result: <textarea id="notesListOut" placeholder=">"></textarea> <button
+        onclick="document.getElementById('notesListIn').value = '';document.getElementById('notesListOut').value = '';">Clear</button></p>
+    </details>
 	` 
 	node.parentNode.open = true
 	}
@@ -935,5 +942,118 @@ else {
 	node.innerHTML = ''
 	}
 }
+
+
+
+
+
+function getNotesListPRESUPPCHAR (charList) {
+    console.log(charList)
+    charList = charList.replace(/\n/,' ')
+    //charList = charList.replace(/[\s]+/,' ').trim()
+    listArray = charList.split(' ')
+    out = ''
+    for (i=0;i<listArray.length;i++) {
+        console.log('listArray:>'+listArray[i]+'<')
+        if (listArray[i][0] && (listArray[i].includes('\\u') || listArray[i].includes('&#x'))) {
+             if (listArray[i].includes('\\u')) listArray[i] = listArray[i].replace('\\u','0x').replace(/\{/,'').replace(/\}/,' ')
+             if (listArray[i].includes('&#x')) listArray[i] = listArray[i].replace('&#x','0x').replace(/;/,'').replace(/\{/,'').replace(/\}/,' ')
+             console.log('Convert escapes from',listArray[i])
+             if (listArray[i].length > 1) {
+                out += '\n'
+                continue
+                }
+             listArray[i] = String.fromCodePoint(listArray[i])
+             console.log('Convert escapes to',listArray[i])
+            }
+       
+        if (listArray[i] === '') {
+            out += '\n'
+            console.log('gap')
+            continue
+            }
+        if (listArray[i].length > 1) {
+            out += '\n'
+            console.log('sequence:',listArray[i])
+            continue
+            }
+        else {
+            char = listArray[i].codePointAt(0)
+            hex = ''
+            hex = char.toString(16).toUpperCase()
+            while (hex.length < 4) hex = '0'+hex
+            ptr = 'char'+hex
+            console.log(ptr)
+            }
+        
+        target = document.getElementById(ptr)
+        if (target == null) out += '\n'
+        else {
+            letters = target.querySelector('.letter')
+            if (letters == null) out += '\n'
+            else out += '🗸\n'
+            }
+        }
+    return(out)
+    }
+
+
+
+
+
+function getNotesList (charList) {
+    console.log(charList)
+    charList = charList.replace(/\n/,' ')
+    //charList = charList.replace(/[\s]+/,' ').trim()
+    listArray = charList.split(' ')
+    out = ''
+    for (i=0;i<listArray.length;i++) {
+        console.log('listArray:>'+listArray[i]+'<')
+        if (listArray[i][0] && (listArray[i].includes('\\u') || listArray[i].includes('&#x'))) {
+             if (listArray[i].includes('\\u')) listArray[i] = listArray[i].replace('\\u','0x').replace(/\{/,'').replace(/\}/,' ')
+             if (listArray[i].includes('&#x')) listArray[i] = listArray[i].replace('&#x','0x').replace(/;/,'').replace(/\{/,'').replace(/\}/,' ')
+             console.log('Convert escapes from',listArray[i])
+             if ([...listArray[i]].length > 1) {
+                out += '\n'
+                continue
+                }
+             listArray[i] = String.fromCodePoint(listArray[i])
+             console.log('Convert escapes to',listArray[i])
+            }
+       
+        if (listArray[i] === '') {
+            out += '\n'
+            console.log('gap')
+            continue
+            }
+        console.log([...listArray[i]].length)
+        if ([...listArray[i]].length > 1) {
+            out += '\n'
+            console.log('sequence:',listArray[i])
+            continue
+            }
+        else {
+            char = listArray[i].codePointAt(0)
+            hex = ''
+            hex = char.toString(16).toUpperCase()
+            while (hex.length < 4) hex = '0'+hex
+            ptr = 'char'+hex
+            console.log(ptr)
+            }
+        
+        target = document.getElementById(ptr)
+        if (target == null) out += '\n'
+        else {
+            letters = target.querySelector('.letter')
+            if (letters == null) out += '\n'
+            else out += '🗸\n'
+            }
+        }
+    return(out)
+    }
+
+
+
+
 
 
