@@ -9,7 +9,11 @@ defList={
 
 "consonantcluster": 'A consonant cluster is a sequence of consonants with no intervening vowels.',
 
+"grapheme": 'A <a class="termref" target="_blank" href="../glossary/#grapheme">grapheme</a> is a user-perceived unit of text. The Unicode Standard uses generalised rules to define \'<a class="termref" target="_blank" href="../glossary/#graphemecluster">grapheme clusters</a>\', which approximate the likely grapheme boundaries in a writing system. Text operations that use graphemes as a unit of text include line-breaking, forwards deletion, cursor movement & selection, character counts, searching & matching, text insertion, line-breaking, justification, case conversions, and sorting.',
+
 "hyphenation": '\'Hyphenation\' here refers to an extra set of rules applied after the basic line-break algorithm to split words at syllable or morphological boundaries in order to improve the layout of a paragraph. Hyphenation may or may not be indicated using a visual marker at the end or start of a line, however it is commonly marked by a hyphen or other glyph.',
+
+"ijam": 'An <a class="termref" target="_blank" href="../glossary/#ijam">ijam</a> is a diacritical mark considered to be part of a basic letter form. Unicode encodes letter+ijam combinations as separate, atomic characters, which are never given decompositions in the standard. Compare with <a class="termref" target="_blank" href="../glossary/#tashkil">tashkil</a>.',
 
 "independentvowel": 'An <a class="termref" target="_blank" href="../glossary/#inherentvowel">inherent vowel</a> is a vowel sound that is automatically pronounced after a consonant letter, unless specifically suppressed.',
 
@@ -23,7 +27,7 @@ defList={
 
 "standalonevowel": 'Standalone vowels are not preceded by a consonant sound, and may appear at the beginning or in the middle of a word.',
 
-"grapheme": 'A <a class="termref" target="_blank" href="../glossary/#grapheme">grapheme</a> is a user-perceived unit of text. The Unicode Standard uses generalised rules to define \'<a class="termref" target="_blank" href="../glossary/#graphemecluster">grapheme clusters</a>\', which approximate the likely grapheme boundaries in a writing system. Text operations that use graphemes as a unit of text include line-breaking, forwards deletion, cursor movement & selection, character counts, searching & matching, text insertion, line-breaking, justification, case conversions, and sorting.',
+"tashkil": 'A <a class="termref" target="_blank" href="../glossary/#tashkil">tashkil</a> is a mark that indicates vocalization of text, as well as other types of phonetic guides to correct pronunciation. They are separately encoded as combining marks. A basic Arabic letter plus any of these types of marks is never encoded as a separate, precomposed character, but must always be represented as a sequence of letter plus combining mark. Compare with <a class="termref" target="_blank" href="../glossary/#ijam">ijam</a>.',
 
 "unchecked": '\'Checked\' means ending in the sound <span class="ipa">-p</span>, <span class="ipa">-t</span>, <span class="ipa">-k</span>, or <span class="ipa">-ʔ</span>. \'Unchecked\' means ending in  sonorants <span class="ipa">m, n, ŋ, w, j</span> or vowels.</p>',
 
