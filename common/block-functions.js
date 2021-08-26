@@ -1,6 +1,7 @@
 /* jshint strict: false */
 /* globals cl, langs */
 
+debug = false
 
 function initialise (base, dir) {
     createtoc(3)
@@ -335,7 +336,7 @@ function parseSpreadsheet (spreadsheet) {
 //replaceStuff('Urdu', 'urdu', spreadsheet, '', 'ur', '', cols, false)
 
 
-function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, showShape) { 
+function replaceStuffOLD (language, langClass, chars, bicameral, lang, dir, cols, showShape) { 
 	var charList = chars.split('\n')
     var div, p, span
 	parseSpreadsheet(chars)
@@ -722,6 +723,11 @@ function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, s
 
 
 
+
+
+
+
+
 function addBasics (lang, dir) {
 	var charList = document.querySelectorAll('.character')
 	console.log('.character length',charList.length)
@@ -782,10 +788,10 @@ function addBasics (lang, dir) {
 
 function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
 
-	var missing = ''
+    var missing = ''
 	var missingDetails = ''
 	var noteList = document.querySelectorAll('.notes')
-	console.log('noteList length',noteList.length)
+	if (debug) console.log('noteList length',noteList.length)
 	parseSpreadsheet(spreadsheet)
 	
     for (var x=0; x<noteList.length; x++) {
@@ -795,7 +801,7 @@ function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
 		cchar = String.fromCodePoint(dec)
 		
 		if (spreadsheetRows[cchar]) {
-			out = '<div class="letter '+langClass+'">'
+			out = '<div class="letter '+langClass+'" id="'+langClass+hex+'">'
 
 			// show shape from shape column (use for cursive or conjunct text)
 			if (cols.shape>0 && spreadsheetRows[cchar][cols.shape]) {
@@ -865,8 +871,8 @@ function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
 
 		else missing += ' '+cchar
 		}
-	console.log('Characters in block file but not in spreadsheet for '+lang+': ',missing)
-	console.log('Spreadsheet characters not in xx-details for '+lang+': ',missingDetails)
+	if (debug) console.log('Characters in block file but not in spreadsheet for '+lang+': ',missing)
+	if (debug) console.log('Spreadsheet characters not in xx-details for '+lang+': ',missingDetails)
 	}
 
 
