@@ -415,8 +415,20 @@ summary {
 .localname, .transliteratedname { margin-inline-start: 1em; }
 .charType { font-size: 80%; }
 .charStatus { font-size: 80%; font-style: italic; font-weight: bold; margin-inline-start: 1em;}
-.localtrans::before { content: '⟨'; font-family: gentiumpluswf; margin-inline-start: 0.2em; margin-inline-end: .2em; color: #aaa; font-size: 80%; }
-.localtrans::after { content: '⟩'; font-family: gentiumpluswf; margin-inline-start: 0.2em; margin-inline-end: .2em; color: #aaa; font-size: 80%; }
+/*.localtrans::before { content: '⟨'; font-family: gentiumpluswf; margin-inline-start: 0.2em; margin-inline-end: .2em; color: #aaa; font-size: 80%; }
+.localtrans::after { content: '⟩'; font-family: gentiumpluswf; margin-inline-start: 0.2em; margin-inline-end: .2em; color: #aaa; font-size: 80%; }*/
+.localtrans::before { 
+    content: 'translit:'; 
+    font-family: gentiumpluswf; 
+    margin-inline-start: 0.2em; 
+    margin-inline-end: .2em; 
+    color: #aaa; 
+    font-size: 80%;
+    }
+.localtrans.trans {
+    float: right;
+    clear: right;
+}
 
 .usedby, .charNotes {
     font-size: 85%;
@@ -565,8 +577,12 @@ blockquote { margin-left: 2em; margin-right: 2em; }
 .charExample {
     display: block;
     text-align: center;
-}
-
+    }
+.charExample.inline {
+	margin: 0;
+	font-size: 100%;
+	display: inline;
+	}
 
 
 
