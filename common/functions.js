@@ -850,13 +850,50 @@ function showNameDetailsEventOLD (evt) {
 	}
 
 
-function showCharDetailsEvent (evt) {
+function showCharDetailsEventOLD (evt) {
 	if (typeof charDetails === 'undefined') return
 
 	if (evt.type === 'mouseover' && document.getElementById('showDetailOnMouseover').checked != true) return
 	
 	// clear any existing table
 	table = evt.target.parentNode.parentNode.parentNode.querySelector('table')
+	if (table !== null) table.parentNode.removeChild(table)
+	
+	var table = document.createElement('table')
+	table.className = 'charDetails'
+	table.innerHTML = makeDetails(evt.target.textContent, evt.target.lang)
+	evt.target.parentNode.parentNode.parentNode.appendChild(table)
+	
+	
+	addExamples(evt.target.lang)
+	autoTransliterate(evt.target.lang)
+	convertTranscriptionData(evt.target)
+	setFootnoteRefs()
+    var links = table.querySelectorAll('.codepoint a')
+	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
+    initialiseShowNames(table)
+	}
+
+
+
+function showCharDetailsEvent (evt) {
+	if (typeof charDetails === 'undefined') return
+
+	if (evt.type === 'mouseover' && document.getElementById('showDetailOnMouseover').checked != true) return
+	
+	table = evt.target.parentNode.parentNode.parentNode.querySelector('table')
+    displayedItem = ''
+    if (table !== null) displayedItem = table.querySelector('.ex')
+    if (displayedItem) displayedItem = displayedItem.textContent
+    
+    // if clicked item and table are about the same thing, just close table
+    if (displayedItem && displayedItem === evt.target.textContent) { 
+        console.log("found",displayedItem)
+        table.parentNode.removeChild(table)
+        return
+        }
+    
+    // clear any existing table
 	if (table !== null) table.parentNode.removeChild(table)
 	
 	var table = document.createElement('table')
