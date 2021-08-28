@@ -242,7 +242,19 @@ reflist = {
 "pages":"365-389",
 "isbn":"978-1-936213-16-0.",
 "url":"https://www.unicode.org/versions/Unicode13.0.0/ch09.pdf",
-"lang": new Set(['ar','ha','ks','ur']),
+"lang": new Set(['ar','fa','ha','ks','ur']),
+"reviewed":true
+},
+
+"u14": {
+"authors": "Unicode Consortium",
+"title":"The Unicode Standard, Version 14.0",
+"sub":"Chapter 9.2: Middle East-I, Arabic",
+"pages":"373-398",
+"isbn":"978-1-936213-29-0",
+"url":"https://www.unicode.org/versions/Unicode14.0.0/ch09.pdf",
+"lang": new Set(['ar','fa','ha','ks','ur']),
+"reviewed":true
 },
 
 "uwa": {
