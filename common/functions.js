@@ -1,7 +1,7 @@
 function initialiseSummary (base, lang, tableName, dir) {
     window.base = base
 	doHeadersFooters(dir)
-	runCharCounts()
+	//runCharCounts()
     makeTables(lang)
 	if (typeof addExamples !== 'undefined') addExamples(lang)
     initialiseShowNames(document, base, 'c')
@@ -46,10 +46,94 @@ function setFindIPA () {
 
 
 
+function shareCodeLinks (charList, script, charApp) {
+    // provides some of the repetitive code for listAllIndexCharacters
+    
+    out = `<td class="indexShareLinks" style="position:relative;" 
+    onmouseover="this.lastChild.style.display='block'" 
+    onmouseout="this.lastChild.style.display='none'"><img src="../common/icons/transfer_small.png" alt="Send characters." title="Send characters." class="ulink">
+    <div class="popup" style="position: absolute; right: 0px; display: none;">
+        <div><a href="/scripts/apps/listcategories/?chars=`+charList+`" target="_blank">General Category</a></div>
+        <div><a href="/app-analysestring/?chars=`+charList+`" target="_blank">Show details</a></div>
+        <div><a href="/uniview?charlist=`+charList+`" target="_blank">Show characters in UniView</a></div>
+        <div><a href="/app-listcharacters?chars=`+charList+`" target="_blank">List characters by block</a></div>
+        <div><a href="/scripts/fontlist?script=`+script+`&amp;text=`+charList+`" target="_blank">Send to Font lister</a></div>
+        <div><a target="_blank" href="/pickers/`+charApp+`/?showFonts=true&amp;text=`+charList+`">Show in character app</a></div></td>`
+    return out
+}
+
+
+
+
+
+
+function listAllIndexCharacters (scriptISO, pickerName) {
+    // creates the showStats table
+    
+    var out = ''
+    var list
+    
+    // find all the characters in the index
+    var allItems = ''
+    var itemArray = []
+    listItems = document.getElementById('index').querySelectorAll('.listItem')
+    for (i=0;i<listItems.length;i++) itemArray.push(listItems[i].textContent)
+    const uniqueSet = new Set(itemArray)
+    allItems = [...uniqueSet].join(' ')
+    if (listItems.length !== [...uniqueSet].length) console.log('NOTE: Index contains ',listItems.length,' items, but only ',[...uniqueSet].length,' unique characters.')
+    
+    //for (i=0;i<listItems.length;i++) allItems += listItems[i].textContent+' '
+	out += '<tr><th>All</th><td id="allCharList">'+allItems+'</td><td id="allCharListTotal">'+[...uniqueSet].length+'</td></tr>'
+    out += '<tr><th colspan="3" style="font-weight:bold; text-align:start;">&nbsp;</td>'
+    out += '</tr>'
+    
+    // find the characters of each type
+    list = [...getOrthographyList('.characterBox')]
+	out += '<tr><th>Main</th><td id="allCharList">'+list.join(' ')+'</td><td id="allCharListTotal">'+list.length+'</td>' + shareCodeLinks(list.join(''),scriptISO,pickerName) + '</tr>'
+    
+    fullList = list
+
+    list = [...getOrthographyList('.auxiliaryBox')]
+	if (list.length > 0) out += '<tr><th>Infrequent</th><td id="allCharList">'+list.join(' ')+'</td><td id="allCharListTotal">'+list.length+'</td>'+ shareCodeLinks(list.join(''),scriptISO,pickerName)+'</tr>'
+    
+    fullList += list
+
+    list = [...getOrthographyList('.formattingBox')]
+	if (list.length > 0) out += '<tr><th>Formatting</th><td id="allCharList">'+list.join(' ')+'</td><td id="allCharListTotal">'+list.length+'</td>' + shareCodeLinks(list.join(''),scriptISO,pickerName) + '</tr>'
+
+    list = [...getOrthographyList('.archaicBox')]
+	if (list.length > 0) out += '<tr><th>Archaic</th><td id="allCharList">'+list.join(' ')+'</td><td id="allCharListTotal">'+list.length+'</td>' + shareCodeLinks(list.join(''),scriptISO,pickerName) + '</tr>'
+
+    list = [...getOrthographyList('.foreignBox')]
+	if (list.length > 0) out += '<tr><th>Foreign</th><td id="allCharList">'+list.join(' ')+'</td><td id="allCharListTotal">'+list.length+'</td>' + shareCodeLinks(list.join(''),scriptISO,pickerName) + '</tr>'
+
+    list = [...getOrthographyList('.otherBox')]
+	if (list.length > 0) out += '<tr><th>Other</th><td id="allCharList">'+list.join(' ')+'</td><td id="allCharListTotal">'+list.length+'</td>' + shareCodeLinks(list.join(''),scriptISO,pickerName) + '</tr>'
+
+    list = [...getOrthographyList('.deprecatedBox')]
+	if (list.length > 0) out += '<tr><th>Deprecated</th><td id="allCharList">'+list.join(' ')+'</td><td id="allCharListTotal">'+list.length+'</td>' + shareCodeLinks(list.join(''),scriptISO,pickerName) + '</tr>'
+	
+	document.getElementById('charCountList').innerHTML = out
+    }
+
+
+
+
 
 function runCharCounts () {
-	var out = ''
-	out += runCharCount('.characterBox', 'Main')
+    // creates the showStats table
+    
+    var out = ''
+    
+    // find all the characters in the index
+    var allItems = ''
+    listItems = document.getElementById('index').querySelectorAll('.listItem')
+    for (i=0;i<listItems.length;i++) allItems += listItems[i].textContent
+	out += '<tr><th>All</th><td id="allCharList">'+allItems+'</td><td id="allCharListTotal">'+allItems.length+'</td></tr>'
+    out += '<tr><th colspan="3" style="font-weight:bold; text-align:start;">&nbsp;</td></tr>'
+    
+	out += '<tr><th>Main</th><td id="allCharList">'+getOrthographyList('.characterBox', 'Main')+'</td><td id="allCharListTotal">'+allItems.length+'</td></tr>'
+	out += getOrthographyList('.characterBox', 'Main')
 	out += runCharCount('.auxiliaryBox', 'Auxiliary')
 	out += runCharCount('.formattingBox', 'Formatting')
 	out += runCharCount('.archaicBox', 'Archaic')
@@ -57,11 +141,12 @@ function runCharCounts () {
 	out += runCharCount('.otherBox', 'Other')
 	out += runCharCount('.deprecatedBox', 'Deprecated')
 	
-	out += runCategoryCharCount('index_letters', 'Letter')
-	out += runCategoryCharCount('index_cchars', 'Marks')
-	out += runCategoryCharCount('index_numbers', 'Numbers')
-	out += runCategoryCharCount('index_punctuation', 'Punctuation')
-	out += runCategoryCharCount('index_symbols', 'Symbols')
+    //out += '<tr><th>&nbsp;</th><td><strong>List by general category:</strong></td><td>&nbsp;</td></tr>'
+	//out += runCategoryCharCount('index_letters', 'Letter')
+	//out += runCategoryCharCount('index_cchars', 'Marks')
+	//out += runCategoryCharCount('index_numbers', 'Numbers')
+	//out += runCategoryCharCount('index_punctuation', 'Punctuation')
+	//out += runCategoryCharCount('index_symbols', 'Symbols')
 	//out += runCategoryCharCount('index_separators', 'Separators')
 	
 	document.getElementById('charCountList').innerHTML = out
@@ -350,7 +435,7 @@ function makeTables (lang) {
     //console.log(spreadsheetRows) 
 
 
-    var tables, node, chars, info, bicameral, out, char
+    var tables, node, chars, info, bicameral, out, char, indexline
     
     tables = document.querySelectorAll('.auto')
 
@@ -360,6 +445,10 @@ function makeTables (lang) {
         bicameral = false
         showFirst = false
        //console.log(node)
+
+// check whether this is an index line
+if (node.classList.contains('indexline')) indexline = true
+else indexline = false
 
 		// populate the chars array with characters & gather additional info
         //chars = node.dataset.chars.split('␣')
@@ -533,11 +622,17 @@ function makeTables (lang) {
             if (links.length > 0) {
                 if (links[i]) {
 					var linkList = links[i].split(' ')
+                    if (indexline) out += '<div class="index_details">'
+                    if (window.spreadsheetRows[char]) uname = window.spreadsheetRows[char][cols.ucsName].replace(/U\+[^:]+: /,'')
+                    else uname = "NAME UNKNOWN"
+                    if (indexline) out += '<span class="index_uname">'+uname+'</span>'
+                    //if (indexline) out += '<span class="index_uname">'+window.spreadsheetRows[char][cols.ucsName].replace(/U\+[^:]+: /,'')+'</span>'
 					out += '<span class="links">'
 					for (let l=0;l<linkList.length;l++) {
 						out += '<a href="'+linkList[l]+'">↓</a>'
 						}
 					out += '</span>'
+                    if (indexline) out += '</div>'
 					}
                 else out += '<span>&nbsp;</span>'
                 }
@@ -1021,6 +1116,8 @@ function setGeneralFont (fontname, size, language) {
 
 
 
+
+
 function runCharCount (type, location, raw=false) { 
 	//if (document.getElementById(location) == null) return
 	var charlists
@@ -1060,6 +1157,58 @@ function getOrthographyList (type, location, spaced=false) {
         return
         }
     else charlists = document.querySelectorAll('#index_details '+type+' .listItem')
+    var chars = ''
+	for (let i=0;i<charlists.length;i++) chars += charlists[i].textContent
+    charlistArray = [...chars]
+	const uniqueSet = new Set(charlistArray)
+	var uniqueArray = [...uniqueSet]
+	
+    if (spaced) out = uniqueArray.toString().replace(/,/g,' ')
+	else out = uniqueArray.toString().replace(/,/g,'')
+    return out
+	}
+
+
+
+
+
+
+function getOrthographyList (type, location, spaced=false) {
+    // this is a modified version of runCharCount, adapted to harvest characters after the 
+    // page has been rendered, and used by the links in the Basic Summary section on click
+    // it requires the presence of #index
+	var charlists, out
+	if (document.getElementById('index') == null) {
+        alert('No #index element (in getOrthographyList)')
+        return
+        }
+    else charlists = document.querySelectorAll('#index '+type+' .listItem')
+    var chars = ''
+	for (let i=0;i<charlists.length;i++) chars += charlists[i].textContent
+    charlistArray = [...chars]
+	const uniqueSet = new Set(charlistArray)
+	var uniqueArray = [...uniqueSet]
+	
+    if (spaced) out = uniqueArray.toString().replace(/,/g,' ')
+	else out = uniqueArray.toString().replace(/,/g,'')
+    return out
+	}
+
+
+
+
+
+
+function getOrthographyListOLD (type, location, spaced=false) {
+    // this is a modified version of runCharCount, adapted to harvest characters after the 
+    // page has been rendered, and used by the links in the Basic Summary section on click
+    // it assumes the presence of #index
+	var charlists, out
+	if (document.getElementById('index') == null) {
+        alert('No #index element (in getOrthographyList)')
+        return
+        }
+    else charlists = document.querySelectorAll('#index '+type+' .listItem')
     var chars = ''
 	for (let i=0;i<charlists.length;i++) chars += charlists[i].textContent
     charlistArray = [...chars]
@@ -1238,8 +1387,10 @@ function makeIndexObject () {
         if (chars[i].classList.contains('listItem')) {
             listHead = chars[i].parentNode.parentNode.parentNode
             if (listHead.classList.contains('otherBox')) status = 'other'
-            else if (listHead.classList.contains('characterBox') || listHead.classList.contains('mainBox')) status = 'main'
-            else if (listHead.classList.contains('auxiliaryBox') || listHead.classList.contains('auxBox')) status = 'aux'
+            //else if (listHead.classList.contains('characterBox') || listHead.classList.contains('mainBox')) status = 'main'
+            //else if (listHead.classList.contains('auxiliaryBox') || listHead.classList.contains('auxBox')) status = 'aux'
+            else if (listHead.classList.contains('characterBox') || listHead.classList.contains('mainBox')) status = 'character'
+            else if (listHead.classList.contains('auxiliaryBox') || listHead.classList.contains('auxBox')) status = 'auxiliary'
             else if (listHead.classList.contains('deprecatedBox')) status = 'deprecated'
             else if (listHead.classList.contains('archaicBox')) status = 'archaic'
             //console.log(cell, status)
@@ -1287,7 +1438,7 @@ function makeIndexObject () {
     // drop lists of characters into the right form fields
     for (entry in index) {
         if (index[entry].status) {
-            if (index[entry].status.includes('main')) document.getElementById('mainIndexList').value += entry
+            if (index[entry].status.includes('character')) document.getElementById('mainIndexList').value += entry
             if (index[entry].status.includes('aux')) document.getElementById('auxIndexList').value += entry
             if (index[entry].status.includes('archaic')) document.getElementById('archaicIndexList').value += entry
             if (index[entry].status.includes('deprecated')) document.getElementById('deprecatedIndexList').value += entry
@@ -1402,6 +1553,29 @@ function makeMarkup () {
  	for (i=0;i<chars.length;i++) {
 		out += index[chars[i]].sectionName+','
 		}
+    out += '">'+chars.join('␣')+'</figure>'
+	document.getElementById('out').value = out
+	document.getElementById('out').select()
+	}
+
+
+
+
+// reworked to add indexline
+function makeMarkup () {
+
+	charList = document.getElementById('in').value
+	charList = charList.replace(/ /g,'')
+	chars = [...charList]
+    type = index[chars[0]].status
+	out = '<figure class="'+type+'Box auto noindex indexline"  data-cols="" data-links="'
+	for (i=0;i<chars.length;i++) {
+		out += index[chars[i]].section+','
+		}
+	//out +='" data-notes="'
+ 	//for (i=0;i<chars.length;i++) {
+	//	out += index[chars[i]].sectionName+','
+	//	}
     out += '">'+chars.join('␣')+'</figure>'
 	document.getElementById('out').value = out
 	document.getElementById('out').select()
@@ -1563,8 +1737,11 @@ function checkParameters () {
         pairs = parameters[p].split('=')
         
         // open index and jump to character location
-        if (pairs[0] === 'index') { if (pairs[1]) { 
-            document.getElementById('index_details').open = true
+        if (pairs[0] === 'index') { if (pairs[1]) {
+            indexSections = document.getElementById('index').querySelectorAll('details')
+            console.log('indexSections',indexSections.length)
+            for (i=0;i<indexSections.length;i++) indexSections[i].open = true
+            //document.getElementById('index_details').open = true
             document.location = '#index'+pairs[1]
             } }
         

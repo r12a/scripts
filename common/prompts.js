@@ -135,7 +135,7 @@ onmouseout="document.getElementById('orthoLinkPopup').style.display='none'" ><im
 */
 
 
-function showOrthoLinks (node, script, langName, lang, orthog, indic) {
+function showOrthoLinksOLD (node, script, langName, lang, orthog, indic) {
 // Adds the link popup and anchoring line in Basic Features
 // script: iso code for script; langName: language name; lang: bcp47 tag
 // orthog: ordinary name for orthography described
@@ -175,6 +175,134 @@ function showOrthoLinks (node, script, langName, lang, orthog, indic) {
 	node.innerHTML = out
 
 }
+
+
+function showOrthoLinks (node, script, langName, lang, orthog, indic) {
+// Adds the link popup and anchoring line in Basic Features
+// script: iso code for script; langName: language name; lang: bcp47 tag
+// orthog: ordinary name for orthography described
+// indic: boolean indicating whether or not to show indic syllable property link
+        
+	out = `
+    <div id="orthoLinkSwitch" onmouseover="document.getElementById('orthoLinkPopup').style.display='block'"  
+    onmouseout="document.getElementById('orthoLinkPopup').style.display='none'"><img src="../common/icons/transfer.png" alt="External links">
+
+    <div id="orthoLinkPopup">
+    <ul>`
+    
+    out += `<li><a target="_blank" href="/app-charuse?language=${lang}">Character usage</a></li>`
+    
+    if (indic) out += `<li><a target="_blank" href="" onClick="this.href='../apps/listindic?chars='+encodeURI(getOrthographyList('.characterBox', 'index', false) + getOrthographyList('.auxiliaryBox', 'index', true));">Indic category</a></li>`
+    
+    out += `<li><a target="_blank" href="" onClick="this.href='../apps/listcategories?chars='+encodeURI(getOrthographyList('.characterBox', 'index', true) + getOrthographyList('.auxiliaryBox', 'index', true))">General Category</a></li>
+    
+    <li><a target="_blank" href="" onClick="this.href='/app-listcharacters?chars='+encodeURI(getOrthographyList('.characterBox', 'index', false) + getOrthographyList('.auxiliaryBox', 'index', true));">Unicode blocks</a></li>
+    
+    <li><a target="_blank" href="" onClick="this.href='/uniview?charlist='+encodeURI(getOrthographyList('.characterBox', 'index', false) + getOrthographyList('.auxiliaryBox', 'index', true))">UniView</a></li>
+    
+    <li><a target="_blank" href="" onClick="this.href='/app-analysestring/?chars='+encodeURI(getOrthographyList('.characterBox', 'index', false) + getOrthographyList('.auxiliaryBox', 'index', true))">Analyse String</a></li>
+    
+    <li><a target="_blank" href="" onClick="this.href='../fontlist/?script=${script}&text='+encodeURI(getOrthographyList('.characterBox', 'index', true) + getOrthographyList('.auxiliaryBox', 'index', true))">Font Lister</a></li>
+    
+    <li><a target="_blank" href="../samples/?script=${script}">Sample texts</a></li>
+    
+    <li><a target="_blank" href="block">Character notes</a></li>
+    
+    <li><a target="_blank" href="../links?iso=${script}">Related resources</a></li>
+    
+    <li id="closeOrthoLink" onClick="this.parentNode.parentNode.style.display='none'">X</li>
+    </ul>
+    </div>
+    </div>
+
+    <div id="orthoLinkInstructions">
+    <p>Click on the image to the left to view all the characters in the index in various groupings or open related apps.</p>
+    <!--p>Show <a href="../../app-charuse/?language=${lang}" target="_blank">${langName}</a> in the Character Usage app.</p>
+    <p>Show ${orthog} characters grouped by <a target="_blank" href="" onClick="this.href='../apps/listcategories?chars='+encodeURI(getOrthographyList('.characterBox', 'index', true) + getOrthographyList('.auxiliaryBox', 'index', true))">General Category</a>, or click on the icon to the left to choose alternatives.</p-->
+    </div>
+	` 
+	node.innerHTML = out
+
+}
+
+
+
+
+
+
+
+function makeIndexIntro (node, script, langName, lang, orthog, indic) {
+// Adds the introduction for the Index - includes the former showOrthoLinks 
+// script: iso code for script; langName: language name; lang: bcp47 tag
+// orthog: ordinary name for orthography described
+// indic: boolean indicating whether or not to show indic syllable property link
+    console.log(node)
+    var out = ''
+    
+    out += `<div id="index_intro">
+    <div class="index_intro_column">
+    <p class="instructions">The index points to locations where a character is mentioned in this page, and indicates whether it is used by the ${orthog} orthography described here.</p>
+    <p class="instructions"><a href="#" onclick="listAllIndexCharacters('arab','arab-fa'); document.getElementById('charCountList').style.display='block'; return false;">List &amp; export characters</a> in the index.</p>
+    </div>
+    <div class="index_intro_column" id="orthoLinks"></div>
+    `
+
+    
+	out += `<div id="orthoLinkSwitch" onmouseover="document.getElementById('orthoLinkPopup').style.display='block'"  
+    onmouseout="document.getElementById('orthoLinkPopup').style.display='none'"><img src="../common/icons/transfer.png" alt="External links">
+
+    <div id="orthoLinkPopup">
+    <ul>`
+    
+    out += `<li><a target="_blank" href="/app-charuse?language=${lang}">Character usage</a></li>`
+    
+    if (indic) out += `<li><a target="_blank" href="" onClick="this.href='../apps/listindic?chars='+encodeURI(getOrthographyList('.characterBox', 'index', false) + getOrthographyList('.auxiliaryBox', 'index', true));">Indic category</a></li>`
+    
+    out += `<li><a target="_blank" href="" onClick="this.href='../apps/listcategories?chars='+encodeURI(getOrthographyList('.characterBox', 'index', true) + getOrthographyList('.auxiliaryBox', 'index', true))">General Category</a></li>
+    
+    <li><a target="_blank" href="" onClick="this.href='/app-listcharacters?chars='+encodeURI(getOrthographyList('.characterBox', 'index', false) + getOrthographyList('.auxiliaryBox', 'index', true));">Unicode blocks</a></li>
+    
+    <li><a target="_blank" href="" onClick="this.href='/uniview?charlist='+encodeURI(getOrthographyList('.characterBox', 'index', false) + getOrthographyList('.auxiliaryBox', 'index', true))">UniView</a></li>
+    
+    <li><a target="_blank" href="" onClick="this.href='/app-analysestring/?chars='+encodeURI(getOrthographyList('.characterBox', 'index', false) + getOrthographyList('.auxiliaryBox', 'index', true))">Analyse String</a></li>
+    
+    <li><a target="_blank" href="" onClick="this.href='../fontlist/?script=${script}&text='+encodeURI(getOrthographyList('.characterBox', 'index', true) + getOrthographyList('.auxiliaryBox', 'index', true))">Font Lister</a></li>
+    
+    <li><a target="_blank" href="../samples/?script=${script}">Sample texts</a></li>
+    
+    <li><a target="_blank" href="block">Character notes</a></li>
+    
+    <li><a target="_blank" href="../links?iso=${script}">Related resources</a></li>
+    
+    <li id="closeOrthoLink" onClick="this.parentNode.parentNode.style.display='none'">X</li>
+    </ul>
+    </div>
+    </div>
+
+    <div id="orthoLinkInstructions">
+    <p>Click on the image to the left to view all the 'main' and 'infrequent' characters in the index in various groupings or open related apps.</p>
+    </div>
+	`
+    
+    out += `</div>
+    <table id="charCountList"></table>
+    `
+	node.outerHTML = out
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function addUsageAdvice (script) {

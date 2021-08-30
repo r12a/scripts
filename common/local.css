@@ -672,7 +672,10 @@ a:visited {
 
 
 #charCountList {
-	font-size: 80%; color: gray; text-align: start; line-height: 1.4; margin: 0 0 0 3em;
+	font-size: 100%; color: gray; text-align: start; line-height: 1.4; /*margin: 0 0 0 3em;*/
+	}
+#charCountList th {
+	font-size: 80%;
 	}
 #linebreak_details p { margin-right: 0; }
 #linebreak_details { font-size: smaller; line-height: 1.2; margin-top: 1em; }
@@ -1035,6 +1038,7 @@ div.btw p, div.btw figure { margin-inline-start: 0; }
 	}
 #index h3 {
     border-bottom: 1px solid #d2691e5e;
+    margin-block-start: 2em;
 	}
 #index .otherBox {
     background-color: transparent;
@@ -1115,7 +1119,7 @@ font-style: italic;
 
 #index .otherBox .listArray { flex-direction: row; text-align: start; }
 
-.index_intro {
+#index_intro {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -1124,7 +1128,7 @@ font-style: italic;
     margin-inline-end: 32%;
     margin-block-end: 1em;
     }
-.index_intro p { width: 45%; margin: 0; }
+#index_intro p { margin: 0 2em 1em 0;}
 
 
 .small .listPair { font-size: 80%; }
@@ -1150,11 +1154,11 @@ font-style: italic;
     }
 */
 
-#orthoLinks { display:flex; flex-direction: row; flex-wrap: nowrap; margin-inline-start:7.5%; margin-inline-end: 32%; }
+#orthoLinks { display:flex; flex-direction: row; flex-wrap: nowrap; /*margin-inline-start:7.5%; margin-inline-end: 32%; */ margin: 0; }
 #closeOrthoLink { list-style-type: none !important; text-align: end; font-size: 150% !important; line-height: 1.6; }
 #orthoLinkSwitch { position: relative; }
-#orthoLinkSwitch img { margin-block-start: 1em; }
-#orthoLinkPopup { display: none; position:absolute; top:1em; left: 24px; width: 16em; background-color: antiquewhite; padding-inline-start: 1em; padding-inline-end: 1em; border-radius: 4px; }
+#orthoLinkSwitch img { margin-left: 0; margin-right: 1em; margin-top: 0; }
+#orthoLinkPopup { display: none; position:absolute; top:0; left: 24px; width: 16em; background-color: antiquewhite; padding-inline-start: 1em; padding-inline-end: 1em; border-radius: 6px; border: 1px solid tan; z-index: 1000; }
 #orthoLinkPopup ul { margin:0; padding: 0; }
 #orthoLinkPopup li { font-size: 90%; cursor: pointer; list-style-type:square; margin-inline-start: 1em; color: #aaa; }
 #orthoLinkInstructions p { font-style: italic; font-size: 80%; line-height: 1.4; margin-inline-end: 0; }
@@ -1166,4 +1170,38 @@ font-style: italic;
 }
 
 
+.index_details { display:inline-flex;flex-direction: column; }
+.index_uname { font-size: 70%; color: #cc4f02; padding-block-end: .2em; }
 
+.indexline .listPair {
+    border-block-start: 1px dotted #aaa;
+    padding-block-start: .2em;
+    }
+
+
+/*<style>
+#orthoLinks { margin: 0; flex-direction: row; }
+#index_intro p { margin: 0 2em 1em 0;}
+#index_intro p { width: auto; }
+#orthoLinkSwitch img { margin-left: 0; margin-right: 1em; margin-top: 0; }
+</style>*/
+
+
+
+.indexShareLinks {
+    border: 0;
+    vertical-align: top;
+    padding: .5em .25em;
+    text-align: left;
+    white-space: nowrap;
+    }
+.popup {
+    font-size: 100%;
+    background-color: bisque;
+    padding: .25em 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    z-index: 100;
+    display: none;
+    text-align: end;
+}
