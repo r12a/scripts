@@ -3778,10 +3778,10 @@ autoExpandExamples.fa = `
 چل||
 چلنگر||
 چله||
-چلهٔ تابستان|midsummer|tʃʰelˈle ye tʰɒːbesˈtʰɒn
-چلهٔ زمستان|midwinter|tʃʰelˈle ye zemesˈtʰɒn
-چله‌ی تابستان|midsummer|tʃʰelˈle ye tʰɒːbesˈtʰɒn
-چله‌ی زمستان|midwinter|tʃʰelˈle ye zemesˈtʰɒn
+چلهٔ تابستان|midsummer|tʃʰelˈleje tʰɒːbesˈtʰɒn
+چلهٔ زمستان|midwinter|tʃʰelˈleje zemesˈtʰɒn
+چله‌ی تابستان|midsummer|tʃʰelˈleje tʰɒːbesˈtʰɒn
+چله‌ی زمستان|midwinter|tʃʰelˈleje zemesˈtʰɒn
 چلو|plain cooked rice|t͡ʃʰeloʊ̯|Tehran t͡ʃʰelo
 چلوکباب||
 چلچله||
