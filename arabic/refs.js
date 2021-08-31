@@ -335,6 +335,14 @@ reflist = {
 "lang": new Set(['ks']),
 },
 
+"wpl": {
+"authors": "Wikipedia",
+"title":"Persian language",
+"url":"https://en.wikipedia.org/wiki/Persian_language",
+"retrieved":"Aug 2021",
+"lang": new Set(['fa']),
+},
+
 "wpa": {
 "authors": "Wikipedia",
 "title":"Persian alphabet",
