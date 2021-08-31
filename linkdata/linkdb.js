@@ -8,6 +8,7 @@ var scriptNotes= {
     'arab':[['Arabic','arabic/'], 
 			['Hausa (ajami)', 'arabic/hausa'],
 			['Kashmiri', 'arabic/kashmiri'],
+			['Persian', 'arabic/arab-fa'],
 			['Urdu', 'arabic/urdu'], 
 			['Uighur', 'arabic/uighur'], 
 			], 
@@ -154,6 +155,7 @@ var scriptNotesByRegion = {
 		],
 	'P':[
 		['Plains Cree', 'cans/cans-crk'],
+		['Persian', 'arabic/arab-fa'],
 		['Pracalit', 'newa/'],
 		['Pular', 'adlam/'],
 		['Punjabi', 'gurmukhi/'],
@@ -261,7 +263,7 @@ var charNotesList = {
 // orthography comparison table (/scripts/featurelist/) NEW ONE with language data
 var orthoChart = {
 'adlm':'Pular',
-'arab':'MS Arabic, Hausa, Kashmiri, Urdu, Uighur',
+'arab':'MS Arabic, Hausa, Kashmiri, Persian, Urdu, Uighur',
 'armn':'Armenian',
 'bali':'Balinese',
 'bamu':'Bamum',
