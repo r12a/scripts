@@ -105,7 +105,6 @@ autoExpandExamples.fa = `
 زبان|tongue (organ)|zæbɒːn|zabân
 ناخن|fingernail|nɒːxon|nâxon
 پا|foot|pɒː|pâ
-ساق|leg|sɒːq|sâq
 ران|leg|ran|rân
 زانو|knee|zɒːnuː|zânu
 دست|hand|dæst|dast
@@ -117,7 +116,7 @@ autoExpandExamples.fa = `
 پشت|back|poʃt|pošt
 سینه|breast|siːne|sine
 دل|heart|del|del
-قلب|heart|qælb|qalb
+قلب|heart|ɢælb|qalb
 جگر|liver|dʒegær|jegar
 نوشیدن|to drink|nuːʃiːdæn|nušidan
 خوردن|to eat|xordæn|xordan
@@ -209,7 +208,7 @@ autoExpandExamples.fa = `
 راه|road|rɒːh|râh
 کوه|mountain|kuːh|kuh
 سرخ|red|sorx|sorx
-قرمز|red|qermez|qermez
+قرمز|red|ɢeɾmez|qermez
 سبز|green|sæbz|sabz
 زرد|yellow|zærd|zard
 سفید|white|sefid|sefid
@@ -2380,7 +2379,7 @@ autoExpandExamples.fa = `
 عمر|life|omr
 عمل|action, deed|ʔæˈmæl
 عمو|paternal uncle|ʔæˈmuː
-عمیق|deep|æˈmiːɣ
+عمیق|deep|ʔæmiːɢ|Tehran emiːɢ
 عمیق‌تر|deeper|æmiːxˈt̪ʰæɾ
 عمیق‌ترین|deepest|æmiːxt̪ʰæˈɾiːn
 عنابی|a reddish colour|ænɒːbiː
