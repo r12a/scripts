@@ -7,7 +7,7 @@ var metadata, value
 if (debug) console.log('lineList',lineList)
 for (var m=0;m<lineList.length;m++) {
 	if (debug) console.log(m)
-	if (lineList[m].trim() == '') {
+	if (lineList[m].trim() == '' || lineList[m].startsWith('#')) {
 		metadata = lineList.splice(m, 1)
 		if (debug) console.log('Removed blank line')
 		m--
