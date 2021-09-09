@@ -1,0 +1,610 @@
+/*
+<!DOCTYPE html>
+<meta charset="utf-8">
+*/
+
+var charDetails = {
+
+
+// MAIN BLOCK
+
+
+'\u{0430}': `
+<p class="insertTranscription">&#x0430;</p>
+<p><span class="ipa">a</span> eg.
+<span class="eg" lang="mn">цас</span>
+</p>
+<p><span class="leadin">Combinations</span></p>
+<p><span class="ipa">aː</span> is <span class="codepoint" translate="no"><span lang="mn">&#x0430;&#x0430;</span> [<a href="/scripts/mongolian/block#char0430"><span class="uname">U+0430 CYRILLIC SMALL LETTER A</span></a> + <a href="/scripts/mongolian/block#char0430"><span class="uname">U+0430 CYRILLIC SMALL LETTER A</span></a>]</span>, eg.
+<span class="eg" lang="mn">цаас</span>
+<span class="eg" lang="mn">харандаа</span>
+</p>
+<p><span class="ipa">u̯a</span> is <span class="codepoint" translate="no"><span lang="mn">&#x0443;&#x0430;</span> [<a href="cyrillic#char0443"><span class="uname">U+0443 CYRILLIC SMALL LETTER U</span></a> + <a href="cyrillic#char0430"><span class="uname">U+0430 CYRILLIC SMALL LETTER A</span></a>]</span>, eg.
+<span class="eg" lang="mn" dir="ltr">хуаран</span>
+</p>
+<p><span class="ipa">ɛː</span> is <span class="codepoint" translate="no"><span lang="mn">&#x0430;&#x0439;</span> [<a href="cyrillic#char0430"><span class="uname">U+0430 CYRILLIC SMALL LETTER A</span></a> + <a href="cyrillic#char0439"><span class="uname">U+0439 CYRILLIC SMALL LETTER SHORT I</span></a>]</span>, eg.
+<span class="eg" lang="mn">баяртай</span>
+</p>
+<p><span class="ipa">jaː</span> is <span class="codepoint" translate="no"><span lang="mn">&#x044F;&#x0430;</span> [<a href="cyrillic#char044F"><span class="uname">U+044F CYRILLIC SMALL LETTER YA</span></a> + <a href="cyrillic#char0430"><span class="uname">U+0430 CYRILLIC SMALL LETTER A</span></a>]</span>, eg.
+<span class="eg" lang="mn">яаж</span>
+</p>
+<p>See also <span class="codepoint" translate="no"><span lang="mn">&#x044F;</span> [<a href="cyrillic#char044F"><span class="uname">U+044F CYRILLIC SMALL LETTER YA</span></a>]</span>.</p>
+`,
+
+'\u{0431}': `
+<p class="insertTranscription">&#x0431;</p>
+<p><span class="ipa">b bʲ</span>, mostly used in word-initial position or after one of <span class="codepoint" translate="no"><span lang="mn">&#x043B;</span> [<a href="/scripts/mongolian/block#char043B"><span class="uname">U+043B CYRILLIC SMALL LETTER EL</span></a>]</span>, <span class="codepoint" translate="no"><span lang="mn">&#x043C;</span> [<a href="/scripts/mongolian/block#char043C"><span class="uname">U+043C CYRILLIC SMALL LETTER EM</span></a>]</span> or <span class="codepoint" translate="no"><span lang="mn">&#x0431;</span> [<a href="/scripts/mongolian/block#char0431"><span class="uname">U+0431 CYRILLIC SMALL LETTER BE</span></a>]</span><tt>gov</tt>, eg.
+<span class="eg" lang="mn">будан</span>
+<span class="eg" lang="mn">халбага</span>
+</p>
+<p>Sometimes transcribed as <span class="ipa">p</span>.</p>
+`,
+
+'\u{0432}': `
+<p class="insertTranscription">&#x0432;</p>
+<p><span class="ipa">v ~ w̜</span> eg.
+<span class="eg" lang="mn">вино</span>
+<span class="eg" lang="mn">аав</span>
+</p>
+<!--p><span class="ipa">-w</span> at the end of a word<tt>bat,11</tt>, eg.
+<span class="eg" lang="mn">тав</span>
+</p-->
+<p><span class="ipa">f</span> sometimes in cluster-initial position, eg.
+<span class="eg" lang="mn">навч</span>
+</p>
+<p>Usually only word-initial in foreign words.<tt>gov</tt></p>
+`,
+
+'\u{0433}': `
+<p class="insertTranscription">&#x0433;</p>
+<p><span class="ipa">ɡ</span> in words with +ATR (front/feminine) vowels (<span class="charExample inline" translate="no"><span class="ex" lang="mn">үэө</span></span>)<tt>wc</tt>, eg.
+<span class="eg" lang="mn">өргөн</span>
+</p>
+<p><span class="ipa">ɢ</span> in words with −ATR (back/masculine) vowels (<span class="charExample inline" translate="no"><span class="ex" lang="mn">уоа</span></span>) unless it occurs in syllable-final position<tt>wc</tt>, eg.
+<span class="eg" lang="mn">монгол</span>
+</p>
+<p><span class="ipa">-k</span> normally in syllable-final position<tt>bat,11</tt>, eg.
+<span class="eg" lang="mn">өндөг</span>
+<p>A final vowel is usually not pronounced, but causes pronunciation to remain <span class="ipa">ɡ</span><tt>bat,11</tt>, eg.
+<span class="eg" lang="mn">өнгө</span>
+<span class="eg" lang="mn">халбага</span>
+</p>
+</p>
+`,
+
+'\u{0434}': `
+<p class="insertTranscription">&#x0434;</p>
+<p><span class="ipa">d</span> eg.
+<span class="eg" lang="mn">дэр</span>
+</p>
+<p><span class="ipa">-t</span> occurs in syllable-final position<tt>bat,11</tt>, eg.
+<span class="eg" lang="mn">гадаад</span>
+</p>
+<p>Sometimes transcribed as <span class="ipa">t</span>.</p>
+`,
+
+'\u{0435}': `
+<p class="insertTranscription">&#x0435;</p>
+<p><span class="ipa">jɵ</span> eg.
+<span class="eg" lang="mn" dir="ltr">ес</span>
+</p>
+<p>Following a consonant it indicates that the consonant is palatalised.</p>
+`,
+
+'\u{0436}': `
+<p class="insertTranscription">&#x0436;</p>
+<p><span class="ipa">d͡ʒ</span> eg.
+<span class="eg" lang="mn">жаал</span>
+</p>
+<p>Sometimes transcribed as <span class="ipa">t͡ʃ</span>.</p>
+`,
+
+'\u{0437}': `
+<p class="insertTranscription">&#x0437;</p>
+<p><span class="ipa">d͡z</span> eg.
+<span class="eg" lang="mn">зун</span>
+</p>
+<p>Sometimes transcribed as <span class="ipa">t͡s</span> or <span class="ipa">z</span>.</p>
+`,
+
+'\u{0438}': `
+<p class="insertTranscription">&#x0438;</p>
+<p><span class="ipa">i</span> eg.
+<span class="eg" lang="mn">жижиг</span>
+</p>
+<p><span class="leadin">Combinations</span></p>
+<p><span class="ipa">iː</span> is <span class="codepoint" translate="no"><span lang="mn">&#x0438;&#x0439;</span> [<a href="/scripts/cyrillic/block#char0438"><span class="uname">U+0438 CYRILLIC SMALL LETTER I</span></a> + <a href="/scripts/cyrillic/block#char0439"><span class="uname">U+0439 CYRILLIC SMALL LETTER SHORT I</span></a>]</span>, eg.
+<span class="eg" lang="mn">лийр</span>
+</p>
+<p><span class="ipa">i̯a</span> is <span class="codepoint" translate="no"><span lang="mn">&#x0438;&#x0430;</span> [<a href="cyrillic#char0438"><span class="uname">U+0438 CYRILLIC SMALL LETTER I</span></a> + <a href="cyrillic#char0430"><span class="uname">U+0430 CYRILLIC SMALL LETTER A</span></a>]</span>, eg.
+<span class="eg" lang="mn">амиараа</span>
+</p>
+`,
+
+'\u{0439}': `
+<p class="insertTranscription">&#x0439;</p>
+<p>Used for diphthongs.</p>
+<p>Also makes the long <span class="ipa">iː</span> sound, eg.
+<span class="eg" lang="mn">тийм</span>
+</p>
+`,
+
+'\u{043A}': `
+<p class="insertTranscription">&#x043A;</p>
+<p><span class="ipa">k</span> as a loan consonant, but often adopted into the Mongolian sound system as <span class="ipa">x</span>, eg.
+<span class="eg" lang="mn">кофе</span>
+</p>
+`,
+
+'\u{043B}': `
+<p class="insertTranscription">&#x043B;</p>
+<p><span class="ipa">ɮ</span> eg.
+<span class="eg" lang="mn">лийр</span>
+</p>
+`,
+
+'\u{043C}': `
+<p class="insertTranscription">&#x043C;</p>
+<p><span class="ipa">m</span> eg.
+<span class="eg" lang="mn">мөс</span>
+</p>
+`,
+
+'\u{043D}': `
+<p class="insertTranscription">&#x043D;</p>
+<p><span class="ipa">n</span> eg.
+<span class="eg" lang="mn">намар</span>
+</p>
+<p><span class="ipa">ŋ</span> sometimes when used as syllable-final<tt>bat,11</tt>, eg.
+<span class="eg" lang="mn">будан</span>
+<span class="eg" lang="mn">мөнгө</span>
+</p>
+<p>A final vowel is usually not pronounced, but causes pronunciation to remain <span class="ipa">n</span><tt>bat,11</tt>, eg.
+<span class="eg" lang="mn">энэ</span>
+<span class="eg" lang="mn">чоно</span>
+</p>
+`,
+
+'\u{043E}': `
+<p class="insertTranscription">&#x043E;</p>
+<p><span class="ipa">ɔ</span> eg.
+<span class="eg" lang="mn">хол</span>
+</p>
+<p><span class="leadin">Combinations</span></p>
+<p><span class="ipa">oː</span> is <span class="codepoint" translate="no"><span lang="mn">&#x043E;&#x043E;</span> [<a href="/scripts/cyrillic/block#char043E"><span class="uname">U+043E CYRILLIC SMALL LETTER O</span></a> + <a href="/scripts/cyrillic/block#char043E"><span class="uname">U+043E CYRILLIC SMALL LETTER O</span></a>]</span>, eg.
+<span class="eg" lang="mn">хоосон</span>
+</p>
+<p><span class="ipa">ɔi̯</span> is <span class="codepoint" translate="no"><span lang="mn">&#x043E;&#x0439;</span> [<a href="cyrillic#char043E"><span class="uname">U+043E CYRILLIC SMALL LETTER O</span></a> + <a href="cyrillic#char0439"><span class="uname">U+0439 CYRILLIC SMALL LETTER SHORT I</span></a>]</span>, eg.
+<span class="eg" lang="mn">ойлгосон</span>
+</p>
+<p><span class="ipa">jɔː</span> is <span class="codepoint" translate="no"><span lang="mn">&#x0451;&#x043E;</span> [<a href="cyrillic#char0451"><span class="uname">U+0451 CYRILLIC SMALL LETTER IO</span></a> + <a href="cyrillic#char043E"><span class="uname">U+043E CYRILLIC SMALL LETTER O</span></a>]</span>, eg. 
+<span class="eg transc" lang="mn" dir="ltr">ёотон</span>
+</p>
+<p>See also <span class="codepoint" translate="no"><span lang="mn">&#x0451;</span> [<a href="cyrillic#char0451"><span class="uname">U+0451 CYRILLIC SMALL LETTER IO</span></a>]</span>.</p>
+`,
+
+'\u{043F}': `
+<p class="insertTranscription">&#x043F;</p>
+<p><span class="ipa">p</span> for foreign loan words, eg.
+<span class="eg" lang="mn" dir="ltr">пүүжин</span>
+</p>
+<p>Sometimes transcribed as <span class="ipa">pʰ</span>.</p>
+`,
+
+'\u{0440}': `
+<p class="insertTranscription">&#x0440;</p>
+<p><span class="ipa">r</span> eg.
+<span class="eg" lang="mn">ширээ</span>
+</p>
+<p>Mongolians find words beginning with <span class="ipa">r</span> difficult to pronounce, and so put a vowel at the beginning<tt>bat,11</tt>, eg.
+<span class="eg" lang="mn">орос</span>
+</p>
+`,
+
+'\u{0441}': `
+<p class="insertTranscription">&#x0441;</p>
+<p><span class="ipa">s</span> eg.
+<span class="eg" lang="mn">саваа</span>
+</p>
+`,
+
+'\u{0442}': `
+<p class="insertTranscription">&#x0442;</p>
+<p><span class="ipa">t tʲ</span> eg.
+<span class="eg" lang="mn">тийм</span>
+</p>
+<p>Sometimes transcribed as <span class="ipa">tʰ</span>.</p>
+`,
+
+'\u{0443}': `
+<p class="insertTranscription">&#x0443;</p>
+<p><span class="ipa">ʊ</span> eg.
+<span class="eg" lang="mn">утас</span>
+</p>
+<p>As a short vowel, it appears only in the first syllable (but can appear later as part of a long vowel or diphthong).<tt>bat,14</tt></p>
+<p><span class="leadin">Combinations</span></p>
+<p><span class="ipa">ʊː</span> is <span class="codepoint" translate="no"><span lang="mn">&#x0443;&#x0443;</span> [<a href="/scripts/cyrillic/block#char0443"><span class="uname">U+0443 CYRILLIC SMALL LETTER U</span></a> + <a href="/scripts/cyrillic/block#char0443"><span class="uname">U+0443 CYRILLIC SMALL LETTER U</span></a>]</span>, eg.
+<span class="eg" lang="mn">уугуул</span>
+</p>
+<p><span class="ipa">ʊi̯</span> is <span class="codepoint" translate="no"><span lang="mn">&#x0443;&#x0439;</span> [<a href="cyrillic#char0443"><span class="uname">U+0443 CYRILLIC SMALL LETTER U</span></a> + <a href="cyrillic#char0439"><span class="uname">U+0439 CYRILLIC SMALL LETTER SHORT I</span></a>]</span>, eg.
+<span class="eg transc" lang="mn">дугуй</span>
+</p>
+<p><span class="ipa">u̯a</span> is <span class="codepoint" translate="no"><span lang="mn">&#x0443;&#x0430;</span> [<a href="cyrillic#char0443"><span class="uname">U+0443 CYRILLIC SMALL LETTER U</span></a> + <a href="cyrillic#char0430"><span class="uname">U+0430 CYRILLIC SMALL LETTER A</span></a>]</span>, eg.
+<span class="eg transc" lang="mn">хуаран</span>
+</p>
+<p><span class="ipa">jʊː</span> is <span class="codepoint" translate="no"><span lang="mn">&#x044E;&#x0443;</span> [<a href="cyrillic#char044E"><span class="uname">U+044E CYRILLIC SMALL LETTER YU</span></a> + <a href="cyrillic#char0443"><span class="uname">U+0443 CYRILLIC SMALL LETTER U</span></a>]</span>, eg.
+<span class="eg" lang="mn">юу</span>
+</p>
+<p>See also <span class="codepoint" translate="no"><span lang="mn">&#x044E;</span> [<a href="cyrillic#char044E"><span class="uname">U+044E CYRILLIC SMALL LETTER YU</span></a>]</span>.</p>
+`,
+
+'\u{0444}': `
+<p class="insertTranscription">&#x0444;</p>
+<p><span class="ipa">f</span> for foreign loan words, but often pronounced <span class="ipa">pʰ</span>, eg.
+<span class="eg" lang="mn">фабрик</span>
+</p>
+`,
+
+'\u{0445}': `
+<p class="insertTranscription">&#x0445;</p>
+<p><span class="ipa">x</span> eg.
+<span class="eg" lang="mn">хөөрхөн</span>
+</p>
+`,
+
+'\u{0446}': `
+<p class="insertTranscription">&#x0446;</p>
+<p><span class="ipa">t͡s</span> eg.
+<span class="eg" lang="mn">цас</span>
+</p>
+<p>Sometimes transcribed as <span class="ipa">t͡sʰ</span>.</p>
+`,
+
+'\u{0447}': `
+<p class="insertTranscription">&#x0447;</p>
+<p><span class="ipa">t͡ʃ</span> eg.
+<span class="eg" lang="mn">чих</span>
+</p>
+<p>Sometimes transcribed as <span class="ipa">t͡ʃʰ</span>.</p>
+`,
+
+'\u{0448}': `
+<p class="insertTranscription">&#x0448;</p>
+<p><span class="ipa">ʃ</span> eg.
+<span class="eg" lang="mn">ширээ</span>
+</p>
+`,
+
+'\u{0449}': `
+<p class="insertTranscription">&#x0449;</p>
+<p><span class="ipa">ʃ</span> in Russian words.</p>
+`,
+
+'\u{044A}': `
+<p class="insertTranscription">&#x044A;</p>
+<p>Only used to separate <span class="codepoint" translate="no"><span lang="mn">я</span> [<a href="cyrillic#char044F" target="c"><span class="uname">U+044F CYRILLIC SMALL LETTER YA</span></a>]</span> and <span class="codepoint" translate="no"><span lang="mn">ё</span> [<a href="cyrillic#char0451" target="c"><span class="uname">U+0451 CYRILLIC SMALL LETTER IO</span></a>]</span> from a -ATR (back) verb stem ending with a consonant<a class="fn" target="_blank" title="номын гэр, The Mongolian Alphabet" href="https://www.mongolianlanguage.mn/free-lessons/mongolian-cyrillic-alphabet">4</a>, eg.
+<span class="charExample" translate="no"><span class="ex" lang="mn">явъя</span> 
+<bdi class="trans">явъя</bdi> <bdi class="meaning">let's go</bdi></span>
+<span class="charExample" translate="no"><span class="ex" lang="mn">уулзъя</span> <bdi class="trans">уулзъя</bdi> <bdi class="meaning">let's meet</bdi></span>
+<span class="charExample" translate="no"><span class="ex" lang="mn">бодъё</span> <bdi class="trans">бодъё</bdi> <bdi class="meaning">let's think</bdi></span>
+</p>
+`,
+
+'\u{044B}': `
+<p class="insertTranscription">&#x044B;</p>
+<p><span class="ipa">i</span> used only in suffixes of masculine words (ie. containing <span class="ex" lang="mn">а</span>, <span class="ex" lang="mn">о</span>, or <span class="ex" lang="mn">у</span>)<tt>gov</tt>, eg.
+<span class="eg" lang="mn">таны</span>
+</p>
+<p>Not used in uppercase. Cannot begin a word.</p>
+`,
+
+'\u{044C}': `
+<p class="insertTranscription">&#x044C;</p>
+<p>Different descriptions appear.</p>
+<p><span class="ipa">ĭ</span> in some descriptions<tt>bat,4</tt>, eg.
+<span class="eg transc" lang="mn">арьс</span>
+<span class="eg transc" lang="mn">амьтан</span>
+</p>
+<p><span class="ipa">ʲ</span> palatalisation marker in other descriptions.<tt>wc</tt></p>
+<p>Not used in uppercase. Cannot begin a word.</p>
+<p>Does one of two things:</p>
+<ul>
+<li>separates <span class="codepoint" translate="no"><span lang="mn">е</span> [<a href="cyrillic#char0435" target="c"><span class="uname">U+0435 CYRILLIC SMALL LETTER IE</span></a>]</span> from a feminine verb stem ending with a consonant, eg.
+<span class="charExample" translate="no"><span class="ex" lang="mn">хэлье</span> <bdi class="trans">хэлье</bdi> <bdi class="meaning">let's say</bdi></span>
+<span class="charExample" translate="no"><span class="ex" lang="mn">өгье</span> <bdi class="trans">өгье</bdi> <bdi class="meaning">let's give</bdi></span>
+</li>
+<li>softens hard consonants, eg.
+<span class="charExample" translate="no"><span class="ex" lang="mn">морь</span> <bdi class="trans">морь</bdi> <bdi class="meaning">horse</bdi></span>
+<span class="charExample" translate="no"><span class="ex" lang="mn">хууль</span> <bdi class="trans">хууль</bdi> <bdi class="meaning">law</bdi></span>
+<span class="charExample" translate="no"><span class="ex" lang="mn">хорь</span> <bdi class="trans">хорь</bdi> <bdi class="meaning">twenty</bdi></span>
+</li>
+</ul>
+`,
+
+'\u{044D}': `
+<p class="insertTranscription">&#x044D;</p>
+<p><span class="ipa">e</span> eg.
+<span class="eg" lang="mn">ээмэр</span>
+</p>
+<p><span class="leadin">Combinations</span></p>
+<p><span class="ipa">eː</span> is <span class="codepoint" translate="no"><span lang="mn">&#x044D;&#x044D;</span> [<a href="/scripts/mongolian/block#char044D"><span class="uname">U+044D CYRILLIC SMALL LETTER E</span></a> + <a href="/scripts/mongolian/block#char044D"><span class="uname">U+044D CYRILLIC SMALL LETTER E</span></a>]</span>, eg.
+<span class="eg" lang="mn" dir="ltr">ээж</span>
+</p>
+<p><span class="ipa">ei̯</span> is <span class="codepoint" translate="no"><span lang="mn">&#x044D;&#x0439;</span> [<a href="cyrillic#char044D"><span class="uname">U+044D CYRILLIC SMALL LETTER E</span></a> + <a href="cyrillic#char0439"><span class="uname">U+0439 CYRILLIC SMALL LETTER SHORT I</span></a>]</span>, eg.
+<span class="eg" lang="mn">эмэгтэй</span>
+</p>
+<p>See also <span class="codepoint" translate="no"><span lang="mn">&#x0435;</span> [<a href="cyrillic#char0435"><span class="uname">U+0435 CYRILLIC SMALL LETTER IE</span></a>]</span>.</p>
+`,
+
+'\u{044E}': `
+<p class="insertTranscription">&#x044E;</p>
+<p><span class="ipa">jʊ ju</span>  eg.
+<span class="eg" lang="mn">юу</span>
+</p>
+<p>Unlike other ioticised vowels, this letter represents both the front and back vowels.</p>
+<p>Following a consonant it indicates that the consonant is palatalised.</p>
+<p><span class="leadin">Combinations</span></p>
+<p><span class="ipa">juː</span> is <span class="codepoint" translate="no"><span lang="mn">&#x044E;&#x04AF;</span> [<a href="cyrillic#char044E"><span class="uname">U+044E CYRILLIC SMALL LETTER YU</span></a> + <a href="cyrillic#char04AF"><span class="uname">U+04AF CYRILLIC SMALL LETTER STRAIGHT U</span></a>]</span>, eg.
+<span class="eg transc" lang="mn" dir="ltr">ширээ юү?</span>
+</p>
+<p><span class="ipa">jʊː</span> is <span class="codepoint" translate="no"><span lang="mn">&#x044E;&#x0443;</span> [<a href="cyrillic#char044E"><span class="uname">U+044E CYRILLIC SMALL LETTER YU</span></a> + <a href="cyrillic#char0443"><span class="uname">U+0443 CYRILLIC SMALL LETTER U</span></a>]</span>, eg.
+<span class="eg" lang="mn">юу</span>
+</p>
+`,
+
+'\u{044F}': `
+<p class="insertTranscription">&#x044F;</p>
+<p><span class="ipa">ja</span>  eg.
+<span class="eg" lang="mn">яс</span>
+</p>
+<p>Following a consonant it indicates that the consonant is palatalised.</p>
+<p><span class="leadin">Combinations</span></p>
+<p><span class="ipa">jaː</span> is <span class="codepoint" translate="no"><span lang="mn">&#x044F;&#x0430;</span> [<a href="cyrillic#char044F"><span class="uname">U+044F CYRILLIC SMALL LETTER YA</span></a> + <a href="cyrillic#char0430"><span class="uname">U+0430 CYRILLIC SMALL LETTER A</span></a>]</span>, eg.
+<span class="eg" lang="mn">яаж</span>
+</p>
+`,
+
+'\u{0451}': `
+<p class="insertTranscription">&#x0451;</p>
+<p><span class="ipa">jɔ</span> eg.
+<span class="eg" lang="mn">хоёр</span>
+</p>
+<p>Following a consonant it indicates that the consonant is palatalised.</p>
+<p><span class="leadin">Combinations</span></p>
+<p><span class="ipa">jɔː</span> is <span class="codepoint" translate="no"><span lang="mn">&#x0451;&#x043E;</span> [<a href="cyrillic#char0451"><span class="uname">U+0451 CYRILLIC SMALL LETTER IO</span></a> + <a href="cyrillic#char043E"><span class="uname">U+043E CYRILLIC SMALL LETTER O</span></a>]</span>, eg. 
+<span class="eg transc" lang="mn" dir="ltr">ёотон</span>
+</p>
+`,
+
+'\u{04AF}': `
+<p class="insertTranscription">&#x04AF;</p>
+<p><span class="ipa">u</span> eg.
+<span class="eg" lang="mn">хүн</span>
+</p>
+<p>As a short vowel, it appears only in the first syllable (but can appear later as part of a long vowel or diphthong).<tt>bat,14</tt></p>
+<p><span class="leadin">Combinations</span></p>
+<p><span class="ipa">uː</span> is <span class="codepoint" translate="no"><span lang="mn">&#x04AF;&#x04AF;</span> [<a href="/scripts/cyrillic/block#char04AF"><span class="uname">U+04AF CYRILLIC SMALL LETTER STRAIGHT U</span></a> + <a href="/scripts/cyrillic/block#char04AF"><span class="uname">U+04AF CYRILLIC SMALL LETTER STRAIGHT U</span></a>]</span>, eg.
+<span class="eg" lang="mn">сүү</span>
+</p>
+<p><span class="ipa">ui̯</span> is <span class="codepoint" translate="no"><span lang="mn">&#x04AF;&#x0439;</span> [<a href="cyrillic#char04AF"><span class="uname">U+04AF CYRILLIC SMALL LETTER STRAIGHT U</span></a> + <a href="cyrillic#char0439"><span class="uname">U+0439 CYRILLIC SMALL LETTER SHORT I</span></a>]</span>, eg.
+<span class="eg transc" lang="mn">хүйтэн</span>
+</p>
+<p><span class="ipa">juː</span> is <span class="codepoint" translate="no"><span lang="mn">&#x044E;&#x04AF;</span> [<a href="cyrillic#char044E"><span class="uname">U+044E CYRILLIC SMALL LETTER YU</span></a> + <a href="cyrillic#char04AF"><span class="uname">U+04AF CYRILLIC SMALL LETTER STRAIGHT U</span></a>]</span>, eg.
+<span class="eg transc" lang="mn" dir="ltr">ширээ юү</span>
+</p>
+`,
+
+'\u{04E9}': `
+<p class="insertTranscription">&#x04E9;</p>
+<p><span class="ipa">ɵ o</span> eg.
+<span class="eg" lang="mn">өндөг</span>
+</p>
+<p><span class="leadin">Combinations</span></p>
+<p><span class="ipa">oː</span> is <span class="codepoint" translate="no"><span lang="mn">&#x0275;&#x0275;</span> [<a href="/scripts/cyrillic/block#char0275"><span class="uname">U+0275 LATIN SMALL LETTER BARRED O</span></a> + <a href="/scripts/cyrillic/block#char0275"><span class="uname">U+0275 LATIN SMALL LETTER BARRED O</span></a>]</span>, eg.
+<span class="eg" lang="mn">өөрөө</span>
+</p>
+`,
+
+
+
+
+
+
+
+
+// COMMON PUNCTUATION
+
+// danda
+'\u{0964}': `
+<p class="insertTranscription">&#x0964;</p>
+`,
+
+// double danda
+'\u{0965}': `
+<p class="insertTranscription">&#x0965;</p>
+`,
+
+// "..
+'\u{201C}': `
+`,
+
+// .."
+'\u{201D}': `
+`,
+
+// '..
+'\u{2018}': `
+`,
+
+// ..'
+'\u{2019}': `
+`,
+
+// «
+'\u{00AB}': `
+`,
+
+// »
+'\u{00BB}': `
+`,
+
+// ;
+'\u{003B}': `
+`,
+
+// :
+'\u{003A}': `
+`,
+
+// .
+'\u{002E}': `
+`,
+
+// ?
+'\u{003F}': `
+`,
+
+// !
+'\u{0021}': `
+`,
+
+// (
+'\u{0028}': `
+`,
+
+// )
+'\u{0029}': `
+`,
+
+// …
+'\u{2026}': `
+`,
+
+// –
+'\u{2013}': `
+`,
+
+// —
+'\u{2014}': `
+`,
+
+// §
+'\u{00A7}': `
+`,
+
+'\u{2020}': `
+<p>Called <span class="name">dagger</span>, but also known as <span class="name">obelisk</span>, <span class="name">obelus</span>, or <span class="name">long cross</span>.<a class="fnref" href="#refs">b321</a></p>
+<p>A reference mark, used primarily with footnotes. When used for this purpose with other signs, the traditional order is <span class="ex" lang="en">* † ‡ § ‖ ¶</span>.<a class="fnref" href="#refs">b68</a></p>
+<p>Also a death sign in European typography, used to mark the year of death or the names of dead persons.<a class="fnref" href="#refs">b321</a></p>
+<p>In lexicography it marks obsolete forms, and in editing of classical texts flags passages judged to be corrupt.<a class="fnref" href="#refs">b321</a></p>
+`,
+
+'\u{2021}': `
+<p>Called <span class="name">dagger</span>, but also known as <span class="name">diesis</span>, or <span class="name">double obelisk</span>.<a class="fnref" href="#refs">b321</a></p>
+<p>A reference mark used  with footnotes. When used for this purpose with other signs, the traditional order is <span class="ex" lang="en">* † ‡ § ‖ ¶</span>.<a class="fnref" href="#refs">b68</a></p>
+`,
+
+'\u{2032}': `
+<p>Abbreviation for feet (1′ = 12″).<a class="fnref" href="#refs">b330</a></p>
+<p>Also used for minutes of arc (eg. 60′=1°)<span class="name"></span>.<a class="fnref" href="#refs">b330</a></p>
+`,
+
+'\u{2033}': `
+<p>Abbreviation for inches (1′ = 12″).<a class="fnref" href="#refs">b321</a></p>
+<p>Also used for seconds of arc (eg. 360″=1°)<span class="name"></span>.<a class="fnref" href="#refs">b321</a></p>
+`,
+
+
+// FORMATTING CHARACTERS
+
+// zwsp
+'\u{200B}': `
+<p>An invisible character, used to signal line-break and word-break opportunities. It was originally provided for use with writing systems such as Thai, Myanmar, Khmer, Japanese, etc. that don't use spaces between words.</p>
+<p>Justification may visibly adjust the space between the characters on either side of this character, doing so as if the ZWSP wasn't there, eg. the Thai text <span class="charExample" translate="no"><span class="ex" lang="th">อักษร​ไทย</span></span> may look like <span class="charExample" translate="no"><span lang="th">อั ก ษ ร ไ ท ย</span></span> when justified, or when letter-spacing is applied, even though the two words are separated by a ZWSP (click on the word to see the composition).</p>
+`,
+
+// zwj
+'\u{200D}': `
+<p>Creates glyph joining behaviour in the absence of normal joining contexts.</p>
+`,
+
+// zwnj
+'\u{200C}': `
+<p>Prevents glyph joining behaviour.</p>
+`,
+
+// word-break
+'\u{2060}': `
+<p>An invisible character, equivalent to a zero-width no-break space, and used to prevent line-breaks, eg. it can be used around the + sign in base&#x2060;+delta&#x2060; to prevent a line break occuring in that sequence of characters. It has no effect on word segmentation.</p>
+<p>It can also be used to bracket other characters to turn them into non-breaking characters, such as <a href="/scripts/punctuation/block#char2009"><span class="uname">U+2009 THIN SPACE</span></a> or <span class="codepoint" translate="no"><span lang="km">&#x2015;</span> [<a href="/scripts/khmer/block#char2015"><span class="uname">U+2015 HORIZONTAL BAR</span></a>]</span>.</p>
+<p>Not to be confused with <a href="/scripts/khmer/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a> or <a href="/scripts/khmer/block#char034F"><span class="uname">U+034F COMBINING GRAPHEME JOINER​</span></a>, since it has no effect on shaping.</p>
+<p>This functionality is also provided by <span class="uname">U+FEFF ZERO WIDTH NO-BREAK SPACE</span>, but since that character also represents the byte-order mark, the use of this word joiner character (added in Unicode 3.2) is strongly preferred over the latter.</p>
+`,
+
+// rli
+'\u{2067}': `
+<p>Sets the base direction for the following text to RTL, and isolates it (ie. stops the bidirectional algorithm causing interactions across the boundaries of the embedded text).</p>
+`,
+
+// lri
+'\u{2066}': `
+<p>Sets the base direction for the following text to LTR, and isolates it (ie. stops the bidirectional algorithm causing interactions across the boundaries of the embedded text).</p>
+`,
+
+//fsi
+'\u{2068}': `
+<p>Sets the base direction for the following text to the direction of the first strong directional character, per Unicode Bidirectional Algorithm rules, and isolates it (ie. stops the bidirectional algorithm causing interactions across the boundaries of the embedded text).</p>
+`,
+
+// pdi
+'\u{2069}': `
+<p>Ends the range of text that started with RLI, LRI, or FSI.</p>
+`,
+
+// rle
+'\u{202B}': `
+<p>Sets the base direction for the following text to RTL, with no isolation. The Unicode Standard recommends use of RLI, instead.</p>
+`,
+
+// lre
+'\u{202A}': `
+<p>Sets the base direction for the following text to LTR, with no isolation. The Unicode Standard recommends use of LRI, instead.</p>
+`,
+
+// pdf
+'\u{202C}': `
+<p>Ends the range of text that started with RLE, or LRE.</p>
+`,
+
+// rlm
+'\u{200F}': `
+<p>An invisible character with a strong RTL directional property. Can be used to correct local issues with the Unicode Bidirectional Algorithm.</p>
+`,
+
+// lrm
+'\u{200E}': `
+<p>An invisible character with a strong LTR directional property. Can be used to correct local issues with the Unicode Bidirectional Algorithm.</p>
+`,
+
+// cgj
+'\u{034F}': `
+<p>Semantically separates characters. Can be used to prevent pairs of characters being treated as digraphs, or to block canonical reordering of combining marks during normalization. The word 'joiner' in the name is a misnomer.</p>
+`,
+
+// alm
+'\u{061C}': `
+<p>Helps produce the correct ordering for sequences with no strong directional characters by overriding the Unicode Bidirectional Algorithm default rules. Used particularly for text in the Arabic language, and languages using Syriac and Thaana scripts. Not usually needed for Hebrew, N'Ko, or Persian.</p>
+`,
+
+
+
+
+// CURRENCY
+
+'\u{20AE}': `
+<p>Currency symbol for the Mongolian unit of currency, the <span class="name">tugrik</span>, formerly subdivided into 100 <span class="name">möngö</span>. The standard abbreviation is MNT.</p>
+`,
+
+
+
+}
