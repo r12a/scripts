@@ -1312,8 +1312,7 @@ function showTransliterations (yes) {
 
 
 function setTranslitToggle () {
-	// adds a checkbox to the sliding selector to 
-	// switch transliterations on/off
+	// adds checkboxes and links to the fixed position selector
 	
 	var checkboxList = document.getElementById('showTranscriptions')
 	if (checkboxList === null) {
@@ -1333,10 +1332,10 @@ function setTranslitToggle () {
 	checkboxList.appendChild(div)
 
 	// add detail mouseover toggle
-	var div = document.createElement('div')
+	div = document.createElement('div')
 	div.id = 'showDetailType'
-	var label = document.createElement('label')
-	var input = document.createElement('input')
+	label = document.createElement('label')
+	input = document.createElement('input')
 	input.type = 'checkbox'
 	input.checked = true
 	input.id = 'showDetailOnMouseover'
@@ -1344,6 +1343,35 @@ function setTranslitToggle () {
 	label.appendChild(input)
 	//label.onclick = showTransliterationsEvt
 	div.appendChild(label)
+	checkboxList.appendChild(div)
+
+	// add links to phonetic symbol info
+	div = document.createElement('div')
+	div.id = 'phoneticLinks'
+    div.appendChild(document.createTextNode('Phonetic alphabet tips:'))
+    div.appendChild(document.createElement('br'))
+    var a = document.createElement('a')
+    a.appendChild(document.createTextNode('Consonants'))
+    a.href = 'https://en.wikipedia.org/wiki/International_Phonetic_Alphabet#Consonants'
+    a.target = "_blank"
+    div.appendChild(a)
+
+    div.appendChild(document.createTextNode(' • '))
+
+    var a = document.createElement('a')
+    a.appendChild(document.createTextNode('Vowels'))
+    a.href = 'https://en.wikipedia.org/wiki/International_Phonetic_Alphabet#Vowels'
+    a.target = "_blank"
+    div.appendChild(a)
+
+    div.appendChild(document.createTextNode(' • '))
+
+    var a = document.createElement('a')
+    a.appendChild(document.createTextNode('Diacritics'))
+    a.href = 'https://en.wikipedia.org/wiki/International_Phonetic_Alphabet#Diacritics_and_prosodic_notation'
+    a.target = "_blank"
+    div.appendChild(a)
+
 	checkboxList.appendChild(div)
 	}
 
