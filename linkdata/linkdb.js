@@ -22,7 +22,9 @@ var scriptNotes= {
     		['Plains Cree', 'cans/cans-crk']
     		],
     'cher':[['Cherokee', 'cherokee/']],
-    'cyrl':[['Cyrillic/Russian', 'cyrillic/']],
+    'cyrl':[['Cyrillic/Russian', 'cyrillic/'],
+    		['Mongolian', 'cyrillic/mn']
+    		],
     'deva':[['Devanagari/Hindi', 'devanagari/'], 
 			['Kashmiri', 'devanagari/kashmiri']
 			],
@@ -139,7 +141,8 @@ var scriptNotesByRegion = {
 	'M':[
 		['Malayalam', 'malayalam'],
 		['Mandaic', 'mandaic/'],
-		['Mongolian', 'mongolian/'],
+		['Mongolian (cyrl)', 'cyrillic/mn'],
+		['Mongolian (mong)', 'mongolian/'],
 		['Myanmar', 'myanmar'],
 		],
 	'N':[
@@ -272,7 +275,7 @@ var orthoChart = {
 'bugi':'Buginese',
 'cans':'Eastern Canadian Inuktitut, Plains Cree', 
 'cher':'Cherokee',
-'cyrl':'Russian',
+'cyrl':'Russian, Mongolian',
 'deva':'Hindi, Kashmiri',
 'ethi':'Amharic',
 'geor':'Georgian',
@@ -292,7 +295,7 @@ var orthoChart = {
 'lisu':'Lisua',
 'mand':'Neo-Mandaic',
 'mlym':'Malayalam',
-'mong':'Halh Mongolian',
+'mong':'Mongolian (Halh)',
 'mymr':'Burmese',
 'newa':'Newar',
 'nkoo':'N’Ko',
