@@ -356,8 +356,8 @@ function getCharacterStats () {
 			else scriptData[i].punctuation = '0'
 
 			if (charuseData.other) {
-				//charArray = [...charuseData.other]
-				charArray = charuseData.other.trim().split(' ')
+				charArray = [...charuseData.other]
+				//charArray = charuseData.other.trim().split(' ')
 				scriptData[i].other = charArray.length
 				count += charArray.length
 				}
