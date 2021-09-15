@@ -40,9 +40,10 @@
   <div id="header-boilerplate"></div>
   <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script> 
 </header>
+
 <h1>Thai character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
+<nav id="top"></nav>
 
 <aside class="sidebar">
   <nav>
@@ -59,15 +60,12 @@
 </aside>
 
 
-<div id="intro">
-<p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->4 December, 2020<!-- #EndDate -->
-  <span id="versionTop"></span>
-  </p>
-
-
 
 <div id="intro">
+<p id="status"><span id="versionTop"></span></p>
+
+
+<section>
   <p>This page lists characters in the following Unicode  block and gathers information about them from various sources. </p>
   <ul>
   <li><a href="../../uniview/?block=thai" target="_blank">Thai</a></li>
@@ -90,10 +88,10 @@
 
 
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Thai','Thai'); return false;">About this page</a></summary>
+<summary class="instructions"><a href="" onClick="showAbout(); return false;">About this page</a></summary>
 <div id="about"></div>
-<p id="charliststr" class="instructions"></p>
 </details>
+</section>
 </div>
 
 
@@ -289,29 +287,34 @@
 
 
 <section id="refs">
-  <h2>References</h2>
-  <ol>
-<li>[ <a class="fnref" href="#refs">b</a> ] Marie-Hélène Brown, Reading and Writing Thai, ISBN 974-210-4506</li>
-    <li>[ <a class="fnref" href="http://www.thailandqa.com/forum/showthread.php?4830-Special-characters-in-thai-language">p</a> ] <a href="http://www.thailandqa.com/forum/showthread.php?4830-Special-characters-in-thai-language">Special characters in thai language</a>, The Packnam Web Forums</li>
-<li>[ <a class="fnref" href="#refs">t</a> ] Benjawan Poomsan Becker, Thai for Beginners, ISBN 1-887521-00-3</li>
-<li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch12.pdf">u</a> ] The Unicode Standard v7.0, <a href="http://www.unicode.org/versions/latest/ch12.pdf">Thai</a></li>
-  </ol>
+<h2>References</h2>
 </section>
 
 
 
 
 <script>
-//addDetails (LanguageName, langClass, lang, dir, spreadsheet, cols) {
 addBasics('th','ltr')
 </script>
+
+
+
+
+
 
 <script src="../../shared/scriptdb/thai.js">  </script>
 <script src="th-details.html">  </script>
 <script>
-addDetails ('Thai', 'th', 'th', '', spreadsheet, cols)
-addExamples('th')
-convertTranscriptionData('th')
+window.languageName = 'Thai'
+window.letterClassName = 'th'
+window.lang = 'th'
+window.direction = ''
+window.explainerDir = 'thai/'
+window.charappDir = 'thai/'
+
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(letterClassName)
+convertTranscriptionData(lang)
 </script>
 
 
@@ -326,32 +329,21 @@ convertTranscriptionData('th')
 
 
 
-<!-- Uncomment this code to get a list of all character names for the file names-subset.js  
-<div id=charliststr></div>
-<div><span class="ex" lang="th">กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรฤลฦวศษสหฬอฮฯะัาำิีึืฺุู฿เแโใไๅๆ็่้๊๋์ํ๎๏๐๑๒๓๔๕๖๗๘๙๚๛</span></div>
-<div id="listofchars"></div>
-<script src="/javascript/showcharacters/names.js"></script>
-<script src="data-extraction.js">//</script>
-<script>document.getElementById('listofchars').innerHTML = getlistofchars();
-listCharsWithNotes();
-</script>
---> 
-
-<!--
-Consonants;consonants;0E01-0E2E
-Vowels;vowels;0E30-0E3A 0E40-0e44 0E47
-Signs;signs;0E2F 0E4C-0e4f 0e5a-0E5B
-Vowel length sign;vowellength;0E45
-Repetition mark;repetition;0E46
-Tone marks;tone;0E48-0E4B
-Currency symbol;currency;0E3F
-Digits;digits;0E50-0E59
---> 
 
 <script>
-initialise('/scripts/thai/block','thai')
-autoTransliterate('th')
-makeFontChanger('th', 'thai', ["Noto Serif Thai WF"], '24px')
+window.version = 'v27'
+window.scriptName = 'Thai'
+window.ghDirectory = 'thai'
+window.blockDirectory = 'thai'
+window.languageList = ['th'] // lang tags for each orthography handled
+window.detailsfileList = ['th'] // first part of xx-details for each orthography
+window.scriptISO = 'thai'
+window.webfonts = ["Noto Serif Thai WF"]
+window.defaultSize = '24px'
+
+initialise(`/scripts/${ blockDirectory }/block`, ghDirectory, detailsfileList, version)
+for (i=0;i<languageList.length;i++) autoTransliterate(languageList[i])
+makeFontChanger(languageList.join(','), scriptISO, webfonts, defaultSize)
 </script>
 </body>
 </html>
