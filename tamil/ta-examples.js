@@ -1,4 +1,5 @@
 /*
+@ Source: https://en.wiktionary.org/wiki/Index:Tamil
 @ Source: https://en.wiktionary.org/wiki/Appendix:Dravidian_Swadesh_lists
 § 'Noto Sans Tamil'
 # 200
@@ -10,383 +11,400 @@
 
 autoExpandExamples.ta = `
 
-இலை|leaf|ʔil̪aɪ̯ (ilai)
-ஈரல்|liver|ʔiːɾ̪al̪ (īral)
-உண்|to eat|ʔuɳ (uṇ)
-ஊது|to blow|ʔuːd̪u (ūtu)
-எலும்பு|bone|ʔel̪umbu (elumpu)
-ஏரி|lake|ʔeːɾ̪i (ēri)
-ஒன்று|one|ʷond̺ʳʉ (oṉṟu)
-ஆண்|man|ʔaːɳ (āṇ)
-ஐந்து|five|ʔaɪ̯n̪d̪u (aintu)
-கைது|arrest|kəjd̪ʉ (kajdu)
-கோடு|dash|koːɖʉ (kōṭu)
-கொடு|to give|koɖʉ (koṭu)
-கௌதாரி|partridge|kəʊd̪ɑːɾɪˑ (kawtāri)
-கிரி|mountain|kɪɾɪˑ (kiri)
-கீரி|mongoose|kiːɾɪˑ (kīɾi)
-குடம்|pot|kʊɖəm (kuṭam)
-அழகு|beauty|əɻəgʉ (aḻaku)
-கூடம்|hall|kuːɖəm (kūṭam)
-கெடு|deadline|kɛɖʉ (keṭu)
-கேடு|destruction|keːɖʉ (kēṭu)
-கால்|leg|kɑːl (kāl)
-பத்து|ten|pət̪t̪ʉ (pattu)
-அப்பன்|Appan|əppən (appaṉ)
-விற்பனை|sale|ʋɪrpənəj (viṟpaṉai)
-ஆபத்து|danger|ɑːbət̪t̪ʉ (āpattu)
-அன்பு|love|ənbʉ (aṉpu)
-தனி|separate|t̪ənɪˑ (taṉi)
-பத்து|ten|pət̪t̪ʉ (pattu)
-யுக்தி|tactical|jʉkt̪ɪˑ (yukti)
-பற்றி|about|pət̺t̺ʳɪˑ (paṟṟi)
-ஃபீசு|fees|fiːsɯ (fīcu)
-பந்து|ball|pən̪d̪ʉ (pantu)
-நல்லது|good|nəlləðʉ (nallatu)
-பட்டு|plush|pəʈʈʉ (paṭṭu)
-வண்டி|carriage|ʋəɳɖɪˑ (vaṇṭi)
-படி|step|pəɖɪˑ (paṭi)
-கால்|call|kɑːl (kāl)
-மக்கள்|people|məkkəɭ (makkaḷ)
-கற்க|learn|kərkə (kaṟka)
-காமாக்ஷி|Kamakshi|kɑːmɑːkʂɪˑ (kāmākṣi)
-பாகு|Baku|pɑːgʉ (pāku)
-அங்கே|there|əŋgeˑ (aṅkē)
-பேச்சு|talk|peːttʃʉ (pēccu)
-கட்சி|party|kəʈtʃɪˑ (kaṭci)
-இஞ்சி|ginger|ʲɪɲd͡ʒɪˑ (iñci)
-ஜானகி|Janaki|d͡ʒɑːnəgɪˑ (dāṉaki)
-பாசம்|affection|pɑːsəm (pācam)
-சின்ன|small|sɪnnə (ciṉṉa)
-ஸந்தியா|Sandya|sən̪d̪ɪjɑː (santiyā)
-ஃஜிரொக்ஸ்|Xerox|ziroks (ziroks)
-ஶிவா|Shiva|ʃɪʋɑː (śivā)
-உஷா|Usha|ʷʊʂɑː (uṣā)
-செங்கிஸ் ஃகான்|Gengis Khan|ʧeŋ͓kis͓ ˑkān͓ (ceṅkis kāṉ)
-ஹரி|Hari|ɦəɾɪˑ (hari)
-மலை|mountain|mələj (malai)
-அம்மாள்|mummy|əmmɑːɭ (ammāḷ)
-தம்பி|brother|t̪əmbɪˑ (tampi)
-வண்ணம்|colour|ʋəɳɳəm (vaṇṇam)
-ஞானம்|wisdom|ɲɑːnəm (ñāṉam)
-அஞ்ஞானம்|fineness|əɲɲɑːnəm (aññāṉam)
-அங்ஙனம்|there|əŋŋənəm (aṅṅaṉam)
-வழி|path|ʋəɻɪˑ (vaḻi)
-அவ்வழி|passer|əʋʋəɻɪˑ (avvaḻi)
-கரி|charcoal|kəɾɪˑ (kari)
-வலி|pain|ʋəlɪˑ (vali)
-வல்லி|Valli|ʋəllɪˑ (valli)
-வந்தால்|if|ʋən̪d̪ɑːl (vantāl)
-வளி|aerobic|ʋəɭɪˑ (vaḷi)
-வந்தாள்|she|ʋən̪d̪ɑːɭ (vantāḷ)
-யானை|elephant|jɑːnəj (yāṉai)
-உய்ய|critical|ʷʊjjə (uyya)
-வள்ளி|Valli|ʋəɭɭɪˑ (vaḷḷi)
-ஃபோரியர்|Fourier|foːɾɪjər (fōriyar)
 
-
-நான்|I|nāṉ
-நீ|you (singular)|/niː/
-நீர்|you (singular)|/niːr/
-தாங்கள்|you (singular)|/t̪aːŋkaɭ/
-அவன்|he|avaṉ
-இவன்|he|/iʋan/
-அந்த ஆள்|he|/antha aːɭ/
-இந்த ஆள்|he|/intha aːɭ/
-நாம்|we|nām
-நாங்கள்|we|nāṅkaḷ
-நீங்கள்|you (plural)|nīṅkaḷ
-அவர்கள்|they|avarkaḷ
-இது|this|itu
-அது|that|/at̪ɨ̆/
-இங்கே|here|iṅkē
-இவ்விடம்|here|/Ivvidam/
-அங்கே|there|/aṅkē/
-அவ்விடம்|there|/aʋiʈam/
-யார்|who|yār
-எவர்|who|/eʋar/
-என்ன|what|eṉṉa
-எங்கே|where|/eṅkē/
-எப்பொழுது|when|eppoḻutu
-எப்படி|how|eppaṭi
-அல்ல|not|/alla/
-இல்லை|not|/illai/
-எல்லாம்|all|ellām
-முழு|all|/muɻu/
-அனைவரும்|all|anaivarum
-எல்லோரும்|all|ellorum
-பல|many|pala
-சில|some|cila
-கொஞ்சம்|few|koñcam
-மற்ற|other|maṟṟa
-ஒன்று|one|oṉṟu
-ஒரு|one|/oɾu/
-முதல்|one|/Mudhal/
-இரண்டு|two|iraṇṭu
-இரு|two|/iɾu-/
-மூன்று|three|mūṉṟu
-மு|three|/mu-/
-நான்கு|four|nāṉku
-நால்|four|/n̪aːl-/
-ஐந்து|five|aintu
-ஐ|five|/ai/
-பெரிய|big|periya
-நீண்ட|long|/n̪iːɳʈa/
-அகலமான|wide|akalamāṉa
-தடித்த|thick|thaditha
-கனம்|heavy|kaNam
-சிறு|small|/ciru/
-சின்ன|small|ciṉṉa
-குட்டி|small|/Kutti/
-குறு|short|/kuru/
-குட்டை|short|kuttai
-குள்ள|short|/kuɭɭa/
-குறுகிய|narrow|kurugiya
-மெல்லிய|thin|Melliya
-பெண்|woman|peṇ
-ஆண்|man (adult male)|āṇ
-மனிதன்|man (human being)|maṉitaṉ
-ஆள்|man (human being)|/-aːɭ/
-குழந்தை|child (a youth)|kuḻantai
-பிள்ளை|child (a youth)|pillai
-மனைவி|wife|maṉaivi
-கணவன்|husband|kaNavan
-தாய்|mother|/Thaai/
-அன்னை|mother|/annai/
-அம்மா|mother|ammā
-தந்தை|father|/thandhai/
-அப்பா|father|/appā/
-விலங்கு|animal|vilaṅku
-மீன்|fish|mīṉ
-பறவை|bird|paṟavai
-நாய்|dog|/nāy/
-குக்கல்|dog|/Kukkal/
-பேன்|louse|pēn
-பாம்பு|snake|pāmpu
-புழு|worm|puzhu
-மரம்|tree|maram
-காடு|forest|kāṭu
-குச்சி|stick (of wood)|kucci
-தடி|stick (of wood)|/thaʈi/
-கம்பு|stick (of wood)|/kampɨ̆/
-கோல்|stick (of wood)|/koːl/
-பழம்|fruit|/paɻam/
-கனி|fruit|/kani/
-விதை|seed|/vithai/
-வித்து|seed|/ʋit̪t̪ɨ̆/
-இலை|leaf|ilai
-வேர்|root|vēr
-பட்டை|bark (of tree)|pattai
-பூ|flower|pū
-மலர்|flower|malar
-புல்|grass|pul
-கயிறு|rope|kayiṟu
-ஞாண்|rope|/njaN/
-தோல்|skin (of a person)|tōl
-இறைச்சி|meat (as in flesh)|/irat͡ʃt͡ʃi/
-கறி|meat (as in flesh)|kaRi
-குருதி|blood|kuruthi
-எலும்பு|bone|elumpu
-கொழுப்பு|fat (noun)|koluppu
-முட்டை|egg|muṭṭai
-கொம்பு|horn|kompu
-வால்|tail|vāl
-இறகு|feather  (rather not down)|iraku
-முடி|hair|muṭi
-தலை|head|talai
-காது|ear|kātu
-செவி|ear|/Chevi/
-கண்|eye|kaṇ
-மூக்கு|nose|mūkku
-வாய்|mouth|vāy
-பல்|tooth (rather not molar)|pal
-நாக்கு|tongue|nākku
-நகம்|fingernail|nagam
-உகிர்|fingernail|/ukir/
-அடி|foot|adi
-பாதம் asa|foot
-கால்|leg|kāl
-மூட்டு|knee|mooṭṭu
-கை|hand|kai
-இறக்கை|wing|irakkai
-வயிறு|belly|/vayiru/
-தொந்தி|belly|tonthi
-குடல்|guts|kudal
-கழுத்து|neck|kazhuthu
-முதுகு|back|muthugu
-புறம்|back|/puram/
-மார்பு|breast|mārbu
-முலை|breast|/mulai/
-உள்ளம்|heart|uḷḷam
-அகம்|heart|/agam/
-ஈரல்|liver|īral
-குடி|to drink|kudi
-உண்|to eat|uN
-தின்|to eat|/thin/
-கடி|to bite|kadi
-உறிஞ்சு|to suck|urinju
-துப்பு|to spit|thuppu
-கக்கு|to vomit|kakku
-ஊது|to blow (as wind)|ūthu
-மூச்சுவிடு|to breathe|moochuvidu
-சிரி|to laugh|ciri
-நகை|to laugh|/nagai/
-பார்|to see|/Paar/
-காண்|to see|/kaaṇ
-நோக்கு|to see|/Nookku/
-கேள்|to hear|kēḷ
-அறி|to know (a fact)|aṟi
-தெரி|to know (a fact)|/theri/
-நினை|to think|niṉai
-மோ|to smell (sense odor)|/Mo/
-நுகர்|to smell (sense odor)|nugar
-அஞ்சு|to fear|añju
-பேடி|to fear|/Pedi/
-தூங்கு|to sleep|tūṅgu
-உறங்கு|to sleep|/Uranku/
-வாழ்|to live|vāḻ
-சாவு|to die|cā
-இற|to die|/ira/
-கொல்|to kill|kol
-போராடு|to fight|/poradu/
-சண்டையிடு|to fight|saṇdaiyidu
-பொருது|to fight|/poɾut̪ɨ̆/
-மோது|to fight|/modhu/
-வேட்டையாடு|to hunt (transitive)|veettaiyaadu
-அடி|to hit|adi
-தாக்கு|to hit|thaaku
-வெட்டு|to cut|veṭṭu
-அரி|to cut|/aɾi/
-முறி|to cut|/muri/
-கொய்|to cut|/koi//
-பிள|to split|pila
-குத்து|to stab (or stick)|kuthu
-சொரி|to scratch (an itch)|sori
-தோண்டு|to dig|thondu
-நீந்து|to swim|neenthu
-பற|to fly|paṟa
-நட|to walk|nada
-வா|to come|vā
-கிட|to lie (as on one's side)|kida
-படு|to lie (as on one's side)|/padu/
-உட்கார்|to sit|uṭkār
-இரு|to sit|/iru/
-நில்|to stand|nil
-திரும்பு|to turn (change direction)|thirumbu
-மடங்கு|to turn (change direction)|/madangu/
-விழு|to fall (as in drop)|vizhu
-தா|to give|thā
-கொடு|to give|/kodu/
-நல்கு|to give|/nalku/
-ஈ|to give|/e/
-கொள்|to hold (in one's hand)|koḷ
-பிடி|to hold (in one's hand)|pidi
-கசக்கு|to squeeze|kasakku
-பிழி|to squeeze|/piɻi/
-தேய்|to rub|thei
-உரை|to rub|/urai/
-கழுவு|to wash|kaḻuvu
-துடை|to wipe|thudai
-இழு|to pull|izhu
-தள்ளு|to push|thallu
-வீசு|to throw|visu
-எறி|to throw|/eri
-கட்டு|to tie|kaṭṭu
-தை|to sew|tai
-எண்|to count|eṇ
-சொல்|to say|sol
-மொழி|to say|/moli/
-பாடு|to sing|pādu
-விளையாடு|to play|vilaiyādu
-மித|to float|mitha
-ஒழுகு|to flow|ozhugu
-பாய்|to flow|/paai/
-உறை|to freeze|uRai
-வீங்கு|to swell|veengu
-ஞாயிறு|sun|ñāyiṟu
-நிலா|moon|/nilā/
-திங்கள்|moon|/thingal/மதி
-விண்மீன்|star|viṇmīṉ
-|star|natchatram
-நீர்|water|nīr
-மழை பொழி|to rain|/mazhaipozhi/
-மாரி|to rain|/Maari/
-ஆறு|river|āṟu
-ஏரி|lake|eri
-கடல்|sea (as in ocean)|kadal
-உப்பு|salt|uppu
-கல்|stone|kal
-மணல்|sand|manal
-புழுதி|dust|puzhudhi
-தூசு|dust|thoosu
-மண்|earth (as in soil)|maṇ=sand
-நிலம்|earth (as in soil)|/nilam/
-முகில்|cloud|/Mugil/
-மேகம்|cloud|mēgam
-பனி|fog|pani
-வானம்|sky|vaanam
-விண்|sky|/vin/
-காற்று|wind (as in breeze)|kāṟṟu
-பனி|snow|pani
-பனிக்கட்டி|ice|panikkatti
-புகை|smoke|pukai
-தீ|fire|thee
-நெருப்பு|fire|/neruppu/
-சாம்பல்|ash|saambal
-எரி|to burn (intransitive)|eri
-சாலை|road|chaalai/saalai வழி
-தடம்|road|/thadam/
-மலை|mountain|malai
-குன்று|mountain|/kundru/
-சிவப்பு|red|civappu சென்
-பச்சை|green|pachai
-பசு|green|/pasu/
-மஞ்சள்|yellow|manjal
-வெள்ளை|white|vellai
-வெண்|white|/ʋeɳ/
-கருப்பு|black|karuppu
-கார்|black|/kaar-/
-கரு|black|/karu/
-இரவு|night|iravu
-அல்|night|/al/
-பகல்|day (daytime)|pagal
-ஆண்டு|year|āndu
-வெக்கை|warm (as in weather)|vekkai
-குளிர்ச்சி|cold (as in weather)|kuLirchi
-தண்|cold (as in weather)|/than/
-முழு|full|xxx
-நிறை|full|/nirai/
-புது|new|puthu
-பழைய|old|pazhaiya
-பண்டை|old|/pandai/
-நல்ல|good|nalla
-கெட்ட|bad|ketta
-அழுகிய|rotten (as, a log)|azhugiya
-அழுக்கான|dirty|azhukkāna
-நேர்|straight|nēr
-வட்டம்|round|/vattam/
-உருண்ட|round|/Urundai/
-கூர்மை|sharp (as a knife)|koormai
-மழுங்கிய|dull (as a knife)|mazhungiya
-வழுவழுப்பு|smooth|vazhuvazhuppu
-ஈரமான|wet|eeramāna
-நனைந்த|wet|/nanaintha/
-உலர்ந்த|dry (adjective)|ularntha
-சரி|right (correct)|sari
-அருகில்|near|Arugil
-கிட்ட|near|kiTTa
-தொலைவு|far|tholaivu
-வலது|right (side)|valathu
-இடது|left (side)|idathu
--இல்|at|-il
--இல்|in|-il
+இல்|house, home|ʔil̪|[ʔɪl̪]
 -உடன்|with  (accompanying)|-udan
--ஓடு|with  (accompanying)|-ODu
 -உம்|and|-um
-மற்றும்|and|matrum
-மேலும்|and|melum
-ஏனென்றால்|because|Enendrāl
-பெயர்|name|peyar
+-ஓடு|with  (accompanying)|-ODu
+|star|natchatram
+ஃஜிரொக்ஸ்|Xerox|ziroks|ziroks
+ஃபீசு|fees|fiːsɯ|fīcu
+ஃபோரியர்|Fourier|foːɾɪjər|fōriyar
+அகம்|heart||agam
+அகலமான|wide||akalamāṉa
+அங்கே|there|ʔaŋɡeː|[ʔəŋɡeː]
+அங்ஙனம்|there|ʔaŋŋanam|[ʔəŋŋənəm]
+அஞ்சு|to fear||añju
+அஞ்ஞானம்|fineness|əɲɲɑːnəm|aññāṉam
+அடி|foot|adi
+அடி|to hit|adi
+அது|that|ʔəd̪ɯ
+அந்த ஆள்|he, that person|ʔan̪d̪a ʔaːɭ|[ʔən̪d̪ə ʔaːɭ]
+அனைவரும்|all (of people)|ʔanaɪ̯ʋaɾ̪um|[ʔənəɪ̯ʋəɾ̪ʊm]
+அன்னை|mother||annai
+அன்பு|love|ənbʉ|aṉpu
+அப்பன்|father|ʔappən|appaṉ
+அப்பா|father|ʔappɑː|appā
+அம்மா|mother|ʔammaː
+அம்மாள்|mummy|əmmɑːɭ|ammāḷ
+அரி|to cut||aɾi
+அருகில்|near||Arugil
+அறி|knowledge|ʔari|[ʔərɪ]
+அல்|night||al
+அல்ல|not||alla
+அழகு|beauty|ʔaɻaɡu|[ʔəɻəɡɯ]
+அழுகிய|rotten (as, a log)||azhugiya
+அழுக்கான|dirty||azhukkāna
+அவன்|he, that man|ʔaʋan|[ʔəʋən]
+அவர்கள்|they|ʔaʋaɾ̪kaɭ|[ʔəʋəɾ̪kəɭ]
+அவ்வழி|after that|ʔaʋʋaɻi|[ʔəʋʋəɻɪ]
+அவ்விடம்|there|ʔaʋʋiɖam|[ʔəʋʋɪɖəm]
+ஆண்|man|ʔaːɳ|[ʔɑːɳ]
+ஆண்டு|year|ʔaːɳɖu|[ʔɑːɳɖɯ]
+ஆபத்து|danger|ɑːbət̪t̪ʉ|āpattu
+ஆறு|river, six|ʔaːru|[ʔɑːrɯ]
+ஆள்|man (human being)||-aːɭ
+இங்கே|here|ʔiŋɡeː|[ʔɪŋɡeː]
+இஞ்சி|ginger|ʔiɲd͡ʑi|[ʔɪɲd͡ʑɪ]
+இடது|left (side)|idathu
+இது|this|itu
+இந்த ஆள்|he, this person|ʔin̪d̪a ʔaːɭ|[ʔɪn̪d̪ə ʔɑːɭ]
+இரண்டு|two|ʔiɾ̪aɳɖu|[ʔɪɾ̪əɳɖɯ]
+இரவு|night|ʔiɾ̪aʋu|[ʔɪɾ̪əʋɯ]
+இரு|to sit, be/exist|ʔiɾ̪u|[ʔɪɾ̪ɯ]
+இற|to die||ira
+இறகு|feather  (rather not down)|ʔiraɡu|[ʔɪrəɡɯ]
+இறக்கை|wing|ʔirakːaɪ̯|[ʔɪrəkːəɪ̯]
+இறைச்சி|meat (as in flesh)|ʔiraɪ̯t͡ɕːi|[ʔɪrəɪ̯sːɪ]
+இலை|leaf|ʔil̪aɪ̯|[ʔɪl̪əɪ̯]
+இல்லை|not|ʔil̪l̪aɪ̯|[ʔɪll̪əɪ̯]
+இழு|to pull||izhu
+இவன்|he||iʋan
+இவ்விடம்|here||Ivvidam
+ஈ|to give||e
+ஈரமான|wet||eeramāna
+ஈரல்|liver|ʔiːɾ̪al̪|[ʔiːɾ̪əl̪]
+உகிர்|fingernail||ukir
+உட்கார்|to sit||uṭkār
+உண்|to eat|ʔuɳ|[ʔʊɳ]
+உப்பு|salt|uppu
+உய்ய|critical|ʷʊjjə|uyya
+உருண்ட|round||Urundai
+உரை|speaking, talk|ʔuɾ̪aɪ̯|[ʔʊɾ̪əɪ̯]
+உறங்கு|to sleep||Uranku
+உறிஞ்சு|to suck||urinju
+உறை|to freeze||uRai
+உலர்ந்த|dry (adjective)||ularntha
+உள்ளம்|mind, heart|ʔuɭɭam|[ʔʊɭɭəm]
+உஷா|Usha|ʷʊʂɑː|uṣā
+ஊது|to blow (as wind)|ūthu
+ஊது|to blow|ʔuːd̪u|ūtu
+எங்கே|where|ʔeŋɡeː|[ʔɛŋɡeː]
+எண்|to count|eṇ
+என்ன|what|ʔenna|ʔɛnnə
+எப்படி|how|eppaṭi
+எப்பொழுது|when||eppoḻutu
+எரி|to glow, burn (intransitive)|ʔeɾ̪i|[ʔɛɾ̪ɪ]
+எறி|to throw||eri
+எலும்பு|bone|ʔel̪umbu|elumpu
+எல்லாம்|all||ellām
+எல்லோரும்|all||ellorum
+எவர்|who||eʋar
+ஏனென்றால்|because|ʔeːnenraːl̪|[ʔeːnɛnrɑːl̪]
+ஏரி|lake|ʔeːɾ̪i|[ʔeːɾ̪ɪ]
+ஐ|five||ai
+ஐந்து|five|ʔaɪ̯n̪d̪u|ʔəɪ̯n̪d̪ɯ/ʔʌɲd͡ʑɯ
+ஒன்று|one|ʔonru|[ʷond̺ʳʉ]
+ஒரு|one|ʔoɾ̪u|[ʔoɾ̪ɯ]
+ஒழுகு|to flow, leak|ʔoɻuɡu|[ʔoɻʊɡɯ]
+ஔகாரம்|sugar|aʊkaːram
+கக்கு|to vomit|kakku
+கசக்கு|to squeeze|kasakku
+கடல்|ocean, sea|kaɖal̪|[kəɖəl̪]
+கடி|to bite|kadi
+கட்சி|party|kaʈt͡ɕi|kəʈsɪ
+கட்டு|to tie|kaṭṭu
+கணவன்|husband|kaɳaʋan|[kəɳəʋən]
+கண்|eye|kaɳ|[kəɳ
+கனம்|heaviness, weight|kanam|kənəm
+கனி|fruit||kani
+கம்பு|stick (of wood)||kampɨ̆
+கயிறு|rope|kajiru|[kəjɪrɯ]
+கரி|charcoal|kaɾ̪i|[kəɾ̪ɪ]
+கரு|black||karu
+கருப்பு|black|kaɾ̪upːu|[kəɾ̪ʊpːɯ]
+கறி|curry, meat|kari|[kərɪ]
+கற்க|learn|kərkə|kaṟka
+கல்|stone|kal̪|[kəl̪]
+கழுத்து|neck|kaɻut̪ːu|[kəɻʊt̪ːɯ]
+கழுவு|to wash|kaɻuʋu|[kəɻʊʋɯ]
+காடு|forest|kāṭu
+காண்|to see||kaaṇ
+காது|ear|kātu
+காமாக்ஷி|Kamakshi|kɑːmɑːkʂɪˑ|kāmākṣi
+கார்|black|kaːɾ̪|[kɑːɾ̪]
+காற்று|wind (as in breeze)|kaːʈʈɾu|[kɑːʈʈɾɯ]
+கால்|leg, foot|kaːl̪|[kɑːl̪]
+கிட|to lie (as on one's side)|kida
+கிட்ட|near|kiTTa
+கிரி|mountain|kiɾ̪i|[kɪɾ̪ɪ]
+கீரி|mongoose|kiːɾɪˑ|kīɾi
+குக்கல்|dog||Kukkal
+குச்சி|stick (of wood)|kucci
+குடம்|pot|kʊɖəm|kuṭam
+குடல்|guts||kudal
+குடி|to drink|kudi
+குட்டி|small||Kutti
+குட்டை|short|kuttai
+குத்து|to stab (or stick)|kuthu
+குன்று|mountain|kunru|kʊnrɯ
+குருதி|blood|kuɾ̪ud̪i|[kʊɾ̪ʊd̪ɪ]
+குறு|short||kuru
+குறுகிய|narrow||kurugiya
+குளிர்ச்சி|cold (as in weather)|kuɭiɾ̪t͡ɕːi|[kʊɭɪɾ̪sːɪ]
+குள்ள|short||kuɭɭa
+குழந்தை|child (a youth)||kuḻantai
+கூடம்|hall|kuːɖəm|kūṭam
+கூர்மை|sharp (as a knife)||koormai
+கெடு|deadline|kɛɖʉ|keṭu
+கெட்ட|bad|ketta
+கேடு|destruction|keːɖʉ|kēṭu
+கேள்|to hear|keːɭ
+கை|hand|kai
+கைது|arrest|kəjd̪ʉ|kajdu
+கொஞ்சம்|few|koɲd͡ʑam|[koɲd͡ʑəm]
+கொடு|to give|koɖʉ|koṭu
+கொடு|to give||kodu
+கொம்பு|horn|kompu
+கொய்|to cut||koi
+கொல்|to kill|kol̪
+கொள்|to hold (in one's hand)||koḷ
+கொழுப்பு|fat, grease|koɻupːu|[koɻʊpːɯ]
+கோடு|dash|koːɖʉ|kōṭu
+கோல்|stick (of wood)||koːl
+கௌதாரி|partridge|kəʊd̪ɑːɾɪˑ|kawtāri
+சண்டையிடு|to fight||saṇdaiyidu
+சரி|right (correct)|t͡ɕaɾ̪i|[səɾ̪ɪ]
+சாம்பல்|ash|t͡ɕaːmbal̪|[sɑːmbəl̪]
+சாலை|road, street|t͡ɕaːl̪aɪ̯|[sɑːl̪əɪ̯]
+சாவு|to die||cā
+சின்ன|small|t͡ɕinna|sɪnnə
+சிரி|to laugh||ciri
+சிறு|small||ciru
+சில|some||cila
+சிவப்பு|red|t͡ɕiʋapːu|[sɪʋəpːɯ]
+செங்கிஸ் ஃகான்|Gengis Khan||&lt;ceṅkis kāṉ>
+செவி|ear|t͡ɕeʋi|[sɛʋɪ]
+சொரி|to scratch (an itch)||sori
+சொல்|to say|t͡ɕol̪|[sol̪]
+ஜானகி|Janaki|d͡ʒɑːnəgɪˑ|dāṉaki
+ஞாண்|rope||njaN
+ஞானம்|wisdom|ɲaːnam|[ɲɑːnəm]
+ஞாயிறு|sun|ɲaːjiru|[ɲɑːjɪrɯ]
+தடம்|road||thadam
+தடி|stick (of wood)||thaʈi
+தடித்த|thick|thaditha
+தண்|cold (as in weather)||than
+தந்தை|father|t̪an̪d̪aɪ̯|t̪ən̪d̪əɪ̯
+தனி|separate|t̪ənɪˑ|taṉi
+தம்பி|brother|t̪əmbɪˑ
+தலை|head|t̪al̪aɪ̯|[t̪əl̪əɪ̯]
+தள்ளு|to push|t̪aɭːu|[t̪əɭːɯ]
+தா|to give|thā
+தாக்கு|to hit|thaaku
+தாங்கள்|you (singular)||t̪aːŋkaɭ
+தாய்|mother|t̪aːj|[t̪ɑːj]
+திங்கள்|moon, Monday|t̪iŋɡaɭ|[t̪ɪŋɡəɭ]
+தின்|to eat||thin
+திரும்பு|to turn (change direction)|t̪iɾ̪umbu|[t̪ɪɾ̪ʊmbɯ]
+தீ|fire|thee
+துடை|to wipe|thudai
+துப்பு|to spit|thuppu
+தூங்கு|to sleep||tūṅgu
+தூசு|dust|thoosu
+தெரி|to know (a fact)|t̪eɾ̪i|[t̪ɛɾ̪ɪ]
+தேய்|to rub||thei
+தை|to sew|tai
+தொந்தி|belly|tonthi
+தொலைவு|far||tholaivu
+தோண்டு|to dig|t̪oːɳɖu|[t̪oːɳɖɯ]
+தோல்|skin (of a person)|t̪oːl̪
+நகம்|fingernail|n̪aɡam|n̪əɡəm
+நகை|smile|n̪aɡaɪ̯|n̪əɡəɪ̯
+நட|to walk|n̪aɖa|n̪əɖə
+நனைந்த|wet||nanaintha
+நல்கு|to give||nalku
+நல்ல|good|n̪alla
+நல்லது|good|n̪əlləðʉ
+நாக்கு|tongue|n̪aːkːu|n̪ɑːkːɯ
+நாங்கள்|we|n̪aːŋɡaɭ|[n̪ɑːŋɡəɭ]
+நான்|I|n̪aːn|n̪ɑːn
+நான்கு|four||nāṉku
+நாம்|we|n̪aːm|n̪ɑːm
+நாய்|dog|n̪aːj|n̪ɑːj
+நால்|four||n̪aːl-
+நினை|to think|n̪inaɪ|n̪ɪnəɪ̯
+நிறை|full||nirai
+நிலம்|earth (as in soil)|n̪il̪am|[n̪ɪl̪əm]
+நிலா|moon|n̪il̪aː|[n̪ɪl̪ɑː]
+நில்|to stand|n̪il̪|[n̪ɪl̪]
+நீ|you (singular)|n̪iː
+நீங்கள்|you (plural)|n̪iːŋɡaɭ|[n̪iːŋɡəɭ]
+நீண்ட|long||n̪iːɳʈa
+நீந்து|to swim|n̪iːn̪d̪u|n̪iːn̪d̪ɯ
+நீர்|water|n̪iːr|[n̪iːɾ̪]
+நுகர்|to smell (sense odor)||nugar
+நெருப்பு|fire|n̪eɾ̪upːu|[n̪ɛɾ̪ʊpːɯ]
+நேர்|straight|nēr
+நோக்கு|to see|n̪oːkku
+பகல்|day, daytime|paɡal̪|[pəɡəl̪]
+பசு|green||pasu
+பச்சை|green|pachai
+படி|step|pəɖɪˑ|paṭi
+படு|to lie (as on one's side)||padu
+பட்டு|plush|pəʈʈɯ|paṭṭu
+பட்டை|bark (of tree)|pattai
+பண்டை|old||pandai
+பத்து|ten|pət̪t̪ɯ
+பந்து|ball|pən̪d̪ʉ|pantu
+பனி|fog|pani|pənɪ
+பனிக்கட்டி|ice|panikkatti
+பற|to fly||paṟa
+பறவை|bird|paraʋaɪ̯|[pərəʋəɪ̯]
+பற்றி|about|paʈʈɾi|[pəʈʈɾɪ]
+பல|many||pala
+பல்|tooth|pal̪|[pəl̪]
+பழம்|fruit|paɻam|[pəɻəm]
+பழைய|old, ancient|paɻaɪ̯ja|[pəɻəɪ̯jə]
+பாகு|Baku|pɑːgʉ|pāku
+பாசம்|affection|pɑːsəm
+பாடு|to sing|pādu
+பாதம் asa|foot
+பாம்பு|snake|paːmbu|pɑːmbɯ
+பாய்|to flow||paai
+பார்|to see, world|paːɾ̪|[pɑːɾ̪]
+பிடி|to hold (in one's hand)|pidi
+பிள|to split||pila
+பிள்ளை|son|piɭɭaɪ̯
+பிழி|to squeeze||piɻi
+புகை|smoke|pukai
+புது|new|puthu
+புறம்|back|puram|[pʊrəm]
+புல்|grass||pul
+புழு|worm|puɻu|[pʊɻɯ]
+புழுதி|dust||puzhudhi
+பூ|flower|pū
+பெண்|woman|peɳ|[pɛɳ]
+பெயர்|name|pejaɾ̪|[pɛjəɾ̪]
+பெரிய|big|peɾ̪ija|[pɛɾ̪ɪjə]
+பேச்சு|talk|peːt͡ɕːu|peːssɯ
+பேடி|to fear||Pedi
+பேன்|louse|pēn
+பொருது|to fight||poɾut̪ɨ̆
+போராடு|to fight||poradu
+மக்கள்|people|məkkəɭ|makkaḷ
+மஞ்சள்|turmeric, yellow|maɲd͡ʑaɭ|[məɲd͡ʑəɭ]
+மடங்கு|to turn (change direction)||madangu
+மணல்|sand|maɳal̪|[məɳəl̪]
+மண்|soil, earth|maɳ|[məɳ]
+மனிதன்|man, human, person)|manid̪an|mənɪd̪ən
+மனைவி|wife|manaɪ̯ʋi|[mənəɪ̯ʋɪ]
+மரம்|tree|maɾ̪am|[məɾ̪əm]
+மற்ற|other|maʈʈɾa|maṟṟa
+மற்றும்|and|maʈʈɾum|[məʈʈɾʊm]
+மலர்|flower|mal̪aɾ̪|[məl̪əɾ̪]
+மலை|mountain|məl̪əɪ̯|malai
+மழுங்கிய|dull (as a knife)||&lt;mazhungiya>
+மழை|rain|maɻaɪ̯|[məɻəɪ̯]
+மாரி|to rain||Maari
+மார்பு|breast||mārbu
+மித|to float||mitha
+மீன்|fish|miːn
+மு|three||mu-
+முகில்|cloud||Mugil
+முடி|hair|muṭi
+முட்டை|egg|muṭṭai
+முதல்|one||Mudhal
+முதுகு|back|muthugu
+முறி|to cut||muri
+முலை|breast||mulai
+முழு|all, full||muɻu
+மூக்கு|nose|mūkku
+மூச்சுவிடு|to breathe||moochuvidu
+மூட்டு|knee|mooṭṭu
+மூன்று|three|muːnru|[muːnrɯ]
+மெல்லிய|soft, thin, delicate|mel̪ːija|[mɛl̪ːɪjə]
+மேகம்|cloud|mēgam
+மேலும்|furthermore, also|meːl̪um|[meːl̪ʊm]
+மொழி|language, word|moɻi|[moɻɪ]
+மோ|to smell (sense odor)||Mo
+மோது|to fight||modhu
+யானை|elephant|jaːnaɪ̯|[jɑːnəɪ̯]
+யார்|who|jaːɾ̪|[jɑːɾ̪]
+யுக்தி|tactical|jʉkt̪ɪˑ|yukti
+வட்டம்|round||vattam
+வண்டி|carriage|ʋəɳɖɪˑ|vaṇṭi
+வண்ணம்|colour|ʋəɳɳəm|vaṇṇam
+வந்தால்|if|ʋən̪d̪ɑːl|vantāl
+வந்தாள்|she|ʋən̪d̪ɑːɭ|vantāḷ
+வயிறு|belly||vayiru
+வலது|right (side)||valathu
+வலி|pain|ʋal̪i|[ʋəl̪ɪ]
+வல்லி|Valli|ʋəllɪˑ|valli
+வளி|aerobic|ʋəɭɪˑ|vaḷi
+வள்ளி|Valli (female name)|ʋəɭɭɪˑ|vaḷḷi
+வழி|path|ʋaɻi|[ʋəɻɪ]
+வழுவழுப்பு|smooth||vazhuvazhuppu
+வா|to come|ʋaː|[ʋɑː]
+வானம்|sky|ʋaːnam|[ʋɑːnəm]
+வாய்|mouth|ʋaːj|[ʋɑːj]
+வால்|tail|ʋaːl̪|[ʋɑːl̪]
+வாழ்|to live|ʋaːɻ|[ʋɑːɻ]
+விண்|sky||vin
+விண்மீன்|star|ʋiɳmiːn|[ʋɪɳmiːn]
+விதை|seed|ʋid̪aɪ̯|[ʋɪd̪əɪ̯]
+வித்து|seed||ʋit̪t̪ɨ̆
+விற்பனை|sale|ʋɪrpənəj|viṟpaṉai
+விலங்கு|animal|ʋil̪aŋɡu|[ʋɪl̪əŋɡɯ]
+விளையாடு|to play||vilaiyādu
+விழு|to fall (as in drop)||vizhu
+வீங்கு|to swell||veengu
+வீசு|to throw||visu
+வெக்கை|warm (as in weather)||vekkai
+வெட்டு|to cut||veṭṭu
+வெண்|white||ʋeɳ
+வெள்ளை|white||veḷḷai
+வேட்டையாடு|to hunt (transitive)||veettaiyaadu
+வேர்|root, foundation|ʋeːɾ̪
+ஶிவா|Shiva|ʃɪʋɑː|śivā
+ஸந்தியா|Sandya|sən̪d̪ɪjɑː|santiyā
+ஹரி|Hari|ɦəɾɪˑ|hari
+
+
+
+
+நீளம்|long|n̪iːɭam|[n̪iːɭəm]
+இப்பொழுது|this time, now|ʔipːoɻud̪u|[ʔɪpːoɻʊd̪ɯ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 `
 
