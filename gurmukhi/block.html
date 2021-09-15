@@ -32,9 +32,6 @@
 <script src="../../uniview/u.js"></script> 
 
 <style id="includeStyles"></style>
-<style>
-.character p { line-height: 35px; }
-</style>
 </head>
 
 <body>
@@ -42,9 +39,10 @@
 <div id="header-boilerplate"></div>
   <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script> 
 </header>
+
 <h1>Gurmukhi character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
+<nav id="top"></nav>
 
 
 <aside class="sidebar">
@@ -63,11 +61,10 @@
   </div>
 </aside>
 
+
+
 <div id="intro">
-<p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->10 December, 2020<!-- #EndDate -->
-  <span id="versionTop"></span>
-</p>
+<p id="status"><span id="versionTop"></span></p>
 
 
 <section>
@@ -93,9 +90,8 @@
 
 
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Gurmukhi','Panjabi'); return false;">About this page</a></summary>
+<summary class="instructions"><a href="" onClick="showAbout(); return false;">About this page</a></summary>
 <div id="about"></div>
-<p id="charliststr" class="instructions"></p>
 </details>
 </section>
 </div>
@@ -264,9 +260,6 @@
 <div class="character" id="char0A75"></div>
 
 <div class="character" id="char0A76"></div>
-
-
-
 </section>
 
 
@@ -275,15 +268,7 @@
 
 
 <section id="refs">
-  <h2>References</h2>
-<ol>
-<li>[ <a class="fnref" href="https://scholarsarchive.byu.edu/cgi/viewcontent.cgi?article=3982&context=etd">b</a> ] Andrea Lynn Bowden, <a href="https://scholarsarchive.byu.edu/cgi/viewcontent.cgi?article=3982&context=etd"><cite>Punjabi Tonemics and the Gurmukhi Script: A Preliminary Study</cite></a></li>
-<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN 0-19-507993-0, pp395-398</li>
-<li>[ <a class="fnref" href="http://unicode.org/L2/L2006/06037-yakash.pdf">s</a> ] Sukhjinder Sidhu, <a href="http://unicode.org/L2/L2006/06037-yakash.pdf"><cite>Proposal to encode Gurmukhi Sign Yakash</cite></a></li>
-<li>[ <a class="fnref" href="http://www.omniglot.com/writing/punjabi.htm">o</a> ] Omniglot, <a href="http://www.omniglot.com/writing/punjabi.htm"><cite>Punjabi</cite></a></li>
-<li>[ <a class="fnref" href="http://www.unicode.org/versions/latest/ch12.pdf">u</a> ] <cite>The Unicode Standard v10.0</cite>, <a href="http://www.unicode.org/versions/latest/ch12.pdf">Gurmukhi</a>, pp475-479.</li>
-<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Gurmukhi_script">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Gurmukhi_script"><cite>Gurmukhi script</cite></a></li>
-</ol>
+<h2>References</h2>
 </section>
 
 
@@ -299,9 +284,16 @@ addBasics('pa','ltr')
 <script src="../../shared/scriptdb/punjabi.js">  </script>
 <script src="pa-details.html">  </script>
 <script>
-addDetails ('Punjabi', 'pa', 'pa', '', spreadsheet, cols)
-addExamples('pa')
-convertTranscriptionData('pa')
+window.languageName = 'Punjabi'
+window.letterClassName = 'pa'
+window.lang = 'pa'
+window.direction = ''
+window.explainerDir = 'gurmukhi/'
+window.charappDir = 'guru/'
+
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(letterClassName)
+convertTranscriptionData(lang)
 </script>
 
 
@@ -315,9 +307,19 @@ convertTranscriptionData('pa')
 
 
 <script>
-initialise('/scripts/gurmukhi/block','gurmukhi')
-autoTransliterate('pa')
-makeFontChanger('pa', 'guru', ["Noto Sans Gurmukhi WF"], '24px')
+window.version = 'v27'
+window.scriptName = 'Gurmukhi'
+window.ghDirectory = 'gurmukhi'
+window.blockDirectory = 'gurmukhi'
+window.languageList = ['pa'] // lang tags for each orthography handled
+window.detailsfileList = ['pa'] // first part of xx-details for each orthography
+window.scriptISO = 'guru'
+window.webfonts = ["Noto Sans Gurmukhi WF"]
+window.defaultSize = '24px'
+
+initialise(`/scripts/${ blockDirectory }/block`, ghDirectory, detailsfileList, version)
+for (i=0;i<languageList.length;i++) autoTransliterate(languageList[i])
+makeFontChanger(languageList.join(','), scriptISO, webfonts, defaultSize)
 </script>
 </body>
 </html>
