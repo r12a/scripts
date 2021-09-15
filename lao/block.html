@@ -39,9 +39,10 @@
   <div id="header-boilerplate"></div>
   <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script> 
 </header>
+
 <h1>Lao character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
+<nav id="top"></nav>
 
 
 <aside class="sidebar">
@@ -59,11 +60,10 @@
 </aside>
 
 
+
 <div id="intro">
-<p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->4 December, 2020<!-- #EndDate -->
-  <span id="versionTop"></span>
-  </p>
+<p id="status"><span id="versionTop"></span></p>
+
 
 <section>
   <p>This page lists characters in the following Unicode  block and provides information about them. </p>
@@ -89,9 +89,8 @@
 
 
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Lao','Lao'); return false;">About this page</a></summary>
+<summary class="instructions"><a href="" onClick="showAbout(); return false;">About this page</a></summary>
 <div id="about"></div>
-<p id="charliststr" class="instructions"></p>
 </details>
 </section>
 </div>
@@ -283,16 +282,25 @@
 
 
 <script>
-//addDetails (LanguageName, langClass, lang, dir, spreadsheet, cols) {
 addBasics('lo','ltr')
 </script>
+
+
+
 
 <script src="../../shared/scriptdb/lao.js">  </script>
 <script src="lo-details.html">  </script>
 <script>
-addDetails ('Lao', 'lo', 'lo', '', spreadsheet, cols)
-addExamples('lo')
-convertTranscriptionData('lo')
+window.languageName = 'Lao'
+window.letterClassName = 'lo'
+window.lang = 'lo'
+window.direction = ''
+window.explainerDir = 'lao/'
+window.charappDir = 'lao/'
+
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(letterClassName)
+convertTranscriptionData(lang)
 </script>
 
 
@@ -308,44 +316,20 @@ convertTranscriptionData('lo')
 
 <div class="smallprint"><span id="version"></span></div>
 
-<!-- Uncomment this code to get a list of all character names for the file names-subset.js  
-<div id=charliststr></div>
-<div><span class="ex" lang="lo">ກຂຄງຈຊຍດຕຖທນບປຜຝພຟມຢຣລວສຫອຮຯະັາຳິີຶືຸູົຼຽເແໂໃໄໆ່້໊໋໌ໍ໐໑໒໓໔໕໖໗໘໙ໜໝໞໟ</span></div>
-<div id="listofchars"></div>
-<script src="/javascript/showcharacters/names.js"></script>
-<script src="data-extraction.js" type="text/javascript">//</script>
-<script>document.getElementById('listofchars').innerHTML = getlistofchars();
-listCharsWithNotes();
-</script>
---> 
-
-<!--
-Consonants;consonants;1000-1020 103F-103F
-Independent vowels;independent;1021-102A
-Dependent vowel signs;depvowelsigns;102B-1035
-Dependent consonant signs;depconsonants;103B-103E
-Various signs;signs;1036-103A 104C-104F
-Digits;digits;1040-1049
-Punctuation;punctuation;104A-104B
-Pali and Sanskrit extensions;pali;1050-1059
-Extensions for Mon;mon;105A-1060
-Extensions for S'gaw Karen;sgaw;1061-1064
-Extensions for Western Pwo Karen;wpwo;1065-106D
-Extensions for Eastern Pwo Karen;epwo;106E-1070
-Extension for Geba Karen;geba;1071-1071
-Extensions for Kayah;kayah;1072-1074
-Extensions for Shan;shan;1075-108D
-Extensions for Rumai Palaung;rumai;108E-108F
-Shan digits;shand;1090-1099
-Extensions for Khamti Shan;kshan;109A-109B
-Extensions for Aiton and Phake;aiton;109C-109D
-Shan symbols;shans;109E-109F
- --> 
-
 <script>
-initialise('/scripts/lao/block','lao')
-autoTransliterate('lo')
-makeFontChanger('lo', 'laoo', ["Noto Serif Lao WF"], '24px')
-</script>
+window.version = 'v27'
+window.scriptName = 'Lao'
+window.ghDirectory = 'lao'
+window.blockDirectory = 'lao'
+window.languageList = ['lo'] // lang tags for each orthography handled
+window.detailsfileList = ['lo'] // first part of xx-details for each orthography
+window.scriptISO = 'laoo'
+window.webfonts = ["Noto Serif Lao WF"]
+window.defaultSize = '24px'
 
+initialise(`/scripts/${ blockDirectory }/block`, ghDirectory, detailsfileList, version)
+for (i=0;i<languageList.length;i++) autoTransliterate(languageList[i])
+makeFontChanger(languageList.join(','), scriptISO, webfonts, defaultSize)
+</script>
+</body>
 </html>
