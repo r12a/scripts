@@ -33,10 +33,6 @@
 
 
 <style id="includeStyles"></style>
-<style>
-.character p { line-height: 35px; }
-.charStatus { font-weight: bold; }
-</style>
 </head>
 
 <body>
@@ -44,9 +40,10 @@
 <div id="header-boilerplate"></div>
   <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script> 
 </header>
+
 <h1>Georgian character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
+<nav id="top"></nav>
 
 
 <aside class="sidebar">
@@ -65,18 +62,17 @@
   </div>
 </aside>
 
+
+
 <div id="intro">
-<p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->18 December, 2020<!-- #EndDate -->
-  <span id="versionTop"></span>
-</p>
+<p id="status"><span id="versionTop"></span></p>
 
 
 <section>
-   <p>This page lists characters in the following Unicode  block and provides information about them. </p>
+<p>This page lists characters in the following Unicode  block and provides information about them. </p>
 <ul>
 <li><a href="../../uniview/?block=georgian" target="_blank">Georgian</a></li>
-   </ul>
+</ul>
 <p>See also the companion document, <a href="." class="linkHighlight">Georgian</a>, for a summary of the Georgian script and its use for the modern Georgian language.</p>
 <p> Phonetic transcriptions should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
@@ -95,9 +91,8 @@
 
 
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Georgian','Georgian'); return false;">About this page</a></summary>
+<summary class="instructions"><a href="" onClick="showAbout(); return false;">About this page</a></summary>
 <div id="about"></div>
-<p id="charliststr" class="instructions"></p>
 </details>
 </section>
 </div>
@@ -492,17 +487,33 @@ addBasics('ka','ltr')
 <script src="../../shared/scriptdb/geor.js">  </script>
 <script src="ka-details.html">  </script>
 <script>
-addDetails ('Georgian', 'ka', 'ka', '', spreadsheet, cols)
-addExamples('ka')
-</script> 
+window.languageName = 'Georgian'
+window.letterClassName = 'ka'
+window.lang = 'ka'
+window.direction = ''
+window.explainerDir = 'georgian/'
+window.charappDir = 'geor-ka/'
+
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(letterClassName)
+convertTranscriptionData(lang)
+</script>
 
 
 <script src="../../shared/scriptdb/geor-other.js">  </script>
 <script src="other-details.html">  </script>
 <script>
-addDetails ('Other languages', 'other', 'ka', '', spreadsheet, cols)
-addExamples('ka')
-</script> 
+window.languageName = 'Other languages'
+window.letterClassName = 'other'
+window.lang = 'ka'
+window.direction = ''
+window.explainerDir = ''
+window.charappDir = 'geor-all/'
+
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(letterClassName)
+convertTranscriptionData(lang)
+</script>
 
 
 <script>
@@ -524,9 +535,19 @@ convertTranscriptionData()
 
 
 <script>
-initialise('/scripts/georgian/block','georgian')
-autoTransliterate('ka')
-makeFontChanger('ka', 'geor', ["BGP 2017 DejaVu Serif WF", "BGP 2017 DejaVu Sans WF", "Noto Sans Georgian WF", "Noto Serif Georgian WF"], '24px')
+window.version = 'v27'
+window.scriptName = 'Georgian'
+window.ghDirectory = 'georgian'
+window.blockDirectory = 'georgian'
+window.languageList = ['ka'] // lang tags for each orthography handled
+window.detailsfileList = ['ka','other'] // first part of xx-details for each orthography
+window.scriptISO = 'geor'
+window.webfonts = ["BGP 2017 DejaVu Serif WF", "BGP 2017 DejaVu Sans WF", "Noto Sans Georgian WF", "Noto Serif Georgian WF"]
+window.defaultSize = '24px'
+
+initialise(`/scripts/${ blockDirectory }/block`, ghDirectory, detailsfileList, version)
+for (i=0;i<languageList.length;i++) autoTransliterate(languageList[i])
+makeFontChanger(languageList.join(','), scriptISO, webfonts, defaultSize)
 </script>
 </body>
 </html>
