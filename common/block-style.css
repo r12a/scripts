@@ -14,13 +14,112 @@
 	}
 
 
-/* This is a new version of style.css, adapted to work with the docs.css style sheet */
+/* This is to be used with docs.css */
 
 
 body {
     font-size: 15px;
     }
-#top { 
+
+
+
+
+/* INLINES */
+
+a { font-weight: 400; }
+
+.observation {
+    font-size: 80%;
+    line-height: 1.2;
+	}
+
+
+.ipa { 
+	font-family: gentiumpluswf, doulosipa,"Gentium Plus", "Lucida Sans Unicode", "Lucida Grande", 'lucida sans', "helvetica", sans-serif; 
+	font-size: 1.2em; /* this sets the size relative to the surrounding ordinary Latin text */ 
+	}
+.ipa:before { 
+	content: '⌈'; 
+	font-family: gentiumpluswf, "Gentium Plus", Gentium, "Lucida Sans Unicode", "Lucida Grande", 'lucida sans', "helvetica neue", sans-serif; 
+	margin-inline-end: 1.5px; 
+	margin-inline-start: 0.2em; 
+	color: #aaa; 
+	}
+.ipa:after { 
+    content: '⌋'; 
+    font-family: gentiumpluswf, "Gentium Plus", Gentium, "Lucida Sans Unicode", "Lucida Grande", 'lucida sans', "helvetica neue", sans-serif;
+    margin-inline-end: 0.2em; 
+    margin-inline-start: 1.5px;
+    color: #aaa;
+    }
+.uname { 
+    font-size: 75%; 
+    margin: 0 2px;
+    }
+.name { 
+	font-family: gentiumpluswf, "Lucida Sans Unicode", "Lucida Grande", 'lucida sans', "helvetica", "Gentium Plus", sans-serif; 
+	font-size: 16px; 
+	}
+.charExample {
+    display: block;
+    text-align: start;
+    margin-inline-start: 2rem;
+    font-size: 110%;
+    }
+.charExample.inline {
+	display: inline;
+	margin: 0;
+	font-size: 100%;
+	}
+.ex { 
+    cursor:pointer;
+    color: chocolate;
+    }
+.exi {
+    color:red;
+    cursor:pointer;
+    vertical-align: top;
+    }
+.meaning { 
+    letter-spacing: 0.02em;
+    }
+.meaning:before { 
+    content: '‘';
+    }
+.meaning:after {
+    content: '’';
+    }
+.name { 
+    font-style: italic;
+    font-family: gentiumpluswf, 'doulos sil', 'charis sil', gentium, sans-serif;
+    font-size:110%;
+    }
+.fnref, .fn {
+	vertical-align: super;
+	margin-inline-start: .25em;
+	font-size: 60%;
+	}
+
+sup {
+	font-size: 65%;
+	}
+.charExample .trans {
+    display: none;
+	}
+.ednote {
+    font-size: 80%;
+    color: #666;
+    font-style:italic;
+    }
+.linkHighlight {
+    font-size: 120%;
+    }
+
+
+
+/* STRUCTURAL */
+
+#top {
 	text-align: center;
 	}
 
@@ -31,12 +130,32 @@ h2 {
 	}
 
 
-a { font-weight: 400; }
 
-#charlistsection img { 
+summary {
+    margin-left: 7.5%;
+    margin-right: 32%;
+    margin-top: 1em;
+    }
+
+.instructions {
+	font-style: italic;
+    font-size: 80%;
+    line-height: 1.4;
+	}
+
+.supportdocs p {
+    margin-bottom: 0;
+    margin-right: 32%;
+    margin-left: 7.5%;
+	}
+
+
+
+/*
+#charlistsection img {
 	vertical-align: top; 
 	}
-#charlistsection p { 
+#charlistsection p {  
 	line-height: 1.2em; 
 	margin-top:0;  
 	margin-bottom: 0; 
@@ -49,89 +168,21 @@ a { font-weight: 400; }
 #index a { width: 80px; }
 #index td a:link,#index td a:visited, #index td a:active { color: #999; line-height: 2em; }
 #index td a:hover { color: white; background-color: gray }
-
-
-.titlepara { text-align:start; }
-
-
-.notes { 
-	margin: 1em 10px 0 7.5%;
-	}
-
-.character .notes p { 
-	margin: .5em 1em; 
-	}
-.character .notes p.charShape { 
-	margin: 0 1em .5em 1em; 
-	}
-.character .notes > p { 
-	font-size: 85%;
-	line-height: 1.4em; 
-	}
-.notes ul, .letter li { 
-	margin-right: 0; text-align: left; 
-	}
-
-.letter { 
-	margin-bottom: 10px; 
-	border: 1px solid #ddd; 
-	border-radius: 10px; 
-	hyphens: auto; 
-	background-color: #ffffef;
-    background-color: #FFFDFA;
-    background-color: #FFFBF0;
-    background-color: #FFFEFA;
-    background-color: #FFFDF5;
-    color: #444;
-    color: #555;
-    clear: right;
-	}
-.generalInfo {
-	background-color: white;
-	}
-.generalInfo .charShape, .syriac .charShape {
-	display: flex;
-	flex-direction: column;
-	line-height: 1;
-	}
-.notes section { 
-	margin-top: 1em; 
-	margin-bottom: 10px; 
-	border: 1px solid #ddd; 
-	border-radius: 10px; 
-	hyphens: auto; 
-	background-color: #ffffef;
-	clear: none;
-	}
-.letter img { 
-	vertical-align: middle; 
-	border-radius: 5px; 
-	}
-.notes .title { 
-	color: #F63; 
-	font-size: 120%; 
-	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif; 
-	font-weight:normal; 
-	letter-spacing: 0.03em; 
-	}
-/*.notes .title:after { 
-	content: '\00A0  '; 
-	}
 */
-.charname { 
-	letter-spacing: 0.02em; 
-	padding-top: .8em;
-	}
+
+
+
+
+
 .character { 
-	margin: 1em 10% 3em 7%; 
-	background-color: #FDFADF; 
-	border: 1px solid #FBF4BF; 
+	margin: 5rem 10% 3rem 7%; 
 	background-color: white; 
-	border: 0; 
+	border: 0;
 	clear: left; 
 	padding-bottom: 15px; 
 	border-radius: 10px;
 	}
+/*
 .character p { 
 	margin-right: 50px; 
 	}
@@ -140,40 +191,172 @@ a { font-weight: 400; }
 	margin-right: 0; 
 	margin-top: -5px; 
 	}
+*/
 
 .charimg { 
 	float: left; 
 	margin: 15px; 
-	margin-bottom: 0;
 	border: 1px solid #E7D10E;
 	border-radius: 10px;
 	}
+/* The following are declared locally for .charimg: font-size, min-width, min-height, text-align, line-height, font-family, background-color */
+
 .charimg img {
     vertical-align: middle;
 	}
+
+
+.charname { 
+	letter-spacing: 0.02em; 
+	padding-top: .8em;
+    margin-inline-start: 1rem;
+    margin-inline-end: 0;
+	}
+
 .univiewLink { 
 	font-size: 80%;
 	margin-bottom: 0;
 	}
+
 .unicodenotes { 
 	line-height: 1.2em; 
-	/*margin-bottom: 3em;*/
 	margin: 0;
-	margin-left: 0%;
 	font-size: 80%;
-	/*min-height: 4em;*/
-	}
-.subtitle { 
-	font-size: 80%; 
-	font-style: italic; 
-	color: #999; 
-	margin-bottom: 0; 
-	/*margin-top: 2.5em;*/
-	margin-left: 40%;
-	display: none;
 	}
 
-.ref { text-align: inherit; }
+
+.notes { 
+	margin: 1rem 0 0 4rem;
+	}
+.character .notes > p { 
+	font-size: 85%;
+	line-height: 1.4em; 
+	}
+
+.letter { 
+    color: #555;
+	hyphens: auto;
+    margin-top: 2rem;
+    clear: both;
+    margin-inline-start: 6%;
+	}
+.letter + .letter {
+    border-top: 2px solid #CCC;
+    }
+
+.letterData {
+    margin-block-end: 2rem;
+    }
+
+
+.titlepara { 
+    text-align:start;
+    margin-inline-start: 1rem;
+    line-height: 1.4;
+    }
+.notes .title { 
+	color: #F63; 
+	font-size: 120%; 
+	/*font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif; */
+	font-weight:normal; 
+	letter-spacing: 0.03em; 
+	}
+.localname, .transliteratedname { 
+    margin-inline-start: 1rem;
+    margin-inline-end: 1rem;
+    }
+.trans, .transc { 
+	font-family: gentiumpluswf, "Doulos SIL", "Gentium Plus", Gentium, "Lucida Sans Unicode", "Lucida Grande", 'lucida sans', "helvetica neue", sans-serif; 
+	font-size: 1.1em;
+	font-style: italic;
+	font-weight: 300;
+	font-feature-settings: "ss05" 1;
+	}
+.charType { 
+    font-size: 80%; 
+    }
+.charStatus { font-size: 80%;
+    font-style: italic;
+    font-weight: bold;
+    margin-inline-start: 1em;
+    }
+/*REMOVE AFTER COPYING*/.titlepara .charName, .titlepara .localtrans, .titlepara .name, .titlepara .ipa, .charIPA, .charMeaning  {margin-left: 1em;}
+.localtrans {
+    margin-inline-start: 1rem;
+    }
+.localtrans::before { 
+    content: 'translit:'; 
+    font-family: gentiumpluswf; 
+    margin-inline-start: 0.2em; 
+    margin-inline-end: .2em; 
+    color: #aaa; 
+    font-size: 80%;
+    }
+/*.localtrans.trans {
+    float: right;
+    clear: right;
+}*/
+.character .notes p.explainerLink {
+    line-height: 1.6;
+	font-size: 75%;
+    margin-block-end: 1rem;
+    }
+
+
+
+.character .notes .insertTranscription { 
+    font-size: 80%;
+    line-height: 1em;
+    text-align: end;
+    clear: right;
+	font-style: italic;
+	float: right;
+	margin-block-end: 2rem;
+	margin-inline-start: 3rem;
+	color: chocolate;
+	padding-left: .5rem;
+	padding-right: .5rem;
+    }
+
+.letterDetails {
+    line-height: 2em;
+    }
+.letter p { 
+    /*line-height: 1.6;*/
+	margin: .5rem 0;
+    }
+.notes ul, .letter li { 
+	margin-inline-end: 0;
+    margin-inline-start: 0;
+    text-align: start; 
+	}
+
+.usedby {
+font-size: 85%;
+line-height: 1.4;
+text-align: start;
+margin-top: 1.5rem;
+margin-inline-end: 0;
+    }
+
+
+
+.letter p.charShape { 
+    text-align: right;
+    float: right;
+    padding: .2rem;
+	padding-right: 0;
+    border-radius: 1rem;
+    font-size: 140%;
+    word-spacing: .5em;
+	display: flex;
+	flex-direction: column;
+	line-height: 1;
+	
+	clear: right;
+	margin: 1rem 0 .5em 1em; 
+	}
+
 
 
 #panel { 
@@ -188,7 +371,6 @@ a { font-weight: 400; }
 	z-index:2000;
 	width: 28%;
 	font-size: 80%;
-	text-align: left;
 	text-align: start;
 	max-height: 80%;
 	overflow: auto;
@@ -200,79 +382,6 @@ a { font-weight: 400; }
 #transInPanel { font-size: 150%; }
 
 
-
-#endlinks li {
-	text-align: left;
-	}
-
-
-
-
-
-sup {
-	font-size: 65%;
-	}
-
-.ex { color:crimson; cursor:pointer; color: chocolate; }
-.exi { color:red; cursor:pointer; vertical-align: top; }
-
-.meaning { letter-spacing: 0.02em; }
-.meaning:before { content: '‘';  }
-.meaning:after { content: '’';   }
-
-.name { font-style: italic; }
-.name { font-family: gentiumpluswf, 'doulos sil', 'charis sil', gentium, sans-serif; font-size:110%;  }
-.character .notes .ref { 
-    font-size: 60%; 
-    text-align: right;
-    }
-
-.trans, .transc { 
-	font-family: gentiumpluswf, "Doulos SIL", "Gentium Plus", Gentium, "Lucida Sans Unicode", "Lucida Grande", 'lucida sans', "helvetica neue", sans-serif; 
-	font-size: 1.1em;
-	font-style: italic;
-	font-weight: 300;
-	font-feature-settings: "ss05" 1;
-	}
-.charExample .trans {
-    display: none;
-	}
-/*
-.trans:before { 
-	content: '·'; 
-	content: '‹'; 
-	color: #bbb; 
-	margin-right: 1.5px; 
-	}
-.trans:after { 
-	content: '·';  
-	content: '›';  
-	color: #bbb; 
-	margin-left: 1.5px; 
-	}
-*/
-
-.ednote { font-size: 80%; color: #666; font-style:italic; }
-
-section { clear: left; }
-
-.ipa { 
-	font-family: gentiumpluswf, doulosipa,"Gentium Plus", "Lucida Sans Unicode", "Lucida Grande", 'lucida sans', "helvetica", sans-serif; 
-	font-size: 18px; 
-	}
-.ipa:before { 
-	content: '⌈'; 
-	font-family: gentiumpluswf, "Gentium Plus", Gentium, "Lucida Sans Unicode", "Lucida Grande", 'lucida sans', "helvetica neue", sans-serif; 
-	margin-right: 1.5px; 
-	margin-left: 0.2em; 
-	color: #aaa; 
-	}
-.ipa:after { content: '⌋'; font-family: gentiumpluswf, "Gentium Plus", Gentium, "Lucida Sans Unicode", "Lucida Grande", 'lucida sans', "helvetica neue", sans-serif; margin-right: 0.2em; margin-left: 1.5px;  color: #aaa; }
-
-.name { 
-	font-family: gentiumpluswf, "Lucida Sans Unicode", "Lucida Grande", 'lucida sans', "helvetica", "Gentium Plus", sans-serif; 
-	font-size: 16px; 
-	}
 
 
 #fontsetting {	
@@ -301,23 +410,85 @@ section { clear: left; }
 	cursor:pointer; 
 	}
 
-summary {
-    margin-left: 7.5%;
-    margin-right: 32%;
-    margin-top: 1em;
+
+
+
+#refs li::marker {
+    color: chocolate;
+    font-size: 80%;
+	}
+
+
+
+
+
+
+/* ########################################################### */
+
+
+
+
+
+
+
+/*.notes section { 
+	margin-top: 1em; 
+	margin-bottom: 10px; 
+	border: 1px solid #ddd; 
+	border-radius: 10px; 
+	hyphens: auto; 
+	background-color: #ffffef;
+	clear: none;
+	}
+.letter img { 
+	vertical-align: middle; 
+	border-radius: 5px; 
+	}
+.otherTranscriptions {
+    clear: none;
+    }
+.character .notes p.titlepara {
+    margin-block-end: 0;
+    clear: none;
+    }
+.subtitle { 
+	font-size: 80%; 
+	font-style: italic; 
+	color: #999; 
+	margin-bottom: 0; 
+	margin-left: 40%;
+	display: none;
+	}
+
+.ref { text-align: inherit; }
+
+
+
+
+
+#endlinks li {
+	text-align: left;
+	}
+
+
+
+
+
+
+
+.character .notes .ref { 
+    font-size: 60%; 
+    text-align: right;
     }
 
-.instructions {
-	font-style: italic;
-    font-size: 80%;
-    line-height: 1.4;
-	}
 
-.supportdocs p {
-    margin-bottom: 0;
-    margin-right: 32%;
-    margin-left: 7.5%;
-	}
+section { clear: left; }
+*/
+
+
+
+
+
 
 /* probably not needed */
 
@@ -327,7 +498,6 @@ summary {
 .choices th { text-align: center; }
 .choices td { padding: 10px 10px 0 10px; }
 
-.uname { font-size: 75%; margin: 0 2px; }
 
 .database h2 {  clear: both; }
 
@@ -360,8 +530,6 @@ summary {
 [lang |= 'dz'] { font-family: "Tibetan Machine Uni", serif; font-size: 140%; }
 [lang |= 'el'] 	{font-family: Gentium, "Times New Roman", serif; font-size: 110%; }
 [lang |= 'en-gb-fonipa'] { font-family: 'Doulos SIL', 'Charis SIL', Gentium, sans-serif; font-size: 110%; }
-/* [lang |= 'fa'] { font-family: IranNastaliq, tahoma, sans-serif; font-size: 32px;  direction: rtl; unicode-bidi: embed; unicode-bidi: isolate; }
-[lang |= 'he'] 	{font-family: "Ezra SIL", "Times New Roman", "Narkisim", "New Peninim MT", serif; font-size: 110%;  direction: rtl; unicode-bidi: embed; unicode-bidi: isolate; } */
 [lang |= 'hi'] 	{font-family: Chandas, Mangal, sans-serif; font-size: 110%; }
 [lang |= 'hu'] { font-family: Gentium, serif; font-size: 100%; }
 [lang |= 'hy'] { font-family: 'Noto Serif Armenian', 'Arian AMU', "Arial Unicode MS", Sylfaen, Mshtakan, sans-serif; font-size: 100%; }
@@ -380,7 +548,6 @@ summary {
 [lang |= 'ne'] 	{font-family: Kanjirowa, Mangal, sans-serif; font-size: 100%; }
 [lang |= 'pa'] 	{font-family: AnmolUniBani, sans-serif; }
 [lang |= 'ru'] 	{font-family: "Doulos SIL", serif; font-size: 100%; }
-:lang(ta)	{font-family: "Tamil Sangam MN", "Tamil MN", InaiMathi, "Noto Sans Tamil", Latha, Vijaya, sans-serif; font-size: 24px; }
 [lang |= 'te'] 	{font-family: "Akshar Unicode", Gautami, sans-serif; font-size: 130%; }
 [lang |= 'th']  {font-family: "Noto Sans Thai", Dokchampa, Thonburi, "Angsana New", "Cordia New", sans-serif; font-size: 25px; }
 [lang |= 'ur'] { font-family: "Nafees Nastaleeq", "Urdu Typesetting", "Aldhabi", serif; font-size: 24px; direction: rtl;  }
@@ -401,39 +568,21 @@ summary {
     margin-left: 1em;
     }
 
-.decomposition, .vowelPairing, .tonePairing, .otherPairing, .charShape, .charLowercase, .charUppercase, .seealso, .subjPair {
+.decomposition, .vowelPairing, .tonePairing, .otherPairing, .charLowercase, .charUppercase, .seealso, .subjPair {
     font-size: 85%;
     text-align: start;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
     }
 
-.titlepara { line-height: 1.4; }
 
-.titlepara .charName, .titlepara .localtrans, .titlepara .name, .titlepara .ipa, .charIPA, .charMeaning  {
-    margin-left: 1em;
-    }
-/*.localname + .transliteratedname { margin-left: 0em; }*/
-.localname, .transliteratedname { margin-inline-start: 1em; }
-.charType { font-size: 80%; }
-.charStatus { font-size: 80%; font-style: italic; font-weight: bold; margin-inline-start: 1em;}
-/*.localtrans::before { content: '⟨'; font-family: gentiumpluswf; margin-inline-start: 0.2em; margin-inline-end: .2em; color: #aaa; font-size: 80%; }
-.localtrans::after { content: '⟩'; font-family: gentiumpluswf; margin-inline-start: 0.2em; margin-inline-end: .2em; color: #aaa; font-size: 80%; }*/
-.localtrans::before { 
-    content: 'translit:'; 
-    font-family: gentiumpluswf; 
-    margin-inline-start: 0.2em; 
-    margin-inline-end: .2em; 
-    color: #aaa; 
-    font-size: 80%;
-    }
-.localtrans.trans {
-    float: right;
-    clear: right;
-}
-
-.usedby, .charNotes {
+.charNotes {
     font-size: 85%;
     line-height: 1.4;
     text-align: start;
+    text-align: end;
+    clear: both;
+    margin-top: 3rem;
     }
 
 .character .notes .otherTranscriptions, .character .notes .numEquiv { 
@@ -443,27 +592,6 @@ summary {
     clear: right;
 	margin-top: 0;
 	font-style: italic;
-    }
-
-.character .notes .insertTranscription { 
-    font-size: 80%;
-    line-height: 1em;
-    text-align: end;
-    clear: right;
-	margin-top: 0;
-	font-style: italic;
-	float: right;
-	margin-left: 2em;
-	
-	margin-top: 1em;
-	margin-bottom: 2em;
-	margin-left: 3em;
-	color: chocolate;
-	/*border-left: 2px chocolate solid;*/
-	padding-left: .5em;
-	/*border-radius: 5px;
-	border-right: 2px chocolate solid;*/
-	padding-right: .5em;
     }
 
 .character .notes .groupedTranscriptions { 
@@ -479,40 +607,10 @@ summary {
 .deprecated { font-weight: bold; }
 
 
-.charShape {
-    text-align: right;
-    float: right;
-    /*border: 1px solid #ccc;*/
-    padding: .2em;
-    border-radius: 1em;
-    font-size: 140%;
-    word-spacing: .5em;
-	display: flex;
-	flex-direction: column;
-	line-height: 1;
-	
-	clear: right;
-	padding-right: 0;
-	margin-bottom: 0;
-	padding-bottom: 0;
-    }
-
-.linkHighlight {
-    font-size: 120%;
-    }
 
 
-.fnref, .fn {
-	vertical-align: super;
-	margin-inline-start: .25em;
-	font-size: 60%;
-	}
 
 
-.observation {
-    font-size: 80%;
-    line-height: 1.2;
-	}
 
 
 
@@ -546,25 +644,13 @@ blockquote { margin-left: 2em; margin-right: 2em; }
 	margin-right:0;
 	}
 
-}
+} /* END MEDIA */
 
-.insertTranscriptionXXX + p {
-	clear: left;
-	}
-
-.character .notes p.titlepara {
-    margin-bottom: 2em;
-}
 
 .moredetails {
 	font-size: 80%;
 	}
 
-
-#refs li::marker {
-    color: chocolate;
-    font-size: 80%;
-	}
 
 
 .vowel_forms { margin-block-end: 2em; }
@@ -574,15 +660,6 @@ blockquote { margin-left: 2em; margin-right: 2em; }
 
 
 
-.charExample {
-    display: block;
-    text-align: center;
-    }
-.charExample.inline {
-	margin: 0;
-	font-size: 100%;
-	display: inline;
-	}
 
 
 
