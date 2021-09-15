@@ -34,9 +34,6 @@
 
 
 <style id="includeStyles"></style>
-<style>
-.character p { line-height: 35px; }
-</style>
 </head>
 
 <body>
@@ -44,9 +41,10 @@
 <div id="header-boilerplate"></div>
   <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script> 
 </header>
+
 <h1>Khmer character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
+<nav id="top"></nav>
 
 <aside class="sidebar">
   <nav>
@@ -64,11 +62,10 @@
   </div>
 </aside>
 
+
+
 <div id="intro">
-<p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->5 December, 2020<!-- #EndDate -->
-  <span id="versionTop"></span>
-</p>
+<p id="status"><span id="versionTop"></span></p>
 
 
 <section>
@@ -95,9 +92,8 @@
 
 
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Khmer','Khmer'); return false;">About this page</a></summary>
+<summary class="instructions"><a href="" onClick="showAbout(); return false;">About this page</a></summary>
 <div id="about"></div>
-<p id="charliststr" class="instructions"></p>
 </details>
 
 <!--p class="instructions"><strong>Transliterations</strong> provide a single correspondence between a Khmer symbol and a Latin symbol, so that the process is reversible. The system used is a cross between the ALA LOC and UNGEGN systems, with a few small additions to help eliminate ambiguity. The transliterations should show inherent vowels. <strong>Transcriptions</strong> provide a Latin version of the Khmer text that is closer to the actual pronunciation, but is not reversible. Mostly IPA transcriptions are used here, but in some cases a transcription based on UNGEGN with modifications is used.  <strong>The Khmer to UNGEGN converter above the window is still in development.</strong></p-->
@@ -418,16 +414,7 @@
 
 
 <section id="refs">
-  <h2>References</h2>
-	<ol>
-<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <span class="doctitle"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
-		    0-19-507993-0</li>
-<li>[ <a class="fnref" href="#refs">g</a> ] Richard Gilbert &amp; Sovandy Hang, <span class="doctitle">Cambodian for Beginners</span>, Paiboon Publishing, ISBN <span class="isbn">1-887521-35-6</span></li>
-<li>[ <a href="http://www.pratyeka.org/csw/hlp-csw.pdf"><sup><span class="doctitle">h</span></sup></a> ] Franklin Huffman, <a href="http://www.pratyeka.org/csw/hlp-csw.pdf"><span class="doctitle">Cambodian System of Writing</span></a></li>
-<li>[ <a class="fnref" href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">s</a> ] SIL, <cite><a href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">The order of components in Khmer orthographical syllables</a></cite></li>
-<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch11.pdf">u</a> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch11.pdf?page=18">The Unicode Standard, Version 11</a>, pp637-648</li>
-<li>[ <a class="fnref" href="https://en.wikipedia.org/wiki/Khmer_alphabet">w</a> ] Wikipedia, <a href="https://en.wikipedia.org/wiki/Khmer_alphabet">Khmer alphabet</a></li>
-</ol>
+<h2>References</h2>
 </section>
 
 
@@ -441,9 +428,16 @@ addBasics('km','ltr')
 <script src="../../shared/scriptdb/khmr.js">  </script>
 <script src="km-details.html">  </script>
 <script>
-addDetails ('Khmer', 'km', 'km', '', spreadsheet, cols)
-addExamples('km')
-convertTranscriptionData('km')
+window.languageName = 'Khmer'
+window.letterClassName = 'km'
+window.lang = 'km'
+window.direction = ''
+window.explainerDir = 'khmer/'
+window.charappDir = 'khmr/'
+
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(letterClassName)
+convertTranscriptionData(lang)
 </script>
 
 
@@ -459,9 +453,19 @@ convertTranscriptionData('km')
 
 
 <script>
-initialise('/scripts/khmer/block','khmer')
-autoTransliterate('km')
-makeFontChanger('km', 'khmr', ["Khmer OS Battambang WF", "Noto Serif Khmer WF"], '24px')
+window.version = 'v27'
+window.scriptName = 'Khmer'
+window.ghDirectory = 'khmer'
+window.blockDirectory = 'khmer'
+window.languageList = ['km'] // lang tags for each orthography handled
+window.detailsfileList = ['km'] // first part of xx-details for each orthography
+window.scriptISO = 'khmr'
+window.webfonts = ["Khmer OS Battambang WF", "Noto Serif Khmer WF"]
+window.defaultSize = '24px'
+
+initialise(`/scripts/${ blockDirectory }/block`, ghDirectory, detailsfileList, version)
+for (i=0;i<languageList.length;i++) autoTransliterate(languageList[i])
+makeFontChanger(languageList.join(','), scriptISO, webfonts, defaultSize)
 </script>
 </body>
 </html>
