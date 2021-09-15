@@ -32,10 +32,6 @@
 <script src="fuf-translit.js">  </script>
 
 <style id="includeStyles"></style>
-<style>
-.character p { line-height: 35px; }
-.charStatus { font-weight: bold; }
-</style>
 </head>
 
 <body>
@@ -45,7 +41,7 @@
 </header>
 <h1>Adlam character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
+<nav id="top"></nav>
 
 <aside class="sidebar">
   <nav>
@@ -64,10 +60,7 @@
 </aside>
 
 <div id="intro">
-<p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->30 November, 2020<!-- #EndDate -->
-  <span id="versionTop"></span>
-  </p>
+<p id="status"><span id="versionTop"></span></p>
 
 
 <section>
@@ -95,7 +88,6 @@
 <details class="supportdocs noprint">
 <summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Adlam','Pular'); return false;">About this page</a></summary>
 <div id="about"></div>
-<p id="charliststr" class="instructions"></p>
 </details>
 </section>
 </div>
@@ -363,9 +355,16 @@ addBasics('fuf','ltr')
 <script src="../../shared/scriptdb/adlm.js">  </script>
 <script src="fuf-details.html">  </script>
 <script>
-addDetails ('Adlam', 'fuf', 'fuf', 'rtl', spreadsheet, cols)
-addExamples('fuf')
-convertTranscriptionData('fuf')
+window.languageName = 'Adlam'
+window.letterClassName = 'fuf'
+window.lang = 'fuf'
+window.direction = 'rtl'
+window.explainerDir = 'adlam/'
+window.charappDir = 'adlm/'
+
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(letterClassName)
+convertTranscriptionData(lang)
 </script>
 
 
@@ -381,9 +380,29 @@ convertTranscriptionData('fuf')
 
 
 <script>
-initialise('/scripts/adlam/block','adlam')
+window.version = 'v27'
+window.ghDirectory = 'adlam'
+window.blockDirectory = 'adlam'
+window.languageList = ['fuf'] // lang tags for each orthography handled
+window.detailsfileList = ['fuf'] // first part of xx-details for each orthography
+window.scriptISO = 'adlm'
+window.webfonts = ["Noto Sans Adlam WF","Noto Sans Adlam Unjoined WF"]
+window.defaultSize = '28px'
+
+initialise(`/scripts/${ blockDirectory }/block`, ghDirectory, detailsfileList, version)
+for (i=0;i<languageList.length;i++) autoTransliterate(languageList[i])
+makeFontChanger(languageList.join(','), scriptISO, webfonts, defaultSize)
+</script>
+
+<!--script>
+window.ghDirectory = 'adlam'
+window.blockDirectory = 'adlam'
+window.detailsList = 'fuf'
+window.version = 'v27'
+
+initialise(`/scripts/${ blockDirectory }/block`, ghDirectory, detailsList, version)
 autoTransliterate('fuf')
 makeFontChanger('fuf', 'adlm', ["Noto Sans Adlam WF","Noto Sans Adlam Unjoined WF"], '28px')
-</script>
+</script-->
 </body>
 </html>
