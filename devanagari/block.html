@@ -41,10 +41,10 @@
   <div id="header-boilerplate"></div>
   <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script> 
 </header>
+
 <h1>Devanagari character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
-
+<nav id="top"></nav>
 
 <aside class="sidebar">
   <h2 class="notoc flush"><a id="tochead">Contents</a></h2>
@@ -56,14 +56,12 @@
   
   <div id="fontsetting" class="closed">
   </div>
-
-
 </aside>
+
+
+
 <div id="intro">
-<p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->22 August, 2021<!-- #EndDate -->
-  <span id="versionTop"></span>
-  </p>
+<p id="status"><span id="versionTop"></span></p>
 
 
 <section>
@@ -90,9 +88,8 @@
 
 
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Devanagari','Hindi'); return false;">About this page</a></summary>
+<summary class="instructions"><a href="" onClick="showAbout(); return false;">About this page</a></summary>
 <div id="about"></div>
-<p id="charliststr" class="instructions"></p>
 </details>
 </section>
 </div>
@@ -497,18 +494,32 @@ addBasics('hi','ltr')
 <script src="../../shared/scriptdb/deva-hi.js">  </script>
 <script src="hi-details.html">  </script>
 <script>
-addDetails ('Hindi', 'hi', 'hi', '', spreadsheet, cols)
-addExamples('hi')
-convertTranscriptionData('hi')
-</script> 
+window.languageName = 'Hindi'
+window.letterClassName = 'hi'
+window.lang = 'hi'
+window.direction = ''
+window.explainerDir = 'devanagari/'
+window.charappDir = 'deva-hi/'
+
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(letterClassName)
+convertTranscriptionData(lang)
+</script>
 
 
 <script src="../../shared/scriptdb/deva-ks.js">  </script>
 <script src="ks-details.html">  </script>
 <script>
-addDetails ('Kashmiri', 'ks', 'ks', '', spreadsheet, cols)
-addExamples('ks')
-convertTranscriptionData('ks')
+window.languageName = 'Kashmiri'
+window.letterClassName = 'ks'
+window.lang = 'ks'
+window.direction = ''
+window.explainerDir = 'devanagari/kashmiri'
+window.charappDir = 'deva-ks/'
+
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(letterClassName)
+convertTranscriptionData(lang)
 </script>
 
 
@@ -516,9 +527,6 @@ convertTranscriptionData('ks')
 
 
 
-
-
- 
 
 
 
@@ -532,51 +540,23 @@ convertTranscriptionData('ks')
 
 
 
-<!-- Uncomment this code to get a list of all character names for the file names-subset.js  
-<div id=charliststr></div>
-<div><span class="ex" lang="hi">ऀँंःऄअआइईउऊऋऌऍऎएऐऑऒओऔकखगघङचछजझञटठडढणतथदधनऩपफबभमयरऱलळऴवशषसहऺऻ़ऽािीुूृॄॅॆेैॉॊोौ्ॎॏॐ॒॑॓॔ॕॖॗक़ख़ग़ज़ड़ढ़फ़य़ॠॡॢॣ।॥०१२३४५६७८९॰ॱॲॳॴॵॶॷॸॹॺॻॼॽॾॿ꣠꣡꣢꣣꣤꣥꣦꣧꣨꣩꣪꣫꣬꣭꣮꣯꣰꣱ꣲꣳꣴꣵꣶꣷ꣸꣹꣺ꣻ</span></div>
-<div id="listofchars"></div>
-<script src="/javascript/showcharacters/names.js"></script> 
-<script src="data-extraction.js">//</script>
-<script>document.getElementById('listofchars').innerHTML = getlistofchars();listCharsWithNotes();
-</script> 
- --> 
-
-<!--
- Devanagari
-Consonants;consonants;0915-0939
-Additional consonants;aconsonants;0958-095F 097A-0978
-Sindhi implosives;sindhi;097B-097C 097E-097F
-Glottal stop;glottal;097D-097D
-Independent vowels;ivowels;0904-0914
-Independent vowels for Kashmiri;kashmiriiv;0973-0977
-Independent vowel for Marathi;marathiiv;0972-0972
-Dependent vowel signs;depvowelsigns;093E-094C 094E-094F 0955-0955
-Dependent vowel signs for Kashmiri;kashmiri;093A-093B 0956-0957
-Additional vowels for Sanskrit;sanskritvowel;0960-0963
-Virama;virama;094D-094D
-Vedic tone marks;vedictone;0951-0952
-Accent marks;accent;0953-0954
-Various signs;signs;0900-0903 093C-093D 0950-0950 0970-0971
-General punctuation for scripts of India;gpunctuation;0964-0965
-Digits;digits;0966-096F
-
-Devanagari Extended
-Cantillation marks (svara) for the Samaveda;cantillation;A8E0:A8F1
-Marks of nasalization;nasalization;A8F2-A8F7
-Editorial marks;editorial;A8F8-A8FB
-  --> 
-
-
-
-
 
 
 
 <script>
-initialise('/scripts/devanagari/block','devanagari')
-autoTransliterate('hi')
-makeFontChanger('hi', 'deva', ["Noto Serif Devanagari WF"], '24px')
+window.version = 'v27'
+window.scriptName = 'Devanagari'
+window.ghDirectory = 'devanagari'
+window.blockDirectory = 'devanagari'
+window.languageList = ['hi','ks'] // lang tags for each orthography handled
+window.detailsfileList = ['hi','ks'] // first part of xx-details for each orthography
+window.scriptISO = 'deva'
+window.webfonts = ["Noto Serif Devanagari WF"]
+window.defaultSize = '24px'
+
+initialise(`/scripts/${ blockDirectory }/block`, ghDirectory, detailsfileList, version)
+for (i=0;i<languageList.length;i++) autoTransliterate(languageList[i])
+makeFontChanger(languageList.join(','), scriptISO, webfonts, defaultSize)
 </script>
 </body>
 </html>
