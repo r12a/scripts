@@ -46,10 +46,6 @@
 
 
 <style id="includeStyles"></style>
-<style>
-.notes .letter p { line-height: 35px; }
-#char0600 .otherTranscriptions { clear: none; }
-</style>
 </head>
 
 <body>
@@ -57,11 +53,10 @@
   <div id="header-boilerplate"></div>
   <script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script> 
 </header>
+
 <h1>Arabic character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br>
-<input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;"
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
+<nav id="top"></nav>
 
 
 <aside class="sidebar">
@@ -81,13 +76,10 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 </aside>
 
 
-<p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->27 August, 2021<!-- #EndDate -->
-  <span id="versionTop"></span>
-  </p>
-
-
 <div id="intro">
+<p id="status"><span id="versionTop"></span></p>
+
+
   <p>This page lists characters in the following Unicode  blocks and gathers information about them from various sources. </p>
   <ul>
   <li><a href="/uniview/?block=arabic" target="_blank">Arabic block</a></li>
@@ -111,9 +103,8 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Arabic','Arabic',block='arabic'); return false;">About this page</a></summary>
+<summary class="instructions"><a href="" onClick="showAbout(); return false;">About this page</a></summary>
 <div id="about"></div>
-<p id="charliststr" class="instructions"></p>
 </details>
 </div>
 
@@ -1112,7 +1103,6 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 <script>
-//addDetails (LanguageName, langClass, lang, dir, spreadsheet, cols) {
 addBasics('ar','ltr')
 </script>
 
@@ -1123,9 +1113,16 @@ addBasics('ar','ltr')
 <script src="../../shared/scriptdb/arab-ar.js">  </script>
 <script src="arb-details.html">  </script>
 <script>
-addDetails ('Arabic', 'ar', 'ar', 'rtl', spreadsheet, cols)
-addExamples('ar')
-convertTranscriptionData('ar')
+window.languageName = 'Arabic'
+window.letterClassName = 'ar'
+window.lang = 'ar'
+window.direction = 'rtl'
+window.explainerDir = 'arabic/'
+window.charappDir = 'arab-ar/'
+
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(lang)
+convertTranscriptionData(lang)
 </script> 
 
 
@@ -1133,9 +1130,16 @@ convertTranscriptionData('ar')
 <script src="../../shared/scriptdb/arab-fa.js">  </script>
 <script src="fa-details.html">  </script>
 <script>
-addDetails ('Persian', 'fa', 'fa', 'rtl', spreadsheet, cols)
-addExamples('fa')
-convertTranscriptionData('fa')
+window.languageName = 'Persian'
+window.letterClassName = 'fa'
+window.lang = 'fa'
+window.direction = 'rtl'
+window.explainerDir = 'arabic/arab-fa'
+window.charappDir = 'arab-fa/'
+
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(lang)
+convertTranscriptionData(lang)
 </script> 
 
 
@@ -1143,9 +1147,16 @@ convertTranscriptionData('fa')
 <script src="../../shared/scriptdb/arab-ha.js">  </script>
 <script src="ha-details.html">  </script>
 <script>
-addDetails ('Hausa', 'ha', 'ha', 'rtl', spreadsheet, cols)
-addExamples('ha')
-convertTranscriptionData('ha')
+window.languageName = 'Hausa'
+window.letterClassName = 'ha'
+window.lang = 'ha'
+window.direction = 'rtl'
+window.explainerDir = 'arabic/hausa'
+window.charappDir = 'arab-ha/'
+
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(lang)
+convertTranscriptionData(lang)
 </script> 
 
 
@@ -1153,9 +1164,16 @@ convertTranscriptionData('ha')
 <script src="../../shared/scriptdb/arab-ks.js">  </script>
 <script src="ks-details.html">  </script>
 <script>
-addDetails ('Kashmiri', 'ks', 'ks', 'rtl', spreadsheet, cols)
-addExamples('ks')
-convertTranscriptionData('ks')
+window.languageName = 'Kashmiri'
+window.letterClassName = 'ks'
+window.lang = 'ks'
+window.direction = 'rtl'
+window.explainerDir = 'arabic/kashmiri'
+window.charappDir = 'arab-ks/'
+
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(lang)
+convertTranscriptionData(lang)
 </script> 
 
 
@@ -1163,9 +1181,16 @@ convertTranscriptionData('ks')
 <script src="../../shared/scriptdb/arab-ug.js">  </script>
 <script src="ug-details.html">  </script>
 <script>
-addDetails ('Uighur', 'ug', 'ug', 'rtl', spreadsheet, cols)
-addExamples('ug')
-convertTranscriptionData('ug')
+window.languageName = 'Uighur'
+window.letterClassName = 'ug'
+window.lang = 'ug'
+window.direction = 'rtl'
+window.explainerDir = 'arabic/uighur'
+window.charappDir = 'arab-ug/'
+
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(lang)
+convertTranscriptionData(lang)
 </script> 
 
 
@@ -1173,9 +1198,16 @@ convertTranscriptionData('ug')
 <script src="../../shared/scriptdb/arab-ur.js">  </script>
 <script src="ur-details.html">  </script>
 <script>
-addDetails ('Urdu', 'ur', 'ur', 'rtl', spreadsheet, cols)
-addExamples('ur')
-convertTranscriptionData('ur')
+window.languageName = 'Urdu'
+window.letterClassName = 'ur'
+window.lang = 'ur'
+window.direction = 'rtl'
+window.explainerDir = 'arabic/urdu'
+window.charappDir = 'arab-ur/'
+
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(lang)
+convertTranscriptionData(lang)
 </script> 
 
 
@@ -1183,7 +1215,16 @@ convertTranscriptionData('ur')
 <script src="../../shared/scriptdb/arab-misc.js">  </script>
 <script src="misc-details.html">  </script>
 <script>
-addDetails ('Miscellanea', 'misc', 'ar', 'rtl', spreadsheet, cols)
+window.languageName = 'Miscellanea'
+window.letterClassName = 'misc'
+window.lang = 'ar'
+window.direction = 'rtl'
+window.explainerDir = ''
+window.charappDir = 'arab-all/'
+
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(lang)
+convertTranscriptionData(lang)
 </script> 
 
 
@@ -1206,6 +1247,24 @@ addDetails ('Miscellanea', 'misc', 'ar', 'rtl', spreadsheet, cols)
 
 
 <script>
+window.version = 'v27'
+window.scriptName = 'Arabic'
+window.ghDirectory = 'arabic'
+window.blockDirectory = 'arabic'
+window.languageList = ['ar','fa','ha','ks','ug','ur'] // lang tags for each orthography handled
+window.detailsfileList = ['arb','fa','ha','ks','ug','ur','misc'] // first part of xx-details for each orthography
+window.scriptISO = 'arab'
+window.webfonts = ["Scheherazade WF", "Awami Nastaliq WF","Noto Nastaliq Urdu WF","Alkalami WF"]
+window.defaultSize = '32px'
+
+initialise(`/scripts/${ blockDirectory }/block`, ghDirectory, detailsfileList, version)
+for (i=0;i<languageList.length;i++) autoTransliterate(languageList[i])
+makeFontChanger(languageList.join(','), scriptISO, webfonts, defaultSize)
+</script>
+
+
+
+<!--script>
 initialise('/scripts/arabic/block','arabic')
 autoTransliterate('ar')
 autoTransliterate('fa')
@@ -1214,7 +1273,7 @@ autoTransliterate('ug')
 autoTransliterate('ur')
 autoTransliterate('ks')
 makeFontChanger('ar,fa,ha,ks,ug,ur', 'arab', ["Scheherazade WF", "Awami Nastaliq WF","Noto Nastaliq Urdu WF","Alkalami WF"], '32px')
-</script>
+</script-->
 
 
 </body>
