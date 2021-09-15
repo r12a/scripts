@@ -33,9 +33,6 @@
 
 
 <style id="includeStyles"></style>
-<style>
-.character p { line-height: 35px; }
-</style>
 </head>
 
 <body>
@@ -43,9 +40,10 @@
 <div id="header-boilerplate"></div>
   <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script> 
 </header>
+
 <h1>Tai Tham character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
+<nav id="top"></nav>
 
 <aside class="sidebar">
   <nav>
@@ -63,11 +61,10 @@
   </div>
 </aside>
 
+
+
 <div id="intro">
-<p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->10 December, 2020<!-- #EndDate -->
-  <span id="versionTop"></span>
-  </p>
+<p id="status"><span id="versionTop"></span></p>
 
 
 <section>
@@ -96,9 +93,8 @@
 
 
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Tai Tham','Tai Khün'); return false;">About this page</a></summary>
+<summary class="instructions"><a href="" onClick="showAbout(); return false;">About this page</a></summary>
 <div id="about"></div>
-<p id="charliststr" class="instructions"></p>
 </details>
 </section>
 </div>
@@ -387,17 +383,6 @@
 
 <section id="refs">
 <h2>References</h2>
-<ol>
-<li>[ <a class="fnref" href="#refs">c</a> ] Patrick Chew, Various private correspondence</li>
-<li>[ <a class="fnref" href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">e</a> ] Michael Everson, Martin Hosken, Peter Constable <a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3207.pdf">Revised proposal for encoding the Lanna script in the BMP of the UCS</a></li>
-<li>[ <a class="fnref" href="#refs">h</a> ] M Hosken, <cite>Structuring Tai Tham Unicode</cite></li>
-<li>[ <a class="fnref" href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">o</a> ] R Wyn Owen, <a href="https://evols.library.manoa.hawaii.edu/bitstream/10524/52403/09_Owen2017description.pdf">A description and linguistic analysis of the Tai Khuen writing system</a></li>
-<li>[ <a class="fnref" href="#refs">r</a> ] Richard Wordingham, personal correspondence.</li>
-<li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode12.0.0/ch16.pdf#G53337">u</a> ] <a href="http://www.unicode.org/versions/Unicode12.0.0/ch16.pdf#G53337">The Unicode Standard v12.0</a></li>
-<li>[ <a class="fnref" href="http://wrdingham.co.uk/lanna/renderer_test.htm
-">w</a> ] Richard Wordingham, <a href="http://wrdingham.co.uk/lanna/renderer_test.htm
-"><cite>Tai Tham Renderer Tests</cite></a></li>
-</ol>
 </section>
 
 
@@ -405,24 +390,46 @@
 
 
 <script>
-//addDetails (LanguageName, langClass, lang, dir, spreadsheet, cols) {
 addBasics('kkh','ltr')
 </script>
+
+
+
+
 
 <script src="../../shared/scriptdb/lana-kkh.js">  </script>
 <script src="kkh-details.html">  </script>
 <script>
-addDetails ('Tai Khün', 'kkh', 'kkh', '', spreadsheet, cols)
-addExamples('kkh')
-convertTranscriptionData('kkh')
+window.languageName = 'Tai Khün'
+window.letterClassName = 'kkh'
+window.lang = 'kkh'
+window.direction = ''
+window.explainerDir = 'taitham/'
+window.charappDir = 'lana-kkh/'
+
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(letterClassName)
+convertTranscriptionData(lang)
 </script>
+
+
+
+
+
 
 <script src="../../shared/scriptdb/lana-nod.js">  </script>
 <script src="nod-details.html">  </script>
 <script>
-addDetails ('Northern Thai', 'nod', 'nod', '', spreadsheet, cols)
-addExamples('nod')
-convertTranscriptionData('nod')
+window.languageName = 'Northern Thai'
+window.letterClassName = 'nod'
+window.lang = 'nod'
+window.direction = ''
+window.explainerDir = 'taitham/northernthai'
+window.charappDir = 'lana-nod/'
+
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(letterClassName)
+convertTranscriptionData(lang)
 </script>
 
 
@@ -439,16 +446,19 @@ convertTranscriptionData('nod')
 
 
 <script>
-initialise('/scripts/taitham/block','taitham')
-autoTransliterate('kkh')
-autoTransliterate('nod')
-makeFontChanger('kkh,nod', 'lana', ["Lamphun WF", "Noto Serif Tai Tham WF", "Lanna Alif WF", "A Tai Tham KH New WF"], '24px')
-</script>
+window.version = 'v27'
+window.scriptName = 'Tai Tham'
+window.ghDirectory = 'taitham'
+window.blockDirectory = 'taitham'
+window.languageList = ['kkh','nod'] // lang tags for each orthography handled
+window.detailsfileList = ['kkh','nod'] // first part of xx-details for each orthography
+window.scriptISO = 'lana'
+window.webfonts = ["Lamphun WF", "Noto Serif Tai Tham WF", "Lanna Alif WF", "A Tai Tham KH New WF"]
+window.defaultSize = '24px'
 
-<!-- Uncomment the following and look in the console to check for out-of-date transliterations -->
-<!--script src="nod-translit.js"> </script>
-<script>reTransliterate('nod',false)</script>
-<script src="kkh-translit.js"> </script>
-<script>reTransliterate('kkh',false)</script-->
+initialise(`/scripts/${ blockDirectory }/block`, ghDirectory, detailsfileList, version)
+for (i=0;i<languageList.length;i++) autoTransliterate(languageList[i])
+makeFontChanger(languageList.join(','), scriptISO, webfonts, defaultSize)
+</script>
 </body>
 </html>
