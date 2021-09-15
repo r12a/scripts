@@ -34,7 +34,6 @@
 
 
 <style id="includeStyles"></style>
-<style>.notes p, .notes li { line-height: 30px; }</style>
 </head>
 
 <body>
@@ -42,9 +41,10 @@
   <div id="header-boilerplate"></div>
   <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script> 
 </header>
+
 <h1>Malayalam character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
+<nav id="top"></nav>
 
 
 <aside class="sidebar">
@@ -60,11 +60,9 @@
 </aside>
 
 
+
 <div id="intro">
-<p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->9 December, 2020<!-- #EndDate -->
-  <span id="versionTop"></span>
-  </p>
+<p id="status"><span id="versionTop"></span></p>
 
 
 <section>
@@ -93,9 +91,8 @@
 
 
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Malayalam','Malayalam'); return false;">About this page</a></summary>
+<summary class="instructions"><a href="" onClick="showAbout(); return false;">About this page</a></summary>
 <div id="about"></div>
-<p id="charliststr" class="instructions"></p>
 </details>
 </section>
 </div>
@@ -363,12 +360,6 @@
 
 <section id="refs">
 <h2>References</h2>
-<ol>
-<li>[ <sup><a href="#refs">d</a></sup> ] Peter T. Daniels and William Bright, <span class="doctitle"><cite>The World's Writing Systems</cite></span>, Oxford University Press, ISBN
-		    0-19-507993-0</li>
-<li>[ <sup><a href="http://www.unicode.org/versions/Unicode6.0.0/ch12.pdf">u</a></sup> ] <a href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf">The Unicode Standard v11.0</a></li>
-<li>[ <sup><a href="http://en.wikipedia.org/wiki/Malayalam_script">w</a></sup> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Malayalam_script">Malayalam script</a></li>
-</ol>
 </section>
 
 
@@ -376,16 +367,25 @@
 
 
 <script>
-//addDetails (LanguageName, langClass, lang, dir, spreadsheet, cols) {
 addBasics('ml','ltr')
 </script>
+
+
+
 
 <script src="../../shared/scriptdb/malayalam.js">  </script>
 <script src="ml-details.html">  </script>
 <script>
-addDetails ('Malayalam', 'ml', 'ml', '', spreadsheet, cols)
-addExamples('ml')
-convertTranscriptionData('ml')
+window.languageName = 'Malayalam'
+window.letterClassName = 'ml'
+window.lang = 'ml'
+window.direction = ''
+window.explainerDir = 'malayalam/'
+window.charappDir = 'mlym/'
+
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(letterClassName)
+convertTranscriptionData(lang)
 </script>
 
 
@@ -401,9 +401,19 @@ convertTranscriptionData('ml')
 
 
 <script>
-initialise('/scripts/malayalam/block', 'malayalam')
-autoTransliterate('ml')
-makeFontChanger('ml', 'mlym', ["Noto Serif Malayalam WF", "Noto Sans Malayalam WF"], '24px')
+window.version = 'v27'
+window.scriptName = 'Malayalam'
+window.ghDirectory = 'malayalam'
+window.blockDirectory = 'malayalam'
+window.languageList = ['ml'] // lang tags for each orthography handled
+window.detailsfileList = ['ml'] // first part of xx-details for each orthography
+window.scriptISO = 'mlym'
+window.webfonts = ["Noto Serif Malayalam WF", "Noto Sans Malayalam WF"]
+window.defaultSize = '24px'
+
+initialise(`/scripts/${ blockDirectory }/block`, ghDirectory, detailsfileList, version)
+for (i=0;i<languageList.length;i++) autoTransliterate(languageList[i])
+makeFontChanger(languageList.join(','), scriptISO, webfonts, defaultSize)
 </script>
 </body>
 </html>
