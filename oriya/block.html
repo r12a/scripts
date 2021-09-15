@@ -34,10 +34,6 @@
 
 
 <style id="includeStyles"></style>
-<style>
-.character p { line-height: 35px; }
-.charStatus { font-weight: bold; }
-</style>
 </head>
 
 <body>
@@ -45,9 +41,11 @@
 <div id="header-boilerplate"></div>
   <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script> 
 </header>
+
 <h1>Odia character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
+<nav id="top"></nav>
+
 
 <aside class="sidebar">
   <nav>
@@ -65,11 +63,10 @@
 </div>
 </aside>
 
+
+
 <div id="intro">
-<p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->7 March, 2021<!-- #EndDate -->
-  <span id="versionTop"></span>
-  </p>
+<p id="status"><span id="versionTop"></span></p>
 
 
 <section>
@@ -98,9 +95,8 @@
 
 
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Odia','Odia'); return false;">About this page</a></summary>
+<summary class="instructions"><a href="" onClick="showAbout(); return false;">About this page</a></summary>
 <div id="about"></div>
-<p id="charliststr" class="instructions"></p>
 </details>
 </section>
 </div>
@@ -359,16 +355,26 @@
 
 
 <script>
-//addDetails (LanguageName, langClass, lang, dir, spreadsheet, cols) {
 addBasics('or','ltr')
 </script>
+
+
+
+
 
 <script src="../../shared/scriptdb/orya.js">  </script>
 <script src="or-details.html">  </script>
 <script>
-addDetails('Odia', 'or', 'or', 'ltr', spreadsheet, cols)
-addExamples('or')
-convertTranscriptionData('or')
+window.languageName = 'Odia'
+window.letterClassName = 'or'
+window.lang = 'or'
+window.direction = ''
+window.explainerDir = 'oriya/'
+window.charappDir = 'orya/'
+
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(letterClassName)
+convertTranscriptionData(lang)
 </script>
 
 
@@ -388,9 +394,19 @@ convertTranscriptionData('or')
 
 
 <script>
-initialise('/scripts/odia/block','ltr')
-autoTransliterate('or')
-makeFontChanger('or', 'orya', ["Noto Sans Oriya WF"], '24px')
+window.version = 'v27'
+window.scriptName = 'Odia (Oriya)'
+window.ghDirectory = 'oriya'
+window.blockDirectory = 'oriya'
+window.languageList = ['or'] // lang tags for each orthography handled
+window.detailsfileList = ['or'] // first part of xx-details for each orthography
+window.scriptISO = 'orya'
+window.webfonts = ["Noto Sans Oriya WF"]
+window.defaultSize = '24px'
+
+initialise(`/scripts/${ blockDirectory }/block`, ghDirectory, detailsfileList, version)
+for (i=0;i<languageList.length;i++) autoTransliterate(languageList[i])
+makeFontChanger(languageList.join(','), scriptISO, webfonts, defaultSize)
 </script>
 </body>
 </html>
