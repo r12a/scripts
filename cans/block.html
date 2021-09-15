@@ -35,10 +35,6 @@
 <script src="../../uniview/u.js"></script> 
 
 <style id="includeStyles"></style>
-<style>
-.character p { line-height: 35px; }
-.charStatus { font-weight: bold; }
-</style>
 </head>
 
 <body>
@@ -46,9 +42,10 @@
 <div id="header-boilerplate"></div>
   <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script> 
 </header>
+
 <h1>UCAS character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
+<nav id="top"></nav>
 
 <aside class="sidebar">
   <nav>
@@ -66,11 +63,10 @@
   </div>
 </aside>
 
+
+
 <div id="intro">
-<p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->21 August, 2021<!-- #EndDate -->
-  <span id="versionTop"></span>
-  </p>
+<p id="status"><span id="versionTop"></span></p>
 
 
 <section>
@@ -94,9 +90,8 @@
 
 
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'UCAS','Inuktitut',block='cans'); return false;">About this page</a></summary>
+<summary class="instructions"><a href="" onClick="showAbout(); return false;">About this page</a></summary>
 <div id="about"></div>
-<p id="charliststr" class="instructions"></p>
 </details>
 </section>
 </div>
@@ -1558,24 +1553,47 @@
 
 
 <script>
-//addDetails (LanguageName, langClass, lang, dir, spreadsheet, cols) {
 addBasics('ike','ltr')
 </script>
+
+
+
+
+
 
 <script src="../../shared/scriptdb/cans-ike.js">  </script>
 <script src="ike-details.html">  </script>
 <script>
-addDetails ('Inuktitut', 'ike', 'ike', '', spreadsheet, cols)
-addExamples('ike')
-convertTranscriptionData('ike')
+window.languageName = 'Inuktitut'
+window.letterClassName = 'ike'
+window.lang = 'ike'
+window.direction = ''
+window.explainerDir = 'cans/'
+window.charappDir = 'cans-ike/'
+
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(letterClassName)
+convertTranscriptionData(lang)
 </script>
+
+
+
+
+
 
 <script src="../../shared/scriptdb/cans-crk.js">  </script>
 <script src="crk-details.html">  </script>
 <script>
-addDetails ('Plains Cree', 'crk', 'crk', '', spreadsheet, cols)
-addExamples('crk')
-convertTranscriptionData('crk')
+window.languageName = 'Plains Cree'
+window.letterClassName = 'crk'
+window.lang = 'crk'
+window.direction = ''
+window.explainerDir = 'cans/cans-crk'
+window.charappDir = 'cans-crk/'
+
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(letterClassName)
+convertTranscriptionData(lang)
 </script>
 
 
@@ -1590,10 +1608,19 @@ convertTranscriptionData('crk')
 
 
 <script>
-initialise('/scripts/cans/block','ike')
-autoTransliterate('ike')
-autoTransliterate('crk')
-makeFontChanger('ike,crk', 'cans', ["Noto Sans Canadian Aboriginal WF"], '24px')
+window.version = 'v27'
+window.scriptName = 'Canadian Aboriginal Syllabics'
+window.ghDirectory = 'cans'
+window.blockDirectory = 'cans'
+window.languageList = ['ike','crk'] // lang tags for each orthography handled
+window.detailsfileList = ['ike','crk'] // first part of xx-details for each orthography
+window.scriptISO = 'cans'
+window.webfonts = ["Noto Sans Canadian Aboriginal WF"]
+window.defaultSize = '24px'
+
+initialise(`/scripts/${ blockDirectory }/block`, ghDirectory, detailsfileList, version)
+for (i=0;i<languageList.length;i++) autoTransliterate(languageList[i])
+makeFontChanger(languageList.join(','), scriptISO, webfonts, defaultSize)
 </script>
 </body>
 </html>
