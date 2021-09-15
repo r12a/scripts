@@ -50,9 +50,10 @@ function setFormsFont (font) {
   <div id="header-boilerplate"></div>
   <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script> 
 </header>
+
 <h1>Mongolian character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a><br><input type="text" id="findInput" placeholder="Find..." style="width: 4em; text-align: center;" onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/></nav>
+<nav id="top"></nav>
 
 
 <aside class="sidebar">
@@ -69,13 +70,11 @@ function setFormsFont (font) {
 </aside>
 
 
-<p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->4 December, 2020<!-- #EndDate -->
-  <span id="versionTop"></span>
-</p>
-
 
 <div id="intro">
+<p id="status"><span id="versionTop"></span></p>
+
+
 <section>
 
   <p>This page lists characters in the following Unicode  block and provides information about them.  </p>
@@ -101,9 +100,8 @@ function setFormsFont (font) {
 
 
 <details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(document.getElementById('about'),'Mongolian','Mongolian'); return false;">About this page</a></summary>
+<summary class="instructions"><a href="" onClick="showAbout(); return false;">About this page</a></summary>
 <div id="about"></div>
-<p id="charliststr" class="instructions"></p>
 </details>
 
 
@@ -447,61 +445,45 @@ function setFormsFont (font) {
 
 
 <section id="refs">
-  <h2>References</h2>
-  <ol>
-<li>[ <a class="fnref" href="http://www.cjvlang.com/Writing/writmongol/mongolalpha.html">b</a> ] <cite>Bathrobe's East Asian Writing Systems</cite>, <a href="http://www.cjvlang.com/Writing/writmongol/mongolalpha.html">Making Sense of the Traditional Mongolian Script</a></li>
-<li>[ <a class="fnref" href="#refs">d</a> ] Peter T. Daniels and William Bright, <cite>The World's Writing Systems</cite>, Oxford University Press, ISBN 0-19-507993-0, p???.</li>
-<li>[ <a class="fnref" href="https://lists.w3.org/Archives/Public/public-i18n-mongolian/2015JulSep/att-0036/DS05_Mongolian_NNBSP_Connected_Suffixes.pdf">m</a> ] <a href="https://lists.w3.org/Archives/Public/public-i18n-mongolian/2015JulSep/att-0036/DS05_Mongolian_NNBSP_Connected_Suffixes.pdf"><cite>Mongolian NNBSP - Connected Suffixes</cite></a>, Greg Eck</li>
-<li>[ <a class="fnref" href="https://w3c.github.io/mlreq/">n</a> ] Nasun-urt, Hu Qitu, <cite><a href="https://w3c.github.io/mlreq/">Mongolian Layout Requirements</a></cite></li>
-<li>[ <a class="fnref" href="https://github.com/w3c/mlreq/issues">g</a> ] <a href="https://github.com/w3c/mlreq/issues">Issue list</a> for W3C Mongolian layout requirements.</li>
-<li>[ <a class="fnref" href="https://www.unicode.org/versions/latest/ch13.pdf">u</a> ] <cite>The Unicode Standard v10.0</cite>, <a href="https://www.unicode.org/versions/latest/ch13.pdf">Mongolian</a>, pp528-536.</li>
-<li>[ <a class="fnref" href="http://en.wikipedia.org/wiki/Mongolian_script">w</a> ] Wikipedia, <a href="http://en.wikipedia.org/wiki/Mongolian_script"><cite> Mongolian script</cite></a>. </li>
-</ol>
+<h2>References</h2>
 </section>
-<div id="panel" style="display:none"></div>
 
-
-<div class="smallprint"><span id="version"></span></div>
-
-
-
-<!-- Uncomment this code to get a list of all character names for the file names-subset.js  
-<div id=charliststr></div>
-<div><span class="ex" lang="mn">᠀᠁᠂᠃᠄᠅᠆᠇᠈᠉᠊᠋᠌᠍᠎᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙ᠠᠡᠢᠣᠤᠥᠦᠧᠨᠩᠪᠫᠬᠭᠮᠯᠰᠱᠲᠳᠴᠵᠶᠷᠸᠹᠺᠻᠼᠽᠾᠿᡀᡁᡂᡃᡄᡅᡆᡇᡈᡉᡊᡋᡌᡍᡎᡏᡐᡑᡒᡓᡔᡕᡖᡗᡘᡙᡚᡛᡜᡝᡞᡟᡠᡡᡢᡣᡤᡥᡦᡧᡨᡩᡪᡫᡬᡭᡮᡯᡰᡱᡲᡳᡴᡵᡶᡷᢀᢁᢂᢃᢄᢅᢆᢇᢈᢉᢊᢋᢌᢍᢎᢏᢐᢑᢒᢓᢔᢕᢖᢗᢘᢙᢚᢛᢜᢝᢞᢟᢠᢡᢢᢣᢤᢥᢦᢧᢨᢩᢪ</span></div>
-<div id="listofchars"></div>
-<script src="/javascript/showcharacters/names.js"></script>
-<script src="data-extraction.js" type="text/javascript">//</script>
-<script>document.getElementById('listofchars').innerHTML = getlistofchars();
-listCharsWithNotes();
-</script>
---> 
-
-<!--
-Punctuation;punctuation;1800-180a 
-Format controls;formatc;180b:180e
-Digits;digits;1810-1819
-Basic letters;basic;1820-1842
-Todo letters;todo;1843-185c
-Sibe letters;sibe;185d-1872
-Manchu letters;manchu;1873-1877
-Extensions for Sanskrit and Tibetan;extensions;1880-18aa
- --> 
 
 
 
 
 
 <script>
-//addDetails (LanguageName, langClass, lang, dir, spreadsheet, cols) {
 addBasics('mn','ltr')
 </script>
+
+
+
+
 
 <script src="../../shared/scriptdb/mong-mn.js">  </script>
 <script src="mn-details.html">  </script>
 <script>
-addDetails ('Halh Mongolian', 'mn', 'mn', '', spreadsheet, cols)
-addExamples('mn')
-</script> 
+window.languageName = 'Halh Mongolian'
+window.letterClassName = 'mn'
+window.lang = 'mn'
+window.direction = ''
+window.explainerDir = 'mongolian/'
+window.charappDir = 'mong-mn/'
+
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(letterClassName)
+convertTranscriptionData(lang)
+</script>
+
+
+
+
+
+<div id="panel" style="display:none"></div>
+
+
+<div class="smallprint"><span id="version"></span></div>
 
 
 <script>
@@ -513,10 +495,19 @@ convertTranscriptionData()
 
 
 <script>
-initialise('/scripts/mongolian/block','mongolian')
-addExamples('mn')
-autoTransliterate('mn')
-makeFontChanger('mn', 'mong', ["Noto Sans Mongolian WF"], '24px')
+window.version = 'v27'
+window.scriptName = 'Mongolian'
+window.ghDirectory = 'mongolian'
+window.blockDirectory = 'mongolian'
+window.languageList = ['mn'] // lang tags for each orthography handled
+window.detailsfileList = ['mn'] // first part of xx-details for each orthography
+window.scriptISO = 'mong'
+window.webfonts = ["Noto Sans Mongolian WF"]
+window.defaultSize = '24px'
+
+initialise(`/scripts/${ blockDirectory }/block`, ghDirectory, detailsfileList, version)
+for (i=0;i<languageList.length;i++) autoTransliterate(languageList[i])
+makeFontChanger(languageList.join(','), scriptISO, webfonts, defaultSize)
 </script>
 </body>
 </html>
