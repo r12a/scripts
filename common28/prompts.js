@@ -236,6 +236,15 @@ function makeIndexIntro (node, script, langName, lang, orthog, indic) {
 // script: iso code for script; langName: language name; lang: bcp47 tag
 // orthog: ordinary name for orthography described
 // indic: boolean indicating whether or not to show indic syllable property link
+
+
+    // redefine the parameters here to improve portability, since this is called from each separate page
+    script = window.scriptTag
+    langName = window.languageName
+    lang = window.charUsageBCP
+    orthog = window.orthogName
+    indic = window.indic
+    
     var out = ''
     
     out += `<div id="index_intro">

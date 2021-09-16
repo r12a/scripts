@@ -9,6 +9,7 @@ function addPageFeatures () {
 function initialiseSummary (blockDirectory, lang, tableName, dir) {
 	doHeadersFooters(dir)
 	//runCharCounts()
+    makeIndexIntro(document.getElementById('index_intro'))
     makeTables(lang)
 	if (typeof addExamples !== 'undefined') addExamples(lang)
     initialiseShowNames(document, blockDirectory, 'c')
@@ -478,7 +479,6 @@ function makeSidePanel (id, otherlinks) {
             }
         out += '</td></tr>'
 		}
-	
 	
 	
 	out += '<tr><th>Native speakers</th><td>'+parseInt(langs[id].speakers.replace(/~/g,'')).toLocaleString()+'</td></tr>'
