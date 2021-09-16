@@ -5,7 +5,7 @@
 <title>Cyrillic character notes</title>
 <meta name="description" content="Notes about characters in the Unicode Cyrillic script blocks."/>
 <link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../common/block-style.css" />
+<link rel="stylesheet" href="../common28/block-style.css" />
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/fontdb/db.js"> </script>
@@ -17,12 +17,12 @@
 <script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
-<script src="../common/block-functions.js"></script>
-<script src="../common/transliterate.js"></script>
+<script src="../common28/block-functions.js"></script>
+<script src="../common28/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
-<script src="../common/egcode.js"></script>
-<script src="../common/references.js"></script>
+<script src="../common28/egcode.js"></script>
+<script src="../common28/references.js"></script>
 <script src="refs.js"></script>
 
 <script src="ru-examples.js"></script>
@@ -1057,14 +1057,8 @@ addBasics('ru','ltr')
 
 <script src="../../shared/scriptdb/cyrl-ru.js">  </script>
 <script src="ru-details.html">  </script>
+<script src="../../shared/manifests/cyrl-ru.js">/* global variables */</script>
 <script>
-window.languageName = 'Russian'
-window.letterClassName = 'ru'
-window.lang = 'ru'
-window.direction = ''
-window.explainerDir = 'cyrillic/'
-window.charappDir = 'cyrl-ru/'
-
 addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
 addExamples(letterClassName)
 convertTranscriptionData(lang)
@@ -1077,14 +1071,8 @@ convertTranscriptionData(lang)
 
 <script src="../../shared/scriptdb/cyrl-mn.js">  </script>
 <script src="mn-details.html">  </script>
+<script src="../../shared/manifests/cyrl-mn.js">/* global variables */</script>
 <script>
-window.languageName = 'Mongolian'
-window.letterClassName = 'mn'
-window.lang = 'mn'
-window.direction = ''
-window.explainerDir = 'cyrillic/mn'
-window.charappDir = 'cyrl-mn/'
-
 addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
 addExamples(letterClassName)
 convertTranscriptionData(lang)
@@ -1105,7 +1093,7 @@ convertTranscriptionData(lang)
 
 
 <script>
-window.version = 'v27'
+window.version = 'v28'
 window.scriptName = 'Cyrillic'
 window.ghDirectory = 'cyrillic'
 window.blockDirectory = 'cyrillic'
@@ -1115,9 +1103,7 @@ window.scriptISO = 'cyrl'
 window.webfonts = ["Gentium Plus WF"]
 window.defaultSize = '24px'
 
-initialise(`/scripts/${ blockDirectory }/block`, ghDirectory, detailsfileList, version)
-for (i=0;i<languageList.length;i++) autoTransliterate(languageList[i])
-makeFontChanger(languageList.join(','), scriptISO, webfonts, defaultSize)
+buildPage()
 </script>
 </body>
 </html>
