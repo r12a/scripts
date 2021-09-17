@@ -624,11 +624,9 @@ alveolar</th>
 <h3>Vowel-signs</h3>
 <p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
 <p>Non-inherent  vowel sounds that follow a consonant  are  represented using <span class="name">vowel-signs</span>, eg. <span class="ipa">ki</span> is written <span class="codepoint noindex" translate="no"><span lang="ml">&#x0D15;&#x0D3F;</span> [<a href="/scripts/malayalam/block#char0D15"><span class="uname">U+0D15 MALAYALAM LETTER KA</span></a> + <a href="/scripts/malayalam/block#char0D3F"><span class="uname">U+0D3F MALAYALAM VOWEL SIGN I</span></a>]</span>.</p>
-<p>Malayalam uses the following vowel-signs.</p>
+<p>An orthography that uses vowel-signs is different from one that uses simple diacritics or letters for vowels, in that the vowel-signs are generally attached to the syllable, rather than  just applied to the letter of the immediately preceding consonant. This means that pre-base vowel-signs and the left glyph of circumgraphs appears before a whole consonant cluster if it is rendered as a conjunct (see <a class="secref">prescript_vowels</a>).</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ി␣ീ␣ു␣ൂ␣െ␣േ␣ൊ␣ോ␣ാ␣ ␣ൈ␣ൗ␣ൌ</figure>
-
-<p>Malayalam vowel-signs are all combining characters. In principle a single Unicode character is used per base consonant, even if the vowel-signs appear on both sides of the base consonant, but 3 vowel signs decompose to more than one character. See also <a class="secref">circumgraphs</a>. All vowel-signs are typed and stored after the base consonant, and the font puts them in the correct place for display.</p>
+<p>Malayalam vowel-signs are all combining characters. In principle a single Unicode character is used per base consonant, even if the vowel-signs appear on both sides of the base consonant, but 3 vowel signs decompose to more than one character. See also <a class="secref">circumgraphs</a>. All vowel-signs are typed and stored after the base consonant, and the glyph rendering system takes care of the positioning at display time.</p>
 <p>All of the vowel-signs are <em>spacing</em> marks, meaning that they consume horizontal space when added to a base consonant.</p>
 
 <p>Vowel-signs may also be attached to digits,<tt>u,505</tt> eg. <span class="eg" lang="ml">355ാം</span></p>
@@ -640,12 +638,32 @@ alveolar</th>
 
 
 
+
+<section id="combiningvowels">
+<h3>Combining marks used for vowels</h3>
+
+<p>Malayalam uses the following dedicated combining marks for vowels.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ി␣ീ␣ു␣ൂ␣െ␣േ␣ൊ␣ോ␣ാ␣ ␣ൈ␣ൗ␣ൌ</figure>
+
+<p>The <span class="trans">u</span> and <span class="trans">ū</span> vowel-signs, and to some extent the <span class="trans">i</span> and <span class="trans">ī</span> signs, tend to form ligatures with the base consonant. See <a class="sectionref">vowelligation</a>.</p>
+</section>
+
+
+
+
+
 <section id="prescript_vowels">
-<h3>pre-base vowel-signs</h3>
+<h3>Pre-base vowel-signs</h3>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">െ␣േ␣ ␣ൈ</figure>
 <p>Three vowel-signs appear to the left of the base consonant letter or cluster, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">കെ</span> <span class="trans">ke</span> <span class="ipa">ke</span></span></p>
 <p>These are combining marks that are always stored after the base consonant. The font places the glyph before the base consonant.</p>
-<p class="info">These vowel-signs are placed before the start of the <em>syllable</em>. This means that a word with a consonant cluster at the start separates the prescript vowel from any postscript vowels by more than one consonant character.</p>
+<p class="info">These vowel-signs are placed before the start of the <em>syllable</em>. This means that a word with a consonant cluster at the start separates the pre-base vowel from the  position where it is pronounced by more than one consonant character, eg.
+<span class="eg" lang="ml">ഇദ്ദേഹം</span>
+</p>
+<p class="info">However, that if the cluster is split by a visible virama, this creates two syllables and the pre-base vowel-sign appears after the consonant with the virama. If you click on the example below, you'll see that the characters and code point orders are the same as for the previous example (apart from the addition of the ZWNJ  to force the virama to appear), but the location of the pre-base vowel-sign is now immediately before the consonant after which it is pronounced.
+<span class="charExample" translate="no"><span class="ex" lang="ml">ഇദ്‌ദേഹം</span></span>
+</p>
 </section>
 
 
@@ -677,6 +695,19 @@ alveolar</th>
 
 
 
+ 
+<section id="independentvowels">
+<h3>Standalone vowels</h3>
+<p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
+
+<p>Malayalam represents standalone vowels using a set of independent vowel letters. The set includes a character to represent the inherent vowel sound.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ഇ␣ഈ␣ഉ␣ഊ␣എ␣ഏ␣ഒ␣ഓ␣അ␣ആ␣ഐ␣ഔ</figure>
+</section>
+
+
+
+
 
 
 
@@ -699,19 +730,6 @@ http://localhost/pickers/malayalam/?text=%0Ac%20%E2%86%92%09k%09g%09c%CA%B0%09j%
 
 <figure class="exampleBox auto noindex" data-cols="trans,transc" data-select="first">ചു␣കു␣ഗു␣ഛു␣ജു␣ണു␣തു␣നു␣ഭു␣രു␣ശു␣ഹു</figure>
 
-</section>
-
-
-
-
- 
-<section id="independentvowels">
-<h3>Standalone vowels</h3>
-<p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
-
-<p>Malayalam represents standalone vowels using a set of independent vowel letters. The set includes a character to represent the inherent vowel sound.</p>
-
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ഇ␣ഈ␣ഉ␣ഊ␣എ␣ഏ␣ഒ␣ഓ␣അ␣ആ␣ഐ␣ഔ</figure>
 </section>
 </section>
 
