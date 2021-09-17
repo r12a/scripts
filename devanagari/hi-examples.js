@@ -276,7 +276,6 @@ autoExpandExamples.hi = `
 सफ़ेद|white||safed
 काला|black||kālā
 रात|night||rāt
-दिन|day||din
 साल|year||sāl
 गर्म|warm||garm
 ठंडा|cold||ṭhaṇḍā
