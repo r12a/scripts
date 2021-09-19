@@ -4,7 +4,7 @@
 <title>Tai Tham character notes</title>
 <meta name="description" content="Notes about characters in the Unicode Tai Tham script blocks."/>
 <link rel="stylesheet" type="text/css" href="../../shared/style/docs.css" />
-<link rel="stylesheet" type="text/css" href="../common/block-style.css" />
+<link rel="stylesheet" type="text/css" href="../common28/block-style.css" />
 <link rel="stylesheet" type="text/css" href="local.css" />
 
 <script src="../../shared/fontdb/db.js"> </script>
@@ -13,15 +13,14 @@
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
-<script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
-<script src="../common/block-functions.js"></script>
-<script src="../common/transliterate.js"></script>
+<script src="../common28/block-functions.js"></script>
+<script src="../common28/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
-<script src="../common/egcode.js"></script>
-<script src="../common/references.js"></script>
+<script src="../common28/egcode.js"></script>
+<script src="../common28/references.js"></script>
 <script src="refs.js"></script>
 
 <script src="kkh-examples.js"></script>
@@ -29,7 +28,6 @@
 <script src="kkh-translit.js">  </script>
 
 <script src="../../uniview/descriptions.js"></script> 
-<script src="../../uniview/u.js"></script> 
 
 
 <style id="includeStyles"></style>
@@ -86,15 +84,15 @@
 
 
 
-<details>
-<summary class="supportdocs instructions"><a href="../#charnotes">Other character notes</a>.</summary>
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(); return false;">About this page</a></summary>
+<div id="about"></div>
 </details>
 
 
 
-<details class="supportdocs noprint">
-<summary class="instructions"><a href="" onClick="showAbout(); return false;">About this page</a></summary>
-<div id="about"></div>
+<details>
+<summary class="supportdocs instructions"><a href="../#charnotes">Other character notes</a>.</summary>
 </details>
 </section>
 </div>
@@ -399,14 +397,8 @@ addBasics('kkh','ltr')
 
 <script src="../../shared/scriptdb/lana-kkh.js">  </script>
 <script src="kkh-details.html">  </script>
+<script src="../../shared/manifests/lana-kkh.js">/* global variables */</script>
 <script>
-window.languageName = 'Tai Khün'
-window.letterClassName = 'kkh'
-window.lang = 'kkh'
-window.direction = ''
-window.explainerDir = 'taitham/'
-window.charappDir = 'lana-kkh/'
-
 addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
 addExamples(letterClassName)
 convertTranscriptionData(lang)
@@ -419,14 +411,8 @@ convertTranscriptionData(lang)
 
 <script src="../../shared/scriptdb/lana-nod.js">  </script>
 <script src="nod-details.html">  </script>
+<script src="../../shared/manifests/lana-nod.js">/* global variables */</script>
 <script>
-window.languageName = 'Northern Thai'
-window.letterClassName = 'nod'
-window.lang = 'nod'
-window.direction = ''
-window.explainerDir = 'taitham/northernthai'
-window.charappDir = 'lana-nod/'
-
 addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
 addExamples(letterClassName)
 convertTranscriptionData(lang)
@@ -446,7 +432,7 @@ convertTranscriptionData(lang)
 
 
 <script>
-window.version = 'v27'
+window.version = 'v28'
 window.scriptName = 'Tai Tham'
 window.ghDirectory = 'taitham'
 window.blockDirectory = 'taitham'
@@ -456,9 +442,7 @@ window.scriptISO = 'lana'
 window.webfonts = ["Lamphun WF", "Noto Serif Tai Tham WF", "Lanna Alif WF", "A Tai Tham KH New WF"]
 window.defaultSize = '24px'
 
-initialise(`/scripts/${ blockDirectory }/block`, ghDirectory, detailsfileList, version)
-for (i=0;i<languageList.length;i++) autoTransliterate(languageList[i])
-makeFontChanger(languageList.join(','), scriptISO, webfonts, defaultSize)
+buildPage()
 </script>
 </body>
 </html>
