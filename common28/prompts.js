@@ -331,24 +331,6 @@ function addAnalytics () {
     // add the stuff at the bottom to generate lists and the index
     
     document.getElementById('analytics').outerHTML = `
-    <details>
-    <summary class="prompts">Show stats</summary>
-
-    <table id="charCountList">
-    <tr><th>Main</th><td id="mainCharList"></td><td id="mainCharListTotal"></td></tr>
-    <tr><th>Auxiliary</th><td id="auxCharList"></td><td id="auxCharListTotal"></td></tr>
-    <tr><th>Archaic</th><td id="archaicCharList"></td><td id="archaicCharListTotal"></td></tr>
-    <tr><th>Other</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
-    <tr><th>Deprecated</th><td id="deprecatedCharList"></td><td id="deprecatedCharListTotal"></td></tr>
-
-    <tr><th>Letter</th><td id="letterCharList"></td><td id="letterCharListTotal"></td></tr>
-    <tr><th>Mark</th><td id="markCharList"></td><td id="markCharListTotal"></td></tr>
-    <tr><th>Number</th><td id="numberCharList"></td><td id="numberCharListTotal"></td></tr>
-    <tr><th>Punctuation</th><td id="punctuationCharList"></td><td id="punctuationCharListTotal"></td></tr>
-    <tr><th>Symbols</th><td id="symbolCharList"></td><td id="symbolCharListTotal"></td></tr>
-    <tr><th>Separators etc</th><td id="otherCharList"></td><td id="otherCharListTotal"></td></tr>
-    </table>
-    </details>
     `
     +
     `<details>
