@@ -1,0 +1,903 @@
+/*
+<!DOCTYPE html>
+<meta charset="utf-8">
+*/
+
+var charDetails = {
+
+
+// MAIN BLOCK
+
+'\u{2000}': `
+
+`,
+
+'\u{2001}': `
+
+`,
+
+'\u{2002}': `
+
+`,
+
+'\u{2003}': `
+
+`,
+
+'\u{2004}': `
+
+`,
+
+'\u{2005}': `
+
+`,
+
+'\u{2006}': `
+
+`,
+
+'\u{2007}': `
+
+`,
+
+'\u{2008}': `
+
+`,
+
+'\u{2009}': `
+
+`,
+
+'\u{200A}': `
+
+`,
+
+'\u{200B}': `
+<p>An invisible character, used to signal line-break and word-break opportunities. It was originally provided for use with writing systems such as Thai, Myanmar, Khmer, Japanese, etc. that don't use spaces between words.</p>
+<p>Justification may visibly adjust the space between the characters on either side of this character, doing so as if the ZWSP wasn't there, eg. the Thai text <span class="charExample" translate="no"><span class="ex" lang="th">อักษร​ไทย</span></span> may look like this when justified or when letter-spacing is applied
+<span class="charExample" translate="no"><span lang="th">อั ก ษ ร ไ ท ย</span></span></p>
+<p>There is no extra space between the 2 words involved, even though they are separated by a ZWSP (click on the word to see the composition).<sup><a href="http://www.unicode.org/versions/Unicode12.0.0/ch23.pdf#Layout" target="_blank">§,827</a></sup></p>
+`,
+
+'\u{200C}': `
+    <p>Prevents two adjacent letters forming a cursive connection with each other when rendered.</p>
+  </div>
+  <div class="letter">
+    <p><span class="title">Persian</span></p>
+    <p>The ZWNJ is used in Persian for plural suffixes, some proper names, and Ottoman Turkish vowels. Ignoring or removing the ZWNJ will result in text with a different meaning or meaningless text.<sup>1</sup> For example, <span class="ex" lang="ar" dir="rtl">تن‌ها</span> is the plural of <span class="meaning">body</span>, whereas <span class="ex" lang="ar" dir="rtl">تنها</span> is the adjective <span class="meaning">alone</span>.<sup>2</sup> The only difference is the presence or absence of ZWNJ after <span class="name">noon</span>. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout">u373</a> <a class="fnref" href="https://github.com/w3c/charmod-norm/issues/44#issuecomment-172042270" target="_blank">g</a></p>
+</div>
+<div class="letter">
+<p><span class="title">Khmer</span></p>
+  <p>Khmer register shifters (ie. <span class="codepoint" translate="no"><span lang="km">&#x25CC;&#x17C9;</span> [<a href="/scripts/khmer/block#char17C9"><span class="uname">U+17C9 KHMER SIGN MUUSIKATOAN​</span></a>]</span> or <span class="codepoint" translate="no"><span lang="km">&#x25CC;&#x17CA;</span> [<a href="/scripts/khmer/block#char17CA"><span class="uname">U+17CA KHMER SIGN TRIISAP​</span></a>]</span>) usually appear above a consonant. However, if a superscript vowel is also attached to the consonant, the shifter is normally displayed below the consonant, instead. If you want to force the shifter to remain above the consonant, as is occasionally the case, insert ZWNJ between the consonant and the shifter.<a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout">u373</a> <a class="fnref" href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">sk</a>  For example, 
+  <span class="charExample" translate="no"><span class="ex" lang="km">ហ ហ៊ ហ៊ី ហ‌៊ី</span></span></p>
+</div>
+
+`,
+
+'\u{200D}': `
+    <p>Permits a letter to form a cursive connection without a visible neighbour.</p>
+  </div>
+  <div class="letter arabic">
+    <p><span class="title">Arabic</span></p>
+    <p>The marker for hijri dates is an initial form of <span class="name">heh</span>, even though it doesn't join to the left, ie. <span class="ex" dir="rtl" lang="ur">ه‍</span>. For this, use a <a href="#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a> immediately after the <span class="name">heh</span>, eg. <span class="ex" lang="ar" dir="rtl">الاثنين 10 رجب 1415 ه‍.</span>. </p>
+    <p>In some cases <span class="codepoint"><span lang="ar" dir="rtl">&#x0640;</span> <a href="#char0640">[<span class="uname">U+0640 ARABIC TATWEEL</span>]</a></span> is used to ensure that the shape looks right, because some applications or fonts don't produce the right effect when using the ZWJ, eg. <span class="ex" lang="ar" dir="rtl">الاثنين 10 رجب 1415 هـ.</span>.</p>
+  </div>
+`,
+
+'\u{200E}': `
+
+`,
+
+'\u{200F}': `
+
+`,
+
+'\u{2010}': `
+
+`,
+
+'\u{2011}': `
+
+`,
+
+'\u{2012}': `
+
+`,
+
+'\u{2013}': `
+
+`,
+
+'\u{2014}': `
+
+`,
+
+'\u{2015}': `
+
+`,
+
+'\u{2016}': `
+<p>Called <span class="name">double bar</span>.<a class="fnref" href="#refs">b</a></p>
+<p>An old standard reference mark used  with footnotes. When used for this purpose with other signs, the traditional order is <span class="ex" lang="en">* † ‡ § ‖ ¶</span>.<a class="fnref" href="#refs">b</a></p>
+<p>Also used as a standard symbol for bibliographic work.<a class="fnref" href="#refs">b</a></p>
+<p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout" target="_blank">Unicode</a> </p>
+`,
+
+'\u{2017}': `
+
+`,
+
+'\u{2018}': `
+
+`,
+
+'\u{2019}': `
+
+`,
+
+'\u{201A}': `
+
+`,
+
+'\u{201B}': `
+
+`,
+
+'\u{201C}': `
+
+`,
+
+'\u{201D}': `
+
+`,
+
+'\u{201E}': `
+
+`,
+
+'\u{201F}': `
+
+`,
+
+'\u{2020}': `
+<p>Called <span class="name">dagger</span>, but also known as <span class="name">obelisk</span>, <span class="name">obelus</span>, or <span class="name">long cross</span>.<a class="fnref" href="#refs">b321</a></p>
+<p>A reference mark, used primarily with footnotes. When used for this purpose with other signs, the traditional order is <span class="ex" lang="en">* † ‡ § ‖ ¶</span>.<a class="fnref" href="#refs">b68</a></p>
+<p>Also a death sign in European typography, used to mark the year of death or the names of dead persons.<a class="fnref" href="#refs">b321</a></p>
+<p>In lexicography it marks obsolete forms, and in editing of classical texts flags passages judged to be corrupt.<a class="fnref" href="#refs">b321</a></p>
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout" target="_blank">Unicode</a>
+</p>
+`,
+
+'\u{2021}': `
+<p>Called <span class="name">dagger</span>, but also known as <span class="name">diesis</span>, or <span class="name">double obelisk</span>.<a class="fnref" href="#refs">b321</a></p>
+<p>A reference mark used  with footnotes. When used for this purpose with other signs, the traditional order is <span class="ex" lang="en">* † ‡ § ‖ ¶</span>.<a class="fnref" href="#refs">b68</a></p>
+<p class="ref"><a href="#refs">General sources</a>:
+   <a href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout" target="_blank">Unicode</a>
+</p>
+`,
+
+'\u{2022}': `
+
+`,
+
+'\u{2023}': `
+
+`,
+
+'\u{2024}': `
+  <div class="letter">
+    <p><span class="title">Armenian</span> punctuation <span class="name">miǰakēt</span></p>
+    <p>Used like a semi-colon – a shorter break than a full stop. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout">u322</a></p>
+    <p><span class="charExample" lang="hy">Ոչ ոք չպետք է լինի ստրկության կամ անազատ <span class="ex">վիճակում․ </span>պետք է արգելվեն ստրկատիրության ու ստրուկների առուծախի բոլոր ձևերը։</span>&nbsp;</p>
+  </div>
+`,
+
+'\u{2025}': `
+
+`,
+
+'\u{2026}': `
+
+`,
+
+'\u{2027}': `
+
+`,
+
+'\u{2028}': `
+
+`,
+
+'\u{2029}': `
+
+`,
+
+'\u{202A}': `
+
+`,
+
+'\u{202B}': `
+
+`,
+
+'\u{202C}': `
+
+`,
+
+'\u{202D}': `
+
+`,
+
+'\u{202E}': `
+
+`,
+
+'\u{202F}': `
+<p>Initially added to Unicode for Mongolian suffix handling, where it is important to visually distinguish between spaces separating suffixes and those separating words, and where lines should not be broken between morphemes.</p>
+<p>Many Mongolian suffixes are separated from the root or other suffixes by this small gap, eg.
+<span class="charExample" translate="no"><span class="ex" lang="mn">ᠭᠠᠵᠠᠷ ᠠ</span> 
+<bdi class="trans">gaǰar-a</bdi> <bdi class="meaning">to the country</bdi></span></p>
+<p>Characters following NNBSP may take on special shapes.</p>
+
+<p>A somewhat recent innovation in writing Cree syllabics is to use this as a morpheme separator, rather than the hyphen which is used in the Latin transcription, eg.
+<span class="charExample" translate="no"><span class="ex" lang="crk">ᐁ ᐚᐸᒫᐟ</span> <span class="transc">ê-wâpamât</span></span>
+</p>
+
+<p>Also useful in Latin script languages where a thin, non-breaking space is needed:</p>
+<ul>
+<li><span class="leadin">Before/after punctuation.</span> esp. French. Occurs before »;?!, and after «.<sup><a href="https://github.com/mundschenk-at/wp-typography/issues/36">§</a></sup> (Cited in <sup><a href="https://github.com/whatwg/html/issues/5121">§</a></sup>)</li>
+<li><span class="leadin">Abbreviations.</span> eg. “z.&#x202F;B.” (German: zum Beispiel)<sup><a href="https://de.wikipedia.org/wiki/Abk%C3%BCrzung#Abk%C3%BCrzungen_ohne_Punkt_und_Leerzeichen">§</a></sup> (Cited in <sup><a href="https://github.com/whatwg/html/issues/5121">§</a></sup>)</li>
+<li><span class="leadin">Number separator.</span> "Because of the confusion that could result in international documents, in recent years the use of spaces as separators has been advocated by the superseded <a href="/wiki/ISO_31-0#Numbers" title="ISO 31-0">SI/ISO 31-0 standard</a>,<sup id="cite_ref-nist.gov_29-1" class="reference"><a href="#cite_note-nist.gov-29">[29]</a></sup> as well as by the <a href="/wiki/International_Bureau_of_Weights_and_Measures" title="International Bureau of Weights and Measures">International Bureau of Weights and Measures</a> and the <a href="/wiki/International_Union_of_Pure_and_Applied_Chemistry" title="International Union of Pure and Applied Chemistry">International Union of Pure and Applied Chemistry</a>, which have also begun advocating the use of a "<a href="/wiki/Thin_space" title="Thin space">thin space</a>" in "groups of three".<sup id="cite_ref-BIPM_30-1" class="reference"><a href="#cite_note-BIPM-30">[30]</a></sup><sup id="cite_ref-old.iupac.org_31-1" class="reference"><a href="#cite_note-old.iupac.org-31">[31]</a></sup> Within the United States, the <a href="/wiki/American_Medical_Association" title="American Medical Association">American Medical Association</a>'s widely followed <i><a href="/wiki/AMA_Manual_of_Style" title="AMA Manual of Style">AMA Manual of Style</a></i> also calls for a thin space.<sup id="cite_ref-AMA10p793_27-1" class="reference"><a href="#cite_note-AMA10p793-27">[27]</a></sup> In some online <a href="/wiki/Character_encoding" title="Character encoding">encoding</a> environments (for example, <a href="/wiki/ASCII" title="ASCII">ASCII</a>-only) a thin space is not practical or available, in which case a regular word space or no delimiter are the alternatives."<sup><a href="https://en.wikipedia.org/wiki/Decimal_separator#Digit_grouping">§</a></sup> (Cited in <sup><a href="https://github.com/whatwg/html/issues/5121">§</a></sup>)</li>
+</ul>
+`,
+
+'\u{2030}': `
+
+`,
+
+'\u{2031}': `
+
+`,
+
+'\u{2032}': `
+<p>Abbreviation for feet (1′ = 12″).<a class="fnref" href="#refs">b330</a></p>
+<p>Also used for minutes of arc (eg. 60′=1°)<span class="name"></span>.<a class="fnref" href="#refs">b330</a></p>
+`,
+
+'\u{2033}': `
+<p>Abbreviation for inches (1′ = 12″).<a class="fnref" href="#refs">b321</a></p>
+<p>Also used for seconds of arc (eg. 360″=1°)<span class="name"></span>.<a class="fnref" href="#refs">b321</a></p>
+`,
+
+'\u{2034}': `
+
+`,
+
+'\u{2035}': `
+
+`,
+
+'\u{2036}': `
+
+`,
+
+'\u{2037}': `
+
+`,
+
+'\u{2038}': `
+
+`,
+
+'\u{2039}': `
+
+`,
+
+'\u{203A}': `
+
+`,
+
+'\u{203B}': `
+
+`,
+
+'\u{203C}': `
+
+`,
+
+'\u{203D}': `
+
+`,
+
+'\u{203E}': `
+
+`,
+
+'\u{203F}': `
+
+`,
+
+'\u{2040}': `
+
+`,
+
+'\u{2041}': `
+
+`,
+
+'\u{2042}': `
+
+`,
+
+'\u{2043}': `
+
+`,
+
+'\u{2044}': `
+
+`,
+
+'\u{2045}': `
+
+`,
+
+'\u{2046}': `
+
+`,
+
+'\u{2047}': `
+
+`,
+
+'\u{2048}': `
+
+`,
+
+'\u{2049}': `
+
+`,
+
+'\u{204A}': `
+
+`,
+
+'\u{204B}': `
+
+`,
+
+'\u{204C}': `
+
+`,
+
+'\u{204D}': `
+
+`,
+
+'\u{204E}': `
+
+`,
+
+'\u{204F}': `
+
+`,
+
+'\u{2050}': `
+
+`,
+
+'\u{2051}': `
+
+`,
+
+'\u{2052}': `
+
+`,
+
+'\u{2053}': `
+
+`,
+
+'\u{2054}': `
+
+`,
+
+'\u{2055}': `
+
+`,
+
+'\u{2056}': `
+
+`,
+
+'\u{2057}': `
+
+`,
+
+'\u{2058}': `
+
+`,
+
+'\u{2059}': `
+
+`,
+
+'\u{205A}': `
+
+`,
+
+'\u{205B}': `
+
+`,
+
+'\u{205C}': `
+
+`,
+
+'\u{205D}': `
+
+`,
+
+'\u{205E}': `
+
+`,
+
+'\u{205F}': `
+
+`,
+
+'\u{2060}': `
+<p>An invisible character, equivalent to a zero-width no-break space, and used to prevent line-breaks, eg. it can be used around the + sign in base&#x2060;+delta&#x2060; to prevent a line break occuring in that sequence of characters. It has no effect on word segmentation.</p>
+<p>It can also be used to bracket other characters to turn them into non-breaking characters, such as <a href="/scripts/punctuation/block#char2009"><span class="uname">U+2009 THIN SPACE</span></a> or <span class="codepoint" translate="no"><span lang="km">&#x2015;</span> [<a href="/scripts/khmer/block#char2015"><span class="uname">U+2015 HORIZONTAL BAR</span></a>]</span>.</p>
+<p>Not to be confused with <a href="/scripts/khmer/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a> or <a href="/scripts/khmer/block#char034F"><span class="uname">U+034F COMBINING GRAPHEME JOINER​</span></a>, since it has no effect on shaping.</p>
+<p>This functionality is also provided by <span class="uname">U+FEFF ZERO WIDTH NO-BREAK SPACE</span>, but since that character also represents the byte-order mark, the use of this word joiner character (added in Unicode 3.2) is strongly preferred over the latter.</p>
+
+`,
+
+'\u{2061}': `
+
+`,
+
+'\u{2062}': `
+
+`,
+
+'\u{2063}': `
+
+`,
+
+'\u{2064}': `
+
+`,
+
+'\u{2066}': `
+
+`,
+
+'\u{2067}': `
+
+`,
+
+'\u{2068}': `
+
+`,
+
+'\u{2069}': `
+
+`,
+
+'\u{206A}': `
+
+`,
+
+'\u{206B}': `
+
+`,
+
+'\u{206C}': `
+
+`,
+
+'\u{206D}': `
+
+`,
+
+'\u{206E}': `
+
+`,
+
+'\u{206F}': `
+
+`,
+
+
+
+
+
+
+
+
+
+// SUPPLEMENTAL PUNCTUATION
+
+
+'\u{2E00}': `
+
+`,
+
+'\u{2E01}': `
+
+`,
+
+'\u{2E02}': `
+
+`,
+
+'\u{2E03}': `
+
+`,
+
+'\u{2E04}': `
+
+`,
+
+'\u{2E05}': `
+
+`,
+
+'\u{2E06}': `
+
+`,
+
+'\u{2E07}': `
+
+`,
+
+'\u{2E08}': `
+
+`,
+
+'\u{2E09}': `
+
+`,
+
+'\u{2E0A}': `
+
+`,
+
+'\u{2E0B}': `
+
+`,
+
+'\u{2E0C}': `
+
+`,
+
+'\u{2E0D}': `
+
+`,
+
+'\u{2E0E}': `
+
+`,
+
+'\u{2E0F}': `
+
+`,
+
+'\u{2E10}': `
+
+`,
+
+'\u{2E11}': `
+
+`,
+
+'\u{2E12}': `
+
+`,
+
+'\u{2E13}': `
+
+`,
+
+'\u{2E14}': `
+
+`,
+
+'\u{2E15}': `
+
+`,
+
+'\u{2E16}': `
+
+`,
+
+'\u{2E17}': `
+
+`,
+
+'\u{2E18}': `
+
+`,
+
+'\u{2E19}': `
+
+`,
+
+'\u{2E1A}': `
+
+`,
+
+'\u{2E1B}': `
+
+`,
+
+'\u{2E1C}': `
+
+`,
+
+'\u{2E1D}': `
+
+`,
+
+'\u{2E1E}': `
+
+`,
+
+'\u{2E1F}': `
+
+`,
+
+'\u{2E20}': `
+
+`,
+
+'\u{2E21}': `
+
+`,
+
+'\u{2E22}': `
+
+`,
+
+'\u{2E23}': `
+
+`,
+
+'\u{2E24}': `
+
+`,
+
+'\u{2E25}': `
+
+`,
+
+'\u{2E26}': `
+
+`,
+
+'\u{2E27}': `
+
+`,
+
+'\u{2E28}': `
+
+`,
+
+'\u{2E29}': `
+
+`,
+
+'\u{2E2A}': `
+
+`,
+
+'\u{2E2B}': `
+
+`,
+
+'\u{2E2C}': `
+
+`,
+
+'\u{2E2D}': `
+
+`,
+
+'\u{2E2E}': `
+
+`,
+
+'\u{2E2F}': `
+
+`,
+
+'\u{2E30}': `
+
+`,
+
+'\u{2E31}': `
+
+`,
+
+'\u{2E32}': `
+
+`,
+
+'\u{2E33}': `
+
+`,
+
+'\u{2E34}': `
+
+`,
+
+'\u{2E35}': `
+
+`,
+
+'\u{2E36}': `
+
+`,
+
+'\u{2E37}': `
+
+`,
+
+'\u{2E38}': `
+
+`,
+
+'\u{2E39}': `
+
+`,
+
+'\u{2E3A}': `
+
+`,
+
+'\u{2E3B}': `
+
+`,
+
+'\u{2E3C}': `
+
+`,
+
+'\u{2E3D}': `
+
+`,
+
+'\u{2E3E}': `
+
+`,
+
+'\u{2E3F}': `
+
+`,
+
+'\u{2E40}': `
+
+`,
+
+'\u{2E41}': `
+
+`,
+
+'\u{2E42}': `
+
+`,
+
+'\u{2E43}': `
+
+`,
+
+'\u{2E44}': `
+
+`,
+
+'\u{2E45}': `
+
+`,
+
+'\u{2E46}': `
+
+`,
+
+'\u{2E47}': `
+
+`,
+
+'\u{2E48}': `
+
+`,
+
+'\u{2E49}': `
+
+`,
+
+'\u{2E4A}': `
+
+`,
+
+'\u{2E4B}': `
+
+`,
+
+'\u{2E4C}': `
+
+`,
+
+'\u{2E4D}': `
+
+`,
+
+'\u{2E4E}': `
+
+`,
+
+'\u{2E4F}': `
+
+`,
+
+'\u{2E50}': `
+
+`,
+
+'\u{2E51}': `
+
+`,
+
+'\u{2E52}': `
+
+`,
+
+'\u{2E53}': `
+
+`,
+
+'\u{2E54}': `
+
+`,
+
+'\u{2E55}': `
+
+`,
+
+'\u{2E56}': `
+
+`,
+
+'\u{2E57}': `
+
+`,
+
+'\u{2E58}': `
+
+`,
+
+'\u{2E59}': `
+
+`,
+
+'\u{2E5A}': `
+
+`,
+
+'\u{2E5B}': `
+
+`,
+
+'\u{2E5C}': `
+
+`,
+
+'\u{2E5D}': `
+
+`,
+
+
+
+
+}

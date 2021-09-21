@@ -3,4389 +3,532 @@
 <head>
 <meta charset="utf-8"/>
 <title>Punctuation character notes</title>
-<meta name="description" content="Notes about characters in the Unicode General Punctuation block."/>
+<meta name="description" content="Notes about characters in the Unicode Scriptname script blocks."/>
 
 <link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../common/block-style.css" />
+<link rel="stylesheet" href="../common28/block-style.css" />
 <link rel="stylesheet" href="local.css" />
+
+<script src="../../shared/fontdb/db.js"> </script>
+<script src="../../shared/fontdb/managefonts.js"></script>
 
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
-<script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
-<script src="../../shared/fontlists/manage.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
-<script src="../common/block-functions.js"></script>
+<script src="../common28/block-functions.js"></script>
+<script src="../common28/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
-<script src="desc.js"></script>
+<script src="../common28/egcode.js"></script>
+<script src="../common28/references.js"></script>
+<script src="refs.js"></script>
+
+<script src="XX-examples.js"></script>
+<script src="XX-translit.js">  </script>
 
 <script src="../../uniview/descriptions.js"></script> 
-<script src="../../uniview/u.js"></script> 
 
-<script src="../../shared/fontlists/latin.js"> </script>
-
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 <style id="includeStyles"></style>
 </head>
 
 <body>
 <header>
-  <div id="header-boilerplate"></div>
-  <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../../shared/images/world.gif','docs');</script> 
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script> 
 </header>
+
 <h1>Punctuation character notes</h1>
 
-<nav id="top"><img src="../common/showImages.png" alt="Toggle images" title="Toggle large characters between images and text." onclick="toggleImages()"/><br/><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top" title="Jump to top of page."/></a></nav>
+<nav id="top"></nav>
 
 <aside class="sidebar">
   <nav>
-    <h2 class="notoc flush" id="tochead">Contents</h2>
-    <div id="toc"><!-- placeholder --></div>
-    <div class="noprint">
-      <h2 class="notoc" id="links">Related links</h2>
-      <p><a href="../links?script=latin" target="_blank">Latin script links</a></p>
-    </div>
-  </nav>
-
-
-  <div id="fontsetting" class="closed">
-    <h2 class="notoc"><a id="fonts">Fonts</a></h2>
-    <div id="fontsettingswitch" title="Click to show/hide the panel."  onclick="if (this.parentNode.className == 'open'){this.parentNode.className='closed'; this.textContent='◀';} else {this.parentNode.className='open';this.textContent='▶';}">◀</div>
-     <p>Set font for large boxes<br/>
-      <select  id="slfontswitchfont" 
-onchange="var params = this.value.split(':');setBoxFont(params[0]);">
-      </select>
-      <script>document.getElementById('slfontswitchfont').innerHTML = fontSelection</script>
-    </p>
-   <p>Set font for examples<br/>
-      <select id="exfontswitchfont" 
-onchange="var params = this.value.split(':');setGeneralFont(params[0], document.querySelector('#exfontswitchsize').value+'px', 'ar');">
-      </select>
-      <script>document.getElementById('exfontswitchfont').innerHTML = fontSelection</script>
-      <input id="exfontswitchsize" type="number" value="28" style="width:30px;"
-onChange="setGeneralFont(document.querySelector('#exfontswitchfont').value, this.value+'px', '*');" />
-    </p>
-    <p onclick="newfont=prompt('Enter the font name. (Only spaces, hyphens, underlines and alphanum allowed.)', '...'); addFontToLists(newfont, 'exfontswitchfont,slfontswitchfont');" style="cursor:pointer;">Add a font to these lists</p>
+  <h2 class="notoc flush"><a id="tochead" name="tochead" tabindex="4">Contents</a></h2>
+  <div id="toc"><!-- placeholder --></div>
+  <div class="noprint">
+    <h2 class="notoc"><a id="links" name="links" tabindex="5">Related links</a></h2>
+    <p><a href="index">Scriptname script summary</a></p>
+    <p><a href="../links?iso=scriptiso">Scriptname script links</a></p>
   </div>
+</nav>
+
+<div id="fontsetting" class="closed"></div>
 </aside>
 
 
-<p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->11 February, 2020<!-- #EndDate -->
-  <span id="versionTop"></span>
-  </p>
-
 
 <div id="intro">
-  <p>This page lists characters in the following Unicode  blocks and provides information about them.</p>
-  <ul>
+<p id="status"><span id="versionTop"></span></p>
+
+
+<section>
+<p>This page lists characters in the following Unicode  blocks and gathers information about them from various sources.</p>
+<ul>
     <li><a href="../../uniview/?block=general_punctuation" target="_blank">General Punctuation</a></li>
-    <li><a href="../../uniview/?block=supplemental_punctuation" target="_blank">Supplemental Punctuation</a></li>
-  </ul>
-  <p>This  is not  authoritative, peer-reviewed information – these are just notes I have gathered and copied from various places.</p>
+<li><a href="../../uniview/?block=supplemental_punctuation" target="_blank">Supplemental Punctuation</a></li>
+</ul>
 
-<p>Find <input type="text" id="findInput"
-onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex); }"/> <button onclick="var hex=document.getElementById('findInput').value; if (hex!=''){ document.location = getFindStr(hex); }">Go</button></p>
 
-<p class="instructions">If you click on any red  example text, you will see  at the bottom right of the page a list of the characters that make up the example.</p>
+<p> Phonetic transcriptions should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
+
+
+
 <details>
-<summary class="instructions">Read more about how to use this page.</summary>
-    <p class="instructions">To <strong>find a character</strong> by codepoint, type #char0000 at the end of the URL in the address bar, where 0000 is a four-figure, hex codepoint number, all in uppercase. Or type the character or the hex number in the <samp>Find</samp> control above.</p>
-    <p class="instructions">To view this page as intended, you  need an appropriate font.  Click the blue vertical bar at the bottom right of the page to apply other fonts, if you have them on your system.  For transcriptions I recommend the excellent and free <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;item_id=DoulosSILfont">Doulos SIL font</a>. The large character in the box will not be rendered unless the webfont downloaded with the page or a system font has a glyph for it. (If there is no glyph and you want to see what it looks like, click on <samp>See in UniView</samp>.)</p>
-    <p class="instructions"><strong>Information about languages</strong> that use these characters is taken from the list maintained for the Character Use app. The list is not exhaustive.</p>
-<p class="instructions"><strong>References</strong> are indicated by superscript characters. Wherever possible, those contain direct links to the source material. When such a pointer is alongside an arrow → it means that it's worth following the link for the additional information it provides. Digits refer to the main sources, which are listed at the bottom of a set of notes.</p>
-<p class="instructions">When you are using UniView and you turn on <samp>Show notes</samp>, UniView will pull in information about characters from this page.</p>
-<p id="charliststr" class="instructions"></p>
+<summary class="instructions"><a href="../links?iso=ScriptISO">Related pages</a>.</summary>
 </details>
-</div>
 
 
-<section id="spaces">
-  <h2>Spaces</h2>
 
-<div class="character" id="char2000">
-<div class="charimg"><img src="../../c/General_Punctuation/large/2000.png" alt=""/></div>
-<p class="charname"><strong>U+2000</strong> <a href="#char2000">EN QUAD</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2000">See in UniView</a></p>
+<details class="supportdocs noprint">
+<summary class="instructions"><a href="" onClick="showAbout(); return false;">About this page</a></summary>
+<div id="about"></div>
+</details>
 
-</div>
 
-<div class="character" id="char2001">
-<div class="charimg"><img src="../../c/General_Punctuation/large/2001.png" alt=""/></div>
-<p class="charname"><strong>U+2001</strong> <a href="#char2001">EM QUAD</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2001">See in UniView</a></p>
 
-</div>
-
-<div class="character" id="char2002">
-<div class="charimg"><img src="../../c/General_Punctuation/large/2002.png" alt=""/></div>
-<p class="charname"><strong>U+2002</strong> <a href="#char2002">EN SPACE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2002">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2003">
-<div class="charimg"><img src="../../c/General_Punctuation/large/2003.png" alt=""/></div>
-<p class="charname"><strong>U+2003</strong> <a href="#char2003">EM SPACE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2003">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2004">
-<div class="charimg"><img src="../../c/General_Punctuation/large/2004.png" alt=""/></div>
-<p class="charname"><strong>U+2004</strong> <a href="#char2004">THREE-PER-EM SPACE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2004">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2005">
-<div class="charimg"><img src="../../c/General_Punctuation/large/2005.png" alt=""/></div>
-<p class="charname"><strong>U+2005</strong> <a href="#char2005">FOUR-PER-EM SPACE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2005">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2006">
-<div class="charimg"><img src="../../c/General_Punctuation/large/2006.png" alt=""/></div>
-<p class="charname"><strong>U+2006</strong> <a href="#char2006">SIX-PER-EM SPACE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2006">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2007">
-<div class="charimg"><img src="../../c/General_Punctuation/large/2007.png" alt=""/></div>
-<p class="charname"><strong>U+2007</strong> <a href="#char2007">FIGURE SPACE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2007">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2008">
-<div class="charimg"><img src="../../c/General_Punctuation/large/2008.png" alt=""/></div>
-<p class="charname"><strong>U+2008</strong> <a href="#char2008">PUNCTUATION SPACE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2008">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2009">
-<div class="charimg"><img src="../../c/General_Punctuation/large/2009.png" alt=""/></div>
-<p class="charname"><strong>U+2009</strong> <a href="#char2009">THIN SPACE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2009">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char200A">
-<div class="charimg"><img src="../../c/General_Punctuation/large/200A.png" alt=""/></div>
-<p class="charname"><strong>U+200A</strong> <a href="#char200A">HAIR SPACE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=200A">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char200B">
-<div class="charimg"><img src="../../c/General_Punctuation/large/200B.png" alt=""/></div>
-<p class="charname"><strong>U+200B</strong> <a href="#char200B">ZERO WIDTH SPACE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=200B">See in UniView</a></p>
-
-<div class="notes">
-<div class="letter arabic">
-<p>An invisible character, used to signal line-break and word-break opportunities. It was originally provided for use with writing systems such as Thai, Myanmar, Khmer, Japanese, etc. that don't use spaces between words.</p>
-<p>Justification may visibly adjust the space between the characters on either side of this character, doing so as if the ZWSP wasn't there, eg. the Thai text <span class="charExample" translate="no"><span class="ex" lang="th">อักษร​ไทย</span></span> may look like <span class="charExample" translate="no"><span lang="th">อั ก ษ ร ไ ท ย</span></span> when justified, or when letter-spacing is applied, even though the two words are separated by a ZWSP (click on the word to see the composition).</p>
-</div>
-<p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/Unicode12.0.0/ch23.pdf#Layout" target="_blank">Unicode</a> p872</p>
-</div>
-</div>
-
-<div class="character" id="char205F">
-<div class="charimg"><img src="../../c/General_Punctuation/large/205F.png" alt=""/></div>
-<p class="charname"><strong>U+205F</strong> <a href="#char205F">MEDIUM MATHEMATICAL SPACE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=205F">See in UniView</a></p>
-
-</div>
-
+<details>
+<summary class="supportdocs instructions"><a href="../#charnotes">Other character notes</a>.</summary>
+</details>
 </section>
-<section id="format_chars">
-  <h2>Format characters</h2>
-
-<div class="character" id="char200C">
-<div class="charimg"><img src="../../c/General_Punctuation/large/200C.png" alt=""/></div>
-<p class="charname"><strong>U+200C</strong> <a href="#char200C">ZERO WIDTH NON-JOINER</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=200C">See in UniView</a></p>
-
-<div class="notes">
-  <div class="letter">
-    <p>Prevents two adjacent letters forming a cursive connection with each other when rendered.</p>
-  </div>
-  <div class="letter">
-    <p><span class="title">Persian</span></p>
-    <p>The ZWNJ is used in Persian for plural suffixes, some proper names, and Ottoman Turkish vowels. Ignoring or removing the ZWNJ will result in text with a different meaning or meaningless text.<sup>1</sup> For example, <span class="ex" lang="ar" dir="rtl">تن‌ها</span> is the plural of <span class="meaning">body</span>, whereas <span class="ex" lang="ar" dir="rtl">تنها</span> is the adjective <span class="meaning">alone</span>.<sup>2</sup> The only difference is the presence or absence of ZWNJ after <span class="name">noon</span>. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout">u373</a> <a class="fnref" href="https://github.com/w3c/charmod-norm/issues/44#issuecomment-172042270" target="_blank">g</a></p>
 </div>
-<div class="letter">
-<p><span class="title">Khmer</span></p>
-  <p>Khmer register shifters (ie. <span class="codepoint" translate="no"><span lang="km">&#x25CC;&#x17C9;</span> [<a href="/scripts/khmer/block#char17C9"><span class="uname">U+17C9 KHMER SIGN MUUSIKATOAN​</span></a>]</span> or <span class="codepoint" translate="no"><span lang="km">&#x25CC;&#x17CA;</span> [<a href="/scripts/khmer/block#char17CA"><span class="uname">U+17CA KHMER SIGN TRIISAP​</span></a>]</span>) usually appear above a consonant. However, if a superscript vowel is also attached to the consonant, the shifter is normally displayed below the consonant, instead. If you want to force the shifter to remain above the consonant, as is occasionally the case, insert ZWNJ between the consonant and the shifter.  For example, <span class="charExample" translate="no"><span class="ex" lang="km">ហ ហ៊ ហ៊ី ហ‌៊ី</span></span>. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout">u373</a> <a class="fnref" href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">sk</a></p>
-</div>
-<p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout" target="_blank">Unicode</a></p>
-</div>
-</div>
-
-<div class="character" id="char200D">
-<div class="charimg"><img src="../../c/General_Punctuation/large/200D.png" alt=""/></div>
-<p class="charname"><strong>U+200D</strong> <a href="#char200D">ZERO WIDTH JOINER</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=200D">See in UniView</a></p>
-
-<div class="notes">
-  <div class="letter urdu">
-    <p>Permits a letter to form a cursive connection without a visible neighbour.</p>
-  </div>
-  <div class="letter arabic">
-    <p><span class="title">Arabic</span></p>
-    <p>The marker for hijri dates is an initial form of <span class="name">heh</span>, even though it doesn't join to the left, ie. <span class="ex" dir="rtl" lang="ur">ه‍</span>. For this, use a <a href="#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a> immediately after the <span class="name">heh</span>, eg. <span class="ex" lang="ar" dir="rtl">الاثنين 10 رجب 1415 ه‍.</span>. </p>
-    <p>In some cases <span class="codepoint"><span lang="ar" dir="rtl">&#x0640;</span> <a href="#char0640">[<span class="uname">U+0640 ARABIC TATWEEL</span>]</a></span> is used to ensure that the shape looks right, because some applications or fonts don't produce the right effect when using the ZWJ, eg. <span class="ex" lang="ar" dir="rtl">الاثنين 10 رجب 1415 هـ.</span>.</p>
-  </div>
-</div>
-</div>
-
-<div class="character" id="char200E">
-<div class="charimg"><img src="../../c/General_Punctuation/large/200E.png" alt=""/></div>
-<p class="charname"><strong>U+200E</strong> <a href="#char200E">LEFT-TO-RIGHT MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=200E">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char200F">
-<div class="charimg"><img src="../../c/General_Punctuation/large/200F.png" alt=""/></div>
-<p class="charname"><strong>U+200F</strong> <a href="#char200F">RIGHT-TO-LEFT MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=200F">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2028">
-<div class="charimg"><img src="../../c/General_Punctuation/large/2028.png" alt=""/></div>
-<p class="charname"><strong>U+2028</strong> <a href="#char2028">LINE SEPARATOR</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2028">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2029">
-<div class="charimg"><img src="../../c/General_Punctuation/large/2029.png" alt=""/></div>
-<p class="charname"><strong>U+2029</strong> <a href="#char2029">PARAGRAPH SEPARATOR</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2029">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char202A">
-<div class="charimg"><img src="../../c/General_Punctuation/large/202A.png" alt=""/></div>
-<p class="charname"><strong>U+202A</strong> <a href="#char202A">LEFT-TO-RIGHT EMBEDDING</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=202A">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char202B">
-<div class="charimg"><img src="../../c/General_Punctuation/large/202B.png" alt=""/></div>
-<p class="charname"><strong>U+202B</strong> <a href="#char202B">RIGHT-TO-LEFT EMBEDDING</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=202B">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char202C">
-<div class="charimg"><img src="../../c/General_Punctuation/large/202C.png" alt=""/></div>
-<p class="charname"><strong>U+202C</strong> <a href="#char202C">POP DIRECTIONAL FORMATTING</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=202C">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char202D">
-<div class="charimg"><img src="../../c/General_Punctuation/large/202D.png" alt=""/></div>
-<p class="charname"><strong>U+202D</strong> <a href="#char202D">LEFT-TO-RIGHT OVERRIDE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=202D">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char202E">
-<div class="charimg"><img src="../../c/General_Punctuation/large/200E.png" alt=""/></div>
-<p class="charname"><strong>U+202E</strong> <a href="#char202E">RIGHT-TO-LEFT OVERRIDE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=202E">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char202F">
-<div class="charimg"><img src="../../c/General_Punctuation/large/200F.png" alt=""/></div>
-<p class="charname"><strong>U+202F</strong> <a href="#char202F">NARROW NO-BREAK SPACE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=202F">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2060">
-<div class="charimg"><img src="../../c/General_Punctuation/large/2060.png" alt=""/></div>
-<p class="charname"><strong>U+2060</strong> <a href="#char2060">WORD JOINER</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2060">See in UniView</a></p>
-
-<div class="notes">
-<div class="letter arabic">
-<p>An invisible character, equivalent to a zero-width no-break space, and used to prevent line-breaks, eg. it can be used around the + sign in base&#x2060;+delta&#x2060; to prevent a line break occuring in that sequence of characters. It has no effect on word segmentation.</p>
-<p>It can also be used to bracket other characters to turn them into non-breaking characters, such as <a href="/scripts/punctuation/block#char2009"><span class="uname">U+2009 THIN SPACE</span></a> or <span class="codepoint" translate="no"><span lang="km">&#x2015;</span> [<a href="/scripts/khmer/block#char2015"><span class="uname">U+2015 HORIZONTAL BAR</span></a>]</span>.</p>
-<p>Not to be confused with <a href="/scripts/khmer/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a> or <a href="/scripts/khmer/block#char034F"><span class="uname">U+034F COMBINING GRAPHEME JOINER​</span></a>, since it has no effect on shaping.</p>
-<p>This functionality is also provided by <span class="uname">U+FEFF ZERO WIDTH NO-BREAK SPACE</span>, but since that character also represents the byte-order mark, the use of this word joiner character (added in Unicode 3.2) is strongly preferred over the latter.</p>
-</div>
-<p class="ref"><a href="#refs">General sources</a>:
-   <a href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout" target="_blank">Unicode</a>
-   </p>
-</div>
-</div>
-
-<div class="character" id="char2066">
-<div class="charimg"><img src="../../c/General_Punctuation/large/2066.png" alt=""/></div>
-<p class="charname"><strong>U+2066</strong> <a href="#char2066">LEFT-TO-RIGHT ISOLATE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2066">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2067">
-<div class="charimg"><img src="../../c/General_Punctuation/large/2067.png" alt=""/></div>
-<p class="charname"><strong>U+2067</strong> <a href="#char2067">RIGHT-TO-LEFT ISOLATE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2067">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2068">
-<div class="charimg"><img src="../../c/General_Punctuation/large/2068.png" alt=""/></div>
-<p class="charname"><strong>U+2068</strong> <a href="#char2068">FIRST STRONG ISOLATE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2068">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2069">
-<div class="charimg"><img src="../../c/General_Punctuation/large/2069.png" alt=""/></div>
-<p class="charname"><strong>U+2069</strong> <a href="#char2069">POP DIRECTIONAL ISOLATE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2069">See in UniView</a></p>
-
-</div>
-
-
-</section>
-<section id="dashes">
-  <h2>Dashes and hyphens</h2>
-
-
-
-
-<div class="character" id="char2010">
-<div class="charimg">&#x2010;</div>
-<p class="charname"><strong>U+2010</strong> <a href="#char2010">HYPHEN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2010">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2011">
-<div class="charimg">&#x2011;</div>
-<p class="charname"><strong>U+2011</strong> <a href="#char2011">NON-BREAKING HYPHEN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2011">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2012">
-<div class="charimg">&#x2012;</div>
-<p class="charname"><strong>U+2012</strong> <a href="#char2012">FIGURE DASH</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2012">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2013">
-<div class="charimg">&#x2013;</div>
-<p class="charname"><strong>U+2013</strong> <a href="#char2013">EN DASH</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2013">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2014">
-<div class="charimg">&#x2014;</div>
-<p class="charname"><strong>U+2014</strong> <a href="#char2014">EM DASH</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2014">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2015">
-<div class="charimg">&#x2015;</div>
-<p class="charname"><strong>U+2015</strong> <a href="#char2015">HORIZONTAL BAR</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2015">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E3A">
-<div class="charimg">&#x2E3A;</div>
-<p class="charname"><strong>U+2E3A</strong> <a href="#char2E3A">TWO-EM DASH</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E3A">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E3B">
-<div class="charimg">&#x2E3B;</div>
-<p class="charname"><strong>U+2E3B</strong> <a href="#char2E3B">THREE-EM DASH</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E3B">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E40">
-<div class="charimg">&#x2E40;</div>
-<p class="charname"><strong>U+2E40</strong> <a href="#char2E40">DOUBLE HYPHEN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E40">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E43">
-<div class="charimg">&#x2E43;</div>
-<p class="charname"><strong>U+2E43</strong> <a href="#char2E43">DASH WITH LEFT UPTURN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E43">See in UniView</a></p>
-
-</div>
-
-
-
-
-</section>
-<section id="quotations">
-  <h2>Quotations and apostrophe</h2>
-
-
-
-<div class="character" id="char2018">
-<div class="charimg">&#x2018;</div>
-<p class="charname"><strong>U+2018</strong> <a href="#char2018">LEFT SINGLE QUOTATION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2018">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2019">
-<div class="charimg">&#x2019;</div>
-<p class="charname"><strong>U+2019</strong> <a href="#char2019">RIGHT SINGLE QUOTATION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2019">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char201A">
-<div class="charimg">&#x201A;</div>
-<p class="charname"><strong>U+201A</strong> <a href="#char201A">SINGLE LOW-9 QUOTATION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=201A">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char201B">
-<div class="charimg">&#x201B;</div>
-<p class="charname"><strong>U+201B</strong> <a href="#char201B">SINGLE HIGH-REVERSED-9 QUOTATION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=201B">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char201C">
-<div class="charimg">&#x201C;</div>
-<p class="charname"><strong>U+201C</strong> <a href="#char201C">LEFT DOUBLE QUOTATION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=201C">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char201D">
-<div class="charimg">&#x201D;</div>
-<p class="charname"><strong>U+201D</strong> <a href="#char201D">RIGHT DOUBLE QUOTATION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=201D">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char201E">
-<div class="charimg">&#x201E;</div>
-<p class="charname"><strong>U+201E</strong> <a href="#char201E">DOUBLE LOW-9 QUOTATION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=201E">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char201F">
-<div class="charimg">&#x201F;</div>
-<p class="charname"><strong>U+201F</strong> <a href="#char201F">DOUBLE HIGH-REVERSED-9 QUOTATION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=201F">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2039">
-<div class="charimg">&#x2039;</div>
-<p class="charname"><strong>U+2039</strong> <a href="#char2039">SINGLE LEFT-POINTING ANGLE QUOTATION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2039">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char203A">
-<div class="charimg">&#x203A;</div>
-<p class="charname"><strong>U+203A</strong> <a href="#char203A">SINGLE RIGHT-POINTING ANGLE QUOTATION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=203A">See in UniView</a></p>
-
-</div>
-
-
-
-
-</section>
-<section id="brackets">
-  <h2>Brackets</h2>
-
-
-
-<div class="character" id="char2E1C">
-<div class="charimg">&#x2E1C;</div>
-<p class="charname"><strong>U+2E1C</strong> <a href="#char2E1C">LEFT LOW PARAPHRASE BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E1C">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E1D">
-<div class="charimg">&#x2E1D;</div>
-<p class="charname"><strong>U+2E1D</strong> <a href="#char2E1D">RIGHT LOW PARAPHRASE BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E1D">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E20">
-<div class="charimg">&#x2E20;</div>
-<p class="charname"><strong>U+2E20</strong> <a href="#char2E20">LEFT VERTICAL BAR WITH QUILL</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E20">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E21">
-<div class="charimg">&#x2E21;</div>
-<p class="charname"><strong>U+2E21</strong> <a href="#char2E21">RIGHT VERTICAL BAR WITH QUILL</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E21">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E22">
-<div class="charimg">&#x2E22;</div>
-<p class="charname"><strong>U+2E22</strong> <a href="#char2E22">TOP LEFT HALF BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E22">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E23">
-<div class="charimg">&#x2E23;</div>
-<p class="charname"><strong>U+2E23</strong> <a href="#char2E23">TOP RIGHT HALF BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E23">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E24">
-<div class="charimg">&#x2E24;</div>
-<p class="charname"><strong>U+2E24</strong> <a href="#char2E24">BOTTOM LEFT HALF BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E24">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E25">
-<div class="charimg">&#x2E25;</div>
-<p class="charname"><strong>U+2E25</strong> <a href="#char2E25">BOTTOM RIGHT HALF BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E25">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E26">
-<div class="charimg">&#x2E26;</div>
-<p class="charname"><strong>U+2E26</strong> <a href="#char2E26">LEFT SIDEWAYS U BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E26">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E27">
-<div class="charimg">&#x2E27;</div>
-<p class="charname"><strong>U+2E27</strong> <a href="#char2E27">RIGHT SIDEWAYS U BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E27">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E28">
-<div class="charimg">&#x2E28;</div>
-<p class="charname"><strong>U+2E28</strong> <a href="#char2E28">LEFT DOUBLE PARENTHESIS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E28">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E29">
-<div class="charimg">&#x2E29;</div>
-<p class="charname"><strong>U+2E29</strong> <a href="#char2E29">RIGHT DOUBLE PARENTHESIS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E29">See in UniView</a></p>
-
-</div>
-
-
-
-
-
-</section>
-<section id="general">
-  <h2>General punctuation</h2>
-
-
-
-<div class="character" id="char2016">
-<div class="charimg">&#x2016;</div>
-<p class="charname"><strong>U+2016</strong> <a href="#char2016">DOUBLE VERTICAL LINE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2016">See in UniView</a></p>
-<div class="notes">
-<div class="letter">
-<p>Called <span class="name">double bar</span>.<a class="fnref" href="#refs">b</a></p>
-<p>An old standard reference mark used  with footnotes. When used for this purpose with other signs, the traditional order is <span class="ex" lang="en">* † ‡ § ‖ ¶</span>.<a class="fnref" href="#refs">b</a></p>
-<p>Also used as a standard symbol for bibliographic work.<a class="fnref" href="#refs">b</a></p>
-</div>
-<p class="ref"><a href="#refs">General sources</a>: <a href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout" target="_blank">Unicode</a> </p>
-</div>
-
-</div>
-
-<div class="character" id="char2017">
-<div class="charimg">&#x2017;</div>
-<p class="charname"><strong>U+2017</strong> <a href="#char2017">DOUBLE LOW LINE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2017">See in UniView</a></p>
-
-</div>
-<div class="character" id="char2020">
-<div class="charimg">&#x2020;</div>
-<p class="charname"><strong>U+2020</strong> <a href="#char2020">DAGGER</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2020">See in UniView</a></p>
-<div class="notes">
-<div class="letter">
-<p>Called <span class="name">dagger</span>, but also known as <span class="name">obelisk</span>, <span class="name">obelus</span>, or <span class="name">long cross</span>.<a class="fnref" href="#refs">b321</a></p>
-<p>A reference mark, used primarily with footnotes. When used for this purpose with other signs, the traditional order is <span class="ex" lang="en">* † ‡ § ‖ ¶</span>.<a class="fnref" href="#refs">b68</a></p>
-<p>Also a death sign in European typography, used to mark the year of death or the names of dead persons.<a class="fnref" href="#refs">b321</a></p>
-<p>In lexicography it marks obsolete forms, and in editing of classical texts flags passages judged to be corrupt.<a class="fnref" href="#refs">b321</a></p>
-</div>
-<p class="ref"><a href="#refs">General sources</a>:
-   <a href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout" target="_blank">Unicode</a>
-</p>
-</div>
-</div>
-
-<div class="character" id="char2021">
-<div class="charimg">&#x2021;</div>
-<p class="charname"><strong>U+2021</strong> <a href="#char2021">DOUBLE DAGGER</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2021">See in UniView</a></p>
-<div class="notes">
-<div class="letter">
-<p>Called <span class="name">dagger</span>, but also known as <span class="name">diesis</span>, or <span class="name">double obelisk</span>.<a class="fnref" href="#refs">b321</a></p>
-<p>A reference mark used  with footnotes. When used for this purpose with other signs, the traditional order is <span class="ex" lang="en">* † ‡ § ‖ ¶</span>.<a class="fnref" href="#refs">b68</a></p>
-</div>
-<p class="ref"><a href="#refs">General sources</a>:
-   <a href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout" target="_blank">Unicode</a>
-</p>
-</div>
-</div>
-
-<div class="character" id="char2022">
-<div class="charimg">&#x2022;</div>
-<p class="charname"><strong>U+2022</strong> <a href="#char2022">BULLET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2022">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2023">
-<div class="charimg">&#x2023;</div>
-<p class="charname"><strong>U+2023</strong> <a href="#char2023">TRIANGULAR BULLET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2023">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2024">
-<div class="charimg">&#x2024;</div>
-<p class="charname"><strong>U+2024</strong> <a href="#char2024">ONE DOT LEADER</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2024">See in UniView</a></p>
-
-<div class="notes">
-  <div class="letter">
-    <p><span class="title">Armenian</span> punctuation <span class="name">miǰakēt</span></p>
-    <p>Used like a semi-colon – a shorter break than a full stop. <a class="fnref" href="http://www.unicode.org/versions/Unicode11.0.0/ch23.pdf#Layout">u322</a></p>
-    <p><span class="charExample" lang="hy">Ոչ ոք չպետք է լինի ստրկության կամ անազատ <span class="ex">վիճակում․ </span>պետք է արգելվեն ստրկատիրության ու ստրուկների առուծախի բոլոր ձևերը։</span>&nbsp;</p>
-  </div>
-</div>
-</div>
-
-<div class="character" id="char2025">
-<div class="charimg">&#x2025;</div>
-<p class="charname"><strong>U+2025</strong> <a href="#char2025">TWO DOT LEADER</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2025">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2026">
-<div class="charimg">&#x2026;</div>
-<p class="charname"><strong>U+2026</strong> <a href="#char2026">HORIZONTAL ELLIPSIS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2026">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2027">
-<div class="charimg">&#x2027;</div>
-<p class="charname"><strong>U+2027</strong> <a href="#char2027">HYPHENATION POINT</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2027">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2030">
-<div class="charimg">&#x2030;</div>
-<p class="charname"><strong>U+2030</strong> <a href="#char2030">PER MILLE SIGN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2030">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2031">
-<div class="charimg">&#x2031;</div>
-<p class="charname"><strong>U+2031</strong> <a href="#char2031">PER TEN THOUSAND SIGN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2031">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2032">
-<div class="charimg">&#x2032;</div>
-<p class="charname"><strong>U+2032</strong> <a href="#char2032">PRIME</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2032">See in UniView</a></p>
-<div class="notes">
-<div class="letter">
-<p>Abbreviation for feet (1′ = 12″).<a class="fnref" href="#refs">b330</a></p>
-<p>Also used for minutes of arc (eg. 60′=1°)<span class="name"></span>.<a class="fnref" href="#refs">b330</a></p>
-</div>
-</div>
-</div>
-
-<div class="character" id="char2033">
-<div class="charimg">&#x2033;</div>
-<p class="charname"><strong>U+2033</strong> <a href="#char2033">DOUBLE PRIME</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2033">See in UniView</a></p>
-<div class="notes">
-<div class="letter">
-<p>Abbreviation for inches (1′ = 12″).<a class="fnref" href="#refs">b321</a></p>
-<p>Also used for seconds of arc (eg. 360″=1°)<span class="name"></span>.<a class="fnref" href="#refs">b321</a></p>
-</div>
-</div>
-</div>
-
-<div class="character" id="char2034">
-<div class="charimg">&#x2034;</div>
-<p class="charname"><strong>U+2034</strong> <a href="#char2034">TRIPLE PRIME</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2034">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2035">
-<div class="charimg">&#x2035;</div>
-<p class="charname"><strong>U+2035</strong> <a href="#char2035">REVERSED PRIME</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2035">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2036">
-<div class="charimg">&#x2036;</div>
-<p class="charname"><strong>U+2036</strong> <a href="#char2036">REVERSED DOUBLE PRIME</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2036">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2037">
-<div class="charimg">&#x2037;</div>
-<p class="charname"><strong>U+2037</strong> <a href="#char2037">REVERSED TRIPLE PRIME</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2037">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2038">
-<div class="charimg">&#x2038;</div>
-<p class="charname"><strong>U+2038</strong> <a href="#char2038">CARET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2038">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char203B">
-<div class="charimg">&#x203B;</div>
-<p class="charname"><strong>U+203B</strong> <a href="#char203B">REFERENCE MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=203B">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char203D">
-<div class="charimg">&#x203D;</div>
-<p class="charname"><strong>U+203D</strong> <a href="#char203D">INTERROBANG</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=203D">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char203E">
-<div class="charimg">&#x203E;</div>
-<p class="charname"><strong>U+203E</strong> <a href="#char203E">OVERLINE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=203E">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char203F">
-<div class="charimg">&#x203F;</div>
-<p class="charname"><strong>U+203F</strong> <a href="#char203F">UNDERTIE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=203F">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2040">
-<div class="charimg">&#x2040;</div>
-<p class="charname"><strong>U+2040</strong> <a href="#char2040">CHARACTER TIE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2040">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2041">
-<div class="charimg">&#x2041;</div>
-<p class="charname"><strong>U+2041</strong> <a href="#char2041">CARET INSERTION POINT</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2041">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2042">
-<div class="charimg">&#x2042;</div>
-<p class="charname"><strong>U+2042</strong> <a href="#char2042">ASTERISM</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2042">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2043">
-<div class="charimg">&#x2043;</div>
-<p class="charname"><strong>U+2043</strong> <a href="#char2043">HYPHEN BULLET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2043">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2044">
-<div class="charimg">&#x2044;</div>
-<p class="charname"><strong>U+2044</strong> <a href="#char2044">FRACTION SLASH</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2044">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2045">
-<div class="charimg">&#x2045;</div>
-<p class="charname"><strong>U+2045</strong> <a href="#char2045">LEFT SQUARE BRACKET WITH QUILL</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2045">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2046">
-<div class="charimg">&#x2046;</div>
-<p class="charname"><strong>U+2046</strong> <a href="#char2046">RIGHT SQUARE BRACKET WITH QUILL</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2046">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char204A">
-<div class="charimg">&#x204A;</div>
-<p class="charname"><strong>U+204A</strong> <a href="#char204A">TIRONIAN SIGN ET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=204A">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char204B">
-<div class="charimg">&#x204B;</div>
-<p class="charname"><strong>U+204B</strong> <a href="#char204B">REVERSED PILCROW SIGN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=204B">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char204C">
-<div class="charimg">&#x204C;</div>
-<p class="charname"><strong>U+204C</strong> <a href="#char204C">BLACK LEFTWARDS BULLET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=204C">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char204D">
-<div class="charimg">&#x204D;</div>
-<p class="charname"><strong>U+204D</strong> <a href="#char204D">BLACK RIGHTWARDS BULLET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=204D">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char204E">
-<div class="charimg">&#x204E;</div>
-<p class="charname"><strong>U+204E</strong> <a href="#char204E">LOW ASTERISK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=204E">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char204F">
-<div class="charimg">&#x204F;</div>
-<p class="charname"><strong>U+204F</strong> <a href="#char204F">REVERSED SEMICOLON</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=204F">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2050">
-<div class="charimg">&#x2050;</div>
-<p class="charname"><strong>U+2050</strong> <a href="#char2050">CLOSE UP</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2050">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2051">
-<div class="charimg">&#x2051;</div>
-<p class="charname"><strong>U+2051</strong> <a href="#char2051">TWO ASTERISKS ALIGNED VERTICALLY</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2051">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2052">
-<div class="charimg">&#x2052;</div>
-<p class="charname"><strong>U+2052</strong> <a href="#char2052">COMMERCIAL MINUS SIGN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2052">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2053">
-<div class="charimg">&#x2053;</div>
-<p class="charname"><strong>U+2053</strong> <a href="#char2053">SWUNG DASH</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2053">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2054">
-<div class="charimg">&#x2054;</div>
-<p class="charname"><strong>U+2054</strong> <a href="#char2054">INVERTED UNDERTIE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2054">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2055">
-<div class="charimg">&#x2055;</div>
-<p class="charname"><strong>U+2055</strong> <a href="#char2055">FLOWER PUNCTUATION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2055">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2057">
-<div class="charimg">&#x2057;</div>
-<p class="charname"><strong>U+2057</strong> <a href="#char2057">QUADRUPLE PRIME</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2057">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E18">
-<div class="charimg">&#x2E18;</div>
-<p class="charname"><strong>U+2E18</strong> <a href="#char2E18">INVERTED INTERROBANG</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E18">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E19">
-<div class="charimg">&#x2E19;</div>
-<p class="charname"><strong>U+2E19</strong> <a href="#char2E19">PALM BRANCH</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E19">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E44">
-<div class="charimg">&#x2E44;</div>
-<p class="charname"><strong>U+2E44</strong> <a href="#char2E44">DOUBLE SUSPENSION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E44">See in UniView</a></p>
-
-</div>
-
-
-
-
-</section>
-<section id="vertical">
-  <h2>Double punctuation for vertical text</h2>
-
-
-
-<div class="character" id="char203C">
-<div class="charimg">&#x203C;</div>
-<p class="charname"><strong>U+203C</strong> <a href="#char203C">DOUBLE EXCLAMATION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=203C">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2047">
-<div class="charimg">&#x2047;</div>
-<p class="charname"><strong>U+2047</strong> <a href="#char2047">DOUBLE QUESTION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2047">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2048">
-<div class="charimg">&#x2048;</div>
-<p class="charname"><strong>U+2048</strong> <a href="#char2048">QUESTION EXCLAMATION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2048">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2049">
-<div class="charimg">&#x2049;</div>
-<p class="charname"><strong>U+2049</strong> <a href="#char2049">EXCLAMATION QUESTION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2049">See in UniView</a></p>
-
-</div>
-
-
-
-</section>
-<section id="archaic">
-  <h2>Archaic/historical punctuation</h2>
-
-
-
-<div class="character" id="char2056">
-<div class="charimg">&#x2056;</div>
-<p class="charname"><strong>U+2056</strong> <a href="#char2056">THREE DOT PUNCTUATION</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2056">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2058">
-<div class="charimg">&#x2058;</div>
-<p class="charname"><strong>U+2058</strong> <a href="#char2058">FOUR DOT PUNCTUATION</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2058">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2059">
-<div class="charimg">&#x2059;</div>
-<p class="charname"><strong>U+2059</strong> <a href="#char2059">FIVE DOT PUNCTUATION</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2059">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char205A">
-<div class="charimg">&#x205A;</div>
-<p class="charname"><strong>U+205A</strong> <a href="#char205A">TWO DOT PUNCTUATION</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=205A">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char205B">
-<div class="charimg">&#x205B;</div>
-<p class="charname"><strong>U+205B</strong> <a href="#char205B">FOUR DOT MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=205B">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char205C">
-<div class="charimg">&#x205C;</div>
-<p class="charname"><strong>U+205C</strong> <a href="#char205C">DOTTED CROSS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=205C">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char205D">
-<div class="charimg">&#x205D;</div>
-<p class="charname"><strong>U+205D</strong> <a href="#char205D">TRICOLON</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=205D">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char205E">
-<div class="charimg">&#x205E;</div>
-<p class="charname"><strong>U+205E</strong> <a href="#char205E">VERTICAL FOUR DOTS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=205E">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E2A">
-<div class="charimg">&#x2E2A;</div>
-<p class="charname"><strong>U+2E2A</strong> <a href="#char2E2A">TWO DOTS OVER ONE DOT PUNCTUATION</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E2A">See in UniView</a></p>
 
-</div>
-
-<div class="character" id="char2E2B">
-<div class="charimg">&#x2E2B;</div>
-<p class="charname"><strong>U+2E2B</strong> <a href="#char2E2B">ONE DOT OVER TWO DOTS PUNCTUATION</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E2B">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E2C">
-<div class="charimg">&#x2E2C;</div>
-<p class="charname"><strong>U+2E2C</strong> <a href="#char2E2C">SQUARED FOUR DOT PUNCTUATION</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E2C">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E2D">
-<div class="charimg">&#x2E2D;</div>
-<p class="charname"><strong>U+2E2D</strong> <a href="#char2E2D">FIVE DOT MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E2D">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E2E">
-<div class="charimg">&#x2E2E;</div>
-<p class="charname"><strong>U+2E2E</strong> <a href="#char2E2E">REVERSED QUESTION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E2E">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E2F">
-<div class="charimg">&#x2E2F;</div>
-<p class="charname"><strong>U+2E2F</strong> <a href="#char2E2F">VERTICAL TILDE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E2F">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E30">
-<div class="charimg">&#x2E30;</div>
-<p class="charname"><strong>U+2E30</strong> <a href="#char2E30">RING POINT</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E30">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E31">
-<div class="charimg">&#x2E31;</div>
-<p class="charname"><strong>U+2E31</strong> <a href="#char2E31">WORD SEPARATOR MIDDLE DOT</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E31">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E33">
-<div class="charimg">&#x2E33;</div>
-<p class="charname"><strong>U+2E33</strong> <a href="#char2E33">RAISED DOT</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E33">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E34">
-<div class="charimg">&#x2E34;</div>
-<p class="charname"><strong>U+2E34</strong> <a href="#char2E34">RAISED COMMA</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E34">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E3F">
-<div class="charimg">&#x2E3F;</div>
-<p class="charname"><strong>U+2E3F</strong> <a href="#char2E3F">CAPITULUM</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E3F">See in UniView</a></p>
-
-</div>
-
-
-
-
-
-</section>
-<section id="editorial">
-  <h2>Specialist symbols</h2>
-
-<section id="new_testament">
-  <h3>New Testament editorial symbols</h3>
-
-  <div class="character" id="char2E00">
-<div class="charimg">&#x2E00;</div>
-<p class="charname"><strong>U+2E00</strong> <a href="#char2E00">RIGHT ANGLE SUBSTITUTION MARKER</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E00">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E01">
-<div class="charimg">&#x2E01;</div>
-<p class="charname"><strong>U+2E01</strong> <a href="#char2E01">RIGHT ANGLE DOTTED SUBSTITUTION MARKER</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E01">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E02">
-<div class="charimg">&#x2E02;</div>
-<p class="charname"><strong>U+2E02</strong> <a href="#char2E02">LEFT SUBSTITUTION BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E02">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E03">
-<div class="charimg">&#x2E03;</div>
-<p class="charname"><strong>U+2E03</strong> <a href="#char2E03">RIGHT SUBSTITUTION BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E03">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E04">
-<div class="charimg">&#x2E04;</div>
-<p class="charname"><strong>U+2E04</strong> <a href="#char2E04">LEFT DOTTED SUBSTITUTION BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E04">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E05">
-<div class="charimg">&#x2E05;</div>
-<p class="charname"><strong>U+2E05</strong> <a href="#char2E05">RIGHT DOTTED SUBSTITUTION BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E05">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E06">
-<div class="charimg">&#x2E06;</div>
-<p class="charname"><strong>U+2E06</strong> <a href="#char2E06">RAISED INTERPOLATION MARKER</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E06">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E07">
-<div class="charimg">&#x2E07;</div>
-<p class="charname"><strong>U+2E07</strong> <a href="#char2E07">RAISED DOTTED INTERPOLATION MARKER</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E07">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E08">
-<div class="charimg">&#x2E08;</div>
-<p class="charname"><strong>U+2E08</strong> <a href="#char2E08">DOTTED TRANSPOSITION MARKER</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E08">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E09">
-<div class="charimg">&#x2E09;</div>
-<p class="charname"><strong>U+2E09</strong> <a href="#char2E09">LEFT TRANSPOSITION BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E09">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E0A">
-<div class="charimg">&#x2E0A;</div>
-<p class="charname"><strong>U+2E0A</strong> <a href="#char2E0A">RIGHT TRANSPOSITION BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E0A">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E0B">
-<div class="charimg">&#x2E0B;</div>
-<p class="charname"><strong>U+2E0B</strong> <a href="#char2E0B">RAISED SQUARE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E0B">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E0C">
-<div class="charimg">&#x2E0C;</div>
-<p class="charname"><strong>U+2E0C</strong> <a href="#char2E0C">LEFT RAISED OMISSION BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E0C">See in UniView</a></p>
-
-</div>
-
-<div class="character" id="char2E0D">
-<div class="charimg">&#x2E0D;</div>
-<p class="charname"><strong>U+2E0D</strong> <a href="#char2E0D">RIGHT RAISED OMISSION BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E0D">See in UniView</a></p>
-
-</div>
-
-	</section>
 
 
+<section id="generalPunctuation">
+<h2>General Punctuation block</h2>
 
-<section id="greek">
-  <h3>Ancient Greek textual symbols</h3>
+<div class="character" id="char2000"></div>
 
-<div class="character" id="char2E0E">
-<div class="charimg">&#x2E0E;</div>
-<p class="charname"><strong>U+2E0E</strong> <a href="#char2E0E">EDITORIAL CORONIS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E0E">See in UniView</a></p>
-
-</div>
+<div class="character" id="char2001"></div>
 
-<div class="character" id="char2E0F">
-<div class="charimg">&#x2E0F;</div>
-<p class="charname"><strong>U+2E0F</strong> <a href="#char2E0F">PARAGRAPHOS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E0F">See in UniView</a></p>
+<div class="character" id="char2002"></div>
 
-</div>
+<div class="character" id="char2003"></div>
 
-<div class="character" id="char2E10">
-<div class="charimg">&#x2E10;</div>
-<p class="charname"><strong>U+2E10</strong> <a href="#char2E10">FORKED PARAGRAPHOS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E10">See in UniView</a></p>
+<div class="character" id="char2004"></div>
 
-</div>
+<div class="character" id="char2005"></div>
 
-<div class="character" id="char2E11">
-<div class="charimg">&#x2E11;</div>
-<p class="charname"><strong>U+2E11</strong> <a href="#char2E11">REVERSED FORKED PARAGRAPHOS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E11">See in UniView</a></p>
+<div class="character" id="char2006"></div>
 
-</div>
+<div class="character" id="char2007"></div>
 
-<div class="character" id="char2E12">
-<div class="charimg">&#x2E12;</div>
-<p class="charname"><strong>U+2E12</strong> <a href="#char2E12">HYPODIASTOLE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E12">See in UniView</a></p>
+<div class="character" id="char2008"></div>
 
-</div>
+<div class="character" id="char2009"></div>
 
-<div class="character" id="char2E13">
-<div class="charimg">&#x2E13;</div>
-<p class="charname"><strong>U+2E13</strong> <a href="#char2E13">DOTTED OBELOS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E13">See in UniView</a></p>
+<div class="character" id="char200A"></div>
 
-</div>
+<div class="character" id="char200B"></div>
 
-<div class="character" id="char2E14">
-<div class="charimg">&#x2E14;</div>
-<p class="charname"><strong>U+2E14</strong> <a href="#char2E14">DOWNWARDS ANCORA</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E14">See in UniView</a></p>
+<div class="character" id="char200C"></div>
 
-</div>
+<div class="character" id="char200D"></div>
 
-<div class="character" id="char2E15">
-<div class="charimg">&#x2E15;</div>
-<p class="charname"><strong>U+2E15</strong> <a href="#char2E15">UPWARDS ANCORA</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E15">See in UniView</a></p>
+<div class="character" id="char200E"></div>
 
-</div>
+<div class="character" id="char200F"></div>
 
-<div class="character" id="char2E16">
-<div class="charimg">&#x2E16;</div>
-<p class="charname"><strong>U+2E16</strong> <a href="#char2E16">DOTTED RIGHT-POINTING ANGLE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E16">See in UniView</a></p>
+<div class="character" id="char2010"></div>
 
-</div>
+<div class="character" id="char2011"></div>
 
-</section>
+<div class="character" id="char2012"></div>
 
+<div class="character" id="char2013"></div>
 
-<section id="near_east">
-  <h3>Ancient Near-Eastern linguistic symbol</h3>
+<div class="character" id="char2014"></div>
 
-<div class="character" id="char2E17">
-<div class="charimg">&#x2E17;</div>
-<p class="charname"><strong>U+2E17</strong> <a href="#char2E17">DOUBLE OBLIQUE HYPHEN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E17">See in UniView</a></p>
+<div class="character" id="char2015"></div>
 
-</div>
+<div class="character" id="char2016"></div>
 
-</section>
+<div class="character" id="char2017"></div>
 
+<div class="character" id="char2018"></div>
 
-<section id="dictionary">
-  <h3>Dictionary punctuation</h3>
+<div class="character" id="char2019"></div>
 
-<div class="character" id="char2E1A">
-<div class="charimg">&#x2E1A;</div>
-<p class="charname"><strong>U+2E1A</strong> <a href="#char2E1A">HYPHEN WITH DIAERESIS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E1A">See in UniView</a></p>
+<div class="character" id="char201A"></div>
 
-</div>
+<div class="character" id="char201B"></div>
 
-<div class="character" id="char2E1B">
-<div class="charimg">&#x2E1B;</div>
-<p class="charname"><strong>U+2E1B</strong> <a href="#char2E1B">TILDE WITH RING ABOVE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E1B">See in UniView</a></p>
+<div class="character" id="char201C"></div>
 
-</div>
+<div class="character" id="char201D"></div>
 
-<div class="character" id="char2E1E">
-<div class="charimg">&#x2E1E;</div>
-<p class="charname"><strong>U+2E1E</strong> <a href="#char2E1E">TILDE WITH DOT ABOVE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E1E">See in UniView</a></p>
+<div class="character" id="char201E"></div>
 
-</div>
+<div class="character" id="char201F"></div>
 
-<div class="character" id="char2E1F">
-<div class="charimg">&#x2E1F;</div>
-<p class="charname"><strong>U+2E1F</strong> <a href="#char2E1F">TILDE WITH DOT BELOW</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E1F">See in UniView</a></p>
+<div class="character" id="char2020"></div>
 
-</div>
+<div class="character" id="char2021"></div>
 
-</section>
+<div class="character" id="char2022"></div>
 
+<div class="character" id="char2023"></div>
 
-<section id="paleo">
-  <h3>Palaeotype transliteration symbol</h3>
+<div class="character" id="char2024"></div>
 
-<div class="character" id="char2E32">
-<div class="charimg">&#x2E32;</div>
-<p class="charname"><strong>U+2E32</strong> <a href="#char2E32">TURNED COMMA</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E32">See in UniView</a></p>
+<div class="character" id="char2025"></div>
 
-</div>
+<div class="character" id="char2026"></div>
 
+<div class="character" id="char2027"></div>
 
-<div class="character" id="char2E35">
-<div class="charimg">&#x2E35;</div>
-<p class="charname"><strong>U+2E35</strong> <a href="#char2E35">TURNED SEMICOLON</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E35">See in UniView</a></p>
+<div class="character" id="char2028"></div>
 
-</div>
+<div class="character" id="char2029"></div>
 
-<div class="character" id="char2E36">
-<div class="charimg">&#x2E36;</div>
-<p class="charname"><strong>U+2E36</strong> <a href="#char2E36">DAGGER WITH LEFT GUARD</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E36">See in UniView</a></p>
+<div class="character" id="char202A"></div>
 
-</div>
+<div class="character" id="char202B"></div>
 
-<div class="character" id="char2E37">
-<div class="charimg">&#x2E37;</div>
-<p class="charname"><strong>U+2E37</strong> <a href="#char2E37">DAGGER WITH RIGHT GUARD</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E37">See in UniView</a></p>
+<div class="character" id="char202C"></div>
 
-</div>
+<div class="character" id="char202D"></div>
 
-<div class="character" id="char2E38">
-<div class="charimg">&#x2E38;</div>
-<p class="charname"><strong>U+2E38</strong> <a href="#char2E38">TURNED DAGGER</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E38">See in UniView</a></p>
+<div class="character" id="char202E"></div>
 
-</div>
+<div class="character" id="char202F"></div>
 
-<div class="character" id="char2E39">
-<div class="charimg">&#x2E39;</div>
-<p class="charname"><strong>U+2E39</strong> <a href="#char2E39">TOP HALF SECTION SIGN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E39">See in UniView</a></p>
+<div class="character" id="char2030"></div>
 
-</div>
+<div class="character" id="char2031"></div>
 
+<div class="character" id="char2032"></div>
 
-</section>
+<div class="character" id="char2033"></div>
 
+<div class="character" id="char2034"></div>
 
-<section id="typicon">
-  <h3>Typicon punctuation</h3>
+<div class="character" id="char2035"></div>
 
-<div class="character" id="char2E45">
-<div class="charimg">&#x2E45;</div>
-<p class="charname"><strong>U+2E45</strong> <a href="#char2E45">INVERTED LOW KAVYKA</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E45">See in UniView</a></p>
+<div class="character" id="char2036"></div>
 
-</div>
+<div class="character" id="char2037"></div>
 
-<div class="character" id="char2E46">
-<div class="charimg">&#x2E46;</div>
-<p class="charname"><strong>U+2E46</strong> <a href="#char2E46">INVERTED LOW KAVYKA WITH KAVYKA ABOVE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E46">See in UniView</a></p>
+<div class="character" id="char2038"></div>
 
-</div>
+<div class="character" id="char2039"></div>
 
-<div class="character" id="char2E47">
-<div class="charimg">&#x2E47;</div>
-<p class="charname"><strong>U+2E47</strong> <a href="#char2E47">LOW KAVYKA</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E47">See in UniView</a></p>
+<div class="character" id="char203A"></div>
 
-</div>
+<div class="character" id="char203B"></div>
 
-<div class="character" id="char2E48">
-<div class="charimg">&#x2E48;</div>
-<p class="charname"><strong>U+2E48</strong> <a href="#char2E48">LOW KAVYKA WITH DOT</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E48">See in UniView</a></p>
+<div class="character" id="char203C"></div>
 
-</div>
+<div class="character" id="char203D"></div>
 
-<div class="character" id="char2E49">
-<div class="charimg">&#x2E49;</div>
-<p class="charname"><strong>U+2E49</strong> <a href="#char2E49">DOUBLE STACKED COMMA</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E49">See in UniView</a></p>
+<div class="character" id="char203E"></div>
 
-</div>
+<div class="character" id="char203F"></div>
 
-</section>
+<div class="character" id="char2040"></div>
 
+<div class="character" id="char2041"></div>
 
-<section id="alternate">
-  <h3>Alternate forms of punctuation</h3>
+<div class="character" id="char2042"></div>
 
-<div class="character" id="char2E3C">
-<div class="charimg">&#x2E3C;</div>
-<p class="charname"><strong>U+2E3C</strong> <a href="#char2E3C">STENOGRAPHIC FULL STOP</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E3C">See in UniView</a></p>
+<div class="character" id="char2043"></div>
 
-</div>
+<div class="character" id="char2044"></div>
 
-<div class="character" id="char2E3D">
-<div class="charimg">&#x2E3D;</div>
-<p class="charname"><strong>U+2E3D</strong> <a href="#char2E3D">VERTICAL SIX DOTS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E3D">See in UniView</a></p>
+<div class="character" id="char2045"></div>
 
-</div>
+<div class="character" id="char2046"></div>
 
-<div class="character" id="char2E3E">
-<div class="charimg">&#x2E3E;</div>
-<p class="charname"><strong>U+2E3E</strong> <a href="#char2E3E">WIGGLY VERTICAL LINE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E3E">See in UniView</a></p>
+<div class="character" id="char2047"></div>
 
-</div>
+<div class="character" id="char2048"></div>
 
+<div class="character" id="char2049"></div>
 
-</section>
+<div class="character" id="char204A"></div>
 
+<div class="character" id="char204B"></div>
 
-<section id="reversed">
-  <h3>Reversed punctuation</h3>
+<div class="character" id="char204C"></div>
 
-<div class="character" id="char2E41">
-<div class="charimg">&#x2E41;</div>
-<p class="charname"><strong>U+2E41</strong> <a href="#char2E41">REVERSED COMMA</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E41">See in UniView</a></p>
+<div class="character" id="char204D"></div>
 
-</div>
+<div class="character" id="char204E"></div>
 
-<div class="character" id="char2E42">
-<div class="charimg">&#x2E42;</div>
-<p class="charname"><strong>U+2E42</strong> <a href="#char2E42">DOUBLE LOW-REVERSED-9 QUOTATION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2E42">See in UniView</a></p>
+<div class="character" id="char204F"></div>
 
-</div>
+<div class="character" id="char2050"></div>
 
-</section>
+<div class="character" id="char2051"></div>
 
+<div class="character" id="char2052"></div>
 
+<div class="character" id="char2053"></div>
 
-</section>
-<section id="invisible">
-  <h2>Invisible operators</h2>
+<div class="character" id="char2054"></div>
 
+<div class="character" id="char2055"></div>
 
+<div class="character" id="char2056"></div>
 
-<div class="character" id="char2061">
-<div class="charimg"><img src="../../c/General_Punctuation/large/2061.png" alt=""/></div>
-<p class="charname"><strong>U+2061</strong> <a href="#char2061">FUNCTION APPLICATION</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2061">See in UniView</a></p>
+<div class="character" id="char2057"></div>
 
-</div>
+<div class="character" id="char2058"></div>
 
-<div class="character" id="char2062">
-<div class="charimg"><img src="../../c/General_Punctuation/large/2062.png" alt=""/></div>
-<p class="charname"><strong>U+2062</strong> <a href="#char2062">INVISIBLE TIMES</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2062">See in UniView</a></p>
+<div class="character" id="char2059"></div>
 
-</div>
+<div class="character" id="char205A"></div>
 
-<div class="character" id="char2063">
-<div class="charimg"><img src="../../c/General_Punctuation/large/2063.png" alt=""/></div>
-<p class="charname"><strong>U+2063</strong> <a href="#char2063">INVISIBLE SEPARATOR</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2063">See in UniView</a></p>
+<div class="character" id="char205B"></div>
 
-</div>
+<div class="character" id="char205C"></div>
 
-<div class="character" id="char2064">
-<div class="charimg"><img src="../../c/General_Punctuation/large/2064.png" alt=""/></div>
-<p class="charname"><strong>U+2064</strong> <a href="#char2064">INVISIBLE PLUS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=2064">See in UniView</a></p>
+<div class="character" id="char205D"></div>
 
-</div>
+<div class="character" id="char205E"></div>
 
+<div class="character" id="char205F"></div>
 
+<div class="character" id="char2060"></div>
 
-</section>
-<section id="deprecated">
-  <h2>Deprecated</h2>
+<div class="character" id="char2061"></div>
 
+<div class="character" id="char2062"></div>
 
+<div class="character" id="char2063"></div>
 
-<div class="character" id="char206A">
-<div class="charimg"><img src="../../c/General_Punctuation/large/206A.png" alt=""/></div>
-<p class="charname"><strong>U+206A</strong> <a href="#char206A">INHIBIT SYMMETRIC SWAPPING</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=206A">See in UniView</a></p>
+<div class="character" id="char2064"></div>
 
-</div>
+<div class="character" id="char2066"></div>
 
-<div class="character" id="char206B">
-<div class="charimg"><img src="../../c/General_Punctuation/large/206B.png" alt=""/></div>
-<p class="charname"><strong>U+206B</strong> <a href="#char206B">ACTIVATE SYMMETRIC SWAPPING</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=206B">See in UniView</a></p>
+<div class="character" id="char2067"></div>
 
-</div>
+<div class="character" id="char2068"></div>
 
-<div class="character" id="char206C">
-<div class="charimg"><img src="../../c/General_Punctuation/large/206C.png" alt=""/></div>
-<p class="charname"><strong>U+206C</strong> <a href="#char206C">INHIBIT ARABIC FORM SHAPING</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=206C">See in UniView</a></p>
+<div class="character" id="char2069"></div>
 
-</div>
+<div class="character" id="char206A"></div>
 
-<div class="character" id="char206D">
-<div class="charimg"><img src="../../c/General_Punctuation/large/206D.png" alt=""/></div>
-<p class="charname"><strong>U+206D</strong> <a href="#char206D">ACTIVATE ARABIC FORM SHAPING</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=206D">See in UniView</a></p>
+<div class="character" id="char206B"></div>
 
-</div>
+<div class="character" id="char206C"></div>
 
-<div class="character" id="char206E">
-<div class="charimg"><img src="../../c/General_Punctuation/large/206E.png" alt=""/></div>
-<p class="charname"><strong>U+206E</strong> <a href="#char206E">NATIONAL DIGIT SHAPES</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=206E">See in UniView</a></p>
+<div class="character" id="char206D"></div>
 
-</div>
+<div class="character" id="char206E"></div>
 
-<div class="character" id="char206F">
-<div class="charimg"><img src="../../c/General_Punctuation/large/206F.png" alt=""/></div>
-<p class="charname"><strong>U+206F</strong> <a href="#char206F">NOMINAL DIGIT SHAPES</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=206F">See in UniView</a></p>
+<div class="character" id="char206F"></div>
 
-</div>
 </section>
 
 
 
 
 
+<!-- 
+Add sections for other characters
+• gather characters from the character index in the description page
+• run them through the List Characters app to separate into blocks and sort
+• for each block, generate markup using _tools/generate_block_page_stubs.html
+• paste the result here, one section per block
+-->
 
 
-<section id="cjk_punctuation">
-<h2>CJK Symbols &amp; punctuation</h2>
-
-<section id="cjk_punctuationh3">
-<h3>CJK Symbols &amp; punctuation</h3>
-
-<div class="character" id="char3000">
-<div class="charimg">&#x3000;</div>
-<p class="charname"><strong>U+3000</strong> <a href="#char3000">IDEOGRAPHIC SPACE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3000">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3001">
-<div class="charimg">&#x3001;</div>
-<p class="charname"><strong>U+3001</strong> <a href="#char3001">IDEOGRAPHIC COMMA</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3001">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3002">
-<div class="charimg">&#x3002;</div>
-<p class="charname"><strong>U+3002</strong> <a href="#char3002">IDEOGRAPHIC FULL STOP</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3002">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3003">
-<div class="charimg">&#x3003;</div>
-<p class="charname"><strong>U+3003</strong> <a href="#char3003">DITTO MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3003">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3004">
-<div class="charimg">&#x3004;</div>
-<p class="charname"><strong>U+3004</strong> <a href="#char3004">JAPANESE INDUSTRIAL STANDARD SYMBOL</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3004">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3005">
-<div class="charimg">&#x3005;</div>
-<p class="charname"><strong>U+3005</strong> <a href="#char3005">IDEOGRAPHIC ITERATION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3005">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3006">
-<div class="charimg">&#x3006;</div>
-<p class="charname"><strong>U+3006</strong> <a href="#char3006">IDEOGRAPHIC CLOSING MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3006">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3007">
-<div class="charimg">&#x3007;</div>
-<p class="charname"><strong>U+3007</strong> <a href="#char3007">IDEOGRAPHIC NUMBER ZERO</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3007">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char301C">
-<div class="charimg">&#x301C;</div>
-<p class="charname"><strong>U+301C</strong> <a href="#char301C">WAVE DASH</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=301C">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char301D">
-<div class="charimg">&#x301D;</div>
-<p class="charname"><strong>U+301D</strong> <a href="#char301D">REVERSED DOUBLE PRIME QUOTATION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=301D">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char301E">
-<div class="charimg">&#x301E;</div>
-<p class="charname"><strong>U+301E</strong> <a href="#char301E">DOUBLE PRIME QUOTATION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=301E">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char301F">
-<div class="charimg">&#x301F;</div>
-<p class="charname"><strong>U+301F</strong> <a href="#char301F">LOW DOUBLE PRIME QUOTATION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=301F">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3030">
-<div class="charimg">&#x3030;</div>
-<p class="charname"><strong>U+3030</strong> <a href="#char3030">WAVY DASH</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3030">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char303B">
-<div class="charimg">&#x303B;</div>
-<p class="charname"><strong>U+303B</strong> <a href="#char303B">VERTICAL IDEOGRAPHIC ITERATION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=303B">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char303C">
-<div class="charimg">&#x303C;</div>
-<p class="charname"><strong>U+303C</strong> <a href="#char303C">MASU MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=303C">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char303D">
-<div class="charimg">&#x303D;</div>
-<p class="charname"><strong>U+303D</strong> <a href="#char303D">PART ALTERNATION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=303D">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div></section>
-
-
-
-
-
-<section id="cjk_angle">
-<h3>CJK angle brackets</h3>
-
-<div class="character" id="char3008">
-<div class="charimg">&#x3008;</div>
-<p class="charname"><strong>U+3008</strong> <a href="#char3008">LEFT ANGLE BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3008">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3009">
-<div class="charimg">&#x3009;</div>
-<p class="charname"><strong>U+3009</strong> <a href="#char3009">RIGHT ANGLE BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3009">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char300A">
-<div class="charimg">&#x300A;</div>
-<p class="charname"><strong>U+300A</strong> <a href="#char300A">LEFT DOUBLE ANGLE BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=300A">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char300B">
-<div class="charimg">&#x300B;</div>
-<p class="charname"><strong>U+300B</strong> <a href="#char300B">RIGHT DOUBLE ANGLE BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=300B">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-</section>
-
-
-
-
-
-<section id="cjk_corner">
-<h3>CJK corner brackets</h3>
-
-<div class="character" id="char300C">
-<div class="charimg">&#x300C;</div>
-<p class="charname"><strong>U+300C</strong> <a href="#char300C">LEFT CORNER BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=300C">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char300D">
-<div class="charimg">&#x300D;</div>
-<p class="charname"><strong>U+300D</strong> <a href="#char300D">RIGHT CORNER BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=300D">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char300E">
-<div class="charimg">&#x300E;</div>
-<p class="charname"><strong>U+300E</strong> <a href="#char300E">LEFT WHITE CORNER BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=300E">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char300F">
-<div class="charimg">&#x300F;</div>
-<p class="charname"><strong>U+300F</strong> <a href="#char300F">RIGHT WHITE CORNER BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=300F">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-</section>
-
-
-
-
-
-<section id="cjk_brackets">
-<h3>CJK brackets</h3>
-
-<div class="character" id="char3010">
-<div class="charimg">&#x3010;</div>
-<p class="charname"><strong>U+3010</strong> <a href="#char3010">LEFT BLACK LENTICULAR BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3010">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3011">
-<div class="charimg">&#x3011;</div>
-<p class="charname"><strong>U+3011</strong> <a href="#char3011">RIGHT BLACK LENTICULAR BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3011">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3014">
-<div class="charimg">&#x3014;</div>
-<p class="charname"><strong>U+3014</strong> <a href="#char3014">LEFT TORTOISE SHELL BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3014">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3015">
-<div class="charimg">&#x3015;</div>
-<p class="charname"><strong>U+3015</strong> <a href="#char3015">RIGHT TORTOISE SHELL BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3015">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3016">
-<div class="charimg">&#x3016;</div>
-<p class="charname"><strong>U+3016</strong> <a href="#char3016">LEFT WHITE LENTICULAR BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3016">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3017">
-<div class="charimg">&#x3017;</div>
-<p class="charname"><strong>U+3017</strong> <a href="#char3017">RIGHT WHITE LENTICULAR BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3017">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3018">
-<div class="charimg">&#x3018;</div>
-<p class="charname"><strong>U+3018</strong> <a href="#char3018">LEFT WHITE TORTOISE SHELL BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3018">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3019">
-<div class="charimg">&#x3019;</div>
-<p class="charname"><strong>U+3019</strong> <a href="#char3019">RIGHT WHITE TORTOISE SHELL BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3019">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char301A">
-<div class="charimg">&#x301A;</div>
-<p class="charname"><strong>U+301A</strong> <a href="#char301A">LEFT WHITE SQUARE BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=301A">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char301B">
-<div class="charimg">&#x301B;</div>
-<p class="charname"><strong>U+301B</strong> <a href="#char301B">RIGHT WHITE SQUARE BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=301B">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-</section>
-
-
-
-
-
-<section id="cjk_symbols">
-<h3>CJK symbols</h3>
-
-<div class="character" id="char3012">
-<div class="charimg">&#x3012;</div>
-<p class="charname"><strong>U+3012</strong> <a href="#char3012">POSTAL MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3012">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3013">
-<div class="charimg">&#x3013;</div>
-<p class="charname"><strong>U+3013</strong> <a href="#char3013">GETA MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3013">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3020">
-<div class="charimg">&#x3020;</div>
-<p class="charname"><strong>U+3020</strong> <a href="#char3020">POSTAL MARK FACE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3020">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3036">
-<div class="charimg">&#x3036;</div>
-<p class="charname"><strong>U+3036</strong> <a href="#char3036">CIRCLED POSTAL MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3036">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3037">
-<div class="charimg">&#x3037;</div>
-<p class="charname"><strong>U+3037</strong> <a href="#char3037">IDEOGRAPHIC TELEGRAPH LINE FEED SEPARATOR SYMBOL</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3037">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-</section>
-
-
-
-
-
-
-<section id="shuzhou_numerals">
-<h3>Shuzou numerals</h3>
-
-<div class="character" id="char3021">
-<div class="charimg">&#x3021;</div>
-<p class="charname"><strong>U+3021</strong> <a href="#char3021">HANGZHOU NUMERAL ONE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3021">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3022">
-<div class="charimg">&#x3022;</div>
-<p class="charname"><strong>U+3022</strong> <a href="#char3022">HANGZHOU NUMERAL TWO</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3022">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3023">
-<div class="charimg">&#x3023;</div>
-<p class="charname"><strong>U+3023</strong> <a href="#char3023">HANGZHOU NUMERAL THREE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3023">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3024">
-<div class="charimg">&#x3024;</div>
-<p class="charname"><strong>U+3024</strong> <a href="#char3024">HANGZHOU NUMERAL FOUR</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3024">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3025">
-<div class="charimg">&#x3025;</div>
-<p class="charname"><strong>U+3025</strong> <a href="#char3025">HANGZHOU NUMERAL FIVE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3025">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3026">
-<div class="charimg">&#x3026;</div>
-<p class="charname"><strong>U+3026</strong> <a href="#char3026">HANGZHOU NUMERAL SIX</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3026">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3027">
-<div class="charimg">&#x3027;</div>
-<p class="charname"><strong>U+3027</strong> <a href="#char3027">HANGZHOU NUMERAL SEVEN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3027">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3028">
-<div class="charimg">&#x3028;</div>
-<p class="charname"><strong>U+3028</strong> <a href="#char3028">HANGZHOU NUMERAL EIGHT</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3028">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3029">
-<div class="charimg">&#x3029;</div>
-<p class="charname"><strong>U+3029</strong> <a href="#char3029">HANGZHOU NUMERAL NINE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3029">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3038">
-<div class="charimg">&#x3038;</div>
-<p class="charname"><strong>U+3038</strong> <a href="#char3038">HANGZHOU NUMERAL TEN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3038">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3039">
-<div class="charimg">&#x3039;</div>
-<p class="charname"><strong>U+3039</strong> <a href="#char3039">HANGZHOU NUMERAL TWENTY</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3039">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char303A">
-<div class="charimg">&#x303A;</div>
-<p class="charname"><strong>U+303A</strong> <a href="#char303A">HANGZHOU NUMERAL THIRTY</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=303A">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-</section>
-
-
-
-
-
-<section id="combining_tone_marks">
-<h3>Combining tone marks</h3>
-
-<div class="character" id="char302A">
-<div class="charimg">&#x302A;</div>
-<p class="charname"><strong>U+302A</strong> <a href="#char302A">IDEOGRAPHIC LEVEL TONE MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=302A">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char302B">
-<div class="charimg">&#x302B;</div>
-<p class="charname"><strong>U+302B</strong> <a href="#char302B">IDEOGRAPHIC RISING TONE MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=302B">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char302C">
-<div class="charimg">&#x302C;</div>
-<p class="charname"><strong>U+302C</strong> <a href="#char302C">IDEOGRAPHIC DEPARTING TONE MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=302C">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char302D">
-<div class="charimg">&#x302D;</div>
-<p class="charname"><strong>U+302D</strong> <a href="#char302D">IDEOGRAPHIC ENTERING TONE MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=302D">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char302E">
-<div class="charimg">&#x302E;</div>
-<p class="charname"><strong>U+302E</strong> <a href="#char302E">HANGUL SINGLE DOT TONE MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=302E">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char302F">
-<div class="charimg">&#x302F;</div>
-<p class="charname"><strong>U+302F</strong> <a href="#char302F">HANGUL DOUBLE DOT TONE MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=302F">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-</section>
-
-
-
-
-
-<section id="kana_repeat_marks">
-<h3>Kana repeat marks</h3>
-
-<div class="character" id="char3031">
-<div class="charimg">&#x3031;</div>
-<p class="charname"><strong>U+3031</strong> <a href="#char3031">VERTICAL KANA REPEAT MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3031">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3032">
-<div class="charimg">&#x3032;</div>
-<p class="charname"><strong>U+3032</strong> <a href="#char3032">VERTICAL KANA REPEAT WITH VOICED SOUND MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3032">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3033">
-<div class="charimg">&#x3033;</div>
-<p class="charname"><strong>U+3033</strong> <a href="#char3033">VERTICAL KANA REPEAT MARK UPPER HALF</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3033">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3034">
-<div class="charimg">&#x3034;</div>
-<p class="charname"><strong>U+3034</strong> <a href="#char3034">VERTICAL KANA REPEAT WITH VOICED SOUND MARK UPPER HALF</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3034">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char3035">
-<div class="charimg">&#x3035;</div>
-<p class="charname"><strong>U+3035</strong> <a href="#char3035">VERTICAL KANA REPEAT MARK LOWER HALF</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=3035">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-</section>
-
-
-
-
-
-<section id="special_cjk_indicators">
-<h3>Special CJK indicators</h3>
-
-<div class="character" id="char303E">
-<div class="charimg">&#x303E;</div>
-<p class="charname"><strong>U+303E</strong> <a href="#char303E">IDEOGRAPHIC VARIATION INDICATOR</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=303E">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="char303F">
-<div class="charimg">&#x303F;</div>
-<p class="charname"><strong>U+303F</strong> <a href="#char303F">IDEOGRAPHIC HALF FILL SPACE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=303F">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-</section>
-</section>
-
-
-
-
-
-
-
-
-
-<section id="halfFullWidth">
-<h2>Halfwidth and Fullwidth Forms</h2>
-
-
-
-<section id="fullwidthAscii">
-<h3>Fullwidth ASCII variants</h3>
-
-
-<div class="character" id="charFF01">
-<div class="charimg">&#xFF01;</div>
-<p class="charname"><strong>U+FF01</strong> <a href="#charFF01">FULLWIDTH EXCLAMATION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF01">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF02">
-<div class="charimg">&#xFF02;</div>
-<p class="charname"><strong>U+FF02</strong> <a href="#charFF02">FULLWIDTH QUOTATION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF02">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF03">
-<div class="charimg">&#xFF03;</div>
-<p class="charname"><strong>U+FF03</strong> <a href="#charFF03">FULLWIDTH NUMBER SIGN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF03">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF04">
-<div class="charimg">&#xFF04;</div>
-<p class="charname"><strong>U+FF04</strong> <a href="#charFF04">FULLWIDTH DOLLAR SIGN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF04">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF05">
-<div class="charimg">&#xFF05;</div>
-<p class="charname"><strong>U+FF05</strong> <a href="#charFF05">FULLWIDTH PERCENT SIGN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF05">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF06">
-<div class="charimg">&#xFF06;</div>
-<p class="charname"><strong>U+FF06</strong> <a href="#charFF06">FULLWIDTH AMPERSAND</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF06">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF07">
-<div class="charimg">&#xFF07;</div>
-<p class="charname"><strong>U+FF07</strong> <a href="#charFF07">FULLWIDTH APOSTROPHE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF07">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF08">
-<div class="charimg">&#xFF08;</div>
-<p class="charname"><strong>U+FF08</strong> <a href="#charFF08">FULLWIDTH LEFT PARENTHESIS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF08">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF09">
-<div class="charimg">&#xFF09;</div>
-<p class="charname"><strong>U+FF09</strong> <a href="#charFF09">FULLWIDTH RIGHT PARENTHESIS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF09">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF0A">
-<div class="charimg">&#xFF0A;</div>
-<p class="charname"><strong>U+FF0A</strong> <a href="#charFF0A">FULLWIDTH ASTERISK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF0A">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF0B">
-<div class="charimg">&#xFF0B;</div>
-<p class="charname"><strong>U+FF0B</strong> <a href="#charFF0B">FULLWIDTH PLUS SIGN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF0B">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF0C">
-<div class="charimg">&#xFF0C;</div>
-<p class="charname"><strong>U+FF0C</strong> <a href="#charFF0C">FULLWIDTH COMMA</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF0C">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF0D">
-<div class="charimg">&#xFF0D;</div>
-<p class="charname"><strong>U+FF0D</strong> <a href="#charFF0D">FULLWIDTH HYPHEN-MINUS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF0D">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF0E">
-<div class="charimg">&#xFF0E;</div>
-<p class="charname"><strong>U+FF0E</strong> <a href="#charFF0E">FULLWIDTH FULL STOP</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF0E">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF0F">
-<div class="charimg">&#xFF0F;</div>
-<p class="charname"><strong>U+FF0F</strong> <a href="#charFF0F">FULLWIDTH SOLIDUS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF0F">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF10">
-<div class="charimg">&#xFF10;</div>
-<p class="charname"><strong>U+FF10</strong> <a href="#charFF10">FULLWIDTH DIGIT ZERO</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF10">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF11">
-<div class="charimg">&#xFF11;</div>
-<p class="charname"><strong>U+FF11</strong> <a href="#charFF11">FULLWIDTH DIGIT ONE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF11">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF12">
-<div class="charimg">&#xFF12;</div>
-<p class="charname"><strong>U+FF12</strong> <a href="#charFF12">FULLWIDTH DIGIT TWO</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF12">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF13">
-<div class="charimg">&#xFF13;</div>
-<p class="charname"><strong>U+FF13</strong> <a href="#charFF13">FULLWIDTH DIGIT THREE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF13">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF14">
-<div class="charimg">&#xFF14;</div>
-<p class="charname"><strong>U+FF14</strong> <a href="#charFF14">FULLWIDTH DIGIT FOUR</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF14">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF15">
-<div class="charimg">&#xFF15;</div>
-<p class="charname"><strong>U+FF15</strong> <a href="#charFF15">FULLWIDTH DIGIT FIVE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF15">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF16">
-<div class="charimg">&#xFF16;</div>
-<p class="charname"><strong>U+FF16</strong> <a href="#charFF16">FULLWIDTH DIGIT SIX</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF16">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF17">
-<div class="charimg">&#xFF17;</div>
-<p class="charname"><strong>U+FF17</strong> <a href="#charFF17">FULLWIDTH DIGIT SEVEN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF17">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF18">
-<div class="charimg">&#xFF18;</div>
-<p class="charname"><strong>U+FF18</strong> <a href="#charFF18">FULLWIDTH DIGIT EIGHT</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF18">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF19">
-<div class="charimg">&#xFF19;</div>
-<p class="charname"><strong>U+FF19</strong> <a href="#charFF19">FULLWIDTH DIGIT NINE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF19">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF1A">
-<div class="charimg">&#xFF1A;</div>
-<p class="charname"><strong>U+FF1A</strong> <a href="#charFF1A">FULLWIDTH COLON</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF1A">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF1B">
-<div class="charimg">&#xFF1B;</div>
-<p class="charname"><strong>U+FF1B</strong> <a href="#charFF1B">FULLWIDTH SEMICOLON</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF1B">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF1C">
-<div class="charimg">&#xFF1C;</div>
-<p class="charname"><strong>U+FF1C</strong> <a href="#charFF1C">FULLWIDTH LESS-THAN SIGN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF1C">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF1D">
-<div class="charimg">&#xFF1D;</div>
-<p class="charname"><strong>U+FF1D</strong> <a href="#charFF1D">FULLWIDTH EQUALS SIGN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF1D">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF1E">
-<div class="charimg">&#xFF1E;</div>
-<p class="charname"><strong>U+FF1E</strong> <a href="#charFF1E">FULLWIDTH GREATER-THAN SIGN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF1E">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF1F">
-<div class="charimg">&#xFF1F;</div>
-<p class="charname"><strong>U+FF1F</strong> <a href="#charFF1F">FULLWIDTH QUESTION MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF1F">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF20">
-<div class="charimg">&#xFF20;</div>
-<p class="charname"><strong>U+FF20</strong> <a href="#charFF20">FULLWIDTH COMMERCIAL AT</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF20">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF21">
-<div class="charimg">&#xFF21;</div>
-<p class="charname"><strong>U+FF21</strong> <a href="#charFF21">FULLWIDTH LATIN CAPITAL LETTER A</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF21">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF22">
-<div class="charimg">&#xFF22;</div>
-<p class="charname"><strong>U+FF22</strong> <a href="#charFF22">FULLWIDTH LATIN CAPITAL LETTER B</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF22">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF23">
-<div class="charimg">&#xFF23;</div>
-<p class="charname"><strong>U+FF23</strong> <a href="#charFF23">FULLWIDTH LATIN CAPITAL LETTER C</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF23">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF24">
-<div class="charimg">&#xFF24;</div>
-<p class="charname"><strong>U+FF24</strong> <a href="#charFF24">FULLWIDTH LATIN CAPITAL LETTER D</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF24">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF25">
-<div class="charimg">&#xFF25;</div>
-<p class="charname"><strong>U+FF25</strong> <a href="#charFF25">FULLWIDTH LATIN CAPITAL LETTER E</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF25">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF26">
-<div class="charimg">&#xFF26;</div>
-<p class="charname"><strong>U+FF26</strong> <a href="#charFF26">FULLWIDTH LATIN CAPITAL LETTER F</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF26">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF27">
-<div class="charimg">&#xFF27;</div>
-<p class="charname"><strong>U+FF27</strong> <a href="#charFF27">FULLWIDTH LATIN CAPITAL LETTER G</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF27">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF28">
-<div class="charimg">&#xFF28;</div>
-<p class="charname"><strong>U+FF28</strong> <a href="#charFF28">FULLWIDTH LATIN CAPITAL LETTER H</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF28">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF29">
-<div class="charimg">&#xFF29;</div>
-<p class="charname"><strong>U+FF29</strong> <a href="#charFF29">FULLWIDTH LATIN CAPITAL LETTER I</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF29">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF2A">
-<div class="charimg">&#xFF2A;</div>
-<p class="charname"><strong>U+FF2A</strong> <a href="#charFF2A">FULLWIDTH LATIN CAPITAL LETTER J</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF2A">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF2B">
-<div class="charimg">&#xFF2B;</div>
-<p class="charname"><strong>U+FF2B</strong> <a href="#charFF2B">FULLWIDTH LATIN CAPITAL LETTER K</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF2B">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF2C">
-<div class="charimg">&#xFF2C;</div>
-<p class="charname"><strong>U+FF2C</strong> <a href="#charFF2C">FULLWIDTH LATIN CAPITAL LETTER L</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF2C">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF2D">
-<div class="charimg">&#xFF2D;</div>
-<p class="charname"><strong>U+FF2D</strong> <a href="#charFF2D">FULLWIDTH LATIN CAPITAL LETTER M</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF2D">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF2E">
-<div class="charimg">&#xFF2E;</div>
-<p class="charname"><strong>U+FF2E</strong> <a href="#charFF2E">FULLWIDTH LATIN CAPITAL LETTER N</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF2E">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF2F">
-<div class="charimg">&#xFF2F;</div>
-<p class="charname"><strong>U+FF2F</strong> <a href="#charFF2F">FULLWIDTH LATIN CAPITAL LETTER O</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF2F">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF30">
-<div class="charimg">&#xFF30;</div>
-<p class="charname"><strong>U+FF30</strong> <a href="#charFF30">FULLWIDTH LATIN CAPITAL LETTER P</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF30">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF31">
-<div class="charimg">&#xFF31;</div>
-<p class="charname"><strong>U+FF31</strong> <a href="#charFF31">FULLWIDTH LATIN CAPITAL LETTER Q</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF31">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF32">
-<div class="charimg">&#xFF32;</div>
-<p class="charname"><strong>U+FF32</strong> <a href="#charFF32">FULLWIDTH LATIN CAPITAL LETTER R</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF32">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF33">
-<div class="charimg">&#xFF33;</div>
-<p class="charname"><strong>U+FF33</strong> <a href="#charFF33">FULLWIDTH LATIN CAPITAL LETTER S</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF33">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF34">
-<div class="charimg">&#xFF34;</div>
-<p class="charname"><strong>U+FF34</strong> <a href="#charFF34">FULLWIDTH LATIN CAPITAL LETTER T</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF34">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF35">
-<div class="charimg">&#xFF35;</div>
-<p class="charname"><strong>U+FF35</strong> <a href="#charFF35">FULLWIDTH LATIN CAPITAL LETTER U</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF35">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF36">
-<div class="charimg">&#xFF36;</div>
-<p class="charname"><strong>U+FF36</strong> <a href="#charFF36">FULLWIDTH LATIN CAPITAL LETTER V</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF36">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF37">
-<div class="charimg">&#xFF37;</div>
-<p class="charname"><strong>U+FF37</strong> <a href="#charFF37">FULLWIDTH LATIN CAPITAL LETTER W</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF37">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF38">
-<div class="charimg">&#xFF38;</div>
-<p class="charname"><strong>U+FF38</strong> <a href="#charFF38">FULLWIDTH LATIN CAPITAL LETTER X</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF38">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF39">
-<div class="charimg">&#xFF39;</div>
-<p class="charname"><strong>U+FF39</strong> <a href="#charFF39">FULLWIDTH LATIN CAPITAL LETTER Y</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF39">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF3A">
-<div class="charimg">&#xFF3A;</div>
-<p class="charname"><strong>U+FF3A</strong> <a href="#charFF3A">FULLWIDTH LATIN CAPITAL LETTER Z</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF3A">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF3B">
-<div class="charimg">&#xFF3B;</div>
-<p class="charname"><strong>U+FF3B</strong> <a href="#charFF3B">FULLWIDTH LEFT SQUARE BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF3B">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF3C">
-<div class="charimg">&#xFF3C;</div>
-<p class="charname"><strong>U+FF3C</strong> <a href="#charFF3C">FULLWIDTH REVERSE SOLIDUS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF3C">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF3D">
-<div class="charimg">&#xFF3D;</div>
-<p class="charname"><strong>U+FF3D</strong> <a href="#charFF3D">FULLWIDTH RIGHT SQUARE BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF3D">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF3E">
-<div class="charimg">&#xFF3E;</div>
-<p class="charname"><strong>U+FF3E</strong> <a href="#charFF3E">FULLWIDTH CIRCUMFLEX ACCENT</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF3E">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF3F">
-<div class="charimg">&#xFF3F;</div>
-<p class="charname"><strong>U+FF3F</strong> <a href="#charFF3F">FULLWIDTH LOW LINE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF3F">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF40">
-<div class="charimg">&#xFF40;</div>
-<p class="charname"><strong>U+FF40</strong> <a href="#charFF40">FULLWIDTH GRAVE ACCENT</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF40">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF41">
-<div class="charimg">&#xFF41;</div>
-<p class="charname"><strong>U+FF41</strong> <a href="#charFF41">FULLWIDTH LATIN SMALL LETTER A</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF41">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF42">
-<div class="charimg">&#xFF42;</div>
-<p class="charname"><strong>U+FF42</strong> <a href="#charFF42">FULLWIDTH LATIN SMALL LETTER B</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF42">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF43">
-<div class="charimg">&#xFF43;</div>
-<p class="charname"><strong>U+FF43</strong> <a href="#charFF43">FULLWIDTH LATIN SMALL LETTER C</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF43">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF44">
-<div class="charimg">&#xFF44;</div>
-<p class="charname"><strong>U+FF44</strong> <a href="#charFF44">FULLWIDTH LATIN SMALL LETTER D</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF44">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF45">
-<div class="charimg">&#xFF45;</div>
-<p class="charname"><strong>U+FF45</strong> <a href="#charFF45">FULLWIDTH LATIN SMALL LETTER E</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF45">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF46">
-<div class="charimg">&#xFF46;</div>
-<p class="charname"><strong>U+FF46</strong> <a href="#charFF46">FULLWIDTH LATIN SMALL LETTER F</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF46">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF47">
-<div class="charimg">&#xFF47;</div>
-<p class="charname"><strong>U+FF47</strong> <a href="#charFF47">FULLWIDTH LATIN SMALL LETTER G</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF47">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF48">
-<div class="charimg">&#xFF48;</div>
-<p class="charname"><strong>U+FF48</strong> <a href="#charFF48">FULLWIDTH LATIN SMALL LETTER H</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF48">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF49">
-<div class="charimg">&#xFF49;</div>
-<p class="charname"><strong>U+FF49</strong> <a href="#charFF49">FULLWIDTH LATIN SMALL LETTER I</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF49">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF4A">
-<div class="charimg">&#xFF4A;</div>
-<p class="charname"><strong>U+FF4A</strong> <a href="#charFF4A">FULLWIDTH LATIN SMALL LETTER J</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF4A">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF4B">
-<div class="charimg">&#xFF4B;</div>
-<p class="charname"><strong>U+FF4B</strong> <a href="#charFF4B">FULLWIDTH LATIN SMALL LETTER K</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF4B">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF4C">
-<div class="charimg">&#xFF4C;</div>
-<p class="charname"><strong>U+FF4C</strong> <a href="#charFF4C">FULLWIDTH LATIN SMALL LETTER L</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF4C">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF4D">
-<div class="charimg">&#xFF4D;</div>
-<p class="charname"><strong>U+FF4D</strong> <a href="#charFF4D">FULLWIDTH LATIN SMALL LETTER M</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF4D">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF4E">
-<div class="charimg">&#xFF4E;</div>
-<p class="charname"><strong>U+FF4E</strong> <a href="#charFF4E">FULLWIDTH LATIN SMALL LETTER N</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF4E">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF4F">
-<div class="charimg">&#xFF4F;</div>
-<p class="charname"><strong>U+FF4F</strong> <a href="#charFF4F">FULLWIDTH LATIN SMALL LETTER O</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF4F">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF50">
-<div class="charimg">&#xFF50;</div>
-<p class="charname"><strong>U+FF50</strong> <a href="#charFF50">FULLWIDTH LATIN SMALL LETTER P</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF50">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF51">
-<div class="charimg">&#xFF51;</div>
-<p class="charname"><strong>U+FF51</strong> <a href="#charFF51">FULLWIDTH LATIN SMALL LETTER Q</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF51">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF52">
-<div class="charimg">&#xFF52;</div>
-<p class="charname"><strong>U+FF52</strong> <a href="#charFF52">FULLWIDTH LATIN SMALL LETTER R</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF52">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF53">
-<div class="charimg">&#xFF53;</div>
-<p class="charname"><strong>U+FF53</strong> <a href="#charFF53">FULLWIDTH LATIN SMALL LETTER S</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF53">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF54">
-<div class="charimg">&#xFF54;</div>
-<p class="charname"><strong>U+FF54</strong> <a href="#charFF54">FULLWIDTH LATIN SMALL LETTER T</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF54">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF55">
-<div class="charimg">&#xFF55;</div>
-<p class="charname"><strong>U+FF55</strong> <a href="#charFF55">FULLWIDTH LATIN SMALL LETTER U</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF55">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF56">
-<div class="charimg">&#xFF56;</div>
-<p class="charname"><strong>U+FF56</strong> <a href="#charFF56">FULLWIDTH LATIN SMALL LETTER V</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF56">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF57">
-<div class="charimg">&#xFF57;</div>
-<p class="charname"><strong>U+FF57</strong> <a href="#charFF57">FULLWIDTH LATIN SMALL LETTER W</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF57">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF58">
-<div class="charimg">&#xFF58;</div>
-<p class="charname"><strong>U+FF58</strong> <a href="#charFF58">FULLWIDTH LATIN SMALL LETTER X</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF58">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF59">
-<div class="charimg">&#xFF59;</div>
-<p class="charname"><strong>U+FF59</strong> <a href="#charFF59">FULLWIDTH LATIN SMALL LETTER Y</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF59">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF5A">
-<div class="charimg">&#xFF5A;</div>
-<p class="charname"><strong>U+FF5A</strong> <a href="#charFF5A">FULLWIDTH LATIN SMALL LETTER Z</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF5A">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF5B">
-<div class="charimg">&#xFF5B;</div>
-<p class="charname"><strong>U+FF5B</strong> <a href="#charFF5B">FULLWIDTH LEFT CURLY BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF5B">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF5C">
-<div class="charimg">&#xFF5C;</div>
-<p class="charname"><strong>U+FF5C</strong> <a href="#charFF5C">FULLWIDTH VERTICAL LINE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF5C">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF5D">
-<div class="charimg">&#xFF5D;</div>
-<p class="charname"><strong>U+FF5D</strong> <a href="#charFF5D">FULLWIDTH RIGHT CURLY BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF5D">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF5E">
-<div class="charimg">&#xFF5E;</div>
-<p class="charname"><strong>U+FF5E</strong> <a href="#charFF5E">FULLWIDTH TILDE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF5E">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-</section>
-
-
-
-
-
-
-<section id="fullwidthBrackets">
-<h3>Fullwidth brackets</h3>
-
-
-<div class="character" id="charFF5F">
-<div class="charimg">&#xFF5F;</div>
-<p class="charname"><strong>U+FF5F</strong> <a href="#charFF5F">FULLWIDTH LEFT WHITE PARENTHESIS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF5F">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF60">
-<div class="charimg">&#xFF60;</div>
-<p class="charname"><strong>U+FF60</strong> <a href="#charFF60">FULLWIDTH RIGHT WHITE PARENTHESIS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF60">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-</section>
-
-
-
-
-
-
-
-
-
-
-<section id="halfwidthCJKPuncn">
-<h3>Halfwidth CJK punctuation</h3>
-
-<div class="character" id="charFF61">
-<div class="charimg">&#xFF61;</div>
-<p class="charname"><strong>U+FF61</strong> <a href="#charFF61">HALFWIDTH IDEOGRAPHIC FULL STOP</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF61">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF62">
-<div class="charimg">&#xFF62;</div>
-<p class="charname"><strong>U+FF62</strong> <a href="#charFF62">HALFWIDTH LEFT CORNER BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF62">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF63">
-<div class="charimg">&#xFF63;</div>
-<p class="charname"><strong>U+FF63</strong> <a href="#charFF63">HALFWIDTH RIGHT CORNER BRACKET</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF63">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF64">
-<div class="charimg">&#xFF64;</div>
-<p class="charname"><strong>U+FF64</strong> <a href="#charFF64">HALFWIDTH IDEOGRAPHIC COMMA</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF64">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-</section>
-
-
-
-
-
-
-
-
-
-<section id="halfwidthKanaVariants">
-<h3>Halfwidth katakana variants</h3>
-
-<div class="character" id="charFF65">
-<div class="charimg">&#xFF65;</div>
-<p class="charname"><strong>U+FF65</strong> <a href="#charFF65">HALFWIDTH KATAKANA MIDDLE DOT</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF65">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF66">
-<div class="charimg">&#xFF66;</div>
-<p class="charname"><strong>U+FF66</strong> <a href="#charFF66">HALFWIDTH KATAKANA LETTER WO</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF66">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF67">
-<div class="charimg">&#xFF67;</div>
-<p class="charname"><strong>U+FF67</strong> <a href="#charFF67">HALFWIDTH KATAKANA LETTER SMALL A</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF67">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF68">
-<div class="charimg">&#xFF68;</div>
-<p class="charname"><strong>U+FF68</strong> <a href="#charFF68">HALFWIDTH KATAKANA LETTER SMALL I</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF68">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF69">
-<div class="charimg">&#xFF69;</div>
-<p class="charname"><strong>U+FF69</strong> <a href="#charFF69">HALFWIDTH KATAKANA LETTER SMALL U</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF69">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF6A">
-<div class="charimg">&#xFF6A;</div>
-<p class="charname"><strong>U+FF6A</strong> <a href="#charFF6A">HALFWIDTH KATAKANA LETTER SMALL E</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF6A">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF6B">
-<div class="charimg">&#xFF6B;</div>
-<p class="charname"><strong>U+FF6B</strong> <a href="#charFF6B">HALFWIDTH KATAKANA LETTER SMALL O</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF6B">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF6C">
-<div class="charimg">&#xFF6C;</div>
-<p class="charname"><strong>U+FF6C</strong> <a href="#charFF6C">HALFWIDTH KATAKANA LETTER SMALL YA</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF6C">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF6D">
-<div class="charimg">&#xFF6D;</div>
-<p class="charname"><strong>U+FF6D</strong> <a href="#charFF6D">HALFWIDTH KATAKANA LETTER SMALL YU</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF6D">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF6E">
-<div class="charimg">&#xFF6E;</div>
-<p class="charname"><strong>U+FF6E</strong> <a href="#charFF6E">HALFWIDTH KATAKANA LETTER SMALL YO</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF6E">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF6F">
-<div class="charimg">&#xFF6F;</div>
-<p class="charname"><strong>U+FF6F</strong> <a href="#charFF6F">HALFWIDTH KATAKANA LETTER SMALL TU</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF6F">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF70">
-<div class="charimg">&#xFF70;</div>
-<p class="charname"><strong>U+FF70</strong> <a href="#charFF70">HALFWIDTH KATAKANA-HIRAGANA PROLONGED SOUND MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF70">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF71">
-<div class="charimg">&#xFF71;</div>
-<p class="charname"><strong>U+FF71</strong> <a href="#charFF71">HALFWIDTH KATAKANA LETTER A</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF71">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF72">
-<div class="charimg">&#xFF72;</div>
-<p class="charname"><strong>U+FF72</strong> <a href="#charFF72">HALFWIDTH KATAKANA LETTER I</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF72">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF73">
-<div class="charimg">&#xFF73;</div>
-<p class="charname"><strong>U+FF73</strong> <a href="#charFF73">HALFWIDTH KATAKANA LETTER U</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF73">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF74">
-<div class="charimg">&#xFF74;</div>
-<p class="charname"><strong>U+FF74</strong> <a href="#charFF74">HALFWIDTH KATAKANA LETTER E</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF74">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF75">
-<div class="charimg">&#xFF75;</div>
-<p class="charname"><strong>U+FF75</strong> <a href="#charFF75">HALFWIDTH KATAKANA LETTER O</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF75">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF76">
-<div class="charimg">&#xFF76;</div>
-<p class="charname"><strong>U+FF76</strong> <a href="#charFF76">HALFWIDTH KATAKANA LETTER KA</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF76">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF77">
-<div class="charimg">&#xFF77;</div>
-<p class="charname"><strong>U+FF77</strong> <a href="#charFF77">HALFWIDTH KATAKANA LETTER KI</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF77">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF78">
-<div class="charimg">&#xFF78;</div>
-<p class="charname"><strong>U+FF78</strong> <a href="#charFF78">HALFWIDTH KATAKANA LETTER KU</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF78">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF79">
-<div class="charimg">&#xFF79;</div>
-<p class="charname"><strong>U+FF79</strong> <a href="#charFF79">HALFWIDTH KATAKANA LETTER KE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF79">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF7A">
-<div class="charimg">&#xFF7A;</div>
-<p class="charname"><strong>U+FF7A</strong> <a href="#charFF7A">HALFWIDTH KATAKANA LETTER KO</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF7A">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF7B">
-<div class="charimg">&#xFF7B;</div>
-<p class="charname"><strong>U+FF7B</strong> <a href="#charFF7B">HALFWIDTH KATAKANA LETTER SA</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF7B">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF7C">
-<div class="charimg">&#xFF7C;</div>
-<p class="charname"><strong>U+FF7C</strong> <a href="#charFF7C">HALFWIDTH KATAKANA LETTER SI</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF7C">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF7D">
-<div class="charimg">&#xFF7D;</div>
-<p class="charname"><strong>U+FF7D</strong> <a href="#charFF7D">HALFWIDTH KATAKANA LETTER SU</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF7D">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF7E">
-<div class="charimg">&#xFF7E;</div>
-<p class="charname"><strong>U+FF7E</strong> <a href="#charFF7E">HALFWIDTH KATAKANA LETTER SE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF7E">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF7F">
-<div class="charimg">&#xFF7F;</div>
-<p class="charname"><strong>U+FF7F</strong> <a href="#charFF7F">HALFWIDTH KATAKANA LETTER SO</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF7F">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF80">
-<div class="charimg">&#xFF80;</div>
-<p class="charname"><strong>U+FF80</strong> <a href="#charFF80">HALFWIDTH KATAKANA LETTER TA</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF80">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF81">
-<div class="charimg">&#xFF81;</div>
-<p class="charname"><strong>U+FF81</strong> <a href="#charFF81">HALFWIDTH KATAKANA LETTER TI</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF81">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF82">
-<div class="charimg">&#xFF82;</div>
-<p class="charname"><strong>U+FF82</strong> <a href="#charFF82">HALFWIDTH KATAKANA LETTER TU</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF82">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF83">
-<div class="charimg">&#xFF83;</div>
-<p class="charname"><strong>U+FF83</strong> <a href="#charFF83">HALFWIDTH KATAKANA LETTER TE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF83">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF84">
-<div class="charimg">&#xFF84;</div>
-<p class="charname"><strong>U+FF84</strong> <a href="#charFF84">HALFWIDTH KATAKANA LETTER TO</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF84">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF85">
-<div class="charimg">&#xFF85;</div>
-<p class="charname"><strong>U+FF85</strong> <a href="#charFF85">HALFWIDTH KATAKANA LETTER NA</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF85">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF86">
-<div class="charimg">&#xFF86;</div>
-<p class="charname"><strong>U+FF86</strong> <a href="#charFF86">HALFWIDTH KATAKANA LETTER NI</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF86">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF87">
-<div class="charimg">&#xFF87;</div>
-<p class="charname"><strong>U+FF87</strong> <a href="#charFF87">HALFWIDTH KATAKANA LETTER NU</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF87">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF88">
-<div class="charimg">&#xFF88;</div>
-<p class="charname"><strong>U+FF88</strong> <a href="#charFF88">HALFWIDTH KATAKANA LETTER NE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF88">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF89">
-<div class="charimg">&#xFF89;</div>
-<p class="charname"><strong>U+FF89</strong> <a href="#charFF89">HALFWIDTH KATAKANA LETTER NO</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF89">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF8A">
-<div class="charimg">&#xFF8A;</div>
-<p class="charname"><strong>U+FF8A</strong> <a href="#charFF8A">HALFWIDTH KATAKANA LETTER HA</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF8A">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF8B">
-<div class="charimg">&#xFF8B;</div>
-<p class="charname"><strong>U+FF8B</strong> <a href="#charFF8B">HALFWIDTH KATAKANA LETTER HI</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF8B">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF8C">
-<div class="charimg">&#xFF8C;</div>
-<p class="charname"><strong>U+FF8C</strong> <a href="#charFF8C">HALFWIDTH KATAKANA LETTER HU</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF8C">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF8D">
-<div class="charimg">&#xFF8D;</div>
-<p class="charname"><strong>U+FF8D</strong> <a href="#charFF8D">HALFWIDTH KATAKANA LETTER HE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF8D">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF8E">
-<div class="charimg">&#xFF8E;</div>
-<p class="charname"><strong>U+FF8E</strong> <a href="#charFF8E">HALFWIDTH KATAKANA LETTER HO</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF8E">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF8F">
-<div class="charimg">&#xFF8F;</div>
-<p class="charname"><strong>U+FF8F</strong> <a href="#charFF8F">HALFWIDTH KATAKANA LETTER MA</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF8F">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF90">
-<div class="charimg">&#xFF90;</div>
-<p class="charname"><strong>U+FF90</strong> <a href="#charFF90">HALFWIDTH KATAKANA LETTER MI</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF90">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF91">
-<div class="charimg">&#xFF91;</div>
-<p class="charname"><strong>U+FF91</strong> <a href="#charFF91">HALFWIDTH KATAKANA LETTER MU</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF91">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF92">
-<div class="charimg">&#xFF92;</div>
-<p class="charname"><strong>U+FF92</strong> <a href="#charFF92">HALFWIDTH KATAKANA LETTER ME</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF92">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF93">
-<div class="charimg">&#xFF93;</div>
-<p class="charname"><strong>U+FF93</strong> <a href="#charFF93">HALFWIDTH KATAKANA LETTER MO</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF93">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF94">
-<div class="charimg">&#xFF94;</div>
-<p class="charname"><strong>U+FF94</strong> <a href="#charFF94">HALFWIDTH KATAKANA LETTER YA</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF94">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF95">
-<div class="charimg">&#xFF95;</div>
-<p class="charname"><strong>U+FF95</strong> <a href="#charFF95">HALFWIDTH KATAKANA LETTER YU</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF95">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF96">
-<div class="charimg">&#xFF96;</div>
-<p class="charname"><strong>U+FF96</strong> <a href="#charFF96">HALFWIDTH KATAKANA LETTER YO</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF96">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF97">
-<div class="charimg">&#xFF97;</div>
-<p class="charname"><strong>U+FF97</strong> <a href="#charFF97">HALFWIDTH KATAKANA LETTER RA</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF97">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF98">
-<div class="charimg">&#xFF98;</div>
-<p class="charname"><strong>U+FF98</strong> <a href="#charFF98">HALFWIDTH KATAKANA LETTER RI</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF98">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF99">
-<div class="charimg">&#xFF99;</div>
-<p class="charname"><strong>U+FF99</strong> <a href="#charFF99">HALFWIDTH KATAKANA LETTER RU</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF99">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF9A">
-<div class="charimg">&#xFF9A;</div>
-<p class="charname"><strong>U+FF9A</strong> <a href="#charFF9A">HALFWIDTH KATAKANA LETTER RE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF9A">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF9B">
-<div class="charimg">&#xFF9B;</div>
-<p class="charname"><strong>U+FF9B</strong> <a href="#charFF9B">HALFWIDTH KATAKANA LETTER RO</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF9B">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF9C">
-<div class="charimg">&#xFF9C;</div>
-<p class="charname"><strong>U+FF9C</strong> <a href="#charFF9C">HALFWIDTH KATAKANA LETTER WA</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF9C">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF9D">
-<div class="charimg">&#xFF9D;</div>
-<p class="charname"><strong>U+FF9D</strong> <a href="#charFF9D">HALFWIDTH KATAKANA LETTER N</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF9D">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF9E">
-<div class="charimg">&#xFF9E;</div>
-<p class="charname"><strong>U+FF9E</strong> <a href="#charFF9E">HALFWIDTH KATAKANA VOICED SOUND MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF9E">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFF9F">
-<div class="charimg">&#xFF9F;</div>
-<p class="charname"><strong>U+FF9F</strong> <a href="#charFF9F">HALFWIDTH KATAKANA SEMI-VOICED SOUND MARK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FF9F">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-</section>
-
-
-
-
-
-
-
-<section id="halfwidthHangulVariants">
-<h3>Halfwidth hangul variants</h3>
-
-<div class="character" id="charFFA0">
-<div class="charimg">&#xFFA0;</div>
-<p class="charname"><strong>U+FFA0</strong> <a href="#charFFA0">HALFWIDTH HANGUL FILLER</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFA0">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFA1">
-<div class="charimg">&#xFFA1;</div>
-<p class="charname"><strong>U+FFA1</strong> <a href="#charFFA1">HALFWIDTH HANGUL LETTER KIYEOK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFA1">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFA2">
-<div class="charimg">&#xFFA2;</div>
-<p class="charname"><strong>U+FFA2</strong> <a href="#charFFA2">HALFWIDTH HANGUL LETTER SSANGKIYEOK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFA2">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFA3">
-<div class="charimg">&#xFFA3;</div>
-<p class="charname"><strong>U+FFA3</strong> <a href="#charFFA3">HALFWIDTH HANGUL LETTER KIYEOK-SIOS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFA3">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFA4">
-<div class="charimg">&#xFFA4;</div>
-<p class="charname"><strong>U+FFA4</strong> <a href="#charFFA4">HALFWIDTH HANGUL LETTER NIEUN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFA4">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFA5">
-<div class="charimg">&#xFFA5;</div>
-<p class="charname"><strong>U+FFA5</strong> <a href="#charFFA5">HALFWIDTH HANGUL LETTER NIEUN-CIEUC</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFA5">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFA6">
-<div class="charimg">&#xFFA6;</div>
-<p class="charname"><strong>U+FFA6</strong> <a href="#charFFA6">HALFWIDTH HANGUL LETTER NIEUN-HIEUH</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFA6">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFA7">
-<div class="charimg">&#xFFA7;</div>
-<p class="charname"><strong>U+FFA7</strong> <a href="#charFFA7">HALFWIDTH HANGUL LETTER TIKEUT</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFA7">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFA8">
-<div class="charimg">&#xFFA8;</div>
-<p class="charname"><strong>U+FFA8</strong> <a href="#charFFA8">HALFWIDTH HANGUL LETTER SSANGTIKEUT</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFA8">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFA9">
-<div class="charimg">&#xFFA9;</div>
-<p class="charname"><strong>U+FFA9</strong> <a href="#charFFA9">HALFWIDTH HANGUL LETTER RIEUL</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFA9">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFAA">
-<div class="charimg">&#xFFAA;</div>
-<p class="charname"><strong>U+FFAA</strong> <a href="#charFFAA">HALFWIDTH HANGUL LETTER RIEUL-KIYEOK</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFAA">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFAB">
-<div class="charimg">&#xFFAB;</div>
-<p class="charname"><strong>U+FFAB</strong> <a href="#charFFAB">HALFWIDTH HANGUL LETTER RIEUL-MIEUM</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFAB">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFAC">
-<div class="charimg">&#xFFAC;</div>
-<p class="charname"><strong>U+FFAC</strong> <a href="#charFFAC">HALFWIDTH HANGUL LETTER RIEUL-PIEUP</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFAC">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFAD">
-<div class="charimg">&#xFFAD;</div>
-<p class="charname"><strong>U+FFAD</strong> <a href="#charFFAD">HALFWIDTH HANGUL LETTER RIEUL-SIOS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFAD">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFAE">
-<div class="charimg">&#xFFAE;</div>
-<p class="charname"><strong>U+FFAE</strong> <a href="#charFFAE">HALFWIDTH HANGUL LETTER RIEUL-THIEUTH</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFAE">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFAF">
-<div class="charimg">&#xFFAF;</div>
-<p class="charname"><strong>U+FFAF</strong> <a href="#charFFAF">HALFWIDTH HANGUL LETTER RIEUL-PHIEUPH</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFAF">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFB0">
-<div class="charimg">&#xFFB0;</div>
-<p class="charname"><strong>U+FFB0</strong> <a href="#charFFB0">HALFWIDTH HANGUL LETTER RIEUL-HIEUH</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFB0">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFB1">
-<div class="charimg">&#xFFB1;</div>
-<p class="charname"><strong>U+FFB1</strong> <a href="#charFFB1">HALFWIDTH HANGUL LETTER MIEUM</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFB1">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFB2">
-<div class="charimg">&#xFFB2;</div>
-<p class="charname"><strong>U+FFB2</strong> <a href="#charFFB2">HALFWIDTH HANGUL LETTER PIEUP</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFB2">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFB3">
-<div class="charimg">&#xFFB3;</div>
-<p class="charname"><strong>U+FFB3</strong> <a href="#charFFB3">HALFWIDTH HANGUL LETTER SSANGPIEUP</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFB3">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFB4">
-<div class="charimg">&#xFFB4;</div>
-<p class="charname"><strong>U+FFB4</strong> <a href="#charFFB4">HALFWIDTH HANGUL LETTER PIEUP-SIOS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFB4">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFB5">
-<div class="charimg">&#xFFB5;</div>
-<p class="charname"><strong>U+FFB5</strong> <a href="#charFFB5">HALFWIDTH HANGUL LETTER SIOS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFB5">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFB6">
-<div class="charimg">&#xFFB6;</div>
-<p class="charname"><strong>U+FFB6</strong> <a href="#charFFB6">HALFWIDTH HANGUL LETTER SSANGSIOS</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFB6">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFB7">
-<div class="charimg">&#xFFB7;</div>
-<p class="charname"><strong>U+FFB7</strong> <a href="#charFFB7">HALFWIDTH HANGUL LETTER IEUNG</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFB7">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFB8">
-<div class="charimg">&#xFFB8;</div>
-<p class="charname"><strong>U+FFB8</strong> <a href="#charFFB8">HALFWIDTH HANGUL LETTER CIEUC</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFB8">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFB9">
-<div class="charimg">&#xFFB9;</div>
-<p class="charname"><strong>U+FFB9</strong> <a href="#charFFB9">HALFWIDTH HANGUL LETTER SSANGCIEUC</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFB9">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFBA">
-<div class="charimg">&#xFFBA;</div>
-<p class="charname"><strong>U+FFBA</strong> <a href="#charFFBA">HALFWIDTH HANGUL LETTER CHIEUCH</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFBA">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFBB">
-<div class="charimg">&#xFFBB;</div>
-<p class="charname"><strong>U+FFBB</strong> <a href="#charFFBB">HALFWIDTH HANGUL LETTER KHIEUKH</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFBB">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFBC">
-<div class="charimg">&#xFFBC;</div>
-<p class="charname"><strong>U+FFBC</strong> <a href="#charFFBC">HALFWIDTH HANGUL LETTER THIEUTH</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFBC">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFBD">
-<div class="charimg">&#xFFBD;</div>
-<p class="charname"><strong>U+FFBD</strong> <a href="#charFFBD">HALFWIDTH HANGUL LETTER PHIEUPH</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFBD">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFBE">
-<div class="charimg">&#xFFBE;</div>
-<p class="charname"><strong>U+FFBE</strong> <a href="#charFFBE">HALFWIDTH HANGUL LETTER HIEUH</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFBE">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFC2">
-<div class="charimg">&#xFFC2;</div>
-<p class="charname"><strong>U+FFC2</strong> <a href="#charFFC2">HALFWIDTH HANGUL LETTER A</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFC2">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFC3">
-<div class="charimg">&#xFFC3;</div>
-<p class="charname"><strong>U+FFC3</strong> <a href="#charFFC3">HALFWIDTH HANGUL LETTER AE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFC3">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFC4">
-<div class="charimg">&#xFFC4;</div>
-<p class="charname"><strong>U+FFC4</strong> <a href="#charFFC4">HALFWIDTH HANGUL LETTER YA</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFC4">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFC5">
-<div class="charimg">&#xFFC5;</div>
-<p class="charname"><strong>U+FFC5</strong> <a href="#charFFC5">HALFWIDTH HANGUL LETTER YAE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFC5">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFC6">
-<div class="charimg">&#xFFC6;</div>
-<p class="charname"><strong>U+FFC6</strong> <a href="#charFFC6">HALFWIDTH HANGUL LETTER EO</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFC6">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFC7">
-<div class="charimg">&#xFFC7;</div>
-<p class="charname"><strong>U+FFC7</strong> <a href="#charFFC7">HALFWIDTH HANGUL LETTER E</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFC7">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFCA">
-<div class="charimg">&#xFFCA;</div>
-<p class="charname"><strong>U+FFCA</strong> <a href="#charFFCA">HALFWIDTH HANGUL LETTER YEO</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFCA">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFCB">
-<div class="charimg">&#xFFCB;</div>
-<p class="charname"><strong>U+FFCB</strong> <a href="#charFFCB">HALFWIDTH HANGUL LETTER YE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFCB">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFCC">
-<div class="charimg">&#xFFCC;</div>
-<p class="charname"><strong>U+FFCC</strong> <a href="#charFFCC">HALFWIDTH HANGUL LETTER O</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFCC">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFCD">
-<div class="charimg">&#xFFCD;</div>
-<p class="charname"><strong>U+FFCD</strong> <a href="#charFFCD">HALFWIDTH HANGUL LETTER WA</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFCD">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFCE">
-<div class="charimg">&#xFFCE;</div>
-<p class="charname"><strong>U+FFCE</strong> <a href="#charFFCE">HALFWIDTH HANGUL LETTER WAE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFCE">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFCF">
-<div class="charimg">&#xFFCF;</div>
-<p class="charname"><strong>U+FFCF</strong> <a href="#charFFCF">HALFWIDTH HANGUL LETTER OE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFCF">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFD2">
-<div class="charimg">&#xFFD2;</div>
-<p class="charname"><strong>U+FFD2</strong> <a href="#charFFD2">HALFWIDTH HANGUL LETTER YO</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFD2">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFD3">
-<div class="charimg">&#xFFD3;</div>
-<p class="charname"><strong>U+FFD3</strong> <a href="#charFFD3">HALFWIDTH HANGUL LETTER U</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFD3">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFD4">
-<div class="charimg">&#xFFD4;</div>
-<p class="charname"><strong>U+FFD4</strong> <a href="#charFFD4">HALFWIDTH HANGUL LETTER WEO</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFD4">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFD5">
-<div class="charimg">&#xFFD5;</div>
-<p class="charname"><strong>U+FFD5</strong> <a href="#charFFD5">HALFWIDTH HANGUL LETTER WE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFD5">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFD6">
-<div class="charimg">&#xFFD6;</div>
-<p class="charname"><strong>U+FFD6</strong> <a href="#charFFD6">HALFWIDTH HANGUL LETTER WI</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFD6">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFD7">
-<div class="charimg">&#xFFD7;</div>
-<p class="charname"><strong>U+FFD7</strong> <a href="#charFFD7">HALFWIDTH HANGUL LETTER YU</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFD7">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFDA">
-<div class="charimg">&#xFFDA;</div>
-<p class="charname"><strong>U+FFDA</strong> <a href="#charFFDA">HALFWIDTH HANGUL LETTER EU</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFDA">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFDB">
-<div class="charimg">&#xFFDB;</div>
-<p class="charname"><strong>U+FFDB</strong> <a href="#charFFDB">HALFWIDTH HANGUL LETTER YI</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFDB">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFDC">
-<div class="charimg">&#xFFDC;</div>
-<p class="charname"><strong>U+FFDC</strong> <a href="#charFFDC">HALFWIDTH HANGUL LETTER I</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFDC">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-</section>
-
-
-
-
-
-
-
-<section id="fullwidthSymbolVariants">
-<h3>Fullwidth symbol variants</h3>
-
-<div class="character" id="charFFE0">
-<div class="charimg">&#xFFE0;</div>
-<p class="charname"><strong>U+FFE0</strong> <a href="#charFFE0">FULLWIDTH CENT SIGN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFE0">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFE1">
-<div class="charimg">&#xFFE1;</div>
-<p class="charname"><strong>U+FFE1</strong> <a href="#charFFE1">FULLWIDTH POUND SIGN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFE1">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFE2">
-<div class="charimg">&#xFFE2;</div>
-<p class="charname"><strong>U+FFE2</strong> <a href="#charFFE2">FULLWIDTH NOT SIGN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFE2">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFE3">
-<div class="charimg">&#xFFE3;</div>
-<p class="charname"><strong>U+FFE3</strong> <a href="#charFFE3">FULLWIDTH MACRON</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFE3">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFE4">
-<div class="charimg">&#xFFE4;</div>
-<p class="charname"><strong>U+FFE4</strong> <a href="#charFFE4">FULLWIDTH BROKEN BAR</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFE4">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFE5">
-<div class="charimg">&#xFFE5;</div>
-<p class="charname"><strong>U+FFE5</strong> <a href="#charFFE5">FULLWIDTH YEN SIGN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFE5">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFE6">
-<div class="charimg">&#xFFE6;</div>
-<p class="charname"><strong>U+FFE6</strong> <a href="#charFFE6">FULLWIDTH WON SIGN</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFE6">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-</section>
-
-
-
-
-
-
-
-<section id="halfwidthSymbolVariants">
-<h3>Halfwidth symbol variants</h3>
-
-<div class="character" id="charFFE8">
-<div class="charimg">&#xFFE8;</div>
-<p class="charname"><strong>U+FFE8</strong> <a href="#charFFE8">HALFWIDTH FORMS LIGHT VERTICAL</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFE8">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFE9">
-<div class="charimg">&#xFFE9;</div>
-<p class="charname"><strong>U+FFE9</strong> <a href="#charFFE9">HALFWIDTH LEFTWARDS ARROW</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFE9">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFEA">
-<div class="charimg">&#xFFEA;</div>
-<p class="charname"><strong>U+FFEA</strong> <a href="#charFFEA">HALFWIDTH UPWARDS ARROW</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFEA">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFEB">
-<div class="charimg">&#xFFEB;</div>
-<p class="charname"><strong>U+FFEB</strong> <a href="#charFFEB">HALFWIDTH RIGHTWARDS ARROW</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFEB">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFEC">
-<div class="charimg">&#xFFEC;</div>
-<p class="charname"><strong>U+FFEC</strong> <a href="#charFFEC">HALFWIDTH DOWNWARDS ARROW</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFEC">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFED">
-<div class="charimg">&#xFFED;</div>
-<p class="charname"><strong>U+FFED</strong> <a href="#charFFED">HALFWIDTH BLACK SQUARE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFED">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-
-<div class="character" id="charFFEE">
-<div class="charimg">&#xFFEE;</div>
-<p class="charname"><strong>U+FFEE</strong> <a href="#charFFEE">HALFWIDTH WHITE CIRCLE</a></p>
-<p class="univiewLink"><a target="_blank" href="/uniview/?char=FFEE">See in UniView</a></p>
-<div class="unicodenotes"></div>
-<div class="notes">
-</div>
-</div>
-</section>
+<section id="supplemental">
+<h2>Supplemental Punctuation block</h2>
 
+<div class="character" id="char2E00"></div>
+
+<div class="character" id="char2E01"></div>
+
+<div class="character" id="char2E02"></div>
+
+<div class="character" id="char2E03"></div>
+
+<div class="character" id="char2E04"></div>
+
+<div class="character" id="char2E05"></div>
+
+<div class="character" id="char2E06"></div>
+
+<div class="character" id="char2E07"></div>
+
+<div class="character" id="char2E08"></div>
+
+<div class="character" id="char2E09"></div>
+
+<div class="character" id="char2E0A"></div>
+
+<div class="character" id="char2E0B"></div>
+
+<div class="character" id="char2E0C"></div>
+
+<div class="character" id="char2E0D"></div>
+
+<div class="character" id="char2E0E"></div>
+
+<div class="character" id="char2E0F"></div>
+
+<div class="character" id="char2E10"></div>
+
+<div class="character" id="char2E11"></div>
+
+<div class="character" id="char2E12"></div>
+
+<div class="character" id="char2E13"></div>
+
+<div class="character" id="char2E14"></div>
+
+<div class="character" id="char2E15"></div>
+
+<div class="character" id="char2E16"></div>
+
+<div class="character" id="char2E17"></div>
+
+<div class="character" id="char2E18"></div>
+
+<div class="character" id="char2E19"></div>
+
+<div class="character" id="char2E1A"></div>
+
+<div class="character" id="char2E1B"></div>
+
+<div class="character" id="char2E1C"></div>
+
+<div class="character" id="char2E1D"></div>
+
+<div class="character" id="char2E1E"></div>
+
+<div class="character" id="char2E1F"></div>
+
+<div class="character" id="char2E20"></div>
+
+<div class="character" id="char2E21"></div>
+
+<div class="character" id="char2E22"></div>
+
+<div class="character" id="char2E23"></div>
+
+<div class="character" id="char2E24"></div>
+
+<div class="character" id="char2E25"></div>
+
+<div class="character" id="char2E26"></div>
+
+<div class="character" id="char2E27"></div>
+
+<div class="character" id="char2E28"></div>
+
+<div class="character" id="char2E29"></div>
+
+<div class="character" id="char2E2A"></div>
+
+<div class="character" id="char2E2B"></div>
+
+<div class="character" id="char2E2C"></div>
+
+<div class="character" id="char2E2D"></div>
+
+<div class="character" id="char2E2E"></div>
+
+<div class="character" id="char2E2F"></div>
+
+<div class="character" id="char2E30"></div>
+
+<div class="character" id="char2E31"></div>
+
+<div class="character" id="char2E32"></div>
+
+<div class="character" id="char2E33"></div>
+
+<div class="character" id="char2E34"></div>
+
+<div class="character" id="char2E35"></div>
+
+<div class="character" id="char2E36"></div>
+
+<div class="character" id="char2E37"></div>
+
+<div class="character" id="char2E38"></div>
+
+<div class="character" id="char2E39"></div>
+
+<div class="character" id="char2E3A"></div>
+
+<div class="character" id="char2E3B"></div>
+
+<div class="character" id="char2E3C"></div>
+
+<div class="character" id="char2E3D"></div>
+
+<div class="character" id="char2E3E"></div>
+
+<div class="character" id="char2E3F"></div>
+
+<div class="character" id="char2E40"></div>
+
+<div class="character" id="char2E41"></div>
+
+<div class="character" id="char2E42"></div>
+
+<div class="character" id="char2E43"></div>
+
+<div class="character" id="char2E44"></div>
+
+<div class="character" id="char2E45"></div>
+
+<div class="character" id="char2E46"></div>
+
+<div class="character" id="char2E47"></div>
+
+<div class="character" id="char2E48"></div>
+
+<div class="character" id="char2E49"></div>
+
+<div class="character" id="char2E4A"></div>
+
+<div class="character" id="char2E4B"></div>
+
+<div class="character" id="char2E4C"></div>
+
+<div class="character" id="char2E4D"></div>
+
+<div class="character" id="char2E4E"></div>
+
+<div class="character" id="char2E4F"></div>
+
+<div class="character" id="char2E50"></div>
+
+<div class="character" id="char2E51"></div>
+
+<div class="character" id="char2E52"></div>
+
+<div class="character" id="char2E53"></div>
+
+<div class="character" id="char2E54"></div>
+
+<div class="character" id="char2E55"></div>
+
+<div class="character" id="char2E56"></div>
+
+<div class="character" id="char2E57"></div>
+
+<div class="character" id="char2E58"></div>
+
+<div class="character" id="char2E59"></div>
+
+<div class="character" id="char2E5A"></div>
+
+<div class="character" id="char2E5B"></div>
+
+<div class="character" id="char2E5C"></div>
+
+<div class="character" id="char2E5D"></div>
 
 </section>
-
-
-
-
 
 
 
@@ -4396,17 +539,22 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 <h2>Acknowledgements</h2>
 <p>The following people have provided helpful advice.</p>
 <ul>
-  <li><a href="https://github.com/r12a/r12a.github.io/issues/1">Denis Moyogo Jacquerye</a></li>
+<li><a href="https://github.com/r12a/r12a.github.io/issues/1">Denis Moyogo Jacquerye</a></li>
+<li>Neil Patel</li>
+<li>Lorna Evans</li>
 </ul>
 </section-->
 
+
+
+
 <section id="refs">
 <h2>References</h2>
-<ul>
-  <li>[ <a class="fnref" href="#refs">b</a> ] Robert Bringhurst, <cite>The Elements of Typographic Style, 12th ed., ISBN 978-0-88179-212-6</cite></li>
+ <ol>
+ <li>[ <a class="fnref" href="#refs">b</a> ] Robert Bringhurst, <cite>The Elements of Typographic Style, 12th ed., ISBN 978-0-88179-212-6</cite></li>
 <li>[ <a class="fnref" href="http://www.unicode.org/versions/Unicode12.0.0/ch23.pdf#Layout">us</a> ] <cite>The Unicode Standard, v12</cite> <a href="https://www.unicode.org/versions/Unicode12.0.0/ch23.pdf">Special areas &amp; format characters</a></li>
 <li>[ <a class="fnref" href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">sk</a> ] SIL, <cite><a href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">The order of components in Khmer orthographical syllables</a></cite></li>
-</ul>
+</ol>
 </section>
 
 
@@ -4414,11 +562,24 @@ onChange="var hex=this.value; if (hex!=''){ document.location = getFindStr(hex);
 
 
 
-<script src="../../shared/scriptdb/punctuation.js">  </script>
-
 <script>
-replaceStuff('', 'punc', spreadsheet, '', 'und', '', cols, false)
-</script> 
+addBasics('langTag','dir')
+</script>
+
+
+
+
+
+
+<script src="../../shared/scriptdb/punctuation.js">/* declares spreadsheet */</script>
+<script src="XX-details.html">/* has the actual note data */</script>
+<script src="../../shared/manifests/punctuation.js">/* global variables */</script>
+<script>
+addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
+addExamples(letterClassName)
+convertTranscriptionData(lang)
+</script>
+
 
 
 
@@ -4435,7 +596,17 @@ replaceStuff('', 'punc', spreadsheet, '', 'und', '', cols, false)
 
 
 <script>
-initialise('/scripts/punctuation/block','punctuation')
+window.version = 'v28'
+window.scriptName = 'Punctuation'
+window.ghDirectory = 'punctuation'
+window.blockDirectory = 'punctuation'
+window.languageList = ['en'] // lang tags for each orthography handled
+window.detailsfileList = ['en'] // first part of xx-details for each orthography
+window.scriptISO = 'latn'
+window.webfonts = ["Noto Sans WF"]
+window.defaultSize = '24px'
+
+buildPage()
 </script>
 </body>
 </html>
