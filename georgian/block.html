@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en-GB">  <!-- NEED TO SORT OUT THE DB FILES !  -->
+<html lang="en-GB">
 <head>
 <meta charset="utf-8"/>
 <title>Georgian character notes</title>
 <meta name="description" content="Notes about characters in the Unicode Georgian script blocks."/>
 <link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../common/block-style.css" />
+<link rel="stylesheet" href="../common28/block-style.css" />
 <link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/fontdb/db.js"> </script>
@@ -14,22 +14,20 @@
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/all-names.js"></script>
-<script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
-<script src="../common/block-functions.js"></script>
-<script src="../common/transliterate.js"></script>
+<script src="../common28/block-functions.js"></script>
+<script src="../common28/transliterate.js"></script>
 <script src="../../app-charuse/char_lang.js"></script>
 <script src="../../app-charuse/langs.js"></script>
-<script src="../common/egcode.js"></script>
-<script src="../common/references.js"></script>
+<script src="../common28/egcode.js"></script>
+<script src="../common28/references.js"></script>
 <script src="refs.js"></script>
 
 <script src="ka-examples.js"></script>
 <script src="ka-translit.js">  </script>
 
 <script src="../../uniview/descriptions.js"></script> 
-<script src="../../uniview/u.js"></script> 
 
 
 <style id="includeStyles"></style>
@@ -486,14 +484,8 @@ addBasics('ka','ltr')
 
 <script src="../../shared/scriptdb/geor.js">  </script>
 <script src="ka-details.html">  </script>
+<script src="../../shared/manifests/geor-ka.js">/* global variables */</script>
 <script>
-window.languageName = 'Georgian'
-window.letterClassName = 'ka'
-window.lang = 'ka'
-window.direction = ''
-window.explainerDir = 'georgian/'
-window.charappDir = 'geor-ka/'
-
 addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
 addExamples(letterClassName)
 convertTranscriptionData(lang)
@@ -502,14 +494,8 @@ convertTranscriptionData(lang)
 
 <script src="../../shared/scriptdb/geor-other.js">  </script>
 <script src="other-details.html">  </script>
+<script src="../../shared/manifests/geor-other.js">/* global variables */</script>
 <script>
-window.languageName = 'Other languages'
-window.letterClassName = 'other'
-window.lang = 'ka'
-window.direction = ''
-window.explainerDir = ''
-window.charappDir = 'geor-all/'
-
 addDetails (languageName, letterClassName, lang, direction, spreadsheet, cols)
 addExamples(letterClassName)
 convertTranscriptionData(lang)
@@ -535,7 +521,7 @@ convertTranscriptionData()
 
 
 <script>
-window.version = 'v27'
+window.version = 'v28'
 window.scriptName = 'Georgian'
 window.ghDirectory = 'georgian'
 window.blockDirectory = 'georgian'
@@ -545,9 +531,7 @@ window.scriptISO = 'geor'
 window.webfonts = ["BGP 2017 DejaVu Serif WF", "BGP 2017 DejaVu Sans WF", "Noto Sans Georgian WF", "Noto Serif Georgian WF"]
 window.defaultSize = '24px'
 
-initialise(`/scripts/${ blockDirectory }/block`, ghDirectory, detailsfileList, version)
-for (i=0;i<languageList.length;i++) autoTransliterate(languageList[i])
-makeFontChanger(languageList.join(','), scriptISO, webfonts, defaultSize)
+buildPage()
 </script>
 </body>
 </html>
