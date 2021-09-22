@@ -2,13 +2,13 @@ function addPageFeatures () {
     initialiseSummary(window.blockDir, window.langTag, window.scriptSummaryTableName, window.explainerDir)
     autoTransliterate(langTag)
     makeFontChanger(langTag, scriptTag, pageWebfonts, defaultSize)
+    pointToSummaryPages()
     checkParameters()
     }
 
 
 function initialiseSummary (blockDirectory, lang, tableName, dir) {
 	doHeadersFooters(dir)
-	//runCharCounts()
     makeIndexIntro(document.getElementById('index_intro'))
     makeTables(lang)
 	if (typeof addExamples !== 'undefined') addExamples(lang)
@@ -24,6 +24,7 @@ function initialiseSummary (blockDirectory, lang, tableName, dir) {
 	setCharOnclicks()
 	if (typeof reflist !== 'undefined') createReferences(lang)
 	//if (typeof reflist !== 'undefined') chooseRelevantRefs()
+    if (scriptLanguageList) makeScriptLanguageList()
     }
 
 
@@ -128,49 +129,15 @@ function listAllIndexCharacters (scriptISO, pickerName) {
 
 
 
-function runCharCounts () {
-    // creates the showStats table
+
+
+function pointToSummaryPages () {
+    // create links for various anchors such as line-breaking properties etc
     
-    var out = ''
-    
-    // find all the characters in the index
-    var allItems = ''
-    listItems = document.getElementById('index').querySelectorAll('.listItem')
-    for (i=0;i<listItems.length;i++) allItems += listItems[i].textContent
-	out += '<tr><th>All</th><td id="allCharList">'+allItems+'</td><td id="allCharListTotal">'+allItems.length+'</td></tr>'
-    out += '<tr><th colspan="3" style="font-weight:bold; text-align:start;">&nbsp;</td></tr>'
-    
-	out += '<tr><th>Main</th><td id="allCharList">'+getOrthographyList('.characterBox', 'Main')+'</td><td id="allCharListTotal">'+allItems.length+'</td></tr>'
-	out += getOrthographyList('.characterBox', 'Main')
-	out += runCharCount('.auxiliaryBox', 'Auxiliary')
-	out += runCharCount('.formattingBox', 'Formatting')
-	out += runCharCount('.archaicBox', 'Archaic')
-	out += runCharCount('.foreignBox', 'Foreign')
-	out += runCharCount('.otherBox', 'Other')
-	out += runCharCount('.deprecatedBox', 'Deprecated')
-	
-    //out += '<tr><th>&nbsp;</th><td><strong>List by general category:</strong></td><td>&nbsp;</td></tr>'
-	//out += runCategoryCharCount('index_letters', 'Letter')
-	//out += runCategoryCharCount('index_cchars', 'Marks')
-	//out += runCategoryCharCount('index_numbers', 'Numbers')
-	//out += runCategoryCharCount('index_punctuation', 'Punctuation')
-	//out += runCategoryCharCount('index_symbols', 'Symbols')
-	//out += runCategoryCharCount('index_separators', 'Separators')
-	
-	document.getElementById('charCountList').innerHTML = out
-    
-    if (document.getElementById('showLinebreaks')) document.getElementById('showLinebreaks').href = '../apps/listlinebreak?chars='+encodeURI(runCharCount('.characterBox', 'index', true) + runCharCount('.auxiliaryBox', 'index', true) + runCharCount('.formattingBox', 'index', true))
+    if (document.getElementById('showLinebreaks')) document.getElementById('showLinebreaks').href = '../apps/listlinebreak?chars='+encodeURI(getOrthographyList('.characterBox', 'index', true) + getOrthographyList('.auxiliaryBox', 'index', true))
 
-    if (document.getElementById('showCategories')) document.getElementById('showCategories').href = '../apps/listcategories?chars='+encodeURI(runCharCount('.characterBox', 'index', true) + runCharCount('.auxiliaryBox', 'index', true) + runCharCount('.formattingBox', 'index', true))
-
-    if (document.getElementById('showBlocks')) document.getElementById('showBlocks').href = '../../app-listcharacters?chars='+encodeURI(runCharCount('.characterBox', 'index', true) + runCharCount('.auxiliaryBox', 'index', true) + runCharCount('.formattingBox', 'index', true))
-
-    if (document.getElementById('showBidiClass')) document.getElementById('showBidiClass').href = '../apps/listbidi?chars='+encodeURI(runCharCount('.characterBox', 'index', true) + runCharCount('.auxiliaryBox', 'index', true) + runCharCount('.formattingBox', 'index', true))
-
-    if (document.getElementById('showIndicSyllables')) document.getElementById('showIndicSyllables').href = '../apps/listindic?chars='+encodeURI(runCharCount('.characterBox', 'index', true) + runCharCount('.auxiliaryBox', 'index', true) + runCharCount('.formattingBox', 'index', true))
-
+    if (document.getElementById('showBidiClass')) document.getElementById('showBidiClass').href = '../apps/listbidi?chars='+encodeURI(getOrthographyList('.characterBox', 'index', true) + getOrthographyList('.auxiliaryBox', 'index', true))
 	}
-
 
 
 
@@ -1573,5 +1540,33 @@ function checkParameters () {
             }
         }
     }
+
+
+
+
+
+
+
+
+
+function makeScriptLanguageList () {
+    // fills in the "Languages using the ... script" section, using an object defined in refs.js
+    var out = ''
+    var count = 0
+    for (var langtag in scriptLanguageList) {
+        if (scriptLanguageList[langtag].url) out += `<li class="linkedOrthography"><a href="${ scriptLanguageList[langtag].url }">${ scriptLanguageList[langtag].name } [${ langtag }]</a></li>\n`
+        else out += `<li>${ scriptLanguageList[langtag].name } [${ langtag }]</li>\n`
+        count++
+        }
+    out += `<li><i>Total: ${ count }</i></li>`
+    document.getElementById('scriptLanguageList').innerHTML = out
+    scriptLanguageList = ''
+    }
+
+
+
+
+
+
 
 
