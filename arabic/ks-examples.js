@@ -1,5 +1,6 @@
 /*
 @ Source: https://en.wiktionary.org/w/index.php?title=Category:Kashmiri_terms_with_IPA_pronunciation&pagefrom=%D8%B2%D8%A7%D9%85%D8%AA%D9%8F%D8%B1%0A%D8%B2%D8%A7%D9%85%D8%AA%D9%8F%D8%B1#mw-pages
+@ Source: https://en.wiktionary.org/wiki/Category:Kashmiri_lemmas
 § 'Noto Nastaliq Urdu'
 # 200
 ~ rtl
@@ -11,54 +12,155 @@
 
 autoExpandExamples.ks = `
 
+
 آب|water|aːb
 آتھوار|Sunday|aːtʰwaːr
 آزاد|free, independent|aːzaːd
 آزٲدی|freedom, liberty|ɑːzəːdiː
 آسُن|to be, exist|aːsun
 آشَنؠ|wife|aːʃanʲ
-آشێنؠ|wife|aːʃenʲ
+آشیٚنؠ|wife|aːʃenʲ
+آلَو||
+آوٕرُن||
+آوٕسُن||
 آپراوُن|to feed|aːpraːʋun
-اۆنْجوٗر|fig|ənd͡ʒiːr
+آگُر||
+أسؠ||
+أمیٖر||
 أنْز|male swan|ə̃z
 أنْزِنؠ|female swan|ə̃zinʲ
+أنْجیٖر||
+أنْز||
+أنْزِنؠ||
+أچھ||
+أہرُن||
+ؤری||
 ؤٹِل|cockroach|wəʈil
 ؤہراتھ|rainy season|wəhraːtʰ
-ئارىسلان|lion
-ئىسلام|Islam|islam
+یٔارىسلان|lion
+یٔىسلام|Islam|islam
+او||
 اوش|husband|oːʃ
+اول||
+اوٗ||
 اوٚبُر|cloudy weather|obur
 اوٚنْگٕج|finger|õɡɨd͡ʒ
+اَ||
+اَبؠن||
+اَباووٚز||
+اَبساوُن||
+اَبسُن||
+اَبَل||
+اَبُز||
+اَبوٚد||
+اَبوٚڈ||
+اَبیْوٚن||
+اَتوٗل||
 اَتھٕ|hand|atʰɨ
+اَخبار||
+اَدَم||
+اَدۄے||
+اَرزُن||
 اَرَب|billion|arab
-اَرٕترْٕہ|thirty-eight|arɨtrɨh
+اَرٕترْٕہ|thirty-eight|arɨtrɨh
 اَرٕتٲجِہہ|forty-eight|arɨtəːd͡ʒih
+اَرٕتٲجی||
 اَرٕداہ|eighteen|arɨdaːh
+اَرٕسَتَتھ||
+اَرٕشیٖتھ||
+اَرٕنَمَتھ||
+اَرٕوَنْزاہ||
+اَرٕہٲٹھ||
+اَرژَن||
+اَرژُن||
+اَز||
+اَزماوُن||
 اَسمٲنؠ أنْز|goose|asməːnʲ ə̃z
+اَل||
+اَماپوٚز||
+اَمب||
+اَنُن||
 اَنْدَر|inside|andar
 اَنْگریٖزؠ|English (language)|aŋɡriːzʲ/ãɡriːzʲ
+اَنْدَر||
+اَنْگ||
+اَنْگریٖزؠ||
+اَٹوٗٹ||
+اَٹَل||
+اَٹھووُہ||
+اَپُز||
+اَپوٚر||
+اَپوٚز||
+اَچھُر||
+اَڈُن||
+اَژھوٚل||
+اَکھ ساس اَکھ||
+اَکھ ساس ہَتھ||
+اَکھ ہَتھ تہٕ اَکھ||
 اَکھ|one|akʰ
+اَکھا||
+اَکہٕ ترْٕہ||
+اَکہٕ تٲجِہہ||
+اَکہٕ تٲجی||
+اَکہٕ سَتَتھ||
+اَکہٕ شیٖتھ||
+اَکہٕ نَمَتھ||
+اَکہٕ وَنْزاہ||
+اَکہٕ وُہ||
+اَکہٕ ہٲٹھ||
+اَہلُن||
+اُ||
+اِ||
 اِدرار|urine|idrɑːr
 اِنسان|human|insaːn
-اۆنْجوٗر|fig|ond͡ʒuːr
+اٟں||
+اۄ||
+اۄا||
+اوٚ||
+اوٚبرَس ہؠتُن نار||
+اوٚدُر||
+اوٚر||
+اوٚنْجوٗر|fig|ond͡ʒuːr
+اوٚنْجوٗر|fig|ənd͡ʒiːr
+اوٚڈ||
+اوٚژھ||
+اوٚگُن||
+ای||
 ایٖمان|faith, belief|iːmaːn
+اے||
+اےٚ||
 بؠنتھٕر|nephew|bʲantʰɨr
 بؠنْزٕ|neice|bʲanzɨ
 بابتھٕر|nephew|baːbtʰɨr
+بادام||
 بادَم|almond|baːdaːm
-باشلئانگۇچ|beginning|bɑʃlɑnʁutʃ
+باشلیٔانگۇچ|beginning|bɑʃlɑnʁutʃ
+بانہٕ||
 باوزٕ|neice|baːwzɨ
+باوَتھ||
+باوُت||
 باپتھٕر|nephew|baːptʰɨr
 باہ|twelve|baːh
 برَْسوار|Thursday|braswaːr
+برَْگ|blue heron|brag
+برَْسوار||
+برِْمِج||
 برْور|cat (m)|broːr
 برْٲر|cat (f)|brəːr
+برْؠسوار||
+برْور||
+برْٲر||
 بوزُن|to hear, listen to|boːzun
 بوموار|Tuesday|boːmwaːr
+بوگ||
 بوے|brother|boːj
 بَب|father|bab
+بَر||
 بَرتھا|husband|bartʰaː
 بَرساتھ|rainy season|barsaːtʰ
+بَرُن||
+بَستہٕ||
+بَسُن||
 بَطُخ|duck (m)|batukʰ
 بَطٕچ|duck (f)|batɨt͡ʃ
 بَلُن|to heal|balun
@@ -69,42 +171,94 @@ autoExpandExamples.ks = `
 بَہار|spring|bahaːr
 بَہہ|twelve|bah
 بُتھ|face, mouth|but̪ʰ
+بُلبُل||
 بُڈؠ بَب|grandfather|buɖʲ bab
+بِل بِچُر||
+بِلؠ بِچُر||
 بٔے کاکَنؠ|sister-in-law|bəj kaːkanʲ
 بٕہ|I|bɨ
 بٕہٕر|kestrel|bɨhɨr
 بٕۂر|kestrel|bɨhər
 بٲدرؠتھ|August-September|bəːdrʲatʰ
 بٲدٕر|August-September|bəːdɨr
+بٲدٕرپؠتھ||
+بٲے کاکَنؠ||
+بھَرَت|India|barat
+بہَ||
+بہٕ||
 بۄ|I|bɔ
+بۄ||
 بۄد وار|Wednesday|bɔdwaːr
 بۄنْوار|Tuesday|bɔ̃waːr
-بۆڈ چِلہٕ|December-January|boɖ t͡ʃilɨ
+بوٚڈ چِلہٕ|December-January|boɖ t͡ʃilɨ
+بوٚڈ||
 بیساکھ|April-May|beːsaːkʰ
 بیمہٕ|brother-in-law|beːmɨ
-بیٔنْزٕ|neice|bjənzɨ
-بیٚنہِ|sister|beni
 بیْور|cat (m)|bjoːr
 بیْٲر|cat (f)|bjəːr
-ترْٕہ|thirty|trɨh
+بیٔنْزٕ|neice|bjənzɨ
+بیٚنہِ|sister|beni
+بیْور||
+بیْٲر||
+تارُکھ||
+تاپھ||
+ترَْٹھ||
+ترُْسَتَتھ||
+ترُْنَمَتھ||
+ترُْواہ||
+ترُْوَنْزاہ||
+ترُْہٲٹھ||
 ترْٕے|woman|trɨj
-ترْۆوُہ|twenty-three|trowuh
+ترْوٚوُہ|twenty-three|trowuh
+ترْٕہ|thirty|trɨh
+ترْٕسَتَتھ||
+ترْٕنَمَتھ||
+ترْٕوَنْزاہ||
+ترْٕہ||
+ترْٕہٲٹھ||
+ترْٕے||
+ترْوٚوُہ||
+ترْیٚیہِ شیٖتھ||
+ترْےٚ ہَتھ||
+ترْےٚ||
+توشُن||
+تونْتھ||
+توٗر||
+تَتُن||
 تَرُن|to cross, visit|tarun
+تَژَر||
 تَگُن|to know (skill)|tagun
+تُرُن||
+تُلُن||
+تُلٕر||
 تْرٚے|three|tre
 تٔژ|hot f.|tət͡s
+تٕژھ||
+تٟر|cold|tɨːr
+تھ||
+تھَزَر||
+تھَپھ||
 تھُج|mallard (f)|tʰud͡ʒ
-تۆت|hot m.|tot
+تھۄکھ||
+تہٕ||
+توٚت|hot m.|tot
+تیٖل||
+تیٚنْگُل||
+تیٚیہِ ترْٕہ||
+تیٚیہِ تٲجِہہ||
+تیٚیہِ تٲجی||
 جاناوار|bird|d͡ʒaːnaːwar
 جَدٕ بُڈؠ بَب|great-great-grandfather|d͡ʒadɨ buɖʲ bab
+جَدٕ بُڈؠ بَب||
 جُمعہ|Friday|d͡ʒumaːh
-جۆنوٗب|south|d͡ʒonuːb
+جوٚنوٗب|south|d͡ʒonuːb
 خانہٕ دار|husband|kʰaːnɨdaːr
-خانہٕ دارێنؠ|wife|kʰaːnɨdaːrenʲ
+خانہٕ داریٚنؠ|wife|kʰaːnɨdaːrenʲ
 خاوَنْد|husband|kʰaːwand
 خلق|people|kʰalɨk
 خوتەن|Khotan
 خَر|donkey|kʰar
+خَر||
 خٔرِنؠ|donkey {f}|kʰərinʲ
 دارُن|to owe|daːrun
 دانْد|bull|dãːd
@@ -112,87 +266,234 @@ autoExpandExamples.ks = `
 داہ لَچھ|million|daːh lat͡ʃʰ
 داہ|ten|daːh
 درُْے|brother-in-law|druj
-درْٕے کاکَنؠ|sister-in-law|drɨj kaːkanʲ
+درْٕے کاکَنؠ|sister-in-law|drɨj kaːkanʲ
+درْٕے||
+درْاگ||
+درْۄکھ||
+درْۄگُن||
+درْوٚٹ||
+درْوٚگ||
+دود||
+دَب||
 دَنْد|tooth, tusk|dãnd
+دَوُن||
 دَکھیُْن|south|dakʰjun
+دَے||
+دُ ہٲٹھ||
+دُسَتَتھ||
+دُنَمَتھ||
+دُوَنْزاہ||
+دُپاسہٕ||
+دُکان||
+دٔنْدٕر||
+دٔہ ساس||
 دٔہ لَچھ|million|dəh lat͡ʃʰ
 دٔہ|ten|dəh
+دٲر||
+دٲن||
 دۄد|milk|dɔd
+دۄدٕ بوے||
+دۄدٕ بیٚنہِ||
+دۄدٕ موج||
+دۄدٕ مٲج||
+دۄہ||
+دۄہَے||
+دۄیہِ ترْٕہ||
+دۄیہِ تٲجِہہ||
+دۄیہِ تٲجی||
+دۄیہِ شیٖتھ||
+دوٚر||
+دوٚگُن||
 دیْارتھٕر|nephew|djaːrtʰɨr
 دیْارٕز|neice|djaːrɨz
+دیْارتھٕر||
+دیْارٕز||
 رؠتہٕ کال|summer|rʲatɨ kaːl
 رؠتہٕ کول|summer|rʲatɨ koːl
+رؠکھ||
 رؠے|ant|rʲaj
+راتھ||
+رازٕ||
+رازٕدٲنؠ||
+رازٕماہ||
 رامہٕ ہوٗن|wolf|raːmɨ huːn
 رامہٕ ہوٗنؠ|she-wolf|raːmɨ huːnʲ
+روزُن||
 روٗد|rain, rainy weather|ruːd
+روٗسؠ کٔٹ||
 روٗن|husband|ruːn
+روٗگ||
+روژُن||
+رَب||
+رَتھ||
+رَنُن||
+رَنْگ|colour|rãɡ
+رَٹُن||
+رَژٕوٲنؠ||
 رِوُن|to cry, weep|riwun
+رِکھ||
 رٔنؠ|wife|rənʲ
+رٕژَر||
+رٕکھ||
+رٟپھ||
+رٲچھ||
+رۄنْگ||
 ریش|beard|reːʃ
 ریٚے|ant|rej
 زؠو|tongue, language|zʲaw
+زاتھ||
+زادۄہ||
+زال||
+زالُن||
 زام|sister-in-law|zaːm
 زامتُر|son-in-law|zaːmtur
+زامَن||
+زان||
+زانُن||
+زاگلُن||
+زوٗن||
+زوٗنہٕ گاش||
 زَبان|language, tongue|zabaːn
+زَرُن||
 زَل|water|zal
 زَنان|woman, wife|zanaːn
+زَنَم||
 زَنْگ|leg|zãɡ
+زَنْگہٕ||
 زُر|grandchild|zur
+زُوُن||
 زٔنؠ|woman|zənʲ
+زٔٹ||
+زٕ ہَتھ||
 زٕ|two|zɨ
-زٲمؠ تٕر گۆبُر|nephew|zəːmʲtɨr ɡobur
+زٕتووُہ||
+زٲمؠ تٕر گوٚبُر|nephew|zəːmʲtɨr ɡobur
 زٲمؠ زٕ|neice|zəːmʲzɨ
 زٲمِتھ نیٚچُو|nephew|zəːmitʰ net͡ʃuw
 زٲمِیہِ|brother-in-law|zəːmiji
 زٲمی|brother-in-law|zəːmiː
-زۆن|man|zon
+زۄو||
+زوٚن|man|zon
+زوٚنْگ||
 زیْو|tongue|zʲaw
+زیٖوَن||
+زیْوٗٹھ||
 زیٹھ|May-June|zeːʈʰ
+زیچھَر||
+سؠکھ||
 ساس|thousand|saːs
 سال|sister-in-law|saːl
+ساوُن||
+سرْوٚگ||
 سونْتھ|spring|sõːtʰ
+سونْتہٕ کال||
+سوٗر||
 سَبٕز|green, raw|sabɨz
+سَتووُہ||
+سَتَتھ||
 سَتُت|hoopoe|satut
+سَتھ ہَتھ||
 سَتھ|seven|satʰ
+سَتہٕ ترْٕہ||
 سَتہٕ تُت|hoopoe|satɨ tut
+سَتہٕ تٲجِہہ||
+سَتہٕ تٲجی||
+سَتہٕ سَتَتھ||
+سَتہٕ شیٖتھ||
+سَتہٕ نَمَتھ||
+سَتہٕ وَنْزاہ||
+سَتہٕ ہٲٹھ||
+سَداہ||
+سَر||
 سَرُف|snake|saruf
+سَرُن||
+سَرُپھ||
+سَنُن||
+سَنْز||
+سَکھ||
+سَگُن||
 سُہ|he, that|su
+سٟتؠ||
 سٲج کوٗر|neice|səːd͡ʒ kuːr
-سٲج گۆبُر|nephew|səːd͡ʒ ɡobur
+سٲج گوٚبُر|nephew|səːd͡ʒ ɡobur
 سٲجُو|brother-in-law|səːd͡ʒuw
 سۄ|she|sɔ
+سۄ||
+سۄاد||
+سۄر||
+سۄرٕگ||
+سۄن||
+سۄنُر||
+سۄنْدَر||
 سۄنیٚنؠ|co-mother-in-law?|sɔnenʲ
-سۆنؠ|co-father-in-law|sonʲ
-سۆک پٔچھَن|northern pintail|sok pət͡ʃʰan
+سۄژَل||
+سوٚنؠ|co-father-in-law|sonʲ
+سوٚک پٔچھَن|northern pintail|sok pət͡ʃʰan
+سیُْن||
+سیٖر||
 شال|jackal|ʃaːl
 شرْاوُن|July-August|ʃraːwun
 شوگہٕ|type of parakeet|ʃoːgɨ
-شيٖتھ|eighty|ʃiːtʰ
+شیٖتھ|eighty|ʃiːtʰ
+شَتہٕ وُہ||
 شُر|child m.|ʃur
 شُرؠ|child f.|ʃurʲ
 شُراہ|sixteen|ʃuɾah
+شُسَتَتھ||
 شُمال|north|ʃumaːl
+شُنَمَتھ||
+شُوَنْزاہ||
+شُپ||
+شُہٲٹھ||
+شُہہ||
 شِشُر|cold season|ʃiʃur
 شٲج|jackal f.|ʃəːd͡ʒ
-شۆکُروار|Friday|ʃokurwaːr
+شۄزَر||
+شوٚکُروار|Friday|ʃokurwaːr
 شیر|tiger|ʃeːr
 شیرنی|tigress|ʃeːrniː
+شیرُن||
 شیرِ بَبَر|lion|ʃeːri babar
+شیٖن||
+شیٚیہِ ترْٕہ||
+شیٚیہِ تٲجِہہ||
+شیٚیہِ تٲجی||
+شیٚیہِ شیٖتھ||
+شیٹھ||
+شےٚ ہَتھ||
 شےٚ|six|ʃe
 صِفَر|zero|sifar
+صِفَر||
 طوطہٕ|parrot|toːtɨ
 لؠو|lick!|lʲaw
+لؠوُن||
+لؠکھ ژارٕنؠ||
+لؠکھ||
+لاہور||
+لایُن||
 لوو|fox|loːw
+لوہوٗر||
+لَبُن||
+لَدُن||
 لَچھ|100,000 (lakh)|lat͡ʃʰ
+لِکھٲرؠ||
+لٔٹؠ تارُکھ||
 لٔڑکہٕ|boy|ləɽkɨ
 لٔڑکی|girl|ləɽkiː
+لٔکٕر||
+لٲر||
+لۄکُٹ||
+لوٚٹ||
+لیٚج||
+ماتامال||
 ماس|maternal aunt|maːs
 ماستُر بوے|cousin|maːstur boːj
 ماستٕر بیٚنہِ|cousin|maːstɨr beni
 ماسُو|maternal uncle|maːsuw
 مالیُْن|maternal home of wife|maːljun
 مام|maternal uncle|maːm
+مامتُر بوے||
+مامتٕر بیٚنہِ||
 مامَنؠ|maternal aunt|maːmanʲ
 ماگ|11th month (Jan-Feb)|maːɡ
 موج|mother|moːd͡ʒ
@@ -201,13 +502,24 @@ autoExpandExamples.ks = `
 مَرٕد|man|marɨd
 مَشرِق|east|maʃrik
 مَغرِب|west|maɡrib
-مَنْجہۆر|9th month (Nov-Dec)|mand͡ʒhor
+مَل||
+مَنْجہوٚر|9th month (Nov-Dec)|mand͡ʒhor
 مَنْگتہٕ نیٚچُو|adopted son|manɡtɨ net͡ʃuw
 مَنْگتہٕ کوٗر|adopted daughter|manɡtɨ kuːr
 مَنْگُن|to ask for|mãɡun
+مَنْجہوٚر||
+مَنْدَر||
+مَنْز||
+مَنْگتہٕ نیٚچُو||
+مَنْگتہٕ کوٗر||
+مَنْگُن||
+مَکان||
 مَگَر مَژھ|crocodile|magar mat͡sʰ
+مَگَر||
 مَہارازٕ|bridegroom|mahaːraːzɨ
 مَہاریٚنؠ|bride|mahaːrenʲ
+مُج||
+مٔشیٖد||
 مٔچھ|fly (insect)|mət͡ʃʰ
 مٔہنیُْو|man|məhnjuw
 مٕتھٕر|urine|mɨtʰɨr
@@ -217,105 +529,316 @@ autoExpandExamples.ks = `
 مۄنْجہِ ہور|9th month (Nov-Dec)|mɔnd͡ʒihoːr
 مۄنْگُر|kid m. (goat)|mɔnɡur
 مۄنْگٕر|kid f. (goat)|mɔnɡɨr
-مۆہنیُْو|man|mohnjuw
+مۄنْجہِ ہور||
+مۄنْگُر||
+مۄنْگٕر||
+مۄٹُن||
+مۄچَر||
+مۄژُن||
+مۄکھٕ||
+موٚدُر||
+موٚلُت||
+موٚٹ||
+موٚہ||
+موٚہنیُْو|man|mohnjuw
+میچھَر||
+نار||
+ناس||
 نانؠ|grandmother|naːnʲ
+ناو||
+ناوُت||
+ناگ||
+نور||
 نوٗل|mongoose|nuːl
 نَب|sky, heaven|nab
+نَس||
 نَشُن|to be destroyed|naʃun
 نَمَتھ|ninety|namatʰ
+نَمہٕ نَمَتھ||
 نَنُن|to become apparent|nanun
+نَو شَتھ||
 نَو|nine|naw
+نُنہٕ||
 نِلٕج|mallard m.|nilɨd͡ʒ
+نٔر||
 نۄش|daughter-in-law|nɔʃ
-نۆتھ|zero|notʰ
+نوٚتھ|zero|notʰ
+نوٚر||
 نیتھٕر|marriage|neːtʰɨr
+نیرُن||
+نیُْک||
 نیٚچُو|son|net͡ʃuːw
+وؠٹھُن||
 واتُن|to arrive at a place|ʋaːtun
 واریُْل|shikra|waːrjul
+وان||
 وانْدُر|monkey|wãːdur
 وانْگُن|aubergine|wãːɡun
+وانْگُن||
+وایُن||
 وورٕ بوے|step-brother|woːrɨ boːj
 وورٕ بیٚنہِ|step-sister|woːrɨ beni
-ووٗنٛٹ|camel m.|wũːʈ
-ووٗںْٹ|camel m.|wũːʈ
+وورٕ موج||
+وورٕ مول||
+وورٕ مٲج||
 ووٗنْٹِنؠ|camel f.|wũːʈinʲ
+ووٗنْٹ|camel m.|wũːʈ
+ووٗنْٹِنؠ||
+ووٗنْٹھ||
+ووٗںْٹ|camel m.|wũːʈ
 وَدُن|to cry, weep|ʋadun
 وَرشا کال|rainy season|warʃaː kaːl
+وَن ہٲر||
 وَنْدٕ|winter|wandɨ
 وَژھٕر|2nd month (Apr-May)|wahʲakʰ
 وَژھٕر|calf f.|wat͡sʰɨr
+وَہؠکھ||
+وُزٕمَل||
+وُشنیر||
+وُشُن||
+وُلٹُن||
 وُہ|twenty|wuh
+وٲد||
+وٲریُْو||
+وٲنؠ||
 وۄتُر|north|wɔtur
 وۄزُل|red|wɔzul
-وۆژھ|calf m.|wot͡sʰ
-يېڭىسار|Yangi Hissary
+ووٚژھ|calf m.|wot͡sʰ
+ویر||
+ویٖر||
+یېڭىسار|Yangi Hissary
 ٲس|mouth|əːs
 ٲشِد|7th month (Sep-Oct)|əːʃid
+ٲشٕژ||
+ٲٹھ شَتھ||
 ٲٹھ|eight|əːʈʰ
+ٲڈراوُن||
+ٲڈرُن||
+ٹوٗکٕر||
+ٹَر||
+ٹَنْگ|pear|tãg
+ٹٔٹ||
+ٹھ||
+ٹھوٗل||
+ٹھۄل||
+ٹۄپھ||
+پ||
+پاتھُن||
+پاتھٕناوُن||
 پادَر سٕہہ|lion|paːdar sɨh
-پانْژٕ ترْٕہ|thirty-five|pãːt͡sɨtrɨh
+پاس||
+پانْژٕ ترْٕہ|thirty-five|pãːt͡sɨtrɨh
 پانْژھ|five|pãːt͡sʰ
+پانْژٕ ترْٕہ||
+پانْژٕ تٲجِہہ||
+پانْژٕ تٲجی||
+پانْژٕ سَتَتھ||
+پانْژٕ شیٖتھ||
+پانْژٕ نَمَتھ||
+پانْژٕ وَنْزاہ||
+پانْژٕ ہٲٹھ||
+پانْژھ ہَتھ||
+پانْژھ||
+پاوُن||
+پرَْتھ||
+پرَْتھُن||
+پرَْزان||
+پرَْکٕرٲن||
+پرْاگ||
+پرْوٗنْژھ||
+پرْوٚن||
 پوش|flower|poːʃ
+پوشُن||
 پونؠ|water|poːnʲ
+پوٗتھ||
 پوٗر|east|puːr
 پوٗرُن|to fill up|puːɾun
+پوٹھُن||
+پوچھَر لَبُن||
+پوگ||
 پوہ|10th month (Dec-Jan)|poːh
+پَدٕکرْٲم||
 پَرُن|to read|parun
+پَرکھٲے||
+پَزَر||
+پَش||
+پَلَو||
 پَمپوش|lotus|pampoːʃ
+پَنُن||
 پَنْجٲبؠ|Punjabi|pand͡ʒəːbʲ
 پَنْداہ|fifteen|pandaːh
+پَنْداہ||
+پَنْژاہ||
 پَنہٕ پونْپُر|butterfly|panɨpõːpur
 پَچھِم|west|pat͡ʃʰim
 پَچھیُْم|west|pat͡ʃʰjum
+پَژھ||
+پَکھ||
+پَگاہ||
+پَہَر||
 پِتُر بوے|cousin|pitur boːj
 پِتٕر بیٚنہِ|cousin|pitɨr beni
+پِشُل||
 پٔچھِن|mallard|pət͡ʃin
+پٕنْژٕہ||
+پٲدٕ||
 پٲنْژھ|five|pə̃ːt͡sʰ
+پٲنْژٕ ترْٕہ||
+پٲنْژٕ تٲجِہہ||
+پٲنْژٕ تٲجی||
+پٲنْژٕ سَتَتھ||
+پٲنْژٕ شیٖتھ||
+پٲنْژٕ نَمَتھ||
+پٲنْژٕ وَنْزاہ||
+پٲنْژٕ ہٲٹھ||
+پٲنْژھ ہَتھ||
+پٲنْژھ||
 پٲکِستان|Pakistan|pəːkistaːn
+پھ||
+پھؠرَن||
 پھاگُن|12th month (Feb-Mar)|pʰaːɡun
+پھررَْست|poplar tree|pʰrast
+پھورُن||
+پھَبُن||
 پھَش|windstorm, cyclone|pʰaʃ
+پھَکھ||
+پھُرَتھ||
+پھُلَے||
+پھُٹُن||
+پھۄکھ||
+پھۄکہٕ ڈوٗن||
+پھوٚل||
+پھیْوٚک||
+پۄنْد||
 پۄپھ|paternal aunt|pɔpʰ
+پۄپھتُر بوے||
+پۄپھتٕر بیٚنہِ||
+پۄپھُو||
 پۄژھٕ لوو|red fox|pɔt͡sʰɨ loːw
 پۄہ|10th month (Dec-Jan)|pɔh
-پۆتھٕر|son|potʰɨr
-پۆنْز|macaque, monkey|ponz
+پوٚتھٕر|son|potʰɨr
+پوٚد||
+پوٚرمُت||
+پوٚنْز|macaque, monkey|ponz
+پوٚژھ||
 پیٔتٕر|paternal uncle|pjətɨr
+پیٖن||
 پیٚشاب|urine|peʃɑːb
 پیٚچھَنؠ|paternal aunt|pet͡ʃʰanʲ
+پیْوٚل||
+چِلَے خۄرٕد||
+چِلَے کَلان||
+چِلہٕ بَچہِ||
+چِکھ||
+چھ||
+چھاپُن||
 چھَلُن|to wash, clean|t͡ʃʰalun
+چھَپُن||
+چھَک||
 چھَکُن|to throw, discard|t͡ʃʰakun
+چھُک||
 چھِرٕ|lamb|t͡ʃirɨ
+چھوٚت||
+ڈالُن||
+ڈوٹھ||
+ڈَبہٕ||
+ڈَل||
+ڈَلُن||
+ڈوٚلمُت||
+ژؠتھ||
+ژارَو||
 ژارُن|to select|t͡saːrun
+ژاس||
+ژالُن||
+ژور ہَتھ||
 ژور|four|t͡soːr
+ژونْگ||
+ژوٗر||
 ژوٗنْٹھ|apple|t͡sũːʈʰ
+ژَتجِہہ||
+ژَتجی||
 ژَرِ سٕہہ|sparrowhawk|t͡sari sɨh
+ژَسُن||
+ژَم||
+ژَٹُن||
 ژَکَو|ruddy shellduck|t͡sakaw
+ژَکھ||
+ژُسَتَتھ||
+ژُنَمَتھ||
+ژُوَتھ||
+ژُوَنْزاہ||
+ژُہٲٹھ||
 ژِتھٕر|1st month (Mar-Apr)|t͡sitʰɨr
+ژِپِنؠ||
 ژٔر|sparrow f.|t͡sər
 ژٔنْدرٕوار|Monday|t͡səndrɨwaːr
+ژٕ||
 ژٕتھٕر|1st month (Mar-Apr)|t͡sɨtʰɨr
+ژٟرُن||
+ژھ||
 ژھانْڈُن|to look for|t͡sʰãːɖun
 ژھاوُل|goat m.|t͡sʰaːwul
 ژھاوٕج|goat f.|t͡sʰaːwɨd͡ʒ
+ژھَٹُت||
+ژھۄپٕہ||
+ژھوٚٹ||
+ژۄداہ||
+ژۄرٔنْگؠ پٔٹ||
+ژۄروٚنْگ||
+ژۄپٲرؠ||
+ژۄیہِ ترْٕہ||
+ژۄیہِ تٲجِہہ||
+ژۄیہِ تٲجی||
+ژۄیہِ شیٖتھ||
+ژۄے||
+ژوٚوُہ||
+ژوٚٹ||
+ژوٚپ||
+ژوٚک||
 ژیر|delay|t͡seːr
+کاتُر||
 کارتِکھ|eighth month (Oct-Nov)|kaːrtikʰ
 کانْتُر|sparrow m.|kãːtur
 کانْدُر|baker|kãːdur/kãːduɾ
+کانْدُر||
+کانْگٕر||
 کاو |crow|kaːw
+کاہ شَتھ||
 کاہ|eleven|kaːh
-کرْٕم|sea turtle|krɨm
+کرْال|potter|kraːl
 کرْینْکہٕ لٔٹ|lizard|krẽːkɨləʈ
+کرْٕم|sea turtle|krɨm
+کرْاوُت||
+کرْینْکہٕ لٔٹ||
 کوتُر|pigeon|koːtur
 کوٗر|daughter|kuːr
+کوڈ||
+کَتھ||
 کَرور|ten million (crore)|karoːr
 کَرُن|to do|karun
+کَمَر||
 کَن|ear|kan
 کَٹھ|sheep m.|kaʈʰ
+کَپُر||
 کَژھ|armpit|kat͡sʰ
+کَہہ شَتھ||
 کَہہ|eleven|kah
+کُرسی||
 کُس|who|kus
+کُل  ||
 کُل|tree|kul
+کُنْز||
+کُنہٕ ترْٕہ||
+کُنہٕ تٲجِہہ||
+کُنہٕ تٲجی||
+کُنہٕ سَتَتھ||
+کُنہٕ شیٖتھ||
+کُنہٕ نَمَتھ||
+کُنہٕ وَنْزاہ||
+کُنہٕ وُہ||
+کُنہٕ ہٲٹھ||
 کُکِل|collared dove|kukil
+کِتاب||
 کِسؠ بَطُخ|common teal|kisʲ batukʰ
 کِسؠ پوٗت|common teal|kisʲ puːt
 کٔشیٖر|Kashmir Valley|kəʃiːr
@@ -325,40 +848,76 @@ autoExpandExamples.ks = `
 کٲشُر|Kashmiri|kəːʃur
 کٲم|work|kəːm
 کٲنْتُر|sparrow m.|kə̃ːtur
+کٲڈؠ||
+کھ||
+کھؠن چؠن||
 کھانْدَر|marriage|kʰaːndar
+کھوٗپرٕ||
+کھوژُن||
+کھوژٕناوُن||
+کھَرَب||
+کھَسُن||
+کھَنْڈ||
+کھَو||
+کھٔنْڈ||
 کھۄر|foot|kʰɔɾ
-کھیْۆن|to eat|kʰjon
+کھیْوٚن|to eat|kʰjon
+کۄرور||
 کۄلَے|wife|kɔlaj
 کۄلہٕ ٹوٗنْچ|kingfisher|kɔlɨ ʈũːt͡ʃ
+کۄنْگ||
+کۄووک||
 کۄکُر|rooster|kɔkur
 کۄکٕر|hen|kɔkɨr
 کۄہ|mountain, hill|kɔh
-کۆٹ|boy|koʈ
-کۆہ|mountain, hill|koh
+کوٚرمُت||
+کوٚل||
+کوٚٹ|boy|koʈ
+کوٚہ|mountain, hill|koh
+کیاہ||
+کیلہٕ||
 کینْکہٕ لٔٹ|lizard|kẽːkɨləʈ
 کیُْس|common teal|kjus
-کیْۆم|insect|kjom
+کیْوٚم|insect|kjom
+کیْازِ||
+کیْوٚم||
+گاش||
 گام|village|ɡaːm
 گانْٹھ|kite (bird)|ɡãːʈʰ
+گاٹُل||
+گاٹہٕ||
+گاڈ||
 گرَْد|vulture|ɡrad
 گرْیٚشِم|hot season|ɡreʃim
+گونْژھ||
+گوٗر||
+گَراہ||
 گَرواجیٚنؠ|wife|ɡarwaːd͡ʒenʲ
 گَروول|husband|ɡarwoːl
 گَرُن|to sharpen|garun
+گَرٕ||
+گَژھُن||
 گَگُر|rat m.|gagur
 گَگٕر|rat f.|gagɨr
 گُر|horse|gur
 گُل|flower|gul
+گُپُن||
 گِلۂرؠ|squirrel|ɡilhərʲ
 گٔب|ewe|ɡəb
 گٔر|clock, watch|ɡər
+گٔنْڈِتھ||
+گٕس||
 گٲنْٹھ|kite (bird)|ɡə̃ːʈʰ
-گۆبُر|son|ɡobur
+گۄگٕج||
+گوٚبُر|son|ɡobur
 ہار|4th month (Jun-Jul)|haːr
+ہارٕؤٹ||
 ہارٕواتٕج|long-tailed shrike|haːrɨwaːtɨd͡ʒ
 ہانْگُل|stag|hãːɡul
+ہاوُن||
 ہاپُتھ|bear m.|haːputʰ
 ہاپٕژ|bear f.|haːpɨt͡s
+ہونْک||
 ہووُر|wife's father's house|hoːwur
 ہوٗن|dog|huːn
 ہوٗنؠ|dog f.|huːnʲ
@@ -367,34 +926,27 @@ autoExpandExamples.ks = `
 ہَتھ|one hundred|hatʰ
 ہَرُد|autumn|harud
 ہَش|mother-in-law|haʃ
+ہُرکرْاوُت||
+ہِشَر||
 ہِہُر|father-in-law|hihur
-ہۆس|elephant m.|hos
-ہۆست|elephant m.|host
-ہۆچھ|dry f.|hot͡ʃʰ
-ہۆکھ|dry m.|hokʰ
+ہٲر||
+ہۄژُن||
+ہوٚس|elephant m.|hos
+ہوٚست|elephant m.|host
+ہوٚچھ|dry f.|hot͡ʃʰ
+ہوٚکھ|dry m.|hokʰ
+ہیر||
 ہیُْہُر|father-in-law|hjuhur
+ہیٚنْگ||
 ہیٚچھُن|to learn|het͡ʃʰun
 ۂسؠ تِنؠ|elephant f.|həsʲtinʲ
+ۂٹ||
 ۂہرٕ باے|sister-in-law|həhrɨ baːj
 ۂہَر|brother-in-law|həhar
-
-
-
-
-
-
-
-تٟر|cold|tɨːr
-بھَرَت|India|barat
-
-رَنْگ|colour|rãɡ
-برَْگ|blue heron|brag
-بیْور|cat|bjoːr
-وانْگُن|aubergine|waː̃gun
-ٹَنْگ|pear|tãg
-کرْال|potter|kraːl
-پھررَْست|poplar tree|pʰrast
-
+یِنہٕ||
+یہِ||
+یوٚد||
+ییٚلہِ||
 
 
 
