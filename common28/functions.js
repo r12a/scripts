@@ -1308,7 +1308,7 @@ function setTranslitToggle () {
 	label = document.createElement('label')
 	input = document.createElement('input')
 	input.type = 'checkbox'
-	input.checked = true
+	input.checked = false
 	input.id = 'showDetailOnMouseover'
 	label.appendChild(document.createTextNode('Detail on mouseover '))
 	label.appendChild(input)
