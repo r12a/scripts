@@ -4,340 +4,673 @@
 # 200
 ~ ltr
 ! shn
+
+
+tones:
+1	˨˦	40
+2	˩	32
+3	˧˧˨	46
+4	˥	43
+5	˦˨	23
 */
 
 autoExpandExamples.shn = `
 
-ၼႃ|thick|naː
-ၼႃႇ|very|naː˩
-ၼႃႈ|face|naː˧˨
-ၼႃး|paddy field|naː˥
-ၼႃႉ|aunt, uncle|na˦˨ˀ
-ၵူၼ်း|human|kon˥
-ပႆ|walk|paj˨˦
-တွင်|banana leaf|tɔŋ˨˦
-ၶူၼ်|hair|kʰon˨˦
-ယဵပ်ႉ|to sew|jeʔ˦˨
-ၵတ်း|cold|kaʔ˥
-ၼူၵ်ႉ|bird|nok̚˦˨ˀ
-ၽူၼ်|rain|pʰon˨˦
-ထူၺ်ႈၸႂ်|to breathe|tʰoj˧˧˨.t͡ɕaɰ˨˦
-သုၵ်ႈ|to wash|sʰuʔ˧˧˨
-ႁႃႈ|five|haː˧˧˨
-မၢၵ်ႇ|fruit|maːʔ˩
-ၼမ်ႉ|water|nam˦˨
-ၼင်ႈ|to sit|naŋ˧˧˨
+
+
+ငဝ်းလၢႆး|||
+ငိူင်ႉဝႄႈ|to avoid, shun|ŋɤŋ˦˨ˀ.wɛː˧˧˨|
+ငိၼ်း|to hear|ŋin˥
 ငူး|snake|ŋuː˥
-ဝၼ်း|day|wan˥
-လၢဝ်|star|laːw˨˦
+တင်း|all|taŋ˥
+တင်း|with|taŋ˥
+တင်ႇငူင်း|||
+တတ်း|||
+တပ်း|liver|tap˥
+တပ်ႉ|||
+တပ်ႉသိုၵ်း|||
+တမ်|to push|tam˨˦
+တမ်းပူႇ|||
+တမ်ႇငႃႈ|||
+တမ်ႇတိူင်း|||
+တမၢၼ်ႇ|||
+တဝ်ႈ|ash|taw˧˧˨
+တိုင်ႇ|to swell|tɯŋ˩
+တိုတ်ႉ|to pull|tɯt˦˨
+တိုၵ်း|to fight|tɯk˥
+တိူၵ်ႇလိူၼ်|||
+တိူၵ်ႈ|||
+တိၼ်|foot|tin˨˦
+တီႈ|at|tiː˧˧˨
+တီႈလႂ်|where|ti˧˧˨ laɰ
+တူ|me, door|tuː˨˦
+တူင်ႉ|||
+တူၵ်း|to fall|tok˥
+တူၵ်းလူင်း|||
+တူၼ်ႈမႆႉ|||
+တူႇ|rotten|tu˩
+တေႃႉသူင်ႇ|transport|tɔː˦˨ˀ.sʰoŋ˩|
+တဵမ်|full|tem˨˦
+တြႃး|law, justice|traː˥|
+တွင်|banana leaf|tɔŋ˨˦
+တွင်းလၢၼ်း|circular pedestal tray|tɔŋ˥.laːn˥|
+တွင်ႉ|belly|tɔŋ˦˨
+တွင်ႉမႆႈသႆႈလိူတ်ႇ|to be hungry (idiom.)|tɔŋ˦˨ˀ.maj˧˧˨.sʰaj˧˧˨.lɤt̚˩|
+တၢင်း|road|taːŋ˥
+တၢင်းပဵၼ်|||
+တၢင်းႁူႉ|||
+တၢင်းႁၵ်ႉ|||
+တၢင်ႇ|other|taaŋ˩
+တၢင်ႇထီး|||
+တၢၼ်း|||
+တၢႆ|to die|taːj˨˦
+တၢႆ|||
+တၼင်းလႃႇ|||
+တၼင်းၼူၺ်ႇ|Sunday|ta˨˦.naŋ˥.noj˩|
+တႃ|eye|taː˨˦
+တႃႈရူတ်ႉလဵၼ်း|railway station|taː˧˧˨.rot̚˦˨ˀ.len˥|
+တႃႈႁိူဝ်း|riverboat jetty|taː˧˧˨.hɤː˥|
+တႅင်း|to stab|tɛŋ˥
+တႅင်ၽၢင်|||
+တႅပ်း|to cut|tɛp˥
+တႅမ်ႈ|write, compose|tɛm˧˧˨|
+တႅၵ်ႇ|to split|tɛk˩
+ထမ်ႈ|||
+ထဝ်ႈ|old (things, people)|tʰaw˧˧˨
+ထိမ်ႈ|to throw|tʰim˧˧˨
+ထိူမ်|to think|tʰɤm˨˦
+ထိူၼ်ႇ|forest|tʰɤn˩
+ထီး|||
+ထုင်း|||
+ထူ|to rub|tʰuː˨˦
+ထူမ်ႇ|to spit|tʰom˩
+ထူဝ်ႇ|||
+ထူး|||
+ထူၺ်ႈၸႂ်|to breathe|tʰoj˧˧˨.t͡ɕaɰ˨˦
+ထေႃးပၢတ်ႈ|||
+ထွင်ႇ|prison, jail|tʰɔŋ˩|
+ထွင်ႉ|corner|tʰɔŋ˦˨ˀ|
+ထႃႇပၼႃႇ|||
+ထႃႈ|if|tʰaa˧˧˨
+ပတ်ႈတမျႃး|ruby|pat̚˧˧˨.ta˨˦.mjaː˥|
+ပတ်ႈတႃး|||
+ပရုၵ်ႈ|camphor|pa˨˦.ruk̚˧˧˨|
+ပဝ်ႇ|to blow|paw˩
+ပိတ်ႈတၵၢတ်ႈ|||
+ပိုၼ်ႉတီႈ|||
+ပိူဝ်ႈ|because|pɤ˧˧˨
+ပိူၵ်ႇ|bark (of a tree)|pɤk˩
+ပိူၼ်ႈ|they/them, others|pɤn
+ပိူၼ်ႈ|they|pɤn˧˧˨
+ပိၵ်ႇ|wing|pik˩
+ပိၵ်ႈမၢၼ်ႇ|||
+ပီ|year|piː˨˦
+ပီႉတၵၢတ်ႈ|||
+ပုင်ႇ|||
+ပုင်ႇၵၢၼ်ႇ|||
+ပုၵ်း|dull (as a knife)|puk˥
+ပုၵ်ႈတႁူး|||
+ပုၵ်ႉထႃႉၽႃႇသႃႇ|||
+ပုၼ်ႉ|there|pun˦˨
+ပူ|crab|puː˨˦|
+ပူၺ်း|ringworm|poj˥|
+ပူၼ်ႉပႅၼ်|||
+ပူႇ|paternal grandfather|puː˩|
+ပူႉထူဝ်း|||
+ပေႃႈ|father|pɔː˧˧˨
+ပဵတ်း|||
+ပဵတ်ႈၸယႃႇ|||
+ပဵၵ်ႇ|wet|pek˩
+ပဵၼ်|||
+ပျၢတ်ႈသၢတ်ႈ|building, steeple|pjaːt̚˧˧˨.sʰaːt̚˧˧˨|
+ပျႃႇတႃႇ|messenger|pjaː˩.taː˩|
+ပွင်ႇၸႂ်|to understand|pɔŋ˩.t͡ɕaɰ˨˦|
+ပွတ်း|short|pɔt˥
+ပွတ်းႁွင်ႇ|||
+ပွႆး|||
+ပၢင်တိုၵ်း|||
+ပၢင်ႇလၢႆႇ|sea|paaŋ˩ laaj˩
+ပၢႆးမွၼ်း|||
+ပၢႆးမၢၵ်ႈမီး|||
+ပၼ်|to give|pan˨˦
+ပၼ်ႁႅင်း|||
+ပၼ်ႈ|to squeeze|pan˧˧˨
+ပႂၢင်း|to open|pwaːŋ˥|
+ပႃ|fish|paː˨˦
+ပႃးၸပူတ်ႉ|||
+ပႃႇတီႇ|||
+ပႃႈ|||
+ပႅတ်ႇ|||
+ပႅတ်ႇသိပ်း|||
+ပႅတ်ႈ|to throw|pɛt˧˧˨
+ပႆ|walk|paj˨˦
+မတ်ႉ|to tie|mat˦˨
+မလႅင်ႇ|||
+မဝ်ႇ|not|maw˩
+မိုဝ်း|hand|mɯː˥
+မိုၼ်ႇ|10,000|mɯn˩|
+မိူင်း|||
+မိူင်းႀမတႃႉ|republic|mɤŋ˥.θa˨˦.ma˨˦.taː˦˨ˀ|
+မိူဝ်ႈ|time|mɤː˧˧˨|
+မိူဝ်ႈလႂ်|when|mɤ˧˧˨ laɰ˨˦
+မိူဝ်ႈၼႃႈထႃႇလိုၼ်း|future|mɤː˧˧˨.naː˧˧˨.tʰaː˩.lɯn˥|
+မိူၼ်|||
+မိၼ်|to fly|min˨˦
+မီ|||
+မီး|||
+မီးပၢၼ်း|||
+မီးယၢပ်ႈ|||
+မုၵ်ႈ|||
+မုၼ်း|||
+မုၼ်ၸဝ်ႈ|||
+မုၼ်ၸဝ်ႈပူပ်ႉ|||
+မူ|pig|muː˨˦|
+မူင်ႈ|worm|moŋ˧˧˨
+မူၺ်|snow|moj
+မူၼ်း|round|mon˥
+မေး|wife|meː˥
+မေႃယႃ|doctor, physician|mɔː˨˦.jaː˨˦|
+မဵတ်ႉ|seed|met˦˨
+မဵဝ်း|||
+မဵၼ်း|louse (body, head)|men˥
+မဵၼ်ႈ|||
+မွၵ်ႇ|cloud, flower|mɔk˩
+မွၼ်|pillow|mɔn˨˦|
+မွၼ်း|Mon|mɔn˥|
+မၢင်|some|maaŋ˨˦
+မၢၵ်ႇ|fruit|maːk̚˩
+မၢၵ်ႇမူင်ႈ|||
+မၢၵ်ႇၼင်|||
+မၢၼ်ႇတႅင်ႇ|||
+မၢၼ်ႈ|||
+မၼ်း|he/she/it (informal/familiar)|mán
+မၼ်း|he|man˥
+မၼ်းၶႆ|fat (noun)|man˥ kʰaj˨˦
+မႁႃႇသႃႇဝၵႃႉ|||
+မႂ်း|you s.|maɰ˥
+မႂ်ႇ|new|maɰ˩
+မႃ|dog|maː˨˦
+မႃး|to come|maː˥
+မႃႇၼၢတ်ႈ|||
+မႃႉ|||
+မႃႉၼမ်ႉ|||
+မႄႈ|mother|mɛː˧˧˨
+မႄႈယိင်း|woman|mɛ˧˧˨ jiŋ˥
+မႄႈၼမ်ႉ|river|mɛ˧˧˨ nam˦˨
+မႅင်ႇ|mile|mɛŋ˩|
+မႅဝ်း|cat|mɛw˥|
+မႅၵ်ႈၵၸိၼ်း|||
+မႅၼ်ႈ|correct|mɛn˧˧˨
+မႆႈ|to burn|maj˧˧˨
+မႆႉ|tree|maj˦˨
+မႆႉၸလီႇ|||
 ယမ်း|wet|jam˥
-လၵ်း|post|lak˥
-လၵ်ႉ|steal|la̰k˦˨ˀ
+ယဝ်ႉ|||
+ယိင်း|||
+ယိပ်း|to hold|jip˥
+ယိူဝ်ႈ|grass|jɤ˧˧˨
+ယုမ်ႉ|||
+ယူဝ်ႇ|||
+ယူႇ|to live|ju˩
+ယေးငိုၼ်း|||
+ယဵပ်ႉ|to sew|jep̚˦˨ˀ
+ယဵၼ်ႇ|||
+ယွမ်|thin|jɔm˨˦
+ယွၵ်ႈလိၼ်ႉပိၼ်ႈတႃ|||
+ယၢပ်ႇၽိုတ်ႇ|difficult, arduous|jaːp̚˩.pʰɯt̚˩|
+ယၢမ်း|||
+ယၢဝ်း|long|jaaw˥
+ယၢၼ်ႇသူႇ|||
+ယၢႆး|to scratch|jaaj˥
+ယႂ်ႇ|big|jaɰ˩
+ရေႃးၵႃႇ|disease, sickness|rɔː˥.kaː˩|
+ရၢၼ်ႇသူႇ|enemy|raːn˩.sʰuː˩|
+ရႁၢၼ်း|monk|ra˨˦.haːn˥|
+ရႃႇဝၢင်ႇ|history|raː˩.waːŋ˩|
+လ|||
+လင်|||
+လပ်း|||
+လမ်|black|lam˨˦
+လိုမ်း|to forget|lɯm˥|
+လိုၵ်ႉ|deep|lɯk̚˦˨ˀ|
+လိူင်|yellow|lɤŋ˨˦
+လိူတ်ႈ|blood|lɤt˧˧˨
+လိူမ်ႈ|smooth|lɤm˧˧˨
+လိူၵ်ႈ|||
+လိူၼ်|moon|lɤn˨˦
+လိၼ်|earth, soil|lin˨˦
+လိၼ်ႉ|tongue (organ)|lin˦˨
+လီ|good|liː˨˦
+လုတ်ႇ|to suck|lut˩
+လုတ်ႈတေႃႇ|||
+လုပ်ႇ|bone|lup˩
+လုမ်ႈၽႃႉ|||
+လုၵ်ႈ|child|luk˧˧˨
+လုၵ်ႈႁဵၼ်း|||
+လုၺ်း|to swim|luj˥
+လူ|man|lù|
+လူင်း|down|loŋ˥|
+လူမ်း|wind|lom˥
+လေး|to lick|leː˥|
+လေႇယိၼ်ႇပျၢၼ်ႇ|aeroplane|leː˩.jin˩.pjaːn˩|
+လဵၵ်ႉ|small|lek˦˨
+လဵၼ်ႈ|to play|len˧˧˨
+လွင်ႈလုၵ်ႉၽိုၼ်ႉ|revolution|lɔŋ˧˧.luk˥˩.pʰɯn˥˩ / lɔŋ˧˧.luk˥˩.fɯn˥˩|
+လွႆ|mountain|lɔj˨˦
+လၢင်းတႃႉ|||
+လၢတ်ႈ|to say|laat˧˧˨
+လၢဝ်|star|laːw˨˦
 လၢၵ်ႇ|differ from others|laːk˩
 လၢၵ်ႈ|drag|laːk˧˨
-တူ|me, door|tuː˨˦
-သူ|you pl.|sʰuː˨˦
-မႂ်း|you s.|maɰ˥
-ၼႆႉ|this|naj˦˨ˀ
-ၼၼ်ႉ|that|nan˦˨ˀ
-ၼိုင်ႈ|one|nɯŋ˧˧˨
-သွင်|two|sʰɔŋ˨˦
-သၢမ်|three|sʰaːm˨˦
-သီႇ|four|sʰiː˩
-ႁႃႈ|five|haː˧˧˨
-ၸၢႆး|man|t͡ɕaːj˥
-မေး|wife|meː˥
-ပေႃႈ|father|pɔː˧˧˨
-ပႃ|fish|paː˨˦
-မႃ|dog|maː˨˦
-ၼင်|skin|naŋ˨˦
-ႁၢင်|tail|haːŋ˨˦
-တႃ|eye|taː˨˦
-ၶဵဝ်ႈ|tooth|kʰew˧˧˨
-တိၼ်|foot|tin˨˦
-ဢႅဝ်|back|ʔɛw˨˦
-ၵိၼ်|to eat|kin˨˦
-ႁၼ်|to see|han˨˦
-ႁူႉ|to know|huː˦˨ˀ
-တၢႆ|to die|taːj˨˦
-ပႆ|to walk|paj˨˦
-မႃး|to come|maː˥
-ထူ|to rub|tʰuː˨˦
-ဢၢၼ်ႇ|to count|ʔaːn˩
-ဝႃႈ|to say|waː˧˧˨
-လႆ|to flow|laj˨˦
-ဝၼ်း|sun|wan˥
-လိူၼ်|moon|lɤn˨˦
-ၵိူဝ်|salt|kɤː˨˦
-ႁိၼ်|stone|hin˨˦
-လိၼ်|earth, soil|lin˨˦
-ၽႃႉ|sky|pʰaː˦˨ˀ
-လူမ်း|wind|lom˥
-ၽႆး|fire|pʰaj˥
-တၢင်း|road|taːŋ˥
-လွႆ|mountain|lɔj˨˦
-လႅင်|red|lɛŋ˨˦
-ၶဵဝ်|green|kʰew˨˦
-လိူင်|yellow|lɤŋ˨˦
-ၶၢဝ်|white|kʰaːw˨˦
-လမ်|black|lam˨˦
-ပီ|year|piː˨˦
-လီ|good|liː˨˦
-တီႈ|at|tiː˧˧˨
+လၢၵ်ႈထၢပ်ႈ|||
+လၢၵ်ႈသမႃး|||
+လၢၵ်ႈသွင်ႇ|||
+လၢၵ်ႈၸွပ်ႈ|||
+လၢၵ်ႈၼၢၵ်ႈ|||
+လၢၵ်ႈၽွႆး|amulet|laːk̚˧˧˨.pʰɔj˥|
+လၢၵ်ႈၽွႆႉ|amulet|laːk̚˧˧˨.pʰɔj˦˨ˀ|
+လၵ်း|post|lak˥
+လၵ်းထၢၼ်|||
+လၵ်ႉ|steal|la̰k˦˨ˀ
 လႄႈ|and|lɛː˧˧˨
-ၶွၵ်ႈမႃ|doghouse|kʰɔk˥ maː˩
+လႅင်|red|lɛŋ˨˦
+လႅင်ႉ|to lie (as in a bed)|lɛŋ˦˨
+လႅမ်|sharp (as a knife)|lɛm˨˦
+လႅၵ်ႈလၢႆႈ|||
+လႅၼ်|||
+လႆ|to flow|laj˨˦
+ဝ|||
+ဝင်ႇၵပႃႇ|||
+ဝိၼ်း|dirty|win˥
+ဝိၼ်ႇ|to turn (intransitive)|win˩
+ဝီႉၺဵၼ်ႇ|soul, spirit|wiː˦˨ˀ.ɲen˩|
+ဝီႉၼႄး|Vinaya|wiː˦˨ˀ.nɛː˥|
+ဝုတ်ႉထူႉ|||
+ဝုၼ်ႇၵျီးၶျုၵ်ႈ|prime minister|wun˩.d͡ʒiː˥.t͡ʃuk̚˧˧˨|
+ဝူၼ်ႉ|to think|won˦˨
+ဝဵင်း|||
+ဝၢင်ႈ|in|waaŋ˧˧˨
+ဝၢၵ်ႈဢူႇ|screw|waːk̚˧˧˨.ʔuː˩|
+ဝၢၼ်|||
+ဝၢၼ်ႈ|||
+ဝၢႆ|rattan wine|waːj˨˦|
+ဝၢႆး|after|waːj˥|
+ဝၢႆႇ|turn around, turn head|waːj˩|
+ဝၢႆႈ|to swim|waːj˧˧˨
+ဝၢႆႉ|sideways|waːj˦˨ˀ|
+ဝၼ်း|day, sun|wan˥
+ဝႂ်ၶၢမ်ႈမိူင်း|passport|waɰ˨˦.kʰaːm˧˧˨.mɤŋ˥|
+ဝႃႈ|to say|waː˧˧˨
+ဝႃႈၼႆ|||
+ဝႆ|to move, wave|waj˨˦|
+သင်|if|sʰaŋ˨˦
+သတ်း|animal|sʰat˥
+သပ်ႉပျႃႇ|soap|sʰap̚˦˨ˀ.pjaː˩|
+သမတႃႉ|||
+သမ်း|||
+သမ်ႇမၼီႉ|||
+သမႅင်း|||
 သရေႃႉ| be flippant|sʰa rɔ˦˨ˀ
-
-
-
-
-ၵဝ်|I/me (informal)|kǎw
-ၶႃႈ|I/me (formal)|kʰaː
-ႁႃး|we/us two (familiar/dual)|háː
-ႁဝ်း|we/us (general)|háw
-ႁဝ်းၶႃႈ|we/us (formal)|háw.kʰaː
-မႂ်း|you (informal/familiar)|máɰ
-ၸဝ်ႈ|you (formal)|tsaw
-ၶိူဝ်|you two (familiar/dual)|kʰə̌ə
-သူၸဝ်ႈ|you (formal s., general pl.)|sʰǔ.tsaw
-မၼ်း|he/she/it (informal/familiar)|mán
-ၶႃ|they/them two (familiar/dual)|kʰǎa
+သရၽူႇ|crown|sʰa˨˦.ra˨˦.pʰuː˩|
+သိင်းၶူဝ်ႇ|||
+သိင်ႇဝႅတ်ႉလွမ်ႉ|environment|sʰiŋ˩.wɛt̚˦˨ˀ.lɔm˦˨ˀ|
+သိပ်း|||
+သိပ်းပႅတ်ႇ|||
+သိပ်းသီႇ|||
+သိပ်းသွင်|||
+သိပ်းသၢမ်|||
+သိပ်းဢဵတ်း|||
+သိပ်းၵဝ်ႈ|||
+သိပ်းၸဵတ်း|||
+သိပ်းႁူၵ်း|||
+သိပ်းႁႃႈ|||
+သိမ်ႇ|||
+သိုဝ်ႈ|straight|sʰɯ˧˧˨
+သိူဝ်|tiger|sʰɤː˨˦|
+သီ|||
+သီမူၼ်ႇ|||
+သီလမ်|||
+သီလိူင်သဝ်ႈ|||
+သီလိူင်ၼုမ်ႇ|||
+သီလႅင်|||
+သီၵမ်ႇ|||
+သီၶဵဝ်|||
+သီၽိူၵ်ႇ|||
+သီႇ|four|sʰiː˩
+သီႇသိပ်း|||
+သုင်|||
+သုမ်းၶၢဝ်းယၢမ်း|waste time|sʰum˥.kʰaːw˥.jaːm˥|
+သုၵ်ႈ|to wash|sʰuʔ˧˧˨
+သူ|you (singular)|sʰu˨˦
+သူ|you pl.|sʰuː˨˦
+သူင်ႇ|to send|sʰoŋ˩|
+သူင်ႇဢွၵ်ႇ|||
+သူတ်ႉ|to drink|sʰot˦˨
+သူပ်း|mouth|sʰop˥
+သူဝ်း|sheep|sʰoː˥|
+သူး|prize, blessing|sʰuː˥|
+သူးၵွၵ်း|trophy, cup|sʰuː˥.kɔk̚˥|
+သူၸဝ်ႈ|you (formal s., general pl.)|sʰǔ.t͡ɕaw
+သူၼ်|garden, zero|sʰon˨˦|
+သူၼ်သတ်း|||
+သေးယူင်ႇ|hospital|sʰeː˥.joŋ˩|
+သဵင်|||
+သဵၼ်ႈ|||
+သဵၼ်ႈတၢင်း|||
+သြႃႇတေႃႇ|abbot (Buddh.)|sʰraː˩.tɔː˩|
+သြႃႇဝုၼ်ႇ|doctor, physician|sʰraː˩.wun˩|
+သြႃႇသမႃး|teacher|sʰraː˩.sʰa˨˦.maː˥|
+သွင်|two|sʰɔŋ˨˦
+သွမ်း|||
+သွၵ်ႉၵျႃႇ|Friday|sʰɔk̚˦˨ˀ.kjaː˩|
+သွၼ်|||
+သၢင်ႇဝၢင်ႇ|||
+သၢင်ႇသီႈ|||
+သၢမ်|three|sʰaːm˨˦
+သၢမ်သိပ်း|||
+သၢမ်ၸဵင်ႇ|||
+သၢဝ်း|twenty|sʰaːw˥|
+သၢဝ်းသွင်|||
+သၢဝ်းသၢမ်|||
+သၢဝ်းဢဵတ်း|||
+သၢၵ်ႇသေ|||
+သၢၵ်ႈသႃႇ|||
+သၢၼ်ႇလႅၵ်ႉ|||
+သၢႆး|sand|sʰaaj˥
+သၢႆႉ|left|sʰaaj˦˨
+သၵျႃး|sugar|sʰa˨˦.kjaː˥|
+သၼၢပ်ႈၶႃး|||
+သႃႇဝၵႃႉ|||
+သႅင်|||
+သႅင်ႇ|||
+သႅၼ်|||
+သႆႈ|guts|sʰaj˧˧˨
+ဢင်းၵိတ်ႉ|||
+ဢင်ႇၵႃႇ|||
+ဢတူဝ်း|||
+ဢပုမ်ႇ|story, tale|ʔa˧˧˨.pum˩|
+ဢမိင်ႉ|order, command|ʔa˨˦.miŋ˦˨ˀ|
+ဢမူၺ်ႇ|inheritance|ʔa˨˦.moj˩|
+ဢလွင်း|||
+ဢသၢၵ်ႈ|life, age|ʔa˧˧˨.sʰaːk̚˧˧˨|
+ဢိင်းၵလဵတ်ႈ|||
+ဢိတ်း|small|ʔit˥
+ဢိုၼ်ႇ|other|ʔɯn˩
+ဢိၵ်ႇ|with|ʔik˩
+ဢီႈသင်|what|ʔi˧˧˨ sʰaŋ˨˦
+ဢုပ်ႇဢူဝ်း|||
+ဢုပ်ႉပိူင်ႇ|||
+ဢုၼ်|||
+ဢုၼ်ႇ|warm|ʔun˩
+ဢူၺ်းလီ|ally|ʔoj˥.liː˨˦|
+ဢူၺ်းၵေႃႉ|friend|ʔoj˥.kɔː˦˨ˀ|
+ဢေႇဢေႇ|few|ʔe˩ ʔe˩
+ဢဵတ်ႇ|||
+ဢွၵ်းဢေႃ|brain||
+ဢၢင်ႇ|basin, sink|ʔaːŋ˩|
+ဢၢၼ်ႇ|to count|ʔaːn˩
+ဢၢႆ|smoke|ʔaaj˨˦
+ဢၵွၵ်ႈ|tax|ʔa˨˦.kɔk̚˧˧˨
+ဢၸူဝ်းယႃႉ|government|ʔa˨˦.t͡ɕoː˥.jaː˦˨ˀ|
+ဢႃးၼႃႇ|||
+ဢႃႇပေႃႇ|||
+ဢႃႇၵႃႇသႃႉ|||
+ဢႅဝ်|back|ʔɛw˨˦
+ဢႅၵ်ႉၶရႃႇ|letter|ʔɛk̚˦˨ˀ.kʰa˨˦.raː˩|
+ၵတ်း|cold|kat̚˥
+ၵတ်ႉၶႅၼ်ႇ|clever|kat̚˦˨ˀ.kʰɛn˩|
+ၵမ်ႈၽွင်ႈ|some|kam˧˧˨ pʰɔŋ˧˧˨
+ၵဝ်|I/me (informal)|kaw˨˦
+ၵဝ်ႇ|old (things, people)|kaw˩
+ၵဝ်ႈ|||
+ၵဝ်ႈသိပ်း|||
+ၵိင်း|||
+ၵိမ်း|||
+ၵိူင်း|||
+ၵိူင်းထွၵ်ႈ|||
+ၵိူင်းဢုပ်ႉ|||
+ၵိူင်းၶျုၵ်ႈ|monastic association head|kɤŋ˥.kʰjuk̚˧˧˨|
+ၵိူဝ်|salt|kɤː˨˦
+ၵိူဝ်ဝၢၼ်|sugar|kɤː˨˦.waːn˨˦|
+ၵိၼ်|to eat|kin˨˦
+ၵုင်ႈ|||
+ၵုၼ်ႇသိၼ်|||
+ၵူပ်း|frog|kop̚˥|
+ၵူဝ်|to fear|ko˨˦
+ၵူဝ်ႇၵဵၼ်း|||
+ၵူဝ်ႈ|dirty|ko˧˧˨
+ၵူၺ်ႈ|banana|koj˧˧˨|
+ၵူၼ်း|human|kon˥
+ၵူၼ်းမိူင်း|||
+ၵူႈ|lpair|kuː˧˧˨|
+ၵေးၸူး|||
+ၵေႃႇတမႃႉ|Gautama Buddha|kɔː˦˨ˀ.ta˨˦.maː˦˨ˀ|
+ၵေႃႉတမႃႉ|Gautama Buddha|kɔː˦˨ˀ.ta˨˦.maː˦˨ˀ|
+ၵျူဝ်ႇ|planet|kjoː˩|
+ၵျေးၸူး|gratitude, kindness||
+ၵျေႃင်း|school|kjɔːŋ˥|
+ၵျွင်း|school|kjɔŋ˥|
+ၵျၢမ်ႇမႃႇ|karma|kjaːm˩.maː˩|
+ၵျႃႇသပ်ႈပတေး|Thursday|kjaː˩.sʰap̚˧˧˨.pa˨˦.teː˥|
+ၵျႃႇသၢၼ်ႇ|vermicelli|kjaː˩.sʰaːn˩|
+ၵွင်းမူး|||
+ၵွင်ႈၵၢင်ႇ|||
+ၵွၵ်ႈ|tax|kɔk̚˧˧˨|
+ၵၢင်ႇ|||
+ၵၢတ်ႇ|||
+ၵၢပ်ႈ|||
+ၵၢမ်ႇ|||
+ၵၢဝ်ႈ|leg|kaaw˧˧˨
+ၵၢၼ်|||
+ၵၼ်ႇၺႃႇ|maiden|kan˩.ɲaː˩|
+ၵႂ်ႈ|to swell|kaɰ˧˧˨
+ၵႂၢင်|deer|kwaːŋ˨˦|
+ၵႂၢင်ႈ|wide|kwaaŋ˧˧˨
+ၵႂၢၼ်း|smoke|kwaan˥
+ၵႂၢႆး|water buffalo|kwaːj˥|
+ၵႂႃႇ|to go
+ၵႃႇလႃႉသႃး|||
+ၵႃႉၶၢႆ|||
+ၵႄႈ|to undo|kɛː˧˧˨|
+ၵႅင်းဢုပ်ႉ|||
+ၵႅပ်ႈ|narrow|kɛp˧˧˨
+ၵႆ|far|kaj˨˦
+ၵႆႇ|chicken|kaj˩|
+ၶ|||
+ၶမ်း|||
 ၶဝ်|he/she/it (formal)/they/them (general)|kʰǎw
-ၶဝ်ၸဝ်ႈ|he/she/it (formal)/they/them (formal)|kʰǎw.tsaw
-ပိူၼ်ႈ|they/them, others|pɤn
+ၶဝ်|horn|kʰaw˨˦
+ၶဝ်|they|kʰaw˨˦
+ၶဝ်ၸဝ်ႈ|he/she/it (formal)/they/them (formal)|kʰǎw.t͡ɕaw
+ၶဝ်ႇ|knee|kʰaw˩
+ၶဝ်ႈ|||
+ၶဝ်ႈသဵၼ်ႈ|||
+ၶဝ်ႈသွႆး|noodles|kʰaw˧˧˨.sʰɔj˥|
+ၶဝ်ႈၵၢပ်ႇ|||
+ၶဝ်ႈၼမ်ႉတၢင်းၵိၼ်|||
+ၶိုၼ်း|night|kʰɯn˥
+ၶိူင်ႈ|device|kʰɤŋ˧˧˨|
+ၶိူဝ်|you two (familiar/dual)|kʰɤ˨˦
+ၶီႈငိုၼ်း|interest (finance)|kʰiː˧˧˨.ŋɯn˥|
+ၶုတ်း|to dig|kʰut˥
+ၶုၼ်မိူၵ်ႈ|||
+ၶုၼ်ႁေႃၶမ်း|||
+ၶူပ်း|to bite|kʰop˥
+ၶူဝ်|to laugh|kʰoː˨˦
+ၶူဝ်လႆ|ladder|kʰoː˨˦.laj˨˦|
+ၶူးသွၼ်|teacher, instructor|kʰuː˥.sʰɔn˨˦|
+ၶူၼ်|hair, feather|kʰon˨˦
+ၶူႈလင်|nose|kʰu˧˧˨ laŋ˨˦
+ၶေႃး|neck|kʰɔ˥
+ၶဵဝ်|green|kʰew˨˦
+ၶဵဝ်ႈ|tooth|kʰew˧˧˨
+ၶျၢမ်းသႃႇ|to be at ease|kʰjaːm˥.sʰaː˩|
+ၶွၵ်ႈမႃ|doghouse|kʰɔk˥ maː˩
+ၶွၼ်ႉ|stick|kʰɔn˦˨
+ၶွၼ်ႉတဝ်ႉ|cane, walking stick|kʰɔn˦˨ˀ.taw˦˨ˀ|
+ၶၢဝ်|white|kʰaːw˨˦
+ၶၢဝ်းတၢင်း|distance|kʰaːw˥.taːŋ˥|
+ၶၢၼ်ႇ|to scratch|kʰaan˩
+ၶႂႃ|right|kʰwaa˨˦
+ၶႃ|they/them two (familiar/dual)|kʰǎa
+ၶႃႈ|I/me (formal)|kʰaː
+ၶႃႈ|to kill|kʰaa˧˧˨
+ၶႆႇ|egg|kʰaj˩
+ၸပြိင်ႇ|spring|t͡ɕa˨˦.priŋ˩|
+ၸမ်|near|t͡ɕam˨˦
+ၸဝ်ႈ|you (formal)|t͡ɕaw
+ၸဝ်ႈမုၼ်|||
+ၸဝ်ႈမုၼ်ပူပ်ႉ|||
+ၸိမ်း|||
+ၸိုဝ်ႈ|name|t͡ɕɯː˧˧˨
+ၸိူၵ်ႈ|rope|t͡ɕɤk˧˧˨
+ၸီးၼႃႉ|||
+ၸီႉၼႃႉ|||
+ၸုမ်းၵူၼ်း|||
+ၸုၵ်း|to stand|t͡ɕuk˥
+ၸေႇတီႇ|pagoda|t͡ɕeː˩.tiː˩|
+ၸဵင်ႇလႅမ်|||
+ၸဵင်ႇဝၢတ်ႈ|||
+ၸဵင်ႇၶိုင်ႈ|||
+ၸဵတ်း|seven|t͡ɕet̚˥|
+ၸဵတ်းသိပ်း|||
+ၸဵတ်ႉ|to wipe|t͡ɕet˦˨
+ၸွမ်းတူဝ်ထိူၼ်ႇ|to hunt|t͡ɕɔm˥ to˨˦ tʰɤn˩
+ၸွမ်ၸိုင်ႈ|president (of country)|t͡ɕɔm˨˦.t͡ɕɯŋ˧˧˨|
+ၸွႆႈထႅမ်|help, assist|t͡ɕɔj˧˧˨.tʰɛm˨˦|
+ၸၢင်ႉ|elephant|t͡ɕaːŋ˦˨ˀ|
+ၸၢဝ်းၶိူဝ်း|ethnic group, nationality|t͡ɕaːw˥.kʰɤː˥|
+ၸၢၵ်ႈ|||
+ၸၢႆး|man|t͡ɕaːj˥
+ၸၵ်း|to split|t͡ɕak˥
+ၸၼေႇ|Saturday|t͡ɕa˨˦.neː˩|
+ၸၼ်ႁၢင်ႈ|||
+ၸႂ်|heart, mind, feeling|t͡ɕaɰ˨˦|
+ၸႃႉ|bad|t͡ɕaa˦˨
+ၺူဝ်ႇ|brown|ɲoː˩|
+ၺွင်ႇ|banyan|ɲɔŋ˩|
+ၺွင်ႇပေႃးထီႉ|bohdi tree|ɲɔŋ˩.pɔː˥.tʰiː˦˨ˀ|
+ၼင်|skin|naŋ˨˦
+ၼင်ႈ|to sit|naŋ˧˧˨
+ၼမ်ၼမ်|many|nam˨˦ nam˨˦
+ၼမ်ႉ|water|nam˦˨
+ၼမ်ႉမၼ်း|||
+ၼမ်ႉၶႅင်|ice|nam˦˨ kʰɛŋ˨˦
+ၼမ်ႉၼၢႆးၵုမ်ႈ|fog|nam˦˨ naaj˥ kum˧˧˨
+ၼဝ်ႈ|rotten|naw˧˧˨
+ၼိုင်ႈ|one|nɯŋ˧˧˨
+ၼိူဝ်ႉ|meat|nɤ˦˨
+ၼူမ်|to smell|nom˨˦
+ၼူမ်း|breast|nom˥
+ၼူၵ်ႉ|bird|nok̚˦˨ˀ
+ၼဵပ်ႉ|fingernail|nep˦˨
+ၼွင်|lake|nɔŋ˨˦
+ၼွၼ်း|to sleep|nɔn˥
+ၼၢင်း|||
+ၼၢင်းတႃႉ|||
+ၼၢင်းယိင်း|||
+ၼၢႆး|||
+ၼၵ်း|heavy|nak˥
+ၼၼ်ႉ|that|nan˦˨ˀ
+ၼႂ်း|inside, interior|naɰ˥|
+ၼႃ|thick|naː
+ၼႃး|paddy field|naː˥
+ၼႃႇ|very|naː˩
+ၼႃႈ|face|naː˧˨
+ၼႃႉ|aunt, uncle|na˦˨ˀ
+ၼႄၼမ်ႉၼႄတူဝ်|to carry through|nɛː˨˦.nam˦˨ˀ.nɛː˨˦.toː˨˦|
+ၼႆ|||
+ၼႆယဝ်ႉ|||
+ၼႆႈ|here|naj˧˧˨
+ၼႆႉ|this|naj˦˨ˀ
+ၽင်း|||
+ၽိဝ်ၼင်|skin|pʰiw˨˦.naŋ˨˦|
+ၽိုင်ႈ|bee|pʰɯŋ˧˧˨|
+ၽိၵ်ႈၶူႇ|||
+ၽိၼ်ႇ|opium|pʰin˩|
+ၽီလူး|ogre|pʰiː˨˦.luː˥|
+ၽုၵ်ႇ|||
+ၽုၺ်ႇ|open|pʰuj˩|
+ၽူတ်ႉ|to swell|pʰot˦˨
+ၽူမ်|hair|pʰom˨˦
+ၽူဝ်|husband|pʰo˨˦
+ၽူး|to float|pʰu˥
+ၽူၼ်|rain|pʰon˨˦
+ၽူႈလႂ်|who|pʰu laɰ
+ၽျၢၼ်း|witness|pʰjaːn˥|
+ၽြႃး|god, idol|pʰraː˥|
+ၽြႃးဢလွင်း|Buddahood candidate|pʰraː˥.ʔa˨˦.lɔŋ˥|
+ၽွင်|dust|pʰɔŋ˨˦
+ၽၢၼ်ႇသၢင်း|||
+ၽၵ်းတူ|||
+ၽၵ်းၵၢတ်ႇမွၵ်ႇ|cauliflower|pʰak̚˥.kaːt̚˩.mɔk̚˩|
+ၽၼ်း|to cut|pʰan˥
+ၽႃႇသႃႇမၢၼ်ႈ|||
+ၽႃႉ|sky|pʰaː˦˨ˀ
+ၽႆး|fire|pʰaj˥
+ၽႆး|||
+ၽႆးၽႃႉ|electricity|pʰaj˥.pʰaː˦˨ˀ|
+ၾိၼ်ႇ|opium|fin˩|
+ၾူၼ်|rain|fon˨˦|
+ၾႆး|fire|faj˥|
+ၾႆးၾႃႉ|electricity|faj˥.faː˦˨ˀ|
+ႀမတႃႉ|president (country)|θa˨˦.ma˨˦.taː˦˨ˀ|
+ႀရၽူႇ|crown|θa˨˦.ra˨˦.pʰuː˩|
+ႀူဝ်း|sheep|θoː˥|
+ႀၼၢပ်ႈၶႃး|thanakha|θa˨˦.naːp̚˧˧˨.kʰaː˥|
+ႁင်းသႃႇ|||
+ႁတရႃႉ|heart|ha˨˦.ta˨˦.raː˦˨ˀ|
+ႁဝ်|louse (body, head)|haw˨˦
+ႁဝ်း|we/us (general)|haw˥
+ႁဝ်းၶႃႈ|we/us (formal)|háw.kʰaː
+ႁိင်ႇႁွႆႈ|firefly|hiŋ˩.hɔj˧˧˨|
+ႁိူဝ်း|boat|hɤː˥|
+ႁိူဝ်းမိၼ်|aeroplane|hɤː˥.min˨˦|
+ႁိၼ်|stone|hin˨˦
+ႁုၼ်ႇ|||
+ႁူ|ear|hu˨˦
+ႁူင်|||
+ႁူင်းယႃ|||
+ႁူင်းၼႄ|exhibition hall, museum|hoŋ˥.nɛː˨˦|
+ႁူင်းႁဵၼ်း|||
+ႁူပ်ႉထူပ်း|||
+ႁူမ်ႇလူမ်ႈ|||
+ႁူဝ်|head, root|ho˨˦
+ႁူဝ်ပဝ်ႈ|||
+ႁူဝ်ၸႂ်|heart|ho˨˦ t͡ɕaɰ
+ႁူဝ်ၽၵ်းပိုၵ်ႉ|||
+ႁူၵ်း|||
+ႁူၵ်းသိပ်း|||
+ႁူၵ်ႈ|||
+ႁူႉ|to know|huː˦˨ˀ
+ႁေႃး|||
+ႁဵင်း|||
+ႁဵတ်း|to sing|het˥
+ႁဵတ်းႁိုဝ်|how|het˥ hɯ˨˦
+ႁွၵ်ႇ|spear|hɔk̚˩|
+ႁၢင်|tail|haːŋ˨˦
+ႁၢင်ႈလီ|||
+ႁၢင်ႈႁႅၼ်း|||
+ႁၢၵ်ႈ|root|haak˧˧˨
+ႁၢၵ်ႈ|to vomit|haak˧˧˨
+ႁၢၼ်ႇ|||
+ႁၢႆႉ|bad|haaj˦˨
+ႁၵ်ႉ|||
+ႁၼ်|to see|han˨˦
+ႁႃး|we/us two (familiar/dual)|háː
+ႁႃႈ|five|haː˧˧˨
+ႁႃႈသိပ်း|||
+ႁႅင်ႈ|dry|hɛŋ˧˧˨
+ႁႅမ်|||
+ယၼ်ႇၵုင်ႇ|Yangon|jan˩.kuŋ˩
 
 
-ၵဝ်|I|kaw1
-တူ|I|tu1
-သူ|you (singular)|sʰu1
-မႂ်း|you (singular)|maɯ4
-မၼ်း|he|man4
-ႁဝ်း|we|haw4
-ၶိူဝ်|you (plural)|kʰɤ1
-ၶဝ်|they|kʰaw1
-ပိူၼ်ႈ|they|pɤn3
-ၼႆႉ|this|naj5
-ၼၼ်ႉ|that|nan5
-ၼႆႈ|here|naj3
-ပုၼ်ႉ|there|pun5
-ၽူႈလႂ်|who|pʰu laɯ
-ဢီႈသင်|what|ʔi3 sʰaŋ1
-တီႈလႂ်|where|ti3 laɯ
-မိူဝ်ႈလႂ်|when|mɤ3 laɯ1
-ႁဵတ်းႁိုဝ်|how|het4 hɯ1
-မဝ်ႇ|not|maw2
-တင်း|all|taŋ4
-ၼမ်ၼမ်|many|nam1 nam1
-မၢင်|some|maaŋ1
-ၵမ်ႈၽွင်ႈ|some|kam3 pʰɔŋ3
-ဢေႇဢေႇ|few|ʔe2 ʔe2
-ဢိုၼ်ႇ|other|ʔɯn2
-တၢင်ႇ|other|taaŋ2
-ၼိုင်ႈ|one|nɯŋ3
-သွင်|two|sʰɔŋ1
-သၢမ်|three|sʰaam1
-သီႇ|four|sʰi2
-ႁႃႈ|five|haa3
-ယႂ်ႇ|big|jaɯ2
-ယၢဝ်း|long|jaaw4
-ၵႂၢင်ႈ|wide|kwaaŋ3
-ၼႃ|thick|naa1
-ၼၵ်း|heavy|nak4
-လဵၵ်ႉ|small|lek5
-ဢိတ်း|small|ʔit4
-ပွတ်း|short|pɔt4
-ၵႅပ်ႈ|narrow|kɛp3
-ယွမ်|thin|jɔm1
-မႄႈယိင်း|woman|mɛ3 jiŋ4
-ၸၢႆး|man|t͡saːj4
-ၵူၼ်း|human|kon4
-လုၵ်ႈ|child|luk3
-မေး|wife|me4
-ၽူဝ်|husband|pʰo1
-မႄႈ|mother|mɛ3
-ပေႃႈ|father|pɔ3
-သတ်း|animal|sʰat4
-ပႃ|fish|paa1
-ၼူၵ်ႉ|bird|nok5
-မႃ|dog|maa1
-မဵၼ်း|louse (body, head)|men4
-ႁဝ်|louse (body, head)|haw1
-ငူး|snake|ŋu4
-မူင်ႈ|worm|moŋ3
-မႆႉ|tree|maj5
-ထိူၼ်ႇ|forest|tʰɤn2
-ၶွၼ်ႉ|stick|kʰɔn5
-မၢၵ်ႇ|fruit|maak2
-မဵတ်ႉ|seed|met5
-တွင်|leaf|tɔŋ1
-ႁၢၵ်ႈ|root|haak3
-ႁူဝ်|root|ho1
-ပိူၵ်ႇ|bark (of a tree)|pɤk2
-မွၵ်ႇ|flower|mɔk2
-ယိူဝ်ႈ|grass|jɤ3
-ၸိူၵ်ႈ|rope|tsɤk3
-ၼင်|skin|naŋ1
-ၼိူဝ်ႉ|meat|nɤ5
-လိူတ်ႈ|blood|lɤt3
-လုပ်ႇ|bone|lup2
-မၼ်းၶႆ|fat (noun)|man4 kʰaj1
-ၶႆႇ|egg|kʰaj2
-ၶဝ်|horn|kʰaw1
-ႁၢင်|tail|haaŋ1
-ၶူၼ်|feather|kʰon1
-ၽူမ်|hair|pʰom1
-ႁူဝ်|head|ho1
-ႁူ|ear|hu1
-တႃ|eye|taa1
-ၶူႈလင်|nose|kʰu3 laŋ1
-သူပ်း|mouth|sʰop4
-ၶဵဝ်ႈ|tooth|kʰew3
-လိၼ်ႉ|tongue (organ)|lin5
-ၼဵပ်ႉ|fingernail|nep5
-တိၼ်|foot|tin1
-ၵၢဝ်ႈ|leg|kaaw3
-ၶဝ်ႇ|knee|kʰaw2
-မိုဝ်း|hand|mɯ4
-ပိၵ်ႇ|wing|pik2
-တွင်ႉ|belly|tɔŋ5
-သႆႈ|guts|sʰaj3
-ၶေႃး|neck|kʰɔ4
-ဢႅဝ်|back|ʔɛw1
-ၼူမ်း|breast|nom4
-ႁူဝ်ၸႂ်|heart|ho1 tsaɯ
-တပ်း|liver|tap4
-သူတ်ႉ|to drink|sʰot5
-ၵိၼ်|to eat|kin1
-ၶူပ်း|to bite|kʰop4
-လုတ်ႇ|to suck|lut2
-ထူမ်ႇ|to spit|tʰom2
-ႁၢၵ်ႈ|to vomit|haak3
-ပဝ်ႇ|to blow|paw2
-ထူၺ်ႈၸႂ်|to breathe|tʰoj3 tsaɯ
-ၶူဝ်|to laugh|kʰo1
-ႁၼ်|to see|han1
-ငိၼ်း|to hear|ŋin4
-ႁူႉ|to know|hu5
-ဝူၼ်ႉ|to think|won5
-ထိူမ်|to think|tʰɤm1
-ၼူမ်|to smell|nom1
-ၵူဝ်|to fear|ko1
-ၼွၼ်း|to sleep|nɔn4
-ယူႇ|to live|ju2
-တၢႆ|to die|taaj1
-ၶႃႈ|to kill|kʰaa3
-တိုၵ်း|to fight|tɯk4
-ၸွမ်းတူဝ်ထိူၼ်ႇ|to hunt|tsɔm4 to1 tʰɤn2
-မႅၼ်ႈ|to hit|mɛn3
-တႅပ်း|to cut|tɛp4
-ၽၼ်း|to cut|pʰan4
-တႅၵ်ႇ|to split|tɛk2
-ၸၵ်း|to split|tsak4
-တႅင်း|to stab|tɛŋ4
-ၶၢၼ်ႇ|to scratch|kʰaan2
-ယၢႆး|to scratch|jaaj4
-ၶုတ်း|to dig|kʰut4
-လုၺ်း|to swim|luj4
-ဝၢႆႈ|to swim|waaj3
-မိၼ်|to fly|min1
-ပႆ|to walk|paj1
-မႃး|to come|maa4
-လႅင်ႉ|to lie (as in a bed)|lɛŋ5
-ၼင်ႈ|to sit|naŋ3
-ၸုၵ်း|to stand|tsuk4
-ဝိၼ်ႇ|to turn (intransitive)|win2
-တူၵ်း|to fall|tok4
-ပၼ်|to give|pan1
-ယိပ်း|to hold|jip4
-ပၼ်ႈ|to squeeze|pan3
-ထူ|to rub|tʰu1
-သုၵ်ႈ|to wash|sʰuk3
-ၸဵတ်ႉ|to wipe|tset5
-တိုတ်ႉ|to pull|tɯt5
-တမ်|to push|tam1
-ထိမ်ႈ|to throw|tʰim3
-ပႅတ်ႈ|to throw|pɛt3
-မတ်ႉ|to tie|mat5
-ယဵပ်ႉ|to sew|jep5
-ဢၢၼ်ႇ|to count|ʔaan2
-ဝႃႈ|to say|waa3
-လၢတ်ႈ|to say|laat3
-ႁဵတ်း|to sing|het4
-လဵၼ်ႈ|to play|len3
-ၽူး|to float|pʰu4
-လႆ|to flow|laj1
-တိုင်ႇ|to swell|tɯŋ2
-ၵႂ်ႈ|to swell|kaɯ3
-ၽူတ်ႉ|to swell|pʰot5
-ဝၼ်း|sun|wan4
-လိူၼ်|moon|lɤn1
-လၢဝ်|star|laaw1
-ၼမ်ႉ|water|nam5
-ၽူၼ်|rain|pʰon1
-မႄႈၼမ်ႉ|river|mɛ3 nam5
-ၼွင်|lake|nɔŋ1
-ပၢင်ႇလၢႆႇ|sea|paaŋ2 laaj2
-ၵိူဝ်|salt|kɤ1
-ႁိၼ်|stone|hin1
-သၢႆး|sand|sʰaaj4
-ၽွင်|dust|pʰɔŋ1
-လိၼ်|earth|lin1
-မွၵ်ႇ|cloud|mɔk2
-ၼမ်ႉၼၢႆးၵုမ်ႈ|fog|nam5 naaj4 kum3
-ၽႃႉ|sky|pʰaa5
-လူမ်း|wind|lom4
-မူၺ်|snow|moj
-ၼမ်ႉၶႅင်|ice|nam5 kʰɛŋ1
-ၵႂၢၼ်း|smoke|kwaan4
-ဢၢႆ|smoke|ʔaaj1
-ၽႆး|fire|pʰaj4
-တဝ်ႈ|ash|taw3
-မႆႈ|to burn|maj3
-တၢင်း|road|taaŋ4
-လွႆ|mountain|lɔj1
-လႅင်|red|lɛŋ1
-ၶဵဝ်|green|kʰew1
-လိူင်|yellow|lɤŋ1
-ၶၢဝ်|white|kʰaaw1
-လမ်|black|lam1
-ၶိုၼ်း|night|kʰɯn4
-ဝၼ်း|day|wan4
-ပီ|year|pi1
-ဢုၼ်ႇ|warm|ʔun2
-ၵတ်း|cold|kat4
-တဵမ်|full|tem1
-မႂ်ႇ|new|maɯ2
-ၵဝ်ႇ|old (things, people)|kaw2
-ထဝ်ႈ|old (things, people)|tʰaw3
-လီ|good|li1
-ႁၢႆႉ|bad|haaj5
-ၸႃႉ|bad|tsaa5
-ၼဝ်ႈ|rotten|naw3
-တူႇ|rotten|tu2
-ၵူဝ်ႈ|dirty|ko3
-ဝိၼ်း|dirty|win4
-သိုဝ်ႈ|straight|sʰɯ3
-မူၼ်း|round|mon4
-လႅမ်|sharp (as a knife)|lɛm1
-ပုၵ်း|dull (as a knife)|puk4
-လိူမ်ႈ|smooth|lɤm3
-ယမ်း|wet|jam4
-ပဵၵ်ႇ|wet|pek2
-ႁႅင်ႈ|dry|hɛŋ3
-မႅၼ်ႈ|correct|mɛn3
-ၸမ်|near|tsam1
-ၵႆ|far|kaj1
-ၶႂႃ|right|kʰwaa1
-သၢႆႉ|left|sʰaaj5
-တီႈ|at|ti3
-ဝၢင်ႈ|in|waaŋ3
-တင်း|with|taŋ4
-ဢိၵ်ႇ|with|ʔik2
-လႄႈ|and|lɛ3
-ထႃႈ|if|tʰaa3
-သင်|if|sʰaŋ1
-ပိူဝ်ႈ|because|pɤ3
-ၸိုဝ်ႈ|name|tsɯ3
+
+
+
+
+
+
 
 `
 
