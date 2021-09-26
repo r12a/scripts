@@ -4,6 +4,17 @@ function addPageFeatures () {
     makeFontChanger(langTag, scriptTag, pageWebfonts, defaultSize)
     pointToSummaryPages()
     checkParameters()
+    
+    if (window.autoIndex) {
+        makeIndexObject()
+        makeMarkupForSection('index_letters')
+        makeMarkupForSection('index_cchars')
+        makeMarkupForSection('index_numbers')
+        makeMarkupForSection('index_punctuation')
+        makeMarkupForSection('index_symbols')
+        makeMarkupForSection('index_other')
+        window.index = {}
+        }
     }
 
 
@@ -499,392 +510,196 @@ function makeTables (lang) {
 
 	// for each figure in the document...
     for (let t=0;t<tables.length;t++) {
-        node = tables[t]
-        bicameral = false
-        showFirst = false
-       //console.log(node)
-
-// check whether this is an index line
-if (node.classList.contains('indexline')) indexline = true
-else indexline = false
-
-		// populate the chars array with characters & gather additional info
-        //chars = node.dataset.chars.split('␣')
-        chars = node.textContent.split('␣')
-        if (typeof node.dataset.cols === 'undefined') info = ''
-        else info = node.dataset.cols
-        if (node.className.includes('bicameral')) bicameral = true // note: phase this out in favour of data-select=last
-        else bicameral = false
-        if (node.dataset.select && node.dataset.select == 'last') bicameral = true
-        else if (node.dataset.select) showFirst = true
-        if (node.className.includes('vowelcluster')) vowelcluster = true // this should be phased out
-        else vowelcluster = false
-        if (node.dataset.ignore) var ignorableChar = node.dataset.ignore.codePointAt(0)
-        else ignorableChar = ''
-        if (node.dataset.notes) {
-            notes = node.dataset.notes.split(',')
-            }
-        else notes = []
-        if (node.dataset.extra) {
-            extra = node.dataset.extra.split('␣')
-			var extraLang = extra.pop()
-            }
-        else extra = []
-        if (node.dataset.ipa) {
-            ipa = node.dataset.ipa.split(',')
-            }
-        else ipa = []
-        if (node.dataset.translit) {
-            translit = node.dataset.translit.split('␣')
-            }
-        else translit = []
-        if (node.dataset.links) {
-            links = node.dataset.links.split(',')
-            }
-        else links = []
-        out = ''
-
-		// make the summary count link
-        if (chars.length > 1) {
-            var length = chars.length
-            for (let j=0;j<chars.length;j++) if (chars[j] === ' ') length-- // ignore spaces
-            out += '<div class="listAll" onClick="listAll(this, \''+lang+'\')">list '
-            if (length === 2) out += 'both'
-            else out += 'all '+length
-            out += '</div>'
-            }
-
-		// start building the listArray
-        out += '<div class="listArray">'
-
-		// for each item ...
-        for (let i=0;i<chars.length;i++) { 
-			if (bicameral || showFirst) {
-				charList = [... chars[i]]
-            	if (bicameral) char = charList[1]
-            	else char = charList[0]
-				}
-            //else char = chars[i].replace(/-|–/g,'')
-            else char = chars[i]
-
-            // create an id attribute for the listPairs in the index
-            //if ((node.parentNode.parentNode.parentNode && node.parentNode.parentNode.parentNode.id === 'index') || (node.parentNode.parentNode.parentNode.parentNode && node.parentNode.parentNode.parentNode.parentNode.id === 'index')) var indexId = ' id="index'+chars[i]+'"'
-            //else indexId = ''
-            if (node.closest("#index")) var indexId = ' id="index'+chars[i]+'"'
-            else indexId = ''
-            
-			if (node.dataset.lang) out += '<div class="listPair"'+indexId+'><span class="listItem" lang="'+node.dataset.lang+'">'+chars[i]+'</span>'
-            else out += '<div class="listPair"'+indexId+'><span class="listItem" lang="'+lang+'">'+chars[i]+'</span>'
-
-			/*if (node.dataset.lang) out += '<div class="listPair"><span class="listItem" lang="'+node.dataset.lang+'">'+chars[i]+'</span>'
-            else out += '<div class="listPair"><span class="listItem" lang="'+lang+'">'+chars[i]+'</span>'*/
-
-            // leave a blank where a space is used
-            if (chars[i] === ' ') {
-                out += '&nbsp;</span></div>'
-                continue
-                }
-            
-			// print any second row of characters
-            if (extra.length > 0) {
-                if (extra[i]) out += '<span class="listExtra" lang="'+extraLang+'">'+extra[i]+'</span>'
-                else out += '<span>&nbsp;</span>'
-                }
-
-            /*for (let z=0;z<chars[i].length;z++) {
-                var hex = chars[i].codePointAt(z)
-                if (ignorableChar && ignorableChar === hex) continue // ignore specified character
-                if (vowelcluster && hex === 45) continue // ignore hyphens - this should be phased out
-                hex = hex.toString(16).toUpperCase()
-                while (hex.length < 4) hex = '0'+hex
-                out += hex
-                if (chars.length>1 && z<chars.length-1) out += '<br/>'
-                }
-                out += '</span>'*/
-
-            if (info.includes('ipa')) { 
-			//if (window.spreadsheetRows[char]) console.log('ipa',char,window.spreadsheetRows[char][cols.ipaLoc])
-                if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.ipaLoc]) ch = window.spreadsheetRows[char][cols.ipaLoc].toLowerCase()
-                else ch = '&nbsp;'
-                if (ch === '&nbsp;') out += '<span>&nbsp;</span>'
-                else out += '<span class="listIPA">'+ch.replace(/ /g,' ')+'</span>'
-                //else out += '<span class="listIPA">'+ch.replace(/ /g,'<i>~</i>')+'</span>'
-                }
-
-            if (ipa.length > 0) {
-                if (ipa[i]) out += '<span class="listIPA">'+ipa[i]+'</span>'
-                else out += ' '
-                }
-
-            if (info.includes('trans')) {
-                if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.transLoc]) ch = window.spreadsheetRows[char][cols.transLoc]
-                else ch = '&nbsp;'
-                out += '<span class="listTrans">'+ch+'</span>'
-                }
-
-             if (translit.length > 0) {
-                if (translit[i]) out += '<span class="listTrans">'+translit[i]+'</span>'
-                else out += ' '
-                }
-
-           if (info.includes('transc')) {
-                if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.transcription]) ch = window.spreadsheetRows[char][cols.transcription]
-                else ch = '&nbsp;'
-                out += '<span class="listTransc">'+ch+'</span>'
-                }
-
-            if (info.includes('trans2')) {
-                if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.transcription2]) ch = window.spreadsheetRows[char][cols.transcription2]
-                else ch = '&nbsp;'
-                out += '<span class="listTrans2">'+ch+'</span>'
-                }
-
-            if (info.includes('meaning')) {
-                if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.meaning]) ch = window.spreadsheetRows[char][cols.meaning]
-                else ch = '&nbsp;'
-                out += '<span class="listMeaning">'+ch+'</span>'
-                }
-
-            if (notes.length > 0) {
-                if (notes[i]) ch = notes[i]
-                else ch = '&nbsp;'
-                out += '<span class="listMeaning">'+ch+'</span>'
-                }
-
-
-			// print the code point values
-            if (node.className.includes('noCodePoints')) {} // do nothing
-            else {
-                out += '<span class="listUnum">'
-                charList = [... chars[i]]
-                for (let z=0;z<charList.length;z++) {
-                    var hex = charList[z].codePointAt(0)
-                    if (ignorableChar && ignorableChar === hex) continue // ignore specified character
-                    if (vowelcluster && hex === 45) continue // ignore hyphens - this should be phased out
-                    hex = hex.toString(16).toUpperCase()
-                    while (hex.length < 4) hex = '0'+hex
-
-                    out += '<span class="listUnumCP" onclick="showCharDetailsInPanel(event)">'+hex+'</span>'
-    /* remove in favour of displaying data in panel
-                    if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.block]) out += '<a href="/scripts/'+window.spreadsheetRows[char][cols.block]+'/block#char'+hex+'" target="c">'
-                    out += hex
-                    if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.block]) out += '</a>'
-                    */
-                    if (charList.length>1 && z<charList.length-1) out += '<br/>'
-                    }
-                    out += '</span>'
-                    }
-
-
-			// add any links
-            if (links.length > 0) {
-                if (links[i]) {
-					var linkList = links[i].split(' ')
-                    if (indexline) out += '<div class="index_details">'
-                    if (window.spreadsheetRows[char]) uname = window.spreadsheetRows[char][cols.ucsName].replace(/U\+[^:]+: /,'')
-                    else uname = "NAME UNKNOWN"
-                    if (indexline) out += '<span class="index_uname">'+uname+'</span>'
-                    //if (indexline) out += '<span class="index_uname">'+window.spreadsheetRows[char][cols.ucsName].replace(/U\+[^:]+: /,'')+'</span>'
-					out += '<span class="links">'
-					for (let l=0;l<linkList.length;l++) {
-						out += '<a href="'+linkList[l]+'">↓</a>'
-						}
-					out += '</span>'
-                    if (indexline) out += '</div>'
-					}
-                else out += '<span>&nbsp;</span>'
-                }
-
-			
-
-            out += '</div>'
-            }
-        out += '</div>'
-
-        node.innerHTML = out
+        replaceStuff(tables[t])
         }
     }
 
 
 
 
+function replaceStuff (node) {
 
-//replaceStuff('Georgian', 'otherlanguages', otherlanguages, '', 'ka', '', cols, false)
-	
+    bicameral = false
+    showFirst = false
+    //console.log(node)
 
+// check whether this is an index line
+if (node.classList.contains('indexline')) indexline = true
+else indexline = false
 
-function replaceStuff (language, langClass, chars, bicameral, lang, dir, cols, showShape) {
-    // create the lists of characters in yellow boxes
-
-    //if (typeof chars == 'undefined') return
-    console.log(cols)
-	
-    // make an object from the spreadsheet data
-    var temp = chars.split('\n')
-    var spreadsheetRows = {}
-    for (var x=0; x<temp.length; x++) {
-        if (temp[x].trim() == '') continue
-        var items = temp[x].split('\t')
-        if (items[0] === '') continue
-
-        spreadsheetRows[items[0]] = ['0']
-        for (let i=1;i<items.length;i++) spreadsheetRows[items[0]].push(items[i])
+    // populate the chars array with characters & gather additional info
+    //chars = node.dataset.chars.split('␣')
+    chars = node.textContent.split('␣')
+    if (typeof node.dataset.cols === 'undefined') info = ''
+    else info = node.dataset.cols
+    if (node.className.includes('bicameral')) bicameral = true // note: phase this out in favour of data-select=last
+    else bicameral = false
+    if (node.dataset.select && node.dataset.select == 'last') bicameral = true
+    else if (node.dataset.select) showFirst = true
+    if (node.className.includes('vowelcluster')) vowelcluster = true // this should be phased out
+    else vowelcluster = false
+    if (node.dataset.ignore) var ignorableChar = node.dataset.ignore.codePointAt(0)
+    else ignorableChar = ''
+    if (node.dataset.notes) {
+        notes = node.dataset.notes.split(',')
         }
-    console.log(spreadsheetRows)
+    else notes = []
+    if (node.dataset.extra) {
+        extra = node.dataset.extra.split('␣')
+        var extraLang = extra.pop()
+        }
+    else extra = []
+    if (node.dataset.ipa) {
+        ipa = node.dataset.ipa.split(',')
+        }
+    else ipa = []
+    if (node.dataset.translit) {
+        translit = node.dataset.translit.split('␣')
+        }
+    else translit = []
+    if (node.dataset.links) {
+        links = node.dataset.links.split(',')
+        }
+    else links = []
+    out = ''
 
+    // make the summary count link
+    if (chars.length > 1) {
+        var length = chars.length
+        for (let j=0;j<chars.length;j++) if (chars[j] === ' ') length-- // ignore spaces
+        out += '<div class="listAll" onClick="listAll(this, \''+lang+'\')">list '
+        if (length === 2) out += 'both'
+        else out += 'all '+length
+        out += '</div>'
+        }
 
-    var tables, node, chars, info, bicameral, out, char
-    
-    tables = document.querySelectorAll(langClass)
-	console.log('table length', tables.length, langClass)
+    // start building the listArray
+    out += '<div class="listArray">'
 
-    for (let t=0;t<tables.length;t++) {
-        node = tables[t]
-        bicameral = false
-        showFirst = false
-       //console.log(node)
-
-        //chars = node.dataset.chars.split('␣')
-        chars = node.textContent.split('␣')
-        info = node.dataset.cols
-        if (node.className.includes('bicameral')) bicameral = true
-        else bicameral = false
-        if (node.dataset.select && node.dataset.select == 'last') bicameral = true
-        else if (node.dataset.select) showFirst = true
-        if (node.className.includes('vowelcluster')) vowelcluster = true // this should be phased out
-        else vowelcluster = false
-        if (node.dataset.ignore) var ignorableChar = node.dataset.ignore.codePointAt(0)
-        else ignorableChar = ''
-        if (node.dataset.notes) {
-            notes = node.dataset.notes.split(',')
+    // for each item ...
+    for (let i=0;i<chars.length;i++) { 
+        if (bicameral || showFirst) {
+            charList = [... chars[i]]
+            if (bicameral) char = charList[1]
+            else char = charList[0]
             }
-        else notes = []
-        if (node.dataset.extra) {
-            extra = node.dataset.extra.split('␣')
-			var extraLang = extra.pop()
-            }
-        else extra = []
-        if (node.dataset.ipa) {
-            ipa = node.dataset.ipa.split(',')
-            }
-        else ipa = []
-        if (node.dataset.translit) {
-            translit = node.dataset.translit.split('␣')
-            }
-        else translit = []
-        if (node.dataset.links) {
-            links = node.dataset.links.split(',')
-            }
-        else links = []
-        out = ''
+        else char = chars[i]
 
-        if (chars.length > 1) {
-            var length = chars.length
-            for (let j=0;j<chars.length;j++) if (chars[j] === ' ') length-- // ignore spaces
-            out += '<div class="listAll" onClick="listAll(this, \''+lang+'\')">list '
-            if (length === 2) out += 'both'
-            else out += 'all '+length
-            out += '</div>'
+        // create an id attribute for the listPairs in the index
+        if (node.closest("#index")) var indexId = ' id="index'+chars[i]+'"'
+        else indexId = ''
+
+        if (node.dataset.lang) out += '<div class="listPair"'+indexId+'><span class="listItem" lang="'+node.dataset.lang+'">'+chars[i]+'</span>'
+        else out += '<div class="listPair"'+indexId+'><span class="listItem" lang="'+lang+'">'+chars[i]+'</span>'
+
+
+        // leave a blank where a space is used
+        if (chars[i] === ' ') {
+            out += '&nbsp;</span></div>'
+            continue
             }
 
-        out += '<div class="listArray">'
+        // print any second row of characters
+        if (extra.length > 0) {
+            if (extra[i]) out += '<span class="listExtra" lang="'+extraLang+'">'+extra[i]+'</span>'
+            else out += '<span>&nbsp;</span>'
+            }
 
-        for (let i=0;i<chars.length;i++) {
-            if (bicameral) char = chars[i][chars[i].length-1]
-            else if (showFirst) char = chars[i][0]
-            else char = chars[i]
-            
-            out += '<div class="listPair"><span class="listItem" lang="'+lang+'">'+chars[i]+'</span>'
 
-            // leave a blank where a space is used
-            if (chars[i] === ' ') {
-                out += '&nbsp;</span></div>'
-                continue
-                }
-            
-			// print any second row of characters
-            if (extra.length > 0) {
-                if (extra[i]) out += '<span class="listExtra" lang="'+extraLang+'">'+extra[i]+'</span>'
-                else out += '<span>&nbsp;</span>'
-                }
+        if (info.includes('ipa')) { 
+        //if (window.spreadsheetRows[char]) console.log('ipa',char,window.spreadsheetRows[char][cols.ipaLoc])
+            if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.ipaLoc]) ch = window.spreadsheetRows[char][cols.ipaLoc].toLowerCase()
+            else ch = '&nbsp;'
+            if (ch === '&nbsp;') out += '<span>&nbsp;</span>'
+            else out += '<span class="listIPA">'+ch.replace(/ /g,' ')+'</span>'
+            //else out += '<span class="listIPA">'+ch.replace(/ /g,'<i>~</i>')+'</span>'
+            }
 
-			
-            // print the code point values
+        if (ipa.length > 0) {
+            if (ipa[i]) out += '<span class="listIPA">'+ipa[i]+'</span>'
+            else out += ' '
+            }
+
+        if (info.includes('trans')) {
+            if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.transLoc]) ch = window.spreadsheetRows[char][cols.transLoc]
+            else ch = '&nbsp;'
+            out += '<span class="listTrans">'+ch+'</span>'
+            }
+
+         if (translit.length > 0) {
+            if (translit[i]) out += '<span class="listTrans">'+translit[i]+'</span>'
+            else out += ' '
+            }
+
+       if (info.includes('transc')) {
+            if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.transcription]) ch = window.spreadsheetRows[char][cols.transcription]
+            else ch = '&nbsp;'
+            out += '<span class="listTransc">'+ch+'</span>'
+            }
+
+        if (info.includes('trans2')) {
+            if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.transcription2]) ch = window.spreadsheetRows[char][cols.transcription2]
+            else ch = '&nbsp;'
+            out += '<span class="listTrans2">'+ch+'</span>'
+            }
+
+        if (info.includes('meaning')) {
+            if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.meaning]) ch = window.spreadsheetRows[char][cols.meaning]
+            else ch = '&nbsp;'
+            out += '<span class="listMeaning">'+ch+'</span>'
+            }
+
+        if (notes.length > 0) {
+            if (notes[i]) ch = notes[i]
+            else ch = '&nbsp;'
+            out += '<span class="listMeaning">'+ch+'</span>'
+            }
+
+
+        // print the code point values
+        if (node.className.includes('noCodePoints')) {} // do nothing
+        else {
             out += '<span class="listUnum">'
-            for (let z=0;z<chars[i].length;z++) {
-                var hex = chars[i].codePointAt(z)
+            charList = [... chars[i]]
+            for (let z=0;z<charList.length;z++) {
+                var hex = charList[z].codePointAt(0)
                 if (ignorableChar && ignorableChar === hex) continue // ignore specified character
                 if (vowelcluster && hex === 45) continue // ignore hyphens - this should be phased out
                 hex = hex.toString(16).toUpperCase()
                 while (hex.length < 4) hex = '0'+hex
-                out += hex
-                if (chars.length>1 && z<chars.length-1) out += '<br/>'
+
+                out += '<span class="listUnumCP" onclick="showCharDetailsInPanel(event)">'+hex+'</span>'
+                if (charList.length>1 && z<charList.length-1) out += '<br/>'
                 }
                 out += '</span>'
-
-            if (info.includes('ipa')) {
-                if (spreadsheetRows[char] && spreadsheetRows[char][cols.ipaLoc]) ch = spreadsheetRows[char][cols.ipaLoc]
-                else ch = '&nbsp;'
-                if (ch === '&nbsp;') out += '<span>&nbsp;</span>'
-                else out += '<span class="listIPA">'+ch+'</span>'
                 }
 
-            if (ipa.length > 0) {
-                if (ipa[i]) out += '<span class="listIPA">'+ipa[i]+'</span>'
-                else out += ' '
-                }
 
-            if (info.includes('trans')) {
-                if (spreadsheetRows[char] && spreadsheetRows[char][cols.transLoc]) ch = spreadsheetRows[char][cols.transLoc]
-                else ch = '&nbsp;'
-                out += '<span class="listTrans">'+ch+'</span>'
+        // add any links
+        if (links.length > 0) {
+            if (links[i]) {
+                var linkList = links[i].split(' ')
+                if (indexline) out += '<div class="index_details">'
+                if (window.spreadsheetRows[char]) uname = window.spreadsheetRows[char][cols.ucsName].replace(/U\+[^:]+: /,'')
+                else uname = "NAME UNKNOWN"
+                if (indexline) out += '<span class="index_uname">'+uname+'</span>'
+                out += '<span class="links">'
+                for (let l=0;l<linkList.length;l++) {
+                    out += '<a href="'+linkList[l]+'">↓</a>'
+                    }
+                out += '</span>'
+                if (indexline) out += '</div>'
                 }
-
-             if (translit.length > 0) {
-                if (translit[i]) out += '<span class="listTrans">'+translit[i]+'</span>'
-                else out += ' '
-                }
-
-           if (info.includes('transc')) {
-                if (spreadsheetRows[char] && spreadsheetRows[char][cols.transcription]) ch = spreadsheetRows[char][cols.transcription]
-                else ch = '&nbsp;'
-                out += '<span class="listTransc">'+ch+'</span>'
-                }
-
-            if (info.includes('trans2')) {
-                if (spreadsheetRows[char] && spreadsheetRows[char][cols.transcription2]) ch = spreadsheetRows[char][cols.transcription2]
-                else ch = '&nbsp;'
-                out += '<span class="listTrans2">'+ch+'</span>'
-                }
-
-            if (info.includes('meaning')) {
-                if (spreadsheetRows[char] && spreadsheetRows[char][cols.meaning]) ch = spreadsheetRows[char][cols.meaning]
-                else ch = '&nbsp;'
-                out += '<span class="listMeaning">'+ch+'</span>'
-                }
-
-            if (notes.length > 0) {
-                if (notes[i]) ch = notes[i]
-                else ch = '&nbsp;'
-                out += '<span class="listMeaning">'+ch+'</span>'
-                }
-/*
-            if (links.length > 0) {
-                if (links[i]) out += '<a href="'+links[i]+'">link</a>'
-                else out += '<span>&nbsp;</span>'
-                }
-*/
-            if (links.length > 0) {
-                if (links[i]) out += '<a href="'+links[i]+'"><img src="../../shared/images/info.png" alt="More information."></a>'
-                else out += '<span>&nbsp;</span>'
-                }
-
-            out += '</div>'
+            else out += '<span>&nbsp;</span>'
             }
-        out += '</div>'
 
-        node.innerHTML = out
+
+
+        out += '</div>'
         }
+    out += '</div>'
+
+    node.innerHTML = out
     }
 
 
@@ -1368,7 +1183,7 @@ function makeIndexObject () {
         if (chars[i].textContent.trim() === '') continue
         if (chars[i].classList.contains('noindex') || chars[i].parentNode.parentNode.parentNode.classList.contains('noindex')) continue
         
-        console.log('Processing:',chars[i].textContent)
+        //console.log('Processing:',chars[i].textContent)
         if (chars[i].firstChild == null) console.log('No content found for',chars[i].parentNode.textContent)
         cell = chars[i].firstChild.textContent
         
@@ -1481,8 +1296,9 @@ function makeMarkup () {
 
 
 
-function makeMarkupForSection (sectionName) {
-
+function OLDmakeMarkupForSection (sectionName) {
+    // 
+    
     var out = ''
     var indexList = document.getElementById(sectionName)
     //var indexSections = indexList.querySelectorAll('section')
@@ -1510,6 +1326,40 @@ function makeMarkupForSection (sectionName) {
     
 	document.getElementById('out').value = out
 	document.getElementById('out').select()
+	}
+
+
+
+
+
+function makeMarkupForSection (sectionName) {
+    // rewrite the index for a given section in the index
+    // new versions makes markup changes in place
+    // sectionName is the id of a section in the index
+    // global: index, contains the mappings of character to section
+    
+    if (document.getElementById(sectionName) === null) {
+        console.log('INFO: sectionName points to non-existent section',sectionName,'in makeMarkupForSection')
+        return
+        }
+
+    var i, j, k
+    
+    var indexList = document.getElementById(sectionName)
+    var indexFigures = indexList.querySelectorAll('figure')
+    for (i=0;i<indexFigures.length;i++) {
+        var allCharsArray = indexFigures[i].textContent.split('␣')
+                
+        var out = ''
+        for (k=0;k<allCharsArray.length;k++) {
+            if (typeof index[allCharsArray[k]] === 'undefined') console.log('NOT FOUND:',allCharsArray[k])
+            else out += index[allCharsArray[k]].section + ','
+            }
+        
+        //console.log('out', out)
+        indexFigures[i].dataset.links = out
+        replaceStuff(indexFigures[i])
+        }
 	}
 
 
