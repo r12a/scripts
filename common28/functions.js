@@ -35,7 +35,7 @@ function initialiseSummary (blockDirectory, lang, tableName, dir) {
 	setCharOnclicks()
 	if (typeof reflist !== 'undefined') createReferences(lang)
 	//if (typeof reflist !== 'undefined') chooseRelevantRefs()
-    if (scriptLanguageList) makeScriptLanguageList()
+    if (typeof scriptLanguageList !== 'undefined') makeScriptLanguageList()
     }
 
 
