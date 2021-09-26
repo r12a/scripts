@@ -22,6 +22,7 @@ function initialise (base, ghDirectory, detailsfileList, version) {
 	doHeadersAndFooters(ghDirectory, detailsfileList, version) 
     initialiseShowNames(base, '') // adds a function to all .ex elements
     checkForCharParam()  // hides unneeded stuff when this page is opened by UniView
+    createCLArray() // creates the window.cl array that associates characters with languages
     addLangInfo()  // adds the used by information
 	if (typeof refs !== 'undefined') createReferences('all')
     
