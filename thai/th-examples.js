@@ -472,6 +472,61 @@ autoExpandExamples.th = `
 น้ำส้มคั้น|orange juice|nam˦˥ som˥˩ kʰan˦˥
 กรุงเทพมหานคร|Bangkok|kruŋ˧ tʰeːp̚˥˩ ma˦˥ haː˩˩˦ na˦˥ kʰɔːn˧
 
+เลอเวือะ|Lawa ethnic group|lɤː˧.wɯa̯ʔ˦˥
+เหิน|to fly|hɤːn˩˩˦
+แล็บ|laboratory (colloq.)|lɛp̚˨˩
+อูย|ouch, ow|ʔuːj˧
+หูย|wow, oh!|huːj˩˩˦
+ร็อก|rock (music)|rɔk̚˦˥
+ซ็อกเก็ต|socket|sɔk̚˦˥.ket̚˨˩
+ยัวะ|to be very angry (colloq.)|jua̯ʔ˦˥
+ผัวะ|whipping or slapping sound|pʰua̯ʔ˨˩
+โอยัวะ|Thai hot, black coffee|ʔoː˧.jua̯ʔ˦˥
+เหว|ravine, abyss|heːw˩˩˦
+เหร่|unattractive|reː˨˩
+หรู|luxurious, magnificent|ruː˩˩˦
+ฦๅชา|obsolete spelling of ลือชา|lɯː˧.t͡ɕʰaː˧
+ลือชา|to make one famous|lɯː˧.t͡ɕʰaː˧
+อัฒจันทร์|grandstand, bleacher|ʔat̚˨˩.t͡ɕan˧.tʰa˦˥
+เหงา|lonely|ŋaw˩˩˦
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 `
 
