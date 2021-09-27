@@ -102,4 +102,50 @@ reflist = {
 
 
 
+
+scriptLanguageList = {
+ahk:{name:"Akha"},
+bzi:{name:"Bisu"},
+blr:{name:"Blang"},
+cog:{name:"Chong"},
+bru:{name:"Bru, Eastern"},
+lwl:{name:"Lawa, Eastern"},
+mww:{name:"Hmong Daw"},
+hnj:{name:"Hmong Njua"},
+ium:{name:"Mien, Iu"},
+kgd:{name:"Kataang"},
+kns:{name:"Kensiu"},
+kjg:{name:"Khmu"},
+khf:{name:"Khuen"},
+kdt:{name:"Kuy"},
+lwm:{name:"Laomian"},
+mlf:{name:"Mal"},
+mra:{name:"Mlabri"},
+mwt:{name:"Moken"},
+mkm:{name:"Moklen"},
+mpz:{name:"Mpi"},
+tts:{name:"Thai, Northeastern"},
+kxm:{name:"Khmer, Northern"},
+nod:{name:"Thai, Northern"},
+cbn:{name:"Nyahkur"},
+pli:{name:"Pali"},
+mfa:{name:"Malay, Pattani"},
+prt:{name:"Phai"},
+kjt:{name:"Karen, Phrae Pwo"},
+kjp:{name:"Karen, Pwo Eastern"},
+pww:{name:"Karen, Pwo Northern"},
+shn:{name:"Shan"},
+sss:{name:"Sô"},
+sou:{name:"Thai, Southern"},
+soa:{name:"Thai Song"},
+tha:{name:"Thai"},
+urk:{name:"Urak Lawoi'"},
+brv:{name:"Bru, Western"},
+lcp:{name:"Lawa, Western"},
+}
+
+
+
+
+
 // <a class="fn">ws,#tones</a>
