@@ -96,3 +96,49 @@ reflist = {
 
 
 
+
+
+
+scriptLanguageList = {
+as:{name:"Assamese"},
+bn:{name:"Bengali"},
+bpy:{name:"Bishnupriya"},
+brx:{name:"Bodo (India)"},
+ccp:{name:"Chakma"},
+cdf:{name:"Chiru"},
+ctg:{name:"Chittagonian"},
+nct:{name:"Naga, Chothe"},
+der:{name:"Deori"},
+dis:{name:"Dimasa"},
+cfm:{name:"Chin, Falam"},
+grt:{name:"Garo"},
+haj:{name:"Hajong"},
+kha:{name:"Khasi"},
+kdq:{name:"Koch"},
+cdz:{name:"Koda"},
+trp:{name:"Kok Borok"},
+kyw:{name:"Kudmali"},
+lus:{name:"Lushai"},
+mni:{name:"Manipuri"},
+nng:{name:"Naga, Maring"},
+mrg:{name:"Mising"},
+nmo:{name:"Naga, Moyon"},
+unx:{name:"Munda"},
+unr:{name:"Mundari"},
+njz:{name:"Nyishi"},
+sdr:{name:"Sadri, Oraon"},
+tdb:{name:"Panchpargania"},
+suv:{name:"Puroik"},
+rah:{name:"Rabha"},
+rkt:{name:"Rangpuri"},
+sck:{name:"Sadri"},
+sat:{name:"Santali"},
+mjt:{name:"Sauria Paharia"},
+syl:{name:"Sylheti"},
+nki:{name:"Naga, Thangal"},
+tpe:{name:"Tippera"},
+lax:{name:"Tiwa"},
+txo:{name:"Toto"},
+usi:{name:"Usui"},
+}
+
