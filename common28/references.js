@@ -66,7 +66,7 @@ function createReferences (lang) {
 function setFootnoteRefs () {
 	// creates markup for the footnote references
 		
-	fnrefs = document.querySelectorAll('tt')
+	var fnrefs = document.querySelectorAll('tt')
 	for (let i=0;i<fnrefs.length;i++) {
 		var more = ''
 		if (fnrefs[i].classList.contains('more')) more = '→'
@@ -83,9 +83,9 @@ function setFootnoteRefs () {
 			if (itemArray[1][0] === '#') locn = itemArray[1]
 			else pages = '<sub>'+itemArray[1]+'</sub>'
 			}
-		url = reflist[id].url
+		var url = reflist[id].url
 		
-		out = '<a class="fn" target="_blank" title="'+authors+', '+title
+		var out = '<a class="fn" target="_blank" title="'+authors+', '+title
 		if (pages) out += ', p.'+pages.replace(/<sub>/,'').replace(/<\/sub>/,'')
 		if (locn) out += ', §'+locn.replace(/#/,'')
 		out += '" href="'+url+locn+'">'+counter+pages+more+'</a>'
