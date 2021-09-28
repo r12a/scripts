@@ -65,7 +65,7 @@ var contentPrompts = {
 function setContentPrompts () {
 	if (contentPrompts) {
 		// set the prompts in the titles
-		for (thePrompt in contentPrompts) {
+		for (var thePrompt in contentPrompts) {
 			var node = document.getElementById(thePrompt)
 			if (node) {		 	
 				var heading = node.querySelector('h3')
@@ -110,73 +110,9 @@ else {
 }
 
 
+
+
 /*
-<div id="orthoLinkSwitch" onmouseover="document.getElementById('orthoLinkPopup').style.display='block'"  
-onmouseout="document.getElementById('orthoLinkPopup').style.display='none'" ><img src="../common/icons/share.png" alt="External links">
-
-<div id="orthoLinkPopup">
-<ul>
-<li><a target="_blank" href="" onClick="this.href='/app-listcharacters?chars='+encodeURI(getOrthographyList('.characterBox', 'index', false) + getOrthographyList('.auxiliaryBox', 'index', true)); this.parentNode.parentNode.style.display='none';">Show grouped by Unicode block</a></li>
-<li><a target="_blank" href="" onClick="this.href='/uniview?charlist='+encodeURI(getOrthographyList('.characterBox', 'index', false) + getOrthographyList('.auxiliaryBox', 'index', true))">Show in UniView</a></li>
-<li><a target="_blank" href="" onClick="this.href='/app-analysestring/?chars='+encodeURI(getOrthographyList('.characterBox', 'index', false) + getOrthographyList('.auxiliaryBox', 'index', true))">Show in Analyse String</a></li>
-<li><a target="_blank" href="" onClick="this.href='../fontlist/?script=armn&text='+encodeURI(getOrthographyList('.characterBox', 'index', true) + getOrthographyList('.auxiliaryBox', 'index', true))">Show in Font Lister</a></li>
-<li><a target="_blank" href="../samples/?script=armn">Show sample texts for this script</a></li>
-<li><a target="_blank" href="block">Show the character notes page</a></li>
-<li><a target="_blank" href="../links?iso=armn">Other local resources for this script</a></li>
-<li id="closeOrthoLink" onClick="this.parentNode.parentNode.style.display='none'">X</li>
-</ul>
-</div>
-</div>
-
-<div id="orthoLinkInstructions">
-<p>Show characters in the  Armenian orthography described here, grouped by <a target="_blank" href="" onClick="this.href='../apps/listcategories?chars='+encodeURI(getOrthographyList('.characterBox', 'index', true) + getOrthographyList('.auxiliaryBox', 'index', true))">General Category</a>, or click on the icon to the left to choose alternatives.</p>
-<p>In the Character Usage app, show <a href="../../app-charuse/?language=hy" target="_blank">Armenian</a>.</p>
-</div>
-*/
-
-
-function showOrthoLinksOLD (node, script, langName, lang, orthog, indic) {
-// Adds the link popup and anchoring line in Basic Features
-// script: iso code for script; langName: language name; lang: bcp47 tag
-// orthog: ordinary name for orthography described
-// indic: boolean indicating whether or not to show indic syllable property link
-        
-	out = `
-    <div id="orthoLinkSwitch" onmouseover="document.getElementById('orthoLinkPopup').style.display='block'"  
-    onmouseout="document.getElementById('orthoLinkPopup').style.display='none'" ><img src="../common/icons/share.png" alt="External links">
-
-    <div id="orthoLinkPopup">
-    <ul>`
-    
-    if (indic) out += `<li><a target="_blank" href="" onClick="this.href='../apps/listindic?chars='+encodeURI(getOrthographyList('.characterBox', 'index', false) + getOrthographyList('.auxiliaryBox', 'index', true));">Show grouped by Indic category</a></li>`
-    
-    out += `<li><a target="_blank" href="" onClick="this.href='/app-listcharacters?chars='+encodeURI(getOrthographyList('.characterBox', 'index', false) + getOrthographyList('.auxiliaryBox', 'index', true));">Show grouped by Unicode block</a></li>
-    
-    <li><a target="_blank" href="" onClick="this.href='/uniview?charlist='+encodeURI(getOrthographyList('.characterBox', 'index', false) + getOrthographyList('.auxiliaryBox', 'index', true))">Show in UniView</a></li>
-    
-    <li><a target="_blank" href="" onClick="this.href='/app-analysestring/?chars='+encodeURI(getOrthographyList('.characterBox', 'index', false) + getOrthographyList('.auxiliaryBox', 'index', true))">Show in Analyse String</a></li>
-    
-    <li><a target="_blank" href="" onClick="this.href='../fontlist/?script=${script}&text='+encodeURI(getOrthographyList('.characterBox', 'index', true) + getOrthographyList('.auxiliaryBox', 'index', true))">Show in Font Lister</a></li>
-    
-    <li><a target="_blank" href="../samples/?script=${script}">Show sample texts for this script</a></li>
-    
-    <li><a target="_blank" href="block">Show the character notes page</a></li>
-    <li><a target="_blank" href="../links?iso=${script}">Other local resources for this script</a></li>
-    <li id="closeOrthoLink" onClick="this.parentNode.parentNode.style.display='none'">X</li>
-    </ul>
-    </div>
-    </div>
-
-    <div id="orthoLinkInstructions">
-    <p>Show characters in the ${orthog} orthography described here, grouped by <a target="_blank" href="" onClick="this.href='../apps/listcategories?chars='+encodeURI(getOrthographyList('.characterBox', 'index', true) + getOrthographyList('.auxiliaryBox', 'index', true))">General Category</a>, or click on the icon to the left to choose alternatives.</p>
-    <p>In the Character Usage app, show <a href="../../app-charuse/?language=${lang}" target="_blank">${langName}</a>.</p>
-    </div>
-	` 
-	node.innerHTML = out
-
-}
-
-
 function showOrthoLinks (node, script, langName, lang, orthog, indic) {
 // Adds the link popup and anchoring line in Basic Features
 // script: iso code for script; langName: language name; lang: bcp47 tag
@@ -224,7 +160,7 @@ function showOrthoLinks (node, script, langName, lang, orthog, indic) {
 	node.innerHTML = out
 
 }
-
+*/
 
 
 
@@ -307,17 +243,6 @@ function makeIndexIntro (node, script, langName, lang, orthog, indic) {
 
 
 
-
-
-
-
-
-
-function addUsageAdvice (script) {
-	// Add a para to the intro 
-	
-	document.getElementById('usage').outerHTML = '<p class="instructions">Click on characters or character names to reveal detailed information. (By default, this happens as the cursor moves over some items, but the floating menu to the right provides a toggle for that.) The same information also appears in the companion document, <a href="block" class="linkHighlight">'+script+' character notes</a>. Click on <span class="ex">highlighted</span> examples to see a list of the characters they contain.</p>'
-	}
 
 
 function addUsageAdvice (script) {
