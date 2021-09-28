@@ -302,14 +302,6 @@ autoExpandExamples.lo = `
 
 
 
-/*
-<p><span class="ipa">xxx</span> <span class="ex" lang="lo">xxx</span>
-<span class="eg" lang="lo"></span>
-</p>
-<p><span class="ipa">xxx</span> <span class="ex" lang="lo">xxx</span>
-<span class="eg" lang="lo"></span>
-</p>
-*/
 
 
 
