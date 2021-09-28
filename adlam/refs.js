@@ -88,3 +88,23 @@ reflist = {
 }
 
 
+
+
+
+scriptLanguageList = {
+ful:{name:"Fular"},
+fuf:{name:"Pular"},
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
