@@ -15,6 +15,11 @@ function addPageFeatures () {
         makeMarkupForSection('index_other')
         window.index = {}
         }
+    
+    // empty large global variables
+    window.fontDB = []
+    defList = []
+    fontInfo = {}
     }
 
 
@@ -153,7 +158,7 @@ function pointToSummaryPages () {
 
 
 
-
+/*
 function runCategoryCharCount (location, row, raw=false) { 
 	if (document.getElementById(location) == null) return
 	var charlists
@@ -183,7 +188,7 @@ function runCategoryCharCount (location, row, raw=false) {
         }
 
 	return out
-	}
+	}*/
 
  //   <tr><th>Letter</th><td id="letterCharList"></td><td id="letterCharListTotal"></td></tr>
 
@@ -228,7 +233,7 @@ function doHeadersFooters (dir) {
 
 
 
-
+/*
 var featureName = { 
 	type:"Script type", 
 	chars:"Number of characters", 
@@ -248,7 +253,7 @@ var featureName = {
 	digits:"Native digits?", 
 	region:"Region" 
 	}
-
+*/
 
 
 function addDefinitions () {
@@ -277,7 +282,7 @@ function makeSidePanel (id, otherlinks) {
 	if (typeof langs === 'undefined') return
 	if (typeof langs[id] === 'undefined') { console.log('Charuse data not found. Id sent to makeSidePanel was ',id); return }
     
-    var letters, marks, punctuation, symbols, others, nummbers, aux, total
+    var letters, marks, punctuation, symbols, others, numbers, aux, total
     var out, records, fields, values
 	
     // get character counts in a way that works around surrogates
@@ -492,6 +497,7 @@ function makeTables (lang) {
     
     // make an object from the spreadsheet
     var temp = window.spreadsheet.split('\n')
+    spreadsheet = ''
     window.spreadsheetRows = {}
     for (var x=0; x<temp.length; x++) {
         if (temp[x].trim() == '') continue
@@ -519,33 +525,33 @@ function makeTables (lang) {
 
 function replaceStuff (node) {
 
-    bicameral = false
-    showFirst = false
+    var bicameral = false
+    var showFirst = false
     //console.log(node)
 
 // check whether this is an index line
-if (node.classList.contains('indexline')) indexline = true
+if (node.classList.contains('indexline')) var indexline = true
 else indexline = false
 
     // populate the chars array with characters & gather additional info
     //chars = node.dataset.chars.split('␣')
     chars = node.textContent.split('␣')
-    if (typeof node.dataset.cols === 'undefined') info = ''
+    if (typeof node.dataset.cols === 'undefined') var info = ''
     else info = node.dataset.cols
     if (node.className.includes('bicameral')) bicameral = true // note: phase this out in favour of data-select=last
     else bicameral = false
     if (node.dataset.select && node.dataset.select == 'last') bicameral = true
     else if (node.dataset.select) showFirst = true
-    if (node.className.includes('vowelcluster')) vowelcluster = true // this should be phased out
+    if (node.className.includes('vowelcluster')) var vowelcluster = true // this should be phased out
     else vowelcluster = false
     if (node.dataset.ignore) var ignorableChar = node.dataset.ignore.codePointAt(0)
     else ignorableChar = ''
     if (node.dataset.notes) {
-        notes = node.dataset.notes.split(',')
+        var notes = node.dataset.notes.split(',')
         }
     else notes = []
     if (node.dataset.extra) {
-        extra = node.dataset.extra.split('␣')
+        var extra = node.dataset.extra.split('␣')
         var extraLang = extra.pop()
         }
     else extra = []
@@ -554,14 +560,14 @@ else indexline = false
         }
     else ipa = []
     if (node.dataset.translit) {
-        translit = node.dataset.translit.split('␣')
+        var translit = node.dataset.translit.split('␣')
         }
     else translit = []
     if (node.dataset.links) {
-        links = node.dataset.links.split(',')
+        var links = node.dataset.links.split(',')
         }
     else links = []
-    out = ''
+    var out = ''
 
     // make the summary count link
     if (chars.length > 1) {
@@ -579,7 +585,7 @@ else indexline = false
     // for each item ...
     for (let i=0;i<chars.length;i++) { 
         if (bicameral || showFirst) {
-            charList = [... chars[i]]
+            var charList = [... chars[i]]
             if (bicameral) char = charList[1]
             else char = charList[0]
             }
@@ -680,7 +686,7 @@ else indexline = false
             if (links[i]) {
                 var linkList = links[i].split(' ')
                 if (indexline) out += '<div class="index_details">'
-                if (window.spreadsheetRows[char]) uname = window.spreadsheetRows[char][cols.ucsName].replace(/U\+[^:]+: /,'')
+                if (window.spreadsheetRows[char]) var uname = window.spreadsheetRows[char][cols.ucsName].replace(/U\+[^:]+: /,'')
                 else uname = "NAME UNKNOWN"
                 if (indexline) out += '<span class="index_uname">'+uname+'</span>'
                 out += '<span class="links">'
@@ -706,7 +712,7 @@ else indexline = false
 
 
 
-
+/*
 function clearExamples () {
 	examples = document.getElementById('freeText').getElementsByTagName('span');
 	for (var i=0; i<examples.length; i++) {
@@ -776,7 +782,7 @@ function showAllFeatureInfo () {
 		notes[i].style.display = 'block'
 		}
 	}
-
+*/
 
 
 function initialiseShowNames (node, base, target) {
@@ -790,6 +796,7 @@ function initialiseShowNames (node, base, target) {
 	if(typeof base === 'undefined') { base = ''; }
 	if(typeof target === 'undefined') { target = ''; } 
 	
+    var e
 	var examples = node.querySelectorAll('.ex')
 	for (e=0;e<examples.length;e++) {
 		if (examples[e].nodeName.toLowerCase() == 'img') {
@@ -886,6 +893,7 @@ function getSelected() {
 	}
 
 
+/*
 function setFigureRefs () {
     // looks for inline tags with class .figref, takes the textContent and replaces it with the number of the figure
     // textConten should be the id of the figure
@@ -908,7 +916,7 @@ function setFigureRefs () {
         if (figrefs[id]) figrefitems[i].textContent = 'Figure '+figrefs[id]
         }
     }
-
+*/
 
 
 function toggleTranscription (type, show) { 
@@ -927,7 +935,7 @@ function toggleTranscription (type, show) {
 
 //<div class="listPair"><span class="listItem" lang="ber">ⵓ</span><span class="listTrans">u</span><span class="listIPA">ʊ</span></div>
 
-
+/*
 function setGeneralFont (fontname, size, language) {
 	if (language === '') return
 	var langtags = language.split(',')
@@ -944,12 +952,12 @@ function setGeneralFont (fontname, size, language) {
 		examples[e].style.fontSize = size
 		}
 	}
+*/
 
 
 
 
-
-
+/*
 function runCharCount (type, location, raw=false) { 
 	//if (document.getElementById(location) == null) return
 	var charlists
@@ -976,7 +984,7 @@ function runCharCount (type, location, raw=false) {
         }
 
 	return out
-	}
+	}*/
 
 
 
@@ -995,7 +1003,7 @@ function getOrthographyList (type, location, spaced=false) {
     else charlists = document.querySelectorAll('#index '+type+' .listItem')
     var chars = ''
 	for (let i=0;i<charlists.length;i++) chars += charlists[i].textContent
-    charlistArray = [...chars]
+    var charlistArray = [...chars]
 	const uniqueSet = new Set(charlistArray)
 	var uniqueArray = [...uniqueSet]
 	
@@ -1070,7 +1078,7 @@ function findIPA () {
 		}
 	}
 
-
+/*
 function copyToClipboard (node) {
 	var oldContent = node.textContent
 	node.textContent=node.textContent.replace(/\u200B/g,'')
@@ -1081,7 +1089,7 @@ function copyToClipboard (node) {
 	node.contentEditable=false
 	node.textContent=oldContent
 	}
-	
+*/	
 
 
 function showTransliterations (yes) {
@@ -1296,40 +1304,6 @@ function makeMarkup () {
 
 
 
-function OLDmakeMarkupForSection (sectionName) {
-    // 
-    
-    var out = ''
-    var indexList = document.getElementById(sectionName)
-    //var indexSections = indexList.querySelectorAll('section')
-    var indexFigures = indexList.querySelectorAll('figure')
-    for (i=0;i<indexFigures.length;i++) {
-        var listItems = indexFigures[i].querySelectorAll('.listItem')
-        var allChars = ''
-        for (j=0;j<listItems.length;j++) allChars += listItems[j].textContent
-        console.log('heading',indexFigures[i].parentNode.id, 'type', indexFigures[i].className.replace(/ auto/,''), 'content', allChars)
-        
-        allCharsArray = [...allChars]
-        out += '<figure class="'+indexFigures[i].className+'" data-cols="" data-links="'
-        for (k=0;k<allCharsArray.length;k++) console.log(allCharsArray[k])
-        for (k=0;k<allCharsArray.length;k++) {
-            if (typeof index[allCharsArray[k]] === 'undefined') console.log('NOT FOUND:',allCharsArray[k])
-            else out += index[allCharsArray[k]].section + ','
-            }
-        out += '">'
-        for (k=0;k<allCharsArray.length;k++) {
-            out += allCharsArray[k]
-            if (k<allCharsArray.length-1) out += '␣'
-            }
-        out += '</figure>\n'
-        }
-    
-	document.getElementById('out').value = out
-	document.getElementById('out').select()
-	}
-
-
-
 
 
 function makeMarkupForSection (sectionName) {
@@ -1349,14 +1323,20 @@ function makeMarkupForSection (sectionName) {
     var indexFigures = indexList.querySelectorAll('figure')
     for (i=0;i<indexFigures.length;i++) {
         var allCharsArray = indexFigures[i].textContent.split('␣')
+        //console.log('allCharsArray',allCharsArray)
                 
         var out = ''
+        var missing = []
         for (k=0;k<allCharsArray.length;k++) {
-            if (typeof index[allCharsArray[k]] === 'undefined') console.log('NOT FOUND:',allCharsArray[k])
+            if (typeof index[allCharsArray[k]] === 'undefined') missing.push(allCharsArray[k])
             else out += index[allCharsArray[k]].section + ','
             }
+        if (missing.length > 0) {
+            console.log('INFO: in makeMarkupForSection, the following characters were not found in the global index object (meaning that they don\'t appear in the text)')
+            for (var j=0;j<missing.length;j++) console.log(missing[j])
+            }
+        //console.log('out',out)
         
-        //console.log('out', out)
         indexFigures[i].dataset.links = out
         replaceStuff(indexFigures[i])
         }
@@ -1369,10 +1349,10 @@ function makeMarkupForSection (sectionName) {
 
 function checkParameters () {
     // check for parameters and take appropriate action
-    parameters = location.search.split('&')
+    var parameters = location.search.split('&')
     parameters[0] = parameters[0].substring(1)
     for (var p=0;p<parameters.length;p++) {  
-        pairs = parameters[p].split('=')
+        var pairs = parameters[p].split('=')
         
         // open index and jump to character location
         if (pairs[0] === 'index') { if (pairs[1]) {
