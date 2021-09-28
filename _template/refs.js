@@ -99,6 +99,40 @@ reflist = {
 
 
 
+scriptLanguageList = {
+aio:{name:"Aiton"},
+ahk:{name:"Akha"},
+csh:{name:"Chin, Asho"},
+mya:{name:"Burmese", url:"index"},
+bwe:{name:"Karen, Bwe"},
+kvq:{name:"Karen, Geba"},
+int:{name:"Intha"},
+kht:{name:"Khamti"},
+lmk:{name:"Lamkang"},
+kxf:{name:"Karen, Manumanaw"},
+rmz:{name:"Marma"},
+mwt:{name:"Moken"},
+mnw:{name:"Mon"},
+obr:{name:"Burmese, Old"},
+blk:{name:"Karen, Pa'o"},
+pli:{name:"Pali"},
+phk:{name:"Phake"},
+kjp:{name:"Karen, Pwo Eastern"},
+pwo:{name:"Karen, Pwo Western"},
+rki:{name:"Rakhine"},
+pce:{name:"Palaung, Ruching"},
+rbb:{name:"Palaung, Rumai"},
+ksw:{name:"Karen, S'gaw"},
+san:{name:"Sanskrit"},
+shn:{name:"Shan", url:"mymr-shn"},
+pll:{name:"Palaung, Shwe"},
+tjl:{name:"Tai Laing"},
+kyu:{name:"Kayah, Western"},
+}
+
+
+
+
 
 
 terms = {
