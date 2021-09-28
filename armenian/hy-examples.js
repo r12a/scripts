@@ -255,6 +255,64 @@ autoExpandExamples.hy = `
 վերջին|last|vɛɾt͡ʃʰin|verǰin
 ռուս|Russian|rus
 
+էակ|creature|ɛˈjɑk
+ֆոլգա|foil|fɔlˈɡɑ
+ֆշշալ|to hiss|fəˈʃːɑl
+դե յուրե|de jure|dɛ ˈjuɾɛ
+
+ուրեմն|consequently|uˈɾɛmən
+քմեր|Khmer language|kʰəˈmɛɾ
+ռամեն|ramen|rɑˈmɛn
+մետր|metre|ˈmɛtəɾ
+քամի|wind|kʰɑˈmi
+միրգ|fruit|miɾkʰ
+վնաս|damage, loss|vəˈnɑs
+աղավնի|dove, pigeon|ɑʁɑvˈni
+մխրճել|to bury|məχəɾˈt͡ʃɛl
+մամխի|blackthorn|mɑmˈχi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

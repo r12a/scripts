@@ -69,3 +69,21 @@ reflist = {
 
 
 
+
+
+scriptLanguageList = {
+hy:{name:"Armenian", url:"index"},
+kur:{name:"Kurdish"},
+kmr:{name:"Kurdish, Northern"},
+hyw:{name:"Armenian, Western"},
+}
+
+
+
+
+
+
+
+
+
+
