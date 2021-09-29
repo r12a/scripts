@@ -138,6 +138,38 @@ reflist = {
 
 
 
+
+
+
+
+
+
+scriptLanguageList = {
+tzm:{name:"Tamazight, Central Atlas"},
+kab:{name:"Kabyle"},
+zgh:{name:"Tamazight, Standard Moroccan"},
+shy:{name:"Tachawit"},
+shi:{name:"Tachelhit"},
+tda:{name:"Tagdal"},
+thv:{name:"Tamahaq, Tahaggart"},
+taq:{name:"Tamasheq"},
+rif:{name:"Tarifit"},
+ttq:{name:"Tamajaq, Tawallammat"},
+thz:{name:"Tamajeq, Tayart"},
+mzb:{name:"Tumzabt"},
+zen:{name:"Zenaga"},
+}
+
+
+
+
+
+
+
+
+
+
+
 terms = {
 
 "i": {
