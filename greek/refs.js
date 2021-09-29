@@ -51,6 +51,44 @@ reflist = {
 
 }
 
+
+
+
+
+
+
+
+
+scriptLanguageList = {
+sqi:{name:"Albanian"},
+grc:{name:"Greek, Ancient (to 1453)"},
+aae:{name:"Albanian, Arbëreshë"},
+rup:{name:"Aromanian"},
+aat:{name:"Albanian, Arvanitika"},
+bgx:{name:"Turkish, Balkan Gagauz"},
+rmn:{name:"Romani, Balkan"},
+cpg:{name:"Greek, Cappadocian"},
+cop:{name:"Coptic"},
+acy:{name:"Arabic, Cypriot"},
+gag:{name:"Gagauz"},
+ell:{name:"Greek, Modern (1453-)"},
+xpg:{name:"Phrygian"},
+pnt:{name:"Pontic"},
+als:{name:"Albanian, Tosk"},
+tsd:{name:"Tsakonian"},
+tur:{name:"Turkish"},
+uum:{name:"Urum"},
+}
+
+
+
+
+
+
+
+
+
+
 // word lists
 // https://en.wiktionary.org/wiki/Appendix:Greek_word_lists/6
 
