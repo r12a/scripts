@@ -1363,6 +1363,12 @@ function checkParameters () {
             document.location = '#index'+pairs[1]
             } }
         
+        // open index without jumping to character location
+        if (pairs[0] === 'showIndex') {
+            indexSections = document.getElementById('index').querySelectorAll('details')
+            for (i=0;i<indexSections.length;i++) indexSections[i].open = true
+            }
+        
         // turn off mouseover reveal of list boxes
         if (pairs[0] === 'nomouseover') {
             document.getElementById('showDetailOnMouseover').checked = false
