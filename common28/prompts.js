@@ -248,7 +248,7 @@ function makeIndexIntro (node, script, langName, lang, orthog, indic) {
 function addUsageAdvice (script) {
 	// Add a para to the intro 
 	
-	document.getElementById('usage').outerHTML = '<p class="instructionsx" style="line-height:1.4"><strong style="font-size:120%;">This is an interactive document:</strong> Click/tap on characters in lists with coloured backgrounds, and on <span style="color:teal;">link text</span> for character names and code point values to reveal detailed information for each character. (By default, this also happens as the cursor moves over characters in lists, but the floating menu to the right allows you to turn that off, if you prefer.) The same information also appears in the companion document, <a href="block" target="_blank" class="linkHighlightx">'+script+' character notes</a>. In addition, you can click/tap on <span class="ex">coloured</span> examples and on figures to see a list of the characters they contain.</p>'
+	document.getElementById('usage').outerHTML = '<p style="line-height:1.4"><strong style="font-size:120%;">This is an interactive document:</strong> Click/tap on the following to reveal detailed information and examples for each character: (a) characters in boxes with coloured backgrounds, (b) <span style="color:teal;">link text</span> on character names. (You can make this happen as the cursor moves over the characters in boxes, by selecting <samp>Detail on mouseover</samp> in the floating menu to the right.) The same information also appears in the companion document, <a href="block" target="_blank" class="linkHighlightx">'+script+' character notes</a>. In addition, you can click/tap on <span class="ex">coloured</span> examples and on figures to see a list of the characters they contain.</p>'
 	}
 
 
