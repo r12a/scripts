@@ -13,7 +13,7 @@ autoExpandExamples.hi = `
 अंतड़ी|guts||antṛī
 अकस्मात्|suddenly, abruptly|ə.kəs.mɑːt̪
 अगर|if|ə.ɡəɾ|agar
-अच्छा|good||acchā
+अच्छा|good|ət͡ʃ.t͡ʃʰɑː|acchā
 अझ़दहा|dragon, python|əʒ.d̪ə.ɦɑː
 अलम्|sufficient|ə.ləm||rare, formal
 अहिभृत्|Shiva|ə.ɦɪbʱ.ɾɪt̪
@@ -101,6 +101,7 @@ autoExpandExamples.hi = `
 चूसना|to suck||cūsnā
 चौड़ा|wide|ˈt͡ʃɔːɽaː|cauṛā
 छः|six|t͡ʃʰəh
+छह|six|t͡ʃʰəh
 छाती|breast||chātī
 छाल|bark (of a tree)||chāl
 छोटा|small, short|t͡ʃʰoː.ʈɑː|choṭā
@@ -335,45 +336,64 @@ autoExpandExamples.hi = `
 ॐ|Om|oːm
 
 
+स्वतः|by oneself|sʋə.t̪ə(ɦ)
+स्पष्टतः|clearly, obviously|spəʂ.ʈə.t̪ə(ɦ)
+सामान्यतः|usually, normally|sɑː.mɑːn.jə.t̪ə(ɦ)
+साधारणतः|usually, commonly|sɑː.d̪ʱɑː.ɾəɳ.t̪ə(ɦ)
+मूलतः|originally|muːl.t̪ə(ɦ)
+प्रायः|usually, normally|pɾɑː.jə(ɦ)
+प्रातः|in the morning|pɾɑː.t̪ə(ɦ)
+पुनःप्रवेश|re-entry|pʊ.nə(ɦ).pɾə.ʋeːʃ
+पुनः|again|pʊ.nə(ɦ)
+निःशुल्क|free of charge|nɪ(ɦ).ʃʊlk
+निःशब्द|speechless|nɪ(ɦ).ʃəbd̪
+दुःस्वप्न|nightmare|d̪ʊ(ɦ).sʋəp.nə, d̪ʊs.ʋəp.nə
+दुःखी|sad, depressed|d̪ʊ(ɦ).kʰiː
+खंडशः|piece by piece|kʰəɳ.ɖʃə(ɦ)
+क्रमशः|respectively|kɾəm.ʃə(ɦ)
+अनुमानतः|approximately|ə.nʊ.mɑːn.t̪ə(ɦ)
+अनिवार्यतः|essentially|ə.nɪ.ʋɑːɾ.jə.t̪ə(ɦ)
+अतः|therefore|ə.t̪ə(ɦ)
+अंशतः|partially|ən.ʃt̪ə(ɦ)
+अंतःक्षेप|injection|ən.t̪ə(ɦ).kʂeːp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 `
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
