@@ -105,7 +105,7 @@ function findWords (reg) {
 		out += '<tr>'
 		out += '<td dir="'+terms.direction+'" style="font-family:'+terms.fontFamily+'; font-size:'+terms.fontSize+'"><a target="lemmas" href="https://en.wiktionary.org/wiki/'+itemArray[TERM]+'#'+terms.wiktionaryLink+'">'+itemArray[TERM]+'</a></td>'
 		out += '<td>'+itemArray[1]+'</td>'
-		out += '<td>&lt;span class="eg" lang="'+terms.language+'"&gt;'+itemArray[TERM]+'&lt;/span&gt;</td>'
+		out += '<td class="noteCol">&lt;span class="eg" lang="'+terms.language+'"&gt;'+itemArray[TERM]+'&lt;/span&gt;</td>'
 		out += '</tr>\n'
         }
     return out
