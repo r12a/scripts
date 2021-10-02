@@ -1294,6 +1294,10 @@ however, this rule does not always hold.)</p>
 <figcaption>A consonant cluster for which there exists a conjunct form in the Tiro Hindi font (left), but not in the Noto Serif Devanagari font (right). The latter indicates that this is a cluster by showing a visible virama<em></em>.</figcaption>
 </figure>
 
+<p>Examples of clusters that the default font used for this page is unable to render as a conjunct form:
+<span class="eg" lang="hi">स्विट्ज़रलैंड</span>
+<span class="eg" lang="hi">रीट्वीट</span>
+</p>
 <p>An important consequence of representing clusters in this way is that the syllable boundaries are different. For example, if we follow the cluster with a left-positioned vowel-sign, it will now appear after the virama, rather than before the cluster, eg. compare the position of the pre-base vowel-sign in <a class="figref">fig_virama_vowel</a>. This change is also reflected in segmentation of the text for line-breaking, inter-character spacing, etc.</p>
 
 <figure id="fig_virama_vowel">
@@ -1314,9 +1318,8 @@ however, this rule does not always hold.)</p>
     
 <section id="doubling">
 <h3>Consonant lengthening</h3>
+<p>Lengthened (geminated) consonants are indicated in the script using the same mechanisms as for <a class="secref">clusters</a>.</p>
 <p>Most native consonants may be lengthened, but not <span class="ipa">bʱ</span>, <span class="ipa">ɽ</span>, <span class="ipa">ɽʱ</span>, or <span class="ipa">ɦ</span>. Geminate consonants are always medial and preceded by one of <span class="ipa">ə</span>, <span class="ipa">ɪ</span>, or <span class="ipa">ʊ</span>.<tt>wp,#Consonants</tt></p>
-<p>Lengthened (geminated) consonants are indicated in the script using the same mechanisms as for 
-<a class="secref">clusters</a>.</p>
 </section>
 
 
@@ -1327,12 +1330,16 @@ however, this rule does not always hold.)</p>
 
 <section id="joiner">
 <h3>Using ZWJ &amp; ZWNJ</h3>
-<p>The examples in the previous subsection used <span class="codepoint" translate="no"><span lang="hi">&#x200C;</span> <a href="/scripts/devanagari/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a></span> (<span class="uname">ZWNJ</span>) to force the production of a visible virama, rather than a half-form. For example:</p>
+<p><span class="leadin">ZWNJ</span> It's possible to prevent the formation of conjuncts using<span class="codepoint" translate="no"><span lang="hi">&#x200C;</span> <a href="/scripts/devanagari/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a></span> (<span class="uname">ZWNJ</span>). For example:</p>
 <ul>
-<li><span class="codepoint noindex" translate="no"><span lang="hi">&#x0915;</span> + <span lang="hi">&#x094D;</span> + <span lang="hi"><span class="uname">ZWNJ</span></span> + <span lang="hi">&#x0915;</span> [<a href="/scripts/devanagari/block#char0915"><span class="uname">U+0915 DEVANAGARI LETTER KA</span></a> + <a href="/scripts/devanagari/block#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA</span></a> + <a href="/scripts/devanagari/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a> + <a href="/scripts/devanagari/block#char0915"><span class="uname">U+0915 DEVANAGARI LETTER KA</span></a>]</span> produces <span class="charExample" translate="no"><span class="ex" lang="hi">क्‌क</span></span> rather than <span class="charExample" translate="no"><span class="ex" lang="hi">क्क</span></span></li>
-<li><span class="codepoint noindex" translate="no"><span lang="hi">&#x0915;</span> + <span lang="hi">&#x094D;</span> + <span lang="hi"><span class="uname">ZWNJ</span></span> + <span lang="hi">&#x0937;</span> [<a href="/scripts/devanagari/block#char0915"><span class="uname">U+0915 DEVANAGARI LETTER KA</span></a> + <a href="/scripts/devanagari/block#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA</span></a> + <a href="/scripts/devanagari/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a> + <a href="/scripts/devanagari/block#char0937"><span class="uname">U+0937 DEVANAGARI LETTER SSA</span></a>]</span> produces <span class="charExample" translate="no"><span class="ex" lang="hi">क्‌ष</span></span> rather than <span class="charExample" translate="no"><span class="ex" lang="hi">क्ष</span></span></li>
+<li><span class="codepoint noindex" translate="no"><span lang="hi">&#x0915;</span> + <span lang="hi">&#x094D;</span> + <span lang="hi"><span class="uname">ZWNJ</span></span> + <span lang="hi">&#x0915;</span> [<a href="/scripts/devanagari/block#char0915"><span class="uname">U+0915 DEVANAGARI LETTER KA</span></a> + <a href="/scripts/devanagari/block#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA</span></a> + <a href="/scripts/devanagari/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a> + <a href="/scripts/devanagari/block#char0915"><span class="uname">U+0915 DEVANAGARI LETTER KA</span></a>]</span> produces <span class="charExample" translate="no"><span class="ex" lang="hi">क्‌क</span> &emsp; → &emsp; <span class="ex" lang="hi">क्क</span></span></li>
+<li><span class="codepoint noindex" translate="no"><span lang="hi">&#x0915;</span> + <span lang="hi">&#x094D;</span> + <span lang="hi"><span class="uname">ZWNJ</span></span> + <span lang="hi">&#x0937;</span> [<a href="/scripts/devanagari/block#char0915"><span class="uname">U+0915 DEVANAGARI LETTER KA</span></a> + <a href="/scripts/devanagari/block#char094D"><span class="uname">U+094D DEVANAGARI SIGN VIRAMA</span></a> + <a href="/scripts/devanagari/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a> + <a href="/scripts/devanagari/block#char0937"><span class="uname">U+0937 DEVANAGARI LETTER SSA</span></a>]</span> produces the following transformation:
+<span class="charExample" translate="no"><span class="ex" lang="hi">क्‌ष</span> &emsp; → &emsp; <span class="ex" lang="hi">क्ष</span></span></li>
 </ul>
-<p><span class="codepoint" translate="no"><span lang="hi">&#x200D;</span> <a href="/scripts/devanagari/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a></span>(<span class="uname">ZWJ</span>) can  be used to produce a half-form, such as <span class="charExample" translate="no"><span class="ex" lang="hi">क्‍ष</span></span>rather than <span class="charExample"><span class="ex" lang="hi">क्ष</span></span>It can also be used to produce standalone half-forms (for educational text) such as <span class="charExample" translate="no"><span class="ex" lang="hi">घ्‍</span></span></p>
+<p><span class="leadin">ZWJ</span> To produce a half-form, rather than a ligated form, use <span class="codepoint" translate="no"><span lang="hi">&#x200D;</span> <a href="/scripts/devanagari/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a></span> (<span class="uname">ZWJ</span>). For example,
+<span class="charExample" translate="no"><span class="ex" lang="hi">क्‍ष</span> &emsp; → &emsp; <span class="ex" lang="hi">क्ष</span></span></p>
+<p>It can also be used to produce standalone half-forms (for educational text) such as 
+<span class="charExample" translate="no"><span class="ex" lang="hi">घ्‍</span></span></p>
 </section>
 
 
@@ -1824,9 +1831,9 @@ however, this rule does not always hold.)</p>
 </tr>
 </tbody>
 </table>
-<p>In practise, it's hard to envisage content authors being aware of, let alone respecting,  rules about whether they should precomposed or decomposed forms. Keyboards or other input mechanisms, or perhaps sometimes applications that automatically normalise can perhaps guide users to the recommended practise, but it's likely that Devanagari text will always contain a mixture of forms for these graphemes.</p>
+<p>In practise, it's hard to envisage content authors being aware of, let alone respecting,  rules about whether they should use precomposed or decomposed forms. Keyboards or other input mechanisms, or perhaps sometimes applications that automatically normalise can perhaps guide users to the recommended practise, but it's likely that Devanagari text will always contain a mixture of forms for these graphemes.</p>
 </section>
-<section>
+</section>
   
 
 
@@ -1837,7 +1844,9 @@ however, this rule does not always hold.)</p>
 <section id="symbols">
 <h2>Symbol</h2>
 
-<p><span class="codepoint" translate="no"><span lang="hi">&#x0950;</span> [<a href="block#char0950"><span class="uname">U+0950 DEVANAGARI OM</span></a>]</span> is a religious symbol.&nbsp;</p>
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ॐ</figure>
+
+<p><span class="codepoint" translate="no"><span lang="hi">&#x0950;</span> [<a href="block#char0950"><span class="uname">U+0950 DEVANAGARI OM</span></a>]</span> is a religious symbol used in both Hinduism and Buddhism.&nbsp;</p>
 </section>
 
 
@@ -2032,7 +2041,10 @@ however, this rule does not always hold.)</p>
 <p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 
 <p>Words are separated by spaces.</p>
-<p>Devanagari has hyphenated words – mainly conjoined nouns,<tt>i</tt> eg. <span class="charExample" translate="no"><span class="ex" lang="hi">लाभ-हानि</span> <span class="trans">lābʱ-hāni</span> <span class="meaning">profit-loss</span></span> <span class="charExample" translate="no"><span class="ex" lang="hi">माता-पिता</span> <span class="trans">mātā-pitā</span> <span class="meaning">parents</span></span></p>
+<p>Devanagari has hyphenated words – mainly conjoined nouns,<tt>i</tt> eg.
+<span class="eg" lang="hi">लाभ-हानि</span>
+<span class="eg" lang="hi">माता-पिता</span>
+</p>
 </section>
 
 
@@ -2042,7 +2054,7 @@ however, this rule does not always hold.)</p>
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
 
-<figure class="characterBox auto small"  data-cols="trans,transc">!␣,␣:␣;␣?␣।␣।␣॥</figure>
+<figure class="characterBox auto small"  data-cols="trans,transc">!␣,␣:␣;␣.␣।␣॥␣?</figure>
 
 <table class="character_list">
 <tbody>
@@ -2067,7 +2079,7 @@ however, this rule does not always hold.)</p>
 </tr>
 </tbody>
 </table>
-<p>Devanagari uses standard Latin punctuation, but also has its own version of a full stop, <span class="codepoint"><span lang="hi">&#x0964;</span> <a href="/scripts/devanagari/block#char0964">[<span class="uname">U+0964 DEVANAGARI DANDA</span>]</a></span>.</p>
+<p>Devanagari uses standard Latin punctuation, but also has its own version of a full stop, <span class="codepoint"><span lang="hi">&#x0964;</span> <a href="/scripts/devanagari/block#char0964">[<span class="uname">U+0964 DEVANAGARI DANDA</span>]</a></span>. Most style guides recommend to use no space before this punctuation, but use space after.</p>
 
 <p class="observation"><span class="leadin">Observation:</span> A number of Hindi style guides consulted require that the danda follow the last letter in the sentence, with no intervening space.</p>
 

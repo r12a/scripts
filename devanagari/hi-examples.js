@@ -239,7 +239,7 @@ autoExpandExamples.hi = `
 मलना|to rub||malnā
 महिला|woman||mahilā
 माँस|meat||mā̃s
-माता-पिता|parents
+माता-पिता|parents|mɑː.t̪ɑː.pɪ.t̪ɑː
 माता|mother||mātā
 मारना|to hit||mārnā
 मारना|to kill||mārnā
@@ -263,7 +263,7 @@ autoExpandExamples.hi = `
 लड़ना|to fight||laṛnā
 लम्बा|long||lambā
 लाठी|stick||lāṭhī
-लाभ-हानि|profit-loss
+लाभ-हानि|profit-loss|lɑːbʱ.ɦɑː.niː
 लाल|red|lɑːl|lāl
 लिंग|gender|lɪŋɡ
 लिङ्ग|gender (alt.)|lɪŋɡ
