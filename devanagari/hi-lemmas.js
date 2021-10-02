@@ -4,12 +4,9 @@
 # 200
 ~ ltr
 ! hi
-
-@conversion ^([^\n]+)\n		\1\n
 */
 
-autoExpandExamples.hi = `
-
+lemmas = `
 अँ
 अँकवैया
 अँगड़ाई
@@ -14114,81 +14111,14116 @@ autoExpandExamples.hi = `
 ह्रस्व
 ह्रीति
 ह्वेल
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 `
 
 
 
+translations = `
+oh
+acronym
+Angdaai
+english
+english
+limbless
+camisole
+fireplace
+ring
+english
+english
+antna
+gut
+darkness
+an
+Number
+arithmetic
+arithmetic
+marking
+to mark
+Ankni
+Uncle
+Ankara
+Ankit
+sprout
+Germinated
+Ankush
+Organ
+limbo
+Angkor Wat
+amputation
+yawn
+Angad
+organ donation
+organ
+angana
+angamardan
+bodyguard
+limbs
+limbless
+embers
+ember
+to ember
+to ember
+to ember
+To blow out embers
+embers rain
+step on the coals
+camisole
+confession
+finger
+finger
+Thumb
+ring
+Grape
+Angoori
+towel
+Angot
+Angola
+English
+english
+Englishness
+english
+English
+Zone
+achar
+stabbing
+Anjan
+anjar-panjar
+result
+Fig
+anju
+Anju
+ant-st
+antarctica
+Antarctica
+under-bund
+scrotum
+testicles
+Andaman
+Andaman and Nicobar Islands
+Egg
+Egg Prince
+Andorra
+Ending
+End
+intervention
+gut
+finally
+last
+Difference
+intimacy
+internet
+transfer
+International
+internationalism
+Antara
+interval
+Space
+Spacecraft
+interim
+interim
+under
+interracial
+internet
+inland
+Intersection
+built-in
+international
+international phonetic script
+international phonetic alphabet
+inmate
+antakshari
+The last
+antylak
+funeral
+intra
+Inside
+come in
+inside
+Andalus
+Style
+style
+guess
+suspect
+dark ocean
+Darkness
+the storm
+blind faith
+Blind
+indiscriminate
+blindness
+Are you blind?
+dark
+Darkness
+Kana King in the Blind
+Sky
+amba
+anbu
+Part
+part time
+partly
+Anshuk
+Anshul
+A:
+aye
+-ak
+ak
+strut
+Stiff
+numbness
+unsaid
+akanya
+inaction
+Intransitive
+Intransitive verb
+indolence
+suddenly
+intelligence
+enemy of wisdom
+intelligent
+wisdom
+Akaj
+academic
+Academy
+shape
+Causeless
+ineffective
+Draught
+Akali
+a lot
+Lonely
+Chana alone doesn't break
+Loneliness
+Lonely
+brash
+akha
+October
+October
+wise
+lonely
+Axis
+intact
+disabled
+unforgivable
+renewable
+Letter
+letter start
+latitude
+intact
+integrity
+aks
+often
+aksai chin
+monolithic
+integrity
+Newspaper
+akharna
+Walnut
+walnut
+newspaper
+newspaperman
+nut
+Arena
+Akhil
+Akhilesh
+Countless
+if
+even if
+Agartala
+Incense stick
+next
+Next Previous
+welcome
+to receive
+August
+side by side
+forward
+fire
+leader
+fire
+baptism by fire
+acid test
+Fire Fighting
+fire weapon
+fire extinguisher
+pancreas
+pioneer
+Agarwal
+agrahayan
+In advance
+advance tax
+advance
+marvel
+long coat
+constant
+Surprise
+immovable
+suddenly
+Pickle
+infallible
+unconscious
+Good
+well worth
+goodness
+goodness
+achna
+The Untouchables
+untouched
+Python
+python
+strangers
+Stranger
+Strange
+Ajmer
+parsley
+Ajay
+Celery
+azadaha
+Azerbaijan
+azaan
+punishment
+Aziz
+Azeem
+strange
+azaan
+museum
+binding
+hey
+Weird
+weird-o-poor
+Indigestion
+Unique
+agenda
+ignorant
+unknown
+ignorance
+ignorance
+agnostic
+agnosticism
+agnostic
+azadaha
+stuck
+get stuck
+speculation
+speculative
+stifle
+stagnation
+awkward
+Firm
+Atlantic Ocean
+Attic
+unbreakable
+briefcase
+a skyscraper
+eight
+twenty eight
+ninety eight
+fifty eight
+eighty eight
+eighteen
+eight wheeler
+seventy eight
+eighteen
+hindrance
+Hitch
+Forty-eight
+thirty eight
+stick
+Sixty-eight
+Adana
+stubborn
+adamant
+adamant
+haunt
+molecule
+egg
+Therefore
+so
+atlas
+Extreme
+overtime
+Guest
+Excessive
+extremism
+extremist
+Hyperbola
+hypersensitive
+diarrhea
+Past
+incomparable
+Incredible
+atfal
+extremely
+Excessive
+extremely
+Atrocity
+tyrant
+urgent
+the best
+tireless
+Or
+unfathomable
+awe
+Garlic
+interchange
+exchange
+exchange
+combustion
+paid
+actor
+Court
+court
+feud
+scalar
+Invisible
+Wonderful
+up to date
+Updates
+however
+indestructible
+Advaita
+half water
+An empty vessel makes the most noise
+iniquity
+coccyx
+super-
+more
+Maximum
+excess
+tribunal
+majority of
+Rights
+officer
+jurisdiction
+Officer
+authorized
+dictator
+Act
+to enact
+to be enacted
+hype
+overload
+occupancy
+surplus
+bonus
+Advocate
+superannuation
+the session
+notification
+notified
+to notify
+superintendent
+superintendence
+Subordinate
+subordination
+impatient
+impatience
+superintendent
+Adhuna
+incomplete
+middle-aged
+the undersigned
+President
+presiding
+Study
+Study
+ordinance
+teacher
+teacher
+Chapter
+Un-
+Anantapur
+uncut
+uncanna
+untold
+Ankhila
+unopened
+rough and tough
+countless
+untested
+unwanted
+untouched
+unknown
+inadvertently
+unbroken
+tireless
+ignore
+permissible
+Pineapple
+undigested
+Illiterate
+Rift
+Anbita
+unmarried
+Anmana
+Invaluable
+misfortune
+Anal
+fasting
+Unheard
+unsolved
+non-existence
+accident
+untoward
+ingestion
+incest
+Cereal
+Anatoly
+clumsy
+Anatolia
+Anatoly
+Orphan
+orphanage
+Orphanage
+disrespect
+unofficial
+casual
+no objection
+anonymous
+ring finger
+Pomegranate
+anarkali
+Anarkali Bazaar
+pomegranate
+Unnecessary
+fast food
+reluctance
+sleeplessness
+insomnia
+uncontrolled
+Irregular
+irregularity
+mandatory
+essentially
+uncertain
+Uncertainty
+Anish
+Compliance-
+simulation
+Friendly
+Customization
+customized
+index
+response
+echo
+gratified
+grace
+Inappropriate
+Article
+license
+Grant
+Persuasion
+resonance
+nasal
+nasality
+infertile
+Anupam
+useless
+absent
+Absence
+Ratio
+supplement
+applied
+applied Sciences
+alliteration
+Experience
+empirical
+experienced
+Feeling
+the permission
+cerebellar
+an estimate
+presumably
+Estimated
+permissible
+Approval
+Approved
+follower
+escort
+Affection
+disinterest
+According
+request
+Annex
+anulom
+genetic
+genetics
+translation
+to translate
+translator
+translated
+disciplinarian
+Discipline
+disciplined
+persuasion
+ritual
+Research
+To research
+Pursuance
+According
+Anusara
+unique
+translated
+Anoop
+Several
+Plurality
+many
+involuntary muscle
+involuntary muscle
+Unique
+informal
+the end
+last
+difference
+space
+under
+inside
+food
+food and water
+Anna people
+other
+other men
+Otherwise
+injustice
+unjust
+unjust
+Antioch
+disabled person
+disability
+disgrace
+disgrace
+uncooked
+offshore
+childlessness
+disclaimer
+My
+To make profit by befooling others
+watch your spinach cheese
+adopt
+Own
+A dog is also a lion in its street
+Our
+on one's own
+on one's own
+Insult
+Offensive
+humiliated
+failure
+upper
+Crime
+criminal
+criminal
+Criminal
+unfamiliar
+immature
+irrational
+irrational number
+uncontained
+Inadequate
+Aplk
+uploading
+Exception
+unholy
+Wastage
+Bad Omen
+ejection
+paranormal
+Kidnapping
+to kidnap
+hijacker
+immense
+handicapped
+but
+Appeal
+apun
+unconfirmed
+incomplete
+Apoorva
+Expectation
+To expect
+Relatively
+expected
+Appointment
+unmanifest
+unpublished
+obsolete
+unpretentious
+amazing
+indirect
+unexpected
+displeased
+unpleasant
+April
+Elf
+Afghanistan
+afarna
+officer
+Alas
+Afghanistan
+superfluous
+a rumor
+officer
+Afsana
+bad luck
+regret
+pity
+regrettable
+opium
+poppy
+Afghanistan
+Afghanistan
+Africa
+African
+Afsana
+sorry
+opium
+Now
+this time
+till now
+Abbottabad
+infallible
+motionless
+single point
+abir
+Abu Dhabi
+abe
+now and then
+do it now and then
+aber
+innocent
+abjad
+abd
+abba
+abr
+abru
+abhay
+sanctuary
+unfortunate
+Lack
+Abhi-
+assertion
+computer
+reactant
+reaction
+access
+Abhigya
+Abhijnanashakuntalam
+visual
+congratulation
+acting
+to act
+actor
+Actress
+meaning
+to be intended
+Guardian
+overwhelmed
+pride
+Arrogant
+Engineer
+engineering
+engineering
+engineer
+engineering
+Campaign
+accused
+accuser
+indictment
+prosecutor
+Pleasure
+aptitude
+desire
+Desire
+Record
+Greeting
+impeachment
+express
+Expression
+Coronation
+Now
+unprecedented
+abhyang
+Used to
+visitor
+Practice
+program
+out of practice
+asbestos
+amchur
+Peace
+amay
+Amar
+Amarkosh
+Amravati
+American
+America
+American
+Guava
+Execution
+precious
+bail
+inhuman
+inhumanity
+invalid
+moon moon
+stomach
+indelible
+Amitabh
+Amitabha Buddha
+amoeba
+Rich
+richness
+so and so
+priceless
+priceless
+Honeydew
+Amritsar
+amedhya
+American
+America
+American
+U.S. Dollar
+infallible
+Amaua
+amber
+Mother
+Amma
+Mother
+acid
+acidity
+acidity
+acidity
+acidic
+amhari
+solstice
+ays
+ore
+Ayut
+ineligible
+disqualification
+Ayodhya
+castor
+anemia
+Argani
+arani
+arathi
+orderly
+Arab
+aurobind
+Arabic
+desires
+Arvind
+Yam
+aras
+long time
+Aristotle
+tur
+chaotic
+Anarchy
+anarchism
+anarchist
+arrowroot
+arihant
+distaste
+distasteful
+Arun
+Arunachal
+Arunachal Pradesh
+Arunoday
+Oho
+smooth muscle
+non-muscle
+sick
+aurora
+extract
+application
+earning
+application
+to apply
+application
+earned
+application
+Arjun
+Argentina
+Argentina
+Argentina
+Meaning
+meaningful
+econometrics
+Economy
+Economics
+economist
+meaningless
+In other words
+ie
+rhetoric
+Meaning
+orderly
+semi
+Half
+half
+semi skilled
+half-match
+half yearly
+underdeveloped
+semi literate
+Semi-official
+half week
+Wife
+half life
+offering
+dedicated
+Aryaman
+aryama
+Haemorrhoids
+Qualified
+El Salvador
+Ornament
+ornate
+Alcatara
+Separate
+Different
+Separate
+Different
+isolated
+disassemble
+Isolation
+separatism
+separatist
+though
+However
+Album
+alum
+cupboard
+alam
+Bye
+alas
+slug
+isolated
+aladdin
+apologise
+Alarm
+bonfire
+Apart from
+alaska
+ali
+unwritten
+Alif
+Ali
+Ali Baba
+Aligarh
+Aligarh
+alona
+Algeria
+Ultimatum
+Small
+meager
+short term
+Minority
+young age
+snack
+alpha
+Alphas
+album
+Albanian
+Albania
+God
+allah hafiz
+Carefree
+derivative
+differential
+differentiable
+Holiday
+depletion
+precipitation
+Aware
+demerits
+disobedience
+concave
+Avatar
+Awadh
+Awadh princely state
+retention
+accreditation
+Period
+Awadhi
+decadence
+sludge
+Component
+Minor
+inferior
+blocked
+blockage
+support
+Observation
+relics
+absorption
+absorbed
+Sure
+infrastructure
+chance
+Depression
+sedimentary
+state
+unfathomable
+disregard
+unwanted
+avai
+speechless
+people
+Award
+underdeveloped
+incorruptible
+motionless
+uninterrupted
+Avinay
+Avinit
+non stop
+Without delay
+Single
+mistrust
+unbelievable
+Unforgettable
+unpaid
+non-vedic
+illegal
+avocado
+latent
+extravagant
+Disorder
+disorganized
+impractical
+first
+incapacitated
+ashrafi
+ashrafi
+disturbed
+unrest
+unrest
+illiterate
+Impolite
+rudeness
+unclean
+inaccuracy
+Inauspicious
+Ashok
+Ashoka Chakra
+Ashokan Prakrit
+Ashoka Prakrit
+tear
+teardrops
+porn
+obscenity
+horse
+ashwamedha
+ashwini
+octagon
+octagon
+innumerable
+inconsistent
+inconsistency
+dissatisfied
+discontent
+unsatisfactory
+Impossible
+unlikely
+insensitive
+unconstitutional
+false
+paradox
+fail
+Failure
+Upholstery
+Uncultured
+rudeness
+Assam
+Confusion
+untimely
+Unable
+incapacity
+Unequal
+inequality
+unfinished
+inequality
+impossible
+Impact
+to be affected
+real
+In fact
+aslam
+reality
+Real
+disagree
+disagreement
+non-cooperation
+helpless
+intolerant
+Intolerance
+intolerable
+eighty
+Extraordinary
+incurable
+untimely
+antisocial
+Extraordinary
+asar
+inattentive
+inattention
+assistant
+limitless
+eighty
+ugly
+ugly
+Asura
+unsafe
+Inconvenience
+inconvenient
+assembly
+civilian
+stables
+lining
+Helter Skelter
+Existence
+weapon
+weapons
+asthma
+asthana
+Temporary
+bone
+osteoclast
+fracture
+Unstable
+destabilize
+instability
+Hospital
+hospital
+unclear
+ambiguity
+untouchable
+untouchability
+Asmita
+unwell
+ill feeling
+unusual
+reject
+reject
+rejected
+rejection
+eighty
+ego
+Ego
+ahabab
+important
+Ahmedabad
+importance
+ahl iman
+ahwal
+Realization
+Quad room
+non hindi
+non-violent
+non-violence
+nonviolent
+ahichhatra
+harm
+harmful
+ahinah
+incompetent
+pride
+ahirbushna
+ahiwat
+non-violence
+aheran
+bad luck
 
+
+data
+eye
+To flirt
+patio
+Anganwadi
+flame
+zonal
+bowel
+The Storm
+tears
+the figure
+Eye
+Courtyard
+Anglo
+Intestine
+Internal
+internal organs
+intestines
+protest
+Storm
+Andra Pradesh
+Gooseberry
+partial
+tears
+Ainda
+einsteinium
+Aizawl
+Ice Cream
+Ice Cream
+Iceland
+iced
+Mirror
+aila
+Out
+-Au
+Aak
+Attractive
+Attraction
+Attracted
+attractive
+assessment
+Casual
+mentor
+Ambition
+aspirant
+Shape
+Sky
+Galaxy
+Galaxy
+Oracle
+Akashi
+shape
+Shape
+attracted
+attack
+to attack
+invader
+Aggressive
+aggression
+Anger
+convulsions
+the last
+the last
+at last
+after all
+at last
+last
+akhateez
+after all
+last
+hunting
+hunter
+Fire
+visitors
+arson
+arson
+arrival
+Agra
+fire
+opening
+lap
+fire
+shed
+warning
+warning
+ahead
+Front Back
+igneous
+firearms
+fire station
+request
+to request
+insistently
+fire
+the strokes
+traumatic
+Behaviour
+Behaviour
+ethics
+Teacher
+acha
+Today
+These days
+Trial
+to try
+trial
+to try
+azerbaijan
+free
+freedom
+azar
+free
+independence
+lifelong
+livelihood
+Permission
+mandate
+Flour
+artichoke
+Eight
+eighth
+eighth
+eight o'clock
+pomp
+Advani
+guise
+transversal
+transverse
+peach
+Aadhya
+molecular
+terror
+terrifying
+terrorism
+Terrorist
+terrified
+tyrant
+you
+intimacy
+Aatish
+fireworks
+Fireworks
+-atu
+eager
+eagerness
+self-
+-atman
+autobiography
+guilty
+suicide
+suicidal
+enlightenment
+self-sacrifice
+self-condemnation
+self determination
+self dependent
+self reliance
+self praise
+soul Sacrifice
+self realization
+Self Defense
+Self-confidence
+complacency
+self respect
+surrender
+self respect
+assimilation
+assimilated
+self praise
+suicide
+Soul
+self pride
+spiritual
+kindred
+intimacy
+self-improvement
+Habit
+Habitually
+Adam
+humanely
+man
+man or mouse
+Respect
+To respect
+Respected
+respectfully
+Ideal
+Aada
+exchange
+give and take
+Adab
+e.t.c
+native language
+primitive
+primitive-shaven
+Tribesman
+accustomed
+Order
+half
+half
+Base
+basic
+based
+more
+official
+excess
+hegemony
+Midnight
+Modern
+Sophisticated
+Modernity
+modernization
+half-and-half
+Spiritual
+aan
+on-and-off
+Pleasure
+enjoy
+pleasurable
+blissful
+immediately
+joy
+enjoy
+Honorary
+-To come
+To come
+to and fro
+To make excuses
+Coming, going
+genetics
+movement
+You
+where do you live
+How are you
+Yours
+What is your name
+how many siblings do you have
+you
+objection
+objectionable
+Disaster
+you
+ordeal
+among themselves
+Among themselves
+mutual
+mutual
+Temper
+emergency
+emergency
+emergency
+hasty
+apoon
+supply
+relative
+immigration
+immigrant
+disaster
+Aftab
+disaster
+Aftab
+afreen
+afridi
+office
+now
+aab-
+aab-e-chashm
+size
+excise
+settled
+abrau
+abla
+inhabited
+population
+aura
+Gratitude
+Thankful
+the impression
+jewelery
+Mango
+common man
+General election
+In general
+generally
+invitation
+invited
+income
+face to face
+face to face
+face to face
+rheumatism
+stomach
+aamiksha
+face
+radical change
+Income
+Rectangle
+volume
+ion
+aymara
+Ireland
+Came
+Import
+importer
+importer
+Dimensions
+Aayita
+age
+commissioner
+medical science
+Ayurveda
+commission
+Arrangement
+Held
+across
+start
+To start
+initial
+Reservation
+arzoo
+Hindu ritual of worship
+performing aarti
+arbal
+start
+to start
+jigsaw
+Rest
+to take a rest
+to rest
+easy
+lounge chair
+resting place
+Comfortable
+Aarush
+health
+blame
+Argentina
+Economic
+economy
+humid
+Army
+Armenia
+Armenian
+Armenia
+Arya
+Aryan
+Aryaman
+launch
+alpine
+alappuzha
+Alam
+start
+Aalaya
+laziness
+Lazy
+Laziness
+came
+Hug
+Alim
+luxurious
+Potato
+luscious
+potato
+Potato Cabbage
+Potato Bukhara
+article
+Alok
+Criticism
+allotment
+allotted
+inward
+the cover
+period
+period bracket
+periodic table
+magnification
+Required
+Need
+-ava
+Sound
+sound
+movement
+vagabond
+Accommodation
+invocation
+Invention
+inventor
+possessed
+frequency
+frequency
+impulse
+application
+applicant
+Agitation
+charged
+matrix
+apprehension
+Aashna
+Meaning
+hope
+optimism
+lover
+temperamental
+aashiqa
+Aashiqui
+home
+Ashish
+Aashi
+Blessings
+shorthand
+Wonder
+to surprise
+Hermitage
+Refuge
+Assurance
+Ashwin
+ashadh
+hope
+Nearby
+around
+apprehension
+asand
+enamored
+Posture
+asand
+imminent
+Sky
+sky
+shelter
+distillation
+easy
+ease
+easily
+Assam
+Assamese
+chances
+asset
+theist
+theism
+theists
+sleeve
+Devil in disguise
+Faith
+Ahh
+Chirm
+Injured
+Withdrawal
+aha
+Diet
+slowly
+sacrifice
+
+revolution
+inquilab
+refuse
+engine
+Ingni
+England
+England
+English
+England
+inches
+incheon
+engine
+Engineer
+engineering
+Scripture
+Internet
+interface
+Interview
+Intel
+intubation
+entrance
+industry
+India
+Indonesian
+Indonesia
+arrangement
+timeout
+death
+waiting
+arrangement
+Wait
+to wait
+Intah
+intifada
+Intiha
+indu
+indur
+Indore
+Indra
+rainbow
+Indranath
+blindness
+senses
+Imphal
+Human
+human
+Inspector
+-one
+one
+one-
+Collect
+to pile up
+one way
+Iqtara
+Fourty one
+thirty one
+thirty one
+single
+single wheel
+Iqbal
+agree
+only
+Sixty one
+unicorn
+seventy one
+iqbal
+Pledge
+-ika
+Unit
+ninety one
+fifty one
+Ekasi
+the ace
+twenty one
+ninety one
+fifty one
+eighty one
+Warrant
+exam
+igloo
+Wish
+desired
+ijmali
+expression
+enlargement
+respect
+permission
+Permission
+to allow
+Respect
+Italy
+italian
+idli
+-it
+This much
+perfume
+flaunt
+sunday
+Italian
+italian
+History
+historian
+historical
+coincidence
+etihad
+tipped
+leisurely
+And so on
+Perfume
+Ethiopia
+here
+Here and there
+In
+their
+Refuse
+to deny
+them
+human
+humanity
+justice
+the prize
+grace
+internet
+indur
+indra
+rainbow
+human
+them
+iftitah
+worship
+Ibtida
+utterance
+Hebrew
+Abraham
+Hebrew
+ibrik
+help
+Spelling
+Tamarind
+priest
+building
+Timber
+emoji
+emotion
+Examination
+exam
+exam
+-yat
+-ia
+Iraq
+Iraqi
+intentional
+the intention
+around
+allegation
+ilham
+locality
+Treatment
+Treatment
+Cardamom
+Allahabad
+elahi
+electron
+Iltija
+knowledge
+Ilmi
+Worm
+Eve
+indication
+to signal
+love
+Love
+ishqiya
+poster
+Ad
+This
+Its
+Its
+to this
+isabgol
+isabgol
+ismail
+in this
+israeli
+israj
+israr
+ISRO
+Therefore
+by this
+This
+that's why
+This
+istam
+istaqbal
+Istanbul
+resign
+use
+to use
+ironing
+steel
+ism
+ism-e-sharif
+israel
+Islam
+Islamabad
+Islamism
+Islamic
+eh
+
+
+Brick
+fuel
+-Earning
+Ecuador
+reed
+-Each
+aegean
+Itanagar
+-in
+Eid
+eid moon
+-een
+Iman
+honest
+E-mail
+-ye
+Iraq
+Iran
+Iranian
+irkha
+jealousy
+jealous
+jealous
+Envy
+-ela
+eve teasing
+Ish
+God
+god know
+theistic
+god
+Jesus
+Christianity
+Christian
+Christianity
+Christianity
+Easter
+BC
+
+
+pour out
+Finger
+height
+phlegm
+tympanic membrane
+those
+Uighur
+Provoke
+eagle
+said
+utterance
+crumble
+Extirpate
+grow
+to spew
+Violent
+extremism
+extremist
+Shrug
+sneak
+Suitable
+High
+Upper House
+pronounced
+high commissioner
+high commission
+Pronunciation
+pronunciation
+resection
+sigh
+bouncing off
+explode
+stupid
+Ujla
+light
+Uzbek
+Uzbekistan
+Expose
+Light
+bright
+Rise
+Raise
+spotting a flying bird
+urad
+Fly
+flight
+blow up
+Oriya
+Orissa
+aviation
+to inflate
+as much
+To get down
+Alight
+take off
+take off
+Unload
+hasty
+Excellent
+Excellent
+gentleman
+answer
+North America
+North and Middle Andaman
+North Korea
+Uttar Pradesh
+North Macedonia
+northeast
+Uttarkashi
+Responsibility
+Responsible
+Uttaranchal
+Uttarakhand
+succession
+succession
+Successor
+the latter
+northern
+Excitement
+Excited
+lever
+leverage
+uplift
+Produce
+Yield
+Utpal
+the product
+producer
+Production
+utensil
+harassment
+Catalyst
+emissions
+Celebration
+excitement
+Excited
+Curious
+curiosity
+shallow
+Udak
+Ugadri
+generation
+Ujareya
+Udnya
+Shine
+heyday
+rise year
+abdomen
+example
+Generous
+kindness
+liberalism
+liberalism
+Downhearted
+the sadness
+Moody
+Example
+Inauguration
+preamble
+Objective
+Evolution
+enterprise
+entrepreneur
+Garden
+Industry
+Industrialist
+industrialist
+industrialization
+udder
+evolution
+bewildered
+fly away
+there
+Borrow
+to lend
+to borrow
+unfold
+Those
+their
+their
+Their
+For them
+forty nine
+forty nine
+twenty nine
+sixty nine
+sixty nine
+nineteen
+sleepy
+advanced
+Development
+Unnao
+nineteen
+frenzy
+free
+Elimination
+seventy nine
+Them
+They
+sub-
+Device
+Favour
+Enterprise
+Satellite
+the treatment
+by-election
+Yield
+produce
+Fertile
+charity
+Sermon
+accessories
+sub stream
+Suburb
+tributary
+Surname
+deputy assistant
+assistant director
+colonization
+colonialism
+colonialist
+Upanishads
+sub eye
+Novel
+novelist
+proof
+concubine
+subtheorem
+to provide
+dialect
+dialect
+consumer
+consumption
+consume
+consumable
+Upam
+subcontinent
+Suitable
+Suitable
+Use
+the user
+Utility
+useful
+after
+Available
+Availability
+Upla
+garden
+Fasting
+deputy Secretary
+subset
+prefix
+Present
+Presence
+Gift
+degree
+upadhyay
+Measure
+Deputy Commissioner
+access
+opening
+worshiper
+Ignore
+Oops
+body scrub
+recover
+to boil
+boring
+to boil
+Ubhay
+bisexuality
+ambidextrous
+ambidexterity
+Emerge
+exultation
+thickening
+age
+Umra
+Humidity
+Uma
+fine
+hope
+Candidate
+candidate
+Ages
+life imprisonment
+uru
+Uruguay
+Urumchi
+sternum
+Urdu
+Urdu
+aka
+Fertilizer
+Urvashi
+confusion
+entangle
+tangled
+entangle
+keel over
+inverse
+vomit
+vomit
+Ulfat
+Ulama
+rebuke
+rebuke
+rebuke
+owl
+Meteor
+Reverse
+the pot calling the kettle black
+Disorderly
+Vomit
+to vomit
+vomit
+Violation
+glee
+Owl
+Son of a bitch
+to make a fool of
+mention
+notable
+warm
+Usha
+Usha Arghya
+camel bird
+hot
+heat
+that
+His
+For him
+Usman
+from him
+heave
+heave
+same
+like that
+principles
+Him
+Razor
+maestro
+Osman
+Osmanabad
+Usmani
+Ottoman Empire
+
+
+high
+height
+More of the show but less in quality
+camel
+the high
+Height
+height gauge
+Ukh
+Ukhal
+Ukhli
+ludicrous
+tissue
+histology
+otter
+beaver
+Wool
+Una
+woolen
+up
+Go up
+uppermost
+upper
+Ufa
+bored
+bumpy
+get bored
+energy
+Energy Conservation
+urna
+vertical air
+vertical wind
+vertical
+Usha
+heat
+heating
+waste
+ooh
+
+
+Rigveda
+Loan
+lender
+debt free
+negative
+anion
+indebted to
+season
+Riddhi
+sage
+Rishikesh
+
+
+aluminum
+
+
+android
+Ambulances
+One
+One by one
+similar
+for each other
+Together
+It takes two to make a quarrel
+one one
+One by one
+unicellular
+exponential
+united
+Solidarity
+Acre
+unilateral
+Unity
+collected
+At once
+suddenly
+uniformity
+Solo
+Singular
+sunrays or Whitelight
+unicameral
+monogamy
+uniform
+Solitude
+all of a sudden
+one or two
+monopoly
+integration
+monotonous
+exit polls
+Agent
+agency
+ATM
+advisory
+ed
+heel
+Adelaide
+Eddy
+edz
+Adriatic Sea
+AIDS
+once again
+objection
+Athens
+-ed
+M.L.A
+ambulance
+-ay
+airline
+Elchi
+Allergies
+Announcement
+aluminum
+And
+Substitute
+Everest
+Asia
+Asian
+asian games
+acetone
+Association
+escalator
+Estonia
+aspirin
+esperanto
+esperanto
+Caution
+precaution
+Favor
+Ehsan Farmosh
+gracious
+Feeling
+
+
+optional
+voluntary muscle
+objection
+to object
+historical
+Glasses
+anime
+endv
+amsterdam
+debauchery
+Aaron
+Announcement
+ash
+to rejoice
+opulence
+Like this
+like that
+to do so
+This way
+precaution
+
+
+auckland
+oxford
+oxide
+office
+ob
+Orthodoxy
+Austria
+australian
+Australia
+
+
+O
+Oye
+Oak
+okai
+oak
+og
+ogh
+petty
+lost
+Exorcist
+Ottawa
+Odisha
+to wear
+onam
+Filled with
+Odan
+Obama
+Oman
+aum
+And
+oleandez
+olympics
+Olympic Games
+Hailstone
+Olympiad
+Oceania
+lip
+Dew
+Osaka
+position
+ohio
+ooh
+NS
+NS
+aunhar
+tool
+Tool
+tools
+autsukya
+industrial
+industrialization
+formal
+presence
+And
+Aurangabad
+woman
+children
+auliya
+drug
+medicine
+medicine
+medicinal
+Average
+Average
+
+
+cornice
+pebbles
+pebbles
+Skeleton
+concrete
+bracelet
+kangaroo
+Pauper
+comb
+to comb
+Kanchan
+Miser
+skimpy
+throat
+mumps
+throat
+conductor
+conditioner
+tubers
+kandra
+tuber
+Shoulder
+tremor
+vibration
+company
+staggered
+Kampu
+Computer
+computerization
+Blanket
+Cambodia
+Many
+cucumber
+room
+class
+orbiter
+ledge
+garbage
+Kachnar
+Trash
+Court
+Kachalu
+Shortbread
+Raw
+raw iron
+raw material
+raw
+Raw
+briefs
+trash
+alluvial
+Tortoise
+Kajra
+Kazakhstan
+Kazawa
+to cut
+Jackfruit
+harvesting
+sarcasm
+dagger
+cut
+bowl
+A bowl
+deduction
+hardcore
+Katha
+balustrade
+puppet
+fandom
+Difficult
+difficulty
+Difficulty
+difficulty
+Kathua
+Harsh
+Kadapa
+hard
+throbbing
+ladle
+Bitter
+bitterness
+bitterness
+Hard
+strictly
+The Link
+embroidery
+curry
+curry leaves
+Particle
+shear
+katal
+Queue
+how much
+brown
+Katha
+murder
+Statement
+Story
+alleged
+text
+day
+maybe
+never
+Pumpkin
+Pumpkin
+Gold
+canetop
+temples
+Kanped
+Canada
+Virgo
+junior
+junior
+kinese
+tubers
+kandara
+tube
+Kannada
+Kannada
+Kannauj
+Virgo
+Kanyadan
+Kanhaiya
+Cheat
+Cloth
+cranium
+Cotton
+Kapilvastu
+Kapeesh
+Kapoor
+Kapot
+cupola
+Fantasy
+captain
+phlegm
+shroud
+When
+kabaddi
+Trashy
+Kebab
+One who interrupts
+Kebabchini
+Kabir
+Pigeon
+confess
+sometimes
+Never
+Low
+at least
+Low-
+weak
+weakness
+fucking
+Waist
+break back
+waistband
+waistband
+rooms
+commercial
+Lotus
+Kamli
+earning
+earn
+command
+tanning
+amazing
+commissioner
+Shortage
+slavish
+bastardism
+commission
+Comment
+committee
+room
+more or less
+comp
+Shivering
+staggered
+Blanket
+Cambodia
+communism
+communism
+communism
+communism
+Apocalypse
+-do
+do
+loom
+ladle
+Karan
+karni
+feat
+Doing
+Karnal
+to do
+karva chauth
+get it done
+Karachi
+to do
+enchantment
+crisp
+Miracle
+Curry
+near
+More like
+More like
+compassion
+Bitter gourd
+Ten million
+millionaire
+Karounda
+Tropic of Cancer
+malignant neoplasm
+Ear
+auricle
+Duty
+duty track
+doer
+duty
+colonel
+Karnataka
+camphor
+Karma
+Staff
+work land
+workshop
+staff
+Tomorrow
+stigma
+Calcutta
+collector
+ladle
+Cullen
+calculus
+Kalaf
+Pen
+Kalamkari
+Kalma
+to color
+Kalash
+Kalasa
+discord
+Art
+Wrist
+artist
+artwork
+artistic
+kalavant
+bud
+church
+Liver
+liver
+Kaleva
+color
+cultivar
+Imagination
+imagination
+imagined
+to imagine
+Welfare
+welfare
+fungus
+armor
+covered
+poetess
+Poet
+Poem
+poetry
+poet
+puff
+Kashmaksh
+flagellum
+kayak
+Kashmir
+cashmere
+Suffering
+painful
+Kasak
+how
+constrict
+Oath
+torment
+Exercise
+Butcher
+fault
+kerosene
+astringent
+test
+Tell
+to say
+havoc
+to be called
+Kahwa
+said
+Where
+Story
+the storyteller
+Proverb
+somewhere
+Q
+absolutely
+Qatar
+strand
+kill
+queue
+murder
+the slaughter
+height
+step
+pace
+Qadeem
+strong
+value
+Appreciation
+Kaphas
+tribe
+confess
+constipation
+Possession
+grave
+graveyard
+shirt
+Judgment
+agreement
+close
+almost close
+almost
+almost
+debt
+pen
+club
+qawwal
+qawwali
+swear
+butcher
+Ode
+fault
+town
+havoc
+Kahwa
+Qazi
+murderer
+slay
+law
+Kanungo
+legal
+convoy
+Kabiz
+capable
+Qabil-e-praise
+ability
+control
+Qaida
+persist
+carpet
+qasid
+Cairo
+crimson
+crimson
+fort
+shortage
+installment
+kind
+luck
+anecdote
+price
+treasured
+mince
+confess
+sacrifice
+to sacrifice
+Qur'an
+porter
+kulfi
+Quvvat
+misdemeanor
+Qustuntuniya
+how
+scissors
+Imprisonment
+quaid-e-solitude
+prison
+prisoner
+Demos
+NS
+armpits
+glass
+thorn
+tremble
+cow
+Cannes
+bronze
+Congress
+Congressman
+glass
+Fork
+Scandal
+radiance
+potato
+Shiver
+bronze
+Kansi
+Moss
+kaodai religion
+kaodai religion
+Kakdant
+kaknaj
+Uncle
+Aunty
+cork
+Paper
+paper
+paper
+paper
+paper
+papers
+paper
+thin skinned lemon
+hinge
+Lampblack
+Cashew
+Cutting
+Lumber
+Kathmandu
+to cast
+decoction
+scandal
+Catalonia
+Ear
+to ear
+Kanpur
+cana
+Law
+Kanti
+Krishna
+copy
+copyright
+of fruit
+Kafir
+enough
+enough
+Kaaba
+Cabina
+kabuki
+Kabul
+Kabuli
+Chickpea
+Work
+to work
+work
+sexual activity
+workers
+lazy
+wish
+successful
+success
+maid
+Kamasutra
+Kamil
+Kami
+erotic
+sexuality
+orgasm
+orgasm
+Kayko
+Creation
+Coward
+Kayastha
+physique
+metamorphosis
+metamorphosis
+kayotsarga
+-car
+car
+-Factor
+Factor
+manufactory
+factory
+effective
+reason
+cartridges
+feat
+business
+caravan
+prison
+the prison
+Imprisonment
+-kari
+Artisan
+business
+businessman
+trade war
+cargo
+Cartoon
+card
+cardiff
+Karthik
+kartik
+Carthage
+organic chemicals
+personnel
+Work
+worker
+executive
+tenure
+efficient
+program
+executive
+Assignments
+Proceeding
+Workshop
+working committee
+work schedule
+Workplace
+implemented
+The Office
+action
+Era
+chronology
+classics
+Kaladweep
+Black
+black raw
+black caluta
+black kikar
+Black coal
+Raven
+dark glasses
+black thief
+black cumin
+black mole
+black money
+Black Salt
+black Mountain
+black hair
+black arm
+black loan
+black buck
+black money
+blackness
+Kalapani
+kalik
+college
+Kaliya
+Black
+whooping cough
+black bull
+black pepper
+Black Yellow
+carpet
+Kaalu
+college
+Imaginary
+Poetry
+If only
+Kashatu
+tenancy
+Kashmir
+woodworkers
+wood plank
+wood sugar
+Casa
+Kaahakshan
+That
+Bewildered
+But
+but- but
+Legend
+Kitchen
+how much
+How much
+What time is it
+book
+where
+why
+Edge
+but
+transgender
+economy
+economical
+km
+kiev
+gritty
+Kyrgyz
+Ray
+beam
+character
+kiranchi
+Rent
+Tenant
+kerosene
+insect virus
+Kyrgyzstan
+Castle
+kg
+Kilogram
+kilometer
+fort
+Raisin
+Kishwar
+teen
+teenager
+teenager
+installment
+What
+Farmer
+farming
+Any
+variety
+Expectation of
+towards
+for the sake of
+instead of
+towards
+like
+as
+kikar
+mud
+insect
+entomology
+germs
+worm
+worm
+keyboard
+alchemy
+Kirtan
+Nail
+Kiev
+kiwi
+well
+virgin
+Kunwar
+Kunjra
+Key
+keyboard
+Horoscope
+blunt
+Aquarius
+well
+Kuala Lumpur
+cookie
+mushroom
+infamous
+notoriety
+Crush
+Some
+something
+bitch
+Kutz
+Cottage
+crooked
+family
+potter
+nibble
+Bitch
+Dog
+dog
+dog
+witch
+Nature
+spade
+clan
+flask
+kuber
+constipation
+Kumak
+Kumaon
+Youth
+Miss
+lilac
+kumarujyoti
+pitcher
+wither
+Potter
+crisp
+kurta
+chair
+ugliness
+to scrape
+attachment
+Kurnool
+Chair
+Total
+Kulak
+clan
+kulthika
+Kulthi
+clan religion
+surname
+Kulcha
+rinse
+ax
+the axe
+Kuwait
+Welfare
+Kushwaha
+misgovernance
+Wrestling
+Kusal
+safflower
+mischief
+nightmare
+nudge
+fog
+Ku
+well
+traveled
+Code
+tamp
+diplomacy
+diplomatic
+diplomat
+garbage
+trash box
+dog
+to jump
+skipping rope
+Kuba
+koor
+coulomb
+hip
+Demand
+Grateful
+Work
+creativity
+act
+Synthetic
+Artificial satellite
+participle
+participle
+miser
+miserliness
+Please
+Courtesy
+cultivator
+Agriculture
+Krishna
+Krishna Vivar
+Dark woman
+Catalonia
+cancer
+Of
+Under
+inside
+according to
+According to
+Apart from
+in front of
+above
+because of
+against
+through
+during
+close to
+beyond
+across
+Near
+behind
+next to
+Without
+Instead of
+after
+about
+in spite of
+outside of
+Without it
+in between
+inside
+in view of
+according to
+according to
+For
+For the sake of
+Unlike the
+against
+with
+before
+with
+in front of
+Except
+earthworm
+Center
+Union Territory
+nucleus
+union territory
+Union Territory
+focused
+centralization
+Central
+Central bank
+Cake
+crab
+Kejrival
+kettle
+ketvatu
+Kedar
+Center
+Kenya
+cape verde
+Cape Town
+Kerala
+banana
+Kelly
+In college
+knowledge only
+Hair
+saffron
+saffron
+Scissor
+canteen
+candy
+Cambridge
+cancer
+Kaithal
+Cathy
+Catholic
+the Catholic Church
+canberra
+kaif
+camera
+carrom
+Caribbean
+Caribbean Hindustani
+The calculator
+Calgary
+california
+caisson
+How
+How
+How are you
+copyright
+coffee
+coffee
+Commonwealth
+comedian
+comedy
+cholera
+To
+Konkan
+Konkani
+plump
+Koidar
+Any
+No problem
+someone
+kokborok
+Coca-Cola
+womb
+Kochi
+Coat
+Kotor
+kotwal
+quota
+Quote:
+closet
+room
+Kothari
+kothi
+whip
+kodi
+leprosy
+angle
+police officer
+kothmir
+Kodo
+Kodon
+corner
+anger
+kopcha
+coffee
+kofta
+Tender
+soft hair
+Comoros
+coimbatore
+Nightingale
+Coal
+charcoal Grey
+Corner
+blank
+Korean
+Korea
+Korean
+Koregaon
+coronavirus
+court
+court office
+Colombo
+Kolkata
+uproar
+covid-19
+Thesaurus
+cell phone
+koshadhu
+the cell
+cellular
+Try
+to try
+fund
+brackets
+cursing
+cursing
+Costa Rica
+Koh
+elbow
+Fog
+chaos
+Kohima
+kohenur
+council
+Crow
+penny
+tight to the penny
+prodigy
+Who
+Which one
+virginity
+Kaumudi
+Kauravas
+crow
+Kaushalya
+What
+are you okay
+can you help me
+are you married
+do you speak Hindi
+do you speak hindi
+am i speaking farsi
+what time is it
+How are you
+kyve
+Why
+Cuba
+Why
+Because
+Kyoto
+cry
+cry
+Order
+serialization
+sorted
+respectively
+ordinal
+consecutive
+programming
+purchase
+Revolution
+Revolutionary
+Christchurch
+revolution
+Cricket
+cricketer
+Action
+adverb
+activity
+verb
+verb forms
+adverb
+adverb
+Christmas
+christmas and new year wishes
+crystal
+christmas
+Creedk
+screed
+play
+playground
+sports
+sports
+Crete
+Cream
+furious
+cross
+buyer
+Kremlin
+Croatia
+Anger
+angry
+club
+clerk
+tired
+weary
+fatigue
+Class
+clifton
+boiling point
+Kwath
+quarantine
+quark
+quartz
+quintal
+Quetta
+X-ray
+moment
+Damage
+kshatrani
+Kshatriya
+Capacity
+Forgiveness
+forgivable
+Decay
+Tuberculosis
+alkali
+alkali
+alkaline
+elution
+bleached
+horizon
+emaciated
+poor
+small
+petty
+asteroid
+apps
+petty
+angry
+pissed off
+Kshuri
+Area
+Area
+area
+fielding
+jurisdiction
+regional
+mercy
+Kshaur
+alkaline
+Kshori
+
+
+canal
+Section
+piece by piece
+Ruins
+Khandelwal
+pillar
+Pole
+Bird
+astronomy
+astronomy
+astronomer
+mule
+Date
+Khat
+tap on
+patter
+Bedbugs
+sour
+sour
+Tart
+Stand
+to erect
+to stand
+the chalk
+Ancient form of Hindi language
+khadoos
+block
+Dangerous
+Khatauni
+Khatri
+mine
+repulse
+khadyot
+knocker
+tinkling
+mining
+Mining
+miner
+minerals
+miner
+Mineral
+mineral oil
+Consumed
+tile
+news
+look
+Rabbit
+scratches
+Kharna Lohanda
+trillion
+candid
+integrity
+scratch
+scratch
+Expenditure
+Kharju
+Khalna
+Villain
+turmoil
+Khalasi
+Barn
+Khallas
+Measles
+k
+dagger
+treasure
+letter
+circumcision
+to circumcise
+the best
+dangerous
+danger
+letter
+finished
+to finish
+angry
+news
+take news
+beware
+news reporter
+news
+Sag
+brunt
+yeast
+care
+rabbit
+cantaloupe
+bad
+sore
+purchase
+to buy
+to buy
+buyer
+shopping
+expenses
+to spend
+expense
+spent water
+dissatisfied
+Khalasi
+happy
+caliph
+measles
+dry
+house
+blueprint
+grizzly
+for the sake of
+Khatoon
+Khan
+Khanqah
+Khangi
+family
+family
+chef
+chef
+food
+nomad
+drawback
+silent
+silence
+dismiss
+Kharish
+empty
+pure
+pure
+Khalistan
+empty
+empty handed
+Khawand
+special
+especially
+peculiarity
+title
+title
+honor
+servant
+against
+Khilafat
+myself
+happiness
+God
+god's son
+lamb of god
+God's boar
+khuda hafiz
+Lord
+lord god
+intelligence
+gratuitous
+microscope
+reveal
+happy
+happy-
+happy man
+lucky luck
+good news
+happy
+lucky
+fragrance
+aromatic
+happy mood
+happy one
+happiness
+happy
+happy
+Happiness
+fierce
+blood
+to bleed
+blood for blood
+drink blood
+bleeding
+bloodshed
+bloody
+great
+beautiful
+beauty
+Apricot
+feature
+Khyber Pakhtunkhwa
+camp
+well
+well case
+dole
+goodness
+awe
+thought
+Khwaja
+dream
+dream
+desire
+khurshed
+Khang
+cough
+cough
+cough
+Cough
+the chasm
+cot
+gulf
+Account
+Fertilizer
+food
+Khadi
+Food
+food fiber
+food fiber
+food fiber
+food fiber
+Mine
+food and drink
+Eat
+Khani
+Khap
+saline
+salt water
+Khari
+Empty
+Special
+stretch
+A dish in South Asian cuisine made of rice and lentils
+window
+Window
+sad
+blossom
+to feed
+player
+feed
+toy
+to slide
+pull
+tussle
+Pull
+Kheer
+Cucumber
+bloom
+washcloth
+itching
+Itching
+Self
+retail
+digging
+Apricot
+hoof
+spud
+frankly
+to open
+open
+openness
+openly
+Happy
+hustle and bustle
+whisper
+peg
+peg
+Plenty
+Farm
+cultivator
+Farming
+Agriculture
+Regret
+to spit
+Play
+sports
+sports
+to play
+played
+So
+bailout
+to dig
+Khoya
+Khoka
+Search
+to search
+false
+Dig
+lose
+shell
+Skull
+Lost
+to open
+Khmer
+reputed
+dream
+
+
+to lose
+Gangai
+gangtok
+Ganges
+gangajal
+Bald
+ganji
+Destination
+dirt
+filth
+Dirty
+smell
+sulfur
+Serious
+seriousness
+to lose
+cow
+sky
+skyscraper
+deafening
+small pot
+Yardstick
+Gaz
+gazer
+nexus
+Build
+alliance
+constituted
+rumble
+thunder
+jumbled up
+messed up
+pit
+Pit
+stronghold
+fabricate
+Garhwal
+forged
+fort
+count
+scorer
+Republic
+republican
+republic
+Enumeration
+Calculation
+republic
+mathematics
+math mode
+mathematician
+Ganesha
+Past
+Speed
+dynamics
+kinetic
+kinetic energy
+moving
+deadlock
+activity
+Cardboard
+bludgeon
+Mattress
+prose
+donkey
+gun powder
+gunny
+messy
+smell
+sulfur
+Sugarcane
+gossip
+gossip
+gossip
+Gabru
+gabbar
+eating gum
+gamak
+towel
+Motion
+Flowerpot
+gamelan
+serious
+Gaya
+thunder
+howling
+Garam Masala
+Heat
+dignity
+Poor
+Garuda
+Eagle
+Garudadwara
+Garbaan
+thunder
+Neck
+thunder
+-garden
+Pregnancy
+pregnancy
+conceived
+umbilical cord
+abortion
+Pregnant
+pregnancy
+Uterus
+hot
+Piping Hot
+Heat
+heat up
+Proud
+proud
+Wrong
+tonsil
+tonsil
+melt
+Galbanhi
+mumps
+Neck
+sore throat
+Corridor
+Street
+to hug
+cowherd
+Witness
+testimony
+patrol
+intense
+jewel
+Deep
+depth
+g
+funny
+Ghazal
+Gaza
+traitor
+good luck
+embezzlement
+sorrow
+eating sorrow
+sad
+gargle
+poor
+poverty
+wrong
+make a mistake
+misunderstanding
+misunderstand
+misunderstanding
+mistake
+Ghaziabad
+missing
+to disappear
+to disappear
+balloon
+ghoor
+slave
+slavery
+ghusal
+bathroom
+ghusl
+to ghusl
+bathroom
+angry
+angry
+non
+non-
+illegal
+absence
+dive
+plunger
+important
+ganja
+Knot
+knot knot
+ass
+Gandu
+Gandhi
+Gandhi Nagar
+Gandhinagar
+Village
+villager
+Ganguly
+Hemp
+ass
+fucker
+Gandhara
+Gandhi
+Gandhigiri
+serious
+Village
+Gansu
+sing
+Carrot
+to bury
+buried
+Vehicle
+Thick
+Gandu
+gatra
+Anthem
+to sing
+Song
+gam
+Cow
+singer
+singing
+Singing
+Missing
+To vanish
+singer
+Cheek
+Swear-word
+Abuse
+abusing
+customer
+every now and then
+gizgiziya
+guitar
+to plead
+Vulture
+counting
+Counting
+to count
+to count
+Guinea
+Guinea-Bissau
+Chameleon
+Church
+Church
+Fall
+arrested
+arrested
+to arrest
+arrest
+Girmit
+Indentured
+gang
+dropped
+to drop
+fall
+Girih
+- kernel
+the gang
+Squirrel
+Gila
+Tumbler
+gilim
+Song
+lyricist
+Gita
+jackal
+Wet
+wetness
+request
+Guntur
+Goon
+hooliganism
+dome
+Guam
+Guomindang
+google
+bunch
+Gujranwala
+Gujarat
+Gujarati
+pass
+passed away
+to go past
+gushta
+to pass
+survive
+request
+Gujju
+Gujiya
+kernels
+Good
+Good morning
+Jaggery
+Gudaku
+Doll
+doll
+a quality
+properties
+multiplication
+chromosome
+centromere
+multiply
+multiply
+coefficient
+tickle
+Tickling
+tortoise
+anal
+anal hole
+anal sex
+anal sex
+anus
+anal fissure
+lukewarm
+humming
+Gunna
+crime
+Secret
+spy
+Gupta
+genitals
+cave
+gossip
+arrest
+Cave
+Ladybug
+Balloon
+missing
+missing
+Anonymous
+Missing
+silent
+Gurbani
+Gurmukhi
+Teacher
+Gurukul
+gravity
+gravitational constant
+gravity
+gravitational
+gravitational wave
+Gurudwara
+Thursday
+guru
+Gurjara-Pratihara Empire
+Gurgistan
+Kidney
+Gul
+Gulzar
+Bouquet
+vase
+rosemary
+Gulshan
+Rose
+sweet dish
+rose
+Slave
+gulal
+neckerchief
+catapult
+Piggy Bank
+Guwahati
+impudent
+gullible
+Anger
+cavity
+cavity
+petition
+occult
+Dumb
+echo
+resonate
+Google
+pit
+home
+home Minister
+civil war
+householder
+Gay
+ball
+kicking
+game
+lyrical
+Orange
+ocher
+wheat
+rhinoceros
+non-essential
+gallon
+gallium
+gas
+gordon
+go
+glue
+Goa
+tattooing
+Lap
+adopt
+tattooing
+Godown
+dock
+twilight
+secret
+privacy
+gopi
+Cow dung
+goose
+Cauliflower
+beef
+cow urine
+onyx
+gore
+cow protection
+Gorakh business
+Gorkhar
+Gurkha
+Gorkhali
+White
+gorilla
+Goristan
+blonde
+goru
+Round
+round peak
+Plumpy
+shotgun
+golgappa
+round ball
+mobilization
+chaos
+peppercorns
+Circle
+hemisphere
+Gun Shot
+firing
+gold coast
+Goa
+Meat
+conference
+iguanas
+cow
+notice
+Pride
+glorious
+proud
+sparrow
+cowshed
+Eleven
+texts
+author
+library
+groin
+Planets
+Assumption
+planetary
+Gram
+Gramcharya
+Rural
+Customer
+Greek
+summer
+Greece
+Gregory
+Great Britain
+granite
+groningen
+glider
+guilt
+glass
+Glasgow
+Guatemala
+Guar
+cowpea
+shepherd
+Gwalior
+
+
+Hour
+bell
+accident
+scene
+decrease
+Reduce
+happened
+Cheap
+alligator
+Watch
+cube
+Playful Man
+density
+dense
+condensate
+cubic
+Tremble
+Nervousness
+Pride
+Proud
+Arrogance
+brawl
+House
+Traitors are the worst enemies
+Homemade chicken dal par
+Son-in-law who stays at wife's home
+Gharana
+the household
+home
+friction
+slurry
+shearer
+a drag
+pier
+loss
+valley
+ambush
+exponential
+Ghana
+Injured
+Wound
+Grass
+disgusted
+thicken
+Ghee
+ghee
+anklet bells
+anklet bells
+knob
+Knee
+knee
+horse
+knob
+horseman
+horse riding
+rotate
+soluble
+to enter
+to penetrate
+to enter
+intrusion
+intruder
+Veil
+sip
+roam
+Wandering
+To roam around
+staring
+Stare
+rotating
+rotational wind
+bribe
+bribe
+bribery
+Hatred
+to hate
+hateful
+surround
+encircle
+circle
+siege
+snail
+snail
+nest
+a scam
+Horse
+If a horse makes friends with grass, then what should it eat?
+fast asleep
+Ghorahi
+solution
+to mix
+announcer
+Announcement
+to announce
+manifesto
+declared
+nest
+
+
+chunk
+heal
+heal
+Chandigarh
+few
+Sandalwood
+Moon
+moon
+Chandrakanti
+Chandrakanti
+Chandragupta
+lunar eclipse
+Chandrabindu
+Moon
+Chandrayaan-1
+moonwar
+Chandrika
+chandrini
+Champak
+Champa
+flint
+glare
+glare
+amazed
+Grapefruit
+Chakor
+Dizziness
+Dizziness
+flywheel
+traffic jam
+traffic jam
+Mill
+Cycle
+Chakraborty
+cyclone
+compounding
+Compound Interest
+Trap
+eye
+eye donation
+Taste
+chatter
+Chittagong
+sauce
+mat
+chator
+chatter
+Rock
+tights
+climb up
+to climb
+climbing
+plating
+Clever
+clever
+IV
+fourth inflection
+Gram
+few
+Chandan
+donation
+moon
+moonlight
+moonlight
+moon point
+moon
+moonwar
+Chandrika
+moonlight
+Slap
+Peon
+chapati
+gripped
+Sandal
+paddle
+to chew
+platform
+Glow
+shiny
+shine
+bright
+Bat
+spoon
+to shine
+spoon
+Chamchagiri
+spoon
+Leather
+foreskin
+Miracle
+miraculous
+skinned cow
+Chamas
+Chamar
+Chamu
+Jasmine
+spoon
+selection
+spinning wheel
+spinning wheel
+step
+graze
+charpara
+fat
+fatty
+extreme
+extremist
+Shepherd
+Charas
+Charak
+lamp
+pasture
+Character
+church
+Discussion
+to discuss
+popular
+fat
+skin
+dermatitis
+Charya
+Ambulatory
+Movies
+cinematography
+trend
+to walk
+to drive
+Run
+go
+Chawni
+Fourty four
+Chavan
+Eye witness
+eyewitness account
+spectacles
+cup
+Cha
+slap
+Moon
+moonlight
+Chandni Chowk
+silver
+to bite
+slap
+Moon
+Silver
+moon
+Champaner
+chancellor
+china
+Chai
+chalk
+Chakar
+Chocolate
+knife
+Knife
+Uncle
+Auntie
+chaat
+Chaat masala
+to lick
+lick
+tact
+Sheet
+moon
+moonlight
+arc
+key
+whip
+key
+Tea
+teahouse
+Caddy
+teapot
+chaiwala
+Four
+boundary wall
+Cot
+Fodder
+Speed
+gait
+Driver
+conductivity
+Clever
+finesse
+invoice
+Forty
+centipede
+Chalukya
+Working
+to start
+Taste
+Rice
+sugar syrup
+Desire
+Wanting
+to like
+Whether
+qinghai
+Spark
+concerns
+reflective
+Worry
+To worry
+worrying
+Chimbuk
+chute
+chick
+Chikungunya
+chikungunya
+Smooth
+smooth muscle
+smooth muscle
+doctor
+Treatment
+hospital
+chikungunya
+chikingunya
+chicken
+Chikku
+chitti
+letter
+irritant
+Bird
+Zoo
+bird
+irritated
+tease
+Tease
+head
+pyre
+mind
+captivating
+Chittoor
+Picture
+picture story
+painting
+pictographs
+painter
+Painting
+illustration
+painted
+patchwork
+chinya
+worry
+to cling
+clingy
+sticky
+Chibuk
+tongs
+chimney
+cheers
+chiranjeev
+Chirkut
+permanence
+everlasting
+lamp
+chirauri
+bell pepper
+chillum
+washbasin
+chillvan
+Chile
+coins
+Shout
+outcry
+chivawa
+chimpanzee
+ant
+ant
+Chikoo
+squeak
+howling
+thing
+thing
+cheesebast
+pine
+Leopard
+China
+sino-science
+sino-scientist
+Chyna
+china
+Sugar
+republic of china
+ceramic
+Cheers
+rip off
+Eagle
+cheela
+Chungal
+magnet
+magnetism
+magnetic
+Kiss
+Kiss
+Beetroot
+miss
+Beet
+beet
+repay
+pick up
+Pinch
+joke
+Witch
+chuddak
+to kiss
+to kiss
+fuck
+to select
+Election
+constituency
+the challenge
+Silent
+Keep quiet
+Silently
+shut up
+silence
+prick
+kiss
+kiss
+to kiss
+kiss
+Kiss
+steal
+churut
+Chul
+Chulbul
+chull
+chullu
+drowning in water
+sip
+suck
+nipple
+rat
+whisper
+Since
+miss
+tit
+chuchuk
+chick
+bangle
+pussy
+butt
+cuter
+fucker
+chutiyagiri
+Lime
+To cheat
+chupan
+kiss
+Powder
+churnatu
+gas fire
+suck
+Mice
+Check
+Czechoslovakia
+checkers
+chicken pox
+Chechen
+Consciousness
+alert
+Warning
+Chena
+Chennai
+Cheep
+Cherrapunji
+cherry
+disciple
+effort
+face
+face off
+check
+chat
+chaitra
+Comfort
+Chocolate
+beak
+sharp
+dressing gown
+Injury
+to hurt
+getting hurt
+peak
+sex
+Chodghar
+bang
+Thief
+steal
+Theft
+to steal
+Chola
+bodice
+bodice
+four-
+startled
+to startle
+thirty four
+sixty four
+square
+attentive
+four
+outpost
+watchman
+square
+quadruple
+Wide
+Width
+Chautal
+Chauth
+fourth
+Quarter
+fourteen
+Chieftain
+quadruped
+twenty four
+ninety four
+eighty four
+Crossroad
+fifty four
+seventy four
+-ch-
+chyawanprash
+chup
+Choice
+
+
+cut off
+verse
+six
+six
+sobbing
+shade
+Chhath
+sixth
+rod
+stick
+Roof
+Umbrella
+thirty six
+Chhattisgarh
+Chhattisgarhi
+umbrella
+beehive
+rod
+camouflage
+pseudonym
+filter
+sieve
+print
+fifty six
+twenty six
+Chhama
+half yearly
+fit slim
+stick
+shrapnel
+Cheat
+spill
+trick
+leap
+to jump
+the illusion
+deceit
+deceit
+image
+imagery
+Six
+shade
+Excision
+dominated
+buttermilk
+Umbrella
+Chest
+wide chest
+chest tightness
+student
+Scholarship
+student Union
+Student
+Hostel
+Filtrate
+impression
+print
+print shop
+raid
+printing press
+guerrilla
+printing press
+printing press
+Shadow
+cinematographer
+shadowism
+bark
+blister
+Cantonment
+shallow
+to spill
+spraying
+disperse
+snatched away
+Lizard
+hide
+to hide
+to conceal
+ninety six
+forty six
+sixty six
+eighty-six
+Rind
+peeling
+peel off
+seventy-six
+shit
+Sneeze
+sneezing
+splash
+Snatch
+flirting
+hide
+shimmy
+peeling
+untouchability
+discount
+release
+youth
+leave
+holiday
+get rid of
+hide
+hidden
+hide
+stab
+knife
+untouched
+Discount
+release
+fingering
+To touch
+tease
+Molestation
+teasing
+hole
+Perforate
+chhena
+chisel
+six
+shell
+baby boy
+small box
+Chogyal
+Small
+little dog
+short attendance
+petty
+short attendance
+small
+Leave
+Relieve
+end
+boy
+girl
+Chickpeas
+Chole bhature
+splash
+
+
+yawn
+Junction
+War
+jangju
+moveable
+Forest
+grille
+Wild
+wild boar
+warlike
+Chain
+Jantar
+Creature
+yawn
+Oat
+Jakarta
+Jug
+world
+Jagdish
+wake up
+Jagannath
+to sparkle
+Place
+place to place
+wake up
+Judge
+jazz
+Jazeera
+passion
+Emotions
+Emotion
+hair
+Complex
+Root
+inertia
+to express
+Jatara
+JDU
+Jadeed
+people
+-parent
+parent
+Janakpur
+Census
+tribe
+democracy
+public
+give birth
+mother
+district
+public representatives
+Representation of the People
+vernacular
+Birth
+public opinion
+Referendum
+Referendum
+general
+January
+democratic
+People's Republic of China
+public opinion
+Population
+population control
+Demographics
+public servant
+funeral
+mass base
+sir
+Janub
+Janubi
+thread
+Heaven
+Birth
+congenital
+Birthday
+happy birthday wishes
+happy birthday
+happy Birthday
+happy birthday
+to be born
+Birth place
+Janmashtami
+Chanting
+When
+Unless
+whereas
+jaw
+Jabrail
+Jabal
+Jabalpur
+solidify
+to freeze
+jamshedpur
+deposit
+To Add
+Jamaat
+Son-in-law
+depositor
+hoarding
+Jamaat
+Solidification
+congestion
+Earth
+Jamiat
+Jamaica
+Jammu
+Jammu and Kashmir
+Jamhooriyat
+Jamhooriyat
+Victory
+Long live Rama
+Be victorious
+jubilee
+Cheer
+Jaipur
+if
+just
+Of course
+Necessary
+shabby
+German
+Germany
+federal republic of germany
+jarrah
+water
+the water cycle
+waterfowl
+hyacinth
+Burnt
+hydrocele
+hydraulic
+waterfowl
+waterborne
+Water logging
+firefighter
+Jaldhar Kedar
+watershed
+Burning
+Burn
+Water evacuation
+refreshments
+Water Board
+hydrosphere
+waterway
+Jalwa
+Climate
+watershed
+Jalsa
+sea ​​lions
+watertight
+to burn
+kindle
+water chart
+Jalal
+Jalalabad
+Reservoir
+burnt
+aquatic
+Syrup field rings
+Soon
+haste
+Soon
+executioner
+Jawa
+young
+youth
+Answer
+to answer
+Sorghum
+Jawari
+celebration
+Jasoor
+zinc
+galvanized
+hell
+hell
+Poison
+Where
+Jahangir
+ship
+ship
+shipwreck
+ship cannon
+ship
+ship
+world
+z
+rust
+chain
+Zakat
+cashew
+wound
+hurt
+zenana
+zafar
+tremendous
+coercion
+tongue
+verbally
+confiscated
+surety
+age
+land
+landowner
+land
+ground
+conscience
+if
+please
+means
+Sure
+need
+necessary
+Lily
+Zarda
+Zarra
+Zalzala
+mind
+trouble
+poison
+poisonous
+poisonous
+zeenseeb
+zagreb
+caste
+caste
+taste
+jaaya
+Tsar
+tsar-tsar
+bloodthirsty
+obviously
+Zindagani
+life
+alive
+alive
+Zimbabwe
+mention
+stubbornness
+insist
+stubborn
+zina
+Life
+Zimbabwe
+responsibility
+responsible
+responsibility
+district
+Collectorate
+zinc
+zine
+chefs
+Zeena
+cumin
+cold
+tongue
+swirl
+persecution
+jewelry
+mind
+olives
+loud
+vigorous
+excess
+more
+mostly
+Thigh
+panties
+Check
+check
+brave
+Thigh
+wake up
+Wake up
+Awakening
+Awareness
+awake
+wake up
+to be awakened
+jazz
+Jat
+winter
+Caste
+Do not ask the caste of the monk; ask for knowledge
+casteist
+Casteism
+racist
+caste
+ethnic
+Magic
+casting spells
+Magician
+sorceress
+witchcraft
+Life
+to die
+If you have life, you have the world
+knowledgeable
+Information
+Know
+intentionally
+lethal
+Animal
+Go
+well-known
+know
+Beloved
+Japan
+Japani
+Jaffna
+Jam
+sourdough
+Jamni
+jama
+Jamata
+Jamun
+purple
+justified
+review
+Property
+nutmeg
+jarak
+Ongoing
+jaray
+Net
+web page
+web
+Fake
+Java
+Mace
+Spy
+spy
+goth
+commodity
+liver
+beloved
+Jighansa
+life expectancy
+Curiosity
+win
+As much
+to win
+where
+Ginnie
+whose
+jina
+genie
+whom
+who
+Djibouti
+Djibouti
+yam
+jira
+interlace
+That
+Whose
+to whom
+Whosoever
+in which
+By which
+whom
+Body
+physical
+jihad
+-Yes
+Yes
+No
+Yes
+Brother-In-law
+GG
+Victory
+to win
+win
+Jean
+Live
+jeans
+Tongue
+Cumin
+Life
+Life
+Life expectancy
+Spouse
+Life span
+Biography
+biosphere
+biosphere
+the biology
+bacteria
+fossil
+fossil fuel
+Living
+Jung
+Gambling
+the gambler
+Jug
+firefly
+chew
+Jugalbandi
+Makeshifter
+mobilize
+ties up
+twins
+tillage
+parted
+separation
+Junhar
+Passion
+bitterness
+jumla
+Zuma
+Jumeirat
+crime
+Fine
+sock
+to unite
+July
+procession
+young
+justtju
+lice
+gambling
+Struggling
+battling
+bun
+Shoes
+June
+July
+Jethani
+Jeddah
+pocket
+pocket watch
+Jail
+jail house
+Jacobabad
+jacket
+Jaguar
+olives
+Jain
+bio
+As
+as I was saying
+like
+Georgia
+Jordan
+that
+leech
+to judge
+risk
+risky
+Joint
+Add
+couple
+Pair
+holding
+plowing
+Jodhpur
+Joban
+thrust
+vigorous
+joru
+Georgia
+Passion
+Venturesome
+johna
+johannesburg
+johor bahru
+barley
+Jauhar
+jeweler
+k
+known
+knower
+known identity
+knowledge
+knowledge sharing
+knowledge base
+epistemology
+enlightenment
+knowledgeable
+Enlightenment
+More
+geometry
+eldest
+as
+Flame
+jyotiringan
+Astrology
+fever
+High tide
+flame
+Volcano
+Genealogy
+
+
+mess
+flag
+Jhakaas
+jerk
+quarrel
+Fight
+quarrelsome
+Quickly
+quickly
+Shock
+instant
+the flurry
+to fall
+Clash
+flurry
+tingle
+Blink
+Mess
+Spring
+Jharokha
+Glimpse
+swing
+squabble
+Fret
+z
+annoyance
+Jha
+peep
+cymbals
+Jhansi
+peek
+foam
+tree
+to dust
+bush
+Broom
+Slap
+JMM
+Jharkhand
+Jharkhand
+welt
+Diffidence
+hesitate
+Shrimp
+crickets
+Lake
+to bend
+Bend
+Tilt
+falsify
+earring
+clump
+wrinkles
+Singe
+Jhujh
+Lie
+to lie
+liar
+liar
+jhoom
+swinging
+Chandelier
+swing
+Swing
+endure
+to blow
+gust
+hut
+bag
+
+
+hang up
+typist
+typing
+to type
+tank
+Collide
+confrontation
+takar
+Collision
+ankle
+grope
+Washroom
+tons
+tunnel
+drip
+tapori
+tub
+gig
+Tomato
+terminal
+turru
+avoid
+twig
+walk
+leg
+to hang
+brazing
+Leg
+Time
+what is the time
+to cover
+island
+Apple gourd
+tindish
+tick tick
+Ticket
+to last
+durable
+Durability
+Tikka
+Tikka masala
+Titkari
+grasshopper
+grasshopper
+tinda
+tin
+Comment
+shimmer
+T-shirt
+Vaccination
+vaccination
+Team
+mound
+TV
+tease
+Piece
+Staring at someone
+bluntly
+break
+broken
+Meteor
+break
+broken broken
+Toothpaste
+Tournament
+technology
+tentua
+tentacle clamp
+take
+lay down
+crooked
+crooked
+curvature
+Tennis
+tension
+Table
+table tennis
+table football
+telephone
+telephone
+television
+television
+telephone
+Phone
+television
+tank
+tanker
+tax
+the cab
+interrrupting
+crate
+basket
+Tokyo
+sorcery
+hat
+Cap
+tofu
+Toronto
+Tory
+team
+toast
+Tunisia
+Tution
+Trump
+truck
+tritium
+Tram
+tractor
+Train
+Troy
+Tweet
+tweeting
+
+
+Cold
+coolness
+cold
+thk
+Thakurai
+the con
+fudge
+cheating
+mocked
+cool
+stop
+stay
+to accommodate
+stay
+Laughter
+Thane
+Thingna
+whereabouts
+to hide
+Stink
+Shiver
+Fine
+amend
+get well
+ok
+turn down
+chin
+tomak
+to dance
+thumri
+thulla
+stifle
+defy
+contract
+thekua
+Contractor
+typical
+to push
+Trolley
+poke
+knocking
+chin
+Solid
+
+
+Danka
+stalk
+stick
+Burp
+dacoit
+stagger
+Dutch
+stick
+tambourine
+puddle
+Double
+bread Loaf
+Dublin
+box
+dabbawala
+Damru
+Fear
+To fear
+Fear
+to be afraid
+Coward
+Durban
+intimidating
+to scare
+Scary
+scary
+to put
+bite
+e
+dine
+dinosaur
+download
+to download
+Post
+post office
+post office
+robbery
+robber
+doctor
+dab
+Dabur
+Witch
+dinosaur
+dinosaur
+Diary
+Darwin
+Branch
+Pour out
+envy
+ovum
+trunk
+Disney
+digital
+digitized
+Deparment store
+deputy
+Box
+canned
+canning
+demand
+to delete
+to be deleted
+dildo
+D
+diesel
+Dean
+DU
+deal
+stature
+Dip
+to drown
+dip
+dunk
+to fall
+Dungar
+drown to death
+Drown
+data
+database
+one and a half
+Denmark
+camp
+Doctor
+doctor
+medical
+donald
+Dollar
+dough
+a doughnut
+door
+lanyard
+swing
+Dola
+doli
+Duke
+drama
+
+
+behaviour
+to cover
+Cap
+drumming
+to cast
+th
+tear down
+frame
+frame
+Two and a half
+Dhaka
+Dhaba
+shield
+mold
+Dishoom
+insolent
+slacken
+Loose
+Finding
+find
+find
+A lot
+lump
+pretend
+shovel
+Dhokla
+dhoka
+Dhota
+tote
+Dhor
+drum
+dholak
+
+
+Narrow
+Harass
+tightness
+Tanz
+Tanzania
+Tanzeem
+Mechanism
+Black magic
+fit
+fitness
+tandoor
+tandoori
+tobacco
+Tobacco
+tent
+Tambol
+tambola
+-:
+till
+Technique
+technology
+wrangling
+trouble
+painful
+tussle
+fate
+almost
+dispute
+Taksim
+demand
+Pillow
+Takshshila
+plinth
+takhallus
+plank
+spline
+coup
+Seat
+sturdy
+Tagaful
+tajna
+tajalli
+experience
+Coast
+neutral
+neutralization
+coastal
+tadka
+torment
+lightning
+Immediately
+contemporaneous
+immediately
+Tatta
+element
+Ready
+readiness
+thereafter
+Element
+philosophy
+metaphysics
+similar
+And
+However
+Fact
+ad hoc
+thereupon
+Tadbhav
+Body
+body distance
+salary
+stretch
+secluded
+loneliness
+Trunk
+Tanay
+the stress
+stressful
+Tanur
+tandoor
+tandoori
+heat up
+ascetic
+consumptive
+Then
+change
+Tabla
+Transfer
+Tabasheer
+devastated
+Destruction
+tabeeb
+health
+percussion
+then
+gun
+tag
+Desire
+slap
+all
+spectacle
+Tamil
+Tamil Nadu
+manners
+you
+decide
+Saturate
+To drench
+wave
+progress
+make progress
+Vegetables
+improvement
+swimming
+Swimming Pool
+Knitting
+Side
+side
+sided
+favoritism
+sided
+Watermelon
+Watermelon
+liquid
+longing
+cravings
+tarswini
+Like
+of different varieties
+behave like
+Terai
+scales
+Tune
+carve
+sculpt
+way
+Method
+tread
+Refreshing
+Argument
+logic
+index finger
+pattern
+tarjuma
+pattern
+floor
+until
+Fry
+summoned
+Sole
+Sword
+sword
+foothills
+fried
+divorce
+pond
+search
+Search
+Underneath
+bitterness
+bitterness
+engrossed
+Tawa
+attention
+Tawa
+Tashaddud
+tasherif
+saucer
+tasma
+Tasla
+solace
+tasavvur
+smugglers
+smuggling
+proof
+Photo
+folding
+culture
+under
+tahri
+Tehelka
+Tehsil
+-ta
+ta
+copper
+Taiwan
+Thai
+life
+Uncle
+stare
+pore
+vigor
+mighty
+So that
+Crown
+Taj Mahal
+coronation
+fresh
+fresh
+Tajikistan
+Surprise
+palm
+toddy
+tata
+Tatar
+instantaneous
+number
+tone
+stretch
+Tanpura
+Taunt
+Dictator
+heat
+temperature
+heating
+Temperature
+Tapti
+tabir
+coffin
+Tamil Nadu
+service
+copper
+taya
+Wire
+star body
+tarkhana
+turpentine
+Star
+star period
+planetarium
+date
+Praise
+to praise
+praise
+to praise
+rythm
+synergy
+rhythm
+Lock
+pond
+lockout
+table
+Talib
+clap
+to clap
+training
+palate
+belong
+ties
+talisman
+playing cards
+Tashkent
+Taseer
+tindish
+gimmick
+triangle
+tikki
+tiktatu
+triple
+trade
+vault
+butterfly
+date
+straw
+tinsukia
+three wheeler
+tripod
+again
+Tibet
+Tibetan
+quarter
+Ti
+tricolor
+oblique
+fifty three
+tarpaulin
+sixty three
+Insult
+To scorn
+ninety three
+Eighty three
+Tiruchirappalli
+Thiruvananthapuram
+Tiruppur
+Sesame
+Tilanga
+Tilak
+cockroach
+oilseeds
+spleen
+Tiwari
+seventy three
+Spicy
+Teej
+partridge
+three
+three sticks
+arrow
+archers
+archery
+pilgrimage
+make a pilgrimage
+tirthankara
+Pilgrimage
+pilgrim
+place of pilgrimage
+matchstick
+intensity
+Thirty
+third
+tung
+rhyme
+rhyme
+Tukka
+Tughlaq
+Tughlaqi Farman
+you
+harvest
+to break
+tufang
+You
+to you
+You
+Your
+how many siblings do you have
+you
+Immediately
+turg
+Immediately
+Trumpet
+trump
+Turk
+Turkmenistan
+Turkestan
+Turkey
+Compare
+comparative
+Basil
+Tulsidas
+Libra
+weigh
+balanced
+equivalent
+gratification
+appeasement
+you
+you
+storm
+weed
+third
+Tritiya Bhakti
+satisfied
+satiety
+craving
+Leopard
+Leopard
+Tendulkar
+twenty three
+fast
+Bay leaf
+Bay leaf
+Tezpur
+Fast
+acid
+tezoosphere
+your
+thirteen
+your
+your
+Your
+Tereko
+Oil
+Telangana
+Telugu
+telugu
+attitude
+Tehran
+forty three
+thirty three
+posted
+deployment
+ready
+Make it ready
+Preparation
+swimming
+swimming
+swim
+So
+Todi
+the break
+Breaking
+broke
+Parrot
+parrot
+cannon
+gunner
+toba
+to break
+tomar
+weighed
+tosh
+gift
+repent
+repent
+form
+torat
+weighing
+to weigh
+towel
+insulting
+sacrifice
+to sacrifice
+give up
+resignation letter
+as such
+festival
+tr
+tin
+triad
+trotter
+trio
+tragic
+Tragedy
+Triangle
+trigonometry
+trigonometric
+Radius
+Trinidad and Tobago
+tripathi
+Tripura
+triangle
+Trinity
+stereoscopic
+stereoscopic printing
+stereochemistry
+trivedi
+hung assembly
+trishukti
+trident
+Error
+flawed
+-tattva
+skin
+acceleration
+hurried up
+quick transportation
+Tsar
+tsunami
+
+
+get tired
+get tired
+get tired
+getting tired
+Tired
+Tiredness
+to tire
+Exhaustion
+tired
+udder
+to Pat
+Slap
+stop
+hand over
+tremble
+tremble
+Thai
+Thailand
+Thai
+Thailand
+that
+Station
+sho
+to establish
+Thapa
+thapi
+hold a
+Plate
+Thimphu
+Thu
+Sputum
+Spitting
+muzzle
+Thanks
+bag
+Bulk
+wholesale price
+Some
+little bit
+little by little
+little bit
+impose
+
+
+stunned
+Dangal
+riot
+a punishment
+dental
+legend
+toothpaste
+dental
+Dandan
+couple
+couple
+conceit
+conceited
+bite
+south
+south
+skilled
+South
+South Andaman
+South Africa
+South America
+South Asia
+South Korea
+South China Sea
+Southeast Asia
+Southwest
+Southeast
+right wing
+right winger
+Dakshina
+Dakshinapath
+southern chili
+interference
+intrusive
+Dagala
+cheat
+traitor
+office
+office
+Burial
+to bury
+to bury
+once
+office
+bureaucrat
+Dabangg
+domination
+Press
+Pressure
+to catch
+submissive
+submissiveness
+power
+fire brigade
+fire brigade
+repression
+Daman and Diu
+Damascus
+couple
+couple
+Mercy
+rate
+Actually
+application
+tree
+Dargah
+court
+between
+Intermediate
+door
+Door
+doorman
+dervish
+sickle
+drawer
+Crack
+Cruel
+poor
+poverty
+hippopotamus
+hippopotamus
+carpet
+Drog
+Inspector
+recorded
+dozen
+tailor
+status
+Pain
+To pain
+painful
+painful
+Mirror
+Darya
+merciful
+pass
+the audience
+Visit
+visible
+show
+team
+swamp
+defector
+Pulses
+Broker
+Dalit
+argument
+Medicine
+Medicine
+dispensary
+dispensary
+medicine
+decade
+Tenth
+decimal
+Dasharatha
+Dussehra
+condition
+Ten
+one hundred million
+One million
+tenth
+signature
+shaft
+glove
+document
+bandit
+combustion
+burn
+tremble
+tenth
+threshold
+panic
+Daitu
+Curd
+Dahi Bhalla
+dowry
+teeth
+stakes
+Teeth
+Midwife
+right
+Dakshinya
+vine
+admission
+admission
+scar
+to stain
+dadim
+molar tooth
+Beard
+donor
+Dadra and Nagar Haveli
+Dadra
+herpes
+Dadsara
+Grandpa
+Dadagiri
+Grandmother
+dadur
+-Donation
+Donation
+Grain
+donor
+pressure
+Price
+Daman
+son in law
+daiz
+filed
+right
+Responsibility
+responsible
+responsible
+responsible
+irresponsible
+right
+-door
+door
+Cinnamon
+poor
+poverty
+alcohol
+Darul rule
+alcohol
+philosopher
+Lentils
+some blackness in lentils
+lentils and rice
+Cinnamon
+dalidra
+Feast
+Claim
+claimant
+Slave
+slave lineage
+slavery
+slavery
+maid
+tale
+right
+Right
+trouble
+disturbance
+Compass
+to be seen
+visible
+visible
+show me
+Show
+Show off
+Digambara
+giants
+Day
+All day
+a routine
+All day
+dated
+Dinesh
+Brain
+brain
+Gave
+diram
+Heart
+Interesting
+Interest
+Dilbar
+Dilruba
+get
+comforter
+Dilli
+impudence
+Delhi
+Delhi is far away
+Delhiwala
+day
+day
+Diwali
+Happy Diwali
+Divi
+Handicapped
+Direction
+guidelines
+this
+December
+December
+daily wage
+Stubborn
+seen
+Elder sister
+Deen
+dinar
+lamp
+Lamp
+lighthouse
+Deepatu
+Diwali
+Diwali
+Deepika
+Lamp
+long
+lampstand
+Minister
+craze
+crazy
+Wall
+sorrow-
+Grief
+sad
+nightmare
+Duanni
+Supplication
+Shop
+shopkeeper
+deuce
+Sadness
+pain
+Sad
+double
+milky
+messenger
+to envoy
+dunali
+World
+scarf
+two wheeler
+Dubai
+lean
+slightly built
+Again
+interpreter
+tail
+Duman
+slow
+abuse
+fit
+Durg
+foul smell
+deodorant
+Accident
+crashed
+weak
+Unfortunate
+unfortunately
+malice
+malicious
+Durmana
+misbehavior
+Bride
+enemy
+enmity
+trouble
+vicious circle
+Wicked
+bad effects
+audacity
+cry
+grief
+shop
+dooj
+Duza
+messanger
+embassy
+Milk
+milk milk and water water
+drinks milk
+milkhead
+milkman
+milky
+milky
+double
+dub
+Distant
+To remove
+Things owned by other people look good
+distant drums sound pleasant
+get away
+Doordarhan
+farsightedness
+Telescope
+phone
+telegraph
+Distance
+distance
+Bridegroom
+Second
+On the other end
+Drag
+Strong
+firmly
+determination
+Scene
+vision
+visual impairments
+point of view
+retina
+Give
+dei
+care
+Look
+Care
+seen and seen
+giving
+Give
+Late
+To delay
+delay
+God
+God
+Cedar
+angel
+Devanagari
+vernacular
+Husband's younger brother
+Deval
+Goddess
+Country
+home and abroad
+treason
+Patriot
+Patriotism
+country language
+Deshmukh
+nationwide
+longitude
+native
+Native
+Body
+body
+Dehra
+Dehradun
+Dehli
+Death
+the countryside
+rustic
+monster
+monster
+daily
+daily
+divine
+divinity
+divine
+two
+Bluntly
+doab
+double
+Both
+Afternoon
+Shortcoming
+defective
+Pardon
+Guilty
+Friend
+Friendly
+friendship
+repeat
+Repeat
+Doha
+race
+runner
+running
+ran
+run
+round
+visit
+During
+wealth
+rich
+fluid
+fluid
+Dravidian
+matter
+Mass
+sighting
+vineyard
+fast
+speedy
+treason
+malignancy
+Duality
+door
+By
+second inflection
+dipole
+bilateral
+bibhuyati jaray
+double
+biref
+bicameral
+bicameralism
+island
+archipelago
+island
+insular
+bilingual
+
+
+sink in
+business
+push
+Push
+furring
+pulsation
+throb
+hustle
+Datura
+Funds
+wealth
+Dhangarhi
+Dhanteras
+Dhanbad
+money
+rich
+Dhanagra
+rich
+money order
+cation
+coriander
+rich
+sagittarius
+archery
+Bow
+bow
+Blessed
+Thank you
+to thank you
+the stain
+to threaten
+Threat
+artery
+blast
+Earth
+Strike
+catch
+surface
+ground
+Heritage
+Religion
+scripture
+Dharmachakra
+secular
+secularism
+pious
+Dharmabhoomi
+Hospice
+theology
+shrine
+charitable
+righteous
+Dhaakad
+Thread
+Metal
+metallurgy
+Rice
+cereal
+Dham
+an assumption
+Stream
+held
+Religious
+Runners
+Foray
+dhishumm
+slow
+slow
+Patience
+slow
+Slow
+slowly
+fishman
+fisherman caste
+mist
+Foggy
+tune
+Dhunni
+spindle
+spindle turn
+to wash
+smoke
+fumigation
+Sunlight
+sunny
+Dhupal
+dhupenya
+sputter
+fanfare
+comet
+smoke
+smoking
+cunning
+dust
+dust
+gray
+Endurance
+wash off
+Danger
+Cheat
+Fraud
+cheater
+dhoti
+wash
+washerwoman
+Washerman
+Dhorit
+Attention
+draw attention
+To pay attention
+take care
+carefully
+dhrupad
+polarization
+ruins
+Flag
+flag
+sound
+sound
+phonetic
+demolished
+
+
+If a root is destroyed there will be no cause for the fight
+nude
+nakedness
+Nandini
+Number
+New Delhi
+new rich
+happy new year
+hemorrhage
+cash
+cash
+copy
+to copy
+fake
+mask
+masked
+nectar
+etching
+map
+negation
+Negative
+Nail
+hell
+Map
+Star
+constellation
+fingernail
+oasis
+tantrum
+oasis
+Gems
+insignificant
+Town
+Municipal council
+Municipality
+urbanization
+urbanized
+nagma
+drum
+Nachle
+dance
+vision
+near
+Eye
+to glance
+ignore
+detention
+point of view
+view
+Najashi
+najibabad
+najumi
+najd
+Naughty
+dance
+daughter
+as a result
+Result
+attached
+missing
+River
+Nanda
+Nankana Sahib
+sister law
+tiny
+Impotent
+impotence
+neuter
+hate
+to hate
+prophet
+the pulse
+pulse
+ninety
+Moist
+Salt
+Faithful
+salt halali
+Salty
+greeting
+hello
+hello
+Hi
+Hi
+prayer
+praying
+prayer hall
+Moisture
+Sample
+meek
+Meekness
+Nayan
+newfound happiness
+new
+innovate
+new rule
+Happy New Year
+new
+Male
+male form
+hell
+Nargis
+Nargisi
+cannibal
+Soft
+male taurus
+Massacre
+Narasimha
+Narendra
+Naresh
+Dancers
+dancer
+Narmada
+Nurse
+tube well
+Nalla
+New
+November
+Newborn
+new life
+Navni
+Navneet
+Neolithic
+Neolithic Age
+November
+Navratna
+Navratri
+Newly married
+neoclassical
+Nawaz
+to honor
+Navana
+Nawab
+nawabzada
+nawabzadi
+Nawabshah
+Nawabi
+eighty nine
+naveed
+latest
+Intoxication
+To get drunk
+intoxicating
+addict
+destroyed
+To destroy
+Vein
+Vasectomy
+luck
+advice
+Nastaleeq
+breed
+Racism
+racial
+Canal
+bathe
+to bathe
+bath
+Bath
+Bathing and eating
+no
+No
+-No
+No
+do not
+No-
+Nangal
+Nigeria
+unfair
+unfair
+Barber
+barber
+Nose
+lose face
+To be fussy about everything
+Failure
+chewing on the nose
+nail
+nails
+nail
+Nails
+snake
+Nagpur
+Citizen
+make citizens
+civil defense
+civil society
+civilian army
+citizenship
+citizenshipless
+exasperating
+nagshakti
+Nagaland
+Nagaland
+nagasaki
+Dance
+Not knowing something and blaming others
+dance
+Pride
+delicate
+delicate
+illegitimate
+Drama
+doing drama
+playwright
+short
+roughness
+pulse
+nadu
+relationship
+granddaughter
+grandson
+God
+innocent
+stupid
+nadirshahi
+nadiri
+Naan
+Nanas
+nansara
+Grandfather
+Grandmother
+Nanu
+Measure
+to scale
+Dislikes
+naf
+disobedience
+Navel
+nucleus
+nuclear
+nuclear weapon
+nuclear physics
+nuclear fission
+nuclear fusion
+umbilical cord
+umbilical cord
+Name
+making a name
+reject
+named
+naming
+nominee
+name wise
+Enrollment
+famous
+well-known
+Namibia
+impossible
+insignia
+nomenclature
+hero
+nb
+unsurpassed
+heroine
+niobium
+Orange
+Slogan
+angry
+heartburn
+Narayan
+Coconut
+Woman
+womanhood
+Feminism
+placenta
+Sewer
+unworthy
+unworthy
+Drain
+boat
+Sailor
+Destruction
+To destroy
+Pear
+Breakfast
+snuff
+goofy
+Nazareth
+Nashik
+Atheist
+atheism
+canal
+Prohibit-
+Condemnation
+blasphemy
+silent
+Free
+Close
+myopia
+useless
+inefficiency
+Shorts
+Out
+to get out
+Get out
+to remove
+niqab
+Nicaragua
+Removal
+exhaust
+marriage
+Nicobar
+to shine
+Nikhad
+to refine
+Nikhil
+Corporation
+incorporation
+Supervision
+Swallowing
+gaze
+Lower
+squeeze
+wringing out
+Private
+Nizam
+nizamabad
+get rid of
+Personal
+privatization
+nijer
+ass
+Eternal
+daily
+director
+sleep
+sleep
+sleep deprivation
+death
+Fund
+ninety-nine
+the condemned
+ninety nine
+tackle
+Genius
+dexterity
+Niputa
+Essay
+Will play
+Carry on
+Invitation
+immersion
+rules
+Lower
+lower house
+Following
+Control
+Line of control
+controlled
+Fixed
+destiny
+Rule
+Manual
+Regular
+regulator
+appointed
+Appointment
+planning
+autocratic
+absolutism
+Continuous
+non nasal
+absolute
+Nirbhimaan
+canceled
+disarmament
+wacky
+Discharged
+disappoint
+Disappointment
+fasting
+inspector
+Inspection
+representation
+healthy
+Condom
+non-
+utterance
+uninhabited
+dehydrated
+inanimate
+Decision
+To decide
+decisive
+jury
+merciless
+Ruthless
+Specified
+Instructions
+the director
+directing
+coordinates
+innocent
+poor
+poverty
+Determination
+Determined
+To determine
+assessee
+weak
+Fearless
+Dependent
+Soft
+Construction
+to construct
+the creator
+manufactured
+cloudless
+export
+election
+constituency
+elected
+nirvana
+Suspended
+morsel
+Residence
+Resident
+retired
+Request
+To request
+Investment
+invest
+Mark
+Target
+shooting
+sure
+to decide
+still
+Fixed
+Nishad
+fertilization
+prohibition
+prohibitive
+Conclusion
+expulsion
+Expelled
+Inactive
+deactivate
+inaction
+loyal
+Loyalty
+ruthless
+master's
+Neutral
+ineffective
+every day
+Nisar
+of course
+vain
+unarmed
+anvil
+behold
+nebula
+Implied
+to implicate
+to consist
+-NS
+NS
+Sleep
+Lemon
+foundation
+laying the foundation
+Lowly
+low
+Down
+nest
+needless
+policy
+Policy
+policy
+proverbs
+Netherlands
+Netherlands
+lemon
+Neem tree
+motive
+neer
+Neerji
+blue
+Blue cow
+sapphire
+nillohit
+Blue
+Auction
+auction
+nivi
+nebula
+Harm
+loss
+to harm
+point
+Street corner
+Street show
+representation
+representative
+exhibition
+Nushur
+recipe
+recipe
+recipe
+nuni
+Noor
+Noah
+dance
+Dance
+has
+Noble
+necktie
+good hearted
+virtuous
+Network
+netanyahu
+Leader
+Leadership
+eye
+eye cover
+eye donation
+eyepiece
+eye
+netropam
+background
+Nepal
+Nepalganj
+Nepali
+Napier Town
+Napoleon
+neptune
+name
+-ner
+Nellore
+Mongoose
+decanter
+Nehru
+nacha
+nailed down
+blockade
+Moral
+clinical psychology
+Nain
+Naina
+Napali
+Norway
+Noida
+scrape
+Note
+demonetisation
+Notebook
+notice
+noni
+nine
+Servant
+bureaucracy
+Maid
+Job
+yacht
+Young
+gimmick
+Meridian
+beginner elementary
+Navy
+Justice
+Judiciary
+jurisprudence
+judge
+Court
+judicial
+judge
+justified
+different
+trust
+new South Wales
+News
+New Zealand
+New Zealand
+neutron
+low
+the minimum
+New York
+invitation
+
+
+Line
+wing
+fan
+fan
+petal
+paralyzed
+pentagon
+pentagon
+pentagon
+Panchatantra
+Panchatalla
+Panchami Bhakti
+Panchsheel
+Almanac
+jury
+Panchayati
+Panchayati Raj
+Birds
+Claw
+Punjab
+Punjabi
+Registration
+registered
+pandal
+Pandit
+Panditai
+fifteen
+pump
+grocer
+Hold
+Catch
+ripen
+dish
+cook
+fritters
+Pucca
+leaf
+row
+ripe
+Party
+Advocate
+Partiality
+partisan
+Bird
+fortnight
+Pakhawaj
+pakheru
+Foot
+trail
+turban
+crazy
+crazy
+pagoda
+digest
+fifty five
+seventy five
+ninety five
+digest
+fifty
+eighty eighty
+twenty five
+Repent
+seventy five
+left
+overtake
+knock out
+tossing
+slam
+Patna
+Patra
+Track
+Table
+Patwari
+firecracker
+cracker
+Pattaya
+Patel
+Patol
+leash
+plaque
+Bandage
+strap
+Pathan
+Pathankot
+Plateau
+investigation
+have got to
+lay down
+neighborhood
+neighbor
+Neighbour
+Reading
+well-read
+Reading
+to teach
+Panaji
+panda
+Pandit
+barbershop
+Kite
+kiteboarder
+kite flying
+moth
+Autumn
+Skinny
+thin aniseed
+trouser
+trousers
+Know
+to find
+To know
+Ensign
+Husband
+paternity
+Vessel
+Leaf
+Cabbage
+leaf
+leafy
+Stone
+stone pelter
+stone pelting
+Wife
+Letter
+Journalist
+messenger
+magazine
+path
+the guide
+rocky
+Post
+medal
+hiking
+title
+officer
+Substance
+promoted
+Promotion
+method
+padma
+Padmavat
+to come
+-pan
+submarine
+flourish
+pans
+Panama
+Refuge
+safe haven
+Desi cheese
+fifteen
+page
+Papani
+Papaya
+papaya
+papota
+Pub
+payam
+Feather
+but who is counting
+but
+paranda
+tradition
+traditional
+compass
+assay
+sizing up
+pargana
+Parcham
+shadow
+shadow
+kin
+layer
+curtain
+Great grandfather
+great-grandmother
+Foreign
+foreigner
+maternal grandfather
+great grandmother
+blasphemy
+parni
+but
+curtain
+Supreme
+atomic
+nuclear
+Divine
+prayer to god
+ecstasy
+God
+Tradition
+overlord
+upbringing
+Pointed gourd
+Parvaaz
+permit
+license
+care
+Bear in mind
+preposition
+Day before
+Mutually
+culmination
+Courage
+mighty
+paratha
+water holder
+Counseling
+Alienation
+reflection
+Overthrown
+Angel-
+parinda
+calculated
+calculator
+circumambulation
+Introduction
+hostess
+operational
+Familiar
+passage
+relatives
+Result
+the resulting
+Parineet
+Parineeti
+satisfied
+Quitted
+abandon
+landscape
+Circumference
+parinda
+circuit
+custom
+perfect
+Definition
+defined
+Perimeter
+rectify
+fairyland
+Project
+confined
+Change
+converted
+transportation
+Family
+familialism
+family
+Appendix
+Hard work
+Council
+confederation
+asset
+liquidation
+Premises
+limitation
+Situation
+gag
+angel
+testing
+Examination
+man
+perushak
+Parusha
+beyond
+the parade
+Worried
+Trouble
+parade
+Charity
+served
+Form
+foliage
+foliage
+Perth
+Veil
+lift the curtain
+Tourist
+Tourism
+to tour
+Sufficient
+alternative
+synonym
+Synonyms
+Environment
+environmental
+Paryushana
+paryushit
+Festival
+Mountain
+mountain
+Moment
+bed
+Eyelid
+team
+rolling over
+to reverse
+counterattack
+to reverse
+Palval
+Plaster
+palandu
+palandu
+Getaway
+Palit
+explode
+Pallava
+far out
+do not fall
+air
+Holy
+Holy Soul
+Holy Rome Empire
+purity
+Animal
+animal keeper
+after
+West
+West Godavari
+West Bengal
+Western
+Western Asia
+Western Wall
+west pakistan
+northwest
+Pashto
+pashmina
+like
+likes
+the favorite
+to spread
+rib
+spread
+exude
+Sweat
+Passeri
+Identification
+identifier
+Identify
+Wear
+to wear
+dress
+Time
+guard
+watchman
+Initiative
+Wrestler
+wrestling
+First
+aspect
+Earlier
+you first
+already
+the mountain
+hill
+the wheel
+reach
+to deliver
+puzzle
+get it
+eye
+Five
+fifth
+feet
+Five
+Pandavas
+Pandu
+feet
+Pie
+Pound
+Clean
+pak soul
+cook port
+Pakistan
+Pakistani
+renegade
+Mad
+asylum
+Madness
+digestion
+pajamas
+Paaji
+Paatan
+Patal
+Patil
+Lesson
+Reader
+School
+text
+syllabus
+Textbook
+panini
+Pandavas
+leaves
+Hell
+Hades
+Pot
+pathing
+Fart
+farting
+foot gland
+footnote
+footer
+footwear
+Farting
+plant
+pastor
+foot arthritis
+foot cover
+paan
+Get
+Water
+Water pancake
+Sin
+papad
+papdi
+dad
+Papua New Guinea
+punctual
+ban
+Footboard
+anklets
+pilot
+emulsion
+Found
+across
+Traditional
+trad Chinese
+permeable
+permeability
+paracha
+transparent
+passport
+traditional chinese
+Paras
+Parsiya
+parsec
+passed
+terminology
+family
+remuneration
+ecology
+Turn
+park
+Party
+mortal
+side skirt
+sail
+sailing boat
+spinach
+Palak Paneer
+palanquin
+pet
+Palathi
+paddling
+obey
+Obey
+upbringing
+nurture
+Nourish
+municipality
+loop
+Pasha
+Pashupat
+western
+stone
+near
+Come near
+Passport
+dice
+Pasta
+wearing
+Pahuna
+ping
+a cage
+cage
+Pimpri-Chinchwad
+piu
+pikachu
+Picture
+to melt
+thaw
+deflate
+lags behind
+backward
+previous
+Last time
+backyard
+Pizza
+beating
+spanking
+Father
+paternal
+paternity
+Bile
+cholecystitis
+Pidar
+craving
+papilika
+drunkard
+drank
+piaz
+the piano
+piala
+pyramid
+Pirich
+thread
+to feed
+Pilas
+puppy
+vampire
+to grind
+grinding
+pistachio
+Pistol
+PM
+Peak
+chase
+Follow
+behind
+to go back
+TO be after something
+Beat
+the back
+Pain
+the victim
+generation
+Brass
+pitas
+orange
+Peen
+Pinus
+To drink
+peep
+Ficus religiosa
+cask
+pir
+Period
+Piru
+Yellow
+yellowness
+Jaundice
+grind
+Pungi
+pundri
+call
+to call
+topaz
+solid
+tail
+tail
+tail star
+Priest
+put
+hindquarters
+Pudiya
+Pune
+Pundri
+Virtue
+death anniversary
+put on
+mannequin
+pupil
+Son
+putrajaya
+Daughter
+Mint
+again
+re-entry
+resurrection
+re-
+restructuring
+Rebirth
+revived
+revisit
+rescheduling
+reconstruction
+PS
+City
+purandar
+parts
+purandar
+Prize
+rewarded
+complete
+Puranas
+archeology
+archeology
+archaeologist
+the ancient
+archaeological
+old
+old testament
+Palaeolithic
+Male
+manly
+priest
+Portugal
+Portuguese
+port
+Bridge
+Happy
+truss
+police
+police station
+policeman
+policeman
+masculine
+ancestral
+pushkalavati
+confirmation
+flower
+Book
+Library
+book
+booklet
+Pu
+tail
+capital
+tail
+Finance
+capital asset
+capitalism
+capitalist
+Poondri
+ask
+inquiry
+Ask
+worship
+prayer
+To worship
+Child
+sepsis
+sepsis
+Poonam
+Poo
+east
+east
+Complete
+To complete
+whole
+Full Name
+Complete
+-Complete
+Complete
+complete majority
+whole numbers
+full time
+completely
+purnabandi
+full stop
+Integer
+full moon
+fulfillment
+East
+past history
+East Godavari
+predetermined
+forecast
+Ancestor
+Previous
+Undergraduate
+prejudice
+Forecast
+Eastern
+East Asia
+East Timor
+East Pakistan
+the aforesaid
+Northeast
+Isolated
+Separation
+Prithu
+earthworm
+Earth
+page
+Page
+background
+on
+the Penguin
+pension
+Pencil
+screw
+screwdriver
+Complicated
+page
+Abdomen
+clear stomach
+box
+gourmet
+Patent
+Patent
+petrol
+Petrol pump
+Petha
+tree
+Tree
+Trees & plants
+peda
+pen
+pencil
+Pennsylvania
+Pepsi
+drink
+Drinking Water
+Paris
+Peru
+Present
+advance
+Peshwa
+profession
+Urine
+Peshawar
+muscle
+Professional
+pants
+maneuver
+Forty-five
+thirty five
+sixty five
+packer
+the packet
+message
+Paige
+penetration
+on foot
+born
+birth
+born
+yield
+sharp
+to sharpen
+the measure
+Feet
+Paraguay
+advocate
+Money
+value for money
+Pondicherry
+pop
+porcelain
+to wipe
+poka
+Puddle
+Pokhara
+ship
+ship
+Grandson
+granddaughter
+potha
+book
+Pope
+popla
+port
+Port Blair
+pole
+political
+Polish
+Poland
+Dress
+Nutrition
+Post
+poppy
+pound
+plant
+seedlings
+Plant
+one and a half
+skimmer
+quarter to
+Pour
+mythical
+masculine
+priesthood
+Poush
+nutritious
+drink
+Onion
+onions
+pawn
+Love
+to love
+give love
+Fall in love
+fall in love
+Dear
+Bowl
+the cup
+Thirst
+thirsty
+pyeongchang
+pyeongchang
+Pyongyang
+NS-
+Revealed
+episode
+type
+functional
+Light
+Publisher
+publication
+light year
+photosynthesis
+published
+To publish
+Prakasam
+scatter
+Nature
+the outbreak
+process
+Process
+wash
+bleached
+missile
+projectile
+Progress
+Progressivism
+progressive
+progressive
+fierce
+Prevailing
+Publicity
+preacher
+publicized
+campaigner
+Abundant
+Reproduction
+People
+democracy
+democratism
+ignite
+vow
+ecstasy
+Greetings
+System
+harassed
+Pratap
+majestic
+To
+per person
+To-
+repulsion
+repulsive
+pratikraman
+Feedback
+reactionary
+intersection
+Pledge
+affirmation
+sample
+every day
+echo
+Representative
+Representation
+consideration
+Sanctions
+Restricted
+Reflection
+Talent
+Brilliant
+security
+image
+every month
+Competition
+competitor
+model
+Resistance
+resistor
+resistivity
+copy
+inverse
+Percent
+the revenge
+catarrh
+Prestige
+Competition
+Sign
+symbolic
+Wait
+To Wait
+seem
+realization
+Prima facie
+eyewitness
+perception
+suffix
+extradition
+extradited
+to extradite
+anticipation
+candidate
+each
+First
+primarily
+first inflection
+Practice
+given
+exhibitor
+Display
+exhibition
+Displayed
+the provider
+provide
+to provide
+Pollution
+State
+Chieftain
+Prime Minister
+primacy
+Prime minister
+Principal
+the headmaster
+Management
+to arrange
+manager
+manager
+Management
+management
+Predominant
+enlightenment
+Prabha
+prabhakeet
+Morning
+in charge
+Effect
+effective
+Impressive
+influenced
+effective
+Lord
+dominance
+cerebrum
+Proof
+certified
+Chief
+theorem
+lemma
+try
+To try
+striving
+Attempt
+used
+Experiment
+to use
+the user
+the laboratory
+experimental
+Purpose
+Holocaust
+documentation
+Spokesman
+discourse
+prone
+originator
+travel
+migration
+the flow
+technique
+Entry
+Praveen
+Proficiency
+To proceed
+Trend
+impulse
+Entry
+To enter
+access road
+fan
+Appreciation
+Praise
+Pacific Ocean
+pacific ocean
+administrator
+administrative
+Administration
+administrative
+Training
+trained
+Question
+Q&A
+Context
+Happy
+Happiness
+delivery
+labor pain
+Holy offerings
+toiletries
+Spreading
+broadcast
+Famous
+fame
+Proposal
+mover
+Presented
+Presentation
+Departure
+hit
+courtyard
+Prangar Dwijareya
+province
+Prakrit
+natural number
+Natural
+natural satellite
+natural wrath
+natural language
+natural selection
+Natural Science
+foreword
+prehistory
+prehistoric
+parameter
+Prachi
+Ancient
+ancient greece
+the ramparts
+Orientalist
+Life
+fly away
+life force
+lifeless
+Creature
+germ
+in the morning
+pratipad
+primary
+territorial
+authority
+authority
+Professor
+Received
+Receiving
+Receipt
+recipient
+receipt
+receivable
+receivable
+authentic
+often
+Often
+peninsula
+priapism
+probability
+Start
+to begin
+Initial
+start
+To start
+preliminary
+Prayer
+Praying
+prayerful
+Provision
+trend
+pras
+Relevant
+Relevance
+Prasad
+Prisuk
+Pvt.
+Prince
+pretoria
+Dear
+priyadarsika
+dear
+Beloved
+Pritam
+Love
+dinner party
+observed
+to observe
+Love
+To love
+lover
+lover
+the lover
+beloved
+Inspiration
+Inspired
+Press
+Prosecutor
+program
+programmer
+protein
+protactinium
+proton
+proto-shaved
+Incentive
+encouraged
+prostate
+mature
+Technology
+Plavika
+please
+please
+Pluto
+plate
+plank
+planck constant
+
+
+get stuck
+the noose
+freak
+burst
+burst into hand
+to burst
+rip up
+fatfatiya
+quick
+fattu
+flutter
+phanishwarnath
+to whine
+mildew
+blister
+Difference
+February
+Faridabad
+duty
+fern
+Furniture
+Fruit
+panel
+function
+flourish
+consequently
+flannel
+pod
+Crop
+f
+fund
+fantasy
+right
+Fakir
+Fakirana
+proud
+Fazool
+fatwa
+Victory
+funa
+Fanney Khan
+difference
+request
+decree
+decree
+February
+Euphrates
+absconding
+angel
+Faridabad
+deception
+Farosh
+Difference
+duty
+Farzand
+Farzand
+fake
+farrukhabad
+paving
+panel
+philosophy
+Palestinian
+so and so
+fluff
+fountain
+crop
+harass
+profit
+fiber
+file
+fiber
+lath
+Fani
+advantage
+fiber
+Persian
+farg
+extravagant
+Phalsa
+fish
+cost
+distance
+distance
+fascism
+Fa
+concern
+concern
+Physics
+fiji
+nature
+fitoor
+Fida
+fidayeen
+Finland
+firang
+firangi
+Pharaoh
+firaq
+angel
+pharaoh
+at the moment
+Palestine
+Palestinian
+Philippines
+movie
+filmy
+film hindi
+lace
+foothill
+filmy
+film songs
+fee
+percentage
+football
+free time
+leisure
+flower
+Facebook
+list
+factory
+fax
+Faiz
+Faizabad
+fashion
+decision
+Faisalabad
+Formula
+Follower
+photon
+photo
+photon
+phone
+to call
+army
+immediately
+steel
+steely
+France
+french
+french
+french
+fridge
+Franchise
+flat
+Florida
+hanged
+torn
+Fafda
+Benefit
+Useless
+Phalsa
+falgun
+Spade
+Phosphorus
+alum
+Then
+Even then
+again
+spin
+turn around
+Film
+filmy
+slippery
+to slide
+faded
+fini
+Pimple
+doll
+pounce
+Fungi
+agility
+phulka
+sparkler
+Whisper
+Spray
+blow up
+blow
+erupt
+Uncle
+puffy
+flower
+Cauliflower
+flower plating
+Vase
+flourish
+throw
+Throw
+lung
+to turn
+ferry
+Facebook
+spread
+Spread
+Spread
+Decision
+Free
+bursting
+burst
+abscess
+pudding
+Phone
+army
+soldier
+France
+French
+Franchise
+
+
+division
+bonded
+bungalow
+Bangalore
+Bangalore
+Bengal
+Bay of Bengal
+bengali
+Bengali
+bungli
+barren
+Nomad
+distribute
+distribute
+Close
+To close
+Cabbage
+closed circuit doordarshan
+bandhgi
+Monkey
+Laying pearls before swine
+Port
+Monkey
+man
+captive
+Bandini
+Restriction
+captive
+habeas corpus
+prison
+gun
+gun power
+gunman
+settlement
+bond
+Brother
+fraternity
+Bombay
+bamba
+bambaiya
+Bansal
+ease
+Buck
+Bakchod
+bakchodi
+whisper
+Goat
+She goat
+chatter
+Nonsense
+Encasement
+Bakrid
+arrears
+outstanding
+bakuchi
+Bakkam
+box
+Bakhra
+Bakheel
+well
+Bakht
+spare
+Bakshish
+Praise
+heron
+Baghdad
+sideways
+rebellion
+garden
+without
+rebellion
+garden
+look at
+Savings
+Avoid
+Childhood
+childish
+save
+Rescue
+Bachchan
+Child
+Baby girl
+Calf
+Budget
+ringing
+bajrangbali
+buzz
+playing
+Instead
+time
+Button
+share
+batata
+share
+battalion
+wallet
+quail
+to collect
+big
+nobility
+Mumble
+Badhan Sarang
+Big
+big day
+brag
+big
+Large
+carpenter
+to grow
+Increase
+encouragement
+Excellent
+grew up
+Growth
+Bat
+duck
+to tell
+Narrate
+chat
+chatting
+as
+duck
+duck
+light
+thirty two
+bad
+rude
+Worse
+worst
+body
+Infamous
+slander
+foul odor
+Rogue
+Naughty
+badar
+change
+Change
+Revenge
+to retaliate
+Change
+Unattractive
+food poison
+thanks to
+Curse
+Baddu
+bound
+locker
+Congratulations
+Congratulations
+neat
+Deaf
+deafness
+become
+to become
+apes
+to make
+Maintain it
+Make
+Vs
+Banaras
+Texture
+fake
+Banij
+merchant
+Vest
+banihar
+banihari
+closed
+stop
+band-o-bast
+monkey
+bandini
+prisoner
+prison
+gun
+gun
+baptism
+papa
+Babar
+Lion
+acacia
+Babbar
+Bomb
+bombing
+bomber
+Bombay
+bambaiya
+Statement
+rhetoric
+forty two
+eighty two
+Barkat
+persist
+Banyan
+spear
+spear
+shower
+barzbaan
+utensils
+carry out
+behavior
+snow
+barbarity
+Auger
+years
+to rain
+rain
+anniversary
+procession
+Equal
+equal
+found
+verandah
+Barishal
+acquitted
+Bareilly
+dismiss
+barkha
+Utensil
+behavior
+tolerate
+To suffer
+snow
+ice cream
+barfi
+icy
+barbat
+barbarity
+Ruined
+waste
+Birmingham
+Berlin
+Force
+kinematics
+mucus
+by force
+Balmette
+Strong
+mighty
+Bala
+rape
+Sacrifice
+Baloch
+Balochistan
+Balochi
+Rather
+bat
+bally
+batsman
+tornado
+commotion
+hemorrhoid
+Enough
+Spring
+spring
+Settle
+Basar
+just
+Basula
+perch
+Bast
+School bag
+colony
+delude
+masquerade
+seventy two
+Sister
+Sisterfucker
+Flow
+sisterhood
+Brother-in-law
+deaf
+Bahraich
+Deafness
+deaf
+Bahrain
+sway
+to amuse
+Discussion
+Argue
+Bahá'í
+Bahá'í religion
+Bahá'u'lláh
+Brave
+bravery
+Excuse
+spring
+Bahara
+outside
+resumed
+flow
+bahawalnagar
+Bahawalpur
+Ex:
+sissy
+brother-in-law
+extrapolation
+Disfellowship
+book
+Multiple-
+multicellular
+famous
+Bahujan
+very
+a lot
+multi party
+polynomial
+versatile
+polyhedron
+multilingual
+multilingual
+polygon
+majority
+Valuable
+multicolored
+multinational
+polymorphic
+plural
+polygamy
+polyhedron
+Multitudinous
+majority
+Daughter in law
+NS-
+dandy
+bang
+to ban
+sterile
+divide
+bind
+to tie
+bamboo
+flute
+arm
+Bangladesh
+to ban
+infertile
+distribute
+Tie
+bondage
+bamboo
+arm
+Bible
+Maid
+twenty two
+left
+quite often
+the rest
+bakira
+Remainder
+Baku
+bad luck
+Garden
+bagger
+the garden
+gardener
+bageshree
+Tiger
+Bach
+Millet
+- hawk
+falcon
+market
+marketer
+bet
+Baazigar
+baazicha
+Arm
+armband
+baja
+bet
+juggler
+weight
+to share
+fence
+fence
+Flooding
+arrow
+Thing
+talking
+Conversation
+wick
+talkative
+Bathroom
+after
+Cloud
+King
+kingship
+Almond
+Obstacle
+bound
+Baan
+ninety nine
+Father
+Oh dear
+Bapu
+baptism
+Regarding
+Babar
+Dad
+Babil
+Baboo
+left
+left
+Times
+Frequently
+Twelve
+Barakhadi
+Marriage procession
+Barik
+Rain
+turn
+finely
+gunpowder
+gunpowder
+gunpowder
+about
+Hair
+Children
+Boy
+balkeli
+Bal Sports
+bucket
+baltod
+hair break
+childhood
+girl child
+Baalish
+Bali
+Sand
+Bucket
+childhood
+Despite
+fifty-two
+Chef
+the demented
+resident
+sixty two
+Basan
+Basmati
+stale
+Outside
+going outside
+exterior
+muscle power
+bahubali
+external
+Cool
+dot
+Point
+to sell
+to sell
+seller
+available
+sales
+scatter
+big bang
+deteriorate
+spoiled
+bugle
+middle
+Jerk
+middleman
+Scorpion
+falling apart
+lay
+to lay
+lay
+the bed
+Lightning
+electrification
+Electricity house
+bitcoin
+daughter
+to spend
+bitta
+bin
+request
+without
+Bibad
+bibhas
+disease
+beer
+wilderness
+biryani
+fraternity
+Bill
+Absolutely
+sobbing
+sobbing
+billona
+kitty
+Absolutely
+badge
+Cat
+bilva
+bishnoi
+disperse
+biscuits
+Bed
+bismillah
+A state in Eastern India
+Bihari
+NS
+Bikaner
+bigha
+Middle
+interrupt
+Seed
+seed math
+algebra
+algebraic
+Byzantine
+ovule
+bijandasana
+BJP
+beat
+gauntlet
+bidi
+to pass
+past
+Bibi
+Insurance
+Sick
+Disease
+beer
+gallant
+Birgunj
+Bir Bahooti
+wife
+Twenty
+rugged
+Bundelkhand
+Bundeli
+father's sister
+sowing
+to book
+Buccaneer
+book
+fever
+Bukhara
+stupid
+elderly
+extinguish
+butwal
+Old man
+old man
+old man's hair
+old age
+old age
+fetish
+fetishly
+fetish
+Buddha
+Intelligence
+intellectual
+Intelligent
+Fool
+wed
+Wednesday
+knit
+foundation
+basic
+Bundeli
+Ignorance
+ill-fated
+bubhukshu
+burqa
+bad
+sound bad
+evil
+turret
+bourgeois
+lofty
+Bulandshahr
+Nightingale
+bubble
+to summon
+Call
+calling
+bullet train
+bulletin
+Bulgaria
+Bulla
+Busan
+Odour
+drop
+drop
+Boo
+Slaughter
+slaughterhouse
+understand
+boot
+old man
+old man
+the booth
+Brindavani Sarang
+Jupiter
+Thursday
+Bay-
+bench
+unreasonable
+disgrace
+Dishonesty
+Bakery
+bekel
+bakeley
+desperate
+uncontrollable
+Waste
+uninformed
+Queen
+Begma
+begana
+forced labor
+innocent
+Homeless
+Sell
+Restless
+beige
+voiceless
+Lifeless
+beijing
+feel free
+Son
+Daughter
+fleet
+cane
+Betwa
+wildly
+desperate
+absurd
+Ousted
+eviction
+ineffective
+unguarded
+carefree
+helpless
+unflinching
+baseless
+mismatch
+Berry
+rudeness
+unemployed
+innocent
+Bell
+Shovel
+Rolling pin
+to roll
+Cylindrical
+Belfast
+Belarus
+Belgium
+idiot
+stupid
+idiot
+unfaithful
+Bewa
+Undoubted
+priceless
+uncountable
+Gram Flour
+baseball
+tasteless
+Better
+best
+extremely
+Fainted
+Bank
+Eggplant
+Purple
+Bag
+Baijik
+Battery
+meeting
+living room
+sitters
+to sit
+to sit
+badminton
+Bethany
+Bethlehem
+hater
+barracks
+waiter
+Bull
+Bullock cart
+crutches
+bottom quark
+Bollywood
+burden
+cumbersome
+boat
+bowtie
+Bottle
+bottled
+bottling
+bottle
+botswana
+perception
+sow
+Sack
+boredom
+sack
+Board
+Lyrics
+colloquial
+Speak
+Bolivia
+Dialect
+bosnia herzegovina
+bohran
+a lot
+gush
+shower
+zany
+Buddhist
+Buddhism
+Dwarf
+Interest
+statement
+marriage
+marriage
+Bureau
+by the way
+details
+Braj
+Braj Bhasha
+Brahma
+brahma-bhoj
+brahmadesh
+Brahma
+universe
+the universe
+Brazil
+Brahmin
+non brahmin
+brahmi
+British
+Britain
+Brisbane
+Brunei
+Brunei
+brampton
+
+
+whirlpool
+whirlpool
+Bhankas
+breach
+breaker
+Bhand
+Bhanda
+busted
+stores
+Storage
+brother
+Devotee
+Bhaktapur
+devotion
+eater
+vulva
+Fistula
+stampede
+Bhagadatta
+Bhanasa
+quotient
+Bhagavad Gita
+Ochre
+saffronisation
+God
+by the grace of God
+God forbid
+god
+Hymn
+to worship
+hymn
+Wander
+Bhatnagar
+Bhatura
+Furnace
+flare up
+inflammatory
+Provoke
+gaudy
+Outburst
+Nephew
+Niece
+allowance
+Bhadaranga
+Bhades
+Clumsy
+Fear
+Terrifying
+Frightened
+fearless
+terrified
+Horrible
+frightening
+Filled
+fill
+Bharat
+Bharatpur
+Fill
+filling
+plentiful
+Reliance
+to trust
+to trust
+Trustworthy
+Recruitment
+reproach
+to reproach
+well
+even though
+building
+Future
+Prediction
+prankster
+ashes
+hemp
+whisper
+ass
+like
+cannabis
+Nephew
+Niece
+Brother
+brothers
+siblings
+brotherhood
+Bhakha
+Part
+to part
+run away
+Escape
+Quotient
+Bhagwat
+ran away
+partner
+Luck
+luckily
+so blessed
+Fortunate
+Bhajan
+B J P
+Vegetable
+Divisible
+rent
+Screw
+Fare
+rice
+Bhatha
+bhaathi
+Bhadra
+feel
+Bhanushali
+Steam
+Sister in law
+Burden
+India
+Republic of India
+Bharatvarsh
+Indian
+Indian Rhinoceros
+indian peacock
+heavy
+Heavy
+heavy
+lifter
+lifting weights
+Indo-European
+Bharya
+Bear
+bear
+Emotion
+sentiment
+Bhavnagar
+feeling
+emotional
+emotional
+Emotional
+sentimentality
+speech
+Language
+language family
+Interpretation
+interpreter
+language comprehension
+language science
+linguist
+linguistic
+Bhaskar
+phosphor
+ladyfinger
+alms
+nuns
+Beggar
+soaking
+clash
+clash
+Bhidu
+Different
+Variation
+Biya
+oracle
+Bhishgwar
+Too
+begging
+wet
+get wet
+crowd
+overcrowding
+inside
+inner
+Bhimsarat
+gruesome
+Bear
+payment
+payment
+Hand
+Bhujang
+arm
+corn cob
+roast
+Forgetful
+Bhuvan
+Bhubaneswar
+Earth
+real estate
+Earthquake
+earthquake
+Appetite
+starvation
+Hungry
+empty stomach
+Geography
+geography
+earthquake
+ground water
+Bhutan
+Evil spirit
+past tense
+ghost
+ground floor
+to fry
+Fry
+earth
+Bhupali
+the terrain
+geosphere
+globalization
+global
+Global warming
+Equator
+Earth
+Role
+underground
+underground rail
+ground level
+Bhumiputra
+geodesy
+brown
+geopolitics
+Mistake
+to forget
+Errors and omissions
+Forget
+Maze
+geology
+straw
+landslide
+eyebrows
+bhrishla
+offering
+Send
+Sent
+sheep
+sheep
+Wolf
+Distinction
+penetrate
+discriminatory
+discrimination
+BHEL Puri
+pharmaceutical
+Buffalo
+buffalo's eye
+buffalo
+Brother
+well
+to bark
+enjoyment
+to offer
+to suffer
+indulgence
+Feast
+food
+food fiber
+food items
+food fiber
+food items
+restaurant
+Bhojpuri
+bhotia dog
+Bhopal
+dawn
+gullible
+bholanath
+naivety
+Bhosdi
+bark
+bumblebee
+brow
+brow raise
+Bhaukaal
+geographical
+Physical
+physical Chemistry
+Physics
+The physics
+physical constant
+materialism
+physics
+ground wise
+geology
+Confusion
+tour
+Bhramar
+corrupt
+Corruption
+corrupt
+fraternal
+brother
+fraternal
+deceptiveness
+embryo
+embryonicity
+embryonic
+
+
+matchmaking
+to order
+fiancé
+Fortunate
+Tuesday
+to order
+Mongolia
+Forum
+Manchuria
+Manjan
+to brush
+scene
+destination
+Allowance
+to approve
+approval
+Approve
+To accept
+approval
+box
+pavilion
+Hover
+Board
+mandalavak
+circle
+mantra
+ministry
+cabinet
+Minister
+slow
+mandakini
+Mandati
+Temple
+recession
+mandra
+Desire
+mansab
+mani
+May
+corn
+spider
+Spider
+Macedonia
+Capricorn
+Makar Sankranti
+Macedonia
+workman
+tomb
+Maqbool
+makrooz
+Objective
+House
+Maize
+Tricksy
+butter
+to butter
+butter fruit
+Fly
+the fly
+velvet
+makhani
+makhija
+But
+Crocodile
+Magaz
+Maghrib
+engrossed
+groan
+to raise
+Mosquito
+Mosquito
+mosquito net
+fish
+fish
+Fisheries
+fisherman
+fisherman
+Majnu
+Majnun
+strong
+Compelled
+Helplessness
+Mazma
+majmoon
+Majlis
+religion
+laborer
+wages
+strong
+Mazmoon
+mazloom
+Religion
+fun
+joke
+funny
+tomb
+funny
+fun
+madder
+midstream
+pot
+thrash
+Pitcher
+matkana
+mushy
+Pea
+patrol
+clay
+monastery
+Madua
+gem
+Manipur
+bracelet
+bracelet
+congregation
+Do not
+counting of votes
+voter
+vote
+Difference
+Meaning
+Having meanings
+Selfish
+drunken
+Mati
+intoxication
+fish
+Mathura
+Item
+MDAC
+Madakchi
+Help
+helping out
+helpful
+madangor parrot
+intoxicated
+Mother Mother
+drunk
+madar
+wine
+madurai
+madd-e-nazar
+in view
+Medium
+Alcohol
+drinking
+alcohol
+Madrasa
+Madras
+Madrasi
+madhamad sarang
+honey
+honey bee
+Diabetes
+sweet
+bar
+Middle
+Madhya Pradesh
+Madhya Desh
+mesolithic
+medium
+middle man
+Middle Ages
+middle class
+intermediate
+half time
+recess
+middle term
+Mind
+contemplation
+Contemplate
+favorite
+arbitrary
+psychiatrist
+Mansoob
+mind
+Manasvita
+mindful
+the wretched
+deny
+Celebrate
+Mani
+money order
+Manish
+Manu
+Manuj
+Human
+humanity
+psycho-
+desire
+occult
+Nominated
+Nominated
+morale
+entertainment
+desire
+psychiatry
+Psychology
+psychosis
+psychologist
+Manda
+Prayer
+love of a mother
+Mamnoon
+maternal
+Mummy
+available
+Peacock
+death
+markaz
+Mortuary
+maraj
+marz
+will
+death
+posthumous
+postpartum erection
+Die
+Repairs
+put to death
+to die
+marhaba
+ointment
+dead
+Marathwada
+Maratha
+flag
+to die
+Mary
+marial
+patients
+Maru
+desert
+there is no heaven without death
+twist
+Marg
+Sickness
+merge
+Will
+frequently
+jar
+man
+Mardan
+mardaniya
+mardani
+masculinity
+manly
+mardum
+masculinity
+mortal
+Modesty
+Stool
+rub
+Malayalam
+ointment
+cream
+sorry
+Malika
+dirty
+Malaria
+Malaysia
+Sailor
+Malhar
+Malhotra
+Cattle
+Mush
+mashak
+busy
+Mushrooms
+consultation
+famous
+torch
+machine
+machinery
+mechanical
+mechanization
+mas
+mask
+clown
+Masjid
+Masnad
+masnavi
+Masroof
+muscle
+issue
+mashari
+Masaan
+Spice
+Masala Tea
+masi
+clerk
+Christ
+Messiah
+Christian
+Christianity
+gum
+Lentil
+get wet
+Mosque
+Easy Going
+cool-headed
+Head
+mastana
+Mastani
+Brain
+brain column
+brain stem
+brain column
+brain stem
+brainstem
+brain stem
+Fun
+to enjoy
+mast
+expensive
+dearness
+costly
+Mehak
+to smell
+department
+just
+Mahtab
+importance
+important
+Importance
+Important
+ambition
+gathering
+safe
+gathering
+Mehboob
+Lover
+Mahmud
+bereft
+Palace
+Feel
+to feel
+big
+big-
+grand alliance
+great master
+Mahatma
+Shiva
+Continent
+continental
+continental
+solicitor general
+Great
+Metropolitan
+great scholar
+great scholar
+Mayor
+Mahaprabhu
+Mahabharata
+Impeachment
+Epidemic
+bloody fool
+Mahayana
+great war
+mastery
+King
+King
+queen
+Maharashtra
+maharnav
+mahout
+Mahavardar
+University
+big Bang
+Mahavir
+monsieur
+General Secretary
+Ocean
+glory
+Woman
+finer
+Month
+Maheshwar
+Maheshwari
+Sir
+Madam
+palace
+thanks to me
+Mother
+mom bang
+mother father
+demand
+ask for
+manja
+manjhi
+mother
+meat
+non-vegetarian
+Mother
+Demand
+To ask
+demanding
+manja
+Mandalik
+Meat
+muscle
+fleshy
+mike
+microprocessor
+microphone
+Maoism
+Maoist
+butter
+Magh
+Matchbox
+majra
+nutmeg
+soil
+mandalik
+weeds
+Mother
+Parents
+Parents
+maternal
+Mother toungue
+Mother toungue
+matriarchy
+Only
+units
+Quantity
+Forehead
+narcotic
+mother
+madar-e-watan
+motherfucker
+mother tongue
+madrecha
+Female
+madhav
+Channel
+Value
+Yield
+Standard
+standard hindi
+Standard Hindi
+Map
+honorarium
+Accept
+Honorable
+Man
+ethnology
+humanity
+unmanned
+humanism
+humanist
+Human science
+anthropology
+human rights
+humanities
+humane
+psyche
+Mental
+mental health
+mindset
+monsoon
+monsoon
+defamation
+Manus
+Mane
+Recognition
+Recognized
+measurement
+scale
+to measure
+sorry
+sorry
+Pardon me
+sorry
+mafia
+forgiveness
+apologize
+matter
+Uncle
+maternal uncle
+Mamu
+minor
+mother's house
+meaning
+Spell
+Mayi
+Downcast
+despair
+Kill
+To get beaten up
+To kill
+get killed
+Marker
+Martaul
+Strike
+Beating
+Marwar
+Marwari
+Maruti
+to mark
+market
+Marxism
+Marxist
+Way
+Guidance
+margshirsha
+routing
+March
+marfia
+touching
+poignancy
+Goods
+owner
+revenue
+warehouse
+Maldar
+Maldives
+Garland
+Malagasy
+rich
+Owner
+proprietary
+Malin
+massage
+to massage
+Gardner
+Malid
+Known
+to know
+Male
+Malta
+mawa
+Masha
+Mashallah
+sweet
+Mass
+monthly
+monthly
+Menstrual
+innocence
+Innocent
+Innocence
+mask
+Moscow
+Month
+expert
+lover
+Ambience
+mixer
+mood swings
+Mizoram
+Mizoram
+fade away
+erase
+Soil
+kerosene
+Sweet
+sweetness
+mitti
+Mitul
+friend
+Allied Powers
+friend
+Mitrai
+false
+Minute
+plea
+babble
+Miyan
+Miyan Ki Malhar
+mirzai
+Chilly
+mill
+Milan
+friendly
+Get
+to meet
+Mix
+solder
+collusion
+property
+alloy
+mix
+Alloy
+Miss
+Egyptian
+missile
+example
+mississauga
+Mrs
+miso
+Mr
+Mechanic
+Egypt
+Arab Republic of Egypt
+Meechna
+meezan
+meter
+sweet
+Media
+Meet
+Pisces
+Pisces
+Meena
+Tower
+meme
+mir
+mirchandani
+Mirpur Khas
+Meera
+miles
+milestone
+Mungri
+mount
+mouth
+darken face
+sweeten the mouth
+smashing
+retort
+ask for
+acne
+glans
+shaved
+Shaved
+expected
+waiting
+Mumbai
+Accountant
+Munsifana
+muezzin
+muallam
+muallim
+muallima
+muallimi
+compensation
+to forgive
+check up
+Compensation
+muahida
+complete
+trial
+destiny
+Muqaddas
+Appointment
+competition
+stage
+crown
+Mukesh
+punch
+boxer
+Free
+To release
+Freedom
+mukti dhan
+libertarian
+mouth
+face
+front page
+throat
+outspoken
+Mukherjee
+opposition
+Mostly
+fire fire
+face to face
+chief
+Important
+chief executive officer
+mainly
+Mainstream
+Chief Minister
+the headquarters
+Mughal
+Mughal Empire
+Mughlai
+Mughalia
+Mughalism
+infatuated
+criminal
+mujasma
+muzaffargarh
+muzaffarpur
+muzaffarabad
+mujahideen
+Me
+me
+with me
+Me
+I have no idea
+I'm thirsty
+I am hungry
+forgive me
+Fist
+Encounter
+to turn
+shave
+mutaalliq
+according to
+corresponding
+mutrapind
+appeal
+Mud
+issue
+issue
+Issue
+printing
+press
+Posture
+inflation
+ring
+profit
+reasonable
+bookkeeper
+Baby
+failure
+free
+mufti
+Auspicious
+Congratulations
+Possible
+Mumbai
+wither
+dead
+Down with
+Murad
+Moradabad
+admirer
+rooster
+cockroach
+chicken
+idol
+dead
+Murdani
+dead
+dead
+accused
+visitation
+employee
+Soft
+country
+Multan
+Multani
+Mullah
+Mushaira
+Crunch
+Mushtaq
+Mushti
+Muslim
+musalla
+traveler
+problem
+Smile
+to smile
+Mustanda
+Mustaqbil
+Muslim
+muhtram
+muhtaj
+love
+Muhammad
+seal
+muharram
+mohalla
+mouth
+muhajir
+governorate
+idiom
+campaign
+provided
+to provide
+Moong
+peanuts
+Mustache
+mouth
+moong
+Coral
+Coral reef
+Mustache
+shave off
+Mute
+Deaf mute
+Mustache
+wee
+pissing
+urine
+urethra
+urine
+urinary bladder
+idol
+idiot
+stupidity
+Silly
+fainting
+faint
+unconscious
+Sculpture
+Idol worship
+idol
+foolish
+Original
+basically
+Principal amount
+Basic
+initials
+foundation
+Radish
+value
+valuable
+Evaluation
+moose
+pestle
+torrential downpour
+Moses
+antelope
+mirage
+dead
+deceased
+dead
+resurrection
+death
+capital punishment
+death rate
+tender
+softness
+In
+In
+out of
+frog
+weed
+manipulating
+Frog
+frog
+mendhika
+Mendhi
+meh
+Mexico
+cloud
+Meghalaya
+mechanagni
+table
+table
+tablecloth
+host
+Metro
+Fenugreek
+intellect
+mendhika
+Mendhi
+Mam
+lamb
+memo
+mayor
+Meerut
+My
+my name is
+My
+spinal cord
+spinal cord
+My
+Match
+Melbourne
+Funfair
+nuts
+Mewar
+Sheep
+mehndi
+Mehta
+Hard work
+workout hard
+toiling
+Hardworking
+Guest
+hospitality
+hospitality
+Mehrgarh
+kind
+Compassion
+I
+i am ... years old
+i don't speak english
+I do not speak english
+I love you
+i love you
+I love you
+i love you
+i am christian
+i am jain
+I'm all right
+I love you
+I love you
+I love you
+I'm in love with you
+I love you
+I love you
+I love you
+I love you
+i miss you
+I'm not religious
+i don't know
+i am hindu
+i am hindu
+I
+Macros
+match
+Madam
+friendship
+masturbation
+Fine flour
+Field
+Maidan-e-Jung
+manchester
+Mansil
+Myna
+manager
+malware
+muddy
+Macedonia
+Mysore
+module
+Mormon
+book of mormon
+Mauritania
+mall
+Montenegro
+salvation
+Sprain
+Cobbler
+stockings
+mozambique
+Motor
+Fat
+obesity
+obesity
+Motu
+turn
+to bend
+twisted
+Pearl
+Motichoor
+Modi
+Monaco
+moped
+mobile
+mobility
+wax
+Candle
+momo
+Peacock
+peacock tail
+Morocco
+a female peacock
+front
+Acquire
+Mossad
+Enchantment
+Madam
+tempted
+mohenjo-daro
+Mohandas
+Mohana
+Love
+Pawn
+moratorium
+chance
+materialistic
+Oral
+Present
+presence
+existing
+Death
+monetary
+monetary policy
+silence
+maurya
+cleric
+Maula
+Maulana
+Original
+Mausambi
+Season
+Meteorology
+seasonal
+seasonality
+warts
+Aunt
+Aunt
+meow meow
+sheath
+Myanmar
+Myanmar
+mlechha
+
+
+Machine
+machine man
+mechanics
+mechanized
+yich
+sure
+sure
+tuberculosis
+yakh
+Yajna
+sacrificer
+orphan
+orphanage
+diligently
+as
+as kings and subjects
+in order
+as it is
+True
+accuracy
+If
+Although
+yama
+pun
+Yemen
+Yemen Welfare
+Yamraj
+Yamalok
+Yamuna
+Jerusalem
+maiden
+yavasharkara
+ale
+isaiah
+This
+This mouth and lentils
+Here
+here and there
+Here
+This only
+right here
+Jews
+Judah
+Judas Iscariot
+Jewish
+Judea
+Jewish
+Judea
+Ezekiel
+Jehovah's Witnesses
+Joshua
+Or
+mechanical
+mechanics
+Yaqut
+petition
+priest
+travel
+transportation
+travel
+Travel
+passenger
+Memory
+to remember
+Memorization
+remind
+Memorial
+memory
+memory
+random
+vehicle
+Yanati
+i.e
+Buddy
+Friend
+Friendship
+Jeremiah
+Jesus
+containing
+device
+Era
+epochs
+Couple
+pair
+coupler
+zygote
+Yut
+Warning
+war crime
+make war
+martial arts
+fighter
+war plane
+wartime
+Battle Field
+war strategy
+warship
+warlike
+prisoner of war
+Battlefield
+war
+University
+uranus
+Europe
+young boy
+young woman
+Youth
+puberty
+you
+just like
+US
+Ukraine
+United Kingdom
+Greece
+Greek
+Unicode
+University
+UP
+UPA
+uranium
+Europe
+european
+The European Union
+John
+these
+yada
+yen
+as such
+just like that
+yokohama
+contribution
+Contribution
+elf
+Yogi
+Suitable
+yogyakarta
+Eligibility
+qualification
+adder
+Plan
+additive
+addibility
+Warrior
+Vagina
+vaginal sex
+vaginal sex
+hymen
+Compound
+sexual
+sexual attraction
+yum
+puberty
+puberty
+youth
+
+
+Colour
+painting
+theater artist
+colored
+Stage
+rookie
+colorless
+colorful
+Rangeela
+Rangoli
+PIP
+dyes
+Ranjan
+choroid
+pigmented
+enmity
+whore
+moll cry
+stoma
+Rambha
+rich
+area
+amount
+Raqeeb
+Raqqasa
+rax
+stirrup
+keep up
+blood
+blood pressure
+bloodshed
+blood circulation
+protection
+Defense
+To protect
+Raksha Bandhan
+Happy Rakshabandhan
+protected
+Maintenance
+Keep
+caretaker
+the caretaker
+veg
+rub
+rubbing
+Rub
+rugby
+Composition
+creative
+creativity
+composition
+composed
+Silver
+Quilt
+Razakar
+agree
+consent
+register
+registered
+menstruation
+Learn by heart
+rote memorization
+Ranachhod
+strategy
+strategic
+Rattan
+yam
+Rati
+Ratti
+Gemstone
+Ratnavali
+Chariot
+Cancelled
+Run
+runwas
+darn
+roughage
+speed
+speed
+speed
+God
+Rubber
+Ramadan
+Ramadan
+delightful
+Ramna
+rummy
+rava
+Rwanda
+off
+ravani
+Sunday
+Ravindra
+Sunday
+ravindra
+attitude
+Russia
+Juice
+juice cream
+Rasagulla
+logistics
+ooze
+raspberries
+chemicals
+Chemistry
+chemist
+chemistry
+chemical
+chemical process
+chemical weapons
+Receipt
+succulent
+Rasool
+Rasulullah
+the Cook
+Kitchen
+kitchen
+cook
+way
+ritual
+ritual-ul-khat
+towing
+rope
+Live
+primate
+mercy
+Rahman
+Mystery
+Mysterious
+Rahim
+Rahim yaar khan
+Ranchi
+ranjha
+Ranchi
+rifle
+rye
+rocket
+Demon
+Ashes
+Rakhi
+happy rakhi
+rakhi mubarak
+Raga
+Ragamala
+ragi
+secret
+Raj Kachori
+to rule
+Raj Mahal
+princess
+Prince
+Princess
+Rajkul
+Rajkot
+NDA
+kingship
+RJD
+Ambassador
+Capital
+diplomacy
+diplomat
+Politics
+political
+politician
+political
+political party
+Rajput
+official language
+palace
+Beans
+Highway
+dynasty
+monarchy
+Rajasthan
+Rajasthani
+Revenue
+flamingo
+secret
+agree
+King
+agree
+Rajeev
+Rajesh
+State
+Governor
+state wise
+state wise
+Night
+night
+overnight
+night
+Radha
+Radhe-Radhe
+queen
+rage
+Queen
+Rabta
+Ram
+Ram story
+Ram knows
+RAM Ram
+Ramachandra
+Ramdasi Malhar
+panacea
+Ramraj
+Ram Leela
+Ramallah
+Ramayana
+Ramayana
+rameshwaram
+View
+raita
+rar
+resin
+Rawat
+Rawalpindi
+ration
+Amount
+Horoscope
+Nation
+national anthem
+President
+father of the nation
+national language
+nationalism
+nationalist
+National
+National Park
+National Security
+nationalization
+Raso
+Way
+way
+relief
+Rahi
+A male name
+wrench
+Riya
+rheumatology
+record
+blank
+vacancy
+vacuole
+rickshaw
+Rickshawwala
+Rikhb
+Result
+Ritu
+Report
+reporter
+drizzle
+Riyaz
+Riyadh
+Concession
+princely state
+Custom
+custom
+Relationship
+Relative
+Bribe
+briber
+bribery
+Risaldar
+Risala
+released
+release
+bear
+retweet
+spine
+traditions
+Rita
+custom
+rees
+Stop
+interruption
+attitude
+leave
+rude
+sick
+hospital
+interest
+ruchira
+trends
+season
+rudraveena
+Rudraksh
+Rupee
+to make me cry
+To make cry
+Russian
+cotton wool
+dry
+to cry
+rude
+conservatism
+rudd
+Form
+appearance
+allegory
+outline
+Rupshaali
+Variation
+conversion
+face to face
+ruble
+room
+Handkerchief
+Russia
+Russian
+soul
+rooh afza
+spirituality
+Ray
+crawling
+rekhta
+rekhti
+rekhta
+Line
+Line segment
+Geometry
+striated muscle
+striated muscle
+reggae
+sandpaper
+Desert
+Resgari
+rate
+radio
+radioactive
+radio
+redox
+radon
+Sand
+sand stone
+sanding
+sand
+ref
+rail
+train
+railway
+Silk
+silky
+restaurant
+linear
+rain
+Doss house
+Ryot
+Rock
+rocket
+goosebumps
+Stoppage
+cash
+cashier
+prevention
+Stop
+Disease
+vector
+glowing spirit
+patient
+Patient
+interesting
+rochatu
+Daily
+everyday
+employment
+everyday
+fasting
+everyday
+rosy
+daily bread
+Bread
+road
+snag
+barrier
+Weeping
+to plant
+printing
+Robot
+Rome
+thrill
+Thriller
+Romania
+Light
+lighthouse
+Rohan
+Rohtak
+Rohan
+Rohingya
+Rohini
+trample
+rauzan
+splendor
+light up
+to illuminate
+light
+
+
+L
+lame
+limp
+Lanka
+Lanka Dahan Sarang
+lankilat
+lame
+langarai
+Baboon
+loincloth
+cock
+London
+lustful
+Tall
+Length
+Lambu
+pillar
+tall
+wood
+streak
+Lucky
+Symptoms
+Laxmi
+aim
+Lakhan
+Lucknow
+Devotion
+Feel
+Around
+Continuously
+Tax
+Placement
+attachment
+Laguha
+Ascendant
+Small
+shorten
+short story
+logarithm
+small
+suppleness
+flex
+delicious
+shame
+shame
+ashamed
+braided
+hanging
+Hang
+A top
+log
+log
+boy
+girl
+boyhood
+Boy
+Girl
+falter
+fight
+War
+Pick a fight
+fighter
+fighter
+A type of sweet
+cock
+rebuke
+Latifah
+soaked up
+Ladakh
+grab
+lightness
+Wrapp up
+lafda
+Lafanga
+words
+lab
+available
+gain
+Lamaha
+lustful
+long
+vertex
+Rhythm
+rhythm
+challenge
+to challenge
+tempt
+frontal
+Lalit
+Fine arts
+Lalit Pancham
+Lavda
+lavdoo
+salt
+Army
+Lashkari
+Lason
+Lassi
+Kilt
+tone
+tone
+Wave
+hoist
+Garlic
+Blood
+la-
+to cross
+accusing action
+stigmatized
+Like
+Queue
+lime
+License
+Lai
+Laosian
+Laos
+Lakh
+Cost
+Applicable
+To apply
+helpless
+shame
+Lajward
+Wonderful
+compulsory
+must
+lat
+lath
+Stick
+pamper
+to molest
+Kick
+Latvia
+Latin
+Latino
+to load
+damn
+Bring in
+missing
+Careless
+Negligence
+Lapsi
+Lafa
+labu
+the profit
+profit loss
+beneficial
+profitable
+Worth
+worth
+Sliva
+Red
+red demon star
+Red light
+Red chilly
+the Red Sea
+greed
+Greedy
+lantern
+Red ribbon
+red tape
+Ambition
+Lala
+longing
+elegance
+lava
+dead body
+Lahore
+gender
+penis enlargement
+lingan
+sex worshiper
+sexism
+sex ratio
+Lingayat
+Lingayat religion
+sex worship
+Write
+writing
+handwriting
+written record
+lichtenstein
+gender
+Lithuania
+to wrap
+Script
+indulge
+indulge
+transliteration
+transliteration
+envelope
+dress
+Ltd.
+limousine
+liverpool
+Lisan
+List
+so
+Lychee
+liters
+Leadership
+Leeds
+lead
+linati
+Libya
+Lila
+Leela
+lungi
+lumbini
+hide and seek
+cost
+cost
+robes
+frivolity
+Scallywag
+robber
+enjoy
+Ludhiana
+lost
+tempted
+allure
+lullaby
+heat up
+Luke
+booty
+to rob
+bring it
+Carry
+laser
+But
+Article
+Author
+writing
+stylus
+accounting
+Statement of account
+accountant
+graph
+writer
+Lie down
+transactions
+to take
+to do with
+Leninism
+Lebanon
+lebanon
+Lester
+lesbian
+sexual
+sexuality
+lander
+Latium
+Lab
+Laila and Majnu
+lockdown
+Folk
+Folk song
+Democracy
+democratic
+folk hero
+Folk dance
+Popular
+Popularity
+Lok Sabha
+folk literature
+ethos
+Lokat
+proverb
+People
+latch
+lojbaan
+lott
+A round metal pot
+carcass
+Loan
+omitted
+cowpea
+greed
+covetous
+Fox
+lullaby
+Lol
+iron
+Lohri
+iron
+iron jaray
+cast iron
+Blacksmith
+lohia
+blood
+flame
+cloves
+Launda
+laurel
+Bottle gourd
+Laukya
+to return
+to pay back
+lauda
+Lolya
+iron
+iron Age
+train
+ferrocolumn spectator
+Lhasa
+
+
+forest
+Deprived
+allocation
+prayer
+Linage
+descendants
+dynasty
+gene
+genealogy
+time
+waqf
+advocacy
+Lawyer
+time
+speaker
+rhetorical
+curve
+Breast
+et cetera
+Promise
+To give promise
+Reason
+weight
+vizier
+wazir-e-azam
+Wazir-e-Ala
+Wazir-e-Kharja
+instead
+Existence
+thunderbolt
+Vada
+Vadodara
+homeland
+patriarch
+deadhead
+Forest
+orangutans
+vegetation
+botany
+vande mataram
+wild
+Wafa
+faithful
+vomit
+age
+adult
+Adult
+adulthood
+selection
+gift
+Otherwise
+Variali
+senior
+preference
+Varun
+Sheet
+Social class
+Square puzzle
+class antagonism
+classless
+classification
+Virtual
+work
+restricted
+taboo
+Character
+Description
+to describe
+Alphabet
+pigment
+chromaticity
+colorless
+color blind
+alphabet
+described
+spelling
+Present
+circle
+Uniform
+uniformed
+increase
+wormsrat
+Verma
+Year
+Rain
+ring
+ring
+wali
+walihad
+spring
+Vasant Panchami
+spring
+the legacy
+recovered
+thing
+in kind
+Clothes
+He
+He is unconscious
+Misconception
+naughty
+fearful
+goth
+There
+Same
+There itself
+or
+-th
+-th
+whitefield
+Wine
+Wi-Fi
+really
+aware
+aware
+Sentence
+sentence formation
+syntax
+Vagrecha
+reading
+Oral
+reasonable
+to wait
+Water
+garden
+Commercial
+commercial
+Voice
+talk
+Air conditioner
+Air Conditioning
+air conditioned
+Climate
+debate
+debate
+To argue
+assembly
+Promise
+to promise
+Fulfill the promise
+disobey
+disobey
+disobey
+plaintiff
+instrumental
+musical instrument
+-wan
+apes
+Botanical
+Botanical Garden
+Back
+Return
+back
+Vamana
+leftist
+promise
+to promise
+Air
+aircraft
+airborne
+Atmosphere
+atmospheric
+atmosphere
+aircraft
+alveolitis
+Air Force
+violin
+War
+to strike
+warak
+crime
+Varanasi
+the heir
+talks
+Conversations
+annual
+-wala
+Walid
+valida
+valid
+Wally
+-vale
+vapor
+steam driven
+evaporation
+evaporation
+transpiration
+desire
+resident
+vasudev
+waistcoat
+Reality
+Actually
+Actual
+real number
+reality
+Architectural
+architecture
+architect
+Wow
+Wow
+the carrier
+Vehicle
+vessel
+Woe-
+windsor
+vindaloo
+formidable
+the option
+developed
+to develop
+disorder
+development
+developing
+wiki-dictionary
+Wikipedia
+wikimedia
+radiation
+radiative
+radiativeness
+Wikipedia
+deformed
+Victoria
+Vikram
+sales
+Seller
+Wiktionary
+Fragmentation
+fragmentation
+famous
+disturbance
+Idea
+Consider
+thinker
+thinking
+to reflect
+thoughtfully
+Weird
+amputated
+severance
+victory
+Vizianagaram
+vijayadashmi
+Visarat
+the winner
+Science
+scientific
+Scientist
+advertisement
+Advertised
+Vitamins
+Vitamin E
+vitamin D
+Vitamin B12
+vitamin C
+Vitthal
+Vidoor
+Delivery
+to distribute
+distributed
+argument
+finance
+financial
+Vidarbha
+farewell
+Foreign
+Foreigner
+foreign language
+scholar
+Knowledge
+student
+Student
+School
+school
+learned
+Electricity
+electric motor
+electroscope
+insulating
+electrical
+electricity
+electromagnet
+electric
+Rebellion
+Scholar
+scholar
+heresy
+Widow
+mode
+Assembly
+MLA
+Legislature
+Method
+predicate
+bill
+destruction
+the destroyer
+request
+request
+To request
+Politeness
+modesty
+without
+the destruction
+the destroyer
+destructive
+investment
+to invest
+winnipeg
+Exchange
+regulation
+manufacturing
+disinvestment
+Respectful
+Vinod
+Opposition
+Opponent
+poverty
+Adverse
+Full
+fail
+Failure
+divider
+to divide
+split up
+inflection
+Partition
+Department
+departmental
+the division
+divided
+Diverse
+horror
+Vibhuti
+insurance
+manufacturer
+Aeroplane
+Airport
+airport
+Vimannagar
+anti-aircraft
+dimensional
+Vietnam
+electrical
+Vietnamese
+sitting
+biratnagar
+pause
+Inheritance
+Opposite
+against
+contradiction
+Opponent
+Delay
+singular
+Fusion
+Vilayat
+Foreigner
+solvent water
+luxury
+luxury
+merged
+solute
+solubility
+description
+constrained
+Controversy
+controversial
+disputed
+Marriage
+married
+University
+Diverse
+Diversity
+Discretion
+Interpretation
+Visakhapatnam
+Huge
+giant
+Specific
+special
+especially
+specialist
+Specialization
+Adjective
+Speciality
+Rest
+rest room
+analyst
+Analysis
+to analyze
+world
+world Heritage Sites
+world Heritage Site
+Vishwakarma
+Encyclopedia
+world famous
+world language
+epidemic
+world War
+world famous
+university
+believe
+To believe
+have faith
+leaps of faith
+Betrayal
+believable
+confidant
+poison
+Vishkanya
+Odd
+heterosexuality
+Subject
+subject matter
+subject matter
+Virus
+antiviral
+equinox
+Bisht
+distinguished
+Vishnu
+Immersion
+immersed
+Expansion
+Detailed
+displacement
+explosion
+explosives
+astonishment
+prescribed
+without
+Woe.
+weekend
+vechi
+visa
+germ industry
+Video
+Video game
+harp
+Daring
+Valor
+Deserted
+Semen
+lupine
+Tree
+Circle
+account
+account
+instinct
+stipend
+britahanta
+large
+Vratraha
+old man
+old age
+old age home
+Growth
+Scorpio
+They
+ventilator
+velocity
+Vatican
+Salary
+Veda
+pain
+Vedanta
+altar
+Venezuela
+webcam
+Website
+wellington
+Wella
+Wales
+prostitute
+prostitution
+vancouver
+Alternative
+optionality
+optionality
+Vaikuntha
+Vaikuntha
+Vaccine
+wagon
+ideological
+Scientist
+paid
+Vedic
+Vedic Sanskrit
+foreign
+Vaidya
+electrical
+valid
+personal
+personal thing
+detachment
+matrimonial
+Vaishakh
+Global
+like that
+By the way
+Otherwise too
+watt
+volleyball
+Washington
+Washington DC
+they
+vodka
+volga
+satire
+Irony
+expression
+Cooking
+euphemisms
+Express
+person
+individual
+Individual
+Persona
+food
+default
+agony
+distressed
+adultery
+Expense
+in vain
+subtraction
+Business
+Businessman
+Arrangement
+Behaviour
+practical knowledge
+individual
+Addiction
+Busy
+Grammer
+Restless
+Explanation
+lecturer
+Lecture
+lecturer
+explained
+ailment
+Comprehensive
+to broaden
+Business
+do business
+Businessman
+work out
+practical
+Diameter
+inverse
+etymology
+derived
+strategy
+Fast
+Vladimir
+vladivostok
+whiskey
+whale
+
+
+doubt
+Shell
+Shanghai
+Shantanu
+Doubt
+Sweet potato
+Sugar
+suspicious
+Power
+mighty
+powerless
+possible
+sugar
+appearance
+person
+personality
+person
+Personality
+omen
+Shagufa
+shajra
+shutter
+cent
+century
+centenarian
+centipede
+chess
+chess piece
+Century
+Asparagus
+enemy
+saturn
+Saturday
+Oath
+oath taking
+Shafa
+shab
+Shab bhair
+Shabnam
+cheers
+mourning
+word
+word thief
+Dictionary
+glossary
+word ocean
+word list
+syllable
+rhetoric
+semantically
+rhetoric
+Glossary
+Shabb
+Mitigation
+burial sites
+shamsheer
+Shamsher
+Shama
+sleeping
+Bedroom
+dormitory
+bed
+asylum
+refugee
+Refugees
+condition
+autumn
+shame
+Blush
+embarrassed
+decency
+decency
+Liquor
+brewery
+prank
+Shariat
+Noble
+Sharifa
+Body
+sugar
+Condition
+sorbet
+Shame
+to be ashamed
+to shame
+shameful
+Sharma
+Blushing
+embarrassment
+shy
+Tumip
+moth
+surgical delivery
+surgical
+Surgeon
+Surgery
+dead body
+funeral procession
+Shashak
+weapons
+Emperor
+prince
+Princess
+Mulberry
+honey
+checkered
+City
+townspeople
+urban
+Shehla
+Martyrdom
+martyr
+sh
+Calm
+Peace
+peace talks
+peaceful
+Shaista
+herb
+Vegetarian
+Branch
+disciple
+Shana
+marriage
+marriage
+to marry
+Married
+married
+married
+magnificence
+Fabulous
+quiet
+peace
+curse
+well done
+kudos
+literal
+evening
+Shaman
+awning
+involve
+Perhaps
+Poet
+Shayra
+poetic
+Poetry
+Sharjah
+Body
+physical distance
+Shark
+shawl
+-shali
+decent
+decency
+decently
+Cubs
+eternal
+ruler
+Governance
+ruleless
+statelessness
+ruled
+ethology
+Shastri
+classical
+classical sanskrit
+Shah
+Shahmukhi
+Shahana
+Royal
+royal family
+Shaheen
+Shaheen Bagh
+Shinde
+screws
+shikanji
+shikam
+defeat
+Grievance
+Hunt
+Hunting
+shikara
+Hunter
+Shikohabad
+Teacher
+teaching
+Education
+Teaching staff
+Batchmates
+learner
+educationist
+Pedagogy
+educationist
+teacher
+Educated
+peak
+crest
+Shigatse
+procrastination
+passion
+shinkansen
+xinjiang
+identification
+shifa
+Shimla
+Capsicum
+head line
+rock
+shillong
+shilajit
+mound
+inscription
+inscription
+inscriptional prakrit
+craft
+the architect
+craft shop
+Shiv
+shivranjani
+Shivling
+Shivambu
+pagoda
+Camp
+baby
+infant death
+nursery
+penis
+sclera
+penile
+elegant
+Etiquette
+courtesy
+Disciple
+disciple
+Soon
+quickness
+cold
+soft
+sheer
+sheer
+Top
+Topic
+topmost
+headstand
+Sheela
+glass
+vial
+Shukta
+oyster
+Venus
+thankful
+Friday
+Sperm
+Thanks
+to thank
+sly
+ostrich
+- separated
+Pure
+Pure Gandhara
+pure malhar
+pure sarong
+pure hindi
+kinematics
+good luck
+Good
+merry christmas
+good name
+Good night
+good luck
+good wishes
+Start
+Beginning
+beginners
+Start
+To start
+fee
+Shushrusha
+Dry
+dry fruit
+shu
+Shooting
+Shudra
+Zero
+shur
+shursen
+chain
+horn
+pure
+rant
+shekhupura
+stock market
+shareholder
+Lion
+Lioness
+Remanent
+shampoo
+academic
+academic
+Satan
+Satanist
+devilish
+satanic religion
+Style
+algae
+infancy
+Shopping Center
+Show
+Mourning
+mournful
+Shonatu
+inflammation
+research
+Researcher
+refining
+Shobhana
+Noise
+noise
+shola
+Exploitation
+exploited
+fame
+Shaukat
+hobby
+fond
+defecation
+toilet
+Shaurseni
+bravery
+husband
+crematorium
+viscous
+viscosity
+shyam
+Shyam Kedar
+shyamdesh
+sheen
+Admiration
+Devotees
+revered
+Labour
+to labor
+Shramana
+labor
+curse
+Shramner
+Shravan
+Shriya
+Wealth
+Srikakulam
+Srinagar
+coconut
+Mrs
+Mr
+Sri Lanka
+Sri Lankan
+Shruti
+Chain
+Category
+graded
+Best
+Audible
+Listner
+audience
+mucous
+verse
+breath
+respiration
+breathing
+dog
+dog
+short
+breathing
+trachea
+white
+white
+Blennenteria
+White
+Shweti
+
+
+hexagon
+Shadj
+conspiracy
+conspiracy
+Shashti
+sashti inflection
+sh
+monthly
+
+
+sampola
+Difficulty
+compiler
+Compilation
+oath
+Concept
+narrow
+Signal
+semiotics
+hesitation
+Infection
+infected
+solstice
+contagious
+infectious disease
+accumulation
+brief
+abbreviation
+Abbreviation
+abbreviated
+Number
+numeric
+With
+come along
+sing along
+walk with
+Organization
+to organize
+organizational
+computer
+Freeze
+confluence
+marble
+music
+musician
+bayonet
+seminar
+library
+collection
+collection
+collection
+museum
+Struggle
+Federation
+Struggle
+federal
+accumulation
+To store
+storage
+Communications
+accumulated
+Sanjay
+network
+Sanjeen
+Noun
+Latrine
+Saint
+Orange
+children
+balance
+Balanced
+Satisfied
+Satisfaction
+Santoshi
+Reference
+sandal
+Doubtful
+box
+box
+contamination
+payable
+Message
+Doubt
+alliance
+arthropod
+Evening
+Sandhya Arghya
+sannyas
+sanyasini
+sannyasin
+Property
+estate
+contact
+Editor
+editorial
+editing
+complete
+completeness
+currently
+property
+sect
+sovereign
+sovereignty
+Relation
+genitive case
+Related
+relative
+Exhortation
+speech inflection
+addressed
+feed
+possible
+handle
+Possibility
+sexual intercourse
+To make love
+plant
+Control
+restraint
+Spartan
+Joint
+United Arab Emirates
+United Provinces
+united monarchy
+United States of America
+United States of America
+ligature
+Chance
+Coincidentally
+coordinator
+connectivity
+Combination
+Protection
+protectionism
+protected
+structure
+structural
+symptoms
+attachment
+fusion
+involved
+Samvatsara
+Samvatsari
+alphabet
+promotion
+convection
+Dialogue
+Reporter
+conductor
+Constitution
+Impulse
+Sensitive
+Sympathy
+constitutional
+Amendment
+Revised
+synthetic
+Parliament
+parliamentary
+Resources
+world
+siddhi
+sacraments
+culture
+cultured
+Sanskrit
+Sanskritist
+sanskrit
+Culture
+Institution
+Institute
+founded by
+memoir
+annihilation
+code
+NS.
+Saudi Arabia
+can
+can
+can
+transitive
+gross
+Gross Domestic Product
+positive
+strong
+sakthi
+Active
+trip off
+Able
+saxena
+strict
+hard hearted
+strictly
+Male friend
+friend
+tough
+Saga
+The engagement
+to get engaged
+dense
+utterance
+music
+truth
+Really
+Truth
+Illustrated
+Secretary
+Conscious
+saccharitra
+Truthful
+Truth
+prostrate
+Sajal
+punishment
+death sentence
+to adorn
+Decoration
+decorative
+alive
+vitality
+gentleman
+decoration
+fitted
+to stick
+exact
+Speculative
+betting
+speculators
+betting
+Street
+road print
+Rot
+sixty seven
+rotten
+rotten throat
+roti
+Sat
+Sat Shri akal
+alert
+Sutlej
+Surface
+seventy seven
+Afflict
+persecuted
+punctuation
+Seventy
+Power
+twenty seven
+ruling
+ninety seven
+ruling
+fifty seven
+authoritarianism
+eighty eighty
+truth
+satyagraha
+verification
+verify
+seventeen
+satwar
+house
+shock
+Sadar
+Sadri
+Member
+Membership
+username
+Always
+Evergreen
+Vector
+century
+Always
+goodwill
+sweetheart
+Sun
+craze
+craze
+Lover
+sensation
+sensational
+Sanatan
+eternal religion
+year
+box
+doubt
+sandha
+silence
+adjacent
+approximation
+Dream
+With Family
+Son
+octave
+seventh inflection
+Week
+Weekend
+Success
+Success
+journey
+Safarnama
+cleanliness
+White
+whiteness
+White
+All
+Lesson
+lesson
+Cause
+submit
+To all
+sabil
+evidence
+vegetable
+vegetable
+vegetable market
+Patience
+Patience is bitter, but its fruit is sweet
+Meeting
+chairman
+All
+Civilized
+Culture
+Even
+Ocean
+Contemporary
+Right angle
+before
+overall
+understand
+Apprehensive
+Understand
+Explain
+a settlement
+Flat
+Samadhi
+subsidiary
+salamander
+Coordination
+equilateral
+Symmetry
+symmetry axis
+Time
+what is the time
+Time Zone
+timetable
+time table
+timetable
+time order
+according to time
+identical
+able
+Supporter
+Support
+to support
+Dedication
+Dedicated
+Gay
+homosexuality
+population
+contemporary
+all
+all-post
+isotopes
+Problem
+communion
+capacitance
+integration
+News
+Newspaper
+Society
+Socialism
+socialist
+Social service
+Solution
+mausoleum
+Similar
+Equality
+egalitarian
+Encounter
+ending
+End
+End
+amalgamator
+amalgamation
+amalgamated
+Adjustment
+Well Adjust
+Celebration
+critique
+included
+Inclusion
+Samas
+summit
+Committee
+the equation
+Review
+near
+Sameer
+set of
+conjunctive
+resurgence
+Community
+sea
+Sea shore
+Marine
+the whole
+Group
+aggregation
+Prosperous
+enrichment
+consolidation
+crimp
+Including
+Samosa
+property
+editor
+editing
+total
+Related
+agreed
+consent
+Respect
+respectable
+insertion
+included in
+blending
+in front
+the seminar
+right
+empress
+King
+grown up
+Sayyed
+Sir
+sir food
+To agree
+saranjam
+reed
+glide
+to slide
+Government
+Government's son-in-law
+official
+official hindi
+sargodha
+sard
+Sardar
+Sardi
+sarnaik
+head
+patronage
+Sarfarosh
+Sarfira
+Straightforward
+simplified
+Simplified Chinese
+Sarwate
+sixty seven
+sarsabz
+Mustard
+Saraswati
+Saraswati Kedar
+outskirts
+border
+Saraiki
+bullion
+drenched
+Inn
+Appreciate
+Surrey
+like
+Reptiles
+sarroor
+openly
+Saroj
+sarod
+saroruh
+lake
+pliers
+Circus
+circle
+surgeon
+cold
+cold
+Snake
+spiral
+Serb
+Serbia
+Serbian
+serve
+pan-Islamism
+everywhere
+downright
+all party
+Pronoun
+the very first
+Server
+pandemic pandemic
+the best
+consensus
+common man
+proletarian
+congruent
+Most
+Service
+Survey
+Top
+Sarvodaya
+most important
+snake
+salwar
+salwar kameez
+ease
+salahuddin
+bar
+Greetings
+Greetings
+safe
+salute
+advice
+Consultant
+sliqa
+crucifix
+Salim
+treatment
+Salotari
+Pretty
+Sultanate
+sallu snake
+upper caste
+a quarter
+Savannah
+riding
+Question
+Savita
+early morning
+in the morning
+suspicious
+empowerment
+armed
+paid
+father-in-law
+In law's house
+Cheap
+cheap
+cheapness
+Agronomic
+Sassa
+fellow worker
+cooperative
+Companion
+Simple
+spontaneous
+symbiosis
+tolerate
+Tolerate
+Tolerate
+classmate
+affiliate
+participant
+Agreed
+Agree
+Agreement
+suffer
+cowardly
+suffocate
+Cooperation
+Associate
+Early morning
+Sahara
+Sehri
+Sahal
+To Titillate
+Cohabitation
+co-infection
+cooperater
+Suddenly
+thousand
+thousand
+millipede
+sahasraman
+sahasriman
+Assistant
+Help
+to help
+Support
+including
+Correct
+save
+Friend
+sibling
+cipher
+-Like
+Like
+Sai
+evening
+bull
+snake
+moldy
+breath
+To breathe
+sai
+statistics
+dusk
+Bull
+sanda
+concentration
+Snake
+communal
+communalism
+sambar
+conversational
+Breath
+breathing
+Member of parliament
+cultural
+cycle
+Bicycle
+Cyprus
+southampton
+southall
+Sao Paulo
+To bring to a concrete form
+literate
+Interview
+Witness
+evidence
+credit
+greens
+sea
+beach
+teak
+Sweet heart
+instrument
+intrigue
+share
+share
+partner
+Partnerships
+sixty
+sixtieth
+text on sixty
+Saree
+one and a half
+Seven
+seventh
+Satavahana
+with
+come along
+sing along
+walk together
+together
+Fellow
+Mild
+Simplicity
+plain
+Sadiqabad
+Resource
+meditation
+Simple
+generally
+Saint
+Sadhvi
+mash
+nasal
+weekly
+Clean
+To clean
+clear
+clear
+to clean
+clearly
+neat
+Sabik
+sabiq
+prove
+Soap
+Sabu
+Sago
+material
+Stuff
+salmon
+face
+Front
+Come to the front
+tactical
+Affordability
+Samaveda
+Social
+Social justice
+social science
+Belongings
+General
+generally
+normalized
+Sami
+community
+community spread
+marine
+the collective
+Equilibrium
+communism
+equilibrium
+Empire
+imperialism
+in front
+Say
+evening
+penthouse
+shadow
+stringed instrument
+Schedule
+charioteer
+stork
+Sarah
+Summary
+worth
+Meaningful
+Public
+universal
+universal
+Year
+year-a-nine
+Anniversary
+Salan
+annually
+year round
+brother in law
+annually
+Sister-In-Law
+Attention
+Caution
+Monsoon
+mother-in-law
+Sir
+Bravery
+brave
+Literature
+literary
+Sahib
+Sahil
+Porcupine
+plumb
+moneylender
+Singapore
+Singh
+irrigation
+irrigated
+cinderella
+Vermilion
+vermilion
+sindoori
+Sindhi
+Indus Sea
+Lion
+Sinhala
+Sinhala
+throne
+Alexander
+Secunderabad
+sikatu
+to shrink
+coin
+Sikkim
+Sikh
+Sikhism
+to teach
+to teach
+teaching
+Cigarette
+cigar
+sichuan
+Sydney
+September
+sitam
+September
+Sitar
+Star
+Proven
+to prove
+Theory
+accomplishment
+Cinema
+movie theater
+Sindhi
+Indus Sagar
+Sipas
+Constable
+sifat
+cipher
+referral
+cafeteria
+recommendation
+shrink
+sia
+siyapati
+siappa
+Jackal
+sialkot
+politics
+political
+siyah
+ink
+Seoul
+Head
+vinegar
+Headache
+head down
+tip
+Only
+only
+Silpat
+fold
+sewn
+continuation
+Tailoring
+to stitch
+silk Road
+sobbing
+Sisodia
+system
+Horn
+Learn
+learned
+to teach
+Seat
+whistle
+blow a whistle
+straight
+Ladder
+Sita
+cilantro
+Straight
+down to heart
+straight
+sew
+chest widening
+Senate
+senator
+oysters
+Limit
+Limited
+seerat
+Syria
+ceiling
+sis
+sniff
+Beautiful
+Beauty
+pig
+Needle
+needleworker
+needle pressure
+Socrates
+Peace
+Happiness
+happily
+happy
+drying
+happy
+Fragrance
+aroma
+Suga
+smooth
+sujata
+suggest
+suggestion
+sutta
+Shapely
+tidy
+care
+improve
+Sudha
+Improvement
+to improve
+reformer
+Improve
+reformist
+Listen
+the hearing
+deserted
+golden
+heard
+to be heard
+Tell
+tsunami
+Goldsmith
+Assured
+sunit
+Beautiful
+Sunnah
+Sunni
+Supas
+handed over
+Good morning
+sobbing
+Morning
+Good Morning
+evidence
+comprehensible
+Subhan Allah
+put in a knot
+Suman
+Sumatra
+sumerujyoti
+Tone
+tunnel
+the protection
+security forces
+Safe
+Surat
+Surat Thani
+antimony
+picturesque
+sankura
+eyelet
+surasar
+surinam
+melodious
+ruddy
+succulent
+headlines
+patch up
+accessible
+to settle
+reconciliation
+put to sleep
+calligraphy
+Suleiman
+Sulochana
+sultana
+sultan
+Sultana
+gold
+well-known
+expert
+Facility
+good governance
+sushi
+dormant
+compatible
+cultured
+Furnished
+Lazy
+dull minded
+slow down
+lethargy
+tasteful
+susa
+Woman having her husband alive
+beautiful
+Nice
+sniff
+to smell
+breath
+pigs
+swine
+awl
+dipping
+porridge
+Microscopes
+microbes
+Drying
+Dry
+pointer
+Information
+Information Technology
+informative
+Inform
+List
+listed
+Swelling
+swelling
+Semolina
+suitcase
+Sudan
+yarn
+Sutika
+gnome
+mortuary
+cotton
+Formula
+interest
+deserted
+sunu
+Sufi
+diocese
+sura
+Sun
+sun circle
+sun circle
+Sunflower
+face
+surat-e-hal
+surah
+Surinder
+Suriya
+Sun
+Solar Eclipse
+solar system
+sun circle
+Suryakanti
+sunrise
+sunlight
+Suryaputra
+the sunset
+sunrise
+creation
+Nature
+From
+beyond
+before
+bake
+st
+Saint Lucia
+centi
+centimeter
+censorship
+compress
+bake
+sex
+having sex
+SEZ
+Settings
+satellite
+Seth
+bridge
+Army
+commander
+Senegal
+Apple
+beans
+ser
+Cell
+selena
+selfie
+vermicelli
+the servant
+Service
+To serve
+retired
+retirement
+maid
+Health
+healthy
+Sehra
+sehi
+forty seven
+thirty seven
+second
+Hundred
+second
+sackta
+second
+theoretical
+Soldier
+military
+Pleasure trip
+inundation
+soccer
+software
+Sorry
+Sausage
+s / o
+dill
+adsorption
+sog
+Thinking
+Thinking
+thought
+Sonia
+the fountain
+Sleep
+sonar
+sofa
+Mon
+Monday
+Somalia
+Somali
+Soybean
+Sorath
+sixteen
+sixteen anane truth
+Soviet
+the Soviet Union
+socialist
+sohag
+Hundred
+Hundred times more furious counter blast
+beauty
+aesthetics
+Assign
+Fennel
+fennel
+Saugand
+Saugandh
+Saugand
+Saut
+stepfather
+deal
+merchant
+beauty
+first
+Good luck
+lucky
+gentle
+solar
+Solar System
+Saurashtra
+solar
+fitness
+cordial
+skirt
+School
+school
+Scotland
+Scots
+script
+Screen
+screening
+screw
+ejaculation
+stock
+star
+Status
+stadium
+stethoscope
+station
+pillar
+columnist
+erection
+breast
+Mammals
+mammal
+Level
+praise
+stupa
+Stokatu
+Woman
+femininity
+feminine
+Woman.
+source
+Postponed
+venue
+lithosphere
+lithosphere
+terrestrial
+permanent
+Location
+place value
+Transfer
+Local
+place value
+architecture
+Establishment
+Established
+To establish
+Permanent
+permanent
+Located
+Situation
+situational
+potential energy
+Stable
+static electricity
+Stability
+constant
+gross
+graduate
+Graduate
+Postgraduate
+Bathing
+Bathroom
+bathroom
+Muscle
+aliphatic
+love
+affectionate
+spaghetti
+competition
+Touch
+Obvious
+Made it clear
+clearly
+the explanation
+clear
+Spain
+spanish
+spanish
+Explanation
+explosion
+blazer
+remembrance
+memory power
+a memorable
+Memorial
+Smartphone
+Commemoration
+smartness
+syandan
+dark
+Ink
+syot
+Source
+slice
+Slavic
+Slovakia
+Slovenian
+Slovenia
+personal
+selfish
+self drive
+Clean
+Cleanliness
+kinsman
+Independent
+Freedom
+libertarian
+automatically
+home country
+My country
+imitative
+dream
+dreaming
+dreamer
+Mood
+Self
+Vocal
+phonetics
+phonetics
+Swaraj
+Swarajya
+Form
+Eden
+heaven
+dead man
+Late
+goldsmith
+Golden temple
+self education
+swastika
+Healthy
+farce
+Farce
+Welcome
+to welcome
+Swati
+Taste
+Delicious
+delicious
+tasteful
+Independence
+self study
+Natural
+ownership
+Owner
+autonomous
+autonomy
+Selfishness
+Selfish
+Health
+Swaha
+Swahili
+Switzerland
+Switzerland
+swinn
+Accept
+Accept
+accept
+affirmative
+Accepted
+Acceptance
+Sweden
+voluntarily
+diaphoretic
+sweating
+swag
+
+
+laughing
+to laugh
+to laugh
+Laugh
+clavicle
+to laugh
+sickle
+laughter
+jokes
+Hungary
+Ruckus
+hangul
+hunter
+Swan
+Laugh at
+to laugh
+Stammer
+right
+reality
+Hakim
+hakimi
+Shit
+Hajj
+Hazrat
+thousand
+thousandaha
+digest
+Shave
+Hajj
+hairdresser
+withdraw
+remove
+rough-hewn
+stubborn
+hadgilla
+strike
+to strike
+Striking
+Harappa
+flurry
+rush
+bone
+Bone
+desperate
+desperation
+Casualty
+discouraged
+the killing
+killer
+handcuffs
+handloom
+grenade
+Weapon
+armed
+Palm
+hammer
+weapon
+To the extent
+Hadaf
+hadith
+infringement
+Honeymoon
+Hanuman
+week
+week
+Habakkuk
+Habib
+Nebshi
+we
+we-
+We
+Hamdard
+sympathy
+We
+Attack
+Attacker
+lookalike
+Companion
+hamsaya
+hammam
+Our
+humiliation
+Us
+Always
+Hyatt
+Each
+Everyone
+everyday
+activity
+absolutely
+Myrrh
+harf
+harf
+harem
+harmasara
+Green
+green coriander
+green onions
+green
+to beat
+Haram
+scumbag
+Haramzada
+Bastard
+Harijans
+green
+Green revolution
+Harima
+Haryanvi
+Haryana
+Greenery
+Haris
+green cabbage
+green tea
+Green chilly
+each
+Harenu
+harm
+harf
+Joy
+Joyful
+solution
+to solve
+plow
+Case
+lightheaded
+light
+Light
+stir
+Turmeric
+affidavit
+halb
+Sweet
+dead
+Halal
+Hello
+light
+Light
+take lightly
+turmeric
+noise
+Offering prayers to God in front of fire
+sergeant
+Lust
+air
+airy
+Airport
+plane
+airy
+hawala
+lock-up
+mansion
+desire
+very beautiful
+beautiful lady
+Interference
+transfer
+Masturbation
+masturbate
+handwritten
+handicrafts
+signature
+hastinapur
+celebrity
+Yes
+yes yes
+sycophancy
+hangar
+Yes
+hong kong
+hydrogen
+hypertext
+House
+Hydra
+present
+Prompt reply
+spot on
+attendance
+hagar
+Haat
+Hand
+To make a request
+walk hand and foot
+to be in hand
+mayhem
+Elephant
+accident
+Loss
+Harmful
+half pants
+hafiz
+hafiza
+consent
+Oh my God
+Defeat
+to garland
+to lose
+harmonium
+Heartfelt
+Harvard
+Condition
+Well being
+condition
+Wine
+however
+Although
+circumstances
+recent
+gesture
+Haas
+Obtain
+to achieve
+Humor
+funny
+funny
+hinged
+Hinglish
+carousel
+carousel
+hind
+Indian Ocean
+Indo-Aryan
+Indo-European
+Indo-European Science
+Hindko
+Indochina
+hindvi
+Hindi
+Hindutva
+Hindutva
+India
+Hindustani
+Hindu
+Hindu Religion
+Violence
+violent
+wisdom
+hikka
+hesitate
+hesitate
+Hiccup
+transgender
+Hijrat
+hijri
+spelling
+interest
+beneficiary
+beneficial
+friendly
+hind
+Indochina
+Hindavi
+Hindi
+Hindustan
+Hindustani
+Hindu
+Hindu religion
+protection
+snow
+snow
+snowfall
+Iceberg
+Avalanche
+freezing point
+frostbite
+Himachal
+Himachal Pradesh
+Himadri
+advocacy
+Himalaya
+Daring
+courageous
+hiya
+Deer
+custody
+Hiroshima
+shaken
+move
+To Move
+to shake
+Shake
+Hilal
+Maths
+Part
+shareholder
+share
+NS
+Asafoetida
+heck
+transgender
+heater
+inferior
+Heer
+diamond
+Diamond
+Hiranandani
+hero
+helium
+Hukum Sadar
+ruling
+Order
+ruler
+Sir
+fancier
+dead soul
+skill
+Hummus
+Hulas
+beauty
+hook
+exactly
+Heart
+heart disease
+heartless
+heart attack
+hey
+heck
+clumsy
+hectare
+The Hague
+hazelnut
+hetauda
+For
+manipulation
+helicopter
+helicopter
+Hi
+hacker
+Hector
+cholera
+hat
+Haiti
+Haider
+Hyderabad
+wonder
+astonished
+shock
+halloween
+Heaven
+savagery
+Status
+Hockey
+Hot dog
+Holland
+To become
+Lips
+lip redness
+Honduras
+hotels
+Happen
+promising
+Happen
+Honshu
+hobart
+homo sapiens
+Holi
+Best wishes for Holi
+Senses
+hoshangabad
+Smart
+senses
+slowly
+slowly slowly
+Hawa
+Courage
+yes
+loss
+Hriti
+whale
+`
 
 
 
