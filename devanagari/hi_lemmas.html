@@ -2,39 +2,44 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Vocab lister</title>
+<title>Wiktionary lemma list</title>
 <meta name="description" content="List examples." />
 <link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../../app-vocab/localstyle.css" />
+<link rel="stylesheet" href="../common28/lemmastyle.css" />
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../app-vocab/drawVocab.js"></script>
-<script>var autoExpandExamples = {}</script>
 
 
 
 
 
 <!-- CHANGE THIS STUFF -->
+<!-- source: https://en.wiktionary.org/wiki/Category:Hindi_lemmas -->
 <script src="hi-lemmas.js"></script> 
 <script>
-var contents = autoExpandExamples.hi
-var _fontFamily = 'Noto Serif Devanagari'
-var _fontSize = '150%'
-var _direction = 'ltr'
-var _language = 'hi'
+var globals = {}
+
+globals.title = 'Hindi'
+globals.fontFamily = 'Noto Serif Devanagari'
+globals.fontSize = '150%'
+globals.direction = 'ltr'
+globals.language = 'hi'
+
+globals.font = 'Noto Sans Devanagari'
+globals.fontSize = '200%'
+globals.direction = 'ltr'
 </script>
 <!-- END -->
 
 
 
 
-<script src="../common/vocab_list.js"></script> 
+<script src="../common28/lemmas.js"></script> 
 </head>
 
 <body class="app">
 <header>
 <div id="header-boilerplate"></div>
-<script>document.getElementById('header-boilerplate').innerHTML = bp_appHeader('../shared/images/world.gif','Vocab lister','v11');</script>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_appHeader('../../shared/images/world.gif',globals.title+' lemmas','');</script>
 </header>
 
 
@@ -45,6 +50,7 @@ var _language = 'hi'
 
 
 <div id="list_tab_area">
+<p><label>Items found: <span id="totalLemmas"></span></label></p>
 <table id="printout"></table>
 </div>
  
