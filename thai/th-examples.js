@@ -212,8 +212,8 @@ autoExpandExamples.th = `
 เมื่อไร|when|mɯa̯˥˩ raj˧
 อย่างไร|how||yàaŋ.ray
 ยังไง|how|jaŋ˧ ŋaj˧
-ไม่|not||mây|verbal negation
-ไม่ใช่|not||mây.chây|nominal negation
+ไม่|not|maj˥˩|mây|verbal negation
+ไม่ใช่|not|maj˥˩.t͡ɕʰaj˥˩|mây.chây|nominal negation
 ทั้งหมด|all|tʰaŋ˦˥ mot̚˨˩
 หมด|all|mot̚˨˩
 หลาย|many|laːj˩˩˦
@@ -255,12 +255,12 @@ autoExpandExamples.th = `
 เหา|louse||hǎo
 งู|snake|ŋuː˧|ŋuu
 หนอน|worm||nɔ̌ɔn
-ต้นไม้|tree||tôn máay
-ดง|forest||doŋ
-ป่า|forest||pàa
+ต้นไม้|tree|ton˥˩.maːj˦˥|tôn máay
+ดง|forest|doŋ˧|doŋ
+ป่า|forest|paː˨˩|pàa
 กิ่งไม้|stick||kìŋ máay
-ผลไม้|fruit||phǒnlamáay
-หมาก|fruit||màak
+ผลไม้|fruit|pʰon˩˩˦.la˦˥.maːj˦˥|phǒnlamáay
+หมาก|betel nut, areca nut|maːk̚˨˩|màak
 เม็ด|seed||mét
 เมล็ด|seed||malét
 รากไม้|root||râak.máay
