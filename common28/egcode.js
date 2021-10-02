@@ -47,7 +47,7 @@ function addExamples (langFilter) {
 		//console.log('Looking for ',nodes[n].textContent)
 		//console.log('Language is ',nodes[n].lang)
         
-        // example of raw data: τέσσερα|four|ˈtesera|téssera
+        // example of raw data: τέσσερα|four|ˈtesera|téssera|notes
 
 		if (nodes[n].lang === langFilter && egList[nodes[n].textContent]) {
 			temp = egList[nodes[n].textContent].split('|')
@@ -67,7 +67,9 @@ function addExamples (langFilter) {
 			// transcription
 			if (! nodes[n].classList.contains('latn')) out += ' <bdi class="trans">xxx</bdi>'
 			var ipa = ''
-			var transcription = ''
+			/*
+            var transcription = ''
+            this code separated out stuff in parens - too complicated!
 			if (temp[2] && temp[2].includes('(')) {
 				var temptemp = temp[2].split('(')
 				ipa = temptemp[0].trim()
@@ -75,6 +77,8 @@ function addExamples (langFilter) {
 				}
 			else if (temp[2]) ipa = temp[2]
 			if (transcription) out += ' (<bdi class="transc">'+transcription+'</bdi>)'
+            */
+			if (temp[2]) ipa = temp[2]
 			
 			// alt/transcription
 			if (temp[3] && nodes[n].classList.contains('transc')) {
