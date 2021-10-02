@@ -1,5 +1,5 @@
-/*
 <!doctype html>
+/*
 To make this file:
 1. copy lemmas from Wiktionary listings to the lemmas variable
 	- leave 2 blank lines between initial letter changes
