@@ -61,7 +61,7 @@ function printAll () {
 	for (var i=0;i<wordList.length;i++) {
         var fields = wordList[i].split('|')
 		out += '<tr>'
-		out += '<td lang="'+globals.language+'" dir="'+globals.direction+'" style="font-family:'+globals.fontFamily+'; font-size:'+globals.fontSize+'" style="font-family:\'Noto Sans\'; font-size:14px">'+fields[TERM]+'</td>'
+		out += '<td lang="'+terms.language+'" dir="'+terms.direction+'" style="font-family:'+terms.fontFamily+'; font-size:'+terms.fontSize+'"><a target="lemmas" href="https://en.wiktionary.org/wiki/'+fields[TERM]+'#'+terms.wiktionaryLink+'">'+fields[TERM]+'</a></td>'
 		out += '<td>'+fields[TRANS]+'</td>'
 		out += '</tr>\n'
 		}
@@ -103,9 +103,9 @@ function findWords (reg) {
     for (let i=0;i<result.length;i++) { 
 		itemArray = result[i].split('|')
 		out += '<tr>'
-		out += '<td dir="'+globals.direction+'" style="font-family:'+globals.fontFamily+'; font-size:'+globals.fontSize+'"><a target="lemmas" href="https://en.wiktionary.org/wiki/'+itemArray[TERM]+'#'+globals.wiktionaryLink+'">'+itemArray[TERM]+'</a></td>'
+		out += '<td dir="'+terms.direction+'" style="font-family:'+terms.fontFamily+'; font-size:'+terms.fontSize+'"><a target="lemmas" href="https://en.wiktionary.org/wiki/'+itemArray[TERM]+'#'+terms.wiktionaryLink+'">'+itemArray[TERM]+'</a></td>'
 		out += '<td>'+itemArray[1]+'</td>'
-		out += '<td>&lt;span class="eg" lang="'+globals.language+'"&gt;'+itemArray[TERM]+'&lt;/span&gt;</td>'
+		out += '<td>&lt;span class="eg" lang="'+terms.language+'"&gt;'+itemArray[TERM]+'&lt;/span&gt;</td>'
 		out += '</tr>\n'
         }
     return out
