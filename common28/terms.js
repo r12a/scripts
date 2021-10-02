@@ -75,8 +75,8 @@ function printAll () {
 		//out += '<td lang="'+terms.language+'" dir="'+terms.direction+'" style="font-family:'+terms.fontFamily+'; font-size:'+terms.fontSize+'" style="font-family:\'Noto Sans\'; font-size:14px">'+fields[TERM]+'</td>'
 		out += '<td>'+fields[MEANING]+'</td>'
 		out += '<td class="tr">'+fields[IPA]+'</td>'
-		out += '<td class="tr trans_column">'+fields[TRANS]+'</td>'
-        if (terms.thereAreNotes) out += '<td class="trans_column">'+fields[NOTES]+'</td>'
+		out += '<td class="tr">'+fields[TRANS]+'</td>'
+        if (terms.thereAreNotes) out += '<td class="noteCol">'+fields[NOTES]+'</td>'
         out += '</tr>\n'
 		}
 	
@@ -131,11 +131,11 @@ function findWords (reg) {
 
         out += '<td class="tr">'+itemArray[IPA]+'</td>'
 
-		out += '<td class="tr trans_column"> '+itemArray[TRANS]+' </td>'
+		out += '<td class="tr"> '+itemArray[TRANS]+' </td>'
 
-        if (terms.thereAreNotes) out += '<td class="trans_column">'+itemArray[NOTES]+'</td>'
+        if (terms.thereAreNotes) out += '<td class="noteCol">'+itemArray[NOTES]+'</td>'
 
-		out += '<td>&lt;span class="eg" lang="'+terms.language+'"&gt;'+itemArray[TERM]+'&lt;/span&gt;</td>'
+		out += '<td class="noteCol">&lt;span class="eg" lang="'+terms.language+'"&gt;'+itemArray[TERM]+'&lt;/span&gt;</td>'
 		out += '</tr>\n'
         }
     return out
