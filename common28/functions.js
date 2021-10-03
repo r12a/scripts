@@ -16,6 +16,8 @@ function addPageFeatures () {
         window.index = {}
         }
     
+    makeCharDataObj()
+    
     // empty large global variables
     window.fontDB = []
     defList = []
@@ -1230,7 +1232,7 @@ function makeIndexObject () {
             if (status !== '') charArray[charArray.length-1].status = status
             }
 		}
-	console.log('charArray',charArray)
+	//console.log('charArray',charArray)
 
 	allchars = '' // makes a list of all characters for sorting later
     
@@ -1253,7 +1255,7 @@ function makeIndexObject () {
 			allchars += indexChar
 			}
 		}
-	console.log('index',index)
+	//console.log('index',index)
     
     // sort the allchars string
     sortedAllChars = [...allchars].sort()
@@ -1398,6 +1400,28 @@ function makeScriptLanguageList () {
     document.getElementById('scriptLanguageList').innerHTML = out
     scriptLanguageList = ''
     }
+
+
+
+
+
+
+function makeCharDataObj () {
+    // create a charData array - (this removes reliance on the all-names.js file)
+    // global, spreadsheetRows
+    
+    window.charData = {}
+    
+    for (var c in spreadsheetRows) {
+        charData[c] = spreadsheetRows[c][cols['ucsName']].replace(/U\+[^:]+: /,'')
+        }
+    }
+
+
+
+
+
+
 
 
 
