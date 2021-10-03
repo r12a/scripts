@@ -71,7 +71,7 @@ autoExpandExamples.hi = `
 क्योंकि|because||kyoṅki
 खड़ा होना|to stand||khaṛā honā
 खरोंचना|to scratch||kharoñcnā
-ख़ारीदारी|shopping
+ख़ारीदारी|shopping|xaːriːdaːri
 ख़ून|blood|xuːn
 खाना|to eat|kʰɑː.nɑː
 खींचना|to pull|kʰĩːt͡ʃ.nɑː|khī̃cnā
@@ -356,6 +356,14 @@ autoExpandExamples.hi = `
 अतः|therefore|ə.t̪ə(ɦ)
 अंशतः|partially|ən.ʃt̪ə(ɦ)
 अंतःक्षेप|injection|ən.t̪ə(ɦ).kʂeːp
+स्त्री॰|feminine|st̪ɾiː.lɪŋɡ|abbreviation of स्त्रीलिंग
+सूत्र|thread, sutra, formula|suːt̪.ɾᵊ
+नक्षत्र|star, constellation|nək.ʂət̪.ɾᵊ
+त्रिज्या|radius|t̪ɾɪd͡ʒ.jɑː
+क्ष-किरण|x-ray|kʂə.kɪ.ɾəɳ
+क्षारातु|sodium|kʂɑː.ɾɑː.t̪uː
+शिक्षिका|teacher f.|ʃɪk.ʂɪ.kɑː
+वृक्ष|tree|ʋɾɪkʂ
 
 
 
