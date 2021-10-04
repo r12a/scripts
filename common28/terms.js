@@ -135,7 +135,7 @@ function findWords (reg) {
 
         if (terms.thereAreNotes) out += '<td class="noteCol">'+itemArray[NOTES]+'</td>'
 
-		out += '<td class="noteCol">&lt;span class="eg" lang="'+terms.language+'"&gt;'+itemArray[TERM]+'&lt;/span&gt;</td>'
+		out += '<td class="noteCol">&lt;span class="eg" lang="'+terms.language+'"&gt;'+itemArray[TERM].trim()+'&lt;/span&gt;</td>'
 		out += '</tr>\n'
         }
     return out
