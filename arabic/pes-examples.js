@@ -6,7 +6,7 @@
 ! fa
 */
 
-autoExpandExamples.fa = `
+autoExpandExamples.pes = `
 
 من|I (1sg)|mæn|man
 تو|you (2sg)|to|to
