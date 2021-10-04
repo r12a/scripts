@@ -480,7 +480,6 @@ autoExpandExamples.ar = `
 أن||
 أنا لا أتكلم العربية||
 أنا|I|ˈʔana
-أنا||
 أناخ||
 أناس||
 أناغالس||
@@ -527,7 +526,6 @@ autoExpandExamples.ar = `
 أنقذ||
 أنقض||
 أنكر|denial|ʔɪnkar
-أنكر||
 أنما||
 أنملة||
 أنموذج||
@@ -1220,7 +1218,8 @@ autoExpandExamples.ar = `
 العزى||
 العصور الوسطى||
 العيد الكبير||
-العَرَبِيَّة|Arabic ((al-ʻarabīyah))
+العَرَبِيَّة|Arabic|al.ʕa.ra.bij.ja
+العربية|Arabic|al.ʕa.ra.bij.ja
 الغابون||
 الفاتيكان||
 الفاطر||
@@ -1241,14 +1240,14 @@ autoExpandExamples.ar = `
 الكنية||
 الكويت||
 اللات||
-اللغة العربية الفصحى||
+اللغة العربية الفصحى|the Arabic language|al.lu.ɣa‿l.ʕa.ra.bij.ja
 اللغة العربية||
 الله أكبر||
 الله||
 اللهم صل على محمد وآل محمد||
 اللهم صل على محمد وعلى آل محمد||
 اللهم||
-اللّٰه|Allah
+اللّٰه|Allah|ʔaɫˈɫaːh
 المجر||
 المحمدية||
 المحيط الأطلسي||
@@ -1410,7 +1409,6 @@ autoExpandExamples.ar = `
 باقلاء||
 باقلى||
 باكستان|Pakistan|pakistaːn
-باكستان||
 باكستاني||
 باكو||
 بال||
@@ -1798,7 +1796,6 @@ autoExpandExamples.ar = `
 تاجورة||
 تارة||
 تاريخ|history|tɑːriːx
-تاريخ||
 تاريخية||
 تازة||
 تاسع||
@@ -3126,7 +3123,6 @@ autoExpandExamples.ar = `
 ذَاتِيَّة|identity|ðaːtiːja
 ذَاكَ|that|ðaː.ka|ḏāka
 ذَنَب|tail|ðanb|ḏanab
-ذٰلِكَ|that
 ذٰلِكَ|that|ðaː.li.ka|ḏālika
 رأس السنة||
 رأس مال||
@@ -5495,7 +5491,8 @@ autoExpandExamples.ar = `
 كتابخانة||
 كتان||
 كتب||
-كتف||
+كتب||
+كتبوا|they wrote|kætæbuː
 كتلة||
 كتيب التشغيل||
 كثافة||
@@ -6414,8 +6411,8 @@ autoExpandExamples.ar = `
 معمل||
 معمودية||
 معنوي||
-معنى|meaning, concept|maʕ.naː/maʕ.nan
-مَعْنًى|meaning, concept|maʕ.naː/maʕ.nan
+معنى|meaning, concept|maʕ.naː|formal maʕ.nan
+مَعْنًى|meaning, concept|maʕ.naː|formal maʕ.nan
 معهد||
 معول||
 معى||
@@ -6748,7 +6745,6 @@ autoExpandExamples.ar = `
 نأى||
 نائم|asleep|naːʔɪm
 نائم|sleeping|nɑːʔim
-نائم||
 ناجذ||
 ناجود||
 ناحية||
@@ -7101,7 +7097,6 @@ autoExpandExamples.ar = `
 هيكل||
 هيمنة||
 هيول||
-هَٰذَا|this
 هُمَا|they (3pl)|humā
 هُمْ|they (3pl)|humm|hum
 هُنَاكَ|there|hu.naː.ka|hunāka
