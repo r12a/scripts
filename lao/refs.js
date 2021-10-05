@@ -94,3 +94,43 @@ reflist = {
 
 
 
+
+scriptLanguageList = {
+bru:{name:"Bru, Eastern"},
+mww:{name:"Hmong Daw"},
+ium:{name:"Mien, Iu"},
+jeh:{name:"Jeh"},
+kgd:{name:"Kataang"},
+kjg:{name:"Khmu"},
+ngt:{name:"Kriang"},
+kdt:{name:"Kuy"},
+lbn:{name:"Lamet"},
+lao:{name:"Lao", url:"index"},
+brb:{name:"Lave"},
+tto:{name:"Ta'oih, Lower"},
+ncq:{name:"Katang, Northern"},
+pac:{name:"Pacoh"},
+pho:{name:"Phunoi"},
+sss:{name:"Sô"},
+blt:{name:"Tai Dam"},
+tth:{name:"Ta'oih, Upper"},
+brv:{name:"Bru, Western"},
+kuf:{name:"Katu, Western"},
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
