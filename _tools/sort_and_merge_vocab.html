@@ -28,6 +28,14 @@ function sortVocab() {
 	const uniqueSet = new Set(items)
 	charlist = [...uniqueSet]
 	charlist.sort()
+    
+    // add a marker to items where the lemma is identical, even though rest is different
+    for (var i=1;i<charlist.length;i++) {
+        var previous = charlist[i-1].split('|')
+        var current = charlist[i].split('|')
+        if (previous[0].replace(/§§§§§/,'') === current[0]) charlist[i] = '§§§§§'+charlist[i]
+        }
+    
 	document.getElementById('out').value = charlist.join('\n')
 	document.getElementById('out').select()
 	}
@@ -87,7 +95,7 @@ function makeList() {
 
 
 <div class="smallprint" style="margin-top: 3em; font-size: 70%; font-style: italic;"><span id="version">This version <span id="version-info"> 
-<!-- #BeginDate format:IS1m -->2020-09-18  19:12<!-- #EndDate --> 
+<!-- #BeginDate format:IS1m -->2021-10-05  19:02<!-- #EndDate --> 
 </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 <script>
