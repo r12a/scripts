@@ -5,9 +5,8 @@
 <title>Vocab lister</title>
 <meta name="description" content="List examples." />
 <link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../../app-vocab/localstyle.css" />
+<link rel="stylesheet" href="../common28/lemmastyle.css" />
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../app-vocab/drawVocab.js"></script>
 <script>var autoExpandExamples = {}</script>
 
 
@@ -17,24 +16,28 @@
 <!-- CHANGE THIS STUFF -->
 <script src="ru-examples.js"></script> 
 <script>
+var terms = {}
+terms.title = 'Russian'
 var contents = autoExpandExamples.ru
-var _fontFamily = 'Times New Roman'
-var _fontSize = '150%'
-var _direction = 'ltr'
-var _language = 'ru'
+terms.fontFamily = 'Times New Roman'
+terms.fontSize = '150%'
+terms.direction = 'ltr'
+terms.language = 'ru'
+terms.wiktionaryLink = "Russian"
 </script>
 <!-- END -->
 
 
 
 
-<script src="../common/vocab_list.js"></script> 
+
+<script src="../common28/terms.js"></script> 
 </head>
 
 <body class="app">
 <header>
 <div id="header-boilerplate"></div>
-<script>document.getElementById('header-boilerplate').innerHTML = bp_appHeader('../shared/images/world.gif','Vocab lister','v11');</script>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_appHeader('../../shared/images/world.gif',terms.title+' terms','');</script>
 </header>
 
 
@@ -45,15 +48,23 @@ var _language = 'ru'
 
 
 <div id="list_tab_area">
+<p style="font-style: italic; font-size: 80%;"><label>Total items: <span id="totalLemmas">–</span></label></p>
 <table id="printout"></table>
 </div>
  
 
 <div id="find_tab_area">
-<p><label>Find words containing the following: <input id="needle" type="text" placeholder="Regular expressions can be used."  onInput="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')"></label> &nbsp;&nbsp;
+<p style="margin-inline-end:1em;"><label>Find words containing the following: <input id="needle" type="text" placeholder="Regular expressions can be used."  onInput="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')"></label> &nbsp;&nbsp;
+Search in: <select id="searchCol">
+<option value="all">All</option>
+<option value="0">Terms</option>
+<option value="1">Meanings</option>
+<option value="2">IPA</option>
+<option value="3">Transcriptions</option>
+</select>&nbsp;&nbsp;
 <button onClick="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')">Go</button>
 </p>
-<p><label>Items found: <span id="found"></span></label><br/><table id="foundItems"></table></p>
+<p style="font-style: italic; font-size: 80%;"><label>Items found: <span id="found">–</span></label><br/><table id="foundItems"></table></p>
 </div>
 
 
