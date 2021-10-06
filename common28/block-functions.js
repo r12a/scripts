@@ -515,13 +515,15 @@ function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
 			
 			out += '<br>'
 
-			if (spreadsheetRows[cchar][cols['typeLoc']]) out += '<span class="charType">'+spreadsheetRows[cchar][cols['typeLoc']]+'</span>'
+			if (spreadsheetRows[cchar][cols['typeLoc']]) out += '<span class="charType" title="Type of character.">'+spreadsheetRows[cchar][cols['typeLoc']]+'</span>'
 			
-			if (spreadsheetRows[cchar][cols['statusLoc']]) out += '<span class="charStatus">'+spreadsheetRows[cchar][cols['statusLoc']]+'</span>'
+			if (spreadsheetRows[cchar][cols['statusLoc']]) out += '<span class="charStatus" title="Usage information.">'+spreadsheetRows[cchar][cols['statusLoc']]+'</span>'
 			
-			if (spreadsheetRows[cchar][cols['ipaLoc']]) out += '<span class="charIPA ipa">'+spreadsheetRows[cchar][cols['ipaLoc']].toLowerCase()+'</span>'
+			if (spreadsheetRows[cchar][cols['ipaLoc']]) out += '<span class="charIPA ipa" title="Typical IPA phonetic values.">'+spreadsheetRows[cchar][cols['ipaLoc']].toLowerCase()+'</span>'
 			
-			if (spreadsheetRows[cchar][cols['transLoc']]) out += '<span class="localtrans trans">'+spreadsheetRows[cchar][cols['transLoc']]+'</span>'
+			if (spreadsheetRows[cchar][cols['class']]) out += '&nbsp; <span class="charType" title="Unicode General Category property value.">'+spreadsheetRows[cchar][cols['class']]+'</span>'
+			
+			if (spreadsheetRows[cchar][cols['transLoc']]) out += '<span class="localtrans trans" title="How transliterated in the scheme used for this document.">'+spreadsheetRows[cchar][cols['transLoc']]+'</span>'
  			out += '</p>'
            
             
