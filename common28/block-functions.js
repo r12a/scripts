@@ -5,6 +5,17 @@
 
 
 debug = false
+marks = new Set()
+
+
+function setMarks () {
+    // sets the global variable marks as a set containing all combining marks in the spreadsheet
+    for (var char in spreadsheetRows) {
+        console.log(char,spreadsheetRows[char][cols['class']])
+        if (spreadsheetRows[char][cols['class']].startsWith('M')) window.marks.add(char)
+        }
+    return
+    }
 
 
 
@@ -30,6 +41,7 @@ function initialise (base, ghDirectory, detailsfileList, version) {
 	desc = ''
 	autoExpandExamples = {}
     cl = ''
+
     }
 
     // U, unicode db declared in u.js

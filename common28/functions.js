@@ -18,6 +18,9 @@ function addPageFeatures () {
     
     makeCharDataObj()
     
+    marks = new Set()
+    setMarks()
+    
     // empty large global variables
     window.fontDB = []
     defList = []
@@ -47,6 +50,24 @@ function initialiseSummary (blockDirectory, lang, tableName, dir) {
 
 
 
+function setMarksOLD () {
+    // sets the global variable marks as a set containing all combining marks in the index
+    var indexSection = document.getElementById('index_cchars')
+    if (indexSection) {
+        entries = indexSection.querySelectorAll('.listItem')
+        for (var i=0;i<entries.length;i++) window.marks.add(entries[i].textContent)
+        }
+    }
+
+
+function setMarks () { console.log(spreadsheetRows.length)
+    // sets the global variable marks as a set containing all combining marks in the spreadsheet
+    for (var char in spreadsheetRows) {
+        console.log(char,spreadsheetRows[char][cols['class']])
+        if (spreadsheetRows[char][cols['class']].startsWith('M')) window.marks.add(char)
+        }
+    return
+    }
 
 
 function setCharOnclicks () {
