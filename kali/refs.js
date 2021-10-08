@@ -58,3 +58,20 @@ reflist = {
 
 
 
+
+
+scriptLanguageList = {
+eky:{name:"Kayah, Eastern"},
+kyu:{name:"Kayah, Western", url:"index"},
+}
+
+
+
+
+
+
+
+
+
+
+

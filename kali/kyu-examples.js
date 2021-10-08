@@ -10,64 +10,197 @@
 
 autoExpandExamples.kyu = `
 
-ꤒꤟꤢꤧ꤬ꤚꤛꤢꤙꤢꤧ꤬ ꤔꤟꤢꤧ꤬|hello|tɛ̤¹rjabɛ¹ nɛ̤¹
-ꤒꤟꤢꤢꤧ꤬ꤙꤝꤤ|thank you|tɛ̤¹bwi
-ꤔꤛꤣ|that|nɯə¹
-ꤕꤟꤌꤣ|older sibling|pɯ̤ə
-ꤥ꤬ꤊꤟꤌꤣ|to rest|o¹kɯ̤ə
-ꤔꤟꤢꤩ꤬|you|nɛ̤¹
-ꤢ꤬ꤕꤟꤛꤢ|difficult|a¹pja̤
-ꤊꤢ꤬ꤛꤢ꤭ꤜꤟꤤ꤬ ꤍꤟꤥ|Red Karen language|ka¹ya³li̤¹ ŋo̤
-ꤊꤢ꤬ꤛꤢ꤭ꤜꤟꤤ꤬ ꤢ꤬ꤜꤤ꤬|Red Karen alphabet|ka¹ya³li̤¹ a¹li¹
-ꤗꤝꤟꤤ꤭|name|mwi̤³
-ꤞꤢꤧ|people|θɛ
-ꤔꤛꤢꤩ꤭|two|nje³
-ꤓꤢꤦ ꤗꤝꤟꤥ꤭|soap|tʰɯ mwo̤³
-ꤞꤥ꤬ꤕꤜꤟꤛꤢꤩ꤬|rope|so¹plje̤¹
-ꤏꤤ꤬ꤜꤤ꤬ꤕꤜꤝꤥ꤭|radio|sʰi¹li¹plwo³
-ꤏꤛꤢꤩ꤬ꤊꤜꤥ꤭|weather|sʰje¹klo³
-ꤜꤟꤢꤪ|all|lɔ̤
-ꤊꤜꤛꤢꤩ꤬ꤕꤜꤟꤢꤧ|arrow|klje¹plɛ̤
-ꤡꤟꤛꤢ|to be able to|d͡ʒja̤
-ꤢꤧ꤬ꤞꤤ꤭|they|ɛ¹θi³
-ꤞꤛꤥꤜꤤ꤬ꤟꤥ꤭ ꤞꤢꤚꤢ|teacher|θjoli¹ho³ θara
-ꤒꤢꤧ꤬ꤋꤢꤨ꤬ ꤞꤢꤚꤢꤘꤢꤨ꤬|doctor|tɛ¹kʰu¹ θaradu¹
-ꤞꤤ꤭|you (pl)|θi³
-ꤜꤟꤢꤪꤞꤛꤣ꤬|pot stand|lɔ̤ʂɯə³
-ꤞꤥ꤭ꤙꤛꤢ|water jar|ʂo³bja
+
+ꤊꤚꤝꤤ|bone|krwi˦
+ꤊꤚꤝꤥ꤭|to follow|krwo˧
 ꤊꤚꤟꤤ|basket with head strap|kri̤
-ꤞꤝꤣ꤭|three|θwə³
-ꤑꤟꤢ꤭|five|ɲa̤³
-ꤞꤛꤥ|eight|θjo
-ꤞꤢꤧꤑꤢꤩ꤭|to know|θɛɲe³
-ꤛꤢꤡꤢꤦ|to try|jaʤɯ
-ꤊꤚꤝꤟꤥ꤭|to follow|krwo̤³
-ꤞꤢꤧ ꤢꤪ|flu|θɛ ɔ
-ꤋꤢ꤭ꤢꤨ꤬|mouth|kʰa³u¹
-ꤢꤪ|brown|ɔ
-ꤞꤢ꤬ꤒꤢ꤬ꤕꤚꤢꤩ꤭|fishnet|ʂa¹ta¹pre³
-ꤠꤢꤧ꤬|husband|vɛ^
-ꤠꤟꤢꤧ꤬|bamboo|vɛ̤¹
-ꤜꤤ꤬|letter|li¹
-ꤜꤟꤤ꤬|red|li̤¹
-ꤕꤢꤎꤕꤥ|passport|paspo
-ꤋꤢꤧ꤬ꤎꤣ꤬|cancer|kʰɛ¹sə¹
-ꤊꤢ꤬ꤔꤟꤥ꤮|very|ka¹no̤ˈ
-ꤟꤌꤣ꤭|uncooked rice|hɯ̤ə/xə³
-ꤔꤟꤤꤟꤌꤣ꤭|to hear|ni̤hɯ̤ə³/ni̤xə³
-ꤒꤢ꤬ꤚꤟꤢꤪ꤬ꤞꤢꤧ ꤞꤢꤧꤤ꤬ꤏꤢꤩ꤭|danger|ta˨rɔ̤˨ʂɛ˦ θɛ˦i˨ʃe˧
+ꤊꤜꤛꤢ|road, street|klja˦
+ꤊꤜꤛꤢꤩ꤬ꤕꤜꤟꤢꤧ|arrow|klje˨plɛ̤
+ꤊꤜꤛꤢ꤬|to run|klja˨
+ꤊꤝꤤ꤭|ask|kwi˧
+ꤊꤟꤛꤢꤏꤛꤢꤩ꤬ꤞꤢꤧ꤬|tomato|kja̤˦ʃje˨ʂɛ˨
+ꤊꤢꤨ꤭ꤜꤤꤊꤟꤢꤩ||
+ꤊꤢꤪ꤬ꤕꤛꤢꤨ꤬ꤒꤣ꤬||
 ꤊꤢ꤬ꤔꤟꤥ꤮ ꤒꤥ꤬|really|ka˨no̤˦ to˨
+ꤊꤢ꤬ꤔꤟꤥ꤮|very|ka˨no̤ˈ
+ꤊꤢ꤬ꤛꤢ꤭ꤜꤟꤤ꤬ ꤍꤟꤥ|Red Karen language|ka˨ya˧li̤˨ ŋo̤
+ꤊꤢ꤬ꤛꤢ꤭ꤜꤟꤤ꤬ ꤢ꤬ꤜꤤ꤬|Red Karen alphabet|ka˨ya˧li̤˨ a˨li˨
+ꤊꤢ꤬ꤛꤢ꤭ꤜꤟꤤ꤬|Kayah Li|ka˨.ja˧.li̤˨
+ꤋꤢꤧ꤬|bitter|kʰɛ˨
+ꤋꤢꤧ꤬ꤎꤣ꤬|cancer|kʰɛ˨.sə˨
+ꤋꤢꤧ꤬ꤗꤣ꤬ꤚꤢ꤬|camera|kʰɛ˨.mə˨.ra˨
+ꤋꤢ꤭ꤗꤟꤤ||
+ꤋꤢ꤭ꤢꤨ꤬|mouth|kʰa˧u˨
+ꤎꤤꤊꤚꤢꤧ|cigarette|si˦.krɛ˦
+ꤏꤛꤢꤩ|ten|ʃje˦
+ꤏꤛꤢꤩ꤬|sour
+ꤏꤛꤢꤩ꤬ꤊꤜꤥ꤭|weather|sʰje˨klo˧
+ꤏꤛꤢꤩ꤭|chicken|ʃje˧
+ꤏꤝꤥ꤬|crab|ʃwo˨
+ꤏꤢꤦ꤭ꤏꤢꤧ꤭|to spear|sʰɯ˧sʰɛ˧
+ꤏꤢꤦ꤭ꤟꤢꤧ꤭|salty|sʰɯ˧.hɛ˧
+ꤏꤤ꤬ꤜꤤ꤬ꤕꤜꤝꤥ꤭|radio|sʰi˨li˨plwo˧
+ꤑꤟꤢ꤭|five|ɲa̤˧
+ꤒꤟꤢꤢꤧ꤬ꤙꤝꤤ|thank you|tɛ̤˨bwi
+ꤒꤟꤢꤧ꤬|thing, object|tɛ̤˨
+ꤒꤟꤢꤧ꤬ꤚꤛꤢꤙꤢꤧ꤬ ꤔꤟꤢꤧ꤬|hello|tɛ̤˨rjabɛ˨ nɛ̤˨
+ꤒꤟꤢꤧ꤬ꤋꤢꤨ꤬ꤞꤢꤚꤢꤘꤢꤨ꤬|doctor|tɛ̤˨kʰu˨ʂa˦ra˦du˨
+ꤒꤢ꤬ꤊꤜꤤ||
+ꤒꤢ꤬ꤏꤛꤢ꤭|elephant|ta˨.ʃja˧
+ꤒꤟꤢꤧ꤬ꤒꤢ꤬ꤚꤟꤢꤪ꤬ꤞꤢꤧ ꤞꤢꤧꤤ꤬ꤏꤢꤩ꤭|danger|tɛ̤˨ta˨rɔ̤˨ʂɛ˦ ʂɛ˦i˨sʰe˧
+ꤒꤢ꤬ꤞꤤ|horse|ta˨.ʂi˦
+ꤒꤣ꤬|one|tə˨
+ꤓꤛꤢ||
+ꤓꤛꤢꤩ꤭||
+ꤓꤛꤢꤩ꤭ꤏꤤ꤭ꤕꤚꤟꤢꤩ|alcohol|tʰje˧ʃi˧pre̤˦
+ꤓꤛꤢ꤬||
+ꤓꤛꤢ꤭||
+ꤓꤛꤥ|cat|tʰwo˦
+ꤓꤝꤤ꤬|dog|tʰwi˨
+ꤓꤢꤦ ꤗꤝꤟꤥ꤭|soap|tʰɯ mwo̤˧
+ꤓꤢꤧ|needle|tʰɛ˦
+ꤓꤢꤧ꤬ꤜꤤ꤬ꤖꤥ꤭||
+ꤓꤢꤧ꤭||
+ꤓꤢꤨ꤬||
+ꤓꤤ꤬||
+ꤔꤛꤢꤩ꤭|two|nje˧
+ꤔꤛꤣ|that|nɯə˨
+ꤔꤟꤢꤧ꤬|you s.|nɛ̤˨
+ꤔꤟꤤꤟꤌꤣ꤭|to hear|ni̤hɯ̤ə˧/ni̤xə˧
+ꤔꤢ꤬|year|na˨
+ꤕꤚꤟꤢꤩꤐꤝꤤ꤬ꤊꤟꤢꤩ|Thailand|pre̤˦.zwi˨.ke̤˦
+ꤕꤟꤌꤣ|older sibling|pɯ̤ə
+ꤕꤟꤢꤧ꤬||
+ꤕꤟꤢꤪ꤬||
+ꤕꤢꤎꤕꤥ|passport|pa.spo
+ꤖꤛꤢꤩ|to take|pʰje˦
+ꤖꤢꤧ꤭|father|pʰɛ˧
+ꤖꤤ꤭|opium|pʰi˧
+ꤖꤥ꤭|flower|pʰo˧
+ꤗꤝꤟꤤ꤬|name|mwi̤˨
+ꤗꤟꤌꤣ|mother|mɯ̤ᵊ
+ꤗꤟꤛꤢ꤬ꤊꤟꤢꤩ||
+ꤗꤤ꤬|fire|mi˨
+ꤘꤛꤢꤩ|to give|dje˦
+ꤘꤟꤤ꤬ꤗꤥ꤬ꤊꤚꤢꤩ꤬ꤎꤤ꤬|democracy|di̤˨.mo˨.kre˨.si˨
+ꤘꤤ꤬|frog|di˨
+ꤘꤤ꤬ꤓꤥ||
+ꤙꤛꤢ꤭|yellow|bja˧
+ꤙꤢꤧ꤬ꤓꤚꤟꤤ꤬|battery|bɛ˨.tʰri̤˨
+ꤙꤢꤨ꤭|white|bu˧
+ꤙꤤ꤬ꤛꤢ꤬||
+ꤚꤟꤢꤨ|snake
+ꤚꤢꤦ꤭|money, silver|rɯ˧
+ꤚꤢ꤬ꤠꤟꤢ꤬|zero|ra˨.va̤˨
+ꤛꤢꤡꤢꤦ|to try|ja˦ʤɯ˦
+ꤢꤛꤢꤡꤢꤦꤢꤛꤢꤚꤢ|to try|ja˦ʤɯ˦ja˦re˨
+ꤜꤝꤟꤤ꤭|four|lwi̤˧
+ꤜꤟꤢꤪ|all|lɔ̤
+ꤜꤟꤢꤪꤞꤛꤣ꤬|pot stand|lɔ̤ʂɯə˧
+ꤜꤟꤤ||
+ꤜꤟꤤ꤬|red|li̤˨
+ꤜꤢꤧ꤬||
+ꤜꤢꤧ꤭||
+ꤜꤤ꤬|letter|li˨
+ꤞꤛꤢꤩ꤭|to die|ʂje˧
+ꤞꤛꤣ꤭|green|ʂɯᵊ˧
+ꤞꤛꤥ|eight|ʂwo˦
+ꤞꤢꤚꤢ|teacher|ʂa˦ra˦
+ꤞꤝꤣ꤭|three|ʂɛ˦
+ꤞꤝꤤ꤬|blood|ʂwi˨
+ꤞꤝꤤ꤬ꤓꤛꤢꤩ꤭|blood|ʂwi˨.tʰje˧
+ꤞꤢꤧ ꤢꤪ|flu|θɛ ɔ
+ꤞꤢꤧ|to want|ʂɛ˦
+ꤞꤢꤧꤐꤟꤢꤦ|to want|ʂɛ˦.zɯ̤˦
+ꤞꤢꤧꤑꤢꤩ꤭|to know|ʂɛ˦.ɲe˧
+ꤞꤢꤨ|fat, oil|ʂu˦
 ꤞꤢꤨ꤬|lungs|ʂu˨
 ꤞꤢꤨ꤭|send|ʂu˧
-ꤞꤢꤨ|fat, oil|ʂu˦
-ꤏꤛꤢꤩ|ten|ʃje˦
-ꤊꤟꤛꤢꤏꤛꤢꤩ꤬ꤞꤢꤧ꤬|tomato|kja̤˦ʃje˨ʂɛ˨
-ꤓꤛꤢꤩ꤭ꤏꤤ꤭ꤕꤚꤟꤢꤩ|alcohol|tʰje˧ʃi˧pre̤˦
-ꤢ꤬ꤠꤖꤚꤤꤊꤢ|Africa|a˨fri˦ka˦
-ꤊꤝꤤ꤭|ask|kwi˧
-ꤤ꤬ꤕꤟꤢ|leap|i˨pa̤˦
+ꤞꤢꤪ꤬|tree|ʂɔ˨
+ꤞꤢꤪ꤬ꤜꤢꤧ꤬|leaf|ʂɔ˨.lɛ˨
+ꤞꤢ꤬ꤒꤢ꤬ꤕꤚꤢꤩ꤭|fishnet|ʂa˨ta˨pre˧
+ꤞꤤꤗꤟꤤ|sheep|ʂi˦.mi̤˦
+ꤞꤤ꤭|you (pl)|ʂi˧
+ꤞꤥ꤬ꤕꤜꤟꤛꤢꤩ꤬|rope|so˨plje̤˨
+ꤞꤥ꤭ꤙꤛꤢ|water jar|ʂo˧bja
+ꤟꤌꤣ꤭|uncooked rice|hɯ̤ə/xə˧
+ꤟꤛꤢ꤭|to come|hja˧
+ꤟꤢꤩ꤭ꤊꤟꤢꤩ||
 ꤟꤢꤪ|already|hɔ˦
-ꤏꤢꤦ꤭ꤏꤢꤧ꤭|to spear|sʰɯ˧sʰɛ˧
+ꤟꤢꤪ꤬ꤒꤢꤧ꤬||
+ꤟꤤ꤬||
+ꤠꤟꤢꤧ꤬|bamboo|vɛ̤˨
+ꤠꤟꤤ꤭ꤗꤟꤌꤣ|capital city|vi̤˧.mɯ̤ᵊ
+ꤠꤢꤧ꤬|husband|vɛ^
+ꤠꤢ꤭||
+ꤡꤛꤢꤪꤊꤜꤢꤧ||
+ꤡꤛꤣ|to go|d͡ʒɯᵊ
+ꤡꤟꤛꤢ|to be able to|d͡ʒja̤
+ꤡꤢꤧ|machine|d͡ʒɛ˦
+ꤢꤧ꤬ꤞꤤ꤭|they|ɛ˨ʂi˧
+ꤢꤩ꤬ꤓꤣ꤬ꤔꤢꤧ|the Internet|ʔe˨.tʰə˨.nɛ˦
+ꤢꤪ|brown|ɔ
+ꤢ꤬ꤏꤛꤢꤊꤟꤢꤩ|Asia|ʔa˨.ʃja˦.ke̤˦
+ꤢ꤬ꤕꤟꤛꤢ|difficult|a˨pja̤
+ꤢ꤬ꤗꤥ꤬ꤢ꤬ꤚꤢ|tax|ʔa˨.mo˨.ʔa˨.ra˦
+ꤢ꤬ꤠꤖꤚꤤꤊꤢ|Africa|a˨fri˦ka˦
+ꤤ꤬ꤕꤟꤢ|leap|i˨pa̤˦
+ꤥ꤬ꤊꤟꤌꤣ|to rest|o˨kɯ̤ə
+ꤥ꤬ꤗꤛꤢꤩ||
+
+ꤢꤛꤢ꤭ꤞꤤ꤭|lion|ja˧ʂi˧
+ꤖꤢꤛꤝꤥ|rubber|pʰa˦jwo˦
+ꤕꤟꤛꤢꤛꤢꤧꤕꤟꤛꤢꤏꤢꤧ꤭|difficult|pja̤˦jɛ˦pja̤˦sʰɛ˧
+ꤜꤟꤢ꤭ꤍꤟꤥ|language|la̤˧ŋo̤˦
+ꤢ꤬ꤍꤟꤥꤜꤢ꤬ꤏꤢ|meaning|a˨ŋo̤˦la˨sʰa˦
+ꤍꤟꤥꤋꤢꤋꤥ꤬|parable|ŋo̤˦kʰa˦kʰo˨
+ꤍꤟꤥꤘꤢꤪꤟꤌꤣ|password|ŋo̤˦dɔ˦ɯ̤ᵊ
+ꤒꤢ꤬ꤍꤢꤨ꤭ꤗꤟꤢꤪ|pine tree|ta˨ŋu˧mɔ̤˦
+ꤍꤟꤢꤨ꤬|price|ŋṳ˨
+ꤍꤟꤥꤢꤧꤓꤥ꤭|slogan|ŋo̤˦ɛ˦tʰo˧
+ꤍꤟꤥꤟꤢꤩꤙꤢꤧ꤬|speech|ŋo̤˦he˦bɛ˨
+ꤍꤟꤥ|word|ŋo̤˦
+ꤒꤢ꤬ꤊꤜꤝꤤ|opposite|ta˨klwi˦
+ꤢꤟꤌꤣꤢꤛꤢ|foolish|ɯ̤ᵊ˦a˦ja˦
+ꤔꤤ꤮|particle to soften statements|ni˦
+ꤕꤝꤟꤥ꤭꤮ ꤒꤣ꤬ꤖꤟꤌꤣ|always|pwo̤˧tə˨pʰɯ̤ᵊ˦
+ꤙꤤꤒꤢꤩ꤭꤮ ꤒꤣ꤬ꤖꤥ꤬ ꤙꤢꤧ꤬ꤙꤢꤧ꤬|anywhere|bi˦te˧ tə˨pʰo˨ bɛ˨bɛ˨
+ꤞꤛꤣ꤬ꤞꤛꤣ꤬꤮ ꤥ꤬ꤗꤛꤢ꤮|Be quiet!|ʂɯᵊ˨ʂɯᵊ˨ o˨mja˦
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
