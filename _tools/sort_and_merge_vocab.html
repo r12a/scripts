@@ -28,12 +28,25 @@ function sortVocab() {
 	const uniqueSet = new Set(items)
 	charlist = [...uniqueSet]
 	charlist.sort()
+    window.rejected = []
     
-    // add a marker to items where the lemma is identical, even though rest is different
+    // add a marker to items where the lemma is identical, but the rest is different
+    // cleanly remove any line where the lemma is identical and there is no additional info
     for (var i=1;i<charlist.length;i++) {
-        var previous = charlist[i-1].split('|')
-        var current = charlist[i].split('|')
-        if (previous[0].replace(/§§§§§/,'') === current[0]) charlist[i] = '§§§§§'+charlist[i]
+        var previousLineArray = charlist[i-1].split('|')
+        var currentLineArray = charlist[i].split('|')
+        var joinedLine = charlist[i].split('|').join('').trim()
+        
+        if (previousLineArray[0].replace(/§§§§§/,'') === currentLineArray[0]) {
+            if (previousLineArray[0].replace(/§§§§§/,'') === joinedLine) {
+                rejected.push(charlist[i])
+                charlist.splice(i,1)
+                i--
+                }
+            else {
+                charlist[i] = charlist[i]+'§§§§§'
+                }
+            }
         }
     
 	document.getElementById('out').value = charlist.join('\n')
@@ -95,7 +108,7 @@ function makeList() {
 
 
 <div class="smallprint" style="margin-top: 3em; font-size: 70%; font-style: italic;"><span id="version">This version <span id="version-info"> 
-<!-- #BeginDate format:IS1m -->2021-10-05  19:02<!-- #EndDate --> 
+<!-- #BeginDate format:IS1m -->2021-10-06  15:56<!-- #EndDate --> 
 </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 <script>
