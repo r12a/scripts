@@ -1,6 +1,8 @@
+trace = false
+
 function addPageFeatures () {
     initialiseSummary(window.blockDir, window.langTag, window.scriptSummaryTableName, window.explainerDir)
-    autoTransliterate(langTag)
+    //autoTransliterate(langTag)
     makeFontChanger(langTag, scriptTag, pageWebfonts, defaultSize)
     pointToSummaryPages()
     checkParameters()
@@ -29,10 +31,11 @@ function addPageFeatures () {
 
 
 function initialiseSummary (blockDirectory, lang, tableName, dir) {
+    if (trace) console.log('initialiseSummary(',blockDirectory, lang, tableName, dir,')')
 	doHeadersFooters(dir)
     makeIndexIntro(document.getElementById('index_intro'))
     makeTables(lang)
-	if (typeof addExamples !== 'undefined') addExamples(lang)
+	//if (typeof addExamples !== 'undefined') addExamples(lang)
     initialiseShowNames(document, blockDirectory, 'c')
     document.getElementById('features').innerHTML = makeSidePanel(tableName,"")
     createtoc(3)
@@ -43,6 +46,7 @@ function initialiseSummary (blockDirectory, lang, tableName, dir) {
 	setupBlockLinks()
 	setTranslitToggle()
 	setCharOnclicks()
+	if (typeof addExamples !== 'undefined') addExamples(lang)
 	if (typeof reflist !== 'undefined') createReferences(lang)
 	//if (typeof reflist !== 'undefined') chooseRelevantRefs()
     if (typeof scriptLanguageList !== 'undefined') makeScriptLanguageList()
@@ -50,17 +54,8 @@ function initialiseSummary (blockDirectory, lang, tableName, dir) {
 
 
 
-function setMarksOLD () {
-    // sets the global variable marks as a set containing all combining marks in the index
-    var indexSection = document.getElementById('index_cchars')
-    if (indexSection) {
-        entries = indexSection.querySelectorAll('.listItem')
-        for (var i=0;i<entries.length;i++) window.marks.add(entries[i].textContent)
-        }
-    }
 
-
-function setMarks () { console.log(spreadsheetRows.length)
+function setMarks () {
     // sets the global variable marks as a set containing all combining marks in the spreadsheet
     for (var char in spreadsheetRows) {
         //console.log(char,spreadsheetRows[char][cols['class']])
@@ -72,12 +67,16 @@ function setMarks () { console.log(spreadsheetRows.length)
 
 function setCharOnclicks () {
 	// all links with target=c should open descriptions in the panel
+    if (trace) console.log('setCharOnclicks(',') All links with target=c should open descriptions in the panel')
+
 	var links = document.querySelectorAll('.codepoint a')
 	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
 	}
 
 function setupBlockLinks () {
 	// set target attribute for links that point to characters in the block page
+    if (trace) console.log('setupBlockLinks(',') Set target attribute for links that point to characters in the block page')
+    
 	var links = document.querySelectorAll('.codepoint a')
 	for (var i=0;i<links.length;i++) if (links[i].target != null) links[i].target = 'c'
 	}
@@ -86,6 +85,8 @@ function setupBlockLinks () {
 
 function setFindIPA () {
 	// makes ipa characters in sounds charts indicate locations they are used
+    if (trace) console.log('setFindIPA(',') Make ipa characters in sounds charts indicate locations they are used')
+
 	var listItems = document.querySelectorAll('.ipaTable .ipa, .ipaTable .allophone')
 	for (let i=0;i<listItems.length;i++) listItems[i].onclick = findIPA
 	var listItems = document.querySelectorAll('.ipaSVG .ipa, .ipaSVG .allophone')
@@ -220,9 +221,10 @@ function runCategoryCharCount (location, row, raw=false) {
 
 
 function doHeadersFooters (dir) {
+    if (trace) console.log('doHeadersFooters(',dir,') Add links to top of document')
 	// adds links to top of document
 	// dir is of the form arabic/index or arabic/urdu
-	
+
 	if (document.getElementById('versionTop') === null) return
 	
 
@@ -511,6 +513,7 @@ function makeSidePanel (id, otherlinks) {
 
 
 function makeTables (lang) {
+    if (trace) console.log('makeTables(',lang,') Create the lists of characters in yellow, etc. boxes')
     // create the lists of characters in yellow, etc. boxes
 
     if (typeof window.spreadsheet == 'undefined') {
@@ -809,11 +812,13 @@ function showAllFeatureInfo () {
 
 
 function initialiseShowNames (node, base, target) {
-// add function to all images with class ex
-// function will display character by character names for example in the panel
-// base (string), path for link to character detail
+    if (trace) console.log('initialiseShowNames(',node, base, target,') Add onclick function to all .ex elements to display in panel')
+    // add function to all images with class ex
+    // function will display character by character names for example in the panel
+    // base (string), path for link to character detail
 
-// this extends the function in show_codepoints.js to add support for listItems
+    // this extends the function in show_codepoints.js to add support for listItems
+
 
 	// check whether the calling page has set a base and target window
 	if(typeof base === 'undefined') { base = ''; }
@@ -872,12 +877,12 @@ function showCharDetailsEvent (evt) {
 	
 	
 	addExamples(evt.target.lang)
-	autoTransliterate(evt.target.lang)
+	//autoTransliterate(evt.target.lang)
 	convertTranscriptionData(evt.target)
 	setFootnoteRefs()
     var links = table.querySelectorAll('.codepoint a')
 	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
-    initialiseShowNames(table)
+    initialiseShowNames(table, window.blockDir, 'c')
 	}
 
 
@@ -1116,6 +1121,7 @@ function copyToClipboard (node) {
 
 
 function showTransliterations (yes) {
+    //console.log('showTransliterations(',yes,')')
 	if (! yes) {
 		var nodes = document.querySelectorAll('.charExample .trans')
 		for (let n=0;n<nodes.length;n++) nodes[n].style.display = 'none'
@@ -1129,6 +1135,7 @@ function showTransliterations (yes) {
 
 
 function setTranslitToggle () {
+    if (trace) console.log('setTranslitToggle(',') Add checkboxes and links to the fixed position selector')
 	// adds checkboxes and links to the fixed position selector
 	
 	var checkboxList = document.getElementById('showTranscriptions')
@@ -1142,7 +1149,8 @@ function setTranslitToggle () {
 	var label = document.createElement('label')
 	var input = document.createElement('input')
 	input.type = 'checkbox'
-	label.appendChild(document.createTextNode('Show transliterations '))
+    input.id = 'translitToggleCheckbox'
+	label.appendChild(document.createTextNode('Show transcriptions '))
 	label.appendChild(input)
 	label.onclick = showTransliterationsEvt
 	div.appendChild(label)
@@ -1409,7 +1417,11 @@ function checkParameters () {
 
 
 function makeScriptLanguageList () {
+    if (trace) console.log('makeScriptLanguageList(',') Fill in the "Languages using the ... script" section, using an object defined in refs.js')
     // fills in the "Languages using the ... script" section, using an object defined in refs.js
+    
+    if (document.getElementById('scriptLanguageList') === null) return
+    
     var out = ''
     var count = 0
     for (var langtag in scriptLanguageList) {

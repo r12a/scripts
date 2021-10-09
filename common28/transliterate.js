@@ -30,10 +30,12 @@ return str.trim()
 
 function transliterateLang (str, lang) {
 // like transliterate() but uses newer data format, to allow for multiple languages per page
+// console.log('transliterateLang(',str,lang,')')
+
 str = ' '+str
 
 var strArray = [...str]
-var exclusions = new Set(['(',')','[',']','.',' '])
+var exclusions = new Set(['(',')','[',']','.','?',' '])
 
 for (i=0;i<strArray.length;i++) {
 	if (exclusions.has(strArray[i])) continue
@@ -55,6 +57,7 @@ function autoTransliterate (language) {
     // global autoTranslitArray
     // local trans i ex translit
     // calls transliterateLang & transliterate
+    console.log('autoTransliterate (',language,')')
 	var trans = document.querySelectorAll('.charExample')
 	
 	for (var i=0;i<trans.length;i++) {
