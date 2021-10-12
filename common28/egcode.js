@@ -104,7 +104,7 @@ function addExamples (langFilter) {
 			nodes[n].outerHTML = out
 			}
 		}
-    showTransliterations( document.getElementById('translitToggleCheckbox').checked )
+    if (! typeof showTransliterations === 'undefined') showTransliterations( document.getElementById('translitToggleCheckbox').checked )
 	egArray = []
 	egList = {}
 	}
