@@ -474,7 +474,7 @@ function makeSidePanel (id, otherlinks) {
 		out += '<tr><th>Justification</th><td class="tableHighlight">'
         for (i=0;i<values.length;i++) {
             switch (values[i]) {
-                case 'sp': out += 'between words'; break
+                case 'sp': out += 'at spaces/wordbreaks'; break
                 case 'str': out += 'baseline stretching'; break
                 case 'sw': out += 'swashes'; break
                 case 'pad': out += 'character padding'; break
