@@ -58,7 +58,7 @@ function addExamples (langFilter) {
 			
 			var out = '<span class="charExample'
 			if (nodes[n].classList.contains('inline')) out += ' inline'
-			else out += '" translate="no">'
+			out += '" translate="no">'
 			
 			// term
 			out += `<span class="ex" lang="${ nodes[n].lang }"`
