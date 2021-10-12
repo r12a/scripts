@@ -1,16 +1,19 @@
 @font-face {
     font-family: 'gentiumpluswf';
-    src: url('../../shared/webfonts/gentiumplus-r-webfont.woff2') format('woff2'),
+    src: local('Gentium Plus'),
+         url('../../shared/webfonts/gentiumplus-r-webfont.woff2') format('woff2'),
          url('../../shared/webfonts/gentiumplus-r-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 	}
 @font-face {
     font-family: 'gentiumpluswf';
-    src: url('../../shared/webfonts/gentiumplus-i-webfont.woff2') format('woff2'),
+    src: /* Local commented out until the feature settings can be made to work */
+         url('../../shared/webfonts/gentiumplus-i-webfont.woff2') format('woff2'),
          url('../../shared/webfonts/gentiumplus-i-webfont.woff') format('woff');
     font-weight: normal;
     font-style: italic;
+	font-feature-settings: "ss05" 1;
 	}
 
 
@@ -48,6 +51,7 @@ a { font-weight: 400; }
 .ipa { 
 	font-family: gentiumpluswf, doulosipa,"Gentium Plus", "Lucida Sans Unicode", "Lucida Grande", 'lucida sans', "helvetica", sans-serif; 
 	font-size: 1.2em; /* this sets the size relative to the surrounding ordinary Latin text */ 
+    font-style: italic;
 	}
 .ipa:before { 
 	content: '⌈'; 
@@ -275,6 +279,22 @@ summary {
 .localname, .transliteratedname { 
     margin-inline-start: 1rem;
     margin-inline-end: 1rem;
+    }
+.charExample .trans::after, .transc::after {
+    content: '>';
+    font-family: gentiumpluswf;
+    margin-right: 0.2em;
+    margin-left: 1.5px;
+    color: #aaa;
+    font-style: italic;
+    }
+.charExample .trans::before, .transc::before {
+    content: '<';
+    font-family: gentiumpluswf;
+    margin-right: 1.5px;
+    margin-left: 0.2em;
+    color: #aaa;
+    font-style: italic;
     }
 .trans, .transc { 
 	font-family: gentiumpluswf, "Doulos SIL", "Gentium Plus", Gentium, "Lucida Sans Unicode", "Lucida Grande", 'lucida sans', "helvetica neue", sans-serif; 
