@@ -131,12 +131,17 @@ function findWords (reg) {
 
         out += '<td class="tr">'+itemArray[IPA]+'</td>'
 
-		out += '<td class="tr"> '+itemArray[TRANS]+' </td>'
+		out += `<td class="tr"> ${ itemArray[TRANS] }</td>`
 
-        if (terms.thereAreNotes) out += '<td class="noteCol">'+itemArray[NOTES]+'</td>'
+        if (terms.thereAreNotes) out += `<td class="noteCol">${ itemArray[NOTES] }</td>`
 
-		out += '<td class="noteCol">&lt;span class="eg" lang="'+terms.language+'"&gt;'+itemArray[TERM].trim()+'&lt;/span&gt;</td>'
-		out += '</tr>\n'
+		out += `<td class="noteCol">&lt;span class="eg`
+        if (itemArray[IPA].trim() == '' && itemArray[TRANS].trim() != '') out += ' transc'
+        out += `" lang="${ terms.language }"&gt;${ itemArray[TERM].trim() }&lt;/span&gt;</td>`
+        
+		//out += '<td class="noteCol">&lt;span class="eg" lang="'+terms.language+'"&gt;'+itemArray[TERM].trim()+'&lt;/span&gt;</td>'
+
+        out += '</tr>\n'
         }
     return out
 	}
