@@ -85,4 +85,10 @@ reflist = {
 
 
 
-// <a class="fn">ws,#tones</a>
+
+
+scriptLanguageList = {
+ban:{name:"Balinese"},
+kaw:{name:"Kawi"},
+sas:{name:"Sasak"},
+}
