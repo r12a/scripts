@@ -79,4 +79,21 @@ reflist = {
 
 
 
-// <a class="fn">ws,#tones</a>
+
+
+scriptLanguageList = {
+cmo:{name:"Mnong, Central"},
+jra:{name:"Jarai"},
+krv:{name:"Kavet"},
+khm:{name:"Khmer"},
+krr:{name:"Krung"},
+kdt:{name:"Kuy"},
+brb:{name:"Lave"},
+kxm:{name:"Khmer, Northern"},
+tpu:{name:"Tampuan"},
+}
+
+
+
+
+
