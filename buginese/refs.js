@@ -50,3 +50,17 @@ reflist = {
 }
 
 
+
+
+
+scriptLanguageList = {
+bug:{name:"Buginese"},
+mak:{name:"Makasar"},
+mdr:{name:"Mandar"},
+}
+
+
+
+
+
+

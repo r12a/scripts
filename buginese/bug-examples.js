@@ -5,12 +5,12 @@ autoExpandExamples.bug = `
 
 ᨀᨆᨗᨔᨗ|Thursday|kɑmɪːsɪ|kamisi
 ᨄᨉᨚᨕᨂᨛ|prayers||paddoangeng
-ᨄᨒᨚᨈᨑ|lontara expert|paʔlontaraʔ|
+ᨄᨒᨚᨈᨑ|lontara expert|paʔlontaraʔ|pa'lontara
 ᨄᨗᨈᨘ|seven|
 ᨅᨔ ᨕᨘᨁᨗ|Buginese language||basa ugi|
 ᨅᨗᨌᨑ|language||bicara
 ᨆᨌ|clever, tiger||maca
-ᨆᨑᨙᨉᨀ|free|
+ᨆᨑᨙᨉᨀ|free||maradeka
 ᨉᨘᨓ|two|dʊa|dua
 ᨍᨘᨆ|Friday|juma
 ᨒᨄ|lava||lapa
