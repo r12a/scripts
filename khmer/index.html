@@ -896,19 +896,7 @@
 <figcaption>A circumgraph vowel-sign (in the light colour), surrounding both the <span class="transc">k</span> and the <span class="transc">r</span> (midtone colour) after which it is pronounced in the word <span class="eg inline" lang="km">គ្រឿង</span>.</figcaption>
 </figure>
 
-
-
-<p><span class="leadin">Encoding.</span> Two of these circumgraphs  can be written as a single character, or as two, eg. </p>
-<ol>
-<li><span class="codepoint" translate="no"><span lang="km">&#x17BE;</span> [<a href="/scripts/khmer/block#char17BE"><span class="uname">U+17BE KHMER VOWEL SIGN OE</span></a></span> could be written as:<br>
-<span class="codepoint" translate="no"><span lang="km">&#x17C1;&#x17B8;</span> [<a href="/scripts/khmer/block#char17C1"><span class="uname">U+17C1 KHMER VOWEL SIGN E</span></a> + <a href="/scripts/khmer/block#char17B8"><span class="uname">U+17B8 KHMER VOWEL SIGN II</span></a>]</span>
-</li>
-<li><span class="codepoint" translate="no"><span lang="km">&#x17C4;</span> [<a href="/scripts/khmer/block#char17C4"><span class="uname">U+17C4 KHMER VOWEL SIGN OO</span></a>]</span> could be written as:<br><span class="codepoint" translate="no"><span lang="km">&#x17C1;&#x17B6;</span> [<a href="/scripts/khmer/block#char17C1"><span class="uname">U+17C1 KHMER VOWEL SIGN E</span></a> + <a href="/scripts/khmer/block#char17B6"><span class="uname">U+17B6 KHMER VOWEL SIGN AA</span></a>]</span>
-</li>
-</ol>
-<p class="info">For Khmer, single and multiple code point realisations do not normalise to be the same in NFC or NFD, so you are creating different content by using one approach or the other. This may affect various operations on the text. It is therefore better to stick with one representation</p>
-<p>The Unicode Standard surprisingly makes no comment on this, although it does for other scripts, where it encourages use of the  precomposed, single code point.</p>
-<p>Whichever approach is used, the vowel-signs must be typed and stored after the consonant characters they surround, and in  left to right order.</p>
+<p>See also <a class="secref">encoding_choices</a>.</p>
 </section>
 
 
@@ -2405,6 +2393,40 @@
 </section>
 </section>
 
+
+
+
+
+
+
+
+<section id="encoding_choices">
+<h2>Encoding choices</h2>
+
+<p>In some fonts, two circumgraphs look the same whether they are written as a single character, or as two.</p>
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Recommended</th>
+<th scope="col">Not recommended</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="codepoint" translate="no"><bdi lang="km">&#x17BE;</bdi> [<a href="/scripts/khmer/block#char17BE"><span class="uname">U+17BE KHMER VOWEL SIGN OE</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><bdi lang="km">&#x17C1;&#x17B8;</bdi> [<a href="/scripts/khmer/block#char17C1"><span class="uname">U+17C1 KHMER VOWEL SIGN E</span></a> + <a href="/scripts/khmer/block#char17B8"><span class="uname">U+17B8 KHMER VOWEL SIGN II</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><bdi lang="km">&#x17C4;</bdi> [<a href="/scripts/khmer/block#char17C4"><span class="uname">U+17C4 KHMER VOWEL SIGN OO</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><bdi lang="km">&#x17C1;&#x17B6;</bdi> [<a href="/scripts/khmer/block#char17C1"><span class="uname">U+17C1 KHMER VOWEL SIGN E</span></a> + <a href="/scripts/khmer/block#char17B6"><span class="uname">U+17B6 KHMER VOWEL SIGN AA</span></a>]</span></td>
+</tr>
+</tbody>
+</table>
+
+
+<p class="info">For Khmer, single and multiple code point realisations do not normalise to be the same in NFC or NFD, so you are creating different content by using one approach or the other. This may affect various operations on the text, and it is therefore better to stick with one representation. The Unicode Standard surprisingly makes no comment on this, although it does for other scripts, where it encourages use of the  precomposed, single code point.</p>
+<p class="info">Also, some fonts may not  display the decomposed sequences correctly.</p>
+</section>
 
 
 
