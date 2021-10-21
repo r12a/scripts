@@ -169,3 +169,26 @@ reflist = {
 
 
 
+
+
+scriptLanguageList = {
+bfq:{name:"Badaga"},
+xub:{name:"Betta Kurumba"},
+iru:{name:"Irula"},
+kfi:{name:"Kannada Kurumba"},
+kfe:{name:"Kota (India)"},
+muv:{name:"Muthuvan"},
+pcg:{name:"Paniya"},
+saz:{name:"Saurashtra"},
+ta:{name:"Tamil"},
+tcx:{name:"Toda"},
+vaa:{name:"Vaagri Booli"},
+ctt:{name:"Wayanad Chetti"},
+}
+
+
+
+
+
+
+
