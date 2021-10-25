@@ -93,9 +93,61 @@ reflist = {
 "title":"Hebrew alphabet",
 },
 
+"ww": {
+"url":"https://en.wikipedia.org/wiki/Waw_(letter)#Pronunciation_in_Modern_Hebrew",
+"authors": "Wikipedia",
+"title":"Waw (letter)",
+},
+
 
 }
 
 
 
-// <a class="fn">ws,#tones</a>
+
+
+
+scriptLanguageList = {
+hbo:{name:"Hebrew, Ancient"},
+bhh:{name:"Bukharic"},
+ydd:{name:"Yiddish, Eastern"},
+heb:{name:"Hebrew"},
+huy:{name:"Hulaulá"},
+jrb:{name:"Judeo-Arabic"},
+jbe:{name:"Judeo-Berber"},
+yhd:{name:"Arabic, Judeo-Iraqi"},
+itk:{name:"Judeo-Italian"},
+aju:{name:"Arabic, Judeo-Moroccan"},
+jpr:{name:"Judeo-Persian"},
+jdt:{name:"Judeo-Tat"},
+yud:{name:"Arabic, Judeo-Tripolitanian"},
+ajt:{name:"Arabic, Judeo-Tunisian"},
+jye:{name:"Arabic, Judeo-Yemeni"},
+lad:{name:"Ladino"},
+trg:{name:"Lishán Didán"},
+lsd:{name:"Lishana Deni"},
+aij:{name:"Lishanid Noshan"},
+sam:{name:"Aramaic, Samaritan"},
+smp:{name:"Samaritan"},
+tgk:{name:"Tajik"},
+yih:{name:"Yiddish, Western"},
+yid:{name:"Yiddish"},
+}
+
+
+
+function removeVowels (str) {
+// removes the nikkud etc from the text in the text area
+
+var vowels =  ['ִ','ֻ','ְ','ֱ','ֵ','ֶ','ֳ','ֹ','ֺ','ֲ','ַ','ָ', 'ּ']
+
+for (var i=0;i<vowels.length;i++) {
+	var re = new RegExp(vowels[i],'g')
+	str = str.replace(re,'')
+	}
+
+return str
+}
+
+
+
