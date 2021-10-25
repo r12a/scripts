@@ -131,9 +131,20 @@ function findWords (reg) {
 
         out += '<td class="tr">'+itemArray[IPA]+'</td>'
 
-		out += `<td class="tr"> ${ itemArray[TRANS] }</td>`
+        // if this is an abjad, check for vowelled alternatives
+        if (itemArray[TRANS].match('#')) {
+            var link = itemArray[TRANS].replace(/#/g,'|')
+            out += `<td class="tr"><a href="${ terms.language }_vocab?q=${ link }">${ link }</a></td>`
+            }
+        else out += `<td class="tr"> ${ itemArray[TRANS] }</td>`
 
-        if (terms.thereAreNotes) out += `<td class="noteCol">${ itemArray[NOTES] }</td>`
+        if (terms.thereAreNotes) { //out += `<td class="noteCol">${ itemArray[NOTES] }</td>`
+        	if (itemArray[NOTES].match('#')) {
+            	var link = itemArray[NOTES].replace(/#/g,'|')
+            	out += `<td class="noteCol"><a href="${ terms.language }_vocab?q=${ link }">${ link }</a></td>`
+            	}
+        	else out += `<td class="noteCol"> ${ itemArray[NOTES] }</td>`
+        	}
 
 		out += `<td class="noteCol">&lt;span class="eg`
         if (itemArray[IPA].trim() == '' && itemArray[TRANS].trim() != '') out += ' transc'
