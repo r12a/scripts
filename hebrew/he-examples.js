@@ -689,7 +689,8 @@ autoExpandExamples.he = `
 אנגולה||
 אנגלי||
 אנגליה||
-אנגלית||
+אנגלית|English|anɡˈlit|ang'lít|אַנְגְּלִית
+אַנְגְּלִית|English|anɡˈlit|ang'lít|אנגלית
 אנגסטרום||
 אנדוסימביוזה||
 אנדורה||
@@ -6959,7 +6960,7 @@ autoExpandExamples.he = `
 ע״פ||
 ע״ש||
 פ"נ||
-פּינגּוין|penguin|ˈpinɡwin|פִּינְגְּוִין
+פּינגּוין|penguin|ˈpinɡwin||פִּינְגְּוִין
 פה|here; mouth; musical note|||פֹּה#פֶּה#פָה
 פֹּה|here|ˈpɔ|pó|פה
 פֶּה|mouth||pe|פה
@@ -8162,7 +8163,8 @@ autoExpandExamples.he = `
 רטרואקטיבי||
 ריאד||
 ריאה||
-ריאיון||
+ריאיון|interview|reʔajon|re'ayon|רֵאָיוֹן
+רֵאָיוֹן|interview|reʔajon|re'ayon|ריאיון
 ריאליטי||
 ריב||
 ריבה||
@@ -8671,7 +8673,7 @@ autoExpandExamples.he = `
 שם פעולה||
 שם פרטי||
 שם תואר||
-שם|name; there; to put, turn on; to assess||שֵׁם#שָׁם#שָׂם#שָׁם
+שם|to put, turn on|sam|sám|שֵׁם#שָׁם#שָׂם#שָׁם
 שֵׁם|(given) name||shém
 שָׁם|there|ʃam|shám
 שָׂם|to put, turn on|sam|sám
