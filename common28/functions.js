@@ -1132,13 +1132,15 @@ function findIPA () {
 
 
 
-function makeFootnoteIndex () {
+function makeFootnoteIndex (charVal) {
 	// when you click on a character in a .listItem or .codepoint this creates a set of links at the bottom
     // of the page to other locations where that character is mentioned
     // it also highlights those instances
 
+    var phoneSet
 	// create a set of the character(s) being looked up
-	const phoneSet = new Set(this.textContent.replace(/-/g,'').split(' '))
+    if (typeof charVal === 'string') phoneSet = new Set(charVal.replace(/-/g,'').split(' '))
+	else phoneSet = new Set(this.textContent.replace(/-/g,'').split(' '))
 	//console.log('search for:',phoneSet)
 
 	// identify locations in svg and tables that should not count
