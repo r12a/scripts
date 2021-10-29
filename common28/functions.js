@@ -95,6 +95,22 @@ function setFindIPA () {
 
 
 
+function setFindIPA () { // test extension to map stuff
+	// makes ipa characters in sounds charts indicate locations they are used
+    if (trace) console.log('setFindIPA(',') Make ipa characters in sounds charts indicate locations they are used')
+
+	var listItems = document.querySelectorAll('.codepoint span, .codepoint bdi')
+	for (let i=0;i<listItems.length;i++) {
+        if (listItems[i].parentNode.classList.contains('codepoint')) listItems[i].onclick = makeFootnoteIndex
+        }
+	var listItems = document.querySelectorAll('.ipaTable .ipa, .ipaTable .allophone')
+	for (let i=0;i<listItems.length;i++) listItems[i].onclick = findIPA
+	var listItems = document.querySelectorAll('.ipaSVG .ipa, .ipaSVG .allophone')
+	for (let i=0;i<listItems.length;i++) listItems[i].onclick = findIPA
+	}
+
+
+
 function shareCodeLinks (charList, script, charApp) {
     // provides some of the repetitive code for listAllIndexCharacters
     
@@ -514,7 +530,6 @@ function makeSidePanel (id, otherlinks) {
 
 function makeTables (lang) {
     if (trace) console.log('makeTables(',lang,') Create the lists of characters in yellow, etc. boxes')
-    // create the lists of characters in yellow, etc. boxes
 
     if (typeof window.spreadsheet == 'undefined') {
 		console.log("Spreadsheet undefined.")
@@ -837,6 +852,7 @@ function initialiseShowNames (node, base, target) {
 	var listItems = document.querySelectorAll(".listItem")
 	for (let i=0;i<listItems.length;i++) {
 		listItems[i].addEventListener('click', showCharDetailsEvent)
+		listItems[i].addEventListener('click', makeFootnoteIndex)
 		//listItems[i].addEventListener('click', showCharDetailsInPanel)
 		//listItems[i].addEventListener('mouseover', showCharDetailsInPanel)
 		listItems[i].addEventListener('mouseover', showCharDetailsEvent)
@@ -883,7 +899,7 @@ function showCharDetailsEvent (evt) {
     var links = table.querySelectorAll('.codepoint a')
 	for (i=0;i<links.length;i++) links[i].onclick = showCharDetailsInPanel
     initialiseShowNames(table, window.blockDir, 'c')
-	}
+    }
 
 
 
@@ -1096,7 +1112,10 @@ function findIPA () {
 	// report the results
 	if (document.getElementById('phoneLinks')) {
 		var out = counter+' matches found in these sections: '
-		for (let i=0;i<leanLinks.length;i++) out += '<a href="#'+leanLinks[i]+'">'+leanLinks[i]+'</a> '
+		for (let i=0;i<leanLinks.length;i++) {
+            if (i>0) out += ' • '
+            out += '<a href="#'+leanLinks[i]+'">'+leanLinks[i]+'</a> '
+            }
 		document.getElementById('phoneLinks').style.display = 'block'
 		document.getElementById('phoneLinks').innerHTML = out+' &nbsp;&nbsp;<span style="cursor:pointer" onclick="this.parentNode.style.display = \'none\'">X</span>&nbsp;&nbsp;'
 		}
@@ -1105,6 +1124,85 @@ function findIPA () {
 		else alert('No matches found.')
 		}
 	}
+
+
+
+
+
+
+
+
+function makeFootnoteIndex () {
+	// when you click on a character in a .listItem or .codepoint this creates a set of links at the bottom
+    // of the page to other locations where that character is mentioned
+    // it also highlights those instances
+
+	// create a set of the character(s) being looked up
+	const phoneSet = new Set(this.textContent.replace(/-/g,'').split(' '))
+	//console.log('search for:',phoneSet)
+
+	// identify locations in svg and tables that should not count
+	var svgArray = document.querySelectorAll('.ipaSVG .ipa, .ipaSVG .allophone',)
+	var tableArray = document.querySelectorAll('.ipaTable .ipa, .ipaTable .allophone')
+	var screenedItems = new Set([ ...svgArray, ...tableArray ])
+	//console.log('screenedItems',screenedItems)
+
+	// collect all the .listItem & .codepoint elements
+	var listItems = document.querySelectorAll('.listItem, .codepoint span, .codepoint bdi')
+	var counter = 0
+	var links = []
+	for (var k=0;k<listItems.length;k++) listItems[k].style.backgroundColor = 'transparent'
+	
+	for (var i=0;i<listItems.length;i++) {
+		var listPhones = listItems[i].textContent.split(' ')
+		for (let p=0;p<listPhones.length;p++) {
+			//listItems[i].style.backgroundColor = 'transparent'
+			if ((! screenedItems.has(listItems[i])) && phoneSet.has(listPhones[p].replace(/-/g,''))) {
+				listItems[i].style.backgroundColor = '#ffa442ad'
+				listItems[i].style.borderRadius = '5px'
+				
+				// gather a list of links to the found items
+				var ptr = listItems[i]
+				//console.log(listItems[i])
+				//while (ptr.parentNode.id == '') ptr = ptr.parentNode
+				while (ptr.parentNode.nodeName == 'FIGURE' || ptr.parentNode.id == '') ptr = ptr.parentNode
+				links.push(ptr.parentNode.id)
+				
+				counter++
+				}
+			}
+		}
+	
+	// remove redundancy from the links array
+	const uniqueLinks = new Set(links)
+	var leanLinks = [...uniqueLinks]
+	//console.log(leanLinks)
+	
+	// report the results
+	if (document.getElementById('phoneLinks')) {
+		var out = counter+' matches found in: '
+		for (let i=0;i<leanLinks.length;i++) {
+            if (i>0) out += ' • '
+            out += '<a href="#'+leanLinks[i]+'">'+leanLinks[i]+'</a> '
+            }
+		document.getElementById('phoneLinks').style.display = 'block'
+		document.getElementById('phoneLinks').innerHTML = out+` &nbsp;&nbsp;<span style="cursor:pointer" onclick="this.parentNode.style.display = 'none'; clearFootnoteIndexHighlights()">X</span>&nbsp;&nbsp;`
+		}
+	else {
+		if (counter > 0) alert(counter+' matches found in these sections: '+leanLinks+'.')
+		else alert('No matches found.')
+		}
+	}
+
+
+
+function clearFootnoteIndexHighlights () {
+    // removes the highlighting associated with the footnote index links
+    // called when the footnote index box is closed
+	var listItems = document.querySelectorAll('.listItem, .codepoint span, .codepoint bdi')
+	for (var k=0;k<listItems.length;k++) listItems[k].style.backgroundColor = 'transparent'
+    }
+
 
 /*
 function copyToClipboard (node) {
