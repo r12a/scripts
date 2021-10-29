@@ -1137,6 +1137,67 @@ function makeFootnoteIndex (charVal) {
     // of the page to other locations where that character is mentioned
     // it also highlights those instances
 
+    var itemToFind
+	// create a regex of the character(s) being looked up
+    if (typeof charVal === 'string') itemToFind = new RegExp(charVal, 'g')
+    else itemToFind = new RegExp(this.textContent, 'g')
+	//console.log('search for:',itemToFind)
+
+	// collect all the .listItem & .codepoint elements
+	var possibleMatches = document.querySelectorAll('.listItem, .codepoint span, .codepoint bdi')
+	var counter = 0
+	var links = []
+    
+    // clear any existing highlights
+	for (var k=0;k<possibleMatches.length;k++) possibleMatches[k].style.backgroundColor = 'transparent'
+	
+    // check for matches and add highlights etc
+	for (var i=0;i<possibleMatches.length;i++) {
+        if (possibleMatches[i].parentNode.nodeName !== 'A' && itemToFind.test(possibleMatches[i].textContent)) {
+            possibleMatches[i].style.backgroundColor = '#ffa442ad'
+            possibleMatches[i].style.borderRadius = '5px'
+            
+            // gather a list of links to the found items
+            var ptr = possibleMatches[i]
+            //console.log(possibleMatches[i])
+            while (ptr.parentNode.nodeName == 'FIGURE' || ptr.parentNode.id == '') ptr = ptr.parentNode
+            links.push(ptr.parentNode.id)
+
+            counter++
+            }
+		}
+	
+	// remove redundancy from the links array
+	const uniqueLinks = new Set(links)
+	var leanLinks = [...uniqueLinks]
+	//console.log(leanLinks)
+	
+	// report the results
+	if (document.getElementById('phoneLinks')) {
+		var out = counter+' matches found in: '
+		for (let i=0;i<leanLinks.length;i++) {
+            if (i>0) out += ' • '
+            out += '<a href="#'+leanLinks[i]+'">'+leanLinks[i]+'</a> '
+            }
+		document.getElementById('phoneLinks').style.display = 'block'
+		document.getElementById('phoneLinks').innerHTML = out+` &nbsp;&nbsp;<span style="cursor:pointer" onclick="this.parentNode.style.display = 'none'; clearFootnoteIndexHighlights()">X</span>&nbsp;&nbsp;`
+		}
+	else {
+		if (counter > 0) alert(counter+' matches found in these sections: '+leanLinks+'.')
+		else alert('No matches found.')
+		}
+	}
+
+
+
+
+
+
+function makeFootnoteIndexOLD (charVal) {
+	// when you click on a character in a .listItem or .codepoint this creates a set of links at the bottom
+    // of the page to other locations where that character is mentioned
+    // it also highlights those instances
+
     var phoneSet
 	// create a set of the character(s) being looked up
     if (typeof charVal === 'string') phoneSet = new Set(charVal.replace(/-/g,'').split(' '))
