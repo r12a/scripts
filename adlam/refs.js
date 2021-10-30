@@ -1,5 +1,21 @@
 reflist = {
 
+/*
+"auth_initials": {
+"authors": "Sort by family name of first contributor",
+"title":"The World's Writing Systems",
+"sub": "subtitle",
+"date": "1996",
+"retr": "May 2021",
+"publisher":"Oxford University Press",
+"isbn":"0-19-507993-0",
+"pages": "xxx",
+"url":"refs",
+"lang": new Set(['ru']),
+"reviewed":false
+},
+*/
+
 
 "yi": {
 "authors": "Abdoulaye &amp; Ibrahima Barry, Mark Jamara, Neil Patel",
@@ -61,6 +77,17 @@ reflist = {
 "authors": "ScriptSource",
 "title":"Adlam",
 "url":"http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&amp;uid=aggc6af8cc",
+},
+
+
+"sow": {
+"authors": "𞤀𞤴𞥃𞤢 𞤅𞤮𞥅 (Aysha Sow)",
+"title":"Adlam Alphabet Learning Guide",
+"sub": "In ten lessons",
+"date": "2021",
+"retr": "Oct 2021",
+"url":"https://tabalde.com/wp-content/uploads/2021/04/ADLAM-ALPHABET-LEARNING-GUIDE.pdf",
+"reviewed":false
 },
 
 "u": {

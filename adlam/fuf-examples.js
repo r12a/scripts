@@ -70,8 +70,8 @@ autoExpandExamples.fuf = `
 𞤦𞤵𞥅𞤦𞤮𞤤⹁‏ 𞤶𞤢𞤲𞤺𞤮𞤤|cold|buːbɔl,‏ d͡ʒanɡɔl|buubol,‏ jangol
 𞤦𞤵𞥅𞤼𞤫𞥅𞤣𞤫|swell|buːtɛːdɛ|buuteede
 𞤧𞤢𞤦𞤵|because|sabu
-𞤧𞤢𞤳𞤫|warehouse
-𞤧𞤢𞤳𞥆𞤫|leather worker
+𞤧𞤢𞤳𞤫|warehouse||sake
+𞤧𞤢𞤳𞥆𞤫|leather worker||sakke
 𞤧𞤢𞥄𞥋𞤭|hour|saːʔi|saa’i
 𞤧𞤫𞤺𞤫𞤲𞤫|fingernail|sɛɡɛnɛ|segene
 𞤧𞤫𞥅𞤣𞤢|few|sɛːda|seeda
@@ -142,6 +142,7 @@ autoExpandExamples.fuf = `
 𞤲𞥋𞤶𞤢𞤲𞥋𞤣𞤭|iron|ᶮd͡ʒaⁿdi|njandi
 𞤲𞥋𞤺𞤢𞤪𞤢|indigo|ᵑɡara|ngara
 𞤲𞥋𞤺𞤵𞤪𞤫|skin|ᵑɡurɛ|ngure
+𞤲𞤺𞤵𞤪𞤫|skin|ᵑɡurɛ|ngure
 𞤳𞤢𞤷𞥆𞤵|lime|katt͡ʃu|kaccu
 𞤳𞤫𞤧𞤮|new|kɛsɔ|keso
 𞤳𞤮𞤧𞤢𞤥|milk|kɔsam|kosam
@@ -238,6 +239,59 @@ autoExpandExamples.fuf = `
 𞥞 𞤢𞤤𞤢𞥄 !|no!
 𞥟 𞤢𞤤𞤢𞥄 ؟|no?
 𞤗𞤵𞤪𞥇𞤢𞤲|Quran|qurʔan
+
+
+𞤢𞥄𞤥𞤵𞤺𞤮𞤤|to be lazy|aːmugɔl|aamugol
+𞤢𞤥𞤵𞤺𞤮𞤤|to dance|amugɔl|amugol
+𞤲𞥋𞤶𞤢𞥄𞤪𞤫|sand|ⁿd͡ʒaːrɛ|njaare
+𞤲𞤶𞤢𞥄𞤪𞤫|sand|ⁿd͡ʒaːrɛ|njaare
+𞤩𞤫𞤴𞤲𞤺𞤵|||
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
