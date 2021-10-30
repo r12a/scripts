@@ -1,6 +1,23 @@
 reflist = {
 
 
+/*
+"auth_initials": {
+"authors": "Sort by family name of first contributor",
+"title":"The World's Writing Systems",
+"sub": "subtitle",
+"date": "1996",
+"retr": "May 2021",
+"publisher":"Oxford University Press",
+"isbn":"0-19-507993-0",
+"pages": "xxx",
+"url":"refs",
+"lang": new Set(['ru']),
+"reviewed":false
+},
+*/
+
+
 "c": {
 "url":"https://unicode-org.github.io/cldr-staging/charts/latest/summary/or.html",
 "authors": "Unicode Consortium",
@@ -31,6 +48,15 @@ reflist = {
 "title":"International Symposium on Indic Scripts, Past & Future",
 "pages":"143-153",
 "publisher":"Research Institute for the Languages and Cultures of Asia and Africa, Tokyo University of Foreign Studies",
+"reviewed":false
+},
+
+"loc": {
+"authors": "Library of Congress",
+"title":"Oriya",
+"date": "1996",
+"retr": "Oct 2021",
+"url":"https://www.loc.gov/catdir/cpso/romanization/oriya.pdf",
 "reviewed":false
 },
 
@@ -101,4 +127,34 @@ reflist = {
 
 
 
-// <a class="fn">ws,#tones</a>
+
+scriptLanguageList = {
+gbj:{name:"Bodo Gadaba"},
+bdv:{name:"Bodo Parja"},
+bfw:{name:"Bondo"},
+dwk:{name:"Dawik"},
+dso:{name:"Desiya"},
+pci:{name:"Duruwa"},
+gaq:{name:"Gara'"},
+hoc:{name:"ho"},
+jun:{name:"Juang"},
+xis:{name:"Kisan"},
+kff:{name:"Koya"},
+kyw:{name:"Kudmali"},
+kxu:{name:"Kui"},
+kxv:{name:"Kuvi"},
+zrg:{name:"Mirgan"},
+unr:{name:"Mundari"},
+or:{name:"Odia"},
+peg:{name:"Pengo"},
+gdb:{name:"Pottangi Ollar Gadaba"},
+spv:{name:"Sambalpuri"},
+sat:{name:"Santhali"},
+srb:{name:"Sora"},
+}
+
+
+
+
+
+
