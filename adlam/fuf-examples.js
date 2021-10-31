@@ -246,6 +246,7 @@ autoExpandExamples.fuf = `
 𞤲𞥋𞤶𞤢𞥄𞤪𞤫|sand|ⁿd͡ʒaːrɛ|njaare
 𞤲𞤶𞤢𞥄𞤪𞤫|sand|ⁿd͡ʒaːrɛ|njaare
 𞤩𞤫𞤴𞤲𞤺𞤵|||
+𞤧𞤢𞤯𞤼𞤵𞤺𞤮𞤤|to be expensive||sattugol
 
 
 
