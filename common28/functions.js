@@ -1258,8 +1258,8 @@ function makeFootnoteIndex (charVal) {
 
 	// create a regex of the character(s) being looked up
     var incomingValue, itemToFind
-    if (typeof charVal === 'string') incomingValue = charVal
-    else incomingValue = this.textContent
+    if (typeof charVal === 'string') incomingValue = charVal.replace(/◌/g,'')
+    else incomingValue = this.textContent.replace(/◌/g,'')
     itemToFind = new RegExp(makeSafeRegex(incomingValue), 'g')
     //console.log('search for:',itemToFind)
 
@@ -1476,6 +1476,20 @@ function setTranslitToggle () {
     a.appendChild(document.createTextNode('Diacritics'))
     a.href = 'https://en.wikipedia.org/wiki/International_Phonetic_Alphabet#Diacritics_and_prosodic_notation'
     a.target = "_blank"
+    div.appendChild(a)
+
+	checkboxList.appendChild(div)
+
+	div = document.createElement('div')
+    var img = document.createElement('img')
+    img.src = '../../shared/images/up.png'
+    img.style.marginBlockStart = '2rem'
+    img.alt = 'TOC.'
+    img.title = 'Jump to table of contents.'
+
+    var a = document.createElement('a')
+    a.appendChild(img)
+    a.href = '#header-boilerplate'
     div.appendChild(a)
 
 	checkboxList.appendChild(div)
