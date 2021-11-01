@@ -515,6 +515,12 @@ details {
     text-align: left;
     display: block;
 	}
+.characterBox.caps::before {
+    display: none;
+    }
+.caps {
+    margin-block-start: -1.5em;
+    }
 .auxiliaryBox::before {
     content: "Infrequent";
     font-size: 60%;
@@ -803,7 +809,14 @@ a:visited {
 .mapItem { display: flex; flex-direction: row; flex-wrap: nowrap; width: 100%; border-bottom: 1px solid #ddd; }
 .mapItem:last-child { border: 0; }
 /*.mapItem div:last-child { border: 1px solid #ccc; border-bottom: 0;  width: 100%; }*/
-.mapItem .posn { font-weight: bold; font-size: 70%; width: 2em; text-align: end; padding: 1em .5em 0 0; }
+.mapItem .posn {
+    font-weight: bold;
+    font-size: 70%;
+    width: 2em;
+    text-align: end;
+    padding: 1em .5em 0 0;
+    color: coral;
+    }
 .mapItem p { margin: .5em; }
 .mapItem div:first-child { width: 3em; padding-top: .5em; }
 .map .mapItem:last-child div:last-child { border-bottom: 0; }
@@ -821,12 +834,12 @@ a:visited {
 .mapItem .posn {
 	min-width: 2em;
 	}
-.mapItem .uncommon {
-    color: #aaa;
+.mapItem.uncommon .phone, .mapItem.uncommon .posn {
     color: #A27842;
-    white-space: nowrap;
+    /*white-space: nowrap;
+    background-color: snow;*/
 	}
-.mapItem .uncommon::after {
+.mapItem.uncommon .phone::after {
     content: 'infrequent';
     display: flex;
     flex-direction: column;
