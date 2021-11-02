@@ -148,7 +148,9 @@ function findWords (reg) {
 
 		out += `<td class="noteCol">&lt;span class="eg`
         if (itemArray[IPA].trim() == '' && itemArray[TRANS].trim() != '') out += ' transc'
-        out += `" lang="${ terms.language }"&gt;${ itemArray[TERM].trim() }&lt;/span&gt;</td>`
+        out += `" lang="${ terms.language }"`
+        if (terms.direction !== '') out += ` dir="${ terms.direction }"`
+        out += `&gt;${ itemArray[TERM].trim() }&lt;/span&gt;</td>`
         
 		//out += '<td class="noteCol">&lt;span class="eg" lang="'+terms.language+'"&gt;'+itemArray[TERM].trim()+'&lt;/span&gt;</td>'
 
