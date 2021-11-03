@@ -8,7 +8,8 @@
 
 autoExpandExamples.pes = `
 
-من|I (1sg)|mæn|man
+مَن|I (1sg)|mæn|man|من
+من|I (1sg)|mæn|man|مَن
 تو|you (2sg)|to|to
 او|he, she, it (3sg)|ˈuː|u
 ما|we (1pl)|mɒː|mâ
@@ -27,8 +28,8 @@ autoExpandExamples.pes = `
 نِـ|not|ne|ne
 نَـ|not|næ|na
 همه|all|hæme|hame
-خیلی|many|xejliː|xeyli
-خَیلی|many|xejliː|xeyli
+خیلی|many|xejliː|xeyli|خَیلی
+خَیلی|many|xejliː|xeyli|خیلی
 بسیاری|many|besjɒːriː|besyâri
 بعضی|some|bæʔziː|ba'zi
 چند|some|t͡ʃænd|čand
@@ -36,8 +37,8 @@ autoExpandExamples.pes = `
 اندکی|few|'ændækiː|andaki
 دیگر|other|diːgær|digar
 یک|one|jek|yek
-دو|two|do|do
-دُو|two|do|do
+دو|two|do|do|دُو
+دُو|two|do|do|دو
 سه|three|se|se
 چهار|four|t͡ʃhɒːr|čhâr
 پنج|five|pændʒ|panj
@@ -69,8 +70,8 @@ autoExpandExamples.pes = `
 سگ|dog|sæg|sag
 شپش|louse|ʃepeʃ|šepeš
 مار|snake|mɒːr|mâr
-کرم|worm|kerm|kerm
-کِرم|worm|kerm|kerm
+کرم|worm|kerm|kerm|کِرم
+کِرم|worm|kerm|kerm|کرم
 درخت|tree|deræxt|deraxt
 جنگل|forest|dʒæŋæl|jangal
 چوب|stick|t͡ʃuːb|čub
@@ -251,8 +252,8 @@ autoExpandExamples.pes = `
 اگر|if|ægær|agar
 چون|because|t͡ʃon|čon
 نام|name|nɒːm|nâm
-اسب|horse|ʔæsb
-اَسب|horse|ʔæsb
+اسب|horse|ʔæsb|asb|اَسب
+اَسب|horse|ʔæsb|asb|اسب
 
 اسکدار||
 اسکندر||
@@ -352,8 +353,8 @@ autoExpandExamples.pes = `
 امضاء|signature|emzɒː
 املای نانوشته غلط ندارد|an unwritten dictation has no errors|(ʔ)emlɒːje nɒːnəveʃte ɣælæt nædɒːɾæd
 امکان||
-امید|hope|omiːd
-اُمید|hope|omiːd
+امید|hope|omiːd|omêd|اُمید
+اُمید|hope|omiːd|omêd|امید
 امیدوار||
 امیدیار||
 امین||
@@ -419,12 +420,12 @@ autoExpandExamples.pes = `
 اوان|time, season|ɒːˈvɒm
 آوام|time, season|ɒːˈvɒm
 اورانیوم|uranium|(ʔ)oɾɒniˈjom
-اوردن|to bring (colloq)|ovordæn
-اُوُردَن|to bring (colloq)|ovordæn
+اوردن|to bring (colloq)|ovordæn|âvardan|اُوُردَن
+اُوُردَن|to bring (colloq)|ovordæn|âvardan|اوردن
 اورشلیم|Jerusalem|ʔoɾʃæˈliːm
 اورمزد|Ahura Mazda|uɾˈmæzd
-اولی|the former, first|ævvæˈliː
-اوّلی|the former, first|ævvæˈliː
+اولی|the former, first|ævvæˈliː|avvali|اوّلی
+اوّلی|the former, first|ævvæˈliː|avvali|اولی
 اومدن|to come|umæˈdæn|Tehran
 اون|flour|(ʔ)ʊn/(ʔ)on
 اوکراین|Ukraine|ʔokˈɾɒjn
@@ -804,13 +805,13 @@ autoExpandExamples.pes = `
 تانزانیا||
 تاوستن||
 تاپه||
-تایوان|porch, veranda|eyvɒːn
-اِیوان|porch, veranda|eyvɒːn
+ایوان|porch, veranda|eyvɒːn|eyvân|اِیوان
+اِیوان|porch, veranda|eyvɒːn|eyvân|ایوان
 تایید||
 تباه||
 تبدیل||
-تبر|axe, hatchet|tæbæɾ
-تَبَر|axe, hatchet|tæbæɾ
+تبر|axe, hatchet|tæbæɾ|tabar|تَبَر
+تَبَر|axe, hatchet|tæbæɾ|tabar|تبر
 تبریز||
 تجدید||
 تجربه||
@@ -901,8 +902,8 @@ autoExpandExamples.pes = `
 تقصیر||
 تقوا||
 تقوایی||
-تقویت|reinforcement|tæɢviːjæt
-تَقویَت|reinforcement|tæɢviːjæt
+تقویت|reinforcement|tæɢviːjæt|taqviyat|تَقویَت
+تَقویَت|reinforcement|tæɢviːjæt|taqviyat|تقویت
 تقویم|calendar|tæɢviːm
 تقیه||
 تقیه کردن||
@@ -976,8 +977,8 @@ autoExpandExamples.pes = `
 توپچى||
 توژ|bark (tree)|ˈtuːʒ
 توگو||
-تپه|hill|tʰæpˈpʰe
-تپّه|hill|tʰæpˈpʰe
+تپه|hill|tʰæpˈpʰe|tappe|تپّه
+تپّه|hill|tʰæpˈpʰe|tappe|تپه
 تکان خوردن||
 تکاپو||
 تکرار||
@@ -2106,8 +2107,8 @@ autoExpandExamples.pes = `
 شب‌بوی|gillyflower|ʃæb buːj
 شب‌ها||
 شب‌کور||
-شتر|camel|ʃoˈtʰoɾ
-شُتُر|camel|ʃoˈtʰoɾ
+شتر|camel|ʃoˈtʰoɾ|šotor|شُتُر
+شُتُر|camel|ʃoˈtʰoɾ|šotor|شتر
 شترخار||
 شترغار||
 شترمرغ||
@@ -2368,8 +2369,8 @@ autoExpandExamples.pes = `
 علاقه|interest, affection|ælɒːɢe
 علامت تعجب|exclamation mark|ælɒːmæte tæʔædd͡ʒob
 علاوه|addition|elɒːve~ælɒːve
-علت|cause, reason|ellæt
-عِلَّت|cause, reason|ellæt
+علت|cause, reason|ellæt|ellat|عِلَّت
+عِلَّت|cause, reason|ellæt|ellat|علت
 علم|science; flag|elm; ælæm
 علمی|scientific|elmiː
 علی|Ali|ʔæˈliː
@@ -2575,8 +2576,8 @@ autoExpandExamples.pes = `
 قاره||
 قارچ||
 قاسم||
-اِسم|name|esm
-اسم|name|esm
+اِسْم|name|esm|esm|اسم
+اسم|name|esm|esm|اِسْم
 قاشق||
 قاضی||
 قاطر||
@@ -3223,8 +3224,8 @@ autoExpandExamples.pes = `
 نزدیک‌تر||
 نزدیک‌ترین||
 نسبتا||
-نستعلیق|Nasta'liq|næstæʔliːɢ
-نَسْتَعْلیق|Nasta'liq|næstæʔliːɢ
+نستعلیق|Nasta'liq|næstæʔliːɢ|nasta'liq|نَسْتَعْلیق
+نَسْتَعْلیق|Nasta'liq|næstæʔliːɢ|nasta'liq|نستعلیق
 نسخ|abolition|næsx
 نسخه|copy, version|nosxe
 نسرین||
@@ -3236,10 +3237,10 @@ autoExpandExamples.pes = `
 نشان دادن||
 نشاندن||
 نشانه|sign, symbol, mark|neʃɒːˈne
-نشانهِ سجاوندی|punctuation mark|neʃɒːˌneje sæd͡ʒɒːvænd̪ˈiː
-نشانه سجاوندی|punctuation mark|neʃɒːˌneje sæd͡ʒɒːvænd̪ˈiː
-نشانهٔ سجاوندی|punctuation mark|neʃɒːˌneje sæd͡ʒɒːvænd̪ˈiː
-نشانه‌هایِ سجاوندی|punctuation marks|neʃɒːˌnehæːje sæd͡ʒɒːvænd̪ˈiː
+نشانهِ سجاوندی|punctuation mark|neʃɒːˌneje sæd͡ʒɒːvænd̪ˈiː|nešâne-ye sajâvandi|نشانه سجاوندی
+نشانه سجاوندی|punctuation mark|neʃɒːˌneje sæd͡ʒɒːvænd̪ˈiː|nešâne-ye sajâvandi|نشانهِ سجاوندی
+نشانه‌هایِ سجاوندی|punctuation marks|neʃɒːˌnehæːje sæd͡ʒɒːvænd̪ˈiː|nešâne-hâ-ye sajâvandi|نشانه‌های سجاوندی
+نشانه‌های سجاوندی|punctuation marks|neʃɒːˌnehæːje sæd͡ʒɒːvænd̪ˈiː|nešâne-hâ-ye sajâvandi|نشانه‌هایِ سجاوندی
 نشانگان آسپرگر|Asperger's syndrome|neʃɒːneˌɡɒːne ɒːspeɾˈɡʲeɾ
 نشلیدن||
 نشور||
@@ -3527,8 +3528,8 @@ autoExpandExamples.pes = `
 ویکی||
 ویکی‌پدیا||
 ویگن||
-اوج|zenith|owd͡ʒ
-اُوج|zenith|owd͡ʒ
+اوج|zenith|owd͡ʒ|owj|اُوج
+اُوج|zenith|owd͡ʒ|owj|اوج
 پ||
 ||
 پ||
@@ -3642,8 +3643,8 @@ autoExpandExamples.pes = `
 پلاک||
 پلخته||
 پله||
-پلو|pilaf|pʰoloʊ̯
-پُلُو|pilaf|pʰoloʊ̯
+پلو|pilaf|pʰoloʊ̯|polow|پُلُو
+پُلُو|pilaf|pʰoloʊ̯|polow|پلو
 پلید||
 پناهنده||
 پناهندگان||
@@ -3777,10 +3778,10 @@ autoExpandExamples.pes = `
 چل||
 چلنگر||
 چله||
-چلهٔ تابستان|midsummer|tʃʰelˈleje tʰɒːbesˈtʰɒn
-چلهٔ زمستان|midwinter|tʃʰelˈleje zemesˈtʰɒn
-چله‌ی تابستان|midsummer|tʃʰelˈleje tʰɒːbesˈtʰɒn
-چله‌ی زمستان|midwinter|tʃʰelˈleje zemesˈtʰɒn
+چلهٔ تابستان|midsummer|tʃʰelˈleje tʰɒːbesˈtʰɒn||
+چلهٔ زمستان|midwinter|tʃʰelˈleje zemesˈtʰɒn||
+چله‌ی تابستان|midsummer|tʃʰelˈleje tʰɒːbesˈtʰɒn||
+چله‌ی زمستان|midwinter|tʃʰelˈleje zemesˈtʰɒn||
 چلو|plain cooked rice|t͡ʃʰeloʊ̯|Tehran t͡ʃʰelo
 چلوکباب||
 چلچله||
@@ -3861,8 +3862,8 @@ autoExpandExamples.pes = `
 کاتولیک||
 کاج||
 کاخ||
-کادو|gift|kɒːdo
-کَادُو|gift|kɒːdo
+کادو|gift|kɒːdo|kâdo|کَادُو
+کَادُو|gift|kɒːdo|kâdo|کادو
 کاذب||
 کار||
 کاربر||
@@ -4080,8 +4081,8 @@ autoExpandExamples.pes = `
 گاراژ||
 گاری||
 گاز||
-گاز طبیعی|natural gas|ˌɡɒːze tæbiːˈʔiː
-گازِ طبیعی|natural gas|ˌɡɒːze tæbiːˈʔiː
+گاز طبیعی|natural gas|ˌɡɒːze tæbiːˈʔiː|gâz-e tabi'i|گازِ طبیعی
+گازِ طبیعی|natural gas|ˌɡɒːze tæbiːˈʔiː|gâz-e tabi'i|گاز طبیعی
 گاش||
 گالری||
 گام||
@@ -4230,13 +4231,13 @@ autoExpandExamples.pes = `
 گیلگمش||
 گین||
 گینه||
-گینه بیسائو|Guinea Bissau|ɡiːˈne biːsɒːˈuː
-گینِه بیسائُو|Guinea Bissau|ɡiːˈne biːsɒːˈuː
+گینه بیسائو|Guinea Bissau|ɡiːˈne biːsɒːˈuː|gine bisâ'u|گینِه بیسائُو
+گینِه بیسائُو|Guinea Bissau|ɡiːˈne biːsɒːˈuː|gine bisâ'u|گینه بیسائو
 گیومه||
 گیک||
 یا||
-یائسگی|menopause|jɒːʔese ɡiː
-یائِسگی|menopause|jɒːʔese ɡiː
+یائسگی|menopause|jɒːʔese ɡiː|yâ'esegi|یائِسگی
+یائِسگی|menopause|jɒːʔese ɡiː|yâ'esegi|یائسگی
 یاب||
 یاد||
 یاد رفتن||
@@ -4280,10 +4281,10 @@ autoExpandExamples.pes = `
 یگانه||
 
 
-پایی|a foot|pɒːiː
-پایٔی|a foot|pɒːiː
-مویی|a hair|muiː
-مویٔی|a hair|muiː
+پایی|a foot|pɒːiː||پایٔی
+پایٔی|a foot|pɒːiː||پایی
+مویی|a hair|muiː||مویٔی
+مویٔی|a hair|muiː||مویی
 
 
 
