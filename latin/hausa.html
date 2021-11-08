@@ -2,8 +2,7 @@
 <html lang="en-GB">
 <head>
 <meta charset="utf-8"/>
-<title>Hausa (boko)</title>
-<meta name="description" content="Hausa in Latin."/>
+<title>Hausa (boko) orthography notes</title>
 
 <link rel="stylesheet" href="../../shared/style/docs.css" />
 <link rel="stylesheet" href="../common28/local.css" />
@@ -12,25 +11,22 @@
 <script src="../../shared/fontdb/db.js"> </script>
 <script src="../../shared/fontdb/managefonts.js"></script>
 
-<script src="../../shared/scriptdb/hausab.js"> </script>
+<script src="../../shared/scriptdb/latn-ha.js"> </script>
 <script src="ha-details.html"> </script>
 
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
-<script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common28/functions.js"></script>
 <script src="../common28/transliterate.js"></script>
 <script src="../common28/prompts.js"> </script>
 <script src="../glossary/glossary.js"> </script>
-<script src="../../shared/code/getLinks.js"></script>
-<script src="../../scripts/linkdata/linkdb.js"></script>
-<script src="../../app-charuse/langs.js"> </script>
 <script src="../common28/egcode.js"></script>
 <script src="../common28/references.js"></script>
 <script src="refs.js"></script>
 
+<script src="ha-langdata.js"></script>
 <script src="ha-examples.js"></script>
 <script src="ha-translit.js">  </script>
 <script src="../../shared/manifests/latn-ha.js"></script>
@@ -42,9 +38,8 @@
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Hausa (boko) (draft)</h1>
+<h1>Hausa (boko)</h1>
 
-<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="Jump to top of page." title="Jump to top of page."/></a></nav>
 
 <aside class="sidebar">
 <div id="toc"><!-- placeholder --></div>
@@ -55,15 +50,19 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:En2 -->20-Sep-2021<!-- #EndDate -->
-&bull; tags <a href="http://r12a.github.io/blog/index.php?tag=latin" title="Show all blog posts tagged with 'latin'">latin</a>, <a href="http://r12a.github.io/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+<!-- #BeginDate format:Sw1 -->8 November, 2021<!-- #EndDate -->
+<span id="versionTop"></span>
+</p>
 
 
 
 <section>
-<p>This page gathers  basic information about the Latin script and its use for the Hausa language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Hausa using Unicode.</p>
+<p>This page brings together basic information about the Latin script and its use for the Hausa language. It aims to provide a brief, descriptive summary of the modern, printed orthography and typographic features, and to advise how to write Hausa using Unicode.</p>
 
 <p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
+<p>In addition, Hausa has numerous dialects, each of which may pronounce letters differently. The pronunciation in this document is generally based on the phonemic transcriptions provided by Wiktionary, although in some places we describe differences with other dialects, especially Kano, with more phonetic information.</p>
+
+
 <p class="instructions">Click on characters or character names to reveal detailed information. (By default, this happens as the cursor moves over some items, but the floating menu to the right provides a toggle for that.)  Click on <span class="ex">highlighted</span> examples to see a list of the characters they contain.</p>
 
 
@@ -99,8 +98,8 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 <div id="freeText" dir="ltr" lang="ha" contenteditable="true">
 <p  title="UDHR." onMouseUp="showtext('freeText')" data-source="https://unicode.org/udhr/d/udhr_hau_NG.html">[Nigeria] Abin nufi ga ilimi shi ne: ya sama wa ɗan-adam jin daɗin rayuwa da ƙarfafa kiyayewa da hakkokinsa da muhimman abubuwan da ʼyancinsa ya ƙunsa. Ya kamata ilimi ya kawo fahimtar juna da ragowa da aminci tsakanin ƙasashe da tsakanin ʼyan-adam, kome launin fatarsu da addinin da suke bi, ya kuma ƙarfafa ƙoƙarin da Majalisar Ɗinkin Duniya take yi domin a sami zaman lafiya da kwanciyar hankali a duniya.</p>
 </div>
-  <div id="freeText" dir="ltr" lang="ha" contenteditable="true">
-  <p  title="UDHR." onMouseUp="showtext('freeText')" data-source="https://unicode.org/udhr/d/udhr_hau_NE.html">[Niger] ... muhimman abubuwan da ƴancinsa ya ƙunsa. ... tsakanin ƙasashe da tsakanin ƴan‐adam, kome ....</p>
+<div id="freeTextAlt" dir="ltr" lang="ha" contenteditable="true">
+<p  title="UDHR." onMouseUp="showtext('freeText')" data-source="https://unicode.org/udhr/d/udhr_hau_NE.html">[Niger] ... muhimman abubuwan da ƴancinsa ya ƙunsa. ... tsakanin ƙasashe da tsakanin ƴan‐adam, kome ....</p>
 </div>
 </section>
 
@@ -111,7 +110,11 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
  <section id="history">
 <h2>Usage &amp; history</h2>
 
-<p>Hausa is normally written in the Latin script, but also (less commonly) using the Arabic ajami script.</p>
+<p>Hausa is normally written in the Latin script, but also (less commonly) using the Arabic <span class="name">ajami</span> script. The modern official orthography is called <span class="name">boko</span>, and was introduced in the 1930s by the British colonial administration.</p>
+
+<p><span class="charExample" translate="no"><span class="ex" lang="ike">Harshe Hausa</span> <span class="ipa">háɽ.ʃè háu.sá</span> <span class="meaning">Hausa language</span></span></p>
+
+<p>The centre of the native speaker population is in northern Nigeria and southern Niger, but Hausa is spoken across the width of the Sahel region, and mostly in mutually intelligible form. There are significant minorities in Benin, Cameroon, and Chad, and as a trade language it also reaches into Ghana, Togo, and parts of Sudan. It is estimated that there are 100-150 million speakers.</p>
 
   
   
@@ -151,7 +154,7 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 <p>Hausa text runs <mark>left-to-right in horizontal lines</mark>. </p>
 <p>Words are <mark>separated by spaces</mark>. </p>
 <p>The orthography is <mark>bicameral</mark>. </p>
-<p>Hausa has <mark>21 consonant letters</mark>, one of which can be written in two different ways. There are <mark>10 vowel letters</mark>. All this duplicated in upper- and lowercase. </p>
+<p>Hausa has <mark>21 consonant letters</mark>, one of which can be written in two different ways. There are <mark>10 vowel letters</mark>. All this duplicated in upper- and lowercase. Some sounds are written using digraphs.</p>
 <p>Numbers use <mark>ASCII digits</mark>. </p>
 <p>The visual forms of letters don't usually interact.</p>
 </section>
@@ -181,13 +184,14 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 <section id="index_letters_consonants">
 <h4>Consonants</h4>
 
-<figure class="characterBox auto" data-cols="" data-links="#stops,#stops,#stops,#stops,#liquids,#liquids #basicconsonants,#stops,#stops,#liquids #basicconsonants #apostrophe,">Ɓ␣Ɗ␣Ƙ␣ƙ␣Ƴ␣ƴ␣ɓ␣ɗ␣ʼ</figure>
+<figure class="characterBox noindex indexline" data-cols="" data-links="">Ɓ␣Ɗ␣Ƙ␣ƙ␣Ƴ␣ƴ␣ɓ␣ɗ␣ʼ</figure>
 </section>
 
 
 <section id="index_letters_ascii">
 <h4>ASCII</h4>
-<figure class="characterBox auto" data-cols="" data-links="#vowelcharacters,#stops,#affricates,#stops,#vowelcharacters,#fricatives,#stops,#fricatives,#vowelcharacters,#affricates,#stops,#liquids,#nasals,#nasals,#vowelcharacters,#liquids,#fricatives,#stops,#vowelcharacters,#liquids,#liquids,#fricatives,#vowelcharacters,#stops,#affricates,#stops,#vowelcharacters,#fricatives,#stops,#fricatives,#vowelcharacters,#affricates,#stops,#liquids,#nasals,#nasals,#vowelcharacters,#liquids #basicconsonants,#fricatives,#stops,#vowelcharacters,#liquids,#liquids #basicconsonants,#fricatives,">A␣B␣C␣D␣E␣F␣G␣H␣I␣J␣K␣L␣M␣N␣O␣R␣S␣T␣U␣W␣Y␣Z␣a␣b␣c␣d␣e␣f␣g␣h␣i␣j␣k␣l␣m␣n␣o␣r␣s␣t␣u␣w␣y␣z</figure>
+<figure class="characterBox noindex indexline" data-cols="" data-links="">a␣b␣c␣d␣e␣f␣g␣h␣i␣j␣k␣l␣m␣n␣o␣p␣r␣s␣t␣u␣w␣y␣z</figure>
+<figure class="characterBox noindex indexline" data-cols="" data-links="">A␣B␣C␣D␣E␣F␣G␣H␣I␣J␣K␣L␣M␣N␣O␣P␣R␣S␣T␣U␣W␣Y␣Z</figure>
 </section>
 </details>
 </section>
@@ -199,7 +203,7 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="auxiliaryBox auto" data-cols="" data-links="#tones,#tones,#tones,">́␣̀␣̂</figure>
+<figure class="auxiliaryBox noindex indexline" data-cols="" data-links="">́␣̀␣̂</figure>
 </details>
 </section>
 
@@ -211,12 +215,12 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="characterBox auto" data-cols="" data-links="#quotations,#apostrophe #quotations,#quotations,#quotations,">‘␣’␣“␣”</figure>
+<figure class="characterBox noindex indexline" data-cols="" data-links="">‘␣’␣“␣”</figure>
 
 
 <section id="index_punctuation_ascii">
 <h4>ASCII</h4>
-<figure class="characterBox auto" data-cols="" data-links="#phrase,#phrase,#phrase,#phrase,#phrase,#phrase,#bracketing,#bracketing,">,␣;␣:␣.␣?␣!␣(␣)</figure>
+<figure class="characterBox noindex indexline" data-cols="" data-links="">,␣;␣:␣.␣?␣!␣(␣)</figure>
 </section>
 </details>
 </section>
@@ -228,7 +232,8 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 
 <section id="structure">
 <h2>Structure</h2>
-    <p>Hausa has 3 syllable types: CV, CVV, and CVC, where VV can be a long vowel or a diphthong.<tt>c</tt> The long vs. short vowel distinction is phonemically important, however when a syllable with a long vowel acquires and final consonant, the vowel is shortened.</p>
+
+<p>Hausa has 3 syllable types: CV, CVV, and CVC, where VV can be a long vowel or a diphthong.<tt>c</tt> The long vs. short vowel distinction is phonemically important, however when a syllable with a long vowel acquires and final consonant, the vowel is shortened.</p>
 <p>Consonant clusters may occur where syllables are side by side, but not within a syllable. Gemination is, however, a distinctive feature.<tt>c</tt></p>
 <p>Labialisation <span class="ipa">ʷ</span> and palatalisation <span class="ipa">ʲ</span> may occur after an initial plosive consonant.</p>
 </section>
@@ -258,7 +263,10 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 <section id="phonology">
 <h2>Phonology</h2>
 
+<p>The following represents the repertoire of the Hausa language.</p>
 <p class="instructions">Click on the sounds to reveal locations in this document where they are mentioned.</p>
+<p class="instructions">Phones in a lighter colour are non-native or allophones. Source <a href="https://en.wikipedia.org/wiki/Hausa_language">Wikipedia</a>.</p>
+
 
 
 
@@ -406,18 +414,20 @@ alveolar</th>
 <tbody>
 <tr>
 <th>stop</th>
-<td><span class="ipa">b</span><br>
+<td><span class="allophone">p</span> <span class="ipa">b</span><br>
 <span class="ipa">ɓ</span></td>
 <td><span class="ipa">t</span> <span class="ipa">d</span><br/>
 <span class="ipa">ɗ</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td>&nbsp;</td>
+<td><span class="ipa">c</span> <span class="allophone">ɟ</span><br/>
+<span class="allophone">cʼ</span></td>
 <td><span class="ipa">k</span> <span class="ipa">ɡ</span><br/>
 <span class="ipa">kʷ</span> <span class="ipa">ɡʷ</span><br/>
-<span class="ipa">kʼ</span> <span class="ipa">kʷʼ</span><br/>
-<span class="ipa">kʲ</span> <span class="ipa">kʲʼ</span> <span class="ipa">gʲ</span></td>
+<span class="ipa">kʲ</span> <span class="ipa">gʲ</span><br>
+<span class="ipa">kʼ</span> <span class="ipa">kʷʼ</span> <span class="ipa">kʲʼ</span>
+</td>
 <td><span class="ipa">ʔ</span></td>
 </tr>
 <tr>
@@ -488,6 +498,11 @@ alveolar</th>
 </tr>
 </tbody>
 </table>
+
+
+<p><span class="ipa">j̰</span> is a semi-vowel approximant with creaky voice (laryngealisation). It is not used in many words, but many of those words are very common, such as
+<span class="eg latn" lang="ha">ƴaƴa</span>
+</p>
 </section>
 </section>
 
@@ -499,16 +514,195 @@ alveolar</th>
 <section id="vowels">
 <h2>Vowels</h2>
 
+<p class="instructions">Click on the characters in the lists for detailed information. For a mapping of sounds to graphemes see <a class="secref">vowel_mappings</a>.</p>
+
+
 
 <section id="vowelcharacters">
-<h3>Vowel characters</h3>
+<h3>Vowel letters</h3>
 
-<p>There are 5 vowel letters, each with an upper and lower case form.</p>
+<p>5 vowel letters are used, each with an upper and lower case form.</p>
 
-<figure class="characterBox auto bicameral"  data-cols="ipa,trans">Ii␣Uu␣Ee␣Oo␣Aa</figure>
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">i␣u␣e␣o␣a</figure>
+<figure class="characterBox auto caps small"  data-cols="">I␣U␣E␣O␣A</figure>
 
-<p>Although it is phonemically distinctive, Hausa doesn't distinguish between long and short vowels in writing.</p>
+<p>Although long and short vowel sounds are phonemically distinctive, Hausa doesn't distinguish between them in writing, eg.
+<span class="eg" lang="ha" dir="ltr">uƙuba</span>
+</p>
 <p>There was an attempt at one point to introduce vowel doubling to indicate long vowels in Niger, but that was dropped.</p>
+</section>
+
+
+
+
+
+
+<section id="diphthong">
+<h3>Diphthongs</h3>
+
+<p>Hausa is usually described as having the following 4 diphthongs. These are sequences of vowel sounds that are not separated by a glottal stop.</p>
+
+<figure class="characterBox auto small"  data-cols="ipa,trans,transc">iu␣ui␣ai␣au</figure>
+
+<p>Examples:
+<span class="eg" lang="ha" dir="ltr">laima</span>
+<span class="eg" lang="ha" dir="ltr">hausa</span>
+</p>
+</section>
+
+
+
+
+
+
+<section id="tones">
+<h3>Tones</h3>
+<p>Hausa uses 3 tones, high, low and falling. These are not indicated in normal text<tt>c</tt>, eg.
+<span class="eg" lang="ha" dir="ltr">ruwa</span>
+<span class="eg" lang="ha" dir="ltr">fure</span>
+<span class="eg" lang="ha" dir="ltr">kunne</span>
+</p>
+<p>In academic and education text the tone can be indicated using one of the following characters, representing high, low, and falling, respectively.<sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf"></a></sup></p>
+
+<figure class="auxiliaryBox auto"  data-cols="">́␣̀␣̂</figure>
+</section>
+
+
+
+
+
+
+<section id="vowel_mappings">
+<h3>Vowel sounds mapped to characters</h3>
+
+<p class="instructions">This section maps Hausa vowel sounds to common graphemes in the Latin orthography, grouped by lowercase ( <mark>l</mark> ) and uppercase ( <mark>u</mark> ). Click on the character names to see examples.</p>
+
+
+<section id="plain_vowel_map">
+<h4>Plain vowels</h4>
+
+<div id="mapv_high" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">i iː</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0069;</bdi> [<a href="/scripts/latin/block#char0069"><span class="uname">U+0069 LATIN SMALL LETTER I</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0049;</bdi> [<a href="/scripts/latin/block#char0049"><span class="uname">U+0049 LATIN CAPITAL LETTER I</span></a>]</span>&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">u uː</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0075;</bdi> [<a href="/scripts/latin/block#char0075"><span class="uname">U+0075 LATIN SMALL LETTER U</span></a>]</span>&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0055;</bdi> [<a href="/scripts/latin/block#char0055"><span class="uname">U+0055 LATIN CAPITAL LETTER U</span></a>]</span></p>
+</div>
+</div>
+</div>
+<div id="mapv_hmid" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">e eː</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0065;</bdi> [<a href="/scripts/latin/block#char0065"><span class="uname">U+0065 LATIN SMALL LETTER E</span></a>]</span>&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0045;</bdi> [<a href="/scripts/latin/block#char0045"><span class="uname">U+0045 LATIN CAPITAL LETTER E</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">o oː</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x006F;</bdi> [<a href="/scripts/latin/block#char006F"><span class="uname">U+006F LATIN SMALL LETTER O</span></a>]</span>&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x004F;</bdi> [<a href="/scripts/latin/block#char004F"><span class="uname">U+004F LATIN CAPITAL LETTER O</span></a>]</span></p>
+</div>
+</div>
+</div>
+
+
+<div id="mapv_low" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">a aː</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0061;</bdi> [<a href="/scripts/latin/block#char0061"><span class="uname">U+0061 LATIN SMALL LETTER A</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0041;</bdi> [<a href="/scripts/latin/block#char0041"><span class="uname">U+0041 LATIN CAPITAL LETTER A</span></a>]</span></p>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+<section id="diphthong_map">
+<h4>Diphthongs</h4>
+
+<div id="map_highdiphthongs" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">iu</span></div>
+<div class="posn">&nbsp;</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0069;&#x0075;</bdi> [<a href="/scripts/latin/block#char0069"><span class="uname">U+0069 LATIN SMALL LETTER I</span></a> + <a href="/scripts/latin/block#char0075"><span class="uname">U+0075 LATIN SMALL LETTER U</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ui</span></div>
+<div class="posn">&nbsp;</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0075;&#x0069;</bdi> [<a href="/scripts/latin/block#char0075"><span class="uname">U+0075 LATIN SMALL LETTER U</span></a> + <a href="/scripts/latin/block#char0069"><span class="uname">U+0069 LATIN SMALL LETTER I</span></a>]</span></p>
+</div>
+</div>
+</div>
+<div id="map_lowdiphthongs" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">ai</span></div>
+<div class="posn">&nbsp;</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0061;&#x0069;</bdi> [<a href="/scripts/latin/block#char0061"><span class="uname">U+0061 LATIN SMALL LETTER A</span></a> + <a href="/scripts/latin/block#char0069"><span class="uname">U+0069 LATIN SMALL LETTER I</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">au</span></div>
+<div class="posn">&nbsp;</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0061;&#x0075;</bdi> [<a href="/scripts/latin/block#char0061"><span class="uname">U+0061 LATIN SMALL LETTER A</span></a> + <a href="/scripts/latin/block#char0075"><span class="uname">U+0075 LATIN SMALL LETTER U</span></a>]</span></p>
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -521,46 +715,117 @@ alveolar</th>
 <section id="consonants">
 <h2>Consonants</h2>
 
+<p class="instructions">Click on the characters in the lists for detailed information. For a mapping of sounds to graphemes see <a class="secref">vowel_mappings</a>.</p>
+
+
+
 <section id="basicconsonants">
-<h3>Basic consonants</h3>
-    
-    
-<p>Basic set of consonants used for Hausa.</p>
+<h3>Basic consonant letters</h3>
+
 
 <section id="stops">
 <h4>Stops</h4>
-<figure class="characterBox auto bicameral"  data-cols="ipa,trans,transc">Bb␣Ɓɓ␣Tt␣Dd␣Ɗɗ␣Kk␣Ƙƙ␣Gg</figure>
+<figure class="characterBox auto"  data-cols="ipa">b␣ɓ␣t␣d␣ɗ␣k␣ƙ␣g</figure>
+<figure class="characterBox auto caps small"  data-cols="">B␣Ɓ␣T␣D␣Ɗ␣K␣Ƙ␣G</figure>
 </section>
 
 
 
 <section id="affricates">
 <h4>Affricates</h4>
-<figure class="characterBox auto bicameral"  data-cols="ipa,trans,transc">Cc␣Jj</figure>
+<figure class="characterBox auto"  data-cols="ipa">c␣j</figure>
+<figure class="characterBox auto caps small"  data-cols="">C␣J</figure>
 </section>
 
 
 
 <section id="fricatives">
 <h4>Fricatives</h4>
-<figure class="characterBox auto bicameral"  data-cols="ipa,trans,transc">Ff␣Ss␣Zz␣Hh</figure>
+<figure class="characterBox auto"  data-cols="ipa">f␣s␣z␣h</figure>
+<figure class="characterBox auto caps small"  data-cols="">F␣S␣Z␣H</figure>
 </section>
 
 
 <section id="nasals">
 <h4>Nasals</h4>
-<figure class="characterBox auto bicameral"  data-cols="ipa,trans,transc">Mm␣Nn</figure>
+<figure class="characterBox auto"  data-cols="ipa">m␣n</figure>
+<figure class="characterBox auto caps small"  data-cols="">M␣N</figure>
 </section>
 
 
-<section id="liquids">
-<h4>Liquids</h4>
-<figure class="characterBox auto bicameral"  data-cols="ipa,trans,transc">Ww␣Rr␣Ll␣Yy␣Ƴƴ␣ʼ</figure>
+<section id="sonorants">
+<h4>Other sonorants</h4>
+<figure class="characterBox auto"  data-cols="ipa">w␣r␣l␣y␣ƴ␣ʼ</figure>
+<figure class="characterBox auto caps small"  data-cols="">W␣R␣L␣Y␣Ƴ</figure>
 </section>
 
 
-<p><span class="ipa">j̰</span> is a semi-vowel approximant with creaky voice (laryngealisation). It is not used in many words, but many of those words are very common, such as <span class="eg latn" lang="ha">ʼyaʼya/ƴaƴa</span>   It can be represented in 2 ways: <span class="codepoint" translate="no"><span lang="ha">&#x01B4;</span> [<a href="/scripts/latin/block#char01B4"><span class="uname">U+01B4 LATIN SMALL LETTER Y WITH HOOK</span></a>]</span>  used in Niger,  and <span class="codepoint" translate="no"><span lang="ha">&#x02BC;&#x0079;</span> [<a href="/scripts/latin/block#char02BC"><span class="uname">U+02BC MODIFIER LETTER APOSTROPHE</span></a> + <a href="/scripts/latin/block#char0079"><span class="uname">U+0079 LATIN SMALL LETTER Y</span></a>]</span>, used in Nigeria.</p>
+<p><span class="codepoint" translate="no"><span lang="ha">&#x01B4;</span> [<a href="/scripts/latin/block#char01B4"><span class="uname">U+01B4 LATIN SMALL LETTER Y WITH HOOK</span></a>]</span> is used in Niger,  and <span class="codepoint" translate="no"><span lang="ha">&#x02BC;&#x0079;</span> [<a href="/scripts/latin/block#char02BC"><span class="uname">U+02BC MODIFIER LETTER APOSTROPHE</span></a> + <a href="/scripts/latin/block#char0079"><span class="uname">U+0079 LATIN SMALL LETTER Y</span></a>]</span> is used in Nigeria.</p>
 <p>The letter <span class="codepoint" translate="no"><span lang="ha">&#x0072;</span> [<a href="/scripts/latin/block#char0072"><span class="uname">U+0072 LATIN SMALL LETTER R</span></a>]</span> represents 2 different sounds: <span class="ipa">ɾ</span> and <span class="ipa">ɽ</span>. In academic or educational texts the former is sometimes distinguished using <span class="codepoint" translate="no"><span lang="ha">&#x0072;&#x0303;</span> [<a href="/scripts/latin/block#char0072"><span class="uname">U+0072 LATIN SMALL LETTER R</span></a> + <a href="/scripts/latin/block#char0303"><span class="uname">U+0303 COMBINING TILDE</span></a>]</span>.</p>
+</section>
+
+
+
+
+<section id="digraphs">
+<h3>Digraphs</h3>
+
+<p>A number of the consonant sounds in Hausa are written using multiple letters.</p>
+
+<figure class="characterBox auto"  data-cols="ipa">ts␣kw␣ky␣ƙw␣sh␣ʼy</figure>
+
+<p>The last digraph in the list above is included here because it is the standard way to write that sound in Nigeria (as opposed to the form in the previous section which is used in Niger).  Other implosives and ejectives may also be written as digraphs (see <a class="secref">ejectives</a>).</p>
+</section>
+
+
+
+
+<section id="allophones">
+<h3>Allophonic pronunciations</h3>
+
+<p>A number of sounds are pronounced differently, according to the dialect. This section highlights a few differences for velar consonants by contrasting the standard phonemic representation with the standard pronunciation in the Kano dialect.</p>
+
+<table>
+<tr>
+<th>Contexts</th>
+<th>phonemic</th><th>Kano</th><th>example</th><th>Kano</th>
+</tr>
+<tr>
+<td><span class="ex" lang="ha">ki ke</span></td>
+<td><span class="ipa">k</span></td>
+<td><span class="ipa">c</span></td><td><span class="eg inline" lang="ha">baki</span></td><td><span class="ipa">bàː.cíː</span></td>
+</tr>
+<tr>
+<td><span class="ex" lang="ha">ku ko</span></td>
+<td><span class="ipa">k</span></td>
+<td><span class="ipa">kʷ</span></td>
+<td><span class="eg inline" lang="ha">kurma</span></td><td><span class="ipa">kʷʊ́ɽ.máː</span></td>
+</tr>
+<tr>
+<td><span class="ex" lang="ha">ƙi ƙe</span></td>
+<td><span class="ipa">kʼ</span></td>
+<td><span class="ipa">cʼ</span></td>
+<td><span class="eg inline" lang="ha">baƙi</span></td><td><span class="ipa">bə́.cʼíː</span></td>
+</tr>
+<tr>
+<td><span class="ex" lang="ha">ƙu ƙo</span></td>
+<td><span class="ipa">kʼ</span></td>
+<td><span class="ipa">kʷʼ</span></td>
+<td><span class="eg inline" lang="ha">ƙugiya</span></td><td><span class="ipa">kʷʼúː.ɟɪ̀.jáː</span></td>
+</tr>
+<tr>
+<td><span class="ex" lang="ha">gi ge</span></td>
+<td><span class="ipa">g</span></td>
+<td><span class="ipa">ɟ</span></td>
+<td><span class="eg inline" lang="ha">kogi</span></td><td><span class="ipa">kʷòː.ɟíː</span></td>
+</tr>
+<tr>
+<td><span class="ex" lang="ha">gu go</span></td>
+<td><span class="ipa">g</span></td>
+<td><span class="ipa">ɡʷ</span></td>
+<td><span class="eg inline" lang="ha">mugu</span></td><td><span class="ipa">múː.ɡʷùː</span></td>
+</tr>
+</table>
 </section>
 
 
@@ -572,7 +837,40 @@ alveolar</th>
     
 <p>Ejectives and implosives can be represented using special characters, but may also be represented by a combination of apostrophe and the basic character<tt>wha</tt>, or often just by the basic character itself. For example, <span class="eg latn" lang="ha">ɗaya</span> might be also written <span class="charExample" translate="no"><span class="ex" lang="ha">dʼaya</span></span> or simply <span class="charExample" translate="no"><span class="ex" lang="ha">daya</span></span></p>
 <p>Wikipedia uses the special character forms, but the BBC, CRI, and VOA Hausa pages just use ordinary characters for the ejectives.</p>
-<p>The digraph <span class="ex" lang="ha">ts</span> represents an ejective sound without the use of a special character or apostrophe. The associated sound can be either <span class="ipa">sʼ</span>or <span class="ipa">t͡sʼ</span>.</p>
+<p>The following table lists some single characters that may be written using a normal letter and apostrophe. Note how the order of the character and apostrophe is reversed in the final example.</p>
+<table>
+<tr>
+<th>Single letter</th>
+<th>Digraph</th>
+<th>example</th>
+<th>alt. form</th>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><bdi lang="ha">&#x0253;</bdi> [<a href="/scripts/latin/block#char0253"><span class="uname">U+0253 LATIN SMALL LETTER B WITH HOOK</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><bdi lang="ha">&#x0062;&#x02BC;</bdi> [<a href="/scripts/latin/block#char0062"><span class="uname">U+0062 LATIN SMALL LETTER B</span></a> + <a href="/scripts/latin/block#char02BC"><span class="uname">U+02BC MODIFIER LETTER APOSTROPHE</span></a>]</span>&nbsp;</td>
+<td><span class="eg inline" lang="ha">raɓa</span></td>
+<td><span class="ex" lang="ha">rabʼa</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><bdi lang="ha">&#x0257;</bdi> [<a href="/scripts/latin/block#char0257"><span class="uname">U+0257 LATIN SMALL LETTER D WITH HOOK</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><bdi lang="ha">&#x0064;&#x02BC;</bdi> [<a href="/scripts/latin/block#char0064"><span class="uname">U+0064 LATIN SMALL LETTER D</span></a> + <a href="/scripts/latin/block#char02BC"><span class="uname">U+02BC MODIFIER LETTER APOSTROPHE</span></a>]</span></td>
+<td><span class="eg inline" lang="ha">ɗaya</span></td>
+<td><span class="ex" lang="ha">dʼaya</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><bdi lang="ha">&#x0199;</bdi> [<a href="/scripts/latin/block#char0199"><span class="uname">U+0199 LATIN SMALL LETTER K WITH HOOK</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><bdi lang="ha">&#x006B;&#x02BC;</bdi> [<a href="/scripts/latin/block#char006B"><span class="uname">U+006B LATIN SMALL LETTER K</span></a> + <a href="/scripts/latin/block#char02BC"><span class="uname">U+02BC MODIFIER LETTER APOSTROPHE</span></a>]</span></td>
+<td><span class="eg inline" lang="ha">ƙashi</span></td>
+<td><span class="ex" lang="ha">kʼashi</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><bdi lang="ha">&#x01B4;</bdi> [<a href="/scripts/latin/block#char01B4"><span class="uname">U+01B4 LATIN SMALL LETTER Y WITH HOOK</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><bdi lang="ha">&#x02BC;&#x0079;</bdi> [<a href="/scripts/latin/block#char02BC"><span class="uname">U+02BC MODIFIER LETTER APOSTROPHE</span></a> + <a href="/scripts/latin/block#char0079"><span class="uname">U+0079 LATIN SMALL LETTER Y</span></a>]</span></td>
+<td><span class="eg inline" lang="ha">ƴa</span></td>
+<td><span class="ex" lang="ha">ʼya</span></td>
+</tr>
+</table>
+<p>The digraph <span class="codepoint" translate="no"><bdi lang="ha">&#x0074;&#x0073;</bdi> [<a href="/scripts/latin/block#char0074"><span class="uname">U+0074 LATIN SMALL LETTER T</span></a> + <a href="/scripts/latin/block#char0073"><span class="uname">U+0073 LATIN SMALL LETTER S</span></a>]</span> represents an ejective sound without the use of a special character or apostrophe. The associated sound can be either <span class="ipa">sʼ</span>or <span class="ipa">t͡sʼ</span>.</p>
 </section>
 
 
@@ -582,25 +880,459 @@ alveolar</th>
 
 <section id="apostrophe">
 <h3>Apostrophe</h3>
-<p>On its own, the apostrophe represents a glottal stop, eg. <span class="eg latn" lang="ha">jamaʼa</span> It is not written in initial position.</p>
+<p>On its own, the apostrophe represents a glottal stop, eg. <span class="eg latn" lang="ha">jamaʼa</span> It is not written in initial position to represent a glottal stop.</p>
+<p>It is also used in some cases to spell certain sounds as described in <a class="secref">ejectives</a>.</p>
 <p>The apostrophe shown here is <span class="codepoint" translate="no"><span lang="ha">&#x02BC;</span> [<a href="/scripts/latin/block#char02BC"><span class="uname">U+02BC MODIFIER LETTER APOSTROPHE</span></a>]</span>, but the BBC, CRI, and Wikipedia texts use <span class="codepoint" translate="no"><span lang="ha">&#x0027;</span> [<a href="/scripts/latin/block#char0027"><span class="uname">U+0027 APOSTROPHE</span></a>]</span> instead. Sometimes texts (including VOA) use <span class="codepoint" translate="no"><span lang="ha">&#x2019;</span> [<a href="/scripts/latin/block#char2019"><span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span></a>]</span>.</p>
 </section>
+
+
+
+
+
+<section id="consonant_mappings">
+<h3>Consonant sounds to characters</h3>
+
+<p class="instructions">This section maps Hausa consonant sounds to common graphemes, grouped by lowercase ( l<mark></mark> )  and uppercase ( <mark>u</mark> ). Click on the character names to see examples.</p>
+
+
+<section id="map_initials">
+<h4>Initials</h4>
+
+<div id="map_plosives" class="map">
+<div class="mapItem uncommon">
+<div class="phone"><span class="ipa">p</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0070;</bdi> [<a href="/scripts/latin/block#char0070"><span class="uname">U+0070 LATIN SMALL LETTER P</span></a>]</span> only used in a few transliterated words.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">b</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0062;</bdi> [<a href="/scripts/latin/block#char0062"><span class="uname">U+0062 LATIN SMALL LETTER B</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0042;</bdi> [<a href="/scripts/latin/block#char0042"><span class="uname">U+0042 LATIN CAPITAL LETTER B</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɓ</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0253;</bdi> [<a href="/scripts/latin/block#char0253"><span class="uname">U+0253 LATIN SMALL LETTER B WITH HOOK</span></a>]</span>   It may sometimes be spelled <span class="codepoint" translate="no"><bdi lang="ha">&#x0062;&#x02BC;</bdi> [<a href="/scripts/latin/block#char0062"><span class="uname">U+0062 LATIN SMALL LETTER B</span></a> + <a href="/scripts/latin/block#char02BC"><span class="uname">U+02BC MODIFIER LETTER APOSTROPHE</span></a>]</span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0181;</bdi> [<a href="/scripts/latin/block#char0181"><span class="uname">U+0181 LATIN CAPITAL LETTER B WITH HOOK</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">t</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0074;</bdi> [<a href="/scripts/latin/block#char0074"><span class="uname">U+0074 LATIN SMALL LETTER T</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0054;</bdi> [<a href="/scripts/latin/block#char0054"><span class="uname">U+0054 LATIN CAPITAL LETTER T</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">d</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0064;</bdi> [<a href="/scripts/latin/block#char0064"><span class="uname">U+0064 LATIN SMALL LETTER D</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0044;</bdi> [<a href="/scripts/latin/block#char0044"><span class="uname">U+0044 LATIN CAPITAL LETTER D</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɗ</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0257;</bdi> [<a href="/scripts/latin/block#char0257"><span class="uname">U+0257 LATIN SMALL LETTER D WITH HOOK</span></a>]</span> It may sometimes be spelled <span class="codepoint" translate="no"><bdi lang="ha">&#x0064;&#x02BC;</bdi> [<a href="/scripts/latin/block#char0064"><span class="uname">U+0064 LATIN SMALL LETTER D</span></a> + <a href="/scripts/latin/block#char02BC"><span class="uname">U+02BC MODIFIER LETTER APOSTROPHE</span></a>]</span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x018A;</bdi> [<a href="/scripts/latin/block#char018A"><span class="uname">U+018A LATIN CAPITAL LETTER D WITH HOOK</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">c</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x006B;&#x0079;</bdi> [<a href="/scripts/latin/block#char006B"><span class="uname">U+006B LATIN SMALL LETTER K</span></a> + <a href="/scripts/latin/block#char0079"><span class="uname">U+0079 LATIN SMALL LETTER Y</span></a>]</span></p>
+</div>
+</div><div class="mapItem">
+<div class="phone"><span class="ipa">k</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x006B;</bdi> [<a href="/scripts/latin/block#char006B"><span class="uname">U+006B LATIN SMALL LETTER K</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x004B;</bdi> [<a href="/scripts/latin/block#char004B"><span class="uname">U+004B LATIN CAPITAL LETTER K</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɡ</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0067;</bdi> [<a href="/scripts/latin/block#char0067"><span class="uname">U+0067 LATIN SMALL LETTER G</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0047;</bdi> [<a href="/scripts/latin/block#char0047"><span class="uname">U+0047 LATIN CAPITAL LETTER G</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">kʷ</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x006B;&#x0077;</bdi> [<a href="/scripts/latin/block#char006B"><span class="uname">U+006B LATIN SMALL LETTER K</span></a> + <a href="/scripts/latin/block#char0077"><span class="uname">U+0077 LATIN SMALL LETTER W</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɡʷ</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">g&#x0077;</bdi> [<a href="/scripts/latin/block#char006B"><span class="uname">U+0067 LATIN SMALL LETTER G</span></a> + <a href="/scripts/latin/block#char0077"><span class="uname">U+0077 LATIN SMALL LETTER W</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">kʼ</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0199;</bdi> [<a href="/scripts/latin/block#char0199"><span class="uname">U+0199 LATIN SMALL LETTER K WITH HOOK</span></a>]</span> It may sometimes be spelled <span class="codepoint" translate="no"><bdi lang="ha">&#x006B;&#x02BC;</bdi> [<a href="/scripts/latin/block#char006B"><span class="uname">U+006B LATIN SMALL LETTER K</span></a> + <a href="/scripts/latin/block#char02BC"><span class="uname">U+02BC MODIFIER LETTER APOSTROPHE</span></a>]</span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0198;</bdi> [<a href="/scripts/latin/block#char0198"><span class="uname">U+0198 LATIN CAPITAL LETTER K WITH HOOK</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">kʷʼ</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0199;&#x0077;</bdi> [<a href="/scripts/latin/block#char0199"><span class="uname">U+0199 LATIN SMALL LETTER K WITH HOOK</span></a> + <a href="/scripts/latin/block#char0077"><span class="uname">U+0077 LATIN SMALL LETTER W</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʔ</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><span class="codepoint" translate="no"><bdi lang="ha">&#x02BC;</bdi> [<a href="/scripts/latin/block#char02BC"><span class="uname">U+02BC MODIFIER LETTER APOSTROPHE</span></a>]</span></span></p>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div id="map_affricates" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">t͡sʼ</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0074;&#x0073;</bdi> [<a href="/scripts/latin/block#char0074"><span class="uname">U+0074 LATIN SMALL LETTER T</span></a> + <a href="/scripts/latin/block#char0073"><span class="uname">U+0073 LATIN SMALL LETTER S</span></a>]</span> (may  be pronounced <span class="ipa">sʼ</span> in some dialects)</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0054;&#x0073;</bdi> [<a href="/scripts/latin/block#char0054"><span class="uname">U+0054 LATIN CAPITAL LETTER T</span></a> + <a href="/scripts/latin/block#char0073"><span class="uname">U+0073 LATIN SMALL LETTER S</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">t͡ʃ</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0063;</bdi> [<a href="/scripts/latin/block#char0063"><span class="uname">U+0063 LATIN SMALL LETTER C</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0043;</bdi> [<a href="/scripts/latin/block#char0043"><span class="uname">U+0043 LATIN CAPITAL LETTER C</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem uncommon">
+<div class="phone"><span class="ipa">d͡ʒ</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x006A;</bdi> [<a href="/scripts/latin/block#char006A"><span class="uname">U+006A LATIN SMALL LETTER J</span></a>]</span></p>
+</div>
+</div>
+</div>
+
+
+
+
+<div id="map_fricatives" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">f</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0066;</bdi> [<a href="/scripts/latin/block#char0066"><span class="uname">U+0066 LATIN SMALL LETTER F</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0046;</bdi> [<a href="/scripts/latin/block#char0046"><span class="uname">U+0046 LATIN CAPITAL LETTER F</span></a>]</span></p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">fʲ</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0066;&#x0079;</bdi> [<a href="/scripts/latin/block#char0066"><span class="uname">U+0066 LATIN SMALL LETTER F</span></a> + <a href="/scripts/latin/block#char0079"><span class="uname">U+0079 LATIN SMALL LETTER Y</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">s</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0073;</bdi> [<a href="/scripts/latin/block#char0073"><span class="uname">U+0073 LATIN SMALL LETTER S</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0053;</bdi> [<a href="/scripts/latin/block#char0053"><span class="uname">U+0053 LATIN CAPITAL LETTER S</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">z</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x007A;</bdi> [<a href="/scripts/latin/block#char007A"><span class="uname">U+007A LATIN SMALL LETTER Z</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x005A;</bdi> [<a href="/scripts/latin/block#char005A"><span class="uname">U+005A LATIN CAPITAL LETTER Z</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">sʼ</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0074;&#x0073;</bdi> [<a href="/scripts/latin/block#char0074"><span class="uname">U+0074 LATIN SMALL LETTER T</span></a> + <a href="/scripts/latin/block#char0073"><span class="uname">U+0073 LATIN SMALL LETTER S</span></a>]</span> (may  be pronounced <span class="ipa">t͡sʼ</span> in some dialects)</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʃ</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0073;&#x0068;</bdi> [<a href="/scripts/latin/block#char0073"><span class="uname">U+0073 LATIN SMALL LETTER S</span></a> + <a href="/scripts/latin/block#char0068"><span class="uname">U+0068 LATIN SMALL LETTER H</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0053;&#x0068;</bdi> [<a href="/scripts/latin/block#char0053"><span class="uname">U+0053 LATIN CAPITAL LETTER S</span></a> + <a href="/scripts/latin/block#char0068"><span class="uname">U+0068 LATIN SMALL LETTER H</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʒ</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x006A;</bdi> [<a href="/scripts/latin/block#char006A"><span class="uname">U+006A LATIN SMALL LETTER J</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x004A;</bdi> [<a href="/scripts/latin/block#char004A"><span class="uname">U+004A LATIN CAPITAL LETTER J</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">h</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0068;</bdi> [<a href="/scripts/latin/block#char0068"><span class="uname">U+0068 LATIN SMALL LETTER H</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0048;</bdi> [<a href="/scripts/latin/block#char0048"><span class="uname">U+0048 LATIN CAPITAL LETTER H</span></a>]</span></p>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+<div id="map_nasals" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">m</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x006D;</bdi> [<a href="/scripts/latin/block#char006D"><span class="uname">U+006D LATIN SMALL LETTER M</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x004D;</bdi> [<a href="/scripts/latin/block#char004D"><span class="uname">U+004D LATIN CAPITAL LETTER M</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">n</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x006E;</bdi> [<a href="/scripts/latin/block#char006E"><span class="uname">U+006E LATIN SMALL LETTER N</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x004E;</bdi> [<a href="/scripts/latin/block#char004E"><span class="uname">U+004E LATIN CAPITAL LETTER N</span></a>]</span></p>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div id="map_other" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">w</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0077;</bdi> [<a href="/scripts/latin/block#char0077"><span class="uname">U+0077 LATIN SMALL LETTER W</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0057;</bdi> [<a href="/scripts/latin/block#char0057"><span class="uname">U+0057 LATIN CAPITAL LETTER W</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɾ</span>~<span class="ipa">r</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0072;</bdi> [<a href="/scripts/latin/block#char0072"><span class="uname">U+0072 LATIN SMALL LETTER R</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0052;</bdi> [<a href="/scripts/latin/block#char0052"><span class="uname">U+0052 LATIN CAPITAL LETTER R</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɽ</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0072;</bdi> [<a href="/scripts/latin/block#char0072"><span class="uname">U+0072 LATIN SMALL LETTER R</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0052;</bdi> [<a href="/scripts/latin/block#char0052"><span class="uname">U+0052 LATIN CAPITAL LETTER R</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">l</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x006C;</bdi> [<a href="/scripts/latin/block#char006C"><span class="uname">U+006C LATIN SMALL LETTER L</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x004C;</bdi> [<a href="/scripts/latin/block#char004C"><span class="uname">U+004C LATIN CAPITAL LETTER L</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">j</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0079;</bdi> [<a href="/scripts/latin/block#char0079"><span class="uname">U+0079 LATIN SMALL LETTER Y</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x0059;</bdi> [<a href="/scripts/latin/block#char0059"><span class="uname">U+0059 LATIN CAPITAL LETTER Y</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">j̰</span></div>
+<div class="posn">l</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x01B4;</bdi> [<a href="/scripts/latin/block#char01B4"><span class="uname">U+01B4 LATIN SMALL LETTER Y WITH HOOK</span></a>]</span> in Niger</p>
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x02BC;&#x0079;</bdi> [<a href="/scripts/latin/block#char02BC"><span class="uname">U+02BC MODIFIER LETTER APOSTROPHE</span></a> + <a href="/scripts/latin/block#char0079"><span class="uname">U+0079 LATIN SMALL LETTER Y</span></a>]</span> in Nigeria&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone">&nbsp;</div>
+<div class="posn">u</div>
+<div class="mapletters">
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x01B3;</bdi> [<a href="/scripts/latin/block#char01B3"><span class="uname">U+01B3 LATIN CAPITAL LETTER Y WITH HOOK</span></a>]</span> in Niger</p>
+<p><span class="codepoint" translate="no"><bdi lang="ha">&#x02BC;&#x0059;</bdi> [<a href="/scripts/latin/block#char02BC"><span class="uname">U+02BC MODIFIER LETTER APOSTROPHE</span></a> + <a href="/scripts/latin/block#char0059"><span class="uname">U+0059 LATIN CAPITAL LETTER Y</span></a>]</span> in Nigeria&nbsp;</p>
+</div>
+</div>
+</div>
+</section>
+</section>
 </section>
 
-
-  
-
-
-
-
-  
-<section id="tones">
-<h2>Tones</h2>
-<p>Hausa uses 3 tones, high, low and falling. These are not indicated in normal text.<tt>c</tt></p>
-<p>In academic and education text the tone can be indicated using one of the following characters, representing high, low, and falling, respectively.<sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch12.pdf"></a></sup></p>
-
-<figure class="auxiliaryBox auto"  data-cols="">́␣̀␣̂</figure>
-</section>
 
 
 
@@ -620,7 +1352,7 @@ alveolar</th>
 
 <p>An interesting feature of large numbers written in India is that they apply groupings of two, rather than three, digits between commas (even when using european digits).</p>
     <figure>
-    <p class="large"><span class="ex" lang="hi">20,00,000</span></p>
+    <p class="large"><span class="ex" lang="ha">20,00,000</span></p>
     <figcaption>Two million, written with Indian comma separators.</figcaption>
     </figure-->
 
@@ -628,7 +1360,7 @@ alveolar</th>
 <!--section>
 <h3 id="currency">Currency</h3>
 
-<p><span class="codepoint" translate="no"><span lang="hi">&#x20B9;</span> [<a href="/scripts/latin/block#char20B9"><span class="uname">U+20B9 INDIAN RUPEE SIGN</span></a>]</span> is the symbol introduced by the Government of India in 2010 as the official currency symbol for the Indian rupee (INR). <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch22.pdf">u</a></sup></p>
+<p><span class="codepoint" translate="no"><span lang="ha">&#x20B9;</span> [<a href="/scripts/latin/block#char20B9"><span class="uname">U+20B9 INDIAN RUPEE SIGN</span></a>]</span> is the symbol introduced by the Government of India in 2010 as the official currency symbol for the Indian rupee (INR). <sup><a href="http://www.unicode.org/versions/Unicode11.0.0/ch22.pdf">u</a></sup></p>
 </section-->
 </section>
 
@@ -698,6 +1430,11 @@ alveolar</th>
 <h3>Word boundaries</h3>
 <p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 <p>Words are  separated by spaces.<sup><a href="https://www.w3.org/TR/ilreq/"></a></sup></p>
+<p>Words can also be hyphenated. This is especially, but not solely, true for words that repeat the same sound, eg.
+<span class="eg" lang="ha" dir="ltr">wuƙi-wuƙi</span>
+<span class="eg" lang="ha" dir="ltr">dushi-dushi</span>
+<span class="eg" lang="ha" dir="ltr">atone-janar</span>
+</p>
 </section>
 
 
@@ -706,31 +1443,22 @@ alveolar</th>
   
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
+
+<figure class="characterBox auto small"  data-cols="">,␣;␣:␣.␣?␣!</figure>
+
 <table class="character_list">
 <tbody>
 <tr>
 <th scope="row">phrase</th>
-<td><p><span class="codepoint" translate="no"><span lang="hi">&#x002C;</span> [<a href="/scripts/devanagari/block#char002C"><span class="uname">U+002C COMMA</span></a>]</span></p>
-<p><span class="codepoint" translate="no"><span lang="hi">&#x003B;</span> [<a href="/scripts/devanagari/block#char003B"><span class="uname">U+003B SEMICOLON</span></a>]</span></p>
-<p><span class="codepoint" translate="no"><span lang="hi">&#x003A;</span> [<a href="/scripts/devanagari/block#char003A"><span class="uname">U+003A COLON</span></a>]</span></p></td>
+<td><p><span class="codepoint" translate="no"><span lang="ha">&#x002C;</span> [<a href="/scripts/devanagari/block#char002C"><span class="uname">U+002C COMMA</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="ha">&#x003B;</span> [<a href="/scripts/devanagari/block#char003B"><span class="uname">U+003B SEMICOLON</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="ha">&#x003A;</span> [<a href="/scripts/devanagari/block#char003A"><span class="uname">U+003A COLON</span></a>]</span></p></td>
 </tr>
 <tr>
 <th scope="row">sentence</th>
-<td><p><span class="codepoint" translate="no"><span lang="hi">&#x002E;</span> [<a href="/scripts/devanagari/block#char002E"><span class="uname">U+002E FULL STOP</span></a>]</span></p>
-<p><span class="codepoint" translate="no"><span lang="hi">&#x003F;</span> [<a href="/scripts/devanagari/block#char003F"><span class="uname">U+003F QUESTION MARK</span></a>]</span></p>
-<p><span class="codepoint" translate="no"><span lang="hi">&#x0021;</span> [<a href="/scripts/devanagari/block#char0021"><span class="uname">U+0021 EXCLAMATION MARK</span></a>]</span></p></td>
-</tr>
-<tr>
-<th scope="row">paragraph</th>
-<td><span class="codepoint"><span lang="jv">&#xA9CB;</span> <a href="/scripts/javanese/block#charA9CB">[<span class="uname">U+A9CB JAVANESE PADA ADEG ADEG</span>]</a></span></td>
-</tr>
-<tr>
-<th scope="row">section</th>
-<td>Ditto.</td>
-</tr>
-<tr>
-<th scope="row">general&nbsp;divider</th>
-<td><span class="codepoint"><span lang="jv">&#xA9CA;</span> <a href="/scripts/javanese/block#charA9CA">[<span class="uname">U+A9CA JAVANESE PADA ADEG</span>]</a></span>&nbsp;</td>
+<td><p><span class="codepoint" translate="no"><span lang="ha">&#x002E;</span> [<a href="/scripts/devanagari/block#char002E"><span class="uname">U+002E FULL STOP</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="ha">&#x003F;</span> [<a href="/scripts/devanagari/block#char003F"><span class="uname">U+003F QUESTION MARK</span></a>]</span></p>
+<p><span class="codepoint" translate="no"><span lang="ha">&#x0021;</span> [<a href="/scripts/devanagari/block#char0021"><span class="uname">U+0021 EXCLAMATION MARK</span></a>]</span></p></td>
 </tr>
 </tbody>
 </table>
@@ -742,6 +1470,9 @@ alveolar</th>
 
 <section id="bracketing">
 <h3>Parentheses &amp; brackets</h3>
+
+<figure class="characterBox auto small"  data-cols="">(␣)</figure>
+
 <table class="character_list">
 <thead>
 <tr>
@@ -753,8 +1484,8 @@ alveolar</th>
 <tbody>
 <tr>
 <th>standard</th>
-<td><p><span class="codepoint" translate="no"><span lang="hi">&#x0028;</span> [<a href="/scripts/devanagari/block#char0028"><span class="uname">U+0028 LEFT PARENTHESIS</span></a>]</span></p></td>
-<td><p><span class="codepoint" translate="no"><span lang="hi">&#x0029;</span> [<a href="/scripts/devanagari/block#char0029"><span class="uname">U+0029 RIGHT PARENTHESIS</span></a>]</span></p></td>
+<td><p><span class="codepoint" translate="no"><span lang="ha">&#x0028;</span> [<a href="/scripts/devanagari/block#char0028"><span class="uname">U+0028 LEFT PARENTHESIS</span></a>]</span></p></td>
+<td><p><span class="codepoint" translate="no"><span lang="ha">&#x0029;</span> [<a href="/scripts/devanagari/block#char0029"><span class="uname">U+0029 RIGHT PARENTHESIS</span></a>]</span></p></td>
 </tr>
 </tbody>
 </table>
@@ -766,6 +1497,9 @@ alveolar</th>
   
 <section id="quotations">
 <h3>Quotations</h3>
+
+<figure class="characterBox auto small"  data-cols="">“␣”␣‘␣’</figure>
+
 <table class="character_list">
 <thead>
 <tr>
@@ -777,13 +1511,13 @@ alveolar</th>
 <tbody>
 <tr>
 <th scope="row">initial</th>
-<td><p><span class="codepoint" translate="no"><span lang="hi">&#x201C;</span> [<a href="/scripts/devanagari/block#char201C"><span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span></a>]</span></p></td>
-<td><span class="codepoint" translate="no"><span lang="hi">&#x201D;</span> [<a href="/scripts/devanagari/block#char201D"><span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span></a>]</span></td>
+<td><p><span class="codepoint" translate="no"><span lang="ha">&#x201C;</span> [<a href="/scripts/devanagari/block#char201C"><span class="uname">U+201C LEFT DOUBLE QUOTATION MARK</span></a>]</span></p></td>
+<td><span class="codepoint" translate="no"><span lang="ha">&#x201D;</span> [<a href="/scripts/devanagari/block#char201D"><span class="uname">U+201D RIGHT DOUBLE QUOTATION MARK</span></a>]</span></td>
 </tr>
 <tr>
 <th scope="row">nested</th>
-<td><p><span class="codepoint" translate="no"><span lang="hi">&#x2018;</span> [<a href="/scripts/devanagari/block#char2018"><span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span></a>]</span></p></td>
-<td><span class="codepoint" translate="no"><span lang="hi">&#x2019;</span> [<a href="/scripts/devanagari/block#char2019"><span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span></a>]</span></td>
+<td><p><span class="codepoint" translate="no"><span lang="ha">&#x2018;</span> [<a href="/scripts/devanagari/block#char2018"><span class="uname">U+2018 LEFT SINGLE QUOTATION MARK</span></a>]</span></p></td>
+<td><span class="codepoint" translate="no"><span lang="ha">&#x2019;</span> [<a href="/scripts/devanagari/block#char2019"><span class="uname">U+2019 RIGHT SINGLE QUOTATION MARK</span></a>]</span></td>
 </tr>
 </tbody>
 </table>
