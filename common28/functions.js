@@ -321,7 +321,218 @@ function removeEditorNotes () {
 
 function makeSidePanel (id, otherlinks) {
 	if (typeof langs === 'undefined') return
-	if (typeof langs[id] === 'undefined') { console.log('Charuse data not found. Id sent to makeSidePanel was ',id); return }
+	if (typeof langs[id] === 'undefined') { console.log('Charuse data not found. ID sent to makeSidePanel was ',id); return }
+    
+    var letters, marks, punctuation, symbols, others, numbers, aux, total
+    var out, records, fields, values
+	
+    // get character counts in a way that works around surrogates
+	letters = marks = punctuation = symbols = others = numbers = aux = 0
+	langs[id].letter ? letters = [...langs[id].letter].length : 0
+	langs[id].letteraux ? letters += [...langs[id].letteraux].length : 0
+	langs[id].mark ? marks = [...langs[id].mark].length : 0
+	langs[id].markaux ? marks += [...langs[id].markaux].length : 0
+	langs[id].punctuation ? punctuation = [...langs[id].punctuation].length : 0
+	langs[id].punctuationaux ? punctuation += [...langs[id].punctuationaux].length : 0
+	langs[id].symbol ? symbols = [...langs[id].symbol].length : 0
+	langs[id].symbolaux ? symbols += [...langs[id].symbolaux].length : 0
+	//langs[id].other ? others = [...langs[id].other].length : 0
+	langs[id].other ? others = langs[id].other.length : 0
+	langs[id].number ? numbers = [...langs[id].number].length : 0
+	langs[id].numberaux ? numbers += [...langs[id].numberaux].length : 0
+	langs[id].aux ? aux = [...langs[id].aux].length : 0
+	
+	total = letters + marks + punctuation + symbols + others + numbers 
+	
+	out = '<table>'
+	out += '<tbody id="featureTableBody">'
+	out += '<tr><th>Script code</th><td>'+langs[id].script+'</td></tr>'
+	out += '<tr><th>Language code</th><td>'+id+'</td></tr>'
+	out += '<tr><th>Script type</th><td class="tableHighlight">'+langs[id].type+'</td></tr>'
+	out += '<tr><th>Total characters</th><td class="tableHighlight" style="font-size: 150%;">'+parseInt(total).toLocaleString()
+	if (aux>0) out += ' <span style="font-size: 70%">+ '+aux+'</span>'
+	out += '</td></tr>'
+	out += '<tr><th>Letters</th><td class="tableHighlight">'+letters+'</td></tr>'
+
+	
+	out += '<tr><th>Combining marks</th><td'
+	if (marks!==0) out += ' class="tableHighlight"'
+	out += '>'+marks+'</td></tr>'
+	
+	if (punctuation!==0) out += '<tr><th>Punctuation</th><td class="tableHighlight">'+punctuation+'</td></tr>'
+	
+	if (symbols!==0) out += '<tr><th>Symbols</th><td class="tableHighlight">'+symbols+'</td></tr>'
+
+	if (others!==0) out += '<tr><th>Format codes</th><td class="tableHighlight">'+others+'</td></tr>'
+
+	out += '<tr><th>Native digits</th><td'
+	if (numbers!==0) out += ' class="tableHighlight"'
+	out += '>'+numbers+'</td></tr>'
+
+	out += '<tr><th>Possible other</th><td>'+aux+'</td></tr>'
+	
+	out += '<tr><th colspan="2">Character counts exclude ASCII.</td></tr>'
+	
+	out += '<tr style="line-height: .4;"><th>&nbsp;</th><td style="border:0;">&nbsp;</td></tr>'
+
+    if (langs[id].vowels) {
+        records = langs[id].vowels.split(' ')
+		out += '<tr><th>Vowels</th><td class="tableHighlight">'
+        for (i=0;i<records.length;i++) {
+            fields = records[i].split(':')
+            if (fields[1] !== 'y') out += fields[1]
+            switch (fields[0]) {
+                case 'let': out += ' letters'; break
+                case 'inh': out += ' inherent vowel'; break
+                case 'vs': out += ' vowel sign marks'; break
+                case 'vsl': out += ' vowel sign letters'; break
+                case 'venc': out += ' visually-encoded'; break
+                case 'ind': out += ' independent vowels'; break
+                case 'ml': out += ' matres lectionis'; break
+                case 'cm': out += ' combining marks'; break
+                case 'hcm': out += ' hidden diacritics'; break
+                case 'syl': out += ' syllables'; break
+
+                case 'base': out += ' base'; break
+                case 'pre': out += ' pre-base glyphs'; break
+                case 'circ': out += ' circumgraphs'; break
+                case 'comp': out += ' composite vowels'; break
+                case 'voc': out += ' vocalics'; break
+                }
+            if (i<records.length) out += '<br>'
+            }
+        out += '</td></tr>'
+		}
+
+    if (langs[id].medials) {
+        records = langs[id].medials.split(' ')
+		out += '<tr><th>Medials</th><td class="tableHighlight">'
+        for (i=0;i<records.length;i++) {
+            fields = records[i].split(':')
+            if (fields[1] !== 'y') out += fields[1]
+            switch (fields[0]) {
+                case 'cm': out += ' diacritics'; break
+                case 'sj': out += ' subjoined letters'; break
+                case 'vs': out += ' dedicated letters'; break
+                }
+            if (i<records.length) out += '<br>'
+            }
+        out += '</td></tr>'
+		}
+
+    if (langs[id].finals) {
+        records = langs[id].finals.split(' ')
+		out += '<tr><th>Finals</th><td class="tableHighlight">'
+        for (i=0;i<records.length;i++) {
+            fields = records[i].split(':')
+            if (fields[1] !== 'y') out += fields[1]
+            switch (fields[0]) {
+                case 'cm': out += ' diacritics'; break
+                case 'let': out += ' dedicated letters'; break
+                case 'ss': out += ' superscript letters'; break
+                case 'vk': out += ' vowel killer'; break
+                }
+            if (i<records.length) out += '<br>'
+            }
+        out += '</td></tr>'
+		}
+
+    if (langs[id].clusters) {
+        values = langs[id].clusters.split(' ')
+		out += '<tr><th>Consonant clusters</th><td class="tableHighlight">'
+        for (i=0;i<values.length;i++) {
+            switch (values[i]) {
+                case 'vir': out += 'visible virama'; break
+                case 'inv': out += 'hidden conjunct maker'; break
+                case 'stk': out += 'stacked glyphs'; break
+                case 'cnj': out += 'conjoined glyphs'; break
+                case 'lig': out += 'ligatures'; break
+                case 'tcg': out += 'touching glyphs'; break
+                case 'rax': out += 'special RA handling'; break
+                case 'mrk': out += 'vowel-killer diacritic'; break
+                case 'let': out += 'special letters'; break
+                case 'unm': out += 'unmarked'; break
+                }
+            if (i<values.length) out += '<br>'
+            }
+        out += '</td></tr>'
+		}
+
+	out += '<tr><th>Case distinction</th><td'
+	if (langs[id].cs!=='no') out += ' class="tableHighlight"'
+	out += '>'+langs[id].cs+'</td></tr>'
+	
+	out += '<tr><th>Cursive script</th><td'
+	if (langs[id].cursive!=='no') out += ' class="tableHighlight"'
+	out += '>'+langs[id].cursive+'</td></tr>'
+	
+	out += '<tr><th>Text direction</th><td'
+	if (langs[id].direction!=='ltr') out += ' class="tableHighlight"'
+	out += '>'+langs[id].direction+'</td></tr>'
+	
+	out += '<tr><th>Baseline</th><td'
+	if (langs[id].baseline!=='mid') out += ' class="tableHighlight"'
+	out += '>'+langs[id].baseline+'</td></tr>'
+	
+	out += '<tr><th>Word separator</th><td'
+	if (langs[id].wordsep!=='space') out += ' class="tableHighlight"'
+	out += '>'+langs[id].wordsep
+    if (langs[id].wordsepChar) out += ' '+langs[id].wordsepChar
+    out += '</td></tr>'
+	
+	out += '<tr><th>Wraps at</th><td'
+	if (langs[id].wrap!=='word') out += ' class="tableHighlight"'
+	out += '>'+langs[id].wrap+'</td></tr>'
+	
+	out += '<tr><th>Hyphenation</th><td'
+	if (langs[id].hyphenation!=='word') out += ' class="tableHighlight"'
+	out += '>'+langs[id].hyphenation
+    if (langs[id].hyphen) out += ' '+langs[id].hyphen
+    out += '</td></tr>'
+	
+    if (langs[id].justification) {
+        values = langs[id].justification.split(' ')
+		out += '<tr><th>Justification</th><td class="tableHighlight">'
+        for (i=0;i<values.length;i++) {
+            switch (values[i]) {
+                case 'sp': out += 'at spaces/wordbreaks'; break
+                case 'str': out += 'baseline stretching'; break
+                case 'sw': out += 'swashes'; break
+                case 'pad': out += 'character padding'; break
+                case 'ic': out += 'between characters'; break
+                case 'ig': out += 'between glyphs'; break
+                case 'none': out += 'none'; break
+                case '?': out += '?'; break
+                }
+            if (i<values.length) out += '<br>'
+            }
+        out += '</td></tr>'
+		}
+	
+	
+	out += '<tr><th>Native speakers</th><td>'+parseInt(langs[id].speakers.replace(/~/g,'')).toLocaleString()+'</td></tr>'
+	
+	out += '<tr><th>Region</th><td>'+langs[id].region+'</td></tr>'
+	
+	
+	
+	out += '</tbody>'
+	out += '</table>'
+
+	out += '<p class="ctlink"><a href="../featurelist/">See the comparison table</a></p>'
+	out += '<p class="ctlink"><a href="../featurelist/#key">See the key</a></p>'
+	
+	langs = {}
+	
+	return out
+	}
+
+
+
+
+function makeSidePanelOLD (id, otherlinks) {
+	if (typeof langs === 'undefined') return
+	if (typeof langs[id] === 'undefined') { console.log('Charuse data not found. ID sent to makeSidePanel was ',id); return }
     
     var letters, marks, punctuation, symbols, others, numbers, aux, total
     var out, records, fields, values
