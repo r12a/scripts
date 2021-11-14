@@ -1691,6 +1691,20 @@ function setTranslitToggle () {
 
 	checkboxList.appendChild(div)
 
+    // add link to glossary
+	div = document.createElement('div')
+    div.id = 'glossaryLink'
+
+    var a = document.createElement('a')
+    a.appendChild(document.createTextNode('Open glossary'))
+    a.href = '../glossary/'
+    a.title = 'Find a term in the glossary.'
+    a.target = '_blank'
+    div.appendChild(a)
+
+	checkboxList.appendChild(div)
+
+    // add link to top of plage
 	div = document.createElement('div')
     var img = document.createElement('img')
     img.src = '../../shared/images/up.png'
