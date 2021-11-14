@@ -6,6 +6,7 @@ const MEANING = 1
 const IPA = 2
 const TRANS = 3
 const NOTES = 4
+const WIKI = 5
 
 // remove blank lines
 for (var m=0;m<wordList.length;m++) {
@@ -16,14 +17,14 @@ for (var m=0;m<wordList.length;m++) {
 	}
 
 
-// add spaces around term, ipa, & transc to facilitate word edge searaching
+// add spaces around term, ipa, & transc to facilitate word edge searching
 // check whether there are notes (affects drawing of table later)
 terms.thereAreNotes = false
 for (var n=0;n<wordList.length;n++) {
     fields = wordList[n].split('|')
     fields[TERM] = ' '+fields[TERM]+' '
     fields[IPA] = ' '+fields[IPA]+' '
-	if (typeof fields[TRANS] === 'undefined' || fields[NOTES] === '') {
+	if (typeof fields[TRANS] === 'undefined' || fields[TRANS] === '') {
         fields[TRANS] = ''
         }
     else fields[TRANS] = ' '+fields[TRANS]+' '
@@ -65,18 +66,35 @@ function initialise () {
 
 
 
+
+
 function printAll () {
 	var out = ''
 	for (var i=0;i<wordList.length;i++) {
         var fields = wordList[i].split('|')
 		out += '<tr>'
-        out += '<td lang="'+terms.language+'" dir="'+terms.direction+'" style="font-family:'+terms.fontFamily+'; font-size:'+terms.fontSize+'"><a target="lemmas" href="https://en.wiktionary.org/wiki/'+fields[TERM]+'#'+terms.wiktionaryLink+'">'+fields[TERM]+'</a></td>'
+        out += `<td lang="${ terms.language }" dir="${ terms.direction }" style="font-family:${ terms.fontFamily }; font-size:${ terms.fontSize }">`
+        
+        // figure out whether to link to a different string for Wiktionary lookup
+        if (fields[WIKI]  && fields[WIKI].trim() !== 'x') out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ fields[WIKI] }#${ terms.wiktionaryLink }">${ fields[TERM] }</a>`
+        else if (fields[WIKI]) out += `${ fields[TERM] }`
+        else out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ fields[TERM] }#${ terms.wiktionaryLink }">${ fields[TERM] }</a>`
+        
+        out += '</td>'
 
-		//out += '<td lang="'+terms.language+'" dir="'+terms.direction+'" style="font-family:'+terms.fontFamily+'; font-size:'+terms.fontSize+'" style="font-family:\'Noto Sans\'; font-size:14px">'+fields[TERM]+'</td>'
-		out += '<td>'+fields[MEANING]+'</td>'
+        out += '<td>'+fields[MEANING]+'</td>'
 		out += '<td class="tr">'+fields[IPA]+'</td>'
 		out += '<td class="tr">'+fields[TRANS]+'</td>'
-        if (terms.thereAreNotes) out += '<td class="noteCol">'+fields[NOTES]+'</td>'
+       // if (terms.thereAreNotes) out += '<td class="noteCol">'+fields[NOTES]+'</td>'
+        
+        if (terms.thereAreNotes) {
+            if (fields[NOTES].match('§')) {
+                var noteParts = fields[NOTES].split('§')
+                var xrefs =  `<a href="${ terms.language }_vocab?q=${ noteParts[1].replace(/,\s*/g,'|') }">${ noteParts[1] }</a>`
+                out += `<td class="noteCol">${ noteParts[0]+xrefs+noteParts[noteParts.length-1] }</td>`
+                }
+            else out += '<td class="noteCol">'+fields[NOTES]+'</td>'
+            }
         out += '</tr>\n'
 		}
 	
@@ -125,21 +143,44 @@ function findWords (reg) {
 		itemArray = result[i].split('|')
 		out += '<tr>'
 
-		out += '<td lang="'+terms.language+'" dir="'+terms.direction+'" style="font-family:'+terms.fontFamily+'; font-size:'+terms.fontSize+'"><a target="lemmas" href="https://en.wiktionary.org/wiki/'+itemArray[TERM]+'#'+terms.wiktionaryLink+'">'+itemArray[TERM]+'</a></td>'
+		//out += '<td lang="'+terms.language+'" dir="'+terms.direction+'" style="font-family:'+terms.fontFamily+'; font-size:'+terms.fontSize+'"><a target="lemmas" href="https://en.wiktionary.org/wiki/'+itemArray[TERM]+'#'+terms.wiktionaryLink+'">'+itemArray[TERM]+'</a></td>'
+        out += `<td lang="${ terms.language }" dir="${ terms.direction }" style="font-family:${ terms.fontFamily }; font-size:${ terms.fontSize }">`
+        if (itemArray[WIKI]  && itemArray[WIKI].trim() !== 'x') out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ itemArray[WIKI] }#${ terms.wiktionaryLink }">${ itemArray[TERM] }</a>`
+        else if (itemArray[WIKI]) out += `${ itemArray[TERM] }`
+        else out += `<a target="lemmas" href="https://en.wiktionary.org/wiki/${ itemArray[TERM] }#${ terms.wiktionaryLink }">${ itemArray[TERM] }</a>`
+        out += '</td>'
+        
 
 		out += '<td>'+itemArray[MEANING]+'</td>'
 
         out += '<td class="tr">'+itemArray[IPA]+'</td>'
 
         // if this is an abjad, check for vowelled alternatives
-        if (itemArray[TRANS].match('#')) {
-            var link = itemArray[TRANS].replace(/#/g,'|')
-            out += `<td class="tr"><a href="${ terms.language }_vocab?q=${ link }">${ link }</a></td>`
-            }
-        else out += `<td class="tr"> ${ itemArray[TRANS] }</td>`
+ //       if (itemArray[TRANS].match('#')) {
+//            var link = itemArray[TRANS].replace(/#/g,'|')
+//            out += `<td class="tr"><a href="${ terms.language }_vocab?q=${ link }">${ link }</a></td>`
+//            }
+//        else out += `<td class="tr"> ${ itemArray[TRANS] }</td>`
 
         if (terms.thereAreNotes) { //out += `<td class="noteCol">${ itemArray[NOTES] }</td>`
-        	if (itemArray[NOTES].match('#')) {
+            // find cross references and turn them into links
+        	/*if (itemArray[NOTES].match('§')) {
+                var noteParts = itemArray[NOTES].split('§')
+                var xrefs = ''
+                for (var x=1;x<noteParts.length-1;x++) {
+                    xrefs +=  `<a href="${ terms.language }_vocab?q=${ noteParts[x] }">${ noteParts[x] }</a> `
+                    }
+            	out += `<td class="noteCol">${ noteParts[0]+xrefs+noteParts[noteParts.length-1] }</td>`
+            	}
+            */
+        	if (itemArray[NOTES].match('§')) {
+                var noteParts = itemArray[NOTES].split('§')
+                var xrefs =  `<a href="${ terms.language }_vocab?q=${ noteParts[1].replace(/,\s*/g,'|') }">${ noteParts[1] }</a>`
+            	out += `<td class="noteCol">${ noteParts[0]+xrefs+noteParts[noteParts.length-1] }</td>`
+            	}
+            
+            // this is the older variant on see also, which should eventually be obsoleted
+        	else if (itemArray[NOTES].match('#')) {
             	var link = itemArray[NOTES].replace(/#/g,'|')
             	out += `<td class="noteCol"><a href="${ terms.language }_vocab?q=${ link }">${ link }</a></td>`
             	}
