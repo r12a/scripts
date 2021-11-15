@@ -6,7 +6,6 @@ window.langSet = true
 reflist = {
 
 
-
 "c": {
 "url":"#refs",
 "authors": " Bernard Comrie",
@@ -28,7 +27,18 @@ reflist = {
 "reviewed":false
 },
 
-"cd": {
+"cdl": {
+"authors": "Donaldson, Coleman",
+"title":"Linguistic and Civic Refinement in the N'ko Movement of Manding-Speaking West Africa",
+"date": "2019",
+"retr": "Nov 2021",
+"publisher":"University of Chicago Press Journals",
+"url":"https://www.journals.uchicago.edu/doi/10.1086/702554",
+"lang": new Set(['bm']),
+"reviewed":false
+},
+
+"cdc": {
 "authors": "Donaldson, Coleman Dupont",
 "title":"The An ka taa Bambara/Dioula Dictionary",
 "retr": "Nov 2021",

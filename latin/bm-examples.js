@@ -700,10 +700,15 @@ A y’à fɔ.|He said it.||||x
 
 mɔ̀muso|grandmother|mɔ̀muso|mɔmuso||x
 wari|money|wari|||x
-
-
-
-
+shɛ|chicken|ʃɛ̌|shɛ̌|variant of §sise§, also spelled sɛ or syɛ|x
+sisɛ|chicken|sìsɛ|sìsɛ||x
+zandarmu|policeman|zã́darmu|zándarmu||x
+sɔsɔ|beans|sɔ̀sɔ|sɔ̀sɔ||x
+shɔ̀|beans|ʃɔ̀|shɔ̀|variant of §sɔsɔ§|x
+shu|cabbage|ʃù|shù
+wolo|skin|wòló|wòló||x
+jɛ|white|jɛ̀|jɛ̀||x
+gɛlɛn|hard, difficult|jɛ̀lɛ̃|jɛ̀lɛ̃
 
 
 
