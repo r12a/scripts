@@ -72,7 +72,7 @@ binkannikɛla||
 bintu||
 bi||
 biɲɛkisɛ||
-biɲɛ||
+biɲɛ|liver|biɲɛ|biɲɛ
 boloci||
 bolofɛn||
 bolokala||
@@ -174,7 +174,7 @@ du||
 dá-ji|saliva||da-ji
 dáyɛlɛlan|||dayɛ
 dege|to learn|dège|dège||dège
-donso|hunter|dõso|dònso||dònso
+donso|hunter|dõzo|dònso||dònso
 doolen|fishhook|dóːlẽẽ̀|doolen||dóolen
 dúuru|||duuru
 dɔnko||
@@ -468,9 +468,9 @@ npan|sword|m͡pã̀
 npogotigi|girl, young woman||npògòtigi
 npògo|||npogo
 nsana|proverb||nsàna
-nsaransaranin|small fish|nsárãsaranĩ̀ː
+nsaransaranin|small fish|nzárãsaranĩ̀ː
 nsiranɛgɛ|bronze|
-nsaajɛ|gum arabic tree|n͡sáːd͡ʒɛ|nsáajɛ||nsáajɛ
+nsaajɛ|gum arabic tree|n͡záːd͡ʒɛ|nsáajɛ||nsáajɛ
 nsɛrɛ|watermelon|
 ntilen|giraffe|n͡tilen
 ntomi|tamarind|n͡tomi
@@ -629,7 +629,7 @@ yɛrɛ||
 àlikaama|wheat||alikaama
 àlisilamɛ|||alisilamɛ
 ŋana|tough|ŋànaꜜà
-ŋaniya||
+ŋaniya|intention, decision|ŋànìja|ŋànìya
 ŋɔmɔ|bark (tree)|ŋɔ̀mɔꜜɔ̀
 ɲaami|to mix, confuse|
 ɲaamɛ|camel|ɲaːmɛ
@@ -671,7 +671,7 @@ Zanga||
 kòori|circle, surround||koori||x
 nàámu|response when name is called|naamu|||x
 nba|male reply to greeting|m͡ba|ǹba||x
-nse|female reply to greeting|n͡se|ǹse||x
+nse|female reply to greeting|n͡ze|ǹse||x
 saha!|thanks!||saha||x
 kelen|one||kélen||x
 saba|three||sàba||x
@@ -709,11 +709,12 @@ shu|cabbage|ʃù|shù
 wolo|skin|wòló|wòló||x
 jɛ|white|jɛ̀|jɛ̀||x
 gɛlɛn|hard, difficult|jɛ̀lɛ̃|jɛ̀lɛ̃
-
-
-
-
-
+gɛsɛ|toothbrush|gʷɛsɛ|gɛsɛ||x
+gwɛsɛ|toothbrush|gʷɛsɛ|gwɛsɛ||x
+saga|sheep|saɣa|sàga||x
+ŋɛɲɛ|itch|ŋʷɛ́ɲɛ|ŋɛ́ɲɛ||x
+mɛɛn|last a long time|mɛ̃ː|mɛɛn||x
+wari caaman|a LOT of money|wari caːman|wari caaman||x
 
 
 

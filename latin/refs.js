@@ -48,6 +48,28 @@ reflist = {
 },
 
 
+"d": {
+"url":"#refs",
+"authors": "Peter T. Daniels and William Bright",
+"title":"The World's Writing Systems",
+"publisher":"Oxford University Press",
+"isbn":"0-19-507993-0",
+"lang": new Set(['ha']),
+"reviewed":true
+},
+
+
+"gd": {
+"authors": "Dumestre, Gérard",
+"title":"Grammaire fondamental du Bambara",
+"date": "2003",
+"publisher":"Éditions Karthala",
+"isbn":"978-2-84586402-3",
+"lang": new Set(['bm']),
+"reviewed":false
+},
+
+
 "ckj": {
 "authors": "Kutsch Lojenga, Constance",
 "title":"Orthography and tone: A tone-system typology and its implications for orthography development",
@@ -61,16 +83,6 @@ reflist = {
 "reviewed":false
 },
 
-
-"d": {
-"url":"#refs",
-"authors": "Peter T. Daniels and William Bright",
-"title":"The World's Writing Systems",
-"publisher":"Oxford University Press",
-"isbn":"0-19-507993-0",
-"lang": new Set(['ha']),
-"reviewed":true
-},
 
 "o": {
 "url":"http://www.omniglot.com/writing/hausa.htm",
