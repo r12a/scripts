@@ -1,5 +1,12 @@
 trace = false
 
+// set accessibility defaults
+access = {
+    fontsize: 15,
+    contrast: 'low'
+    }
+
+
 function addPageFeatures () {
     initialiseSummary(window.blockDir, window.langTag, window.scriptSummaryTableName, window.explainerDir)
     //autoTransliterate(langTag)
@@ -31,6 +38,18 @@ function addPageFeatures () {
 
 
 function initialiseSummary (blockDirectory, lang, tableName, dir) {
+    //set accessibility defaults
+    if (localStorage['docsAccess']) access = JSON.parse(localStorage['docsAccess']) 
+    if (access.contrast === 'high') {
+        document.querySelector('body').classList.add('contrast')
+        document.getElementById('contrastLow').classList.remove('access_selected')
+        document.getElementById('contrastHigh').classList.add('access_selected')
+        }
+    document.querySelector('html').style.fontSize = access.fontsize+'px'
+    document.getElementById('accessFontsize').value = access.fontsize
+    console.log(access.fontsize,document.getElementById('accessFontsize').value)
+
+
     if (trace) console.log('initialiseSummary(',blockDirectory, lang, tableName, dir,')')
 	doHeadersFooters(dir)
     makeIndexIntro(document.getElementById('index_intro'))

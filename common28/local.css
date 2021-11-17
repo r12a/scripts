@@ -19,10 +19,12 @@
 .counter_style_comp table { margin:0; margin-top: 2em; }
 
 
+html { font-size: 15px; }
 body {
 	line-height: 2em;
-	font-size: 15px;
+	/*font-size: 15px;*/
 	hyphens: auto;
+    font-size: 100%; /* this neutralises the setting in docs.css, so that the accessibility options work on the html tag */
 	}
 #featureTableBody {
 	line-height: 1.75;
@@ -652,8 +654,8 @@ details figure {
 /*.allophone::before { content: '('; color: #ccc; }
 .allophone::after { content: ')'; color: #ccc; }*/
 
-.ipaSVG .ipa { fill: #666; font-family: "ExtendedLatinWF"; font-weight:normal; font-size:20px;text-align:left; text-anchor: center; cursor: pointer; }
-.ipaSVG .allophone { fill: #ccc; fill: tan; font-family: "ExtendedLatinWF"; font-weight:normal; font-size:20px;text-align:left; text-anchor: center; cursor: pointer; }
+.ipaSVG .ipa { fill: #666; font-family: "ExtendedLatinWF"; font-weight:normal; font-size:1.2rem;text-align:left; text-anchor: center; cursor: pointer; }
+.ipaSVG .allophone { fill: #ccc; fill: tan; font-family: "ExtendedLatinWF"; font-weight:normal; font-size:1.2rem;text-align:left; text-anchor: center; cursor: pointer; }
 .ipaSVG .allophone::before { content: '('; stroke: #ccc; }
 .ipaSVG .allophone::after { content: ')'; stroke: #ccc; }
 
@@ -1417,6 +1419,72 @@ p.notesLink {
     margin-right: 32%;
     margin-left: 7.5%
     }
+
+
+
+
+
+/* ACCESSIBLITY PANEL */
+
+
+#contrastSwitch {
+    position:fixed;
+    top:3px;
+    right:14px;
+    line-height:1;
+    }
+
+#access { 
+    position:fixed; 
+    top: 50px;
+    right: 30px;
+    width: 40%;
+    background-color:#60b0f9;
+    z-index: 1000;
+    text-align: center;
+    padding: 1.4em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border-radius: 1rem;
+    }
+#access_contrast, #access_fontsize {
+    padding: 1rem;
+    background: #eee;
+    border-radius: 1rem;
+    border: 1px solid gray;
+    }
+#contrastChoice {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 1rem;
+    justify-content: space-around;
+    }
+#contrastChoice button {
+    padding: 1rem;
+    font-size: 1.4rem;
+    border: 1px solid gray;
+    border-radius: .4rem;
+    }
+.access_selected {
+    color: white;
+    background: #007bf2;
+    }
+/* end */
+
+
+
+/* ACCESSIBILITY SETTINGS  */
+
+body.contrast a, body.contrast .listUnumCP {
+    color: #36c;
+    }
+body.contrast a:hover {
+    background-color: tan;
+    }
+
+/* end */
 
 
 

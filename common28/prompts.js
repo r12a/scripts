@@ -252,6 +252,47 @@ function addUsageAdvice (script) {
 	}
 
 
+function addUsageAdvice (script) {
+	// Add a para to the intro & add accessibility controls
+	
+	document.getElementById('usage').outerHTML = `
+    <p style="line-height:1.4"><strong style="font-size:120%;">This is an interactive document:</strong> Click/tap on the following to reveal detailed information and examples for each character: (a) characters in boxes with coloured backgrounds, (b) <span style="color:teal;">link text</span> on character names. (You can make this happen as the cursor moves over the characters in boxes, by selecting <samp>Detail on mouseover</samp> in the floating menu to the right.) The same information also appears in the companion document, <a href="block" target="_blank" class="linkHighlightx">${ script } character notes</a>. In addition, you can click/tap on <span class="ex">coloured</span> examples and on figures to see a list of the characters they contain.</p>
+    
+    <div id="contrastSwitch" title="Accessibility settings." onclick="document.getElementById('access').style.display='flex'"><img src="../../shared/images/access.png" alt="Accessibility settings"></div>
+
+    <!-- ACCESSIBILITY PANEL  -->
+    <div id="access" style="display: none;">
+    <div id="access_contrast">
+    <div id="contrastChoice">
+    <button id="contrastLow" class="access_selected" onClick="document.querySelector('body').classList.remove('contrast');
+        access.contrast = 'low';
+        this.classList.add('access_selected'); 
+        document.getElementById('contrastHigh').classList.remove('access_selected');
+        ">Low contrast</button><button id="contrastHigh"
+    onClick="document.querySelector('body').classList.add('contrast');
+        access.contrast = 'high';
+        this.classList.add('access_selected'); 
+        document.getElementById('contrastLow').classList.remove('access_selected');
+        ">High contrast</button>
+    </div>
+    </div>
+    
+    <div id="access_fontsize">Set text size: <input id="accessFontsize" type="range" min="15" max="24" step="1" value="15" oninput="access.fontsize=this.value; document.querySelector('html').style.fontSize = this.value+'px'" style="width:12rem;"></div>
+    <div style="color: white;">Font &amp; text size of the examples can be changed independently using the control that pulls out from the bottom right of the page.</div>
+    
+    <div style="display:flex; flex-direction:row; flex-wrap:nowrap; justify-content:space-around;">
+    <div style="margin-block-start: 1rem; font-size: 1.4rem; color: black; cursor:pointer;" onclick="localStorage['docsAccess'] = JSON.stringify(access)">Save settings</div>
+    <div style="margin-block-start: 1rem; font-size: 1.4rem; color: black; cursor:pointer;" onclick="this.parentNode.parentNode.style.display='none';">Close X</div>
+    </div>
+    </div>
+    `
+	}
+
+
+
+
+
+
 function addAnalytics () {
     // add the stuff at the bottom to generate lists and the index
     
