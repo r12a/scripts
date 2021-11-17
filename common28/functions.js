@@ -1703,6 +1703,19 @@ function setTranslitToggle () {
     div.appendChild(a)
 
 	checkboxList.appendChild(div)
+    
+    // add link to character app
+	div = document.createElement('div')
+    div.id = 'characterAppLink'
+
+    var a = document.createElement('a')
+    a.appendChild(document.createTextNode('Open character app'))
+    a.href = '../../pickers/'+window.pickerDir
+    a.title = 'Open a character app for this orthography.'
+    a.target = '_blank'
+    div.appendChild(a)
+
+	checkboxList.appendChild(div)
 
     // add link to top of plage
 	div = document.createElement('div')
