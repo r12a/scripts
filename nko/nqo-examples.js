@@ -58,6 +58,14 @@ autoExpandExamples.nqo = `
 ߓߊ߭ߞߐ߬ߦߐ|herbaceous plant|bǎkɔ̀jɔ́|bǎkɔ̀yɔ́||x
 ߌ ߓߴߊ߬ ߝߐ߫|you say it|í b(ɛ́)à fɔ́|í bʼà fɔ́||x
 ߌ ߞߵߊ߬ ߝߐ߫|you said it|í k(à)à fɔ́|í kʼà fɔ́||x
+ߞߏ߲|do first, precede||kɔ̌n||x
+ߛߓߊ߬|three||sábá||x
+ߍߛߑߞߌߡߏߞߊ|eskimo||ɛskimoka||x
+ߍߛߑߕߎߥߊߣߌߞߊ|Estonian||ɛstuwanika||x
+ߦߎߣߍߛߑߞߏ|UNESCO||yunɛsko||x
+ߛߑߔߌߣߏߖ߭ߊ߫|Spinoza||spinozá||x
+
+
 
 
 
