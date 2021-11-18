@@ -715,7 +715,7 @@ saga|sheep|saɣa|sàga||x
 ŋɛɲɛ|itch|ŋʷɛ́ɲɛ|ŋɛ́ɲɛ||x
 mɛɛn|last a long time|mɛ̃ː|mɛɛn||x
 wari caaman|a LOT of money|wari caːman|wari caaman||x
-
+kɔn|do first, precede|kɔ̌n|kɔ̌n||x
 
 
 
