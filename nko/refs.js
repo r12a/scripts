@@ -1,6 +1,16 @@
 reflist = {
 
 
+"cd": {
+"authors": "Sort by family name of first contributor",
+"title":"Clear Language: Script, Register And The N’ko Movement Of Manding-Speaking West Africa",
+"date": "2017",
+"retr": "Nov 2021",
+"publisher":"University of Pennsylvania ScholarlyCommons",
+"url":"https://repository.upenn.edu/cgi/viewcontent.cgi?article=4537&context=edissertations",
+"reviewed":false
+},
+
 "ec": {
 "url":"https://www.unicode.org/L2/L2005/05237-n2977-nko-jona.pdf",
 "authors": "Michael Everson, Mamady Doumbouya, Baba Mamadi Diané, Karamo Kaba Jammeh",
@@ -66,4 +76,18 @@ reflist = {
 
 
 
-// <a class="fn">ws,#tones</a>
+
+
+scriptLanguageList = {
+bam:{name:"Bambara"},
+dyu:{name:"Dyula"},
+emk:{name:"Maninkan, Eastern"},
+man:{name:"Mandingo"},
+nqo:{name:"N'Ko", url:"index"},
+}
+
+
+
+
+
+
