@@ -156,11 +156,11 @@ function findWords (reg) {
         out += '<td class="tr">'+itemArray[IPA]+'</td>'
 
         // if this is an abjad, check for vowelled alternatives
- //       if (itemArray[TRANS].match('#')) {
-//            var link = itemArray[TRANS].replace(/#/g,'|')
-//            out += `<td class="tr"><a href="${ terms.language }_vocab?q=${ link }">${ link }</a></td>`
-//            }
-//        else out += `<td class="tr"> ${ itemArray[TRANS] }</td>`
+        if (itemArray[TRANS].match('#')) {
+            var link = itemArray[TRANS].replace(/#/g,'|')
+            out += `<td class="tr"><a href="${ terms.language }_vocab?q=${ link }">${ link }</a></td>`
+            }
+        else out += `<td class="tr"> ${ itemArray[TRANS] }</td>`
 
         if (terms.thereAreNotes) { //out += `<td class="noteCol">${ itemArray[NOTES] }</td>`
             // find cross references and turn them into links
