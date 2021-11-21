@@ -36,6 +36,13 @@ reflist = {
 "reviewed":true
 },
 
+"nfb": {
+"url":"http://www.fakoli.net/nko/tutorial/intro.html",
+"title":"N’ko for Beginners: Introduction",
+"retr": "Nov 2021",
+"reviewed":false
+},
+
 "o": {
 "url":"https://www.omniglot.com/writing/bamum.htm",
 "authors": "Omniglot",

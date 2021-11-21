@@ -3,8 +3,8 @@ autoExpandExamples.nqo = `
 
 ߁߭|first||1̣³
 ߂߲|second||2̣˜
-ߊ߲ ߧߴߌ ߝߏ߬ ߟߊ߫ ߸ ߞߵߌ ߞߎߟߎ߲ߖߋ߲.|We give you thanks.||a˜ j⁸i fo² la¹ , k⁹i kulu˜ʤe˜.
-ߓߐߗ߭ߎߙ. ߓߌߢߍ߲ ߝ߭ߋߣߎ߳.|Bonjour. Bien venue.|(bɔʒur. bi‌ñɛ̃ veny)|bɔʧ³ur. biɲɛ˜ f³enuˑ.
+ߊ߲ ߧߴߌ ߝߏ߬ ߟߊ߫ ߸ ߞߵߌ ߞߎߟߎ߲ߖߋ߲|We give you thanks.|ã ɲi fò lá,  ki kulũd͡ʒẽ|ã y’i fò lá,  k’i kulũjẽ||x
+ߓߐߗ߭ߎߙ. ߓߌߢߍ߲ ߝ߭ߋߣߎ߳.|Bonjour. Bien venue.|bɔʒur. bi‌ɲɛ̃ veny|bɔʧ³ur. biɲɛ˜ f³enuˑ.||x
 ߕߏ߲ߜߊ|litre||to˜gᵇa
 ߘߋ߲ߣߍ߲ ߠߎ߬ ߟߊ߫ ߓߋߟߋ߲ߠߊ|a speech from the children|dẽnɛ̃ łu la belẽła|
 ߛߌ ߺ ߌ ߺ ߛߌ|anyone||si _ i _ si
@@ -48,8 +48,7 @@ autoExpandExamples.nqo = `
 ߕߏ߫|leave, abandon||to¹
 ߥߊߙߌ|money||wari
 ߦߊ߲߬|here||ya˜²
-ߒ|I||ŋ̩
-ߒߞߏ|N’Ko||ŋ̩ko
+ߒ|I|n̩|ń
 
 ߝ߭ߍߙߌ|glass||véri|extremely marginal phoneme from French (cdl)|x
 ߜߍ߫|white||ɡ͡bɛ||x
@@ -81,7 +80,7 @@ autoExpandExamples.nqo = `
 ߓߌߢߍ|liver||biɲɛ
 ߞߌ߬ߢߍ߬ߞߌߢߍ|sand||kìɲɛ̀kiɲɛ
 ߟߋߟߋ|absent||lele||x
-ߝߘߊ߬ߝߌ߲߬ߠߊ߫|Africa||fadàfì̃lá||x
+ߝߘߊ߬ߝߌ߲߬ߠߊ߫|Africa||fadàfĩ̀ná||x
 ߜߐ߱|widow||gbòó||x
 ߘߎ߱|city||dùú||x
 ߓߎ߱|wigwam||bùú||x
@@ -102,14 +101,29 @@ autoExpandExamples.nqo = `
 ߤߊߤߊߣߍ߲|panting||hahanɛ̃||x
 ߛߌߣߊߣߍ߲|gazelle||sinanɛ̃||x
 ߢߐ߯ߡߍ|camel||ɲɔ́ɔmɛ||x
-ߥߏ߲ߥߏ߲ߠߌ|bark||wõwõli||x
+ߥߏ߲ߥߏ߲ߠߌ|bark||wõwõni||x
 ߥߋ߬ߟߋ߲߬ߥߋߟߋ߲|acrobatics||wèlẽ̀welẽ||x
-ߒߞߏ|N'ko||n'ko||x
-ߡߊ߰ߒߠߊ|contact||màn'la||x
-ߓߏ߲߬ߧߊ|honour||bõ̀ɲa||x
-ߘߏ߲߬ߠߌ߲|access||dõ̀lĩ||x
+ߒߞߏ|N’Ko||ńko
+ߡߊ߰ߒߠߊ|contact||màńna||x
+ߓߏ߲߬ߧߊ|honour||bõ̀ya||x
+ߘߏ߲߬ߠߌ߲|access||dõ̀nĩ||x
+ߝߚߎ߫|completely||fúr(ú)rú||x
+ߛߐ߬ߛߐ|bean||sɔ̀sɔ́||x
 
 
+
+ߓߟߊ|xylophone||bála||x
+ߓߊ߬ߟߊ|porcupine||bàlá||x
+ߓߊߛߌ|evil||bási||x
+ߓߊ߬ߛߌ|couscous||bàsí||x
+ߓߊ߲߫|finish||bán||x
+ߓߊ߲߬|refuse||bàn||x
+ߞߣߎ߫|wake up||kúnu||x
+ߞߣߎ߬|swallow||kùnu||x
+ߦߙߌ|tree||yíri||x
+
+
+߾߅،߿߉߅|5 dorome and 95 taman (đ5.ŧ95)
 
 
 
