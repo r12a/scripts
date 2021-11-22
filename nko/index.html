@@ -89,7 +89,8 @@
   
 
 <p class="instructions noprint">Select part of this sample text to show a
-list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" 
+list of characters, with links to more details. <a style="margin-inline-start: 2rem;" href="http://www.kanjamadi.com/">Source</a><br>
+Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" 
 oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
 
 <div id="freeText" dir="rtl" lang="nqo" data-target="c" data-base="/scripts/nko/block" data-source="http://www.kanjamadi.com/">
@@ -268,7 +269,7 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 
 <section id="index_punctuation_ascii">
 <h4>ASCII</h4>
-<figure class="characterBox noindex indexline"  data-cols="" data-links="">(␣)␣.␣:</figure>
+<figure class="characterBox noindex indexline"  data-cols="" data-links="">(␣)␣[␣]␣.␣:</figure>
 </section>
 </section>
 
@@ -282,6 +283,19 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 <summary class="instructions">Show</summary>
 
 <figure class="characterBox noindex indexline" data-cols="" data-links="">߶␣߾␣߿</figure>
+</details>
+</section>
+
+
+
+
+
+<section id="index_other">
+<h3>Other</h3>
+<details>
+<summary class="instructions">Show</summary>
+
+<figure class="characterBox noindex indexline" data-cols="" data-notes="<img src='../../c/General_Punctuation/200C.png' alt='ZWNJ' style='vertical-align:middle'>,<img src='../../c/General_Punctuation/200D.png' alt='ZWJ' style='vertical-align:middle'>,<img src='../../c/General_Punctuation/2067.png' alt='RLI' style='vertical-align:middle'>,<img src='../../c/General_Punctuation/202B.png' alt='RLE' style='vertical-align:middle'>,<img src='../../c/General_Punctuation/2066.png' alt='LRI' style='vertical-align:middle'>,<img src='../../c/General_Punctuation/202A.png' alt='LRE' style='vertical-align:middle'>,<img src='../../c/General_Punctuation/2068.png' alt='FSI' style='vertical-align:middle'>,<img src='../../c/General_Punctuation/2069.png' alt='PDI' style='vertical-align:middle'>,<img src='../../c/General_Punctuation/202C.png' alt='PDF' style='vertical-align:middle'>,<img src='../../c/General_Punctuation/200F.png' alt='RLM' style='vertical-align:middle'>,<img src='../../c/General_Punctuation/200E.png' alt='LRM' style='vertical-align:middle'>" data-links="">&#x200C;␣&#x200D;␣&#x2067;␣&#x202B;␣&#x2066;␣&#x202A;␣&#x2068;␣&#x2069;␣&#x202C;␣&#x200F;␣&#x200E;</figure>
 </details>
 </section>
 </section>
@@ -1797,6 +1811,25 @@ alveolar</th>
 
 <figcaption>Joining forms for  shapes that join on both sides.</figcaption>
 </figure>
+
+
+
+
+
+<section id="shapingcontrols">
+<h4>Managing glyph shaping</h4>
+
+
+<p><span class="codepoint" translate="no"><span style="display:none;" lang="fuf">&#x200D;</span><img src="../../c/General_Punctuation/200D.png" alt="ZWJ" style="vertical-align:middle"> [<a href="/scripts/nko/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span> (<span class="uname">ZWJ</span>) and <span class="codepoint" translate="no"><span style="display:none;" lang="fuf">&#x200C;</span><img src="../../c/General_Punctuation/200C.png" alt="ZWNJ" style="vertical-align:middle"> [<a href="/scripts/nko/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a>]</span> (<span class="uname">ZWNJ</span>) are used to control the visual joining behaviour of cursive glyphs. They are particularly useful in educational contexts. For example, the <span class="uname" dir="ltr">ZWJ</span> was used to create the shapes in <a class="figref">fig_joining_forms</a>.</p>
+
+<p><span class="uname" dir="ltr">ZWJ</span>  permits a letter to form a cursive connection without a visible neighbour.</p>
+
+<p><span class="uname" dir="ltr">ZWNJ</span> prevents two adjacent letters forming a cursive connection with each other when rendered.</p>
+
+<!--p><span class="codepoint" translate="no"><span style="display:none;" lang="fuf">&#x034F;</span><img src="../../c/Combining_Diacritical_Marks/034F.png" alt="MVS" style="vertical-align:middle"> [<a href="/scripts/XXXXXX/block#char034F"><span class="uname">U+034F COMBINING GRAPHEME JOINER</span></a>]</span> is used in Arabic to produce special ordering of diacritics. The name is a misnomer, as it is generally used to <em>break</em> the normal sequence of diacritics.</p-->
+
+<p class="observation"><span class="leadin">Observation:</span> The <span class="uname" dir="ltr">ZWJ</span> only works on the left side of glyphs in <a class="figref">fig_joining_forms</a> if the table cell's base direction is set to RTL.</p>
+</section>
 </section>
 </section>
  
@@ -2042,12 +2075,24 @@ alveolar</th>
 
 <p>&nbsp;<span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07FD;</span> &nbsp; [<a href="/scripts/nko/block#char07FD"><span class="uname">U+07FD NKO DANTAYALAN</span></a>]</span> is used to abbreviate units of measure.<tt>e4</tt> The table shows some examples from a long list at <tt class="more">e4</tt>:</p>
 <table>
-<tr><th>Full word</th><th>Abbreviation</th></tr>
-<tr><td><span class="eg" lang="nqo" dir="rtl">ߞߎߘߍ</span></td><td><img src="images/abbr_kilometer.png"/></td></tr>
-<tr><td><span class="eg" lang="nqo" dir="rtl">ߛߌߘߐ</span></td><td><img src="images/abbr_gram.png"/></td></tr>
-<tr><td><span class="eg" lang="nqo" dir="rtl">ߕߏ߲ߜߊ</span></td><td><img src="images/abbr_litre.png"/></td></tr>
-<tr><td><span class="eg" lang="nqo" dir="rtl">ߜߟߊ߬ߥߊ߰ߘߋ߲</span></td><td><img src="images/abbr_mm.png"/></td></tr>
-<tr><td><span class="eg" lang="nqo" dir="rtl">ߜߟߊ߬ߗߡߍ߬ߝߘߎ߬ߓߍ߲</span></td><td><img src="images/abbr_cm2.png"/></td></tr>
+<tr><th>Full word</th>
+<th>Abbreviation</th>
+</tr>
+<tr><td><span class="eg" lang="nqo" dir="rtl">ߞߎߘߍ</span></td>
+<td><span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07DE;&#x07FD;</bdi> [<a href="/scripts/nko/block#char07DE"><span class="uname">U+07DE NKO LETTER KA</span></a> + <a href="/scripts/nko/block#char07FD"><span class="uname">U+07FD NKO DANTAYALAN</span></a>]</span>&nbsp;</td>
+</tr>
+<tr><td><span class="eg" lang="nqo" dir="rtl">ߛߌߘߐ</span></td>
+<td><span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07DB;&#x07FD;</bdi> [<a href="/scripts/nko/block#char07DB"><span class="uname">U+07DB NKO LETTER SA</span></a> + <a href="/scripts/nko/block#char07FD"><span class="uname">U+07FD NKO DANTAYALAN</span></a>]</span>&nbsp;</td>
+</tr>
+<tr><td><span class="eg" lang="nqo" dir="rtl">ߕߏ߲ߜߊ</span></td>
+<td><span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07D5;&#x07FD;</bdi> [<a href="/scripts/nko/block#char07D5"><span class="uname">U+07D5 NKO LETTER TA</span></a> + <a href="/scripts/nko/block#char07FD"><span class="uname">U+07FD NKO DANTAYALAN</span></a>]</span>&nbsp;</td>
+</tr>
+<tr><td><span class="eg" lang="nqo" dir="rtl">ߜߟߊ߬ߥߊ߰ߘߋ߲</span></td>
+<td><span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07E1;&#x07E5;&#x07FD;</bdi> [<a href="/scripts/nko/block#char07E1"><span class="uname">U+07E1 NKO LETTER MA</span></a> + <a href="/scripts/nko/block#char07E5"><span class="uname">U+07E5 NKO LETTER WA</span></a> + <a href="/scripts/nko/block#char07FD"><span class="uname">U+07FD NKO DANTAYALAN</span></a>]</span>&nbsp;</td>
+</tr>
+<tr><td><span class="eg" lang="nqo" dir="rtl">ߜߟߊ߬ߗߡߍ߬ߝߘߎ߬ߓߍ߲</span></td>
+<td><span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07E1;&#x07D7;&#x07FD;<sup>&#x07C2;</sup></bdi> [<a href="/scripts/nko/block#char07E1"><span class="uname">U+07E1 NKO LETTER MA</span></a> + <a href="/scripts/nko/block#char07D7"><span class="uname">U+07D7 NKO LETTER CHA</span></a> + <a href="/scripts/nko/block#char07FD"><span class="uname">U+07FD NKO DANTAYALAN</span></a> + <a href="/scripts/nko/block#char07C2"><span class="uname">U+07C2 NKO DIGIT TWO</span></a>]</span>&nbsp;</td>
+</tr>
 </table>
 </section>
 
