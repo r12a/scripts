@@ -432,7 +432,8 @@ function addBasics (lang, dir) {
 		// add top stuff
 		out += '<div class="charimg">&#x'+hex+';</div>\n'
 		out += '<p class="charname"><strong>U+'+hex+'</strong> <a href="#char'+hex+'">'+cpName+'</a></p>\n'
-		out += '<p class="univiewLink"><a target="_blank" href="/uniview/?char='+hex+'">See in UniView</a></p>\n'
+		out += '<p class="univiewLink"><a target="_blank" href="https://util.unicode.org/UnicodeJsps/character.jsp?a='+hex+'">Unicode properties</a><br>\n'
+		out += '<a target="_blank" href="../../uniview/?char='+hex+'">Open in UniView</a></p>\n'
 		
 		// get data from descriptions.js
 		var unicodenotes = ''
