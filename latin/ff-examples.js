@@ -402,7 +402,7 @@ nyaari|cat|ɲaːri|||x
 ƴanngal||
 ƴi'al|bone|jiʔal|
 ƴiire||
-ƴiiƴam|blood|j̰iːj̰am
+ƴiiƴam|blood|ʔʲiːʔʲam
 ƴiʼal|bone|jiʔal|||ƴi'al
 ƴulɓere||
 ɓaawo||
