@@ -9,7 +9,7 @@ autoExpandExamples.nqo = `
 ߘߋ߲ߣߍ߲ ߠߎ߬ ߟߊ߫ ߓߋߟߋ߲ߠߊ|a speech from the children|dẽnɛ̃ łu la belẽła|
 ߛߌ ߺ ߌ ߺ ߛߌ|anyone||si _ i _ si
 ߛߌߘߐ|gram||sidɔ
-ߜߟߊ߬ߗߡߍ߬ߝߘߎ߬ߓߍ߲|cm²||gᵇla²ʧmɛ²fdu²bɛ˜
+ߜߟߊ߬ߗߡߍ߬ߝߘߎ߬ߓߍ߲|cm²||gbàlàcɛ̀mɛ̀fùdùbɛ̃
 ߜߟߊ߬ߥߊ߰ߘߋ߲|millimetre||gbalàwàadẽ||x
 ߞߎߘߍ|kilometer||kudɛ
 ߡߐ߰ ߺ ߐ ߺ ߡߐ߰|everyone||mɔ⁶ _ ɔ _ mɔ⁶
