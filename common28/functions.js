@@ -11,7 +11,6 @@ function addPageFeatures () {
     initialiseSummary(window.blockDir, window.langTag, window.scriptSummaryTableName, window.explainerDir)
     //autoTransliterate(langTag)
     makeFontChanger(langTag, scriptTag, pageWebfonts, defaultSize)
-    pointToSummaryPages()
     checkParameters()
     
     if (window.autoIndex) {
@@ -26,6 +25,7 @@ function addPageFeatures () {
         }
     
     makeCharDataObj()
+    pointToSummaryPages()
     
     marks = new Set()
     setMarks()
