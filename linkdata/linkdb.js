@@ -43,7 +43,10 @@ var scriptNotes= {
     'laoo':[['Lao', 'lao/']],
     'lana':[['Tai Tham/Tai Khün', 'taitham/'], 
 			['Northern Thai', 'taitham/northernthai']],
-    'latn':[['Hausa (boko)', 'latin/hausa']],
+    'latn':[['Bamanan', 'latin/bm'],
+    		['Fula', 'latin/ff'],
+    		['Hausa (boko)', 'latin/hausa']
+    		],
     'lisu':[['Lisu', 'lisu/']],
     'mand':[['Mandaic', 'mandaic/']],
     'mong':[['Mongolian', 'mongolian/']],
@@ -80,9 +83,13 @@ var scriptNotes= {
 // Script summary selector, used by /scripts/#scriptnotes
 var scriptNotesByRegion = {  
 	'A':[
-		['Adlam', 'adlam/'],
+		['Adlam[', 'adlam/'],
+		['Pular]', 'adlam/'],
 		['Amharic', 'ethiopic/'],
-		['Arabic','arabic/'],
+		['<em>Arabic</em>[','arabic/'],
+		['MSA','arabic/'],
+		['Persian','arabic/arab-fa'],
+		['Urdu]','arabic/urdu'],
 		['Armenian','armenian/'],
 		['Assyrian Neo-Aramaic', 'syriac/syrc-aii'],
 		],
