@@ -6,7 +6,8 @@ autoExpandExamples.bm = `
 a dɔ la||
 a dɔ ra||
 a dɔ rɔ||
-a'||
+á|you|á|á||a'
+a|he, she, it|a|a||x
 abada|forever|abada
 abarika||
 abarka||
