@@ -56,7 +56,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->20 September, 2021<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->25 November, 2021<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -526,7 +526,9 @@ alveolar</th>
 
 <section id="vowel_length">
 <h4>Vowel length and tone</h4>
-<p>The vowel in a CV syllable doesn't distinguish between short and long vowel sounds, nor does it indicate tonal values, eg.  <span class="eg" lang="chr">ᎠᎹ</span>  and  <span class="eg" lang="chr">ᎠᎹ</span> are written the same, although the vowels are of different lengths and the tones (low vs high, respectively) are different.<tt>d</tt></p>
+<p>The vowel in a CV syllable doesn't distinguish between short and long vowel sounds, nor does it indicate tonal values, eg. the following sequence of Cherokee characters represents two different words, each having different lengths and tones (low vs. high, respectively)<tt>d</tt>:
+<span class="eg" lang="chr">ᎠᎹ</span>
+</p>
 </section>
 </section>
 
@@ -656,8 +658,13 @@ alveolar</th>
 <section id="transforms">
 <h3>Case &amp; other character transforms</h3>
 
-<p>Cherokee has recently developed a lowercase set of glyphs to complement the original set (see <a class="secref">cs</a>). Applications should provide for transformations between upper and lower case forms. </p>
+<p>In 2015 a set of lowercase letters were added to version 8.0 of the Unicode repertoire, to complement the original set. This is discussed in more detail in <a class="secref">cs</a>.</p>
 
+<p>Applications should provide for transformations between upper and lower case forms, however the situation is slightly unusual in that the pre-existing text is now written uppercase, and transforms need to in some cases treat lowercasing as the default operation. The following is from the Unicode Standard:</p>
+
+<blockquote>
+<p>This exceptional introduction of a lowercase set to change a unicameral encoding into a bicameral encoding has important implications that implementers of the Cherokee script need to keep in mind. First, in order to preserve case folding stability, Cherokee case folds to the previously encoded uppercase letters, rather than to the newly encoded lowercase letters. This exceptional case folding behavior impacts identifiers, and so can trip up implementations if they are not prepared for it. Second, representation of cased Cherokee text requires using the new lowercase letters for most of the body text, instead of just changing a few initial letters to uppercase. That means that representation of traditional text such as the Cherokee New Testament requires substantial re-encoding of the text. Third, the fact that uppercase Cherokee still represents the default and is most widely supported in fonts means that input systems which are extended to support the new lowercase letters face unusual design choices.</p>
+</blockquote>
 </section>
 </section>
   
