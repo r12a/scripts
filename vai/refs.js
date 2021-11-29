@@ -9,6 +9,14 @@ reflist = {
 "isbn":"0-19-507993-0",
 },
 
+"rmr": {
+"authors": "Andrij Rovenchak, Ján Mačutek, Charles Riley",
+"title":"Distribution of complexities in the Vai script",
+"date": "unknown",
+"url":"https://www.academia.edu/379791/Distribution_of_complexities_in_the_Vai_script",
+"reviewed":false
+},
+
 "s": {
 "url":"http://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Vaii",
 "authors": "ScriptSource",

@@ -2,5 +2,77 @@
 
 autoExpandExamples.vai = `
 
+ꕀ|water|jí
+ꔌꘋ|thing|feŋ
+ꘓ|thing|feŋ
+ꔔꘋ|child|děŋ
+ꔤꕷꕞ|ebola|ibola
+-ꔰ|every, all|ɡ͡bi
+ꕘꕌ|die, kill|fáː
+ꕙꔤ|Vai language|vai
+ꕚꕌ|to go|táː
+ꕢꕔ|three|sàkpá
+ꕪꔤ|man|kàí
+ꖷꖬ|woman|mùsù
+ꖸ|plural marker|nu
+ꔔꘋ ꖸ|children|deng nu
+ꗘꘋ|slave|jɔ́ng
+ꗞ|person|mɔ́
+ꗱꕞꕯꕊ|second|felanaã
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 `
 
