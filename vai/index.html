@@ -17,20 +17,17 @@
 
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
-<script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common28/functions.js"></script>
 <script src="../common28/transliterate.js"></script>
 <script src="../common28/prompts.js"> </script>
 <script src="../glossary/glossary.js"> </script>
-<script src="../../shared/code/getLinks.js"></script>
-<script src="/scripts/linkdata/linkdb.js"></script>
-<script src="../../app-charuse/langs.js"> </script>
 <script src="../common28/egcode.js"></script>
 <script src="../common28/references.js"></script>
 <script src="refs.js"></script>
 
+<script src="vai-langdata.js"></script>
 <script src="vai-examples.js"></script>
 <script src="vai-translit.js">  </script>
 <script src="../../shared/manifests/vai-vai.js"></script>
@@ -58,15 +55,15 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->29 November, 2021<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->30 November, 2021<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
 
 
 <div class="section">
-  <p>This page gathers  basic information about the Vai script and its use for the Vai language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Vai using Unicode.</p>
-<p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
+<p>This page brings together basic information about the Vai script and its use for the Vai language. It aims to provide a brief, descriptive summary of the modern, printed orthography and typographic features, and to advise how to write Vai using Unicode.</p>
+<p>Phonological transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
 
 
 
@@ -93,7 +90,8 @@
 <section id="sample">
 <h2>Sample (Vai)</h2>
   
-<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
+<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.  <a style="margin-inline-start: 2rem;" href="http://unicode.org/udhr/translations.html">Source</a><br>
+Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
 
 <div id="freeText" lang="vai" data-target="c" data-base="/scripts/vai/block" data-source="http://unicode.org/udhr/translations.html">
 <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">ꕢꕎꕌ ꔖꔜꕯꕊ (1) ꕉꕜꕮ ꔔꘋ ꖸ ꔰ ꗋꘋ ꕮꕨ ꔔꘋ ꖸ ꕎ ꕉꖸꕊ ꕴꖃ ꕃꔤꘂ ꗱ, ꕉꖷ ꗪꗡ ꔻꔤ ꗏꗒꗡ ꕎ ꗪ ꕉꖸꕊ ꖏꕎ. ꕉꕡ ꖏ ꗳꕮꕊ ꗏ ꕪ ꗓ ꕉꖷ ꕉꖸ ꕘꕞ ꗪ. ꖏꖷ ꕉꖸꔧ ꖏ ꖸ ꕚꕌꘂ ꗷꔤ ꕞ ꘃꖷ ꘉꔧ ꗠꖻ ꕞ ꖴꘋ ꔳꕩ ꕉꖸ ꗳ.</p>
@@ -133,15 +131,27 @@
 
 <section id="type">
 <h2>Basic features</h2>
-    <p>The Vai script is a moraic <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#syllabary">syllabary</a></span>, ie. each symbol typically represents both a consonant and a vowel.  See the table to the right for a brief overview of features for the modern Vai orthography.  ( See the <a href="../../scripts/featurelist/#key">key</a>. Character counts exclude ASCII characters.)</p>
+
+<p>The Vai script is a moraic <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#syllabary">syllabary</a></span>, ie. each symbol typically represents both a consonant and a vowel.  See the table to the right for a brief overview of features for the modern Vai orthography.  ( See the <a href="../../scripts/featurelist/#key">key</a>. Character counts exclude ASCII characters.)</p>
+
 <p>Vai runs <mark>left to right</mark> in <mark>horizontal lines</mark>.</p>
-<p>Words are separated by spaces.</p>
-<p>There are <mark>around 270 syllables</mark>, each represented by <mark>unique characters</mark>. Although some glyphs representing a common place of articulation are related, there is <q>no referable derivation of form or predictable application of diacritics.</q><tt>s</tt></p>
+
+<p>Words are <mark>separated by spaces</mark>.</p>
+
+<p>There are <mark>around 270 <a href="#characters">syllables</a></mark>, each represented by <mark>unique characters</mark>. Although some glyphs representing a common place of articulation are related, there is <q>no referable derivation of form or predictable application of diacritics.</q><tt>s</tt></p>
+
 <p>Many people literate in the script find around 50 characters sufficient for most of their needs.<tt>s</tt></p>
+
 <p>The language is tonal, but the <mark>tones are not written</mark>.</p>
-<p><mark>Vowels can be lengthened</mark> using a special symbol, or by following the vowel with as syllable beginning with <span class="trans">h-</span> (which creates ambiguity).</p>
-<p>Older texts used several <mark>logograms</mark>, 2 of which are still in use, but infrequently.</p>
-<p>ASCII digits are used. A set of Vai digits were proposed but never used.</p>
+
+<p><mark><a href="#vowelextension">Vowels can be lengthened</a></mark> using a special symbol, or by following the vowel with as syllable beginning with <span class="trans">h-</span> (which creates ambiguity).</p>
+<p>Older texts used several <mark><a href="#logograms">logograms</a></mark>, 2 of which are still in use, but infrequently.</p>
+
+<p>ASCII digits are used. A set of <a href="#numbers">Vai digits</a> were proposed but never used.</p>
+
+<p>Some <a href="#phrase">Vai-specific punctuation</a> exists, but ASCII punctuation is also used.</p>
+
+<p>By default, lines are broken at word boundaries.</p>
 </section>
    
     
@@ -169,28 +179,28 @@
 
 <section id="index_letters_consonants">
 <h4>CV syllables</h4>
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops #logograms,#stops,#stops,#stops #logograms,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops #logograms,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#affricates,#affricates,#affricates,#affricates,#affricates,#affricates,#affricates,#affricates,#affricates,#affricates,#affricates,#affricates,#affricates,#affricates,#affricates,#affricates,#affricates,#affricates,#affricates,#affricates,#affricates,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,">ꔪ␣ꖛ␣ꔅ␣ꕶ␣ꗨ␣ꗁ␣ꕐ␣ꔫ␣ꖜ␣ꔆ␣ꕷ␣ꗩ␣ꗂ␣ꕑ␣ꔰ␣ꖡ␣ꔋ␣ꕼ␣ꗯ␣ꗰ␣ꗇ␣ꗈ␣ꕗ␣ꔯ␣ꖠ␣ꔊ␣ꕻ␣ꗮ␣ꗆ␣ꕖ␣ꔬ␣ꖝ␣ꔇ␣ꕸ␣ꗪ␣ꗃ␣ꕒ␣ꔭ␣ꖞ␣ꔈ␣ꕹ␣ꗫ␣ꗄ␣ꕓ␣ꔳ␣ꖤ␣ꔎ␣ꕿ␣ꗳ␣ꗋ␣ꕚ␣ꔵ␣ꖦ␣ꔐ␣ꖁ␣ꗵ␣ꗍ␣ꕜ␣ꔹ␣ꖪ␣ꔔ␣ꖅ␣ꗹ␣ꗑ␣ꕠ␣ꔺ␣ꖫ␣ꔕ␣ꖆ␣ꗺ␣ꗒ␣ꕡ␣ꕃ␣ꖴ␣ꔞ␣ꖏ␣ꘃ␣ꗛ␣ꕪ␣ꕫ␣ꔮ␣ꖟ␣ꔉ␣ꕺ␣ꗬ␣ꗭ␣ꗅ␣ꕔ␣ꕕ␣ꕅ␣ꖶ␣ꔠ␣ꖑ␣ꘆ␣ꘇ␣ꗝ␣ꕭ␣ꕄ␣ꔟ␣ꖐ␣ꘄ␣ꘅ␣ꖵ␣ꗜ␣ꕬ␣ꔿ␣ꖰ␣ꔚ␣ꖋ␣ꗿ␣ꗗ␣ꕦ␣ꕀ␣ꖱ␣ꔛ␣ꖌ␣ꘀ␣ꗘ␣ꕧ␣ꕁ␣ꖲ␣ꔜ␣ꖍ␣ꘁ␣ꗙ␣ꕨ␣ꔱ␣ꖢ␣ꔌ␣ꕽ␣ꗱ␣ꗉ␣ꕘ␣ꔲ␣ꖣ␣ꔍ␣ꕾ␣ꗲ␣ꗊ␣ꕙ␣ꔴ␣ꖥ␣ꔏ␣ꖀ␣ꗴ␣ꗌ␣ꕛ␣ꔶ␣ꔑ␣ꖧ␣ꖂ␣ꗶ␣ꗎ␣ꕝ␣ꔻ␣ꖬ␣ꔖ␣ꖇ␣ꗻ␣ꗓ␣ꕢ␣ꔽ␣ꖮ␣ꔘ␣ꖉ␣ꗽ␣ꗕ␣ꕤ␣ꔼ␣ꖭ␣ꔗ␣ꖈ␣ꗼ␣ꗔ␣ꕣ␣ꔾ␣ꖯ␣ꔙ␣ꖊ␣ꗾ␣ꗖ␣ꕥ␣ꔦ␣ꔧ␣ꖗ␣ꖘ␣ꔂ␣ꕳ␣ꗤ␣ꗥ␣ꖽ␣ꖾ␣ꕌ␣ꕍ␣ꕆ␣ꖷ␣ꔡ␣ꖒ␣ꘈ␣ꗞ␣ꕮ␣ꕇ␣ꖸ␣ꔢ␣ꖓ␣ꘉ␣ꗟ␣ꕯ␣ꖹ␣ꔣ␣ꖔ␣ꗠ␣ꘊ␣ꕰ␣ꕈ␣ꗣ␣ꖼ␣ꕋ␣ꔨ␣ꔩ␣ꖙ␣ꖚ␣ꔃ␣ꔄ␣ꕴ␣ꕵ␣ꗦ␣ꗧ␣ꖿ␣ꗀ␣ꕎ␣ꕏ␣ꔸ␣ꖩ␣ꔓ␣ꖄ␣ꗸ␣ꗐ␣ꕟ␣ꔷ␣ꖨ␣ꔒ␣ꖃ␣ꗷ␣ꗏ␣ꕞ␣ꕂ␣ꖳ␣ꔝ␣ꖎ␣ꘂ␣ꗚ␣ꕩ</figure>
+<figure class="characterBox noindex indexline" data-cols="" data-links="">ꔪ␣ꖛ␣ꔅ␣ꕶ␣ꗨ␣ꗁ␣ꕐ␣ꔫ␣ꖜ␣ꔆ␣ꕷ␣ꗩ␣ꗂ␣ꕑ␣ꔰ␣ꖡ␣ꔋ␣ꕼ␣ꗯ␣ꗰ␣ꗇ␣ꗈ␣ꕗ␣ꔯ␣ꖠ␣ꔊ␣ꕻ␣ꗮ␣ꗆ␣ꕖ␣ꔬ␣ꖝ␣ꔇ␣ꕸ␣ꗪ␣ꗃ␣ꕒ␣ꔭ␣ꖞ␣ꔈ␣ꕹ␣ꗫ␣ꗄ␣ꕓ␣ꔳ␣ꖤ␣ꔎ␣ꕿ␣ꗳ␣ꗋ␣ꕚ␣ꔵ␣ꖦ␣ꔐ␣ꖁ␣ꗵ␣ꗍ␣ꕜ␣ꔹ␣ꖪ␣ꔔ␣ꖅ␣ꗹ␣ꗑ␣ꕠ␣ꔺ␣ꖫ␣ꔕ␣ꖆ␣ꗺ␣ꗒ␣ꕡ␣ꕃ␣ꖴ␣ꔞ␣ꖏ␣ꘃ␣ꗛ␣ꕪ␣ꕫ␣ꔮ␣ꖟ␣ꔉ␣ꕺ␣ꗬ␣ꗭ␣ꗅ␣ꕔ␣ꕕ␣ꕅ␣ꖶ␣ꔠ␣ꖑ␣ꘆ␣ꘇ␣ꗝ␣ꕭ␣ꕄ␣ꔟ␣ꖐ␣ꘄ␣ꘅ␣ꖵ␣ꗜ␣ꕬ␣ꔿ␣ꖰ␣ꔚ␣ꖋ␣ꗿ␣ꗗ␣ꕦ␣ꕀ␣ꖱ␣ꔛ␣ꖌ␣ꘀ␣ꗘ␣ꕧ␣ꕁ␣ꖲ␣ꔜ␣ꖍ␣ꘁ␣ꗙ␣ꕨ␣ꔱ␣ꖢ␣ꔌ␣ꕽ␣ꗱ␣ꗉ␣ꕘ␣ꔲ␣ꖣ␣ꔍ␣ꕾ␣ꗲ␣ꗊ␣ꕙ␣ꔴ␣ꖥ␣ꔏ␣ꖀ␣ꗴ␣ꗌ␣ꕛ␣ꔶ␣ꔑ␣ꖧ␣ꖂ␣ꗶ␣ꗎ␣ꕝ␣ꔻ␣ꖬ␣ꔖ␣ꖇ␣ꗻ␣ꗓ␣ꕢ␣ꔽ␣ꖮ␣ꔘ␣ꖉ␣ꗽ␣ꗕ␣ꕤ␣ꔼ␣ꖭ␣ꔗ␣ꖈ␣ꗼ␣ꗔ␣ꕣ␣ꔾ␣ꖯ␣ꔙ␣ꖊ␣ꗾ␣ꗖ␣ꕥ␣ꔦ␣ꔧ␣ꖗ␣ꖘ␣ꔂ␣ꕳ␣ꗤ␣ꗥ␣ꖽ␣ꖾ␣ꕌ␣ꕍ␣ꕆ␣ꖷ␣ꔡ␣ꖒ␣ꘈ␣ꗞ␣ꕮ␣ꕇ␣ꖸ␣ꔢ␣ꖓ␣ꘉ␣ꗟ␣ꕯ␣ꖹ␣ꔣ␣ꖔ␣ꗠ␣ꘊ␣ꕰ␣ꕈ␣ꗣ␣ꖼ␣ꕋ␣ꔨ␣ꔩ␣ꖙ␣ꖚ␣ꔃ␣ꔄ␣ꕴ␣ꕵ␣ꗦ␣ꗧ␣ꖿ␣ꗀ␣ꕎ␣ꕏ␣ꔸ␣ꖩ␣ꔓ␣ꖄ␣ꗸ␣ꗐ␣ꕟ␣ꔷ␣ꖨ␣ꔒ␣ꖃ␣ꗷ␣ꗏ␣ꕞ␣ꕂ␣ꖳ␣ꔝ␣ꖎ␣ꘂ␣ꗚ␣ꕩ</figure>
 </section>
 
 <section id="index_letters_vowels">
 <h4>Vowels</h4>
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#vowels,#vowels,#vowels,#vowels,#vowels,#vowels,#vowels,#vowels,#vowels,#vowels,#vowels,#vowels,#vowels,#vowels,">ꔤ␣ꔥ␣ꖕ␣ꖖ␣ꔀ␣ꔁ␣ꕱ␣ꕲ␣ꗡ␣ꗢ␣ꖺ␣ꖻ␣ꕉ␣ꕊ</figure>
+<figure class="characterBox noindex indexline" data-cols="" data-links="">ꔤ␣ꔥ␣ꖕ␣ꖖ␣ꔀ␣ꔁ␣ꕱ␣ꕲ␣ꗡ␣ꗢ␣ꖺ␣ꖻ␣ꕉ␣ꕊ</figure>
 </section>
 
 <section id="index_letters_vocalics">
 <h4>Logograms</h4>
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#logograms,#logograms,">ꘓ␣ꘘ</figure>
+<figure class="characterBox noindex indexline" data-cols="" data-links="#logograms,#logograms,">ꘓ␣ꘘ</figure>
 </section>
 
 
 <section id="index_letters_other">
 <h4>Other</h4>
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#syllfinal,#vowelextension,">ꘋ␣ꘌ</figure>
+<figure class="characterBox noindex indexline" data-cols="" data-links="#syllfinal,#vowelextension,">ꘋ␣ꘌ</figure>
 </section>
 
 <section id="index_letters_unused">
 <h4>Not used for Vai</h4>
-<figure class="archaicBox auto noindex indexline" data-cols="" data-links="#historical,#historical,#historical,#historical,#historical,#logograms,#logograms,#logograms,#logograms,#logograms,#logograms,#logograms,#logograms,#logograms,#logograms,#logograms,">ꘐ␣ꘑ␣ꘒ␣ꘪ␣ꘫ␣ꘔ␣ꘕ␣ꘖ␣ꘗ␣ꘙ␣ꘚ␣ꘛ␣ꘜ␣ꘝ␣ꘞ␣ꘟ</figure>
+<figure class="archaicBox noindex indexline" data-cols="" data-links="">ꘐ␣ꘑ␣ꘒ␣ꘪ␣ꘫ␣ꘔ␣ꘕ␣ꘖ␣ꘗ␣ꘙ␣ꘚ␣ꘛ␣ꘜ␣ꘝ␣ꘞ␣ꘟ</figure>
 </section>
 </details>
 </section>
@@ -218,9 +228,9 @@
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#bracketing,#bracketing,#phrase,#phrase,#phrase,#phrase,">(␣)␣,␣.␣?␣!</figure>
+<figure class="characterBox noindex indexline" data-cols="" data-links="#bracketing,#bracketing,#phrase,#phrase,#phrase,#phrase,">(␣)␣,␣.␣?␣!</figure>
 
-<figure class="auxiliaryBox auto noindex indexline" data-cols="" data-links="#phrase,#phrase,#phrase,">꘍␣꘎␣꘏</figure>
+<figure class="auxiliaryBox noindex indexline" data-cols="" data-links="#phrase,#phrase,#phrase,">꘍␣꘎␣꘏</figure>
 </details>
 </section>
 </section>
@@ -1198,6 +1208,9 @@ alveolar</th>
   
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
+
+<figure class="characterBox auto small"  data-cols="trans,transc">,␣꘍␣:␣;␣.␣꘎␣?␣꘏␣!␣꘎꘎␣—</figure>
+
 <table class="character_list">
 <tbody>
 <tr>
@@ -1211,11 +1224,12 @@ alveolar</th>
 <p><span class="codepoint" translate="no"><span lang="vai">&#xA60E;</span> [<a href="/scripts/vai/block#charA60E"><span class="uname">U+A60E VAI FULL STOP</span></a>]</span></p>
 <p><span class="codepoint" translate="no"><span lang="vai">&#x003F;</span> [<span class="uname">U+003F QUESTION MARK</span>]</span></p>
 <p><span class="codepoint" translate="no"><span lang="vai">&#xA60F;</span> [<a href="/scripts/vai/block#charA60F"><span class="uname">U+A60F VAI QUESTION MARK</span></a>]</span>&nbsp;</p>
-<p><span class="codepoint" translate="no"><span lang="vai">&#x0021;</span> [<span class="uname">U+0021 EXCLAMATION MARK</span>]</span></p></td>
+<p><span class="codepoint" translate="no"><span lang="vai">&#x0021;</span> [<span class="uname">U+0021 EXCLAMATION MARK</span>]</span></p>
+<p><span class="codepoint" translate="no"><bdi lang="vai">&#xA60E;&#xA60E;</bdi> [<a href="/scripts/vai/block#charA60E"><span class="uname">U+A60E VAI FULL STOP</span></a> + <a href="/scripts/vai/block#charA60E"><span class="uname">U+A60E VAI FULL STOP</span></a>]</span>&nbsp;</p></td>
 </tr>
 </tbody>
 </table>
-<p>Vai uses European punctuation, but also has a few distinct punctuation marks of its own. These are not listed in CLDR, nor used in UDHR, which uses European punctuation.</p>
+<p>Vai uses ASCII punctuation, but also has a few distinct punctuation marks of its own. These are not listed in CLDR, nor used in UDHR, which uses ASCII punctuation.</p>
 </section>
 
 
@@ -1224,6 +1238,9 @@ alveolar</th>
 
 <section id="bracketing">
 <h3>Parentheses &amp; brackets</h3>
+
+<figure class="characterBox auto small"  data-cols="trans,transc">(␣)</figure>
+
 <table class="character_list">
 <thead>
 <tr>
@@ -1249,6 +1266,9 @@ alveolar</th>
 <section id="quotations">
 <h3>Quotations</h3>
 <p class="prompts">tbd</p>
+
+<!--figure class="characterBox auto small"  data-cols="trans,transc">‘␣’␣“␣”</figure-->
+
 </section>
 
 
@@ -1420,33 +1440,9 @@ alveolar</th>
 
 
 
-<!--section id="chars">
-<h2>Character lists</h2>
-  <p>Version 13.0 of the Unicode Standard has the following blocks dedicated to the Vai script (numbers in lists are non-ASCII only):</p>
-    <ul>
-<li><a href="/uniview/?block=vai" target="_blank">Vai</a> <span class="charCount">287 letters,  10 numbers, 3 punctuation :   total 300</span></li>
-</ul>
-
-
-<p>Show  characters used for the Vai orthography described here:</p>
-<ul>
-<li><a id="showCategories" target="_blank" href="tbd">grouped by Unicode general category</a></li>
-<li><a id="showBlocks" target="_blank" href="tbd">grouped by Unicode block</a></li>
-<li>in  the <a href="../../app-charuse/?language=vai" target="_blank">Character usage lookup</a> page</li>
-</ul>
-
-
-<p>See also the <a target="_blank" href="../featurelist/">Script Comparison Table</a>.</p>
-</section-->
-
-
-
-
-
-
 <section id="languages">
 <h2>Languages using the Vai script</h2>
-<p>According to ScriptSource, the Vai script is used for the following language only: </p>
+<p>According to ScriptSource, the Vai script is used for one language only: </p>
 <ul>
 <li>Vai [vai]</li>
 </ul>
@@ -1458,14 +1454,15 @@ alveolar</th>
 	
 
 
-<!--section id="online_samples">
+<section id="online_samples">
 <h2>Online resources</h2>
 
-  <ol>
-    <li><a href="https://unicode.org/udhr/d/udhr_aii.html">Universal Declaration of Human Rights - Assyrian Neo-Aramaic</a></li>
-<li><a href="http://worldbibles.org/language_detail.php/eng/aii/Assyrian+Neo-Aramaic?translation=eng&&language=aii&&name=Assyrian+Neo-Aramaic">The Bible in Assyrian Neo-Aramaic</a></li>
+<ol>
+<li><a href="https://unicode.org/udhr/d/udhr_vai.html">Universal Declaration of Human Rights - Vai</a></li>
+<li><a href="https://vocab.panlex.org/vai-000/eng-000?page=1">PanLex ꕙꔤ Vocabulary</a></li>
+<li><a href="https://unicode-org.github.io/cldr-staging/charts/37/summary/vai.html">CLDR: Locale Data Summary for Vai [vai]</a></li>
 </ol>
-</section-->
+</section>
 
 
 

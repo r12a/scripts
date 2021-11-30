@@ -19,7 +19,17 @@ autoExpandExamples.vai = `
 ꗘꘋ|slave|jɔ́ng
 ꗞ|person|mɔ́
 ꗱꕞꕯꕊ|second|felanaã
-
+ꔞꘋ|foot|keŋ
+ꔳꘋ|island|tiŋ
+ꕇꔦ|cow|nii
+ꗬ ꗛꖙ|case of gin|kpɛ kɔwu
+ꕒꘋ|finished|ɓaŋ
+ꕠꘋ|to hear, understand|ɗaŋ
+ꖅꘋ|to enter|ɗoŋ
+ꖴꘋ|head|kuŋ
+ꗋꘋ|to be named|tɔŋ
+ꗑꖽ|to be small|ɗɔɔ
+ꗏ|in|lɔ
 
 
 

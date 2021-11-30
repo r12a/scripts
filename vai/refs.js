@@ -56,3 +56,15 @@ reflist = {
 
 
 
+
+scriptLanguageList = {
+vai:{name:"Vai"},
+}
+
+
+
+
+
+
+
+
