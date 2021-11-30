@@ -59,7 +59,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->19 September, 2021<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->30 November, 2021<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -788,13 +788,17 @@ alveolar</th>
 <p>Consonant cluster handling is a little unusual in Sinhala, compared to other indic scripts.</p>
 <p>There are 3 ways of managing consonant clusters. Modern Sinhala uses only the first two alternatives.</p>
 <ol>
-<li>Show a virama over the first character in the cluster. Unlike Devanagari, <strong>this is the default for Sinhala</strong>.</li>
-<li>Use a reduced or ligated form, especially for <span class="trans">r</span> or <span class="trans">y</span>. Since the approach changes the shape of the constituent components, the cluster is referred to as a <span class="name">conjunct</span>.</li>
-<li>Make the consonants touch.</li>
+<li><mark><a href="#visiblevirama">Visible virama</a></mark> : Show <span class="codepoint"><span lang="si">&#x0DCA;</span> [<a href="/scripts/sinhala/block#char0DCA"><span class="uname">U+0DCA SINHALA SIGN AL-LAKUNA​</span></a>], called <span class="name">al lakuna</span>, over the first character in the cluster. Unlike Devanagari, <strong>this is the default for Sinhala</strong>.</li>
+
+<li><mark><a href="#conjunctforms">Conjunct forms</a></mark> : Use a reduced or ligated form, especially for <span class="trans">r</span> or <span class="trans">y</span>. Since the approach changes the shape of the constituent components, the cluster is referred to as a <span class="name">conjunct</span>.</li>
+
+<li><mark><a href="#touchingconsonants">Touching consonants</a></mark> : Make the consonants touch (not used in modern Sinhala).</li>
 </ol>
 
+<p>See also <a class="secref">finals</a>.</p>
 
-<p> In all cases, <span class="codepoint"><span lang="si">&#x0DCA;</span> [<a href="/scripts/sinhala/block#char0DCA"><span class="uname">U+0DCA SINHALA SIGN AL-LAKUNA​</span></a>], called <span class="name">al lakuna</span>, </span> is used as the virama, however, different joining behaviour can be produced by adding <span class="codepoint" translate="no"><span lang="si">&#x200D;</span> <a href="/scripts/punctuation/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a></span> (<span class="name">ZWJ</span>) before or after.</p>
+
+
 
 
 
@@ -806,7 +810,21 @@ alveolar</th>
 
 
 
+
+
 <section id="conjuncts">
+<h4>Conjunct formation</h4>
+
+<p class="linkToApp"><a target="_blank" href="../apps/conjunct_generator/?preset=sinh">See a table of 2-consonant clusters.</a><br>The table allows you to test results for various fonts.</p>
+
+<figure class="characterBox auto"  data-cols="trans">&#x0DCA;</figure>
+
+<p>In Unicode,  conjunct formation is achieved by adding &nbsp; <span class="codepoint"><span lang="si">&#x0DCA;</span> [<a href="/scripts/sinhala/block#char0DCA"><span class="uname">U+0DCA SINHALA SIGN AL-LAKUNA​</span></a>], called <span class="name">al lakuna</span>, </span> between the consonants, however, different joining behaviour can be produced by adding <span class="codepoint" translate="no"><span lang="si">&#x200D;</span> <a href="/scripts/punctuation/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a></span> (<span class="name">ZWJ</span>) before or after. The font hides the virama glyph automatically when a conjunct is formed.</p>
+</section>
+
+
+
+<section id="conjunctforms">
 <h4>Conjuncts</h4>
 
 <p>The second approach uses ZWJ after the virama to produce a conjunct, ie. <span class="codepoint" translate="no"><span lang="si">&#x0DCA;&#x200D;</span> [<a href="/scripts/sinhala/block#char0DCA"><span class="uname">U+0DCA SINHALA SIGN AL-LAKUNA</span></a> + <a href="/scripts/punctuation/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span>. It is principally used when combining <span class="trans">r</span> or <span class="trans">y</span> with another consonant (both before and after, in the case of <span class="trans">r</span>), and produces a reduced or ligated form.</p>

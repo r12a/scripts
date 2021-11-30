@@ -54,7 +54,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->4 November, 2021<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->30 November, 2021<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -1101,28 +1101,47 @@ alveolar</th>
 
 <section id="clusters">
 <h3>Consonant clusters</h3>
+
 <p id="def-consonantcluster" class="explanatoryintro definitionStub"></p>
 <p id="def-conjunct" class="explanatoryintro definitionStub"></p>
    
 <p>The absence of a vowel sound after a letter (ie. not involving medial or final consonant diacritics) is shown visually in the script in one of the following ways:</p>
 <ol>
-<li><b class="newterm">Stacked</b> consonants, where the non-initial (<b class="newterm">subjoined</b>) consonant appears below the initial, often with a different shape from normal.</li>
-<li><b class="newterm">Conjoined</b> consonants, where consonants sit side-by-side but the non-initial consonant has a slightly different form than usual.</li>
-<li>A <b class="newterm">visible <span class="codepoint" translate="no"><span lang="jv">&#xA9C0;</span> [<a href="/scripts/javanese/block#charA9C0"><span class="uname">U+A9C0 JAVANESE PANGKON​</span></a>]</span></b> following the initial consonant.</li>
-<li>A dedicated <b class="newterm">final consonant mark</b> followed by a regular consonant.</li>
-<li>A regular initial consonant followed by a dedicated <b class="newterm">medial consonant mark</b>.</li>
+<li><mark><a href="#stacking">Stacked</a></mark> consonants, where the non-initial (<mark class="newterm">subjoined</mark>) consonant appears below the initial, often with a different shape from normal.</li>
+
+<li><mark><a href="#conjoined">Conjoined</a></mark> consonants, where consonants sit side-by-side but the non-initial consonant has a slightly different form than usual.</li>
+
+<li>A <mark><a href="#pangkon">visible <i>pangkon</i></a></mark> following the initial consonant.</li>
+
+<li>A dedicated <mark><a href="#final_medial_mark_clusters">final consonant mark</a></mark> followed by a regular consonant.</li>
+
+<li>A regular initial consonant followed by a dedicated <mark><a href="#final_medial_mark_clusters">medial consonant mark</a></mark>.</li>
 </ol>
-<p>In Unicode, the stacking and conjoining behaviour is achieved by adding <span class="codepoint" translate="no"><span lang="jv">&#xA9C0;</span> [<a href="/scripts/javanese/block#charA9C0"><span class="uname">U+A9C0 JAVANESE PANGKON​</span></a>]</span> between the consonants. The font hides the glyph automatically when a stacked conjunct is formed.</p>
+
+<p><span class="leadin">Word boundaries.</span> Conjuncts span word boundaries. Because there are no spaces between words, consonants with no following vowel at the end of one word and a consonant at the beginning of the next  create a cluster.</p>
+
+<p>Stacks and conjoined sequences are  not  normally split at line ends (see <a class="secref">word</a> and <a class="secref">linebreak</a> for the ramifications of this). It means that some words cannot be wrapped at word boundaries.</p>
 
 <figure>
 <img lang="jv" class="ex" src="images/conjuncts.png" alt="ꦲꦏ꧀ꦲꦏ꧀ꦏꦁꦥꦝ" data-notes="62px yogyakarta">
 <figcaption>In the sequence  <span class="trans">hak-hak-kang-pa-da</span> the combination <span class="trans">k-h</span> is conjoined, and <span class="trans">k-k</span> is stacked.</figcaption>
 </figure>
 
-<p><span class="leadin">Word boundaries.</span> Conjuncts span word boundaries. Because there are no spaces between words, consonants with no following vowel at the end of one word and a consonant at the beginning of the next  create a cluster.</p>
 
-<p>Stacks and conjoined sequences are  not  normally split at line ends (see <a class="secref">word</a> and <a class="secref">linebreak</a> for the ramifications of this). It means that some words cannot be wrapped at word boundaries.</p>
 
+
+
+
+
+<section id="conjuncts">
+<h4>Conjunct formation</h4>
+
+<p class="linkToApp"><a target="_blank" href="../apps/conjunct_generator/?preset=java">See a table of 2-consonant clusters.</a><br>The table allows you to test results for various fonts.</p>
+
+<figure class="characterBox auto"  data-cols="trans">&#xA9C0;</figure>
+
+<p>In Unicode, the stacking and conjoining behaviour is achieved by adding <span class="codepoint" translate="no"><span lang="jv">&#xA9C0;</span> [<a href="/scripts/javanese/block#charA9C0"><span class="uname">U+A9C0 JAVANESE PANGKON​</span></a>]</span> between the consonants. The font hides the glyph automatically when a stacked conjunct is formed. However, in some cases the glyph needs to remain visible.</p>
+</section>
 
 
 
@@ -1184,7 +1203,7 @@ alveolar</th>
 
 
 
-<section id="vowel_absence">
+<section id="pangkon">
 <h4>Visible <span class="name">pangkon</span></h4>
 <p>Occasionally <span class="codepoint"><span lang="jv">&#xA9C0;</span> <a href="/scripts/javanese/block#charA9C0">[<span class="uname">U+A9C0 JAVANESE PANGKON​</span>]</a></span> may be visible in the middle of a word, eg. <span class="eg" lang="jv">ꦧꦶꦱ꧀ꦠꦿꦤ꧀​ꦱ꧀ꦗꦏꦂꦠ</span></p>
 <p class="info">The Javanese section of the Unicode Standard doesn't indicate how to force the <span class="name">pangkon</span> to remain visible, but the Balinese section recommends the use of <span class="codepoint" translate="no"><span lang="jv">&#x200C;</span> [<a href="/scripts/punctuation/block#char200C"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></a>]</span> (ZWNJ) after the <span class="name">adeg-adeg</span> in order to prevent conjunct formation. However, not many people understand the function of ZWNJ or can access it easily from the keypad. It also doesn't introduce line-break opportunities. A better solution may be to use <span class="codepoint" translate="no"><span lang="jv">&#x200B;</span> [<a href="/scripts/punctuation/block#char200B"><span class="uname">U+200B ZERO WIDTH SPACE</span></a>]</span> (ZWSP). This character is needed anyway on most systems in order to allow line-breaking, and it appears to work equally well for this.</p>
