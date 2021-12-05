@@ -1,12 +1,66 @@
 reflist = {
 
+/*
+"auth_initials": {
+"authors": "Sort by family name of first contributor",
+"title":"The World's Writing Systems",
+"sub": "subtitle",
+"date": "1996",
+"retr": "May 2021",
+"publisher":"Oxford University Press",
+"isbn":"0-19-507993-0",
+"pages": "xxx",
+"url":"refs",
+"lang": new Set(['ru']),
+"reviewed":false
+},
+*/
+
 
 "d": {
 "url":"#refs",
-"authors": "Peter T. Daniels and William Bright",
+"authors": "John Victor Singler, eds.Peter T. Daniels and William Bright",
 "title":"The World's Writing Systems",
+"sub": "Vai script",
 "publisher":"Oxford University Press",
+"pages": "593-597",
 "isbn":"0-19-507993-0",
+"reviewed":false
+},
+
+"esf": {
+"authors": "Eberhard, David M, Gary F. Simons, and Charles D Fennig (eds)",
+"title":"Ethnologue: Languages of the World, 24th ed.",
+"sub": "Vai",
+"date": "2021",
+"retr": "Dec 2021",
+"publisher":"SIL International, Dallas, Texas",
+"url":"https://www.ethnologue.com/language/vai",
+"reviewed":true
+},
+
+"ev": {
+"authors": "Michael Everson",
+"title":"Proposal to add additional historic syllables for Vai to the UCS",
+"date": "2007",
+"url":"http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3243.pdf",
+"reviewed":true
+},
+
+"enrs": {
+"authors": "Michael Everson, Mohamed Nyei, Charles Riley, Tombekai Sherman",
+"title":"Proposal for addition of Vai characters to the UCS",
+"date": "2006",
+"url":"https://www.unicode.org/L2/L2006/06120r-n3081r-vai-additions.pdf",
+"reviewed":true
+},
+
+"err": {
+"authors": "Michael Everson, Charles Riley, José Rivera",
+"title":"Proposal to add the Vai script to the BMP of the UCS",
+"date": "2005",
+"url":"http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2948.pdf",
+"reviewed":true
 },
 
 "rmr": {
@@ -39,6 +93,16 @@ reflist = {
 "reviewed":true
 },
 
+"w": {
+"authors": "Wm E Welmers",
+"title":"A Grammar of Vai",
+"date": "1976",
+"publisher":"University of California Publications",
+"isbn":"0-520-09555-3",
+"url":"https://www.google.co.uk/books/edition/A_Grammar_of_Vai/yXTdbqvhnaEC?hl=en&gbpv=0",
+"reviewed":false
+},
+
 "wl": {
 "url":"http://en.wikipedia.org/wiki/Vai_language",
 "authors": "Wikipedia",
@@ -49,10 +113,12 @@ reflist = {
 "url":"http://en.wikipedia.org/wiki/Vai_syllabary",
 "authors": "Wikipedia",
 "title":"Vai syllabary",
+"reviewed":true
 },
 
 
 }
+
 
 
 

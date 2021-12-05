@@ -3,25 +3,28 @@
 autoExpandExamples.vai = `
 
 ꕀ|water|jí
-ꔌꘋ|thing|feŋ
-ꘓ|thing|feŋ
-ꔔꘋ|child|děŋ
+ꔌꘋ|thing|féŋ
+ꘓ|thing|féŋ
+ꔔꘋ|child|ɗěŋ
 ꔤꕷꕞ|ebola|ibola
 -ꔰ|every, all|ɡ͡bi
 ꕘꕌ|die, kill|fáː
+ꕘꘌ|die, kill|fáː
+ꘘ|die, kill|fáː|||x
 ꕙꔤ|Vai language|vai
+ꕚꘌ|to go|táː
 ꕚꕌ|to go|táː
 ꕢꕔ|three|sàkpá
 ꕪꔤ|man|kàí
 ꖷꖬ|woman|mùsù
 ꖸ|plural marker|nu
-ꔔꘋ ꖸ|children|deng nu
-ꗘꘋ|slave|jɔ́ng
+ꔔꘋ ꖸ|children|ɗěŋ nu
 ꗞ|person|mɔ́
 ꗱꕞꕯꕊ|second|felanaã
 ꔞꘋ|foot|keŋ
 ꔳꘋ|island|tiŋ
-ꕇꔦ|cow|nii
+ꕇꔦ|cow|nìí|nii
+ꕇꘌ|cow|nìí|nii
 ꗬ ꗛꖙ|case of gin|kpɛ kɔwu
 ꕒꘋ|finished|ɓaŋ
 ꕠꘋ|to hear, understand|ɗaŋ
@@ -30,7 +33,68 @@ autoExpandExamples.vai = `
 ꗋꘋ|to be named|tɔŋ
 ꗑꖽ|to be small|ɗɔɔ
 ꗏ|in|lɔ
-
+ꕚꘋ|ten|tâŋ|||x
+ꕪꕮ|elephant|kámà|kama|||x
+ꔞꘋ|house|kéŋ|keŋ|||x
+ꔉꔊ|frog|k͡péᵐɡ͡bé|kpemgbe|||x
+ꔳꔀ|chicken|tìè|||x
+ꖏꘋꗹ|bird|kòŋɗé|||x
+ꗬꘉ|catfish|k͡pɛ̀nɛ̀|||x
+ꗬ|alcoholic drink|kpɛ́|||x
+ꗅꘋ|monkey|k͡pɔ̀ŋ|||x
+ꕒ|goat|ɓǎ|||x
+ꔬꘋꕠ|spoon|ɓìŋɗá|||x
+ꖝ|abdomen, width|ɓú|||x
+ꕧꘋꕒ|leaf|d͡ʒàmbá|||x
+ꖌ|who?|d͡ʒô|||x
+ꗘꘋ|slave|d͡ʒǒŋ
+ꕘ|father|fǎ
+ꕘꘋꗹ|cotton|fànɗé
+ꖢꘋꔔ|mushroom|fúnɗé
+ꔖꔢ|farm|sɛ̀nɛ́
+ꕢꘋꕒ|basket|sámɓà
+ꖇꕯ|rain|sòná
+ꔖꘋ|stone|sěŋ
+ꖬꔀ|animal, meat|sùé
+ꔨꕃ|week|wíkì
+ꕴꔀ|(particle)|wóé
+ꖿꘋꘂ|driver ants|wɔ́ŋjɛ̀
+ꕞ|mouth|lá
+ꗏꘋꗑ|one|lɔ̀nɗɔ́
+ꗷꘋꗹ|vehicle|lɛ̀nɗɛ́
+ꗏꘋ|cooked rice|lɔ́ŋ
+ꔷꔱ|night|lìfí
+ꖨꕮ|ground|lùmà
+ꕈꗡ|fish|ɲíɛ́
+ꕐꕪꔤ|papaya|pàkáì
+ꔅꔃ|mongoose|péwé
+ꕶ|heron|pò
+ꕦꘋ|snail|t͡ʃâŋ
+ꗗꔿ|church|t͡ʃɔ́t͡ʃì
+ꗂꔞ|bucket|bɔ́kè
+ꔫꕇ|porcupine|bínì
+ꖜ|gun|bù
+ꔵꔵ|insect|dìdí
+ꖁ|raft|dó
+ꔵꘋ|shark|dìŋ
+ꖦꕉ|cannon|dùà
+ꕭꘋꕭꘋ|stingray|gàŋgàŋ
+ꗝꘋꗝ|grasshopper|gɔ́ŋgɔ̀
+ꕗꕢ|cassava|ɡ͡bàsà
+ꔰ|all, every|ɡ͡bí
+ꕙꕰ|blood vessel|vàɲá
+ꖣ|mildew, mold|vù
+ꔽꖻ|ceiling mat|zìɔ̃̀
+ꕌꔞꕿ|forgive me|hákètò
+ꖽꘋꗑ|hundred|hɔ́nɗɔ̀
+ꕋꕇ|character|ŋàní
+ꔈ|what?|ᵐɓê
+ꕡꕘꔤ|masked entertainer|ⁿɗáfàí
+ꖆꕽꗇꔤ|snake|ⁿɗòfóɡ͡bɔ̀í
+ꕩꕒꔻ|onion|jàbásì
+ꘂ|in that case|jɛ̀
+ꗚ|ressembling|jɔ́
+ꔝ|to, for|yè
 
 
 
