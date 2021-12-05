@@ -800,9 +800,9 @@ function replaceStuff (node) {
     var showFirst = false
     //console.log(node)
 
-// check whether this is an index line
-if (node.classList.contains('indexline')) var indexline = true
-else indexline = false
+    // check whether this is an index line
+    if (node.classList.contains('indexline')) var indexline = true
+    else indexline = false
 
     // populate the chars array with characters & gather additional info
     //chars = node.dataset.chars.split('␣')
@@ -850,6 +850,12 @@ else indexline = false
         out += '</div>'
         }
 
+    // find out whether this table includes status information
+    var showStatus = false
+    for (c=0;c<chars.length;c++) {
+        if (window.spreadsheetRows[chars[c]] && window.spreadsheetRows[chars[c]][cols.status] && window.spreadsheetRows[chars[c]][cols.status] !== '') showStatus = true
+        }
+    
     // start building the listArray
     out += '<div class="listArray">'
 
@@ -882,6 +888,22 @@ else indexline = false
             else out += '<span>&nbsp;</span>'
             }
 
+        
+        // status line, if needed
+        if (showStatus) {
+            var status = '&nbsp;'
+            if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.status]) {
+                switch (window.spreadsheetRows[char][cols.status]) {
+                case 'i': status = 'infreq.'; break;
+                case 'a': status = 'archaic'; break;
+                case 'u': status = 'unused'; break;
+                case 'o': status = 'obsolete'; break;
+                case 'd': status = 'deprecated'; break;
+                default: status = '&nbsp;'
+                }}
+            out += `<span class="listItemType">${ status }</span>`
+            }
+
 
         if (info.includes('ipa')) { 
         //if (window.spreadsheetRows[char]) console.log('ipa',char,window.spreadsheetRows[char][cols.ipaLoc])
@@ -890,6 +912,11 @@ else indexline = false
             if (ch === '&nbsp;') out += '<span>&nbsp;</span>'
             else out += '<span class="listIPA">'+ch.replace(/ /g,' ')+'</span>'
             //else out += '<span class="listIPA">'+ch.replace(/ /g,'<i>~</i>')+'</span>'
+            }
+
+        if (ipa.length > 0) {
+            if (ipa[i]) out += '<span class="listItemType">infreq.</span>'
+            else out += ' '
             }
 
         if (ipa.length > 0) {
