@@ -8,6 +8,51 @@ const TRANS = 3
 const NOTES = 4
 const WIKI = 5
 
+
+// build the tab markup
+if (document.getElementById('tabPlaceholder')) {
+    document.getElementById('tabPlaceholder').innerHTML =
+    `
+    <div id="tabs">
+    <h2 id="list_tab" onClick="switchTabTo(this.id)">List</h2>
+    <h2 id="find_tab" onClick="switchTabTo(this.id)">Find</h2>
+    <h2 id="freq_tab" onClick="switchTabTo(this.id);listFrequency()">Frequency</h2>
+    </div> 
+
+
+    <div id="list_tab_area">
+    <p style="font-style: italic; font-size: 80%;"><label>Total items: <span id="totalLemmas">–</span></label></p>
+    <table id="printout"></table>
+    </div>
+
+
+    <div id="find_tab_area">
+    <p style="margin-inline-end:1em;"><label>Find words containing the following: <input id="needle" type="text" placeholder="Regular expressions can be used."  onInput="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')"></label> &nbsp;&nbsp;
+    Search in: <select id="searchCol">
+    <option value="all">All</option>
+    <option value="0">Terms</option>
+    <option value="1">Meanings</option>
+    <option value="2">IPA</option>
+    <option value="3">Transcriptions</option>
+    </select>&nbsp;&nbsp;
+    <button onClick="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')">Go</button>
+    </p>
+    <p style="font-style: italic; font-size: 80%;"><label>Items found: <span id="found">–</span></label><br/><table id="foundItems"></table></p>
+    </div>
+
+
+    <div id="freq_tab_area">
+    <p>Frequency of individual characters across all the entries.</p>
+    <p style="font-style: italic; font-size: 80%;">Total sample size: <span id="totalFreq">–</span> characters. &nbsp;&nbsp; Unique characters: <span id="uniqueChars">-</span>. &nbsp;&nbsp; Averaged: <span id="averaged">-</span> &nbsp; <img src="../../shared/images/help.png" alt="[?]" id="averagedHelp"></p>
+    <table id="freqout"></table>
+    </div>
+    `
+    }
+
+
+
+
+
 // remove blank lines
 for (var m=0;m<wordList.length;m++) {
 	if (wordList[m].trim() == '' || wordList[m].startsWith('#')) {
@@ -41,6 +86,10 @@ for (var n=0;n<wordList.length;n++) {
 
 window.autoExpandExamples = {}
 window.contents = ''
+
+
+
+
 
 
 
@@ -218,7 +267,69 @@ function compareByWord(a,b) {
 
 
 
+function compareFrequency(a,b) { // comparison function
+  if (a < b)         // compare by age
+    return -1;
+  if (a > b)
+    return 1;
+  return 0;
+}
 
+function listFrequency () {
+    var frequencyTable = {}
+    var total = 0
+    
+    // count the characters
+	for (var i=0;i<wordList.length;i++) {
+        var fields = wordList[i].split('|')
+        fields[0] = fields[0].replace(/ /g,'').toLowerCase()
+        var native = [...fields[0]]
+        for (var j=0;j<native.length;j++) {
+            if (frequencyTable[native[j]]) {
+                frequencyTable[native[j]]++
+                total++
+                }
+            else {
+                frequencyTable[native[j]] = 1
+                total++
+                }
+            }
+        }
+
+    // sort the data in descending order of frequency
+    const sortedArr = Object.entries(frequencyTable)
+      .sort(([, v1], [, v2]) => v2 - v1)
+    const sorted = Object.fromEntries(sortedArr)
+
+
+    // create the markup
+    var out = ''
+    for (var key in sorted) {
+        var hex = key.codePointAt(0).toString(16).toUpperCase()
+        while (hex.length < 4) hex = '0'+hex
+        out += '<tr><td class="uname"><a target="charnotes" href="block#char'+hex+'">U+'+ hex + '</a></td><td class="char">'+ key +'</td><td class="freq">'+sorted[key].toLocaleString()+'</td><td class="percent">'+eval(sorted[key]*100/total).toFixed(2)+'%</td></tr>\n'
+        }
+
+    document.getElementById('freqout').innerHTML = out 
+    document.getElementById('totalFreq').textContent = total.toLocaleString()     
+    document.getElementById('uniqueChars').textContent = Object.keys(frequencyTable).length 
+    
+    
+    if (window.langs && langs[terms.langdataTag]) {
+        var letterCount = 0
+        if (langs[terms.langdataTag].letter) letterCount = langs[terms.langdataTag].letter.length
+        var markCount = 0
+        if (langs[terms.langdataTag].mark) markCount = langs[terms.langdataTag].mark.length
+        var charCount = letterCount + markCount
+        document.getElementById('averaged').textContent = eval(100/charCount).toFixed(2)+'%'   
+        document.querySelector("#averagedHelp").addEventListener('click', function(evt) { alert(`Taking into account typical characters, there are ${ letterCount } letters and ${ markCount } combining marks in this orthography. If each of these characters was used equally, you'd expect to see this percentage value.`) })
+        }
+    else {
+        document.getElementById('averaged').textContent = parseInt(total/Object.keys(frequencyTable).length).toLocaleString()
+        document.querySelector("#averagedHelp").addEventListener('click', function(evt) { alert(`The number of occurrences you would expect if every character had the same frequency.`) })
+       }
+   
+    }
 
 
 
