@@ -2,6 +2,7 @@
 
 autoExpandExamples.vai = `
 
+ꘋ|I (1st p. sing)|ŋ|ŋ́||x
 ꕀ|water|jí
 ꔌꘋ|thing|féŋ
 ꘓ|thing|féŋ
@@ -97,7 +98,13 @@ autoExpandExamples.vai = `
 ꔝ|to, for|yè
 
 
-
+ꕞꖏꕎ|about|lákóa|||x
+ꖴꖕ|home, compound|kùú|||x
+ꖴꖙ|home, compound|kùú|||x
+ꕪꕋ|box|kã̀ã́|||x
+ꕪꖃ|moon|káló|||x
+ꕪꕴ|moon|káó|||x
+ꕪꕱ|moon|káó|||x
 
 
 
