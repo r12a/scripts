@@ -1,4 +1,5 @@
 var wordList = contents.split('\n')
+var spreadsheetInfo = {}
 //wordList.push('|End of list reached.||')
 var metadata, value
 const TERM = 0
@@ -7,6 +8,24 @@ const IPA = 2
 const TRANS = 3
 const NOTES = 4
 const WIKI = 5
+
+
+// get names and ipa info from the spreadsheet
+if (document.getElementById('tabPlaceholder')) {
+    var rows = spreadsheet.split('\n')
+    for (r=0;r<rows.length;r++) {
+        var temp = rows[r].split('\t')
+        var cps = [...temp[0]]
+        if (cps.length === 1) {
+            spreadsheetInfo[temp[0]] = {}
+            spreadsheetInfo[temp[0]]['name'] = temp[cols['ucsName']]
+            spreadsheetInfo[temp[0]]['ipa'] = temp[cols['ipaLoc']]
+            }
+        }
+    spreadsheet = ''
+    rows = ''
+    temp = ''
+    }
 
 
 // build the tab markup
@@ -307,7 +326,23 @@ function listFrequency () {
     for (var key in sorted) {
         var hex = key.codePointAt(0).toString(16).toUpperCase()
         while (hex.length < 4) hex = '0'+hex
-        out += '<tr><td class="uname"><a target="charnotes" href="block#char'+hex+'">U+'+ hex + '</a></td><td class="char">'+ key +'</td><td class="freq">'+sorted[key].toLocaleString()+'</td><td class="percent">'+eval(sorted[key]*100/total).toFixed(2)+'%</td></tr>\n'
+        //out += '<tr><td class="uname"><a target="charnotes" href="block#char'+hex+'">U+'+ hex + '</a></td><td class="char">'+ key +'</td><td class="freq">'+sorted[key].toLocaleString()+'</td><td class="percent">'+eval(sorted[key]*100/total).toFixed(2)+'%</td></tr>\n'
+        //console.log(key)
+        
+        if (typeof spreadsheetInfo[key] === 'undefined') {
+            spreadsheetInfo[key] = {}
+            if (key === '-') spreadsheetInfo[key].name = 'U+002D HYPHEN'
+            else spreadsheetInfo[key].name = 'U+'+ hex
+            spreadsheetInfo[key].ipa = ''
+            }
+        out += `<tr>
+            <td class="uname"><a target="charnotes" href="block#char${ hex }">${ spreadsheetInfo[key].name }</a>`
+            if (spreadsheetInfo[key].ipa !== '') out +=` <span class="ipa">${ spreadsheetInfo[key].ipa.toLowerCase() }</span>`
+            out += `</td>
+            <td class="char">${ key }</td>
+            <td class="freq">${ sorted[key].toLocaleString() }</td>
+            <td class="percent">${ eval(sorted[key]*100/total).toFixed(2) }%</td>
+            </tr>\n`
         }
 
     document.getElementById('freqout').innerHTML = out 
