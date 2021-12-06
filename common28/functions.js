@@ -924,17 +924,6 @@ function replaceStuff (node) {
             else out += ' '
             }
 
-        if (info.includes('trans')) {
-            if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.transLoc]) ch = window.spreadsheetRows[char][cols.transLoc]
-            else ch = '&nbsp;'
-            out += '<span class="listTrans">'+ch+'</span>'
-            }
-
-         if (translit.length > 0) {
-            if (translit[i]) out += '<span class="listTrans">'+translit[i]+'</span>'
-            else out += ' '
-            }
-
        if (info.includes('transc')) {
             if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.transcription]) ch = window.spreadsheetRows[char][cols.transcription]
             else ch = '&nbsp;'
@@ -947,7 +936,18 @@ function replaceStuff (node) {
             out += '<span class="listTrans2">'+ch+'</span>'
             }
 
-        if (info.includes('meaning')) {
+         if (info.includes('trans')) {
+            if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.transLoc]) ch = window.spreadsheetRows[char][cols.transLoc]
+            else ch = '&nbsp;'
+            out += '<span class="listTrans">'+ch+'</span>'
+            }
+
+         if (translit.length > 0) {
+            if (translit[i]) out += '<span class="listTrans">'+translit[i]+'</span>'
+            else out += ' '
+            }
+
+       if (info.includes('meaning')) {
             if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.meaning]) ch = window.spreadsheetRows[char][cols.meaning]
             else ch = '&nbsp;'
             out += '<span class="listMeaning">'+ch+'</span>'
