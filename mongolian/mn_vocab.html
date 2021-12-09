@@ -5,9 +5,8 @@
 <title>Vocab lister</title>
 <meta name="description" content="List examples." />
 <link rel="stylesheet" href="../../shared/style/docs.css" />
-<link rel="stylesheet" href="../../app-vocab/localstyle.css" />
+<link rel="stylesheet" href="../common28/lemmastyle.css" />
 <script src="../../shared/code/boilerplate.js"></script>
-<script src="../../app-vocab/drawVocab.js"></script>
 <script>var autoExpandExamples = {}</script>
 
 
@@ -16,45 +15,36 @@
 
 <!-- CHANGE THIS STUFF -->
 <script src="mn-examples.js"></script> 
+<script src="mn-langdata.js"></script> 
+<script src="../../shared/scriptdb/mong-mn.js"></script> 
 <script>
+var terms = {}
+terms.title = 'Mongolian'
 var contents = autoExpandExamples.mn
-var _fontFamily = 'Noto Sans Mongolian'
-var _fontSize = '150%'
-var _direction = 'ltr'
-var _language = 'mn'
+terms.fontFamily = 'Noto Sans Mongolian'
+terms.fontSize = '150%'
+terms.direction = 'ltr'
+terms.language = 'mn'
+terms.wiktionaryLink = "Mongolian"
+terms.langdataTag = 'khk-mong'
 </script>
 <!-- END -->
 
 
 
 
-<script src="../common/vocab_list.js"></script> 
+
 </head>
 
 <body class="app">
 <header>
 <div id="header-boilerplate"></div>
-<script>document.getElementById('header-boilerplate').innerHTML = bp_appHeader('../shared/images/world.gif','Vocab lister','v11');</script>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_appHeader('../../shared/images/world.gif',terms.title+' terms','');</script>
 </header>
 
 
-<div id="tabs">
-<h2 id="list_tab" onClick="switchTabTo(this.id)">List</h2>
-<h2 id="find_tab" onClick="switchTabTo(this.id)">Find</h2>
-</div> 
-
-
-<div id="list_tab_area">
-<table id="printout"></table>
-</div>
+<div id="tabPlaceholder"></div>
  
-
-<div id="find_tab_area">
-<p><label>Find words containing the following: <input id="needle" type="text" placeholder="Regular expressions can be used."  onInput="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')"></label> &nbsp;&nbsp;
-<button onClick="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')">Go</button>
-</p>
-<p><label>Items found: <span id="found"></span></label><br/><table id="foundItems"></table></p>
-</div>
 
 
 <div class="smallprint"><span id="version">
@@ -62,6 +52,7 @@ Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-B
 </span>
 </div>
 
+<script src="../common28/terms.js"></script> 
 <script>initialise()</script>
 </body>
 </html>
