@@ -1190,7 +1190,7 @@ autoExpandExamples.my = `
 ပါး|thin|pá|pa:
 ကျဲ|thin|tɕɛ́|kyai:
 မိန်းမ|woman|méiɴma̰|min:ma.9
-ယောက်ျား[10]|man (adult male)|jauʔtɕá
+ယောက်ျား|man (adult male)|jaʊʔt͡ɕá|yaukya
 လူ|man (human being)|lù|lu
 ကလေး|child|kʰəlé|ka.le:
 မယား|wife|məjá|ma.ya:11
