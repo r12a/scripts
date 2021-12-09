@@ -121,7 +121,6 @@ autoExpandExamples.osa = `
 𐓪𐓬𐓸𐓘͘|elk|ópxɑ̃
 𐓪𐓵𐓘𐓡𐓘|follow|oðɑ́hɑ
 𐓪𐓵𐓘𐓡𐓘͘|you cook|oːðɑ́hɑ̃
-𐓬etxa͘|surrounding|petxɑ̃́
 𐓬ʼ𐓪𐓵𐓪͘|steam|pˀóðõ
 𐓬𐓘̄𐓹𐓪́|hill, mountain|pɑːɣó
 𐓬𐓘𐓢𐓶|hair|pɑhʲu
