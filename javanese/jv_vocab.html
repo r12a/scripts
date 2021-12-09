@@ -15,6 +15,8 @@
 
 <!-- CHANGE THIS STUFF -->
 <script src="jv-examples.js"></script> 
+<script src="jv-langdata.js"></script> 
+<script src="../../shared/scriptdb/java-jv.js"></script> 
 <script>
 var terms = {}
 terms.title = 'Javanese'
@@ -24,6 +26,7 @@ terms.fontSize = '150%'
 terms.direction = 'ltr'
 terms.language = 'jv'
 terms.wiktionaryLink = "Javanese"
+terms.langdataTag = 'jv-java'
 </script>
 <!-- END -->
 
@@ -31,7 +34,6 @@ terms.wiktionaryLink = "Javanese"
 
 
 
-<script src="../common28/terms.js"></script> 
 </head>
 
 <body class="app">
@@ -41,31 +43,8 @@ terms.wiktionaryLink = "Javanese"
 </header>
 
 
-<div id="tabs">
-<h2 id="list_tab" onClick="switchTabTo(this.id)">List</h2>
-<h2 id="find_tab" onClick="switchTabTo(this.id)">Find</h2>
-</div> 
-
-
-<div id="list_tab_area">
-<p style="font-style: italic; font-size: 80%;"><label>Total items: <span id="totalLemmas">–</span></label></p>
-<table id="printout"></table>
-</div>
+<div id="tabPlaceholder"></div>
  
-
-<div id="find_tab_area">
-<p style="margin-inline-end:1em;"><label>Find words containing the following: <input id="needle" type="text" placeholder="Regular expressions can be used."  onInput="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')"></label> &nbsp;&nbsp;
-Search in: <select id="searchCol">
-<option value="all">All</option>
-<option value="0">Terms</option>
-<option value="1">Meanings</option>
-<option value="2">IPA</option>
-<option value="3">Transcriptions</option>
-</select>&nbsp;&nbsp;
-<button onClick="document.getElementById('foundItems').innerHTML = findWords(document.getElementById('needle').value, '')">Go</button>
-</p>
-<p style="font-style: italic; font-size: 80%;"><label>Items found: <span id="found">–</span></label><br/><table id="foundItems"></table></p>
-</div>
 
 
 <div class="smallprint"><span id="version">
@@ -73,6 +52,7 @@ Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-B
 </span>
 </div>
 
+<script src="../common28/terms.js"></script> 
 <script>initialise()</script>
 </body>
 </html>
