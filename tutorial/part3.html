@@ -6,13 +6,12 @@
 <meta name="description"
 	  content="The tutorial will provide you with an understanding of key requirements for implementing writing systems in information technology. It will do this by examining real examples of a wide range of modern scripts to discover features that a computerized implementation must support." />
 
-<link rel="stylesheet" href="../../shared/style/docs.css" type="text/css" />
-<link rel="stylesheet" href="../../shared/style/slideshow.css" type="text/css" />
-<link rel="stylesheet" type="text/css" href="local.css" />
+<link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../../shared/style/slideshow.css" />
+<link rel="stylesheet" href="local.css" />
 
 <script src="../../shared/code/toc_2016.js"></script>
 <script src="../../shared/code/boilerplate.js"></script>
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 
 <body>
@@ -295,8 +294,7 @@
     <p>One approach that is very common is the use of a <span class="newterm">half-form</span> to represent the initial consonant in the cluster.
       An example of this is shown on the bottom line of the slide.</p>
     <p>It is important to bear in mind, once again, that this is all glyph magic. The individual consonants are all still represented using the
-      regular code points in memory, it is only the visual appearance that changes. There are no special code points for half-form glyphs. The appropriate
-      glyph is simply applied at display time according to the rendering rules of the script. </p>
+      regular code points in memory, it is only the visual appearance that changes. There are no special code points for half-form glyphs. The alternate glyph appropriate for the context is simply applied at display time according to the rendering rules of the script. </p>
   </div>
 </section>
 <section class="slide">
@@ -309,8 +307,7 @@
     <p>It is only when you put a virama character between them that they combine to form a conjunct. So the conjunct glyph shown middle right
       actually represents three underlying characters.</p>
     <p>The number of conjunct forms can vary from font to font. Some fonts will be capable of rendering more than others. So what happens if the
-      font you are using doesn’t have a conjunct glyph for the combination you want to create?</p>
-    <p>In this case the virama is shown visually as a combining mark – see the last line on the slide. (In fact, in modern Tamil this is the
+      font you are using doesn’t have a conjunct glyph for the combination you want to create? In such a case the virama is shown visually as a combining mark – see the last line on the slide. (In fact, in modern Tamil this is the
       default approach.) </p>
     <p class="slide-bottom">&nbsp;<a href="#topbar">go to top of page</a></p>
   </div>
@@ -366,6 +363,15 @@
       some (typically more classical) fonts, specific pairings join above the baseline as shown in the  example on the slide. Since this is font dependent, it is driven more by aesthetics than by practical or functional motives.</p>
     </div>
   </section>
+  <section id="arabic-joining" class="slide">
+    <div class="slide-pic"><img src="images/joining6.png" alt="slide" /></div>
+    <div class="speaker-notes">
+      <p>Arabic can take these special joining forms much further. This slide shows the kinds of special joining forms you will see in an advanced Arabic font.</p>
+<p>On the top line we see the same character (U+0646 ARABIC LETTER NOON) in word-initial position and followed by 5 different letter sequences. Notice how the initial letter assumes a wide variety of shapes along with the following letter.</p>
+<p>The middle line shows 3 items, each of which consists of the same character repeated twice. You can see that, although it is the same character, the glyphs are different.</p>
+<p>And the bottom line shows how certain combinations can join vertically, rather than just moving along the baseline.</p>
+    </div>
+  </section>
   <section id="positional" class="slide">
     <h3><a href="positional">Positional variation</a></h3>
     <div class="slide-pic"><img src="images/positional.png" alt="slide" /></div>
@@ -388,9 +394,10 @@
   </section>
   <section class="slide">
     <div class="slide-pic"><img src="images/positional3.png" alt="slide" /></div>
+    <div class="slide-pic"><img src="images/positional4.png" alt="slide" /></div>
     <div class="speaker-notes">
       <p>This slide shows some additional examples of reordering during display.</p>
-      <p>The top example shows a Tamil combining character that appears on <em>both</em> sides of the base consonant when
+      <p>The top example shows a single Tamil code point which is a combining character that places glyphs on <em>both</em> sides of the base consonant when
       displayed.</p>
       <p>The bottom example shows the Devanagari <span class="newterm">repha</span> in a consonant cluster. The RA code that appears at the
       beginning of the cluster in memory is rendered as a diacritic above the vowel sign that completes the syllabic cluster. </p>
@@ -504,8 +511,8 @@
     <div class="slide-pic"><img src="images/grapheme-cluster4.png" alt="slide" /></div>
     <div class="speaker-notes">
       <p>There are still some combinations of glyphs that users may consider a single unit, but which are not currently covered by the concept of grapheme cluster.  Some Indic languages other than Tamil have  groupings of glyphs that interact in a complicated way to create a single unit.  In the word on the slide, the first syllable includes a consonant + virama + consonant + vowel sign. It is clear that this is a single typographic unit, not only because the first consonant uses the half glyph common to such conjuncts, but because the vowel-sign appears to the left of the whole group, and extends over to the rightmost part.</p>
-<p>However, although this is one grapheme (ie. user-perceived unit), the Unicode grapheme cluster algorithm treats this as two grapheme clusters, where the first (the orange one) is embedded inside the second, visually. This is because the algorithm doesn't combine the characters following the virama. This is about to change, however, in Unicode 11.</p>
-<p>Pre-Unicode11, UAX #29 describes the notion of tailored grapheme clusters for this.  The problem is that such a combination of characters is not always rendered in way that looks like a single character – sometimes a virama may be used, rather than a ligature. So tailorings for conjuncts may need to be script-, language-, font-, or context-specific to be useful. </p>
+<p>However, although this is one grapheme (ie. user-perceived unit), the Unicode grapheme cluster algorithm treats this as two grapheme clusters, where the first (the brown one) is embedded inside the second, visually. This is because the algorithm doesn't combine the characters following the virama.</p>
+<p>UAX #29 describes the notion of tailored grapheme clusters for this.  The problem is that such a combination of characters is not always rendered in way that looks like a single character – sometimes a virama may be used, rather than a ligature. So tailorings for conjuncts may need to be script-, language-, font-, or context-specific to be useful. </p>
       <p class="slide-bottom">&nbsp;<a href="#topbar">go to top of page</a></p>
     </div>
   </section>
@@ -518,7 +525,7 @@
 
 
 <div class="smallprint"><span id="version">First published  Feb 2003.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2018-03-22  15:26<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2021-12-10  17:16<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 

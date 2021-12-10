@@ -5,19 +5,19 @@
 <title>An Introduction to Writing Systems</title>
 <meta name="description"
 	  content="The tutorial will provide you with an understanding of key requirements for implementing writing systems in information technology. It will do this by examining real examples of a wide range of modern scripts to discover features that a computerized implementation must support." />
-<link rel="stylesheet" href="/style/docs.css" type="text/css" />
-<link rel="stylesheet" href="/style/slideshow.css" type="text/css" />
-<link rel="stylesheet" type="text/css" href="local.css" />
 
-<script type="text/javascript" src="/code/toc_section.js"></script>
-<script type="text/javascript" src="/code/boilerplate.js"></script>
-<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<link rel="stylesheet" href="../../shared/style/docs.css" />
+<link rel="stylesheet" href="../../shared/style/slideshow.css" />
+<link rel="stylesheet" href="local.css" />
+
+<script src="../../shared/code/toc_2020.js"></script>
+<script src="../../shared/code/boilerplate.js"></script>
 </head>
 
 <body>
 <header>
 <div id="header-boilerplate"></div>
-<script>document.getElementById('header-boilerplate').innerHTML = bp_header('/images/world.gif','docs');</script>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
 </header>
 
 <h1>An Introduction to Writing Systems &amp; Unicode</h1>
@@ -28,10 +28,10 @@
   <div id="toc"><!-- placeholder --></div>
   <div class="noprint">
     <h2 class="notoc"><a id="links">Related links</a></h2>
-    <p><a href="/scripts/tutorial/summaries/">Tutorial example texts</a></p>
-    <p><a href="/scripts/featurelist/">Script Comparison Chart</a></p>
-	<p><a href="/scripts/links">Script links</a></p>
-    <p><a href="/uniview/">UniView</a></p>
+    <p><a href="summaries/">Tutorial example texts</a></p>
+    <p><a href="../featurelist/">Script Comparison Chart</a></p>
+	<p><a href="../links">Script links</a></p>
+    <p><a href="../../uniview/">UniView</a></p>
 	<p><a href="http://www.unicode.org">Unicode Consortium</a></p>
   </div>
   </nav>
@@ -71,9 +71,9 @@
         would use one or other of these scripts to write Chinese – ie. the characters do not necessarily represent the sounds.</p>
       <p>There are a few local characters, such as for Cantonese in Hong Kong, that are not in widespread use. </p>
       <p>In Chinese these ideographs are
-        called <span class="newterm">hanzi</span>. They are often referred to as <span class="newterm">Han characters</span>.</p>
+        called <span class="newterm">hanzi</span> (<span class="ipa">xan.ʦɹ̩</span>). They are often referred to as <span class="newterm">Han characters</span>.</p>
       <p>There is another script used with Traditional Chinese for annotations and transliteration during input. It is called <span
-			 class="newterm">zhuyin</span> or <span class="newterm">bopomofo</span>, and will be described in more detail later.</p>
+			 class="newterm">zhuyin</span> (<span class="ipa">ʈʂu.in</span>) or <span class="newterm">bopomofo</span>, and will be described in more detail later.</p>
       <p>It is said that Chinese people typically use around 3-4,000 characters for most communication, but a reasonable word processor would need
         to support at least 10,000. Unicode supports over 70,000 Han characters. </p>
     </div>
@@ -88,11 +88,11 @@
     </div>
   </div>
   <div id="japanese" class="slide">
-    <h3><a href="japanese">Japanese</a></h3>
+    <h3><a href="#japanese">Japanese</a></h3>
     <div class="slide-pic"> <img src="images/japanese1.png" alt="slide" /></div>
     <div class="speaker-notes">
       <p>Japanese uses three native scripts in addition to Latin (which is called <span class="newterm">romaji</span>), and mixes them all together.</p>
-      <p>Top cetnre on the slide is an example of ideographic characters, borrowed from Chinese, which in Japanese are called <span
+      <p>Top centre on the slide is an example of ideographic characters, borrowed from Chinese, which in Japanese are called <span
 			 class="newterm">kanji</span>. Kanji characters are used principally for the roots of words.</p>
       <p>The example at the top right of the slide is written entirely in <span class="newterm">hiragana</span>. Hiragana is a native Japanese
         syllabic script typically used for many indigenous Japanese words (as in this case) and for grammatical particles and endings. The example at the
@@ -187,7 +187,7 @@
   <div class="slide" id="Slide0170">
     <div class="slide-pic"> <img src="images/ideograph-char-components3.png" alt="slide" /></div>
     <div class="speaker-notes">
-      <p>Unicode dedicates two blocks to radicals. The <span class="newterm">KangXi radicals block</span> depicted here contains the base forms of the 214 radicals.</p>
+      <p>Unicode dedicates two blocks to radicals. The <span class="newterm">KangXi radicals block</span> (pronounced <span class="ipa">kʰɑŋ.ɕi</span>) depicted here contains the base forms of the 214 radicals.</p>
       <p>The <span class="newterm">CJK Radicals Extension</span> contains variant shapes of these radicals when they are used as parts of other characters or in simplified
         form. These have not been unified because they often appear independently in dictionaries indices.</p>
       <p>Characters in these blocks should never be used as ideographs. </p>
@@ -367,7 +367,27 @@
       <p class="slide-bottom">&nbsp;<a href="#topbar">go to top of page</a></p>
     </div>
   </div>
-  <div id="tools" class="slide">
+
+<div class="slide" id="Slide0320b">
+<div class="slide-pic"><img src="images/char-boundaries3.png" alt="slide" /></div>
+<div class="speaker-notes">
+<p>Here is another example of the importance of working with characters, rather than bytes (and sometimes even larger units). In this use case, text is automatically truncated after reaching a fixed number of bytes. The top row is English, and each character is represented by a single byte. Cyrillic text, however, uses 2 bytes per character in UTF-8, so the Russian text on the 2nd line is truncated in the middle of a character. Consequently, the Russian reader will see a diamond with a question mark at the end of the line, indicating that the system doesn't recognise this.</p>
+<p>The same happens for the Chinese text, which uses 3 bytes per character, so there is twice the likelihood of garbage appearing at the line end. </p>
+<p>It's a similar story for emoji, although there is an additional twist. This slide shows the composition of a couple of pre-composed emoji sequences, and lists the code points involved in constructing those images.</p>
+<p class="slide-bottom">&nbsp;<a href="#topbar">go to top of page</a></p>
+</div>
+</div>
+
+<div class="slide" id="Slide0320c">
+<div class="slide-pic"><img src="images/char-boundaries4.png" alt="slide" /></div>
+<div class="speaker-notes">
+<p>Truncate the emoji sequences at the right point, and rather than producing garbage, you change the picture. See how the family has lost a child at the bottom right! In this case, the truncation wasn't problematic because a single code point was split, but because an unbreakable sequence of code points was damaged. In cases such as these, it's important to locate the boundaries of the item that will be truncated. (And by the way, note how long emoji sequences can be, and think carefully before imposing short limits on field lengths.)</p><p class="slide-bottom">&nbsp;<a href="#topbar">go to top of page</a></p>
+</div>
+</div>
+
+
+
+<div id="tools" class="slide">
     <h3><a href="tools">Tools</a></h3>
     <div class="slide-pic"><img src="images/uniview.png" alt="slide" /></div>
     <div class="speaker-notes">
@@ -491,7 +511,7 @@
 
 
 <div class="smallprint"><span id="version">First published  Feb 2003.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2017-10-16  11:35<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2021-12-10  17:17<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 
