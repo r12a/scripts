@@ -894,6 +894,7 @@ function replaceStuff (node) {
             var status = '&nbsp;'
             if (window.spreadsheetRows[char] && window.spreadsheetRows[char][cols.status]) {
                 switch (window.spreadsheetRows[char][cols.status]) {
+                case 'r': status = 'rare'; break;
                 case 'i': status = 'infreq.'; break;
                 case 'a': status = 'archaic'; break;
                 case 'u': status = 'unused'; break;
