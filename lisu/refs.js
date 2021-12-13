@@ -41,4 +41,17 @@ reflist = {
 
 
 
-// <a class="fn">ws,#tones</a>
+
+scriptLanguageList = {
+lbc:{name:"Lakkia"},
+lpo:{name:"Lipo"},
+lis:{name:"Lisu"},
+nxq:{name:"Naxi"},
+atb:{name:"Zaiwa"},
+}
+
+
+
+
+
+
