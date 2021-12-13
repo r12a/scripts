@@ -2,8 +2,7 @@
 <html lang="en-GB">
 <head>
 <meta charset="utf-8"/>
-<title>Uighur writing system</title>
-<meta name="description" content="Summary of the Arabic script."/>
+<title>Uighur orthography</title>
 
 <link rel="stylesheet" href="../../shared/style/docs.css" />
 <link rel="stylesheet" href="../common28/local.css" />
@@ -17,24 +16,20 @@
 
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
-<script src="../../shared/code/all-names.js"></script>
-<script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common28/functions.js"></script>
 <script src="../common28/transliterate.js"></script>
 <script src="../common28/prompts.js"> </script>
 <script src="../glossary/glossary.js"> </script>
-<script src="../../shared/code/getLinks.js"></script>
-<script src="../linkdata/linkdb.js"></script>
-<script src="../../app-charuse/langs.js"> </script>
 <script src="../common28/egcode.js"></script>
 <script src="../common28/references.js"></script>
 <script src="refs.js"></script>
 
+<script src="ug-langdata.js"></script>
 <script src="ug-examples.js"></script>
 <script src="ug-translit.js">  </script>
-<script src="/shared/manifests/arab-ug.js"></script>
+<script src="../../shared/manifests/arab-ug.js"></script>
 </head>
 
 <body class="useBlockExamples">
@@ -43,10 +38,9 @@
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Uighur</h1>
+<h1>Uighur (draft)</h1>
 
 
-<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top"/></a></nav>
 
 <aside class="sidebar">
 <nav>
@@ -60,7 +54,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->22 September, 2021<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->13 December, 2021<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -68,7 +62,7 @@
 <div class="section">
 <p>This page brings together basic information about the Arabic script and its use for the Uighur language. It aims to provide a brief, descriptive summary of the modern, printed orthography and typographic features, and to  advise  how to write Uighur using Unicode.</p>
 <p>See the <a class="linkHighlight" href="index">Arabic</a> page for most of the information about how the Arabic script works, and the orthography used for the Arabic language. This page aims to provide Uighur-specific information.</p>
-<p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
+<p>Phonological transcriptions on this page should be treated as an approximate guide, only. They are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available.</p>
 
 
 
@@ -95,7 +89,8 @@
 <section id="sample">
 <h2>Sample (Uighur)</h2>
   
-<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="38" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">38px</span></p>
+<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.  <a style="margin-inline-start: 2rem;" href="http://unicode.org/udhr/translations.html">Source</a><br>
+Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="38" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">38px</span></p>
 
 <div id="freeText" dir="rtl" lang="ug" data-target="c" data-base="/scripts/arabic/block" data-source="http://unicode.org/udhr/translations.html">
 <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">1 ماددا ھەممە ئادەم زانىدىنلا ئەركىن، ئىززەت-ھۆرمەت ۋە ھوقۇقتا باپباراۋەر بولۇپ تۇغۇلغان. ئۇلار ئەقىلغە ۋە ۋىجدانغا ئىگە ھەمدە بىر-بىرىگە قېرىنداشلىق مۇناسىۋىتىگە خاس روھ بىلەن موئامىلە قىلىشى كېرەك.</p>
@@ -140,12 +135,12 @@
 <section id="type">
 <h2>Basic features</h2>
     <p>The Arabic script is normally an abjad, ie. in normal use the script  represents only consonant and long vowel sounds. This approach is helped by the strong emphasis on consonant patterns in Semitic languages. However Uighur is not a Semitic language, and the modern version of the Arabic script used for Uighur is an <span class="newterm">alphabet</span>.   See the table to the right for a brief overview of the features of the modern Uighur orthography.</p>
-<p>Uighur text is written <mark>horizontally, right-to-left</mark>, but numbers and embedded Latin text are read left-to-right. </p>
+<p>Uighur text is written <mark>horizontally, <a href="#direction">right-to-left</a></mark>, but numbers and embedded Latin text are read left-to-right. </p>
 <p>Words are <mark>separated by spaces</mark>, and contain a mixture of  consonants and  vowels. </p>
 <p>The script is <mark>unicameral</mark>.</p>
-<p>The script is <mark>cursive</mark>, and some basic letter shapes  change significantly, depending on their joining context. </p>
-<p>Uighur has <mark>25 consonant letters</mark>, including a character that serves as a <mark>vowel base</mark>. Initial vowels or those preceded by a vowel in a word are preceded by 'hamza on a tooth', eg. <span class="charExample"><span class="ex" lang="ug" dir="rtl">ئە</span></span></p>
-<p> There are <mark>8 vowel letters</mark>.</p>
+<p>The script is <mark><a href="#cursive">cursive</a></mark>, and some basic letter shapes  change significantly, depending on their joining context. </p>
+<p>Uighur has <mark>25 <a href="#consonantLetters">consonant letters</a></mark>, including a character that serves as a <mark>vowel base</mark>. Initial vowels or those preceded by a vowel in a word are preceded by 'hamza on a tooth', eg. <span class="charExample inline"><span class="ex" lang="ug" dir="rtl">ئە</span></span>.</p>
+<p> There are <mark>8 <a href="#vowelLetters">vowel letters</a></mark>.</p>
 <p>Numbers use <mark>ASCII digits</mark>.</p>
 </section>
 
@@ -176,12 +171,12 @@
 
 <section id="index_letters_consonants">
 <h4>Consonants</h4>
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#stops,#stops,#stops,#stops,#stops,#stops,#stops,#affricates,#affricates,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#nasals,#nasals,#liquids,#liquids,#liquids,#fricatives #semivowels,#semivowels,#vowelLetters #encoding,">پ␣ب␣ت␣د␣ك␣گ␣ق␣چ␣ج␣ف␣س␣ز␣ژ␣ش␣خ␣غ␣ھ␣ر␣ل␣م␣ن␣ڭ␣ۋ␣ي␣ئ</figure>
+<figure class="characterBox noindex indexline">پ␣ب␣ت␣د␣ك␣گ␣ق␣چ␣ج␣ف␣س␣ز␣ژ␣ش␣خ␣غ␣ھ␣ر␣ل␣م␣ن␣ڭ␣ۋ␣ي␣ئ</figure>
 </section>
 
 <section id="index_letters_vowels">
 <h4>Vowels</h4>
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#vowelLetters,#vowelLetters,#vowelLetters,#vowelLetters,#vowelLetters,#vowelLetters,#vowelLetters,#vowelLetters,">ى␣ۈ␣ۇ␣ې␣و␣ە␣ۆ␣ا</figure>
+<figure class="characterBox noindex indexline">ى␣ۈ␣ۇ␣ې␣و␣ە␣ۆ␣ا</figure>
 </section>
 </details>
 </section>
@@ -194,7 +189,7 @@
 <summary class="instructions">Show</summary>
 
 
-<figure class="characterBox auto noindex indexline"  data-cols="" data-links="#encoding">ٔ</figure>
+<figure class="characterBox noindex indexline">ٔ</figure>
 </details>
 </section>
 
@@ -207,7 +202,12 @@
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#phrase,#phrase,#phrase,#phrase,#phrase,#phrase,">،␣؛␣؟␣!␣.␣:</figure>
+<figure class="characterBox noindex indexline">،␣؛␣؟␣«␣»</figure>
+
+<section id="index_punctuation_ascii">
+<h4>ASCII</h4>
+<figure class="characterBox noindex indexline">!␣.␣:</figure>
+</section>
 </details>
 </section>
 </section>
@@ -543,8 +543,8 @@ alveolar</th>
 </section>
 
 
-<section id="liquids">
-<h4>Liquids</h4>
+<section id="sonorants">
+<h4>Other sonorants</h4>
 <figure class="characterBox auto" data-cols="ipa,trans,transc,trans2">م␣ن␣ڭ</figure>
 </section>
 
@@ -558,7 +558,9 @@ alveolar</th>
 
 
 
-<p>The transcriptions shown are from the Uyghur Latin alphabet (ULY) system, and occasionally there can be ambiguities around the digraphs. In such cases, an apostrophe is used, eg. the transcription <span class="trans">bashlan’ghuch</span> for  <span class="eg" lang="ug" dir="rtl">باشلئانگۇچ</span> disambiguates <span class="trans">n-gh</span> from <span class="trans">ng-h</span>.</p>
+<p>The transcriptions shown are from the Uyghur Latin alphabet (ULY) system, and occasionally there can be ambiguities around the digraphs. In such cases, an apostrophe is used, eg. the transcription <span class="trans">bashlan’ghuch</span> for the following disambiguates <span class="trans">n-gh</span> from <span class="trans">ng-h</span>.
+<span class="eg" lang="ug" dir="rtl">باشلئانگۇچ</span>
+</p>
 </section>
 
 
@@ -721,6 +723,8 @@ alveolar</th>
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
 
+<figure class="characterBox auto small"  data-cols="trans,transc">!␣،␣:␣؛␣.␣؟</figure>
+
 <table class="character_list">
 <tbody>
 <tr>
@@ -754,6 +758,8 @@ alveolar</th>
 <section id="bracketing">
 <h3>Parentheses &amp; brackets</h3>
 
+<figure class="characterBox auto small"  data-cols="trans,transc">(␣)</figure>
+
 <p class="observation"><span class="leadin">Observation:</span> <a class="figref">fig_bracketed_text</a> shows double angle brackets being used to a kind of quotation mark, for examples.</p>
 
 <figure id="fig_bracketed_text">
@@ -768,6 +774,8 @@ alveolar</th>
   
 <section id="quotations">
 <h3>Quotations</h3>
+
+<figure class="characterBox auto small"  data-cols="trans,transc">«␣»</figure>
 
 <p class="observation"><span class="leadin">Observation:</span> <a class="figref">fig_quotation</a> appears to show double angle brackets being used as a quotation mark.</p>
 
