@@ -50,3 +50,26 @@ reflist = {
 
 
 
+
+scriptLanguageList = {
+all:{name:"Allar"},
+pkr:{name:"Kurumba, Attapady"},
+xub:{name:"Kurumba, Betta"},
+iru:{name:"Irula"},
+kfg:{name:"Kudiya"},
+kfh:{name:"Kurichiya"},
+mal:{name:"Malayalam"},
+mjv:{name:"Mannan"},
+udg:{name:"Muduga"},
+pcg:{name:"Paniya"},
+yea:{name:"Ravula"},
+}
+
+
+
+
+
+
+
+
+

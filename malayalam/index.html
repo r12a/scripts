@@ -2,7 +2,7 @@
 <html lang="en-GB">
 <head>
 <meta charset="utf-8"/>
-<title>Malayalam orthography/script notes</title>
+<title>Malayalam orthography notes</title>
 <meta name="description" content="Summary of the Malayalam script."/>
 
 <link rel="stylesheet" href="../../shared/style/docs.css" />
@@ -12,29 +12,25 @@
 <script src="../../shared/fontdb/db.js"> </script>
 <script src="../../shared/fontdb/managefonts.js"></script>
 
-<script src="../../shared/scriptdb/malayalam.js"> </script>
+<script src="../../shared/scriptdb/mlym-ml.js"> </script>
 <script src="ml-details.html"> </script>
 
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
-<script src="../../shared/code/all-names.js"></script>
-<script src="../../shared/code/character_conversion.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common28/functions.js"></script>
 <script src="../common28/transliterate.js"></script>
 <script src="../common28/prompts.js"> </script>
 <script src="../glossary/glossary.js"> </script>
-<script src="../../shared/code/getLinks.js"></script>
-<script src="../linkdata/linkdb.js"></script>
-<script src="../../app-charuse/langs.js"> </script>
 <script src="../common28/egcode.js"></script>
 <script src="../common28/references.js"></script>
 <script src="refs.js"></script>
 
+<script src="ml-langdata.js"></script>
 <script src="ml-examples.js"></script>
 <script src="ml-translit.js">  </script>
-<script src="/shared/manifests/mlym-ml.js"></script>
+<script src="../../shared/manifests/mlym-ml.js"></script>
 </head>
 
 <body class="useBlockExamples">
@@ -43,9 +39,8 @@
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Malayalam</h1>
+<h1>Malayalam (draft)</h1>
 
-<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top"/></a></nav>
 
   <aside class="sidebar"> 
 		<h2 class="notoc flush"><a id="tochead" name="tochead" tabindex="4">Contents</a></h2>
@@ -58,20 +53,15 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->29 November, 2021<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->13 December, 2021<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
 
 
 	<div class="section">
-	  <p>This page gathers  basic information about the Malayalam script and its use for the Malayalam language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Malayalam using Unicode.</p>
-
-
-
-
-<p>See also the companion document, <a href="block" class="linkHighlight">Malayalam character notes</a>, for detailed information about specific Unicode characters.</p>
-<p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
+<p>This page brings together basic information about the Malayalam script and its use for the Malayalam language. It aims to provide a brief, descriptive summary of the modern, printed orthography and typographic features, and to advise how to write Malayalam using Unicode.</p>
+<p>Phonological transcriptions on this page should be treated as an approximate guide, only. They are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available.</p>
 
 
 
@@ -99,7 +89,8 @@
 <h2>Sample (Malayalam)</h2>
   
 
-<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
+<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.  <a style="margin-inline-start: 2rem;" href="http://unicode.org/udhr/translations.html">Source</a><br>
+Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
 
 <div id="freeText" dir="ltr" lang="ml" data-target="c" data-base="/scripts/malayalam/block" data-source="http://unicode.org/udhr/translations.html">
 <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">വകുപ്പ്‌ 1. മനുഷ്യരെല്ലാവരും തുല്യാവകാശങ്ങളോടും അന്തസ്സോടും സ്വാതന്ത്ര്യത്തോടുംകൂടി ജനിച്ചിട്ടുള്ളവരാണ്‌. അന്യോന്യം ഭ്രാതൃഭാവത്തോടെ പെരുമാറുവാനാണ്‌ മനുഷ്യന്നു വിവേകബുദ്ധിയും മനസ്സാക്ഷിയും സിദ്ധമായിരിക്കുന്നത്‌.</p>
@@ -144,14 +135,14 @@
 
 <p>Generally, words are separated by spaces, however the number of characters between spaces can be quite high as sometimes spaces are used to indicate phonological pauses, rather than lexical boundaries.</p>
 
-<p>Malayalam uses <mark>36 basic consonant</mark> letters. <mark></mark></p> 
-<p><mark>Consonant clusters</mark> are typically indicated in modern Malayalam using the <mark>visible <span class="name">chandrakkala</span> mark</mark> (virama), which indicates that no vowel follows a consonant. Conjunct forms are also expressed using  <mark>stacked consonants</mark>, and <mark>conjoined consonants</mark>, where the <span class="name">chandrakkala</span> is still used but hidden, and special <mark>chillu shapes</mark>.</p>
+<p>Malayalam uses <mark>36 <a href="#basicconsonants">basic consonant</a></mark> letters. <mark></mark></p> 
+<p><mark><a href="#clusters">Consonant clusters</a></mark> are typically indicated in modern Malayalam using the <mark>visible <span class="name">chandrakkala</span> mark</mark> (virama), which indicates that no vowel follows a consonant. Conjunct forms are also expressed using  <mark>stacked consonants</mark>, and <mark>conjoined consonants</mark>, where the <span class="name">chandrakkala</span> is still used but hidden, and special <mark>chillu shapes</mark>.</p>
 <p>As part of a cluster, <mark>RA has  special forms</mark>. As a medial consonant in the modern orthography it appears as a simple glyph to the left of the letters spoken before it. When initial in the cluster its glyph includes a cillu hook at the top right. There are also special rules involving clusters of multiple RA letters.</p>
-<p><mark>Syllable-final</mark> consonant sounds may be represented by <mark>2 dedicated combining marks</mark> (anusvara &amp; visarga), but are generally <mark>ordinary consonants with <span class="name">chandrakkala</span></mark>, or <mark>6 chillu forms</mark>. The word-final virama  sometimes represents a <span class="name">half-u</span> sound, rather than completely killing the inherent vowel. Because of this, Malayalam uses a set of syllable-final consonants called <span class="name">chillus</span> that have no vowel sound associated with them.</p>
-<p>The Malayalam orthography has an <mark>inherent vowel</mark>, and represents other vowels using <mark>12 vowel-signs</mark>, including <mark>3 prescripts</mark> and <mark>3 circumgraphs</mark>. All circumgraphs can be decomposed. All vowel-signs are <mark>combining marks</mark>, and are stored after the base character. Also a word-final half-u sound   is written in modern Malayalam using <span class="codepoint" translate="no"><span lang="ml">&#x0D4D;</span> [<a href="/scripts/malayalam/block#char0D4D"><span class="uname">U+0D4D MALAYALAM SIGN VIRAMA</span></a>]</span> (<span class="name">candrakkala</span>).</p>
-<p>There are  <mark>12 independent vowels</mark>, one for each vowel sound, including the inherent vowel, and these are used to write all standalone vowel sounds.</p>
+<p><mark><a href="#finals">Syllable-final</a></mark> consonant sounds may be represented by <mark>2 dedicated combining marks</mark> (anusvara &amp; visarga), but are generally <mark>ordinary consonants with <span class="name">chandrakkala</span></mark>, or <mark>6 chillu forms</mark>. The word-final virama  sometimes represents a <span class="name">half-u</span> sound, rather than completely killing the inherent vowel. Because of this, Malayalam uses a set of syllable-final consonants called <span class="name">chillus</span> that have no vowel sound associated with them.</p>
+<p>The Malayalam orthography has an <mark><a href="#inherent">inherent vowel</a></mark>, and represents other vowels using <mark>12 <a href="#vowelsigns">vowel-signs</a></mark>, including <mark>3 <a href="#prescript_vowels">pre-base vowels</a></mark> and <mark>3 <a href="#circumgraphs">circumgraphs</a></mark>. All circumgraphs can be decomposed. All vowel-signs are <mark>combining marks</mark>, and are stored after the base character. Also a word-final half-u sound   is written in modern Malayalam using <span class="codepoint" translate="no"><span lang="ml">&#x0D4D;</span> [<a href="/scripts/malayalam/block#char0D4D"><span class="uname">U+0D4D MALAYALAM SIGN VIRAMA</span></a>]</span> (<span class="name">candrakkala</span>).</p>
+<p>There are  <mark>12 <a href="#independentvowels">independent vowels</a></mark>, one for each vowel sound, including the inherent vowel, and these are used to write all standalone vowel sounds.</p>
 <p>The only  <mark>composite vowels</mark> are those created by decomposition of the circumgraphs, and involve 2 glyphs, one on each side of the base consonant(s).</p>
-<p>There is also a set of <mark>vocalics</mark>.</p>
+<p>There is also a set of <mark><a href="#vocalics">vocalics</a></mark>.</p>
 <p>There is an archaic set of numbers that include digits beyond the normal 0-9 range, and include a number of fractional symbols.</p>
 </section>
    
@@ -180,32 +171,32 @@
 
 <section id="index_letters_consonants">
 <h4>Basic consonants</h4>
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#stops,#stops,#stops,#stops,#stops,#stops,#stops #affricates #initialclusters,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#affricates,#affricates,#affricates,#affricates,#fricatives,#affricates #fricatives,#fricatives,#fricatives,#nasals,#nasals #other_consonants #initialclusters,#nasals #initialclusters,#nasals,#nasals,#liquids #conjoined,#liquids #clusters #initialclusters #initial_ra,#liquids #other_consonants #conjoined #rra_conjuncts,#liquids,#liquids #initialclusters,#liquids #initialclusters,#liquids #conjoined #initial_ra,">പ␣ബ␣ത␣ദ␣ട␣ഡ␣ക␣ഗ␣ഫ␣ഭ␣ഥ␣ധ␣ഠ␣ഢ␣ഖ␣ഘ␣ച␣ജ␣ഛ␣ഝ␣സ␣ഷ␣ശ␣ഹ␣മ␣ന␣ണ␣ഞ␣ങ␣വ␣ര␣റ␣ഴ␣ല␣ള␣യ</figure>
+<figure class="characterBox noindex indexline" data-cols="">പ␣ബ␣ത␣ദ␣ട␣ഡ␣ക␣ഗ␣ഫ␣ഭ␣ഥ␣ധ␣ഠ␣ഢ␣ഖ␣ഘ␣ച␣ജ␣ഛ␣ഝ␣സ␣ഷ␣ശ␣ഹ␣മ␣ന␣ണ␣ഞ␣ങ␣വ␣ര␣റ␣ഴ␣ല␣ള␣യ</figure>
 </section>
 
 <section id="index_letters_vowels">
 <h4>Vowels</h4>
 
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#independentvowels,#independentvowels,#independentvowels,#independentvowels,#independentvowels,#independentvowels,#independentvowels,#independentvowels,#independentvowels,#independentvowels,#independentvowels,#independentvowels,">ഇ␣ഈ␣ഉ␣ഊ␣എ␣ഏ␣ഒ␣ഓ␣അ␣ആ␣ഐ␣ഔ</figure>
+<figure class="characterBox noindex indexline" data-cols="">ഇ␣ഈ␣ഉ␣ഊ␣എ␣ഏ␣ഒ␣ഓ␣അ␣ആ␣ഐ␣ഔ</figure>
 </section>
 
 <section id="index_letters_vocalics">
 <h4>Vocalics</h4>
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#vocalics,#vocalics,#vocalics,#vocalics,">ഋ␣ൠ␣ഌ␣ൡ</figure>
+<figure class="characterBox noindex indexline" data-cols="">ഋ␣ൠ␣ഌ␣ൡ</figure>
 </section>
 
 
 <section id="index_letters_finals">
 <h4>Dead consonants</h4>
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#chillus,#chillus,#chillus,#chillus,#chillus,#chillus,">ൿ␣ൺ␣ൻ␣ർ␣ൽ␣ൾ</figure>
+<figure class="characterBox noindex indexline" data-cols="">ൿ␣ൺ␣ൻ␣ർ␣ൽ␣ൾ</figure>
 </section>
 
 
 <section id="index_letters_unused">
 <h4>Not used for modern Malayalam</h4>
-<figure class="archaicBox auto noindex indexline" data-cols="" data-links="#other_consonants,#other_consonants,">ഩ␣ഺ</figure>
+<figure class="archaicBox noindex indexline" data-cols="">ഩ␣ഺ</figure>
 
-<!--figure class="otherBox auto noindex indexline" data-cols="">ഄ␣ഽ␣ൔ␣ൕ␣ൖ␣ൟ</figure-->
+<!--figure class="otherBox noindex indexline" data-cols="">ഄ␣ഽ␣ൔ␣ൕ␣ൖ␣ൟ</figure-->
 </section>
 </details>
 </section>
@@ -220,33 +211,33 @@
 
 <section id="index_cchars_vowels">
 <h4>Vowels</h4>
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#vowelsigns #prescript_vowels #circumgraphs,#vowelsigns #prescript_vowels #circumgraphs,#vowelsigns #prescript_vowels,#vowelsigns #circumgraphs,#vowelsigns #circumgraphs,#vowelsigns #circumgraphs,#vowelsigns,#vowelsigns,#vowelsigns #uvowels,#vowelsigns #uvowels,#vowelsigns #circumgraphs,#vowelsigns #circumgraphs,">െ␣േ␣ൈ␣ൊ␣ോ␣ൌ␣ി␣ീ␣ു␣ൂ␣ാ␣ൗ</figure>
+<figure class="characterBox noindex indexline" data-cols="">െ␣േ␣ൈ␣ൊ␣ോ␣ൌ␣ി␣ീ␣ു␣ൂ␣ാ␣ൗ</figure>
 </section>
 
 <section id="index_cchars_vocalics">
 <h4>Vocalics</h4>
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#vocalics,">ൃ</figure>
+<figure class="characterBox noindex indexline" data-cols="">ൃ</figure>
 </section>
 
 <section id="index_cchars_bindu">
 <h4>Bindu</h4>
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#anusvara_visarga,">ം</figure>
+<figure class="characterBox noindex indexline" data-cols="">ം</figure>
 </section>
 
 <section id="index_cchars_virama">
 <h4>Virama</h4>
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#absence #affricates #clusters #rra_conjuncts,">്</figure>
+<figure class="characterBox noindex indexline" data-cols="">്</figure>
 </section>
 
 <section id="index_cchars_visarga">
 <h4>Visarga</h4>
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#anusvara_visarga,">ഃ</figure>
+<figure class="characterBox noindex indexline" data-cols="">ഃ</figure>
 </section>
 
 <section id="index_cchars_unused">
 <h4>Not used for modern Malayalam</h4>
-<figure class="archaicBox auto noindex indexline" data-cols="" data-links="#initial_ra,">ൎ</figure>
-<!--figure class="otherBox auto noindex indexline"  data-cols="">ഀ␣ഁ␣഻␣഼␣ൄ␣ൢ␣ൣ</figure-->
+<figure class="archaicBox noindex indexline" data-cols="">ൎ</figure>
+<!--figure class="otherBox noindex indexline"  data-cols="">ഀ␣ഁ␣഻␣഼␣ൄ␣ൢ␣ൣ</figure-->
 </section>
 </details>
 </section>
@@ -260,11 +251,11 @@
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="auxiliaryBox auto noindex indexline" data-cols="" data-links="#digits #cs_numeric,#digits #cs_numeric,#digits #cs_numeric,#digits #cs_numeric,#digits #cs_numeric,#digits #cs_numeric,#digits #cs_numeric,#digits #cs_numeric,#digits #cs_numeric,#digits #cs_numeric,">൦␣൧␣൨␣൩␣൪␣൫␣൬␣൭␣൮␣൯</figure>
+<figure class="auxiliaryBox noindex indexline" data-cols="">൦␣൧␣൨␣൩␣൪␣൫␣൬␣൭␣൮␣൯</figure>
 
 <section id="index_numbers_unused">
 <h4>Not used for modern Malayalam</h4>
-<figure class="archaicBox auto noindex indexline" data-cols="" data-links="#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits,#digits,">൰␣൱␣൲␣൳␣൴␣൵␣൘␣൙␣൚␣൛␣൜␣൝␣൞␣൶␣൷␣൸␣꠰␣꠱␣꠲</figure>
+<figure class="archaicBox noindex indexline" data-cols="">൰␣൱␣൲␣൳␣൴␣൵␣൘␣൙␣൚␣൛␣൜␣൝␣൞␣൶␣൷␣൸</figure>
 </section>
 </details>
 </section>
@@ -277,9 +268,13 @@
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#quotations,#quotations,#bracketing,#bracketing,#phrase,#phrase,#phrase,#phrase,#phrase,#phrase,#phrase,#phrase">‘␣’␣“␣”␣(␣)␣,␣.␣:␣;␣?␣!</figure>
+<figure class="auxiliaryBox noindex indexline" data-cols="">।␣॥</figure>
 
-<figure class="auxiliaryBox auto noindex indexline" data-cols="" data-links="#phrase,#phrase,">।␣॥</figure>
+
+<section id="index_punctuation_ascii">
+<h4>ASCII</h4>
+<figure class="characterBox noindex indexline" data-cols="">‘␣’␣“␣”␣(␣)␣,␣.␣:␣;␣?␣!</figure>
+</section>
 </details>
 </section>
 
@@ -292,11 +287,11 @@
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="auxiliaryBox auto noindex indexline" data-links="#dates" data-cols="">൹</figure>
+<figure class="auxiliaryBox noindex indexline" data-cols="">൹</figure>
 
 <section id="index_symbols_unused">
 <h4>Not used for modern Malayalam</h4>
-<figure class="archaicBox auto noindex indexline"  data-cols="">൏</figure>
+<figure class="archaicBox noindex indexline"  data-cols="">൏</figure>
 </section>
 </details>
 </section>
@@ -311,7 +306,8 @@
 <summary class="instructions">Show</summary>
 
 
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#joiner,#joiner,">‍␣‌</figure>
+<figure class="characterBox noindex indexline" data-cols="" data-notes="<img src='../../c/General_Punctuation/200C.png' alt='ZWNJ' style='vertical-align:middle'>,<img src='../../c/General_Punctuation/200D.png' alt='ZWJ' style='vertical-align:middle'>" data-links="">&#x200C;␣&#x200D;</figure>
+
 </details>
 </section>
 </section>
@@ -595,6 +591,11 @@ alveolar</th>
 <section id="vowels">
 <h2>Vowels</h2>
 
+<!--p class="instructions">Click on the characters in the lists for detailed information. For a mapping of sounds to graphemes see <a class="secref">vowel_mappings</a>.</p-->
+
+
+
+
 <section id="inherent">
 <h3>Inherent vowel</h3>
 
@@ -759,6 +760,9 @@ http://localhost/pickers/malayalam/?text=%0Ac%20%E2%86%92%09k%09g%09c%CA%B0%09j%
 <section id="consonants">
 <h2>Consonants</h2>
 
+<!--p class="instructions">Click on the characters in the lists for detailed information. For a mapping of sounds to graphemes see <a class="secref">consonant_mappings</a>.</p-->
+
+
 
 <section id="basicconsonants">
 <h3>Basic  consonants</h3>
@@ -783,8 +787,8 @@ http://localhost/pickers/malayalam/?text=%0Ac%20%E2%86%92%09k%09g%09c%CA%B0%09j%
 <figure class="characterBox auto" data-cols="ipa,trans,transc">മ␣ന␣ണ␣ഞ␣ങ</figure>
 </section>
 
-<section id="liquids">
-<h4>Liquids</h4>
+<section id="sonorants">
+<h4>Other sonorants</h4>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">വ␣ര␣റ␣ഴ␣ല␣ള␣യ</figure>
 </section>
 
@@ -1011,7 +1015,7 @@ The conjunct <span class="codepoint" translate="no"><span lang="ml">&#x0D31;&#x0
 </section>
 </section>
 </section>
- 
+</section>
  
 
 
@@ -1032,6 +1036,7 @@ The conjunct <span class="codepoint" translate="no"><span lang="ml">&#x0D31;&#x0
 
 <figure class="auxiliaryBox auto"  data-cols="trans,transc">൦␣൧␣൨␣൩␣൪␣൫␣൬␣൭␣൮␣൯</figure>
 
+<div class="btw">
 <p>Older texts also used the following additional numeric characters.</p>
 
 <figure class="archaicBox auto"  data-cols="trans">൰␣൱␣൲␣൳␣൴␣൵␣൘␣൙␣൚␣൛␣൜␣൝␣൞␣൶␣൷␣൸</figure>
@@ -1039,6 +1044,7 @@ The conjunct <span class="codepoint" translate="no"><span lang="ml">&#x0D31;&#x0
 <p>According to the  Unicode Standard, Malayalam also used the following characters in the Common Indic Number Forms block.<tt>u,507</tt></p>
 
 <figure class="otherBox auto" data-translit="¼␣½␣¾" data-cols="">꠰␣꠱␣꠲</figure>
+</div>
 </section>
 
 
@@ -1179,6 +1185,11 @@ The conjunct <span class="codepoint" translate="no"><span lang="ml">&#x0D31;&#x0
   
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
+
+<figure class="characterBox auto small"  data-cols="trans,transc">!␣,␣:␣;␣.␣।␣॥␣?</figure>
+
+
+
 <table class="character_list">
 <tbody>
 <tr>
@@ -1211,6 +1222,9 @@ The conjunct <span class="codepoint" translate="no"><span lang="ml">&#x0D31;&#x0
 
 <section id="bracketing">
 <h3>Parentheses &amp; brackets</h3>
+
+<figure class="characterBox auto small"  data-cols="trans,transc">(␣)</figure>
+
 <table class="character_list">
 <thead>
 <tr>
@@ -1235,6 +1249,9 @@ The conjunct <span class="codepoint" translate="no"><span lang="ml">&#x0D31;&#x0
   
 <section id="quotations">
 <h3>Quotations</h3>
+
+<figure class="characterBox auto small"  data-cols="trans,transc">‘␣’␣“␣”</figure>
+
 <table class="character_list">
 <thead>
 <tr>
@@ -1482,52 +1499,19 @@ The conjunct <span class="codepoint" translate="no"><span lang="ml">&#x0D31;&#x0
 
 
 
- 
- <!--section id="chars">
-<h2>Character lists</h2>
-  <p>Version 13.0 of the Unicode Standard has the following blocks dedicated to the Malayalam script:</p>
-    <ul>
-<li> <a href="/uniview/?block=malayalam" target="_blank">Malayalam</a> <span class="charCount">67 letters, 23 marks, 26 numbers, 2 symbols : total 118</span></li>
-</ul>
-
-
-
-
-<p>Show  characters used for the modern Malayalam orthography:</p>
-<ul>
-<li><a id="showCategories" target="_blank" href="tbd">grouped by Unicode general category</a></li>
-<li><a id="showBlocks" target="_blank" href="tbd">grouped by Unicode block</a></li>
-<li>in  the <a href="../../app-charuse/?language=ml" target="_blank">Character usage lookup</a> page</li>
-</ul>
-
-
-<p>See also the <a target="_blank" href="../featurelist/">Script Comparison Table</a>.</p>
-</section--> 
-
-
-
 
 
 
 
 <section id="languages">
 <h2>Languages using the Malayalam script</h2>
-<p>According to ScriptSource, the Malayalam script is used for the following languages: </p>
-<ul>
-<li>Allar [all]</li>
-<li>Kurumba, Attapady [pkr]</li>
-<li>Kurumba, Betta [xub]</li>
-<li>Irula [iru]</li>
-<li>Kudiya [kfg]</li>
-<li>Kurichiya [kfh]</li>
-<li>Malayalam [mal]</li>
-<li>Mannan [mjv]</li>
-<li>Muduga [udg]</li>
-<li>Paniya [pcg]</li>
-<li>Ravula [yea]</li>
+<p>According to ScriptSource, the Malayalam script is used for the following languages:</p>
+<ul id="scriptLanguageList">
 </ul>
 </section>
- 
+
+
+
 	
 
 
