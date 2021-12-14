@@ -73,4 +73,17 @@ reflist = {
 
 
 
-// <a class="fn">ws,#tones</a>
+
+scriptLanguageList = {
+bn:{name:"Bengali"},
+hi:{name:"Hindi"},
+mai:{name:"Maithili"},
+new:{name:"Newar"},
+sa:{name:"Sanskrit"},
+}
+
+
+
+
+
+
