@@ -2,8 +2,7 @@
 <html lang="en-GB">
 <head>
 <meta charset="utf-8"/>
-<title>Gujarati orthography/script notes</title>
-<meta name="description" content="Summary of the Gujarati orthography/script."/>
+<title>Gujarati orthography notes</title>
 
 <link rel="stylesheet" href="../../shared/style/docs.css" />
 <link rel="stylesheet" href="../common28/local.css" />
@@ -12,28 +11,25 @@
 <script src="../../shared/fontdb/db.js"> </script>
 <script src="../../shared/fontdb/managefonts.js"></script>
 
-<script src="../../shared/scriptdb/gujarati.js"> </script>
+<script src="../../shared/scriptdb/gujr-gu.js"> </script>
 <script src="gu-details.html"> </script>
 
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
-<script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common28/functions.js"></script>
 <script src="../common28/transliterate.js"></script>
 <script src="../common28/prompts.js"> </script>
 <script src="../glossary/glossary.js"> </script>
-<script src="../../shared/code/getLinks.js"></script>
-<script src="../linkdata/linkdb.js"></script>
-<script src="../../app-charuse/langs.js"> </script>
 <script src="../common28/egcode.js"></script>
 <script src="../common28/references.js"></script>
 <script src="refs.js"></script>
 
+<script src="gu-langdata.js"></script>
 <script src="gu-examples.js"></script>
 <script src="gu-translit.js">  </script>
-<script src="/shared/manifests/gujr-gu.js"></script> 
+<script src="../../shared/manifests/gujr-gu.js"></script> 
 </head>
 
 <body class="useBlockExamples">
@@ -42,11 +38,10 @@
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Gujarati</h1>
+<h1>Gujarati (draft)</h1>
 
-<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top"/></a></nav>
 
-  <aside class="sidebar"> 
+<aside class="sidebar"> 
 		<h2 class="notoc flush"><a id="tochead" name="tochead" tabindex="4">Contents</a></h2>
 		<div id="toc"><!-- placeholder --></div>
 
@@ -56,19 +51,16 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->29 November, 2021<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->14 December, 2021<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
 
 
 <div class="section">
-  <p>This page gathers  basic information about the Gujarati script and its use for the Gujarati language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Gujarati using Unicode.</p>
-<p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
+<p>This page brings together basic information about the Gujarati script and its use for the Gujarati language. It aims to provide a brief, descriptive summary of the modern, printed orthography and typographic features, and to advise how to write Gujarati using Unicode.</p>
 
-
-
-
+<p>Phonological transcriptions on this page should be treated as an approximate guide, only. They are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available.</p>
 <p id="usage"></p>
 <script>addUsageAdvice('Gujarati')</script>
 
@@ -92,7 +84,8 @@
 <h2>Sample (Gujarati)</h2>
   
 
-<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
+<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.  <a style="margin-inline-start: 2rem;" href="https://unicode.org/udhr/d/udhr_guj.html">Source</a><br>
+Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
 
 <div id="freeText" dir="ltr" lang="gu" data-target="c" data-base="/scripts/gujarati/block" data-source="https://unicode.org/udhr/d/udhr_guj.html">
 <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">અનુચ્છેદ ૧:
@@ -140,22 +133,19 @@
 <p>The script  is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>. Consonants carry an inherent vowel which can be modified by appending vowel-signs to the consonant.  See the table to the right for a brief overview of features of the modern Gujarati orthography.</p>
 
 <p>Gujarati text runs left to right in horizontal lines.</p>
+
 <p>Words are separated by spaces.</p>
 
 
-<p>Gujarati uses <mark>34 consonant letters</mark>. The repertoire can be extended by applying the <span class="name">nukta</span> diacritic to  characters, or with additional characters, but these are used for Arabic and Avestan transliterations, rather than current Gujarati text. Gujarati doesn't use a shiroreka (top line) like its close relative Devanagari.</p>
-<p>The Gujarati orthography has an <mark>inherent vowel</mark>, and represents other vowels using <mark>11 vowel-signs</mark>, including <mark>1 prescript</mark> and no circumgraphs.  All vowel-signs are <mark>combining marks</mark>, and are stored after the base character.</p>
-<p>There are  <mark class="newterm">12 independent vowels</mark>, one for each vowel sound, including the inherent vowel, and these are used to write all standalone vowel sounds. Some vowel-signs can be visually analysed into subcomponents, but Unicode usage involves only one combining character per consonant.</p>
+<p>Gujarati uses <mark>34 <a href="#consonants">consonant letters</a></mark>. The repertoire can be extended by applying the <span class="name">nukta</span> diacritic to  characters, or with additional characters, but these are used for Arabic and Avestan transliterations, rather than current Gujarati text. Gujarati doesn't use a shiroreka (top line) like its close relative Devanagari.</p>
+<p>The Gujarati orthography has an <mark><a href="#inherent">inherent vowel</a></mark>, and represents other vowels using <mark>11 <a href="#vowelsigns">vowel-signs</a></mark>, including <mark>1 <a href="#prescript_vowels">pre-base vowel</a></mark> and no circumgraphs.  All vowel-signs are <mark>combining marks</mark>, and are stored after the base character.</p>
+<p>There are  <mark class="newterm">12 <a href="#independentvowels">independent vowels</a></mark>, one for each vowel sound, including the inherent vowel, and these are used to write all standalone vowel sounds. Some vowel-signs can be visually analysed into subcomponents, but Unicode usage involves only one combining character per consonant.</p>
 <p>There are no composite vowels.</p>
 <p>Vowels may be nasalised, using the <span class="name">anusvara</span> diacritic.</p>
-
-
-
-<p><mark>Consonant clusters</mark> at any location are normally indicated using the <span class="name">virama</span> between consonants. This results in a large number of conjunct forms expressed using <mark>half-forms</mark>,  <mark>stacked consonants</mark>, and <mark>ligated glyphs</mark>. Occasionally, a visible <span class="name">virama</span> is used.</p>
-<p>The absence of the inherent vowel is not always indicated. It is generally not pronounced at the end of a word, but also it is sometimes elided without indications  within a word. <mark>Consonant clusters</mark> can be indicated using the <span class="name">virama</span> between consonants and include  <mark>half-forms</mark>, <mark>stacked consonants</mark>, and <mark>ligated glyphs</mark>. Occasionally, a <mark>visible <span class="name">virama</span></mark> is used. In addition, participating consonants may just be <mark>moved together</mark>. Gujarati is also unusual in that components in clusters sometimes used <mark>Devanagari glyphs</mark> for one or more Gujarati characters.</p>
-<p><mark>Final consonant</mark> sounds may be represented by <mark>2 dedicated combining marks</mark> (anusvara &amp; visarga), but are generally <mark>ordinary consonants</mark> that are not marked by a virama.</p>
-<p><mark>Two vocalics</mark> are used in current text. Others were used historically.</p>
-<p>Gujarati has a set of <mark>native digits</mark>.</p>
+<p>The absence of the inherent vowel is not always indicated. It is generally not pronounced at the end of a word, but also it is sometimes elided without indications  within a word. <mark><a href="#clusters">Consonant clusters</a></mark> can be indicated using the <span class="name">virama</span> between consonants and include  <mark>half-forms</mark>, <mark>stacked consonants</mark>, and <mark>ligated glyphs</mark>. Occasionally, a <mark>visible <span class="name">virama</span></mark> is used. In addition, participating consonants may just be <mark>moved together</mark>. Gujarati is also unusual in that components in clusters sometimes used <mark>Devanagari glyphs</mark> for one or more Gujarati characters.</p>
+<p><mark><a href="#finals">Final consonant</a></mark> sounds may be represented by <mark>2 dedicated combining marks</mark> (anusvara &amp; visarga), but are generally <mark>ordinary consonants</mark> that are not marked by a virama.</p>
+<p><mark>Two <a href="#vocalics">vocalics</a></mark> are used in current text. Others were used historically.</p>
+<p>Gujarati has a set of <mark><a href="#digits">native digits</a></mark>.</p>
 </section>
    
     
@@ -183,23 +173,23 @@
 
 <section id="index_letters_consonants">
 <h4>Basic consonants</h4>
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#stops,#stops,#stops,#stops #extensions,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops #extensions,#stops,#stops #extensions,#affricates,#affricates,#affricates #extensions,#affricates,#fricatives,#fricatives,#fricatives #clusters,#fricatives,#fricatives,#nasals,#nasals,#nasals,#nasals,#nasals,#liquids,#liquids,#liquids,#liquids,#liquids,">પ␣બ␣ભ␣ત␣થ␣દ␣ધ␣ટ␣ઠ␣ડ␣ઢ␣ક␣ખ␣ગ␣ઘ␣ચ␣છ␣જ␣ઝ␣ફ␣સ␣શ␣ષ␣હ␣મ␣ન␣ઞ␣ણ␣ઙ␣વ␣ર␣લ␣ળ␣ય</figure>
+<figure class="characterBox noindex indexline">પ␣બ␣ભ␣ત␣થ␣દ␣ધ␣ટ␣ઠ␣ડ␣ઢ␣ક␣ખ␣ગ␣ઘ␣ચ␣છ␣જ␣ઝ␣ફ␣સ␣શ␣ષ␣હ␣મ␣ન␣ઞ␣ણ␣ઙ␣વ␣ર␣લ␣ળ␣ય</figure>
 </section>
 
 <section id="index_letters_vowels">
 <h4>Vowels</h4>
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#independentvowels,#independentvowels,#independentvowels,#independentvowels,#independentvowels #standalone_encoding,#independentvowels #standalone_encoding,#independentvowels #standalone_encoding,#independentvowels #standalone_encoding,#independentvowels #standalone_encoding,#independentvowels #standalone_encoding,#independentvowels #standalone_encoding,#independentvowels #standalone_encoding,">ઇ␣ઈ␣ઊ␣ઉ␣એ␣ઓ␣અ␣ઑ␣ઍ␣આ␣ઔ␣ઐ</figure>
+<figure class="characterBox noindex indexline">ઇ␣ઈ␣ઊ␣ઉ␣એ␣ઓ␣અ␣ઑ␣ઍ␣આ␣ઔ␣ઐ</figure>
 </section>
 
 <section id="index_letters_vocalics">
 <h4>Vocalics</h4>
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#vocalics,#vocalics,">ઋ␣ૠ</figure>
+<figure class="characterBox noindex indexline">ઋ␣ૠ</figure>
 </section>
 
 
 <section id="index_letters_other">
 <h4>Other</h4>
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#otherletter,#otherletter,">ઽ␣ૐ</figure>
+<figure class="characterBox noindex indexline">ઽ␣ૐ</figure>
 </section>
 
 <!--section id="index_letters_unused">
@@ -219,17 +209,17 @@
 
 <section id="index_cchars_vowels">
 <h4>Vowels</h4>
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#vowelsigns #prescript_vowels,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns,#vowelsigns #vs_encoding,#vowelsigns #vs_encoding,#vowelsigns,#vowelsigns #vs_encoding,#vowelsigns,#vowelsigns #vs_encoding,">િ␣ી␣ુ␣ૂ␣ે␣ો␣ૉ␣ૅ␣ા␣ૈ␣ૌ</figure>
+<figure class="characterBox noindex indexline">િ␣ી␣ુ␣ૂ␣ે␣ો␣ૉ␣ૅ␣ા␣ૈ␣ૌ</figure>
 </section>
 
 <section id="index_cchars_vocalics">
 <h4>Vocalics</h4>
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#vocalics,#vocalics,">ૃ␣ૄ</figure>
+<figure class="characterBox noindex indexline">ૃ␣ૄ</figure>
 </section>
 
 <section id="index_cchars_other">
 <h4>Other</h4>
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#nasalisation #extensions #finals,#finals,#extensions,#absence #clusters,">ં␣ઃ␣઼␣્</figure>
+<figure class="characterBox noindex indexline">ં␣ઃ␣઼␣્</figure>
 </section>
 
 <!--section id="index_cchars_unused">
@@ -248,7 +238,7 @@
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#digits #cs_numeric,#digits #cs_numeric,#digits #cs_numeric,#digits #cs_numeric,#digits #cs_numeric,#digits #cs_numeric,#digits #cs_numeric,#digits #cs_numeric,#digits #cs_numeric,#digits #cs_numeric,">૦␣૧␣૨␣૩␣૪␣૫␣૬␣૭␣૮␣૯</figure>
+<figure class="characterBox noindex indexline">૦␣૧␣૨␣૩␣૪␣૫␣૬␣૭␣૮␣૯</figure>
 </details>
 </section>
 
@@ -261,12 +251,17 @@
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#quotations,#quotations,#quotations,#quotations,#bracketing,#bracketing,#phrase,#phrase,#phrase,#phrase,#phrase,#phrase,">‘␣’␣“␣”␣(␣)␣,␣.␣:␣;␣?␣!</figure>
-<figure class="auxiliaryBox auto noindex indexline" data-cols="" data-links="#abbrev,#phrase,#phrase,">૰␣।␣॥</figure>
+<figure class="characterBox noindex indexline">‘␣’␣“␣”</figure>
+<figure class="auxiliaryBox noindex indexline">૰␣।␣॥</figure>
+
+<section id="index_punctuation_ascii">
+<h4>ASCII</h4>
+<figure class="characterBox noindex indexline">(␣)␣,␣.␣:␣;␣?␣!</figure>
+</section>
 
 <section id="index_punctuation_cldr">
 <h4>CLDR additions</h4>
-<figure class="auxiliaryBox auto noindex indexline" data-cols="" data-links="#otherpunctuation,#otherpunctuation,#otherpunctuation,#otherpunctuation,#otherpunctuation,#otherpunctuation,#otherpunctuation,#otherpunctuation,#otherpunctuation,">§␣‐␣–␣—␣†␣‡␣…␣′␣″</figure>
+<figure class="auxiliaryBox noindex indexline">§␣‐␣–␣—␣†␣‡␣…␣′␣″</figure>
 </section>
 </details>
 </section>
@@ -280,7 +275,7 @@
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="characterBox auto noindex indexline" data-links="#currency,#symbols" data-cols="">૱</figure>
+<figure class="characterBox noindex indexline">૱</figure>
 </details>
 </section>
 
@@ -293,7 +288,7 @@
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="characterBox auto noindex indexline" data-links="#joiner,#joiner" data-cols="">‍␣‌</figure>
+<figure class="characterBox noindex indexline" data-notes="<img src='../../c/General_Punctuation/200C.png' alt='ZWNJ' style='vertical-align:middle'>,<img src='../../c/General_Punctuation/200D.png' alt='ZWJ' style='vertical-align:middle'>" data-links="">&#x200C;␣&#x200D;</figure>
 </details>
 </section>
 </section>
@@ -665,6 +660,9 @@ alveolar</th>
 <section id="vowels">
 <h2>Vowels</h2>
 
+<p class="instructions">Click on the characters in the lists for detailed information. <!--For a mapping of sounds to graphemes see <a class="secref">vowel_mappings</a>.--></p>
+
+
 
 <section id="inherent">
 <h3>Inherent vowel</h3>
@@ -874,6 +872,7 @@ alveolar</th>
 <section id="consonants">
 <h2>Consonants</h2>
 
+<p class="instructions">Click on the characters in the lists for detailed information. <!--For a mapping of sounds to graphemes see <a class="secref">consonant_mappings</a>.--></p>
 
 
 <section id="basicconsonants">
@@ -905,8 +904,8 @@ alveolar</th>
 </section>
 
 
-<section id="liquids">
-<h4>Liquids</h4>
+<section id="sonorants">
+<h4>Other sonorants</h4>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">વ␣ર␣લ␣ળ␣ય</figure>
 </section>
 </section>
@@ -1229,6 +1228,9 @@ An important consequence of representing clusters in this way is that the syllab
   
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
+
+<figure class="characterBox auto small"  data-cols="trans,transc">,␣:␣;␣.␣?␣!␣।␣॥</figure>
+
 <table class="character_list">
 <tbody>
 <tr>
@@ -1261,6 +1263,8 @@ An important consequence of representing clusters in this way is that the syllab
 <section id="bracketing">
 <h3>Parentheses &amp; brackets</h3>
 
+<figure class="characterBox auto small"  data-cols="trans,transc">(␣)</figure>
+
 <table class="character_list">
 <thead>
 <tr>
@@ -1285,6 +1289,8 @@ An important consequence of representing clusters in this way is that the syllab
   
 <section id="quotations">
 <h3>Quotations</h3>
+
+<figure class="characterBox auto small"  data-cols="trans,transc">‘␣’␣“␣”</figure>
 
 <table class="character_list">
 <thead>
@@ -1325,7 +1331,7 @@ An important consequence of representing clusters in this way is that the syllab
   
 <section id="abbrev">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
-<p><span class="codepoint" translate="no"><span lang="gu">&#x0AF0;</span> [<a href="/scripts/gujarati/block#char0AF0"><span class="uname">U+0AF0 GUJARATI ABBREVIATION SIGN</span></a>] </span>is a commonly-used character in Gujarati and appears in printed materials. It  is used to write abbreviations of words in Gujarati, eg. <span class="eg" lang="gu">ડોક્ટર</span> can be abbreviated as <span class="charExample" translate="no"><span class="ex" lang="gu">ડો૰</span></span> The Latin full stop is used interchangably with this character, eg. <span class="charExample" translate="no"><span class="ex" lang="gu">ડો.</span></span></p>
+<p><span class="codepoint" translate="no"><span lang="gu">&#x0AF0;</span> [<a href="/scripts/gujarati/block#char0AF0"><span class="uname">U+0AF0 GUJARATI ABBREVIATION SIGN</span></a>] </span>is a commonly-used character in Gujarati and appears in printed materials. It  is used to write abbreviations of words in Gujarati, eg. <span class="eg" lang="gu">ડોક્ટર</span> can be abbreviated as <span class="charExample" translate="no"><span class="ex" lang="gu">ડો૰</span></span> The Latin full stop is used interchangeably with this character, eg. <span class="charExample" translate="no"><span class="ex" lang="gu">ડો.</span></span></p>
 </section>
 
 
@@ -1523,28 +1529,6 @@ An important consequence of representing clusters in this way is that the syllab
 
 
 
- <!--section id="chars">
-<h2>Character lists</h2>
-  <p>The Gujarati script characters in Unicode 13.0 are in the following block: </p>
-    <ul>
-      <li> <a href="/uniview/?block=gujarati" target="_blank">Gujarati</a> <span class="charCount">53 letters, 26 marks, 10 digits, 1 punctuation, 1 symbol:   total 91</span></li>
-    </ul>
-
-
-
-
-<p>Show  characters used for the modern Gujarati orthography:</p>
-<ul>
-<li><a id="showCategories" target="_blank" href="tbd">grouped by Unicode general category</a></li>
-<li><a id="showBlocks" target="_blank" href="tbd">grouped by Unicode block</a></li>
-<li>in  the <a href="../../app-charuse/?language=gu" target="_blank">Character usage lookup</a> page</li>
-</ul>
-
-
-<p>See also the <a target="_blank" href="../featurelist/">Script Comparison Table</a>.</p>
-</section-->
-
-
 
 
 
@@ -1552,24 +1536,8 @@ An important consequence of representing clusters in this way is that the syllab
 
 <section id="languages">
 <h2>Languages using the Gujarati script</h2>
-<p>According to ScriptSource, the Gujarati script is used for the following languages: </p>
-<ul>
-<li>Garasia, Adiwasi [gas]</li>
-<li>Avestan [ave]</li>
-<li>Bhili [bhb]</li>
-<li>Chodri [cdi]</li>
-<li>Dhanki [dhn]</li>
-<li>Dubli [dub]</li>
-<li>Dungra Bhil [duh]</li>
-<li>Gamit [gbl]</li>
-<li>Gujarati [guj]</li>
-<li>Kachhi [kfr]</li>
-<li>Koli, Kachi [gjk]</li>
-<li>Kukna [kex]</li>
-<li>Garasia, Rajput [gra]</li>
-<li>Varli [vav]</li>
-<li>Vasavi [vas]</li>
-<li>Koli, Wadiyara [kxp]</li>
+<p>According to ScriptSource, the Gujarati script is used for the following languages:</p>
+<ul id="scriptLanguageList">
 </ul>
 </section>
 

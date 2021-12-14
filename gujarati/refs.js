@@ -70,3 +70,31 @@ reflist = {
 
 
 
+
+scriptLanguageList = {
+gas:{name:"Garasia, Adiwasi"},
+ave:{name:"Avestan"},
+bhb:{name:"Bhili"},
+cdi:{name:"Chodri"},
+dhn:{name:"Dhanki"},
+dub:{name:"Dubli"},
+duh:{name:"Dungra Bhil"},
+gbl:{name:"Gamit"},
+guj:{name:"Gujarati"},
+kfr:{name:"Kachhi"},
+gjk:{name:"Koli, Kachi"},
+kex:{name:"Kukna"},
+gra:{name:"Garasia, Rajput"},
+vav:{name:"Varli"},
+vas:{name:"Vasavi"},
+kxp:{name:"Koli, Wadiyara"},
+}
+
+
+
+
+
+
+
+
+
