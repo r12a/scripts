@@ -68,4 +68,15 @@ reflist = {
 
 
 
-// <a class="fn">ws,#tones</a>
+
+scriptLanguageList = {
+pan:{name:"Panjabi"},
+skr:{name:"Saraiki"},
+snd:{name:"Sindhi"},
+}
+
+
+
+
+
+
