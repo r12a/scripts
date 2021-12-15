@@ -35,7 +35,7 @@ autoExpandExamples.chr = `
 ᎠᎨᎯ|||
 ᎠᎨᏴ|||
 ᎠᎩ-|||
-ᎠᎩᎠ|||
+ᎠᎩᎠ|he's eating it|aàkíʔa|akia
 ᎠᎩᎳᎨᏂ|neck||agilageni|||
 ᎠᎩᎵᏲᎦ|||
 ᎠᎩᎾ|||
@@ -117,7 +117,7 @@ autoExpandExamples.chr = `
 ᎠᎵᏰᏑᎶ|||
 ᎠᎵᏰᏑᏍᏙ|||
 ᎠᎵᏰᏑᏍᏛᏍᎦ|||
-ᎠᎵᏲ|||
+ᎠᎵᏲ|sock|àː.li̋ː.jo|aliyo
 ᎠᎶᏍᎦ|||
 ᎠᎶᏕᎯᎭ|||
 ᎠᎷ|||
@@ -228,7 +228,7 @@ autoExpandExamples.chr = `
 ᎠᏏᏛᏂᎭ|||
 ᎠᏏᏴᎠ|||
 ᎠᏐᎣᏅᏗᎭ|||
-ᎠᏐᎣᏍᎦ|||
+ᎠᏐᎣᏍᎦ|it (long thing) is falling||asoosga
 ᎠᏐᏅᏍᎦ|||
 ᎠᏐᏍᏗ|||
 ᎠᏐᏲᎭ|||
@@ -377,6 +377,7 @@ autoExpandExamples.chr = `
 ᎠᏟᎩᎠ|||
 ᎠᏟᎭ|||
 ᎠᏟᎶᎠ|||
+ᎠᏟᎶ|he's measuring it|ȁː.ɬìː.lo|atliloa||x
 ᎠᏟᎶᎢᏙᎯ|||
 ᎠᏟᏍᏙᏗ|||
 ᎠᏟᏴᏌᎾᏩᏍᏗᎭ|||
@@ -422,12 +423,12 @@ autoExpandExamples.chr = `
 ᎠᏩᏘᎭ|||
 ᎠᏩᏛᎯᏙᎭ|||
 ᎠᏫ|||
-ᎠᏫᎡ|||
+ᎠᏫᎡ|elk||awie
 ᎠᏫᎢᎾᎨᎡᎯ|deer||awiinageehi|||
 ᎠᏫᏍᎦ|||
 ᎠᏫᏳᏍᏘ|||
 ᎠᏬᎭᎵ|||
-ᎠᏯ|I||aya|||
+ᎠᏯ|I|aja|aya
 ᎠᏯᎠ|||
 ᎠᏯᎢ|||
 ᎠᏯᎦᏢ|||
@@ -471,7 +472,7 @@ autoExpandExamples.chr = `
 ᎠᏴᏓᏆᎶᏍᎩ|||
 ᎠᏴᏓᏆᎶᏍᎬ|thunder||ayvdaqualosgv|||
 ᎠᏴᏜᏗᏍᏗᏍᎩ|||
-ᎠᏴᏠ|||
+ᎠᏴᏠ|ladder||ayvtlo
 ᎠᏴᏣᏗᏍᏗᏍᎩ|||
 ᎠᏴᏤᏂ|||
 ᎠᏴᏩᏘᎭ|||
@@ -480,10 +481,10 @@ autoExpandExamples.chr = `
 ᎡᎦ|||
 ᎡᎯ|||
 ᎡᎯᏍᏛ|||
-ᎡᎳᏗ|||
+ᎡᎳᏗ|low, lower||eladi
 ᎡᎳᏗᏝ|||
 ᎡᎵᏏ|||
-ᎡᎶᎯ|||
+ᎡᎶᎯ|earth, world|e.lòː.hi|elohi|
 ᎡᎶᎯᏃ|earth (as in soil)||elohino|||
 ᎡᎶᏆ|||
 ᎡᎺᏅ|||
@@ -517,7 +518,7 @@ autoExpandExamples.chr = `
 ᎢᎳᏏᏗ|||
 ᎢᎾ|||
 ᎢᎾᎨᎢ|||
-ᎢᎾᏛ|snake||inadv)|||
+ᎢᎾᏛ|snake||inadv|||
 ᎢᏁᎾ|||
 ᎢᏅ|far||inv|||
 ᎢᏌ|||
@@ -527,7 +528,7 @@ autoExpandExamples.chr = `
 ᎢᏤᎢ|||
 ᎢᏤᎢᏳᏍᏗ ᎦᏙᎯ|||
 ᎢᏥ-|you (plural)||itsi-|||
-ᎢᏯ|||
+ᎢᏯ|pumpkin|ìːja|iya
 ᎢᏯᎦᏴᎵ|||
 ᎢᏯᏂ|||
 ᎢᏯᏔᏬᏍᏔᏅᎢ|||
@@ -540,7 +541,7 @@ autoExpandExamples.chr = `
 ᎣᎩᏙᏓ ᎦᎸᎳᏗ ᎮᎯ|||
 ᎣᎳ|||
 ᎣᎵᎦ|||
-ᎣᎷᎦ|||
+ᎣᎷᎦ|moth||oluga
 ᎣᏅᏛ|to know  (a fact)||onvdv|||
 ᎣᏍᎨᏫ|||
 ᎣᏍᏓ|good||osda|||
@@ -550,12 +551,11 @@ autoExpandExamples.chr = `
 ᎣᏏᏳ|||
 ᎣᏓᎸ|||
 ᎣᏓᎸᎢ|mountain||odalvi|||
-ᎣᏝ|||
+ᎣᏝ|soap|òːɬa|otla
 ᎣᏣᎵᎮᎵᎦ|||
 ᎣᏪᏅᏒ|||
 ᎤᎦ|||
 ᎤᎦᎶᎬ|leaf||ugalogv|||
-ᎤᎦᎹ|||
 ᎤᎦᎾᏩ|warm (as in weather)||uganawa|||
 ᎤᎦᏅᏓᏛᎢ|||
 ᎤᎦᏍᎦ|||
@@ -687,6 +687,7 @@ autoExpandExamples.chr = `
 ᎤᏍᏗ|small||usdi|||
 ᎤᏍᏗᎢ|||
 ᎤᏍᏗᏁᎦᎸᎢ|||
+ᎤᏍᏘ|baby|ùːsti|usti||x
 ᎤᏍᏘᎬᎢ|||
 ᎤᏍᏟ|||
 ᎤᏎᎳᏘ|||
@@ -735,8 +736,7 @@ autoExpandExamples.chr = `
 ᎤᏠᏏᏅᏗ|||
 ᎤᏠᏯ ᏗᏟᎶᏍᏗᏍᎩ|||
 ᎤᏢ|||
-ᎤᏢᎩ|||
-ᎤᏢᎩ|sick (painful)||utlvgi§§§§§|||
+ᎤᏢᎩ|sick (painful)||utlvgi|||
 ᎤᏢᏉᏗ|||
 ᎤᏢᏓᎸᏓ|||
 ᎤᏣᎠ|||
@@ -809,8 +809,8 @@ autoExpandExamples.chr = `
 ᎤᏴᎰᏒᎯ|||
 ᎤᏴᏍᏕᏍᎩ|||
 ᎤᏴᏍᏕᏓ|||
-ᎤᏴᏜ|||
-ᎤᏴᏢ|cold (as in weather)||uyvtlv|||
+ᎤᏴᏜ|cold||uyvdla
+ᎤᏴᏢ|cold (weather)||uyvtlv|||
 ᎤᏴᏣ|||
 ᎥᎥ|||
 ᎥᎦᏬᏂᏍᎬ ᎪᏟᏍᏙᏗ|||
@@ -819,10 +819,10 @@ autoExpandExamples.chr = `
 ᎥᎾᏘ|||
 ᎥᏍᎩᎦ|||
 ᎥᏍᎩᎾ|||
-ᎥᏓᎵ|lake||vdali|||
+ᎥᏓᎵ|pond, lake|ə̃̀ːtàːli|vdali
 ᎥᏳᎩ|||
 ᎦᎦᎶᎢ|leg||gagaloi|||
-ᎦᎦᎹ|||
+ᎦᎦᎹ|cucumber|kaákáma|gagama
 ᎦᎦᏪᏍᎦ|||
 ᎦᎧᎯᏯᎠ|||
 ᎦᎨᏓ|||
@@ -911,7 +911,6 @@ autoExpandExamples.chr = `
 ᎦᏃᏴᎦ|||
 ᎦᏄᎪᎦ|||
 ᎦᏄᎳᏥ|||
-ᎦᏄᎸ|||
 ᎦᏄᎸ ᎠᎦᎵᏍᏗ|||
 ᎦᏄᎸ|grass||ganulv|||
 ᎦᏅᎦ|||
@@ -1005,7 +1004,6 @@ autoExpandExamples.chr = `
 ᎧᎶᎡᏏᎠ|||
 ᎧᎸᎢ|||
 ᎧᎸᎬ|||
-ᎧᎹᎹ|||
 ᎧᎾᎷᏍᎦ|||
 ᎧᎾᎸᏍᏗᎭ|||
 ᎧᎾᏁᏍᎩ|||
@@ -1047,7 +1045,6 @@ autoExpandExamples.chr = `
 ᎨᎵᏍᏙᎩ|||
 ᎨᎵᏏᏁᎭ|||
 ᎨᎵᏥᎩ|||
-ᎨᎻᎵ|||
 ᎨᏐᎵᏂ|||
 ᎨᏘᎶᏍᏗ|||
 ᎨᏝ|||
@@ -1067,9 +1064,9 @@ autoExpandExamples.chr = `
 ᎩᏍᏚᎳ|||
 ᎩᏔᏯ|||
 ᎩᏚᏩ|||
-ᎩᏟ|dog||gitli|||
+ᎩᏟ|dog/strand of hair|kiːɬi/kiːt͡ɬi|gitli|||
 ᎩᏳᎦ|||
-ᎪᎢ|||
+ᎪᎢ|oil, grease|kòʔi|goi
 ᎪᎢᎯ|||
 ᎪᎦᏍᎦ|||
 ᎪᎦᏍᏗ|||
@@ -1083,7 +1080,7 @@ autoExpandExamples.chr = `
 ᎪᎯᏳᏗ|||
 ᎪᎰᏍᎦ|||
 ᎪᎲᎾᏗᎭ|||
-ᎪᎳ|bone||gola|||
+ᎪᎳ|winter/bone|kőːla/ kʰǒːla|gola
 ᎪᎳᏅ|||
 ᎪᎴᎯ|||
 ᎪᎵᎦ|||
@@ -1121,14 +1118,14 @@ autoExpandExamples.chr = `
 ᎫᏇ ᏗᎦᎾᏌᎢ|||
 ᎫᏍᏗ|||
 ᎫᏓᎴᎠ|||
-ᎫᏘᎭ|||
-ᎫᏙᎢ|||
+ᎫᏘᎭ|it is snowing||gutiha
+ᎫᏙᎢ|how?||gudoi
 ᎫᏩ|||
 ᎫᏩᏧᏁᎦ|||
 ᎫᏯᎩᎠ|||
 ᎫᏰᏉᎾ|||
 ᎫᏰᏉᎾ ᎤᎩᏁ|||
-ᎫᏰᏉᏂ|||
+ᎫᏰᏉᏂ|July||guyequoni
 Ꭼ|||
 ᎬᎩᏍᏗ|||
 ᎬᎫᏍᎦ|||
@@ -1137,17 +1134,16 @@ autoExpandExamples.chr = `
 ᎬᎯ|||
 ᎬᎵ|||
 ᎬᎵᎧ|||
-ᎬᎾ|||
+ᎬᎾ|turkey/I'm alive|kə̃́.na/kə̃̀ː.na|gvna
 ᎬᎾ ᏧᏆᏙᏟ|||
-ᎬᎾ|I'm alive|kə̃ːna|||
 ᎬᎾᎨ ᏥᏍᏆ|||
 ᎬᎾᏬᏍᎦ|||
 ᎬᎾᏬᏗᎭ|||
-ᎬᎿ|she's alive|kə̃ːhna|||
+ᎬᎿ|he is alive|kə̃ː.hn̥a|gvhna
 ᎬᎿᎨ|||
 ᎬᎿᎨᏍᏛ|||
 ᎬᏂ|||
-ᎬᏂᎭ|||
+ᎬᏂᎭ|I am/(s)he is striking it|kə̃ːniha/kə̃ːhn̥iha|gvniha
 ᎬᏂᏍᎦ|||
 ᎬᏃᏌᏍᎦ|||
 ᎬᏃᏌᏍᏗ|||
@@ -1234,7 +1230,7 @@ autoExpandExamples.chr = `
 ᏅᏃᎯ|road||nvnohi|||
 ᏅᏓ|||
 ᏅᏓ ᏗᏎᏍᏗ|||
-ᏅᏓ|moon|, sun||nvda|||
+ᏅᏓ|moon, sun||nvda|||
 ᏅᏓᎡᎨᎯ|||
 ᏅᏓᎩ|||
 ᏅᏙᎢᎦᎡᎯ|sun||nvdoigaehi|||
@@ -1247,7 +1243,7 @@ autoExpandExamples.chr = `
 ᏆᏄᎾᏍᏗᎢ|||
 ᏆᏅ|||
 ᏇᎳᎷᏍ|||
-ᏊᎵᎨᎵᎠ|||
+ᏊᎵᎨᎵᎠ|Bulgaria|koː.li.ɡe.li.ʔa|quuligelia
 ᏋᎩᎾ ᏩᏐ|||
 ᏌᎨᎢ|thin||sagei|||
 ᏌᎪᏂᎨᎢ|||
@@ -1270,7 +1266,7 @@ autoExpandExamples.chr = `
 ᏍᏆᎳᎢ|short||squalai|||
 ᏍᏆᎴᏩᎵ|||
 ᏍᏆᏂᏤᏍᏛᎢ|||
-ᏍᏆᏞᏍᏗ|||
+ᏍᏆᏞᏍᏗ|ball||squatlesdi
 ᏍᏇᏅᎢ|||
 ᏍᏓᏯ|||
 ᏍᏕᏱᏛ|rope||sdeyidv|||
@@ -1329,7 +1325,6 @@ autoExpandExamples.chr = `
 ᏓᎶᏂᎨ|yellow||dalonige|||
 ᏓᎶᏂᎨᏍᏛ|||
 ᏓᎷᏚ|||
-ᏓᎹᎦ|||
 ᏓᎾᎵᎬᏚᎸᏍᎬ|||
 ᏓᎾᏓᎯᎵᏙᎭ|||
 ᏓᎾᏓᏍᎧᎩ|||
@@ -1353,18 +1348,18 @@ autoExpandExamples.chr = `
 ᏓᏕᎦ|||
 ᏓᏗᎦᏍᎦ|||
 ᏓᏙᏂᎭ|||
-ᏓᏡᎦ|||
+ᏓᏡᎦ|yellow-billed cuckoo||datluga
 ᏓᏣᎷᏂ|||
 ᏓᏨᏍᏔᏍᎦ|||
 ᏓᏫᏍᎦ|||
 ᏓᏫᏍᎬᎯ|||
-ᏓᏬᎵ|||
+ᏓᏬᎵ|mushroom|tà.wóː.li|dawoli
 ᏓᏴᎩᎠ|||
 ᏓᏴᏍᏉᎢ|||
 ᏔᎳ|||
 ᏔᎳᏚ|||
 ᏔᎵ|||
-ᏔᎵ|two|tʰaʔli|tali|||
+ᏔᎵ|two|tʰaʔ.li|tali|||
 ᏔᎵᏁ|||
 ᏔᎵᏁ ᎠᏛᏙᏗ|||
 ᏔᎵᏁ ᎢᎦ|||
@@ -1379,7 +1374,7 @@ autoExpandExamples.chr = `
 ᏔᏁᏆ|||
 ᏔᏂᏏ|||
 ᏔᏥᎩᏍᏔᏂ|||
-ᏔᏬᏗ|||
+ᏔᏬᏗ|hawk|tʰà.wőː.ti|tawoti
 ᏔᏯ|||
 ᏕᎦᎵᏗ|||
 ᏕᎦᎶᏗ|||
@@ -1390,8 +1385,8 @@ autoExpandExamples.chr = `
 ᏕᎬᎩᎶᎠ|||
 ᏕᎬᏗᏰᎠ|||
 ᏕᎭᎷᏱ|||
-ᏕᏩ|||
-ᏖᎸᎳᏗ|||
+ᏕᏩ|flying squirrel||dewa
+ᏖᎸᎳᏗ|grape||telvladi
 ᏗᎦᎳᏫᏍᏗᎢ|||
 ᏗᎦᎵᏅᎯᏛ|||
 ᏗᎦᎶᎩᏍᎩ|||
@@ -1446,7 +1441,7 @@ autoExpandExamples.chr = `
 ᏗᏛᏛᎮᎸᎠᏍᎩ|||
 ᏗᏠᎯᏍᏗᎢ|||
 ᏗᏢᏈᏍᏙᏗ|||
-ᏗᏲᎯᏗ|||
+ᏗᏲᎯᏗ|abandon||diyohidi
 ᏗᏳᏆᎪᏯᏗ|||
 ᏘᎢᎾ|louse||tiina|||
 ᏘᎾ|||
@@ -1462,7 +1457,7 @@ autoExpandExamples.chr = `
 ᏙᏓᏆᏍᎬᎢ|||
 ᏙᏓᏈᏕᎾ|||
 ᏙᏥ|||
-ᏙᏧᏩ|||
+ᏙᏧᏩ|cardinal||dotsuwa
 ᏙᏬᏗ|||
 ᏙᏯ|||
 ᏙᏲᎯᎳ|||
@@ -1487,29 +1482,27 @@ autoExpandExamples.chr = `
 ᏚᏳᎪᏛ|right (side)||duyugodv|||
 ᏚᏳᏩᏛ|||
 ᏚᏴᏍᏙᏯᏍᎦ|||
-ᏛᎬᎾ|||
+ᏛᎬᎾ|oyster||dvgvna
 ᏛᏗᏍᏗ|||
 ᏛᏰᏆ|||
-Ꮬ|||
-ᏜᎺᎭ|||
+ᏜᎺᎭ|bat (mammal)|d͡ɮameha|dlameha
 ᏜᏄᏏ|||
 Ꮭ ᎢᎸᎯᏳ|||
 Ꮭ ᎪᎱᏍᏗ|||
 Ꮭ ᏣᎳᎩ ᏱᏥᏬᏂ|||
 ᏝᏊᎠᏰᎸᏗ|||
-ᏝᏓᏥ|||
+ᏝᏓᏥ|lion||tladatsi
 ᏝᏬᏚᎯ|||
-ᏞᎺᎭ|||
+ᏞᎺᎭ|bat||tlemeha
 ᏠᎨᏍᎢ|||
-ᏠᎨᏏ|||
-Ꮱ|||
-ᏡᎬ|||
+ᏠᎨᏏ|garden, meadow||tlogesi
+ᏡᎬ|tree||tlugv
 ᏡᏡ|||
-ᏢᏓᏥ|||
+ᏢᏓᏥ|panther||tlvdatsi
 ᏢᏕᎦ|||
 ᏢᏗᏍᏗ|||
 ᏢᏩᎵᎦ|||
-ᏣᎳᎩ|||
+ᏣᎳᎩ|Cherokee|t͡sa.lɑ.ki|tsalagi
 ᏣᎵᎫ|tree||tsaligu|||
 ᏣᏆᏂᏱ|||
 ᏣᏉᎳᏓᎩ|||
@@ -1542,7 +1535,7 @@ autoExpandExamples.chr = `
 ᏥᏲ|||
 ᏥᏳ|||
 ᏥᏳ ᎦᏃᎯᎵᏙᎯ|||
-ᏦᎢ|three||tsoi|||
+ᏦᎢ|three|t͡soʔi|tsoi
 ᏦᎢᏁ ᎢᎦ|||
 ᏦᎦᏚ|||
 ᏦᎨᏏ|||
@@ -1574,7 +1567,6 @@ autoExpandExamples.chr = `
 ᏧᎾᏗᏔᏍᏗ|||
 ᏧᎾᏦᏍᏘ|||
 ᏧᎿᏦᏍᏗ|||
-ᏧᏁᎳ|eight||tsunela|||
 ᏧᏁᏍᏓᎸᎯ|||
 ᏧᏂᎪᎵᏰᏗᎢ|||
 ᏧᏂᎳᏫᏍᏗ|||
@@ -1607,7 +1599,7 @@ autoExpandExamples.chr = `
 ᏩᏓᎬ|||
 ᏩᏗᎠ|||
 ᏩᏘᏰᎳ|||
-ᏩᏙ|||
+ᏩᏙ|thank you|watõ|wado
 ᏩᏚᎵᏏ|||
 ᏩᏥ|||
 ᏩᏥᎳ||||
@@ -1627,7 +1619,6 @@ autoExpandExamples.chr = `
 ᏭᏕᎵᎬ|||
 ᏭᏕᎵᎬᎢ|||
 ᏯᎾᏌ|||
-ᏯᏙᏟ|||
 ᏰᎦᏟ|||
 ᏲᎾ|||
 ᏲᏁᎦ|||
@@ -1642,15 +1633,47 @@ autoExpandExamples.chr = `
 ᏴᏫ|man (human being)||yvwi|||
 
 
+ᏒᎧᏔ|apple|sə̃:kʰta|svkata||x
 
+ᏩᏇᏅᏅᏒ|I went there|wȁ:.kʷè:.nə̃́:.sə̃|wakwenvsv||x
+ᎦᏇᏅᏍᎦ|he's wrapping it|kàː.kʰw̥è:.nə̃̀:.ska|gakwenvska||x
+ᎪᎯ|today|kʰȍhi|
+ᏍᏊᏅᎢ|fist|skʷèn̥ə̃̋ʔi|skwenvi||x
+ᎠᏓ|wood/young animal|àta/áʔta|||x
+ᎭᏛᎦ|you did it/you hung it up|hà.tə̃̏.ka/hatʰə̃̏ːka|hadvga
+ᏓᎵᏲᎯᎭ|he's putting on socks|tȁːlíːjóhìha|daliyohiha
+ᏓᎵᏲᏏᎭ|he's changing socks|tȁːlíːjósìha|daliyosiha
 
+ᏧᏁᎳ|eight||tsunela|||
+ᏣᏁᎳ|eight|tʰ͡ʃà.néː.la|tsanela||x
+ᏥᏃᏍᎦ|coal|tʰ͡ʃìnòska|tsinosga
+ᏧᎦ|flea|tʰ͡ʃùhka|tsuka
+ᎠᏧᏣ|boy|atʰ͡ʃűt͡ʒa|atsutsa
+ᎦᏥᏃᏍᏓ|straight|katʰ͡ʃìnősta|gatsinosta||x
+ᎠᏨᏯ|male animal/rooster|a.t͡sə̃̀.ja/a.tʰ͡ʃə̃̀.ja|atsvya
+ᏗᏨᏍᏗ|marriage|titʰ͡ʃə̃́ːsti|ditsvsdi||x
+ᏯᏖᎾ|board|j̥àhtʰěna|yatena||x
+ᏯᏙᏟ|narrow|j̥àh.tʰő.ɬi|yadotli
 
+ᏰᎦᎵ|quilt|j̥èhkàɬi|yekatli||x
+ᎠᎦᎾᏘ|he is licking it|ȁː.kà.na̋ː.ti|aganadi||x
+ᎤᎦᎹ|soup|űː.ká.ma|ugama
+ᎠᎹᏴ|near the water|a.mà.jə̃̋ː|amayv||x
+ᎠᎺᏉᎢ|ocean|a.méː.kʷő.ʔi|a.me.kwo.i||x
+ᏝᎺᎭ|bat|tlàːmèːha|tla.me.ha||x
+ᏔᎹᏟ|tomato|tʰàmàːɬi|ta.ma.tli||x
+ᎧᎹᎹ|elephant/butterfly|kʰà.màː.ma|kamama
+ᏓᎹᎦ|horsefly|tàː.má.ka|damaga
+ᎣᎦᎳᎰᎹ|Oklahoma|òː.kà.làː.hőː.ma|ogalahoma||x
+ᎺᎵ|Mary|méːli|me.li||x
+ᎨᎻᎵ|camel|kʰe̋ː.mí.li|gemili
+ᎹᎩ|Maggie|ma̋ː.ki|magi||x
+ᎰᏩ|OK|hò.wã|howa||x
+ᏗᎦᏙᏗ|curtains|tì.kà.tó̥h.tĩ|digadodi
+ᏥᎩᎵ|ghost|t͡ski.li|tsikili|||x
 
-
-
-
-
-
+ᎠᎨᏯ|woman|à.kěː.hj̥a|ageya||x
+ᎤᏂᎷᏨ|they arrived|ȕː.nì.lúh.tʰ͡ʃə̃|unilutsv||x
 
 
 

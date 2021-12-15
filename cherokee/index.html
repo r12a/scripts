@@ -17,20 +17,17 @@
 
 <script src="../../shared/code/boilerplate.js"></script>
 <script src="../../shared/code/toc_2020.js"></script>
-<script src="../../shared/code/all-names.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common28/functions.js"></script>
 <script src="../common28/transliterate.js"></script>
 <script src="../common28/prompts.js"> </script>
 <script src="../glossary/glossary.js"> </script>
-<script src="../../shared/code/getLinks.js"></script>
-<script src="../linkdata/linkdb.js"></script>
-<script src="../../app-charuse/langs.js"> </script>
 <script src="../common28/egcode.js"></script>
 <script src="../common28/references.js"></script>
 <script src="refs.js"></script>
 
+<script src="chr-langdata.js"></script>
 <script src="chr-examples.js"></script>
 <script src="chr-translit.js">  </script>
 <script src="../../shared/manifests/cher-chr.js"></script>
@@ -42,7 +39,7 @@
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Cherokee</h1>
+<h1>Cherokee (draft)</h1>
 
 <nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="Jump to top of page." title="Jump to top of page."/></a></nav>
 
@@ -56,14 +53,17 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->25 November, 2021<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->15 December, 2021<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
 
 <div class="section">
-  <p>This page gathers  basic information about the Cherokee script and its use for the Cherokee language. It aims (generally) to provide an overview of the orthography and typographic features, and (specifically) to advise how to write Cherokee using Unicode.</p>
-<p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
+<p>This page brings together basic information about the Cherokee script and its use for the Cherokee language. It aims to provide a brief, descriptive summary of the modern, printed orthography and typographic features, and to advise how to write Cherokee using Unicode.</p>
+
+<p class="instructions">This page is a work in progress. The information given here should be correct, but needs to be added to and refined further.</p>
+<p>Phonological transcriptions on this page should be treated as an approximate guide, only. They are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available.</p>
+<p>It is remarkably difficult to find actual phonetic transcriptions of Cherokee words, and most so-called 'phonetic' transcriptions use one of the Latin orthographies, which also lack the more <a href="#characters">fine-grained distinctions</a> needed to understand how to pronounce the text properly. Take, for example, the word for apple (<span class="ex inline" lang="chr">ᏒᎦᏔ</span>), which is written <span class="transc">svgata</span> in the Latin orthography, but is actually pronounced <span class="ipa">sə̃̌ːkʰtʰ</span>. Therefore, the pronunciation information here and in the character notes is necessarily somewhat vague.</p>
 
 
 
@@ -90,7 +90,7 @@
 <section id="sample">
 <h2>Samples (Cherokee)</h2>
   
-<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px';document.getElementById('freeText2').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
+<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.  <a style="margin-inline-start: 2rem;" href="https://unicode.org/udhr/d/udhr_chr_cased.html">Source</a><br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px';document.getElementById('freeText2').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
 
 <section>
   <h3 href="#casedsample">Cased</h3>
@@ -126,7 +126,9 @@
 <section id="history">
 <h2>Usage &amp; history</h2>
 <p>It is estimated that only around 2,000 Cherokee people speak the language. However, those who do speak the language use the script widely for <q>writing letters, recipes, folktales, diaries, and for personal record-keeping. It is also used in some legal, governmental and religious documents and, in some areas, public signage. Efforts are being made to revive both the language and the script; to that end it is used in a limited capacity in education. Knowledge of the script is considered a prerequisite for full Cherokee citizenship</q>.<tt>s</tt></p>
-<p><span class="charExample" translate="no"><span class="ex" lang="chr">ᏣᎳᎩ</span> <span class="trans">TˢᵃLᵃGⁱ</span>(<span class="transc">tsalagi</span>) <span class="meaning">Cherokee</span></span></p>
+
+<p><span class="eg transc" lang="chr">ᏣᎳᎩ</span></p>
+
 <p>The script was developed by a Cherokee named Sequoyah and presented to the Cherokee Nation in 1821. It was popular and most Cherokee were literate in the script by 1828, when Sequoyah and Samuel Worcester reformed the orthography during the process of preparing it for printing.</p>
 <p>From the 1870s to the early 1900s, the US government actively suppressed the Cherokee language and culture, sending children away from their parents and creating a generation that was unfamiliar with the language and script. The ultimate result of this policy is that the Cherokee language is now considered endangered to moribund. There are, however, efforts to increase usage, and users are able to use the language and script for social media on mobile devices.</p>
 <p class="instructions">Sources: <a href="http://scriptsource.org/scr/Cher">Scriptsource</a>, <a href="http://en.wikipedia.org/wiki/Cherokee_script">Wikipedia</a>.</p>
@@ -154,10 +156,10 @@
 <p>Cherokee text runs <mark>left to right in horizontal lines</mark>.</p>
 <p>Words are <mark>separated by spaces</mark>.</p>
 
-<p>The syllabary has <mark>85 characters</mark>, of which 6 represent syllables that start with either no consonant or with <span class="ipa">ʔ</span> (<span class="ex" lang="chr">Ꭰ Ꭱ Ꭲ Ꭳ Ꭴ Ꭵ</span>), and one character represents the non-syllabic consonant sound <span class="ipa">s</span> (<span class="ex" lang="chr">Ꮝ</span>). The rest nominally represent a combination of consonant plus vowel, though the actual practise is a little more nuanced, and there is a degree of vagueness in the script when it comes to phonetically transcribing spoken sounds.<tt>d</tt></p>
+<p>The syllabary has <mark>85 <a href="#characters">characters</a></mark>, of which 6 represent syllables that start with either no consonant or with <span class="ipa">ʔ</span> (<span class="ex" lang="chr">Ꭰ Ꭱ Ꭲ Ꭳ Ꭴ Ꭵ</span>), and one character represents the non-syllabic consonant sound <span class="ipa">s</span> (<span class="ex" lang="chr">Ꮝ</span>). The rest nominally represent a combination of consonant plus vowel, though the actual practise is a little more nuanced, and there is a degree of vagueness in the script when it comes to phonetically transcribing spoken sounds.<tt>d</tt></p>
 <p>The script doesn't fully represent the sounds of the spoken language. Vowel length is not distinguished, with some exceptions syllable-final consonants and syllable-initial aspiration are not reflected in the orthography, and the user has to figure out when to drop the vowel of a CV letter to make consonant clusters. Some readers are beginning to use diacritics to indicate pronunciation more accurately.</p>
 <p>The spoken language is tonal, but <mark>tones are not written</mark>.</p>
-<p>The script is <mark>becoming bicameral</mark>, after a long period when syllabic characters ressembled uppercase letters.</p>
+<p>The script is <mark><a href="#cs">becoming bicameral</a></mark>, after a long period when syllabic characters ressembled uppercase letters.</p>
     <p>There is no standard spelling. The way a word is written may vary, according to the pronunciation of the writer, or choices they make for dealing with consonant clusters.</p>
     <p>The visual forms of letters don't  interact. There are no combining characters or diacritics, and ASCII digits are used.</p>
 </section>
@@ -188,17 +190,19 @@
 
 <section id="index_letters_consonants">
 <h4>Basic syllables</h4>
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#stops,#affricates,#affricates,#affricates,#affricates,#affricates,#affricates,#affricates,#affricates,#affricates,#affricates,#affricates,#affricates,#fricatives,#fricatives,#fricatives #clusters #ssV #syllable_final,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#fricatives,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#nasals,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,#liquids,">Ꮣ␣ꮣ␣Ꮤ␣ꮤ␣Ꮥ␣ꮥ␣Ꮦ␣ꮦ␣Ꮧ␣ꮧ␣Ꮨ␣ꮨ␣Ꮩ␣ꮩ␣Ꮪ␣ꮪ␣Ꮫ␣ꮫ␣Ꮬ␣ꮬ␣Ꮭ␣ꮭ␣Ꮮ␣ꮮ␣Ꮯ␣ꮯ␣Ꮰ␣ꮰ␣Ꮱ␣ꮱ␣Ꮲ␣ꮲ␣Ꭶ␣ꭶ␣Ꭷ␣ꭷ␣Ꭸ␣ꭸ␣Ꭹ␣ꭹ␣Ꭺ␣ꭺ␣Ꭻ␣ꭻ␣Ꭼ␣ꭼ␣Ꮖ␣ꮖ␣Ꮗ␣ꮗ␣Ꮘ␣ꮘ␣Ꮙ␣ꮙ␣Ꮚ␣ꮚ␣Ꮛ␣ꮛ␣Ꮳ␣ꮳ␣Ꮴ␣ꮴ␣Ꮵ␣ꮵ␣Ꮶ␣ꮶ␣Ꮷ␣ꮷ␣Ꮸ␣ꮸ␣Ꮜ␣ꮜ␣Ꮝ␣ꮝ␣Ꮞ␣ꮞ␣Ꮟ␣ꮟ␣Ꮠ␣ꮠ␣Ꮡ␣ꮡ␣Ꮢ␣ꮢ␣Ꭽ␣ꭽ␣Ꭾ␣ꭾ␣Ꭿ␣ꭿ␣Ꮀ␣ꮀ␣Ꮁ␣ꮁ␣Ꮂ␣ꮂ␣Ꮉ␣ꮉ␣Ꮊ␣ꮊ␣Ꮋ␣ꮋ␣Ꮌ␣ꮌ␣Ꮍ␣ꮍ␣Ꮎ␣ꮎ␣Ꮏ␣ꮏ␣Ꮐ␣ꮐ␣Ꮑ␣ꮑ␣Ꮒ␣ꮒ␣Ꮓ␣ꮓ␣Ꮔ␣ꮔ␣Ꮕ␣ꮕ␣Ꮹ␣ꮹ␣Ꮺ␣ꮺ␣Ꮻ␣ꮻ␣Ꮼ␣ꮼ␣Ꮽ␣ꮽ␣Ꮾ␣ꮾ␣Ꮃ␣ꮃ␣Ꮄ␣ꮄ␣Ꮅ␣ꮅ␣Ꮆ␣ꮆ␣Ꮇ␣ꮇ␣Ꮈ␣ꮈ␣Ꮿ␣ꮿ␣Ᏸ␣ᏸ␣Ᏹ␣ᏹ␣Ᏺ␣ᏺ␣Ᏻ␣ᏻ␣Ᏼ␣ᏼ</figure>
+<figure class="characterBox noindex indexline" data-cols="">Ꮣ␣Ꮤ␣Ꮥ␣Ꮦ␣Ꮧ␣Ꮨ␣Ꮩ␣Ꮪ␣Ꮫ␣Ꮬ␣Ꮭ␣Ꮮ␣Ꮯ␣Ꮰ␣Ꮱ␣Ꮲ␣Ꭶ␣Ꭷ␣Ꭸ␣Ꭹ␣Ꭺ␣Ꭻ␣Ꭼ␣Ꮖ␣Ꮗ␣Ꮘ␣Ꮙ␣Ꮚ␣Ꮛ␣Ꮳ␣Ꮴ␣Ꮵ␣Ꮶ␣Ꮷ␣Ꮸ␣Ꮜ␣Ꮝ␣Ꮞ␣Ꮟ␣Ꮠ␣Ꮡ␣Ꮢ␣Ꭽ␣Ꭾ␣Ꭿ␣Ꮀ␣Ꮁ␣Ꮂ␣Ꮉ␣Ꮊ␣Ꮋ␣Ꮌ␣Ꮍ␣Ꮎ␣Ꮏ␣Ꮐ␣Ꮑ␣Ꮒ␣Ꮓ␣Ꮔ␣Ꮕ␣Ꮹ␣Ꮺ␣Ꮻ␣Ꮼ␣Ꮽ␣Ꮾ␣Ꮃ␣Ꮄ␣Ꮅ␣Ꮆ␣Ꮇ␣Ꮈ␣Ꮿ␣Ᏸ␣Ᏹ␣Ᏺ␣Ᏻ␣Ᏼ</figure>
+<figure class="characterBox noindex indexline" data-cols="">ꮣ␣ꮤ␣ꮥ␣ꮦ␣ꮧ␣ꮨ␣ꮩ␣ꮪ␣ꮫ␣ꮬ␣ꮭ␣ꮮ␣ꮯ␣ꮰ␣ꮱ␣ꮲ␣ꭶ␣ꭷ␣ꭸ␣ꭹ␣ꭺ␣ꭻ␣ꭼ␣ꮖ␣ꮗ␣ꮘ␣ꮙ␣ꮚ␣ꮛ␣ꮳ␣ꮴ␣ꮵ␣ꮶ␣ꮷ␣ꮸ␣ꮜ␣ꮝ␣ꮞ␣ꮟ␣ꮠ␣ꮡ␣ꮢ␣ꭽ␣ꭾ␣ꭿ␣ꮀ␣ꮁ␣ꮂ␣ꮉ␣ꮊ␣ꮋ␣ꮌ␣ꮍ␣ꮎ␣ꮏ␣ꮐ␣ꮑ␣ꮒ␣ꮓ␣ꮔ␣ꮕ␣ꮹ␣ꮺ␣ꮻ␣ꮼ␣ꮽ␣ꮾ␣ꮃ␣ꮄ␣ꮅ␣ꮆ␣ꮇ␣ꮈ␣ꮿ␣ᏸ␣ᏹ␣ᏺ␣ᏻ␣ᏼ</figure>
 </section>
 
 <section id="index_letters_vowels">
 <h4>Vowels</h4>
-<figure class="characterBox auto noindex indexline" data-cols="" data-links="#vowels #vowel_chars #tones,#vowels #vowel_chars,#vowels #vowel_chars,#vowels #vowel_chars,#vowels #vowel_chars,#vowels #vowel_chars,#vowels #vowel_chars,#vowels #vowel_chars,#vowels #vowel_chars,#vowels #vowel_chars,#vowels #vowel_chars,#vowels #vowel_chars,">Ꭰ␣ꭰ␣Ꭱ␣ꭱ␣Ꭲ␣ꭲ␣Ꭳ␣ꭳ␣Ꭴ␣ꭴ␣Ꭵ␣ꭵ</figure>
+<figure class="characterBox noindex indexline" data-cols="">Ꭰ␣Ꭱ␣Ꭲ␣Ꭳ␣Ꭴ␣Ꭵ</figure>
+<figure class="characterBox noindex indexline" data-cols="">ꭰ␣ꭱ␣ꭲ␣ꭳ␣ꭴ␣ꭵ</figure>
 </section>
 
 <section id="index_letters_unused">
 <h4>Not used for Cherokee</h4>
-<figure class="archaicBox auto noindex indexline" data-cols="" data-links="#archaic,#archaic,">Ᏽ␣ᏽ</figure>
+<figure class="archaicBox noindex indexline" data-cols="" data-links="#archaic,#archaic,">Ᏽ␣ᏽ</figure>
 </section>
 </details>
 </section>
@@ -210,7 +214,7 @@
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="auxiliaryBox auto noindex indexline" data-cols="" data-links="#diacritics,#diacritics,#diacritics,#diacritics,#tones,#tones,#tones,#tones,#tones,#tones,">̣␣̱␣̤␣̰␣̀␣́␣̂␣̄␣̋␣̌</figure>
+<figure class="auxiliaryBox noindex indexline" data-cols="">̣␣̱␣̤␣̰␣̀␣́␣̂␣̄␣̋␣̌</figure>
 </details>
 </section>
 
@@ -221,7 +225,12 @@
 <details>
 <summary class="instructions">Show</summary>
 
-<figure class="auxiliaryBox auto noindex indexline" data-cols="" data-links="#quotations,#quotations,#quotations,#quotations,#bracketing,#bracketing,#phrase,#phrase,#phrase,#phrase,#phrase,#phrase,">‘␣’␣“␣”␣(␣)␣,␣.␣:␣;␣?␣!</figure>
+<figure class="auxiliaryBox noindex indexline" data-cols="">‘␣’␣“␣”</figure>
+
+<section id="index_punctuation_ascii">
+<h4>ASCII</h4>
+<figure class="auxiliaryBox noindex indexline" data-cols="">(␣)␣,␣.␣:␣;␣?␣!</figure>
+</section>
 </details>
 </section>
 </section>
@@ -261,9 +270,7 @@
 <section id="vowelPhonemes">
 <h3>Vowel sounds</h3>
 
-<div style="margin-left: 7.5%;">
-<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -20 500 240" class="ipaSVG">
   <defs>
     <filter x="0" y="0" width="1" height="1" id="solid">
       <feFlood flood-color="white"/>
@@ -303,21 +310,43 @@
   
   
   <!-- close -->
-  <text x="32" y="15" class="ipa" text-anchor="end">i iː</text> 
-<text x="250" y="15" class="ipa">u uː</text> 
+  <text x="32" y="15" text-anchor="end">
+<tspan class="ipa">i</tspan>
+</text> 
+  <text x="22" y="15" text-anchor="end">
+<tspan class="ipa">iː</tspan>
+</text> 
+  <text x="250" y="15">
+<tspan class="ipa">u</tspan>
+</text> 
+  <text x="265" y="15">
+<tspan class="ipa">uː</tspan>
+</text> 
 
   <!-- close mid -->
-  <text x="57" y="75" class="ipa" text-anchor="end">e eː</text> 
-<text x="250" y="75" class="ipa">o oː</text> 
+  <text x="57" y="75" text-anchor="end">
+<tspan class="ipa">e</tspan>
+</text> 
+  <text x="43" y="75" text-anchor="end">
+<tspan class="ipa">eː</tspan>
+</text> 
+  <text x="250" y="75">
+<tspan class="ipa">o</tspan>
+</text> 
+<text x="264" y="75">
+<tspan class="ipa">oː</tspan>
+</text> 
 
   <!-- mid -->
-  <text x="158" y="105" class="ipa" text-anchor="middle" filter="url(#solid)">ə̃ ə̃ː</text>
-  <text x="158" y="105" class="ipa" text-anchor="middle">ə̃ ə̃ː</text> 
+  <text x="154" y="105" text-anchor="end" filter="url(#solid)"><tspan class="ipa">ə̃</tspan></text>
+  <text x="154" y="105" text-anchor="end"><tspan class="ipa">ə̃</tspan></text> 
+<text x="160" y="105" text-anchor="start" filter="url(#solid)"><tspan class="ipa">ə̃ː</tspan></text>
+<text x="160" y="105" text-anchor="start"><tspan class="ipa">ə̃ː</tspan></text> 
 
   <!-- open -->
-<text x="106" y="195" class="ipa" text-anchor="end">a aː</text> 
+  <text x="106" y="195" text-anchor="end"><tspan class="ipa">a</tspan></text> 
+  <text x="92" y="195" text-anchor="end"><tspan class="ipa">aː</tspan></text> 
 </svg>
-</div>
 </section>
 
 
@@ -346,19 +375,29 @@ alveolar</th>
 <tr>
 <th>stop</th>
 <td>&nbsp;</td>
-<td><span class="ipa">t</span> <span class="ipa">d</span></td>
+<td><span class="ipa">t</span> <span class="ipa">tʰ</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td><span class="ipa">k</span> <span class="ipa">ɡ</span><br>
-<span class="ipa">kʷ</span></td>
-<td><span class="allophone">ʔ</span></td>
+<td><span class="ipa">k</span> <span class="ipa">kʰ</span></td>
+<td><span class="ipa">ʔ</span></td>
+</tr>
+<tr>
+<th>labialised stop</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">kw̥</span> <span class="ipa">kʰw̥</span></td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <th>affricate</th>
 <td>&nbsp;</td>
-<td><span class="ipa">t͡s</span></td>
-<td><span class="ipa">t͡ɬ</span> <span class="ipa">d͡ɮ</span></td>
+<td><span class="ipa">t͡s</span> <span class="ipa">tʰ͡s</span></td>
+<td><span class="allophone">t͡ʃ</span> <span class="allophone">tʰ͡ʃ</span><br>
+<span class="ipa">t͡l</span> <span class="ipa">t͡ɬ</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -368,7 +407,8 @@ alveolar</th>
 <th>fricative </th>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td><span class="ipa">s</span></td>
+<td><span class="ipa">s</span><br>
+<span class="ipa">ɬ</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -378,7 +418,7 @@ alveolar</th>
 <th>nasal</th>
 <td><span class="ipa">m</span></td>
 <td>&nbsp;</td>
-<td><span class="ipa">n</span></td>
+<td><span class="ipa">n</span> <span class="ipa">n̥</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -386,12 +426,12 @@ alveolar</th>
 </tr>
 <tr>
 <th>approximant</th>
-<td>&nbsp;</td>
+<td><span class="ipa">w</span> <span class="ipa">w̥</span></td>
 <td>&nbsp;</td>
 <td><span class="ipa">l</span></td>
 <td>&nbsp;</td>
-<td><span class="ipa">j</span></td>
-<td><span class="ipa">ɰ</span></td>
+<td><span class="ipa">j</span> <span class="ipa">j̥</span></td>
+<td><!--span class="ipa">ɰ</span--></td>
 <td></td>
 </tr>
 <tr>
@@ -416,6 +456,116 @@ alveolar</th>
 </tr>
 </tbody>
 </table>
+
+<p>Although some transcriptions suggest it, Cherokee doesn't contrast voiced vs. unvoiced stops and affricates; all are unvoiced. Instead, it contrasts aspirated and unaspirated forms<tt>ma,34</tt>.</p>
+
+<p><span class="ipa">t͡s</span> is pronounced <span class="ipa">t͡ʃ</span> by some speakers. This also applies to the aspirated forms.</p>
+
+<p>The glottal stop appears between vowels, and also sometimes between a vowel and a consonant, though less frequently. However, it is not written when using the syllabary, and so minimal pairs may be spelled the same, eg.
+<span class="eg" lang="chr">ᎪᎢ</span>
+<span class="eg" lang="chr">ᎠᏓ</span>
+</p>
+</section>
+
+
+
+
+
+<section id="tones">
+<h3>Tones</h3>
+
+<p>Cherokee has 6 tones, 2 level and 4 contoured. They are shown in the table with Latin transcriptions used by Scancarelli (1986), 	Montgomery-Anderson (2008,2015), and	Feeling (2003)/Uchihara (2016), respectively<tt>ws,#Tone</tt>.</p>
+
+<table style="font-size: 120%;">
+<tr><th>IPA</th><th>short</th>
+<th>long</th>
+<th>name</th></tr>
+<tr><td class="ipa">˨</td><td>à, 	a, 	a </td>
+<td>à:, 	aa, 	aa </td>
+<td>low</td></tr>
+<tr><td class="ipa">˧</td><td>á, 	á, 	á </td>
+<td>á:, 	áa, 	áá </td>
+<td>high</td></tr>
+<tr><td class="ipa">˨˧</td><td>&nbsp;</td>
+<td>ǎ:, 	aá, 	aá </td>
+<td>rising</td></tr>
+<tr><td class="ipa">˧˨</td><td>&nbsp;</td>
+<td>â:, 	áà, 	áà </td>
+<td>falling</td></tr>
+<tr>
+<td class="ipa">˨˩</td>
+<td>&nbsp;</td>
+<td>ȁ:, 	aà, 	àà, àa </td>
+<td>lowfall</td>
+</tr>
+<tr>
+<td class="ipa">˧˦</td>
+<td>&nbsp;</td>
+<td>a̋:, 	áá, 	aa̋ </td>
+<td>superhigh</td>
+</tr>
+</table>
+
+<p>The level tones can appear with short or long vowels, but the others only occur with long vowels.</p>
+
+<p>Tones are not marked in the Cherokee orthography, although this doesn't often create ambiguity<tt>ws,#Tone</tt>. Nor are they used in the Latin orthographies, except in dictionaries. See also <a class="secref">tonemarks</a>.</p>
+
+<p>For the superhigh tone, Wikipedia says: <q>The superhigh tone, also called "highfall" by Montgomery-Anderson, has a distinctive morphosyntactical function, primarily appearing on adjectives, nouns derived from verbs, and on subordinate verbs. It is mobile and falls on the rightmost long vowel. If the final short vowel is dropped and the superhigh tone becomes in word-final position, it is shortened and pronounced like a slightly higher final tone (notated as a̋ in most orthographies). There can only be one superhigh tone per word, constraint not shared by the other tones. For these reasons, this contour exhibits some accentual properties and has been referred to as an "accent" (or stress) in the literature.</q></p>
+</section>
+
+
+
+
+
+
+<section id="phonological_processes">
+<h3>Phonological processes</h3>
+
+<p>Cherokee, like many other North American languages, builds words into short phrases by adding prefixes and suffixes to the word root. A number of phonological changes are applied during this process. Typically, but not always, the result of these changes is captured by the orthography.</p>
+
+
+
+<section id="vowel_deletion">
+<h4>Vowel deletion</h4>
+
+<style>
+.rule { display:flex;flex-direction: row;flex-wrap: nowrap;justify-content: space-around; width: 60%; text-align: start;hyphens: none; font-size: 1.5rem; }
+.rule span { margin-inline-end: 1em;}
+</style>
+<p>In certain circumstances, vowels in the underlying morphemic model are dropped when particles are added to a word root. The rule is as follows<tt>ma,65</tt>:</p>
+<p class="rule"><span class="trans">t, k, j, w, y, n, kw, l</span> + <span>short vowel</span> + <span><span class="trans">h</span></span> + <span>plosive or vowel</span> –&gt; <span>removal of the short vowel and aspiration of the initial letter in the sequence</span></p>
+
+<!--p class="instructions"><span class="ipa">t, k, j, w, y, n, kw, l</span>, followed by a short vowel, then an <span class="ipa">h</span> followed by a plosive or vowel -&gt; removal of the short vowel and aspiration of the initial letter in the sequence.</p-->
+
+<p>For example:</p>
+
+<style>
+.multilineGlossedText .ipa { font-size: 1.5em; }
+</style>
+
+<figure id="fig_vowel_deletion">
+<div class="multilineGlossedText">
+<div class="stack"><span class="legend">Cherokee:</span><span class="legend">Transcription:</span><span class="legend">Components:</span><span class="legend">IPA:</span></div>
+
+<div class="stack"><span class="base" lang="chr">ᏫᎦᏘ</span><span class="trans">wi-ga-di</span><span class="gloss">wi-hi-kah.thi</span><span class="ipa">w̥ì.kʰtʰi</span></div>
+
+<div class="stack"><span class="base" lang="chr">ᏫᏥᎦᏔ</span><span class="trans">wi-tsi-ga-ta</span><span class="gloss">wi-tsi-kah-tha</span><span class="ipa">wìt͡sìkâːtʰa</span></div>
+
+<div class="stack"><span class="base" lang="chr">ᏂᏪᏓᏍ</span><span class="trans">ni-we-da-s</span><span class="gloss">ni-wi-hi-eetas</span><span class="ipa">nìw̥èːtàs</span></div>
+</div>
+<figcaption>Three phrases: <q>You're heading there</q>, <q>I'm heading there</q>, and <q>Are you already going?</q>. The first experiences vowel deletion, the second not, the third does.</figcaption>
+</figure>
+
+<p>This phonological change is generally reflected in the orthography, however, the <span class="ipa">kʰ</span> in the first example still uses a non-aspirated letter.</p>
+</section>
+
+
+
+<section id="metathesis">
+<h4>Metathesis</h4>
+
+<p>tbd</p>
+</section>
 </section>
 </section>
 
@@ -425,58 +575,151 @@ alveolar</th>
 
 <section id="characters">
 <h2>Syllables</h2>
+
+
+
+
+<p>Cherokee syllabic letters don't provide all the information needed to detect the underlying sounds if you are not familiar with the language. Features that are not generally expressed by the orthography include syllable-initial aspiration, syllable-final consonants, vowel length and unpronounced vowels, and tone. These are described in more detail below. Montgomery-Anderson lists the following possible sounds that are represented by <span class="codepoint" translate="no"><bdi lang="chr">&#x13D9;</bdi> [<a href="/scripts/cherokee/block#char13D9"><span class="uname">U+13D9 CHEROKEE LETTER DO</span></a>]</span>:<br>
+<span class="ipa">tò, tó, tòː, tóː, tǒː, tôː, tȍː, tőː, tòh, tóh, tòʔ, tóʔ,<br>
+tʰò, tʰó, tʰòː, tʰóː, tʰǒː, tʰôː, tʰȍː, tʰőː, tʰòh, tʰóh, tʰòʔ, tʰóʔ</span></p>
+
+<p>The realisation of Cherokee sounds is also often affected by phonological rules that are determined by context – creating another step away from the sounds implied by the syllabic letters.</p>
+
+<p>In addition, vowels at the end of a word or in syllable onsets may be dropped, eg.
+<span class="eg" lang="chr">ᏥᎩᎵ</span>
+</p>
+
+<p>As mentioned in the introduction, it is difficult to find precise information about how Cherokee syllables and words are pronounced, so while we try to provide what phonetic information we can here, most of the transcriptions are in one of  the rather imprecise Latin orthographies. There are also different versions of the Latin orthographies, some preferring to make a distinction between <span class="transc">d</span> and <span class="transc">t</span>, whereas others map to <span class="transc">t</span> and <span class="transc">th</span>.</p>
+
+
+
+
+
+<section id="vowel_chars">
+<h3>Vowel syllables</h3>
+
+<figure class="characterBox auto" data-cols="ipa,trans">Ꭲ␣Ꭴ␣Ꭱ␣Ꭳ␣Ꭵ␣Ꭰ</figure>
+<figure class="characterBox auto small caps" data-cols="">ꭲ␣ꭴ␣ꭱ␣ꭳ␣ꭵ␣ꭰ</figure>
+
+<p>The six vowel characters, when they appear at the start of a word represent plain vowel sounds. They may be short or long, and will be modified by tone, but none of those things are expressed by the orthography, eg. <span class="eg" lang="chr">ᎠᎹ</span></p>
+<p>Elsewhere they represent a syllable starting with <span class="ipa">ʔ</span>,<tt>d</tt> eg. <span class="eg" lang="chr">ᎯᎠ</span></p>
+</section>
+
+
+
+
+
+<section id="vowel_absence">
+<h3>Vowel absence</h3>
+
+<section id="word_end_vowels">
+<h4>Vowels at the end of a word</h4>
+
+<p>In spoken Cherokee, vowels at the end of a word are often dropped, although the orthography indicates what the vowel would have been<tt>ma,96</tt>. <a class="figref">fig_eow_vowels</a> shows an example based on Montgomery-Anderson of the pronunciation of the sentence: <q>The hungry man ate all the good food.</q></p>
+
+<figure id="fig_eow_vowels">
+<div class="multilineGlossedText">
+<div class="stack"><span class="legend">Cherokee:</span><span class="legend">Transcription:</span><span class="legend">IPA:</span><span class="legend">Meaning:</span></div>
+
+<div class="stack"><span class="base" lang="chr">ᎠᏍᎦᏯ</span><span class="trans">a-s-ga-ya</span><span class="ipa">àskàj</span><span class="gloss">man</span></div>
+
+<div class="stack"><span class="base" lang="chr">ᎤᏲᏏᏍᎬ</span><span class="trans">u-yo-si-s-kv</span><span class="ipa">ȕːyòːsíːsk</span><span class="gloss">hungry</span></div>
+
+<div class="stack"><span class="base" lang="chr">ᏂᎦᏓ</span><span class="trans">ni-ka-da</span><span class="ipa">nìka̋ːt</span><span class="gloss">all</span></div>
+
+<div class="stack"><span class="base" lang="chr">ᎤᏒᏅ</span><span class="trans">u-sv-nv</span><span class="ipa">ȕːsə̃̀hn̥ə̃</span><span class="gloss">eat</span></div>
+
+<div class="stack"><span class="base" lang="chr">ᎣᏍᏓ</span><span class="trans">o-s-da</span><span class="ipa">őːst</span><span class="gloss">good</span></div>
+
+<div class="stack"><span class="base" lang="chr">ᎠᎵᏍᏓᏴᏙᏗ</span><span class="trans">a-li-s-da-yv-do-di</span><span class="ipa">álstȁːhj̥tòhti</span><span class="gloss">food</span></div>
+</div>
+
+
+<figcaption>Phonetic transcription of a sentence where word-final vowels have been dropped from most words in pronunciation.</figcaption>
+</figure>
+</section>
+
+<p>Additional vowel loss occurs as a result of phonological changes. See <a class="secref">phonological_processes</a>.</p>
+</section>
+</section>
+
+
+
+
+
+<section id="vowel_length">
+<h3>Vowel length and tone</h3>
+
+<p>The vowel in a CV syllable doesn't distinguish between short and long vowel sounds, nor does it indicate tonal values, eg. the following sequence of Cherokee characters represents two different words, each having different lengths and tones (low vs. high, respectively)<tt>d</tt>:
+<span class="eg" lang="chr">ᎠᎹ</span>
+</p>
+</section>
+
+
+
+
+
 <section id="basic">
-<h3>Cherokee syllables</h3>
-
-
+<h3>Consonant-vowel syllables</h3>
 
 <section id="stops">
 <h4>Stops</h4>
-<figure class="characterBox auto" data-select="last" data-cols="ipa,trans">Ꮣꮣ␣Ꮤꮤ␣Ꮥꮥ␣Ꮦꮦ␣Ꮧꮧ␣Ꮨꮨ␣Ꮩꮩ␣Ꮪꮪ␣Ꮫꮫ</figure>
-<figure class="characterBox auto" data-select="last" data-cols="ipa,trans">Ꮬꮬ␣Ꮭꮭ␣Ꮮꮮ␣Ꮯꮯ␣Ꮰꮰ␣Ꮱꮱ␣Ꮲꮲ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans">Ꮧ␣Ꮨ␣Ꮪ␣Ꮥ␣Ꮦ␣Ꮩ␣Ꮫ␣Ꮣ␣Ꮤ</figure>
+<figure class="characterBox auto caps small" data-cols="">ꮧ␣ꮨ␣ꮪ␣ꮥ␣ꮦ␣ꮩ␣ꮫ␣ꮣ␣ꮤ</figure>
 
-<figure class="characterBox auto" data-select="last" data-cols="ipa,trans">Ꭶꭶ␣Ꭷꭷ␣Ꭸꭸ␣Ꭹꭹ␣Ꭺꭺ␣Ꭻꭻ␣Ꭼꭼ</figure>
-<figure class="characterBox auto" data-select="last" data-cols="ipa,trans">Ꮖꮖ␣Ꮗꮗ␣Ꮘꮘ␣Ꮙꮙ␣Ꮚꮚ␣Ꮛꮛ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans">Ꭹ␣Ꭻ␣Ꭸ␣Ꭺ␣Ꭼ␣Ꭶ␣Ꭷ</figure>
+<figure class="characterBox auto caps small" data-cols="">ꭹ␣ꭻ␣ꭸ␣ꭺ␣ꭼ␣ꭶ␣ꭷ</figure>
+
+<figure class="characterBox auto" data-cols="ipa,trans">Ꮘ␣Ꮚ␣Ꮗ␣Ꮙ␣Ꮛ␣Ꮖ</figure>
+<figure class="characterBox auto caps small" data-cols="">ꮘ␣ꮚ␣ꮗ␣ꮙ␣ꮛ␣ꮖ</figure>
 </section>
 
 
 
 <section id="affricates">
-<h4>Affricates</h4>
-<figure class="characterBox auto" data-select="last" data-cols="ipa,trans">Ꮳꮳ␣Ꮴꮴ␣Ꮵꮵ␣Ꮶꮶ␣Ꮷꮷ␣Ꮸꮸ</figure>
+<h4>Affricate</h4>
+<figure class="characterBox auto" data-cols="ipa,trans">Ꮵ␣Ꮷ␣Ꮴ␣Ꮶ␣Ꮸ␣Ꮳ</figure>
+<figure class="characterBox auto caps small" data-cols="">ꮵ␣ꮷ␣ꮴ␣ꮶ␣ꮸ␣ꮳ</figure>
+
+<figure class="characterBox auto" data-cols="ipa,trans">Ꮯ␣Ꮱ␣Ꮮ␣Ꮰ␣Ꮲ␣Ꮬ␣Ꮭ</figure>
+<figure class="characterBox auto caps small" data-cols="">ꮯ␣ꮱ␣ꮮ␣ꮰ␣ꮲ␣ꮬ␣ꮭ</figure>
 </section>
 
 
 
 <section id="fricatives">
 <h4>Fricatives</h4>
-<figure class="characterBox auto" data-select="last" data-cols="ipa,trans">Ꮜꮜ␣Ꮝꮝ␣Ꮞꮞ␣Ꮟꮟ␣Ꮠꮠ␣Ꮡꮡ␣Ꮢꮢ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans">Ꮟ␣Ꮡ␣Ꮞ␣Ꮠ␣Ꮢ␣Ꮜ</figure>
+<figure class="characterBox auto caps small" data-cols="">ꮟ␣ꮡ␣ꮞ␣ꮠ␣ꮢ␣ꮜ</figure>
 
-<figure class="characterBox auto" data-select="last" data-cols="ipa,trans">Ꭽꭽ␣Ꭾꭾ␣Ꭿꭿ␣Ꮀꮀ␣Ꮁꮁ␣Ꮂꮂ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans">Ꭿ␣Ꮁ␣Ꭾ␣Ꮀ␣Ꮂ␣Ꭽ</figure>
+<figure class="characterBox auto caps small" data-cols="">ꭿ␣ꮁ␣ꭾ␣ꮀ␣ꮂ␣ꭽ</figure>
+
+<p>A 3rd fricative, <span class="ipa">ɬ</span>, appears below as an aspirated form of <span class="ipa">l</span>.</p>
+<p>See also <a class="secref">s_consonant</a>.</p>
 </section>
 
 
 <section id="nasals">
 <h4>Nasals</h4>
-<figure class="characterBox auto" data-select="last" data-cols="ipa,trans">Ꮉꮉ␣Ꮊꮊ␣Ꮋꮋ␣Ꮌꮌ␣Ꮍꮍ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans">Ꮋ␣Ꮍ␣Ꮊ␣Ꮌ␣Ꮉ</figure>
+<figure class="characterBox auto caps small" data-cols="">ꮋ␣ꮍ␣ꮊ␣ꮌ␣ꮉ</figure>
 
-<figure class="characterBox auto" data-select="last" data-cols="ipa,trans">Ꮎꮎ␣Ꮏꮏ␣Ꮐꮐ␣Ꮑꮑ␣Ꮒꮒ␣Ꮓꮓ␣Ꮔꮔ␣Ꮕꮕ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans">Ꮒ␣Ꮔ␣Ꮑ␣Ꮓ␣Ꮕ␣Ꮎ␣Ꮏ␣Ꮐ</figure>
+<figure class="characterBox auto caps small" data-cols="">ꮒ␣ꮔ␣ꮑ␣ꮓ␣ꮕ␣ꮎ␣ꮏ␣ꮐ</figure>
 </section>
 
 
-<section id="liquids">
-<h4>Liquids</h4>
-<figure class="characterBox auto" data-select="last" data-cols="ipa,trans">Ꮹꮹ␣Ꮺꮺ␣Ꮻꮻ␣Ꮼꮼ␣Ꮽꮽ␣Ꮾꮾ</figure>
+<section id="sonorants">
+<h4>Other sonorants</h4>
+<figure class="characterBox auto" data-cols="ipa,trans">Ꮻ␣Ꮽ␣Ꮺ␣Ꮼ␣Ꮾ␣Ꮹ</figure>
+<figure class="characterBox auto caps small" data-cols="">ꮻ␣ꮽ␣ꮺ␣ꮼ␣ꮾ␣ꮹ</figure>
 
-<figure class="characterBox auto" data-select="last" data-cols="ipa,trans">Ꮃꮃ␣Ꮄꮄ␣Ꮅꮅ␣Ꮆꮆ␣Ꮇꮇ␣Ꮈꮈ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans">Ꮅ␣Ꮇ␣Ꮄ␣Ꮆ␣Ꮈ␣Ꮃ</figure>
+<figure class="characterBox auto caps small" data-cols="">ꮅ␣ꮇ␣ꮄ␣ꮆ␣ꮈ␣ꮃ</figure>
 
-<figure class="characterBox auto" data-select="last" data-cols="ipa,trans">Ꮿꮿ␣Ᏸᏸ␣Ᏹᏹ␣Ᏺᏺ␣Ᏻᏻ␣Ᏼᏼ</figure>
-</section>
-
-
-<section id="vowels">
-<h4>Vowels/glottal stop</h4>
-<figure class="characterBox auto" data-select="last" data-cols="ipa,trans">Ꭰꭰ␣Ꭱꭱ␣Ꭲꭲ␣Ꭳꭳ␣Ꭴꭴ␣Ꭵꭵ</figure>
+<figure class="characterBox auto" data-cols="ipa,trans">Ᏹ␣Ᏻ␣Ᏸ␣Ᏺ␣Ᏼ␣Ꮿ</figure>
+<figure class="characterBox auto caps small" data-cols="">ᏹ␣ᏻ␣ᏸ␣ᏺ␣ᏼ␣ꮿ</figure>
 </section>
 
 
@@ -487,8 +730,110 @@ alveolar</th>
 <section id="archaic">
 <h4>Archaic</h4>
 <p>One syllable is archaic and not used.</p>
-<figure class="archaicBox auto bicameral" data-cols="ipa,trans">Ᏽᏽ</figure>
+
+<figure class="archaicBox auto" data-cols="ipa,trans">Ᏽ</figure>
+<figure class="archaicBox auto caps small" data-cols="">ᏽ</figure>
 </section>
+</section>
+
+
+
+
+
+<section id="s_consonant">
+<h3>Consonant 's'</h3>
+
+<figure class="characterBox auto" data-cols="ipa,trans">Ꮝ</figure>
+<figure class="characterBox auto caps small" data-cols="">ꮝ</figure>
+
+<p>Because it  is not followed by a vowel, this character can be used to form consonant clusters at the start of a syllable<tt>d</tt>, eg.
+<span class="eg" lang="chr">ᏍᎪᎯ</span>
+</p>
+<p>It is also used for syllables that end with an <span class="ipa">s</span> sound, eg.
+<span class="eg" lang="chr">ᎯᏴᏫᏯᏍ</span>
+</p>
+<p>Some manuscripts precede syllables beginning with an <span class="ipa">s</span> sound with this character. Sequoyah spelled his name like that, ie.
+<span class="charExample" translate="no"><span class="ex" lang="chr">ᏍᏏᏉᏯ</span> <span class="transc">s-si-quo-ya</span></span>
+</p>
+</section>
+    
+    
+    
+    
+<section id="aspiration">
+<h3>Aspiration</h3>
+
+    
+<section id="onset_aspiration">
+<h4>Syllable initial aspiration</h4>
+
+<p>Most syllables can start with aspirated forms, but only 6 pairs of letters distinguish between aspirated and non-aspirated sounds in the onset.</p>
+
+<p>Five pairs of characters make this distinction for stops or affricates: <span class="ex" lang="chr">Ꭶ+Ꭷ, Ꮣ+Ꮤ, Ꮥ+Ꮦ, Ꮧ+Ꮨ, Ꮬ+Ꮭ</span>. For example, it is possible to distinguish between the first two syllables of <span class="eg" lang="chr">ᎧᎦᎵ</span> but not<tt>d,590</tt> between the two meanings of 
+<span class="eg" lang="chr">ᎪᎳ</span>
+</p>
+
+<p>Only one nasal syllable makes this distinction, ie. compare <span class="eg" lang="chr">ᎬᎾ</span>  <span class="eg" lang="chr">ᎬᎿ</span></p>
+<p>However, the following could have two different meanings
+<span class="eg" lang="chr">ᎬᏂᎭ</span>
+</p>
+</section>
+
+
+
+
+
+<section id="intrusive_h">
+<h4>The intrusive h</h4>
+
+<p>Aspiration can also arise when there is a non-written <span class="ipa">h</span> sound in a syllable. Most syllables can have a coda with this sound, which then interacts with the sounds around it as morpheme prefixes and suffixes are attached to the base word.  In some cases, it may produce transformations in other syllables.</p>
+<p>The following 2 words illustrate non-written <span class="ipa">h</span> sounds, the first in the syllable coda, and the second in the onset. <span class="eg" lang="chr">ᎤᏂᎷᏨ</span>
+<span class="eg" lang="chr">ᎠᎨᏯ</span>
+</p>
+
+</section>
+</section>
+
+
+
+<section id="syllable_final">
+<h3>Syllable-final consonants</h3>
+
+<p>Each character may not only end with a vowel, but may also end with <span class="ipa">ʔ</span> or <span class="ipa">h</span>, eg. the following are written with just two characters
+<span class="eg" lang="chr">ᏑᏗ</span>
+<span class="eg" lang="chr">ᏔᎵ</span>
+</p>
+
+<p>There is one distinctive pair related to syllables ending with <span class="ipa">h</span>, ie. compare:
+<span class="charExample"><span class="ex" lang="chr">Ꮎ</span> <span class="ipa">na</span></span>
+<span class="charExample"><span class="ex" lang="chr">Ꮐ</span> <span class="ipa">nah</span></span>
+</p>
+
+<p>Syllables that end with an <span class="ipa">s</span> sound can be written using <span class="codepoint"><span lang="chr">&#x13CD;</span> <a href="/scripts/cherokee/block#char13CD">[<span class="uname">U+13CD CHEROKEE LETTER S</span>]</a></span>, eg.
+<span class="eg" lang="chr">ᎯᏴᏫᏯᏍ</span>
+</p>
+</section>
+
+
+
+
+
+<section id="clusters">
+<h3>Consonant clusters</h3>
+
+<p>With one exception, consonant clusters are managed by using a normal syllabic character but ignoring the ('dummy') vowel, eg. <span class="eg" lang="chr">ᎦᎵᏉᎩ</span>  <span class="eg" lang="chr">ᎬᏙᎠ</span> The character chosen is largely up to the writer, but some words bring in etymological connections.</p>
+
+<p>The exception is <span class="codepoint"><span lang="chr">&#x13CD;</span> <a href="/scripts/cherokee/block#char13CD">[<span class="uname">U+13CD CHEROKEE LETTER S</span>]</a></span>, which is not followed by a vowel,<tt>d</tt> eg. <span class="eg" lang="chr">ᏍᎪᎯ</span></p>
+</section>
+
+
+
+
+    
+<section id="ssV">
+<h3>ssV sequences</h3>
+
+<p>Some manuscripts precede syllables beginning with an <span class="ipa">s</span> sound with <span class="codepoint"><span lang="chr">&#x13CD;</span> <a href="/scripts/cherokee/block#char13CD">[<span class="uname">U+13CD CHEROKEE LETTER S</span>]</a></span>, and Sequoyah spelled his name like that, ie. <span class="charExample" translate="no"><span class="ex" lang="chr">ᏍᏏᏉᏯ</span> <span class="trans">s-si-qo-ya</span></span></p>
 </section>
 
 
@@ -498,76 +843,17 @@ alveolar</th>
 
 <section id="cs">
 <h3>Case</h3>
-    <p>Lowercase characters were introduced in Unicode 8.0, to cover growing use of bicameral content in modern typesetting, as well as some older texts such as the Cherokee New Testament. The lowercase text above is likely to be displayed as tofu (boxes), since it is currently difficult to find a font that includes lowercase forms.</p>
-    <p>It is unusual for the majority of content to be in uppercase, and for lowercase to come in later, and implementers may need to take care in introducing the new characters. For example, Cherokee case-folds to uppercase, rather than lower. For more details see the <a href="http://www.unicode.org/versions/latest/ch20.pdf" target="_blank">Unicode Standard</a>.<tt>u</tt></p>
-    <p> The shapes of the upper- vs. lower-cased letters don't change radically (as they do in Latin or Cyrillic). The lowercase letters are often simply smaller, however they may have ascenders and descenders in some fonts<tt>e,5</tt>.</p>
-    <figure>
-    <p class="large"><span lang="chr" class="ex">ᎤᎾᏕᏅᎢ</span>&nbsp;vs.&nbsp;<span lang="chr" class="ex">Ꭴꮎꮥꮕꭲ</span></p>
-    <figcaption>Traditional uppercase text (left) and the newer mixed case text (right).</figcaption>
-    </figure>
-  </section>
 
+<p>Lowercase characters were introduced in Unicode 8.0, to cover growing use of bicameral content in modern typesetting, as well as some older texts such as the Cherokee New Testament. The lowercase text above is likely to be displayed as tofu (boxes), since it is currently difficult to find a font that includes lowercase forms.</p>
 
+<p>It is unusual for the majority of content to be in uppercase, and for lowercase to come in later, and implementers may need to take care in introducing the new characters. For example, Cherokee case-folds to uppercase, rather than lower. For more details see the <a href="http://www.unicode.org/versions/latest/ch20.pdf" target="_blank">Unicode Standard</a>.<tt>u</tt></p>
 
+<p> The shapes of the upper- vs. lower-cased letters don't change radically (as they do in Latin or Cyrillic). The lowercase letters are often simply smaller, however they may have ascenders and descenders in some fonts<tt>e,5</tt>.</p>
 
-
-
-<section id="vowel_chars">
-<h3>'Vowel' characters</h3>
-
-<figure class="characterBox auto bicameral" data-cols="ipa,trans">Ꭰꭰ␣Ꭱꭱ␣Ꭲꭲ␣Ꭳꭳ␣Ꭴꭴ␣Ꭵꭵ</figure>
-
-<p>The six vowel characters, when they appear at the start of a word represent plain vowel sounds, eg. <span class="eg" lang="chr">ᎠᎹ</span></p>
-<p>Elsewhere they represent a syllable starting with <span class="ipa">ʔ</span>,<tt>d</tt> eg. <span class="eg" lang="chr">ᎯᎠ</span></p>
-
-
-
-
-
-<section id="vowel_length">
-<h4>Vowel length and tone</h4>
-<p>The vowel in a CV syllable doesn't distinguish between short and long vowel sounds, nor does it indicate tonal values, eg. the following sequence of Cherokee characters represents two different words, each having different lengths and tones (low vs. high, respectively)<tt>d</tt>:
-<span class="eg" lang="chr">ᎠᎹ</span>
-</p>
-</section>
-</section>
-
-
-
-
-
-<section id="clusters">
-<h3>Consonant clusters</h3>
-<p>With one exception, consonant clusters are managed by using a normal syllabic character but ignoring the ('dummy') vowel, eg. <span class="eg" lang="chr">ᎦᎵᏉᎩ</span>  <span class="eg" lang="chr">ᎬᏙᎠ</span> The character chosen is largely up to the writer, but some words bring in etymological connections.</p>
-<p>The exception is <span class="codepoint"><span lang="chr">&#x13CD;</span> <a href="/scripts/cherokee/block#char13CD">[<span class="uname">U+13CD CHEROKEE LETTER S</span>]</a></span>, which is not followed by a vowel,<tt>d</tt> eg. <span class="eg" lang="chr">ᏍᎪᎯ</span></p>
-</section>
-    
-    
-    
-    
-    <section id="aspiration">
-<h3>Syllable initial aspiration</h3>
-    <p>Only 6 syllable pairs distinguish between aspirated and non-aspirated sounds at the start of a syllable.</p>
-    <p>Only one nasal syllable makes this distinction, ie. compare <span class="eg" lang="chr">ᎬᎾ</span>  <span class="eg" lang="chr">ᎬᎿ</span></p>
-<p>However, the following could be either <span class="ipa">kə̃ːniha</span> <span class="meaning">I'm striking it</span> or <span class="ipa">kə̃ːhniha</span> <span class="trans">gv-ni-ha</span> <span class="meaning">she's striking it</span>.<span class="charExample" translate="no"><span class="ex" lang="chr">ᎬᏂᎭ</span> <span class="trans">gv-ni-ha</span></span></p>
-    <p>There are five pairs of characters that make this distinction for stops or affricates: <span class="ex" lang="chr">Ꭶ+Ꭷ, Ꮣ+Ꮤ, Ꮥ+Ꮦ, Ꮧ+Ꮨ, Ꮬ+Ꮭ</span>. For example, it is possible to distinguish between the first two syllables of <span class="eg" lang="chr">ᎧᎦᎵ</span> but not<tt>d</tt> between the two meanings of <span class="charExample" translate="no"><span class="ex" lang="chr">ᎪᎳ</span> <span class="trans">go-la</span></span>ie. <span class="ipa">koːla</span> <span class="meaning">winter</span>  <span class="ipa">kʰoːla</span> <span class="meaning">bone</span>.</p>
-    </section>
-    
-    
-    <section id="ssV">
-<h3>ssV sequences</h3>
-    <p>Some manuscripts precede syllables beginning with an <span class="ipa">s</span> sound with <span class="codepoint"><span lang="chr">&#x13CD;</span> <a href="/scripts/cherokee/block#char13CD">[<span class="uname">U+13CD CHEROKEE LETTER S</span>]</a></span>, and Sequoyah spelled his name like that, ie. <span class="charExample" translate="no"><span class="ex" lang="chr">ᏍᏏᏉᏯ</span> <span class="trans">s-si-qo-ya</span></span></p>
-  </section>
-
-
-
-
-
-<section id="syllable_final">
-<h3>Syllable final consonants</h3>
-<p>Each character may not only end with a vowel, but may also end with <span class="ipa">ʔ</span> or <span class="ipa">h</span>, eg. <span class="eg" lang="chr">ᏑᏗ</span>  <span class="eg" lang="chr">ᏔᎵ</span> are written with just two characters.</p>
-<p>There is one distinctive pair related to syllables ending with h, ie. compare: <span class="charExample"><span class="ex" lang="chr">Ꮎ</span> <span class="ipa">na</span></span>  <span class="charExample"><span class="ex" lang="chr">Ꮐ</span> <span class="ipa">nah</span></span></p>
-<p>Syllables that end with an <span class="ipa">s</span> sound can be written using <span class="codepoint"><span lang="chr">&#x13CD;</span> <a href="/scripts/cherokee/block#char13CD">[<span class="uname">U+13CD CHEROKEE LETTER S</span>]</a></span>, eg. <span class="eg" lang="chr">ᎯᏴᏫᏯᏍ</span></p>
+<figure>
+<p class="large"><span lang="chr" class="ex">ᎤᎾᏕᏅᎢ</span>&nbsp;vs.&nbsp;<span lang="chr" class="ex">Ꭴꮎꮥꮕꭲ</span></p>
+<figcaption>Traditional uppercase text (left) and the newer mixed case text (right).</figcaption>
+</figure>
 </section>
 
 
@@ -592,7 +878,7 @@ alveolar</th>
 
 
 
-<section id="tones">
+<section id="tonemarks">
 <h3>Tones</h3>
 <p>Spoken Cherokee has tones, but they are not shown in the text.<tt>u</tt></p>
 <p>Linguists who want to show tones do so using standard allocations of combining characters.<a class="ref" href="http://www.omniglot.com/writing/cherokee.htm"></a> The following list shows diacritics used to express tones. (Mid is the default, and doesn't need marking.)<tt>e,5</tt></p>
@@ -694,8 +980,11 @@ alveolar</th>
 
 
 
-  <section id="phrase">
+<section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
+
+<figure class="characterBox auto small" data-cols="">,␣;␣:␣.␣?␣!</figure>
+
 <table class="character_list">
 <tbody>
 <tr>
@@ -722,6 +1011,9 @@ alveolar</th>
 
 <section id="bracketing">
 <h3>Parentheses &amp; brackets</h3>
+
+<figure class="characterBox auto small" data-cols="">(␣)</figure>
+
 <table class="character_list">
 <thead>
 <tr>
@@ -746,6 +1038,9 @@ alveolar</th>
   
 <section id="quotations">
 <h3>Quotations</h3>
+
+<figure class="characterBox auto small" data-cols="">“␣”␣‘␣’</figure>
+
 <table class="character_list">
 <thead>
 <tr>
@@ -967,7 +1262,8 @@ alveolar</th>
 
 <section id="languages">
 <h2>Languages using the Cherokee script</h2>
-<p>According to ScriptSource, the Cherokee script is only used for the Cherokee [chr] language. </p>
+
+<p>According to ScriptSource, the Cherokee script is only used for the Cherokee [chr] language.</p>
 </section>
 
 

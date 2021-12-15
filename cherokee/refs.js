@@ -15,10 +15,29 @@ reflist = {
 "title":"Revised proposal for the addition of Cherokee characters to the UCS",
 },
 
+"ma": {
+"authors": "Brad Montgomery-Anderson",
+"title":"A reference grammar of Oklahoma Cherokee",
+"date": "2008",
+"publisher":"PhD dissertation",
+"url":"https://kuscholarworks.ku.edu/bitstream/handle/1808/4212/umi-ku-2613_1.pdf",
+"reviewed":false
+},
+
 "o": {
 "url":"http://www.omniglot.com/writing/cherokee.htm",
 "authors": "Omniglot",
 "title":"Cherokee",
+},
+
+"pr": {
+"authors": "Margaret Peake Raymond",
+"title":"The Cherokee Nation and its Language",
+"sub": "tsalagi ayeli ale uniwonishisdi",
+"date": "2008",
+"retr": "Dec 2021",
+"url":"https://carla.umn.edu/conferences/past/immersion2008/documents/Peter_L_CherokeeNation.pdf",
+"reviewed":false
 },
 
 "s": {
@@ -36,6 +55,18 @@ reflist = {
 "isbn":"978-1-936213-16-0.",
 },
 
+
+"uh": {
+"authors": "Uchihara, Hiroto",
+"title":"Cherokee Phonology and Verb Morphology",
+"date": "2007",
+"retr": "Dec 2021",
+"publisher":"University of Tokyo, MA Thesis",
+"url":"https://www.academia.edu/3884316/Cherokee_Phonology_and_Verb_Morphology",
+"reviewed":false
+},
+
+
 "ul": {
 "url":"https://www.unicode.org/reports/tr14/",
 "authors": "Unicode Consortium",
@@ -52,5 +83,19 @@ reflist = {
 
 }
 
-
+/*
+"auth_initials": {
+"authors": "Sort_by_family_name_of_first_contributor",
+"title":"The_Worlds_Writing_Systems",
+"sub": "subtitle",
+"date": "1996",
+"retr": "May 2021",
+"publisher":"Oxford_University_Press",
+"isbn":"0-19-507993-0",
+"pages": "xxx",
+"url":"refs",
+"lang": new Set(['ru']),
+"reviewed":false
+},
+*/
 
