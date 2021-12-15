@@ -43,4 +43,13 @@ reflist = {
 
 
 
-// <a class="fn">ws,#tones</a>
+
+scriptLanguageList = {
+khb:{name:"Lü"},
+}
+
+
+
+
+
+
