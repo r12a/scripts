@@ -84,4 +84,46 @@ reflist = {
 
 
 
-// <a class="fn">ws,#tones</a>
+
+scriptLanguageList = {
+adi:{name:"Adi"},
+adx:{name:"Tibetan, Amdo"},
+bft:{name:"Balti"},
+kjz:{name:"Bumthangkha"},
+cna:{name:"Changthang"},
+dre:{name:"Dolpo"},
+dzo:{name:"Dzongkha"},
+taj:{name:"Tamang, Eastern"},
+bfu:{name:"Gahri"},
+khk:{name:"Mongolian, Halh"},
+clk:{name:"Idu-Mishmi"},
+jya:{name:"Jiarong"},
+kbg:{name:"Khamba"},
+khg:{name:"Tibetan, Khams"},
+xkf:{name:"Khengkha"},
+xkz:{name:"Kurtokha"},
+lbj:{name:"Ladakhi"},
+lep:{name:"Lepcha"},
+loy:{name:"Loke"},
+nmm:{name:"Manangba"},
+muk:{name:"Mugom"},
+otb:{name:"Tibetan, Old"},
+lae:{name:"Pattani"},
+prx:{name:"Purik"},
+xsr:{name:"Sherpa"},
+sip:{name:"Sikkimese"},
+spt:{name:"Bhoti, Spiti"},
+sbu:{name:"Bhoti, Stod"},
+bod:{name:"Tibetan"},
+lbf:{name:"Tinani"},
+tsj:{name:"Tshangla"},
+ola:{name:"Walungge"},
+tdg:{name:"Tamang, Western"},
+zau:{name:"Zangskari"},
+}
+
+
+
+
+
+
