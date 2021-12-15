@@ -74,3 +74,35 @@ reflist = {
 
 
 
+
+scriptLanguageList = {
+wsg:{name:"Gondi, Adilabad"},
+ort:{name:"Oriya, Adivasi"},
+cde:{name:"Chenchu"},
+gon:{name:"Gondi"},
+hoc:{name:"Ho"},
+kfc:{name:"Konda-Dora"},
+kff:{name:"Koya"},
+key:{name:"Kupia"},
+lmn:{name:"Lambadi"},
+mju:{name:"Manna-Dora"},
+zrg:{name:"Mirgan"},
+gau:{name:"Gadaba, Mudhili"},
+pcj:{name:"Parenga"},
+gdb:{name:"Gadaba, Pottangi Ollar"},
+saz:{name:"Saurashtra"},
+srb:{name:"Sora"},
+nit:{name:"Kolami, Southeastern"},
+tel:{name:"Telugu"},
+wbq:{name:"Waddar"},
+yeu:{name:"Yerukula"},
+}
+
+
+
+
+
+
+
+
+
