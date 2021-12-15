@@ -1,291 +1,522 @@
-/*
-@ Source: https://en.wiktionary.org/wiki/Appendix:Sinhalese_Swadesh_list
-§ 'Noto Serif Sinhala'
-# 200
-~ ltr
-! si
-*/
 
 
 autoExpandExamples.si = `
 
 
-
+අංක||
+අක්මාව|liver|akmāwa
+අක්‍කා||
+අකුර||
+අඟ|horn|aⁿga
+අට||
+අඩුව පවතිනවා||
 අණ්ඩ|egg|aɳɖa
+අණ්ඩය|egg|aṇḍaya
+අණුව||
 අඬ|sound|aⁿɖa
-ක්‍ය්‍ර|Kyra
-කාර්‍ය්‍යාලය|the office
-ඤාණ|Jnana|(ɲāna)
-ඥාන|knowledge|(ᵑǰāṅa)
-සිංහල|Sinhala|siŋhala
-
-මම|I (1sg)|mama
-මං|I (1sg)|maṁ
-ඔයා|you (2sg)(neutral)|oyā
-ඔහේ|you (2sg)(dial. neutral)|ohē
+අත|hand|ata
+අතන|there (emphatic)|atana
+අත්අඩංගුවට||
+අතුල්ලනවා|to rub|atullanawā
+අදිනවා|to pull|adinawā
+අන්ත්‍රාව||
+අප්පොච්චි|father|appocci
+අපි|we (1pl)|api
+අපිරිසිදු|dirty|apirisidu
+අම්මා|mother|ammā
+අම්ලකර||
+අය්‍යා||
+අයිස්||
+අයු කල්||
+අයු||
+අර|that (distal, gender neutral)|ara
+අරයා|he, she, it (3sg)(distal, gender neutral)|arayā
+අරයාලා|they (3pl)(distal, gender neutral)|arayālā
+අරහේ|there|arahē
+අර්‍තාපල්||
+අල්ලනවා|to hold|allanawā
+අලියා||
+අලුත්|new|alut
+අවියක්||
+අවුරුද්ද|year|awurudda
+අවුරුද්‍ද||
+අශ්වය||
+අසල|near|asala
+අස්ථි||
+අහස|sky|ahasa
+අළු||
+ආන්ද්ර ප්රදේශ්||
+ආයුබෝවන්||
+ආරෝග්‍යශාලා||
+ආලෝකය||
+ආවරණය||
+ඇඟිල්‍ල||
+ඇතැම්|other, some|ætæm
+ඇපල්||
+ඇවිදිනවා|to walk|æwidinawā
+ඇස|eye|æsa
+ඇහෙනවා|to hear|æhenawā
+ඉංග්‍රීසි||
+ඉගිලෙනවා|to fly|igilenawā
+ඉදිමෙනවා|to swell|idimenawā
+ඉදිරිය||
+ඉන්දියාව||
+ඉඳගන්නවා|to sit|iⁿdagannawā
+ඉර||
+ඉරු|sun|iru
+ඉස|head|isa
+උකුණා|snake, louse|ukuṇā
+උණුසුම්|warm|uṇusum
 උඹ|you (2sg)(informal)|uᵐba
-තමුසේ|you (2sg)(informal)|tamusē
-තෝ|you (2sg)(derogatory)|tō
-නුඹ|you (2sg)(honorific)|nuᵐba
+උඹලා|you (2pl)(informal)|uᵐbalā
+උරනවා|to suck|uranawā
+එක|one|eka
+එතන|there (emphatic)|etana
+එනවා|to come|enawā
+එයා|he, she, it (3sg)(anaphoric, gender neutral)|eyā
+එයාලා|they (3pl)(distal/anaphoric, gender neutral)|eyālā
+එල||
+එහේ|there|ehē
+ඒ|that(distal/anaphoric, gender neutral)|ē
+ඔක්කොම|all|okkoma
+ඔටුවා||
 ඔබ|you (2sg)(formal)|oba
 ඔබතුමා|you (2sg)(high-level honorific)|obatumā
-එයා|he, she, it (3sg)(anaphoric, gender neutral)|eyā
-අරයා|he, she, it (3sg)(distal, gender neutral)|arayā
-මෙයා|he, she, it (3sg)(proximal, gender neutral)|meyā
-ඔහු|he, she, it (3sg)|ohu
-අපි|we (1pl)|api
-ඔයාලා|you (2pl)(neutral)|oyālā
-ඔහේලා|you (2pl)(dial. neutral)|ohēlā
-උඹලා|you (2pl)(informal)|uᵐbalā
-තමුසේලා|you (2pl)(informal)|tamusēlā
-තොපි|you (2pl)(derogatory)|topi
-නුඹලා|you (2pl)(honorific)|nuᵐbalā
-ඔබලා|you (2pl)(formal)|obalā
 ඔබතුමාලා|you (2pl)(high-level honorific)|obatumālā
-එයාලා|they (3pl)(distal/anaphoric, gender neutral)|eyālā
-අරයාලා|they (3pl)(distal, gender neutral)|arayālā
-මෙයාලා|they (3pl)(proximal, gender neutral)|meyālā
+ඔබලා|you (2pl)(formal)|obalā
+ඔය|river|oya
+ඔයා|you s. neutral|oyā
+ඔයාලා|you s. neutral|oyālā
+ඔලුව|head|oluwa
 ඔව්හු|they (3pl)|owhu
 ඔවුන්|they (3pl)|owun
-මේ|this (speaker proximal, gender-neutral)|mē
-ඒ|that(distal/anaphoric, gender neutral)|ē
-අර|that (distal, gender neutral)|ara
-ඔය|that (addressee proximal, gender-neutral)|oya
-මෙහේ|here|mehē
-මෙතන|here (emphatic)|metana
-එහේ|there|ehē
-එතන|there (emphatic)|etana
-අරහේ|there|arahē
-අතන|there (emphatic)|atana
-කවුරු|who|kawuru
-මොනවා|what|monawā
-මොක|what|moka 
-කොහේ|where|kohē
-කොතන|where (emphatic)|kotana
-කවදා|when|kawadā 
-කීයට|when|kīyaṭa 
-කොහොම|how|kohoma
-නැහැ|not|næhæ
-නො-|not|no-
-හැම|all|hæma
-ඔක්කොම|all|okkoma
-ගොඩක්|many|goḍak
-බොහොම|many|bohoma
-ඇතැම්|some|ætæm
-ටිකක්|few|ṭikak
-ඇතැම්|other|ætæm
-එක|one|eka
-දෙක|two|deka
-තුන|three|tuna
-හතර|four|hatara
-පහ|five|paha
-ලොකු|big|loku
-දිග|long|diga
-පුළුල්|wide|puḷul
-ගන|thick|gana
-බර|heavy|bara
-පුංචි|small|puṁci
-කුඩා|small|kuḍā
-කෙටි|short|keṭi
-පටුයි|narrow|paṭuyi
-සිහින්|thin|sihin
-ගෑනි|woman|gǣni
-පිරිමියා|man (adult male)|pirimiyā
-මිනිහා|man (human being)|minihā
-ළමයා|child|ḷamayā
-නෝනා|wife|nōnā
-මහත්තයා|husband|mahattayā
-මව|mother|mawa
-අම්මා|mother|ammā
-පිය|father|piya
-තාත්තා|father|tāttā
-අප්පොච්චි|father|appocci
-සතා|animal|satā
-මාලුව|fish|māluwa
-කුරුල්ලා|bird|kurullā
-බල්ලා|dog|ballā
-උකුණා|louse|ukuṇā
-උකුණා|snake|ukuṇā
-ක්‍රිමියාව|worm|krimiyāwa
-පණුවා|worm| paṇuwā
-ගස|tree|gasa
-වන|forest|wana
-කෝටුව|stick|kōṭuwa
-පලතුරු|fruit|palaturu
-බීජ|seed|bīja
-කොළේ|leaf|koḷē
-මුල|root|mula
-පොතු|bark (of a tree)|potu
-මල්|flower|mal
-තණකොළ|grass|taṇakoḷa
-කඹය|rope|kaᵐbaya
-හම්|skin|ham
-මස්|meat|mas
-ලේ|blood|lē
-කටු|bone|kaṭu
-මේද|fat (noun)|mēda
-බිත්තරය|egg|bittaraya
-අණ්ඩය|egg|aṇḍaya
-අඟ|horn|aⁿga
-වලිගය|tail|waligaya
-පිහාටු|feather|pihāṭu
-කෙස්|hair|kes
-කොණ්ඩය|hair|koṇḍaya
-ඔලුව|head|oluwa
-ඉස|head|isa
-කන|ear|kana
-ඇස|eye|æsa
-නහය|nose|nahaya
+ඔවුහු||
+ඔහු|he, she, it (3sg)|ohu
+ඔහේ|you (2sg)(dial. neutral)|ohē
+ඔහේලා|you (2pl)(dial. neutral)|ohēlā
+ඕස්ට්‍රේලියාව||
+කකුල|foot, leg|kakula
 කට|mouth|kaṭa
-දත|tooth|data
-දිව|tongue (organ)|diwa
-නියපොතු|fingernail|niyapotu
-පය|foot|paya
-කකුල|foot|kakula
-කකුල|leg|kakula
-දන හිස|knee|dana hisa
-අත|hand|ata
-පියාපත්|wing|piyāpat
-බඩ|belly|baḍa
-පිට|guts|piṭa
-බෙල්ල|neck|bella
-පස්ස|back|passa
-තනේ|breast|tanē
-පියයුරුව|breast|piyayuruwa
-හදවත|heart|hadawata
-හිත|heart|hita
-ළය|heart|ḷaya
-අක්මාව|liver|akmāwa
-බොනවා|to drink|bonawā
-කනවා|to eat|kanawā
-රිදවනවා|to bite|ridawanawā
-උරනවා|to suck|uranawā
-කෙළගහනවා|to spit|keḷagahanawā
-වමනෙ යනවා|to vomit|wamane yanawā
-තප්පුලනවා|to blow|tappulanawā
-හමනවා|to breathe|hamanawā
-හිනාවෙනවා|to laugh|hināwenawā
-දකිනවා|to see|dakinawā
-බලනවා|to see|balanawā
-ඇහෙනවා|to hear|æhenawā
-දන්නවා|to know|dannawā
-හිතනවා|to think|hitanawā
-නිදනවා|to smell|nidanawā
-තැතිගන්නවා|to fear|tætigannawā
-නිදා ගන්නවා|to sleep|nidā gannawā
-නිදනවා|to sleep|nidanawā
-ජීවත් වෙනවා|to live|jīwat wenawā
-සිටිනවා|to live|siṭinawā
-මැරෙනවා|to die|mærenawā
-මියනවා|to die|miyanawā
-මිය යනවා|to die|miya yanawā
-මරනවා|to kill|maranawā
-සටන් කරන්න|to fight|saṭan karanna
-දඩයම් කරනවා|to hunt|daḍayam karanawā
-ගහනවා|to hit|gahanawā
-කපනවා|to cut|kapanawā
-බෙදා ගන්නවා|to split|bedā gannawā
-පිහියකින් අනිනවා|to stab|pihiyakin aninawā
-සූරනවා|to scratch|sūranawā
+කටු|bone|kaṭu
 කණිනවා|to dig|kaṇinawā
-පිහිනනවා|to swim|pihinanawā
-ඉගිලෙනවා|to fly|igilenawā
-පියඹනවා|to fly|piyaᵐbanawā
-ඇවිදිනවා|to walk|æwidinawā
-එනවා|to come|enawā
-වැතිරෙනවා|to lie (as in a bed)|wætirenawā
-ඉඳගන්නවා|to sit|iⁿdagannawā
-සිටිනවා|to stand|siṭinawā
-කැරකැවෙනවා|to turn (intransitive)|kærakæwenawā
-වැටෙනවා|to fall|wæṭenawā
-දෙනවා|to give|denawā
-අල්ලනවා|to hold|allanawā
-මිරිකනවා|to squeeze|mirikanawā
-අතුල්ලනවා|to rub|atullanawā
-සෝදනවා|to wash|sōdanawā
-පිසනවා|to wipe|pisanawā
-අදිනවා|to pull|adinawā
-තල්ලුව|to push|talluwa
-වීසි කරනවා|to throw|wīsi karanawā
-ගැට ගසනවා|to tie|gæṭa gasanawā
-මහනවා|to sew|mahanawā
-ගණිනවා|to count|gaṇinawā
-කියනවා|to say|kiyanawā
-පවසනවා|to say|pawasanawā
 කතා කරනවා|to say|katā karanawā
-ගයනවා|to sing|gayanawā
-සෙල්ලම් කරනවා|to play|sellam karanawā
-පාවෙනවා|to float|pāwenawā
-ගලනවා|to flow|galanawā
+කතුර||
+කන|ear|kana
+කනවා|to eat|kanawā
+කන්ද|mountain|kanda
+කපනවා|to cut|kapanawā
+කඹය|rope|kaᵐbaya
+කරත්තය||
+කරනවා||
+කල්මීකියා||
+කවදා|when|kawadā 
+කවුරු|who|kawuru
+කහ|yellow|kaha
+කළු|black|kaḷu
+ක්‍ය්‍ර|Kyra
+ක්‍රිමියාව|worm|krimiyāwa
+ක්‍රොඒෂියාව||
+කාමරංගා||
+කාමරය||
+කාර්‍ය්‍යාලය|the office
+කාලගුණ||
 කැටි කරනවා|to freeze|kæṭi karanawā
-ඉදිමෙනවා|to swell|idimenawā
-ඉරු|sun|iru
-හඳ|moon|haⁿda
-තරු|star|taru
-වතුර|water|watura
-වැස්ස|rain|wæssa
+කැන්බරා||
+කැරකැවෙනවා|to turn (intransitive)|kærakæwenawā
+කියනවා|to say|kiyanawā
+කිරි||
+කීයට|when|kīyaṭa 
+කුඩා|small|kuḍā
+කුරුල්ලා|bird|kurullā
+කුරුල්‍ලා||
+කුලුණ||
+කෙටි|short|keṭi
+කෙස්|hair|kes
+කෙසෙල්||
+කෙළගහනවා|to spit|keḷagahanawā
+කෙළින්|straight|keḷin
+කේරළ||
+කොණ්ඩය|hair|koṇḍaya
+කොතන|where (emphatic)|kotana
+කොරියාව||
+කොස්ස||
+කොහේ|where|kohē
+කොහොම|how|kohoma
+කොහොමද||
+කොළ|green|koḷa
+කොළඹ||
+කොළේ|leaf|koḷē
+කෝටුව|stick|kōṭuwa
+කෝපි||
 ගඟ|river|gaⁿga
-ඔය|river|oya
-විල|lake|wila
-මුහුදු|sea|muhudu
-සයුර|sea|sayura
-ලුණු|salt|luṇu
+ගණිනවා|to count|gaṇinawā
+ගන|thick|gana
+ගම||
+ගමරාළ||
+ගයනවා|to sing|gayanawā
 ගල|stone|gala
-වැලි|sand|wæli
+ගලනවා|to flow|galanawā
+ගස|tree|gasa
+ගස්||
+ගහනවා|to hit|gahanawā
+ග්‍රහලෝක||
+ගාල්ල||
+ගැට ගසනවා|to tie|gæṭa gasanawā
+ගෑනි|woman|gǣni
+ගිටාරය||
+ගිතෙල්||
+ගින්දර||
+ගින්‍න||
+ගිනි අවියක්||
+ගිනි|fire|gini
+ගිරි|mountain|giri
+ගුවන් යානයක්||
+ගූ||
+ගූථ||
+ගෙන්දගම්||
+ගෙය||
+ගොටුකොල||
+ගොඩක්|many|goḍak
+චතුරිකා||
+චර්‍මය||
+චරිතය||
+චීන||
+චීනය||
+ජනේලය||
+ජලය||
+ජීවත් වෙනවා|to live|jīwat wenawā
+ජීවය||
+ජීවිතය||
+ඤාණ|Jnana|(ɲāna)
+ඥාන|knowledge|(ᵑǰāṅa)
+ටිකක්|few|ṭikak
+ඪාකා||
+තණකොළ|grass|taṇakoḷa
+තත්පරය||
+තනේ|breast|tanē
+තප්පුලනවා|to blow|tappulanawā
+තමුසේ|you (2sg)(informal)|tamusē
+තමුසේලා|you (2pl)(informal)|tamusēlā
+තරු|star|taru
+තරුණ||
+තරුව||
+තල්ලුව|to push|talluwa
+තාත්තා|father|tāttā
+තැතිගන්නවා|to fear|tætigannawā
+තියුණු|sharp (as a knife)|tiyuṇu
+තිරුවනංතපුරම්||
+තුන|three|tuna
+තුළ|in|tuḷa
+තෙත්|wet|tet
+තේ||
+තොපි|you (2pl)(derogatory)|topi
+තෝ|you (2sg)(derogatory)|tō
+දකිනවා|to see|dakinawā
+දකුණු|right|dakuṇu
+දඩයම් කරනවා|to hunt|daḍayam karanawā
+දණ||
+දණහිස||
+දත|tooth|data
+දන හිස|knee|dana hisa
+දන්නවා|to know|dannawā
+දවස|day|dawasa
+දහය||
+දහස||
+දා|day|dā
+දැන්||
+දැව||
+දිග|long|diga
+දිල්ලිය||
+දිව|tongue (organ)|diwa
+දිවයින||
+දිවුල්||
+දුම|smoke|duma
+දුර|far|dura
+දුව||
+දූවිල්ල||
+දෙක|two|deka
+දෙනවා|to give|denawā
+දෙවියා||
+දේවදූතයා||
+දොර||
+නං|if|naṁ
+නංගි||
+නගරය||
+නදිය||
+නම|name|nama
+නමය||
+නම්|if|nam
+නරක|bad|naraka
+නව දිල්ලිය||
+නවය||
+නහය|nose|nahaya
+නැහැ|not|næhæ
+නිදනවා|to sleep|nidanawā
+නිදා ගන්නවා|to sleep|nidā gannawā
+නියපොතු|fingernail|niyapotu
+නිල්||
+නිවැරදි|correct|niwæradi
+නිසා|because|nisā
+නිළි||
+නුඹ|you (2sg)(honorific)|nuᵐba
+නුඹලා|you (2pl)(honorific)|nuᵐbalā
+නො-|not|no-
+නෝනා|wife|nōnā
+පටුයි|narrow|paṭuyi
+පණුවා|worm| paṇuwā
+පය|foot|paya
+පරණ|old|paraṇa
+පලතුරු|fruit|palaturu
+පවසනවා|to say|pawasanawā
 පස|dust|pasa
-බිම|earth|bima
+පස්ස|back|passa
+පහ|five|paha
+පළවෙනි||
+ප්‍රභාසංශ්ලේෂණය||
+පාන්||
+පාර|road|pāra
+පාවෙනවා|to float|pāwenawā
+පැය||
+පැරිස්||
+පෑන||
+පිට|guts|piṭa
+පිය|father|piya
+පියඹනවා|to fly|piyaᵐbanawā
+පියයුරුව|breast|piyayuruwa
+පියාපත්|wing|piyāpat
+පිරිමියා|man (adult male)|pirimiyā
+පිසනවා|to wipe|pisanawā
+පිහාටු|feather|pihāṭu
+පිහිනනවා|to swim|pihinanawā
+පිහියකින් අනිනවා|to stab|pihiyakin aninawā
+පුංචි|small|puṁci
+පුක||
+පුච්චනවා|to burn|puccanawā
+පුතා||
+පුර|full|pura
+පුළුල්|wide|puḷul
+පූති|rotten|pūti
+පූසා||
+පොකුණ||
+පොත||
+පොතු|bark (of a tree)|potu
 පොළොව|earth|poḷowa
-වැලි|cloud|wæli
+බටහිර||
+බඩ|belly|baḍa
+බණ්ඩක්කා||
+බත්||
+බර|heavy|bara
+බලනවා|to see|balanawā
+බලය||
+බල්ලා|dog|ballā
+බළලා||
+බැංකුව||
+බිත්තරය|egg|bittaraya
+බිම|earth|bima
+බීජ|seed|bīja
+බීර||
+බෙදා ගන්නවා|to split|bedā gannawā
+බෙල්ල|neck|bella
+බෙල්ලා||
+බෙලි||
+බොනවා|to drink|bonawā
+බොහොම|many|bohoma
+බෝට්‍ටුව||
+බෝතලය||
+භාරත්||
+භාෂාව||
+මං|I (1sg)|maṁ
+මඟ|road|maⁿga
+මධු||
+මම|I (1sg)|mama
+මමම||
+මරණ||
+මරණය||
+මරනවා|to kill|maranawā
+මල්|flower|mal
+මල්‍ලි||
+මව|mother|mawa
+මස්|meat|mas
+මහත්තයා|husband|mahattayā
+මහත්මයා||
+මහනවා|to sew|mahanawā
+මහනුවර||
+මානෙල්||
+මාර්ග|ash|mārga
+මාලුව|fish|māluwa
+මාසය||
+මැරෙනවා|to die|mærenawā
+මිනිහා|man (human being)|minihā
+මිය යනවා|to die|miya yanawā
+මියනවා|to die|miyanawā
+මිරිකනවා|to squeeze|mirikanawā
+මිලියනය||
 මීදුම|fog|mīduma
-අහස|sky|ahasa
+මීයා||
+මුදල්||
+මුල|root|mula
+මුහුණ||
+මුහුද||
+මුහුදු|sea|muhudu
+මූණ||
+මෙතන|here (emphatic)|metana
+මෙයා|he, she, it (3sg)(proximal, gender neutral)|meyā
+මෙයාලා|they (3pl)(proximal, gender neutral)|meyālā
+මෙහේ|here|mehē
+මේ|this (speaker proximal, gender-neutral)|mē
+මේද|fat (noun)|mēda
+මේසය||
+මොක|what|moka 
+මොට|dull (as a knife)|moṭa
+මොනවා|what|monawā
+මොස්කව්||
+මෝටර රිය||
+යතුර||
+යතුරු පැදි||
+යුද්ධය||
+යෙරෙවාන්||
+රජ||
+රට||
+රතු|red|ratu
+රන්||
+රෑ|night|rǣ
+රිදවනවා|to bite|ridawanawā
+රුසියානු||
+රුසියාව||
+ලංකා||
+ලක්ෂය||
+ලුණු|salt|luṇu
+ලූණු||
+ලූනු||
+ලේ|blood|lē
+ලොකු මීයා||
+ලොකු|big|loku
+ලෝකය||
+වචනය||
+වටය|round|waṭaya
+වතුර|water|watura
+වන|forest|wana
+වම|left|wama
+වමනෙ යනවා|to vomit|wamane yanawā
+වයින්||
+වර්ණ||
+වලසා||
+වලිගය|tail|waligaya
+ව්‍යාජ||
+වාතය||
+වැටෙනවා|to fall|wæṭenawā
+වැතිරෙනවා|to lie (as in a bed)|wætirenawā
+වැලි|cloud, sand|wæli
+වැස්ස|rain|wæssa
+විකිපීඩියා||
+වියළි|dry|wiyaḷi
+විල|lake|wila
+විල්||
+විශාල||
+විස්ස||
+වීසි කරනවා|to throw|wīsi karanawā
+වේදනාව||
+ශ්‍රී ලංකා||
+ශ්‍රී ලංකාව||
+ශාක||
+ශීතකරණය||
+සටන් කරන්න|to fight|saṭan karanna
+සත්‍තු||
+සතා|animal|satā
+සතිය||
+සන්දේශය||
+සඳ||
+සබන්||
+සමග|with|samaga
+සමහර||
+සමාජ||
+සයුර|sea|sayura
+සර්පයා||
+සල්ෆර්||
+සහ||
+සාගරය||
+සාමය||
+සිංහල|Sinhala|siŋhala
+සිකුරාදා||
+සිඛු||
+සිගරෙට්ටුව||
+සිටිනවා|to live, stand|siṭinawā
+සිනා||
+සිනිඳු|smooth|siniⁿdu
+සියඹලා||
+සිරුර||
+සිසිල්|cold|sisil
+සිහින්|thin|sihin
+සීනි||
+සීනුව||
+සුදු|white|sudu
 සුළඟ|wind|suḷaⁿga
+සූරනවා|to scratch|sūranawā
+සෙල්ලම් කරනවා|to play|sellam karanawā
+සෝදනවා|to wash|sōdanawā
+හත||
+හතර|four|hatara
+හදවත|heart|hadawata
+හඳ|moon|haⁿda
+හමනවා|to breathe|hamanawā
+හම්|skin|ham
+හය||
+හල්මිල්ල||
+හා|and|hā
+හැන්ද||
+හැම|all|hæma
+හිත|heart|hita
+හිතනවා|to think|hitanawā
+හිනාවෙනවා|to laugh|hināwenawā
 හිම|snow|hima
 හිමකැට|ice|himakæṭa
-දුම|smoke|duma
-ගිනි|fire|gini
-මාර්ග|ash|mārga
-පුච්චනවා|to burn|puccanawā
-පාර|road|pāra
-මඟ|road|maⁿga
-කන්ද|mountain|kanda
-ගිරි|mountain|giri
-රතු|red|ratu
-කොළ|green|koḷa
-කහ|yellow|kaha
-සුදු|white|sudu
-කළු|black|kaḷu
-රෑ|night|rǣ
-දවස|day|dawasa
-දා|day|dā
-අවුරුද්ද|year|awurudda
-උණුසුම්|warm|uṇusum
-සිසිල්|cold|sisil
-පුර|full|pura
-අලුත්|new|alut
-පරණ|old|paraṇa
+හීන් ගොටුකොල||
 හොඳ|good|hoⁿda
-නරක|bad|naraka
-පූති|rotten|pūti
-අපිරිසිදු|dirty|apirisidu
-කෙළින්|straight|keḷin
-වටය|round|waṭaya
-තියුණු|sharp (as a knife)|tiyuṇu
-මොට|dull (as a knife)|moṭa
-සිනිඳු|smooth|siniⁿdu
-තෙත්|wet|tet
-වියළි|dry|wiyaḷi
-නිවැරදි|correct|niwæradi
-අසල|near|asala
-දුර|far|dura
-දකුණු|right|dakuṇu
-වම|left|wama
-තුළ|in|tuḷa
-සමග|with|samaga
-හා|and|hā
-නම්|if|nam
-නං|if|naṁ
-නිසා|because|nisā
-නම|name|nama
+ළමයා|child|ḷamayā
+ළය|heart|ḷaya
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 `
 

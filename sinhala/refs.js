@@ -56,3 +56,18 @@ reflist = {
 
 
 
+
+scriptLanguageList = {
+pli:{name:"Pali"},
+san:{name:"Sanskrit"},
+si:{name:"Sinhala"},
+}
+
+
+
+
+
+
+
+
+
