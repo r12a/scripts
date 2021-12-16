@@ -42,3 +42,17 @@ reflist = {
 
 
 
+
+
+scriptLanguageList = {
+blr:{name:"Blang"},
+tdd:{name:"Tai Nüa"},
+}
+
+
+
+
+
+
+
+
