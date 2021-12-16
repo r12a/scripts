@@ -55,3 +55,16 @@ reflist = {
 
 
 
+
+scriptLanguageList = {
+su:{name:"Sundanese"},
+}
+
+
+
+
+
+
+
+
+
