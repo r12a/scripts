@@ -7,7 +7,7 @@ reflist = {
 "c": {
 "authors": "Patrick Chew",
 "title":"Various private correspondence",
-"lang": new Set(['kkh']),
+"lang": new Set(['kkh', 'nod']),
 },
 
 "d": {
@@ -52,7 +52,7 @@ reflist = {
 "r": {
 "authors": "Richard Wordingham",
 "title":"Personal correspondence",
-"lang": new Set(['kkh']),
+"lang": new Set(['kkh', 'nod']),
 "reviewed":true
 },
 
@@ -77,4 +77,17 @@ reflist = {
 
 
 
-// <a class="fn">ws,#tones</a>
+
+
+scriptLanguageList = {
+kkh:{name:"Khün", url:"index"},
+khb:{name:"Lü"},
+nod:{name:"Northern Thai", url:"northernthai"},
+cuu:{name:"Tai Ya"},
+}
+
+
+
+
+
+

@@ -78,5 +78,52 @@ autoExpandExamples.kkh = `
 ᩑᨠ|one|eːk³
 ᪓᩠ᨴ|three times|saːm tiː
 
+ᨩ᩠ᨿᨦᨲᩩᨦ|Kentung|
+ᨻᩱ|to go||pai
+ᨽᩣᩈᩣ|language|
+ᨽᩣᩈᩣᨡ᩠ᨶᩨ|the Khün language|
+ᨾᩦ|to have|
+ᨿᩪᨶᩥᨤ᩠ᨯᩰᨯ᩼|Unicode|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 `
 

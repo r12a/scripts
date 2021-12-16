@@ -11,83 +11,221 @@
 
 autoExpandExamples.nod = `
 
+
+ᨠᩋᩯ᩠ᨶ||
 ᨠᩕᩣ᩠ᨷ|to prostrate oneself|kʰaːp
+ᨠ᩠ᩅᩣ᩠ᨦ||
+ᨠ᩠ᩅ᩶ᩣ᩠ᨦ||
+ᨠᩡᩋᩯ᩠ᨶ||
 ᨠᩢᩬᩃ᩠ᨼ᩺|golf|kɔlf
+ᨠᩣᨼᩯ||
 ᨠᩣ᩠ᨯ|market|kaːt³
 ᨠᩣ᩠ᩁ|work|kan¹
 ᨠᩥ᩠ᨶ|eat|kin¹
+ᨠᩨ||
+ᨠᩱ᩵||
 ᨡᩮᩢ᩶ᩣ|rice|kʰaw⁵
 ᨡᩮᩢ᩶ᩣᨡᩬᨦ|belongings|xo²xɔŋ
+ᨡᩮᩢ᩶ᩣᨧᩲ||
+ᨡᩱ᩵||
 ᨡ᩶ᩣ|I, me|xa᷇ː
+ᨢ᩠ᩅᨯ||
 ᨣ᩠ᩅᩣ᩠ᨿ|buffalo|kwaːj²
 ᨣᩮᩢᩤ|eldest|ko⁵
 ᨣᩴ|then|kɔː
+ᨤ᩠ᩅᩣ᩠ᨿ||
+ᨤᩢ᩠ᨶᨤᩣ᩠ᨠ||
 ᨤᩥ᩠ᨦ|you|xīŋ
+ᨤᩫ᩠ᨶ||
+ᨥᩁᩣᩅᩤᩈ||
+ᨦᩪ||
 ᨧ᩠ᨷᩪ|kiss|cuːp³
+ᨧᩮᩢ᩶ᩣ||
+ᨧᩲ||
+ᨩ᩠ᨿᨦᩁᩣ᩠ᨿ||
+ᨩ᩠ᨿᨦᩉ᩠ᨾᩲ᩵||
 ᨩᩨ᩵|to be named|cɯː⁴
+ᨩᩬᨦ||
 ᨩᩲ᩶|use|t͡ɕáj
+ᨩ᩶ᩣ᩠ᨦ||
+ᨬᩥ᩠ᨦ||
+ᨯᩣ᩠ᩅ||
+ᨯᩥ᩠ᨶ||
+ᨯᩦ||
 ᨯᩬᩢ|flower|dɔːk
 ᨯᩬᩢᩡ|flower|dɔːk³
+ᨯᩮᩥᩬᩁ||
+ᨯᩮᩬᩥᩁ||
 ᨯᩱ᩶|did|daj⁵
+ᨲᩣ᩠ᩃ||
+ᨲᩪ||
+ᨲᩮᩢ᩵ᩣ||
 ᨲ᩵ᩣ᩠ᨦ|to be different|taːŋ
 ᨲ᩵ᩣ᩠ᨦ᩻|different in my view|taːŋ taːŋ
+ᨳ᩠ᨶᩫ᩻ᩁ|path|tʰanon
 ᨳ᩠ᨶ᩻ᩫᩁ|path|tʰanon [misspelled]
 ᨳᩫ᩠ᨶ᩻ᩁ|path|tʰanon [misspelled]
-ᨳ᩠ᨶᩫ᩻ᩁ|path|tʰanon
+ᨳᩴ᩶ᩣ||
 ᨳ᩶ᩣ|wait|tʰaː⁵
+ᨳ᩶ᩣᩴ||
+ᨴ᩠ᨿᩁ||
+ᨴ᩠ᩅ᩶ᨦ||
 ᨴᩢ᩠ᨦ|all|taŋ²
+ᨴᩤ||
+ᨴᩮᩅ||
 ᨴᩱ᩠ᨿ|Thailand|tai
 ᨶᩣᩴ|lead|nam
+ᨶᩫ᩠ᨠ||
+ᨶᩴ᩶ᩣ||
+ᨶ᩶ᩣᩴ||
 ᨷᩢᨱ᩠ᨻᨷᩩᩁᩩᩇ|disciple
+ᨷᩤ᩠ᨷ||
+ᨷᩤ᩠ᨸ||
 ᨷᩴ᩵|no|bɔ̀ː
+ᨸᩖᩣ||
+ᨸᩦ||
+ᨸᩦ᩵ᨩᩩᨾ||
 ᨸᩮ᩠ᨶ|to be|pěn
+ᨹᩫ᩠ᨾ|hair||phom
 ᨻᩕᩥ᩠ᨠ|chilli
 ᨻ᩠ᩅᩢ|group|puak⁴
 ᨻᩬᩴ᩵ᨾᩯ᩵|parents|pɔː⁴mɛː⁴
 ᨻᩬ᩵ᩴ|father|pɔ̂ː
+ᨻᩮᩥ᩠᩵ᨶ||
+ᨻᩮᩬᩥ᩵ᩁ||
+ᨻᩯ᩠ᨦ||
+ᨻᩱ||
+ᨼᩢ᩠ᨶ||
 ᨼᩥᩃ᩠ᨾ᩺|film|fim²
+ᨼᩱ||
+ᨼᩱᨼ᩶ᩣ||
+ᨼ᩶ᩣ||
+ᨽᩣᩇᩣ||
+ᨽᩣᩈᩣ||
 ᨾᩢ᩠ᨠ|to like|ma᷇k
 ᨾᩢᩣ|a lot|maːk⁴
+ᨾᩣ||
+ᨾᩦ||
 ᨾᩦ᩠ᨯ|knife|mîːt
 ᨾᩧ᩠ᨦ|you|mɯ̄ŋ
+ᨾᩮᩥᩬᨦ||
+ᨾᩮᩬᩥᨦ||
+ᨾᩮᩬᩥ᩵ᩋ||
+ᨾᩯ᩠ᩅ||
 ᨾᩯ᩵|mother|mɛ̂ː
 ᨾᩳ|drunk|maw
+ᨾ᩶ᩣ||
 ᨿᩡ|do|ɲa᷇ʔ
 ᨿᩩᨦ|mosquito|ɲūŋ
+ᩀᩣ||
 ᩁᨭᩛᨷᩣ᩠ᩃ|government
+ᩁ᩠ᩅᩣ᩠ᨿᨲᩕᩦ|night||lwaithi
 ᩁᩢ|love|hak⁶
+ᩁᩢ᩠ᨠ||
+ᩁᩣ||
 ᩁᩪ᩶|to know|húː
 ᩁᩬ᩶ᩁ|hot|hɔ́ːn
+ᩁᩮᩥᩬᩋ||
+ᩁᩮᩬᩥᩋ||
 ᩃᩢ᩠ᨠ|steal|la᷇k
+ᩃᩣ||
 ᩃᩣ᩠ᨠ|drag|lâːk
 ᩃᩪᨠ|offspring|luːk⁴
 ᩃᩪᩢ|luːk⁴
+ᩃᩫ᩠ᨾ||
 ᩃᩫ᩠᩵ᨶ|run|lôn
 ᩃᩮᩢᩣ|beautiful|lāw
 ᩃᩮᩢ᩵ᩣ|tell (story)|lâw
 ᩃᩮᩢ᩶ᩣ|coop, pen|láw
+ᩃᩮᩥᩢ᩠ᨠ||
+ᩃᩮᩥᩬᨠ||
+ᩃᩮᩬᩥᨠ||
+ᩃ᩶ᩣ᩠ᨶᨶᩣ||
+ᩅ᩠ᨿᨦ||
+ᩅᩬᩴ᩶||
+ᩅᩴ᩶ᩬ||
 ᩈᨱᩛᩣ᩠ᨶ|shape
 ᩈᨳᨷᩢ᩠ᨶ‍ᩁᩣᨩᨽᩢ᩠ᨮ‍ᨩ᩠ᩀᨦ‍ᩉ᩠ᨾᩱ᩵|Chiang Mai College of Further Education
 ᩈᨻᩛ|omniscience
 ᩈ᩠ᩅ᩠ᨿ|beautiful|suai
 ᩈᩣ᩠ᨾ|three|saːm¹
+ᩈᩣᩴᨶ᩠ᨿᨦ||
 ᩈᩮᩓ᩠ᩅ᩶|already|seː¹lɛːw⁶
+ᩈᩮᩬᩥ᩵ᩋ||
+ᩉ||
+ᩉᩖᩋᩯ᩠ᨶ||
+ᩉᩖᩡᩋᩯ᩠ᨶ||
 ᩉᩖᩢᨠ|post|lǎk
 ᩉᩖᩣ᩠ᨠ|differ from others|làːk
-ᩉᩖᩣ᩠ᨠ|to differ from others|làːk
 ᩉ᩠ᨶᩧ᩵ᨦ|one|nɯɲ³
+ᩉ᩠ᨾᩣ||
+ᩉ᩠ᨾᩲ᩵||
 ᩉ᩠ᨾ᩵ᩣᩴ|eat|mam
+ᩉ᩠ᩃᩋᩯ᩠ᨶ||
+ᩉ᩠ᩃᩡᩋᩯ᩠ᨶ||
+ᩉ᩠ᩅᩫ||
+ᩉᩢ᩠ᨶ||
 ᩉᩨ᩶|give|hɯ᷇ː
+ᩉᩩᨾ||
+ᩉᩫ᩠ᩅ||
 ᩉᩮᩖᩢᩣ|sharpen|lǎw
 ᩉᩮᩖᩢ᩵ᩣ|forest|làw
 ᩉᩮᩖᩢ᩶ᩣ|liquor|la᷇w
+ᩉᩯ᩵ᩉᩯ᩠ᨶ||
 ᩉᩱ᩵|hit|hai
 ᩋᨾᩛ|mango
 ᩋᩧ᩠ᨷ|starve|ɯp²
+ᩋᩪ᩶||
+ᩋᩬᨠᩋᩴᩬ||
 ᩋᩯ᩠᩵ᩅ|travel|ʔɛ̀ːw
 ᩌᩣᩴ|sprinkle|ham
 ᩑᨠ|one|eːk³
+ᩓ||
 ᪓᩠ᨴ|three times|saːm tiː
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 `
 
