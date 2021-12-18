@@ -60,3 +60,21 @@ reflist = {
 
 
 
+
+
+scriptLanguageList = {
+abk:{name:"Abkhazian"},
+ka:{name:"Georgian", url:"index"},
+lzz:{name:"Laz"},
+xmf:{name:"Mingrelian"},
+oav:{name:"Avar, Old"},
+oss:{name:"Ossetic"},
+sva:{name:"Svan"},
+}
+
+
+
+
+
+
+
