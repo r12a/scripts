@@ -24,6 +24,21 @@ autoExpandExamples.rhg = `
 𐴀𐴞𐴏𐴃𐴞𐴌𐴞|iron (clothes)|istiɾi
 𐴇𐴥𐴠𐴚𐴒𐴝𐴌|hanger (clothes)|heŋgaɾ
 
+𐴁𐴡𐴒𐴝|egret||boga
+𐴇𐴞𐴥𐴘𐴝𐴓|jackal, fox||híiyal
+𐴉𐴟𐴌𐴝𐴕|old||furan
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 `
