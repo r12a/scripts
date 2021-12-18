@@ -23,7 +23,7 @@ reflist = {
 "title":"The World's Writing Systems",
 "publisher":"Oxford University Press",
 "isbn":"0-19-507993-0",
-"lang": new Set(['syc','aii']),
+"lang": new Set(['syr','aii']),
 "reviewed":true
 },
 
@@ -46,14 +46,14 @@ reflist = {
 "title":"Proposal to Encode Syriac in ISO/IEC 10646",
 "date":"1998",
 "url":"http://www.unicode.org/L2/L1998/98050-syriac-proposal.pdf",
-"lang": new Set(['syc','aii']),
+"lang": new Set(['syr','aii']),
 },
 
 "s": {
 "authors": "Nicholas Sims-Williams, Michael Everson",
 "title":"Proposal to add six Syriac letters for Sogdian and Persian to the UCS",
 "url":"http://www.unicode.org/L2/L2002/02132-N2422-syrian.pdf",
-"lang": new Set(['syc']),
+"lang": new Set(['syr']),
 },
 
 "u": {
@@ -63,7 +63,7 @@ reflist = {
 "pages":"390-398",
 "isbn":"978-1-936213-16-0.",
 "url":"https://www.unicode.org/versions/Unicode13.0.0/ch09.pdf",
-"lang": new Set(['syc','aii']),
+"lang": new Set(['syr','aii']),
 },
 
 "wa": {
@@ -77,21 +77,21 @@ reflist = {
 "authors": "Wikipedia",
 "title":"Bet",
 "url":"https://en.wikipedia.org/wiki/Bet_(letter)",
-"lang": new Set(['syc']),
+"lang": new Set(['syr']),
 },
 
 "wh": {
 "url":"https://en.wikipedia.org/wiki/He_(letter)",
 "authors": "Wikipedia",
 "title":"He",
-"lang": new Set(['syc']),
+"lang": new Set(['syr']),
 },
 
 "w": {
 "authors": "Wikipedia",
 "title":"Syriac alphabet",
 "url":"httphttps://en.wikipedia.org/wiki/Syriac_alphabet",
-"lang": new Set(['syc','aii']),
+"lang": new Set(['syr','aii']),
 },
 
 
@@ -99,4 +99,31 @@ reflist = {
 
 
 
-// <a class="fn">ws,#tones</a>
+
+
+
+scriptLanguageList = {
+ara:{name:"Arabic"},
+aii:{name:"Neo-Aramaic, Assyrian", url:"syrc-aii"},
+bjf:{name:"Neo-Aramaic, Barzani Jewish"},
+bhn:{name:"Neo-Aramaic, Bohtan"},
+cld:{name:"Neo-Aramaic, Chaldean"},
+syc:{name:"Syriac, Classical"},
+hrt:{name:"Hértevin"},
+tmr:{name:"Aramaic, Jewish Babylonian (ca. 200-1200 CE)"},
+kqd:{name:"Koy Sanjaq Surat"},
+lhs:{name:"Mlahsö"},
+arc:{name:"Aramaic, Official (700-300 BCE)"},
+oar:{name:"Aramaic, Old (up to 700 BCE)"},
+sam:{name:"Aramaic, Samaritan"},
+syn:{name:"Senaya"},
+sog:{name:"Sogdian"},
+syr:{name:"Syriac", url:"index"},
+tru:{name:"Turoyo", url:"syrc-tru"},
+}
+
+
+
+
+
+
