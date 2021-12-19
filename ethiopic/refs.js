@@ -90,3 +90,61 @@ reflist = {
 
 
 
+
+scriptLanguageList = {
+aiw:{name:"Aari"},
+aar:{name:"Afar"},
+alw:{name:"Alaba-K’abeena"},
+amh:{name:"Amharic", url:"index.html"},
+anu:{name:"Anuak"},
+agj:{name:"Argobba"},
+awn:{name:"Awngi"},
+bst:{name:"Basketo"},
+bcq:{name:"Bench"},
+byn:{name:"Bilin"},
+gax:{name:"Oromo, Borana-Arsi-Guji"},
+bwo:{name:"Boro (Ethiopia)"},
+bji:{name:"Burji"},
+dwr:{name:"Dawro"},
+gdl:{name:"Dirasha"},
+mdx:{name:"Dizin"},
+gmv:{name:"Gamo"},
+drs:{name:"Gedeo"},
+gez:{name:"Geez"},
+gof:{name:"Gofa"},
+guk:{name:"Gumuz"},
+hdy:{name:"Hadiyya"},
+amf:{name:"Hamer-Banna"},
+har:{name:"Harari"},
+kbr:{name:"Kafa"},
+ktb:{name:"Kambaata"},
+gru:{name:"Kistane"},
+kxc:{name:"Konso"},
+kqy:{name:"Koorete"},
+mpe:{name:"Majang"},
+mdy:{name:"Male (Ethiopia)"},
+mym:{name:"Me'en"},
+muz:{name:"Mursi"},
+orm:{name:"Oromo"},
+ahg:{name:"Qimant"},
+ssy:{name:"Saho"},
+sgw:{name:"Sebat Bet Gurage"},
+sid:{name:"Sidamo"},
+stv:{name:"Silt'e"},
+suq:{name:"Suri"},
+tig:{name:"Tigre"},
+tir:{name:"Tigrinya"},
+tir:{name:"Tigrinya"},
+gaz:{name:"Oromo, West Central"},
+wal:{name:"Wolaytta"},
+xan:{name:"Xamtanga"},
+zay:{name:"Zaysete"},
+}
+
+
+
+
+
+
+
+

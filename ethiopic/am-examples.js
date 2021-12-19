@@ -1,230 +1,997 @@
 /*
-@ Source: https://en.wiktionary.org/wiki/Appendix:Amharic_Swadesh_list
-§ 'Noto Serif Ethiopic'
-# 200
-~ ltr
-! am
+Sources: 
+https://en.wiktionary.org/wiki/Appendix:Amharic_Swadesh_list
+Wiktionary lemmas
 */
 
 autoExpandExamples.am = `
 
-ስም|name|sɨm
-አየሩ|the weather|əyyəru
-ኢትዮጵያ|Ethiopia|ʾītyōṗṗyā
+
+-ዚህ||
+-ዚች||
+-ዚያ||
+-ዚያች||
+ሀልሎ||
+ሀምሌ||
+ሀይቅ|lake||häyḳ
+ሁ||
+ሁለተኛ||
+ሁለት|two||hulät
+ሁሉ||
+ሁሉም|all||hulum
+ሃምራዊ||
+ሃርድዌር||
+ሃያ ሁለት||
+ሃያ ሰባት||
+ሃያ ስምንት||
+ሃያ ስድስት||
+ሃያ ሶስት||
+ሃያ አምስት||
+ሃያ አራት||
+ሃያ አንድ||
+ሃያ ዘጠኝ||
+ሃያ||
+ህዝብ||
+ህግ||
+ህጻን|child||həṣan
+ሆ||
+ሆድ|belly||hod
+ለስላሳ|smooth||läslasa
+ለውዝ||
+ሉል||
+ላም||
+ላባ|feather||laba
+ላይ|at||lay
+ሌሊት|night||lelit
+ሌላ|other||lela
+ሌባ||
+ሌት||
+ልምጭ|stick||ləmč̣
+ልሳን||
+ልብ|heart||ləb
+ልብስ||
+ልብን||
+ልዥ||
+ልጅ||
+ልጓም||
+ሎሚ||
+ሐሙስ||
+ሐምሌ||
+ሐሳብ||
+ሐተታ||
+ሐኪም||
+ሐያ||
+ሐዲስ||
+ሐጅስ||
+ሓምሌ||
+ሕመም||
+ሕሙም||
+ሕቅ||
+ሕባብ||
+ሕገ መንግሥት||
+ሕገ መንግስት||
+ሕግ||
+ሕፃን||
+መሄድ|to walk||mähed
+መላስ||
+መልካም፡ልደት||
+መልካም፡አዲስ፡አመት||
+መማር||
+መምታት|to hit||mämtat
+መምጣት|to come||mämṭat
+መሞት|to die||mämot
+መረብ||
+መሬት|earth||märet
+መርከብ||
+መርፌ||
+መሮጥ||
+መሳቅ|to laugh||mäsaḳ
+መስማት|to hear||mäsmat
+መስራት||
+መስታዎት||
+መስከረም||
+መስኮት||
+መስጊድ||
+መስጠት|to give||mäsṭät
+መሸጥ||
+መቀመጥ|to sit||mäḳämäṭ
+መቀስ||
+መቀዝቀዝ|to freeze||mäḳäzḳäz
+መቁረጥ|to cut||mäḳuräṭ
+መቁጠር|to count||mäḳuṭär
+መቅሠፍት||
+መቆም|to stand||mäḳom
+መቆፈር|to dig||mäḳofär
+መብላት|to eat||mäblat
+መብረር|to fly||mäbrär
+መብረቅ||
+መቦረሽ|to rub||mäboräš
+መተንፈስ|to breathe||mätänfäs
+መተኛት|to sleep||mätäñat
+መታገል|to fight||mätagäl
+መታጠፍ|to turn (intransitive)||mätaṭäf
+መትፋት|to spit||mätfat
+መቶ||
+መቼ|when||mäče
+መነኩሴ||
+መነጣጠል|to split||mänäṭaṭäl
+መነጽር||
+መናገር|to say||mänagär
+መንሳፈፍ|to float||mänsafäf
+መንበር||
+መንከስ|to bite||mänkäs
+መንደር||
+መንገድ|road||mängäd
+መንግሥት||
+መንግስት||
+መንጣፍ||
+መንፈስ|to blow||mänfäs
+መኖር|to live||mänor
+መከፈቻ||
+መኪና||
+መክፈቻ||
+መወርወር|to throw||mäwärwär
+መዉረድ|to flow||mäwuräd
+መዉደቅ|to fall||mäwudäḳ
+መዉጋት|to stab||mäwugat
+መዋኘት|to swim||mäwañät
+መዘመር|to sing||mäzämär
+መዝገበ ቃላት||
+መያዝ|to hold||mäyaz
+መይ||
+መድፍ||
+መዶሻ||
+መጀመሪያ||
+መገንባት||
+መጋቢት||
+መጋደም|to lie (as in a bed)||mägadäm
+መግቢያ||
+መግባት||
+መግዛት||
+መግደል|to kill||mägdäl
+መግፋት|to push||mägfat
+መጎተት|to pull||mägotät
+መጠበቅ||
+መጠየቅ||
+መጠጣት|to drink||mäṭäṭat
+መጠጥ||
+መጥረጊያ||
+መጥባት|to suck||mäṭbat
+መጥፎ|bad||mäṭfo
+መጫን|to squeeze||mäč̣an
+መጫወት|to play||mäč̣awät
+መጽሃፍ||
+መጽሐፍ||
+መፋቅ|to scratch||mäfaḳ
+መፍራት|to fear||mäfrat
+ሙሉ|full||mulu
+ሙሉክዬ||
+ሙስሊም||
+ሙሽራ||
+ሙቅ|warm||muḳ
+ሙት||
+ሙዝ||
+ሚስት|wife||mist
+ሚኒስትር||
+ሚያዝያ||
+ሚጥሚጣ||
+ማልቀስ||
+ማረስ||
+ማረሻ||
+ማር||
+ማርች||
+ማሰር|to tie||masär
+ማሰብ|to think||masäb
+ማስታወክ|to vomit||mastawäk
+ማሸት|to wipe||መፈተግ
+ማሽላ||
+ማሽተት|to smell||maštät
+ማቃጠል|to burn||maḳaṭäl
+ማበጥ|to swell||mabäṭ
+ማብራቅ||
 ማቴ4፥23|Matt 4:23
-
-
-
-እኔ|I (1sg)||ʾəne
-አንተ|you (2sg)||ʾäntä
-አንቺ|you (2sg)||ʾänči
+ማኅበረሰብ||
+ማኅበርተኛ||
+ማን|who||man
+ማንበብ||
+ማንኛቸው||
+ማንኛችሁ||
+ማንኛችን||
+ማንኛው||
+ማንካ||
+ማን፡ማን||
+ማክሰኞ||
+ማወቅ||
+ማዎቅ|to know||mawoḳ
+ማየት|to see||mayät
+ማደን|to hunt||madän
+ማዳመጥ||
+ማድረግ||
+ማጠብ|to wash||maṭäb
+ምላስ|tongue (organ)||məlas
+ምላሽ||
+ምርጫ||
+ምሰሶ||
+ምስል||
+ምስር||
+ምስት||
+ምስጋና||
+ምስጥ||
+ምሼት||
+ምሽት||
+ምን|what||mən
+ምንናምን||
+ምንና፡ምን||
+ምንድር||
+ምንድን||
+ምን፡ምን||
+ምክንያቱም|because||məknyatum
+ምክንያት||
+ምግብ ቤት||
+ምግብ||
+ሞተ||
+ሞት||
+ሞንጎመሪ||
+ሠላሳ||
+ሥር||
+ሥብ|fat (noun)||śəb
+ሦስት||
+ረቡ||
+ረቡዕ||
+ረዝም|long||räzm
+ረጂም||
+ሩማን||
+ሩቅ|far||ruḳ
+ሩጫ||
+ራስ||
+ራብ||
+ሬሳ||
 ርስዎ|you (2sg)||rəswo
+ርእሰ ብሔር||
+ርግብ||
+ርጥብ|wet||rəṭb
+ሮማን||
+ሮም||
+ሮም፡በአንድ፡ቀን፡አልተገነባችም||
+ሮብ||
+ሮዝ||
+ሯጭ||
+ሰላም||
+ሰላጣ||
+ሰማ||
+ሰማንያ||
+ሰማያዊ||
+ሰማይ|sky||sämay
+ሰስፋት|to sew||säsfat
+ሰበን||
+ሰባ||
+ሰባተኛ||
+ሰባት||
+ሰናፍጭ||
+ሰኔ||
+ሰንሰለት||
+ሰኞ||
+ሰዉ|man (human being)||säwu
+ሰዋሰው||
+ሰው||
+ሰውነት||
+ሰውዬ||
+ሰዓት||
+ሰይፍ||
+ሰዳ||
+ሰጎን||
+ሰፊ|wide||säfi
+ሰፕቴምበር||
+ሱሪ||
+ሱሺ||
+ሱቅ||
+ሲኒማ||
+ሲጃራ||
+ሲጋራ||
+ሳመ||
+ሳሙና||
+ሳማ||
+ሳምንት||
+ሳር|grass||sar
+ሳቀ||
+ሳቡና||
+ሳት||
+ሳንቲም||
+ሴት ልጅ||
+ሴት||
+ሴትዮ|woman||setyo
+ስለት|sharp (as a knife)||səlät
+ስልሳ||
+ስልቻ||
+ስልክ||
+ስም|name|sɨm|səm
+ስምህ፡ማን፡ነው||
+ስምሽ፡ማን፡ነው||
+ስምንተኛ||
+ስምንት||
+ስር|root||sər
+ስንዴ||
+ስኳር||
+ስድስተኛ||
+ስድስት||
+ስጋ|meat||səga
+ስጦታ||
+ስጳንያ||
+ስፖርት||
+ሶማሊ||
+ሶስተኛ||
+ሶስት|three||sost
+ሶፍትዌር||
+ሸለመ||
+ሸለቆ||
+ሸሚዝ||
+ሸረሪት||
+ሸክላ||
+ሹምብራ||
+ሻል||
+ሻይ||
+ሽላን||
+ሽል||
+ሽምብራ||
+ሽታ||
+ሽንብራ||
+ሽንት||
+ሽንት፡ቤት||
+ሽንኩርት||
+ሽጉጡን፡ጠጣ||
+ሽጉጥ||
+ሾክ||
+ቀረፋ||
+ቀስተ ደመና||
+ቀስተዳመና||
+ቀበሌ||
+ቀን|day||ḳän
+ቀንድ|horn||ḳänd
+ቀኝ|right||ḳäñ
+ቀዝቃዛ|cold||ḳäzḳaza
+ቀይ|red||ḳäy
+ቀጥታ|straight||ḳäṭta
+ቀጭኔ||
+ቀጭን|thin||ḳäč̣n
+ቁላ||
+ቁራ||
+ቁርስ||
+ቁንዶ በርበሬ||
+ቂንጥር||
+ቃል||
+ቃጥሎ||
+ቅማል|louse||ḳəmal
+ቅርብ|near||ḳərb
+ቅርፊት|bark (of a tree)||ḳərfit
+ቅንፍዝ||
+ቅዳሜ||
+ቅጠል|leaf||ḳəṭäl
+ቆርቆሮ||
+ቆስጣ||
+ቆሻሻ|dirty||ḳošaša
+ቆብ||
+ቆንጆ||
+ቆዳ|skin||ḳoda
+ቋንቋ||
+ቍርስ||
+በለስ||
+በላ||
+በረሃ||
+በረዶ|ice||bärädo
+በሬ||
+በር||
+በርበሬ||
+በርኖስ||
+በቅሎ||
+በቆሎ||
+በታች||
+በዳ||
+በገን||
+በጣጢስ||
+ቡራኬ||
+ቡና||
+ቡናይነት||
+ቡን||
+ቢሆን|if||bihon
+ቢላዋ||
+ቢምቢ||
+ቢራቢሮ||
+ቢዛ||
+ቢጫ|yellow||bič̣a
+ባህር|sea||bahr
+ባል|husband||bal
+ባሕር||
+ባሚያ||
+ባረከ||
+ባሪያ||
+ባቄላ||
+ባንዴራ||
+ባዶ||
+ቤተሰብ||
+ቤተ፡ክርስቲያን||
+ቤት||
+ብሄራዊ||
+ብሔረተኝነት||
+ብሔር||
+ብር||
+ብርቱካን||
+ብርክ||
+ብቻ||
+ብናኝ|snow||bənañ
+ብዕር||
+ብዙ|many||bəzu
+ብጒንጅ||
+ብጫ||
+ቧምቧ||
+ቪዛ||
+ቫይረስ||
+ቫዮሊን||
+ተመን||
+ተመኘ||
+ተማሪ||
+ተምር||
+ተረከዝ||
+ተራራ|mountain||tärara
+ተንታኝ||
+ተከፈተ||
+ቲማቲም||
+ታህሳስ||
+ታንክ||
+ቴሌፎን||
+ቴምብር||
+ቴዎድሮስ||
+ትል|worm||təl
+ትልቅ|big||təlḳ
+ትምባሆ||
+ትራስ||
+ትራፊክ||
+ትርንጎ||
+ትናንት||
+ትናንትና||
+ትንሽ|small||tənš
+ትንቢት||
+ትክክል|correct||təkkl
+ትግርኛ||
+ቺሌ||
+ቻይ||
+ችግር||
+ኀልዮ||
+ኃምሌ||
+ኅብረት||
+ኅብር||
+ኅዳር||
+ነሐሴ||
+ነበረ||
+ነቢት||
+ነገ||
+ነገር||
+ነጭ ሽንኩርት||
+ነጭ|white||näč̣
+ነፃነት||
+ነፋስ|wind||näfas
+ነፍስ||
+ኑዛዜ||
+ናሚቢያ||
+ንስር||
+ንብ||
+ንጉሥ||
+ንጋት||
+ንግሥት||
+ንፋስ||
+ኖቬምበር||
+አሁን||
+አህያ||
+አለም||
+አላህ||
+አልማዝ||
+አልጋ||
+አመት|year||ʾämät
+አመድ|ash||ʾämäd
+አማርኛ||
+አምላክ||
+አምሳ||
+አምሳግር||
+አምሳ፡እግር||
+አምስተኛ||
+አምስት|five||ʾämst
+አምበሳ||
+አሞሌ||
+አረም||
+አረሰ||
+አረቂ||
+አረንገዴ|green||ʾärängäde
+አረንጓዴ||
+አራተኛ||
+አራት|four||ʾärat
+አርመንኛ||
+አርሜንኛ||
+አርበኛ||
+አርባ||
+አሮጌ|old||ʾäroge
+አሳ|fish||ʾäsa
+አስረኛ||
+አስራ ሁለት||
+አስራ ሰባት||
+አስራ ስምንት||
+አስራ ስድስት||
+አስራ ሶስት||
+አስራ አምስት||
+አስራ አራት||
+አስራ አንድ||
+አስራ ዘጠኝ||
+አስራአንድ||
+አስር||
+አስተማሪ||
+አስኳል||
+አሸለመ||
+አሸዋ|sand||ʾäšäwa
+አሽዋ||
+አበባ|flower||ʾäbäba
+አቡነ||
+አባራ|dust||ʾäbara
+አባት|father||ʾäbat
+አባጨጓሬ||
+አቧራ||
+አናናስ||
+አንሶላ||
+አንቄ||
+አንበሳ||
+አንተ|you (2sg)||ʾäntä
+አንቱ||
+አንቺ|you (2sg)||ʾänči
+አንደኛ||
+አንድ|one||ʾänd
+አንጀባ||
+አንገት|neck||ʾängät
+አንጎል||
+አክሊል||
+አክስት||
+አኮርዲዮን||
+አውራ ዶሮ||
+አውሬ||
+አውሮፓ||
+አውሮፕላን||
+አውስትራልያ||
+አዘመተ||
+አዘን||
+አየሩ|the weather|əyyəru
+አያት||
+አይብ||
+አይን|eye||ʾäyn
+አይደለም|not||ʾäydäläm
+አይጥ||
+አደገኛ||
+አዲስ አበባ||
+አዲስ|new||ʾädis
+አድሓኖም||
+አዶ||
+አገራት||
+አገር||
+አጥር||
+አጥንት|bone||ʾäṭnt
+አጭር|short||ʾäč̣r
+አጻፈ||
+አፈር||
+አፍ|mouth||ʾäf
+አፍንጫ|nose||ʾäfnč̣a
+ኡነት||
+ኢትዮጵያ|Ethiopia|ʾītyōṗṗyā
+ኢንተርኔት||
+ኣልጋ||
+ኣከስት||
+ኣጎት||
+ኤሌክትሪክ||
+ኤርትራ||
+ኤስቶኒያ||
+ኤፕሪል||
+እ-||
+እህል||
+እህት||
+እልም||
+እሑድ||
+እምስ||
+እራስ||
+እራብ||
+እርሱ||
+እርሳቸው||
+እርስዎ||
+እርሷ||
+እርቃን||
+እርዳታ||
+እርድ||
+እርጎ||
+እሮብ||
 እሱ|he, she, it (3sg)||ʾəsu
+እሳተ ጎመራ||
+እሳት|fire||ʾəsat
+እሳቸው||
+እሴት||
+እስላማዊ||
+እስልምና||
+እስስት||
+እስትንፋስ||
+እስዎ||
 እሷ|he, she, it (3sg)||ʾəsʷa
-እኛ|we (1pl)||ʾəña
-እናንተ|you (2pl)||ʾənantä
+እሾህ||
+እሾክ||
+እባብ|snake||ʾəbab
+እባት||
+እት||
+እቺ||
+እች||
+እኅት||
+እነ-||
+እነማን||
 እነርሱ|they (3pl)||ʾənärsu
-ይህ|this||yəh
-ያ|that||ya
+እነሱ||
+እነዚህ||
+እነዚያ||
+እና|and||ʾəna
+እናት|mother||ʾənat
+እናንተ|you (2pl)||ʾənantä
+እናንት||
+እኔ|I (1sg)||ʾəne
+እንስሳ|animal||ʾənssa
+እንሽላሊት||
+እንቁላል|egg||ʾənḳulal
+እንቁራሪት||
+እንቆቅልሽ||
+እንባ||
+እንብርት||
+እንኮይ||
+እንኰይ||
+እንዴት|how||ʾəndet
+እንጀራ||
+እንግሊዝኛ፡ትችላለህ||
+እንግሊዝኛ፡ትችያለሽ||
+እንግሊዝኛ፡ይችላሉ||
+እንግዳ||
+እንጨት||
+እኛ|we (1pl)||ʾəña
 እዚህ|here||ʾəzih
 እዚያ|there||ʾəziya
-ማን|who||man
-ምን|what||mən
-የት|where||yät
-መቼ|when||mäče
-እንዴት|how||ʾəndet
-አይደለም|not||ʾäydäläm
-ሁሉም|all||hulum
-ብዙ|many||bəzu
-የተወሰነ|some||yätäwäsänä
-ጥቂት|few||ṭəḳit
-ሌላ|other||lela
-አንድ|one||ʾänd
-ሁለት|two||hulät
-ሶስት|three||sost
-አራት|four||ʾärat
-አምስት|five||ʾämst
-ትልቅ|big||təlḳ
-ረዝም|long||räzm
-ሰፊ|wide||säfi
-ደንዳና|thick||dändana
-ከባድ|heavy||käbad
-ትንሽ|small||tənš
-አጭር|short||ʾäč̣r
-ጠባብ|narrow||ṭäbab
-ቀጭን|thin||ḳäč̣n
-ሴትዮ|woman||setyo
-ጎልማሳ|man (adult male)||golmasa
-ሰዉ|man (human being)||säwu
-ህጻን|child||həṣan
-ሚስት|wife||mist
-ባል|husband||bal
-እናት|mother||ʾənat
-አባት|father||ʾäbat
-እንስሳ|animal||ʾənssa
-አሳ|fish||ʾäsa
-ወፍ|bird||wäf
-ዉሻ|dog||wuša
-ቅማል|louse||ḳəmal
-እባብ|snake||ʾəbab
-ትል|worm||təl
-ዛፍ|tree||zaf
-ደን|forest||dän
-ልምጭ|stick||ləmč̣
-ፍራፍሬ|fruit||fərafre
-ዘር|seed||zär
-ቅጠል|leaf||ḳəṭäl
-ስር|root||sər
-ቅርፊት|bark (of a tree)||ḳərfit
-አበባ|flower||ʾäbäba
-ሳር|grass||sar
-ገመድ|rope||gämäd
-ቆዳ|skin||ḳoda
-ስጋ|meat||səga
-ደም|blood||däm
-አጥንት|bone||ʾäṭnt
-ሥብ|fat (noun)||śəb
-እንቁላል|egg||ʾənḳulal
-ቀንድ|horn||ḳänd
-ጅራት|tail||ǧərat
-ላባ|feather||laba
-ጸጉር|hair||ṣägur
-ጭንቅላት|head||č̣ənḳlat
-ጆሮ|ear||ǧoro
-አይን|eye||ʾäyn
-አፍንጫ|nose||ʾäfnč̣a
-አፍ|mouth||ʾäf
-ጥርስ|tooth||ṭərs
-ምላስ|tongue (organ)||məlas
-ጥፍር|fingernail||ṭəfr
-የእግር መዳፍ|foot||yäʾgr mädaf
-እግር|leg||ʾəgr
-ጉልበት|knee||gulbät
+እዛብ||
 እጅ|hand||ʾəǧ
-ክንፍ|wing||kənf
-ሆድ|belly||hod
-ጉሮሮ|guts||guroro
-አንገት|neck||ʾängät
-ጀርባ|back||ǧärba
-ጡት|breast||ṭut
-ልብ|heart||ləb
-ጉበት|liver||gubät
-መጠጣት|to drink||mäṭäṭat
-መብላት|to eat||mäblat
-መንከስ|to bite||mänkäs
-መጥባት|to suck||mäṭbat
-መትፋት|to spit||mätfat
-ማስታወክ|to vomit||mastawäk
-መንፈስ|to blow||mänfäs
-መተንፈስ|to breathe||mätänfäs
-መሳቅ|to laugh||mäsaḳ
-ማየት|to see||mayät
-መስማት|to hear||mäsmat
-ማዎቅ|to know||mawoḳ
-ማሰብ|to think||masäb
-ማሽተት|to smell||maštät
-መፍራት|to fear||mäfrat
-መተኛት|to sleep||mätäñat
-መኖር|to live||mänor
-መሞት|to die||mämot
-መግደል|to kill||mägdäl
-መታገል|to fight||mätagäl
-ማደን|to hunt||madän
-መምታት|to hit||mämtat
-መቁረጥ|to cut||mäḳuräṭ
-መነጣጠል|to split||mänäṭaṭäl
-መዉጋት|to stab||mäwugat
-መፋቅ|to scratch||mäfaḳ
-መቆፈር|to dig||mäḳofär
-መዋኘት|to swim||mäwañät
-መብረር|to fly||mäbrär
-መሄድ|to walk||mähed
-መምጣት|to come||mämṭat
-መጋደም|to lie (as in a bed)||mägadäm
-መቀመጥ|to sit||mäḳämäṭ
-መቆም|to stand||mäḳom
-መታጠፍ|to turn (intransitive)||mätaṭäf
-መዉደቅ|to fall||mäwudäḳ
-መስጠት|to give||mäsṭät
-መያዝ|to hold||mäyaz
-መጫን|to squeeze||mäč̣an
-መቦረሽ|to rub||mäboräš
-ማጠብ|to wash||maṭäb
-ማሸት|to wipe||መፈተግ
-መጎተት|to pull||mägotät
-መግፋት|to push||mägfat
-መወርወር|to throw||mäwärwär
-ማሰር|to tie||masär
-ሰስፋት|to sew||säsfat
-መቁጠር|to count||mäḳuṭär
-መናገር|to say||mänagär
-መዘመር|to sing||mäzämär
-መጫወት|to play||mäč̣awät
-መንሳፈፍ|to float||mänsafäf
-መዉረድ|to flow||mäwuräd
-መቀዝቀዝ|to freeze||mäḳäzḳäz
-ማበጥ|to swell||mabäṭ
-ጸሀይ|sun||ṣähäy
-ጨረቃ|moon||č̣äräḳa
-ኮከብ|star||kokäb
-ዉሃ|water||wuha
-ዝናብ|rain||zənab
-ወንዝ|river||wänz
-ሀይቅ|lake||häyḳ
-ባህር|sea||bahr
-ጨዉ|salt||č̣äwu
-ድንጋይ|stone||dəngay
-አሸዋ|sand||ʾäšäwa
-አባራ|dust||ʾäbara
-መሬት|earth||märet
-ደመና|cloud||dämäna
-ጭጋግ|fog||č̣əgag
-ሰማይ|sky||sämay
-ነፋስ|wind||näfas
-ብናኝ|snow||bənañ
-በረዶ|ice||bärädo
-ጭስ|smoke||č̣əs
-እሳት|fire||ʾəsat
-አመድ|ash||ʾämäd
-ማቃጠል|to burn||maḳaṭäl
-መንገድ|road||mängäd
-ተራራ|mountain||tärara
-ቀይ|red||ḳäy
-አረንገዴ|green||ʾärängäde
-ቢጫ|yellow||bič̣a
-ነጭ|white||näč̣
-ጥቁር|black||ṭəḳur
-ሌሊት|night||lelit
-ቀን|day||ḳän
-አመት|year||ʾämät
-ሙቅ|warm||muḳ
-ቀዝቃዛ|cold||ḳäzḳaza
-ሙሉ|full||mulu
-አዲስ|new||ʾädis
-አሮጌ|old||ʾäroge
-ጥሩ|good||ṭəru
-መጥፎ|bad||mäṭfo
-የገማ|rotten||yägäma
-ቆሻሻ|dirty||ḳošaša
-ቀጥታ|straight||ḳäṭta
-ክብ|round||kəb
-ስለት|sharp (as a knife)||səlät
-የዶለዶመ|dull (as a knife)||yädolädomä
-ለስላሳ|smooth||läslasa
-ርጥብ|wet||rəṭb
-ደረቅ|dry||däräḳ
-ትክክል|correct||təkkl
-ቅርብ|near||ḳərb
-ሩቅ|far||ruḳ
-ቀኝ|right||ḳäñ
-ግራ|left||gəra
-ላይ|at||lay
-ዉስጥ|in||wusṭ
+እግረኛ||
+እግር ኳስ||
+እግር|leg||ʾəgr
+እግርጌ||
+እጡብ||
+እጥር||
+ኦሃዮ||
+ኦክቶበር||
+ኦገስት||
+ከልብ||
+ከሎታ||
+ከሰረት||
+ከበሮ||
+ከባድ|heavy||käbad
+ከተማ||
+ከተበ||
+ከታተበ||
+ከፈተ||
 ከ….ጋር|with||kä….gar
-እና|and||ʾəna
-ቢሆን|if||bihon
-ምክንያቱም|because||məknyatum
-ስም|name||səm
+ኩራት||
+ኪሩብ||
+ኪስ||
+ካርታ||
+ክረምት||
+ክራር||
+ክርስትና||
+ክሮኤሽያ||
+ክብ|round||kəb
+ክብር||
+ክታብ||
+ክንድ||
+ክንፍ|wing||kənf
+ኮረንቲ||
+ኮሪቻ||
+ኮከብ|star||kokäb
+ኮክ||
+ኳሰ||
+ኳስ||
+ወምበር||
+ወረቀት||
+ወረዳ||
+ወር||
+ወርቅ||
+ወተት||
+ወንበር||
+ወንዝ|river||wänz
+ወንድም||
+ወንድምዬ||
+ወንጌል||
+ወይም||
+ወይን||
+ወይፈን||
+ወፍ|bird||wäf
+ወፍራም||
+ወፍጮ||
+ዉሃ|water||wuha
+ዉስጥ|in||wusṭ
+ዉሻ|dog||wuša
+ዊኪፔዲያ||
+ዋሊያ||
+ዋሻ||
+ዋና||
+ው||
+ውሃ||
+ውሻ||
+ውኃ||
+ውጭ||
+ዐመት||
+ዐምባ||
+ዐሥራ ሁለት||
+ዐሥር||
+ዐባይ||
+ዐይን||
+ዓለም||
+ዓመት||
+ዓሣ||
+ዓርብ||
+ዓዋቂ||
+ዕርድ||
+ዕጣን||
+ዕጥር||
+ዘመተ||
+ዘመናዊ||
+ዘመን||
+ዘር|seed||zär
+ዘበን||
+ዘነዘና||
+ዘውድ||
+ዘይት||
+ዘጠነኛ||
+ዘጠና||
+ዘጠኝ||
+ዛሬ||
+ዛብ||
+ዛፍ|tree||zaf
+ዝሆን||
+ዝምብ||
+ዝናብ|rain||zənab
+ዝንብ||
+ዝንጀሮ||
+ዝንጅብል||
+ዝይ||
+ዝግጁ||
+ዝፍት||
+የ-||
+የርሱ||
+የርሷ||
+የሱ||
+የሷ||
+የተወሰነ|some||yätäwäsänä
+የቱ||
+የቲቱ||
+የት|where||yät
+የትኛው||
+የቷ||
+የነርሱ||
+የነሱ||
+የናንተ||
+የኔ||
+የኛ||
+የእርስ በእርስ ጦርነት||
+የእግር መዳፍ|foot||yäʾgr mädaf
+የካቲት||
+የዶለዶመ|dull (as a knife)||yädolädomä
+የገማ|rotten||yägäma
+ያ|that||ya
+ያቺ||
+ያች||
+ያንተ||
+ያንቺ||
+ይህ|this||yəh
+ይህቺ||
+ይህች||
+ይሉኝታ||
+ይቺ||
+ይች||
+ደመና|cloud||dämäna
+ደም|blood||däm
+ደረቅ|dry||däräḳ
+ደሴት||
+ደብር||
+ደን|forest||dän
+ደንቆሮ||
+ደንዳና|thick||dändana
+ደካማ||
+ደግ||
+ዱባ||
+ዲሴምበር||
+ዲዳ||
+ዳር||
+ዳቦ||
+ዳክየ||
+ዴሞክራሲ||
+ዴንማርክ||
+ድልድይ||
+ድመት||
+ድርቂ||
+ድብ||
+ድንች||
+ድንክ||
+ድንጋይ|stone||dəngay
+ድዳ||
+ዶሮ ወጥ||
+ዶሮ||
+ጀርመን||
+ጀርባ|back||ǧärba
+ጀብዱ||
+ጀነት||
+ጀግና||
+ጁላይ||
+ጁን||
+ጂንስ||
+ጃርት||
+ጃንዩዌሪ||
+ጃንጥላ||
+ጃኬት||
+ጅራት|tail||ǧərat
+ጅብ||
+ጅብዱ||
+ጅግራ||
+ጆሮ|ear||ǧoro
+ገመድ|rope||gämäd
+ገረድ||
+ገበሬ||
+ገባ||
+ገብስ||
+ገነት||
+ገና||
+ገንዘብ||
+ገንፎ||
+ገውዝ||
+ገዛ||
+ገጆ||
+ጉልበት|knee||gulbät
+ጉሮሮ|guts||guroro
+ጉበት|liver||gubät
+ጉዞ||
+ጉጉት||
+ጊታር||
+ጊዜ||
+ጋሜ||
+ጋር||
+ጋዜጣ||
+ጌታ||
+ግመል||
+ግሪክኛ||
+ግራ|left||gəra
+ግርጌ||
+ግንባር||
+ግንቦት||
+ግንደ ቆርቁር||
+ግዕዝ||
+ጎልማሳ|man (adult male)||golmasa
+ጎመን||
+ጎረቤት||
+ጎዳና||
+ጓያ||
+ጓደኛ||
+ጠረጴዛ||
+ጠቅላይ ሚኒስትር||
+ጠበንጃ||
+ጠባብ|narrow||ṭäbab
+ጠጀ||
+ጠጉር||
+ጠጣ||
+ጡብ||
+ጡት|breast||ṭut
+ጣም||
+ጣት||
+ጣፋጭ||
+ጤና||
+ጤዛ||
+ጤፍ||
+ጥላ||
+ጥልቀት||
+ጥምቀት||
+ጥሩ|good||ṭəru
+ጥር||
+ጥርስ|tooth||ṭərs
+ጥቁር|black||ṭəḳur
+ጥቂት|few||ṭəḳit
+ጥቅምቲ||
+ጥበብ||
+ጥንቸል||
+ጥጃ||
+ጥፍር|fingernail||ṭəfr
+ጦርነት||
+ጨለማ||
+ጨሌ||
+ጨረቃ|moon||č̣äräḳa
+ጨዉ|salt||č̣äwu
+ጨዋታ||
+ጨው||
+ጨጓራ||
+ጫማ||
+ጫካ||
+ጭላዳ||
+ጭማቂ||
+ጭምብል||
+ጭስ|smoke||č̣əs
+ጭቃ||
+ጭንቅላት|head||č̣ənḳlat
+ጭጋግ|fog||č̣əgag
+ጮማ||
+ጳውሎስ||
+ጸሀይ|sun||ṣähäy
+ጸሐይ||
+ጸሓይ||
+ጸጉር|hair||ṣägur
+ጻፈ||
+ፀሐይ||
+ፀሓይ||
+ፀጉር||
+ፈረስ||
+ፈርምዌር||
+ፈርጥ||
+ፊልም||
+ፊት||
+ፊደል||
+ፋኑስ||
+ፌብሩዋሪ||
+ፌንጣ||
+ፍሉካ||
+ፍራፍሬ|fruit||fərafre
+ፍቅር||
+ፍትህ||
+ፍየል||
+ፎርማጆ||
+ፏፏቴ||
+ፒያኖ||
+ፓፓያ||
+ፕሬዚዳንት||
+ፖለቲካ||
+ፖሊስ||
+ፖም||
+ፖስታ||
+ፖስታ፡ቤት||
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 `
 
