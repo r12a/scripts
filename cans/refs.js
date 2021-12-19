@@ -97,3 +97,36 @@ reflist = {
 
 
 
+
+
+scriptLanguageList = {
+bea:{name:"Beaver"},
+bla:{name:"Blackfoot"},
+crx:{name:"Carrier"},
+caf:{name:"Carrier, Southern"},
+ciw:{name:"Chippewa"},
+crk:{name:"Cree, Plains", url:"cans-crk.html"},
+crj:{name:"Cree, Southern East"},
+csw:{name:"Cree, Swampy"},
+cwd:{name:"Cree, Woods"},
+crm:{name:"Cree, Moose"},
+crl:{name:"Cree, Northern East"},
+chp:{name:"Dene"},
+ike:{name:"Inuktitut, Eastern Canadian", url:"index.html"},
+ikt:{name:"Inuinnaqtun"},
+nsk:{name:"Naskapi"},
+ojg:{name:"Ojibwa, Eastern"},
+ojb:{name:"Ojibwa, Northwestern"},
+ojw:{name:"Ojibwa, Western"},
+ojs:{name:"Oji-Cree"},
+sek:{name:"Sekani"},
+scs:{name:"Slavey, North"},
+xsl:{name:"Slavey, South"},
+}
+
+
+
+
+
+
+
