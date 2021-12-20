@@ -39,7 +39,7 @@
 <script src="/shared/manifests/deva-hi.js"></script>
 </header>
 
-<h1>Hindi</h1>
+<h1>Hindi (draft) <div class="subhead">Devanagari</div></h1>
 
 
 
@@ -53,7 +53,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->29 November, 2021<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->20 December, 2021<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -61,7 +61,10 @@
 
 <section>
 <p>This page brings together basic information about the Devanagari script and its use for the Hindi language. It aims to provide a brief, descriptive summary of the modern, printed orthography and typographic features, and to advise how to write Hindi using Unicode.</p>
-<p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
+
+<p class="instructions">This page is a work in progress. The information given here should be correct, but needs to be added to and refined further.</p>
+
+<p>Phonological transcriptions on this page should be treated as an approximate guide, only. They are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available.</p>
 
 
 
@@ -89,7 +92,8 @@
 <h2>Sample (hindi)</h2>
   
   
-<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
+<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.  <a style="margin-inline-start: 2rem;" href="http://unicode.org/udhr/translations.html">Source</a><br>
+Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
 
 <div id="freeText" dir="ltr" lang="hi" contenteditable="true">
 <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">अनुच्छेद १. सभी मनुष्यों को गौरव और अधिकारों के मामले में जन्मजात स्वतन्त्रता और समानता प्राप्त है । उन्हें बुद्धि और अन्तरात्मा की देन प्राप्त है और परस्पर उन्हें भाईचारे के भाव से बर्ताव करना चाहिए ।</p>
@@ -284,10 +288,10 @@
 <div>Character lists show:</div>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>ISO 15919 <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
 <div>
 <label>Transliteration 
 <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
-<div><label>ISO 15919 <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
 </div>
 
 
@@ -305,10 +309,9 @@
 
 <section id="vowelPhonemes">
 <h3>Vowel sounds</h3>
-<div style="margin-left: 7.5%;">
-<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
 
-  <defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -20 500 240" class="ipaSVG">
+<defs>
     <filter x="0" y="0" width="1" height="1" id="solid">
       <feFlood flood-color="white"/>
       <feComposite in="SourceGraphic" operator="xor"/>
@@ -392,7 +395,10 @@
   <text x="232" y="195" class="ipa" text-anchor="end" filter="url(#solid)">ɑː</text>
   <text x="232" y="195" class="ipa" text-anchor="end">ɑː</text> 
 </svg>
-</div>
+
+
+
+
 
 <table class="ipaTable" style="display: none">
 <thead>
@@ -463,28 +469,35 @@ alveolar</th>
 </thead>
 <tbody>
 <tr>
-<th>stop</th>
-<td><span class="ipa">p</span> <span class="ipa">b</span><br/>
-<span class="ipa">pʰ</span> <span class="ipa">bʱ</span></td>
-<td><span class="ipa">t</span> <span class="ipa">d</span><br/>
-<span class="ipa">tʰ</span> <span class="ipa">dʱ</span></td>
+<th>stops</th>
+<td><span class="ipa">p</span> <span class="ipa">b</span></td>
+<td><span class="ipa">t</span> <span class="ipa">d</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td><span class="ipa">ʈ</span> <span class="ipa">ɖ</span><br/>
-<span class="ipa">ʈʰ</span> <span class="ipa">ɖʱ</span></td>
+<td><span class="ipa">ʈ</span> <span class="ipa">ɖ</span></td>
 <td>&nbsp;</td>
-<td><span class="ipa">k</span> <span class="ipa">ɡ</span><br/>
-<span class="ipa">kʰ</span> <span class="ipa">ɡʱ</span></td>
+<td><span class="ipa">k</span> <span class="ipa">ɡ</span></td>
 <td><span class="allophone">q</span></td>
 <td><span class="allophone">ʔ</span></td>
 </tr>
 <tr>
-<th>affricate</th>
+<th>aspirated</th>
+<td><span class="ipa">pʰ</span> <span class="ipa">bʱ</span></td>
+<td><span class="ipa">tʰ</span> <span class="ipa">dʱ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ʈʰ</span> <span class="ipa">ɖʱ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">kʰ</span> <span class="ipa">ɡʱ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>affricates</th>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td><span class="ipa">t͡ʃ</span> <span class="ipa">d͡ʒ</span><br/>
-<span class="ipa"> t͡ʃʰ</span> <span class="ipa">d͡ʒʱ</span></td>
+<td><span class="ipa">t͡ʃ</span> <span class="ipa">d͡ʒ</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -492,7 +505,19 @@ alveolar</th>
 <td>&nbsp;</td>
 </tr>
 <tr>
-<th>fricative </th>
+<th>aspirated</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa"> t͡ʃʰ</span> <span class="ipa">d͡ʒʱ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>fricatives</th>
 <td><span class="allophone">f</span> <span class="allophone">v</span></td>
 <td>&nbsp;</td>
 <td><span class="ipa">s</span> <span class="allophone">z</span></td>
@@ -504,7 +529,7 @@ alveolar</th>
 <td><span class="allophone">h</span> <span class="ipa">ɦ</span></td>
 </tr>
 <tr>
-<th>nasal </th>
+<th>nasals</th>
 <td><span class="ipa">m</span></td>
 <td>&nbsp;</td>
 <td><span class="ipa">n</span></td>
@@ -516,7 +541,7 @@ alveolar</th>
 <td></td>
 </tr>
 <tr>
-<th>approximant </th>
+<th>approximants</th>
 <td><span class="ipa">ʋ</span> <span class="allophone">w</span></td>
 <td>&nbsp;</td>
 <td><span class="ipa">l</span></td>
@@ -528,12 +553,24 @@ alveolar</th>
 <td></td>
 </tr>
 <tr>
-<th>trill/flap </th>
+<th>trills/flaps</th>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td><span class="ipa">r</span> <span class="ipa">ɾ</span></td>
 <td>&nbsp;</td>
-<td><span class="allophone">ɽ</span> <span class="ipa">ɽʱ</span></td>
+<td><span class="allophone">ɽ</span></td>
+<td></td>
+<td></td>
+<td>&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<th>aspirated</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɽʱ</span></td>
 <td></td>
 <td></td>
 <td>&nbsp;</td>
