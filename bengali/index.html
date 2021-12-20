@@ -37,10 +37,10 @@
 <body class="useBlockExamples">
 <header>
 <div id="header-boilerplate"></div>
-  <script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script> 
+  <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script> 
 </header>
 
-<h1>Bangla/Bengali</h1>
+<h1>Bangla (draft) <div class="subhead">Bengali</div></h1>
 
 
 
@@ -57,14 +57,17 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->29 November, 2021<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->20 December, 2021<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
 
 <section>
 <p>This page brings together basic information about the Bengali script and its use for the Bangla language. It aims to provide a brief, descriptive summary of the modern, printed orthography and typographic features, and to advise how to write Bengali using Unicode.</p>
-<p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
+
+<p class="instructions">This page is a work in progress. The information given here should be correct, but needs to be added to and refined further.</p>
+
+<p>Phonological transcriptions on this page should be treated as an approximate guide, only. They are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available.</p>
 
 
 
@@ -92,7 +95,8 @@
 <h2 id="h_sample">Sample (Bangla)</h2>
   
 
-<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
+<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.  <a style="margin-inline-start: 2rem;" href="http://unicode.org/udhr/translations.html">Source</a><br>
+Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
 
 <div id="freeText" dir="ltr" lang="bn" data-target="c" data-base="/scripts/template/block" data-source="http://unicode.org/udhr/translations.html">
 <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">ধারা ১ সমস্ত মানুষ স্বাধীনভাবে সমান মর্যাদা এবং অধিকার নিয়ে জন্মগ্রহণ করে। তাঁদের বিবেক এবং বুদ্ধি আছে; সুতরাং সকলেরই একে অপরের প্রতি ভ্রাতৃত্বসুলভ মনোভাব নিয়ে আচরণ করা উচিত।</p>
@@ -311,8 +315,8 @@
 <div>Character lists show:</div>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div><label>r12a <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
 <div><label>ISO 15919 <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+<div><label>Transliteration <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
 </div>
 
 
@@ -337,9 +341,8 @@
 
 <section id="plain_vowels">
 <h4>Plain vowels</h4>
-<div style="margin-left: 7.5%;">
-<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -20 500 240" class="ipaSVG">
   <defs>
     <filter x="0" y="0" width="1" height="1" id="solid">
       <feFlood flood-color="white"/>
@@ -386,35 +389,82 @@
   
   
   <!-- close -->
-  <text x="32" y="15" class="ipa" text-anchor="end" filter="url(#solid)">i ĩ</text>
-  <text x="32" y="15" class="ipa" text-anchor="end">i ĩ</text> 
-  <text x="250" y="15" class="ipa" filter="url(#solid)">u ũ</text> 
-  <text x="250" y="15" class="ipa">u ũ</text> 
+  <text x="32" y="15" text-anchor="end" filter="url(#solid)">
+<tspan class="ipa">i</tspan>
+<tspan class="ipa">ĩ</tspan>
+</text>
+  <text x="32" y="15" text-anchor="end">
+<tspan class="ipa">i</tspan>
+<tspan class="ipa">ĩ</tspan>
+</text> 
+  <text x="250" y="15" filter="url(#solid)">
+<tspan class="ipa">u</tspan>
+<tspan class="ipa">ũ</tspan>
+</text> 
+  <text x="250" y="15">
+<tspan class="ipa">u</tspan>
+<tspan class="ipa">ũ</tspan>
+</text> 
 
     <!-- near close -->
-  <text x="210" y="45" class="allophone">ʊ</text> 
+  <text x="210" y="45">
+<tspan class="allophone">ʊ</tspan>
+</text> 
 
   <!-- close mid -->
-  <text x="57" y="75" class="ipa" text-anchor="end" filter="url(#solid)">e ẽ</text>
-  <text x="57" y="75" class="ipa" text-anchor="end">e ẽ</text> 
-  <text x="250" y="75" class="ipa" filter="url(#solid)">o õ</text> 
-  <text x="250" y="75" class="ipa">o õ</text> 
+  <text x="57" y="75" text-anchor="end" filter="url(#solid)">
+<tspan class="ipa">e</tspan>
+<tspan class="ipa">ẽ</tspan>
+</text>
+  <text x="57" y="75" text-anchor="end">
+<tspan class="ipa">e</tspan>
+<tspan class="ipa">ẽ</tspan>
+</text> 
+  <text x="250" y="75" filter="url(#solid)">
+<tspan class="ipa">o</tspan>
+<tspan class="ipa">õ</tspan>
+</text> 
+  <text x="250" y="75">
+<tspan class="ipa">o</tspan>
+<tspan class="ipa">õ</tspan>
+</text> 
 
   <!-- open mid -->
-  <text x="81" y="135" class="ipa" text-anchor="end" filter="url(#solid)">ɛ ɛ̃</text>
-  <text x="81" y="135" class="ipa" text-anchor="end">ɛ ɛ̃</text> 
-  <text x="250" y="135" class="ipa" filter="url(#solid)">ɔ ɔ̃</text> 
-  <text x="250" y="135" class="ipa">ɔ ɔ̃</text> 
+  <text x="81" y="135" text-anchor="end" filter="url(#solid)">
+<tspan class="ipa">ɛ</tspan>
+<tspan class="ipa">ɛ̃</tspan>
+</text>
+  <text x="81" y="135" text-anchor="end">
+<tspan class="ipa">ɛ</tspan>
+<tspan class="ipa">ɛ̃</tspan>
+</text> 
+  <text x="250" y="135" filter="url(#solid)">
+<tspan class="ipa">ɔ</tspan>
+<tspan class="ipa">ɔ̃</tspan>
+</text> 
+  <text x="250" y="135">
+<tspan class="ipa">ɔ</tspan>
+<tspan class="ipa">ɔ̃</tspan>
+</text> 
 
   <!-- near open -->
-  <text x="94" y="165" class="allophone" text-anchor="end" filter="url(#solid)">æ</text>
-  <text x="94" y="165" class="allophone" text-anchor="end">æ</text> 
+  <text x="94" y="165" text-anchor="end" filter="url(#solid)">
+<tspan class="allophone">æ</tspan>
+</text>
+  <text x="94" y="165" text-anchor="end">
+<tspan class="allophone">æ</tspan>
+</text> 
 
   <!-- open -->
-  <text x="106" y="195" class="ipa" text-anchor="end" filter="url(#solid)">a ã</text>
-  <text x="106" y="195" class="ipa" text-anchor="end">a ã</text> 
+  <text x="106" y="195" text-anchor="end" filter="url(#solid)">
+<tspan class="ipa">a</tspan>
+<tspan class="ipa">ã</tspan>
+</text>
+  <text x="106" y="195" text-anchor="end">
+<tspan class="ipa">a</tspan>
+<tspan class="ipa">ã</tspan>
+</text> 
 </svg>
-</div>
 </section>
 
 
@@ -425,15 +475,13 @@
 
 
 
-<div style="margin-left: 7.5%;">
-<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
-
-  <defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -20 500 240" class="ipaSVG">
+<defs>
     <filter x="0" y="0" width="1" height="1" id="solid">
       <feFlood flood-color="white"/>
       <feComposite in="SourceGraphic" operator="xor"/>
     </filter>
-  </defs>
+</defs>
 
   <!--image xlink:href="images/vowelgrid.gif" alt="Les caractères sont associés à des octets." x="0" y="0" width="400" height="200"></image--> 
   <use xlink:href="#arrowRight" x="155" y="25"></use> 
@@ -472,32 +520,85 @@
   
   
   <!-- close -->
-  <text x="32" y="15" class="ipa" text-anchor="end" filter="url(#solid)">ii̯ iu̯</text>
-  <text x="32" y="15" class="ipa" text-anchor="end">ii̯ iu̯</text> 
-  <text x="250" y="15" class="ipa" filter="url(#solid)">ui̯</text> 
-  <text x="250" y="15" class="ipa">ui̯</text> 
+  <text x="32" y="15" text-anchor="end" filter="url(#solid)">
+<tspan class="ipa">ii̯</tspan>
+<tspan class="ipa">iu̯</tspan>
+</text>
+  <text x="32" y="15" text-anchor="end">
+<tspan class="ipa">ii̯</tspan>
+<tspan class="ipa">iu̯</tspan>
+</text> 
+  <text x="250" y="15" filter="url(#solid)">
+<tspan class="ipa">ui̯</tspan>
+</text> 
+  <text x="250" y="15">
+<tspan class="ipa">ui̯</tspan>
+</text> 
 
   <!-- close mid -->
-  <text x="57" y="75" class="ipa" text-anchor="end" filter="url(#solid)">ei̯ eu̯</text>
-  <text x="57" y="75" class="ipa" text-anchor="end">ei̯ eu̯</text> 
-  <text x="250" y="75" class="ipa" filter="url(#solid)">oi̯ ou̯ oe̯ oo̯</text> 
-  <text x="250" y="75" class="ipa">oi̯ ou̯ oe̯ oo̯</text> 
+  <text x="57" y="75" text-anchor="end" filter="url(#solid)">
+<tspan class="ipa">ei̯</tspan>
+<tspan class="ipa">eu̯</tspan>
+</text>
+  <text x="57" y="75" text-anchor="end">
+<tspan class="ipa">ei̯</tspan>
+<tspan class="ipa">eu̯</tspan>
+</text> 
+  <text x="250" y="75" filter="url(#solid)">
+<tspan class="ipa">oi̯</tspan>
+<tspan class="ipa">ou̯</tspan>
+<tspan class="ipa">oe̯</tspan>
+<tspan class="ipa">oo̯</tspan>
+</text> 
+  <text x="250" y="75">
+<tspan class="ipa">oi̯</tspan>
+<tspan class="ipa">ou̯</tspan>
+<tspan class="ipa">oe̯</tspan>
+<tspan class="ipa">oo̯</tspan>
+</text> 
 
   <!-- open mid -->
-  <text x="81" y="135" class="ipa" text-anchor="end" filter="url(#solid)">ɛe̯</text>
-  <text x="81" y="135" class="ipa" text-anchor="end">ɛe̯</text> 
-  <text x="250" y="135" class="ipa" filter="url(#solid)">ɔe̯ ɔo̯</text> 
-  <text x="250" y="135" class="ipa">ɔe̯ ɔo̯</text> 
+  <text x="81" y="135" text-anchor="end" filter="url(#solid)">
+<tspan class="ipa">ɛe̯</tspan>
+</text>
+  <text x="81" y="135" text-anchor="end">
+<tspan class="ipa">ɛe̯</tspan>
+</text> 
+  <text x="250" y="135" filter="url(#solid)">
+<tspan class="ipa">ɔe̯</tspan>
+<tspan class="ipa">ɔo̯</tspan>
+</text> 
+  <text x="250" y="135">
+<tspan class="ipa">ɔe̯</tspan>
+<tspan class="ipa">ɔo̯</tspan>
+</text> 
 
   <!-- near open -->
-  <text x="94" y="165" class="allophone" text-anchor="end" filter="url(#solid)">æe̯ æo̯</text>
-  <text x="94" y="165" class="allophone" text-anchor="end">æe̯ æo̯</text> 
+  <text x="94" y="165" text-anchor="end" filter="url(#solid)">
+<tspan class="allophone">æe̯</tspan>
+<tspan class="allophone">æo̯</tspan>
+</text>
+  <text x="94" y="165" text-anchor="end">
+<tspan class="allophone">æe̯</tspan>
+<tspan class="allophone">æo̯</tspan>
+</text> 
 
   <!-- open -->
-  <text x="106" y="195" class="ipa" text-anchor="end" filter="url(#solid)">ai̯ au̯ ae̯ ao̯</text>
-  <text x="106" y="195" class="ipa" text-anchor="end">ai̯ au̯ ae̯ ao̯</text> 
+  <text x="106" y="195" text-anchor="end" filter="url(#solid)">
+<tspan>
+<tspan class="ipa">ai̯</tspan>
+</tspan>
+<tspan class="ipa">au̯</tspan>
+<tspan class="ipa">ae̯</tspan>
+<tspan class="ipa">ao̯</tspan>
+</text>
+  <text x="106" y="195" text-anchor="end">
+<tspan class="ipa">ai̯</tspan>
+<tspan class="ipa">au̯</tspan>
+<tspan class="ipa">ae̯</tspan>
+<tspan class="ipa">ao̯</tspan>
+</text> 
 </svg>
-</div>
 </section>
 
 
@@ -559,34 +660,51 @@ alveolar</th>
 </thead>
 <tbody>
 <tr>
-<th>stop</th>
-<td><span class="ipa">p</span> <span class="ipa">b</span><br>
-<span class="allophone">pʰ</span> <span class="allophone">pf</span> <span class="ipa">bʰ</span></td>
-<td><span class="ipa">t</span> <span class="ipa">d</span><br/>
-<span class="ipa">tʰ</span> <span class="ipa">dʰ</span></td>
+<th>stops</th>
+<td><span class="ipa">p</span> <span class="ipa">b</span></td>
+<td><span class="ipa">t</span> <span class="ipa">d</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td><span class="ipa">ʈ</span> <span class="ipa">ɖ</span><br/>
-<span class="ipa">ʈʰ</span> <span class="ipa">ɖʰ</span></td>
+<td><span class="ipa">ʈ</span> <span class="ipa">ɖ</span></td>
 <td>&nbsp;</td>
-<td><span class="ipa">k</span> <span class="ipa">ɡ</span><br/>
-<span class="ipa">kʰ</span> <span class="ipa">ɡʰ</span></td>
+<td><span class="ipa">k</span> <span class="ipa">ɡ</span></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
-<th>affricate</th>
+<th>aspirated</th>
+<td><span class="allophone">pʰ</span> <span class="allophone">pf</span> <span class="ipa">bʰ</span></td>
+<td><span class="ipa">tʰ</span> <span class="ipa">dʰ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ʈʰ</span> <span class="ipa">ɖʰ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">kʰ</span> <span class="ipa">ɡʰ</span></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>affricates</th>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td><span class="ipa">t͡ʃ</span> <span class="ipa">d͡ʒ</span><br/>
-<span class="ipa">t͡ʃʰ</span> <span class="ipa">d͡ʒʰ</span></td>
+<td><span class="ipa">t͡ʃ</span> <span class="ipa">d͡ʒ</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
-<th>fricative </th>
+<th>aspirated</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">t͡ʃʰ</span> <span class="ipa">d͡ʒʰ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>fricatives </th>
 <td><span class="allophone">f</span></td>
 <td>&nbsp;</td>
 <td><span class="ipa">s</span> <span class="allophone">z</span></td>
@@ -597,7 +715,7 @@ alveolar</th>
 <td><span class="ipa">ɦ</span> <span class="ipa">h</span></td>
 </tr>
 <tr>
-<th>nasal</th>
+<th>nasals</th>
 <td><span class="ipa">m</span></td>
 <td>&nbsp;</td>
 <td><span class="ipa">n</span></td>
@@ -608,7 +726,7 @@ alveolar</th>
 <td></td>
 </tr>
 <tr>
-<th>approximant</th>
+<th>approximants</th>
 <td><span class="allophone">w</span></td>
 <td>&nbsp;</td>
 <td><span class="ipa">l</span></td>
@@ -619,12 +737,23 @@ alveolar</th>
 <td></td>
 </tr>
 <tr>
-<th>trill/flap</th>
+<th>trills/flaps</th>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td><span class="ipa">r</span> <span class="ipa">ɾ</span></td>
 <td>&nbsp;</td>
-<td><span class="ipa">ɽ</span><br/><span class="ipa">ɽʰ</span></td>
+<td><span class="ipa">ɽ</span></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>aspirated</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɽʰ</span></td>
 <td></td>
 <td></td>
 <td></td>
@@ -1085,7 +1214,7 @@ two, when influenced by surrounding sounds.) Bengalis are not always aware of th
 
 <section id="vowel_mappings">
 <h3>Vowel sounds mapped to characters</h3>
-<p span class="instructions">This section maps Bengali vowel sounds to common graphemes, grouped by whether they are vowel-signs ( vs<mark></mark> ), or standalone ( <mark>s</mark> ). Click on the character names to see examples.</p>
+<p span class="instructions">This section maps Bengali vowel sounds to common graphemes, grouped by whether they are vowel-signs ( <mark>vs</mark> ), or standalone ( <mark>s</mark> ). Click on the character names to see examples.</p>
 <p>Hyphens indicate a consonant with inherent vowel. </p>
 <section id="plain_vowel_map">
 <h4>Plain vowels</h4>
