@@ -35,9 +35,13 @@
 <body class="useBlockExamples">
 <header>
 <div id="header-boilerplate"></div>
-<script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
 </header>
-<h1>Pular (Adlam)</h1>
+
+
+
+<h1>Pular (draft) <div class="subhead">Adlam</div></h1>
+
 
 
 <aside class="sidebar">
@@ -51,7 +55,7 @@
 
 
 <p id="status">Updated
-<!-- #BeginDate format:Sw1 -->26 November, 2021<!-- #EndDate --> <span id="versionTop"></span>
+<!-- #BeginDate format:Sw1 -->21 December, 2021<!-- #EndDate --> <span id="versionTop"></span>
 </p>
 
 
@@ -59,7 +63,10 @@
 
 <div class="section">
 <p>This page brings together basic information about the Adlam script and its use for the Pular language. It aims to provide a brief, descriptive summary of the modern, printed orthography and typographic features, and to advise how to write Pular using Unicode.</p>
-<p>The level of detail in the phonetic transcriptions shown below may vary according to the source. The transcriptions are generally intended to merely give an idea of the pronunciation.</p>
+
+<p class="instructions">This page is a work in progress. The information given here should be correct, but needs to be added to and refined further.</p>
+
+<p>Phonological transcriptions on this page should be treated as an approximate guide, only. They are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available.</p>
 
 
 
@@ -85,9 +92,10 @@
 
 
 <section id="sample">
-<h2>Sample (Adlam)</h2>
+<h2>Sample</h2>
 <p class="instructions noprint">Select part of this sample text to show a
-list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" 
+list of characters, with links to more details.  <a style="margin-inline-start: 2rem;" href="http://unicode.org/udhr/translations.html">Source</a><br>
+Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" 
 oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
 <div id="freeText" dir="rtl" data-target="c" data-base="/scripts/adlam/block" data-source="http://unicode.org/udhr/translations.html" lang="fuf">
  <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">𞤑𞤵𞥅𞤤𞤢𞤤 𞤺𞤢𞤣𞤢𞤲𞤢𞤤
@@ -297,8 +305,8 @@ be used for titles, etc.</p>
 <div>Character lists show:</div>
 <div><label>Codepoint <input onchange="toggleTranscription('listUnum', this.checked)" checked="checked" type="checkbox"></label></div>
 <div><label>IPA <input onchange="toggleTranscription('listIPA', this.checked)" checked="checked" type="checkbox"></label></div>
-<div> <label>Transliteration <input onchange="toggleTranscription('listTrans', this.checked)" type="checkbox"></label></div>
 <div><label>Latin <input onchange="toggleTranscription('listTransc', this.checked)" type="checkbox"></label></div>
+<div> <label>Transliteration <input onchange="toggleTranscription('listTrans', this.checked)" type="checkbox"></label></div>
 </div>
 
 
@@ -325,9 +333,7 @@ the document each of the sounds are referred to.</p>
 <section id="vowelSounds">
 <h3>Vowel sounds</h3>
 
-<div style="margin-left: 7.5%;">
-<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG">
-<defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -20 500 240" class="ipaSVG"><defs>
 <filter x="0" y="0" width="1" height="1" id="solid">
 <feFlood flood-color="white"></feFlood>
 <feComposite in="SourceGraphic" operator="xor"></feComposite> </filter>
@@ -358,17 +364,38 @@ the document each of the sounds are referred to.</p>
 <circle cx="177" cy="190" r="3" fill="#ccc"></circle>
 <circle cx="240" cy="190" r="3" fill="#ccc"></circle>
 <!-- close -->
-<text x="32" y="15" class="ipa" text-anchor="end">i iː</text>
-<text x="250" y="15" class="ipa">u uː</text>
+<text x="32" y="15" text-anchor="end">
+<tspan class="ipa">i</tspan>
+<tspan class="ipa">iː</tspan>
+</text>
+<text x="250" y="15">
+<tspan class="ipa">u</tspan>
+<tspan class="ipa">uː</tspan>
+</text>
 <!-- close mid -->
-<text x="57" y="75" class="allophone" text-anchor="end">e eː</text>
-<text x="250" y="75" class="allophone">o oː</text>
+<text x="57" y="75" text-anchor="end">
+<tspan class="allophone">e</tspan>
+<tspan class="allophone">eː</tspan>
+</text>
+<text x="250" y="75">
+<tspan class="allophone">o</tspan>
+<tspan class="allophone">oː</tspan>
+</text>
 <!-- open mid -->
-<text x="81" y="135" class="ipa" text-anchor="end">ɛ ɛː</text>
-<text x="250" y="135" class="ipa">ɔ ɔː</text>
+<text x="81" y="135" text-anchor="end">
+<tspan class="ipa">ɛ</tspan>
+<tspan class="ipa">ɛː</tspan>
+</text>
+<text x="250" y="135">
+<tspan class="ipa">ɔ</tspan>
+<tspan class="ipa">ɔː</tspan>
+</text>
 <!-- open -->
-<text x="106" y="195" class="ipa" text-anchor="end">a aː</text> </svg>
-</div>
+<text x="106" y="195" text-anchor="end">
+<tspan class="ipa">a</tspan>
+<tspan class="ipa">aː</tspan>
+</text> 
+</svg>
 
 <p>Short <span class="ipa">i e o u</span> vowel sounds can also be realized as <span class="ipa">ɪ ɛ ɔ ʊ</span>.<tt>wl</tt></p>
 </section>
