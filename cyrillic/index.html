@@ -43,12 +43,15 @@
 <body class="useBlockExamples">
 <header>
 <div id="header-boilerplate"></div>
-<script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Russian</h1><nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top"/></a></nav>
+
+<h1>Russian (draft) <div class="subhead">Cyrillic</div></h1>
+
 
 <aside class="sidebar">
+<h2 class="notoc flush"><a id="tochead" name="tochead" tabindex="4">Contents</a></h2>
 <div id="toc"><!-- placeholder --></div>
 
  <div id="fontsetting" class="closed">
@@ -57,7 +60,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->31 October, 2021<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->21 December, 2021<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -65,7 +68,10 @@
 
 <div class="section">
 <p>This page brings together basic information about the Cyrillic script and its use for the Russian language. It aims to provide a brief, descriptive summary of the modern, printed orthography and typographic features, and to advise how to write Russian using Unicode.</p>
-<p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
+
+<p class="instructions">This page is a work in progress. The information given here should be correct, but needs to be added to and refined further.</p>
+
+<p>Phonological transcriptions on this page should be treated as an approximate guide, only. They are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available.</p>
 
 
 
@@ -90,9 +96,10 @@
 
 
 <section id="sample">
-<h2>Sample (Russian)</h2>
+<h2>Sample</h2>
   
-<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="24" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">24px</span></p>
+<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.  <a style="margin-inline-start: 2rem;" href="http://unicode.org/udhr/translations.html">Source</a><br>
+Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="24" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">24px</span></p>
 
 <div id="freeText" dir="ltr" lang="ru">
 <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">Статья 1 Все люди рождаются свободными и равными в своем достоинстве и правах. Они наделены разумом и совестью и должны поступать в отношении друг друга в духе братства.</p>
@@ -240,11 +247,11 @@
 <div>Character lists show:</div>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>ISO 9:1995 
+<input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
 <div>
 <label>Transliteration 
 <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
-<div><label>ISO 9:1995 
-<input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
 </div>
 
 
@@ -269,11 +276,12 @@
 
 <section id="vowelPhonemes">
 <h3>Vowel sounds</h3>
+
+
 <section id="plain_vowels">
 <h4>Plain vowels</h4>
-<div style="margin-left: 7.5%;">
-<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -20 500 240" class="ipaSVG">
   <defs>
     <filter x="0" y="0" width="1" height="1" id="solid">
       <feFlood flood-color="white"/>
@@ -356,7 +364,6 @@
   <!-- open -->
   <text x="106" y="195" class="ipa" text-anchor="end">a</text> 
 </svg>
-</div>
 </section>
 
 
@@ -390,22 +397,29 @@ alveolar</th>
 </thead>
 <tbody>
 <tr>
-<th>stop</th>
-<td><span class="ipa">p</span> <span class="ipa">b</span><br>
-<span class="ipa">pʲ</span> <span class="ipa">bʲ</span></td>
-<td><span class="ipa">t</span> <span class="ipa">d</span><br/>
-<span class="ipa">tʲ</span> <span class="ipa">dʲ</span></td>
+<th>stops</th>
+<td><span class="ipa">p</span> <span class="ipa">b</span></td>
+<td><span class="ipa">t</span> <span class="ipa">d</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td><span class="ipa">k</span> <span class="ipa">ɡ</span><br/>
-<span class="allophone">kʲ</span> <span class="allophone">ɡʲ</span></td>
+<td><span class="ipa">k</span> <span class="ipa">ɡ</span></td>
 </tr>
 <tr>
-<th>affricate</th>
+<th>palatalised</th>
+<td><span class="ipa">pʲ</span> <span class="ipa">bʲ</span></td>
+<td><span class="ipa">tʲ</span> <span class="ipa">dʲ</span></td>
 <td>&nbsp;</td>
-<td><span class="ipa">t͡s</span><br><span class="allophone">t͡sʲ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="allophone">kʲ</span> <span class="allophone">ɡʲ</span></td>
+</tr>
+<tr>
+<th>affricates</th>
+<td>&nbsp;</td>
+<td><span class="ipa">t͡s</span></td>
 <td>&nbsp;</td>
 <td><span class="ipa">t͡ɕ</span></td>
 <td>&nbsp;</td>
@@ -413,44 +427,90 @@ alveolar</th>
 <td>&nbsp;</td>
 </tr>
 <tr>
-<th>fricative </th>
-<td><span class="ipa">f</span> <span class="ipa">v</span><br><span class="ipa">fʲ</span> <span class="ipa">vʲ</span></td>
+<th>palatalised</th>
 <td>&nbsp;</td>
-<td><span class="ipa">s</span> <span class="ipa">z</span><br/>
-<span class="ipa">sʲ</span> <span class="ipa">zʲ</span></td>
+<td><span class="allophone">t͡sʲ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>fricatives</th>
+<td><span class="ipa">f</span> <span class="ipa">v</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">s</span> <span class="ipa">z</span></td>
 <td><span class="ipa">ɕː</span> <span class="allophone">ʑː</span></td>
 <td><span class="ipa">ʂ</span> <span class="ipa">ʐ</span></td>
 <td>&nbsp;</td>
-<td><span class="ipa">x</span> <span class="allophone">ɣ</span><br>
-<span class="ipa">xʲ</span></td>
+<td><span class="ipa">x</span> <span class="allophone">ɣ</span></td>
 </tr>
 <tr>
-<th>nasal</th>
-<td><span class="ipa">m</span><br>
-<span class="ipa">mʲ</span></td>
+<th>palatalised</th>
+<td><span class="ipa">fʲ</span> <span class="ipa">vʲ</span></td>
 <td>&nbsp;</td>
-<td><span class="ipa">n</span><br>
-<span class="ipa">nʲ</span></td>
+<td><span class="ipa">sʲ</span> <span class="ipa">zʲ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">xʲ</span></td>
+</tr>
+<tr>
+<th>nasals</th>
+<td><span class="ipa">m</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">n</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
-<th>approximant</th>
+<th>palatalised</th>
+<td><span class="ipa">mʲ</span></td>
+<td>&nbsp;</td>
+<td><span class="ipa">nʲ</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td><span class="ipa">ɫ</span><br/><span class="ipa">lʲ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>approximants</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ɫ</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td><span class="ipa">j</span></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
-<th>trill/flap</th>
+<th>palatalised</th>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td><span class="ipa">r</span> <br><span class="ipa">rʲ</span></td>
+<td><span class="ipa">lʲ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>trills/flaps</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">r</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>palatalised</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">rʲ</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td></td>
