@@ -38,26 +38,33 @@
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Bassa Vah</h1>
 
-<nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="go to page top"/></a></nav>
 
-  <aside class="sidebar"> 
-		<h2 class="notoc flush"><a id="tochead" name="tochead" tabindex="4">Contents</a></h2>
-		<div id="toc"><!-- placeholder --></div>
+<h1>Bassa (draft) <div class="subhead">Bassa Vah</div></h1>
+
+
+
+
+
+<aside class="sidebar"> 
+<h2 class="notoc flush"><a id="tochead" name="tochead" tabindex="4">Contents</a></h2>
+<div id="toc"><!-- placeholder --></div>
 
 <div id="fontsetting" class="closed">
 </div>
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->31 October, 2021<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->21 December, 2021<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
 <div class="section">
 <p>This page brings together basic information about the Bassa Vah script and its use for the Bassa language. It aims to provide a brief, descriptive summary of the modern, printed orthography and typographic features, and to advise how to write Bassa using Unicode.</p>
-<p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
+
+<p class="instructions">This page is a work in progress. The information given here should be correct, but needs to be added to and refined further.</p>
+
+<p>Phonological transcriptions on this page should be treated as an approximate guide, only. They are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available.</p>
 
 
 
@@ -82,11 +89,12 @@
 
 
 <section id="sample">
-<h2>Sample (Bassa)</h2>
+<h2>Sample</h2>
   
 
 <p class="instructions noprint">Select part of this sample text to show a
-list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" 
+list of characters, with links to more details.  <a style="margin-inline-start: 2rem;" href="https://www.omniglot.com/writing/bassa.htm">Source</a><br>
+Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" 
 oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
 
 <div id="freeText" dir="ltr" lang="bsq" data-target="c" data-base="/scripts/bassavah/block" data-source="https://www.omniglot.com/writing/bassa.htm">
@@ -216,10 +224,10 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 <div>Character lists show:</div>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
 <div>
 <label>Transliteration 
 <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
-<div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
 </div>
   
   
@@ -240,8 +248,7 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 <section id="vowelPhonemes">
 <h3>Vowel sounds</h3>
 
-<div style="margin-left: 7.5%;">
-<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -20 500 240" class="ipaSVG">
 
   <defs>
     <filter x="0" y="0" width="1" height="1" id="solid">
@@ -284,21 +291,39 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
   
   
   <!-- close -->
-  <text x="32" y="15" class="ipa" text-anchor="end">i ĩ</text> 
-  <text x="250" y="15" class="ipa">u ũ</text> 
+  <text x="32" y="15" text-anchor="end">
+<tspan class="ipa">i</tspan>
+<tspan class="ipa">ĩ</tspan>
+</text> 
+  <text x="250" y="15">
+<tspan class="ipa">u</tspan>
+<tspan class="ipa">ũ</tspan>
+</text> 
 
   <!-- close mid -->
-  <text x="57" y="75" class="ipa" text-anchor="end">e</text> 
-  <text x="250" y="75" class="ipa">o</text> 
+  <text x="57" y="75" text-anchor="end">
+<tspan class="ipa">e</tspan>
+</text> 
+  <text x="250" y="75">
+<tspan class="ipa">o</tspan>
+</text> 
 
   <!-- open mid -->
-  <text x="81" y="135" class="ipa" text-anchor="end">ɛ ɛ̃</text> 
-  <text x="250" y="135" class="ipa">ɔ ɔ̃</text> 
+  <text x="81" y="135" text-anchor="end">
+<tspan class="ipa">ɛ</tspan>
+<tspan class="ipa">ɛ̃</tspan>
+</text> 
+  <text x="250" y="135">
+<tspan class="ipa">ɔ</tspan>
+<tspan class="ipa">ɔ̃</tspan>
+</text> 
 
   <!-- open -->
-  <text x="106" y="195" class="ipa" text-anchor="end">a ã</text> 
+  <text x="106" y="195" text-anchor="end">
+<tspan class="ipa">a</tspan>
+<tspan class="ipa">ã</tspan>
+</text>
 </svg>
-</div>
 </section>
 
 
