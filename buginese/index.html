@@ -2,8 +2,7 @@
 <html lang="en-GB">
 <head>
 <meta charset="utf-8"/>
-<title>Buginese orthography/script summary</title>
-<meta name="description" content="Summary of the Buginese script."/>
+<title>Buginese orthography notes</title>
 
 <link rel="stylesheet" href="../../shared/style/docs.css" />
 <link rel="stylesheet" href="../common28/local.css" />
@@ -15,10 +14,10 @@
 <script src="../../shared/scriptdb/bugi-bug.js"> </script>
 <script src="bug-details.html"> </script>
 
-<script src="/shared/code/boilerplate.js"></script>
-<script src="/shared/code/toc_2020.js"></script>
+<script src="../../shared/code/boilerplate.js"></script>
+<script src="../../shared/code/toc_2020.js"></script>
 <script src="../../shared/code/show_codepoints.js"></script>
-<script src="/shared/code/scriptGroups.js"></script>
+<script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common28/functions.js"></script>
 <script src="../common28/transliterate.js"></script>
 <script src="../common28/prompts.js"> </script>
@@ -36,10 +35,11 @@
 <body class="useBlockExamples">
 <header>
 <div id="header-boilerplate"></div>
-<script>document.getElementById('header-boilerplate').innerHTML = bp_header('/shared/images/world.gif','docs');</script>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Buginese</h1>
+
+<h1>Bugis (draft) <div class="subhead">Buginese</div></h1>
 
 
 
@@ -56,14 +56,17 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->4 November, 2021<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->20 December, 2021<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
 
 <section>
 <p>This page brings together basic information about the Buginese script and its use for the Buginese/Bugis language. It aims to provide a brief, descriptive summary of the modern, printed orthography and typographic features, and to advise how to write Buginese using Unicode.</p>
-<p>Phonetic transcriptions on this page should be treated as an approximate guide, only. Many are more phonemic than phonetic, and there may be variations depending on the source of the transcription.</p>
+
+<p class="instructions">This page is a work in progress. The information given here should be correct, but needs to be added to and refined further.</p>
+
+<p>Phonological transcriptions on this page should be treated as an approximate guide, only. They are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available.</p>
 
 
 
@@ -93,10 +96,11 @@
 
 
 <section id="sample">
-<h2>Sample (Buginese)</h2>
+<h2>Sample</h2>
   
 
-<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
+<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.  <a style="margin-inline-start: 2rem;" href="http://unicode.org/udhr/translations.html">Source</a><br>
+Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
 
 <div id="freeText" dir="ltr" lang="bug" data-target="c" data-base="/scripts/buginese/block" data-source="http://unicode.org/udhr/translations.html">
 <p  title="UDHR, article 1" onMouseUp="showtext('freeText')">ᨔᨗᨔᨗᨊᨗᨊ ᨑᨘᨄ ᨈᨕᨘ ᨑᨗ ᨍᨍᨗᨕᨂᨗ ᨑᨗᨒᨗᨊᨚᨕᨙ ᨊᨄᨘᨊᨕᨗ ᨆᨊᨙᨂᨗ ᨑᨗᨕᨔᨙᨂᨙ ᨕᨒᨙᨅᨗᨑᨙ᨞ ᨊᨄᨘᨊᨕᨗ ᨑᨗᨕᨔᨙᨂᨙ ᨕᨀᨒᨙ᨞ ᨊᨄᨘᨊᨕᨗ ᨑᨗᨕᨔᨙᨂᨙ ᨕᨈᨗ ᨆᨑᨙᨊᨗ ᨊ ᨔᨗᨅᨚᨒᨙ ᨅᨚᨒᨙᨊ ᨄᨉ ᨔᨗᨄᨀᨈᨕᨘ ᨄᨉ ᨆᨔᨒᨔᨘᨑᨙ᨞ </p>
@@ -249,10 +253,10 @@
 <div>Character lists show:</div>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
 <div>
 <label>Transliterate 
 <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
-<div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
 </div>
 
 
@@ -272,9 +276,8 @@
 <section id="vowelPhonemes">
 <h3>Vowel sounds</h3>
 
-<div style="margin-left: 7.5%;">
-<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -20 500 240" class="ipaSVG">
   <defs>
     <filter x="0" y="0" width="1" height="1" id="solid">
       <feFlood flood-color="white"/>
@@ -330,7 +333,6 @@
   <!-- open -->
   <text x="106" y="195" class="ipa" text-anchor="end">a</text> 
 </svg>
-</div>
 
 <p class="ednote">There's something odd here and later about a vs ə. Need to figure out which is right.</p>
 </section>
@@ -357,30 +359,27 @@ alveolar</th>
 </thead>
 <tbody>
 <tr>
-<th>stop</th>
-<td><span class="ipa">p</span> <span class="ipa">b</span><br/>
-<span class="ipa">ᵐp</span></td>
+<th>stops</th>
+<td><span class="ipa">p</span> <span class="ipa">b</span></td>
 <td><span class="ipa">t</span> <span class="ipa">d</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td><span class="ipa">c</span> <span class="ipa">ɟ</span><br/>
-<span class="ipa">ⁿc</span></td>
-<td><span class="ipa">k</span> <span class="ipa">ɡ</span><br/>
-<span class="ipa">ᵑk</span></td>
+<td><span class="ipa">c</span> <span class="ipa">ɟ</span></td>
+<td><span class="ipa">k</span> <span class="ipa">ɡ</span></td>
 <td><span class="ipa">ʔ</span></td>
 </tr>
 <tr>
-<th>affricate</th>
+<th>pre-nasalised</th>
+<td><span class="ipa">ᵐp</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td><span class="ipa">ⁿc</span></td>
+<td><span class="ipa">ᵑk</span></td>
 <td>&nbsp;</td>
 </tr>
 <tr>
-<th>fricative </th>
+<th>fricatives </th>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td><span class="ipa">s</span></td>
@@ -390,7 +389,7 @@ alveolar</th>
 <td><span class="ipa">h</span></td>
 </tr>
 <tr>
-<th>nasal</th>
+<th>nasals</th>
 <td><span class="ipa">m</span></td>
 <td>&nbsp;</td>
 <td><span class="ipa">n</span></td>
@@ -400,7 +399,7 @@ alveolar</th>
 <td></td>
 </tr>
 <tr>
-<th>approximant</th>
+<th>approximants</th>
 <td><span class="ipa">w</span></td>
 <td>&nbsp;</td>
 <td><span class="ipa">l</span></td>
@@ -410,11 +409,20 @@ alveolar</th>
 <td></td>
 </tr>
 <tr>
-<th>trill/flap</th>
+<th>trills/flaps</th>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td><span class="ipa">r</span><br/>
-<span class="ipa">ⁿr</span></td>
+<td><span class="ipa">r</span></td>
+<td>&nbsp;</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th>pre-nasalised</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><span class="ipa">ⁿr</span></td>
 <td>&nbsp;</td>
 <td></td>
 <td></td>
