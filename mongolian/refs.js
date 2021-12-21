@@ -86,6 +86,28 @@ reflist = {
 
 
 
+scriptLanguageList = {
+khk:{name:"Mongolian, Halh", url:"index.html"},
+xal:{name:"Kalmyk"},
+mnc:{name:"Manchu"},
+bxm:{name:"Buriat"},
+mon:{name:"Mongolian"},
+oui:{name:"Old Uighur"},
+mvf:{name:"Peripheral Mongolian"},
+alt:{name:"Southern Altai"},
+sjo:{name:"Xibe"},
+dta:{name:"Daur"},
+}
+
+
+
+
+
+
+
+
+
+
 
 
 terms = {
