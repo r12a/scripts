@@ -2,8 +2,8 @@
 <html lang="en-GB">
 <head>
 <meta charset="utf-8"/>
-<title>Arabic script summary</title>
-<meta name="description" content="Summary of the Arabic script."/>
+<title>Arabic orthography notes</title>
+
 <link rel="stylesheet" href="../../shared/style/docs.css" />
 <link rel="stylesheet" href="../common28/local.css" />
 <link rel="stylesheet" href="arb.css" />
@@ -36,9 +36,11 @@
 <div id="header-boilerplate"></div>
 <script>document.getElementById('header-boilerplate').innerHTML = bp_header('../../shared/images/world.gif','docs');</script>
 </header>
-<h1>Arabic</h1>
 
-<!--nav id="top"><a href="#header-boilerplate"><img src="../../shared/images/up.png" alt="Jump to top of page." title="Jump to top of page."/></a></nav-->
+
+
+<h1>Modern Standard Arabic (draft) <div class="subhead">Arabic</div></h1>
+
 
 <aside class="sidebar">
 <nav>
@@ -52,14 +54,24 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->2 November, 2021<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->21 December, 2021<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
 
 
 <div class="section">
-  <p>This page brings together basic information about the Arabic script and its use for the Modern Standard Arabic language. It doesn't cover Quranic usage. It aims to provide a brief, descriptive summary of the modern, printed orthography and typographic features, and to advise how to write Arabic using Unicode.</p>
+<p>This page brings together basic information about the Arabic script and its use for the Modern Standard Arabic language. It doesn't cover Quranic usage. It aims to provide a brief, descriptive summary of the modern, printed orthography and typographic features, and to advise how to write Arabic using Unicode.</p>
+
+<p class="instructions">This page is a work in progress. The information given here should be correct, but needs to be added to and refined further.</p>
+
+<p>Phonological transcriptions on this page should be treated as an approximate guide, only. They are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available.</p>
+
+
+
+
+
+
 <p id="usage"></p>
 <script>addUsageAdvice('Arabic')</script>
 
@@ -80,9 +92,10 @@
 
 
 <section id="sample">
-<h2>Sample (Arabic)</h2>
+<h2>Sample</h2>
  
-<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="36" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">36px</span></p>
+<p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.  <a style="margin-inline-start: 2rem;" href="http://unicode.org/udhr/translations.html">Source</a><br>
+Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="36" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">36px</span></p>
 
  
   <div id="freeText" dir="rtl" lang="ar" data-target="c" data-base="/scripts/arabic/block" data-source="http://unicode.org/udhr/translations.html">
@@ -137,24 +150,6 @@
 <p>A mandatory <mark>ligature</mark> has to be used for combinations of <span class="trans">lam + alif</span>.</p>
 <p>Arabic uses both <mark>European and native digits</mark>, and has local forms for several of the more common punctuation marks.</p>
 </section>
-
-
-
-
-
-
-
-
-
-<div id="showTranscriptions">
-<div>Character lists show:</div>
-<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
-<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
-<div>
-<label>Translit 
-<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
-<div><label>ISO 9985 <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
-</div>
 
 
 
@@ -300,6 +295,24 @@
 
 
 
+<div id="showTranscriptions">
+<div>Character lists show:</div>
+<div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
+<div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
+<div><label>ISO 9985 <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
+<div>
+<label>Transliteration 
+<input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
+</div>
+
+
+
+
+
+
+
+
+
 <section id="phonology">
 <h2>Phonology</h2>
 
@@ -312,9 +325,8 @@
 
 <section id="plain_vowels">
 <h4>Plain vowels</h4>
-<div style="margin-left: 7.5%;">
-<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -20 500 240" class="ipaSVG">
   <defs>
     <filter x="0" y="0" width="1" height="1" id="solid">
       <feFlood flood-color="white"/>
@@ -363,29 +375,49 @@
   
   
   <!-- close -->
-  <text x="32" y="15" class="ipa" text-anchor="end">iː</text> 
-<text x="250" y="15" class="ipa">uː</text> 
+  <text x="32" y="15" text-anchor="end">
+<tspan class="ipa">iː</tspan>
+</text> 
+<text x="250" y="15">
+<tspan class="ipa">uː</tspan>
+</text> 
 
   <!-- near close -->
-<text x="85" y="45" class="ipa" text-anchor="end">ɪ</text> 
-<text x="210" y="45" class="ipa">ʊ</text> 
+<text x="85" y="45" text-anchor="end">
+<tspan class="ipa">ɪ</tspan>
+</text> 
+<text x="210" y="45">
+<tspan class="ipa">ʊ</tspan>
+</text> 
 
   <!-- close mid -->
-<text x="250" y="75" class="allophone">o</text> 
+<text x="250" y="75">
+<tspan class="allophone">o</tspan>
+</text> 
 
   <!-- open mid -->
-<text x="81" y="135" class="allophone" text-anchor="end">ɛ</text> 
+<text x="81" y="135" text-anchor="end">
+<tspan class="allophone">ɛ</tspan>
+</text> 
 
 <!-- near open -->
-<text x="94" y="165" class="allophone" text-anchor="end">æ</text> 
+<text x="94" y="165" text-anchor="end">
+<tspan class="allophone">æ</tspan>
+</text> 
 
 <!-- open -->
-<!--text x="106" y="195" class="ipa" text-anchor="end">a</text--> 
-<text x="166" y="175" class="ipa" text-anchor="end">a aː</text> 
-<text x="232" y="195" class="allophone" text-anchor="end" filter="url(#solid)">ɑ</text>
-<text x="232" y="195" class="allophone" text-anchor="end">ɑ</text> 
+<!--text x="106" y="195" text-anchor="end">a</text--> 
+<text x="166" y="175" text-anchor="end">
+<tspan class="ipa">a</tspan>
+<tspan class="ipa">aː</tspan>
+</text> 
+<text x="232" y="195" text-anchor="end" filter="url(#solid)">
+<tspan class="allophone">ɑ</tspan>
+</text>
+<text x="232" y="195" text-anchor="end">
+<tspan class="allophone">ɑ</tspan>
+</text> 
 </svg>
-</div>
 
 <p>The above chart is for 'Standard Arabic'. Even so, many regional variants of the standard pronunciation exist, not to mention local dialects.<tt>wp</tt></p>
 <p><span class="ipa">o</span>, <span class="ipa">oː</span> and <span class="ipa">e</span>, and <span class="ipa">eː</span> are  sometimes used for foreign words, and are sometimes introduced into speech as allophones due to regional dialects.</p>
@@ -399,8 +431,8 @@
 
 <section id="diphthongs">
 <h4>Diphthongs</h4>
-<div style="margin-left: 7.5%;">
-<svg width="420px" height="220px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 220" class="ipaSVG"> 
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -20 500 240" class="ipaSVG">
 
   <defs>
     <filter x="0" y="0" width="1" height="1" id="solid">
@@ -443,9 +475,11 @@
   
   
   <!-- open -->
-<text x="106" y="195" class="ipa" text-anchor="end">aj aw</text> 
+<text x="106" y="195" text-anchor="end">
+<tspan class="ipa">aj</tspan>
+<tspan class="ipa">aw</tspan>
+</text> 
 </svg>
-</div>
 <p style="font-size: 60%;text-align: end; line-height: 1;">Source <tt>wp</tt>..</p>
 </section>
 
@@ -475,10 +509,9 @@ alveolar</th>
 </thead>
 <tbody>
 <tr>
-<th>stop</th>
+<th>stops</th>
 <td><span class="allophone">p</span> <span class="ipa">b</span></td>
-<td><span class="ipa">t</span> <span class="ipa">d</span><br/>
-<span class="ipa">tˤ</span> <span class="ipa">dˤ</span></td>
+<td><span class="ipa">t</span> <span class="ipa">d</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -488,7 +521,19 @@ alveolar</th>
 <td><span class="ipa">ʔ</span></td>
 </tr>
 <tr>
-<th>affricate</th>
+<th>ejective</th>
+<td>&nbsp;</td>
+<td><span class="ipa">tˤ</span> <span class="ipa">dˤ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>affricates</th>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -500,12 +545,11 @@ alveolar</th>
 <td>&nbsp;</td>
 </tr>
 <tr>
-<th>fricative </th>
+<th>fricatives</th>
 <td><span class="ipa">f</span> <span class="allophone">v</span></td>
-<td><span class="ipa">θ</span> <span class="ipa">ð</span><br/><span class="ipa">ðˤ</span></td>
-<td><span class="ipa">s</span> <span class="ipa">z</span><br/>
-<span class="ipa">sˤ</span> <span class="allophone">zˤ</span></td>
-<td><span class="ipa">ʃ</span> <span class="allophone"><span class="ipa">ʒ</span></span></td>
+<td><span class="ipa">θ</span> <span class="ipa">ð</span></td>
+<td><span class="ipa">s</span> <span class="ipa">z</span></td>
+<td><span class="ipa">ʃ</span> <span class="allophone">ʒ</span></td>
 <td>&nbsp;</td>
 <td><span class="ipa">x</span> <span class="ipa">ɣ</span></td>
 <td><span class="allophone">χ</span> <span class="allophone">ʁ</span></td>
@@ -513,7 +557,19 @@ alveolar</th>
 <td><span class="ipa">h</span></td>
 </tr>
 <tr>
-<th>nasal</th>
+<th>ejective</th>
+<td>&nbsp;</td>
+<td><span class="ipa">ðˤ</span></td>
+<td><span class="ipa">sˤ</span> <span class="allophone">zˤ</span></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th>nasals</th>
 <td><span class="ipa">m</span></td>
 <td>&nbsp;</td>
 <td><span class="ipa">n</span></td>
@@ -525,7 +581,7 @@ alveolar</th>
 <td></td>
 </tr>
 <tr>
-<th>approximant</th>
+<th>approximants</th>
 <td><span class="ipa">w</span></td>
 <td>&nbsp;</td>
 <td><span class="ipa">l</span> <span class="allophone">ɫ</span></td>
@@ -537,7 +593,7 @@ alveolar</th>
 <td></td>
 </tr>
 <tr>
-<th>trill/flap</th>
+<th>trills/flaps</th>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td><span class="ipa">r</span></td>
