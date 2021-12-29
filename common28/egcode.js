@@ -48,7 +48,9 @@ function addExamples (langFilter) {
 		//console.log('Looking for ',nodes[n].textContent)
 		//console.log('Language is ',nodes[n].lang)
         
-        // example of raw data: τέσσερα|four|ˈtesera|téssera|notes
+        // example of raw data: 
+        // τέσσερα|four|ˈtesera|téssera|notes|x|ˈte§se§ra
+        // term|meaning|ipa|transcription|notes|source|ipalist
 
 		if (nodes[n].lang === langFilter && egList[nodes[n].textContent]) {
 			temp = egList[nodes[n].textContent].split('|')
@@ -65,7 +67,9 @@ function addExamples (langFilter) {
 			//out += nodes[n].lang
 			//out += '"'
 			if (nodes[n].dir === 'rtl') out += ' dir="rtl"'
-            out += `  onclick="showNameDetails('${ temp[0] }', '${ nodes[n].lang }', window.blockDir, 'c', document.getElementById('panel'), '')"`
+			if (nodes[n].classList.contains('ipalist') && temp[6]) ipaBreakdown = temp[6]
+            else ipaBreakdown = ''
+            out += `  onclick="showNameDetails('${ temp[0] }', '${ nodes[n].lang }', window.blockDir, 'c', document.getElementById('panel'), '', '', '${ ipaBreakdown }')"`
 			out += '>'
 			out += temp[0]
 			out += '</span>'
