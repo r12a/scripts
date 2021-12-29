@@ -41,7 +41,7 @@
 </header>
 
 
-<h1>Cambodian (draft) <div class="subhead">Khmer</div></h1>
+<h1>Cambodian (draft) <div class="subhead" style="margin-inline-start:.25em;">Khmer</div></h1>
 
 
 
@@ -54,7 +54,7 @@
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->20 December, 2021<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->29 December, 2021<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
   
@@ -62,7 +62,10 @@
 
 <div class="section">
 <p>This page brings together basic information about the Khmer script and its use for the Cambodian language. It aims to provide a brief, descriptive summary of the modern, printed orthography and typographic features, and to advise how to write Khmer using Unicode.</p>
-<p>The level of detail in the phonetic transcriptions shown below may vary according to the source. The transcriptions are generally intended to merely give an idea of the pronunciation.</p>
+
+<p class="instructions">This page is a work in progress. The information given here should be correct, but needs to be added to and refined further.</p>
+
+<p>Phonological transcriptions on this page should be treated as an approximate guide, only. They are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available.</p>
 
 
 
@@ -861,32 +864,56 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <section id="syllable_structure">
 <h2>Structure </h2>
-   <p>The syllable is fundamental in Cambodian. </p>
-  <p>Many native Cambodian words are  monosyllabic. These start with one or more consonants or an independent vowel (or a vowel sign attached to <span class="name">ʔɑː</span>, which is a combination of both). Short vowels in stressed syllables are always followed by a consonant. Long vowels may not be. There are many monosyllabic words that begin with consonant clusters, and some monosyllabic words that end with clusters, although only one consonant is pronounced in syllable final position.</p>
-  <p>There are also many bisyllabic words. In many cases the first syllable in a bisyllabic word is unstressed, and the vowel is usually rendered in colloquial speech as a schwa. Some bisyllabic words are compounds, however, and this may not apply.</p>
-  <p>Polysyllabic words are usually of Sanskrit, Pali or French origin. These words tend to alternate stress across their syllables, but may not. </p>
 
 
 
 
-<section id="usageboundaries">
-<h3>Order of syllable components</h3>
 
-<p>An orthographic syllable is slightly different from a morphological syllable, since an orthographic syllable may begin with the final consonant of the previous morphological syllable. Alternatively, an orthographic syllable may be just a final consonant or consonant cluster in a morphological syllable.</p>
-    <p>Components of an 'orthographic syllable'*  should be composed in the following order:</p>
-  <ol style="text-align: left;">
-    <li>base consonant or independent vowel </li>
-    <li><span class="name">rɔɓaːt </span></li>
-    <li><span class="name">museʔkətoə̯n </span>or <span class="name">trəisaɓ </span> (register shifters)</li>
-    <li>subscript (consonant or independent vowel)</li>
-    <li>vowel sign</li>
-    <li>zero-width joiner or non-joiner</li>
-    <li>any other mark </li>
-  </ol>
-  <p>This fixed ordering makes it easier to search for and collate text. For more details, see <a href="scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">this SIL document</a>.<tt>sil</tt></p>
-  <p>As mentioned above, although all combining characters follow the base in memory, the visual order of syllable components may not follow a linear progression from left to right. In the following example the order in which the glyphs are pronounced is far left, far right, down, left, left: <span class="eg" lang="km">កន្ត្រៃ</span> In the word <span class="eg" lang="km">ច្រៀង</span> the spoken order of the separate visible parts, numbered left to right, is 3,2, 1+4, 5, Some vowel signs span two or three sides of the base consonant or cluster. </p>
+<section id="morphosyllables">
+<h3>Morphological syllables</h3>
+
+<p>Many native Cambodian words are  monosyllabic. There are also many bisyllabic words, in which the first syllable  is typically unstressed, and the vowel is  rendered in colloquial speech as a schwa. Some bisyllabic words are compounds, however, and this may not apply.</p>
+
+<p>Syllables start with one or more consonants or an independent vowel, however the latter represent a vowel sound after a glottal stop, so the syllable onset is always C(C)(C)V. The rhyme is composed of a short vowel in stressed syllables that is always followed by a consonant (VC), or a long vowel, that may not be.</p>
+
+<p>Many monosyllabic words that begin with consonant clusters, and some monosyllabic words that end with clusters, although only one consonant is pronounced in syllable final position.</p>
+
+<p>Word-internally, a syllable with a final consonant  followed by another syllable creates a stack of consonants. The top item in the stack is the syllable final consonant, and the initial consonant of the next syllable is rendered in subjoined form.</p>
+
+<p>Polysyllabic words are usually of Sanskrit, Pali or French origin. These words tend to alternate stress across their syllables, but may not. </p>
 </section>
 
+
+
+
+<section id="orthosyllables">
+<h3>Orthographic syllables</h3>
+
+<p>An orthographic syllable differs from a morphological syllable in that it always begins with a consonant, or cluster of consonants. Where word-medial stacks occur, the orthographic syllable may begin with the final consonant of the previous morphological syllable and continue through the onsets of the following syllable. Alternatively, an orthographic syllable may be just a final consonant (or consonant cluster) in a morphological syllable.</p>
+
+<figure id="fig_syllables">
+<img src="images/syll_phonetic.png" class="ex" lang="km" alt="កដ្ឋមណ្ឌូ"> &nbsp;&nbsp;&nbsp;&nbsp;
+<img src="images/syll_orthographic.png" class="ex" lang="km" alt="កដ្ឋមណ្ឌូ" style="border-inline-start: 1px solid tan; padding-inline-start: 1em;">
+<figcaption>The same word, split into phonetic syllables (left) and orthgraphic syllables (right).</figcaption>
+</figure>
+
+<p>An orthographic syllable includes all the combining characters associated with the consonants it contains.</p>
+
+<p>Components of an 'orthographic syllable'  should be composed in the following order:</p>
+<ol style="text-align: left;">
+<li>base consonant or independent vowel </li>
+<li><span class="name">rɔɓaːt </span></li>
+<li><span class="name">museʔkətoə̯n </span>or <span class="name">trəisaɓ </span> (register shifters)</li>
+<li>subscript (consonant or independent vowel)</li>
+<li>vowel sign</li>
+<li>zero-width joiner or non-joiner</li>
+<li>any other mark </li>
+</ol>
+
+<p>This fixed ordering makes it easier to search for and collate text. For more details, see <a href="http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Mondulkiri-5.513-Ortho&filename=Mondulkiri-5.513-Ortho.pdf">this SIL document</a>.<tt>sil</tt></p>
+
+<p>As mentioned above, although all combining characters follow the base in memory, the visual order of syllable components may not follow a linear progression from left to right. In the following example the order in which the glyphs are pronounced is far left, far right, down, left, left: <span class="eg" lang="km">កន្ត្រៃ</span> In the word <span class="eg" lang="km">ច្រៀង</span> the spoken order of the separate visible parts, numbered left to right, is 3,2, 1+4, 5, Some vowel signs span two or three sides of the base consonant or cluster. </p>
+</section>
 </section>
 
 
@@ -908,40 +935,87 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-            
-            
-            
-<section id="vowel_harmony">
-<h3>Vowel harmony</h3>           
-			<p> In two-syllable words, where the second syllable begins with one of the following consonants the vowel class of the second syllable is the same as that of the first.</p>
+<section id="consonant_registers">
+<h3>Consonant registers</h3>
+<p>Cambodian inherited a writing system that has more vowel sounds than ways to write them, but has fewer consonant sounds than consonant symbols. Khmer takes advantage of this by dividing the consonant symbols into 2  classes (or registers): an <span class="name">a-class</span> and an <span class="name">o-class</span>. The class of a consonant then determines the vowel sound in a syllable.  For example, compare the pronunciations in the table:</p>
 
-<figure class="auto" data-cols="trans">ង␣ញ␣ណ␣ន␣ម␣យ␣ឡ␣ល␣រ␣វ</figure>
+<figure id="fig_registers">
+<table>
+<tr><th>A-class consonant</th>
+<th>IPA</th>
+<th>O-class consonant</th><th>IPA</th></tr>
+<tr>
+<td><span class="codepoint" translate="no"><bdi lang="km">&#x1780;</bdi> [<a href="/scripts/khmer/block#char1780"><span class="uname">U+1780 KHMER LETTER KA</span></a>]</span></td>
+<td><span class="ipa">kɑː</span></td>
+<td><span class="codepoint" translate="no"><bdi lang="km">&#x1782;</bdi> [<a href="/scripts/khmer/block#char1782"><span class="uname">U+1782 KHMER LETTER KO</span></a>]</span></td>
+<td><span class="ipa">kɔː</span></td></tr>
+<tr>
+<td><span class="codepoint" translate="no"><bdi lang="km">&#x1780;&#x17B8;</bdi> [<a href="/scripts/khmer/block#char1780"><span class="uname">U+1780 KHMER LETTER KA</span></a> + <a href="/scripts/khmer/block#char17B8"><span class="uname">U+17B8 KHMER VOWEL SIGN II</span></a>]</span></td>
+<td><span class="ipa">kəj</span></td>
+<td><span class="codepoint" translate="no"><bdi lang="km">&#x1782;&#x17B8;</bdi> [<a href="/scripts/khmer/block#char1782"><span class="uname">U+1782 KHMER LETTER KO</span></a> + <a href="/scripts/khmer/block#char17B8"><span class="uname">U+17B8 KHMER VOWEL SIGN II</span></a>]</span></td>
+<td><span class="ipa">kiː</span></td>
+</tr>
+<tr>
+<td><span class="codepoint noindex" translate="no"><span lang="km">&#x1780;&#x17B6;</span> [<a href="/scripts/khmer/block#char1780"><span class="uname">U+1780 KHMER LETTER KA</span></a> + <a href="/scripts/khmer/block#char17B6"><span class="uname">U+17B6 KHMER VOWEL SIGN AA</span></a>]</span></td>
+<td><span class="ipa">kaː</span></td>
+<td><span class="codepoint noindex" translate="no"><span lang="km">&#x1782;&#x17B6;</span> [<a href="/scripts/khmer/block#char1782"><span class="uname">U+1782 KHMER LETTER KO</span></a> + <a href="/scripts/khmer/block#char17B6"><span class="uname">U+17B6 KHMER VOWEL SIGN AA</span></a>]</span></td>
+<td><span class="ipa">kiə</span></td>
+</tr>
+</table>
+<figcaption>Examples of vowel pronunciation changes, depending on the class of the base consonant.</figcaption>
+</figure>
 
-
-<p>For example, in <span class="eg" lang="km">ប្រយ័ត្ន</span> the second syllable starts with an <span class="ipa">oː</span> class consonant but the class of the preceding syllable turns the vowel to an <span class="ipa">ɑː</span> class sound. There are, however, exceptions to this rule. </p>
+<p>Other factors may also affect the  sound, such as stress, and <a href="#vowel_harmony">vowel harmony</a>. Diacritics can also be used to change the class of a consonant, or create sequences that represent a class for which there isn't a single character (see <a class="secref">register_change</a>).</p>
+<p>These registers are not related to tone, as Khmer is not tonal.</p>
 </section>
+
+
 
 
 
 
 <section id="inherent_vowels">
 <h3>Inherent vowels</h3>
+
 <p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
 
-<p>Consonants carry an inherent vowel usually transcribed as <span class="trans">a</span> but pronounced as either <span class="ipa">ɑː</span> or <span class="ipa">ɔː</span>. The class of the consonant will initially dictate which sound is appropriate, eg. <span class="codepoint noindex" translate="no"><span lang="km">&#x1780;</span> [<a href="/scripts/khmer/block#char1780"><span class="uname">U+1780 KHMER LETTER KA</span></a>]</span> (an ɑː class consonant) is pronounced <span class="ipa">kɑː</span> whereas <span class="codepoint noindex" translate="no"><span lang="km">&#x1782;</span> [<a href="/scripts/khmer/block#char1782"><span class="uname">U+1782 KHMER LETTER KO</span></a>]</span> (an ɔː class consonant) is pronounced <span class="ipa">kɔː</span>.</p>
-<p>The Unicode Khmer block has two characters that appear to be associated with the inherent vowel, but their use is not clear. They are <span class="codepoint" translate="no"><span lang="km">&#x17B4;</span> <a href="/scripts/khmer/block#char17B4"><span class="uname">U+17B4 KHMER VOWEL INHERENT AQ</span></a></span> and <span class="codepoint" translate="no"><span lang="km">&#x17B5;</span> <a href="/scripts/khmer/block#char17B5"><span class="uname">U+17B5 KHMER VOWEL INHERENT AA</span></a></span>.</p>
+<p>Khmer has 2 inherent vowels: <span class="ipa">ɑː</span> and <span class="ipa">ɔː</span>. Both are commonly transcribed as <span class="transc">a</span>.</p>
+
+<p>The class of the consonant will initially dictate which sound is appropriate, eg. <span class="codepoint noindex" translate="no"><span lang="km">&#x1780;</span> [<a href="/scripts/khmer/block#char1780"><span class="uname">U+1780 KHMER LETTER KA</span></a>]</span> (an ɑː class consonant) is pronounced <span class="ipa">kɑː</span> whereas <span class="codepoint noindex" translate="no"><span lang="km">&#x1782;</span> [<a href="/scripts/khmer/block#char1782"><span class="uname">U+1782 KHMER LETTER KO</span></a>]</span> (an ɔː class consonant) is pronounced <span class="ipa">kɔː</span>, but see also <a class="secref">vowel_harmony</a>.</p>
+
+<p class="btw">The invisible characters <span class="codepoint" translate="no"><span lang="km">&#x17B4;</span> <a href="/scripts/khmer/block#char17B4"><span class="uname">U+17B4 KHMER VOWEL INHERENT AQ</span></a></span> and <span class="codepoint" translate="no"><span lang="km">&#x17B5;</span> <a href="/scripts/khmer/block#char17B5"><span class="uname">U+17B5 KHMER VOWEL INHERENT AA</span></a></span> were originally intended to <q>represent a phonetic difference not expressed by the spelling, so as to assist in phonetic sorting</q>, however, the Unicode Standard considers them <q>insufficient for that purpose</q> and <q>errors in the encoding</q>, and they should not be used.<tt>u,677</tt></p>
 </section>
+
+
+
+
+
             
-            
+<section id="vowel_harmony">
+<h3>Vowel harmony</h3>           
+			
+<p> In two-syllable words, where the second syllable begins with one of the following sonorant consonants the vowel class of the second syllable is the same as that of the first.</p>
+
+<figure class="otherBox auto" data-cols="ipa,transc,trans">ង␣ញ␣ណ␣ន␣ម␣យ␣ឡ␣ល␣រ␣វ</figure>
+
+<p>For example, in the following word the second syllable starts with an o-class consonant but the class of the preceding syllable turns the vowel to an a-class sound. There are, however, exceptions to this rule.
+<span class="eg" lang="km">ប្រយ័ត្ន</span>
+</p>
+</section>
+
+
+
             
             
 <section id="vowel_signs">
-<h3>Vowel signs</h3>           
+<h3>Vowel-signs</h3>           
 <p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
 
-<p>Non-inherent  vowel sounds that follow a consonant  can be represented using <span class="name">vowel-signs</span>, eg. <span class="ipa">ki</span> is written <span class="codepoint noindex" translate="no"><span lang="km">&#x1780;&#x17B7;</span> [<a href="/scripts/khmer/block#char1780"><span class="uname">U+1780 KHMER LETTER KA</span></a> + <a href="/scripts/khmer/block#char17B7"><span class="uname">U+17B7 KHMER VOWEL SIGN I</span></a>]</span>.</p>
-<p>An orthography that uses vowel-signs is different from one that uses simple diacritics or letters for vowels in that the vowel-signs are generally attached to the syllable, rather than  just applied to the letter of the immediately preceding consonant. This means that pre-base vowel-signs and the left glyph of circumgraphs appears before a whole consonant cluster if it is rendered as a conjunct (see <a class="secref">prescript_vowels</a>).</p>
-<p>Khmer vowel-signs are all combining characters.  All vowel-signs are  stored after the base consonant, and the glyph rendering system takes care of the positioning at display time. This also applies for the 5 <a href="#circumgraphs">circumgraphs</a>, where a single code point produces glyphs on more than one side of the consonant base.</p>
+<p>Non-inherent vowel sounds that follow a consonant  can be represented using <span class="name">vowel-signs</span>, eg. <span class="ipa">ki</span> is written <span class="codepoint noindex" translate="no"><span lang="km">&#x1780;&#x17B7;</span> [<a href="/scripts/khmer/block#char1780"><span class="uname">U+1780 KHMER LETTER KA</span></a> + <a href="/scripts/khmer/block#char17B7"><span class="uname">U+17B7 KHMER VOWEL SIGN I</span></a>]</span>.</p>
+
+<p>An orthography that uses vowel-signs is different from one that uses simple diacritics or letters for vowels in that the vowel-signs are generally attached to the <a href="#orthosyllables">orthographic syllable</a>, rather than  just applied to the letter of the immediately preceding consonant. Where the orthographic syllable begins with a stack of consonants, the vowel-sign, including pre-base vowel-signs and  circumgraphs, is rendered relative to the first (full-sized) item in the stack (see <a class="secref">stack_vowels</a> for examples). However, they are typed and stored in computer memory in the order of pronunciation.</p>
+<p>Khmer vowels are written using <a href="#combiningvowels">dedicated combining characters</a>, the <a href="#anusvara_visarga"><span class="name">nikahit</span> or <span class="name">reəahmuk</span> diacritics</a>, and <a href="#consonant_vowels">some consonants</a> that are pronounced as vowels in certain contexts. These components may be used on their own, or in combination with others (see <a class="secref">composite_vowels</a>). </p>
+
 <p>Around half  the vowel-signs are <em>spacing</em> marks, meaning that they consume horizontal space when added to a base consonant.</p>
 </section>
 
@@ -953,30 +1027,31 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <section id="combiningvowels">
 <h3>Combining marks used for vowels</h3>
 
-<p>Khmer uses the following dedicated combining marks for vowels. They may be used on their own, or in combination with others (see <a class="secref">composite_vowels</a>). A  few vowel signs are combined with <span class="name">niʔkəhət</span> or <span class="name">reə̆hmuk</span> diacritics to produce additional sounds (see <a class="secref">anusvara_visarga</a>), and some <a href="#consonant_vowels">consonants are pronounced as vowels</a> in certain contexts.</p>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ិ␣ី␣ឹ␣ឺ␣ុ␣ូ␣េ␣ោ␣ែ␣ៈ␣ា␣ ␣ៀ␣ឿ␣ួ␣ើ␣ៃ␣ៅ</figure>
+<p>Khmer uses the following dedicated combining marks for vowels. As just mentioned, they may be used on their own, or in combination with others (see <a class="secref">composite_vowels</a>). Where there are 2 possible pronunciations listed, the left is for a-class consonants, and the right for 0-class.</p>
 
-<figure class="auxiliaryBox auto" data-cols="ipa,trans,transc">៏</figure>
-
-
-<p>In most cases, vowel signs attached to a consonant are pronounced differently, depending on the register of the consonant letter, eg. <span class="codepoint noindex" translate="no"><span lang="km">&#x1780;&#x17B6;</span> [<a href="/scripts/khmer/block#char1780"><span class="uname">U+1780 KHMER LETTER KA</span></a> + <a href="/scripts/khmer/block#char17B6"><span class="uname">U+17B6 KHMER VOWEL SIGN AA</span></a>]</span> is pronounced <span class="ipa">kaː</span>, whereas <span class="codepoint noindex" translate="no"><span lang="km">&#x1782;&#x17B6;</span> [<a href="/scripts/khmer/block#char1782"><span class="uname">U+1782 KHMER LETTER KO</span></a> + <a href="/scripts/khmer/block#char17B6"><span class="uname">U+17B6 KHMER VOWEL SIGN AA</span></a>]</span> is pronounced <span class="ipa">kiə</span>.</p>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ិ␣ី␣ឹ␣ឺ␣ុ␣ូ␣េ␣ោ␣ែ␣ៈ␣ា␣៏␣ ␣ៀ␣ឿ␣ួ␣ើ␣ៃ␣ៅ</figure>
+<p>All these characters are  typed and stored after the base consonant they follow during pronunciation, and the glyph rendering system takes care of the positioning at display time. This also applies for stacks, and for the 3 <a href="#prescript_vowels">pre-base vowel-signs</a> and the 5 <a href="#circumgraphs">circumgraphs</a>.</p>
 <p><span class="codepoint" translate="no"><span lang="km">&#x17C8;</span> [<a href="/scripts/khmer/block#char17C8"><span class="uname">U+17C8 KHMER SIGN YUUKALEAPINTU​</span></a>]</span> is a 20th century addition to the Khmer repertoire. It is used as a vowel after consonants that are pronounced as stressed syllables at the end of a word, or preceding an internal juncture in compounds.</p>
 <p><span class="codepoint" translate="no"><span lang="km">&#x17CF;</span> [<a href="/scripts/khmer/block#char17CF"><span class="uname">U+17CF KHMER SIGN AHSDA​</span></a>]</span> is used over just two words: <span class="eg" lang="km">ក៏</span> <span class="eg" lang="km">ដ៏</span></p>
-<p>In the <span class="name">âksâr mul</span> font style, some vowels form ligatures with their base consonants. See <a class="secref">vowel_ligatures</a>.</p>
-</section>
+<p>In the <span class="name">âksâr mul</span> font style, some vowel-signs form ligatures with their base consonants. See <a class="secref">vowel_ligatures</a>.</p>
 
 
 
 
 <section id="prescript_vowels">
-<h3>Pre-base vowel-signs</h3>  
+<h4>Pre-base vowel-signs</h4>  
+
+<p id="def-prebase" class="explanatoryintro definitionStub"></p>
 
 <figure class="characterBox auto small" data-cols="ipa,trans,transc">េ␣ែ␣ៃ</figure>
 
-<p>Three vowel-signs appear to the left of the onset consonant, eg. <span class="eg" lang="km">សេះ</span></p>
+<p>Three combining marks are displayed to the left of the onset consonant(s), eg.
+<span class="eg" lang="km">គេ</span>
+</p>
 
-<p>These are combining marks that are always stored after the base consonant. The glyph rendering system places the glyph before the base consonant.</p>
-<p>These vowel-signs are placed before the start of the orthographic <em>syllable</em>. This means that a word with a consonant cluster  visually separates the pre-base vowel from the  position where it is pronounced by more than one consonant character, eg.
+<p>Relative to the consonants, these combining marks are always typed and stored in the order in which they are pronounced, not the order in which they are displayed. The positioning of the glyph when displayed is managed by the font and rendering software.</p>
+
+<p>In fact, these vowel-signs appear before the start of the orthographic <em>syllable</em>. When a syllable onset is a consonant cluster, the vowel-sign appears to the left of the initial character in the consonant stack. Click on the following examples to compare the sequence of code points with the displayed result:
 <span class="eg" lang="km">ម្ដេច</span>
 <span class="eg" lang="km">អង្គ្លេស</span>
 </p>
@@ -988,7 +1063,9 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 <section id="circumgraphs">
-<h3>Circumgraphs</h3>
+<h4>Circumgraphs</h4>
+
+<p id="def-circumgraph" class="explanatoryintro definitionStub"></p>
 
 <figure class="characterBox auto small" data-cols="ipa,trans,transc">ៀ␣ឿ␣ើ␣ោ␣ៅ</figure>
 
@@ -1003,27 +1080,8 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <p>See also <a class="secref">encoding_choices</a>.</p>
 </section>
-
-
-
-
-
-
-
-  
-<section id="anusvara_visarga">
-<h3><span class="name">niʔkəhət</span> and <span class="name">reə̆hmuk</span></h3>
-
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ំ␣ះ</figure>
-
-<p>The descendants of the anusvara and the visarga, <span class="codepoint" translate="no"><span lang="km">&#x17C6;</span> [<a href="/scripts/khmer/block#char17C6"><span class="uname">U+17C6 KHMER SIGN NIKAHIT​</span></a>],</span> called <span lang="km">និគ្គហិត</span> <span class="name">niʔkəhət,</span> and <span class="codepoint" translate="no"><span lang="km">&#x17C7;</span> [<a href="/scripts/khmer/block#char17C7"><span class="uname">U+17C7 KHMER SIGN REAHMUK​</span></a>]</span>, called <span lang="km">រះមុខ</span> <span class="name">reə̆hmuk</span>, are  regarded as vowels in Khmer, even though they represent the sounds <span class="ipa">m</span> and <span class="ipa">h</span>, respectively.</p>
-<p>Used on their own, they can change the inherent vowel, affecting both the pronunciation and the meaning. For example, compare <span class="name">niʔkəhət</span> used alone  <span class="eg" lang="km">ដម</span> <span class="eg" lang="km">ដំ</span> and used with <span class="codepoint" translate="no"><span lang="km">&#x17B6;</span> [<a href="/scripts/khmer/block#char17B6"><span class="uname">U+17B6 KHMER VOWEL SIGN AA</span></a>]</span> <tt>u,643</tt>  <span class="eg" lang="km">ពាម</span> <span class="eg" lang="km">ពាំ</span></p>
-<p>They are also used in combination with other vowel signs.</p>
-
-<figure class="characterBox auto" data-cols="ipa,trans">ាំ␣ុំ␣ុះ␣េះ␣ោះ</figure>
-
-<p>The first two of these combinations are regarded as  vowels in the Khmer alphabet but they are not encoded separately in Unicode (though they are named sequences), ie. <span class="ex" lang="km">អាំ</span> <span class="ipa">am oə̆m</span> and <span class="ex" lang="km">អុំ</span> <span class="ipa">om um</span>.</p>
 </section>
+
 
 
 
@@ -1031,11 +1089,52 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <section id="consonant_vowels">
 <h3>Consonants used for vowels</h3>
-<p>Vowel-signs may sometimes be combined with other  characters to represent a particular vowel sound. In addition to <span class="name">niʔkəhət</span> and <span class="name">reə̆hmuk</span>, these include the following:</p>
 
-<figure class="characterBox auto" data-cols="ipa,trans">ង␣វ␣រ␣យ</figure>
+
+<p>Vowel-signs may sometimes be combined with other  characters to represent a particular vowel sound. </p>
+
+
+
+
+<section id="anusvara_visarga">
+<h4>Nikahit and reahmuk</h4>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ំ␣ះ</figure>
+
+<p>The descendants of the anusvara and the visarga, <span class="codepoint" translate="no"><span lang="km">&#x17C6;</span> [<a href="/scripts/khmer/block#char17C6"><span class="uname">U+17C6 KHMER SIGN NIKAHIT</span></a>],</span> called <span lang="km">និគ្គហិត</span> <span class="ipa">niʔkəhət,</span> and <span class="codepoint" translate="no"><span lang="km">&#x17C7;</span> [<a href="/scripts/khmer/block#char17C7"><span class="uname">U+17C7 KHMER SIGN REAHMUK</span></a>]</span>, called <span lang="km">រះមុខ</span> <span class="ipa">reə̆hmuk</span>, are  regarded as vowels in Khmer, even though they represent the sounds <span class="ipa">m</span> and <span class="ipa">h</span>, respectively.</p>
+
+<p>Used on their own, they can change the inherent vowel, affecting both the pronunciation and the meaning, eg.
+<span class="eg" lang="km">ដម</span>
+<span class="eg" lang="km">ដំ</span>
+</p>
+
+<p>Nikahit can also follow the vowel-signs for <span class="ipa">aa</span>, and <span class="ipa">u/uː</span>. The following example shows its effect on the vowel-sign <span class="codepoint" translate="no"><span lang="km">&#x17B6;</span> [<a href="/scripts/khmer/block#char17B6"><span class="uname">U+17B6 KHMER VOWEL SIGN AA</span></a>]</span><tt>u,643</tt>:
+<span class="eg" lang="km">ពាម</span>
+<span class="eg" lang="km">ពាំ</span>
+</p>
+
+<p>They are also used in combination with other vowel signs (see <a class="secref">composite_vowels</a>), and the 2 following sequences are regarded as letters in the Khmer alphabet. They are not encoded separately in Unicode, but they are named sequences.</p>
+
+<figure class="characterBox auto small" data-cols="ipa,trans">ាំ␣ុំ</figure>
+</section>
+
+
+
+
+
+<section id="other_vowels">
+<h4>Other characters</h4>
+
+<p>The following produce glides or <span class="ipa">iː</span> when used in syllable-final position.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans">វ␣យ</figure>
 
 <p>See <a class="secref">composite_vowels</a> for the few instances where these are used.</p>
+
+<p><span class="codepoint" translate="no"><bdi lang="km">&#x179A;</bdi> [<a href="/scripts/khmer/block#char179A"><span class="uname">U+179A KHMER LETTER RO</span></a>]</span> is usually silent in syllable-final position, but the combination <span class="codepoint" translate="no"><span style="background-color: rgba(255, 164, 66, 0.68); border-radius: 5px;" lang="km">–័រ</span> [<a href="/scripts/khmer/block#char17D0" target="c"><span class="uname" style="background-color: transparent;">U+17D0 KHMER SIGN SAMYOK SANNYA</span></a> + <a href="/scripts/khmer/block#char179A" target="c"><span class="uname" style="background-color: transparent;">U+179A KHMER LETTER RO</span></a>]</span> produces the sound <span class="ipa">ɔə</span>, eg.
+<span class="eg" lang="km">ជ័រ</span>
+</p>
+</section>
 </section>
 
 
@@ -1048,8 +1147,9 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <figure class="characterBox auto" data-cols="">័␣់</figure>
 
-<p><span class="codepoint" translate="no"><span lang="km">&#x17CB;</span> [<a href="/scripts/khmer/block#char17CB"><span class="uname">U+17CB KHMER SIGN BANTOC</span></a>]</span> is always placed above the final consonant, and basically shortens the preceding vowel.</p>
 <p><span class="codepoint" translate="no"><span lang="km">&#x17D0;</span> [<a href="/scripts/khmer/block#char17D0"><span class="uname">U+17D0 KHMER SIGN SAMYOK SANNYA​</span></a>]</span> is used in some Pali and Sanskrit loan words (although alternative spellings exist) and indicates that the syllable has a particular vowel (click on the name just above for more details).&nbsp;</p>
+
+<p><span class="codepoint" translate="no"><span lang="km">&#x17CB;</span> [<a href="/scripts/khmer/block#char17CB"><span class="uname">U+17CB KHMER SIGN BANTOC</span></a>]</span> is always placed above the final consonant, and basically shortens the preceding vowel.</p>
 </section>
 
 
@@ -1177,26 +1277,39 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <h3>Standalone vowels</h3>           
 <p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
 
-<p> There are two ways of representing vowel sounds that are not preceded by a consonant.</p>
+
+<p>Most of the time, vowels that appear to be standalone are actually pronounced and written after a glottal stop. These use the regular consonant <span class="codepoint" translate="no"><bdi lang="km">&#x17A2;</bdi> [<a href="/scripts/khmer/block#char17A2"><span class="uname">U+17A2 KHMER LETTER QA</span></a>]</span> followed by a vowel-sign (and <span class="codepoint" translate="no"><bdi lang="km">&#x17A2;&#x17CA;</bdi> [<a href="/scripts/khmer/block#char17A2"><span class="uname">U+17A2 KHMER LETTER QA</span></a> + <a href="/scripts/khmer/block#char17CA"><span class="uname">U+17CA KHMER SIGN TRIISAP</span></a>]</span> to change the register), eg.
+<span class="eg" lang="km">អូ</span>
+<span class="eg" lang="km">អ៊ូ</span>
+<span class="eg ipalist" lang="km" dir="ltr">ចង្អូរ</span>
+</p>
+
+<!--p> There are two ways of representing vowel sounds that are not preceded by a consonant.</p>
 
 
 <section id="standalone_vowelsigns">
 <h4>Vowel-signs</h4>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">អិ␣អី␣អឹ␣អឺ␣អុ␣អូ␣អេ␣អោ␣អែ␣អៈ␣អា␣អៀ␣អឿ␣អួ␣អើ␣អៃ␣អៅ</figure>
 
 <p>The most common way is to add  a vowel-sign to the glottal consonant character <span class="codepoint"><span lang="km">&#x17A2;</span> <a href="/scripts/khmer/block#char17A2">[<span class="uname">U+17A2 KHMER LETTER QA</span>]</a></span>, eg. <span class="ex" lang="km">អី</span> <span class="ipa">ʔəj</span>.</p>
-</section>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">អិ␣អី␣អឹ␣អឺ␣អុ␣អូ␣អេ␣អោ␣អែ␣អៈ␣អា␣អៀ␣អឿ␣អួ␣អើ␣អៃ␣អៅ</figure>
+</section-->
 
 
 
 
 <section id="standalone_independent">
 <h4>Independent vowels</h4>
+
+<p>Khmer also has independent vowel letters that can be used to represent some of these sounds, but unlike most South Asian scripts, there are fewer independent vowels than vowel sounds, and some do not have direct correspondences with a simple vowel sign, eg. <span class="codepoint" translate="no"><bdi lang="km">&#x17AA;</bdi> [<a href="/scripts/khmer/block#char17AA"><span class="uname">U+17AA KHMER INDEPENDENT VOWEL QUUV</span></a>]</span> corresponds phonetically to the composite vowel <span class="codepoint" translate="no"><bdi lang="km">&#x17A2;&#x17BC;&#x179C;</bdi> [<a href="/scripts/khmer/block#char17A2"><span class="uname">U+17A2 KHMER LETTER QA</span></a> + <a href="/scripts/khmer/block#char17BC"><span class="uname">U+17BC KHMER VOWEL SIGN UU</span></a> + <a href="/scripts/khmer/block#char179C"><span class="uname">U+179C KHMER LETTER VO</span></a>]</span> (See also <a class="sectionref">vocalics</a>.)</p>
+
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ឥ␣ឦ␣ឪ␣ឧ␣ឩ␣ឯ␣ឰ␣ឱ␣ឳ␣ឲ</figure>
 
-<p>There are also some independent vowel letters, but unlike most South Asian scripts, there are fewer independent vowels than vowel signs, and some do not have direct correspondences with a vowel sign, eg. <span class="ex" lang="km">ឪ</span> corresponds phonetically to the vowel plus consonant combination <span class="ex" lang="km">ូវ</span>. (See also <a class="sectionref">vocalics</a>.)</p>
-
-<p>Whether an standalone vowel sound is represented using an independent vowel letter or the glottal consonant plus vowel-sign varies from word to word. In Cambodian orthography the two are not interchangeable. The independent vowel letters appear in relatively few words, but some of those words are quite common, eg. <span class="eg" lang="km">ឪពុក</span> <span class="eg" lang="km">ឲ្យ</span>  <span class="eg" lang="km">ឮ</span></p>
+<p>Whether a vowel sound is represented using an independent vowel letter or the glottal consonant plus vowel-sign varies from word to word. In Cambodian orthography the two are not interchangeable. The independent vowel letters appear in relatively few words, but some of those words are quite common, eg.
+<span class="eg ipalist" lang="km">ឪពុក</span>
+<span class="eg ipalist" lang="km">ឲ្យ</span>
+<span class="eg ipalist" lang="km">ឮ</span>
+</p>
 </section>
 
 
@@ -1215,6 +1328,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <figure class="deprecatedBox auto" data-cols="">ឣ␣ឤ</figure>
 </div>
 </section>
+</section>
 
 
 
@@ -1230,10 +1344,18 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <figure class="auxiliaryBox auto" data-cols="trans">៑␣៌␣៝</figure>
 
 <p>Vowels are  not pronounced between stacked consonants. The first character in the lists above, <span class="codepoint" translate="no"><span lang="km">&#x17D2;</span> [<a href="/scripts/khmer/block#char17D2"><span class="uname">U+17D2 KHMER SIGN COENG</span></a>]</span>,  is used to create those consonant stacks. It is never visible. See  <a class="secref">clusters</a>.</p>
-<p>Two diacritics, <span class="codepoint" translate="no"><span lang="km">&#x17CC;</span> [<a href="/scripts/khmer/block#char17CC"><span class="uname">U+17CC KHMER SIGN ROBAT​</span></a>]</span> and <span class="codepoint" translate="no"><span lang="km">&#x17CD;</span> [<a href="/scripts/khmer/block#char17CD"><span class="uname">U+17CD KHMER SIGN TOANDAKHIAT​</span></a>]</span>, are used to silence written characters. The former is not very common and silences final consonants, eg.  <span class="eg" lang="km">បរិបូណ៌</span> (although it also introduces or affects sound in some cases in multisyllabic words). The latter is used over a consonant, particularly in loan words, to silence it and any attached vowels or subscripts, eg. <span class="eg" lang="km">សប្ដាហ៍</span>  <span class="eg" lang="km">រេហ៍ពល</span></p>
-<p><span class="codepoint" translate="no"><span lang="km">&#x17D1;</span> [<a href="/scripts/khmer/block#char17D1"><span class="uname">U+17D1 KHMER SIGN VIRIAM</span></a>]</span>, the sanskrit virama, is sometimes used in Sanskrit words to indicate that a final consonant has no vowel sound, eg. <span class="eg" lang="km">អាត្មន៑</span></p>
-<p><span class="codepoint" translate="no"><span lang="km">&#x17DD;</span> [<a href="/scripts/khmer/block#char17DD"><span class="uname">U+17DD KHMER SIGN ATTHACAN</span></a>]</span>, on the other hand, is a rarely used sign that indicates that a final consonant retains its inherent vowel sound.&nbsp;</p>
-</section>
+<p>Two diacritics, <span class="codepoint" translate="no"><span lang="km">&#x17CC;</span> [<a href="/scripts/khmer/block#char17CC"><span class="uname">U+17CC KHMER SIGN ROBAT​</span></a>]</span> and <span class="codepoint" translate="no"><span lang="km">&#x17CD;</span> [<a href="/scripts/khmer/block#char17CD"><span class="uname">U+17CD KHMER SIGN TOANDAKHIAT​</span></a>]</span>, are used to silence written characters. The former is not very common and silences final consonants, eg.
+<span class="eg ipalist" lang="km">បរិបូណ៌</span>
+</p>
+<p>(although it also introduces or affects sound in some cases in multisyllabic words). The latter is used over a consonant, particularly in loan words, to silence it and any attached vowels or subscripts, eg.
+<span class="eg ipalist" lang="km">សប្ដាហ៍</span>
+<span class="eg ipalist" lang="km">រេហ៍ពល</span>
+<span class="eg ipalist" lang="km">កេរ្តិ៍</span>
+</p>
+<p><span class="codepoint" translate="no"><span lang="km">&#x17D1;</span> [<a href="/scripts/khmer/block#char17D1"><span class="uname">U+17D1 KHMER SIGN VIRIAM</span></a>]</span>, the sanskrit virama, is sometimes used in Sanskrit words to indicate that a final consonant has no vowel sound, eg.
+<span class="eg ipalist" lang="km">អាត្មន៑</span>
+</p>
+<p><span class="codepoint" translate="no"><span lang="km">&#x17DD;</span> [<a href="/scripts/khmer/block#char17DD"><span class="uname">U+17DD KHMER SIGN ATTHACAN</span></a>]</span>, on the other hand, is a rarely used sign that indicates that a final consonant retains its inherent vowel sound.</p>
 </section>
 
 
@@ -1247,8 +1369,9 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <h3>Vowel sounds mapped to characters</h3>
 
 <p class="instructions">This section maps Khmer vowel sounds to common graphemes, grouped by register (class <mark>1</mark> or <mark>2</mark>).  The dotted circle indicates the location of the consonant relative to the vowel-sign; if there are 2 circles, the vowel is used only in closed syllables. Click on the character names to see examples.
-<section id="plain_vowel_map"> </section>
 </p>
+
+
 <section id="plain_vowel_map">
 <h4>Plain vowels</h4>
 
@@ -1799,6 +1922,8 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
+
+
 <section id="vocalics">
 <h2>Vocalics</h2>
 <p id="def-vocalic" class="explanatoryintro definitionStub"></p>
@@ -1806,9 +1931,10 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <p> Khmer represents vocalics only as independent vowel letters.</p>
 
 <figure class="characterBox auto" data-cols="ipa,trans">ឫ␣ឬ␣ឭ␣ឮ</figure>
-
-
 </section>
+
+
+
 
 
 
@@ -1822,8 +1948,8 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="register_changes">
-<h3>Consonant registers</h3>
+<section id="register_change">
+<h3>Changing consonant registers</h3>
 
 <p>Khmer is not tonal, but each consonant character belongs to one of two classes. The class of a consonant determines the vowel sound in a syllable. For example, compare<span class="charExample" translate="no"><span class="ex" lang="km">ក</span> <span class="ipa">kɑː</span></span> <span class="charExample" translate="no"><span class="ex" lang="km">គ</span> <span class="ipa">kɔː</span></span>and <span class="charExample" translate="no"><span class="ex" lang="km">កី</span> <span class="ipa">kəj</span></span> <span class="charExample" translate="no"><span class="ex" lang="km">គី</span> <span class="ipa">kiː</span></span></p>
 
@@ -1925,9 +2051,48 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <figure class="auto" data-cols="">ង␣ញ␣ន␣ម␣យ␣រ␣ល␣វ</figure>
 
 <p>Some subscripts change the sound of the preceding consonant. </p>
-  <p>Subscript consonants that appear at the end of a word, are silent, eg. <span class="eg" lang="km">ពេទ្យ</span> <span class="eg" lang="km">រដ្ឋ</span></p>
-  <p>In some multisyllabic words a medial cluster may contain a final consonant for the first syllable and the initial consonant of the next syllable, eg. <span class="eg" lang="km">កម្មករ</span></p>
-  <p>There are some clusters involving two subscripts. These are, with three exceptions, composed of a final nasal, followed by a stop and r, eg. <span class="eg" lang="km">កន្ត្រៃ</span> <span class="eg" lang="km">កញ្ជ្រេង</span> The three exceptions are the loan words,  <span class="eg" lang="km">អង្គ្លេស</span> <span class="eg" lang="km">សងស្ក្រិត</span> and <span class="eg" lang="km">សាស្ត្រាចារ្យ</span></p>
+  <p>Subscript consonants that appear at the end of a word, are silent, eg.
+  <span class="eg ipalist" lang="km" data-ipa="pei§t§∅">ពេទ្យ</span>
+  <span class="eg ipalist" lang="km" data-ipa="rɔa§t§∅">រដ្ឋ</span>
+</p>
+  <p>In some multisyllabic words a medial cluster may contain a final consonant for the first syllable and the initial consonant of the next syllable, eg.
+  <span class="eg ipalist" lang="km" data-ipa="kɑ§m.§mɔ.§kɑː§∅">កម្មករ</span>
+  </p>
+  <p>Some clusters involve two subscripts. These are, with three exceptions, composed of a final nasal, followed by a stop and r, eg.
+  <span class="eg ipalist" lang="km" data-ipa="kɑː§n.§t§raj§∅">កន្ត្រៃ</span>
+  <span class="eg ipalist" lang="km" data-ipa="kɑ§ɲ.§c§reː§ŋ">កញ្ជ្រេង</span>
+  </p>
+<p>The three exceptions are the loan words,
+<span class="eg ipalist" lang="km" data-ipa="ʔɑ§ŋ.§k§leː§h§∅">អង្គ្លេស</span>
+<span class="eg ipalist" lang="km" data-ipa="sɑ§ŋ.§s§k§re§t">សងស្ក្រិត</span>
+<span class="eg ipalist" lang="km" data-ipa="sɑ.§s§t§raː.§caː§∅§∅">សាស្ត្រាចារ្យ</span>
+</p>
+</section>
+
+
+
+
+<section id="stack_vowels">
+<h4>Combining characters &amp; stacks</h4> 
+
+<p>Most vowels that are pronounced after a consonant stack are displayed as if they were attached to the consonant at the top of the stack (including pre-base vowel-signs and circumgraphs) eg. (click on the examples to see the underlying sequence more clearly)
+<span class="eg ipalist" lang="km" dir="ltr">ក្លិន</span>
+<span class="eg ipalist" lang="km" dir="ltr">ឆ្វេង</span>
+<span class="eg ipalist" lang="km" dir="ltr">ភ្លៀង</span>
+</p>
+
+<p>This can also lead to ligation between the top consonant in the stack and a vowel-sign, unless the subjoined consonant is right-spacing, eg.
+<span class="eg ipalist" lang="km" dir="ltr">ក្ដារ</span>
+<span class="eg ipalist" lang="km" dir="ltr">ក្រាក់</span>
+<span class="eg ipalist" lang="km" dir="ltr">ក្បាល</span>
+</p>
+
+<p>The exceptions are the vowel-signs that appear below the consonant; these appear below the last subjoined form, unless the subjoined form is left-spacing, eg.
+<span class="eg ipalist" lang="km" dir="ltr">ខ្ពុរ</span>
+<span class="eg ipalist" lang="km" dir="ltr">ត្រុំ</span>
+</p>
+
+<p>Other diacritics are treated in a similar fashion. This can lead to ambiguity if a diacritic could modify either consonant in a stack.</p>
 </section>
 
 
@@ -1935,8 +2100,10 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 <section id="subscript_with_vowel">
 <h4>Subscript consonants after vowels</h4>
-  <p>It is rare but possible to find subscripts used after independent vowels. One common word spelled this way is <span class="eg" lang="km">ឲ្យ</span></p>
-  <p>It is also possible to find subscript forms of independent vowels. Four of these are named sequences in Unicode.</p>
+
+<p>It is rare but possible to find subscripts used after independent vowels. One common word spelled this way is <span class="eg" lang="km">ឲ្យ</span></p>
+
+<p>It is also possible to find subscript forms of independent vowels. Four of these are named sequences in Unicode.</p>
 </section>
 </section>
 

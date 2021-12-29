@@ -1,6 +1,23 @@
 reflist = {
 
 
+/*
+"auth_initials": {
+"authors": "Sort_by_family_name_of_first_contributor",
+"title":"The_Worlds_Writing_Systems",
+"sub": "subtitle",
+"date": "1996",
+"retr": "May 2021",
+"publisher":"Oxford_University_Press",
+"isbn":"0-19-507993-0",
+"pages": "xxx",
+"url":"refs",
+"lang": new Set(['ru']),
+"reviewed":false
+},
+*/
+
+
 "d": {
 "url":"#refs",
 "authors": "Peter T. Daniels and William Bright",
@@ -14,6 +31,16 @@ reflist = {
 "url":"http://www.pratyeka.org/csw/hlp-csw.pdf",
 "authors": "Franklin Huffman",
 "title":"Cambodian System of Writing",
+},
+
+"mh": {
+"authors": "Martin Hosken",
+"title":"Khmer Encoding",
+"date": "2021",
+"retr": "Dec 2021",
+"url":"refs",
+"lang": new Set(['km']),
+"reviewed":false
 },
 
 "rh": {
