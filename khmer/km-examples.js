@@ -1,9 +1,5 @@
 /*
 @ Source: https://en.wiktionary.org/wiki/Appendix:Khmer_Swadesh_list
-§ 'Noto Serif Khmer'
-# 200
-~ ltr
-! km
 */
 
 
@@ -11,9 +7,9 @@ autoExpandExamples.km = `
 
 -ឧបនីយកម្ម||
 ក|neck|kɑː
-កក|to freeze|kɑɑk|frozen
+កក|to freeze|kɑːʔ
 កកេរ||
-កក់|to wash|kɑk
+កក់|to wash|kɑʔ
 កក់ក្ដៅ||
 កក្កដា|July|kɑʔ.kaʔ.ɗaː
 កខ្វក់||
@@ -47,7 +43,7 @@ autoExpandExamples.km = `
 កញ្ជ្រឹល||
 កញ្ជ្រេង|fox|kɑɲcreːŋ|||x|kɑ§ɲ.§c§reː§ŋ
 កញ្ជ្រោង||
-កញ្ញា|young lady|kɑɲɲaa
+កញ្ញា|young lady|kaɲ.ˈɲaː
 កដិពន្ធ||
 កដិពន្ធនាឡិកា||
 កដៃ||
@@ -84,7 +80,7 @@ autoExpandExamples.km = `
 កន្ទប||
 កន្ទល់||
 កន្ទាលត្រអាក||
-កន្ទុយ|tail|kɑntuy
+កន្ទុយ|tail|kɑn.ˈtuj
 កន្ទុំរុយ||
 កន្ទួត||
 កន្ទោងត្រង||
@@ -114,14 +110,14 @@ autoExpandExamples.km = `
 កម្ពុជ||
 កម្ពុជា||
 កម្ពោជិក||
-កម្ម|mission|kɑːm*
-កម្មករ|worker|kɑmmɔkɑː||||kɑ§m.§mɔ.§kɑː§∅
+កម្ម|action, deed|kɑm
+កម្មករ|worker|kam.ˈkɑː~kam.mĕəʔ.kɑː~kam.maʔ.kɑː
 កម្មករនាវា||
 កម្មការិនី||
 កម្មន្ត||
 កម្មន្តសាល||
 កម្មបទ||
-កម្មផល|karma|kɑːmmɔːpʰɑːl*
+កម្មផល|karma|kɑːmmɔːpʰɑːl|||x|
 កម្មវិធី||
 កម្មសិទ្ធិ||
 កម្មាធិការ||
@@ -145,8 +141,8 @@ autoExpandExamples.km = `
 កសិណ||
 កសិណសាក្សី||
 កស្រូវ||
-កា|to address (a letter)|kaa
-កាក|refuse, residue|kaːʔ
+កា|to address (a letter)|kaː|||x
+កាក|refuse, crow|kaːʔ
 កាកបាទ||
 កាក់||
 កាច||
@@ -164,7 +160,7 @@ autoExpandExamples.km = `
 កាបូប||
 កាបូបយួរ||
 កាប៊ុល||
-កាប់|to cut|kap
+កាប់|to chop, cut|kap
 កាប់វែរ||
 កាពិ||
 កាព្យ||
@@ -176,7 +172,7 @@ autoExpandExamples.km = `
 កាមេរ៉ា||
 កាយ||
 កាយវិការ||
-ការ|to work|kaa
+ការ|work, occupation|kaː
 ការកែទំរង់||
 ការកំណត់||
 ការក្បត់||
@@ -255,7 +251,7 @@ autoExpandExamples.km = `
 កាវស||
 កាសែត||
 កាស៊ីណូ||
-កាហ្វេ|coffee|kaːfei
+កាហ្វេ|coffee|kaː.ˈfei
 កាហ្វេដោះគោទឹកកក||
 កាហ្វេទឹកកក||
 កាហ្វេទឹកដោះគោទឹកកក||
@@ -284,7 +280,7 @@ autoExpandExamples.km = `
 កិត្តិ||
 កិត្តិយស||
 កិន||
-កិរិយា|conduct|kerijaː
+កិរិយា|conduct, behaviour|ke.ri.jaː
 កិរិយាវិសេសន៍||
 កិរិយាសព្ទ||
 កិរិយាស័ព្ទ||
@@ -297,7 +293,7 @@ autoExpandExamples.km = `
 កីឡាបាល់ទាត់||
 កីឡាបាល់ទះ||
 កឹង||
-កឹះ|to scratch|kəh
+កឹះ|to tap on the shoulder|kəh
 កុង||
 កុងតាក់||
 កុងទ័រ||
@@ -309,7 +305,7 @@ autoExpandExamples.km = `
 កុណ្ឌល||
 កុន|film|kon
 កុបកម្ម||
-កុមារ|child|komaː
+កុមារ|child|ko.ˈmaː
 កុមារភាព||
 កុម្ពណ្ឌ||
 កុម្ភៈ||
@@ -328,9 +324,9 @@ autoExpandExamples.km = `
 កូកាកូឡា||
 កូដកម្ម||
 កូតឌីវ័រ||
-កូន|child|koon
+កូន|child|koun
 កូនក្រមុំ||
-កូនខ្ចី||
+កូនខ្ចី|infant, newborn|koun ˈkʰcəj
 កូនង៉ា||
 កូនង៉ែត||
 កូនឆ្កែ||
@@ -396,7 +392,7 @@ autoExpandExamples.km = `
 កៅឡាក់||
 កៅអី||
 កំចាត់||
-កំញម|ash|kɑmɲɑɑm
+កំញម|ash|kɑm.ˈɲɑːm
 កំដៅ||
 កំណត់||
 កំណប់||
@@ -423,8 +419,8 @@ autoExpandExamples.km = `
 កំពត||
 កំពស់||
 កំពឹស||
-កំពុក|rotten|kɑmpuk
-កំពុង|present tense marker|kɑmpuŋ
+កំពុក|rotten|kɑm.ˈpuk
+កំពុង|ongoing action|kɑm.ˈpuŋ
 កំពុងតែ||
 កំពូល||
 កំពែង||
@@ -456,7 +452,7 @@ autoExpandExamples.km = `
 ក៏ដោយ|whether or not|kɑː ˈɗaoj||||kɑː§ˈɗao§j
 ក៏ប៉ុន្តែ|but, however|kɑː pon.ˈtae||||kɑː§po§n.§ˈtae
 ក្ងាន|goose|kŋaːn||||k§ŋaː§n
-ក្ងោក||
+ក្ងោក|peacock|kŋaok
 ក្ដ||
 ក្ដាប់|to grasp tightly|kɗap||||k§ɗa§p
 ក្ដាម||
@@ -467,11 +463,11 @@ autoExpandExamples.km = `
 ក្ដិត||
 ក្ដិតឡាន||
 ក្ដោង||
-ក្ដៅ|warm|kdav|hot
+ក្ដៅ|warm|kɗaw
 ក្តី||
 ក្តុក||
-ក្នាត់||
-ក្នុង|in|knoŋ
+ក្នាត់|section, slice|kʰnat||||kʰ§na§t
+ក្នុង|in|kʰnoŋ||||kʰ§no§ŋ
 ក្នុងចំណោម||
 ក្នុងនាម||
 ក្នុងពេល||
@@ -481,7 +477,7 @@ autoExpandExamples.km = `
 ក្បាច់||
 ក្បាច់គុនដំបងវែង||
 ក្បាច់គុនបូរាណ||
-ក្បាល|head|kbaal|Sanskrit
+ក្បាល|head|kɓaːl||Sanskrit
 ក្បាលពោះ||
 ក្បាលម៉ាស៊ីនទឹក||
 ក្បាំង||
@@ -493,7 +489,7 @@ autoExpandExamples.km = `
 ក្បៀស||
 ក្បៀសក្រោម||
 ក្បែរ||
-ក្មេង||
+ក្មេង|child, youngster|kʰmeiŋ||||kʰ§mei§ŋ
 ក្មេងកំព្រា||
 ក្មេងប្រុស||
 ក្មេងស្រី||
@@ -502,7 +498,7 @@ autoExpandExamples.km = `
 ក្រក||
 ក្រខ្វក់||
 ក្រចក||
-ក្រចកដៃ|fingernail|krɑcɑɑk day
+ក្រចកដៃ|fingernail|krɑ.ˈcɑːʔ ɗaj
 ក្រចាប់||
 ក្រចើល||
 ក្រញរ||
@@ -536,7 +532,7 @@ autoExpandExamples.km = `
 ក្រសាន||
 ក្រសារ||
 ក្រសួង||
-ក្រហម|red|krɑhɑɑm
+ក្រហម|red|krɑ.ˈhɑːm
 ក្រឡាហោម||
 ក្រឡុក||
 ក្រឡេច||
@@ -548,7 +544,7 @@ autoExpandExamples.km = `
 ក្រាល||
 ក្រាវាត់||
 ក្រាស||
-ក្រាស់|thick|kras'
+ក្រាស់|thick|krah
 ក្រិក||
 ក្រិត||
 ក្រីក្រ||
@@ -563,7 +559,7 @@ autoExpandExamples.km = `
 ក្រុមទាហាន||
 ក្រុមទាហានពេជ្ឈឃាដ||
 ក្រុមប្រឹក្សា||
-ក្រុមហ៊ុន|company|kromhun
+ក្រុមហ៊ុន|company|krom ˈhun ~ krom.ˈmaʔ hun
 ក្រូច||
 ក្រូចឃ្វិច||
 ក្រូចឆ្មារ||
@@ -593,7 +589,7 @@ autoExpandExamples.km = `
 ក្លាវ||
 ក្លាហាន||
 ក្លាំពូ||
-ក្លិន|smell|klən||||k§lə§n
+ក្លិន|smell|kʰlən||||kʰ§lə§n
 ក្លឹប||
 ក្លើ||
 ក្លៀក||
@@ -620,7 +616,7 @@ autoExpandExamples.km = `
 ខណៈ||
 ខណ្ឌ||
 ខណ្ឌប័ណ្ណ||
-ខត់|to polish|kʰɑt
+ខត់|to polish|kʰɑt|||x
 ខន||
 ខនិជ||
 ខន្តី||
@@ -636,14 +632,14 @@ autoExpandExamples.km = `
 ខាងលិច||
 ខាងលើ||
 ខាត||
-ខាត់|to rub|kʰat
+ខាត់|to polish|kʰat
 ខាទុំ||
 ខាន||
 ខាន់||
 ខារ||
 ខារ៉ាអូខេ||
 ខាល||
-ខាំ|to bite|kham
+ខាំ|to bite|kʰam
 ខិត||
 ខិតខំ||
 ខឹង||
@@ -689,12 +685,12 @@ autoExpandExamples.km = `
 ខ្ចៅឈ្មោល||
 ខ្ចៅញី||
 ខ្ជាក់||
-ខ្ជាប់||
+ខ្ជាប់|to be stuck to|kʰcŏəp
 ខ្ជាប់ខ្ជួន||
 ខ្ជាយ||
 ខ្ជិល||
-ខ្ញម||
-ខ្ញី||
+ខ្ញម|fine powder, dust|kɲɑːm
+ខ្ញី|ginger|kɲəj
 ខ្ញុំ|I|kɲom
 ខ្ញុំឈ្មោះ||
 ខ្ញុំបាទ||
@@ -714,7 +710,7 @@ autoExpandExamples.km = `
 ខ្ទុះ||
 ខ្ទួយ||
 ខ្ទើយ||
-ខ្នង|back|knɑɑŋ
+ខ្នង|back|kʰnɑːŋ
 ខ្នាត||
 ខ្នាយ||
 ខ្នារ||
@@ -731,33 +727,33 @@ autoExpandExamples.km = `
 ខ្មួរ||
 ខ្មេរ||
 ខ្មេះ||
-ខ្មែរ|Cambodian|kmae
+ខ្មែរ|Cambodian|kʰmae
 ខ្មែរក្រហម||
 ខ្មែរូបនីយកម្ម||
 ខ្មោច||
-ខ្មៅ|black|kmav
+ខ្មៅ|black|kʰmaw
 ខ្មៅដៃ||
 ខ្យង||
-ខ្យល់|wind|kyɑl
+ខ្យល់|wind, breath|kjɑl~kʰcɑl~kʰsɑl
 ខ្យល់ផាយ||
 ខ្យល់ព្យុះ||
 ខ្លា||
 ខ្លាឃ្មុំ|sun bear|kʰlaːˈkʰmum
 ខ្លាច||
-ខ្លាញ់|fat (noun)|klaɲ
+ខ្លាញ់|fat n.|kʰlaɲ
 ខ្លាញ់ជ្រូក||
 ខ្លាញ់ទឹកដោះ||
 ខ្លាធំ||
 ខ្លាំង ៗ|very strong|klaŋklaŋ|||x
 ខ្លាំង||
-ខ្លី|short|kləy
+ខ្លី|short|kʰləj
 ខ្លឹម||
 ខ្លុយ||
 ខ្លួន||
 ខ្លួនឯង||
 ខ្លែង||
 ខ្លៅ||
-ខ្លះ|some|klah
+ខ្លះ|some|kʰlah
 ខ្វង់||
 ខ្វល់||
 ខ្វាក់||
@@ -765,13 +761,13 @@ autoExpandExamples.km = `
 ខ្វាម||
 ខ្វិត||
 ខ្វិន||
-ខ្សាច់|sand|ksac
+ខ្សាច់|sand|kʰsac
 ខ្សាច់នារ||
 ខ្សឹប||
 ខ្សុយ||
 ខ្សៀ||
 ខ្សៀវ||
-ខ្សែ|rope|ksae
+ខ្សែ|rope|kʰsae
 ខ្សែក្រវាត់||
 ខ្សែដៃ||
 ខ្សែបង្ហៀរ||
@@ -826,7 +822,7 @@ autoExpandExamples.km = `
 គរ||
 គរុ||
 គហណសាល||
-គាត់|he, she, they|koə̆t
+គាត់|he, she, they|kŏət
 គាត់មានផ្ទះថ្មី ៗ|he has a brand new house|kaːtʰ miən pʰteə̯h tʰməitʰməi
 គាប||
 គាប់||
@@ -860,7 +856,7 @@ autoExpandExamples.km = `
 គុយទាវឆា||
 គុយបា||
 គុយវ៉ែត||
-គុលិកា|pill|kulikaː
+គុលិកា|pill, tablet|ku.li.kaː
 គុហា||
 គូ|pair|kuː
 គូត||
@@ -966,7 +962,7 @@ autoExpandExamples.km = `
 គ្លុយកូស||
 គ្វាម||
 គ៖||
-ឃត់|to prevent|kʰuə̆t
+ឃត់|to prevent|kʰuə̆t|||x
 ឃរ||
 ឃរណី||
 ឃរមូល||
@@ -977,22 +973,22 @@ autoExpandExamples.km = `
 ឃឹម||
 ឃុន||
 ឃុំ||
-ឃើញ|to see|kʰəəɲ
+ឃើញ|to see|kʰəːɲ
 ឃោសនា||
 ឃោស្នា||
 ឃ្មុំ||
 ឃ្លា||
-ឃ្លាន|hungry|kliən
+ឃ្លាន|hungry|kʰliən
 ឃ្លាំង||
 ឃ្លេ||
 ឃ្លោង||
-ងងឹត|dark|ŋoŋət
-ងាក|to turn (intransitive)|ŋiek
+ងងឹត|dark|ŋɔ.ˈŋɨt
+ងាក|to turn|ŋiəʔ
 ងាប់||
 ងាយ||
 ងាយស្រួល||
 ងារ||
-ងាវ|kind of clam|ŋiəw
+ងាវ|cockle|ŋiəw
 ងីងើ||
 ងូត||
 ងូតទឹក||
@@ -1000,7 +996,7 @@ autoExpandExamples.km = `
 ងើប||
 ងៀត||
 ង៉ា||
-ង៉ាវ|noise-maker|ŋaːw
+ង៉ាវ|noise-maker, sabre|ŋaːw
 ង៉ាវៗ||
 ង៉ាំង៉ូវ||
 ង៉ែត||
@@ -1016,7 +1012,7 @@ autoExpandExamples.km = `
 ចង់|to want|cɑŋ
 ចង្កា||
 ចង្កឹះ||
-ចង្កើះ|chopsticks|cɑŋkəh
+ចង្កើះ|chopsticks|cɑŋ.ˈkəh
 ចង្កៀង||
 ចង្កេះ||
 ចង្កោយ||
@@ -1024,7 +1020,7 @@ autoExpandExamples.km = `
 ចង្ហុក||
 ចង្អុល|to confirm|cɑŋ.ˈʔol
 ចង្អូរ|channel, gutter|cɑŋ.ˈʔou||||cɑ§ŋ§ˈʔou§–
-ចង្អៀត|narrow|cɑŋʔiet
+ចង្អៀត|narrow|cɑŋ.ˈʔiət
 ចចក||
 ចចាក់||
 ចចាមអារ៉ាម||
@@ -1063,11 +1059,11 @@ autoExpandExamples.km = `
 ចលនា||
 ចលាចល||
 ចល័ត||
-ចា|to inscribe|caː
+ចា|to inscribe|caː|||x
 ចាក||
 ចាកចេញ||
 ចាការតា||
-ចាក់|to stab|cak
+ចាក់|to stab|caʔ
 ចាងវ៉ាង||
 ចាងហ្វាង||
 ចាញ់||
@@ -1103,7 +1099,7 @@ autoExpandExamples.km = `
 ចិត្តអត់ធ្មត់||
 ចិន||
 ចិនកន្តាំង||
-ចឹក|to bite|cək|of animals
+ចឹក|to bite|cək||of animals
 ចុង||
 ចុងក្រោយ||
 ចុច||
@@ -1130,7 +1126,7 @@ autoExpandExamples.km = `
 ចេញទៅ||
 ចេតនា||
 ចេតសិក||
-ចេតិយ|stupa|caetdəj
+ចេតិយ|stupa|caet.ˈɗəj
 ចេរ||
 ចេស||
 ចេះ|to know|ceh
@@ -1139,7 +1135,7 @@ autoExpandExamples.km = `
 ចែកបៀ||
 ចែករំលែក||
 ចែង||
-ចៃ|louse|cay
+ចៃ|louse|caj
 ចៃដន់||
 ចៃដន្យ||
 ចោទ||
@@ -1207,7 +1203,7 @@ autoExpandExamples.km = `
 ច្រត់||
 ច្របល់||
 ច្របាច់||
-ច្រមុះ|nose|crɑmoh
+ច្រមុះ|nose|crɑ.ˈmoh
 ច្រវា||
 ច្រវាក់||
 ច្រឡៃ||
@@ -1219,7 +1215,7 @@ autoExpandExamples.km = `
 ច្រាំងភ្នំ||
 ច្រុះ||
 ច្រើន|many|craən
-ច្រៀង|to sing|crieŋ
+ច្រៀង|to sing|criəŋ
 ច្រែះ||
 ឆក់||
 ឆត្រ||
@@ -1236,21 +1232,21 @@ autoExpandExamples.km = `
 ឆែកកូស្លូវ៉ាគី||
 ឆែកែវ||
 ឆែវ||
-ឆោង|interval|cʰaoŋ
+ឆោង|interval|cʰaoŋ|||x
 ឆោត||
 ឆោម||
 ឆៅ||
 ឆ័ត្រ||
 ឆ័ត្រយោង||
-ឆ្កឹះ|to pry out|ckəh
+ឆ្កឹះ|to prise out|cʰkəh
 ឆ្កួត||
 ឆ្កែ|dog|cʰkae
 ឆ្កែចចក||
 ឆ្កែបា||
 ឆ្កែព្រៃ||
 ឆ្ងាញ់||
-ឆ្ងាយ|far|cŋaay
-ឆ្នាំ|year|cnam
+ឆ្ងាយ|far|cʰŋaːj
+ឆ្នាំ|year|cʰnam
 ឆ្នាំង||
 ឆ្នាំងអ៊ុត||
 ឆ្នាំទៅ||
@@ -1282,17 +1278,17 @@ autoExpandExamples.km = `
 ឆ្អែត||
 ជក់||
 ជគត||
-ជង្គង់|knee|cʊəŋkʊəŋ
+ជង្គង់|knee|cŭəŋ.ˈkŭəŋ
 ជង្រុក||
 ជជួរ||
-ជញ្ជក់|to suck|cʊəɲcoap
+ជញ្ជក់|to suck|cŭəɲ.ˈcŭəʔ
 ជញ្ជាំង||
 ជញ្ជីង||
 ជញ្ជូន||
 ជណ្ដើរ||
 ជណ្ដើរយន្ត||
 ជណ្ដើរយោង||
-ជន|man (human being)|cʊən|Sanskrit
+ជន|man (human being)|cŭən||Sanskrit
 ជនឃាត||
 ជនជាតិ||
 ជននាថ||
@@ -1339,7 +1335,7 @@ autoExpandExamples.km = `
 ជាដរាប||
 ជាដើម||
 ជាតក||
-ជាតិ|national|ciəteʔ*
+ជាតិ|national|ciət~ciə.ˈteʔ
 ជាតិនិយម||
 ជាតិលិង្គ||
 ជាតិសាសន៍|race|ciəteʔsaːsɑː|||x
@@ -1357,11 +1353,11 @@ autoExpandExamples.km = `
 ជាពិសេស||
 ជាម||
 ជាមធ្យម||
-ជាមួយ|with|cie muə yɔɔ
+ជាមួយ|with|ciə ˈmuəj
 ជាយដែន||
 ជាល||
 ជាស្រេច||
-ជាំ|bruised|coə̆m
+ជាំ|bruised|cŏəm
 ជិត|near|cɨt
 ជិតខាង||
 ជិន||
@@ -1391,7 +1387,7 @@ autoExpandExamples.km = `
 ជុំវិញ||
 ជុះ||
 ជុះអាច់||
-ជូត|to wipe|cuut
+ជូត|to wipe|cuːt
 ជូតការក៍||
 ជូន||
 ជូបហ្សាណា||
@@ -1490,11 +1486,11 @@ autoExpandExamples.km = `
 ឈប់បុណ្យ||
 ឈប់សំរាក||
 ឈម||
-ឈរ|to stand|cʰɔɔ
+ឈរ|to stand|cʰɔː
 ឈរតាមផ្លូវសុំដោយសារឡានគេ||
 ឈរឡើង||
 ឈាន||
-ឈាម|blood|cʰiem
+ឈាម|blood|cʰiəm
 ឈិង||
 ឈឹង||
 ឈឺ|sick|cʰɨː
@@ -1532,7 +1528,7 @@ autoExpandExamples.km = `
 ញាតិ||
 ញាតិមិត្តនិយម||
 ញាប់||
-ញាំ|meat salad|ɲoə̆m
+ញាំ|meat/fish salad|ɲŏəm
 ញាំង||
 ញី|female|ɲiː
 ញឹក||
@@ -1546,13 +1542,13 @@ autoExpandExamples.km = `
 ញេច||
 ញ៉ាំ|to eat (coll.)|ɲam
 ញ័រ||
-ដក|to pull|dɑɑ
-ដកដង្ហើម|to breathe|dɑɑk dɑŋhaəm
+ដក|to pull|ɗɑːʔ
+ដកដង្ហើម|to breathe|ɗɑːʔ ɗɑŋ.ˈhaəm
 ដក់||
 ដង||
 ដងប៉ាកកា||
 ដង្កាត់||
-ដង្កូវ|worm|dɑŋkəv
+ដង្កូវ|worm, grub|ɗɑŋ.ˈkəw
 ដង្កែ||
 ដង្ហើម||
 ដង្ហែ||
@@ -1570,7 +1566,7 @@ autoExpandExamples.km = `
 ដប់ប្រាំមួយ||
 ដប់ពីរ||
 ដប់មួយ||
-ដម|nectar|ɗɑːm
+ដម|nectar|ɗɑːm|||x
 ដរាប||
 ដល់||
 ដល់ក||
@@ -1588,7 +1584,7 @@ autoExpandExamples.km = `
 ដាស់||
 ដាំ|to plant|ɗam
 ដាំងដុង||
-ដី|earth|dəy
+ដី|earth|ɗəj
 ដីខ្សាច់||
 ដីគោក||
 ដីធ្លី||
@@ -1600,10 +1596,10 @@ autoExpandExamples.km = `
 ដឹង|to know|ɗəŋ
 ដឹងខ្លួន||
 ដឹងគុណ||
-ដឺ|fallow|ɗəɨ
+ដឺ|fallow|ɗəɨ|||x
 ដុត||
-ដុន|elephant command|ɗon
-ដុល្លារ|dollar|ɗɑllaː
+ដុន|elephant command|ɗon|||x
+ដុល្លារ|dollar|ɗol.ˈlaː
 ដុស||
 ដុសលាង||
 ដុំ|piece, morsel|ɗom
@@ -1619,14 +1615,14 @@ autoExpandExamples.km = `
 ដូច្នោះ||
 ដូរ||
 ដូហា||
-ដួល|to fall|duəl|collapse
+ដួល|to fall, collapse|duəl
 ដើម||
 ដើមកំណើតពាក្យ||
-ដើមឈើ|tree|daəm cʰəə
+ដើមឈើ|tree|ɗaəm ˈcʰəː
 ដើមដូង||
 ដើមទ្រូង||
 ដើម្បី||
-ដើរ|to walk|daə
+ដើរ|to walk|ɗaə
 ដើរខ្យល់||
 ដើរចេញ||
 ដើរតួ||
@@ -1641,7 +1637,7 @@ autoExpandExamples.km = `
 ដេកលក់||
 ដេញ||
 ដេញតាម||
-ដេរ|to sew|dee
+ដេរ|to sew|ɗei
 ដែក||
 ដែកកេះ||
 ដែកគោល||
@@ -1652,7 +1648,7 @@ autoExpandExamples.km = `
 ដែលចំហរ||
 ដែលបើក||
 ដែលសាហាវ||
-ដៃ|hand|day
+ដៃ|hand|ɗaj
 ដៃគូ||
 ដៃជណ្ដើរ||
 ដៃសមុទ្រ||
@@ -1661,11 +1657,11 @@ autoExpandExamples.km = `
 ដោយគ្មាន||
 ដោយសារ||
 ដោយសារតែ||
-ដោះ|breast|dɑh
+ដោះ|breast|ɗɑh
 ដោះខោអាវ||
 ដោះស្រាយ||
 ដៅ||
-ដំ|to pound|ɗɑm
+ដំ|to pound|ɗɑm|||x
 ដំណក់||
 ដំណល់||
 ដំណាក់||
@@ -1702,7 +1698,7 @@ autoExpandExamples.km = `
 ដំឡូង||
 ដំឡូងជ្វា||
 ដំឡើង||
-ដ៏|which, very|ɗɑː
+ដ៏|which, very|ɗɑː||archaic
 ដ្ឋាន||
 ដ្បិត||
 ឋាន|place, site|tʰaːn
@@ -1717,14 +1713,14 @@ autoExpandExamples.km = `
 ឌីណូស័រ||
 ឌីប្លូម៉ាត||
 ឌុដាន់||
-ឌុន|alike|ɗun
+ឌុន|alike|ɗun|||x
 ឌុយប្លាំង||
 ឌូយ||
 ឌូស្ហាន់បេ||
-ឍាល|large drum|tʰiəl
+ឍាល|large drum|tʰiəl|||x
 ណា|which, where|naː
 ណាមីប៊ី||
-ណាយ|bored|naːj
+ណាយ|bored|naːj|||x
 ណាស៊ី||
 ណាស់|very|nah
 ណាំង||
@@ -1734,7 +1730,7 @@ autoExpandExamples.km = `
 ណេះ||
 ណែ||
 ណែនាំ||
-ណែ៎|Hey !|nɛː
+ណែ៎|Hey !|nɛː|||x
 ណោះ||
 តក់||
 តក់ៗ||
@@ -1746,7 +1742,7 @@ autoExpandExamples.km = `
 តង់ហ្សានី||
 តង្ករ||
 តង្កៀប||
-តង្វាយ|gift|ɗɔŋʋaaj
+តង្វាយ|gift|ɗɔŋʋaaj|||x
 តនយា||
 តន័យ||
 តន្ត្រី||
@@ -1781,7 +1777,7 @@ autoExpandExamples.km = `
 តាមផ្លូវ||
 តាមពិត||
 តាមរយៈ||
-តាយ|to die|taay
+តាយ|to die|taːj
 តាយប៉ាន||
 តារា||
 តារាង||
@@ -1806,7 +1802,7 @@ autoExpandExamples.km = `
 តិចតួច||
 តិរច្ឆាន||
 តិះ||
-តិះដៀល|to ridicule|tehɗiəl
+តិះដៀល|to ridicule|teh ˈɗiəl
 តីរវិថី||
 តឹក||
 តឹកកែ||
@@ -1895,8 +1891,8 @@ autoExpandExamples.km = `
 ត្រង||
 ត្រងាល||
 ត្រង់|straight|trɑŋ
-ត្រចៀក|ear|trɑciək
-ត្រជាក់|cold|trɑceak
+ត្រចៀក|ear|trɑ.ˈciəʔ
+ត្រជាក់|cold|trɑ.ˈcĕəʔ
 ត្រដុស||
 ត្រណាប់||
 ត្របក||
@@ -2017,16 +2013,16 @@ autoExpandExamples.km = `
 ថ្ពាល់||
 ថ្ពាល់គូថ||
 ថ្ពែក||
-ថ្ម|stone|tmɑɑ
+ថ្ម|stone|tʰmɑː
 ថ្មអាចម៍ផ្កាយ||
-ថ្មី|new|tməy
+ថ្មី|new|tʰməj
 ថ្មីៗ||
 ថ្មើរ||
 ថ្មើរជើង||
 ថ្លង់||
 ថ្លាន់||
 ថ្លុក||
-ថ្លើម|liver|tlaəm
+ថ្លើម|liver|tʰlaəm
 ថ្លែង||
 ថ្លៃ||
 ថ្លៃថ្នូរ||
@@ -2046,7 +2042,7 @@ autoExpandExamples.km = `
 ទណ្ឌកិច្ច||
 ទណ្ឌឃាដ||
 ទណ្ឌវាទ||
-ទទឹក|wet|tɔtɨk
+ទទឹក|wet|tɔ.ˈtɨk
 ទទឹម||
 ទទូច||
 ទទួល||
@@ -2057,12 +2053,12 @@ autoExpandExamples.km = `
 ទន្ត||
 ទន្ទឹម||
 ទន្ទេញ||
-ទន្លេ|river|tʊənlee
+ទន្លេ|river|tŭən.ˈleː
 ទន្សាយ||
 ទន្សាយគល់||
 ទន្សាយស្លឹក||
 ទប់|to stop up|tup
-ទម្ងន់|weight|tɔmŋɔn
+ទម្ងន់|weight|tum.ˈŋŭən
 ទម្រង់||
 ទម្រង់ស័ក្តិ||
 ទម្លាក់||
@@ -2073,7 +2069,7 @@ autoExpandExamples.km = `
 ទសជាតក||
 ទសបញ្ញត្តិ||
 ទសបារមី||
-ទសវត្សរ៍|year|ʋŏət
+ទសវត្សរ៍|decade|tĕəʔ.saʔ.ʋŏət~tŭəh.saʔ.ʋŏət
 ទស្សន||
 ទស្សនកិច្ច||
 ទស្សនវិជ្ជា||
@@ -2146,7 +2142,7 @@ autoExpandExamples.km = `
 ទីលានចាក់សម្រាម||
 ទីហ្វុង||
 ទឹក|water|tɨk
-ទឹកកក|ice|tɨk kɑɑ kɑɑ
+ទឹកកក|ice|tɨk ˈkɑːʔ
 ទឹកកាម||
 ទឹកក្រឡុក||
 ទឹកក្រូច||
@@ -2180,7 +2176,7 @@ autoExpandExamples.km = `
 ទុកចិត្ត||
 ទុកដាក់||
 ទុក្ខ||
-ទុគ៌ត|destitute|tuːrəkuə̆t
+ទុគ៌ត|destitute|tuːrəkuə̆t|||x
 ទុង||
 ទុតិយតា||
 ទុន||
@@ -2208,7 +2204,7 @@ autoExpandExamples.km = `
 ទូរសព្ទចល័ត||
 ទូរស័ព្ទ||
 ទូរស័ព្ទចល័ត||
-ទូលាយ|wide|tou-leay
+ទូលាយ|wide|tuː.ˈliəj
 ទូសៀវភៅ||
 ទួរគី||
 ទួរណឺវិស||
@@ -2331,17 +2327,17 @@ autoExpandExamples.km = `
 ធុត្តជន||
 ធុន||
 ធុមី||
-ធុរៈ|preoccupation|tʰureə̆ʔ
+ធុរៈ|preoccupation|tʰureə̆ʔ|||x
 ធុំ||
-ធូរ|relaxed|tʰuː
-ធូលី|dust|tʰuulii|Sanskrit
+ធូរ|relaxed|tʰuː|||x
+ធូលី|dust|tʰuː.ˈliː||Sanskrit
 ធៀប||
 ធោវនដ្ឋាន||
-ធំ|big|tʰɑm
+ធំ|big|tʰom
 ធំធាត់||
 ធំសម្បើម||
 ធំឡើង||
-ធ្ងន់|heavy|tŋʊən
+ធ្ងន់|heavy|tʰŋŭən
 ធ្ងន់ធ្ងរ||
 ធ្នល់||
 ធ្នាក់||
@@ -2350,7 +2346,7 @@ autoExpandExamples.km = `
 ធ្នើរ||
 ធ្មប់||
 ធ្មាយ||
-ធ្មេញ|tooth|tmɨɲ
+ធ្មេញ|tooth|tʰmɨɲ
 ធ្យូង||
 ធ្លាក់||
 ធ្លាក់ចុះ||
@@ -2378,7 +2374,7 @@ autoExpandExamples.km = `
 នរ||
 នរក||
 នរកកុណ្ឌ||
-នរណា|who|nɔɔnaa
+នរណា|who|nɔː ˈnaː
 នហារុ||
 នាក់||
 នាគ|dragon|niəʔ
@@ -2394,7 +2390,7 @@ autoExpandExamples.km = `
 នាម||
 នាមត្រកូល||
 នាមរនាប់||
-នាយ|there; leader|niəj
+នាយ|leader|niəj
 នាយក||
 នាយកដ្ឋាន||
 នាយករដ្ឋមន្ត្រី||
@@ -2405,7 +2401,7 @@ autoExpandExamples.km = `
 នាវាមុជទឹក||
 នាវិក||
 នាឡិកា||
-នាំ|to lead|noə̯m
+នាំ|to lead|nŏəm
 នាំគ្នា||
 នាំចូល||
 នាំចេញ||
@@ -2419,7 +2415,7 @@ autoExpandExamples.km = `
 និង|and|nɨŋ
 និច្ឆ័យ||
 និជ្ជជនភាព||
-និទាន|story|nitiən
+និទាន|story|ni.ˈtiən
 និបាត||
 និបាតសព្ទ||
 និពន្ធ||
@@ -2448,11 +2444,11 @@ autoExpandExamples.km = `
 នីហ្សេ||
 នីហ្សេរីយ៉ា||
 នឹក||
-នឹង|future tense marker|nəŋ
+នឹង|future tense marker|nɨŋ
 នឹងន||
 នុរស៊ុលតង់||
 នុំប៉ាវ||
-នុ៎ះន៎|Over there !|nuhnɔː
+នុ៎ះន៎|Over there !|nuhnɔː|||x
 នូវ|consisting of|nɨw
 នូវែលហ្សេឡង់||
 នឿយ||
@@ -2464,13 +2460,13 @@ autoExpandExamples.km = `
 នៃ||
 នោម||
 នោះ|that|nuh
-នៅ|at|nɨv|to be at
+នៅ|at|nɨw
 នៅក្នុង||
 នៅក្នុងចំណោម||
-នៅណោះ|over there|nəɨnɔh
+នៅណោះ|over there|nəɨnɔh|||x
 នៅលីវ||
 នៅសល់||
-នៅឯណា|where|nɨv ʔae naa
+នៅឯណា|where|nɨw ʔae naː
 នំ||
 នំបារាំង||
 នំប៉ាវ||
@@ -2491,7 +2487,7 @@ autoExpandExamples.km = `
 បកស្រាយ||
 បក់||
 បក្ស||
-បក្សី|bird|baksəy
+បក្សី|bird|ɓak.ˈsəj
 បង||
 បងប្រុស||
 បងប្អូន||
@@ -2544,7 +2540,7 @@ autoExpandExamples.km = `
 បច្ចូស||
 បច្ចេកទេស||
 បច្ចេកវិទ្យា||
-បច្ច័យ|money|paccaj
+បច្ច័យ|money|pac.ˈcaj
 បញ||
 បញ្ចប់||
 បញ្ចុះ||
@@ -2553,7 +2549,7 @@ autoExpandExamples.km = `
 បញ្ចៀស||
 បញ្ចេញ||
 បញ្ចេញសំឡេង||
-បញ្ឆោត|to trick|ɓɑɲcʰaot
+បញ្ឆោត|to trick|ɓɑɲ.ˈcʰaot
 បញ្ជា||
 បញ្ជាក់||
 បញ្ជី||
@@ -2584,7 +2580,7 @@ autoExpandExamples.km = `
 បណ្ឌិត្យ||
 បណ្ណាគារ||
 បណ្ណាល័យ||
-បណ្តុះ|to grow|ɓɑnɗoh
+បណ្តុះ|to grow|ɓɑnɗoh|||x
 បថ||
 បទ||
 បទភ្លេង||
@@ -2596,14 +2592,14 @@ autoExpandExamples.km = `
 បន្តិច||
 បន្តិចបន្តូច||
 បន្តិចបន្តួច||
-បន្តិចម្ដង ៗ|little by little|ɓɑntecmɗɑːŋ ɓɑntecmɗɑːŋ
+បន្តិចម្ដង ៗ|little by little|.təc mɗɑːŋ ɓɑn.təc mɗɑːŋ
 បន្តឹង||
-បន្តុះ|to criticize|ɓɑntoh
+បន្តុះ|to criticize|ɓɑntoh|||x
 បន្តូច||
 បន្ថយ||
 បន្ថែ||
 បន្ថែម||
-បន្ទប់|room|ɓɑntuɓ
+បន្ទប់|room|ɓɑn.ˈtup
 បន្ទប់គេង||
 បន្ទប់ដេក||
 បន្ទប់ទឹក||
@@ -2665,11 +2661,11 @@ autoExpandExamples.km = `
 បាញ់ក្រុមជម្រើសជាតិ||
 បាញ់ឆែវ||
 បាញ់ធ្លាក់||
-បាញ់សត្វ|to hunt|baɲ sat|lit. "shoot animals"
+បាញ់សត្វ|to hunt|ɓaɲ ˈsat||lit. "shoot animals"
 បាញ់ហយ||
 បាដិហារិយ៍||
 បាដិហារ្យ||
-បាឋ|to tell, recite (clergy)|ɓaːt
+បាឋ|to tell, recite (clergy)|ɓaːt|||x
 បាត||
 បាតជើង||
 បាតដៃ||
@@ -2727,7 +2723,7 @@ autoExpandExamples.km = `
 បិសាច||
 បី|three|ɓəj
 បីតិ||
-បឹង|lake|bəŋ
+បឹង|lake|ɓəŋ
 បឺត||
 បឺរ||
 បុក||
@@ -2748,7 +2744,7 @@ autoExpandExamples.km = `
 បុព្វកថា||
 បុព្វបទ||
 បុព្វេ||
-បុរស|man (adult male)|boʔrɑh|Sanskrit
+បុរស|man (adult male)|ɓo.ˈrɑh||Sanskrit
 បុរាណ||
 បុរាណវត្ថុវិទ្យា||
 បុរាណវិទ្យា||
@@ -2760,13 +2756,13 @@ autoExpandExamples.km = `
 បូជា||
 បូប៊ីន||
 បូព៌ា||
-បូរាណ|ancient|ɓouraːn
+បូរាណ|ancient|ɓouraːn|||x
 បូលីវី||
 បូស៊្នី||
 បូស្នៀ និង ហេហ្សេហ្គូវីណា||
 បូស្នៀ||
 បួគីណាហ្វាសូ||
-បួន|four|buən|៤
+បួន|four|ɓuən||៤
 បួស||
 បើ|if|ɓaə
 បើក||
@@ -2784,7 +2780,7 @@ autoExpandExamples.km = `
 បេស្បល||
 បេឡា||
 បេឡារុស||
-បេះដូង|heart|beh dooŋ
+បេះដូង|heart|ɓeh.ˈɗouŋ
 បែក||
 បែកញើស||
 បែប||
@@ -2792,7 +2788,7 @@ autoExpandExamples.km = `
 បែរជា||
 បែលក្រាដ||
 បែលហ្ស៊ិក||
-បៃតង|green|bay tɑɑŋ
+បៃតង|green|ɓaj.ˈtɑːŋ
 បោក||
 បោកគក់||
 បោកចំបាប់||
@@ -2854,7 +2850,7 @@ autoExpandExamples.km = `
 ប៉ុន្តែ||
 ប៉ុន្មាន||
 ប៉ុម||
-ប៉ុស្តិ៍|Post|poh
+ប៉ុស្តិ៍|Post|poh||||po§h§∅
 ប៉ូដហ្គោរីកា||
 ប៉ូតាស្យូម||
 ប៉ូលិស||
@@ -2882,7 +2878,7 @@ autoExpandExamples.km = `
 ប៊ីសកេក||
 ប៊ីស៊ីក្លេត||
 ប៊ីស្កេក||
-ប៊ុត|a personal name|ɓut
+ប៊ុត|a personal name|ɓut|||x
 ប៊ុយការ៉េស||
 ប៊ុយដាប៉ែស||
 ប៊ុយតាន||
@@ -2902,7 +2898,7 @@ autoExpandExamples.km = `
 ប្ដី||
 ប្ដឹង||
 ប្ដូរ||
-ប្តី|husband|pdəy|Sanskrit
+ប្តី|husband|pɗəj||Sanskrit
 ប្តេជ្ញា||
 ប្រកប||
 ប្រកាន់||
@@ -2942,7 +2938,7 @@ autoExpandExamples.km = `
 ប្រតិបត្តិការ||
 ប្រតិពល||
 ប្រតិភូ||
-ប្រតឺងអ‌៊ឹះ|urgent, too busy|prɑːtəɨŋʔɨh
+ប្រតឺងអ‌៊ឹះ|urgent, too busy|prɑːtəɨŋʔɨh|||x
 ប្រទីប||
 ប្រទេស||
 ប្រទេសកំណើត||
@@ -2950,7 +2946,7 @@ autoExpandExamples.km = `
 ប្រធាន||
 ប្រធានាធិបតី||
 ប្រផេះ||
-ប្រពន្ធ|wife|prɑpʊən|Sanskrit
+ប្រពន្ធ|wife|prɑ.ˈpŭən||Sanskrit
 ប្រពៃណី||
 ប្រព័ន្ធ||
 ប្រព័ន្ធព្រះអាទិត្យ||
@@ -2961,7 +2957,7 @@ autoExpandExamples.km = `
 ប្រមា||
 ប្រមាញ់||
 ប្រមាណ||
-ប្រមាថ|to scorn, despise|prɑmaːt
+ប្រមាថ|to scorn, despise|prɑmaːt|||x
 ប្រមឹក||
 ប្រមុខ||
 ប្រមូល||
@@ -2970,7 +2966,7 @@ autoExpandExamples.km = `
 ប្រយុទ្ធ||
 ប្រយោគ||
 ប្រយោជន៍||
-ប្រយ័ត្ន|to be careful|prɑjat
+ប្រយ័ត្ន|to be careful|prɑ.ˈjat
 ប្រលាន||
 ប្រលោម||
 ប្រលោមលោក||
@@ -3000,12 +2996,12 @@ autoExpandExamples.km = `
 ប្រឡង់||
 ប្រឡាក់||
 ប្រឡាយ||
-ប្រឡូស|dirty|prɑlooh
+ប្រឡូស|dirty|prɑ.ˈlouh
 ប្រអប់||
 ប្រអប់ដៃ||
 ប្រអប់ប្រៃសណីយ៍||
 ប្រាក||
-ប្រាកដ|exact|praːkɑːt
+ប្រាកដ|exact|praː.ˈkɑt
 ប្រាក់||
 ប្រាក់ខែ||
 ប្រាក់ចំណូល||
@@ -3016,7 +3012,7 @@ autoExpandExamples.km = `
 ប្រាង្គណ៍||
 ប្រាចិន||
 ប្រាជ្ញ||
-ប្រាជ្ញា|intelligence|praːcɲaa
+ប្រាជ្ញា|intelligence|praːc.ˈɲaː
 ប្រាណ||
 ប្រាថ្នា||
 ប្រាទីស្លាវ៉ា||
@@ -3026,7 +3022,7 @@ autoExpandExamples.km = `
 ប្រារព្ធ||
 ប្រាសាទ||
 ប្រាស់||
-ប្រាំ|five|pram|៥
+ប្រាំ|five|pram||៥
 ប្រាំបី||
 ប្រាំបួន||
 ប្រាំពីរ||
@@ -3072,7 +3068,7 @@ autoExpandExamples.km = `
 ប្អូន||
 ប្អូនប្រុស||
 ប្អូនស្រី||
-ប‌៊ិយែរ|beer|ɓijɛː
+ប‌៊ិយែរ|beer|ɓijɛː|||x
 ផង||
 ផល|fruit|pʰɑl|Sanskrit
 ផលប្រយោជន៍||
@@ -3084,7 +3080,7 @@ autoExpandExamples.km = `
 ផលិតផលក្នុងស្រុកសរុប||
 ផល្លា||
 ផា||
-ផាត់|to blow|pʰat|wind
+ផាត់|to blow|pʰat
 ផាប់||
 ផាយ|run at full speed|pʰaːj
 ផាល||
@@ -3104,10 +3100,10 @@ autoExpandExamples.km = `
 ផែនទី||
 ផោន||
 ផោម||
-ផ្កា|flower|pkaa
+ផ្កា|flower|pʰkaː
 ផ្កាឈូក||
 ផ្កាថ្ម||
-ផ្កាយ|star|pkaay
+ផ្កាយ|star|pʰkaːj
 ផ្កាយព្រះគ្រោះ||
 ផ្កាយសមុទ្រ||
 ផ្គង់||
@@ -3152,8 +3148,8 @@ autoExpandExamples.km = `
 ផ្លាស់||
 ផ្លាស់ប្ដូរ||
 ផ្លិត||
-ផ្លុំ|to blow|plom|mouth
-ផ្លូវ|road|pləv
+ផ្លុំ|to blow|pʰlom||mouth
+ផ្លូវ|road|pʰləw
 ផ្លូវការ||
 ផ្លូវក្រោមដី||
 ផ្លូវដែក||
@@ -3161,7 +3157,7 @@ autoExpandExamples.km = `
 ផ្លេក||
 ផ្លេកបន្ទោរ||
 ផ្លែ||
-ផ្លែឈើ|fruit|phle-chheur
+ផ្លែឈើ|fruit|pʰlae ˈcʰəː
 ផ្លែព័រ||
 ផ្លែភា||
 ផ្លែល្ហុង||
@@ -3172,13 +3168,13 @@ autoExpandExamples.km = `
 ផ្សងព្រេង||
 ផ្សព្វផ្សាយ||
 ផ្សាយ||
-ផ្សារ|market|psaː
+ផ្សារ|market|pʰsaː
 ផ្សារទំនើប||
 ផ្សិត||
 ផ្សេង||
 ផ្សេងទៀត||
 ផ្សេងៗ||
-ផ្សែង|smoke|psaeŋ
+ផ្សែង|smoke|pʰsaeŋ
 ផ្សោត||
 ផ្សំ||
 ផ្អប||
@@ -3186,7 +3182,7 @@ autoExpandExamples.km = `
 ផ្អើល||
 ផ្អែក||
 ផ្អែម||
-ពង|egg|pɔɔŋ
+ពង|egg|pɔːŋ
 ពងទឹក||
 ពងមាន់ចៀន||
 ពងមាន់ស្ងោរ||
@@ -3208,7 +3204,7 @@ autoExpandExamples.km = `
 ពន្លឺ||
 ពន្លឺចរាចរណ៍||
 ពន្លឿន||
-ពពក|cloud|pɔpɔɔk
+ពពក|cloud|pɔ.ˈpɔːʔ
 ពពុះ||
 ពពុះទឹក||
 ពពួក||
@@ -3220,11 +3216,11 @@ autoExpandExamples.km = `
 ពលយោធា||
 ពលរដ្ឋ||
 ពលី||
-ពស់|snake|pous'
+ពស់|snake|pŭəh
 ពស់ថ្លាន់||
 ពហុ||
 ពហុវចនៈ||
-ពាក់|to wear|peə̆ʔ
+ពាក់|to wear|pĕəʔ
 ពាក់ព័ន្ធ|to be intertwined, connected|pĕəʔ pŏən.ˈtʰɔː
 ពាក្យ|word|piəʔ
 ពាក្យក្លាយ||
@@ -3253,7 +3249,7 @@ autoExpandExamples.km = `
 ពារ||
 ពាល||
 ពាល់||
-ពាំ|to carry in the beak|poə̆m
+ពាំ|to carry in the beak|poə̆m|||x
 ពាំង||
 ពិការ||
 ពិឃាដ||
@@ -3289,7 +3285,7 @@ autoExpandExamples.km = `
 ពិស||
 ពិសឆ្លង||
 ពិសា||
-ពិសាខ|April-May|pisaːʔ
+ពិសាខ|April-May|pisaːʔ|||x
 ពិសេស||
 ពិសោធ||
 ពិសោធន៍||
@@ -3298,7 +3294,7 @@ autoExpandExamples.km = `
 ពីងពាង||
 ពីជៈ||
 ពីណា||
-ពីព្រោះ|because|pii prʊəh
+ពីព្រោះ|because|piː ˈprŭəh
 ពីមុន||
 ពីរ|two|piː
 ពីរោះ||
@@ -3318,17 +3314,17 @@ autoExpandExamples.km = `
 ពុះ|to boil; to split (wood)|puh
 ពូក||
 ពូកែ||
-ពូជ|seed|puuc|Sanskrit
+ពូជ|seed|puːc||Sanskrit
 ពូជនិយម||
 ពូថៅ||
 ពូល||
 ពួក||
 ពួកគាត់||
-ពួកគេ|they|puək kee
+ពួកគេ|they|puəʔ ˈkeː
 ពួកម៉ាក||
 ពួកយើង||
 ពួកវា||
-ពួកអ្នក|you (plural)|puək neak
+ពួកអ្នក|you (plural)|puəʔ ˈnĕəʔ
 ពួរ||
 ពេក||
 ពេជ្ឈឃាដ||
@@ -3353,12 +3349,12 @@ autoExpandExamples.km = `
 ពោត||
 ពោតលីង||
 ពោល||
-ពោះ|belly|pʊəh
+ពោះ|belly|pŭəh
 ពោះវៀន||
-ពោះវៀនពោះតាំង|guts|pʊəh viən pʊəh taŋ
+ពោះវៀនពោះតាំង|guts|pŭəh ʋiən pŭəh taŋ
 ពៅ||
 ពំនាល់||
-ព៉ី|flute|pəj
+ព៉ី|flute|pəj|||x
 ព័ត៌មាន||
 ព័ន្ធ||
 ព័រទុយហ្គាល់||
@@ -3465,12 +3461,12 @@ autoExpandExamples.km = `
 ភាពយន្ត||
 ភាពយន្តឯកសារ||
 ភាពល្ងង់ខ្លៅ||
-ភាយ|to circulate|pʰiəj
+ភាយ|to circulate|pʰiəj|||x
 ភារ||
 ភារវត្ថុ||
 ភារៈ||
 ភាវរស់||
-ភាសា|language|pʰiəsaː
+ភាសា|language|pʰiə.ˈsaː
 ភាសាផ្លូវការ||
 ភាសាវិទូ||
 ភាសាសាស្ត្រ||
@@ -3507,7 +3503,7 @@ autoExpandExamples.km = `
 ភោជនីយ||
 ភោជនីយដ្ឋាន||
 ភោជ្ជសាលី||
-ភំ|big|tʰom
+ភំ|big|tʰom|||x
 ភ័យ||
 ភ្ងា||
 ភ្ជាប់||
@@ -3520,8 +3516,8 @@ autoExpandExamples.km = `
 ភ្នាក់ងារ||
 ភ្នាក់ដៃ||
 ភ្នាល់||
-ភ្នែក|eye|pnɛɛk
-ភ្នំ|mountain|pnum
+ភ្នែក|eye|pʰnɛːk
+ភ្នំ|mountain|pʰnum
 ភ្នំពេញ||
 ភ្នំភ្លើង||
 ភ្រូណ||
@@ -3532,7 +3528,7 @@ autoExpandExamples.km = `
 ភ្លឺ||
 ភ្លុក||
 ភ្លើ||
-ភ្លើង|fire|pləəŋ
+ភ្លើង|fire|pʰləːŋ
 ភ្លៀង|rain|pʰliəŋ||||pʰ§liə§ŋ
 ភ្លេង||
 ភ្លេងជាតិ||
@@ -3540,7 +3536,7 @@ autoExpandExamples.km = `
 ភ្លែត||
 ភ្លោះ||
 ភ្លៅ||
-មក|to come|mɔɔk
+មក|to come|mɔːʔ
 មកដល់||
 មករា||
 មកុដ||
@@ -3559,14 +3555,14 @@ autoExpandExamples.km = `
 មណី||
 មណ្ឌល||
 មណ្ឌុកសត្វ||
-មតិ|opinion|matteʔ
+មតិ|opinion|mĕəʔ.ˈteʔ~ma.ˈteʔ
 មត្ត||
 មធុរជាតិ||
 មធ្យម||
 មធ្យោបាយ||
 មន||
 មនសិការ||
-មនុស្ស|man (human being)|mɔnuh|Sanskrit
+មនុស្ស|man (human being)|mɔ.ˈnuh~mɔ.ˈnɨh~mĕəʔ.ˈnuh||Sanskrit
 មនុស្សគ្រាស||
 មនុស្សជាតិ||
 មនុស្សទោស||
@@ -3607,7 +3603,7 @@ autoExpandExamples.km = `
 មាតិកា||
 មាតិកានុក្រម||
 មាតុប្រទេស||
-មាត់|mouth|moat
+មាត់|mouth|mŏət
 មាត្រា||
 មាន|to have|miən
 មានគភ៌||
@@ -3617,7 +3613,7 @@ autoExpandExamples.km = `
 មានពោះពុង||
 មានអី||
 មានិត||
-មាន់|chicken|moə̆n
+មាន់|chicken|mŏən
 មាន់ឈ្មោល||
 មាន់ញី||
 មាន់បារាំង||
@@ -3673,7 +3669,7 @@ autoExpandExamples.km = `
 មុំ||
 មូត្រ||
 មូត្រាស័យ||
-មូល|round|muul
+មូល|round|muːl
 មូលដ្ឋាន||
 មូលតា||
 មូលធន||
@@ -3688,7 +3684,7 @@ autoExpandExamples.km = `
 មូស្គូ||
 មូស្លីម||
 មួក||
-មួយ|one|muəy|១
+មួយ|one|muəj||១
 មួយទៀត||
 មួយពាន់||
 មួយម៉ឺន||
@@ -3730,14 +3726,14 @@ autoExpandExamples.km = `
 មេអណ្ដើក||
 មេអាប||
 មេអំបៅ||
-មែ|polite response particle|mɛː
+មែ|mother|mae
 មែក||
-មែន|correct|mɛɛn
+មែន|real, true|mɛːn
 មែនទេ||
 មោទនភាព||
 មោរៈ||
 មំសៈ||
-ម៉ត់ចត់|careful|mɑtcɑt
+ម៉ត់ចត់|careful|mɑtcɑt|||x
 ម៉ាក||
 ម៉ាកាវ||
 ម៉ាក់ប្រាង||
@@ -3808,7 +3804,7 @@ autoExpandExamples.km = `
 ម្ដង||
 ម្ដងទៀត||
 ម្ដាយ||
-ម្ដេច|how|mdəc
+ម្ដេច|how|mɗəc
 ម្ទេស||
 ម្នាក់||
 ម្នាក់ៗ||
@@ -3832,7 +3828,7 @@ autoExpandExamples.km = `
 ម្សៅ||
 ម្ហូប||
 ម្ហូបតាមផ្លូវ||
-ម្ហូបបារាំង|French food|mhouɓɓaːraŋ
+ម្ហូបបារាំង|French food|mhouɓɓaːraŋ|||x
 យក||
 យកចិត្តទុកដាក់||
 យកចេញ||
@@ -3848,15 +3844,15 @@ autoExpandExamples.km = `
 យន្តសិក្សា||
 យន្តហោះ||
 យន្ត្រ||
-យប់|night|yup
+យប់|night|jup
 យប់មិញ||
 យម||
-យល់|to understand|juə̆l
+យល់|to understand|jŭəl
 យល់ព្រម||
 យល់សប្តិ||
 យស||
 យសស័ក្តិ||
-យាង|go (royalty)|jiəŋ
+យាង|go (royalty)|jiəŋ|||x
 យាន||
 យានជំនិះ||
 យានដ្ឋាន||
@@ -3891,7 +3887,7 @@ autoExpandExamples.km = `
 យូហ្គោស្លាវ||
 យួន||
 យួរ||
-យើង|we|yəəŋ
+យើង|we|jəːŋ
 យើងខ្ញុំ||
 យេមែន||
 យេស៊ូ||
@@ -3909,7 +3905,7 @@ autoExpandExamples.km = `
 យ៉||
 យ៉ាក||
 យ៉ាង|kind; variety|jaːŋ
-យ៉ាងដូចម្តេច|how
+យ៉ាងដូចម្តេច|how||||x
 យ៉ាងណា||
 យ៉ាងណាមិញ||
 យ៉ាបា||
@@ -4022,7 +4018,7 @@ autoExpandExamples.km = `
 រលាយ||
 រលុង||
 រលូត||
-រលួយ|rotten|rɔluəy
+រលួយ|rotten|rɔ.ˈluəj
 រលែក||
 រលំ||
 រវល់||
@@ -4034,7 +4030,7 @@ autoExpandExamples.km = `
 រសាយនវិទ្យា||
 រសៀល||
 រសោះ||
-រស់|to live|rʊəh
+រស់|to live|rŭəh
 រស់នៅ||
 រស្មី||
 រស្ស||
@@ -4066,7 +4062,7 @@ autoExpandExamples.km = `
 រាត្រីសួស្ដី||
 រាន||
 រាប|smooth|riep
-រាប់|to count|roap
+រាប់|to count|rŏəp
 រាប់ពាន់||
 រាមញ្ញ||
 រាយ||
@@ -4088,7 +4084,7 @@ autoExpandExamples.km = `
 រី||
 រីក||
 រីករាយ||
-រីញ|dried up|riːŋ
+រីញ|dried up|riːŋ|||x
 រីត||
 រីហ្កា||
 រីឯ||
@@ -4109,7 +4105,7 @@ autoExpandExamples.km = `
 រូ||
 រូង|hole|ruːŋ
 រូត||
-រូប|picture|ruːɓ
+រូប|image, figure|ruːp
 រូបតំណាង||
 រូបថត||
 រូបធាតុ||
@@ -4165,7 +4161,7 @@ autoExpandExamples.km = `
 រោងល្ខោន||
 រោងស្រី||
 រោទ៍||
-រោម|feather|roum|down
+រោម|feather|roːm
 រោមភ្នែក||
 រោយ||
 រោរព||
@@ -4174,9 +4170,9 @@ autoExpandExamples.km = `
 រោហិណី||
 រំខាន||
 រំពត់||
-រំពាត់|stick|rumpoat
+រំពាត់|stick|rum.ˈpŏət
 រំពឹង||
-រំភើប|excited|rumɓəːpʰ
+រំភើប|excited|rumɓəːpʰ|||x
 រំលាយ||
 រំលាយអាហារ||
 រំលូត||
@@ -4186,7 +4182,7 @@ autoExpandExamples.km = `
 រំហួត||
 រំហែ||
 រំអិល||
-រំឭក|to commemorate|rumlɨk
+រំឭក|to commemorate|rum.ˈlɨk
 រះ||
 រះមុខ||
 រ៉||
@@ -4200,7 +4196,7 @@ autoExpandExamples.km = `
 រ៉ាំងណុក||
 រ៉ឺកុម្មងដេ||
 រ៉ុកកែត||
-រ៉ូង|rattling noise|rouŋ
+រ៉ូង|rattling noise|ruːŋ
 រ៉ូម||
 រ៉ូម៉ង់||
 រ៉ែ||
@@ -4223,12 +4219,12 @@ autoExpandExamples.km = `
 លទ្ធកម្ម||
 លទ្ធផល||
 លទ្ធភាព||
-លទ្ធិ|precept|lattʰiʔ
+លទ្ធិ|precept|lat.ˈtʰiʔ
 លទ្ធិកុម្មុយនិស្ត||
 លទ្ធិចក្រពត្តិនិយម||
 លទ្ធិមូលធននិយម||
 លប|fish trap|lɔːp
-លប់|bird trap|lup
+លប់|bird trap|lup|||x
 លម្អ||
 លយ||
 លលា||
@@ -4238,7 +4234,7 @@ autoExpandExamples.km = `
 លស់||
 លា||
 លាក់||
-លាង|to play|leeŋ
+លាង|to play|liəŋ
 លាជ||
 លាឈប់||
 លាញ||
@@ -4301,7 +4297,7 @@ autoExpandExamples.km = `
 លេខនា||
 លេខា||
 លេខាធិការ||
-លេង|to play|leiŋ
+លេង|to play|leːŋ
 លេងកុន||
 លេណ||
 លេណក||
@@ -4310,7 +4306,7 @@ autoExpandExamples.km = `
 លែង||
 លៃ||
 លោ||
-លោក|you (singular)|louk|polite
+លោក|you (singular)|loːk||polite
 លោកខែ||
 លោកគ្រូ||
 លោកសង្ឃ||
@@ -4318,7 +4314,7 @@ autoExpandExamples.km = `
 លោកអ្នកឧកញ៉ា||
 លោកិយ||
 លោត||
-លោភ|greed|loːp
+លោភ|greed|loːp|||x
 លោម||
 លោហធាតុ||
 លោហាករ||
@@ -4342,7 +4338,7 @@ autoExpandExamples.km = `
 លះ||
 លះបង់||
 ល័ក្ត||
-ល័ខ|gum lac|leə̆k
+ល័ខ|red dye|lĕəʔ
 ល្ខោន||
 ល្ខោនខោល||
 ល្ង||
@@ -4400,7 +4396,7 @@ autoExpandExamples.km = `
 វត្តមាន||
 វត្តមានកាល||
 វត្តមានា||
-វត្តុ|artifact|ʋoə̆ttoʔ
+វត្តុ|artifact|ʋoə̆ttoʔ|||x
 វត្ថុ||
 វត្ថុលេខនា||
 វត្ស||
@@ -4456,17 +4452,17 @@ autoExpandExamples.km = `
 វិជ្ជាជីវៈ||
 វិជ្ជាជីវៈខាងសារព័ត៌មាន||
 វិជ្ជុ||
-វិញ|instead, again|ʋiɲ
+វិញ|instead, again|ʋɨɲ
 វិញ្ញាណ||
 វិញ្ញាសា||
 វិថី||
-វិទូ|expert|ʋiʔ tuː
+វិទូ|expert|ʋi.ˈtuː
 វិទ្យា||
-វិទ្យាល័យ|highschool|ʋiʔtjiəlɨj*
+វិទ្យាល័យ|highschool|ʋi.tʰjiə.laj
 វិទ្យាសាស្ត្រ||
 វិទ្យាសាស្ត្រនយោបាយ||
 វិទ្យាស្ថាន||
-វិទ្យុ|radio|ʋitjuʔ
+វិទ្យុ|radio|ʋi.ˈtʰjuʔ
 វិធាន||
 វិធានការ||
 វិធី||
@@ -4530,9 +4526,9 @@ autoExpandExamples.km = `
 វេលាណា||
 វែក||
 វែកកូរ||
-វែង|long|vɛɛŋ
+វែង|long|ʋɛːŋ
 វែលីងតោន||
-វៃ|quick, clever|ʋɨj
+វៃ|quick, clever|ʋɨj|||x
 វៃយរាពណ៍||
 វៃយាករណ៍||
 វោត||
@@ -4555,19 +4551,19 @@ autoExpandExamples.km = `
 វ៉ែនតាសំរាប់ថ្ងៃ||
 វ៉ែនតាស្រទំ||
 វ៉ែល||
-វ៉ៃ|to hit|ʋaj
-វ័ង|palace|ʋeə̯ŋ
+វ៉ៃ|to hit|ʋaj|||x
+វ័ង|palace|ʋŭəŋ
 វ័យ||
 វ័យក្មេង||
-ស|white|sɑɑ
+ស|white|sɑː
 សក||
 សកម្ម||
 សកម្មភាព||
 សកល||
 សកលលោក||
-សកលវិទ្យាល័យ|university|sɑːkɑːlɔːʋiʔtjiəlɨj*
+សកលវិទ្យាល័យ|university|sɑːkɑːlɔːʋiʔtjiəlɨj*|||x
 សកុណាយន្ត||
-សក់|hair|sɑk
+សក់|hair|sɑʔ
 សក់ទង់ដែង||
 សក្តា||
 សក្តានុពល||
@@ -4618,7 +4614,7 @@ autoExpandExamples.km = `
 សតិ||
 សត្រី||
 សត្រូវ||
-សត្វ|animal|sat|Sanskrit
+សត្វ|animal|sat||Sanskrit
 សត្វឃាតស្ថាន||
 សត្វពពែ||
 សត្វព្រៃ||
@@ -4683,9 +4679,9 @@ autoExpandExamples.km = `
 សមិន្ធន៍||
 សមីការ||
 សមុទ្ទ||
-សមុទ្រ|sea|saʔmot|Sanskrit
+សមុទ្រ|sea|saʔ.ˈmot||Sanskrit
 សមុទ្រចិនខាងត្បូង||
-សម័យ|era|sɑmaj
+សម័យ|era|saʔ.ˈmaj
 សម្គាល់||
 សម្ងាត់||
 សម្ងួត||
@@ -4729,7 +4725,7 @@ autoExpandExamples.km = `
 សម្លាក||
 សម្លាញ់||
 សម្លាញ់និយម||
-សម្លាប់|to kill|sɑmlap
+សម្លាប់|to kill|sɑm.ˈlap
 សម្លឹង||
 សម្លៀកបំពាក់||
 សម្លៀកបំពាក់ក្នុង||
@@ -4874,7 +4870,7 @@ autoExpandExamples.km = `
 សិល្បៈថតកុន||
 សិសិរៈ||
 សិស្ស||
-សី|wicker ball|səj
+សី|wicker ball|səj|||x
 សីត||
 សីតកម្ម||
 សីតុណ្ហភាព||
@@ -4929,7 +4925,7 @@ autoExpandExamples.km = `
 សូភ្វីយ៉ា||
 សូម||
 សូមកុំជក់បារី||
-សូមទោស|I beg your pardon|soum toːs
+សូមទោស|I beg your pardon|soum ˈtoːh
 សូម៉ាលី||
 សូម្បី||
 សូម្បីតែ||
@@ -5033,7 +5029,7 @@ autoExpandExamples.km = `
 សំទុះ||
 សំនួន||
 សំនួរ||
-សំបក|bark (of a tree)|sɑmbɑɑk
+សំបក|bark (of a tree)|sɑm.ˈɓɑːʔ
 សំបកឈើ||
 សំបុក||
 សំបុត្រ||
@@ -5047,7 +5043,7 @@ autoExpandExamples.km = `
 សំពះ||
 សំភោរ||
 សំយោគ||
-សំយោគសញ្ញា|name of a diacritic|sɑnjoːksaɲɲaː
+សំយោគសញ្ញា|name of a diacritic|saŋ.joːk saɲ.ɲaː
 សំរស់||
 សំរាក||
 សំរាប់||
@@ -5059,7 +5055,7 @@ autoExpandExamples.km = `
 សំរួល||
 សំរេក||
 សំលោហៈ||
-សំស្ក្រិត|Sanskrit|sɑŋskret
+សំស្ក្រិត|Sanskrit|sɑŋskret|||x
 សំស្ក្រឹត||
 សំឡ||
 សំឡេង||
@@ -5093,7 +5089,7 @@ autoExpandExamples.km = `
 ស៊ើប||
 ស៊េប៊ី||
 ស័ក|era|saʔ
-ស័កិ្ត|rank|sak
+ស័កិ្ត|rank|sak|||x
 ស័ក្តិ||
 ស័ង្កសី||
 ស័ង្គសី||
@@ -5121,11 +5117,11 @@ autoExpandExamples.km = `
 ស្ដាប់បង្គាប់||
 ស្ដាប់ឮ||
 ស្ដាយ||
-ស្ដាំ|right|sdam
-ស្ដើង|thin|sdaəŋ
+ស្ដាំ|right|sɗam
+ស្ដើង|thin|sɗaəŋ
 ស្ដេច||
 ស្ដែង||
-ស្ដោះ|to spit|sdɑh
+ស្ដោះ|to spit|sɗɑh
 ស្ដៅ||
 ស្ដ្រី||
 ស្តង់||
@@ -5185,7 +5181,7 @@ autoExpandExamples.km = `
 ស្នែង|horn|snaeŋ
 ស្បថ||
 ស្បូន||
-ស្បែក|skin|sbaek
+ស្បែក|skin|sɓaek
 ស្បែកជើង||
 ស្បែកជើងផ្ទាត់||
 ស្បែកជើងសង្រែក||
@@ -5209,7 +5205,7 @@ autoExpandExamples.km = `
 ស្មៀន||
 ស្មេរ||
 ស្មោះ||
-ស្មៅ|grass|smav
+ស្មៅ|grass|smaw
 ស្មៅស្ងួត||
 ស្ម័គ្រ||
 ស្ម័គ្រចិត្ត||
@@ -5244,7 +5240,7 @@ autoExpandExamples.km = `
 ស្រាវ||
 ស្រាវជ្រាវ||
 ស្រាស||
-ស្រី|woman|srǝy
+ស្រី|woman|srəj
 ស្រីខូច||
 ស្រីញី||
 ស្រីមេផ្ទះ||
@@ -5284,7 +5280,7 @@ autoExpandExamples.km = `
 ស្លាកស្នាម||
 ស្លាជីប||
 ស្លាថ្មាត់||
-ស្លាប|wing|slaap
+ស្លាប|wing|slaːp
 ស្លាបព្រា||
 ស្លាប់||
 ស្លឹក|leaf|slǝk
@@ -5353,7 +5349,7 @@ autoExpandExamples.km = `
 ហិណ្ឌី||
 ហិប||
 ហិបប្រាក់||
-ហិមៈ|snow|heʔmeaʔ|Sanskrit
+ហិមៈ|snow|he.ˈmĕəʔ||Sanskrit
 ហិរញ្ញ||
 ហិរញ្ញវត្ថុ||
 ហិរណ្យ||
@@ -5367,7 +5363,7 @@ autoExpandExamples.km = `
 ហូជីមិញ||
 ហូតែល||
 ហូប||
-ហូរ|to flow|hoo
+ហូរ|to flow|hou
 ហូឡង់||
 ហួច||
 ហួត||
@@ -5419,7 +5415,7 @@ autoExpandExamples.km = `
 ហ្ន័ង||
 ហ្ម||
 ហ្មដំរី||
-ហ្មត់|fine, powdered|mɑt
+ហ្មត់|fine, powdered|mɑt|||x
 ហ្មឺន||
 ហ្លួង|king|luəŋ
 ហ្វាម៉ាស៊ី||
@@ -5436,7 +5432,7 @@ autoExpandExamples.km = `
 ហ្វឿងហ្វា||
 ហ្វេសប៊ុក||
 ហ្វៃហ្វា||
-ហ្វ៊ីស៉ិក|physics|fiːsik
+ហ្វ៊ីស៉ិក|physics|fiːsik|||x
 ហ្វ្រង្ក||
 ហ្វ្រូម៉ាហ្ស||
 ហ្វ្រែហ្ស៍|strawberry|frɛːh
@@ -5479,7 +5475,7 @@ autoExpandExamples.km = `
 អក្ខរៈ||
 អក្សរ||
 អក្សរខម||
-អក្សរខ្មែរ|Khmer script|ʔaʔsɑːkmae
+អក្សរខ្មែរ|Khmer script|ʔak.ˈsɑː kʰmae
 អក្សរជ្រៀង||
 អក្សរឈរ||
 អក្សរត្រង់||
@@ -5510,7 +5506,7 @@ autoExpandExamples.km = `
 អង្កាញ់||
 អង្កាម||
 អង្កាល||
-អង្កាល់|when|ʔɑŋkaal|Sanskrit
+អង្កាល់|when|ʔɑŋ.ˈkal||Sanskrit
 អង្កាល់ណា||
 អង្កេត||
 អង្គ||
@@ -5521,7 +5517,7 @@ autoExpandExamples.km = `
 អង្គរធំ||
 អង្គរវត្ត||
 អង្គារ||
-អង្គុយ|to sit|ʔɑŋkuy
+អង្គុយ|to sit|ʔɑŋ.ˈkuj
 អង្គុលី||
 អង្គុលីលេខ||
 អង្គ្លេស|English|ʔɑŋkleːh||||ʔɑ§ŋ.§k§leː§h§∅
@@ -5545,11 +5541,11 @@ autoExpandExamples.km = `
 អឌ្ឍ||
 អឌ្ឍគោល||
 អណូ||
-អណ្ដាត|tongue (organ)|ʔɑndaat
+អណ្ដាត|tongue (organ)|ʔɑn.ˈɗaːt
 អណ្ដូង||
 អណ្ដូងរ៉ែ||
 អណ្ដើក||
-អណ្ដែត|to float|ʔɑndaet
+អណ្ដែត|to float|ʔɑn.ˈɗaet
 អតិ||
 អតិថិ||
 អតិថិជន||
@@ -5601,7 +5597,7 @@ autoExpandExamples.km = `
 អនុស្សាវរីយ៍||
 អន្ត||
 អន្តរ||
-អន្តរជាតិ|international|ʔɑːntɑːciəteʔ*
+អន្តរជាតិ|international|ʔɑn.taʔ.raʔ.ciət
 អន្តរវាសក||
 អន្តរាគមន៍||
 អន្តរាយ||
@@ -5676,7 +5672,7 @@ autoExpandExamples.km = `
 អស្វិន||
 អស្សាភរណ៍||
 អស្សុ||
-អហិ|snake|ʔaʔheʔ|Sanskrit
+អហិ|snake|ʔaʔheʔ||Sanskrit
 អហិង្សា||
 អា||
 អាកទិក||
@@ -5688,7 +5684,7 @@ autoExpandExamples.km = `
 អាកាសបាតុភូត||
 អាកាសយានដ្ឋាន||
 អាកុល||
-អាក្រក់|bad|ʔaakrɑk
+អាក្រក់|bad|ʔaːʔ.ˈrɑʔ
 អាគម||
 អាគារ||
 អាគ្នេយ៍||
@@ -5737,7 +5733,7 @@ autoExpandExamples.km = `
 អាមីប||
 អាមេនី||
 អាមេរិក||
-អាយ|here|ʔaay
+អាយ|here|ʔaːj
 អាយឡែន||
 អាយុ||
 អាយុវឌ្ឍន៍||
@@ -5761,13 +5757,13 @@ autoExpandExamples.km = `
 អាវធំ||
 អាវស៊ូជាង||
 អាវាស||
-អាវុធ|weapon|ʔaːʋut
+អាវុធ|weapon|ʔaː.ˈʋut
 អាវេសិក||
 អាវ៉ូកាត៍||
 អាសន្ទិ||
 អាសយដ្ឋាន||
 អាសហ្គាបាត||
-អាសាឍ|June-July|ʔaːsaːt
+អាសាឍ|June-July|ʔaːsaːt|||x
 អាសេនិក||
 អាស៊ី||
 អាស៊ីត||
@@ -5798,7 +5794,6 @@ autoExpandExamples.km = `
 អាំស្ទែដាំ||
 អិស្លាម||
 អី/what||ʔəj
-អី|what|ʔī
 អីវ៉ាន់||
 អឺរ៉ាស៊ី||
 អឺរ៉ុប||
@@ -5869,7 +5864,7 @@ autoExpandExamples.km = `
 អំណាចផ្ដាច់ការ||
 អំណោយ||
 អំបាត||
-អំបិល|salt|ʔɑmbǝl
+អំបិល|salt|ʔɑm.ˈɓəl
 អំបូរ||
 អំបូរភាសា||
 អំបោស||
@@ -5883,7 +5878,7 @@ autoExpandExamples.km = `
 អំពៅ||
 អំឡុង||
 អះអាង||
-អ៊ី|interjection|ʔiː
+អ៊ី|interjection|ʔiː|||x
 អ៊ីចឹង||
 អ៊ីចុង||
 អ៊ីចុះ||
@@ -5910,7 +5905,7 @@ autoExpandExamples.km = `
 អ័ព្ភ||
 អ័ព្ភសន្និបាត||
 អ័ភ្រ|fog|ʔap
-អ្នក|you (singular)|neak
+អ្នក|you (singular)|nĕəʔ
 អ្នកការទូត||
 អ្នកកាសែត||
 អ្នកកីឡា||
@@ -5930,7 +5925,7 @@ autoExpandExamples.km = `
 អ្នកជំនួយ||
 អ្នកដាំស្ល||
 អ្នកដំណើរ||
-អ្នកណា|who|neak naa
+អ្នកណា|who|nĕəʔ ˈnaː
 អ្នកតែង||
 អ្នកតែងភ្លេង||
 អ្នកត្រួតត្រា||
@@ -5981,7 +5976,7 @@ autoExpandExamples.km = `
 អ្នកអត្តពល||
 អ្នកអាន||
 អ្នកឧកញ៉ា||
-អ្វី|what|ʔvǝy
+អ្វី|what|ʔaʔ.ˈʋəj
 អ្វីៗ||
 អ្វីៗទាំងអស់||
 ឥដ្ឋ|brick|ʔət
@@ -5996,10 +5991,10 @@ autoExpandExamples.km = `
 ឥតបង់ថ្លៃ||
 ឥទ្ធិ||
 ឥទ្ធិពល||
-ឥន្ត្រិយ|power|ʔəntriː
+ឥន្ត្រិយ|power|ʔəntriː|||x
 ឥន្ទ||
 ឥន្ទធនូ||
-ឥន្ទុ|the moon|ʔɨntuʔ
+ឥន្ទុ|the moon|ʔɨntuʔ|||x
 ឥន្ទ្រិយ||
 ឥន្ទ្រី||
 ឥន្ធនៈ||
@@ -6012,8 +6007,8 @@ autoExpandExamples.km = `
 ឥឡូវនេះ||
 ឥឡូវហ្នឹង||
 ឦស||
-ឦសាន|northeast|ʔəjsaːn
-ឧកញ៉ា|official of ministerial rank|ʔokɲaː
+ឦសាន|northeast|ʔəj.ˈsaːn~ʔiː.ˈsaːn
+ឧកញ៉ា|official of ministerial rank|ʔok.ˈɲaː
 ឧក្កាបាត||
 ឧក្រិដ្ឋ||
 ឧក្រិដ្ឋជន||
@@ -6041,13 +6036,13 @@ autoExpandExamples.km = `
 ឧបត្ថម្ភ||
 ឧបទ្រព||
 ឧបទ្វីប||
-ឧបម៉ា|example|uppəmaː
+ឧបម៉ា|example|uppəmaː|||x
 ឧបយុវរាជ||
 ឧបរាជ||
 ឧបសគ្គ||
 ឧបាយ||
 ឧបាយកល||
-ឧបាសក|layman|ʔaoɓaːsɑʔ
+ឧបាសក|layman|ʔaoɓaːsɑʔ|||x
 ឧប្បាទធម៌||
 ឧភយោរាជ||
 ឧម្មង្គ||
@@ -6066,7 +6061,7 @@ autoExpandExamples.km = `
 ឧស្សាហៈ||
 ឧស្សាហ៍||
 ឩដ្ឋ|camel|ʔout
-ឩន|deficient (lit.)|ʔuːn
+ឩន|deficient (lit.)|ʔuːn|||x
 ឪពុក|father|ʔəwpuk||||ʔəw§pu§k
 ឪពុកម្ដាយ||
 ឪម៉ាល់||
@@ -6076,7 +6071,7 @@ autoExpandExamples.km = `
 ឫស្សី||
 ឬ|or|rɨː
 ឬទេ||
-ឬស្សី|bamboo|rɨːhsəj
+ឬស្សី|bamboo|rɨːhsəj|||x
 ឮ|to hear|lɨː||||lɨː
 ឯ|at, as, for|ʔae
 ឯក||
@@ -6098,11 +6093,11 @@ autoExpandExamples.km = `
 ឯង||
 ឯណា||
 ឯណោះ||
-ឯទៀត|other|ae tiət
+ឯទៀត|other|ʔae ˈtiət
 ឯនេះ||
-ឰរាវ័ណ|Erawan|ʔajrəʋoə̆n
+ឰរាវ័ណ|Erawan|ʔajrəʋoə̆n|||x
 ឱកាស||
-ឱប|to embrace|ʔaop
+ឱប|to embrace|ʔaop|||x
 ឱរ៉ុប||
 ឱរ៉ូប||
 ឱសថ||
@@ -6112,8 +6107,8 @@ autoExpandExamples.km = `
 ឱ្យ||
 ឲ្យ|to give|ʔaoj||||ʔao§j
 ឲ្យយោបល់||
-ឳទក|water-plant|ʔawtuə̆k
-ឳពុក|father|ʔəv puk
+ឳទក|water-plant|ʔawtuə̆k|||x
+ឳពុក|father|ʔəw.ˈpuk
 ។ល។||
 ៣០០០ ៛|3000 riel|ɓej poan riəl
 ​ធំ|big|tʰom
