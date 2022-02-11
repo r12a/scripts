@@ -55,7 +55,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->20 December, 2021<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->11 February, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -533,8 +533,58 @@ alveolar</th>
 
 <section id="structure">
 <h2>Structure</h2>
-<p>An orthographic syllable in Javanese can be described as {C F} C {{R}Y} {V{A}} {Z}, where: </p>
-<ul>
+<p>A Javanese phonetic syllable can begin with a vowel, a consonant, or a consonant cluster. Vowel onsets can be written using either a vowel-sign on a carrier or an independent vowel. Independent vowels can also carry vowel-signs.  See <a class="secref">independent</a>.</p>
+
+<p>Syllable-initial consonant clusters usually have either <span class="ipa">r</span> or <span class="ipa">j</span> in the second position, or may have both. These are typically written using dedicated combining marks referred to as 'medial' characters.  See <a class="secref">medials</a>.</p>
+
+<p>According to Comrie, word-initial consonant clusters may involve prenasalised sounds such as <span class="trans">mb</span>, <span class="trans">nd</span>, <span class="trans">ndh</span>, <span class="trans">nj</span> or <span class="trans">nng</span>, which appear to be written using unconnected consonants side by side,<tt>c</tt> eg. 
+<span class="eg" lang="jv">ꦩꦧꦸꦫꦸ</span>
+</p>
+
+<p>Vowels following an initial consonant or consonant cluster are usually expressed using the inherent vowel, or one or more vowel signs associated with the base.  See <a class="secref">vowelsigns</a>.</p>
+
+<p>Syllable-final consonants are usually a single sound, and can be written using either a dedicated mark or an ordinary consonant character. See <a class="secref">finals</a>.</p>
+
+<p class="observation"><span class="leadin">Observation:</span> The following example transliterates a foreign word where the first syllable ends with multiple consonants. The stacking behaviour between the 2 syllable-final consonants is prevented by the insertion of a visible pangkon. It would be interesting to research whether this is the typical approach for multi-consonant syllable-final sounds. The example is:
+<span class="eg transc" lang="jv">ꦧꦶꦱ꧀ꦠꦿꦤ꧀​ꦱ꧀ꦗꦏꦂꦠ</span>
+</p>
+
+<p>Where a consonant ends an initial syllable and begins a following syllable, the orthography typically introduces a conjunct (ie. stacks or conjoins the consonants), eg.
+<span class="eg" lang="jv">ꦲꦏ꧀ꦱꦫ</span>
+</p>
+
+<p>Javanese is unusual in that this conjunct formation occurs across word boundaries, so the word-final consonant of the first word may be stacked above the word-initial consonant of the second. This means that line-breaking and other operations do not work on word boundaries, but instead look for 'orthographic syllables'.</p>
+
+<p>Root words are typically disyllables of the form Cˡ V Cˡ V Cˡ, where Cˡ represents an optional consonant or consonant cluster, and V represents a vowel. Most commonly, this represents CVCVC, followed by CVCCVC.<tt>c</tt></p>
+
+<p>Because stacks and conjoined consonants cannot be separated, typographic processes such as line-breaking and justification tend to operate on the basis of units called 'orthographic syllables'. An orthgographic syllable shifts the syllable start leftwards to include stacks preceding the syllable nucleus, and exclude syllable-final characters that are stacked.</p>
+
+<p>The following indicates the normal expectation for ordering of Unicode characters within an orthographic syllable.</p>
+
+<p>The sequencing of code points in a Javanese orthographic syllable can be described as follows:</p>
+
+<blockquote>
+<pre>
+Syllable := (Base | Generic_Base) Nukta*
+            (Virama Base Nukta*)* 
+            [Consonant_Medial && [Bottom_And_Left || Bottom]]?
+            [Consonant_Medial && Bottom_And_Right]?
+            [Vowel_Dependent && Left]*
+            [Vowel_Dependent && Top]*
+            [Vowel_Dependent && Bottom]*
+            [Vowel_Dependent && Right]*
+            Bindu*
+            Visarga*
+            Consonant_Final*
+        :=  (Base | Generic_Base) Nukta*
+            (Virama Base Nukta*)* 
+            Virama
+Base := Consonant | Vowel_Independent | Number
+</pre>
+</blockquote>
+
+
+<!--ul>
 <li>C is a consonant (or consonant + <span class="codepoint"><span lang="jv">&#xA9B3;</span> <a href="/scripts/javanese/block#charA9B3">[<span class="uname">U+A9B3 JAVANESE SIGN CECAK TELU​</span>]</a></span>), </li>
 <li>F is <span class="codepoint"><span lang="jv">&#xA9C0;</span> <a href="/scripts/javanese/block#charA9C0">[<span class="uname">U+A9C0 JAVANESE PANGKON​</span>]</a></span>, </li>
 <li>R is<span class="codepoint"><span lang="jv">&#xA9BF;</span> <a href="/scripts/javanese/block#charA9BF">[<span class="uname">U+A9BF JAVANESE CONSONANT SIGN CAKRA​</span>]</a></span>, </li>
@@ -542,9 +592,8 @@ alveolar</th>
 <li>V is a vowel-sign, </li>
 <li>A is <span class="codepoint"><span lang="jv">&#xA9B4;</span> <a href="/scripts/javanese/block#charA9B4">[<span class="uname">U+A9B4 JAVANESE VOWEL SIGN TARUNG​</span>]</a></span>, and </li>
 <li>Z is one of the syllable-final consonants.</li>
-</ul>
+</ul-->
 <p>The initial consonant cluster may represent a word-initial cluster such as <span class="trans">mb</span>, <span class="trans">nd</span>, <span class="trans">ndh</span>, <span class="trans">nj</span> or <span class="trans">nng</span>,<tt>c</tt> eg. <span class="eg" lang="jv">ꦩꦧꦸꦫꦸ</span> or it may represent the final consonant of a preceding syllable and the initial consonant of another, eg. <span class="eg" lang="jv">ꦲꦏ꧀ꦱꦫ</span></p>
-<p>Root words are typically disyllables of the form Cˡ V Cˡ V Cˡ, where Cˡ represents an optional consonant or consonant cluster, and V represents a vowel. Most commonly, this represents CVCVC, followed by CVCCVC.<tt>c</tt></p>
 </section>
 
 
