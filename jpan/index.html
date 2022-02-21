@@ -47,7 +47,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->20 December, 2021<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->21 February, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -1096,7 +1096,7 @@ alveolar</th>
 <li>Underline.</li>
 <li>Boten marks (also known as emphasis marks).</li>
 </ol>
-<p>(1) and (2) are popular approaches. (5) is not as common, but is a traditional approach with some value attached.</p>
+<p>Note that this list doesn't include italicisation or bolding of text. (1) and (2) are popular approaches. (5) is not as common, but is a traditional approach with some value attached.</p>
 <p>Different boten marks are used in horizontal and vertical text. Typically, bullets are used above characters in horizontal text, and sesame dots are used to the right of characters in vertical text.<tt>j,#composition_of_emphasis_dots</tt></p>
 <p>The boten mark is centre-aligned with the base characters, and doesn't normally appear alongside full stops, commas, or brackets.<tt>j,#composition_of_emphasis_dots</tt></p>
 
@@ -1106,6 +1106,67 @@ alveolar</th>
 <figcaption>Boten marks used for emphasis in horizontal and vertical text. (<a href="https://w3c.github.io/jlreq/#fig2_3_37">source</a>)</figcaption>
 </figure>
 <p>Embedded  text in other languages would have boten marks displayed on the same side as for Japanese.</p>
+</section>
+
+
+
+
+
+<section id="otherinline">
+<h3>Other inline ranges</h3>
+
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+ <section id="letterspace">
+<h3>Text spacing</h3>
+<p id="def-letterspacing" class="explanatoryintro definitionStub"></p>
+
+<section id="letterspacing">
+<h4>Inter-character letter-spacing</h4>
+<p>Letter-spacing is used to achieve balance between items with large and small numbers of characters, such as headings, running heads, and captions. When expanding text, equal amounts of space are added between the character frames of the item with the smaller number of characters.</p>
+
+<figure id="fig_letterspace">
+<img src="images/letter_spacing_1.jpeg" alt="" style="max-width: 40%;"/><img src="images/letter_spacing_2.jpeg" alt=""  style="max-width: 40%;"/>
+<figcaption>Examples of headings where letter spacing has been applied.</figcaption>
+</figure>
+
+<p><span class="leadin">Reducing inter-character spacing.</span> Although solid set text is normally best for readability, in large print sizes, such as for magazine headings, it may be desirable to reduce the distance between certain characters. This is typically done by reducing the distance between adjacent letter faces.</p>
+<p>Sometimes, text may also be kerned by overlapping the character frames by a regular amount across a whole line.</p>
+</section>
+
+<section id="autospace">
+<h4>Spacing around alphabetic or numeric phrases</h4>
+
+<p>When a run of romaji or ASCII numerals appears in text, it is often set off from the surrounding kanji/kana letters by a small space.</p>
+
+<p>The amount of spacing can vary.  JLREQ<tt>j,#id209</tt> suggests a ¼em space, but sometimes other spaces may be appropriate, such as ⅙em.<a class="qlink" href="https://github.com/w3c/csswg-drafts/issues/7050" target="_blank">gh</a></p>
+
+<figure id="fig_text_space">
+<img src="images/text_space_none.png" alt="">
+<span style="margin-inline:2rem">&nbsp;</span>
+<img src="images/text_space_applied.png" alt="">
+<figcaption>A Japanese paragraph where text-spacing has and has not been applied. (<a href="https://w3c.github.io/jlreq/#id209" target="_blank">source</a>)</figcaption>
+</figure>
+
+
+<p>Such spacing is not needed when the phrase is followed or preceded by punctuation that already has built in space. It also doesn't appear at the line start/end.</p>
+
+<div class="html">
+<p>To achieve this in web pages use the <code class="kw" translate="no">text-spacing</code> CSS property<sup><a href="https://drafts.csswg.org/css-text-4/#text-spacing-property" target="_blank">§</a></sup> in your style sheet with the following values. It's best not to use space characters. The actual amount of spacing applied is dependent on the browser.</p>
+<dl>
+<dt>ideograph-alpha*</dt>
+<dd>Creates extra spacing between runs of ideographs and non-ideographic letters.</dd>
+<dt>ideograph-numeric*</dt>
+<dd>Creates extra spacing between runs of ideographs and non-ideographic numerals glyphs.</dd>
+</dl>
+<p class="instructions">* Not yet widely supported.<sup><a href="https://www.w3.org/International/i18n-tests/results/int-letter-spacing#ja_auto_space" target="_blank">§</a></sup></p>
+<p>Eg. the following puts spacing around both:<br><code>text-spacing: ideograph-alpha ideograph-numeric;</code></p>
+</div>
+</section>
 </section>
 
 
@@ -1257,16 +1318,6 @@ alveolar</th>
 
 
 
-<section id="otherinline">
-<h3>Other inline ranges</h3>
-
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
-
 <section id="otherpunctuation">
 <h3>Other punctuation</h3>
 
@@ -1344,23 +1395,6 @@ alveolar</th>
     <p class="english noprint" dir="ltr">
       <button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Justify   </button>
     </p>
-</section>
-
-
-
-
- <section id="letterspace">
-<h3>Letter spacing</h3>
-<p id="def-letterspacing" class="explanatoryintro definitionStub"></p>
-<p>Letter-spacing is used to achieve balance between items with large and small numbers of characters, such as headings, running heads, and captions. When expanding text, equal amounts of space are added between the character frames of the item with the smaller number of characters.</p>
-
-<figure id="fig_letterspace">
-<img src="images/letter_spacing_1.jpeg" alt="" style="max-width: 40%;"/><img src="images/letter_spacing_2.jpeg" alt=""  style="max-width: 40%;"/>
-<figcaption>Examples of headings where letter spacing has been applied.</figcaption>
-</figure>
-
-<p><span class="leadin">Reducing inter-character spacing.</span> Although solid set text is normally best for readability, in large print sizes, such as for magazine headings, it may be desirable to reduce the distance between certain characters. This is typically done by reducing the distance between adjacent letter faces.</p>
-<p>Sometimes, text may also be kerned by overlapping the character frames by a regular amount across a whole line.</p>
 </section>
 
 
