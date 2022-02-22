@@ -47,7 +47,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->21 February, 2022<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->22 February, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -1138,6 +1138,9 @@ alveolar</th>
 <p>Sometimes, text may also be kerned by overlapping the character frames by a regular amount across a whole line.</p>
 </section>
 
+
+
+
 <section id="autospace">
 <h4>Spacing around alphabetic or numeric phrases</h4>
 
@@ -1158,14 +1161,108 @@ alveolar</th>
 <div class="html">
 <p>To achieve this in web pages use the <code class="kw" translate="no">text-spacing</code> CSS property<sup><a href="https://drafts.csswg.org/css-text-4/#text-spacing-property" target="_blank">§</a></sup> in your style sheet with the following values. It's best not to use space characters. The actual amount of spacing applied is dependent on the browser.</p>
 <dl>
-<dt>ideograph-alpha*</dt>
+<dt>ideograph-alpha <span class="instructions">(Not yet supported by browsers.)</span><a class="qlink" href="https://www.w3.org/International/i18n-tests/results/int-letter-spacing#ja_auto_space" target="_blank">§</a></dt>
 <dd>Creates extra spacing between runs of ideographs and non-ideographic letters.</dd>
-<dt>ideograph-numeric*</dt>
+<dt>ideograph-numeric <span class="instructions">(Not yet supported by browsers.)</span><a class="qlink" href="https://www.w3.org/International/i18n-tests/results/int-letter-spacing#ja_auto_space" target="_blank">§</a></dt>
 <dd>Creates extra spacing between runs of ideographs and non-ideographic numerals glyphs.</dd>
 </dl>
-<p class="instructions">* Not yet widely supported.<sup><a href="https://www.w3.org/International/i18n-tests/results/int-letter-spacing#ja_auto_space" target="_blank">§</a></sup></p>
 <p>Eg. the following puts spacing around both:<br><code>text-spacing: ideograph-alpha ideograph-numeric;</code></p>
 </div>
+</section>
+
+
+
+
+<section id="punctuationspace">
+<h4>Spacing around punctuation</h4>
+
+<p>Punctuation such as full stop, comma, parentheses, etc. normally has built-in space associated with it because the ink takes up only a part of the em square. However, in some situations, the blank space is not appropriate.</p>
+<p>When text is arranged on a strict grid pattern, none of this space removal applies.</p>
+
+<p><span class="leadin">Sequences of punctuation.</span> One such example is when multiple punctuation marks appear side by side. <a class="figref">fig_text_space_adjacent</a> shows how space can be removed between a fullwidth comma and fullwidth bracket to reduce large blank spaces.  It shouldn't be necessary to use halfwidth characters for this; you should use normal characters and the application should  remove the appropriate amount of space automatically.</p>
+
+<figure id="fig_text_space_adjacent">
+<img src="images/text_space_adjacent.png" alt="">
+<span style="margin-inline:2rem">&nbsp;</span>
+<img src="images/text_space_adjacent_none.png" alt="">
+<figcaption>Space has been removed on the left to make the text more readable.</figcaption>
+</figure>
+
+
+
+<div class="html">
+<p>It is not yet possible to control this in web pages, but the CSS Text spec proposes a way forward using the <code class="kw" translate="no">text-spacing</code> CSS property<sup><a href="https://drafts.csswg.org/css-text-4/#text-spacing-property" target="_blank">§</a></sup>. The relevant property values are:</p>
+<dl>
+<dt>trim-adjacent <span class="instructions">(Not yet supported by browsers.)</span></dt>
+<dd>Collapses spacing between punctuation glyphs. </dd>
+<dt>space-adjacent <span class="instructions">(Not yet supported by browsers.)</span></dt>
+<dd>Keeps the space before fullwidth opening punctuation when not at the start of the line. Keeps the space after fullwidth closing punctuation when not at the end of the line.</dd>
+</dl>
+<p>Eg. the following collapses spaces between punctuation marks:<br>
+<code>text-spacing: trim-adjacent;</code></p>
+</div>
+
+
+
+
+
+<p><span class="leadin">Line-initial punctuation.</span> Similarly, space may be removed from punctuation at the start or the end of a line. If we use a bracket as an example, the ink of the bracket should be flush with the line start when that bracket occurs inside a paragraph. Where paragraphs are separated by a blank line, the bracket at the start of the first line should also be flush with the left edge of the text.</p>
+<p>It is common, however, to have no blank line before a Japanese paragraph, but instead  indent the paragraph's first line. Usually this indent is the width of one fullwidth character. If the line begins with a punctuation such as a bracket, the empty space that usually precedes a fullwidth bracket is still dropped, but the line is set so that the glyph hangs into the indent (which, visually, looks like it is preceded by a half-width space). <a class="figref">fig_text_space_para</a> shows examples of this.</p>
+
+<figure id="fig_text_space_para">
+<img src="images/text_space_para.jpg" alt="">
+<figcaption>Space is removed from a bracket at the start of a line, but not at the beginning of a paragraph. (<a href="https://github.com/w3c/csswg-drafts/issues/2462">source</a>)</figcaption>
+</figure>
+<div class="html">
+<p>It is not yet possible to achieve this in web pages, but the CSS Text spec proposes a way forward using the <code class="kw" translate="no">text-spacing</code> CSS property<sup><a href="https://drafts.csswg.org/css-text-4/#text-spacing-property" target="_blank">§</a></sup>.</p>
+
+<p>A typical way of setting styling for indented paragraphs would therefore include something like this</p>
+
+<pre>p {
+  margin: 0;
+  text-indent: 1em;
+  text-spacing: trim-start;
+  hanging-punctuation: first;
+  }</pre>
+
+<p>The relevant property values are:</p>
+
+<dl>
+<dt>text-space: trim-start <span class="instructions">(Not yet supported by browsers.)</span></dt>
+<dd>Sets fullwidth opening punctuation flush (ie. removes the leading space from fullwidth glyphs) at the start of each line.</dd>
+<dt>text-space: space-start <span class="instructions">(Not yet supported by browsers.)</span></dt>
+<dd>Keeps the space before all  fullwidth opening punctuation at the beginning of every line (ie. full-width glyphs).</dd>
+<dt>text-indent: 1em</dt>
+<dd>Indents the first line of a paragraph by 1 character space.</dd>
+<dt>hanging-punctuation: first <span class="instructions">(Not yet supported by browsers.)</span></dt>
+<dd>An opening bracket or quote at the start of the first formatted line of an element hangs. This applies to all characters in the Unicode categories Ps, Pf, Pi plus the ASCII quote marks <span class="codepoint" translate="no"><bdi lang="en">&#x0027;</bdi> [<span class="uname">U+0027 APOSTROPHE</span>]</span> and <span class="codepoint" translate="no"><bdi lang="en">&#x0022;</bdi> [<span class="uname">U+0022 QUOTATION MARK</span>]</span>. </dd>
+</dl>
+
+<p>In some cases, the paragraph-start line indentation has been achieved by adding a fullwidth bracket at the start of the paragraph (rather than indentation), while removing the leading space from other brackets in the paragraph. Indentations for lines that don't begin with a bracket-like punctuation will typically use an ideographic space character rather than styling to create the indent (because line indentation doesn't behave differently depending on whether a line starts with a bracket). This approach is not recommended, because it impedes the ability of authors to change behaviour simply through changing the styling, but to provide a workaround for legacy text in this situation, CSS proposes another value:</p>
+
+<dl>
+<dt>space-first <span class="instructions">(Not yet supported by browsers, and not recommended for normal use.)</span></dt>
+<dd>Behaves as <code class="kw" translate="no">space-start</code> on the first line the block container and each line after a forced line break but as <code class="kw" translate="no">trim-start</code> on all other lines.</dd>
+</dl>
+</div>
+
+
+
+
+
+<p><span class="leadin">Line-final punctuation.</span> It is often useful to remove trailing space from a fullwidth punctuation glyph if it allows that character to fit at the end of a line (rather than wrapping it to the next line).</p>
+<div class="html">
+<p>Again, it is not yet possible to achieve this in web pages, but the CSS Text spec proposes a way forward using the <code class="kw" translate="no">text-spacing</code> CSS property<sup><a href="https://drafts.csswg.org/css-text-4/#text-spacing-property" target="_blank">§</a></sup>. The relevant property values are:</p>
+<dl>
+<dt>allow-end <span class="instructions">(Not yet supported by browsers.)</span></dt>
+<dd>Removes trailing space from fullwidth closing punctuation at the end of each line if it does not otherwise fit prior to justification; otherwise set the punctuation with full-width glyphs. .</dd>
+<dt>trim-end <span class="instructions">(Not yet supported by browsers.)</span></dt>
+<dd>Removes trailing space from fullwidth closing punctuation at the end of every line.</dd>
+<dt>space-end <span class="instructions">(Not yet supported by browsers.)</span></dt>
+<dd>Keeps the space after all  fullwidth closing punctuation at the end of every line (ie. full-width glyphs).</dd>
+</dl>
+</div>
+
 </section>
 </section>
 
