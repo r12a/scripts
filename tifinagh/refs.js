@@ -2,6 +2,16 @@ window.langSet = true
 
 reflist = {
 
+"pa": {
+"authors": "Patrick Andries",
+"title":"Proposal to add the Tifinagh Script",
+"publisher":"ISO/IEC JTC 1/SC 2/ WG 2",
+"date": "2004",
+"url":"http://std.dkuug.dk/jtc1/sc2/wg2/docs/n2739.pdf",
+"lang": new Set(['zgh']),
+"reviewed":false
+},
+
 "ae": {
 "authors": "Paul Anderson",
 "title":"Evolution of the Tifinagh script in Unicode",
