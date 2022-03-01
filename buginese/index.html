@@ -56,7 +56,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->20 December, 2021<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->1 March, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -250,13 +250,15 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 <div id="showTranscriptions">
-<div>Character lists show:</div>
+<details>
+<summary>Items to show in lists</summary>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
 <div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
 <div>
 <label>Transliterate 
 <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
+</details>
 </div>
 
 
@@ -450,110 +452,12 @@ alveolar</th>
 <section id="vowels">
 <h2>Vowels</h2>
 
-<p class="instructions">Click on the characters in the lists for detailed information. For a mapping of sounds to graphemes see <a class="secref">vowel_mappings</a>.</p>
-
-
-
-<section id="inherent">
-<h3>Inherent vowel</h3>
-<p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
-<p><span class="ipa">a</span> following a consonant is not written, but is seen as an inherent part of the consonant letter, so <span class="ipa">ka</span> is written by simply using the consonant letter <span class="codepoint noindex" translate="no"><span lang="bug">&#x1A00;</span> [<a href="/scripts/buginese/block#char1A00"><span class="uname">U+1A00 BUGINESE LETTER KA</span></a>]</span>.</p>
-</section>
-
-
-
-
-
-<section id="vowelsigns">
-<h3>Vowel signs</h3>
-<p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
-
-<p>Non-inherent  vowel sounds that follow a consonant  can be represented using <span class="name">vowel-signs</span>, eg. <span class="ipa">ki</span> is written <span class="codepoint noindex" translate="no"><span lang="bug">&#x1A00;&#x1A17;</span> [<a href="/scripts/buginese/block#char1A00"><span class="uname">U+1A00 BUGINESE LETTER KA</span></a> + <a href="/scripts/buginese/block#char1A17"><span class="uname">U+1A17 BUGINESE VOWEL SIGN I</span></a>]</span>.</p>
-<p>An orthography that uses vowel-signs is different from one that uses simple diacritics or letters for vowels in that the vowel-signs are generally attached to the <em>syllable</em>, rather than  just applied to the letter of the immediately preceding consonant. This means that pre-base vowel-signs and the left glyph of circumgraphs appear before a whole consonant cluster if the cluster is rendered as a conjunct (see <a class="secref">prescript_vowels</a>).</p>
-
-<p>Buginese vowel-signs are all combining characters. A single character is used per base consonant. All vowel-signs are typed and stored after the base consonant, whether or not they precede it when displayed. The font takes care of the glyph positioning.</p>
-<p>Two of the vowel-signs are <em>spacing</em> marks, meaning that they consume horizontal space when added to a base consonant.</p>
-</section>
-
-
-
-
-
-
-<section id="combiningvowels">
-<h3>Combining marks used for vowels</h3>
-
-<p>Buginese uses the following dedicated combining marks for vowels.  They may be used on their own, or in combination with others (see <a class="secref">composite_vowels</a>).</p>
-
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨗ␣ᨘ␣ᨙ␣ᨚ␣ᨛ</figure>
-</section>
-
-
-
-
-
-
-<section id="prescript_vowels">
-<h3>Prescript vowel-sign</h3>
-
-<figure class="characterBox auto small" data-cols="ipa,trans,transc">ᨙ</figure>
-
-<p>One vowel-sign appears to the left of the base consonant letter or cluster, eg. <span class="charExample inline" translate="no"><span class="ex" lang="bug">ᨀᨙ</span> <span class="trans">ke</span></span>.</p>
-<p>This is a  combining mark that is always stored after the base consonant. The font places the glyph before the base consonant.</p>
-
-<figure id="fig_prebase">
-<img src="images/prebase.png" alt="ᨕᨔᨙ" data-notes="62px noto sans buginese" class="ex" lang="bug">
-<figcaption>The pre-base <span class="transc">e</span> vowel-sign appears to the left of the base character after which it is pronounced in the word <span class="eg inline transc" lang="bug">ᨕᨔᨙ</span>.</figcaption>
-</figure>
-
-<p>Because a vowel-sign is associated with a syllable, rather than the immediately preceding consonant, the vowel-sign doesn't need to split letters that represent pre-nasalised consonants (see <a class="secref">clusters</a>), eg. <span class="charExample" translate="no"><span class="ex" lang="bug">ᨋᨙ</span> <span class="transc">nre</span></span>
-</p>
-</section>
-
-
-
-
- 
-   
- 
-<section id="independentvowels">
-<h3>Standalone vowels</h3>
-<p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
-
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨕᨗ␣ᨕᨘ␣ᨕᨙ␣ᨕᨚ␣ᨕᨛ␣ᨕ</figure>
-
-<p>Buginese uses <span class="codepoint"><span lang="bug">&#x1A15;</span> <a href="/scripts/buginese/block#char1A15">[<span class="uname">U+1A15 BUGINESE LETTER A</span>]</a></span> to represent the sound <span class="trans">a</span>  when there is no preceding consonant.</p>
-<p>Other syllable-initial vowel sounds are written using the same character with vowel-signs attached.</p>
-
-<figure id="fig_standalone">
-<img src="images/ənəng.png" alt="ᨕᨛᨊᨛ">
-<figcaption>The word <span class="transc">ənəng</span> <span class="meaning">six</span> begins with <span class="uname">BUGINESE LETTER A</span> supporting a standalone <span class="ipa">ə</span> vowel.</figcaption>
-</figure>
-</section>
-
-     
-         
-             
-<section id="novowel">
-<h3>Vowel absence</h3>
-<p>Other than the characters representing consonant clusters mentioned in the section <a class="secref">clusters</a>, Buginese has no way to indicate missing vowels between consonants or at the end of a word.</p>
-</section>
-
-
-
-
-
-
 
 <section id="vowel_mappings">
 <h3>Vowel sounds mapped to characters</h3>
 
-<p class="instructions">This section maps Buginese vowel sounds to common graphemes, grouped by dependant ( <mark>d</mark> ), or standalone ( <mark>s</mark> ) types. Click on the character names to see examples.</p>
+<p class="instructions">This section maps Bugis vowel sounds to common graphemes in the Buginese orthography, grouped by dependant ( <mark>d</mark> ), or standalone ( <mark>s</mark> ) types. Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
 
-
-
-<section id="plain_vowel_map">
-<h4>Plain vowels</h4>
 
 <div id="mapv_high" class="map">
 <div class="mapItem">
@@ -654,6 +558,94 @@ alveolar</th>
 </div>
 </div>
 </section>
+
+
+
+
+
+<section id="inherent">
+<h3>Inherent vowel</h3>
+<p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
+<p><span class="ipa">a</span> following a consonant is not written, but is seen as an inherent part of the consonant letter, so <span class="ipa">ka</span> is written by simply using the consonant letter <span class="codepoint noindex" translate="no"><span lang="bug">&#x1A00;</span> [<a href="/scripts/buginese/block#char1A00"><span class="uname">U+1A00 BUGINESE LETTER KA</span></a>]</span>.</p>
+</section>
+
+
+
+
+
+<section id="vowelsigns">
+<h3>Vowel signs</h3>
+<p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
+
+<p>Non-inherent  vowel sounds that follow a consonant  can be represented using <span class="name">vowel-signs</span>, eg. <span class="ipa">ki</span> is written <span class="codepoint noindex" translate="no"><span lang="bug">&#x1A00;&#x1A17;</span> [<a href="/scripts/buginese/block#char1A00"><span class="uname">U+1A00 BUGINESE LETTER KA</span></a> + <a href="/scripts/buginese/block#char1A17"><span class="uname">U+1A17 BUGINESE VOWEL SIGN I</span></a>]</span>.</p>
+<p>An orthography that uses vowel-signs is different from one that uses simple diacritics or letters for vowels in that the vowel-signs are generally attached to the <em>syllable</em>, rather than  just applied to the letter of the immediately preceding consonant. This means that pre-base vowel-signs and the left glyph of circumgraphs appear before a whole consonant cluster if the cluster is rendered as a conjunct (see <a class="secref">prescript_vowels</a>).</p>
+
+<p>Buginese vowel-signs are all combining characters. A single character is used per base consonant. All vowel-signs are typed and stored after the base consonant, whether or not they precede it when displayed. The font takes care of the glyph positioning.</p>
+<p>Two of the vowel-signs are <em>spacing</em> marks, meaning that they consume horizontal space when added to a base consonant.</p>
+</section>
+
+
+
+
+
+
+<section id="combiningvowels">
+<h3>Combining marks used for vowels</h3>
+
+<p>Buginese uses the following dedicated combining marks for vowels.  They may be used on their own, or in combination with others (see <a class="secref">composite_vowels</a>).</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨗ␣ᨘ␣ᨙ␣ᨚ␣ᨛ</figure>
+</section>
+
+
+
+
+
+
+<section id="prescript_vowels">
+<h3>Prescript vowel-sign</h3>
+
+<figure class="characterBox auto small" data-cols="ipa,trans,transc">ᨙ</figure>
+
+<p>One vowel-sign appears to the left of the base consonant letter or cluster, eg. <span class="charExample inline" translate="no"><span class="ex" lang="bug">ᨀᨙ</span> <span class="trans">ke</span></span>.</p>
+<p>This is a  combining mark that is always stored after the base consonant. The font places the glyph before the base consonant.</p>
+
+<figure id="fig_prebase">
+<img src="images/prebase.png" alt="ᨕᨔᨙ" data-notes="62px noto sans buginese" class="ex" lang="bug">
+<figcaption>The pre-base <span class="transc">e</span> vowel-sign appears to the left of the base character after which it is pronounced in the word <span class="eg inline transc" lang="bug">ᨕᨔᨙ</span>.</figcaption>
+</figure>
+
+<p>Because a vowel-sign is associated with a syllable, rather than the immediately preceding consonant, the vowel-sign doesn't need to split letters that represent pre-nasalised consonants (see <a class="secref">clusters</a>), eg. <span class="charExample" translate="no"><span class="ex" lang="bug">ᨋᨙ</span> <span class="transc">nre</span></span>
+</p>
+</section>
+
+
+
+
+ 
+   
+ 
+<section id="independentvowels">
+<h3>Standalone vowels</h3>
+<p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨕᨗ␣ᨕᨘ␣ᨕᨙ␣ᨕᨚ␣ᨕᨛ␣ᨕ</figure>
+
+<p>Buginese uses <span class="codepoint"><span lang="bug">&#x1A15;</span> <a href="/scripts/buginese/block#char1A15">[<span class="uname">U+1A15 BUGINESE LETTER A</span>]</a></span> to represent the sound <span class="trans">a</span>  when there is no preceding consonant.</p>
+<p>Other syllable-initial vowel sounds are written using the same character with vowel-signs attached.</p>
+
+<figure id="fig_standalone">
+<img src="images/ənəng.png" alt="ᨕᨛᨊᨛ">
+<figcaption>The word <span class="transc">ənəng</span> <span class="meaning">six</span> begins with <span class="uname">BUGINESE LETTER A</span> supporting a standalone <span class="ipa">ə</span> vowel.</figcaption>
+</figure>
+</section>
+
+     
+         
+             
+<section id="novowel">
+<h3>Vowel absence</h3>
+<p>Other than the characters representing consonant clusters mentioned in the section <a class="secref">clusters</a>, Buginese has no way to indicate missing vowels between consonants or at the end of a word.</p>
 </section>
 </section> 
 
@@ -666,92 +658,17 @@ alveolar</th>
 <h2>Consonants</h2>
 
 
-<p class="instructions">Click on the characters in the lists for detailed information. For a mapping of sounds to graphemes see <a class="secref">consonant_mappings</a>.</p>
-
-
-
-
-<section id="basicconsonants">
-<h3>Consonant character list</h3>
-
-<section id="stops">
-<h4>Stops &amp; affricates</h4>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨄ␣ᨅ␣ᨈ␣ᨉ␣ᨌ␣ᨍ␣ᨀ␣ᨁ</figure>
-</section>
-
-
-
-<section id="fricatives">
-<h4>Fricatives</h4>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨔ␣ᨖ</figure>
-</section>
-
-
-<section id="nasals">
-<h4>Nasals</h4>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨆ␣ᨊ␣ᨎ␣ᨂ</figure>
-</section>
-
-
-<section id="sonorants">
-<h4>Other sonorants</h4>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨓ␣ᨑ␣ᨒ␣ᨐ</figure>
-</section>
-
-<p><span class="codepoint"><span lang="bug">&#x1A16;</span> <a href="/scripts/buginese/block#char1A16">[<span class="uname">U+1A16 BUGINESE LETTER HA</span>]</a></span> was   introduced to represent an Arabic sound.</p>
-</section>
-  
-  
-  
-  
-  
-<section id="geminated">
-<h3>Geminated consonants</h3>
-    
-<p>Similarly, geminated consonants sounds (which are distinctive and frequent in Buginese) are not written, eg. the following sequence can be read as <span class="charExample inline"><span class="transc">lapa</span> <span class="meaning">lava</span></span> or <span class="charExample inline"><span class="transc">lappa</span> <span class="meaning">joint</span></span>
-<span class="charExample"><span class="charExample" translate="no"><span class="ex" lang="bug">ᨒᨄ</span> <span class="trans">lp</span></span></span></p>
-  <p>These omissions can lead to ambiguities in the written text that are exploited for Buginese word games.</p>
-</section>
-  
-  
-  
-  
-<section id="clusters">
-<h3>Pre-nasalised consonants &amp; consonant clusters</h3>
-
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨇ␣ᨏ␣ᨃ␣ᨋ␣</figure>
-
-<p>Four characters are used to represent pre-nasalised consonant clusters in Buginese (but not Makassarese).</p>
-<p>Otherwise, Buginese doesn't mark clusters.<tt>u</tt> There is no virama equivalent.</p>
-</section>
-  
-  
-  
-  
-  
-<section id="finals">
-<h3>Syllable-final consonants</h3>
-    
-<p>Syllable-final consonant sounds (normally <span class="ipa">ʔ</span> and <span class="ipa">ŋ</span>) are not written, eg. the final consonant sound is not written at the end of
-<span class="eg" lang="bug">ᨕᨙᨔᨙᨊᨙ</span>
-</p>
-</section>
-
-
-
-
-
-
-
 <section id="consonant_mappings">
 <h3>Consonant sounds to characters</h3>
 
-<p class="instructions">This section maps Buginese consonant sounds to common graphemes. Click on the character names to see examples.</p>
+<p class="instructions">This section maps Bugis consonant sounds to common graphemes in the Buginese orthography. Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
 
 
-<section id="map_initials">
-<h4>Initials</h4>
 
+
+
+<section id="stops">
+<h4>Stops</h4>
 <div id="map_plosives" class="map">
 <div class="mapItem">
 <div class="phone"><span class="ipa">p</span></div>
@@ -817,11 +734,13 @@ alveolar</th>
 </div>
 </div>
 </div>
+</section>
 
 
 
 
-
+<section id="affricates">
+<h4>Affricates</h4>
 <div id="map_affricates" class="map">
 <div class="mapItem">
 <div class="phone"><span class="ipa">c</span></div>
@@ -845,10 +764,14 @@ alveolar</th>
 </div>
 </div>
 </div>
+</section>
 
 
 
 
+
+<section id="fricatives">
+<h4>Fricatives</h4>
 <div id="map_fricatives" class="map">
 <div class="mapItem">
 <div class="phone"><span class="ipa">s</span></div>
@@ -865,11 +788,13 @@ alveolar</th>
 </div>
 </div>
 </div>
+</section>
 
 
 
 
-
+<section id="nasals">
+<h4>Nasals</h4>
 <div id="map_nasals" class="map">
 <div class="mapItem">
 <div class="phone"><span class="ipa">m</span></div>
@@ -901,11 +826,13 @@ alveolar</th>
 </div>
 </div>
 </div>
+</section>
 
 
 
 
-
+<section id="sonorants">
+<h4>Other</h4>
 <div id="map_other" class="map">
 <div class="mapItem">
 <div class="phone"><span class="ipa">w</span></div>
@@ -944,6 +871,58 @@ alveolar</th>
 </div>
 </div>
 </section>
+</section>
+
+
+
+<section id="basicconsonants">
+<h3>Consonant character list</h3>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨄ␣ᨅ␣ᨈ␣ᨉ␣ᨌ␣ᨍ␣ᨀ␣ᨁ</figure>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨔ␣ᨖ</figure>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨆ␣ᨊ␣ᨎ␣ᨂ</figure>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨓ␣ᨑ␣ᨒ␣ᨐ</figure>
+
+<p><span class="codepoint"><span lang="bug">&#x1A16;</span> <a href="/scripts/buginese/block#char1A16">[<span class="uname">U+1A16 BUGINESE LETTER HA</span>]</a></span> was   introduced to represent an Arabic sound.</p>
+</section>
+  
+  
+  
+  
+  
+<section id="geminated">
+<h3>Geminated consonants</h3>
+    
+<p>Similarly, geminated consonants sounds (which are distinctive and frequent in Buginese) are not written, eg. the following sequence can be read as <span class="charExample inline"><span class="transc">lapa</span> <span class="meaning">lava</span></span> or <span class="charExample inline"><span class="transc">lappa</span> <span class="meaning">joint</span></span>
+<span class="charExample"><span class="charExample" translate="no"><span class="ex" lang="bug">ᨒᨄ</span> <span class="trans">lp</span></span></span></p>
+  <p>These omissions can lead to ambiguities in the written text that are exploited for Buginese word games.</p>
+</section>
+  
+  
+  
+  
+<section id="clusters">
+<h3>Pre-nasalised consonants &amp; consonant clusters</h3>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ᨇ␣ᨏ␣ᨃ␣ᨋ␣</figure>
+
+<p>Four characters are used to represent pre-nasalised consonant clusters in Buginese (but not Makassarese).</p>
+<p>Otherwise, Buginese doesn't mark clusters.<tt>u</tt> There is no virama equivalent.</p>
+</section>
+  
+  
+  
+  
+  
+<section id="finals">
+<h3>Syllable-final consonants</h3>
+    
+<p>Syllable-final consonant sounds (normally <span class="ipa">ʔ</span> and <span class="ipa">ŋ</span>) are not written, eg. the final consonant sound is not written at the end of
+<span class="eg" lang="bug">ᨕᨙᨔᨙᨊᨙ</span>
+</p>
 </section>
 </section>
   
