@@ -56,7 +56,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->21 January, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->1 March, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -293,13 +293,15 @@
 
 
 <div id="showTranscriptions">
-<div>Character lists show:</div>
+<details>
+<summary>Items to show in lists</summary>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
 <div><label>ISO 15919 <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div>
 <div>
 <label>Transliteration 
 <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
+</details>
 </div>
 
 
@@ -629,197 +631,10 @@ alveolar</th>
 <section id="vowels">
 <h2>Vowels</h2>
 
-<p class="instructions">Click on the characters in the lists for detailed information. For a mapping of sounds to graphemes see <a class="secref">vowel_mappings</a>.</p>
-
-
-
-
-
-<section id="inherentvowel">
-<h3>Inherent vowel</h3>
-
-<p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
-<p><span class="ipa">a</span> following a consonant is not written, but is seen as an inherent part of the consonant letter, so <span class="ipa">ka</span> is written by simply using the consonant letter <span class="codepoint noindex" translate="no"><span lang="ta">&#x0B95;</span> [<a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a>]</span>.</p>
-<p class="note">Daniels<tt>d</tt> describes the inherent vowel  as <span class="ipa">ʌ</span>, though not consistently.</p>
-</section>
-
-
-
-<section id="vowelsigns">
-<h3>Vowel-signs</h3>
-<p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
-
-<p>Non-inherent  vowel sounds that follow a consonant  are  represented using <span class="name">vowel-signs</span>, eg. <span class="ipa">kiː</span> is written <span class="codepoint noindex" translate="no"><span lang="ta">&#x0B95;&#x0BC0;</span> [<a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a> + <a href="/scripts/tamil/block#char0BC0"><span class="uname">U+0BC0 TAMIL VOWEL SIGN II</span></a>]</span>.</p>
-<p>An orthography that uses vowel-signs is different from one that uses simple diacritics or letters for vowels, in that the vowel-signs are generally attached to the syllable, rather than  just applied to the letter of the immediately preceding consonant. This means that pre-base vowel-signs and the left glyph of circumgraphs appears before a whole consonant cluster if it is rendered as a conjunct (see <a class="secref">prescript_vowels</a>).</p>
-<p>Tamil vowel-signs are all combining characters. In principle a single Unicode character is used per base consonant, even if the vowel-signs appear on both sides of the base consonant (however see also <a class="secref">circumgraphs</a> for decomposed forms). All vowel-signs are typed and stored after the base consonant, and the glyph rendering system takes care of the positioning at display time.</p>
-<p>All but one vowel-signs are <em>spacing</em> combining characters, ie. they expand the text width when applied to a consonant.</p>
-</section>
-
-
-
-
-
-
-<section id="combiningvowels">
-<h3>Combining marks used for vowels</h3>
-
-<p>Tamil uses the following dedicated combining marks for vowels.</p>
-
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ி␣ீ␣ு␣ூ␣ெ␣ே␣ொ␣ோ␣ ␣ை␣ௌ</figure>
-<p>The <span class="trans">u</span> and <span class="trans">ū</span> vowel-signs, and to some extent the <span class="trans">i</span> and <span class="trans">ī</span> signs, tend to form ligatures with the base consonant. See <a class="sectionref">vowelligation</a>.</p>
-</section>
-
-
-
-
-
-<section id="prescript_vowels">
-<h3>Pre-base vowel-signs</h3>
-<figure class="characterBox auto small" data-cols="ipa,trans,transc">ெ␣ே␣ை</figure>
-<p>Three vowel-signs appear to the left of the base consonant letter or conjunct, eg. <span class="eg" lang="ta">கெடு</span></p>
-<p>These are combining marks that are always stored after the base consonant. The font places the glyph before the base consonant.</p>
-<p>Because modern Tamil usually indicates consonant clusters with a visible virama, pre-base vowel-signs normally appear before the consonant that immediately precedes them audially, eg.
-<span class="eg" lang="ta">எங்கே</span>
-</p>
-<p>However, in versions of the orthography that include conjunct forms the pre-base vowel appears before the whole consonant cluster at the beginning of the orthographic syllable.</p>
-</section>
-
-
-
-
-
-
-<section id="circumgraphs">
-<h3>Circumgraphs</h3>
-<p id="def-circumgraph" class="explanatoryintro definitionStub"></p>
-
-<figure class="characterBox auto small" data-cols="ipa,trans,transc">ொ␣ோ␣ௌ</figure>
-<p>Three vowels  are produced by a single combining character with visually separate parts, that appear on  opposite sides of the consonant onset eg.   <span class="eg" lang="ta">கொடு</span></p>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section id="compositeVowels">
-<h3>Composite vowels</h3>
-<p id="def-compositevowel" class="explanatoryintro definitionStub"></p>
-
-<p>Composite vowels only occur in Tamil when the circumgraphs listed above are decomposed.</p>
-
-
-
-
-
-
-<details>
-<summary class="instructions" style="margin-block-start: 3em;margin-block-end: 4em;">Show details about vowel glyph positioning.</summary>
-
-<p>The following list summarises where vowel-signs are positioned around a base consonant to produce vowels, and how many instances of that pattern there are.</p>
-<ul>
-<li>3 prescript, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">கெ</span> <span class="trans">ke</span></span></li>
-<li>4 postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">கூ</span> <span class="trans">kū</span></span></li>
-<li>1 superscript, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">கீ</span> <span class="trans">kī</span></span></li>
-<li>3 pre+postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">கௌ</span> <span class="trans">kʌʷ</span></span></li>
-</ul>
-<p>However, some of the vowel signs are tightly integrated with the consonant shape. See <a class="secref">vowelligation</a>.</p>
-</details>
-</section>
-
-
-
-
-
-
-<section id="independentvowel">
-<h3>Standalone vowels</h3>
-<p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
-
-<p>Tamil represents syllable-initial vowels using a set of independent vowel letters.</p>
-
-<figure class="characterBox auto" data-cols="ipa,trans,transc">இ␣ஈ␣உ␣ஊ␣எ␣ஏ␣ஒ␣ஓ␣அ␣ஆ␣ ␣ஐ␣ஔ</figure>
-
-
-<p>Independent vowel forms used to be used at the beginning of metrical groups, but now they are used at the beginning of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">இந்த</span> <span class="trans">ịṅt</span> <span class="transc">inta</span> <span class="meaning">this</span></span></p>
-<p>They are also used  internally to represent 'overlong' vowel sounds, eg. compare <span class="charExample" translate="no"><span class="ex" lang="ta">பெரீய</span> <span class="trans">peɾīy</span> <span class="transc">perīya</span> <span class="meaning">really big</span></span><span class="charExample" translate="no"><span class="ex" lang="ta">பெரீஇஇய</span> <span class="trans">peɾīịịy</span> <span class="transc">perīiiya</span> <span class="meaning">reeeeally big</span></span></p>
-</section>
-
- 
-
-
-
-    
-    
-<section id="vowelligation">
-<h3>Vowel ligatures</h3>
-<p>Vowel-signs for   <span class="ipa">u</span> and <span class="ipa">uː</span>, and to some extent  <span class="ipa">i</span> and <span class="ipa">i:</span>, produce significantly different, ligated shapes as they combine with the base consonant. The figure below shows the various alternative shapes produced by   <span class="codepoint" translate="no"><span lang="ta">&#x0BC1;</span> [<a href="/scripts/tamil/block#char0BC1"><span class="uname">U+0BC1 TAMIL VOWEL SIGN U</span></a>]</span> when combined with  different base characters.</p>
-	<figure id="consvowellig">
-			  <table>
-			    <tbody>
-			      <tr>
-			        <th>Base consonant</th>
-			        <th>Combination</th>
-                </tr>
-		          <tr>
-			          <td><span class="ex" lang="ta">க</span></td>
-			          <td><span class="ex" lang="ta">கு</span></td>
-                </tr>
-		          <tr>
-			            <td><span class="ex" lang="ta">ச</span></td>
-			            <td><span class="ex" lang="ta">சு</span></td>
-                </tr>
-	              <tr>
-			              <td><span class="ex" lang="ta">ஞ</span></td>
-			              <td><span class="ex" lang="ta">ஞு</span></td>
-                </tr>
-	              <tr>
-			                <td><span class="ex" lang="ta">ட</span></td>
-			                <td><span class="ex" lang="ta">டு</span></td>
-                </tr>
-                  <tr>
-			                  <td><span class="ex" lang="ta">ஜ</span></td>
-			                  <td><span class="ex" lang="ta">ஜு</span></td>
-                </tr>
-                </tbody>
-		      </table>
-			  <figcaption>Ligatures with  <span class="codepoint" translate="no"><span lang="ta">&#x0BC1;</span> [<a href="/scripts/tamil/block#char0BC1"><span class="uname">U+0BC1 TAMIL VOWEL SIGN U</span></a>]</span>.</figcaption>
-  </figure>
-	  <p>Besides these significant transformations, special shaping is used to ensure a clean join between the consonant and vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">லி</span> <span class="transc">li</span></span>In the following sequence  the vowel-sign is stretched slightly to fit the shape of the consonant.<span class="charExample" translate="no"><span class="ex" lang="ta">ஷி</span> <span class="transc">ʂi</span></span></p>
-<p>A reform in 1978 by the Tamil Nadu government changed the shapes and relative positions of certain consonant+vowel-sign combinations in India, though not necessarily in other locations. See <a class="secref">variants</a> for a list of shape differences.</p>
-<p><a href="../apps/vowel_signs/?preset=taml" target="_blank">Show a table of all consonant+vowel combinations.</a></p>
-</section>
-
-
-
-<section id="suppression">
-<h3>Consonants with no following vowel</h3>
-
-<figure class="characterBox auto" data-cols="">்</figure>
-
-<p>Tamil uses  <span class="codepoint" translate="no"><span lang="ta">&#x0BCD;</span> [<a href="/scripts/tamil/block#char0BCD"><span class="uname">U+0BCD TAMIL SIGN VIRAMA</span></a>]</span> (called <span class="name">puḷḷi</span> in Tamil) to kill the inherent vowel after a consonant, eg.<span class="codepoint noindex" translate="no"><span lang="ta"> &#x0B95;&#x0BCD;</span> [<a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a> + <a href="/scripts/tamil/block#char0BCD"><span class="uname">U+0BCD TAMIL SIGN VIRAMA</span></a>]</span> explicitly represents just the sound <span class="ipa">k</span>.</p>
-<p>The <span class="name">puḷḷi</span> may be rendered as a dot, or as a small, open circle.</p>
-<p>The <span class="name">puḷḷi</span> tends to be visible anywhere a vowel is dropped. For example, unlike Devanagari, it is used at the end of a word if there is no final vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">மனிதப்</span> <span class="trans">mnitp</span> <span class="ipa">mənid̪əp</span> <span class="meaning">human</span></span></p>
-<p>The <span class="name">puḷḷi</span> is also used to form conjuncts, although there are normally only 2 of those in modern Tamil (see <a class="secref">conjuncts</a>).</p>
-
-<p class="btw"><span class="codepoint" translate="no"><span lang="ta">&#x0B82;</span> [<a href="/scripts/tamil/block#char0B82"><span class="uname">U+0B82 TAMIL SIGN ANUSVARA</span></a>]</span> is not used for Tamil. Nor should it be used as a graphical variant of the <span class="name">pulli</span>.<tt>s</tt></p>
-</section>
-
-
-
-
-
-
 <section id="vowel_mappings">
 <h3>Vowel to script mapping</h3>
-<p class="instructions">This section maps Tamil vowel sounds to common graphemes, grouped according to whether they are dependent ( <mark>d</mark> ) or standalone ( <mark>s</mark><mark></mark> ) forms.. Click on the character names to see examples.</p>
+
+<p class="instructions">This section maps Tamil vowel sounds to common graphemes in the Tamil orthography, grouped according to whether they are dependent ( <mark>d</mark> ) or standalone ( <mark>s</mark><mark></mark> ) forms. Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
 <section id="plain_vowel_map">
 <h4>Plain vowels</h4>
 
@@ -1021,6 +836,186 @@ alveolar</th>
 <p style="font-size: 60%;text-align: end; line-height: 1;">Sources: <a href="https://en.wikipedia.org/wiki/Help:IPA/Tamil">Wikipedia</a>, <a  href="http://anunaadam.appspot.com/">Anunaadam</a>, and Google Translate.</p>
 </section>
 </section>
+
+
+
+
+<section id="inherentvowel">
+<h3>Inherent vowel</h3>
+
+<p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
+<p><span class="ipa">a</span> following a consonant is not written, but is seen as an inherent part of the consonant letter, so <span class="ipa">ka</span> is written by simply using the consonant letter <span class="codepoint noindex" translate="no"><span lang="ta">&#x0B95;</span> [<a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a>]</span>.</p>
+<p class="note">Daniels<tt>d</tt> describes the inherent vowel  as <span class="ipa">ʌ</span>, though not consistently.</p>
+</section>
+
+
+
+<section id="vowelsigns">
+<h3>Vowel-signs</h3>
+<p id="def-vowelsign" class="explanatoryintro definitionStub"></p>
+
+<p>Non-inherent  vowel sounds that follow a consonant  are  represented using <span class="name">vowel-signs</span>, eg. <span class="ipa">kiː</span> is written <span class="codepoint noindex" translate="no"><span lang="ta">&#x0B95;&#x0BC0;</span> [<a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a> + <a href="/scripts/tamil/block#char0BC0"><span class="uname">U+0BC0 TAMIL VOWEL SIGN II</span></a>]</span>.</p>
+<p>An orthography that uses vowel-signs is different from one that uses simple diacritics or letters for vowels, in that the vowel-signs are generally attached to the syllable, rather than  just applied to the letter of the immediately preceding consonant. This means that pre-base vowel-signs and the left glyph of circumgraphs appears before a whole consonant cluster if it is rendered as a conjunct (see <a class="secref">prescript_vowels</a>).</p>
+<p>Tamil vowel-signs are all combining characters. In principle a single Unicode character is used per base consonant, even if the vowel-signs appear on both sides of the base consonant (however see also <a class="secref">circumgraphs</a> for decomposed forms). All vowel-signs are typed and stored after the base consonant, and the glyph rendering system takes care of the positioning at display time.</p>
+<p>All but one vowel-signs are <em>spacing</em> combining characters, ie. they expand the text width when applied to a consonant.</p>
+</section>
+
+
+
+
+
+
+<section id="combiningvowels">
+<h3>Combining marks used for vowels</h3>
+
+<p>Tamil uses the following dedicated combining marks for vowels.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ி␣ீ␣ு␣ூ␣ெ␣ே␣ொ␣ோ␣ ␣ை␣ௌ</figure>
+<p>The <span class="trans">u</span> and <span class="trans">ū</span> vowel-signs, and to some extent the <span class="trans">i</span> and <span class="trans">ī</span> signs, tend to form ligatures with the base consonant. See <a class="sectionref">vowelligation</a>.</p>
+</section>
+
+
+
+
+
+<section id="prescript_vowels">
+<h3>Pre-base vowel-signs</h3>
+<figure class="characterBox auto small" data-cols="ipa,trans,transc">ெ␣ே␣ை</figure>
+<p>Three vowel-signs appear to the left of the base consonant letter or conjunct, eg. <span class="eg" lang="ta">கெடு</span></p>
+<p>These are combining marks that are always stored after the base consonant. The font places the glyph before the base consonant.</p>
+<p>Because modern Tamil usually indicates consonant clusters with a visible virama, pre-base vowel-signs normally appear before the consonant that immediately precedes them audially, eg.
+<span class="eg" lang="ta">எங்கே</span>
+</p>
+<p>However, in versions of the orthography that include conjunct forms the pre-base vowel appears before the whole consonant cluster at the beginning of the orthographic syllable.</p>
+</section>
+
+
+
+
+
+
+<section id="circumgraphs">
+<h3>Circumgraphs</h3>
+<p id="def-circumgraph" class="explanatoryintro definitionStub"></p>
+
+<figure class="characterBox auto small" data-cols="ipa,trans,transc">ொ␣ோ␣ௌ</figure>
+<p>Three vowels  are produced by a single combining character with visually separate parts, that appear on  opposite sides of the consonant onset eg.   <span class="eg" lang="ta">கொடு</span></p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="compositeVowels">
+<h3>Composite vowels</h3>
+<p id="def-compositevowel" class="explanatoryintro definitionStub"></p>
+
+<p>Composite vowels only occur in Tamil when the circumgraphs listed above are decomposed.</p>
+
+
+
+
+
+
+<details>
+<summary class="instructions" style="margin-block-start: 3em;margin-block-end: 4em;">Show details about vowel glyph positioning.</summary>
+
+<p>The following list summarises where vowel-signs are positioned around a base consonant to produce vowels, and how many instances of that pattern there are.</p>
+<ul>
+<li>3 prescript, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">கெ</span> <span class="trans">ke</span></span></li>
+<li>4 postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">கூ</span> <span class="trans">kū</span></span></li>
+<li>1 superscript, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">கீ</span> <span class="trans">kī</span></span></li>
+<li>3 pre+postscript, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">கௌ</span> <span class="trans">kʌʷ</span></span></li>
+</ul>
+<p>However, some of the vowel signs are tightly integrated with the consonant shape. See <a class="secref">vowelligation</a>.</p>
+</details>
+</section>
+
+
+
+
+
+
+<section id="independentvowel">
+<h3>Standalone vowels</h3>
+<p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
+
+<p>Tamil represents syllable-initial vowels using a set of independent vowel letters.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans,transc">இ␣ஈ␣உ␣ஊ␣எ␣ஏ␣ஒ␣ஓ␣அ␣ஆ␣ ␣ஐ␣ஔ</figure>
+
+
+<p>Independent vowel forms used to be used at the beginning of metrical groups, but now they are used at the beginning of a word, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">இந்த</span> <span class="trans">ịṅt</span> <span class="transc">inta</span> <span class="meaning">this</span></span></p>
+<p>They are also used  internally to represent 'overlong' vowel sounds, eg. compare <span class="charExample" translate="no"><span class="ex" lang="ta">பெரீய</span> <span class="trans">peɾīy</span> <span class="transc">perīya</span> <span class="meaning">really big</span></span><span class="charExample" translate="no"><span class="ex" lang="ta">பெரீஇஇய</span> <span class="trans">peɾīịịy</span> <span class="transc">perīiiya</span> <span class="meaning">reeeeally big</span></span></p>
+</section>
+
+ 
+
+
+
+    
+    
+<section id="vowelligation">
+<h3>Vowel ligatures</h3>
+<p>Vowel-signs for   <span class="ipa">u</span> and <span class="ipa">uː</span>, and to some extent  <span class="ipa">i</span> and <span class="ipa">i:</span>, produce significantly different, ligated shapes as they combine with the base consonant. The figure below shows the various alternative shapes produced by   <span class="codepoint" translate="no"><span lang="ta">&#x0BC1;</span> [<a href="/scripts/tamil/block#char0BC1"><span class="uname">U+0BC1 TAMIL VOWEL SIGN U</span></a>]</span> when combined with  different base characters.</p>
+	<figure id="consvowellig">
+			  <table>
+			    <tbody>
+			      <tr>
+			        <th>Base consonant</th>
+			        <th>Combination</th>
+                </tr>
+		          <tr>
+			          <td><span class="ex" lang="ta">க</span></td>
+			          <td><span class="ex" lang="ta">கு</span></td>
+                </tr>
+		          <tr>
+			            <td><span class="ex" lang="ta">ச</span></td>
+			            <td><span class="ex" lang="ta">சு</span></td>
+                </tr>
+	              <tr>
+			              <td><span class="ex" lang="ta">ஞ</span></td>
+			              <td><span class="ex" lang="ta">ஞு</span></td>
+                </tr>
+	              <tr>
+			                <td><span class="ex" lang="ta">ட</span></td>
+			                <td><span class="ex" lang="ta">டு</span></td>
+                </tr>
+                  <tr>
+			                  <td><span class="ex" lang="ta">ஜ</span></td>
+			                  <td><span class="ex" lang="ta">ஜு</span></td>
+                </tr>
+                </tbody>
+		      </table>
+			  <figcaption>Ligatures with  <span class="codepoint" translate="no"><span lang="ta">&#x0BC1;</span> [<a href="/scripts/tamil/block#char0BC1"><span class="uname">U+0BC1 TAMIL VOWEL SIGN U</span></a>]</span>.</figcaption>
+  </figure>
+	  <p>Besides these significant transformations, special shaping is used to ensure a clean join between the consonant and vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">லி</span> <span class="transc">li</span></span>In the following sequence  the vowel-sign is stretched slightly to fit the shape of the consonant.<span class="charExample" translate="no"><span class="ex" lang="ta">ஷி</span> <span class="transc">ʂi</span></span></p>
+<p>A reform in 1978 by the Tamil Nadu government changed the shapes and relative positions of certain consonant+vowel-sign combinations in India, though not necessarily in other locations. See <a class="secref">variants</a> for a list of shape differences.</p>
+<p><a href="../apps/vowel_signs/?preset=taml" target="_blank">Show a table of all consonant+vowel combinations.</a></p>
+</section>
+
+
+
+<section id="suppression">
+<h3>Consonants with no following vowel</h3>
+
+<figure class="characterBox auto" data-cols="">்</figure>
+
+<p>Tamil uses  <span class="codepoint" translate="no"><span lang="ta">&#x0BCD;</span> [<a href="/scripts/tamil/block#char0BCD"><span class="uname">U+0BCD TAMIL SIGN VIRAMA</span></a>]</span> (called <span class="name">puḷḷi</span> in Tamil) to kill the inherent vowel after a consonant, eg.<span class="codepoint noindex" translate="no"><span lang="ta"> &#x0B95;&#x0BCD;</span> [<a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a> + <a href="/scripts/tamil/block#char0BCD"><span class="uname">U+0BCD TAMIL SIGN VIRAMA</span></a>]</span> explicitly represents just the sound <span class="ipa">k</span>.</p>
+<p>The <span class="name">puḷḷi</span> may be rendered as a dot, or as a small, open circle.</p>
+<p>The <span class="name">puḷḷi</span> tends to be visible anywhere a vowel is dropped. For example, unlike Devanagari, it is used at the end of a word if there is no final vowel, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">மனிதப்</span> <span class="trans">mnitp</span> <span class="ipa">mənid̪əp</span> <span class="meaning">human</span></span></p>
+<p>The <span class="name">puḷḷi</span> is also used to form conjuncts, although there are normally only 2 of those in modern Tamil (see <a class="secref">conjuncts</a>).</p>
+
+<p class="btw"><span class="codepoint" translate="no"><span lang="ta">&#x0B82;</span> [<a href="/scripts/tamil/block#char0B82"><span class="uname">U+0B82 TAMIL SIGN ANUSVARA</span></a>]</span> is not used for Tamil. Nor should it be used as a graphical variant of the <span class="name">pulli</span>.<tt>s</tt></p>
+</section>
 </section>
 
 
@@ -1032,7 +1027,345 @@ alveolar</th>
 <section id="consonants">
 <h2>Consonants</h2>
 
-<p class="instructions">Click on the characters in the lists for detailed information. For a mapping of sounds to graphemes see <a class="secref">consonant_mappings</a>.</p>
+
+<p class="instructions">This section maps Tamil consonant sounds to common graphemes in the Tamil orthography. Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
+<section id="consonant_mappings">
+<h3>Consonant sounds to characters</h3>
+
+
+
+<section id="stops">
+<h4>Stops</h4>
+<div id="map_plosives" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">p</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BAA;</span> [<a href="/scripts/tamil/block#char0BAA"><span class="uname">U+0BAA TAMIL LETTER PA</span></a>]</span> when:</p>
+<p>initial, eg. <span class="eg" lang="ta">பத்து</span><br>
+geminated, eg. <span class="eg" lang="ta">அப்பன்</span>, <span class="eg" lang="ta">விற்பனை</span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">b</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BAA;</span> [<a href="/scripts/tamil/block#char0BAA"><span class="uname">U+0BAA TAMIL LETTER PA</span></a>]</span> when:<br>
+between vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">ஆபத்து</span> <span class="trans">ạ̄pt͓tu</span> <span class="ipa">ɑːbət̪t̪ʉ</span> <span class="meaning">danger</span></span><br>
+after a nasal, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">அன்பு</span> <span class="trans">ạn͓pu</span> <span class="ipa">ənbʉ</span> <span class="meaning">love</span></span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">t̪</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BA4;</span> [<a href="/scripts/tamil/block#char0BA4"><span class="uname">U+0BA4 TAMIL LETTER TA</span></a>]</span> when:<br>
+initial, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">தனி</span> <span class="trans">tni</span> <span class="ipa">﻿t̪ənɪˑ</span> <span class="meaning">separate</span></span>, <br>
+geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">பத்து</span> <span class="trans">pt͓tu</span> <span class="ipa">pət̪t̪ʉ</span> <span class="meaning">ten</span></span>, or <br>
+after a stop, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">யுக்தி</span> <span class="trans">yuk͓ti</span> <span class="ipa">jʉkt̪ɪˑ</span> <span class="meaning">tactical</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB1;</span> [<a href="/scripts/tamil/block#char0BB1"><span class="uname">U+0BB1 TAMIL LETTER RRA</span></a>]</span> inserted when this letter is geminated after a  nasal, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">பற்றி</span> <span class="trans">pr͓ri</span> <span class="ipa">﻿pət̺t̺ʳɪˑ</span> <span class="meaning">about</span></span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">d̪</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BA4;</span> [<a href="/scripts/tamil/block#char0BA4"><span class="uname">U+0BA4 TAMIL LETTER TA</span></a>]</span> occurs:<br>
+after a nasal, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">பந்து</span> <span class="trans">pṅ͓tu</span> <span class="ipa">﻿pən̪d̪ʉ</span> <span class="meaning">ball</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB1;</span> [<a href="/scripts/tamil/block#char0BB1"><span class="uname">U+0BB1 TAMIL LETTER RRA</span></a>]</span> inserted when this letter follows a nasal, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">ஒன்று</span> <span class="trans">ọn͓ru</span> <span class="ipa">﻿ʷond̺ʳʉ</span> <span class="meaning">one</span></span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʈ</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0B9F;</span> [<a href="/scripts/tamil/block#char0B9F"><span class="uname">U+0B9F TAMIL LETTER TTA</span></a>]</span> when<br>
+geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">பட்டு</span> <span class="trans">pʈ͓ʈu</span> <span class="ipa">pəʈʈʉ</span> <span class="meaning">plush</span></span>.</p>
+<p>Not used initially.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɖ</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0B9F;</span> [<a href="/scripts/tamil/block#char0B9F"><span class="uname">U+0B9F TAMIL LETTER TTA</span></a>]</span> when:<br>
+after a nasal, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">வண்டி</span> <span class="trans">ʋɳ͓ʈi</span> <span class="ipa">﻿ʋəɳɖɪˑ</span> <span class="meaning">carriage</span></span><br>
+between vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">படி</span> <span class="trans">pʈi</span> <span class="ipa">pəɖɪˑ</span> <span class="meaning">step</span></span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">k</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0B95;</span> [<a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a>]</span> when:<br>
+initial, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">கால்</span> <span class="trans">kāl͓</span> <span class="ipa">kɑːl</span> <span class="meaning">call</span></span><br>
+geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">மக்கள்</span> <span class="trans">mk͓kɭ͓</span> <span class="ipa">﻿məkkəɭ</span> <span class="meaning">people</span></span><br>
+in a cluster, eg.
+<span class="charExample" translate="no"><span class="ex" lang="ta">கற்க</span> <span class="trans">kr͓k</span> <span class="ipa">﻿kərkə</span> <span class="meaning">learn</span></span>.</p>
+<p>Also,  the first part of <span class="codepoint" translate="no"><span lang="ta">&#x0B95;&#x0BCD;&#x0BB7;</span> [<a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a> + <a href="/scripts/tamil/block#char0BCD"><span class="uname">U+0BCD TAMIL SIGN VIRAMA</span></a> + <a href="/scripts/tamil/block#char0BB7"><span class="uname">U+0BB7 TAMIL LETTER SSA</span></a>]</span>. <span class="ipa">kʂ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">காமாக்ஷி</span> <span class="trans">kāmāk͓ʂi</span> <span class="ipa">﻿kɑːmɑːkʂɪˑ</span> <span class="meaning">Kamakshi</span></span>.</p>
+<p>And  part of <span class="codepoint" translate="no"><span lang="ta">&#x0B83;&#x0BB8;</span> [<a href="/scripts/tamil/block#char0B83"><span class="uname">U+0B83 TAMIL SIGN VISARGA</span></a> + <a href="/scripts/tamil/block#char0BB8"><span class="uname">U+0BB8 TAMIL LETTER SA</span></a>]</span> <span class="ipa">ks</span> for foreign words.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">g</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0B95;</span> [<a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a>]</span> when:<br>
+between vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">பாகு</span> <span class="trans">pāku</span> <span class="ipa">pɑːgʉ</span> <span class="meaning">Baku</span></span><br>
+after a nasal, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">அங்கே</span> <span class="trans">ạŋ͓kē</span> <span class="ipa">﻿əŋgeˑ</span> <span class="meaning">there </span></span><br>
+Not found word-initially.</p>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+<section id="affricates">
+<h4>Affricates</h4>
+<div id="map_affricates" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">t͡ʃ</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0B9A;</span> [<a href="/scripts/tamil/block#char0B9A"><span class="uname">U+0B9A TAMIL LETTER CA</span></a>]</span> when:<br>
+initial, eg.  <br>
+geminated, eg. .<span class="charExample" translate="no"><span class="ex" lang="ta">பேச்சு</span> <span class="trans">pēc͓cu</span> <span class="ipa">peːttʃʉ</span> <span class="meaning">talk</span></span><br> 
+following a stop consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">கட்சி</span> <span class="trans">kʈ͓ci</span> <span class="ipa">kəʈtʃɪˑ</span> <span class="meaning">party</span></span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">d͡ʒ</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0B9A;</span> [<a href="/scripts/tamil/block#char0B9A"><span class="uname">U+0B9A TAMIL LETTER CA</span></a>]</span> when:</p>
+<p>following a nasal, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">இஞ்சி</span> <span class="trans">ịɲ͓ci</span> <span class="ipa">﻿ʲɪɲd͡ʒɪˑ</span> <span class="meaning">ginger</span></span></p>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0B9C;</span> [<a href="/scripts/tamil/block#char0B9C"><span class="uname">U+0B9C TAMIL LETTER JA</span></a>]</span> (grantha consonant), eg. <span class="charExample" translate="no"><span class="ex" lang="ta">ஜானகி</span> <span class="trans">ʤānki</span> <span class="ipa">﻿d͡ʒɑːnəgɪˑ</span> <span class="meaning">Janaki</span></span>.</p>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+<section id="fricatives">
+<h4>Fricatives</h4>
+<div id="map_fricatives" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">f</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0B83;&#x0BAA;</span> [<a href="/scripts/tamil/block#char0B83"><span class="uname">U+0B83 TAMIL SIGN VISARGA</span></a> + <a href="/scripts/tamil/block#char0BAA"><span class="uname">U+0BAA TAMIL LETTER PA</span></a>]</span> for foreign words, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">ஃபீசு</span> <span class="trans">ˑpīcu</span> <span class="ipa">fiːsɯ</span> <span class="meaning">fees</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BAA;</span> [<a href="/scripts/tamil/block#char0BAA"><span class="uname">U+0BAA TAMIL LETTER PA</span></a>]</span> for some foreign words.&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">β</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BAA;</span> [<a href="/scripts/tamil/block#char0BAA"><span class="uname">U+0BAA TAMIL LETTER PA</span></a>]</span> <br>
+between vowels.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ð</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BA4;</span> [<a href="/scripts/tamil/block#char0BA4"><span class="uname">U+0BA4 TAMIL LETTER TA</span></a>]</span><br> 
+between vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">நல்லது</span> <span class="trans">ṅl͓ltu</span> <span class="ipa">﻿nəlləd̪ʉ</span> <span class="meaning">good</span></span>.</p>
+</div>
+</div>
+
+<div class="mapItem">
+<div class="phone"><span class="ipa">s</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0B9A;</span> [<a href="/scripts/tamil/block#char0B9A"><span class="uname">U+0B9A TAMIL LETTER CA</span></a>]</span> when:<br>
+between vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">பாசம்</span> <span class="trans">pācm͓</span> <span class="ipa">﻿pɑːsəm</span> <span class="meaning">affection</span></span><br> 
+at the beginning of some words, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">சின்ன</span> <span class="trans">cin͓n</span> <span class="ipa">﻿sɪnnə</span> <span class="meaning">small</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB8;</span> [<a href="/scripts/tamil/block#char0BB8"><span class="uname">U+0BB8 TAMIL LETTER SA</span></a>]</span> (grantha consonant), eg. <span class="charExample" translate="no"><span class="ex" lang="ta">ஸந்தியா</span> <span class="trans">sṅ͓tiyā</span> <span class="ipa">﻿sən̪d̪ɪjɑː</span> <span class="meaning">Sandya</span></span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">z</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0B9C;</span> [<a href="/scripts/tamil/block#char0B9C"><span class="uname">U+0B9C TAMIL LETTER JA</span></a>]</span> for borrowed words.</p>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0B83;&#x0B9C;</span> [<a href="/scripts/tamil/block#char0B83"><span class="uname">U+0B83 TAMIL SIGN VISARGA</span></a> + <a href="/scripts/tamil/block#char0B9C"><span class="uname">U+0B9C TAMIL LETTER JA</span></a>]</span> for foreign words, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">ஃஜிரொக்ஸ்</span> <span class="trans">ˑziɾok͓s͓</span> <span class="meaning">Xerox</span></span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʃ</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB6;</span> [<a href="/scripts/tamil/block#char0BB6"><span class="uname">U+0BB6 TAMIL LETTER SHA</span></a>]</span> (grantha consonant), eg. <span class="charExample" translate="no"><span class="ex" lang="ta">ஶிவா</span> <span class="trans">ʃiʋā</span> <span class="ipa">﻿ʃɪʋɑː</span> <span class="meaning">Shiva</span></span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʂ</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB7;</span> [<a href="/scripts/tamil/block#char0BB7"><span class="uname">U+0BB7 TAMIL LETTER SSA</span></a>]</span> (grantha consonant), eg. <span class="charExample" translate="no"><span class="ex" lang="ta">உஷா</span> <span class="trans">ụʂā</span> <span class="ipa">﻿ʷʊʂɑː</span> <span class="meaning">Usha</span></span>.</p>
+<p>Also, as the second part of <span class="codepoint" translate="no"><span lang="ta">&#x0B95;&#x0BCD;&#x0BB7;</span> [<a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a> + <a href="/scripts/tamil/block#char0BCD"><span class="uname">U+0BCD TAMIL SIGN VIRAMA</span></a> + <a href="/scripts/tamil/block#char0BB7"><span class="uname">U+0BB7 TAMIL LETTER SSA</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">காமாக்ஷி</span> <span class="trans">kāmāk͓ʂi</span> <span class="ipa">﻿kɑːmɑːkʂɪˑ</span> <span class="meaning">Kamakshi</span></span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">x</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0B95;</span> [<a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a>]</span> between vowels.</p>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0B83;&#x0B95;</span> [<a href="/scripts/tamil/block#char0B83"><span class="uname">U+0B83 TAMIL SIGN VISARGA</span></a> + <a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a>]</span> for foreign words, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">செங்கிஸ் ஃகான்</span> <span class="trans">ceŋ͓kis͓ ˑkɑ̄n͓</span> <span class="meaning">Gengis Khan</span></span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɣ</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0B95;</span> [<a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a>]</span> between vowels.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">h</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB9;</span> [<a href="/scripts/tamil/block#char0BB9"><span class="uname">U+0BB9 TAMIL LETTER HA</span></a>]</span> (grantha consonant), eg. <span class="charExample" translate="no"><span class="ex" lang="ta">ஹரி</span> <span class="trans">hɾi</span> <span class="ipa">ɦəɾɪˑ</span> <span class="meaning">Hari</span></span>.</p>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0B95;</span> [<a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a>]</span> between vowels only in colloquial speech.</p>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+<section id="nasals">
+<h4>Nasals</h4>
+<div id="map_nasals" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">m</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BAE;</span> [<a href="/scripts/tamil/block#char0BAE"><span class="uname">U+0BAE TAMIL LETTER MA</span></a>]</span>, when:<br>
+initial,
+eg. <span class="charExample" translate="no"><span class="ex" lang="ta">மலை</span> <span class="trans">mlaʲ</span> <span class="ipa">﻿mələj</span> <span class="meaning">mountain</span></span>,<br>
+geminated, eg.
+<span class="charExample" translate="no"><span class="ex" lang="ta">அம்மாள்</span> <span class="trans">ạm͓māɭ͓</span> <span class="ipa">əmmɑːɭ</span> <span class="meaning">mummy</span></span>,<br>
+in a cluster, eg. 
+<span class="charExample" translate="no"><span class="ex" lang="ta">தம்பி</span> <span class="trans">tm͓pi</span> <span class="ipa">t̪əmbɪˑ</span> <span class="meaning">brother</span></span>,<br>
+finally, eg.
+<span class="charExample" translate="no"><span class="ex" lang="ta">வண்ணம்</span> <span class="trans">ʋɳ͓ɳm͓</span> <span class="ipa">ʋəɳɳəm</span> <span class="meaning">colour</span></span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">n̪</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BA8;</span> [<a href="/scripts/tamil/block#char0BA8"><span class="uname">U+0BA8 TAMIL LETTER NA</span></a>]</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ta">பந்து</span> <span class="trans">pṅ͓tu</span> <span class="ipa">﻿pən̪d̪ʉ</span> <span class="meaning">ball</span></span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">n</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BA9;</span> [<a href="/scripts/tamil/block#char0BA9"><span class="uname">U+0BA9 TAMIL LETTER NNNA</span></a>]</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɳ</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BA3;</span> [<a href="/scripts/tamil/block#char0BA3"><span class="uname">U+0BA3 TAMIL LETTER NNA</span></a>]</span>, when:<br>
+in a cluster,
+eg. <span class="eg" lang="ta">வண்டி</span>,<br>
+geminated, eg.
+<span class="charExample" translate="no"><span class="ex" lang="ta">வண்ணம்</span> <span class="trans">ʋɳ͓ɳm͓</span> <span class="ipa">ʋəɳɳəm</span> <span class="meaning">colour</span></span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɲ</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0B9E;</span> [<a href="/scripts/tamil/block#char0B9E"><span class="uname">U+0B9E TAMIL LETTER NYA</span></a>]</span> when:<br>
+initial, 
+eg. <span class="charExample" translate="no"><span class="ex" lang="ta">ஞானம்</span> <span class="trans">ɲānm͓</span> <span class="ipa">﻿ɲɑːnəm</span> <span class="meaning">wisdom</span></span>,<br>
+geminated, eg.
+<span class="charExample" translate="no"><span class="ex" lang="ta">அஞ்ஞானம்</span> <span class="trans">ạɲ͓ɲānm͓</span> <span class="ipa">əɲɲɑːnəm</span> <span class="meaning">fineness</span></span>,<br>
+in a cluster, eg.
+<span class="charExample" translate="no"><span class="ex" lang="ta">இஞ்சி</span> <span class="trans">ịɲ͓ci</span> <span class="ipa">﻿ʲɪɲd͡ʒɪˑ</span> <span class="meaning">ginger</span></span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ŋ</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0B99;</span> [<a href="/scripts/tamil/block#char0B99"><span class="uname">U+0B99 TAMIL LETTER NGA</span></a>]</span>,when:</p>
+<p>in a cluster, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">அங்கே</span> <span class="trans">ạŋ͓kē</span> <span class="ipa">əŋgeˑ</span> <span class="meaning">there</span></span>,<br>
+geminated, eg.
+<span class="charExample" translate="no"><span class="ex" lang="ta">அங்ஙனம்</span> <span class="trans">ạŋ͓ŋnm͓</span> <span class="ipa">əŋŋənəm</span> <span class="meaning">there</span></span>.</p>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+<section id="sonorants">
+<h4>Other</h4>
+<div id="map_approximants" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʋ</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB5;</span> [<a href="/scripts/tamil/block#char0BB5"><span class="uname">U+0BB5 TAMIL LETTER VA</span></a>]</span> occurs:<br>
+initially, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">வழி</span> <span class="trans">ʋɻi</span> <span class="ipa">﻿ʋəɻɪˑ</span> <span class="meaning">path</span></span><br>
+geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">அவ்வழி</span> <span class="trans">ạʋ͓ʋɻi</span> <span class="ipa">əʋʋəɻɪˑ</span> <span class="meaning">passer</span></span>
+</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">r</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB1;</span> [<a href="/scripts/tamil/block#char0BB1"><span class="uname">U+0BB1 TAMIL LETTER RRA</span></a>]</span> <span class="ednote">check all this out பற்றினார், பன்றி  pət̺t̺ʳɪnɑːr , pənd̺ʳɪˑ</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɾ</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB0;</span> [<a href="/scripts/tamil/block#char0BB0"><span class="uname">U+0BB0 TAMIL LETTER RA</span></a>]</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ta">கரி</span> <span class="trans">kɾi</span> <span class="ipa">﻿kəɾɪˑ</span> <span class="meaning">charcoal</span></span> <span class="ednote">check out வந்தார்/ʋṅ͓tāɾ͓/ʋən̪d̪ɑːr/came</span> <span class="ednote">aslo <span class="charExample" translate="no"><span class="ex" lang="ta">கறி</span> <span class="trans">kri</span> <span class="ipa">﻿kəɾɪˑ</span> <span class="meaning">curry</span></span> ?</span></p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɻ</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB4;</span> [<a href="/scripts/tamil/block#char0BB4"><span class="uname">U+0BB4 TAMIL LETTER LLLA</span></a>]</span>, occurs:<br>
+between vowels,
+eg. <span class="charExample" translate="no"><span class="ex" lang="ta">வழி</span> <span class="trans">ʋɻi</span> <span class="ipa">﻿ʋəɻɪˑ</span> <span class="meaning">path</span></span><br>
+geminated, eg. 
+</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɽ</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB4;</span> [<a href="/scripts/tamil/block#char0BB4"><span class="uname">U+0BB4 TAMIL LETTER LLLA</span></a>]</span> between vowels.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">l</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB2;</span> [<a href="/scripts/tamil/block#char0BB2"><span class="uname">U+0BB2 TAMIL LETTER LA</span></a>]</span> when:<br>
+between vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">வலி</span> <span class="trans">ʋli</span> <span class="ipa">﻿ʋəlɪˑ</span> <span class="meaning">pain</span></span><br>
+geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">வல்லி</span> <span class="trans">ʋl͓li</span> <span class="ipa">ʋəllɪˑ</span> <span class="meaning">Valli</span></span>;<br>
+final, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">வந்தால்</span> <span class="trans">ʋṅ͓tāl͓</span> <span class="ipa">ʋən̪d̪ɑːl</span> <span class="meaning">if</span></span>
+</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɭ</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB3;</span> [<a href="/scripts/tamil/block#char0BB3"><span class="uname">U+0BB3 TAMIL LETTER LLA</span></a>]</span> when:<br>
+between vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">வளி</span> <span class="trans">ʋɭi</span> <span class="ipa">﻿ʋəɭɪˑ</span> <span class="meaning">aerobic</span></span><br>
+geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">வள்ளி</span> <span class="trans">ʋɭ͓ɭi</span> <span class="ipa">ʋəɭɭɪˑ</span> <span class="meaning">Valli</span></span><br>
+final, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">வந்தாள்</span> <span class="trans">ʋṅ͓tāɭ͓</span> <span class="ipa">ʋən̪d̪ɑːɭ</span> <span class="meaning">she</span></span><br>
+Doesn't occur in word-initial position.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">j</span></div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="ta">&#x0BAF;</span> [<a href="/scripts/tamil/block#char0BAF"><span class="uname">U+0BAF TAMIL LETTER YA</span></a>]</span> when:<br>
+initial, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">யானை</span> <span class="trans">yānaʲ</span> <span class="ipa">﻿jɑːnəj</span> <span class="meaning">elephant</span></span><br>
+geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">உய்ய</span> <span class="trans">ụy͓y</span> <span class="ipa">ʷʊjjə</span> <span class="meaning">critical</span></span>
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<p style="font-size: 60%;text-align: end; line-height: 1;">Sources: <a href="https://en.wikipedia.org/wiki/Help:IPA/Tamil">Wikipedia</a>, <a  href="http://anunaadam.appspot.com/">Anunaadam</a>, and Google Translate.</p>
+</section>
+
+
+
 
 
 
@@ -1040,21 +1373,14 @@ alveolar</th>
 <section id="basicconsonants">
 <h3>Basic consonants</h3>
     
-<p>The   basic consonant sounds of the standard Tamil alphabet are represented by the following characters. Note that there are no consonants dedicated only to voiced stops or to fricative sounds.</p>
+<p>The basic consonant sounds of the standard Tamil alphabet are represented by the following characters. Note that there are no consonants dedicated only to voiced stops or to fricative sounds.</p>
 
-<section id="stops">
-<h4>Stops/fricatives</h4>
-<figure class="characterBox auto" data-cols="ipa,trans,transc">ப␣த␣ச␣ட␣க</figure>
 <p>This list uses hyphens to provide information about the context in which allophonic variants are used (see <a class="figref">fig_allophone_table</a>).</p>
-</section>
 
-<section id="nasals">
-<h4>Nasals</h4>
+<figure class="characterBox auto" data-cols="ipa,trans,transc">ப␣த␣ச␣ட␣க</figure>
+
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ம␣ந␣ன␣ண␣ஞ␣ங</figure>
-</section>
 
-<section id="sonorants">
-<h4>More sonorants</h4>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">வ␣ர␣ற␣ழ␣ல␣ள␣ய</figure>
 </section>
 
@@ -1252,329 +1578,6 @@ alveolar</th>
 <h4>Representation of shrī</h4>
 <p>The syllable <span class="charExampleInline"><span class="ipa">ʃri</span></span> can be written with two different initial letters: <span class="codepoint" translate="no"><span lang="ta">&#x0BB6;</span> [<a href="/scripts/tamil/block#char0BB6"><span class="uname">U+0BB6 TAMIL LETTER SHA</span></a>]</span> (ie. <span class="charExampleInline" translate="no"><span class="ex" lang="ta">ஶ்ரீ</span> <span class="trans">ʃɾī</span></span>) or <span class="codepoint" translate="no"><span lang="ta">&#x0BB8;</span> [<a href="/scripts/tamil/block#char0BB8"><span class="uname">U+0BB8 TAMIL LETTER SA</span></a>]</span> (ie.<span class="charExampleInline" translate="no"><span class="ex" lang="ta">ஸ்ரீ</span> <span class="trans">s͓ɾī</span></span>). The result looks identical. Since 2005, the Unicode Consortium has recommended use of the former, but both are still in wide circulation, so Unicode 12 recommends that both be treated as equivalent sequences.<tt>u</tt></p>
 </section>
-</section>
-
-
-
-
-
-
-<section id="consonant_mappings">
-<h3>Consonant sounds to characters</h3>
-<p class="instructions">This section maps Tamil consonant sounds to common graphemes.. Click on the character names to see examples.</p>
-<div id="map_plosives" class="map">
-<div class="mapItem">
-<div class="phone"><span class="ipa">p</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BAA;</span> [<a href="/scripts/tamil/block#char0BAA"><span class="uname">U+0BAA TAMIL LETTER PA</span></a>]</span> when:</p>
-<p>initial, eg. <span class="eg" lang="ta">பத்து</span><br>
-geminated, eg. <span class="eg" lang="ta">அப்பன்</span>, <span class="eg" lang="ta">விற்பனை</span>.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">b</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BAA;</span> [<a href="/scripts/tamil/block#char0BAA"><span class="uname">U+0BAA TAMIL LETTER PA</span></a>]</span> when:<br>
-between vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">ஆபத்து</span> <span class="trans">ạ̄pt͓tu</span> <span class="ipa">ɑːbət̪t̪ʉ</span> <span class="meaning">danger</span></span><br>
-after a nasal, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">அன்பு</span> <span class="trans">ạn͓pu</span> <span class="ipa">ənbʉ</span> <span class="meaning">love</span></span>.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">t̪</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BA4;</span> [<a href="/scripts/tamil/block#char0BA4"><span class="uname">U+0BA4 TAMIL LETTER TA</span></a>]</span> when:<br>
-initial, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">தனி</span> <span class="trans">tni</span> <span class="ipa">﻿t̪ənɪˑ</span> <span class="meaning">separate</span></span>, <br>
-geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">பத்து</span> <span class="trans">pt͓tu</span> <span class="ipa">pət̪t̪ʉ</span> <span class="meaning">ten</span></span>, or <br>
-after a stop, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">யுக்தி</span> <span class="trans">yuk͓ti</span> <span class="ipa">jʉkt̪ɪˑ</span> <span class="meaning">tactical</span></span>.</p>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB1;</span> [<a href="/scripts/tamil/block#char0BB1"><span class="uname">U+0BB1 TAMIL LETTER RRA</span></a>]</span> inserted when this letter is geminated after a  nasal, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">பற்றி</span> <span class="trans">pr͓ri</span> <span class="ipa">﻿pət̺t̺ʳɪˑ</span> <span class="meaning">about</span></span>.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">d̪</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BA4;</span> [<a href="/scripts/tamil/block#char0BA4"><span class="uname">U+0BA4 TAMIL LETTER TA</span></a>]</span> occurs:<br>
-after a nasal, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">பந்து</span> <span class="trans">pṅ͓tu</span> <span class="ipa">﻿pən̪d̪ʉ</span> <span class="meaning">ball</span></span>.</p>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB1;</span> [<a href="/scripts/tamil/block#char0BB1"><span class="uname">U+0BB1 TAMIL LETTER RRA</span></a>]</span> inserted when this letter follows a nasal, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">ஒன்று</span> <span class="trans">ọn͓ru</span> <span class="ipa">﻿ʷond̺ʳʉ</span> <span class="meaning">one</span></span>.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">ʈ</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0B9F;</span> [<a href="/scripts/tamil/block#char0B9F"><span class="uname">U+0B9F TAMIL LETTER TTA</span></a>]</span> when<br>
-geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">பட்டு</span> <span class="trans">pʈ͓ʈu</span> <span class="ipa">pəʈʈʉ</span> <span class="meaning">plush</span></span>.</p>
-<p>Not used initially.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">ɖ</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0B9F;</span> [<a href="/scripts/tamil/block#char0B9F"><span class="uname">U+0B9F TAMIL LETTER TTA</span></a>]</span> when:<br>
-after a nasal, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">வண்டி</span> <span class="trans">ʋɳ͓ʈi</span> <span class="ipa">﻿ʋəɳɖɪˑ</span> <span class="meaning">carriage</span></span><br>
-between vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">படி</span> <span class="trans">pʈi</span> <span class="ipa">pəɖɪˑ</span> <span class="meaning">step</span></span>.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">k</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0B95;</span> [<a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a>]</span> when:<br>
-initial, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">கால்</span> <span class="trans">kāl͓</span> <span class="ipa">kɑːl</span> <span class="meaning">call</span></span><br>
-geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">மக்கள்</span> <span class="trans">mk͓kɭ͓</span> <span class="ipa">﻿məkkəɭ</span> <span class="meaning">people</span></span><br>
-in a cluster, eg.
-<span class="charExample" translate="no"><span class="ex" lang="ta">கற்க</span> <span class="trans">kr͓k</span> <span class="ipa">﻿kərkə</span> <span class="meaning">learn</span></span>.</p>
-<p>Also,  the first part of <span class="codepoint" translate="no"><span lang="ta">&#x0B95;&#x0BCD;&#x0BB7;</span> [<a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a> + <a href="/scripts/tamil/block#char0BCD"><span class="uname">U+0BCD TAMIL SIGN VIRAMA</span></a> + <a href="/scripts/tamil/block#char0BB7"><span class="uname">U+0BB7 TAMIL LETTER SSA</span></a>]</span>. <span class="ipa">kʂ</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">காமாக்ஷி</span> <span class="trans">kāmāk͓ʂi</span> <span class="ipa">﻿kɑːmɑːkʂɪˑ</span> <span class="meaning">Kamakshi</span></span>.</p>
-<p>And  part of <span class="codepoint" translate="no"><span lang="ta">&#x0B83;&#x0BB8;</span> [<a href="/scripts/tamil/block#char0B83"><span class="uname">U+0B83 TAMIL SIGN VISARGA</span></a> + <a href="/scripts/tamil/block#char0BB8"><span class="uname">U+0BB8 TAMIL LETTER SA</span></a>]</span> <span class="ipa">ks</span> for foreign words.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">g</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0B95;</span> [<a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a>]</span> when:<br>
-between vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">பாகு</span> <span class="trans">pāku</span> <span class="ipa">pɑːgʉ</span> <span class="meaning">Baku</span></span><br>
-after a nasal, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">அங்கே</span> <span class="trans">ạŋ͓kē</span> <span class="ipa">﻿əŋgeˑ</span> <span class="meaning">there </span></span><br>
-Not found word-initially.</p>
-</div>
-</div>
-</div>
-
-
-
-
-
-<div id="map_affricates" class="map">
-<div class="mapItem">
-<div class="phone"><span class="ipa">t͡ʃ</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0B9A;</span> [<a href="/scripts/tamil/block#char0B9A"><span class="uname">U+0B9A TAMIL LETTER CA</span></a>]</span> when:<br>
-initial, eg.  <br>
-geminated, eg. .<span class="charExample" translate="no"><span class="ex" lang="ta">பேச்சு</span> <span class="trans">pēc͓cu</span> <span class="ipa">peːttʃʉ</span> <span class="meaning">talk</span></span><br> 
-following a stop consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">கட்சி</span> <span class="trans">kʈ͓ci</span> <span class="ipa">kəʈtʃɪˑ</span> <span class="meaning">party</span></span>.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">d͡ʒ</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0B9A;</span> [<a href="/scripts/tamil/block#char0B9A"><span class="uname">U+0B9A TAMIL LETTER CA</span></a>]</span> when:</p>
-<p>following a nasal, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">இஞ்சி</span> <span class="trans">ịɲ͓ci</span> <span class="ipa">﻿ʲɪɲd͡ʒɪˑ</span> <span class="meaning">ginger</span></span></p>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0B9C;</span> [<a href="/scripts/tamil/block#char0B9C"><span class="uname">U+0B9C TAMIL LETTER JA</span></a>]</span> (grantha consonant), eg. <span class="charExample" translate="no"><span class="ex" lang="ta">ஜானகி</span> <span class="trans">ʤānki</span> <span class="ipa">﻿d͡ʒɑːnəgɪˑ</span> <span class="meaning">Janaki</span></span>.</p>
-</div>
-</div>
-</div>
-
-
-
-
-<div id="map_fricatives" class="map">
-<div class="mapItem">
-<div class="phone"><span class="ipa">f</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0B83;&#x0BAA;</span> [<a href="/scripts/tamil/block#char0B83"><span class="uname">U+0B83 TAMIL SIGN VISARGA</span></a> + <a href="/scripts/tamil/block#char0BAA"><span class="uname">U+0BAA TAMIL LETTER PA</span></a>]</span> for foreign words, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">ஃபீசு</span> <span class="trans">ˑpīcu</span> <span class="ipa">fiːsɯ</span> <span class="meaning">fees</span></span>.</p>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BAA;</span> [<a href="/scripts/tamil/block#char0BAA"><span class="uname">U+0BAA TAMIL LETTER PA</span></a>]</span> for some foreign words.&nbsp;</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">β</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BAA;</span> [<a href="/scripts/tamil/block#char0BAA"><span class="uname">U+0BAA TAMIL LETTER PA</span></a>]</span> <br>
-between vowels.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">ð</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BA4;</span> [<a href="/scripts/tamil/block#char0BA4"><span class="uname">U+0BA4 TAMIL LETTER TA</span></a>]</span><br> 
-between vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">நல்லது</span> <span class="trans">ṅl͓ltu</span> <span class="ipa">﻿nəlləd̪ʉ</span> <span class="meaning">good</span></span>.</p>
-</div>
-</div>
-
-<div class="mapItem">
-<div class="phone"><span class="ipa">s</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0B9A;</span> [<a href="/scripts/tamil/block#char0B9A"><span class="uname">U+0B9A TAMIL LETTER CA</span></a>]</span> when:<br>
-between vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">பாசம்</span> <span class="trans">pācm͓</span> <span class="ipa">﻿pɑːsəm</span> <span class="meaning">affection</span></span><br> 
-at the beginning of some words, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">சின்ன</span> <span class="trans">cin͓n</span> <span class="ipa">﻿sɪnnə</span> <span class="meaning">small</span></span>.</p>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB8;</span> [<a href="/scripts/tamil/block#char0BB8"><span class="uname">U+0BB8 TAMIL LETTER SA</span></a>]</span> (grantha consonant), eg. <span class="charExample" translate="no"><span class="ex" lang="ta">ஸந்தியா</span> <span class="trans">sṅ͓tiyā</span> <span class="ipa">﻿sən̪d̪ɪjɑː</span> <span class="meaning">Sandya</span></span>.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">z</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0B9C;</span> [<a href="/scripts/tamil/block#char0B9C"><span class="uname">U+0B9C TAMIL LETTER JA</span></a>]</span> for borrowed words.</p>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0B83;&#x0B9C;</span> [<a href="/scripts/tamil/block#char0B83"><span class="uname">U+0B83 TAMIL SIGN VISARGA</span></a> + <a href="/scripts/tamil/block#char0B9C"><span class="uname">U+0B9C TAMIL LETTER JA</span></a>]</span> for foreign words, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">ஃஜிரொக்ஸ்</span> <span class="trans">ˑziɾok͓s͓</span> <span class="meaning">Xerox</span></span>.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">ʃ</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB6;</span> [<a href="/scripts/tamil/block#char0BB6"><span class="uname">U+0BB6 TAMIL LETTER SHA</span></a>]</span> (grantha consonant), eg. <span class="charExample" translate="no"><span class="ex" lang="ta">ஶிவா</span> <span class="trans">ʃiʋā</span> <span class="ipa">﻿ʃɪʋɑː</span> <span class="meaning">Shiva</span></span>.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">ʂ</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB7;</span> [<a href="/scripts/tamil/block#char0BB7"><span class="uname">U+0BB7 TAMIL LETTER SSA</span></a>]</span> (grantha consonant), eg. <span class="charExample" translate="no"><span class="ex" lang="ta">உஷா</span> <span class="trans">ụʂā</span> <span class="ipa">﻿ʷʊʂɑː</span> <span class="meaning">Usha</span></span>.</p>
-<p>Also, as the second part of <span class="codepoint" translate="no"><span lang="ta">&#x0B95;&#x0BCD;&#x0BB7;</span> [<a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a> + <a href="/scripts/tamil/block#char0BCD"><span class="uname">U+0BCD TAMIL SIGN VIRAMA</span></a> + <a href="/scripts/tamil/block#char0BB7"><span class="uname">U+0BB7 TAMIL LETTER SSA</span></a>]</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">காமாக்ஷி</span> <span class="trans">kāmāk͓ʂi</span> <span class="ipa">﻿kɑːmɑːkʂɪˑ</span> <span class="meaning">Kamakshi</span></span>.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">x</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0B95;</span> [<a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a>]</span> between vowels.</p>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0B83;&#x0B95;</span> [<a href="/scripts/tamil/block#char0B83"><span class="uname">U+0B83 TAMIL SIGN VISARGA</span></a> + <a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a>]</span> for foreign words, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">செங்கிஸ் ஃகான்</span> <span class="trans">ceŋ͓kis͓ ˑkɑ̄n͓</span> <span class="meaning">Gengis Khan</span></span>.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">ɣ</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0B95;</span> [<a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a>]</span> between vowels.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">h</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB9;</span> [<a href="/scripts/tamil/block#char0BB9"><span class="uname">U+0BB9 TAMIL LETTER HA</span></a>]</span> (grantha consonant), eg. <span class="charExample" translate="no"><span class="ex" lang="ta">ஹரி</span> <span class="trans">hɾi</span> <span class="ipa">ɦəɾɪˑ</span> <span class="meaning">Hari</span></span>.</p>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0B95;</span> [<a href="/scripts/tamil/block#char0B95"><span class="uname">U+0B95 TAMIL LETTER KA</span></a>]</span> between vowels only in colloquial speech.</p>
-</div>
-</div>
-
-</div>
-
-
-
-
-
-<div id="map_nasals" class="map">
-<div class="mapItem">
-<div class="phone"><span class="ipa">m</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BAE;</span> [<a href="/scripts/tamil/block#char0BAE"><span class="uname">U+0BAE TAMIL LETTER MA</span></a>]</span>, when:<br>
-initial,
-eg. <span class="charExample" translate="no"><span class="ex" lang="ta">மலை</span> <span class="trans">mlaʲ</span> <span class="ipa">﻿mələj</span> <span class="meaning">mountain</span></span>,<br>
-geminated, eg.
-<span class="charExample" translate="no"><span class="ex" lang="ta">அம்மாள்</span> <span class="trans">ạm͓māɭ͓</span> <span class="ipa">əmmɑːɭ</span> <span class="meaning">mummy</span></span>,<br>
-in a cluster, eg. 
-<span class="charExample" translate="no"><span class="ex" lang="ta">தம்பி</span> <span class="trans">tm͓pi</span> <span class="ipa">t̪əmbɪˑ</span> <span class="meaning">brother</span></span>,<br>
-finally, eg.
-<span class="charExample" translate="no"><span class="ex" lang="ta">வண்ணம்</span> <span class="trans">ʋɳ͓ɳm͓</span> <span class="ipa">ʋəɳɳəm</span> <span class="meaning">colour</span></span>.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">n̪</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BA8;</span> [<a href="/scripts/tamil/block#char0BA8"><span class="uname">U+0BA8 TAMIL LETTER NA</span></a>]</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ta">பந்து</span> <span class="trans">pṅ͓tu</span> <span class="ipa">﻿pən̪d̪ʉ</span> <span class="meaning">ball</span></span></p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">n</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BA9;</span> [<a href="/scripts/tamil/block#char0BA9"><span class="uname">U+0BA9 TAMIL LETTER NNNA</span></a>]</span></p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">ɳ</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BA3;</span> [<a href="/scripts/tamil/block#char0BA3"><span class="uname">U+0BA3 TAMIL LETTER NNA</span></a>]</span>, when:<br>
-in a cluster,
-eg. <span class="eg" lang="ta">வண்டி</span>,<br>
-geminated, eg.
-<span class="charExample" translate="no"><span class="ex" lang="ta">வண்ணம்</span> <span class="trans">ʋɳ͓ɳm͓</span> <span class="ipa">ʋəɳɳəm</span> <span class="meaning">colour</span></span>.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">ɲ</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0B9E;</span> [<a href="/scripts/tamil/block#char0B9E"><span class="uname">U+0B9E TAMIL LETTER NYA</span></a>]</span> when:<br>
-initial, 
-eg. <span class="charExample" translate="no"><span class="ex" lang="ta">ஞானம்</span> <span class="trans">ɲānm͓</span> <span class="ipa">﻿ɲɑːnəm</span> <span class="meaning">wisdom</span></span>,<br>
-geminated, eg.
-<span class="charExample" translate="no"><span class="ex" lang="ta">அஞ்ஞானம்</span> <span class="trans">ạɲ͓ɲānm͓</span> <span class="ipa">əɲɲɑːnəm</span> <span class="meaning">fineness</span></span>,<br>
-in a cluster, eg.
-<span class="charExample" translate="no"><span class="ex" lang="ta">இஞ்சி</span> <span class="trans">ịɲ͓ci</span> <span class="ipa">﻿ʲɪɲd͡ʒɪˑ</span> <span class="meaning">ginger</span></span>.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">ŋ</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0B99;</span> [<a href="/scripts/tamil/block#char0B99"><span class="uname">U+0B99 TAMIL LETTER NGA</span></a>]</span>,when:</p>
-<p>in a cluster, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">அங்கே</span> <span class="trans">ạŋ͓kē</span> <span class="ipa">əŋgeˑ</span> <span class="meaning">there</span></span>,<br>
-geminated, eg.
-<span class="charExample" translate="no"><span class="ex" lang="ta">அங்ஙனம்</span> <span class="trans">ạŋ͓ŋnm͓</span> <span class="ipa">əŋŋənəm</span> <span class="meaning">there</span></span>.</p>
-</div>
-</div>
-</div>
-
-
-
-
-
-<div id="map_approximants" class="map">
-<div class="mapItem">
-<div class="phone"><span class="ipa">ʋ</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB5;</span> [<a href="/scripts/tamil/block#char0BB5"><span class="uname">U+0BB5 TAMIL LETTER VA</span></a>]</span> occurs:<br>
-initially, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">வழி</span> <span class="trans">ʋɻi</span> <span class="ipa">﻿ʋəɻɪˑ</span> <span class="meaning">path</span></span><br>
-geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">அவ்வழி</span> <span class="trans">ạʋ͓ʋɻi</span> <span class="ipa">əʋʋəɻɪˑ</span> <span class="meaning">passer</span></span>
-</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">r</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB1;</span> [<a href="/scripts/tamil/block#char0BB1"><span class="uname">U+0BB1 TAMIL LETTER RRA</span></a>]</span> <span class="ednote">check all this out பற்றினார், பன்றி  pət̺t̺ʳɪnɑːr , pənd̺ʳɪˑ</span></p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">ɾ</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB0;</span> [<a href="/scripts/tamil/block#char0BB0"><span class="uname">U+0BB0 TAMIL LETTER RA</span></a>]</span> eg. <span class="charExample" translate="no"><span class="ex" lang="ta">கரி</span> <span class="trans">kɾi</span> <span class="ipa">﻿kəɾɪˑ</span> <span class="meaning">charcoal</span></span> <span class="ednote">check out வந்தார்/ʋṅ͓tāɾ͓/ʋən̪d̪ɑːr/came</span> <span class="ednote">aslo <span class="charExample" translate="no"><span class="ex" lang="ta">கறி</span> <span class="trans">kri</span> <span class="ipa">﻿kəɾɪˑ</span> <span class="meaning">curry</span></span> ?</span></p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">ɻ</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB4;</span> [<a href="/scripts/tamil/block#char0BB4"><span class="uname">U+0BB4 TAMIL LETTER LLLA</span></a>]</span>, occurs:<br>
-between vowels,
-eg. <span class="charExample" translate="no"><span class="ex" lang="ta">வழி</span> <span class="trans">ʋɻi</span> <span class="ipa">﻿ʋəɻɪˑ</span> <span class="meaning">path</span></span><br>
-geminated, eg. 
-</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">ɽ</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB4;</span> [<a href="/scripts/tamil/block#char0BB4"><span class="uname">U+0BB4 TAMIL LETTER LLLA</span></a>]</span> between vowels.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">l</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB2;</span> [<a href="/scripts/tamil/block#char0BB2"><span class="uname">U+0BB2 TAMIL LETTER LA</span></a>]</span> when:<br>
-between vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">வலி</span> <span class="trans">ʋli</span> <span class="ipa">﻿ʋəlɪˑ</span> <span class="meaning">pain</span></span><br>
-geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">வல்லி</span> <span class="trans">ʋl͓li</span> <span class="ipa">ʋəllɪˑ</span> <span class="meaning">Valli</span></span>;<br>
-final, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">வந்தால்</span> <span class="trans">ʋṅ͓tāl͓</span> <span class="ipa">ʋən̪d̪ɑːl</span> <span class="meaning">if</span></span>
-</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">ɭ</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BB3;</span> [<a href="/scripts/tamil/block#char0BB3"><span class="uname">U+0BB3 TAMIL LETTER LLA</span></a>]</span> when:<br>
-between vowels, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">வளி</span> <span class="trans">ʋɭi</span> <span class="ipa">﻿ʋəɭɪˑ</span> <span class="meaning">aerobic</span></span><br>
-geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">வள்ளி</span> <span class="trans">ʋɭ͓ɭi</span> <span class="ipa">ʋəɭɭɪˑ</span> <span class="meaning">Valli</span></span><br>
-final, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">வந்தாள்</span> <span class="trans">ʋṅ͓tāɭ͓</span> <span class="ipa">ʋən̪d̪ɑːɭ</span> <span class="meaning">she</span></span><br>
-Doesn't occur in word-initial position.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">j</span></div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="ta">&#x0BAF;</span> [<a href="/scripts/tamil/block#char0BAF"><span class="uname">U+0BAF TAMIL LETTER YA</span></a>]</span> when:<br>
-initial, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">யானை</span> <span class="trans">yānaʲ</span> <span class="ipa">﻿jɑːnəj</span> <span class="meaning">elephant</span></span><br>
-geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">உய்ய</span> <span class="trans">ụy͓y</span> <span class="ipa">ʷʊjjə</span> <span class="meaning">critical</span></span>
-</p>
-</div>
-</div>
-</div>
-<p style="font-size: 60%;text-align: end; line-height: 1;">Sources: <a href="https://en.wikipedia.org/wiki/Help:IPA/Tamil">Wikipedia</a>, <a  href="http://anunaadam.appspot.com/">Anunaadam</a>, and Google Translate.</p>
 </section>
 </section>
 
