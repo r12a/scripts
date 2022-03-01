@@ -251,7 +251,7 @@ autoExpandExamples.km = `
 កាវស||
 កាសែត||
 កាស៊ីណូ||
-កាហ្វេ|coffee|kaː.ˈfei
+កាហ្វេ|coffee|kaː.ˈfei||from French cafe
 កាហ្វេដោះគោទឹកកក||
 កាហ្វេទឹកកក||
 កាហ្វេទឹកដោះគោទឹកកក||
@@ -628,7 +628,7 @@ autoExpandExamples.km = `
 ខាងក្រៅ||
 ខាងជើង||
 ខាងត្បូង||
-ខាងមុខ||
+ខាងមុខ|in front of, facing|kʰaːŋ ˈmuk
 ខាងលិច||
 ខាងលើ||
 ខាត||
@@ -3470,7 +3470,7 @@ autoExpandExamples.km = `
 ភាសាផ្លូវការ||
 ភាសាវិទូ||
 ភាសាសាស្ត្រ||
-ភីហ្សា||
+ភីហ្សា|pizza|pʰiː.ˈzaː||from French pizza
 ភូត||
 ភូតភរ||
 ភូមធ្យរេខា||
@@ -5402,27 +5402,27 @@ autoExpandExamples.km = `
 ហ័វ||
 ហ្គាណា||
 ហ្គាបុង||
-ហ្គាស||
+ហ្គាស|gas|ɡaːh||from French
 ហ្គីណេ||
 ហ្គីណេអេក្វាទ័រ||
 ហ្គីតា||
 ហ្គីយ៉ាន||
 ហ្គូហ្គល||
 ហ្គំប៊ី||
-ហ្នាំង||
+ហ្នាំង|shadow play|naŋ||from Thai nang
 ហ្នឹង|that's right|nəŋ
 ហ្នុង||
-ហ្ន័ង||
+ហ្ន័ង|shadow play|naŋ||from Thai nang
 ហ្ម||
 ហ្មដំរី||
 ហ្មត់|fine, powdered|mɑt|||x
 ហ្មឺន||
-ហ្លួង|king|luəŋ
+ហ្លួង|king|luəŋ||from Thai หลวง
 ហ្វាម៉ាស៊ី||
 ហ្វារ||
 ហ្វាស៊ីស||
 ហ្វាំងឡង់||
-ហ្វីល||
+ហ្វីល|film|fiːl||from French film
 ហ្វីលីពីន||
 ហ្វីលីព្ពីន||
 ហ្វឹក|to practice|fək
@@ -5851,7 +5851,7 @@ autoExpandExamples.km = `
 អេវ៉ែក||
 អេស្តូនី||
 អេស្ប៉ាញ||
-អេហ្ស៊ីប||
+អេហ្ស៊ីប|Egypt|ʔei.ˈziːp
 អេះ||
 អែម||
 អែរអង់||
@@ -6115,8 +6115,14 @@ autoExpandExamples.km = `
 
 
 
-
-
+ហ្គ៊ារ|train station|giə||from French gare
+ប៉ាក់|to embroider|pak
+ប៉័ង|bread|paŋ||from French pain
+គ្រូហ្ម|shaman|kruː.mɑː||from Thai หมอ
+ហ្វង់|clear|ʋɑŋ
+ហ្វ៊ីល|film|fiːl||from French film
+ហ្សាស|jazz|ʒaːh||from French jazz
+ហ្ស៊ីប|jeep|ʒiːp||from French jeep
 
 
 
