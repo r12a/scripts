@@ -915,10 +915,10 @@ function replaceStuff (node) {
             //else out += '<span class="listIPA">'+ch.replace(/ /g,'<i>~</i>')+'</span>'
             }
 
-        if (ipa.length > 0) {
-            if (ipa[i]) out += '<span class="listItemType">infreq.</span>'
-            else out += ' '
-            }
+        //if (ipa.length > 0) {
+        //    if (ipa[i]) out += '<span class="listItemType">infreq.</span>'
+        //    else out += ' '
+        //    }
 
         if (ipa.length > 0) {
             if (ipa[i]) out += '<span class="listIPA">'+ipa[i]+'</span>'
@@ -1758,6 +1758,13 @@ function setTranslitToggle () {
 		console.log("Couldn't find sliding checkbox!")
 		return
 		}
+    
+    var details = document.createElement('details')
+    
+    var summary = document.createElement('summary')
+    summary.appendChild(document.createTextNode('Hide/show other items'))
+    details.appendChild(summary)
+    
 	// add translit toggle
 	var div = document.createElement('div')
 	div.id = 'translitToggle'
@@ -1769,7 +1776,7 @@ function setTranslitToggle () {
 	label.appendChild(input)
 	label.onclick = showTransliterationsEvt
 	div.appendChild(label)
-	checkboxList.appendChild(div)
+	details.appendChild(div)
 
 	// add detail mouseover toggle
 	div = document.createElement('div')
@@ -1783,7 +1790,9 @@ function setTranslitToggle () {
 	label.appendChild(input)
 	//label.onclick = showTransliterationsEvt
 	div.appendChild(label)
-	checkboxList.appendChild(div)
+	details.appendChild(div)
+    
+	checkboxList.appendChild(details)
 
 	// add links to phonetic symbol info
 	div = document.createElement('div')
