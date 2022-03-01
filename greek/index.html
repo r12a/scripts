@@ -55,7 +55,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->21 December, 2021<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->1 March, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -275,13 +275,15 @@
 
 
 <div id="showTranscriptions">
-<div>Character lists show:</div>
+<details>
+<summary>Items to show in lists</summary>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
 <div>
 <label>Transliteration 
 <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
 <!--div><label>LOC <input type="checkbox" onChange="toggleTranscription('listTransc', this.checked)"/></label></div-->
+</details>
 </div>
 
 
@@ -472,121 +474,16 @@ alveolar</th>
 <section id="vowels">
 <h2>Vowels</h2>
 
-<p class="instructions">Click on the characters in the lists for detailed information. For a mapping of sounds to graphemes see <a class="secref">vowel_mappings</a>.</p>
-
-
-
-
-<section id="basicvowels">
-<h3>Basic vowels</h3>
-
-<p>The basic set of vowels used in modern Greek includes the following.</p>
-<figure class="characterBox auto" data-cols="ipa,trans">ι␣υ␣η␣ε␣ο␣ω␣α</figure>
-<figure class="characterBox auto caps" data-cols="ipa,trans">Ι␣Υ␣Η␣Ε␣Ο␣Ω␣Α</figure>
-</section>
-
-
-
-
-
-<section id="digraphs">
-<h3>Digraphs</h3>
-<p>In  Greek, pairs of vowel letters may represent a single sound, or something other than two consecutive basic vowel sounds. These spellings hark back to Classical Greek. </p>
-<p>These are vowels written as digraphs in modern Greek.</p>
-
-<figure class="characterBox auto" data-cols="" data-ipa="i,i,i,u,e̞" data-select="last">ει␣οι␣υι␣ου␣αι</figure>
-
-<p>Three more digraphs are pronounced with <span class="ipa">v</span> before a vowel or voiced consonant, and <span class="ipa">f</span> elsewhere.</p>
-
-<figure class="characterBox auto" data-cols="" data-ipa="iv if,ev ef,av af" data-select="last">ηυ␣ευ␣αυ</figure>
-
-<p class="btw">Polytonic Greek has additional digraphs involving <span class="name">iota</span>. </p>
-</section>
-
-
-
-
-
-<section id="monotonic_vowels">
-<h3>Monotonic vowel diacritics</h3>
-
-
-<section id="tonos">
-<h4>Tonos</h4>
-
-<p>Stressed syllables carry a <span class="name">tonos</span> diacritic. This can be written by following the above vowel characters with &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0301;</span> [<a href="/scripts/greek/block#char0301"><span class="uname">U+0301 COMBINING ACUTE ACCENT</span></a>]</span>, but Unicode also has a set of precomposed characters.</p>
-
-<figure class="characterBox auto" data-cols="ipa,trans">ή␣ύ␣ί␣ό␣ώ␣έ␣ά</figure>
-<figure class="characterBox auto caps" data-cols="ipa,trans">Ή␣Ύ␣Ί␣Ό␣Ώ␣Έ␣Ά</figure>
-
-<p>The diacritic appears to the left of the uppercase letters. (The uppercase letters shown here are only used if the first letter of a word is capitalised and that letter happens to be a vowel with a tonos. If the whole word is uppercased, the tonos is dropped. See <a class="secref">transforms</a>.)</p>
-<p>If the stress falls on a digraph, the second letter carries the tonos, eg.
-<span class="eg" lang="el">αίμα</span>
-</p>
-</section>
-
-
-
-
-<section id="dialytika">
-<h4>Dialytika</h4>
-
-<p>Monotonic Greek on occasion uses a <span class="name">dialytika</span> diacritic to indicate that two adjacent vowel letters don't form a digraph, eg. the first 2 vowels in this example are pronounced <span class="ipa">ai</span>, rather than <span class="ipa">e</span>
-<span class="eg" lang="el">καϊμάν</span>
-</p>
-<p>Again, it is possible to use &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0308;</span> [<a href="/scripts/greek/block#char0308"><span class="uname">U+0308 COMBINING DIAERESIS</span></a>]</span> with the basic vowel or vowel+tonos, or to use one of the following precomposed characters.</p>
-
-<figure class="characterBox auto" data-cols="ipa,trans">ϊ␣ϋ␣ΰ␣ΐ</figure>
-<figure class="characterBox auto caps" data-cols="ipa,trans">Ϊ␣Ϋ</figure>
-
-<p>If the first vowel in what looks like a digraph has a tonos diacritic, this signals that it is not a digraph, and there is no need to use a dialytika, eg.
-<span class="eg" lang="el">τρία</span>
-</p>
-
-<p>Tonos and dialytika may  appear together above a vowel that is stressed, in which case the tonos appears either between or above the dialytika, eg.
-<span class="eg" lang="el">ευφυΐα</span>
-</p>
-
-<p>Unlike tonos, dialytika is not dropped for capital letters, but may be produced from a tonos in some circumstances (see <a class="secref">transforms</a>).</p>
-
-<figure class="deprecatedBox auto" data-cols="">&#x0344;</figure>
-
-<p>The  code point &nbsp;&nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0344;</span> [<a href="/scripts/greek/block#char0344"><span class="uname">U+0344 COMBINING GREEK DIALYTIKA TONOS</span></a>]</span> exists, but its use is discouraged by the Unicode Standard in favour of &nbsp;&nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0308;&#x0301;</span> [<a href="/scripts/greek/block#char0308"><span class="uname">U+0308 COMBINING DIAERESIS</span></a> + <a href="/scripts/greek/block#char0301"><span class="uname">U+0301 COMBINING ACUTE ACCENT</span></a>]</span>.<tt>u,#Greek</tt></p>
-</section>
-</section>
-
-
-
-
-
-
-
-<section id="polytonic_vowels">
-<h3>Polytonic vowel diacritics</h3>
-
-<div class="btw">
-<figure class="characterBox auto noindex small" data-cols="">́␣̀␣͂␣̔␣̓␣&#x0343;␣ͅ␣̈␣̄␣̆</figure>
-
-<p>In polytonic Greek, stressed syllables are identified using one of 3 diacritics: <span class="name">oxia</span> (called <span class="name">tonos</span> in monotonic Greek), <span class="name">varia</span>, or <span class="name">perispomeni</span>. The original distinctions represented by these 3 marks are no longer relevant to modern Greek, and they simply reflect much older spellings. There are precomposed characters for most combinations, but decomposed sequences use &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0301;</span> [<a href="/scripts/greek/block#char0301"><span class="uname">U+0301 COMBINING ACUTE ACCENT</span></a>]</span> for <span class="name">oxia</span> and &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0300;</span> [<a href="/scripts/greek/block#char0300"><span class="uname">U+0300 COMBINING GRAVE ACCENT</span></a>]</span> for <span class="name">varia</span>. Perispomeni can be rendered as a circumflex, a tilde, or occasionally a macron, so a special code point is available for it: &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0342;</span> [<a href="/scripts/greek/block#char0342"><span class="uname">U+0342 COMBINING GREEK PERISPOMENI</span></a>]</span>.</p>
-<p>A vowel that begins a word carries one of two breathing marks, where the rough breathing mark (<span class="name">dasia</span>) indicates the presence of  <span class="ipa">h</span>, and the smooth (<span class="name">psili</span>) its absence. (<span class="ipa">h</span> is no longer used in modern Greek.) &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0314;</span> [<a href="/scripts/greek/block#char0314"><span class="uname">U+0314 COMBINING REVERSED COMMA ABOVE</span></a>]</span> represents the rough breathing mark, and &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0313;</span> [<a href="/scripts/greek/block#char0313"><span class="uname">U+0313 COMBINING COMMA ABOVE</span></a>]</span>  the smooth breathing mark. The code point &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0343;</span> [<a href="/scripts/greek/block#char0343"><span class="uname">U+0343 COMBINING GREEK KORONIS</span></a>]</span> also represents the smooth breathing mark, but exists for compatibility with other encodings and should not be used.<tt>u,#Greek</tt></p>
-<p>The <span class="name">ypogegrammeni</span> (or <span class="name">iota</span> subscript) represents the former offglide for what were long diphthongs in ancient Greek, and in decomposed text can be written using &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0345;</span> [<a href="/scripts/greek/block#char0345"><span class="uname">U+0345 COMBINING GREEK YPOGEGRAMMENI</span></a>]</span>. It is used with 3 vowel letters, <span class="charExample inline" translate="no"><span class="ex" lang="el">α</span></span>, <span class="charExample inline" translate="no"><span class="ex" lang="el">η</span></span>, and <span class="charExample inline" translate="no"><span class="ex" lang="el">ω</span></span>, ie. <span class="charExample" translate="no"><span class="ex" lang="el">ᾳῃῳ</span></span></p>
-<p>Polytonic Greek also uses  &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0308;</span> [<a href="/scripts/greek/block#char0308"><span class="uname">U+0308 COMBINING DIAERESIS</span></a>]</span> to indicate that two adjacent vowels receive equal weight.</p>
-<p>The Greek Extended Unicode block provides precomposed characters for most of the combinations of Greek letters and diacritics. The precomposed code points are produced by normalisation.</p>
-<figure class="auxiliaryBox auto noindex small" data-cols="" data-select="last">Ὰὰ␣Ἀἀ␣Ἁἁ␣Ἂἂ␣Ἃἃ␣Ἄἄ␣Ἅἅ␣Ἆἆ␣Ἇἇ␣ᾲ␣ᾴ␣ᾶ␣ᾷ␣Ᾰᾰ␣Ᾱᾱ␣ᾼᾳ␣ᾈᾀ␣ᾉᾁ␣ᾊᾂ␣ᾋᾃ␣ᾌᾄ␣ᾍᾅ␣ᾎᾆ␣ᾏᾇ␣Ὲὲ␣Ἐἐ␣Ἑἑ␣Ἒἒ␣Ἓἓ␣Ἔἔ␣Ἕἕ␣Ὴὴ␣Ἠἠ␣Ἡἡ␣Ἢἢ␣Ἣἣ␣Ἤἤ␣Ἥἥ␣Ἦἦ␣Ἧἧ␣ῆ␣ῌῃ␣ῂ␣ῄ␣ῇ␣ᾘᾐ␣ᾙᾑ␣ᾚᾒ␣ᾛᾓ␣ᾜᾔ␣ᾝᾕ␣ᾞᾖ␣ᾟᾗ␣Ὶὶ␣Ἰἰ␣Ἱἱ␣Ἲἲ␣Ἳἳ␣Ἴἴ␣Ἵἵ␣Ἶἶ␣Ἷἷ␣Ῐῐ␣Ῑῑ␣ῒ␣ῖ␣ῗ␣Ὸὸ␣Ὀὀ␣Ὁὁ␣Ὂὂ␣Ὃὃ␣Ὄὄ␣Ὅὅ␣Ὺὺ␣ὐ␣ὒ␣ὔ␣ὖ␣Ὑὑ␣Ὓὓ␣Ὕὕ␣Ὗὗ␣Ῠῠ␣Ῡῡ␣ῢ␣ῦ␣ῧ␣Ὼὼ␣Ὠὠ␣Ὡὡ␣Ὢὢ␣Ὣὣ␣Ὤὤ␣Ὥὥ␣Ὦὦ␣Ὧὧ␣ῼῳ␣ᾨᾠ␣ᾩᾡ␣ᾪᾢ␣ᾫᾣ␣ᾬᾤ␣ᾭᾥ␣ᾮᾦ␣ᾯᾧ␣ῲ␣ῴ␣ῶ␣ῷ</figure>
-
-<p>When decomposed, these characters produce 2 additional combining marks: &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0304;</span> [<a href="/scripts/greek/block#char0304"><span class="uname">U+0304 COMBINING MACRON</span></a>]</span> and &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0306;</span> [<a href="/scripts/greek/block#char0306"><span class="uname">U+0306 COMBINING BREVE</span></a>]</span>.</p>
-<p class="info">In addition to the characters just listed, there are a set that replicate characters in monotonic Greek, but change <span class="name">tonos</span> in the character name to <span class="name">oxia</span>. These  shouldn't be used, since they normalise to characters in the main Greek block (which don't  get converted back to these characters).</p>
-<figure class="deprecatedBox auto noindex small" data-cols="" data-select="last">&#x1FBB;&#x1F71;␣&#x1FC9;&#x1F73;␣&#x1FCB;&#x1F75;␣&#x1FDB;&#x1F77;␣&#x1FD3;␣&#x1FF9;&#x1F79;␣&#x1FEB;&#x1F7B;␣&#x1FE3;␣&#x1FFB;&#x1F7D;</figure>
-</div>
-</section>
-
 
 
 
 
 <section id="vowel_mappings">
 <h3>Vowel sounds mapped to characters</h3>
-<p class="instructions">This section maps Modern Greek vowel sounds to common graphemes, grouped by lowercase ( <mark>l</mark> ) and uppercase ( <mark>u</mark> ). The code points for vowels with tonos and/or dialytika accents are not shown, but they have the same sound. Click on the character names to see examples.</p>
+
+<p class="instructions">This section maps Modern Greek vowel sounds to common graphemes in the Greek orthography, grouped by lowercase ( <mark>l</mark> ) and uppercase ( <mark>u</mark> ). The code points for vowels with tonos and/or dialytika accents are not shown, but they have the same sound. Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
+
+
 
 
 
@@ -783,6 +680,115 @@ alveolar</th>
 </div>
 </section>
 </section>
+
+
+
+
+
+
+
+<section id="basicvowels">
+<h3>Basic vowels</h3>
+
+<p>The basic set of vowels used in modern Greek includes the following.</p>
+<figure class="characterBox auto" data-cols="ipa,trans">ι␣υ␣η␣ε␣ο␣ω␣α</figure>
+<figure class="characterBox auto caps" data-cols="ipa,trans">Ι␣Υ␣Η␣Ε␣Ο␣Ω␣Α</figure>
+</section>
+
+
+
+
+
+<section id="digraphs">
+<h3>Digraphs</h3>
+<p>In  Greek, pairs of vowel letters may represent a single sound, or something other than two consecutive basic vowel sounds. These spellings hark back to Classical Greek. </p>
+<p>These are vowels written as digraphs in modern Greek.</p>
+
+<figure class="characterBox auto" data-cols="" data-ipa="i,i,i,u,e̞" data-select="last">ει␣οι␣υι␣ου␣αι</figure>
+
+<p>Three more digraphs are pronounced with <span class="ipa">v</span> before a vowel or voiced consonant, and <span class="ipa">f</span> elsewhere.</p>
+
+<figure class="characterBox auto" data-cols="" data-ipa="iv if,ev ef,av af" data-select="last">ηυ␣ευ␣αυ</figure>
+
+<p class="btw">Polytonic Greek has additional digraphs involving <span class="name">iota</span>. </p>
+</section>
+
+
+
+
+
+<section id="monotonic_vowels">
+<h3>Monotonic vowel diacritics</h3>
+
+
+<section id="tonos">
+<h4>Tonos</h4>
+
+<p>Stressed syllables carry a <span class="name">tonos</span> diacritic. This can be written by following the above vowel characters with &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0301;</span> [<a href="/scripts/greek/block#char0301"><span class="uname">U+0301 COMBINING ACUTE ACCENT</span></a>]</span>, but Unicode also has a set of precomposed characters.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans">ή␣ύ␣ί␣ό␣ώ␣έ␣ά</figure>
+<figure class="characterBox auto caps" data-cols="ipa,trans">Ή␣Ύ␣Ί␣Ό␣Ώ␣Έ␣Ά</figure>
+
+<p>The diacritic appears to the left of the uppercase letters. (The uppercase letters shown here are only used if the first letter of a word is capitalised and that letter happens to be a vowel with a tonos. If the whole word is uppercased, the tonos is dropped. See <a class="secref">transforms</a>.)</p>
+<p>If the stress falls on a digraph, the second letter carries the tonos, eg.
+<span class="eg" lang="el">αίμα</span>
+</p>
+</section>
+
+
+
+
+<section id="dialytika">
+<h4>Dialytika</h4>
+
+<p>Monotonic Greek on occasion uses a <span class="name">dialytika</span> diacritic to indicate that two adjacent vowel letters don't form a digraph, eg. the first 2 vowels in this example are pronounced <span class="ipa">ai</span>, rather than <span class="ipa">e</span>
+<span class="eg" lang="el">καϊμάν</span>
+</p>
+<p>Again, it is possible to use &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0308;</span> [<a href="/scripts/greek/block#char0308"><span class="uname">U+0308 COMBINING DIAERESIS</span></a>]</span> with the basic vowel or vowel+tonos, or to use one of the following precomposed characters.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans">ϊ␣ϋ␣ΰ␣ΐ</figure>
+<figure class="characterBox auto caps" data-cols="ipa,trans">Ϊ␣Ϋ</figure>
+
+<p>If the first vowel in what looks like a digraph has a tonos diacritic, this signals that it is not a digraph, and there is no need to use a dialytika, eg.
+<span class="eg" lang="el">τρία</span>
+</p>
+
+<p>Tonos and dialytika may  appear together above a vowel that is stressed, in which case the tonos appears either between or above the dialytika, eg.
+<span class="eg" lang="el">ευφυΐα</span>
+</p>
+
+<p>Unlike tonos, dialytika is not dropped for capital letters, but may be produced from a tonos in some circumstances (see <a class="secref">transforms</a>).</p>
+
+<figure class="deprecatedBox auto" data-cols="">&#x0344;</figure>
+
+<p>The  code point &nbsp;&nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0344;</span> [<a href="/scripts/greek/block#char0344"><span class="uname">U+0344 COMBINING GREEK DIALYTIKA TONOS</span></a>]</span> exists, but its use is discouraged by the Unicode Standard in favour of &nbsp;&nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0308;&#x0301;</span> [<a href="/scripts/greek/block#char0308"><span class="uname">U+0308 COMBINING DIAERESIS</span></a> + <a href="/scripts/greek/block#char0301"><span class="uname">U+0301 COMBINING ACUTE ACCENT</span></a>]</span>.<tt>u,#Greek</tt></p>
+</section>
+</section>
+
+
+
+
+
+
+
+<section id="polytonic_vowels">
+<h3>Polytonic vowel diacritics</h3>
+
+<div class="btw">
+<figure class="characterBox auto noindex small" data-cols="">́␣̀␣͂␣̔␣̓␣&#x0343;␣ͅ␣̈␣̄␣̆</figure>
+
+<p>In polytonic Greek, stressed syllables are identified using one of 3 diacritics: <span class="name">oxia</span> (called <span class="name">tonos</span> in monotonic Greek), <span class="name">varia</span>, or <span class="name">perispomeni</span>. The original distinctions represented by these 3 marks are no longer relevant to modern Greek, and they simply reflect much older spellings. There are precomposed characters for most combinations, but decomposed sequences use &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0301;</span> [<a href="/scripts/greek/block#char0301"><span class="uname">U+0301 COMBINING ACUTE ACCENT</span></a>]</span> for <span class="name">oxia</span> and &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0300;</span> [<a href="/scripts/greek/block#char0300"><span class="uname">U+0300 COMBINING GRAVE ACCENT</span></a>]</span> for <span class="name">varia</span>. Perispomeni can be rendered as a circumflex, a tilde, or occasionally a macron, so a special code point is available for it: &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0342;</span> [<a href="/scripts/greek/block#char0342"><span class="uname">U+0342 COMBINING GREEK PERISPOMENI</span></a>]</span>.</p>
+<p>A vowel that begins a word carries one of two breathing marks, where the rough breathing mark (<span class="name">dasia</span>) indicates the presence of  <span class="ipa">h</span>, and the smooth (<span class="name">psili</span>) its absence. (<span class="ipa">h</span> is no longer used in modern Greek.) &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0314;</span> [<a href="/scripts/greek/block#char0314"><span class="uname">U+0314 COMBINING REVERSED COMMA ABOVE</span></a>]</span> represents the rough breathing mark, and &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0313;</span> [<a href="/scripts/greek/block#char0313"><span class="uname">U+0313 COMBINING COMMA ABOVE</span></a>]</span>  the smooth breathing mark. The code point &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0343;</span> [<a href="/scripts/greek/block#char0343"><span class="uname">U+0343 COMBINING GREEK KORONIS</span></a>]</span> also represents the smooth breathing mark, but exists for compatibility with other encodings and should not be used.<tt>u,#Greek</tt></p>
+<p>The <span class="name">ypogegrammeni</span> (or <span class="name">iota</span> subscript) represents the former offglide for what were long diphthongs in ancient Greek, and in decomposed text can be written using &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0345;</span> [<a href="/scripts/greek/block#char0345"><span class="uname">U+0345 COMBINING GREEK YPOGEGRAMMENI</span></a>]</span>. It is used with 3 vowel letters, <span class="charExample inline" translate="no"><span class="ex" lang="el">α</span></span>, <span class="charExample inline" translate="no"><span class="ex" lang="el">η</span></span>, and <span class="charExample inline" translate="no"><span class="ex" lang="el">ω</span></span>, ie. <span class="charExample" translate="no"><span class="ex" lang="el">ᾳῃῳ</span></span></p>
+<p>Polytonic Greek also uses  &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0308;</span> [<a href="/scripts/greek/block#char0308"><span class="uname">U+0308 COMBINING DIAERESIS</span></a>]</span> to indicate that two adjacent vowels receive equal weight.</p>
+<p>The Greek Extended Unicode block provides precomposed characters for most of the combinations of Greek letters and diacritics. The precomposed code points are produced by normalisation.</p>
+<figure class="auxiliaryBox auto noindex small" data-cols="" data-select="last">Ὰὰ␣Ἀἀ␣Ἁἁ␣Ἂἂ␣Ἃἃ␣Ἄἄ␣Ἅἅ␣Ἆἆ␣Ἇἇ␣ᾲ␣ᾴ␣ᾶ␣ᾷ␣Ᾰᾰ␣Ᾱᾱ␣ᾼᾳ␣ᾈᾀ␣ᾉᾁ␣ᾊᾂ␣ᾋᾃ␣ᾌᾄ␣ᾍᾅ␣ᾎᾆ␣ᾏᾇ␣Ὲὲ␣Ἐἐ␣Ἑἑ␣Ἒἒ␣Ἓἓ␣Ἔἔ␣Ἕἕ␣Ὴὴ␣Ἠἠ␣Ἡἡ␣Ἢἢ␣Ἣἣ␣Ἤἤ␣Ἥἥ␣Ἦἦ␣Ἧἧ␣ῆ␣ῌῃ␣ῂ␣ῄ␣ῇ␣ᾘᾐ␣ᾙᾑ␣ᾚᾒ␣ᾛᾓ␣ᾜᾔ␣ᾝᾕ␣ᾞᾖ␣ᾟᾗ␣Ὶὶ␣Ἰἰ␣Ἱἱ␣Ἲἲ␣Ἳἳ␣Ἴἴ␣Ἵἵ␣Ἶἶ␣Ἷἷ␣Ῐῐ␣Ῑῑ␣ῒ␣ῖ␣ῗ␣Ὸὸ␣Ὀὀ␣Ὁὁ␣Ὂὂ␣Ὃὃ␣Ὄὄ␣Ὅὅ␣Ὺὺ␣ὐ␣ὒ␣ὔ␣ὖ␣Ὑὑ␣Ὓὓ␣Ὕὕ␣Ὗὗ␣Ῠῠ␣Ῡῡ␣ῢ␣ῦ␣ῧ␣Ὼὼ␣Ὠὠ␣Ὡὡ␣Ὢὢ␣Ὣὣ␣Ὤὤ␣Ὥὥ␣Ὦὦ␣Ὧὧ␣ῼῳ␣ᾨᾠ␣ᾩᾡ␣ᾪᾢ␣ᾫᾣ␣ᾬᾤ␣ᾭᾥ␣ᾮᾦ␣ᾯᾧ␣ῲ␣ῴ␣ῶ␣ῷ</figure>
+
+<p>When decomposed, these characters produce 2 additional combining marks: &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0304;</span> [<a href="/scripts/greek/block#char0304"><span class="uname">U+0304 COMBINING MACRON</span></a>]</span> and &nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="el">&#x0306;</span> [<a href="/scripts/greek/block#char0306"><span class="uname">U+0306 COMBINING BREVE</span></a>]</span>.</p>
+<p class="info">In addition to the characters just listed, there are a set that replicate characters in monotonic Greek, but change <span class="name">tonos</span> in the character name to <span class="name">oxia</span>. These  shouldn't be used, since they normalise to characters in the main Greek block (which don't  get converted back to these characters).</p>
+<figure class="deprecatedBox auto noindex small" data-cols="" data-select="last">&#x1FBB;&#x1F71;␣&#x1FC9;&#x1F73;␣&#x1FCB;&#x1F75;␣&#x1FDB;&#x1F77;␣&#x1FD3;␣&#x1FF9;&#x1F79;␣&#x1FEB;&#x1F7B;␣&#x1FE3;␣&#x1FFB;&#x1F7D;</figure>
+</div>
+</section>
 </section>
 
 
@@ -795,99 +801,18 @@ alveolar</th>
 <section id="consonants">
 <h2>Consonants</h2>
 
-<p class="instructions">Click on the characters in the lists for detailed information. For a mapping of sounds to graphemes see <a class="secref">consonant_mappings</a>.</p>
-
-
-
-
-
-<section id="greekLetters">
-<h3>Modern Greek consonant letters</h3>
-<section id="stops">
-<h4>Stops &amp; affricates</h4>
-<figure class="characterBox auto" data-cols="ipa,trans">π␣ψ␣τ␣κ␣ξ</figure>
-<figure class="characterBox auto caps" data-cols="ipa,trans">Π␣Ψ␣Τ␣Κ␣Ξ</figure>
-</section>
-
-
-
-<section id="fricatives">
-<h4>Fricatives</h4>
-<figure class="characterBox auto" data-cols="ipa,trans">φ␣β␣θ␣δ␣ς␣σ␣ζ␣χ␣γ</figure>
-<figure class="characterBox auto caps" data-cols="ipa,trans">Φ␣Β␣Θ␣Δ␣ ␣Σ␣Ζ␣Χ␣Γ</figure>
-</section>
-
-
-<section id="nasals">
-<h4>Nasals</h4>
-<figure class="characterBox auto" data-cols="ipa,trans">μ␣ν</figure>
-<figure class="characterBox auto caps" data-cols="ipa,trans">Μ␣Ν</figure>
-</section>
-
-
-<section id="sonorants">
-<h4>Other</h4>
-<figure class="characterBox auto" data-cols="ipa,trans">ρ␣λ</figure>
-<figure class="characterBox auto caps" data-cols="ipa,trans">Ρ␣Λ</figure>
-</section>
-
-
-
-
-
-<p><span class="codepoint" translate="no"><span lang="el">&#x03C2;</span> [<a href="/scripts/greek/block#char03C2"><span class="uname">U+03C2 GREEK SMALL LETTER FINAL SIGMA</span></a>]</span> is a word-final form of <span class="codepoint" translate="no"><span lang="el">&#x03C3;</span> [<a href="/scripts/greek/block#char03C3"><span class="uname">U+03C3 GREEK SMALL LETTER SIGMA</span></a>]</span>.  Due to legacy implementations, Unicode has a separate code point for this glyph (see <a class="secref">shaping</a>).</p>
-<p>Consonants are sometimes doubled, but the sound is not lengthened as a consquence.</p>
-</section>
-
-
-
-
-
-<section id="cdigraphs">
-<h3>Digraphs</h3>
-<p>When they appear together the following digraphs produce voiced sounds. At the beginning of a word only the plosive is pronounced.</p>
-<figure class="characterBox auto" data-cols="" data-ipa="b mb,d nd,ɡ ŋɡ" data-select="last">μπ ␣ντ ␣νκ</figure>
-
-<p>The 2 digraphs just below are generally pronounced either <span class="ipa">ɡ</span>, or <span class="ipa">ʝ</span> before front vowels <span class="ipa">e</span> and <span class="ipa">i</span>. When they follow a vowel the nasal is pronounced, giving <span class="ipa">ŋɡ</span> and <span class="ipa">ɲɟ</span>.</p>
-<figure class="characterBox auto" data-cols="" data-ipa="ɡ ʝ ŋɡ ŋʝ,ɡ ʝ ŋɡ ŋʝ" data-select="last">γγ␣γκ</figure>
-</section>
-
-
-
-
-
-<section id="accented_rho">
-<h3>Polytonic accented rho</h3>
-
-<div class="btw">
-<p>Although not a vowel, an initial letter <span class="codepoint" translate="no"><span lang="el">&#x03C1;</span> [<a href="/scripts/greek/block#char03C1"><span class="uname">U+03C1 GREEK SMALL LETTER RHO</span></a>]</span> can also carry a rough breathing mark. When geminated, the first always has a smooth breathing mark, and the second rough,<tt>ws</tt> ie. <span class="charExample" translate="no"><span class="ex" lang="el">ῤῥ</span></span></p>
-<p>Precomposed characters are available in the Extended Greek block.</p>
-
-<figure class="auxiliaryBox auto" data-cols="" data-select="last">ῤ␣Ῥῥ</figure>
-</div>
-</section>
-
-
-
-<section id="archaic">
-<h3>Archaic letters</h3>
-
-<div class="btw">
-<p>The following letters are no longer used in modern Greek text, except that a few are used for the additive counter styles (see <a class="secref">cs_additive</a>).</p>
-<figure class="archaicBox auto noindex" data-cols="" data-select="last">Ͱ␣ͱ␣Ͳ␣ͳ␣Ͷ␣ͷ␣Ϙ␣ϙ␣Ϛ␣ϛ␣Ϝ␣ϝ␣Ϟ␣ϟ␣Ϡ␣ϡ␣Ϸ␣ϸ␣Ϻ␣ϻ</figure>
-</div>
-</section>
-
-
-
 
 
 <section id="consonant_mappings">
 <h3>Consonant sounds to characters</h3>
-<p class="instructions">This section maps Modern Greek consonant sounds to common graphemes, grouped by lowercase ( <mark>l</mark> ) and uppercase ( <mark>u</mark> ).  Click on the character names to see examples.</p>
-<section id="map_initials">
-<h4>Initials</h4>
 
+<p class="instructions">This section maps Modern Greek consonant sounds to common graphemes in the Greek orthography, grouped by lowercase ( <mark>l</mark> ) and uppercase ( <mark>u</mark> ). Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of the character(s) shown.</p>
+
+
+
+
+<section id="stops">
+<h4>Stops &amp; affricates</h4>
 <div id="map_plosives" class="map">
 <div class="mapItem">
 <div class="phone"><span class="ipa">p</span></div>
@@ -1020,6 +945,7 @@ alveolar</th>
 </div>
 </div>
 </div>
+</section>
 
 
 
@@ -1027,6 +953,8 @@ alveolar</th>
 
 
 
+<section id="fricatives">
+<h4>Fricatives</h4>
 <div id="map_fricatives" class="map">
 <div class="mapItem">
 <div class="phone"><span class="ipa">f</span></div>
@@ -1165,13 +1093,17 @@ alveolar</th>
 <p><span class="codepoint" translate="no"><span lang="el">&#x0393;</span> [<a href="/scripts/greek/block#char0393"><span class="uname">U+0393 GREEK CAPITAL LETTER GAMMA</span></a>]</span> before <span class="ipa">a</span> or <span class="ipa">u.</span></p>
 </div>
 </div>
-
 </div>
+</section>
 
 
 
 
 
+
+
+<section id="nasals">
+<h4>Nasals</h4>
 <div id="map_nasals" class="map">
 <div class="mapItem">
 <div class="phone"><span class="ipa">m</span></div>
@@ -1216,11 +1148,15 @@ alveolar</th>
 </div>
 </div>
 </div>
+</section>
 
 
 
 
 
+
+<section id="sonorants">
+<h4>Other</h4>
 <div id="map_approximants" class="map">
 <div class="mapItem">
 <div class="phone"><span class="ipa">r</span></div>
@@ -1252,6 +1188,73 @@ alveolar</th>
 </div>
 </div>
 </section>
+</section>
+
+
+
+
+
+
+<section id="greekLetters">
+<h3>Modern Greek consonant letters</h3>
+
+<figure class="characterBox auto" data-cols="ipa,trans">π␣ψ␣τ␣κ␣ξ</figure>
+<figure class="characterBox auto caps" data-cols="ipa,trans">Π␣Ψ␣Τ␣Κ␣Ξ</figure>
+
+<figure class="characterBox auto" data-cols="ipa,trans">φ␣β␣θ␣δ␣ς␣σ␣ζ␣χ␣γ</figure>
+<figure class="characterBox auto caps" data-cols="ipa,trans">Φ␣Β␣Θ␣Δ␣ ␣Σ␣Ζ␣Χ␣Γ</figure>
+
+<figure class="characterBox auto" data-cols="ipa,trans">μ␣ν</figure>
+<figure class="characterBox auto caps" data-cols="ipa,trans">Μ␣Ν</figure>
+
+<figure class="characterBox auto" data-cols="ipa,trans">ρ␣λ</figure>
+<figure class="characterBox auto caps" data-cols="ipa,trans">Ρ␣Λ</figure>
+
+
+
+
+
+<p><span class="codepoint" translate="no"><span lang="el">&#x03C2;</span> [<a href="/scripts/greek/block#char03C2"><span class="uname">U+03C2 GREEK SMALL LETTER FINAL SIGMA</span></a>]</span> is a word-final form of <span class="codepoint" translate="no"><span lang="el">&#x03C3;</span> [<a href="/scripts/greek/block#char03C3"><span class="uname">U+03C3 GREEK SMALL LETTER SIGMA</span></a>]</span>.  Due to legacy implementations, Unicode has a separate code point for this glyph (see <a class="secref">shaping</a>).</p>
+<p>Consonants are sometimes doubled, but the sound is not lengthened as a consquence.</p>
+</section>
+
+
+
+
+
+<section id="cdigraphs">
+<h3>Digraphs</h3>
+<p>When they appear together the following digraphs produce voiced sounds. At the beginning of a word only the plosive is pronounced.</p>
+<figure class="characterBox auto" data-cols="" data-ipa="b mb,d nd,ɡ ŋɡ" data-select="last">μπ ␣ντ ␣νκ</figure>
+
+<p>The 2 digraphs just below are generally pronounced either <span class="ipa">ɡ</span>, or <span class="ipa">ʝ</span> before front vowels <span class="ipa">e</span> and <span class="ipa">i</span>. When they follow a vowel the nasal is pronounced, giving <span class="ipa">ŋɡ</span> and <span class="ipa">ɲɟ</span>.</p>
+<figure class="characterBox auto" data-cols="" data-ipa="ɡ ʝ ŋɡ ŋʝ,ɡ ʝ ŋɡ ŋʝ" data-select="last">γγ␣γκ</figure>
+</section>
+
+
+
+
+
+<section id="accented_rho">
+<h3>Polytonic accented rho</h3>
+
+<div class="btw">
+<p>Although not a vowel, an initial letter <span class="codepoint" translate="no"><span lang="el">&#x03C1;</span> [<a href="/scripts/greek/block#char03C1"><span class="uname">U+03C1 GREEK SMALL LETTER RHO</span></a>]</span> can also carry a rough breathing mark. When geminated, the first always has a smooth breathing mark, and the second rough,<tt>ws</tt> ie. <span class="charExample" translate="no"><span class="ex" lang="el">ῤῥ</span></span></p>
+<p>Precomposed characters are available in the Extended Greek block.</p>
+
+<figure class="auxiliaryBox auto" data-cols="" data-select="last">ῤ␣Ῥῥ</figure>
+</div>
+</section>
+
+
+
+<section id="archaic">
+<h3>Archaic letters</h3>
+
+<div class="btw">
+<p>The following letters are no longer used in modern Greek text, except that a few are used for the additive counter styles (see <a class="secref">cs_additive</a>).</p>
+<figure class="archaicBox auto noindex" data-cols="" data-select="last">Ͱ␣ͱ␣Ͳ␣ͳ␣Ͷ␣ͷ␣Ϙ␣ϙ␣Ϛ␣ϛ␣Ϝ␣ϝ␣Ϟ␣ϟ␣Ϡ␣ϡ␣Ϸ␣ϸ␣Ϻ␣ϻ</figure>
+</div>
 </section>
 </section>
 
