@@ -54,7 +54,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->21 December, 2021<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->1 March, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -312,7 +312,8 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 
 
 <div id="showTranscriptions">
-<div>Character lists show:</div>
+<details>
+<summary>Items to show in lists</summary>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
 <div>
@@ -321,6 +322,7 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 <div>
 <label>Transliteration 
 <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
+</details>
 </div>
 
 
@@ -510,153 +512,17 @@ alveolar</th>
   <section id="vowels">
 <h2>Vowels</h2>
 
-<p class="instructions">Click on the characters in the lists for detailed information. For a mapping of sounds to graphemes see <a class="secref">vowel_mappings</a>.</p>
-
-
-
-<section> </section>
-<section id="basic_vowels">
-<h3>Vowel characters</h3>
-
-<p>N’Ko has 7 vowel letters.</p>
-
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">ߌ␣ߎ␣ߋ␣ߏ␣ߍ␣ߐ␣ߊ</figure>
-
-<p>Each can carry a tone mark and a nasalisation mark. The choice of tone mark also indicates whether the vowel is long or short. See <a class="secref">tone_marks</a>.</p>
-</section>
-   
-  
-  
-  
-  
-  
-<section id="vowelextensions">
-<h3>Vowel repertoire extension</h3>
-
-<p>&nbsp;<span class="codepoint"><span lang="nqo" dir="rtl">&#x07F3;</span> <a href="/scripts/nko/block#char07F3">[<span class="uname">U+07F3 NKO COMBINING DOUBLE DOT ABOVE​</span>]</a></span> is  used above N’Ko letters to represent foreign sounds (particularly French and Arabic).</p>
-
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">ߎ߳␣ߋ߳␣ߊ߳</figure>
-</section>
-
-
-
-
-
-
-<section id="nasalisation">
-<h3>Nasalisation</h3>
-
-<p>The low diacritic &nbsp;<span class="codepoint"><span lang="nqo" dir="rtl">&#x07F2;</span> <a href="/scripts/nko/block#char07F2">[<span class="uname">U+07F2 NKO COMBINING NASALIZATION MARK​</span>]</a></span> is applied to a vowel to indicate nasalisation. This may produce multiple combining marks attached to a single character.</p>
-<figure>
-<p dir="rtl" lang="nqo" class="large"><span class="ex">ߣߌ߲߬</span></p>
-<figcaption>A nasalisation mark attached to a letter that already has a combining character.</figcaption>
-</figure>
-<p class="info">This mark should be typed and stored before any tone mark to preserve the canonical order.<tt>u</tt></p>
-</section>
-
-
-
-
-<section id="absence">
-<h3>Vowel absence</h3>
-
-<figure class="characterBox auto"  data-cols="trans">ߑ</figure>
-
-
-<p>An absence of vowels between two consonants can be indicated using <span class="codepoint"><span lang="nqo" dir="rtl">&#x07D1;</span> <a href="/scripts/nko/block#char07D1">[<span class="uname">U+07D1 NKO LETTER DAGBASINNA</span>]</a></span><tt>u</tt>.  However, this is not often needed, given that Manding words are normally composed of CV syllables, and is used in words from other languages, eg.
-<span class="eg transc" lang="nqo">ߍߛߑߞߌߡߏߞߊ</span>
-<span class="eg transc" lang="nqo">ߛߑߔߌߣߏߖ߭ߊ߫</span>
-</p>
-<p>However, when writing N’Ko, when two adjacent consonants are followed by the same vowel the vowel is omitted after the first consonant<tt>u</tt>, eg.
-<span class="eg transc" lang="nqo">ߛߓߊ߬</span>
-</p>
-<p>There is no ambiguity here with regards to consonant clusters, since in the case of a cluster <span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07D1;</bdi> [<a href="/scripts/nko/block#char07D1"><span class="uname">U+07D1 NKO LETTER DAGBASINNA</span></a>]</span> would appear between the two letters.</p>
-<p>This does not happen, however, if the two consonants are the same<tt>cd,xvii</tt>, eg.
-<span class="eg transc" lang="nqo" dir="rtl">ߝߊߝߊ</span>
-</p>
-</section>
-
-
-
-
-
-
-<section id="tone_marks">
-<h3>Tones &amp; vowel length</h3>
-
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">߫␣߯␣߬␣߰␣߭␣߱␣߮</figure>
-
-<p>In the N’Ko orthography,  each of the above diacritics indicates both vowel length and tone. Manding languages have two basic tones, high and low.  A low-high combination may also occur with short and long vowels, and a high-low combination with long vowels.<tt>ws</tt></p>
-<figure id="fig_tones">
-<table>
-<tbody><tr>
-<th></th>
-<th></th>
-<th>short</th>
-<th>long</th>
-</tr>
-<tr>
-<th><span style="font-size: 2rem;font-family: ExtendedLatinWF;">ˊ</span></th>
-<th>high</th>
-<td><span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07EB;</bdi> [<a href="/scripts/nko/block#char07EB"><span class="uname">U+07EB NKO COMBINING SHORT HIGH TONE</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07EF;</bdi> [<a href="/scripts/nko/block#char07EF"><span class="uname">U+07EF NKO COMBINING LONG HIGH TONE</span></a>]</span></td>
-</tr>
-<tr>
-<th><span style="font-size: 2rem;font-family: ExtendedLatinWF;">ˋ</span></th>
-<th>low</th>
-<td><span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07EC;</bdi> [<a href="/scripts/nko/block#char07EC"><span class="uname">U+07EC NKO COMBINING SHORT LOW TONE</span></a>]</span>&nbsp;</td>
-<td><span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07F0;</bdi> [<a href="/scripts/nko/block#char07F0"><span class="uname">U+07F0 NKO COMBINING LONG LOW TONE</span></a>]</span>&nbsp;</td>
-</tr>
-<tr>
-<th><span style="font-size: 2rem;font-family: ExtendedLatinWF;">ˇ</span></th>
-<th>rising</th>
-<td><span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07ED;</bdi> [<a href="/scripts/nko/block#char07ED"><span class="uname">U+07ED NKO COMBINING SHORT RISING TONE</span></a>]</span>&nbsp;</td>
-<td><span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07F1;</bdi> [<a href="/scripts/nko/block#char07F1"><span class="uname">U+07F1 NKO COMBINING LONG RISING TONE</span></a>]</span>&nbsp;</td>
-</tr>
-<tr>
-<th><span style="font-size: 2rem;font-family: ExtendedLatinWF;">ˆ</span></th>
-<th>falling</th>
-<td>&nbsp;</td>
-<td><span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07EE;</bdi> [<a href="/scripts/nko/block#char07EE"><span class="uname">U+07EE NKO COMBINING LONG DESCENDING TONE</span></a>]</span>&nbsp;</td>
-</tr>
-</tbody>
-</table>
-<figcaption>Tone diacritics in N’Ko.</figcaption>
-</figure>
-
-<p class="info">Tone marks should be typed and stored after any nasalisation marker.</p>
-<p>Several of these diacritics are also used over consonants to extend the repertoire when translitering foreign sounds (see <a class="secref">transliteration</a>).</p>
-<p>Although some of the N’Ko diacritics look like those in general use with the Latin script, the ones provided in this block are typically drawn higher and bolder, and have a wider range of glyph variation.<tt>u</tt></p>
-
-
-
-<section id="tone_letters">
-<h4>Tonal apostrophes</h4>
-<figure class="characterBox auto"  data-cols="trans,transc">ߴ␣ߵ</figure>
-
-
-<p>Mande languages commonly elide a word-final vowel that precedes another vowel. The elided vowel is replaced by an apostrophe, eg. <span class="charExample" translate="no"><span class="ex" lang="nqo">í bɛ́ à fɔ́ → í bʼà fɔ́</span></span></p>
-<p>N’Ko has two apostrophes, <span class="codepoint"><span lang="nqo" dir="rtl">&#x07F4;</span> <a href="/scripts/nko/block#char07F4">[<span class="uname">U+07F4 NKO HIGH TONE APOSTROPHE</span>]</a></span> and  <span class="codepoint"><span lang="nqo" dir="rtl">&#x07F5;</span> <a href="/scripts/nko/block#char07F5">[<span class="uname">U+07F5 NKO LOW TONE APOSTROPHE</span>]</a></span>, that are used to indicate elision, but which preserve information about the tone of the elided vowel, eg.<tt>cd,xvi</tt>
-<span class="eg transc" lang="nqo">ߌ ߓߴߊ߬ ߝߐ߫</span>
-<span class="eg transc" lang="nqo">ߌ ߞߵߊ߬ ߝߐ߫</span>
-</p>
-<p>The height relative to the baseline can vary.
-</p>
-</section>
-</section>
-
-
-
 
 
 <section id="vowel_mappings">
 <h3>Vowel sounds mapped to characters</h3>
 
-<p class="instructions">This section maps N’Ko vowel sounds to common graphemes. Tone is not shown here. Click on the character names to see examples.</p>
+
+<p class="instructions">This section maps N’Ko vowel sounds to common graphemes in the N’Ko orthography. Tone is not shown here. Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
 
 
-<section id="plain_vowel_map">
-<h4>Plain vowels</h4>
+
+
 
 <div id="mapv_high" class="map">
 <div class="mapItem">
@@ -763,9 +629,7 @@ alveolar</th>
 </div>
 </div>
 <div class="mapItem">
-<div class="phone">
 <div class="phone"><span class="ipa">ɔ̃</span></div>
-</div>
 <div class="posn">&nbsp;</div>
 <div class="mapletters">
 <p><span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07D0;&#x07F2;</bdi> [<a href="/scripts/nko/block#char07D0"><span class="uname">U+07D0 NKO LETTER O</span></a> + <a href="/scripts/nko/block#char07F2"><span class="uname">U+07F2 NKO COMBINING NASALIZATION MARK</span></a>]</span></p>
@@ -800,7 +664,6 @@ alveolar</th>
 </div>
 </div>
 </div>
-</section>
 
 
 
@@ -950,6 +813,142 @@ alveolar</th>
 </div>
 </section-->
 </section>
+
+
+
+
+
+
+<section> </section>
+<section id="basic_vowels">
+<h3>Vowel characters</h3>
+
+<p>N’Ko has 7 vowel letters.</p>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ߌ␣ߎ␣ߋ␣ߏ␣ߍ␣ߐ␣ߊ</figure>
+
+<p>Each can carry a tone mark and a nasalisation mark. The choice of tone mark also indicates whether the vowel is long or short. See <a class="secref">tone_marks</a>.</p>
+</section>
+   
+  
+  
+  
+  
+  
+<section id="vowelextensions">
+<h3>Vowel repertoire extension</h3>
+
+<p>&nbsp;<span class="codepoint"><span lang="nqo" dir="rtl">&#x07F3;</span> <a href="/scripts/nko/block#char07F3">[<span class="uname">U+07F3 NKO COMBINING DOUBLE DOT ABOVE​</span>]</a></span> is  used above N’Ko letters to represent foreign sounds (particularly French and Arabic).</p>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ߎ߳␣ߋ߳␣ߊ߳</figure>
+</section>
+
+
+
+
+
+
+<section id="nasalisation">
+<h3>Nasalisation</h3>
+
+<p>The low diacritic &nbsp;<span class="codepoint"><span lang="nqo" dir="rtl">&#x07F2;</span> <a href="/scripts/nko/block#char07F2">[<span class="uname">U+07F2 NKO COMBINING NASALIZATION MARK​</span>]</a></span> is applied to a vowel to indicate nasalisation. This may produce multiple combining marks attached to a single character.</p>
+<figure>
+<p dir="rtl" lang="nqo" class="large"><span class="ex">ߣߌ߲߬</span></p>
+<figcaption>A nasalisation mark attached to a letter that already has a combining character.</figcaption>
+</figure>
+<p class="info">This mark should be typed and stored before any tone mark to preserve the canonical order.<tt>u</tt></p>
+</section>
+
+
+
+
+<section id="absence">
+<h3>Vowel absence</h3>
+
+<figure class="characterBox auto"  data-cols="trans">ߑ</figure>
+
+
+<p>An absence of vowels between two consonants can be indicated using <span class="codepoint"><span lang="nqo" dir="rtl">&#x07D1;</span> <a href="/scripts/nko/block#char07D1">[<span class="uname">U+07D1 NKO LETTER DAGBASINNA</span>]</a></span><tt>u</tt>.  However, this is not often needed, given that Manding words are normally composed of CV syllables, and is used in words from other languages, eg.
+<span class="eg transc" lang="nqo">ߍߛߑߞߌߡߏߞߊ</span>
+<span class="eg transc" lang="nqo">ߛߑߔߌߣߏߖ߭ߊ߫</span>
+</p>
+<p>However, when writing N’Ko, when two adjacent consonants are followed by the same vowel the vowel is omitted after the first consonant<tt>u</tt>, eg.
+<span class="eg transc" lang="nqo">ߛߓߊ߬</span>
+</p>
+<p>There is no ambiguity here with regards to consonant clusters, since in the case of a cluster <span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07D1;</bdi> [<a href="/scripts/nko/block#char07D1"><span class="uname">U+07D1 NKO LETTER DAGBASINNA</span></a>]</span> would appear between the two letters.</p>
+<p>This does not happen, however, if the two consonants are the same<tt>cd,xvii</tt>, eg.
+<span class="eg transc" lang="nqo" dir="rtl">ߝߊߝߊ</span>
+</p>
+</section>
+
+
+
+
+
+
+<section id="tone_marks">
+<h3>Tones &amp; vowel length</h3>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">߫␣߯␣߬␣߰␣߭␣߱␣߮</figure>
+
+<p>In the N’Ko orthography,  each of the above diacritics indicates both vowel length and tone. Manding languages have two basic tones, high and low.  A low-high combination may also occur with short and long vowels, and a high-low combination with long vowels.<tt>ws</tt></p>
+<figure id="fig_tones">
+<table>
+<tbody><tr>
+<th></th>
+<th></th>
+<th>short</th>
+<th>long</th>
+</tr>
+<tr>
+<th><span style="font-size: 2rem;font-family: ExtendedLatinWF;">ˊ</span></th>
+<th>high</th>
+<td><span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07EB;</bdi> [<a href="/scripts/nko/block#char07EB"><span class="uname">U+07EB NKO COMBINING SHORT HIGH TONE</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07EF;</bdi> [<a href="/scripts/nko/block#char07EF"><span class="uname">U+07EF NKO COMBINING LONG HIGH TONE</span></a>]</span></td>
+</tr>
+<tr>
+<th><span style="font-size: 2rem;font-family: ExtendedLatinWF;">ˋ</span></th>
+<th>low</th>
+<td><span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07EC;</bdi> [<a href="/scripts/nko/block#char07EC"><span class="uname">U+07EC NKO COMBINING SHORT LOW TONE</span></a>]</span>&nbsp;</td>
+<td><span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07F0;</bdi> [<a href="/scripts/nko/block#char07F0"><span class="uname">U+07F0 NKO COMBINING LONG LOW TONE</span></a>]</span>&nbsp;</td>
+</tr>
+<tr>
+<th><span style="font-size: 2rem;font-family: ExtendedLatinWF;">ˇ</span></th>
+<th>rising</th>
+<td><span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07ED;</bdi> [<a href="/scripts/nko/block#char07ED"><span class="uname">U+07ED NKO COMBINING SHORT RISING TONE</span></a>]</span>&nbsp;</td>
+<td><span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07F1;</bdi> [<a href="/scripts/nko/block#char07F1"><span class="uname">U+07F1 NKO COMBINING LONG RISING TONE</span></a>]</span>&nbsp;</td>
+</tr>
+<tr>
+<th><span style="font-size: 2rem;font-family: ExtendedLatinWF;">ˆ</span></th>
+<th>falling</th>
+<td>&nbsp;</td>
+<td><span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07EE;</bdi> [<a href="/scripts/nko/block#char07EE"><span class="uname">U+07EE NKO COMBINING LONG DESCENDING TONE</span></a>]</span>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<figcaption>Tone diacritics in N’Ko.</figcaption>
+</figure>
+
+<p class="info">Tone marks should be typed and stored after any nasalisation marker.</p>
+<p>Several of these diacritics are also used over consonants to extend the repertoire when translitering foreign sounds (see <a class="secref">transliteration</a>).</p>
+<p>Although some of the N’Ko diacritics look like those in general use with the Latin script, the ones provided in this block are typically drawn higher and bolder, and have a wider range of glyph variation.<tt>u</tt></p>
+
+
+
+<section id="tone_letters">
+<h4>Tonal apostrophes</h4>
+<figure class="characterBox auto"  data-cols="trans,transc">ߴ␣ߵ</figure>
+
+
+<p>Mande languages commonly elide a word-final vowel that precedes another vowel. The elided vowel is replaced by an apostrophe, eg. <span class="charExample" translate="no"><span class="ex" lang="nqo">í bɛ́ à fɔ́ → í bʼà fɔ́</span></span></p>
+<p>N’Ko has two apostrophes, <span class="codepoint"><span lang="nqo" dir="rtl">&#x07F4;</span> <a href="/scripts/nko/block#char07F4">[<span class="uname">U+07F4 NKO HIGH TONE APOSTROPHE</span>]</a></span> and  <span class="codepoint"><span lang="nqo" dir="rtl">&#x07F5;</span> <a href="/scripts/nko/block#char07F5">[<span class="uname">U+07F5 NKO LOW TONE APOSTROPHE</span>]</a></span>, that are used to indicate elision, but which preserve information about the tone of the elided vowel, eg.<tt>cd,xvi</tt>
+<span class="eg transc" lang="nqo">ߌ ߓߴߊ߬ ߝߐ߫</span>
+<span class="eg transc" lang="nqo">ߌ ߞߵߊ߬ ߝߐ߫</span>
+</p>
+<p>The height relative to the baseline can vary.
+</p>
+</section>
+</section>
 </section> 
   
   
@@ -961,7 +960,7 @@ alveolar</th>
 <section id="consonants">
 <h2>Consonants</h2>
 
-<p class="instructions">Click on the characters in the lists for detailed information. For a mapping of sounds to graphemes see <a class="secref">consonant_mappings</a>.</p>
+
 
 <p>N’Ko has 19 regular consonants. There is also a nasal syllabic (<span class="ex" lang="nqo">ߒ</span>), and two 'abstract' consonants (<span class="ex" lang="nqo">ߠ ߧ</span>).</p>
  
@@ -970,135 +969,21 @@ alveolar</th>
 
 
 
-<section id="basic_consonants">
-<h3>Basic consonants</h3>
-
- 
-<section id="stops">
-<h4>Stops</h4>
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">ߔ␣ߓ␣ߕ␣ߘ␣ߞ␣ߜ</figure>
-</section>
-
-
-
-<section id="affricates">
-<h4>Affricates</h4>
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">ߗ␣ߖ</figure>
-</section>
-
-
-
-<section id="fricatives">
-<h4>Fricatives</h4>
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">ߝ␣ߛ␣ߤ</figure>
-</section>
-
-
-<section id="nasals">
-<h4>Nasals</h4>
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">ߡ␣ߣ␣ߢ</figure>
-</section>
-
-
-<section id="sonorants">
-<h4>Other sonorants</h4>
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">ߥ␣ߙ␣ߚ␣ߟ␣ߦ</figure>
-</section>
-</section>
-
-
-
-
-
-<section id="nasal_syllabic">
-<h3>Nasal syllabic</h3>
- 
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">ߒ</figure>
-
-  <p><span class="codepoint"><span lang="nqo" dir="rtl">&#x07D2;</span> <a href="/scripts/nko/block#char07D2">[<span class="uname">U+07D2 NKO LETTER N</span>]</a></span> is considered to be neither a consonant nor a vowel. It represents an alveolar or velar syllabic nasal sound.<tt>u</tt></p>
-  <p>This character may carry a tone diacritic, eg. <span class="ex" lang="nqo">ߒ߬</span>.</p>
-</section>
-
-
-
-<section id="abstract_consonants">
-<h3>Abstract consonants</h3>
-
- 
-<figure class="characterBox auto"  data-cols="ipa,trans,transc">ߠ␣ߧ</figure>
-
-<p>The 'abstract' consonants  <span class="codepoint"><span lang="nqo" dir="rtl">&#x07E0;</span> <a href="/scripts/nko/block#char07E0">[<span class="uname">U+07E0 NKO LETTER NA WOLOSO</span>]</a></span> and <span class="codepoint"><span lang="nqo" dir="rtl">&#x07E7;</span> <a href="/scripts/nko/block#char07E7">[<span class="uname">U+07E7 NKO LETTER NYA WOLOSO</span>]</a></span> are used where allophonic variants of <span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07DF;</bdi> [<a href="/scripts/nko/block#char07DF"><span class="uname">U+07DF NKO LETTER LA</span></a>]</span> and <span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07E6;</bdi> [<a href="/scripts/nko/block#char07E6"><span class="uname">U+07E6 NKO LETTER YA</span></a>]</span> after a nasal or nasalisation produce the sounds <span class="ipa">n</span> and <span class="ipa">ɲ</span>, respectively, either word-internally or across word boundaries.<tt>u</tt>  They are generally transcribed using <span class="transc">n</span> and <span class="transc">y</span>, respectively<tt>cd,xviii</tt>.</p>
-</section>
-  
-  
-  
-  
-  
-  
-<section id="transliteration">
-<h3>Consonant repertoire extension</h3>
-
-<p>Three diacritics, two of them tone markers, are used to represent foreign sounds (particularly Arabic and French) in conjunction with existing N’Ko letters, eg. <span class="charExample inline" translate="no"><span class="ex" lang="nqo" dir="rtl">ߛ߳</span> <span class="trans">sx̣</span></span> represents the <span class="ipa">θ</span> sound of the Arabic letter <span lang="ar" dir="rtl">ث</span>.<tt>u</tt></p>
-
-<figure class="otherBox auto"  data-cols="ipa,trans,transc">ߓ߭␣ߕ߭␣ߙ߳␣ߘ߭␣ߜ߳␣ߜ߭␣ߞ߫</figure>
-<figure class="otherBox auto"  data-cols="ipa,trans,transc">ߝ߭␣ߛ߳␣ߗ߭␣ߛ߫␣ߖ߭␣ߖ߳␣ߛ߭␣ߜ߫␣ߞ߭␣ߤ߭</figure>
-<figure class="otherBox auto"  data-cols="ipa,trans,transc">ߡ߭␣ߢ߭</figure>
-<figure class="otherBox auto"  data-cols="ipa,trans,transc">ߟ߭␣ߦ߭␣ߙ߭</figure>
-
-
-
-<p>The diacritics used are &nbsp;<span class="codepoint"><span lang="nqo" dir="rtl">&#x07EB;</span> <a href="/scripts/nko/block#char07EB">[<span class="uname">U+07EB NKO COMBINING SHORT HIGH TONE​</span>]</a></span>, &nbsp;<span class="codepoint"><span lang="nqo" dir="rtl">&#x07ED;</span> <a href="/scripts/nko/block#char07ED">[<span class="uname">U+07ED NKO COMBINING SHORT RISING TONE​</span>]</a></span>, or &nbsp;<span class="codepoint"><span lang="nqo" dir="rtl">&#x07F3;</span> <a href="/scripts/nko/block#char07F3">[<span class="uname">U+07F3 NKO COMBINING DOUBLE DOT ABOVE​</span>]</a></span>.</p>
-<p>For example, <span class="eg" lang="nqo" dir="rtl">ߓߐߗ߭ߎߙ. ߓߌߢߍ߲ ߝ߭ߋߣߎ߳.</span></p>
-</section>
- 
-
-
-
-  
-<section id="consonant_clusters">
-<h3>Consonant clusters</h3>
-
-<p>Adjacent consonants with no intervening vowel sound are indicated using <span class="codepoint"><span lang="nqo" dir="rtl">&#x07D1;</span> <a href="/scripts/nko/block#char07D1">[<span class="uname">U+07D1 NKO LETTER DAGBASINNA</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">ߓߟߏ</span> <span class="trans">blo</span> <span class="ipa">bolo</span></span> is pronounced with the vowel after the first letter, even though none is present, because of the rule explained above. To show that this should be pronounced without the vowel you need <tt>u</tt><span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">ߓߑߟߏ</span> <span class="trans">bˣlo</span> <span class="ipa">blo</span></span></p>
-<p>See <a class="secref">absence</a>.</p>
-</section>
- 
-  
-  
-  
-  
-  
-<section id="archaic_consonants">
-<h3>Archaic consonants</h3>
-
-<figure class="archaicBox auto"  data-cols="">ߨ␣ߩ␣ߪ</figure>
-
-<div class="btw">
-<p>The Unicode Standard lists 3 consonants that are archaic forms of other characters in the N’Ko block. The new shapes were only introduced in the latter writings of the inventor of the script, Solomana Kante. (Their inclusion in the block generated some controversy.<tt>ya</tt><tt>ec</tt>)</p>
-<table>
-<tr><th>Archaic form</th><th>Modern form</th></tr>
-<tr><td><span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07E8;</span> [<a href="/scripts/nko/block#char07E8"><span class="uname">U+07E8 NKO LETTER JONA JA</span></a>]</span></td><td><span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07D6;</span> [<a href="/scripts/nko/block#char07D6"><span class="uname">U+07D6 NKO LETTER JA</span></a>]</span></td></tr>
-<tr>
-<td><span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07E9;</span> [<a href="/scripts/nko/block#char07E9"><span class="uname">U+07E9 NKO LETTER JONA CHA</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07D7;</span> [<a href="/scripts/nko/block#char07D7"><span class="uname">U+07D7 NKO LETTER CHA</span></a>]</span></td>
-</tr>
-<tr>
-<td><span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07EA;</span> [<a href="/scripts/nko/block#char07EA"><span class="uname">U+07EA NKO LETTER JONA RA</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07D9;</span> [<a href="/scripts/nko/block#char07D9"><span class="uname">U+07D9 NKO LETTER RA</span></a>]</span></td>
-</tr>
-</table>
-</div>
-</section>
-
-
-
-
 
 
 <section id="consonant_mappings">
 <h3>Consonant to script mapping</h3>
 
-<p class="instructions">This section maps N’Ko consonant sounds to common graphemes. Click on the character names to see examples.</p>
+<p class="instructions">This section maps N’Ko consonant sounds to common graphemes in the N’Ko orthography. Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
 
+<p class="instructions">Sounds listed as 'infrequent' are allophones, or sounds used for foreign words,, etc.</p>
+
+
+
+
+
+<section id="stops">
+<h4>Stops</h4>
 <div id="map_plosives" class="map">
 <div class="mapItem">
 <div class="phone"><span class="ipa">p</span></div>
@@ -1191,9 +1076,14 @@ alveolar</th>
 </div>
 </div>
 </div>
+</section>
 
 
 
+
+
+<section id="affricates">
+<h4>Affricates</h4>
 <div id="map_affricates" class="map">
 <div class="mapItem">
 <div class="phone"><span class="ipa">t͡ʃ</span></div>
@@ -1210,11 +1100,15 @@ alveolar</th>
 </div>
 </div>
 </div>
+</section>
 
 
 
 
 
+
+<section id="fricatives">
+<h4>Fricatives</h4>
 <div id="map_fricatives" class="map">
 <div class="mapItem">
 <div class="phone"><span class="ipa">f</span></div>
@@ -1308,9 +1202,15 @@ alveolar</th>
 </div>
 </div>
 </div>
+</section>
 
 
 
+
+
+
+<section id="nasals">
+<h4>Nasals</h4>
 <div id="map_nasals" class="map">
 <div class="mapItem">
 <div class="phone"><span class="ipa">m</span></div>
@@ -1355,9 +1255,16 @@ alveolar</th>
 </div>
 </div>
 </div>
+</section>
 
 
 
+
+
+
+
+<section id="sonorants">
+<h4>Other</h4>
 <div id="map_approximants" class="map">
 <div class="mapItem">
 <div class="phone"><span class="ipa">w</span></div>
@@ -1415,6 +1322,112 @@ alveolar</th>
 <p><span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07E6;&#x07ED;</bdi> [<a href="/scripts/nko/block#char07E6"><span class="uname">U+07E6 NKO LETTER YA</span></a> + <a href="/scripts/nko/block#char07ED"><span class="uname">U+07ED NKO COMBINING SHORT RISING TONE</span></a>]</span></p>
 </div>
 </div>
+</div>
+</section>
+</section>
+
+
+
+
+
+
+
+
+<section id="basic_consonants">
+<h3>Basic consonants</h3>
+
+ 
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ߔ␣ߓ␣ߕ␣ߘ␣ߞ␣ߜ</figure>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ߗ␣ߖ</figure>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ߝ␣ߛ␣ߤ</figure>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ߡ␣ߣ␣ߢ</figure>
+
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ߥ␣ߙ␣ߚ␣ߟ␣ߦ</figure>
+</section>
+
+
+
+
+
+<section id="nasal_syllabic">
+<h3>Nasal syllabic</h3>
+ 
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ߒ</figure>
+
+  <p><span class="codepoint"><span lang="nqo" dir="rtl">&#x07D2;</span> <a href="/scripts/nko/block#char07D2">[<span class="uname">U+07D2 NKO LETTER N</span>]</a></span> is considered to be neither a consonant nor a vowel. It represents an alveolar or velar syllabic nasal sound.<tt>u</tt></p>
+  <p>This character may carry a tone diacritic, eg. <span class="ex" lang="nqo">ߒ߬</span>.</p>
+</section>
+
+
+
+<section id="abstract_consonants">
+<h3>Abstract consonants</h3>
+
+ 
+<figure class="characterBox auto"  data-cols="ipa,trans,transc">ߠ␣ߧ</figure>
+
+<p>The 'abstract' consonants  <span class="codepoint"><span lang="nqo" dir="rtl">&#x07E0;</span> <a href="/scripts/nko/block#char07E0">[<span class="uname">U+07E0 NKO LETTER NA WOLOSO</span>]</a></span> and <span class="codepoint"><span lang="nqo" dir="rtl">&#x07E7;</span> <a href="/scripts/nko/block#char07E7">[<span class="uname">U+07E7 NKO LETTER NYA WOLOSO</span>]</a></span> are used where allophonic variants of <span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07DF;</bdi> [<a href="/scripts/nko/block#char07DF"><span class="uname">U+07DF NKO LETTER LA</span></a>]</span> and <span class="codepoint" translate="no"><bdi lang="nqo" dir="rtl">&#x07E6;</bdi> [<a href="/scripts/nko/block#char07E6"><span class="uname">U+07E6 NKO LETTER YA</span></a>]</span> after a nasal or nasalisation produce the sounds <span class="ipa">n</span> and <span class="ipa">ɲ</span>, respectively, either word-internally or across word boundaries.<tt>u</tt>  They are generally transcribed using <span class="transc">n</span> and <span class="transc">y</span>, respectively<tt>cd,xviii</tt>.</p>
+</section>
+  
+  
+  
+  
+  
+  
+<section id="transliteration">
+<h3>Consonant repertoire extension</h3>
+
+<p>Three diacritics, two of them tone markers, are used to represent foreign sounds (particularly Arabic and French) in conjunction with existing N’Ko letters, eg. <span class="charExample inline" translate="no"><span class="ex" lang="nqo" dir="rtl">ߛ߳</span> <span class="trans">sx̣</span></span> represents the <span class="ipa">θ</span> sound of the Arabic letter <span lang="ar" dir="rtl">ث</span>.<tt>u</tt></p>
+
+<figure class="otherBox auto"  data-cols="ipa,trans,transc">ߓ߭␣ߕ߭␣ߙ߳␣ߘ߭␣ߜ߳␣ߜ߭␣ߞ߫</figure>
+<figure class="otherBox auto"  data-cols="ipa,trans,transc">ߝ߭␣ߛ߳␣ߗ߭␣ߛ߫␣ߖ߭␣ߖ߳␣ߛ߭␣ߜ߫␣ߞ߭␣ߤ߭</figure>
+<figure class="otherBox auto"  data-cols="ipa,trans,transc">ߡ߭␣ߢ߭</figure>
+<figure class="otherBox auto"  data-cols="ipa,trans,transc">ߟ߭␣ߦ߭␣ߙ߭</figure>
+
+
+
+<p>The diacritics used are &nbsp;<span class="codepoint"><span lang="nqo" dir="rtl">&#x07EB;</span> <a href="/scripts/nko/block#char07EB">[<span class="uname">U+07EB NKO COMBINING SHORT HIGH TONE​</span>]</a></span>, &nbsp;<span class="codepoint"><span lang="nqo" dir="rtl">&#x07ED;</span> <a href="/scripts/nko/block#char07ED">[<span class="uname">U+07ED NKO COMBINING SHORT RISING TONE​</span>]</a></span>, or &nbsp;<span class="codepoint"><span lang="nqo" dir="rtl">&#x07F3;</span> <a href="/scripts/nko/block#char07F3">[<span class="uname">U+07F3 NKO COMBINING DOUBLE DOT ABOVE​</span>]</a></span>.</p>
+<p>For example, <span class="eg" lang="nqo" dir="rtl">ߓߐߗ߭ߎߙ. ߓߌߢߍ߲ ߝ߭ߋߣߎ߳.</span></p>
+</section>
+ 
+
+
+
+  
+<section id="consonant_clusters">
+<h3>Consonant clusters</h3>
+
+<p>Adjacent consonants with no intervening vowel sound are indicated using <span class="codepoint"><span lang="nqo" dir="rtl">&#x07D1;</span> <a href="/scripts/nko/block#char07D1">[<span class="uname">U+07D1 NKO LETTER DAGBASINNA</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">ߓߟߏ</span> <span class="trans">blo</span> <span class="ipa">bolo</span></span> is pronounced with the vowel after the first letter, even though none is present, because of the rule explained above. To show that this should be pronounced without the vowel you need <tt>u</tt><span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">ߓߑߟߏ</span> <span class="trans">bˣlo</span> <span class="ipa">blo</span></span></p>
+<p>See <a class="secref">absence</a>.</p>
+</section>
+ 
+  
+  
+  
+  
+  
+<section id="archaic_consonants">
+<h3>Archaic consonants</h3>
+
+<figure class="archaicBox auto"  data-cols="">ߨ␣ߩ␣ߪ</figure>
+
+<div class="btw">
+<p>The Unicode Standard lists 3 consonants that are archaic forms of other characters in the N’Ko block. The new shapes were only introduced in the latter writings of the inventor of the script, Solomana Kante. (Their inclusion in the block generated some controversy.<tt>ya</tt><tt>ec</tt>)</p>
+<table>
+<tr><th>Archaic form</th><th>Modern form</th></tr>
+<tr><td><span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07E8;</span> [<a href="/scripts/nko/block#char07E8"><span class="uname">U+07E8 NKO LETTER JONA JA</span></a>]</span></td><td><span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07D6;</span> [<a href="/scripts/nko/block#char07D6"><span class="uname">U+07D6 NKO LETTER JA</span></a>]</span></td></tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07E9;</span> [<a href="/scripts/nko/block#char07E9"><span class="uname">U+07E9 NKO LETTER JONA CHA</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07D7;</span> [<a href="/scripts/nko/block#char07D7"><span class="uname">U+07D7 NKO LETTER CHA</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07EA;</span> [<a href="/scripts/nko/block#char07EA"><span class="uname">U+07EA NKO LETTER JONA RA</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="nqo" dir="rtl">&#x07D9;</span> [<a href="/scripts/nko/block#char07D9"><span class="uname">U+07D9 NKO LETTER RA</span></a>]</span></td>
+</tr>
+</table>
 </div>
 </section>
 </section>
