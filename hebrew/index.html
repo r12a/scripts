@@ -53,7 +53,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->21 December, 2021<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->1 March, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -252,7 +252,8 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 <div id="showTranscriptions">
-<div>Character lists show:</div>
+<details>
+<summary>Items to show in lists</summary>
 <div><label>Codepoint <input type="checkbox" onChange="toggleTranscription('listUnum', this.checked)" checked/></label></div>
 <div><label>IPA <input type="checkbox" onChange="toggleTranscription('listIPA', this.checked)" checked/></label></div>
 <div><label>Israeli Academy 
@@ -260,6 +261,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <div>
 <label>Transliteration 
 <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
+</details>
 </div>
 
 
@@ -543,65 +545,6 @@ alveolar</th>
 <p>Hebrew has diacritics that can be used to express short vowel sounds, but  rarely uses them in normal text. Hebrew readers are usually able to understand the pronunciation from the context and the regular structure of Hebrew words.</p>
 <p>Certain consonant letters, referred to as <span class="name">matres lectionis</span>, may indicate the location of vowels in pointed and unpointed text.</p>
 
-<p class="instructions">Click on the characters in the lists for detailed information. For a mapping of sounds to graphemes see <a class="secref">vowel_mappings</a>.</p>
-
-
-
-
-<section id="niqqud">
-<h3>Niqqud points</h3>
-<p>A series of points, known as <span class="name">niqqud</span>, can be used to give precision about vowel sounds. They are rarely used outside of educational, children's, and religious texts, or for foreign or ambiguous words.</p>
-
-<figure>
-<img src="images/niqqud.png" alt="אָלֶף־בֵּית עִבְרִי" data-notes="72px Noto Serif Hebrew" class="ex" lang="he">
-<figcaption>'Hebrew alphabet', <span class="ipa">alef-bet ivri</span>, spelled out using diacritic points.</figcaption>
-</figure>
-
-<p>These are the niqqud used for modern Hebrew.</p>
-
-<figure class="characterBox auto" data-cols="ipa,trans">ִ␣ֻ␣ֵ␣ֶ␣ֱ␣ֹ␣ֳ␣ְ␣ָ␣ַ␣ֲ</figure>
-
-<p>Redundancy arises because the modern orthography retains alternative points that in the past expressed length differences. Modern Israeli Hebrew pronunciation ignores  phonetic length.</p>
-<div class="infoIcon"><img src="../../shared/images/info.png" alt="ℹ"></div>
-<p>Three of the above code points  have glyphs that combine <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05B0;</span> [<a href="/scripts/hebrew/block#char05B0"><span class="uname">U+05B0 HEBREW POINT SHEVA</span></a>]</span> (<span class="name">sh'va</span>) and another point (used to indicate shortened lengths in older Hebrew). A single Unicode code point  (that doesn't decompose during normalisation) is used for each of these combinations. Authors should not attach multiple vowel code points to a single consonant letter.</p>
-</section>
-
-
-
-
-
-
-<section id="matres">
-<h3>Matres lectionis</h3>
-<p id="def-materlectionis" class="explanatoryintro definitionStub"></p>
-
-<p>Hebrew uses the following consonant letters to indicate the location of a vowel.</p>
-
-<figure class="characterBox auto" data-cols="trans,transc" data-ipa="∅,∅,u,i">א␣ע␣ו␣י</figure>
-
-<p>The first two are silent vowel supports, whereas the second two are considered to be part of the vowel.</p>
-<p>There is a trend in Modern Hebrew towards the use of matres lectionis to indicate vowels that have traditionally gone unwritten, a practice known as <q>full spelling</q>.<tt>ws</tt></p>
-</section>
- 
-
-
-
-<section id="vowelabsence">
-<h3>Vowel absence</h3>
-
-<!--p>To express an absence of vowel between two consonants, in pointed text  <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05B0;</span> [<span class="uname">U+05B0 HEBREW POINT SHEVA</span>]</span> is sometimes used. However, <a href="https://en.wikipedia.org/wiki/Shva#Pronunciation_in_modern_Hebrew">in various contexts</a> the <span class="name">sh'va</span> is pronounced.</p-->
-<p>In pointed text, <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05B0;</span> &nbsp; [<a href="/scripts/hebrew/block#char05B0"><span class="uname">U+05B0 HEBREW POINT SHEVA</span></a>]</span> may be used to express an absence of vowel between two consonants. However, <a href="https://en.wikipedia.org/wiki/Shva#Pronunciation_in_modern_Hebrew">in various other contexts</a> this <span class="name">sh'va</span> is pronounced.</p>
-</section>
-
-
-
-
- 
-<section id="independentvowels">
-<h3>Standalone vowels</h3>
-<p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
-<p>Word-initial vowels that are not preceded by a consonant sound are  represented by, or written in conjunction with, <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D0;</span> [<a href="/scripts/hebrew/block#char05D0"><span class="uname">U+05D0 HEBREW LETTER ALEF</span></a>]</span> or <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E2;</span> [<a href="/scripts/hebrew/block#char05E2"><span class="uname">U+05E2 HEBREW LETTER AYIN</span></a>]</span>.</p>
-</section>
 
 
 
@@ -609,7 +552,12 @@ alveolar</th>
 
 <section id="vowel_mappings">
 <h3>Vowel to script mapping</h3>
-<p>The following tables show how Hebrew  vowel sounds commonly map to characters or sequences of characters in <em>pointed text</em>. </p>
+
+
+<p class="instructions">This section maps Hebrew vowel sounds to common graphemes in the Hebrew orthography, in pointed text. Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
+<p class="instructions">Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, etc.</p>
+
+
 
 
 
@@ -687,8 +635,8 @@ alveolar</th>
 <section id="diphthong_map">
 <h4>Diphthongs</h4>
 <div id="map_hmiddiphthongs" class="map">
-<div class="mapItem">
-<div class="uncommon"><span class="ipa">ij</span></div>
+<div class="mapItem uncommon">
+<div class="phone"><span class="ipa">ij</span></div>
 <div class="posn"></div>
 <div>
 <p><span class="codepoint" translate="no"><bdi lang="he" dir="rtl">&#x05B4;&#x05D9;&#x05B0;</bdi> [<a href="/scripts/hebrew/block#char05B4"><span class="uname">U+05B4 HEBREW POINT HIRIQ</span></a> + <a href="/scripts/hebrew/block#char05D9"><span class="uname">U+05D9 HEBREW LETTER YOD</span></a> + <a href="/scripts/hebrew/block#char05B0"><span class="uname">U+05B0 HEBREW POINT SHEVA</span></a>]</span></p>
@@ -701,8 +649,8 @@ alveolar</th>
 <p><span class="codepoint" translate="no"><bdi lang="he" dir="rtl">&#x05D9;&#x05D5;</bdi> [<a href="/scripts/hebrew/block#char05D9"><span class="uname">U+05D9 HEBREW LETTER YOD</span></a> + <a href="/scripts/hebrew/block#char05D5"><span class="uname">U+05D5 HEBREW LETTER VAV</span></a></span></p>
 </div>
 </div>
-<div class="mapItem">
-<div class="uncommon"><span class="ipa">ui</span></div>
+<div class="mapItem uncommon">
+<div class="phone"><span class="ipa">ui</span></div>
 <div class="posn"></div>
 <div>
 <p><span class="codepoint" translate="no"><bdi lang="he" dir="rtl">&#x05D5;&#x05BC;&#x05D9;</bdi> [<a href="/scripts/hebrew/block#char05D5"><span class="uname">U+05D5 HEBREW LETTER VAV</span></a> + <a href="/scripts/hebrew/block#char05BC"><span class="uname">U+05BC HEBREW POINT DAGESH OR MAPIQ</span></a> + <a href="/scripts/hebrew/block#char05D9"><span class="uname">U+05D9 HEBREW LETTER YOD</span></a>]</span></p>
@@ -731,8 +679,8 @@ alveolar</th>
 <p><span class="codepoint" translate="no"><bdi lang="he" dir="rtl">&#x05B8;&#x05D9;</bdi> [<a href="/scripts/hebrew/block#char05B8"><span class="uname">U+05B8 HEBREW POINT QAMATS</span></a> + <a href="/scripts/hebrew/block#char05D9"><span class="uname">U+05D9 HEBREW LETTER YOD</span></a>]</span>&nbsp;</p>
 </div>
 </div>
-<div class="mapItem">
-<div class="uncommon"><span class="ipa">ao</span></div>
+<div class="mapItem uncommon">
+<div class="phone"><span class="ipa">ao</span></div>
 <div class="posn"></div>
 <div>
 <p><span class="codepoint" translate="no"><bdi lang="he" dir="rtl">&#x05D0;&#x05D5;&#x200E;</bdi> [<a href="/scripts/hebrew/block#char05D0"><span class="uname">U+05D0 HEBREW LETTER ALEF</span></a> + <a href="/scripts/hebrew/block#char05D5"><span class="uname">U+05D5 HEBREW LETTER VAV</span></a> + <a href="/scripts/hebrew/block#char200E"><span class="uname">U+200E LEFT-TO-RIGHT MARK</span></a>]</span></p>
@@ -740,6 +688,68 @@ alveolar</th>
 </div>
 </div>
 </section>
+</section>
+
+
+
+
+
+
+
+
+<section id="niqqud">
+<h3>Niqqud points</h3>
+<p>A series of points, known as <span class="name">niqqud</span>, can be used to give precision about vowel sounds. They are rarely used outside of educational, children's, and religious texts, or for foreign or ambiguous words.</p>
+
+<figure>
+<img src="images/niqqud.png" alt="אָלֶף־בֵּית עִבְרִי" data-notes="72px Noto Serif Hebrew" class="ex" lang="he">
+<figcaption>'Hebrew alphabet', <span class="ipa">alef-bet ivri</span>, spelled out using diacritic points.</figcaption>
+</figure>
+
+<p>These are the niqqud used for modern Hebrew.</p>
+
+<figure class="characterBox auto" data-cols="ipa,trans">ִ␣ֻ␣ֵ␣ֶ␣ֱ␣ֹ␣ֳ␣ְ␣ָ␣ַ␣ֲ</figure>
+
+<p>Redundancy arises because the modern orthography retains alternative points that in the past expressed length differences. Modern Israeli Hebrew pronunciation ignores  phonetic length.</p>
+<div class="infoIcon"><img src="../../shared/images/info.png" alt="ℹ"></div>
+<p>Three of the above code points  have glyphs that combine <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05B0;</span> [<a href="/scripts/hebrew/block#char05B0"><span class="uname">U+05B0 HEBREW POINT SHEVA</span></a>]</span> (<span class="name">sh'va</span>) and another point (used to indicate shortened lengths in older Hebrew). A single Unicode code point  (that doesn't decompose during normalisation) is used for each of these combinations. Authors should not attach multiple vowel code points to a single consonant letter.</p>
+</section>
+
+
+
+
+
+
+<section id="matres">
+<h3>Matres lectionis</h3>
+<p id="def-materlectionis" class="explanatoryintro definitionStub"></p>
+
+<p>Hebrew uses the following consonant letters to indicate the location of a vowel.</p>
+
+<figure class="characterBox auto" data-cols="trans,transc" data-ipa="∅,∅,u,i">א␣ע␣ו␣י</figure>
+
+<p>The first two are silent vowel supports, whereas the second two are considered to be part of the vowel.</p>
+<p>There is a trend in Modern Hebrew towards the use of matres lectionis to indicate vowels that have traditionally gone unwritten, a practice known as <q>full spelling</q>.<tt>ws</tt></p>
+</section>
+ 
+
+
+
+<section id="vowelabsence">
+<h3>Vowel absence</h3>
+
+<!--p>To express an absence of vowel between two consonants, in pointed text  <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05B0;</span> [<span class="uname">U+05B0 HEBREW POINT SHEVA</span>]</span> is sometimes used. However, <a href="https://en.wikipedia.org/wiki/Shva#Pronunciation_in_modern_Hebrew">in various contexts</a> the <span class="name">sh'va</span> is pronounced.</p-->
+<p>In pointed text, <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05B0;</span> &nbsp; [<a href="/scripts/hebrew/block#char05B0"><span class="uname">U+05B0 HEBREW POINT SHEVA</span></a>]</span> may be used to express an absence of vowel between two consonants. However, <a href="https://en.wikipedia.org/wiki/Shva#Pronunciation_in_modern_Hebrew">in various other contexts</a> this <span class="name">sh'va</span> is pronounced.</p>
+</section>
+
+
+
+
+ 
+<section id="independentvowels">
+<h3>Standalone vowels</h3>
+<p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
+<p>Word-initial vowels that are not preceded by a consonant sound are  represented by, or written in conjunction with, <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D0;</span> [<a href="/scripts/hebrew/block#char05D0"><span class="uname">U+05D0 HEBREW LETTER ALEF</span></a>]</span> or <span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E2;</span> [<a href="/scripts/hebrew/block#char05E2"><span class="uname">U+05E2 HEBREW LETTER AYIN</span></a>]</span>.</p>
 </section>
 </section>
 
@@ -754,7 +764,286 @@ alveolar</th>
 <h2>Consonants</h2>
 
 
-<p class="instructions">Click on the characters in the lists for detailed information. For a mapping of sounds to graphemes see <a class="secref">consonant_mappings</a>.</p>
+
+<section id="consonant_mappings">
+<h3>Consonant to script mapping</h3>
+
+
+<p class="instructions">This section maps Hebrew consonant sounds to common graphemes in the Hebrew orthography. Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
+
+<p class="instructions">Sounds listed as 'infrequent' are allophones, or sounds used for foreign words, etc.</p>
+
+
+
+
+<section id="stops">
+<h4>Stops</h4>
+<div id="map_plosives" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">p</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E4;</span> [<a href="/scripts/hebrew/block#char05E4"><span class="uname">U+05E4 HEBREW LETTER PE</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">שופ</span>, or</p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E4;&#x05BC;</span> [<a href="/scripts/hebrew/block#char05E4"><span class="uname">U+05E4 HEBREW LETTER PE</span></a> + <a href="/scripts/hebrew/block#char05BC"><span class="uname">U+05BC HEBREW POINT DAGESH OR MAPIQ</span></a>]</span> in pointed text.</p>
+</div>
+</div><div class="mapItem">
+<div class="phone"><span class="ipa">b</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D1;</span> [<a href="/scripts/hebrew/block#char05D1"><span class="uname">U+05D1 HEBREW LETTER BET</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">בן</span>, or</p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D1;&#x05BC;</span> [<a href="/scripts/hebrew/block#char05D1"><span class="uname">U+05D1 HEBREW LETTER BET</span></a> + <a href="/scripts/hebrew/block#char05BC"><span class="uname">U+05BC HEBREW POINT DAGESH OR MAPIQ</span></a>]</span> in pointed text.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">t</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D8;</span> [<a href="/scripts/hebrew/block#char05D8"><span class="uname">U+05D8 HEBREW LETTER TET</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">קט</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05EA;</span> [<a href="/scripts/hebrew/block#char05EA"><span class="uname">U+05EA HEBREW LETTER TAV</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">תות</span>.&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05EA;&#x05BC;</span> [<a href="/scripts/hebrew/block#char05EA"><span class="uname">U+05EA HEBREW LETTER TAV</span></a> + <a href="/scripts/hebrew/block#char05BC"><span class="uname">U+05BC HEBREW POINT DAGESH OR MAPIQ</span></a>]</span>.  Archaic spelling, still found sometimes in pointed text. (see previous example).</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">d</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D3;</span> [<a href="/scripts/hebrew/block#char05D3"><span class="uname">U+05D3 HEBREW LETTER DALET</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">דוד</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D3;&#x05BC;</span> [<a href="/scripts/hebrew/block#char05D3"><span class="uname">U+05D3 HEBREW LETTER DALET</span></a> + <a href="/scripts/hebrew/block#char05BC"><span class="uname">U+05BC HEBREW POINT DAGESH OR MAPIQ</span></a>]</span>. Archaic spelling, still found sometimes in pointed text.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">k</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E7;</span> [<a href="/scripts/hebrew/block#char05E7"><span class="uname">U+05E7 HEBREW LETTER QOF</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">קול</span>.&nbsp;</p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05DB;</span> [<a href="/scripts/hebrew/block#char05DB"><span class="uname">U+05DB HEBREW LETTER KAF</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">הכה</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05DB;&#x05BC;</span> [<a href="/scripts/hebrew/block#char05DB"><span class="uname">U+05DB HEBREW LETTER KAF</span></a> + <a href="/scripts/hebrew/block#char05BC"><span class="uname">U+05BC HEBREW POINT DAGESH OR MAPIQ</span></a>]</span> in pointed text, eg. <span class="eg" lang="he" dir="rtl">הִכָּה</span></p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05DA;&#x05BC;</span> [<a href="/scripts/hebrew/block#char05DA"><span class="uname">U+05DA HEBREW LETTER FINAL KAF</span></a> + <a href="/scripts/hebrew/block#char05BC"><span class="uname">U+05BC HEBREW POINT DAGESH OR MAPIQ</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">ממּךּ</span>. Rare, final form.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ɡ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D2;</span> [<a href="/scripts/hebrew/block#char05D2"><span class="uname">U+05D2 HEBREW LETTER GIMEL</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">גג</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">גּ</span> [<a href="/scripts/hebrew/block#char05D2"><span class="uname">U+05D2 HEBREW LETTER GIMEL</span></a>]</span>. Archaic spelling, still sometimes used in pointed text (see previous example).</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʔ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E2;</span> [<a href="/scripts/hebrew/block#char05E2"><span class="uname">U+05E2 HEBREW LETTER AYIN</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">מועיל</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D0;</span> [<a href="/scripts/hebrew/block#char05D0"><span class="uname">U+05D0 HEBREW LETTER ALEF</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">שאל</span>.</p>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+<section id="afficates">
+<h4>Affricates</h4>
+<div id="map_affricates" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">t͡s</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E6;</span> [<a href="/scripts/hebrew/block#char05E6"><span class="uname">U+05E6 HEBREW LETTER TSADI</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">ציץ</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E5;</span> [<a href="/scripts/hebrew/block#char05E5"><span class="uname">U+05E5 HEBREW LETTER FINAL TSADI</span></a>]</span>. Word-final form.</p>
+</div>
+</div>
+<div class="mapItem uncommon">
+<div class="phone"><span class="ipa">t͡ʃ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E6;&#x05F3;</span> [<a href="/scripts/hebrew/block#char05E6"><span class="uname">U+05E6 HEBREW LETTER TSADI</span></a> + <a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">ריצ׳רץ׳</span>. Used in loanwords and slang.</p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E5;&#x05F3;</span> [<a href="/scripts/hebrew/block#char05E5"><span class="uname">U+05E5 HEBREW LETTER FINAL TSADI</span></a> + <a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]. Final form.</span>&nbsp;</p>
+</div>
+</div>
+<div class="mapItem uncommon">
+<div class="phone"><span class="ipa">d͡ʒ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D2;&#x05F3;</span> [<a href="/scripts/hebrew/block#char05D2"><span class="uname">U+05D2 HEBREW LETTER GIMEL</span></a> + <a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">ג׳וּק</span>. Used in loanwords and slang.</p>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+<section id="fricatives">
+<h4>Fricatives</h4>
+<div id="map_fricatives" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">f</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E4;</span> [<a href="/scripts/hebrew/block#char05E4"><span class="uname">U+05E4 HEBREW LETTER PE</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">פיספס</span>.</p>
+<p><span class="codepoint" translate="no"><bdi lang="he" dir="rtl">&#x05E3;</bdi> 
+[<a href="/scripts/hebrew/block#char05E3"><span class="uname">U+05E3 HEBREW LETTER FINAL PE</span></a>]</span> in word-final position, eg. <span class="eg" lang="he">כנף</span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">v</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D1;</span> [<a href="/scripts/hebrew/block#char05D1"><span class="uname">U+05D1 HEBREW LETTER BET</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">טוב</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D5;</span> [<a href="/scripts/hebrew/block#char05D5"><span class="uname">U+05D5 HEBREW LETTER VAV</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">וו</span>.&nbsp;</p>
+</div>
+</div>
+<div class="mapItem uncommon">
+<div class="phone"><span class="ipa">θ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p>Foreign sound.</p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05EA;&#x05F3;</span> [<a href="/scripts/hebrew/block#char05EA"><span class="uname">U+05EA HEBREW LETTER TAV</span></a> + <a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">ת׳רסטון</span>.</p>
+</div>
+</div>
+<div class="mapItem uncommon">
+<div class="phone"><span class="ipa">ð</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p>Foreign sound.</p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D3;&#x05F3;</span> [<a href="/scripts/hebrew/block#char05D3"><span class="uname">U+05D3 HEBREW LETTER DALET</span></a> + <a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">ד׳ו אל-חיג׳ה</span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">s</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E1;</span> [<a href="/scripts/hebrew/block#char05E1"><span class="uname">U+05E1 HEBREW LETTER SAMEKH</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">סוף</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E9;</span> [<a href="/scripts/hebrew/block#char05E9"><span class="uname">U+05E9 HEBREW LETTER SHIN</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">שם</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E9;&#x05C2;</span> [<a href="/scripts/hebrew/block#char05E9"><span class="uname">U+05E9 HEBREW LETTER SHIN</span></a> + <a href="/scripts/hebrew/block#char05C2"><span class="uname">U+05C2 HEBREW POINT SIN DOT</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">שָׂם</span>. Explicit form, used in pointed text to distinguish from <span class="ipa">ʃ</span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">z</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D6;</span> [<a href="/scripts/hebrew/block#char05D6"><span class="uname">U+05D6 HEBREW LETTER ZAYIN</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">זה</span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʃ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E9;</span> [<a href="/scripts/hebrew/block#char05E9"><span class="uname">U+05E9 HEBREW LETTER SHIN</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">שם</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E9;&#x05C1;</span> [<a href="/scripts/hebrew/block#char05E9"><span class="uname">U+05E9 HEBREW LETTER SHIN</span></a> + <a href="/scripts/hebrew/block#char05C1"><span class="uname">U+05C1 HEBREW POINT SHIN DOT</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">שָׁם</span>. Explicit form, used in pointed text to distinguish from <span class="ipa">s</span>.</p>
+</div>
+</div>
+<div class="mapItem uncommon">
+<div class="phone"><span class="ipa">ʒ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D6;&#x05F3;</span> [<a href="/scripts/hebrew/block#char05D6"><span class="uname">U+05D6 HEBREW LETTER ZAYIN</span></a> + <a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">ז׳רגון</span>. Used in loan words &amp; slang.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">χ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05DB;</span> [<a href="/scripts/hebrew/block#char05DB"><span class="uname">U+05DB HEBREW LETTER KAF</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">סכך</span>. </p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05DA;</span> [<a href="/scripts/hebrew/block#char05DA"><span class="uname">U+05DA HEBREW LETTER FINAL KAF</span></a>]</span> word finally.</p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D7;</span> [<a href="/scripts/hebrew/block#char05D7"><span class="uname">U+05D7 HEBREW LETTER HET</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">חם</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D7;&#x05F3;</span> [<a href="/scripts/hebrew/block#char05D7"><span class="uname">U+05D7 HEBREW LETTER HET</span></a> + <a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">שייח׳</span>. Used to indicate that this sound should be used rather than <span class="ipa">h</span> in non-Hebrew (esp. Arabic) text.&nbsp;</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">ʁ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E8;</span> [<a href="/scripts/hebrew/block#char05E8"><span class="uname">U+05E8 HEBREW LETTER RESH</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">עיר</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E8;&#x05F3;</span> [<a href="/scripts/hebrew/block#char05E8"><span class="uname">U+05E8 HEBREW LETTER RESH</span></a> + <a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">ר׳ג׳ר</span>. Explicitly indicates the sound for Arabic transliteration.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">h</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D4;</span> [<a href="/scripts/hebrew/block#char05D4"><span class="uname">U+05D4 HEBREW LETTER HE</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">הד</span>.</p>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+<section id="nasals">
+<h4>Nasals</h4>
+<div id="map_nasals" class="map">
+<div class="mapItem">
+<div class="phone"><span class="ipa">m</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05DE;</span> [<a href="/scripts/hebrew/block#char05DE"><span class="uname">U+05DE HEBREW LETTER MEM</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">מוּם</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05DD;</span> [<a href="/scripts/hebrew/block#char05DD"><span class="uname">U+05DD HEBREW LETTER FINAL MEM</span></a>]</span>. Word-final form.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">n</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E0;</span> [<a href="/scripts/hebrew/block#char05E0"><span class="uname">U+05E0 HEBREW LETTER NUN</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">נין</span>.</p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05DF;</span> [<a href="/scripts/hebrew/block#char05DF"><span class="uname">U+05DF HEBREW LETTER FINAL NUN</span></a>]</span>. Word-final form.</p>
+</div>
+</div>
+<div class="mapItem uncommon">
+<div class="phone"><span class="ipa">ŋɡ</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><bdi lang="he" dir="rtl">&#x05E0;&#x05D2;</bdi> 
+[<a href="/scripts/hebrew/block#char05E0"><span class="uname">U+05E0 HEBREW LETTER NUN</span></a> + <a href="/scripts/hebrew/block#char05D2"><span class="uname">U+05D2 HEBREW LETTER GIMEL</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">אנגלית</span>.</p>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+<section id="sonorants">
+<h4>Other</h4>
+<div id="map_liquids" class="map">
+<div class="mapItem uncommon">
+<div class="phone"><span class="ipa">w</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D5;ו</span> [<a href="/scripts/hebrew/block#char05D5"><span class="uname">U+05D5 HEBREW LETTER VAV</span></a> + <a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">אוטווה</span>. Non-standard orthography.</p>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D5;&#x05F3;</span> [<a href="/scripts/hebrew/block#char05D5"><span class="uname">U+05D5 HEBREW LETTER VAV</span></a> + <a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]</span> Non-standard orthography (not common), eg. <span class="eg" lang="he" dir="rtl">ו׳יליאם</span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">l</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05DC;</span> [<a href="/scripts/hebrew/block#char05DC"><span class="uname">U+05DC HEBREW LETTER LAMED</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">לי</span>.</p>
+</div>
+</div>
+<div class="mapItem">
+<div class="phone"><span class="ipa">j</span></div>
+<div class="posn">&nbsp;</div>
+<div>
+<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D9;</span> [<a href="/scripts/hebrew/block#char05D9"><span class="uname">U+05D9 HEBREW LETTER YOD</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">ים</span>.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+
+
+
+
 
 
 
@@ -763,42 +1052,19 @@ alveolar</th>
 
 <p>These are the basic consonant letters used in modern Hebrew.</p>
 
-<section id="aleph_ayin">
-<h4>Aleph &amp; ayin</h4>
+
 <figure class="characterBox auto" data-cols="ipa,trans,transc">א␣ע</figure>
-</section>
 
-
-<section id="stops">
-<h4>Stops</h4>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ט␣ת␣ד␣ק␣ג</figure>
-</section>
 
-
-
-<section id="affricates">
-<h4>Affricate</h4>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">צ</figure>
-</section>
 
-
-
-<section id="fricatives">
-<h4>Fricatives</h4>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">פ␣ב␣ו␣ש␣ס␣ז␣ח␣כ␣ר␣ה</figure>
-</section>
 
-
-<section id="nasals">
-<h4>Nasals</h4>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">מ␣נ</figure>
-</section>
 
-
-<section id="liquids">
-<h4>Liquids</h4>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ל␣י</figure>
-</section>
+
 
 
 
@@ -885,256 +1151,6 @@ alveolar</th>
 <p>In Biblical and older Hebrew texts, many additional diacritics are  attached to the base character alongside the <span class="name">niqqud</span>. Nearly all of the following additional marks in the Hebrew Unicode block are cantillation marks, used to indicate how to chant ritual readings from the Hebrew Bible in synagogue services.</p>
 
 <figure class="otherBox auto noindex" data-cols="">֑␣֒␣֓␣֔␣֕␣֖␣֗␣֘␣֙␣֚␣֛␣֜␣֝␣֞␣֟␣֠␣֡␣֢␣֣␣֤␣֥␣֦␣֧␣֨␣֩␣֪␣֫␣֬␣֭␣֮␣֯␣ֺ␣ֽ␣ֿ␣ׄ␣ׅ␣ׇ</figure>
-</div>
-</section>
-
-
-
-
-
-<section id="consonant_mappings">
-<h3>Consonant to script mapping</h3>
-<p>The following tables show how the above consonant sounds commonly map to  characters or sequences of characters. </p>
-
-<div id="map_plosives" class="map">
-<div class="mapItem">
-<div class="phone"><span class="ipa">p</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E4;</span> [<a href="/scripts/hebrew/block#char05E4"><span class="uname">U+05E4 HEBREW LETTER PE</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">שופ</span>, or</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E4;&#x05BC;</span> [<a href="/scripts/hebrew/block#char05E4"><span class="uname">U+05E4 HEBREW LETTER PE</span></a> + <a href="/scripts/hebrew/block#char05BC"><span class="uname">U+05BC HEBREW POINT DAGESH OR MAPIQ</span></a>]</span> in pointed text.</p>
-</div>
-</div><div class="mapItem">
-<div class="phone"><span class="ipa">b</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D1;</span> [<a href="/scripts/hebrew/block#char05D1"><span class="uname">U+05D1 HEBREW LETTER BET</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">בן</span>, or</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D1;&#x05BC;</span> [<a href="/scripts/hebrew/block#char05D1"><span class="uname">U+05D1 HEBREW LETTER BET</span></a> + <a href="/scripts/hebrew/block#char05BC"><span class="uname">U+05BC HEBREW POINT DAGESH OR MAPIQ</span></a>]</span> in pointed text.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">t</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D8;</span> [<a href="/scripts/hebrew/block#char05D8"><span class="uname">U+05D8 HEBREW LETTER TET</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">קט</span>.</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05EA;</span> [<a href="/scripts/hebrew/block#char05EA"><span class="uname">U+05EA HEBREW LETTER TAV</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">תות</span>.&nbsp;</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05EA;&#x05BC;</span> [<a href="/scripts/hebrew/block#char05EA"><span class="uname">U+05EA HEBREW LETTER TAV</span></a> + <a href="/scripts/hebrew/block#char05BC"><span class="uname">U+05BC HEBREW POINT DAGESH OR MAPIQ</span></a>]</span>.  Archaic spelling, still found sometimes in pointed text. (see previous example).</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">d</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D3;</span> [<a href="/scripts/hebrew/block#char05D3"><span class="uname">U+05D3 HEBREW LETTER DALET</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">דוד</span>.</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D3;&#x05BC;</span> [<a href="/scripts/hebrew/block#char05D3"><span class="uname">U+05D3 HEBREW LETTER DALET</span></a> + <a href="/scripts/hebrew/block#char05BC"><span class="uname">U+05BC HEBREW POINT DAGESH OR MAPIQ</span></a>]</span>. Archaic spelling, still found sometimes in pointed text.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">k</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E7;</span> [<a href="/scripts/hebrew/block#char05E7"><span class="uname">U+05E7 HEBREW LETTER QOF</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">קול</span>.&nbsp;</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05DB;</span> [<a href="/scripts/hebrew/block#char05DB"><span class="uname">U+05DB HEBREW LETTER KAF</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">הכה</span>.</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05DB;&#x05BC;</span> [<a href="/scripts/hebrew/block#char05DB"><span class="uname">U+05DB HEBREW LETTER KAF</span></a> + <a href="/scripts/hebrew/block#char05BC"><span class="uname">U+05BC HEBREW POINT DAGESH OR MAPIQ</span></a>]</span> in pointed text, eg. <span class="eg" lang="he" dir="rtl">הִכָּה</span></p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05DA;&#x05BC;</span> [<a href="/scripts/hebrew/block#char05DA"><span class="uname">U+05DA HEBREW LETTER FINAL KAF</span></a> + <a href="/scripts/hebrew/block#char05BC"><span class="uname">U+05BC HEBREW POINT DAGESH OR MAPIQ</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">ממּךּ</span>. Rare, final form.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">ɡ</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D2;</span> [<a href="/scripts/hebrew/block#char05D2"><span class="uname">U+05D2 HEBREW LETTER GIMEL</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">גג</span>.</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">גּ</span> [<a href="/scripts/hebrew/block#char05D2"><span class="uname">U+05D2 HEBREW LETTER GIMEL</span></a>]</span>. Archaic spelling, still sometimes used in pointed text (see previous example).</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">ʔ</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E2;</span> [<a href="/scripts/hebrew/block#char05E2"><span class="uname">U+05E2 HEBREW LETTER AYIN</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">מועיל</span>.</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D0;</span> [<a href="/scripts/hebrew/block#char05D0"><span class="uname">U+05D0 HEBREW LETTER ALEF</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">שאל</span>.</p>
-</div>
-</div>
-</div>
-
-
-
-<div id="map_affricates" class="map">
-<div class="mapItem">
-<div class="phone"><span class="ipa">t͡s</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E6;</span> [<a href="/scripts/hebrew/block#char05E6"><span class="uname">U+05E6 HEBREW LETTER TSADI</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">ציץ</span>.</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E5;</span> [<a href="/scripts/hebrew/block#char05E5"><span class="uname">U+05E5 HEBREW LETTER FINAL TSADI</span></a>]</span>. Word-final form.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="uncommon"><span class="ipa">t͡ʃ</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E6;&#x05F3;</span> [<a href="/scripts/hebrew/block#char05E6"><span class="uname">U+05E6 HEBREW LETTER TSADI</span></a> + <a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">ריצ׳רץ׳</span>. Used in loanwords and slang.</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E5;&#x05F3;</span> [<a href="/scripts/hebrew/block#char05E5"><span class="uname">U+05E5 HEBREW LETTER FINAL TSADI</span></a> + <a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]. Final form.</span>&nbsp;</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="uncommon"><span class="ipa">d͡ʒ</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D2;&#x05F3;</span> [<a href="/scripts/hebrew/block#char05D2"><span class="uname">U+05D2 HEBREW LETTER GIMEL</span></a> + <a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">ג׳וּק</span>. Used in loanwords and slang.</p>
-</div>
-</div>
-</div>
-
-
-
-
-
-<div id="map_fricatives" class="map">
-<div class="mapItem">
-<div class="phone"><span class="ipa">f</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E4;</span> [<a href="/scripts/hebrew/block#char05E4"><span class="uname">U+05E4 HEBREW LETTER PE</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">פיספס</span>.</p>
-<p><span class="codepoint" translate="no"><bdi lang="he" dir="rtl">&#x05E3;</bdi> 
-[<a href="/scripts/hebrew/block#char05E3"><span class="uname">U+05E3 HEBREW LETTER FINAL PE</span></a>]</span> in word-final position, eg. <span class="eg" lang="he">כנף</span>.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">v</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D1;</span> [<a href="/scripts/hebrew/block#char05D1"><span class="uname">U+05D1 HEBREW LETTER BET</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">טוב</span>.</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D5;</span> [<a href="/scripts/hebrew/block#char05D5"><span class="uname">U+05D5 HEBREW LETTER VAV</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">וו</span>.&nbsp;</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="uncommon"><span class="ipa">θ</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p>Foreign sound.</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05EA;&#x05F3;</span> [<a href="/scripts/hebrew/block#char05EA"><span class="uname">U+05EA HEBREW LETTER TAV</span></a> + <a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">ת׳רסטון</span>.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="uncommon"><span class="ipa">ð</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p>Foreign sound.</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D3;&#x05F3;</span> [<a href="/scripts/hebrew/block#char05D3"><span class="uname">U+05D3 HEBREW LETTER DALET</span></a> + <a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">ד׳ו אל-חיג׳ה</span>.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">s</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E1;</span> [<a href="/scripts/hebrew/block#char05E1"><span class="uname">U+05E1 HEBREW LETTER SAMEKH</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">סוף</span>.</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E9;</span> [<a href="/scripts/hebrew/block#char05E9"><span class="uname">U+05E9 HEBREW LETTER SHIN</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">שם</span>.</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E9;&#x05C2;</span> [<a href="/scripts/hebrew/block#char05E9"><span class="uname">U+05E9 HEBREW LETTER SHIN</span></a> + <a href="/scripts/hebrew/block#char05C2"><span class="uname">U+05C2 HEBREW POINT SIN DOT</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">שָׂם</span>. Explicit form, used in pointed text to distinguish from <span class="ipa">ʃ</span>.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">z</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D6;</span> [<a href="/scripts/hebrew/block#char05D6"><span class="uname">U+05D6 HEBREW LETTER ZAYIN</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">זה</span>.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">ʃ</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E9;</span> [<a href="/scripts/hebrew/block#char05E9"><span class="uname">U+05E9 HEBREW LETTER SHIN</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">שם</span>.</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E9;&#x05C1;</span> [<a href="/scripts/hebrew/block#char05E9"><span class="uname">U+05E9 HEBREW LETTER SHIN</span></a> + <a href="/scripts/hebrew/block#char05C1"><span class="uname">U+05C1 HEBREW POINT SHIN DOT</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">שָׁם</span>. Explicit form, used in pointed text to distinguish from <span class="ipa">s</span>.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="uncommon"><span class="ipa">ʒ</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D6;&#x05F3;</span> [<a href="/scripts/hebrew/block#char05D6"><span class="uname">U+05D6 HEBREW LETTER ZAYIN</span></a> + <a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">ז׳רגון</span>. Used in loan words &amp; slang.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">χ</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05DB;</span> [<a href="/scripts/hebrew/block#char05DB"><span class="uname">U+05DB HEBREW LETTER KAF</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">סכך</span>. </p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05DA;</span> [<a href="/scripts/hebrew/block#char05DA"><span class="uname">U+05DA HEBREW LETTER FINAL KAF</span></a>]</span> word finally.</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D7;</span> [<a href="/scripts/hebrew/block#char05D7"><span class="uname">U+05D7 HEBREW LETTER HET</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">חם</span>.</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D7;&#x05F3;</span> [<a href="/scripts/hebrew/block#char05D7"><span class="uname">U+05D7 HEBREW LETTER HET</span></a> + <a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">שייח׳</span>. Used to indicate that this sound should be used rather than <span class="ipa">h</span> in non-Hebrew (esp. Arabic) text.&nbsp;</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">ʁ</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E8;</span> [<a href="/scripts/hebrew/block#char05E8"><span class="uname">U+05E8 HEBREW LETTER RESH</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">עיר</span>.</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E8;&#x05F3;</span> [<a href="/scripts/hebrew/block#char05E8"><span class="uname">U+05E8 HEBREW LETTER RESH</span></a> + <a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">ר׳ג׳ר</span>. Explicitly indicates the sound for Arabic transliteration.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">h</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D4;</span> [<a href="/scripts/hebrew/block#char05D4"><span class="uname">U+05D4 HEBREW LETTER HE</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">הד</span>.</p>
-</div>
-</div>
-</div>
-
-
-
-<div id="map_nasals" class="map">
-<div class="mapItem">
-<div class="phone"><span class="ipa">m</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05DE;</span> [<a href="/scripts/hebrew/block#char05DE"><span class="uname">U+05DE HEBREW LETTER MEM</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">מוּם</span>.</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05DD;</span> [<a href="/scripts/hebrew/block#char05DD"><span class="uname">U+05DD HEBREW LETTER FINAL MEM</span></a>]</span>. Word-final form.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">n</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05E0;</span> [<a href="/scripts/hebrew/block#char05E0"><span class="uname">U+05E0 HEBREW LETTER NUN</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">נין</span>.</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05DF;</span> [<a href="/scripts/hebrew/block#char05DF"><span class="uname">U+05DF HEBREW LETTER FINAL NUN</span></a>]</span>. Word-final form.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="uncommon"><span class="ipa">ŋɡ</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><bdi lang="he" dir="rtl">&#x05E0;&#x05D2;</bdi> 
-[<a href="/scripts/hebrew/block#char05E0"><span class="uname">U+05E0 HEBREW LETTER NUN</span></a> + <a href="/scripts/hebrew/block#char05D2"><span class="uname">U+05D2 HEBREW LETTER GIMEL</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">אנגלית</span>.</p>
-</div>
-</div>
-</div>
-
-
-
-<div id="map_liquids" class="map">
-<div class="mapItem">
-<div class="uncommon"><span class="ipa">w</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D5;ו</span> [<a href="/scripts/hebrew/block#char05D5"><span class="uname">U+05D5 HEBREW LETTER VAV</span></a> + <a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">אוטווה</span>. Non-standard orthography.</p>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D5;&#x05F3;</span> [<a href="/scripts/hebrew/block#char05D5"><span class="uname">U+05D5 HEBREW LETTER VAV</span></a> + <a href="/scripts/hebrew/block#char05F3"><span class="uname">U+05F3 HEBREW PUNCTUATION GERESH</span></a>]</span> Non-standard orthography (not common), eg. <span class="eg" lang="he" dir="rtl">ו׳יליאם</span>.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">l</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05DC;</span> [<a href="/scripts/hebrew/block#char05DC"><span class="uname">U+05DC HEBREW LETTER LAMED</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">לי</span>.</p>
-</div>
-</div>
-<div class="mapItem">
-<div class="phone"><span class="ipa">j</span></div>
-<div class="posn">&nbsp;</div>
-<div>
-<p><span class="codepoint" translate="no"><span lang="he" dir="rtl">&#x05D9;</span> [<a href="/scripts/hebrew/block#char05D9"><span class="uname">U+05D9 HEBREW LETTER YOD</span></a>]</span>, eg. <span class="eg" lang="he" dir="rtl">ים</span>.</p>
-</div>
-</div>
 </div>
 </section>
 </section>
