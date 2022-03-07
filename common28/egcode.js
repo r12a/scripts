@@ -67,9 +67,19 @@ function addExamples (langFilter) {
 			//out += nodes[n].lang
 			//out += '"'
 			if (nodes[n].dir === 'rtl') out += ' dir="rtl"'
-			if (nodes[n].classList.contains('ipalist') && temp[6]) ipaBreakdown = temp[6]
+			//if (nodes[n].classList.contains('ipalist') && temp[6]) ipaBreakdown = temp[6]
+            
+            
+			if (temp[2]) ipaBreakdown = temp[2]
             else ipaBreakdown = ''
             out += `  onclick="showNameDetails('${ temp[0] }', '${ nodes[n].lang }', window.blockDir, 'c', document.getElementById('panel'), '', '', '${ ipaBreakdown }')"`
+           
+            
+            
+            
+			/*if (temp[6]) ipaBreakdown = temp[6]
+            else ipaBreakdown = ''
+            out += `  onclick="showNameDetails('${ temp[0] }', '${ nodes[n].lang }', window.blockDir, 'c', document.getElementById('panel'), '', '', '${ ipaBreakdown }')"`*/
 			out += '>'
 			out += temp[0]
 			out += '</span>'
@@ -88,7 +98,7 @@ function addExamples (langFilter) {
 			//if (! nodes[n].classList.contains('latn')) out += ' <bdi class="trans">xxx</bdi>'
             
 			var ipa = ''
-			if (temp[2]) ipa = temp[2]
+			if (temp[2]) ipa = temp[2].replace(/§/g,'').replace(/–/g,'')
 			
 			// alt/transcription
 			//if (temp[3] && nodes[n].classList.contains('transc')) {
