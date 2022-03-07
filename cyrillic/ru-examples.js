@@ -1,8 +1,8 @@
 autoExpandExamples.ru = `
 брат|brother|brat
 брать|to take|bratʲ
-за́мок|castle|ˈzamək
-замо́к|lock|zəˈmok
+за́мок|castle|ˈz§a.§m§ə§k
+замо́к|lock|z§ə.§ˈm§o§k
 туш|flourish after a toast|tuʂ
 тушь|india ink|tuʂ
 
@@ -35,7 +35,7 @@ autoExpandExamples.ru = `
 немно́гие|few|nʲɪˈmnogʲɪjɪ
 ма́ло|few|ˈmaɫə
 друго́й|other|druˈgoj
-ино́й|other|ɪˈnoj
+ино́й|other|ɪ.§ˈn§o§j
 оди́н|one|ʌˈdʲin
 два|two|dva
 три|three|trʲi
@@ -191,7 +191,7 @@ autoExpandExamples.ru = `
 ходи́ть|to walk|xʌˈdʲitʲ
 идти́|to walk|ɪˈtʲtʲi
 приходи́ть|to come|prʲɪxʌˈdʲitʲ
-прийти́|to come|prʲɪjˈtʲi
+прийти́|to come|p§rʲ§ɪ§j.§ˈtʲ§i
 лежа́ть|to lie (as in a bed)|lʲɪˈʐatʲ
 сиде́ть|to sit|sʲɪˈdʲetʲ
 стоя́ть|to stand|stʌˈjætʲ
