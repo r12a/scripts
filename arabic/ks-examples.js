@@ -28,10 +28,9 @@ autoExpandExamples.ks = `
 أسؠ||
 أمیٖر||
 أنْز|male swan|ə̃z
-أنْزِنؠ|female swan|ə̃zinʲ
+أنْزِنؠ|female swan|ə§̃.§zi§n§ʲ
 أنْجیٖر||
 أنْز||
-أنْزِنؠ||
 أچھ||
 أہرُن||
 ؤری||
@@ -80,9 +79,8 @@ autoExpandExamples.ks = `
 اَماپوٚز||
 اَمب||
 اَنُن||
-اَنْدَر|inside|andar
+اَنْدَر|inside|a§n.§da§r
 اَنْگریٖزؠ|English (language)|aŋɡriːzʲ/ãɡriːzʲ
-اَنْدَر||
 اَنْگ||
 اَنْگریٖزؠ||
 اَٹوٗٹ||
@@ -208,7 +206,7 @@ autoExpandExamples.ks = `
 ترُْواہ||
 ترُْوَنْزاہ||
 ترُْہٲٹھ||
-ترْٕے|woman|trɨj
+ترْٕے|woman|t§rɨ§j
 ترْوٚوُہ|twenty-three|trowuh
 ترْٕہ|thirty|trɨh
 ترْٕسَتَتھ||
@@ -231,7 +229,7 @@ autoExpandExamples.ks = `
 تُرُن||
 تُلُن||
 تُلٕر||
-تْرٚے|three|tre
+تْرٚے|three|t§re§–
 تٔژ|hot f.|tət͡s
 تٕژھ||
 تٟر|cold|tɨːr
@@ -461,7 +459,7 @@ autoExpandExamples.ks = `
 شیٚیہِ شیٖتھ||
 شیٹھ||
 شےٚ ہَتھ||
-شےٚ|six|ʃe
+شےٚ|six|ʃ§e
 صِفَر|zero|sifar
 صِفَر||
 طوطہٕ|parrot|toːtɨ
@@ -570,7 +568,7 @@ autoExpandExamples.ks = `
 نیٚچُو|son|net͡ʃuːw
 وؠٹھُن||
 واتُن|to arrive at a place|ʋaːtun
-واریُْل|shikra|waːrjul
+واریُْل|shikra|w§aː§r.§ju§l
 وان||
 وانْدُر|monkey|wãːdur
 وانْگُن|aubergine|wãːɡun
@@ -589,7 +587,7 @@ autoExpandExamples.ks = `
 وَدُن|to cry, weep|ʋadun
 وَرشا کال|rainy season|warʃaː kaːl
 وَن ہٲر||
-وَنْدٕ|winter|wandɨ
+وَنْدٕ|winter|wa§n.§dɨ
 وَژھٕر|2nd month (Apr-May)|wahʲakʰ
 وَژھٕر|calf f.|wat͡sʰɨr
 وَہؠکھ||
@@ -844,8 +842,8 @@ autoExpandExamples.ks = `
 کٔشیٖر|Kashmir Valley|kəʃiːr
 کٔٹ|girl|kəʈ
 کٔچھوٕ|tortoise|kət͡ʃʰwɨ
-کٲشُر|Kashmiri language|kəːʃur
-کٲشُر|Kashmiri|kəːʃur
+کٲشُر|Kashmiri language|k§əː.§ʃu§r
+کٲشُر|Kashmiri|k§əː.§ʃu§r
 کٲم|work|kəːm
 کٲنْتُر|sparrow m.|kə̃ːtur
 کٲڈؠ||
