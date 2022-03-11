@@ -45,7 +45,7 @@ reflist = {
 scriptLanguageList = {
 lbc:{name:"Lakkia"},
 lpo:{name:"Lipo"},
-lis:{name:"Lisu"},
+lis:{name:"Lisu", url:"lis.html"},
 nxq:{name:"Naxi"},
 atb:{name:"Zaiwa"},
 }
