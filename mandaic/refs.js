@@ -60,7 +60,7 @@ reflist = {
 
 
 scriptLanguageList = {
-mid:{name:"Mandaic"},
+mid:{name:"Mandaic", url:"mid.html"},
 myz:{name:"Classical Mandaic"},
 }
 
