@@ -78,7 +78,7 @@ scriptLanguageList = {
 bn:{name:"Bengali"},
 hi:{name:"Hindi"},
 mai:{name:"Maithili"},
-new:{name:"Newar"},
+new:{name:"Newar", url:"new.html"},
 sa:{name:"Sanskrit"},
 }
 
