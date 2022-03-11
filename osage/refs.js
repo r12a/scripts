@@ -57,3 +57,10 @@ reflist = {
 
 
 
+
+scriptLanguageList = {
+osa:{name:"Osage", url:"osa.html"},
+}
+
+
+
