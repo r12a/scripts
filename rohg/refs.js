@@ -37,3 +37,11 @@ reflist = {
 
 
 
+
+
+scriptLanguageList = {
+rhg:{name:"Rohingya", url:"rhg.html"},
+}
+
+
+
