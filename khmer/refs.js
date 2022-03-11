@@ -112,7 +112,7 @@ scriptLanguageList = {
 cmo:{name:"Mnong, Central"},
 jra:{name:"Jarai"},
 krv:{name:"Kavet"},
-khm:{name:"Khmer"},
+khm:{name:"Khmer", url:"km.html"},
 krr:{name:"Krung"},
 kdt:{name:"Kuy"},
 brb:{name:"Lave"},
