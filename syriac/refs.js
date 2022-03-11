@@ -104,7 +104,7 @@ reflist = {
 
 scriptLanguageList = {
 ara:{name:"Arabic"},
-aii:{name:"Neo-Aramaic, Assyrian", url:"syrc-aii"},
+aii:{name:"Neo-Aramaic, Assyrian", url:"aii.html"},
 bjf:{name:"Neo-Aramaic, Barzani Jewish"},
 bhn:{name:"Neo-Aramaic, Bohtan"},
 cld:{name:"Neo-Aramaic, Chaldean"},
@@ -118,8 +118,8 @@ oar:{name:"Aramaic, Old (up to 700 BCE)"},
 sam:{name:"Aramaic, Samaritan"},
 syn:{name:"Senaya"},
 sog:{name:"Sogdian"},
-syr:{name:"Syriac", url:"index"},
-tru:{name:"Turoyo", url:"syrc-tru"},
+syr:{name:"Syriac", url:"syr.html"},
+tru:{name:"Turoyo", url:"tru.html"},
 }
 
 
