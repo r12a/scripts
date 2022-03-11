@@ -124,7 +124,7 @@ reflist = {
 
 
 scriptLanguageList = {
-vai:{name:"Vai"},
+vai:{name:"Vai", url:"vai.html"},
 }
 
 
