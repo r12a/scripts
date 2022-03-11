@@ -87,7 +87,7 @@ reflist = {
 
 
 scriptLanguageList = {
-khk:{name:"Mongolian, Halh", url:"index.html"},
+khk:{name:"Mongolian, Halh", url:"mn.html"},
 xal:{name:"Kalmyk"},
 mnc:{name:"Manchu"},
 bxm:{name:"Buriat"},
