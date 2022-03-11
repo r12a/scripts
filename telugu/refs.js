@@ -93,7 +93,7 @@ gdb:{name:"Gadaba, Pottangi Ollar"},
 saz:{name:"Saurashtra"},
 srb:{name:"Sora"},
 nit:{name:"Kolami, Southeastern"},
-tel:{name:"Telugu"},
+tel:{name:"Telugu", url:"te.html"},
 wbq:{name:"Waddar"},
 yeu:{name:"Yerukula"},
 }
