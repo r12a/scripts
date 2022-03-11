@@ -64,7 +64,7 @@ reflist = {
 
 scriptLanguageList = {
 abk:{name:"Abkhazian"},
-ka:{name:"Georgian", url:"index"},
+ka:{name:"Georgian", url:"ka.html"},
 lzz:{name:"Laz"},
 xmf:{name:"Mingrelian"},
 oav:{name:"Avar, Old"},
