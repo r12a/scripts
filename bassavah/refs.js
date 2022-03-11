@@ -84,4 +84,10 @@ reflist = {
 
 
 
-// <a class="fn">ws,#tones</a>
+
+scriptLanguageList = {
+bsq:{name:"Bassa", url:"bsq.html"},
+}
+
+
+
