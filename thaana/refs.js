@@ -42,3 +42,16 @@ reflist = {
 
 
 
+
+
+scriptLanguageList = {
+dv:{name:"Dhivehi", url:"dv.html"},
+}
+
+
+
+
+
+
+
+
