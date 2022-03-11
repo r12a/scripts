@@ -57,7 +57,7 @@ reflist = {
 
 
 scriptLanguageList = {
-su:{name:"Sundanese"},
+su:{name:"Sundanese", url:"su.html"},
 }
 
 
