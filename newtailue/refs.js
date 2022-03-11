@@ -45,7 +45,7 @@ reflist = {
 
 
 scriptLanguageList = {
-khb:{name:"Lü"},
+khb:{name:"Lü", url:"khb.html"},
 }
 
 
