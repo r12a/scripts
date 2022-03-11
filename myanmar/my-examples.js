@@ -21,7 +21,7 @@ autoExpandExamples.my = `
 ကစား|to play|ɡəzá|ka.ca:
 ကစ်|||kac
 ကဏ္ဍ|section|kàɴda̰
-ကတ်|||kat
+ကတ်|card|ka§ʔ|kat
 ကနေဒါ|||ka.neda
 ကန့်|||kan.
 ကန်|lake|kàɴ|kan
@@ -1034,6 +1034,51 @@ autoExpandExamples.my = `
 ဩဇာသီး|custard apple|ʔɔ́zàðí
 ၌|at|n̥aiʔ|hnai.
 ၎င်း|afore|lə.ɡàu§ɴ
+နှေး|slow|n̥é
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 `
 
