@@ -22,7 +22,7 @@ autoExpandExamples.jv = `
 ꦏꦏꦁ||
 ꦏꦏꦏ꧀||
 ꦏꦏꦶꦄꦩꦺꦴꦁ||
-ꦏꦔꦼꦤ꧀|desirous|ˈka.ŋən
+ꦏꦔꦼꦤ꧀|desirous|ˈka.§ŋə§n
 ꦏꦕ|glass||kaca
 ꦏꦕꦼꦥꦼꦠꦤ꧀||
 ꦏꦚ꧀ꦕ||
@@ -43,7 +43,7 @@ autoExpandExamples.jv = `
 ꦏꦸ||
 ꦏꦸꦏꦸꦃ||
 ꦏꦸꦕꦶꦁ||
-ꦏꦸꦛ|town|ku.ʈa|
+ꦏꦸꦛ|town|ku.§ʈa|
 ꦏꦸꦩ꧀ꦥꦫꦤ꧀||
 ꦏꦸꦩ꧀ꦧꦁ||
 ꦏꦸꦭꦮꦂꦒ||
@@ -63,7 +63,7 @@ autoExpandExamples.jv = `
 ꦏꦿꦩꦱ꧀||
 ꦏꦿꦶꦪ|skill, craft||kriya
 ꦏꦿꦸꦥꦸꦏ꧀|crackers||krupuk
-ꦏꦿꦺꦴꦠꦺꦴ|ant egg|ˈkro.to|kroto
+ꦏꦿꦺꦴꦠꦺꦴ|ant egg|ˈkro.§to|kroto
 ꦏ꧀ꦫꦩ|politeness|krɔmɔ
 ꦒꦗꦃ|elephant||gaja
 ꦒꦧꦃ|grain of rice||gabah
@@ -87,7 +87,7 @@ autoExpandExamples.jv = `
 ꦕꦺꦭꦺꦁ||
 ꦕꦼꦏꦏ꧀||
 ꦕꦼꦩꦼꦁ|black||cemeng
-ꦕꦼꦩꦼꦔꦚ꧀|dry rice paddy|ˈt͡ʃə.mə.ŋan|cemengan
+ꦕꦼꦩꦼꦔꦚ꧀|dry rice paddy|ˈt͡ʃə.§mə.§ŋa§n|cemengan
 ꦗꦔꦤꦤ꧀||
 ꦗꦚ꧀ꦕꦸꦏ꧀||
 ꦗꦤ꧀ꦩ|human, people||jalma
@@ -179,7 +179,7 @@ autoExpandExamples.jv = `
 ꦧꦗꦶꦁꦔꦤ꧀||
 ꦧꦚꦸ||
 ꦧꦛꦁ||
-ꦧꦛꦶꦏ꧀|batik clothing|ˈba.ʈɪʔ|bathik
+ꦧꦛꦶꦏ꧀|batik clothing|ˈba.§ʈɪ§ʔ|bathik
 ꦧꦤ꧀ꦢꦼꦁ||
 ꦧꦤ꧀ꦣ|wealth|bɔnɖ̥ɔ
 ꦧꦥꦏ꧀||
@@ -189,7 +189,7 @@ autoExpandExamples.jv = `
 ꦧꦭꦸꦁ||
 ꦧꦭꦺ||
 ꦧꦱ||
-ꦧꦲꦸꦱꦱ꧀ꦠꦿ|dictionary|bausastra|bausastra
+ꦧꦲꦸꦱꦱ꧀ꦠꦿ|dictionary|ba§u§sa§s§tra|bausastra
 ꦧꦶꦁꦧꦶꦁ||
 ꦧꦶꦏꦏ꧀||
 ꦧꦶꦕꦫ||
@@ -206,8 +206,8 @@ autoExpandExamples.jv = `
 ꦧꦿꦤꦁ||
 ꦧꦿꦩ||
 ꦧ꧀ꦊꦏꦺꦴꦏ꧀||
-ꦧ꧀ꦊꦢꦸꦒ꧀|dust|bləd̪uɡ|bledug
-ꦧ꧀ꦊꦣꦸꦒ꧀|mud|bləɖuɡ|bledhug
+ꦧ꧀ꦊꦢꦸꦒ꧀|dust|b§lə§d̪u§ɡ|bledug
+ꦧ꧀ꦊꦣꦸꦒ꧀|mud|b§lə§ɖu§ɡ|bledhug
 ꦨꦶꦩ|Bima (name)|
 ꦩꦁꦒꦶꦱ꧀||
 ꦩꦁꦱꦶ||
@@ -303,7 +303,7 @@ autoExpandExamples.jv = `
 ꦲꦒꦼꦁ|big (polite)||ageng
 ꦲꦒ꧀ꦤꦶ||
 ꦲꦔꦶꦤ꧀|wind||angin
-ꦲꦔꦺꦭ꧀|difficult|ˈaŋɛl|angel
+ꦲꦔꦺꦭ꧀|difficult|ˈa§ŋɛ§l|angel
 ꦲꦕꦫ|programme||acara
 ꦲꦠꦮ||
 ꦲꦢꦠ꧀|tradition, custom||adat

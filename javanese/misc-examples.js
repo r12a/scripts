@@ -63,7 +63,7 @@ autoExpandExamples.misc = `
 ꦏꦿꦩꦱ꧀||
 ꦏꦿꦶꦪ|skill, craft||kriya
 ꦏꦿꦸꦥꦸꦏ꧀|crackers||krupuk
-ꦏꦿꦺꦴꦠꦺꦴ|ant egg|ˈkro.to|kroto
+ꦏꦿꦺꦴꦠꦺꦴ|ant egg|ˈkro.§to|kroto
 ꦏ꧀ꦫꦩ|politeness|krɔmɔ
 ꦒꦗꦃ|elephant||gaja
 ꦒꦧꦃ|grain of rice||gabah
