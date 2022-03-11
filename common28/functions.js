@@ -73,6 +73,16 @@ function initialiseSummary (blockDirectory, lang, tableName, dir) {
 
 
 
+function initialiseIndex () {
+    // called from index.html pages to set up page after load
+    makeScriptLanguageList()
+    
+    // add fragids for legacy URLs to all links to orthography descriptions
+    olinks = document.querySelectorAll('#olinks a')
+    for (i=0;i<olinks.length;i++) olinks[i].href += window.location.hash
+
+    }
+
 
 function setMarks () {
     // sets the global variable marks as a set containing all combining marks in the spreadsheet
