@@ -111,7 +111,7 @@ scriptLanguageList = {
 hbo:{name:"Hebrew, Ancient"},
 bhh:{name:"Bukharic"},
 ydd:{name:"Yiddish, Eastern"},
-heb:{name:"Hebrew"},
+heb:{name:"Hebrew", url:"he.html"},
 huy:{name:"Hulaulá"},
 jrb:{name:"Judeo-Arabic"},
 jbe:{name:"Judeo-Berber"},
