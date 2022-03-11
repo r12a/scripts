@@ -80,9 +80,9 @@ reflist = {
 
 
 scriptLanguageList = {
-kkh:{name:"Khün", url:"index"},
+kkh:{name:"Khün", url:"kkh.html"},
 khb:{name:"Lü"},
-nod:{name:"Northern Thai", url:"northernthai"},
+nod:{name:"Northern Thai", url:"nod.html"},
 cuu:{name:"Tai Ya"},
 }
 
