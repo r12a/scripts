@@ -70,7 +70,7 @@ reflist = {
 
 
 scriptLanguageList = {
-pan:{name:"Panjabi"},
+pan:{name:"Panjabi", url:"pa.html"},
 skr:{name:"Saraiki"},
 snd:{name:"Sindhi"},
 }
