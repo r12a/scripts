@@ -72,7 +72,7 @@ reflist = {
 
 
 scriptLanguageList = {
-hy:{name:"Armenian", url:"index"},
+hy:{name:"Armenian", url:"hy.html"},
 kur:{name:"Kurdish"},
 kmr:{name:"Kurdish, Northern"},
 hyw:{name:"Armenian, Western"},
