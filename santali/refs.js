@@ -59,3 +59,14 @@ reflist = {
 
 
 
+
+
+scriptLanguageList = {
+sat:{name:"Santali", url:"sat.html"},
+}
+
+
+
+
+
+
