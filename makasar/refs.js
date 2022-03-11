@@ -23,10 +23,12 @@ reflist = {
 
 
 
-terms = {
-
-
+scriptLanguageList = {
+mak:{name:"Makasar", url:"mak.html"},
 }
+
+
+
 
 
 
