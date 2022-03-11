@@ -157,7 +157,7 @@ reflist = {
 scriptLanguageList = {
 tzm:{name:"Tamazight, Central Atlas"},
 kab:{name:"Kabyle"},
-zgh:{name:"Tamazight, Standard Moroccan"},
+zgh:{name:"Tamazight, Standard Moroccan", url:"zgh.html"},
 shy:{name:"Tachawit"},
 shi:{name:"Tachelhit"},
 tda:{name:"Tagdal"},
