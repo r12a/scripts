@@ -72,7 +72,7 @@ reflist = {
 
 scriptLanguageList = {
 ban:{name:"Balinese"},
-jv:{name:"Javanese"},
+jv:{name:"Javanese", url:"jv.html"},
 osi:{name:"Osing"},
 sun:{name:"Sundanese"},
 tes:{name:"Tengger"},
