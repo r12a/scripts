@@ -67,7 +67,7 @@ reflist = {
 
 scriptLanguageList = {
 tyr:{name:"Tai Daeng"},
-blt:{name:"Tai Dam", url:"index.html"},
+blt:{name:"Tai Dam", url:"blt.html"},
 twh:{name:"Tai Dón"},
 tyt:{name:"Tày Tac"},
 soa:{name:"Thai Song"},
