@@ -95,7 +95,7 @@ scriptLanguageList = {
 aiw:{name:"Aari"},
 aar:{name:"Afar"},
 alw:{name:"Alaba-K’abeena"},
-amh:{name:"Amharic", url:"index.html"},
+amh:{name:"Amharic", url:"am.html"},
 anu:{name:"Anuak"},
 agj:{name:"Argobba"},
 awn:{name:"Awngi"},
