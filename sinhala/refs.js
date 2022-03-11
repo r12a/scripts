@@ -60,7 +60,7 @@ reflist = {
 scriptLanguageList = {
 pli:{name:"Pali"},
 san:{name:"Sanskrit"},
-si:{name:"Sinhala"},
+si:{name:"Sinhala", url:"si.html"},
 }
 
 
