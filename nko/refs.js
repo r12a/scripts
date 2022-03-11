@@ -90,7 +90,7 @@ bam:{name:"Bambara"},
 dyu:{name:"Dyula"},
 emk:{name:"Maninkan, Eastern"},
 man:{name:"Mandingo"},
-nqo:{name:"N'Ko", url:"index"},
+nqo:{name:"N'Ko", url:"nqo.html"},
 }
 
 
