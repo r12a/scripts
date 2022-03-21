@@ -14,8 +14,8 @@ autoExpandExamples.ks = `
 
 
 آب|water|aːb
-آتھوار|Sunday|aːtʰwaːr
-آزاد|free, independent|aːzaːd
+آتھوار|Sunday|aː§tʰ§‹§w§aː§r
+آزاد|free, independent|aː§z§aː§d
 آزٲدی|freedom, liberty|ɑːzəːdiː
 آسُن|to be, exist|aːsun
 آشَنؠ|wife|aːʃanʲ
@@ -23,23 +23,22 @@ autoExpandExamples.ks = `
 آلَو||
 آوٕرُن||
 آوٕسُن||
-آپراوُن|to feed|aːpraːʋun
+آپراوُن|to feed|aː§p§r§aː§ʋu§n
 آگُر||
 أسؠ||
 أمیٖر||
-أنْز|male swan|ə̃z
+أنْز|male swan|ə§̃§z
 أنْزِنؠ|female swan|ə§̃.§zi§n§ʲ
 أنْجیٖر||
-أنْز||
 أچھ||
 أہرُن||
 ؤری||
-ؤٹِل|cockroach|wəʈil
-ؤہراتھ|rainy season|wəhraːtʰ
+ؤٹِل|cockroach|wə§ʈi§l
+ؤہراتھ|rainy season|wə§h§r§aː§t§ʰ
 یٔارىسلان|lion
 یٔىسلام|Islam|islam
 او||
-اوش|husband|oːʃ
+اوش|husband|oː§‹§ʃ
 اول||
 اوٗ||
 اوٚبُر|cloudy weather|obur
@@ -55,12 +54,12 @@ autoExpandExamples.ks = `
 اَبوٚڈ||
 اَبیْوٚن||
 اَتوٗل||
-اَتھٕ|hand|atʰɨ
+اَتھٕ|hand|a§t§ʰɨ
 اَخبار||
 اَدَم||
 اَدۄے||
 اَرزُن||
-اَرَب|billion|arab
+اَرَب|billion|a§ra§b
 اَرٕترْٕہ|thirty-eight|arɨtrɨh
 اَرٕتٲجِہہ|forty-eight|arɨtəːd͡ʒih
 اَرٕتٲجی||
@@ -95,7 +94,7 @@ autoExpandExamples.ks = `
 اَکھ ساس اَکھ||
 اَکھ ساس ہَتھ||
 اَکھ ہَتھ تہٕ اَکھ||
-اَکھ|one|akʰ
+اَکھ|one|a§kʰ§‹
 اَکھا||
 اَکہٕ ترْٕہ||
 اَکہٕ تٲجِہہ||
@@ -110,7 +109,7 @@ autoExpandExamples.ks = `
 اُ||
 اِ||
 اِدرار|urine|idrɑːr
-اِنسان|human|insaːn
+اِنسان|human|i§n§s§aː§n
 اٟں||
 اۄ||
 اۄا||
@@ -124,7 +123,7 @@ autoExpandExamples.ks = `
 اوٚژھ||
 اوٚگُن||
 ای||
-ایٖمان|faith, belief|iːmaːn
+ایٖمان|faith, belief|›§iː§m§aː§n
 اے||
 اےٚ||
 بؠنتھٕر|nephew|bʲantʰɨr
@@ -151,7 +150,7 @@ autoExpandExamples.ks = `
 بوزُن|to hear, listen to|boːzun
 بوموار|Tuesday|boːmwaːr
 بوگ||
-بوے|brother|boːj
+بوے|brother|b§oː§j
 بَب|father|bab
 بَر||
 بَرتھا|husband|bartʰaː
@@ -160,7 +159,7 @@ autoExpandExamples.ks = `
 بَستہٕ||
 بَسُن||
 بَطُخ|duck (m)|batukʰ
-بَطٕچ|duck (f)|batɨt͡ʃ
+بَطٕچ|duck (f)|ba§tɨ§t͡ʃ
 بَلُن|to heal|balun
 بَٹہٕ وار|Saturday|baʈɨwaːr
 بَڈٕ بُڈؠ بَب|great-grandfather|baɖɨ buɖʲ bab
@@ -168,22 +167,22 @@ autoExpandExamples.ks = `
 بَہ|with|bah
 بَہار|spring|bahaːr
 بَہہ|twelve|bah
-بُتھ|face, mouth|but̪ʰ
+بُتھ|face, mouth|bu§t̪§ʰ
 بُلبُل||
-بُڈؠ بَب|grandfather|buɖʲ bab
+بُڈؠ بَب|grandfather|bu§ɖ§ʲ§ §ba§b
 بِل بِچُر||
 بِلؠ بِچُر||
 بٔے کاکَنؠ|sister-in-law|bəj kaːkanʲ
 بٕہ|I|bɨ
 بٕہٕر|kestrel|bɨhɨr
-بٕۂر|kestrel|bɨhər
+بٕۂر|kestrel|bɨ§hə§r
 بٲدرؠتھ|August-September|bəːdrʲatʰ
 بٲدٕر|August-September|bəːdɨr
 بٲدٕرپؠتھ||
 بٲے کاکَنؠ||
-بھَرَت|India|barat
+بھَرَت|India|ba§‹§ra§t
 بہَ||
-بہٕ||
+بہٕ|I|bɨ
 بۄ|I|bɔ
 بۄ||
 بۄد وار|Wednesday|bɔdwaːr
@@ -191,11 +190,11 @@ autoExpandExamples.ks = `
 بوٚڈ چِلہٕ|December-January|boɖ t͡ʃilɨ
 بوٚڈ||
 بیساکھ|April-May|beːsaːkʰ
-بیمہٕ|brother-in-law|beːmɨ
+بیمہٕ|brother-in-law|b§eː§m§ɨ
 بیْور|cat (m)|bjoːr
 بیْٲر|cat (f)|bjəːr
 بیٔنْزٕ|neice|bjənzɨ
-بیٚنہِ|sister|beni
+بیٚنہِ|sister|b§e§n§i
 بیْور||
 بیْٲر||
 تارُکھ||
@@ -229,14 +228,14 @@ autoExpandExamples.ks = `
 تُرُن||
 تُلُن||
 تُلٕر||
-تْرٚے|three|t§re§–
-تٔژ|hot f.|tət͡s
+تْرٚے|three|t§re§‹§
+تٔژ|hot f.|tə§t͡s
 تٕژھ||
-تٟر|cold|tɨːr
+تٟر|cold|tɨː§r
 تھ||
 تھَزَر||
 تھَپھ||
-تھُج|mallard (f)|tʰud͡ʒ
+تھُج|mallard (f)|t§ʰu§d͡ʒ
 تھۄکھ||
 تہٕ||
 توٚت|hot m.|tot
@@ -248,12 +247,12 @@ autoExpandExamples.ks = `
 جاناوار|bird|d͡ʒaːnaːwar
 جَدٕ بُڈؠ بَب|great-great-grandfather|d͡ʒadɨ buɖʲ bab
 جَدٕ بُڈؠ بَب||
-جُمعہ|Friday|d͡ʒumaːh
+جُمعہ|Friday|d͡ʒu§m§aː§h
 جوٚنوٗب|south|d͡ʒonuːb
 خانہٕ دار|husband|kʰaːnɨdaːr
 خانہٕ داریٚنؠ|wife|kʰaːnɨdaːrenʲ
 خاوَنْد|husband|kʰaːwand
-خلق|people|kʰalɨk
+خلق|people|kʰa§lɨ§k
 خوتەن|Khotan
 خَر|donkey|kʰar
 خَر||
@@ -289,7 +288,7 @@ autoExpandExamples.ks = `
 دٔہ|ten|dəh
 دٲر||
 دٲن||
-دۄد|milk|dɔd
+دۄد|milk|d§ɔ§d
 دۄدٕ بوے||
 دۄدٕ بیٚنہِ||
 دۄدٕ موج||
@@ -307,17 +306,17 @@ autoExpandExamples.ks = `
 دیْارتھٕر||
 دیْارٕز||
 رؠتہٕ کال|summer|rʲatɨ kaːl
-رؠتہٕ کول|summer|rʲatɨ koːl
+رؠتہٕ کول|summer|r§ʲa§t§ɨ§ §k§oː§l
 رؠکھ||
-رؠے|ant|rʲaj
+رؠے|ant|r§ʲa§j
 راتھ||
 رازٕ||
 رازٕدٲنؠ||
 رازٕماہ||
-رامہٕ ہوٗن|wolf|raːmɨ huːn
+رامہٕ ہوٗن|wolf|r§aː§m§ɨ§ §h§uː§n
 رامہٕ ہوٗنؠ|she-wolf|raːmɨ huːnʲ
 روزُن||
-روٗد|rain, rainy weather|ruːd
+روٗد|rain, rainy weather|r§uː§d
 روٗسؠ کٔٹ||
 روٗن|husband|ruːn
 روٗگ||
@@ -328,7 +327,7 @@ autoExpandExamples.ks = `
 رَنْگ|colour|rãɡ
 رَٹُن||
 رَژٕوٲنؠ||
-رِوُن|to cry, weep|riwun
+رِوُن|to cry, weep|ri§wu§n
 رِکھ||
 رٔنؠ|wife|rənʲ
 رٕژَر||
@@ -336,15 +335,15 @@ autoExpandExamples.ks = `
 رٟپھ||
 رٲچھ||
 رۄنْگ||
-ریش|beard|reːʃ
+ریش|beard|r§eː§ʃ
 ریٚے|ant|rej
-زؠو|tongue, language|zʲaw
+زؠو|tongue, language|z§ʲa§w
 زاتھ||
 زادۄہ||
 زال||
 زالُن||
-زام|sister-in-law|zaːm
-زامتُر|son-in-law|zaːmtur
+زام|sister-in-law|z§aː§m
+زامتُر|son-in-law|z§aː§m§tu§r
 زامَن||
 زان||
 زانُن||
@@ -356,9 +355,9 @@ autoExpandExamples.ks = `
 زَل|water|zal
 زَنان|woman, wife|zanaːn
 زَنَم||
-زَنْگ|leg|zãɡ
+زَنْگ|leg|zã§‹§ɡ
 زَنْگہٕ||
-زُر|grandchild|zur
+زُر|grandchild|zu§r
 زُوُن||
 زٔنؠ|woman|zənʲ
 زٔٹ||
@@ -366,10 +365,10 @@ autoExpandExamples.ks = `
 زٕ|two|zɨ
 زٕتووُہ||
 زٲمؠ تٕر گوٚبُر|nephew|zəːmʲtɨr ɡobur
-زٲمؠ زٕ|neice|zəːmʲzɨ
+زٲمؠ زٕ|neice|z§əː§m§ʲ§ §zɨ
 زٲمِتھ نیٚچُو|nephew|zəːmitʰ net͡ʃuw
-زٲمِیہِ|brother-in-law|zəːmiji
-زٲمی|brother-in-law|zəːmiː
+زٲمِیہِ|brother-in-law|z§əː§mi§j§i
+زٲمی|brother-in-law|z§əː§m§iː
 زۄو||
 زوٚن|man|zon
 زوٚنْگ||
@@ -379,7 +378,7 @@ autoExpandExamples.ks = `
 زیٹھ|May-June|zeːʈʰ
 زیچھَر||
 سؠکھ||
-ساس|thousand|saːs
+ساس|thousand|s§aː§s
 سال|sister-in-law|saːl
 ساوُن||
 سرْوٚگ||
@@ -393,7 +392,7 @@ autoExpandExamples.ks = `
 سَتھ ہَتھ||
 سَتھ|seven|satʰ
 سَتہٕ ترْٕہ||
-سَتہٕ تُت|hoopoe|satɨ tut
+سَتہٕ تُت|hoopoe|sa§t§ɨ§ §tu§t
 سَتہٕ تٲجِہہ||
 سَتہٕ تٲجی||
 سَتہٕ سَتَتھ||
@@ -403,7 +402,7 @@ autoExpandExamples.ks = `
 سَتہٕ ہٲٹھ||
 سَداہ||
 سَر||
-سَرُف|snake|saruf
+سَرُف|snake|sa§ru§f
 سَرُن||
 سَرُپھ||
 سَنُن||
@@ -415,8 +414,7 @@ autoExpandExamples.ks = `
 سٲج کوٗر|neice|səːd͡ʒ kuːr
 سٲج گوٚبُر|nephew|səːd͡ʒ ɡobur
 سٲجُو|brother-in-law|səːd͡ʒuw
-سۄ|she|sɔ
-سۄ||
+سۄ|she|s§ɔ
 سۄاد||
 سۄر||
 سۄرٕگ||
@@ -448,7 +446,7 @@ autoExpandExamples.ks = `
 شٲج|jackal f.|ʃəːd͡ʒ
 شۄزَر||
 شوٚکُروار|Friday|ʃokurwaːr
-شیر|tiger|ʃeːr
+شیر|tiger|ʃ§eː§r
 شیرنی|tigress|ʃeːrniː
 شیرُن||
 شیرِ بَبَر|lion|ʃeːri babar
@@ -460,16 +458,15 @@ autoExpandExamples.ks = `
 شیٹھ||
 شےٚ ہَتھ||
 شےٚ|six|ʃ§e
-صِفَر|zero|sifar
-صِفَر||
-طوطہٕ|parrot|toːtɨ
-لؠو|lick!|lʲaw
+صِفَر|zero|si§fa§r
+طوطہٕ|parrot|t§oː§t§ɨ
+لؠو|lick!|l§ʲa§w
 لؠوُن||
 لؠکھ ژارٕنؠ||
 لؠکھ||
 لاہور||
 لایُن||
-لوو|fox|loːw
+لوو|fox|l§oː§w
 لوہوٗر||
 لَبُن||
 لَدُن||
@@ -477,14 +474,14 @@ autoExpandExamples.ks = `
 لِکھٲرؠ||
 لٔٹؠ تارُکھ||
 لٔڑکہٕ|boy|ləɽkɨ
-لٔڑکی|girl|ləɽkiː
+لٔڑکی|girl|lə§ɽ§k§iː
 لٔکٕر||
 لٲر||
 لۄکُٹ||
 لوٚٹ||
 لیٚج||
 ماتامال||
-ماس|maternal aunt|maːs
+ماس|maternal aunt|m§aː§s
 ماستُر بوے|cousin|maːstur boːj
 ماستٕر بیٚنہِ|cousin|maːstɨr beni
 ماسُو|maternal uncle|maːsuw
@@ -495,11 +492,11 @@ autoExpandExamples.ks = `
 مامَنؠ|maternal aunt|maːmanʲ
 ماگ|11th month (Jan-Feb)|maːɡ
 موج|mother|moːd͡ʒ
-مول|father|moːl
+مول|father|m§oː§l
 مَرُن|to die|marun
 مَرٕد|man|marɨd
-مَشرِق|east|maʃrik
-مَغرِب|west|maɡrib
+مَشرِق|east|ma§ʃ§ri§k
+مَغرِب|west|ma§ɡ§ri§b
 مَل||
 مَنْجہوٚر|9th month (Nov-Dec)|mand͡ʒhor
 مَنْگتہٕ نیٚچُو|adopted son|manɡtɨ net͡ʃuw
@@ -518,7 +515,7 @@ autoExpandExamples.ks = `
 مَہاریٚنؠ|bride|mahaːrenʲ
 مُج||
 مٔشیٖد||
-مٔچھ|fly (insect)|mət͡ʃʰ
+مٔچھ|fly (insect)|mə§t͡ʃʰ§‹
 مٔہنیُْو|man|məhnjuw
 مٕتھٕر|urine|mɨtʰɨr
 مٲج|mother|məːd͡ʒ
@@ -547,13 +544,13 @@ autoExpandExamples.ks = `
 ناوُت||
 ناگ||
 نور||
-نوٗل|mongoose|nuːl
+نوٗل|mongoose|n§uː§l
 نَب|sky, heaven|nab
 نَس||
 نَشُن|to be destroyed|naʃun
 نَمَتھ|ninety|namatʰ
 نَمہٕ نَمَتھ||
-نَنُن|to become apparent|nanun
+نَنُن|to become apparent|na§nu§n
 نَو شَتھ||
 نَو|nine|naw
 نُنہٕ||
@@ -567,10 +564,11 @@ autoExpandExamples.ks = `
 نیُْک||
 نیٚچُو|son|net͡ʃuːw
 وؠٹھُن||
-واتُن|to arrive at a place|ʋaːtun
+واتُن|to arrive at a place|ʋ§aː§tu§n
 واریُْل|shikra|w§aː§r.§ju§l
 وان||
-وانْدُر|monkey|wãːdur
+وانْدُر|monkey|w§aː§̃§du§r
+وانْدُر|monkey|w§ãː§⋯§du§r
 وانْگُن|aubergine|wãːɡun
 وانْگُن||
 وایُن||
@@ -583,8 +581,8 @@ autoExpandExamples.ks = `
 ووٗنْٹ|camel m.|wũːʈ
 ووٗنْٹِنؠ||
 ووٗنْٹھ||
-ووٗںْٹ|camel m.|wũːʈ
-وَدُن|to cry, weep|ʋadun
+ووٗںْٹ|camel m.|w§ũː§‹§ʈ
+وَدُن|to cry, weep|ʋa§du§n
 وَرشا کال|rainy season|warʃaː kaːl
 وَن ہٲر||
 وَنْدٕ|winter|wa§n.§dɨ
@@ -595,17 +593,17 @@ autoExpandExamples.ks = `
 وُشنیر||
 وُشُن||
 وُلٹُن||
-وُہ|twenty|wuh
+وُہ|twenty|wu§h
 وٲد||
 وٲریُْو||
 وٲنؠ||
 وۄتُر|north|wɔtur
-وۄزُل|red|wɔzul
+وۄزُل|red|w§ɔ§zu§l
 ووٚژھ|calf m.|wot͡sʰ
 ویر||
 ویٖر||
 یېڭىسار|Yangi Hissary
-ٲس|mouth|əːs
+ٲس|mouth|əː§s
 ٲشِد|7th month (Sep-Oct)|əːʃid
 ٲشٕژ||
 ٲٹھ شَتھ||
@@ -626,7 +624,7 @@ autoExpandExamples.ks = `
 پادَر سٕہہ|lion|paːdar sɨh
 پاس||
 پانْژٕ ترْٕہ|thirty-five|pãːt͡sɨtrɨh
-پانْژھ|five|pãːt͡sʰ
+پانْژھ|five|p§ãː§⋯§t͡s§ʰ
 پانْژٕ ترْٕہ||
 پانْژٕ تٲجِہہ||
 پانْژٕ تٲجی||
@@ -636,7 +634,6 @@ autoExpandExamples.ks = `
 پانْژٕ وَنْزاہ||
 پانْژٕ ہٲٹھ||
 پانْژھ ہَتھ||
-پانْژھ||
 پاوُن||
 پرَْتھ||
 پرَْتھُن||
@@ -645,7 +642,7 @@ autoExpandExamples.ks = `
 پرْاگ||
 پرْوٗنْژھ||
 پرْوٚن||
-پوش|flower|poːʃ
+پوش|flower|p§oː§ʃ
 پوشُن||
 پونؠ|water|poːnʲ
 پوٗتھ||
@@ -656,7 +653,7 @@ autoExpandExamples.ks = `
 پوگ||
 پوہ|10th month (Dec-Jan)|poːh
 پَدٕکرْٲم||
-پَرُن|to read|parun
+پَرُن|to read|pa§ru§n
 پَرکھٲے||
 پَزَر||
 پَش||
@@ -664,8 +661,7 @@ autoExpandExamples.ks = `
 پَمپوش|lotus|pampoːʃ
 پَنُن||
 پَنْجٲبؠ|Punjabi|pand͡ʒəːbʲ
-پَنْداہ|fifteen|pandaːh
-پَنْداہ||
+پَنْداہ|fifteen|pa§n§d§aː§h
 پَنْژاہ||
 پَنہٕ پونْپُر|butterfly|panɨpõːpur
 پَچھِم|west|pat͡ʃʰim
@@ -698,7 +694,7 @@ autoExpandExamples.ks = `
 پھررَْست|poplar tree|pʰrast
 پھورُن||
 پھَبُن||
-پھَش|windstorm, cyclone|pʰaʃ
+پھَش|windstorm, cyclone|pʰa§‹§ʃ
 پھَکھ||
 پھُرَتھ||
 پھُلَے||
@@ -722,7 +718,7 @@ autoExpandExamples.ks = `
 پیٔتٕر|paternal uncle|pjətɨr
 پیٖن||
 پیٚشاب|urine|peʃɑːb
-پیٚچھَنؠ|paternal aunt|pet͡ʃʰanʲ
+پیٚچھَنؠ|paternal aunt|p§e§t͡ʃ§ʰa§n§ʲ
 پیْوٚل||
 چِلَے خۄرٕد||
 چِلَے کَلان||
@@ -730,12 +726,12 @@ autoExpandExamples.ks = `
 چِکھ||
 چھ||
 چھاپُن||
-چھَلُن|to wash, clean|t͡ʃʰalun
+چھَلُن|to wash, clean|t͡ʃʰa§‹§lu§n
 چھَپُن||
 چھَک||
 چھَکُن|to throw, discard|t͡ʃʰakun
 چھُک||
-چھِرٕ|lamb|t͡ʃirɨ
+چھِرٕ|lamb|t͡ʃ§i§rɨ
 چھوٚت||
 ڈالُن||
 ڈوٹھ||
@@ -768,7 +764,7 @@ autoExpandExamples.ks = `
 ژُہٲٹھ||
 ژِتھٕر|1st month (Mar-Apr)|t͡sitʰɨr
 ژِپِنؠ||
-ژٔر|sparrow f.|t͡sər
+ژٔر|sparrow f.|t͡sə§r
 ژٔنْدرٕوار|Monday|t͡səndrɨwaːr
 ژٕ||
 ژٕتھٕر|1st month (Mar-Apr)|t͡sɨtʰɨr
@@ -776,7 +772,7 @@ autoExpandExamples.ks = `
 ژھ||
 ژھانْڈُن|to look for|t͡sʰãːɖun
 ژھاوُل|goat m.|t͡sʰaːwul
-ژھاوٕج|goat f.|t͡sʰaːwɨd͡ʒ
+ژھاوٕج|goat f.|t͡sʰ§‹§aː§wɨ§d͡ʒ
 ژھَٹُت||
 ژھۄپٕہ||
 ژھوٚٹ||
@@ -816,11 +812,11 @@ autoExpandExamples.ks = `
 کَرُن|to do|karun
 کَمَر||
 کَن|ear|kan
-کَٹھ|sheep m.|kaʈʰ
+کَٹھ|sheep m.|ka§ʈʰ§‹
 کَپُر||
 کَژھ|armpit|kat͡sʰ
 کَہہ شَتھ||
-کَہہ|eleven|kah
+کَہہ|eleven|ka§h§–
 کُرسی||
 کُس|who|kus
 کُل  ||
@@ -835,11 +831,11 @@ autoExpandExamples.ks = `
 کُنہٕ وَنْزاہ||
 کُنہٕ وُہ||
 کُنہٕ ہٲٹھ||
-کُکِل|collared dove|kukil
+کُکِل|collared dove|ku§ki§l
 کِتاب||
 کِسؠ بَطُخ|common teal|kisʲ batukʰ
 کِسؠ پوٗت|common teal|kisʲ puːt
-کٔشیٖر|Kashmir Valley|kəʃiːr
+کٔشیٖر|Kashmir Valley|kə§ʃ§iː§r
 کٔٹ|girl|kəʈ
 کٔچھوٕ|tortoise|kət͡ʃʰwɨ
 کٲشُر|Kashmiri language|k§əː.§ʃu§r
@@ -858,16 +854,16 @@ autoExpandExamples.ks = `
 کھَنْڈ||
 کھَو||
 کھٔنْڈ||
-کھۄر|foot|kʰɔɾ
+کھۄر|foot|kʰ§‹§ɔ§ɾ
 کھیْوٚن|to eat|kʰjon
 کۄرور||
-کۄلَے|wife|kɔlaj
+کۄلَے|wife|k§ɔ§la§j
 کۄلہٕ ٹوٗنْچ|kingfisher|kɔlɨ ʈũːt͡ʃ
 کۄنْگ||
 کۄووک||
 کۄکُر|rooster|kɔkur
-کۄکٕر|hen|kɔkɨr
-کۄہ|mountain, hill|kɔh
+کۄکٕر|hen|k§ɔ§kɨ§r
+کۄہ|mountain, hill|k§ɔ§h
 کوٚرمُت||
 کوٚل||
 کوٚٹ|boy|koʈ
@@ -891,16 +887,16 @@ autoExpandExamples.ks = `
 گوٗر||
 گَراہ||
 گَرواجیٚنؠ|wife|ɡarwaːd͡ʒenʲ
-گَروول|husband|ɡarwoːl
-گَرُن|to sharpen|garun
+گَروول|husband|ɡa§r§w§oː§l
+گَرُن|to sharpen|ga§ru§n
 گَرٕ||
 گَژھُن||
 گَگُر|rat m.|gagur
-گَگٕر|rat f.|gagɨr
-گُر|horse|gur
-گُل|flower|gul
+گَگٕر|rat f.|ga§gɨ§r
+گُر|horse|gu§r
+گُل|flower|gu§l
 گُپُن||
-گِلۂرؠ|squirrel|ɡilhərʲ
+گِلۂرؠ|squirrel|ɡi§l§hə§r§ʲ
 گٔب|ewe|ɡəb
 گٔر|clock, watch|ɡər
 گٔنْڈِتھ||
@@ -918,12 +914,12 @@ autoExpandExamples.ks = `
 ہونْک||
 ہووُر|wife's father's house|hoːwur
 ہوٗن|dog|huːn
-ہوٗنؠ|dog f.|huːnʲ
+ہوٗنؠ|dog f.|h§uː§n§ʲ
 ہوہور|wife's father's house|hoːhoːr
 ہَتھ|hundred|hatʰ
 ہَتھ|one hundred|hatʰ
-ہَرُد|autumn|harud
-ہَش|mother-in-law|haʃ
+ہَرُد|autumn|ha§ru§d
+ہَش|mother-in-law|ha§ʃ
 ہُرکرْاوُت||
 ہِشَر||
 ہِہُر|father-in-law|hihur
@@ -937,16 +933,21 @@ autoExpandExamples.ks = `
 ہیُْہُر|father-in-law|hjuhur
 ہیٚنْگ||
 ہیٚچھُن|to learn|het͡ʃʰun
-ۂسؠ تِنؠ|elephant f.|həsʲtinʲ
+ۂسؠ تِنؠ|elephant f.|hə§s§ʲ§ §ti§n§ʲ
 ۂٹ||
 ۂہرٕ باے|sister-in-law|həhrɨ baːj
-ۂہَر|brother-in-law|həhar
+ۂہَر|brother-in-law|hə§ha§r
 یِنہٕ||
 یہِ||
 یوٚد||
 ییٚلہِ||
 
 
+زۆن|man|z§o§n
+تۆت|warm|t§o§t
+اۆنْجوٗر|fig|o§‹§n§d͡ʒ§uː§r
+اٟں|yeah|ɨ̃ː§‹
+شيٖتھ|eighty|ʃ§iː§tʰ§‹
 
 
 
@@ -964,12 +965,7 @@ autoExpandExamples.ks = `
 
 
 
-
-
-
-
-
-
+#‹›
 
 
 
