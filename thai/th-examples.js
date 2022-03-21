@@ -14078,7 +14078,7 @@ autoExpandExamples.th = `
 โลหิต|blood||loohìt
 โลหิตจาง||
 โลหิตวิทยา||
-โละ||
+โละ|to discard|›§ló§ʔ
 โลโต||
 โล่||
 โล่ง||
