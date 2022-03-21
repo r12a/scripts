@@ -30,8 +30,8 @@ function addExamples (langFilter) {
     if (trace) console.log('addExamples(',langFilter,')')
     
 	if (typeof langFilter === 'undefined') alert('addExamples call needs to specify a language')
-    
-	var egArray = autoExpandExamples[langFilter].split("\n")
+
+    var egArray = autoExpandExamples[langFilter].split("\n")
 	var egList = {}
 	for (var i=0;i<egArray.length;i++) {
 		if (egArray[i] == '') continue
@@ -98,7 +98,7 @@ function addExamples (langFilter) {
 			//if (! nodes[n].classList.contains('latn')) out += ' <bdi class="trans">xxx</bdi>'
             
 			var ipa = ''
-			if (temp[2]) ipa = temp[2].replace(/§/g,'').replace(/–/g,'')
+			if (temp[2]) ipa = temp[2].replace(/§/g,'').replace(/–/g,'').replace(/‹/g,'').replace(/›/g,'')
 			
 			// alt/transcription
 			//if (temp[3] && nodes[n].classList.contains('transc')) {
