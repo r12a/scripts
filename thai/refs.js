@@ -15,11 +15,31 @@ reflist = {
 "reviewed":true
 },
 
+"c": {
+"authors": "Bernard Comrie",
+"title":"The World's Major Languages",
+"sub": "Thai",
+"date": "2018, 3rd Ed",
+"publisher":"Routledge",
+"isbn":"978-1-315-64493-6",
+"notes": "Esp. ch 39, Thai, by Thomas John Hudak",
+"reviewed":false
+},
+
 "cldr": {
 "url":"https://www.unicode.org/cldr/charts/latest/summary/th.html",
 "authors": "CLDR",
 "version":"v36",
 "title":"Locale Data Summary for Thai [th]",
+},
+
+"cs": {
+"authors": "Stuart Campbell, Chuan Shaweevongs",
+"title":"The Fundamentals of the Thai Language",
+"sub": "5th Edition",
+"retr": "Mar 2022",
+"url":"http://www.lyndonhill.com/FunThai/CONTENTS.html",
+"reviewed":false
 },
 
 "d": {
