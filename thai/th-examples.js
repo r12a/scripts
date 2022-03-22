@@ -325,7 +325,7 @@ autoExpandExamples.th = `
 กริ่ง||
 กริ่งเกรง||
 กริ้ว||
-กรี|elephant / pointy bit on shrimp head|kà.§rīː / k§rīː
+กรี|elephant / pointy bit on shrimp head|kà.§rīː / krīː
 กรีก||
 กรีซ||
 กรีฑา||
@@ -1794,7 +1794,7 @@ autoExpandExamples.th = `
 คนกรุง||
 คนกลาง||
 คนขับ||
-คนขับรถ|driver|kʰon kʰàp ròt
+คนขับรถ|driver|kʰo§n.§kʰà§p.§rò§t
 คนค้า||
 คนงาน||
 คนดำ||
@@ -2878,7 +2878,7 @@ autoExpandExamples.th = `
 จุล||
 จุลชีพ||
 จุลชีววิทยา||
-จุลทัศน์|microscope|tɕun la tʰat
+จุลทัศน์|microscope|tɕu§n.la.§tʰa§t§–
 จุลภาค||
 จุลมงกุฎ||
 จุลรัฐ||
@@ -3972,7 +3972,7 @@ autoExpandExamples.th = `
 ตึง||
 ตึ๊ง||
 ตือ||
-ตื่น|to wake up|tɯːn˨˩
+ตื่น|to wake up|tɯ̀ː§n
 ตื่นขึ้น||
 ตื่นตัว||
 ตื่นนอน||
@@ -4261,7 +4261,7 @@ autoExpandExamples.th = `
 ทราบ|to know|s§–§âː§p̚
 ทราบฝ่าละอองธุลีพระบาท||
 ทราม||
-ทราย|sand|saːj˧
+ทราย|sand|s§‹§āː§j
 ทรายดูด||
 ทรุด||
 ทฤษฎี||
@@ -4724,7 +4724,7 @@ autoExpandExamples.th = `
 นพศก||
 นพเคราะห์||
 นภา||
-นม|milk; a salutation|nōm; nama
+นม|milk; a salutation|nō§m / nama
 นมข้น||
 นมข้าว||
 นมถั่วเหลือง||
@@ -6528,9 +6528,9 @@ autoExpandExamples.th = `
 พฤศจิกา||
 พฤศจิกายน||
 พฤษภ||
-พฤษภา|May|pʰrɯt̚˦˥ sa˨˩ pʰaː˧
+พฤษภา|May|pʰ§rɯ́§t̚.sà.§pʰ§āː
 พฤษภาคม||
-พฤหัส|Thursday|pʰa˦˥ rɯ˦˥ hat̚˨˩
+พฤหัส|Thursday|pʰá.§rɯ́.§hà§t̚
 พฤหัสบดี||
 พล||
 พลการ||
@@ -6708,7 +6708,7 @@ autoExpandExamples.th = `
 พิษ|poison|pʰí§t̚
 พิษณุโลก||
 พิษสุนัขบ้า||
-พิสดาร|peculiar|pʰit̚˦˥ sa˨˩ daːn˧
+พิสดาร|peculiar|pʰí§t̚.sà.§d§āː§n
 พิสตาชีโอ||
 พิสุทธินิยม||
 พิสูจน์||
@@ -9310,7 +9310,7 @@ autoExpandExamples.th = `
 สะระแหน่||
 สะสม||
 สะสวย||
-สะอาด|clean|sa˨˩ ʔaːt̚˨˩
+สะอาด|clean|s§à.§ʔ§àː§t̚
 สะอึก||
 สะเก็ด||
 สะเก็ดดาว||
@@ -10502,7 +10502,7 @@ autoExpandExamples.th = `
 ห้องทดลอง||
 ห้องนอน||
 ห้องนั่งเล่น||
-ห้องน้ำ|toilet|hɔŋ˥˩ naːm˦˥
+ห้องน้ำ|toilet|hɔ̂§‹§ŋ.§n§áːm
 ห้องปฏิบัติการ||
 ห้องปิดตาย||
 ห้องพัก||
@@ -10519,7 +10519,7 @@ autoExpandExamples.th = `
 ห้าง||
 ห้างสรรพสินค้า||
 ห้าบาทสิบบาท||
-ห้าม|to forbid|haːm˥˩
+ห้าม|to forbid|h§âː§m
 ห้ามจอด||
 ห้ามสูบบุหรี่||
 ห้าร้อย||
@@ -11070,7 +11070,7 @@ autoExpandExamples.th = `
 อิเล็กทรอนิกส์||
 อิเล็กโทรนิกส์||
 อิเหนา||
-อิ่ม|to be full|ʔim˨˩
+อิ่ม|to be full|ʔì§m
 อิ่มตัว||
 อิ้ง||
 อิ๊ง||
@@ -12187,7 +12187,7 @@ autoExpandExamples.th = `
 เปลญวน||
 เปลว||
 เปลวไฟ||
-เปลี่ยน|to change|pliːa̯n˨˩
+เปลี่ยน|to change|››§p§lìa̯§‹§n
 เปลี่ยนแปลง||
 เปลี่ยนใจ||
 เปลี่ยว||
@@ -12203,7 +12203,7 @@ autoExpandExamples.th = `
 เปลือย||
 เปลื้อง||
 เปล่ง||
-เปล่า|no|plaːw˨˩
+เปล่า|no|››§p§làːw§‹
 เปอร์เซีย||
 เปอร์เซ็นต์||
 เปา||
@@ -13921,7 +13921,7 @@ autoExpandExamples.th = `
 โปรตุเกส||
 โปรย||
 โปรเตสแตนต์||
-โปรแกรม|(computer) program|››§p§rōː.§››§k§rɛ§̄m
+โปรแกรม|(computer) program|››§p§rōː.§››§k§rɛ̄§m
 โปรโมชั่น||
 โปร่ง||
 โปร่งใจ||
