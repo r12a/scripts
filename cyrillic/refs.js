@@ -138,12 +138,28 @@ reflist = {
 "lang": new Set(['ru']),
 },
 
+"wua": {
+"authors": "Wikipedia",
+"title":"Ukrainian alphabet",
+"retr": "Mar 2022",
+"url":"https://en.wikipedia.org/wiki/Ukrainian_alphabet",
+"lang": new Set(['uk']),
+},
+
 "wp": {
 "authors": "Wikipedia",
 "title":"Russian phonology",
 "retr": "Apr 2021",
 "url":"https://en.wikipedia.org/wiki/Russian_phonology",
 "lang": new Set(['ru']),
+},
+
+"wup": {
+"authors": "Wikipedia",
+"title":"Ukrainian phonology",
+"retr": "Mar 2022",
+"url":"https://en.wikipedia.org/wiki/Ukrainian_phonology",
+"lang": new Set(['uk']),
 },
 
 }
@@ -327,31 +343,6 @@ yug:{name:"Yug"},
 
 
 
-
-terms = {
-
-"ru1": {
-"url":"http://shtooka.net/overview.php?lang=rus&page=8",
-"authors": "?",
-"title":"Projet Shtooka",
-"notes": "Word lists in alphabetical order"
-},
-
-"ru2": {
-"url":"https://ru.wiktionary.org/wiki/%D1%81%D1%83%D0%BF%D1%80%D1%83%D0%B3",
-"authors": "Wikipedia",
-"title":"Russian Wiktionary",
-"notes": "Change the word at the end of the URL to look up IPA.  Remove any accent."
-},
-
-
-"mn1": {
-"url":"https://www.mongolianlanguage.mn/free-lessons/mongolian-cyrillic-alphabet",
-"url":"https://www.mongolianlanguage.mn/free-lessons",
-"authors": "Nomiin Ger",
-"title":"Free lessons",
-},
-}
 
 
 
