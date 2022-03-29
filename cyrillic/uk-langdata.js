@@ -2,14 +2,12 @@
 
 var langs = {
 
-"ru": { name:"Russian", local:"русский язык‎ (russkij jazyk)", silcode:"rus", 
-source:"3b62d1cd6732b3b939bef075192c917a41ed20da,cldr_ru,udhr_rus", 
-region:"eur", countries:"Russia, Ukraine, Kazakhstan, Uzbekistan, Poland, Belarus, Azerbaijan, Georgia, Kyrgyzstan, Lithuania, Latvia, Moldova, Estonia, etc.", script:"cyrl", speakers:"258227760", 
-letter:"всеобщаядклрципчнтзгшюйьмуыхъжэфёВСЕОБЩАЯДКЛРЦИПЧНТЗГШЮЙЬМУЫХЪЖЭФЁ", markaux:"̆̈́", punctuation:"‐–—…“„«»", aux:"§", 
-orth:`Cyrillic. &nbsp; <a href="../scripts/cyrillic" target="_blank">Details</a>.`,
+"uk": { name:"Ukrainian", silcode:"ukr", source:"cldr_uk,udhr_ukr", region:"eur", countries:"Ukraine, Brazil, Moldova, Romania", script:"cyrl", speakers:"45000000", local:"українська мова‎ (Ukrayins’ka mova)", 
+letter:"ʼЄІЇАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЮЯабвгдежзийклмнопрстуфхцчшщьюяєіїҐґ", mark:"̆̈́", punctuation:"«»„“—‐–…", symbol:"№", aux:"§",
+orth:`Cyrillic. &nbsp; <a href="../scripts/cyrillic/ks.html" target="_blank">Details</a>.`,
 type:"alphabet", cs:"yes", gpos:"no", gsub:"no", cursive:"no", direction:"ltr", wordsep:"space", baseline:"mid", wrap:"word", hyphenation:"yes", hyphen:"-",  justification:"sp",
-vowels:"let:11",
-linked:"cyrillic", fonts:"/pickers/cyrl-ru/", 
+vowels:"let:10",
+linked:"cyrillic", fonts:"/pickers/cyrl-uk/", 
 },
 
 

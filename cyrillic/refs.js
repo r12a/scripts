@@ -122,12 +122,20 @@ reflist = {
 "lang": new Set(['mn']),
 },
 
+"wul": {
+"authors": "Wikipedia",
+"title":"Ukrainian Language",
+"retr": "Mar 2022",
+"url":"https://en.wikipedia.org/wiki/Ukrainian_language",
+"lang": new Set(['uk']),
+},
+
 "wq": {
 "authors": "Wikipedia",
 "title":"Quotation mark",
 "retr": "Apr 2021",
 "url":"https://en.wikipedia.org/wiki/Quotation_mark",
-"lang": new Set(['ru','mn']),
+"lang": new Set(['ru','mn','uk']),
 },
 
 "wa": {
