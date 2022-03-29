@@ -254,7 +254,9 @@ function addUsageAdvice (script) {
 	// Add a para to the intro & add accessibility controls
 	
 	document.getElementById('usage').outerHTML = `
-    <p style="line-height:1.4"><strong style="font-size:120%;">This is an interactive document:</strong> Click/tap on the following to reveal detailed information and examples for each character: (a) characters in boxes with coloured backgrounds, (b) <span style="color:teal;">link text</span> on character names. (You can make this happen as the cursor moves over the characters in boxes, by selecting <samp>Detail on mouseover</samp> in the floating menu to the right.) The same information also appears in the companion document, <a href="block.html" target="_blank" class="linkHighlightx">${ script } character notes</a>. In addition, you can click/tap on <span class="ex">coloured examples</span> and on figures to see a list of the characters they contain.</p>
+    <p>See a list of <a href="index.html#languages" target="_blank">languages using the ${ script } script</a>.</p>
+    
+    <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:120%;">This is an interactive document:</strong> Click/tap on the following to reveal detailed information and examples for each character: (a) characters in boxes with coloured backgrounds, (b) <span style="color:teal;">link text</span> on character names. (You can make this happen as the cursor moves over the characters in boxes, by selecting <samp>Detail on mouseover</samp> in the floating menu to the right.) The same information also appears in the companion document, <a href="block.html" target="_blank" class="linkHighlightx">${ script } character notes</a>. In addition, you can click/tap on <span class="ex">coloured examples</span> and on figures to see a list of the characters they contain.</p>
     
     <div id="contrastSwitch" title="Accessibility settings." onclick="document.getElementById('access').style.display='flex'"><img src="../../shared/images/access.png" alt="Accessibility settings"></div>
 
