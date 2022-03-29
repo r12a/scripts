@@ -357,6 +357,14 @@ reflist = {
 "lang": new Set(['ug']),
 },
 
+"yh": {
+"authors": "Yannis Haralambous",
+"title":"Breaking Arabic: the creative inventiveness of Uyghur script reforms",
+"url":"https://designregression.com/article/breaking-arabic",
+"retrieved":"Mar 2022",
+"lang": new Set(['ug']),
+},
+
 }
 
 
