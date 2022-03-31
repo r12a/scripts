@@ -304,7 +304,7 @@ autoExpandExamples.am = `
 ስልሳ||
 ስልቻ||
 ስልክ||
-ስም|name|sɨm|səm
+ስም|name|sɨ§m|səm
 ስምህ፡ማን፡ነው||
 ስምሽ፡ማን፡ነው||
 ስምንተኛ||
@@ -554,7 +554,7 @@ autoExpandExamples.am = `
 አውስትራልያ||
 አዘመተ||
 አዘን||
-አየሩ|the weather|əyyəru
+አየሩ|the weather|ə§yyə§ru
 አያት||
 አይብ||
 አይን|eye||ʾäyn
@@ -575,7 +575,7 @@ autoExpandExamples.am = `
 አፍ|mouth||ʾäf
 አፍንጫ|nose||ʾäfnč̣a
 ኡነት||
-ኢትዮጵያ|Ethiopia|ʾītyōṗṗyā
+ኢትዮጵያ|Ethiopia||ʾītyōṗṗyā
 ኢንተርኔት||
 ኣልጋ||
 ኣከስት||
