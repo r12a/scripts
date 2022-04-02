@@ -99,7 +99,7 @@ function showComponents (str) {
     
     for (var i=0;i<chars.length;i++) {
         var scriptGroup = findScriptGroup( chars[i].codePointAt(0) )
-        var hex = chars[i].codePointAt(0).toString(16)
+        var hex = chars[i].codePointAt(0).toString(16).toUpperCase()
         while (hex.length < 4) hex = '0'+hex
         out += `<div class="panelCharacter"><a target="c" href="../../../uniview/index.html?char=${ hex }"><img src="../../../c/${ scriptGroup }/${ hex }.png" alt="${ chars[i] }"> U+${ hex } ${ charData[chars[i]] }</a></div>\n`
         }
