@@ -1,0 +1,159 @@
+rawPropertyListStr = `
+# GraphemeBreakProperty-14.0.0.txt
+# Date: 2021-08-12, 23:13:02 GMT
+# © 2021 Unicode®, Inc.
+# Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
+# For terms of use, see http://www.unicode.org/terms_of_use.html
+#
+# Unicode Character Database
+#   For documentation, see http://www.unicode.org/reports/tr44/
+
+# ================================================
+
+# Property:	Grapheme_Cluster_Break
+
+#  All code points not explicitly listed for Grapheme_Cluster_Break
+#  have the value Other (XX).
+
+# @missing: 0000..10FFFF; Other
+
+# ================================================
+
+1B05..1B33    ; Aksara # Cf   [6] BALINESE LETTER AKARA..BALINESE LETTER HA
+1B45..1B4C    ; Aksara # Cf       BALINESE LETTER KAF SASAK..BALINESE LETTER ARCHAIC JNYA
+25CC          ; Aksara # Cf       DOTTED CIRCLE
+A984..A9B2    ; Aksara # Cf   [2] JAVANESE LETTER A..JAVANESE LETTER HA
+11005..11037  ; Aksara # Cf       BRAHMI LETTER A..BRAHMI LETTER OLD TAMIL NNNA
+11071..11072  ; Aksara # Cf       BRAHMI LETTER OLD TAMIL SHORT E..BRAHMI LETTER OLD TAMIL SHORT O
+11075         ; Aksara # Lo       BRAHMI LETTER OLD TAMIL LLA
+11305..1130C  ; Aksara # Cf       GRANTHA LETTER A..GRANTHA LETTER VOCALIC L
+1130F..11310  ; Aksara # Cf       GRANTHA LETTER EE..GRANTHA LETTER AI
+11313..11328  ; Aksara # Cf       GRANTHA LETTER OO..GRANTHA LETTER NA
+1132A..11330  ; Aksara # Cf       GRANTHA LETTER PA..GRANTHA LETTER RA
+11332..11333  ; Aksara # Cf       GRANTHA LETTER LA..GRANTHA LETTER LLA
+11335..11339  ; Aksara # Cf       GRANTHA LETTER VA..GRANTHA LETTER HA
+11360..11361  ; Aksara # Cf       GRANTHA LETTER VOCALIC RR..GRANTHA LETTER VOCALIC LL
+11392..113B5  ; Aksara # Cf       TULU-TIGALARI LETTER KA..TULU-TIGALARI LETTER LLLA
+11F04..11F10  ; Aksara # Cf       KAWI LETTER A..KAWI LETTER O
+11F12..11F33  ; Aksara # Cf       KAWI LETTER KA..KAWI LETTER JNYA
+
+# Total code points: 26
+
+
+
+# ================================================
+
+11003..11004  ; PreBase   BRAHMI SIGN JIHVAMULIYA..BRAHMI SIGN UPADHMANIYA
+113D1  		  ; PreBase   TULU-TIGALARI REPHA
+11F02  		  ; PreBase   KAWI SIGN REPHA
+
+
+# ================================================
+
+1BC0..1BE5      ; Start	      BATAK LETTER A..BATAK LETTER U
+11066..1106F    ; Start       BRAHMI DIGIT ZERO..BRAHMI DIGIT NINE
+11350           ; Start   [2] GRANTHA OM
+1135E..1135F    ; Start  [18] GRANTHA LETTER VEDIC ANUSVARA..GRANTHA LETTER VEDIC DOUBLE
+ANUSVARA
+11380..11389    ; Start  [33] TULU-TIGALARI LETTER A..TULU-TIGALARI LETTER VOCALIC LL
+1138B           ; Start   [2] TULU-TIGALARI LETTER EE
+1138E           ; Start   [2] TULU-TIGALARI LETTER AI
+11390..11391    ; Start       TULU-TIGALARI LETTER OO..TULU-TIGALARI LETTER AU
+11F50..11F59    ; Start       KAWI DIGIT ZERO..KAWI DIGIT NINE
+
+# Total code points: 3886
+
+
+
+
+# ================================================
+
+1BF2    ; Virama_Final [112] BATAK PANGOLAT
+1BF3    ; Virama_Final   [5] BATAK PANONGONAN
+
+# Total code points: 2095
+
+
+
+
+# Total code points: 26
+
+# ================================================
+
+1B44          ; Virama       BALINESE ADEG ADEG
+A9C0          ; Virama       JAVANESE PANGKON
+11046         ; Virama   [3] BRAHMI VIRAMA
+1134D         ; Virama   [4] GRANTHA SIGN VIRAMA
+113D0         ; Virama   [2] TULU-TIGALARI CONJOINER
+11F42         ; Virama   [2] KAWI CONJOINER
+
+# Total code points: 388
+
+
+# ================================================
+
+1B00..1B04    ; Mark	 BALINESE SIGN ULU RICEM..BALINESE SIGN SURANG
+1B34..1B43    ; Mark     BALINESE SIGN REREKAN..BALINESE VOWEL SIGN PEPET TEDUNG
+1BE6..1BF1    ; Mark     BATAK SIGN TOMPI..BATAK CONSONANT SIGN H
+11000..11002  ; Mark     BRAHMI SIGN CANDRABINDU..BRAHMI SIGN VISARGA
+11038..11045  ; Mark     BRAHMI VOWEL SIGN AA..BRAHMI VOWEL SIGN AU
+11070         ; Mark     BRAHMI SIGN OLD TAMIL VIRAMA
+11073..11074  ; Mark     BRAHMI VOWEL SIGN OLD TAMIL SHORT E..BRAHMI VOWEL SIGN OLD TAMIL SHORT O
+AA29..AA36    ; Mark	 CHAM VOWEL SIGN AA..CHAM CONSONANT SIGN WA
+AA43          ; Mark	 CHAM CONSONANT SIGN FINAL NG
+AA4C..AA4D    ; Mark	 CHAM CONSONANT SIGN FINAL M..CHAM CONSONANT SIGN FINAL H
+11300..11303  ; Mark     GRANTHA SIGN COMBINING ANUSVARA ABOVE..GRANTHA SIGN VISARGA
+1133B..1133C  ; Mark     COMBINING BINDU BELOW..GRANTHA SIGN NUKTA
+1133E..11348  ; Mark     GRANTHA VOWEL SIGN AA..GRANTHA VOWEL SIGN AI
+1134B..1134C  ; Mark     GRANTHA VOWEL SIGN OO..GRANTHA SIGN AU
+11357         ; Mark     GRANTHA AU LENGTH MARK
+11362..11363  ; Mark     GRANTHA VOWEL SIGN VOCALIC L..GRANTHA VOWEL SIGN VOCALIC LL
+11366..1136C  ; Mark     COMBINING GRANTHA DIGIT ZERO..COMBINING GRANTHA DIGIT SIX
+11370..11374  ; Mark     COMBINING GRANTHA LETTER A..COMBINING GRANTHA LETTER PA
+A980..A983    ; Mark	 JAVANESE SIGN PANYANGGA..JAVANESE SIGN WIGNYAN
+A9B3..A9BF    ; Mark	 JAVANESE SIGN CECAK TELU..JAVANESE CONSONANT SIGN CAKRA
+11F00..11F01  ; Mark     KAWI SIGN CANDRABINDU..KAWI SIGN ANUSVARA
+11F03         ; Mark     KAWI SIGN VISARGA
+11F34..11F3A  ; Mark     KAWI VOWEL SIGN AA..KAWI VOWEL SIGN VOCALIC R
+11F3E..11F41  ; Mark     KAWI VOWEL SIGN E..KAWI SIGN KILLER
+
+
+
+# Total code points: 2095
+
+
+
+
+
+
+# EOF
+`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
