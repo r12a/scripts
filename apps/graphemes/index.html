@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Grapheme segmenter</title>
+<meta name="description" content="Tool to parse a string into graphemic units." />
+
+<link rel="stylesheet" href="../../../shared/style/docs.css" />
+<link rel="stylesheet"  href="style.css" />
+
+<script src="../../../shared/code/boilerplate.js"></script>
+<!--script src="../../../uniview/functions.js"></script-->
+<script src="../../../shared/code/scriptGroups.js"></script>
+<script src="../../../shared/code/all-names.js"></script>
+<script src="propertylist.js"></script>
+<script src="script.js"></script>
+</head>
+
+<body class="app">
+<header>
+<div id="header-boilerplate"></div>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_appHeader('../../../shared/images/world.gif','Grapheme segmenter','');</script>
+</header>
+
+<dialog id="panel" style="display:none"></dialog>
+
+<div id="start">
+<p id="clearInput" onClick="document.getElementById('in').value = '';">Clear all</p>
+
+<textarea id="in" placeholder="Drop text to be analysed here."></textarea>
+
+<div>
+<button id="analyseBCvButton" onclick="document.getElementById('out').innerHTML = makeBCvGraphemes(document.getElementById('in').value)">BCv Graphemes</button>
+<span style="margin-inline:2rem;">&nbsp;</span>
+<button id="analyseGButton" onclick="document.getElementById('out').innerHTML = makeGraphemes(document.getElementById('in').value)">BC Graphemes</button>
+<span style="margin-inline:2rem;">&nbsp;</span>
+<button id="analyseGCButton" onclick="document.getElementById('out').innerHTML = makeGraphemeClusters(document.getElementById('in').value)">Unicode grapheme clusters</button>
+</div>
+</div>
+
+
+<p id="out"></p>
+
+
+
+
+
+
+
+
+
+<div id="notes" style=" background-color: bisque; margin-top:4em; padding: 1em; ">
+
+<aside class="sidebar">
+<p>Apply a font: <input id="fontChanger" type="text" placeholder="Font name here" onChange="changeFont(this.value)"> <button onclick="changeFont(document.getElementById('fontChanger').value)">Apply</button></p>
+
+<p><label><input type="checkbox" id="mouseover"> 
+Show character names on mouseover</label></p>
+</aside>
+
+<p>This tool parses a string and shows extended grapheme cluster boundaries (except for Korean  jamo and emoji character sequences.)</p>
+
+<p>Click on the segments to reveal the character names.</p>
+
+
+
+<details>
+<summary>show more</summary>
+
+<section>
+<aside class="sidebar">
+  <div class="section">
+    <p><a target="_blank" href="../../../uniview/">UniView</a></p>
+    <p><a target="_blank" href="https://unicode.org/reports/tr29/">UAX #29 Unicode Text Segmentation</a></p>
+    <p><a target="_blank" href="https://www.unicode.org/Public/UCD/latest/ucd/auxiliary/GraphemeBreakProperty.txt">GraphemeBreakProperty-14.0.0.txt</a></p>
+    <p><a target="_blank" href="https://icu4c-demos.unicode.org/icu-bin/icusegments">ICU Segments</a></p>
+  </div>
+</aside>
+
+<p>This app segments text in 3 different ways:</p>
+<ul>
+<li><strong>BCv graphemes</strong> start with a base character and add all following combining marks, unless the base character is preceded by a character with the virama or invisible stacker indic property, in which case it extends the previous grapheme. This may produce inaccurate results if a virama is meant to signal the end of a syllable with a visible marker.</li>
+<li><strong>BC graphemes</strong> start with a base character and add all following combining marks. They don't extend the grapheme where there are viramas or stackers. That means that conjunct graphemes are split into separate parts.</li>
+<li><strong>Unicode grapheme clusters</strong> are an approximation to user perceived graphemes where the boundaries are established by rules applied to code point sequences according to <a href="https://unicode.org/reports/tr29/">UAX #29</a>. The rules tend to be biased towards producing the units of text needed for cursor positioning. (There is a different set of rules for establishing break opportunities for line-breaking.) Grapheme clusters may also be tailored for particular languages.</li>
+</ul>
+
+<p>To pass a string in the URL, use one of:</p>
+<ul>
+<li><code style="white-space: nowrap">?bcv=&lt;string&gt;</code></li>
+<li><code style="white-space: nowrap">?bc=&lt;string&gt;</code></li>
+<li><code style="white-space: nowrap">?gc=&lt;string&gt;</code></li>
+</ul>
+
+<p>To indicate in the URL the font you want to use for the display, add <code style="white-space: nowrap">&amp;font=&lt;font_name&gt;</code>.</p>
+
+<p>See also the <a href="https://icu4c-demos.unicode.org/icu-bin/icusegments#2/en__ULI">ICU line-break segmenter</a>.</p>
+</section>
+
+<p id="status">Updated 
+<!-- #BeginDate format:Sw1 -->4 April, 2022<!-- #EndDate -->
+</p>
+</details>
+</div>
+
+<div class="smallprint"><span id="version">
+See <a href="https://github.com/r12a/scripts/apps/listlinebreak/commits/gh-pages">recent changes</a>.
+Make a <a href="https://github.com/r12a/scripts/issues/new">comment</a>. 
+Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a> © <a href="mailto:r12a@w3.org">r12a</a> 
+</span>
+</div>
+  
+ <script>
+// check for parameters and take appropriate action
+parameters = location.search.split('&');
+parameters[0] = parameters[0].substring(1);
+for (var p=0;p<parameters.length;p++) {  
+	pair = parameters[p].split('=');
+	if (pair[0] == 'bcv' && pair[1]) { 
+        document.getElementById('in').value = decodeURIComponent(pair[1])
+        document.getElementById('out').innerHTML = makeBCvGraphemes(decodeURIComponent(pair[1])) 
+        }
+	if (pair[0] == 'bc' && pair[1]) { 
+        document.getElementById('in').value = decodeURIComponent(pair[1])
+        document.getElementById('out').innerHTML = makeGraphemes(decodeURIComponent(pair[1])) 
+        }
+	if (pair[0] == 'gc' && pair[1]) { 
+        document.getElementById('in').value = decodeURIComponent(pair[1])
+        document.getElementById('out').innerHTML = makeGraphemeClusters(decodeURIComponent(pair[1])) 
+        }
+	if (pair[0] == 'q' && pair[1]) { 
+        document.getElementById('in').value = decodeURIComponent(pair[1])
+        document.getElementById('out').innerHTML = makeGraphemeClusters(decodeURIComponent(pair[1])) 
+        }
+	if (pair[0] == 'font' && pair[1]) {
+        document.getElementById('fontChanger').value = decodeURIComponent(pair[1])
+        changeFont( decodeURIComponent(pair[1]) ) 
+        }
+	}
+</script>
+</body>
+</html>
