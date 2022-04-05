@@ -9,7 +9,7 @@
 autoExpandExamples.ban = `
 
 ᬅᬃᬘᬵ|statue|ar.t͡ʃə
-ᬅᬃᬣ|wealth|artə
+ᬅᬃᬣ|wealth|ar§tə
 ᬅᬓ᭄ᬱᬭ|alphabet||akśara
 ᬅᬓ᭄ᬲᬭ|letter, alphabet|aksarə
 ᬅᬗ᭄ᬕᬭ|Tuesday|aŋɡarə|anggara
@@ -110,9 +110,9 @@ autoExpandExamples.ban = `
 ᬢᬶᬢᬶᬬᬂ||
 ᬢᬶᬫᬄ||
 ᬢᬶᬫᬄᬧᬸᬢᬶᬄ|tin||timah putih
-ᬢᬶᬫ᭄ᬧᬮ᭄|friend||timpal
+ᬢᬶᬫ᭄ᬧᬮ᭄|friend|ti§m§pa§l|timpal
 ᬢᬶᬬᬂ||
-ᬢᬷᬃᬢ|holy water|tirtə
+ᬢᬷᬃᬢ|holy water|tir§tə
 ᬢᬸᬃ|again|tur
 ᬢᬸᬓᬤ᭄||
 ᬢᬸᬮᬂ|bone||tulang
@@ -123,7 +123,7 @@ autoExpandExamples.ban = `
 ᬢᭀᬬ|water|tojə
 ᬢᭂᬓ||
 ᬣᬦᬶ|farmer||tani
-ᬤᬍᬫ᭄|deep|daləm|dalem
+ᬤᬍᬫ᭄|deep|da§lə§m|dalem
 ᬤᬓ᭄ᬱᬶᬡ|south||daksina
 ᬤᬤᭀᬂ|grandmother||dadong
 ᬤᬦ|sick|danə
@@ -168,6 +168,7 @@ autoExpandExamples.ban = `
 ᬧᬓ᭄ᬭᬫᬦ᭄|membership||pakraman
 ᬧᬓ᭄ᬲ|force||paksa
 ᬧᬓ᭄‌ᬭᬫᬦ᭄|Mr Raman||Pak Raman
+ᬧᬓ᭄​ᬭᬫᬦ᭄|Mr Raman|pa§k.§–§ra.§ma§n|Pak Raman
 ᬧᬢᬶ|death|pati
 ᬧᬢ᭄ᬢᬶ|army|pati
 ᬧᬢ᭄ᬧᬢ᭄|four||patpat
@@ -296,7 +297,7 @@ autoExpandExamples.ban = `
 ᬰᬭᬷᬭ|body||sarira
 ᬰᬰᬶ|moon, month||sasi
 ᬰᬵᬓᬵ|branch|sakə
-ᬰᬵᬲ᭄ᬢ᭄ᬭ|writing|sastrə|sastra
+ᬰᬵᬲ᭄ᬢ᭄ᬭ|writing|sa§s§t§rə|sastra
 ᬰᬶᬓᬶ|peacock|siki
 ᬰᬶᬮ|conduct|silə
 ᬰᬶᬮᬵ|stone|silə

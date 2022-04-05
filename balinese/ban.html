@@ -52,7 +52,7 @@
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->1 March, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->5 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -1350,7 +1350,6 @@ alveolar</th>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ᬫ␣ᬦ␣ᬗ␣ᬜ</figure>
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ᬯ␣ᬭ␣ᬮ␣ᬬ</figure>
-</section>
 
 
 <p><span class="codepoint" translate="no"><span lang="ban">&#x1B33;</span> [<a href="balinese#char1B33"><span class="uname">U+1B33 BALINESE LETTER HA</span></a>]</span> at the beginning of a word or after a preceding vowel is mostly used as a support for a vowel-sign (see <a class="sectionref">independentvowels</a>), and is not pronounced or transcribed. Word finally with a suffix vowel, however, it is transcribed.<tt>loc</tt></p>
@@ -1892,19 +1891,107 @@ unless the word involves repetition, eg.
 
 
 
-<section id="inline">
-<h2>Punctuation &amp; inline features</h2>  
+<section id="segments">
+<h2>Text segmentation</h2>  
+  
   
 <section id="graphemes">
 <h3>Grapheme boundaries</h3>
 <p id="def-grapheme" class="explanatoryintro definitionStub"></p>
 
-<p>Balinese text contains stacks and conjoined pairs that should not be split by line-breaking. These are constructs that encompass more than one grapheme-cluster as defined by the Unicode rules, and so additional rules are needed to handle them properly when splitting text.</p>
-
-<p>For each of the 3 words in <a class="figref">fig_grapheme_cluster</a> the colour coding of the glyphs show each of the separate grapheme clusters. In all 3 words there are examples of stacked glyphs containing multiple grapheme clusters, which should not be split during line-breaking.</p>
 
 
-<figure id="fig_grapheme_cluster">
+<p>Typographically, the basic unit of Balinese text is a grapheme whose boundaries may differ from those of the phonetic syllable.</p>
+
+
+
+
+<section id="basicSeg">
+<h4>Basic typographic units</h4>
+
+<p><code>Base (Combining_mark)*</code></p>
+<p>A basic typographic unit is equivalent to a <a href="../glossary/index.html#graphemecluster">Unicode grapheme cluster</a>, and includes a base and any combining marks associated with it.</p>
+<p>The base is generally a consonant, however independent vowels also constitute a base and may be followed by combining marks.</p>
+<p>In the case of Balinese,  sequences that include a syllable nucleus may include the combining marks:</p>
+<ol>
+<li>a <span class="name"><a href="#rerekan">rerekan</a></span> (a kind of nukta)</li>
+<li>a <a href="#vowelsigns">vowel-sign</a>, and</li>
+<li>a <a href="#finals">final consonant</a> that is expressed using a combining mark.</li>
+</ol>
+<p> Examples: </p>
+
+<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
+<tr><td><img src="images/tirte.png" alt=""></td><td><span class="eg transc" lang="ban">ᬢᬷᬃᬢ</span></td></tr>
+<tr><td><img src="images/arte.png" alt=""></td><td><span class="eg transc" lang="ban">ᬅᬃᬣ</span></td></tr>
+</table>
+
+<p>Syllable codas may be represented by a combining mark, but may also be written using a sequence of consonant letter (possibly including a <span class="name">rerekan</span>) followed by a visible <span class="name">adeg adeg</span>, eg.</p>
+
+<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
+<tr><td><img src="images/dalem.png" alt=""></td><td><span class="eg" lang="ban">ᬤᬍᬫ᭄</span></td></tr>
+</table>
+
+<p>These basic typographic units are typically used for cursor movements. In this case, any stacked consonants are stepped through, and the cursor positioning points can be visualised as follows:</p>
+
+<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
+<tr><td><img src="images/cursor_movt.png" alt=""></td><td><span class="eg" lang="ban" dir="ltr">ᬰᬵᬲ᭄ᬢ᭄ᬭ</span></td></tr>
+</table>
+
+</section>
+
+
+
+
+<section id="advancedSeg">
+<h4>Extended typographic units</h4>
+
+<p><code>(Base Rerekan)+ Base (Combining_mark)*</code></p>
+<p>Typographic units for most operations, such as line-breaking, first-letter selection, etc., incorporate any <a href="#clusters">stacked or conjoined forms</a> (representing consonant clusters) without splitting them. Clusters can arise where one phonetic syllable ends in a consonant letter and the following syllable begins with a consonant. They also occur when medial consonants are written, since (unlike Javanese) Balinese doesn't have dedicated combining marks for medials.</p>
+<!--p>This is most commonly the coda of the previous syllable and the onset of the current syllable, because where one phonetic syllable ends in a consonant letter and the following syllable begins with a consonant, the orthography typically joins the consonants together, either by stacking or conjoining them, eg. </p-->
+
+<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
+<tr><td><img src="images/dante.png" alt=""></td><td><span class="eg" lang="ban">ᬤᬦ᭄ᬢ</span></td></tr>
+<tr><td><img src="images/timpal.png" alt=""></td><td><span class="eg" lang="ban" dir="ltr">ᬢᬶᬫ᭄ᬧᬮ᭄</span></td></tr>
+<tr><td><img src="images/sastre.png" alt=""></td><td><span class="eg" lang="ban" dir="ltr">ᬰᬵᬲ᭄ᬢ᭄ᬭ</span></td></tr>
+</table>
+
+<p>These conjuncts are never split apart visually.</p>
+
+<p>Balinese is also unusual in that these conjuncts occur across word boundaries, so the word-final consonant of the first word may be stacked above the word-initial consonant of the second. See <a class="figref">fig_kahananlankwasa2</a> for an example.</p>
+<p>On the infrequent occasions when an <span class="name">adeg adeg</span> needs to be visible even though it is followed by another base, an invisible character must be added to prevent it joining with the following base. A zero-width space can achieve that.</p>
+
+<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
+<tr><td><img src="images/pakraman.png" alt=""></td><td><span class="eg" lang="ban">ᬧᬓ᭄​ᬭᬫᬦ᭄</span></td></tr>
+</table>
+</section>
+
+
+
+<section id="charorder">
+<h4>Code point ordering</h4>
+
+<p>The following indicates the  expected ordering of Unicode characters within a typographic unit for Balinese. The labels are those used for the Unicode <a target="_blank" href="../apps/listindic/index.html?chars=ᬧᬩᬢᬤᬘᬚᬓᬕᬲᬳᬫᬦᬗᬜᬯᬭᬮᬬᬞᬟᬠᬔᬛᬨᬝᬣᬥᬖᬰᬱᬡᬪᬙᬇᬈᬉᬊᬏᬑᬅᬆᬐᬒᬋᬌᬍᬎᬾᬿᭀᭃᭁᬶᬷᬸᬹᭃᬺᬻᬼᬽᬀᬁᬂᬃ᬴᭄ᬄ᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙᭚᭛᭜᭝᭞᭟᭠‌%E2%80%8B">Indic Syllabic Categories</a>. (Follow that link to see what characters they represent.)</p>
+<blockquote>
+<pre>
+Base             := Consonant | Vowel_Independent
+
+Typographic Unit := Base Nukta*
+                    (Virama Base Nukta*)*
+                    Vowel_Dependent*
+                    Bindu*
+                    Visarga*
+                    Consonant_Final*
+                :=  Base Nukta*
+                    (Virama Base Nukta*)* 
+                    Virama
+</pre>
+</blockquote>
+
+<p>Ordering characters as shown above avoids potential ambiguities and maximises the likelihood of success when rendering the text.</p>
+<p class="btw">Although Balinese and Javanese are very similar scripts, two key differences are that Balinese vowel-signs are always a single code point  per syllable, and there are no dedicated marks for Balinese medial consonants.</p>
+</section>
+
+<!--figure id="fig_grapheme_cluster">
 <div style="display: flex; justify-content: center; flex-wrap: wrap;">
 <img src="images/grapheme_cluster1.png" alt="ᬩ᭄ᬭ᭄ᬬᬕ᭄" data-notes="hibiscus, colour-modified" class="ex" lang="ban" style="height:120px">
 <span style="width: 4rem">&nbsp;</span>
@@ -1913,10 +2000,7 @@ unless the word involves repetition, eg.
 <img src="images/grapheme_cluster3.png" alt="ᬩ᭄ᬭ᭄ᬬᬕ᭄" data-notes="hibiscus, colour-modified" class="ex" lang="ban" style="height:120px">
 </div>
 <figcaption>Grapheme clusters in 3 Balinese words.</figcaption>
-</figure>
-
-<p class="observation"><span class="leadin">Observation:</span> The basic unit for Balinese text appears to be a stack of consonants plus all combining characters, where a stack could be a single character, or could have up to 3 consonants joined by <span class="name">adeg-adeg</span>. The combining characters include all vowel-signs, and final consonant marks.</p>
-<p class="observation">In the Chrome browser, this is the case for cursor movement. The cursor jumps over each of the stacks in <span class="ex" lang="ban">ᬓᬓᬵᬓ᭄ᬓᬓ᭄ᬓ᭄ᬬᬓ᭄ᬓ᭄ᬬᬵᬃ</span> one by one. In Firefox, however, the cursor appears to follow Unicode grapheme clusters, which makes it jump inside stacks with <span class="name">adeg-adeg</span> because a grapheme cluster doesn't include the non-combining characters following the base.</p>
+</figure-->
 </section>
 
 
@@ -1930,12 +2014,20 @@ unless the word involves repetition, eg.
 
 <figure id="fig_kahananlankwasa2">
 <img src="images/kahananlankwasa.png" alt="ᬓᬳᬦᬦ᭄ᬮᬦ᭄ᬓ᭄ᬯᬲ" class="ex" lang="ban">
-<figcaption>In the sequence of words <span class="charExample inline" translate="no"><span class="ex" lang="jv">ᬓᬳᬦᬦ</span> <span class="trans">pŋn</span> <span class="ipa">kahanan</span></span>,  <span class="charExample inline" translate="no"><span class="ex" lang="jv">ᬮᬦ</span> <span class="trans">pŋn</span> <span class="ipa">lan</span></span>, <span class="charExample inline" translate="no"><span class="ex" lang="jv">ᬓ᭄ᬯᬲ</span> <span class="trans">dik</span> <span class="ipa">kwasa</span></span>, the initial letter of both the 2nd and 3rd words are subjoined below the last letter of the previous word.</figcaption>
+<figcaption>In the sequence of words <span class="charExample inline" translate="no"><span class="ex" lang="ban">ᬓᬳᬦᬦ</span> <span class="trans">pŋn</span> <span class="ipa">kahanan</span></span>,  <span class="charExample inline" translate="no"><span class="ex" lang="ban">ᬮᬦ</span> <span class="trans">pŋn</span> <span class="ipa">lan</span></span>, <span class="charExample inline" translate="no"><span class="ex" lang="ban">ᬓ᭄ᬯᬲ</span> <span class="trans">dik</span> <span class="ipa">kwasa</span></span>, the initial letter of both the 2nd and 3rd words are subjoined below the last letter of the previous word.</figcaption>
 </figure>
+</section>
 </section>
 
 
 
+
+
+
+
+
+<section id="inline">
+<h2>Punctuation &amp; inline features</h2>  
 
   
 <section id="phrase">
