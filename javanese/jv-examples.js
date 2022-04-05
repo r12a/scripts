@@ -9,13 +9,13 @@
 autoExpandExamples.jv = `
 
 ꧇꧑꧕꧇ꦎꦏ꧀ꦠꦺꦴꦧꦼꦂ꧇꧒꧐꧑꧒꧇|15 october 2012|
-ꦄꦪꦸ|Ayu||ayu|personal name
-ꦄꦫꦶꦱ꧀ꦠꦺꦴꦠꦼꦭꦼꦱ꧀||
+ꦄꦪꦸ|Ayu|ˈa§ju*|ayu|personal name
+ꦄꦫꦶꦱ꧀ꦠꦺꦴꦠꦼꦭꦼꦱ꧀|Aristotle|
 ꦄꦭ꧀ꦭꦃ|Allah||allah
 ꦆꦤ꧀ꦠꦼꦫꦏ꧀ꦱꦶ|interaction||interaksi
 ꦉꦩꦸꦏ꧀ꦗꦸꦁ||
 ꦉꦩꦸꦗꦸꦁ||
-ꦊꦩꦃꦊꦩ꧀ꦧꦸꦠ꧀|gentle||lemah lembut
+ꦊꦩꦃꦊꦩ꧀ꦧꦸꦠ꧀|gentle|lə§mah §lə§m§bu§t*|lemah lembut
 ꦊꦩ꧀ꦧꦸ||
 ꦊꦭꦸꦲꦸꦂ||
 ꦏꦁꦩꦱ꧀||
@@ -28,13 +28,13 @@ autoExpandExamples.jv = `
 ꦏꦚ꧀ꦕ||
 ꦏꦠꦿꦺꦴ||
 ꦏꦤꦱ꧀|pineapple||kanas
-ꦏꦤ꧀ꦛꦶ|by|kanʈi
+ꦏꦤ꧀ꦛꦶ|by|ka§n§ʈi
 ꦏꦤ꧀ꦠꦺꦴꦂ|office||kantor
 ꦏꦧꦸꦥꦠꦺꦤ꧀||
 ꦏꦩꦶ|we, us||kami
 ꦏꦪꦔꦤ꧀||
 ꦏꦭ||
-ꦏꦭꦶꦱ꧀ꦠꦿꦶꦏꦤ꧀||
+ꦏꦭꦶꦱ꧀ꦠꦿꦶꦏꦤ꧀|electricity||kalistrikan
 ꦏꦭꦺꦴꦁ||
 ꦏꦮꦱ||
 ꦏꦮꦸꦁ||
@@ -108,7 +108,7 @@ autoExpandExamples.jv = `
 ꦠꦩꦤ꧀|garden||taman
 ꦠꦭꦶ||
 ꦠꦱꦶꦏ꧀||
-ꦠꦶꦂꦠ|holy water|tirtɔ
+ꦠꦶꦂꦠ|holy water|tir§tɔ
 ꦠꦶꦊꦩ꧀||
 ꦠꦶꦤꦸꦭꦶꦱ꧀||
 ꦠꦸꦫꦸ||
@@ -220,11 +220,11 @@ autoExpandExamples.jv = `
 ꦩꦤꦸꦁꦱ||
 ꦩꦤꦸꦏ꧀||
 ꦩꦥꦒ꧀||
-ꦩꦧꦸꦫꦸ|hunting|
+ꦩꦧꦸꦫꦸ|hunting|ᵐ§bu§ru
 ꦩꦪꦁ||
 ꦩꦭꦲꦺꦏꦠ꧀||
 ꦩꦱꦾꦫꦏꦠ꧀||
-ꦩꦲꦺꦴꦱ꧀|to read (polite)||maos
+ꦩꦲꦺꦴꦱ꧀|to read (polite)|ma§o§s*|maos
 ꦩꦶꦠꦿ||
 ꦩꦸꦏ||
 ꦩꦸꦝ|young||mudha
@@ -285,7 +285,7 @@ autoExpandExamples.jv = `
 ꦱꦸꦩꦸꦂ||
 ꦱꦸꦱꦶꦭ||
 ꦱꦺꦭ||
-ꦱꦼꦏꦺꦴꦭꦃ|school||sekolah
+ꦱꦼꦏꦺꦴꦭꦃ|school|sə§ˈko§lah|sekolah
 ꦱꦼꦩꦔ꧀ꦏ||
 ꦱꦼꦩꦢꦶ||
 ꦱꦼꦩ꧀ꦥꦿꦺꦴꦁ||
@@ -298,22 +298,22 @@ autoExpandExamples.jv = `
 ꦲꦏꦸ|I, me||aku
 ꦲꦏꦺꦫꦠ꧀||
 ꦲꦏꦿꦧ꧀||
-ꦲꦏ꧀ꦱꦫ|alphabet||aksara
+ꦲꦏ꧀ꦱꦫ|letter|a§k§sa§ra|aksara
 ꦲꦒꦩ|religion||agama
 ꦲꦒꦼꦁ|big (polite)||ageng
 ꦲꦒ꧀ꦤꦶ||
 ꦲꦔꦶꦤ꧀|wind||angin
 ꦲꦔꦺꦭ꧀|difficult|ˈa§ŋɛ§l|angel
-ꦲꦕꦫ|programme||acara
+ꦲꦕꦫ|programme|ˈa§t͡ʃa.§ra|acara
 ꦲꦠꦮ||
 ꦲꦢꦠ꧀|tradition, custom||adat
-ꦲꦤꦕꦫꦏ|alphabet||hanacaraka
+ꦲꦤꦕꦫꦏ|alphabet|ha§na§t͡ɕa§ra§ka|hanacaraka
 ꦲꦤ꧀ꦝꦲꦂ||
 ꦲꦤ꧀ꦝꦸꦏ꧀||
 ꦲꦧꦁ|red|ˈa.baŋ/ˈɔ.bɔŋ
 ꦲꦩ꧀ꦧꦿꦤꦁ|turn fiery red||ambranaŋ
 ꦲꦪꦤ꧀||
-ꦲꦪꦸ|graceful||ayu
+ꦲꦪꦸ|graceful|ˈa§ju*|ayu
 ꦲꦭꦱ꧀||
 ꦲꦭꦺꦴꦤ꧀ꦲꦭꦺꦴꦤ꧀||
 ꦲꦱꦸ||
@@ -343,8 +343,9 @@ autoExpandExamples.jv = `
 
 ꦎꦏ꧀ꦠꦺꦴꦧꦼꦂ|October|
 
-
-
+ꦲꦏ꧀ꦱꦫꦗꦮ|Javanese script|a§k§sa§ra §d͡ʒa§wa
+ꦔꦺꦴꦏꦺꦴ|neutral register|ŋo§ko
+ꦏꦿꦩ|polite register|krɔmɔ
 
 
 
