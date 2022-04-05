@@ -196,25 +196,25 @@ function makeIndexIntro (node, script, langName, lang, orthog, indic) {
     <div id="orthoLinkPopup">
     <ul>`
     
-    out += `<li><a target="_blank" href="/app-charuse?language=${lang}">Character usage</a></li>`
+    out += `<li><a target="_blank" href="../../app-charuse/index.html?language=${lang}">Character usage</a></li>`
     
-    if (indic) out += `<li><a target="_blank" href="" onClick="this.href='../apps/listindic?chars='+encodeURI(getOrthographyList('.characterBox', 'index', false) + getOrthographyList('.auxiliaryBox', 'index', true));">Indic category</a></li>`
+    if (indic) out += `<li><a target="_blank" href="" onClick="this.href='../apps/listindic/index.html?chars='+encodeURI(getOrthographyList('.characterBox', 'index', false) + getOrthographyList('.auxiliaryBox', 'index', true));">Indic category</a></li>`
     
-    out += `<li><a target="_blank" href="" onClick="this.href='../apps/listcategories?chars='+encodeURI(getOrthographyList('.characterBox', 'index', true) + getOrthographyList('.auxiliaryBox', 'index', true))">General Category</a></li>
+    out += `<li><a target="_blank" href="" onClick="this.href='../apps/listcategories/index.html?chars='+encodeURI(getOrthographyList('.characterBox', 'index', true) + getOrthographyList('.auxiliaryBox', 'index', true))">General Category</a></li>
     
-    <li><a target="_blank" href="" onClick="this.href='/app-listcharacters?chars='+encodeURI(getOrthographyList('.characterBox', 'index', false) + getOrthographyList('.auxiliaryBox', 'index', true));">Unicode blocks</a></li>
+    <li><a target="_blank" href="" onClick="this.href='../../app-listcharacters/index.html?chars='+encodeURI(getOrthographyList('.characterBox', 'index', false) + getOrthographyList('.auxiliaryBox', 'index', true));">Unicode blocks</a></li>
     
-    <li><a target="_blank" href="" onClick="this.href='/uniview?charlist='+encodeURI(getOrthographyList('.characterBox', 'index', false) + getOrthographyList('.auxiliaryBox', 'index', true))">UniView</a></li>
+    <li><a target="_blank" href="" onClick="this.href='../../uniview/index.html?charlist='+encodeURI(getOrthographyList('.characterBox', 'index', false) + getOrthographyList('.auxiliaryBox', 'index', true))">UniView</a></li>
     
-    <li><a target="_blank" href="" onClick="this.href='/app-analysestring/?chars='+encodeURI(getOrthographyList('.characterBox', 'index', false) + getOrthographyList('.auxiliaryBox', 'index', true))">Analyse String</a></li>
+    <li><a target="_blank" href="" onClick="this.href='../../app-analysestring/index.html?chars='+encodeURI(getOrthographyList('.characterBox', 'index', false) + getOrthographyList('.auxiliaryBox', 'index', true))">Analyse String</a></li>
     
-    <li><a target="_blank" href="" onClick="this.href='../fontlist/?script=${script}&text='+encodeURI(getOrthographyList('.characterBox', 'index', true) + getOrthographyList('.auxiliaryBox', 'index', true))">Font Lister</a></li>
+    <li><a target="_blank" href="" onClick="this.href='../fontlist/index.html?script=${script}&text='+encodeURI(getOrthographyList('.characterBox', 'index', true) + getOrthographyList('.auxiliaryBox', 'index', true))">Font Lister</a></li>
     
-    <li><a target="_blank" href="../samples/?script=${script}">Sample texts</a></li>
+    <li><a target="_blank" href="../samples/index.html?script=${script}">Sample texts</a></li>
     
-    <li><a target="_blank" href="block">Character notes</a></li>
+    <li><a target="_blank" href="block.html">Character notes</a></li>
     
-    <li><a target="_blank" href="../links?iso=${script}">Related resources</a></li>
+    <li><a target="_blank" href="../links.html?iso=${script}">Related resources</a></li>
     
     <li id="closeOrthoLink" onClick="this.parentNode.parentNode.style.display='none'">X</li>
     </ul>
