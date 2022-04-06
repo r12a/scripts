@@ -127,7 +127,7 @@ autoExpandExamples.ban = `
 ᬤᬓ᭄ᬱᬶᬡ|south||daksina
 ᬤᬤᭀᬂ|grandmother||dadong
 ᬤᬦ|sick|danə
-ᬤᬦ᭄ᬢ|tooth|dantə
+ᬤᬦ᭄ᬢ|tooth|da§n§tə
 ᬤᬯᬸᬄ|west|dawuh
 ᬤᬰ|ten|dasə
 ᬤᬰᬶ|ten|dasi

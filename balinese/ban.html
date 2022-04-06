@@ -52,7 +52,7 @@
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->5 April, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->6 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -1909,61 +1909,61 @@ unless the word involves repetition, eg.
 <section id="basicSeg">
 <h4>Basic typographic units</h4>
 
-<p><code>Base (Combining_mark)*</code></p>
-<p>A basic typographic unit is equivalent to a <a href="../glossary/index.html#graphemecluster">Unicode grapheme cluster</a> for Balinese, and includes a base and any combining marks associated with it.</p>
+<p><code>(Base (Rerekan)* Adeg_adeg)* Base (Combining_mark)*</code></p>
+<p>A simple typographic unit for Balinese includes a base and any combining marks associated with it.</p>
 <p>The base is generally a consonant, however independent vowels also constitute a base and may be followed by combining marks.</p>
-<p>In the case of Balinese,  sequences that include a syllable nucleus may include the combining marks:</p>
+<p>In the case of Balinese,  <mark>sequences that include a syllable nucleus</mark> may include the following combining marks:</p>
 <ol>
-<li>a <span class="name"><a href="#rerekan">rerekan</a></span> (a kind of nukta)</li>
-<li>a <a href="#vowelsigns">vowel-sign</a>, and</li>
-<li>a <a href="#finals">final consonant</a> that is expressed using a combining mark.</li>
+<li><span class="name"><a href="#rerekan">rerekan</a></span> (a kind of nukta)</li>
+<li><a href="#vocalics">medial vocalic</a></li>
+<li><a href="#vowelsigns">vowel-sign</a></li>
+<li><a href="#finals">final consonant marks</a></li>
 </ol>
-<p> Examples: </p>
+<p> The following examples show simple typographic units that begin with a single consonant or independent vowel: </p>
 
 <table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
 <tr><td><img src="images/tirte.png" alt=""></td><td><span class="eg transc" lang="ban">ᬢᬷᬃᬢ</span></td></tr>
 <tr><td><img src="images/arte.png" alt=""></td><td><span class="eg transc" lang="ban">ᬅᬃᬣ</span></td></tr>
+<tr><td><img src="images/s_krishna.png" alt=""></td><td><span class="eg transc" lang="ban">ᬓᬺᬰ᭄ᬡ</span></td></tr>
 </table>
 
-<p>Syllable codas may be represented by a combining mark, but may also be written using a sequence of consonant letter (possibly including a <span class="name">rerekan</span>) followed by a visible <span class="name">adeg adeg</span>, eg.</p>
+<p>Because  <mark>stacked or conjoined forms</mark>  are never split apart visually, they are incorporated into the beginning of a typographic unit. These represent consonant clusters, which can arise where one phonetic syllable ends in a consonant letter and the following syllable begins with a consonant, or when most medial consonants are written, since Balinese uses conjunct forms for sequences such as Cr-, Cy-, Cw-, Cry-, etc. The consonants that make up the cluster are all encoded with a following <span class="name">adeg adeg</span> (see <a class="secref">clusters</a>).</p>
+<p>Balinese is also unusual in that these conjuncts occur across word boundaries, so the word-final consonant of the first word may be stacked above the word-initial consonant of the second. See <a class="figref">fig_kahananlankwasa2</a> for an example.</p>
+<p>The following examples show typographic units that begin with a consonant cluster:</p>
+
+<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
+<tr><td><img src="images/dante.png" alt=""></td><td><span class="eg" lang="ban">ᬤᬦ᭄ᬢ</span></td></tr>
+<tr><td><img src="images/timpal.png" alt=""></td><td><span class="eg" lang="ban" dir="ltr">ᬢᬶᬫ᭄ᬧᬮ᭄</span></td></tr>
+<tr><td><img src="images/s_bryag.png" alt=""></td><td><span class="eg transc" lang="ban" dir="ltr">ᬩ᭄ᬭ᭄ᬬᬕ᭄</span></td></tr>
+<tr><td><img src="images/sastre.png" alt=""></td><td><span class="eg" lang="ban" dir="ltr">ᬰᬵᬲ᭄ᬢ᭄ᬭ</span></td></tr>
+</table>
+
+<p><mark>Syllable codas</mark>, as we have just seen, may be represented by a combining mark, or may be incorporated into a consonant cluster, but they may also be written using a sequence of consonant letter (possibly including a <span class="name">rerekan</span>) followed by an  <span class="name">adeg adeg</span>, which is visible if no base immediately follows it, eg.</p>
 
 <table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
 <tr><td><img src="images/dalem.png" alt=""></td><td><span class="eg" lang="ban">ᬤᬍᬫ᭄</span></td></tr>
 </table>
 
-<p>These basic typographic units are typically used for cursor movements. In this case, any stacked consonants are stepped through, and the cursor positioning points can be visualised as follows:</p>
+<p>If another consonant does follow this, the coda becomes part of a new conjunct and therefore of a new typographic unit.</p>
 
-<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
-<tr><td><img src="images/cursor_movt.png" alt=""></td><td><span class="eg" lang="ban" dir="ltr">ᬰᬵᬲ᭄ᬢ᭄ᬭ</span></td></tr>
-</table>
-
-</section>
-
-
-
-
-<section id="advancedSeg">
-<h4>Extended typographic units</h4>
-
-<p><code>(Base Rerekan)+ Base (Combining_mark)*</code></p>
-<p>Typographic units for most operations, such as line-breaking, first-letter selection, etc., incorporate any <a href="#clusters">stacked or conjoined forms</a> (representing consonant clusters), because these can't be split visually. Clusters can arise where one phonetic syllable ends in a consonant letter and the following syllable begins with a consonant. They also occur when medial consonants are written, since (unlike Javanese) Balinese doesn't have dedicated combining marks for medials.</p>
-<!--p>This is most commonly the coda of the previous syllable and the onset of the current syllable, because where one phonetic syllable ends in a consonant letter and the following syllable begins with a consonant, the orthography typically joins the consonants together, either by stacking or conjoining them, eg. </p-->
-
-<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
-<tr><td><img src="images/dante.png" alt=""></td><td><span class="eg" lang="ban">ᬤᬦ᭄ᬢ</span></td></tr>
-<tr><td><img src="images/timpal.png" alt=""></td><td><span class="eg" lang="ban" dir="ltr">ᬢᬶᬫ᭄ᬧᬮ᭄</span></td></tr>
-<tr><td><img src="images/sastre.png" alt=""></td><td><span class="eg" lang="ban" dir="ltr">ᬰᬵᬲ᭄ᬢ᭄ᬭ</span></td></tr>
-</table>
-
-<p>These conjuncts are never split apart visually.</p>
-
-<p>Balinese is also unusual in that these conjuncts occur across word boundaries, so the word-final consonant of the first word may be stacked above the word-initial consonant of the second. See <a class="figref">fig_kahananlankwasa2</a> for an example.</p>
 <p>On the infrequent occasions when an <span class="name">adeg adeg</span> needs to be visible even though it is followed by another base, an invisible character must be added to prevent it joining with the following base. A zero-width space can achieve that.</p>
 
 <table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
 <tr><td><img src="images/pakraman.png" alt=""></td><td><span class="eg" lang="ban">ᬧᬓ᭄​ᬭᬫᬦ᭄</span></td></tr>
 </table>
+
+<p><mark>Grapheme clusters.</mark> This  kind of  typographic unit cannot be realised using <a href="../glossary/index.html#graphemecluster">Unicode grapheme clusters</a> because they create breaks after an <span class="name">adeg-adeg</span>, rather than including the following consonants. The following shows the segmentation that would be produced when using grapheme clusters.</p>
+
+<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
+<tr>
+<td><img src="images/cursor_movt.png" alt=""></td><td><span class="eg" lang="ban" dir="ltr">ᬰᬵᬲ᭄ᬢ᭄ᬭ</span></td></tr>
+</table>
+
+<p class="observation"><span class="leadin">Observation:</span> Browsers based on the Gecko engine (Firefox, etc.) use grapheme clusters for cursor movement and forward delete, whereas Blink (Chrome) and WebKit (Safari) browsers use the tyographic units described here.</p>
 </section>
+
+
+
 
 
 
@@ -1975,20 +1975,19 @@ unless the word involves repetition, eg.
 <pre>
 Base             := Consonant | Vowel_Independent
 
-Typographic Unit := Base Nukta*
-                    (Virama Base Nukta*)*
+Typographic Unit := (Base Nukta* Virama)*
+                    Base Nukta*
                     Vowel_Dependent*
                     Bindu*
                     Visarga*
                     Consonant_Final*
-                :=  Base Nukta*
+                 := Base Nukta*
                     (Virama Base Nukta*)* 
                     Virama
 </pre>
 </blockquote>
 
 <p>Ordering characters as shown above avoids potential ambiguities and maximises the likelihood of success when rendering the text.</p>
-<p class="btw">Although Balinese and Javanese are very similar scripts, two key differences are that Balinese vowel-signs are always a single code point  per syllable, and there are no dedicated marks for Balinese medial consonants.</p>
 </section>
 
 <!--figure id="fig_grapheme_cluster">
@@ -2010,11 +2009,11 @@ Typographic Unit := Base Nukta*
 <section id="word">
 <h3>Word boundaries</h3>
 <p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
-<p>Words are not separated by spaces, and in fact some word boundaries occur between stacked consonants. This means that segmentation for line-breaking, etc. uses orthographic syllables as a unit, where orthographic means a character or stack of characters with all associated combining marks.</p>
+<p>Words are not separated by spaces, and in fact some word boundaries occur between stacked consonants. This means that segmentation for line-breaking, etc. uses orthographic syllables as a unit (see <a class="secref">graphemes</a>).</p>
 
 <figure id="fig_kahananlankwasa2">
 <img src="images/kahananlankwasa.png" alt="ᬓᬳᬦᬦ᭄ᬮᬦ᭄ᬓ᭄ᬯᬲ" class="ex" lang="ban">
-<figcaption>In the sequence of words <span class="charExample inline" translate="no"><span class="ex" lang="ban">ᬓᬳᬦᬦ</span> <span class="trans">pŋn</span> <span class="ipa">kahanan</span></span>,  <span class="charExample inline" translate="no"><span class="ex" lang="ban">ᬮᬦ</span> <span class="trans">pŋn</span> <span class="ipa">lan</span></span>, <span class="charExample inline" translate="no"><span class="ex" lang="ban">ᬓ᭄ᬯᬲ</span> <span class="trans">dik</span> <span class="ipa">kwasa</span></span>, the initial letter of both the 2nd and 3rd words are subjoined below the last letter of the previous word.</figcaption>
+<figcaption>In the sequence of words <span class="charExample inline" translate="no"><span class="ex" lang="ban">ᬓᬳᬦᬦ᭄</span> <span class="trans">pŋn</span> <span class="ipa">kahanan</span></span>,  <span class="charExample inline" translate="no"><span class="ex" lang="ban">ᬮᬦ᭄</span> <span class="trans">pŋn</span> <span class="ipa">lan</span></span>, <span class="charExample inline" translate="no"><span class="ex" lang="ban">ᬓ᭄ᬯᬲ</span> <span class="trans">dik</span> <span class="ipa">kwasa</span></span>, the initial letter of both the 2nd and 3rd words are subjoined below the last letter of the previous word.</figcaption>
 </figure>
 </section>
 </section>
@@ -2136,7 +2135,7 @@ Typographic Unit := Base Nukta*
 <section id="linebreak">
 <h3>Line breaking &amp; hyphenation</h3>
 
-<p>Because there are no spaces between words, and because the end of one word and the beginning of another often form conjuncts (see <a class="figref">fig_kahananlankwasa2</a>), Balinese doesn't wrap at word boundaries. Instead, it wraps at syllable boundaries where no conjuncts are involved. </p>
+<p>Because there are no spaces between words, and because the end of one word and the beginning of another often form conjuncts (see <a class="figref">fig_kahananlankwasa2</a>), Balinese doesn't wrap at word boundaries. See <a class="secref">graphemes</a> for a description of the typographic units that are used for line break opportunities.</p>
 <p>Unfortunately, modern browsers are often unable to detect appropriate break points for Balinese, so in the sample text at the beginning of this page <span class="codepoint" translate="no"><span style="visibility: hidden;" lang="mn">&#x200B;</span><img src="../../c/General_Punctuation/200B.png" alt="ZWSP" style="vertical-align:middle"> [<a href="/scripts/balinese/block#char200B"><span class="uname">U+200B ZERO WIDTH SPACE</span></a>]</span> is used at places where the line could be broken. Otherwise, the line would continue, unbroken off the right side of the page.</p>
 <p><a id="showLinebreaks" target="_blank" href="tbd">Show (default) line-breaking properties for characters in the Balinese orthography.</a></p>
 
@@ -2270,12 +2269,12 @@ Typographic Unit := Base Nukta*
 
 
 
-<section id="languages">
+<!--section id="languages">
 <h2>Languages using the Balinese script</h2>
 <p>According to Balinese, the thisScript script is used for the following languages:</p>
 <ul id="scriptLanguageList">
 </ul>
-</section>
+</section-->
 
 
 
