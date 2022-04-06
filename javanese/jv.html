@@ -55,7 +55,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->5 April, 2022<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->6 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -1763,22 +1763,19 @@ alveolar</th>
 <section id="basicSeg">
 <h4>Basic typographic units</h4>
 
-<p><code>Base (Combining mark)*</code></p>
+<p><code>(Base (Cecak_telu)* Pangkon)* Base (Combining_mark)*</code></p>
 
-<p>A basic typographic unit is equivalent to a <a href="../glossary/index.html#graphemecluster">Unicode grapheme cluster</a>, and includes a base and any combining marks associated with it. </p>
-
+<p>A simple typographic unit for Javanese includes a base and any combining marks associated with it.</p>
 <p>The base is generally a consonant, however independent vowels and occasionally numbers also constitute a base and may be followed by combining marks.</p>
-
-<p>In the case of Javanese,  sequences that include a syllable nucleus may include the combining marks:</p>
-
+<p>In the case of Javanese, <mark>sequences that include a syllable nucleus</mark> may include the following combining marks:</p>
 <ol>
-<li>a  <span class="name"><a href="#foreign">cecak telu</a></span> (a kind of nukta)</li>
-<li>a <a href="#medials">medial consonant</a></li>
-<li>one or two <a href="#vowelsigns">vowel-signs</a>, and</li>
-<li>a <a href="#finals">final consonant</a> that is expressed using a combining mark.</li>
+<li><span class="name"><a href="#foreign">cecak telu</a></span> (a kind of nukta)</li>
+<li><a href="#medials">medial consonant</a></li>
+<li><a href="#vowelsigns">vowel-sign</a></li>
+<li><a href="#finals">final consonant marks</a></li>
 </ol>
 
-<p> Examples:</p>
+<p> The following examples show simple typographic units that begin with a single consonant or independent vowel: </p>
 
 <table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
 <tr><td><img src="images/tirta.png" alt=""></td><td><span class="eg" lang="jv">ꦠꦶꦂꦠ</span></td></tr>
@@ -1787,38 +1784,45 @@ alveolar</th>
 </table>
 
 
-<p>Syllable codas may be represented by a combining mark, but may also be written using a sequence of consonant letter (possibly including an <span class="name">cecak telu</span>) followed by a visible <span class="name">adeg adeg</span>, eg.</p>
+<p>Because <mark>stacked or conjoined forms</mark> are never split apart visually, they are incorporated whole into the beginning of a typographic unit. These represent consonant clusters, which can arise where one phonetic syllable ends in a consonant letter and the following syllable begins with a consonant. The consonants that make up the cluster are all encoded with a following <span class="name">pangkon</span> (see <a class="secref">clusters</a>).</p>
+<p>Javanese is also unusual in that these conjuncts occur across word boundaries, so the word-final consonant of the first word may be stacked above the word-initial consonant of the second. See <a class="figref">fig_pangandika</a> for an example.</p>
+<p>The following examples show typographic units that begin with a consonant cluster:</p>
 <table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
-<tr><td><img src="images/kanen.png" alt=""></td><td><span class="eg" lang="jv">ꦏꦔꦼꦤ꧀</span></td></tr>
+<tr>
+<td><img src="images/kanti.png" alt=""></td>
+<td><span class="eg" lang="jv">ꦏꦤ꧀ꦛꦶ</span></td>
+</tr>
+<tr>
+<td><img src="images/aksara.png" alt=""></td>
+<td><span class="eg transc" lang="jv">ꦲꦏ꧀ꦱꦫ</span></td>
+</tr>
+<tr>
+<td><img src="images/electricity.png" alt=""></td>
+<td><span class="eg" lang="jv">ꦏꦭꦶꦱ꧀ꦠꦿꦶꦏꦤ꧀</span></td>
+</tr>
 </table>
-<p>These basic typographic units are typically used for cursor movements. In this case, any stacked consonants are stepped through, and the cursor positioning points can be visualised as follows:</p>
+<p><mark>Syllable codas</mark>, as we have just seen, may be represented by a combining mark, or may be incorporated into a consonant cluster, but they may also be written using a sequence of consonant letter (possibly including a <span class="name">cecak telu</span>) followed by a <span class="name">pangkon</span>, which is visible if no base immediately follows it, eg.</p>
+<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
+<tr>
+<td><img src="images/kanen.png" alt=""></td>
+<td><span class="eg" lang="jv">ꦏꦔꦼꦤ꧀</span></td>
+</tr>
+</table>
+<p>If another consonant does follow this, the coda becomes part of a new conjunct and therefore of a new typographic unit.</p>
+<p>On the infrequent occasions when a <span class="name">pangkon</span> needs to be visible even though it is followed by another base, an invisible character must be added to prevent it joining with the following base. A zero-width space can achieve that.</p>
+<p><mark>Grapheme clusters.</mark> This  kind of  typographic unit cannot be realised using <a href="../glossary/index.html#graphemecluster">Unicode grapheme clusters</a> because they create breaks after a <span class="name">pangkon</span>, rather than including the following consonants. The following shows the segmentation that would be produced when using grapheme clusters.</p>
 
 <table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
 <tr><td><img src="images/bledug.png" alt=""></td><td><span class="eg" lang="jv">ꦧ꧀ꦊꦣꦸꦒ꧀</span></td></tr>
 </table>
-<p class="observation"><span class="leadin">Observation:</span> In the Chrome browser, the cursor jumps over each of the stacks in the above example one by one. In Firefox, however, the cursor appears to follow Unicode grapheme clusters, which makes it jump inside stacks with <span class="name">pangkon</span> because a grapheme cluster doesn't include the non-combining characters following the base. Likewise for forward deletion. (Backward deletion removes the characters code point by code point.)</p>
+
+<p class="observation"><span class="leadin">Observation:</span> Browsers based on the Gecko engine (Firefox, etc.) use grapheme clusters for cursor movement and forward delete, whereas Blink (Chrome) and WebKit (Safari) browsers use the tyographic units described here.</p>
 </section>
 
 
 
 
-<section id="advancedSeg">
-<h4>Extended typographic units</h4>
 
-<p><code>(Base Pangkon)+ Base (Combining mark)*</code></p>
-<p>Typographic units for most operations, such as line-breaking, first-letter selection, etc, incorporate any <a href="#clusters">stacked or conjoined forms</a> (representing consonant clusters) without splitting them. Clusters can arise where one phonetic syllable ends in a consonant letter and the following syllable begins with a consonant.</p>
-
-<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
-<tr><td><img src="images/kanti.png" alt=""></td><td><span class="eg" lang="jv">ꦏꦤ꧀ꦛꦶ</span></td></tr>
-<tr><td><img src="images/aksara.png" alt=""></td><td><span class="eg transc" lang="jv">ꦲꦏ꧀ꦱꦫ</span></td></tr>
-<tr><td><img src="images/electricity.png" alt=""></td><td><span class="eg" lang="jv">ꦏꦭꦶꦱ꧀ꦠꦿꦶꦏꦤ꧀</span></td></tr>
-</table>
-
-<p>These  conjuncts are never split apart visually.</p>
-
-<p>Javanese is also unusual in that these conjuncts occur across word boundaries, so the word-final consonant of the first word may be stacked above the word-initial consonant of the second. See <a class="figref">fig_pangandika</a> for an example.</p>
-<p>On the infrequent occasions when a <span class="name">pangkon</span> needs to be visible even though it is followed by another base, an invisible character must be added to prevent it joining with the following base. A zero-width space can achieve that.</p>
-</section>
 
 
 
@@ -1849,8 +1853,6 @@ Syllable := Base Nukta*
 </blockquote>
 
 <p>Ordering characters as shown above avoids potential ambiguities and maximises the likelihood of success when rendering the text.</p>
-
-<p class="btw">Although Balinese and Javanese are very similar scripts, two key differences are that Balinese vowel-signs are always a single code point per syllable, whereas Javanese uses multiple code points for composite vowels, and there are no dedicated marks for Balinese medial consonants but there are for Javanese.</p>
 </section>
 </section>
 
@@ -1862,7 +1864,7 @@ Syllable := Base Nukta*
 <h3>Word boundaries</h3>
 <p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 <p>Words are not separated by spaces. (Though spaces may be used to separate phrases, see <a class="secref">phrase</a>).</p>
-<p>As mentioned in the previous section, Javanese is one of a small number of scripts where an initial consonant for a word may be subjoined below the last consonant of a preceding word.  Since stacks are never broken, typographic operations such as line-breaking therefore split the text at orthographic syllable boundaries rather than words.</p>
+<p>As mentioned in the previous section, Javanese is one of a small number of scripts where an initial consonant for a word may be subjoined below the last consonant of a preceding word.  Since stacks are never broken, typographic operations such as line-breaking therefore split the text at orthographic syllable boundaries rather than words (see <a class="secref">graphemes</a>).</p>
 
 <figure id="fig_pangandika">
 <img class="ex" lang="jv" src="images/pangandika.png" alt="ꦥꦔꦤ꧀ꦢꦶꦏ">
