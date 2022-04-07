@@ -52,7 +52,7 @@
 </aside>
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->6 April, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->7 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -1909,7 +1909,7 @@ unless the word involves repetition, eg.
 <section id="basicSeg">
 <h4>Basic typographic units</h4>
 
-<p><code>(Base (Rerekan)* Adeg_adeg)* Base (Combining_mark)*</code></p>
+<p><code>(Consonant (Rerekan)* Adeg_adeg)* Base (Combining_mark)*</code></p>
 <p>A simple typographic unit for Balinese includes a base and any combining marks associated with it.</p>
 <p>The base is generally a consonant, however independent vowels also constitute a base and may be followed by combining marks.</p>
 <p>In the case of Balinese,  <mark>sequences that include a syllable nucleus</mark> may include the following combining marks:</p>
@@ -1968,22 +1968,34 @@ unless the word involves repetition, eg.
 
 
 <section id="charorder">
-<h4>Code point ordering</h4>
+<h4>Code point sequences</h4>
 
-<p>The following indicates the  expected ordering of Unicode characters within a typographic unit for Balinese. The labels are those used for the Unicode <a target="_blank" href="../apps/listindic/index.html?chars=ᬧᬩᬢᬤᬘᬚᬓᬕᬲᬳᬫᬦᬗᬜᬯᬭᬮᬬᬞᬟᬠᬔᬛᬨᬝᬣᬥᬖᬰᬱᬡᬪᬙᬇᬈᬉᬊᬏᬑᬅᬆᬐᬒᬋᬌᬍᬎᬾᬿᭀᭃᭁᬶᬷᬸᬹᭃᬺᬻᬼᬽᬀᬁᬂᬃ᬴᭄ᬄ᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙᭚᭛᭜᭝᭞᭟᭠‌%E2%80%8B">Indic Syllabic Categories</a>. (Follow that link to see what characters they represent.)</p>
+<p>The following indicates the  expected ordering of Unicode characters within a typographic unit for Balinese. The labels are those used for the Unicode <a target="_blank" href="../apps/listindic/index.html?chars=ᬧᬩᬢᬤᬘᬚᬓᬕᬲᬳᬫᬦᬗᬜᬯᬭᬮᬬᬞᬟᬠᬔᬛᬨᬝᬣᬥᬖᬰᬱᬡᬪᬙᬇᬈᬉᬊᬏᬑᬅᬆᬐᬒᬋᬌᬍᬎᬾᬿᭀᭃᭁᬶᬷᬸᬹᭃᬺᬻᬼᬽᬀᬁᬂᬃ᬴᭄ᬄ᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙᭚᭛᭜᭝᭞᭟᭠‌%E2%80%8B">Indic Syllabic Categories</a>. Follow that link to see what characters are represented by a given label.</p>
 <blockquote>
 <pre>
-Base             := Consonant | Vowel_Independent
-
-Typographic Unit := (Base Nukta* Virama)*
-                    Base Nukta*
+Typographic Unit := (Consonant Nukta* Virama)*
+                    Consonant Nukta*
                     Vowel_Dependent*
                     Bindu*
                     Visarga*
                     Consonant_Final*
-                 := Base Nukta*
-                    (Virama Base Nukta*)* 
+
+                 := Vowel_Independent
+                    Consonant_Final*
+
+                 := Consonant Nukta*
                     Virama
+</pre>
+</blockquote>
+
+<p>When multiple dependent vowels appear, they should be in the following order:</p>
+
+<blockquote>
+<pre>
+Left
+Top
+Bottom
+Right
 </pre>
 </blockquote>
 
