@@ -55,7 +55,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->6 April, 2022<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->7 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -1766,7 +1766,7 @@ alveolar</th>
 <p><code>(Base (Cecak_telu)* Pangkon)* Base (Combining_mark)*</code></p>
 
 <p>A simple typographic unit for Javanese includes a base and any combining marks associated with it.</p>
-<p>The base is generally a consonant, however independent vowels and occasionally numbers also constitute a base and may be followed by combining marks.</p>
+<p>The base is generally a consonant, however independent vowels and occasionally numbers also constitute a base (and by some reports may be followed by combining marks).</p>
 <p>In the case of Javanese, <mark>sequences that include a syllable nucleus</mark> may include the following combining marks:</p>
 <ol>
 <li><span class="name"><a href="#foreign">cecak telu</a></span> (a kind of nukta)</li>
@@ -1827,28 +1827,46 @@ alveolar</th>
 
 
 <section id="charorder">
-<h4>Code point ordering</h4>
+<h4>Code point sequences</h4>
 
-<p>The following indicates the expected ordering of Unicode characters within a typographic unit for Balinese. The labels are those used for the Unicode <a target="_blank" href="../apps/listindic/index.html?chars=ꦥꦧꦠꦢꦛꦝꦏꦒꦕꦗꦱꦲꦩꦤꦚꦔꦮꦫꦭꦪꦦꦨꦡꦑꦓꦖꦟꦘꦆꦈꦌꦎꦄꦉꦊꦺꦶꦸꦼꦴꦿꦽꦾꦃꦀꦁꦂ꦳꧀꧐꧑꧒꧓꧔꧕꧖꧗꧘꧙꧊꧋꧌꧍꧈꧉꧇꧁꧂꧅꧄꧃꧆%E2%80%8B‌ꦯ ꦣ ꦜ ꦞ ꦙ ꦰ ꧏ ꧞ ꧟">Indic Syllabic Categories</a>. (Follow that link to see what characters are represented by a given label.)</p>
+<p>The following indicates the expected ordering of Unicode characters within a typographic unit for Javanese. The labels are those used for the Unicode <a target="_blank" href="../apps/listindic/index.html?chars=ꦥꦧꦠꦢꦛꦝꦏꦒꦕꦗꦱꦲꦩꦤꦚꦔꦮꦫꦭꦪꦦꦨꦡꦑꦓꦖꦟꦘꦆꦈꦌꦎꦄꦉꦊꦺꦶꦸꦼꦴꦿꦽꦾꦃꦀꦁꦂ꦳꧀꧐꧑꧒꧓꧔꧕꧖꧗꧘꧙꧊꧋꧌꧍꧈꧉꧇꧁꧂꧅꧄꧃꧆%E2%80%8B‌ꦯ ꦣ ꦜ ꦞ ꦙ ꦰ ꧏ ꧞ ꧟">Indic Syllabic Categories</a>. Follow that link to see what characters are represented by a given label.</p>
 
 <blockquote>
 <pre>
-Base := Consonant | Vowel_Independent | Number
+Typographic Unit := (Consonant Nukta* Virama)*
+                    Consonant Nukta*
+                    Consonant_Medial*
+                    Vowel_Dependent*
+                    Bindu*
+                    Visarga*
+                    Consonant_Final*
 
-Syllable := Base Nukta*
-            (Virama Base Nukta*)* 
-            [Consonant_Medial && [Bottom_And_Left || Bottom]]?
-            [Consonant_Medial && Bottom_And_Right]?
-            [Vowel_Dependent && Left]*
-            [Vowel_Dependent && Top]*
-            [Vowel_Dependent && Bottom]*
-            [Vowel_Dependent && Right]*
-            Bindu*
-            Visarga*
-            Consonant_Final*
-        :=  Base Nukta*
-            (Virama Base Nukta*)* 
-            Virama
+                 := Vowel_Independent
+
+                 := Consonant Nukta*
+                    Virama
+</pre>
+</blockquote>
+
+<p>It is reported that the independent vowels and numbers may be followed by combining characters.</p>
+
+<p>When multiple dependent vowels appear, they should be in the following order:</p>
+
+<blockquote>
+<pre>
+Left
+Top
+Bottom
+Right
+</pre>
+</blockquote>
+
+<p>When multiple medials appear, they should be in the following order:</p>
+
+<blockquote>
+<pre>
+Bottom_And_Left || Bottom
+Bottom_And_Right
 </pre>
 </blockquote>
 
