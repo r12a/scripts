@@ -1909,6 +1909,11 @@ geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="t
 
 <p><code>Base Virama Base (Combining_mark)*</code></p>
 <p>Modern Tamil uses conjunct forms for only <a href="#clusters">two sound sequences</a> (though this can be written using 3 code point sequences). This kind of typographic unit is appropriate when, and only when, text with these conjuncts need to be segmented. </p>
+
+<p>The exceptions are the sequences <span class="charExampleInline" translate="no"><span class="ex" lang="ta">க்ஷ</span> <span class="trans">k͓ʂ</span></span>, and <span class="charExampleInline" translate="no"><span class="ex" lang="ta">ஶ்ரீ</span> <span class="trans">ʃ͓ɾī</span></span> / <span class="charExampleInline" translate="no"><span class="ex" lang="ta">ஸ்ரீ</span> <span class="trans">s͓ɾī</span></span> (the latter two being alternate ways of writing the same sound). These sequences should not be broken during segmentation. Note, that the 'shri' sequence must include the <span class="trans">i</span> vowel to produce a conjunct. With a different vowel, the sequence of characters is displayed using a visual <span class="name">pulli</span>, eg. 
+<span class="charExample" translate="no"><span class="ex" lang="ta">இஶ்ரேல்</span> <span class="trans">ịʃ͓ɾēl͓</span> <span class="meaning">Israel</span></span>
+</p>
+
 <p>Because <mark> conjunct forms</mark> are never split apart visually, the whole conjunct form is incorporated into a typographic unit. The consonants that make up the cluster are all encoded with a following <span class="name">virama</span>, however in these cases the typographic unit doesn't stop there.</p>
 
 <table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
@@ -1918,6 +1923,7 @@ geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="t
 </table>
 
 <p>This difference in segmentation arises from a reinterpretation of the effect of the virama – no special, alternative virama character is available. So this behaviour needs to be triggered by special rules.</p>
+
 <p><mark>Grapheme clusters.</mark> This  kind of  typographic unit <em>cannot</em> be realised using <a href="../glossary/index.html#graphemecluster">Unicode grapheme clusters</a> because they create breaks after a <span class="name">pulli</span>, rather than including the following consonants.</p>
 </section>
 
@@ -1981,38 +1987,7 @@ Typographic Unit := Consonant
 
 
 <section id="inline">
-<h2>Punctuation &amp; inline features</h2>  
-        
-<section id="graphemes">
-<h3>Grapheme boundaries</h3>
-<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
-
-<p>With 3 exceptions, modern Tamil doesn't use conjuncts to represent consonant clusters. Instead, it uses a visible <span class="name">pulli</span> over the characters without an inherent vowel. The basic typographic unit is therefore equivalent to a Unicode grapheme cluster, ie. a base character followed by combining character(s). </p>
-<p>This also means that, in a consonant cluster, a prescript vowel is displayed immediately to the left of the consonant it follows, rather than at the beginning of the cluster (see the sequence <span class="charExampleInline" translate="no"><span class="ex" lang="ta">ற்றை</span> <span class="trans">r͓rʌʲ</span></span> in <a class="figref">fig_yavattaiyum</a>).</p>
-<figure id="fig_yavattaiyum">
-<p class="large"><span class="ex" lang="ta">யா<span class="breakpoint">வ</span><span class="breakpoint">ற்</span><span class="breakpoint">றை</span><span class="breakpoint">யு</span><span class="breakpoint">ம்</span></span></p>
-<figcaption>Grapheme boundaries in a word with consonant clusters.</figcaption>
-</figure>
-
-<p>Note, however, that typographic units used for justification and word stretching are based on glyph boundaries, rather than grapheme clusters. See <a class="secref">justification</a>.</p>
-<p><span class="leadin">Conjuncts.</span> The exceptions are the sequences <span class="charExampleInline" translate="no"><span class="ex" lang="ta">க்ஷ</span> <span class="trans">k͓ʂ</span></span>, and <span class="charExampleInline" translate="no"><span class="ex" lang="ta">ஶ்ரீ</span> <span class="trans">ʃ͓ɾī</span></span> / <span class="charExampleInline" translate="no"><span class="ex" lang="ta">ஸ்ரீ</span> <span class="trans">s͓ɾī</span></span> (the latter two being alternate ways of writing the same sound). These sequences should not be broken during segmentation. Note, that the 'shri' sequence must include the <span class="trans">i</span> vowel to produce a conjunct. With a different vowel, the sequence of characters is displayed using a visual <span class="name">pulli</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">இஶ்ரேல்</span> <span class="trans">ịʃ͓ɾēl͓</span> <span class="meaning">Israel</span></span></p>
-<p>Correct segmentation of these conjunct-forming sequences are not  supported by default by Unicode grapheme clusters (which split them in two), and requires the application of tailored rules.</p>
-</section>
-
-
-
-
-  
-<section id="word">
-<h3>Word boundaries</h3>
-<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
-<p>Words are  separated by spaces.</p>
-</section>
-
-
-
-
-  
+<h2>Punctuation &amp; inline features</h2>
 
 
 
