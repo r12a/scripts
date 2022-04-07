@@ -56,7 +56,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->1 March, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->7 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -1382,7 +1382,6 @@ geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="t
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ம␣ந␣ன␣ண␣ஞ␣ங</figure>
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">வ␣ர␣ற␣ழ␣ல␣ள␣ய</figure>
-</section>
 
 
 
@@ -1842,13 +1841,145 @@ geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="t
 <p>Some fonts have upright glyphs, whereas others have slightly slanted glyphs.</p>
 <p class="observation"><i>Observation:</i> <a href="images/oblique.jpeg" target="_blank">Panels</a> of text in a Tamil newspaper that uses fonts that are more slanted than normal. Could this be an italic font face? Note that all the body text of the panel uses that font. There appear to be no instances where italic-looking fonts are applied to inline text. Other fonts used for the body text in other articles tended to also have a slight lean, though not as much. The verticals in headings tend to be upright.</p>
 </section>
-
 </section>
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+<section id="segments">
+<h2>Text segmentation</h2>  
+
+
+<p>Tamil principally uses word boundaries for <a href="#linebreak">line-breaking</a> and basic <a href="#justification">justification</a>, but uses grapheme boundaries for other operations that work at the sub-word level.</p>
+<p>Phrase, sentence, and section delimiters are described in <a class="secref">phrase</a>. </p>
+
+
+
+
+  
+<section id="graphemes">
+<h3>Grapheme boundaries</h3>
+<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
+
+
+
+<p>Modern Tamil needs to interpret the virama (pulli) in two different ways for segmentation. It also segments text in a third way for <a href="#justification">justification</a>.</p>
+
+
+
+
+<section id="basicSeg">
+<h4>Basic typographic units</h4>
+
+<p><code>Base (Combining_mark)*</code></p>
+<p>Most of the time, in modern Tamil, a typographic unit  includes a base and any combining marks associated with it.</p>
+<p>The base is generally a consonant, however independent vowels also constitute a base (though they are not followed by combining marks).</p>
+<p>In the case of Tamil,  <mark>sequences that include a syllable nucleus</mark> only include one type of combining mark: <a href="#vowelsigns">vowel-signs</a>.</p>
+<p> Examples: </p>
+
+<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
+<tr><td><img src="images/s_road_street.png" alt=""></td><td><span class="eg" lang="ta">சாலை</span></td></tr>
+<tr><td><img src="images/s_cut.png" alt=""></td><td><span class="eg" lang="ta">அரி</span></td></tr>
+</table>
+
+<p><mark>Syllable codas and vowel-less consonants in clusters</mark> are written using a sequence of consonant letter followed by a visible <a href="#suppression">virama</a> (<span class="name">pulli</span>), eg.</p>
+
+<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
+<tr><td><img src="images/s_there.png" alt=""></td><td><span class="eg" lang="ta">அங்கே</span></td></tr>
+<tr><td><img src="images/s_fineness.png" alt=""></td><td><span class="eg" lang="ta">அஞ்ஞானம்</span></td></tr>
+<tr>
+<td><img src="images/s_stalk.png" alt=""></td>
+<td><span class="eg" lang="ta">உலர்ந்தம்</span></td>
+</tr>
+</table>
+<p>In Tamil the equivalent of the visarga </p>
+<p><mark>Grapheme clusters.</mark> This  kind of  typographic unit can be realised using <a href="../glossary/index.html#graphemecluster">Unicode grapheme clusters</a>.</p>
+</section>
+
+
+
+
+<section id="conjSeg">
+<h4>Conjunct typographic units</h4>
+
+<p><code>Base Virama Base (Combining_mark)*</code></p>
+<p>Modern Tamil uses conjunct forms for only <a href="#clusters">two sound sequences</a> (though this can be written using 3 code point sequences). This kind of typographic unit is appropriate when, and only when, text with these conjuncts need to be segmented. </p>
+<p>Because <mark> conjunct forms</mark> are never split apart visually, the whole conjunct form is incorporated into a typographic unit. The consonants that make up the cluster are all encoded with a following <span class="name">virama</span>, however in these cases the typographic unit doesn't stop there.</p>
+
+<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
+<tr><td><img src="images/s_lakh.png" alt=""></td><td><span class="eg" lang="ta">லக்ஷம்</span></td></tr>
+<tr><td><img src="images/s_weakness.png" alt=""></td><td><span class="eg" lang="ta">க்ஷீணம்</span></td></tr>
+<tr><td><img src="images/s_shri.png" alt=""></td><td><span class="eg" lang="ta" dir="ltr">ஶ்ரீ</span></td></tr>
+</table>
+
+<p>This difference in segmentation arises from a reinterpretation of the effect of the virama – no special, alternative virama character is available. So this behaviour needs to be triggered by special rules.</p>
+<p><mark>Grapheme clusters.</mark> This  kind of  typographic unit <em>cannot</em> be realised using <a href="../glossary/index.html#graphemecluster">Unicode grapheme clusters</a> because they create breaks after a <span class="name">pulli</span>, rather than including the following consonants.</p>
+</section>
+
+
+
+<section id="charorder">
+<h4>Code point sequences</h4>
+
+<p>The following indicates the  expected ordering of Unicode characters within a typographic unit for Tamil. The labels are those used for the Unicode <a target="_blank" href="../apps/listindic/index.html?chars=பதசடகமநனணஞஙவரறழலளயஇஈஉஊஎஏஒஓஅஆஐஔிீுூெேொோாைௌ்ௗ“”‘’!().:;?௹₹ஜ ஸ ஶ ஷ ஹ ஃ ௐ । ॥">Indic Syllabic Categories</a>. Follow that link to see what characters they represent.</p>
+<blockquote>
+<pre>
+Typographic Unit := Consonant
+                    Vowel_Dependent*
+
+                 [for 3 specific cases only]
+                 := Consonant Virama Consonant
+                    Vowel_Dependent*
+
+                 := Consonant
+                    Virama
+
+                 := Modifying_Letter
+
+                 := Vowel_Independent
+</pre>
+</blockquote>
+</section>
+
+
+
+
+<section id="glyphSeg">
+<h4>Glyph-based typographic units</h4>
+
+<p>When Tamil is justified, space is added around graphemes, but in many cases it is also added <em>within</em> the normal basic typographic units.  The code point sequences are not affected, though. See <a class="secref">justification</a>.</p>
+</section>
+</section>
+
+
+
+
+
+<section id="word">
+<h3>Word boundaries</h3>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+<p>Words are  separated by spaces. Tamil words are often quite long because they bind together multiple morphemes.</p>
+<p>Word-level segmentation is used for <a href="#linebreak">line-breaking</a>.</p>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <section id="inline">
 <h2>Punctuation &amp; inline features</h2>  
         
@@ -1998,6 +2129,27 @@ geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="t
 
 
   
+<section id="otherinline">
+<h3>Other inline ranges</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+
+
+<section id="letterspace">
+<h3>Text spacing</h3>
+<p class="prompts">tbd</p>
+
+<p>&nbsp;</p>
+</section>
+
+
+
+
+  
 <section id="abbrev">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
 <p class="prompts">tbd</p>
@@ -2009,15 +2161,6 @@ geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="t
   
 <section id="inlinenotes">
 <h3>Inline notes &amp; annotations</h3>
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
-  
-<section id="otherinline">
-<h3>Other inline ranges</h3>
 <p class="prompts">tbd</p>
 </section>
 
@@ -2140,18 +2283,6 @@ geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="t
 <h4>Paragraph indents</h4>
 <p>Paragraph features are the same as in English. Paragraphs can start with or without indents.<tt>g26</tt></p>
 </section>
-</section>
-
-
-
-
-
-
-<section id="letterspace">
-<h3>Letter spacing</h3>
-<p class="prompts">tbd</p>
-
-<p>&nbsp;</p>
 </section>
 
 
