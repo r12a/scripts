@@ -56,7 +56,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->2 March, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->8 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -608,11 +608,14 @@ alveolar</th>
 
 <section id="direction">
 <h2>Text direction</h2>
+
 <p>Arabic script is written horizontally and right-to-left in the main, but as with most RTL scripts, numbers and embedded LTR script text are written left-to-right (producing 'bidirectional' text). </p>
+
 <figure>
-<p dir="rtl" lang="ug" class="large"><span class="charExample"><span class="ex"  dir="rtl"> 1899 - ئاسپىرىن (Aspirin) بازارغا سېلىندى.</span></span></p>
-<figcaption>Uighur words are read RTL, starting  on the right, but numbers and Latin text are  read left-to-right.</figcaption>
+<img src="images_ug/aspirin.png" class="ex" lang="ug" alt=" 1899 - ئاسپىرىن (Aspirin) بازارغا سېلىندى." data-notes="40px Scheherazade New">
+<figcaption>Uighur words are read RTL, starting  on the right, but numbers and Latin text (highlighted here) are  read left-to-right.</figcaption>
 </figure>
+
 <p><a id="showBidiClass" target="_blank" href="tbd">Show default <code class="kw" translate="no">bidi_class</code> properties for characters in the  Uighur orthography described here.</a></p>
 </section>
 
@@ -639,7 +642,7 @@ alveolar</th>
 <span id="transformsInline">case &amp; other character transforms</span>.
 </p>
 
-<p class="instructions">You can experiment with examples using the <a href="/pickers/uighur/">Uighur character app</a>.</p>
+<p class="instructions">You can experiment with examples using the <a target="_blank" href="../../pickers/arab-ug/index.html">Uighur character app</a>.</p>
 <p>The orthography has no case distinction, and no special transforms are needed to convert between characters.</p>
 
 
@@ -695,7 +698,61 @@ alveolar</th>
 
 </section>
 </section>
+
+
+
+
+
+
+<section id="segments">
+<h2>Text segmentation</h2>  
+
+
+<p>Uighur principally uses word boundaries for <a href="#linebreak">line-breaking</a> and basic <a href="#justification">justification</a>, but uses grapheme boundaries for other operations that work at the sub-word level.</p>
+<p>Phrase, sentence, and section delimiters are described in <a class="secref">phrase</a>. </p>
+
+
+
+
   
+<section id="graphemes">
+<h3>Grapheme boundaries</h3>
+<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
+
+
+<section id="basicSeg">
+<h4>Typographic units</h4>
+
+<p><code>Base (Combining_mark)*</code></p>
+<p>In Uighur, a typographic unit  is almost always equivalent to a letter, since precomposed code points are available for all letter and diacritic combinations. However, in decomposed text a combining <span class="name">hamza</span> may be attached to the base letter. In that case, the typographic unit includes both the base letter and the combining mark.</p>
+<p> Examples, that apply to both precomposed and decomposed text: </p>
+
+<table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
+<tr><td dir="rtl"><img src="images_ug/s_key.png" alt=""></td><td><span class="eg" lang="ug">ئاچقۇچ</span></td></tr>
+<tr><td><img src="images_ug/s_door.png" alt=""></td><td><span class="eg" lang="ug" dir="rtl">ئۆيمۇئۆي</span></td></tr>
+</table>
+
+<p>This kind of typographic unit can be used for forwards deletion, cursor movement &amp; selection, character counts, text spacing, and text insertion.</p>
+</section>
+
+
+<section id="graphemeC">
+<h4>Grapheme clusters</h4>
+<p>This  kind of  segmentation can be realised using <a href="../glossary/index.html#graphemecluster">Unicode grapheme clusters</a>.</p>
+</section>
+</section>
+
+
+
+
+
+<section id="word">
+<h3>Word boundaries</h3>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+<p>Words are  separated by spaces.</p>
+<p>Word-level segmentation is used for <a href="#linebreak">line-breaking</a> and basic <a href="#justification">justification</a>.</p>
+</section>
+</section>
   
   
   
@@ -703,26 +760,7 @@ alveolar</th>
 
 
 <section id="inline">
-<h2>Punctuation &amp; inline features</h2>  
-  
-<section id="graphemes">
-<h3>Grapheme boundaries</h3>
-<p id="def-grapheme" class="explanatoryintro definitionStub"></p>
-
-<p class="prompts">tbd</p>
-
-</section>
-
-
-
-
-  
-<section id="word">
-<h3>Word boundaries</h3>
-<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
-<p>Words are separated by spaces.</p>
-</section>
-	
+<h2>Punctuation &amp; inline features</h2>	
 
 	
 	
@@ -803,6 +841,24 @@ alveolar</th>
 
 
 
+
+<section id="otherinline">
+<h3>Other inline ranges</h3>
+
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+<section id="letterspace">
+<h3>Text spacing</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
   
 <section id="abbrev">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
@@ -815,16 +871,6 @@ alveolar</th>
   
 <section id="inlinenotes">
 <h3>Inline notes &amp; annotations</h3>
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
-
-<section id="otherinline">
-<h3>Other inline ranges</h3>
-
 <p class="prompts">tbd</p>
 </section>
 
@@ -880,14 +926,6 @@ alveolar</th>
 <h3>Text alignment &amp; justification</h3>
 
 <p><a class="figref">fig_hyphenation</a> not only shows hyphenation, but also shows kashida being used for justification. Kashida is an elongation of the baseline to make words wider.</p>
-</section>
-
-
-
-
-<section id="letterspace">
-<h3>Letter spacing</h3>
-<p class="prompts">tbd</p>
 </section>
 
 
