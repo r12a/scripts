@@ -54,7 +54,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->2 March, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->10 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -310,7 +310,7 @@ It is the official writing system of South Korea and North Korea. It is a co-off
 <p class="instructions">Phones in a lighter colour are non-native or allophones. Source <a href="https://en.wikipedia.org/wiki/Korean_phonology">Wikipedia</a>.</p>
 
 
-<section id="vowelPhonemes">
+<section id="phonemesV">
 <h3>Vowel sounds</h3>
 
 <section id="plain_vowels">
@@ -492,7 +492,7 @@ It is the official writing system of South Korea and North Korea. It is a co-off
 
 
 
-<section id="consonantSounds">
+<section id="phonemesC">
 <h3>Consonant sounds</h3>
 <table class="ipaTable">
 <thead>
@@ -642,9 +642,22 @@ alveolar</th>
 
 <section id="characters">
 <h2>Syllables</h2>
-    
-    
-    <section id="jamos">
+
+
+
+
+
+
+
+<div id="vowel_description"></div>
+<div id="consonant_description"></div>
+
+
+
+
+
+
+<section id="jamos">
 <h3>Syllables and jamos</h3>
     
     <p>One of the peculiarities of hangul characters is that discreet phonetic symbols, called jamo (<span lang="ko">자모</span>), are combined within a standard square space to represent a syllable. This means that it is only necessary to learn a small number of symbols to be able to read any of the approximately 11,000 syllablic characters supported by Unicode.</p>
@@ -679,7 +692,7 @@ Johab
     </section>
      
     
-<section id="sounds">
+<section id="basicC">
 <h3>Consonants &amp; vowels</h3>
     
 <p>There are 19 consonant jamo, which typically have different pronunciations when syllable initial and final.<sup>3</sup></p>
@@ -821,17 +834,17 @@ Johab
 <span id="transformsInline">case &amp; other character transforms</span>.
 </p>
 <p>The Hangul script is not cursive, and involves no significant context-based shaping or positioning.</p>
-<p>The script is unicameral and needs no transforms to convert between code points.
+<p>The script is unicameral and needs no transforms to convert between code points.</p>
 
 
 
 
-<section> </section>
-</p>
+<section id="context">
+<h3>Context-based shaping &amp; positioning</h3>
+
+
 <section id="gsub">
-<h3>Context-based shaping</h3>
-    
-    
+<h4>Shaping</h4>    
 
 <p id="width"><span class="leadin">Fullwidth and halfwidth characters.</span>Hangul syllables are normally displayed in the same sized square spaces, much like Han and Kana characters.</p>
 <p>Embedded Latin text, numbers, or punctuation, however, can be represented using fullwidth, halfwidth, or proportionally-spaced glyphs.</p>
@@ -858,14 +871,13 @@ Johab
 
 
 <section id="gpos">
-<h3>Context-based positioning</h3>
+<h4>Positioning</h4>
 <p id="kerning"><span class="leadin">Kerning.</span>It is possible to kern Hangul syllabic glyphs, as demonstrated in this figure.</p>
 <figure> <img src="images/kerning.png" alt=""/>
 <figcaption>Examples of opportunities for kerning syllabic glyphs.</figcaption>
 </figure>
 <p>For more information about how this works, see [<a href="http://w3c.github.io/klreq/#fonts-kerning">klreq</a>]. (This is not something that is common in Chinese or Japanese text.)</p>
-
-    
+</section>
 </section>
 
 
@@ -891,29 +903,31 @@ Johab
 
 
 
-<section id="inline">
-<h2>Punctuation &amp; inline features</h2>
+<section id="segments">
+<h2>Text segmentation</h2>
    
-<p>This section summarises some of the salient features of text layout  related to Korean text. For more detail and additional requirements, see <a href="http://w3c.github.io/klreq/">Requirements for Hangul Text Layout and Typography : 한국어 텍스트 레이아웃 및 타이포그래피를 위한 요구사항</a>.</p>
-  
 <section id="graphemes">
 <h3>Grapheme boundaries</h3>
 <p id="def-grapheme" class="explanatoryintro definitionStub"></p>
-
-<p class="prompts">tbd</p>
-
 </section>
 
 
-
-
-  
 <section id="word">
 <h3>Word boundaries</h3>
 <p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 <p>Unlike Japanese and Chinese, Korean separates 'words' with spaces.</p>
 </section>
+</section>
 
+
+
+
+
+
+<section id="inline">
+<h2>Punctuation &amp; inline features</h2>
+   
+<p>This section summarises some of the salient features of text layout  related to Korean text. For more detail and additional requirements, see <a href="http://w3c.github.io/klreq/">Requirements for Hangul Text Layout and Typography : 한국어 텍스트 레이아웃 및 타이포그래피를 위한 요구사항</a>.</p>
 
 
 <section id="phrase">
@@ -1043,6 +1057,38 @@ Johab
 
 
 
+<section id="otherinline">
+<h3>Other inline ranges</h3>
+<p id="booktitles"><span class="leadin">Book &amp; article titles.</span>Book or newspaper titles are delimited by the following punctuation.</p>
+<figure class="characterBox auto" data-cols="">《␣》␣『␣』␣"</figure>
+
+<p>Artworks, trademarks, regulations use the following.</p>
+
+<figure class="characterBox auto" data-cols="">「␣」␣〈␣〉␣'␣</figure>
+
+<p>The fullwidth characters used for titles in horizontal text are often not available from keyboards.</p>
+<p>Hangul Spelling<tt>h</tt> also describes the use of <span class="codepoint"><span lang="ko">&#x2015;</span> [<span class="uname">U+2015 HORIZONTAL BAR</span>]</span> as a means to separate two-part titles. It can either precede or surround the second part of the title, eg. <span class="charExample"><span class="ex" lang="ko">올해의 권장 도서는 톨스토이의 『인생이란 무엇인가 ― 삶의 길 ―』이다.</span></span> or <span class="charExample"><span class="ex" lang="ko">올해의 권장 도서는 톨스토이의 『인생이란 무엇인가 ― 삶의 길』이다.</span></span> Note that it is surrounded by spaces.</p>
+<p id="textdecor"><span class="leadin">Text decoration.</span>Underlines appear below horizontally set text, and to the right of vertically set text.<tt>h</tt> </p>
+<figure> 
+<p class="large" lang="ko">지금 필요한 것은 <span class="ex" style="text-decoration:underline;">지식</span>이 아니라 <span class="ex" style="text-decoration:underline;">실천</span>입니다.</p>
+<figcaption>Underline in horizontal Korean text. (The underline should appear slightly further away from the syllable than shown.)</figcaption>
+</figure>
+  <p>Note how the underline in the figure above doesn't include the syllables at the end of the word.</p>
+<p>Less commonly, a wavy underline is used.<sup></sup></p>
+</section>
+
+
+
+
+
+<section id="spacing">
+<h3>Text spacing</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
 
 <section id="abbrev">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
@@ -1076,29 +1122,6 @@ Johab
 <p>Since it is only needed for hanja characters, ruby is rarely seen on the Web and is only used for publishing text which uses hanja extensively, which is not common either.<sup>5</sup></p>
 </section>   
 
-
-
-
-
-<section id="otherinline">
-<h3>Other inline ranges</h3>
-<p id="booktitles"><span class="leadin">Book &amp; article titles.</span>Book or newspaper titles are delimited by the following punctuation.</p>
-<figure class="characterBox auto" data-cols="">《␣》␣『␣』␣"</figure>
-
-<p>Artworks, trademarks, regulations use the following.</p>
-
-<figure class="characterBox auto" data-cols="">「␣」␣〈␣〉␣'␣</figure>
-
-<p>The fullwidth characters used for titles in horizontal text are often not available from keyboards.</p>
-<p>Hangul Spelling<tt>h</tt> also describes the use of <span class="codepoint"><span lang="ko">&#x2015;</span> [<span class="uname">U+2015 HORIZONTAL BAR</span>]</span> as a means to separate two-part titles. It can either precede or surround the second part of the title, eg. <span class="charExample"><span class="ex" lang="ko">올해의 권장 도서는 톨스토이의 『인생이란 무엇인가 ― 삶의 길 ―』이다.</span></span> or <span class="charExample"><span class="ex" lang="ko">올해의 권장 도서는 톨스토이의 『인생이란 무엇인가 ― 삶의 길』이다.</span></span> Note that it is surrounded by spaces.</p>
-<p id="textdecor"><span class="leadin">Text decoration.</span>Underlines appear below horizontally set text, and to the right of vertically set text.<tt>h</tt> </p>
-<figure> 
-<p class="large" lang="ko">지금 필요한 것은 <span class="ex" style="text-decoration:underline;">지식</span>이 아니라 <span class="ex" style="text-decoration:underline;">실천</span>입니다.</p>
-<figcaption>Underline in horizontal Korean text. (The underline should appear slightly further away from the syllable than shown.)</figcaption>
-</figure>
-  <p>Note how the underline in the figure above doesn't include the syllables at the end of the word.</p>
-<p>Less commonly, a wavy underline is used.<sup></sup></p>
-</section>
 
 
 
@@ -1138,7 +1161,7 @@ Johab
 
 
 
- <section id="wrap">
+ <section id="linebreak">
 <h3>Line breaking &amp; hyphenation</h3>
 <p>Korean can be wrapped on a word-by-word basis, but it is more common in modern Korean to simply wrap at syllable boundaries. It's a question of preference. This includes embedded Latin script text.</p>
 <p>Line breaking has to also take into account line-breaking rules (<span class="trans">geumchik</span>) which dictate what characters cannot appear at the end or start of a line. Although lines are typically broken after the character that reaches the end of the line, certain characters, such as <span class="charExample inline"><span class="ex" lang="ko">」</span></span>, should not appear at the start of a line, and others, such as <span class="charExample inline"><span class="ex" lang="ko">「</span></span>, should not appear at the end. Some character pairs, such as <span class="charExample inline"><span class="ex" lang="ko">……</span></span> or numbers, should not be broken either. For more information, see [<a href="http://w3c.github.io/klreq/#line-head-rest">klreq</a>].</p>
@@ -1250,14 +1273,6 @@ Johab
 </section>
 </section>
 
-
-
-
-
-<section id="letterspace">
-<h3>Letter spacing</h3>
-<p class="prompts">tbd</p>
-</section>
 
 
 
@@ -1701,20 +1716,6 @@ data-cols="">九仟␣八仟␣七仟␣六仟␣五仟␣四仟␣參仟␣貳�
 <li> <a href="/uniview/?block=hangul_jamo">Hangul  Jamo</a> (<span class="charCount">67 infrequent)</span></li>
 <li> <a href="/uniview/?block=katakana">Katakana</a> <span class="charCount">1 punctuation : total 1</span></li>
     </ul>
-</section>
-
-
-
-
-
-
-<section id="languages">
-<h2>Languages using the Hangul script</h2>
-<p>According to ScriptSource, the Hangul script is used for the following languages: </p>
-<ul>
-<li>Cia-cia [cia]</li>
-<li>Jejueo [jje]</li>
-</ul>
 </section>
 
 

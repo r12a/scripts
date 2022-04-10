@@ -51,7 +51,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->2 March, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->10 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -335,7 +335,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <p class="instructions">Phones in a lighter colour are non-native or allophones. Source <a href="https://en.wikipedia.org/wiki/Gujarati_phonology">Wikipedia</a>.</p>
 
 
-<section id="vowelPhonemes">
+<section id="phonemesV">
 <h3>Vowel sounds</h3>
 
 <section id="plain_vowels">
@@ -477,7 +477,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="consonantPhonemes">
+<section id="phonemesC">
 <h3>Consonant sounds</h3>
 <table class="ipaTable">
 <thead>
@@ -613,6 +613,15 @@ alveolar</th>
 
 
 
+
+
+
+<div id="vowel_description"></div>
+
+
+
+
+
 <section id="inherent">
 <h3>Inherent vowel</h3>
 <p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
@@ -645,7 +654,7 @@ alveolar</th>
 
 
 
-<section id="prescript_vowels">
+<section id="prebase_vowels">
 <h3>pre-base vowel-sign</h3>
 <p>One vowel-sign appears to the left of the base consonant letter or cluster, eg. <span class="ex" lang="gu">કિ</span>.</p>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">િ</figure>
@@ -688,7 +697,7 @@ alveolar</th>
 
 
 
-<section id="absence">
+<section id="novowel">
 <h3>Vowel absence</h3>
 
 <p>The inherent vowel is not always pronounced, even if there is no visual indication of its absence.</p>
@@ -704,95 +713,12 @@ alveolar</th>
 
 
 
-<section id="independentvowels">
+<section id="standalone">
 <h3>Standalone vowels</h3>
 <p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
 
 <p>Gujarati represents standalone vowels using a set of independent vowel letters. The set includes a character to represent the inherent vowel sound.</p>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ઇ␣ઈ␣ઊ␣ઉ␣એ␣ઓ␣અ␣ઑ␣ઍ␣આ␣ઔ␣ઐ</figure>
-</section>
-
-
-
-
-
-<section id="vowel_encoding">
-<h3>Encoding choices</h3>
-<p>Visually, several of the standalone vowels and some vowel-signs look as it they could be composed of smaller parts. This section compares approaches and considers the relevance of <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD) and  <span class="termref" href="../glossary/#nfc">Unicode Normalisation Form C</span> (NFC) to give guidance on which approach is best.</p>
-
-<section id="vs_encoding">
-<h4>Vowel-signs</h4>
-<p class="info">The approaches listed here are not equivalent when the text is normalised, and therefore produce different content which creates problems for search or other operations. In all cases, only the precomposed approach in the left column should be used.</p>
-
-<table class="comparison">
-<thead>
-<tr>
-<th scope="col">Use</th>
-<th scope="col">Do not use</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><span class="codepoint" translate="no"><span lang="gu">&#x0ACB;</span> [<a href="/scripts/gujarati/block#char0ACB"><span class="uname">U+0ACB GUJARATI VOWEL SIGN O</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="gu">&#x0ABE;</span> + <span lang="gu">&#x0AC7;</span> [<a href="/scripts/gujarati/block#char0ABE"><span class="uname">U+0ABE GUJARATI VOWEL SIGN AA</span></a> + <a href="/scripts/gujarati/block#char0AC7"><span class="uname">U+0AC7 GUJARATI VOWEL SIGN E</span></a>]</span></td>
-</tr>
-<tr>
-<td><span class="codepoint" translate="no"><span lang="gu">&#x0AC9;</span> [<a href="/scripts/gujarati/block#char0AC9"><span class="uname">U+0AC9 GUJARATI VOWEL SIGN CANDRA O</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="gu">&#x0ABE;</span> + <span lang="gu">&#x0AC5;</span> [<a href="/scripts/gujarati/block#char0ABE"><span class="uname">U+0ABE GUJARATI VOWEL SIGN AA</span></a> + <a href="/scripts/gujarati/block#char0AC5"><span class="uname">U+0AC5 GUJARATI VOWEL SIGN CANDRA E</span></a>]</span></td>
-</tr>
-<tr>
-<td><span class="codepoint" translate="no"><span lang="gu">&#x0ACC;</span> [<a href="/scripts/gujarati/block#char0ACC"><span class="uname">U+0ACC GUJARATI VOWEL SIGN AU</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="gu">&#x0ABE;</span> + <span lang="gu">&#x0AC8;</span> [<a href="/scripts/gujarati/block#char0ABE"><span class="uname">U+0ABE GUJARATI VOWEL SIGN AA</span></a> + <a href="/scripts/gujarati/block#char0AC8"><span class="uname">U+0AC8 GUJARATI VOWEL SIGN AI</span></a>]</span></td>
-</tr>
-</tbody>
-</table>
-</section>
-
-
-
-
-<section id="standalone_encoding">
-<h4>Independent vowels</h4>
-<p class="info">The approaches listed here are also not equivalent when the text is normalised, and therefore  only the precomposed approach in the left column should be used.</p>
-<table class="comparison">
-<thead>
-<tr>
-<th scope="col">Use</th>
-<th scope="col">Do not use</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><span class="codepoint" translate="no"><span lang="gu">&#x0A86;</span> [<a href="/scripts/gujarati/block#char0A86"><span class="uname">U+0A86 GUJARATI LETTER AA</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="gu">&#x0A85;</span> + <span lang="gu">&#x0ABE;</span> [<a href="/scripts/gujarati/block#char0A85"><span class="uname">U+0A85 GUJARATI LETTER A</span></a> + <a href="/scripts/gujarati/block#char0ABE"><span class="uname">U+0ABE GUJARATI VOWEL SIGN AA</span></a>]</span></td>
-</tr>
-<tr>
-<td><span class="codepoint" translate="no"><span lang="gu">&#x0A8F;</span> [<a href="/scripts/gujarati/block#char0A8F"><span class="uname">U+0A8F GUJARATI LETTER E</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="gu">&#x0A85;</span> + <span lang="gu">&#x0AC7;</span> [<a href="/scripts/gujarati/block#char0A85"><span class="uname">U+0A85 GUJARATI LETTER A</span></a> + <a href="/scripts/gujarati/block#char0AC7"><span class="uname">U+0AC7 GUJARATI VOWEL SIGN E</span></a>]</span></td>
-</tr>
-<tr>
-<td><span class="codepoint" translate="no"><span lang="gu">&#x0A93;</span> [<a href="/scripts/gujarati/block#char0A93"><span class="uname">U+0A93 GUJARATI LETTER O</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="gu">&#x0A85;</span> + <span lang="gu">&#x0ACB;</span> [<a href="/scripts/gujarati/block#char0A85"><span class="uname">U+0A85 GUJARATI LETTER A</span></a> + <a href="/scripts/gujarati/block#char0ACB"><span class="uname">U+0ACB GUJARATI VOWEL SIGN O</span></a>]</span></td>
-</tr>
-<tr>
-<td><span class="codepoint" translate="no"><span lang="gu">&#x0A8D;</span> [<a href="/scripts/gujarati/block#char0A8D"><span class="uname">U+0A8D GUJARATI VOWEL CANDRA E</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="gu">&#x0A85;</span> + <span lang="gu">&#x0AC5;</span> [<a href="/scripts/gujarati/block#char0A85"><span class="uname">U+0A85 GUJARATI LETTER A</span></a> + <a href="/scripts/gujarati/block#char0AC5"><span class="uname">U+0AC5 GUJARATI VOWEL SIGN CANDRA E</span></a>]</span></td>
-</tr>
-<tr>
-<td><span class="codepoint" translate="no"><span lang="gu">&#x0A91;</span> [<a href="/scripts/gujarati/block#char0A91"><span class="uname">U+0A91 GUJARATI VOWEL CANDRA O</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="gu">&#x0A85;</span> + <span lang="gu">&#x0AC9;</span> [<a href="/scripts/gujarati/block#char0A85"><span class="uname">U+0A85 GUJARATI LETTER A</span></a> + <a href="/scripts/gujarati/block#char0AC9"><span class="uname">U+0AC9 GUJARATI VOWEL SIGN CANDRA O</span></a>]</span></td>
-</tr>
-<tr>
-<td><span class="codepoint" translate="no"><span lang="gu">&#x0A90;</span> [<a href="/scripts/gujarati/block#char0A90"><span class="uname">U+0A90 GUJARATI LETTER AI</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="gu">&#x0A85;</span> + <span lang="gu">&#x0AC8;</span> [<a href="/scripts/gujarati/block#char0A85"><span class="uname">U+0A85 GUJARATI LETTER A</span></a> + <a href="/scripts/gujarati/block#char0AC8"><span class="uname">U+0AC8 GUJARATI VOWEL SIGN AI</span></a>]</span></td>
-</tr>
-<tr>
-<td><span class="codepoint" translate="no"><span lang="gu">&#x0A94;</span> [<a href="/scripts/gujarati/block#char0A94"><span class="uname">U+0A94 GUJARATI LETTER AU</span></a>]</span></td>
-<td><span class="codepoint" translate="no"><span lang="gu">&#x0A85;</span> + <span lang="gu">&#x0ACC;</span> [<a href="/scripts/gujarati/block#char0A85"><span class="uname">U+0A85 GUJARATI LETTER A</span></a> + <a href="/scripts/gujarati/block#char0ACC"><span class="uname">U+0ACC GUJARATI VOWEL SIGN AU</span></a>]</span></td>
-</tr>
-</tbody>
-</table>
-</section>
 </section>
 </section>
 
@@ -824,7 +750,17 @@ alveolar</th>
 <p class="instructions">Click on the characters in the lists for detailed information. <!--For a mapping of sounds to graphemes see <a class="secref">consonant_mappings</a>.--></p>
 
 
-<section id="basicconsonants">
+
+
+
+
+<div id="consonant_description"></div>
+
+
+
+
+
+<section id="basicC">
 <h3>Basic  consonants</h3>
 
 <section id="stops">
@@ -862,7 +798,7 @@ alveolar</th>
 
 
 
-<section id="extensions">
+<section id="extendedC">
 <h3>Repertoire extension</h3>
 
 <div class="btw">
@@ -1032,6 +968,91 @@ An important consequence of representing clusters in this way is that the syllab
 
 
 
+
+
+<section id="encoding">
+<h2>Encoding choices</h2>
+<p>Visually, several of the standalone vowels and some vowel-signs look as it they could be composed of smaller parts. This section compares approaches and considers the relevance of <span class="termref" href="../glossary/#nfd">Unicode Normalisation Form D</span> (NFD) and  <span class="termref" href="../glossary/#nfc">Unicode Normalisation Form C</span> (NFC) to give guidance on which approach is best.</p>
+
+<section id="vs_encoding">
+<h3>Vowel-signs</h3>
+<p class="info">The approaches listed here are not equivalent when the text is normalised, and therefore produce different content which creates problems for search or other operations. In all cases, only the precomposed approach in the left column should be used.</p>
+
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Use</th>
+<th scope="col">Do not use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="gu">&#x0ACB;</span> [<a href="/scripts/gujarati/block#char0ACB"><span class="uname">U+0ACB GUJARATI VOWEL SIGN O</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="gu">&#x0ABE;</span> + <span lang="gu">&#x0AC7;</span> [<a href="/scripts/gujarati/block#char0ABE"><span class="uname">U+0ABE GUJARATI VOWEL SIGN AA</span></a> + <a href="/scripts/gujarati/block#char0AC7"><span class="uname">U+0AC7 GUJARATI VOWEL SIGN E</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="gu">&#x0AC9;</span> [<a href="/scripts/gujarati/block#char0AC9"><span class="uname">U+0AC9 GUJARATI VOWEL SIGN CANDRA O</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="gu">&#x0ABE;</span> + <span lang="gu">&#x0AC5;</span> [<a href="/scripts/gujarati/block#char0ABE"><span class="uname">U+0ABE GUJARATI VOWEL SIGN AA</span></a> + <a href="/scripts/gujarati/block#char0AC5"><span class="uname">U+0AC5 GUJARATI VOWEL SIGN CANDRA E</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="gu">&#x0ACC;</span> [<a href="/scripts/gujarati/block#char0ACC"><span class="uname">U+0ACC GUJARATI VOWEL SIGN AU</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="gu">&#x0ABE;</span> + <span lang="gu">&#x0AC8;</span> [<a href="/scripts/gujarati/block#char0ABE"><span class="uname">U+0ABE GUJARATI VOWEL SIGN AA</span></a> + <a href="/scripts/gujarati/block#char0AC8"><span class="uname">U+0AC8 GUJARATI VOWEL SIGN AI</span></a>]</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+
+
+<section id="standalone_encoding">
+<h3>Independent vowels</h3>
+<p class="info">The approaches listed here are also not equivalent when the text is normalised, and therefore  only the precomposed approach in the left column should be used.</p>
+<table class="comparison">
+<thead>
+<tr>
+<th scope="col">Use</th>
+<th scope="col">Do not use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="gu">&#x0A86;</span> [<a href="/scripts/gujarati/block#char0A86"><span class="uname">U+0A86 GUJARATI LETTER AA</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="gu">&#x0A85;</span> + <span lang="gu">&#x0ABE;</span> [<a href="/scripts/gujarati/block#char0A85"><span class="uname">U+0A85 GUJARATI LETTER A</span></a> + <a href="/scripts/gujarati/block#char0ABE"><span class="uname">U+0ABE GUJARATI VOWEL SIGN AA</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="gu">&#x0A8F;</span> [<a href="/scripts/gujarati/block#char0A8F"><span class="uname">U+0A8F GUJARATI LETTER E</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="gu">&#x0A85;</span> + <span lang="gu">&#x0AC7;</span> [<a href="/scripts/gujarati/block#char0A85"><span class="uname">U+0A85 GUJARATI LETTER A</span></a> + <a href="/scripts/gujarati/block#char0AC7"><span class="uname">U+0AC7 GUJARATI VOWEL SIGN E</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="gu">&#x0A93;</span> [<a href="/scripts/gujarati/block#char0A93"><span class="uname">U+0A93 GUJARATI LETTER O</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="gu">&#x0A85;</span> + <span lang="gu">&#x0ACB;</span> [<a href="/scripts/gujarati/block#char0A85"><span class="uname">U+0A85 GUJARATI LETTER A</span></a> + <a href="/scripts/gujarati/block#char0ACB"><span class="uname">U+0ACB GUJARATI VOWEL SIGN O</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="gu">&#x0A8D;</span> [<a href="/scripts/gujarati/block#char0A8D"><span class="uname">U+0A8D GUJARATI VOWEL CANDRA E</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="gu">&#x0A85;</span> + <span lang="gu">&#x0AC5;</span> [<a href="/scripts/gujarati/block#char0A85"><span class="uname">U+0A85 GUJARATI LETTER A</span></a> + <a href="/scripts/gujarati/block#char0AC5"><span class="uname">U+0AC5 GUJARATI VOWEL SIGN CANDRA E</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="gu">&#x0A91;</span> [<a href="/scripts/gujarati/block#char0A91"><span class="uname">U+0A91 GUJARATI VOWEL CANDRA O</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="gu">&#x0A85;</span> + <span lang="gu">&#x0AC9;</span> [<a href="/scripts/gujarati/block#char0A85"><span class="uname">U+0A85 GUJARATI LETTER A</span></a> + <a href="/scripts/gujarati/block#char0AC9"><span class="uname">U+0AC9 GUJARATI VOWEL SIGN CANDRA O</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="gu">&#x0A90;</span> [<a href="/scripts/gujarati/block#char0A90"><span class="uname">U+0A90 GUJARATI LETTER AI</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="gu">&#x0A85;</span> + <span lang="gu">&#x0AC8;</span> [<a href="/scripts/gujarati/block#char0A85"><span class="uname">U+0A85 GUJARATI LETTER A</span></a> + <a href="/scripts/gujarati/block#char0AC8"><span class="uname">U+0AC8 GUJARATI VOWEL SIGN AI</span></a>]</span></td>
+</tr>
+<tr>
+<td><span class="codepoint" translate="no"><span lang="gu">&#x0A94;</span> [<a href="/scripts/gujarati/block#char0A94"><span class="uname">U+0A94 GUJARATI LETTER AU</span></a>]</span></td>
+<td><span class="codepoint" translate="no"><span lang="gu">&#x0A85;</span> + <span lang="gu">&#x0ACC;</span> [<a href="/scripts/gujarati/block#char0A85"><span class="uname">U+0A85 GUJARATI LETTER A</span></a> + <a href="/scripts/gujarati/block#char0ACC"><span class="uname">U+0ACC GUJARATI VOWEL SIGN AU</span></a>]</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+
+
+
 <section id="otherletter">
 <h2>Other letters</h2>
     <p>In addition to the consonants and vowel letters already mentioned, the Gujarati block contains the following letters, which CLDR lists as needed for writing the Gujarati language.</p>
@@ -1089,6 +1110,7 @@ An important consequence of representing clusters in this way is that the syllab
 
 <section id="shaping">
 <h2>Glyph shaping &amp; positioning</h2>
+
 <p class="instructions">This section brings together information about the following topics:
 <span id="writingstylesInline">writing styles</span>; 
 <span id="cursiveInline">cursive text</span>;
@@ -1149,8 +1171,8 @@ An important consequence of representing clusters in this way is that the syllab
 
 
 
-<section id="inline">
-<h2>Punctuation &amp; inline features</h2>  
+<section id="segments">
+<h2>Text segmentation</h2>  
  
 <section id="graphemes">
 <h3>Grapheme boundaries</h3>
@@ -1170,11 +1192,17 @@ An important consequence of representing clusters in this way is that the syllab
 <p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 <p>Words are  separated by spaces.</p>
 </section>
+</section>
 
 
 
 
-  
+
+
+<section id="inline">
+<h2>Punctuation &amp; inline features</h2>
+
+
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
 
@@ -1277,6 +1305,24 @@ An important consequence of representing clusters in this way is that the syllab
 
 
 
+
+<section id="otherinline">
+<h3>Other inline ranges</h3>
+
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+<section id="spacing">
+<h3>Text spacing</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
   
 <section id="abbrev">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
@@ -1289,16 +1335,6 @@ An important consequence of representing clusters in this way is that the syllab
   
 <section id="inlinenotes">
 <h3>Inline notes &amp; annotations</h3>
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
-
-<section id="otherinline">
-<h3>Other inline ranges</h3>
-
 <p class="prompts">tbd</p>
 </section>
 
@@ -1335,14 +1371,6 @@ An important consequence of representing clusters in this way is that the syllab
 
 <section id="justification">
 <h3>Text alignment &amp; justification</h3>
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
-<section id="letterspace">
-<h3>Letter spacing</h3>
 <p class="prompts">tbd</p>
 </section>
 
@@ -1470,24 +1498,6 @@ An important consequence of representing clusters in this way is that the syllab
 <h3>Page numbering, running headers, etc</h3>
 <p class="prompts">tbd</p>
 </section-->
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-<section id="languages">
-<h2>Languages using the Gujarati script</h2>
-<p>According to ScriptSource, the Gujarati script is used for the following languages:</p>
-<ul id="scriptLanguageList">
-</ul>
 </section>
 
 

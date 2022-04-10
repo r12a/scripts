@@ -55,7 +55,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->2 March, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->10 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -316,7 +316,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="vowelPhonemes">
+<section id="phonemesV">
 <h3>Vowel sounds</h3>
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -20 500 240" class="ipaSVG">
@@ -417,7 +417,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="consonantSounds">
+<section id="phonemesC">
 <h3>Consonant sounds</h3>
 
 <table class="ipaTable">
@@ -545,7 +545,16 @@ alveolar</th>
 
 
 
-<section id="inherentvowel">
+
+
+
+<div id="vowel_description"></div>
+
+
+
+
+
+<section id="inherent">
 <h3>Inherent vowel</h3>
 <p id="def-inherentvowel" class="explanatoryintro definitionStub"></p>
 
@@ -574,7 +583,7 @@ alveolar</th>
 
 
 
-<section id="prescript_vowels">
+<section id="prebase_vowels">
 <h3>pre-base vowel-signs</h3>
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ෙ␣ ␣ෛ</figure>
@@ -645,7 +654,7 @@ alveolar</th>
 
 
 
-<section id="absence">
+<section id="novowel">
 <h3>Vowel absence</h3>
 <p>When the inherent vowel is not pronounced, <span class="codepoint" translate="no"><span lang="si">&#x0DCA;</span> [<a href="/scripts/sinhala/block#char0DCA"><span class="uname">U+0DCA SINHALA SIGN AL-LAKUNA</span></a>]</span> is attached to the consonant. So to indicate just the sound <span class="ipa">k</span>, use <span class="charExample" translate="no"><span class="ex" lang="si">ක්</span></span></p>
 </section>
@@ -654,7 +663,7 @@ alveolar</th>
 
 
 
-<section id="independentvowel">
+<section id="standalone">
 <h3>Standalone vowels</h3>
 <p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
 
@@ -704,7 +713,14 @@ alveolar</th>
 
 
 
-<section id="basicconsonants">
+
+<div id="consonant_description"></div>
+
+
+
+
+
+<section id="basicC">
 <h3>Basic (<span class="trans">ʃuddʰa</span>) consonants</h3>
 
 <p>The core set, or <span class="trans">ʃuddʰa hōɖiya</span>, is based on the classical grammar of the middle ages (called <span land="si">එළු හෝඩිය</span> <span class="name">ẹɭu hōɖiya</span>) and contains the following consonants:</p>
@@ -745,7 +761,7 @@ alveolar</th>
 
 
 
-<section id="misraconsonants">
+<section id="extendedC">
 <h3><span class="trans">miʃra</span> &amp; other consonants</h3>
 
 <p>The full set of consonants, known as <span class="trans">miʃra hōɖiya</span> (mixed alphabet), includes the additional consonants in this section.</p>
@@ -949,8 +965,16 @@ alveolar</th>
 
 <p>Sinhala text is not cursive (ie. joined up like Arabic), however there is a significant amount of interaction between glyphs, and some joining, around consonant clusters.</p>
 <p>The orthography has no case distinction, and no special transforms are needed to convert between characters.</p>
+
+
+
+
+<section id="context">
+<h3>Context-based shaping &amp; positioning</h3>
+
+
 <section id="gsub">
-<h3>Contextual shaping</h3>
+<h4>Contextual shaping</h4>
 <p>Similarly to the Tamil script, the <span class="trans">u</span> and <span class="trans">ū</span> vowels assume various different shapes and connection points, depending on what consonant they follow.</p>
 
 <!--figure class="narrowlines">
@@ -1022,30 +1046,31 @@ alveolar</th>
 <p>As described above, consonant clusters may cause conjuncts to form, as a way of indicating that there are no intervening vowels. Conjunct ligations are generally expected for <span class="trans">r</span> and <span class="trans">y</span>, and other conjuncts depend on font availability. Generally, a conjunct is formed by reducing the non-final consonant shapes.</p>
 <figure>
 <p lang="si" class="large"><span class="ex">ක්‍ව</span> &nbsp;&nbsp; <span class="ex">ක්ව</span></p>
-       <figcaption>Conjoined <span class="trans">kv</span> (left), and <span class="trans">kv</span> with <span class="titlepara"><span class="trans">hal kirīma</span></span> (left).</figcaption>
- </figure>
+<figcaption>Conjoined <span class="trans">kv</span> (left), and <span class="trans">kv</span> with <span class="titlepara"><span class="trans">hal kirīma</span></span> (left).</figcaption>
+</figure>
 </section>
   
   
   
   
-  <section id="gpos">
-<h3>Context-based positioning</h3>
+<section id="gpos">
+<h4>Context-based positioning</h4>
 <p>Vowel signs may appear above, below, to the right, to the left, or on both sides of the base consonant.
-    <figure>
-    </figure>
+<figure>
+</figure>
 </p>
 <figure>
 <p dir="rtl" lang="si" class="large" style="font-size: 300%;"><span class="ex">ක කි කු කැ කෙ කො</span></p>
-   <figcaption>Position of vowel signs for the sequence <span class="trans">ka ki ku kæ ke ko</span>.</figcaption>
+<figcaption>Position of vowel signs for the sequence <span class="trans">ka ki ku kæ ke ko</span>.</figcaption>
 </figure>
-    <p>Vowels signs are positioned around an orthographic syllable, rather than around a specific consonant. So a part of a vowel sign that appears to the left of its base will appear to the left of a conjunct.</p>
-    <figure>
-    <p dir="rtl" lang="si" class="ex large">ක්‍වො</p>
-       <figcaption>In the syllable <span class="trans">kvo</span> the vowel sign appears on either side of the conjunct, not the letter <span class="trans">v</span>.</figcaption>
- </figure>
- <p>When a <span class="trans">u</span> vowel (or the long vowel) appears below a conjunct, it is placed below the final consonant, eg. <span class="charExample"><span class="ex" lang="si">ක්‍යු</span> <span class="trans">k͓₊yu</span></span></p>
-  </section>
+<p>Vowels signs are positioned around an orthographic syllable, rather than around a specific consonant. So a part of a vowel sign that appears to the left of its base will appear to the left of a conjunct.</p>
+<figure>
+<p dir="rtl" lang="si" class="ex large">ක්‍වො</p>
+<figcaption>In the syllable <span class="trans">kvo</span> the vowel sign appears on either side of the conjunct, not the letter <span class="trans">v</span>.</figcaption>
+</figure>
+<p>When a <span class="trans">u</span> vowel (or the long vowel) appears below a conjunct, it is placed below the final consonant, eg. <span class="charExample"><span class="ex" lang="si">ක්‍යු</span> <span class="trans">k͓₊yu</span></span></p>
+</section>
+</section>
 
 
 
@@ -1081,8 +1106,8 @@ alveolar</th>
   
   
   
-<section id="inline">
-<h2>Punctuation &amp; inline features</h2>  
+<section id="segments">
+<h2>Text segmentation</h2>  
 
 <section id="graphemes">
 <h3>Grapheme boundaries</h3>
@@ -1101,7 +1126,15 @@ alveolar</th>
 <p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 <p>Words are separated by spaces.</p>
 </section>
+</section>
 
+  
+  
+  
+  
+  
+<section id="inline">
+<h2>Punctuation &amp; inline features</h2>
 
 
 
@@ -1203,6 +1236,24 @@ alveolar</th>
 
 
 
+
+<section id="otherinline">
+<h3>Other inline ranges</h3>
+
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+<section id="spacing">
+<h3>Text spacing</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
   
 <section id="abbrev">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
@@ -1215,16 +1266,6 @@ alveolar</th>
   
 <section id="inlinenotes">
 <h3>Inline notes &amp; annotations</h3>
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
-
-<section id="otherinline">
-<h3>Other inline ranges</h3>
-
 <p class="prompts">tbd</p>
 </section>
 
@@ -1263,14 +1304,6 @@ alveolar</th>
 
  <section id="justification">
 <h3>Text alignment &amp; justification</h3>
-    <p class="prompts">tbd</p>
-</section>
-
-
-
-
- <section id="letterspace">
-<h3>Letter spacing</h3>
     <p class="prompts">tbd</p>
 </section>
 
@@ -1376,24 +1409,6 @@ alveolar</th>
 <p>Note also, in the bottom left corner, that the keyboard has a key for the combination of <span class="codepoint noindex"><span lang="si">&#x0DCA;</span> + <span class="trans">ZWJ</span> + <span lang="si">&#x0DBB;</span> [<a href="/scripts/sinhala/block#char0DCA"><span class="uname">U+0DCA SINHALA SIGN AL-LAKUNA​</span></a> + <a href="/scripts/sinhala/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a> + <a href="/scripts/sinhala/block#char0DBB"><span class="uname">U+0DBB SINHALA LETTER RAYANNA</span></a>]</span>, ie. the conjoined <span class="trans">-r</span>. The shifted layout has a similar key for <span class="trans">-y.</span></p>
 <p>There is a <span class="name">rephaya</span> key (for the sequence <span class="codepoint noindex"><span lang="si">&#x0DBB;</span> + <span lang="si">&#x0DCA;</span> + <span class="trans">ZWJ</span> [<a href="/scripts/sinhala/block#char0DBB"><span class="uname">U+0DBB SINHALA LETTER RAYANNA</span></a> + <a href="/scripts/sinhala/block#char0DCA"><span class="uname">U+0DCA SINHALA SIGN AL-LAKUNA​</span></a> + <a href="/scripts/sinhala/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span>), but it is typed <em>after</em> the consonant that normally follows it in memory. The input method then has to rearrange the codepoints in canonical order.</p>
 <p>Effectively, you type characters or parts of multipart characters in visual order, and the system then has to rearrange things to produce the expected codepoint order.</p>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-<section id="languages">
-<h2>Languages using the Sinhala script</h2>
-<p>According to ScriptSource, the Sinhala script is used for the following languages:</p>
-<ul id="scriptLanguageList">
-</ul>
 </section>
 
 

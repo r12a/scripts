@@ -57,7 +57,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->1 March, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->10 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -93,7 +93,7 @@
 
 
 <section id="sample">
-<h2>Sample (Urdu)</h2>
+<h2>Sample</h2>
 <p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.  <a style="margin-inline-start: 2rem;" href="http://unicode.org/udhr/translations.html">Source</a><br>
 Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
 
@@ -341,7 +341,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="vowelPhonemes">
+<section id="phonemesV">
 <h3>Vowel sounds</h3>
 
 <p>There are 10 vowel sounds, though there are also allophonic variants. They are usually grouped into pairs of 'short' and 'long' sounds - although the difference is qualitative, rather than just length. The basic phonemes are as follows: </p>
@@ -441,7 +441,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="consonantSounds">
+<section id="phonemesC">
 <h3>Consonant sounds</h3>
 
 <table class="ipaTable">
@@ -602,7 +602,7 @@ alveolar</th>
 
 
 <section id="vowel_mappings">
-<h3>Vowel to script mapping</h3>
+<h3>Vowel sounds to characters</h3>
 
 
 <p class="instructions">This section maps Urdu vowel sounds to common graphemes in the Arabic orthography, grouped by word-initial ( <mark>i</mark> ), medial ( <mark>m</mark> ), and final ( <mark>f</mark> ) types. Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
@@ -863,7 +863,14 @@ alveolar</th>
 
 
 
-<section id="mapToVowels">
+
+<div id="vowel_description"></div>
+
+
+
+
+
+<section id="matres">
 <h3>Vowels without diacritics</h3>
 
 <figure class="characterBox auto" data-cols="ipa,trans,transc">ا␣آ␣ی␣ے␣و</figure>
@@ -978,7 +985,7 @@ alveolar</th>
 
 
 
-<section id="vowelDiacritics">
+<section id="voweldiacritics">
 <h3>Vowel diacritics</h3>
 
 <p>In situations where it is necessary to unambiguously indicate the underlying vowel sounds, the following diacritics can be added to base letters.</p>
@@ -1210,8 +1217,8 @@ two different shapes, one like the initial form of <span class="name">'ain</span
 
 
 
-<section id="junctions">
-<h3>Vowel clusters</h3>
+<section id="standalone">
+<h3>Standalone vowels</h3>
 
 <p>A vowel that follows another vowel, with no preceding consonant, is commonly marked with a combining <span class="name">hamzā</span>. This generally applies to words where the second vowel is one of the following: <span class="ipa">iː e ɪ uː oː</span>, and the graphemes used are:</p>
 
@@ -1654,9 +1661,13 @@ unless it produces <span class="ipa">h</span> in which case use the following in
 
 
 
+<div id="consonant_description"></div>
 
 
-<section id="basic_letters">
+
+
+
+<section id="basicC">
 <h3>Basic letters</h3>
 
 <p>The alphabet standardised in 2004 by the National Language Authority in Pakistan counts 39 letters, and 18  digraphs representing aspirated consonants. Follow the links to the character notes for the letters described below to find examples and detailed information.</p>
@@ -1775,7 +1786,7 @@ in Urdu, but it is also pronounced <span class="ipa">ɑː</span> or is silent in
 
 
 
-<section id="encoding_choices">
+<section id="encoding">
 <h2>Encoding choices<a class="selflink" href="#encoding_choices"></a></h2>
 
 <p>In the Urdu orthography different sequences of Unicode characters may produce the same visual result. Here we look at those, and make notes on usage.</p>
@@ -2415,17 +2426,14 @@ in Urdu, but it is also pronounced <span class="ipa">ɑː</span> or is silent in
 
 
 
-<section id="gsub">
-<h3>Context-based shaping</h3>
+<section id="context">
+<h3>Context-based shaping &amp; positioning</h3>
 <p>Context-based shaping is everwhere in Urdu due to the combination of the cursive behaviour of the script plus the strong tendency to arrange joined characters in cascades or vertical arrangements.</p>
 <p>As in Arabic, <span class="trans">lam</span> followed by <span class="trans">alef</span> ligates, eg. <span class="eg" lang="ur" dir="rtl">اسلام</span> and there are other such commonly ligated forms. There are also common rules about special joining arrangements when certain characters appear side by side, for example a <span class="uname">KA</span> followed by an <span class="uname">ALEF</span> takes the special shape <span class="charExample" translate="no"><span class="ex" lang="ur" dir="rtl"> کا</span></span></p>
-</section>
 
 
 
 
-<section id="gpos">
-<h3>Context-based positioning</h3>
 
 <p>Positioning of cursive joining forms is already complicated in the nastaliq style because of the vertical placement; adding dots and hamzas then complicates matters in that they need to be aligned with the appropriate base character without overlapping adjacent character glyphs or other dots, etc.  Positioning vowel diacritics, shadda, etc. then adds to the complexity.</p>
 <p>The table in <a class="figref">fig_gpos</a> selects just a handful of situations to illustrate the kinds of positioning that take place.</p>
@@ -2514,8 +2522,8 @@ in Urdu, but it is also pronounced <span class="ipa">ɑː</span> or is silent in
 
 
 
-<section id="inline">
-<h2>Punctuation &amp; inline features</h2>  
+<section id="segments">
+<h2>Text segmentation</h2>  
 	
 <section id="graphemes">
 <h3>Grapheme boundaries</h3>
@@ -2534,7 +2542,14 @@ in Urdu, but it is also pronounced <span class="ipa">ɑː</span> or is silent in
 <p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 <p>Words are separated by spaces.</p>
 </section>
-  
+</section>
+
+
+
+
+
+<section id="inline">
+<h2>Punctuation &amp; inline features</h2>  
   
 
 	
@@ -2646,6 +2661,24 @@ in Urdu, but it is also pronounced <span class="ipa">ɑː</span> or is silent in
 
 
 
+
+<section id="otherinline">
+<h3>Other inline ranges</h3>
+
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+<section id="spacing">
+<h3>Text spacing</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
   
 <section id="abbrev">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
@@ -2658,16 +2691,6 @@ in Urdu, but it is also pronounced <span class="ipa">ɑː</span> or is silent in
   
 <section id="inlinenotes">
 <h3>Inline notes &amp; annotations</h3>
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
-
-<section id="otherinline">
-<h3>Other inline ranges</h3>
-
 <p class="prompts">tbd</p>
 </section>
 
@@ -2717,14 +2740,6 @@ in Urdu, but it is also pronounced <span class="ipa">ɑː</span> or is silent in
 
 <section id="justification">
 <h3>Text alignment &amp; justification</h3>
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
-<section id="letterspace">
-<h3>Letter spacing</h3>
 <p class="prompts">tbd</p>
 </section>
 
@@ -2815,22 +2830,6 @@ in Urdu, but it is also pronounced <span class="ipa">ɑː</span> or is silent in
 <h3>Page numbering, running headers, etc</h3>
 <p class="prompts">tbd</p>
 </section-->
-</section>
-
-
-
-
-
-
-
-
-
-
-<section id="languages">
-<h2>Languages using the Arabic script</h2>
-<p>According to ScriptSource, the Arabic script is used for the following languages: </p>
-<ul id="scriptLanguageList">
-</ul>
 </section>
 
 

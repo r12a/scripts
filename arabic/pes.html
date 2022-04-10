@@ -56,7 +56,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->1 March, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->10 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -344,7 +344,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="vowelPhonemes">
+<section id="phonemesV">
 <h3>Vowel sounds</h3>
 
 <p>There are 6 vowel sounds, though there are also allophonic variants. The basic phonemes are as follows: </p>
@@ -421,7 +421,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="consonantSounds">
+<section id="phonemesC">
 <h3>Consonant sounds</h3>
 
 <table class="ipaTable">
@@ -536,7 +536,7 @@ alveolar</th>
 
 
 <section id="vowel_mappings">
-<h3>Vowel to script mapping</h3>
+<h3>Vowel sounds to characters</h3>
 
 
 <p class="instructions">This section maps Persian vowel sounds to common graphemes in the Arabic orthography, grouping them by initial  (<b>i</b>), medial (<b>m</b>), and final (<b>f</b>) forms. Click on the character names for examples of usage. Vowel diacritics are shown here, but can be ignored to reflect normal usage in Persian text. Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
@@ -696,9 +696,13 @@ alveolar</th>
 
 
 
+<div id="vowel_description"></div>
 
 
-<section id="mapToVowels">
+
+
+
+<section id="matres">
 <h3>Matres lectionis</h3>
 
 <p id="def-materlectionis" class="explanatoryintro definitionStub"></p>
@@ -775,7 +779,7 @@ alveolar</th>
 
 
 
-<section id="vowelDiacritics">
+<section id="voweldiacritics">
 <h3>Vowel diacritics</h3>
 
 <p>In situations where it is necessary to unambiguously indicate the underlying vowel sounds, the following diacritics can be added to base letters.</p>
@@ -1149,9 +1153,13 @@ alveolar</th>
 
 
 
+<div id="consonant_description"></div>
 
 
-<section id="basic_letters">
+
+
+
+<section id="basicC">
 <h3>Basic letters</h3>
 
 
@@ -1310,7 +1318,7 @@ alveolar</th>
 
 
 
-<section id="encoding_choices">
+<section id="encoding">
 <h2>Encoding choices<a class="selflink" href="#encoding_choices"></a></h2>
 
 <p>In the Persian orthography different sequences of Unicode characters may produce the same visual result. Here we look at those, and make notes on usage.</p>
@@ -1867,17 +1875,13 @@ alveolar</th>
 
 
 
-<section id="gsub">
-<h3>Context-based shaping</h3>
+<section id="context">
+<h3>Context-based shaping &amp; positioning</h3>
 <p>Context-based shaping is everwhere in Persian due to the combination of the cursive behaviour of the script plus the strong tendency to arrange joined characters in cascades or vertical arrangements.</p>
 <p>As in Arabic, <span class="trans">lam</span> followed by <span class="trans">alef</span> ligates, eg. <span class="eg" lang="pes" dir="rtl">اسلام</span> and there are other such commonly ligated forms.</p>
-</section>
 
 
 
-
-<section id="gpos">
-<h3>Context-based positioning</h3>
 
 <p>Depending on the font, Arabic letters often have special rules for joining between certain characters, and diacritic marks generally vary in height and horizontal position depending on the size of the base character.</p>
 <p>Another example of contextual positioning rules is the placement of <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0650;</span> [<a href="arabic#char0650"><span class="uname">U+0650 ARABIC KASRA</span></a>]</span> (<span class="name">zir</span>) in vowelled text when it appears on the same letter as <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x0651;</span> [<a href="arabic#char0651"><span class="uname">U+0651 ARABIC SHADDA</span></a>]</span> (<span class="name">tašdid</span>). Usually, <span class="name">zir</span> appears below the base letter, and this is how it can be distinguished from <span class="codepoint" translate="no"><span lang="pes" dir="rtl">&#x064E;</span> [<a href="arabic#char064E"><span class="uname">U+064E ARABIC FATHA</span></a>]</span> (<span class="name">zebar</span>). However, when combined, <span class="name">zir</span> may be placed relative to the <strong><span class="name">shadda</span></strong> diacritic, rather than relative to the base character, as seen in <a class="figref">fig_kasra_placement</a>.</p>
@@ -1914,8 +1918,10 @@ alveolar</th>
 
 
 
-<section id="inline">
-<h2>Punctuation &amp; inline features</h2>  
+
+
+<section id="segments">
+<h2>Text segmentation</h2>  
 	
 <section id="graphemes">
 <h3>Grapheme boundaries</h3>
@@ -1934,9 +1940,17 @@ alveolar</th>
 <p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 <p>Words are separated by spaces.</p>
 </section>
-  
-  
+</section>
 
+
+
+
+
+
+
+<section id="inline">
+<h2>Punctuation &amp; inline features</h2>  
+  
 	
 	
 <section id="phrase">
@@ -2056,6 +2070,25 @@ alveolar</th>
 
 
 
+
+<section id="otherinline">
+<h3>Other inline ranges</h3>
+
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+<section id="spacing">
+<h3>Text spacing</h3>
+
+<p>See the section on <a href="/scripts/arabic/#letterspace">letter spacing</a> for the Arabic language.</p>
+</section>
+
+
+
+
   
 <section id="abbrev">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
@@ -2068,16 +2101,6 @@ alveolar</th>
   
 <section id="inlinenotes">
 <h3>Inline notes &amp; annotations</h3>
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
-
-<section id="otherinline">
-<h3>Other inline ranges</h3>
-
 <p class="prompts">tbd</p>
 </section>
 
@@ -2130,16 +2153,6 @@ alveolar</th>
 
 <figure class="characterBox auto small" data-cols="">ـ</figure>
 <p>See the section on <a href="/scripts/arabic/#justify">justification</a> for the Arabic language.</p>
-
-</section>
-
-
-
-
-<section id="letterspace">
-<h3>Letter spacing</h3>
-
-<p>See the section on <a href="/scripts/arabic/#letterspace">letter spacing</a> for the Arabic language.</p>
 </section>
 
 
@@ -2295,27 +2308,6 @@ data-cols="">ا␣ب␣پ␣ت␣ث␣ج␣چ␣ح␣خ␣د␣ذ␣ر␣ز␣ژ
 <h3>Page numbering, running headers, etc</h3>
 <p class="prompts">tbd</p>
 </section-->
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section id="languages">
-<h2>Languages using the Arabic script</h2>
-<p>According to ScriptSource, the Arabic script is used for the following languages:</p>
-<ul id="scriptLanguageList">
-</ul>
 </section>
 
 

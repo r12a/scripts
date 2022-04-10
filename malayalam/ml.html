@@ -53,7 +53,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->2 March, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->10 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -89,7 +89,7 @@
 
 
 <section id="sample">
-<h2>Sample (Malayalam)</h2>
+<h2>Sample</h2>
   
 
 <p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.  <a style="margin-inline-start: 2rem;" href="http://unicode.org/udhr/translations.html">Source</a><br>
@@ -351,7 +351,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="vowelPhonemes">
+<section id="phonemesV">
 <h3>Vowel sounds</h3>
 
 <section id="plain_vowels">
@@ -499,7 +499,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="consonantPhonemes">
+<section id="phonemesC">
 <h3>Consonant sounds</h3>
 
 <table class="ipaTable">
@@ -631,7 +631,14 @@ alveolar</th>
 <section id="vowels">
 <h2>Vowels</h2>
 
-<!--p class="instructions">Click on the characters in the lists for detailed information. For a mapping of sounds to graphemes see <a class="secref">vowel_mappings</a>.</p-->
+
+
+
+
+
+
+<div id="vowel_description"></div>
+
 
 
 
@@ -694,7 +701,7 @@ alveolar</th>
 
 
 
-<section id="prescript_vowels">
+<section id="prebase_vowels">
 <h3>Pre-base vowel-signs</h3>
 <figure class="characterBox auto" data-cols="ipa,trans,transc">െ␣േ␣ ␣ൈ</figure>
 <p>Three vowel-signs appear to the left of the base consonant letter or cluster, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">കെ</span> <span class="trans">ke</span> <span class="ipa">ke</span></span></p>
@@ -737,7 +744,7 @@ alveolar</th>
 
 
  
-<section id="independentvowels">
+<section id="standalone">
 <h3>Standalone vowels</h3>
 <p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
 
@@ -800,11 +807,19 @@ http://localhost/pickers/malayalam/?text=%0Ac%20%E2%86%92%09k%09g%09c%CA%B0%09j%
 <section id="consonants">
 <h2>Consonants</h2>
 
-<!--p class="instructions">Click on the characters in the lists for detailed information. For a mapping of sounds to graphemes see <a class="secref">consonant_mappings</a>.</p-->
 
 
 
-<section id="basicconsonants">
+
+
+
+<div id="consonant_description"></div>
+
+
+
+
+
+<section id="basicC">
 <h3>Basic  consonants</h3>
 
 <section id="stops">
@@ -851,7 +866,7 @@ http://localhost/pickers/malayalam/?text=%0Ac%20%E2%86%92%09k%09g%09c%CA%B0%09j%
 
 
 <section id="finals">
-<h3>Syllable-final consonants</h3>
+<h3>Final consonants</h3>
 
 
 
@@ -1134,16 +1149,11 @@ The conjunct <span class="codepoint" translate="no"><span lang="ml">&#x0D31;&#x0
 
 
 
-<section id="gsub">
-<h3>Context-based shaping</h3>
+<section id="context">
+<h3>Context-based shaping &amp; positioning</h3>
 <p>Malayalam is not cursive, but d	isplay technology needs to provide shaping for conjunct formation.</p>
-</section>
 
 
-
-
-<section id="gpos">
-<h3>Context-based positioning</h3>
 <p>Display technology must correctly position prescript vowels to the left of the consonant or consonant cluster, and place the separate glyphs of 2-part vowels around those also.</p>
 <p>It must do a similar thing for display of <span class="uname">RA</span> using the orthographic reforms.</p>
 </section>
@@ -1197,8 +1207,8 @@ The conjunct <span class="codepoint" translate="no"><span lang="ml">&#x0D31;&#x0
  
 
 
-<section id="inline">
-<h2>Punctuation &amp; inline features</h2>  
+<section id="segments">
+<h2>Text segmentation</h2>  
   
 <section id="graphemes">
 <h3>Grapheme boundaries</h3>
@@ -1218,9 +1228,17 @@ The conjunct <span class="codepoint" translate="no"><span lang="ml">&#x0D31;&#x0
 <p>Spaces are often used between words, but it is not uncommon for writers to use spacing to indicate phonological pauses, rather than lexical boundaries.<tt>ws</tt></p>
 <p>Sequences of characters between spaces are often quite long in Malayalam, eg. <span class="charExample" translate="no"><span class="ex" lang="ml">അറിയപ്പെടുന്നുവെങ്കിലും</span> <span class="trans">ạ̄ṙiyp͓peʈun͓nuʋeŋ͓kilum̽</span></span></p>
 </section>
+</section>
 
 
+ 
+ 
+ 
+ 
 
+
+<section id="inline">
+<h2>Punctuation &amp; inline features</h2>
 
   
 <section id="phrase">
@@ -1322,6 +1340,24 @@ The conjunct <span class="codepoint" translate="no"><span lang="ml">&#x0D31;&#x0
 
 
 
+
+<section id="otherinline">
+<h3>Other inline ranges</h3>
+
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+<section id="spacing">
+<h3>Text spacing</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
   
 <section id="abbrev">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
@@ -1334,16 +1370,6 @@ The conjunct <span class="codepoint" translate="no"><span lang="ml">&#x0D31;&#x0
   
 <section id="inlinenotes">
 <h3>Inline notes &amp; annotations</h3>
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
-
-<section id="otherinline">
-<h3>Other inline ranges</h3>
-
 <p class="prompts">tbd</p>
 </section>
 
@@ -1397,14 +1423,6 @@ The conjunct <span class="codepoint" translate="no"><span lang="ml">&#x0D31;&#x0
 
  <section id="justification">
 <h3>Text alignment &amp; justification</h3>
-    <p class="prompts">tbd</p>
-</section>
-
-
-
-
- <section id="letterspace">
-<h3>Letter spacing</h3>
     <p class="prompts">tbd</p>
 </section>
 
@@ -1531,23 +1549,6 @@ The conjunct <span class="codepoint" translate="no"><span lang="ml">&#x0D31;&#x0
 <h3>Page numbering, running headers, etc</h3>
 <p class="prompts">tbd</p>
 </section-->
-</section>
-
-
-
-
-
-
-
-
-
-
-
-<section id="languages">
-<h2>Languages using the Malayalam script</h2>
-<p>According to ScriptSource, the Malayalam script is used for the following languages:</p>
-<ul id="scriptLanguageList">
-</ul>
 </section>
 
 

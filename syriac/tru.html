@@ -54,7 +54,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->2 March, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->10 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -91,7 +91,7 @@
 
 
 <section id="sample">
-<h2>Sample (Turoyo)</h2>
+<h2>Sample</h2>
     
 <p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.  <a style="margin-inline-start: 2rem;" href="http://unicode.org/udhr/translations.html">Source</a><br>
 Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="40" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">40px</span></p>
@@ -268,7 +268,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="vowelPhonemes">
+<section id="phonemesV">
 <h3>Vowel sounds</h3>
 <section id="plain_vowels">
 <h4>Plain vowels.</h4>
@@ -390,7 +390,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="consonantSounds">
+<section id="phonemesC">
 <h3>Consonant sounds</h3>
 
 <table class="ipaTable">
@@ -524,7 +524,17 @@ alveolar</th>
 <p class="instructions">Click on the characters in the lists for detailed information. <!--For a mapping of sounds to graphemes see <a class="secref">vowel_mappings</a>.--></p>
 
 
-<section id="consonant_vowels">
+
+
+
+
+<div id="vowel_description"></div>
+
+
+
+
+
+<section id="matres">
 <h3>Consonants representing vowels (matres lectionis)</h3>
 <p id="def-materlectionis" class="explanatoryintro definitionStub"></p>
 
@@ -546,7 +556,7 @@ alveolar</th>
 	
 	
 	
-<section id="vowel_basics">
+<section id="voweldiacritics">
 <h3>Vowel diacritics</h3>
  
     <p>Turoyo  uses Greek symbols to represent the other vowels. Unlike West Syriac, the position of the diacritic above or below the base consonant is fixed, and fewer diacritics are used.</p>
@@ -622,7 +632,16 @@ alveolar</th>
 
 
 
-<section id="basics">
+
+
+
+<div id="consonant_description"></div>
+
+
+
+
+
+<section id="basicC">
 <h3>Basic consonants</h3>
 
 <p>All the letters in the Syriac block are consonants. There are 22 basic consonants, but these can be combined with one of two diacritics to create additional sounds. The list below shows the combinations as well as the simple consonants, since the former are  treated as letters of the alphabet.</p>
@@ -691,7 +710,7 @@ alveolar</th>
 
 
 
-<section id="consonant_clusters">
+<section id="clusters">
 <h3>Consonant clusters</h3>
     
     <p>There is no equivalent to the Arabic sukun to indicate clusters of consonant sounds.<sup></sup> Consonant letters are simply juxtaposed with no intervening vowel diacritics, eg. <span class="eg" lang="tru" dir="rtl">ܬܰܚܪܰܙܬܐ</span>.</p>
@@ -1068,9 +1087,12 @@ alveolar</th>
 
 
 
+<section id="context">
+<h3>Context-based shaping &amp; positioning</h3>
+
 
 <section id="gsub">
-<h3>Context-based shaping</h3>
+<h4>Cursive shaping</h4>
 
 <p>See just above for shaping related to cursive joining.</p>
 
@@ -1145,7 +1167,7 @@ alveolar</th>
 
 
 <section id="gpos">
-<h3>Context-based positioning</h3>
+<h4>Context-based positioning</h4>
 <p>There are sometimes clashes between diacritic marks which have to be resolved by repositioning one of the diacritics, or sometimes producing a different solution.</p>
       <p>For example, marks are usually centred vertically over or under a base character. If, however, &nbsp; <span class="codepoint"><span lang="syr-syrj" dir="rtl">&#x0742;</span> &#xA0; <a href="/scripts/syriac/block#char0742">[<span class="uname">U+0742 SYRIAC RUKKAKHA</span>]</a></span> appears below <span class="codepoint"><span lang="tru" dir="rtl">&#x0715;</span> <a href="/scripts/syriac/block#char0715">[<span class="uname">U+0715 SYRIAC LETTER DALATH</span>]</a></span> when the glyph for that has a dot below, the mark is moved slightly to the right, as shown here.</p>
       <figure>
@@ -1162,6 +1184,7 @@ alveolar</th>
   <p dir="rtl" lang="tru" class="large"><span class="ex">ܪ̈ܵ</span> &nbsp; vs &nbsp; <span class="ex">ܝܵ</span></p>
   <figcaption>Rish + diaeresis + vowel mark causes stacking diacritics.</figcaption>
   </figure>
+</section>
 </section>
 
 
@@ -1194,15 +1217,14 @@ alveolar</th>
 
 
 
-<section id="inline">
-<h2>Punctuation &amp; inline features</h2>  
+<section id="segments">
+<h2>Text segmentation</h2>  
   
 <section id="graphemes">
 <h3>Grapheme boundaries</h3>
 <p id="def-grapheme" class="explanatoryintro definitionStub"></p>
 
 <p class="prompts">TBD</p>
-
 </section>
 
 
@@ -1213,15 +1235,25 @@ alveolar</th>
 <h3>Word boundaries</h3>
 <p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 <p>Syriac uses spaces between words. </p>
-    <p>There are no one-letter words. One letter conjunctions and prepositions such as <span class="charExample inline"><span class="ex" lang="aii" dir="rtl">ܘ</span> <span class="trans">w</span></span> are continguous with the word they precede.</p>
     
+<p>There are no one-letter words. One letter conjunctions and prepositions such as <span class="charExample inline"><span class="ex" lang="aii" dir="rtl">ܘ</span> <span class="trans">w</span></span> are continguous with the word they precede.</p>
+</section>
+</section>
 
-     </section>
 
+
+  
+  
+
+
+
+
+
+
+<section id="inline">
+<h2>Punctuation &amp; inline features</h2> 
 	   
-	   
-	   
-	   
+
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
 
@@ -1285,6 +1317,24 @@ alveolar</th>
 
 
 
+
+<section id="otherinline">
+<h3>Other inline ranges</h3>
+
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+<section id="spacing">
+<h3>Text spacing</h3>
+<p class="prompts">TBD</p>
+</section>
+
+
+
+
   
 <section id="abbrev">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
@@ -1298,16 +1348,6 @@ alveolar</th>
 
 <section id="inlinenotes">
 <h3>Inline notes &amp; annotations</h3>
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
-
-<section id="otherinline">
-<h3>Other inline ranges</h3>
-
 <p class="prompts">tbd</p>
 </section>
 
@@ -1354,14 +1394,6 @@ alveolar</th>
  <section id="justification">
 <h3>Text alignment &amp; justification</h3>
     <p class="prompts">TBD</p>
-</section>
-
-
-
-
-<section id="letterspace">
-<h3>Letter spacing</h3>
-<p class="prompts">TBD</p>
 </section>
 
 
@@ -1459,25 +1491,6 @@ alveolar</th>
 <h3>Page numbering, running headers, etc</h3>
 <p class="prompts">tbd</p>
 </section-->
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section id="languages">
-<h2>Languages using the Syriac script</h2>
-<p>According to ScriptSource, the Syriac script is used for the following languages:</p>
-<ul id="scriptLanguageList">
-</ul>
 </section>
 
 

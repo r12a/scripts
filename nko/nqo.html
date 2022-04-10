@@ -54,7 +54,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->1 March, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->10 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -344,7 +344,7 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 
 
 
-<section id="vowelPhonemes">
+<section id="phonemesV">
 <h3>Vowel sounds</h3>
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -20 500 240" class="ipaSVG">
@@ -409,7 +409,7 @@ oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; d
 
 
 
-<section id="consonantPhonemes">
+<section id="phonemesC">
 <h3>Consonant sounds</h3>
 <table class="ipaTable">
 <thead>
@@ -515,7 +515,7 @@ alveolar</th>
 
 
 <section id="vowel_mappings">
-<h3>Vowel sounds mapped to characters</h3>
+<h3>Vowel sounds  to characters</h3>
 
 
 <p class="instructions">This section maps N’Ko vowel sounds to common graphemes in the N’Ko orthography. Tone is not shown here. Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
@@ -819,8 +819,14 @@ alveolar</th>
 
 
 
+<div id="vowel_description"></div>
+
+
+
+
+
 <section> </section>
-<section id="basic_vowels">
+<section id="basicV">
 <h3>Vowel characters</h3>
 
 <p>N’Ko has 7 vowel letters.</p>
@@ -835,7 +841,7 @@ alveolar</th>
   
   
   
-<section id="vowelextensions">
+<section id="extendedV">
 <h3>Vowel repertoire extension</h3>
 
 <p>&nbsp;<span class="codepoint"><span lang="nqo" dir="rtl">&#x07F3;</span> <a href="/scripts/nko/block#char07F3">[<span class="uname">U+07F3 NKO COMBINING DOUBLE DOT ABOVE​</span>]</a></span> is  used above N’Ko letters to represent foreign sounds (particularly French and Arabic).</p>
@@ -862,7 +868,7 @@ alveolar</th>
 
 
 
-<section id="absence">
+<section id="novowel">
 <h3>Vowel absence</h3>
 
 <figure class="characterBox auto"  data-cols="trans">ߑ</figure>
@@ -972,7 +978,7 @@ alveolar</th>
 
 
 <section id="consonant_mappings">
-<h3>Consonant to script mapping</h3>
+<h3>Consonant sounds to characters</h3>
 
 <p class="instructions">This section maps N’Ko consonant sounds to common graphemes in the N’Ko orthography. Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
 
@@ -1331,9 +1337,13 @@ alveolar</th>
 
 
 
+<div id="consonant_description"></div>
 
 
-<section id="basic_consonants">
+
+
+
+<section id="basicC">
 <h3>Basic consonants</h3>
 
  
@@ -1377,7 +1387,7 @@ alveolar</th>
   
   
   
-<section id="transliteration">
+<section id="extendedC">
 <h3>Consonant repertoire extension</h3>
 
 <p>Three diacritics, two of them tone markers, are used to represent foreign sounds (particularly Arabic and French) in conjunction with existing N’Ko letters, eg. <span class="charExample inline" translate="no"><span class="ex" lang="nqo" dir="rtl">ߛ߳</span> <span class="trans">sx̣</span></span> represents the <span class="ipa">θ</span> sound of the Arabic letter <span lang="ar" dir="rtl">ث</span>.<tt>u</tt></p>
@@ -1397,7 +1407,7 @@ alveolar</th>
 
 
   
-<section id="consonant_clusters">
+<section id="clusters">
 <h3>Consonant clusters</h3>
 
 <p>Adjacent consonants with no intervening vowel sound are indicated using <span class="codepoint"><span lang="nqo" dir="rtl">&#x07D1;</span> <a href="/scripts/nko/block#char07D1">[<span class="uname">U+07D1 NKO LETTER DAGBASINNA</span>]</a></span>, eg. <span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">ߓߟߏ</span> <span class="trans">blo</span> <span class="ipa">bolo</span></span> is pronounced with the vowel after the first letter, even though none is present, because of the rule explained above. To show that this should be pronounced without the vowel you need <tt>u</tt><span class="charExample" translate="no"><span class="ex" lang="nqo" dir="rtl">ߓߑߟߏ</span> <span class="trans">bˣlo</span> <span class="ipa">blo</span></span></p>
@@ -1858,7 +1868,7 @@ alveolar</th>
  
  
  
-<section id="gpos">
+<section id="context">
 <h3>Context-based shaping &amp; positioning</h3>
 
 
@@ -1915,8 +1925,8 @@ alveolar</th>
 
 
   
-<section id="inline">
-<h2>Punctuation &amp; inline features</h2>  
+<section id="segments">
+<h2>Text segmentation</h2>  
 
  <section id="graphemes">
 <h3>Grapheme boundaries</h3>
@@ -1930,14 +1940,23 @@ alveolar</th>
 
 
   
-<section id="words">
+<section id="word">
 <h3>Word boundaries</h3>
 <p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 <p>N’Ko has word units that are separated by spaces.</p>
 <p class="observation"><span class="leadin">Observation:</span> The te-kerende is a common way of linking compounds together. It sits on the baseline, and breaks cursive joining. It was proposed for inclusion into Unicode, but not adopted. However, I'm unable to find any rationale for the lack of adoption. In these examples, I am using <span class="codepoint noindex" translate="no"><span lang="nqo" dir="rtl">&#x07FA;</span> [<a href="/scripts/nko/block#char07FA"><span class="uname">U+07FA NKO LAJANYALAN</span></a>]</span> surrounded by spaces to create an idea of how te-kerende should look:<tt>e4</tt> <span class="eg" lang="nqo" dir="rtl">ߡߐ߰ ߺ ߐ ߺ ߡߐ߰</span> <span class="eg" lang="nqo" dir="rtl">ߛߌ ߺ ߌ ߺ ߛߌ</span></p>
 <p>Line-breaks only occur after te-kerende, and not before.<tt>e4</tt></p>
 </section>
- 
+</section>
+  
+
+
+
+
+
+  
+<section id="inline">
+<h2>Punctuation &amp; inline features</h2>   
  
 
 
@@ -2089,6 +2108,34 @@ alveolar</th>
 
 
   
+<section id="otherinline">
+<h3>Other inline ranges</h3>
+
+<p class="prompts">tbd</p>
+</section>
+    
+    
+    
+    
+<section id="spacing">
+<h3>Text spacing</h3>
+
+<figure class="characterBox auto"  data-cols="trans">ߺ</figure>
+
+<p>Text may be stretched, like in Arabic, using <span class="codepoint"><span lang="nqo" dir="rtl">&#x07FA;</span> <a href="/scripts/nko/block#char07FA">[<span class="uname">U+07FA NKO LAJANYALAN</span>]</a></span> to fit a given space or make a heading stand out, eg. <a class="figref">fig_letter_spacing</a> shows a streched version of the title, <span class="eg inline transc" lang="nqo">ߞߏ߲</span>.</p>
+
+<figure id="fig_letter_spacing">
+<img src="images/letter_spacing.png" alt="ߞߺߺߺߺߺߏ߲" data-source="wikipedia?">
+<figcaption>A title that is stretched using baseline extension characters.</figcaption>
+</figure>
+
+<p>This corresponds to the Arabic <span class="codepoint noindex"><span dir="rtl" lang="ar">ـ</span> <a href="/scripts/arabic/block#char0640">[<span class="uname">U+0640 ARABIC TATWEEL</span>]</a></span>.</p>
+</section>
+
+
+
+
+  
 <section id="abbreviation">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
 
@@ -2123,16 +2170,6 @@ alveolar</th>
   
 <section id="inlinenotes">
 <h3>Inline notes &amp; annotations</h3>
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
-  
-<section id="otherinline">
-<h3>Other inline ranges</h3>
-
 <p class="prompts">tbd</p>
 </section>
 
@@ -2194,7 +2231,7 @@ alveolar</th>
 
 
 
-<section id="justify">
+<section id="justification">
 <h3>Text alignment &amp; justification</h3>
 
 <p>The most common approach to justification relies on adjustment of spaces.<tt>u</tt></p>
@@ -2202,24 +2239,6 @@ alveolar</th>
 <p> Sometimes, however, <span class="codepoint"><span lang="nqo" dir="rtl">&#x07FA;</span> <a href="/scripts/nko/block#char07FA">[<span class="uname">U+07FA NKO LAJANYALAN</span>]</a></span> is used like  arabic <span class="name">tatweel</span> to  stretch the intra-word baseline.<tt>u</tt></p>
 
 <p class="observation"><span class="leadin">Observation:</span> The N’Ko comma is separated from the preceding word by a space, which appears to stretch during justification in various samples. It's not clear whether that is expected, or simply because an ordinary space was used, rather than, say, a NNBSP.</p>
-</section>
-    
-    
-    
-    
-<section id="letterspace">
-<h3>Letter spacing</h3>
-
-<figure class="characterBox auto"  data-cols="trans">ߺ</figure>
-
-<p>Text may be stretched, like in Arabic, using <span class="codepoint"><span lang="nqo" dir="rtl">&#x07FA;</span> <a href="/scripts/nko/block#char07FA">[<span class="uname">U+07FA NKO LAJANYALAN</span>]</a></span> to fit a given space or make a heading stand out, eg. <a class="figref">fig_letter_spacing</a> shows a streched version of the title, <span class="eg inline transc" lang="nqo">ߞߏ߲</span>.</p>
-
-<figure id="fig_letter_spacing">
-<img src="images/letter_spacing.png" alt="ߞߺߺߺߺߺߏ߲" data-source="wikipedia?">
-<figcaption>A title that is stretched using baseline extension characters.</figcaption>
-</figure>
-
-<p>This corresponds to the Arabic <span class="codepoint noindex"><span dir="rtl" lang="ar">ـ</span> <a href="/scripts/arabic/block#char0640">[<span class="uname">U+0640 ARABIC TATWEEL</span>]</a></span>.</p>
 </section>
 
 
@@ -2317,18 +2336,6 @@ alveolar</th>
 <h3>Page numbering, running headers, etc</h3>
 <p class="prompts">tbd</p>
 </section-->
-</section>
-
-
-
-
-
-
-<section id="languages">
-<h2>Languages using the N’Ko script</h2>
-<p>According to ScriptSource, the N’Ko script is used for the following languages:</p>
-<ul id="scriptLanguageList">
-</ul>
 </section>
 
 

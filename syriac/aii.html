@@ -53,7 +53,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->2 March, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->10 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -272,7 +272,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="vowelPhonemes">
+<section id="phonemesV">
 <h3>Vowel sounds</h3>
 
 <section id="plain_vowels">
@@ -429,7 +429,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="consonantSounds">
+<section id="phonemesC">
 <h3>Consonant sounds</h3>
 
 <table class="ipaTable">
@@ -603,7 +603,13 @@ alveolar</th>
 
 
 
-<section id="consonant_vowels">
+<div id="vowel_description"></div>
+
+
+
+
+
+<section id="matres">
 <h3>Consonants representing vowels (matres lectionis)</h3>
 <p id="def-materlectionis" class="explanatoryintro definitionStub"></p>
 
@@ -626,7 +632,7 @@ alveolar</th>
 
 
 
-<section id="basic_vowels">
+<section id="voweldiacritics">
 <h3>Vowel points</h3>
 <p>Other vowels are expressed  through applying the  diacritics to a base letter. Four more dot-based diacritics are used, in addition to the 2 just mentioned.</p>
   
@@ -705,7 +711,18 @@ alveolar</th>
 
 <p class="instructions">Click on the characters in the lists for detailed information. <!--For a mapping of sounds to graphemes see <a class="secref">consonant_mappings</a>.--></p>
 
-<section id="basics">
+
+
+
+
+
+<div id="consonant_description"></div>
+
+
+
+
+
+<section id="basicC">
 <h3>Basic consonants</h3>
 
 <p>All the letters in the Syriac block are consonants. There are 22 basic consonants, but these can be combined with one of 3 diacritics to create additional sounds. The list below shows the combinations as well as the simple consonants.</p>
@@ -770,7 +787,7 @@ alveolar</th>
 
 
 
-<section id="consonant_clusters">
+<section id="clusters">
 <h3>Consonant clusters</h3>
     
     <p>There is no equivalent to the Arabic sukun to indicate clusters of consonant sounds.<sup></sup></p>
@@ -1304,11 +1321,12 @@ data-cols="">ܛܸ␣ܚܸ␣ܙܸ␣ܘܸ␣ܗܸ␣ܕܸ␣ܓܸ␣ܒܸ␣ܐܸ␣ܛ̤
 
 
 
+<section id="context">
+<h3>Context-based shaping &amp; positioning</h3>
+
+
 <section id="gsub">
-<h3>Context-based shaping</h3>
-
-
-
+<h4>Context-based shaping</h4>
 
 
 <section id="ligatures">
@@ -1350,7 +1368,7 @@ data-cols="">ܛܸ␣ܚܸ␣ܙܸ␣ܘܸ␣ܗܸ␣ܕܸ␣ܓܸ␣ܒܸ␣ܐܸ␣ܛ̤
 
 
 <section id="gpos">
-<h3>Context-based positioning</h3>
+<h4>Context-based positioning</h4>
 <p>There are sometimes clashes between diacritic marks which have to be resolved by repositioning one of the diacritics, or sometimes producing a different solution.</p>
       <p>For example, marks are usually centred vertically over or under a base character. If, however, &nbsp; <span class="codepoint"><span lang="syr-syrn" dir="rtl">&#x0742;</span> &#xA0; <a href="/scripts/syriac/block#char0742">[<span class="uname">U+0742 SYRIAC RUKKAKHA</span>]</a></span> appears below <span class="codepoint"><span lang="aii" dir="rtl">&#x0715;</span> <a href="/scripts/syriac/block#char0715">[<span class="uname">U+0715 SYRIAC LETTER DALATH</span>]</a></span> when the glyph for that has a dot below, the mark is moved slightly to the right, as shown here.</p>
       <figure>
@@ -1367,6 +1385,7 @@ data-cols="">ܛܸ␣ܚܸ␣ܙܸ␣ܘܸ␣ܗܸ␣ܕܸ␣ܓܸ␣ܒܸ␣ܐܸ␣ܛ̤
   <p dir="rtl" lang="syr-Syrn" class="large"><span class="ex">ܪ̈ܵ</span> &nbsp; vs &nbsp; <span class="ex">ܝܵ</span></p>
   <figcaption>Rish + diaeresis + vowel mark causes stacking diacritics.</figcaption>
   </figure>
+</section>
 </section>
   
 
@@ -1399,17 +1418,15 @@ data-cols="">ܛܸ␣ܚܸ␣ܙܸ␣ܘܸ␣ܗܸ␣ܕܸ␣ܓܸ␣ܒܸ␣ܐܸ␣ܛ̤
 
 
 
-<section id="inline">
-<h2>Punctuation &amp; inline features</h2>  
+<section id="segments">
+<h2>Text segmentation</h2>  
   
 <section id="graphemes">
 <h3>Grapheme boundaries</h3>
 <p id="def-grapheme" class="explanatoryintro definitionStub"></p>
 
 <p class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements when double-clicking on the text, or moving through the text with the cursor, or backspace, etc.? </p>
-
 </section>
-
 
 
 
@@ -1418,15 +1435,25 @@ data-cols="">ܛܸ␣ܚܸ␣ܙܸ␣ܘܸ␣ܗܸ␣ܕܸ␣ܓܸ␣ܒܸ␣ܐܸ␣ܛ̤
 <h3>Word boundaries</h3>
 <p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 <p>Syriac uses spaces between words. </p>
-    <p>There are no one-letter words. One letter conjunctions and prepositions such as <span class="charExample inline"><span class="ex" lang="aii" dir="rtl">ܘ</span> <span class="trans">w</span></span> are continguous with the word they precede.</p>
-    
 
-     </section>
+<p>There are no one-letter words. One letter conjunctions and prepositions such as <span class="charExample inline"><span class="ex" lang="aii" dir="rtl">ܘ</span> <span class="trans">w</span></span> are continguous with the word they precede.</p>
+</section>
+</section>
 
+
+
+  
+  
+
+
+
+
+
+
+<section id="inline">
+<h2>Punctuation &amp; inline features</h2>
 	   
-	   
-	   
-	   
+	      
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
 
@@ -1483,6 +1510,27 @@ data-cols="">ܛܸ␣ܚܸ␣ܙܸ␣ܘܸ␣ܗܸ␣ܕܸ␣ܓܸ␣ܒܸ␣ܐܸ␣ܛ̤
 
 
 
+
+<section id="otherinline">
+<h3>Other inline ranges</h3>
+
+<section id="bracketing_numbers">
+<h4>Numbers</h4>
+<p>The Syriac abbreviation mark is used in older texts to identify letters used as numbers by drawing a line above them. See <a class="secref">numbers</a> for more information.</p>
+<p><span class="codepoint"><span lang="aii" dir="rtl">&#x032D;</span> &#xA0; <a href="/scripts/syriac/block#char032D">[<span class="uname">U+032D COMBINING CIRCUMFLEX ACCENT BELOW​</span>]</a></span> is also used as a digit marker.<tt>u</tt></p>
+</section>
+
+
+
+
+<section id="spacing">
+<h3>Text spacing</h3>
+<p class="prompts">Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see above.).</p>
+</section>
+
+
+
+
   
 <section id="abbrev">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
@@ -1503,23 +1551,6 @@ data-cols="">ܛܸ␣ܚܸ␣ܙܸ␣ܘܸ␣ܗܸ␣ܕܸ␣ܓܸ␣ܒܸ␣ܐܸ␣ܛ̤
 <section id="inlinenotes">
 <h3>Inline notes &amp; annotations</h3>
 <p class="prompts">What mechanisms, if any, are used to create <u>inline</u> notes and annotations? (For referent-type notes such as footnotes, see below.)</p>
-</section>
-
-
-
-
-
-<section id="otherinline">
-<h3>Other inline ranges</h3>
-
-<p class="prompts">Punctuation not already mentioned, such as dashes, connectors, separators, etc.</p>
-
-
-<section id="bracketing_numbers">
-<h4>Numbers</h4>
-<p>The Syriac abbreviation mark is used in older texts to identify letters used as numbers by drawing a line above them. See <a class="secref">numbers</a> for more information.</p>
-<p><span class="codepoint"><span lang="aii" dir="rtl">&#x032D;</span> &#xA0; <a href="/scripts/syriac/block#char032D">[<span class="uname">U+032D COMBINING CIRCUMFLEX ACCENT BELOW​</span>]</a></span> is also used as a digit marker.<tt>u</tt></p>
-</section>
 </section>
 
 
@@ -1567,14 +1598,6 @@ data-cols="">ܛܸ␣ܚܸ␣ܙܸ␣ܘܸ␣ܗܸ␣ܕܸ␣ܓܸ␣ܒܸ␣ܐܸ␣ܛ̤
     <p class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script need assistance to conform to a grid pattern? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</p>
  <p><span class="codepoint"><span lang="aii" dir="rtl">&#x0640;</span> <a href="/scripts/syriac/block#char0640">[<span class="uname">U+0640 ARABIC TATWEEL</span>]</a></span> can be used, as in Arabic, to lengthen the baseline inside Syriac words. </p>
 <p class="observation"><i>Observation:</i> It's not clear, however, whether the use of that is for justification, or simply for word stretching. </p>
-</section>
-
-
-
-
-<section id="letterspace">
-<h3>Letter spacing</h3>
-<p class="prompts">Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see above.).</p>
 </section>
 
 
@@ -1673,24 +1696,6 @@ data-cols="">ܛܸ␣ܚܸ␣ܙܸ␣ܘܸ␣ܗܸ␣ܕܸ␣ܓܸ␣ܒܸ␣ܐܸ␣ܛ̤
 <h3>Page numbering, running headers, etc</h3>
 <p class="prompts">tbd</p>
 </section-->
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-<section id="languages">
-<h2>Languages using the Syriac script</h2>
-<p>According to ScriptSource, the Syriac script is used for the following languages:</p>
-<ul id="scriptLanguageList">
-</ul>
 </section>
 
 

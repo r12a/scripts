@@ -56,7 +56,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->2 March, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->10 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -91,7 +91,7 @@
 
 
 <section id="sample">
-<h2>Sample (Tibetan)</h2>
+<h2>Sample</h2>
   
 
 <p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.  <a style="margin-inline-start: 2rem;" href="http://unicode.org/udhr/translations.html">Source</a><br>
@@ -334,7 +334,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="vowelPhonemes">
+<section id="phonemesV">
 <h3>Vowel sounds</h3>
 <section id="plain_vowels">
 <h4>Plain vowels</h4>
@@ -500,7 +500,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="consonantSounds">
+<section id="phonemesC">
 <h3>Consonant sounds</h3>
 
 <table class="ipaTable">
@@ -626,6 +626,15 @@ alveolar</th>
 
 
 
+
+
+
+<div id="vowel_description"></div>
+
+
+
+
+
 <section id="inherent">
 <h3>Inherent vowel</h3>
 <p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
@@ -652,7 +661,7 @@ alveolar</th>
 
 
 
-<section id="absence">
+<section id="novowel">
 <h3>Consonants with no following vowel</h3>
 <p>The inherent vowel is not normally pronounced at the end of a word.</p>
 <p>Word-internally, consonants with no intervening vowel are stacked (see <a class="secref">stacking</a>).</p>
@@ -662,7 +671,7 @@ alveolar</th>
 
 
  
-<section id="independentvowels">
+<section id="standalone">
 <h3>Standalone vowels</h3>
 <p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
 
@@ -811,7 +820,15 @@ alveolar</th>
 
 
 
-<section id="basicconsonants">
+
+
+<div id="consonant_description"></div>
+
+
+
+
+
+<section id="basicC">
 <h3>Basic consonants</h3>
 
 <p> Native Tibetan words use  30 consonants, but the Tibetan block contains many more (see <a class="secref">transliteration</a>).</p>
@@ -858,7 +875,7 @@ alveolar</th>
       
       
       
-<section id="stacking">
+<section id="clusters">
 <h3>Consonant stacking</h3>
 	  <p> A  stack  has a  consonant character at the top (although it may actually be slightly squeezed or adapted slightly in shape), and one or more special subjoined consonant characters beneath it. </p>
 	  <p>The  topmost consonant in a stack always uses the standard character from the Unicode Tibetan block regardless of whether it is a root consonant or not, and consonants below it always use a character from the subjoined range.</p>
@@ -1022,7 +1039,7 @@ alveolar</th>
   
   
   
-  <section id="transliteration">
+<section id="extendedC">
 <h2>Repertoire extension</h2>
 
 <p> Many of the extra consonants (and other characters) in the Uncode Tibetan script block are used for transliteration of other languages, principally Sanskrit and Chinese. These include the retroflex and voiced aspirated consonants. A couple of characters are extensions for Balti.</p>
@@ -1092,7 +1109,7 @@ alveolar</th>
 
 
 
-<section id="balti">
+<section id="balti" class="btw">
 <h3>Balti</h3>
 
 <div class="btw">
@@ -1182,8 +1199,14 @@ alveolar</th>
 <p class="instructions">You can experiment with examples using the <a href="/pickers/tibetan/">Tibetan picker</a>.</p>
 <p>Tibetan requires many rules to position glyphs correctly, and also to shape characters according to context.</p>
 <p>The orthography has no case distinction, and no special transforms are needed to convert between characters.</p>
-<section id="gsub">
-<h3>Context-based shaping</h3>
+
+
+
+
+
+<section id="context">
+<h3>Context-based shaping &amp; positioning</h3>
+
 <p>Glyphs in Tibetan script need to be adapted sometimes to suit the context in which the character is used. A particularly prevalent example is that of the letter <span class="codepoint"><span lang="bo">&#x0F62;</span> <a href="/scripts/tibetan/block#char0F62">[<span class="uname">U+0F62 TIBETAN LETTER RA</span>]</a></span>. When used at the top of a stack it has an abbreviated form, as shown by the grey highlight in <a class="figref">fig_ra_position</a> on the left.</p>
 <p>The example on the right in <a class="figref">fig_ra_position</a> shows what a normal RA looks like. This is the same underlying character. The shape is determined by rules in the font.</p>
 
@@ -1192,14 +1215,8 @@ alveolar</th>
 <img src="images/tibetan-ra2.png" alt="à½¢à½„à¼‹" class="ex" style="margin-left:1em;" data-notes="72px Tibetan Machine Uni">
 <figcaption>Different renderings of the letter <span class="trans">ra</span>.</figcaption>
 </figure>
-</section>
 
 
-
-
-
-<section id="gpos">
-<h3>Context-based positioning</h3>
 <p>Combining characters need to be placed in different positions, according to the context. <a class="figref">fig_tibetan_position</a> shows the same vowel sign displayed at different heights, according to what stacks above it.</p>
 
 <figure id="fig_tibetan_position">
@@ -1234,8 +1251,8 @@ alveolar</th>
  
  
  
-<section id="inline">
-<h2>Punctuation &amp; inline features</h2>  
+<section id="segments">
+<h2>Text segmentation</h2>  
   
 <section id="graphemes">
 <h3>Grapheme boundaries</h3>
@@ -1263,7 +1280,16 @@ alveolar</th>
 
 <p>See also <a class="secref">tsek</a>.</p>
 </section>
-   
+</section>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<section id="inline">
+<h2>Punctuation &amp; inline features</h2>   
    
    
       
@@ -1499,6 +1525,24 @@ alveolar</th>
 
 
 
+<section id="otherinline">
+<h3>Other inline ranges</h3>
+
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+<section id="spacing">
+<h3>Text spacing</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+
 
   
 <section id="abbrev">
@@ -1519,16 +1563,6 @@ alveolar</th>
   
 <section id="inlinenotes">
 <h3>Inline notes &amp; annotations</h3>
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
-
-<section id="otherinline">
-<h3>Other inline ranges</h3>
-
 <p class="prompts">tbd</p>
 </section>
 
@@ -1600,7 +1634,7 @@ when a line starts with <span class="ex" lang="bo" style="white-space:nowrap;">à
   
   
   
-<section id="justify">
+<section id="justification">
 <h3>Text alignment &amp; justification</h3>
 <p> There are two alternative methods of justification.</p>
 
@@ -1623,14 +1657,6 @@ when a line starts with <span class="ex" lang="bo" style="white-space:nowrap;">à
 <p>If the line ends in a double shay (with space between), it is unusual (though possible) to add tsek padding. Instead, the space between the shays is stretched or narrowed. (See examples in the figure below.) The same applies if the second shay was removed because it was preceded by a KA or GA.</p>
 <figure><img src="images/shay-justification.jpeg" width="600" height="440" alt="" /><figcaption>Booklet pages showing double shay usage at the end of a line.</figcaption></figure>
 </section>
-</section>
-
-
-
-
-<section id="letterspace">
-<h3>Letter spacing</h3>
-<p class="prompts">tbd</p>
 </section>
 
 
@@ -1777,24 +1803,6 @@ when a line starts with <span class="ex" lang="bo" style="white-space:nowrap;">à
 <h3>Page numbering, running headers, etc</h3>
 <p class="prompts">tbd</p>
 </section-->
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-<section id="languages">
-<h2>Languages using the Tibetan script</h2>
-<p>According to ScriptSource, the Tibetan script is used for the following languages:</p>
-<ul id="scriptLanguageList">
-</ul>
 </section>
 
 

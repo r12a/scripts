@@ -47,7 +47,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->22 February, 2022<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->10 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -248,6 +248,31 @@
 </section>
 </section>
 
+ 
+  
+
+
+
+
+
+ 
+ 
+<section id="structure">
+<h2>Structure</h2>
+
+<p>The Japanese language, unlike many neighouring languages, uses polysyllabic words, and has no tones. It is an agglutinative language, and doesn't use spaces or other characters to separate  words.</p>
+<p>Wikipedia<tt>w,#Sentences,_phrases_and_words</tt> has a nicely written summary of the structural characteristics:</p>
+<blockquote>
+<p><i>Text</i> (<span lang="ja">文章</span> <i class="trans">bunshō</i>) is composed of <i>sentences</i> (<span lang="ja">文</span> <i class="trans">bun</i>), which are in turn composed of <i>phrases</i> (<span lang="ja">文節</span> <i class="trans">bunsetsu</i>), which are its smallest coherent components. Like Chinese and classical Korean, written Japanese does not typically demarcate words with spaces; its agglutinative nature further makes the concept of a <i>word</i> rather different from words in English. The reader identifies word divisions by semantic cues and a knowledge of phrase structure. Phrases have a <em>single</em> meaning-bearing word, followed by a string of suffixes, auxiliary verbs and particles to modify its meaning and designate its grammatical role. In the following example, phrases are indicated by vertical bars:</p>
+<dl>
+<dd lang="ja">太陽が｜東の｜空に｜昇る。</dd>
+<dd translate="no"><i class="trans">taiyō ga | higashi no | sora ni | noboru</i></dd>
+<dd>sun <small>SUBJECT</small> | east <small>POSSESSIVE</small> | sky <small>LOCATIVE</small> | rise</dd>
+<dd>The sun rises in the eastern sky.</dd>
+</dl>
+</blockquote>
+<p>Romanised Japanese text may add spaces between bunsetsu phrases, with hyphens separating suffixes (eg. <span class="trans">higashi-no</span>), or may also separate the suffixes using spaces (ie. <span class="trans">higashi no</span>).</p>
+</section>
 
 
 
@@ -268,7 +293,7 @@
 
 
 
-<section id="vowelPhonemes">
+<section id="phonemesV">
 <h3>Vowel sounds</h3>
 
 <section id="plain_vowels">
@@ -332,7 +357,7 @@
 
 
 
-<section id="consonantSounds">
+<section id="phonemesC">
 <h3>Consonant sounds</h3>
 
 <table class="ipaTable">
@@ -431,32 +456,6 @@ alveolar</th>
 </tbody>
 </table>
 </section>
-
- 
-  
-
-
-
-
-
- 
- 
-<section id="structure">
-<h2>Structure</h2>
-
-<p>The Japanese language, unlike many neighouring languages, uses polysyllabic words, and has no tones. It is an agglutinative language, and doesn't use spaces or other characters to separate  words.</p>
-<p>Wikipedia<tt>w,#Sentences,_phrases_and_words</tt> has a nicely written summary of the structural characteristics:</p>
-<blockquote>
-<p><i>Text</i> (<span lang="ja">文章</span> <i class="trans">bunshō</i>) is composed of <i>sentences</i> (<span lang="ja">文</span> <i class="trans">bun</i>), which are in turn composed of <i>phrases</i> (<span lang="ja">文節</span> <i class="trans">bunsetsu</i>), which are its smallest coherent components. Like Chinese and classical Korean, written Japanese does not typically demarcate words with spaces; its agglutinative nature further makes the concept of a <i>word</i> rather different from words in English. The reader identifies word divisions by semantic cues and a knowledge of phrase structure. Phrases have a <em>single</em> meaning-bearing word, followed by a string of suffixes, auxiliary verbs and particles to modify its meaning and designate its grammatical role. In the following example, phrases are indicated by vertical bars:</p>
-<dl>
-<dd lang="ja">太陽が｜東の｜空に｜昇る。</dd>
-<dd translate="no"><i class="trans">taiyō ga | higashi no | sora ni | noboru</i></dd>
-<dd>sun <small>SUBJECT</small> | east <small>POSSESSIVE</small> | sky <small>LOCATIVE</small> | rise</dd>
-<dd>The sun rises in the eastern sky.</dd>
-</dl>
-</blockquote>
-<p>Romanised Japanese text may add spaces between bunsetsu phrases, with hyphens separating suffixes (eg. <span class="trans">higashi-no</span>), or may also separate the suffixes using spaces (ie. <span class="trans">higashi no</span>).</p>
-</section>
 </section>
 
 
@@ -469,6 +468,16 @@ alveolar</th>
 <h2>Characters</h2>
 
 <p class="instructions">Click on the characters in the lists for detailed information.</p>
+
+
+
+
+
+
+
+<div id="vowel_description"></div>
+<div id="consonant_description"></div>
+
 
 
 
@@ -782,8 +791,8 @@ alveolar</th>
 
 
 
-<section id="gpos">
-<h3>Context-based positioning</h3>
+<section id="context">
+<h3>Context-based shaping &amp; positioning</h3>
 <p>Characters such as small kana and punctuation occupy different locations within the character frame in horizontal and vertical text.</p>
 
 <figure its-locale-filter-list="en" id="fig_small_kana">
@@ -843,8 +852,8 @@ alveolar</th>
 
 
 
-<section id="inline">
-<h2>Punctuation &amp; inline features</h2>  
+<section id="segments">
+<h2>Text segmentation</h2>  
   
 <section id="graphemes">
 <h3>Grapheme boundaries</h3>
@@ -855,20 +864,27 @@ alveolar</th>
 </section>
 
 
-
-
   
 <section id="word">
 <h3>Word boundaries</h3>
 <p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 <p>Japanese rarely uses spaces. In the sample text there are gaps around punctuation, but these are produced by a lack of 'ink' in parts of the square character glyphs.</p>
-  <p class="instructions">You can verify this by clicking on this example. The character list popup shows that only four characters make up this sequence, and none are spaces.</p>
-  <p class="large"><span class="ex" lang="ja">い。（こ</span></p>
-  
-  <p>Gaps of this kind may also be reduced during justification and line alignment.</p>
+<p class="instructions">You can verify this by clicking on this example. The character list popup shows that only four characters make up this sequence, and none are spaces.</p>
+<p class="large"><span class="ex" lang="ja">い。（こ</span></p>
+
+<p>Gaps of this kind may also be reduced during justification and line alignment.</p>
 <p>In general, word boundaries are not important for line-wrapping, however occasionally text such as headings may be wrapped at word boundaries in order to better balance the text.</p>
 <p>Word boundaries are identified when users select screen text, eg. by double-clicking inside a word. Heuristics and dictionaries are needed to identify the boundaries of words in such situations. Note, also, that words in Japanese are very often a mixture of kanji characters followed by hiragana. The word boundary detection needs to treat the various scripts as a unified orthography.</p>
 </section>   
+</section>
+
+
+
+
+
+
+<section id="inline">
+<h2>Punctuation &amp; inline features</h2>  
    
   
 <section id="phrase">
@@ -1796,24 +1812,6 @@ data-cols="">九阡␣八阡␣七阡␣六阡␣伍阡␣四阡␣参阡␣弐�
 
 
 <p>See also the <a target="_blank" href="../featurelist/">Script Comparison Table</a>.</p-->
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-<section id="languages">
-<h2>Languages using the Japanese script</h2>
-<p>According to ScriptSource, the Japanese script is used for the following languages:</p>
-<ul id="scriptLanguageList">
-</ul>
 </section>
 
 

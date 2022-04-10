@@ -54,7 +54,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->1 March, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->10 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -268,6 +268,19 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 </div>
 
 
+  
+  
+  
+<section id="structure">
+<h2>Structure</h2>
+
+<p>The spoken language adheres strictly to the following pattern for syllables:<tt>s</tt></p>
+<p><code>(C)V(N)</code></p>
+<p>Script symbols represent mora, rather than full syllables. Long vowels, diphthongs and syllables ending in <span class="trans">n</span> are all represented using two characters.<tt>s</tt></p>
+<p>There can be some variation in the way long vowels and diphthongs are divided into syllables, and therefore written.<tt>s</tt></p>
+</section>
+
+
 
 
   
@@ -281,7 +294,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="vowelPhonemes">
+<section id="phonemesV">
 <h3>Vowel sounds</h3>
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -20 500 240" class="ipaSVG"> 
@@ -361,7 +374,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="consonantSounds">
+<section id="phonemesC">
 <h3>Consonant sounds</h3>
 <table class="ipaTable">
 <thead>
@@ -475,7 +488,7 @@ alveolar</th>
 
 
 
-<section id="tones">
+<section id="phonemesT">
 <h3>Tones</h3>
 
 <p>Vai has 4 tones, 2 level and 2 contoured. They are:</p>
@@ -490,18 +503,6 @@ alveolar</th>
 <p>Tones are not marked in the Vai orthography, although this doesn't often create ambiguity<tt>d,596</tt>. They do, however, tend to be marked using the accent marks in transcriptions.</p>
 </section>
 </section>      
-
-
-  
-  
-  
-  <section id="structure">
-<h2>Structure</h2>
-<p>The spoken language adheres strictly to the following pattern for syllables:<tt>s</tt></p>
-<p><code>(C)V(N)</code></p>
-<p>Script symbols represent mora, rather than full syllables. Long vowels, diphthongs and syllables ending in <span class="trans">n</span> are all represented using two characters.<tt>s</tt></p>
-<p>There can be some variation in the way long vowels and diphthongs are divided into syllables, and therefore written.<tt>s</tt></p>
-</section>
 
 
   
@@ -972,13 +973,27 @@ alveolar</th>
 <section id="characters">
 <h2>Syllables</h2>
 
+
+
+
+
+
+
+<div id="vowel_description"></div>
+<div id="consonant_description"></div>
+
+
+
+
+
+
 <p>Vai syllables are typically displayed as a table (see <a class="secref">alphabet</a>). Here we follow our usual practice of ordering symbols by sound.</p>
 
 
 
 
 
-<section id="vowels">
+<section id="basicV">
 <h3>Vowel syllables</h3>
 
 <p>The following represent sounds for standalone vowels.</p>
@@ -995,7 +1010,7 @@ language group in Liberia) and Mende, which each have five vowels: <a class="ipa
 
 
 
-<section id="basic">
+<section id="basicC">
 <h3>Consonant-vowel syllables</h3>
 
 <p>The core of the script is a set of CV syllables, however the set shown here includes symbols that were added to support the sounds of other languages, or to fill gaps.  Not all the symbols will be used, or even recognised, by all native Vai readers<tt>err</tt>.</p>
@@ -1100,8 +1115,8 @@ language group in Liberia) and Mende, which each have five vowels: <a class="ipa
 
 
 
-<section id="syllfinal">
-<h3>Syllable-final/syllabic nasal</h3>
+<section id="finals">
+<h3>Final consonants &amp; syllabic nasal</h3>
 
 <figure class="characterBox auto" data-cols="ipa, trans, transc">&#xA60B;</figure>
 
@@ -1153,16 +1168,16 @@ language group in Liberia) and Mende, which each have five vowels: <a class="ipa
 <p>&quot;Originally there were separate glyphs for syllables ending in a nasal, such as <span class="ipa">don</span>, with a long vowel, such as <span class="ipa">soo</span>, with a diphthong, such as <span class="ipa">bai</span>, as well as <span class="ipa">bili</span> and <span class="ipa">sɛli</span>. However, these have been dropped from the modern script.&quot;<tt>ws</tt></p>
 </div>
 </section>
+</section>
   
 
 
 
 
 <section id="tones">
-<h3>Tones</h3>
-<p>Although Vai is a tonal language, tone is not represented in the script.<tt>s</tt></p>
-</section>
+<h2>Tones</h2>
 
+<p>Although Vai is a tonal language, tone is not represented in the script.<tt>s</tt></p>
 </section>
 
 
@@ -1237,6 +1252,10 @@ language group in Liberia) and Mende, which each have five vowels: <a class="ipa
 
 <p class="instructions">You can experiment with examples using the <a href="../../pickers/vai/">Vai character app</a>.</p>
 <p>Vai has no context-based shaping or positioning, and is not cursive. There is no case, or any other character transform that applications need to support.</p>
+
+
+
+
 <section id="fontstyle">
 <h3>Font styles</h3>
 <p class="prompts">tbd</p>
@@ -1257,31 +1276,34 @@ language group in Liberia) and Mende, which each have five vowels: <a class="ipa
 
 
 
-<section id="inline">
-<h2>Punctuation &amp; inline features</h2>  
+<section id="segments">
+<h2>Text segmentation</h2>  
   
 <section id="graphemes">
 <h3>Grapheme boundaries</h3>
  <p class="explanatoryintro">A grapheme is a user-perceived unit of text. The Unicode Standard uses generalised rules to define 'grapheme clusters', which approximate the likely grapheme boundaries in a writing system.</p>
-
-<p class="prompts">tbd</p>
 </section>
-
-
 
 
   
 <section id="word">
 <h3>Word boundaries</h3>
- <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
+ 
+<p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
 <p>In modern printed Vai, spaces commonly appear around words.</p>
 <p>There is, however, another tradition where Vai is written without inter-word spacing, although Vai literates report that this makes it harder to read Vai than to write it, although Singler reports that script conventions and distributional patterns help a little<tt>d,596</tt>.</p>
+</section>
 </section>
 
 
 
 
+
+
+<section id="inline">
+<h2>Punctuation &amp; inline features</h2>
   
+
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
 
@@ -1360,6 +1382,24 @@ language group in Liberia) and Mende, which each have five vowels: <a class="ipa
 
 
 
+
+<section id="otherinline">
+<h3>Other inline ranges</h3>
+
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+<section id="spacing">
+<h3>Text spacing</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
   
 <section id="abbrev">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
@@ -1372,16 +1412,6 @@ language group in Liberia) and Mende, which each have five vowels: <a class="ipa
   
 <section id="inlinenotes">
 <h3>Inline notes &amp; annotations</h3>
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
-
-<section id="otherinline">
-<h3>Other inline ranges</h3>
-
 <p class="prompts">tbd</p>
 </section>
 
@@ -1436,14 +1466,6 @@ must not start a line.</li>
 
 <section id="justification">
 <h3>Text alignment &amp; justification</h3>
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
-<section id="letterspace">
-<h3>Letter spacing</h3>
 <p class="prompts">tbd</p>
 </section>
 
@@ -1525,22 +1547,6 @@ must not start a line.</li>
 <h3>Page numbering, running headers, etc</h3>
 <p class="prompts">tbd</p>
 </section-->
-</section>
-
-
-
-
-
-
-
-
-
-<section id="languages">
-<h2>Languages using the Vai script</h2>
-<p>According to ScriptSource, the Vai script is used for one language only: </p>
-<ul>
-<li>Vai [vai]</li>
-</ul>
 </section>
 
 

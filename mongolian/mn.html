@@ -55,7 +55,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->1 March, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->10 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -92,7 +92,7 @@
 
 
 <section id="sample">
-<h2>Sample (Mongolian)</h2>
+<h2>Sample</h2>
   
 <p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.  <a style="margin-inline-start: 2rem;" href="http://unicode.org/udhr/translations.html">Source</a><br>
 Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="24" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">24px</span></p>
@@ -278,7 +278,76 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <input type="checkbox" onChange="toggleTranscription('listTrans', this.checked)" /></label></div>
 </details>
 </div>
+  
+  
+  
+  
+  
+  
+<section id="structure">
+<h2>Structure</h2>
+<p>The basic unit of text is a word, however words can contain prefixes and suffixes. Some of the suffixes are separated from the root of the word by a small gap, but they are still considered to be part of the word.</p>
 
+
+
+
+
+<section id="harmony">
+<h3>Vowel harmony</h3>
+<p>Vowel harmony is an important aspect of the Mongolian language – words contain only masculine+neuter vowels, or only feminine+neuter vowels. The masculine vowels are:</p>
+
+<figure class="characterBox auto" data-cols="ipa">ᠠ␣ᠣ␣ᠤ</figure>
+
+<p>The feminine vowels are:</p>
+
+<figure class="characterBox auto" data-cols="ipa">ᠡ␣ᠥ␣ᠦ</figure>
+
+<p>The following vowel is neutral, and can appear in words with either masculine or feminine vowels.</p>
+
+<figure class="characterBox auto" data-cols="ipa">ᠢ</figure>
+
+<p>Grammatical suffixes also have masculine and feminine versions.</p>
+</section>
+
+
+
+<section id="encodingprinciples">
+	 <h3>Glyphs vs. phonemes</h3>
+<p>Unicode  encodes separate characters for different sounds for the Mongolian language, regardless of whether the glyph shapes used are identical. For example, the glyph shapes for the 2 characters <span class="codepoint" translate="no"><span lang="mn">&#x1823;</span> [<a href="/scripts/mongolian/block#char1823"><span class="uname">U+1823 MONGOLIAN LETTER O</span></a>]</span> and <span class="codepoint" translate="no"><span lang="mn">&#x1824;</span> [<a href="/scripts/mongolian/block#char1824"><span class="uname">U+1824 MONGOLIAN LETTER U</span></a>]</span> are identical, as are those for <span class="codepoint" translate="no"><span lang="mn">&#x1825;</span> [<a href="/scripts/mongolian/block#char1825"><span class="uname">U+1825 MONGOLIAN LETTER OE</span></a>]</span> and <span class="codepoint" translate="no"><span lang="mn">&#x1826;</span> [<a href="/scripts/mongolian/block#char1826"><span class="uname">U+1826 MONGOLIAN LETTER UE</span></a>]</span>. The two pairs only differ in shape in isolated and initial forms.</p>
+
+<figure id="fig_o_u_glyphs">
+<img src="images/o_u_glyphs.png" alt="ᠣ᠊ ᠊ᠣ᠊ ᠊ᠣ ᠤ᠊ ᠊ᠤ᠊ ᠊ᠤ ᠥ᠊ ᠊ᠥ᠊ ᠊ᠥ ᠦ᠊ ᠊ᠦ᠊ ᠊ᠦ" class="ex">
+<figcaption>Initial, medial and final forms for characters representing <span class="ipa">ɔ</span>, <span class="ipa">ʊ</span>, <span class="ipa">o</span>, and <span class="ipa">u</span>, respectively.</figcaption>
+</figure>
+
+<p>Identical glyphs for different sounds occur across other pairings also. For example, the medial and final shapes for <span class="ipa">a</span> and <span class="ipa">n</span> are identical.</p>
+
+<figure id="fig_a_n_glyphs">
+<img src="images/a_n_glyphs.png" alt="ᠠ᠊ ᠊ᠠ᠊ ᠊ᠠ ᠨ᠊ ᠊ᠨ᠊ ᠊ᠨ" class="ex">
+<figcaption>Initial, medial and final forms for characters representing <span class="ipa">a</span>, and <span class="ipa">n</span>, respectively.</figcaption>
+</figure>
+
+<p>The Unicode Standard provides the following examples of word pairs that cannot be distinguished visually.<tt>u,530</tt> (Click on the words to see their actual composition.)</p>
+
+<figure id="fig_indistinguishable_words">
+<img src="images/indistinguishable_words.png" alt="ᠤᠷᠲᠤ ᠣᠷᠳᠤ ᠡᠨᠳᠡ ᠠᠳᠠ" class="ex">
+<figcaption>The confusable words <span class="charExample inline" translate="no"><span class="transc">ʊrtʊ</span> <span class="meaning">long</span></span>, <span class="charExample inline" translate="no"><span class="transc">ɔrdʊ</span> <span class="meaning">camp</span></span>, <span class="charExample inline" translate="no"><span class="transc">ende</span> <span class="meaning">here</span></span>, and <span class="charExample inline" translate="no"><span class="transc">ada</span> <span class="meaning">devil</span></span> in Mongolian.</figcaption>
+</figure>
+
+<p>The result of this encoding method is that it is impossible to  accurately copy Mongolian text  from a visual source unless you speak the language well enough to recognise the phonetics of the words involved. It also leads to mistakes when Mongolian speakers type text.</p>
+</section>
+
+
+
+
+<section id="diglossia">
+<h3>Spelling vs. pronunciation</h3>
+
+<p>Written Mongolian words use traditional spellings that may not correspond closely to modern pronunciations.  For example, if you were to spell out  the letters in the following word as written you would get <span class="ipa">uʤəgulxu</span>, whereas the modern pronunciation is <span class="ipa">uʤuuləx</span>.
+<span class="eg" lang="mn">ᠤᠵᠡᠭᠦᠯᠬᠦ</span>
+</p>
+</section>
+</section>
 
 
 
@@ -295,7 +364,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="vowelPhonemes">
+<section id="phonemesV">
 <h3>Vowel sounds</h3>
 
 <section id="plain_vowels">
@@ -470,7 +539,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="consonantPhonemes">
+<section id="phonemesC">
 <h3>Consonant sounds</h3>
 
 <table class="ipaTable">
@@ -637,76 +706,7 @@ alveolar</th>
 </table>
 </section>
 </section>
-  
-  
-  
-  
-  
-  
-<section id="structure">
-<h2>Structure</h2>
-<p>The basic unit of text is a word, however words can contain prefixes and suffixes. Some of the suffixes are separated from the root of the word by a small gap, but they are still considered to be part of the word.</p>
 
-
-
-
-
-<section id="harmony">
-<h3>Vowel harmony</h3>
-<p>Vowel harmony is an important aspect of the Mongolian language – words contain only masculine+neuter vowels, or only feminine+neuter vowels. The masculine vowels are:</p>
-
-<figure class="characterBox auto" data-cols="ipa">ᠠ␣ᠣ␣ᠤ</figure>
-
-<p>The feminine vowels are:</p>
-
-<figure class="characterBox auto" data-cols="ipa">ᠡ␣ᠥ␣ᠦ</figure>
-
-<p>The following vowel is neutral, and can appear in words with either masculine or feminine vowels.</p>
-
-<figure class="characterBox auto" data-cols="ipa">ᠢ</figure>
-
-<p>Grammatical suffixes also have masculine and feminine versions.</p>
-</section>
-
-
-
-<section id="encodingprinciples">
-	 <h3>Glyphs vs. phonemes</h3>
-<p>Unicode  encodes separate characters for different sounds for the Mongolian language, regardless of whether the glyph shapes used are identical. For example, the glyph shapes for the 2 characters <span class="codepoint" translate="no"><span lang="mn">&#x1823;</span> [<a href="/scripts/mongolian/block#char1823"><span class="uname">U+1823 MONGOLIAN LETTER O</span></a>]</span> and <span class="codepoint" translate="no"><span lang="mn">&#x1824;</span> [<a href="/scripts/mongolian/block#char1824"><span class="uname">U+1824 MONGOLIAN LETTER U</span></a>]</span> are identical, as are those for <span class="codepoint" translate="no"><span lang="mn">&#x1825;</span> [<a href="/scripts/mongolian/block#char1825"><span class="uname">U+1825 MONGOLIAN LETTER OE</span></a>]</span> and <span class="codepoint" translate="no"><span lang="mn">&#x1826;</span> [<a href="/scripts/mongolian/block#char1826"><span class="uname">U+1826 MONGOLIAN LETTER UE</span></a>]</span>. The two pairs only differ in shape in isolated and initial forms.</p>
-
-<figure id="fig_o_u_glyphs">
-<img src="images/o_u_glyphs.png" alt="ᠣ᠊ ᠊ᠣ᠊ ᠊ᠣ ᠤ᠊ ᠊ᠤ᠊ ᠊ᠤ ᠥ᠊ ᠊ᠥ᠊ ᠊ᠥ ᠦ᠊ ᠊ᠦ᠊ ᠊ᠦ" class="ex">
-<figcaption>Initial, medial and final forms for characters representing <span class="ipa">ɔ</span>, <span class="ipa">ʊ</span>, <span class="ipa">o</span>, and <span class="ipa">u</span>, respectively.</figcaption>
-</figure>
-
-<p>Identical glyphs for different sounds occur across other pairings also. For example, the medial and final shapes for <span class="ipa">a</span> and <span class="ipa">n</span> are identical.</p>
-
-<figure id="fig_a_n_glyphs">
-<img src="images/a_n_glyphs.png" alt="ᠠ᠊ ᠊ᠠ᠊ ᠊ᠠ ᠨ᠊ ᠊ᠨ᠊ ᠊ᠨ" class="ex">
-<figcaption>Initial, medial and final forms for characters representing <span class="ipa">a</span>, and <span class="ipa">n</span>, respectively.</figcaption>
-</figure>
-
-<p>The Unicode Standard provides the following examples of word pairs that cannot be distinguished visually.<tt>u,530</tt> (Click on the words to see their actual composition.)</p>
-
-<figure id="fig_indistinguishable_words">
-<img src="images/indistinguishable_words.png" alt="ᠤᠷᠲᠤ ᠣᠷᠳᠤ ᠡᠨᠳᠡ ᠠᠳᠠ" class="ex">
-<figcaption>The confusable words <span class="charExample inline" translate="no"><span class="transc">ʊrtʊ</span> <span class="meaning">long</span></span>, <span class="charExample inline" translate="no"><span class="transc">ɔrdʊ</span> <span class="meaning">camp</span></span>, <span class="charExample inline" translate="no"><span class="transc">ende</span> <span class="meaning">here</span></span>, and <span class="charExample inline" translate="no"><span class="transc">ada</span> <span class="meaning">devil</span></span> in Mongolian.</figcaption>
-</figure>
-
-<p>The result of this encoding method is that it is impossible to  accurately copy Mongolian text  from a visual source unless you speak the language well enough to recognise the phonetics of the words involved. It also leads to mistakes when Mongolian speakers type text.</p>
-</section>
-
-
-
-
-<section id="diglossia">
-<h3>Spelling vs. pronunciation</h3>
-
-<p>Written Mongolian words use traditional spellings that may not correspond closely to modern pronunciations.  For example, if you were to spell out  the letters in the following word as written you would get <span class="ipa">uʤəgulxu</span>, whereas the modern pronunciation is <span class="ipa">uʤuuləx</span>.
-<span class="eg" lang="mn">ᠤᠵᠡᠭᠦᠯᠬᠦ</span>
-</p>
-</section>
-</section>
 
 
 
@@ -722,7 +722,16 @@ alveolar</th>
 
 
 
-<section id="basicvowels">
+
+
+
+<div id="vowel_description"></div>
+
+
+
+
+
+<section id="basicV">
 <h3>Basic vowels</h3>
 <p>Eight vowels are used for the Mongolian language.</p>
 
@@ -802,7 +811,15 @@ alveolar</th>
 
 
 
-<section id="basicconsonants">
+
+
+<div id="consonant_description"></div>
+
+
+
+
+
+<section id="basicC">
 <h3>Basic Mongolian consonants</h3>
 
 <p>The Mongolian language has a basic set of 16 consonants.</p>
@@ -911,7 +928,7 @@ alveolar</th>
 
 
 
-<section id="extensions">
+<section id="extendedC">
 <h3>Repertoire extension</h3>
 
 <p>The full set of consonants used for Mongolian includes 11 letters that are normally used for writing foreign sounds.</p>
@@ -1026,7 +1043,7 @@ alveolar</th>
 
 
 
-  <section id="nnbsp">
+<section id="horizontal">
 <h3>In horizontal contexts</h3>
 <p>When Mongolian excerpts are shown in text that is set horizontally (such as on this page), the Mongolian is sometimes represented as a sequence of single vertical words,  eg. <span style="writing-mode:vertical-lr" class="ex" lang="mn">ᠮᠣᠩᠤᠯ<br/>ᠪᠢᠴᠢᠭ</span>, but in other cases it is rotated left and joins horizontally,  eg. <span style="writing-mode:horizontal-tb" class="ex" lang="mn">ᠮᠣᠩᠤᠯ ᠪᠢᠴᠢᠭ</span>. </p>
 <p>Mongolian text  written horizontally is read left-to-right. This means that if it contains embedded text from another language, such as English, there is no bidirectional behaviour (as there would be in Arabic-script text).</p>
@@ -1069,8 +1086,8 @@ alveolar</th>
   
   
   
-<section id="gsub">
-<h3>Context-based shaping</h3>
+<section id="context">
+<h3>Context-based shaping &amp; positioning</h3>
 <p>Certain letters ligate with adjacent letters.</p>
 <p>In addition to the cursive shaping mentioned just above, individual letters may have context-dependent variant forms, that can be quite different from the standard forms. Where the alternative form can be determined algorithmically, the font should produce the change.</p>
 <p>An unusual feature of the Mongolian traditional script is that the shape of a letter may depend on the vowel harmony of the word, and so may be determined at some distance from the character in question.</p>
@@ -1081,14 +1098,6 @@ alveolar</th>
 <p>Unfortunately, variation selector usage is still not completely standardised across Mongolian fonts. For a set of tables summarising current standardisation proposals and major font support see  <a href="https://r12a.github.io/mongolian-variants/">Mongolian variant forms</a>.</p>
 </section>
 
-
-
-
-<section id="gpos">
-<h3>Context-based positioning</h3>
-
-<p class="prompts">tbd</p>
-</section>
 
 
 
@@ -1117,8 +1126,11 @@ alveolar</th>
 
 
 
-<section id="inline">
-<h2>Punctuation &amp; inline features</h2>  
+
+
+
+<section id="segments">
+<h2>Text segmentation</h2>  
   
 <section id="graphemes">
 <h3>Grapheme boundaries</h3>
@@ -1131,11 +1143,22 @@ alveolar</th>
 
 
   
-<section id="words">
+<section id="word">
 <h3>Word boundaries</h3>
     <p class="explanatoryintro">The concept of 'word' is difficult to define in any language (see <a href="https://www.w3.org/International/articles/typography/linebreak.en#whatisword">What is a word?</a>). Here, a word is a vaguely-defined, but recognisable  semantic unit that is typically smaller than a phrase and may comprise one or more syllables.</p>
 <p>Words are separated by spaces. The gaps before certain suffixes are not considered to be word delimiters. Those gaps are usually created using <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x180E;</span><img src="../../c/Mongolian/180E.png" alt="MVS" style="vertical-align:middle"> [<a href="/scripts/mongolian/block#char180E"><span class="uname">U+180E MONGOLIAN VOWEL SEPARATOR</span></a>]</span> or <span class="codepoint" translate="no"><span style="display:none;" lang="mn">&#x202F;</span><img src="../../c/General_Punctuation/202F.png" alt="NNBSP" style="vertical-align:middle"> [<a href="/scripts/mongolian/block#char202F"><span class="uname">U+202F NARROW NO-BREAK SPACE</span></a>]</span>.</p>
 </section>
+</section>
+
+
+
+
+
+
+
+
+<section id="inline">
+<h2>Punctuation &amp; inline features</h2>  
 
 
 <section id="phrase">
@@ -1249,32 +1272,6 @@ alveolar</th>
 
 
 
-  
-<section id="abbrev">
-<h3>Abbreviation, ellipsis &amp; repetition</h3>
-
-<figure class="characterBox auto small" data-cols="trans">᠁</figure>
-
-<p><span class="codepoint" translate="no"><span lang="mn">&#x1801;</span> [<a href="/scripts/mongolian/block#char1801"><span class="uname">U+1801 MONGOLIAN ELLIPSIS</span></a>]</span> is used for ellipsis.</p>
-</section>
-
-
-
-
-  
-<section id="inlinenotes">
-<h3>Inline notes &amp; annotations</h3>
-<p>Like Chinese and Japanese, Mongolian text uses ruby annotations to express the pronunciation of words for beginners or in ambiguous situations. This is useful in Mongolian because many characters look identical in cursive text.</p>
-  <p>Annotations are typically written in the Latin script, and run down the right side of the line.<tt>g1</tt></p>
-<figure id="fig_ruby">
-<p><img src="images/ruby.png" alt=""/></p>
-<figcaption>Ruby in Mongolian text.</figcaption>
-</figure>
-</section>
-
-
-
-
 
 <section id="otherinline">
 <h3>Other inline ranges</h3>
@@ -1298,6 +1295,40 @@ alveolar</th>
 </figure>
 </div>
 </section>
+
+
+
+
+<section id="spacing">
+<h3>Text spacing</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+  
+<section id="abbrev">
+<h3>Abbreviation, ellipsis &amp; repetition</h3>
+
+<figure class="characterBox auto small" data-cols="trans">᠁</figure>
+
+<p><span class="codepoint" translate="no"><span lang="mn">&#x1801;</span> [<a href="/scripts/mongolian/block#char1801"><span class="uname">U+1801 MONGOLIAN ELLIPSIS</span></a>]</span> is used for ellipsis.</p>
+</section>
+
+
+
+
+  
+<section id="inlinenotes">
+<h3>Inline notes &amp; annotations</h3>
+<p>Like Chinese and Japanese, Mongolian text uses ruby annotations to express the pronunciation of words for beginners or in ambiguous situations. This is useful in Mongolian because many characters look identical in cursive text.</p>
+  <p>Annotations are typically written in the Latin script, and run down the right side of the line.<tt>g1</tt></p>
+<figure id="fig_ruby">
+<p><img src="images/ruby.png" alt=""/></p>
+<figcaption>Ruby in Mongolian text.</figcaption>
+</figure>
+</section>
+
 
 
 
@@ -1350,14 +1381,6 @@ alveolar</th>
 <p><img src="images/justification_mixed_cjk.png" alt=""/></p>
 <figcaption>Space is added around embedded Chinese text during justification, not between.</figcaption>
 </figure>
-</section>
-
-
-
-
-<section id="letterspace">
-<h3>Letter spacing</h3>
-<p class="prompts">tbd</p>
 </section>
 
 
@@ -1517,24 +1540,6 @@ data-cols="">⒈␣⒉␣⒊␣⒋␣⒌␣⒍␣⒎␣⒏␣⒐␣⒑␣⒒␣�
 <h3>Page numbering, running headers, etc</h3>
 <p>Page numbers should be displayed on the upper or lower side of the page.<tt>n,#h_page_numbering</tt></p>
 </section>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-<section id="languages">
-<h2>Languages using the Mongolian script</h2>
-<p>According to ScriptSource, the Mongolian script is used for the following languages:</p>
-<ul id="scriptLanguageList">
-</ul>
 </section>
 
 

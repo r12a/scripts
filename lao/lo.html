@@ -55,7 +55,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->1 March, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->10 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -328,7 +328,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 <!-- Source <a href="https://en.wikipedia.org/wiki/Modern_Hebrew_phonology">Wikipedia</a>.-->
 </p>
 
-<section id="vowelPhonemes">
+<section id="phonemesV">
 <h3>Vowel sounds</h3>
 
 <section id="plain_vowels">
@@ -571,7 +571,7 @@ Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="
 
 
 
-<section id="consonantPhonemes">
+<section id="phonemesC">
 <h3>Consonant sounds</h3>
 
 
@@ -788,7 +788,7 @@ alveolar</th>
 
 
 <section id="vowel_mappings">
-<h3>Vowel sounds mapped to characters</h3>
+<h3>Vowel sounds  to characters</h3>
 
 
 <p class="instructions">This section maps Lao vowel sounds to common graphemes in the Lao orthography. The dash indicates the location of the consonant relative to the vowel-sign; if there are 2 dashes, the vowel is used only in closed syllables. Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
@@ -1066,6 +1066,9 @@ alveolar</th>
 
 
 
+<div id="vowel_description"></div>
+
+
 
 
 
@@ -1143,7 +1146,7 @@ alveolar</th>
 
 
 
-<section id="prescript_vowels">
+<section id="prebase_vowels">
 <h3>Pre-base vowel-signs</h3>  
 
 <figure class="characterBox auto small" data-cols="ipa,trans,transc">ເ␣ແ␣ໂ␣ ␣ໄ␣ໃ</figure>
@@ -1322,7 +1325,7 @@ alveolar</th>
 
 
 
-<section id="independent_vowels">
+<section id="standalone">
 <h3>Standalone vowels</h3>
 
 <p class="explanatoryintro">Standalone vowels are not preceded by a consonant, and may appear at the beginning or in the middle of a word. This typically includes a way to represent the sound of the inherent vowel in isolation.</p>
@@ -1343,7 +1346,7 @@ alveolar</th>
 
 
 
-<section id="vowel_absence">
+<section id="novowel">
 <h3>Silent vowels &amp; consonants</h3>
 <p>Because the orthography is alphabetic, vowel absence after syllable-final consonants is not normally marked in any way. Nor is it marked in syllable-initial clusters.</p>
 
@@ -1353,6 +1356,7 @@ alveolar</th>
 <p>&nbsp;&nbsp;<span class="codepoint" translate="no"><span lang="lo">&#x0ECC;</span> [<a href="/scripts/lao/block#char0ECC"><span class="uname">U+0ECC LAO CANCELLATION MARK</span></a></span> was previously used to indicate silenced consonants, but Wikipedia describes it as now obsolete.<tt>wl,#Punctuation</tt></p>
 </div>
 </section>
+</section>
 
 
 
@@ -1361,11 +1365,11 @@ alveolar</th>
 
 
 <section id="tones">
-<h3>Tones</h3>
+<h2>Tones</h2>
 
 
 <section id="tone_values">
-<h4>Tone values</h4>
+<h3>Tone values</h3>
 
 <p>Lao  has 6 phonological tones in unchecked syllables, and 4 in checked syllables.</p>
 
@@ -1594,7 +1598,7 @@ mai cat-ta-waː</th>
 
 
 <section id="tone_marks">
-<h4>Tone marks</h4>
+<h3>Tone marks</h3>
 
 <p>The Unicode Lao block provides the following characters for indicating tone.</p>
 
@@ -1700,7 +1704,6 @@ mai cat-ta-waː</th>
 </tr>
 </tbody>
 </table--></section>
-</section>
 </section>
 
 
@@ -2135,9 +2138,13 @@ mai cat-ta-waː</th>
 
 
 
+<div id="consonant_description"></div>
 
 
-<section id="consonant_letters">
+
+
+
+<section id="basicC">
 <h3>Consonant letters</h3>
 
 
@@ -2246,7 +2253,7 @@ mai cat-ta-waː</th>
 
 
 <section id="finals">
-<h3>Syllable-final consonants</h3>
+<h3>Final consonants</h3>
 <p>Lao doesn't have any code points dedicated to syllable final consonants, although consonants do appear in those positions, eg. <span class="eg" lang="lo">ນົກ</span></p>
 <p>Only the following consonants appear in syllable-final position. Note how the sound may change: where there is more than one phonetic realisation, the one with a preceding hyphen is the final.</p>
   
@@ -2405,8 +2412,8 @@ mai cat-ta-waː</th>
 
 
 
-<section id="gpos">
-<h3>Context-based positioning</h3>
+<section id="context">
+<h3>Context-based shaping &amp; positioning</h3>
 
 <p>Prescript vowels are visually ordered, and therefore do not need to be positioned by the font.</p>
 <p>Vowel-signs, tones, and one consonant, on the other hand, are combining characters that need to be correctly positioned relative to the base character, and multiple marks can be combined with a single base character.</p>
@@ -2455,8 +2462,8 @@ mai cat-ta-waː</th>
 
 
 
-<section id="inline">
-<h2>Punctuation &amp; inline features</h2>  
+<section id="segments">
+<h2>Text segmentation</h2>  
   
 <section id="graphemes">
 <h3>Grapheme boundaries</h3>
@@ -2487,9 +2494,16 @@ mai cat-ta-waː</th>
 <p>If a dictionary fails to keep two or more syllables together as needed, it should be possible to use the Unicode character <span class="codepoint" translate="no"><span lang="lo">&#x2060;</span> <a href="/scripts/lao/block#char2060"><span class="uname">U+2060 WORD JOINER</span></a></span>between the two syllables. This is an invisible character, equivalent to a zero-width no-break space, and used to prevent line-breaks.</p>
 <p>If dictionaries are used for segmentation, they should be selected based on the language, not the script. (See the <a href="#languages">list of languages</a> using the Lao script.)</p>
 </section>
+</section>
 
 
 
+
+
+
+
+<section id="inline">
+<h2>Punctuation &amp; inline features</h2>
 
 
 <section id="phrase">
@@ -2605,6 +2619,23 @@ mai cat-ta-waː</th>
 
 
   
+<section id="otherinline">
+<h3>Other inline ranges</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+<section id="spacing">
+<h3>Text spacing</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+  
 <section id="abbrev">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
 
@@ -2641,15 +2672,6 @@ mai cat-ta-waː</th>
 
 
 
-  
-<section id="otherinline">
-<h3>Other inline ranges</h3>
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
 
 <section id="otherpunctuation">
 <h3>Other punctuation</h3>
@@ -2680,20 +2702,12 @@ mai cat-ta-waː</th>
 
 
 
-<section id="justify">
+<section id="justification">
 <h3>Text alignment &amp; justification</h3>
 <p>Since spaces aren't used to separate words, Lao has to use alternative strategies for justification of text.</p>
     <p class="instructions">The following shows how your browser justifies text.</p>
     <p lang="lo" id="justificationExample" style="text-align:justify;">ບຸກຄົນສະເໝີກັນຕໍ່ໜ້າກົດໝາຍ ແລະ ມີສິດທີ່ຈະໄດ້ຮັບຄວາມຄຸ້ມຄອງຂອງກົດໝາຍເທົ່າທຽມກັນໂດຍບໍ່ມີການແຕກຕ່າງທຸກຄົນມີສິດທີ່ຈະໄດ້ຮັບຄວາມຄຸ້ມຄອງເທົ່າທຽມກັນຕໍ່ການກະທຳໃດໆທີ່ຖືກບຸກຄົນແຕກຕ່າງກັນອັນອາດເປັນການລະເມີດໃບປະກາດສະບັບນີ້ ແລະ ຕໍ່ການທ້າທາຍໃດໆທີ່ຈະຖືໃຫ້ແຕກຕ່າງກັນດັ່ງນີ້:</p>
     <p class="noprint" dir="ltr"><button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Toggle   </button></p>
-</section>
-
-
-
-
-<section id="letterspace">
-<h3>Letter spacing</h3>
-    <p class="prompts">tbd</p>
 </section>
 
 
@@ -2822,19 +2836,6 @@ mai cat-ta-waː</th>
 <h3>Page numbering, running headers, etc</h3>
 <p class="prompts">tbd</p>
 </section-->
-</section>
-
-
-
-
-
-
-
-<section id="languages">
-<h2>Languages using the Lao script</h2>
-<p>According to ScriptSource, the Lao script is used for the following languages:</p>
-<ul id="scriptLanguageList">
-</ul>
 </section>
 
 

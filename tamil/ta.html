@@ -56,7 +56,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->7 April, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->10 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -92,7 +92,7 @@
 
 
 <section id="sample">
-<h2>Sample (Tamil)</h2>
+<h2>Sample</h2>
 <p class="instructions noprint">Select part of this sample text to show a list of characters, with links to more details.<br>Change size: <input id="fontFSSizeSlider" type="range" min="12" max="100" step="1" value="28" oninput="document.getElementById('freeText').style.fontSize = this.value+'px'; document.getElementById('sizeFSIndicator').textContent=this.value+'px'"> &nbsp; <span id="sizeFSIndicator">28px</span></p>
 
   
@@ -308,6 +308,16 @@
 
 
 
+<section id="structure">
+<h2>Structure</h2>
+<p>Tamil has a very restricted set of consonant clusters, and no word-initial clusters.<tt>wp</tt> Geminated consonants, however, are common.</p>
+<p>Some consonants cannot begin a word (eg. <span class="ipa">ɾ ɻ l</span>) and others cannot appear at the end.<tt>ws,#Basic_consonants</tt></p>
+</section>
+
+
+
+
+
 <section id="phonology">
 <h2>Phonology</h2>
 
@@ -316,7 +326,7 @@
 
 
 
-<section id="vowelPhonemes">
+<section id="phonemesV">
 <h3>Vowel sounds</h3>
 
 <section id="plain_vowels">
@@ -511,7 +521,7 @@
 
 
 
-<section id="consonantPhonemes">
+<section id="phonemesC">
 <h3>Consonant sounds</h3>
 <table class="ipaTable">
 <thead>
@@ -612,16 +622,6 @@ alveolar</th>
 
 </section>
 </section>
-
-
-
-
-
-<section id="structure">
-<h2>Structure</h2>
-<p>Tamil has a very restricted set of consonant clusters, and no word-initial clusters.<tt>wp</tt> Geminated consonants, however, are common.</p>
-<p>Some consonants cannot begin a word (eg. <span class="ipa">ɾ ɻ l</span>) and others cannot appear at the end.<tt>ws,#Basic_consonants</tt></p>
-</section>
   
 
 
@@ -632,7 +632,7 @@ alveolar</th>
 <h2>Vowels</h2>
 
 <section id="vowel_mappings">
-<h3>Vowel to script mapping</h3>
+<h3>Vowel sounds to characters</h3>
 
 <p class="instructions">This section maps Tamil vowel sounds to common graphemes in the Tamil orthography, grouped according to whether they are dependent ( <mark>d</mark> ) or standalone ( <mark>s</mark><mark></mark> ) forms. Click on a grapheme to find  other mentions on this page (links appear at the bottom of the page). Click on the character name to see examples  and for detailed descriptions of  the character(s) shown.</p>
 <section id="plain_vowel_map">
@@ -840,7 +840,15 @@ alveolar</th>
 
 
 
-<section id="inherentvowel">
+
+
+<div id="vowel_description"></div>
+
+
+
+
+
+<section id="inherent">
 <h3>Inherent vowel</h3>
 
 <p id="def-independentvowel" class="explanatoryintro definitionStub"></p>
@@ -878,7 +886,7 @@ alveolar</th>
 
 
 
-<section id="prescript_vowels">
+<section id="prebase_vowels">
 <h3>Pre-base vowel-signs</h3>
 <figure class="characterBox auto small" data-cols="ipa,trans,transc">ெ␣ே␣ை</figure>
 <p>Three vowel-signs appear to the left of the base consonant letter or conjunct, eg. <span class="eg" lang="ta">கெடு</span></p>
@@ -914,7 +922,7 @@ alveolar</th>
 
 
 
-<section id="compositeVowels">
+<section id="composite_vowels">
 <h3>Composite vowels</h3>
 <p id="def-compositevowel" class="explanatoryintro definitionStub"></p>
 
@@ -944,7 +952,7 @@ alveolar</th>
 
 
 
-<section id="independentvowel">
+<section id="standalone">
 <h3>Standalone vowels</h3>
 <p id="def-standalonevowel" class="explanatoryintro definitionStub"></p>
 
@@ -1004,7 +1012,7 @@ alveolar</th>
 
 
 
-<section id="suppression">
+<section id="novowel">
 <h3>Consonants with no following vowel</h3>
 
 <figure class="characterBox auto" data-cols="">்</figure>
@@ -1369,8 +1377,13 @@ geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="t
 
 
 
+<div id="consonant_description"></div>
 
-<section id="basicconsonants">
+
+
+
+
+<section id="basicC">
 <h3>Basic consonants</h3>
     
 <p>The basic consonant sounds of the standard Tamil alphabet are represented by the following characters. Note that there are no consonants dedicated only to voiced stops or to fricative sounds.</p>
@@ -1471,7 +1484,7 @@ geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="t
 
 
 
-<section id="grantha">
+<section id="extendedC">
 <h3>Grantha consonants</h3>
     
 
@@ -1588,8 +1601,9 @@ geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="t
  
 
 
-<section id="vowel_encoding">
+<section id="encoding">
 <h2>Encoding choices</h2>
+
 <p>Tamil is a script where different sequences of Unicode characters may produce the same visual result. Here we look at those  related to vowels.</p>
 
 <section id="vs_encoding">
@@ -1805,8 +1819,8 @@ geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="t
 
 
 
-<section id="gsub">
-<h3>Context-based shaping</h3>
+<section id="context">
+<h3>Context-based shaping &amp; positioning</h3>
 
   <!--p class="prompts">Are special glyph forms needed, depending on the context in which a character is used? Do glyphs interact in some circumstances?</p-->
 <p>Although modern Tamil uses fewer <em>conjunct</em> ligatures than most other indic scripts,  many ligatures are still needed for a Tamil font, mostly for combinations of base consonant and vowel-sign. See <a class="sectionref">vowelligation</a>.</p>
@@ -1819,16 +1833,16 @@ geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="t
 <p><img alt="Newspaper clipping" src="images/ra_variants.jpeg" style="width: 20em;" data-source="https://github.com/w3c/iip/issues/58"/></p>
 <figcaption>Variant forms of  <span class="codepoint" translate="no"><span lang="ta">&#x0BB0;</span> [<a href="/scripts/tamil/block#char0BB0"><span class="uname">U+0BB0 TAMIL LETTER RA</span></a>]</span>.</figcaption></figure>
 </section>
-</section>
 
 
 
 
 
 <section id="gpos">
-<h3>Context-based positioning</h3>
+<h4>Context-based positioning</h4>
 <p class="observation"><i>Observation:</i> Tamil consonants tend to all be the same height, and so the vertical positioning of the pulli tends to be the same. Otherwise, apart from the vowel-signs and pulli, Tamil doesn't really have combining characters.</p>
 <p class="observation"><i>Observation:</i> The only time Tamil has multiple combining marks attached to the same base character is when decomposed multi-part vowel-signs are used, see <a class="secref">vowelsigns</a>.</p>
+</section>
 </section>
 
 
@@ -2390,20 +2404,6 @@ data-cols="">௯௲␣௮௲␣௭௲␣௬௲␣௫௲␣௪௲␣௩௲␣௨�
 <h3>Page numbering, running headers, etc</h3>
 <p class="prompts">tbd</p>
 </section-->
-</section>
-
-
-
-
-
-
-
-
-<section id="languages">
-<h2>Languages using the Tamil script</h2>
-<p>According to ScriptSource, the Tamil script is used for the following languages:</p>
-<ul id="scriptLanguageList">
-</ul>
 </section>
 
 
