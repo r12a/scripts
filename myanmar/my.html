@@ -315,14 +315,9 @@ for the medial. Aspirated onset consonants are common: some have dedicated lette
 <section id="structure">
 <h2>Structure</h2>
 
-<section id="syllables">
-<h3>Basic syllabic structure</h3>
-
 <p>The Burmese language is  tonal and  many native Burmese words are monosyllabic.</p>
 <p>Syllables  can start with a consonant or initial vowel. An initial consonant may  be followed by a medial consonant, which adds the sound <span class="ipa">j</span> or <span class="ipa">w</span>. After the vowel, a syllable may end with a nasalisation of the vowel or an unreleased glottal stop, though these final sounds can be represented by various different consonant symbols. </p>
-<p>At the end of a  syllable in written Burmese a final consonant usually has an 'asat' sign above it, to show that there is no inherent vowel.</p>
 <p>In multisyllabic words  derived from an Indian language such as Pali, where two consonants occur internally with no intervening vowel, the consonants tend to be stacked vertically, and the asat sign is not used. </p>
-</section>
 
 
 
@@ -331,16 +326,14 @@ for the medial. Aspirated onset consonants are common: some have dedicated lette
 <section id="orthosyllables">
 <h3>Orthographic syllables<a class="selflink" href="#orthosyllables"></a></h3>
 
-<p>Algorithms for manipulating text, such as for detecting line break opportunities, use orthographic syllable boundaries, rather than phonetic syllable boundaries.</p>
-<p>An <span class="newterm">orthographic syllable</span> differs from a phonetic syllable in that it always begins with a consonant, or cluster of consonants. Where word-medial stacks occur, the orthographic syllable may begin with the final consonant of the previous phonetic syllable and continue through the onset(s) of the following syllable. Alternatively, an orthographic syllable may be just a final consonant (or consonant cluster) in a morphological syllable.</p>
+<p>Algorithms for manipulating text at a sub-word level use <span class="newterm">orthographic syllable</span> boundaries, rather than phonetic syllable boundaries.</p>
+<p>The boundaries of an  orthographic syllable may differ from those of a phonetic syllable, particularly in the presence of a conjunct. For more details, see <a class="secref">graphemes</a>.</p>
 
 <figure id="fig_syllables">
 <img src="images/my_phonetic_syllable.png" class="ex" alt="ဣန္ဒြေ" lang="my"> &nbsp;&nbsp;&nbsp;&nbsp;
 <img src="images/my_orthographic_syllable.png" class="ex" alt="ဣန္ဒြေ" style="border-inline-start: 1px solid tan; padding-inline-start: 1em;" lang="my">
 <figcaption>The same word, split into phonetic syllables (left) and orthgraphic syllables (right). <span class="instructions">(Click to see the composition.)</span></figcaption>
 </figure>
-
-<p>An orthographic syllable includes all the combining characters associated with the consonants it contains.</p>
 </section>
 
 
@@ -348,7 +341,7 @@ for the medial. Aspirated onset consonants are common: some have dedicated lette
 
 
 
-<section id="cporder">
+<!--section id="cporder">
 <h3>Codepoint order</h3>
     <p>The following table shows the order in which characters should be typed and stored in memory for a given syllable, per the description in the Unicode Standard. (It is Burmese-specific and doesn't reflect the order or characters needed for languages such as Karen, Mon, Shan, etc.) <tt>u,648-9</tt></p>
     <table style="margin-right: 30%;">
@@ -417,7 +410,7 @@ for the medial. Aspirated onset consonants are common: some have dedicated lette
     <p> Unfortunately, normalization may result in a different order. In particular, <span class="codepoint"><span lang="my">&#x103A;</span> <a href="/scripts/myanmar/block#char103A">[<span class="uname">U+103A MYANMAR SIGN ASAT​</span>]</a></span> occurs after <span class="codepoint"><span lang="my">&#x1037;</span> <a href="/scripts/myanmar/block#char1037">[<span class="uname">U+1037 MYANMAR SIGN DOT BELOW​</span>]</a></span> in normalized text. Applications such as fonts should still handle this alternative order, since the sequences are canonically equivalent.</p>
     <p>The following schematic shows sequences that typically make up a syllable in Burmese. Start with the <span style="color: #E100F7">C</span> (consonant) on the left, or <span style="color: #E100F7">IV</span> (initial vowel) and travel from left to right only. You can stop at any point. The plus sign in the box represents the virama – this should be followed immediately by another syllable, as should the kinzi.</p>
     <p><img src="syllable.png" alt="schematic of syllable composition"/></p>
-  </section>
+  </section-->
 </section>
   
 
@@ -3467,6 +3460,8 @@ and all stops are pronounced <span class="ipa">ʔ</span>, eg.
 <li><a href="../apps/listindic/index.html?chars=း">Visarga</a></li>
 </ol>
 
+<p> Unfortunately, normalization may result in a different order. In particular, <span class="codepoint"><span lang="my">်</span> <a href="/scripts/myanmar/block#char103A" target="c">[<span class="uname">U+103A MYANMAR SIGN ASAT​</span>]</a></span> occurs after <span class="codepoint"><span lang="my">့</span> <a href="/scripts/myanmar/block#char1037" target="c">[<span class="uname">U+1037 MYANMAR SIGN DOT BELOW​</span>]</a></span> in normalized text. Applications such as fonts should still handle this alternative order, since the sequences are canonically equivalent.</p>
+
 <p>Ordering characters as shown above avoids potential ambiguities and maximises the likelihood of success when rendering the text.</p>
 </section>
 </section>
@@ -3481,7 +3476,7 @@ and all stops are pronounced <span class="ipa">ʔ</span>, eg.
 <p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
 <p>Myanmar script doesn't separate words in a phrase.</p>
 <p>There is, however, a concept of words. Native Burmese words are typically monosyllabic, but there are also multisyllabic words, and these should not be broken during line wrapping.</p>
-<p>Consonants are NOT stacked across word boundaries. That makes it easier to apply line-breaking.</p>
+<p>Consonants are NOT stacked across word boundaries. As consequence, it is easier to apply word-based line-breaking.</p>
 </section>
 </section>
 
