@@ -134,7 +134,7 @@ autoExpandExamples.my = `
 ကြောင့်|because|dʑa̰uɴ|kraung.
 ကြောင်|cat|dʑàʊ§ɴ
 ကြော်|to fry|t͡ɕɔ̀|krau
-ကြေးမုံ|||kre:mum
+ကြေးမုံ|mirror|t͡ɕé§mòʊɴ|kre:mum
 ကြံ|||kram
 ကြံ့|||kram.
 ကြံ့လျော်|||kram.lyau
@@ -386,7 +386,7 @@ autoExpandExamples.my = `
 ထင်|to think|tʰìɴ|htang
 ထပ်|again|tʰaʔ|htap
 ထမင်း|cooked rice|tʰə§mɪ́§ɴ|hta.mang:
-ထမင်းဆိုင်|restaurant|tʰa̰mɪ́ɴzàɪɴ
+ထမင်းဆိုင်|restaurant|tʰa̰§mɪ́§ɴ§zàɪ§ɴ
 ထား|to put, place|tʰá|hta:
 ထားဝယ်|Tavoy/Dawei|də.§wɛ̀
 ထိ|to touch|tʰḭ|hti.
@@ -910,7 +910,7 @@ autoExpandExamples.my = `
 အင်္ဂလိပ်|||angga.lip
 အင်္ဂလိပ်စကား|||angga.lipca.ka:
 အင်္ဂလိပ်ဘာသာ|||angga.lipbhasa
-အင်္ဂါ|||angga
+အင်္ဂါ|Mars|ʔɪ̀§ɴ§ɡà|angga
 အငြိမ့်|||a.ngrim.
 အငွေ့|steam, fumes|ʔa̰§ŋwḛ|a.ngwe.
 အစေ့|seed|ʔəsḭ|a.ce.
@@ -1019,7 +1019,7 @@ autoExpandExamples.my = `
 ဣန္ဒြေ|India|ʔḭ§ɴ.§djè
 ဤ|this|ʔì|i|||ʔì
 ဥ|egg|ʔṵ
-ဥစ္စာ|property|ʔoʊʔsà
+ဥစ္စာ|property|ʔoʊ§ʔ§sà
 ဥရောပ သမဂ္ဂ|||u.rau:pa. sa.magga.
 ဥရောပ|||u.rau:pa.
 ဦး|uncle, Mr.|ʔù|u:
