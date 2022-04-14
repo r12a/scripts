@@ -18,14 +18,14 @@ autoExpandExamples.si = `
 අතන|there (emphatic)|atana
 අත්අඩංගුවට||
 අතුල්ලනවා|to rub|atullanawā
-අදිනවා|to pull|adinawā
+අදිනවා|to pull||adinawā
 අන්ත්‍රාව||
 අප්පොච්චි|father|appocci
 අපි|we (1pl)|api
 අපිරිසිදු|dirty|apirisidu
-අම්මා|mother|ammā
+අම්මා|mother||ammā
 අම්ලකර||
-අය්‍යා||
+අය්‍යා|older brother||ayyā
 අයිස්||
 අයු කල්||
 අයු||
@@ -36,7 +36,7 @@ autoExpandExamples.si = `
 අර්‍තාපල්||
 අල්ලනවා|to hold|allanawā
 අලියා||
-අලුත්|new|alut
+අලුත්|new|a§lu§t
 අවියක්||
 අවුරුද්ද|year|awurudda
 අවුරුද්‍ද||
@@ -51,12 +51,12 @@ autoExpandExamples.si = `
 ආලෝකය||
 ආවරණය||
 ඇඟිල්‍ල||
-ඇතැම්|other, some|ætæm
+ඇතැම්|other, some|æ§tæ§m
 ඇපල්||
 ඇවිදිනවා|to walk|æwidinawā
 ඇස|eye|æsa
 ඇහෙනවා|to hear|æhenawā
-ඉංග්‍රීසි||
+ඉංග්‍රීසි|English||iṁgrīsi
 ඉගිලෙනවා|to fly|igilenawā
 ඉදිමෙනවා|to swell|idimenawā
 ඉදිරිය||
@@ -103,7 +103,7 @@ autoExpandExamples.si = `
 කතුර||
 කන|ear|kana
 කනවා|to eat|kanawā
-කන්ද|mountain|kanda
+කන්ද|mountain|ka§n§da
 කපනවා|to cut|kapanawā
 කඹය|rope|kaᵐbaya
 කරත්තය||
@@ -114,7 +114,7 @@ autoExpandExamples.si = `
 කහ|yellow|kaha
 කළු|black|kaḷu
 ක්‍ය්‍ර|Kyra
-ක්‍රිමියාව|worm|krimiyāwa
+ක්‍රිමියාව|worm||krimiyāwa
 ක්‍රොඒෂියාව||
 කාමරංගා||
 කාමරය||
@@ -178,7 +178,7 @@ autoExpandExamples.si = `
 ගොටුකොල||
 ගොඩක්|many|goḍak
 චතුරිකා||
-චර්‍මය||
+චර්‍මය|skin, hide||carmaya
 චරිතය||
 චීන||
 චීනය||
@@ -289,7 +289,7 @@ autoExpandExamples.si = `
 පිහාටු|feather|pihāṭu
 පිහිනනවා|to swim|pihinanawā
 පිහියකින් අනිනවා|to stab|pihiyakin aninawā
-පුංචි|small|puṁci
+පුංචි|small||puṁci
 පුක||
 පුච්චනවා|to burn|puccanawā
 පුතා||
@@ -384,7 +384,7 @@ autoExpandExamples.si = `
 රුසියානු||
 රුසියාව||
 ලංකා||
-ලක්ෂය||
+ලක්ෂය|lakh|ˈla§k§sə§jə
 ලුණු|salt|luṇu
 ලූණු||
 ලූනු||
@@ -402,7 +402,7 @@ autoExpandExamples.si = `
 වර්ණ||
 වලසා||
 වලිගය|tail|waligaya
-ව්‍යාජ||
+ව්‍යාජ|fake||vyāja
 වාතය||
 වැටෙනවා|to fall|wæṭenawā
 වැතිරෙනවා|to lie (as in a bed)|wætirenawā
@@ -416,7 +416,7 @@ autoExpandExamples.si = `
 විස්ස||
 වීසි කරනවා|to throw|wīsi karanawā
 වේදනාව||
-ශ්‍රී ලංකා||
+ශ්‍රී ලංකා|Sri Lanka||śrī laṁkā
 ශ්‍රී ලංකාව||
 ශාක||
 ශීතකරණය||
