@@ -56,7 +56,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->16 April, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->19 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -1858,7 +1858,7 @@ geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="t
 
 
 <section id="segments">
-<h2>Text segmentation</h2>  
+<h2>Typographic units</h2>  
 
 
 <p>Tamil principally uses word boundaries for <a href="#linebreak">line-breaking</a> and basic <a href="#justification">justification</a>, but uses grapheme boundaries for other operations that work at the sub-word level.</p>
@@ -1904,8 +1904,7 @@ geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="t
 <td><span class="eg" lang="ta">உலர்ந்தம்</span></td>
 </tr>
 </table>
-<p>In Tamil the equivalent of the visarga </p>
-<p><mark>Grapheme clusters.</mark> This  kind of  typographic unit can be realised using <a href="../glossary/index.html#graphemecluster">Unicode grapheme clusters</a>.</p>
+<p>In Tamil the equivalent of the visarga, <span class="codepoint" translate="no"><bdi lang="ta">&#x0B83;</bdi> [<a href="/scripts/tamil/block#char0B83"><span class="uname">U+0B83 TAMIL SIGN VISARGA</span></a>]</span>, has the general category of Other_Letter and Indic syllabic category of Modifying_Letter. It is it's own typographic unit.</p>
 </section>
 
 
@@ -1930,33 +1929,16 @@ geminated, eg. <span class="charExample" translate="no"><span class="ex" lang="t
 </table>
 
 <p>This difference in segmentation arises from a reinterpretation of the effect of the virama – no special, alternative virama character is available. So this behaviour needs to be triggered by special rules.</p>
-
-<p><mark>Grapheme clusters.</mark> This  kind of  typographic unit <em>cannot</em> be realised using <a href="../glossary/index.html#graphemecluster">Unicode grapheme clusters</a> because they create breaks after a <span class="name">pulli</span>, rather than including the following consonants.</p>
 </section>
 
 
 
-<section id="charorder">
-<h4>Code point sequences</h4>
 
-<p>The following indicates the  expected ordering of Unicode characters within a typographic unit for Tamil. The labels are those used for the Unicode <a target="_blank" href="../apps/listindic/index.html?chars=பதசடகமநனணஞஙவரறழலளயஇஈஉஊஎஏஒஓஅஆஐஔிீுூெேொோாைௌ்ௗ“”‘’!().:;?௹₹ஜ ஸ ஶ ஷ ஹ ஃ ௐ । ॥">Indic Syllabic Categories</a>. Follow that link to see what characters they represent.</p>
-<blockquote>
-<pre>
-Typographic Unit := Consonant
-                    Vowel_Dependent*
+<section id="grapheme_clusters">
+<h4>Grapheme clusters</h4>
 
-                 [for 3 specific cases only]
-                 := Consonant Virama Consonant
-                    Vowel_Dependent*
-
-                 := Consonant
-                    Virama
-
-                 := Modifying_Letter
-
-                 := Vowel_Independent
-</pre>
-</blockquote>
+<p><a href="../glossary/index.html#graphemecluster">Unicode grapheme clusters</a>  correspond to the normal (non-conjunct) typographic units used in Tamil.</p>
+<p> The  kind of  typographic unit that includes conjuncts <em>cannot</em> be realised using Unicode grapheme clusters because they create breaks after a <span class="name">pulli</span>, rather than including the following consonants.</p>
 </section>
 
 
@@ -1973,11 +1955,17 @@ Typographic Unit := Consonant
 
 
 
-<section id="word">
-<h3>Word boundaries</h3>
-<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
-<p>Words are  separated by spaces. Tamil words are often quite long because they bind together multiple morphemes.</p>
-<p>Word-level segmentation is used for <a href="#linebreak">line-breaking</a>.</p>
+
+<section id="charorder">
+<h3>Code point sequences</h3>
+
+<p>The following indicates the  expected ordering of Unicode characters within a Tamil combining character sequence. The labels are those used for the Unicode <a target="_blank" href="../apps/listindic/index.html?chars=பதசடகமநனணஞஙவரறழலளயஇஈஉஊஎஏஒஓஅஆஐஔிீுூெேொோாைௌ்ௗ“”‘’!().:;?௹₹ஜஸஶஷஹஃௐ।॥">Indic Syllabic Categories</a>. Follow the links to see what characters are represented by a given label.</p>
+
+<ol>
+<li><a href="../apps/listindic/index.html?chars=பதசடகமநனணஞஙவரறழலளயஜஸஶஷஹ" target="_blank">Consonant</a> (23) <bdi class="grammar">|</bdi> <a href="../apps/listindic/index.html?chars=இஈஉஊஎஏஒஓஅஆஐஔ" target="_blank">Vowel_Independent</a> (12)</li>
+
+<li><a href="../apps/listindic/index.html?chars=்" target="_blank">Virama</a>  <bdi class="grammar">|</bdi> <a href="../apps/listindic/index.html?chars=ிீுூெேொோாைௌௗ" target="_blank">Vowel_Dependent</a> (12)</li>
+</ol>
 </section>
 </section>
 
@@ -1995,6 +1983,16 @@ Typographic Unit := Consonant
 
 <section id="inline">
 <h2>Punctuation &amp; inline features</h2>
+
+
+<section id="word">
+<h3>Word boundaries</h3>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+<p>Words are  separated by spaces. Tamil words are often quite long because they bind together multiple morphemes.</p>
+<p>Word-level segmentation is used for <a href="#linebreak">line-breaking</a>.</p>
+</section>
+
+
 
 
 
