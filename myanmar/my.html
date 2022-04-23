@@ -58,7 +58,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->22 April, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->23 April, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -3334,9 +3334,8 @@ and all stops are pronounced <span class="ipa">ʔ</span>, eg.
 
 <p><code>(Kinzi)? Letter (Invisible_Stacker Consonant)? Combining_mark*</code></p>
 <p>A minimal  typographic unit is usually equivalent to a CCS (but see <a class="secref">grapheme_clusters</a> below), however <span class="codepoint" translate="no"><bdi lang="my">&#x1039;</bdi> [<a href="/scripts/myanmar/block#char1039"><span class="uname">U+1039 MYANMAR SIGN VIRAMA</span></a>]</span> binds adjacent CCS's together into a single typographic unit.</p>
-<p> Burmese <mark>graphemes that include a syllable nucleus</mark>  usually begin with a consonant, but can also begin with an independent vowel. If one classes <span class="codepoint" translate="no"><bdi lang="my">&#x1021;</bdi> [<a href="/scripts/myanmar/block#char1021"><span class="uname">U+1021 MYANMAR LETTER A</span></a>]</span> as an independent vowel, it is one that can be followed by vowel-signs as well as tone marks, but otherwise independent vowels are typically followed by a tone mark only, if anything.</p>
 
-<p> The <a href="#kinzi"><span class="name">kinzi</span></a> is the sequence <span class="codepoint" translate="no"><bdi lang="my">&#x1004;&#x103A;&#x1039;</bdi> [<a href="/scripts/myanmar/block#char1004"><span class="uname">U+1004 MYANMAR LETTER NGA</span></a> + <a href="/scripts/myanmar/block#char103A"><span class="uname">U+103A MYANMAR SIGN ASAT</span></a> + <a href="/scripts/myanmar/block#char1039"><span class="uname">U+1039 MYANMAR SIGN VIRAMA</span></a>]</span>, which is unusual  in that the first consonant in the cluster appears above the second, rather than the normal arrangement where the second is subjoined to the first. It is also unusual in that it does this even though the first consonant is followed by an <span class="name">asat</span> sign. Nevertheless, it and the following consonant still follow the CCS+Virama+CSS pattern for graphemes.</p>
+<p>Burmese uses different code points for indicating syllable-final characters and for stacking.</p>
 
 <p>Combining marks may include characters with the following Indic syllabic categories:</p>
 
@@ -3350,6 +3349,10 @@ and all stops are pronounced <span class="ipa">ʔ</span>, eg.
 <li><a href="../apps/listindic/index.html?chars=်">Pure_Killer</a> (see <a class="secref">finals</a>)</li>
 </ol>
 
+<p> Burmese <mark>graphemes that include a syllable nucleus</mark>  usually begin with a consonant, but can also begin with an independent vowel. If one classes <span class="codepoint" translate="no"><bdi lang="my">&#x1021;</bdi> [<a href="/scripts/myanmar/block#char1021"><span class="uname">U+1021 MYANMAR LETTER A</span></a>]</span> as an independent vowel, it is one that can be followed by vowel-signs as well as tone marks, but otherwise independent vowels are typically followed by a tone mark only, if anything.</p>
+
+<p> The <a href="#kinzi"><span class="name">kinzi</span></a> is the sequence <span class="codepoint" translate="no"><bdi lang="my">&#x1004;&#x103A;&#x1039;</bdi> [<a href="/scripts/myanmar/block#char1004"><span class="uname">U+1004 MYANMAR LETTER NGA</span></a> + <a href="/scripts/myanmar/block#char103A"><span class="uname">U+103A MYANMAR SIGN ASAT</span></a> + <a href="/scripts/myanmar/block#char1039"><span class="uname">U+1039 MYANMAR SIGN VIRAMA</span></a>]</span>, which is unusual  in that the first consonant in the cluster appears above the second, rather than the normal arrangement where the second is subjoined to the first. It is also unusual in that it does this even though the first consonant is followed by an <span class="name">asat</span> sign. Nevertheless, it and the following consonant still follow the CCS+Virama+CSS pattern for graphemes.</p>
+
 <p> The following examples show simple typographic units that begin with a single consonant or independent vowel:</p>
 
 <p class="instructions">Click on the word to see the components.</p>
@@ -3359,7 +3362,7 @@ and all stops are pronounced <span class="ipa">ʔ</span>, eg.
 <tr><td><img src="images/s_restaurant.png" alt="ထမင်းဆိုင်" class="ex" lang="my"></td><td><span class="eg transc" lang="my">ထမင်းဆိုင်</span></td></tr>
 </table>
 <p>These typographic units also include consonant stacks, which generally appear only in word medial positions in Burmese. Stacks do not occur across word boundaries, as they do in some other scripts.</p>
-<p>The following words contain examples that show typographic units which begin with a consonant cluster:</p>
+<p>The following words contain  typographic units which begin with a consonant cluster:</p>
 <p class="instructions">Click on the word to see the components.</p>
 
 <table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
@@ -3375,8 +3378,6 @@ and all stops are pronounced <span class="ipa">ʔ</span>, eg.
 <table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
 <tr><td><img src="images/s_garlic.png" alt="ကြက်သွန်ဖြူ" class="ex" lang="my"></td><td><span class="eg" lang="my">ကြက်သွန်ဖြူ</span></td></tr>
 </table>
-
-<p>Burmese, then, unlike some other scripts, uses different code points for indicating syllable-final characters and for stacking.</p>
 </section>
 
 
@@ -3450,6 +3451,19 @@ and all stops are pronounced <span class="ipa">ʔ</span>, eg.
 
 <p>Ordering characters as shown above avoids potential ambiguities and maximises the likelihood of success when rendering the text.</p>
 </section>
+
+
+
+
+
+
+<section id="words">
+<h3>Word boundaries</h3>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+<p>Myanmar script doesn't visually separate words in a phrase.</p>
+<p>There is, however, a concept of words. Native Burmese words are typically monosyllabic, but there are also multisyllabic words, and these should not be broken during line wrapping.</p>
+<p>Consonants are not stacked across word boundaries. As consequence, it is easier to apply word-based line-breaking.</p>
+</section>
 </section>
 
   
@@ -3458,19 +3472,6 @@ and all stops are pronounced <span class="ipa">ʔ</span>, eg.
   
 <section id="inline">
 <h2>Punctuation &amp; inline features</h2>  
-
-
-
-<section id="words">
-<h3>Word boundaries</h3>
-<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
-<p>Myanmar script doesn't separate words in a phrase.</p>
-<p>There is, however, a concept of words. Native Burmese words are typically monosyllabic, but there are also multisyllabic words, and these should not be broken during line wrapping.</p>
-<p>Consonants are NOT stacked across word boundaries. As consequence, it is easier to apply word-based line-breaking.</p>
-</section>
-
-
-
 
 
 
