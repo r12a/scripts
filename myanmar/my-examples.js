@@ -20,11 +20,11 @@ autoExpandExamples.my = `
 ကင်းစီး|kinzi|kɪ́§ɴ.§zí
 ကစား|to play|ɡəzá|ka.ca:
 ကစ်|||kac
-ကဏ္ဍ|section|kàɴda̰
+ကဏ္ဍ|section|kà§ɴ§da̰
 ကတ်|card|ka§ʔ|kat
 ကနေဒါ|||ka.neda
 ကန့်|||kan.
-ကန်|lake|kàɴ|kan
+ကန်|lake|kà§ɴ|kan
 ကန်တော့|||kantau.
 ကန်း|||kan:
 ကပ်|||kap
@@ -42,7 +42,7 @@ autoExpandExamples.my = `
 ကရင်|||ka.rang
 ကလာပ်စည်း|||ka.lapcany:
 ကလောင်|||ka.laung
-ကလေး|child|kʰəlé|ka.le:
+ကလေး|child|kʰə§lé|ka.le:
 ကာ|||ka
 ကာဂျစ်စတန်|||kagyacca.tan
 ကာဇက်စတန်|||kajakca.tan
@@ -51,8 +51,8 @@ autoExpandExamples.my = `
 ကားရုံ|||ka:rum
 ကိတ်|||kit
 ကို|||kui
-ကိုက်|to bite|kaiʔ|kuik
-ကိုင်|to hold|kàiɴ|kuing
+ကိုက်|to bite|kai§ʔ|kuik
+ကိုင်|to hold|kài§ɴ|kuing
 ကိုပင်ဟေဂင်မြို့|||kuipanghegangmrui.
 ကိုရမ်ကျမ်း|||kuiramkyam:
 ကိုရီးယား|||kuiri:ya:
@@ -61,7 +61,7 @@ autoExpandExamples.my = `
 ကိုးကွယ်|||kui:kwai
 ကိုးဆယ်|||kui:hcai
 ကု|||ku.
-ကုတ်|to scratch|kouʔ|kut
+ကုတ်|to scratch|kou§ʔ|kut
 ကုန်|||kun
 ကုန်ရုံ|||kunrum
 ကုပ်|||kup
@@ -77,21 +77,21 @@ autoExpandExamples.my = `
 ကောက်|||kauk
 ကောက်ညှင်း|sticky rice|kaʊ§ʔ.§ɲ̥ɪ́§ɴ
 ကောင်|||kaung
-ကောင်း|good|káuɴ|kaung:
+ကောင်း|good|káu§ɴ|kaung:
 ကောင်းကင်|||kaung:kang
 ကော်|glue|kɔ̀|kau
 ကဲ|||kai:
 ကဲ့|||kai.
 ကံ|||kam
 ကျ|to fall|tɕa̰|kya.
-ကျဉ်း|narrow|tɕíɴ|kyany:
-ကျဉ်းကျပ်|narrow|tɕíɴtɕaʔ|kyany:kyap
+ကျဉ်း|narrow|tɕí§ɴ|kyany:
+ကျဉ်းကျပ်|narrow|tɕí§ɴ§tɕa§ʔ|kyany:kyap
 ကျနော်|||kya.nau
-ကျပ်|to be tight|tɕaʔ
+ကျပ်|to be tight|tɕa§ʔ
 ကျပ်သား|||kyapsa:
 ကျမ|||kya.ma.
-ကျယ်|wide|tɕɛ̀|kyai
-ကျယ်ဝန်း|wide|tɕɛ̀wúɴ|kyaiwan:
+ကျယ်|wide|tɕɛ̀§|kyai
+ကျယ်ဝန်း|wide|tɕɛ§̀wú§ɴ|kyaiwan:
 ကျား|tiger|tɕá
 ကျီး|||kyi:
 ကျီးကန်း|||kyi:kan:
@@ -261,7 +261,7 @@ autoExpandExamples.my = `
 စောင့်တယ်|to wait|sa̰ʊ§ɴ.§d§ɛ̀
 စောင်|||caung
 စေး|||ce:
-စံပယ်|||campai
+စံပယ်|jasmine|zə§b§ɛ̀|campai
 စျေး|market|zé
 စွန်|||cwan
 စွမ်း|||cwam:
@@ -336,7 +336,7 @@ autoExpandExamples.my = `
 တချို့|some|tə.§tɕʰo̰
 တစပြင်|||ta.ca.prang
 တစ်|one|tiʔ|tac
-တစ်ဆယ်|ten|tə§ʔ.§sʰɛ̀
+တစ်ဆယ်|ten|tə§ʔ.§sʰ§ɛ̀
 တစ်သိန်း|hundred thousand|tə.§–§θéɪ§ɴ
 တဆယ်|||ta.hcai
 တတ်|to know|taʔ|tat
@@ -687,7 +687,7 @@ autoExpandExamples.my = `
 ရင်ခွဲရုံ|||ranghkwai:rum
 ရင်ပတ်|||rangpat
 ရင်ဘတ်|breast|jìɴbaʔ|rangbhat
-ရစ်|pheasant|jɪʔ
+ရစ်|pheasant|jɪ§ʔ
 ရန်ကုန်|Rangoon|jà§ɴ.§gòʊ§ɴ
 ရန်ဖက်|||ranhpak
 ရန်ဖြစ်|to fight|jàɴpʰjiʔ|ranhprac
