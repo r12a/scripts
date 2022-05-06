@@ -1,4 +1,6 @@
 defList={
+"bccs": `A <a class="termref" target="_blank" href="../glossary/index.html#ccs">BCCS (base plus combining character sequence)</a> includes a (single) base (consonant, vowel, or digit) plus any combining marks and ZWJ and ZWNJ that immediately follow it. When a BCCS contains certain characters (such as viramas), multiple BCCSs may combine to make a <a class="termref" target="_blank" href="../glossary/index.html#typographicunit">typographic unit</a>, which is a unit of text that is not split during a particular text operation.`,
+
 "checked": '\'Checked\' means ending in the sound <span class="ipa">-p</span>, <span class="ipa">-t</span>, <span class="ipa">-k</span>, or <span class="ipa">-ʔ</span>. \'Unchecked\' means ending in  sonorants <span class="ipa">m, n, ŋ, w, j</span> or vowels.</p>',
 
 "circumgraph": 'When a single vowel-sign code point produces glyphs on more than one side of the consonant base, it is referred to as a circumgraph.',
@@ -11,7 +13,7 @@ defList={
 
 "contourtonelanguage": 'A contour tone language has patterns where the pitch moves up and down over the course of a syllable. (Compare with register tone languages.)',
 
-"ccs": `A <a class="termref" target="_blank" href="../glossary/index.html#ccs">CCS (combining character sequence)</a> includes a base (consonant, vowel, or digit) plus all the combining marks plus ZWJ and ZWNJ that are attached to it. To simplify usage, this document includes a base with no following characters in the definition of CCS. When a CCS contains certain characters (such as viramas), multiple CCSs may combine to make a <a class="termref" target="_blank" href="../glossary/index.html#typographicunit">typographic unit</a>, which is a unit of text that is not split during a particular text operation.`,
+"ccs": `A <a class="termref" target="_blank" href="../glossary/index.html#ccs">CCS (combining character sequence)</a> includes an optional base (consonant, vowel, or digit) plus all the combining marks and ZWJ and ZWNJ that immediately follow it. See also <a href="#bccs">BCCS</a>.`,
 
 "grapheme": `A <a class="termref" target="_blank" href="../glossary/index.html#grapheme">grapheme</a> is a user-perceived unit of text. Text operations that use graphemes as a unit of text include line-breaking, forwards deletion, cursor movement & selection, character counts, text spacing, text insertion, justification, case conversions, and sorting.  The Unicode Standard uses generalised rules to define \'<a class="termref" target="_blank" href="../glossary/index.html#graphemecluster">grapheme clusters</a>\', which approximate the likely grapheme boundaries in a writing system, however they don't work well with many complex scripts.`,
 
