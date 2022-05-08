@@ -21,11 +21,11 @@ reflist = {
 */
 
 "ab": {
-"authors": "",
-"title":"Batak Surat",
+"authors": "aksara-batak",
+"title":"Batak Script",
 "retr": "Apr 2022",
 "publisher": "",
-"url":"https://aksara-batak.com/",
+"url":"https://aksara-batak.com/courses/batak-script-i/?lang=en",
 "reviewed":true
 },
 
