@@ -88,8 +88,8 @@ for (var n=0;n<wordList.length;n++) {
     fields = wordList[n].split('|')
     fields[TERM] = ' '+fields[TERM]+' '
     fields[IPA] = ' '+fields[IPA]+' '
-    fields[IPA] = fields[IPA].replace(/§/g,'').replace(/–/g,'')
-    console.log(fields[IPA].replace(/§/g,'').replace(/–/g,''))
+    fields[IPA] = fields[IPA].replace(/§/g,'').replace(/–/g,'').replace(/‹/g,'').replace(/›/g,'')
+    console.log(fields[IPA].replace(/§/g,'').replace(/–/g,'').replace(/‹/g,'').replace(/›/g,''))
 	if (typeof fields[TRANS] === 'undefined' || fields[TRANS] === '') {
         fields[TRANS] = ''
         }
