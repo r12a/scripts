@@ -77,7 +77,7 @@ reflist = {
 "authors": "Wikipedia",
 "title":"Bet",
 "url":"https://en.wikipedia.org/wiki/Bet_(letter)",
-"lang": new Set(['syr']),
+"lang": new Set(['syr','aii']),
 },
 
 "wh": {
@@ -87,10 +87,17 @@ reflist = {
 "lang": new Set(['syr']),
 },
 
+"ws": {
+"authors": "Wikipedia",
+"title":"Suret language",
+"url":"https://en.wikipedia.org/wiki/Suret_language",
+"lang": new Set(['aii']),
+},
+
 "w": {
 "authors": "Wikipedia",
 "title":"Syriac alphabet",
-"url":"httphttps://en.wikipedia.org/wiki/Syriac_alphabet",
+"url":"https://en.wikipedia.org/wiki/Syriac_alphabet",
 "lang": new Set(['syr','aii']),
 },
 

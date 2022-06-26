@@ -28,10 +28,10 @@ autoExpandExamples.aii = `
 ܐܘܪܝܦܝ|Europe||urupi
 ܐܘܪܫܠܡܝ|Jerusalemite||orišlimaya
 ܐܵܘܬܵܓ݂|room, study|ʔoː§‹§ta§ɣ|awtaḡ||ܐܘܬܓ
-ܐܝܼܣܪܵܐܹܝܠ|Israel|–§i§s.§rɑː§ʔe§‹§ll|īsraʾēl||ܐܝܣܪܐܝܠ
-ܐܝܼܪܵܢ|Iran|–§īː§ra§n|īran||ܐܝܪܢ
+ܐܝܼܣܪܵܐܹܝܠ|Israel|–§i§s.§rɑː§ʔe§‹§l|īsraʾēl||ܐܝܣܪܐܝܠ
+ܐܝܼܪܵܢ|Iran|–§iː§ra§n|īran||ܐܝܪܢ
 ܐܝܼܕ݂ܵܗ̇|her hand|–§i§ðɑ§–
-ܐܝܼܛܵܠܝܼܵܐ|Italy|–§īː§tˤaː§l§ja§–|īṭalya||ܐܝܛܠܝܐ	
+ܐܝܼܛܵܠܝܼܵܐ|Italy|–§iː§tˤaː§l§ija§–|īṭaliya||ܐܝܛܠܝܐ	
 ܐܝܼܠܵܢܵܐ|tree|–§i§lɑ§nɑ§–
 ܐ݇ܟܘܼܡܵܐ|black|–§k§uː§mɑː§–|kuma||ܐܟܘܡܐ
 ܐܲܠܡܵܢܝܼܵܐ|Germany|a§l.§maː§n§i.ja§–|ālmaniya||ܐܠܡܢܝܐ
@@ -52,14 +52,14 @@ autoExpandExamples.aii = `
 ܐܵܕܵܪ|March|aː§da§r|adar||ܐܕܪ
 ܐܵܕ݂ܵܪ|March|aː§ða§r|adar||ܐܕܪ
 ܐܵܗܵܐ|this|aː§haː§–|aha||ܐܗܐ
-ܐܵܬܘܿܪ|Assyria|ɑː§t§ʊ§r|||ܐܬܘܪ
-ܐܵܬ݂ܘܿܪ|Assyria|ɑː§θ§ʊ§r|||ܐܬܘܪ
+ܐܵܬܘܿܪ|Assyria|ɑː§t§ʊ§r|ātor||ܐܬܘܪ
+ܐܵܬ݂ܘܿܪ|Assyria|ɑː§θ§ʊ§r|ātor||ܐܬܘܪ
 ܐܹܝܠ|God|e§‹§l|el||ܐܝܠ
-ܐ݇ܬܹܐ ܠܵܗ̇|she came|–§te§lɑ§–
-ܒ|by,at|b|b
+ܐ݇ܬܹܐ ܠܵܗ̇|she came|–§te§–§ §lɑ§–
+ܒ|by, at|b-|b
 ܒܵܬܹ̈ܐ|houses|bɑ§tte§–|bāttē||ܒܬܐ
 ܒܲܝܬܵܐ|house|ˈba§j.§tɑ§–|bāyta|standard, Urmian:ˈbeːtɑ|ܒܝܬܐ
-ܒܲܝܬ̣ܵܐ|house|ˈbeː§θɑ§–|bāyta|Nineveh|ܒܝܬܐ
+ܒܲܝܬ݂ܵܐ|house|ˈbeː§θɑ§–|bāyta|Nineveh|ܒܝܬܐ
 ܒܐܵܗܵܐ|by this|b§ɑ§hɑ§–|b-ʾāhāʾ
 ܒܵܒܵܐ|father, dad|bɑːbɑː|baba||ܒܒܐ
 ܒܘܼܓ̰ܪܹ̈ܐ|cultivated||bûʤreʾ
@@ -69,7 +69,7 @@ autoExpandExamples.aii = `
 ܒܢܵܬܹ̈ܐ|girls|bnɑte|||x
 ܒܪܝܼܬܵܐ ܝܗ: 1-6|Genesis 15:1-6||||x
 ܒܵܪܹܟ|to kneel|ˈbɑː§rə§k|barek|Urm:ˈbɒ.ɾɪk|ܒܪܟ
-ܒܪܵܬܵܐ ܘܝܵـܠܵܐ|girl and boy|b§rɑ§tɑ§–§ §wa§yɑ§–§lɑ§–||||x
+ܒܪܵܬܵܐ ܘܝܵـܠܵܐ|girl and boy|b§rɑ§tɑ§–§ §w§yɑ§–§lɑ§–||||x
 ܒܵܬ݇ܪ|after|ba§–§r|bar|Nin:baːθər|ܒܬܪ
 ܒܲܟ݂ܬܵܐ|wife|ba§ħ§tɑ§–|||x
 ܒܵܒܝܼ|my father|bɑ§b§i||||x
@@ -93,7 +93,7 @@ autoExpandExamples.aii = `
 ܕܵܫܢܵܐ ܠܲܒܪܵܬܵܐ|gift to the girl|dɑ§ʃ§nɑ§–§ §la§b§rɑ§tɑ§–|||x
 ܗܵܘܢܵܢܹ̈ܐ|wise|hɑwnane|||x
 ܗܵܘܵܐ|air|hɑː§wɑː§–|hāwā||ܗܘܐ
-ܘ|and|w|||x
+ܘ|and|w-|||x
 ܘܲܪܵܩܵܐ|paper, map|wæ.§raː§qaː§–|wāraqa||ܘܪܩܐ
 ܘܲܪܵܩܬܵܐ|document, playing card|wa.§ra§qq§tɑ§–|wāraqta||ܘܪܩܬܐ
 ܘܲܪܵܩܬ݂ܵܐ|document, playing card|wa.§ra§qq§θɑ§–|wāraqta|Nineveh|ܘܪܩܬܐ
@@ -130,7 +130,7 @@ autoExpandExamples.aii = `
 ܟ̰ܵܐܝ|tea|t͡ʃaː§–§j|čay|also: t͡ʃaːʔi|ܟ̰ܐܝ
 ܟܘܼܣܝܼܬܵܐ|head covering, hat|k§ʊ.§s§iː§ta§–|kusīta|Urm:tʃo.siːta|ܟܘܣܝܬܐ
 ܟܲܠܒ݂ܵܐ|dog|kæ§l.§wɑ§–|kālwa|Urm:tʃæl.bɑ; Nin:kal.bɑ|ܟܠܒܐ
-ܠ|to|l|||x
+ܠ|to|l-|||x
 ܠܸܒܢܵܢ|Lebanon|li§bb§na§n|libnan||ܠܒܢܢ
 ܠܸܒ݂ܢܵܢ|name of a mountain range|ljuː§‹§na§n|liwnan||ܠܒܢܢ
 ܠܹܘܒ݂ܹܐ|Libya|liː§uː§we§–|lewe||ܠܘܒܐ
@@ -144,8 +144,9 @@ autoExpandExamples.aii = `
 ܡܒܵܪܲܟ݂ܬܵܐ ܕܒܵܬܹ̈ܐ|housewarming||mbaraḵta d-bate||ܡܒܪܟܬܐ ܕܒܬܐ
 ܡܘܼܫܟܸܠܵܐ|problem|m§ʊ§ʃʃ§ki.§la§–|muškila||ܡܘܫܟܠܐ
 ܡܘܿܕܵܐ|bowl|m§o§dɑ§–|||x
-ܡܝܼܫ̰|fog|m§i§ʒ|miš||ܡܝܫ
+ܡܝܼܫ̰|fog|m§iː§ʒ|miš||ܡܝܫ
 ܡܲܠܟܵܐ|king|ma§l.§kɑː§–|mālka|Urm:mal.t͡ʃɑː|ܡܠܟܐ
+ܡܲܠܟܹ̈ܐ|kings|ma§l.§ke§–||ܡܠܟܐ
 ܡܲܠܟܘܼܬܵܐ ܡܚܲܝܕܬܵܐ|United Kingdom|ma§l.§k§ʊː§ta§–§ §m§xɛː§‹§d.§ta§–|mālkuta mḳaydta|Urm:mal.tʃʊːta mxɛːd.ta|ܡܠܟܘܬܐ ܡܚܝܕܬܐ
 ܡܸܨܪܹܝܢ|Egypt|mi§sˤ.§riː§‹§n|miṣrēn||ܡܨܪܝܢ
 ܡܵܪܵܟܸܫ|Morocco|maː§raː§ki§ʃ|marakiš|also Marrakesh|ܡܪܟܫ
@@ -205,7 +206,7 @@ autoExpandExamples.aii = `
 ܩܘܝܡܐ|subsistence|qujama
 ܩܘܼܝܵܡܵܐܼ|subsistence|q§u§ja§ma§–|qûyamaʾ
 ܩܘܼܠܘܼܓ݂|service||k̭ullux
-ܩܘܼܦܬܵܐ|owl|q§u§p§ta§–|||x
+ܩܘܼܦܬܵܐ|owl|q§ʊ§p§ta§–|||x
 ܩܵܛܵܪ|Qatar|qaː§tˤa§r|qaṭar||ܩܛܪ
 ܩܲܝܛܵܐ|summer|qe§‹§tˤɑ§–|qayṭa||ܩܝܛܐ
 ܩܵܝܵܐ|rock|qɑ§jɑ§–|||x
@@ -244,22 +245,47 @@ autoExpandExamples.aii = `
 ܒ݁ܪܵܬܵ݁ܐ|daughter, girl|b§rɑː§tɑː§–|brata||ܒܪܬܐ
 ܨܘܼܢܵܡܝܼ|tsunami|sˤ§u.§nɑː§m§iː|ṣunamī||ܨܘܢܡܝ
 ܓܵܘ ܐܸܡܵܐ|percent|ɡʊː əm.maː|go imma||ܓܘ ܐܡܐ
+ܐܵܒ|August|a§bb|ab||ܐܒ
+ܓܲܢܬܵܐ|garden|ɡa§n.§tɑː§–|gānta|Urm:d͡ʒan.tɑː; Nin:ɡan.θɑː|ܓܢܬܐ
+ܦܵܝܹܫ|to become|pɑːjəʃ|payeš||ܦܝܫ
+ܛܵܒ݂ܬܵܐ|goodness|tˤoː§‹§tɑː§–|ṭawta|Urm:tˤɑvːtɑː; Nin:tˤɑwːθɑː|ܛܒܬܐ
+ܓ݂ܵܠܹܒ|to overcome|ɣɑː§lə§b|ḡaleb||ܓ݂ܠܒ
+ܓ̰ܵܘܹܓ̰|to advance, walk|dʒɑː§wə§dʒ|jawej||ܓ̰ܘܓ̰
+ܛܵܡܵܛܵܐ|tomato|tˤɑː§mɑː§tˤɑː§–|ṭamaṭa||ܛܡܛܐ
+ܛܲܒܵܚ|August|tˤab.bax|ṭabbaḳ|Nin:tˤab.baħ|ܛܒܚ
+ܟ̰ܸܠܲܝܩܵܐ|strawberry|tʃə§l.leː§‹§qaː§–|čillayqa||ܟ̰ܠܝܩܐ
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ܟ̰ܵܝܹܕ|to invite|t͡ʃɑː§jə§d|čayed||ܟ̰ܝܕ
+ܟ̰ܝܼܟܵܠܹܬܹܐ|chocolate|ˈt͡ʃ§i.§ka.§leː§teː§–|čīkalete||ܟ̰ܝܟܠܬܐ
+ܟ̰ܵܡܹܥ|to quench, extinguish|t͡ʃɑː§me§ʕʕ|čameʿ|Urm:t͡ʃɑːmeʔː|ܟ̰ܡܥ
+ܟܹܐ|twenty-one|kiː§–|ke|Urm:tʃiː|ܟܐ
+ܟܲܒܝܼܪܵܐ|large, massive|ka§b.b§iː§rɑː§–|kābīra|Urm:t͡ʃab.biːrɑː|ܟܒܝܪܐ
+ܟܘܼܒܵܐ|thorn|k§u§b.bɑː§–|kubba|Urm:t͡ʃub.bɑː|ܟܘܒܐ
+ܟܘܼܡܵܬܪܵܐ|pear|k§ʊː§mɑː§t§rɑː§–|kumatra|Urm:tʃɑːmʊːtrɑː; Nin:kʊːmɑːθrɑː|ܟܘܡܬܪܐ
+ܟܵܘܬܵܐ|window|k§oː§tɑ§–|kawta|Nin:kawːθɑ|ܟܘܬܐ
+ܟܝܼܘܝܼ|kiwi|k§iː§w§iː|kīwī||ܟܝܘܝ
+ܟܝܵܢܵܐ|cyan|k§j.ɑː§nɑː§–|kyana||ܟܝܢܐ
+ܟܵܝܹܦ|to bow|kɑː§jə§p|kayep||ܟܝܦ
+ܟܵܟ̰ܹܚ|to be tired|kɑː§t͡ʃə§xx|kačeḳ||ܟܟ̰ܚ
+ܟܵܠܹܐ|to stop|kɑː§leː§–|kale||ܟܠܐ
+ܟܲܠܒ݂ܵܐ|dog|kæ§l.§wɑ§–|kālwa|Urm:tʃæl.bɑ; Nin:kal.bɑ|ܟܠܒܐ
+ܟܵܢܘܿܢ|winter month|kaː§n§ʊ§n|kanon|Urm:tʃaːnʊn|ܟܢܘܢ
+ܡܲܐܟ݂ܸܠ|to feed|ma§ʔ.§xə§l|māʾḳil|Urm:maːxəl|ܡܐܟܠ
+ܣܠܘܿܒ݂ܵܟܵܝܵܐ|Slovakia|s§l§o.§vaː§ki.§jaː§–|slovakaya||ܣܠܘܒܟܝܐ
+ܒܹܝܬ ܡܲܟ̰ܡܲܥܬܵܐ|fire station|be§‹§tt§‿§ma§t͡ʃ.§ma§ʕʕ§tɑː§–|bēt māčmāʿta|Urm:betː‿mat͡ʃ.meːtɑː; Nin:beθː‿mat͡ʃ.maʕːθɑː|ܒܝܬ ܡܟ̰ܡܥܬܐ
+ܓܵܚܹܟ|to laugh|ɡɑː§xə§k|gaḳek|Urm:d͡ʒɑːxət͡ʃ|ܓܚܟ
+ܕܵܐܟ݂ܝܼܘܼܬܵܐ|quality|dɑː§–§x§iː§uː§tɑ§–|daḳīuta|Nin:dɑːxiːuːθɑ|ܕܐܟܝܘܬܐ
+ܕܘܼܟܵܢܵܐ|shop, store|d§u.§kɑː§nɑː§–|dukana||ܕܘܟܢܐ
+ܕܵܟ݂ܹܐ|to clean, purify|daː§xeː§–|daḳe||ܕܟܐ
+ܙܓ݂ܘܼܓ݂ܝܼܬܵܐ|glass|z§ɣ§oː§ɣ§iː§tɑ§–|zḡoḡīta|Nin:zɣoːɣiːθɑ|ܙܓܘܓܝܬܐ
+ܡܲܟܬܵܒ݂ܬܵܐ|desk|ma§k.§toː§‹§tɑ§–|māktawta|Urm:mat͡ʃ.tɑvːtɑ; Nin:mak.θɑwːθɑ|ܡܟܬܒܬܐ
+ܙܵܒ݂ܹܢ|to buy|zɑː§wə§n|zawen|Urm:zɑːvən|ܙܒܢ
+ܨܵܘܸܠܬܵܐ|shoe|sˤaː§wi§l.§taː§–|ṣawīlta||ܨܘܠܬܐ
+ܒܹܝܬ ܨܵܘܒܹ̈ܐ|university|be§tt§‿§sˤ§oː§beː§–|bēt ṣawbe||ܒܝܬ ܨܘܒܐ
+ܙܵܕܹܥ|to be afraid|zɑː§də§ʕ|zadeʿ|Urm:zɑd.deʔ|ܙܕܥ
+ܦܵܪܹܥ|to pay|pɑː§rə§ʕʕ|pareʿ|Urm:pɑ.reː|ܦܪܥ
+ܣܘܼܪܝܬ|Suret|ˈsu:rɪtʰ||or ˈsu:rɪθ|x
 
 
 
