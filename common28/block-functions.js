@@ -629,7 +629,35 @@ function convertTranscriptionData (lang) {
 			var para = ''
 			for (var i=0;i<cols.othertranscriptions.length;i++) {
 				if (spreadsheetRows[insertTranscriptions[t].textContent] && spreadsheetRows[insertTranscriptions[t].textContent][cols.othertranscriptions[i][0]]) {
-					para += cols.othertranscriptions[i][1]+': <span class="trans">'+spreadsheetRows[insertTranscriptions[t].textContent][cols.othertranscriptions[i][0]]+'</span>'
+					para += cols.othertranscriptions[i][1]+': <span class="transc">'+spreadsheetRows[insertTranscriptions[t].textContent][cols.othertranscriptions[i][0]]+'</span>'
+					if (i<cols.othertranscriptions.length-1) para += '<br>'
+					}
+				}
+			insertTranscriptions[t].innerHTML = para
+			}
+		else { insertTranscriptions[t].outerHTML = '' }
+		}
+	}
+
+
+
+
+
+function convertTranscriptionData (lang) {
+    // adds the Latin transcriptions that are floated right, for a given language
+    // local insertTranscriptions t para 
+    // global cols spreadsheetRows
+	var insertTranscriptions = document.querySelectorAll('.letter.'+lang+' .insertTranscription')
+	console.log("For language ",lang,'Transcriptions to check: ',insertTranscriptions.length)
+	
+	// do the inserted transcription locations
+	for (var t=0;t<insertTranscriptions.length;t++) {
+		if (insertTranscriptions.length > 0 && cols.othertranscriptions && cols.othertranscriptions.length > 0) {
+			var para = ''
+			for (var i=0;i<cols.othertranscriptions.length;i++) {
+				if (spreadsheetRows[insertTranscriptions[t].textContent] && spreadsheetRows[insertTranscriptions[t].textContent][cols.othertranscriptions[i][0]]) {
+                    if (cols.othertranscriptions[i][1]) 					para += cols.othertranscriptions[i][1]+': '
+                    para += '<span class="transc">'+spreadsheetRows[insertTranscriptions[t].textContent][cols.othertranscriptions[i][0]]+'</span>'
 					if (i<cols.othertranscriptions.length-1) para += '<br>'
 					}
 				}
