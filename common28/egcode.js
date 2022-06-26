@@ -1,9 +1,10 @@
 /* jshint strict: false */
-/* globals autoExpandExamples */
+/* globals autoExpandExamples, egList */
 
 window.autoExpandExamples = {}
 // this will contain the vocab information stored in xxx-examples.js for all languages
 // it has to be declared before that page is loaded, so that the .langFilter item can be attached
+var egList = {}
 
 
 function addExamples (langFilter) {
@@ -31,15 +32,16 @@ function addExamples (langFilter) {
     
 	if (typeof langFilter === 'undefined') alert('addExamples call needs to specify a language')
 
+    if (typeof autoExpandExamples[langFilter] === 'undefined') console.log('autoExpandExamples[langFilter] fails for ',langFilter)
     var egArray = autoExpandExamples[langFilter].split("\n")
-	var egList = {}
+	//var egList = {}
 	for (var i=0;i<egArray.length;i++) {
 		if (egArray[i] == '') continue
 		var temp = egArray[i].split('|')
 		egList[temp[0]] = egArray[i]
 		}
-	
-	// find the nodes that correspond to the language in langFilter
+
+    // find the nodes that correspond to the language in langFilter
 	var selector = '.eg[lang='+langFilter+']'
 	var nodes = document.querySelectorAll(selector)
 	//console.log(nodes.length,' example nodes to expand')
@@ -120,7 +122,7 @@ function addExamples (langFilter) {
 		}
     if (! typeof showTransliterations === 'undefined') showTransliterations( document.getElementById('translitToggleCheckbox').checked )
 	egArray = []
-	egList = {}
+	//egList = {}
 	}
 
 
