@@ -6,14 +6,14 @@ reflist = {
 
 "a": {
 "authors": "Aramaic Online Project (2014-2017) edited by Shabo Talay",
-"title":" ܫܠܳܡܐ ܣܘܪܰܝܬ Šlomo Surayt An Introductory Course to Surayt-Aramaic (Turoyo)",
-"url":"https://textbook.surayt.com/en/Level%20A/",
+"title":" ܫܠܳܡܐ ܣܘܪܰܝܬ Šlomo Surayt An Introductory Course to Surayt-Aramaic (Turoyo) (consonants)",
+"url":"https://textbook.surayt.com/en/Level%20A/2.1?content-fragment-id=1747",
 "lang": new Set(['tru']),
 },
 
 "a2": {
 "authors": "Aramaic Online Project (2014-2017) edited by Shabo Talay",
-"title":" ܫܠܳܡܐ ܣܘܪܰܝܬ Šlomo Surayt An Introductory Course to Surayt-Aramaic (Turoyo)",
+"title":" ܫܠܳܡܐ ܣܘܪܰܝܬ Šlomo Surayt An Introductory Course to Surayt-Aramaic (Turoyo) (vowels)",
 "url":"https://textbook.surayt.com/en/Level%20A/2?content-fragment-id=1746",
 "lang": new Set(['tru']),
 },
@@ -56,6 +56,21 @@ reflist = {
 "lang": new Set(['syr']),
 },
 
+"so": {
+"authors": "Erasmus+ Aramaic-Online project (2014–2017)",
+"title":"Surayt Orthography",
+"url":"https://userblogs.fu-berlin.de/wp-includes/ms-files.php?path=/aramaic-ol/&file=2017/08/Surayt-Orthography.pdf",
+"lang": new Set(['tru']),
+},
+
+"ss": {
+"authors": "Shabo Talay (ed)",
+"title":"Šlomo Suryat – An introductory course to Surayt-Aramaic (Turoyo)",
+"url":"https://zenodo.org/record/2682272",
+"date":"2017",
+"lang": new Set(['tru']),
+},
+
 "u": {
 "authors": "Unicode Consortium",
 "title":"The Unicode Standard, Version 13.0",
@@ -63,7 +78,7 @@ reflist = {
 "pages":"390-398",
 "isbn":"978-1-936213-16-0.",
 "url":"https://www.unicode.org/versions/Unicode13.0.0/ch09.pdf",
-"lang": new Set(['syr','aii']),
+"lang": new Set(['syr','aii', 'tru']),
 },
 
 "wa": {
@@ -92,6 +107,13 @@ reflist = {
 "title":"Suret language",
 "url":"https://en.wikipedia.org/wiki/Suret_language",
 "lang": new Set(['aii']),
+},
+
+"wt": {
+"authors": "Wikipedia",
+"title":"Turoyo language",
+"url":"https://en.wikipedia.org/wiki/Turoyo_language",
+"lang": new Set(['tru']),
 },
 
 "w": {
