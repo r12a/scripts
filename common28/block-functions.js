@@ -545,14 +545,14 @@ function addDetails (languageName, langClass, lang, dir, spreadsheet, cols) {
  			    out += '<p class="explainerLink">Show in: '
 
                 if (window.explainerDir) {
-                out += '<a target="_blank" href="/scripts/'+window.explainerDir+'?index='+encodeURIComponent(cchar)+'">script notes index</a> '
+                out += '<a target="_blank" href="../'+window.explainerDir+'.html?showIndex&index='+encodeURIComponent(cchar)+'">script notes index</a> '
                 }
 
                 if (window.explainerDir && window.pickerDir) out += ' &bull; '
 
                 // add a link to the character app
                 if (window.pickerDir) {
-                    out += '<a target="_blank" href="/pickers/'+window.pickerDir+'?text='+encodeURIComponent(cchar)+'">character app</a> '
+                    out += '<a target="_blank" href="../../pickers/'+window.pickerDir+'index.html?text='+encodeURIComponent(cchar)+'">character app</a> '
                     }
 
                 out += '</p>'
