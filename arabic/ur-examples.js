@@ -12,7 +12,7 @@ autoExpandExamples.ur = `
 
 
 آؤ|come|ɑːo
-آیٔین|constitution|ɑː.iːn
+آئین|constitution|ɑː.iːn
 آب حیات|aqua vitae|ɑːb.eː.ɦə.jɑːt̪
 آب و ہوا|weather, climate|ɑːb‿oː‿ɦə.ʋɑː
 آب|now|ɑːb
@@ -27,11 +27,11 @@ autoExpandExamples.ur = `
 آدمی|human being, man|ɑːd̪.miː
 آدهنك|modern, contemporary|ɑː.d̪ʱʊ.nɪk
 آدھا|half|ɑː.d̪ʱɑː
-آذربایٔجان|Azerbaijan|ɑː.zəɾ.bɑː.ɪ.d͡ʒɑːn
+آذربائجان|Azerbaijan|ɑː.zəɾ.bɑː.ɪ.d͡ʒɑːn
 آرام|relaxation|ɑːɾɑːm
 آرزو|wish, desire|ɑːɾ.zuː
 آزادی|freedom, independence|ɑː.zɑː.d̪iː
-آزادیٔ مذہب|freedom of religion|ɑːzɑːdiː ɛ məzhəb
+آزادئ مذہب|freedom of religion|ɑːzɑːdiː ɛ məzhəb
 آزمودہ|experienced|ɑːz.muː.də
 آس|longing, hope|ɑːs
 آسام|Assam|ɑː.sɑːm
@@ -67,7 +67,7 @@ autoExpandExamples.ur = `
 آکھیٹ|hunting, fright|ɑː.kʰeːʈ
 آگار|house, hall|ɑː.ɡɑːɾ
 آیا|nurse maid|ɑː.jɑː
-ابتدایٔی حروف|initials|ɪb.t̪ɪ.d̪ɑː.iː‿ɦʊ.ɾuːf
+ابتدائی حروف|initials|ɪb.t̪ɪ.d̪ɑː.iː‿ɦʊ.ɾuːf
 ابن الوقت|unprincipled|ɪbn.ʊl.ʋəqt̪
 ابن الوقتی|opportunistic|ɪbn.ʊl.ʋəq.t̪iː
 ابهار|emergence|ʊ.bʱɑːɾ
@@ -85,7 +85,7 @@ autoExpandExamples.ur = `
 اثبات|attestation|ɪs.bɑːt̪
 اجازت|authorisation, authority|ɪ.d͡ʒɑː.zət̪
 اجالا|light, dawn|ʊ.d͡ʒɑː.lɑː
-اجوایٔن|anise|əd͡ʒ.ʋɑː.ɪn
+اجوائن|anise|əd͡ʒ.ʋɑː.ɪn
 اَجْگَر|python|əd͡ʒ.ɡəɾ||اجگر
 اجگر|python|əd͡ʒ.ɡəɾ||اَجْگَر
 احباب|friends, companions|əɦ.bɑːb
@@ -132,7 +132,7 @@ autoExpandExamples.ur = `
 اطمینان|trust, satisfaction|ɪt̪.miː.nɑːn
 اعلی|paramount, highest|alɑː||اعلیٰ
 اعلیٰ|paramount, highest|alɑː||اعلی
-افزایٔش|increase, growth|əf.zɑː.ɪʃ
+افزائش|increase, growth|əf.zɑː.ɪʃ
 افسانہ|story, legend|əf.sɑː.nə
 افغانستان|Afghanistan|əf.ɣɑː.nɪs.t̪ɑːn
 افق|horizon|ɑː.fəq
@@ -329,7 +329,7 @@ autoExpandExamples.ur = `
 بکری|goat f.|bək.ɾiː
 بکس|box, chest|bəks
 بکھراو|scattering|bɪkʰ.ɾɑːʋ
-بھایٔی|brother|bʱɑː.iː
+بھائی|brother|bʱɑː.iː
 بھاجن|division (maths)|bʱɑː.d͡ʒən
 بھاروپیہ|Indo=European|bʱɑː.ɾoː.pɪ.jɑː
 بھاری|heavy|bʱɑː.ɾiː
@@ -397,9 +397,9 @@ autoExpandExamples.ur = `
 تگنا|thrice|t̪ɪɡ.nɑː
 تھوک|spit, saliva|t̪ʰuːk
 تھوکنا|to spit|t̪ʰuːk.nɑː
-تہایٔی|third (fraction)|t̪ɪ.ɦɑː.iː
+تہائی|third (fraction)|t̪ɪ.ɦɑː.iː
 تہجی|alphabet, orthography|t̪ə.ɦə.d͡ʒː.iː
-تییٔیس|twenty-three|teiːs
+تیئیس|twenty-three|teiːs
 تیاگ|sacrifice|t̪jɑːɡ
 تیر انداز|archer|t̪iː.ɾən.d̪ɑːz
 تیر اندازی|archery|t̪iː.ɾən.d̪ɑː.ziː
@@ -412,7 +412,7 @@ autoExpandExamples.ur = `
 ثروت|wealth, affluence|səɾ.ʋət̪
 ثقافت|culture|sə.qɑː.fət̪
 جاؤں|I may go|ʤɑːũː
-جایٔپھل|nutmeg|d͡ʒɑː.ɪ.pʰəl
+جائپھل|nutmeg|d͡ʒɑː.ɪ.pʰəl
 جادو|magic, enchantment|d͡ʒɑː.d̪uː
 جامعہ|university|d͡ʒɑː.mɪ.(ʔ)ɑː/d͡ʒɑː.mɪ.jɑː
 جامنی|purple|d͡ʒɑːm.niː
@@ -431,7 +431,7 @@ autoExpandExamples.ur = `
 جسور|bold, brave|d͡ʒə.suːɾ
 جشن|banquet, feast|d͡ʒə.ʃən
 جعلی|fake|d͡ʒɑː.liː
-جغرافیایٔی|geographical|d͡ʒʊɣ.ɾɑː.fɪ.jɑː.iː
+جغرافیائی|geographical|d͡ʒʊɣ.ɾɑː.fɪ.jɑː.iː
 جل|water|d͡ʒəl
 جلانا|to turn on a light|d͡ʒə.lɑː.nɑː
 جلنا|to burn|d͡ʒəl.nɑː
@@ -594,7 +594,7 @@ autoExpandExamples.ur = `
 دیپک|light, lamp|d̪iː.pək
 دیپکا|light, lamp|d̪iː.pɪ.kɑː
 دیکھنا|to look, see|d̪eːkʰ.nɑː
-ذایٔقہ|taste|zɑːj.qɑː
+ذائقہ|taste|zɑːj.qɑː
 ذرہ|particle, atom|zərːə
 ذریعہ|means, way|zə.ɾɪ.jə
 ذکاء|intelligence|zakaː
@@ -616,7 +616,7 @@ autoExpandExamples.ur = `
 رفتار|motion, speed|ɾəf.t̪ɑːɾ
 رمضان|Ramadan|ɾəm.zɑːn
 رنگت|complexion|ɾəŋ.ɡət̪
-رویٔے زمین|the surface of the ground|ruː ɛ zamiːn
+روئے زمین|the surface of the ground|ruː ɛ zamiːn
 روانڈا|Rwanda|ɾə.ʋɑːɳ.ɖɑː
 روزن|crevice, hole|ɾɔː.zən
 روزہ|fast|ɾoː.zɑː
@@ -638,8 +638,8 @@ autoExpandExamples.ur = `
 زہر|poison, venom|zə.ɦəɾ
 زیادتی|injustice|zjɑːd̪.t̪iː/zɪ.jɑːd̪.t̪iː
 سؤر|hog, pig, boar|suː.əɾ
-سایٔنس|science|sɑː.ɪns/sɑː.eːns
-سایٔنسی|scientific|sɑː.ɪn.siː/sɑː.eːn.siː
+سائنس|science|sɑː.ɪns/sɑː.eːns
+سائنسی|scientific|sɑː.ɪn.siː/sɑː.eːn.siː
 ساتواں|seventh|sɑːt̪.ʋɑ̃ː
 ساتھی|companion|sɑː.t̪ʰiː
 ساحل|coast, shore|sɑː.ɦɪl
@@ -662,7 +662,7 @@ autoExpandExamples.ur = `
 سرسوں|mustard|səɾ.sõː
 سرشت|nature, disposition|sə.ɾɪʃt̪
 سرشپ|mustard seed|səɾ.ʂəp
-سرمیٔی|grey|sʊɾ.mə.iː/səɾ.mə.iː
+سرمئی|grey|sʊɾ.mə.iː/səɾ.mə.iː
 سرور|exhiliration, delight|sʊ.ɾuːɾ
 سرونام|pronoun|səɾ.ʋnɑːm
 سرکار|government|səɾ.kɑːɾ
@@ -677,7 +677,7 @@ autoExpandExamples.ur = `
 سلاح|weapon, arms|sɪ.lɑː
 سلام علیکم|salaam alaikum|sə.lɑːm‿ə.lɛː.kʊm
 سلام|greeting|sə.lɑːm
-سمیٔے|time, period|sə.məj
+سمئے|time, period|sə.məj
 سماس|compound word|sə.mɑːs
 سماچار|news, information|sə.mɑː.t͡ʃɑːɾ
 سمجھدار|intelligent|sə.məd͡ʒʱ.d̪ɑːɾ
@@ -754,8 +754,8 @@ autoExpandExamples.ur = `
 شیر پنجاب|Lion of the Punjab|ʃer ɛ pənʤɑːb||شیرِ پنجاب
 شیشہ|glass, mirror|ʃiː.ʃɑː
 شیو|Shiva|ʃiːʋ
-صایِٔب|to the point, well-aimed|sɑː.ɪb||صایٔب
-صایٔب|to the point, well-aimed|sɑː.ɪb||صایِٔب
+صایِٔب|to the point, well-aimed|sɑː.ɪb||صائب
+صائب|to the point, well-aimed|sɑː.ɪb||صایِٔب
 صابر|patient, forbearing|sɑː.bɪɾ
 صابُن|soap|sɑːbʊn||صابن
 صابن|soap|sɑːbʊn||صابُن
@@ -764,7 +764,7 @@ autoExpandExamples.ur = `
 صارفین|users (computing)|sɑː.ɾɪ.fiːn
 صحافی|journalist|sɪ.ɦɑː.fiː/sə.ɦɑː.fiː
 صحیح|right, correct, accurate|sə.ɦiː
-صدایٔے بلند|a high voice|sadɑː ɛ buland
+صدائے بلند|a high voice|sadɑː ɛ buland
 صدر مملکت|president|sə.d̪əɾ.eː.mʊm.lɪ.kət̪
 صفحہ|page|səf.ɦɑː/sə.fɑː
 صَفْحَۂ اَوَّل‎|home page|səf.ɦə.e.əʋːəl||صفحۂ اول‎
@@ -789,8 +789,8 @@ autoExpandExamples.ur = `
 عام|common, ordinary|ɑːm
 عبادت|worship, veneration|ɪbad̪ət̪
 عبری|Hebrew|ɪb.ɾiː
-عجایٔب گھر|museum|ə.d͡ʒɑː.ɪb‿ɡʱəɾ
-عجایٔب|wonder, curiosity|ə.d͡ʒɑː.ɪb/ə.d͡ʒɑː.eːb
+عجائب گھر|museum|ə.d͡ʒɑː.ɪb‿ɡʱəɾ
+عجائب|wonder, curiosity|ə.d͡ʒɑː.ɪb/ə.d͡ʒɑː.eːb
 عجوبہ|wonder, portent|ə.d͡ʒuː.bɑː
 عجیب|strange, foreign|ə.d͡ʒiːb
 عرض|request, petition|əɾz
@@ -820,14 +820,14 @@ autoExpandExamples.ur = `
 غلط سمجھنا|to misunderstand|ɣə.lət̪‿sə.məd͡ʒʱ.nɑː
 غلطی|mistake, error|ɣəl.(ə.)t̪iː
 غم|grief, sorrow|ɣəm
-غُنّایِٔیّت|nasalisation|ɣʊn.nɑː.iː.jət̪||غنایٔیت
-غنایٔیت|nasalisation|ɣʊn.nɑː.iː.jət̪||غُنّایِٔیّت
+غُنّایِٔیّت|nasalisation|ɣʊn.nɑː.iː.jət̪||غنائیت
+غنائیت|nasalisation|ɣʊn.nɑː.iː.jət̪||غُنّایِٔیّت
 غنچہ|flower bud|ɣʊn.t͡ʃɑː
 غنہ|nasal|ɣʊn.nə
 غُلام|slave|ɣʊlɑːm||غلام
 غلام|slave|ɣʊlɑːm||غُلام
 فارسی|Persian|fɑːɾ.siː
-فالسیٔی|magenta|fɑːl.sə.iː
+فالسئی|magenta|fɑːl.sə.iː
 فانی|mortal, finite|fɑː.niː
 فخر|glory, pride|fəxɾ
 فرضی|false, fake|fəɾ.ziː
@@ -871,7 +871,7 @@ autoExpandExamples.ur = `
 قینچی|scissors|qɛ̃ː.t͡ʃiː||قَین٘چی
 قیمتی|valuable, precious|qiː.mə.t̪iː
 قیمہ|ground meat|qiː.mɑː
-لایٔن|queue|lɑːɪn
+لائن|queue|lɑːɪn
 لال|red|lɑːl
 لامتناہی|infinite, endless|lɑː.mʊ.t̪ə.nɑː.ɦiː
 لاکھ|100,000|lɑːkʰ
@@ -883,7 +883,7 @@ autoExpandExamples.ur = `
 لغت|dictionary|lʊ.ɣət̪
 للاٹ|forehead|lə.lɑːʈ
 لمبا|tall (people)|ləm.bɑː
-لمبایٔی|length, height|lə̃m.bɑː.iː
+لمبائی|length, height|lə̃m.bɑː.iː
 لوتھ|corpse|loːt̪ʰ
 لوری|lullaby|loː.ɾiː
 لوک شاہی|democracy|loːk.ʃɑː.ɦiː
@@ -929,7 +929,7 @@ autoExpandExamples.ur = `
 مرتیو|death|mɾɪt̪.juː
 مرنا|to die|məɾ.nɑː
 مزہ|fun, pleasure|mə.zɑː
-مسیٔلہ|question|məs.lɑː
+مسئلہ|question|məs.lɑː
 مسافر|traveller, passenger|mʊ.sɑː.fɪɾ
 مسجد|mosque|məs.d͡ʒɪd̪
 مسلمان|muslim|mʊ.səl.mɑːn
@@ -1029,7 +1029,7 @@ autoExpandExamples.ur = `
 نیم|rule, law|neːm/nɪ.jəm
 نے|ergative case marker|neː
 وا|or|ʋɑː
-وایٔی فایٔی|wifi|ʋɑː.iː.fɑː.iː
+وائی فائی|wifi|ʋɑː.iː.fɑː.iː
 واحد|single|ʋɑː.ɦɪd̪
 وار|assault|ʋɑːɾ
 واضِح|clear|vɑːzɛh||واضح
@@ -1048,9 +1048,9 @@ autoExpandExamples.ur = `
 وصال|embrace|ʋɪ.sɑːl
 وفا|faith, loyalty|ʋə.fɑː
 وفاق|federal|wə.fɑːq/wɪ.fɑːq
-ولایٔتی|foreigner|ʋɪ.lɑː.ɪ.t̪iː
+ولائتی|foreigner|ʋɪ.lɑː.ɪ.t̪iː
 ولایت|province|ʋɪ.lɑː.jət̪
-ولیٔ کامل|perfect saint|valiː ɛ kɑːmɪl
+ولئ کامل|perfect saint|valiː ɛ kɑːmɪl
 وَستُو|item|ʋəstu||وستو
 وستو|item|ʋəstu||وَستُو
 وہ|he|ʋoːɦ
@@ -1117,7 +1117,7 @@ autoExpandExamples.ur = `
 پیاز|onion, leek|pɪ.jɑːz
 پیاس|thirst|pjɑːs
 پیج|solemn declaration|pɛːd͡ʒ
-چایٔے خانہ|teahouse|t͡ʃɑːj.xɑː.nɑː
+چائے خانہ|teahouse|t͡ʃɑːj.xɑː.nɑː
 چابھی|key|t͡ʃɑː.bʱiː
 چار|four|t͡ʃɑːɾ
 چاشنی|syrup|t͡ʃɑːʃ.niː
@@ -1137,7 +1137,7 @@ autoExpandExamples.ur = `
 چوری|theft|t͡ʃoː.ɾiː
 چومنا|to kiss|t͡ʃuːm.nɑː
 چوڑا|wide|t͡ʃɔː.ɽɑː
-چوڑایٔی|breadth|t͡ʃɔː.ɽɑː.iː
+چوڑائی|breadth|t͡ʃɔː.ɽɑː.iː
 چپل|sandal, slipper|t͡ʃəp.pəl
 چڑھنا|to climb|t͡ʃəɽʱ.nɑː
 چڑیا گھر|zoo|t͡ʃɪ.ɽɪ.jɑː‿ɡʱəɾ
@@ -1162,7 +1162,7 @@ autoExpandExamples.ur = `
 ڈھونڈھ|seeking, search|ɖʱuːɳɖʱ
 ڈھيٹھ|impudent|ɖʱiːʈʰ
 ژالہ|hail, dew|ʒɑː.lə
-کیٔی|several|kaiː
+کئی|several|kaiː
 کا|of|kɑː
 کارن|cause, reason|kɑː.ɾən
 کاروبار|business, trade|kɑː.ɾoː.bɑːɾ
@@ -1203,8 +1203,8 @@ autoExpandExamples.ur = `
 کندرا|cave|kən.d̪ə.ɾɑː
 کهان|mine, quarry|kʰɑːn
 کو|on|koː
-کویٔلہ|coal|koɪlɑː
-کویٔی|someone|koiː
+کوئلہ|coal|koɪlɑː
+کوئی|someone|koiː
 کوتا|poetry, poem|kə.ʋɪ.t̪ɑː
 کوشش|effort|koː.ʃɪʃ
 کوکب|star|kɔː.kəb
@@ -1222,7 +1222,7 @@ autoExpandExamples.ur = `
 کھجور|date (fruit)|kʰə.d̪͡ʒʊːɾ
 کھدیوت|firefly|kʰəd̪.joːt̪
 کھنک|sound of wind|kʰə.nək
-کھٹایٔی|sourness|kʰə.ʈɑː.iː
+کھٹائی|sourness|kʰə.ʈɑː.iː
 کھیل|game, sport|kʰeːl
 کہ|that|ke
 کہ|that|kɛ
@@ -1237,10 +1237,10 @@ autoExpandExamples.ur = `
 کیول|sole, one and only|keː.ʋəl
 کیڑا|worm|kiː.ɽɑː
 کے بنا|without|keː‿bɪ.nɑː
-گیٔے|they went|gae
+گئے|they went|gae
 گاؤں|village, hamlet|ɡɑ̃ː.oː/ɡɑː.õː
-گایٔے|cow|ɡɑː.eː
-گایٔے|they sang|gɑːe
+گائے|cow|ɡɑː.eː
+گائے|they sang|gɑːe
 گاتر|limb|ɡɑːt̪.ɾᵊ
 گاری|car|gɑːriː
 گام|step|gɑːm
@@ -1291,10 +1291,10 @@ autoExpandExamples.ur = `
 ہتھیار|weapon|ɦə.t̪ʰɪ.jɑːɾ
 ہتھیلی|palm|ɦə.t̪ʰeː.liː
 ہماہمی|selfishness|ɦə.mɑː.ɦə.miː
-ہمنوایٔی|compatibility|ɦəm‿nə.ʋɑː.iː
+ہمنوائی|compatibility|ɦəm‿nə.ʋɑː.iː
 ہمیشگی|eternity|ɦə.meːʃ.ɡiː
-جَنییُٔو|(Hindu) janeu|d͡ʒə.neː.uː||جنییٔو
-جنییٔو|(Hindu) janeu|d͡ʒə.neː.uː||جَنییُٔو
+جَنییُٔو|(Hindu) janeu|d͡ʒə.neː.uː||جنیئو
+جنیئو|(Hindu) janeu|d͡ʒə.neː.uː||جَنییُٔو
 ہِنْدوٗ|Hindu|hɪnduː||ہندو
 ہندو|Hindu|hɪnduː||ہِنْدو#ہِنْدُو
 ہِنْدُو|Hindu|hɪnduː||ہندو
@@ -1313,7 +1313,7 @@ autoExpandExamples.ur = `
 ہیک|hiccup|ɦiːk
 ہڈی|bone|ɦəɖ.ɖiː
 ہٹا کٹا|robust, sturdy|ɦəʈ.ʈɑː.kəʈ.ʈɑː
-ہییٔت|astronomy|hɛːat
+ہیئت|astronomy|hɛːat
 ہے|is (3rd p sing)|ɦɛː
 یا|oh!|jɑː
 یار|friend|jɑːr
