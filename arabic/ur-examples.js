@@ -753,13 +753,13 @@ letters|xʊ§t§uː§t||خطوط
 شکتی|energy|ʃə§k§t§i||شَکتی
 شُہرت|fame|ʃo§h§rə§t||شہرت
 شہرت|fame|ʃo§h§rə§t||شُہرت
-سعشِعر|verse|ʃeːɾ|śer|سعشعر
-سعشعر|verse|ʃeːɾ|śer|سعشِعر
+شِعر|verse|ʃeː§‹§ɾ|śer|شعر
+شعر|verse|ʃ§eː§ɾ|śer|شِعر
 شکتی|power, strength|ʃək.t̪iː
 شکریہ|thanks, thank you|ʃʊk.ɾɪ.jɑː
 شہر|city, town|ʃɛ.ɦɛɾ
 شہزادہ|prince|ʃəɦ.zɑː.d̪ɑː
-شیر|lion, tiger; milk|ʃeːɾ
+شیر|lion, tiger; milk|ʃ§eː§ɾ
 شیرِ پنجاب|Lion of the Punjab|ʃ§e§r ɛ§ §pə§n§ʤ§ɑː§b||شیر پنجاب
 شیر پنجاب|Lion of the Punjab|ʃ§e§r ɛ§ §pə§n§ʤ§ɑː§b||شیرِ پنجاب
 شیشہ|glass, mirror|ʃ§iː.§ʃ§ɑː
