@@ -1,3 +1,5 @@
+
+
 var charData = {
 "\u0901":{n:"DEVANAGARI SIGN CANDRABINDU",m:1,g:"Devanagari"},
 "\u0902":{n:"DEVANAGARI SIGN ANUSVARA",m:1,g:"Devanagari"},
@@ -130,7 +132,7 @@ var charData = {
 "\u0B06":{n:"ORIYA LETTER AA",m:0,g:"Oriya"},
 "\u0B15":{n:"ORIYA LETTER KA",m:0,g:"Oriya"},
 "\u0B22":{n:"ORIYA LETTER DDHA",m:0,g:"Oriya"},
-"\u0B3C":{n:"ORIYA SIGN NUKTA",m:0,g:"Oriya"},
+"\u0B3C":{n:"ORIYA SIGN NUKTA",m:1,g:"Oriya"},
 "\u0B3E":{n:"ORIYA VOWEL SIGN AA",m:1,g:"Oriya"},
 "\u0B5C":{n:"ORIYA LETTER RRA",m:0,g:"Oriya"},
 "\u0B66":{n:"ORIYA DIGIT ZERO",m:0,g:"Oriya"},
