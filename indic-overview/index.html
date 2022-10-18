@@ -18,7 +18,7 @@
 <script src="../../shared/code/simple_show_codepoints.js"></script>
 <script src="../../shared/code/scriptGroups.js"></script>
 <script src="../common28/functions.js"></script>
-<script src="../../shared/code/getLinks.js"></script>
+<!--script src="../../shared/code/getLinks.js"></script-->
 <script src="../featurelist/scriptdata.js"> </script>
 </head>
 
@@ -31,19 +31,19 @@
 <h1>An Introduction to Indic Scripts</h1>
 		
 <aside class="sidebar"> 
-			<div class="noprint"> 
-		<h2 class="notoc flush">Contents</h2>
-		<div id="toc"><!-- placeholder --></div>
-        </div>
-    <h2 class="notoc">Practical matters</h2>
-  <p><b class="leadin">Terminology.</b> The names of letters and diacritics with a particular function (and location relative to the beginning of the code block) are largely standardised in Unicode across all the Indic code charts. For example, although the 'vowel killer' diacritic may be called a 'pulli' in Tamil, it is still referred to by the Unicode character names as a 'virama'. In order to simplify the explanations and show better the commonality between the scripts, we will use the generic names for characters provided by Unicode. In addition, when it is occasionally necessary to refer to a specific letter by name, part of the Unicode name will be used in upper case.</p>
-  <div class="noprint"> 
+<div class="noprint"> 
+<h2 class="notoc flush">Contents</h2>
+<div id="toc"><!-- placeholder --></div>
+</div>
+<h2 class="notoc">Practical matters</h2>
+<p><b class="leadin">Terminology.</b> The names of letters and diacritics with a particular function (and location relative to the beginning of the code block) are largely standardised in Unicode across all the Indic code charts. For example, although the 'vowel killer' diacritic may be called a 'pulli' in Tamil, it is still referred to by the Unicode character names as a 'virama'. In order to simplify the explanations and show better the commonality between the scripts, we will use the generic names for characters provided by Unicode. In addition, when it is occasionally necessary to refer to a specific letter by name, part of the Unicode name will be used in upper case.</p>
+<div class="noprint"> 
 
 <h2 id="links" class="notoc"><a href="links">Useful links</a></h2>
-			<p><a href="http://www.unicode.org/">The Unicode Consortium</a></p>
-			<p><a href="http://www.w3.org/International/">W3C Internationalization Activity</a></p>
-			</div>
-		</aside>
+<p><a href="http://www.unicode.org/">The Unicode Consortium</a></p>
+<p><a href="http://www.w3.org/International/">W3C Internationalization Activity</a></p>
+</div>
+</aside>
 
 
 <p id="status">Updated 
@@ -52,1222 +52,1337 @@
   </p>
 
 		
-<div class="section"> 
-			<p>This article provides an introduction to the major Indic scripts used on the Indian mainland. Those addressed in this paper include
-				specifically Bengali, Devanagari, Gujarati, Gurmukhi, Kannada, Malayalam, Oriya, Tamil, and Telugu.</p>
-			<p class="noprint">The Indic examples are represented by graphics, to ensure that you see what is expected regardless of any fonts and rendering algorithms that are lacking on your system.  Unless you have disabled JavaScript, you can see a list of the characters represented in any graphic by clicking on it. You will also be presented with a text version of the characters in the graphic, which may or may not display correctly depending on whether your system has the right fonts and rendering algorithms. This information will pop up from the bottom right of your browser window. You can try it now by clicking on the following: <span class="ex" lang="hi">हिंदी</span></p>
-			<p class="noprint">Free fonts can be obtained from the Web for most scripts. For the phonetic transcriptions I recommend downloading the free Doulos SIL font.</p>
+<p>This article provides an introduction to the major Indic scripts used on the Indian mainland. Those addressed in this paper include
+specifically Bengali, Devanagari, Gujarati, Gurmukhi, Kannada, Malayalam, Oriya, Tamil, and Telugu.</p>
+
+<p class="noprint">The Indic examples are represented by graphics, to ensure that you see what is expected regardless of any fonts and rendering algorithms that are lacking on your system.  Unless you have disabled JavaScript, you can see a list of the characters represented in any graphic by clicking on it. You will also be presented with a text version of the characters in the graphic, which may or may not display correctly depending on whether your system has the right fonts and rendering algorithms. This information will pop up from the bottom right of your browser window. You can try it now by clicking on the following: <span class="ex" lang="hi">हिंदी</span></p>
+
+<p class="noprint">Free fonts can be obtained from the Web for most scripts. For the phonetic transcriptions I recommend downloading the free Doulos SIL font.</p>
+
 <p>Although the Indic scripts are often described as similar there is a large amount of variation at the detailed implementation level. To
-				provide a detailed account of how each Indic script implements particular features on a letter by letter basis would require too much time and space
-				for the task at hand. Nevertheless, despite the  variations at the detailed level, the basic mechanisms are to a large extent the same, and at the general level
-				there <em>is</em> a great deal of similarity between these scripts. It is certainly possible to structure a discussion of the relevant features along
-				the same lines for each of the scripts in the set. It is these common themes that this discussion will attempt to highlight, although we will also point out one or two of the differences along the way.
+provide a detailed account of how each Indic script implements particular features on a letter by letter basis would require too much time and space
+for the task at hand. Nevertheless, despite the  variations at the detailed level, the basic mechanisms are to a large extent the same, and at the general level there <em>is</em> a great deal of similarity between these scripts. It is certainly possible to structure a discussion of the relevant features along
+the same lines for each of the scripts in the set. It is these common themes that this discussion will attempt to highlight, although we will also point out one or two of the differences along the way.</p>
+
+<p>After some historical and phonetic background, we will tackle the subject in two parts:</p>
+
+<ol>
+<li> 
+<p>In the first part  I will survey the <em>visual characteristics</em> of these scripts.</p>
+</li>
+<li> 
+<p>In the second part I will make brief reference to some of the <em>practical ways those characteristics are supported using
+Unicode</em>.</p>
+</li>
+</ol>
+		
+		
+		
+		
+		
+<section id="history"> 
+<h2>Historical background</h2>
+
+<p>The similarity of features across all these scripts is not surprising if you consider their history. As shown in the illustration below,
+they all derive from a common ancestor. Note also that these scripts are used for two distinct major linguistic groups, Indo-European languages in
+the north, and Dravidian languages in the south.</p>
+
+<p style="text-align: center;"><img src="images/nna-derivation.gif"
+alt="An illustration of the derivation of the character NNA, showing how from a common source (Brahmi) all the different forms arose for the modern scripts.  The diagram shows an early divergence between north and south indian scripts."
+width="377" height="401"></p>
+
+<p>The diagram above is an illustration of the derivation of the character NNA, showing how from a common source (Brahmi) all the different forms arose for the
+modern scripts. The diagram shows an early divergence between North and South Indian scripts. (Adapted from Daniels and Bright, <em>The World's
+Writing Systems</em>.)</p>
+</section>
+
+		
+		
+		
+		
+<section id="sounds"> 
+<h2>Sounds of Indic languages</h2>
+
+
+<p>One of the defining aspects of a script is the repertoire of sounds it has to support. Because there is typically a letter for each of
+the phonemes in an Indic language, the alphabet tends to be quite large. The table below shows a superset of Indic consonant sounds in a traditional
+articulatory arrangement. It is meant to be illustrative rather than exhaustive, so as to give you an idea of the number of sounds most Indic scripts must support. It does not include all sounds, for example a number of Dravidian alveolar sounds are not shown. The table also provides an
+<em>approximate</em> idea of how Unicode character names map to actual sounds, though it has to be stressed that this is only very approximate. The
+IPA transcription is shown to the left, followed by the standard Unicode name for that sound. Note the following:</p>
+
+<ul>
+<li>retroflex variants of a basic sound are found in most Indian languages,</li>
+<li>a plosive sound typically has an aspirated and unaspirated version,</li>
+<li>many languages also recognise one or more combinations as a single unit for sorting or other purposes, eg. <span
+    class="ipa">kʃ</span>,</li>
+<li>it is common for consonant sounds in particular locations to be held for longer than usual (or in the case of plosives, slightly
+    delayed) - these <em>geminated consonants</em> are typically shown by writing two consonants together, although the actual visual appearance can
+    become quite complicated (this is described in more detail later).</li>
+</ul>
+
+<table border="0" id="ipa-table"> 
+<!--<caption>A very generalised table, showing a range of typical Indic sounds with Unicode names.</caption>-->
+<tbody>
+<tr>
+    <th colspan="3">&nbsp; </th>
+    <th colspan="2">Uvular</th>
+    <th colspan="2">Velar</th>
+    <th colspan="2">Palatal</th>
+    <th colspan="2">Retroflex </th>
+    <th colspan="2">Dental</th>
+    <th colspan="2">Labial</th>
+</tr>
+<tr>
+    <th rowspan="4" class="group">Plosives</th>
+    <th rowspan="2" class="group">Voiceless</th>
+    <th>Unaspirated</th>
+    <td class="ipa-large">q</td>
+    <td>QA</td>
+    <td class="ipa-large">k</td>
+    <td>KA</td>
+    <td class="ipa-large">c</td>
+    <td>CA</td>
+    <td class="ipa-large">ʈ</td>
+    <td>TTA</td>
+    <td class="ipa-large">t</td>
+    <td>TA</td>
+    <td class="ipa-large">p</td>
+    <td>PA</td>
+</tr>
+<tr>
+    <th>Aspirated</th>
+    <td></td>
+    <td></td>
+  <td class="ipa-large">kʰ</td>
+    <td>KHA</td>
+    <td class="ipa-large">cʰ</td>
+    <td>CHA</td>
+    <td class="ipa-large">ʈʰ</td>
+    <td>TTHA</td>
+    <td class="ipa-large">tʰ</td>
+    <td>THA</td>
+    <td class="ipa-large">pʰ</td>
+    <td>PHA</td>
+</tr>
+<tr>
+    <th rowspan="2" class="group">Voiced</th>
+    <th>Unaspirated</th>
+    <td></td>
+  <td></td>
+  <td class="ipa-large">g</td>
+    <td>GA</td>
+    <td class="ipa-large">ɟ </td>
+    <td>JA</td>
+    <td class="ipa-large">ɖ</td>
+    <td>DDA</td>
+    <td class="ipa-large">d</td>
+    <td>DA</td>
+    <td class="ipa-large">b</td>
+    <td>BA</td>
+</tr>
+<tr>
+    <th>Aspirated</th>
+    <td></td>
+  <td></td>
+  <td class="ipa-large">gʰ</td>
+    <td>GHA</td>
+    <td class="ipa-large">ɟʰ</td>
+    <td>JHA</td>
+    <td class="ipa-large">ɖʰ</td>
+    <td>DDHA</td>
+    <td class="ipa-large">dʰ</td>
+    <td>DHA</td>
+    <td class="ipa-large">bʰ</td>
+    <td>BHA</td>
+</tr>
+<tr>
+    <th colspan="3">Nasals</th>
+    <td></td>
+  <td></td>
+  <td class="ipa-large">ŋ</td>
+    <td>NGA</td>
+    <td class="ipa-large">ɲ</td>
+    <td>NYA</td>
+    <td class="ipa-large">ɳ </td>
+    <td>NNA</td>
+    <td class="ipa-large">n</td>
+    <td>NA</td>
+    <td class="ipa-large">m</td>
+    <td>MA</td>
+</tr>
+<tr>
+    <th rowspan="2" colspan="2" class="group">Fricatives</th>
+    <th>Voiceless</th>
+    <td></td>
+  <td></td>
+  <td class="ipa-large">x</td>
+    <td>KHHA</td>
+    <td class="ipa-large">ʃ</td>
+    <td>SHA</td>
+    <td class="ipa-large">ʂ</td>
+    <td>SSA</td>
+    <td class="ipa-large">s</td>
+    <td>SA</td>
+    <td class="ipa-large">f</td>
+    <td>FA</td>
+</tr>
+<tr>
+    <th>Voiced</th>
+    <td></td>
+  <td></td>
+  <td class="ipa-large">ɣ</td>
+    <td>GHHA</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="ipa-large">z</td>
+    <td>ZA</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <th rowspan="2" colspan="3">Flapped &amp; tapped sounds</th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="ipa-large">ɽ</td>
+    <td>DDDHA</td>
+    <td class="ipa-large">ɾ</td>
+    <td>RA</td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="ipa-large">ɽʰ</td>
+    <td>RHA</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr>
+<tr>
+    <th colspan="3">Aspirate, semi-vowels and liquid</th>
+    <td></td>
+  <td></td>
+  <td class="ipa-large">h</td>
+    <td>HA</td>
+    <td class="ipa-large">j</td>
+    <td>YA</td>
+    <td class="ipa-large">ɭ</td>
+    <td>LLA</td>
+    <td class="ipa-large">l</td>
+    <td>LA</td>
+    <td class="ipa-large">v</td>
+    <td>VA</td>
+</tr>
+</tbody>
+</table>
+
+<p>There are up to 18 Unicode code points dedicated to vowels in each script block, although fewer than this are actually needed on a per
+language basis. Nearly always these are simple vowel sounds, although occasionally a symbol may represent a diphthong (especially AI and AU). The
+Unicode names for the whole list are:</p>
+
+<blockquote class="block-indent"> 
+<p>A, AA, I, II, U, UU, VOCALIC R, VOCALIC L, CANDRA E, SHORT E, E, AI, CANDRA O, SHORT O, O, AU, VOCALIC RR, VOCALIC LL</p>
+</blockquote>
+
+<p>Indic languages are syllabic in nature, and the <em>inherent vowel</em> is an important concept (see below). Unless otherwise indicated,
+each consonant is typically followed by this vowel sound. The inherent vowel can vary in pronunciation from script to script, and examples include
+<span class="ipa">ə</span>, <span class="ipa">ʌ</span>, and <span class="ipa">ɔ</span>.</p>
+
+<p>Nasalisation of vowels is also an important phonetic feature that affects the written form of several South Asian languages. The effect is similar to the nasalisation of words like 'en' in French.</p>
+</section>
+		
+		
+		
+		
+		
+		
+<section id="characteristics" style="page-break-before: always;"> 
+<h2>Characteristic script features</h2>
+
+
+<section id="directionposn"> 
+<h3>Direction and positioning of script</h3>
+
+<p>All Indic scripts run left to right, although some combining glyphs appear to the left of their base character for display (see the
+discussion of vowel signs below). </p>
+<p>In a number of scripts, characters commonly have a headstroke and a high baseline. Such characters typically hang from the line when
+written.</p>
+</section>
+
+
+
+
+<section id="consonantvowel"> 
+<h3>Consonants and inherent vowels</h3>
+
+<p>These scripts are often called <em>abugidas</em> or <em>alpha-syllabaries</em>.</p>
+
+<p>In this type of script, consonant characters represent a consonant+vowel syllable. The consonant is associated with an <em>inherent
+vowel</em> that has to be overridden if it is not the required vowel sound for a particular spoken syllable. For example,
+the character <span class="ex" lang="hi">क</span> in Hindi (Devanagari script) is pronounced <span class="ipa">kə</span> rather than
+just <span class="ipa">k</span>. The <span class="ipa">ə</span> sound is the inherent vowel, and is usually transcribed as <span class="transc">a</span>.</p>
+
+<p>Note that the inherent vowel is not always pronounced. For example in Hindi it is not usually pronounced at the end of a word,
+although a ghost echo may appear after a word-final cluster of consonants, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">योग्य</span> <span class="ipa">jogjᵉ</span></span>, or <span class="charExample" translate="no"><span class="ex" lang="hi">राष्ट्र</span> <span class="ipa">ɾəstɾᵉ</span></span>. In
+addition Hindi has a general rule that when a word has three or more syllables and ends in a vowel other than the inherent a, the penultimate vowel
+is not pronounced, eg. 
+<span class="charExample" translate="no"><span class="ex" lang="hi">समझ</span> <span class="ipa">səməɟʰ</span></span>
+but
+<span class="charExample" translate="no"><span class="ex" lang="hi">समझा</span> <span class="ipa">səmɟʰaː</span></span>; 
+<span class="charExample" translate="no"><span class="ex" lang="hi">रहन</span> <span class="ipa">rəhən</span></span>
+but 
+<span class="charExample" translate="no"><span class="ex" lang="hi">रहना</span> <span class="ipa">rəhnaː</span></span>. 
+(For a number of reasons,
+however, this rule does not always hold.)</p>
+
+<p>Nonetheless, on the whole, Indic scripts are close to phonemic transcriptions. The pronunciation of consonants is typically quite
+regular and predictable, although there is the occasional exception. The following are two examples of exceptions:</p>
+
+<div class="block-indent"> 
+<p>Example 1: voiced aspirated plosives and the non-initial letter HA in Gurmukhi are used to indicate tones rather than sounds. For
+example a voiced, aspirated plosive in word-initial position represents an <em>unvoiced unaspirated</em> plosive sound with a low tone on the
+syllable, eg.
+<span class="charExample" translate="no"><span class="ex" lang="pa">ਘੋੜਾ</span> <span class="ipa">kòɽɑ</span></span>
+(The primary use of all voiced aspirated plosives in Gurmukhi is to
+express tone information.)</p>
+<p>Example 2: in Tamil, consonants such as 
+<span class="charExample" translate="no"><span class="ex" lang="ta">க</span></span>
+are typically phonemic rather than phonetic. In practise, this
+consonant may represent any of <span class="ipa">kʌ, gʌ, xʌ, ɣʌ, hʌ</span>.</p>
+</div>
+
+<p>Most scripts supplement a basic set of letters with additional letters used to represent the sounds of other languages, such as
+Sanskrit and English. These additional letters are commonly formed by adding a diacritic to an existing letter. This diacritic is called a
+<em>nukta</em> in the Unicode Standard, although the name used by speakers of different Indian languages may vary. Some scripts use this diacritic
+with several basic letters (eg. Devanagari), others not at all (eg. Kannada).</p>
+
+<p>Examples:</p>
+
+<blockquote class="block-indent"> 
+<p>Devanagari, 
+<span class="charExample" translate="no"><span class="ex" lang="hi">क़</span> <span class="ipa">qə</span></span>
+(cf.
+<span class="charExample" translate="no"><span class="ex" lang="hi">क</span> <span class="ipa">kə</span></span>)</p>
+<p>Gurmukhi, 
+<span class="charExample" translate="no"><span class="ex" lang="pa">ਲ਼</span> <span class="ipa">ɭə</span></span>
+(cf. 
+<span class="charExample" translate="no"><span class="ex" lang="pa">ਲ</span> <span class="ipa">lə</span></span>)</p>
+<p>Oriya,
+<span class="charExample" translate="no"><span class="ex" lang="or">ଢ଼</span> <span class="ipa">ɽʰ</span></span>
+(cf. 
+<span class="charExample" translate="no"><span class="ex" lang="or">ଢ</span> <span class="ipa">ɖʰ</span></span>)</p>
+</blockquote>
+
+<p>It is possible to 'kill' the inherent vowel sound where it would normally be pronounced. This is achieved by attaching a small
+diacritic mark, called a <em>virama</em> in the Unicode Standard, to the consonant in question.</p>
+
+<p>Examples:</p>
+
+<blockquote class="block-indent"> 
+<p>Gujarati, 
+<span class="charExample" translate="no"><span class="ex" lang="gu">ક્</span> <span class="ipa">k</span></span>
+( cf. 
+<span class="charExample" translate="no"><span class="ex" lang="gu">ક</span> <span class="ipa">kə</span></span>)</p>
+
+<p>Tamil, 
+<span class="charExample" translate="no"><span class="ex" lang="ta">க்</span> <span class="ipa">k</span></span>
+( cf.
+<span class="charExample" translate="no"><span class="ex" lang="ta">க</span> <span class="ipa">kʌ</span></span>)</p>
+
+<p>Telugu, 
+<span class="charExample" translate="no"><span class="ex" lang="te">క్</span> <span class="ipa">k</span></span>
+( cf.
+<span class="charExample" translate="no"><span class="ex" lang="te">క</span> <span class="ipa">kʌ</span></span>)</p>
+</blockquote>
+
+<p>In the examples that follow, single consonants pronounced without the inherent vowel are depicted with a virama.</p>
+</section>
+			
+			
+			
+			
+<section id="vowelsigns"> 
+<h3>Vowel signs</h3>
+
+<p>Where a consonant is followed by a vowel other than the inherent vowel, the change is produced by adding a <em>vowel sign</em>  (called a <em>matra</em> in Sanskrit) to the
+base consonant. A consonant can only support one vowel (and one vowel sign) at a time. A vowel
+sign may appear to the left or right, above or below the base consonant, and sometimes surrounds the base consonant on more than one side.</p>
+
+<p>The following illustrates the use of vowel signs with the 
+<span class="charExample" translate="no"><span class="ex" lang="hi">क</span></span> 
+consonant in Hindi, and the resultant sounds:</p>
+<blockquote class="block-indent"> 
+
+<p><span class="charExample" translate="no"><span class="ex" lang="hi">की</span> <span class="ipa">kiː</span></span> &nbsp; 
+<span class="charExample" translate="no"><span class="ex" lang="hi">के</span> <span class="ipa">ke</span></span> &nbsp;
+<span class="charExample" translate="no"><span class="ex" lang="hi">कू</span> <span class="ipa">kuː</span></span></p>
+</blockquote>
+
+<p>Vowel signs may also appear to the left of the base consonant they are related to. For example:</p>
+
+<blockquote class="block-indent"> 
+<p style="white-space: nowrap">Gujarati<br> 
+<span class="codepoint" translate="no"><bdi lang="gu">&#x0A95;</bdi> + <bdi lang="gu">&#x0ABF;</bdi> [<span class="uname">U+0A95 GUJARATI LETTER KA</span> + <span class="uname">U+0ABF GUJARATI VOWEL SIGN I</span>]</span>
+-&gt;
+<span class="charExample" translate="no"><span class="ex" lang="gu">કિ</span> <span class="ipa">ki</span></span></p>
+
+<p style="white-space: nowrap">Tamil<br>
+<span class="codepoint" translate="no"><bdi lang="ta">&#x0B95;</bdi> + <bdi lang="ta">&#x0BC8;</bdi> [<span class="uname">U+0B95 TAMIL LETTER KA</span> + <span class="uname">U+0BC8 TAMIL VOWEL SIGN AI</span>]</span>
+-&gt;
+<span class="charExample" translate="no"><span class="ex" lang="ta">கை</span> <span class="ipa">kʌy</span></span>
 </p>
-			<p>After some historical and phonetic background, we will tackle the subject in two parts:</p>
-			<ol>
-				<li> 
-					<p>In the first part  I will survey the <em>visual characteristics</em> of these scripts.</p>
-				</li>
-				<li> 
-					<p>In the second part I will make brief reference to some of the <em>practical ways those characteristics are supported using
-						Unicode</em>.</p>
-				</li>
-			</ol>
-		</div>
-		
-		
-		
-		
-		
-		<section id="history"> 
-		<h2>Historical background</h2>
-		
-			<p>The similarity of features across all these scripts is not surprising if you consider their history. As shown in the illustration below,
-				they all derive from a common ancestor. Note also that these scripts are used for two distinct major linguistic groups, Indo-European languages in
-				the north, and Dravidian languages in the south.</p>
-			<p style="text-align: center;"><img src="images/nna-derivation.gif"
-				alt="An illustration of the derivation of the character NNA, showing how from a common source (Brahmi) all the different forms arose for the modern scripts.  The diagram shows an early divergence between north and south indian scripts."
-				width="377" height="401"></p>
-			<p>The diagram above is an illustration of the derivation of the character NNA, showing how from a common source (Brahmi) all the different forms arose for the
-				modern scripts. The diagram shows an early divergence between North and South Indian scripts. (Adapted from Daniels and Bright, <em>The World's
-				Writing Systems</em>.)</p>
-		</section>
-		
-		
-		
-		
-		
-		<section id="sounds"> 
-		<h2>Sounds of Indic languages</h2>
-		
 
-			<p>One of the defining aspects of a script is the repertoire of sounds it has to support. Because there is typically a letter for each of
-				the phonemes in an Indic language, the alphabet tends to be quite large. The table below shows a superset of Indic consonant sounds in a traditional
-				articulatory arrangement. It is meant to be illustrative rather than exhaustive, so as to give you an idea of the number of sounds most Indic scripts
-				must support. It does not include all sounds, for example a number of Dravidian alveolar sounds are not shown. The table also provides an
-				<em>approximate</em> idea of how Unicode character names map to actual sounds, though it has to be stressed that this is only very approximate. The
-				IPA transcription is shown to the left, followed by the standard Unicode name for that sound. Note the following:</p>
-			<ul>
-				<li>retroflex variants of a basic sound are found in most Indian languages,</li>
-				<li>a plosive sound typically has an aspirated and unaspirated version,</li>
-				<li>many languages also recognise one or more combinations as a single unit for sorting or other purposes, eg. <span
-					class="ipa">kʃ</span>,</li>
-				<li>it is common for consonant sounds in particular locations to be held for longer than usual (or in the case of plosives, slightly
-					delayed) - these <em>geminated consonants</em> are typically shown by writing two consonants together, although the actual visual appearance can
-					become quite complicated (this is described in more detail later).</li>
-			</ul>
-
-			<table border="0" id="ipa-table"> 
-				<!--<caption>A very generalised table, showing a range of typical Indic sounds with Unicode names.</caption>-->
-				<tbody>
-					<tr>
-						<th colspan="3">&nbsp; </th>
-						<th colspan="2">Uvular</th>
-						<th colspan="2">Velar</th>
-						<th colspan="2">Palatal</th>
-						<th colspan="2">Retroflex </th>
-						<th colspan="2">Dental</th>
-						<th colspan="2">Labial</th>
-					</tr>
-					<tr>
-						<th rowspan="4" class="group">Plosives</th>
-						<th rowspan="2" class="group">Voiceless</th>
-						<th>Unaspirated</th>
-						<td class="ipa-large">q</td>
-						<td>QA</td>
-						<td class="ipa-large">k</td>
-						<td>KA</td>
-						<td class="ipa-large">c</td>
-						<td>CA</td>
-						<td class="ipa-large">ʈ</td>
-						<td>TTA</td>
-						<td class="ipa-large">t</td>
-						<td>TA</td>
-						<td class="ipa-large">p</td>
-						<td>PA</td>
-					</tr>
-					<tr>
-						<th>Aspirated</th>
-						<td></td>
-						<td></td>
-					  <td class="ipa-large">kʰ</td>
-						<td>KHA</td>
-						<td class="ipa-large">cʰ</td>
-						<td>CHA</td>
-						<td class="ipa-large">ʈʰ</td>
-						<td>TTHA</td>
-						<td class="ipa-large">tʰ</td>
-						<td>THA</td>
-						<td class="ipa-large">pʰ</td>
-						<td>PHA</td>
-					</tr>
-					<tr>
-						<th rowspan="2" class="group">Voiced</th>
-						<th>Unaspirated</th>
-						<td></td>
-					  <td></td>
-					  <td class="ipa-large">g</td>
-						<td>GA</td>
-						<td class="ipa-large">ɟ </td>
-						<td>JA</td>
-						<td class="ipa-large">ɖ</td>
-						<td>DDA</td>
-						<td class="ipa-large">d</td>
-						<td>DA</td>
-						<td class="ipa-large">b</td>
-						<td>BA</td>
-					</tr>
-					<tr>
-						<th>Aspirated</th>
-						<td></td>
-					  <td></td>
-					  <td class="ipa-large">gʰ</td>
-						<td>GHA</td>
-						<td class="ipa-large">ɟʰ</td>
-						<td>JHA</td>
-						<td class="ipa-large">ɖʰ</td>
-						<td>DDHA</td>
-						<td class="ipa-large">dʰ</td>
-						<td>DHA</td>
-						<td class="ipa-large">bʰ</td>
-						<td>BHA</td>
-					</tr>
-					<tr>
-						<th colspan="3">Nasals</th>
-						<td></td>
-					  <td></td>
-					  <td class="ipa-large">ŋ</td>
-						<td>NGA</td>
-						<td class="ipa-large">ɲ</td>
-						<td>NYA</td>
-						<td class="ipa-large">ɳ </td>
-						<td>NNA</td>
-						<td class="ipa-large">n</td>
-						<td>NA</td>
-						<td class="ipa-large">m</td>
-						<td>MA</td>
-					</tr>
-					<tr>
-						<th rowspan="2" colspan="2" class="group">Fricatives</th>
-						<th>Voiceless</th>
-						<td></td>
-					  <td></td>
-					  <td class="ipa-large">x</td>
-						<td>KHHA</td>
-						<td class="ipa-large">ʃ</td>
-						<td>SHA</td>
-						<td class="ipa-large">ʂ</td>
-						<td>SSA</td>
-						<td class="ipa-large">s</td>
-						<td>SA</td>
-						<td class="ipa-large">f</td>
-						<td>FA</td>
-					</tr>
-					<tr>
-						<th>Voiced</th>
-						<td></td>
-					  <td></td>
-					  <td class="ipa-large">ɣ</td>
-						<td>GHHA</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td class="ipa-large">z</td>
-						<td>ZA</td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr>
-						<th rowspan="2" colspan="3">Flapped &amp; tapped sounds</th>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td class="ipa-large">ɽ</td>
-						<td>DDDHA</td>
-						<td class="ipa-large">ɾ</td>
-						<td>RA</td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td class="ipa-large">ɽʰ</td>
-						<td>RHA</td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr>
-						<th colspan="3">Aspirate, semi-vowels and liquid</th>
-						<td></td>
-					  <td></td>
-					  <td class="ipa-large">h</td>
-						<td>HA</td>
-						<td class="ipa-large">j</td>
-						<td>YA</td>
-						<td class="ipa-large">ɭ</td>
-						<td>LLA</td>
-						<td class="ipa-large">l</td>
-						<td>LA</td>
-						<td class="ipa-large">v</td>
-						<td>VA</td>
-					</tr>
-				</tbody>
-			</table>
-
-			<p>There are up to 18 Unicode code points dedicated to vowels in each script block, although fewer than this are actually needed on a per
-				language basis. Nearly always these are simple vowel sounds, although occasionally a symbol may represent a diphthong (especially AI and AU). The
-			  Unicode names for the whole list are:</p>
-			<blockquote class="block-indent"> 
-				<p>A, AA, I, II, U, UU, VOCALIC R, VOCALIC L, CANDRA E, SHORT E, E, AI, CANDRA O, SHORT O, O, AU, VOCALIC RR, VOCALIC LL</p>
-			</blockquote>
-			<p>Indic languages are syllabic in nature, and the <em>inherent vowel</em> is an important concept (see below). Unless otherwise indicated,
-				each consonant is typically followed by this vowel sound. The inherent vowel can vary in pronunciation from script to script, and examples include
-				<span class="ipa">ə</span>, <span class="ipa">ʌ</span>, and <span class="ipa">ɔ</span>.</p>
-<!--<p>The next table shows the superset of vowel sounds.  There is somewhat more variation in the pronunciation of vowels than for consonants, and mere examples of pronunciation have been shown here.  Generally speaking these are simple vowel sounds, although in a small number of cases a script may treat a few sounds as diphthongs.</p>
-			 <table><colgroup width="100px"></colgroup><colgroup span="20" width="70px" align="center" valign="middle"></colgroup><tbody><tr><th>Unicode name </th><td>A</td><td>AA</td><td>I</td><td>II</td><td>U</td><td>UU</td><td>VOCALIC R</td><td>VOCALIC RR</td><td>VOCALIC L</td><td>VOCALIC LL</td></tr><tr><th>Pronunciation</th><td class="ipa">ə/ʌ/ɔ
-</td><td class="ipa">aː</td><td class="ipa">i</td><td class="ipa">iː</td><td class="ipa">u</td><td class="ipa">uː</td><td class="ipa">ri/ru</td><td class="ipa">ɽi/ɽu</td><td class="ipa">&nbsp;</td><td class="ipa">&nbsp;</td></tr></tbody></table><table><colgroup width="100px"></colgroup><colgroup span="20" width="70px" align="center" valign="middle"></colgroup><tbody><tr><th>Unicode name </th><td>CANDRA E</td><td>SHORT E</td><td>E</td><td>EE</td><td>AI</td><td>CANDRA O</td><td>SHORT O</td><td>O</td><td>OO</td><td>AU</td></tr><tr><th>Pronunciation</th><td class="ipa">&nbsp;</td><td class="ipa">&nbsp;</td><td class="ipa">e</td><td class="ipa">eː</td><td class="ipa">ɛ</td><td class="ipa">&nbsp;</td><td class="ipa">&nbsp;</td><td class="ipa">o</td><td class="ipa">oː</td><td class="ipa">ɔ</td></tr></tbody></table>-->
-			<p>Nasalisation of vowels is also an important phonetic feature that affects the written form of several South Asian languages. The effect
-				is similar to the nasalisation of words like 'en' in French.</p>
-		</section>
-		
-		
-		
-		
-		
-		
-		<section id="characteristics" style="page-break-before: always;"> 
-		<h2>Characteristic script features</h2>
-		
-			<div class="section2"> 
-
-				<h3 id="directionposn"><a href="#directionposn">Direction and positioning of script</a></h3>
-				<p>All Indic scripts run left to right, although some combining glyphs appear to the left of their base character for display (see the
-					discussion of vowel signs below). </p>
-				<p>In a number of scripts, characters commonly have a headstroke and a high baseline. Such characters typically hang from the line when
-					written.</p>
-		  </div>
-			<div class="section2"> 
-
-				<h3 id="consonantvowel"><a href="#consonantvowel">Consonants and inherent vowels</a></h3>
-				<p>These scripts are often called <em>abugidas</em> or <em>alpha-syllabaries</em>.</p>
-				<p>In this type of script, consonant characters represent a consonant+vowel syllable. The consonant is associated with an <em>inherent
-					vowel</em> that has to be overridden if it is not the required vowel sound for a particular spoken syllable. For example,
-					the character <span class="ex" lang="hi">क</span> in Hindi (Devanagari script) is pronounced <span class="ipa">kə</span> rather than
-				  just <span class="ipa">k</span>. The <span class="ipa">ə</span> sound is the inherent vowel, and is usually transcribed as <span class="transc">a</span>.</p>
-				<p>Note that the inherent vowel is not always pronounced. For example in Hindi it is not usually pronounced at the end of a word,
-					although a ghost echo may appear after a word-final cluster of consonants, eg.  <span class="charExample" translate="no"><span class="ex" lang="hi">योग्य</span> <span class="ipa">jogjᵉ</span></span>, or <span class="charExample" translate="no"><span class="ex" lang="hi">राष्ट्र</span> <span class="ipa">ɾəstɾᵉ</span></span>. In
-					addition Hindi has a general rule that when a word has three or more syllables and ends in a vowel other than the inherent a, the penultimate vowel
-					is not pronounced, eg. 
-                    <span class="charExample" translate="no"><span class="ex" lang="hi">समझ</span> <span class="ipa">səməɟʰ</span></span>
-                    but
-                    <span class="charExample" translate="no"><span class="ex" lang="hi">समझा</span> <span class="ipa">səmɟʰaː</span></span>; 
-                    <span class="charExample" translate="no"><span class="ex" lang="hi">रहन</span> <span class="ipa">rəhən</span></span>
-                    but 
-                    <span class="charExample" translate="no"><span class="ex" lang="hi">रहना</span> <span class="ipa">rəhnaː</span></span>. 
-                    (For a number of reasons,
-					however, this rule does not always hold.)</p>
-				<p>Nonetheless, on the whole, Indic scripts are close to phonemic transcriptions. The pronunciation of consonants is typically quite
-        regular and predictable, although there is the occasional exception. The following are two examples of exceptions:</p>
-				<div class="block-indent"> 
-					<p>Example 1: voiced aspirated plosives and the non-initial letter HA in Gurmukhi are used to indicate tones rather than sounds. For
-						example a voiced, aspirated plosive in word-initial position represents an <em>unvoiced unaspirated</em> plosive sound with a low tone on the
-						syllable, eg.
-                        <span class="charExample" translate="no"><span class="ex" lang="pa">ਘੋੜਾ</span> <span class="ipa">kòɽɑ</span></span>
-                        (The primary use of all voiced aspirated plosives in Gurmukhi is to
-						express tone information.)</p>
-					<p>Example 2: in Tamil, consonants such as 
-                    <span class="charExample" translate="no"><span class="ex" lang="ta">க</span></span>
-                     are typically phonemic rather than phonetic. In practise, this
-						consonant may represent any of <span class="ipa">kʌ, gʌ, xʌ, ɣʌ, hʌ</span>.</p>
-				</div>
-				<p>Most scripts supplement a basic set of letters with additional letters used to represent the sounds of other languages, such as
-					Sanskrit and English. These additional letters are commonly formed by adding a diacritic to an existing letter. This diacritic is called a
-					<em>nukta</em> in the Unicode Standard, although the name used by speakers of different Indian languages may vary. Some scripts use this diacritic
-					with several basic letters (eg. Devanagari), others not at all (eg. Kannada).</p>
-				<p>Examples:</p>
-				<blockquote class="block-indent"> 
-					<p>Devanagari, 
-                    <span class="charExample" translate="no"><span class="ex" lang="hi">क़</span> <span class="ipa">qə</span></span>
-                    (cf.
-                    <span class="charExample" translate="no"><span class="ex" lang="hi">क</span> <span class="ipa">kə</span></span>)</p>
-			    <p>Gurmukhi, 
-                <span class="charExample" translate="no"><span class="ex" lang="pa">ਲ਼</span> <span class="ipa">ɭə</span></span>
-                (cf. 
-                <span class="charExample" translate="no"><span class="ex" lang="pa">ਲ</span> <span class="ipa">lə</span></span>)</p>
-					<p>Oriya,
-                    <span class="charExample" translate="no"><span class="ex" lang="or">ଢ଼</span> <span class="ipa">ɽʰ</span></span>
-                    (cf. 
-                    <span class="charExample" translate="no"><span class="ex" lang="or">ଢ</span> <span class="ipa">ɖʰ</span></span>)</p>
-				</blockquote>
-				<p>It is possible to 'kill' the inherent vowel sound where it would normally be pronounced. This is achieved by attaching a small
-					diacritic mark, called a <em>virama</em> in the Unicode Standard, to the consonant in question.</p>
-				<p>Examples:</p>
-				<blockquote class="block-indent"> 
-					<p>Gujarati, 
-                    <span class="charExample" translate="no"><span class="ex" lang="gu">ક્</span> <span class="ipa">k</span></span>
-                    ( cf. 
-                    <span class="charExample" translate="no"><span class="ex" lang="gu">ક</span> <span class="ipa">kə</span></span>)</p>
-					<p>Tamil, 
-                    <span class="charExample" translate="no"><span class="ex" lang="ta">க்</span> <span class="ipa">k</span></span>
-                    ( cf.
-                    <span class="charExample" translate="no"><span class="ex" lang="ta">க</span> <span class="ipa">kʌ</span></span>)</p>
-					<p>Telugu, 
-                    <span class="charExample" translate="no"><span class="ex" lang="te">క్</span> <span class="ipa">k</span></span>
-                    ( cf.
-                    <span class="charExample" translate="no"><span class="ex" lang="te">క</span> <span class="ipa">kʌ</span></span>)</p>
-				</blockquote>
-				<p>In the examples that follow, single consonants pronounced without the inherent vowel are depicted with a virama.</p>
-			</div>
-			
-			
-			
-			
-			<div class="section2"> 
-
-				<h3 id="vowelsigns"><a href="#vowelsigns">Vowel signs</a></h3>
-				<p>Where a consonant is followed by a vowel other than the inherent vowel, the change is produced by adding a <em>vowel sign</em>  (called a <em>matra</em> in Sanskrit) to the
-					base consonant. A consonant can only support one vowel (and one vowel sign) at a time. A vowel
-				  sign may appear to the left or right, above or below the base consonant, and sometimes surrounds the base consonant on more than one side.</p>
-				<p>The following illustrates the use of vowel signs with the 
-                <span class="charExample" translate="no"><span class="ex" lang="hi">क</span></span> 
-            consonant in Hindi, and the resultant sounds:</p>
-				<blockquote class="block-indent"> 
-				  <p><span class="charExample" translate="no"><span class="ex" lang="hi">की</span> <span class="ipa">kiː</span></span> &nbsp; 
-                  <span class="charExample" translate="no"><span class="ex" lang="hi">के</span> <span class="ipa">ke</span></span> &nbsp;
-                  <span class="charExample" translate="no"><span class="ex" lang="hi">कू</span> <span class="ipa">kuː</span></span>
-                </p>
-	      </blockquote>
-				<p>Vowel signs may also appear to the left of the base consonant they are related to. For example:</p>
-				<blockquote class="block-indent"> 
-					<p style="white-space: nowrap">Gujarati<br> 
-                    <span class="codepoint" translate="no"><bdi lang="gu">&#x0A95;</bdi> + <bdi lang="gu">&#x0ABF;</bdi> [<span class="uname">U+0A95 GUJARATI LETTER KA</span> + <span class="uname">U+0ABF GUJARATI VOWEL SIGN I</span>]</span>
-                    -&gt;
-                    <span class="charExample" translate="no"><span class="ex" lang="gu">કિ</span> <span class="ipa">ki</span></span>
-                    </p>
-                <p style="white-space: nowrap">Tamil<br>
-                    <span class="codepoint" translate="no"><bdi lang="ta">&#x0B95;</bdi> + <bdi lang="ta">&#x0BC8;</bdi> [<span class="uname">U+0B95 TAMIL LETTER KA</span> + <span class="uname">U+0BC8 TAMIL VOWEL SIGN AI</span>]</span>
-                    -&gt;
-                    <span class="charExample" translate="no"><span class="ex" lang="ta">கை</span> <span class="ipa">kʌy</span></span>
-                    </p>
-                <p style="white-space: nowrap">Oriya<br>
-                    <span class="codepoint" translate="no"><bdi lang="or">&#x0B15;</bdi> + <bdi lang="or">&#x0B47;</bdi> [<span class="uname">U+0B15 ORIYA LETTER KA</span> + <span class="uname">U+0B47 ORIYA VOWEL SIGN E</span>]</span>
-                    -&gt;
-                    <span class="charExample" translate="no"><span class="ex" lang="or">କେ</span> <span class="ipa">ke</span></span>
-                    </p>
-                </blockquote>
-				<p>Occasionally a vowel sign may be composed of multiple parts. In some cases such a split vowel sign may have parts on both the left and
-					right of the base character simultaneously, eg. in Tamil 
-                    <span class="codepoint" translate="no"><bdi lang="ta">&#x0B95;</bdi> + <bdi lang="ta">&#x0BCA;</bdi> [<span class="uname">U+0B95 TAMIL LETTER KA</span> + <span class="uname">U+0BCA TAMIL VOWEL SIGN O</span>]</span>
-                    -&gt;
-                    <span class="charExample" translate="no"><span class="ex" lang="ta">கொ</span> <span class="ipa">ko</span></span>. In Kannada there are no vowel signs that surround a base character on both left and right, but there are some that
-					have multiple parts above and following the base character, eg.
-                    <span class="codepoint" translate="no"><bdi lang="kn">&#x0C95;</bdi> + <bdi lang="kn">&#x0CCB;</bdi> [<span class="uname">U+0C95 KANNADA LETTER KA</span> + <span class="uname">U+0CCB KANNADA VOWEL SIGN OO</span>]</span>
-                    -&gt;
-                    <span class="charExample" translate="no"><span class="ex" lang="kn">ಕೋ</span> <span class="ipa">koː</span></span>. 
-                    Another alternative is top and bottom, eg. Telugu 
-                    <span class="codepoint" translate="no"><bdi lang="te">&#x0C15;</bdi> + <bdi lang="te">&#x0C48;</bdi> [<span class="uname">U+0C15 TELUGU LETTER KA</span> + <span class="uname">U+0C48 TELUGU VOWEL SIGN AI</span>]</span> 
-                    -&gt;
-                    <span class="charExample" translate="no"><span class="ex" lang="te">కై</span> <span class="ipa">kaj</span></span>. 
-                    In some cases, the additional parts can be viewed as
-					lengthening marks.</p>
-				<p>Often the pairing of base character and vowel sign produces a change in the basic shape of either base character or vowel sign or
-					both. Tamil provides many such examples, especially with <span class="ipa">u</span> and <span class="ipa">uː</span>. For example, the following
-		      are a selection of the Tamil consonants, each followed by the same vowel sign, <span class="codepoint" translate="no"><bdi lang="ta">&#x0BC1;</bdi> [<span class="uname">U+0BC1 TAMIL VOWEL SIGN U</span>]</span>:</p>
-				<div class="print-right-aligned">
-				  <table id="tamil-vowel-ligs" class="print-right-aligned">
-			      <tbody>
-							<tr class="noVS">
-								<th>Without vowel sign</th>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">க</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">ர</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">ம</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">ச</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">ப</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">ன</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">ஹ</span></span></td>
-							</tr>
-							<tr class="withVS">
-								<th>With vowel sign</th>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">கு</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">ரு</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">மு</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">சு</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">பு</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">னு</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">ஹு</span></span></td>
-							</tr>
-						</tbody>
-					</table>
-
-				</div> 
-			 <!--<div class="block-indent"> 
-				<p><span class="ta ex">கு ஙு சு ஜு ஞு டு ணு து நு னு பு மு யு ரு று லு
-				  ளு ழு வு ஷு ஸு ஹு</span></p> 
-			 </div>-->
-			</div>
-			
-			
-			
-			
-			<div class="section2"> 
-
-				<h3 id="independentvowels"><a href="independentvowels">Independent vowels</a></h3>
-				<p>Vowels that appear at the beginning of a word or after a preceding vowel with no intervening consonant are typically rendered using
-					independent vowel letters. The following table illustrates the correspondence between the most common independent vowels and vowel signs in
-					Telugu:</p>
-				<div class="print-right-aligned"> 
-
-					<table id="telugu-vowels" class="print-right-aligned">
-						<tbody>
-							<tr>
-								<th>Unicode name </th>
-								<td>A</td>
-								<td>AA</td>
-								<td>I</td>
-								<td>II</td>
-								<td>U</td>
-								<td>UU</td>
-								<td>vR</td>
-								<td>E</td>
-								<td>EE</td>
-								<td>AI</td>
-								<td>O</td>
-								<td>OO</td>
-								<td>AU</td>
-							</tr>
-							<tr style="font-size: 110%;">
-								<th>Independent vowel</th>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">అ</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ఆ</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ఇ</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ఈ</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ఉ</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ఊ</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ఋ</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ఎ</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ఏ</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ఐ</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ఒ</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ఓ</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ఔ</span></span></td>
-							</tr>
-							<tr style="font-size: 110%;">
-								<th>Vowel sign</th>
-								<td>—</td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ా</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ి</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ీ</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ు</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ూ</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ృ</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ె</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ే</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ై</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ొ</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ో</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">ౌ</span></span></td>
-							</tr>
-							<tr>
-								<th>Pronunciation</th>
-								<td><span class="ipa">ʌ</span></td>
-								<td><span class="ipa">aː</span></td>
-								<td><span class="ipa">i</span></td>
-								<td><span class="ipa">iː</span></td>
-								<td><span class="ipa">u</span></td>
-								<td><span class="ipa">uː</span></td>
-								<td><span class="ipa">rɨ/ru</span></td>
-								<td><span class="ipa">e</span></td>
-								<td><span class="ipa">eː</span></td>
-								<td><span class="ipa">aj</span></td>
-								<td><span class="ipa">o</span></td>
-								<td><span class="ipa">oː</span></td>
-								<td><span class="ipa">aw</span></td>
-							</tr>
-						</tbody>
-					</table>
-
-				</div>
-				<p>Note that there is no vowel sign for the sound associated with the inherent vowel A. Vowel signs are only needed to <em>change</em>
-					the inherent vowel.</p>
-				<p>Because a consonant (or consonant cluster) can only support one vowel at a time, note the difference in Devanagari between
-					<span class="codepoint" translate="no"><bdi lang="hi">&#x0915;&#x0940;</bdi> [<span class="uname">U+0915 DEVANAGARI LETTER KA</span> + <span class="uname">U+0940 DEVANAGARI VOWEL SIGN II</span>]</span>
-                    pronounced <span class="ipa">kiː</span>
-                    and
-                    <span class="codepoint" translate="no"><bdi lang="hi">&#x0915;&#x0908;</bdi> [<span class="uname">U+0915 DEVANAGARI LETTER KA</span> + <span class="uname">U+0908 DEVANAGARI LETTER II</span>]</span>
-                    pronounced <span class="ipa">kəiː</span>. The first example follows the base consonant with a vowel sign; the second, with an
-					independent vowel. In the second case only, the independent vowel sound is retained immediately after the initial <span class="ipa">k</span>, and
-					the sequence is pronounced with two distinct vowel sounds.</p>
-				<p>Gurmukhi is unusual in that, with the exception of <span class="codepoint" translate="no"><bdi lang="pa">&#x0A05;</bdi> [<span class="uname">U+0A05 GURMUKHI LETTER A</span>]</span> when used for the sound <span class="ipa">ə</span>, there are no independent
-			    vowels. Instead there are special 'vowel-bearer' glyphs (of which <span class="charExample" translate="no"><span class="ex" lang="pa">ਅ</span></span> is one) that are used to support the vowel signs.</p>
-				<blockquote class="block-indent"> 
-					<p><span class="codepoint" translate="no"><bdi lang="pa">&#x0A05;</bdi> [<span class="uname">U+0A05 GURMUKHI LETTER A</span>]</span> is used for <span class="ipa">ɑ</span> <span class="charExample" translate="no"><span class="ex" lang="pa">ਆ</span></span>, <span class="ipa">æ</span>
-						<span class="charExample" translate="no"><span class="ex" lang="pa">ਐ</span></span>, <span class="ipa">ɔ</span> <span class="charExample" translate="no"><span class="ex" lang="pa">ਔ</span></span>, </p>
-					<p><span class="codepoint" translate="no"><bdi lang="pa">&#x0A72;</bdi> [<span class="uname">U+0A72 GURMUKHI IRI</span>]</span> is used for <span class="ipa">ɪ</span> <span class="charExample" translate="no"><span class="ex" lang="pa">ਇ</span></span>, <span class="ipa">i</span>
-	              <span class="charExample" translate="no"><span class="ex" lang="pa">ਈ</span></span>, <span class="ipa">e</span> <span class="charExample" translate="no"><span class="ex" lang="pa">ਏ</span></span>, </p>
-					<p><span class="codepoint" translate="no"><bdi lang="pa">&#x0A73;</bdi> [<span class="uname">U+0A73 GURMUKHI URA</span>]</span> is used for <span class="ipa">ʊ</span> <span class="charExample" translate="no"><span class="ex" lang="pa">ਉ</span></span>, <span class="ipa">u</span>
-						<span class="charExample" translate="no"><span class="ex" lang="pa">ਊ</span></span>, <span class="ipa">o</span> <span class="charExample" translate="no"><span class="ex" lang="pa">ਓ</span></span>, </p>
-				</blockquote>
-			</div>
-			
-			
-			
-			
-			<div class="section2"> 
-
-				<h3 id="consonantclusters"><a href="#consonantclusters">Consonant clusters</a></h3>
-				<p>Where consonants appear together without intervening vowels special steps need to be taken to indicate that the inherent vowels have
-					disappeared. There are many ways in which this is achieved in Indic scripts, and the specifics of how each character behaves are too many to
-					catalogue here in detail for each script. There are, however, two main approaches: either (a) change the shape of the consonants or merge them
-					together in some way (a <em>conjunct</em> form), or (b) use a special diacritic to indicate the absence of intervening vowels.</p>
-			  <p>A number of strategies are used to show consonant clusters by merging or changing shapes, and nearly all scripts employ more than one
-				  of these approaches. The following are a few examples:</p>
-				<ul>
-					<li> 
-						<p>For 60% of Devanagari conjuncts the consonants that lose the vowel typically lose their characteristic vertical bar (which is
-							historically associated with the sound of the inherent vowel). Such glyphs are referred to as <em>half-forms</em>. For example,
-							<span class="charExample" translate="no"><span class="ex" lang="hi">स्</span></span> <span class="ipa">s</span> + <span class="charExample" translate="no"><span class="ex" lang="hi">स</span></span> <span
-							class="ipa">mə</span> -&gt; <span class="charExample" translate="no"><span class="ex" lang="hi">स्म</span></span> <span class="ipa">smə</span>.</p>
-					</li>
-					<li> 
-						<p>Sometimes the two consonant glyphs may be combined vertically. For example, certain combinations in Gujarati  such as							<span class="charExample" translate="no"><span class="ex" lang="gu">ટ્</span></span> <span class="ipa">ʈ</span> +  <span class="charExample" translate="no"><span class="ex" lang="gu">ઠ</span></span> <span class="ipa">ʈʰə</span> -&gt; <span class="charExample" translate="no"><span class="ex" lang="gu">ટ્ઠ</span></span> <span class="ipa">ʈʈʰə</span>. Note that the choice of vertical vs. horizontal combination may be a stylistic preference. For example, the result
-							of <span class="charExample" translate="no"><span class="ex" lang="hi">क्</span></span> <span class="ipa">k</span> + <span class="charExample" translate="no"><span class="ex" lang="hi">क</span></span> <span
-							class="ipa">kə</span> in Devanagari could be rendered as either a vertical <img src="images/kkligature.png" class="ex" alt="क्क"> or horizontal <img src="images/khalfk.png" class="ex" alt="क्क"> combination.</p>
-					</li>
-					<li>					  Clustering may produce a conjunct that does not have easily recognisable parts, such as Bengali <span class="charExample" translate="no"><span class="ex" lang="bn">ক্ষ</span></span><!--<img src="bengali-ksha.gif" height="12" width="17" alt="bengali conjunct for ksha" align="middle">-->
-						<span class="ipa">kʃɔ</span> (= <span class="charExample" translate="no"><span class="ex" lang="bn">ক্</span></span><!--<img src="bengali-k.gif" height="19" width="16" alt="bengali k" align="middle">-->
-						<span class="ipa">k</span> + <span class="charExample" translate="no"><span class="ex" lang="bn">ষ</span></span><!--<img src="bengali-sha.gif" height="15" width="13" alt="bengali sha" align="middle">-->
-						<span class="ipa">ʃɔ</span>), or that expresses the conjunct by extension of a glyph such as the Malayalam <span class="charExample" translate="no"><span class="ex" lang="ml">ക്ക</span></span><!--<img src="malayalam-kka.gif" height="14" width="28" alt="malayalam kka" align="middle">-->
-						<span class="ipa">kːa</span> (= <span class="charExample" translate="no"><span class="ex" lang="ml">ക്</span></span><!--<img src="malayalam-k.gif" height="16" width="26" alt="malayalam k" align="middle">-->
-						<span class="ipa">k</span> + <span class="charExample" translate="no"><span class="ex" lang="ml">ക</span></span><!--<img src="malayalam-ka.gif" height="16" width="22" align="middle" alt="malayalam ka">-->
-					<span class="ipa">ka</span>).					</li>
-					<li> 
-						<p>Another common approach is to reduce and simplify one of the consonants in the cluster, and then attach it to the other like a
-							diacritic. In Kannada most combinations are formed by reducing non-initial consonant glyphs in a cluster to a simplified form, joined beneath and/or
-							to the right of the initial consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="kn">ತ್</span></span> + <span class="charExample" translate="no"><span class="ex" lang="kn">ಯ</span></span> -&gt; <span class="charExample" translate="no"><span class="ex" lang="kn">ತ್ಯ</span> <span class="ipa">tjʌ</span></span>. Oriya also often reduces the second consonant, but in some combinations will reduce the <em>first</em> consonant and attach
-							it to the bottom of the second<!--, eg. <span style="font-family: code2000">କ୍</span> /<span class="ipa">k</span>/ + <span style="font-family: code2000">ତ</span> /<span class="ipa">tɔ</span>/ =&gt; <span style="font-family: code2000">କ୍ତ</span> /<span class="ipa">ktɔ</span>/-->.</p>
-					</li>
-				</ul>
-				<p>Another approach is to simply show the virama we introduced earlier. This is really the standard approach for modern Tamil, eg.
-					<span class="charExample" translate="no"><span class="ex" lang="ta">இந்த</span> <span class="ipa">intʌ</span></span>  (the dot is the virama), but may also be used for any other script if the font being
+<p style="white-space: nowrap">Oriya<br>
+<span class="codepoint" translate="no"><bdi lang="or">&#x0B15;</bdi> + <bdi lang="or">&#x0B47;</bdi> [<span class="uname">U+0B15 ORIYA LETTER KA</span> + <span class="uname">U+0B47 ORIYA VOWEL SIGN E</span>]</span>
+-&gt;
+<span class="charExample" translate="no"><span class="ex" lang="or">କେ</span> <span class="ipa">ke</span></span>
 </p>
-				<p>There is actually a third approach, and that is to simply rely on the user to recognise contexts where the inherent vowel is dropped.
-					This occurs in some specific situations such as at the end of a word or those examples described earlier. The only script that does this as a
-					<em>general rule</em> is Gurmukhi. Very few letter combinations are handled as conjuncts in Gurmukhi, most of the time the reader just has to know
-					where the inherent vowel is not pronounced, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਉਤਸੁਕ</span> <span class="ipa">utsuk</span></span>.</p>
-				<p>A common feature of Indic scripts is the gemination or lengthening of consonants. For example, note the lengthening of the
-					<span class="charExample" translate="no"><span class="ex" lang="hi">ल</span> <span class="ipa">l</span></span> sound in <span class="charExample" translate="no"><span class="ex" lang="hi">चिल्लहट</span> <span class="ipa">cilːʌhʌʈ</span></span>
-				    (Devanagari). Such consonant lengthening is typically handled just as a normal consonant cluster. Gurmukhi,
-					again, is somewhat non-standard in that it uses a special diacritic called <em>addak</em> in this situation. To indicate a geminated consonant, the
-					addak sits above the <em>preceding</em> syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਪੁੱਤਰ</span> <span class="ipa">putːər</span></span>.</p>
-				<p>The letter RA is an example of a letter that typically behaves quite idiosyncratically in consonant clusters, and typically quite
-					differently depending on whether it appears at the beginning or end of the cluster. Its placement also often involves apparent reordering. This can
-					be illustrated with the Devanagari RA <span class="charExample" translate="no"><span class="ex" lang="hi">र</span></span>. When in initial position in the cluster the letter
-					<span class="charExample" translate="no"><span class="ex" lang="hi">र</span></span> is typically displayed as a small mark above the <em>right</em> shoulder of the last letter in the
-					syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">शार्मा</span> <span class="ipa">ʃaːrmaː</span></span>. This is called a <em>repha</em>. A
-					<span class="charExample" translate="no"><span class="ex" lang="hi">र</span></span> in final position in a conjunct cluster is displayed as a small diagonal mark, but precisely where
-					it appears depends on the shape of the previous consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">प्र</span></span> <span class="ipa">pra</span>,
-		        <span class="charExample" translate="no"><span class="ex" lang="hi">त्र</span></span> <span class="ipa">tra</span>, <span class="charExample" translate="no"><span class="ex" lang="hi">ह्र</span></span> <span
-					class="ipa">hra</span>. With TTA and DDA it needs a little supporting line, eg <span class="charExample" translate="no"><span class="ex" lang="hi">ट्र</span></span> <span
-					class="ipa">ʈra</span>, <span class="charExample" translate="no"><span class="ex" lang="hi">ड्र</span></span> <span class="ipa">ɖra</span>.</p>
+</blockquote>
+
+<p>Occasionally a vowel sign may be composed of multiple parts. In some cases such a split vowel sign may have parts on both the left and
+right of the base character simultaneously, eg. in Tamil 
+<span class="codepoint" translate="no"><bdi lang="ta">&#x0B95;</bdi> + <bdi lang="ta">&#x0BCA;</bdi> [<span class="uname">U+0B95 TAMIL LETTER KA</span> + <span class="uname">U+0BCA TAMIL VOWEL SIGN O</span>]</span>
+-&gt;
+<span class="charExample" translate="no"><span class="ex" lang="ta">கொ</span> <span class="ipa">ko</span></span>. In Kannada there are no vowel signs that surround a base character on both left and right, but there are some that
+have multiple parts above and following the base character, eg.
+<span class="codepoint" translate="no"><bdi lang="kn">&#x0C95;</bdi> + <bdi lang="kn">&#x0CCB;</bdi> [<span class="uname">U+0C95 KANNADA LETTER KA</span> + <span class="uname">U+0CCB KANNADA VOWEL SIGN OO</span>]</span>
+-&gt;
+<span class="charExample" translate="no"><span class="ex" lang="kn">ಕೋ</span> <span class="ipa">koː</span></span>. 
+Another alternative is top and bottom, eg. Telugu 
+<span class="codepoint" translate="no"><bdi lang="te">&#x0C15;</bdi> + <bdi lang="te">&#x0C48;</bdi> [<span class="uname">U+0C15 TELUGU LETTER KA</span> + <span class="uname">U+0C48 TELUGU VOWEL SIGN AI</span>]</span> 
+-&gt;
+<span class="charExample" translate="no"><span class="ex" lang="te">కై</span> <span class="ipa">kaj</span></span>. 
+In some cases, the additional parts can be viewed as
+lengthening marks.</p>
+
+<p>Often the pairing of base character and vowel sign produces a change in the basic shape of either base character or vowel sign or
+both. Tamil provides many such examples, especially with <span class="ipa">u</span> and <span class="ipa">uː</span>. For example, the following
+are a selection of the Tamil consonants, each followed by the same vowel sign, <span class="codepoint" translate="no"><bdi lang="ta">&#x0BC1;</bdi> [<span class="uname">U+0BC1 TAMIL VOWEL SIGN U</span>]</span>:</p>
+
+<div class="print-right-aligned">
+<table id="tamil-vowel-ligs" class="print-right-aligned">
+<tbody>
+<tr class="noVS">
+<th>Without vowel sign</th>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">க</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">ர</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">ம</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">ச</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">ப</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">ன</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">ஹ</span></span></td>
+</tr>
+<tr class="withVS">
+<th>With vowel sign</th>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">கு</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">ரு</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">மு</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">சு</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">பு</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">னு</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">ஹு</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div> 
+</section>
+
+
+
+
+
+
+
+
+<section id="independentvowels"> 
+<h3>Independent vowels</h3>
+
+<p>Vowels that appear at the beginning of a word or after a preceding vowel with no intervening consonant are typically rendered using
+independent vowel letters. The following table illustrates the correspondence between the most common independent vowels and vowel signs in
+Telugu:</p>
+
+
+<div class="print-right-aligned"> 
+<table id="telugu-vowels" class="print-right-aligned">
+<tbody>
+<tr>
+<th>Unicode name </th>
+<td>A</td>
+<td>AA</td>
+<td>I</td>
+<td>II</td>
+<td>U</td>
+<td>UU</td>
+<td>vR</td>
+<td>E</td>
+<td>EE</td>
+<td>AI</td>
+<td>O</td>
+<td>OO</td>
+<td>AU</td>
+</tr>
+<tr style="font-size: 110%;">
+<th>Independent vowel</th>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">అ</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ఆ</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ఇ</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ఈ</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ఉ</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ఊ</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ఋ</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ఎ</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ఏ</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ఐ</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ఒ</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ఓ</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ఔ</span></span></td>
+</tr>
+<tr style="font-size: 110%;">
+<th>Vowel sign</th>
+<td>—</td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ా</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ి</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ీ</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ు</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ూ</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ృ</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ె</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ే</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ై</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ొ</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ో</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">ౌ</span></span></td>
+</tr>
+<tr>
+<th>Pronunciation</th>
+<td><span class="ipa">ʌ</span></td>
+<td><span class="ipa">aː</span></td>
+<td><span class="ipa">i</span></td>
+<td><span class="ipa">iː</span></td>
+<td><span class="ipa">u</span></td>
+<td><span class="ipa">uː</span></td>
+<td><span class="ipa">rɨ/ru</span></td>
+<td><span class="ipa">e</span></td>
+<td><span class="ipa">eː</span></td>
+<td><span class="ipa">aj</span></td>
+<td><span class="ipa">o</span></td>
+<td><span class="ipa">oː</span></td>
+<td><span class="ipa">aw</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p>Note that there is no vowel sign for the sound associated with the inherent vowel A. Vowel signs are only needed to <em>change</em>
+the inherent vowel.</p>
+
+<p>Because a consonant (or consonant cluster) can only support one vowel at a time, note the difference in Devanagari between
+<span class="codepoint" translate="no"><bdi lang="hi">&#x0915;&#x0940;</bdi> [<span class="uname">U+0915 DEVANAGARI LETTER KA</span> + <span class="uname">U+0940 DEVANAGARI VOWEL SIGN II</span>]</span>
+pronounced <span class="ipa">kiː</span>
+and
+<span class="codepoint" translate="no"><bdi lang="hi">&#x0915;&#x0908;</bdi> [<span class="uname">U+0915 DEVANAGARI LETTER KA</span> + <span class="uname">U+0908 DEVANAGARI LETTER II</span>]</span>
+pronounced <span class="ipa">kəiː</span>. The first example follows the base consonant with a vowel sign; the second, with an
+independent vowel. In the second case only, the independent vowel sound is retained immediately after the initial <span class="ipa">k</span>, and
+the sequence is pronounced with two distinct vowel sounds.</p>
+
+<p>Gurmukhi is unusual in that, with the exception of <span class="codepoint" translate="no"><bdi lang="pa">&#x0A05;</bdi> [<span class="uname">U+0A05 GURMUKHI LETTER A</span>]</span> when used for the sound <span class="ipa">ə</span>, there are no independent
+vowels. Instead there are special 'vowel-bearer' glyphs (of which <span class="charExample" translate="no"><span class="ex" lang="pa">ਅ</span></span> is one) that are used to support the vowel signs.</p>
+
+<blockquote class="block-indent"> 
+<p><span class="codepoint" translate="no"><bdi lang="pa">&#x0A05;</bdi> [<span class="uname">U+0A05 GURMUKHI LETTER A</span>]</span> is used for <span class="ipa">ɑ</span> <span class="charExample" translate="no"><span class="ex" lang="pa">ਆ</span></span>, <span class="ipa">æ</span>
+<span class="charExample" translate="no"><span class="ex" lang="pa">ਐ</span></span>, <span class="ipa">ɔ</span> <span class="charExample" translate="no"><span class="ex" lang="pa">ਔ</span></span>, </p>
+
+<p><span class="codepoint" translate="no"><bdi lang="pa">&#x0A72;</bdi> [<span class="uname">U+0A72 GURMUKHI IRI</span>]</span> is used for <span class="ipa">ɪ</span> <span class="charExample" translate="no"><span class="ex" lang="pa">ਇ</span></span>, <span class="ipa">i</span>
+<span class="charExample" translate="no"><span class="ex" lang="pa">ਈ</span></span>, <span class="ipa">e</span> <span class="charExample" translate="no"><span class="ex" lang="pa">ਏ</span></span>, </p>
+
+<p><span class="codepoint" translate="no"><bdi lang="pa">&#x0A73;</bdi> [<span class="uname">U+0A73 GURMUKHI URA</span>]</span> is used for <span class="ipa">ʊ</span> <span class="charExample" translate="no"><span class="ex" lang="pa">ਉ</span></span>, <span class="ipa">u</span>
+<span class="charExample" translate="no"><span class="ex" lang="pa">ਊ</span></span>, <span class="ipa">o</span> <span class="charExample" translate="no"><span class="ex" lang="pa">ਓ</span></span>, </p>
+</blockquote>
+</section>
+
+
+
+
+
+
+
+<section id="consonantclusters"> 
+<h3>Consonant clusters</h3>
+
+<p>Where consonants appear together without intervening vowels special steps need to be taken to indicate that the inherent vowels have
+disappeared. There are many ways in which this is achieved in Indic scripts, and the specifics of how each character behaves are too many to
+catalogue here in detail for each script. There are, however, two main approaches: either (a) change the shape of the consonants or merge them
+together in some way (a <em>conjunct</em> form), or (b) use a special diacritic to indicate the absence of intervening vowels.</p>
+<p>A number of strategies are used to show consonant clusters by merging or changing shapes, and nearly all scripts employ more than one
+of these approaches. The following are a few examples:</p>
+
+<ul>
+<li> 
+<p>For 60% of Devanagari conjuncts the consonants that lose the vowel typically lose their characteristic vertical bar (which is
+    historically associated with the sound of the inherent vowel). Such glyphs are referred to as <em>half-forms</em>. For example,
+    <span class="charExample" translate="no"><span class="ex" lang="hi">स्</span></span> <span class="ipa">s</span> + <span class="charExample" translate="no"><span class="ex" lang="hi">स</span></span> <span
+    class="ipa">mə</span> -&gt; <span class="charExample" translate="no"><span class="ex" lang="hi">स्म</span></span> <span class="ipa">smə</span>.</p>
+</li>
+
+<li> 
+<p>Sometimes the two consonant glyphs may be combined vertically. For example, certain combinations in Gujarati  such as							<span class="charExample" translate="no"><span class="ex" lang="gu">ટ્</span></span> <span class="ipa">ʈ</span> +  <span class="charExample" translate="no"><span class="ex" lang="gu">ઠ</span></span> <span class="ipa">ʈʰə</span> -&gt; <span class="charExample" translate="no"><span class="ex" lang="gu">ટ્ઠ</span></span> <span class="ipa">ʈʈʰə</span>. Note that the choice of vertical vs. horizontal combination may be a stylistic preference. For example, the result
+    of <span class="charExample" translate="no"><span class="ex" lang="hi">क्</span></span> <span class="ipa">k</span> + <span class="charExample" translate="no"><span class="ex" lang="hi">क</span></span> <span
+    class="ipa">kə</span> in Devanagari could be rendered as either a vertical <img src="images/kkligature.png" class="ex" alt="क्क"> or horizontal <img src="images/khalfk.png" class="ex" alt="क्क"> combination.</p>
+</li>
+
+<li>Clustering may produce a conjunct that does not have easily recognisable parts, such as Bengali <span class="charExample" translate="no"><span class="ex" lang="bn">ক্ষ</span></span><!--<img src="bengali-ksha.gif" height="12" width="17" alt="bengali conjunct for ksha" align="middle">-->
+<span class="ipa">kʃɔ</span> (= <span class="charExample" translate="no"><span class="ex" lang="bn">ক্</span></span><!--<img src="bengali-k.gif" height="19" width="16" alt="bengali k" align="middle">-->
+<span class="ipa">k</span> + <span class="charExample" translate="no"><span class="ex" lang="bn">ষ</span></span><!--<img src="bengali-sha.gif" height="15" width="13" alt="bengali sha" align="middle">-->
+<span class="ipa">ʃɔ</span>), or that expresses the conjunct by extension of a glyph such as the Malayalam <span class="charExample" translate="no"><span class="ex" lang="ml">ക്ക</span></span><!--<img src="malayalam-kka.gif" height="14" width="28" alt="malayalam kka" align="middle">-->
+<span class="ipa">kːa</span> (= <span class="charExample" translate="no"><span class="ex" lang="ml">ക്</span></span><!--<img src="malayalam-k.gif" height="16" width="26" alt="malayalam k" align="middle">-->
+<span class="ipa">k</span> + <span class="charExample" translate="no"><span class="ex" lang="ml">ക</span></span><!--<img src="malayalam-ka.gif" height="16" width="22" align="middle" alt="malayalam ka">-->
+<span class="ipa">ka</span>).</li>
+
+<li> 
+<p>Another common approach is to reduce and simplify one of the consonants in the cluster, and then attach it to the other like a
+diacritic. In Kannada most combinations are formed by reducing non-initial consonant glyphs in a cluster to a simplified form, joined beneath and/or
+to the right of the initial consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="kn">ತ್</span></span> + <span class="charExample" translate="no"><span class="ex" lang="kn">ಯ</span></span> -&gt; <span class="charExample" translate="no"><span class="ex" lang="kn">ತ್ಯ</span> <span class="ipa">tjʌ</span></span>. Oriya also often reduces the second consonant, but in some combinations will reduce the <em>first</em> consonant and attach
+it to the bottom of the second<!--, eg. <span style="font-family: code2000">କ୍</span> /<span class="ipa">k</span>/ + <span style="font-family: code2000">ତ</span> /<span class="ipa">tɔ</span>/ =&gt; <span style="font-family: code2000">କ୍ତ</span> /<span class="ipa">ktɔ</span>/-->.</p>
+</li>
+</ul>
+
+<p>Another approach is to simply show the virama we introduced earlier. This is really the standard approach for modern Tamil, eg.
+<span class="charExample" translate="no"><span class="ex" lang="ta">இந்த</span> <span class="ipa">intʌ</span></span>  (the dot is the virama), but may also be used for any other script if the font being
+</p>
+
+<p>There is actually a third approach, and that is to simply rely on the user to recognise contexts where the inherent vowel is dropped.
+This occurs in some specific situations such as at the end of a word or those examples described earlier. The only script that does this as a
+<em>general rule</em> is Gurmukhi. Very few letter combinations are handled as conjuncts in Gurmukhi, most of the time the reader just has to know
+where the inherent vowel is not pronounced, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਉਤਸੁਕ</span> <span class="ipa">utsuk</span></span>.</p>
+
+<p>A common feature of Indic scripts is the gemination or lengthening of consonants. For example, note the lengthening of the
+<span class="charExample" translate="no"><span class="ex" lang="hi">ल</span> <span class="ipa">l</span></span> sound in <span class="charExample" translate="no"><span class="ex" lang="hi">चिल्लहट</span> <span class="ipa">cilːʌhʌʈ</span></span>
+(Devanagari). Such consonant lengthening is typically handled just as a normal consonant cluster. Gurmukhi,
+again, is somewhat non-standard in that it uses a special diacritic called <em>addak</em> in this situation. To indicate a geminated consonant, the
+addak sits above the <em>preceding</em> syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਪੁੱਤਰ</span> <span class="ipa">putːər</span></span>.</p>
+
+<p>The letter RA is an example of a letter that typically behaves quite idiosyncratically in consonant clusters, and typically quite
+differently depending on whether it appears at the beginning or end of the cluster. Its placement also often involves apparent reordering. This can
+be illustrated with the Devanagari RA <span class="charExample" translate="no"><span class="ex" lang="hi">र</span></span>. When in initial position in the cluster the letter
+<span class="charExample" translate="no"><span class="ex" lang="hi">र</span></span> is typically displayed as a small mark above the <em>right</em> shoulder of the last letter in the
+syllable, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">शार्मा</span> <span class="ipa">ʃaːrmaː</span></span>. This is called a <em>repha</em>. A
+<span class="charExample" translate="no"><span class="ex" lang="hi">र</span></span> in final position in a conjunct cluster is displayed as a small diagonal mark, but precisely where
+it appears depends on the shape of the previous consonant, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">प्र</span></span> <span class="ipa">pra</span>,
+<span class="charExample" translate="no"><span class="ex" lang="hi">त्र</span></span> <span class="ipa">tra</span>, <span class="charExample" translate="no"><span class="ex" lang="hi">ह्र</span></span> <span
+class="ipa">hra</span>. With TTA and DDA it needs a little supporting line, eg <span class="charExample" translate="no"><span class="ex" lang="hi">ट्र</span></span> <span
+class="ipa">ʈra</span>, <span class="charExample" translate="no"><span class="ex" lang="hi">ड्र</span></span> <span class="ipa">ɖra</span>.</p>
+
 <p>Note that a cluster is not limited to two consonants, eg. </p>
-				<blockquote class="block-indent"> 
-					<p><span class="charExample" translate="no"><span class="ex" lang="hi">र्</span></span> <span class="ipa">r</span> + <span class="charExample" translate="no"><span class="ex" lang="hi">ग्</span></span> <span class="ipa">g</span> + <span class="charExample" translate="no"><span class="ex" lang="hi">घ</span></span> <span class="ipa">dʰʌ</span> -&gt;
-						<span class="charExample" translate="no"><span class="ex" lang="hi">र्ग्ध</span></span> <span class="ipa">rgdʰʌ</span></p>
-        </blockquote>
-				<p> This use of the repha, appearing as it does to the right of the whole cluster, demonstrates the syllabic nature of the Indic scripts.
-					The following extension of the example shows even more clearly that the repha is actually positioned to the right of the <em>syllable</em>, rather
-					than just the cluster, since it appears above the vowel sign.</p>
-				<blockquote class="block-indent"> 
-					<p><span class="charExample" translate="no"><span class="ex" lang="hi">र्</span></span> <span class="ipa">r</span> + <span class="charExample" translate="no"><span class="ex" lang="hi">ग्</span></span> <span class="ipa">g</span> + <span class="charExample" translate="no"><span class="ex" lang="hi">घ</span></span> <span class="ipa">dʰʌ</span> +
-						<span class="charExample" translate="no"><span class="ex" lang="hi">ी</span></span> <span class="ipa">iː</span> -&gt; <span class="charExample" translate="no"><span class="ex" lang="hi">र्ग्धी</span></span> <span
-						class="ipa">rgdʰiː</span></p>
-      </blockquote>
-				<p>(Note that syllable boundaries in spoken text do not equate to those in written text. For example, 'Hindi' is spoken as 'hin-di', but
-					written as 'hi-ndi'.)</p>
-			</div>
-			
-			
-			
-			
-			
-			<div class="section2"> 
 
-				<h3 id="vsandcc"><a href="#vsandcc">Vowel signs used with consonant clusters</a></h3>
-				<p>Where the vowel following a consonant cluster is rendered with a vowel sign, the placement of the vowel sign may need attention. As
-					with the examples of the repha at the end of the last section, the syllabic nature of the script becomes apparent with the use of reordrant vowel
-					signs attached to consonant clusters.</p>
-				<p>In Devanagari, where a vowel sign that is is normally rendered to the left of a character is pronounced immediately after the cluster,
-					it will be rendered to the left of the whole cluster, eg. in <span class="charExample" translate="no"><span class="ex" lang="hi">मुश्किल</span> <span class="ipa">muʃkil</span></span>, the <span class="charExample" translate="no"><span class="ex" lang="hi">ि</span></span> is pronounced after the <span class="charExample" translate="no"><span class="ex" lang="hi">क</span></span>.</p>
-				<p>Vowel signs in a script like Kannada are visually attached to the first consonant in the cluster. Note how the vowel sign appears over
-					the <span class="ipa">k</span> in <span class="charExample" translate="no"><span class="ex" lang="kn">ಕ್ರಿ</span></span> <span class="ipa">kri</span>, since the <span class="ipa">r</span> is rendered
-					as a reduced appendage at the bottom right of the first consonant in the cluster.</p>
-			</div>
-			
-			
-			
-			
-			
-			<div class="section2"> 
+<blockquote class="block-indent"> 
+<p><span class="charExample" translate="no"><span class="ex" lang="hi">र्</span></span> <span class="ipa">r</span> + <span class="charExample" translate="no"><span class="ex" lang="hi">ग्</span></span> <span class="ipa">g</span> + <span class="charExample" translate="no"><span class="ex" lang="hi">घ</span></span> <span class="ipa">dʰʌ</span> -&gt;
+<span class="charExample" translate="no"><span class="ex" lang="hi">र्ग्ध</span></span> <span class="ipa">rgdʰʌ</span></p>
+</blockquote>
 
-				<h3 id="nasalisation"><a href="#nasalisation">Nasalisation and alternative nasal letter representations</a></h3>
-				<p>There are three diacritics associated with the nasalisation of vowels or the alternative representation of nasal consonants as part of
-					a consonant cluster. Which diacritic is used for which purpose varies from script to script. The following are a few examples of usage. (As usual,
-					although these diacritics have their own names in the various languages represented by the scripts, I will refer to them using the generic names
-					used in the Unicode Standard):</p>
-				<ul>
-					<li> 
-						<p>In Devanagari, nasalisation of vowel sounds is indicated using the <em>candrabindu</em> <span class="charExample" translate="no"><span class="ex" lang="hi">ँ</span></span> or <em>anusvara</em> <span class="charExample" translate="no"><span class="ex" lang="hi">ं</span></span> diacritics, eg.
-							<span class="charExample" translate="no"><span class="ex" lang="hi">अँग्रेज़</span> <span class="ipa">ʌ̃grez</span></span>, <span class="charExample" translate="no"><span class="ex" lang="hi">नहीं</span> <span class="ipa">nʌhĩː</span></span>. The anusvara is commonly used in conjunction with a vowel sign that extends above the headstroke.</p>
-						<p>Nasal consonants in initial place in a conjunct may also be expressed using the anusvara over the previous letter, rather than
-							as a half-glyph attached to the following consonant. The anusvara is written above the headstroke, at the right-hand end of the preceding character.
-							In the list below both spellings are correct and equivalent, although the anusvara is preferred in the case of the first two:
-							<span class="charExample" translate="no"><span class="ex" lang="hi">रंग</span></span> = <span class="charExample" translate="no"><span class="ex" lang="hi">रङ्ग</span> <span class="ipa">rʌŋg</span></span>,
-							<span class="charExample" translate="no"><span class="ex" lang="hi">पंजाबी</span></span> = <span class="charExample" translate="no"><span class="ex" lang="hi">पञ्जाबी</span> <span class="ipa">pʌɳɟaːbiː</span></span>, <span class="charExample" translate="no"><span class="ex" lang="hi">हिंदी</span></span> = <span class="charExample" translate="no"><span class="ex" lang="hi">हिन्दी</span> <span class="ipa">hindiː</span></span>, <span class="charExample" translate="no"><span class="ex" lang="hi">लंबा</span></span> = <span class="charExample" translate="no"><span class="ex" lang="hi">लम्बा</span> <span class="ipa">lʌmbaː</span></span>. Note that the anusvara is still applied when the previous character has its own vowel
-							sign. If the vowel sign is AA, the anusvara appears over the AA, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">फ़्रांसीसी</span> <span class="ipa">pʰɾɑːnsiːsiː</span></span> or
-							<span class="charExample" translate="no"><span class="ex" lang="hi">आंदोलन</span> <span class="ipa">ɑːndoːlən</span></span>.</p>
-					</li>
-					<li> 
-						<p>In Kannada the anusvara <span class="charExample" translate="no"><span class="ex" lang="kn">ಂ</span></span> is mostly used for nasal consonants that are homorganic with a following stop,
-							eg. <span class="charExample" translate="no"><span class="ex" lang="kn">ಅಂಗ</span> <span class="ipa">ʌŋga</span></span>. When followed by a consonant other than a stop or when word final, the anusvara is
-							pronounced <span class="ipa">m</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="kn">ಸಂಹ</span> <span class="ipa">simha</span></span>, <span class="charExample" translate="no"><span class="ex" lang="hi">ಲಗಾಂ</span> <span class="ipa">lʌgaːm</span></span>.</p>
-					</li>
-					<li> 
-						<p>In Oriya, homorganic nasal+stop clusters are usually written with distinctive conjunct letters<!--, eg. <span class="ka ex">ଅଙ୍କ</span> /<span class="ipa">ɔŋkɔ</span>/-->.
-							However, the nasal may also be written with anusvara, eg. <span class="charExample" translate="no"><span class="ex" lang="or">ଅଂକ</span> <span class="ipa">ɔŋkɔ</span></span>.</p>
-						<p>Nasalised vowels use the bindu, eg. <span class="charExample" translate="no"><span class="ex" lang="or">ଆଁ</span> <span class="ipa">ã</span></span>, <span class="charExample" translate="no"><span class="ex" lang="or">କାଁ</span> <span class="ipa">kã</span></span>.</p>
-					</li>
-					<li> 
-						<p>Gurmukhi is unusual in that it has its own special diacritic for indicating nasalisation of vowel sounds. The tippi
-							<span class="charExample" translate="no"><span class="ex" lang="pa">ੰ</span></span> is used over the preceding syllable with <span class="ipa">a</span>, <span class="ipa">ɪ</span>, <span
-							class="ipa">ʊ</span> and final <span class="ipa">u</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਮੁੰਡਾ</span> <span class="ipa">mʊɳɖɑ</span></span>.</p>
-						<p>All other vowels use the anusvara <span class="charExample" translate="no"><span class="ex" lang="pa">ਂ</span></span> (called <em>bimdi</em> in Panjabi), eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਸ਼ਾਂਤ</span> <span class="ipa">ʃɑ̃t</span></span>.</p>
-					</li>
-				</ul>
-			</div>
-			
-			
-			
-			
-			
-			<div class="section2"> 
+<p> This use of the repha, appearing as it does to the right of the whole cluster, demonstrates the syllabic nature of the Indic scripts.
+The following extension of the example shows even more clearly that the repha is actually positioned to the right of the <em>syllable</em>, rather
+than just the cluster, since it appears above the vowel sign.</p>
 
-				<h3 id="visarga"><a href="#visarga">The visarga</a></h3>
-				<p>The visarga is commonly required for transcribing Sanskrit, but occasionally has more specific uses too. It is not used at all in
-					Gurmukhi.</p>
-				<p>The pronunciation of the visarga may vary. In Kannada it is commonly pronounced <span class="ipa">ha</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="kn">ಪುನಃ</span> <span class="ipa">punəha</span></span>. In Gujarati it is typically silent.</p>
-                <div class="sidenoteGroup">
-				<p>In Tamil the visarga <span class="charExample" translate="no"><span class="ex" lang="ta">ஃ</span></span> is known as 'aytham' and is used to create additional fricative sounds. Before PA it creates <span
-					class="ipa">f</span>, and before JA it creates <span class="ipa">z</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">ஃபீசு</span> <span class="ipa">fiːsɯ</span></span>,
-					<span class="charExample" translate="no"><span class="ex" lang="ta">ஃஜிராக்ஸ்</span> <span class="ipa">ziɾoks</span></span>.
-                    </p>
-                    <div class="sidenote"> Glyphs for the visarga should not have a dotted circle before
-					them. This is feature of some older fonts, inherited from the fact that incorrect semantics were applied to this Unicode character prior to Unicode version
-					3.2.</div>
-              </div>
-			</div>
-			
-			
-			
-			
-			
-			<div class="section2"> 
+<blockquote class="block-indent"> 
+<p><span class="charExample" translate="no"><span class="ex" lang="hi">र्</span></span> <span class="ipa">r</span> + <span class="charExample" translate="no"><span class="ex" lang="hi">ग्</span></span> <span class="ipa">g</span> + <span class="charExample" translate="no"><span class="ex" lang="hi">घ</span></span> <span class="ipa">dʰʌ</span> +
+<span class="charExample" translate="no"><span class="ex" lang="hi">ी</span></span> <span class="ipa">iː</span> -&gt; <span class="charExample" translate="no"><span class="ex" lang="hi">र्ग्धी</span></span> <span
+class="ipa">rgdʰiː</span></p>
+</blockquote>
 
-				<h3 id="numbers"><a href="#numbers">Numbers</a></h3>
-				<p>All scripts have their own number shapes. While some scripts, such as Tamil, tend to favour European numerals over their own in modern
-					text, other scripts, such as Hindi, still make heavy use of their native shapes.</p>
-				<p>The following table shows the number symbols:</p>
-				<div class="block-indent"> 
+<p>(Note that syllable boundaries in spoken text do not equate to those in written text. For example, 'Hindi' is spoken as 'hin-di', but
+written as 'hi-ndi'.)</p>
+</section>
+
+
+
+
+
+
+
+<section id="vsandcc"> 
+<h3>Vowel signs used with consonant clusters</h3>
+
+<p>Where the vowel following a consonant cluster is rendered with a vowel sign, the placement of the vowel sign may need attention. As
+with the examples of the repha at the end of the last section, the syllabic nature of the script becomes apparent with the use of reordrant vowel
+signs attached to consonant clusters.</p>
+
+<p>In Devanagari, where a vowel sign that is is normally rendered to the left of a character is pronounced immediately after the cluster,
+it will be rendered to the left of the whole cluster, eg. in <span class="charExample" translate="no"><span class="ex" lang="hi">मुश्किल</span> <span class="ipa">muʃkil</span></span>, the <span class="charExample" translate="no"><span class="ex" lang="hi">ि</span></span> is pronounced after the <span class="charExample" translate="no"><span class="ex" lang="hi">क</span></span>.</p>
+
+<p>Vowel signs in a script like Kannada are visually attached to the first consonant in the cluster. Note how the vowel sign appears over
+the <span class="ipa">k</span> in <span class="charExample" translate="no"><span class="ex" lang="kn">ಕ್ರಿ</span></span> <span class="ipa">kri</span>, since the <span class="ipa">r</span> is rendered
+as a reduced appendage at the bottom right of the first consonant in the cluster.</p>
+</section>
+
+
+
+
+
+
+
+
+<section id="nasalisation"> 
+<h3>Nasalisation and alternative nasal letter representations</h3>
+
+<p>Three diacritics are associated with the nasalisation of vowels or the alternative representation of nasal consonants as part of
+a consonant cluster. Which diacritic is used for which purpose varies from script to script. The following are a few examples of usage. (As usual,
+although these diacritics have their own names in the various languages represented by the scripts, I will refer to them using the generic names
+used in the Unicode Standard):</p>
+
+<ul>
+<li> 
+<p>In Devanagari, nasalisation of vowel sounds is indicated using the <em>candrabindu</em> <span class="charExample" translate="no"><span class="ex" lang="hi">ँ</span></span> or <em>anusvara</em> <span class="charExample" translate="no"><span class="ex" lang="hi">ं</span></span> diacritics, eg.
+<span class="charExample" translate="no"><span class="ex" lang="hi">अँग्रेज़</span> <span class="ipa">ʌ̃grez</span></span>, <span class="charExample" translate="no"><span class="ex" lang="hi">नहीं</span> <span class="ipa">nʌhĩː</span></span>. The anusvara is commonly used in conjunction with a vowel sign that extends above the headstroke.</p>
+
+<p>Nasal consonants in initial place in a conjunct may also be expressed using the anusvara over the previous letter, rather than
+as a half-glyph attached to the following consonant. The anusvara is written above the headstroke, at the right-hand end of the preceding character.
+In the list below both spellings are correct and equivalent, although the anusvara is preferred in the case of the first two:
+<span class="charExample" translate="no"><span class="ex" lang="hi">रंग</span></span> = <span class="charExample" translate="no"><span class="ex" lang="hi">रङ्ग</span> <span class="ipa">rʌŋg</span></span>,
+<span class="charExample" translate="no"><span class="ex" lang="hi">पंजाबी</span></span> = <span class="charExample" translate="no"><span class="ex" lang="hi">पञ्जाबी</span> <span class="ipa">pʌɳɟaːbiː</span></span>, <span class="charExample" translate="no"><span class="ex" lang="hi">हिंदी</span></span> = <span class="charExample" translate="no"><span class="ex" lang="hi">हिन्दी</span> <span class="ipa">hindiː</span></span>, <span class="charExample" translate="no"><span class="ex" lang="hi">लंबा</span></span> = <span class="charExample" translate="no"><span class="ex" lang="hi">लम्बा</span> <span class="ipa">lʌmbaː</span></span>. Note that the anusvara is still applied when the previous character has its own vowel
+sign. If the vowel sign is AA, the anusvara appears over the AA, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">फ़्रांसीसी</span> <span class="ipa">pʰɾɑːnsiːsiː</span></span> or
+<span class="charExample" translate="no"><span class="ex" lang="hi">आंदोलन</span> <span class="ipa">ɑːndoːlən</span></span>.</p>
+</li>
+
+<li> 
+<p>In Kannada the anusvara <span class="charExample" translate="no"><span class="ex" lang="kn">ಂ</span></span> is mostly used for nasal consonants that are homorganic with a following stop,
+eg. <span class="charExample" translate="no"><span class="ex" lang="kn">ಅಂಗ</span> <span class="ipa">ʌŋga</span></span>. When followed by a consonant other than a stop or when word final, the anusvara is
+pronounced <span class="ipa">m</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="kn">ಸಂಹ</span> <span class="ipa">simha</span></span>, <span class="charExample" translate="no"><span class="ex" lang="hi">ಲಗಾಂ</span> <span class="ipa">lʌgaːm</span></span>.</p>
+</li>
+
+<li> 
+<p>In Oriya, homorganic nasal+stop clusters are usually written with distinctive conjunct letters<!--, eg. <span class="ka ex">ଅଙ୍କ</span> /<span class="ipa">ɔŋkɔ</span>/-->.
+However, the nasal may also be written with anusvara, eg. <span class="charExample" translate="no"><span class="ex" lang="or">ଅଂକ</span> <span class="ipa">ɔŋkɔ</span></span>.</p>
+
+<p>Nasalised vowels use the bindu, eg. <span class="charExample" translate="no"><span class="ex" lang="or">ଆଁ</span> <span class="ipa">ã</span></span>, <span class="charExample" translate="no"><span class="ex" lang="or">କାଁ</span> <span class="ipa">kã</span></span>.</p>
+</li>
+
+<li> 
+<p>Gurmukhi is unusual in that it has its own special diacritic for indicating nasalisation of vowel sounds. The tippi
+<span class="charExample" translate="no"><span class="ex" lang="pa">ੰ</span></span> is used over the preceding syllable with <span class="ipa">a</span>, <span class="ipa">ɪ</span>, <span
+class="ipa">ʊ</span> and final <span class="ipa">u</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਮੁੰਡਾ</span> <span class="ipa">mʊɳɖɑ</span></span>.</p>
+
+<p>All other vowels use the anusvara <span class="charExample" translate="no"><span class="ex" lang="pa">ਂ</span></span> (called <em>bimdi</em> in Panjabi), eg. <span class="charExample" translate="no"><span class="ex" lang="pa">ਸ਼ਾਂਤ</span> <span class="ipa">ʃɑ̃t</span></span>.</p>
+</li>
+</ul>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="visarga"> 
+<h3>The visarga</h3>
+
+<p>The visarga is commonly required for transcribing Sanskrit, but occasionally has more specific uses too. It is not used at all in
+Gurmukhi.</p>
+
+<p>The pronunciation of the visarga may vary. In Kannada it is commonly pronounced <span class="ipa">ha</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="kn">ಪುನಃ</span> <span class="ipa">punəha</span></span>. In Gujarati it is typically silent.</p>
+
+<div class="sidenoteGroup">
+<p>In Tamil the visarga <span class="charExample" translate="no"><span class="ex" lang="ta">ஃ</span></span> is known as 'aytham' and is used to create additional fricative sounds. Before PA it creates <span
+class="ipa">f</span>, and before JA it creates <span class="ipa">z</span>, eg. <span class="charExample" translate="no"><span class="ex" lang="ta">ஃபீசு</span> <span class="ipa">fiːsɯ</span></span>,
+<span class="charExample" translate="no"><span class="ex" lang="ta">ஃஜிராக்ஸ்</span> <span class="ipa">ziɾoks</span></span>.
+</p>
+
+<div class="sidenote"> Glyphs for the visarga should not have a dotted circle before
+them. This is feature of some older fonts, inherited from the fact that incorrect semantics were applied to this Unicode character prior to Unicode version
+3.2.</div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+<section> 
+<h3 id="numbers">Numbers</h3>
+
+<p>All scripts have their own number shapes. While some scripts, such as Tamil, tend to favour European numerals over their own in modern
+text, other scripts, such as Hindi, still make heavy use of their native shapes.</p>
+
+<p>The following table shows the number symbols:</p>
+<div class="block-indent"> 
 
 <style>
 #digits td { font-size: 120%; line-height: 1.6; }
 </style>
-					<table id="digits">
-						<tbody>
-							<tr>
-								<th>European</th>
-								<th style="font-size: 24px;">0</th>
-								<th style="font-size: 24px;">1</th>
-								<th style="font-size: 24px;">2</th>
-								<th style="font-size: 24px;">3</th>
-								<th style="font-size: 24px;">4</th>
-								<th style="font-size: 24px;">5</th>
-								<th style="font-size: 24px;">6</th>
-								<th style="font-size: 24px;">7</th>
-								<th style="font-size: 24px;">8</th>
-								<th style="font-size: 24px;">9</th>
-							</tr>
-							<tr>
-								<th>Devanagari</th>
-								<td><span class="charExample" translate="no"><span class="ex" lang="hi">०</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="hi">१</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="hi">२</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="hi">३</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="hi">४</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="hi">५</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="hi">६</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="hi">७</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="hi">८</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="hi">९</span></span></td>
-							</tr>
-							<tr>
-								<th>Bengali</th>
-								<td><span class="charExample" translate="no"><span class="ex" lang="bn">০</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="bn">১</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="bn">২</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="bn">৩</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="bn">৪</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="bn">৫</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="bn">৬</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="bn">৭</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="bn">৮</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="bn">৯</span></span></td>
-							</tr>
-							<tr>
-								<th>Gurmukhi</th>
-								<td><span class="pa ex"><span class="charExample" translate="no"><span class="ex" lang="pa">੦</span></span></span></td>
-								<td><span class="pa ex"><span class="charExample" translate="no"><span class="ex" lang="pa">੧</span></span></span></td>
-								<td><span class="pa ex"><span class="charExample" translate="no"><span class="ex" lang="pa">੨</span></span></span></td>
-								<td><span class="pa ex"><span class="charExample" translate="no"><span class="ex" lang="pa">੩</span></span></span></td>
-								<td><span class="pa ex"><span class="charExample" translate="no"><span class="ex" lang="pa">੪</span></span></span></td>
-								<td><span class="pa ex"><span class="charExample" translate="no"><span class="ex" lang="pa">੫</span></span></span></td>
-								<td><span class="pa ex"><span class="charExample" translate="no"><span class="ex" lang="pa">੬</span></span></span></td>
-								<td><span class="pa ex"><span class="charExample" translate="no"><span class="ex" lang="pa">੭</span></span></span></td>
-								<td><span class="pa ex"><span class="charExample" translate="no"><span class="ex" lang="pa">੮</span></span></span></td>
-								<td><span class="pa ex"><span class="charExample" translate="no"><span class="ex" lang="pa">੯</span></span></span></td>
-							</tr>
-							<tr>
-								<th>Gujarati</th>
-								<td><span class="charExample" translate="no"><span class="ex" lang="gu">૦</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="gu">૧</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="gu">૨</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="gu">૩</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="gu">૪</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="gu">૫</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="gu">૬</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="gu">૭</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="gu">૮</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="gu">૯</span></span></td>
-							</tr>
-							<tr>
-								<th>Oriya</th>
-								<td><span class="charExample" translate="no"><span class="ex" lang="or">୦</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="or">୧</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="or">୨</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="or">୩</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="or">୪</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="or">୫</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="or">୬</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="or">୭</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="or">୮</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="or">୯</span></span></td>
-							</tr>
-							<tr>
-								<th>Tamil</th>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">௦</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">௧</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">௨</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">௩</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">௪</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">௫</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">௬</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">௭</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">௮</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ta">௯</span></span></td>
-							</tr>
-							<tr>
-								<th>Telugu</th>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">౦</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">౧</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">౨</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">౩</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">౪</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">౫</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">౬</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">౭</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">౮</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="te">౯</span></span></td>
-							</tr>
-							<tr>
-								<th>Kannada</th>
-								<td><span class="charExample" translate="no"><span class="ex" lang="kn">೦</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="kn">೧</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="kn">೨</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="kn">೩</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="kn">೪</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="kn">೫</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="kn">೬</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="kn">೭</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="kn">೮</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="kn">೯</span></span></td>
-							</tr>
-							<tr>
-								<th>Malayalam</th>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ml">൦</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ml">൧</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ml">൨</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ml">൩</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ml">൪</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ml">൫</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ml">൬</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ml">൭</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ml">൮</span></span></td>
-								<td><span class="charExample" translate="no"><span class="ex" lang="ml">൯</span></span></td>
-							</tr>
-						</tbody>
-					</table>
+<table id="digits">
+<tbody>
+<tr>
+<th>European</th>
+<th style="font-size: 24px;">0</th>
+<th style="font-size: 24px;">1</th>
+<th style="font-size: 24px;">2</th>
+<th style="font-size: 24px;">3</th>
+<th style="font-size: 24px;">4</th>
+<th style="font-size: 24px;">5</th>
+<th style="font-size: 24px;">6</th>
+<th style="font-size: 24px;">7</th>
+<th style="font-size: 24px;">8</th>
+<th style="font-size: 24px;">9</th>
+</tr>
+<tr>
+<th>Devanagari</th>
+<td><span class="charExample" translate="no"><span class="ex" lang="hi">०</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="hi">१</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="hi">२</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="hi">३</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="hi">४</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="hi">५</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="hi">६</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="hi">७</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="hi">८</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="hi">९</span></span></td>
+</tr>
+<tr>
+<th>Bengali</th>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">০</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">১</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">২</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">৩</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">৪</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">৫</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">৬</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">৭</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">৮</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="bn">৯</span></span></td>
+</tr>
+<tr>
+<th>Gurmukhi</th>
+<td><span class="pa ex"><span class="charExample" translate="no"><span class="ex" lang="pa">੦</span></span></span></td>
+<td><span class="pa ex"><span class="charExample" translate="no"><span class="ex" lang="pa">੧</span></span></span></td>
+<td><span class="pa ex"><span class="charExample" translate="no"><span class="ex" lang="pa">੨</span></span></span></td>
+<td><span class="pa ex"><span class="charExample" translate="no"><span class="ex" lang="pa">੩</span></span></span></td>
+<td><span class="pa ex"><span class="charExample" translate="no"><span class="ex" lang="pa">੪</span></span></span></td>
+<td><span class="pa ex"><span class="charExample" translate="no"><span class="ex" lang="pa">੫</span></span></span></td>
+<td><span class="pa ex"><span class="charExample" translate="no"><span class="ex" lang="pa">੬</span></span></span></td>
+<td><span class="pa ex"><span class="charExample" translate="no"><span class="ex" lang="pa">੭</span></span></span></td>
+<td><span class="pa ex"><span class="charExample" translate="no"><span class="ex" lang="pa">੮</span></span></span></td>
+<td><span class="pa ex"><span class="charExample" translate="no"><span class="ex" lang="pa">੯</span></span></span></td>
+</tr>
+<tr>
+<th>Gujarati</th>
+<td><span class="charExample" translate="no"><span class="ex" lang="gu">૦</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="gu">૧</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="gu">૨</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="gu">૩</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="gu">૪</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="gu">૫</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="gu">૬</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="gu">૭</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="gu">૮</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="gu">૯</span></span></td>
+</tr>
+<tr>
+<th>Oriya</th>
+<td><span class="charExample" translate="no"><span class="ex" lang="or">୦</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="or">୧</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="or">୨</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="or">୩</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="or">୪</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="or">୫</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="or">୬</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="or">୭</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="or">୮</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="or">୯</span></span></td>
+</tr>
+<tr>
+<th>Tamil</th>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">௦</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">௧</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">௨</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">௩</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">௪</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">௫</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">௬</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">௭</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">௮</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ta">௯</span></span></td>
+</tr>
+<tr>
+<th>Telugu</th>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">౦</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">౧</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">౨</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">౩</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">౪</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">౫</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">౬</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">౭</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">౮</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="te">౯</span></span></td>
+</tr>
+<tr>
+<th>Kannada</th>
+<td><span class="charExample" translate="no"><span class="ex" lang="kn">೦</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="kn">೧</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="kn">೨</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="kn">೩</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="kn">೪</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="kn">೫</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="kn">೬</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="kn">೭</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="kn">೮</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="kn">೯</span></span></td>
+</tr>
+<tr>
+<th>Malayalam</th>
+<td><span class="charExample" translate="no"><span class="ex" lang="ml">൦</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ml">൧</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ml">൨</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ml">൩</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ml">൪</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ml">൫</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ml">൬</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ml">൭</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ml">൮</span></span></td>
+<td><span class="charExample" translate="no"><span class="ex" lang="ml">൯</span></span></td>
+</tr>
+</tbody>
+</table>
+</div>
 
-				</div>
-				<p>Tamil number shapes are not based on the decimal system, and so there is traditionally no zero. There are however additional symbols to represent 10				  <span class="charExample" translate="no"><span class="ex" lang="ta">௰</span></span>, 100 <span class="charExample" translate="no"><span class="ex" lang="ta">௱</span></span>, and 1000 <span class="charExample" translate="no"><span class="ex" lang="ta">௲</span></span>. Modern Tamil typically uses European numerals.</p>
-			</div>
-			
-			
-			
-			
-			
-			<div class="section2"> 
+<p>Tamil number shapes are not based on the decimal system, and so there is traditionally no zero. There are however additional symbols to represent 10 <span class="charExample" translate="no"><span class="ex" lang="ta">௰</span></span>, 100 <span class="charExample" translate="no"><span class="ex" lang="ta">௱</span></span>, and 1000 <span class="charExample" translate="no"><span class="ex" lang="ta">௲</span></span>. Modern Tamil typically uses European numerals.</p>
+</section>
 
-				<h3 id="punctuation"><a href="#punctuation">Text units &amp; punctuation</a></h3>
-				<p>Sub-sentence units (words) are separated with spaces.</p>
-				<p>Modern text commonly uses western punctuation, but some scripts sometimes use traditional punctuation. For example, the DANDA
-					<span class="charExample" translate="no"><span class="ex" lang="hi">।</span></span> may still be used in Devanagari to mark the end of a sentence, or the DOUBLE DANDA
-					<span class="charExample" translate="no"><span class="ex" lang="te">॥</span></span> in Telugu for certain abbreviations.<!--<span class="ed"> Check out whether gurmukhi uses sentence final punctuation.</span>--></p>
-			</div> 
-			</section>
-			
-			
-			
-			
-		  <!--<div> 
-			 <h3>Wrapping &amp; justification</h3> 
-			 <p>For information about, see .....</p> 
-			 </div>--><!--<div> 
-				<h3>Collation</h3> 
-				<p>For information about collation of Indic scripts, see UTN#1.</p> </div>--></div>
-				
-				
-				
-				
-				
-				
-		<section id="implementation" style="page-break-before:always;"> 
-		<h2>Unicode implementation notes</h2>
-		
-		
-		
-			<div class="section2"> 
 
-				<h3 id="distinctions"><a href="#distinctions">An important distinction</a></h3>
-				<p>In this section we need to make a clear distinction between <em>characters</em>, the basic codepoint units provided by the Unicode
-					Standard for representation of the script in memory, and <em>glyphs</em>, the visual representation of one or more underlying characters when
-					displayed or printed. As with other complex scripts, and unlike text in English, it is common to find situations where there is not a one-to-one
-					mapping of characters to glyphs.</p>
-				<p>I will try to use the terms character and glyph carefully in the following text to clarify whether we are talking about the
-					representation of the text in memory or as rendered on-screen or in print.</p>
-			</div>
-			
-			
-			
-			
-			<div class="section2"> 
 
-				<h3 id="charsets"><a href="#charsets">Character sets</a></h3>
-				<p>The characters in an Indic Unicode script block are a superset of the ISCII (Indian Standard Code for Information Interchange)
-					character sets. The ISCII standard includes separate encodings for each of the scripts discussed here, using escape sequences to shift between them.
-					The Unicode blocks were originally based on the 1988 version of ISCII encodings. ISCII published a new version of the standard in 1991 with a few
-					changes to order and repertoire of characters. Unicode, nevertheless, remains a superset of all the ISCII codes, with the exception of a few Vedic
-					extension characters.</p>
-				<p>When first encoded in Unicode, the first 85 characters in each Unicode block were placed in the same order and position, on a script by script basis, as the 1988 ISCII
-					characters for the respective script. Every script block orders analogous characters in the ISCII range in the same relative locations to the start
-					of the block across all 9 scripts under consideration in this paper. The next 27 characters are additional Unicode characters, where each analogous
-					character across the scripts is also assigned to the same code point relative to the beginning of the block. The final column is reserved for script
-					specific characters. There is no special ordering here.</p>
-				<p style="page-break-before: always;">In the following charts I will use colour coding to indicate the different ranges as follows:</p>
-				<blockquote> 
 
-					<table id="chart-key">
-						<tr>
-							<td class="td-iscii">ISCII-derived </td>
-							<td class="td-unicode-ext">coordinated Unicode extension </td>
-							<td class="td-script-spec"> additional script specific characters</td>
-						</tr>
-					</table>
 
-				</blockquote> 
-			 <!--<p>The zones described above are illustrated here using the Devanagari script block. The yellow background shows the ISCII-derived range,
-				the orange is the coordinated Unicode extension range, and the brown is the range of additional script specific characters. (If viewing without
-				colour, use the following grey shades: light shows the ISCII-derived range, medium is the coordinated Unicode extension range, and the dark is the
-				range of additional script specific characters.)</p>-->
-				<p>The zones described above are illustrated here using the Devanagari script block.</p>
-		    <blockquote class="block-indent"><img src="images/devanagari-block.png" alt="Picture of devanagari block showing zoned areas."></blockquote>
-				<p>The fact that ISCII and Unicode attempt to use the same code point relative to the start of the code block for analogous characters
-					across all nine Indic scripts theoretically allows for easy transliteration between the various scripts, however in practice there are quite a few
-					exceptions in transliteration, so specific tables have to be developed anyway.<!-- For a more detailed discussion of this topic see the paper by Ram Viswanadha,
-				<cite>Transliteration of Indic Scripts Implementation in ICU and Lessons Learned</cite>.--></p>
-				<p style="page-break-before: always;">Each script block has a different number and distribution of characters. The following table
-					contrasts the allocation of characters for Devanagari, Bengali and Tamil.</p>
 
-				<table id="charts">
-					<tr>
-						<td class="block-comparison">Devanagari</td>
-						<td class="block-comparison">Bengali</td>
-						<td class="block-comparison">Tamil</td>
-					</tr>
-					<tr>
-						<td class="block-comparison"><img src="images/devanagari-block.png" alt=" "></td>
-						<td class="block-comparison"><img src="images/bengali-block.png" alt=" "></td>
-						<td class="block-comparison"><img src="images/tamil-block.png" alt=" "></td>
-					</tr>
-				</table>
 
-				<p>Other notes:</p>
-				<ol>
-					<li> 
-						<p>In older fonts the Tamil visarga, or aytham, was in some cases incorrectly rendered with a dotted circle before it in word-initial position (eg. in a word like <span class="charExample" translate="no"><span class="ex" lang="ta">ஃஜிராக்ஸ்</span></span>). This is because the Unicode Standard initially classified the Tamil visarga as a combining character.
-							An erratum issued in September 2001 corrected this, changing the General Category from "Mc" (Mark, combining) to "Lo" (Letter, other).</p>
-					</li>
-					<li> 
-						<p>The Kannada character <span class="codepoint" translate="no"><bdi lang="kn">&#x0CDE;</bdi> [<span class="uname">U+0CDE KANNADA LETTER FA</span>]</span> was incorrectly named. A more appropriate name would be
-							LLLA, rather than FA. Because of the rules for Unicode naming, the current name cannot, however, be changed. Fortunately this letter has not been
-							actively used in Kannada since the end of the 10th century.</p>
-					</li>
-				</ol>
-			</div>
-			
-			
-			
-			
-			<div class="section2"> 
+<section id="punctuation"> 
+<h3>Text units &amp; punctuation</h3>
 
-				<h3 id="combiningchars" style="page-break-before: always;"><a href="#combiningchars">Combining characters</a></h3>
-				<p>It is important to correctly order Indic characters in memory where combining characters are involved. The Unicode Standard requires
-					that all combining characters be stored in memory after the base character they are combined with. This is a fundamentally important concept. It
-					means that, even if a combining glyph appears to the left of its base character, it is stored <em>after</em> the base character in memory. (This is
-					often referred to as <em>logical</em> ordering.)</p>
-				<p>For example, the  characters in the word <span class="charExample" translate="no"><span class="ex" lang="hi">हिंदी</span> <span class="ipa">hindiː</span></span>  are
-					stored in memory as:</p>
-				<blockquote class="block-indent"> 
-				  <p><span class="charExample" translate="no"><span class="ex" lang="hi">ह</span> <span class="ipa">h</span></span>  + <span class="charExample" translate="no"><span class="ex" lang="hi">ि</span> <span class="ipa">i</span></span>
-					    + <span class="charExample" translate="no"><span class="ex" lang="hi">ं</span> <span class="ipa">n</span></span>  +						<span class="charExample" translate="no"><span class="ex" lang="hi">द</span> <span class="ipa">d</span></span>  + <span class="charExample" translate="no"><span class="ex" lang="hi">ी</span> <span class="ipa">iː</span></span></p>
-    </blockquote>
-				<p>Lets see a slightly more complicated example from Kannada. The visual sequence <span class="charExample" translate="no"><span class="ex" lang="kn">ಕ್ರಿ</span></span> is pronounced <span class="ipa">kri</span>; the RA is rendered as a subscript to the bottom right and the vowel is rendered
-					as a diacritic above the symbol for KA. The order of characters in memory (ignoring the virama, which is introduced in the next section) is:</p>
-				<blockquote class="block-indent"> 
-				  <p><span class="charExample" translate="no"><span class="ex" lang="kn">ಕ</span> <span class="ipa">k</span></span>  + <span class="charExample" translate="no"><span class="ex" lang="kn">ರ</span> <span class="ipa">r</span></span>  + <span class="charExample" translate="no"><span class="ex" lang="hi">ಿ</span> <span class="ipa">i</span></span></p>
-				</blockquote>
-				<p>It is common that multiple combining characters are asssociated with a single base character. Examples of such combinations from
-					Devanagari include an anusvara with a vowel sign, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">हिंदी</span> <span class="ipa">hindiː</span></span>, or a
-					visarga with a vowel sign, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">दुःख</span> <span class="ipa">duhkʰ</span></span>. Where there are multiple
-					combining characters, the Unicode Standard provides rules about relative ordering in memory that should be observed. If there is a nukta it must
-					immediately follow the base character. Next comes any virama or any vowel sign, then any bindus. Observing these rules improves operability and
-					simplifies operations such as searching, sorting, character indexing, and the like.</p>
-				<p>The treatment of combining characters in Indic scripts also necessitates the use of context-based rules in the font to ensure the
-					correct positioning and behaviour of displayed glyphs (a <em>glyph</em> being the visual representation of an underlying character). The position of
-					a glyph for a combining character will commonly vary according to the shape and position of its base character, and any other combining characters
-					associated with that base. In a number of cases, the combination of base character and combining character produces a fused shape that must be
-			    rendered by use of a <em>ligature</em> glyph or other special context-sensitive glyph forms (see also the next section for use of the virama).</p>
-				<p>Note also that reordering is not limited to displaying certain vowel signs to the left of the immediately preceding base consonant. In
-					a consonant cluster a vowel sign that appears to the left may need to be displayed to the left of the whole consonant cluster, not just the preceding
-					character. Similarly, the symbol for the consonant RA may be rendered as a diacritic at the far right of a syllable involving a consonant cluster
-					that it logically begins.</p>
-				<p>In addition, because the base character is typed first during normal keyboarding, the base character will typically need to be 'moved'
-					slightly to the right to accommodate the combining character glyph that joins to the left. In practice, the entire word is redrawn with every Indic
-					letter. This is typically done in an off-screen buffer and blitted to the screen. The effect is that characters appear to move and change shape
-					considerably while one is typing.</p>
-				<p>As mentioned earlier, a number of scripts (Bengali, Oriya, Tamil, Telugu, Kannada, Malayalam) have vowel signs that are composed,
-					visually, of more than one part. Such multi-part vowel signs can normally be represented using a single character. For example, Tamil
-					<span class="charExample" translate="no"><span class="ex" lang="ta">கௌ</span> <span class="ipa">kʌʋ</span></span>  can be represented using the characters <span class="codepoint" translate="no"><bdi lang="ta">&#x0B95;</bdi> [<span class="uname">U+0B95 TAMIL LETTER KA</span>]</span> and <span class="codepoint" translate="no"><bdi lang="ta">&#x0BCC;</bdi> [<span class="uname">U+0BCC TAMIL VOWEL SIGN AU</span>]</span>. Kannada <span class="charExample" translate="no"><span class="ex" lang="kn">ಕೋ</span> <span class="ipa">koː</span></span>  can be composed of the characters <span class="codepoint" translate="no"><bdi lang="kn">&#x0C95;</bdi> [<span class="uname">U+0C95 KANNADA LETTER KA</span>]</span> and <span class="codepoint" translate="no"><bdi lang="ta">&#x0CCB;</bdi> [<span class="uname">U+0CCB KANNADA VOWEL SIGN OO</span>]</span>. The Unicode charts typically do also provide separate characters that can be used to represent multi-part vowel signs.
-					If these parts are not already available as simple vowel sign characters, they are provided as special 'length mark' characters  such as <span class="codepoint" translate="no"><bdi lang="ta">&#x0BD7;</bdi> [<span class="uname">U+0BD7 TAMIL AU LENGTH MARK</span>]</span> and <span class="codepoint" translate="no"><bdi lang="kn">&#x0CD5;</bdi> [<span class="uname">U+0CD5 KANNADA LENGTH MARK</span>]</span>. Note also that if two characters are used to represent a split vowel sign both combining
-					characters must <em>follow</em> the base character in memory (eg. <span class="charExample" translate="no"><span class="ex" lang="ta">க</span></span> + <span class="charExample" translate="no"><span class="ex" lang="ta">ெ</span></span> + <span class="charExample" translate="no"><span class="ex" lang="ta">ௗ</span></span>
-					for the Tamil example <span class="charExample" translate="no"><span class="ex" lang="ta">கௌ</span></span> above).</p>
-				<p>Although Unicode typically provides single characters for letters formed by the addition of a  nukta (eg.
-					<span class="codepoint" translate="no"><bdi lang="hi">&#x0958;</bdi> [<span class="uname">U+0958 DEVANAGARI LETTER QA</span>]</span>, <span class="codepoint" translate="no"><bdi lang="pa">&#x0A33;</bdi> [<span class="uname">U+0A33 GURMUKHI LETTER LLA</span>]</span>, and <span class="codepoint" translate="no"><bdi lang="or">&#x0B5C;</bdi> [<span class="uname">U+0B5C ORIYA LETTER RRA</span>]</span>), these almost all have canonical
-		      decompositions to base character plus nukta diacritic (ie.
-			  <span class="codepoint" translate="no"><bdi lang="hi">&#x0915;&#x093C;</bdi> [<span class="uname">U+0915 DEVANAGARI LETTER KA</span> + <span class="uname">U+093C DEVANAGARI SIGN NUKTA</span>]</span>, <span class="codepoint" translate="no"><bdi lang="pa">&#x0A32;&#x0A3C;</bdi> [<span class="uname">U+0A32 GURMUKHI LETTER LA</span> + <span class="uname">U+0A3C GURMUKHI SIGN NUKTA</span>]</span>, and <span class="codepoint" translate="no"><bdi lang="or">&#x0B21;&#x0B3C;</bdi> [<span class="uname">U+0B21 ORIYA LETTER DDA</span> + <span class="uname">U+0B3C ORIYA SIGN NUKTA</span></span>.</p>
-				<p>Since there are alternative ways of representing multi-part vowel signs and consonants created using the nukta, the question arises,
-					"Which approach should be used when entering Indic text?" The W3C recommends the use of NFC (Unicode Normalization Form C) for  web content. NFC
-					represents all multi-part vowels as single characters, but all combinations of consonant plus nukta as two separate characters (apart from the 
-					following exceptions in Devanagari: <span class="codepoint" translate="no"><bdi lang="hi">&#x0931;</bdi> [<span class="uname">U+0931 DEVANAGARI LETTER RRA</span>]</span>, <span class="codepoint" translate="no"><bdi lang="hi">&#x0934;</bdi> [<span class="uname">U+0934 DEVANAGARI LETTER LLLA</span>]</span>,
-          and <span class="codepoint" translate="no"><bdi lang="hi">&#x0929;</bdi> [<span class="uname">U+0929 DEVANAGARI LETTER NNNA</span>]</span>).</p>
-				<p>It was mentioned above that Gurmukhi is somewhat unusual in that vowel signs are carried by special 'vowel bearer' letters to create
-					independent vowels. While Unicode does provide character codes for  these vowel bearers, <span class="codepoint" translate="no"><bdi lang="pa">&#x0A72;</bdi> [<span class="uname">U+0A72 GURMUKHI IRI</span>]</span> and <span class="codepoint" translate="no"><bdi lang="pa">&#x0A73;</bdi> [<span class="uname">U+0A73 GURMUKHI URA</span>]</span>
-					(plus, of course, <span class="codepoint" translate="no"><bdi lang="pa">&#x0A05;</bdi> [<span class="uname">U+0A05 GURMUKHI LETTER A</span>]</span>), their use isn't recommended. Instead Unicode provides precomposed characters for all the independent
-		      vowel sounds needed, eg. <span class="codepoint" translate="no"><bdi lang="pa">&#x0A06;</bdi> [<span class="uname">U+0A06 GURMUKHI LETTER AA</span>]</span>, <span class="codepoint" translate="no"><bdi lang="pa">&#x0A07;</bdi> [<span class="uname">U+0A07 GURMUKHI LETTER I</span>]</span>, <span class="codepoint" translate="no"><bdi lang="pa">&#x0A09;</bdi> [<span class="uname">U+0A09 GURMUKHI LETTER U</span>]</span>, etc.</p>
-				<p>Note however that, for the general case, whereas some other encoding systems for Indic represent an II SIGN, for example, by VIRAMA +
-					VOWEL II, Unicode does not do that. It considers these two sequences to not be equivalent, and not have the same rendering.</p>
-			</div>
-			
-			
-			
-			
-			
-			<div class="section2"> 
+<p>Sub-sentence units (words) are separated with spaces.</p>
 
-				<h3 id="variantglyph"><a href="#variantglyph">Variant glyph forms</a></h3>
-				<p>Unicode follows the rule of 'encode characters not glyphs'. This is a fundamentally important concept relating to the support of Indic
-					scripts in Unicode. Even though there are many potential shapes for a character when displayed (half-form, conjunct, ligature, diacritic, etc.), the
-					rule means that there is only one codepoint to represent that character. This is a major advantage for conducting operations on the text such as
-					string comparison, collation, etc. It also allows for a much simpler keyboard, and simpler correspondence between the keyboard input and the stored
-					text. The task of producing the right shape for printing or display of a character according to its context falls to the rendering algorithms of the
-					font, application or system.</p>
-				<p>We have already mentioned that combining character glyphs may sometimes adopt different shapes or merge with and alter the shape of
-					the base consonant. Another key area where intelligent glyph shaping is required is the display of consonant clusters.</p>
-				<p>Consonant clusters are invariably indicated in a sequence of Unicode characters by the presence of a VIRAMA character, whether or not
-					the glyph for the virama will be visible on display. Thus the virama is the trigger for any complex glyph shaping that may be applied to a conjunct
-					by the font or rendering algorithms.</p>
-				<p>The outcome of a <em>consonant+virama+consonant</em> sequence will vary according to the characters, scripts, and fonts involved. Some
-					possibilities are:</p>
-				<ul>
-					<li> 
-						<p>the initial consonant is rendered as a 'half-form' alternative glyph and no virama is shown, eg.
-							<span class="charExample" translate="no"><span class="ex" lang="hi">क</span></span> + <span class="charExample" translate="no"><span class="ex" lang="hi">्</span></span> + <span class="charExample" translate="no"><span class="ex" lang="hi">क</span></span> = <span class="charExample" translate="no"><span class="ex" lang="hi">क्क</span> <span class="ipa">kk</span></span></p>
-					</li>
-					<li> 
-						<p>the two consonants and virama are represented by a single glyph (a ligature), eg. <span class="charExample" translate="no"><span class="ex" lang="hi">क</span></span> + <span class="charExample" translate="no"><span class="ex" lang="hi">्</span></span> + <span class="charExample" translate="no"><span class="ex" lang="hi">ष</span></span> = <span class="charExample" translate="no"><span class="ex" lang="hi">क्ष</span> <span class="ipa">kʂ</span></span>
-                         (or 
-							<span class="charExample" translate="no"><span class="ex" lang="hi">क</span></span> + <span class="charExample" translate="no"><span class="ex" lang="hi">्</span></span> + <span class="charExample" translate="no"><span class="ex" lang="hi">क</span></span> = <img src="images/kkligature.png" class="ex" alt="क्क">  in some fonts)</p>
-					</li>
-					<li> 
-						<p>one of the consonants is represented as a combining diacritic (that may or may not be spacing),  eg. <span class="charExample" translate="no"><span class="ex" lang="kn">ತ</span></span> +							<span class="charExample" translate="no"><span class="ex" lang="kn">್</span></span> + <span class="charExample" translate="no"><span class="ex" lang="kn">ಯ</span></span> -&gt; <span class="charExample" translate="no"><span class="ex" lang="te">ತ್ಯ</span> <span class="ipa">tj</span></span>.</p>
-						<p>Note that in some cases the diacritic may appear in a very different position visually than
-							the position of the character it represents in the text stream. For instance, we have already seen the example of the repha in
-							<span class="charExample" translate="no"><span class="ex" lang="hi">र्ग्धी</span> <span class="ipa">rgdʰiː</span></span>. Even though the RA appears visually at the top right of the
-							cluster, the sequence of characters underlying the cluster is in pronounced order:</p>
-						<p><span class="charExample" translate="no"><span class="ex" lang="hi">र</span> <span class="ipa">r</span></span>+ <span class="charExample" translate="no"><span class="ex" lang="hi">्</span></span> + <span class="charExample" translate="no"><span class="ex" lang="hi">ग</span> <span class="ipa">g</span></span>  + <span class="charExample" translate="no"><span class="ex" lang="hi">्</span></span> + <span class="charExample" translate="no"><span class="ex" lang="hi">ध</span> <span class="ipa">dʰ</span></span>  + <span class="charExample" translate="no"><span class="ex" lang="hi">ी</span> <span class="ipa">iː</span></span></p>
-					</li>
-					<li> 
-						<p>the virama may simply be displayed as a combining glyph. In some scripts (eg. Tamil) this is very much the norm, eg.
-							<span class="charExample" translate="no"><span class="ex" lang="ta">ந</span></span> + <span class="charExample" translate="no"><span class="ex" lang="ta">்</span></span> + <span class="charExample" translate="no"><span class="ex" lang="ta">த</span></span> = <span class="charExample" translate="no"><span class="ex" lang="ta">ந்த</span> <span class="ipa">nt</span></span>. In other scripts (such as
-							Devanagari) this is an optional scenario that depends on the preference of the user or the richness of the font - a font that has few ligatures and
-							special glyph forms will resort to simply displaying the virama instead.</p>
-					</li>
-				</ul>
-				<p>In Unicode it should be possible to force a consonant + virama sequence to display the virama (rather than convert the consonant to a
-					half-form or ligature) by adding the character <span class="codepoint" translate="no"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></span>  immediately after the virama of the dead consonant. For example, this
-    produces <span class="charExample" translate="no"><span class="ex" lang="hi">क्‌क</span></span> rather than <span class="charExample" translate="no"><span class="ex" lang="hi">क्क</span></span>.</p>
-				<p>To force a dead consonant to assume a half-form rather than combine as part of a ligature, place the character
-					<span class="codepoint" translate="no"><span class="uname">U+200D ZERO WIDTH JOINER</span></span> immediately after the virama. For example, this produces <span class="charExample" translate="no"><span class="ex" lang="hi">क्‍ष</span></span> rather than
-					<span class="charExample" translate="no"><span class="ex" lang="hi">क्ष</span></span>. The zero width joiner can also be used to produce an example of a half-form on its own for
-					illustration purposes, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">क्‍</span></span>. You can also create half-forms of combining ligatures, eg.
-					<span class="charExample" translate="no"><span class="ex" lang="hi">त्त्‍</span></span>.</p>
-			</div>
-			
-			
-			
-			
-			
-			<div class="section2"> 
+<p>Modern text commonly uses western punctuation, but some scripts sometimes use traditional punctuation. For example, the DANDA
+<span class="charExample" translate="no"><span class="ex" lang="hi">।</span></span> may still be used in Devanagari to mark the end of a sentence, or the DOUBLE DANDA
+<span class="charExample" translate="no"><span class="ex" lang="te">॥</span></span> in Telugu for certain abbreviations.<!--<span class="ed"> Check out whether gurmukhi uses sentence final punctuation.</span>--></p>
+</section>
+</section>
 
-				<h3 id="otherpractical"><a href="#otherpractical">Other practical considerations</a></h3>
-				<p> Where scripts use glyphs that hang from the baseline, rather than sitting on the baseline, it is important to ensure that any glyphs
-					from another intermixed script (eg. Latin script letters) are correctly aligned with the Indic script. It is also important to ensure that the glyphs
-					are aligned as expected with other elements, such as table cells, graphic elements, and the like. For a detailed treatment of the issues for
-					alignment of such scripts with other fonts see Steve Zilles' talk, 'Internationalized Text Formatting in CSS and XML' in the proceedings of
-					IUC22.</p>
-				<p>There are other practical considerations related to enabling Indic script input and display. Keyboards must, of course, provide access
-					to all needed characters, but consider standardisation of layout. On-screen display must support adequate resolution and line height, as well as
-					proportional spacing.</p>
-				<p>For information about collation of Indic scripts, see  <a
-					href="http://www.unicode.org/notes/tn1/">Unicode Technical Note #1</a>.</p>
-			</div>
-		</section>
-		
-		
-		
-		
-		
-		
-		<section id="glossary" style="page-break-before:always;">
-		<h2>Glossary</h2>
-		
-			<dl>
-				<dt>abugida</dt>
-				<dd>A word used to describe scripts where consonant letters represent syllables with an inherent vowel. See Consonants and inherent
-					vowels.</dd>
-				<dt>addak</dt>
-				<dd>A diacritic used in Gurmukhi to lengthen the following consonant sound. See Consonant clusters.</dd>
-				<dt>anusvara</dt>
-				<dd>A diacritic used to represent nasalisation of vowels and/or to represent nasalised consonants. See Nasalisation and alternative nasal
-					letter representations.</dd>
-				<dt>articulatory</dt>
-				<dd>Related to the production of speech sounds.</dd>
-				<dt>aspirated, aspiration</dt>
-				<dd>Aspirated consonants are those produced with an audible expulsion of breath. Note that a non-aspirated consonant, such as a b, is
-					produced with much less aspiration than a similar sound in English.</dd>
-				<dt>bindu</dt>
-				<dd>A diacritic used to represent nasalisation of vowels and/or to represent nasalised consonants. See Nasalisation and alternative nasal
-					letter representations.</dd>
-				<dt>combining character</dt>
-				<dd>A character that graphically combines with a preceding base character. Combining characters are not usually used on their own, They
-					include combining accents, diacritics, vowel signs, etc.</dd>
-				<dt>conjunct forms</dt>
-				<dd>A special graphical representation used to display a combination of consonants without intervening vowels. See Consonant
-					clusters.</dd>
-				<dt>diphthong</dt>
-				<dd>A pair of vowels considered to be a single phoneme where the tongue moves from one to the other in such as way as to cause continual
-					change in vowel quality.</dd>
-				<dt>glyph</dt>
-				<dd>The visual representation of one or more underlying characters. A font is made up of a set of glyph images.</dd>
-				<dt>half-form</dt>
-				<dd>A reduced version of a consonant glyph (typically missing the vertical stem) used to represent a consonant without a following vowel.
-					See Consonant clusters.</dd>
-				<dt>homorganic</dt>
-				<dd>A consonant articulated at the same point in the vocal tract as a consonant in another class. For example, ŋ is the homorganic
-					nasal of k.</dd>
-				<dt>independent vowel</dt>
-				<dd>A vowel used at the beginning of a word or within a word immediately after another vowel sound. See Independent vowels.</dd>
-				<dt>inherent vowel</dt>
-				<dd>In Indic scripts a consonant character represents a syllable that includes the consonant followed by a default (inherent) vowel
-					sound. This vowel sound varies by language and script. See Consonants and inherent vowels.</dd>
-				<dt>ligature</dt>
-				<dd>A glyph representing a combination of two or more characters.</dd>
-				<dt>logical order</dt>
-				<dd>The order in which text is usually typed on a keyboard. For the most part, logical order corresponds to phonetic order.</dd>
-				<dt>nukta</dt>
-				<dd>A diacritic used in several indic scripts to extend the range of sounds covered by the alphabet. See Consonants and inherent
-					vowels.</dd>
-				<dt>plosive</dt>
-				<dd>A sound produced by the mouth in such as way as to temporarily block the passage of the air, eg. a p.</dd>
-				<dt>phoneme</dt>
-				<dd>A minimally distinct sound in the context of a particular spoken language. For example, in UK English p and b are distinct
-					phonemes because 'pat' and 'bat' are distinct.</dd>
-				<dt>repha</dt>
-				<dd>A glyph representing the character RA as the initial consonant in a cluster. The repha appears to the right of the consonant cluster.
-					See Consonant clusters.</dd>
-				<dt>retroflex</dt>
-				<dd>Retroflex sounds are those made with the tongue being curled upwards.</dd>
-				<dt>tippi</dt>
-				<dd>A diacritic used in Gurmukhi to represent nasalisation of vowels and/or to represent nasalised consonants in the following syllable.
-					See Nasalisation and alternative nasal letter representations.</dd>
-				<dt>virama</dt>
-				<dd>A combining mark used to indicate a consonant without a following vowel. See Consonants and inherent vowels.</dd>
-				<dt>visarga</dt>
-				<dd>A character used most commonly to transcribe Sanskrit, but also sometimes having additional uses such as in Tamil where it is used in
-					conjunction with other characters to create sounds not in the basic repertoire. See Visarga.</dd>
-				<dt>vowel sign</dt>
-				<dd>A combining character used to indicate the replacement of the inherent vowel associated with a consonant with another vowel sound.
-					See Vowel signs.</dd>
-			</dl>
-		</section>
-		
-		
-		
-		
-		
-		
-		
-		<section id="refs"> 
-		<h2>References</h2>
 
-			<h3 class="notoc">Sources</h3>
-			<ol>
-				<li>The Unicode Consortium, <cite>The Unicode Standard -- Version 3.0</cite>, ISBN 0-201-61633-5. (See
-					<a
-					href="http://www.unicode.org/unicode/standard/versions/Unicode3.0.html">http://www.unicode.org/unicode/standard/versions/Unicode3.0.html</a>.)</li>
-				<li>P Daniels, W Bright, <cite>The World's Writing Systems</cite>, ISBN 0-19-507993-0</li>
-				<li>R Gillam, <cite>Unicode Demystified</cite>, ISBN 0-201-70052-2</li>
-				<li>R Snell, S Weightman, <cite>Teach Yourself Hindi</cite>, ISBN 0-340-42464-8</li>
-				<li>Kalra, Purewall, <cite>Teach Yourself Panjabi</cite>, ISBN 0-340-70129-3</li>
-			</ol>
-      <h3 class="notoc">Other references</h3>
-			<ol>
-				<li>C Wissink,<cite> Unicode Technical Note #1</cite>, <a
-					href="http://www.unicode.org/notes/tn1/">http://www.unicode.org/notes/tn1/</a></li>
-				<li>K Zia, <cite>Mapping of National Urdu Standard to Unicode</cite>, Proceedings of 22nd International Unicode Conference, 2002</li>
-				<li>M Dürst, F Yergeau, M Wolf, R Ishida, T Texin, <cite>Character Model for the World Wide Web 1.0</cite>, (See
-					<a href="http://www.unicode.org/unicode/standard/versions/Unicode3.0.html">http://www.w3.org/TR/charmod/</a>.)</li>
-			</ol>
-		</section>
-		
-		
-		
-		
-		<section id="ack" class="acknowledgements"> 
-		<h2>Acknowledgements</h2>
 
+
+
+
+
+
+
+
+<section id="implementation" style="page-break-before:always;"> 
+<h2>Unicode implementation notes</h2>
+
+
+
+
+<section id="distinctions"> 
+<h3>An important distinction</h3>
+
+<p>In this section we need to make a clear distinction between <em>characters</em>, the basic codepoint units provided by the Unicode
+Standard for representation of the script in memory, and <em>glyphs</em>, the visual representation of one or more underlying characters when
+displayed or printed. As with other complex scripts, and unlike text in English, it is common to find situations where there is not a one-to-one
+mapping of characters to glyphs.</p>
+
+<p>I will try to use the terms character and glyph carefully in the following text to clarify whether we are talking about the
+representation of the text in memory or as rendered on-screen or in print.</p>
+</section>
+
+
+
+
+
+
+
+
+<section id="charsets"> 
+<h3>Character sets</h3>
+
+<p>The characters in an Indic Unicode script block are a superset of the ISCII (Indian Standard Code for Information Interchange)
+character sets. The ISCII standard includes separate encodings for each of the scripts discussed here, using escape sequences to shift between them.
+The Unicode blocks were originally based on the 1988 version of ISCII encodings. ISCII published a new version of the standard in 1991 with a few
+changes to order and repertoire of characters. Unicode, nevertheless, remains a superset of all the ISCII codes, with the exception of a few Vedic
+extension characters.</p>
+
+<p>When first encoded in Unicode, the first 85 characters in each Unicode block were placed in the same order and position, on a script by script basis, as the 1988 ISCII
+characters for the respective script. Every script block orders analogous characters in the ISCII range in the same relative locations to the start
+of the block across all 9 scripts under consideration in this paper. The next 27 characters are additional Unicode characters, where each analogous
+character across the scripts is also assigned to the same code point relative to the beginning of the block. The final column is reserved for script
+specific characters. There is no special ordering here.</p>
+
+<p style="page-break-before: always;">In the following charts I will use colour coding to indicate the different ranges as follows:</p>
+
+<blockquote> 
+<table id="chart-key">
+<tr>
+<td class="td-iscii">ISCII-derived </td>
+<td class="td-unicode-ext">coordinated Unicode extension </td>
+<td class="td-script-spec"> additional script specific characters</td>
+</tr>
+</table>
+</blockquote>
+
+<p>The zones described above are illustrated here using the Devanagari script block.</p>
+<blockquote class="block-indent"><img src="images/devanagari-block.png" alt="Picture of devanagari block showing zoned areas."></blockquote>
+
+<p>The fact that ISCII and Unicode attempt to use the same code point relative to the start of the code block for analogous characters
+across all nine Indic scripts theoretically allows for easy transliteration between the various scripts, however in practice there are quite a few
+exceptions in transliteration, so specific tables have to be developed anyway.<!-- For a more detailed discussion of this topic see the paper by Ram Viswanadha,
+<cite>Transliteration of Indic Scripts Implementation in ICU and Lessons Learned</cite>.--></p>
+
+<p style="page-break-before: always;">Each script block has a different number and distribution of characters. The following table
+contrasts the allocation of characters for Devanagari, Bengali and Tamil.</p>
+
+<table id="charts">
+<tr>
+<td class="block-comparison">Devanagari</td>
+<td class="block-comparison">Bengali</td>
+<td class="block-comparison">Tamil</td>
+</tr>
+<tr>
+<td class="block-comparison"><img src="images/devanagari-block.png" alt=" "></td>
+<td class="block-comparison"><img src="images/bengali-block.png" alt=" "></td>
+<td class="block-comparison"><img src="images/tamil-block.png" alt=" "></td>
+</tr>
+</table>
+
+<p>Other notes:</p>
+
+<ol>
+<li> 
+<p>In older fonts the Tamil visarga, or aytham, was in some cases incorrectly rendered with a dotted circle before it in word-initial position (eg. in a word like <span class="charExample" translate="no"><span class="ex" lang="ta">ஃஜிராக்ஸ்</span></span>). This is because the Unicode Standard initially classified the Tamil visarga as a combining character.
+An erratum issued in September 2001 corrected this, changing the General Category from "Mc" (Mark, combining) to "Lo" (Letter, other).</p>
+</li>
+
+<li> 
+<p>The Kannada character <span class="codepoint" translate="no"><bdi lang="kn">&#x0CDE;</bdi> [<span class="uname">U+0CDE KANNADA LETTER FA</span>]</span> was incorrectly named. A more appropriate name would be
+LLLA, rather than FA. Because of the rules for Unicode naming, the current name cannot, however, be changed. Fortunately this letter has not been
+actively used in Kannada since the end of the 10th century.</p>
+</li>
+</ol>
+</section>
+
+
+
+
+
+
+
+<section id="combiningchars"> 
+<h3 style="page-break-before: always;">Combining characters</h3>
+
+<p>It is important to correctly order Indic characters in memory where combining characters are involved. The Unicode Standard requires
+that all combining characters be stored in memory after the base character they are combined with. This is a fundamentally important concept. It
+means that, even if a combining glyph appears to the left of its base character, it is stored <em>after</em> the base character in memory. (This is
+often referred to as <em>logical</em> ordering.)</p>
+
+<p>For example, the  characters in the word <span class="charExample" translate="no"><span class="ex" lang="hi">हिंदी</span> <span class="ipa">hindiː</span></span>  are
+stored in memory as:</p>
+
+<blockquote class="block-indent"> 
+<p><span class="charExample" translate="no"><span class="ex" lang="hi">ह</span> <span class="ipa">h</span></span>  + <span class="charExample" translate="no"><span class="ex" lang="hi">ि</span> <span class="ipa">i</span></span>
++ <span class="charExample" translate="no"><span class="ex" lang="hi">ं</span> <span class="ipa">n</span></span>  +						<span class="charExample" translate="no"><span class="ex" lang="hi">द</span> <span class="ipa">d</span></span>  + <span class="charExample" translate="no"><span class="ex" lang="hi">ी</span> <span class="ipa">iː</span></span></p>
+</blockquote>
+
+<p>Lets see a slightly more complicated example from Kannada. The visual sequence <span class="charExample" translate="no"><span class="ex" lang="kn">ಕ್ರಿ</span></span> is pronounced <span class="ipa">kri</span>; the RA is rendered as a subscript to the bottom right and the vowel is rendered
+as a diacritic above the symbol for KA. The order of characters in memory (ignoring the virama, which is introduced in the next section) is:</p>
+
+<blockquote class="block-indent"> 
+<p><span class="charExample" translate="no"><span class="ex" lang="kn">ಕ</span> <span class="ipa">k</span></span>  + <span class="charExample" translate="no"><span class="ex" lang="kn">ರ</span> <span class="ipa">r</span></span>  + <span class="charExample" translate="no"><span class="ex" lang="hi">ಿ</span> <span class="ipa">i</span></span></p>
+</blockquote>
+
+<p>It is common that multiple combining characters are asssociated with a single base character. Examples of such combinations from
+Devanagari include an anusvara with a vowel sign, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">हिंदी</span> <span class="ipa">hindiː</span></span>, or a
+visarga with a vowel sign, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">दुःख</span> <span class="ipa">duhkʰ</span></span>. Where there are multiple
+combining characters, the Unicode Standard provides rules about relative ordering in memory that should be observed. If there is a nukta it must
+immediately follow the base character. Next comes any virama or any vowel sign, then any bindus. Observing these rules improves operability and
+simplifies operations such as searching, sorting, character indexing, and the like.</p>
+
+<p>The treatment of combining characters in Indic scripts also necessitates the use of context-based rules in the font to ensure the
+correct positioning and behaviour of displayed glyphs (a <em>glyph</em> being the visual representation of an underlying character). The position of
+a glyph for a combining character will commonly vary according to the shape and position of its base character, and any other combining characters
+associated with that base. In a number of cases, the combination of base character and combining character produces a fused shape that must be
+rendered by use of a <em>ligature</em> glyph or other special context-sensitive glyph forms (see also the next section for use of the virama).</p>
+
+<p>Note also that reordering is not limited to displaying certain vowel signs to the left of the immediately preceding base consonant. In
+a consonant cluster a vowel sign that appears to the left may need to be displayed to the left of the whole consonant cluster, not just the preceding
+character. Similarly, the symbol for the consonant RA may be rendered as a diacritic at the far right of a syllable involving a consonant cluster
+that it logically begins.</p>
+
+<p>In addition, because the base character is typed first during normal keyboarding, the base character will typically need to be 'moved'
+slightly to the right to accommodate the combining character glyph that joins to the left. In practice, the entire word is redrawn with every Indic
+letter. This is typically done in an off-screen buffer and blitted to the screen. The effect is that characters appear to move and change shape
+considerably while one is typing.</p>
+
+<p>As mentioned earlier, a number of scripts (Bengali, Oriya, Tamil, Telugu, Kannada, Malayalam) have vowel signs that are composed,
+visually, of more than one part. Such multi-part vowel signs can normally be represented using a single character. For example, Tamil
+<span class="charExample" translate="no"><span class="ex" lang="ta">கௌ</span> <span class="ipa">kʌʋ</span></span>  can be represented using the characters <span class="codepoint" translate="no"><bdi lang="ta">&#x0B95;</bdi> [<span class="uname">U+0B95 TAMIL LETTER KA</span>]</span> and <span class="codepoint" translate="no"><bdi lang="ta">&#x0BCC;</bdi> [<span class="uname">U+0BCC TAMIL VOWEL SIGN AU</span>]</span>. Kannada <span class="charExample" translate="no"><span class="ex" lang="kn">ಕೋ</span> <span class="ipa">koː</span></span>  can be composed of the characters <span class="codepoint" translate="no"><bdi lang="kn">&#x0C95;</bdi> [<span class="uname">U+0C95 KANNADA LETTER KA</span>]</span> and <span class="codepoint" translate="no"><bdi lang="ta">&#x0CCB;</bdi> [<span class="uname">U+0CCB KANNADA VOWEL SIGN OO</span>]</span>. The Unicode charts typically do also provide separate characters that can be used to represent multi-part vowel signs.
+If these parts are not already available as simple vowel sign characters, they are provided as special 'length mark' characters  such as <span class="codepoint" translate="no"><bdi lang="ta">&#x0BD7;</bdi> [<span class="uname">U+0BD7 TAMIL AU LENGTH MARK</span>]</span> and <span class="codepoint" translate="no"><bdi lang="kn">&#x0CD5;</bdi> [<span class="uname">U+0CD5 KANNADA LENGTH MARK</span>]</span>. Note also that if two characters are used to represent a split vowel sign both combining
+characters must <em>follow</em> the base character in memory (eg. <span class="charExample" translate="no"><span class="ex" lang="ta">க</span></span> + <span class="charExample" translate="no"><span class="ex" lang="ta">ெ</span></span> + <span class="charExample" translate="no"><span class="ex" lang="ta">ௗ</span></span>
+for the Tamil example <span class="charExample" translate="no"><span class="ex" lang="ta">கௌ</span></span> above).</p>
+
+<p>Although Unicode typically provides single characters for letters formed by the addition of a  nukta (eg.
+<span class="codepoint" translate="no"><bdi lang="hi">&#x0958;</bdi> [<span class="uname">U+0958 DEVANAGARI LETTER QA</span>]</span>, <span class="codepoint" translate="no"><bdi lang="pa">&#x0A33;</bdi> [<span class="uname">U+0A33 GURMUKHI LETTER LLA</span>]</span>, and <span class="codepoint" translate="no"><bdi lang="or">&#x0B5C;</bdi> [<span class="uname">U+0B5C ORIYA LETTER RRA</span>]</span>), these almost all have canonical
+decompositions to base character plus nukta diacritic (ie.
+<span class="codepoint" translate="no"><bdi lang="hi">&#x0915;&#x093C;</bdi> [<span class="uname">U+0915 DEVANAGARI LETTER KA</span> + <span class="uname">U+093C DEVANAGARI SIGN NUKTA</span>]</span>, <span class="codepoint" translate="no"><bdi lang="pa">&#x0A32;&#x0A3C;</bdi> [<span class="uname">U+0A32 GURMUKHI LETTER LA</span> + <span class="uname">U+0A3C GURMUKHI SIGN NUKTA</span>]</span>, and <span class="codepoint" translate="no"><bdi lang="or">&#x0B21;&#x0B3C;</bdi> [<span class="uname">U+0B21 ORIYA LETTER DDA</span> + <span class="uname">U+0B3C ORIYA SIGN NUKTA</span></span>.</p>
+
+<p>Since there are alternative ways of representing multi-part vowel signs and consonants created using the nukta, the question arises,
+"Which approach should be used when entering Indic text?" The W3C recommends the use of NFC (Unicode Normalization Form C) for  web content. NFC
+represents all multi-part vowels as single characters, but all combinations of consonant plus nukta as two separate characters (apart from the 
+following exceptions in Devanagari: <span class="codepoint" translate="no"><bdi lang="hi">&#x0931;</bdi> [<span class="uname">U+0931 DEVANAGARI LETTER RRA</span>]</span>, <span class="codepoint" translate="no"><bdi lang="hi">&#x0934;</bdi> [<span class="uname">U+0934 DEVANAGARI LETTER LLLA</span>]</span>,
+and <span class="codepoint" translate="no"><bdi lang="hi">&#x0929;</bdi> [<span class="uname">U+0929 DEVANAGARI LETTER NNNA</span>]</span>).</p>
+
+<p>It was mentioned above that Gurmukhi is somewhat unusual in that vowel signs are carried by special 'vowel bearer' letters to create
+independent vowels. While Unicode does provide character codes for  these vowel bearers, <span class="codepoint" translate="no"><bdi lang="pa">&#x0A72;</bdi> [<span class="uname">U+0A72 GURMUKHI IRI</span>]</span> and <span class="codepoint" translate="no"><bdi lang="pa">&#x0A73;</bdi> [<span class="uname">U+0A73 GURMUKHI URA</span>]</span>
+(plus, of course, <span class="codepoint" translate="no"><bdi lang="pa">&#x0A05;</bdi> [<span class="uname">U+0A05 GURMUKHI LETTER A</span>]</span>), their use isn't recommended. Instead Unicode provides precomposed characters for all the independent
+vowel sounds needed, eg. <span class="codepoint" translate="no"><bdi lang="pa">&#x0A06;</bdi> [<span class="uname">U+0A06 GURMUKHI LETTER AA</span>]</span>, <span class="codepoint" translate="no"><bdi lang="pa">&#x0A07;</bdi> [<span class="uname">U+0A07 GURMUKHI LETTER I</span>]</span>, <span class="codepoint" translate="no"><bdi lang="pa">&#x0A09;</bdi> [<span class="uname">U+0A09 GURMUKHI LETTER U</span>]</span>, etc.</p>
+
+<p>Note however that, for the general case, whereas some other encoding systems for Indic represent an II SIGN, for example, by VIRAMA +
+VOWEL II, Unicode does not do that. It considers these two sequences to not be equivalent, and not have the same rendering.</p>
+</section>
+
+
+
+
+
+
+
+<section id="variantglyph"> 
+<h3>Variant glyph forms</h3>
+
+<p>Unicode follows the rule of 'encode characters not glyphs'. This is a fundamentally important concept relating to the support of Indic
+scripts in Unicode. Even though there are many potential shapes for a character when displayed (half-form, conjunct, ligature, diacritic, etc.), the
+rule means that there is only one codepoint to represent that character. This is a major advantage for conducting operations on the text such as
+string comparison, collation, etc. It also allows for a much simpler keyboard, and simpler correspondence between the keyboard input and the stored
+text. The task of producing the right shape for printing or display of a character according to its context falls to the rendering algorithms of the
+font, application or system.</p>
+
+<p>We have already mentioned that combining character glyphs may sometimes adopt different shapes or merge with and alter the shape of
+the base consonant. Another key area where intelligent glyph shaping is required is the display of consonant clusters.</p>
+
+<p>Consonant clusters are invariably indicated in a sequence of Unicode characters by the presence of a VIRAMA character, whether or not
+the glyph for the virama will be visible on display. Thus the virama is the trigger for any complex glyph shaping that may be applied to a conjunct
+by the font or rendering algorithms.</p>
+
+<p>The outcome of a <em>consonant+virama+consonant</em> sequence will vary according to the characters, scripts, and fonts involved. Some
+possibilities are:</p>
+
+<ul>
+<li> 
+<p>the initial consonant is rendered as a 'half-form' alternative glyph and no virama is shown, eg.
+<span class="charExample" translate="no"><span class="ex" lang="hi">क</span></span> + <span class="charExample" translate="no"><span class="ex" lang="hi">्</span></span> + <span class="charExample" translate="no"><span class="ex" lang="hi">क</span></span> = <span class="charExample" translate="no"><span class="ex" lang="hi">क्क</span> <span class="ipa">kk</span></span></p>
+</li>
+
+<li> 
+<p>the two consonants and virama are represented by a single glyph (a ligature), eg. <span class="charExample" translate="no"><span class="ex" lang="hi">क</span></span> + <span class="charExample" translate="no"><span class="ex" lang="hi">्</span></span> + <span class="charExample" translate="no"><span class="ex" lang="hi">ष</span></span> = <span class="charExample" translate="no"><span class="ex" lang="hi">क्ष</span> <span class="ipa">kʂ</span></span>
+(or 
+<span class="charExample" translate="no"><span class="ex" lang="hi">क</span></span> + <span class="charExample" translate="no"><span class="ex" lang="hi">्</span></span> + <span class="charExample" translate="no"><span class="ex" lang="hi">क</span></span> = <img src="images/kkligature.png" class="ex" alt="क्क">  in some fonts)</p>
+</li>
+
+<li> 
+<p>one of the consonants is represented as a combining diacritic (that may or may not be spacing),  eg. <span class="charExample" translate="no"><span class="ex" lang="kn">ತ</span></span> +							<span class="charExample" translate="no"><span class="ex" lang="kn">್</span></span> + <span class="charExample" translate="no"><span class="ex" lang="kn">ಯ</span></span> -&gt; <span class="charExample" translate="no"><span class="ex" lang="te">ತ್ಯ</span> <span class="ipa">tj</span></span>.</p>
+<p>Note that in some cases the diacritic may appear in a very different position visually than
+the position of the character it represents in the text stream. For instance, we have already seen the example of the repha in
+<span class="charExample" translate="no"><span class="ex" lang="hi">र्ग्धी</span> <span class="ipa">rgdʰiː</span></span>. Even though the RA appears visually at the top right of the
+cluster, the sequence of characters underlying the cluster is in pronounced order:</p>
+<p><span class="charExample" translate="no"><span class="ex" lang="hi">र</span> <span class="ipa">r</span></span>+ <span class="charExample" translate="no"><span class="ex" lang="hi">्</span></span> + <span class="charExample" translate="no"><span class="ex" lang="hi">ग</span> <span class="ipa">g</span></span>  + <span class="charExample" translate="no"><span class="ex" lang="hi">्</span></span> + <span class="charExample" translate="no"><span class="ex" lang="hi">ध</span> <span class="ipa">dʰ</span></span>  + <span class="charExample" translate="no"><span class="ex" lang="hi">ी</span> <span class="ipa">iː</span></span></p>
+</li>
+
+<li> 
+<p>the virama may simply be displayed as a combining glyph. In some scripts (eg. Tamil) this is very much the norm, eg.
+<span class="charExample" translate="no"><span class="ex" lang="ta">ந</span></span> + <span class="charExample" translate="no"><span class="ex" lang="ta">்</span></span> + <span class="charExample" translate="no"><span class="ex" lang="ta">த</span></span> = <span class="charExample" translate="no"><span class="ex" lang="ta">ந்த</span> <span class="ipa">nt</span></span>. In other scripts (such as
+Devanagari) this is an optional scenario that depends on the preference of the user or the richness of the font - a font that has few ligatures and
+special glyph forms will resort to simply displaying the virama instead.</p>
+</li>
+</ul>
+
+<p>In Unicode it should be possible to force a consonant + virama sequence to display the virama (rather than convert the consonant to a
+half-form or ligature) by adding the character <span class="codepoint" translate="no"><span class="uname">U+200C ZERO WIDTH NON-JOINER</span></span>  immediately after the virama of the dead consonant. For example, this
+produces <span class="charExample" translate="no"><span class="ex" lang="hi">क्‌क</span></span> rather than <span class="charExample" translate="no"><span class="ex" lang="hi">क्क</span></span>.</p>
+
+<p>To force a dead consonant to assume a half-form rather than combine as part of a ligature, place the character
+<span class="codepoint" translate="no"><span class="uname">U+200D ZERO WIDTH JOINER</span></span> immediately after the virama. For example, this produces <span class="charExample" translate="no"><span class="ex" lang="hi">क्‍ष</span></span> rather than
+<span class="charExample" translate="no"><span class="ex" lang="hi">क्ष</span></span>. The zero width joiner can also be used to produce an example of a half-form on its own for
+illustration purposes, eg. <span class="charExample" translate="no"><span class="ex" lang="hi">क्‍</span></span>. You can also create half-forms of combining ligatures, eg.
+<span class="charExample" translate="no"><span class="ex" lang="hi">त्त्‍</span></span>.</p>
+</section>
+
+
+
+
+
+
+
+
+<section> 
+<h3 id="otherpractical">Other practical considerations</h3>
+
+<p> Where scripts use glyphs that hang from the baseline, rather than sitting on the baseline, it is important to ensure that any glyphs
+from another intermixed script (eg. Latin script letters) are correctly aligned with the Indic script. It is also important to ensure that the glyphs
+are aligned as expected with other elements, such as table cells, graphic elements, and the like. For a detailed treatment of the issues for
+alignment of such scripts with other fonts see Steve Zilles' talk, 'Internationalized Text Formatting in CSS and XML' in the proceedings of
+IUC22.</p>
+
+<p>There are other practical considerations related to enabling Indic script input and display. Keyboards must, of course, provide access
+to all needed characters, but consider standardisation of layout. On-screen display must support adequate resolution and line height, as well as
+proportional spacing.</p>
+
+<p>For information about collation of Indic scripts, see  <a
+href="http://www.unicode.org/notes/tn1/">Unicode Technical Note #1</a>.</p>
+</section>
+</section>
 		
-			<p>Many thanks to Cathy Wissink, Mark Davis and Joe Becker for reviewing the initial version of this paper at very short notice and still
-				making numerous useful comments and suggestions.</p>
-		</section>
 		
 		
 		
-        
+		
+		
+<section id="glossary" style="page-break-before:always;">
+<h2>Glossary</h2>
+
+<dl>
+<dt>abugida</dt>
+<dd>A word used to describe scripts where consonant letters represent syllables with an inherent vowel. See Consonants and inherent
+    vowels.</dd>
+<dt>addak</dt>
+<dd>A diacritic used in Gurmukhi to lengthen the following consonant sound. See Consonant clusters.</dd>
+<dt>anusvara</dt>
+<dd>A diacritic used to represent nasalisation of vowels and/or to represent nasalised consonants. See Nasalisation and alternative nasal
+    letter representations.</dd>
+<dt>articulatory</dt>
+<dd>Related to the production of speech sounds.</dd>
+<dt>aspirated, aspiration</dt>
+<dd>Aspirated consonants are those produced with an audible expulsion of breath. Note that a non-aspirated consonant, such as a b, is
+    produced with much less aspiration than a similar sound in English.</dd>
+<dt>bindu</dt>
+<dd>A diacritic used to represent nasalisation of vowels and/or to represent nasalised consonants. See Nasalisation and alternative nasal
+    letter representations.</dd>
+<dt>combining character</dt>
+<dd>A character that graphically combines with a preceding base character. Combining characters are not usually used on their own, They
+    include combining accents, diacritics, vowel signs, etc.</dd>
+<dt>conjunct forms</dt>
+<dd>A special graphical representation used to display a combination of consonants without intervening vowels. See Consonant
+    clusters.</dd>
+<dt>diphthong</dt>
+<dd>A pair of vowels considered to be a single phoneme where the tongue moves from one to the other in such as way as to cause continual
+    change in vowel quality.</dd>
+<dt>glyph</dt>
+<dd>The visual representation of one or more underlying characters. A font is made up of a set of glyph images.</dd>
+<dt>half-form</dt>
+<dd>A reduced version of a consonant glyph (typically missing the vertical stem) used to represent a consonant without a following vowel.
+    See Consonant clusters.</dd>
+<dt>homorganic</dt>
+<dd>A consonant articulated at the same point in the vocal tract as a consonant in another class. For example, ŋ is the homorganic
+    nasal of k.</dd>
+<dt>independent vowel</dt>
+<dd>A vowel used at the beginning of a word or within a word immediately after another vowel sound. See Independent vowels.</dd>
+<dt>inherent vowel</dt>
+<dd>In Indic scripts a consonant character represents a syllable that includes the consonant followed by a default (inherent) vowel
+    sound. This vowel sound varies by language and script. See Consonants and inherent vowels.</dd>
+<dt>ligature</dt>
+<dd>A glyph representing a combination of two or more characters.</dd>
+<dt>logical order</dt>
+<dd>The order in which text is usually typed on a keyboard. For the most part, logical order corresponds to phonetic order.</dd>
+<dt>nukta</dt>
+<dd>A diacritic used in several indic scripts to extend the range of sounds covered by the alphabet. See Consonants and inherent
+    vowels.</dd>
+<dt>plosive</dt>
+<dd>A sound produced by the mouth in such as way as to temporarily block the passage of the air, eg. a p.</dd>
+<dt>phoneme</dt>
+<dd>A minimally distinct sound in the context of a particular spoken language. For example, in UK English p and b are distinct
+    phonemes because 'pat' and 'bat' are distinct.</dd>
+<dt>repha</dt>
+<dd>A glyph representing the character RA as the initial consonant in a cluster. The repha appears to the right of the consonant cluster.
+    See Consonant clusters.</dd>
+<dt>retroflex</dt>
+<dd>Retroflex sounds are those made with the tongue being curled upwards.</dd>
+<dt>tippi</dt>
+<dd>A diacritic used in Gurmukhi to represent nasalisation of vowels and/or to represent nasalised consonants in the following syllable.
+    See Nasalisation and alternative nasal letter representations.</dd>
+<dt>virama</dt>
+<dd>A combining mark used to indicate a consonant without a following vowel. See Consonants and inherent vowels.</dd>
+<dt>visarga</dt>
+<dd>A character used most commonly to transcribe Sanskrit, but also sometimes having additional uses such as in Tamil where it is used in
+    conjunction with other characters to create sounds not in the basic repertoire. See Visarga.</dd>
+<dt>vowel sign</dt>
+<dd>A combining character used to indicate the replacement of the inherent vowel associated with a consonant with another vowel sound.
+    See Vowel signs.</dd>
+</dl>
+</section>
+		
+		
+		
+		
+		
+		
+		
+<section id="refs"> 
+<h2>References</h2>
+
+<h3 class="notoc">Sources</h3>
+<ol>
+<li>The Unicode Consortium, <cite>The Unicode Standard -- Version 3.0</cite>, ISBN 0-201-61633-5. (See
+<a
+href="http://www.unicode.org/unicode/standard/versions/Unicode3.0.html">http://www.unicode.org/unicode/standard/versions/Unicode3.0.html</a>.)</li>
+<li>P Daniels, W Bright, <cite>The World's Writing Systems</cite>, ISBN 0-19-507993-0</li>
+<li>R Gillam, <cite>Unicode Demystified</cite>, ISBN 0-201-70052-2</li>
+<li>R Snell, S Weightman, <cite>Teach Yourself Hindi</cite>, ISBN 0-340-42464-8</li>
+<li>Kalra, Purewall, <cite>Teach Yourself Panjabi</cite>, ISBN 0-340-70129-3</li>
+</ol>
+<h3 class="notoc">Other references</h3>
+<ol>
+<li>C Wissink,<cite> Unicode Technical Note #1</cite>, <a
+href="http://www.unicode.org/notes/tn1/">http://www.unicode.org/notes/tn1/</a></li>
+<li>K Zia, <cite>Mapping of National Urdu Standard to Unicode</cite>, Proceedings of 22nd International Unicode Conference, 2002</li>
+<li>M Dürst, F Yergeau, M Wolf, R Ishida, T Texin, <cite>Character Model for the World Wide Web 1.0</cite>, (See
+<a href="http://www.unicode.org/unicode/standard/versions/Unicode3.0.html">http://www.w3.org/TR/charmod/</a>.)</li>
+</ol>
+</section>
+
+
+
+
+
+
+<section id="ack" class="acknowledgements"> 
+<h2>Acknowledgements</h2>
+
+
+<p>Many thanks to Cathy Wissink, Mark Davis and Joe Becker for reviewing the initial version of this paper at very short notice and still making numerous useful comments and suggestions.</p>
+</section>
+
+
+
+
+
+
 <div id="panel" style="display:none"></div>
 
 <div class="smallprint"><span id="version">First published  15 Aug 2003.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2022-10-18  11:18<!-- #EndDate --> 
-  </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
+<!-- #BeginDate format:IS1m -->2022-10-18  14:12<!-- #EndDate --> 
+</span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 
 <script>
