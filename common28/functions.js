@@ -56,7 +56,7 @@ function initialiseSummary (blockDirectory, lang, tableName, dir) {
     makeTables(lang)
 	if (typeof addExamples !== 'undefined') addExamples(lang)
     initialiseShowNames(document, blockDirectory, 'c')
-    document.getElementById('features').innerHTML = makeSidePanel(tableName,"")
+    if (document.getElementById('features')) document.getElementById('features').innerHTML = makeSidePanel(tableName,"")
     createtoc(3)
 	removeEditorNotes()
 	addDefinitions()
