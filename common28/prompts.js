@@ -173,6 +173,8 @@ function makeIndexIntro (node, script, langName, lang, orthog, indic) {
 // indic: boolean indicating whether or not to show indic syllable property link
 
 
+    if (node === null) return
+
     // redefine the parameters here to improve portability, since this is called from each separate page
     script = window.scriptTag
     langName = window.languageName
@@ -243,7 +245,7 @@ function makeIndexIntro (node, script, langName, lang, orthog, indic) {
 
 
 
-function addUsageAdvice (script, iso, picker) {
+function addUsageAdviceOLD (script, iso, picker) {
 	// Add a para to the intro & add accessibility controls
     var draft = ''
     var fonts = ''
@@ -323,6 +325,101 @@ function addUsageAdvice (script, iso, picker) {
     </div>
     `
 	}
+
+
+
+
+
+
+function addUsageAdvice (script, iso, picker) {
+	// Add a para to the intro & add accessibility controls
+    var draft = ''
+    var fonts = ''
+    
+    // capture any para relating to font availability
+    if (document.querySelector('#fontWarning')) fonts = `<p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:120%;">Fonts:</strong> ${ document.querySelector('#fontWarning').innerHTML }</p>`
+   
+    // Add a line to mention this is a draft if 'draft' appears in h1
+    if (document.querySelector('h1').textContent.includes('draft')) draft = `<p class="instructions">This page is a work in progress. The information given here should be correct, but needs to be added to and refined further.</p>`
+
+
+    var out = ''
+	
+    
+    if (script !== '') {
+        out += `
+        <p>See a list of <a href="index.html#languages" target="_blank">languages using the ${ orthogName } script</a>.</p>
+
+        ${ draft }
+
+        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:120%;">Phonological transcriptions:</strong> These should be treated as an approximate guide, only. They are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available. They mostly represent pronunciation of words in isolation. For more detailed information about allophones, alternations, sandhi, dialectal differences, and so on, follow the links to cited references.</p>
+
+        <p style="line-height:1.4; font-style:italic; font-size:.9rem;"><strong style="font-size:120%;">This is an interactive document:</strong> Click/tap on the following to reveal detailed information and examples for each character: (a) characters in boxes with coloured backgrounds, (b) <span style="color:teal;">link text</span> on character names. (You can make this happen as the cursor moves over the characters in boxes, by selecting <samp>Detail on mouseover</samp> in the floating menu to the right.) The same information also appears in the companion document, <a href="block.html" target="_blank" class="linkHighlightx">${ orthogName } character notes</a>. In addition, you can click/tap on <span class="ex">coloured examples</span> and on figures to see a list of the characters they contain.</p>
+
+
+        ${ fonts }
+
+        <div id="about">
+
+        <details class="supportdocs noprint">
+        <summary class="instructions">More about using this page</a></summary>
+
+        <p class="instructions"><span class="leadin">Transcriptions.</span> Transcriptions in <span style="white-space:nowrap;">⌈corner brackets⌋</span> are taken from the sources consulted, and may be narrow or broad, phonemic or phonetic, depending on what is available (which is why corner brackets are used rather than the usual /phonemic/ and [phonetic] indicators). Transcriptions between <span style="white-space:nowrap;">&lt;angle brackets&gt;</span>, represent the letters as commonly written in the Latin script. When you click on an example to see its composition, the letters in the panel that opens are a <em><a href="../glossary/#transliteration" class="termref">transliteration</a></em>, rather than a <a href="../glossary/#transcription" class="termref">transcription</a>: the difference being that a transliteration provides perfect round-trip conversion between the native and Latin, whereas transcriptions rarely do.  The transliteration has been developed especially for this page, and is generally based on the sound of a letter where possible, but where a letter has multiple pronunciations, the transliteration represents only one.</p>
+
+        <p class="instructions noprint"><span class="leadin">Detailed topic information.</span> Footnote  links with an arrow alongside take you to more detailed information on the current topic.</p>
+
+        <p class="instructions noprint"><span class="leadin">Changing fonts.</span>Click on the vertical blue bar (bottom right) to change font settings for the sample text.</p>
+        </details>
+
+
+        <details class="supportdocs noprint">
+        <summary class="instructions"><a href="../links.html?iso=${ scriptTag }">Related pages</a></summary>
+        </details>
+
+        <details class="supportdocs noprint">
+        <summary class="instructions"><a target="_blank" href="../../pickers/${ pickerDir }index.html">Character app</a></summary>
+        </details>
+
+        <details class="supportdocs noprint">
+        <summary class="instructions"><a href="../index.html#scriptnotes">Other orthography descriptions</a></summary>
+        </details>
+
+        </div>`
+        }
+    
+    out += `
+    <div id="contrastSwitch" title="Accessibility settings." onclick="document.getElementById('access').style.display='flex'"><img src="../../shared/images/access.png" alt="Accessibility settings"></div>
+
+    <!-- ACCESSIBILITY PANEL  -->
+    <div id="access" style="display: none;">
+    <div id="access_contrast">
+    <div id="contrastChoice">
+    <button id="contrastLow" class="access_selected" onClick="document.querySelector('body').classList.remove('contrast');
+        access.contrast = 'low';
+        this.classList.add('access_selected'); 
+        document.getElementById('contrastHigh').classList.remove('access_selected');
+        ">Low contrast</button><button id="contrastHigh"
+    onClick="document.querySelector('body').classList.add('contrast');
+        access.contrast = 'high';
+        this.classList.add('access_selected'); 
+        document.getElementById('contrastLow').classList.remove('access_selected');
+        ">High contrast</button>
+    </div>
+    </div>
+    
+    <div id="access_fontsize">Set text size: <input id="accessFontsize" type="range" min="15" max="24" step="1" value="15" oninput="access.fontsize=this.value; document.querySelector('html').style.fontSize = this.value+'px'" style="width:12rem;"></div>
+    <div style="color: white;">Font &amp; text size of the examples can be changed independently using the control that pulls out from the bottom right of the page.</div>
+    
+    <div style="display:flex; flex-direction:row; flex-wrap:nowrap; justify-content:space-around;">
+    <div style="margin-block-start: 1rem; font-size: 1.4rem; color: black; cursor:pointer;" onclick="localStorage['docsAccess'] = JSON.stringify(access)">Save settings</div>
+    <div style="margin-block-start: 1rem; font-size: 1.4rem; color: black; cursor:pointer;" onclick="this.parentNode.parentNode.style.display='none';">Close X</div>
+    </div>
+    </div>
+    `
+    
+    
+	document.getElementById('usage').outerHTML = out
+    }
 
 
 
