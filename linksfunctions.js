@@ -42,6 +42,29 @@ function getData (script) {
 		}
 
 
+	// descriptions
+	if ((record.local && record.local.length > 0) || scriptNotes[lc] || orthoChart[lc]) {
+		var temp = ''
+		temp += '<tr><td>Descriptions:</td><td>'
+		if (scriptNotes[lc]) {
+            for (let n=0;n<scriptNotes[lc].length;n++) temp += '<p><a href="'+scriptNotes[lc][n][1]+'" >'+scriptNotes[lc][n][0]+' orthography description</a></p>'
+            }
+		if (orthoChart[lc]) temp += '<p><a href="featurelist/index.html" >Comparisons:</a> '+orthoChart[lc]+'</p>'
+		for (var r=0;r<record.local.length;r++) temp += '<p><a href="'+record.local[r].url+'" >'+record.local[r].name+'</a></p>'
+		temp += '</td></tr>'
+		if (temp !== '<tr><th>This site:</th><td></td></tr>') out += temp
+		}
+
+	// character detail
+	if (charNotesList[lc] || ssHistory[lc]) {
+		out += '<tr><td>Character detail:</td><td>'
+		if (charNotesList[lc]) out += '<p><a href="/scripts/'+charNotesList[lc][1]+'" target="_blank">Character notes</a></p>'
+		out += '<p><a href="http://scriptsource.org/entry/'+ssHistory[lc]+'" target="_blank">Unicode historical documents</a></p>'
+		out += '</td></tr>'
+		}
+
+
+
 	// general info
 	if (record.info) {
 		out += '<tr><td>General info:</td><td>'
@@ -59,26 +82,15 @@ function getData (script) {
 		}
 
 
-	// descriptions
-	if ((record.local && record.local.length > 0) || scriptNotes[lc] || compChartSet.has(lc)) {
-		var temp = ''
-		temp += '<tr><td>Descriptions:</td><td>'
-		if (scriptNotes[lc]) {
-            for (let n=0;n<scriptNotes[lc].length;n++) temp += '<p><a href="/scripts/'+scriptNotes[lc][n][1]+'" >'+scriptNotes[lc][n][0]+'</a></p>'
-            }
-		if (orthoChart[lc]) temp += '<p><a href="/scripts/featurelist/" >Comparisons:</a> '+orthoChart[lc]+'</p>'
-		for (var r=0;r<record.local.length;r++) temp += '<p><a href="'+record.local[r].url+'" >'+record.local[r].name+'</a></p>'
-		temp += '</td></tr>'
-		if (temp !== '<tr><th>This site:</th><td></td></tr>') out += temp
+	// character apps
+	temp = ''
+	temp += '<tr><td>Character apps:</td><td>'
+	for (let p=0;p<plist.length;p++) {
+		if (plist[p].tag === script) temp += '<p><a href="/pickers/'+plist[p].url+'" >'+plist[p].name+'</a></p>'
 		}
+	temp += '</td></tr>'
+	if (temp !== '<tr><td>Character apps:</td><td></td></tr>') out += temp
 
-	// character detail
-	if (charNotesList[lc] || ssHistory[lc]) {
-		out += '<tr><td>Character detail:</td><td>'
-		if (charNotesList[lc]) out += '<p><a href="/scripts/'+charNotesList[lc][1]+'">Character notes</a></p>'
-		out += '<p><a href="http://scriptsource.org/entry/'+ssHistory[lc]+'" >Unicode historical documents</a></p>'
-		out += '</td></tr>'
-		}
 
 
 	// character usage
@@ -114,19 +126,9 @@ function getData (script) {
 	// charts
 	if (record.charts) {
 		out += '<tr><td>Charts:</td><td><table><tbody>'
-		for (var r=0;r<record.charts.length;r++) out += '<tr><td>'+record.charts[r]+'</td><td><a href="/uniview/?block='+record.charts[r].toLowerCase().replace(/ /g,'_')+'" >UniView</a></td><td><a href="http://www.unicode.org/charts/PDF/U'+blockStart[record.charts[r].toLowerCase().replace(/ /g,'_')]+'.pdf" >Unicode</a></td></tr>'
+		for (var r=0;r<record.charts.length;r++) out += '<tr><td>'+record.charts[r]+'</td><td><a href="../uniview/index.html?block='+record.charts[r].toLowerCase().replace(/ /g,'_')+'" target="_blank">UniView</a></td><td><a href="http://www.unicode.org/charts/PDF/U'+blockStart[record.charts[r].toLowerCase().replace(/ /g,'_')]+'.pdf" target="_blank">Unicode</a></td></tr>'
 		out += '</tbody></table></td></tr>'
 		}
-
-
-	// character apps
-	temp = ''
-	temp += '<tr><td>Character apps:</td><td>'
-	for (let p=0;p<plist.length;p++) {
-		if (plist[p].tag === script) temp += '<p><a href="/pickers/'+plist[p].url+'" >'+plist[p].name+'</a></p>'
-		}
-	temp += '</td></tr>'
-	if (temp !== '<tr><td>Character apps:</td><td></td></tr>') out += temp
 
 
 	/* old fonts
@@ -143,7 +145,7 @@ function getData (script) {
 	temp = ''
 	if (sampleScriptsIndex[lc] && sampleScriptsIndex[lc].font) {
 		temp = '<tr><td>Fonts:</td><td>'
-		for (let i=0;i<sampleScriptsIndex[lc].font.length;i++) temp += '<p><a href="fontlist?script='+sampleScriptsIndex[lc].font[i]+'">'+sampleScriptsIndex[lc].font[i]+'</a></p>'
+		for (let i=0;i<sampleScriptsIndex[lc].font.length;i++) temp += '<p><a href="fontlist/index.html?script='+sampleScriptsIndex[lc].font[i]+'">'+sampleScriptsIndex[lc].font[i]+'</a></p>'
 		}
 	temp += '</td></tr>'
 	if (temp !== '<tr><td>Character apps:</td><td></td></tr>') out += temp
@@ -153,14 +155,14 @@ function getData (script) {
 	if ((phrasesList[lc] || sampleScriptsIndex[lc])) {
 		temp = '<tr><td>Samples:</td><td>'
 		if (sampleScriptsIndex[lc]) {
-			temp += '<p><a href="samples?script='+lc+'" >Sample DB</a> ('
+			temp += '<p><a href="samples/index.html?script='+lc+'" >Sample DB</a> ('
 			for (let i=0;i<sampleScriptsIndex[lc].langs.length;i++) {
 				if (i!==0) temp += ', '
 				temp += sampleScriptsIndex[lc].langs[i]
 				}
 			temp += ')</p>'
 			}
-		if (phrasesList[lc]) temp += '<p><a href="phrases#'+lc+'" >W3C phrase list</a> ('+phrasesList[lc]+')</p>'
+		if (phrasesList[lc]) temp += '<p><a href="phrases.html#'+lc+'" >W3C phrase list</a> ('+phrasesList[lc]+')</p>'
 		}
 	temp += '</td></tr>'
 	if (temp !== '<tr><td>Character apps:</td><td></td></tr>') out += temp

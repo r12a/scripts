@@ -332,7 +332,11 @@ var orthoChart = {
 
 
 // URL endings for scriptsource historical bibliograpy, used by /scripts/links
-var ssHistory = { 'grek':'wxsx5j4kzt', 'cyrl':'ngc339csy8', 'armn':'z35gwmg4ft', 'hebr':'qek84cbq5u', 'arab':'hqr6rc9md5', 'syrc':'hlvzdczufr', 'thaa':'n2tj49rr2n', 'nkoo':'mnqzubphu7', 'samr':'qv7wwr9xgp', 'mand':'djwvfmuu3h', 'deva':'b6c6j63sf5', 'beng':'f8jrlqwbac', 'guru':'fd27tquj5j', 'gujr':'yqug2kbjjr', 'orya':'znkmblg693', 'taml':'zw5nedjarb', 'telu':'sjrwm9ppr3', 'knda':'ur8y3qj6yk', 'mlym':'ypvmjurtyg', 'sinh':'sbwtu85wbv', 'thai':'d877ebfc65', 'laoo':'98522835fg', 'tibt':'mg8ulatcjb', 'mymr':'vcz6flwzqs', 'geor':'rbr2wkvu4m', 'ethi':'fvp74ug66k', 'cher':'nwnmgh2n8j', 'cans':'c36d846u2d', 'ogam':'d3z382ahas', 'runi':'ha667hekd4', 'tglg':'76d3376b7c', 'hano':'ga9dbe72a2', 'buhd':'h4446ag538', 'tagb':'d62f48hfad', 'khmr':'2269c7g9ee', 'mong':'xluqdp54ts', 'limb':'a2exgfkrmf', 'tale':'76c7d2ch4g', 'talu':'37fcf7h92b', 'bugi':'739e2e7g2e', 'lana':'gf97b8ad78', 'bali':'f2bb6f3bh9', 'sund':'3844bc8cea', 'batk':'geb5h358d3', 'lepc':'g6cv78jn42', 'olck':'rrkdvn7crf', 'glag':'lbhv6e4efr', 'copt':'msg4hep5ev', 'tfng':'wmx4utrkuc', 'jpan':'ly5dbxtthx', 'bopo':'tk449c64jh', 'yiii':'ejx9jwrd8e', 'lisu':'473c93dddf', 'vaii':'z8tk356ua7', 'bamu':'aeg5ah9fbg', 'sylo':'kylcx42avd', 'phag':'y22gh9p8g2', 'saur':'eqjs45mf8t', 'kali':'enl5dse8jv', 'rjng':'72d3ce3834', 'java':'db9724gea9', 'cham':'c4yzafta3f', 'tavt':'mn8j2mcblt', 'mtei':'x29ycx7hp5', 'hang':'umfm3ftrny', 'linb':'by38na5akh', 'lyci':'hsu56mxkr7', 'cari':'kqrxbcekmr', 'ital':'uk7vpcchbc', 'goth':'hj7ztebb5e', 'perm':'cqdluhalzh', 'ugar':'ffz7nkcxpb', 'xpeo':'pbjd5pecq6', 'dsrt':'tdjlnarc8y', 'shaw':'gj5fewb8ed', 'osma':'hg53222b9b', 'osge':'gm4pjj3qw7', 'elba':'fum3p8xz6v', 'lina':'rmvt9u45sq', 'cprt':'nywfdbys7b', 'armi':'ys8lxa9y4j', 'palm':'z3u3jwap6r', 'nbat':'kcjefvy9uw', 'hatr':'jpekrxh2wn', 'phnx':'ltk6h5bent', 'lydi':'hsu56mxkr7', 'mero':'ssxtjnbc7s', 'khar':'n974scptwz', 'sarb':'clvjlzfzv9', 'sarn':'gw3vnam33r', 'mani':'nnf3pjr2v3', 'avst':'appyvwf4ku', 'prti':'b7daarfs3a', 'phli':'ssmdqax9mt', 'phlp':'wqytv3ldez', 'orhk':'hpmlm9pjev', 'hung':'fx7n7tnxzt', 'brah':'nskejp3py5', 'kthi':'xa9swfhv9f', 'sora':'r4c4bsfy7v', 'cakm':'pdqjuf5k39', 'mahj':'kuegm6qedh', 'shrd':'spnpfarl4t', 'khoj':'r9e56hvyut', 'mult':'fptnmnhe3c', 'sind':'fykru6vn8h', 'gran':'qzhwzbsvm7', 'newa':'y53lggbts6', 'tirh':'wysbq8bpm4', 'sidd':'fcmrsmpp9f', 'modi':'tx5uz2hvvz', 'takr':'wvh5zdz7jl', 'ahom':'ky6s63f7fx', 'wara':'llvwz8vpn8', 'zanb':'j7rr9jgtyl', 'soyo':'lns82rb9hp', 'pauc':'t2uqldgjlv', 'bhks':'mcr57c34fw', 'marc':'h6ln54mufu', 'gonm':'vqhk6w3pgq', 'xsux':'yqbyb2mdz7', 'egyp':'q7yl4zu8eh', 'hluw':'tasanpp3u9', 'mroo':'b6ebw4c6al', 'bass':'3d6596eh4g', 'hmng':'ha2hg6d5b7', 'miao':'cb32gtbj58', 'tang':'rkw5m9sm64', 'nshu':'v39xawqg64', 'dupl':'sbhfvtwqkl', 'mend':'2874g2ehc8', 'adlm':'llp3cqd7gg', 'hani':'tsps57x35g', 'mede':'evyd5v7ebg', 'sogd':'xjh6av9y5z', 'sogo':'u9szp2wg4g', 'dogr':'ujs77ahv7k', 'gong':'r3u3b4rjy9', 'rohg':'mj3a6n78t2', 'maka':'wj3ak6u5s2', 'jpan':'lrnzlkagyq', 'elym':'bxzpxkpyu4', 'hmnp':'f6vf3vzlls', 'wcho':'besbhg4q95', 'nand':'pn37qqd7m4', 'rohg':'mj3a6n78t2', 'chrs':'dsrbaeqtxg', 'yezi':'dwz25agleu', 'diak':'zd8qnsls7x', 'kits':'s5y4qyk59q', 'plrd':"cb32gtbj58"
+var ssHistory = { 'grek':'wxsx5j4kzt', 'cyrl':'ngc339csy8', 'armn':'z35gwmg4ft', 'hebr':'qek84cbq5u', 'arab':'hqr6rc9md5', 'syrc':'hlvzdczufr', 'thaa':'n2tj49rr2n', 'nkoo':'mnqzubphu7', 'samr':'qv7wwr9xgp', 'mand':'djwvfmuu3h', 'deva':'b6c6j63sf5', 'beng':'f8jrlqwbac', 'guru':'fd27tquj5j', 'gujr':'yqug2kbjjr', 'orya':'znkmblg693', 'taml':'zw5nedjarb', 'telu':'sjrwm9ppr3', 'knda':'ur8y3qj6yk', 'mlym':'ypvmjurtyg', 'sinh':'sbwtu85wbv', 'thai':'d877ebfc65', 'laoo':'98522835fg', 'tibt':'mg8ulatcjb', 'mymr':'vcz6flwzqs', 'geor':'rbr2wkvu4m', 'ethi':'fvp74ug66k', 'cher':'nwnmgh2n8j', 'cans':'c36d846u2d', 'ogam':'d3z382ahas', 'runi':'ha667hekd4', 'tglg':'76d3376b7c', 'hano':'ga9dbe72a2', 'buhd':'h4446ag538', 'tagb':'d62f48hfad', 'khmr':'2269c7g9ee', 'mong':'xluqdp54ts', 'limb':'a2exgfkrmf', 'tale':'76c7d2ch4g', 'talu':'37fcf7h92b', 'bugi':'739e2e7g2e', 'lana':'gf97b8ad78', 'bali':'f2bb6f3bh9', 'sund':'3844bc8cea', 'batk':'geb5h358d3', 'lepc':'g6cv78jn42', 'olck':'rrkdvn7crf', 'glag':'lbhv6e4efr', 'copt':'msg4hep5ev', 'tfng':'wmx4utrkuc', 'jpan':'ly5dbxtthx', 'bopo':'tk449c64jh', 'yiii':'ejx9jwrd8e', 'lisu':'473c93dddf', 'vaii':'z8tk356ua7', 'bamu':'aeg5ah9fbg', 'sylo':'kylcx42avd', 'phag':'y22gh9p8g2', 'saur':'eqjs45mf8t', 'kali':'enl5dse8jv', 'rjng':'72d3ce3834', 'java':'db9724gea9', 'cham':'c4yzafta3f', 'tavt':'mn8j2mcblt', 'mtei':'x29ycx7hp5', 'hang':'umfm3ftrny', 'linb':'by38na5akh', 'lyci':'hsu56mxkr7', 'cari':'kqrxbcekmr', 'ital':'uk7vpcchbc', 'goth':'hj7ztebb5e', 'perm':'cqdluhalzh', 'ugar':'ffz7nkcxpb', 'xpeo':'pbjd5pecq6', 'dsrt':'tdjlnarc8y', 'shaw':'gj5fewb8ed', 'osma':'hg53222b9b', 'osge':'gm4pjj3qw7', 'elba':'fum3p8xz6v', 'lina':'rmvt9u45sq', 'cprt':'nywfdbys7b', 'armi':'ys8lxa9y4j', 'palm':'z3u3jwap6r', 'nbat':'kcjefvy9uw', 'hatr':'jpekrxh2wn', 'phnx':'ltk6h5bent', 'lydi':'hsu56mxkr7', 'mero':'ssxtjnbc7s', 'khar':'n974scptwz', 'sarb':'clvjlzfzv9', 'sarn':'gw3vnam33r', 'mani':'nnf3pjr2v3', 'avst':'appyvwf4ku', 'prti':'b7daarfs3a', 'phli':'ssmdqax9mt', 'phlp':'wqytv3ldez', 'orhk':'hpmlm9pjev', 'hung':'fx7n7tnxzt', 'brah':'nskejp3py5', 'kthi':'xa9swfhv9f', 'sora':'r4c4bsfy7v', 'cakm':'pdqjuf5k39', 'mahj':'kuegm6qedh', 'shrd':'spnpfarl4t', 'khoj':'r9e56hvyut', 'mult':'fptnmnhe3c', 'sind':'fykru6vn8h', 'gran':'qzhwzbsvm7', 'newa':'y53lggbts6', 'tirh':'wysbq8bpm4', 'sidd':'fcmrsmpp9f', 'modi':'tx5uz2hvvz', 'takr':'wvh5zdz7jl', 'ahom':'ky6s63f7fx', 'wara':'llvwz8vpn8', 'zanb':'j7rr9jgtyl', 'soyo':'lns82rb9hp', 'pauc':'t2uqldgjlv', 'bhks':'mcr57c34fw', 'marc':'h6ln54mufu', 'gonm':'vqhk6w3pgq', 'xsux':'yqbyb2mdz7', 'egyp':'q7yl4zu8eh', 'hluw':'tasanpp3u9', 'mroo':'b6ebw4c6al', 'bass':'3d6596eh4g', 'hmng':'ha2hg6d5b7', 'miao':'cb32gtbj58', 'tang':'rkw5m9sm64', 'nshu':'v39xawqg64', 'dupl':'sbhfvtwqkl', 'mend':'2874g2ehc8', 'adlm':'llp3cqd7gg', 'hani':'tsps57x35g', 'mede':'evyd5v7ebg', 'sogd':'xjh6av9y5z', 'sogo':'u9szp2wg4g', 'dogr':'ujs77ahv7k', 'gong':'r3u3b4rjy9', 'rohg':'mj3a6n78t2', 'maka':'wj3ak6u5s2', 'jpan':'lrnzlkagyq', 'elym':'bxzpxkpyu4', 'hmnp':'f6vf3vzlls', 'wcho':'besbhg4q95', 'nand':'pn37qqd7m4', 'rohg':'mj3a6n78t2', 'chrs':'dsrbaeqtxg', 'yezi':'dwz25agleu', 'diak':'zd8qnsls7x', 'kits':'s5y4qyk59q', 'plrd':"cb32gtbj58", 
+'vith':'temwtnc7ry', 'ougr':'nzgtqdq9jk', cpmn:'fdvm6hmkac',
+'tnsa':'ukq9lrcu3j', 'toto':'m2xj4ggrfp',
+'kawi':'flxwepg4jd', 'nagm':'rybdaxcvvm',
+
 }
 
 
@@ -394,16 +398,16 @@ yiii: 'yi'
 // chapter numbers in Unicode Standard - should be checked after each release
 var chapters = { 
 'latn':'07', 'grek':'07', 'copt':'07', 'cyrl':'07', 'glag':'07', 'armn':'07', 'geor':'07',
-'lina':'08', 'linb':'08', 'cprt':'08', 'lyci':'08', 'cari':'08', 'lydi':'08', 'ital':'08', 'runi':'08','hung':'08', 'goth':'08', 'elba':'08', 'aghb':'08', 'perm':'08', 'ogam':'08', 'shaw':'08',
+'lina':'08', 'linb':'08', 'cprt':'08', 'cpmn':'08', 'lyci':'08', 'cari':'08', 'lydi':'08', 'ital':'08', 'runi':'08','hung':'08', 'goth':'08', 'elba':'08', 'aghb':'08', 'vith':'08', 'perm':'08', 'ogam':'08', 'shaw':'08',
 'hebr':'09', 'arab':'09', 'syrc':'09', 'samr':'09', 'mand':'09', 'yezi':'09',
 'sarb':'10', 'sarn':'10', 'phnx':'10', 'armi':'10', 'mani':'10', 'prti':'10', 'phli':'10', 'plhp':'10', 'avst':'10', 'chrs':'10', 'elym':'10', 'nbat':'10', 'palm':'10', 'hatr':'10',
 'xsux':'11', 'ugar':'11', 'xpeo':'11', 'egyp':'11', 'mero':'11', 'hluw':'11',
 'deva':'12', 'beng':'12', 'guru':'12', 'gujr':'12', 'orya':'12', 'taml':'12', 'telu':'12', 'knda':'12', 'mlym':'12',
-'thaa':'13', 'sinh':'13', 'newa':'13', 'tibt':'13', 'mong':'13', 'limb':'13', 'mtei':'13', 'mroo':'13', 'wara':'13', 'olck':'13', 'cakm':'13', 'lepc':'13', 'saur':'13', 'gond':'13', 'gong':'13', 'wcho':'13',
-'brah':'14', 'khar':'14', 'bhks':'14', 'phag':'14', 'marc':'14', 'zanb':'14', 'soyo':'14', 'orhk':'14', 'sogd':'14', 'sogo':'14',
-'sylo':'15', 'kthi':'15', 'shrd':'15', 'takr':'15', 'sidd':'15', 'mahj':'15', 'khoj':'15', 'sind':'15',  'mult':'15', 'tirh':'15', 'modi':'15', 'nand':'15', 'gran':'15', 'diak':'15', 'ahom':'15', 'sora':'15', 'dogr':'15',
-'thai':'16', 'laoo':'16', 'mymr':'16', 'khmr':'16', 'tale':'16', 'talu':'16', 'lana':'16', 'tavt':'16', 'kali':'16', 'cham':'16', 'hmng':'16', 'pauc':'16', 'rohg':'16', 'hmnp':'16',
-'tglg':'17', 'hano':'17', 'buhd':'17', 'tagb':'17', 'bugi':'17', 'bali':'17', 'java':'17', 'rjng':'17', 'batk':'17', 'sund':'17', 'maka':'17',
+'thaa':'13', 'sinh':'13', 'newa':'13', 'tibt':'13', 'mong':'13', 'limb':'13', 'mtei':'13', 'mroo':'13', 'wara':'13', 'olck':'13', 'cakm':'13', 'lepc':'13', 'saur':'13', 'gond':'13', 'gong':'13', 'wcho':'13', 'toto':'13', 'tnsa':'13',
+'brah':'14', 'khar':'14', 'bhks':'14', 'phag':'14', 'marc':'14', 'zanb':'14', 'soyo':'14', 'orhk':'14', 'sogd':'14', 'sogo':'14', 'ougr':'14',
+'sylo':'15', 'kthi':'15', 'shrd':'15', 'takr':'15', 'sidd':'15', 'mahj':'15', 'khoj':'15', 'nagm':'15', 'sind':'15', 'mult':'15', 'tirh':'15', 'modi':'15', 'nand':'15', 'gran':'15', 'diak':'15', 'ahom':'15', 'sora':'15', 'dogr':'15',
+'thai':'16', 'laoo':'16', 'mymr':'16', 'khmr':'16', 'tale':'16', 'talu':'16', 'lana':'16', 'tavt':'16', 'kali':'16', 'cham':'16', 'hmng':'16', 'hmnp':'16', 'pauc':'16', 'rohg':'16',
+'tglg':'17', 'hano':'17', 'buhd':'17', 'tagb':'17', 'bugi':'17', 'bali':'17', 'java':'17', 'rjng':'17', 'batk':'17', 'sund':'17', 'maka':'17', 'kawi':'17',
 'hani':'18', 'bopo':'18', 'jpan':'18', 'hang':'18', 'yiii':'18', 'nshu':'18', 'lisu':'18', 'plrd':'18', 'tang':'18', 'kits':'18',
 'ethi':'19',  'osma':'19', 'tfng':'19', 'nkoo':'19', 'vaii':'19', 'bamu':'19',  'bass':'19', 'mend':'19', 'adlm':'19', 'mede':'19',
 'cher':'20', 'cans':'20', 'osge':'20', 'dsrt':'20',
@@ -415,7 +419,12 @@ var chapters = {
 
 var blockStart = { 
 'basic_latin':'0000', 'latin-1_supplement':'0080', 'latin_extended-a':'0100', 'latin_extended-b':'0180', 'ipa_extensions':'0250', 'spacing_modifier_letters':'02B0', 'combining_diacritical_marks':'0300', 'greek_and_coptic':'0370', 'cyrillic':'0400', 'cyrillic_supplement':'0500', 'armenian':'0530', 'hebrew':'0590', 'arabic':'0600', 'syriac':'0700', 'arabic_supplement':'0750', 'thaana':'0780', 'nko':'07C0', 'samaritan':'0800', 'mandaic':'0840', 'syriac_supplement':'0860', 'arabic_extended-a':'08A0', 'devanagari':'0900', 'bengali':'0980', 'gurmukhi':'0A00', 'gujarati':'0A80', 'oriya':'0B00', 'tamil':'0B80', 'telugu':'0C00', 'kannada':'0C80', 'malayalam':'0D00', 'sinhala':'0D80', 'thai':'0E00', 'lao':'0E80', 'tibetan':'0F00', 'myanmar':'1000', 'georgian':'10A0', 'hangul_jamo':'1100', 'ethiopic':'1200', 'ethiopic_supplement':'1380', 'cherokee':'13A0', 'unified_canadian_aboriginal_syllabics':'1400', 'ogham':'1680', 'runic':'16A0', 'tagalog':'1700', 'hanunoo':'1720', 'buhid':'1740', 'tagbanwa':'1760', 'khmer':'1780', 'mongolian':'1800', 'unified_canadian_aboriginal_syllabics_extended':'18B0', 'limbu':'1900', 'tai_le':'1950', 'new_tai_lue':'1980', 'khmer_symbols':'19E0', 'buginese':'1A00', 'tai_tham':'1A20', 'combining_diacritical_marks_extended':'1AB0', 'balinese':'1B00', 'sundanese':'1B80', 'batak':'1BC0', 'lepcha':'1C00', 'ol_chiki':'1C50', 'cyrillic_extended-c':'1C80', 'sundanese_supplement':'1CC0', 'vedic_extensions':'1CD0', 'phonetic_extensions':'1D00', 'phonetic_extensions_supplement':'1D80', 'combining_diacritical_marks_supplement':'1DC0', 'latin_extended_additional':'1E00', 'greek_extended':'1F00', 'general_punctuation':'2000', 'superscripts_and_subscripts':'2070', 'currency_symbols':'20A0', 'combining_diacritical_marks_for_symbols':'20D0', 'letterlike_symbols':'2100', 'number_forms':'2150', 'arrows':'2190', 'mathematical_operators':'2200', 'miscellaneous_technical':'2300', 'control_pictures':'2400', 'optical_character_recognition':'2440', 'enclosed_alphanumerics':'2460', 'box_drawing':'2500', 'block_elements':'2580', 'geometric_shapes':'25A0', 'miscellaneous_symbols':'2600', 'dingbats':'2700', 'miscellaneous_mathematical_symbols-a':'27C0', 'supplemental_arrows-a':'27F0', 'braille_patterns':'2800', 'supplemental_arrows-b':'2900', 'miscellaneous_mathematical_symbols-b':'2980', 'supplemental_mathematical_operators':'2A00', 'miscellaneous_symbols_and_arrows':'2B00', 'glagolitic':'2C00', 'latin_extended-c':'2C60', 'coptic':'2C80', 'georgian_supplement':'2D00', 'tifinagh':'2D30', 'ethiopic_extended':'2D80', 'cyrillic_extended-a':'2DE0', 'supplemental_punctuation':'2E00', 'cjk_radicals_supplement':'2E80', 'kangxi_radicals':'2F00', 'ideographic_description_characters':'2FF0', 'cjk_symbols_and_punctuation':'3000', 'hiragana':'3040', 'katakana':'30A0', 'bopomofo':'3100', 'hangul_compatibility_jamo':'3130', 'kanbun':'3190', 'bopomofo_extended':'31A0', 'cjk_strokes':'31C0', 'katakana_phonetic_extensions':'31F0', 'enclosed_cjk_letters_and_months':'3200', 'cjk_compatibility':'3300', 'cjk_unified_ideographs_extension_a':'3400', 'yijing_hexagram_symbols':'4DC0', 'cjk_unified_ideographs':'4E00', 'yi_syllables':'A000', 'yi_radicals':'A490', 'lisu':'A4D0', 'vai':'A500', 'cyrillic_extended-b':'A640', 'bamum':'A6A0', 'modifier_tone_letters':'A700', 'latin_extended-d':'A720', 'syloti_nagri':'A800', 'common_indic_number_forms':'A830', 'phags-pa':'A840', 'saurashtra':'A880', 'devanagari_extended':'A8E0', 'kayah_li':'A900', 'rejang':'A930', 'hangul_jamo_extended-a':'A960', 'javanese':'A980', 'myanmar_extended-b':'A9E0', 'cham':'AA00', 'myanmar_extended-a':'AA60', 'tai_viet':'AA80', 'meetei_mayek_extensions':'AAE0', 'ethiopic_extended-a':'AB00', 'latin_extended-e':'AB30', 'cherokee_supplement':'AB70', 'meetei_mayek':'ABC0', 'hangul_syllables':'AC00', 'hangul_jamo_extended-b':'D7B0', 'high_surrogates':'D800', 'high_private_use_surrogates':'DB80', 'low_surrogates':'DC00', 'private_use_area':'E000', 'cjk_compatibility_ideographs':'F900', 'alphabetic_presentation_forms':'FB00', 'arabic_presentation_forms-a':'FB50', 'variation_selectors':'FE00', 'vertical_forms':'FE10', 'combining_half_marks':'FE20', 'cjk_compatibility_forms':'FE30', 'small_form_variants':'FE50', 'arabic_presentation_forms-b':'FE70', 'halfwidth_and_fullwidth_forms':'FF00', 'specials':'FFF0', 'linear_b_syllabary':'10000', 'linear_b_ideograms':'10080', 'aegean_numbers':'10100', 'ancient_greek_numbers':'10140', 'ancient_symbols':'10190', 'phaistos_disc':'101D0', 'lycian':'10280', 'carian':'102A0', 'coptic_epact_numbers':'102E0', 'old_italic':'10300', 'gothic':'10330', 'old_permic':'10350', 'ugaritic':'10380', 'old_persian':'103A0', 'deseret':'10400', 'shavian':'10450', 'osmanya':'10480', 'osage':'104B0', 'elbasan':'10500', 'caucasian_albanian':'10530', 'linear_a':'10600', 'cypriot_syllabary':'10800', 'imperial_aramaic':'10840', 'palmyrene':'10860', 'nabataean':'10880', 'hatran':'108E0', 'phoenician':'10900', 'lydian':'10920', 'meroitic_hieroglyphs':'10980', 'meroitic_cursive':'109A0', 'kharoshthi':'10A00', 'old_south_arabian':'10A60', 'old_north_arabian':'10A80', 'manichaean':'10AC0', 'avestan':'10B00', 'inscriptional_parthian':'10B40', 'inscriptional_pahlavi':'10B60', 'psalter_pahlavi':'10B80', 'old_turkic':'10C00', 'old_hungarian':'10C80', 'rumi_numeral_symbols':'10E60', 'brahmi':'11000', 'kaithi':'11080', 'sora_sompeng':'110D0', 'chakma':'11100', 'mahajani':'11150', 'sharada':'11180', 'sinhala_archaic_numbers':'111E0', 'khojki':'11200', 'multani':'11280', 'khudawadi':'112B0', 'grantha':'11300', 'newa':'11400', 'tirhuta':'11480', 'siddham':'11580', 'modi':'11600', 'mongolian_supplement':'11660', 'takri':'11680', 'ahom':'11700', 'warang_citi':'118A0', 'zanabazar_square':'11A00', 'soyombo':'11A50', 'pau_cin_hau':'11AC0', 'bhaiksuki':'11C00', 'marchen':'11C70', 'masaram_gondi':'11D00', 'cuneiform':'12000', 'cuneiform_numbers_and_punctuation':'12400', 'early_dynastic_cuneiform':'12480', 'egyptian_hieroglyphs':'13000', 'anatolian_hieroglyphs':'14400', 'bamum_supplement':'16800', 'mro':'16A40', 'bassa_vah':'16AD0', 'pahawh_hmong':'16B00', 'miao':'16F00', 'ideographic_symbols_and_punctuation':'16FE0', 'tangut':'17000', 'tangut_components':'18800', 'kana_supplement':'1B000', 'kana_extended-a':'1B100', 'nushu':'1B170', 'duployan':'1BC00', 'shorthand_format_controls':'1BCA0', 'byzantine_musical_symbols':'1D000', 'musical_symbols':'1D100', 'ancient_greek_musical_notation':'1D200', 'tai_xuan_jing_symbols':'1D300', 'counting_rod_numerals':'1D360', 'mathematical_alphanumeric_symbols':'1D400', 'sutton_signwriting':'1D800', 'glagolitic_supplement':'1E000', 'mende_kikakui':'1E800', 'adlam':'1E900', 'arabic_mathematical_alphabetic_symbols':'1EE00', 'mahjong_tiles':'1F000', 'domino_tiles':'1F030', 'playing_cards':'1F0A0', 'enclosed_alphanumeric_supplement':'1F100', 'enclosed_ideographic_supplement':'1F200', 'miscellaneous_symbols_and_pictographs':'1F300', 'emoticons':'1F600', 'ornamental_dingbats':'1F650', 'transport_and_map_symbols':'1F680', 'alchemical_symbols':'1F700', 'geometric_shapes_extended':'1F780', 'supplemental_arrows-c':'1F800', 'supplemental_symbols_and_pictographs':'1F900', 'cjk_unified_ideographs_extension_b':'20000', 'cjk_unified_ideographs_extension_c':'2A700', 'cjk_unified_ideographs_extension_d':'2B740', 'cjk_unified_ideographs_extension_e':'2B820', 'cjk_compatibility_ideographs_supplement':'2F800', 'tags':'E0000', 'variation_selectors_supplement':'E0100', 'supplementary_private_use_area-a':'F0000', 'supplementary_private_use_area-b':'100000',  'medefaidrin':'16E40','sogdian':'10F30', 'old_sogdian':'10F00', 'dogra':'11800', 'gunjala_gondi':'11D60', 'hanifi_rohingya':'10D00', 'makasar':'11EE0', 'georgian_extended':'1C90', 'elymaic':'10FE0', 'nyiakeng_puachue_hmong':'1E100', 'wancho':'1E2C0', 'nandinagari':'119A0',
-'chorasmian':'10FB0', 'yezidi':'10E80', 'dives_akuru':'11900', 'khitan_small_script':'18B00'
+// 13
+'chorasmian':'10FB0', 'yezidi':'10E80', 'dives_akuru':'11900', 'khitan_small_script':'18B00', 'lisu_supplement':'11FB0', 'tangut_supplement':'18D00', 'cjk unified ideographs extension g':'30000',
+// 14
+'arabic_extended-b':'0870', 'vithkuqi':'10570', 'latin_extended-f':'10780', 'old_uyghur':'10F70', 'unified_canadian_aboriginal_syllabics_extended-a':'11AB0', 'cypro-minoan':'12F90', 'tangsa':'16A70', 'kana_extended-b':'1AFF0', 'znamenny_musical_notation':'1CF00', 'latin_extended-g':'1DF00', 'toto':'1E290', 'ethiopic_extended-b':'1E7E0',
+// 15
+'arabic_extended-c':'10EC0', 'devanagari_extended-a':'11B00', 'kawi':'11F00', 'kaktovik_numerals':'1D2C0', 'cyrillic_extended-d':'1E030', 'nag_mundari':'1E4D0', 'cjk_unified_ideographs_extension_h':'31350',
  }
 
 
@@ -431,7 +440,7 @@ origin:"South Asia",
 info:{ wikipedia:"Devanagari", omniglot:"devanagari" },
 local: [ { name:"Introduction to Indic Scripts", url:"indic-overview"},
           ],
-charts: [ "Devanagari", "Devanagari Extended", "Vedic Extensions" ],
+charts: [ "Devanagari", "Devanagari Extended", "Devanagari Extended-A", "Vedic Extensions" ],
 layout: [ ],
 usedfor: "Gondi, Aheri [esg], Andh [anr], Angika [anp], Asuri [asr], Athpariya [aph], Awadhi [awa], Bagheli [bfy], Bagheli [bfy], Bagri [bgq], Bahing [bhj], Bantawa [bap], Baraamu [brd], Bateri [btv], Belhariya [byw], Bhadrawahi [bhd], Bharia [bha], Bhatri [bgw], Bhilali [bhi], Bhili [bhb], Bhojpuri [bho], Bhujel [byh], Bhunjia [bhu], Bilaspuri [kfs], Birhor [biy], Bodo (India) [brx], Bote-Majhi [bmj], Braj [bra], Buksa [tkb], Bundeli [bns], Byangsi [bee], Camling [rab], Nicobarese, Central [ncb], Chambeali [cdh], Chantyal [chx], Chepang [cdm], Chhattisgarhi [hne], Chhintange [ctn], Chinali [cih], Tharu, Chitwania [the], Churahi [cdj], Maria, Dandami [daq], Tharu, Dangaura [thl], Darai [dry], Deccan [dcc], Dhanwar (Nepal) [dhw], Dhimal [dhi], Dhodia [dho], Dhundari [dhd], Dogri (individual language) [dgo], Dogri (macrolanguage) [doi], Dotyali [dty], Dumi [dus], Dungmali [raa], Dungra Bhil [duh], Duruwa [pci], Eastern Gurung [ggn], Magar, Eastern [mgp], Meohang, Eastern [emg], Tamang, Eastern [taj], Hindi, Fiji [hif], Gaddi [gbk], Kham, Gamale [kgj], Gamit [gbl], Garhwali [gbm], Konkani, Goan [gom], Gondi [gon], Gowli [gok], Gujari [gju], Gurung [gvr], Halbi [hlb], Kinnauri, Harijan [kjo], Haroti [hoj], Haryanvi [bgc], Hindi [hin], Ho [hoc], Hyolmo [scp], Idu-Mishmi [clk], Jaunsari [jns], Jerung [jee], Jirel [jul], Jumli [jml], Kachhi [kfr], Kagate [syw], Kanauji [bjj], Kangri [xnr], Kashmiri [kas], Tharu, Kathoriya [tkt], Khaling [klr], Khandesi [khn], Kharia [khr], Kinnauri [kfk], Tharu, Kochila [thq], Kodaku [ksz], Koi [kkt], Konkani (individual language) [knn], Konkani (macrolanguage) [kok], Korku [kfq], Creole Portuguese, Korlai [vkp], Korwa [kfp], Koya [kff], Kudmali [kyw], Kukna [kex], Pahari, Kullu [kfx], Kulung (Nepal) [kle], Kumaoni [kfy], Kumhali [kra], Kurukh [kru], Lambadi [lmn], Lhomi [lhm], Limbu [lif], Lohorung [lbr], Loke [loy], Magahi [mag], Pahari, Mahasu [bfz], Maithili [mai], Majhi [mjz], Mal Paharia [mkb], Malvi [mup], Manangba [nmm], Mandeali [mjl], Marathi [mar], Maria (India) [mrr], Marwari (India) [rwr], Marwari [mwr], Mawchi [mke], Mewari [mtr], Mewati [wtm], Newar, Middle [nwx], Mising [mrg], Munda [unx], Mundari [unr], Na [nbt], Nachering [ncd], Nepali (individual language) [npi], Nepali (macrolanguage) [nep], Kurux, Nepali [kxl], Newari [new], Nimadi [noe], Noiri [noi], Gondi, Northern [gno], Kolami, Northwestern [kfb], Tamang, Northwestern [tmk], Pali [pli], Palpa [plp], Panchpargania [tdb], Pangwali [pgg], Pankhu [pkh], Pattani [lae], Bareli, Pauri [bfb], Puma [pum], Puroik [suv], Rajasthani [raj], Rajbanshi [rjs], Raji [rji], Garasia, Rajput [gra], Tharu, Rana [thr], Bareli, Rathwi [bgd], Rawat [jnl], Sadri [sck], Sampang [rav], Sanskrit [san], Santali [sat], Saraiki [skr], Sartang [onp], Prākrit, Sauraseni [psu], Saurashtra [saz], Sauria Paharia [mjt], Shekhawati [swv], Sherpa [xsr], Kham, Sheshi [kip], Sindhi [snd], Sirmauri [srx], Ghale, Southern [ghe], Southwestern Tamang [tsf], Bhoti, Stod [sbu], Sunwar [suz], Surgujia [sgj], Surjapuri [sjp], Monpa, Tawang [twm], Monpa, Tawang [twm], Thakali [ths], Thangmi [thf], Thulung [tdh], Tilung [tij], Tinani [lbf], Toto [txo], Varhadi-Nagpuri [vah], Varli [vav], Vasavi [vas], Wagdi [wbr], Wambule [wme], Naga, Wancho [nnp], Wayu [vay], Magar, Western [mrd], Meohang, Western [raf], Muria, Western [mut], Kham, Western Parbate [kjl], Tamang, Western [tdg], Yakha [ybh], Yamphu [ybi]"
 },
@@ -467,7 +476,7 @@ status:"The second most broadly-used script in the world, after the Latin alphab
 origin:"West Asia",
 info:{ wikipedia:"Arabic_script", omniglot:"arabic" },
 local: [ ],
-charts: [ "Arabic", "Arabic Supplement", "Arabic Extended-A", "Arabic Presentation Forms-A", "Arabic Presentation Forms-B" ],
+charts: [ "Arabic", "Arabic Supplement", "Arabic Extended-A", "Arabic Extended-B", "Arabic Extended-C", "Arabic Presentation Forms-A", "Arabic Presentation Forms-B" ],
 layout: [ { name:"Arabic Layout Requirements", url:"https://w3c.github.io/alreq/"},
           { name:"Arabic text justification", url:"http://www.tug.org/tugboat/tb27-2/tb87benatia.pdf"},
           { name:"Justify Just or Just Justify", url:"http://quod.lib.umich.edu/j/jep/3336451.0013.105?view=text;rgn=main"},
@@ -484,7 +493,7 @@ status:"Standard script for the Armenian language, in the Caucasus and the wide 
 origin:"Europe",
 info:{ wikipedia:"Armenian_script", omniglot:"armenian" },
 local: [ ],
-charts: [ "Armenian" ],
+charts: [ "Armenian", "Alphabetic Presentation Forms" ],
 layout: [ ],
 usedfor: "Armenian [hy], Kurdish [kur], Kurdish, Northern [kmr], Armenian, Western [hyw]",
 },
@@ -518,7 +527,7 @@ status:"Traditionally used for writing Slavic languages, of which Russian is the
 origin:"Europe",
 info:{ wikipedia:"Cyrillic_script", omniglot:"cyrillic" },
 local: [ ],
-charts: [ "Cyrillic", "Cyrillic Supplement", "Cyrillic Extended-A", "Cyrillic Extended-B" ],
+charts: [ "Cyrillic", "Cyrillic Supplement", "Cyrillic Extended-A", "Cyrillic Extended-B", "Cyrillic Extended-C", "Cyrillic Extended-D" ],
 layout: [ ],
 usedfor: "Abaza [abq], Abkhazian [abk], Adyghe [ady], Aghul [agx], Akhvakh [akv], Sami, Akkala [sia], Alutor [alr], Andi [ani], Archi [aqc], Arin [xrn], Armazic [xrm], Assan [xss], Neo-Aramaic, Assyrian [aii], Avaric [ava], Azerbaijani [aze], Bagvalal [kva], Romani, Balkan [rmn], Romani, Baltic [rml], Bashkir [bak], Belarusian [bel], Bezhta [kap], Bosnian [bos], Botlikh [bph], Bukharic [bhh], Bulgarian [bul], Buriat [bua], Yupik, Central Siberian [ess], Chamalal [cji], Chechen [che], Chukot [ckt], Chulym [clw], Slavonic, Church [chu], Chuvash [chv], Tatar, Crimean [crh], Dargwa [dar], Daur [dta], Dido [ddo], Dolgan [dlg], Dungan [dng], Mari, Eastern [mhr], Erzya [myv], Even [eve], Evenki [evn], Enets, Forest [enf], Gagauz [gag], Ghodoberi [gdo], Gilyak [niv], Mongolian, Halh [khk], Mongolian, Halh [khk], Hinukh [gin], Hunzib [huz], Ingush [inh], Itelmen [itl], Judeo-Tat [jdt], Kabardian [kbd], Kalmyk [xal], Kamas [xas], Kara-Kalpak [kaa], Karachay-Balkar [krc], Karagas [kim], Karaim [kdr], Karata [kpt], Karelian [krl], Kazakh [kaz], Kerek [krk], Ket [ket], Khakas [kjh], Khanty [kca], Khazar [zkz], Khvarshi [khv], Sami, Kildin [sjd], Koibal [zkb], Komi [kom], Komi-Permyak [koi], Komi-Zyrian [kpv], Koryak [kpy], Kott [zko], Krymchak [jct], Kuman (Russia) [qwm], Kumyk [kum], Kurdish [kur], Kyrgyz [kir], Ladino [lad], Lak [lbe], Lezghian [lez], Lingua Franca Nova [lfn], Macedonian [mkd], Mansi [mns], Mari (Russia) [chm], Mator [mtm], Mator [mtm], Aleut, Mednyj [mud], Greek, Modern (1453-) [ell], Moksha [mdf], Buriat, Mongolia [bxm], Mongolian [mon], Montenegrin [cnr], Tat, Muslim [ttt], Nadruvian [ndf], Nanai [gld], Yupik, Naukan [ynk], Negidal [neg], Nenets [yrk], Nganasan [nio], Nogai [nog], Azerbaijani, North [azj], Altai, Northern [atv], Kurdish, Northern [kmr], Sami, Northern [sme], Uzbek, Northern [uzn], Yukaghir, Northern [ykg], Russian, Old [orv], Omok [omk], Oroch [oac], Orok [oaa], Ossetic [oss], Yupik, Pacific Gulf [ems], Pontic [pnt], Pumpokol [xpm], Romanian [ron], Romany [rom], Buriat, Russia [bxr], Russian [rus], Rusyn [rue], Rutul [rut], Selkup [sel], Serbian [srp], Shor [cjs], Shughni [sgh], Tatar, Siberian [sty], Yupik, Sirenik [ysr], Altai, Southern [alt], Yukaghir, Southern [yux], Svan [sva], Tabassaran [tab], Tajik [tgk], Talysh [tly], Tatar [tat], Sami, Ter [sjt], Tindi [tin], Tlingit [tli], Tsakhur [tkr], Enets, Tundra [enh], Turkish [tur], Turkmen [tuk], Tuvinian [tyv], Udi [udi], Udihe [ude], Udmurt [udm], Ukrainian [ukr], Ulch [ulc], Urum [uum], Uyghur [uig], Uyghur [uig], Uzbek [uzb], Uzbek [uzb], Romani, Vlax [rmy], Wakhi [wbl], Balochi, Western [bgn], Mari, Western [mrj], Oirat, Written [xwo], Xibe [sjo], Yagnobi [yai], Yakut [sah], Yazgulyam [yah], Yug [yug]",
 },
@@ -598,7 +607,7 @@ status:"",
 origin:"Europe",
 info:{ wikipedia:"Latin_script", omniglot:"latin" },
 local: [ ],
-charts: [ "Basic Latin", "Latin-1 Supplement", "Latin Extended-A", "Latin Extended-B", "Latin Extended-C", "Latin Extended-D", "Latin Extended-E", "Latin Extended Additional", "Halfwidth and Fullwidth Forms", "IPA Extensions", "Phonetic Extensions", "Phonetic Extensions Supplement" ],
+charts: [ "Basic Latin", "Latin-1 Supplement", "Latin Extended-A", "Latin Extended-B", "Latin Extended-C", "Latin Extended-D", "Latin Extended-E", "Latin Extended-F", "Latin Extended-G", "Latin Extended Additional", "Halfwidth and Fullwidth Forms", "IPA Extensions", "Phonetic Extensions", "Phonetic Extensions Supplement" ],
 layout: [ { name:"Requirements for Latin Text Layout and Pagination", url:"http://w3c.github.io/dpub-pagination/"},
           ],
 },
@@ -746,7 +755,7 @@ status:"",
 origin:"Africa",
 info:{ wikipedia:"Egyptian_hieroglyphs", omniglot:"egyptian" },
 local: [ ],
-charts: [ "Egyptian Hieroglyphs" ],
+charts: [ "Egyptian Hieroglyphs", "Egyptian Hieroglyph Format Controls"  ],
 layout: [ ],
 },
 
@@ -757,7 +766,7 @@ status:"Widely used for writing the Ethiopian and Eritrean Semitic languages suc
 origin:"Africa",
 info:{ wikipedia:"Ge'ez_script", omniglot:"ethiopic" },
 local: [ ],
-charts: [ "Ethiopic", "Ethiopic Supplement", "Ethiopic Extended", "Ethiopic Extended-A" ],
+charts: [ "Ethiopic", "Ethiopic Supplement", "Ethiopic Extended", "Ethiopic Extended-A", "Ethiopic Extended-B" ],
 layout: [ { name:"Ethiopic Layout Requirements", url:"https://w3c.github.io/elreq/"},
           { name:"Proposal to Reclassify Ethiopic Wordspace as a Space Separator (Zs) Symbol", url:"http://www.unicode.org/L2/L2015/15148-ethiopic-wordspace.pdf"},
           ],
@@ -1435,7 +1444,7 @@ origin:"South Asia",
 info:{ wikipedia:"Tamil_script", omniglot:"tamil" },
 local: [ { name:"Introduction to Indic Scripts", url:"indic-overview"},
           ],
-charts: [ "Tamil" ],
+charts: [ "Tamil", "Tamil Supplement" ],
 layout: [ ],
 usedfor:"Badaga [bfq], Betta Kurumba [xub], Irula [iru], Kannada Kurumba [kfi], Kota (India) [kfe], Muthuvan [muv], Paniya [pcg], Saurashtra [saz], Tamil [ta], Toda [tcx], Vaagri Booli [vaa], Wayanad Chetti [ctt]",
 },
@@ -1868,7 +1877,7 @@ origin:"East Asia",
 info:{ wikipedia:"Chinese_characters", omniglot:"" },
 local: [ { name:"Simplified vs Traditional", url:"http://r12a.github.io/scripts/chinese/"},
           ],
-charts: [ "CJK Unified Ideographs", "CJK Unified Ideographs Extension A", "CJK Unified Ideographs Extension B", "CJK Unified Ideographs Extension C", "CJK Unified Ideographs Extension D", "CJK Unified Ideographs Extension E", "CJK Unified Ideographs Extension F", "CJK Compatibility Ideographs", "CJK Compatibility Ideographs Supplement", "KangXi Radicals", "CJK Radicals Supplement", "CJK Strokes", "Ideographic Description Characters", "CJK Symbols and Punctuation", "Enclosed CJK Letters and Months", "Kanbun" ],
+charts: [ "CJK Unified Ideographs", "CJK Unified Ideographs Extension A", "CJK Unified Ideographs Extension B", "CJK Unified Ideographs Extension C", "CJK Unified Ideographs Extension D", "CJK Unified Ideographs Extension E", "CJK Unified Ideographs Extension F", "CJK Unified Ideographs Extension G", "CJK Unified Ideographs Extension H", "CJK Compatibility Ideographs", "CJK Compatibility Ideographs Supplement", "KangXi Radicals", "CJK Radicals Supplement", "CJK Strokes", "Ideographic Description Characters", "CJK Symbols and Punctuation", "Enclosed CJK Letters and Months", "Kanbun" ],
 layout: [ { name:"Chinese Layout Requirements", url:"http://w3c.github.io/clreq/"},
           ],
 usedfor:"Bouyei [pcc], Bai, Central [bca], Zhuang, Central Hongshuihe [zch], Zhuang, Dai [zhd], Zhuang, Eastern Hongshuihe [zeh], Zhuang, Guibei [zgb], Zhuang, Guibian [zgn], Honi [how], Mien, Iu [ium], Zhuang, Lianshan [zln], Zhuang, Liujiang [zlj], Zhuang, Liuqian [zlq], Zhuang, Minz [zgm], Zhuang, Nong [zhn], Puyuma [pyu], Zhuang, Qiubei [zqe], Bai, Southern [bfs], Dong, Southern [kmc], Sui [swi], Vietnamese [vie], Zhuang, Yang [zyg], Zhuang, Yongbei [zyb], Zhuang, Yongnan [zyn], Zhuang, Youjiang [zyj], Zhuang [zha], Zhuang, Zuojiang [zzj], <b>Traditional:</b> Atayal [tay], Chinese [zho], Chinese, Gan [gan], Chinese, Hakka [hak], Chinese, Huizhou [czh], Chinese, Jinyu [cjy], Chinese, Literary [lzh], Chinese, Mandarin [cmn], Maonan [mmd], Chinese, Min Dong [cdo], Chinese, Wu [wuu], Chinese, Xiang [hsn], Chinese, Yue [yue], <b>Simplified:</b> Atayal [tay], Chinese [zho], Daur [dta], Chinese, Gan [gan], Chinese, Hakka [hak], Chinese, Huizhou [czh], Chinese, Jinyu [cjy], Chinese, Literary [lzh], Chinese, Mandarin [cmn], Maonan [mmd], Chinese, Min Dong [cdo], Chinese, Min Nan [nan], Chinese, Wu [wuu], Chinese, Xiang [hsn], Chinese, Yue [yue], Zhuang [zha]",
@@ -1895,7 +1904,7 @@ origin:"East Asia",
 info:{ wikipedia:"Japanese_writing_system", omniglot:"japanese" },
 local: [ { name:"Jukugo ruby (blog)", url:"https://r12a.github.io/blog/201002.html#20100924"},
           ],
-charts: [ "Hiragana", "Katakana", "Katakana Phonetic Extensions", "Kana Supplement", "Kana Extended-A" ],
+charts: [ "Hiragana", "Katakana", "Katakana Phonetic Extensions", "Small Kana Extension", "Kana Supplement", "Kana Extended-A", "Kana Extended-B" ],
 layout: [ { name:"Japanese Layout Requirements", url:"http://w3c.github.io/jlreq/"},
           ],
 usedfor:"Japanese [ja]",
@@ -1979,7 +1988,7 @@ status:"Used by several aboriginal groups throughout Canada, including Algonquia
 origin:"Americas",
 info:{ wikipedia:"Canadian_Aboriginal_syllabics", omniglot:"ucas" },
 local: [ ],
-charts: [ "Unified Canadian Aboriginal Syllabics", "Unified Canadian Aboriginal Syllabics Extended" ],
+charts: [ "Unified Canadian Aboriginal Syllabics", "Unified Canadian Aboriginal Syllabics Extended", "Kaktovik Numerals" ],
 layout: [ ],
 usedfor:"Beaver [bea], Blackfoot [bla], Carrier [crx], Carrier, Southern [caf], Chippewa [ciw], Cree, Plains [crk], Cree, Southern East [crj], Cree, Swampy [csw], Cree, Woods [cwd], Cree, Moose [crm], Cree, Northern East [crl], Dene [chp], Inuktitut, Eastern Canadian [ike], Inuinnaqtun [ikt], Naskapi [nsk], Ojibwa, Eastern [ojg], Ojibwa, Northwestern [ojb], Ojibwa, Western [ojw], Oji-Cree [ojs], Sekani [sek], Slavey, North [scs], Slavey, South [xsl]",
 },
@@ -2080,10 +2089,11 @@ dogr:{ script:"Dogra", code: "Dogr", name:"",
 dates:"15thC – 20thC", start:"1400", end:"2000", current_usage:"",
 status:"",
 origin:"South Asia",
-info:{ wikipedia:"Dogri_language", omniglot:"" },
+info:{ wikipedia:"Dogri_script", omniglot:"" },
 local: [ ],
 charts: [ "Dogra" ],
 layout: [ ],
+usedfor:"Dogri [dgo]",
 },
 
 
@@ -2120,6 +2130,7 @@ local: [ { name:"Makasar spreadsheet", url:"https://docs.google.com/spreadsheets
           ],
 charts: [ "Makasar" ],
 layout: [ ],
+usedfor:"Makasar [mak]",
 },
 
 
@@ -2131,6 +2142,7 @@ info:{ wikipedia:"Nandinagari", omniglot:"" },
 local: [ ],
 charts: [ "Nandinagari" ],
 layout: [ ],
+usedfor:"Kannada [kn], Sanskrit [sa]",
 },
 
 
@@ -2142,6 +2154,7 @@ info:{ wikipedia:"Elymaic", omniglot:"" },
 local: [ ],
 charts: [ "Elymaic" ],
 layout: [ ],
+usedfor:"Elymian [xly]",
 },
 
 
@@ -2177,6 +2190,7 @@ info:{ wikipedia:"Khwarezmian_language#Writing_system", omniglot:"" },
 local: [ ],
 charts: [ "Chorasmian" ],
 layout: [ ],
+usedfor: "Chorasmian [xco]",
 },
 
 
@@ -2200,6 +2214,7 @@ info:{ wikipedia:"Dhives_Akuru", omniglot:"dhivesakuru" },
 local: [ ],
 charts: [ "Dives Akuru" ],
 layout: [ ],
+usedfor:"Maldivian [dv]",
 },
 
 
@@ -2211,33 +2226,127 @@ info:{ wikipedia:"Khitan_small_script", omniglot:"khitan" },
 local: [ ],
 charts: [ "Khitan Small Script" ],
 layout: [ ],
+usedfor:"Khitan [zkt]",
+},
+
+
+
+vith:{ script:"Vithkuqi", code:"Vith", name:"", 
+dates:"1825 – 1845", start:"1825", end:"1845", current_usage:"endangered", 
+status: "",
+origin:"Europe",
+info:{ wikipedia:"Vithkuqi_script", omniglot:"" }, 
+local: [	],
+charts:[ "Vithkuqi" ],
+layout:[	],
+usedfor:"Albanian [sq]",
+},
+
+
+
+ougr:{ script:"Old Uyghur", code:"Ougr", name:"", 
+dates:"8thC – 18thC", start:"700", end:"1700", current_usage:"", 
+status: "",
+origin:"Central Asia",
+info:{ wikipedia:"Old_Uyghur_alphabet", omniglot:"olduyghur" }, 
+local: [	],
+charts:[ "Old Uyghur" ],
+layout:[	],
+usedfor:"Old Uighur [oui]",
+},
+
+
+
+cpmn:{ script:"Cypro-Minoan", code:"Cpmn", name:"", 
+dates:"1550 – 1050 BC", start:"-1600", end:"-1100", current_usage:"", 
+status: "",
+origin:"Europe",
+info:{ wikipedia:"Cypro-Minoan_syllabary", omniglot:"" }, 
+local: [	],
+charts:[ "Cypro-Minoan" ],
+layout:[	],
+usedfor:"",
+},
+
+
+tnsa:{ script:"Tangsa", code:"Tnsa", name:"", 
+dates:"1990 – today", start:"1990", end:"", current_usage:"uptake", 
+status: "Invented in 1990 by Lakhum Mossang, it has seen limited use among members of the Mossang community and received support from the government of Arunachal Pradesh",
+origin:"S Asia",
+info:{ wikipedia:"Tangsa_Naga", omniglot:"tangsa" }, 
+local: [	],
+charts:[ "Tangsa" ],
+layout:[	],
+usedfor:"Tangshang Naga [nst]",
+},
+
+
+toto:{ script:"Toto", code:"Toto", name:"", 
+dates:"2015 – Today", start:"2015", end:"", current_usage:"community", 
+status: "Developed for the language by community elder and author Dhaniram Toto in 2015. Has seen limited but increasing use in literature, education, and computing.",
+origin:"S Asia",
+info:{ wikipedia:"Toto_language#Writing_system", omniglot:"toto2" }, 
+local: [	],
+charts:[ "Toto" ],
+layout:[	],
+usedfor:"Toto [txo]",
+},
+
+
+kawi:{ script:"Kawi", code:"Kawi", name:"", 
+dates:"8thC — 16thC", start:"700", end:"1500", current_usage:"", 
+status: "",
+origin:"SE Asia",
+info:{ wikipedia:"Kawi_script", omniglot:"kawi" }, 
+local: [	],
+charts:[ "Kawi" ],
+layout:[	],
+usedfor:"Kawi [kaw], Sanskrit [sa]",
+},
+
+
+nagm:{ script:"Nag Mundari", code:"Nagm", name:"Mundari Bani", 
+dates:"1982 – today", start:"1982", end:"", current_usage:"", 
+status: "Invented and published in late 1980 by community elder and author Rohidas Singh Nag. It has seen limited but increasing use in literature, education, and computing.",
+origin:"S Asia",
+info:{ wikipedia:"Mundari_Bani", omniglot:"mundaribani" }, 
+local: [	],
+charts:[ "Nag Mundari" ],
+layout:[	],
+usedfor:"Mundari [unr]",
 },
 
 
 
 
+
+}
 
 
 
 // NOTES
 
-xxxx:{ script:"Ahom", code:"Ahom", name:"", 
-dates:"15thC – today", start:"1400", end:"", current_usage:"endangered", 
+/*
+
+
+xxxx:{ script:"Ahom", code:"Ahom", name:"", type:"abugida", 
+dates:"15thC – today", start:"1400", end:"", current_usage:"", 
 status: "describe_current_status_for_living_scripts",
-origin:"South Asia",
+origin:"Europe",
 info:{ wikipedia:"Ahom_alphabet", omniglot:"ahom" }, 
 local: [	],
-charts:[ "Arabic", "Arabic Supplement", "Arabic Extended-A" ],
-layout:[	]
+charts:[ "Arabic", "Arabic Supplement", "Arabic Extended" ],
+layout:[	],
+usedfor:"Eastern Punjabi [pan], Saraiki [skr], Sindhi [snd]",
 },
 
 
-/*
 
 ahom:{ script:"Ahom", code:"Ahom", name:"Ahom (other names)"
 SCRIPT: for main title & menu & some links, it is the plain script name
 CODE: initial cap, used for scriptsource link
 NAME: use this also if there are alternative names
+TYPE: keywords include: alphabet, abjad, abugida, syllabary, RTL, cased
 
 dates:"15thC – today", start:"1400", end:"", current_usage:""
 DATES: mostly from http://www.worldswritingsystems.org/
@@ -2274,9 +2383,7 @@ LAYOUT: List of links to W3C language enablement docs
 },
 
 
-*/
 
-}
 
 
 // OBSOLETE STUFF FOLLOWS
@@ -2367,3 +2474,4 @@ var w3cTypographySet =  new Set(['arab','hani','ethi','hebr','deva','jpan','hang
 var w3cTypeSampleSet =  new Set(['arab','hani','cyrl','ethi','grek','hebr','jpan','hang','mong','deva','thai','tibt'])
 
 var examplePhraseSet = new Set(['arab','armn','cans','cher','cyrl','deva','ethi','grek','guru','hani','hebr','latn','khmr','hang','mong','mymr','telu','tfng','thai','tibt'])
+*/
