@@ -207,7 +207,7 @@ autoExpandExamples.ml = `
 ആസാമം||
 ആഹാരം||
 ആഹ്ലാദം||
-ആൻ്റോ|proper name|aːntoː
+ആൻ്റോ|proper name|aː§n§toː
 ആർത്തവം||
 ആർത്തവചക്രം||
 ആർത്തവവിരാമം||
@@ -241,7 +241,7 @@ autoExpandExamples.ml = `
 ഇത്|this|it̪ɨ̆
 ഇത്തിരി|few|it̪t̪iɾi
 ഇതൾ||
-ഇദ്ദേഹം|he|iddeham
+ഇദ്ദേഹം|he|i§d§de§ham
 ഇന്തുപ്പ്||
 ഇന്ത്യ||
 ഇന്ത്യയ്ക്ക്|to India 
@@ -421,7 +421,7 @@ autoExpandExamples.ml = `
 എവർ|who|eʋar
 എവൾ|who|eʋaɭ
 എസ്റ്റോണിയ||
-എ്ന്നാ|on which day?|ənnaː
+എ്ന്നാ|on which day?|ə§n§naː
 ഏകദേശം||
 ഏണി||
 ഏതാണ്ട്||
@@ -442,7 +442,7 @@ autoExpandExamples.ml = `
 ഐങ്കോണം||
 ഐങ്കോൺ||
 ഐറാൻ||
-ഐശീല്ം|than ice|ai̯ɕiːləm
+ഐശീല്ം|than ice|ai̯§ɕiː§ləm
 ഒക്ടോബർ||
 ഒച്ച||
 ഒട്ടകം||
@@ -508,7 +508,7 @@ autoExpandExamples.ml = `
 കനത്ത|heavy|kanat̪t̪a
 കനമുള്ള|heavy|kanamuɭɭa
 കന്നഡ||
-കന്നി|unmarried girl|kanni
+കന്നി|unmarried girl|ka§n§ni
 കന്നുകാലി||
 കപടം||
 കപടൻ||
@@ -626,7 +626,7 @@ autoExpandExamples.ml = `
 കിന്നരിമൈന||
 കിരി||
 കിരീടം||
-കിലോമീറ്ററുകൾ|kilometers|kiloːmiːṯṯarukaɭ
+കിലോമീറ്ററുകൾ|kilometers|ki§loː§miː§ṯ§ṯa§ru§ka§ɭ
 കിളി|bird|kiɭi
 കിളിമീൻ||
 കിഴക്ക്||
@@ -969,7 +969,7 @@ autoExpandExamples.ml = `
 ഞ്ച||
 ഞ്ജ||
 ഞ്ഞ||
-ടെംപററി|temporary|ʈemparari
+ടെംപററി|temporary|ʈem§pa§ra§ri
 ട്ട||
 ടൗൺ||
 ഡിസംബർ||
@@ -1127,7 +1127,7 @@ autoExpandExamples.ml = `
 ദിവസം||
 ദീർഘക്ഷമ||
 ദുഃഖ വെള്ളി||
-ദുഃഖം|sorrow|d̪uɦkʰam
+ദുഃഖം|sorrow|d̪uɦ§kʰam
 ദുർബല||
 ദുർബലം||
 ദൂതൻ||
@@ -1309,7 +1309,7 @@ autoExpandExamples.ml = `
 പനി||
 പന്ത്||
 പന്ന|bad|panna
-പന്നി|pig|pan̪n̪i
+പന്നി|pig|pa§n̪§n̪i
 പയർ||
 പരസ്യം||
 പരാജയം||
@@ -1365,9 +1365,10 @@ autoExpandExamples.ml = `
 പാപ്പാൻ||
 പാമ്പ്|snake|paːmpɨ̆
 പാറ||
-പാറ്റ|cockroach|paːtta
+പാറ്റ|cockroach|paː§t§ta
+പാററ|cockroach|paː§t§ta
 പാലം||
-പാലു്|milk, pink|paːlə|pālə̆
+പാലു്|milk, pink|paː§lə|pālə̆
 പാല്||
 പാവാട||
 പാൽ||
@@ -1623,7 +1624,7 @@ autoExpandExamples.ml = `
 മാമ്പഴം||
 മാമൻ||
 മാര്‍||
-മാറെറാലി|echo|maːṯṯoli
+മാറെറാലി|echo|maː§ṯ§ṯo§li
 മാല||
 മാലയിടുക||
 മാലാഖ||
@@ -1894,7 +1895,7 @@ autoExpandExamples.ml = `
 വില||
 വിലാസം||
 വില്ല്||
-വില്ലൻ|villain|ʋillan
+വില്ലൻ|villain|ʋi§l§la§n
 വിളംബരം||
 വിളക്ക്||
 വിളിക്കുക||
@@ -2093,7 +2094,7 @@ autoExpandExamples.ml = `
 സർവ്വ||
 സർവ്വകലാശാല||
 സൽസ്വഭാവി||
-ഹംസം|swan|hamsam
+ഹംസം|swan|ham§sam
 ഹരിയാണ||
 ഹാസ്യം||
 ഹിതം||
@@ -2107,6 +2108,8 @@ autoExpandExamples.ml = `
 ഹ്ന||
 ഹ്മ||
 ഹ്ല||
+മാറ്റം|change|ma§t§tam
+ചന്ദ്രക്കല|chandrakala|ʧa§n§d̪§r̪a§k§ka§la
 
 
 
