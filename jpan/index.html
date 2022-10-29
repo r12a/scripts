@@ -47,7 +47,7 @@
 
 
 <p id="status">Updated 
-<!-- #BeginDate format:Sw1 -->11 October, 2022<!-- #EndDate -->
+<!-- #BeginDate format:Sw1 -->29 October, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
 </p>
 
@@ -576,7 +576,12 @@ alveolar</th>
 
 
 <p>The Unicode hiragana block does contain code points for dakuten combining marks and modifiers, but these are not used in normal text.</p>
-<p>The basic set is completed by a number of small forms  used for medial glides, foreign sounds, and gemination, and a vowel lengthener. </p>
+
+
+
+
+<div  id="small_kana">
+<p><span class="leadin">Small kana.</span> The basic set is completed by a number of small forms  used for medial glides, foreign sounds, and gemination, and a vowel lengthener. </p>
 
 <figure class="characterBox auto bicameral" data-cols="ipa">ぁァ␣ぃィ␣ぅゥ␣ぇェ␣ぉォ␣ゃャ␣ゅュ␣ょョ␣ゎヮ␣っッ␣ー</figure>
 
@@ -584,6 +589,7 @@ alveolar</th>
 <p><span class="codepoint" translate="no"><span lang="ja">&#x30C3;</span> [<a href="/scripts/kana/block#char30C3"><span class="uname">U+30C3 KATAKANA LETTER SMALL TU</span></a>]</span> is  used to lengthen a consonant sound.</p>
 
 <p><span class="codepoint" translate="no"><span lang="ja">&#x30FC;</span> [<a href="/scripts/kana/block#char30FC"><span class="uname">U+30FC KATAKANA-HIRAGANA PROLONGED SOUND MARK</span></a>]</span> is used to elongate vowel sounds. This elongation is phonemically significant. It is used predominantly with katakana, but occasionally also with hiragana.<tt>uk,720</tt></p>
+</div>
 </section>
 
 
@@ -841,14 +847,6 @@ alveolar</th>
 </section>
 
 
-
-
-<section id="baselines">
-<h3>Baselines &amp; inline alignment</h3>
-
-<p>The standard baseline for kanji and kana characters is slightly lower than the alphabetic baseline used for Latin characters. Mixed script text needs to align baselines correctly.</p>
-<p>Japanese characters have not ascenders or descenders, but occupy the square space described earlier.</p>
-</section>
 
 
 
@@ -1160,151 +1158,6 @@ alveolar</th>
 
 
 
- <section id="letterspace">
-<h3>Text spacing</h3>
-<p id="def-letterspacing" class="explanatoryintro definitionStub"></p>
-
-<section id="letterspacing">
-<h4>Inter-character letter-spacing</h4>
-<p>Letter-spacing is used to achieve balance between items with large and small numbers of characters, such as headings, running heads, and captions. When expanding text, equal amounts of space are added between the character frames of the item with the smaller number of characters.</p>
-
-<figure id="fig_letterspace">
-<img src="images/letter_spacing_1.jpeg" alt="" style="max-width: 40%;"/><img src="images/letter_spacing_2.jpeg" alt=""  style="max-width: 40%;"/>
-<figcaption>Examples of headings where letter spacing has been applied.</figcaption>
-</figure>
-
-<p><span class="leadin">Reducing inter-character spacing.</span> Although solid set text is normally best for readability, in large print sizes, such as for magazine headings, it may be desirable to reduce the distance between certain characters. This is typically done by reducing the distance between adjacent letter faces.</p>
-<p>Sometimes, text may also be kerned by overlapping the character frames by a regular amount across a whole line.</p>
-</section>
-
-
-
-
-<section id="autospace">
-<h4>Spacing around alphabetic or numeric phrases</h4>
-
-<p>When a run of romaji or ASCII numerals appears in text, it is often set off from the surrounding kanji/kana letters by a small space.</p>
-
-<p>The amount of spacing can vary.  JLREQ<tt>j,#id209</tt> suggests a ¼em space, but sometimes other spaces may be appropriate, such as ⅙em.<a class="qlink" href="https://github.com/w3c/csswg-drafts/issues/7050" target="_blank">gh</a></p>
-
-<figure id="fig_text_space">
-<img src="images/text_space_none.png" alt="">
-<span style="margin-inline:2rem">&nbsp;</span>
-<img src="images/text_space_applied.png" alt="">
-<figcaption>A Japanese paragraph where text-spacing has and has not been applied. (<a href="https://w3c.github.io/jlreq/#id209" target="_blank">source</a>)</figcaption>
-</figure>
-
-
-<p>Such spacing is not needed when the phrase is followed or preceded by punctuation that already has built in space. It also doesn't appear at the line start/end.</p>
-
-<div class="html">
-<p>To achieve this in web pages use the <code class="kw" translate="no">text-spacing</code> CSS property<sup><a href="https://drafts.csswg.org/css-text-4/#text-spacing-property" target="_blank">§</a></sup> in your style sheet with the following values. It's best not to use space characters. The actual amount of spacing applied is dependent on the browser.</p>
-<dl>
-<dt>ideograph-alpha <span class="instructions">(Not yet supported by browsers.)</span><a class="qlink" href="https://www.w3.org/International/i18n-tests/results/int-letter-spacing#ja_auto_space" target="_blank">§</a></dt>
-<dd>Creates extra spacing between runs of ideographs and non-ideographic letters.</dd>
-<dt>ideograph-numeric <span class="instructions">(Not yet supported by browsers.)</span><a class="qlink" href="https://www.w3.org/International/i18n-tests/results/int-letter-spacing#ja_auto_space" target="_blank">§</a></dt>
-<dd>Creates extra spacing between runs of ideographs and non-ideographic numerals glyphs.</dd>
-</dl>
-<p>Eg. the following puts spacing around both:<br><code>text-spacing: ideograph-alpha ideograph-numeric;</code></p>
-</div>
-</section>
-
-
-
-
-<section id="punctuationspace">
-<h4>Spacing around punctuation</h4>
-
-<p>Punctuation such as full stop, comma, parentheses, etc. normally has built-in space associated with it because the ink takes up only a part of the em square. However, in some situations, the blank space is not appropriate.</p>
-<p>When text is arranged on a strict grid pattern, none of this space removal applies.</p>
-
-<p><span class="leadin">Sequences of punctuation.</span> One such example is when multiple punctuation marks appear side by side. <a class="figref">fig_text_space_adjacent</a> shows how space can be removed between a fullwidth comma and fullwidth bracket to reduce large blank spaces.  It shouldn't be necessary to use halfwidth characters for this; you should use normal characters and the application should  remove the appropriate amount of space automatically.</p>
-
-<figure id="fig_text_space_adjacent">
-<img src="images/text_space_adjacent.png" alt="">
-<span style="margin-inline:2rem">&nbsp;</span>
-<img src="images/text_space_adjacent_none.png" alt="">
-<figcaption>Space has been removed on the left to make the text more readable.</figcaption>
-</figure>
-
-
-
-<div class="html">
-<p>It is not yet possible to control this in web pages, but the CSS Text spec proposes a way forward using the <code class="kw" translate="no">text-spacing</code> CSS property<sup><a href="https://drafts.csswg.org/css-text-4/#text-spacing-property" target="_blank">§</a></sup>. The relevant property values are:</p>
-<dl>
-<dt>trim-adjacent <span class="instructions">(Not yet supported by browsers.)</span></dt>
-<dd>Collapses spacing between punctuation glyphs. </dd>
-<dt>space-adjacent <span class="instructions">(Not yet supported by browsers.)</span></dt>
-<dd>Keeps the space before fullwidth opening punctuation when not at the start of the line. Keeps the space after fullwidth closing punctuation when not at the end of the line.</dd>
-</dl>
-<p>Eg. the following collapses spaces between punctuation marks:<br>
-<code>text-spacing: trim-adjacent;</code></p>
-</div>
-
-
-
-
-
-<p><span class="leadin">Line-initial punctuation.</span> Similarly, space may be removed from punctuation at the start or the end of a line. If we use a bracket as an example, the ink of the bracket should be flush with the line start when that bracket occurs inside a paragraph. Where paragraphs are separated by a blank line, the bracket at the start of the first line should also be flush with the left edge of the text.</p>
-<p>It is common, however, to have no blank line before a Japanese paragraph, but instead  indent the paragraph's first line. Usually this indent is the width of one fullwidth character. If the line begins with a punctuation such as a bracket, the empty space that usually precedes a fullwidth bracket is still dropped, but the line is set so that the glyph hangs into the indent (which, visually, looks like it is preceded by a half-width space). <a class="figref">fig_text_space_para</a> shows examples of this.</p>
-
-<figure id="fig_text_space_para">
-<img src="images/text_space_para.jpg" alt="">
-<figcaption>Space is removed from a bracket at the start of a line, but not at the beginning of a paragraph. (<a href="https://github.com/w3c/csswg-drafts/issues/2462">source</a>)</figcaption>
-</figure>
-<div class="html">
-<p>It is not yet possible to achieve this in web pages, but the CSS Text spec proposes a way forward using the <code class="kw" translate="no">text-spacing</code> CSS property<sup><a href="https://drafts.csswg.org/css-text-4/#text-spacing-property" target="_blank">§</a></sup>.</p>
-
-<p>A typical way of setting styling for indented paragraphs would therefore include something like this</p>
-
-<pre>p {
-  margin: 0;
-  text-indent: 1em;
-  text-spacing: trim-start;
-  hanging-punctuation: first;
-  }</pre>
-
-<p>The relevant property values are:</p>
-
-<dl>
-<dt>text-space: trim-start <span class="instructions">(Not yet supported by browsers.)</span></dt>
-<dd>Sets fullwidth opening punctuation flush (ie. removes the leading space from fullwidth glyphs) at the start of each line.</dd>
-<dt>text-space: space-start <span class="instructions">(Not yet supported by browsers.)</span></dt>
-<dd>Keeps the space before all  fullwidth opening punctuation at the beginning of every line (ie. full-width glyphs).</dd>
-<dt>text-indent: 1em</dt>
-<dd>Indents the first line of a paragraph by 1 character space.</dd>
-<dt>hanging-punctuation: first <span class="instructions">(Not yet supported by browsers.)</span></dt>
-<dd>An opening bracket or quote at the start of the first formatted line of an element hangs. This applies to all characters in the Unicode categories Ps, Pf, Pi plus the ASCII quote marks <span class="codepoint" translate="no"><bdi lang="en">&#x0027;</bdi> [<span class="uname">U+0027 APOSTROPHE</span>]</span> and <span class="codepoint" translate="no"><bdi lang="en">&#x0022;</bdi> [<span class="uname">U+0022 QUOTATION MARK</span>]</span>. </dd>
-</dl>
-
-<p>In some cases, the paragraph-start line indentation has been achieved by adding a fullwidth bracket at the start of the paragraph (rather than indentation), while removing the leading space from other brackets in the paragraph. Indentations for lines that don't begin with a bracket-like punctuation will typically use an ideographic space character rather than styling to create the indent (because line indentation doesn't behave differently depending on whether a line starts with a bracket). This approach is not recommended, because it impedes the ability of authors to change behaviour simply through changing the styling, but to provide a workaround for legacy text in this situation, CSS proposes another value:</p>
-
-<dl>
-<dt>space-first <span class="instructions">(Not yet supported by browsers, and not recommended for normal use.)</span></dt>
-<dd>Behaves as <code class="kw" translate="no">space-start</code> on the first line the block container and each line after a forced line break but as <code class="kw" translate="no">trim-start</code> on all other lines.</dd>
-</dl>
-</div>
-
-
-
-
-
-<p><span class="leadin">Line-final punctuation.</span> It is often useful to remove trailing space from a fullwidth punctuation glyph if it allows that character to fit at the end of a line (rather than wrapping it to the next line).</p>
-<div class="html">
-<p>Again, it is not yet possible to achieve this in web pages, but the CSS Text spec proposes a way forward using the <code class="kw" translate="no">text-spacing</code> CSS property<sup><a href="https://drafts.csswg.org/css-text-4/#text-spacing-property" target="_blank">§</a></sup>. The relevant property values are:</p>
-<dl>
-<dt>allow-end <span class="instructions">(Not yet supported by browsers.)</span></dt>
-<dd>Removes trailing space from fullwidth closing punctuation at the end of each line if it does not otherwise fit prior to justification; otherwise set the punctuation with full-width glyphs. .</dd>
-<dt>trim-end <span class="instructions">(Not yet supported by browsers.)</span></dt>
-<dd>Removes trailing space from fullwidth closing punctuation at the end of every line.</dd>
-<dt>space-end <span class="instructions">(Not yet supported by browsers.)</span></dt>
-<dd>Keeps the space after all  fullwidth closing punctuation at the end of every line (ie. full-width glyphs).</dd>
-</dl>
-</div>
-
-</section>
-</section>
-
 
 
 
@@ -1495,17 +1348,71 @@ alveolar</th>
 <section id="para">
 <h2>Line &amp; paragraph layout</h2>
    
-      
+
+
+
+
+
+
 <section id="linebreak">
 <h3>Line breaking &amp; hyphenation</h3>
+
 <p>Lines are normally wrapped between characters – word boundaries usually have no significance for the wrapping. However, occasionally there is a preference to wrap text at word boundaries, eg. to better balance headings.</p>
-<p>Japanese should also take into account a few rules (kinsoku rules) which dictate what characters cannot appear at the end or start of a line.</p>
+
+<p>Kanji characters have the ID line-break property, which means that lines can ordinarily break before and after and between pairs of ideographic characters. Note that this class also includes characters other than Han ideographs.</p>
+
+<p><span class="leadin">Kinsoku rules.</span> Japanese should also take into account a few rules (called <span class="name">kinsoku</span> rules) which dictate what characters cannot appear at the end or start of a line. The set of characters affected by these rules varies slightly from application to application, but <a class="figref">fig_kinsoku_start</a> and <a class="figref">fig_kinsoku_start</a> show examples of the kinds of punctuation involved.</p>
+
+<figure id="fig_kinsoku_start" class="sideCaption">
+<p class="ex" lang="ja" style="font-size: 200%;">’ ” ） 》 〉 】 〗 〕 ］ ｝<br>。 ． 、 ， ・ ： ； ？ ！ ヽ ヾ ゝ ゞ 々 % º</p>
+<figcaption>Characters typically not permitted at the start of a line.</figcaption>
+</figure>
+
+<figure id="fig_kinsoku_end" class="sideCaption">
+<p class="ex" lang="ja" style="font-size: 200%;">‘ “ （ ［ 〔 《 〈 【 ｛<br>¥ $ £</p>
+<figcaption>Characters typically not permitted at the end of a line.</figcaption>
+</figure>
+
 <p><a id="showLinebreaks" target="_blank" href="tbd">Show (default) line-breaking properties for non-kanji characters in the  Chinese orthography described here.</a></p>
-<p>Kanji characters have the ID character property.</p>
+
+<p>There are a number of ways to handle these characters:</p>
+
+<ol>
+<li><p>Wrap the previous character  to the next line with the punctuation.</p>
+    <figure id="fig_kinsoku_wrap">
+    <img src="images/kinsoku_wrap.png" alt="人間は、理性と良心とを授けられており、互いに同胞の精神をもって行動しなければならない。" lang="ja" data-notes="Hiragino Mincho Pro 32px" style="max-width: 30em;">
+    </figure>
+</li>
+<li><p>Leave the punctuation character protruding into the margin (if there is one).</p>
+    <figure id="fig_kinsoku_protrude">
+    <img src="images/kinsoku_protrude.png" alt="人間は、理性と良心とを授けられており、互いに同胞の精神をもって行動しなければならない。" lang="ja" data-notes="Hiragino Mincho Pro 32px" style="max-width: 30em;">
+    </figure>
+</li>
+<li><p>Ignore the kinsoku rules.</p>
+    <figure id="fig_kinsoku_none">
+    <img src="images/kinsoku_none.png" alt="人間は、理性と良心とを授けられており、互いに同胞の精神をもって行動しなければならない。" lang="ja" data-notes="Hiragino Mincho Pro 32px" style="max-width: 30em;">
+    </figure>
+</li>
+</ol>
+
+<p>Where a gap appears at the end of a line, full justification is usually restored by adding space across the line (see <a class="secref">justification</a>).</p>
+
+
+<p><span class="leadin">Small kana.</span> These kinsoku rules may also be used to prevent <a href="#small_kana">small kana</a> characters appearing alone at the start of a line.  However, this is much more likely to reflect the preferences of the author. For example, the rule may be ignored in narrow newspaper columns.</p>
+
+<figure id="fig_kinsoku_small_kana">
+<img src="images/kinsoku_small_kana.png" alt="人間は、理性と良心とを授けられており互いに同胞の精神をもって行動しなければならない" lang="ja" data-notes="Hiragino Mincho Pro 32px" style="max-width: 30em;">
+<figcaption>Kinsoku rules used to prevent a small kana character appearing alone at the start of a line.</figcaption>
+</figure>
+
+
+
+
 
 
 <section id="lb_hyphenation">
 <h4>Hyphenation</h4>
+
 <p>There is no hyphenation at line-breaks for Japanese text.</p>
 </section>
 </section>
@@ -1518,7 +1425,8 @@ alveolar</th>
 <h3>Text alignment &amp; justification</h3>
 <p id="def-justification" class="explanatoryintro definitionStub"></p>
 <p>The preferred arrangement of characters on a line is solid set, ie. each character frame immediately follows the previous one, each with the same width. In principle, in books where the width of the text area on a page is set by counting characters and fixed, paragraphs composed of kanji and kana characters don't need to be justified. Lines break as soon as the line is full of characters, and the whole paragraph has grid lines vertically and horizontally between the characters.</p>
-<p>However, a number of factors may introduce a need to introduce justification, from time to time. One such would be punctuation that pulls the last character of the previous line with it to the next line, so that it doesn't begin a line on its own. Another would be web-based text where windows can be stretched, resulting in a situation where the width of a line no longer exactly corresponds to the sum of the width of all the characters on that line. Other situations include lines where proportionally-spaced romaji text breaks the grid effect.</p><p>Japanese justifies text using a complex set of rules which adjust the space between characters on a line. Some characters are adjusted before others. </p>
+<p>However, a number of factors may introduce a need to introduce justification, from time to time. One such would be punctuation that pulls the last character of the previous line with it to the next line, so that it doesn't begin a line on its own. Another would be web-based text where windows can be stretched, resulting in a situation where the width of a line no longer exactly corresponds to the sum of the width of all the characters on that line. Other situations include lines where proportionally-spaced romaji text breaks the grid effect.</p>
+<p>Japanese justifies text using a complex set of rules which adjust the space between characters on a line. Some characters are adjusted before others. Typically in character-based justification, rules are applied to different types of character in successive waves. For example, the algorithm may attempt to reduce the spacing around punctuation first, and only when more adjustment is needed turn to adjusting the spacing between ideographs.</p>
 <p>In situations where a set of lines each contains self-contained text, the line content may be stretched to fit the line width, for example in table cells. In this case it is typical to set the first and last characters at the line start and end, respectively, and then apply equal amounts of spacing between all remaining characters. This can result in large gaps, including lines where the two characters are arranged at opposite line ends with nothing between. See <a class="figref">fig_distributed_spacing</a>.</p>
 
 <figure id="fig_distributed_spacing">
@@ -1526,12 +1434,192 @@ alveolar</th>
 <figcaption>Evenly distributed spaces across a line in a table. Source <tt>j,#id25</tt></figcaption>
 </figure>
 
- <p class="instructions noprint">Use the control below to see how your browser justifies the text sample here.</p>
+ <!--p class="instructions noprint">Use the control below to see how your browser justifies the text sample here.</p>
     <p dir="ltr" lang="ja" class="noprint" id="justificationExample" style="text-align:start;">すべての人は、法の下において平等であり、また、いかなる差別もなしに法の平等な保護を受ける権利を有する。すべての人は、この宣言に違反するいかなる差別に対しても、また、そのような差別をそそのかすいかなる行為に対しても、平等な保護を受ける権利を有する。</p>
     <p class="english noprint" dir="ltr">
       <button type="button" id="justifyButton" onclick="toggleJustification(document.getElementById('justificationExample'), this)">   Justify   </button>
-    </p>
+    </p-->
 </section>
+
+
+
+
+
+
+<section id="letterspace">
+<h3>Text spacing</h3>
+
+<p>This section looks at ways in which spacing is applied between characters over and above that which is introduced during justification.</p>
+
+
+
+<section id="letterspacing">
+<h4>Inter-character letter-spacing</h4>
+
+<p id="def-letterspacing" class="explanatoryintro definitionStub"></p>
+
+<p>Letter-spacing is used to achieve balance between items with large and small numbers of characters, such as headings, running heads, and captions. When expanding text, equal amounts of space are added between the character frames of the item with the smaller number of characters.</p>
+
+<figure id="fig_letterspace">
+<img src="images/letter_spacing_1.jpeg" alt="" style="max-width: 40%;"/><img src="images/letter_spacing_2.jpeg" alt=""  style="max-width: 40%;"/>
+<figcaption>Examples of headings where letter spacing has been applied.</figcaption>
+</figure>
+
+<p><span class="leadin">Reducing inter-character spacing.</span> Although solid set text is normally best for readability, in large print sizes, such as for magazine headings, it may be desirable to reduce the distance between certain characters. This is typically done by reducing the distance between adjacent letter faces.</p>
+<p>Sometimes, text may also be kerned by overlapping the character frames by a regular amount across a whole line.</p>
+</section>
+
+
+
+
+<section id="autospace">
+<h4>Spacing around alphabetic or numeric phrases</h4>
+
+<p>When a run of romaji or ASCII numerals appears in text, it is often set off from the surrounding kanji/kana letters by a small space.</p>
+
+<p>The amount of spacing can vary.  JLREQ<tt>j,#id209</tt> suggests a ¼em space, but sometimes other spaces may be appropriate, such as ⅙em.<a class="qlink" href="https://github.com/w3c/csswg-drafts/issues/7050" target="_blank">gh</a></p>
+
+<figure id="fig_text_space">
+<img src="images/text_space_none.png" alt="">
+<span style="margin-inline:2rem">&nbsp;</span>
+<img src="images/text_space_applied.png" alt="">
+<figcaption>A Japanese paragraph where text-spacing has and has not been applied. (<a href="https://w3c.github.io/jlreq/#id209" target="_blank">source</a>)</figcaption>
+</figure>
+
+
+<p>Such spacing is not needed when the phrase is followed or preceded by punctuation that already has built in space. It also doesn't appear at the line start/end.</p>
+
+<div class="html">
+<p>To achieve this in web pages use the <code class="kw" translate="no">text-spacing</code> CSS property<sup><a href="https://drafts.csswg.org/css-text-4/#text-spacing-property" target="_blank">§</a></sup> in your style sheet with the following values. It's best not to use space characters. The actual amount of spacing applied is dependent on the browser.</p>
+<dl>
+<dt>ideograph-alpha <span class="instructions">(Not yet supported by browsers.)</span><a class="qlink" href="https://www.w3.org/International/i18n-tests/results/int-letter-spacing#ja_auto_space" target="_blank">§</a></dt>
+<dd>Creates extra spacing between runs of ideographs and non-ideographic letters.</dd>
+<dt>ideograph-numeric <span class="instructions">(Not yet supported by browsers.)</span><a class="qlink" href="https://www.w3.org/International/i18n-tests/results/int-letter-spacing#ja_auto_space" target="_blank">§</a></dt>
+<dd>Creates extra spacing between runs of ideographs and non-ideographic numerals glyphs.</dd>
+</dl>
+<p>Eg. the following puts spacing around both:<br><code>text-spacing: ideograph-alpha ideograph-numeric;</code></p>
+</div>
+</section>
+
+
+
+
+<section id="punctuationspace">
+<h4>Spacing around punctuation</h4>
+
+<p>Punctuation such as full stop, comma, parentheses, etc. normally has built-in space associated with it because the ink takes up only a part of the em square. However, in some situations, the blank space is not appropriate.</p>
+<p>When text is arranged on a strict grid pattern, none of this space removal applies.</p>
+
+<p><span class="leadin">Sequences of punctuation.</span> One such example is when multiple punctuation marks appear side by side. <a class="figref">fig_text_space_adjacent</a> shows how space can be removed between a fullwidth comma and fullwidth bracket to reduce large blank spaces.  It shouldn't be necessary to use halfwidth characters for this; you should use normal characters and the application should  remove the appropriate amount of space automatically.</p>
+
+<figure id="fig_text_space_adjacent">
+<img src="images/text_space_adjacent.png" alt="">
+<span style="margin-inline:2rem">&nbsp;</span>
+<img src="images/text_space_adjacent_none.png" alt="">
+<figcaption>Space has been removed on the left to make the text more readable.</figcaption>
+</figure>
+
+
+
+<div class="html">
+<p>It is not yet possible to control this in web pages, but the CSS Text spec proposes a way forward using the <code class="kw" translate="no">text-spacing</code> CSS property<sup><a href="https://drafts.csswg.org/css-text-4/#text-spacing-property" target="_blank">§</a></sup>. The relevant property values are:</p>
+<dl>
+<dt>trim-adjacent <span class="instructions">(Not yet supported by browsers.)</span></dt>
+<dd>Collapses spacing between punctuation glyphs. </dd>
+<dt>space-adjacent <span class="instructions">(Not yet supported by browsers.)</span></dt>
+<dd>Keeps the space before fullwidth opening punctuation when not at the start of the line. Keeps the space after fullwidth closing punctuation when not at the end of the line.</dd>
+</dl>
+<p>Eg. the following collapses spaces between punctuation marks:<br>
+<code>text-spacing: trim-adjacent;</code></p>
+</div>
+
+
+
+
+
+<p><span class="leadin">Line-initial punctuation.</span> Similarly, space may be removed from punctuation at the start or the end of a line. If we use a bracket as an example, the ink of the bracket should be flush with the line start when that bracket occurs inside a paragraph. Where paragraphs are separated by a blank line, the bracket at the start of the first line should also be flush with the left edge of the text.</p>
+<p>It is common, however, to have no blank line before a Japanese paragraph, but instead  indent the paragraph's first line. Usually this indent is the width of one fullwidth character. If the line begins with a punctuation such as a bracket, the empty space that usually precedes a fullwidth bracket is still dropped, but the line is set so that the glyph hangs into the indent (which, visually, looks like it is preceded by a half-width space). <a class="figref">fig_text_space_para</a> shows examples of this.</p>
+
+<figure id="fig_text_space_para">
+<img src="images/text_space_para.jpg" alt="">
+<figcaption>Space is removed from a bracket at the start of a line, but not at the beginning of a paragraph. (<a href="https://github.com/w3c/csswg-drafts/issues/2462">source</a>)</figcaption>
+</figure>
+<div class="html">
+<p>It is not yet possible to achieve this in web pages, but the CSS Text spec proposes a way forward using the <code class="kw" translate="no">text-spacing</code> CSS property<sup><a href="https://drafts.csswg.org/css-text-4/#text-spacing-property" target="_blank">§</a></sup>.</p>
+
+<p>A typical way of setting styling for indented paragraphs would therefore include something like this</p>
+
+<pre>p {
+  margin: 0;
+  text-indent: 1em;
+  text-spacing: trim-start;
+  hanging-punctuation: first;
+  }</pre>
+
+<p>The relevant property values are:</p>
+
+<dl>
+<dt>text-space: trim-start <span class="instructions">(Not yet supported by browsers.)</span></dt>
+<dd>Sets fullwidth opening punctuation flush (ie. removes the leading space from fullwidth glyphs) at the start of each line.</dd>
+<dt>text-space: space-start <span class="instructions">(Not yet supported by browsers.)</span></dt>
+<dd>Keeps the space before all  fullwidth opening punctuation at the beginning of every line (ie. full-width glyphs).</dd>
+<dt>text-indent: 1em</dt>
+<dd>Indents the first line of a paragraph by 1 character space.</dd>
+<dt>hanging-punctuation: first <span class="instructions">(Not yet supported by browsers.)</span></dt>
+<dd>An opening bracket or quote at the start of the first formatted line of an element hangs. This applies to all characters in the Unicode categories Ps, Pf, Pi plus the ASCII quote marks <span class="codepoint" translate="no"><bdi lang="en">&#x0027;</bdi> [<span class="uname">U+0027 APOSTROPHE</span>]</span> and <span class="codepoint" translate="no"><bdi lang="en">&#x0022;</bdi> [<span class="uname">U+0022 QUOTATION MARK</span>]</span>. </dd>
+</dl>
+
+<p>In some cases, the paragraph-start line indentation has been achieved by adding a fullwidth bracket at the start of the paragraph (rather than indentation), while removing the leading space from other brackets in the paragraph. Indentations for lines that don't begin with a bracket-like punctuation will typically use an ideographic space character rather than styling to create the indent (because line indentation doesn't behave differently depending on whether a line starts with a bracket). This approach is not recommended, because it impedes the ability of authors to change behaviour simply through changing the styling, but to provide a workaround for legacy text in this situation, CSS proposes another value:</p>
+
+<dl>
+<dt>space-first <span class="instructions">(Not yet supported by browsers, and not recommended for normal use.)</span></dt>
+<dd>Behaves as <code class="kw" translate="no">space-start</code> on the first line the block container and each line after a forced line break but as <code class="kw" translate="no">trim-start</code> on all other lines.</dd>
+</dl>
+</div>
+
+
+
+
+
+<p><span class="leadin">Line-final punctuation.</span> It is often useful to remove trailing space from a fullwidth punctuation glyph if it allows that character to fit at the end of a line (rather than wrapping it to the next line).</p>
+<div class="html">
+<p>Again, it is not yet possible to achieve this in web pages, but the CSS Text spec proposes a way forward using the <code class="kw" translate="no">text-spacing</code> CSS property<sup><a href="https://drafts.csswg.org/css-text-4/#text-spacing-property" target="_blank">§</a></sup>. The relevant property values are:</p>
+<dl>
+<dt>allow-end <span class="instructions">(Not yet supported by browsers.)</span></dt>
+<dd>Removes trailing space from fullwidth closing punctuation at the end of each line if it does not otherwise fit prior to justification; otherwise set the punctuation with full-width glyphs. .</dd>
+<dt>trim-end <span class="instructions">(Not yet supported by browsers.)</span></dt>
+<dd>Removes trailing space from fullwidth closing punctuation at the end of every line.</dd>
+<dt>space-end <span class="instructions">(Not yet supported by browsers.)</span></dt>
+<dd>Keeps the space after all  fullwidth closing punctuation at the end of every line (ie. full-width glyphs).</dd>
+</dl>
+</div>
+
+</section>
+</section>
+
+
+
+
+
+
+
+<section id="baselines">
+<h3>Baselines, line height, etc.</h3>
+
+<p>The standard baseline for kanji and kana characters is slightly lower than the alphabetic baseline used for Latin characters. Mixed script text needs to align baselines correctly.</p>
+
+<p><a class="figref">fig_baselines</a> shows metrics for the Hiragino Mincho Pro font. In this font the maximum height of the Japanese letters reaches slightly higher than the Latin ascenders, but not as low as the Latin descenders.</p>
+
+<figure id="fig_baselines">
+<img src="images/baselines.png" alt="qhx国的性もと" class="ex" lang="ja" data-notes="Hiragino Mincho Pro 130px" style="max-width: 40rem;">
+<figcaption>Font metrics for text in the Hiragino Mincho Pro font.</figcaption>
+</figure>
+
+<p>Japanese characters have no ascenders or descenders, but occupy the square space described <a href="#shaping">earlier</a>. Some characters use more of the square space than others, as can be seen in <a class="figref">fig_baselines</a>.</p>
+</section>
+
+
+
 
 
 
