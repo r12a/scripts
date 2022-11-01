@@ -70,6 +70,13 @@ reflist = {
 "lang": new Set(['ar','fa']),
 },
 
+"ma": {
+"authors": "Muhammad Asad, Ahmed Shiraz Butt, Salahuddin Chaudhry, Dr Sarmad Hussain",
+"title":"Rule-based Expert System for Urdu Nastaliq Justification",
+"url":"https://www.cle.org.pk/Publication/papers/2004/rule-based-expert-system.pdf",
+"lang": new Set(['ur']),
+},
+
 "pm": {
 "authors": "Narguess Farzad",
 "title":"Modern Persian",
