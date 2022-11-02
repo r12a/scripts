@@ -38,7 +38,7 @@ var contentPrompts = {
 
 "justification":"Does text in a paragraph needs to have flush lines down both sides?\n• Does the script allow punctuation to hang outside the text box at the start or end of a line?\n• Where adjustments are need to make a line flush, how is that done?\n• Does the script shrink/stretch space between words and/or letters?\n• Are word baselines stretched, as in Arabic?\n• What about paragraph indents?",
 
-"spacing":"Does the script create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see Text alignment & justification, below).",
+"spacing":"This section looks at ways in which spacing is applied between characters over and above that which is introduced during justification. For example, does the orthography create emphasis or other effects by spacing out the words, letters or syllables in a word?  (For justification related spacing, see Text alignment & justification, above).",
 
 "lists":"Are there list or other counter styles in use?  If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed?",
 
