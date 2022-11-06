@@ -906,6 +906,7 @@ function replaceStuff (node) {
                 switch (window.spreadsheetRows[char][cols.status]) {
                 case 'r': status = 'rare'; break;
                 case 'i': status = 'infreq.'; break;
+                case 'l': status = 'loan'; break;
                 case 'a': status = 'archaic'; break;
                 case 'u': status = 'unused'; break;
                 case 'o': status = 'obsolete'; break;
