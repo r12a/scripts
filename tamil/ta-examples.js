@@ -4282,7 +4282,7 @@ autoExpandExamples.ta = `
 ஸ்தலம்||
 ஸ்தாயி||
 ஸ்த்ரீ||
-ஸ்ரீ|Lakshmi, title for deities|sɾ̪iː
+ஸ்ரீ|Lakshmi, title for deities|s§ɾ̪iː
 ஶ்ரீ|Lakshmi, title for deities|s§ɾ̪iː
 ஸ்வரம்||
 ஹக்காசியா||
