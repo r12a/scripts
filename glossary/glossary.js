@@ -35,6 +35,8 @@ defList={
 
 "standalonevowel": 'Standalone vowels are not preceded by a consonant sound, and may appear at the beginning or in the middle of a word.',
 
+"orthographicsyllable": 'The term <a class="termref" target="_blank" href="../glossary/index.html#orthographicsyllable">orthographic syllable</a> is not clearly defined in the Unicode Standard. In the orthography notes on this site we define it to mean a typographic unit that includes more than one grapheme cluster. This is commonly the case for Brahmi-derived scripts, such as for Devanagari conjuncts, or Balinese stacks.',
+
 "tashkil": 'A <a class="termref" target="_blank" href="../glossary/index.html#tashkil">tashkil</a> is a mark that indicates vocalization of text, as well as other types of phonetic guides to correct pronunciation. They are separately encoded as combining marks. A basic Arabic letter plus any of these types of marks is never encoded as a separate, precomposed character, but must always be represented as a sequence of letter plus combining mark. Compare with <a class="termref" target="_blank" href="../glossary/index.html#ijam">ijam</a>.',
 
 "typographicunit": `A <a class="termref" target="_blank" href="../glossary/index.html#typographicunit">typographic unit</a> is a unit of text that is not normally split during a particular text operation. The actual constituents of a typographic unit vary according to the process being applied to the text. For example, in complex scripts cursor movement may use smaller typographic units than hyphenation for the same text.`,
