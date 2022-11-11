@@ -55,7 +55,7 @@
 
 
 <p id="status">Updated 
-  <!-- #BeginDate format:Sw1 -->16 April, 2022<!-- #EndDate -->
+  <!-- #BeginDate format:Sw1 -->11 November, 2022<!-- #EndDate -->
   <span id="versionTop"></span>
   </p>
 
@@ -1118,15 +1118,6 @@ alveolar</th>
 
 
 
-  
-<!--section id="baselines">
-<h3>Baselines &amp; inline alignment</h3>
-<p class="prompts">tbd</p>
-</section-->
-
-
-
-
 
 
 <section id="formatting">
@@ -1149,39 +1140,41 @@ alveolar</th>
   
   
   
-<section id="segments">
-<h2>Text segmentation</h2>  
-
-
-<p>Sinhala uses word boundaries for <a href="#linebreak">line wrapping</a> and basic <a href="#justification">justification</a>, but may use grapheme boundaries (sometimes called orthographic syllables) for other operations that work at the sub-word level.</p>
-
-<p>Phrase, sentence, and section delimiters are described in <a class="secref">phrase</a>.</p>
-
-
-
-
-
 <section id="graphemes">
-<h3>Grapheme boundaries</h3>
+<h2>Graphemes</h2>  
+
 <p id="def-grapheme" class="explanatoryintro definitionStub"></p>
-<p id="def-ccs" class="explanatoryintro definitionStub"></p>
-
-<p>CCS here represents a base character with zero or more combining marks. Sinhala has a virama, but it doesn't combine CCSs unless it is accompanied by a ZWJ. A base is either a consonant or an independent vowel.</p>
-
-
+<p id="def-orthographicsyllable" class="explanatoryintro definitionStub"></p>
+<p><strong>This section is still undergoing research and development.</strong></p>
+<p>Modern Sinhala has a virama, but it doesn't combine grapheme clusters unless it is accompanied by a ZWJ. A base is either a consonant or an independent vowel.</p>
 
 
-<section id="basicSeg">
-<h4>Basic typographic units</h4>
+
+
+<section id="gClusters">
+<h3>Grapheme clusters</h3>
+
 
 <p><code>Base Combining_mark*</code></p>
-<p>Most of the time, in modern Sinhala, a typographic unit  is equivalent to a single CCS. The virama, which is a visible vowel-killer, is just another combining mark and doesn't extend the typographic unit.</p>
-<p><mark>Sequences that include a syllable nucleus</mark>   may include combining marks with the following Indic syllabic categories:</p>
+
+<p>Grapheme clusters can be used much of the time to segment Sinhala words. </p>
+<p>Because a virama used alone is a visible vowel-killer and doesn't create conjuncts, it can be treated as just another combining mark and segmentation can break after it.</p>
+<p>Evidence for this approach can be seen when a consonant cluster is followed by a vowel-sign glyph that is displayed to the left of the base.  For example, observe the placement of the pre-base vowel in <a class="figref">fig_kro</a>. In the conjunct form for <span class="ipa">kro</span> on the left, the vowel-sign surrounds the whole conjunct. If the sequence is not rendered as a conjunct (see the second example), such as <span class="ipa">-k.ro</span>,  the pre-base glyph precedes the <span class="uname">RA</span>, not the <span class="uname">KA</span>.</p>
+
+
+<figure id="fig_kro">
+<img src="images/kro.png" alt="ක්‍රො  ක්රො  *කේරා" class="ex" lang="si" data-notes="40px Noto Serif Sinhala">
+<figcaption>Placement of pre-base vowel glyphs.</figcaption>
+</figure>
+
+<!--p>Most of the time, in modern Sinhala, a typographic unit  is equivalent to a grapheme cluster. The virama, which is a visible vowel-killer, is just another combining mark and doesn't extend the typographic unit.</p-->
+
+<p><mark>Sequences that include a syllable nucleus</mark> may include combining marks with the following Indic syllabic categories:</p>
 
 <ol>
-<li><a href="../apps/listindic/index.html?chars=ිීුූෙේොෝැෑාෛෞෘ">Vowel_Dependent</a> (see <a class="secref">combiningvowels</a>)</li>
-<li><a href="../apps/listindic/index.html?chars=ං">Bindu</a> (see <a class="secref">finals</a>)</li>
-<li><a href="../apps/listindic/index.html?chars=ඃ">Visarga</a> (see <a class="secref">finals</a>)</li>
+<li><a href="../apps/listindic/index.html?chars=ිීුූෙේොෝැෑාෛෞෘ">Vowel_Dependent</a> [13] (see <a class="secref">combiningvowels</a>)</li>
+<li><a href="../apps/listindic/index.html?chars=ං">Bindu</a> [1] (see <a class="secref">finals</a>)</li>
+<li><a href="../apps/listindic/index.html?chars=ඃ">Visarga</a> [1] (see <a class="secref">finals</a>)</li>
 </ol>
 
 
@@ -1196,47 +1189,62 @@ alveolar</th>
 <tr><td><img src="images/s_new.png" alt="අලුත්" class="ex" lang="si"></td><td><span class="eg" lang="si">අලුත්</span></td></tr>
 <tr><td><img src="images/s_mountain.png" alt="කන්ද" class="ex" lang="si"></td><td><span class="eg" lang="si">කන්ද</span></td></tr>
 </table>
+
+<p>Although <a href="../glossary/index.html#graphemecluster">Unicode grapheme clusters</a> are equivalent to the basic typographic units just described, they are not useful for dealing with conjuncts, because grapheme cluster boundaries always fall between the virama and the following consonant.</p>
+
+<p class="observation"><span class="leadin">Observation:</span> Browsers based on the Gecko engine (Firefox, etc.) use grapheme clusters for cursor movement and forward delete when a virama occurs without a following ZWJ, whereas Blink (Chrome) and WebKit (Safari) browsers use the typographic units described in the next section.</p>
 </section>
 
 
 
-
-<section id="conjSeg">
-<h4>Conjunct typographic units</h4>
+<section id="orthSyllables">
+<h3>Orthographic syllables</h3>
 
 <p><code>(Base Virama ZWJ)+ Base Combining_mark*</code></p>
-<p>Where conjuncts appear, a typographic units contain multiple CCS units. The union is signalled by <span class="codepoint" translate="no"><span lang="si">&#x0DCA;&#x200D;</span><span class="uname">+ZWJ</span> [<a href="/scripts/sinhala/block#char0DCA"><span class="uname">U+0DCA SINHALA SIGN AL-LAKUNA</span></a> + <a href="/scripts/punctuation/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span> before a base.</p>
+
+<p>Where conjuncts appear, a typographic unit contains multiple grapheme clusters. The union is signalled by the <em>sequence</em> <span class="codepoint" translate="no"><span lang="si">&#x0DCA;&#x200D;</span><span class="uname">+ZWJ</span> [<a href="/scripts/sinhala/block#char0DCA"><span class="uname">U+0DCA SINHALA SIGN AL-LAKUNA</span></a> + <a href="/scripts/punctuation/block#char200D"><span class="uname">U+200D ZERO WIDTH JOINER</span></a>]</span> before a base.</p>
+
+<p>Because conjunct forms are never split apart visually, the whole conjunct form is typically treated as a typographic unit when gaps are introduced into the text, such as for line-breaking or letter-spacing. This may not apply, however, for some other operations such as cursor movement or backwards delete.</p>
+
 <table class="noBorderTable alignStartTable" style="margin-inline-start: 10%;">
 <tr><td><img src="images/s_english.png" alt="ඉංග්‍රීසි" class="ex" lang="si"></td><td><span class="eg transc" lang="si">ඉංග්‍රීසි</span></td></tr>
 <tr><td><img src="images/s_skin.png" alt="චර්‍මය" class="ex" lang="si"></td><td><span class="eg transc" lang="si">චර්‍මය</span></td></tr>
 </table>
 
-<p>Correct behaviour is font-dependent. If a font doesn't have a conjunct form for a particular combination of characters it will fall back to what looks like 2 basic typographic units, however the sequence behaves as a single typographic unit. For example, observe the placement of the pre-base vowel in <a class="figref">fig_kro</a>. In the syllable <span class="ipa">kro</span> on the left, the vowel-sign surrounds the whole conjunct. In the middle we drop the ZWJ to give <span class="ipa">-k.ro</span>, and now the pre-base glyph precedes the RA.  The same should happen for the right-hand example, if the code points indicate a conjunct but the font doesn't have the necessary glyphs.</p>
 
 
-<figure id="fig_kro">
-<img src="images/kro.png" alt="ක්‍රො  ක්රො  *කේරා" class="ex" lang="si" data-notes="40px Noto Serif Sinhala">
-<figcaption>Placement of pre-base vowel glyphs.</figcaption>
-</figure>
+<section id="fontFactors">
+<h4>Font factors</h4>
+
+<p>Behaviour is font-dependent. If a font doesn't have a conjunct form for a particular combination of characters it will fall back to what looks  like 2 grapheme clusters. For example, observe the placement of the pre-base vowel in <a class="figref">fig_kro</a>. In the syllable <span class="ipa">kro</span> on the left, the vowel-sign surrounds the whole conjunct. In the middle we drop the ZWJ to give <span class="ipa">-k.ro</span>, and now the pre-base glyph precedes the RA.  The same should happen  if the code points indicate a conjunct but the font doesn't have the necessary glyphs.</p>
+
+<p>This is currently difficult to manage because the decision as to whether the text is segmented into 2 grapheme clusters or one orthographic syllable depends on the capabilities of the font used (ie. the rendered result). The code point sequence is identical for both cases, and gives no clues if different typographic units are applicable.</p>
 </section>
 
 
 
-<section id="grapheme_clusters">
-<h4>Grapheme clusters</h4>
-<p><a href="../glossary/index.html#graphemecluster">Unicode grapheme clusters</a> are equivalent to the basic typographic units described above. However, they are not useful for dealing with conjunct typographic units, since the virama always causes them to stop.</p>
+<section id="webSegmentation">
+<h4>Browser behaviour</h4>
 
-<p class="observation"><span class="leadin">Observation:</span> Browsers based on the Gecko engine (Firefox, etc.) use grapheme clusters for cursor movement and forward delete, whereas Blink (Chrome) and WebKit (Safari) browsers use the tyographic units described here.</p>
+<div style="padding: 3rem; padding-block: 0;">
+<p><span class="leadin">Test in your browser.</span> <span class="instructions">Left to right, the following words contain 2 conjunct sequences with virama+ZWJ, one that displays as a conjunct, another that doesn't, and two sequences with virama but no ZWJ. First, the text is displayed in a contenteditable paragraph, then in a textarea. Results are reported for Gecko (Firefox), Blink (Chrome), and WebKit (Safari) on a Mac.</span></p>
+
+<p class="ex" lang="si" contenteditable style="margin-inline-start:7.5%; line-break:anywhere; border: 1px solid #ccc;">ක්‍රො ක්‍සො ක්රො කන්ද</p>
+
+<textarea class="ex" lang="si" style="margin-inline-start:7.5%; line-break:anywhere;">ක්‍රො ක්‍සො ක්රො කන්ද</textarea>
+</div>
+
+<p><span class="leadin">Cursor movement.</span> <span class="instructions">Move the cursor through the text.</span><br>
+Gecko steps through the whole text using grapheme clusters. The cursor visually stops in the middle of the virama+ZWJ sequences. Blink steps through the virama+ZWJ sequences using grapheme clusters, however the cursor appears to skip to the end of the whole sequence and you have to hit the cursor key again (with no apparent movement) to actually clear it. Blink treats the sequences with just a virama as a single unit. WebKit skips all sequences with a virama (whether or not there is a ZWJ) as a single unit.</p>
+
+<p><span class="leadin">Selection.</span> <span class="instructions">Place the cursor next to a character and hold down shift while pressing an arrow key.</span><br>
+The behaviour is the same as for cursor movement. This has the effect of sometimes appearing to highlight backwards in Blink.</p>
+
+<p><span class="leadin">Deletion.</span> Forward deletion works in the same way as cursor movement.  The backspace key deletes code point by code point, except that WebKit deletes both the virama and the ZWJ at the same time.</p>
+
+<p><span class="leadin">Line-break.</span> <span class="instructions">The CSS sets the value of the <code class="kw" translate="no">line-break</code> property to <code class="kw" translate="no">anywhere</code>. Pad the start of the container with characters to slowly push the Sinhala text off the first line.</span><br>
+Gecko wraps at grapheme cluster boundaries except that it wraps a sequence with virama+ZWJ as a single unit. Blink and WebKit wrap everything at grapheme cluster boundaries, which has the effect of breaking a conjunct in half at the end of a line.</p>
 </section>
-</section>
-
-
-
-  
-<section id="word">
-<h3>Word boundaries</h3>
-<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
-<p>Words are separated by spaces.</p>
 </section>
 </section>
 
@@ -1247,6 +1255,15 @@ alveolar</th>
   
 <section id="inline">
 <h2>Punctuation &amp; inline features</h2>
+
+
+
+<section id="word">
+<h3>Word boundaries</h3>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+<p>Words are separated by spaces.</p>
+</section>
+
 
 
 
@@ -1358,14 +1375,6 @@ alveolar</th>
 
 
 
-<section id="spacing">
-<h3>Text spacing</h3>
-<p class="prompts">tbd</p>
-</section>
-
-
-
-
   
 <section id="abbrev">
 <h3>Abbreviation, ellipsis &amp; repetition</h3>
@@ -1418,6 +1427,24 @@ alveolar</th>
 <h3>Text alignment &amp; justification</h3>
     <p class="prompts">tbd</p>
 </section>
+
+
+
+
+<section id="spacing">
+<h3>Text spacing</h3>
+<p class="prompts">tbd</p>
+</section>
+
+
+
+
+  
+<section id="baselines">
+<h3>Baselines &amp; inline alignment</h3>
+<p class="prompts">tbd</p>
+</section>
+
 
 
 
