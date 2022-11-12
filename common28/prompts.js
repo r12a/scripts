@@ -22,13 +22,13 @@ var contentPrompts = {
 
 "quotations":"What characters are used to indicate quotations?\n• Do quotations within quotations use different characters?\n• What characters are used to indicate dialogue?",
 
-"abbrev":"What characters are used to indicate abbreviation, ellipsis &amp; repetition?",
+"abbrev":"What characters are used to indicate abbreviation, ellipsis & repetition?",
 
 "emphasis":"How are emphasis and highlighting achieved?\n• If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself?\n• Is it important to skip characters when underlining, etc?\n• How do things change for vertically set text?",
 
-"bracketing":"What parentheses or brackets are used?",
+"bracketing":"What parentheses, brackets or other punctuation is used to offset parenthetical information?",
 
-"otherpunctuation":"Punctuation not already mentioned, such as dashes, connectors, separators, etc.",
+"otherpunctuation":"Punctuation not already mentioned, such as dashes, connectors, separators, scare quotes, etc.",
 
 "inlinenotes":"What mechanisms, if any, are used to create *inline* notes and annotations? (For referent-type notes such as footnotes, see below.)",
 
