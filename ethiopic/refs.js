@@ -67,6 +67,12 @@ reflist = {
 "title":"Geʽez script",
 },
 
+"wam": {
+"url":"https://en.wikipedia.org/wiki/Amharic",
+"authors": "Wikipedia",
+"title":"Amharic",
+},
+
 "wa": {
 "url":"https://en.wikipedia.org/wiki/Help:IPA/Amharic",
 "authors": "Wikipedia",

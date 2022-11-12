@@ -575,7 +575,7 @@ autoExpandExamples.am = `
 አፍ|mouth||ʾäf
 አፍንጫ|nose||ʾäfnč̣a
 ኡነት||
-ኢትዮጵያ|Ethiopia||ʾītyōṗṗyā
+ኢትዮጵያ|Ethiopia|i§t§jo§pʼ§ja|ʾītyōṗṗyā|itʰiopʼia
 ኢንተርኔት||
 ኣልጋ||
 ኣከስት||
@@ -930,7 +930,7 @@ autoExpandExamples.am = `
 ፈርጥ||
 ፊልም||
 ፊት||
-ፊደል||
+ፊደል|letter, alphabet|ˈfi§də§l|fidäl
 ፋኑስ||
 ፌብሩዋሪ||
 ፌንጣ||
@@ -944,7 +944,7 @@ autoExpandExamples.am = `
 ፒያኖ||
 ፓፓያ||
 ፕሬዚዳንት||
-ፖለቲካ||
+ፖለቲካ|politics|po§lə§ti§ka|polätika
 ፖሊስ||
 ፖም||
 ፖስታ||
